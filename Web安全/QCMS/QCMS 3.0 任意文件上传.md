@@ -12,17 +12,17 @@ QCMS 3.0
 三、复现过程
 ------------
 
-![](/Users/aresx/Documents/VulWiki/.resource/QCMS3.0任意文件上传/media/rId24.png)
+![](./.resource/QCMS3.0任意文件上传/media/rId24.png)
 
 漏洞产生点在系统设置上传logo处
 
 构造一个test.php文件，内容为\`，点击上传
 
-![](/Users/aresx/Documents/VulWiki/.resource/QCMS3.0任意文件上传/media/rId25.png)
+![](./.resource/QCMS3.0任意文件上传/media/rId25.png)
 
 可以看到，上传后给出了路径
 
-![](/Users/aresx/Documents/VulWiki/.resource/QCMS3.0任意文件上传/media/rId26.png)
+![](./.resource/QCMS3.0任意文件上传/media/rId26.png)
 
 访问文件，发现上传成功
 

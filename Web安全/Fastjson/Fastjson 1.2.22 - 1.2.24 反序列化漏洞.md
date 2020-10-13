@@ -64,7 +64,7 @@ Students有一个公有属性name和一个私有属性age。下面使用一个�
 
 结果：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Fastjson1.2.22-1.2.24反序列化漏洞/media/rId26.png)
+![](./.resource/Fastjson1.2.22-1.2.24反序列化漏洞/media/rId26.png)
 
 ### 0x02 原理分析
 
@@ -170,58 +170,58 @@ Students有一个公有属性name和一个私有属性age。下面使用一个�
 
 下面来分析一下反序列化TemplatesImpl的调用链，首先经过java的反射机制，到达TemplatesImpl类，调用其getOutputProperties()方法：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Fastjson1.2.22-1.2.24反序列化漏洞/media/rId30.png)
+![](./.resource/Fastjson1.2.22-1.2.24反序列化漏洞/media/rId30.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/Fastjson1.2.22-1.2.24反序列化漏洞/media/rId31.png)
+![](./.resource/Fastjson1.2.22-1.2.24反序列化漏洞/media/rId31.png)
 
 跟进newTransformer()方法，这个方法是用于创建一个Transformer实例。然后到达getTransletInstance()方法：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Fastjson1.2.22-1.2.24反序列化漏洞/media/rId32.png)
+![](./.resource/Fastjson1.2.22-1.2.24反序列化漏洞/media/rId32.png)
 
 getTransletInstance()方法用于创建一个translet实例，返回这个translet给newTransformer()，然后被包裹成Transformer对象。跟进一下这个方法，发现其调用了defineTransletClasses()用来加载\_bytecodes中的类，接着又调用了\_class\[\_transletIndex\].newInstance()将defineTransletClasses()返回的类进行实例化：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Fastjson1.2.22-1.2.24反序列化漏洞/media/rId33.png)
+![](./.resource/Fastjson1.2.22-1.2.24反序列化漏洞/media/rId33.png)
 
 先跟进一下defineTransletClasses方法：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Fastjson1.2.22-1.2.24反序列化漏洞/media/rId34.png)
+![](./.resource/Fastjson1.2.22-1.2.24反序列化漏洞/media/rId34.png)
 
 可以看到，使用了loader.defineClass()方法用于加载\_bytecodes的内容，并将返回的类赋值给\_class\[i\]（这里的i是0）。loader是TemplatesImpl自定义的类，跟进一下：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Fastjson1.2.22-1.2.24反序列化漏洞/media/rId35.png)
+![](./.resource/Fastjson1.2.22-1.2.24反序列化漏洞/media/rId35.png)
 
 可以看到TransletClassLoader继承了Java类加载器---ClassLoader类，跟进其defineClass方法，发现直接调用了父类ClassLoader中的方法，所以就不再跟进了。
 
 回到defineTransletClasses方法，其间接调用ClassLoader加载\_bytecodes中的内容之后，将加载出来的类赋值给\_class\[0\]，然后结束，回到getTransletInstance方法，再看一下图：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Fastjson1.2.22-1.2.24反序列化漏洞/media/rId36.png)
+![](./.resource/Fastjson1.2.22-1.2.24反序列化漏洞/media/rId36.png)
 
 可以看到，455行直接使用了\_class\[0\].newInstance()创建实例，创建的过程中调用了evilClass1构造方法，然后触发了payload：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Fastjson1.2.22-1.2.24反序列化漏洞/media/rId37.png)
+![](./.resource/Fastjson1.2.22-1.2.24反序列化漏洞/media/rId37.png)
 
 ### 0x03 复现过程
 
 从github上直接pull下poc：https://github.com/ianxtianxt/fastjson-remote-code-execute-poc
 使用idea打开工程，编译test.java：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Fastjson1.2.22-1.2.24反序列化漏洞/media/rId39.png)
+![](./.resource/Fastjson1.2.22-1.2.24反序列化漏洞/media/rId39.png)
 
 然后会在target/classes/person下生成test.class文件。用同样的方法编译Poc.java。
 
-![](/Users/aresx/Documents/VulWiki/.resource/Fastjson1.2.22-1.2.24反序列化漏洞/media/rId40.png)
+![](./.resource/Fastjson1.2.22-1.2.24反序列化漏洞/media/rId40.png)
 
 配置运行方式
 
-![](/Users/aresx/Documents/VulWiki/.resource/Fastjson1.2.22-1.2.24反序列化漏洞/media/rId41.png)
+![](./.resource/Fastjson1.2.22-1.2.24反序列化漏洞/media/rId41.png)
 
 image
 
 运行Poc：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Fastjson1.2.22-1.2.24反序列化漏洞/media/rId42.png)
+![](./.resource/Fastjson1.2.22-1.2.24反序列化漏洞/media/rId42.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/Fastjson1.2.22-1.2.24反序列化漏洞/media/rId43.png)
+![](./.resource/Fastjson1.2.22-1.2.24反序列化漏洞/media/rId43.png)
 
 参考链接
 --------

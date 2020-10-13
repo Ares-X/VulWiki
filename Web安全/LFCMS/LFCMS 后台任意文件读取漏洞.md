@@ -10,7 +10,7 @@ LFCMS 后台任意文件读取漏洞
 三、复现过程
 ------------
 
-漏洞起始点位于`/Application/Admin/Controller/TemplateController.class.php`中的`edit`方法，该方法用作后台模板编辑，关键代码如下![1.png](/Users/aresx/Documents/VulWiki/.resource/LFCMS后台任意文件读取漏洞/media/rId24.png)
+漏洞起始点位于`/Application/Admin/Controller/TemplateController.class.php`中的`edit`方法，该方法用作后台模板编辑，关键代码如下![1.png](./.resource/LFCMS后台任意文件读取漏洞/media/rId24.png)
 
 我们传入的路径需要将`/`替换为`*`接着调用了`read`方法，跟进该方法
 
@@ -38,7 +38,7 @@ LFCMS 后台任意文件读取漏洞
 
     http://www.0-sec.org/admin.php?s=/Template/edit/path/*..*index.php
 
-![2.png](/Users/aresx/Documents/VulWiki/.resource/LFCMS后台任意文件读取漏洞/media/rId25.png)
+![2.png](./.resource/LFCMS后台任意文件读取漏洞/media/rId25.png)
 
 成功的读到了`CMS`的入口文件
 

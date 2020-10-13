@@ -18,7 +18,7 @@ WeCenter 3.3.4
 处，设置了用户可上传的文件类型后缀。而这个配置是写在数据库中的，我们可以利用前面的任意
 **SQL** 语句执行的 **POP** 链，往字段中添加 **php** 文件后缀。
 
-![](/Users/aresx/Documents/VulWiki/.resource/WeCenter3.3.4远程命令执行/media/rId25.png)
+![](./.resource/WeCenter3.3.4远程命令执行/media/rId25.png)
 
 ### poc
 
@@ -51,7 +51,7 @@ WeCenter 3.3.4
 这里以 **RCE** 利用为例子。我们先用上面的 **EXP**
 生成文件，然后找个可以上传文件的地方。这里要注意，一定不要选择在用户头像处上传。这里我们通过发起问题的地方来上传文件。
 
-![](/Users/aresx/Documents/VulWiki/.resource/WeCenter3.3.4远程命令执行/media/rId28.png)
+![](./.resource/WeCenter3.3.4远程命令执行/media/rId28.png)
 
 通过如下数据包，将 **headimgurl** 插入数据库中（ **Cookie**
 前缀每个网站都不一样，修改成自己的即可）。
@@ -75,6 +75,6 @@ WeCenter 3.3.4
 
 现在，我们就可以随意上传 **webshell** 了。
 
-![](/Users/aresx/Documents/VulWiki/.resource/WeCenter3.3.4远程命令执行/media/rId29.png)
+![](./.resource/WeCenter3.3.4远程命令执行/media/rId29.png)
 
 image

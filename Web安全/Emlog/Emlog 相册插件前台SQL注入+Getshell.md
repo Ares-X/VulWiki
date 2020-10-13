@@ -14,11 +14,11 @@ Emlog 相册插件前台SQL注入+Getshell
 
 首先安装Emlog的相册的插件
 
-![](/Users/aresx/Documents/VulWiki/.resource/Emlog相册插件前台SQL注入+Getshell/media/rId25.png)
+![](./.resource/Emlog相册插件前台SQL注入+Getshell/media/rId25.png)
 
 安装之后可以在目录：emlog\\src\\content\\plugins\\kl\_album下找到所有的安装文件：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Emlog相册插件前台SQL注入+Getshell/media/rId26.png)
+![](./.resource/Emlog相册插件前台SQL注入+Getshell/media/rId26.png)
 
 之后我们分析Kl-album\_ajax\_do.php文件
 
@@ -156,13 +156,13 @@ array(\'jpg\',\'png\',\'jpeg\',\'gif\');，也不是用来验证后缀的，而�
 
 保存为html，本地打开：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Emlog相册插件前台SQL注入+Getshell/media/rId28.png)
+![](./.resource/Emlog相册插件前台SQL注入+Getshell/media/rId28.png)
 
 填入目标url，并选择要上传的shell。（如图，我这里是info\'.php，会令SQL出错）。点击GO!
 
 之后可以发现出错了，可以发现文件名已经爆出来了：../content/plugins/kl\_album/upload/201411/38493d4468377f721357e9c64f93637d2014111211381611097.php访问可见shell：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Emlog相册插件前台SQL注入+Getshell/media/rId29.png)
+![](./.resource/Emlog相册插件前台SQL注入+Getshell/media/rId29.png)
 
 这里给出独自等待的一份payload：
 

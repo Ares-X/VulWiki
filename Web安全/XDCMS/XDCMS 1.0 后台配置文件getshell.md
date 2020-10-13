@@ -12,7 +12,7 @@ XDCMS 1.0
 三、复现过程
 ------------
 
-![](/Users/aresx/Documents/VulWiki/.resource/XDCMS1.0后台配置文件getshell/media/rId24.png)
+![](./.resource/XDCMS1.0后台配置文件getshell/media/rId24.png)
 
 刚看到这里的时候，这里的网站地址:`http://127.0.0.5`我很好奇是干嘛的，因为它现在写的是127.0.0.5而网站的ip与这个无关，去翻翻源码看看这玩意是干嘛的
 
@@ -53,4 +53,4 @@ XDCMS 1.0
 
 访问该配置文件页面：`http://www.0-sec.org/system/xdcms.inc.php`
 
-![](/Users/aresx/Documents/VulWiki/.resource/XDCMS1.0后台配置文件getshell/media/rId25.png)
+![](./.resource/XDCMS1.0后台配置文件getshell/media/rId25.png)

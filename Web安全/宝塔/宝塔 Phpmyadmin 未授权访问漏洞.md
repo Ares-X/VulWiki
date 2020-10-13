@@ -16,4 +16,4 @@ windows版本6.8
 
 `https://www.0-sec.org:888/pma/`
 
-![1.png](/Users/aresx/Documents/VulWiki/.resource/宝塔Phpmyadmin未授权访问漏洞/media/rId24.png)
+![1.png](./.resource/宝塔Phpmyadmin未授权访问漏洞/media/rId24.png)

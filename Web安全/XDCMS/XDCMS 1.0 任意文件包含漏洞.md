@@ -16,9 +16,9 @@ XDCMS 1.0
 
 漏洞文件：`api\index.php`
 
-![](/Users/aresx/Documents/VulWiki/.resource/XDCMS1.0任意文件包含漏洞/media/rId24.jpg)
+![](./.resource/XDCMS1.0任意文件包含漏洞/media/rId24.jpg)
 
-![](/Users/aresx/Documents/VulWiki/.resource/XDCMS1.0任意文件包含漏洞/media/rId25.jpg)
+![](./.resource/XDCMS1.0任意文件包含漏洞/media/rId25.jpg)
 
 安全过滤函数 发生鸡肋
 

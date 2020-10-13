@@ -91,7 +91,7 @@ Eyoucms 1.4.3
 
 登陆后台，在高级选项\>管理员\>新增管理员点击之后截包
 
-![](/Users/aresx/Documents/VulWiki/.resource/Eyoucms1.4.3csrf漏洞/media/rId26.png)
+![](./.resource/Eyoucms1.4.3csrf漏洞/media/rId26.png)
 
 ### poc
 
@@ -114,8 +114,8 @@ Eyoucms 1.4.3
 
 模拟管理员点击
 
-![](/Users/aresx/Documents/VulWiki/.resource/Eyoucms1.4.3csrf漏洞/media/rId28.png)
+![](./.resource/Eyoucms1.4.3csrf漏洞/media/rId28.png)
 
 添加完成
 
-![](/Users/aresx/Documents/VulWiki/.resource/Eyoucms1.4.3csrf漏洞/media/rId29.png)
+![](./.resource/Eyoucms1.4.3csrf漏洞/media/rId29.png)

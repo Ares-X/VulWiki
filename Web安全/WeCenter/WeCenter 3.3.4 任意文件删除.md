@@ -17,7 +17,7 @@ WeCenter 3.3.4
 **system/Zend/Http/Response/Stream.php:\_\_destruct()**
 方法中存在任意文件删除。
 
-![](/Users/aresx/Documents/VulWiki/.resource/WeCenter3.3.4任意文件删除/media/rId25.png)
+![](./.resource/WeCenter3.3.4任意文件删除/media/rId25.png)
 
 ### poc
 

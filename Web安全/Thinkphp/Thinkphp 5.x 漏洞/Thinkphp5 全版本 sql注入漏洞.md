@@ -65,7 +65,7 @@ ThinkPHP5全版本
 访问链接，即可触发 **SQL注入漏洞** 。（没开启 **app\_debug** 是无法看到
 **SQL** 报错信息的）
 
-![1.png](/Users/aresx/Documents/VulWiki/.resource/Thinkphp5全版本sql注入漏洞/media/rId26.png)
+![1.png](./.resource/Thinkphp5全版本sql注入漏洞/media/rId26.png)
 
 ### 漏洞分析
 
@@ -77,7 +77,7 @@ ThinkPHP5全版本
 **parseWhereExp** 方法分析查询表达式，然后再返回并继续调用 **select**
 方法准备开始构建 **select** 语句。
 
-![2.png](/Users/aresx/Documents/VulWiki/.resource/Thinkphp5全版本sql注入漏洞/media/rId28.png)
+![2.png](./.resource/Thinkphp5全版本sql注入漏洞/media/rId28.png)
 
 上面的 **\$this-\>builder** 为 **\\think\\db\\builder\\Mysql** 类，该类继承于 **Builder** 类，所以接着会调用 **Builder** 类的
 **select** 方法。在 **select** 方法中，程序会对 **SQL**
@@ -86,14 +86,14 @@ ThinkPHP5全版本
 分析函数，会发现其会调用生成查询条件 **SQL** 语句的 **buildWhere**
 函数。
 
-![3.png](/Users/aresx/Documents/VulWiki/.resource/Thinkphp5全版本sql注入漏洞/media/rId29.png)
+![3.png](./.resource/Thinkphp5全版本sql注入漏洞/media/rId29.png)
 
 继续跟进 **buildWhere** 函数，发现用户可控数据又被传入了
 **parseWhereItem** where子单元分析函数。我们发现当操作符等于 **EXP**
 时，将来自用户的数据直接拼接进了 **SQL** 语句，最终导致了
 **SQL注入漏洞** 。
 
-![4.png](/Users/aresx/Documents/VulWiki/.resource/Thinkphp5全版本sql注入漏洞/media/rId30.png)
+![4.png](./.resource/Thinkphp5全版本sql注入漏洞/media/rId30.png)
 
 ### 漏洞修复
 
@@ -103,7 +103,7 @@ ThinkPHP5全版本
 
 最后，再通过一张攻击流程图来回顾整个攻击过程。
 
-![5.png](/Users/aresx/Documents/VulWiki/.resource/Thinkphp5全版本sql注入漏洞/media/rId33.png)
+![5.png](./.resource/Thinkphp5全版本sql注入漏洞/media/rId33.png)
 
 参考链接
 --------

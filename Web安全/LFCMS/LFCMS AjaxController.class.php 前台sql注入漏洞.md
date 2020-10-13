@@ -12,7 +12,7 @@ LFCMS AjaxController.class.php 前台sql注入漏洞
 
 漏洞起始点位于`/Application/Home/Controller/AjaxController.class.php`文件中的`randMovie`方法，代码如下
 
-![1.png](/Users/aresx/Documents/VulWiki/.resource/LFCMSAjaxController.class.php前台sql注入漏洞/media/rId24.png)
+![1.png](./.resource/LFCMSAjaxController.class.php前台sql注入漏洞/media/rId24.png)
 
 第七行代码中调用了`Ajax`模型中的`randMovie`方法，同时`limit`和`category`是我们输入的可控的参数，跟进`randMovie`方法
 
@@ -30,7 +30,7 @@ LFCMS AjaxController.class.php 前台sql注入漏洞
 
 在这里注意到`$type`与`$limit`在`sql`语句执行时均没有被单引号包裹，直接拼接到语句当中，这里就存在了sql注入的可能，首先我们在`movie`表里放一条数据，看一下正常执行时sql语句是如何执行的
 
-![2.png](/Users/aresx/Documents/VulWiki/.resource/LFCMSAjaxController.class.php前台sql注入漏洞/media/rId25.png)
+![2.png](./.resource/LFCMSAjaxController.class.php前台sql注入漏洞/media/rId25.png)
 
 查看数据库日志可以得到如下`sql`语句
 
@@ -62,7 +62,7 @@ LFCMS AjaxController.class.php 前台sql注入漏洞
                 print(result)
                 break
 
-![3.png](/Users/aresx/Documents/VulWiki/.resource/LFCMSAjaxController.class.php前台sql注入漏洞/media/rId26.png)
+![3.png](./.resource/LFCMSAjaxController.class.php前台sql注入漏洞/media/rId26.png)
 
 相同原理的利用点同样不止一个，如`/Application/Home/Controller/PlayerController.class.php`文件中的`down`方法调用了模型`movie`中的`getPlayerUrl`方法，该方法的`pid`参数同样可以注入
 

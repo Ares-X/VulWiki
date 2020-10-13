@@ -38,4 +38,4 @@ POST穷举用户和密码代码如下
 
     Proxy-Connection: Keep-Alive
 
-![](/Users/aresx/Documents/VulWiki/.resource/致远OAA8-v5无视验证码撞库/media/rId24.shtml)
+![](./.resource/致远OAA8-v5无视验证码撞库/media/rId24.shtml)

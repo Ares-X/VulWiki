@@ -14,11 +14,11 @@ XDCMS 1.0
 
 注入存在于用户登录页面：`/index.php?m=member&f=login`
 
-![](/Users/aresx/Documents/VulWiki/.resource/XDCMS1.0sql注入漏洞(一)/media/rId24.jpg)
+![](./.resource/XDCMS1.0sql注入漏洞(一)/media/rId24.jpg)
 
 漏洞文件:`/modules/member/index.php`，`lines:112`
 
-![](/Users/aresx/Documents/VulWiki/.resource/XDCMS1.0sql注入漏洞(一)/media/rId25.jpg)
+![](./.resource/XDCMS1.0sql注入漏洞(一)/media/rId25.jpg)
 
     login_save()`在用户登录界面时调用，URL:`/index.php?m=member&f=login
 
@@ -39,8 +39,8 @@ htmlspecialchars()未设置第二个参数，导致仅对双引号"进行转义�
 >
 > ENT\_NOQUOTES：两种引号都不转换。
 
-![](/Users/aresx/Documents/VulWiki/.resource/XDCMS1.0sql注入漏洞(一)/media/rId26.jpg)
+![](./.resource/XDCMS1.0sql注入漏洞(一)/media/rId26.jpg)
 
 但此处注入由于过滤了`.`，无法通过information\_schema来获取表名，需去猜测，较为鸡肋
 
-![](/Users/aresx/Documents/VulWiki/.resource/XDCMS1.0sql注入漏洞(一)/media/rId27.jpg)
+![](./.resource/XDCMS1.0sql注入漏洞(一)/media/rId27.jpg)

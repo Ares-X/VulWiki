@@ -20,19 +20,19 @@
 
 上架抓包
 
-![](/Users/aresx/Documents/VulWiki/.resource/微擎低权限后台getshell/media/rId24.png)
+![](./.resource/微擎低权限后台getshell/media/rId24.png)
 
 改html内容为php
 
-![](/Users/aresx/Documents/VulWiki/.resource/微擎低权限后台getshell/media/rId25.png)
+![](./.resource/微擎低权限后台getshell/media/rId25.png)
 
 复制前台url
 
-![](/Users/aresx/Documents/VulWiki/.resource/微擎低权限后台getshell/media/rId26.png)
+![](./.resource/微擎低权限后台getshell/media/rId26.png)
 
 访问之
 
-![](/Users/aresx/Documents/VulWiki/.resource/微擎低权限后台getshell/media/rId27.png)
+![](./.resource/微擎低权限后台getshell/media/rId27.png)
 
 四、参考链接
 ------------

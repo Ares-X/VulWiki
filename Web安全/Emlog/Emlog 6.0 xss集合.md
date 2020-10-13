@@ -23,7 +23,7 @@ payload
 
 效果，可无视浏览器filter：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Emlog6.0xss集合/media/rId25.png)
+![](./.resource/Emlog6.0xss集合/media/rId25.png)
 
 ### 反射xss
 
@@ -32,14 +32,14 @@ admin/admin\_log,admin/sort.php,admin/link.php页面需要在表单中添加了h
 
 拦截抓包修改cookie中的token值如下：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Emlog6.0xss集合/media/rId27.png)
+![](./.resource/Emlog6.0xss集合/media/rId27.png)
 
 效果：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Emlog6.0xss集合/media/rId28.png)
+![](./.resource/Emlog6.0xss集合/media/rId28.png)
 
 ### 侧边栏存储性XSS
 
 为了同样是为了支持HTML代码的输出，没有转义对应的脚本代码标签，导致了存储性的XSS存在
 
-![](/Users/aresx/Documents/VulWiki/.resource/Emlog6.0xss集合/media/rId30.png)
+![](./.resource/Emlog6.0xss集合/media/rId30.png)

@@ -28,7 +28,7 @@ thinkphp系列框架过滤表达式注入多半采用I函数去调用think\_filt
 一般按照官方的写法，thinkphp提供了数据库链式操作，其中包含连贯操作和curd操作，在进行数据库CURD操作去更新数据的时候：
 举例update数据操作。
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp3.2.3update注入漏洞/media/rId25.jpg)
+![](./.resource/Thinkphp3.2.3update注入漏洞/media/rId25.jpg)
 
 where制定主键的数值，save方法去更新变量传进来的参数到数据库的指定位置。
 
@@ -285,26 +285,26 @@ id\[\]=bind&id\[\]=1'&money\[\]=1123&user=liao
 
 然后\$that = \$this
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp3.2.3update注入漏洞/media/rId26.jpg)
+![](./.resource/Thinkphp3.2.3update注入漏洞/media/rId26.jpg)
 
 然后下面的替换操作是将":0"替换为外部传进来的字符串，这里就可控了。
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp3.2.3update注入漏洞/media/rId27.jpg)
+![](./.resource/Thinkphp3.2.3update注入漏洞/media/rId27.jpg)
 
 替换后：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp3.2.3update注入漏洞/media/rId28.jpg)
+![](./.resource/Thinkphp3.2.3update注入漏洞/media/rId28.jpg)
 
 明显发现之前的`user`参数为:0然后被替换为了liao，这样就把:替换掉了。
 后面的:1明显是替换不掉的：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp3.2.3update注入漏洞/media/rId29.jpg)
+![](./.resource/Thinkphp3.2.3update注入漏洞/media/rId29.jpg)
 
 那么我们将id\[1\]数组的参数变为0呢？
 
     id[]=bind&id[]=0%27&money[]=1123&user=liao
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp3.2.3update注入漏洞/media/rId30.jpg)
+![](./.resource/Thinkphp3.2.3update注入漏洞/media/rId30.jpg)
 
 果然造成了注入：
 
@@ -312,7 +312,7 @@ id\[\]=bind&id\[\]=1'&money\[\]=1123&user=liao
 
     money[]=1123&user=liao&id[0]=bind&id[1]=0%20and%20(updatexml(1,concat(0x7e,(select%20user()),0x7e),1))
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp3.2.3update注入漏洞/media/rId32.jpg)
+![](./.resource/Thinkphp3.2.3update注入漏洞/media/rId32.jpg)
 
 参考链接
 --------

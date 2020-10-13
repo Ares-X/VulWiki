@@ -14,7 +14,7 @@ Spring Boot sql
 
 许您指定任何SQL查询，它将针对当前数据库自动执行。它可以是任何语句，包括插入，更新或删除。
 
-![](/Users/aresx/Documents/VulWiki/.resource/SpringBootsql/media/rId24.png)
+![](./.resource/SpringBootsql/media/rId24.png)
 
     spring.datasource.tomcat.url=jdbc:hsqldb:https://localhost:3002/xdb
 
@@ -26,7 +26,7 @@ Spring Boot sql
 
 我们可以在此处使用的技巧是增加到数据库的同时连接数。因此，我们可以更改JDBC连接字符串，增加连接数，然后将许多请求发送到应用程序以模拟繁重的负载。在负载下，应用程序将使用更新的恶意JDBC字符串创建新的数据库连接。我在Mysql本地对这项技术进行了测试，它的工作原理就像一个魅力。
 
-![](/Users/aresx/Documents/VulWiki/.resource/SpringBootsql/media/rId25.png)
+![](./.resource/SpringBootsql/media/rId25.png)
 
 除此之外，还有其他一些看起来有趣的属性，但实际上并没有真正的用处：
 

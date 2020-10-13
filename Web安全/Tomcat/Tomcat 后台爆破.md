@@ -36,38 +36,38 @@ Tomcat 后台爆破
 
 将数据包发送到Intruder模块，添加一个变量：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Tomcat后台爆破/media/rId24.jpg)
+![](./.resource/Tomcat后台爆破/media/rId24.jpg)
 
 在设置Payload的时候要使用自定义迭代器：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Tomcat后台爆破/media/rId25.jpg)
+![](./.resource/Tomcat后台爆破/media/rId25.jpg)
 
 由于登录令牌都是`base64`加密的，我们需要
 `[用户名]:[密码]`这样的格式进行`base64encde`才可以发送出去，我们设置三个迭代payload分别代表：用户名、:、密码、。
 
-![](/Users/aresx/Documents/VulWiki/.resource/Tomcat后台爆破/media/rId26.jpg)
+![](./.resource/Tomcat后台爆破/media/rId26.jpg)
 
 第一位设置用户名这类的字典，可以多个。
 
-![](/Users/aresx/Documents/VulWiki/.resource/Tomcat后台爆破/media/rId27.jpg)
+![](./.resource/Tomcat后台爆破/media/rId27.jpg)
 
 第二位设置`:`，只需要一个即可。
 
-![](/Users/aresx/Documents/VulWiki/.resource/Tomcat后台爆破/media/rId28.jpg)
+![](./.resource/Tomcat后台爆破/media/rId28.jpg)
 
 第三位设置密码，可以多个。
 
 然后设置一个编码器，选择`base64`这个函数：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Tomcat后台爆破/media/rId29.jpg)
+![](./.resource/Tomcat后台爆破/media/rId29.jpg)
 
 接下来再将url编码去掉，因为在base64密文里`=`会被编码成`%3d`。
 
-![](/Users/aresx/Documents/VulWiki/.resource/Tomcat后台爆破/media/rId30.jpg)
+![](./.resource/Tomcat后台爆破/media/rId30.jpg)
 
 设置完毕后，我们可以爆破了：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Tomcat后台爆破/media/rId31.jpg)
+![](./.resource/Tomcat后台爆破/media/rId31.jpg)
 
 参考链接
 --------

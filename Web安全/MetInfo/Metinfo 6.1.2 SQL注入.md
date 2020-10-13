@@ -175,9 +175,9 @@ check\_field方法，我们要做的就是保证程序能够顺利执行到add�
 
 至于为什么让他饶过第一层判断返回验证码错误，这样的话我们可以布尔盲注，否则只能进行时间注入。这里不多解释，自己研究一下。
 
-![](/Users/aresx/Documents/VulWiki/.resource/Metinfo6.1.2SQL注入/media/rId25.png)
+![](./.resource/Metinfo6.1.2SQL注入/media/rId25.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/Metinfo6.1.2SQL注入/media/rId26.png)
+![](./.resource/Metinfo6.1.2SQL注入/media/rId26.png)
 
 ### 解决方法
 

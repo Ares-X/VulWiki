@@ -46,17 +46,17 @@ middleware.php中添加
 
 在修复之前，参数id为32位时直接将其值赋值给\$this-\>id
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp6.1任意文件创建&删除漏洞/media/rId26.jpg)
+![](./.resource/Thinkphp6.1任意文件创建&删除漏洞/media/rId26.jpg)
 
 回溯该方法调用情况，在`vendor/topthink/framework/src/think/middleware/SessionInit.php`中发现调用
 
 同时从图中可知\$sessionId的值来源途径之一为cookie中获取，而\$cookieName默认值为"PHPSESSID"
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp6.1任意文件创建&删除漏洞/media/rId27.jpg)
+![](./.resource/Thinkphp6.1任意文件创建&删除漏洞/media/rId27.jpg)
 
 `handle()`方法作用是初始化session，在下面发现end()方法，在响应过程中一定会触发end()方法，因为在框架入口文件index.php中已经写明：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp6.1任意文件创建&删除漏洞/media/rId28.jpg)
+![](./.resource/Thinkphp6.1任意文件创建&删除漏洞/media/rId28.jpg)
 
 end()中存在save()方法：
 
@@ -75,31 +75,31 @@ save()位于`vendor/topthink/framework/src/think/session/Store.php`
 
 则\$this-\>data值为"admin"，因此如果写入session可控，则可写入任意内容文件。
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp6.1任意文件创建&删除漏洞/media/rId29.jpg)
+![](./.resource/Thinkphp6.1任意文件创建&删除漏洞/media/rId29.jpg)
 
 写入write()和创建文件delete()均是接口方法
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp6.1任意文件创建&删除漏洞/media/rId30.jpg)
+![](./.resource/Thinkphp6.1任意文件创建&删除漏洞/media/rId30.jpg)
 
 在程序处理过程中肯定会涉及其他类，因此搜索实现了该接口的类，发现：
 
 `vendor/topthink/framework/src/think/session/driver/File.php`符合条件
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp6.1任意文件创建&删除漏洞/media/rId31.jpg)
+![](./.resource/Thinkphp6.1任意文件创建&删除漏洞/media/rId31.jpg)
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp6.1任意文件创建&删除漏洞/media/rId32.jpg)
+![](./.resource/Thinkphp6.1任意文件创建&删除漏洞/media/rId32.jpg)
 
 ### 漏洞复现
 
 在上文write()方法中，文件名\$filename经过了getFIleName()的处理，而该方法会在传入参数前添加"sess\_"，也就是说文件名后部分可控，这是比较重要的一个点。
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp6.1任意文件创建&删除漏洞/media/rId34.jpg)
+![](./.resource/Thinkphp6.1任意文件创建&删除漏洞/media/rId34.jpg)
 
 \*\*任意文件删除：\*\*删除public目录下aaaaaaaaaaa.php
 
 > 需开启session，且仅Windows下可行
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp6.1任意文件创建&删除漏洞/media/rId35.jpg)
+![](./.resource/Thinkphp6.1任意文件创建&删除漏洞/media/rId35.jpg)
 
 **文件写入**：
 
@@ -107,9 +107,9 @@ save()位于`vendor/topthink/framework/src/think/session/Store.php`
 
     session('name', '<?php phpinfo();?>');
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp6.1任意文件创建&删除漏洞/media/rId36.jpg)
+![](./.resource/Thinkphp6.1任意文件创建&删除漏洞/media/rId36.jpg)
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp6.1任意文件创建&删除漏洞/media/rId37.jpg)
+![](./.resource/Thinkphp6.1任意文件创建&删除漏洞/media/rId37.jpg)
 
 写入和删除文件时的测试：
 

@@ -16,32 +16,32 @@ CLTPHP 5.5.3
 
 找到一个注册界面
 
-![2.png](/Users/aresx/Documents/VulWiki/.resource/CLTPHP5.5.3任意文件上传漏洞/media/rId24.png)
+![2.png](./.resource/CLTPHP5.5.3任意文件上传漏洞/media/rId24.png)
 
 随便注册一个用户，登陆后在设置里找到一个上传点
 
-![3.png](/Users/aresx/Documents/VulWiki/.resource/CLTPHP5.5.3任意文件上传漏洞/media/rId25.png)
+![3.png](./.resource/CLTPHP5.5.3任意文件上传漏洞/media/rId25.png)
 
 上传我们的一句话木马
 
-![4.png](/Users/aresx/Documents/VulWiki/.resource/CLTPHP5.5.3任意文件上传漏洞/media/rId26.png)
+![4.png](./.resource/CLTPHP5.5.3任意文件上传漏洞/media/rId26.png)
 
 查看返回包，上传成功
 
-![5.png](/Users/aresx/Documents/VulWiki/.resource/CLTPHP5.5.3任意文件上传漏洞/media/rId27.png)
+![5.png](./.resource/CLTPHP5.5.3任意文件上传漏洞/media/rId27.png)
 
 访问失败，猜测返回路径可能不是绝对路径
 
-![6.png](/Users/aresx/Documents/VulWiki/.resource/CLTPHP5.5.3任意文件上传漏洞/media/rId28.png)
+![6.png](./.resource/CLTPHP5.5.3任意文件上传漏洞/media/rId28.png)
 
 通过报错信息查找关键词，发现存在public目录 那再把public加上再试试\~
 success！
 
-![7.png](/Users/aresx/Documents/VulWiki/.resource/CLTPHP5.5.3任意文件上传漏洞/media/rId29.png)
+![7.png](./.resource/CLTPHP5.5.3任意文件上传漏洞/media/rId29.png)
 
 菜刀连接
 
-![8.png](/Users/aresx/Documents/VulWiki/.resource/CLTPHP5.5.3任意文件上传漏洞/media/rId30.png)
+![8.png](./.resource/CLTPHP5.5.3任意文件上传漏洞/media/rId30.png)
 
 ### poc
 
@@ -73,11 +73,11 @@ success！
 
 **使用方法**：把payload.py和一句话.php放到同一文件夹下，
 
-![9.png](/Users/aresx/Documents/VulWiki/.resource/CLTPHP5.5.3任意文件上传漏洞/media/rId32.png)
+![9.png](./.resource/CLTPHP5.5.3任意文件上传漏洞/media/rId32.png)
 
 cmd执行 `python payload.py www.0-sec.org`
 
-![10.png](/Users/aresx/Documents/VulWiki/.resource/CLTPHP5.5.3任意文件上传漏洞/media/rId33.png)
+![10.png](./.resource/CLTPHP5.5.3任意文件上传漏洞/media/rId33.png)
 
 参考链接
 --------

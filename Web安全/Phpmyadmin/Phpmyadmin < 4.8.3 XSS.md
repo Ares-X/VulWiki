@@ -52,7 +52,7 @@ Phpmyadmin \< 4.8.3
 然后构造http://127.0.0.1/phpMyAdmin-4.8.2/server\_privileges.php?change\_copy=aa&old\_username=test&old\_hostname=127.0.0.1&mode=5
 参数请求，change\_copy随便给个参数即可，mode必须大于4否则新添加的数据会被删除。
 
-![1.png](/Users/aresx/Documents/VulWiki/.resource/Phpmyadmin<4.8.3XSS/media/rId24.png)可以看到\$GLOBALS\[\'xz\'\]=\'aliyun\'已经成功赋值。
+![1.png](./.resource/Phpmyadmin<4.8.3XSS/media/rId24.png)可以看到\$GLOBALS\[\'xz\'\]=\'aliyun\'已经成功赋值。
 
 ### 利用构造
 
@@ -151,7 +151,7 @@ Phpmyadmin \< 4.8.3
         }
 
 这里注意\_\_construct中的register\_shutdown\_function函数，看php
-manual，意思是说当脚本运行结束或遇到exit后会执行该response函数，![2.png](/Users/aresx/Documents/VulWiki/.resource/Phpmyadmin<4.8.3XSS/media/rId26.png)**意思就是说只要哪里实例化了Response类，在程序运行结束后就会执行response函数**。真好，回到server\_privileges.php::34行，发现有实例化Response。
+manual，意思是说当脚本运行结束或遇到exit后会执行该response函数，![2.png](./.resource/Phpmyadmin<4.8.3XSS/media/rId26.png)**意思就是说只要哪里实例化了Response类，在程序运行结束后就会执行response函数**。真好，回到server\_privileges.php::34行，发现有实例化Response。
 
     $response = Response::getInstance();
     $header   = $response->getHeader();

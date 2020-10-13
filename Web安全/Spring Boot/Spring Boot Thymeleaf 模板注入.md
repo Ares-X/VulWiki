@@ -22,7 +22,7 @@ DispatcherServlet 前端控制器的来拦截请求的。而在 Spring Boot 中
 
 例如，我们来解析 /users 这个请求
 
-![1.png](/Users/aresx/Documents/VulWiki/.resource/SpringBootThymeleaf模板注入/media/rId25.png)
+![1.png](./.resource/SpringBootThymeleaf模板注入/media/rId25.png)
 
 1.  DispatcherServlet 前端控制器拦截请求 /users
 
@@ -184,7 +184,7 @@ payload
     Host: www.0-sec.org:8090
     Connection: close
 
-![2.png](/Users/aresx/Documents/VulWiki/.resource/SpringBootThymeleaf模板注入/media/rId33.png)
+![2.png](./.resource/SpringBootThymeleaf模板注入/media/rId33.png)
 
 #### 第二种
 

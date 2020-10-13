@@ -58,7 +58,7 @@ CLTPHP 5.8及之前版本
      
     POST: sqlfilename=..\\..\\1.txt
 
-![11.png](/Users/aresx/Documents/VulWiki/.resource/CLTPHP5.8后台任意文件删除漏洞/media/rId26.png)
+![11.png](./.resource/CLTPHP5.8后台任意文件删除漏洞/media/rId26.png)
 
 ### 修复建议
 

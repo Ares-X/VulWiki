@@ -84,9 +84,9 @@ Pluck CMS后台另两处任意代码执行
 
 所以只要把\$cont2变成我们的payload即可
 
-![](/Users/aresx/Documents/VulWiki/.resource/PluckCMS后台另两处任意代码执行/media/rId25.shtml)
+![](./.resource/PluckCMS后台另两处任意代码执行/media/rId25.shtml)
 
-![](/Users/aresx/Documents/VulWiki/.resource/PluckCMS后台另两处任意代码执行/media/rId26.shtml)
+![](./.resource/PluckCMS后台另两处任意代码执行/media/rId26.shtml)
 
 #### 第二处：安装模版+文件包含导致任意命令执行
 
@@ -98,17 +98,17 @@ Pluck CMS后台另两处任意代码执行
 
 然后打包成shell.zip，直接上传主题
 
-![](/Users/aresx/Documents/VulWiki/.resource/PluckCMS后台另两处任意代码执行/media/rId29.shtml)
+![](./.resource/PluckCMS后台另两处任意代码执行/media/rId29.shtml)
 
-![](/Users/aresx/Documents/VulWiki/.resource/PluckCMS后台另两处任意代码执行/media/rId30.shtml)
+![](./.resource/PluckCMS后台另两处任意代码执行/media/rId30.shtml)
 
 发现确实上传并且解压成功
 
 但是由于目录下有.htaccess文件，直接把php设置为不可解析，所以无法直接访问
 
-![](/Users/aresx/Documents/VulWiki/.resource/PluckCMS后台另两处任意代码执行/media/rId31.shtml)
+![](./.resource/PluckCMS后台另两处任意代码执行/media/rId31.shtml)
 
-![](/Users/aresx/Documents/VulWiki/.resource/PluckCMS后台另两处任意代码执行/media/rId32.shtml)
+![](./.resource/PluckCMS后台另两处任意代码执行/media/rId32.shtml)
 
 ##### 2、文件包含突破
 
@@ -116,11 +116,11 @@ Pluck CMS后台另两处任意代码执行
 
 首先看到admin.php中关于theme的部分
 
-![](/Users/aresx/Documents/VulWiki/.resource/PluckCMS后台另两处任意代码执行/media/rId34.shtml)
+![](./.resource/PluckCMS后台另两处任意代码执行/media/rId34.shtml)
 
 跟进 data/inc/theme.php，发现调用了get\_themes()方法
 
-![](/Users/aresx/Documents/VulWiki/.resource/PluckCMS后台另两处任意代码执行/media/rId35.shtml)
+![](./.resource/PluckCMS后台另两处任意代码执行/media/rId35.shtml)
 
 跟进 functions.all.php，查看get\_themes()方法
 
@@ -159,8 +159,8 @@ Pluck CMS后台另两处任意代码执行
 
 上传安装主题，然后点击回到主题页，此时触发文件包含。
 
-![](/Users/aresx/Documents/VulWiki/.resource/PluckCMS后台另两处任意代码执行/media/rId37.shtml)
+![](./.resource/PluckCMS后台另两处任意代码执行/media/rId37.shtml)
 
-![](/Users/aresx/Documents/VulWiki/.resource/PluckCMS后台另两处任意代码执行/media/rId38.shtml)
+![](./.resource/PluckCMS后台另两处任意代码执行/media/rId38.shtml)
 
-![](/Users/aresx/Documents/VulWiki/.resource/PluckCMS后台另两处任意代码执行/media/rId39.shtml)
+![](./.resource/PluckCMS后台另两处任意代码执行/media/rId39.shtml)

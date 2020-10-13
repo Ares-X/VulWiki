@@ -20,11 +20,11 @@ Thinkphp 6.0.\*-dev 反序列化漏洞
 
 ### poc演示截图
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp6.0.*-dev反序列化漏洞/media/rId27.png)
+![](./.resource/Thinkphp6.0.*-dev反序列化漏洞/media/rId27.png)
 
 ### 调用链
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp6.0.*-dev反序列化漏洞/media/rId29.png)
+![](./.resource/Thinkphp6.0.*-dev反序列化漏洞/media/rId29.png)
 
 ### 单步调试
 
@@ -128,7 +128,7 @@ Thinkphp 6.0.\*-dev 反序列化漏洞
 
 后面的链跟之前的一样，这里就不分析了
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp6.0.*-dev反序列化漏洞/media/rId31.png)
+![](./.resource/Thinkphp6.0.*-dev反序列化漏洞/media/rId31.png)
 
 ### poc v6.0.\*-dev
 

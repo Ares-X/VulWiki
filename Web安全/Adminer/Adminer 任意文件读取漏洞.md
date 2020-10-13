@@ -44,17 +44,17 @@ Mysql可以使用`LOAD DATA INFILE`来读取文件，通常有两种用法，分
 
 (客户端-\>\>服务端: Load data infile '/etc/passwd'... )
 
-![1.png](/Users/aresx/Documents/VulWiki/.resource/Adminer任意文件读取漏洞/media/rId26.png)
+![1.png](./.resource/Adminer任意文件读取漏洞/media/rId26.png)
 
 -   2、服务器对客户端说：好啊，读取你本地的/etc/passwd文件
     (服务端-\>\>客户端: Response TABULAR)
 
-![2.png](/Users/aresx/Documents/VulWiki/.resource/Adminer任意文件读取漏洞/media/rId27.png)
+![2.png](./.resource/Adminer任意文件读取漏洞/media/rId27.png)
 
 -   3、客户端将data文件的内容发给服务器 (客户端-\>\>服务端:
     etc/passwd的内容)
 
-![3.png](/Users/aresx/Documents/VulWiki/.resource/Adminer任意文件读取漏洞/media/rId28.png)
+![3.png](./.resource/Adminer任意文件读取漏洞/media/rId28.png)
 
 而这里存在逻辑错误，即服务端可以不管客户端的请求，直接向客户端发送一个Response
 TABULAR，
@@ -79,7 +79,7 @@ TABULAR，
 
 这里用到的脚本是`https://doanload.0-sec.org/Web安全/Adminer/Rogue-MySql-Server-master.zip`
 
-![4.png](/Users/aresx/Documents/VulWiki/.resource/Adminer任意文件读取漏洞/media/rId29.png)
+![4.png](./.resource/Adminer任意文件读取漏洞/media/rId29.png)
 
 这里我们将端口改成了3308 读取目标机器上的test.php.
 
@@ -95,27 +95,27 @@ TABULAR，
 
 监听后会生成一个mysql.log文件
 
-![5.png](/Users/aresx/Documents/VulWiki/.resource/Adminer任意文件读取漏洞/media/rId30.png)
+![5.png](./.resource/Adminer任意文件读取漏洞/media/rId30.png)
 
 接着我们用phpmyadmin和adminer访问一下
 
-![6.png](/Users/aresx/Documents/VulWiki/.resource/Adminer任意文件读取漏洞/media/rId31.png)
+![6.png](./.resource/Adminer任意文件读取漏洞/media/rId31.png)
 
 登陆进去的状态，报错不用管
 
-![7.png](/Users/aresx/Documents/VulWiki/.resource/Adminer任意文件读取漏洞/media/rId32.png)
+![7.png](./.resource/Adminer任意文件读取漏洞/media/rId32.png)
 
 在log文件里可以读到test.php的文件内容
 
-![8.png](/Users/aresx/Documents/VulWiki/.resource/Adminer任意文件读取漏洞/media/rId33.png)
+![8.png](./.resource/Adminer任意文件读取漏洞/media/rId33.png)
 
 adminer也一样，不过adminer默认开启远程连接，所以挖src的时候碰到adminer就等于碰到金矿hh
 
-![9.png](/Users/aresx/Documents/VulWiki/.resource/Adminer任意文件读取漏洞/media/rId34.png)
+![9.png](./.resource/Adminer任意文件读取漏洞/media/rId34.png)
 
-![10.png](/Users/aresx/Documents/VulWiki/.resource/Adminer任意文件读取漏洞/media/rId35.png)
+![10.png](./.resource/Adminer任意文件读取漏洞/media/rId35.png)
 
-![11.png](/Users/aresx/Documents/VulWiki/.resource/Adminer任意文件读取漏洞/media/rId36.png)
+![11.png](./.resource/Adminer任意文件读取漏洞/media/rId36.png)
 
 明显发现adminer比phpmyadmin的数据量要少.
 

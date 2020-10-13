@@ -62,9 +62,9 @@ PbootCMS v2.0.7
 
 `{pboot:if(1)}OK{/pboot:if}`
 
-![](/Users/aresx/Documents/VulWiki/.resource/PbootCMSv2.0.7模板注入/media/rId26.png)
+![](./.resource/PbootCMSv2.0.7模板注入/media/rId26.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/PbootCMSv2.0.7模板注入/media/rId27.png)
+![](./.resource/PbootCMSv2.0.7模板注入/media/rId27.png)
 
 可以看到这里的模板语句已经解析了。所以这里是存在模板注入的。
 
@@ -112,7 +112,7 @@ php的语法有一些具有函数结构，但是却不是函数的关键字。
 
     意思就是`echo a`=\>`define(a, 'a');echo a;`
 
-![](/Users/aresx/Documents/VulWiki/.resource/PbootCMSv2.0.7模板注入/media/rId28.png)
+![](./.resource/PbootCMSv2.0.7模板注入/media/rId28.png)
 
 那么就可以不使用引号，从而构造字符串了。
 
@@ -126,7 +126,7 @@ php的语法有一些具有函数结构，但是却不是函数的关键字。
 
 在程序里打印一下看看
 
-![](/Users/aresx/Documents/VulWiki/.resource/PbootCMSv2.0.7模板注入/media/rId29.png)
+![](./.resource/PbootCMSv2.0.7模板注入/media/rId29.png)
 
 `.`和`/`都有，但是直接用数组的方式去取是会报错的。
 
@@ -135,7 +135,7 @@ php的语法有一些具有函数结构，但是却不是函数的关键字。
     var_dump(array(__FILE__)[0][-4]); //=.
     var_dump(array(__FILE__)[0][-21]); //=/
 
-![](/Users/aresx/Documents/VulWiki/.resource/PbootCMSv2.0.7模板注入/media/rId30.png)
+![](./.resource/PbootCMSv2.0.7模板注入/media/rId30.png)
 
 现在就缺数字了，而且该数字还必须是String型的数字。
 
@@ -211,7 +211,7 @@ PHP下还有带有数字的常量，例如`__LINE__`、`__PHP_VERSION__`，但�
 
 例如：`http://www.0-sec.org/?keyword=123&page=0123456789`
 
-![](/Users/aresx/Documents/VulWiki/.resource/PbootCMSv2.0.7模板注入/media/rId31.png)
+![](./.resource/PbootCMSv2.0.7模板注入/media/rId31.png)
 
 且该常量为string类型。
 
@@ -221,7 +221,7 @@ PHP下还有带有数字的常量，例如`__LINE__`、`__PHP_VERSION__`，但�
 
 1.  上传图片马
 
-![](/Users/aresx/Documents/VulWiki/.resource/PbootCMSv2.0.7模板注入/media/rId33.png)
+![](./.resource/PbootCMSv2.0.7模板注入/media/rId33.png)
 
 1.  得到路径`static/upload/image/20200417/1587111957160139.png`
 
@@ -233,11 +233,11 @@ PHP下还有带有数字的常量，例如`__LINE__`、`__PHP_VERSION__`，但�
 
 3.  模板注入
 
-![](/Users/aresx/Documents/VulWiki/.resource/PbootCMSv2.0.7模板注入/media/rId34.jpg)
+![](./.resource/PbootCMSv2.0.7模板注入/media/rId34.jpg)
 
 4.  访问带有分页类且又能输出公司地址的地方
 
-![](/Users/aresx/Documents/VulWiki/.resource/PbootCMSv2.0.7模板注入/media/rId35.png)
+![](./.resource/PbootCMSv2.0.7模板注入/media/rId35.png)
 
 Getshell成功！！！
 
@@ -249,7 +249,7 @@ Getshell成功！！！
 
 P师傅理解了我的需求后，直接甩了个payload给我
 
-![](/Users/aresx/Documents/VulWiki/.resource/PbootCMSv2.0.7模板注入/media/rId37.png)
+![](./.resource/PbootCMSv2.0.7模板注入/media/rId37.png)
 
 看到后我才想起，以前就看过P师傅的一篇文章里面的一个trick：在一个函数的括号前面加入一些控制字符，PHP一样能识别改函数并执行。利用这个trick就可以执行任意函数了。
 
@@ -261,15 +261,15 @@ P师傅理解了我的需求后，直接甩了个payload给我
 
 向模板注入该payload：
 
-![](/Users/aresx/Documents/VulWiki/.resource/PbootCMSv2.0.7模板注入/media/rId38.jpg)
+![](./.resource/PbootCMSv2.0.7模板注入/media/rId38.jpg)
 
 访问前台触发点：
 
-![](/Users/aresx/Documents/VulWiki/.resource/PbootCMSv2.0.7模板注入/media/rId39.png)
+![](./.resource/PbootCMSv2.0.7模板注入/media/rId39.png)
 
 则会去`http://mock.x.dnshia.cn/shell`下载webshell，并保存到`1.php`
 
-![](/Users/aresx/Documents/VulWiki/.resource/PbootCMSv2.0.7模板注入/media/rId40.png)
+![](./.resource/PbootCMSv2.0.7模板注入/media/rId40.png)
 
 参考链接
 --------

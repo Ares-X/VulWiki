@@ -128,12 +128,12 @@ dedecms的/member/resetpassword.php就是用来处理用户密码重置的问题
 
 在找回密码处，点击通过安全问题取回。
 
-![](/Users/aresx/Documents/VulWiki/.resource/【开启会员注册】(SSV-97074)DeDecms前台任意用户密码修改/media/rId26.png)
+![](./.resource/【开启会员注册】(SSV-97074)DeDecms前台任意用户密码修改/media/rId26.png)
 
 填写信息并抓包，修改id和userid为想要重置密码的对象，再加上以上分析内容，发包即可得到修改密码url
 
-![](/Users/aresx/Documents/VulWiki/.resource/【开启会员注册】(SSV-97074)DeDecms前台任意用户密码修改/media/rId27.png)
+![](./.resource/【开启会员注册】(SSV-97074)DeDecms前台任意用户密码修改/media/rId27.png)
 
 进入该url，修改密码。
 
-![](/Users/aresx/Documents/VulWiki/.resource/【开启会员注册】(SSV-97074)DeDecms前台任意用户密码修改/media/rId28.png)
+![](./.resource/【开启会员注册】(SSV-97074)DeDecms前台任意用户密码修改/media/rId28.png)

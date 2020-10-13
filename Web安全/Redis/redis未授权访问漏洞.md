@@ -25,7 +25,7 @@ redis未授权访问漏洞
     (2)protected-mode设为no
 
 如图
-![](/Users/aresx/Documents/VulWiki/.resource/redis未授权访问漏洞/media/rId25.png)![](/Users/aresx/Documents/VulWiki/.resource/redis未授权访问漏洞/media/rId26.png)
+![](./.resource/redis未授权访问漏洞/media/rId25.png)![](./.resource/redis未授权访问漏洞/media/rId26.png)
 
 ##### 2.攻击者常用命令
 
@@ -49,8 +49,8 @@ redis未授权访问漏洞
 
     命令：nmap -A -p 6379 --script redis-info ipaddress
 
-![](/Users/aresx/Documents/VulWiki/.resource/redis未授权访问漏洞/media/rId30.png)
+![](./.resource/redis未授权访问漏洞/media/rId30.png)
 
 ##### 5.连接Redis服务器
 
-![](/Users/aresx/Documents/VulWiki/.resource/redis未授权访问漏洞/media/rId32.png)
+![](./.resource/redis未授权访问漏洞/media/rId32.png)

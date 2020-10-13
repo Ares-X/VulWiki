@@ -50,9 +50,9 @@ V1.0.0.20200506\_beta
       </body>
     </html>
 
-![1.png](/Users/aresx/Documents/VulWiki/.resource/FastAdmincsrf+存储型xss漏洞/media/rId25.png)
+![1.png](./.resource/FastAdmincsrf+存储型xss漏洞/media/rId25.png)
 
-![2.png](/Users/aresx/Documents/VulWiki/.resource/FastAdmincsrf+存储型xss漏洞/media/rId26.png)
+![2.png](./.resource/FastAdmincsrf+存储型xss漏洞/media/rId26.png)
 
 参考链接
 --------

@@ -25,11 +25,11 @@ MKCMS v6.2
 
 全局搜`DATA_NAME`变量，是安装时候设置的数据库名
 
-![](/Users/aresx/Documents/VulWiki/.resource/MKCMSv6.2备份文件路径可猜解/media/rId24.png)
+![](./.resource/MKCMSv6.2备份文件路径可猜解/media/rId24.png)
 
 默认的`DATA_NAME`值是`movie`
 
-![](/Users/aresx/Documents/VulWiki/.resource/MKCMSv6.2备份文件路径可猜解/media/rId25.png)
+![](./.resource/MKCMSv6.2备份文件路径可猜解/media/rId25.png)
 
 参考链接
 --------

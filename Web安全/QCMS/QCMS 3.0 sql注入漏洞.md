@@ -14,7 +14,7 @@ QCMS 3.0
 
 在后台下载管理处
 
-![](/Users/aresx/Documents/VulWiki/.resource/QCMS3.0sql注入漏洞/media/rId24.png)
+![](./.resource/QCMS3.0sql注入漏洞/media/rId24.png)
 
 构造payload
 

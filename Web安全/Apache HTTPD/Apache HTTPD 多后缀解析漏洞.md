@@ -28,14 +28,14 @@ Apache HTTPD
 
 首先正常上传一个 `xxx.php` 文件
 
-![](/Users/aresx/Documents/VulWiki/.resource/ApacheHTTPD多后缀解析漏洞/media/rId24.png)
+![](./.resource/ApacheHTTPD多后缀解析漏洞/media/rId24.png)
 
 这里可以看到上传失败了。我们更改一下文件后缀名
 
 将上传文件命名为 `xxx.php.jpg`
 
-![](/Users/aresx/Documents/VulWiki/.resource/ApacheHTTPD多后缀解析漏洞/media/rId25.png)
+![](./.resource/ApacheHTTPD多后缀解析漏洞/media/rId25.png)
 
 通过游览器访问上传的"jpg文件"
 
-![](/Users/aresx/Documents/VulWiki/.resource/ApacheHTTPD多后缀解析漏洞/media/rId26.png)
+![](./.resource/ApacheHTTPD多后缀解析漏洞/media/rId26.png)

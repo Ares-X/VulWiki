@@ -151,7 +151,7 @@ post进入的execution参数值即`encoded`，在经过`decrypt`解密后，最�
 
 同时要注意存在一个base64的过程
 
-![](/Users/aresx/Documents/VulWiki/.resource/ApereoCAS4.Xexecution参数反序列化漏洞/media/rId25.png)
+![](./.resource/ApereoCAS4.Xexecution参数反序列化漏洞/media/rId25.png)
 
 因此要生成payload，即先用`encode`加密后再进行一次base64编码。其中`/etc/keystore.jceks`在spring-webflow-client-repo-1.0.0.jar/etc/目录下
 
@@ -180,19 +180,19 @@ post进入的execution参数值即`encoded`，在经过`decrypt`解密后，最�
 
 运行代码
 
-![](/Users/aresx/Documents/VulWiki/.resource/ApereoCAS4.Xexecution参数反序列化漏洞/media/rId27.png)
+![](./.resource/ApereoCAS4.Xexecution参数反序列化漏洞/media/rId27.png)
 
 接着
 
-![](/Users/aresx/Documents/VulWiki/.resource/ApereoCAS4.Xexecution参数反序列化漏洞/media/rId28.png)
+![](./.resource/ApereoCAS4.Xexecution参数反序列化漏洞/media/rId28.png)
 
 服务器监听：
 
-![](/Users/aresx/Documents/VulWiki/.resource/ApereoCAS4.Xexecution参数反序列化漏洞/media/rId29.png)
+![](./.resource/ApereoCAS4.Xexecution参数反序列化漏洞/media/rId29.png)
 
 完整过程动图
 
-![](/Users/aresx/Documents/VulWiki/.resource/ApereoCAS4.Xexecution参数反序列化漏洞/media/rId30.gif)
+![](./.resource/ApereoCAS4.Xexecution参数反序列化漏洞/media/rId30.gif)
 
 ### Apereo CAS 4.1.7 ～ 4.2.X 漏洞复现
 
@@ -274,16 +274,16 @@ cas-server-core-util.jar!/org/jasig/cas/util/WebflowCipherExecutor.java:14
 
 修改cas.properties，使其支持http，并修改webflow相关默认密钥
 
-![](/Users/aresx/Documents/VulWiki/.resource/ApereoCAS4.Xexecution参数反序列化漏洞/media/rId34.png)
+![](./.resource/ApereoCAS4.Xexecution参数反序列化漏洞/media/rId34.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/ApereoCAS4.Xexecution参数反序列化漏洞/media/rId35.png)
+![](./.resource/ApereoCAS4.Xexecution参数反序列化漏洞/media/rId35.png)
 
     webflow.encryption.key=C4SBogp_badO82wC
     webflow.signing.key=8_G6JMTdkxiJ5rN0tqFrEOQj200VoxGrRzAp7bvjMFSGdA2IOzdFRsGv3m3GMNVmoSJ0O4miIBrYCHx_FWP4oQ
 
 利用 apereocas42.jar 生成加密参数，由于依赖包中存在c3p0
 
-![](/Users/aresx/Documents/VulWiki/.resource/ApereoCAS4.Xexecution参数反序列化漏洞/media/rId36.png)
+![](./.resource/ApereoCAS4.Xexecution参数反序列化漏洞/media/rId36.png)
 
 因此可以利用其做gadget
 
@@ -313,11 +313,11 @@ cas-server-core-util.jar!/org/jasig/cas/util/WebflowCipherExecutor.java:14
 
 截取cas的登录包，替换execution参数
 
-![](/Users/aresx/Documents/VulWiki/.resource/ApereoCAS4.Xexecution参数反序列化漏洞/media/rId37.gif)
+![](./.resource/ApereoCAS4.Xexecution参数反序列化漏洞/media/rId37.gif)
 
 vps上可以看到c3p0远程加载了class
 
-![](/Users/aresx/Documents/VulWiki/.resource/ApereoCAS4.Xexecution参数反序列化漏洞/media/rId38.png)
+![](./.resource/ApereoCAS4.Xexecution参数反序列化漏洞/media/rId38.png)
 
 参考链接
 --------

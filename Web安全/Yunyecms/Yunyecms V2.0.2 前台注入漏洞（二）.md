@@ -16,19 +16,19 @@ yunyecms 2.0.2
 
 问题出现在前台`me***.php`文件中，自定义表单customform中的userid从cookie中获取，截取一段数据包可以看到cookie的userid如下：
 
-![](/Users/aresx/Documents/VulWiki/.resource/YunyecmsV2.0.2前台注入漏洞(二)/media/rId24.png)
+![](./.resource/YunyecmsV2.0.2前台注入漏洞(二)/media/rId24.png)
 
 经过了加密处理，根据解密算法**yunyecms\_strdecode**可以在corefun.php找到对应的加解密算法
 
-![](/Users/aresx/Documents/VulWiki/.resource/YunyecmsV2.0.2前台注入漏洞(二)/media/rId25.png)
+![](./.resource/YunyecmsV2.0.2前台注入漏洞(二)/media/rId25.png)
 
 因为cookie里的userid可控因此我们根据算法流程我们可以在cookie中伪造userid值。还是用刚刚以上截取的userid测试。
 
-![](/Users/aresx/Documents/VulWiki/.resource/YunyecmsV2.0.2前台注入漏洞(二)/media/rId26.png)
+![](./.resource/YunyecmsV2.0.2前台注入漏洞(二)/media/rId26.png)
 
 可以看到真实的userid为9。构造一个SQL注入，生成如下payload：
 
-![](/Users/aresx/Documents/VulWiki/.resource/YunyecmsV2.0.2前台注入漏洞(二)/media/rId27.png)
+![](./.resource/YunyecmsV2.0.2前台注入漏洞(二)/media/rId27.png)
 
     YmM0OWM5ZWY1ODk5ZGRkNzM0T1NjZ1lXNWtJSE5zWldWd0tEVXA4ZDdlNzk5NTliNDQyYTI1ZDE0ZWUzODZmZDI4MzY5OTM0YQ==
 
@@ -59,23 +59,23 @@ payload生成代码front-test.php为：
 
 继续追溯可控的userid,可以看到userid经过步骤`3->4->5`传递到了pagelist函数中
 
-![](/Users/aresx/Documents/VulWiki/.resource/YunyecmsV2.0.2前台注入漏洞(二)/media/rId28.png)
+![](./.resource/YunyecmsV2.0.2前台注入漏洞(二)/media/rId28.png)
 
 跟入pagelist函数，将\$where拼接到了sql查询语句中\$sqlcnt,然后交给了前几次SQL注入都出现的SQL查询函数**GetCount**中。
 
-![](/Users/aresx/Documents/VulWiki/.resource/YunyecmsV2.0.2前台注入漏洞(二)/media/rId29.png)
+![](./.resource/YunyecmsV2.0.2前台注入漏洞(二)/media/rId29.png)
 
 详细查看下该函数，直接进行了sql查询。
 
-![](/Users/aresx/Documents/VulWiki/.resource/YunyecmsV2.0.2前台注入漏洞(二)/media/rId30.png)
+![](./.resource/YunyecmsV2.0.2前台注入漏洞(二)/media/rId30.png)
 
 附上截
 
-![](/Users/aresx/Documents/VulWiki/.resource/YunyecmsV2.0.2前台注入漏洞(二)/media/rId31.png)
+![](./.resource/YunyecmsV2.0.2前台注入漏洞(二)/media/rId31.png)
 
 手工有点麻烦，又想丢入sqlmap怎么办，由于userid经过了加密和编码处理，于是根据算法流程写一个tamper就可以很好的解决了，
 
-![](/Users/aresx/Documents/VulWiki/.resource/YunyecmsV2.0.2前台注入漏洞(二)/media/rId32.png)
+![](./.resource/YunyecmsV2.0.2前台注入漏洞(二)/media/rId32.png)
 
 对应tamper的的脚本为
 

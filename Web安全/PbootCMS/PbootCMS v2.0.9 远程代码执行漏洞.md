@@ -14,11 +14,11 @@ PbootCMS v2.0.9
 
 ### 漏洞分析
 
-漏洞可以利用的原因在于apps\\home\\controller\\ParserController.php中parserIfLabel函数对if标签解析时安全检验做的不够全面，函数主要存在两处安全校验，如图![1.png](/Users/aresx/Documents/VulWiki/.resource/PbootCMSv2.0.9远程代码执行漏洞/media/rId25.png)
+漏洞可以利用的原因在于apps\\home\\controller\\ParserController.php中parserIfLabel函数对if标签解析时安全检验做的不够全面，函数主要存在两处安全校验，如图![1.png](./.resource/PbootCMSv2.0.9远程代码执行漏洞/media/rId25.png)
 
 对于第一处if判断，我们可以在函数名和括号之间插入控制字符，如\\x01，这样即可绕过该处正则校验，并且可以正常执行php代码，该trick来源于KCon2019的一个议题
 
-![2.png](/Users/aresx/Documents/VulWiki/.resource/PbootCMSv2.0.9远程代码执行漏洞/media/rId26.png)
+![2.png](./.resource/PbootCMSv2.0.9远程代码执行漏洞/media/rId26.png)
 
 完整的ppt可以参见文末链接
 
@@ -36,20 +36,20 @@ PbootCMS v2.0.9
 
 https://github.com/hnaoyun/PbootCMS
 
-![3.png](/Users/aresx/Documents/VulWiki/.resource/PbootCMSv2.0.9远程代码执行漏洞/media/rId28.png)
+![3.png](./.resource/PbootCMSv2.0.9远程代码执行漏洞/media/rId28.png)
 
 安装后去https://www.pbootcms.com/freesn/获取授权码，登录后台添加授权码即可
 
 正常登录后台，在站点信息中插入如下代码并且保存
 
-![4.png](/Users/aresx/Documents/VulWiki/.resource/PbootCMSv2.0.9远程代码执行漏洞/media/rId29.png)
+![4.png](./.resource/PbootCMSv2.0.9远程代码执行漏洞/media/rId29.png)
 
-![5.png](/Users/aresx/Documents/VulWiki/.resource/PbootCMSv2.0.9远程代码执行漏洞/media/rId30.png)
+![5.png](./.resource/PbootCMSv2.0.9远程代码执行漏洞/media/rId30.png)
 
 保存后我们来到前台首页，使用burpsuite进行抓包，将数据包中的cookie头设为assert，Proxy-Connection头设置为想要执行的php代码，测试图片中使用的代码为system(\'whoami\')
 如图
 
-![6.png](/Users/aresx/Documents/VulWiki/.resource/PbootCMSv2.0.9远程代码执行漏洞/media/rId31.png)
+![6.png](./.resource/PbootCMSv2.0.9远程代码执行漏洞/media/rId31.png)
 
 可以看到成功的执行了php代码
 

@@ -22,13 +22,13 @@ MKCMS v6.2
      9          alert_href('验证码错误','cms_login.php');
     10      }
 
-![](/Users/aresx/Documents/VulWiki/.resource/MKCMSv6.2验证码重用/media/rId24.png)
+![](./.resource/MKCMSv6.2验证码重用/media/rId24.png)
 
 跳转后就会刷新验证码，然而我用的是burp，默认是不解析js的
 
 全局搜索这个`$_SESSION['verifycode']`，发现只在`/system/verifycode.php`有赋值，也就是说，如果使用验证码后，我们不跟随`js`跳转，就不会重置验证码，**验证码也就能被重复使用**了
 
-![](/Users/aresx/Documents/VulWiki/.resource/MKCMSv6.2验证码重用/media/rId25.png)
+![](./.resource/MKCMSv6.2验证码重用/media/rId25.png)
 
 参考链接
 --------

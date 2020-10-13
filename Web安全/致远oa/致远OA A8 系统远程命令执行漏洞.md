@@ -35,11 +35,11 @@
 ------------
 
 先访问/seeyon/htmlofficeservlet
-![](/Users/aresx/Documents/VulWiki/.resource/致远OAA8系统远程命令执行漏洞/media/rId25.png) 出现DBSTEP V3.0 0 21 0 htmoffice operate
+![](./.resource/致远OAA8系统远程命令执行漏洞/media/rId25.png) 出现DBSTEP V3.0 0 21 0 htmoffice operate
 err
-![](/Users/aresx/Documents/VulWiki/.resource/致远OAA8系统远程命令执行漏洞/media/rId26.png) 掏出burp进行抓包替换成poc如下
-![](/Users/aresx/Documents/VulWiki/.resource/致远OAA8系统远程命令执行漏洞/media/rId27.png) 提交POST请求包，查看回显如下
-![](/Users/aresx/Documents/VulWiki/.resource/致远OAA8系统远程命令执行漏洞/media/rId28.png)
+![](./.resource/致远OAA8系统远程命令执行漏洞/media/rId26.png) 掏出burp进行抓包替换成poc如下
+![](./.resource/致远OAA8系统远程命令执行漏洞/media/rId27.png) 提交POST请求包，查看回显如下
+![](./.resource/致远OAA8系统远程命令执行漏洞/media/rId28.png)
 
 ### 小结
 

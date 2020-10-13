@@ -39,27 +39,27 @@ attacker"，密码为" attacker"。
 
 ### 图1.插入XSS代码以添加管理员帐户
 
-![](/Users/aresx/Documents/VulWiki/.resource/(从xss到getshell)xss的深层次利用与探讨/media/rId24.png)
+![](./.resource/(从xss到getshell)xss的深层次利用与探讨/media/rId24.png)
 
 具有高权限的受害者查看此帖子后，将创建管理员帐户"攻击者"。
 
 ### 图2. XSS代码被执行
 
-![](/Users/aresx/Documents/VulWiki/.resource/(从xss到getshell)xss的深层次利用与探讨/media/rId26.png)
+![](./.resource/(从xss到getshell)xss的深层次利用与探讨/media/rId26.png)
 
 ### 图3. XSS代码创建的具有管理员权限的"攻击者"帐户
 
-![](/Users/aresx/Documents/VulWiki/.resource/(从xss到getshell)xss的深层次利用与探讨/media/rId28.png)
+![](./.resource/(从xss到getshell)xss的深层次利用与探讨/media/rId28.png)
 
 然后，攻击者可以将现有的php文件修改为Webshel​​l，并使用该Webshel​​l来控制Web服务器。
 
 图4.使用攻击者的帐户添加一个Web Shell
 
-![](/Users/aresx/Documents/VulWiki/.resource/(从xss到getshell)xss的深层次利用与探讨/media/rId29.png)
+![](./.resource/(从xss到getshell)xss的深层次利用与探讨/media/rId29.png)
 
 图5.控制Web服务器
 
-![](/Users/aresx/Documents/VulWiki/.resource/(从xss到getshell)xss的深层次利用与探讨/media/rId30.png)
+![](./.resource/(从xss到getshell)xss的深层次利用与探讨/media/rId30.png)
 
 ### 2、恶意命令执行
 

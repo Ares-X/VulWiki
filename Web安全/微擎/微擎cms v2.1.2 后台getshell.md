@@ -16,17 +16,17 @@ v2.1.2
 
 这个洞首先需要一个高权账号。问题出在模板解析这里(template.func.php)。
 
-![](/Users/aresx/Documents/VulWiki/.resource/微擎cmsv2.1.2后台getshell/media/rId24.png)
+![](./.resource/微擎cmsv2.1.2后台getshell/media/rId24.png)
 
 attachurl\_remote来自于后台的设置,但是有一层htmlspecialchars
 
-![](/Users/aresx/Documents/VulWiki/.resource/微擎cmsv2.1.2后台getshell/media/rId25.png)
+![](./.resource/微擎cmsv2.1.2后台getshell/media/rId25.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/微擎cmsv2.1.2后台getshell/media/rId26.png)
+![](./.resource/微擎cmsv2.1.2后台getshell/media/rId26.png)
 
 但是恰巧微擎支持SQL操作,虽然有些绿化版本的把SQL提交按钮和TOKEN值隐藏了,但是由于微擎一个页面做了多个CASE,所以可以数据表优化处找到TOKEN
 
-![](/Users/aresx/Documents/VulWiki/.resource/微擎cmsv2.1.2后台getshell/media/rId27.png)
+![](./.resource/微擎cmsv2.1.2后台getshell/media/rId27.png)
 
 这样就可以愉快的修改SQL了,然后会发现微擎存在一个缓存表,同时remote这边的设置做了序列化(其实这个也可以利用),就可以构造如下
 
@@ -36,8 +36,8 @@ attachurl\_remote来自于后台的设置,但是有一层htmlspecialchars
 
 最后刷新缓存然后打开有加载footer的页面就能getshell了
 
-![](/Users/aresx/Documents/VulWiki/.resource/微擎cmsv2.1.2后台getshell/media/rId29.png)
+![](./.resource/微擎cmsv2.1.2后台getshell/media/rId29.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/微擎cmsv2.1.2后台getshell/media/rId30.png)
+![](./.resource/微擎cmsv2.1.2后台getshell/media/rId30.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/微擎cmsv2.1.2后台getshell/media/rId31.png)
+![](./.resource/微擎cmsv2.1.2后台getshell/media/rId31.png)

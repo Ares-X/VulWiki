@@ -36,7 +36,7 @@ Nginx 配置错误漏洞 CRLF注入漏洞
 Payload:
 `http://www.0-sec.org:8080/%0a%0dSet-Cookie:%20a=1`，可注入Set-Cookie头。
 
-![](/Users/aresx/Documents/VulWiki/.resource/Nginx配置错误漏洞CRLF注入漏洞/media/rId24.png)
+![](./.resource/Nginx配置错误漏洞CRLF注入漏洞/media/rId24.png)
 
 参考链接
 --------

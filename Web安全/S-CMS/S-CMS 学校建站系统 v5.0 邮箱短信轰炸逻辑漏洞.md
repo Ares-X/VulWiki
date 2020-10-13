@@ -16,8 +16,8 @@ S-CMS 学校建站系统 v5.0
 
 该漏洞存在的位置有：前台注册，后台短信模块测试，以及前台用户绑定邮箱以及手机号的位置，均存在该逻辑漏洞。
 
-![](/Users/aresx/Documents/VulWiki/.resource/S-CMS学校建站系统v5.0邮箱短信轰炸逻辑漏洞/media/rId24.png)
+![](./.resource/S-CMS学校建站系统v5.0邮箱短信轰炸逻辑漏洞/media/rId24.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/S-CMS学校建站系统v5.0邮箱短信轰炸逻辑漏洞/media/rId25.png)
+![](./.resource/S-CMS学校建站系统v5.0邮箱短信轰炸逻辑漏洞/media/rId25.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/S-CMS学校建站系统v5.0邮箱短信轰炸逻辑漏洞/media/rId26.png)
+![](./.resource/S-CMS学校建站系统v5.0邮箱短信轰炸逻辑漏洞/media/rId26.png)

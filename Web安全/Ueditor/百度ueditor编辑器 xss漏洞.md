@@ -27,25 +27,25 @@
 
 #### /php/getContent.php
 
-![](/Users/aresx/Documents/VulWiki/.resource/百度ueditor编辑器xss漏洞/media/rId27.png)
+![](./.resource/百度ueditor编辑器xss漏洞/media/rId27.png)
 
 入进行了过滤，但是在14行输出时却使用了htmlspecialchars\_decode，造成XSS漏洞。
 
 #### /asp/getContent.asp
 
-![](/Users/aresx/Documents/VulWiki/.resource/百度ueditor编辑器xss漏洞/media/rId29.png)
+![](./.resource/百度ueditor编辑器xss漏洞/media/rId29.png)
 
 获取myEditor参数无过滤，直接输出。
 
 #### /jsp/getContent.jsp
 
-![](/Users/aresx/Documents/VulWiki/.resource/百度ueditor编辑器xss漏洞/media/rId31.png)
+![](./.resource/百度ueditor编辑器xss漏洞/media/rId31.png)
 
 获取myEditor参数无过滤，直接输出。
 
 #### /net/getContent.ashx
 
-![](/Users/aresx/Documents/VulWiki/.resource/百度ueditor编辑器xss漏洞/media/rId33.png)
+![](./.resource/百度ueditor编辑器xss漏洞/media/rId33.png)
 
 获取myEditor参数无过滤，直接输出。
 
@@ -53,7 +53,7 @@
 
 php版本测试，其他版本一样。
 
-![](/Users/aresx/Documents/VulWiki/.resource/百度ueditor编辑器xss漏洞/media/rId35.png)
+![](./.resource/百度ueditor编辑器xss漏洞/media/rId35.png)
 
 url:
 

@@ -16,4 +16,4 @@ Finecms 5.0.10
 
     http://0-sec.org/index.php?c=api&m=目标站点的值&param=action=sql%20sql=%27select%20version();%27
 
-![](/Users/aresx/Documents/VulWiki/.resource/Finecms5.0.10sql注入漏洞/media/rId24.png)
+![](./.resource/Finecms5.0.10sql注入漏洞/media/rId24.png)

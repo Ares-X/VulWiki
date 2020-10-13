@@ -28,8 +28,8 @@ Nginx配置文件子块（server、location、if）中的`add_header`，将会�
 
 但`/test2`的location中又添加了`X-Content-Type-Options`头，导致父块中的`add_header`全部失效：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Nginx配置错误漏洞add_header被覆盖/media/rId24.png)
+![](./.resource/Nginx配置错误漏洞add_header被覆盖/media/rId24.png)
 
 XSS可被触发：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Nginx配置错误漏洞add_header被覆盖/media/rId25.png)
+![](./.resource/Nginx配置错误漏洞add_header被覆盖/media/rId25.png)

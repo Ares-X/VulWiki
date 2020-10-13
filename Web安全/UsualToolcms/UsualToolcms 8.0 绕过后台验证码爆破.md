@@ -20,19 +20,19 @@ UsualToolCMS-8.0-Release
 
 ### 1.默认情况下登陆数据包
 
-![](/Users/aresx/Documents/VulWiki/.resource/UsualToolcms8.0绕过后台验证码爆破/media/rId26.png)
+![](./.resource/UsualToolcms8.0绕过后台验证码爆破/media/rId26.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/UsualToolcms8.0绕过后台验证码爆破/media/rId27.png)
+![](./.resource/UsualToolcms8.0绕过后台验证码爆破/media/rId27.png)
 
 删除ucode参数和cookie后登陆，直接登陆成功
 
-![](/Users/aresx/Documents/VulWiki/.resource/UsualToolcms8.0绕过后台验证码爆破/media/rId28.png)
+![](./.resource/UsualToolcms8.0绕过后台验证码爆破/media/rId28.png)
 
 通过burp爆破后台密码
 
-![](/Users/aresx/Documents/VulWiki/.resource/UsualToolcms8.0绕过后台验证码爆破/media/rId29.png)
+![](./.resource/UsualToolcms8.0绕过后台验证码爆破/media/rId29.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/UsualToolcms8.0绕过后台验证码爆破/media/rId30.png)
+![](./.resource/UsualToolcms8.0绕过后台验证码爆破/media/rId30.png)
 
     POST /UsualToolCMS/cmsadmin/a_login.php?do=login HTTP/1.1
     Host: 0-sec.org

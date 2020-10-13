@@ -16,7 +16,7 @@
 
 -   1.执行NC安装包根目录下setup.bat文件（要求安装盘同级目下有ufjdk文件或者设置JAVA\_HOME环境变量），安装时，出现如下图界面;
 
-![1.png](/Users/aresx/Documents/VulWiki/.resource/用友nc6.5反序列化漏洞/media/rId25.png)
+![1.png](./.resource/用友nc6.5反序列化漏洞/media/rId25.png)
 
 -   2.选择安装的产品，这里我只安装了部分与NC相关的模块。下面对NC产品模块做个简要说明;
 
@@ -54,54 +54,54 @@
 ```
 -   服务器类型选择UAP SERVER。点击服务器信息→读取，如下图：
 
-![2.png](/Users/aresx/Documents/VulWiki/.resource/用友nc6.5反序列化漏洞/media/rId26.png)
+![2.png](./.resource/用友nc6.5反序列化漏洞/media/rId26.png)
 
 -   进入"数据源页签"→"读取"→"添加",将NC
     V6.5作为账套数据源，数据库类型选择ORACLE11G，添加数据源名称，不能包含中文。配置数据库地址、用户名密码、失效链接检查周期、prepareStatement缓存数等信息，完成后点击测试，如果提示测试通过则表示NC能够与数据库连通，保存即可。
 
-![3.png](/Users/aresx/Documents/VulWiki/.resource/用友nc6.5反序列化漏洞/media/rId27.png)
+![3.png](./.resource/用友nc6.5反序列化漏洞/media/rId27.png)
 
 -   进入"安全日志数据源页签"→"读取"，初始化数据源，初始化完成后点击"确定"。
 
-![4.png](/Users/aresx/Documents/VulWiki/.resource/用友nc6.5反序列化漏洞/media/rId28.png)
+![4.png](./.resource/用友nc6.5反序列化漏洞/media/rId28.png)
 
 -   进入"部署"→"全选"→"部署EJB"， 此处用于生成、部署EJB，如下图所示：
 
-![5.png](/Users/aresx/Documents/VulWiki/.resource/用友nc6.5反序列化漏洞/media/rId29.png)
+![5.png](./.resource/用友nc6.5反序列化漏洞/media/rId29.png)
 
 -   进入"文件服务器"→"读取"，此处添加服务器ip地址，端口，存储路径，及选择元数据仓库,如下图所示：
 
-![6.png](/Users/aresx/Documents/VulWiki/.resource/用友nc6.5反序列化漏洞/media/rId30.png)
+![6.png](./.resource/用友nc6.5反序列化漏洞/media/rId30.png)
 
 5.环境搭建完成。因为通过浏览器访问的方式需要依赖不同用户设备上的Java版本以及系统配置等环境因素，所以为了避免这些不必要的麻烦，可以使用专用浏览器UClient来解决此问题。
 
-![7.png](/Users/aresx/Documents/VulWiki/.resource/用友nc6.5反序列化漏洞/media/rId31.png)
+![7.png](./.resource/用友nc6.5反序列化漏洞/media/rId31.png)
 
 ### 漏洞分析
 
 下载UClient并安装后，进入启动页面，选择添加应用。
 
-![8.png](/Users/aresx/Documents/VulWiki/.resource/用友nc6.5反序列化漏洞/media/rId33.png)
+![8.png](./.resource/用友nc6.5反序列化漏洞/media/rId33.png)
 
 在其安装目录里发现了NCLogin65.jar，通过对其反编译进行查看发现，它里面只是一些界面和登录逻辑代码，主要的通信代码并不在该jar包中。
 
-![9.png](/Users/aresx/Documents/VulWiki/.resource/用友nc6.5反序列化漏洞/media/rId34.png)
+![9.png](./.resource/用友nc6.5反序列化漏洞/media/rId34.png)
 
 继续在其他目录下的寻找，发现该目录(nc\_client\_home\\NCCACHE\\CODE)中的子目录含有许多jar包，其中external目录中的jar包是负责客户端与服务端之间通信的逻辑代码。
 
-![10.png](/Users/aresx/Documents/VulWiki/.resource/用友nc6.5反序列化漏洞/media/rId35.png)
+![10.png](./.resource/用友nc6.5反序列化漏洞/media/rId35.png)
 
 通过对登录流程的动态调试，最后找到了对应的类(nc.login.ui.LoginUISuppor)，并定位到该类中处理登录请示的方法(getLoginRequest())
 
-![11.png](/Users/aresx/Documents/VulWiki/.resource/用友nc6.5反序列化漏洞/media/rId36.png)
+![11.png](./.resource/用友nc6.5反序列化漏洞/media/rId36.png)
 
 执行getInstance()，获取NCLocator的实例，然后执行NCLocator实例的lookup()方法
 
-![12.png](/Users/aresx/Documents/VulWiki/.resource/用友nc6.5反序列化漏洞/media/rId37.png)
+![12.png](./.resource/用友nc6.5反序列化漏洞/media/rId37.png)
 
 查看nc.bs.framework.common.NCLocator\#getInstance(java.util.Properties)
 
-![13.png](/Users/aresx/Documents/VulWiki/.resource/用友nc6.5反序列化漏洞/media/rId38.png)
+![13.png](./.resource/用友nc6.5反序列化漏洞/media/rId38.png)
 
     //nc.bs.framework.common.NCLocator#getInstance
     locator = (NCLocator)locatorMap.get(key);
@@ -123,15 +123,15 @@
 
 由于程序刚启动的时候locatorMap的值为空，则会进入下面的分支语句中去判断locatorProvider值，而此时又因为locatorProvider的值为空，svcDispatchURL的值(http://ip:port/ServiceDispatcherServlet)不为空，所以会创建RmiNCLocator实例，将其存放至locatorMap中。获取到RmiNCLocator实例后，查看其lookup()方法：
 
-![14.png](/Users/aresx/Documents/VulWiki/.resource/用友nc6.5反序列化漏洞/media/rId39.png)
+![14.png](./.resource/用友nc6.5反序列化漏洞/media/rId39.png)
 
 继续跟进nc.bs.framework.server.RemoteMetaContext\#lookup()：
 
-![15.png](/Users/aresx/Documents/VulWiki/.resource/用友nc6.5反序列化漏洞/media/rId40.png)
+![15.png](./.resource/用友nc6.5反序列化漏洞/media/rId40.png)
 
 从proxyMap中查看是否存在参数name，如果存在则直接返回，不存在则进入下面的分支。查看getMetaOnDemand()方法：
 
-![16.png](/Users/aresx/Documents/VulWiki/.resource/用友nc6.5反序列化漏洞/media/rId41.png)
+![16.png](./.resource/用友nc6.5反序列化漏洞/media/rId41.png)
 
 可以看到当metaV0值为空的时候，又调用了this.remoteMetaContext.lookup()方法，在当前类中搜索remoteMetaContext，发现在类构造函数中创建了一个代理并将其赋值到this.remoteMetaContext：
 
@@ -228,14 +228,14 @@ args)方法
 
 跟进this.sendRequest(target, ii, method, args)：
 
-![17.png](/Users/aresx/Documents/VulWiki/.resource/用友nc6.5反序列化漏洞/media/rId42.png)
+![17.png](./.resource/用友nc6.5反序列化漏洞/media/rId42.png)
 
 可以看到该方法中将 ii
 序列化输出，发送到服务端，然后获取服务端返回的反序列化结果并回显到客户端。
 
 ### poc
 
-![mov.gif](/Users/aresx/Documents/VulWiki/.resource/用友nc6.5反序列化漏洞/media/rId44.gif)
+![mov.gif](./.resource/用友nc6.5反序列化漏洞/media/rId44.gif)
 
 > explpit.java
 

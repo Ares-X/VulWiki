@@ -20,17 +20,17 @@
 
 差不多的逻辑
 
-![1.png](/Users/aresx/Documents/VulWiki/.resource/深信服SSLVPN-PreAuth任意密码重置/media/rId25.png)
+![1.png](./.resource/深信服SSLVPN-PreAuth任意密码重置/media/rId25.png)
 
 唯独多了个 RC4 解密，key 是 20100720
 
-![2.png](/Users/aresx/Documents/VulWiki/.resource/深信服SSLVPN-PreAuth任意密码重置/media/rId26.png)
+![2.png](./.resource/深信服SSLVPN-PreAuth任意密码重置/media/rId26.png)
 
 在数据提取中写的有点奇怪,使用,和=作为分隔符，所以我们的数据也要类似如：
 
 `,username=test,ip=127.0.0.1,grpid=1,pripsw=suiyi,newpsw=QQ123456,`
 
-![3.png](/Users/aresx/Documents/VulWiki/.resource/深信服SSLVPN-PreAuth任意密码重置/media/rId27.png)
+![3.png](./.resource/深信服SSLVPN-PreAuth任意密码重置/media/rId27.png)
 
 M7.6.6R1 key 为 `20181118`
 
@@ -42,7 +42,7 @@ M7.6.1 key 为 `20100720`
 
     sessReq=clusterd&sessid=0&str=RC4_STR&len=RC4_STR_LEN
 
-![4.png](/Users/aresx/Documents/VulWiki/.resource/深信服SSLVPN-PreAuth任意密码重置/media/rId28.png)
+![4.png](./.resource/深信服SSLVPN-PreAuth任意密码重置/media/rId28.png)
 
 ### poc
 

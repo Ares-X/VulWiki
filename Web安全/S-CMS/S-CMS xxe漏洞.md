@@ -14,7 +14,7 @@ S-CMS xxe漏洞
 
 全局搜索`simplexml`，在`weixin/index.php`发现漏洞
 
-![](/Users/aresx/Documents/VulWiki/.resource/S-CMSxxe漏洞/media/rId25.jpg)
+![](./.resource/S-CMSxxe漏洞/media/rId25.jpg)
 
 非常标准的XXE，没有任何过滤手段，往下并未发现有输出XML解析结果的地方，此处应用无回显的XXE攻击手段
 
@@ -37,11 +37,11 @@ S-CMS xxe漏洞
     %send;
     ]>
 
-![](/Users/aresx/Documents/VulWiki/.resource/S-CMSxxe漏洞/media/rId27.jpg)
+![](./.resource/S-CMSxxe漏洞/media/rId27.jpg)
 
 然后在Apache日志中查看到结果：
 
-![](/Users/aresx/Documents/VulWiki/.resource/S-CMSxxe漏洞/media/rId28.jpg)
+![](./.resource/S-CMSxxe漏洞/media/rId28.jpg)
 
 在这里发现一个问题，查看其它php文件的内容会发生`Detected an entity reference loop`错误，查询资料发现libxml解析器默认限制外部实体长度为2k，无法突破，只能寻找压缩解决方案（但效果不明显）
 

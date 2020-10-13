@@ -41,7 +41,7 @@ Discuz! X3.4
 
 分析一下安装逻辑，`install/index.php`文件的整体流程如下：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Discuz!X3.4任意文件删除配合install过程getshell/media/rId25.png)
+![](./.resource/Discuz!X3.4任意文件删除配合install过程getshell/media/rId25.png)
 
 分别是我们安装的每一步，接受协议-\>环境检测-\>是否安装 UCenter
 Server-\>数据库配置信息-\>安装过程，生成lock文件-\>检查
@@ -107,19 +107,19 @@ Server-\>数据库配置信息-\>安装过程，生成lock文件-\>检查
 
 如果安装后`install/index.php`因为某些原因还存在，直接访问会有如下警告：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Discuz!X3.4任意文件删除配合install过程getshell/media/rId27.png)
+![](./.resource/Discuz!X3.4任意文件删除配合install过程getshell/media/rId27.png)
 
 通过文件删除漏洞删除data目录下的`install.lock`文件就可以重新安装。
 
 安装过程修改表前缀内容为：`x');@eval($_POST[lanvnal]);('`
 
-![](/Users/aresx/Documents/VulWiki/.resource/Discuz!X3.4任意文件删除配合install过程getshell/media/rId28.png)
+![](./.resource/Discuz!X3.4任意文件删除配合install过程getshell/media/rId28.png)
 
 在`config/config_ucenter.php`中已经写入了webshell。
 
-![](/Users/aresx/Documents/VulWiki/.resource/Discuz!X3.4任意文件删除配合install过程getshell/media/rId29.png)
+![](./.resource/Discuz!X3.4任意文件删除配合install过程getshell/media/rId29.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/Discuz!X3.4任意文件删除配合install过程getshell/media/rId30.png)
+![](./.resource/Discuz!X3.4任意文件删除配合install过程getshell/media/rId30.png)
 
 ### poc
 

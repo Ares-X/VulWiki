@@ -17,7 +17,7 @@ MyuCMS v2.1
 
 定位到 **application/common.php** 中的 **deleteun** 函数
 
-![1.jpg](/Users/aresx/Documents/VulWiki/.resource/MyuCMSv2.1任意目录删除漏洞/media/rId24.jpg)
+![1.jpg](./.resource/MyuCMSv2.1任意目录删除漏洞/media/rId24.jpg)
 
     function deleteun($dir_name)
     {
@@ -52,7 +52,7 @@ MyuCMS v2.1
 **deleteun**
 函数的参数不同，我们可以判断出，这三处都可以触发任意目录删除漏洞。
 
-![2.jpg](/Users/aresx/Documents/VulWiki/.resource/MyuCMSv2.1任意目录删除漏洞/media/rId25.jpg)
+![2.jpg](./.resource/MyuCMSv2.1任意目录删除漏洞/media/rId25.jpg)
 
 这三处的不同之处在于。**Muban.php** 继承了 **Common** 类，在 **Common**
 类中实现了对于是否已经登录的验证。实现代码如下。

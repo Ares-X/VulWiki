@@ -20,11 +20,11 @@ Thinkphp 5.2.\*-dev 反序列化漏洞
 
 ### poc演示截图
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp5.2.*-dev反序列化漏洞/media/rId27.png)
+![](./.resource/Thinkphp5.2.*-dev反序列化漏洞/media/rId27.png)
 
 ### 调用链
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp5.2.*-dev反序列化漏洞/media/rId29.png)
+![](./.resource/Thinkphp5.2.*-dev反序列化漏洞/media/rId29.png)
 
 ### 单步调试
 
@@ -102,7 +102,7 @@ Thinkphp 5.2.\*-dev 反序列化漏洞
 
 这里\$fieldName、\$this-\>withAttr，导致\$closure也可控，最终直接产生RCE。如下图
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp5.2.*-dev反序列化漏洞/media/rId31.png)
+![](./.resource/Thinkphp5.2.*-dev反序列化漏洞/media/rId31.png)
 
 补充：
 
@@ -111,9 +111,9 @@ Thinkphp 5.2.\*-dev 反序列化漏洞
     $a = array();
     system('whoami',$a);
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp5.2.*-dev反序列化漏洞/media/rId32.png)
+![](./.resource/Thinkphp5.2.*-dev反序列化漏洞/media/rId32.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp5.2.*-dev反序列化漏洞/media/rId33.png)
+![](./.resource/Thinkphp5.2.*-dev反序列化漏洞/media/rId33.png)
 
 ### poc v5.2.\*-dev
 

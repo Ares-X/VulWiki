@@ -20,19 +20,19 @@
 
 设置里需要选择本地，否则删除的不是本地文件
 
-![](/Users/aresx/Documents/VulWiki/.resource/百家cmsv4.1.4任意文件删除漏洞/media/rId24.png)
+![](./.resource/百家cmsv4.1.4任意文件删除漏洞/media/rId24.png)
 
 先在根目录下创建qwe.txt作为测试文件
 
-![](/Users/aresx/Documents/VulWiki/.resource/百家cmsv4.1.4任意文件删除漏洞/media/rId25.png)
+![](./.resource/百家cmsv4.1.4任意文件删除漏洞/media/rId25.png)
 
 访问payload
 
-![](/Users/aresx/Documents/VulWiki/.resource/百家cmsv4.1.4任意文件删除漏洞/media/rId26.png)
+![](./.resource/百家cmsv4.1.4任意文件删除漏洞/media/rId26.png)
 
 查看文件，已经被删除
 
-![](/Users/aresx/Documents/VulWiki/.resource/百家cmsv4.1.4任意文件删除漏洞/media/rId27.png)
+![](./.resource/百家cmsv4.1.4任意文件删除漏洞/media/rId27.png)
 
 参考链接
 --------

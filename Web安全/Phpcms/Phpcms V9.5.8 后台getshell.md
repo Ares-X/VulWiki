@@ -82,7 +82,7 @@ Phpcms V9.5.8
 
 在当前函数开始下个断点
 
-![1.png](/Users/aresx/Documents/VulWiki/.resource/PhpcmsV9.5.8后台getshell/media/rId25.png)![2.png](/Users/aresx/Documents/VulWiki/.resource/PhpcmsV9.5.8后台getshell/media/rId26.png)
+![1.png](./.resource/PhpcmsV9.5.8后台getshell/media/rId25.png)![2.png](./.resource/PhpcmsV9.5.8后台getshell/media/rId26.png)
 
 跟到526行：
 
@@ -143,7 +143,7 @@ Phpcms V9.5.8
 
     if($this->get_child($id))
 
-![3.png](/Users/aresx/Documents/VulWiki/.resource/PhpcmsV9.5.8后台getshell/media/rId27.png)
+![3.png](./.resource/PhpcmsV9.5.8后台getshell/media/rId27.png)
 
 当第一次执行为ture的时候，还是会再次执行`get_treeview`的内容
 

@@ -15,7 +15,7 @@ Discuz! X authkey+Memcache+ssrf getshell
 Dz 整合 Memcache
 配置成功后，默认情况下网站首页右下角会出现`MemCache On`的标志：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Discuz!Xauthkey+Memcache+ssrfgetshell/media/rId24.jpg)
+![](./.resource/Discuz!Xauthkey+Memcache+ssrfgetshell/media/rId24.jpg)
 
 Dz 在安装的时候，对于缓存中的键名加了随机字符串作为前缀。所以如果 SSRF
 要攻击 Memcache ，第一个问题是，如何找到正确的键名？
@@ -104,7 +104,7 @@ image
 
 再访问`/forum.php?mod=ajax&action=getthreadtypes&inajax=yes`，即可看到`phpinfo()`代码已被执行：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Discuz!Xauthkey+Memcache+ssrfgetshell/media/rId26.png)
+![](./.resource/Discuz!Xauthkey+Memcache+ssrfgetshell/media/rId26.png)
 
 由于缓存被暴力篡改，会导致网站无法正常运行。恢复正常办法是刷新缓存。用上面的思路直接一次
 getshell 后执行以下命令，网站就可以恢复正常：

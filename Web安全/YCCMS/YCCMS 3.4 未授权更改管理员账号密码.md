@@ -13,7 +13,7 @@ YCCMS 3.4
 ------------
 
 首先来看一下漏洞利用过程，在未登录的情况下构造url,只需要更改username
-password notpassword的值即可更改数据库中admin账号的相关信息![1.png](/Users/aresx/Documents/VulWiki/.resource/YCCMS3.4未授权更改管理员账号密码/media/rId24.png)去数据库中查看发现已经更改了账号密码![2.png](/Users/aresx/Documents/VulWiki/.resource/YCCMS3.4未授权更改管理员账号密码/media/rId25.png)根据url来定位一下漏洞函数，函数位于controller\\AdminAction.class.php中的update函数
+password notpassword的值即可更改数据库中admin账号的相关信息![1.png](./.resource/YCCMS3.4未授权更改管理员账号密码/media/rId24.png)去数据库中查看发现已经更改了账号密码![2.png](./.resource/YCCMS3.4未授权更改管理员账号密码/media/rId25.png)根据url来定位一下漏洞函数，函数位于controller\\AdminAction.class.php中的update函数
 
     public function update(){
             if(isset($_POST['send'])){

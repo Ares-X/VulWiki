@@ -112,7 +112,7 @@ Common.inc.php
 
 当目录存在点时候
 
-![](/Users/aresx/Documents/VulWiki/.resource/Dedecms找后台/media/rId26.png)
+![](./.resource/Dedecms找后台/media/rId26.png)
 
 当目录不存在点时候
 

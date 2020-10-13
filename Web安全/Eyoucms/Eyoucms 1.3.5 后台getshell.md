@@ -59,7 +59,7 @@ Eyoucms 1.3.5
 
 登陆后台在`高级选项->备份还原->数据还原`可选择上传sql文件并执行
 
-![](/Users/aresx/Documents/VulWiki/.resource/Eyoucms1.3.5后台getshell/media/rId27.png)
+![](./.resource/Eyoucms1.3.5后台getshell/media/rId27.png)
 
 上传sql文件内容为（需要知道网站绝对路径）
 
@@ -67,4 +67,4 @@ Eyoucms 1.3.5
 
 上传成功后在网站根目录生成webshell。
 
-![](/Users/aresx/Documents/VulWiki/.resource/Eyoucms1.3.5后台getshell/media/rId28.png)
+![](./.resource/Eyoucms1.3.5后台getshell/media/rId28.png)

@@ -24,7 +24,7 @@ Hadoop未授权访问
 
 ##### 1.1 常见端口
 
-![](/Users/aresx/Documents/VulWiki/.resource/Hadoop未授权访问/media/rId26.png)
+![](./.resource/Hadoop未授权访问/media/rId26.png)
 
 ##### 1.2 敏感端口
 
@@ -42,7 +42,7 @@ Hadoop未授权访问
 开放，攻击者可以通过 HDSF 提供的 restful API 对 HDFS
 存储的数据进行操作。
 
-![](/Users/aresx/Documents/VulWiki/.resource/Hadoop未授权访问/media/rId28.png)
+![](./.resource/Hadoop未授权访问/media/rId28.png)
 
 #### 2. 攻击手法
 
@@ -82,7 +82,7 @@ API 也可以提交任务执行。
     }
     requests.post(url, json=data)
 
-![](/Users/aresx/Documents/VulWiki/.resource/Hadoop未授权访问/media/rId30.png)
+![](./.resource/Hadoop未授权访问/media/rId30.png)
 
 #### 3. 防范措施
 

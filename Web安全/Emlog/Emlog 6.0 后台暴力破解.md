@@ -15,13 +15,13 @@ emlog5.3.1和6.0
 三、复现过程
 ------------
 
-![](/Users/aresx/Documents/VulWiki/.resource/Emlog6.0后台暴力破解/media/rId24.png)
+![](./.resource/Emlog6.0后台暴力破解/media/rId24.png)
 
 访问
 
     http://0-sec.org:81/admin/
 
-![](/Users/aresx/Documents/VulWiki/.resource/Emlog6.0后台暴力破解/media/rId25.png)
+![](./.resource/Emlog6.0后台暴力破解/media/rId25.png)
 
 已知管理员用户名为：admin（可在前端文章页寻找作者用户名）
 
@@ -29,21 +29,21 @@ image
 
 登陆后台
 
-![](/Users/aresx/Documents/VulWiki/.resource/Emlog6.0后台暴力破解/media/rId26.png)
+![](./.resource/Emlog6.0后台暴力破解/media/rId26.png)
 
 随便输入admin admin123 qdiwx，点击登陆
 
 然后burpsuite抓包
 
-![](/Users/aresx/Documents/VulWiki/.resource/Emlog6.0后台暴力破解/media/rId27.png)
+![](./.resource/Emlog6.0后台暴力破解/media/rId27.png)
 
 CTRL+I尝试暴力破解：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Emlog6.0后台暴力破解/media/rId28.png)
+![](./.resource/Emlog6.0后台暴力破解/media/rId28.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/Emlog6.0后台暴力破解/media/rId29.png)
+![](./.resource/Emlog6.0后台暴力破解/media/rId29.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/Emlog6.0后台暴力破解/media/rId30.png)
+![](./.resource/Emlog6.0后台暴力破解/media/rId30.png)
 
 成功爆破出密码，所以再次验证：验证码没消除会话，导致可暴力破解漏洞的存在
 

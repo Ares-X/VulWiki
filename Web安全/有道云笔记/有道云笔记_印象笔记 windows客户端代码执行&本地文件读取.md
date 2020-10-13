@@ -12,21 +12,21 @@
 
 构造一个pdf，UF处是执行的地方，输入iexplore表示打开ie
 
-![](/Users/aresx/Documents/VulWiki/.resource/有道云笔记_印象笔记windows客户端代码执行&本地文件读取/media/rId24.png)
+![](./.resource/有道云笔记_印象笔记windows客户端代码执行&本地文件读取/media/rId24.png)
 
 在客户端上传就会触发：
 
-![](/Users/aresx/Documents/VulWiki/.resource/有道云笔记_印象笔记windows客户端代码执行&本地文件读取/media/rId25.png)
+![](./.resource/有道云笔记_印象笔记windows客户端代码执行&本地文件读取/media/rId25.png)
 
 打开cmd
 
-![](/Users/aresx/Documents/VulWiki/.resource/有道云笔记_印象笔记windows客户端代码执行&本地文件读取/media/rId26.png)
+![](./.resource/有道云笔记_印象笔记windows客户端代码执行&本地文件读取/media/rId26.png)
 
 用到的pdf：
 
 改/UF (iexplore)即可：
 
-![](/Users/aresx/Documents/VulWiki/.resource/有道云笔记_印象笔记windows客户端代码执行&本地文件读取/media/rId27.png)
+![](./.resource/有道云笔记_印象笔记windows客户端代码执行&本地文件读取/media/rId27.png)
 
 /F（cmd）不用理会，这个是我测试的时候乱插的
 

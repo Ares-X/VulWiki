@@ -17,7 +17,7 @@ Thinkphp \< 6.0.2
 通过diff
 github上面的6.0.1和6.0.2的代码可以发现，6.0.1在设置`session id`时未对值进行`ctype_alnum()`校验，从而导致可以传入任意字符。
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp<6.0.2sessionid未作过滤导致getshell/media/rId25.png)
+![](./.resource/Thinkphp<6.0.2sessionid未作过滤导致getshell/media/rId25.png)
 
 传入任意字符会有什么危害？一般来说程序可能会以session
 id作为文件名来创建对应的session文件，但是到目前为止这只是猜测。看一下保存session是怎么写的。
@@ -118,7 +118,7 @@ id写为类似于`xxxx.php`的格式，即可导致session保存成`.php`文件�
 
 由于`session.var_session_id`默认是空，这里的`$sessionId`的值由`$request->cookie($cookieName)`获得，`$cookieName`经过跟进后发现默认是PHPSESSID。
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp<6.0.2sessionid未作过滤导致getshell/media/rId27.png)
+![](./.resource/Thinkphp<6.0.2sessionid未作过滤导致getshell/media/rId27.png)
 
 因此我们只要设置Cookie中的PHPSESSID的值为1234567890123456789012345678.php即可。
 
@@ -134,11 +134,11 @@ id写为类似于`xxxx.php`的格式，即可导致session保存成`.php`文件�
 
 访问url：`http://127.0.0.1/tp6/public/index.php/index/testsession2?name=`
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp<6.0.2sessionid未作过滤导致getshell/media/rId28.png)
+![](./.resource/Thinkphp<6.0.2sessionid未作过滤导致getshell/media/rId28.png)
 
 访问session文件，一般位于项目根目录下的`./runtime/session/`文件夹下，也就是`/runtime/session/sess_1234567890123456789012345678.php`
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp<6.0.2sessionid未作过滤导致getshell/media/rId29.png)
+![](./.resource/Thinkphp<6.0.2sessionid未作过滤导致getshell/media/rId29.png)
 
 参考链接
 --------

@@ -14,7 +14,7 @@ XDCMS 1.0
 
 漏洞文件漏洞文件：`system\modules\xdcms\template.php`，同上述xss漏洞相同
 
-![](/Users/aresx/Documents/VulWiki/.resource/XDCMS1.0后台任意文件读取/media/rId24.jpg)
+![](./.resource/XDCMS1.0后台任意文件读取/media/rId24.jpg)
 
 第43行未对文件进行限制，从而导致了目录遍历，造成任意文件读取
 
@@ -24,4 +24,4 @@ XDCMS 1.0
 
 后台任意文件读取。
 
-![](/Users/aresx/Documents/VulWiki/.resource/XDCMS1.0后台任意文件读取/media/rId25.jpg)
+![](./.resource/XDCMS1.0后台任意文件读取/media/rId25.jpg)

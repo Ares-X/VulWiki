@@ -136,9 +136,9 @@ Semcms PHP(多语)版 V3.9
 
 运行截图
 
-![](/Users/aresx/Documents/VulWiki/.resource/SemcmsPHP(多语)版V3.9sql注入漏洞/media/rId26.png)
+![](./.resource/SemcmsPHP(多语)版V3.9sql注入漏洞/media/rId26.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/SemcmsPHP(多语)版V3.9sql注入漏洞/media/rId27.png)
+![](./.resource/SemcmsPHP(多语)版V3.9sql注入漏洞/media/rId27.png)
 
 不过因为过滤了select，暂时不知道怎么注出数据ORZ，比如说注出user表中的密码之类的，如果有师傅愿意不吝赐教，这里万分感谢
 

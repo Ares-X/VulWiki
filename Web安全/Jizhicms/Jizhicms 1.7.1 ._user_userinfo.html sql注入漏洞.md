@@ -32,7 +32,7 @@ Jizhicms 1.7.1
 
 在userinfo函数中可以看到只对tel ,pass sex
 repass等参数进行了过滤，并不涉及province city
-address等地址，意味着可以随意拼接sql语句触发 sql注入漏洞![1.png](/Users/aresx/Documents/VulWiki/.resource/Jizhicms1.7.1._user_userinfo.htmlsql注入漏洞/media/rId24.png)![2.png](/Users/aresx/Documents/VulWiki/.resource/Jizhicms1.7.1._user_userinfo.htmlsql注入漏洞/media/rId25.png)通过mysql监控工具可以看到已经带入查询，触发了sql注入漏洞![3.png](/Users/aresx/Documents/VulWiki/.resource/Jizhicms1.7.1._user_userinfo.htmlsql注入漏洞/media/rId26.png)通过sqlmap跑一下![4.png](/Users/aresx/Documents/VulWiki/.resource/Jizhicms1.7.1._user_userinfo.htmlsql注入漏洞/media/rId27.png)
+address等地址，意味着可以随意拼接sql语句触发 sql注入漏洞![1.png](./.resource/Jizhicms1.7.1._user_userinfo.htmlsql注入漏洞/media/rId24.png)![2.png](./.resource/Jizhicms1.7.1._user_userinfo.htmlsql注入漏洞/media/rId25.png)通过mysql监控工具可以看到已经带入查询，触发了sql注入漏洞![3.png](./.resource/Jizhicms1.7.1._user_userinfo.htmlsql注入漏洞/media/rId26.png)通过sqlmap跑一下![4.png](./.resource/Jizhicms1.7.1._user_userinfo.htmlsql注入漏洞/media/rId27.png)
 
 参考链接
 --------

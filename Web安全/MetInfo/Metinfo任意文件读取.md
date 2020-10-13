@@ -76,7 +76,7 @@ MetInfo 6.0.0 MetInfo 6.1.0
 
 从代码中看用看到，\$dir直接由\$\_GET\[\'dir\'\]传递进来，并将../置空。目标是进入到第一个，如果里面的readfile(\$dir);，读取文件。看看如果语句的条件，的英文外面一个strstr函数，判断\$dir中http字符串的首次出现位置，实质上，要进入到这个if语句里面，\$dir中必须包含http字符串。里面的将\$dir中包含\$\_M\[\'url\'\]\[\'site\'\]的部分放置空，这里可以不用管。
 
-![](/Users/aresx/Documents/VulWiki/.resource/Metinfo任意文件读取/media/rId25.png)
+![](./.resource/Metinfo任意文件读取/media/rId25.png)
 
 从上面的分析可以构造出有效负载，只要\$dir里包含http字符串就可以进入到readfile函数从而重新读取任意函数，然后可以使用\..././来进行目录替换，因为../会被置空，所以最终payload如下
 
@@ -103,6 +103,6 @@ MetInfo 6.0.0 MetInfo 6.1.0
 
 所以我们通过thumb.php将构造好的\$dir传入即可。
 
-![](/Users/aresx/Documents/VulWiki/.resource/Metinfo任意文件读取/media/rId27.png)
+![](./.resource/Metinfo任意文件读取/media/rId27.png)
 
 可以看到成功的读取到了config/config\_

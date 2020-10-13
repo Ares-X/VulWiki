@@ -100,11 +100,11 @@ standalone模式下，master将在6066端口启动一个HTTP服务器，我们�
 
 其中，`spark.jars`即是编译好的应用，mainClass是待运行的类，appArgs是传给应用的参数。
 
-![1.png](/Users/aresx/Documents/VulWiki/.resource/ApacheSpark未授权访问漏洞/media/rId26.png)
+![1.png](./.resource/ApacheSpark未授权访问漏洞/media/rId26.png)
 
 返回的包中有submissionId，然后访问`http://www.0-sec.org:8081/logPage/?driverId={submissionId}&logType=stdout`，即可查看执行结果：
 
-![2.png](/Users/aresx/Documents/VulWiki/.resource/ApacheSpark未授权访问漏洞/media/rId27.png)
+![2.png](./.resource/ApacheSpark未授权访问漏洞/media/rId27.png)
 
 注意，提交应用是在master中，查看结果是在具体执行这个应用的slave里（默认8081端口）。实战中，由于slave可能有多个。
 
@@ -134,7 +134,7 @@ gateway来提交应用。
     msf5> set srvport 8080
     msf5> exploit
 
-![1.png](/Users/aresx/Documents/VulWiki/.resource/ApacheSpark未授权访问漏洞/media/rId30.png)
+![1.png](./.resource/ApacheSpark未授权访问漏洞/media/rId30.png)
 
 参考链接
 --------

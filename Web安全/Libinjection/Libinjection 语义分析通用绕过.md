@@ -49,7 +49,7 @@ Libinjection 语义分析通用绕过
 
 测试payload 是否OK
 
-![1.png](/Users/aresx/Documents/VulWiki/.resource/Libinjection语义分析通用绕过/media/rId24.png)
+![1.png](./.resource/Libinjection语义分析通用绕过/media/rId24.png)
 
 为什么会这样呢???
 
@@ -59,7 +59,7 @@ Libinjection 语义分析通用绕过
 
 下图是一个运行的一个流程图
 
-![2.png](/Users/aresx/Documents/VulWiki/.resource/Libinjection语义分析通用绕过/media/rId25.png)
+![2.png](./.resource/Libinjection语义分析通用绕过/media/rId25.png)
 
 ### 它内部分为四种模式
 
@@ -188,4 +188,4 @@ Libinjection 语义分析通用绕过
 
 附一张调试打印图
 
-![3.png](/Users/aresx/Documents/VulWiki/.resource/Libinjection语义分析通用绕过/media/rId27.png)
+![3.png](./.resource/Libinjection语义分析通用绕过/media/rId27.png)

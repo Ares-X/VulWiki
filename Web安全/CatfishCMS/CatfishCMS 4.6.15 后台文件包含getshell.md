@@ -24,15 +24,15 @@ url：
 
 函数：newpage()
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.6.15后台文件包含getshell/media/rId25.png)
+![](./.resource/CatfishCMS4.6.15后台文件包含getshell/media/rId25.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.6.15后台文件包含getshell/media/rId26.png)
+![](./.resource/CatfishCMS4.6.15后台文件包含getshell/media/rId26.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.6.15后台文件包含getshell/media/rId27.png)
+![](./.resource/CatfishCMS4.6.15后台文件包含getshell/media/rId27.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.6.15后台文件包含getshell/media/rId28.png)
+![](./.resource/CatfishCMS4.6.15后台文件包含getshell/media/rId28.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.6.15后台文件包含getshell/media/rId29.png)
+![](./.resource/CatfishCMS4.6.15后台文件包含getshell/media/rId29.png)
 
 ### 复现
 
@@ -57,17 +57,17 @@ url：
 
 制作过程：
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.6.15后台文件包含getshell/media/rId31.png)
+![](./.resource/CatfishCMS4.6.15后台文件包含getshell/media/rId31.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.6.15后台文件包含getshell/media/rId32.png)
+![](./.resource/CatfishCMS4.6.15后台文件包含getshell/media/rId32.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.6.15后台文件包含getshell/media/rId33.png)
+![](./.resource/CatfishCMS4.6.15后台文件包含getshell/media/rId33.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.6.15后台文件包含getshell/media/rId34.png)
+![](./.resource/CatfishCMS4.6.15后台文件包含getshell/media/rId34.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.6.15后台文件包含getshell/media/rId35.png)
+![](./.resource/CatfishCMS4.6.15后台文件包含getshell/media/rId35.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.6.15后台文件包含getshell/media/rId36.png)
+![](./.resource/CatfishCMS4.6.15后台文件包含getshell/media/rId36.png)
 
 图片马制作脚本
 
@@ -244,12 +244,12 @@ url：
         }
     ?>
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.6.15后台文件包含getshell/media/rId37.png)
+![](./.resource/CatfishCMS4.6.15后台文件包含getshell/media/rId37.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.6.15后台文件包含getshell/media/rId38.png)
+![](./.resource/CatfishCMS4.6.15后台文件包含getshell/media/rId38.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.6.15后台文件包含getshell/media/rId39.png)
+![](./.resource/CatfishCMS4.6.15后台文件包含getshell/media/rId39.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.6.15后台文件包含getshell/media/rId40.png)
+![](./.resource/CatfishCMS4.6.15后台文件包含getshell/media/rId40.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.6.15后台文件包含getshell/media/rId41.png)
+![](./.resource/CatfishCMS4.6.15后台文件包含getshell/media/rId41.png)

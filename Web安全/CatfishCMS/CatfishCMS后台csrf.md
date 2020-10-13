@@ -27,7 +27,7 @@ CatfishCMS后台csrf
 
 修改前
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS后台csrf/media/rId24.png)
+![](./.resource/CatfishCMS后台csrf/media/rId24.png)
 
 修改后
 

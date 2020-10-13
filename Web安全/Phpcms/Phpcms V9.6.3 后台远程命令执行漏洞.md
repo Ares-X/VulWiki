@@ -77,7 +77,7 @@ Phpcms V9.6.3
 首先要登录后台拿到 pc\_hash 的值，这个是防止提交恶意数据的，后台首页 F12
 就能看到
 
-![1.png](/Users/aresx/Documents/VulWiki/.resource/PhpcmsV9.6.3后台远程命令执行漏洞/media/rId25.png)
+![1.png](./.resource/PhpcmsV9.6.3后台远程命令执行漏洞/media/rId25.png)
 
 然后访问：
 
@@ -147,7 +147,7 @@ POST:
 
     dosubmit=1&info[name]=];phpinfo();//1&language=];phpinfo();//1'
 
-![2.png](/Users/aresx/Documents/VulWiki/.resource/PhpcmsV9.6.3后台远程命令执行漏洞/media/rId28.png)
+![2.png](./.resource/PhpcmsV9.6.3后台远程命令执行漏洞/media/rId28.png)
 
 参考链接
 --------

@@ -194,7 +194,7 @@ framework / api / index\_control.php＃phpok\_f
 =
 xxx的信息，然后在phpok()函数的131行进行动态调用其插入为type\_id的值函数。
 
-![](/Users/aresx/Documents/VulWiki/.resource/PHPOK5.3前台注入/media/rId25.png)
+![](./.resource/PHPOK5.3前台注入/media/rId25.png)
 
 例如我们要调用framework/phpok\_call.php下的\_arclist函数，我们可以选择：
 
@@ -234,7 +234,7 @@ xxx的信息，然后在phpok()函数的131行进行动态调用其插入为type
 
 调用：framework / model / list.php＃arc\_count 5.jpg
 
-![](/Users/aresx/Documents/VulWiki/.resource/PHPOK5.3前台注入/media/rId26.png)
+![](./.resource/PHPOK5.3前台注入/media/rId26.png)
 
 拼接sql，调用\$this-\>db-\>count(\$sql)
 
@@ -274,7 +274,7 @@ framework / engine / db / mysqli.php＃count
 
 根进\$this-\>query(\$sql);：framework / engine / db / mysqli.php＃query
 
-![](/Users/aresx/Documents/VulWiki/.resource/PHPOK5.3前台注入/media/rId27.png)
+![](./.resource/PHPOK5.3前台注入/media/rId27.png)
 
 最终将sql带入执行。
 
@@ -306,7 +306,7 @@ framework / engine / db / mysqli.php＃count
 
 其中第一个如果条件需要在后台生成api字符串：
 
-![](/Users/aresx/Documents/VulWiki/.resource/PHPOK5.3前台注入/media/rId28.png)
+![](./.resource/PHPOK5.3前台注入/media/rId28.png)
 
 > 没开启的话，其实构造一个csrf的poc也是可以的
 
@@ -316,7 +316,7 @@ framework / engine / db / mysqli.php＃count
 
     http://0-sec.org/api.php?c=index&f=token&id=m_picplayer
 
-![](/Users/aresx/Documents/VulWiki/.resource/PHPOK5.3前台注入/media/rId30.png)
+![](./.resource/PHPOK5.3前台注入/media/rId30.png)
 
 POC：
 

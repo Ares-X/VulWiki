@@ -14,11 +14,11 @@ v1.8.2（201812130002）
 
 站点-附件设置-支持文件后缀
 
-![](/Users/aresx/Documents/VulWiki/.resource/微擎cmsv1.8.2后台getshell/media/rId24.png)
+![](./.resource/微擎cmsv1.8.2后台getshell/media/rId24.png)
 
 在安装完成的时候,数据库里面并没有写入支持文件后缀的值,需要我们进行添加需要的脚本格式php等等
 
-![](/Users/aresx/Documents/VulWiki/.resource/微擎cmsv1.8.2后台getshell/media/rId25.png)
+![](./.resource/微擎cmsv1.8.2后台getshell/media/rId25.png)
 
 直接写上支持的后缀为php是会带入到数据库的,提交完毕以后数据库会显示可上传的值
 
@@ -33,7 +33,7 @@ v1.8.2（201812130002）
 
 写入任意字符
 
-![](/Users/aresx/Documents/VulWiki/.resource/微擎cmsv1.8.2后台getshell/media/rId27.png)
+![](./.resource/微擎cmsv1.8.2后台getshell/media/rId27.png)
 
     a:3:{s:16:"attachment_limit";i:0;s:5:"image";  
     a:5:{s:5:"thumb";i:0;s:5:"width";i:800;s:10:"extentions";  
@@ -61,7 +61,7 @@ or 如果在渗透过程中有SQL注入点的情况下
     a:2:{s:10:\"extentions\";a:1:{i:0;s:3:\"mp3\";}s:5:\"limit\";i:5000;}}'
     WHERE `key` = 'upload' AND `key` = 'upload' COLLATE utf8mb4_bin;
 
-![](/Users/aresx/Documents/VulWiki/.resource/微擎cmsv1.8.2后台getshell/media/rId28.png)
+![](./.resource/微擎cmsv1.8.2后台getshell/media/rId28.png)
 
     a:3:{s:16:"attachment_limit";i:0;s:5:"image";  
     a:5:{s:5:"thumb";i:0;s:5:"width";i:800;s:10:"extentions";  
@@ -72,13 +72,13 @@ or 如果在渗透过程中有SQL注入点的情况下
 
 执行完毕-系统-更新缓存
 
-![](/Users/aresx/Documents/VulWiki/.resource/微擎cmsv1.8.2后台getshell/media/rId29.png)
+![](./.resource/微擎cmsv1.8.2后台getshell/media/rId29.png)
 
 ### 上传php文件
 
 以上全部操作完毕,直接在可以上传图片的地方进行上传脚本
 
-![](/Users/aresx/Documents/VulWiki/.resource/微擎cmsv1.8.2后台getshell/media/rId31.png)
+![](./.resource/微擎cmsv1.8.2后台getshell/media/rId31.png)
 
 四、参考链接
 ------------

@@ -192,11 +192,11 @@ intval了一下\$this-\>M\_ID = intval(\$this-\>M\_ID);
 
 访问member/index.php?uid=0000001并抓包(注意cookie中last\_vid值应该为空)。
 
-![](/Users/aresx/Documents/VulWiki/.resource/【开启会员注册】(SSV-97087)DeDecms任意用户登录/media/rId28.png)
+![](./.resource/【开启会员注册】(SSV-97087)DeDecms任意用户登录/media/rId28.png)
 
 可以看到已经获取到了，拿去当做DeDeUserID
 
-![](/Users/aresx/Documents/VulWiki/.resource/【开启会员注册】(SSV-97087)DeDecms任意用户登录/media/rId29.png)
+![](./.resource/【开启会员注册】(SSV-97087)DeDecms任意用户登录/media/rId29.png)
 
 可以看到，登陆了admin用户。
 

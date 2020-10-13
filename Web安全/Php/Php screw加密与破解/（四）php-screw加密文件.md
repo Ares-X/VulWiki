@@ -13,25 +13,25 @@
     然后解压
     tar –zxvf php_screw-1.5.tar.gz
 
-![1.png](/Users/aresx/Documents/VulWiki/.resource/(四)php-screw加密文件/media/rId21.png)
+![1.png](./.resource/(四)php-screw加密文件/media/rId21.png)
 
 > 编译PHP扩展的工具，主要是根据系统信息生成对应的configure文件
 
     Phpize
     ./configure
 
-![2.png](/Users/aresx/Documents/VulWiki/.resource/(四)php-screw加密文件/media/rId22.png)![3.png](/Users/aresx/Documents/VulWiki/.resource/(四)php-screw加密文件/media/rId23.png)
+![2.png](./.resource/(四)php-screw加密文件/media/rId22.png)![3.png](./.resource/(四)php-screw加密文件/media/rId23.png)
 
 > 编辑my\_screw.h修改pm9screw\_mycryptkey密钥的值
 
 如下图，是默认值
 
-![4.png](/Users/aresx/Documents/VulWiki/.resource/(四)php-screw加密文件/media/rId24.png)
+![4.png](./.resource/(四)php-screw加密文件/media/rId24.png)
 
 > 此外我们可以编辑php\_screw.h修改PM9SCREW 和
 > PM9SCREW\_LEN的值，注意PM9SCREW\_LEN的值要小于等于PM9SCREW的长度。如下图是其默认值。
 
-![5.png](/Users/aresx/Documents/VulWiki/.resource/(四)php-screw加密文件/media/rId25.png)
+![5.png](./.resource/(四)php-screw加密文件/media/rId25.png)
 
 > 进行编译
 
@@ -39,13 +39,13 @@
 
     sed -i "s/CG(extended_info) = 1;/CG(compiler_options) |= ZEND_COMPILE_EXTENDED_INFO;/g" php_screw.c
 
-![6.png](/Users/aresx/Documents/VulWiki/.resource/(四)php-screw加密文件/media/rId26.png)
+![6.png](./.resource/(四)php-screw加密文件/media/rId26.png)
 
 > 将编译好的php\_screw.so拷贝到php扩展库目录。
 
 通过phpinfo()页面查找extension-dir关键字
 
-![7.png](/Users/aresx/Documents/VulWiki/.resource/(四)php-screw加密文件/media/rId27.png)
+![7.png](./.resource/(四)php-screw加密文件/media/rId27.png)
 
 将编译好的php\_screw.so拷贝到php扩展目录。
 
@@ -64,7 +64,7 @@
     cd tools
     make
 
-> 编译完成后生成screw可执行文件。> ![8.png](/Users/aresx/Documents/VulWiki/.resource/(四)php-screw加密文件/media/rId28.png){width="5.833333333333333in"
+> 编译完成后生成screw可执行文件。> ![8.png](./.resource/(四)php-screw加密文件/media/rId28.png){width="5.833333333333333in"
 > height="2.4657994313210847in"}
 >
 > 尝试加密一个php文件
@@ -73,13 +73,13 @@
 
 然后执行./screw phpinfo.php加密文件，见下图
 
-![9.png](/Users/aresx/Documents/VulWiki/.resource/(四)php-screw加密文件/media/rId29.png)
+![9.png](./.resource/(四)php-screw加密文件/media/rId29.png)
 
 > 将加密好的文件拷贝到web目录
 
     cp phpinfo.php /var/www/html/phpinfo.php
 
-![10.png](/Users/aresx/Documents/VulWiki/.resource/(四)php-screw加密文件/media/rId30.png)
+![10.png](./.resource/(四)php-screw加密文件/media/rId30.png)
 
 > 批量加密php文件
 

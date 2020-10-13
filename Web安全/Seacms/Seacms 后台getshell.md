@@ -132,14 +132,14 @@ seacms getshell
 
 这两个脚本会将cookie和后台路径保存在文件中，并且会向后台发送数据，添加一个系统管理员，同时会在系统中写入一个一句话木马，需要注意的是修改域名为测试域名。测试如下
 
-![](/Users/aresx/Documents/VulWiki/.resource/Seacms后台getshell/media/rId24.png)
+![](./.resource/Seacms后台getshell/media/rId24.png)
 
 代码已经写进了后
 
-![](/Users/aresx/Documents/VulWiki/.resource/Seacms后台getshell/media/rId25.png)
+![](./.resource/Seacms后台getshell/media/rId25.png)
 
 管理员添加成功
 
-![](/Users/aresx/Documents/VulWiki/.resource/Seacms后台getshell/media/rId26.png)
+![](./.resource/Seacms后台getshell/media/rId26.png)
 
 \<

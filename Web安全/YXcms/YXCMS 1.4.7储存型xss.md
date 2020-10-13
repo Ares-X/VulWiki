@@ -88,11 +88,11 @@ payload：
 
     <svg/onload=alert(1)>
 
-![](/Users/aresx/Documents/VulWiki/.resource/YXCMS1.4.7储存型xss/media/rId26.png)
+![](./.resource/YXCMS1.4.7储存型xss/media/rId26.png)
 
 然后登陆后台，查看审核
 
-![](/Users/aresx/Documents/VulWiki/.resource/YXCMS1.4.7储存型xss/media/rId27.png)
+![](./.resource/YXCMS1.4.7储存型xss/media/rId27.png)
 
 点击编辑
 

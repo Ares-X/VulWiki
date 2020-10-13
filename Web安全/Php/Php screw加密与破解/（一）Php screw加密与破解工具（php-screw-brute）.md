@@ -15,11 +15,11 @@
 
 下图是php文件经过php
 screw加密后的一个样子，通过开头的"PM9SCREW"字符串得知使用了php
-screw进行加密。![1.png](/Users/aresx/Documents/VulWiki/.resource/(一)Phpscrew加密与破解工具(php-screw-brute)/media/rId21.png)
+screw进行加密。![1.png](./.resource/(一)Phpscrew加密与破解工具(php-screw-brute)/media/rId21.png)
 
 ### 使用方法
 
-下图是使用方法，解密成功后，会在相同目录下生成以".plain"为后缀的同名文件。比如待解密的文件是"index.php"，则解密成功后生成"index.php.plain"文件。![2.png](/Users/aresx/Documents/VulWiki/.resource/(一)Phpscrew加密与破解工具(php-screw-brute)/media/rId23.png)
+下图是使用方法，解密成功后，会在相同目录下生成以".plain"为后缀的同名文件。比如待解密的文件是"index.php"，则解密成功后生成"index.php.plain"文件。![2.png](./.resource/(一)Phpscrew加密与破解工具(php-screw-brute)/media/rId23.png)
 
 > 写了一个python脚本，用于筛选解密成功的php文件。
 

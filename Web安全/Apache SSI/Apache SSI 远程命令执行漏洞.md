@@ -16,11 +16,11 @@ Apache SSI 远程命令执行漏洞
 
     <!--#exec cmd="ls" -->
 
-![](/Users/aresx/Documents/VulWiki/.resource/ApacheSSI远程命令执行漏洞/media/rId24.png)
+![](./.resource/ApacheSSI远程命令执行漏洞/media/rId24.png)
 
 成功上传，然后访问shell.shtml，可见命令已成功执行：
 
-![](/Users/aresx/Documents/VulWiki/.resource/ApacheSSI远程命令执行漏洞/media/rId25.png)
+![](./.resource/ApacheSSI远程命令执行漏洞/media/rId25.png)
 
 参考链接
 --------

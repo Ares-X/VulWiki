@@ -130,7 +130,7 @@ file\_exists可以触发`__tostring`，所以寻找`__tostring`，找到了Model
 
 由于我们的目的是执行`__call`，所以要找函数调用的点，在toArray里有三处
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp5.0.24反序列化漏洞/media/rId25.png)
+![](./.resource/Thinkphp5.0.24反序列化漏洞/media/rId25.png)
 
 然后看这三处哪里可控，经调试第三处可控，需要满足的条件是
 
@@ -503,7 +503,7 @@ write
 权限的目录（这里利用的是 **think\\cache\\driver\\File:getCacheKey()**
 中的 **mkdir** 函数），然后再往这个目录写文件。
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp5.0.24反序列化漏洞/media/rId27.gif)
+![](./.resource/Thinkphp5.0.24反序列化漏洞/media/rId27.gif)
 
 ### poc 创建demo目录
 
@@ -624,9 +624,9 @@ write
     use think\process\pipes\Windows;
     echo base64_encode(serialize(new Windows()));
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp5.0.24反序列化漏洞/media/rId29.jpg)
+![](./.resource/Thinkphp5.0.24反序列化漏洞/media/rId29.jpg)
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp5.0.24反序列化漏洞/media/rId30.jpg)
+![](./.resource/Thinkphp5.0.24反序列化漏洞/media/rId30.jpg)
 
 参考链接
 --------

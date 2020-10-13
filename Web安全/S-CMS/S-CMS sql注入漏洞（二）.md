@@ -12,7 +12,7 @@ S-CMS sql注入漏洞（二）
 
 漏洞位置：`index.php`
 
-![](/Users/aresx/Documents/VulWiki/.resource/S-CMSsql注入漏洞(二)/media/rId24.jpg)
+![](./.resource/S-CMSsql注入漏洞(二)/media/rId24.jpg)
 
 跟进函数`splitx()`
 

@@ -35,7 +35,7 @@ MongoDB
 
     nmap -p 27017 --script mongodb-info <ip>
 
-![](/Users/aresx/Documents/VulWiki/.resource/MongoDB未授权访问/media/rId27.png)
+![](./.resource/MongoDB未授权访问/media/rId27.png)
 
     vim /etc/mongodb.conf
     dbpath = /data/
@@ -141,12 +141,12 @@ MongoDB
         shodanSearch('redis')
 
 查询操作
-![](/Users/aresx/Documents/VulWiki/.resource/MongoDB未授权访问/media/rId34.png)
+![](./.resource/MongoDB未授权访问/media/rId34.png)
 
 #### 2. 爆破脚本
 
 <https://github.com/netxfly/x-crack>
-![](/Users/aresx/Documents/VulWiki/.resource/MongoDB未授权访问/media/rId37.png)
+![](./.resource/MongoDB未授权访问/media/rId37.png)
 
 #### 4. 防范措施
 
@@ -169,7 +169,7 @@ MongoDB
 
 管理员创建成功，现在拥有了用户管理员 用户名:adminUser 密码:adminPass
 
-![](/Users/aresx/Documents/VulWiki/.resource/MongoDB未授权访问/media/rId39.png)
+![](./.resource/MongoDB未授权访问/media/rId39.png)
 
 **(2).本地访问**bind 127.0.0.1 **(3).修改默认端口**修改默认的mongoDB端口(默认为: TCP 27017)为其他端口
 

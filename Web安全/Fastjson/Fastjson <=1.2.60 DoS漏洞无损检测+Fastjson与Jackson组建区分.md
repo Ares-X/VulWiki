@@ -26,7 +26,7 @@ Fastjson 1.2.60 以下版本
 
 例如
 
-![](/Users/aresx/Documents/VulWiki/.resource/Fastjson<=1.2.60DoS漏洞无损检测+Fastjson与Jackson组建区分/media/rId25.png)
+![](./.resource/Fastjson<=1.2.60DoS漏洞无损检测+Fastjson与Jackson组建区分/media/rId25.png)
 
 ### 无回显，盲区分 Fastjson 和 Jackson
 
@@ -45,11 +45,11 @@ Java 系 Json 处理基本只有 Fastjson 和 Jackson。由于 Jackson 相对比
 
 Fastjson：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Fastjson<=1.2.60DoS漏洞无损检测+Fastjson与Jackson组建区分/media/rId27.png)
+![](./.resource/Fastjson<=1.2.60DoS漏洞无损检测+Fastjson与Jackson组建区分/media/rId27.png)
 
 Jackson：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Fastjson<=1.2.60DoS漏洞无损检测+Fastjson与Jackson组建区分/media/rId28.png)
+![](./.resource/Fastjson<=1.2.60DoS漏洞无损检测+Fastjson与Jackson组建区分/media/rId28.png)
 
 ### 无损检测原理
 
@@ -98,7 +98,7 @@ pom.xml
 
     </project>
 
-![](/Users/aresx/Documents/VulWiki/.resource/Fastjson<=1.2.60DoS漏洞无损检测+Fastjson与Jackson组建区分/media/rId30.png)
+![](./.resource/Fastjson<=1.2.60DoS漏洞无损检测+Fastjson与Jackson组建区分/media/rId30.png)
 
 Fastjson == 1.2.60，可以看到报错
 
@@ -123,7 +123,7 @@ pom.xml
 
     </project>
 
-![](/Users/aresx/Documents/VulWiki/.resource/Fastjson<=1.2.60DoS漏洞无损检测+Fastjson与Jackson组建区分/media/rId31.png)
+![](./.resource/Fastjson<=1.2.60DoS漏洞无损检测+Fastjson与Jackson组建区分/media/rId31.png)
 
 ### 使用 Burp 测试
 
@@ -131,11 +131,11 @@ pom.xml
 
 当后端 Fastjson 版本小于 1.2.60 时，使用该请求包不会延时不会报错
 
-![](/Users/aresx/Documents/VulWiki/.resource/Fastjson<=1.2.60DoS漏洞无损检测+Fastjson与Jackson组建区分/media/rId33.png)
+![](./.resource/Fastjson<=1.2.60DoS漏洞无损检测+Fastjson与Jackson组建区分/media/rId33.png)
 
 使用 {\"a:\"\\x 进行请求就会发生 DOS
 
-![](/Users/aresx/Documents/VulWiki/.resource/Fastjson<=1.2.60DoS漏洞无损检测+Fastjson与Jackson组建区分/media/rId34.png)
+![](./.resource/Fastjson<=1.2.60DoS漏洞无损检测+Fastjson与Jackson组建区分/media/rId34.png)
 
 四、参考链接
 ------------

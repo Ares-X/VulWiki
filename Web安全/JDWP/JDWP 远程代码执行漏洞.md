@@ -19,31 +19,31 @@ Debugger Architecture）中，它定义了调试器（debugger）和被调试的
 
 ### 利用dnslog确定可以执行命令：
 
-![1.png](/Users/aresx/Documents/VulWiki/.resource/JDWP远程代码执行漏洞/media/rId25.png)执行结果：![2.png](/Users/aresx/Documents/VulWiki/.resource/JDWP远程代码执行漏洞/media/rId26.png)
+![1.png](./.resource/JDWP远程代码执行漏洞/media/rId25.png)执行结果：![2.png](./.resource/JDWP远程代码执行漏洞/media/rId26.png)
 
 ### 生成msf后门文件，并将其放入自己的web目录下：
 
-![3.png](/Users/aresx/Documents/VulWiki/.resource/JDWP远程代码执行漏洞/media/rId28.png)
+![3.png](./.resource/JDWP远程代码执行漏洞/media/rId28.png)
 
 ### 执行命令，让目标主机下载后门：
 
-![4.png](/Users/aresx/Documents/VulWiki/.resource/JDWP远程代码执行漏洞/media/rId30.png)
+![4.png](./.resource/JDWP远程代码执行漏洞/media/rId30.png)
 
 ### 设置msf,让其处于监听状态：
 
-![5.png](/Users/aresx/Documents/VulWiki/.resource/JDWP远程代码执行漏洞/media/rId32.png)![6.png](/Users/aresx/Documents/VulWiki/.resource/JDWP远程代码执行漏洞/media/rId33.png)![7.png](/Users/aresx/Documents/VulWiki/.resource/JDWP远程代码执行漏洞/media/rId34.png)
+![5.png](./.resource/JDWP远程代码执行漏洞/media/rId32.png)![6.png](./.resource/JDWP远程代码执行漏洞/media/rId33.png)![7.png](./.resource/JDWP远程代码执行漏洞/media/rId34.png)
 
 ### 给予后门可执行的权限，并执行后门：
 
-![8.png](/Users/aresx/Documents/VulWiki/.resource/JDWP远程代码执行漏洞/media/rId36.png)![9.png](/Users/aresx/Documents/VulWiki/.resource/JDWP远程代码执行漏洞/media/rId37.png)
+![8.png](./.resource/JDWP远程代码执行漏洞/media/rId36.png)![9.png](./.resource/JDWP远程代码执行漏洞/media/rId37.png)
 
 ### 查看msf反弹shell情况：
 
-![10.png](/Users/aresx/Documents/VulWiki/.resource/JDWP远程代码执行漏洞/media/rId39.png)
+![10.png](./.resource/JDWP远程代码执行漏洞/media/rId39.png)
 
 ### 这个时候session已经成功创建，但是没办法正常出现meterpreter终端。这个时候需要ctrl+c，然后用sessions 1来使用创建的session。
 
-![11.png](/Users/aresx/Documents/VulWiki/.resource/JDWP远程代码执行漏洞/media/rId41.png)
+![11.png](./.resource/JDWP远程代码执行漏洞/media/rId41.png)
 
 ### ps
 

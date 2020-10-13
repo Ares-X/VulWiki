@@ -12,7 +12,7 @@ XDCMS 3.0
 三、复现过程
 ------------
 
-![](/Users/aresx/Documents/VulWiki/.resource/XDCMS3.0后台友情链接sql注入/media/rId24.jpg)
+![](./.resource/XDCMS3.0后台友情链接sql注入/media/rId24.jpg)
 
 友链title和url部分过滤函数成功防御了XSS，但对SQL过滤不全，关键代码如下：
 

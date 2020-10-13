@@ -63,13 +63,13 @@ Discuz!X V3.4
 
 登陆后台，进入论坛-\>模块管理-\>编辑板块，使用burp拦截提交的数据。
 
-![](/Users/aresx/Documents/VulWiki/.resource/Discuz!X3.4后台任意文件删除/media/rId26.png)
+![](./.resource/Discuz!X3.4后台任意文件删除/media/rId26.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/Discuz!X3.4后台任意文件删除/media/rId27.png)
+![](./.resource/Discuz!X3.4后台任意文件删除/media/rId27.png)
 
 发送，查看文件发现被删除。
 
-![](/Users/aresx/Documents/VulWiki/.resource/Discuz!X3.4后台任意文件删除/media/rId28.png)
+![](./.resource/Discuz!X3.4后台任意文件删除/media/rId28.png)
 
 参考链接
 --------

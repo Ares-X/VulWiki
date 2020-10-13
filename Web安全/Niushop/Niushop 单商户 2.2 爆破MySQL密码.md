@@ -25,7 +25,7 @@ Version：单商户 2.2
     Cookie: action=db
     Connection: close
 
-![](/Users/aresx/Documents/VulWiki/.resource/Niushop单商户2.2爆破MySQL密码/media/rId25.jpg)
+![](./.resource/Niushop单商户2.2爆破MySQL密码/media/rId25.jpg)
 
 爆破成功返回1，密码错误返回0
 

@@ -10,11 +10,11 @@ S-CMS sql注入漏洞（一）
 三、复现过程
 ------------
 
-![](/Users/aresx/Documents/VulWiki/.resource/S-CMSsql注入漏洞(一)/media/rId24.jpg)
+![](./.resource/S-CMSsql注入漏洞(一)/media/rId24.jpg)
 
 根据文章注入
 
-![](/Users/aresx/Documents/VulWiki/.resource/S-CMSsql注入漏洞(一)/media/rId25.jpg)
+![](./.resource/S-CMSsql注入漏洞(一)/media/rId25.jpg)
 
 参考链接
 --------

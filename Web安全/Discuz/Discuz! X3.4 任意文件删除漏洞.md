@@ -20,7 +20,7 @@ https://gitee.com/ComsenzDiscuz/DiscuzX/commit/7d603a197c2717ef1d7e9ba654cf72aa4
 
 核心问题在`upload/source/include/spacecp/spacecp_profile.php`
 
-![](/Users/aresx/Documents/VulWiki/.resource/Discuz!X3.4任意文件删除漏洞/media/rId25.png)
+![](./.resource/Discuz!X3.4任意文件删除漏洞/media/rId25.png)
 
 跟入代码70行
 
@@ -28,11 +28,11 @@ https://gitee.com/ComsenzDiscuz/DiscuzX/commit/7d603a197c2717ef1d7e9ba654cf72aa4
 
 当提交profilesubmit时进入判断，跟入177行
 
-![](/Users/aresx/Documents/VulWiki/.resource/Discuz!X3.4任意文件删除漏洞/media/rId26.png)
+![](./.resource/Discuz!X3.4任意文件删除漏洞/media/rId26.png)
 
 我们发现如果满足配置文件中某个formtype的类型为file，我们就可以进入判断逻辑，这里我们尝试把配置输出出来看看
 
-![](/Users/aresx/Documents/VulWiki/.resource/Discuz!X3.4任意文件删除漏洞/media/rId27.png)
+![](./.resource/Discuz!X3.4任意文件删除漏洞/media/rId27.png)
 
 我们发现formtype字段和条件不符，这里代码的逻辑已经走不进去了
 
@@ -42,11 +42,11 @@ https://gitee.com/ComsenzDiscuz/DiscuzX/commit/7d603a197c2717ef1d7e9ba654cf72aa4
 
 回溯进入条件
 
-![](/Users/aresx/Documents/VulWiki/.resource/Discuz!X3.4任意文件删除漏洞/media/rId28.png)
+![](./.resource/Discuz!X3.4任意文件删除漏洞/media/rId28.png)
 
 当上传文件并上传成功，即可进入unlink语句
 
-![](/Users/aresx/Documents/VulWiki/.resource/Discuz!X3.4任意文件删除漏洞/media/rId29.png)
+![](./.resource/Discuz!X3.4任意文件删除漏洞/media/rId29.png)
 
 然后回溯变量`$space[$key]`,不难发现这就是用户的个人设置。
 
@@ -54,7 +54,7 @@ https://gitee.com/ComsenzDiscuz/DiscuzX/commit/7d603a197c2717ef1d7e9ba654cf72aa4
 
 在设置页面直接提交就可以绕过字段内容的限制了。
 
-![](/Users/aresx/Documents/VulWiki/.resource/Discuz!X3.4任意文件删除漏洞/media/rId30.png)
+![](./.resource/Discuz!X3.4任意文件删除漏洞/media/rId30.png)
 
 成功实现了任意文件删除
 
@@ -62,11 +62,11 @@ https://gitee.com/ComsenzDiscuz/DiscuzX/commit/7d603a197c2717ef1d7e9ba654cf72aa4
 
 访问`http://your-ip/robots.txt`可见robots.txt是存在的：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Discuz!X3.4任意文件删除漏洞/media/rId32.png)
+![](./.resource/Discuz!X3.4任意文件删除漏洞/media/rId32.png)
 
 注册用户后，在个人设置页面找到自己的formhash：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Discuz!X3.4任意文件删除漏洞/media/rId33.png)
+![](./.resource/Discuz!X3.4任意文件删除漏洞/media/rId33.png)
 
 带上自己的Cookie、formhash发送如下数据包：
 
@@ -99,7 +99,7 @@ https://gitee.com/ComsenzDiscuz/DiscuzX/commit/7d603a197c2717ef1d7e9ba654cf72aa4
 
 提交成功之后，用户资料修改页面上的出生地就会显示成下图所示的状态：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Discuz!X3.4任意文件删除漏洞/media/rId34.png)
+![](./.resource/Discuz!X3.4任意文件删除漏洞/media/rId34.png)
 
 说明我们的脏数据已经进入数据库了。
 
@@ -116,4 +116,4 @@ https://gitee.com/ComsenzDiscuz/DiscuzX/commit/7d603a197c2717ef1d7e9ba654cf72aa4
 
 再次访问`http://your-ip/robots.txt`，发现文件成功被删除：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Discuz!X3.4任意文件删除漏洞/media/rId35.png)
+![](./.resource/Discuz!X3.4任意文件删除漏洞/media/rId35.png)

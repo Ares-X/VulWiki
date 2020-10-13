@@ -20,4 +20,4 @@ XDCMS 1.0
 
 直接修改Cookie中`member_userid`字段，成功将其他用户信息修改
 
-![](/Users/aresx/Documents/VulWiki/.resource/XDCMS1.0csrf漏洞/media/rId24.jpg)
+![](./.resource/XDCMS1.0csrf漏洞/media/rId24.jpg)

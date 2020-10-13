@@ -16,7 +16,7 @@ YzmCMS V5.4
 
 这个cms中有一些配置项是写在文件中，也有一些是写在数据库中的，例如上一个漏洞提到的`mode`就是写在文件中，而我们的payload是写在数据库中再进行读取的，为了避免上面手动修改配置文件这一过程，我找到了一个函数可以修改配置文件，但是问题是只能对规定的4个key进行修改，所以是不能直接修改`mode`这个key的。于是我回去查看补丁，发现修改配置的函数也进行了修改。
 
-![](/Users/aresx/Documents/VulWiki/.resource/YzmCMSV5.4后台getshell(二)/media/rId25.png)
+![](./.resource/YzmCMSV5.4后台getshell(二)/media/rId25.png)
 
 该函数位于文件`application/admin/common/function/function.php`
 
@@ -93,7 +93,7 @@ YzmCMS V5.4
 
 设置的接口在系统管理的系统设置中的附加设置处。
 
-![](/Users/aresx/Documents/VulWiki/.resource/YzmCMSV5.4后台getshell(二)/media/rId27.png)
+![](./.resource/YzmCMSV5.4后台getshell(二)/media/rId27.png)
 
 通过上文的分析我们来构建payload。
 
@@ -103,19 +103,19 @@ YzmCMS V5.4
 
 先查看配置文件原先的内容
 
-![](/Users/aresx/Documents/VulWiki/.resource/YzmCMSV5.4后台getshell(二)/media/rId28.png)
+![](./.resource/YzmCMSV5.4后台getshell(二)/media/rId28.png)
 
 回到页面，`水印图片名称`就是可用的一个配置项，在这个地方写入我们的payload并提交。
 
-![](/Users/aresx/Documents/VulWiki/.resource/YzmCMSV5.4后台getshell(二)/media/rId29.png)
+![](./.resource/YzmCMSV5.4后台getshell(二)/media/rId29.png)
 
 提交以后可以发现已经成功执行命令了
 
-![](/Users/aresx/Documents/VulWiki/.resource/YzmCMSV5.4后台getshell(二)/media/rId30.png)
+![](./.resource/YzmCMSV5.4后台getshell(二)/media/rId30.png)
 
 再回去查看配置文件可以看到代码也写入了
 
-![](/Users/aresx/Documents/VulWiki/.resource/YzmCMSV5.4后台getshell(二)/media/rId31.png)
+![](./.resource/YzmCMSV5.4后台getshell(二)/media/rId31.png)
 
 参考链接
 --------

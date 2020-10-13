@@ -17,4 +17,4 @@ phpstudy: \<=8.1.0.7
 三、复现过程
 ------------
 
-![1.jpeg](/Users/aresx/Documents/VulWiki/.resource/Phpstudynginx解析漏洞/media/rId24.jpg)
+![1.jpeg](./.resource/Phpstudynginx解析漏洞/media/rId24.jpg)

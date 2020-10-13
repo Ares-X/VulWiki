@@ -12,7 +12,7 @@ YCCMS 3.4
 三、复现过程
 ------------
 
-![7.png](/Users/aresx/Documents/VulWiki/.resource/YCCMS3.4任意文件上传漏洞(二)/media/rId24.png)在不需要登录的情况下可以看到已经上传成功，上传地址为E:/phpstudy/WWW/yccms/uploads/20200509133351770.php定位漏洞位置为controller\\CallAction.class.php中的xhUp函数
+![7.png](./.resource/YCCMS3.4任意文件上传漏洞(二)/media/rId24.png)在不需要登录的情况下可以看到已经上传成功，上传地址为E:/phpstudy/WWW/yccms/uploads/20200509133351770.php定位漏洞位置为controller\\CallAction.class.php中的xhUp函数
 
     public function xhUp() {
             if (isset($_GET['type'])) {

@@ -16,7 +16,7 @@ XDCMS 1.0
 
 漏洞文件：`install/index.php` ，`line：12`
 
-![](/Users/aresx/Documents/VulWiki/.resource/XDCMS1.0重装系统漏洞/media/rId24.jpg)
+![](./.resource/XDCMS1.0重装系统漏洞/media/rId24.jpg)
 
 造成重装漏洞是由于12-14行存在变量覆盖漏洞，可以将`$insLockfile`变量重置为0
 
@@ -27,4 +27,4 @@ dbpre dblang adminuser adminpwd 。构造
 
 不过db的用户及口令还需要借助其他方法获得。
 
-![](/Users/aresx/Documents/VulWiki/.resource/XDCMS1.0重装系统漏洞/media/rId25.jpg)
+![](./.resource/XDCMS1.0重装系统漏洞/media/rId25.jpg)

@@ -20,7 +20,7 @@ Mssql 模拟登录提权
     -- Create login 4
     CREATE LOGIN MyUser4 WITH PASSWORD = 'MyPassword!';
 
-![1.png](/Users/aresx/Documents/VulWiki/.resource/Mssql模拟登录提权/media/rId24.png)
+![1.png](./.resource/Mssql模拟登录提权/media/rId24.png)
 
 #### 2.赋予用户MyUser1权限来模拟 MyUser2, MyUser3,及sa
 
@@ -30,12 +30,12 @@ Mssql 模拟登录提权
     GRANT IMPERSONATE ON LOGIN::MyUser3 to [MyUser1];
     GO
 
-![2.png](/Users/aresx/Documents/VulWiki/.resource/Mssql模拟登录提权/media/rId26.png)
+![2.png](./.resource/Mssql模拟登录提权/media/rId26.png)
 
 这里的GRANT IMPERSONATE ON
 LOGIN意思是授权MyUser1用户对sa,MyUser2,MyUser3用户登录权限，查看sqlserver的文档`https://docs.microsoft.com/zh-cn/sql/t-sql/statements/grant-server-principal-permissions-transact-sql?view=sql-server-ver15`
 
-![3.png](/Users/aresx/Documents/VulWiki/.resource/Mssql模拟登录提权/media/rId27.png)
+![3.png](./.resource/Mssql模拟登录提权/media/rId27.png)
 
 在SQL Server的安全模型中，模拟（IMPERSONATE
 ）权限的安全对象是User或Login，被授予者（Grantee
@@ -58,7 +58,7 @@ LOGIN意思是授权MyUser1用户对sa,MyUser2,MyUser3用户登录权限，查�
     ON a.grantor_principal_id = b.principal_id
     WHERE a.permission_name = 'IMPERSONATE'
 
-![4.png](/Users/aresx/Documents/VulWiki/.resource/Mssql模拟登录提权/media/rId29.png)
+![4.png](./.resource/Mssql模拟登录提权/media/rId29.png)
 
 这里我们可以看到MyUser1用户可以模拟登录sa,MyUser2,MyUser2用户，接下来就是模拟登录sa来获取sysadmin权限了
 
@@ -73,7 +73,7 @@ LOGIN意思是授权MyUser1用户对sa,MyUser2,MyUser3用户登录权限，查�
     SELECT SYSTEM_USER
     SELECT IS_SRVROLEMEMBER('sysadmin')
 
-![5.png](/Users/aresx/Documents/VulWiki/.resource/Mssql模拟登录提权/media/rId31.png)
+![5.png](./.resource/Mssql模拟登录提权/media/rId31.png)
 
 可以看到，第二个查询之后我们已经是sysadmin的权限了
 
@@ -84,11 +84,11 @@ LOGIN意思是授权MyUser1用户对sa,MyUser2,MyUser3用户登录权限，查�
 
 模拟sa登录之前
 
-![6.png](/Users/aresx/Documents/VulWiki/.resource/Mssql模拟登录提权/media/rId32.png)
+![6.png](./.resource/Mssql模拟登录提权/media/rId32.png)
 
 模拟sa登录之后
 
-![7.png](/Users/aresx/Documents/VulWiki/.resource/Mssql模拟登录提权/media/rId33.png)
+![7.png](./.resource/Mssql模拟登录提权/media/rId33.png)
 
 权限高了，可以看到更多的用户登录
 
@@ -98,7 +98,7 @@ LOGIN意思是授权MyUser1用户对sa,MyUser2,MyUser3用户登录权限，查�
     SELECT SYSTEM_USER
     SELECT IS_SRVROLEMEMBER('sysadmin')
 
-![8.png](/Users/aresx/Documents/VulWiki/.resource/Mssql模拟登录提权/media/rId35.png)
+![8.png](./.resource/Mssql模拟登录提权/media/rId35.png)
 
 这样我们又回到myuser1用户登录的会话了
 
@@ -447,10 +447,10 @@ LOGIN意思是授权MyUser1用户对sa,MyUser2,MyUser3用户登录权限，查�
         
     }
 
-![9.png](/Users/aresx/Documents/VulWiki/.resource/Mssql模拟登录提权/media/rId38.png)
+![9.png](./.resource/Mssql模拟登录提权/media/rId38.png)
 
     Invoke-SqlServer-Escalate-ExecuteAs -SqlUser MyUser1 -SqlPass MyPassword! -SqlServerInstance WIN-80LVKKRM5UA
 
-![10.png](/Users/aresx/Documents/VulWiki/.resource/Mssql模拟登录提权/media/rId39.png)
+![10.png](./.resource/Mssql模拟登录提权/media/rId39.png)
 
 总的来说，利用这个来提权也不算是漏洞，毕竟可能是运维人员想要的正常功能，然后被攻击者利用，达到提权sysadmin的目的。

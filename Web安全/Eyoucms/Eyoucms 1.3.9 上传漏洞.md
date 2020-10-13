@@ -19,7 +19,7 @@ Weapp.php文件中的create()方法接收了请求中的参数，过滤后直接
 
 在后台\-\-\-\--》插件应用\-\-\-\--》上传插件这里可以上传zip文件
 
-![](/Users/aresx/Documents/VulWiki/.resource/Eyoucms1.3.9上传漏洞/media/rId25.png)
+![](./.resource/Eyoucms1.3.9上传漏洞/media/rId25.png)
 
 在Weapp.php文件中的upload()方法中可以上传zip文件，并会自动解压到一个文件夹名是随机md5值的文件夹下
 
@@ -31,4 +31,4 @@ Weapp.php文件中的create()方法接收了请求中的参数，过滤后直接
 
 直接访问该文件夹下的php一句话木马文件即可
 
-![](/Users/aresx/Documents/VulWiki/.resource/Eyoucms1.3.9上传漏洞/media/rId26.png)
+![](./.resource/Eyoucms1.3.9上传漏洞/media/rId26.png)

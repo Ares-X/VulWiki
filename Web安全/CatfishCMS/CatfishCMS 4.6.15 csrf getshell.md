@@ -22,17 +22,17 @@ CatfishCMS 4.6
 
 函数：fetch()
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.6.15csrfgetshell/media/rId25.png)
+![](./.resource/CatfishCMS4.6.15csrfgetshell/media/rId25.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.6.15csrfgetshell/media/rId26.png)
+![](./.resource/CatfishCMS4.6.15csrfgetshell/media/rId26.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.6.15csrfgetshell/media/rId27.png)
+![](./.resource/CatfishCMS4.6.15csrfgetshell/media/rId27.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.6.15csrfgetshell/media/rId28.png)
+![](./.resource/CatfishCMS4.6.15csrfgetshell/media/rId28.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.6.15csrfgetshell/media/rId29.png)
+![](./.resource/CatfishCMS4.6.15csrfgetshell/media/rId29.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.6.15csrfgetshell/media/rId30.png)
+![](./.resource/CatfishCMS4.6.15csrfgetshell/media/rId30.png)
 
 嗯，说完了。Fetch方法最后都会编译文件以后通过PHP输出，所以如果我们可以在他编译之前写入恶意代码 那么就可以为所欲为。
 
@@ -129,19 +129,19 @@ CatfishCMS-4.6.12-xss.js
         }
     });
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.6.15csrfgetshell/media/rId32.png)
+![](./.resource/CatfishCMS4.6.15csrfgetshell/media/rId32.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.6.15csrfgetshell/media/rId33.png)
+![](./.resource/CatfishCMS4.6.15csrfgetshell/media/rId33.png)
 
 写好以后模拟管理员，进入后台
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.6.15csrfgetshell/media/rId34.png)
+![](./.resource/CatfishCMS4.6.15csrfgetshell/media/rId34.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.6.15csrfgetshell/media/rId35.png)
+![](./.resource/CatfishCMS4.6.15csrfgetshell/media/rId35.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.6.15csrfgetshell/media/rId36.png)
+![](./.resource/CatfishCMS4.6.15csrfgetshell/media/rId36.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.6.15csrfgetshell/media/rId37.png)
+![](./.resource/CatfishCMS4.6.15csrfgetshell/media/rId37.png)
 
 getshell\_code
 
@@ -164,7 +164,7 @@ getshell\_code
         }
     ?>
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.6.15csrfgetshell/media/rId38.png)
+![](./.resource/CatfishCMS4.6.15csrfgetshell/media/rId38.png)
 
 连接马子的操作，这个文件会在index.php中给引入所以直接
 
@@ -174,6 +174,6 @@ getshell\_code
 
     ddd = 你要执行的命令
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.6.15csrfgetshell/media/rId39.png)
+![](./.resource/CatfishCMS4.6.15csrfgetshell/media/rId39.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.6.15csrfgetshell/media/rId40.png)
+![](./.resource/CatfishCMS4.6.15csrfgetshell/media/rId40.png)

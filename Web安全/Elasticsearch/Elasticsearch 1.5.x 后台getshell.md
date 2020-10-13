@@ -63,7 +63,7 @@ Elasticsearch 1.5.x
 
 该shell的作用是向wwwroot下的test.jsp文件中写入任意字符串，如：`http://www.0-sec.org:8080/wwwroot/indices/yz.jsp/snapshot-yz.jsp?f=success`，我们再访问/wwwroot/test.jsp就能看到success了：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Elasticsearch1.5.x后台getshell/media/rId26.png)
+![](./.resource/Elasticsearch1.5.x后台getshell/media/rId26.png)
 
 参考链接
 --------

@@ -72,7 +72,7 @@ MIP建站系统 v5.0.5
     POST方法进行请求，payload：  
     postAddress=file:///C:\phpStudy\PHPTutorial\WWW\app\database.php&url=test&id=test
 
-![](/Users/aresx/Documents/VulWiki/.resource/MIP建站系统v5.0.5SSRF漏洞/media/rId26.png)
+![](./.resource/MIP建站系统v5.0.5SSRF漏洞/media/rId26.png)
 
 参考链接
 --------

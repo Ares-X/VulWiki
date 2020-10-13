@@ -24,7 +24,7 @@ Coremail XT 3.0.1至XT 5.0.9版本，XT 5.0.9a及以上版本已修复该漏洞
 
 输入Poc访问漏洞页面发现信息泄露页面内搜索user，password，database等关键字如下图
 
-![](/Users/aresx/Documents/VulWiki/.resource/Coremail配置文件信息泄漏/media/rId25.png)
+![](./.resource/Coremail配置文件信息泄漏/media/rId25.png)
 
 ### 四、修复建议
 

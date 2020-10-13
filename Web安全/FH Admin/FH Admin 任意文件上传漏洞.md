@@ -90,7 +90,7 @@ FH Admin 任意文件上传漏洞
 
 尝试访问此文件，提示未登录302跳转
 
-![3.png](/Users/aresx/Documents/VulWiki/.resource/FHAdmin任意文件上传漏洞/media/rId24.png)
+![3.png](./.resource/FHAdmin任意文件上传漏洞/media/rId24.png)
 
 由于该框架使用到了shiro，如若shiro版本过低会导致shiro身份绕过漏洞，结合文库shiro部分的身份认证绕过利用即可getshell
 
@@ -100,15 +100,15 @@ FH Admin 任意文件上传漏洞
 
 来绕过shiro的权限控制，可以注意到状态码为200
 
-![4.png](/Users/aresx/Documents/VulWiki/.resource/FHAdmin任意文件上传漏洞/media/rId25.png)
+![4.png](./.resource/FHAdmin任意文件上传漏洞/media/rId25.png)
 
 结合之前给出的代码需要两个参数构造上传包
 
-![5.png](/Users/aresx/Documents/VulWiki/.resource/FHAdmin任意文件上传漏洞/media/rId26.png)
+![5.png](./.resource/FHAdmin任意文件上传漏洞/media/rId26.png)
 
 发现上传成功，但是居然找不到文件。
 
-![6.png](/Users/aresx/Documents/VulWiki/.resource/FHAdmin任意文件上传漏洞/media/rId27.png)
+![6.png](./.resource/FHAdmin任意文件上传漏洞/media/rId27.png)
 
 仔细看了一下才知道request.getParameter(\"uploadPath\");解析不了multipart里的参数，再次构造上传包
 

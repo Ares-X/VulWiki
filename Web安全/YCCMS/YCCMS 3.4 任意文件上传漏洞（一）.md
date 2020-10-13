@@ -12,7 +12,7 @@ YCCMS 3.4
 三、复现过程
 ------------
 
-在不需要登录的情况上传成功![5.png](/Users/aresx/Documents/VulWiki/.resource/YCCMS3.4任意文件上传漏洞(一)/media/rId24.png)定位到漏洞位置： controller\\CallAction.class.php
+在不需要登录的情况上传成功![5.png](./.resource/YCCMS3.4任意文件上传漏洞(一)/media/rId24.png)定位到漏洞位置： controller\\CallAction.class.php
 
     public function upLoad() {
             if (isset($_POST['send'])) {
@@ -39,7 +39,7 @@ YCCMS 3.4
 
     private $typeArr = array('image/png','image/x-png');//类型合集
 
-根据Content-Type的值来判断是否是图片格式，只要Content-Type是这两种类型就可以，那直接伪造Content-Type就可以了![6.png](/Users/aresx/Documents/VulWiki/.resource/YCCMS3.4任意文件上传漏洞(一)/media/rId25.png)
+根据Content-Type的值来判断是否是图片格式，只要Content-Type是这两种类型就可以，那直接伪造Content-Type就可以了![6.png](./.resource/YCCMS3.4任意文件上传漏洞(一)/media/rId25.png)
 
 参考链接
 --------

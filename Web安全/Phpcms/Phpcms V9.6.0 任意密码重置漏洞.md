@@ -101,7 +101,7 @@ Phpcms V9.6.0
 然后在mysql中，where 1 = \'1sFdsfdsf\'
 是相等的，因为后面的字符串转为了数组1
 
-![1.png](/Users/aresx/Documents/VulWiki/.resource/PhpcmsV9.6.0任意密码重置漏洞/media/rId25.png)
+![1.png](./.resource/PhpcmsV9.6.0任意密码重置漏洞/media/rId25.png)
 
 所以他的语句就变成了
 

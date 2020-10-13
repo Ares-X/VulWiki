@@ -23,7 +23,7 @@ rConfig v3.9.6 及其之前版本
 
 > rConfig.py 需要修改代码里面的部分内容
 
-![1.png](/Users/aresx/Documents/VulWiki/.resource/rConfigv3.9.6远程命令执行/media/rId25.png)
+![1.png](./.resource/rConfigv3.9.6远程命令执行/media/rId25.png)
 
     import requests
 

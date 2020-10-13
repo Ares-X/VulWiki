@@ -20,11 +20,11 @@ Thinkphp 5.1.37 反序列化漏洞
 
 ### poc演示截图
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp5.1.37反序列化漏洞/media/rId27.png)
+![](./.resource/Thinkphp5.1.37反序列化漏洞/media/rId27.png)
 
 ### 调用链
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp5.1.37反序列化漏洞/media/rId29.png)
+![](./.resource/Thinkphp5.1.37反序列化漏洞/media/rId29.png)
 
 ### 单步调试
 
@@ -68,7 +68,7 @@ Thinkphp 5.1.37 反序列化漏洞
 当一个对象被反序列化后又被当做字符串使用时会被触发，我们通过传入一个对象来触发**toString
 方法。
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp5.1.37反序列化漏洞/media/rId31.png)
+![](./.resource/Thinkphp5.1.37反序列化漏洞/media/rId31.png)
 
     //thinkphp\library\think\model\concern\Conversion.php
     public function __toString()
@@ -129,13 +129,13 @@ Thinkphp 5.1.37 反序列化漏洞
 这里的\$this-\>append是我们可控的，然后通过getRelation(\$key)，但是下面有一个!\$relation,所以我们只要置空即可，然后调用getAttr(\$key),在调用getData(\$name)函数，这里\$this-\>data\[\'name\'\]我们可控，之后回到toArray函数，通过这一句话\$relation-\>visible(\$name);
 我们控制\$relation为一个类对象，调用不存在的visible方法，会自动调用**call方法，那么我们找到一个类对象没有visible方法，但存在**call方法的类，这里
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp5.1.37反序列化漏洞/media/rId32.png)
+![](./.resource/Thinkphp5.1.37反序列化漏洞/media/rId32.png)
 
 可以看到这里有一个我们熟悉的回调函数call\_user\_func\_array，但是这里有一个卡住了，就是array\_unshift，这个函数把request对象插入到数组的开头，虽然这里的this-\>hook\[\$method\]我们可以控制，但是构造不出来参数可用的payload，因为第一个参数是\$this对象。
 
 目前我们所能控制的内容就是
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp5.1.37反序列化漏洞/media/rId33.png)
+![](./.resource/Thinkphp5.1.37反序列化漏洞/media/rId33.png)
 
 也就是我们能调用任意类的任意方法。
 
@@ -212,7 +212,7 @@ Thinkphp 5.1.37 反序列化漏洞
 这里\$filter可控，data参数不可控，而且\$name = (string)
 \$name;这里如果直接调用input的话，执行到这一句的时候会报错，直接退出，所以继续回溯，目的是要找到可以控制\$name变量，使之最好是字符串。同时也要找到能控制data参数
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp5.1.37反序列化漏洞/media/rId34.png)
+![](./.resource/Thinkphp5.1.37反序列化漏洞/media/rId34.png)
 
     public function param($name = '', $default = null, $filter = '')
     {
@@ -289,7 +289,7 @@ Thinkphp 5.1.37 反序列化漏洞
 
 可以看到这里\$this-\>config\[\'var\_ajax\'\]可控，那么也就是name可控，所有条件聚齐。成功导致rce。
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp5.1.37反序列化漏洞/media/rId35.png)
+![](./.resource/Thinkphp5.1.37反序列化漏洞/media/rId35.png)
 
 补充：
 
@@ -306,7 +306,7 @@ Thinkphp 5.1.37 反序列化漏洞
     $data = array('input'=>"asdfasdf",'id'=>'whoami');
     array_walk_recursive($data, "filterValue", "system");
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp5.1.37反序列化漏洞/media/rId36.png)
+![](./.resource/Thinkphp5.1.37反序列化漏洞/media/rId36.png)
 
 ### poc v5.1.37
 

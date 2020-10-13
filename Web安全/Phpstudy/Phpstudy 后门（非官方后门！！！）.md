@@ -36,7 +36,7 @@ PHPstudy
 
 根据\@eval()这个代码执行函数定位到引用位置。\@是PHP提供的错误信息屏蔽专用符号。Eval()可执行php代码，中间%s格式符为字符串传参。函数地址为：0x100031F0
 
-![1.jpg](/Users/aresx/Documents/VulWiki/.resource/Phpstudy后门(非官方后门！！！)/media/rId27.jpg)
+![1.jpg](./.resource/Phpstudy后门(非官方后门！！！)/media/rId27.jpg)
 
 图1：eval特征代码
 
@@ -67,11 +67,11 @@ compress,gzip可以触发第二部分。
     Accept-Encoding:compress,gzip
     ….
 
-![2.jpg](/Users/aresx/Documents/VulWiki/.resource/Phpstudy后门(非官方后门！！！)/media/rId29.jpg)
+![2.jpg](./.resource/Phpstudy后门(非官方后门！！！)/media/rId29.jpg)
 
 图2：第1部分流程判断代码
 
-![3.jpg](/Users/aresx/Documents/VulWiki/.resource/Phpstudy后门(非官方后门！！！)/media/rId30.jpg)
+![3.jpg](./.resource/Phpstudy后门(非官方后门！！！)/media/rId30.jpg)
 
 图3：第2部分流程判断代码
 
@@ -127,7 +127,7 @@ compress,gzip可以触发第二部分。
         }
     }while($n);
 
-![4.jpg](/Users/aresx/Documents/VulWiki/.resource/Phpstudy后门(非官方后门！！！)/media/rId31.jpg)
+![4.jpg](./.resource/Phpstudy后门(非官方后门！！！)/media/rId31.jpg)
 
 从1000D028 到1000D66C的代码解密：
 
@@ -147,7 +147,7 @@ compress,gzip可以触发第二部分。
         fclose($fp);
     }
 
-![5.jpg](/Users/aresx/Documents/VulWiki/.resource/Phpstudy后门(非官方后门！！！)/media/rId32.jpg)
+![5.jpg](./.resource/Phpstudy后门(非官方后门！！！)/media/rId32.jpg)
 
 #### 动态调试构造传参内容
 
@@ -155,7 +155,7 @@ OD动态调试传参值需要对httpd.exe进程进行附加调试，phpstudy启�
 
 根据前面IDA静态分析得到的后门函数地址，OD附加进程后从httpd.exe调用的模块里找到php\_xmlrpc.dll模块，在DLL空间里定位后门函数地址0x100031F0，可能还需要手动修改偏移后下断点。使用burpsuite，构造Accept-Encoding的内容。发包后可以动态调试。建立触发点的虚拟机快照后可以反复跟踪调试得到最终可利用的payload。
 
-![6.jpg](/Users/aresx/Documents/VulWiki/.resource/Phpstudy后门(非官方后门！！！)/media/rId34.jpg)
+![6.jpg](./.resource/Phpstudy后门(非官方后门！！！)/media/rId34.jpg)
 
 图4：OD动态调试Payload
 
@@ -254,7 +254,7 @@ Payload：`printf(md5(333));`
 
 回显特征：`310dcbbf4cce62f762a2aaa148d556bd`
 
-![7.jpg](/Users/aresx/Documents/VulWiki/.resource/Phpstudy后门(非官方后门！！！)/media/rId37.jpg)
+![7.jpg](./.resource/Phpstudy后门(非官方后门！！！)/media/rId37.jpg)
 
 图5：Payload回显验证
 

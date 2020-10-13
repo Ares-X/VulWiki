@@ -167,7 +167,7 @@ Phpcms V9.6.3
 
     dosubmit=1&fromvalue=0.6&from=1id=1`setset'&to=}" onmousemove=alert(1)>//
 
-![1.png](/Users/aresx/Documents/VulWiki/.resource/PhpcmsV9.6.3储存型xss/media/rId26.png)
+![1.png](./.resource/PhpcmsV9.6.3储存型xss/media/rId26.png)
 
 参考链接
 --------

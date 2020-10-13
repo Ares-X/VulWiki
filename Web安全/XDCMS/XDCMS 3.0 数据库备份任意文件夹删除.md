@@ -12,7 +12,7 @@ XDCMS 3.0
 三、复现过程
 ------------
 
-![](/Users/aresx/Documents/VulWiki/.resource/XDCMS3.0数据库备份任意文件夹删除/media/rId24.jpg)
+![](./.resource/XDCMS3.0数据库备份任意文件夹删除/media/rId24.jpg)
 
 漏洞点：`system/modules/xdcms/data.php`
 
@@ -37,4 +37,4 @@ XDCMS 3.0
 
 删除数据库备份时候仅判断是否为文件夹，是则删除其中所有的文件；同时未对目录进行过滤，导致可以删除任意文件夹中的文件
 
-![](/Users/aresx/Documents/VulWiki/.resource/XDCMS3.0数据库备份任意文件夹删除/media/rId25.jpg)
+![](./.resource/XDCMS3.0数据库备份任意文件夹删除/media/rId25.jpg)

@@ -85,9 +85,9 @@ Payload数据包如下：
 
 写入的内容和效果如下：
 
-![11.jpg](/Users/aresx/Documents/VulWiki/.resource/MyuCMSv2.1命令执行漏洞/media/rId25.jpg)
+![11.jpg](./.resource/MyuCMSv2.1命令执行漏洞/media/rId25.jpg)
 
-![111.jpg](/Users/aresx/Documents/VulWiki/.resource/MyuCMSv2.1命令执行漏洞/media/rId26.jpg)
+![111.jpg](./.resource/MyuCMSv2.1命令执行漏洞/media/rId26.jpg)
 
 参考链接
 --------

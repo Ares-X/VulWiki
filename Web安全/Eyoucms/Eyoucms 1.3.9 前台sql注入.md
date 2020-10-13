@@ -12,7 +12,7 @@ Eyoucms 1.3.9 前台sql注入
 
     http://0-sec.org:8081/eyoucms/?m=home&c=View&a=index&aid=89
 
-![](/Users/aresx/Documents/VulWiki/.resource/Eyoucms1.3.9前台sql注入/media/rId24.png)
+![](./.resource/Eyoucms1.3.9前台sql注入/media/rId24.png)
 
 然后开启burp抓包，构建如下的包
 
@@ -20,13 +20,13 @@ Eyoucms 1.3.9 前台sql注入
 
 然后将get的url构造为如下
 
-![](/Users/aresx/Documents/VulWiki/.resource/Eyoucms1.3.9前台sql注入/media/rId25.png)
+![](./.resource/Eyoucms1.3.9前台sql注入/media/rId25.png)
 
 然后放进sqlmap一把梭就行啦
 
 ### 代码分析
 
-![](/Users/aresx/Documents/VulWiki/.resource/Eyoucms1.3.9前台sql注入/media/rId27.png)
+![](./.resource/Eyoucms1.3.9前台sql注入/media/rId27.png)
 
 \'url\_screen\_var\'这个值=\>\'ZXLjbXM\'，这里它cms也注释说明了这个参数代表了文章状态，在前台使用的。
 
@@ -45,7 +45,7 @@ ZXljbXM
 但是这个参数也是属于用户发表的文章里面的构造，所以结合ZXLjbXM
 即可构造可以存在注入的url链接
 
-![](/Users/aresx/Documents/VulWiki/.resource/Eyoucms1.3.9前台sql注入/media/rId28.png)
+![](./.resource/Eyoucms1.3.9前台sql注入/media/rId28.png)
 
 它这里请求的参数没有做防护
 

@@ -58,7 +58,7 @@ Discuz! X3.4
 
 不过因为这里用到了微信登录的插件，所以要利用的话需要目标站开启微信登录：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Discuz!X3.4WeixinPluginssrf/media/rId24.png)
+![](./.resource/Discuz!X3.4WeixinPluginssrf/media/rId24.png)
 
 这里 SSRF 的构造很简单，直接在`avatar`参数构造 url
 即可（只是注意`wxopenid`参数每次请求都要足够随机保证没有重复，如果重复的话代码是无法走到发起请求的逻辑的）：
@@ -67,4 +67,4 @@ Discuz! X3.4
 
     http://target/plugin.php?id=wechat:wechat&ac=wxregister&username=vov&avatar=http://localhost:9090/dz-weixin-plugin-ssrf&wxopenid=dont_be_evil
 
-![](/Users/aresx/Documents/VulWiki/.resource/Discuz!X3.4WeixinPluginssrf/media/rId26.png)
+![](./.resource/Discuz!X3.4WeixinPluginssrf/media/rId26.png)

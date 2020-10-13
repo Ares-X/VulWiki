@@ -61,7 +61,7 @@ MKCMS v5.0
 
 本质上来说此处是一个逻辑问题，程序未通过邮箱等验证是否为用户本身就直接先在第13-14行把用户密码重置为`123456`了，根本没管邮件发送成功没有。
 
-![](/Users/aresx/Documents/VulWiki/.resource/MKCMSv5.0任意密码重置漏洞/media/rId24.jpg)
+![](./.resource/MKCMSv5.0任意密码重置漏洞/media/rId24.jpg)
 
 ### poc
 

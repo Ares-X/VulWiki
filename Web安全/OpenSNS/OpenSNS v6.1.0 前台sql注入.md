@@ -17,17 +17,17 @@ OpenSNS v6.1.0
 Addons/ChinaCity/Controller/ChinaCityController.class.php:50
 发现我们输入的payload，向前查找，最开始从\$\_POST获取，如何处理，到此处
 
-![](/Users/aresx/Documents/VulWiki/.resource/OpenSNSv6.1.0前台sql注入/media/rId25.jpg)
+![](./.resource/OpenSNSv6.1.0前台sql注入/media/rId25.jpg)
 
 ThinkPHP/Common/functions.php:343 跟进I函数获取到payload
 
-![](/Users/aresx/Documents/VulWiki/.resource/OpenSNSv6.1.0前台sql注入/media/rId26.jpg)
+![](./.resource/OpenSNSv6.1.0前台sql注入/media/rId26.jpg)
 
 继续跟发现有参数过滤，可仔细一看跟没过滤一样
 
-![](/Users/aresx/Documents/VulWiki/.resource/OpenSNSv6.1.0前台sql注入/media/rId27.jpg)
+![](./.resource/OpenSNSv6.1.0前台sql注入/media/rId27.jpg)
 
-![](/Users/aresx/Documents/VulWiki/.resource/OpenSNSv6.1.0前台sql注入/media/rId28.jpg)
+![](./.resource/OpenSNSv6.1.0前台sql注入/media/rId28.jpg)
 
 到这里向前追溯就结束了，从`$pid = I('pid');` 向后跟
 
@@ -35,67 +35,67 @@ ThinkPHP/Common/functions.php:343 跟进I函数获取到payload
 `$list = D('Addons://ChinaCity/District')->_list($map);`跟进
 Addons/ChinaCity/Model/DistrictModel.class.php:12
 
-![](/Users/aresx/Documents/VulWiki/.resource/OpenSNSv6.1.0前台sql注入/media/rId29.jpg)
+![](./.resource/OpenSNSv6.1.0前台sql注入/media/rId29.jpg)
 
-![](/Users/aresx/Documents/VulWiki/.resource/OpenSNSv6.1.0前台sql注入/media/rId30.jpg)
+![](./.resource/OpenSNSv6.1.0前台sql注入/media/rId30.jpg)
 
 ThinkPHP/Library/Think/Model.class.php:618
 `$resultSet = $this->db->select($options);`ThinkPHP/Library/Think/Db.class.php:772
 
-![](/Users/aresx/Documents/VulWiki/.resource/OpenSNSv6.1.0前台sql注入/media/rId31.jpg)
+![](./.resource/OpenSNSv6.1.0前台sql注入/media/rId31.jpg)
 
 Db.class.php:799, Think\\Db-\>buildSelectSql() 下的 `$this->parseSQl`
 ThinkPHP/Library/Think/Db.class.php:799
 
-![](/Users/aresx/Documents/VulWiki/.resource/OpenSNSv6.1.0前台sql注入/media/rId32.jpg)
+![](./.resource/OpenSNSv6.1.0前台sql注入/media/rId32.jpg)
 
 ThinkPHP/Library/Think/Db.class.php:804
 发现执行了2个其他的sql语句，在此处（`buildSelectSql 里->return $sql`）下断点可以看到sql语句
 
-![](/Users/aresx/Documents/VulWiki/.resource/OpenSNSv6.1.0前台sql注入/media/rId33.jpg)
+![](./.resource/OpenSNSv6.1.0前台sql注入/media/rId33.jpg)
 
 ThinkPHP/Library/Think/Db.class.php:813
 
-![](/Users/aresx/Documents/VulWiki/.resource/OpenSNSv6.1.0前台sql注入/media/rId34.jpg)
+![](./.resource/OpenSNSv6.1.0前台sql注入/media/rId34.jpg)
 
 ThinkPHP/Library/Think/Db.class.php:821
 `$this->parseWhere(!empty($options['where'])?$options['where']:''),`
 
 ThinkPHP/Library/Think/Db.class.php:423
 
-![](/Users/aresx/Documents/VulWiki/.resource/OpenSNSv6.1.0前台sql注入/media/rId35.jpg)
+![](./.resource/OpenSNSv6.1.0前台sql注入/media/rId35.jpg)
 
 跟到
 
-![](/Users/aresx/Documents/VulWiki/.resource/OpenSNSv6.1.0前台sql注入/media/rId36.jpg)
+![](./.resource/OpenSNSv6.1.0前台sql注入/media/rId36.jpg)
 
 ThinkPHP/Library/Think/Db.class.php:457
 
-![](/Users/aresx/Documents/VulWiki/.resource/OpenSNSv6.1.0前台sql注入/media/rId37.jpg)
+![](./.resource/OpenSNSv6.1.0前台sql注入/media/rId37.jpg)
 
 ThinkPHP/Library/Think/Db.class.php:468
 
-![](/Users/aresx/Documents/VulWiki/.resource/OpenSNSv6.1.0前台sql注入/media/rId38.jpg)
+![](./.resource/OpenSNSv6.1.0前台sql注入/media/rId38.jpg)
 
 ThinkPHP/Library/Think/Db.class.php:457
 
-![](/Users/aresx/Documents/VulWiki/.resource/OpenSNSv6.1.0前台sql注入/media/rId39.jpg)
+![](./.resource/OpenSNSv6.1.0前台sql注入/media/rId39.jpg)
 
 ThinkPHP/Library/Think/Db.class.php:497
 
-![](/Users/aresx/Documents/VulWiki/.resource/OpenSNSv6.1.0前台sql注入/media/rId40.jpg)
+![](./.resource/OpenSNSv6.1.0前台sql注入/media/rId40.jpg)
 
 虽然这个地方有转译，但只有\$val\[1\]
 
-![](/Users/aresx/Documents/VulWiki/.resource/OpenSNSv6.1.0前台sql注入/media/rId41.jpg)
+![](./.resource/OpenSNSv6.1.0前台sql注入/media/rId41.jpg)
 
 ThinkPHP/Library/Think/Db.class.php:464
 
-![](/Users/aresx/Documents/VulWiki/.resource/OpenSNSv6.1.0前台sql注入/media/rId42.jpg)
+![](./.resource/OpenSNSv6.1.0前台sql注入/media/rId42.jpg)
 
 ThinkPHP/Library/Think/Db.class.php:813
 
-![](/Users/aresx/Documents/VulWiki/.resource/OpenSNSv6.1.0前台sql注入/media/rId43.jpg)
+![](./.resource/OpenSNSv6.1.0前台sql注入/media/rId43.jpg)
 
 ThinkPHP/Library/Think/Db.class.php:773
 `$result = $this->query($sql,$this->parseBind(!empty($options['bind'])?$options['bind']:array()));`
@@ -141,21 +141,21 @@ ThinkPHP/Library/Think/Db.class.php:773
 
     cid=0&pid%5B0%5D=%3D%28select%2Afrom%28select%2Bsleep%283%29union%2F%2A%2A%2Fselect%2B1%29a%29and+3+in+&pid%5B1%5D=3
 
-![](/Users/aresx/Documents/VulWiki/.resource/OpenSNSv6.1.0前台sql注入/media/rId48.jpg)
+![](./.resource/OpenSNSv6.1.0前台sql注入/media/rId48.jpg)
 
-![](/Users/aresx/Documents/VulWiki/.resource/OpenSNSv6.1.0前台sql注入/media/rId49.jpg)
+![](./.resource/OpenSNSv6.1.0前台sql注入/media/rId49.jpg)
 
 Vulnerability file
 
 Addons/ChinaCity/Controller/ChinaCityController.class.php:50
 
-![](/Users/aresx/Documents/VulWiki/.resource/OpenSNSv6.1.0前台sql注入/media/rId50.jpg)
+![](./.resource/OpenSNSv6.1.0前台sql注入/media/rId50.jpg)
 
 ThinkPHP/Library/Think/Db.class.php:772
 
-![](/Users/aresx/Documents/VulWiki/.resource/OpenSNSv6.1.0前台sql注入/media/rId51.jpg)
+![](./.resource/OpenSNSv6.1.0前台sql注入/media/rId51.jpg)
 
-![](/Users/aresx/Documents/VulWiki/.resource/OpenSNSv6.1.0前台sql注入/media/rId52.jpg)
+![](./.resource/OpenSNSv6.1.0前台sql注入/media/rId52.jpg)
 
 #### exp
 
@@ -183,7 +183,7 @@ ThinkPHP/Library/Think/Db.class.php:772
                 flag+=chr(j)
                 print flag
 
-![](/Users/aresx/Documents/VulWiki/.resource/OpenSNSv6.1.0前台sql注入/media/rId54.jpg)
+![](./.resource/OpenSNSv6.1.0前台sql注入/media/rId54.jpg)
 
 参考链接
 --------

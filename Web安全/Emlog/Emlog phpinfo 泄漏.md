@@ -14,7 +14,7 @@ Emlog phpinfo 泄漏
 
 首先看看漏洞出现的位置：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Emlogphpinfo泄漏/media/rId24.png)
+![](./.resource/Emlogphpinfo泄漏/media/rId24.png)
 
 如上图，我们只要构造如下的URL：
 
@@ -22,7 +22,7 @@ Emlog phpinfo 泄漏
 
 直接访问：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Emlogphpinfo泄漏/media/rId25.png)
+![](./.resource/Emlogphpinfo泄漏/media/rId25.png)
 
 四、参考链接
 ------------

@@ -140,24 +140,24 @@ WellCMS 2.0 Beta3 后台任意文件上传
 
 第一步，登陆该CMS后台：
 
-![](/Users/aresx/Documents/VulWiki/.resource/WellCMS2.0Beta3后台任意文件上传/media/rId26.png)
+![](./.resource/WellCMS2.0Beta3后台任意文件上传/media/rId26.png)
 
 第二步，进入"后台管理"，定位利用点，点击下图红框中图片进行上传：
 
-![](/Users/aresx/Documents/VulWiki/.resource/WellCMS2.0Beta3后台任意文件上传/media/rId27.png)
+![](./.resource/WellCMS2.0Beta3后台任意文件上传/media/rId27.png)
 
 上传并抓取数据包：
 
-![](/Users/aresx/Documents/VulWiki/.resource/WellCMS2.0Beta3后台任意文件上传/media/rId28.png)
+![](./.resource/WellCMS2.0Beta3后台任意文件上传/media/rId28.png)
 
 第三步，修改post包中"filetype"参数类型为"php"；经分析
 "data"参数为base64加密，这里我们将测试数据""经过base64加密等构造，形成"data"参数的数据：data%3Aimage%2Fjpeg%3Bbase64%2CPD9waHAgcGhwaW5mbygpOz8%2B，最后数据包放行，返回成功上传为php文件的路径：
 
-![](/Users/aresx/Documents/VulWiki/.resource/WellCMS2.0Beta3后台任意文件上传/media/rId29.png)
+![](./.resource/WellCMS2.0Beta3后台任意文件上传/media/rId29.png)
 
 最后，尝试访问，成功：
 
-![](/Users/aresx/Documents/VulWiki/.resource/WellCMS2.0Beta3后台任意文件上传/media/rId30.png)
+![](./.resource/WellCMS2.0Beta3后台任意文件上传/media/rId30.png)
 
 参考链接
 --------

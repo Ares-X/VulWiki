@@ -12,7 +12,7 @@ Version：单商户 2.2
 三、复现过程
 ------------
 
-![](/Users/aresx/Documents/VulWiki/.resource/Niushop单商户2.2前台getshell/media/rId24.jpg)
+![](./.resource/Niushop单商户2.2前台getshell/media/rId24.jpg)
 
 上传图片只做了前端校验，抓包改后缀即可绕过。
 
@@ -20,7 +20,7 @@ Version：单商户 2.2
 
 请求包截图，删除不必要的参数仍旧能够上传。
 
-![](/Users/aresx/Documents/VulWiki/.resource/Niushop单商户2.2前台getshell/media/rId25.jpg)
+![](./.resource/Niushop单商户2.2前台getshell/media/rId25.jpg)
 
 所以导致**前台getshell**
 

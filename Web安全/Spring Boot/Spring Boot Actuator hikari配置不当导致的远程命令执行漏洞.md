@@ -68,7 +68,7 @@ ALIAS创建一个java函数然后调用它，示例如下:
 
 命令执行的结果:
 
-![](/Users/aresx/Documents/VulWiki/.resource/SpringBootActuatorhikari配置不当导致的远程命令执行漏洞/media/rId25.png)
+![](./.resource/SpringBootActuatorhikari配置不当导致的远程命令执行漏洞/media/rId25.png)
 
 ### 针对WAFs
 

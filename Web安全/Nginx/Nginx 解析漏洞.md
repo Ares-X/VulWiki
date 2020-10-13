@@ -19,8 +19,8 @@ Nginx 解析漏洞
 
 正常显示：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Nginx解析漏洞/media/rId24.jpg)
+![](./.resource/Nginx解析漏洞/media/rId24.jpg)
 
 增加`/.php`后缀，被解析成PHP文件：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Nginx解析漏洞/media/rId25.jpg)
+![](./.resource/Nginx解析漏洞/media/rId25.jpg)

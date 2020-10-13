@@ -72,7 +72,7 @@ PbootCMS v2.0.7
             return $content;
         }
 
-简单讲一下重点![1.png](/Users/aresx/Documents/VulWiki/.resource/PbootCMSv2.0.7前台任意文件包含漏洞/media/rId25.png)这里对传入路径的过滤并不严格，可以双写绕过再往下跟一下![2.png](/Users/aresx/Documents/VulWiki/.resource/PbootCMSv2.0.7前台任意文件包含漏洞/media/rId26.png)当模板文件不在缓存中的时候，会读取\$tpl\_file中的内容，然后写入缓存文件中并且包含。也就是说，当parser函数的参数可以被控制的时候，就会造成一个任意文件包含。所以，要找一个可控参数的parser调用经过简单寻找，就可以发现前台控制器TagController中的index方法，完美符合我们的要求上代码：
+简单讲一下重点![1.png](./.resource/PbootCMSv2.0.7前台任意文件包含漏洞/media/rId25.png)这里对传入路径的过滤并不严格，可以双写绕过再往下跟一下![2.png](./.resource/PbootCMSv2.0.7前台任意文件包含漏洞/media/rId26.png)当模板文件不在缓存中的时候，会读取\$tpl\_file中的内容，然后写入缓存文件中并且包含。也就是说，当parser函数的参数可以被控制的时候，就会造成一个任意文件包含。所以，要找一个可控参数的parser调用经过简单寻找，就可以发现前台控制器TagController中的index方法，完美符合我们的要求上代码：
 
     public function index()
         {
@@ -103,7 +103,7 @@ PbootCMS v2.0.7
 
 因为是windows搭的环境，就不读/etc/passwd了，读一下D盘根目录的文件吧
 
-![3.png](/Users/aresx/Documents/VulWiki/.resource/PbootCMSv2.0.7前台任意文件包含漏洞/media/rId28.png)成功再包含个phpinfo试试![4.png](/Users/aresx/Documents/VulWiki/.resource/PbootCMSv2.0.7前台任意文件包含漏洞/media/rId29.png)也是可以的漏洞验证完成本来是想再看看有没有什么组合利用的姿势，毕竟文件包含这种洞本身利用的灵活度还是蛮高的不过既然最新版已经修了 就不多看了
+![3.png](./.resource/PbootCMSv2.0.7前台任意文件包含漏洞/media/rId28.png)成功再包含个phpinfo试试![4.png](./.resource/PbootCMSv2.0.7前台任意文件包含漏洞/media/rId29.png)也是可以的漏洞验证完成本来是想再看看有没有什么组合利用的姿势，毕竟文件包含这种洞本身利用的灵活度还是蛮高的不过既然最新版已经修了 就不多看了
 
 参考链接
 --------

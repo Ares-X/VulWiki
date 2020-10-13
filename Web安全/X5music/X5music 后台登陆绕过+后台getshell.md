@@ -45,7 +45,7 @@ X5music 后台登陆绕过+后台getshell
 在登陆成功后设置cookies，没有任何session等服务端验证存储方式。
 然后再看登录后验证是否登陆的逻辑。跟入admin\_index.php
 
-![](/Users/aresx/Documents/VulWiki/.resource/X5music后台登陆绕过+后台getshell/media/rId25.png)
+![](./.resource/X5music后台登陆绕过+后台getshell/media/rId25.png)
 
 验证是否登陆的为admincheck()这个函数。 跟进/function\_common.php查看
 
@@ -72,9 +72,9 @@ X5music 后台登陆绕过+后台getshell
 其中`if(empty($_COOKIE['CD_AdminID']) || empty($_COOKIE['CD_Login']) || $_COOKIE['CD_Login']!==md5($_COOKIE['CD_AdminID'] . $_COOKIE['CD_AdminUserName'] . $_COOKIE['CD_AdminPassWord'] . $_COOKIE['CD_Permission']))`判断cookies：CD\_Admin,CD\_Login是否存在。然后拼接cookies：CD\_AdminID，CD\_AdminUserName，CD\_AdminPassWord，CD\_Permission后对其组成的字符串进行md5后和CD\_Login的值进行比对。
 由于服务端没有任何session验证，所有的数据来自客户端,修改客户端cookies符合它的逻辑即可绕过。
 
-![](/Users/aresx/Documents/VulWiki/.resource/X5music后台登陆绕过+后台getshell/media/rId26.png)
+![](./.resource/X5music后台登陆绕过+后台getshell/media/rId26.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/X5music后台登陆绕过+后台getshell/media/rId27.png)
+![](./.resource/X5music后台登陆绕过+后台getshell/media/rId27.png)
 
 ### 修改配置文件getshell
 
@@ -100,13 +100,13 @@ X5music 后台登陆绕过+后台getshell
 而过滤仅仅过滤了\'\"\'号。过滤方式是对其转义。
 在后台配置文件修改插入如下代码
 
-![](/Users/aresx/Documents/VulWiki/.resource/X5music后台登陆绕过+后台getshell/media/rId29.png)
+![](./.resource/X5music后台登陆绕过+后台getshell/media/rId29.png)
 
 这里由于`"`被转义，再给它添加一个`\`二次转义即可逃逸`"`包裹.
 
-![](/Users/aresx/Documents/VulWiki/.resource/X5music后台登陆绕过+后台getshell/media/rId30.png)
+![](./.resource/X5music后台登陆绕过+后台getshell/media/rId30.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/X5music后台登陆绕过+后台getshell/media/rId31.png)
+![](./.resource/X5music后台登陆绕过+后台getshell/media/rId31.png)
 
 参考链接
 --------

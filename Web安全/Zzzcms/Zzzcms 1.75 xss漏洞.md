@@ -16,7 +16,7 @@ Zzzcms 1.75
 
 该onmouseover事件在移动到登录注册时会触发
 
-![](/Users/aresx/Documents/VulWiki/.resource/Zzzcms1.75xss漏洞/media/rId24.png)
+![](./.resource/Zzzcms1.75xss漏洞/media/rId24.png)
 
 对传入的backurl并没有做任何防护
 

@@ -40,7 +40,7 @@ XYHCMS 3.6
 4.  点击下面的
     `水印图片上传`上传以上后缀shell，此时点不点提交都已经传入服务器
 
-5.  之后会在图片部分显示上传路径    ![1.png](/Users/aresx/Documents/VulWiki/.resource/XYHCMS3.6后台文件上传getshell(一)/media/rId26.png){width="5.833333333333333in"
+5.  之后会在图片部分显示上传路径    ![1.png](./.resource/XYHCMS3.6后台文件上传getshell(一)/media/rId26.png){width="5.833333333333333in"
     height="2.686567147856518in"}
 
 6.  访问连接即可，只有网站配置了.htaccess自动解析php3-5与phtml的才能解析。

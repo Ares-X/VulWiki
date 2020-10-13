@@ -20,19 +20,19 @@ OKLite v1.2.25 版本
 
     1','pf3qm0js3gb2s5f33r7lf14vl3','30'),('1',0x7265732f3230313931302f30342f,'shell.jpg','jpg',0x7265732f3230313931302f30352f7368656c6c2e706870,'1570161575','abc
 
-![](/Users/aresx/Documents/VulWiki/.resource/OKLitev1.2.25SQL注入导致getshell(前台)/media/rId25.png)
+![](./.resource/OKLitev1.2.25SQL注入导致getshell(前台)/media/rId25.png)
 
 上传成功之后会返回图片的id和保存的路径：
 
-![](/Users/aresx/Documents/VulWiki/.resource/OKLitev1.2.25SQL注入导致getshell(前台)/media/rId26.png)
+![](./.resource/OKLitev1.2.25SQL注入导致getshell(前台)/media/rId26.png)
 
 再次上传一个图片，把地址中的save改成replace，添加一个参数名为`oldid`，值为图片的id
 + 1。
 
 图片的内容改为恶意的php代码：
 
-![](/Users/aresx/Documents/VulWiki/.resource/OKLitev1.2.25SQL注入导致getshell(前台)/media/rId27.png)
+![](./.resource/OKLitev1.2.25SQL注入导致getshell(前台)/media/rId27.png)
 
 上传完成之后可在`res\201910\05`目录下生成一个shell.php
 
-![](/Users/aresx/Documents/VulWiki/.resource/OKLitev1.2.25SQL注入导致getshell(前台)/media/rId28.shtml)
+![](./.resource/OKLitev1.2.25SQL注入导致getshell(前台)/media/rId28.shtml)

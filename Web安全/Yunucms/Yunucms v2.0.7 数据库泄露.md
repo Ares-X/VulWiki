@@ -74,16 +74,16 @@ Yunucms v2.0.7
 
 在后台系统管理-\>数据库管理模块将所有数据库备份
 
-![](/Users/aresx/Documents/VulWiki/.resource/Yunucmsv2.0.7数据库泄露/media/rId26.png)
+![](./.resource/Yunucmsv2.0.7数据库泄露/media/rId26.png)
 
 查看本地文件，所有备份保存在data目录下，发现名命是以时间命名，可以直接爆破得到
 
-![](/Users/aresx/Documents/VulWiki/.resource/Yunucmsv2.0.7数据库泄露/media/rId27.png)
+![](./.resource/Yunucmsv2.0.7数据库泄露/media/rId27.png)
 
 从前台访问并下载
 
-![](/Users/aresx/Documents/VulWiki/.resource/Yunucmsv2.0.7数据库泄露/media/rId28.png)
+![](./.resource/Yunucmsv2.0.7数据库泄露/media/rId28.png)
 
 下载完成后打开，泄露所有数据库信息
 
-![](/Users/aresx/Documents/VulWiki/.resource/Yunucmsv2.0.7数据库泄露/media/rId29.shtml)
+![](./.resource/Yunucmsv2.0.7数据库泄露/media/rId29.shtml)

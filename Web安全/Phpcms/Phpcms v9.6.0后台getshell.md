@@ -67,7 +67,7 @@ foreach (\$data as \$k =\> \$v) {\$old\[\] = \"\'\$k\'=\>\'\".(isset(\$config\[\
 
 全局过滤了post，但是这里只过滤了value，并没有过滤key
 
-![](/Users/aresx/Documents/VulWiki/.resource/Phpcmsv9.6.0后台getshell/media/rId24.png)
+![](./.resource/Phpcmsv9.6.0后台getshell/media/rId24.png)
 
 在这个地方，我们可以构造
 
@@ -79,10 +79,10 @@ foreach (\$data as \$k =\> \$v) {\$old\[\] = \"\'\$k\'=\>\'\".(isset(\$config\[\
 
 再进行缓存更新
 
-![](/Users/aresx/Documents/VulWiki/.resource/Phpcmsv9.6.0后台getshell/media/rId25.png)
+![](./.resource/Phpcmsv9.6.0后台getshell/media/rId25.png)
 
 就成功写入了一句话
 
-![](/Users/aresx/Documents/VulWiki/.resource/Phpcmsv9.6.0后台getshell/media/rId26.png)
+![](./.resource/Phpcmsv9.6.0后台getshell/media/rId26.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/Phpcmsv9.6.0后台getshell/media/rId27.png)
+![](./.resource/Phpcmsv9.6.0后台getshell/media/rId27.png)

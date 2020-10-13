@@ -16,43 +16,43 @@ WPdiscuz 7.0.0 - WPdiscuz 7.0.4
 
 -   1.环境搭建后，手动安装wpdiscuz插件后，看到文章下增加评论模块
 
-![1.png](/Users/aresx/Documents/VulWiki/.resource/WordPressPlugin-WPdiscuz7.0.4任意文件上传漏洞/media/rId25.png)
+![1.png](./.resource/WordPressPlugin-WPdiscuz7.0.4任意文件上传漏洞/media/rId25.png)
 
 -   2.phpstorm导入web目录，点击图片按钮，上传一个php文件测试一下，上传路径是`http://www.0-sec.org:8888/wordpress/wp-admin/admin-ajax.php`，默认是上传不了的。
 
-![2.png](/Users/aresx/Documents/VulWiki/.resource/WordPressPlugin-WPdiscuz7.0.4任意文件上传漏洞/media/rId26.png)
+![2.png](./.resource/WordPressPlugin-WPdiscuz7.0.4任意文件上传漏洞/media/rId26.png)
 
 -   3.从入口点分析，如图是wp\_filter的action过滤
 
-![3.png](/Users/aresx/Documents/VulWiki/.resource/WordPressPlugin-WPdiscuz7.0.4任意文件上传漏洞/media/rId27.png)
+![3.png](./.resource/WordPressPlugin-WPdiscuz7.0.4任意文件上传漏洞/media/rId27.png)
 
 -   4.跟进去，可以看到上传的功能点，再进去
 
-![4.png](/Users/aresx/Documents/VulWiki/.resource/WordPressPlugin-WPdiscuz7.0.4任意文件上传漏洞/media/rId28.png)
+![4.png](./.resource/WordPressPlugin-WPdiscuz7.0.4任意文件上传漏洞/media/rId28.png)
 
 -   5.可以看到如图位置，使用getMimeType方法根据文件内容获取文件类型，并不是通过文件后缀名判断，进一步根据\$mineType判断是否是允许的上传类型。
 
-![5.png](/Users/aresx/Documents/VulWiki/.resource/WordPressPlugin-WPdiscuz7.0.4任意文件上传漏洞/media/rId29.png)
+![5.png](./.resource/WordPressPlugin-WPdiscuz7.0.4任意文件上传漏洞/media/rId29.png)
 
 -   6.跟入查看isAllowedFileType方法，在判斷\$mineType是否在\$this -\>
     options -\> content\[\"wmuMimeTypes\"\]中存在。
 
-![6.png](/Users/aresx/Documents/VulWiki/.resource/WordPressPlugin-WPdiscuz7.0.4任意文件上传漏洞/media/rId30.png)
+![6.png](./.resource/WordPressPlugin-WPdiscuz7.0.4任意文件上传漏洞/media/rId30.png)
 
 -   7.如图，进入\$options中，可以content\[\"wmuMimeTypes\"\]使用三目运算判断，搜索上下文得知，结果就是\$defaultOptions\[self::TAB\_CONTENT\]\[\"wmuMimeTypes\"\]
 
-![7.png](/Users/aresx/Documents/VulWiki/.resource/WordPressPlugin-WPdiscuz7.0.4任意文件上传漏洞/media/rId31.png)
+![7.png](./.resource/WordPressPlugin-WPdiscuz7.0.4任意文件上传漏洞/media/rId31.png)
 
 -   8.进入\$defaultOptions中可以得到最终\$this -\> options -\>
     content\[\"wmuMimeTypes\"\]的值是几种常见的图片类型。
 
-![8.png](/Users/aresx/Documents/VulWiki/.resource/WordPressPlugin-WPdiscuz7.0.4任意文件上传漏洞/media/rId32.png)
+![8.png](./.resource/WordPressPlugin-WPdiscuz7.0.4任意文件上传漏洞/media/rId32.png)
 
-![9.png](/Users/aresx/Documents/VulWiki/.resource/WordPressPlugin-WPdiscuz7.0.4任意文件上传漏洞/media/rId33.png)
+![9.png](./.resource/WordPressPlugin-WPdiscuz7.0.4任意文件上传漏洞/media/rId33.png)
 
 -   9.很明显此时文件类型已经通过getMimeType()方法修改为text/plain了，但是回到进入isAllowedFileType的代码，发现程序只在此处对上传文件进行了判断后，直接保存了文件。
 
-![10.png](/Users/aresx/Documents/VulWiki/.resource/WordPressPlugin-WPdiscuz7.0.4任意文件上传漏洞/media/rId34.png)
+![10.png](./.resource/WordPressPlugin-WPdiscuz7.0.4任意文件上传漏洞/media/rId34.png)
 
 ### 漏洞复现
 
@@ -60,17 +60,17 @@ WPdiscuz 7.0.0 - WPdiscuz 7.0.4
 
 -   1.把后门文件追加到图片后
 
-![11.png](/Users/aresx/Documents/VulWiki/.resource/WordPressPlugin-WPdiscuz7.0.4任意文件上传漏洞/media/rId36.png)
+![11.png](./.resource/WordPressPlugin-WPdiscuz7.0.4任意文件上传漏洞/media/rId36.png)
 
-![12.png](/Users/aresx/Documents/VulWiki/.resource/WordPressPlugin-WPdiscuz7.0.4任意文件上传漏洞/media/rId37.png)
+![12.png](./.resource/WordPressPlugin-WPdiscuz7.0.4任意文件上传漏洞/media/rId37.png)
 
 -   2.上传并修改后缀名为php，可以看到返回路径
 
-![13.png](/Users/aresx/Documents/VulWiki/.resource/WordPressPlugin-WPdiscuz7.0.4任意文件上传漏洞/media/rId38.png)
+![13.png](./.resource/WordPressPlugin-WPdiscuz7.0.4任意文件上传漏洞/media/rId38.png)
 
 -   3.连接webshell
 
-![14.png](/Users/aresx/Documents/VulWiki/.resource/WordPressPlugin-WPdiscuz7.0.4任意文件上传漏洞/media/rId39.png)
+![14.png](./.resource/WordPressPlugin-WPdiscuz7.0.4任意文件上传漏洞/media/rId39.png)
 
 ### poc
 

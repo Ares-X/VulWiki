@@ -6,7 +6,7 @@ weblogic爆破
 
 现有的redhat环境7.0,jdk版本1.7。
 
-![](/Users/aresx/Documents/VulWiki/.resource/weblogic爆破/media/rId22.png)
+![](./.resource/weblogic爆破/media/rId22.png)
 
 二、weblogic下载
 ----------------
@@ -34,22 +34,22 @@ java -jar wls1036\_generic.jar -mode=console
 
 出现问题
 
-![](/Users/aresx/Documents/VulWiki/.resource/weblogic爆破/media/rId26.png)
+![](./.resource/weblogic爆破/media/rId26.png)
 
 提示空间内存大小不够，清理空间再下一步。
 
-![](/Users/aresx/Documents/VulWiki/.resource/weblogic爆破/media/rId27.png)
+![](./.resource/weblogic爆破/media/rId27.png)
 
 \[root\@localhostsrc\]\# cd
 /usr/lib/jvm/java-1.7.0-openjdk-1.7.0.51-2.4.5.5.el7.x86\_64
 
-![](/Users/aresx/Documents/VulWiki/.resource/weblogic爆破/media/rId28.png)
+![](./.resource/weblogic爆破/media/rId28.png)
 
 修改 commEnv.sh 文件
 
 JAVA\_HOME=\"/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.9.x86\_64/ jre\"
 
-![](/Users/aresx/Documents/VulWiki/.resource/weblogic爆破/media/rId29.png)
+![](./.resource/weblogic爆破/media/rId29.png)
 
 ### 2、启动weblogic
 
@@ -57,17 +57,17 @@ JAVA\_HOME=\"/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.9.x86\_64/ jre\"
 /home/weblogic/Oracle/Middleware/user\_projects/domains/base\_domain/
 \[weblogic\@localhost base\_domain\]\$ ./startWebLogic.sh
 
-![](/Users/aresx/Documents/VulWiki/.resource/weblogic爆破/media/rId31.png)
+![](./.resource/weblogic爆破/media/rId31.png)
 
 在目录/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.79.x86\_64中找不到JRE
 
 编辑setDomainEnv.sh
 
-![](/Users/aresx/Documents/VulWiki/.resource/weblogic爆破/media/rId32.png)
+![](./.resource/weblogic爆破/media/rId32.png)
 
 重新启动weblogic服务
 
-![](/Users/aresx/Documents/VulWiki/.resource/weblogic爆破/media/rId33.png)
+![](./.resource/weblogic爆破/media/rId33.png)
 
 四、破解weblogic控制台密码
 --------------------------
@@ -88,7 +88,7 @@ Password=weblogic123
 
 \[root\@localhost bin\]\# ./startWebLogic.sh&
 
-![](/Users/aresx/Documents/VulWiki/.resource/weblogic爆破/media/rId37.png)
+![](./.resource/weblogic爆破/media/rId37.png)
 
 已经加密
 
@@ -96,12 +96,12 @@ Password=weblogic123
 
 #### 1.java和javac的版本一致
 
-![](/Users/aresx/Documents/VulWiki/.resource/weblogic爆破/media/rId40.png)
+![](./.resource/weblogic爆破/media/rId40.png)
 
 #### 2.编译WebLogicPasswordDecryptor.java
 
-![](/Users/aresx/Documents/VulWiki/.resource/weblogic爆破/media/rId42.png)
+![](./.resource/weblogic爆破/media/rId42.png)
 
 3.破解密码
 
-![](/Users/aresx/Documents/VulWiki/.resource/weblogic爆破/media/rId43.shtml)
+![](./.resource/weblogic爆破/media/rId43.shtml)

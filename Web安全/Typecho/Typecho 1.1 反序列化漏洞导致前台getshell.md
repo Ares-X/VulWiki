@@ -16,11 +16,11 @@ Typecho 1.1
 
 复现环境：PHP5.6+Apache+Windows
 
-![](/Users/aresx/Documents/VulWiki/.resource/Typecho1.1反序列化漏洞导致前台getshell/media/rId25.jpg)
+![](./.resource/Typecho1.1反序列化漏洞导致前台getshell/media/rId25.jpg)
 
 `Typecho_Cookie::get`目的是获取Cookie，可从Cookie或POST中获取
 
-![](/Users/aresx/Documents/VulWiki/.resource/Typecho1.1反序列化漏洞导致前台getshell/media/rId26.jpg)
+![](./.resource/Typecho1.1反序列化漏洞导致前台getshell/media/rId26.jpg)
 
 要执行到此处需要经过前面的各种判断条件：
 
@@ -60,17 +60,17 @@ Typecho 1.1
 
 回到`install.php`中看232行中\$config\['adapter'\]作为了Typecho\_Db()参数，只要控制\$config\['adapter'\]的值为某一个类的对象就可以触发\_\_toString()，那么\$config的值应为一个数组。
 
-![](/Users/aresx/Documents/VulWiki/.resource/Typecho1.1反序列化漏洞导致前台getshell/media/rId27.jpg)
+![](./.resource/Typecho1.1反序列化漏洞导致前台getshell/media/rId27.jpg)
 
-![](/Users/aresx/Documents/VulWiki/.resource/Typecho1.1反序列化漏洞导致前台getshell/media/rId28.jpg)
+![](./.resource/Typecho1.1反序列化漏洞导致前台getshell/media/rId28.jpg)
 
 接下来寻找\_\_toString()方法，在`var/Typecho/Feed.php`中找到
 
-![](/Users/aresx/Documents/VulWiki/.resource/Typecho1.1反序列化漏洞导致前台getshell/media/rId29.jpg)
+![](./.resource/Typecho1.1反序列化漏洞导致前台getshell/media/rId29.jpg)
 
 \$item可控，如果\$item\['author'\]为某个不存在screenName属性的类对象时，自动触发\_\_get()方法`var/Typecho/Request.php`，如下图，显然可控吧\~
 
-![](/Users/aresx/Documents/VulWiki/.resource/Typecho1.1反序列化漏洞导致前台getshell/media/rId30.jpg)
+![](./.resource/Typecho1.1反序列化漏洞导致前台getshell/media/rId30.jpg)
 
 ### 漏洞复现
 
@@ -115,15 +115,15 @@ Typecho 1.1
 >
 > 程序继续进入到Db.php的构造方法中，并在下图汇总抛出异常
 
-![](/Users/aresx/Documents/VulWiki/.resource/Typecho1.1反序列化漏洞导致前台getshell/media/rId32.jpg)
+![](./.resource/Typecho1.1反序列化漏洞导致前台getshell/media/rId32.jpg)
 
 如果是命令是写入文件，则不会影响结果，但如果需要显示命令结果，则无法实现，因而考虑在抛出异常之前结束运行程序运行
 
-![](/Users/aresx/Documents/VulWiki/.resource/Typecho1.1反序列化漏洞导致前台getshell/media/rId33.jpg)
+![](./.resource/Typecho1.1反序列化漏洞导致前台getshell/media/rId33.jpg)
 
 最终结果
 
-![](/Users/aresx/Documents/VulWiki/.resource/Typecho1.1反序列化漏洞导致前台getshell/media/rId34.jpg)
+![](./.resource/Typecho1.1反序列化漏洞导致前台getshell/media/rId34.jpg)
 
 Python脚本，**仅用作学习目的**
 

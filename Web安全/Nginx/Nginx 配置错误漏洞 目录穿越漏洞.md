@@ -20,4 +20,4 @@ Nginx在配置别名（Alias）的时候，如果忘记加`/`，将造成一个�
 
 Payload: `http://www.0-sec.org:8081/files../` ，成功穿越到根目录：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Nginx配置错误漏洞目录穿越漏洞/media/rId24.png)
+![](./.resource/Nginx配置错误漏洞目录穿越漏洞/media/rId24.png)

@@ -16,11 +16,11 @@ v4.8.54
 
 CatfishCMS基于thinkPHP5开发。Request类（catfish/library/think/Request.php）用于处理请求。它的成员函数method用于获取请求的类型。
 
-![](/Users/aresx/Documents/VulWiki/.resource/(CNVD-2019-06255)CatfishCMS远程命令执行/media/rId25.png)
+![](./.resource/(CNVD-2019-06255)CatfishCMS远程命令执行/media/rId25.png)
 
 application/config.php 中定义了"表单请求类型伪装变量":
 
-![](/Users/aresx/Documents/VulWiki/.resource/(CNVD-2019-06255)CatfishCMS远程命令执行/media/rId26.png)
+![](./.resource/(CNVD-2019-06255)CatfishCMS远程命令执行/media/rId26.png)
 
 POST请求参数 " \_method=\_\_construct "，将 \_\_construct
 传给了var\_method ，在Request类的method函数中执行后，实现了对Request类的
@@ -30,7 +30,7 @@ POST请求参数 " \_method=\_\_construct "，将 \_\_construct
 
 catfish/library/think/Request.php模块中的Request类的构造函数：
 
-![](/Users/aresx/Documents/VulWiki/.resource/(CNVD-2019-06255)CatfishCMS远程命令执行/media/rId28.png)
+![](./.resource/(CNVD-2019-06255)CatfishCMS远程命令执行/media/rId28.png)
 
 中存在的参数，就取用户传入的值为其赋值。
 
@@ -38,9 +38,9 @@ catfish/library/think/Request.php模块中的Request类的构造函数：
 并且将完整的POST参数传递过去。实现了对本类中的 \$method 和 \$filter
 两个全局变量的覆盖。
 
-![](/Users/aresx/Documents/VulWiki/.resource/(CNVD-2019-06255)CatfishCMS远程命令执行/media/rId29.png)
+![](./.resource/(CNVD-2019-06255)CatfishCMS远程命令执行/media/rId29.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/(CNVD-2019-06255)CatfishCMS远程命令执行/media/rId30.png)
+![](./.resource/(CNVD-2019-06255)CatfishCMS远程命令执行/media/rId30.png)
 
 filter\[\]=system 的补充说明：filter\[\]=system 或者
 filter=system都可以，\[\]符号可有可无；system意为执行系统命令。
@@ -51,7 +51,7 @@ method参数的取值限定为：catfish/library/think/Route.php
 模块中定义的路由规则。如：GET、POST、PUT、\*
 等任何一个值都可以；如果值不在此表或为空，都会报错。
 
-![](/Users/aresx/Documents/VulWiki/.resource/(CNVD-2019-06255)CatfishCMS远程命令执行/media/rId31.png)
+![](./.resource/(CNVD-2019-06255)CatfishCMS远程命令执行/media/rId31.png)
 
 ### 3、s=dir
 

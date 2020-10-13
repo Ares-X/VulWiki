@@ -18,17 +18,17 @@
 
 根目录下创建test文件夹，里面有内容为123的test.txt文件
 
-![](/Users/aresx/Documents/VulWiki/.resource/百家cmsv4.1.4任意路径删除漏洞/media/rId24.png)
+![](./.resource/百家cmsv4.1.4任意路径删除漏洞/media/rId24.png)
 
 访问payload将参数转为base64并方位payload
 
-![](/Users/aresx/Documents/VulWiki/.resource/百家cmsv4.1.4任意路径删除漏洞/media/rId25.png)
+![](./.resource/百家cmsv4.1.4任意路径删除漏洞/media/rId25.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/百家cmsv4.1.4任意路径删除漏洞/media/rId26.png)
+![](./.resource/百家cmsv4.1.4任意路径删除漏洞/media/rId26.png)
 
 查看文件夹，已被删除
 
-![](/Users/aresx/Documents/VulWiki/.resource/百家cmsv4.1.4任意路径删除漏洞/media/rId27.png)
+![](./.resource/百家cmsv4.1.4任意路径删除漏洞/media/rId27.png)
 
 参考链接
 --------

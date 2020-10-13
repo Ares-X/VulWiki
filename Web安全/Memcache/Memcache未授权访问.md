@@ -16,7 +16,7 @@ Memcache未授权访问
 
     nmap -sV -p 11211 --script memcached-info 0.0.0.0
 
-![](/Users/aresx/Documents/VulWiki/.resource/Memcache未授权访问/media/rId25.png)
+![](./.resource/Memcache未授权访问/media/rId25.png)
 
     ##! /usr/bin/env python
     ## _*_  coding:utf-8 _*_
@@ -87,7 +87,7 @@ version \| 打印Memcached版本 \| version
 telnet 11211，或 nc -vv 11211，无需用户名密码，可以直接连接memcache
 服务的11211端口。
 
-![](/Users/aresx/Documents/VulWiki/.resource/Memcache未授权访问/media/rId29.png) 附赠大佬写的文章
+![](./.resource/Memcache未授权访问/media/rId29.png) 附赠大佬写的文章
 [Discuz!因Memcached未授权访问导致的RCE](https://xz.aliyun.com/t/2018)
 
 #### 3.防范措施

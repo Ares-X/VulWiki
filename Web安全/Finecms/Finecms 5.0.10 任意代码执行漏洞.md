@@ -82,13 +82,13 @@ Finecms 5.0.10
 
 授权码在`/config/system.php`
 
-![](/Users/aresx/Documents/VulWiki/.resource/Finecms5.0.10任意代码执行漏洞/media/rId25.png)可以看到SYS\_KEY是固定的，我们可以在Cookies找到，`/finecms/dayrui/config/config.php`
+![](./.resource/Finecms5.0.10任意代码执行漏洞/media/rId25.png)可以看到SYS\_KEY是固定的，我们可以在Cookies找到，`/finecms/dayrui/config/config.php`
 
-![](/Users/aresx/Documents/VulWiki/.resource/Finecms5.0.10任意代码执行漏洞/media/rId26.png)
+![](./.resource/Finecms5.0.10任意代码执行漏洞/media/rId26.png)
 
 用浏览器查看Cookies可以看到KEY，但是验证用MD5，我们先把KEY加密就行了。
 
-![](/Users/aresx/Documents/VulWiki/.resource/Finecms5.0.10任意代码执行漏洞/media/rId27.png)
+![](./.resource/Finecms5.0.10任意代码执行漏洞/media/rId27.png)
 
 直接看到这一段，调用了Template对象里面的list\_tag函数
 
@@ -167,4 +167,4 @@ payload为：`1'];phpinfo();$a=['1 `那么返回的\$string的内容：
 
     http://0-sec.org/index.php?c=api&m=data2&auth=目标站点的值&param=action=cache%20name=MEMBER.1%27];phpinfo();$a=[%271
 
-![](/Users/aresx/Documents/VulWiki/.resource/Finecms5.0.10任意代码执行漏洞/media/rId29.png)
+![](./.resource/Finecms5.0.10任意代码执行漏洞/media/rId29.png)

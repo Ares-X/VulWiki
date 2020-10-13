@@ -17,7 +17,7 @@ WeCenter 3.3.4
 **system/aws\_model.inc.php:\_\_destruct()** 方法中存在任意 **SQL**
 语句执行。
 
-![](/Users/aresx/Documents/VulWiki/.resource/WeCenter3.3.4前台sql注入/media/rId25.png)
+![](./.resource/WeCenter3.3.4前台sql注入/media/rId25.png)
 
 ### poc
 
@@ -49,11 +49,11 @@ WeCenter 3.3.4
 
 首先注册账号，并利用上面的poc生成Phar文件，并将运行后将生成的`shell.gif`通过编辑器的上传功能上传到服务器上。
 
-![](/Users/aresx/Documents/VulWiki/.resource/WeCenter3.3.4前台sql注入/media/rId28.png)
+![](./.resource/WeCenter3.3.4前台sql注入/media/rId28.png)
 
 记录下上传后的目录
 
-![](/Users/aresx/Documents/VulWiki/.resource/WeCenter3.3.4前台sql注入/media/rId29.png)
+![](./.resource/WeCenter3.3.4前台sql注入/media/rId29.png)
 
 #### 生成并设置`COOKIE`中的`WXConnect`值
 
@@ -71,12 +71,12 @@ WeCenter 3.3.4
 
 #### 访问`app/m/weixin.php`下的`binding_action`
 
-![](/Users/aresx/Documents/VulWiki/.resource/WeCenter3.3.4前台sql注入/media/rId32.png)
+![](./.resource/WeCenter3.3.4前台sql注入/media/rId32.png)
 
 提示绑定微信成功后进行下一步
 
 #### 访问`app/account/ajax.php`下的`synch_img_action`
 
-![](/Users/aresx/Documents/VulWiki/.resource/WeCenter3.3.4前台sql注入/media/rId34.png)
+![](./.resource/WeCenter3.3.4前台sql注入/media/rId34.png)
 
 任意

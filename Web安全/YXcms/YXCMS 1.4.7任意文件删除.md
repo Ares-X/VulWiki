@@ -44,12 +44,12 @@ POST：
 
     picname=../../protected/apps/install/install.lock
 
-![](/Users/aresx/Documents/VulWiki/.resource/YXCMS1.4.7任意文件删除/media/rId26.png)
+![](./.resource/YXCMS1.4.7任意文件删除/media/rId26.png)
 
 然后访问网站首页就会自动转到安装的页面
 
-![](/Users/aresx/Documents/VulWiki/.resource/YXCMS1.4.7任意文件删除/media/rId27.png)
+![](./.resource/YXCMS1.4.7任意文件删除/media/rId27.png)
 
 看到目录下的install.lock文件已经被删除了
 
-![](/Users/aresx/Documents/VulWiki/.resource/YXCMS1.4.7任意文件删除/media/rId28.shtml)
+![](./.resource/YXCMS1.4.7任意文件删除/media/rId28.shtml)

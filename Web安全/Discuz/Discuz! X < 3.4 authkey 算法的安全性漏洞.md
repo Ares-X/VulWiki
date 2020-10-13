@@ -42,13 +42,13 @@ php\>5.3+php-curl\<=7.54
 
 在dz3.3/upload/install/index.php 346行
 
-![](/Users/aresx/Documents/VulWiki/.resource/Discuz!X<3.4authkey算法的安全性漏洞/media/rId25.png)
+![](./.resource/Discuz!X<3.4authkey算法的安全性漏洞/media/rId25.png)
 
 我们看到authkey是由多个参数的md5前6位加上random生成的10位产生的。
 
 跟入random函数
 
-![](/Users/aresx/Documents/VulWiki/.resource/Discuz!X<3.4authkey算法的安全性漏洞/media/rId26.png)
+![](./.resource/Discuz!X<3.4authkey算法的安全性漏洞/media/rId26.png)
 
 当php版本大于4.2.0时，随机数种子不会改变
 
@@ -60,7 +60,7 @@ php\>5.3+php-curl\<=7.54
 
 首先我们需要先获得4位字符
 
-![](/Users/aresx/Documents/VulWiki/.resource/Discuz!X<3.4authkey算法的安全性漏洞/media/rId27.png)
+![](./.resource/Discuz!X<3.4authkey算法的安全性漏洞/media/rId27.png)
 
 > 如上图所示，前四位是**sW7c**
 
@@ -137,15 +137,15 @@ https://github.com/ianxtianxt/php-mt\_rand
 会进入`/source/module/member/member_lostpasswd.php`
 65行生成用于验证的sign值。
 
-![](/Users/aresx/Documents/VulWiki/.resource/Discuz!X<3.4authkey算法的安全性漏洞/media/rId28.png)
+![](./.resource/Discuz!X<3.4authkey算法的安全性漏洞/media/rId28.png)
 
 跟随make\_getpws\_sign函数进入`/source/function/function_member.php`
 
-![](/Users/aresx/Documents/VulWiki/.resource/Discuz!X<3.4authkey算法的安全性漏洞/media/rId29.png)
+![](./.resource/Discuz!X<3.4authkey算法的安全性漏洞/media/rId29.png)
 
 然后进入dsign函数，配合authkey生成结果
 
-![](/Users/aresx/Documents/VulWiki/.resource/Discuz!X<3.4authkey算法的安全性漏洞/media/rId30.png)
+![](./.resource/Discuz!X<3.4authkey算法的安全性漏洞/media/rId30.png)
 
 这里我们可以用python模拟这个过程，然后通过找回密码获得uid、id、sign，爆破判断结果。
 
@@ -185,9 +185,9 @@ https://github.com/ianxtianxt/php-mt\_rand
                     return "[*] authkey found: " + authkey
     print main()
 
-![](/Users/aresx/Documents/VulWiki/.resource/Discuz!X<3.4authkey算法的安全性漏洞/media/rId32.png)
+![](./.resource/Discuz!X<3.4authkey算法的安全性漏洞/media/rId32.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/Discuz!X<3.4authkey算法的安全性漏洞/media/rId33.png)
+![](./.resource/Discuz!X<3.4authkey算法的安全性漏洞/media/rId33.png)
 
 参考链接
 --------

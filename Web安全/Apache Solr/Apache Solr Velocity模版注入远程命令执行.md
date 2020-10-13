@@ -24,7 +24,7 @@ Solr默认集成VelocityResponseWriter插件，在该插件的初始化参数中
 手动检测访问http://www.0-sec.org/8983/solr/\#/进入主界面，单击左侧的Core
 Selector查看集合名称
 
-![](/Users/aresx/Documents/VulWiki/.resource/ApacheSolrVelocity模版注入远程命令执行/media/rId25.png)
+![](./.resource/ApacheSolrVelocity模版注入远程命令执行/media/rId25.png)
 
 #### 1、post发送请求
 

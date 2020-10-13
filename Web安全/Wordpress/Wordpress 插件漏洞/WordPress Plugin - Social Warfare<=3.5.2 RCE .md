@@ -16,7 +16,7 @@ WordPress Plugin - Social Warfare\<=3.5.2 RCE
 
 在/wp-content/plugins/social-warfare/lib/utilities/SWP\_Database\_Migration.php文件中有一处eval()函数，该函数将file\_get\_contents()读取的文件内容当做PHP代码执行导致RCE。
 
-![](/Users/aresx/Documents/VulWiki/.resource/WordPressPlugin-SocialWarfare<=3.5.2RCE/media/rId25.png)
+![](./.resource/WordPressPlugin-SocialWarfare<=3.5.2RCE/media/rId25.png)
 
 ### 漏洞利用
 
@@ -30,7 +30,7 @@ WordPress Plugin - Social Warfare\<=3.5.2 RCE
 
 我的本机环境为3.5.2版本。
 
-![](/Users/aresx/Documents/VulWiki/.resource/WordPressPlugin-SocialWarfare<=3.5.2RCE/media/rId27.png)
+![](./.resource/WordPressPlugin-SocialWarfare<=3.5.2RCE/media/rId27.png)
 
 第二步：在自己的VPS服务器上放置一个code.txt文件，并启动HTTP服务使该文件可通过HTTP访问。文件内容如下：
 

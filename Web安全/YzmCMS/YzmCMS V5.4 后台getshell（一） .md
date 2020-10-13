@@ -16,7 +16,7 @@ YzmCMS V5.4
 
 发现的第一个问题出现在缓存文件写入函数处，文件为`yzmphp/core/class/cache_file.class.php`，函数名为`_fileputcontents`
 
-![](/Users/aresx/Documents/VulWiki/.resource/YzmCMSV5.4后台getshell(一)/media/rId25.png)
+![](./.resource/YzmCMSV5.4后台getshell(一)/media/rId25.png)
 
 可以看到，补丁在原先的`$contents`前拼接了一段`\n`，而如果要进入序列化的代码，需要`$this->config['mode']`为1，然后就是正常的写入文件。
 
@@ -147,19 +147,19 @@ YzmCMS V5.4
 
 然后使用`yzmcms/yzmcms`登陆后台，来到系统管理的自定义配置处
 
-![](/Users/aresx/Documents/VulWiki/.resource/YzmCMSV5.4后台getshell(一)/media/rId27.png)
+![](./.resource/YzmCMSV5.4后台getshell(一)/media/rId27.png)
 
 然后添加配置，写入代码即可。
 
-![](/Users/aresx/Documents/VulWiki/.resource/YzmCMSV5.4后台getshell(一)/media/rId28.png)
+![](./.resource/YzmCMSV5.4后台getshell(一)/media/rId28.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/YzmCMSV5.4后台getshell(一)/media/rId29.png)
+![](./.resource/YzmCMSV5.4后台getshell(一)/media/rId29.png)
 
 添加以后去查看缓存文件夹`cache/chche_file`，可以看到`configs.cache.php`
 
 直接在浏览器打开
 
-![](/Users/aresx/Documents/VulWiki/.resource/YzmCMSV5.4后台getshell(一)/media/rId30.png)
+![](./.resource/YzmCMSV5.4后台getshell(一)/media/rId30.png)
 
 参考链接
 --------

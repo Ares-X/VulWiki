@@ -14,6 +14,6 @@ XYHCMS 3.6
 
     <?=phpinfo();?>
 
-![1.png](/Users/aresx/Documents/VulWiki/.resource/XYHCMS3.6后台代码执行漏洞(三)/media/rId24.png)
+![1.png](./.resource/XYHCMS3.6后台代码执行漏洞(三)/media/rId24.png)
 
-![2.png](/Users/aresx/Documents/VulWiki/.resource/XYHCMS3.6后台代码执行漏洞(三)/media/rId25.png)
+![2.png](./.resource/XYHCMS3.6后台代码执行漏洞(三)/media/rId25.png)

@@ -21,12 +21,12 @@ Phpcms \< V9.6.3
 > pconnect参数，因为默认它没有单引号比较好调试。注意这里如果不传dbport参数的话database.php里的port参数会置空，将会报错。就无法执行到后面的
 > eval了
 
-![1.png](/Users/aresx/Documents/VulWiki/.resource/PhpcmsV9.6.3install.php没有即使删除导致的getshell/media/rId24.png)
+![1.png](./.resource/PhpcmsV9.6.3install.php没有即使删除导致的getshell/media/rId24.png)
 
 被修改后的database.php：
 
-![2.png](/Users/aresx/Documents/VulWiki/.resource/PhpcmsV9.6.3install.php没有即使删除导致的getshell/media/rId25.png)
+![2.png](./.resource/PhpcmsV9.6.3install.php没有即使删除导致的getshell/media/rId25.png)
 
 url：`/caches/configs/database.php`
 
-![3.png](/Users/aresx/Documents/VulWiki/.resource/PhpcmsV9.6.3install.php没有即使删除导致的getshell/media/rId26.png)
+![3.png](./.resource/PhpcmsV9.6.3install.php没有即使删除导致的getshell/media/rId26.png)

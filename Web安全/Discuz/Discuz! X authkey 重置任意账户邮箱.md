@@ -14,7 +14,7 @@ Discuz! X authkey 重置任意账户邮箱
 
 当我们申请修改邮箱的时候，我们会受到一封类似于下面这样的邮件。
 
-![](/Users/aresx/Documents/VulWiki/.resource/Discuz!Xauthkey重置任意账户邮箱/media/rId24.png)
+![](./.resource/Discuz!Xauthkey重置任意账户邮箱/media/rId24.png)
 
 验证链接类似于
 
@@ -135,7 +135,7 @@ Discuz! X authkey 重置任意账户邮箱
 
 访问hash页面，我们可以看到验证邮箱已经被修改了，接下来我们可以直接通过忘记密码来修改当前用户的密码。
 
-![](/Users/aresx/Documents/VulWiki/.resource/Discuz!Xauthkey重置任意账户邮箱/media/rId26.png)
+![](./.resource/Discuz!Xauthkey重置任意账户邮箱/media/rId26.png)
 
 参考链接
 --------

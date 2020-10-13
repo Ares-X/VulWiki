@@ -79,16 +79,16 @@ username参数，也就是我们要修改的用户名。那么漏洞就很
 
 第一步先在找回密码页面输入要修改的用户名，点击下一步，burp拦截。
 
-![](/Users/aresx/Documents/VulWiki/.resource/Zzcms8.2任意用户密码修改/media/rId26.png)
+![](./.resource/Zzcms8.2任意用户密码修改/media/rId26.png)
 
 抓包获取session值
 
-![](/Users/aresx/Documents/VulWiki/.resource/Zzcms8.2任意用户密码修改/media/rId27.png)
+![](./.resource/Zzcms8.2任意用户密码修改/media/rId27.png)
 
 这里我们获取到了
 session值，然后根据上面的描述，修改数据包，直接进入修改密码操作。
 
-![](/Users/aresx/Documents/VulWiki/.resource/Zzcms8.2任意用户密码修改/media/rId28.png)
+![](./.resource/Zzcms8.2任意用户密码修改/media/rId28.png)
 
 这里session就是上面获取到的，只需要修改
 post-data值就可以。这里改成mima888。action值要改成step3
@@ -98,10 +98,10 @@ update语句的操作。然后重放数据包，就可以完成任意密码修�
 
 前台登录试试，是否修改成功。
 
-![](/Users/aresx/Documents/VulWiki/.resource/Zzcms8.2任意用户密码修改/media/rId29.png)
+![](./.resource/Zzcms8.2任意用户密码修改/media/rId29.png)
 
 成功修改密码，登录成功。
 
-![](/Users/aresx/Documents/VulWiki/.resource/Zzcms8.2任意用户密码修改/media/rId30.png)
+![](./.resource/Zzcms8.2任意用户密码修改/media/rId30.png)
 
 利用此漏洞，只需

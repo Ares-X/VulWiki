@@ -83,8 +83,8 @@ NewZhan CMS 个人版 2.6.3
 审计发现前台商品管理控制器有\$POST 数据传入update(\$data)可以触发SQL
 注入
 
-![1.png](/Users/aresx/Documents/VulWiki/.resource/NewZhanCMSsql注入漏洞/media/rId25.png)
+![1.png](./.resource/NewZhanCMSsql注入漏洞/media/rId25.png)
 
 ### 漏洞复现
 
-![2.png](/Users/aresx/Documents/VulWiki/.resource/NewZhanCMSsql注入漏洞/media/rId27.png)![3.png](/Users/aresx/Documents/VulWiki/.resource/NewZhanCMSsql注入漏洞/media/rId28.png)![4.png](/Users/aresx/Documents/VulWiki/.resource/NewZhanCMSsql注入漏洞/media/rId29.png)
+![2.png](./.resource/NewZhanCMSsql注入漏洞/media/rId27.png)![3.png](./.resource/NewZhanCMSsql注入漏洞/media/rId28.png)![4.png](./.resource/NewZhanCMSsql注入漏洞/media/rId29.png)

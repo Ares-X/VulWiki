@@ -18,7 +18,7 @@ CatfishCMS 4.5
 
 参数：default\_filter
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.5.7xss/media/rId25.png)
+![](./.resource/CatfishCMS4.5.7xss/media/rId25.png)
 
 最后找到一处未过滤的地方
 
@@ -26,7 +26,7 @@ CatfishCMS 4.5
 
 方法：pinglun()
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.5.7xss/media/rId26.png)
+![](./.resource/CatfishCMS4.5.7xss/media/rId26.png)
 
 过滤函数
 
@@ -34,7 +34,7 @@ CatfishCMS 4.5
 
 方法：filterJs()
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.5.7xss/media/rId27.png)
+![](./.resource/CatfishCMS4.5.7xss/media/rId27.png)
 
 可以看到只是简单的过滤
 

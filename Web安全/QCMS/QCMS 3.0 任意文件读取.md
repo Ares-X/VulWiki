@@ -20,11 +20,11 @@ QCMS 3.0
 
 即可读取Controller文件下admin.php文件源码
 
-![](/Users/aresx/Documents/VulWiki/.resource/QCMS3.0任意文件读取/media/rId24.png)
+![](./.resource/QCMS3.0任意文件读取/media/rId24.png)
 
 跟源码对比下，确实是读到了
 
-![](/Users/aresx/Documents/VulWiki/.resource/QCMS3.0任意文件读取/media/rId25.png)
+![](./.resource/QCMS3.0任意文件读取/media/rId25.png)
 
 参考链接
 --------

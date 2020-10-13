@@ -18,11 +18,11 @@ yunyecms 2.0.2
 
 废话不多说，又经过一番寻找与"提示"，发现core/admin/deparment.php文件，其中id值是通过post直接获取的，然后被edit\_admin\_department()调用。
 
-![](/Users/aresx/Documents/VulWiki/.resource/YunyecmsV2.0.2后台注入漏洞(一)/media/rId25.png)
+![](./.resource/YunyecmsV2.0.2后台注入漏洞(一)/media/rId25.png)
 
 去到edit\_admin\_department()函数定义处，发现过滤语句。
 
-![](/Users/aresx/Documents/VulWiki/.resource/YunyecmsV2.0.2后台注入漏洞(一)/media/rId26.png)
+![](./.resource/YunyecmsV2.0.2后台注入漏洞(一)/media/rId26.png)
 
 但是仔细一看，发现代码只是过滤了departmentname和olddepartmentname两个变量，放过了我们的id变量，只是判断id值是否为空。
 
@@ -37,21 +37,21 @@ yunyecms 2.0.2
 
 来到core/admin/deparment.php所在的页面，即后台的部门管理处。
 
-![](/Users/aresx/Documents/VulWiki/.resource/YunyecmsV2.0.2后台注入漏洞(一)/media/rId28.png)
+![](./.resource/YunyecmsV2.0.2后台注入漏洞(一)/media/rId28.png)
 
 修改部门名字，只要前后名字不一致即可，使用burp抓包。
 
-![](/Users/aresx/Documents/VulWiki/.resource/YunyecmsV2.0.2后台注入漏洞(一)/media/rId29.png)
+![](./.resource/YunyecmsV2.0.2后台注入漏洞(一)/media/rId29.png)
 
 发送到Repeater模块，构造参数，可以看到sql报错。
 
-![](/Users/aresx/Documents/VulWiki/.resource/YunyecmsV2.0.2后台注入漏洞(一)/media/rId30.png)
+![](./.resource/YunyecmsV2.0.2后台注入漏洞(一)/media/rId30.png)
 
 不想动手，就扔到sqlmap去跑就完事了。
 
     sqlmap.py -r C:\Users\Administrator\Desktop\yunye.txt --batch
 
-![](/Users/aresx/Documents/VulWiki/.resource/YunyecmsV2.0.2后台注入漏洞(一)/media/rId31.png)
+![](./.resource/YunyecmsV2.0.2后台注入漏洞(一)/media/rId31.png)
 
 参考链接
 --------

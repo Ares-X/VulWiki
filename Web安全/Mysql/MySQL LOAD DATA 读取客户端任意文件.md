@@ -15,7 +15,7 @@ INFILE语句主要用于读取一个文件的内容并且存入一个表中。�
 第一个语句是读取服务器上的/etc/passwd文件并存入TestTable表中，第二个语句是读取客户端本地的/etc/passwd文件并存入TestTable表中。我们要利用的是LOAD
 DATA LOCAL INFILE。官方文档中也提出了这个问题（PS：Google翻译的不是很准确）
 
-![](/Users/aresx/Documents/VulWiki/.resource/MySQLLOADDATA读取客户端任意文件/media/rId23.png)
+![](./.resource/MySQLLOADDATA读取客户端任意文件/media/rId23.png)
 
 二、漏洞影响
 ------------
@@ -29,31 +29,31 @@ DATA LOCAL INFILE。官方文档中也提出了这个问题（PS：Google翻译�
 
 使用tcpdump抓取3306端口的数据包
 
-![](/Users/aresx/Documents/VulWiki/.resource/MySQLLOADDATA读取客户端任意文件/media/rId27.png)
+![](./.resource/MySQLLOADDATA读取客户端任意文件/media/rId27.png)
 
 #### 1.服务器向客户端发送greeting问候包，包含服务端banner信息
 
-![](/Users/aresx/Documents/VulWiki/.resource/MySQLLOADDATA读取客户端任意文件/media/rId29.png)
+![](./.resource/MySQLLOADDATA读取客户端任意文件/media/rId29.png)
 
 #### 2.客户端发送登陆请求包，包含用户名密码，以及含有LOAD DATA LOCAL选项的客户端banner信息。
 
-![](/Users/aresx/Documents/VulWiki/.resource/MySQLLOADDATA读取客户端任意文件/media/rId31.png)
+![](./.resource/MySQLLOADDATA读取客户端任意文件/media/rId31.png)
 
 #### 3.然后是客户端初始化的一些查询，比如select database(); select @\@version\_comment;
 
-![](/Users/aresx/Documents/VulWiki/.resource/MySQLLOADDATA读取客户端任意文件/media/rId33.png)
+![](./.resource/MySQLLOADDATA读取客户端任意文件/media/rId33.png)
 
 #### 4.找到我们执行的LOAD DATA INFILE数据包，第一个包看起来比较正常，是客户端发起的Request Que
 
-![](/Users/aresx/Documents/VulWiki/.resource/MySQLLOADDATA读取客户端任意文件/media/rId35.png)
+![](./.resource/MySQLLOADDATA读取客户端任意文件/media/rId35.png)
 
 #### 5.但是紧接着服务器返回了一个包含刚才所要LOAD DATA INFILE的文件名/Users/smi1e/Desktop/test.txt的数据包。
 
-![](/Users/aresx/Documents/VulWiki/.resource/MySQLLOADDATA读取客户端任意文件/media/rId37.png)
+![](./.resource/MySQLLOADDATA读取客户端任意文件/media/rId37.png)
 
 #### 6.然后客户端向服务端发送了/Users/smi1e/Desktop/test.txt文件的内容：
 
-![](/Users/aresx/Documents/VulWiki/.resource/MySQLLOADDATA读取客户端任意文件/media/rId39.png)
+![](./.resource/MySQLLOADDATA读取客户端任意文件/media/rId39.png)
 
 如果我们在客户端发送查询之后，返回一个Response
 TABULAR数据包，即服务端向客户端发送了文件名的数据包，如果我们把这个文件名设置成我们想要读取的文件，那么我们就可以读取客户端的任意文件了。正如官方文档所写的
@@ -84,7 +84,7 @@ File Transfer数据包格式：Protocol::LOCAL\_INFILE\_Request
 并且我们需要等待一个来自 Client
 的查询请求，才能回复这个读文件的请求。不过我们在上面看到客户端在连接成功后会自动的做一些初始化的查询。
 
-![](/Users/aresx/Documents/VulWiki/.resource/MySQLLOADDATA读取客户端任意文件/media/rId42.png)
+![](./.resource/MySQLLOADDATA读取客户端任意文件/media/rId42.png)
 
 官方也给了exmaple
 
@@ -93,7 +93,7 @@ File Transfer数据包格式：Protocol::LOCAL\_INFILE\_Request
 数据包的内容其实是从\\xfb开始的，这个字节代表包的类型，后面紧跟要读取的文件名。前面的0x0c是数据包的长度（从
 \\xfb 开始计算），长度后面的三个字节\\x00\\x00\\x01是数据包的序号。
 
-![](/Users/aresx/Documents/VulWiki/.resource/MySQLLOADDATA读取客户端任意文件/media/rId43.png)
+![](./.resource/MySQLLOADDATA读取客户端任意文件/media/rId43.png)
 
 Greeting数据包格式：官方文档，如果不会构造可以直接拷贝抓到的数据包然后改一下长度、文件名之类的。
 
@@ -163,7 +163,7 @@ Greeting数据包格式：官方文档，如果不会构造可以直接拷贝抓
         # Don't leave the connection open.
         conn.close()
 
-![](/Users/aresx/Documents/VulWiki/.resource/MySQLLOADDATA读取客户端任意文件/media/rId45.png)
+![](./.resource/MySQLLOADDATA读取客户端任意文件/media/rId45.png)
 
 ps: 实测 下面这个项目比较好用，上面的poc还需要改长度和内容的16进制值Github还有一个项目：https://github.com/allyshka/Rogue-MySql-Server
 

@@ -42,57 +42,57 @@ V11版2017版2016版2015版2013增强版2013版
 
 我们根据官网发布的补丁，更新的是ispirit/im/upload.php这个文件，我们跟进这个文件
 
-![](/Users/aresx/Documents/VulWiki/.resource/通达oa任意文件上传+rce+文件包含/media/rId24.png)
+![](./.resource/通达oa任意文件上传+rce+文件包含/media/rId24.png)
 
 当传入P参数时，就可以绕过登录认证，直接获取到session。
 
-![](/Users/aresx/Documents/VulWiki/.resource/通达oa任意文件上传+rce+文件包含/media/rId25.png)
+![](./.resource/通达oa任意文件上传+rce+文件包含/media/rId25.png)
 
 跟进函数流程，逻辑判断是否传入DEST\_UID并且不为0，否则直接退出。
 
-![](/Users/aresx/Documents/VulWiki/.resource/通达oa任意文件上传+rce+文件包含/media/rId26.png)
+![](./.resource/通达oa任意文件上传+rce+文件包含/media/rId26.png)
 
 传入一个DEST\_UID后，访问，提示无文件上传
 
-![](/Users/aresx/Documents/VulWiki/.resource/通达oa任意文件上传+rce+文件包含/media/rId27.png)
+![](./.resource/通达oa任意文件上传+rce+文件包含/media/rId27.png)
 
 1\<=count(\$\_FILES)判断是否有文件上传，后面的逻辑，如果传入文件，直接进入未授权任意文件上传
 
-![](/Users/aresx/Documents/VulWiki/.resource/通达oa任意文件上传+rce+文件包含/media/rId28.png)
+![](./.resource/通达oa任意文件上传+rce+文件包含/media/rId28.png)
 
 可以使用python3的requests库进行文件上传操作，跟进代码，后面判断的是UPLOAD\_MODE上传模式的值，如果传入UPLOAD\_MODE，当取值为1，2，3时，将回显。
 
-![](/Users/aresx/Documents/VulWiki/.resource/通达oa任意文件上传+rce+文件包含/media/rId29.png)
+![](./.resource/通达oa任意文件上传+rce+文件包含/media/rId29.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/通达oa任意文件上传+rce+文件包含/media/rId30.png)
+![](./.resource/通达oa任意文件上传+rce+文件包含/media/rId30.png)
 
 进入上传逻辑，调用upload()函数，upload()会对上传的文件进行后缀名检测，这里使用name.php.即可绕过文件后缀名限制，调用upload函数后，会返回一个\$ATTACHMENTS数组，这也是后面我们传入上传模式UPLOAD\_MODE值时会根据该值的取值返回\$ATTACHMENTS\[ID\]和\$ATTACHMENTS\[NAME\]
 
-![](/Users/aresx/Documents/VulWiki/.resource/通达oa任意文件上传+rce+文件包含/media/rId31.png)
+![](./.resource/通达oa任意文件上传+rce+文件包含/media/rId31.png)
 
 跟进upload()函数，\$ATTACHMENTS\[ID\]由add\_attach()函数返回在add\_attach()可以看到传入的文件存储路径为
 
-![](/Users/aresx/Documents/VulWiki/.resource/通达oa任意文件上传+rce+文件包含/media/rId32.png)
+![](./.resource/通达oa任意文件上传+rce+文件包含/media/rId32.png)
 
 \$MODULE的值在upload.php文件中指定为im
 
-![](/Users/aresx/Documents/VulWiki/.resource/通达oa任意文件上传+rce+文件包含/media/rId33.png)
+![](./.resource/通达oa任意文件上传+rce+文件包含/media/rId33.png)
 
 存储路径就保存在在upload.php文件中指定的attch/im/\$YM/文件夹下面，文件名就是\$ATTACH\_ID.\$ATTACH\_FILEadd\_attach()函数最终返回的前台的能够回显的\$ATTACHMENTS\[ID\]里面就包含上传的文件名和路径。
 
-![](/Users/aresx/Documents/VulWiki/.resource/通达oa任意文件上传+rce+文件包含/media/rId34.png)
+![](./.resource/通达oa任意文件上传+rce+文件包含/media/rId34.png)
 
 此时，我们就可以构造payloads进行任意文件上传
 
-![](/Users/aresx/Documents/VulWiki/.resource/通达oa任意文件上传+rce+文件包含/media/rId35.png)
+![](./.resource/通达oa任意文件上传+rce+文件包含/media/rId35.png)
 
 但是，开发者指定的保存路径不在wwwroot目录下面，我们只能通过文件包含漏洞进行包含触发漏洞。文件包含漏洞出现在/ispirit/interface/gateway.php，首先接从客户端接收一个\$json的参数，然后将\$json转换为数组后再转换成变量，当存在\$json数据中存在一个key为url的且不为空的值时，并且url传入的数据中有general/或者ispirit/或者module/时，执行include\_once包含该url。
 
-![](/Users/aresx/Documents/VulWiki/.resource/通达oa任意文件上传+rce+文件包含/media/rId36.png)
+![](./.resource/通达oa任意文件上传+rce+文件包含/media/rId36.png)
 
 此处文件包含的另外一个利用，直接触发nginx的错误日志，利用文件包含直接getshell
 
-![](/Users/aresx/Documents/VulWiki/.resource/通达oa任意文件上传+rce+文件包含/media/rId37.png)
+![](./.resource/通达oa任意文件上传+rce+文件包含/media/rId37.png)
 
 ### 请求包
 

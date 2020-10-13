@@ -18,19 +18,19 @@ Thinkphp 3.1.3
 
 将这一条修复语句注释后开始一步步复现
 
-![1.png](/Users/aresx/Documents/VulWiki/.resource/Thinkphp3.1.3sql注入漏洞/media/rId24.png)
+![1.png](./.resource/Thinkphp3.1.3sql注入漏洞/media/rId24.png)
 
 在ThinkPHP目录下创建app文件夹后创建index.php
 
-![2.png](/Users/aresx/Documents/VulWiki/.resource/Thinkphp3.1.3sql注入漏洞/media/rId25.png)
+![2.png](./.resource/Thinkphp3.1.3sql注入漏洞/media/rId25.png)
 
 访问相应页面，显示这个则说明成功。
 
-![3.png](/Users/aresx/Documents/VulWiki/.resource/Thinkphp3.1.3sql注入漏洞/media/rId26.png)
+![3.png](./.resource/Thinkphp3.1.3sql注入漏洞/media/rId26.png)
 
 成功后app文件夹下会生成工程文件
 
-![4.png](/Users/aresx/Documents/VulWiki/.resource/Thinkphp3.1.3sql注入漏洞/media/rId27.png)
+![4.png](./.resource/Thinkphp3.1.3sql注入漏洞/media/rId27.png)
 
 然后开始配置数据库(在app/conf/config.php下配置)
 
@@ -86,11 +86,11 @@ Thinkphp 3.1.3
 
 `https://www.0-sec.org:9090/ThinkPHP_3.1.3_full/ThinkPHP/app/`
 
-![5.png](/Users/aresx/Documents/VulWiki/.resource/Thinkphp3.1.3sql注入漏洞/media/rId28.png)
+![5.png](./.resource/Thinkphp3.1.3sql注入漏洞/media/rId28.png)
 
 `https://www.0-sec.org:9090/ThinkPHP_3.1.3_full/ThinkPHP/app/?id=1" or 1 –`
 
-![6.png](/Users/aresx/Documents/VulWiki/.resource/Thinkphp3.1.3sql注入漏洞/media/rId29.png)
+![6.png](./.resource/Thinkphp3.1.3sql注入漏洞/media/rId29.png)
 
 复现结束
 

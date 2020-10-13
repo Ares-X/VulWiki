@@ -23,11 +23,11 @@ Phpyun v4.2（部分） 4.3 4.5 系统重装漏洞
 
 先判断了是否存在lock文件，存在即退出安装。
 
-![](/Users/aresx/Documents/VulWiki/.resource/Phpyunv4.2(部分)4.34.5系统重装漏洞/media/rId25.png)
+![](./.resource/Phpyunv4.2(部分)4.34.5系统重装漏洞/media/rId25.png)
 
 其中S\_ROOT这个常量是在前面index.php文件中定义的。
 
-![](/Users/aresx/Documents/VulWiki/.resource/Phpyunv4.2(部分)4.34.5系统重装漏洞/media/rId26.png)
+![](./.resource/Phpyunv4.2(部分)4.34.5系统重装漏洞/media/rId26.png)
 
 取得是当前文件的绝对路径。拼接起来，检测的lock文件位置应该是
 根目录/install/data/phpyun.lock。
@@ -36,7 +36,7 @@ Phpyun v4.2（部分） 4.3 4.5 系统重装漏洞
 
 按照正常安装走完，看到最后一步
 
-![](/Users/aresx/Documents/VulWiki/.resource/Phpyunv4.2(部分)4.34.5系统重装漏洞/media/rId27.png)
+![](./.resource/Phpyunv4.2(部分)4.34.5系统重装漏洞/media/rId27.png)
 
 创建lock文件，这里用的是相对路径。install.php是被index.php
 用require的模式调用的。
@@ -53,17 +53,17 @@ Phpyun v4.2（部分） 4.3 4.5 系统重装漏洞
 
 以本地phpyun4.3 已经安装完成系统为例，是可以被重装的。
 
-![](/Users/aresx/Documents/VulWiki/.resource/Phpyunv4.2(部分)4.34.5系统重装漏洞/media/rId28.png)
+![](./.resource/Phpyunv4.2(部分)4.34.5系统重装漏洞/media/rId28.png)
 
 最新版phpyun 4.5这里的代码和4.3是一样的。
 
-![](/Users/aresx/Documents/VulWiki/.resource/Phpyunv4.2(部分)4.34.5系统重装漏洞/media/rId29.png)
+![](./.resource/Phpyunv4.2(部分)4.34.5系统重装漏洞/media/rId29.png)
 
 phpyun 4.2 版本处理逻辑不一样，这个版本不受影响。
 
-![](/Users/aresx/Documents/VulWiki/.resource/Phpyunv4.2(部分)4.34.5系统重装漏洞/media/rId30.png)
+![](./.resource/Phpyunv4.2(部分)4.34.5系统重装漏洞/media/rId30.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/Phpyunv4.2(部分)4.34.5系统重装漏洞/media/rId31.png)
+![](./.resource/Phpyunv4.2(部分)4.34.5系统重装漏洞/media/rId31.png)
 
 **经测试phpyun 4.2某些版本依旧是受影响的。**
 
@@ -73,11 +73,11 @@ phpyun 4.2 版本处理逻辑不一样，这个版本不受影响。
 
 #### 官方测试站，版本phpyun 4.2111：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Phpyunv4.2(部分)4.34.5系统重装漏洞/media/rId34.png)
+![](./.resource/Phpyunv4.2(部分)4.34.5系统重装漏洞/media/rId34.png)
 
 #### 某招聘网，版本phpyun 4.3
 
-![](/Users/aresx/Documents/VulWiki/.resource/Phpyunv4.2(部分)4.34.5系统重装漏洞/media/rId36.png)
+![](./.resource/Phpyunv4.2(部分)4.34.5系统重装漏洞/media/rId36.png)
 
 参考链接
 --------

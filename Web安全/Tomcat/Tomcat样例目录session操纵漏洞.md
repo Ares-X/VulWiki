@@ -16,18 +16,18 @@ tomcat中，有一个默认的example示例目录，该example目录中存着众
 
 如图，是Apache tomcat 网站根目录下的文件夹，默认是有一个examples目录的
 
-![](/Users/aresx/Documents/VulWiki/.resource/Tomcat样例目录session操纵漏洞/media/rId24.png)
+![](./.resource/Tomcat样例目录session操纵漏洞/media/rId24.png)
 
 这是examples目录下的文件
 
-![](/Users/aresx/Documents/VulWiki/.resource/Tomcat样例目录session操纵漏洞/media/rId25.png)
+![](./.resource/Tomcat样例目录session操纵漏洞/media/rId25.png)
 
 我们访问该SessionExample页面，该页面可以对Session进行操控，本来该页面是Apache
 tomcat用来给开发者操纵Session示例的页面。但是，如果实际生产环境中不删除该页面的话，可能存在伪造任意用户身份的漏洞。
 
 <http://127.0.0.1:8080/examples/servlets/servlet/SessionExample>
 
-![](/Users/aresx/Documents/VulWiki/.resource/Tomcat样例目录session操纵漏洞/media/rId27.png)
+![](./.resource/Tomcat样例目录session操纵漏洞/media/rId27.png)
 
 那么我们来看看SessionExample页面是如何通过接收用户输入的值，来对Session进行控制的。
 
@@ -65,7 +65,7 @@ tomcat用来给开发者操纵Session示例的页面。但是，如果实际生�
 也就是说，用户通过表单提交Name和Value参数，然后通过request.getParameter（）函数获取这两个参数的值，再通过session.setAttribute()
 函数将Name和Value的值写入Session中。
 
-![](/Users/aresx/Documents/VulWiki/.resource/Tomcat样例目录session操纵漏洞/media/rId28.png)
+![](./.resource/Tomcat样例目录session操纵漏洞/media/rId28.png)
 
 ### 漏洞示例
 
@@ -112,7 +112,7 @@ index.jsp
 
 <http://127.0.0.1:8080/examples/index.jsp>
 
-![](/Users/aresx/Documents/VulWiki/.resource/Tomcat样例目录session操纵漏洞/media/rId31.png)
+![](./.resource/Tomcat样例目录session操纵漏洞/media/rId31.png)
 
 发现被重定向到login.jsp了。因为我们没有登录，所以被重定向到了登录页面
 
@@ -123,14 +123,14 @@ index.jsp
 在Name of Session Attribute: 里输入 login
 
 在Value of Session Attribute:里输入 admin
-![](/Users/aresx/Documents/VulWiki/.resource/Tomcat样例目录session操纵漏洞/media/rId32.png)
+![](./.resource/Tomcat样例目录session操纵漏洞/media/rId32.png)
 
 提交后显示login=admin已经写入session
 
-![](/Users/aresx/Documents/VulWiki/.resource/Tomcat样例目录session操纵漏洞/media/rId33.png)
+![](./.resource/Tomcat样例目录session操纵漏洞/media/rId33.png)
 
 再次打开index.jsp，显示成功登录
 
-![](/Users/aresx/Documents/VulWiki/.resource/Tomcat样例目录session操纵漏洞/media/rId34.png)
+![](./.resource/Tomcat样例目录session操纵漏洞/media/rId34.png)
 
 > 注：但是在现实生产环境中，我们很难知道服务器后端的Session中是通过什么参数(Name)和值(Value)来判断用户登录状态的。所以就是我们根本很难利用该页面来进行任意用户伪造，只是说理论上是可行的。

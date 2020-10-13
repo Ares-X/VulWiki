@@ -24,7 +24,7 @@ Phpcms v9.6.2
 ，代码如下图。我们可以明显看到下图第33行，程序直接将解密后的数据未经过滤直接带入查询。而待解密数据
 **\$phpcms\_auth** 和解密秘钥 **\$auth\_key** 均可构造。
 
-![](/Users/aresx/Documents/VulWiki/.resource/Phpcmsv9.6.2前台sql注入/media/rId25.png)
+![](./.resource/Phpcmsv9.6.2前台sql注入/media/rId25.png)
 
 我们先来看一下待解密数据 **\$phpcms\_auth**
 如何构造。从下图中，可以看出程序将从 **cookie** 中的 **xxx\_auth**
@@ -32,13 +32,13 @@ Phpcms v9.6.2
 ，而默认情况下使用 **pc\_base::load\_config(\'system\', \'auth\_key\')**
 作为加解密的 **key** 值。
 
-![](/Users/aresx/Documents/VulWiki/.resource/Phpcmsv9.6.2前台sql注入/media/rId26.png)
+![](./.resource/Phpcmsv9.6.2前台sql注入/media/rId26.png)
 
 而 **pc\_base::load\_config(\'system\', \'auth\_key\')**
 的值在网站搭建好后，会存储在 **caches/configs/system.php**
 中，我们可以通过任意文件读取来获得这个值。
 
-![](/Users/aresx/Documents/VulWiki/.resource/Phpcmsv9.6.2前台sql注入/media/rId27.png)
+![](./.resource/Phpcmsv9.6.2前台sql注入/media/rId27.png)
 
 现在 **\$phpcms\_auth** 已经搞定了，我们再来看看 **\$auth\_key =
 get\_auth\_key(\'login\')** 如何构造，跟进 **get\_auth\_key**
@@ -46,14 +46,14 @@ get\_auth\_key(\'login\')** 如何构造，跟进 **get\_auth\_key**
 **\$prefix、pc\_base::load\_config(\'system\',\'auth\_key\')、ip()**
 三个元素决定。前两个都是已知的，而第三个获取用户IP的函数存在IP伪造的问题，也可以是固定的。
 
-![](/Users/aresx/Documents/VulWiki/.resource/Phpcmsv9.6.2前台sql注入/media/rId28.png)
+![](./.resource/Phpcmsv9.6.2前台sql注入/media/rId28.png)
 
 所以 **get\_auth\_key(\'login\')**
 的值也是我们可以构造的，剩下的事情只要我们将 **payload**
 传给加密函数加密两次即可。我们最后再来看一下 **PHPCMS v9.6.3**
 中是如何修复这个漏洞的，补丁如下：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Phpcmsv9.6.2前台sql注入/media/rId29.png)
+![](./.resource/Phpcmsv9.6.2前台sql注入/media/rId29.png)
 
 可以明显看到，补丁将解密后获得的 **\$userid** 进行了强转。
 
@@ -163,11 +163,11 @@ get\_auth\_key(\'login\')** 如何构造，跟进 **get\_auth\_key**
 使用上面的代码可以进行解密和加密，下图中decryption\_step2
 result的值便是对payload进行解密的最终结果，encryption\_step2的值是对payload进行加密的最终结果。
 
-![](/Users/aresx/Documents/VulWiki/.resource/Phpcmsv9.6.2前台sql注入/media/rId31.png)
+![](./.resource/Phpcmsv9.6.2前台sql注入/media/rId31.png)
 
 最终利用的现象，cookie中的YDVIB\_auth参数名称，前缀是安装时候生成的可能不一样，可以在配置文件中找到对应的值，可以先注册普通用户然后看服务端下发的cookie中字段名称中xxx\_auth的参数名称，便是存在漏洞的位置。
 
-![](/Users/aresx/Documents/VulWiki/.resource/Phpcmsv9.6.2前台sql注入/media/rId32.png)
+![](./.resource/Phpcmsv9.6.2前台sql注入/media/rId32.png)
 
 参考链接
 --------

@@ -18,11 +18,11 @@ Variables）的方式动态配置后端Web应用。如果其端口暴露在外�
 
 使用poc.py，执行命令`python poc.py -u your-ip:8000 -c "touch /tmp/success"`：
 
-![1.png](/Users/aresx/Documents/VulWiki/.resource/uWSGI未授权访问漏洞/media/rId24.png)
+![1.png](./.resource/uWSGI未授权访问漏洞/media/rId24.png)
 
 执行`docker-compose exec web bash`进入容器，可见`/tmp/success`已经成功执行：
 
-![2.png](/Users/aresx/Documents/VulWiki/.resource/uWSGI未授权访问漏洞/media/rId25.png)
+![2.png](./.resource/uWSGI未授权访问漏洞/media/rId25.png)
 
     poc.py
     #!/usr/bin/python

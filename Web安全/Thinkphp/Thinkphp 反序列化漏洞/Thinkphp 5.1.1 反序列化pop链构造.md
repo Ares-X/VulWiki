@@ -392,4 +392,4 @@ model类是抽象类，不能直接调用。所以调用他的子类Pivot类(thi
 
 > 漏洞的利用前提是存在一个点可以输入点可以反序列化。
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp5.1.1反序列化pop链构造/media/rId26.png)
+![](./.resource/Thinkphp5.1.1反序列化pop链构造/media/rId26.png)

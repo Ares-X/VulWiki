@@ -20,11 +20,11 @@ MyuCMS v2.1
 。显示消息为 **User-\>xiaoxi()**
 方法。该方法中无用户可控参数。所以注入不可能在此方法中。
 
-![1.jpg](/Users/aresx/Documents/VulWiki/.resource/MyuCMSv2.1sql注入漏洞/media/rId24.jpg)
+![1.jpg](./.resource/MyuCMSv2.1sql注入漏洞/media/rId24.jpg)
 
 如图所示功能处可将未读消息更改为已读消息。同时我们抓包观察。未读消息为其他用户在登录用户发布的文章下留言所产生。
 
-![2.jpg](/Users/aresx/Documents/VulWiki/.resource/MyuCMSv2.1sql注入漏洞/media/rId25.jpg)
+![2.jpg](./.resource/MyuCMSv2.1sql注入漏洞/media/rId25.jpg)
 
 可以发现，该功能对应的路由地址，以及所提交的参数。我们找到路由地址对应的方法为
 **User-\>xiaoxidel()** 代码如下
@@ -56,7 +56,7 @@ MyuCMS v2.1
 上述代码中，**where()**
 方法使用字符串条件，但并没有执行预编译。其实针对字符串条件，官方手册是做了说明的，显然这里没有遵守官方手册的意见，所以造成了SQL注入。
 
-![3.png](/Users/aresx/Documents/VulWiki/.resource/MyuCMSv2.1sql注入漏洞/media/rId26.png)
+![3.png](./.resource/MyuCMSv2.1sql注入漏洞/media/rId26.png)
 
 ### Payload
 
@@ -66,7 +66,7 @@ Payload如下
 
 在下图所示位置打上断点，即可查执行的SQL语句
 
-![4.jpg](/Users/aresx/Documents/VulWiki/.resource/MyuCMSv2.1sql注入漏洞/media/rId28.jpg)
+![4.jpg](./.resource/MyuCMSv2.1sql注入漏洞/media/rId28.jpg)
 
 参考链接
 --------

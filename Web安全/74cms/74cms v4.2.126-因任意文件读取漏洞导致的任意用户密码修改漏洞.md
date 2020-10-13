@@ -12,22 +12,22 @@
 
 突突突突突突突文件：74cms\\upload\\Application\\Home\\Controller\\ApiController.class.php方法：members\_edit(
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv4.2.126-因任意文件读取漏洞导致的任意用户密码修改漏洞/media/rId23.png)
+![](./.resource/74cmsv4.2.126-因任意文件读取漏洞导致的任意用户密码修改漏洞/media/rId23.png)
 
 从这里看漏洞整体都很简单。没有过多的套路的，有的只是中规中矩。那么就让我们直接利用试试。
 
 先看看数据库现在的数据
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv4.2.126-因任意文件读取漏洞导致的任意用户密码修改漏洞/media/rId24.png)
+![](./.resource/74cmsv4.2.126-因任意文件读取漏洞导致的任意用户密码修改漏洞/media/rId24.png)
 
 接着让我们来调接口看看
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv4.2.126-因任意文件读取漏洞导致的任意用户密码修改漏洞/media/rId25.png)
+![](./.resource/74cmsv4.2.126-因任意文件读取漏洞导致的任意用户密码修改漏洞/media/rId25.png)
 
 文件：
 74cms\\upload\\Application\\Home\\Controller\\ApiController.class.php方法：check\_token(
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv4.2.126-因任意文件读取漏洞导致的任意用户密码修改漏洞/media/rId26.png)
+![](./.resource/74cmsv4.2.126-因任意文件读取漏洞导致的任意用户密码修改漏洞/media/rId26.png)
 
 接口调用失败的原因是因为，上图的析构函数调用了方法 check\_token 进行了token验证
 
@@ -51,43 +51,43 @@ https://github.com/ianxtianxt/74cms\_file\_read
 
 下载此文件以后
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv4.2.126-因任意文件读取漏洞导致的任意用户密码修改漏洞/media/rId27.png)
+![](./.resource/74cmsv4.2.126-因任意文件读取漏洞导致的任意用户密码修改漏洞/media/rId27.png)
 
 设置成这样，然后执行一下
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv4.2.126-因任意文件读取漏洞导致的任意用户密码修改漏洞/media/rId28.png)
+![](./.resource/74cmsv4.2.126-因任意文件读取漏洞导致的任意用户密码修改漏洞/media/rId28.png)
 
 接着把 PWDHASH 复制出来
 
 我们这里看看加密的代码：文件：74cms\\upload\\Application\\Common\\Common\\function.php函数：encrypt(
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv4.2.126-因任意文件读取漏洞导致的任意用户密码修改漏洞/media/rId29.png)
+![](./.resource/74cmsv4.2.126-因任意文件读取漏洞导致的任意用户密码修改漏洞/media/rId29.png)
 
 然后加密一下
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv4.2.126-因任意文件读取漏洞导致的任意用户密码修改漏洞/media/rId30.png)
+![](./.resource/74cmsv4.2.126-因任意文件读取漏洞导致的任意用户密码修改漏洞/media/rId30.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv4.2.126-因任意文件读取漏洞导致的任意用户密码修改漏洞/media/rId31.png)
+![](./.resource/74cmsv4.2.126-因任意文件读取漏洞导致的任意用户密码修改漏洞/media/rId31.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv4.2.126-因任意文件读取漏洞导致的任意用户密码修改漏洞/media/rId32.png)
+![](./.resource/74cmsv4.2.126-因任意文件读取漏洞导致的任意用户密码修改漏洞/media/rId32.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv4.2.126-因任意文件读取漏洞导致的任意用户密码修改漏洞/media/rId33.png)
+![](./.resource/74cmsv4.2.126-因任意文件读取漏洞导致的任意用户密码修改漏洞/media/rId33.png)
 
 这时你就会发现虽然我们密码改了但是不知道用户名怎么办？
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv4.2.126-因任意文件读取漏洞导致的任意用户密码修改漏洞/media/rId34.png)
+![](./.resource/74cmsv4.2.126-因任意文件读取漏洞导致的任意用户密码修改漏洞/media/rId34.png)
 
 好在我们可以这样利用！人家登录是可以用户名，手机号登录的，所以我们就
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv4.2.126-因任意文件读取漏洞导致的任意用户密码修改漏洞/media/rId35.png)
+![](./.resource/74cmsv4.2.126-因任意文件读取漏洞导致的任意用户密码修改漏洞/media/rId35.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv4.2.126-因任意文件读取漏洞导致的任意用户密码修改漏洞/media/rId36.png)
+![](./.resource/74cmsv4.2.126-因任意文件读取漏洞导致的任意用户密码修改漏洞/media/rId36.png)
 
 当然如果你要修改用户名登录的话，也可以，看你自己喜欢了
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv4.2.126-因任意文件读取漏洞导致的任意用户密码修改漏洞/media/rId37.png)
+![](./.resource/74cmsv4.2.126-因任意文件读取漏洞导致的任意用户密码修改漏洞/media/rId37.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv4.2.126-因任意文件读取漏洞导致的任意用户密码修改漏洞/media/rId38.png)
+![](./.resource/74cmsv4.2.126-因任意文件读取漏洞导致的任意用户密码修改漏洞/media/rId38.png)
 
 0x03 利用小工具
 ---------------
@@ -96,9 +96,9 @@ https://github.com/ianxtianxt/74cms\_file\_read
 
 https://github.com/ianxtianxt/74cms\_file\_read
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv4.2.126-因任意文件读取漏洞导致的任意用户密码修改漏洞/media/rId40.png)
+![](./.resource/74cmsv4.2.126-因任意文件读取漏洞导致的任意用户密码修改漏洞/media/rId40.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/74cmsv4.2.126-因任意文件读取漏洞导致的任意用户密码修改漏洞/media/rId41.png)
+![](./.resource/74cmsv4.2.126-因任意文件读取漏洞导致的任意用户密码修改漏洞/media/rId41.png)
 
 四、参考链接
 ------------

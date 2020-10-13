@@ -36,29 +36,29 @@ CatfishCMS 4.5
 
 1， 准备好脚本
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.5.7csrfgetshell/media/rId24.png)
+![](./.resource/CatfishCMS4.5.7csrfgetshell/media/rId24.png)
 
 2，利用前面的xss漏洞，配合这个脚本形成xsrf漏洞
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.5.7csrfgetshell/media/rId25.png)
+![](./.resource/CatfishCMS4.5.7csrfgetshell/media/rId25.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.5.7csrfgetshell/media/rId26.png)
+![](./.resource/CatfishCMS4.5.7csrfgetshell/media/rId26.png)
 
 这样我们在前端的事情就完事了。接着我们模拟后台管理员进入后台的操作
 
 模拟的后端管理员操作：
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.5.7csrfgetshell/media/rId27.png)
+![](./.resource/CatfishCMS4.5.7csrfgetshell/media/rId27.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.5.7csrfgetshell/media/rId28.png)
+![](./.resource/CatfishCMS4.5.7csrfgetshell/media/rId28.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.5.7csrfgetshell/media/rId29.png)
+![](./.resource/CatfishCMS4.5.7csrfgetshell/media/rId29.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.5.7csrfgetshell/media/rId30.png)
+![](./.resource/CatfishCMS4.5.7csrfgetshell/media/rId30.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.5.7csrfgetshell/media/rId31.png)
+![](./.resource/CatfishCMS4.5.7csrfgetshell/media/rId31.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.5.7csrfgetshell/media/rId32.png)
+![](./.resource/CatfishCMS4.5.7csrfgetshell/media/rId32.png)
 
 ### 漏洞原理与流程：
 
@@ -68,25 +68,25 @@ CatfishCMS 4.5
 
 3,访问前端重新生成缓存地址： application\\index\\controller\\Index.php方法：index()
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.5.7csrfgetshell/media/rId34.png)
+![](./.resource/CatfishCMS4.5.7csrfgetshell/media/rId34.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.5.7csrfgetshell/media/rId35.png)
+![](./.resource/CatfishCMS4.5.7csrfgetshell/media/rId35.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.5.7csrfgetshell/media/rId36.png)
+![](./.resource/CatfishCMS4.5.7csrfgetshell/media/rId36.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.5.7csrfgetshell/media/rId37.png)
+![](./.resource/CatfishCMS4.5.7csrfgetshell/media/rId37.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.5.7csrfgetshell/media/rId38.png)
+![](./.resource/CatfishCMS4.5.7csrfgetshell/media/rId38.png)
 
 缓存的名字由来缓存的名字组成就是比较简单的了。
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.5.7csrfgetshell/media/rId39.png)
+![](./.resource/CatfishCMS4.5.7csrfgetshell/media/rId39.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.5.7csrfgetshell/media/rId40.png)
+![](./.resource/CatfishCMS4.5.7csrfgetshell/media/rId40.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.5.7csrfgetshell/media/rId41.png)
+![](./.resource/CatfishCMS4.5.7csrfgetshell/media/rId41.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.5.7csrfgetshell/media/rId42.png)
+![](./.resource/CatfishCMS4.5.7csrfgetshell/media/rId42.png)
 
 这上面几幅图就是缓存的名字了什么意思呢？很简单
 
@@ -98,7 +98,7 @@ Cache::set(\'hunhe\_\'.\$source.\$page,\$hunhe,3600); 缓存方法最后就是
 
 MD5(hunhe\_index1) = 9040ab6906a15768edcd9e5b1d57fcda
 
-![](/Users/aresx/Documents/VulWiki/.resource/CatfishCMS4.5.7csrfgetshell/media/rId43.png)
+![](./.resource/CatfishCMS4.5.7csrfgetshell/media/rId43.png)
 
 ### 后记：
 

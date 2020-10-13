@@ -14,10 +14,10 @@ Semcms v3.8
 
 > URL: <http://0-sec.org/123/sOWj5B_Admin/SEMCMS_Inquiry.php>
 >
-> ![](/Users/aresx/Documents/VulWiki/.resource/Semcmsv3.8sql注入漏洞/media/rId25.png){width="5.833333333333333in"
+> ![](./.resource/Semcmsv3.8sql注入漏洞/media/rId25.png){width="5.833333333333333in"
 > height="2.9166666666666665in"}Debug：Defense module is
 > class.phpmailer.php and function
-> inject\_check\_sql![](/Users/aresx/Documents/VulWiki/.resource/Semcmsv3.8sql注入漏洞/media/rId26.png){width="5.833333333333333in"
+> inject\_check\_sql![](./.resource/Semcmsv3.8sql注入漏洞/media/rId26.png){width="5.833333333333333in"
 > height="0.4946084864391951in"}But VID\[\] didn\'t handle it
 
 -   POST

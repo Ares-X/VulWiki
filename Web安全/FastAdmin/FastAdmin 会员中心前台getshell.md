@@ -68,9 +68,9 @@ V1.0.0.20200506\_beta
 1、在linux下利用`is_file()`来判断类似于`/****/../../../../etc/passwd`文件时，如果`****`是不存在的目录，则会返回false，在windows下
 ，这个目录存在与否，均返回true，如下图所示：
 
-![1.png](/Users/aresx/Documents/VulWiki/.resource/FastAdmin会员中心前台getshell/media/rId26.png)
+![1.png](./.resource/FastAdmin会员中心前台getshell/media/rId26.png)
 
-![2.png](/Users/aresx/Documents/VulWiki/.resource/FastAdmin会员中心前台getshell/media/rId27.png)
+![2.png](./.resource/FastAdmin会员中心前台getshell/media/rId27.png)
 
 2、在linux下，`is_file()`函数判可用于判断符号链接
 
@@ -79,9 +79,9 @@ V1.0.0.20200506\_beta
 4、windows系统里面`/`和`\` 都可以使用，但是在linux下只能使用`/`
 来分隔路径，因此这会导致`is_file()`在不同系统下的返回结果不一致
 
-![3.png](/Users/aresx/Documents/VulWiki/.resource/FastAdmin会员中心前台getshell/media/rId28.png)
+![3.png](./.resource/FastAdmin会员中心前台getshell/media/rId28.png)
 
-![4.png](/Users/aresx/Documents/VulWiki/.resource/FastAdmin会员中心前台getshell/media/rId29.png)
+![4.png](./.resource/FastAdmin会员中心前台getshell/media/rId29.png)
 
 5、`is_file()`判断文件时，如果文件大小超过2\^32时，会判断失败
 
@@ -93,7 +93,7 @@ V1.0.0.20200506\_beta
 
 在前台的会员中心，个人资料处，上传修改头像：
 
-![5.png](/Users/aresx/Documents/VulWiki/.resource/FastAdmin会员中心前台getshell/media/rId31.png)
+![5.png](./.resource/FastAdmin会员中心前台getshell/media/rId31.png)
 
 抓包后修改图片数据（满足图片头格式即可）：
 
@@ -122,19 +122,19 @@ V1.0.0.20200506\_beta
     {php}phpinfo();{/php}
     ------WebKitFormBoundaryJ60Dcmopu4qDLQwq--
 
-![6.png](/Users/aresx/Documents/VulWiki/.resource/FastAdmin会员中心前台getshell/media/rId32.png)
+![6.png](./.resource/FastAdmin会员中心前台getshell/media/rId32.png)
 
 记录下路径后，成功getshell
 
-![7.png](/Users/aresx/Documents/VulWiki/.resource/FastAdmin会员中心前台getshell/media/rId33.png)
+![7.png](./.resource/FastAdmin会员中心前台getshell/media/rId33.png)
 
 在Linux下，通过这种方法会失效，因为在`/public`路径下不存在`user`目录，由前文中的知识点可以知道，当不存在这个目录的时候，无论怎么跳转目录，`is_file()`函数返回的结果始终未false，因此无法利用该漏洞，如下图所示：
 
-![8.png](/Users/aresx/Documents/VulWiki/.resource/FastAdmin会员中心前台getshell/media/rId34.png)
+![8.png](./.resource/FastAdmin会员中心前台getshell/media/rId34.png)
 
 当我们在`/public`目录下创建文件夹`/user`，在利用，即可成功：
 
-![9.png](/Users/aresx/Documents/VulWiki/.resource/FastAdmin会员中心前台getshell/media/rId35.png)
+![9.png](./.resource/FastAdmin会员中心前台getshell/media/rId35.png)
 
 参考链接
 --------

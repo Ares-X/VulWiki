@@ -50,16 +50,16 @@ YXcms 1.4.7
 
     http://0-sec.org/index.php%3Fr%3Dadmin/set/tpadd%26Mname%3Ddefault
 
-![](/Users/aresx/Documents/VulWiki/.resource/YXCMS1.4.7任意文件写入/media/rId26.png)
+![](./.resource/YXCMS1.4.7任意文件写入/media/rId26.png)
 
 打开我们的文件监控软件FolderChangesView，输入我们的程序路径D:\\phpStudy\\PHPTutorial\\WWW\\YXcms
 
-![](/Users/aresx/Documents/VulWiki/.resource/YXCMS1.4.7任意文件写入/media/rId27.png)
+![](./.resource/YXCMS1.4.7任意文件写入/media/rId27.png)
 
 然后写shell.php文件名，写入我们的代码。
 
-![](/Users/aresx/Documents/VulWiki/.resource/YXCMS1.4.7任意文件写入/media/rId28.png)
+![](./.resource/YXCMS1.4.7任意文件写入/media/rId28.png)
 
 然后会在\\protected\\apps\\default\\view\\default下面生成我们写入的文件。
 
-![](/Users/aresx/Documents/VulWiki/.resource/YXCMS1.4.7任意文件写入/media/rId29.shtml)
+![](./.resource/YXCMS1.4.7任意文件写入/media/rId29.shtml)

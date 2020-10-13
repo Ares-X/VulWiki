@@ -20,15 +20,15 @@ Yunucms v2.0.7
 
 需要注意的是需要填云账号，我去官网注册了一个随便填上了，账号testqwe，密码123456，手机号利用的在线短信注册的
 
-![](/Users/aresx/Documents/VulWiki/.resource/Yunucmsv2.0.7后台xss/media/rId26.png)
+![](./.resource/Yunucmsv2.0.7后台xss/media/rId26.png)
 
 填上MySQL密码即可
 
-![](/Users/aresx/Documents/VulWiki/.resource/Yunucmsv2.0.7后台xss/media/rId27.png)
+![](./.resource/Yunucmsv2.0.7后台xss/media/rId27.png)
 
 前台界面
 
-![](/Users/aresx/Documents/VulWiki/.resource/Yunucmsv2.0.7后台xss/media/rId28.png)
+![](./.resource/Yunucmsv2.0.7后台xss/media/rId28.png)
 
 ### 漏洞分析
 
@@ -156,23 +156,23 @@ fetch\_sql变量为false，跟进execute方法
 
 后台TAG管理模块
 
-![](/Users/aresx/Documents/VulWiki/.resource/Yunucmsv2.0.7后台xss/media/rId31.png)
+![](./.resource/Yunucmsv2.0.7后台xss/media/rId31.png)
 
 进行添加TAG
 
-![](/Users/aresx/Documents/VulWiki/.resource/Yunucmsv2.0.7后台xss/media/rId32.png)
+![](./.resource/Yunucmsv2.0.7后台xss/media/rId32.png)
 
 在名称处填入XSS代码并提交
 
-![](/Users/aresx/Documents/VulWiki/.resource/Yunucmsv2.0.7后台xss/media/rId33.png)
+![](./.resource/Yunucmsv2.0.7后台xss/media/rId33.png)
 
 返回模块即可看到效果
 
-![](/Users/aresx/Documents/VulWiki/.resource/Yunucmsv2.0.7后台xss/media/rId34.png)
+![](./.resource/Yunucmsv2.0.7后台xss/media/rId34.png)
 
 查看源码，发现已经插入
 
-![](/Users/aresx/Documents/VulWiki/.resource/Yunucmsv2.0.7后台xss/media/rId35.png)
+![](./.resource/Yunucmsv2.0.7后台xss/media/rId35.png)
 
 查看数据库
 

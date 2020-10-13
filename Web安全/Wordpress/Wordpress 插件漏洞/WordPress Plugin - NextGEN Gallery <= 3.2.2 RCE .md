@@ -29,13 +29,13 @@ WordPress插件NextGEN Gallery \<=
 
 点击"Add Gallery / Images"然后上传zip压缩包。
 
-![](/Users/aresx/Documents/VulWiki/.resource/WordPressPlugin-NextGENGallery<=3.2.2RCE/media/rId26.png)
+![](./.resource/WordPressPlugin-NextGENGallery<=3.2.2RCE/media/rId26.png)
 
 ### 第3步：查看临时目录
 
 点击"import folder"，再点击"uploads"即可看到解压的临时目录。
 
-![](/Users/aresx/Documents/VulWiki/.resource/WordPressPlugin-NextGENGallery<=3.2.2RCE/media/rId28.png)
+![](./.resource/WordPressPlugin-NextGENGallery<=3.2.2RCE/media/rId28.png)
 
 ### 第4步：生成webshell
 
@@ -43,6 +43,6 @@ WordPress插件NextGEN Gallery \<=
 
     http://0-sec.org/wp-content/uploads/unpacked-phpA0CB.tmp/abc233.php
 
-![](/Users/aresx/Documents/VulWiki/.resource/WordPressPlugin-NextGENGallery<=3.2.2RCE/media/rId30.png)
+![](./.resource/WordPressPlugin-NextGENGallery<=3.2.2RCE/media/rId30.png)
 
 image

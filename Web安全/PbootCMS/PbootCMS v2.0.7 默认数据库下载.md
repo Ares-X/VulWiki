@@ -16,7 +16,7 @@ PbootCMS v2.0.7
 
     www.0-sec.org/data/pbootcms.db
 
-![](/Users/aresx/Documents/VulWiki/.resource/PbootCMSv2.0.7默认数据库下载/media/rId24.png)
+![](./.resource/PbootCMSv2.0.7默认数据库下载/media/rId24.png)
 
 下载后用`sqlite3`打开就可以得到用户的hash，hash使用的是`md5(md5($pass))`生成的。
 

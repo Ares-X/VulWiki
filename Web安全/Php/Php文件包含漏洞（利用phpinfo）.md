@@ -47,11 +47,11 @@ PHP文件包含漏洞中，如果找不到可以包含的文件，我们可以�
 
 用python2执行：`python exp.py www.0-sec.org 8080 100`：
 
-![1.png](/Users/aresx/Documents/VulWiki/.resource/Php文件包含漏洞(利用phpinfo)/media/rId27.png)
+![1.png](./.resource/Php文件包含漏洞(利用phpinfo)/media/rId27.png)
 
 可见，执行到第289个数据包的时候就写入成功。然后，利用lfi.php，即可执行任意命令：
 
-![2.png](/Users/aresx/Documents/VulWiki/.resource/Php文件包含漏洞(利用phpinfo)/media/rId28.png)
+![2.png](./.resource/Php文件包含漏洞(利用phpinfo)/media/rId28.png)
 
 ### poc
 

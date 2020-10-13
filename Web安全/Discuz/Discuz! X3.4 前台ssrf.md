@@ -43,7 +43,7 @@ source/class/class\_image.php 118行
 可以发现如果`$source`经过`parse_url`的解析结果中如果包含host字段就不结束流程，然后将`$source`参数传入`dfsockopen`函数。Php中的`parse_url`函数是可以对`//`开头的域名进行解析的,
 `$source`本身就是`/`开头，因此只需要通过开始的`$_GET['cutimg']`注入`/www.0-sec.org，变成`//www.0-sec.org\`即可继续执行。
 
-![](/Users/aresx/Documents/VulWiki/.resource/Discuz!X3.4前台ssrf/media/rId25.png)
+![](./.resource/Discuz!X3.4前台ssrf/media/rId25.png)
 
 source/function/function\_core.php 199行
 
@@ -57,21 +57,21 @@ image
 
 发起了curl请求，就是这里触发了ssrf，这里的现有使用后parse\_url解析了一次\$url，和上面的解析是一样的，然后又进行了拼接成为了curl的地址。
 
-![](/Users/aresx/Documents/VulWiki/.resource/Discuz!X3.4前台ssrf/media/rId26.png)
+![](./.resource/Discuz!X3.4前台ssrf/media/rId26.png)
 
 其\$scheme为空，如果我们为cutimg传入/dz//member.php，那么到就会变成://dz//member.php
 
-![](/Users/aresx/Documents/VulWiki/.resource/Discuz!X3.4前台ssrf/media/rId27.png)
+![](./.resource/Discuz!X3.4前台ssrf/media/rId27.png)
 
 在php的curl中我们尝试访问://dz/forum.php
 
-![](/Users/aresx/Documents/VulWiki/.resource/Discuz!X3.4前台ssrf/media/rId28.png)
+![](./.resource/Discuz!X3.4前台ssrf/media/rId28.png)
 
 可以发现无指定协议的默认就是http协议，://是代表访问本地dz/forum.php表示路径和path，因此能够访问首页，到这里就有了一个可以对通网站下进行ssrf的漏洞点。
 
 Curl的配置当中开启了跳转
 
-![](/Users/aresx/Documents/VulWiki/.resource/Discuz!X3.4前台ssrf/media/rId29.png)
+![](./.resource/Discuz!X3.4前台ssrf/media/rId29.png)
 
 再找到一个站内的url跳转，就能绕过站内curl的限制，实现真正的ssrf。
 
@@ -79,13 +79,13 @@ Curl的配置当中开启了跳转
 
 /source/class/class\_member.php 310行
 
-![](/Users/aresx/Documents/VulWiki/.resource/Discuz!X3.4前台ssrf/media/rId31.png)
+![](./.resource/Discuz!X3.4前台ssrf/media/rId31.png)
 
 调用了dreferer()结果作为跳转地址，继续跟进该函数。
 
 source/function/function\_core.php 1498行
 
-![](/Users/aresx/Documents/VulWiki/.resource/Discuz!X3.4前台ssrf/media/rId32.png)
+![](./.resource/Discuz!X3.4前台ssrf/media/rId32.png)
 
 `$_G['referer']`这个参数我们可控，同样使用了`parse_url`进行了解析，首先对协议进行了判断，需要属于`http/https`。
 
@@ -93,7 +93,7 @@ source/function/function\_core.php 1498行
 
 此时处理跳转的是php的curl，curl这里会因为`#@`出现解析问题，会跳转到192.168.2.63:6666，也就是形成ssrf。
 
-![](/Users/aresx/Documents/VulWiki/.resource/Discuz!X3.4前台ssrf/media/rId33.png)
+![](./.resource/Discuz!X3.4前台ssrf/media/rId33.png)
 
 站内ssrf-\>前台get型的任意url跳转-\>ssrf漏洞
 
@@ -128,7 +128,7 @@ source/function/function\_core.php 1498行
                 formhash=formhash, path=path, payload=payload))
         exit()
 
-![](/Users/aresx/Documents/VulWiki/.resource/Discuz!X3.4前台ssrf/media/rId36.png)
+![](./.resource/Discuz!X3.4前台ssrf/media/rId36.png)
 
 参考链接
 --------

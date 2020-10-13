@@ -26,7 +26,7 @@
     Cookie: ecology_JSessionId=abc3I_8E3ZP75a_tnGnrx; testBanCookie=test; JSESSIONID=3kqlxwz8wo04x6cs4dlaovn; EBRIDGE_JSESSIONID=3DD7A4B45D85CAE1AC75F8FF6DEB7556
     Connection: close
 
-![1.png](/Users/aresx/Documents/VulWiki/.resource/泛微E-Bridge云桥任意文件读取/media/rId25.png)
+![1.png](./.resource/泛微E-Bridge云桥任意文件读取/media/rId25.png)
 
 ### windows服务器：
 
@@ -41,7 +41,7 @@
     Cookie: EBRIDGE_JSESSIONID=182ED2E3025C11EA9ADDC07761F56DBA
     Connection: close
 
-![2.png](/Users/aresx/Documents/VulWiki/.resource/泛微E-Bridge云桥任意文件读取/media/rId27.png)
+![2.png](./.resource/泛微E-Bridge云桥任意文件读取/media/rId27.png)
 
 ### 读取文件
 
@@ -58,4 +58,4 @@
 
 **35acd348e86549ffb33d7f531350391e为上个包返回的id**
 
-![3.png](/Users/aresx/Documents/VulWiki/.resource/泛微E-Bridge云桥任意文件读取/media/rId29.png)
+![3.png](./.resource/泛微E-Bridge云桥任意文件读取/media/rId29.png)

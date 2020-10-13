@@ -23,7 +23,7 @@ Zzzcms 1.61
 
 发现是跳到/inc/zzz\_client.php，那么我们就来到/inc/zzz\_client.php
 
-![](/Users/aresx/Documents/VulWiki/.resource/Zzzcms1.61后台远程命令执行漏洞/media/rId25.png)
+![](./.resource/Zzzcms1.61后台远程命令执行漏洞/media/rId25.png)
 
 发现解析模块是通过ParsetTemplate来解析的，那么我们找到ParserTemplate类的php文件zzz\_template.php。在zzz\_template.php中我们发现一个IF语句
 
@@ -31,7 +31,7 @@ Zzzcms 1.61
 
 那么我们来到zzz\_template.php中对parserIfLabel的定义
 
-![](/Users/aresx/Documents/VulWiki/.resource/Zzzcms1.61后台远程命令执行漏洞/media/rId26.png)
+![](./.resource/Zzzcms1.61后台远程命令执行漏洞/media/rId26.png)
 
 发现\$ifstr
 经过一连串的花里胡哨的过滤最后进了evel函数，然后使用了evel函数执行，最后造成了本次远程代码执行漏洞。
@@ -40,13 +40,13 @@ Zzzcms 1.61
 
 在后台模块管理中的电脑模块找到cn2016
 
-![](/Users/aresx/Documents/VulWiki/.resource/Zzzcms1.61后台远程命令执行漏洞/media/rId28.png)
+![](./.resource/Zzzcms1.61后台远程命令执行漏洞/media/rId28.png)
 
 然后在cn2016文件中到html文件，然后在html文件中找到search.html，然后将其的代码修改为
 
     {if:assert($_request[phpinfo()])}phpinfo();{end if}
 
-![](/Users/aresx/Documents/VulWiki/.resource/Zzzcms1.61后台远程命令执行漏洞/media/rId29.png)
+![](./.resource/Zzzcms1.61后台远程命令执行漏洞/media/rId29.png)
 
 然后打开`http://xxxx.com/zzzcms/search/`就可以看到我们刚刚输入的phpinfo()执行了。
 

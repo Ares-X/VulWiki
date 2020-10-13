@@ -15,19 +15,19 @@ AutoSuggest这款插件在访问者输入关键字时，插件会在提交搜索
 
 首先我们得进入exploit-db网站上下载这个存在漏洞的版本的插件原始码和本地构建WordPress网站（本地构建WordPress这里就不说了）。下载源码，如下图所示
 
-![](/Users/aresx/Documents/VulWiki/.resource/WordPressPlugin-AutoSuggestsql注入/media/rId24.png)
+![](./.resource/WordPressPlugin-AutoSuggestsql注入/media/rId24.png)
 
 下载完成之后，把wp-autosuggest目录直接拖到Wordpress目录的\\wp-content\\plugins\\下。
 
-![](/Users/aresx/Documents/VulWiki/.resource/WordPressPlugin-AutoSuggestsql注入/media/rId25.png)
+![](./.resource/WordPressPlugin-AutoSuggestsql注入/media/rId25.png)
 
 接着，登录后台，启用这款插件，如下图所示：
 
-![](/Users/aresx/Documents/VulWiki/.resource/WordPressPlugin-AutoSuggestsql注入/media/rId26.png)
+![](./.resource/WordPressPlugin-AutoSuggestsql注入/media/rId26.png)
 
 启用后，退出后台，如下图所示：
 
-![](/Users/aresx/Documents/VulWiki/.resource/WordPressPlugin-AutoSuggestsql注入/media/rId27.png)
+![](./.resource/WordPressPlugin-AutoSuggestsql注入/media/rId27.png)
 
 然后根据exploit-db网站上给出的漏洞详情，我们访问下面的URL：
 
@@ -35,7 +35,7 @@ AutoSuggest这款插件在访问者输入关键字时，插件会在提交搜索
 
 访问后，网页内容如下图所示：
 
-![](/Users/aresx/Documents/VulWiki/.resource/WordPressPlugin-AutoSuggestsql注入/media/rId28.png)
+![](./.resource/WordPressPlugin-AutoSuggestsql注入/media/rId28.png)
 
 根据exploit-db网站上给出的漏洞详情，我们也知道了wpas\_keys参数存在注入，于是我们可以使用SQLMAP注入神器，对网站进行注入。SQLMAP命令如下：
 
@@ -43,25 +43,25 @@ AutoSuggest这款插件在访问者输入关键字时，插件会在提交搜索
 
 一开始，笔者使用的时php5.2.17+Apache的环境，结果复现不了，头疼了半天，如下图：
 
-![](/Users/aresx/Documents/VulWiki/.resource/WordPressPlugin-AutoSuggestsql注入/media/rId29.png)
+![](./.resource/WordPressPlugin-AutoSuggestsql注入/media/rId29.png)
 
 后来笔者换了一个php-5.4.45+Apache的环境，就解决了。
 
-![](/Users/aresx/Documents/VulWiki/.resource/WordPressPlugin-AutoSuggestsql注入/media/rId30.png)
+![](./.resource/WordPressPlugin-AutoSuggestsql注入/media/rId30.png)
 
 通过SQLMAP，成功获取到服务器的一些信息，如下图所示：
 
-![](/Users/aresx/Documents/VulWiki/.resource/WordPressPlugin-AutoSuggestsql注入/media/rId31.png)
+![](./.resource/WordPressPlugin-AutoSuggestsql注入/media/rId31.png)
 
 下图也成功跑出了当前数据库的名称。
 
-![](/Users/aresx/Documents/VulWiki/.resource/WordPressPlugin-AutoSuggestsql注入/media/rId32.png)
+![](./.resource/WordPressPlugin-AutoSuggestsql注入/media/rId32.png)
 
 ### 漏洞分析
 
 分析WordPress插件的话还是挺容易的。文件和代码也不是很多，用Notepad++就够用啦。进入插件根目录下面就看到了autosuggest\_functions.php、autosuggest.php这两个php文件。
 
-![](/Users/aresx/Documents/VulWiki/.resource/WordPressPlugin-AutoSuggestsql注入/media/rId34.png)
+![](./.resource/WordPressPlugin-AutoSuggestsql注入/media/rId34.png)
 
 下面是autosuggest.php文件所有代码：
 
@@ -200,7 +200,7 @@ AutoSuggest这款插件在访问者输入关键字时，插件会在提交搜索
 
 相信大家没看几行就看出了问题的所在，变量wpas\_keys是直接获取GET中的wpas\_keys。一点都没过滤，并且在下面代码中，变量wpas\_keys也带入数据库中查询了（wpdb是wordpress操作数据库方法），于是SQL注入就产生了。
 
-![](/Users/aresx/Documents/VulWiki/.resource/WordPressPlugin-AutoSuggestsql注入/media/rId35.png)
+![](./.resource/WordPressPlugin-AutoSuggestsql注入/media/rId35.png)
 
 四、参考链接
 ------------

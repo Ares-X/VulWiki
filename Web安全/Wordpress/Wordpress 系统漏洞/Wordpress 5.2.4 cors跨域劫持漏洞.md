@@ -20,15 +20,15 @@ Wordpress 5.2.4
 
 1、影响版本wordpress5.2.4，首先访问首页，利用burp抓包
 
-![](/Users/aresx/Documents/VulWiki/.resource/Wordpress5.2.4cors跨域劫持漏洞/media/rId24.png)
+![](./.resource/Wordpress5.2.4cors跨域劫持漏洞/media/rId24.png)
 
 2、然后发送到reapeter，日常go一下，看到返回包内容，返回了/wp-json
 
-![](/Users/aresx/Documents/VulWiki/.resource/Wordpress5.2.4cors跨域劫持漏洞/media/rId25.png)
+![](./.resource/Wordpress5.2.4cors跨域劫持漏洞/media/rId25.png)
 
 3、我们将请求包中的url补上/wp-json，再次发包，发现出现了一堆json数据，我们将其复制到jsonbeautiful进行格式化，说明漏洞出现在：[http://www.0-sec.org/wp-json，](http://www.0-sec.org/wp-json，)
 
-![](/Users/aresx/Documents/VulWiki/.resource/Wordpress5.2.4cors跨域劫持漏洞/media/rId27.png)
+![](./.resource/Wordpress5.2.4cors跨域劫持漏洞/media/rId27.png)
 
 4、我们在请求包中，加入orgin头[http://192.168.1.7（实战中为你的vps），再次发送，](http://192.168.1.7（实战中为你的vps），再次发送，)
 发现响应头内的
@@ -37,16 +37,16 @@ Access-Control-Allow-Origin:已经变成[http://192.168.1.7，并且且Access-Co
 
 从而证明是存在cors漏洞的，我们可以进行cors跨域劫持
 
-![](/Users/aresx/Documents/VulWiki/.resource/Wordpress5.2.4cors跨域劫持漏洞/media/rId30.png)
+![](./.resource/Wordpress5.2.4cors跨域劫持漏洞/media/rId30.png)
 
 5、然后我们利用pocbox构造payload，输入漏洞链接(记住！！记住！！！加上[http://)，选择http请求方法即可](http://)，选择http请求方法即可)
 
-![](/Users/aresx/Documents/VulWiki/.resource/Wordpress5.2.4cors跨域劫持漏洞/media/rId32.png)
+![](./.resource/Wordpress5.2.4cors跨域劫持漏洞/media/rId32.png)
 
 6、然后将生成的html内容，放到你的vps下，命名为wp-cors.html
 
-![](/Users/aresx/Documents/VulWiki/.resource/Wordpress5.2.4cors跨域劫持漏洞/media/rId33.png)
+![](./.resource/Wordpress5.2.4cors跨域劫持漏洞/media/rId33.png)
 
 7、然后诱骗受害者点击，就会把json数据传到你的服务器，从而获取对方敏感信息，攻击成功
 
-![](/Users/aresx/Documents/VulWiki/.resource/Wordpress5.2.4cors跨域劫持漏洞/media/rId34.shtml)
+![](./.resource/Wordpress5.2.4cors跨域劫持漏洞/media/rId34.shtml)

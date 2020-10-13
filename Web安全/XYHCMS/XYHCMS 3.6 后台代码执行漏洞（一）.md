@@ -17,21 +17,21 @@ XYHCMS 3.6
 
 搜索site.php 打开发现是一堆配置文件,这让我想起了前不久看到的一个漏洞所以就全局去找写入点
 
-![](/Users/aresx/Documents/VulWiki/.resource/XYHCMS3.6后台代码执行漏洞(一)/media/rId24.png)
+![](./.resource/XYHCMS3.6后台代码执行漏洞(一)/media/rId24.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/XYHCMS3.6后台代码执行漏洞(一)/media/rId25.png)
+![](./.resource/XYHCMS3.6后台代码执行漏洞(一)/media/rId25.png)
 
 很显然这里是可以写入的,不过却没有这么简单
 
-![](/Users/aresx/Documents/VulWiki/.resource/XYHCMS3.6后台代码执行漏洞(一)/media/rId26.png)
+![](./.resource/XYHCMS3.6后台代码执行漏洞(一)/media/rId26.png)
 
 有过滤,所以我暂时放弃了'但是我找到一个其他的写入点并没有过滤
 
-![](/Users/aresx/Documents/VulWiki/.resource/XYHCMS3.6后台代码执行漏洞(一)/media/rId27.png)
+![](./.resource/XYHCMS3.6后台代码执行漏洞(一)/media/rId27.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/XYHCMS3.6后台代码执行漏洞(一)/media/rId28.png)
+![](./.resource/XYHCMS3.6后台代码执行漏洞(一)/media/rId28.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/XYHCMS3.6后台代码执行漏洞(一)/media/rId29.png)
+![](./.resource/XYHCMS3.6后台代码执行漏洞(一)/media/rId29.png)
 
 参考链接
 --------

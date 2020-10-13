@@ -109,7 +109,7 @@ step = 2绕过
             break;
     }
 
-![](/Users/aresx/Documents/VulWiki/.resource/Zzcms2018最新版重装getshell/media/rId26.png)
+![](./.resource/Zzcms2018最新版重装getshell/media/rId26.png)
 
     <?php
     if(@$step==3){
@@ -131,16 +131,16 @@ config.php的配置文件中所以这里通过\$ DB\_NAME来写到配置文件�
 zzcms%27%29%3bphpinfo%28%29%3b%2f%2f
 本机创建zzcms\');phpinfo();//的数据库
 
-![](/Users/aresx/Documents/VulWiki/.resource/Zzcms2018最新版重装getshell/media/rId28.png)
+![](./.resource/Zzcms2018最新版重装getshell/media/rId28.png)
 
 因为本地有JS验证，所以先把数据库名改成123，bp抓到包以后在修改成zzcms%27%29%3bphpinfo%28%29%3b%2f%2f
 
-![](/Users/aresx/Documents/VulWiki/.resource/Zzcms2018最新版重装getshell/media/rId29.png)
+![](./.resource/Zzcms2018最新版重装getshell/media/rId29.png)
 
 成功写入到配置文件
 
-![](/Users/aresx/Documents/VulWiki/.resource/Zzcms2018最新版重装getshell/media/rId30.png)
+![](./.resource/Zzcms2018最新版重装getshell/media/rId30.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/Zzcms2018最新版重装getshell/media/rId31.png)
+![](./.resource/Zzcms2018最新版重装getshell/media/rId31.png)
 
 image

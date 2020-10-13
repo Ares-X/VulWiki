@@ -65,7 +65,7 @@ demo：
         echo file_get_contents('php://filter/read=string.strip_tags/resource=php://input');
     ?>
 
-![1.png](/Users/aresx/Documents/VulWiki/.resource/PHPOK5.5csrf+反序列化漏洞getshell/media/rId26.png)
+![1.png](./.resource/PHPOK5.5csrf+反序列化漏洞getshell/media/rId26.png)
 
 但是如果直接这样操作，会把我们后面也添加的PHP代码也给去掉，所以还得把加入的PHP代码通过base64encode的方式添加进去，再利用`php://filter`的`convert.base64-decode`进行还原。使用`|`符号能在`php://filter`中使用两个过滤器。
 
@@ -75,7 +75,7 @@ demo：
         echo file_get_contents('php://filter/read=string.strip_tags|convert.base64-decode/resource=php://input');
     ?>
 
-![2.png](/Users/aresx/Documents/VulWiki/.resource/PHPOK5.5csrf+反序列化漏洞getshell/media/rId27.png)
+![2.png](./.resource/PHPOK5.5csrf+反序列化漏洞getshell/media/rId27.png)
 
 对文件写入时，将`read`修改为`write`即可。
 
@@ -147,7 +147,7 @@ demo：
 
 可以看到`encode`与`decode`方法都需要导入一个`keyid`值。于是全局搜索`->keyid(`
 
-![3.png](/Users/aresx/Documents/VulWiki/.resource/PHPOK5.5csrf+反序列化漏洞getshell/media/rId29.png)
+![3.png](./.resource/PHPOK5.5csrf+反序列化漏洞getshell/media/rId29.png)
 
 得知了这是在`site`数组里面的`api_code`值，且该值只能通过后台设置。
 
@@ -155,7 +155,7 @@ demo：
 
 这部分就不细分析了，直接黑盒抓后台修改`api_code`的请求，经过测试后可以发现，这个功能点没有进行CSRF防护：
 
-![4.png](/Users/aresx/Documents/VulWiki/.resource/PHPOK5.5csrf+反序列化漏洞getshell/media/rId31.png)
+![4.png](./.resource/PHPOK5.5csrf+反序列化漏洞getshell/media/rId31.png)
 
 可以看到，没有任何的CSRF防护
 
@@ -169,7 +169,7 @@ demo：
 
 假设此处已经通过CSRF重置了系统的`api_code`为`123456`
 
-![5.png](/Users/aresx/Documents/VulWiki/.resource/PHPOK5.5csrf+反序列化漏洞getshell/media/rId33.png)
+![5.png](./.resource/PHPOK5.5csrf+反序列化漏洞getshell/media/rId33.png)
 
 使用脚本序列化恶意类，并对其进行`encode`
 
@@ -256,7 +256,7 @@ demo：
     echo $token->encode(serialize(new cache));
     ?>
 
-![6.png](/Users/aresx/Documents/VulWiki/.resource/PHPOK5.5csrf+反序列化漏洞getshell/media/rId34.png)
+![6.png](./.resource/PHPOK5.5csrf+反序列化漏洞getshell/media/rId34.png)
 
 运行脚本拿到Payload，请求有进行解密操作的接口，如：
 
@@ -264,19 +264,19 @@ demo：
 
 请求前：
 
-![7.png](/Users/aresx/Documents/VulWiki/.resource/PHPOK5.5csrf+反序列化漏洞getshell/media/rId35.png)
+![7.png](./.resource/PHPOK5.5csrf+反序列化漏洞getshell/media/rId35.png)
 
 请求后：
 
-![8.png](/Users/aresx/Documents/VulWiki/.resource/PHPOK5.5csrf+反序列化漏洞getshell/media/rId36.png)
+![8.png](./.resource/PHPOK5.5csrf+反序列化漏洞getshell/media/rId36.png)
 
 shell写入成功。
 
 文件内容：
 
-![9.png](/Users/aresx/Documents/VulWiki/.resource/PHPOK5.5csrf+反序列化漏洞getshell/media/rId37.png)
+![9.png](./.resource/PHPOK5.5csrf+反序列化漏洞getshell/media/rId37.png)
 
-![10.png](/Users/aresx/Documents/VulWiki/.resource/PHPOK5.5csrf+反序列化漏洞getshell/media/rId38.png)
+![10.png](./.resource/PHPOK5.5csrf+反序列化漏洞getshell/media/rId38.png)
 
 参考链接
 --------

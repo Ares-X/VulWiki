@@ -14,24 +14,24 @@ ECShop（2.x、3.0.x、3.6.x）
 
 ### 漏洞分析
 
-![](/Users/aresx/Documents/VulWiki/.resource/ECShop<=2.7.x代码执行漏洞/media/rId25.png)
+![](./.resource/ECShop<=2.7.x代码执行漏洞/media/rId25.png)
 
 继续看fetch函数
 
-![](/Users/aresx/Documents/VulWiki/.resource/ECShop<=2.7.x代码执行漏洞/media/rId26.png)
+![](./.resource/ECShop<=2.7.x代码执行漏洞/media/rId26.png)
 
 追踪\_eval函数
 
-![](/Users/aresx/Documents/VulWiki/.resource/ECShop<=2.7.x代码执行漏洞/media/rId27.png)
+![](./.resource/ECShop<=2.7.x代码执行漏洞/media/rId27.png)
 
 \$position\_style变量来源于数据库中的查询结构
 
-![](/Users/aresx/Documents/VulWiki/.resource/ECShop<=2.7.x代码执行漏洞/media/rId28.png)
+![](./.resource/ECShop<=2.7.x代码执行漏洞/media/rId28.png)
 
 然后我们继续构造SQL注入，因为这段sql操作 order by部分换行了截断不了
 所以需要在id处构造注释来配合num进行union查询
 
-![](/Users/aresx/Documents/VulWiki/.resource/ECShop<=2.7.x代码执行漏洞/media/rId29.png)
+![](./.resource/ECShop<=2.7.x代码执行漏洞/media/rId29.png)
 
 payload
 
@@ -39,27 +39,27 @@ payload
 
 函数中有一个判断
 
-![](/Users/aresx/Documents/VulWiki/.resource/ECShop<=2.7.x代码执行漏洞/media/rId30.png)
+![](./.resource/ECShop<=2.7.x代码执行漏洞/media/rId30.png)
 
 我们 id传入'/\*
 
 num传入\*/ union select 1,0x272f2a,3,4,5,6,7,8,9,10-- -就能绕过了
 
-![](/Users/aresx/Documents/VulWiki/.resource/ECShop<=2.7.x代码执行漏洞/media/rId31.png)
+![](./.resource/ECShop<=2.7.x代码执行漏洞/media/rId31.png)
 
 var\_dump一下
 
-![](/Users/aresx/Documents/VulWiki/.resource/ECShop<=2.7.x代码执行漏洞/media/rId32.png)
+![](./.resource/ECShop<=2.7.x代码执行漏洞/media/rId32.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/ECShop<=2.7.x代码执行漏洞/media/rId33.png)
+![](./.resource/ECShop<=2.7.x代码执行漏洞/media/rId33.png)
 
 再看fetch函数,传入的参数被fetch\_str函数处理了
 
-![](/Users/aresx/Documents/VulWiki/.resource/ECShop<=2.7.x代码执行漏洞/media/rId34.png)
+![](./.resource/ECShop<=2.7.x代码执行漏洞/media/rId34.png)
 
 追踪fetch\_str函数，这里的字符串处理流程比较复杂
 
-![](/Users/aresx/Documents/VulWiki/.resource/ECShop<=2.7.x代码执行漏洞/media/rId35.png)
+![](./.resource/ECShop<=2.7.x代码执行漏洞/media/rId35.png)
 
     return preg_replace("/{([^\}\{\n]*)}/e", "\$this->select('\\1');", $source);
 
@@ -67,19 +67,19 @@ var\_dump一下
 
 看看select函数
 
-![](/Users/aresx/Documents/VulWiki/.resource/ECShop<=2.7.x代码执行漏洞/media/rId36.png)
+![](./.resource/ECShop<=2.7.x代码执行漏洞/media/rId36.png)
 
 第一个字符为\$时进入\$this-\>get\_val函数
 
-![](/Users/aresx/Documents/VulWiki/.resource/ECShop<=2.7.x代码执行漏洞/media/rId37.png)
+![](./.resource/ECShop<=2.7.x代码执行漏洞/media/rId37.png)
 
 我们\$val没有.\$又进入make\_var函数
 
-![](/Users/aresx/Documents/VulWiki/.resource/ECShop<=2.7.x代码执行漏洞/media/rId38.png)
+![](./.resource/ECShop<=2.7.x代码执行漏洞/media/rId38.png)
 
 最后这里引入单引号从变量中逃逸
 
-![](/Users/aresx/Documents/VulWiki/.resource/ECShop<=2.7.x代码执行漏洞/media/rId39.png)
+![](./.resource/ECShop<=2.7.x代码执行漏洞/media/rId39.png)
 
 我们要闭合\_var所以最终payload是
 
@@ -87,7 +87,7 @@ var\_dump一下
 
 会在网站跟目录生成1.txt 里面内容是getshell
 
-![](/Users/aresx/Documents/VulWiki/.resource/ECShop<=2.7.x代码执行漏洞/media/rId40.png)
+![](./.resource/ECShop<=2.7.x代码执行漏洞/media/rId40.png)
 
 ### 2.x
 

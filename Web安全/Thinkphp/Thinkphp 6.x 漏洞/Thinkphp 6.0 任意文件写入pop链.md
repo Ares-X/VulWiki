@@ -41,25 +41,25 @@ POP链：
     League\Flysystem\Adapter\Local --> write()
     vendor/league/flysystem-cached-adapter/src/Storage/AbstractCache.php
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp6.0任意文件写入pop链/media/rId26.jpg)
+![](./.resource/Thinkphp6.0任意文件写入pop链/media/rId26.jpg)
 
 因AbstractCache类为抽象类，需找到其实现子类，且要有save()方法
 
 成功找到：`vendor/league/flysystem-cached-adapter/src/Storage/Adapter.php`
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp6.0任意文件写入pop链/media/rId27.jpg)
+![](./.resource/Thinkphp6.0任意文件写入pop链/media/rId27.jpg)
 
 \$contents决定文件写入内容，显然可向\$this-\>complete或\$this-\>expire写入具体内容即可
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp6.0任意文件写入pop链/media/rId28.jpg)
+![](./.resource/Thinkphp6.0任意文件写入pop链/media/rId28.jpg)
 
 接下来需找到具有write()方法的类，`vendor/league/flysystem/src/Adapter/Local.php`中Local类符合条件
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp6.0任意文件写入pop链/media/rId29.jpg)
+![](./.resource/Thinkphp6.0任意文件写入pop链/media/rId29.jpg)
 
 但`ensureDirectory()`对利用造成了影响，将对目录进行检测，因而造成必须使用绝对路径
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp6.0任意文件写入pop链/media/rId30.jpg)
+![](./.resource/Thinkphp6.0任意文件写入pop链/media/rId30.jpg)
 
 ### 漏洞复现
 
@@ -109,15 +109,15 @@ POP链：
     use League\Flysystem\Cached\Storage\Adapter;
     echo base64_encode(serialize(new Adapter()));
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp6.0任意文件写入pop链/media/rId32.jpg)
+![](./.resource/Thinkphp6.0任意文件写入pop链/media/rId32.jpg)
 
 效果演示：自己构造一个反序列化输入点，发送请求(页面的输出是我自己方便调试打印的)
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp6.0任意文件写入pop链/media/rId33.png)
+![](./.resource/Thinkphp6.0任意文件写入pop链/media/rId33.png)
 
 文件成功写入：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Thinkphp6.0任意文件写入pop链/media/rId34.png)
+![](./.resource/Thinkphp6.0任意文件写入pop链/media/rId34.png)
 
 参考链接
 --------

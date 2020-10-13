@@ -105,7 +105,7 @@ XDebug是PHP的一个扩展，用于调试PHP代码。如果目标开启了远�
             print('[-] May be not string result...')
 
 ![1
-1.png](/Users/aresx/Documents/VulWiki/.resource/PhpXDebug远程调试漏洞/media/rId24.png)
+1.png](./.resource/PhpXDebug远程调试漏洞/media/rId24.png)
 
 **重要说明：因为该通信是一个反向连接的过程，exp.py启动后其实是会监听本地的9000端口（可通过-l参数指定）并等待XDebug前来连接，所以执行该脚本的服务器必须有外网IP（或者与目标服务器处于同一内网）。**
 

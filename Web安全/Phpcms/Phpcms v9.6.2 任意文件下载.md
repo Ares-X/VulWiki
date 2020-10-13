@@ -46,7 +46,7 @@ Phpcms v9.6.2 任意文件下载
 
     http://127.0.0.1/code/phpcms_v9.6.2_UTF8/index.php?m=content&c=down&a=download&a_k=7e9d9SFk0jOteAemg-j7IVn6Ph1JFU9FEkyDo9xeasNJDPgZsOhusc39D4KiHzydJwt2B4iLuu-l9w03UV47obM9nsnjcJxi2jbawvqfZWcY9PeL3j0MgKxAvgXL4-dbf8gGG6_EJXIOA2p9Jkl9QcM
 
-![](/Users/aresx/Documents/VulWiki/.resource/Phpcmsv9.6.2任意文件下载/media/rId28.png)
+![](./.resource/Phpcmsv9.6.2任意文件下载/media/rId28.png)
 
 参考链接
 --------

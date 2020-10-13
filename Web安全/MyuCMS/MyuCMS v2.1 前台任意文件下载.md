@@ -17,7 +17,7 @@ MyuCMS v2.1
 
 通过搜索定位到 **bbs** 模块下的 **Index** 控制器的 **download** 方法。
 
-[![img](/Users/aresx/Documents/VulWiki/.resource/MyuCMSv2.1前台任意文件下载/media/rId24.jpg)](https://pic.downk.cc/item/5e4266e52fb38b8c3c9e7e3d.jpg)
+[![img](./.resource/MyuCMSv2.1前台任意文件下载/media/rId24.jpg)](https://pic.downk.cc/item/5e4266e52fb38b8c3c9e7e3d.jpg)
 
 **download** 方法接受三个参数，这三个参数我们是完全可控的，单从
 **download** 这个方法来看，无任何参数内容限制，直接将 **\$url** 和

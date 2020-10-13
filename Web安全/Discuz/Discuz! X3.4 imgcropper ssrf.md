@@ -97,7 +97,7 @@ poc:
 
 此时 url 即为`//:@localhost:9090/dz-imgcropper-ssrf`。SSRF 请求成功：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Discuz!X3.4imgcropperssrf/media/rId24.png)
+![](./.resource/Discuz!X3.4imgcropperssrf/media/rId24.png)
 
 通过这种方式进行构造利用的话，不太需要额外的限制条件（只要求服务端 PHP
 环境没有安装 curl 扩展）￼，但是只能发 HTTP GET
@@ -107,7 +107,7 @@ poc:
 是可以成功请求 `HTTP://:/` 的，较高版本的 curl 会将这种 url 地址解析到
 127.0.0.1 的 80 端口：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Discuz!X3.4imgcropperssrf/media/rId25.jpg)
+![](./.resource/Discuz!X3.4imgcropperssrf/media/rId25.jpg)
 
 最后他再利用之前 PHP `parse_url` 的解析 bug（
 [https://bugs.php.net/bug.php?id=73192](https://link.zhihu.com/?target=https%3A//bugs.php.net/bug.php%3Fid%3D73192)

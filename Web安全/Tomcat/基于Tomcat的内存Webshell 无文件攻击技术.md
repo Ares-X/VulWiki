@@ -581,15 +581,15 @@ payload就完成了。
 
 然后我们把步骤一和步骤二生成的payload依次打过去
 
-![](/Users/aresx/Documents/VulWiki/.resource/基于Tomcat的内存Webshell无文件攻击技术/media/rId27.png)
+![](./.resource/基于Tomcat的内存Webshell无文件攻击技术/media/rId27.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/基于Tomcat的内存Webshell无文件攻击技术/media/rId28.png)
+![](./.resource/基于Tomcat的内存Webshell无文件攻击技术/media/rId28.png)
 
 可以依次看到，两个步骤都返回500异常，相关信息证明已经执行反序列化成功了，接下来我们试试这个内存Webshell
 
-![](/Users/aresx/Documents/VulWiki/.resource/基于Tomcat的内存Webshell无文件攻击技术/media/rId29.png)
+![](./.resource/基于Tomcat的内存Webshell无文件攻击技术/media/rId29.png)
 
-![](/Users/aresx/Documents/VulWiki/.resource/基于Tomcat的内存Webshell无文件攻击技术/media/rId30.png)
+![](./.resource/基于Tomcat的内存Webshell无文件攻击技术/media/rId30.png)
 
 完美，具体ysoserial改造后的代码，我已经上传到github，有兴趣可以看看
 [ianxtianxt/ysoserial](https://github.com/ianxtianxt/ysoserial)

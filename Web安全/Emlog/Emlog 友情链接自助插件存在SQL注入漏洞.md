@@ -12,7 +12,7 @@ Emlog 友情链接自助插件存在SQL注入漏洞
 
 在该插件当中的link\_web.php文件中，直接将用户提交的数据进行了拼接，之后直接带入了查询，未经过任何的过滤操作，由此一个典型的SQL注入漏洞就这样简易的诞生了：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Emlog友情链接自助插件存在SQL注入漏洞/media/rId24.png)
+![](./.resource/Emlog友情链接自助插件存在SQL注入漏洞/media/rId24.png)
 
 由于这里的参数都没有经过过滤，所以我们可以对任意参数进行验证，进行SQL注入，首先我们可以提交正常的访问请求，之后使用burpsuite进行抓包，之后改包，我们这里以URL为例：
 

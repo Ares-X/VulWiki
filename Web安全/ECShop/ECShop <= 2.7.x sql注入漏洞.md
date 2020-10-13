@@ -16,23 +16,23 @@ ECShop（2.x、3.0.x、3.6.x）
 
 先看user.php
 
-![](/Users/aresx/Documents/VulWiki/.resource/ECShop<=2.7.xsql注入漏洞/media/rId25.png)
+![](./.resource/ECShop<=2.7.xsql注入漏洞/media/rId25.png)
 
 \$back\_act变量来源于HTTP\_REFERER，我们可控。
 
 assign函数用于在模版变量里赋值
 
-![](/Users/aresx/Documents/VulWiki/.resource/ECShop<=2.7.xsql注入漏洞/media/rId26.png)
+![](./.resource/ECShop<=2.7.xsql注入漏洞/media/rId26.png)
 
 再看display函数
 
-![](/Users/aresx/Documents/VulWiki/.resource/ECShop<=2.7.xsql注入漏洞/media/rId27.png)
+![](./.resource/ECShop<=2.7.xsql注入漏洞/media/rId27.png)
 
 读取user\_passport.dwt模版文件内容，显示解析变量后的html内容，用\_echash做分割，得到\$k然后交给isnert\_mod处理，由于\_echash是默认的，不是随机生成的，所以\$val内容可随意控制。
 
 再看insert\_mod函数
 
-![](/Users/aresx/Documents/VulWiki/.resource/ECShop<=2.7.xsql注入漏洞/media/rId28.png)
+![](./.resource/ECShop<=2.7.xsql注入漏洞/media/rId28.png)
 
 非常关键的一个地方，这里进行了动态调用
 
@@ -40,7 +40,7 @@ assign函数用于在模版变量里赋值
 
 再看include/lib\_insert.php中的insert\_ads函数
 
-![](/Users/aresx/Documents/VulWiki/.resource/ECShop<=2.7.xsql注入漏洞/media/rId29.png)
+![](./.resource/ECShop<=2.7.xsql注入漏洞/media/rId29.png)
 
 可以看到这里直接就能注入了
 
@@ -57,7 +57,7 @@ assign函数用于在模版变量里赋值
     Upgrade-Insecure-Requests: 1
     Cache-Control: max-age=0
 
-![](/Users/aresx/Documents/VulWiki/.resource/ECShop<=2.7.xsql注入漏洞/media/rId31.png)
+![](./.resource/ECShop<=2.7.xsql注入漏洞/media/rId31.png)
 
 参考链接
 --------

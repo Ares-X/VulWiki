@@ -132,12 +132,12 @@ private function isBind(\$wxid=\'\') {
 
 我们首先打开目标站点，点击网页左侧注册按钮，首先注册一个账号：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Phpyunv3.1xml注入漏洞/media/rId26.gif)
+![](./.resource/Phpyunv3.1xml注入漏洞/media/rId26.gif)
 
 这个时候已经是登录状态，我们按`F9` 调出 `Hack Bar`
 的界面，点击`Enable Post data` ，将Payload写入输入框，如下图所示：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Phpyunv3.1xml注入漏洞/media/rId27.png)
+![](./.resource/Phpyunv3.1xml注入漏洞/media/rId27.png)
 
 #### payload文件:
 
@@ -157,16 +157,16 @@ private function isBind(\$wxid=\'\') {
 接下来还需要修改HTTP头，伪装成XML，点击浏览器上方工具栏，打开`Tamper Data`
 ，点击启动。
 
-![](/Users/aresx/Documents/VulWiki/.resource/Phpyunv3.1xml注入漏洞/media/rId30.gif)
+![](./.resource/Phpyunv3.1xml注入漏洞/media/rId30.gif)
 
 现在前提工作已经做好，接下来重新访问网站，Tamper Data
 就会抓取到数据包，再对数据包进行更改，操作如图：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Phpyunv3.1xml注入漏洞/media/rId31.gif)
+![](./.resource/Phpyunv3.1xml注入漏洞/media/rId31.gif)
 
 然后点击确定就可以将构造好的数据包发出去：
 
-![](/Users/aresx/Documents/VulWiki/.resource/Phpyunv3.1xml注入漏洞/media/rId32.gif)
+![](./.resource/Phpyunv3.1xml注入漏洞/media/rId32.gif)
 
 成功获取管理员账号密码。
 
