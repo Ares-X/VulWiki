@@ -18,13 +18,15 @@ Markdown文件内添加漏洞详情
 
 ## To-do
 
+- [ ] 在线版本 
+
 ### 系统安全
 
 **Windows本地提权漏洞**
 
 - [ ] （CVE-2016-0099）【MS16-32】 windows 本地提权漏洞
 - [ ] （CVE-2016-3225）【MS16-075】 JuicyPotato windows 本地提权漏洞
-- [ ] CVE-2019-0803）Win32K组件提权
+- [ ] （CVE-2019-0803）Win32K组件提权
 - [ ] （CVE-2020-0787）Windows 本地提权漏洞
 - [ ] （CVE-2020-1054）Windows 本地提权漏洞
 
