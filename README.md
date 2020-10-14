@@ -47,7 +47,7 @@ Markdown文件内添加漏洞详情
 
 **IOT安全**
 
-- [ ]  [Amazon Kindle Fire HD (3rd)]()
+- [ ]   Amazon Kindle Fire HD (3rd)
 - [ ] （CVE-2018-11019）Amazon Kindle Fire HD (3rd) Fire OS kernel组件安全漏洞
 
 - [ ] （CVE-2018-11020）Amazon Kindle Fire HD (3rd) Fire OS kernel组件安全漏洞
