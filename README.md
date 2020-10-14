@@ -16,7 +16,7 @@ Markdown文件内添加漏洞详情
 
 
 
-## To-do
+# To-do
 
 - [ ] 在线版本 
 
@@ -47,49 +47,49 @@ Markdown文件内添加漏洞详情
 
 **IOT安全**
 
-- [ ]   Amazon Kindle Fire HD (3rd)
-- [ ] （CVE-2018-11019）Amazon Kindle Fire HD (3rd) Fire OS kernel组件安全漏洞
+- [x]   Amazon Kindle Fire HD (3rd)
+- [x] （CVE-2018-11019）Amazon Kindle Fire HD (3rd) Fire OS kernel组件安全漏洞
 
-- [ ] （CVE-2018-11020）Amazon Kindle Fire HD (3rd) Fire OS kernel组件安全漏洞
-- [ ] （CVE-2018-11021）Amazon Kindle Fire HD (3rd) Fire OS kernel组件安全漏洞
+- [x] （CVE-2018-11020）Amazon Kindle Fire HD (3rd) Fire OS kernel组件安全漏洞
+- [x] （CVE-2018-11021）Amazon Kindle Fire HD (3rd) Fire OS kernel组件安全漏洞
 
 - [ ] （CVE-2018-11022）Amazon Kindle Fire HD (3rd) Fire OS kernel组件安全漏洞
 
-- [ ] （CVE-2018-11023）Amazon Kindle Fire HD (3rd) Fire OS kernel组件安全漏洞
+- [x] （CVE-2018-11023）Amazon Kindle Fire HD (3rd) Fire OS kernel组件安全漏洞
 
-- [ ] （CVE-2018-11024）Amazon Kindle Fire HD (3rd) Fire OS kernel组件安全漏洞
+- [x] （CVE-2018-11024）Amazon Kindle Fire HD (3rd) Fire OS kernel组件安全漏洞
 
-- [ ] （CVE-2018-11025）Amazon Kindle Fire HD (3rd) Fire OS kernel组件安全漏洞
+- [x] （CVE-2018-11025）Amazon Kindle Fire HD (3rd) Fire OS kernel组件安全漏洞
 
   - [ ]  Cisco
 
-- [ ] （CVE-2019-1663）Cisco 堆栈缓冲区溢出漏洞
+- [x] （CVE-2019-1663）Cisco 堆栈缓冲区溢出漏洞
 
 - [ ] （CVE-2020-3452）Cisco ASA/FTD 任意文件读取漏洞
 
   - [ ]  D-Link
 
-- [ ] （CVE-2018-19986）D-Link DIR-818LW&828命令注入漏洞
+- [x] （CVE-2018-19986）D-Link DIR-818LW&828命令注入漏洞
 
-- [ ] （CVE-2018-20056）D-Link DIR-619L&605L 栈溢出漏洞
+- [x] （CVE-2018-20056）D-Link DIR-619L&605L 栈溢出漏洞
 
-- [ ] （CVE-2018-20057）D-Link DIR-619L&605L 命令注入漏洞
+- [x] （CVE-2018-20057）D-Link DIR-619L&605L 命令注入漏洞
 
-- [ ] （CVE-2019-7297）D-Link DIR-823G 命令注入漏洞
+- [x] （CVE-2019-7297）D-Link DIR-823G 命令注入漏洞
 
-- [ ] （CVE-2019-7298）D-Link DIR-823G 命令注入漏洞
+- [x] （CVE-2019-7298）D-Link DIR-823G 命令注入漏洞
 
-- [ ] （CVE-2019-13128）D-Link DIR-823G命令注入漏洞
+- [x] （CVE-2019-13128）D-Link DIR-823G命令注入漏洞
 
-- [ ] （CVE-2019-15529）D-Link DIR-823G
+- [x] （CVE-2019-15529）D-Link DIR-823G
 
-- [ ] （CVE-2019-16920）D-Link rce
+- [x] （CVE-2019-16920）D-Link rce
 
 - [ ] （CVE-2019–17621）D-Link DIR-859 rce
 
-- [ ] （CVE-2019–20213）D-Link DIR-859 rce
+- [x] （CVE-2019–20213）D-Link DIR-859 rce
 
-  - [ ]  [Hikvision
+  - [ ]  Hikvision
 
 - [ ] （CVE-2017-7921）Hikvision IP Camera Access Bypass
 
@@ -109,23 +109,23 @@ Markdown文件内添加漏洞详情
 
   - [ ]  [Huawei
 
-- [ ] （CVE-2016-6158）华为WS331a产品管理页面存在CSRF漏洞
+- [x] （CVE-2016-6158）华为WS331a产品管理页面存在CSRF漏洞
 
-  - [ ]  JCG
+  - [x]  JCG
 
-- [ ] JCG路由器命令执行漏洞
+- [x] JCG路由器命令执行漏洞
 
-  - [ ]  PHICOMM
+  - [x]  PHICOMM
 
-- [ ] （CVE-2019-19117）PHICOMM 远程代码执行
+- [x] （CVE-2019-19117）PHICOMM 远程代码执行
 
-  - [ ]  Sapido
+  - [x]  Sapido
 
-- [ ] Sapido多款路由器命令执行漏洞&突破
+- [x] Sapido多款路由器命令执行漏洞&突破
 
   - [ ]  TP-Link
 
-- [ ] （CVE-2017-16957）TP-Link 命令注入漏洞
+- [x] （CVE-2017-16957）TP-Link 命令注入漏洞
 
 - [ ] （CVE-2020-9374）TP-Link TL-WR849N 远程命令执行漏洞
 
@@ -133,9 +133,9 @@ Markdown文件内添加漏洞详情
 
 - [ ] （CVE-2020-6871）ZTE R5300G4、R8500G4和R5500G4 未授权访问漏洞
 
-  - [ ]  360
+  - [x]  360
 
-- [ ] 360 Phone N6 Pro内核漏洞
+- [x] 360 Phone N6 Pro内核漏洞
 
   - [ ]  三星
 
