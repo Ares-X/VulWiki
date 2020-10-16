@@ -52,47 +52,11 @@ Markdown文件内添加漏洞详情
 
 **IOT安全**
 
-- [x]   Amazon Kindle Fire HD (3rd)
-- [x] （CVE-2018-11019）Amazon Kindle Fire HD (3rd) Fire OS kernel组件安全漏洞
-
-- [x] （CVE-2018-11020）Amazon Kindle Fire HD (3rd) Fire OS kernel组件安全漏洞
-- [x] （CVE-2018-11021）Amazon Kindle Fire HD (3rd) Fire OS kernel组件安全漏洞
-
-- [ ] （CVE-2018-11022）Amazon Kindle Fire HD (3rd) Fire OS kernel组件安全漏洞
-
-- [x] （CVE-2018-11023）Amazon Kindle Fire HD (3rd) Fire OS kernel组件安全漏洞
-
-- [x] （CVE-2018-11024）Amazon Kindle Fire HD (3rd) Fire OS kernel组件安全漏洞
-
-- [x] （CVE-2018-11025）Amazon Kindle Fire HD (3rd) Fire OS kernel组件安全漏洞
-
-  - [ ]  Cisco
+- [ ]  Cisco
 
 - [x] （CVE-2019-1663）Cisco 堆栈缓冲区溢出漏洞
 
 - [ ] （CVE-2020-3452）Cisco ASA/FTD 任意文件读取漏洞
-
-  - [ ]  D-Link
-
-- [x] （CVE-2018-19986）D-Link DIR-818LW&828命令注入漏洞
-
-- [x] （CVE-2018-20056）D-Link DIR-619L&605L 栈溢出漏洞
-
-- [x] （CVE-2018-20057）D-Link DIR-619L&605L 命令注入漏洞
-
-- [x] （CVE-2019-7297）D-Link DIR-823G 命令注入漏洞
-
-- [x] （CVE-2019-7298）D-Link DIR-823G 命令注入漏洞
-
-- [x] （CVE-2019-13128）D-Link DIR-823G命令注入漏洞
-
-- [x] （CVE-2019-15529）D-Link DIR-823G
-
-- [x] （CVE-2019-16920）D-Link rce
-
-- [ ] （CVE-2019–17621）D-Link DIR-859 rce
-
-- [x] （CVE-2019–20213）D-Link DIR-859 rce
 
   - [ ]  Hikvision
 
@@ -112,48 +76,16 @@ Markdown文件内添加漏洞详情
 
 - [ ] （CVE-2020-24219）任意文件读取漏洞
 
-  - [ ]  [Huawei
-
-- [x] （CVE-2016-6158）华为WS331a产品管理页面存在CSRF漏洞
-
-  - [x]  JCG
-
-- [x] JCG路由器命令执行漏洞
-
-  - [x]  PHICOMM
-
-- [x] （CVE-2019-19117）PHICOMM 远程代码执行
-
-  - [x]  Sapido
-
-- [x] Sapido多款路由器命令执行漏洞&突破
-
   - [ ]  TP-Link
 
 - [x] （CVE-2017-16957）TP-Link 命令注入漏洞
 
-- [ ] （CVE-2020-9374）TP-Link TL-WR849N 远程命令执行漏洞
+- [x] （CVE-2020-9374）TP-Link TL-WR849N 远程命令执行漏洞
 
   - [ ]  ZTE
 
 - [ ] （CVE-2020-6871）ZTE R5300G4、R8500G4和R5500G4 未授权访问漏洞
 
-  - [x]  360
-
-- [x] 360 Phone N6 Pro内核漏洞
-
-  - [ ]  三星
-
-- [ ] （CVE-2017-14262）Samsung NVR devices 漏洞
-
-  - [ ]  小米
-
-- [ ] （CVE-2019-18370）Xiaomi Mi WiFi R3G 远程命令执行漏洞
-
-- [ ] （CVE-2019-18371） Xiaomi Mi WiFi R3G 任意文件读取漏洞
-
-  - [ ]  火狐浏览器
-
-- [ ] Firefox安卓手机浏览器恶意跳转
+  
 
 - [ ] 默认设备密码
