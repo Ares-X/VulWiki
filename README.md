@@ -20,7 +20,6 @@ Markdown文件内添加漏洞详情
 
 [VulWiki](https://ares-x.com/wiki) 
 
-Password:`qaxniubi`
 
 # To-do
 
