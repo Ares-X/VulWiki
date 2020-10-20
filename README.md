@@ -10,6 +10,7 @@
 找到对应分类或新建分类,新建Markdown文件，文件名为漏洞标题
 Markdown文件内添加漏洞详情 
 图片保存到当前文件路径下的`.resource/文件名/mdeia/` 目录，使用相对路径
+按时间倒序在Change Log中添加修改的内容
 ```
 
 ![image.png](https://i.loli.net/2020/10/15/MF94bHBscvjU85t.png)
@@ -21,13 +22,22 @@ Markdown文件内添加漏洞详情
 [VulWiki](https://ares-x.com/wiki) 
 
 
+
+# Change Log
+
+
+
+* 2020-10-20 修复%20造成的侧栏折叠问题
+
+* 2020-10-20 添加护网中的漏洞
+
 # To-do
 
 - [x] 在线版本 
 
 # Web安全
 
-- [ ] 添加护网中的漏洞
+- [x] 添加护网中的漏洞
 
 ### 系统安全
 
