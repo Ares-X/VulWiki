@@ -27,6 +27,10 @@ Markdown文件内添加漏洞详情
 
 
 
+
+
+* 2020-10-21 添加RuoYi CMS 任意文件读取漏洞
+
 * 2020-10-20 添加护网中的漏洞,CVE-2020-10189 Zoho ManageEngine反序列化RCE,Fastjson Payload汇总，修复%20造成的侧栏折叠问题
 
 # To-do
