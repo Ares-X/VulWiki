@@ -214,3 +214,7 @@ Apache Struts 漏洞列表快速查阅
 -   [S2-058](https://cwiki.apache.org/confluence/display/WW/S2-058) ---
     Previous Security Bulletins contained incorrect affected release
     version ranges.
+    
+- Struts2 S2-059
+
+    
