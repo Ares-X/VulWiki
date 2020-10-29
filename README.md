@@ -1,7 +1,5 @@
 # VulWiki
 
-
-
 # Don't fuck without money.
 
 ## 如何添加新的文章
@@ -28,7 +26,7 @@ Markdown文件内添加漏洞详情
 
 
 
-* 2020-10-28 添加s2-059,CVE-2020-14882 weblogic 未授权命令执行
+* 2020-10-28 添加s2-059,CVE-2020-14882 weblogic 未授权命令执行，（CVE-2020-14825）Weblogic反序列化漏洞
 
 * 2020-10-21 添加RuoYi CMS 任意文件读取漏洞
 
