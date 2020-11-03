@@ -25,7 +25,7 @@ Markdown文件内添加漏洞详情
 
 # Change Log
 
-* 2020-11-3 添加禅道<=12.4.2 后台getshell，windows本地提权漏洞
+* 2020-11-3 添加禅道<=12.4.2 后台getshell，windows本地提权漏洞，Linux本地提权漏洞
 
 * 2020-10-28 添加s2-059,CVE-2020-14882 weblogic 未授权命令执行，（CVE-2020-14825）Weblogic反序列化漏洞
 
@@ -43,14 +43,9 @@ Markdown文件内添加漏洞详情
 
 ### 系统安全
 
-**Linux**
+- [ ] 完善系统提权漏洞
 
-- [ ] （CVE-2015-1328）Ubuntu Linux内核本地提权漏洞
-- [ ] （CVE-2016-5195）脏牛Linux 本地提权
-- [ ] （CVE-2017-7494）Linux Samba 远程代码执行
-- [ ] （CVE-2017-16995）Ubuntu 内核提权
-- [ ] （CVE-2019-13272）Linux 本地提权漏洞
-- [ ] （CVE-2019-14287）sudo提权漏洞
+- [ ] 
 
 **IOT安全**
 
