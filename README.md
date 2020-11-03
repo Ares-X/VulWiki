@@ -25,7 +25,7 @@ Markdown文件内添加漏洞详情
 
 # Change Log
 
-
+* 2020-11-3 添加禅道<=12.4.2 后台getshell，windows本地提权漏洞
 
 * 2020-10-28 添加s2-059,CVE-2020-14882 weblogic 未授权命令执行，（CVE-2020-14825）Weblogic反序列化漏洞
 
@@ -43,16 +43,6 @@ Markdown文件内添加漏洞详情
 
 ### 系统安全
 
-**Windows本地提权漏洞**
-
-- [ ] （CVE-2016-0099）【MS16-32】 windows 本地提权漏洞
-- [ ] （CVE-2016-3225）【MS16-075】 JuicyPotato windows 本地提权漏洞
-- [ ] （CVE-2019-0803）Win32K组件提权
-- [ ] （CVE-2020-0787）Windows 本地提权漏洞
-- [ ] （CVE-2020-1054）Windows 本地提权漏洞
-
-
-
 **Linux**
 
 - [ ] （CVE-2015-1328）Ubuntu Linux内核本地提权漏洞
@@ -65,8 +55,6 @@ Markdown文件内添加漏洞详情
 **IOT安全**
 
 - [ ]  Cisco
-
-- [x] （CVE-2019-1663）Cisco 堆栈缓冲区溢出漏洞
 
 - [ ] （CVE-2020-3452）Cisco ASA/FTD 任意文件读取漏洞
 
@@ -88,11 +76,7 @@ Markdown文件内添加漏洞详情
 
 - [ ] （CVE-2020-24219）任意文件读取漏洞
 
-  - [ ]  TP-Link
-
-- [x] （CVE-2017-16957）TP-Link 命令注入漏洞
-
-- [x] （CVE-2020-9374）TP-Link TL-WR849N 远程命令执行漏洞
+  
 
   - [ ]  ZTE
 
