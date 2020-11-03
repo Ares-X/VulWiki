@@ -23,7 +23,7 @@ Spring Boot 2.x
 
 该请求修改了"
 spring.cloud.bootstrap.location"属性，该属性用于加载外部配置并以YAML格式解析它。为了做到这一点，我们还需要调用"
-/ refresh"端点。
+ refresh"端点。
 
     POST /refresh HTTP/1.1
     Host: 127.0.0.1:8090
