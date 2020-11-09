@@ -16,23 +16,27 @@ https://domain/common/download/resource?resource=/profile/../../../../etc/passwd
 
 ## 2.分析过度
 
-1、**看山不是山**  打开源码，看到“通用下载请求”的实现方法，先研究一下。![0009.png](https://www.hackexp.cn/content/uploadfile/202006/90c71592015925.png)
+1、**看山不是山**  打开源码，看到“通用下载请求”的实现方法，先研究一下。![image-20201109164827975](.resource/RuoYi%20CMS%20%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96/media/image-20201109164827975.png)
 流程如下：1、传入两个参数，一个文件名参数，一个delete参数，控制是否删除2、将全局变量中的下载路径和用户传入的文件名进行拼接![999990.png](https://www.hackexp.cn/content/uploadfile/202006/0a061592016072.png)
-其中getProfile()获取资源下载路径，该下载路径在配置文件中声明了，如下：![93.jpeg](https://www.hackexp.cn/content/uploadfile/202006/c32f1592016128.jpeg)
+其中getProfile()获取资源下载路径，该下载路径在配置文件中声明了，如下：![image-20201109164820331](.resource/RuoYi%20CMS%20%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96/media/image-20201109164820331.png)
 
 3、先读取文件，然后再到FileUtils.writeBytes方法，将文件内容放到response流中。
 
-![999990.png](https://www.hackexp.cn/content/uploadfile/202006/0a061592016226.png)
+![image-20201109164816483](.resource/RuoYi%20CMS%20%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96/media/image-20201109164816483.png)
 4、然后判断是否删除文件。
 
 
 
-![999990.png](https://www.hackexp.cn/content/uploadfile/202006/0a061592016280.png)
+![image-20201109164812062](.resource/RuoYi%20CMS%20%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96/media/image-20201109164812062.png)
  POC构造：
 
 `任意文件读取：/common/download?fileName=1.txt&delete=false`
 
-![999990.png](https://www.hackexp.cn/content/uploadfile/202006/0a061592016618.png) 任意文件删除：/common/download?fileName=1.txt&delete=true ![999990.png](https://www.hackexp.cn/content/uploadfile/202006/0a061592016733.png)
+![image-20201109164804728](.resource/RuoYi%20CMS%20%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96/media/image-20201109164804728.png)
+
+ 任意文件删除：/common/download?fileName=1.txt&delete=true
+
+ ![image-20201109164750336](.resource/RuoYi%20CMS%20%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96/media/image-20201109164750336.png)
 
 原以为到这里就可以任意文件读取和删除了，但是忽略了一个点，就是isValidFilename函数，该函数的实现如下：   
 
@@ -58,7 +62,9 @@ https://domain/common/download/resource?resource=/profile/../../../../etc/passwd
    
    
    
-   ![999990.png](https://www.hackexp.cn/content/uploadfile/202006/0a061592016814.png) 那这个点就没什么用了，只能删除/home/ruoyi/uploadPath/download/目录下的文件。
+   ![image-20201109164743172](.resource/RuoYi%20CMS%20%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96/media/image-20201109164743172.png)
+   
+    那这个点就没什么用了，只能删除/home/ruoyi/uploadPath/download/目录下的文件。
    
    
    
@@ -84,7 +90,7 @@ https://domain/common/download/resource?resource=/profile/../../../../etc/passwd
    
    
    
-   ![999990.png](https://www.hackexp.cn/content/uploadfile/202006/0a061592017129.png) 
+   ![image-20201109164730890](.resource/RuoYi%20CMS%20%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96/media/image-20201109164730890.png) 
    
    利用点比较鸡肋，只能下载本地资源所在盘符下的文件，但是linux系统下就不受这个影响了。
    
