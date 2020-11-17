@@ -25,6 +25,8 @@ Markdown文件内添加漏洞详情
 
 # Change Log
 
+* 2020-11-17 CVE-2020-26217 XStream XML反序列化远程代码执行，Citrix XenMobile CVE-2020-8209
+
 * 2020-11-3 添加禅道<=12.4.2 后台getshell，windows本地提权漏洞，Linux本地提权漏洞
 
 * 2020-10-28 添加s2-059,CVE-2020-14882 weblogic 未授权命令执行，（CVE-2020-14825）Weblogic反序列化漏洞
@@ -45,7 +47,6 @@ Markdown文件内添加漏洞详情
 
 - [ ] 完善系统提权漏洞
 
-- [ ] 
 
 **IOT安全**
 
