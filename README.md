@@ -25,6 +25,8 @@ Markdown文件内添加漏洞详情
 
 # Change Log
 
+* 2021-2-20 Apache Druid 远程代码执行漏洞（CVE-2021-25646）
+
 * 2021-1-13 CVE-2020-3452
 * 2020-12-14 74cms v6.0.48模版注入+文件包含getshell,CVE-2019-11580 Atlassian Crowd RCE,s2-061
 
