@@ -39,7 +39,7 @@ Jizhicms 1.7.1
 在 /FrPHP/db/DBholder.php中,
 getArray函数调用query函数，如果有错误将输出错误信息![4.png](./.resource/Jizhicms1.7.1从sql注入到任意文件上传/media/rId27.png)
 
-在接下来发现该CMS允许上传的文件类型是保存在数据库中的![5.png](./.resource/Jizhicms1.7.1从sql注入到任意文件上传/media/rId28.png)通过数据库写入到缓存文件，在使用时从缓存文件中去看上传的类型是不是缓存文件中允许的，如果是则允许上传。那可以通过SQL注入漏洞更新下数据库，写入允许上传的后缀php,即可实现getshell![6.png](./.resource/Jizhicms1.7.1从sql注入到任意文件上传/media/rId29.png)然后登陆后台清空缓存让网站重新获得新的缓存，然后上传php文件。看到上传成功了![7.png](./.resource/Jizhicms1.7.1从sql注入到任意文件上传/media/rId30.png)既然是代码审计，我们也来跟下网站获取上传类型的方式在/A/c/CommonController.php
+在接下来发现该CMS允许上传的文件类型是保存在数据库中的![5.png](./.resource/Jizhicms1.7.1从sql注入到任意文件上传/media/rId28.png)通过数据库写入到缓存文件，在使用时从缓存文件中去看上传的类型是不是缓存文件中允许的，如果是则允许上传。那可以通过SQL注入漏洞更新下数据库，写入允许上传的后缀php,即可实现getshell![6.png](./.resource/Jizhicms1.7.1从sql注入到任意文件上传/media/rId29.png)然后登陆后台清空缓存让网站重新获得新的缓存，然后上传php文件。看到上传成功了![7.png](./.resource/Jizhicms1.7.1从sql注入到任意文件上传/media/rId30.png)既然是Code Auditing，我们也来跟下网站获取上传类型的方式在/A/c/CommonController.php
 中uploads函数中是从webconf中获得的fileType的值
 
     $fileType = $this->webconf['fileType'];

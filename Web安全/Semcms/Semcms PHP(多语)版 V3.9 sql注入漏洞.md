@@ -34,7 +34,7 @@ Semcms PHP(多语)版 V3.9
 
 基于时间的注入
 
-### 代码审计
+### Code Auditing
 
 查看web\_inc.php的关键代码
 

@@ -21,7 +21,7 @@ yunyecms 2.0.2
     http://127.0.0.1/yunyecms_2.0.2/admin.php?c=login&=
     1
 
-打开Seay源代码审计工具，分析代码。经过一番寻找与"提示"，发现getip()方法获取ip没有进行过滤，可能有戏。
+打开Seay源Code Auditing工具，分析代码。经过一番寻找与"提示"，发现getip()方法获取ip没有进行过滤，可能有戏。
 
 ![](./.resource/YunyecmsV2.0.2前台注入漏洞(一)/media/rId25.png)
 
