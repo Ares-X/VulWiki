@@ -1,3 +1,8 @@
+---
+version: "锐捷EG易网关"
+source: "Threekiii/Vulnerability-Wiki"
+---
+
 # 锐捷 EG易网关 cli.php 远程命令执行漏洞
 
 ## 漏洞描述

@@ -1,3 +1,8 @@
+---
+fofa: "app="
+source: "wy876 漏洞文库"
+---
+
 # Fortinet FortiOS message存在xss漏洞
 
 # 一、漏洞简介

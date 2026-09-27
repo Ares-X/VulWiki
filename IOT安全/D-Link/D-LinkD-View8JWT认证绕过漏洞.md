@@ -1,3 +1,8 @@
+---
+fofa: "web.title="
+source: "wy876 漏洞文库"
+---
+
 # D-Link D-View 8 JWT认证绕过漏洞
 
 # 一、漏洞简介

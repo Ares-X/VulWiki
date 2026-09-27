@@ -1,3 +1,8 @@
+---
+version: "博华网龙防火墙"
+source: "Threekiii/Awesome-POC"
+---
+
 # 博华网龙防火墙 cmd.php 远程命令执行漏洞
 
 ## 漏洞描述

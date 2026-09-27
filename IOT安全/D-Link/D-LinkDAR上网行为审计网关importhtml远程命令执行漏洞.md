@@ -1,3 +1,8 @@
+---
+fofa: "mask.style.visibility"
+source: "wy876 漏洞文库"
+---
+
 # D-Link DAR上网行为审计网关 importhtml远程命令执行漏洞
 
 # 一、漏洞简介

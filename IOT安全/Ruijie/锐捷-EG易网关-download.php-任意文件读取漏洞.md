@@ -1,3 +1,8 @@
+---
+version: "锐捷EG易网关"
+source: "Threekiii/Vulnerability-Wiki"
+---
+
 # 锐捷 EG易网关 download.php 任意文件读取漏洞
 
 ## 漏洞描述

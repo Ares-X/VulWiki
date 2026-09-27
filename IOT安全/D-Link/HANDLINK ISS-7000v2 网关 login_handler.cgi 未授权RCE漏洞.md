@@ -1,3 +1,8 @@
+---
+fofa: "icon_hash="
+source: "SourByte05/Vulnerability-Wiki-PoC"
+---
+
 # HANDLINK ISS-7000v2 网关 login_handler.cgi 未授权RCE漏洞
 
 # 漏洞描述

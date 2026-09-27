@@ -1,3 +1,8 @@
+---
+fofa: "app.name="
+source: "wy876 漏洞文库"
+---
+
 # 锐捷 Smartweb管理系统密码信息泄漏漏洞
 
 # 一、漏洞描述

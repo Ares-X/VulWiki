@@ -1,3 +1,8 @@
+---
+version: "Panabit Panalog"
+source: "Threekiii/Awesome-POC"
+---
+
 # Panabit Panalog sy_addmount.php 远程命令执行漏洞
 
 ## 漏洞描述

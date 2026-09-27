@@ -1,3 +1,8 @@
+---
+fofa: "app="
+source: "wy876 漏洞文库"
+---
+
 # Fortigate SSL VPN fgt_lang存在任意文件读取漏洞
 
 # 一、漏洞简介

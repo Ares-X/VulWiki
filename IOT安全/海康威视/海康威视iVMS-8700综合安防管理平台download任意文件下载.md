@@ -1,3 +1,8 @@
+---
+fofa: "app.name=="
+source: "wy876 漏洞文库"
+---
+
 # 海康威视 iVMS-8700综合安防管理平台 download 任意文件下载
 
 # 一、漏洞简介

@@ -1,3 +1,8 @@
+---
+fofa: "title="
+source: "SourByte05/Vulnerability-Wiki-PoC"
+---
+
 #  锐捷EWEB路由器-timeout.php任意文件上传漏洞
 
 # 漏洞描述

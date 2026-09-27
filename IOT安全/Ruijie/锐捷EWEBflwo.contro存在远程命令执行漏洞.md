@@ -1,3 +1,8 @@
+---
+fofa: "app.name=="
+source: "wy876 漏洞文库"
+---
+
 # 锐捷EWEB flwo.contro存在远程命令执行漏洞
 
 # 一、漏洞简介

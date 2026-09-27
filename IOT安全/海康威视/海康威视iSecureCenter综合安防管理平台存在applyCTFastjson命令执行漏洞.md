@@ -1,3 +1,8 @@
+---
+fofa: "查询语法：**"
+source: "wy876 漏洞文库"
+---
+
 # 海康威视iSecure Center 综合安防管理平台存在applyCT Fastjson命令执行漏洞
 
 # 1、漏洞描述

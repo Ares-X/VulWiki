@@ -1,3 +1,8 @@
+---
+version: "FLIR-AX8"
+source: "Threekiii/Awesome-POC"
+---
+
 # FLIR-AX8 res.php 后台命令执行漏洞
 
 ## 漏洞描述

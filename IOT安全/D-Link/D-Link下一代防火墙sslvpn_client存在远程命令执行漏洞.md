@@ -1,3 +1,8 @@
+---
+fofa: "web.title=="
+source: "wy876 漏洞文库"
+---
+
 # D-Link下一代防火墙sslvpn_client存在远程命令执行漏洞
 
 # 一、漏洞简介

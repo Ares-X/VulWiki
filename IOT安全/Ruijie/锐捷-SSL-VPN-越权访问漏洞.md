@@ -1,3 +1,8 @@
+---
+version: "Ruijie SSL VPN"
+source: "Threekiii/Vulnerability-Wiki"
+---
+
 # 锐捷 SSL VPN 越权访问漏洞
 
 ## 漏洞描述

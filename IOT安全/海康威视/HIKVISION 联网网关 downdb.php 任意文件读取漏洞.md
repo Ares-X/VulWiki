@@ -1,3 +1,8 @@
+---
+version: "Hikvision 联网网关，流媒体管理服务器"
+source: "Threekiii/Awesome-POC"
+---
+
 # Hikvision 联网网关 downdb.php 任意文件读取漏洞
 
 ## 漏洞描述

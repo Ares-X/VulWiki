@@ -1,3 +1,8 @@
+---
+cve: "CVE-2018-13379"
+source: "白阁文库 BaizeSec/bylibrary"
+---
+
 # Fortigate SSL VPN多个漏洞
 
 ## **Fortigate**

@@ -1,3 +1,7 @@
+---
+source: "wy876 漏洞文库"
+---
+
 # 锐捷 EG易网关phpinfo.view.php 信息泄露漏洞
 
 **<font style="color:rgb(38, 38, 38);">一、漏洞简介</font>**

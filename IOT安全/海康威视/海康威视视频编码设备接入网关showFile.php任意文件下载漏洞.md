@@ -1,3 +1,8 @@
+---
+fofa: "web.title="
+source: "wy876 漏洞文库"
+---
+
 # 海康威视视频编码设备接入网关 showFile.php 任意文件下载漏洞
 
 # 一、漏洞简介

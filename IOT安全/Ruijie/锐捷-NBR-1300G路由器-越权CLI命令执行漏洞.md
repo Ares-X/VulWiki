@@ -1,3 +1,8 @@
+---
+version: "锐捷 NBR 路由器"
+source: "Threekiii/Vulnerability-Wiki"
+---
+
 # 锐捷 NBR 1300G 路由器 越权 CLI 命令执行漏洞
 
 ## 漏洞描述

@@ -1,3 +1,8 @@
+---
+version: "锐捷EG易网关"
+source: "wy876 漏洞文库"
+---
+
 # 锐捷 EG易网关cli存在后台远程命令执行漏洞
 
 **<font style="color:rgb(38, 38, 38);">一、漏洞简介</font>**<font style="color:rgb(38, 38, 38);">  

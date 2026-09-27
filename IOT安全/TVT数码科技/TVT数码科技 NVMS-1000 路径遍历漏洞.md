@@ -1,3 +1,8 @@
+---
+version: "TVT NVMS-1000"
+source: "Threekiii/Awesome-POC"
+---
+
 # TVT数码科技 NVMS-1000 路径遍历漏洞
 
 ## 漏洞描述

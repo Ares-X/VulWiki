@@ -1,3 +1,8 @@
+---
+fofa: "web.body="
+source: "wy876 漏洞文库"
+---
+
 # 锐捷交换机WEB管理系统EXCU_SHELL密码信息泄漏漏洞
 
 # 一、漏洞简介

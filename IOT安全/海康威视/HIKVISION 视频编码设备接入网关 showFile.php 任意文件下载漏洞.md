@@ -1,3 +1,8 @@
+---
+version: "Hikvision 视频编码设备接入网关"
+source: "Threekiii/Awesome-POC"
+---
+
 # Hikvision 视频编码设备接入网关 showFile.php 任意文件下载漏洞
 
 ## 漏洞描述

@@ -1,3 +1,7 @@
+---
+source: "wy876 漏洞文库"
+---
+
 # 锐捷RG-EW1200G路由器后台命令执行
 
 # <font style="color:rgba(0, 0, 0, 0.9);">一、漏洞简介</font>

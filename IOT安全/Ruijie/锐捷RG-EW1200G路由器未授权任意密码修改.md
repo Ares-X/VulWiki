@@ -1,3 +1,7 @@
+---
+source: "wy876 漏洞文库"
+---
+
 # 锐捷RG-EW1200G路由器未授权任意密码修改
 
 # <font style="color:rgba(0, 0, 0, 0.9);">一、漏洞简介</font>

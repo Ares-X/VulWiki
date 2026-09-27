@@ -1,3 +1,8 @@
+---
+fofa: "app.name=="
+source: "wy876 漏洞文库"
+---
+
 # 锐捷NBR路由器fileupload.php任意文件上传漏洞
 
 # 一、漏洞简介

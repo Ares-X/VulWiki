@@ -1,3 +1,8 @@
+---
+fofa: "web.title="
+source: "wy876 漏洞文库"
+---
+
 # 海康威视视频编码设备接入网关userinfodata接口存在信息泄漏漏洞
 
 # 一、漏洞简介

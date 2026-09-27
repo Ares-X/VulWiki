@@ -1,3 +1,8 @@
+---
+fofa: "app="
+source: "wy876 漏洞文库"
+---
+
 # 锐捷网络股份有限公司校园网自助服务系统queryAccountNumReportDataDetail存在SQL注入漏洞
 
 # 一、漏洞简介

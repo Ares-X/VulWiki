@@ -1,57 +1,63 @@
 # VulWiki
 
-> 中文漏洞知识库 · 收录范围：漏洞详情 + 影响版本 + 复现步骤 / POC / EXP（纯预警类不收录）
+> 中文漏洞知识库 · 实战导向 · 全部条目含漏洞信息与复现/利用方式
 
-**2026-09-27 批量补库**：断档 2021-04 → 2026-09 全线补齐，本次新增 **2028** 篇（两批）
-（含 CVE 编号 320 条），总库存 **3014** 篇。来源见各文末来源标注，均经格式统一、图片本地化、去重处理后收录。
+[![articles](https://img.shields.io/badge/文章-3000-blue)](INDEX.md) [![last](https://img.shields.io/badge/更新-持续-green)](#change-log)
+
+## 简介
+
+VulWiki 收录有**完整漏洞信息和复现/利用方式**的中文漏洞文章。纯漏洞预警、无利用细节的条目一律不入库。
+
+- 总量 **3000 篇**：Web安全 2729 / IOT安全 217 / 系统安全 54
+- 覆盖 CVE ~950 条（2021:102 2022:50 2023:57 2024:66 2025:44 2026:17）
+- 每篇含：漏洞描述 / 影响版本 / 网络测绘(FOFA) / 复现步骤或 POC / 参考链接
+- 多数文章带 YAML frontmatter（`cve` / `version` / `fofa`），可 grep 精确定位
 
 ## 目录结构
 
 ```
-Web安全/     2742 篇   按组件建目录（Apache/泛微OA/用友/...）
-系统安全/    55 篇   提权 / 内核 / 容器逃逸
-IOT安全/     217 篇   网络设备 / 安防摄像头 / 固件
+Web安全/          # Web应用、中间件、框架、组件漏洞
+  字母F/Fastjson/ # 组件目录按首字母分片，浏览不卡
+  字母Y/用友/
+  中文/泛微oa/
+IOT安全/          # 网络设备、摄像头、路由器、工控（46 类厂商）
+系统安全/         # 系统提权、容器逃逸、后门利用
+INDEX.md          # 全库索引（分类 → 组件 → 文章）
 ```
 
-图片统一存放于各 md 同级 `.resource/<文章名>/media/`，相对路径引用。
+查找方式：**INDEX.md 目录导航** / **grep CVE 号** / **grep FOFA 指纹**（frontmatter 已索引）。
 
 ## 如何添加新的文章
 
-```
-1. 检查本地仓库是否为最新版本
-2. 找到对应分类或新建分类（目录名=组件名），新建 Markdown 文件，文件名为漏洞标题
-3. 文档应包含：漏洞描述 / 影响版本 / 复现步骤或 POC（硬性要求，纯预警不收）
-4. 图片保存到 .resource/<文件名>/media/，Markdown 使用相对路径引用
-5. 按时间倒序在 Change Log 中添加修改内容
-```
+1. 找到对应分类与组件目录（没有就新建，放入对应字母分片）
+2. Markdown 文件名即漏洞标题；正文含：漏洞描述、影响版本、网络测绘、复现/POC、参考
+3. 图片存放在当前 Markdown 同级 `.resource/文章名去括号/media/`，正文相对路径引用
+4. 文首加 frontmatter（cve / version / fofa / source），按时间倒序在 Change Log 添加记录
 
-## 收录标准
+## 引用来源（致谢）
 
-- ✅ 有完整漏洞信息（描述、影响版本、资产测绘/指纹）
-- ✅ 有可操作的复现步骤或 POC/EXP
-- ❌ 纯 CVE 预警转述、无利用面分析的条目不收录
+本库在 2026-09 大规模补档，以下外部项目/社区的内容经筛选、去重、格式统一后收录，版权归原作者所有：
 
-# Online Version
+| 来源 | 说明 |
+|---|---|
+| [零组攻防实验室 (0-sec)](https://wiki.0-sec.org) | 本库初始血源 |
+| [wy876 漏洞文库](https://github.com/wy876/POC)（备份镜像 [DMW11525708/wiki](https://github.com/DMW11525708/wiki)、[cvi-Qing/poc](https://github.com/cvi-Qing/poc)） | 国产 1day POC 文库，2023-2025 主力来源 |
+| [SourByte05/Vulnerability-Wiki-PoC](https://github.com/SourByte05/Vulnerability-Wiki-PoC) | 2024-至今高价值资产 1day 复现归档 |
+| [Threekiii/Vulnerability-Wiki](https://github.com/Threekiii/Vulnerability-Wiki) & [Threekiii/Awesome-POC](https://github.com/Threekiii/Awesome-POC) | 中文漏洞知识库 + PoC 知识库（含乌云/0sec 归档） |
+| [BaizeSec/bylibrary 白阁文库](https://github.com/BaizeSec/bylibrary) | 白泽Sec 漏洞 POC/EXP 文库 |
+| [Mr-xn/Penetration_Testing_POC](https://github.com/Mr-xn/Penetration_Testing_POC) | 渗透测试 POC/EXP 汇总 |
+| [Vulhub](https://github.com/vulhub/vulhub) | 部分 docker 复现环境参考 |
+| 先知社区 / 跳跳糖 / Seebug / 安全客 / Y4er Blog 等 | 部分文章原始出处（文内已逐篇标注） |
 
-[VulWiki](https://ares-x.com/wiki)
+每篇文末的 `> 来源：` 脚注保留原始出处；引用内容仅作学习研究用途，严禁非法使用。
 
-# Change Log
+## Change Log
 
-* 2026-09-27 第二批补库 578 篇（来源：Threekiii/Awesome-POC 366 / 白阁文库 161 / Mr-xn 51；同样标准：有复现/POC 才收，图片本地化+去重）
-* 2026-09-27 批量补库 1450 篇（2021-04 → 2026-09 断档补齐；来源：wy876 漏洞文库镜像 / SourByte05/Vulnerability-Wiki-PoC / Threekiii/Vulnerability-Wiki；全部经去重、图片本地化、格式统一）
-* 2021-2-20 Apache Druid 远程代码执行漏洞（CVE-2021-25646）
-* 2021-1-13 CVE-2020-3452
-* 2020-12-14 74cms v6.0.48模版注入+文件包含getshell,CVE-2019-11580 Atlassian Crowd RCE,s2-061
-* 2020-12-3 ThinkAdmin未授权列目录任意文件读取(CVE-2020-25540)漏洞
-* 2020-11-17 CVE-2020-26217 XStream XML反序列化远程代码执行，Citrix XenMobile CVE-2020-8209
-* 2020-11-3 添加禅道<=12.4.2 后台getshell，windows本地提权漏洞，Linux本地提权漏洞
-* 2020-10-28 添加s2-059,CVE-2020-14882 weblogic 未授权命令执行，（CVE-2020-14825）Weblogic反序列化漏洞
-* 2020-10-21 添加RuoYi CMS 任意文件读取漏洞
-* 2020-10-20 添加护网中的漏洞,CVE-2020-10189 Zoho ManageEngine反序列化RCE,Fastjson Payload汇总，修复%20造成的侧栏折叠问题
+* 2026-09-27 结构重构：组件目录字母分片、frontmatter 索引、INDEX 重建、坏目录清洗 197 个、大小写归并 17 组、修复历史断链图片引用 1500+、fastjson 2026 双 0day（CVE-2026-16723 / CVE-2026-44034）入库
+* 2026-09-27 批量补档 +2028 篇（来源见上表），总量 988 → 3000
+* 2021-03 沿用历史记录见 git log
 
-# To-do
+## To-do
 
-- [x] 在线版本
-- [x] 2021-2026 断档补齐（本批）
-- [ ] 完善系统提权漏洞
-- [ ] 建立 CVE 总索引
+- [ ] GitHub Actions 自动构建部署在线版
+- [ ] 按月增量：新 CVE 复现文章自动采集入库

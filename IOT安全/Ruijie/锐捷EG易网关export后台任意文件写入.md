@@ -1,3 +1,8 @@
+---
+fofa: "</font>"
+source: "wy876 漏洞文库"
+---
+
 # 锐捷EG易网关export后台任意文件写入
 
 **<font style="color:rgb(38, 38, 38);">一、漏洞简介</font>**

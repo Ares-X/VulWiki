@@ -1,3 +1,8 @@
+---
+fofa: "icon_hash="
+source: "wy876 漏洞文库"
+---
+
 # 锐捷RG SSL VPN 垂直越权漏洞
 
 **一、漏洞简介**

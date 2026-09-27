@@ -1,3 +1,8 @@
+---
+fofa: "body="
+source: "SourByte05/Vulnerability-Wiki-PoC"
+---
+
 #  海康威视iVMS download.action任意文件读取漏洞
 
 # 漏洞描述

@@ -1,3 +1,7 @@
+---
+source: "Mr-xn/Penetration_Testing_POC"
+---
+
 # 0x00 前言
 
 使用strace来获取ssh密码的方法并不是100％有效的，因为strace的输出在不同linux发行版上会发生变化，需要有针对性的写匹配规则，于是乎就找到了另一种方法PAM劫持SSH密码。参考链接在最后。

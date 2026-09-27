@@ -1,3 +1,8 @@
+---
+fofa: "app="
+source: "SourByte05/Vulnerability-Wiki-PoC"
+---
+
 # 海康威视综合安防管理平台 detection 前台RCE漏洞
 
 # 漏洞描述

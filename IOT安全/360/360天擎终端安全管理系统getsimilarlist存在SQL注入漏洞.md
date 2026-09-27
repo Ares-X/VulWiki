@@ -1,3 +1,8 @@
+---
+fofa: "app.name=="
+source: "wy876 漏洞文库"
+---
+
 # 360天擎终端安全管理系统getsimilarlist存在SQL注入漏洞
 
 # 一、漏洞简介

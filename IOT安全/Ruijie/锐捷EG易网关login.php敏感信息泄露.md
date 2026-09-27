@@ -1,3 +1,7 @@
+---
+source: "wy876 漏洞文库"
+---
+
 # 锐捷EG易网关login.php敏感信息泄露
 
 **<font style="color:rgb(38, 38, 38);">一、漏洞简介</font>**

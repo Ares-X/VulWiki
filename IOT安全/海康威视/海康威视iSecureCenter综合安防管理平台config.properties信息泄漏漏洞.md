@@ -1,3 +1,8 @@
+---
+fofa: "查询语法：**"
+source: "wy876 漏洞文库"
+---
+
 # 海康威视iSecure Center综合安防管理平台 config.properties信息泄漏漏洞
 
 # 一、漏洞简介

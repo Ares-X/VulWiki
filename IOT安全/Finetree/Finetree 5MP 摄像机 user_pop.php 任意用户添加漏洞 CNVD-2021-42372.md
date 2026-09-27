@@ -1,3 +1,9 @@
+---
+cnvd: "CNVD-2021-42372"
+version: "Finetree 5MP"
+source: "Threekiii/Awesome-POC"
+---
+
 # Finetree 5MP 摄像机 user_pop.php 任意用户添加漏洞 CNVD-2021-42372
 
 ## 漏洞描述

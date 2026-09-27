@@ -1,3 +1,8 @@
+---
+version: "Kyan"
+source: "Threekiii/Awesome-POC"
+---
+
 # Kyan 网络监控设备 module.php 远程命令执行漏洞
 
 ## 漏洞描述

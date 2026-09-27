@@ -1,3 +1,8 @@
+---
+fofa: "app="
+source: "wy876 漏洞文库"
+---
+
 # D-Link DCS监控系统getuser存在密码泄露漏洞
 
 # 一、漏洞简介

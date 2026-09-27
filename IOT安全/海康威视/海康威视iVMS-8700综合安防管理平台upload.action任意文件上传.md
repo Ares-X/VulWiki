@@ -1,3 +1,8 @@
+---
+fofa: "web.body="
+source: "wy876 漏洞文库"
+---
+
 # 海康威视iVMS-8700综合安防管理平台 upload.action 任意文件上传
 
 # 一、漏洞简介

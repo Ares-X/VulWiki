@@ -1,3 +1,8 @@
+---
+fofa: "app.name=="
+source: "wy876 漏洞文库"
+---
+
 # NETGEAR ProSafe SSL VPN SQL注入（CNNVD-202205-3298）
 
 # 一、漏洞简介

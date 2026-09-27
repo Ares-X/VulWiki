@@ -1,3 +1,8 @@
+---
+version: "Selea Selea Targa IP OCR-ANPR Camera iZero"
+source: "Threekiii/Awesome-POC"
+---
+
 # Selea OCR-ANPR摄像机 SeleaCamera 任意文件读取漏洞
 
 ## 漏洞描述

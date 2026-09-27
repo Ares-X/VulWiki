@@ -1,3 +1,8 @@
+---
+fofa: "web.body="
+source: "wy876 漏洞文库"
+---
+
 # JCG JHR-N835R 后台存在命令执行
 
 # 一、漏洞简介

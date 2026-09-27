@@ -1,3 +1,8 @@
+---
+fofa: "查询语法：**"
+source: "wy876 漏洞文库"
+---
+
 # 海康威视iSecure Center综合安防管理平台lm任意文件上传漏洞
 
 # <font style="color:rgb(0, 0, 0);">1、漏洞描述</font>

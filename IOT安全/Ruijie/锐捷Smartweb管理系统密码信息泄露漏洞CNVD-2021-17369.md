@@ -1,3 +1,9 @@
+---
+cnvd: "CNVD-2021-17369"
+fofa: "web.body="
+source: "wy876 漏洞文库"
+---
+
 # 锐捷Smartweb管理系统 密码信息泄露漏洞 CNVD-2021-17369
 
 **一、漏洞简介**  

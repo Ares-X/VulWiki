@@ -1,3 +1,7 @@
+---
+source: "Threekiii/Awesome-POC"
+---
+
 # Hikvision 综合安防管理平台 files 任意文件上传漏洞
 
 ## 漏洞描述
@@ -22,7 +26,7 @@ web.title=="综合安防管理平台"
 
 登陆页面
 
-![image-20220824134144287](./.resource/HIKVISION综合安防管理平台files任意文件上传漏洞/media/202208241341481.png)
+![image-20220824134144287](./.resource/HIKVISION综合安防管理平台report任意文件上传漏洞/media/202208241341481.png)
 
 需要开放运行管理中心 (8001端口)
 

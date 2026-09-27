@@ -1,3 +1,8 @@
+---
+fofa: "app.name="
+source: "wy876 漏洞文库"
+---
+
 # 锐捷RG-UAC统一上网行为管理审计系统ip_addr_add_commit后台命令执行漏洞
 
 # 一、漏洞简介

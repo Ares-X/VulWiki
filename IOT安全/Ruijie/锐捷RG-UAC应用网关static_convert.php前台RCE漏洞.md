@@ -1,3 +1,8 @@
+---
+fofa: "app="
+source: "wy876 漏洞文库"
+---
+
 # 锐捷RG-UAC应用网关static_convert.php前台RCE漏洞
 
 ### 一、漏洞描述

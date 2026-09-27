@@ -1,3 +1,8 @@
+---
+version: "docker-compose up -d"
+source: "Threekiii/Vulnerability-Wiki"
+---
+
 # V2board 1.6.1 提权漏洞
 
 ## 漏洞描述

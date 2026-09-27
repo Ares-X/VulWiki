@@ -1,3 +1,8 @@
+---
+version: "信诺瑞得 WiseGrid慧敏应用交付网关"
+source: "Threekiii/Awesome-POC"
+---
+
 # 信诺瑞得 WiseGrid慧敏应用交付网关 sysadmin_action.php 后台命令执行漏洞
 
 ## 漏洞描述

@@ -1,3 +1,8 @@
+---
+fofa: "web.title=="
+source: "wy876 漏洞文库"
+---
+
 # 斐讯路由器PHICOMM-FIR300M型号存在命令执行漏洞
 
 # 一、漏洞简介

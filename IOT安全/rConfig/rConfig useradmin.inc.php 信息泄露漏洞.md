@@ -1,3 +1,8 @@
+---
+version: "rConfig"
+source: "Threekiii/Awesome-POC"
+---
+
 # rConfig useradmin.inc.php 信息泄露漏洞
 
 ## 漏洞描述

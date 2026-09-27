@@ -1,3 +1,8 @@
+---
+version: "中科网威 NPFW防火墙"
+source: "Threekiii/Awesome-POC"
+---
+
 # 中科网威 NPFW防火墙 CommandsPolling.php 任意文件读取漏洞
 
 ## 漏洞描述

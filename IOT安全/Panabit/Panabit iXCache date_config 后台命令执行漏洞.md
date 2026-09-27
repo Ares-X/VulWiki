@@ -1,3 +1,8 @@
+---
+version: "Panabit iXCache"
+source: "Threekiii/Awesome-POC"
+---
+
 # Panabit iXCache date_config 后台命令执行漏洞
 
 ## 漏洞描述

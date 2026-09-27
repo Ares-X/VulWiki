@@ -1,3 +1,8 @@
+---
+fofa: "web.title="
+source: "wy876 漏洞文库"
+---
+
 # NETGEAR DGND3700v2 路由器 setup.cgi 接口身份认证绕过漏洞
 
 # 一、漏洞简介
