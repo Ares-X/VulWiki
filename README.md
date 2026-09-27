@@ -1,91 +1,56 @@
 # VulWiki
 
+> 中文漏洞知识库 · 收录范围：漏洞详情 + 影响版本 + 复现步骤 / POC / EXP（纯预警类不收录）
 
-> 基于零组公开漏洞库
+**2026-09-27 批量补库**：断档 2021-04 → 2026-09 全线补齐，本次新增 **1450** 篇
+（含 CVE 编号 320 条），总库存 **2438** 篇。来源见各文末来源标注，均经格式统一、图片本地化、去重处理后收录。
+
+## 目录结构
+
+```
+Web安全/     2224 篇   按组件建目录（Apache/泛微OA/用友/...）
+系统安全/    39 篇   提权 / 内核 / 容器逃逸
+IOT安全/     173 篇   网络设备 / 安防摄像头 / 固件
+```
+
+图片统一存放于各 md 同级 `.resource/<文章名>/media/`，相对路径引用。
 
 ## 如何添加新的文章
 
 ```
-先检查本地仓库是否为最新版本
-找到对应分类或新建分类,新建Markdown文件，文件名为漏洞标题
-Markdown文件内添加漏洞详情 
-图片保存到当前Markdown文件路径下的`.resource/文件名/mdeia/` 目录，Markdown插入时使用相对路径
-按时间倒序在Change Log中添加修改的内容
+1. 检查本地仓库是否为最新版本
+2. 找到对应分类或新建分类（目录名=组件名），新建 Markdown 文件，文件名为漏洞标题
+3. 文档应包含：漏洞描述 / 影响版本 / 复现步骤或 POC（硬性要求，纯预警不收）
+4. 图片保存到 .resource/<文件名>/media/，Markdown 使用相对路径引用
+5. 按时间倒序在 Change Log 中添加修改内容
 ```
 
-![image.png](https://i.loli.net/2020/10/15/MF94bHBscvjU85t.png)
+## 收录标准
 
-
+- ✅ 有完整漏洞信息（描述、影响版本、资产测绘/指纹）
+- ✅ 有可操作的复现步骤或 POC/EXP
+- ❌ 纯 CVE 预警转述、无利用面分析的条目不收录
 
 # Online Version
 
-[VulWiki](https://ares-x.com/wiki) 
-
-
+[VulWiki](https://ares-x.com/wiki)
 
 # Change Log
 
+* 2026-09-27 批量补库 1450 篇（2021-04 → 2026-09 断档补齐；来源：wy876 漏洞文库镜像 / SourByte05/Vulnerability-Wiki-PoC / Threekiii/Vulnerability-Wiki；全部经去重、图片本地化、格式统一）
 * 2021-2-20 Apache Druid 远程代码执行漏洞（CVE-2021-25646）
-
 * 2021-1-13 CVE-2020-3452
 * 2020-12-14 74cms v6.0.48模版注入+文件包含getshell,CVE-2019-11580 Atlassian Crowd RCE,s2-061
-
 * 2020-12-3 ThinkAdmin未授权列目录任意文件读取(CVE-2020-25540)漏洞
-
 * 2020-11-17 CVE-2020-26217 XStream XML反序列化远程代码执行，Citrix XenMobile CVE-2020-8209
-* 
-
 * 2020-11-3 添加禅道<=12.4.2 后台getshell，windows本地提权漏洞，Linux本地提权漏洞
-
 * 2020-10-28 添加s2-059,CVE-2020-14882 weblogic 未授权命令执行，（CVE-2020-14825）Weblogic反序列化漏洞
-
 * 2020-10-21 添加RuoYi CMS 任意文件读取漏洞
-
 * 2020-10-20 添加护网中的漏洞,CVE-2020-10189 Zoho ManageEngine反序列化RCE,Fastjson Payload汇总，修复%20造成的侧栏折叠问题
 
 # To-do
 
-- [x] 在线版本 
-
-# Web安全
-
-- [x] 添加护网中的漏洞
-
-### 系统安全
-
+- [x] 在线版本
+- [x] 2021-2026 断档补齐（本批）
 - [ ] 完善系统提权漏洞
-
-
-**IOT安全**
-
-- [ ]  Cisco
-
-- [ ] （CVE-2020-3452）Cisco ASA/FTD 任意文件读取漏洞
-
-  - [ ]  Hikvision
-
-- [ ] （CVE-2017-7921）Hikvision IP Camera Access Bypass
-
-  - [ ]  Hisilicon
-
-- [ ] （CVE-2020-24214）Buffer%20overflow: definite DoS and potential RCE
-
-- [ ] （CVE-2020-24215）HiSilicon Backdoor password
-
-- [ ] （CVE-2020-24216）RTSP 未授权访问
-
-- [ ] （CVE-2020-24217）任意文件上传漏洞
-
-- [ ] （CVE-2020-24218）root access via telnet
-
-- [ ] （CVE-2020-24219）任意文件读取漏洞
-
-  
-
-  - [ ]  ZTE
-
-- [ ] （CVE-2020-6871）ZTE R5300G4、R8500G4和R5500G4 未授权访问漏洞
-
-  
-
-- [ ] 默认设备密码
+- [ ] 建立 CVE 总索引
