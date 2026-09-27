@@ -1,0 +1,181 @@
+---
+cve: "CVE-2024-49113"
+source: "gelusus/wxvl 公众号漏洞文库"
+---
+
+#  【漏洞通告】Windows LDAP拒绝服务漏洞（CVE-2024-49113）   
+原创 NS-CERT  绿盟科技CERT   2025-01-06 10:03  
+  
+**通告编号:NS-2024-0039**  
+  
+2025-01-06  
+  
+<table><tbody><tr><td style="margin: 5px 10px;border-color: rgb(216, 216, 216);word-break: break-all;" valign="top"><strong><span style="font-size: 14px;">TA</span></strong><strong><span style="font-size: 14px;">G：</span></strong></td><td style="margin: 5px 10px;border-color: rgb(216, 216, 216);word-break: break-all;" valign="top"><p style="vertical-align: inherit;line-height: 1.75em;font-size: 14px;color: rgb(0, 0, 0);font-family: 微软雅黑;"><strong style="caret-color: red;line-height: 1.57em;font-family:微软雅黑, &#34;Microsoft YaHei&#34;;">Windows、LDAP、拒绝服务、CVE-2024-49113</strong></p></td></tr><tr><td style="margin: 5px 10px;border-color: rgb(216, 216, 216);word-break: break-all;" valign="top"><span style="color: rgb(0, 0, 0);"><strong><span style="font-size: 14px;">漏洞危害：</span></strong></span><span style="color: rgb(255, 0, 0);"><strong><span style="font-size: 14px;"></span></strong></span></td><td style="margin: 5px 10px;border-color: rgb(216, 216, 216);word-break: break-all;" valign="top"><p><strong style="caret-color: red;font-size: 14px;line-height: 1.57em;font-family:微软雅黑, &#34;Microsoft YaHei&#34;;">攻击者利用此漏洞，可导致拒绝服务或信息泄露</strong></p></td></tr><tr><td style="margin: 5px 10px;border-color: rgb(216, 216, 216);word-break: break-all;" valign="top"><strong><span style="font-size: 14px;">版本：</span></strong></td><td style="margin: 5px 10px;border-color: rgb(216, 216, 216);word-break: break-all;" valign="top"><strong><span style="font-size: 14px;">1.0<br/></span></strong></td></tr></tbody></table>  
+  
+**1**  
+  
+  
+**漏洞概述**  
+  
+  
+近日，绿盟科技CERT监测到网上披露了Windows LDAP远程代码执行漏洞（CVE-2024-49113）的细节，由于Windows LDAP服务的wldap32.dll中存在越界读取漏洞，未经身份验证的攻击者可以通过未认证的特制DCE/RPC调用（或通过其他方式）诱使目标服务器（作为 LDAP 客户端）向攻击者控制的恶意LDAP服务器发起查询请求，当恶意LDAP服务器返回特制的、恶意构造的响应时可导致拒绝服务或信息泄露。CVSS评分7.5，目前漏洞细节与PoC已公开，请相关用户尽快采取措施进行防护。  
+  
+Windows Lightweight Directory Access Protocol (LDAP) 是一种基于 LDAP 协议的轻量级目录访问协议，广泛用于 Windows Active Directory (AD) 环境中，用来访问和管理目录服务信息。  
+  
+绿盟科技已成功复现此漏洞：  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/VvfsuOanecpefLaCv3mAibYicqRdkqD7icYq492czicarPdaJA5XnZAK1AJkrppNbThkoWiaauujpvJXvC0vnF0cxRw/640?wx_fmt=png&from=appmsg "")  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/VvfsuOanecpefLaCv3mAibYicqRdkqD7icYjO1VQO5fNTfy2VZejo9O2IrzTMbiamYkJT3NL9EJvel6KOeYibiaYvW3A/640?wx_fmt=png&from=appmsg "")  
+  
+  
+参考链接：  
+  
+https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-49113  
+  
+  
+**SEE MORE →******  
+  
+**2****影响范围**  
+  
+**受影响版本：**  
+  
+- Windows Server 2008 for 32-bit Systems Service Pack 2 (Server Core installation)  
+  
+- Windows Server 2012 R2 (Server Core installation)  
+  
+- Windows Server 2012 R2  
+  
+- Windows Server 2012 (Server Core installation)  
+  
+- Windows Server 2012  
+  
+- Windows Server 2008 R2 for x64-based Systems Service Pack 1 (Server Core installation)  
+  
+- Windows Server 2008 R2 for x64-based Systems Service Pack 1  
+  
+- Windows Server 2008 for x64-based Systems Service Pack 2 (Server Core installation)  
+  
+- Windows Server 2008 for x64-based Systems Service Pack 2  
+  
+- Windows Server 2008 for 32-bit Systems Service Pack 2  
+  
+- Windows Server 2016 (Server Core installation)  
+  
+- Windows Server 2016  
+  
+- Windows 10 Version 1607 for x64-based Systems  
+  
+- Windows 10 Version 1607 for 32-bit Systems  
+  
+- Windows 10 for x64-based Systems  
+  
+- Windows 10 for 32-bit Systems  
+  
+- Windows Server 2025  
+  
+- Windows 11 Version 24H2 for x64-based Systems  
+  
+- Windows 11 Version 24H2 for ARM64-based Systems  
+  
+- Windows Server 2022, 23H2 Edition (Server Core installation)  
+  
+- Windows 11 Version 23H2 for x64-based Systems  
+  
+- Windows 11 Version 23H2 for ARM64-based Systems  
+  
+- Windows Server 2025 (Server Core installation)  
+  
+- Windows 10 Version 22H2 for 32-bit Systems  
+  
+- Windows 10 Version 22H2 for ARM64-based Systems  
+  
+- Windows 10 Version 22H2 for x64-based Systems  
+  
+- Windows 11 Version 22H2 for x64-based Systems  
+  
+- Windows 11 Version 22H2 for ARM64-based Systems  
+  
+- Windows 10 Version 21H2 for x64-based Systems  
+  
+- Windows 10 Version 21H2 for ARM64-based Systems  
+  
+- Windows 10 Version 21H2 for 32-bit Systems  
+  
+- Windows Server 2022 (Server Core installation)  
+  
+- Windows Server 2022  
+  
+- Windows Server 2019 (Server Core installation)  
+  
+- Windows Server 2019  
+  
+- Windows 10 Version 1809 for x64-based Systems  
+  
+- Windows 10 Version 1809 for 32-bit Systems  
+  
+  
+  
+**3****漏洞检测**  
+  
+**3.1 人工检测**  
+  
+相关用户可通过查看系统版本与补丁信息的方法判断当前系统是否存在风险。  
+  
+1、使用“Win+R”组合键，输入“winver”并回车，即可查看当前系统build版本号：  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/VvfsuOanecpefLaCv3mAibYicqRdkqD7icYibia8EtSg6w8lQvt35X8pliaEyBiaF6lnxYdNPDIR6EicBE2IYtkbzw0icAQ/640?wx_fmt=png&from=appmsg "")  
+  
+2、打开命令提示符窗口，输入systeminfo命令，检查系统安装补丁信息：  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/VvfsuOanecpefLaCv3mAibYicqRdkqD7icYVAXfibefIJXrDic4kic1P8GjsZ4SFceMk49pEvbD7O2GQMKOIjIhKmkNw/640?wx_fmt=png&from=appmsg "")  
+  
+  
+**4****漏洞防护**  
+  
+**4.1  补丁更新**  
+  
+目前微软官方已针对受支持的产品版本发布了修复该漏洞的安全补丁，建议受影响用户尽快安装补丁进行防护，下载链接：  
+  
+https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-49113  
+  
+ 注：由于网络问题、计算机环境问题等原因，Windows Update的补丁更新可能出现失败。用户在安装补丁后，应及时检查补丁是否成功更新。  
+  
+右键点击Windows图标，选择“设置(N)”，选择“更新和安全”-“Windows更新”，查看该页面上的提示信息，也可点击“查看更新历史记录”查看历史更新情况。  
+  
+针对未成功安装的更新，可点击更新名称跳转到微软官方下载页面，建议用户点击该页面上的链接，转到“Microsoft更新目录”网站下载独立程序包并安装。  
+  
+  
+**END**  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/qR4ORTNELImFwJM2rh6GKbnrurdFA28jJ8chUPyC1U6aW3jhenqEiaXkmeGVmfOnvAJy8j3My901JQ7emHaicYzA/640?wx_fmt=png "")  
+           
+  
+![](https://mmbiz.qpic.cn/mmbiz_jpg/qR4ORTNELImFwJM2rh6GKbnrurdFA28jib7icfic0lJJHh3eLRpIXiaia08KqOSEibBsz64vlOH9aqicu3lmjccEeAFWQ/640?wx_fmt=jpeg "")  
+          
+  
+**声明**  
+  
+本安全公告仅用来描述可能存在的安全问题，绿盟科技不为此安全公告提供任何保证或承诺。由于传播、利用此安全公告所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，绿盟科技以及安全公告作者不为此承担任何责任。              
+  
+绿盟科技拥有对此安全公告的修改和解释权。如欲转载或传播此安全公告，必须保证此安全公告的完整性，包括版权声明等全部内容。未经绿盟科技允许，不得任意修改或者增减此安全公告内容，不得以任何方式将其用于商业目的。              
+  
+![](https://mmbiz.qpic.cn/mmbiz_jpg/qR4ORTNELImFwJM2rh6GKbnrurdFA28jib7icfic0lJJHh3eLRpIXiaia08KqOSEibBsz64vlOH9aqicu3lmjccEeAFWQ/640?wx_fmt=jpeg "")  
+  
+  
+**绿盟科技CERT**  
+****  
+∣  
+微信公众号  
+  
+![](https://mmbiz.qpic.cn/mmbiz_jpg/VvfsuOanecpefLaCv3mAibYicqRdkqD7icYFLngtg5sDkngS0dFFoMgc7K3INogua9wuh73TwltkTeUeHwibVibQG6w/640?wx_fmt=jpeg&from=appmsg "绿盟科技CERT公众号.jpg")  
+  
+![](https://mmbiz.qpic.cn/mmbiz/Hu8hctxHqSW0nSJn8p8OHVEQwHicSwTibFJMBE650AxdzfISoeY8woe2QsgCINIBrccBOOUft2HuU0GsNQWibSG7g/640?wx_fmt=png "")  
+  
+长按识别二维码，关注网络安全威胁信息  
+  
+
+
+---
+
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）

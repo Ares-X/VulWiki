@@ -1,0 +1,121 @@
+---
+cve: "CVE-2023-36475"
+source: "gelusus/wxvl 公众号漏洞文库"
+---
+
+#  【漏洞通告】Parse Server远程代码执行漏洞(CVE-2023-36475)   
+深瞳漏洞实验室  深信服千里目安全技术中心   2023-07-03 20:22  
+  
+![](https://mmbiz.qpic.cn/mmbiz_gif/w8NHw6tcQ5wqicZGVRKXkCKQVevStQ3biaSBXvwpiaUJxeQUicibCZ9pt0xicEuYUvLic32zZhq9rWtibSWgAEAVgsodKw/640?wx_fmt=gif "")  
+  
+**漏洞名称：**  
+  
+Parse Server远程代码执行漏洞(CVE-2023-36475)  
+  
+**组件名称：**  
+  
+Parse Server   
+  
+**影响范围：**  
+  
+Parse Server < 5.5.2  
+  
+6.0.0 ≤ Parse Server < 6.2.1  
+  
+**漏洞类型：**  
+  
+远程代码执行  
+  
+**利用条件：**  
+  
+1、用户认证：未知  
+  
+2、前置条件：默认配置  
+  
+3、触发方式：远程  
+  
+**综合评价：**  
+  
+<综合评定利用难度>：未知。  
+  
+<综合评定威胁等级>：严重，能造成远程代码执行。  
+  
+**官方解决方案：**  
+  
+已发布  
+  
+  
+  
+  
+  
+**漏洞分析**  
+  
+![](https://mmbiz.qpic.cn/mmbiz_gif/w8NHw6tcQ5wqicZGVRKXkCKQVevStQ3biaFWYWSux1AGRDMPhAdbg48fQzs56jcazfpchGqe0O1lNZ1AaAJonZMA/640?wx_fmt=gif "")  
+  
+**组件介绍**  
+  
+Parse Server是一个开源的后端框架，可以部署到任何能运行Node.js的基础设施上。它与Express web应用程序框架配合使用，可以添加到现有的Web应用程序中，也可以单独运行。  
+  
+![](https://mmbiz.qpic.cn/mmbiz_gif/w8NHw6tcQ5wqicZGVRKXkCKQVevStQ3biaFWYWSux1AGRDMPhAdbg48fQzs56jcazfpchGqe0O1lNZ1AaAJonZMA/640?wx_fmt=gif "")  
+  
+**漏洞简介**  
+  
+**2023年7月3日，深信服安全团队监测到一则Parse Server组件存在远程代码执行漏洞的信息，漏洞编号：CVE-2023-36475，漏洞威胁等级：严重。**  
+  
+  
+该漏洞是由于Parse Server对用户的输入缺乏控制，当MongoDB BSON解析器解析攻击者构造的恶意BSON数据时易受原型污染影响，攻击者可利用该漏洞远程执行任意代码。  
+  
+  
+**影响范围**  
+  
+目前受影响的Parse Server版本：  
+  
+Parse Server < 5.5.2  
+  
+6.0.0 ≤ Parse Server < 6.2.1  
+  
+  
+**解决方案**  
+  
+![](https://mmbiz.qpic.cn/mmbiz_gif/w8NHw6tcQ5wqicZGVRKXkCKQVevStQ3biaFWYWSux1AGRDMPhAdbg48fQzs56jcazfpchGqe0O1lNZ1AaAJonZMA/640?wx_fmt=gif "")  
+  
+**官方修复建议**  
+  
+  
+当前官方已发布最新版本，建议受影响的用户及时更新升级到最新版本。链接如下：  
+  
+https://github.com/parse-community/parse-server/releases  
+  
+  
+**参考链接**  
+  
+  
+https://github.com/parse-community/parse-server/security/advisories/GHSA-462x-c3jw-7vr6  
+  
+  
+**时间轴**  
+  
+  
+  
+**2023/7/3**  
+  
+深信服监测到Parse Server官方发布安全通告。  
+  
+  
+**2023/7/3**  
+  
+深信服千里目安全技术中心发布漏洞通告。  
+  
+  
+点击**阅读原文**，及时关注并登录深信服**智安全平台**，可轻松查询漏洞相关解决方案。  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/w8NHw6tcQ5wqicZGVRKXkCKQVevStQ3biat2WgvfUOtJDFUZvfbcLmYFAbABuWX1RAYibibdv3X73dWpoK1bxCQ05Q/640?wx_fmt=png "")  
+  
+![](https://mmbiz.qpic.cn/mmbiz_jpg/w8NHw6tcQ5wqicZGVRKXkCKQVevStQ3bia4RBVCrI7ib0uicc2WfbOm0RkJfHq9XXkpyzfiam0WLS92jVt8ib14uicicZg/640?wx_fmt=jpeg "")  
+  
+  
+
+
+---
+
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）

@@ -1,0 +1,18 @@
+---
+cve: "CVE-2026-76009"
+source: "gelusus/wxvl 公众号漏洞文库"
+---
+
+#  【漏洞通告】Next-Cart迁移插件认证绕过漏洞(CVE-2026-76009)  
+ 安迈信科应急响应中心   2026-09-10 07:29  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/tdibEPWdubQUgErMslSgzVibGKdSFkWPTbTgu83UTXdNYm7eOxRSmuNmOjUIxdicy73wTLufCMnbs6CAsc3uicJUcg/640?wx_fmt=png "")  
+### 01 漏洞概况      WordPress 的 Next-Cart Store to WooCommerce Migration 插件在所有版本（包括 3.9.8）中存在身份验证绕过漏洞。插件注册的/wp-json/next_cart/v1/migration REST 路由，permission_callback设置为__return_true，同时get_option('nextcart_token', 'token')依赖硬编码回退值token；当nextcart_token选项未写入数据库时，未经身份验证的攻击者可传入字符串token绕过身份验证。该端点可接收攻击者可控 SQL 语句并执行，支持创建管理员账号，还可传入可控路径执行unlink()实现任意文件删除，最终造成站点完全接管。当插件通过 WP-CLI、网络激活等方式激活，且管理员未登录后台触发令牌生成时，漏洞条件即可满足。建议用户升级插件至 3.9.9 及以上版本修复此漏洞。02 漏洞处置综合处置优先级：高漏洞信息漏洞名称Next-Cart 迁移插件认证绕过漏洞漏洞编号CVE编号CVE-2026-76009‍漏洞评估披露时间2026-09-09漏洞类型身份验证绕过危害评级高危公开程度PoC未公开威胁类型身份验证漏洞利用情报在野利用否影响产品产品名称Next-Cart Store toWooCommerce Migration（Next-Cart 迁移插件）受影响版本≤3.9.8影响范围广有无修复补丁有  
+### 03 漏洞排查      用户尽快排查 WordPress 站点是否部署 Next-Cart Store to WooCommerce Migration 迁移插件，且插件版本是否≤3.9.8。若存在，极大可能会受到影响。同时核查插件配置，检查数据库中nextcart_token字段是否已正常生成。04 修复方案官方修复方案：将组件 nextcart-woocommerce-migration 升级至 3.9.9 及以上版本05 时间线      2026.09.09 漏洞披露，CVE-2026-76009 公开；2026.09.09 发布安全预警，提醒用户排查 WordPress 站点 Next-Cart 迁移插件版本并升级修复漏洞。   关于安迈信科西安安迈信科科技有限公司以“数字化可管理”为核心理念，坚持DevOps自主研发，创新打造“能力聚合、流程闭环、持续赋能”的综合性网络数据安全平台与运营服务。公司从古城西安出发，已在全国范围内为政府、运营商、电力、能源等行业客户提供了高质量的安全保障，并将继续为我国数字化转型和发展贡献力量。智 慧 . 至 简 . 致 诚  
+  
+  
+
+
+---
+
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）

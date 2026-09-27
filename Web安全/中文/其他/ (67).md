@@ -1,0 +1,210 @@
+---
+cve: "CVE-2026-21508"
+source: "gelusus/wxvl 公众号漏洞文库"
+---
+
+#  【已复现】Windows 存储权限提升漏洞(CVE-2026-21508)  
+原创 360漏洞研究院
+                    360漏洞研究院  360漏洞研究院   2026-02-13 03:21  
+  
+“扫描下方二维码，进入公众号粉丝交流群。更多一手网安资讯、漏洞预警、技术干货和技术交流等您参与！”  
+  
+  
+  
+![](https://mmbiz.qpic.cn/mmbiz_gif/5nNKGRl7pFgrNicMticDTWVCUWbOwRuWcrYSpAlwDRibKNLbe3KialEfR0Y2PlPAvS4MN50asXETicAviaRy1gRicI2Dw/640?wx_fmt=gif&from=appmsg "")  
+  
+  
+<table><tbody><tr style="box-sizing: border-box;"><td colspan="4" data-colwidth="100.0000%" width="100.0000%" style="border-width: 1px;border-color: rgb(100, 130, 228);border-style: solid;background-color: rgb(100, 130, 228);box-sizing: border-box;padding: 0px;"><section style="text-align: center;color: rgb(255, 255, 255);box-sizing: border-box;"><p style="margin: 0px;padding: 0px;box-sizing: border-box;"><strong style="box-sizing: border-box;"><span leaf="">漏洞概述</span></strong></p></section></td></tr><tr style="box-sizing: border-box;"><td data-colwidth="24.0000%" width="24.0000%" style="border-width: 1px;border-color: rgb(100, 130, 228);border-style: solid;box-sizing: border-box;padding: 0px;"><section style="font-size: 12px;color: rgb(0, 0, 0);padding: 0px 8px;box-sizing: border-box;"><p style="white-space: normal;margin: 0px;padding: 0px;box-sizing: border-box;"><strong style="box-sizing: border-box;"><span leaf="">漏洞名称</span></strong></p></section></td><td colspan="3" data-colwidth="76.0000%" width="76.0000%" style="border-width: 1px;border-color: rgb(100, 130, 228);border-style: solid;box-sizing: border-box;padding: 0px;"><section style="font-size: 12px;padding: 0px 8px;box-sizing: border-box;"><p style="white-space: normal;margin: 0px;padding: 0px;box-sizing: border-box;"><span leaf="">Windows 存储权限提升漏洞</span></p></section></td></tr><tr style="box-sizing: border-box;"><td data-colwidth="24.0000%" width="24.0000%" style="border-width: 1px;border-color: rgb(100, 130, 228);border-style: solid;box-sizing: border-box;padding: 0px;"><section style="font-size: 12px;color: rgb(0, 0, 0);padding: 0px 8px;box-sizing: border-box;"><p style="white-space: normal;margin: 0px;padding: 0px;box-sizing: border-box;"><strong style="box-sizing: border-box;"><span leaf="">漏洞编号</span></strong></p></section></td><td colspan="3" data-colwidth="76.0000%" width="76.0000%" style="border-width: 1px;border-color: rgb(100, 130, 228);border-style: solid;box-sizing: border-box;padding: 0px;"><section style="font-size: 12px;padding: 0px 8px;box-sizing: border-box;"><p style="white-space: normal;margin: 0px;padding: 0px;box-sizing: border-box;"><span leaf="">CVE-2026-21508</span></p></section></td></tr><tr style="box-sizing: border-box;"><td data-colwidth="24.0000%" width="24.0000%" style="border-width: 1px;border-color: rgb(100, 130, 228);border-style: solid;box-sizing: border-box;padding: 0px;"><section style="font-size: 12px;color: rgb(0, 0, 0);padding: 0px 8px;box-sizing: border-box;"><p style="white-space: normal;margin: 0px;padding: 0px;box-sizing: border-box;"><strong style="box-sizing: border-box;"><span leaf="">公开时间</span></strong></p></section></td><td data-colwidth="28.0000%" width="28.0000%" style="border-width: 1px;border-color: rgb(100, 130, 228);border-style: solid;box-sizing: border-box;padding: 0px;"><section style="font-size: 12px;padding: 0px 8px;box-sizing: border-box;"><p style="white-space: normal;margin: 0px;padding: 0px;box-sizing: border-box;"><span leaf="">2026-02-10</span></p></section></td><td data-colwidth="28.0000%" width="28.0000%" style="border-width: 1px;border-color: rgb(100, 130, 228);border-style: solid;box-sizing: border-box;padding: 0px;"><section style="font-size: 12px;padding: 0px 8px;box-sizing: border-box;"><p style="white-space: normal;margin: 0px;padding: 0px;box-sizing: border-box;"><strong style="box-sizing: border-box;"><span style="color: rgb(0, 0, 0);box-sizing: border-box;"><span leaf="">POC状态</span></span></strong></p></section></td><td data-colwidth="20.0000%" width="20.0000%" style="border-width: 1px;border-color: rgb(100, 130, 228);border-style: solid;box-sizing: border-box;padding: 0px;"><section style="font-size: 12px;padding: 0px 8px;color: rgb(100, 130, 228);box-sizing: border-box;"><p style="white-space: normal;margin: 0px;padding: 0px;box-sizing: border-box;"><strong style="box-sizing: border-box;"><span leaf="">已公开</span></strong></p></section></td></tr><tr style="box-sizing: border-box;"><td data-colwidth="24.0000%" width="24.0000%" style="border-width: 1px;border-color: rgb(100, 130, 228);border-style: solid;box-sizing: border-box;padding: 0px;"><section style="font-size: 12px;color: rgb(0, 0, 0);padding: 0px 8px;box-sizing: border-box;"><p style="white-space: normal;margin: 0px;padding: 0px;box-sizing: border-box;"><strong style="box-sizing: border-box;"><span leaf="">漏洞类型</span></strong></p></section></td><td data-colwidth="28.0000%" width="28.0000%" style="border-width: 1px;border-color: rgb(100, 130, 228);border-style: solid;box-sizing: border-box;padding: 0px;"><section style="font-size: 12px;padding: 0px 8px;box-sizing: border-box;"><p style="white-space: normal;margin: 0px;padding: 0px;box-sizing: border-box;"><span leaf="">身份验证不当</span></p></section></td><td data-colwidth="28.0000%" width="28.0000%" style="border-width: 1px;border-color: rgb(100, 130, 228);border-style: solid;box-sizing: border-box;padding: 0px;"><section style="font-size: 12px;color: rgb(0, 0, 0);padding: 0px 8px;box-sizing: border-box;"><p style="white-space: normal;margin: 0px;padding: 0px;box-sizing: border-box;"><strong style="box-sizing: border-box;"><span leaf="">EXP状态</span></strong></p></section></td><td data-colwidth="20.0000%" width="20.0000%" style="border-width: 1px;border-color: rgb(100, 130, 228);border-style: solid;box-sizing: border-box;padding: 0px;"><section style="font-size: 12px;padding: 0px 8px;color: rgb(100, 130, 228);box-sizing: border-box;"><p style="white-space: normal;margin: 0px;padding: 0px;box-sizing: border-box;"><strong style="box-sizing: border-box;"><span leaf="">已公开</span></strong></p></section></td></tr><tr style="box-sizing: border-box;"><td data-colwidth="24.0000%" width="24.0000%" style="border-width: 1px;border-color: rgb(100, 130, 228);border-style: solid;box-sizing: border-box;padding: 0px;"><section style="font-size: 12px;padding: 0px 8px;box-sizing: border-box;"><p style="white-space: normal;margin: 0px;padding: 0px;box-sizing: border-box;"><strong style="box-sizing: border-box;"><span style="color: rgb(0, 0, 0);box-sizing: border-box;"><span leaf="">利用可能性</span></span></strong></p></section></td><td data-colwidth="28.0000%" width="28.0000%" style="border-width: 1px;border-color: rgb(100, 130, 228);border-style: solid;box-sizing: border-box;padding: 0px;"><section style="font-size: 12px;padding: 0px 8px;box-sizing: border-box;"><p style="white-space: normal;margin: 0px;padding: 0px;box-sizing: border-box;"><span leaf="">高</span></p></section></td><td data-colwidth="28.0000%" width="28.0000%" style="border-width: 1px;border-color: rgb(100, 130, 228);border-style: solid;box-sizing: border-box;padding: 0px;"><section style="font-size: 12px;padding: 0px 8px;color: rgb(0, 0, 0);box-sizing: border-box;"><p style="white-space: normal;margin: 0px;padding: 0px;box-sizing: border-box;"><strong style="box-sizing: border-box;"><span leaf="">技术细节状态</span></strong></p></section></td><td data-colwidth="20.0000%" width="20.0000%" style="border-width: 1px;border-color: rgb(100, 130, 228);border-style: solid;box-sizing: border-box;padding: 0px;"><section style="font-size: 12px;padding: 0px 8px;color: rgb(100, 130, 228);box-sizing: border-box;"><p style="white-space: normal;margin: 0px;padding: 0px;box-sizing: border-box;"><strong style="box-sizing: border-box;"><span leaf="">已公开</span></strong></p></section></td></tr><tr style="box-sizing: border-box;"><td data-colwidth="24.0000%" width="24.0000%" style="border-width: 1px;border-color: rgb(100, 130, 228);border-style: solid;box-sizing: border-box;padding: 0px;"><section style="font-size: 12px;color: rgb(0, 0, 0);padding: 0px 8px;box-sizing: border-box;"><p style="white-space: normal;margin: 0px;padding: 0px;box-sizing: border-box;"><strong style="box-sizing: border-box;"><span leaf="">CVSS 3.1</span></strong></p></section></td><td data-colwidth="28.0000%" width="28.0000%" style="border-width: 1px;border-color: rgb(100, 130, 228);border-style: solid;box-sizing: border-box;padding: 0px;"><section style="font-size: 12px;padding: 0px 8px;box-sizing: border-box;"><p style="white-space: normal;margin: 0px;padding: 0px;box-sizing: border-box;"><span leaf="">7.0</span></p></section></td><td data-colwidth="28.0000%" width="28.0000%" style="border-width: 1px;border-color: rgb(100, 130, 228);border-style: solid;box-sizing: border-box;padding: 0px;"><section style="font-size: 12px;color: rgb(0, 0, 0);padding: 0px 8px;box-sizing: border-box;"><p style="white-space: normal;margin: 0px;padding: 0px;box-sizing: border-box;"><strong style="box-sizing: border-box;"><span leaf="">在野利用状态</span></strong></p></section></td><td data-colwidth="20.0000%" width="20.0000%" style="border-width: 1px;border-color: rgb(100, 130, 228);border-style: solid;box-sizing: border-box;padding: 0px;"><section style="font-size: 12px;padding: 0px 8px;box-sizing: border-box;"><p style="white-space: normal;margin: 0px;padding: 0px;box-sizing: border-box;"><span leaf="">未发现</span></p></section></td></tr></tbody></table>  
+  
+  
+**01**  
+  
+影响组件  
+  
+  
+  
+Windows 存储（Windows Storage）是 Windows 操作系统中负责文件系统访问与数据管理的一组核心组件与 API 体系，主要面向本地磁盘、可移动设备、网络位置以及云同步内容的统一访问。  
+  
+  
+**02**  
+  
+**漏洞描述**  
+  
+  
+  
+近日，官方披露了 Windows 存储权限提升漏洞（CVE-2026-21508）。该漏洞源于 windows.storage.dll 中未公开函数 _SHCoCreateInstance 与 DllGetClassObject 的实现逻辑缺陷，允许攻击者通过操纵当前用户注册表项，在高权限进程调用 API 时劫持 CoCreateInstance 的 CLSID 参数，从而强制特权进程初始化指定的恶意 COM 对象。  
+  
+  
+利用此机制，攻击者只需定位一个 InprocServer32 路径位于可写目录下的特定 COM 类，即可诱导高权限进程（如 SYSTEM 或 LOCAL SERVICE）加载恶意 DLL 并在其上下文中执行任意代码。由于该漏洞源于底层 API 的通用设计缺陷，其风险不限于特定服务（如 WUDFHost.exe），理论上任何调用受影响存储组件的特权进程均可被利用实现本地提权。  
+  
+  
+**03**  
+  
+**漏洞复现******  
+  
+  
+  
+360漏洞研究院已复现Windows 存储权限提升漏洞（CVE-2026-21508），执行提权代码后，高权限进程WUDFHost.exe启动具有NT AUTHORITY\LOCAL SERVICE 身份的cmd.exe，证明漏洞可实现本地权限提升。  
+  
+![](https://mmbiz.qpic.cn/sz_mmbiz_png/dZ7ia5iaWFzzib8xRFNSpicO2lMHt2dIXTOFWaMZpbK6Tqyu1oNNeOjjtO7lR43zSIiaa8EkV2sMwDBibgMU0TfqWlRaPtDxSQshTqHkjugUTqQJw/640?wx_fmt=png&from=appmsg "")  
+  
+CVE-2026-21508 Windows 存储权限提升漏洞复现  
+  
+  
+**04**  
+  
+**漏洞影响范围******  
+  
+  
+  
+受影响的系统版本：  
+  
+Windows 11 version 26H1 for x64-based Systems < 10.0.28000.1575  
+  
+ Windows 11 Version 26H1 for ARM64-based Systems < 10.0.28000.1575  
+  
+ Windows Server 2012 R2 (Server Core installation) < 6.3.9600.23022  
+  
+ Windows Server 2012 R2 < 6.3.9600.23022  
+  
+ Windows Server 2012 (Server Core installation) < 6.2.9200.25923  
+  
+ Windows Server 2012 < 6.2.9200.25923  
+  
+ Windows Server 2016 (Server Core installation) < 10.0.14393.8868  
+  
+ Windows Server 2016 < 10.0.14393.8868  
+  
+ Windows 10 Version 1607 for x64-based Systems < 10.0.14393.8868  
+  
+ Windows 10 Version 1607 for 32-bit Systems < 10.0.14393.8868  
+  
+ Windows Server 2025 < 10.0.26100.32370  
+  
+ Windows 11 Version 24H2 for x64-based Systems < 10.0.26100.7840  
+  
+ Windows 11 Version 24H2 for ARM64-based Systems < 10.0.26100.7840  
+  
+ Windows Server 2022, 23H2 Edition (Server Core installation) < 10.0.25398.2149  
+  
+ Windows 11 Version 23H2 for x64-based Systems < 10.0.22631.6649  
+  
+ Windows 11 Version 23H2 for ARM64-based Systems < 10.0.22631.6649  
+  
+ Windows 11 Version 25H2 for x64-based Systems < 10.0.26200.7840  
+  
+ Windows 11 Version 25H2 for ARM64-based Systems < 10.0.26200.7840  
+  
+ Windows Server 2025 (Server Core installation) < 10.0.26100.32370  
+  
+ Windows 10 Version 22H2 for 32-bit Systems < 10.0.19045.6937  
+  
+ Windows 10 Version 22H2 for ARM64-based Systems < 10.0.19045.6937  
+  
+ Windows 10 Version 22H2 for x64-based Systems < 10.0.19045.6937  
+  
+ Windows 10 Version 21H2 for x64-based Systems < 10.0.19044.6937  
+  
+ Windows 10 Version 21H2 for ARM64-based Systems < 10.0.19044.6937  
+  
+ Windows 10 Version 21H2 for 32-bit Systems < 10.0.19044.6937  
+  
+ Windows Server 2022 (Server Core installation) < 10.0.20348.4773  
+  
+ Windows Server 2022 < 10.0.20348.4773  
+  
+ Windows Server 2019 (Server Core installation) < 10.0.17763.8389  
+  
+ Windows Server 2019 < 10.0.17763.8389  
+  
+ Windows 10 Version 1809 for x64-based Systems < 10.0.17763.8389  
+  
+ Windows 10 Version 1809 for 32-bit Systems < 10.0.17763.8389  
+  
+  
+**05**  
+  
+**修复建议******  
+  
+  
+  
+**正式防护方案**  
+  
+方法一. 使用Windows Update更新  
+  
+自动更新：  
+  
+Microsoft Update默认启用，当系统检测到可用更新时，将会自动下载更新并在下一次启动时安装。  
+  
+手动更新：  
+  
+1、点击“开始菜单”或按Windows快捷键，点击进入“设置”。  
+  
+2、选择“更新和安全”，进入“Windows更新”。  
+  
+3、选择“检查更新”，等待系统将自动检查并下载可用更新。  
+  
+4、重启计算机，安装更新系统重新启动后，可通过进入“Windows更新”->“查看更新历史记录”查看是否成功安装了更新。对于没有成功安装的更新，可以点击该更新名称进入微软官方更新描述链接，点击最新的SSU名称并在新链接中点击“Microsoft 更新目录”，然后在新链接中选择适用于目标系统的补丁进行下载并安装。  
+  
+  
+方法二. 手动安装补丁  
+  
+Microsoft官方下载相应补丁进行更新。  
+  
+安全更新下载链接：https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-21508  
+  
+1.点击打开上述链接。  
+  
+2.在微软公告页面底部左侧【产品】选择相应的系统类型，点击右侧【下载】处打开补丁下载链接。  
+  
+3.点击【安全更新】，打开补丁下载页面，下载相应补丁并进行安装。  
+  
+4.安装完成后重启计算机。  
+  
+  
+**06**  
+  
+**时间线**  
+  
+  
+  
+2026年02月13日，360漏洞研究院发布本安全风险通告。  
+  
+  
+**07**  
+  
+参考链接  
+  
+  
+  
+https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-21508  
+  
+  
+08  
+  
+更多漏洞情报  
+  
+  
+  
+建议您订阅360数字安全-漏洞情报服务，获取更多漏洞情报详情以及处置建议，让您的企业远离漏洞威胁。  
+  
+  
+邮箱：360VRI@360.cn  
+  
+网址：https://vi.loudongyun.360.net  
+  
+  
+  
+“洞”悉网络威胁，守护数字安全  
+  
+  
+**关于我们**  
+  
+  
+360 漏洞研究院，隶属于360数字安全集团。其成员常年入选谷歌、微软、华为等厂商的安全精英排行榜, 并获得谷歌、微软、苹果史上最高漏洞奖励。研究院是中国首个荣膺Pwnie Awards“史诗级成就奖”，并获得多个Pwnie Awards提名的组织。累计发现并协助修复谷歌、苹果、微软、华为、高通等全球顶级厂商CVE漏洞3000多个，收获诸多官方公开致谢。研究院也屡次受邀在BlackHat，Usenix Security，Defcon等极具影响力的工业安全峰会和顶级学术会议上分享研究成果，并多次斩获信创挑战赛、天府杯等顶级黑客大赛总冠军和单项冠军。研究院将凭借其在漏洞挖掘和安全攻防方面的强大技术实力，帮助各大企业厂商不断完善系统安全，为数字安全保驾护航，筑造数字时代的安全堡垒。  
+  
+
+
+---
+
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）

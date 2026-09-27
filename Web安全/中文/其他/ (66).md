@@ -1,0 +1,49 @@
+---
+cve: "CVE-2026-26029"
+source: "gelusus/wxvl 公众号漏洞文库"
+---
+
+#  【AI高危漏洞预警】Claude Desktop命令注入漏洞CVE-2026-26029  
+cexlife
+                    cexlife  飓风网络安全   2026-02-27 15:21  
+  
+![](https://mmbiz.qpic.cn/sz_mmbiz_png/Yd9HAo0qc3rlnUc1vrHdU16QMmjDkT03QX392XHX3h2icmRIo4RxhyY1xkh4e4XXqubX5d1tSMbxCFIPKADlsdymfpwZe6Cv0mZCktmD1pew/640?wx_fmt=png&from=appmsg "")  
+  
+漏洞描述:  
+  
+ѕf-mср-ѕеrvеr是为Clаudе fоr Dеѕktор实现的Sаlеѕfоrсе MCP服务器,由于在使用сhild_рrосеѕѕ.ехес构造Sаlеѕfоrсе CLI命令时对用户可控输入的处理不安全,ѕf-mср-ѕеrvеr 存在一个命令注入漏洞,成功利用该漏洞可使攻击者以MCP服务器进程的权限执行任意ѕhеll命令  
+  
+![](https://mmbiz.qpic.cn/sz_mmbiz_png/Yd9HAo0qc3rmGYogYXIMV7Th0uX2Uq1FiaaySqnrUqFo93cvcKTAAkZE1seL9G3j88KhATicy99DcUltmlbUFiaTibnZy3EhRuuZCuCANJ7O6Uw/640?wx_fmt=png&from=appmsg "")  
+  
+攻击场景:  
+  
+攻击者可通过网络远程发送恶意构造的用户输入,利用child_process.exec在未正确过滤的情况下执行任意系统命令,从而在目标系统上以MCP服务器进程权限执行任意shell命令  
+  
+影响产品及版本:  
+  
+Claude Desktop所依赖的sf-mcp-server（Salesforce MCP 服务器）组件,受影响版本为在提交 99fba0171b8c22b5ee3c0405053ccfd2910a066d之前的所有版本  
+  
+修复建议:  
+  
+应立即升级sf-mcp-server至修复版本避免使用未经验证的用户输入直接拼接至命令行,对于关键系统建议启用最小权限运行、禁用不必要的shell执行权限并部署WAF或运行时行为监控以检测异常命令调用  
+  
+目前官方已有可更新版本建议受影响用户升级至最新版本   
+  
+建议措施:  
+  
+紧急升级：立即检查本地 sf-mcp-server 版本，升级至包含修复提交 99fba0171b8c22b5ee3c0405053ccfd2910a066d的最新版本  
+  
+输入验证：对所有用户输入进行严格过滤,禁止包含 ;, &, |, $(), ` 等 shell 特殊字符  
+  
+使用安全 API：替换 child_process.exec 为 child_process.spawn 并以数组形式传参避免shell解析  
+  
+权限最小化：运行 sf-mcp-server 的进程应以非 root 权限运行，限制其系统操作能力  
+  
+日志审计：开启命令执行日志记录，监控异常命令行为，便于事后溯源  
+  
+  
+
+
+---
+
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）

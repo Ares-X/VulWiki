@@ -1,0 +1,17 @@
+---
+cve: "CVE-2026-69112"
+source: "gelusus/wxvl 公众号漏洞文库"
+---
+
+#  【漏洞通告】Hugging Face Accelerate存在目录遍历漏洞(CVE-2026-69112)  
+ 安迈信科应急响应中心   2026-08-12 10:06  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/tdibEPWdubQUgErMslSgzVibGKdSFkWPTbTgu83UTXdNYm7eOxRSmuNmOjUIxdicy73wTLufCMnbs6CAsc3uicJUcg/640?wx_fmt=png "")  
+### 01 漏洞概况     Hugging Face Accelerate 至 1.14.0 版本中存在路径遍历漏洞，涉及load_checkpoint_in_model 和 load_checkpoint_and_dispatch 函数，这些函数未能净化来自分片检查点索引的 weight_map 条目。攻击者可以利用包含 ../ 序列的相对路径或绝对路径读取任意文件，或将分片条目指向命名管道，从而造成无限阻塞和拒绝服务。02 漏洞处置综合处置优先级：高漏洞信息漏洞名称HuggingFace Accelerate存在目录遍历漏洞漏洞编号CVE编号CVE-2026-69112‍漏洞评估披露时间2026-08-10漏洞类型目录遍历危害评级高危公开程度PoC未公开威胁类型远程利用情报在野利用是影响产品产品名称HuggingFace Accelerate受影响版本HuggingFace Accelerate ≤1.14.0影响范围广有无修复补丁有  
+### 03 漏洞排查      用户尽快排查应用系统Hugging Face Accelerate应用版本是否在Hugging Face Accelerate ≤1.14.0。若存在应用使用，极大可能会受到影响。04 修复方案1、官方修复方案：当前官方已发布最新版本，建议受影响的用户及时更新升级到最新版本。05 时间线      2024.08.10 厂商发布安全补丁      2024.08.12 安迈信科安全运营团队发布通告   关于安迈信科西安安迈信科科技有限公司以“数字化可管理”为核心理念，坚持DevOps自主研发，创新打造“能力聚合、流程闭环、持续赋能”的综合性网络数据安全平台与运营服务。公司从古城西安出发，已在全国范围内为政府、运营商、电力、能源等行业客户提供了高质量的安全保障，并将继续为我国数字化转型和发展贡献力量。智 慧 . 至 简 . 致 诚  
+  
+
+
+---
+
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）

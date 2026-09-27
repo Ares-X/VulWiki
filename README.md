@@ -4,13 +4,13 @@
 
 **收录标准**：描述清楚漏洞原理/影响 + 提供利用方式（复现步骤/POC/EXP/验证方法）即收录；篇幅长短不是门槛。纯预警、无利用细节的条目不收。
 
-[![articles](https://img.shields.io/badge/文章-3000-blue)](INDEX.md) [![last](https://img.shields.io/badge/更新-持续-green)](#change-log)
+[![articles](https://img.shields.io/badge/文章-6082-blue)](INDEX.md) [![last](https://img.shields.io/badge/更新-持续-green)](#change-log)
 
 ## 简介
 
 VulWiki 收录有**完整漏洞信息和复现/利用方式**的中文漏洞文章。纯漏洞预警、无利用细节的条目一律不入库。
 
-- 总量 **3874 篇**：Web安全 3532 / IOT安全 253 / 系统安全 89
+- 总量 **6082 篇**：Web安全 5740 / IOT安全 253 / 系统安全 89
 - 覆盖 CVE ~950 条（2021:102 2022:50 2023:57 2024:66 2025:44 2026:17）
 - 每篇含：漏洞描述 / 影响版本 / 网络测绘(FOFA) / 复现步骤或 POC / 参考链接
 - 多数文章带 YAML frontmatter（`cve` / `version` / `fofa`），可 grep 精确定位
@@ -57,6 +57,7 @@ INDEX.md          # 全库索引（分类 → 组件 → 文章）
 
 ## Change Log
 
+* 2026-09-27 第四波收录 +2208 篇：gelusus/wxvl 公众号漏洞文库定向收割（CVE 复现文 2051 + 国产 1day 无 CVE 精选 157，覆盖 2022-04→2026-09，重点漏洞覆盖 48→58/63）
 * 2026-09-27 标准放宽+第三波收录 +866 篇：短篇但描述清楚+有利用方式的复活 190 篇；MrWQ/vulnerability-paper 中文复现文章 676 篇（总量 3011 → 3874）
 * 2026-09-27 重点漏洞补全：ProxyShell/vCenter/PrintNightmare/Zyxel/PaperCut/Citrix/Ivanti×3/XZ后门/regreSSHion/SAP/SharePoint 等历年 A 级漏洞 12 篇（含利用方式与 PoC 链接）
 * 2026-09-27 结构重构：组件目录字母分片、frontmatter 索引、INDEX 重建、坏目录清洗 197 个、大小写归并 17 组、修复历史断链图片引用 1500+、fastjson 2026 双 0day（CVE-2026-16723 / CVE-2026-44034）入库

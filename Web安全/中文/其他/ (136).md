@@ -1,0 +1,100 @@
+---
+cve: "CVE-2024-0012"
+source: "gelusus/wxvl 公众号漏洞文库"
+---
+
+#  【漏洞复现】Palo Alto PAN-OS身份认证绕过CVE-2024-0012及命令执行漏洞CVE-2024-9474   
+原创 清风  白帽攻防   2024-12-09 01:34  
+  
+## 免责声明：请勿使用本文中提到的技术进行非法测试或行为。使用本文中提供的信息或工具所造成的任何后果和损失由使用者自行承担，所产生的一切不良后果与文章作者无关。该文章仅供学习用途使用。  
+简介  
+  
+  
+Palo Alto Networks是全球知名的网络安全厂商，PAN-OS是Palo Alto Networks为其防火墙设备开发的操作系统。  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/yu6trpdUX0dXU9gOpUE8BXUHYZw10tRp8MwxGEajvMgY7zhpw6XAbtRjr2OlDia0skfCsGQZ9XAZxoHY33vlALQ/640?wx_fmt=png&from=appmsg "")  
+  
+  
+漏洞描述  
+  
+  
+  
+Palo Alto Networks PAN-OS 存在身份验证绕过漏洞 (CVE-2024-0012)，该漏洞允许未经身份验证的攻击者通过网络访问管理 Web 界面，获取 PAN-OS 管理员权限，从而执行管理操作、篡改配置，或利用其他经过身份验证的特权升级漏洞；此外，PAN-OS 软件还存在特权升级漏洞 (CVE-2024-9474)，该漏洞使拥有管理 Web 界面访问权限的 PAN-OS 管理员能够以 root 权限在防火墙上执行操作。  
+  
+够以 root 权限在防火墙上执行操作。  
+影响版本```
+PAN-OS 10.2 < 10.2.12-h2
+PAN-OS 11.0 < 11.0.6-h1
+PAN-OS 11.1 < 11.1.5-h1
+PAN-OS 11.2 < 11.2.4-h1
+```  
+fofa语法```
+QUAKE: app:"Palo Alto 网络防火墙"
+hunter: product.name="Palo Alto"
+```  
+漏洞复现  
+##### 身份验证绕过 - CVE-2024-0012  
+  
+查看Nginx 路由配置 -/etc/nginx/conf/locations.conf可以看到X-pan-AuthCheck控制身份验证的值为on，conf/proxy_default.conf被添加到.js.map处理程序中  
+```
+add_header Allow "GET, HEAD, POST, PUT, DELETE, OPTIONS";
+ if ($request_method !~ ^(GET|HEAD|POST|PUT|DELETE|OPTIONS)$) {
+   return 405;
+ }
+
++proxy_set_header X-Real-IP "";
++proxy_set_header X-Real-Scheme "";
++proxy_set_header X-Real-Port "";
++proxy_set_header X-Real-Server-IP "";
++proxy_set_header X-Forwarded-For  "";
++proxy_set_header X-pan-ndpp-mode "";
++proxy_set_header Proxy "";
++proxy_set_header X-pan-AuthCheck 'on';
+ # rewrite_log on;
+
+ # static ones
+@@ -27,6 +17,5 @@ location /nginx_status {
+ location ~ \.js\.map$ {
+   add_header Cache-Control "no-cache; no-store";
+   proxy_pass_header Authorization;
++  include conf/proxy_default.conf;
+   proxy_pass http://$gohost$gohostExt;
+ }
+```  
+```
+poc请到知识星球获取
+```  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/yu6trpdUX0dXU9gOpUE8BXUHYZw10tRpWbWvsJdaiaA3ryiclJrPWRiaaJK2VibFVBibaVJokEdVtenUVqNdGP5Blfg/640?wx_fmt=png&from=appmsg "")  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/yu6trpdUX0dXU9gOpUE8BXUHYZw10tRpLyxs0TUezEL1uXpdf9ZlwR4DiaGmbZXBYdjRA31W7f5KgFG4ePFsRpA/640?wx_fmt=png&from=appmsg "")  
+##### 命令执行 - CVE-2024-9474  
+```
+poc请到知识星球获取
+```  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/yu6trpdUX0dXU9gOpUE8BXUHYZw10tRpTJkiaDqBNic72a55EIEZruSw2kRib6yLVH6t3jxuictpgkicQjOY5zUkzEQ/640?wx_fmt=png&from=appmsg "")  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/yu6trpdUX0dXU9gOpUE8BXUHYZw10tRpMezW6icH9dOVGIictMjLsPs1G5cJbmgibZ9d1H9yfvCrcb3hRmNLtsAPQ/640?wx_fmt=png&from=appmsg "")  
+#### 批量检测：  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/yu6trpdUX0dXU9gOpUE8BXUHYZw10tRpeAheJibUt0px5G0B8JuuGbFXtuuic0ahuf7AWPxPkibN60rv4609o3VWg/640?wx_fmt=png&from=appmsg "")  
+修复建议  
+升级至最新版本  
+  
+  
+  
+  
+  
+  
+  
+  
+网安交流群  
+  
+![](https://mmbiz.qpic.cn/mmbiz_jpg/yu6trpdUX0efFOzibVic3qjn100tFgpUIh7ib8g9cKajewKFM5kXP350q21SCLvlgO6yx1tlia8VYxI4j3cv57FqFg/640?wx_fmt=other&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+  
+
+
+---
+
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）

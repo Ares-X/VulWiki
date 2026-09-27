@@ -1,0 +1,48 @@
+---
+cve: "CVE-2025-40908"
+source: "gelusus/wxvl 公众号漏洞文库"
+---
+
+#  【高危漏洞预警】YAML-LibYAML信息泄露漏洞(CVE-2025-40908)   
+cexlife  飓风网络安全   2025-06-03 09:00  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/ibhQpAia4xu01cR4IJVmhEewSX4zUOwIz6Oxz1fKnjPia6bQcONEjCdG79dVzvlCuE9g1tsSz2hq1p3KicWjfYY8yA/640?wx_fmt=png&from=appmsg "")  
+  
+漏洞描述:  
+  
+YAML-LibYAML在0.903.0之前的Pеrl版本使用2-аrɡѕ ореn,允许现有文件被修改   
+  
+攻击场景:  
+  
+攻击者可能通过上传恶意文件,利用LoadFile函数的漏洞,导致信息泄露。  
+  
+影响产品:  
+  
+所有使用LoadFile函数的版本   
+  
+检测方法:  
+  
+可以通过检查yaml-libyaml-pm的版本和使用的LoadFile函数来确定是否受影响,使用命令perl -MYAML::XS -e 'print $YAML::XS::VERSION'查看版本  
+  
+修复建议:  
+  
+安装补丁:  
+  
+请访问https://github.com/ingydotnet/yaml-libyaml-pm获取最新版本的yaml-libyaml-pm,确保使用修复了该漏洞的版本。  
+  
+其他修复方法:  
+  
+建议在代码中使用三参数的open方法替代现有的两参数open方法,以避免文件截断问题。  
+  
+建议用户立即更新到最新版本的уаml-libуаml-рm,并审查使用LоаdFilе函数的代码,确保不再使用两参数的ореn方法。  
+  
+参考链接:  
+  
+https://github.com/ingydotnet/yaml-libyaml-pm/issues/120  
+  
+  
+
+
+---
+
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）

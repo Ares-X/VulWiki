@@ -1,0 +1,155 @@
+---
+cve: "CVE-2025-49844"
+source: "gelusus/wxvl 公众号漏洞文库"
+---
+
+#  【成功复现】Redis Lua脚本远程代码执行漏洞(CVE-2025-49844)  
+原创 弥天安全实验室
+                    弥天安全实验室  弥天安全实验室   2026-02-11 09:51  
+  
+网安引领时代，弥天点亮未来    
+   
+  
+  
+  
+  
+  
+   
+  
+![Image](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&randomid=2jntd263&tp=webp#imgIndex=0 "")  
+  
+  
+**0x00写在前面**  
+  
+**本次测试仅供学习使用，如若非法他用，与平台和本文作者无关，需自行负责！**  
+  
+![Image](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&randomid=7c3v7kvq&tp=webp#imgIndex=1 "")  
+  
+  
+**0x01漏洞介绍**  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/YfTkN0R6oGgueKicyXdU4Us9Giaf3Pk3r4XsDZzSl9goKv8DzDagbYMA6qt378iaugfdJ8STMoKCHSdR5WiamYxOpHyS3WHuxzAucHnamuaViaqI/640?wx_fmt=png&from=appmsg "")  
+  
+Redis是美国Redis公司的一套开源的使用ANSI C编写、支持网络、可基于内存亦可持久化的日志型、键值（Key-Value）存储数据库，并提供多种语言的API。  
+  
+Redis 8.2.1及之前版本存在资源管理错误漏洞，该漏洞源于特制Lua脚本可操纵垃圾收集器，触发释放后重用，可能导致远程代码执行。  
+  
+  
+![Image](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&randomid=bzequ3sx&tp=webp#imgIndex=3 "")  
+  
+  
+**0x02影响版本**  
+  
+通过命令确认当前telnet所属包和版本  
+```
+redis-cli -v 
+```  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/YfTkN0R6oGgobNv9GpCDzWFibWqEtIPuhEgSNxZ5pT34qNe56ibLgGbboCBBZjbnJjJrBMvxwVmsq07243nuUpcLfEoGBLRGibZpRuiciarqMCo8/640?wx_fmt=png&from=appmsg "")  
+  
+Redis < 6.2.20  
+  
+7.2.0 ≤ Redis < 7.2.11  
+  
+7.4.0 ≤ Redis < 7.4.6  
+  
+8.0.0 ≤ Redis < 8.0.4  
+  
+8.2.0 ≤ Redis < 8.2.2  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/YfTkN0R6oGhU1cQx9sy6Eic0BR2Est82aibEAicic7toQLDK1TpvTBjU9aicRh4jm4nnnRDSklGHQVXmSu9ju2CpvdtWszplm2Ricic4sXOFmtJJic4/640?wx_fmt=png&from=appmsg "")  
+  
+  
+![Image](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&randomid=bzequ3sx&tp=webp#imgIndex=5 "")  
+  
+  
+**0x03漏洞复现**  
+  
+  
+1.docker搭建环境  
+```
+docker-compose up -d
+```  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/YfTkN0R6oGgk1dOjoJUmJFNFNbwxKAfmmCs5HnrBIjicxwZv2JibeWE7kv1QJDWn1NwDEKf7rB2FMqPic93dOLib1fEHhicZJwtJy3fSt9nXZiaUo/640?wx_fmt=png&from=appmsg "")  
+  
+2.漏洞复现  
+```
+python3 exploit_poc.py -H 192.168.3.33 -p 6380 -m all
+```  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/YfTkN0R6oGhU0KNz88EtkxYVpFLNT0IOdIr8Ijs1dYVV2fs98RQFbicd3aKm5hwKOESyC1qLG91GSyCgew9fvmFrvViaQtJB5IMxAm5nhJzuU/640?wx_fmt=png&from=appmsg "")  
+  
+3.工具测试  
+  
+查看信息  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/YfTkN0R6oGjsD0mIAZNfkpoEmdFjfEr5SB2sthbKPvqmgAicpbCA4MUwIwBljHyI53I2xlUeiah64bMHibicUJYOm2QfvY9SZqqySLE3JricTUlI/640?wx_fmt=png&from=appmsg "")  
+  
+4.自研漏洞流量检测规则，成功检出。  
+  
+  
+![](https://mmbiz.qpic.cn/sz_mmbiz_png/YfTkN0R6oGg0jbSJdrNsjpuQepDYs3icYFfrNUKfn6pvj69ia6Zf9Q5fAoibgxDTOzNE8U9e8omHmdNWdYX86jeicibxzswXdtpeRTxBThVYq0CU/640?wx_fmt=png&from=appmsg "")  
+  
+![Image](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&randomid=bzequ3sx&tp=webp#imgIndex=3 "")  
+  
+  
+**0x04修复建议**  
+  
+  
+目前厂商已发布升级补丁以修复漏洞，补丁获取链接：  
+  
+临时缓解方案  
+  
+1、在 WAF、IDS/IPS 中部署基于 POC 的检测规则，识别针对该漏洞的探测与攻击行为。  
+  
+2、 在业务允许的情况下内网访问redis。  
+  
+  
+  建议尽快升级修复漏洞，再次声明本文仅供学习使用，非法他用责任自负！  
+  
+         
+```
+https://redis.io/
+https://github.com/redis/redis/security/advisories/GHSA-4789-qfc9-5f9q
+```  
+  
+  
+  
+弥天简介  
+  
+学海浩茫，予以风动，必降弥天之润！弥天安全实验室成立于2019年2月19日，主要研究安全防守溯源、威胁狩猎、漏洞复现、工具分享等不同领域。目前主要力量为民间白帽子，也是民间组织。主要以技术共享、交流等不断赋能自己，赋能安全圈，为网络安全发展贡献自己的微薄之力。  
+  
+口号 网安引领时代，弥天点亮未来  
+  
+  
+  
+![Image](https://mmbiz.qpic.cn/mmbiz_gif/b96CibCt70iaaqjXT4YxgHVARD1NNv0RvKtiaAvXhmruVqgavPY3stwrfvLKetGycKUfxIq3Xc6F6dhU7eb4oh2gg/640?wx_fmt=gif&wxfrom=5&wx_lazy=1&randomid=h6lqq1ue&tp=webp#imgIndex=8 "")  
+  
+   
+  
+  
+知识分享完了  
+  
+喜欢别忘了关注我们哦~  
+  
+学海浩茫，  
+  
+予以风动，  
+  
+必降弥天之润！  
+  
+  
+   弥  天  
+  
+安全实验室  
+  
+![Image](https://mmbiz.qpic.cn/mmbiz_jpg/MjmKb3ap0hDyTJAqicycpl7ZakwfehdOgvOqd7bOUjVTdwxpfudPLOJcLiaSZnMC7pDDdlIF4TWBWWYnD04wX7uA/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&randomid=u34b870m&tp=webp#imgIndex=9 "")  
+  
+  
+  
+
+
+---
+
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）

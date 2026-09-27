@@ -1,0 +1,85 @@
+---
+cve: "CVE-2025-31324"
+source: "gelusus/wxvl 公众号漏洞文库"
+---
+
+#  【二次更新已复现】SAP NetWeaver MetadataUploader 文件上传漏洞（CVE-2025-31324）   
+原创 安全探索者  安全探索者   2025-04-27 07:57  
+  
+↑点击关注，获取更多漏洞预警，技术分享  
+  
+0x01 组件介绍  
+  
+    
+SAP NetWeaver是SAP的集成技术平台，是自从SAP Business Suite以来的所有SAP应用的技术基础。SAP NetWeaver是一个面向服务的应用和集成平台,为SAP的应用提供开发和运行环境，也可以用来和其它应用和系统进行自定义的开发和集成。SAP NetWeaver是使用开放标准和事实上的工业标准进行开发的，可以用Microsoft .NET，Sun Java EE，和IBM WebSphere等这些技术平台进行扩展和互操作  
+  
+  
+0x02 漏洞描述  
+  
+     
+  
+  近日，互联网上揭露了 SAP NetWeaver Visual Composer MetadataUploader 的一个关键零日漏洞，现在跟踪为 CVE-2025-31324，正在野外积极利用以破坏企业和政府系统。CVSS 评分最高为 10，该漏洞允许未经身份验证的攻击者上传和执行恶意二进制文件，使他们能够完全控制受漏洞影响的主机。ReliaQuest 威胁研究团队在 4 月份的应急响应活动中发现了这一漏洞，当时他们调查了多起 SAP NetWeaver 入侵事件。  
+目前EXP/POC都已经公开，受影响者应该立马排查。  
+<table><tbody><tr style="-webkit-tap-highlight-color: transparent;margin: 0px;padding: 0px;outline: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;visibility: visible;"><td data-colwidth="143" width="143" style="-webkit-tap-highlight-color: transparent;margin: 0px;padding: 5px 10px;outline: 0px;overflow-wrap: break-word !important;word-break: break-all;hyphens: auto;border: 1px solid rgb(0, 128, 255);max-width: 100%;box-sizing: border-box !important;visibility: visible;"><section style="-webkit-tap-highlight-color: transparent;margin: 0px;padding: 0px;outline: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;visibility: visible;"><span leaf="" style="-webkit-tap-highlight-color: transparent;margin: 0px;padding: 0px;outline: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;visibility: visible;">漏洞分类</span></section></td><td colspan="3" data-colwidth="143,143,143" width="143,143,143" style="-webkit-tap-highlight-color: transparent;margin: 0px;padding: 5px 10px;outline: 0px;overflow-wrap: break-word !important;word-break: break-all;hyphens: auto;border: 1px solid rgb(0, 128, 255);max-width: 100%;box-sizing: border-box !important;visibility: visible;"><section style="-webkit-tap-highlight-color: transparent;margin: 0px;padding: 0px;outline: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;visibility: visible;"><span leaf="" style="-webkit-tap-highlight-color: transparent;margin: 0px;padding: 0px;outline: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;visibility: visible;">文件上传</span></section></td></tr><tr style="-webkit-tap-highlight-color: transparent;margin: 0px;padding: 0px;outline: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;visibility: visible;"><td data-colwidth="143" width="143" style="-webkit-tap-highlight-color: transparent;margin: 0px;padding: 5px 10px;outline: 0px;overflow-wrap: break-word !important;word-break: break-all;hyphens: auto;border: 1px solid rgb(0, 128, 255);max-width: 100%;box-sizing: border-box !important;visibility: visible;"><section style="-webkit-tap-highlight-color: transparent;margin: 0px;padding: 0px;outline: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;visibility: visible;"><span leaf="" data-pm-slice="1 1 [&#34;table&#34;,{&#34;interlaced&#34;:null,&#34;align&#34;:null,&#34;class&#34;:null,&#34;style&#34;:null},&#34;table_body&#34;,{},&#34;table_row&#34;,{&#34;class&#34;:null,&#34;style&#34;:null},&#34;table_cell&#34;,{&#34;colspan&#34;:1,&#34;rowspan&#34;:1,&#34;colwidth&#34;:[143],&#34;width&#34;:null,&#34;valign&#34;:null,&#34;align&#34;:null,&#34;style&#34;:null},&#34;para&#34;,null]" style="-webkit-tap-highlight-color: transparent;margin: 0px;padding: 0px;outline: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;visibility: visible;">CVSS 3.1分数</span></section></td><td data-colwidth="143" width="143" style="-webkit-tap-highlight-color: transparent;margin: 0px;padding: 5px 10px;outline: 0px;overflow-wrap: break-word !important;word-break: break-all;hyphens: auto;border: 1px solid rgb(0, 128, 255);max-width: 100%;box-sizing: border-box !important;visibility: visible;"><section style="-webkit-tap-highlight-color: transparent;margin: 0px;padding: 0px;outline: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;visibility: visible;"><span leaf="" style="-webkit-tap-highlight-color: transparent;margin: 0px;padding: 0px;outline: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;visibility: visible;"><span textstyle="" style="color: rgb(255, 0, 0);">10.0</span></span></section></td><td data-colwidth="143" width="143" style="-webkit-tap-highlight-color: transparent;margin: 0px;padding: 5px 10px;outline: 0px;overflow-wrap: break-word !important;word-break: break-all;hyphens: auto;border: 1px solid rgb(0, 128, 255);max-width: 100%;box-sizing: border-box !important;visibility: visible;"><section style="-webkit-tap-highlight-color: transparent;margin: 0px;padding: 0px;outline: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;visibility: visible;"><span leaf="" style="-webkit-tap-highlight-color: transparent;margin: 0px;padding: 0px;outline: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;visibility: visible;">漏洞等级</span></section></td><td data-colwidth="143" width="143" style="-webkit-tap-highlight-color: transparent;margin: 0px;padding: 5px 10px;outline: 0px;overflow-wrap: break-word !important;word-break: break-all;hyphens: auto;border: 1px solid rgb(0, 128, 255);max-width: 100%;box-sizing: border-box !important;visibility: visible;"><section style="-webkit-tap-highlight-color: transparent;margin: 0px;padding: 0px;outline: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;visibility: visible;"><span leaf="" style="-webkit-tap-highlight-color: transparent;margin: 0px;padding: 0px;outline: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;visibility: visible;"><span textstyle="" style="color: rgb(255, 0, 0);">严重</span></span></section></td></tr><tr style="-webkit-tap-highlight-color: transparent;margin: 0px;padding: 0px;outline: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;visibility: visible;"><td data-colwidth="143" width="143" style="-webkit-tap-highlight-color: transparent;margin: 0px;padding: 5px 10px;outline: 0px;overflow-wrap: break-word !important;word-break: break-all;hyphens: auto;border: 1px solid rgb(0, 128, 255);max-width: 100%;box-sizing: border-box !important;visibility: visible;"><section style="-webkit-tap-highlight-color: transparent;margin: 0px;padding: 0px;outline: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;visibility: visible;"><span leaf="" style="-webkit-tap-highlight-color: transparent;margin: 0px;padding: 0px;outline: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;visibility: visible;">POC/EXP</span></section></td><td data-colwidth="143" width="143" style="-webkit-tap-highlight-color: transparent;margin: 0px;padding: 5px 10px;outline: 0px;overflow-wrap: break-word !important;word-break: break-all;hyphens: auto;border: 1px solid rgb(0, 128, 255);max-width: 100%;box-sizing: border-box !important;visibility: visible;"><section style="-webkit-tap-highlight-color: transparent;margin: 0px;padding: 0px;outline: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;visibility: visible;"><span leaf="" style="-webkit-tap-highlight-color: transparent;margin: 0px;padding: 0px;outline: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;visibility: visible;"> </span><span leaf="" style="-webkit-tap-highlight-color: transparent;margin: 0px;padding: 0px;outline: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;visibility: visible;"><span textstyle="" style="color: rgb(255, 0, 0);">已公开</span></span></section></td><td data-colwidth="143" width="143" style="-webkit-tap-highlight-color: transparent;margin: 0px;padding: 5px 10px;outline: 0px;overflow-wrap: break-word !important;word-break: break-all;hyphens: auto;border: 1px solid rgb(0, 128, 255);max-width: 100%;box-sizing: border-box !important;visibility: visible;"><section style="-webkit-tap-highlight-color: transparent;margin: 0px;padding: 0px;outline: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;visibility: visible;"><span leaf="" style="-webkit-tap-highlight-color: transparent;margin: 0px;padding: 0px;outline: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;visibility: visible;">可利用性</span></section></td><td data-colwidth="143" width="143" style="-webkit-tap-highlight-color: transparent;margin: 0px;padding: 5px 10px;outline: 0px;overflow-wrap: break-word !important;word-break: break-all;hyphens: auto;border: 1px solid rgb(0, 128, 255);max-width: 100%;box-sizing: border-box !important;visibility: visible;"><section style="-webkit-tap-highlight-color: transparent;margin: 0px;padding: 0px;outline: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;visibility: visible;"><span leaf="" style="-webkit-tap-highlight-color: transparent;margin: 0px;padding: 0px;outline: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;visibility: visible;"><span textstyle="" style="color: rgb(255, 0, 0);">高</span></span></section></td></tr></tbody></table>  
+  
+0x03 影响版本  
+  
+此漏洞影响 SAP NetWeaver  及其 Visual Composer 组件  
+<table><tbody><tr style="-webkit-tap-highlight-color: transparent;outline: 0px;visibility: visible;"></tr></tbody></table>  
+  
+0x04 漏洞验证  
+  
+目前POC/EXP已经公开（  
+后台留言：  
+CVE-2025-31324  
+，获取测试POC  
+）  
+  
+概念性验证：  
+  
+发送数据包，出现下面的即可证明漏洞存在  
+  
+![](https://mmbiz.qpic.cn/sz_mmbiz_png/pl2czC0m3eroibQvj2dvvGsvWBFHVWThjpN5e17Tml7Fmr11Ewq4IWPRnxbVfDib0wib6BGYyQl5XRjicdFwxfGtTw/640?wx_fmt=png&from=appmsg "")  
+  
+![](https://mmbiz.qpic.cn/sz_mmbiz_png/pl2czC0m3eroibQvj2dvvGsvWBFHVWThjzyJvKiadbYsmW2uz6rnnkAABAIW8iaAQcLTibAFWlwPcdbP5gqviciavQWA/640?wx_fmt=png&from=appmsg "")  
+  
+  
+  
+0x05 漏洞影响  
+  
+由于该漏洞影响范围较广，危害较大。通过以上复现过程，我们可以知道该漏洞的利用过程比较简单，  
+可以上传webshell控制服务器  
+，能造成的危害是严重的。企业应该尽快排查是否有使用该组件，并尽快做出对应措施  
+  
+  
+0x06 修复建议  
+  
+1.SAP 已发布修复补丁，建议用户立即升级到最新版本。  
+  
+下载地址：  
+https://me.sap.com/notes/3594142  
+  
+2.临时修复措施：  
+  
+限制对 Metadata Uploader 组件的访问  
+  
+0X07 参考链接  
+  
+https://securityonline.info/cve-2025-31324-cvss-10-zero-day-in-sap-netweaver-exploited-in-the-wild-to-deploy-webshells-and-c2-frameworks/  
+  
+  
+0x08 免责声明  
+  
+> 本文所涉及的任何技术、信息或工具，仅供学习和参考之用。  
+  
+> 请勿利用本文提供的信息从事任何违法活动或不当行为。任何因使用本文所提供的信息或工具而导致的损失、后果或不良影响，均由使用者个人承担责任，与本文作者无关。  
+  
+> 作者不对任何因使用本文信息或工具而产生的损失或后果承担任何责任。使用本文所提供的信息或工具即视为同意本免责声明，并承诺遵守相关法律法规和道德规范。  
+  
+  
+  
+
+
+---
+
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）

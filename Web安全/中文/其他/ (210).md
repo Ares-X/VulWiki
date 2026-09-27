@@ -1,0 +1,101 @@
+---
+cve: "CVE-2023-20887"
+source: "gelusus/wxvl 公众号漏洞文库"
+---
+
+#  【安全通告】VMware Aria Operations for Networks代码执行漏洞（CVE-2023-20887）   
+原创 NS-CERT  绿盟科技CERT   2023-06-15 18:02  
+  
+**通告编号:NS-2023-0025**  
+  
+2023-06-15  
+  
+<table><tbody><tr><td style="margin: 5px 10px;border-color: rgb(216, 216, 216);word-break: break-all;" valign="top" width="98"><strong><span style="font-size: 14px;">TA</span></strong><strong><span style="font-size: 14px;">G：</span></strong></td><td style="margin: 5px 10px;border-color: rgb(216, 216, 216);word-break: break-all;" valign="top" width="417"><p style="vertical-align: inherit;line-height: 1.75em;font-size: 14px;color: rgb(0, 0, 0);font-family: 微软雅黑;"><strong style="caret-color: red;line-height: 1.57em;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;, sans-serif;"><span style="font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">VMware Aria Operations for Networks、远程代码执行、CVE-2023-20887</span></strong></p></td></tr><tr><td style="margin: 5px 10px;border-color: rgb(216, 216, 216);word-break: break-all;" valign="top" width="46"><span style="color: rgb(0, 0, 0);"><strong><span style="font-size: 14px;">漏洞危害：</span></strong></span><span style="color: rgb(255, 0, 0);"><strong><span style="font-size: 14px;"></span></strong></span></td><td style="margin: 5px 10px;border-color: rgb(216, 216, 216);word-break: break-all;" valign="top" width="437"><p><strong style="caret-color: red;font-size: 14px;line-height: 1.5em;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">攻击者利用该漏洞可实现远程代码执行</strong></p></td></tr><tr><td style="margin: 5px 10px;border-color: rgb(216, 216, 216);word-break: break-all;" valign="top" width="46"><strong><span style="font-size: 14px;">版本：</span></strong></td><td style="margin: 5px 10px;border-color: rgb(216, 216, 216);word-break: break-all;" valign="top" width="433"><strong><span style="font-size: 14px;">1.0<br/></span></strong></td></tr></tbody></table>  
+  
+**1**  
+  
+  
+**漏洞概述**  
+  
+  
+近日，绿盟科技  
+CERT  
+监测到  
+VMware Aria Operations for Networks  
+远程代码执行漏洞。由于  
+createSupportBundle  
+方法中存在特定缺陷，执行系统调用时未正确验证用户输入的字符串，未经身份验证的远程攻击者可通过命令注入的方式利用该漏洞，最终可实现在目标系统上以  
+root  
+权限执行任意代码。目前该漏洞细节及  
+PoC已公开，请相关用户尽快采取措施进行防护。  
+  
+VMware Aria Operations for Networks  
+是  
+VMware  
+的一款多云网络智能运维工具，它提供了一整套网络智能管理方案，旨在优化网络运营效率，提高网络服务质量，有效提升企业业务效果和用户满意度。它还提供了自定义报告、数据分析和运维服务等增值功能，扩展了网络管理的职能，并支持与其他  
+VMware  
+平台的集成。适用于各种规模的网络环境，包括企业、云提供商和服务提供商等。  
+  
+  
+漏洞状态：  
+<table><tbody><tr><td style="border-top-width: 2px;border-left-width: 2px;border-color: windowtext;" width="145"><p style="text-align:center;line-height: 1.75em;"><span style="font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;"><strong><span style="line-height: 125%;color: black;background: white;">漏洞细节</span></strong></span></p></td><td style="border-top-width: 2px;border-top-color: windowtext;border-left: none;border-bottom-color: windowtext;border-right-color: windowtext;" width="145"><p style="text-align:center;line-height: 1.75em;"><span style="font-family:微软雅黑, Microsoft YaHei;"><strong><span style="line-height: 125%;color: black;background: white;">漏洞</span></strong><strong><span style="line-height: 125%;color: black;background: white;">PoC</span></strong></span></p></td><td style="border-top-width: 2px;border-top-color: windowtext;border-left: none;border-bottom-color: windowtext;border-right-color: windowtext;" width="126"><p style="text-align:center;line-height: 1.75em;"><span style="font-family:微软雅黑, Microsoft YaHei;"><strong><span style="line-height: 125%;color: black;background: white;">漏洞</span></strong><strong><span style="line-height: 125%;color: black;background: white;">EXP</span></strong></span></p></td><td style="border-top-width: 2px;border-top-color: windowtext;border-left: none;border-bottom-color: windowtext;border-right-width: 2px;border-right-color: windowtext;" width="188"><p style="text-align:center;line-height: 1.75em;"><span style="font-family:微软雅黑, Microsoft YaHei;"><strong><span style="line-height: 125%;color: black;background: white;">在野利用</span></strong></span></p></td></tr><tr><td style="border-top: none;border-left-width: 2px;border-left-color: windowtext;border-bottom-width: 2px;border-bottom-color: windowtext;border-right-color: windowtext;" width="145"><p style="text-align:center;line-height: 1.75em;"><span style="line-height: 125%;color: black;background: white;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">已公开</span></p></td><td style="border-top: none;border-left: none;border-bottom-width: 2px;border-bottom-color: windowtext;border-right-color: windowtext;" width="145"><p style="text-align:center;line-height: 1.75em;"><span style="line-height: 125%;color: black;background: white;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">已公开</span></p></td><td style="border-top: none;border-left: none;border-bottom-width: 2px;border-bottom-color: windowtext;border-right-color: windowtext;" width="196"><p style="text-align:center;line-height: 1.75em;"><span style="line-height: 125%;color: black;background: white;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">未公开</span></p></td><td style="border-top: none;border-left: none;border-bottom-width: 2px;border-bottom-color: windowtext;border-right-width: 2px;border-right-color: windowtext;" width="188"><p style="text-align:center;line-height: 1.75em;"><span style="line-height: 125%;color: black;background: white;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">暂不存在</span></p></td></tr></tbody></table>  
+  
+参考链接：  
+  
+https://www.vmware.com/security/advisories/VMSA-2023-0012.html  
+  
+  
+**SEE MORE →******  
+  
+**2****影响范围**  
+  
+**受影响版本：**  
+  
+- VMware Aria Operations Networks = 6.x  
+  
+  
+  
+  
+**3****漏洞防护**  
+  
+**3.1 官方升级**  
+  
+目前官方已发布安全补丁修复此漏洞，建议受影响的用户及时升级防护，官方下载链接如下：  
+  
+https://kb.vmware.com/s/article/92684  
+  
+  
+**END**  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/qR4ORTNELImFwJM2rh6GKbnrurdFA28jJ8chUPyC1U6aW3jhenqEiaXkmeGVmfOnvAJy8j3My901JQ7emHaicYzA/640?wx_fmt=png "")  
+           
+  
+![](https://mmbiz.qpic.cn/mmbiz_jpg/qR4ORTNELImFwJM2rh6GKbnrurdFA28jib7icfic0lJJHh3eLRpIXiaia08KqOSEibBsz64vlOH9aqicu3lmjccEeAFWQ/640?wx_fmt=jpeg "")  
+          
+  
+**声明**  
+  
+本安全公告仅用来描述可能存在的安全问题，绿盟科技不为此安全公告提供任何保证或承诺。由于传播、利用此安全公告所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，绿盟科技以及安全公告作者不为此承担任何责任。              
+  
+绿盟科技拥有对此安全公告的修改和解释权。如欲转载或传播此安全公告，必须保证此安全公告的完整性，包括版权声明等全部内容。未经绿盟科技允许，不得任意修改或者增减此安全公告内容，不得以任何方式将其用于商业目的。              
+  
+![](https://mmbiz.qpic.cn/mmbiz_jpg/qR4ORTNELImFwJM2rh6GKbnrurdFA28jib7icfic0lJJHh3eLRpIXiaia08KqOSEibBsz64vlOH9aqicu3lmjccEeAFWQ/640?wx_fmt=jpeg "")  
+  
+  
+**绿盟科技CERT**  
+****  
+∣  
+微信公众号  
+  
+![](https://mmbiz.qpic.cn/mmbiz_jpg/VvfsuOanecoQ72JRvqHlpec6Vkrrpfv8kCujBHsO2uNkYv4qSqicrtHF8LiavGdOYfQiaC0GRHsHjn9H8jllITHLQ/640?wx_fmt=jpeg "绿盟科技CERT公众号.jpg")  
+  
+![](https://mmbiz.qpic.cn/mmbiz/Hu8hctxHqSW0nSJn8p8OHVEQwHicSwTibFJMBE650AxdzfISoeY8woe2QsgCINIBrccBOOUft2HuU0GsNQWibSG7g/640?wx_fmt=png "")  
+  
+长按识别二维码，关注网络安全威胁信息  
+  
+  
+
+
+---
+
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）

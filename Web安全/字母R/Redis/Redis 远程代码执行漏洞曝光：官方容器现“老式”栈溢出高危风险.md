@@ -1,0 +1,64 @@
+---
+cve: "CVE-2025-62507"
+source: "gelusus/wxvl 公众号漏洞文库"
+---
+
+#  Redis 远程代码执行漏洞曝光：官方容器现“老式”栈溢出高危风险  
+看雪学苑
+                    看雪学苑  看雪学苑   2026-01-21 09:59  
+  
+近日，JFrog安全研究团队公开披露了Redis数据库中一个高危漏洞的完整利用链，证实“老式”栈缓冲区溢出攻击在2026年仍具极大危害性。  
+该漏洞编号为CVE-2025-62507，CVSS评分高达8.8，影响Redis 8.2.0至8.2.2版本，可被攻击者用于实现远程代码执行（RCE）。  
+  
+  
+![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8EWlibLrznGWdJ9oTiaYicmK0GCeaibwIBYLfbpibdBtiaGVmyrzAsMGN25bBHrIiaFo80qR8gOE06wsV57A/640?wx_fmt=png&from=appmsg "")  
+  
+  
+漏洞根源在于Redis 8.2版本新增的XACKDEL命令。  
+此命令用于优化流处理，支持在单个原子操作中确认并删除多条消息，但开发者未对用户输入的消息ID数量进行边界检查。当攻击者传入的ID数量超过函数栈上固定大小数组的容量时，数据会溢出并覆盖栈上的关键内存，包括函数返回地址。  
+  
+  
+更令人担忧的是，JFrog团队发现官方Redis Docker镜像未启用栈金丝雀（stack canary）保护机制，这一安全疏漏让原本复杂的栈溢出攻击变得极易实现。攻击者可精准控制指令指针，通过面向返回编程（ROP）绕过NX（不可执行）保护，调用系统mprotect函数将栈标记为可执行，最终运行恶意Shellcode。研究人员已通过构造包含XGROUP CREATE和特制XACKDEL命令的攻击序列，成功触发反向Shell，完整验证了攻击链的可行性。  
+  
+  
+根据Shodan扫描数据，全球约有3262台服务器运行受影响的Redis版本，其中美国、德国、中国的暴露数量位居前三。由于Redis默认不强制身份验证，该漏洞可被未经授权的远程攻击者直接利用，成为黑客的重点攻击目标。  
+  
+  
+目前，Redis官方已在8.3.2版本中修复该漏洞。安全专家建议所有使用受影响版本的用户立即升级，并检查Redis实例的网络暴露情况，限制公网访问以降低被攻击风险。  
+  
+  
+  
+资讯来源  
+：  
+securityonline.info  
+  
+转载请注明出处和本文链接  
+  
+  
+  
+﹀  
+  
+﹀  
+  
+﹀  
+  
+  
+![](https://mmbiz.qpic.cn/mmbiz_jpg/Uia4617poZXP96fGaMPXib13V1bJ52yHq9ycD9Zv3WhiaRb2rKV6wghrNa4VyFR2wibBVNfZt3M5IuUiauQGHvxhQrA/640?wx_fmt=jpeg "")  
+  
+![](https://mmbiz.qpic.cn/sz_mmbiz_gif/1UG7KPNHN8Fjcl6q2ORwibt8PXPU5bLibE1yC1VFg5b1Fw8RncvZh2CWWiazpL6gPXp0lXED2x1ODLVNicsagibuxRw/640?wx_fmt=gif&from=appmsg "")  
+  
+**球分享**  
+  
+![](https://mmbiz.qpic.cn/sz_mmbiz_gif/1UG7KPNHN8Fjcl6q2ORwibt8PXPU5bLibE1yC1VFg5b1Fw8RncvZh2CWWiazpL6gPXp0lXED2x1ODLVNicsagibuxRw/640?wx_fmt=gif&from=appmsg "")  
+  
+**球点赞**  
+  
+![](https://mmbiz.qpic.cn/sz_mmbiz_gif/1UG7KPNHN8Fjcl6q2ORwibt8PXPU5bLibE1yC1VFg5b1Fw8RncvZh2CWWiazpL6gPXp0lXED2x1ODLVNicsagibuxRw/640?wx_fmt=gif&from=appmsg "")  
+  
+**球在看**  
+  
+
+
+---
+
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）

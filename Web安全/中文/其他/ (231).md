@@ -1,0 +1,178 @@
+---
+cve: "CVE-2019-14439"
+source: "gelusus/wxvl 公众号漏洞文库"
+---
+
+#  【漏洞处置SOP】FasterXML jackson-databind 信息泄露漏洞（CVE-2019-14439）   
+原创 Eason  方桥安全漏洞防治中心   2025-04-16 10:01  
+  
+![](https://mmbiz.qpic.cn/sz_mmbiz_png/2JVOUiaJORTsJByUl9Ecvlksa1G17JM4q6Kz3hJv8hJLKYdaEBjWbSYiaib9RuNuj5jicoicHdUBia98AcHsQH7BSTFg/640?wx_fmt=png&from=appmsg "")  
+# 01 SOP基本信息  
+- **SOP名称：**  
+CVE-2019-14439｜FasterXML jackson-databind 信息泄露漏洞处置标准作业程序（SOP）  
+  
+- **版本：**  
+1.0  
+  
+- **发布日期：**  
+2024-08-22  
+  
+- **作者：Jungle**  
+  
+- **审核人：**  
+T小组  
+  
+- **修订记录：**  
+  
+- **初始版本：**  
+创建SOP  
+  
+# 02 SOP的用途  
+  
+本SOP旨在指导系统管理员安全、高效地处置CVE-2019-14439漏洞，确保在规定时间内完成漏洞修复并提交给安全部门验证，保障系统安全。  
+  
+# 03 SOP的目标用户技能要求  
+- 具备Java应用程序开发的相关知识。  
+  
+- 了解 FasterXML jackson-databind功能。  
+  
+- 能够阅读和理解技术文档，如软件更新日志、安全公告等。  
+  
+# 04 漏洞详细信息  
+- 漏洞名称：  
+CVE-2019-14439  
+  
+- 漏洞类型：  
+远程代码执行（RCE）  
+  
+- 风险等级：  
+高危  
+  
+- CVSS评分：  
+7.5  
+  
+- 漏洞描述：  
+CVE-2019-14439是Jackson-databind组件中的一个反序列化远程命令执行漏洞。攻击者可以通过精心构造的JSON数据，利用Jackson的数据绑定功能，在受影响的Jackson服务器上执行任意代码。该漏洞可以绕过先前已知的CVE-2019-12384漏洞防护，对系统安全构成严重威胁。  
+  
+- 影响范围：  
+  
+- Jackson-databind < 2.9.9.2  
+  
+- Jackson-databind < 2.10.0  
+  
+- Jackson-databind < 2.7.9.6  
+  
+- Jackson-databind < 2.8.11.4  
+  
+- 其他未提及但版本低于上述安全版本的Jackson-databind组件  
+  
+# 05 漏洞处置方案  
+1. 升级到以下安全版本：  
+  
+1. jackson-databind >=   
+2.9.9.2  
+  
+1. jackson-databind >=   
+2.10.0  
+  
+1. jackson-databind >=   
+2.7.9.6  
+  
+1. jackson-databind >=   
+2.8.11.4  
+    
+  
+1. 目前厂商已发布升级补丁以修复漏洞，补丁获取链接：  
+https://github.com/FasterXML/jackson-databind/tags  
+  
+# 【注意事项】  
+- 在应用补丁或升级版本之前，请确保进行充分的备份。  
+  
+- 遵循官方提供的安装和配置指南进行操作。  
+  
+- 在生产环境中升级前，最好在测试环境中先进行测试。  
+  
+- 修复漏洞前进行充分测试，以确保系统稳定性和安全性。  
+  
+- 不同版本系列尽量升级到本系列版本无漏洞的版本，尽量不要版本跨度太大，避免出现一些不兼容情况。  
+  
+# 06 漏洞修补详细步骤  
+  
+以下是针对（CVE-2019-14439）FasterXML jackson-databind 信息泄露漏洞的具体可操作的详细修复步骤参考：  
+  
+**1. 使用开发工具打开受影响的工程**  
+  
+本文以eclipse为例  
+  
+**2. 确定当前 jackson-databind版本**  
+  
+打开pom.xml文件查看相关依赖，本文以受影响的jackson-databind-2.9.9版本为例  
+  
+![](https://mmbiz.qpic.cn/sz_mmbiz_png/2JVOUiaJORTsJByUl9Ecvlksa1G17JM4qiacAzlEpPyxDaThM5DRrl8jj61rVlZ0SAXQnicjprBPNg6Ok3egIr2VQ/640?wx_fmt=png&from=appmsg "")  
+  
+![](https://mmbiz.qpic.cn/sz_mmbiz_png/2JVOUiaJORTsJByUl9Ecvlksa1G17JM4qfrFvdxJSt3TVZfMy5pNiahmsGXficibFgC0FUuiah6Tg6xgycMSeTABvlw/640?wx_fmt=png&from=appmsg "")  
+  
+****  
+**3. 修改****pom****文件升级jackson-databind版本(如有别的jackson相关组件，建议版本一起升级，避免不兼容)**  
+- 创建新分支用于漏洞修复  
+  
+- 修改pom文件中jackson-databind版本，本文以升级到jackson-databind-2.11.3为例  
+  
+![](https://mmbiz.qpic.cn/sz_mmbiz_png/2JVOUiaJORTsJByUl9Ecvlksa1G17JM4qCItXSNcsQhTYGhQvGlbUyjHNoDRFicmuvabf7keMZDfVyS3UlV93esg/640?wx_fmt=png&from=appmsg "")  
+  
+![](https://mmbiz.qpic.cn/sz_mmbiz_png/2JVOUiaJORTsJByUl9Ecvlksa1G17JM4qBS87PNQ8c9ZWQvZDfZpSXuM77eh06DfiaGtk7wwpdhJ3NV6pbWOFhqw/640?wx_fmt=png&from=appmsg "")  
+  
+**4. 重新编译打包工程**  
+  
+编译打包命令   
+```
+mvn clean install
+```  
+  
+**5. 启动对应工程服务**  
+  
+启动命令  
+```
+ java -jar  xxx.jar
+```  
+  
+**6. 验证修复效果**  
+：  
+  
+访问系统相关功能进行测试，确保漏洞已被成功修复。  
+  
+**7. 记录处置过程**  
+：  
+  
+撰写漏洞处置报告，详细记录修补步骤、日期和结果。****  
+  
+**8. 提交报告**  
+：  
+  
+将漏洞处置报告提交给安全部门，等待验证和确认。  
+  
+  
+  
+- End -  
+  
+  
+  
+  
+欢迎投稿或扫码添加运营助手获取附件  
+  
+▽  
+  
+![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/2JVOUiaJORTs0BYdgedlDZlsLV4xZ0ibUnRljKAMsTq37lxLQCBBuo5pgf5iahvEaL4rAfHY9wR2fyE2M8e9V2k4g/640?wx_fmt=other&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+  
+  
+欢迎关注公众号  
+  
+▽  
+  
+  
+  
+
+
+---
+
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）

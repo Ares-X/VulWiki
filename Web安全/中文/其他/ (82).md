@@ -1,0 +1,84 @@
+---
+cve: "CVE-2026-8037"
+source: "gelusus/wxvl 公众号漏洞文库"
+---
+
+#  【已支持检测】预认证即可利用！Kemp LoadMaster 堆内存缺陷导致命令注入远程代码执行漏洞（CVE-2026-8037）  
+ 华顺信安威胁情报中心   2026-06-30 08:29  
+  
+# ▌漏洞描述  
+  
+  
+Progress Kemp LoadMaster 是一类负载均衡和应用交付控制器（ADC），广泛部署于企业边界、数据中心入口、业务发布链路和高可用场景，可提供四层/七层流量管理、SSL/TLS 卸载、内容切换、健康检查和 Web 应用防护等能力。  
+  
+Progress官方在 2026 年 6 月披露 Kemp LoadMaster 命令注入远程代码执行漏洞CVE-2026-8037，CVSS 评分 9.8（严重）。漏洞位于 API 认证处理链路中，当系统处理提交到访问接口的用户名、密码等字段时，会调用用于处理单引号转义的逻辑，再将处理结果拼接进后续认证命令。  
+<table><tbody><tr><td data-colwidth="191"><p><span leaf=""><span textstyle="" style="font-size: 12px;">受影响组件产品</span></span></p></td><td data-colwidth="191"><p><span leaf=""><span textstyle="" style="font-size: 12px;">受影响版本</span></span></p></td><td data-colwidth="191"><p><span leaf=""><span textstyle="" style="font-size: 12px;">修复版本</span></span></p></td></tr><tr><td data-colwidth="191"><p><span leaf=""><span textstyle="" style="font-size: 12px;">Kemp LoadMaster GA</span></span></p></td><td data-colwidth="191"><p><span leaf=""><span textstyle="" style="font-size: 12px;">&lt; v7.2.63.1</span></span></p></td><td data-colwidth="191"><p><span leaf=""><span textstyle="" style="font-size: 12px;">7.2.63.2</span></span></p></td></tr><tr><td data-colwidth="191"><p><span leaf=""><span textstyle="" style="font-size: 12px;">Kemp LoadMaster LTSF</span></span></p></td><td data-colwidth="191"><p><span leaf=""><span textstyle="" style="font-size: 12px;">&lt; v7.2.54.17</span></span></p></td><td data-colwidth="191"><p><span leaf=""><span textstyle="" style="font-size: 12px;">7.2.54.18</span></span></p></td></tr></tbody></table># ▌利用条件  
+  
+  
+- 目标相关 API 功能处于启用状态；  
+  
+- 攻击者能够从公网、办公网、运维网或其他可达网段访问 LoadMaster API。  
+  
+大致利用链路：  
+  
+攻击者首先访问 LoadMaster 的 API 认证相关接口，向认证流程提交经过构造的用户名、密码等字段。系统在处理这些字段时，会调用单引号转义逻辑对用户输入进行处理，并将处理结果拼接进后续认证命令。  
+  
+旧版本的转义处理逻辑在分配堆缓冲区后，没有可靠完成内存初始化和字符串终止处理。攻击者可通过特定输入影响转义后的内存布局，使后续命令拼接逻辑读取到非预期内容，进而破坏原本应被保护的命令参数边界。  
+  
+在完成堆内存布局影响后，攻击者可进一步让认证命令拼接进入异常状态，使非预期命令内容进入系统命令执行路径，最终造成未认证远程命令执行。  
+# ▌威胁状态分析  
+  
+LoadMaster 通常位于企业网络边界或关键业务入口。一旦边界负载均衡设备被控制，攻击者可能获得对业务流量、证书材料、管理配置、后端服务映射和访问控制策略的进一步观察或篡改能力，同时也可能以root权限在设备上执行命令。对于承担公网入口、SSL 卸载或应用交付职责的部署，该漏洞的影响不应仅按单台设备理解。  
+  
+        结合 FOFA 等测绘引擎，可以看到全球暴露的公网 LoadMaster 服务实例达800+:  
+  
+![](https://mmbiz.qpic.cn/sz_mmbiz_png/iaPgUxMqaSAiaJgEvlWH0djLpFaKLAVtl46ic4h244SicL6BbHTLPVq83omj6XofecXHKMOsBD4EWhTbbAyZm8jV6r8ic86mceiasm9Cm05MooibpI/640?wx_fmt=png&from=appmsg "")  
+  
+高风险场景  
+- LoadMaster 管理界面或 API 对公网开放。  
+  
+- API 只对办公网、访客网、弱隔离 VLAN 或第三方运维网络开放，但缺少强访问控制。  
+  
+- 设备部署在 DMZ、云主机、虚拟化环境或核心业务入口，且历史上未及时更新。  
+  
+- 边界设备与后端业务网络之间存在较高信任关系，缺少独立审计和横向访问限制。  
+  
+# ▌排查和修复建议  
+  
+  
+- 梳理是否存在 Progress Kemp LoadMaster 资产，重点核查公网入口、DMZ、云环境、测试环境和历史遗留管理地址。  
+  
+- 确认当前 LMOS 版本和运行分支，GA 分支升级至 7.2.63.2，LTSF 分支升级至 7.2.54.18。  
+  
+- 限制 LoadMaster 管理界面和 API 访问，仅允许可信管理网段、堡垒机或 VPN 后访问。  
+  
+- 排查公网安全组、NAT、端口映射、反向代理、运维跳板配置，确认 API 未被非预期暴露。  
+  
+- 对升级前曾暴露过 API 的设备进行入侵排查，关注异常 API 请求、配置变更、异常进程、异常账号、证书或密钥访问痕迹。  
+  
+- 若怀疑已被利用，除升级外，应评估轮换管理凭据、API 相关凭据、证书私钥和后端服务访问凭据。  
+  
+  
+  
+# ▌产品支持情况  
+  
+  
+华顺信安全产线产品已支持 LoadMaster 相关产品组件暴露面风险资产规则识别及 CVE-2026-8037 漏洞检测（EXP），缩短从“知道有漏洞”到“找到资产并完成处置”的时间差。  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/iaPgUxMqaSAiaUHOuvtPbtOoyq99vH9Sl9YypszZnW3ESE9gmr83qmSNib9GLj6QicSPOGSW3moYMNjAEl0QrfhDuG64RLUkpsu7h5ULmbhjbjk/640?wx_fmt=png&from=appmsg "")  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/iaPgUxMqaSAgAm4Qggn8OydkcZTXFGZONic9z0xoI2HjHaM5OqUYnJs3AvGxELZjLXeRN044ic2aGgiaicVkMQtc5m7V8ibic4WaYOnFLneSQBhQ64/640?wx_fmt=png&from=appmsg "")  
+# ▌参考  
+- https://labs.watchtowr.com/enterprise-tech-in-shell-out-progress-kemp-loadmaster-uninitialized-heap-to-pre-auth-rce-cve-2026-8037/  
+  
+- https://docs.progress.com/bundle/loadmaster-vulnerabilities-ga/page/Vulnerabilities.html  
+  
+![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/iaPgUxMqaSAiaGSMGlL1tDCIKobjY6yE5QEzLH0piaDOsHs2Cp8EpNt4wRwG8gsHJ0Hwh5YhqY8JH3C7sQP04paoyhbPPZxVqf5wscbwLRSiaZw/640?wx_fmt=other&from=appmsg&watermark=1&tp=webp&wxfrom=5&wx_lazy=1#imgIndex=2 "")  
+  
+![图片](https://mmbiz.qpic.cn/sz_mmbiz_jpg/iaPgUxMqaSAg3rbmrt8b5zVrvNlbMAkBc3icQPjPy59bgFWKA58EWheMcnn9ibZ0nOEuqa9DouhMHpm0cRZdJHGADKb6gwk73jy6J4rW1do1YU/640?wx_fmt=other&from=appmsg&watermark=1&tp=webp&wxfrom=5&wx_lazy=1#imgIndex=3 "")  
+  
+
+
+---
+
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）

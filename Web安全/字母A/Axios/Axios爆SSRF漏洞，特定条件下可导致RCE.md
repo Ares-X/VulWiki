@@ -1,0 +1,129 @@
+---
+source: "gelusus/wxvl 公众号漏洞文库"
+---
+
+#  Axios爆SSRF漏洞，特定条件下可导致RCE  
+原创 微步情报局
+                    微步情报局  微步在线研究响应中心   2026-04-14 07:06  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/fFyp1gWjicMKNkm4Pg1Ed6nv0proxQLEKJ2CUCIficfAwKfClJ84puialc9eER0oaibMn1FDUpibeK1t1YvgZcLYl3A/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+  
+  
+  
+漏洞概况  
+  
+  
+Axios是一个基于Promise的HTTP客户端，广泛应用于浏览器和Node.js环境。  
+  
+近日，Axios官方发布安全通告，修复了一个SSRF漏洞（CVE-2026-40175）。  
+微步情报局已成功复现该漏洞。  
+经分析，该漏洞  
+无需用户权限  
+即可利用。攻击者可通过传入相对URL或绝对URL的方式，控制请求发送至非预期目标，从而对内网服务发起探测与访问，  
+导致敏感信息泄露或内网资产被攻击。  
+  
+值得注意的是，在特定场景下，若结合不安全的运行环境配置或业务代码，  
+影响会进一步扩大，导致远程代码执行  
+。建议受影响用户  
+尽快升级修复  
+。（完整漏洞情报请查阅 https://x.threatbook.com/v5/vul/XVE-2026-13154）  
+  
+漏洞处置优先级(VPT)  
+  
+  
+**综合处置优先级：**  
+中风险  
+<table><tbody><tr><td rowspan="3" style="border: 1px solid rgb(221, 221, 221);padding: 12px;vertical-align: top;font-weight: bold;background-color: rgb(248, 249, 250);"><section><span leaf="">基本信息</span></section></td><td style="border: 1px solid rgb(221, 221, 221);padding: 12px;vertical-align: top;"><section><span leaf="">微步编号</span></section></td><td style="border: 1px solid #ddd;padding: 12px;vertical-align: top;"><section><span leaf="">XVE-2026-13154</span></section></td></tr><tr><td style="border: 1px solid #ddd;padding: 12px;vertical-align: top;"><section><span leaf="">CVE编号</span></section></td><td style="border: 1px solid #ddd;padding: 12px;vertical-align: top;"><section><span leaf="">CVE-2026-40175</span></section></td></tr><tr><td style="border: 1px solid #ddd;padding: 12px;vertical-align: top;"><section><span leaf="">漏洞类型</span></section></td><td style="border: 1px solid #ddd;padding: 12px;vertical-align: top;"><section><span leaf="">SSRF</span></section></td></tr><tr><td rowspan="5" style="border: 1px solid #ddd;padding: 12px;vertical-align: top;font-weight: bold;background-color: #f8f9fa;"><section><span leaf="">利用条件评估</span></section></td><td style="border: 1px solid #ddd;padding: 12px;vertical-align: top;"><section><span leaf="">利用漏洞的网络条件</span></section></td><td style="border: 1px solid #ddd;padding: 12px;vertical-align: top;"><section><span leaf="">远程</span></section></td></tr><tr><td style="border: 1px solid #ddd;padding: 12px;vertical-align: top;"><section><span leaf="">是否需要绕过安全机制</span></section></td><td style="border: 1px solid #ddd;padding: 12px;vertical-align: top;"><section><span leaf="">否</span></section></td></tr><tr><td style="border: 1px solid #ddd;padding: 12px;vertical-align: top;"><section><span leaf="">对被攻击系统的要求</span></section></td><td style="border: 1px solid #ddd;padding: 12px;vertical-align: top;"><section><span leaf="">无特殊要求</span></section></td></tr><tr><td style="border: 1px solid #ddd;padding: 12px;vertical-align: top;"><section><span leaf="">利用漏洞的权限要求</span></section></td><td style="border: 1px solid #ddd;padding: 12px;vertical-align: top;"><section><span leaf="">无须用户权限</span></section></td></tr><tr><td style="border: 1px solid #ddd;padding: 12px;vertical-align: top;"><section><span leaf="">是否需要受害者配合</span></section></td><td style="border: 1px solid #ddd;padding: 12px;vertical-align: top;"><section><span leaf="">否</span></section></td></tr><tr><td rowspan="2" style="border: 1px solid #ddd;padding: 12px;vertical-align: top;font-weight: bold;background-color: #f8f9fa;"><section><span leaf="">利用情报</span></section></td><td style="border: 1px solid #ddd;padding: 12px;vertical-align: top;"><section><span leaf="">POC是否公开</span></section></td><td style="border: 1px solid #ddd;padding: 12px;vertical-align: top;"><span style="color: #d93025;font-weight: bold;"><span leaf="">是</span></span></td></tr><tr><td style="border: 1px solid #ddd;padding: 12px;vertical-align: top;"><section><span leaf="">已知利用行为</span></section></td><td style="border: 1px solid #ddd;padding: 12px;vertical-align: top;"><section><span leaf="">暂无</span></section></td></tr></tbody></table>  
+漏洞影响范围  
+  
+<table><tbody><tr><td style="border: 1px solid rgb(221, 221, 221);padding: 12px;vertical-align: top;font-weight: bold;background-color: rgb(248, 249, 250);"><section><span leaf="">产品名称</span></section></td><td style="border: 1px solid #ddd;padding: 12px;vertical-align: top;"><section><span leaf="">Axios</span></section></td></tr><tr><td style="border: 1px solid rgb(221, 221, 221);padding: 12px;vertical-align: top;font-weight: bold;background-color: rgb(248, 249, 250);"><section><span leaf="">受影响版本</span></section></td><td style="border: 1px solid #ddd;padding: 12px;vertical-align: top;"><section><span leaf="">&lt; 1.15.0</span></section></td></tr><tr><td style="border: 1px solid rgb(221, 221, 221);padding: 12px;vertical-align: top;font-weight: bold;background-color: rgb(248, 249, 250);"><section><span leaf="">有无修复补丁</span></section></td><td style="border: 1px solid #ddd;padding: 12px;vertical-align: top;"><section><span leaf="">有</span></section></td></tr></tbody></table>  
+漏洞复现  
+  
+  
+SSRF:  
+  
+![image.png](https://mmbiz.qpic.cn/sz_mmbiz_png/T4OSm0sXdEOWOF2FLM2CZYetvVqWyVVr80kCiciaaELBZU8mje80zs0wtyoc5AjZaIfBVicY7HtLaAMn94ZoTALDCA3zUJ80eMuGeWea5mo9ibo/640?wx_fmt=png&from=appmsg "")  
+  
+RCE:  
+  
+![image.png](https://mmbiz.qpic.cn/sz_mmbiz_png/T4OSm0sXdENOVLI2BQMNUAu1uzfotaQMRfEAJjf8kqbc8qTicH3S7kn4otFwWwrbrASVBunA9qV5FZoibyjfQMjSYT0J2282sA7J4bFfWUFk0/640?wx_fmt=png&from=appmsg "")  
+  
+  
+修复方案  
+  
+### 官方修复方案  
+  
+官方已发布修复方案，请访问链接下载：  
+  
+https://github.com/axios/axios/releases/tag/v1.15.0  
+### 临时缓解措施  
+  
+配置层：对 Host 头进行严格校验，仅允许业务使用的合法域名，避免攻击者通过伪造或覆盖 Host 头访问非预期的内部服务；同时避免直接信任 X-Forwarded-Host、X-Host、X-Original-Host 等非标准头。  
+  
+微步产品支撑  
+  
+  
+微步漏洞情报于  
+2026-04-11  
+收录该漏洞。  
+  
+微步下一代威胁情报平台NGTIP及X情报社区已于漏洞收录时向漏洞订阅用户推送该漏洞情报，并将持续推送后续更新；对于已经录入资产的用户，支持实时自动化排查受影响资产。  
+  
+微步威胁感知平台TDP已于  
+20260414  
+支持检测，检测ID：  
+S3100174564，  
+模型/规则高于：  
+20260414000000  
+可检出。  
+  
+![](https://mmbiz.qpic.cn/sz_mmbiz_png/T4OSm0sXdEP6FiaxPJFz6ghhzYSXb7Tf6wJucTibgibFQaWW4fdWJG7co93IMib5hk1fkH4zuiczQn4hmkZS08akoYcv9zWPl9fg2KBQLpu4D7BA/640?wx_fmt=png&from=appmsg "")  
+  
+  
+- END -  
+**微步漏洞情报订阅服务**  
+  
+  
+微步提供漏洞情报订阅服务，精准、高效助力企业漏洞运营：  
+- 提供高价值漏洞情报，具备及时、准确、全面和可操作性，帮助企业高效应对漏洞应急与日常运营难题；  
+  
+- 可实现对高威胁漏洞提前掌握，以最快的效率解决信息差问题，缩短漏洞运营MTTR；  
+  
+- 提供漏洞完整的技术细节，更贴近用户漏洞处置的落地；  
+  
+- 将漏洞与威胁事件库、APT组织和黑产团伙攻击大数据、网络空间测绘等结合，对漏洞的实际风险进行持续动态更新  
+。  
+  
+  
+扫码在线沟通  
+  
+↓  
+↓↓  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/Yv6ic9zgr5hQl5bZ5Mx6PTAQg6tGLiciarvXajTdDnQiacxmwJFZ0D3ictBOmuYyRk99bibwZV49wbap77LibGQHdQPtA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/Yv6ic9zgr5hTIdM9koHZFkrtYe5WU5rHxSDicbiaNFjEBAs1rojKGviaJGjOGd9KwKzN4aSpnNZDA5UWpY2E0JAnNg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+  
+  
+[点此电话咨询]()  
+  
+  
+  
+  
+**X漏洞奖励计划**  
+  
+  
+“X漏洞奖励计划”是微步X情报社区推出的一款  
+针对未公开  
+漏洞的奖励计划，我们鼓励白帽子提交挖掘到的0day漏洞，并给予白帽子可观的奖励。我们期望通过该计划与白帽子共同努力，提升0day防御能力，守护数字世界安全。  
+  
+活动详情：  
+https://x.threatbook.com/v5/vulReward  
+  
+  
+  
+
+
+---
+
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
