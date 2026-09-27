@@ -15,6 +15,13 @@ VulWiki 收录有**完整漏洞信息和复现/利用方式**的中文漏洞文�
 - 每篇含：漏洞描述 / 影响版本 / 网络测绘(FOFA) / 复现步骤或 POC / 参考链接
 - 多数文章带 YAML frontmatter（`cve` / `version` / `fofa`），可 grep 精确定位
 
+## 快速检索（三索引）
+
+- [INDEX.md](INDEX.md) — 按分类/字母/组件浏览
+- [INDEX-CVE.md](INDEX-CVE.md) — 按 CVE 年份定位（3894 个 CVE）
+- [INDEX-FOFA.md](INDEX-FOFA.md) — 按网络测绘指纹反查漏洞（446 条），FOFA/Hunter/Quake 直接可用
+- 命令行：`grep -r 'cve: "CVE-2024-21887"'` / `grep -r 'fofa' --include='*.md' -l`
+
 ## 目录结构
 
 ```
