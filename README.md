@@ -8,7 +8,7 @@
 
 VulWiki 收录有**完整漏洞信息和复现/利用方式**的中文漏洞文章。纯漏洞预警、无利用细节的条目一律不入库。
 
-- 总量 **3000 篇**：Web安全 2729 / IOT安全 217 / 系统安全 54
+- 总量 **3011 篇**：Web安全 2737 / IOT安全 217 / 系统安全 57
 - 覆盖 CVE ~950 条（2021:102 2022:50 2023:57 2024:66 2025:44 2026:17）
 - 每篇含：漏洞描述 / 影响版本 / 网络测绘(FOFA) / 复现步骤或 POC / 参考链接
 - 多数文章带 YAML frontmatter（`cve` / `version` / `fofa`），可 grep 精确定位
@@ -46,6 +46,8 @@ INDEX.md          # 全库索引（分类 → 组件 → 文章）
 | [Threekiii/Vulnerability-Wiki](https://github.com/Threekiii/Vulnerability-Wiki) & [Threekiii/Awesome-POC](https://github.com/Threekiii/Awesome-POC) | 中文漏洞知识库 + PoC 知识库（含乌云/0sec 归档） |
 | [BaizeSec/bylibrary 白阁文库](https://github.com/BaizeSec/bylibrary) | 白泽Sec 漏洞 POC/EXP 文库 |
 | [Mr-xn/Penetration_Testing_POC](https://github.com/Mr-xn/Penetration_Testing_POC) | 渗透测试 POC/EXP 汇总 |
+| [MrWQ/vulnerability-paper](https://github.com/MrWQ/vulnerability-paper) | 漏洞分析文章合集（重点漏洞补齐来源） |
+| [lal0ne/vulnerability](https://github.com/lal0ne/vulnerability) | 公开 POC 整理（边界设备 0day/1day） |
 | [Vulhub](https://github.com/vulhub/vulhub) | 部分 docker 复现环境参考 |
 | 先知社区 / 跳跳糖 / Seebug / 安全客 / Y4er Blog 等 | 部分文章原始出处（文内已逐篇标注） |
 
@@ -53,6 +55,7 @@ INDEX.md          # 全库索引（分类 → 组件 → 文章）
 
 ## Change Log
 
+* 2026-09-27 重点漏洞补全：ProxyShell/vCenter/PrintNightmare/Zyxel/PaperCut/Citrix/Ivanti×3/XZ后门/regreSSHion/SAP/SharePoint 等历年 A 级漏洞 12 篇（含利用方式与 PoC 链接）
 * 2026-09-27 结构重构：组件目录字母分片、frontmatter 索引、INDEX 重建、坏目录清洗 197 个、大小写归并 17 组、修复历史断链图片引用 1500+、fastjson 2026 双 0day（CVE-2026-16723 / CVE-2026-44034）入库
 * 2026-09-27 批量补档 +2028 篇（来源见上表），总量 988 → 3000
 * 2021-03 沿用历史记录见 git log

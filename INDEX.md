@@ -1,6 +1,6 @@
 # VulWiki 索引
 
-## Web安全（2729 篇）
+## Web安全（2737 篇）
 
 - **一米OA**（1）
   - [一米OA getfile.jsp 任意文件读取漏洞](Web安全/中文/一米OA/一米OA%20getfile.jsp%20任意文件读取漏洞.md)
@@ -1530,7 +1530,7 @@
   - [CellinxNVT摄像机GetFileContent.cgi任意文件读取漏洞](Web安全/中文/CellinxNVT摄像机/CellinxNVT摄像机GetFileContent.cgi任意文件读取漏洞.md)
 - **CISCO ASA**（1）
   - [（CVE-2020-3452）CISCO ASA远程任意文件读取](Web安全/中文/CISCO%20ASA/（CVE-2020-3452）CISCO%20ASA远程任意文件读取.md)
-- **Citrix**（11）
+- **Citrix**（12）
   - [Citrix XenMobile 任意文件读取 CVE-2020-8209](Web安全/中文/Citrix/Citrix%20XenMobile%20任意文件读取%20CVE-2020-8209.md)
   - [Citrix 远程命令执行漏洞 CVE-2019-19781](Web安全/中文/Citrix/Citrix%20远程命令执行漏洞%20CVE-2019-19781.md)
   - [Citrix-NetScaler-ADC-&-Gateway-信息泄露漏洞-CVE-2023-4966](Web安全/中文/Citrix/Citrix-NetScaler-ADC-&-Gateway-信息泄露漏洞-CVE-2023-4966.md)
@@ -1542,6 +1542,7 @@
   - [（CVE-2020-8198）Citrix 储存型xss](Web安全/中文/Citrix/（CVE-2020-8198）Citrix%20储存型xss.md)
   - [（CVE-2020-8209）Citrix XenMobile目录遍历任意文件读取漏洞](Web安全/中文/Citrix/（CVE-2020-8209）Citrix%20XenMobile目录遍历任意文件读取漏洞.md)
   - [（CVE-2020-ianianian）Citrix 目录遍历漏洞](Web安全/中文/Citrix/（CVE-2020-ianianian）Citrix%20目录遍历漏洞.md)
+  - [Citrix ADC-Gateway CVE-2023-3519 远程代码执行](Web安全/字母C/Citrix/Citrix%20ADC-Gateway%20CVE-2023-3519%20远程代码执行.md)
 - **CloudPanel**（1）
   - [CloudPanel-makefile-任意文件上传漏洞-CVE-2023-35885](Web安全/中文/CloudPanel/CloudPanel-makefile-任意文件上传漏洞-CVE-2023-35885.md)
 - **CLTPHP**（2）
@@ -1795,12 +1796,13 @@
   - [Erlang-OTP-SSH未授权远程代码执行漏洞-CVE-2025-32433](Web安全/中文/Erlang/Erlang-OTP-SSH未授权远程代码执行漏洞-CVE-2025-32433.md)
 - **ESPCMS**（1）
   - [ESPCMS 反射型xss](Web安全/中文/ESPCMS/ESPCMS%20反射型xss.md)
-- **Exchange**（5）
+- **Exchange**（6）
   - [CVE-2020-17083 Microsoft Exchange Server任意代码执行漏洞 POC](Web安全/中文/Exchange/CVE-2020-17083%20Microsoft%20Exchange%20Server任意代码执行漏洞%20POC.md)
   - [Microsoft Exchange Server 远程执行代码漏洞 CVE-2020-17083](Web安全/中文/Exchange/Microsoft%20Exchange%20Server%20远程执行代码漏洞%20CVE-2020-17083.md)
   - [Microsoft-Exchange-SSRF漏洞-CVE-2021-26885](Web安全/中文/Exchange/Microsoft-Exchange-SSRF漏洞-CVE-2021-26885.md)
   - [Microsoft-Exchange-信息泄露漏洞-CVE-2020-17143](Web安全/中文/Exchange/Microsoft-Exchange-信息泄露漏洞-CVE-2020-17143.md)
   - [Microsoft-Exchange-远程命令执行-CVE-2021-27065-26857-26858](Web安全/中文/Exchange/Microsoft-Exchange-远程命令执行-CVE-2021-27065-26857-26858.md)
+  - [ProxyShell Microsoft Exchange CVE-2021-34473 远程代码执行](Web安全/字母E/Exchange/ProxyShell%20Microsoft%20Exchange%20CVE-2021-34473%20远程代码执行.md)
 - **Eyoucms**（11）
   - [Eyoucms 1.0 前台getshell](Web安全/中文/Eyoucms/Eyoucms%201.0%20前台getshell.md)
   - [Eyoucms 1.3.5 后台getshell](Web安全/中文/Eyoucms/Eyoucms%201.3.5%20后台getshell.md)
@@ -2049,6 +2051,10 @@
 - **IP-guard**（2）
   - [IP-guardWebServer权限绕过漏洞](Web安全/中文/IP-guard/IP-guardWebServer权限绕过漏洞.md)
   - [IP-guardWebServer远程命令执行漏洞](Web安全/中文/IP-guard/IP-guardWebServer远程命令执行漏洞.md)
+- **Ivanti**（3）
+  - [Ivanti Connect Secure CVE-2023-46805 认证绕过 chained CVE-2024-21887 RCE](Web安全/字母I/Ivanti/Ivanti%20Connect%20Secure%20CVE-2023-46805%20认证绕过%20chained%20CVE-2024-21887%20RCE.md)
+  - [Ivanti Connect Secure CVE-2024-21887 未授权命令注入](Web安全/字母I/Ivanti/Ivanti%20Connect%20Secure%20CVE-2024-21887%20未授权命令注入.md)
+  - [Ivanti Connect Secure CVE-2025-0282 栈溢出远程代码执行](Web安全/字母I/Ivanti/Ivanti%20Connect%20Secure%20CVE-2025-0282%20栈溢出远程代码执行.md)
 - **Jackson**（4）
   - [Jackson-databind 反序列化漏洞 CVE-2017-7525+CVE-2017-17485](Web安全/中文/Jackson/Jackson-databind%20反序列化漏洞%20CVE-2017-7525+CVE-2017-17485.md)
   - [Jackson-databind-SSRF&RCE-CVE-2020-36179~36182](Web安全/中文/Jackson/Jackson-databind-SSRF&RCE-CVE-2020-36179~36182.md)
@@ -2545,6 +2551,8 @@
   - [panabit日志审计系统sprog_deletevent存在SQL注入漏洞](Web安全/中文/Panabit/panabit日志审计系统sprog_deletevent存在SQL注入漏洞.md)
   - [panabit日志审计系统任意用户创建漏洞和后台命令执行](Web安全/中文/Panabit/panabit日志审计系统任意用户创建漏洞和后台命令执行.md)
   - [panabit日志审计系统存在弱口令漏洞](Web安全/中文/Panabit/panabit日志审计系统存在弱口令漏洞.md)
+- **PaperCut**（1）
+  - [PaperCut NG-MF CVE-2023-27350 未授权远程代码执行](Web安全/字母P/PaperCut/PaperCut%20NG-MF%20CVE-2023-27350%20未授权远程代码执行.md)
 - **PbootCMS**（13）
   - [PbootCMS V3.1.2 正则绕过 RCE 漏洞](Web安全/中文/PbootCMS/PbootCMS%20V3.1.2%20正则绕过%20RCE%20漏洞.md)
   - [PbootCMS csrf](Web安全/中文/PbootCMS/PbootCMS%20csrf.md)
@@ -3173,6 +3181,8 @@
   - [VMware-vCenter-Server-任意文件读取漏洞](Web安全/中文/VMware/VMware-vCenter-Server-任意文件读取漏洞.md)
   - [VMware-vCenter-Server-服务器端请求伪造漏洞-CVE-2021-21973](Web安全/中文/VMware/VMware-vCenter-Server-服务器端请求伪造漏洞-CVE-2021-21973.md)
   - [VMware-vRealize-Operations-Manager-SSRF漏洞-CVE-2021-21975](Web安全/中文/VMware/VMware-vRealize-Operations-Manager-SSRF漏洞-CVE-2021-21975.md)
+- **VMware vCenter**（1）
+  - [VMware vCenter Server CVE-2021-21985 未授权RCE](Web安全/字母V/VMware%20vCenter/VMware%20vCenter%20Server%20CVE-2021-21985%20未授权RCE.md)
 - **Vmware vCenter**（2）
   - [CVE-2021-21972 vCenter 6.5-7.0 RCE ](Web安全/中文/Vmware%20vCenter/CVE-2021-21972%20vCenter%206.5-7.0%20RCE%20.md)
   - [VMware vCenter未授权任意文件读取](Web安全/中文/Vmware%20vCenter/VMware%20vCenter未授权任意文件读取.md)
@@ -3444,9 +3454,10 @@
   - [CVE-2020-10189 Zoho ManageEngine反序列化RCE](Web安全/中文/Zoho%20ManageEngine/CVE-2020-10189%20Zoho%20ManageEngine反序列化RCE.md)
 - **ZoneMinder**（1）
   - [ZoneMinderindex存在SQL注入漏洞](Web安全/中文/ZoneMinder/ZoneMinderindex存在SQL注入漏洞.md)
-- **Zyxel**（2）
+- **Zyxel**（3）
   - [Zyxel-NBG2105-身份验证绕过-CVE-2021-3297](Web安全/中文/Zyxel/Zyxel-NBG2105-身份验证绕过-CVE-2021-3297.md)
   - [Zyxel-硬编码后门账户漏洞-CVE-2020-29583](Web安全/中文/Zyxel/Zyxel-硬编码后门账户漏洞-CVE-2020-29583.md)
+  - [Zyxel 防火墙 CVE-2022-30525 setWanPortStat 未授权命令执行](Web安全/字母Z/Zyxel/Zyxel%20防火墙%20CVE-2022-30525%20setWanPortStat%20未授权命令执行.md)
 - **Zyxel(合勤)**（1）
   - [ZyxelNBG2105身份验证绕过](Web安全/中文/Zyxel%28合勤%29/ZyxelNBG2105身份验证绕过.md)
 - **ZZCMS**（7）
@@ -3487,7 +3498,7 @@
   - [74cms v6.0.4 反射型xss](Web安全/中文/74cms/74cms%20v6.0.4%20反射型xss.md)
   - [74cms v6.0.48模版注入+文件包含getshell](Web安全/中文/74cms/74cms%20v6.0.48模版注入+文件包含getshell.md)
 
-## 系统安全（54 篇）
+## 系统安全（57 篇）
 
 - **其他组件**（2）
   - [CVE-2021-1675](系统安全/其他组件/CVE-2021-1675.md)
@@ -3516,16 +3527,19 @@
   - [（CVE-2019-14287）sudo提权漏洞](系统安全/Linux/Linux本地提权漏洞/（CVE-2019-14287）sudo提权漏洞.md)
 - **Linux远程溢出漏洞**（1）
   - [（CVE-2017-7494）Linux Samba 远程代码执行](系统安全/Linux/Linux远程溢出漏洞/（CVE-2017-7494）Linux%20Samba%20远程代码执行.md)
+- **OpenSSH**（1）
+  - [OpenSSH regreSSHion CVE-2024-6387 信号处理器竞态远程代码执行](系统安全/OpenSSH/OpenSSH%20regreSSHion%20CVE-2024-6387%20信号处理器竞态远程代码执行.md)
 - **PAM劫持SSH密码**（1）
   - [PAM劫持SSH密码](系统安全/PAM劫持SSH密码/PAM劫持SSH密码.md)
 - **Ubuntu**（1）
   - [Kubernetes + Ubuntu 18.04 漏洞环境搭建](系统安全/Ubuntu/Kubernetes%20+%20Ubuntu%2018.04%20漏洞环境搭建.md)
-- **Windows**（14）
+- **Windows**（15）
   - [CVE-2020-1048 Microsoft Windows Print Spooler提权漏洞](系统安全/Windows/CVE-2020-1048%20Microsoft%20Windows%20Print%20Spooler提权漏洞.md)
   - [CVE-2020-1337](系统安全/Windows/CVE-2020-1337.md)
   - [CVE-2020-1350 Windows DNS Server蠕虫级远程代码执行漏洞](系统安全/Windows/CVE-2020-1350%20Windows%20DNS%20Server蠕虫级远程代码执行漏洞.md)
   - [CVE-2020-16898 Bad Neighbor  Windows TCPIP远程代码执行漏洞分析](系统安全/Windows/CVE-2020-16898%20Bad%20Neighbor%20%20Windows%20TCPIP远程代码执行漏洞分析.md)
   - [PHP-CGI-Windows-平台远程代码执行漏洞-CVE-2024-4577](系统安全/Windows/PHP-CGI-Windows-平台远程代码执行漏洞-CVE-2024-4577.md)
+  - [PrintNightmare CVE-2021-1675-34527 Windows打印服务权限提升](系统安全/Windows/PrintNightmare%20CVE-2021-1675-34527%20Windows打印服务权限提升.md)
   - [Splunk Enterprise Windows 平台 messaging 目录遍历漏洞 CVE-2024-36991](系统安全/Windows/Splunk%20Enterprise%20Windows%20平台%20messaging%20目录遍历漏洞%20CVE-2024-36991.md)
   - [Windows DNS  Server远程代码执行漏洞（CVE-2020-1350](系统安全/Windows/Windows%20DNS%20%20Server远程代码执行漏洞（CVE-2020-1350.md)
   - [Windows SMB 远程代码执行漏洞 CVE-2020-0796](系统安全/Windows/Windows%20SMB%20远程代码执行漏洞%20CVE-2020-0796.md)
@@ -3553,6 +3567,8 @@
   - [（CVE-2017-0143........）【MS17-010】Windows 远程溢出漏洞](系统安全/Windows/Windows远程溢出漏洞/（CVE-2017-0143........）【MS17-010】Windows%20远程溢出漏洞.md)
   - [（CVE-2019-0708） Windows 远程溢出漏洞](系统安全/Windows/Windows远程溢出漏洞/（CVE-2019-0708）%20Windows%20远程溢出漏洞.md)
   - [（CVE­-2020­-0796） Windows 远程溢出漏洞](系统安全/Windows/Windows远程溢出漏洞/（CVE­-2020­-0796）%20Windows%20远程溢出漏洞.md)
+- **XZ Utils**（1）
+  - [XZ Utils CVE-2024-3094 供应链后门 SSH RCE 分析](系统安全/XZ%20Utils/XZ%20Utils%20CVE-2024-3094%20供应链后门%20SSH%20RCE%20分析.md)
 
 ## IOT安全（217 篇）
 
