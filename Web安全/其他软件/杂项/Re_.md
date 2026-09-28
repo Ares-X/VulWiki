@@ -1,11 +1,11 @@
 ---
-cve: "CVE-2025-24085"
-date: "2025-10-30"
-ref: "https://seclists.org/fulldisclosure/2025/Oct/31"
+cve: "CVE-2025-31133"
+date: "2025-11-07"
+ref: "https://seclists.org/fulldisclosure/2025/Nov/1"
 source: "gelusus/wxvl 公众号漏洞文库"
 ---
 
-# Re: [FD]	: "Glass Cage" – Zero-Click iMessage → Persistent iOS Compromise + Bricking (CVE-2025-24085 / 24201, CNVD-2025-07885)
+# Re: [oss-security] runc container breakouts via procfs writes: CVE-2025-31133, CVE-2025-52565, and CVE-2025-52881
 
 [](#menu)
 
@@ -23,115 +23,172 @@ source: "gelusus/wxvl 公众号漏洞文库"
 
 ## [Full Disclosure](/fulldisclosure/) mailing list archives
 
-[](30)
-[By Date](date.html#31)
-[](32)
-
-[](30)
-[By Thread](index.html#31)
+[](0)
+[By Date](date.html#1)
 [](2)
 
+[](13)
+[By Thread](index.html#1)
+[](14)
 
 
-# Re: [FD] : "Glass Cage" – Zero-Click iMessage → Persistent iOS Compromise + Bricking (CVE-2025-24085 / 24201, CNVD-2025-07885)
 
----
-
-*From*: josephgoyd via Fulldisclosure <fulldisclosure () seclists org>
-*Date*: Wed, 29 Oct 2025 11:15:18 +0000
-
----
-
-```
-The exploit I caught in the wild and the flow of the attack chain are in this repo:
-https://github.com/JGoyd/Glass-Cage-iOS18-CVE-2025-24085-CVE-2025-24201
-
-The report was constructed via log analysis.
-
--------- Original Message --------
-On Wednesday, 10/29/25 at 01:44 Christoph Gruber <list () guru at> wrote:
-It seems, the whole account is down
---
-Christoph Gruber
-```
-
-> ```
-> Am 29.10.2025 um 03:37 schrieb Noor Christensen <kchr+fd () fripost org>:
->
-> ﻿On Thu Oct 2, 2025 at 11:45 PM CEST, josephgoyd via Fulldisclosure wrote:
-> ```
->
-> > > ```
-> > > ----------------------------------------------------------------------
-> > >
-> > > Full Technical Disclosure:
-> > >
-> > > [Glass Cage iOS Attack Chain](https://weareapartyof1.substack.com/p/glass-cage-zero-day-imessage-attack)
-> > > ```
->
-> ```
-> Hi Joseph,
->
-> Looks like your post with the technical details is down; I'm getting a 404 since
-> yesterday.
->
-> -- kchr
-> _______________________________________________
-> Sent through the Full Disclosure mailing list
-> https://nmap.org/mailman/listinfo/fulldisclosure
-> Web Archives & RSS: https://seclists.org/fulldisclosure/
-> ```
-
-```
-_______________________________________________
-Sent through the Full Disclosure mailing list
-https://nmap.org/mailman/listinfo/fulldisclosure
-Web Archives & RSS: https://seclists.org/fulldisclosure/
-```
+# Re: [oss-security] runc container breakouts via procfs writes: CVE-2025-31133, CVE-2025-52565, and CVE-2025-52881
 
 ---
 
-[](30)
-[By Date](date.html#31)
-[](32)
+*From*: "akendo () akendo eu" <akendo () akendo eu>
+*Date*: Thu, 6 Nov 2025 08:04:30 +0000
 
-[](30)
-[By Thread](index.html#31)
-[](2)
+---
 
-### Current thread:
+```
+Thank you for sharing this. I wondered how big the impact of this vulnerability is when you have only the ability to
+access runs via the Kubernetes API? Would you argue that the vulnerability becomes harder (or impossible?) to exploit
+when you can only interact with the service via another API?
 
-* [Re: [FD] : "Glass Cage" – Zero-Click iMessage → Persistent iOS Compromise + Bricking (CVE-2025-24085 / 24201, CNVD-2025-07885)](1) *josephgoyd via Fulldisclosure (Oct 02)*
-  + [Re: [FD] : "Glass Cage" – Zero-Click iMessage → Persistent iOS Compromise + Bricking (CVE-2025-24085 / 24201, CNVD-2025-07885)](23) *Noor Christensen (Oct 28)*
-    - [Re: : "Glass Cage" – Zero-Click iMessage → Persistent iOS Compromise + Bricking (CVE-2025-24085 / 24201, CNVD-2025-07885)](30) *Christoph Gruber (Oct 29)*
-      * **Re: [FD] : "Glass Cage" – Zero-Click iMessage → Persistent iOS Compromise + Bricking (CVE-2025-24085 / 24201, CNVD-2025-07885)** *josephgoyd via Fulldisclosure (Oct 29)*
+In my current understanding of the vulnerabilities, it seems like you need to be able to interact with runs directly.
 
+Furthermore, the ability to “replace” /dev/null seems rather only possible when conducted by a user with higher
+permissions?
 
+Lastly, I do not see a container break when /proc/sysrq-trigger is not enabled. I am not sure if there are other ways,
+there will be, but I am not seeing this exploitable in most environments.
 
-## [Nmap Security Scanner](https://nmap.org/)
+Thank you, great work!
 
-* [Ref Guide](https://nmap.org/book/man.html)* [Install Guide](https://nmap.org/book/install.html)* [Docs](https://nmap.org/docs.html)* [Download](https://nmap.org/download.html)* [Nmap OEM](https://nmap.org/oem/)
+So far,
+Akendo
 
-## [Npcap packet capture](https://npcap.com/)
+Lastly, when you do not have
+On 05.11.25, 10:55, "Aleksa Sarai" <cyphar () cyphar com> wrote:
 
-* [User's Guide](https://npcap.com/guide/)* [API docs](https://npcap.com/guide/npcap-devguide.html#npcap-api)* [Download](https://npcap.com/#download)* [Npcap OEM](https://npcap.com/oem/)
+| NOTE: This advisory was sent to <security-announce () opencontainers org<mailto:security-announce () opencontainers
+org>>
+| on 2025-10-16. If you ship any Open Container Initiative software, we
+| highly recommend that you subscribe to our security-announce list in
+| order to receive more timely disclosures of future security issues.
+| The procedure for subscribing to security-announce is outlined here:
+| <https://github.com/opencontainers/.github/blob/main/SECURITY.md#disclosure-distribution-list>
 
-## [Security Lists](https://seclists.org/)
+Hello,
 
-* [Nmap Announce](https://seclists.org/nmap-announce/)* [Nmap Dev](https://seclists.org/nmap-dev/)* [Full Disclosure](https://seclists.org/fulldisclosure/)* [Open Source Security](https://seclists.org/oss-sec/)* [BreachExchange](https://seclists.org/dataloss/)
+This is a notification to vendors that use or ship runc about THREE (3)
+high-severity vulnerabilities (CVE-2025-31133, CVE-2025-52565, and
+CVE-2025-52881). All three vulnerabilities ultimately allow (through
+different methods) for full container breakouts by bypassing runc's
+restrictions for writing to arbitrary /proc files.
 
-## [Security Tools](https://sectools.org)
+Today we have released the following runc releases which include more
+than 20 patches to resolve this issue:
 
-* [Vuln scanners](https://sectools.org/tag/vuln-scanners/)* [Password audit](https://sectools.org/tag/pass-audit/)* [Web scanners](https://sectools.org/tag/web-scanners/)* [Wireless](https://sectools.org/tag/wireless/)* [Exploitation](https://sectools.org/tag/sploits/)
+* runc v1.4.0-rc.3 <https://github.com/opencontainers/runc/releases/tag/v1.4.0-rc.3>
+* runc v1.3.3 <https://github.com/opencontainers/runc/releases/tag/v1.3.3>
+* runc v1.2.8 <https://github.com/opencontainers/runc/releases/tag/v1.2.8>
 
-## [About](https://insecure.org/)
+We strongly recommend you update as soon as possible. For your own
+reference I have attached a tarball of the patches (which apply cleanly
+on top of runc v1.2.7, v1.3.2 and v1.4.0-rc.2).
 
-* [About/Contact](https://insecure.org/fyodor/)* [Privacy](https://insecure.org/privacy.html)* [Advertising](https://insecure.org/advertising.html)* [Nmap Public Source License](https://nmap.org/npsl/)
+Unfortunately the patches are are quite large as they required a lot of
+development work in github.com/cyphar/filepath-securejoin along with
+quite deep changes to runc. I would recommend just going with the
+released versions.
 
-[](https://twitter.com/nmap "Visit us on Twitter")
-[](https://facebook.com/nmap "Visit us on Facebook")
-[](https://github.com/nmap/ "Visit us on Github")
-[](https://reddit.com/r/nmap/ "Discuss Nmap on Reddit")
+Note that these patches have not been split into per-CVE patches, as the
+resolutions for each issue overlap and so some patches help resolve more
+than one CVE on the list. We strongly recommend simply applying all of
+the provided patches (we have included a squashed single-patch version
+for your convenience -- see v1.[234].patch).
+
+| **NOTE**:
+| Some vendors were given a pre-release version of this release.
+| These public releases include two extra patches to fix regressions
+| dIscovered very late during the embargo period and were thus not
+| included in the pre-release versions. Please update to this version.
+| The above tarball includes these extra patches as well.
+
+/*** Vulnerabilities ***/
+
+Below is a break-down of the key points of each issue. Once this
+vulnerability is made public on the embargo date, the linked advisory
+pages will contain some more information about the issues.
+
+Please note that while these issues are generally related, the available
+mitigations (if any) vary from issue to issue. However, all of these
+attacks rely on starting containers with custom mount configurations --
+if you do not run untrusted container images from unknown or unverified
+sources then these attacks would not be possible to exploit. Note that
+Dockerfiles support custom mount configurations (with RUN --mount=...)
+and so these issues are also exploitable from Dockerfiles.
+
+Also please note that the below CVSS scores are based on the threat
+model from *runc's point of view*. If you were to analyse the same
+vulnerability from the perspective of network-enabled systems like
+Docker or Kubernetes you would likely end up with a much higher
+severity.
+
+/* CVE-2025-31133 */
+
+"container escape via 'masked path' abuse due to mount race conditions"
+
+CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:A/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H (7.3)
+
+<https://github.com/opencontainers/runc/security/advisories/GHSA-9493-h29p-rfm2>
+
+CVE-2025-31133 exploits an issue with how masked paths are implemented
+in runc. When masking files, runc will bind-mount the container's
+/dev/null inode on top of the file. However, if an attacker can replace
+/dev/null with a symlink to some other procfs file, runc will instead
+bind-mount the symlink target read-write. This issue affects all known
+runc versions.
+
+This stage happens after pivot_root(2) and so cannot be used to
+bind-mount host files directly. However, paths like
+/proc/sys/kernel/core_pattern which can be used to break out of a
+container entirely (coredump helpers are spawned as upcalls, which are
+not namespaced and have full host privileges). /proc/sysrq-trigger can
+also be used by an attacker to cause the host system to crash or halt.
+(This is "Attack 1".)
+
+While developing a fix for this issue, we also discovered that if the
+attacker instead deleted /dev/null, runc would purposefully ignore the
+error and thus make maskedPath a no-op. This is slightly less serious,
+but it would permit some information disclosure through masked files
+like /proc/kcore and /proc/timer_list. (This is "Attack 2".)
+
+Potential mitigations for this issue include:
+
+* Using user namespaces, with the host root user not mapped into the
+   container's namespace. procfs file permissions are managed using Unix
+   DAC and thus user namespaces stop a container process from being able
+   to write to them.
+
+* Not running as a root user in the container (this includes disabling
+   setuid binaries with noNewPrivileges). As above, procfs file
+   permissions are managed using Unix DAC and thus non-root users cannot
+   write to them.
+
+* Depending on the maskedPath configuration (the default configuration
+   only masks paths in /proc and /sys), using an AppArmor that blocks
+   unexpected writes to any maskedPaths (as is the case with the default
+   profile used by Docker and Podman) will block attempts to exploit
+   this issue. However, CVE-2025-52881 allows an attacker to bypass LSM
+   labels, and so this mitigation is not helpful when considered in
+   combination with CVE-2025-52881.
+
+* Based on our analysis, SELinux will NOT help mitigate this issue --
+   the /dev/null bind-mount used for maskedPaths get re-labeled to the
+   container context and thus the container will have access to them.
+
+Thanks to Lei Wang (@ssst0n3 from Huawei) for finding and reporting the
+original vulnerability (Attack 1), and Li Fubang (@lifubang from
+acmcoder.com, CIIC) for discovering another attack vector (Attack 2)
+based on @ssst0n3's initial findings.
+
+/* CVE-2025-52565 */
+
+"container escape with malicious config due to /de...
 
 ---
 
