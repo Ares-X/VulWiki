@@ -1,6 +1,6 @@
 # VulWiki 索引
 
-## Web安全（5740 篇）
+## Web安全（5737 篇）
 
 - **一个**（2）
   - [一个漏洞仓库免费送~](Web安全/其他软件/一个/一个漏洞仓库免费送~.md)
@@ -15,22 +15,14 @@
   - [一个字符引发的严重漏洞：CVE-2026-28292 simple-git 远程代码执行分析](Web安全/其他软件/一个字符引发的严重/一个字符引发的严重漏洞：CVE-2026-28292%20simple-git%20远程代码执行分析.md)
 - **一次意外**（1）
   - [一次意外的代码审计 ----JfinalCMS 审计 - 先知社区](Web安全/CMS内容/一次意外/一次意外的代码审计%20----JfinalCMS%20审计%20-%20先知社区.md)
-- **一种新**（1）
-  - [一种新的 email 欺骗漏洞 - SMTP 走私](Web安全/AI应用/一种新/一种新的%20email%20欺骗漏洞%20-%20SMTP%20走私.md)
-- **一米**（1）
-  - [一米OA-getfile.jsp-任意文件读取漏洞](Web安全/OA办公/一米/一米OA-getfile.jsp-任意文件读取漏洞.md)
-- **一米OA**（1）
+- **一米OA**（2）
   - [一米OA getfile.jsp 任意文件读取漏洞](Web安全/OA办公/一米OA/一米OA%20getfile.jsp%20任意文件读取漏洞.md)
+  - [一米OA-getfile.jsp-任意文件读取漏洞](Web安全/OA办公/一米OA/一米OA-getfile.jsp-任意文件读取漏洞.md)
 - **七牛云**（1）
   - [七牛云 logkit log_path 任意文件读取漏洞](Web安全/云平台/七牛云/七牛云%20logkit%20log_path%20任意文件读取漏洞.md)
 - **七牛云-logkit-log_path**（1）
   - [七牛云-logkit-log_path-任意文件读取漏洞](Web安全/云平台/七牛云-logkit-log_path/七牛云-logkit-log_path-任意文件读取漏洞.md)
-- **万户**（4）
-  - [万户OA-OfficeServer.jsp-任意文件上传漏洞](Web安全/OA办公/万户/万户OA-OfficeServer.jsp-任意文件上传漏洞.md)
-  - [万户OA-fileUpload.controller-任意文件上传漏洞](Web安全/OA办公/万户/万户OA-fileUpload.controller-任意文件上传漏洞.md)
-  - [万户OA-showResult.action-后台SQL注入漏洞](Web安全/OA办公/万户/万户OA-showResult.action-后台SQL注入漏洞.md)
-  - [万户OA-smartUpload.jsp-任意文件上传漏洞](Web安全/OA办公/万户/万户OA-smartUpload.jsp-任意文件上传漏洞.md)
-- **万户OA**（12）
+- **万户OA**（16）
   - [万户 ezOFFICE  selectCommentField  SQL 注入漏洞](Web安全/OA办公/万户OA/万户%20ezOFFICE%20%20selectCommentField%20%20SQL%20注入漏洞.md)
   - [万户 ezOFFICE DocumentHistory SQL 注入漏洞](Web安全/OA办公/万户OA/万户%20ezOFFICE%20DocumentHistory%20SQL%20注入漏洞.md)
   - [万户 ezOFFICE SignatureEditFrm.jsp SQL注入漏洞](Web安全/OA办公/万户OA/万户%20ezOFFICE%20SignatureEditFrm.jsp%20SQL注入漏洞.md)
@@ -42,25 +34,27 @@
   - [万户OA fileUpload.controller 任意文件上传漏洞](Web安全/OA办公/万户OA/万户OA%20fileUpload.controller%20任意文件上传漏洞.md)
   - [万户OA showResult.action 后台SQL注入漏洞](Web安全/OA办公/万户OA/万户OA%20showResult.action%20后台SQL注入漏洞.md)
   - [万户OA smartUpload.jsp 任意文件上传漏洞](Web安全/OA办公/万户OA/万户OA%20smartUpload.jsp%20任意文件上传漏洞.md)
+  - [万户OA-OfficeServer.jsp-任意文件上传漏洞](Web安全/OA办公/万户OA/万户OA-OfficeServer.jsp-任意文件上传漏洞.md)
+  - [万户OA-fileUpload.controller-任意文件上传漏洞](Web安全/OA办公/万户OA/万户OA-fileUpload.controller-任意文件上传漏洞.md)
+  - [万户OA-showResult.action-后台SQL注入漏洞](Web安全/OA办公/万户OA/万户OA-showResult.action-后台SQL注入漏洞.md)
+  - [万户OA-smartUpload.jsp-任意文件上传漏洞](Web安全/OA办公/万户OA/万户OA-smartUpload.jsp-任意文件上传漏洞.md)
   - [万户ezEIP企业管理系统 productlist.aspx SQL注入漏洞](Web安全/OA办公/万户OA/万户ezEIP企业管理系统%20productlist.aspx%20SQL注入漏洞.md)
 - **万江港利山洪灾害预警系统**（1）
   - [万江港利山洪灾害预警系统FileHandler存在任意文件读取漏洞](Web安全/其他软件/万江港利山洪灾害预警系统/万江港利山洪灾害预警系统FileHandler存在任意文件读取漏洞.md)
-- **万能门店小程序**（2）
+- **万能门店小程序**（3）
+  - [万能门店小程序管理系统 onepic_uploade 任意文件上传漏洞](Web安全/商业软件/万能门店小程序/万能门店小程序管理系统%20onepic_uploade%20任意文件上传漏洞.md)
   - [微信万能门店小程序系统存在SQL注入漏洞](Web安全/商业软件/万能门店小程序/微信万能门店小程序系统存在SQL注入漏洞.md)
   - [微信万能门店小程序系统存在任意文件读取漏洞](Web安全/商业软件/万能门店小程序/微信万能门店小程序系统存在任意文件读取漏洞.md)
 - **万能门店小程序 dopagefxcount sql注入漏洞**（1）
   - [万能门店小程序 dopagefxcount sql注入漏洞](Web安全/商业软件/万能门店小程序%20dopagefxcount%20sql注入漏洞/万能门店小程序%20dopagefxcount%20sql注入漏洞.md)
 - **万能门店小程序 doPageGuiz sql注入漏洞**（1）
   - [万能门店小程序 doPageGuiz sql注入漏洞](Web安全/商业软件/万能门店小程序%20doPageGuiz%20sql注入漏洞/万能门店小程序%20doPageGuiz%20sql注入漏洞.md)
-- **万能门店小程序管理系统 onepic_uploade**（1）
-  - [万能门店小程序管理系统 onepic_uploade 任意文件上传漏洞](Web安全/OA办公/万能门店小程序管理系统%20onepic_uploade/万能门店小程序管理系统%20onepic_uploade%20任意文件上传漏洞.md)
 - **三星 KNOX 内核释放后重用**（1）
   - [三星 KNOX 内核释放后重用漏洞，数百万 Galaxy 系列手机面临风险](Web安全/其他软件/三星%20KNOX%20内核释放后重用/三星%20KNOX%20内核释放后重用漏洞，数百万%20Galaxy%20系列手机面临风险.md)
-- **三星-WLAN-AP-WEA453e路由器**（1）
-  - [三星-WLAN-AP-WEA453e路由器-远程命令执行漏洞](Web安全/网络设备/三星-WLAN-AP-WEA453e路由器/三星-WLAN-AP-WEA453e路由器-远程命令执行漏洞.md)
-- **三星路由器WLANAP**（2）
-  - [三星路由器WLANAP任意文件读取漏洞](Web安全/网络设备/三星路由器WLANAP/三星路由器WLANAP任意文件读取漏洞.md)
-  - [三星路由器WLANAP远程命令执行漏洞](Web安全/网络设备/三星路由器WLANAP/三星路由器WLANAP远程命令执行漏洞.md)
+- **三星路由器**（3）
+  - [三星-WLAN-AP-WEA453e路由器-远程命令执行漏洞](Web安全/网络设备/三星路由器/三星-WLAN-AP-WEA453e路由器-远程命令执行漏洞.md)
+  - [三星路由器WLANAP任意文件读取漏洞](Web安全/网络设备/三星路由器/三星路由器WLANAP任意文件读取漏洞.md)
+  - [三星路由器WLANAP远程命令执行漏洞](Web安全/网络设备/三星路由器/三星路由器WLANAP远程命令执行漏洞.md)
 - **三汇SMG网关管理软件 SMGSuperAdmin 信息泄露漏洞**（1）
   - [三汇SMG网关管理软件 SMGSuperAdmin 信息泄露漏洞](Web安全/其他软件/三汇SMG网关管理软件%20SMGSuperAdmin%20信息泄露漏洞/三汇SMG网关管理软件%20SMGSuperAdmin%20信息泄露漏洞.md)
 - **不是我懒**（1）
@@ -72,13 +66,11 @@
 - **东华医疗协同办公系统**（1）
   - [东华医疗协同办公系统connector接口处存在任意文件上传漏洞](Web安全/其他软件/东华医疗协同办公系统/东华医疗协同办公系统connector接口处存在任意文件上传漏洞.md)
 - **东胜物流软件**（3）
-  - [东胜物流软件GetDataList存在SQL注入漏洞](Web安全/OA办公/东胜物流软件/东胜物流软件GetDataList存在SQL注入漏洞.md)
-  - [东胜物流软件SaveUserQuerySetting存在SQL注入漏洞](Web安全/OA办公/东胜物流软件/东胜物流软件SaveUserQuerySetting存在SQL注入漏洞.md)
-  - [东胜物流软件TCodeVoynoAdapter存在SQL注入漏洞](Web安全/OA办公/东胜物流软件/东胜物流软件TCodeVoynoAdapter存在SQL注入漏洞.md)
+  - [东胜物流软件GetDataList存在SQL注入漏洞](Web安全/商业软件/东胜物流软件/东胜物流软件GetDataList存在SQL注入漏洞.md)
+  - [东胜物流软件SaveUserQuerySetting存在SQL注入漏洞](Web安全/商业软件/东胜物流软件/东胜物流软件SaveUserQuerySetting存在SQL注入漏洞.md)
+  - [东胜物流软件TCodeVoynoAdapter存在SQL注入漏洞](Web安全/商业软件/东胜物流软件/东胜物流软件TCodeVoynoAdapter存在SQL注入漏洞.md)
 - **东胜物流软件 AttributeAdapter.aspx SQL 注入漏洞**（1）
   - [东胜物流软件 AttributeAdapter.aspx SQL 注入漏洞](Web安全/其他软件/东胜物流软件%20AttributeAdapter.aspx%20SQL%20注入漏洞/东胜物流软件%20AttributeAdapter.aspx%20SQL%20注入漏洞.md)
-- **两万字原创长文 完全零基础入门 Fastjson 系列**（1）
-  - [两万字原创长文 完全零基础入门 Fastjson 系列漏洞（基础篇）](Web安全/开发框架/两万字原创长文%20完全零基础入门%20Fastjson%20系列/两万字原创长文%20完全零基础入门%20Fastjson%20系列漏洞（基础篇）.md)
 - **严重**（1）
   - [严重远程代码执行漏洞（CVE-2024-53691）在QNAP 系统中被发现](Web安全/其他软件/严重/严重远程代码执行漏洞（CVE-2024-53691）在QNAP%20系统中被发现.md)
 - **严重告警**（1）
@@ -87,49 +79,43 @@
   - [严重的 Telnetd 漏洞允许远程攻击者通过 23 端口执行任意代码](Web安全/服务器软件/严重的%20Telnetd/严重的%20Telnetd%20漏洞允许远程攻击者通过%2023%20端口执行任意代码.md)
 - **严重的SAP**（1）
   - [严重的SAP漏洞可让攻击者绕过身份验证破坏企业系统](Web安全/ERP企业/严重的SAP/严重的SAP漏洞可让攻击者绕过身份验证破坏企业系统.md)
-- **严重的思科 SD-WAN**（1）
-  - [严重的思科 SD-WAN 漏洞可导致信息泄露](Web安全/网络设备/严重的思科%20SD-WAN/严重的思科%20SD-WAN%20漏洞可导致信息泄露.md)
 - **严重的蓝牙漏洞已**（1）
   - [严重的蓝牙漏洞已存在多年，可用于接管安卓、iOS 和 Linux 设备](Web安全/其他软件/严重的蓝牙漏洞已/严重的蓝牙漏洞已存在多年，可用于接管安卓、iOS%20和%20Linux%20设备.md)
 - **严重的西门子 RTU**（1）
   - [严重的西门子 RTU 漏洞可导致电网不稳定](Web安全/其他软件/严重的西门子%20RTU/严重的西门子%20RTU%20漏洞可导致电网不稳定.md)
 - **中兴**（1）
   - [中兴H108NS路由器存在任意密码修改漏洞](Web安全/网络设备/中兴/中兴H108NS路由器存在任意密码修改漏洞.md)
-- **中兴SmartLife安卓应用的4个CVE**（1）
-  - [中兴SmartLife安卓应用的4个CVE漏洞直至账户接管](Web安全/开发框架/中兴SmartLife安卓应用的4个CVE/中兴SmartLife安卓应用的4个CVE漏洞直至账户接管.md)
-- **中国移动**（2）
+- **中兴SmartLife**（1）
+  - [中兴SmartLife安卓应用的4个CVE漏洞直至账户接管](Web安全/其他软件/中兴SmartLife/中兴SmartLife安卓应用的4个CVE漏洞直至账户接管.md)
+- **中国电信网关**（1）
+  - [电信-网关配置管理系统-login.php-SQL注入漏洞](Web安全/网络设备/中国电信网关/电信-网关配置管理系统-login.php-SQL注入漏洞.md)
+- **中国移动**（1）
   - [中国移动云控制台preview存在任意文件读取](Web安全/桌面软件/中国移动/中国移动云控制台preview存在任意文件读取.md)
-  - [中国移动禹路由ExportSettings.sh存在信息泄露漏洞](Web安全/网络设备/中国移动/中国移动禹路由ExportSettings.sh存在信息泄露漏洞.md)
+- **中国移动网关**（1）
+  - [中国移动禹路由ExportSettings.sh存在信息泄露漏洞](Web安全/网络设备/中国移动网关/中国移动禹路由ExportSettings.sh存在信息泄露漏洞.md)
 - **中新金盾信息安全管理系统**（2）
   - [中新金盾信息安全管理系统 逻辑缺陷 + 默认密码](Web安全/商业软件/中新金盾信息安全管理系统/中新金盾信息安全管理系统%20逻辑缺陷%20+%20默认密码.md)
   - [中新金盾信息安全管理系统-默认超级管理员密码漏洞](Web安全/商业软件/中新金盾信息安全管理系统/中新金盾信息安全管理系统-默认超级管理员密码漏洞.md)
 - **中新金盾信息安全管理系统 默认超级管理员密码**（1）
   - [中新金盾信息安全管理系统 默认超级管理员密码漏洞](Web安全/商业软件/中新金盾信息安全管理系统%20默认超级管理员密码/中新金盾信息安全管理系统%20默认超级管理员密码漏洞.md)
 - **中科网威**（2）
-  - [中科网威下一代防火墙控制系统download存在任意文件读取漏洞](Web安全/OA办公/中科网威/中科网威下一代防火墙控制系统download存在任意文件读取漏洞.md)
+  - [中科网威下一代防火墙控制系统download存在任意文件读取漏洞](Web安全/安全设备/中科网威/中科网威下一代防火墙控制系统download存在任意文件读取漏洞.md)
   - [中科网威下一代防火墙控制系统存在账号密码泄露漏洞](Web安全/安全设备/中科网威/中科网威下一代防火墙控制系统存在账号密码泄露漏洞.md)
 - **中科网威 下一代防火墙控制系统 信息**（1）
   - [中科网威 下一代防火墙控制系统 信息泄露漏洞   孤桜懶契](Web安全/安全设备/中科网威%20下一代防火墙控制系统%20信息/中科网威%20下一代防火墙控制系统%20信息泄露漏洞%20%20%20孤桜懶契.md)
-- **中科网威 锐捷 网域 等多个设备 账号密码**（1）
-  - [中科网威 锐捷 网域 等多个设备 账号密码泄露漏洞 (好久不更新了，补一下啦~)](Web安全/网络设备/中科网威%20锐捷%20网域%20等多个设备%20账号密码/中科网威%20锐捷%20网域%20等多个设备%20账号密码泄露漏洞%20%28好久不更新了，补一下啦~%29.md)
 - **中远麒麟**（2）
   - [中远麒麟堡垒机admin_commonuserSQL注入漏洞](Web安全/安全设备/中远麒麟/中远麒麟堡垒机admin_commonuserSQL注入漏洞.md)
   - [中远麒麟堡垒机tokensSQL注入漏洞](Web安全/安全设备/中远麒麟/中远麒麟堡垒机tokensSQL注入漏洞.md)
 - **中远麒麟堡垒机**（1）
   - [中远麒麟堡垒机 SQL 注入漏洞复现 and 漏洞利用（附 poc 和 EXP）](Web安全/安全设备/中远麒麟堡垒机/中远麒麟堡垒机%20SQL%20注入漏洞复现%20and%20漏洞利用（附%20poc%20和%20EXP）.md)
-- **中间件常见**（2）
-  - [中间件常见漏洞之 JBOSS](Web安全/中间件/中间件常见/中间件常见漏洞之%20JBOSS.md)
-  - [中间件常见漏洞之 weblogic](Web安全/中间件/中间件常见/中间件常见漏洞之%20weblogic.md)
 - **九块九付费进群系统**（1）
   - [九块九付费进群系统wxselect存在SQL注入漏洞](Web安全/其他软件/九块九付费进群系统/九块九付费进群系统wxselect存在SQL注入漏洞.md)
-- **九思**（3）
-  - [九思OA dl.jsp 任意文件读取漏洞](Web安全/OA办公/九思/九思OA%20dl.jsp%20任意文件读取漏洞.md)
-  - [九思OA wap 任意文件读取](Web安全/OA办公/九思/九思OA%20wap%20任意文件读取.md)
-  - [九思OA workflowSync.getUserStatusByRole.dwr SQL注入漏洞](Web安全/OA办公/九思/九思OA%20workflowSync.getUserStatusByRole.dwr%20SQL注入漏洞.md)
-- **九维团队 - 红队  ActiveMQ**（1）
-  - [九维团队 - 红队（突破）  ActiveMQ RCE 漏洞利用](Web安全/中间件/九维团队%20-%20红队%20%20ActiveMQ/九维团队%20-%20红队（突破）%20%20ActiveMQ%20RCE%20漏洞利用.md)
+- **九思OA**（3）
+  - [九思OA dl.jsp 任意文件读取漏洞](Web安全/OA办公/九思OA/九思OA%20dl.jsp%20任意文件读取漏洞.md)
+  - [九思OA wap 任意文件读取](Web安全/OA办公/九思OA/九思OA%20wap%20任意文件读取.md)
+  - [九思OA workflowSync.getUserStatusByRole.dwr SQL注入漏洞](Web安全/OA办公/九思OA/九思OA%20workflowSync.getUserStatusByRole.dwr%20SQL注入漏洞.md)
 - **云安宝**（1）
-  - [云安宝-云匣子config存在fastjson远程代码执行漏洞](Web安全/开发框架/云安宝/云安宝-云匣子config存在fastjson远程代码执行漏洞.md)
+  - [云安宝-云匣子config存在fastjson远程代码执行漏洞](Web安全/安全设备/云安宝/云安宝-云匣子config存在fastjson远程代码执行漏洞.md)
 - **云时空社会化商业ERP系统**（1）
   - [云时空社会化商业ERP系统gpy任意文件上传漏洞](Web安全/ERP企业/云时空社会化商业ERP系统/云时空社会化商业ERP系统gpy任意文件上传漏洞.md)
 - **互联网公开**（1）
@@ -215,10 +201,10 @@
   - [亿赛通电子文档安全管理系统syn_user_policy任意文件上传漏洞](Web安全/安全设备/亿赛通/亿赛通电子文档安全管理系统syn_user_policy任意文件上传漏洞.md)
   - [亿赛通电子文档安全管理系统updateUserToOrganise存在后台SQL注入漏洞](Web安全/安全设备/亿赛通/亿赛通电子文档安全管理系统updateUserToOrganise存在后台SQL注入漏洞.md)
   - [亿赛通电子文档安全管理系统uploadFile任意文件上传漏洞](Web安全/安全设备/亿赛通/亿赛通电子文档安全管理系统uploadFile任意文件上传漏洞.md)
-- **亿邮电子邮件系统**（3）
-  - [亿邮电子邮件系统-moni_detail.do-远程命令执行漏洞](Web安全/OA办公/亿邮电子邮件系统/亿邮电子邮件系统-moni_detail.do-远程命令执行漏洞.md)
-  - [亿邮电子邮件系统远程命令执行漏洞-(CNVD-2021-26422)](Web安全/OA办公/亿邮电子邮件系统/亿邮电子邮件系统远程命令执行漏洞-%28CNVD-2021-26422%29.md)
-  - [漏洞复现：亿邮电子邮件系统远程命令执行](Web安全/OA办公/亿邮电子邮件系统/漏洞复现：亿邮电子邮件系统远程命令执行.md)
+- **亿邮**（3）
+  - [亿邮电子邮件系统-moni_detail.do-远程命令执行漏洞](Web安全/邮件系统/亿邮/亿邮电子邮件系统-moni_detail.do-远程命令执行漏洞.md)
+  - [亿邮电子邮件系统远程命令执行漏洞-(CNVD-2021-26422)](Web安全/邮件系统/亿邮/亿邮电子邮件系统远程命令执行漏洞-%28CNVD-2021-26422%29.md)
+  - [漏洞复现：亿邮电子邮件系统远程命令执行](Web安全/邮件系统/亿邮/漏洞复现：亿邮电子邮件系统远程命令执行.md)
 - **今日热点网络安全**（4）
   - [今日（2026年5月2日）热点网络安全漏洞动态](Web安全/其他软件/今日热点网络安全/今日（2026年5月2日）热点网络安全漏洞动态.md)
   - [今日（2026年5月3日）热点网络安全漏洞动态](Web安全/其他软件/今日热点网络安全/今日（2026年5月3日）热点网络安全漏洞动态.md)
@@ -226,12 +212,8 @@
   - [今日（2026年5月5日）热点网络安全漏洞动态](Web安全/其他软件/今日热点网络安全/今日（2026年5月5日）热点网络安全漏洞动态.md)
 - **从 allow_active 到 root 的本地提权**（1）
   - [CVE-2025-6019 从 allow_active 到 root 的本地提权漏洞 (LPE) (2)](Web安全/其他软件/从%20allow_active%20到%20root%20的本地提权/CVE-2025-6019%20从%20allow_active%20到%20root%20的本地提权漏洞%20%28LPE%29%20%282%29.md)
-- **从 AST 到 100 个某知名 OA 前台**（1）
-  - [从 AST 到 100 个某知名 OA 前台注入 - 斗象能力中心](Web安全/OA办公/从%20AST%20到%20100%20个某知名%20OA%20前台/从%20AST%20到%20100%20个某知名%20OA%20前台注入%20-%20斗象能力中心.md)
 - **从未经身份验证的存储型**（1）
   - [从未经身份验证的存储型 XSS 到 RCE](Web安全/其他软件/从未经身份验证的存储型/从未经身份验证的存储型%20XSS%20到%20RCE.md)
-- **从某达 OA 到 Yii2 框架的 cookie**（1）
-  - [从某达 OA 到 Yii2 框架的 cookie 反序列化漏洞研究](Web安全/OA办公/从某达%20OA%20到%20Yii2%20框架的%20cookie/从某达%20OA%20到%20Yii2%20框架的%20cookie%20反序列化漏洞研究.md)
 - **从补丁到**（1）
   - [从补丁到漏洞利用：逆向分析CVE-2026-24127](Web安全/其他软件/从补丁到/从补丁到漏洞利用：逆向分析CVE-2026-24127.md)
 - **从路径遍历到**（1）
@@ -265,8 +247,8 @@
   - [优客API接口管理系统存在SQL注入漏洞](Web安全/商业软件/优客API接口管理系统/优客API接口管理系统存在SQL注入漏洞.md)
   - [优客API接口管理系统存在信息泄露漏洞](Web安全/商业软件/优客API接口管理系统/优客API接口管理系统存在信息泄露漏洞.md)
 - **会捷通云视讯**（2）
-  - [会捷通云视讯-fileDownload-任意文件读取漏洞](Web安全/OA办公/会捷通云视讯/会捷通云视讯-fileDownload-任意文件读取漏洞.md)
   - [会捷通云视讯 登录绕过漏洞](Web安全/其他软件/会捷通云视讯/会捷通云视讯%20登录绕过漏洞.md)
+  - [会捷通云视讯-fileDownload-任意文件读取漏洞](Web安全/商业软件/会捷通云视讯/会捷通云视讯-fileDownload-任意文件读取漏洞.md)
 - **会捷通云视讯-登录**（1）
   - [会捷通云视讯-登录绕过漏洞](Web安全/其他软件/会捷通云视讯-登录/会捷通云视讯-登录绕过漏洞.md)
 - **会捷通云视讯平台**（1）
@@ -278,17 +260,14 @@
   - [佑友防火墙存在默认口令漏洞](Web安全/安全设备/佑友防火墙存在默认口令/佑友防火墙存在默认口令漏洞.md)
 - **俄罗斯APT组织利用Zimbra**（1）
   - [俄罗斯APT组织利用Zimbra XSS漏洞CVE-2025-66376攻击乌克兰](Web安全/邮件系统/俄罗斯APT组织利用Zimbra/俄罗斯APT组织利用Zimbra%20XSS漏洞CVE-2025-66376攻击乌克兰.md)
-- **信呼**（1）
-  - [信呼OA-beifenAction.php-后台目录遍历漏洞](Web安全/OA办公/信呼/信呼OA-beifenAction.php-后台目录遍历漏洞.md)
-- **信呼oa**（3）
-  - [信呼OA beifenAction.php 后台目录遍历漏洞](Web安全/OA办公/信呼oa/信呼OA%20beifenAction.php%20后台目录遍历漏洞.md)
-  - [信呼OA-qcloudCosAction.php-任意文件上传漏洞](Web安全/OA办公/信呼oa/信呼OA-qcloudCosAction.php-任意文件上传漏洞.md)
-  - [信呼oa 1.9.0-1.9.1 储存型xss](Web安全/OA办公/信呼oa/信呼oa%201.9.0-1.9.1%20储存型xss.md)
-- **信息泄露**（4）
-  - [皓峰防火墙setdomain存在信息泄露漏洞](Web安全/AI应用/信息泄露/皓峰防火墙setdomain存在信息泄露漏洞.md)
+- **信呼OA**（4）
+  - [信呼OA beifenAction.php 后台目录遍历漏洞](Web安全/OA办公/信呼OA/信呼OA%20beifenAction.php%20后台目录遍历漏洞.md)
+  - [信呼OA-beifenAction.php-后台目录遍历漏洞](Web安全/OA办公/信呼OA/信呼OA-beifenAction.php-后台目录遍历漏洞.md)
+  - [信呼OA-qcloudCosAction.php-任意文件上传漏洞](Web安全/OA办公/信呼OA/信呼OA-qcloudCosAction.php-任意文件上传漏洞.md)
+  - [信呼oa 1.9.0-1.9.1 储存型xss](Web安全/OA办公/信呼OA/信呼oa%201.9.0-1.9.1%20储存型xss.md)
+- **信息泄露**（2）
   - [佑友防火墙存在信息泄露漏洞](Web安全/安全设备/信息泄露/佑友防火墙存在信息泄露漏洞.md)
   - [DVR设备存在敏感信息泄露](Web安全/智能设备/信息泄露/DVR设备存在敏感信息泄露.md)
-  - [TG8 Firewall RCE 和 信息泄露](Web安全/网络设备/信息泄露/TG8%20Firewall%20RCE%20和%20信息泄露.md)
 - **修复 Rsync**（1）
   - [修复 Rsync 漏洞 CVE-2024-12084](Web安全/ERP企业/修复%20Rsync/修复%20Rsync%20漏洞%20CVE-2024-12084.md)
 - **停用**（1）
@@ -299,19 +278,11 @@
   - [先锋WEB燃气收费系统AjaxService存在任意文件上传漏洞](Web安全/商业软件/先锋WEB燃气收费系统/先锋WEB燃气收费系统AjaxService存在任意文件上传漏洞.md)
 - **全新优客**（1）
   - [全新优客API接口管理系统 indexdoc SQL注入漏洞](Web安全/商业软件/全新优客/全新优客API接口管理系统%20indexdoc%20SQL注入漏洞.md)
-- **全球使用最广泛的**（1）
-  - [全球使用最广泛的 AI Agent 编排框架爆三个高危∕严重漏洞](Web安全/AI应用/全球使用最广泛的/全球使用最广泛的%20AI%20Agent%20编排框架爆三个高危∕严重漏洞.md)
-- **全球首例**（1）
-  - [全球首例！AI智能体自主发现满级评分RCE漏洞](Web安全/AI应用/全球首例/全球首例！AI智能体自主发现满级评分RCE漏洞.md)
-- **全程云**（2）
-  - [全程云OA系统QCPES.asmx存在SQL注入漏洞](Web安全/OA办公/全程云/全程云OA系统QCPES.asmx存在SQL注入漏洞.md)
-  - [全程云DocumentDocService.asmx接口存在任意文件上传漏洞](Web安全/中间件/全程云/全程云DocumentDocService.asmx接口存在任意文件上传漏洞.md)
+- **全程云OA**（2）
+  - [全程云DocumentDocService.asmx接口存在任意文件上传漏洞](Web安全/OA办公/全程云OA/全程云DocumentDocService.asmx接口存在任意文件上传漏洞.md)
+  - [全程云OA系统QCPES.asmx存在SQL注入漏洞](Web安全/OA办公/全程云OA/全程云OA系统QCPES.asmx存在SQL注入漏洞.md)
 - **全行业小程序运营系统**（1）
   - [全行业小程序运营系统接口_requestPost存在任意文件读取漏洞](Web安全/商业软件/全行业小程序运营系统/全行业小程序运营系统接口_requestPost存在任意文件读取漏洞.md)
-- **兰德网络O2OA**（1）
-  - [兰德网络O2OA存在默认口令漏洞](Web安全/OA办公/兰德网络O2OA/兰德网络O2OA存在默认口令漏洞.md)
-- **关于锐捷**（1）
-  - [关于锐捷命令执行漏洞的安全告知](Web安全/网络设备/关于锐捷/关于锐捷命令执行漏洞的安全告知.md)
 - **关键 PHP**（1）
   - [关键 PHP 漏洞允许黑客绕过验证以加载恶意内容](Web安全/其他软件/关键%20PHP/关键%20PHP%20漏洞允许黑客绕过验证以加载恶意内容.md)
 - **关键的 Windows**（1）
@@ -325,6 +296,8 @@
   - [分析 - Microsoft Excel 远程代码执行漏洞 CVE-2023-36041](Web安全/安全设备/分析%20-%20Microsoft%20Excel/分析%20-%20Microsoft%20Excel%20远程代码执行漏洞%20CVE-2023-36041.md)
 - **分析和学习 WordPress--5-7 XXE**（1）
   - [分析和学习 WordPress--5-7 XXE 漏洞 - 先知社区](Web安全/CMS内容/分析和学习%20WordPress--5-7%20XXE/分析和学习%20WordPress--5-7%20XXE%20漏洞%20-%20先知社区.md)
+- **创维路由器**（1）
+  - [天翼创维awifi路由器存在多处未授权访问漏洞](Web安全/网络设备/创维路由器/天翼创维awifi路由器存在多处未授权访问漏洞.md)
 - **利用**（2）
   - [利用 CVE-2025-0072 绕过 MTE](Web安全/其他软件/利用/利用%20CVE-2025-0072%20绕过%20MTE.md)
   - [利用Reverge自动化工具：提升漏洞赏金 hunting 的速度与效率](Web安全/其他软件/利用/利用Reverge自动化工具：提升漏洞赏金%20hunting%20的速度与效率.md)
@@ -334,20 +307,19 @@
   - [利用Bitpixie漏洞（CVE-2023-21563）可在数分钟内绕过BitLocker加密——概念验证揭示高风险攻击路径](Web安全/桌面软件/利用Bitpixie/利用Bitpixie漏洞（CVE-2023-21563）可在数分钟内绕过BitLocker加密——概念验证揭示高风险攻击路径.md)
 - **利用gitRepo卷在Node上**（1）
   - [利用gitRepo卷在Node上RCE(CVE-2024-10220)](Web安全/其他软件/利用gitRepo卷在Node上/利用gitRepo卷在Node上RCE%28CVE-2024-10220%29.md)
-- **利用RouterOS**（1）
-  - [利用RouterOS（CVE-2022-3496）漏洞，将符号链接作为挂载入口获取代码执行](Web安全/网络设备/利用RouterOS/利用RouterOS（CVE-2022-3496）漏洞，将符号链接作为挂载入口获取代码执行.md)
 - **利用飞塔 FortiCloud SSO 零日**（1）
   - [利用飞塔 FortiCloud SSO 零日漏洞的攻击持续在野，亟待补丁发布](Web安全/网络设备/利用飞塔%20FortiCloud%20SSO%20零日/利用飞塔%20FortiCloud%20SSO%20零日漏洞的攻击持续在野，亟待补丁发布.md)
 - **剖析复杂**（1）
   - [剖析复杂漏洞并在 Ichitaro Word 中实现任意代码执行](Web安全/其他软件/剖析复杂/剖析复杂漏洞并在%20Ichitaro%20Word%20中实现任意代码执行.md)
 - **勒索软件正在利用VMware**（1）
   - [勒索软件正在利用VMware漏洞，通过VPN访问发动攻击](Web安全/云平台/勒索软件正在利用VMware/勒索软件正在利用VMware漏洞，通过VPN访问发动攻击.md)
-- **医疗设备资产管理系统DownLoadFiles**（1）
-  - [医疗设备资产管理系统DownLoadFiles任意文件读取漏洞](Web安全/OA办公/医疗设备资产管理系统DownLoadFiles/医疗设备资产管理系统DownLoadFiles任意文件读取漏洞.md)
-- **医药公司登录系统**（3）
+- **医疗设备资产管理系统**（1）
+  - [医疗设备资产管理系统DownLoadFiles任意文件读取漏洞](Web安全/商业软件/医疗设备资产管理系统/医疗设备资产管理系统DownLoadFiles任意文件读取漏洞.md)
+- **医药公司登录系统**（2）
   - [医药公司登录系统GetLshByTj存在SQL注入漏洞](Web安全/其他软件/医药公司登录系统/医药公司登录系统GetLshByTj存在SQL注入漏洞.md)
   - [医药公司登录系统存在SQL注入漏洞](Web安全/其他软件/医药公司登录系统/医药公司登录系统存在SQL注入漏洞.md)
-  - [医药公司登录系统Login存在SQL注入漏洞](Web安全/开发框架/医药公司登录系统/医药公司登录系统Login存在SQL注入漏洞.md)
+- **匿名OA研究**（1）
+  - [从 AST 到 100 个某知名 OA 前台注入 - 斗象能力中心](Web安全/OA办公/匿名OA研究/从%20AST%20到%20100%20个某知名%20OA%20前台注入%20-%20斗象能力中心.md)
 - **华夏 ERP**（2）
   - [华夏 ERP 存在 SQL 注入漏洞](Web安全/CMS内容/华夏%20ERP/华夏%20ERP%20存在%20SQL%20注入漏洞.md)
   - [华夏 ERP 漏洞之授权绕过漏洞 + 后台命令执行漏洞 - 未授权命令执行](Web安全/CMS内容/华夏%20ERP/华夏%20ERP%20漏洞之授权绕过漏洞%20+%20后台命令执行漏洞%20-%20未授权命令执行.md)
@@ -365,27 +337,24 @@
   - [华测监测预警系统任意文件读取漏洞](Web安全/其他软件/华测监测预警系统/华测监测预警系统任意文件读取漏洞.md)
 - **华测监测预警系统数据库信息**（1）
   - [华测监测预警系统数据库信息泄露漏洞](Web安全/其他软件/华测监测预警系统数据库信息/华测监测预警系统数据库信息泄露漏洞.md)
-- **华硕**（2）
+- **华硕**（7）
+  - [华硕 Armoury Crate漏洞可导致攻击者获取Windows 管理员权限](Web安全/网络设备/华硕/华硕%20Armoury%20Crate漏洞可导致攻击者获取Windows%20管理员权限.md)
+  - [华硕 RT-AC68U 漏洞复现（二）](Web安全/网络设备/华硕/华硕%20RT-AC68U%20漏洞复现（二）.md)
+  - [华硕-GT-AC2900-身份验证绕过-CVE-2021-32030](Web安全/网络设备/华硕/华硕-GT-AC2900-身份验证绕过-CVE-2021-32030.md)
   - [华硕RT-AC68U漏洞复现（一）](Web安全/网络设备/华硕/华硕RT-AC68U漏洞复现（一）.md)
+  - [华硕修复严重的AMI 漏洞](Web安全/网络设备/华硕/华硕修复严重的AMI%20漏洞.md)
   - [华硕：启用AiCloud 的路由器中存在严重的认证绕过漏洞](Web安全/网络设备/华硕/华硕：启用AiCloud%20的路由器中存在严重的认证绕过漏洞.md)
-- **华硕 Armoury Crate**（1）
-  - [华硕 Armoury Crate漏洞可导致攻击者获取Windows 管理员权限](Web安全/网络设备/华硕%20Armoury%20Crate/华硕%20Armoury%20Crate漏洞可导致攻击者获取Windows%20管理员权限.md)
-- **华硕 RT-AC68U**（1）
-  - [华硕 RT-AC68U 漏洞复现（二）](Web安全/网络设备/华硕%20RT-AC68U/华硕%20RT-AC68U%20漏洞复现（二）.md)
-- **华硕-GT-AC2900-身份验证**（1）
-  - [华硕-GT-AC2900-身份验证绕过-CVE-2021-32030](Web安全/网络设备/华硕-GT-AC2900-身份验证/华硕-GT-AC2900-身份验证绕过-CVE-2021-32030.md)
-- **华硕修复严重的AMI**（1）
-  - [华硕修复严重的AMI 漏洞](Web安全/网络设备/华硕修复严重的AMI/华硕修复严重的AMI%20漏洞.md)
-- **协众oa**（1）
-  - [协众oa-后台存在任意代码注入漏洞](Web安全/OA办公/协众oa/协众oa-后台存在任意代码注入漏洞.md)
+  - [这些华硕路由器存在远程代码执行漏洞，请立即更新固件](Web安全/网络设备/华硕/这些华硕路由器存在远程代码执行漏洞，请立即更新固件.md)
+- **协众OA**（1）
+  - [协众oa-后台存在任意代码注入漏洞](Web安全/OA办公/协众OA/协众oa-后台存在任意代码注入漏洞.md)
 - **博华网龙**（1）
   - [博华网龙安全设备cmd.php远程命令执行漏洞](Web安全/其他软件/博华网龙/博华网龙安全设备cmd.php远程命令执行漏洞.md)
 - **博华网龙防火墙-cmd.php**（1）
   - [博华网龙防火墙-cmd.php-远程命令执行漏洞](Web安全/安全设备/博华网龙防火墙-cmd.php/博华网龙防火墙-cmd.php-远程命令执行漏洞.md)
 - **博斯软件**（1）
   - [博斯软件V6.0存在sql注入](Web安全/其他软件/博斯软件/博斯软件V6.0存在sql注入.md)
-- **博纳睿通软件**（1）
-  - [南京博纳睿通软件科技有限公司医院一站式后勤管理系统processApkUpload存在任意文件上传漏洞](Web安全/OA办公/博纳睿通软件/南京博纳睿通软件科技有限公司医院一站式后勤管理系统processApkUpload存在任意文件上传漏洞.md)
+- **博纳睿通**（1）
+  - [南京博纳睿通软件科技有限公司医院一站式后勤管理系统processApkUpload存在任意文件上传漏洞](Web安全/商业软件/博纳睿通/南京博纳睿通软件科技有限公司医院一站式后勤管理系统processApkUpload存在任意文件上传漏洞.md)
 - **博通修复3个已遭利用的 VMware 0day**（1）
   - [博通修复3个已遭利用的 VMware 0day 漏洞](Web安全/云平台/博通修复3个已遭利用的%20VMware%200day/博通修复3个已遭利用的%20VMware%200day%20漏洞.md)
 - **卡号极团管理系统**（2）
@@ -397,14 +366,8 @@
   - [厂商纷纷主动绕过Adobe发布的CVE-2022-24086安全补丁](Web安全/桌面软件/厂商纷纷主动/厂商纷纷主动绕过Adobe发布的CVE-2022-24086安全补丁.md)
 - **原创**（1）
   - [原创  OPC UA .NET Standard Stack可信应用认证绕过漏洞分析](Web安全/其他软件/原创/原创%20%20OPC%20UA%20.NET%20Standard%20Stack可信应用认证绕过漏洞分析.md)
-- **原创 Paper  GL-iNet 路由器**（1）
-  - [原创 Paper  GL-iNet 路由器 CVE-2024-39226 漏洞分析](Web安全/网络设备/原创%20Paper%20%20GL-iNet%20路由器/原创%20Paper%20%20GL-iNet%20路由器%20CVE-2024-39226%20漏洞分析.md)
 - **原创 Paper  glibc 提权**（1）
   - [原创 Paper  glibc 提权漏洞（CVE-2023-4911）分析](Web安全/其他软件/原创%20Paper%20%20glibc%20提权/原创%20Paper%20%20glibc%20提权漏洞（CVE-2023-4911）分析.md)
-- **原创 Paper  Tenda-FH1201 多处**（1）
-  - [原创 Paper  Tenda-FH1201 多处命令注入漏洞分析和复现](Web安全/网络设备/原创%20Paper%20%20Tenda-FH1201%20多处/原创%20Paper%20%20Tenda-FH1201%20多处命令注入漏洞分析和复现.md)
-- **原创 Paper  Zyxel Telnet**（1）
-  - [原创 Paper  Zyxel Telnet 漏洞分析(CVE-2025-0890、CVE‑2024‑40891)](Web安全/网络设备/原创%20Paper%20%20Zyxel%20Telnet/原创%20Paper%20%20Zyxel%20Telnet%20漏洞分析%28CVE-2025-0890、CVE‑2024‑40891%29.md)
 - **原创Paper  parse-server 从原型污染到**（1）
   - [原创Paper  parse-server 从原型污染到 RCE 漏洞(CVE-2022-39396) 分析](Web安全/其他软件/原创Paper%20%20parse-server%20从原型污染到/原创Paper%20%20parse-server%20从原型污染到%20RCE%20漏洞%28CVE-2022-39396%29%20分析.md)
 - **又是 Prompt**（1）
@@ -421,22 +384,12 @@
   - [最新漏洞预警 开源组件漏洞之 AjaxPro.NET反序列化漏洞 CVE-2021-23758](Web安全/其他软件/反序列化/最新漏洞预警%20开源组件漏洞之%20AjaxPro.NET反序列化漏洞%20CVE-2021-23758.md)
 - **发现WinRAR严重**（1）
   - [发现WinRAR严重漏洞！利用ANSI 转义序列欺骗用户触发](Web安全/桌面软件/发现WinRAR严重/发现WinRAR严重漏洞！利用ANSI%20转义序列欺骗用户触发.md)
-- **可视化融合指挥调度平台**（1）
-  - [可视化融合指挥调度平台uploadImg存在任意文件上传漏洞](Web安全/OA办公/可视化融合指挥调度平台/可视化融合指挥调度平台uploadImg存在任意文件上传漏洞.md)
 - **可访问全球**（1）
   - [可访问全球任意主机：Cloudflare WAF 0-day漏洞剖析](Web安全/安全设备/可访问全球/可访问全球任意主机：Cloudflare%20WAF%200-day漏洞剖析.md)
-- **史上最全 log4j2**（1）
-  - [史上最全 log4j2 远程命令执行漏洞汇总报告](Web安全/开发框架/史上最全%20log4j2/史上最全%20log4j2%20远程命令执行漏洞汇总报告.md)
-- **合勤**（1）
-  - [合勤：影响十几款路由器的严重RCE漏洞](Web安全/网络设备/合勤/合勤：影响十几款路由器的严重RCE漏洞.md)
-- **合勤科技修复NAS 设备中的高危**（1）
-  - [合勤科技修复NAS 设备中的高危漏洞](Web安全/网络设备/合勤科技修复NAS%20设备中的高危/合勤科技修复NAS%20设备中的高危漏洞.md)
 - **吉大正元身份认证网关**（1）
   - [吉大正元身份认证网关downtools存在任意文件读取漏洞](Web安全/其他软件/吉大正元身份认证网关/吉大正元身份认证网关downtools存在任意文件读取漏洞.md)
 - **吉大正元身份认证网关 downTools**（1）
   - [吉大正元身份认证网关 downTools 任意文件读取漏洞](Web安全/其他软件/吉大正元身份认证网关%20downTools/吉大正元身份认证网关%20downTools%20任意文件读取漏洞.md)
-- **吉林医药系统**（1）
-  - [吉林医药系统Login存在SQL注入漏洞](Web安全/开发框架/吉林医药系统/吉林医药系统Login存在SQL注入漏洞.md)
 - **同鑫**（1）
   - [同鑫eHR人力资源管理系统 GetFlowDropDownListItems SQL注入漏洞](Web安全/商业软件/同鑫/同鑫eHR人力资源管理系统%20GetFlowDropDownListItems%20SQL注入漏洞.md)
 - **后门**（1）
@@ -450,9 +403,7 @@
   - [启明星辰天玥运维安全网关默认口令](Web安全/网络设备/启明星辰/启明星辰天玥运维安全网关默认口令.md)
 - **员工管理系统**（1）
   - [员工管理系统 Employee Management System 1.0 身份验证绕过](Web安全/商业软件/员工管理系统/员工管理系统%20Employee%20Management%20System%201.0%20身份验证绕过.md)
-- **命令执行**（31）
-  - [Cyber​​Panel filemanagerupload 远程命令执行漏洞](Web安全/OA办公/命令执行/Cyber​​Panel%20filemanagerupload%20远程命令执行漏洞.md)
-  - [天融信-TopApp-LB-enable_tool_debug.php-远程命令执行漏洞](Web安全/OA办公/命令执行/天融信-TopApp-LB-enable_tool_debug.php-远程命令执行漏洞.md)
+- **命令执行**（20）
   - [ (169)](Web安全/其他软件/命令执行/%20%28169%29.md)
   - [ (281)](Web安全/其他软件/命令执行/%20%28281%29.md)
   - [ (403)](Web安全/其他软件/命令执行/%20%28403%29.md)
@@ -473,15 +424,6 @@
   - [安恒明御安全网关aaa_portal_auth_local_submit存在远程命令执行漏洞](Web安全/安全设备/命令执行/安恒明御安全网关aaa_portal_auth_local_submit存在远程命令执行漏洞.md)
   - [安恒明御安全网关aaa_portal_auth_wchat_submit存在远程命令执行漏洞](Web安全/安全设备/命令执行/安恒明御安全网关aaa_portal_auth_wchat_submit存在远程命令执行漏洞.md)
   - [网康NS-ASG应用安全网关存在远程命令执行漏洞](Web安全/安全设备/命令执行/网康NS-ASG应用安全网关存在远程命令执行漏洞.md)
-  - [H3C IMC dynamiccontent-properties-xhtm 远程命令执行](Web安全/网络设备/命令执行/H3C%20IMC%20dynamiccontent-properties-xhtm%20远程命令执行.md)
-  - [H3C SecParh 堡垒机 data provider-php 远程命令执行漏洞](Web安全/网络设备/命令执行/H3C%20SecParh%20堡垒机%20data%20provider-php%20远程命令执行漏洞.md)
-  - [H3C-SecParh堡垒机-data_provider.php-远程命令执行漏洞](Web安全/网络设备/命令执行/H3C-SecParh堡垒机-data_provider.php-远程命令执行漏洞.md)
-  - [博达下一代防火墙sslvpn_client存在远程命令执行漏洞](Web安全/网络设备/命令执行/博达下一代防火墙sslvpn_client存在远程命令执行漏洞.md)
-  - [安恒明御安全网关sslvpn_client存在远程命令执行漏洞](Web安全/网络设备/命令执行/安恒明御安全网关sslvpn_client存在远程命令执行漏洞.md)
-  - [深信服终端检测平台（EDR）存在远程命令执行漏洞分析 - 斗象能力中心](Web安全/网络设备/命令执行/深信服终端检测平台（EDR）存在远程命令执行漏洞分析%20-%20斗象能力中心.md)
-  - [网御-Leadsec-ACM管理平台-importhtml.php-远程命令执行漏洞](Web安全/网络设备/命令执行/网御-Leadsec-ACM管理平台-importhtml.php-远程命令执行漏洞.md)
-  - [迈普安全网关sslvpn_client存在远程命令执行漏洞](Web安全/网络设备/命令执行/迈普安全网关sslvpn_client存在远程命令执行漏洞.md)
-  - [鑫塔第二代防火墙sslvpn_client存在远程命令执行漏洞](Web安全/网络设备/命令执行/鑫塔第二代防火墙sslvpn_client存在远程命令执行漏洞.md)
 - **和信创天**（1）
   - [和信创天云桌面系统upload_file存在任意文件上传](Web安全/OA办公/和信创天/和信创天云桌面系统upload_file存在任意文件上传.md)
 - **和信创天云桌面系统**（2）
@@ -499,12 +441,6 @@
   - [圣乔ERP系统 ResultSetConvertor SQL注入漏洞](Web安全/ERP企业/圣乔/圣乔ERP系统%20ResultSetConvertor%20SQL注入漏洞.md)
   - [圣乔ERP系统 SingleRowQueryConvertor SQL注入漏洞](Web安全/ERP企业/圣乔/圣乔ERP系统%20SingleRowQueryConvertor%20SQL注入漏洞.md)
   - [圣乔ERP系统 uploadFile.action 文件上传致RCE漏洞](Web安全/OA办公/圣乔/圣乔ERP系统%20uploadFile.action%20文件上传致RCE漏洞.md)
-- **在野 0day nginxWebUI**（1）
-  - [在野 0day nginxWebUI  远程代码执行漏洞 poc 补充](Web安全/OA办公/在野%200day%20nginxWebUI/在野%200day%20nginxWebUI%20%20远程代码执行漏洞%20poc%20补充.md)
-- **在野 0day nginxWebUI runCmd**（1）
-  - [在野 0day nginxWebUI runCmd 远程代码执行漏洞](Web安全/OA办公/在野%200day%20nginxWebUI%20runCmd/在野%200day%20nginxWebUI%20runCmd%20远程代码执行漏洞.md)
-- **基于**（1）
-  - [基于Weblogic的一系列漏洞复现总结（一）](Web安全/中间件/基于/基于Weblogic的一系列漏洞复现总结（一）.md)
 - **基于 ASPX.NET 的某 CMS**（1）
   - [基于 ASPX.NET 的某 CMS 漏洞分析](Web安全/CMS内容/基于%20ASPX.NET%20的某%20CMS/基于%20ASPX.NET%20的某%20CMS%20漏洞分析.md)
 - **堡垒机 - 附 PoC Jumpserver**（1）
@@ -515,12 +451,10 @@
   - [CVE-2022-23613复现与漏洞利用可能性尝试 (2)](Web安全/其他软件/复现与/CVE-2022-23613复现与漏洞利用可能性尝试%20%282%29.md)
 - **复现了 13 个**（1）
   - [复现了 13 个漏洞](Web安全/其他软件/复现了%2013%20个/复现了%2013%20个漏洞.md)
-- **多个 GitLab**（1）
-  - [多个 GitLab 漏洞使攻击者能够发起 DoS 攻击](Web安全/开发框架/多个%20GitLab/多个%20GitLab%20漏洞使攻击者能够发起%20DoS%20攻击.md)
 - **多个 TPM 2.0 实现**（1）
   - [多个 TPM 2.0 实现存在越界写入和越界读取漏洞](Web安全/其他软件/多个%20TPM%202.0%20实现/多个%20TPM%202.0%20实现存在越界写入和越界读取漏洞.md)
 - **多企源**（1）
-  - [多企源-基础数据支撑系统 checkLogin存在SQL注入漏洞](Web安全/开发框架/多企源/多企源-基础数据支撑系统%20checkLogin存在SQL注入漏洞.md)
+  - [多企源-基础数据支撑系统 checkLogin存在SQL注入漏洞](Web安全/其他软件/多企源/多企源-基础数据支撑系统%20checkLogin存在SQL注入漏洞.md)
 - **多客圈子论坛**（1）
   - [多客圈子论坛系统httpGet存在任意文件读取漏洞](Web安全/商业软件/多客圈子论坛/多客圈子论坛系统httpGet存在任意文件读取漏洞.md)
 - **多客圈子论坛系统**（1）
@@ -540,8 +474,7 @@
   - [天堂之门：发现谷歌云 Apigee 中的跨租户漏洞](Web安全/其他软件/天堂之门/天堂之门：发现谷歌云%20Apigee%20中的跨租户漏洞.md)
 - **天智(苏州)智能系统有限公司**（1）
   - [天智云制造管理平台存在SQL注入漏洞](Web安全/其他软件/天智%28苏州%29智能系统有限公司/天智云制造管理平台存在SQL注入漏洞.md)
-- **天津环球磁卡股份有限公司**（7）
-  - [公交IC卡收单管理系统bus存在SQL注入漏洞](Web安全/中间件/天津环球磁卡股份有限公司/公交IC卡收单管理系统bus存在SQL注入漏洞.md)
+- **天津环球磁卡股份有限公司**（6）
   - [公交IC卡收单管理系统line存在SQL注入漏洞](Web安全/商业软件/天津环球磁卡股份有限公司/公交IC卡收单管理系统line存在SQL注入漏洞.md)
   - [公交IC卡收单管理系统parametercard存在SQL注入漏洞](Web安全/商业软件/天津环球磁卡股份有限公司/公交IC卡收单管理系统parametercard存在SQL注入漏洞.md)
   - [公交IC卡收单管理系统role存在SQL注入漏洞](Web安全/商业软件/天津环球磁卡股份有限公司/公交IC卡收单管理系统role存在SQL注入漏洞.md)
@@ -550,8 +483,6 @@
   - [公交IC卡收单管理系统存在弱口令漏洞](Web安全/商业软件/天津环球磁卡股份有限公司/公交IC卡收单管理系统存在弱口令漏洞.md)
 - **天维尔消防智能指挥平台**（1）
   - [天维尔消防智能指挥平台API接口页面sql注入](Web安全/其他软件/天维尔消防智能指挥平台/天维尔消防智能指挥平台API接口页面sql注入.md)
-- **天翼创维**（1）
-  - [天翼创维awifi路由器存在多处未授权访问漏洞](Web安全/网络设备/天翼创维/天翼创维awifi路由器存在多处未授权访问漏洞.md)
 - **天融信**（9）
   - [天融信 TopApp-LB enable_tool_debug.php 远程命令执行漏洞](Web安全/网络设备/天融信/天融信%20TopApp-LB%20enable_tool_debug.php%20远程命令执行漏洞.md)
   - [天融信-TopApp-LB 负载均衡系统sql注入](Web安全/网络设备/天融信/天融信-TopApp-LB%20负载均衡系统sql注入.md)
@@ -591,12 +522,10 @@
   - [契约锁template存在远程命令执行漏洞](Web安全/其他软件/契约锁/契约锁template存在远程命令执行漏洞.md)
   - [契约锁utask存在远程命令执行漏洞](Web安全/其他软件/契约锁/契约锁utask存在远程命令执行漏洞.md)
 - **好视通**（2）
-  - [好视通云会议 upLoad2.jsp 任意文件上传漏洞](Web安全/OA办公/好视通/好视通云会议%20upLoad2.jsp%20任意文件上传漏洞.md)
   - [好视通视频会议系统存在任意文件读取漏洞](Web安全/其他软件/好视通/好视通视频会议系统存在任意文件读取漏洞.md)
+  - [好视通云会议 upLoad2.jsp 任意文件上传漏洞](Web安全/商业软件/好视通/好视通云会议%20upLoad2.jsp%20任意文件上传漏洞.md)
 - **如何在**（1）
   - [如何在DIR 882中拿到一个方便调试的shell](Web安全/其他软件/如何在/如何在DIR%20882中拿到一个方便调试的shell.md)
-- **如何获取**（1）
-  - [如何获取Tenda AX18系列的Telnet密码](Web安全/网络设备/如何获取/如何获取Tenda%20AX18系列的Telnet密码.md)
 - **威努特**（1）
   - [威努特sslvpn_client存在远程命令执行漏洞](Web安全/网络设备/威努特/威努特sslvpn_client存在远程命令执行漏洞.md)
 - **子辰视讯**（1）
@@ -615,8 +544,6 @@
   - [安全预警](Web安全/其他软件/安全/安全预警.md)
 - **安全研究员无意间发现谷歌手机一个锁屏**（1）
   - [安全研究员无意间发现谷歌手机一个锁屏绕过漏洞，收获七万美元赏金](Web安全/其他软件/安全研究员无意间发现谷歌手机一个锁屏/安全研究员无意间发现谷歌手机一个锁屏绕过漏洞，收获七万美元赏金.md)
-- **安全验证  Dubbo**（1）
-  - [安全验证  Dubbo CVE-2023-29234 反序列化漏洞分析](Web安全/中间件/安全验证%20%20Dubbo/安全验证%20%20Dubbo%20CVE-2023-29234%20反序列化漏洞分析.md)
 - **安卓旧系统 OTA 包分析与**（1）
   - [安卓旧系统 OTA 包分析与漏洞提权适配](Web安全/其他软件/安卓旧系统%20OTA%20包分析与/安卓旧系统%20OTA%20包分析与漏洞提权适配.md)
 - **安卓零点击**（1）
@@ -649,12 +576,12 @@
   - [宏景 HCM codesettree SQL注入漏洞 CNVD-2023-0874](Web安全/ERP企业/宏景%20HCM%20codesettree/宏景%20HCM%20codesettree%20SQL注入漏洞%20CNVD-2023-0874.md)
 - **宏景-HCM-codesettree**（1）
   - [宏景-HCM-codesettree-SQL注入漏洞-CNVD-2023-0874](Web安全/ERP企业/宏景-HCM-codesettree/宏景-HCM-codesettree-SQL注入漏洞-CNVD-2023-0874.md)
+- **宏景eHR**（1）
+  - [宏景eHR uploadLogo.do 任意文件上传致RCE漏洞](Web安全/商业软件/宏景eHR/宏景eHR%20uploadLogo.do%20任意文件上传致RCE漏洞.md)
 - **宏景EHR**（1）
   - [宏景EHR-searchCreatPlanList-sql注入](Web安全/ERP企业/宏景EHR/宏景EHR-searchCreatPlanList-sql注入.md)
 - **宏景eHR pos_dept_post**（1）
   - [宏景eHR pos_dept_post SQL注入漏洞](Web安全/ERP企业/宏景eHR%20pos_dept_post/宏景eHR%20pos_dept_post%20SQL注入漏洞.md)
-- **宏景eHR uploadLogo.do**（1）
-  - [宏景eHR uploadLogo.do 任意文件上传致RCE漏洞](Web安全/OA办公/宏景eHR%20uploadLogo.do/宏景eHR%20uploadLogo.do%20任意文件上传致RCE漏洞.md)
 - **宏电 H8922 Telnet 后门**（1）
   - [宏电 H8922 Telnet 后门漏洞（CVE-2021-28149）   孤桜懶契](Web安全/服务器软件/宏电%20H8922%20Telnet%20后门/宏电%20H8922%20Telnet%20后门漏洞（CVE-2021-28149）%20%20%20孤桜懶契.md)
 - **宏电 H8922 多个**（1）
@@ -680,10 +607,11 @@
   - [富通天下外贸ERPUploadEmailAttr存在任意文件上传漏洞](Web安全/ERP企业/富通天下外贸ERP/富通天下外贸ERPUploadEmailAttr存在任意文件上传漏洞.md)
 - **对SugarCRM零日**（1）
   - [对SugarCRM零日漏洞（CVE-2023-22952）的防御](Web安全/商业软件/对SugarCRM零日/对SugarCRM零日漏洞（CVE-2023-22952）的防御.md)
-- **小米手机可信执行环境安全**（1）
-  - [小米手机可信执行环境安全漏洞](Web安全/网络设备/小米手机可信执行环境安全/小米手机可信执行环境安全漏洞.md)
-- **小鱼易连视频系统 - Nginx LUA 脚本**（1）
-  - [小鱼易连视频系统 - Nginx LUA 脚本远程命令执行](Web安全/中间件/小鱼易连视频系统%20-%20Nginx%20LUA%20脚本/小鱼易连视频系统%20-%20Nginx%20LUA%20脚本远程命令执行.md)
+- **小米**（1）
+  - [小米手机可信执行环境安全漏洞](Web安全/智能设备/小米/小米手机可信执行环境安全漏洞.md)
+- **小说漫画系统**（2）
+  - [微信公众号小说漫画系统Upload存在任意文件写入漏洞](Web安全/商业软件/小说漫画系统/微信公众号小说漫画系统Upload存在任意文件写入漏洞.md)
+  - [微信公众号小说漫画系统fileupload.php存在任意文件写入漏洞](Web安全/商业软件/小说漫画系统/微信公众号小说漫画系统fileupload.php存在任意文件写入漏洞.md)
 - **尽快修补**（1）
   - [尽快修补！新的 MOVEit 传输漏洞记录的漏洞正在被利用](Web安全/其他软件/尽快修补/尽快修补！新的%20MOVEit%20传输漏洞记录的漏洞正在被利用.md)
 - **工业网关惊现高危**（1）
@@ -694,8 +622,6 @@
   - [工作流接口没登录就能执行命令：Orkes漏洞已遭利用](Web安全/其他软件/工作流接口没登录就能执行/工作流接口没登录就能执行命令：Orkes漏洞已遭利用.md)
 - **工控系统高危**（1）
   - [工控系统高危预警：台达 COMMGR2 栈溢出漏洞（CVE-2026-3630）CVSS 9.8，无需认证可直接远程执行代码](Web安全/其他软件/工控系统高危/工控系统高危预警：台达%20COMMGR2%20栈溢出漏洞（CVE-2026-3630）CVSS%209.8，无需认证可直接远程执行代码.md)
-- **已复现  Langflow post-auth**（1）
-  - [已复现  Langflow post-auth RCE](Web安全/AI应用/已复现%20%20Langflow%20post-auth/已复现%20%20Langflow%20post-auth%20RCE.md)
 - **帆软**（1）
   - [帆软 excel SQL注入漏洞复现](Web安全/其他软件/帆软/帆软%20excel%20SQL注入漏洞复现.md)
 - **帆软报表 v8-0**（1）
@@ -723,26 +649,26 @@
   - [帮管客CRMmessage存在SQL注入漏洞](Web安全/商业软件/帮管客CRM/帮管客CRMmessage存在SQL注入漏洞.md)
 - **常见**（1）
   - [常见未授权访问漏洞总结及验证方式](Web安全/其他软件/常见/常见未授权访问漏洞总结及验证方式.md)
-- **常见框架**（1）
-  - [常见框架漏洞复现——Spring](Web安全/开发框架/常见框架/常见框架漏洞复现——Spring.md)
 - **常见的**（1）
   - [常见的未授权访问漏洞](Web安全/其他软件/常见的/常见的未授权访问漏洞.md)
-- **干货 - 最全的 Weblogic**（1）
-  - [干货 - 最全的 Weblogic 漏洞复现](Web安全/中间件/干货%20-%20最全的%20Weblogic/干货%20-%20最全的%20Weblogic%20漏洞复现.md)
 - **干货分享   禅道 18.0beta1**（1）
   - [干货分享   禅道 18.0beta1RCE 代码分析 - 附 Nuclei 脚本](Web安全/其他软件/干货分享%20%20%20禅道%2018.0beta1/干货分享%20%20%20禅道%2018.0beta1RCE%20代码分析%20-%20附%20Nuclei%20脚本.md)
 - **平升电子水库安全监管平台**（1）
   - [平升电子水库安全监管平台GetRecordsByTableNameAndColumns存在SQL注入漏洞](Web安全/其他软件/平升电子水库安全监管平台/平升电子水库安全监管平台GetRecordsByTableNameAndColumns存在SQL注入漏洞.md)
-- **广联达**（2）
-  - [广联达 Linkworks msgbroadcastuploadfile.aspx 后台文件上传漏洞](Web安全/OA办公/广联达/广联达%20Linkworks%20msgbroadcastuploadfile.aspx%20后台文件上传漏洞.md)
+- **广告任务平台**（1）
+  - [微信广告任务平台ajax_upload存在任意文件上传漏洞](Web安全/商业软件/广告任务平台/微信广告任务平台ajax_upload存在任意文件上传漏洞.md)
+- **广联达**（3）
+  - [广联达 Linkworks msgbroadcastuploadfile.aspx 后台文件上传漏洞](Web安全/ERP企业/广联达/广联达%20Linkworks%20msgbroadcastuploadfile.aspx%20后台文件上传漏洞.md)
+  - [广联达-Linkworks-msgbroadcastuploadfile.aspx-后台文件上传漏洞](Web安全/ERP企业/广联达/广联达-Linkworks-msgbroadcastuploadfile.aspx-后台文件上传漏洞.md)
   - [广联达 Linkworks GetIMDictionary SQL注入漏洞](Web安全/其他软件/广联达/广联达%20Linkworks%20GetIMDictionary%20SQL注入漏洞.md)
 - **广联达-Linkworks-GetIMDictionary**（1）
   - [广联达-Linkworks-GetIMDictionary-SQL注入漏洞](Web安全/其他软件/广联达-Linkworks-GetIMDictionary/广联达-Linkworks-GetIMDictionary-SQL注入漏洞.md)
-- **广西金中软件集团有限公司**（4）
-  - [广西金中软件集团有限公司智慧医养服务平台UpLoaderAction存在任意文件上传漏洞](Web安全/OA办公/广西金中软件集团有限公司/广西金中软件集团有限公司智慧医养服务平台UpLoaderAction存在任意文件上传漏洞.md)
-  - [广西金中软件集团有限公司智慧医养服务平台Uploader存在任意文件上传漏洞](Web安全/OA办公/广西金中软件集团有限公司/广西金中软件集团有限公司智慧医养服务平台Uploader存在任意文件上传漏洞.md)
-  - [广西金中软件集团有限公司智慧医养服务平台Uploads存在任意文件上传漏洞](Web安全/OA办公/广西金中软件集团有限公司/广西金中软件集团有限公司智慧医养服务平台Uploads存在任意文件上传漏洞.md)
+- **广西金中软件集团有限公司**（1）
   - [广西金中软件集团有限公司智慧医养服务平台DownFile存在任意文件删除漏洞](Web安全/其他软件/广西金中软件集团有限公司/广西金中软件集团有限公司智慧医养服务平台DownFile存在任意文件删除漏洞.md)
+- **建研信息**（3）
+  - [湖南建研工程质量检测系统Attachment存在任意文件上传漏洞](Web安全/商业软件/建研信息/湖南建研工程质量检测系统Attachment存在任意文件上传漏洞.md)
+  - [湖南建研工程质量检测系统FileUpload存在任意文件上传漏洞](Web安全/商业软件/建研信息/湖南建研工程质量检测系统FileUpload存在任意文件上传漏洞.md)
+  - [湖南建研工程质量检测系统updatefile存在任意文件上传漏洞](Web安全/商业软件/建研信息/湖南建研工程质量检测系统updatefile存在任意文件上传漏洞.md)
 - **开源 IAM 平台ZITADEL中**（1）
   - [开源 IAM 平台ZITADEL中存在漏洞，可导致用户账户遭完全接管](Web安全/其他软件/开源%20IAM%20平台ZITADEL中/开源%20IAM%20平台ZITADEL中存在漏洞，可导致用户账户遭完全接管.md)
 - **开源堡垒机 JumpServer**（1）
@@ -753,8 +679,6 @@
   - [开源库 Libpng 漏洞已存在30年，可导致数百万系统遭代码执行攻击](Web安全/其他软件/开源库%20Libpng/开源库%20Libpng%20漏洞已存在30年，可导致数百万系统遭代码执行攻击.md)
 - **开源的 Snort 入侵检测系统中**（1）
   - [开源的 Snort 入侵检测系统中存在高危漏洞](Web安全/其他软件/开源的%20Snort%20入侵检测系统中/开源的%20Snort%20入侵检测系统中存在高危漏洞.md)
-- **引导加载程序**（1）
-  - [引导加载程序存在高危漏洞，影响思科100多个交换机机型](Web安全/网络设备/引导加载程序/引导加载程序存在高危漏洞，影响思科100多个交换机机型.md)
 - **彩虹外链网盘**（5）
   - [彩虹外链网盘 v4.0 sql注入漏洞](Web安全/其他软件/彩虹外链网盘/彩虹外链网盘%20v4.0%20sql注入漏洞.md)
   - [彩虹外链网盘 v4.0 任意文件读取漏洞（一）](Web安全/其他软件/彩虹外链网盘/彩虹外链网盘%20v4.0%20任意文件读取漏洞（一）.md)
@@ -765,14 +689,9 @@
   - [影响多个OEM的Android本地漏洞公布](Web安全/其他软件/影响多个OEM的Android本地/影响多个OEM的Android本地漏洞公布.md)
 - **微信公众号商家收银台小程序系统**（1）
   - [微信公众号商家收银台小程序系统存在任意文件上传漏洞](Web安全/商业软件/微信公众号商家收银台小程序系统/微信公众号商家收银台小程序系统存在任意文件上传漏洞.md)
-- **微信公众号小说漫画系统**（2）
-  - [微信公众号小说漫画系统Upload存在任意文件写入漏洞](Web安全/OA办公/微信公众号小说漫画系统/微信公众号小说漫画系统Upload存在任意文件写入漏洞.md)
-  - [微信公众号小说漫画系统fileupload.php存在任意文件写入漏洞](Web安全/OA办公/微信公众号小说漫画系统/微信公众号小说漫画系统fileupload.php存在任意文件写入漏洞.md)
 - **微信客户端**（2）
   - [微信客户端 远程命令执行漏洞](Web安全/其他软件/微信客户端/微信客户端%20远程命令执行漏洞.md)
   - [微信客户端-远程命令执行漏洞](Web安全/其他软件/微信客户端/微信客户端-远程命令执行漏洞.md)
-- **微信广告任务平台**（1）
-  - [微信广告任务平台ajax_upload存在任意文件上传漏洞](Web安全/OA办公/微信广告任务平台/微信广告任务平台ajax_upload存在任意文件上传漏洞.md)
 - **微信活码系统**（1）
   - [微信活码系统index存在SQL注入漏洞](Web安全/其他软件/微信活码系统/微信活码系统index存在SQL注入漏洞.md)
 - **微信活码系统 ucenterindex**（1）
@@ -785,8 +704,8 @@
   - [微擎 0.8 后台任意文件删除](Web安全/商业软件/微擎%200.8%20后台/微擎%200.8%20后台任意文件删除.md)
 - **微擎 后台**（1）
   - [微擎 后台绕过禁用函数写shell](Web安全/商业软件/微擎%20后台/微擎%20后台绕过禁用函数写shell.md)
-- **微步 XGPT 发现 Apple 内核**（1）
-  - [微步 XGPT 发现 Apple 内核漏洞并获致谢](Web安全/AI应用/微步%20XGPT%20发现%20Apple%20内核/微步%20XGPT%20发现%20Apple%20内核漏洞并获致谢.md)
+- **微步**（1）
+  - [微步 XGPT 发现 Apple 内核漏洞并获致谢](Web安全/安全设备/微步/微步%20XGPT%20发现%20Apple%20内核漏洞并获致谢.md)
 - **微步情报局发现DataEase**（1）
   - [微步情报局发现DataEase存在多个高危漏洞，可实现RCE](Web安全/其他软件/微步情报局发现DataEase/微步情报局发现DataEase存在多个高危漏洞，可实现RCE.md)
 - **微软.NET零日**（1）
@@ -819,8 +738,6 @@
   - [微软确认SharePoint Server关键零日漏洞遭活跃攻击（CVE-2026-32201）](Web安全/其他软件/微软确认SharePoint%20Server关键零日/微软确认SharePoint%20Server关键零日漏洞遭活跃攻击（CVE-2026-32201）.md)
 - **微软紧急修复严重的**（1）
   - [严重的 ASP.NET](Web安全/其他软件/微软紧急修复严重的/严重的%20ASP.NET.md)
-- **微软详述严重的 ChromeOS**（1）
-  - [微软详述严重的 ChromeOS 漏洞](Web安全/中间件/微软详述严重的%20ChromeOS/微软详述严重的%20ChromeOS%20漏洞.md)
 - **忆赛通**（1）
   - [忆赛通电子文档安全管理系统 9处 SQL注入漏洞复现](Web安全/ERP企业/忆赛通/忆赛通电子文档安全管理系统%209处%20SQL注入漏洞复现.md)
 - **忆赛通电子文档安全管理系统 getAllUsers 信息泄露漏洞**（1）
@@ -831,76 +748,27 @@
   - [快递微信小程序系统存在前台任意文件读取漏洞](Web安全/其他软件/快递微信小程序系统/快递微信小程序系统存在前台任意文件读取漏洞.md)
 - **快递微信小程序系统 httpRequest**（1）
   - [快递微信小程序系统 httpRequest 任意文件读取漏洞](Web安全/其他软件/快递微信小程序系统%20httpRequest/快递微信小程序系统%20httpRequest%20任意文件读取漏洞.md)
-- **思普企业运营管理平台 apilogin**（1）
-  - [思普企业运营管理平台 apilogin SQL注入漏洞](Web安全/开发框架/思普企业运营管理平台%20apilogin/思普企业运营管理平台%20apilogin%20SQL注入漏洞.md)
+- **思普**（1）
+  - [思普企业运营管理平台 apilogin SQL注入漏洞](Web安全/商业软件/思普/思普企业运营管理平台%20apilogin%20SQL注入漏洞.md)
 - **思源笔记**（1）
   - [思源笔记存在前台任意文件写入漏洞](Web安全/其他软件/思源笔记/思源笔记存在前台任意文件写入漏洞.md)
 - **思福迪**（3）
   - [思福迪-运维安全管理系统-test_qrcode_b-远程命令执行漏洞](Web安全/商业软件/思福迪/思福迪-运维安全管理系统-test_qrcode_b-远程命令执行漏洞.md)
   - [思福迪运维安全管理系统GetCaCert存在任意文件读取漏洞](Web安全/商业软件/思福迪/思福迪运维安全管理系统GetCaCert存在任意文件读取漏洞.md)
   - [思福迪运维安全管理系统test_qrcode_b存在远程命令执行漏洞](Web安全/商业软件/思福迪/思福迪运维安全管理系统test_qrcode_b存在远程命令执行漏洞.md)
-- **思科**（3）
-  - [思科 Unified CM 中存在满分漏洞，可用于获得root权限](Web安全/网络设备/思科/思科%20Unified%20CM%20中存在满分漏洞，可用于获得root权限.md)
-  - [思科：满分ISE漏洞可导致未认证攻击者执行root 代码](Web安全/网络设备/思科/思科：满分ISE漏洞可导致未认证攻击者执行root%20代码.md)
-  - [思科：速修复满分 Secure Workload 未授权 API 访问漏洞](Web安全/网络设备/思科/思科：速修复满分%20Secure%20Workload%20未授权%20API%20访问漏洞.md)
-- **思科 AnyConnect VPN 服务器**（1）
-  - [思科 AnyConnect VPN 服务器漏洞可用于触发 DoS 条件](Web安全/网络设备/思科%20AnyConnect%20VPN%20服务器/思科%20AnyConnect%20VPN%20服务器漏洞可用于触发%20DoS%20条件.md)
-- **思科 BroadWorks 受严重的认证**（1）
-  - [思科 BroadWorks 受严重的认证绕过漏洞影响](Web安全/OA办公/思科%20BroadWorks%20受严重的认证/思科%20BroadWorks%20受严重的认证绕过漏洞影响.md)
-- **思科Catalyst SD-WAN严重认证**（1）
-  - [思科Catalyst SD-WAN严重认证绕过漏洞遭长期入侵，可植入恶意节点控制网络](Web安全/网络设备/思科Catalyst%20SD-WAN严重认证/思科Catalyst%20SD-WAN严重认证绕过漏洞遭长期入侵，可植入恶意节点控制网络.md)
-- **思科Webex爆9.8分**（1）
-  - [思科Webex爆9.8分漏洞：你的会议可能被老板窃听](Web安全/网络设备/思科Webex爆9.8分/思科Webex爆9.8分漏洞：你的会议可能被老板窃听.md)
-- **思科严重**（1）
-  - [思科严重漏洞可导致黑客在SEG设备上添加 root 用户](Web安全/网络设备/思科严重/思科严重漏洞可导致黑客在SEG设备上添加%20root%20用户.md)
-- **思科修复 ClamAV 拒绝服务**（1）
-  - [思科修复 ClamAV 拒绝服务 (DoS) 漏洞，专家警告称概念验证 (PoC) 漏洞代码可用](Web安全/网络设备/思科修复%20ClamAV%20拒绝服务/思科修复%20ClamAV%20拒绝服务%20%28DoS%29%20漏洞，专家警告称概念验证%20%28PoC%29%20漏洞代码可用.md)
-- **思科修复企业协作解决方案中的严重**（1）
-  - [思科修复企业协作解决方案中的严重漏洞](Web安全/网络设备/思科修复企业协作解决方案中的严重/思科修复企业协作解决方案中的严重漏洞.md)
-- **思科修复已有 PoC 的根提权**（1）
-  - [思科修复已有 PoC 的根提权漏洞](Web安全/网络设备/思科修复已有%20PoC%20的根提权/思科修复已有%20PoC%20的根提权漏洞.md)
-- **思科修复已遭利用的 Unified CM**（1）
-  - [思科修复已遭利用的 Unified CM RCE 0day漏洞](Web安全/网络设备/思科修复已遭利用的%20Unified%20CM/思科修复已遭利用的%20Unified%20CM%20RCE%200day漏洞.md)
-- **思科修复由NSA报送的两个高危**（1）
-  - [思科修复由NSA报送的两个高危漏洞](Web安全/网络设备/思科修复由NSA报送的两个高危/思科修复由NSA报送的两个高危漏洞.md)
-- **思科修补 VPN 产品中的高严重性**（1）
-  - [思科修补 VPN 产品中的高严重性漏洞](Web安全/网络设备/思科修补%20VPN%20产品中的高严重性/思科修补%20VPN%20产品中的高严重性漏洞.md)
-- **思科修补启用**（1）
-  - [思科修补启用 Root CmdExec 和 PrivEsc 的关键 ISE 漏洞](Web安全/网络设备/思科修补启用/思科修补启用%20Root%20CmdExec%20和%20PrivEsc%20的关键%20ISE%20漏洞.md)
-- **思科安全管理器**（1）
-  - [CVE-2020-27131 思科安全管理器反序列化漏洞 POC](Web安全/网络设备/思科安全管理器/CVE-2020-27131%20思科安全管理器反序列化漏洞%20POC.md)
-- **思科提醒 ISE 中的满分**（1）
-  - [思科提醒 ISE 中的满分 RCE 漏洞](Web安全/网络设备/思科提醒%20ISE%20中的满分/思科提醒%20ISE%20中的满分%20RCE%20漏洞.md)
-- **思科提醒Small Business路由器中的**（1）
-  - [思科提醒Small Business路由器中的XSS漏洞](Web安全/中间件/思科提醒Small%20Business路由器中的/思科提醒Small%20Business路由器中的XSS漏洞.md)
-- **思科提醒严重的 ISE 和 CCP**（1）
-  - [思科提醒严重的 ISE 和 CCP 漏洞](Web安全/网络设备/思科提醒严重的%20ISE%20和%20CCP/思科提醒严重的%20ISE%20和%20CCP%20漏洞.md)
-- **思科提醒满分 Secure FMC**（1）
-  - [思科提醒满分 Secure FMC 漏洞可用于获取 root 权限](Web安全/网络设备/思科提醒满分%20Secure%20FMC/思科提醒满分%20Secure%20FMC%20漏洞可用于获取%20root%20权限.md)
-- **思科提醒通信软件中的严重**（1）
-  - [思科提醒通信软件中的严重 RCE 漏洞](Web安全/网络设备/思科提醒通信软件中的严重/思科提醒通信软件中的严重%20RCE%20漏洞.md)
-- **思科物联网无线AP遭遇严重**（1）
-  - [思科物联网无线AP遭遇严重命令注入漏洞](Web安全/网络设备/思科物联网无线AP遭遇严重/思科物联网无线AP遭遇严重命令注入漏洞.md)
-- **思科电话适配器易受**（1）
-  - [思科电话适配器易受 RCE 攻击，目前无修复方案](Web安全/网络设备/思科电话适配器易受/思科电话适配器易受%20RCE%20攻击，目前无修复方案.md)
-- **思科紧急通告**（1）
-  - [思科通告：本地智能软件管理器曝出高危漏洞，安全升级刻不容缓！](Web安全/网络设备/思科紧急通告/思科通告：本地智能软件管理器曝出高危漏洞，安全升级刻不容缓！.md)
-- **思迅商旗**（5）
-  - [思迅商旗商业管理系统10SetAiPosItemImage存在任意文件上传漏洞](Web安全/AI应用/思迅商旗/思迅商旗商业管理系统10SetAiPosItemImage存在任意文件上传漏洞.md)
+- **思迅**（1）
+  - [思迅商旗商业管理系统10SetAiPosItemImage存在任意文件上传漏洞](Web安全/商业软件/思迅/思迅商旗商业管理系统10SetAiPosItemImage存在任意文件上传漏洞.md)
+- **思迅商旗**（4）
   - [思迅商旗商业管理系统7Cashier存在信息泄露漏洞](Web安全/商业软件/思迅商旗/思迅商旗商业管理系统7Cashier存在信息泄露漏洞.md)
   - [思迅商旗商业管理系统7GylOperator存在信息泄露漏洞](Web安全/商业软件/思迅商旗/思迅商旗商业管理系统7GylOperator存在信息泄露漏洞.md)
   - [思迅商旗商业管理系统7Operator存在信息泄露漏洞](Web安全/商业软件/思迅商旗/思迅商旗商业管理系统7Operator存在信息泄露漏洞.md)
   - [思迅商旗商业管理系统7存在弱口令漏洞](Web安全/商业软件/思迅商旗/思迅商旗商业管理系统7存在弱口令漏洞.md)
-- **思迈特**（1）
-  - [Smartbi内置用户登陆绕过漏洞](Web安全/开发框架/思迈特/Smartbi内置用户登陆绕过漏洞.md)
-- **恶意软件利用零日**（1）
-  - [恶意软件利用零日漏洞感染报废的AVTECH IP 摄像机](Web安全/网络设备/恶意软件利用零日/恶意软件利用零日漏洞感染报废的AVTECH%20IP%20摄像机.md)
 - **悟空CRM**（1）
   - [悟空CRM9.0存在fastjson远程代码执行漏洞(CVE-2024-23052)](Web安全/商业软件/悟空CRM/悟空CRM9.0存在fastjson远程代码执行漏洞%28CVE-2024-23052%29.md)
 - **悦库网盘**（1）
   - [悦库网盘aRegisAdmin存在SQL注入漏洞](Web安全/其他软件/悦库网盘/悦库网盘aRegisAdmin存在SQL注入漏洞.md)
 - **惠尔顿**（1）
-  - [惠尔顿安全审计系统download任意文件读取漏洞](Web安全/OA办公/惠尔顿/惠尔顿安全审计系统download任意文件读取漏洞.md)
+  - [惠尔顿安全审计系统download任意文件读取漏洞](Web安全/网络设备/惠尔顿/惠尔顿安全审计系统download任意文件读取漏洞.md)
 - **惠普HPE CMU曝高危**（1）
   - [惠普HPE CMU曝高危漏洞：攻击者可绕过认证执行远程命令](Web安全/其他软件/惠普HPE%20CMU曝高危/惠普HPE%20CMU曝高危漏洞：攻击者可绕过认证执行远程命令.md)
 - **惠普将在90天内修复这个严重的 LaserJet 打印机**（1）
@@ -927,19 +795,13 @@
   - [手机卡号推广商城ssk存在SQL注入漏洞](Web安全/商业软件/手机卡号推广商城/手机卡号推广商城ssk存在SQL注入漏洞.md)
 - **打了**（1）
   - [CVE-2026-43899 打了补丁，但只补了一半：DeepChat Electron RCE 与不完整修复的代价 (2)](Web安全/其他软件/打了/CVE-2026-43899%20打了补丁，但只补了一半：DeepChat%20Electron%20RCE%20与不完整修复的代价%20%282%29.md)
-- **技术干货 - Apache Shiro 权限**（1）
-  - [技术干货 - Apache Shiro 权限绕过漏洞分析 (CVE-2020-17523)](Web安全/中间件/技术干货%20-%20Apache%20Shiro%20权限/技术干货%20-%20Apache%20Shiro%20权限绕过漏洞分析%20%28CVE-2020-17523%29.md)
 - **抖音国际版安卓APP安全**（1）
   - [抖音国际版安卓APP安全漏洞可劫持用户账户](Web安全/其他软件/抖音国际版安卓APP安全/抖音国际版安卓APP安全漏洞可劫持用户账户.md)
 - **拓普泰尔**（1）
   - [深圳市拓普泰尔科技有限公司RG2000存在命令执行漏洞](Web安全/其他软件/拓普泰尔/深圳市拓普泰尔科技有限公司RG2000存在命令执行漏洞.md)
 - **挂号系统**（1）
   - [挂号系统login.php存在SQL注入漏洞](Web安全/商业软件/挂号系统/挂号系统login.php存在SQL注入漏洞.md)
-- **指挥调度平台**（11）
-  - [指挥调度平台client_upload存在任意文件上传漏洞](Web安全/OA办公/指挥调度平台/指挥调度平台client_upload存在任意文件上传漏洞.md)
-  - [指挥调度平台event_uploadfile存在任意文件上传漏洞](Web安全/OA办公/指挥调度平台/指挥调度平台event_uploadfile存在任意文件上传漏洞.md)
-  - [指挥调度平台task_uploadfile存在任意文件上传漏洞](Web安全/OA办公/指挥调度平台/指挥调度平台task_uploadfile存在任意文件上传漏洞.md)
-  - [指挥调度平台zx_upload存在任意文件上传漏洞](Web安全/OA办公/指挥调度平台/指挥调度平台zx_upload存在任意文件上传漏洞.md)
+- **指挥调度平台**（7）
   - [指挥调度平台ajax_users存在SQL注入漏洞](Web安全/其他软件/指挥调度平台/指挥调度平台ajax_users存在SQL注入漏洞.md)
   - [指挥调度平台get_gis_fence_warning存在SQL注入漏洞](Web安全/其他软件/指挥调度平台/指挥调度平台get_gis_fence_warning存在SQL注入漏洞.md)
   - [指挥调度平台invite2videoconf存在远程命令执行漏洞](Web安全/其他软件/指挥调度平台/指挥调度平台invite2videoconf存在远程命令执行漏洞.md)
@@ -960,22 +822,12 @@
   - [提权验证一键搞定：全面集成的内核漏洞测试工具 RootHawkX](Web安全/其他软件/提权验证一键搞定/提权验证一键搞定：全面集成的内核漏洞测试工具%20RootHawkX.md)
 - **插件**（1）
   - [插件前台任意文件读取漏洞复现与分析 (CVE-2025-2294)](Web安全/其他软件/插件/插件前台任意文件读取漏洞复现与分析%20%28CVE-2025-2294%29.md)
-- **揭秘NVIDIA AI安全**（1）
-  - [揭秘NVIDIA AI安全漏洞：CVE-2024-0132深度剖析](Web安全/AI应用/揭秘NVIDIA%20AI安全/揭秘NVIDIA%20AI安全漏洞：CVE-2024-0132深度剖析.md)
-- **攻击者利用 Flowise 严重**（1）
-  - [攻击者利用 Flowise 严重漏洞 CVE-2025-59528 实现远程代码执行](Web安全/AI应用/攻击者利用%20Flowise%20严重/攻击者利用%20Flowise%20严重漏洞%20CVE-2025-59528%20实现远程代码执行.md)
-- **攻击者利用 Mjobtime 应用程序**（1）
-  - [攻击者利用 Mjobtime 应用程序漏洞，通过 MSSQL 和 IIS POST 请求攻击建筑公司](Web安全/中间件/攻击者利用%20Mjobtime%20应用程序/攻击者利用%20Mjobtime%20应用程序漏洞，通过%20MSSQL%20和%20IIS%20POST%20请求攻击建筑公司.md)
 - **攻击者利用 MLflow**（1）
   - [攻击者利用 MLflow 漏洞窃取云凭据和机密信息](Web安全/CMS内容/攻击者利用%20MLflow/攻击者利用%20MLflow%20漏洞窃取云凭据和机密信息.md)
 - **攻击者利用Mitel VoIP**（1）
   - [攻击者利用Mitel VoIP漏洞进行勒索软件攻击](Web安全/其他软件/攻击者利用Mitel%20VoIP/攻击者利用Mitel%20VoIP漏洞进行勒索软件攻击.md)
-- **攻击者利用新零日**（1）
-  - [攻击者利用新零日漏洞劫持Fortinet防火墙](Web安全/网络设备/攻击者利用新零日/攻击者利用新零日漏洞劫持Fortinet防火墙.md)
 - **攻击者可利用的FortiSandbox**（1）
   - [攻击者可利用的FortiSandbox漏洞PoC公开，可执行任意命令](Web安全/其他软件/攻击者可利用的FortiSandbox/攻击者可利用的FortiSandbox漏洞PoC公开，可执行任意命令.md)
-- **攻击者持续一年攻击TP-Link路由器**（1）
-  - [攻击者持续一年攻击TP-Link路由器漏洞CVE-2023-33538仍未得逞](Web安全/网络设备/攻击者持续一年攻击TP-Link路由器/攻击者持续一年攻击TP-Link路由器漏洞CVE-2023-33538仍未得逞.md)
 - **数字化校园管理平台**（1）
   - [数字化校园平台 校园综合管理系统 任意文件上传漏洞](Web安全/商业软件/数字化校园管理平台/数字化校园平台%20校园综合管理系统%20任意文件上传漏洞.md)
 - **数字系统**（12）
@@ -993,28 +845,14 @@
   - [酒店宽带运营系统server_ping远程命令执行漏洞](Web安全/商业软件/数字系统/酒店宽带运营系统server_ping远程命令执行漏洞.md)
 - **整合分析  Fortinet 双子星高危**（1）
   - [整合分析  Fortinet 双子星高危漏洞：未认证即可远程代码执行](Web安全/网络设备/整合分析%20%20Fortinet%20双子星高危/整合分析%20%20Fortinet%20双子星高危漏洞：未认证即可远程代码执行.md)
-- **文件上传**（16）
-  - [广联达-Linkworks-msgbroadcastuploadfile.aspx-后台文件上传漏洞](Web安全/OA办公/文件上传/广联达-Linkworks-msgbroadcastuploadfile.aspx-后台文件上传漏洞.md)
-  - [管家婆订货易在线商城 UploadImgNoCheck 文件上传致RCE漏洞](Web安全/OA办公/文件上传/管家婆订货易在线商城%20UploadImgNoCheck%20文件上传致RCE漏洞.md)
-  - [金盘图书馆系统doUpload存在任意文件上传漏洞](Web安全/OA办公/文件上传/金盘图书馆系统doUpload存在任意文件上传漏洞.md)
-  - [[网络安全] 十四. 文件上传漏洞 (3) 编辑器漏洞和 IIS 高版本漏洞及防御](Web安全/中间件/文件上传/[网络安全]%20十四.%20文件上传漏洞%20%283%29%20编辑器漏洞和%20IIS%20高版本漏洞及防御.md)
+- **文件上传**（6）
   - [叮～你有新的速递！某友文件上传漏洞（附 EXP）](Web安全/其他软件/文件上传/叮～你有新的速递！某友文件上传漏洞（附%20EXP）.md)
   - [任我行-管家婆-订货易在线商城-SelectImage.aspx-任意文件上传漏洞](Web安全/商业软件/文件上传/任我行-管家婆-订货易在线商城-SelectImage.aspx-任意文件上传漏洞.md)
   - [微擎微信公众号管理系统系统AccountEdit存在任意文件上传漏洞](Web安全/商业软件/文件上传/微擎微信公众号管理系统系统AccountEdit存在任意文件上传漏洞.md)
   - [奇安信攻防社区 - 金山终端安全系统 V8-V9 存在文件上传漏洞](Web安全/安全设备/文件上传/奇安信攻防社区%20-%20金山终端安全系统%20V8-V9%20存在文件上传漏洞.md)
   - [联软准入 任意文件上传](Web安全/安全设备/文件上传/联软准入%20任意文件上传.md)
   - [大华-智慧园区综合管理平台-user_save.action-任意文件上传漏洞](Web安全/智能设备/文件上传/大华-智慧园区综合管理平台-user_save.action-任意文件上传漏洞.md)
-  - [网神 SecGate 3600 防火墙 obj_app_upfile 任意文件上传漏洞](Web安全/网络设备/文件上传/网神%20SecGate%203600%20防火墙%20obj_app_upfile%20任意文件上传漏洞.md)
-  - [网神-SecGate-3600-防火墙-obj_app_upfile-任意文件上传漏洞](Web安全/网络设备/文件上传/网神-SecGate-3600-防火墙-obj_app_upfile-任意文件上传漏洞.md)
-  - [网神SecGata3600防火墙app_av_import_save任意文件上传漏洞](Web安全/网络设备/文件上传/网神SecGata3600防火墙app_av_import_save任意文件上传漏洞.md)
-  - [网神SecGata3600防火墙obj_app_upfile任意文件上传漏洞](Web安全/网络设备/文件上传/网神SecGata3600防火墙obj_app_upfile任意文件上传漏洞.md)
-  - [网神SecGata3600防火墙sec_ssl_agent_import_save任意文件上传漏洞](Web安全/网络设备/文件上传/网神SecGata3600防火墙sec_ssl_agent_import_save任意文件上传漏洞.md)
-  - [网神SecGata3600防火墙sys_hand_upfile任意文件上传漏洞](Web安全/网络设备/文件上传/网神SecGata3600防火墙sys_hand_upfile任意文件上传漏洞.md)
-- **文件读取**（9）
-  - [​畅捷通 TPlus DownloadProxy.aspx 任意文件读取漏洞](Web安全/OA办公/文件读取/​畅捷通%20TPlus%20DownloadProxy.aspx%20任意文件读取漏洞.md)
-  - [奇安信-网康-NS-ASG安全网关-cert_download.php-任意文件读取漏洞](Web安全/OA办公/文件读取/奇安信-网康-NS-ASG安全网关-cert_download.php-任意文件读取漏洞.md)
-  - [网康 NS-ASG安全网关 cert_download.php 任意文件读取漏洞](Web安全/OA办公/文件读取/网康%20NS-ASG安全网关%20cert_download.php%20任意文件读取漏洞.md)
-  - [网康-NS-ASG安全网关-cert_download.php-任意文件读取漏洞](Web安全/OA办公/文件读取/网康-NS-ASG安全网关-cert_download.php-任意文件读取漏洞.md)
+- **文件读取**（5）
   - [ (224)](Web安全/其他软件/文件读取/%20%28224%29.md)
   - [NAKIVO Backup & Replication任意文件读取漏洞(CVE-2024-48248)](Web安全/其他软件/文件读取/NAKIVO%20Backup%20&%20Replication任意文件读取漏洞%28CVE-2024-48248%29.md)
   - [金山-V8-终端安全系统-get_file_content.php-任意文件读取漏洞](Web安全/其他软件/文件读取/金山-V8-终端安全系统-get_file_content.php-任意文件读取漏洞.md)
@@ -1025,17 +863,14 @@
   - [文库yunyeCMS 漏洞合集](Web安全/CMS内容/文库/文库yunyeCMS%20漏洞合集.md)
 - **文库 - Thinkphp5-0-5-2sql**（1）
   - [文库 - Thinkphp5-0-5-2sql 注入漏洞整理](Web安全/开发框架/文库%20-%20Thinkphp5-0-5-2sql/文库%20-%20Thinkphp5-0-5-2sql%20注入漏洞整理.md)
-- **新华三**（2）
-  - [新华三magicR100存在未授权RCE攻击](Web安全/网络设备/新华三/新华三magicR100存在未授权RCE攻击.md)
-  - [新华三magicR100存在未授权访问](Web安全/网络设备/新华三/新华三magicR100存在未授权访问.md)
+- **斐讯**（1）
+  - [PHICOMM K2 命令注入漏洞 (CVE-2023-40796)](Web安全/网络设备/斐讯/PHICOMM%20K2%20命令注入漏洞%20%28CVE-2023-40796%29.md)
 - **新开普**（1）
   - [新开普 前置服务管理平台 service.action 远程命令执行漏洞](Web安全/其他软件/新开普/新开普%20前置服务管理平台%20service.action%20远程命令执行漏洞.md)
 - **新开普-前置服务管理平台-service.action**（1）
   - [新开普-前置服务管理平台-service.action-远程命令执行漏洞](Web安全/其他软件/新开普-前置服务管理平台-service.action/新开普-前置服务管理平台-service.action-远程命令执行漏洞.md)
-- **新点网络协同办公系统**（1）
-  - [新点OA V7.0 V8.0 Getshell](Web安全/OA办公/新点网络协同办公系统/新点OA%20V7.0%20V8.0%20Getshell.md)
-- **新的UEFI**（1）
-  - [新的UEFI漏洞使得针对技嘉、微星、华硕和华擎主板的预启动攻击成为焦点](Web安全/网络设备/新的UEFI/新的UEFI漏洞使得针对技嘉、微星、华硕和华擎主板的预启动攻击成为焦点.md)
+- **新点协同办公**（1）
+  - [新点OA V7.0 V8.0 Getshell](Web安全/商业软件/新点协同办公/新点OA%20V7.0%20V8.0%20Getshell.md)
 - **新的蓝牙**（1）
   - [新的蓝牙漏洞会在配对时可能泄露密码](Web安全/其他软件/新的蓝牙/新的蓝牙漏洞会在配对时可能泄露密码.md)
 - **新网医讯**（4）
@@ -1048,6 +883,8 @@
   - [方天云ERP系统GetSalQuatation存在SQL注入漏洞](Web安全/ERP企业/方天科技%28深圳%29有限公司/方天云ERP系统GetSalQuatation存在SQL注入漏洞.md)
 - **施耐德**（1）
   - [施耐德EcoStruxure™ IT DataCenter Expert漏洞分析](Web安全/云平台/施耐德/施耐德EcoStruxure™%20IT%20DataCenter%20Expert漏洞分析.md)
+- **施耐德Modicon**（1）
+  - [CVE-2013-0662：施耐德 ModBus串行驱动远程代码执行漏洞分析](Web安全/智能设备/施耐德Modicon/CVE-2013-0662：施耐德%20ModBus串行驱动远程代码执行漏洞分析.md)
 - **施耐德电气提醒 Modicon 控制器中的严重**（1）
   - [施耐德电气提醒 Modicon 控制器中的严重漏洞](Web安全/其他软件/施耐德电气提醒%20Modicon%20控制器中的严重/施耐德电气提醒%20Modicon%20控制器中的严重漏洞.md)
 - **时空WMS**（3）
@@ -1055,24 +892,24 @@
   - [时空WMS-仓储精细化管理系统 ImageAdd.ashx 文件上传致RCE漏洞](Web安全/商业软件/时空WMS/时空WMS-仓储精细化管理系统%20ImageAdd.ashx%20文件上传致RCE漏洞.md)
   - [时空WMS-仓储精细化管理系统 SaveCrash.ashx 文件上传致RCE漏洞](Web安全/商业软件/时空WMS/时空WMS-仓储精细化管理系统%20SaveCrash.ashx%20文件上传致RCE漏洞.md)
 - **时空智友**（6）
+  - [时空智友企业流程化管控系统login文件读取漏洞](Web安全/ERP企业/时空智友/时空智友企业流程化管控系统login文件读取漏洞.md)
   - [时空智友企业流程化管控系统formserverSQL注入漏洞](Web安全/商业软件/时空智友/时空智友企业流程化管控系统formserverSQL注入漏洞.md)
   - [时空智友企业流程化管控系统formserver任意文件上传漏洞](Web安全/商业软件/时空智友/时空智友企业流程化管控系统formserver任意文件上传漏洞.md)
   - [时空智友企业流程化管控系统manage敏感信息泄露漏洞](Web安全/商业软件/时空智友/时空智友企业流程化管控系统manage敏感信息泄露漏洞.md)
   - [时空智友企业流程化管控系统wc.db文件信息泄露漏洞](Web安全/商业软件/时空智友/时空智友企业流程化管控系统wc.db文件信息泄露漏洞.md)
   - [时空智友企业流程化管控系统文件存在任意文件上传漏洞 附 POC](Web安全/商业软件/时空智友/时空智友企业流程化管控系统文件存在任意文件上传漏洞%20附%20POC.md)
-  - [时空智友企业流程化管控系统login文件读取漏洞](Web安全/开发框架/时空智友/时空智友企业流程化管控系统login文件读取漏洞.md)
+- **昂捷**（8）
+  - [EnjoyRMISGetChildGroupSql1存在SQL注入漏洞](Web安全/商业软件/昂捷/EnjoyRMISGetChildGroupSql1存在SQL注入漏洞.md)
+  - [EnjoyRMISGetOAById存在SQL注入漏洞](Web安全/商业软件/昂捷/EnjoyRMISGetOAById存在SQL注入漏洞.md)
+  - [EnjoyRMISGetOCashById存在SQL注入漏洞](Web安全/商业软件/昂捷/EnjoyRMISGetOCashById存在SQL注入漏洞.md)
+  - [EnjoyRMISGetOCgpById存在SQL注入漏洞](Web安全/商业软件/昂捷/EnjoyRMISGetOCgpById存在SQL注入漏洞.md)
+  - [EnjoyRMISGetOCountById存在SQL注入漏洞](Web安全/商业软件/昂捷/EnjoyRMISGetOCountById存在SQL注入漏洞.md)
+  - [EnjoyRMISGetOCpById存在SQL注入漏洞](Web安全/商业软件/昂捷/EnjoyRMISGetOCpById存在SQL注入漏洞.md)
+  - [EnjoyRMISGetODById存在SQL注入漏洞](Web安全/商业软件/昂捷/EnjoyRMISGetODById存在SQL注入漏洞.md)
+  - [EnjoyRMISGetOSpById存在SQL注入漏洞](Web安全/商业软件/昂捷/EnjoyRMISGetOSpById存在SQL注入漏洞.md)
 - **昂捷CRM**（2）
   - [昂捷CRMcwsfiledown存在任意文件读取漏洞](Web安全/商业软件/昂捷CRM/昂捷CRMcwsfiledown存在任意文件读取漏洞.md)
   - [昂捷CRMcwsuploadpicture存在任意文件读取漏洞](Web安全/商业软件/昂捷CRM/昂捷CRMcwsuploadpicture存在任意文件读取漏洞.md)
-- **昂捷信息**（8）
-  - [EnjoyRMISGetOAById存在SQL注入漏洞](Web安全/OA办公/昂捷信息/EnjoyRMISGetOAById存在SQL注入漏洞.md)
-  - [EnjoyRMISGetChildGroupSql1存在SQL注入漏洞](Web安全/开发框架/昂捷信息/EnjoyRMISGetChildGroupSql1存在SQL注入漏洞.md)
-  - [EnjoyRMISGetOCashById存在SQL注入漏洞](Web安全/开发框架/昂捷信息/EnjoyRMISGetOCashById存在SQL注入漏洞.md)
-  - [EnjoyRMISGetOCgpById存在SQL注入漏洞](Web安全/开发框架/昂捷信息/EnjoyRMISGetOCgpById存在SQL注入漏洞.md)
-  - [EnjoyRMISGetOCountById存在SQL注入漏洞](Web安全/开发框架/昂捷信息/EnjoyRMISGetOCountById存在SQL注入漏洞.md)
-  - [EnjoyRMISGetOCpById存在SQL注入漏洞](Web安全/开发框架/昂捷信息/EnjoyRMISGetOCpById存在SQL注入漏洞.md)
-  - [EnjoyRMISGetODById存在SQL注入漏洞](Web安全/开发框架/昂捷信息/EnjoyRMISGetODById存在SQL注入漏洞.md)
-  - [EnjoyRMISGetOSpById存在SQL注入漏洞](Web安全/开发框架/昂捷信息/EnjoyRMISGetOSpById存在SQL注入漏洞.md)
 - **昂捷捷诚供应链管理系统**（1）
   - [昂捷捷诚供应链管理系统任意文件上传漏洞复现 CNVD-2023-26756](Web安全/商业软件/昂捷捷诚供应链管理系统/昂捷捷诚供应链管理系统任意文件上传漏洞复现%20CNVD-2023-26756.md)
 - **昆石网络**（1）
@@ -1090,19 +927,19 @@
   - [明源地产ERP Service.asmx X-Forwarded-For注入漏洞复现](Web安全/ERP企业/明源地产ERP%20Service.asmx%20X/明源地产ERP%20Service.asmx%20X-Forwarded-For注入漏洞复现.md)
 - **易宝OA**（1）
   - [易宝OA-ExecuteSqlForDataSet接口存在SQL注入漏洞](Web安全/OA办公/易宝OA/易宝OA-ExecuteSqlForDataSet接口存在SQL注入漏洞.md)
-- **易思智能物流**（2）
+- **易思智能物流**（3）
   - [易思智能物流无人值守系统ImportReport任意文件上传漏洞](Web安全/其他软件/易思智能物流/易思智能物流无人值守系统ImportReport任意文件上传漏洞.md)
   - [易思智能物流无人值守系统downfile文件读取漏洞](Web安全/其他软件/易思智能物流/易思智能物流无人值守系统downfile文件读取漏洞.md)
+  - [易思智能物流无人值守系统 login SQL注入漏洞](Web安全/商业软件/易思智能物流/易思智能物流无人值守系统%20login%20SQL注入漏洞.md)
 - **易思智能物流无人值守系统 DownFile**（1）
   - [易思智能物流无人值守系统 DownFile 任意文件读取漏洞](Web安全/其他软件/易思智能物流无人值守系统%20DownFile/易思智能物流无人值守系统%20DownFile%20任意文件读取漏洞.md)
-- **易思智能物流无人值守系统 login**（1）
-  - [易思智能物流无人值守系统 login SQL注入漏洞](Web安全/开发框架/易思智能物流无人值守系统%20login/易思智能物流无人值守系统%20login%20SQL注入漏洞.md)
 - **星图实验室接棒玄武实验室**（1）
   - [星图实验室接棒玄武实验室，完成底层密码学库漏洞的最终修复](Web安全/其他软件/星图实验室接棒玄武实验室/星图实验室接棒玄武实验室，完成底层密码学库漏洞的最终修复.md)
-- **智慧城市**（3）
+- **智慧城市**（2）
   - [满客宝智慧食堂系统 selectUserByOrgId 未授权访问漏洞](Web安全/ERP企业/智慧城市/满客宝智慧食堂系统%20selectUserByOrgId%20未授权访问漏洞.md)
-  - [瑞格智慧心理服务平台 NPreenSMSList.asmx SQL注入漏洞复现](Web安全/中间件/智慧城市/瑞格智慧心理服务平台%20NPreenSMSList.asmx%20SQL注入漏洞复现.md)
   - [银达汇智-智慧综合管理平台-FileUp.aspx-任意文件上传漏洞](Web安全/其他软件/智慧城市/银达汇智-智慧综合管理平台-FileUp.aspx-任意文件上传漏洞.md)
+- **智慧城市系统**（1）
+  - [瑞格智慧心理服务平台 NPreenSMSList.asmx SQL注入漏洞复现](Web安全/商业软件/智慧城市系统/瑞格智慧心理服务平台%20NPreenSMSList.asmx%20SQL注入漏洞复现.md)
 - **智慧校园管理系统 前台**（1）
   - [智慧校园管理系统 前台任意文件上传漏洞](Web安全/商业软件/智慧校园管理系统%20前台/智慧校园管理系统%20前台任意文件上传漏洞.md)
 - **智联**（5）
@@ -1138,7 +975,7 @@
   - [本周最新7个CVE漏洞POC](Web安全/其他软件/本周最新7个CVE/本周最新7个CVE漏洞POC.md)
 - **本该在2020年被修复的Windows提权**（1）
   - [本该在2020年被修复的Windows提权漏洞，现在竟然还存在](Web安全/其他软件/本该在2020年被修复的Windows提权/本该在2020年被修复的Windows提权漏洞，现在竟然还存在.md)
-- **杂项**（503）
+- **杂项**（550）
   - [ (102)](Web安全/其他软件/杂项/%20%28102%29.md)
   - [ (107)](Web安全/其他软件/杂项/%20%28107%29.md)
   - [ (109)](Web安全/其他软件/杂项/%20%28109%29.md)
@@ -1368,7 +1205,10 @@
   - [9万个站点面临风险：Jupiter X Core RCE 漏洞（CVE-2025-0366）](Web安全/其他软件/杂项/9万个站点面临风险：Jupiter%20X%20Core%20RCE%20漏洞（CVE-2025-0366）.md)
   - [AppCms 的一次综合审计 - Panda - 专注于网络空间安全研究](Web安全/其他软件/杂项/AppCms%20的一次综合审计%20-%20Panda%20-%20专注于网络空间安全研究.md)
   - [As-Exploits 你不能错过的 antSword 插件](Web安全/其他软件/杂项/As-Exploits%20你不能错过的%20antSword%20插件.md)
+  - [Atlassian fixed maximum severity flaw CVE-2025-66516 in Apache Tika](Web安全/其他软件/杂项/Atlassian%20fixed%20maximum%20severity%20flaw%20CVE-2025-66516%20in%20Apache%20Tika.md)
   - [Atlassian-Jira-Mobile-Plugin-SSRF漏洞-CVE-2022-26135](Web安全/其他软件/杂项/Atlassian-Jira-Mobile-Plugin-SSRF漏洞-CVE-2022-26135.md)
+  - [Autonomous AI Tool Finds 2-Year-Old RCE Flaw in Redis (CVE-2026-23479)](Web安全/其他软件/杂项/Autonomous%20AI%20Tool%20Finds%202-Year-Old%20RCE%20Flaw%20in%20Redis%20%28CVE-2026-23479%29.md)
+  - [CISA Warns of Two Malware Strains Exploiting Ivanti EPMM CVE-2025-4427](Web安全/其他软件/杂项/CISA%20Warns%20of%20Two%20Malware%20Strains%20Exploiting%20Ivanti%20EPMM%20CVE-2025-4427.md)
   - [CVE 2024-43570 和 CVE-2024-43535 的报告和 POC (2)](Web安全/其他软件/杂项/CVE%202024-43570%20和%20CVE-2024-43535%20的报告和%20POC%20%282%29.md)
   - [CVE 漏洞复现：CVE-2023-32233](Web安全/其他软件/杂项/CVE%20漏洞复现：CVE-2023-32233.md)
   - [CVE-2013-0750详细分析 (2)](Web安全/其他软件/杂项/CVE-2013-0750详细分析%20%282%29.md)
@@ -1392,6 +1232,7 @@
   - [CVE-2022-22583和CVE-2022-32800技术分析 (2)](Web安全/其他软件/杂项/CVE-2022-22583和CVE-2022-32800技术分析%20%282%29.md)
   - [CVE-2022-22954 漏洞复现及简单分析](Web安全/其他软件/杂项/CVE-2022-22954%20漏洞复现及简单分析.md)
   - [CVE-2022-24521 Windows CLFS本地提权漏洞分析](Web安全/其他软件/杂项/CVE-2022-24521%20Windows%20CLFS本地提权漏洞分析.md)
+  - [CVE-2022-25165：AWS VPN 客户端中的 SYSTEM 权限提升](Web安全/其他软件/杂项/CVE-2022-25165：AWS%20VPN%20客户端中的%20SYSTEM%20权限提升.md)
   - [CVE-2022-2588 Dirty Cred漏洞分析与复现](Web安全/其他软件/杂项/CVE-2022-2588%20Dirty%20Cred漏洞分析与复现.md)
   - [CVE-2022-30887（文件上传漏洞） (2)](Web安全/其他软件/杂项/CVE-2022-30887（文件上传漏洞）%20%282%29.md)
   - [CVE-2022-33891 漏洞复现](Web安全/其他软件/杂项/CVE-2022-33891%20漏洞复现.md)
@@ -1508,9 +1349,11 @@
   - [CVE-2026-42740 漏洞复现：Tainacan REST API 子查询 SQL 注入](Web安全/其他软件/杂项/CVE-2026-42740%20漏洞复现：Tainacan%20REST%20API%20子查询%20SQL%20注入.md)
   - [CVE-2026-42989：Windows 10 1607 权限提升漏洞 + POC](Web安全/其他软件/杂项/CVE-2026-42989：Windows%2010%201607%20权限提升漏洞%20+%20POC.md)
   - [CVE-2026-44442：ERPNext 授权检查缺失漏洞 (2)](Web安全/其他软件/杂项/CVE-2026-44442：ERPNext%20授权检查缺失漏洞%20%282%29.md)
+  - [CVE-2026-48907 and LiteSpeed cPanel Plugin Flaws Come Under Active Att](Web安全/其他软件/杂项/CVE-2026-48907%20and%20LiteSpeed%20cPanel%20Plugin%20Flaws%20Come%20Under%20Active%20Att.md)
   - [CVE-2026-49176 深度解析：Windows WalletService 本地提权链](Web安全/其他软件/杂项/CVE-2026-49176%20深度解析：Windows%20WalletService%20本地提权链.md)
   - [CVE-2026-58704：零点击、近距离、间谍级攻击 (2)](Web安全/其他软件/杂项/CVE-2026-58704：零点击、近距离、间谍级攻击%20%282%29.md)
   - [CVE-2026-62943：btrbk SSH命令过滤绕过漏洞，CVSS 8.7分](Web安全/其他软件/杂项/CVE-2026-62943：btrbk%20SSH命令过滤绕过漏洞，CVSS%208.7分.md)
+  - [CVE-2026-7458-UserVerificationByPickPlugins-认证绕过漏洞分析报告](Web安全/其他软件/杂项/CVE-2026-7458-UserVerificationByPickPlugins-认证绕过漏洞分析报告.md)
   - [CVE-2026-81000（TUNderflow）技术分析 (2)](Web安全/其他软件/杂项/CVE-2026-81000（TUNderflow）技术分析%20%282%29.md)
   - [CVE初探之CVE-2019-6250反弹Shell](Web安全/其他软件/杂项/CVE初探之CVE-2019-6250反弹Shell.md)
   - [CVSS 10 分 Hoppscotch 批量赋值漏洞：服务器完全沦陷](Web安全/其他软件/杂项/CVSS%2010%20分%20Hoppscotch%20批量赋值漏洞：服务器完全沦陷.md)
@@ -1519,13 +1362,22 @@
   - [CVSS 9.1](Web安全/其他软件/杂项/CVSS%209.1.md)
   - [CVSS 9.8](Web安全/其他软件/杂项/CVSS%209.8.md)
   - [CVSS评分9.8！亚信安全率先发现大模型关联Ray架构高危漏洞](Web安全/其他软件/杂项/CVSS评分9.8！亚信安全率先发现大模型关联Ray架构高危漏洞.md)
+  - [Fidelity充电桩AI量化理财系统存在前台任意文件上传漏洞](Web安全/其他软件/杂项/Fidelity充电桩AI量化理财系统存在前台任意文件上传漏洞.md)
+  - [Fuzzing 升级：谷歌通过AI找到更多漏洞](Web安全/其他软件/杂项/Fuzzing%20升级：谷歌通过AI找到更多漏洞.md)
+  - [H3C IMC dynamiccontent-properties-xhtm 远程命令执行](Web安全/其他软件/杂项/H3C%20IMC%20dynamiccontent-properties-xhtm%20远程命令执行.md)
+  - [H3C SecParh 堡垒机 data provider-php 远程命令执行漏洞](Web安全/其他软件/杂项/H3C%20SecParh%20堡垒机%20data%20provider-php%20远程命令执行漏洞.md)
+  - [H3C-SecParh堡垒机-data_provider.php-远程命令执行漏洞](Web安全/其他软件/杂项/H3C-SecParh堡垒机-data_provider.php-远程命令执行漏洞.md)
   - [Hackers Exploit Pandoc CVE-2025-51591 to Target AWS IMDS and Steal EC2](Web安全/其他软件/杂项/Hackers%20Exploit%20Pandoc%20CVE-2025-51591%20to%20Target%20AWS%20IMDS%20and%20Steal%20EC2.md)
   - [Ldap（CVE-2024-49112）Exp](Web安全/其他软件/杂项/Ldap（CVE-2024-49112）Exp.md)
   - [ManageEngine ADSelfService Plus（CVE-2021-40539）漏洞分析 - 先知社区](Web安全/其他软件/杂项/ManageEngine%20ADSelfService%20Plus（CVE-2021-40539）漏洞分析%20-%20先知社区.md)
+  - [NextGenMirthConnectXStream存在反序列化远程代码执行漏洞](Web安全/其他软件/杂项/NextGenMirthConnectXStream存在反序列化远程代码执行漏洞.md)
   - [NovaCHRON Zeitsysteme GmbH & Co.KG addProject 逻辑缺陷漏洞（CVE-2024-53542）](Web安全/其他软件/杂项/NovaCHRON%20Zeitsysteme%20GmbH%20&%20Co.KG%20addProject%20逻辑缺陷漏洞（CVE-2024-53542）.md)
+  - [Over 28,000 Citrix instances remain exposed to critical RCE flaw CVE-2](Web安全/其他软件/杂项/Over%2028,000%20Citrix%20instances%20remain%20exposed%20to%20critical%20RCE%20flaw%20CVE-2.md)
   - [Play Ransomware 利用 Windows 实施勒索攻击 CVE-2025-29824](Web安全/其他软件/杂项/Play%20Ransomware%20利用%20Windows%20实施勒索攻击%20CVE-2025-29824.md)
   - [Re_ (2)](Web安全/其他软件/杂项/Re_%20%282%29.md)
   - [Re_](Web安全/其他软件/杂项/Re_.md)
+  - [SmangamediaId存在SQL注入漏洞](Web安全/其他软件/杂项/SmangamediaId存在SQL注入漏洞.md)
+  - [TG8 Firewall RCE 和 信息泄露](Web安全/其他软件/杂项/TG8%20Firewall%20RCE%20和%20信息泄露.md)
   - [TP 诸多限制条件下如何 getshell](Web安全/其他软件/杂项/TP%20诸多限制条件下如何%20getshell.md)
   - [Windows 任务计划程序允许攻击者提升权限漏洞](Web安全/其他软件/杂项/Windows%20任务计划程序允许攻击者提升权限漏洞.md)
   - [Windows 内核 WMI 计数回绕 CVE-2026-42980](Web安全/其他软件/杂项/Windows%20内核%20WMI%20计数回绕%20CVE-2026-42980.md)
@@ -1543,16 +1395,21 @@
   - [[漏洞复现]CVE-2024-0305](Web安全/其他软件/杂项/[漏洞复现]CVE-2024-0305.md)
   - [[系统安全] 七. 逆向分析之 PE 病毒原理、C++ 文件加解密及 OllyDbg 逆向](Web安全/其他软件/杂项/[系统安全]%20七.%20逆向分析之%20PE%20病毒原理、C++%20文件加解密及%20OllyDbg%20逆向.md)
   - [[系统安全] 六. 逆向分析之条件语句和循环语句源码还原及流程控制](Web安全/其他软件/杂项/[系统安全]%20六.%20逆向分析之条件语句和循环语句源码还原及流程控制.md)
+  - [apache nginx iis 中间件漏洞 - 先知社区](Web安全/其他软件/杂项/apache%20nginx%20iis%20中间件漏洞%20-%20先知社区.md)
   - [cve-2019-17424 nipper-ng_0.11.10-Remote_Buffer_Overflow远程缓冲区溢出附PoC](Web安全/其他软件/杂项/cve-2019-17424%20nipper-ng_0.11.10-Remote_Buffer_Overflow远程缓冲区溢出附PoC.md)
   - [cve-2024-53376：CyberPanel RCE 已发布PoC](Web安全/其他软件/杂项/cve-2024-53376：CyberPanel%20RCE%20已发布PoC.md)
+  - [dde-api-proxy：Deepin D-Bus 代理服务中的身份验证绕过（CVE-2025-23222）](Web安全/其他软件/杂项/dde-api-proxy：Deepin%20D-Bus%20代理服务中的身份验证绕过（CVE-2025-23222）.md)
   - [exploit_db漏洞复现&分析1_CVE-2024-40110](Web安全/其他软件/杂项/exploit_db漏洞复现&分析1_CVE-2024-40110.md)
+  - [green_XWiki SolrSearch Exploit Attempts (CVE-2025-24893) with link to](Web安全/其他软件/杂项/green_XWiki%20SolrSearch%20Exploit%20Attempts%20%28CVE-2025-24893%29%20with%20link%20to.md)
   - [​万户协同办公平台 ezoffice 存在未授权访问漏洞 附 POC](Web安全/其他软件/杂项/​万户协同办公平台%20ezoffice%20存在未授权访问漏洞%20附%20POC.md)
+  - [“AI 投毒”：Claude Code 项目配置漏洞可致代码执行](Web安全/其他软件/杂项/“AI%20投毒”：Claude%20Code%20项目配置漏洞可致代码执行.md)
   - [“伏特台风”黑客利用Versa零日漏洞攻击美国服务商](Web安全/其他软件/杂项/“伏特台风”黑客利用Versa零日漏洞攻击美国服务商.md)
   - [「0day」通过 iTunes 入侵 Windows - 本地权限提升](Web安全/其他软件/杂项/「0day」通过%20iTunes%20入侵%20Windows%20-%20本地权限提升.md)
   - [「漏洞复现」BladeX企业级开发平台 tenant∕list SQL 注入漏洞复现(CVE-2024-33332)](Web安全/其他软件/杂项/「漏洞复现」BladeX企业级开发平台%20tenant∕list%20SQL%20注入漏洞复现%28CVE-2024-33332%29.md)
   - [一个 CSRF，让攻击者无需登录就能拿下服务器——CVE-2026-28495 分析](Web安全/其他软件/杂项/一个%20CSRF，让攻击者无需登录就能拿下服务器——CVE-2026-28495%20分析.md)
   - [一个整数溢出引发的全球安全危机：CVE-2022-22822深度解析](Web安全/其他软件/杂项/一个整数溢出引发的全球安全危机：CVE-2022-22822深度解析.md)
   - [一次渗透过程中的CVE-2022-45460撞洞RCE](Web安全/其他软件/杂项/一次渗透过程中的CVE-2022-45460撞洞RCE.md)
+  - [一种新的 email 欺骗漏洞 - SMTP 走私](Web安全/其他软件/杂项/一种新的%20email%20欺骗漏洞%20-%20SMTP%20走私.md)
   - [万字长文详解CVE-2014-1767提权漏洞分析与利用（x86x64）](Web安全/其他软件/杂项/万字长文详解CVE-2014-1767提权漏洞分析与利用（x86x64）.md)
   - [两次 HTTP 请求拿下网站管理员权限——CVE-2026-1492 漏洞分析](Web安全/其他软件/杂项/两次%20HTTP%20请求拿下网站管理员权限——CVE-2026-1492%20漏洞分析.md)
   - [严重级别满分：谷歌 Pixel 手机底层引导程序曝出提权漏洞 CVE-2026-0124](Web安全/其他软件/杂项/严重级别满分：谷歌%20Pixel%20手机底层引导程序曝出提权漏洞%20CVE-2026-0124.md)
@@ -1566,14 +1423,22 @@
   - [代码审计 Xiuno BBS 4.0 后台 Getshell](Web安全/其他软件/杂项/代码审计%20Xiuno%20BBS%204.0%20后台%20Getshell.md)
   - [代码级起底 CVE-2026-0035：如何利用逻辑缺陷实现跨 App 隐私窃取](Web安全/其他软件/杂项/代码级起底%20CVE-2026-0035：如何利用逻辑缺陷实现跨%20App%20隐私窃取.md)
   - [使用 NAM 在思科安全客户端中执行代码 - CVE-2024-20391](Web安全/其他软件/杂项/使用%20NAM%20在思科安全客户端中执行代码%20-%20CVE-2024-20391.md)
+  - [使用开源AI探寻0day的艺术](Web安全/其他软件/杂项/使用开源AI探寻0day的艺术.md)
   - [俄罗斯黑客利用 Roundcube 缺陷（CVE-2023-5631）攻击欧洲政府](Web安全/其他软件/杂项/俄罗斯黑客利用%20Roundcube%20缺陷（CVE-2023-5631）攻击欧洲政府.md)
+  - [全球使用最广泛的 AI Agent 编排框架爆三个高危∕严重漏洞](Web安全/其他软件/杂项/全球使用最广泛的%20AI%20Agent%20编排框架爆三个高危∕严重漏洞.md)
+  - [全球首例！AI智能体自主发现满级评分RCE漏洞](Web安全/其他软件/杂项/全球首例！AI智能体自主发现满级评分RCE漏洞.md)
   - [利用 CVE-2025-49825（Teleport 中的身份验证绕过漏洞）](Web安全/其他软件/杂项/利用%20CVE-2025-49825（Teleport%20中的身份验证绕过漏洞）.md)
   - [剖析 CVE-2024-12695：利用 V8 中的 Object.assign()](Web安全/其他软件/杂项/剖析%20CVE-2024-12695：利用%20V8%20中的%20Object.assign%28%29.md)
+  - [医药公司登录系统Login存在SQL注入漏洞](Web安全/其他软件/杂项/医药公司登录系统Login存在SQL注入漏洞.md)
   - [十亿量级IoT设备面临威胁：arduino-esp32 VLA栈溢出漏洞（CVE-2026-42854）技术分析](Web安全/其他软件/杂项/十亿量级IoT设备面临威胁：arduino-esp32%20VLA栈溢出漏洞（CVE-2026-42854）技术分析.md)
+  - [华为WS331a产品管理页面存在CSRF漏洞](Web安全/其他软件/杂项/华为WS331a产品管理页面存在CSRF漏洞.md)
+  - [博达下一代防火墙sslvpn_client存在远程命令执行漏洞](Web安全/其他软件/杂项/博达下一代防火墙sslvpn_client存在远程命令执行漏洞.md)
   - [博通： Vmware Windows Tools 中的认证绕过漏洞](Web安全/其他软件/杂项/博通：%20Vmware%20Windows%20Tools%20中的认证绕过漏洞.md)
   - [原创  CVE-2019-0808](Web安全/其他软件/杂项/原创%20%20CVE-2019-0808.md)
   - [反转 Windows RPC 以查找 CVE（CVE-2024-36036、CVE-2024-36037）](Web安全/其他软件/杂项/反转%20Windows%20RPC%20以查找%20CVE（CVE-2024-36036、CVE-2024-36037）.md)
   - [叮~ 你有新的速递！CVE-2022-42475 RCE 漏洞（附 EXP）](Web安全/其他软件/杂项/叮~%20你有新的速递！CVE-2022-42475%20RCE%20漏洞（附%20EXP）.md)
+  - [吉林医药系统Login存在SQL注入漏洞](Web安全/其他软件/杂项/吉林医药系统Login存在SQL注入漏洞.md)
+  - [告警！Meta Llama框架漏洞，AI系统面临远程代码执行风险](Web安全/其他软件/杂项/告警！Meta%20Llama框架漏洞，AI系统面临远程代码执行风险.md)
   - [命令注入漏洞 CVE-2022-26258 复现](Web安全/其他软件/杂项/命令注入漏洞%20CVE-2022-26258%20复现.md)
   - [命令注入漏洞 CVE-2022-34527 复现](Web安全/其他软件/杂项/命令注入漏洞%20CVE-2022-34527%20复现.md)
   - [命令注入漏洞CVE-2023-27216复现](Web安全/其他软件/杂项/命令注入漏洞CVE-2023-27216复现.md)
@@ -1581,8 +1446,10 @@
   - [城堡的小门：v8类型混淆漏洞CVE-2024-4761分析](Web安全/其他软件/杂项/城堡的小门：v8类型混淆漏洞CVE-2024-4761分析.md)
   - [奇安信攻防社区 - CVE-2022-42475 FortiGate SSLVPN 堆溢出漏洞分析与利用](Web安全/其他软件/杂项/奇安信攻防社区%20-%20CVE-2022-42475%20FortiGate%20SSLVPN%20堆溢出漏洞分析与利用.md)
   - [安全简讯（2024.12.12）](Web安全/其他软件/杂项/安全简讯（2024.12.12）.md)
+  - [安恒明御安全网关sslvpn_client存在远程命令执行漏洞](Web安全/其他软件/杂项/安恒明御安全网关sslvpn_client存在远程命令执行漏洞.md)
   - [容器逃逸方法检测指北（附检测脚本）](Web安全/其他软件/杂项/容器逃逸方法检测指北（附检测脚本）.md)
   - [容器逃逸检测及逃逸方法](Web安全/其他软件/杂项/容器逃逸检测及逃逸方法.md)
+  - [常见框架漏洞复现——Spring](Web安全/其他软件/杂项/常见框架漏洞复现——Spring.md)
   - [当你打开一个陌生网页，你的代码库密钥可能已经被偷走了CVE-2026-28792](Web安全/其他软件/杂项/当你打开一个陌生网页，你的代码库密钥可能已经被偷走了CVE-2026-28792.md)
   - [当异常绕过handleException：最新VM2沙箱绕过 CVE-2026-45411 原理分析](Web安全/其他软件/杂项/当异常绕过handleException：最新VM2沙箱绕过%20CVE-2026-45411%20原理分析.md)
   - [微擎 低权限后台getshell](Web安全/其他软件/杂项/微擎%20低权限后台getshell.md)
@@ -1596,22 +1463,27 @@
   - [手机“看一眼就死”：CVE-2026-0049 零点击 DoS 实战全复现](Web安全/其他软件/杂项/手机“看一眼就死”：CVE-2026-0049%20零点击%20DoS%20实战全复现.md)
   - [打破K8s命名空间隔离：CVE-2026-4789 Kyverno漏洞详解](Web安全/其他软件/杂项/打破K8s命名空间隔离：CVE-2026-4789%20Kyverno漏洞详解.md)
   - [技术分享 QWB2019 VMw 虚拟机逃逸 wp](Web安全/其他软件/杂项/技术分享%20QWB2019%20VMw%20虚拟机逃逸%20wp.md)
+  - [攻击者利用 Mjobtime 应用程序漏洞，通过 MSSQL 和 IIS POST 请求攻击建筑公司](Web安全/其他软件/杂项/攻击者利用%20Mjobtime%20应用程序漏洞，通过%20MSSQL%20和%20IIS%20POST%20请求攻击建筑公司.md)
   - [无需交互即可攻破？CVE-2025-24054正被利用绕过Windows身份验证](Web安全/其他软件/杂项/无需交互即可攻破？CVE-2025-24054正被利用绕过Windows身份验证.md)
   - [无需任何账户，一条请求接管整站：CVE-2026-2446 技术分析](Web安全/其他软件/杂项/无需任何账户，一条请求接管整站：CVE-2026-2446%20技术分析.md)
   - [无需认证！本地知识库 QAnything 任意文件写入漏洞可提权至 Root RCE（CVE-2026-88533）](Web安全/其他软件/杂项/无需认证！本地知识库%20QAnything%20任意文件写入漏洞可提权至%20Root%20RCE（CVE-2026-88533）.md)
   - [春秋云镜 CVE-2023-2130](Web安全/其他软件/杂项/春秋云镜%20CVE-2023-2130.md)
   - [最新披露！三星手机组件发现三个高危漏洞](Web安全/其他软件/杂项/最新披露！三星手机组件发现三个高危漏洞.md)
+  - [构建ASMX绕过限制WAF达到命令执行](Web安全/其他软件/杂项/构建ASMX绕过限制WAF达到命令执行.md)
   - [某 json--1-2-68 Autotype bypass - 先知社区](Web安全/其他软件/杂项/某%20json--1-2-68%20Autotype%20bypass%20-%20先知社区.md)
   - [某管理系统快速代码审计](Web安全/其他软件/杂项/某管理系统快速代码审计.md)
+  - [某系统存在Beetl反序列化模板注入RCE漏洞](Web安全/其他软件/杂项/某系统存在Beetl反序列化模板注入RCE漏洞.md)
   - [某达 oa 存在 SQL 注入漏洞 (CVE-2023-4166)](Web安全/其他软件/杂项/某达%20oa%20存在%20SQL%20注入漏洞%20%28CVE-2023-4166%29.md)
   - [某邮件管理系统代码审计](Web安全/其他软件/杂项/某邮件管理系统代码审计.md)
   - [每周网安资讯 （2.24-3.2） UNC6201组织利用CVE-2026-22769零日漏洞部署恶意软件](Web安全/其他软件/杂项/每周网安资讯%20（2.24-3.2）%20UNC6201组织利用CVE-2026-22769零日漏洞部署恶意软件.md)
   - [毫秒级破解：戴尔BIOS口令为何在XOR加密下不堪一击 (CVE-2026-40639)](Web安全/其他软件/杂项/毫秒级破解：戴尔BIOS口令为何在XOR加密下不堪一击%20%28CVE-2026-40639%29.md)
   - [注释写着需要认证，代码说不——CVE-2026-42864 未授权 SSRF 导致 AWS 凭据窃取](Web安全/其他软件/杂项/注释写着需要认证，代码说不——CVE-2026-42864%20未授权%20SSRF%20导致%20AWS%20凭据窃取.md)
   - [海洋 CMS 代码审计过程分析](Web安全/其他软件/杂项/海洋%20CMS%20代码审计过程分析.md)
+  - [深信服终端检测平台（EDR）存在远程命令执行漏洞分析 - 斗象能力中心](Web安全/其他软件/杂项/深信服终端检测平台（EDR）存在远程命令执行漏洞分析%20-%20斗象能力中心.md)
   - [深入解析 CVE-2024-51567：CyberPanel 命令注入漏洞及 PoC 复现](Web安全/其他软件/杂项/深入解析%20CVE-2024-51567：CyberPanel%20命令注入漏洞及%20PoC%20复现.md)
   - [满分漏洞预警：一行POST请求，2亿患者健康档案门户洞开](Web安全/其他软件/杂项/满分漏洞预警：一行POST请求，2亿患者健康档案门户洞开.md)
   - [漏洞分析 CVE-2010-0249](Web安全/其他软件/杂项/漏洞分析%20CVE-2010-0249.md)
+  - [漏洞复现CVE-2017-18349（FastJson1-2-24 反序列化导致任意命令执行漏洞）](Web安全/其他软件/杂项/漏洞复现CVE-2017-18349（FastJson1-2-24%20反序列化导致任意命令执行漏洞）.md)
   - [漏洞复现：CVE-2015-1635、CVE-2017-0144](Web安全/其他软件/杂项/漏洞复现：CVE-2015-1635、CVE-2017-0144.md)
   - [漏洞扫描神器AWVS又更新了，全新界面，快来下载体验吧！](Web安全/其他软件/杂项/漏洞扫描神器AWVS又更新了，全新界面，快来下载体验吧！.md)
   - [漏洞技术 - CVE-2020-13942](Web安全/其他软件/杂项/漏洞技术%20-%20CVE-2020-13942.md)
@@ -1620,16 +1492,27 @@
   - [漏洞梳理篇之 XXE](Web安全/其他软件/杂项/漏洞梳理篇之%20XXE.md)
   - [漏洞通告 Windows TCP∕IP 远程代码执行漏洞CVE-2024-38063](Web安全/其他软件/杂项/漏洞通告%20Windows%20TCP∕IP%20远程代码执行漏洞CVE-2024-38063.md)
   - [漏洞通告DELL Cloud Disaster Recovery操作系统命令注入漏洞(CVE-2026-71171)](Web安全/其他软件/杂项/漏洞通告DELL%20Cloud%20Disaster%20Recovery操作系统命令注入漏洞%28CVE-2026-71171%29.md)
+  - [皓峰防火墙login.php存在SQL注入漏洞](Web安全/其他软件/杂项/皓峰防火墙login.php存在SQL注入漏洞.md)
+  - [皓峰防火墙setdomain存在信息泄露漏洞](Web安全/其他软件/杂项/皓峰防火墙setdomain存在信息泄露漏洞.md)
   - [禅知后台getshell](Web安全/其他软件/杂项/禅知后台getshell.md)
   - [禅道 12.4.2 后台管理员权限 Getshell 复现](Web安全/其他软件/杂项/禅道%2012.4.2%20后台管理员权限%20Getshell%20复现.md)
   - [禅道<=12.4.2 后台getshell](Web安全/其他软件/杂项/禅道<=12.4.2%20后台getshell.md)
   - [移动安全框架 (MobSF) 存在存储型XSS漏洞  CVE-2024-53999](Web安全/其他软件/杂项/移动安全框架%20%28MobSF%29%20存在存储型XSS漏洞%20%20CVE-2024-53999.md)
   - [米拓建站系统 1day 审计与利用](Web安全/其他软件/杂项/米拓建站系统%201day%20审计与利用.md)
+  - [网御-Leadsec-ACM管理平台-importhtml.php-远程命令执行漏洞](Web安全/其他软件/杂项/网御-Leadsec-ACM管理平台-importhtml.php-远程命令执行漏洞.md)
+  - [网神 SecGate 3600 防火墙 obj_app_upfile 任意文件上传漏洞](Web安全/其他软件/杂项/网神%20SecGate%203600%20防火墙%20obj_app_upfile%20任意文件上传漏洞.md)
+  - [网神-SecGate-3600-防火墙-obj_app_upfile-任意文件上传漏洞](Web安全/其他软件/杂项/网神-SecGate-3600-防火墙-obj_app_upfile-任意文件上传漏洞.md)
+  - [网神SecGata3600防火墙app_av_import_save任意文件上传漏洞](Web安全/其他软件/杂项/网神SecGata3600防火墙app_av_import_save任意文件上传漏洞.md)
+  - [网神SecGata3600防火墙obj_app_upfile任意文件上传漏洞](Web安全/其他软件/杂项/网神SecGata3600防火墙obj_app_upfile任意文件上传漏洞.md)
+  - [网神SecGata3600防火墙sec_ssl_agent_import_save任意文件上传漏洞](Web安全/其他软件/杂项/网神SecGata3600防火墙sec_ssl_agent_import_save任意文件上传漏洞.md)
+  - [网神SecGata3600防火墙sys_hand_upfile任意文件上传漏洞](Web安全/其他软件/杂项/网神SecGata3600防火墙sys_hand_upfile任意文件上传漏洞.md)
   - [美国CISA：包括（CVE-2023-21608）在内的五个高危漏洞已被利用](Web安全/其他软件/杂项/美国CISA：包括（CVE-2023-21608）在内的五个高危漏洞已被利用.md)
   - [被改写的系统服务：IDM 内核驱动 CVE-2026-90493 提权](Web安全/其他软件/杂项/被改写的系统服务：IDM%20内核驱动%20CVE-2026-90493%20提权.md)
   - [费浦门禁出入口安防平台aDKManageUser存在未授权访问](Web安全/其他软件/杂项/费浦门禁出入口安防平台aDKManageUser存在未授权访问.md)
+  - [迈普安全网关sslvpn_client存在远程命令执行漏洞](Web安全/其他软件/杂项/迈普安全网关sslvpn_client存在远程命令执行漏洞.md)
   - [通过 CVE-2024-52875 攻击 Kerio Control：从 CRLF 注入到一键 RCE](Web安全/其他软件/杂项/通过%20CVE-2024-52875%20攻击%20Kerio%20Control：从%20CRLF%20注入到一键%20RCE.md)
   - [通过转储文件利用 Visual Studio - CVE-2024-30052](Web安全/其他软件/杂项/通过转储文件利用%20Visual%20Studio%20-%20CVE-2024-30052.md)
+  - [鑫塔第二代防火墙sslvpn_client存在远程命令执行漏洞](Web安全/其他软件/杂项/鑫塔第二代防火墙sslvpn_client存在远程命令执行漏洞.md)
   - [随机数、XKCD 漫画与 ZEN 系列最新 CPU 漏洞 CVE-2024-56161](Web安全/其他软件/杂项/随机数、XKCD%20漫画与%20ZEN%20系列最新%20CPU%20漏洞%20CVE-2024-56161.md)
   - [预警  三星自带电子邮件应用任意文件写入漏洞 CVE-2026-21053](Web安全/其他软件/杂项/预警%20%20三星自带电子邮件应用任意文件写入漏洞%20CVE-2026-21053.md)
   - [预警！Windows磁盘清理工具惊现高危漏洞，你的电脑可能面临被控制风险！](Web安全/其他软件/杂项/预警！Windows磁盘清理工具惊现高危漏洞，你的电脑可能面临被控制风险！.md)
@@ -1639,10 +1522,11 @@
   - [高危预警  CVE-2026-26713：开源点餐系统存在未授权 SQL 注入漏洞，CVSS 评分 9.8](Web安全/其他软件/杂项/高危预警%20%20CVE-2026-26713：开源点餐系统存在未授权%20SQL%20注入漏洞，CVSS%20评分%209.8.md)
   - [高危预警  CVE-2026-2844：时间同步管理系统现关键认证漏洞，5G、电网、国防基础设施受影响](Web安全/其他软件/杂项/高危预警%20%20CVE-2026-2844：时间同步管理系统现关键认证漏洞，5G、电网、国防基础设施受影响.md)
   - [高危预警](Web安全/其他软件/杂项/高危预警.md)
+  - [黑客可将存在漏洞的 LiteLLM AI 网关转化为获取 root 权限和窃取云凭证的途径](Web安全/其他软件/杂项/黑客可将存在漏洞的%20LiteLLM%20AI%20网关转化为获取%20root%20权限和窃取云凭证的途径.md)
   - [（9.1分）CVE-2026-94098：Netcore 路由器固件升级接口命令注入](Web安全/其他软件/杂项/（9.1分）CVE-2026-94098：Netcore%20路由器固件升级接口命令注入.md)
   - [（CVE-2024-25648）福昕阅读器 ComboBox 小部件格式事件 UAF](Web安全/其他软件/杂项/（CVE-2024-25648）福昕阅读器%20ComboBox%20小部件格式事件%20UAF.md)
   - [（CVE-2024-31852）福昕阅读器条形码小部件 Calculate 事件](Web安全/其他软件/杂项/（CVE-2024-31852）福昕阅读器条形码小部件%20Calculate%20事件.md)
-- **权限提升**（15）
+- **权限提升**（14）
   - [严重警告：Winter CMS 后台权限提升漏洞（CVE-2026-27591）深度解析](Web安全/CMS内容/权限提升/严重警告：Winter%20CMS%20后台权限提升漏洞（CVE-2026-27591）深度解析.md)
   - [重温OMI：分析CVE-2022-29149，Azure OMI中的权限提升漏洞](Web安全/云平台/权限提升/重温OMI：分析CVE-2022-29149，Azure%20OMI中的权限提升漏洞.md)
   - [ (133)](Web安全/其他软件/权限提升/%20%28133%29.md)
@@ -1657,39 +1541,30 @@
   - [关键的 SimpleHelp 缺陷允许文件盗窃、权限提升和 RCE 攻击](Web安全/其他软件/权限提升/关键的%20SimpleHelp%20缺陷允许文件盗窃、权限提升和%20RCE%20攻击.md)
   - [最新漏洞预警  ShardingSphere ElasticJob-UI从权限提升到H2 RCE CVE-2022-22733](Web安全/数据库/权限提升/最新漏洞预警%20%20ShardingSphere%20ElasticJob-UI从权限提升到H2%20RCE%20CVE-2022-22733.md)
   - [ToDesk 软件在权限提升中的应用](Web安全/桌面软件/权限提升/ToDesk%20软件在权限提升中的应用.md)
-  - [CVE-2022-25165：AWS VPN 客户端中的 SYSTEM 权限提升](Web安全/网络设备/权限提升/CVE-2022-25165：AWS%20VPN%20客户端中的%20SYSTEM%20权限提升.md)
-- **杭州九麒科技 BigAnt**（1）
-  - [杭州九麒科技 BigAnt-Admin uploadMultipleFile.html 文件上传致RCE漏洞](Web安全/OA办公/杭州九麒科技%20BigAnt/杭州九麒科技%20BigAnt-Admin%20uploadMultipleFile.html%20文件上传致RCE漏洞.md)
 - **杭州圣乔科技有限公司**（1）
   - [圣乔ERP系统存在struts2远程命令执行漏洞](Web安全/ERP企业/杭州圣乔科技有限公司/圣乔ERP系统存在struts2远程命令执行漏洞.md)
 - **杭州法源软件**（1）
   - [杭州法源软件-公证实务教学软件-SQL注入漏洞](Web安全/其他软件/杭州法源软件/杭州法源软件-公证实务教学软件-SQL注入漏洞.md)
 - **极简云**（2）
-  - [极简云验证系统download存在任意文件读取漏洞](Web安全/OA办公/极简云/极简云验证系统download存在任意文件读取漏洞.md)
+  - [极简云验证系统download存在任意文件读取漏洞](Web安全/云平台/极简云/极简云验证系统download存在任意文件读取漏洞.md)
   - [极简云验证系统存在敏感信息泄露漏洞](Web安全/其他软件/极简云/极简云验证系统存在敏感信息泄露漏洞.md)
 - **极致CMS**（1）
   - [极致CMS-alipay_return_pay-SQL注入漏洞](Web安全/CMS内容/极致CMS/极致CMS-alipay_return_pay-SQL注入漏洞.md)
-- **极通**（1）
-  - [极通EWEBS-casmain.xgi-任意文件读取漏洞](Web安全/AI应用/极通/极通EWEBS-casmain.xgi-任意文件读取漏洞.md)
-- **极通EWEBS**（1）
-  - [极通EWEBS casmain.xgi 任意文件读取漏洞](Web安全/AI应用/极通EWEBS/极通EWEBS%20casmain.xgi%20任意文件读取漏洞.md)
-- **构建**（1）
-  - [构建ASMX绕过限制WAF达到命令执行](Web安全/中间件/构建/构建ASMX绕过限制WAF达到命令执行.md)
+- **极通**（2）
+  - [极通EWEBS casmain.xgi 任意文件读取漏洞](Web安全/商业软件/极通/极通EWEBS%20casmain.xgi%20任意文件读取漏洞.md)
+  - [极通EWEBS-casmain.xgi-任意文件读取漏洞](Web安全/商业软件/极通/极通EWEBS-casmain.xgi-任意文件读取漏洞.md)
 - **某 CMS**（1）
   - [某 CMS 漏洞合集](Web安全/CMS内容/某%20CMS/某%20CMS%20漏洞合集.md)
 - **某依后台**（1）
   - [某依后台 RCE 分析 - 先知社区](Web安全/商业软件/某依后台/某依后台%20RCE%20分析%20-%20先知社区.md)
-- **某系统**（1）
-  - [某系统存在Beetl反序列化模板注入RCE漏洞](Web安全/开发框架/某系统/某系统存在Beetl反序列化模板注入RCE漏洞.md)
 - **某行业通用流程管控平台**（1）
   - [某行业通用流程管控平台 RCE 之旅](Web安全/商业软件/某行业通用流程管控平台/某行业通用流程管控平台%20RCE%20之旅.md)
 - **某诈骗微盘**（1）
   - [某诈骗微盘存在前台SQL注入漏洞](Web安全/其他软件/某诈骗微盘/某诈骗微盘存在前台SQL注入漏洞.md)
 - **栈溢出从复现到挖掘**（1）
   - [栈溢出从复现到挖掘-CVE-2018-16333漏洞复现详解](Web安全/其他软件/栈溢出从复现到挖掘/栈溢出从复现到挖掘-CVE-2018-16333漏洞复现详解.md)
-- **核弹级**（2）
+- **核弹级**（1）
   - [核弹级漏洞预警微软超高危漏洞“桌面许可”波及全球远程桌面RCE CVE-2024-38077](Web安全/其他软件/核弹级/核弹级漏洞预警微软超高危漏洞“桌面许可”波及全球远程桌面RCE%20CVE-2024-38077.md)
-  - [核弹级漏洞预警 苹果、微信、支付宝、小米浏览器、携程应用等均存在任意文件读取漏洞](Web安全/网络设备/核弹级/核弹级漏洞预警%20苹果、微信、支付宝、小米浏览器、携程应用等均存在任意文件读取漏洞.md)
 - **梅赛德斯**（1）
   - [梅赛德斯—奔驰信息娱乐系统漏洞详细信息披露](Web安全/其他软件/梅赛德斯/梅赛德斯—奔驰信息娱乐系统漏洞详细信息披露.md)
 - **楼宇控制系统现高危**（1）
@@ -1711,7 +1586,7 @@
   - [江森自控修复工业制冷产品中的严重漏洞](Web安全/其他软件/江森自控修复工业制冷产品中的严重/江森自控修复工业制冷产品中的严重漏洞.md)
 - **江阴汇智软件技术有限公司**（1）
   - [汇智ERPfilehandle存在任意文件读取漏洞](Web安全/ERP企业/江阴汇智软件技术有限公司/汇智ERPfilehandle存在任意文件读取漏洞.md)
-- **泛微oa**（82）
+- **泛微oa**（84）
   - [0day 泛微OA前台登录绕过+后台组合拳RCE](Web安全/OA办公/泛微oa/0day%20泛微OA前台登录绕过+后台组合拳RCE.md)
   - [2023 泛微 OA 漏洞合集（附 POC）](Web安全/OA办公/泛微oa/2023%20泛微%20OA%20漏洞合集（附%20POC）.md)
   - [Attackers Exploit SimpleHelp CVE-2026-48558 to Deploy TaskWeaver and D](Web安全/OA办公/泛微oa/Attackers%20Exploit%20SimpleHelp%20CVE-2026-48558%20to%20Deploy%20TaskWeaver%20and%20D.md)
@@ -1789,6 +1664,8 @@
   - [泛微e-office系统ajax.php接口存在任意文件上传漏洞](Web安全/OA办公/泛微oa/泛微e-office系统ajax.php接口存在任意文件上传漏洞.md)
   - [泛微emobile6.5 6.6前台SQL注入漏洞分析](Web安全/OA办公/泛微oa/泛微emobile6.5%206.6前台SQL注入漏洞分析.md)
   - [泛微云桥e-bridge 目录遍历文件读取漏洞](Web安全/OA办公/泛微oa/泛微云桥e-bridge%20目录遍历文件读取漏洞.md)
+  - [漏洞分析 XX OA11.7 SQL 注入 2 Getshell 漏洞分析学习](Web安全/OA办公/泛微oa/漏洞分析%20XX%20OA11.7%20SQL%20注入%202%20Getshell%20漏洞分析学习.md)
+  - [漏洞分析 XX OA11.7 组合拳漏洞分析学习（一）](Web安全/OA办公/泛微oa/漏洞分析%20XX%20OA11.7%20组合拳漏洞分析学习（一）.md)
   - [漏洞复现  泛微e-office dept.wsdl.php 接口存在SQL注入漏洞](Web安全/OA办公/泛微oa/漏洞复现%20%20泛微e-office%20dept.wsdl.php%20接口存在SQL注入漏洞.md)
   - [漏洞速递  CVE-2026-22679泛微RCE漏洞（附EXP）](Web安全/OA办公/泛微oa/漏洞速递%20%20CVE-2026-22679泛微RCE漏洞（附EXP）.md)
   - [漏洞速递 + 检测脚本  泛微 E-Office 任意文件上传漏洞 CVE-2021-49104](Web安全/OA办公/泛微oa/漏洞速递%20+%20检测脚本%20%20泛微%20E-Office%20任意文件上传漏洞%20CVE-2021-49104.md)
@@ -1820,12 +1697,12 @@
 - **浪潮ClusterEngineV4.0**（2）
   - [浪潮ClusterEngineV4.0-sysShell-任意命令执行漏洞](Web安全/ERP企业/浪潮ClusterEngineV4.0/浪潮ClusterEngineV4.0-sysShell-任意命令执行漏洞.md)
   - [浪潮ClusterEngineV4.0-远程命令执行漏洞-CVE-2020-21224](Web安全/ERP企业/浪潮ClusterEngineV4.0/浪潮ClusterEngineV4.0-远程命令执行漏洞-CVE-2020-21224.md)
-- **浪潮海岳 HCM Cloud download**（1）
-  - [浪潮海岳 HCM Cloud download 任意文件读取漏洞](Web安全/OA办公/浪潮海岳%20HCM%20Cloud%20download/浪潮海岳%20HCM%20Cloud%20download%20任意文件读取漏洞.md)
+- **浪潮海岳**（1）
+  - [浪潮海岳 HCM Cloud download 任意文件读取漏洞](Web安全/ERP企业/浪潮海岳/浪潮海岳%20HCM%20Cloud%20download%20任意文件读取漏洞.md)
+- **海信智能公交**（1）
+  - [海信智能公交企业管理系统 OrgInfoMng.aspx SQL注入漏洞](Web安全/商业软件/海信智能公交/海信智能公交企业管理系统%20OrgInfoMng.aspx%20SQL注入漏洞.md)
 - **海信智能公交企业管理系统 apply.aspx**（1）
   - [海信智能公交企业管理系统 apply.aspx SQL注入漏洞](Web安全/商业软件/海信智能公交企业管理系统%20apply.aspx/海信智能公交企业管理系统%20apply.aspx%20SQL注入漏洞.md)
-- **海信智能公交企业管理系统 OrgInfoMng.aspx**（1）
-  - [海信智能公交企业管理系统 OrgInfoMng.aspx SQL注入漏洞](Web安全/开发框架/海信智能公交企业管理系统%20OrgInfoMng.aspx/海信智能公交企业管理系统%20OrgInfoMng.aspx%20SQL注入漏洞.md)
 - **海外抢单刷单系统**（1）
   - [某二开版海外抢单Shua单系统存在任意用户登录漏洞](Web安全/其他软件/海外抢单刷单系统/某二开版海外抢单Shua单系统存在任意用户登录漏洞.md)
 - **海康威视 iVMS 综合安防系统**（1）
@@ -1851,7 +1728,7 @@
   - [润乾报表InputServlet存在任意文件读取漏洞](Web安全/其他软件/润乾报表InputServlet/润乾报表InputServlet存在任意文件读取漏洞.md)
 - **润申信息管理系统**（1）
   - [润申企业标准化管理系统DefaultHandler存在SQL注入漏洞](Web安全/商业软件/润申信息管理系统/润申企业标准化管理系统DefaultHandler存在SQL注入漏洞.md)
-- **深信服**（20）
+- **深信服**（22）
   - [深信服 NGAF下一代防火墙 loadfile.php 任意文件读取漏洞](Web安全/网络设备/深信服/深信服%20NGAF下一代防火墙%20loadfile.php%20任意文件读取漏洞.md)
   - [深信服 NGAF下一代防火墙 login.cgi 远程命令执行漏洞](Web安全/网络设备/深信服/深信服%20NGAF下一代防火墙%20login.cgi%20远程命令执行漏洞.md)
   - [深信服 SSL VPN - Pre Auth 任意密码重置](Web安全/网络设备/深信服/深信服%20SSL%20VPN%20-%20Pre%20Auth%20任意密码重置.md)
@@ -1864,6 +1741,7 @@
   - [深信服 终端检测相应平台（EDR） 任意命令执行漏洞（二）](Web安全/网络设备/深信服/深信服%20终端检测相应平台（EDR）%20任意命令执行漏洞（二）.md)
   - [深信服 终端检测相应平台（EDR） 任意用户登陆漏洞](Web安全/网络设备/深信服/深信服%20终端检测相应平台（EDR）%20任意用户登陆漏洞.md)
   - [深信服-EDR-c.php-远程命令执行漏洞-CNVD-2020-46552](Web安全/网络设备/深信服/深信服-EDR-c.php-远程命令执行漏洞-CNVD-2020-46552.md)
+  - [深信服-SSL-VPN-客户端远程文件下载](Web安全/网络设备/深信服/深信服-SSL-VPN-客户端远程文件下载.md)
   - [深信服EDR任意命令执行漏洞](Web安全/网络设备/深信服/深信服EDR任意命令执行漏洞.md)
   - [深信服EDR平台存在任意用户登录漏洞](Web安全/网络设备/深信服/深信服EDR平台存在任意用户登录漏洞.md)
   - [深信服EDR平台存在远程命令执行漏洞](Web安全/网络设备/深信服/深信服EDR平台存在远程命令执行漏洞.md)
@@ -1872,12 +1750,10 @@
   - [深信服下一代防火墙NGAFloadfile存在任意文件读取漏洞](Web安全/网络设备/深信服/深信服下一代防火墙NGAFloadfile存在任意文件读取漏洞.md)
   - [深信服应用交付管理系统download存在任意文件读取漏洞](Web安全/网络设备/深信服/深信服应用交付管理系统download存在任意文件读取漏洞.md)
   - [深信服应用交付管理系统rep_login远程命令执行漏洞](Web安全/网络设备/深信服/深信服应用交付管理系统rep_login远程命令执行漏洞.md)
-- **深信服-NGAF下一代防火墙-loadfile.php**（1）
-  - [深信服-NGAF下一代防火墙-loadfile.php-任意文件读取漏洞](Web安全/OA办公/深信服-NGAF下一代防火墙-loadfile.php/深信服-NGAF下一代防火墙-loadfile.php-任意文件读取漏洞.md)
-- **深信服-NGAF下一代防火墙-login.cgi**（1）
-  - [深信服-NGAF下一代防火墙-login.cgi-远程命令执行漏洞](Web安全/开发框架/深信服-NGAF下一代防火墙-login.cgi/深信服-NGAF下一代防火墙-login.cgi-远程命令执行漏洞.md)
-- **深信服-SSL-VPN-客户端**（1）
-  - [深信服-SSL-VPN-客户端远程文件下载](Web安全/网络设备/深信服-SSL-VPN-客户端/深信服-SSL-VPN-客户端远程文件下载.md)
+  - [漏洞情报 新 深信服应用交付系统 RCE](Web安全/网络设备/深信服/漏洞情报%20新%20深信服应用交付系统%20RCE.md)
+- **深信服NGAF**（2）
+  - [深信服-NGAF下一代防火墙-loadfile.php-任意文件读取漏洞](Web安全/安全设备/深信服NGAF/深信服-NGAF下一代防火墙-loadfile.php-任意文件读取漏洞.md)
+  - [深信服-NGAF下一代防火墙-login.cgi-远程命令执行漏洞](Web安全/安全设备/深信服NGAF/深信服-NGAF下一代防火墙-login.cgi-远程命令执行漏洞.md)
 - **深入分析 SaltStack Salt**（1）
   - [深入分析 SaltStack Salt 命令注入漏洞](Web安全/服务器软件/深入分析%20SaltStack%20Salt/深入分析%20SaltStack%20Salt%20命令注入漏洞.md)
 - **深入剖析GCP Looker**（1）
@@ -1895,15 +1771,10 @@
   - [易天智能eHR管理平台任意用户添加漏洞](Web安全/商业软件/温州市易天信息科技有限公司/易天智能eHR管理平台任意用户添加漏洞.md)
 - **湖南众合百易信息技术有限公司**（1）
   - [资产管理运营系统comfileup前台文件上传漏洞](Web安全/其他软件/湖南众合百易信息技术有限公司/资产管理运营系统comfileup前台文件上传漏洞.md)
-- **湖南建研信息技术股份有限公司**（3）
-  - [湖南建研工程质量检测系统Attachment存在任意文件上传漏洞](Web安全/OA办公/湖南建研信息技术股份有限公司/湖南建研工程质量检测系统Attachment存在任意文件上传漏洞.md)
-  - [湖南建研工程质量检测系统FileUpload存在任意文件上传漏洞](Web安全/OA办公/湖南建研信息技术股份有限公司/湖南建研工程质量检测系统FileUpload存在任意文件上传漏洞.md)
-  - [湖南建研工程质量检测系统updatefile存在任意文件上传漏洞](Web安全/OA办公/湖南建研信息技术股份有限公司/湖南建研工程质量检测系统updatefile存在任意文件上传漏洞.md)
-- **满客宝**（2）
+- **满客宝**（3）
   - [满客宝后台管理系统downloadWebFile任意文件读取漏洞](Web安全/ERP企业/满客宝/满客宝后台管理系统downloadWebFile任意文件读取漏洞.md)
   - [满客宝智慧食堂预定系统selectUserByOrgId存在未授权访问漏洞](Web安全/ERP企业/满客宝/满客宝智慧食堂预定系统selectUserByOrgId存在未授权访问漏洞.md)
-- **满客宝后台管理系统 downloadWebFile**（1）
-  - [满客宝后台管理系统 downloadWebFile 任意文件读取漏洞(XVE-2024-18926)](Web安全/OA办公/满客宝后台管理系统%20downloadWebFile/满客宝后台管理系统%20downloadWebFile%20任意文件读取漏洞%28XVE-2024-18926%29.md)
+  - [满客宝后台管理系统 downloadWebFile 任意文件读取漏洞(XVE-2024-18926)](Web安全/商业软件/满客宝/满客宝后台管理系统%20downloadWebFile%20任意文件读取漏洞%28XVE-2024-18926%29.md)
 - **滥用 libxml2 特性**（1）
   - [滥用 libxml2 特性绕过 GitHub Enterprise 上的 SAML 身份验证 (CVE-2025-23369)](Web安全/ERP企业/滥用%20libxml2%20特性/滥用%20libxml2%20特性绕过%20GitHub%20Enterprise%20上的%20SAML%20身份验证%20%28CVE-2025-23369%29.md)
 - **漏洞**（3）
@@ -1912,22 +1783,13 @@
   - [漏洞预警：Gerapy 项目 的二次漏洞挖掘](Web安全/其他软件/漏洞/漏洞预警：Gerapy%20项目%20的二次漏洞挖掘.md)
 - **漏洞分析   二进制**（1）
   - [漏洞分析   二进制漏洞原理分析实战总结](Web安全/其他软件/漏洞分析%20%20%20二进制/漏洞分析%20%20%20二进制漏洞原理分析实战总结.md)
-- **漏洞分析  Apache Tomcat 信息**（1）
-  - [漏洞分析  Apache Tomcat 信息泄露漏洞 (CVE-2024-21733)](Web安全/中间件/漏洞分析%20%20Apache%20Tomcat%20信息/漏洞分析%20%20Apache%20Tomcat%20信息泄露漏洞%20%28CVE-2024-21733%29.md)
 - **漏洞分析 SaltStack**（1）
   - [漏洞分析 SaltStack 未授权访问及命令执行漏洞分析（CVE-2020-16846和 CVE-2020-25592）](Web安全/服务器软件/漏洞分析%20SaltStack/漏洞分析%20SaltStack%20未授权访问及命令执行漏洞分析（CVE-2020-16846和%20CVE-2020-25592）.md)
-- **漏洞分析 XX OA11.7**（1）
-  - [漏洞分析 XX OA11.7 SQL 注入 2 Getshell 漏洞分析学习](Web安全/OA办公/漏洞分析%20XX%20OA11.7/漏洞分析%20XX%20OA11.7%20SQL%20注入%202%20Getshell%20漏洞分析学习.md)
-- **漏洞分析 XX OA11.7 组合拳**（1）
-  - [漏洞分析 XX OA11.7 组合拳漏洞分析学习（一）](Web安全/OA办公/漏洞分析%20XX%20OA11.7%20组合拳/漏洞分析%20XX%20OA11.7%20组合拳漏洞分析学习（一）.md)
-- **漏洞复现**（3）
+- **漏洞复现**（2）
   - [嵌入式 HMI 软件 - InduSoft Web Studio RCE 漏洞复现](Web安全/其他软件/漏洞复现/嵌入式%20HMI%20软件%20-%20InduSoft%20Web%20Studio%20RCE%20漏洞复现.md)
   - [某 RCE 漏洞复现、排查与监测](Web安全/其他软件/漏洞复现/某%20RCE%20漏洞复现、排查与监测.md)
-  - [漏洞复现CVE-2017-18349（FastJson1-2-24 反序列化导致任意命令执行漏洞）](Web安全/开发框架/漏洞复现/漏洞复现CVE-2017-18349（FastJson1-2-24%20反序列化导致任意命令执行漏洞）.md)
 - **漏洞复现   ThinkPHP 全版本**（1）
   - [漏洞复现   ThinkPHP 全版本漏洞复现](Web安全/开发框架/漏洞复现%20%20%20ThinkPHP%20全版本/漏洞复现%20%20%20ThinkPHP%20全版本漏洞复现.md)
-- **漏洞复现  Letta-ai letta代码**（1）
-  - [漏洞复现  Letta-ai letta代码注入漏洞(CVE-2025-51482)](Web安全/AI应用/漏洞复现%20%20Letta-ai%20letta代码/漏洞复现%20%20Letta-ai%20letta代码注入漏洞%28CVE-2025-51482%29.md)
 - **漏洞复现 -帆软报表系统历史版本**（1）
   - [漏洞复现 -（通用 0day）帆软报表系统历史版本存在多处漏洞](Web安全/其他软件/漏洞复现%20-帆软报表系统历史版本/漏洞复现%20-（通用%200day）帆软报表系统历史版本存在多处漏洞.md)
 - **漏洞复现 jumpserver**（1）
@@ -1938,14 +1800,8 @@
   - [漏洞复现无垠智能模糊测试系统实战复现OpenSSL高危漏洞](Web安全/其他软件/漏洞复现无垠智能模糊测试系统实战复现OpenSSL高危/漏洞复现无垠智能模糊测试系统实战复现OpenSSL高危漏洞.md)
 - **漏洞导致未经授权的系统**（1）
   - [CVE-2024-36041：KDE Plasma 漏洞导致未经授权的系统访问](Web安全/安全设备/漏洞导致未经授权的系统/CVE-2024-36041：KDE%20Plasma%20漏洞导致未经授权的系统访问.md)
-- **漏洞情报  Apache NiFi 多个**（1）
-  - [漏洞情报  Apache NiFi 多个漏洞通告(CVE-2023-34468、CVE-2023-34212)](Web安全/中间件/漏洞情报%20%20Apache%20NiFi%20多个/漏洞情报%20%20Apache%20NiFi%20多个漏洞通告%28CVE-2023-34468、CVE-2023-34212%29.md)
-- **漏洞情报 新 深信服应用交付系统**（1）
-  - [漏洞情报 新 深信服应用交付系统 RCE](Web安全/网络设备/漏洞情报%20新%20深信服应用交付系统/漏洞情报%20新%20深信服应用交付系统%20RCE.md)
 - **漏洞赏金实战**（1）
   - [漏洞赏金实战：AFL++ 挖掘 GNOME libsoup 高危漏洞技术解析](Web安全/其他软件/漏洞赏金实战/漏洞赏金实战：AFL++%20挖掘%20GNOME%20libsoup%20高危漏洞技术解析.md)
-- **漏洞通告GeoServer SSRF和XXE**（1）
-  - [漏洞通告GeoServer SSRF和XXE漏洞](Web安全/中间件/漏洞通告GeoServer%20SSRF和XXE/漏洞通告GeoServer%20SSRF和XXE漏洞.md)
 - **漏洞通告Microsoft Office代码执行**（1）
   - [漏洞通告Microsoft Office代码执行漏洞(CVE-2026-55022)](Web安全/桌面软件/漏洞通告Microsoft%20Office代码执行/漏洞通告Microsoft%20Office代码执行漏洞%28CVE-2026-55022%29.md)
 - **漏洞通报 ThinkPHP3-2-x**（1）
@@ -1954,38 +1810,12 @@
   - [ (87)](Web安全/其他软件/漏洞速递/%20%2887%29.md)
   - [漏洞速递   CVE-2023-32233 漏洞（附 EXP）](Web安全/其他软件/漏洞速递/漏洞速递%20%20%20CVE-2023-32233%20漏洞（附%20EXP）.md)
   - [漏洞速递  CVE-2025-0868 RCE漏洞（附EXP）](Web安全/其他软件/漏洞速递/漏洞速递%20%20CVE-2025-0868%20RCE漏洞（附EXP）.md)
-- **漏洞速递    VPN**（1）
-  - [漏洞速递   CVE-2022-42475 VPN 远程代码执行漏洞](Web安全/网络设备/漏洞速递%20%20%20%20VPN/漏洞速递%20%20%20CVE-2022-42475%20VPN%20远程代码执行漏洞.md)
 - **漏洞速递 附 EXP**（1）
   - [漏洞速递 附 EXP  漏洞 CVE-2023-32233](Web安全/其他软件/漏洞速递%20附%20EXP/漏洞速递%20附%20EXP%20%20漏洞%20CVE-2023-32233.md)
 - **漏洞预警  1Panel跨站脚本**（1）
   - [漏洞预警  1Panel跨站脚本漏洞](Web安全/运维面板/漏洞预警%20%201Panel跨站脚本/漏洞预警%20%201Panel跨站脚本漏洞.md)
-- **漏洞预警  Apache DolphinScheduler**（1）
-  - [漏洞预警  Apache DolphinScheduler远程代码执行漏洞](Web安全/中间件/漏洞预警%20%20Apache%20DolphinScheduler/漏洞预警%20%20Apache%20DolphinScheduler远程代码执行漏洞.md)
-- **漏洞预警  Apache OFBiz 服务端模板**（1）
-  - [漏洞预警  Apache OFBiz 服务端模板注入漏洞（CVE-2025-26865）](Web安全/中间件/漏洞预警%20%20Apache%20OFBiz%20服务端模板/漏洞预警%20%20Apache%20OFBiz%20服务端模板注入漏洞（CVE-2025-26865）.md)
-- **漏洞预警  Apache Pulsar**（1）
-  - [漏洞预警  Apache Pulsar任意文件读取漏洞](Web安全/中间件/漏洞预警%20%20Apache%20Pulsar/漏洞预警%20%20Apache%20Pulsar任意文件读取漏洞.md)
-- **漏洞预警  Apache Submarine**（1）
-  - [漏洞预警  Apache Submarine SQL注入漏洞](Web安全/中间件/漏洞预警%20%20Apache%20Submarine/漏洞预警%20%20Apache%20Submarine%20SQL注入漏洞.md)
-- **漏洞预警  Apache Tomcat拒绝服务**（1）
-  - [漏洞预警  Apache Tomcat拒绝服务漏洞](Web安全/中间件/漏洞预警%20%20Apache%20Tomcat拒绝服务/漏洞预警%20%20Apache%20Tomcat拒绝服务漏洞.md)
-- **漏洞预警  Apache ZooKeeper认证**（1）
-  - [漏洞预警  Apache ZooKeeper认证绕过漏洞](Web安全/中间件/漏洞预警%20%20Apache%20ZooKeeper认证/漏洞预警%20%20Apache%20ZooKeeper认证绕过漏洞.md)
-- **漏洞预警  Apache ZooKeeper身份验证**（1）
-  - [漏洞预警  Apache ZooKeeper身份验证绕过漏洞](Web安全/中间件/漏洞预警%20%20Apache%20ZooKeeper身份验证/漏洞预警%20%20Apache%20ZooKeeper身份验证绕过漏洞.md)
-- **漏洞预警  D-Link DIR-868L**（1）
-  - [漏洞预警  D-Link DIR-868L远程代码执行漏洞](Web安全/网络设备/漏洞预警%20%20D-Link%20DIR-868L/漏洞预警%20%20D-Link%20DIR-868L远程代码执行漏洞.md)
-- **漏洞预警  D-Link NAS设备**（1）
-  - [漏洞预警  D-Link NAS设备远程代码执行漏洞](Web安全/网络设备/漏洞预警%20%20D-Link%20NAS设备/漏洞预警%20%20D-Link%20NAS设备远程代码执行漏洞.md)
 - **漏洞预警  DataX-Web**（1）
   - [漏洞预警  DataX-Web命令注入漏洞](Web安全/其他软件/漏洞预警%20%20DataX-Web/漏洞预警%20%20DataX-Web命令注入漏洞.md)
-- **漏洞预警  Django拒绝服务和**（1）
-  - [漏洞预警  Django拒绝服务和SQL注入漏洞](Web安全/开发框架/漏洞预警%20%20Django拒绝服务和/漏洞预警%20%20Django拒绝服务和SQL注入漏洞.md)
-- **漏洞预警  GeoServer**（1）
-  - [漏洞预警  GeoServer远程代码执行漏洞](Web安全/中间件/漏洞预警%20%20GeoServer/漏洞预警%20%20GeoServer远程代码执行漏洞.md)
-- **漏洞预警  GitLab**（1）
-  - [漏洞预警  GitLab未授权访问漏洞](Web安全/开发框架/漏洞预警%20%20GitLab/漏洞预警%20%20GitLab未授权访问漏洞.md)
 - **漏洞预警  GitPython代码执行**（1）
   - [漏洞预警  GitPython代码执行漏洞](Web安全/其他软件/漏洞预警%20%20GitPython代码执行/漏洞预警%20%20GitPython代码执行漏洞.md)
 - **漏洞预警  go-git参数**（1）
@@ -1996,8 +1826,6 @@
   - [漏洞预警  JEEWMS SQL注入漏洞](Web安全/商业软件/漏洞预警%20%20JEEWMS/漏洞预警%20%20JEEWMS%20SQL注入漏洞.md)
 - **漏洞预警  JumpServer未正确校验输入**（1）
   - [漏洞预警  JumpServer未正确校验输入漏洞](Web安全/运维面板/漏洞预警%20%20JumpServer未正确校验输入/漏洞预警%20%20JumpServer未正确校验输入漏洞.md)
-- **漏洞预警  Langflow身份验证缺失**（1）
-  - [漏洞预警  Langflow身份验证缺失漏洞](Web安全/AI应用/漏洞预警%20%20Langflow身份验证缺失/漏洞预警%20%20Langflow身份验证缺失漏洞.md)
 - **漏洞预警  Magento Open Source XXE**（1）
   - [漏洞预警  Magento Open Source XXE漏洞](Web安全/其他软件/漏洞预警%20%20Magento%20Open%20Source%20XXE/漏洞预警%20%20Magento%20Open%20Source%20XXE漏洞.md)
 - **漏洞预警  Microsoft ODBC Driver**（1）
@@ -2006,10 +1834,6 @@
   - [漏洞预警  MiroFish命令注入和路径遍历漏洞](Web安全/其他软件/漏洞预警%20%20MiroFish/漏洞预警%20%20MiroFish命令注入和路径遍历漏洞.md)
 - **漏洞预警  MLFlow**（1）
   - [漏洞预警  MLFlow远程代码执行漏洞](Web安全/CMS内容/漏洞预警%20%20MLFlow/漏洞预警%20%20MLFlow远程代码执行漏洞.md)
-- **漏洞预警  Netgear信息**（1）
-  - [漏洞预警  Netgear信息泄露漏洞](Web安全/网络设备/漏洞预警%20%20Netgear信息/漏洞预警%20%20Netgear信息泄露漏洞.md)
-- **漏洞预警  Netis Wifi路由器信息**（1）
-  - [漏洞预警  Netis Wifi路由器信息泄露漏洞](Web安全/网络设备/漏洞预警%20%20Netis%20Wifi路由器信息/漏洞预警%20%20Netis%20Wifi路由器信息泄露漏洞.md)
 - **漏洞预警  OpenMetadata身份验证**（1）
   - [漏洞预警  OpenMetadata身份验证绕过和SpEL表达式注入漏洞](Web安全/其他软件/漏洞预警%20%20OpenMetadata身份验证/漏洞预警%20%20OpenMetadata身份验证绕过和SpEL表达式注入漏洞.md)
 - **漏洞预警  Perl for Windows代码执行**（1）
@@ -2020,10 +1844,6 @@
   - [漏洞预警  Progress ShareFile身份认证绕过和文件上传漏洞](Web安全/其他软件/漏洞预警%20%20Progress%20ShareFile身份认证/漏洞预警%20%20Progress%20ShareFile身份认证绕过和文件上传漏洞.md)
 - **漏洞预警  PublicCMS**（1）
   - [漏洞预警  PublicCMS命令注入漏洞](Web安全/CMS内容/漏洞预警%20%20PublicCMS/漏洞预警%20%20PublicCMS命令注入漏洞.md)
-- **漏洞预警  pyLoad**（1）
-  - [漏洞预警  pyLoad远程代码执行漏洞](Web安全/OA办公/漏洞预警%20%20pyLoad/漏洞预警%20%20pyLoad远程代码执行漏洞.md)
-- **漏洞预警  Redis hyperloglog**（1）
-  - [漏洞预警  Redis hyperloglog 远程代码执行漏洞(CVE-2025-32023)](Web安全/中间件/漏洞预警%20%20Redis%20hyperloglog/漏洞预警%20%20Redis%20hyperloglog%20远程代码执行漏洞%28CVE-2025-32023%29.md)
 - **漏洞预警  RustFS认证**（1）
   - [漏洞预警  RustFS认证绕过漏洞](Web安全/其他软件/漏洞预警%20%20RustFS认证/漏洞预警%20%20RustFS认证绕过漏洞.md)
 - **漏洞预警  SeaCMS海洋影视管理系统**（2）
@@ -2031,26 +1851,23 @@
   - [漏洞预警  SeaCMS海洋影视管理系统SQL注入漏洞](Web安全/CMS内容/漏洞预警%20%20SeaCMS海洋影视管理系统/漏洞预警%20%20SeaCMS海洋影视管理系统SQL注入漏洞.md)
 - **漏洞预警  User Meta敏感信息**（1）
   - [漏洞预警  User Meta敏感信息泄露漏洞](Web安全/其他软件/漏洞预警%20%20User%20Meta敏感信息/漏洞预警%20%20User%20Meta敏感信息泄露漏洞.md)
-- **漏洞预警  vLLM**（1）
-  - [漏洞预警  vLLM远程代码执行漏洞](Web安全/AI应用/漏洞预警%20%20vLLM/漏洞预警%20%20vLLM远程代码执行漏洞.md)
 - **漏洞预警  WSO2**（1）
   - [漏洞预警  WSO2任意文件上传漏洞](Web安全/其他软件/漏洞预警%20%20WSO2/漏洞预警%20%20WSO2任意文件上传漏洞.md)
-- **漏洞预警  XStream栈溢出**（1）
-  - [漏洞预警  XStream栈溢出漏洞](Web安全/开发框架/漏洞预警%20%20XStream栈溢出/漏洞预警%20%20XStream栈溢出漏洞.md)
 - **漏洞预警  蓝网科技临床浏览系统**（1）
   - [漏洞预警  蓝网科技临床浏览系统 SQL注入漏洞](Web安全/其他软件/漏洞预警%20%20蓝网科技临床浏览系统/漏洞预警%20%20蓝网科技临床浏览系统%20SQL注入漏洞.md)
 - **漏洞风险提示  微软3月补丁日多个高危安全**（1）
   - [漏洞风险提示  微软3月补丁日多个高危安全漏洞](Web安全/其他软件/漏洞风险提示%20%20微软3月补丁日多个高危安全/漏洞风险提示%20%20微软3月补丁日多个高危安全漏洞.md)
-- **瀚霖科技股份有限公司**（1）
-  - [瀚霖科技股份有限公司ISS-7000v2网关login_handler.cgi存在命令执行漏洞](Web安全/开发框架/瀚霖科技股份有限公司/瀚霖科技股份有限公司ISS-7000v2网关login_handler.cgi存在命令执行漏洞.md)
+- **瀚霖科技**（1）
+  - [瀚霖科技股份有限公司ISS-7000v2网关login_handler.cgi存在命令执行漏洞](Web安全/商业软件/瀚霖科技/瀚霖科技股份有限公司ISS-7000v2网关login_handler.cgi存在命令执行漏洞.md)
 - **灵当**（1）
   - [灵当CRM wechatSessionindex.php 文件上传致RCE漏洞](Web安全/商业软件/灵当/灵当CRM%20wechatSessionindex.php%20文件上传致RCE漏洞.md)
-- **灵当互动信息**（8）
-  - [灵当crmmultipleUpload存在任意文件上传漏洞](Web安全/OA办公/灵当互动信息/灵当crmmultipleUpload存在任意文件上传漏洞.md)
-  - [灵当crmuploadfile存在文件写入漏洞](Web安全/OA办公/灵当互动信息/灵当crmuploadfile存在文件写入漏洞.md)
-  - [灵当crmuploadify存在任意文件上传漏洞](Web安全/OA办公/灵当互动信息/灵当crmuploadify存在任意文件上传漏洞.md)
-  - [灵当crmupload存在任意文件上传漏洞](Web安全/OA办公/灵当互动信息/灵当crmupload存在任意文件上传漏洞.md)
-  - [灵当crmwechatSession存在任意文件上传漏洞](Web安全/OA办公/灵当互动信息/灵当crmwechatSession存在任意文件上传漏洞.md)
+- **灵当CRM**（5）
+  - [灵当crmmultipleUpload存在任意文件上传漏洞](Web安全/商业软件/灵当CRM/灵当crmmultipleUpload存在任意文件上传漏洞.md)
+  - [灵当crmuploadfile存在文件写入漏洞](Web安全/商业软件/灵当CRM/灵当crmuploadfile存在文件写入漏洞.md)
+  - [灵当crmuploadify存在任意文件上传漏洞](Web安全/商业软件/灵当CRM/灵当crmuploadify存在任意文件上传漏洞.md)
+  - [灵当crmupload存在任意文件上传漏洞](Web安全/商业软件/灵当CRM/灵当crmupload存在任意文件上传漏洞.md)
+  - [灵当crmwechatSession存在任意文件上传漏洞](Web安全/商业软件/灵当CRM/灵当crmwechatSession存在任意文件上传漏洞.md)
+- **灵当互动信息**（3）
   - [灵当crmauth-info存在信息泄露漏洞](Web安全/商业软件/灵当互动信息/灵当crmauth-info存在信息泄露漏洞.md)
   - [灵当crmgetOrderList存在SQL注入漏洞](Web安全/商业软件/灵当互动信息/灵当crmgetOrderList存在SQL注入漏洞.md)
   - [灵当crmpdf存在任意文件读取漏洞](Web安全/商业软件/灵当互动信息/灵当crmpdf存在任意文件读取漏洞.md)
@@ -2079,12 +1896,14 @@
   - [狮子鱼CMS ApigoodController.class.php SQL注入漏洞](Web安全/CMS内容/狮子鱼CMS/狮子鱼CMS%20ApigoodController.class.php%20SQL注入漏洞.md)
   - [狮子鱼CMS-image_upload.php-任意文件上传](Web安全/CMS内容/狮子鱼CMS/狮子鱼CMS-image_upload.php-任意文件上传.md)
   - [狮子鱼CMS-wxapp.php-任意文件上传漏洞](Web安全/CMS内容/狮子鱼CMS/狮子鱼CMS-wxapp.php-任意文件上传漏洞.md)
+- **环球磁卡**（1）
+  - [公交IC卡收单管理系统bus存在SQL注入漏洞](Web安全/商业软件/环球磁卡/公交IC卡收单管理系统bus存在SQL注入漏洞.md)
 - **瑞友 应用虚拟化系统 GetBSAppUrl**（1）
   - [瑞友 应用虚拟化系统 GetBSAppUrl SQL注入漏洞](Web安全/ERP企业/瑞友%20应用虚拟化系统%20GetBSAppUrl/瑞友%20应用虚拟化系统%20GetBSAppUrl%20SQL注入漏洞.md)
 - **瑞友-应用虚拟化系统-GetBSAppUrl**（1）
   - [瑞友-应用虚拟化系统-GetBSAppUrl-SQL注入漏洞](Web安全/ERP企业/瑞友-应用虚拟化系统-GetBSAppUrl/瑞友-应用虚拟化系统-GetBSAppUrl-SQL注入漏洞.md)
-- **瑞友天翼应用虚拟化系统**（1）
-  - [瑞友天翼应用虚拟化系统-AgentBoard.XGI-远程代码执行漏洞](Web安全/OA办公/瑞友天翼应用虚拟化系统/瑞友天翼应用虚拟化系统-AgentBoard.XGI-远程代码执行漏洞.md)
+- **瑞友天翼**（1）
+  - [瑞友天翼应用虚拟化系统-AgentBoard.XGI-远程代码执行漏洞](Web安全/商业软件/瑞友天翼/瑞友天翼应用虚拟化系统-AgentBoard.XGI-远程代码执行漏洞.md)
 - **瑞友天翼应用虚拟化系统 GetPwdPolicy**（1）
   - [瑞友天翼应用虚拟化系统 GetPwdPolicy SQL注入漏洞](Web安全/其他软件/瑞友天翼应用虚拟化系统%20GetPwdPolicy/瑞友天翼应用虚拟化系统%20GetPwdPolicy%20SQL注入漏洞.md)
 - **瑞斯康达**（1）
@@ -2093,8 +1912,8 @@
   - [瑞斯康达智能网关 RCE漏洞](Web安全/其他软件/瑞斯康达智能网关/瑞斯康达智能网关%20RCE漏洞.md)
 - **瑞斯康达科技发展股份有限公司**（1）
   - [瑞斯康达多业务智能网关list_base_config存在远程命令执行漏洞](Web安全/其他软件/瑞斯康达科技发展股份有限公司/瑞斯康达多业务智能网关list_base_config存在远程命令执行漏洞.md)
-- **生命港湾 服务配置工具平台 Download**（1）
-  - [生命港湾 服务配置工具平台 Download 任意文件读取漏洞](Web安全/OA办公/生命港湾%20服务配置工具平台%20Download/生命港湾%20服务配置工具平台%20Download%20任意文件读取漏洞.md)
+- **生命港湾**（1）
+  - [生命港湾 服务配置工具平台 Download 任意文件读取漏洞](Web安全/商业软件/生命港湾/生命港湾%20服务配置工具平台%20Download%20任意文件读取漏洞.md)
 - **用友GRP-u8**（100）
   - [CNVD-2021-30167 - 附 PoC 用友 NC BeanShell 远程代码执行漏洞复现](Web安全/ERP企业/用友GRP-u8/CNVD-2021-30167%20-%20附%20PoC%20用友%20NC%20BeanShell%20远程代码执行漏洞复现.md)
   - [CNVD-2021-30167：用友 NC BeanShell RCE 复现](Web安全/ERP企业/用友GRP-u8/CNVD-2021-30167：用友%20NC%20BeanShell%20RCE%20复现.md)
@@ -2203,17 +2022,16 @@
 - **申瓯通信设备有限公司**（2）
   - [申瓯通信设备有限公司在线录音管理系统index存在文件包含漏洞](Web安全/商业软件/申瓯通信设备有限公司/申瓯通信设备有限公司在线录音管理系统index存在文件包含漏洞.md)
   - [申瓯通信设备有限公司在线录音管理系统存在任意文件下载漏洞](Web安全/商业软件/申瓯通信设备有限公司/申瓯通信设备有限公司在线录音管理系统存在任意文件下载漏洞.md)
-- **电信-网关配置管理系统-login.php**（1）
-  - [电信-网关配置管理系统-login.php-SQL注入漏洞](Web安全/开发框架/电信-网关配置管理系统-login.php/电信-网关配置管理系统-login.php-SQL注入漏洞.md)
 - **电信网关配置管理系统**（3）
   - [电信网关配置管理系统 upload_channels.php 文件上传致RCE漏洞](Web安全/商业软件/电信网关配置管理系统/电信网关配置管理系统%20upload_channels.php%20文件上传致RCE漏洞.md)
   - [电信网关配置管理系统rewrite存在文件上传漏洞](Web安全/商业软件/电信网关配置管理系统/电信网关配置管理系统rewrite存在文件上传漏洞.md)
   - [电信网关配置管理系统存在弱口令漏洞](Web安全/商业软件/电信网关配置管理系统/电信网关配置管理系统存在弱口令漏洞.md)
 - **电子文档安全管理系统**（1）
   - [电子文档安全管理系统backup存在任意文件读取漏洞](Web安全/商业软件/电子文档安全管理系统/电子文档安全管理系统backup存在任意文件读取漏洞.md)
-- **电子资料管理系统 ImageUpload.ashx 文件**（1）
-  - [电子资料管理系统 ImageUpload.ashx 文件上传致RCE漏洞](Web安全/OA办公/电子资料管理系统%20ImageUpload.ashx%20文件/电子资料管理系统%20ImageUpload.ashx%20文件上传致RCE漏洞.md)
-- **畅捷通**（4）
+- **电子资料管理系统**（1）
+  - [电子资料管理系统 ImageUpload.ashx 文件上传致RCE漏洞](Web安全/商业软件/电子资料管理系统/电子资料管理系统%20ImageUpload.ashx%20文件上传致RCE漏洞.md)
+- **畅捷通**（5）
+  - [​畅捷通 TPlus DownloadProxy.aspx 任意文件读取漏洞](Web安全/ERP企业/畅捷通/​畅捷通%20TPlus%20DownloadProxy.aspx%20任意文件读取漏洞.md)
   - [畅捷通T+ Ufida.T.DI.UIP.RRA.RRATableController 反序列化RCE漏洞](Web安全/ERP企业/畅捷通/畅捷通T+%20Ufida.T.DI.UIP.RRA.RRATableController%20反序列化RCE漏洞.md)
   - [新洞！ 畅捷通 TPlus keyEdit.aspx SQL 注入漏洞](Web安全/其他软件/畅捷通/新洞！%20畅捷通%20TPlus%20keyEdit.aspx%20SQL%20注入漏洞.md)
   - [畅捷通 T+ Plus 审计 （超详细）](Web安全/其他软件/畅捷通/畅捷通%20T+%20Plus%20审计%20（超详细）.md)
@@ -2222,13 +2040,11 @@
   - [畅捷通T+ KeyInfoList.aspx SQL漏洞](Web安全/其他软件/畅捷通T+%20KeyInfoList.aspx%20SQL漏洞/畅捷通T+%20KeyInfoList.aspx%20SQL漏洞.md)
 - **百为流控**（1）
   - [百为智能流控路由器存在命令执行漏洞](Web安全/网络设备/百为流控/百为智能流控路由器存在命令执行漏洞.md)
-- **百卓-Smart-importhtml.php**（1）
-  - [百卓-Smart-importhtml.php-远程命令执行漏洞](Web安全/开发框架/百卓-Smart-importhtml.php/百卓-Smart-importhtml.php-远程命令执行漏洞.md)
-- **百卓Smart**（2）
-  - [百卓SmartSQL命令注入漏洞](Web安全/开发框架/百卓Smart/百卓SmartSQL命令注入漏洞.md)
-  - [百卓Smartuploadfile存在任意文件上传漏洞](Web安全/开发框架/百卓Smart/百卓Smartuploadfile存在任意文件上传漏洞.md)
-- **百卓Smart后台**（1）
-  - [百卓Smart后台任意文件上传漏洞](Web安全/开发框架/百卓Smart后台/百卓Smart后台任意文件上传漏洞.md)
+- **百卓**（4）
+  - [百卓-Smart-importhtml.php-远程命令执行漏洞](Web安全/网络设备/百卓/百卓-Smart-importhtml.php-远程命令执行漏洞.md)
+  - [百卓SmartSQL命令注入漏洞](Web安全/网络设备/百卓/百卓SmartSQL命令注入漏洞.md)
+  - [百卓Smartuploadfile存在任意文件上传漏洞](Web安全/网络设备/百卓/百卓Smartuploadfile存在任意文件上传漏洞.md)
+  - [百卓Smart后台任意文件上传漏洞](Web安全/网络设备/百卓/百卓Smart后台任意文件上传漏洞.md)
 - **百家cms**（4）
   - [百家cms v4.1.4 任意文件删除漏洞](Web安全/CMS内容/百家cms/百家cms%20v4.1.4%20任意文件删除漏洞.md)
   - [百家cms v4.1.4 任意路径删除漏洞](Web安全/CMS内容/百家cms/百家cms%20v4.1.4%20任意路径删除漏洞.md)
@@ -2261,8 +2077,6 @@
   - [研究人员发现 macOS 远程代码执行缺陷漏洞 – CVE-2024-44236](Web安全/云平台/研究人员发现%20macOS/研究人员发现%20macOS%20远程代码执行缺陷漏洞%20–%20CVE-2024-44236.md)
 - **研究人员在Windows版的SVN中发现代码执行**（1）
   - [研究人员在Windows版的SVN中发现代码执行漏洞](Web安全/其他软件/研究人员在Windows版的SVN中发现代码执行/研究人员在Windows版的SVN中发现代码执行漏洞.md)
-- **研究人员称攻击者正在大规模利用新的Ivanti VPN**（1）
-  - [研究人员称攻击者正在大规模利用新的Ivanti VPN漏洞，Fortinet警告APT 组织在攻击中利用FortiOS漏洞](Web安全/网络设备/研究人员称攻击者正在大规模利用新的Ivanti%20VPN/研究人员称攻击者正在大规模利用新的Ivanti%20VPN漏洞，Fortinet警告APT%20组织在攻击中利用FortiOS漏洞.md)
 - **碧海威**（6）
   - [碧海威L7多款产品confirm存在命令执行漏洞](Web安全/其他软件/碧海威/碧海威L7多款产品confirm存在命令执行漏洞.md)
   - [碧海威L7多款产品index存在命令执行漏洞](Web安全/其他软件/碧海威/碧海威L7多款产品index存在命令执行漏洞.md)
@@ -2310,13 +2124,12 @@
   - [福特曝WiFi安全漏洞，官方称仍可安全驾驶](Web安全/其他软件/福特曝WiFi安全/福特曝WiFi安全漏洞，官方称仍可安全驾驶.md)
 - **科拓全智能停车收费系统 T_SellFrom.aspx**（1）
   - [科拓全智能停车收费系统 T_SellFrom.aspx SQL注入漏洞](Web安全/CMS内容/科拓全智能停车收费系统%20T_SellFrom.aspx/科拓全智能停车收费系统%20T_SellFrom.aspx%20SQL注入漏洞.md)
-- **科荣 AIO 管理系统**（1）
-  - [科荣 AIO 管理系统RCE漏洞](Web安全/AI应用/科荣%20AIO%20管理系统/科荣%20AIO%20管理系统RCE漏洞.md)
-- **科荣AIO管理系统**（4）
-  - [科荣AIO管理系统ReportServlet存在任意文件读取漏洞](Web安全/AI应用/科荣AIO管理系统/科荣AIO管理系统ReportServlet存在任意文件读取漏洞.md)
-  - [科荣AIO管理系统ReportServlet存在目录遍历漏洞](Web安全/AI应用/科荣AIO管理系统/科荣AIO管理系统ReportServlet存在目录遍历漏洞.md)
-  - [科荣AIO管理系统UtilServlet存在任意文件读取漏洞](Web安全/AI应用/科荣AIO管理系统/科荣AIO管理系统UtilServlet存在任意文件读取漏洞.md)
-  - [科荣AIO管理系统UtilServlet存在远程命令执行漏洞](Web安全/AI应用/科荣AIO管理系统/科荣AIO管理系统UtilServlet存在远程命令执行漏洞.md)
+- **科荣AIO**（5）
+  - [科荣 AIO 管理系统RCE漏洞](Web安全/商业软件/科荣AIO/科荣%20AIO%20管理系统RCE漏洞.md)
+  - [科荣AIO管理系统ReportServlet存在任意文件读取漏洞](Web安全/商业软件/科荣AIO/科荣AIO管理系统ReportServlet存在任意文件读取漏洞.md)
+  - [科荣AIO管理系统ReportServlet存在目录遍历漏洞](Web安全/商业软件/科荣AIO/科荣AIO管理系统ReportServlet存在目录遍历漏洞.md)
+  - [科荣AIO管理系统UtilServlet存在任意文件读取漏洞](Web安全/商业软件/科荣AIO/科荣AIO管理系统UtilServlet存在任意文件读取漏洞.md)
+  - [科荣AIO管理系统UtilServlet存在远程命令执行漏洞](Web安全/商业软件/科荣AIO/科荣AIO管理系统UtilServlet存在远程命令执行漏洞.md)
 - **租赁管理系统 信息**（1）
   - [租赁管理系统 信息泄露漏洞（CNVD-2025-03578)](Web安全/商业软件/租赁管理系统%20信息/租赁管理系统%20信息泄露漏洞（CNVD-2025-03578%29.md)
 - **积木报表 testConnection**（1）
@@ -2334,44 +2147,35 @@
   - [符号连接替换漏洞复现](Web安全/其他软件/符号连接替换/符号连接替换漏洞复现.md)
 - **简单图床**（1）
   - [EasyImagedown.php任意文件读取漏洞](Web安全/其他软件/简单图床/EasyImagedown.php任意文件读取漏洞.md)
+- **管家婆**（1）
+  - [管家婆订货易在线商城 UploadImgNoCheck 文件上传致RCE漏洞](Web安全/商业软件/管家婆/管家婆订货易在线商城%20UploadImgNoCheck%20文件上传致RCE漏洞.md)
 - **索贝融媒体 Sc**（1）
   - [索贝融媒体 Sc-TaskMonitoringresttasksearch SQL注入漏洞](Web安全/其他软件/索贝融媒体%20Sc/索贝融媒体%20Sc-TaskMonitoringresttasksearch%20SQL注入漏洞.md)
-- **紧急**（1）
-  - [！华硕DriverHub曝高危漏洞，请立即更新！—远程攻击者可通过HTTP请求劫持你的主板驱动管理](Web安全/网络设备/紧急/！华硕DriverHub曝高危漏洞，请立即更新！—远程攻击者可通过HTTP请求劫持你的主板驱动管理.md)
-- **紫光档案管理系统**（3）
+- **紫光档案管理系统**（4）
   - [紫光档案管理系统 upload.html 后台文件上传漏洞](Web安全/商业软件/紫光档案管理系统/紫光档案管理系统%20upload.html%20后台文件上传漏洞.md)
+  - [紫光档案管理系统-upload.html-后台文件上传漏洞](Web安全/商业软件/紫光档案管理系统/紫光档案管理系统-upload.html-后台文件上传漏洞.md)
   - [紫光档案管理系统WorkFlow存在任意文件上传漏洞](Web安全/商业软件/紫光档案管理系统/紫光档案管理系统WorkFlow存在任意文件上传漏洞.md)
   - [紫光档案管理系统editPass存在SQL注入漏洞](Web安全/商业软件/紫光档案管理系统/紫光档案管理系统editPass存在SQL注入漏洞.md)
-- **紫光档案管理系统-upload.html-后台文件**（1）
-  - [紫光档案管理系统-upload.html-后台文件上传漏洞](Web安全/OA办公/紫光档案管理系统-upload.html-后台文件/紫光档案管理系统-upload.html-后台文件上传漏洞.md)
-- **红帆**（1）
-  - [红帆OA-ioFileExport.aspx-任意文件读取漏洞](Web安全/OA办公/红帆/红帆OA-ioFileExport.aspx-任意文件读取漏洞.md)
-- **红帆OA**（1）
+- **红帆OA**（2）
   - [红帆OA ioFileExport.aspx 任意文件读取漏洞](Web安全/OA办公/红帆OA/红帆OA%20ioFileExport.aspx%20任意文件读取漏洞.md)
+  - [红帆OA-ioFileExport.aspx-任意文件读取漏洞](Web安全/OA办公/红帆OA/红帆OA-ioFileExport.aspx-任意文件读取漏洞.md)
 - **红海云**（1）
   - [红海云eHRpc.mob SQL注入漏洞](Web安全/商业软件/红海云/红海云eHRpc.mob%20SQL注入漏洞.md)
 - **红队攻防实战之钉钉**（1）
   - [红队攻防实战之钉钉 RCE](Web安全/商业软件/红队攻防实战之钉钉/红队攻防实战之钉钉%20RCE.md)
 - **终极**（1）
   - [终极MySQL数据库利用姿势](Web安全/数据库/终极/终极MySQL数据库利用姿势.md)
-- **绿盟 NF下一代防火墙**（1）
-  - [绿盟 NF下一代防火墙 任意文件上传漏洞](Web安全/网络设备/绿盟%20NF下一代防火墙/绿盟%20NF下一代防火墙%20任意文件上传漏洞.md)
+- **绿盟**（8）
+  - [绿盟 NF下一代防火墙 任意文件上传漏洞](Web安全/网络设备/绿盟/绿盟%20NF下一代防火墙%20任意文件上传漏洞.md)
+  - [绿盟 SAS堡垒机 Exec 远程命令执行漏洞](Web安全/网络设备/绿盟/绿盟%20SAS堡垒机%20Exec%20远程命令执行漏洞.md)
+  - [绿盟 UTS 综合威胁探针 信息泄露](Web安全/网络设备/绿盟/绿盟%20UTS%20综合威胁探针%20信息泄露.md)
+  - [绿盟-NF下一代防火墙-任意文件上传漏洞](Web安全/网络设备/绿盟/绿盟-NF下一代防火墙-任意文件上传漏洞.md)
+  - [绿盟-SAS堡垒机-Exec-远程命令执行漏洞](Web安全/网络设备/绿盟/绿盟-SAS堡垒机-Exec-远程命令执行漏洞.md)
+  - [绿盟SAS堡垒机GetFile任意文件读取漏洞](Web安全/网络设备/绿盟/绿盟SAS堡垒机GetFile任意文件读取漏洞.md)
+  - [绿盟SAS堡垒机local_user.php任意用户登录漏洞](Web安全/网络设备/绿盟/绿盟SAS堡垒机local_user.php任意用户登录漏洞.md)
+  - [绿盟UTS绕过登录](Web安全/网络设备/绿盟/绿盟UTS绕过登录.md)
 - **绿盟 SAS堡垒机 chgplay**（1）
   - [绿盟 SAS堡垒机 chgplay 远程命令执行漏洞](Web安全/CMS内容/绿盟%20SAS堡垒机%20chgplay/绿盟%20SAS堡垒机%20chgplay%20远程命令执行漏洞.md)
-- **绿盟 SAS堡垒机 Exec**（1）
-  - [绿盟 SAS堡垒机 Exec 远程命令执行漏洞](Web安全/网络设备/绿盟%20SAS堡垒机%20Exec/绿盟%20SAS堡垒机%20Exec%20远程命令执行漏洞.md)
-- **绿盟 UTS 综合威胁探针 信息**（1）
-  - [绿盟 UTS 综合威胁探针 信息泄露](Web安全/网络设备/绿盟%20UTS%20综合威胁探针%20信息/绿盟%20UTS%20综合威胁探针%20信息泄露.md)
-- **绿盟-NF下一代防火墙**（1）
-  - [绿盟-NF下一代防火墙-任意文件上传漏洞](Web安全/网络设备/绿盟-NF下一代防火墙/绿盟-NF下一代防火墙-任意文件上传漏洞.md)
-- **绿盟-SAS堡垒机-Exec**（1）
-  - [绿盟-SAS堡垒机-Exec-远程命令执行漏洞](Web安全/网络设备/绿盟-SAS堡垒机-Exec/绿盟-SAS堡垒机-Exec-远程命令执行漏洞.md)
-- **绿盟SAS堡垒机GetFile**（1）
-  - [绿盟SAS堡垒机GetFile任意文件读取漏洞](Web安全/网络设备/绿盟SAS堡垒机GetFile/绿盟SAS堡垒机GetFile任意文件读取漏洞.md)
-- **绿盟SAS堡垒机local_user.php**（1）
-  - [绿盟SAS堡垒机local_user.php任意用户登录漏洞](Web安全/网络设备/绿盟SAS堡垒机local_user.php/绿盟SAS堡垒机local_user.php任意用户登录漏洞.md)
-- **绿盟UTS**（1）
-  - [绿盟UTS绕过登录](Web安全/网络设备/绿盟UTS/绿盟UTS绕过登录.md)
 - **网动统一通信平台**（3）
   - [网动统一通信平台iactiveEnterMeeting存在密钥泄露漏洞](Web安全/其他软件/网动统一通信平台/网动统一通信平台iactiveEnterMeeting存在密钥泄露漏洞.md)
   - [网动统一通信平台meetingShow存在任意文件读取漏洞](Web安全/其他软件/网动统一通信平台/网动统一通信平台meetingShow存在任意文件读取漏洞.md)
@@ -2384,20 +2188,22 @@
   - [网康-NS-ASG安全网关-index.php-远程命令执行漏洞](Web安全/安全设备/网康-NS-ASG安全网关-index.php/网康-NS-ASG安全网关-index.php-远程命令执行漏洞.md)
 - **网康-下一代防火墙-HeartBeat.php**（1）
   - [网康-下一代防火墙-HeartBeat.php-远程命令执行漏洞](Web安全/安全设备/网康-下一代防火墙-HeartBeat.php/网康-下一代防火墙-HeartBeat.php-远程命令执行漏洞.md)
-- **网康-下一代防火墙-router**（1）
-  - [网康-下一代防火墙-router-远程命令执行漏洞](Web安全/网络设备/网康-下一代防火墙-router/网康-下一代防火墙-router-远程命令执行漏洞.md)
+- **网康NS-ASG**（3）
+  - [奇安信-网康-NS-ASG安全网关-cert_download.php-任意文件读取漏洞](Web安全/安全设备/网康NS-ASG/奇安信-网康-NS-ASG安全网关-cert_download.php-任意文件读取漏洞.md)
+  - [网康 NS-ASG安全网关 cert_download.php 任意文件读取漏洞](Web安全/安全设备/网康NS-ASG/网康%20NS-ASG安全网关%20cert_download.php%20任意文件读取漏洞.md)
+  - [网康-NS-ASG安全网关-cert_download.php-任意文件读取漏洞](Web安全/安全设备/网康NS-ASG/网康-NS-ASG安全网关-cert_download.php-任意文件读取漏洞.md)
 - **网康NS-ASG应用安全网关源代码**（1）
   - [网康NS-ASG应用安全网关源代码泄露漏洞](Web安全/安全设备/网康NS-ASG应用安全网关源代码/网康NS-ASG应用安全网关源代码泄露漏洞.md)
 - **网康下一代防火墙**（1）
   - [网康下一代防火墙远程命令执行漏洞](Web安全/安全设备/网康下一代防火墙/网康下一代防火墙远程命令执行漏洞.md)
-- **网御星云**（1）
+- **网康防火墙**（1）
+  - [网康-下一代防火墙-router-远程命令执行漏洞](Web安全/网络设备/网康防火墙/网康-下一代防火墙-router-远程命令执行漏洞.md)
+- **网御星云**（2）
   - [网御ACM上网行为管理系统bottomframe.cgiSQL注入漏洞](Web安全/网络设备/网御星云/网御ACM上网行为管理系统bottomframe.cgiSQL注入漏洞.md)
-- **网御星云 - 网页防篡改系统古老版本多个**（1）
-  - [网御星云 - 网页防篡改系统古老版本多个漏洞](Web安全/网络设备/网御星云%20-%20网页防篡改系统古老版本多个/网御星云%20-%20网页防篡改系统古老版本多个漏洞.md)
-- **网神 下一代极速防火墙 pki_file_download**（1）
-  - [网神 下一代极速防火墙 pki_file_download 任意文件读取漏洞](Web安全/OA办公/网神%20下一代极速防火墙%20pki_file_download/网神%20下一代极速防火墙%20pki_file_download%20任意文件读取漏洞.md)
-- **网神-下一代极速防火墙-pki_file_download**（1）
-  - [网神-下一代极速防火墙-pki_file_download-任意文件读取漏洞](Web安全/OA办公/网神-下一代极速防火墙-pki_file_download/网神-下一代极速防火墙-pki_file_download-任意文件读取漏洞.md)
+  - [网御星云 - 网页防篡改系统古老版本多个漏洞](Web安全/网络设备/网御星云/网御星云%20-%20网页防篡改系统古老版本多个漏洞.md)
+- **网神防火墙**（2）
+  - [网神 下一代极速防火墙 pki_file_download 任意文件读取漏洞](Web安全/安全设备/网神防火墙/网神%20下一代极速防火墙%20pki_file_download%20任意文件读取漏洞.md)
+  - [网神-下一代极速防火墙-pki_file_download-任意文件读取漏洞](Web安全/安全设备/网神防火墙/网神-下一代极速防火墙-pki_file_download-任意文件读取漏洞.md)
 - **网络基础设施 Acronis 中的严重**（1）
   - [网络基础设施 Acronis 中的严重漏洞已遭在野利用](Web安全/其他软件/网络基础设施%20Acronis%20中的严重/网络基础设施%20Acronis%20中的严重漏洞已遭在野利用.md)
 - **网课交单平台**（1）
@@ -2412,17 +2218,16 @@
   - [美团代付微信小程序系统 read.php 任意文件读取漏洞](Web安全/其他软件/美团代付微信小程序系统%20read.php/美团代付微信小程序系统%20read.php%20任意文件读取漏洞.md)
 - **美国CISA最新收录高危**（1）
   - [美国CISA最新收录高危漏洞，系与甲骨文有关](Web安全/其他软件/美国CISA最新收录高危/美国CISA最新收录高危漏洞，系与甲骨文有关.md)
-- **美国网件Netgear RAX30路由器**（1）
-  - [美国网件Netgear RAX30路由器RCE漏洞分析](Web安全/网络设备/美国网件Netgear%20RAX30路由器/美国网件Netgear%20RAX30路由器RCE漏洞分析.md)
 - **美国铁路关基系统曝**（1）
   - [美国铁路关基系统曝漏洞，英国零售商650万数据遭窃取一周特辑](Web安全/其他软件/美国铁路关基系统曝/美国铁路关基系统曝漏洞，英国零售商650万数据遭窃取一周特辑.md)
-- **美特**（2）
-  - [美特CRM commonjspupload3.jsp 文件上传致RCE漏洞](Web安全/OA办公/美特/美特CRM%20commonjspupload3.jsp%20文件上传致RCE漏洞.md)
+- **美特**（1）
   - [美特CRM sync_emp_weixin存在反序列化漏洞](Web安全/商业软件/美特/美特CRM%20sync_emp_weixin存在反序列化漏洞.md)
+- **美特CRM**（1）
+  - [美特CRM commonjspupload3.jsp 文件上传致RCE漏洞](Web安全/商业软件/美特CRM/美特CRM%20commonjspupload3.jsp%20文件上传致RCE漏洞.md)
 - **群晖DiskStation**（1）
   - [群晖DiskStation漏洞利用：从CVE-2024-10442到远程代码执行](Web安全/其他软件/群晖DiskStation/群晖DiskStation漏洞利用：从CVE-2024-10442到远程代码执行.md)
 - **翰智**（1）
-  - [员工自助平台loginByPassword存在SQL注入漏洞](Web安全/开发框架/翰智/员工自助平台loginByPassword存在SQL注入漏洞.md)
+  - [员工自助平台loginByPassword存在SQL注入漏洞](Web安全/ERP企业/翰智/员工自助平台loginByPassword存在SQL注入漏洞.md)
 - **聊聊CS4.5下的**（1）
   - [聊聊CS4.5下的CVE-2022-39197 RCE 的修复](Web安全/其他软件/聊聊CS4.5下的/聊聊CS4.5下的CVE-2022-39197%20RCE%20的修复.md)
 - **联发科**（2）
@@ -2444,119 +2249,112 @@
   - [腾讯开源项目现严重 RCE 漏洞：两行请求拿下服务器，CVE-2026-30861 详解](Web安全/其他软件/腾讯开源项目现严重/腾讯开源项目现严重%20RCE%20漏洞：两行请求拿下服务器，CVE-2026-30861%20详解.md)
 - **自助打印微信小程序系统**（1）
   - [自助打印微信小程序系统存在SQL注入漏洞](Web安全/其他软件/自助打印微信小程序系统/自助打印微信小程序系统存在SQL注入漏洞.md)
-- **致翔**（1）
-  - [致翔OA open_juese.aspx SQL注入漏洞](Web安全/OA办公/致翔/致翔OA%20open_juese.aspx%20SQL注入漏洞.md)
-- **致翔软件致翔OA**（1）
-  - [致翔软件致翔OA-open_juese存在SQL注入漏洞](Web安全/OA办公/致翔软件致翔OA/致翔软件致翔OA-open_juese存在SQL注入漏洞.md)
-- **致远oa**（90）
-  - [4月漏洞快报  kkFileView任意文件上传导致远程执行漏洞、Apache Zeppelin 命令执行漏洞...](Web安全/OA办公/致远oa/4月漏洞快报%20%20kkFileView任意文件上传导致远程执行漏洞、Apache%20Zeppelin%20命令执行漏洞....md)
-  - [Adobe ColdFusion 多个漏洞细节已公开，可导致远程代码执行](Web安全/OA办公/致远oa/Adobe%20ColdFusion%20多个漏洞细节已公开，可导致远程代码执行.md)
-  - [Apache-OFBiz-身份验证绕过导致远程代码执行-CVE-2024-38856](Web安全/OA办公/致远oa/Apache-OFBiz-身份验证绕过导致远程代码执行-CVE-2024-38856.md)
-  - [Apache-OFBiz-身份验证绕过导致远程代码执行-CVE-2024-45195](Web安全/OA办公/致远oa/Apache-OFBiz-身份验证绕过导致远程代码执行-CVE-2024-45195.md)
-  - [Apache-Superset-Python-Pickle-反序列化导致远程代码执行-CVE-2023-37941](Web安全/OA办公/致远oa/Apache-Superset-Python-Pickle-反序列化导致远程代码执行-CVE-2023-37941.md)
-  - [CVE-2024-28888：福昕阅读器中使用释放后导致远程代码执行](Web安全/OA办公/致远oa/CVE-2024-28888：福昕阅读器中使用释放后导致远程代码执行.md)
-  - [CVE-2026-25860 - OpenClinic GA 反射型 XSS 漏洞导致远程代码执行](Web安全/OA办公/致远oa/CVE-2026-25860%20-%20OpenClinic%20GA%20反射型%20XSS%20漏洞导致远程代码执行.md)
-  - [Cacti-RRDTool-后台参数注入导致远程代码执行-CVE-2025-24367](Web安全/OA办公/致远oa/Cacti-RRDTool-后台参数注入导致远程代码执行-CVE-2025-24367.md)
-  - [Cacti-graph_view.php-SQL-注入导致远程代码执行漏洞-CVE-2023-39361&CVE-2024-31459](Web安全/OA办公/致远oa/Cacti-graph_view.php-SQL-注入导致远程代码执行漏洞-CVE-2023-39361&CVE-2024-31459.md)
-  - [Fortinet FortiSwitch 凭证管理不当漏洞 可导致远程代码执行](Web安全/OA办公/致远oa/Fortinet%20FortiSwitch%20凭证管理不当漏洞%20可导致远程代码执行.md)
-  - [GeoServer-JAI-EXT-导致远程代码注入漏洞-CVE-2022-24816-CVE-2023-35042](Web安全/OA办公/致远oa/GeoServer-JAI-EXT-导致远程代码注入漏洞-CVE-2022-24816-CVE-2023-35042.md)
-  - [Gogs-符号链接导致远程命令注入漏洞-CVE-2025-8110](Web安全/OA办公/致远oa/Gogs-符号链接导致远程命令注入漏洞-CVE-2025-8110.md)
-  - [H2-Database-Web-Console-未授权-JDBC-攻击导致远程代码执行-CVE-2022-23221](Web安全/OA办公/致远oa/H2-Database-Web-Console-未授权-JDBC-攻击导致远程代码执行-CVE-2022-23221.md)
-  - [Ivanti Endpoint 管理器漏洞可导致远程攻击者泄露任意数据](Web安全/OA办公/致远oa/Ivanti%20Endpoint%20管理器漏洞可导致远程攻击者泄露任意数据.md)
-  - [Jetbrains-TeamCity-认证绕过导致远程命令执行漏洞-CVE-2023-42793](Web安全/OA办公/致远oa/Jetbrains-TeamCity-认证绕过导致远程命令执行漏洞-CVE-2023-42793.md)
-  - [Kibana-7.6.2-upgrade-assistant-telemetry-原型污染导致远程代码执行-CVE-2020-7012](Web安全/OA办公/致远oa/Kibana-7.6.2-upgrade-assistant-telemetry-原型污染导致远程代码执行-CVE-2020-7012.md)
-  - [Microsoft Excel 资源控制不当漏洞 可导致远程代码执行](Web安全/OA办公/致远oa/Microsoft%20Excel%20资源控制不当漏洞%20可导致远程代码执行.md)
-  - [NVIDIA 严重漏洞可导致远程代码执行和拒绝服务攻击](Web安全/OA办公/致远oa/NVIDIA%20严重漏洞可导致远程代码执行和拒绝服务攻击.md)
-  - [Nday 致远 constDef.do 远程代码执行深度利用](Web安全/OA办公/致远oa/Nday%20致远%20constDef.do%20远程代码执行深度利用.md)
-  - [N∕A｜kkFileView 任意文件上传导致远程代码执行漏洞（POC）](Web安全/OA办公/致远oa/N∕A｜kkFileView%20任意文件上传导致远程代码执行漏洞（POC）.md)
-  - [O2OA-9.0.3-版本-scriptingBlockedClasses-绕过导致远程代码执行](Web安全/OA办公/致远oa/O2OA-9.0.3-版本-scriptingBlockedClasses-绕过导致远程代码执行.md)
-  - [OpenPrinting-Cups-Browsed-PDD-FoomaticRIPCommandLine-参数导致远程命令执行漏洞-CVE-2024-47177](Web安全/OA办公/致远oa/OpenPrinting-Cups-Browsed-PDD-FoomaticRIPCommandLine-参数导致远程命令执行漏洞-CVE-2024-47177.md)
-  - [Primeton EOS Platform jmx反序列化致远程代码执行漏洞](Web安全/OA办公/致远oa/Primeton%20EOS%20Platform%20jmx反序列化致远程代码执行漏洞.md)
-  - [ServiceNow 严重漏洞导致远程攻击者执行恶意代码](Web安全/OA办公/致远oa/ServiceNow%20严重漏洞导致远程攻击者执行恶意代码.md)
-  - [Stackfield 桌面应用任意文件写入导致远程代码执行漏洞分析 (CVE-2026-28373)](Web安全/OA办公/致远oa/Stackfield%20桌面应用任意文件写入导致远程代码执行漏洞分析%20%28CVE-2026-28373%29.md)
-  - [WebAssembly 规范类型索引与相对类型索引混淆导致远程代码执行](Web安全/OA办公/致远oa/WebAssembly%20规范类型索引与相对类型索引混淆导致远程代码执行.md)
-  - [Windows DNS客户端漏洞可导致远程代码执行攻击](Web安全/OA办公/致远oa/Windows%20DNS客户端漏洞可导致远程代码执行攻击.md)
-  - [YApi NoSQL注入导致远程命令执行漏洞](Web安全/OA办公/致远oa/YApi%20NoSQL注入导致远程命令执行漏洞.md)
-  - [n8n-Pyodide-沙箱逃逸导致远程代码执行漏洞-CVE-2025-68668](Web安全/OA办公/致远oa/n8n-Pyodide-沙箱逃逸导致远程代码执行漏洞-CVE-2025-68668.md)
-  - [n8n-表达式沙箱逃逸导致远程代码执行漏洞-CVE-2025-68613](Web安全/OA办公/致远oa/n8n-表达式沙箱逃逸导致远程代码执行漏洞-CVE-2025-68613.md)
-  - [thinkphp5框架缺陷导致远程代码执行](Web安全/OA办公/致远oa/thinkphp5框架缺陷导致远程代码执行.md)
-  - [已复现 kkFileView任意文件上传致远程代码执行漏洞](Web安全/OA办公/致远oa/已复现%20kkFileView任意文件上传致远程代码执行漏洞.md)
-  - [微软 Code Runner 插件爆高危漏洞，配置文件被篡改可导致远程代码执行（CVE-2025-65715）](Web安全/OA办公/致远oa/微软%20Code%20Runner%20插件爆高危漏洞，配置文件被篡改可导致远程代码执行（CVE-2025-65715）.md)
-  - [微软Office严重漏洞可导致远程代码执行攻击](Web安全/OA办公/致远oa/微软Office严重漏洞可导致远程代码执行攻击.md)
-  - [漏洞利用代码公开：Firefox WebRTC 严重漏洞可导致远程代码执行 (CVSS 9.8)](Web安全/OA办公/致远oa/漏洞利用代码公开：Firefox%20WebRTC%20严重漏洞可导致远程代码执行%20%28CVSS%209.8%29.md)
-  - [漏洞复现  致远OA ∕seeyon∕sursenServlet 命令执行漏洞](Web安全/OA办公/致远oa/漏洞复现%20%20致远OA%20∕seeyon∕sursenServlet%20命令执行漏洞.md)
-  - [漏洞复现 致远OA wpsAssistServlet 任意文件上传漏洞](Web安全/OA办公/致远oa/漏洞复现%20致远OA%20wpsAssistServlet%20任意文件上传漏洞.md)
-  - [漏洞预警  致远OA代码注入漏洞](Web安全/OA办公/致远oa/漏洞预警%20%20致远OA代码注入漏洞.md)
-  - [瑞友天翼应用虚拟化系统SQL注入致远程代码执行漏洞](Web安全/OA办公/致远oa/瑞友天翼应用虚拟化系统SQL注入致远程代码执行漏洞.md)
-  - [联发科发布公告CVE-2025-20633可能导致远程代码执行](Web安全/OA办公/致远oa/联发科发布公告CVE-2025-20633可能导致远程代码执行.md)
-  - [腾讯微信存在可能导致远程代码执行漏洞](Web安全/OA办公/致远oa/腾讯微信存在可能导致远程代码执行漏洞.md)
-  - [致远 A8 + 数据库账号密码读取](Web安全/OA办公/致远oa/致远%20A8%20+%20数据库账号密码读取.md)
-  - [致远 M3-server 反序列化 RCE 漏洞复现（附 POC）](Web安全/OA办公/致远oa/致远%20M3-server%20反序列化%20RCE%20漏洞复现（附%20POC）.md)
-  - [致远 OA A8 htmlofficeservlet getshell 漏洞](Web安全/OA办公/致远oa/致远%20OA%20A8%20htmlofficeservlet%20getshell%20漏洞.md)
-  - [致远 OA ajax-do 登录绕过任意文件上传](Web安全/OA办公/致远oa/致远%20OA%20ajax-do%20登录绕过任意文件上传.md)
-  - [致远 OA ajaxAction formulaManager 文件上传漏洞](Web安全/OA办公/致远oa/致远%20OA%20ajaxAction%20formulaManager%20文件上传漏洞.md)
-  - [致远 OA webmail-do 任意文件下载 CNVD-2020-62422](Web安全/OA办公/致远oa/致远%20OA%20webmail-do%20任意文件下载%20CNVD-2020-62422.md)
-  - [致远 OA wpsAssistServlet 接口存在任意文件上传漏洞 附 POC](Web安全/OA办公/致远oa/致远%20OA%20wpsAssistServlet%20接口存在任意文件上传漏洞%20附%20POC.md)
-  - [致远 OA 未授权短信验证码绕过重置密码漏洞](Web安全/OA办公/致远oa/致远%20OA%20未授权短信验证码绕过重置密码漏洞.md)
-  - [致远 OA-ajax-do 未授权文件上传漏洞](Web安全/OA办公/致远oa/致远%20OA-ajax-do%20未授权文件上传漏洞.md)
-  - [致远-OA-未授权短信验证码绕过重置密码漏洞](Web安全/OA办公/致远oa/致远-OA-未授权短信验证码绕过重置密码漏洞.md)
-  - [致远A8任意文件写入漏洞 getshell exp - 程序园](Web安全/OA办公/致远oa/致远A8任意文件写入漏洞%20getshell%20exp%20-%20程序园.md)
-  - [致远OA A6 search_result.jsp sql注入漏洞](Web安全/OA办公/致远oa/致远OA%20A6%20search_result.jsp%20sql注入漏洞.md)
-  - [致远OA A6 setextno.jsp SQL注入漏洞](Web安全/OA办公/致远oa/致远OA%20A6%20setextno.jsp%20SQL注入漏洞.md)
-  - [致远OA A6 setextno.jsp sql注入漏洞](Web安全/OA办公/致远oa/致远OA%20A6%20setextno.jsp%20sql注入漏洞.md)
-  - [致远OA A6 test.jsp sql注入漏洞](Web安全/OA办公/致远oa/致远OA%20A6%20test.jsp%20sql注入漏洞.md)
-  - [致远OA A6 敏感信息泄露（一）](Web安全/OA办公/致远oa/致远OA%20A6%20敏感信息泄露（一）.md)
-  - [致远OA A6 敏感信息泄露（二）](Web安全/OA办公/致远oa/致远OA%20A6%20敏感信息泄露（二）.md)
-  - [致远OA A6 重置数据库账号密码漏洞](Web安全/OA办公/致远oa/致远OA%20A6%20重置数据库账号密码漏洞.md)
-  - [致远OA A8 htmlofficeservlet 任意文件上传漏洞](Web安全/OA办公/致远oa/致远OA%20A8%20htmlofficeservlet%20任意文件上传漏洞.md)
-  - [致远OA A8 任意用户密码修改漏洞](Web安全/OA办公/致远oa/致远OA%20A8%20任意用户密码修改漏洞.md)
-  - [致远OA A8 未授权访问](Web安全/OA办公/致远oa/致远OA%20A8%20未授权访问.md)
-  - [致远OA A8 系统远程命令执行漏洞](Web安全/OA办公/致远oa/致远OA%20A8%20系统远程命令执行漏洞.md)
-  - [致远OA A8-m 后台万能密码](Web安全/OA办公/致远oa/致远OA%20A8-m%20后台万能密码.md)
-  - [致远OA A8-m 存在sql语句页面回显功能](Web安全/OA办公/致远oa/致远OA%20A8-m%20存在sql语句页面回显功能.md)
-  - [致远OA A8-v5 任意用户密码修改](Web安全/OA办公/致远oa/致远OA%20A8-v5%20任意用户密码修改.md)
-  - [致远OA A8-v5 无视验证码撞库](Web安全/OA办公/致远oa/致远OA%20A8-v5%20无视验证码撞库.md)
-  - [致远OA A8系统远程命令执行漏洞 - Yangsir34 - 博客园](Web安全/OA办公/致远oa/致远OA%20A8系统远程命令执行漏洞%20-%20Yangsir34%20-%20博客园.md)
-  - [致远OA M1Server userTokenService 远程命令执行漏洞](Web安全/OA办公/致远oa/致远OA%20M1Server%20userTokenService%20远程命令执行漏洞.md)
-  - [致远OA Session泄漏漏洞](Web安全/OA办公/致远oa/致远OA%20Session泄漏漏洞.md)
-  - [致远OA ajax.do 未授权漏洞任意文件上传](Web安全/OA办公/致远oa/致远OA%20ajax.do%20未授权漏洞任意文件上传.md)
-  - [致远OA getSessionList.jsp Session泄漏漏洞](Web安全/OA办公/致远oa/致远OA%20getSessionList.jsp%20Session泄漏漏洞.md)
-  - [致远OA properties接口存在敏感信息泄露漏洞](Web安全/OA办公/致远oa/致远OA%20properties接口存在敏感信息泄露漏洞.md)
-  - [致远OA wpsAssistServlet 任意文件上传漏洞(CVE-2025-34040)](Web安全/OA办公/致远oa/致远OA%20wpsAssistServlet%20任意文件上传漏洞%28CVE-2025-34040%29.md)
-  - [致远OA wpsAssistServlet 任意文件上传漏洞](Web安全/OA办公/致远oa/致远OA%20wpsAssistServlet%20任意文件上传漏洞.md)
-  - [致远OA 帆软报表组件 前台XXE漏洞](Web安全/OA办公/致远oa/致远OA%20帆软报表组件%20前台XXE漏洞.md)
-  - [致远OA-A6-setextno.jsp-SQL注入漏洞](Web安全/OA办公/致远oa/致远OA-A6-setextno.jsp-SQL注入漏洞.md)
-  - [致远OA-A6-test.jsp-SQL注入漏洞](Web安全/OA办公/致远oa/致远OA-A6-test.jsp-SQL注入漏洞.md)
-  - [致远OA-A8-htmlofficeservlet-任意文件上传漏洞](Web安全/OA办公/致远oa/致远OA-A8-htmlofficeservlet-任意文件上传漏洞.md)
-  - [致远OA-M1Server-userTokenService-远程命令执行漏洞](Web安全/OA办公/致远oa/致远OA-M1Server-userTokenService-远程命令执行漏洞.md)
-  - [致远OA-ajax.do-任意文件上传-CNVD-2021-01627](Web安全/OA办公/致远oa/致远OA-ajax.do-任意文件上传-CNVD-2021-01627.md)
-  - [致远OA-getSessionList.jsp-Session泄漏漏洞](Web安全/OA办公/致远oa/致远OA-getSessionList.jsp-Session泄漏漏洞.md)
-  - [致远OA-wpsAssistServlet-任意文件上传漏洞](Web安全/OA办公/致远oa/致远OA-wpsAssistServlet-任意文件上传漏洞.md)
-  - [致远OA_A8_getshell_0day](Web安全/OA办公/致远oa/致远OA_A8_getshell_0day.md)
-  - [致远OA任意文件下载漏洞(CNVD-2020-62422)](Web安全/OA办公/致远oa/致远OA任意文件下载漏洞%28CNVD-2020-62422%29.md)
-  - [致远OA系统多版本Getshell漏洞复现](Web安全/OA办公/致远oa/致远OA系统多版本Getshell漏洞复现.md)
-  - [致远互联-OA 前台fileUpload.do 绕过文件上传漏洞](Web安全/OA办公/致远oa/致远互联-OA%20前台fileUpload.do%20绕过文件上传漏洞.md)
-  - [致远互联FE_addUser_sql注入-CVE-2025-2030](Web安全/OA办公/致远oa/致远互联FE_addUser_sql注入-CVE-2025-2030.md)
-  - [致远互联FE协作办公平台 apprvaddNew.jsp SQL注入漏洞](Web安全/OA办公/致远oa/致远互联FE协作办公平台%20apprvaddNew.jsp%20SQL注入漏洞.md)
-  - [致远伪 0day FastJson 利用链](Web安全/OA办公/致远oa/致远伪%200day%20FastJson%20利用链.md)
+- **致翔OA**（2）
+  - [致翔OA open_juese.aspx SQL注入漏洞](Web安全/OA办公/致翔OA/致翔OA%20open_juese.aspx%20SQL注入漏洞.md)
+  - [致翔软件致翔OA-open_juese存在SQL注入漏洞](Web安全/OA办公/致翔OA/致翔软件致翔OA-open_juese存在SQL注入漏洞.md)
+- **致远OA**（90）
+  - [4月漏洞快报  kkFileView任意文件上传导致远程执行漏洞、Apache Zeppelin 命令执行漏洞...](Web安全/OA办公/致远OA/4月漏洞快报%20%20kkFileView任意文件上传导致远程执行漏洞、Apache%20Zeppelin%20命令执行漏洞....md)
+  - [Adobe ColdFusion 多个漏洞细节已公开，可导致远程代码执行](Web安全/OA办公/致远OA/Adobe%20ColdFusion%20多个漏洞细节已公开，可导致远程代码执行.md)
+  - [Apache-OFBiz-身份验证绕过导致远程代码执行-CVE-2024-38856](Web安全/OA办公/致远OA/Apache-OFBiz-身份验证绕过导致远程代码执行-CVE-2024-38856.md)
+  - [Apache-OFBiz-身份验证绕过导致远程代码执行-CVE-2024-45195](Web安全/OA办公/致远OA/Apache-OFBiz-身份验证绕过导致远程代码执行-CVE-2024-45195.md)
+  - [Apache-Superset-Python-Pickle-反序列化导致远程代码执行-CVE-2023-37941](Web安全/OA办公/致远OA/Apache-Superset-Python-Pickle-反序列化导致远程代码执行-CVE-2023-37941.md)
+  - [CVE-2024-28888：福昕阅读器中使用释放后导致远程代码执行](Web安全/OA办公/致远OA/CVE-2024-28888：福昕阅读器中使用释放后导致远程代码执行.md)
+  - [CVE-2026-25860 - OpenClinic GA 反射型 XSS 漏洞导致远程代码执行](Web安全/OA办公/致远OA/CVE-2026-25860%20-%20OpenClinic%20GA%20反射型%20XSS%20漏洞导致远程代码执行.md)
+  - [Cacti-RRDTool-后台参数注入导致远程代码执行-CVE-2025-24367](Web安全/OA办公/致远OA/Cacti-RRDTool-后台参数注入导致远程代码执行-CVE-2025-24367.md)
+  - [Cacti-graph_view.php-SQL-注入导致远程代码执行漏洞-CVE-2023-39361&CVE-2024-31459](Web安全/OA办公/致远OA/Cacti-graph_view.php-SQL-注入导致远程代码执行漏洞-CVE-2023-39361&CVE-2024-31459.md)
+  - [Fortinet FortiSwitch 凭证管理不当漏洞 可导致远程代码执行](Web安全/OA办公/致远OA/Fortinet%20FortiSwitch%20凭证管理不当漏洞%20可导致远程代码执行.md)
+  - [GeoServer-JAI-EXT-导致远程代码注入漏洞-CVE-2022-24816-CVE-2023-35042](Web安全/OA办公/致远OA/GeoServer-JAI-EXT-导致远程代码注入漏洞-CVE-2022-24816-CVE-2023-35042.md)
+  - [Gogs-符号链接导致远程命令注入漏洞-CVE-2025-8110](Web安全/OA办公/致远OA/Gogs-符号链接导致远程命令注入漏洞-CVE-2025-8110.md)
+  - [H2-Database-Web-Console-未授权-JDBC-攻击导致远程代码执行-CVE-2022-23221](Web安全/OA办公/致远OA/H2-Database-Web-Console-未授权-JDBC-攻击导致远程代码执行-CVE-2022-23221.md)
+  - [Ivanti Endpoint 管理器漏洞可导致远程攻击者泄露任意数据](Web安全/OA办公/致远OA/Ivanti%20Endpoint%20管理器漏洞可导致远程攻击者泄露任意数据.md)
+  - [Jetbrains-TeamCity-认证绕过导致远程命令执行漏洞-CVE-2023-42793](Web安全/OA办公/致远OA/Jetbrains-TeamCity-认证绕过导致远程命令执行漏洞-CVE-2023-42793.md)
+  - [Kibana-7.6.2-upgrade-assistant-telemetry-原型污染导致远程代码执行-CVE-2020-7012](Web安全/OA办公/致远OA/Kibana-7.6.2-upgrade-assistant-telemetry-原型污染导致远程代码执行-CVE-2020-7012.md)
+  - [Microsoft Excel 资源控制不当漏洞 可导致远程代码执行](Web安全/OA办公/致远OA/Microsoft%20Excel%20资源控制不当漏洞%20可导致远程代码执行.md)
+  - [NVIDIA 严重漏洞可导致远程代码执行和拒绝服务攻击](Web安全/OA办公/致远OA/NVIDIA%20严重漏洞可导致远程代码执行和拒绝服务攻击.md)
+  - [Nday 致远 constDef.do 远程代码执行深度利用](Web安全/OA办公/致远OA/Nday%20致远%20constDef.do%20远程代码执行深度利用.md)
+  - [N∕A｜kkFileView 任意文件上传导致远程代码执行漏洞（POC）](Web安全/OA办公/致远OA/N∕A｜kkFileView%20任意文件上传导致远程代码执行漏洞（POC）.md)
+  - [O2OA-9.0.3-版本-scriptingBlockedClasses-绕过导致远程代码执行](Web安全/OA办公/致远OA/O2OA-9.0.3-版本-scriptingBlockedClasses-绕过导致远程代码执行.md)
+  - [OpenPrinting-Cups-Browsed-PDD-FoomaticRIPCommandLine-参数导致远程命令执行漏洞-CVE-2024-47177](Web安全/OA办公/致远OA/OpenPrinting-Cups-Browsed-PDD-FoomaticRIPCommandLine-参数导致远程命令执行漏洞-CVE-2024-47177.md)
+  - [Primeton EOS Platform jmx反序列化致远程代码执行漏洞](Web安全/OA办公/致远OA/Primeton%20EOS%20Platform%20jmx反序列化致远程代码执行漏洞.md)
+  - [ServiceNow 严重漏洞导致远程攻击者执行恶意代码](Web安全/OA办公/致远OA/ServiceNow%20严重漏洞导致远程攻击者执行恶意代码.md)
+  - [Stackfield 桌面应用任意文件写入导致远程代码执行漏洞分析 (CVE-2026-28373)](Web安全/OA办公/致远OA/Stackfield%20桌面应用任意文件写入导致远程代码执行漏洞分析%20%28CVE-2026-28373%29.md)
+  - [WebAssembly 规范类型索引与相对类型索引混淆导致远程代码执行](Web安全/OA办公/致远OA/WebAssembly%20规范类型索引与相对类型索引混淆导致远程代码执行.md)
+  - [Windows DNS客户端漏洞可导致远程代码执行攻击](Web安全/OA办公/致远OA/Windows%20DNS客户端漏洞可导致远程代码执行攻击.md)
+  - [YApi NoSQL注入导致远程命令执行漏洞](Web安全/OA办公/致远OA/YApi%20NoSQL注入导致远程命令执行漏洞.md)
+  - [n8n-Pyodide-沙箱逃逸导致远程代码执行漏洞-CVE-2025-68668](Web安全/OA办公/致远OA/n8n-Pyodide-沙箱逃逸导致远程代码执行漏洞-CVE-2025-68668.md)
+  - [n8n-表达式沙箱逃逸导致远程代码执行漏洞-CVE-2025-68613](Web安全/OA办公/致远OA/n8n-表达式沙箱逃逸导致远程代码执行漏洞-CVE-2025-68613.md)
+  - [thinkphp5框架缺陷导致远程代码执行](Web安全/OA办公/致远OA/thinkphp5框架缺陷导致远程代码执行.md)
+  - [已复现 kkFileView任意文件上传致远程代码执行漏洞](Web安全/OA办公/致远OA/已复现%20kkFileView任意文件上传致远程代码执行漏洞.md)
+  - [微软 Code Runner 插件爆高危漏洞，配置文件被篡改可导致远程代码执行（CVE-2025-65715）](Web安全/OA办公/致远OA/微软%20Code%20Runner%20插件爆高危漏洞，配置文件被篡改可导致远程代码执行（CVE-2025-65715）.md)
+  - [微软Office严重漏洞可导致远程代码执行攻击](Web安全/OA办公/致远OA/微软Office严重漏洞可导致远程代码执行攻击.md)
+  - [漏洞利用代码公开：Firefox WebRTC 严重漏洞可导致远程代码执行 (CVSS 9.8)](Web安全/OA办公/致远OA/漏洞利用代码公开：Firefox%20WebRTC%20严重漏洞可导致远程代码执行%20%28CVSS%209.8%29.md)
+  - [漏洞复现  致远OA ∕seeyon∕sursenServlet 命令执行漏洞](Web安全/OA办公/致远OA/漏洞复现%20%20致远OA%20∕seeyon∕sursenServlet%20命令执行漏洞.md)
+  - [漏洞复现 致远OA wpsAssistServlet 任意文件上传漏洞](Web安全/OA办公/致远OA/漏洞复现%20致远OA%20wpsAssistServlet%20任意文件上传漏洞.md)
+  - [漏洞预警  致远OA代码注入漏洞](Web安全/OA办公/致远OA/漏洞预警%20%20致远OA代码注入漏洞.md)
+  - [瑞友天翼应用虚拟化系统SQL注入致远程代码执行漏洞](Web安全/OA办公/致远OA/瑞友天翼应用虚拟化系统SQL注入致远程代码执行漏洞.md)
+  - [联发科发布公告CVE-2025-20633可能导致远程代码执行](Web安全/OA办公/致远OA/联发科发布公告CVE-2025-20633可能导致远程代码执行.md)
+  - [腾讯微信存在可能导致远程代码执行漏洞](Web安全/OA办公/致远OA/腾讯微信存在可能导致远程代码执行漏洞.md)
+  - [致远 A8 + 数据库账号密码读取](Web安全/OA办公/致远OA/致远%20A8%20+%20数据库账号密码读取.md)
+  - [致远 M3-server 反序列化 RCE 漏洞复现（附 POC）](Web安全/OA办公/致远OA/致远%20M3-server%20反序列化%20RCE%20漏洞复现（附%20POC）.md)
+  - [致远 OA A8 htmlofficeservlet getshell 漏洞](Web安全/OA办公/致远OA/致远%20OA%20A8%20htmlofficeservlet%20getshell%20漏洞.md)
+  - [致远 OA ajax-do 登录绕过任意文件上传](Web安全/OA办公/致远OA/致远%20OA%20ajax-do%20登录绕过任意文件上传.md)
+  - [致远 OA ajaxAction formulaManager 文件上传漏洞](Web安全/OA办公/致远OA/致远%20OA%20ajaxAction%20formulaManager%20文件上传漏洞.md)
+  - [致远 OA webmail-do 任意文件下载 CNVD-2020-62422](Web安全/OA办公/致远OA/致远%20OA%20webmail-do%20任意文件下载%20CNVD-2020-62422.md)
+  - [致远 OA wpsAssistServlet 接口存在任意文件上传漏洞 附 POC](Web安全/OA办公/致远OA/致远%20OA%20wpsAssistServlet%20接口存在任意文件上传漏洞%20附%20POC.md)
+  - [致远 OA 未授权短信验证码绕过重置密码漏洞](Web安全/OA办公/致远OA/致远%20OA%20未授权短信验证码绕过重置密码漏洞.md)
+  - [致远 OA-ajax-do 未授权文件上传漏洞](Web安全/OA办公/致远OA/致远%20OA-ajax-do%20未授权文件上传漏洞.md)
+  - [致远-OA-未授权短信验证码绕过重置密码漏洞](Web安全/OA办公/致远OA/致远-OA-未授权短信验证码绕过重置密码漏洞.md)
+  - [致远A8任意文件写入漏洞 getshell exp - 程序园](Web安全/OA办公/致远OA/致远A8任意文件写入漏洞%20getshell%20exp%20-%20程序园.md)
+  - [致远OA A6 search_result.jsp sql注入漏洞](Web安全/OA办公/致远OA/致远OA%20A6%20search_result.jsp%20sql注入漏洞.md)
+  - [致远OA A6 setextno.jsp SQL注入漏洞](Web安全/OA办公/致远OA/致远OA%20A6%20setextno.jsp%20SQL注入漏洞.md)
+  - [致远OA A6 setextno.jsp sql注入漏洞](Web安全/OA办公/致远OA/致远OA%20A6%20setextno.jsp%20sql注入漏洞.md)
+  - [致远OA A6 test.jsp sql注入漏洞](Web安全/OA办公/致远OA/致远OA%20A6%20test.jsp%20sql注入漏洞.md)
+  - [致远OA A6 敏感信息泄露（一）](Web安全/OA办公/致远OA/致远OA%20A6%20敏感信息泄露（一）.md)
+  - [致远OA A6 敏感信息泄露（二）](Web安全/OA办公/致远OA/致远OA%20A6%20敏感信息泄露（二）.md)
+  - [致远OA A6 重置数据库账号密码漏洞](Web安全/OA办公/致远OA/致远OA%20A6%20重置数据库账号密码漏洞.md)
+  - [致远OA A8 htmlofficeservlet 任意文件上传漏洞](Web安全/OA办公/致远OA/致远OA%20A8%20htmlofficeservlet%20任意文件上传漏洞.md)
+  - [致远OA A8 任意用户密码修改漏洞](Web安全/OA办公/致远OA/致远OA%20A8%20任意用户密码修改漏洞.md)
+  - [致远OA A8 未授权访问](Web安全/OA办公/致远OA/致远OA%20A8%20未授权访问.md)
+  - [致远OA A8 系统远程命令执行漏洞](Web安全/OA办公/致远OA/致远OA%20A8%20系统远程命令执行漏洞.md)
+  - [致远OA A8-m 后台万能密码](Web安全/OA办公/致远OA/致远OA%20A8-m%20后台万能密码.md)
+  - [致远OA A8-m 存在sql语句页面回显功能](Web安全/OA办公/致远OA/致远OA%20A8-m%20存在sql语句页面回显功能.md)
+  - [致远OA A8-v5 任意用户密码修改](Web安全/OA办公/致远OA/致远OA%20A8-v5%20任意用户密码修改.md)
+  - [致远OA A8-v5 无视验证码撞库](Web安全/OA办公/致远OA/致远OA%20A8-v5%20无视验证码撞库.md)
+  - [致远OA A8系统远程命令执行漏洞 - Yangsir34 - 博客园](Web安全/OA办公/致远OA/致远OA%20A8系统远程命令执行漏洞%20-%20Yangsir34%20-%20博客园.md)
+  - [致远OA M1Server userTokenService 远程命令执行漏洞](Web安全/OA办公/致远OA/致远OA%20M1Server%20userTokenService%20远程命令执行漏洞.md)
+  - [致远OA Session泄漏漏洞](Web安全/OA办公/致远OA/致远OA%20Session泄漏漏洞.md)
+  - [致远OA ajax.do 未授权漏洞任意文件上传](Web安全/OA办公/致远OA/致远OA%20ajax.do%20未授权漏洞任意文件上传.md)
+  - [致远OA getSessionList.jsp Session泄漏漏洞](Web安全/OA办公/致远OA/致远OA%20getSessionList.jsp%20Session泄漏漏洞.md)
+  - [致远OA properties接口存在敏感信息泄露漏洞](Web安全/OA办公/致远OA/致远OA%20properties接口存在敏感信息泄露漏洞.md)
+  - [致远OA wpsAssistServlet 任意文件上传漏洞(CVE-2025-34040)](Web安全/OA办公/致远OA/致远OA%20wpsAssistServlet%20任意文件上传漏洞%28CVE-2025-34040%29.md)
+  - [致远OA wpsAssistServlet 任意文件上传漏洞](Web安全/OA办公/致远OA/致远OA%20wpsAssistServlet%20任意文件上传漏洞.md)
+  - [致远OA 帆软报表组件 前台XXE漏洞](Web安全/OA办公/致远OA/致远OA%20帆软报表组件%20前台XXE漏洞.md)
+  - [致远OA-A6-setextno.jsp-SQL注入漏洞](Web安全/OA办公/致远OA/致远OA-A6-setextno.jsp-SQL注入漏洞.md)
+  - [致远OA-A6-test.jsp-SQL注入漏洞](Web安全/OA办公/致远OA/致远OA-A6-test.jsp-SQL注入漏洞.md)
+  - [致远OA-A8-htmlofficeservlet-任意文件上传漏洞](Web安全/OA办公/致远OA/致远OA-A8-htmlofficeservlet-任意文件上传漏洞.md)
+  - [致远OA-M1Server-userTokenService-远程命令执行漏洞](Web安全/OA办公/致远OA/致远OA-M1Server-userTokenService-远程命令执行漏洞.md)
+  - [致远OA-ajax.do-任意文件上传-CNVD-2021-01627](Web安全/OA办公/致远OA/致远OA-ajax.do-任意文件上传-CNVD-2021-01627.md)
+  - [致远OA-getSessionList.jsp-Session泄漏漏洞](Web安全/OA办公/致远OA/致远OA-getSessionList.jsp-Session泄漏漏洞.md)
+  - [致远OA-wpsAssistServlet-任意文件上传漏洞](Web安全/OA办公/致远OA/致远OA-wpsAssistServlet-任意文件上传漏洞.md)
+  - [致远OA_A8_getshell_0day](Web安全/OA办公/致远OA/致远OA_A8_getshell_0day.md)
+  - [致远OA任意文件下载漏洞(CNVD-2020-62422)](Web安全/OA办公/致远OA/致远OA任意文件下载漏洞%28CNVD-2020-62422%29.md)
+  - [致远OA系统多版本Getshell漏洞复现](Web安全/OA办公/致远OA/致远OA系统多版本Getshell漏洞复现.md)
+  - [致远互联-OA 前台fileUpload.do 绕过文件上传漏洞](Web安全/OA办公/致远OA/致远互联-OA%20前台fileUpload.do%20绕过文件上传漏洞.md)
+  - [致远互联FE_addUser_sql注入-CVE-2025-2030](Web安全/OA办公/致远OA/致远互联FE_addUser_sql注入-CVE-2025-2030.md)
+  - [致远互联FE协作办公平台 apprvaddNew.jsp SQL注入漏洞](Web安全/OA办公/致远OA/致远互联FE协作办公平台%20apprvaddNew.jsp%20SQL注入漏洞.md)
+  - [致远伪 0day FastJson 利用链](Web安全/OA办公/致远OA/致远伪%200day%20FastJson%20利用链.md)
 - **艾科思**（1）
   - [艾科思（霆智科技）应用接入系统存在任意文件读取漏洞](Web安全/其他软件/艾科思/艾科思（霆智科技）应用接入系统存在任意文件读取漏洞.md)
 - **苏州科达科技股份有限公司**（1）
   - [苏州科达科技股份有限公司多媒体录播系统存在信息泄露漏洞](Web安全/其他软件/苏州科达科技股份有限公司/苏州科达科技股份有限公司多媒体录播系统存在信息泄露漏洞.md)
-- **若依**（1）
-  - [若依(RuoYi)管理系统 后台任意文件读取](Web安全/开发框架/若依/若依%28RuoYi%29管理系统%20后台任意文件读取.md)
-- **若依  管理系统后台 sql**（1）
-  - [若依 (RuoYi) 管理系统后台 sql 注入漏洞分析](Web安全/开发框架/若依%20%20管理系统后台%20sql/若依%20%28RuoYi%29%20管理系统后台%20sql%20注入漏洞分析.md)
-- **若依系统前后台**（1）
-  - [若依系统前后台漏洞大全](Web安全/开发框架/若依系统前后台/若依系统前后台漏洞大全.md)
+- **英特尔**（1）
+  - [英特尔披露 AI 模型压缩软件中的严重漏洞](Web安全/AI应用/英特尔/英特尔披露%20AI%20模型压缩软件中的严重漏洞.md)
 - **英特尔和联想**（1）
   - [英特尔和联想存在永久的安全漏洞](Web安全/其他软件/英特尔和联想/英特尔和联想存在永久的安全漏洞.md)
-- **英特尔披露**（1）
-  - [英特尔披露 AI 模型压缩软件中的严重漏洞](Web安全/AI应用/英特尔披露/英特尔披露%20AI%20模型压缩软件中的严重漏洞.md)
+- **英飞达**（1）
+  - [英飞达影像存档与通讯(PACS)系统INFINITTPACSWebJobUpload存在任意文件上传漏洞](Web安全/商业软件/英飞达/英飞达影像存档与通讯%28PACS%29系统INFINITTPACSWebJobUpload存在任意文件上传漏洞.md)
 - **英飞达影像存档与通讯系统**（1）
   - [英飞达影像存档与通讯(PACS)系统存在信息泄露漏洞](Web安全/其他软件/英飞达影像存档与通讯系统/英飞达影像存档与通讯%28PACS%29系统存在信息泄露漏洞.md)
-- **英飞达软件（上海）有限公司**（1）
-  - [英飞达影像存档与通讯(PACS)系统INFINITTPACSWebJobUpload存在任意文件上传漏洞](Web安全/OA办公/英飞达软件（上海）有限公司/英飞达影像存档与通讯%28PACS%29系统INFINITTPACSWebJobUpload存在任意文件上传漏洞.md)
 - **苹果**（1）
   - [苹果CVE-2025-24104漏洞未完全修复，可以读取沙盒外的文件](Web安全/其他软件/苹果/苹果CVE-2025-24104漏洞未完全修复，可以读取沙盒外的文件.md)
 - **苹果CMS**（1）
@@ -2581,16 +2379,11 @@
   - [荷花商品混凝土ERP系统DictionaryEdit.aspx页面存在SQL注入](Web安全/ERP企业/荷花商品混凝土ERP系统/荷花商品混凝土ERP系统DictionaryEdit.aspx页面存在SQL注入.md)
 - **菲力尔（FLIR）**（1）
   - [FLIR-AX8热成像仪res.php远程命令执行漏洞（CVE-2022-37061）](Web安全/其他软件/菲力尔（FLIR）/FLIR-AX8热成像仪res.php远程命令执行漏洞（CVE-2022-37061）.md)
-- **蓝凌**（3）
-  - [蓝凌EIS-智慧协同平台-api.aspx-任意文件上传漏洞](Web安全/OA办公/蓝凌/蓝凌EIS-智慧协同平台-api.aspx-任意文件上传漏洞.md)
-  - [蓝凌OA-sysSearchMain.do-远程命令执行漏洞](Web安全/OA办公/蓝凌/蓝凌OA-sysSearchMain.do-远程命令执行漏洞.md)
-  - [蓝凌OA-treexml.tmpl-远程命令执行漏洞](Web安全/OA办公/蓝凌/蓝凌OA-treexml.tmpl-远程命令执行漏洞.md)
-- **蓝凌 OA custom-jsp**（1）
-  - [蓝凌 OA custom-jsp 任意文件读取漏洞](Web安全/OA办公/蓝凌%20OA%20custom-jsp/蓝凌%20OA%20custom-jsp%20任意文件读取漏洞.md)
-- **蓝凌 OA EKP 后台**（1）
-  - [蓝凌 OA EKP 后台 SQL 注入漏洞 CNVD-2021-01363](Web安全/OA办公/蓝凌%20OA%20EKP%20后台/蓝凌%20OA%20EKP%20后台%20SQL%20注入漏洞%20CNVD-2021-01363.md)
-- **蓝凌OA**（8）
+- **蓝凌OA**（13）
+  - [蓝凌 OA EKP 后台 SQL 注入漏洞 CNVD-2021-01363](Web安全/OA办公/蓝凌OA/蓝凌%20OA%20EKP%20后台%20SQL%20注入漏洞%20CNVD-2021-01363.md)
+  - [蓝凌 OA custom-jsp 任意文件读取漏洞](Web安全/OA办公/蓝凌OA/蓝凌%20OA%20custom-jsp%20任意文件读取漏洞.md)
   - [蓝凌EIS 智慧协同平台 api.aspx 任意文件上传漏洞](Web安全/OA办公/蓝凌OA/蓝凌EIS%20智慧协同平台%20api.aspx%20任意文件上传漏洞.md)
+  - [蓝凌EIS-智慧协同平台-api.aspx-任意文件上传漏洞](Web安全/OA办公/蓝凌OA/蓝凌EIS-智慧协同平台-api.aspx-任意文件上传漏洞.md)
   - [蓝凌EIS智慧协同平台 fi_message_receiver.aspx SQL注入漏洞复现(CVE-2025-22214)](Web安全/OA办公/蓝凌OA/蓝凌EIS智慧协同平台%20fi_message_receiver.aspx%20SQL注入漏洞复现%28CVE-2025-22214%29.md)
   - [蓝凌EKP系统接口thirdImSyncForKKWebService接口存在任意文件读取漏洞](Web安全/OA办公/蓝凌OA/蓝凌EKP系统接口thirdImSyncForKKWebService接口存在任意文件读取漏洞.md)
   - [蓝凌OA sysSearchMain.do 远程命令执行漏洞](Web安全/OA办公/蓝凌OA/蓝凌OA%20sysSearchMain.do%20远程命令执行漏洞.md)
@@ -2598,23 +2391,30 @@
   - [蓝凌OA-admin.do-JNDI远程命令执行](Web安全/OA办公/蓝凌OA/蓝凌OA-admin.do-JNDI远程命令执行.md)
   - [蓝凌OA-custom.jsp-任意文件读取漏洞](Web安全/OA办公/蓝凌OA/蓝凌OA-custom.jsp-任意文件读取漏洞.md)
   - [蓝凌OA-kmImeetingRes.do-后台SQL注入漏洞-CNVD-2021-01363](Web安全/OA办公/蓝凌OA/蓝凌OA-kmImeetingRes.do-后台SQL注入漏洞-CNVD-2021-01363.md)
+  - [蓝凌OA-sysSearchMain.do-远程命令执行漏洞](Web安全/OA办公/蓝凌OA/蓝凌OA-sysSearchMain.do-远程命令执行漏洞.md)
+  - [蓝凌OA-treexml.tmpl-远程命令执行漏洞](Web安全/OA办公/蓝凌OA/蓝凌OA-treexml.tmpl-远程命令执行漏洞.md)
 - **蓝天采集器**（1）
   - [蓝天采集器 v2.3.1 后台getshell](Web安全/其他软件/蓝天采集器/蓝天采集器%20v2.3.1%20后台getshell.md)
-- **蓝海卓越**（5）
-  - [蓝海卓越计费管理系统debug存在远程命令执行漏洞](Web安全/OA办公/蓝海卓越/蓝海卓越计费管理系统debug存在远程命令执行漏洞.md)
-  - [蓝海卓越计费管理系统picUpLoad存在任意文件删除漏洞](Web安全/OA办公/蓝海卓越/蓝海卓越计费管理系统picUpLoad存在任意文件删除漏洞.md)
+- **蓝海卓越**（3）
   - [蓝海卓越计费管理系统agent_setstat存在SQL注入漏洞](Web安全/商业软件/蓝海卓越/蓝海卓越计费管理系统agent_setstat存在SQL注入漏洞.md)
   - [蓝海卓越计费管理系统任意文件读取漏洞](Web安全/商业软件/蓝海卓越/蓝海卓越计费管理系统任意文件读取漏洞.md)
   - [蓝海卓越计费管理系统多漏洞导致getshell](Web安全/商业软件/蓝海卓越/蓝海卓越计费管理系统多漏洞导致getshell.md)
+- **蓝海卓越计费**（4）
+  - [蓝海卓越计费管理系统 debug-php 远程命令执行漏洞](Web安全/商业软件/蓝海卓越计费/蓝海卓越计费管理系统%20debug-php%20远程命令执行漏洞.md)
+  - [蓝海卓越计费管理系统-download.php-任意文件读取漏洞](Web安全/商业软件/蓝海卓越计费/蓝海卓越计费管理系统-download.php-任意文件读取漏洞.md)
+  - [蓝海卓越计费管理系统debug存在远程命令执行漏洞](Web安全/商业软件/蓝海卓越计费/蓝海卓越计费管理系统debug存在远程命令执行漏洞.md)
+  - [蓝海卓越计费管理系统picUpLoad存在任意文件删除漏洞](Web安全/商业软件/蓝海卓越计费/蓝海卓越计费管理系统picUpLoad存在任意文件删除漏洞.md)
 - **蓝海卓越计费管理系统**（2）
   - [蓝海卓越计费管理系统 download.php 任意文件读取漏洞](Web安全/商业软件/蓝海卓越计费管理系统/蓝海卓越计费管理系统%20download.php%20任意文件读取漏洞.md)
   - [蓝海卓越计费管理系统存在后台 RCE 漏洞](Web安全/商业软件/蓝海卓越计费管理系统/蓝海卓越计费管理系统存在后台%20RCE%20漏洞.md)
-- **蓝海卓越计费管理系统 debug-php**（1）
-  - [蓝海卓越计费管理系统 debug-php 远程命令执行漏洞](Web安全/OA办公/蓝海卓越计费管理系统%20debug-php/蓝海卓越计费管理系统%20debug-php%20远程命令执行漏洞.md)
-- **蓝海卓越计费管理系统-download.php**（1）
-  - [蓝海卓越计费管理系统-download.php-任意文件读取漏洞](Web安全/OA办公/蓝海卓越计费管理系统-download.php/蓝海卓越计费管理系统-download.php-任意文件读取漏洞.md)
 - **蜂网互联**（1）
   - [蜂网互联-企业级路由器v4.31-密码泄露漏洞-CVE-2019-16313](Web安全/网络设备/蜂网互联/蜂网互联-企业级路由器v4.31-密码泄露漏洞-CVE-2019-16313.md)
+- **融合指挥调度平台**（5）
+  - [可视化融合指挥调度平台uploadImg存在任意文件上传漏洞](Web安全/商业软件/融合指挥调度平台/可视化融合指挥调度平台/可视化融合指挥调度平台uploadImg存在任意文件上传漏洞.md)
+  - [指挥调度平台client_upload存在任意文件上传漏洞](Web安全/商业软件/融合指挥调度平台/指挥调度平台client_upload存在任意文件上传漏洞.md)
+  - [指挥调度平台event_uploadfile存在任意文件上传漏洞](Web安全/商业软件/融合指挥调度平台/指挥调度平台event_uploadfile存在任意文件上传漏洞.md)
+  - [指挥调度平台task_uploadfile存在任意文件上传漏洞](Web安全/商业软件/融合指挥调度平台/指挥调度平台task_uploadfile存在任意文件上传漏洞.md)
+  - [指挥调度平台zx_upload存在任意文件上传漏洞](Web安全/商业软件/融合指挥调度平台/指挥调度平台zx_upload存在任意文件上传漏洞.md)
 - **装盟科技**（1）
   - [装盟科技-家装ERP管理系统 Public.asmx SQL注入](Web安全/ERP企业/装盟科技/装盟科技-家装ERP管理系统%20Public.asmx%20SQL注入.md)
 - **西软云XMS**（2）
@@ -2626,8 +2426,6 @@
   - [要塞T3 CheckMobileRepeat SQL注入漏洞](Web安全/其他软件/要塞/要塞T3%20CheckMobileRepeat%20SQL注入漏洞.md)
   - [要塞T3 CommonHomeIndex SQL注入漏洞](Web安全/其他软件/要塞/要塞T3%20CommonHomeIndex%20SQL注入漏洞.md)
   - [要塞T3 getddlb SQL注入漏洞](Web安全/其他软件/要塞/要塞T3%20getddlb%20SQL注入漏洞.md)
-- **警惕**（1）
-  - [“AI 投毒”：Claude Code 项目配置漏洞可致代码执行](Web安全/AI应用/警惕/“AI%20投毒”：Claude%20Code%20项目配置漏洞可致代码执行.md)
 - **记一次全设备通杀**（1）
   - [记一次全设备通杀未授权 RCE 的挖掘经历](Web安全/其他软件/记一次全设备通杀/记一次全设备通杀未授权%20RCE%20的挖掘经历.md)
 - **记一次曲折的exchange**（1）
@@ -2650,8 +2448,8 @@
   - [谷歌浏览器“SymStealer”漏洞：可窃取用户敏感文件](Web安全/桌面软件/谷歌浏览器/谷歌浏览器“SymStealer”漏洞：可窃取用户敏感文件.md)
 - **谷歌针对PWN2OWN 2024演示的两个Chrome零日**（1）
   - [谷歌针对PWN2OWN 2024演示的两个Chrome零日漏洞进行了处理](Web安全/商业软件/谷歌针对PWN2OWN%202024演示的两个Chrome零日/谷歌针对PWN2OWN%202024演示的两个Chrome零日漏洞进行了处理.md)
-- **赛普**（1）
-  - [赛普EAP企业适配管理平台 Download.aspx 任意文件读取漏洞](Web安全/OA办公/赛普/赛普EAP企业适配管理平台%20Download.aspx%20任意文件读取漏洞.md)
+- **赛普软件**（1）
+  - [赛普EAP企业适配管理平台 Download.aspx 任意文件读取漏洞](Web安全/商业软件/赛普软件/赛普EAP企业适配管理平台%20Download.aspx%20任意文件读取漏洞.md)
 - **赛蓝企业管理系统 AuthTokenIndex 身份认证绕过漏洞**（1）
   - [赛蓝企业管理系统 AuthTokenIndex 身份认证绕过漏洞](Web安全/商业软件/赛蓝企业管理系统%20AuthTokenIndex%20身份认证绕过漏洞/赛蓝企业管理系统%20AuthTokenIndex%20身份认证绕过漏洞.md)
 - **赛蓝企业管理系统 GetFieldJson**（1）
@@ -2664,44 +2462,33 @@
   - [超级CMS任意文件上传漏洞剖析](Web安全/CMS内容/超级/超级CMS任意文件上传漏洞剖析.md)
 - **超级管理员权限提升**（1）
   - [超级管理员权限提升漏洞使90万台设备面临风险](Web安全/其他软件/超级管理员权限提升/超级管理员权限提升漏洞使90万台设备面临风险.md)
-- **超详细  Weblogic**（1）
-  - [超详细  Weblogic 未授权命令执行漏洞复现 CVE-2020-14882](Web安全/中间件/超详细%20%20Weblogic/超详细%20%20Weblogic%20未授权命令执行漏洞复现%20CVE-2020-14882.md)
 - **超详细 Microsoft Exchange**（1）
   - [超详细 Microsoft Exchange 远程代码执行漏洞复现 CVE-2020-17144](Web安全/邮件系统/超详细%20Microsoft%20Exchange/超详细%20Microsoft%20Exchange%20远程代码执行漏洞复现%20CVE-2020-17144.md)
 - **超高危 Wordpress**（1）
   - [超高危 Wordpress RCE漏洞 CVE-2024-5932 全网资产 5W+ 附POC](Web安全/CMS内容/超高危%20Wordpress/超高危%20Wordpress%20RCE漏洞%20CVE-2024-5932%20全网资产%205W+%20附POC.md)
 - **辰信景云**（1）
-  - [辰信景云终端安全管理系统login存在SQL注入漏洞](Web安全/开发框架/辰信景云/辰信景云终端安全管理系统login存在SQL注入漏洞.md)
+  - [辰信景云终端安全管理系统login存在SQL注入漏洞](Web安全/安全设备/辰信景云/辰信景云终端安全管理系统login存在SQL注入漏洞.md)
 - **迅饶自动化**（5）
-  - [上海迅饶自动化科技有限公司X2Modbus网关GetUserList存在敏感信息泄露](Web安全/中间件/迅饶自动化/上海迅饶自动化科技有限公司X2Modbus网关GetUserList存在敏感信息泄露.md)
-  - [上海迅饶自动化科技有限公司X2Modbus网关GetUser存在敏感信息泄露](Web安全/中间件/迅饶自动化/上海迅饶自动化科技有限公司X2Modbus网关GetUser存在敏感信息泄露.md)
-  - [上海迅饶自动化科技有限公司X2Modbus网关任意用户删除漏洞](Web安全/中间件/迅饶自动化/上海迅饶自动化科技有限公司X2Modbus网关任意用户删除漏洞.md)
-  - [上海迅饶自动化科技有限公司X2Modbus网关任意用户添加漏洞](Web安全/中间件/迅饶自动化/上海迅饶自动化科技有限公司X2Modbus网关任意用户添加漏洞.md)
-  - [上海迅饶自动化科技有限公司X2Modbus网关未授权访问漏洞](Web安全/中间件/迅饶自动化/上海迅饶自动化科技有限公司X2Modbus网关未授权访问漏洞.md)
-- **迈普pnsr2900x DOWNLOAD_FILE**（1）
-  - [迈普pnsr2900x DOWNLOAD_FILE 任意文件读取漏洞](Web安全/OA办公/迈普pnsr2900x%20DOWNLOAD_FILE/迈普pnsr2900x%20DOWNLOAD_FILE%20任意文件读取漏洞.md)
+  - [上海迅饶自动化科技有限公司X2Modbus网关GetUserList存在敏感信息泄露](Web安全/智能设备/迅饶自动化/上海迅饶自动化科技有限公司X2Modbus网关GetUserList存在敏感信息泄露.md)
+  - [上海迅饶自动化科技有限公司X2Modbus网关GetUser存在敏感信息泄露](Web安全/智能设备/迅饶自动化/上海迅饶自动化科技有限公司X2Modbus网关GetUser存在敏感信息泄露.md)
+  - [上海迅饶自动化科技有限公司X2Modbus网关任意用户删除漏洞](Web安全/智能设备/迅饶自动化/上海迅饶自动化科技有限公司X2Modbus网关任意用户删除漏洞.md)
+  - [上海迅饶自动化科技有限公司X2Modbus网关任意用户添加漏洞](Web安全/智能设备/迅饶自动化/上海迅饶自动化科技有限公司X2Modbus网关任意用户添加漏洞.md)
+  - [上海迅饶自动化科技有限公司X2Modbus网关未授权访问漏洞](Web安全/智能设备/迅饶自动化/上海迅饶自动化科技有限公司X2Modbus网关未授权访问漏洞.md)
+- **迈普**（1）
+  - [迈普pnsr2900x DOWNLOAD_FILE 任意文件读取漏洞](Web安全/网络设备/迈普/迈普pnsr2900x%20DOWNLOAD_FILE%20任意文件读取漏洞.md)
 - **这个VMware高危**（1）
   - [这个VMware高危漏洞已发现超一年，官方至今仍未修复](Web安全/云平台/这个VMware高危/这个VMware高危漏洞已发现超一年，官方至今仍未修复.md)
-- **这个严重的 Fiber Go**（1）
-  - [这个严重的 Fiber Go 漏洞！](Web安全/开发框架/这个严重的%20Fiber%20Go/这个严重的%20Fiber%20Go%20漏洞！.md)
 - **这个已**（1）
   - [这个已存在18年的提权漏洞影响 X.Org 服务器](Web安全/其他软件/这个已/这个已存在18年的提权漏洞影响%20X.Org%20服务器.md)
-- **这些华硕路由器**（1）
-  - [这些华硕路由器存在远程代码执行漏洞，请立即更新固件](Web安全/网络设备/这些华硕路由器/这些华硕路由器存在远程代码执行漏洞，请立即更新固件.md)
 - **这谁防得住**（1）
   - [这谁防得住？Wi-Fi 联盟官方测试套件中存在命令注入漏洞](Web安全/其他软件/这谁防得住/这谁防得住？Wi-Fi%20联盟官方测试套件中存在命令注入漏洞.md)
 - **远秋医学在线考试系统**（3）
   - [远秋医学培训报名系统User存在未授权账号密码泄露漏洞](Web安全/商业软件/远秋医学在线考试系统/远秋医学培训报名系统User存在未授权账号密码泄露漏洞.md)
   - [远秋医学培训报名系统v1.0ManagerList存在未授权账号密码泄露漏洞](Web安全/商业软件/远秋医学在线考试系统/远秋医学培训报名系统v1.0ManagerList存在未授权账号密码泄露漏洞.md)
   - [远秋医学培训报名系统v1.0NewsDetailPage存在SQL注入漏洞](Web安全/商业软件/远秋医学在线考试系统/远秋医学培训报名系统v1.0NewsDetailPage存在SQL注入漏洞.md)
-- **远程代码执行**（53）
-  - [告警！Meta Llama框架漏洞，AI系统面临远程代码执行风险](Web安全/AI应用/远程代码执行/告警！Meta%20Llama框架漏洞，AI系统面临远程代码执行风险.md)
+- **远程代码执行**（48）
   - [CVE-2020-27955 Git-LFS 远程代码执行漏洞复现](Web安全/CMS内容/远程代码执行/CVE-2020-27955%20Git-LFS%20远程代码执行漏洞复现.md)
   - [成功复现 Splunk Enterprise XML Parsing 远程代码执行漏洞 () CVE-2023-46214](Web安全/ERP企业/远程代码执行/成功复现%20Splunk%20Enterprise%20XML%20Parsing%20远程代码执行漏洞%20%28%29%20CVE-2023-46214.md)
-  - [CVE -2020-13942 (Apache Unomi 远程代码执行漏洞) 复现](Web安全/中间件/远程代码执行/CVE%20-2020-13942%20%28Apache%20Unomi%20远程代码执行漏洞%29%20复现.md)
-  - [CVE-2013-0662：施耐德 ModBus串行驱动远程代码执行漏洞分析](Web安全/中间件/远程代码执行/CVE-2013-0662：施耐德%20ModBus串行驱动远程代码执行漏洞分析.md)
-  - [CVE-2019-18935 通过 Telerik UI 中的不安全反序列化进行远程代码执行](Web安全/中间件/远程代码执行/CVE-2019-18935%20通过%20Telerik%20UI%20中的不安全反序列化进行远程代码执行.md)
-  - [CVE-2020-17144-EXP - 远程代码执行](Web安全/中间件/远程代码执行/CVE-2020-17144-EXP%20-%20远程代码执行.md)
   - [ (10)](Web安全/其他软件/远程代码执行/%20%2810%29.md)
   - [ (13)](Web安全/其他软件/远程代码执行/%20%2813%29.md)
   - [ (138)](Web安全/其他软件/远程代码执行/%20%28138%29.md)
@@ -2753,7 +2540,8 @@
   - [迪威讯Focus6100音视频通讯平台存在任意用户密码修改漏洞](Web安全/其他软件/迪威讯/迪威讯Focus6100音视频通讯平台存在任意用户密码修改漏洞.md)
   - [迪威讯Focus6100音视频通讯平台存在任意用户添加漏洞](Web安全/其他软件/迪威讯/迪威讯Focus6100音视频通讯平台存在任意用户添加漏洞.md)
   - [迪威讯Focus6100音视频通讯平台存在敏感信息泄露漏洞](Web安全/其他软件/迪威讯/迪威讯Focus6100音视频通讯平台存在敏感信息泄露漏洞.md)
-- **迪普**（1）
+- **迪普**（2）
+  - [1day 迪普 VPN Service 任意文件读取漏洞复现（附 nuclei poc）](Web安全/网络设备/迪普/1day%20迪普%20VPN%20Service%20任意文件读取漏洞复现（附%20nuclei%20poc）.md)
   - [迪普SSL VPN 任意文件读取漏洞(补丁绕过)](Web安全/网络设备/迪普/迪普SSL%20VPN%20任意文件读取漏洞%28补丁绕过%29.md)
 - **追洞小组 - ThinkPHP5**（1）
   - [追洞小组 - ThinkPHP5 SQL 注入漏洞 and 敏感信息泄露](Web安全/开发框架/追洞小组%20-%20ThinkPHP5/追洞小组%20-%20ThinkPHP5%20SQL%20注入漏洞%20and%20敏感信息泄露.md)
@@ -2786,74 +2574,76 @@
   - [通天星CMSV6车载视频监控平台muck_vehi_certificate存在SQL注入漏洞](Web安全/CMS内容/通天星CMSV6/通天星CMSV6车载视频监控平台muck_vehi_certificate存在SQL注入漏洞.md)
   - [通天星CMSV6车载视频监控平台run_stop_delete存在SQL注入漏洞](Web安全/CMS内容/通天星CMSV6/通天星CMSV6车载视频监控平台run_stop_delete存在SQL注入漏洞.md)
   - [通天星CMSV6车载视频监控平台task_record_detail_delete存在SQL注入漏洞](Web安全/CMS内容/通天星CMSV6/通天星CMSV6车载视频监控平台task_record_detail_delete存在SQL注入漏洞.md)
-- **通达oa**（67）
-  - [(补充) 通达 OA v11-8 存储型 XSS 与 命令执行](Web安全/OA办公/通达oa/%28补充%29%20通达%20OA%20v11-8%20存储型%20XSS%20与%20命令执行.md)
-  - [2020HW 中通达 OA 多个漏洞复现总结](Web安全/OA办公/通达oa/2020HW%20中通达%20OA%20多个漏洞复现总结.md)
-  - [CVE-2023-4165：通达 OA SQL 注入漏洞](Web安全/OA办公/通达oa/CVE-2023-4165：通达%20OA%20SQL%20注入漏洞.md)
-  - [代码审计 - 通达 OA 任意用户登录漏洞（匿名 RCE）分析 - zrools](Web安全/OA办公/通达oa/代码审计%20-%20通达%20OA%20任意用户登录漏洞（匿名%20RCE）分析%20-%20zrools.md)
-  - [全网首发   通达 OA 多枚 0day 漏洞分享](Web安全/OA办公/通达oa/全网首发%20%20%20通达%20OA%20多枚%200day%20漏洞分享.md)
-  - [文库 - 通达 OA 部分版本漏洞](Web安全/OA办公/通达oa/文库%20-%20通达%20OA%20部分版本漏洞.md)
-  - [案例 通达OA任意文件上传绕过+Udf绕过RCE的故事](Web安全/OA办公/通达oa/案例%20通达OA任意文件上传绕过+Udf绕过RCE的故事.md)
-  - [续集   再发通达 OA 多枚 0day](Web安全/OA办公/通达oa/续集%20%20%20再发通达%20OA%20多枚%200day.md)
-  - [通达 OA SQL 注入漏洞 (CVE-2023-4165CVE-2023-4166)](Web安全/OA办公/通达oa/通达%20OA%20SQL%20注入漏洞%20%28CVE-2023-4165CVE-2023-4166%29.md)
-  - [通达 OA v11-7 在线用户登录漏洞](Web安全/OA办公/通达oa/通达%20OA%20v11-7%20在线用户登录漏洞.md)
-  - [通达 OA v11-8 存储型 XSS 与 命令执行](Web安全/OA办公/通达oa/通达%20OA%20v11-8%20存储型%20XSS%20与%20命令执行.md)
-  - [通达 OA v11.9 getdata 任意命令执行漏洞](Web安全/OA办公/通达oa/通达%20OA%20v11.9%20getdata%20任意命令执行漏洞.md)
-  - [通达 OA 任意文件上传 + 文件包含 RCE 漏洞复现 (附自写 EXP)](Web安全/OA办公/通达oa/通达%20OA%20任意文件上传%20+%20文件包含%20RCE%20漏洞复现%20%28附自写%20EXP%29.md)
-  - [通达 OA 任意文件上传漏洞详细分析](Web安全/OA办公/通达oa/通达%20OA%20任意文件上传漏洞详细分析.md)
-  - [通达 OA 俩 SQL 注入复现与分析](Web安全/OA办公/通达oa/通达%20OA%20俩%20SQL%20注入复现与分析.md)
-  - [通达 OA 漏洞比 getshell 还要牛的 system 权限](Web安全/OA办公/通达oa/通达%20OA%20漏洞比%20getshell%20还要牛的%20system%20权限.md)
-  - [通达 OA 远程命令执行漏洞分析](Web安全/OA办公/通达oa/通达%20OA%20远程命令执行漏洞分析.md)
-  - [通达OA 11.6文件删除+文件上传getshell](Web安全/OA办公/通达oa/通达OA%2011.6文件删除+文件上传getshell.md)
-  - [通达OA 11.7存在sql注入](Web安全/OA办公/通达oa/通达OA%2011.7存在sql注入.md)
-  - [通达OA < 11.5.200417 任意用户登录漏洞](Web安全/OA办公/通达oa/通达OA%20<%2011.5.200417%20任意用户登录漏洞.md)
-  - [通达OA v11.2 upload.php 后台任意文件上传漏洞](Web安全/OA办公/通达oa/通达OA%20v11.2%20upload.php%20后台任意文件上传漏洞.md)
-  - [通达OA v11.5 logincheck_code.php 登陆绕过漏洞](Web安全/OA办公/通达oa/通达OA%20v11.5%20logincheck_code.php%20登陆绕过漏洞.md)
-  - [通达OA v11.5 swfupload_new.php SQL注入漏洞](Web安全/OA办公/通达oa/通达OA%20v11.5%20swfupload_new.php%20SQL注入漏洞.md)
-  - [通达OA v11.6 report_bi.func.php SQL注入漏洞](Web安全/OA办公/通达oa/通达OA%20v11.6%20report_bi.func.php%20SQL注入漏洞.md)
-  - [通达OA v11.7 在线用户登录漏洞](Web安全/OA办公/通达oa/通达OA%20v11.7%20在线用户登录漏洞.md)
-  - [通达OA v11.7后台SQL注入到RCE[0day]](Web安全/OA办公/通达oa/通达OA%20v11.7后台SQL注入到RCE[0day].md)
-  - [通达OA v11.8 api.ali.php 任意文件上传漏洞](Web安全/OA办公/通达oa/通达OA%20v11.8%20api.ali.php%20任意文件上传漏洞.md)
-  - [通达OA v11.8 getway.php 远程文件包含漏洞](Web安全/OA办公/通达oa/通达OA%20v11.8%20getway.php%20远程文件包含漏洞.md)
-  - [通达OA v11.8 存储型XSS 与 命令执行](Web安全/OA办公/通达oa/通达OA%20v11.8%20存储型XSS%20与%20命令执行.md)
-  - [通达OA 漏洞预警](Web安全/OA办公/通达oa/通达OA%20漏洞预警.md)
-  - [通达OA 部分漏洞信息整合](Web安全/OA办公/通达oa/通达OA%20部分漏洞信息整合.md)
-  - [通达OA-v11.2-upload.php-后台任意文件上传漏洞](Web安全/OA办公/通达oa/通达OA-v11.2-upload.php-后台任意文件上传漏洞.md)
-  - [通达OA-v11.5-login_code.php-任意用户登录](Web安全/OA办公/通达oa/通达OA-v11.5-login_code.php-任意用户登录.md)
-  - [通达OA-v11.5-logincheck_code.php-登陆绕过漏洞](Web安全/OA办公/通达oa/通达OA-v11.5-logincheck_code.php-登陆绕过漏洞.md)
-  - [通达OA-v11.5-swfupload_new.php-SQL注入漏洞](Web安全/OA办公/通达oa/通达OA-v11.5-swfupload_new.php-SQL注入漏洞.md)
-  - [通达OA-v11.6-print.php-任意文件删除&RCE](Web安全/OA办公/通达oa/通达OA-v11.6-print.php-任意文件删除&RCE.md)
-  - [通达OA-v11.6-report_bi.func.php-SQL注入漏洞](Web安全/OA办公/通达oa/通达OA-v11.6-report_bi.func.php-SQL注入漏洞.md)
-  - [通达OA-v11.7-auth_mobi.php-在线用户登录漏洞](Web安全/OA办公/通达oa/通达OA-v11.7-auth_mobi.php-在线用户登录漏洞.md)
-  - [通达OA-v11.7-delete_cascade.php-后台SQL注入](Web安全/OA办公/通达oa/通达OA-v11.7-delete_cascade.php-后台SQL注入.md)
-  - [通达OA-v11.8-api.ali.php-任意文件上传漏洞](Web安全/OA办公/通达oa/通达OA-v11.8-api.ali.php-任意文件上传漏洞.md)
-  - [通达OA-v11.8-getway.php-远程文件包含漏洞](Web安全/OA办公/通达oa/通达OA-v11.8-getway.php-远程文件包含漏洞.md)
-  - [通达OA-v11.8-update.php-后台文件包含XSS漏洞](Web安全/OA办公/通达oa/通达OA-v11.8-update.php-后台文件包含XSS漏洞.md)
-  - [通达OA-v11.8-update.php-后台文件包含命令执行漏洞](Web安全/OA办公/通达oa/通达OA-v11.8-update.php-后台文件包含命令执行漏洞.md)
-  - [通达OA-v11.9-upsharestatus-后台SQL注入漏洞](Web安全/OA办公/通达oa/通达OA-v11.9-upsharestatus-后台SQL注入漏洞.md)
-  - [通达OA-v2017-action_upload.php-任意文件上传漏洞](Web安全/OA办公/通达oa/通达OA-v2017-action_upload.php-任意文件上传漏洞.md)
-  - [通达OA2017前台任意用户登录漏洞](Web安全/OA办公/通达oa/通达OA2017前台任意用户登录漏洞.md)
-  - [通达OA前台任意用户伪造登录漏洞批量检测](Web安全/OA办公/通达oa/通达OA前台任意用户伪造登录漏洞批量检测.md)
-  - [通达oa 11.2 后台getshell](Web安全/OA办公/通达oa/通达oa%2011.2%20后台getshell.md)
-  - [通达oa 11.5 sql注入漏洞](Web安全/OA办公/通达oa/通达oa%2011.5%20sql注入漏洞.md)
-  - [通达oa 11.5 未授权访问漏洞](Web安全/OA办公/通达oa/通达oa%2011.5%20未授权访问漏洞.md)
-  - [通达oa 11.6 远程命令执行漏洞](Web安全/OA办公/通达oa/通达oa%2011.6%20远程命令执行漏洞.md)
-  - [通达oa 11.7 后台getshell](Web安全/OA办公/通达oa/通达oa%2011.7%20后台getshell.md)
-  - [通达oa 11.7 后台sql注入漏洞&rce](Web安全/OA办公/通达oa/通达oa%2011.7%20后台sql注入漏洞&rce.md)
-  - [通达oa 2007 sql注入漏洞](Web安全/OA办公/通达oa/通达oa%202007%20sql注入漏洞.md)
-  - [通达oa 2011-2013 通杀GETSHELL](Web安全/OA办公/通达oa/通达oa%202011-2013%20通杀GETSHELL.md)
-  - [通达oa XFF导致日志混淆](Web安全/OA办公/通达oa/通达oa%20XFF导致日志混淆.md)
-  - [通达oa sql注入](Web安全/OA办公/通达oa/通达oa%20sql注入.md)
-  - [通达oa xss](Web安全/OA办公/通达oa/通达oa%20xss.md)
-  - [通达oa ⻚面敏感信息泄露](Web安全/OA办公/通达oa/通达oa%20⻚面敏感信息泄露.md)
-  - [通达oa 任意⽂件上传漏洞](Web安全/OA办公/通达oa/通达oa%20任意⽂件上传漏洞.md)
-  - [通达oa 任意文件上传+rce+文件包含](Web安全/OA办公/通达oa/通达oa%20任意文件上传+rce+文件包含.md)
-  - [通达oa 任意账号跳转](Web安全/OA办公/通达oa/通达oa%20任意账号跳转.md)
-  - [通达oa 小技巧](Web安全/OA办公/通达oa/通达oa%20小技巧.md)
-  - [通达oa 数据库脚本导⼊getshell](Web安全/OA办公/通达oa/通达oa%20数据库脚本导⼊getshell.md)
-  - [通达oa 文件包含漏洞](Web安全/OA办公/通达oa/通达oa%20文件包含漏洞.md)
-  - [通达oa 越权访问](Web安全/OA办公/通达oa/通达oa%20越权访问.md)
-  - [（WooYun-2014-82678）通达oa未授权获取帐号](Web安全/OA办公/通达oa/（WooYun-2014-82678）通达oa未授权获取帐号.md)
+- **通达OA**（67）
+  - [(补充) 通达 OA v11-8 存储型 XSS 与 命令执行](Web安全/OA办公/通达OA/%28补充%29%20通达%20OA%20v11-8%20存储型%20XSS%20与%20命令执行.md)
+  - [2020HW 中通达 OA 多个漏洞复现总结](Web安全/OA办公/通达OA/2020HW%20中通达%20OA%20多个漏洞复现总结.md)
+  - [CVE-2023-4165：通达 OA SQL 注入漏洞](Web安全/OA办公/通达OA/CVE-2023-4165：通达%20OA%20SQL%20注入漏洞.md)
+  - [代码审计 - 通达 OA 任意用户登录漏洞（匿名 RCE）分析 - zrools](Web安全/OA办公/通达OA/代码审计%20-%20通达%20OA%20任意用户登录漏洞（匿名%20RCE）分析%20-%20zrools.md)
+  - [全网首发   通达 OA 多枚 0day 漏洞分享](Web安全/OA办公/通达OA/全网首发%20%20%20通达%20OA%20多枚%200day%20漏洞分享.md)
+  - [文库 - 通达 OA 部分版本漏洞](Web安全/OA办公/通达OA/文库%20-%20通达%20OA%20部分版本漏洞.md)
+  - [案例 通达OA任意文件上传绕过+Udf绕过RCE的故事](Web安全/OA办公/通达OA/案例%20通达OA任意文件上传绕过+Udf绕过RCE的故事.md)
+  - [续集   再发通达 OA 多枚 0day](Web安全/OA办公/通达OA/续集%20%20%20再发通达%20OA%20多枚%200day.md)
+  - [通达 OA SQL 注入漏洞 (CVE-2023-4165CVE-2023-4166)](Web安全/OA办公/通达OA/通达%20OA%20SQL%20注入漏洞%20%28CVE-2023-4165CVE-2023-4166%29.md)
+  - [通达 OA v11-7 在线用户登录漏洞](Web安全/OA办公/通达OA/通达%20OA%20v11-7%20在线用户登录漏洞.md)
+  - [通达 OA v11-8 存储型 XSS 与 命令执行](Web安全/OA办公/通达OA/通达%20OA%20v11-8%20存储型%20XSS%20与%20命令执行.md)
+  - [通达 OA v11.9 getdata 任意命令执行漏洞](Web安全/OA办公/通达OA/通达%20OA%20v11.9%20getdata%20任意命令执行漏洞.md)
+  - [通达 OA 任意文件上传 + 文件包含 RCE 漏洞复现 (附自写 EXP)](Web安全/OA办公/通达OA/通达%20OA%20任意文件上传%20+%20文件包含%20RCE%20漏洞复现%20%28附自写%20EXP%29.md)
+  - [通达 OA 任意文件上传漏洞详细分析](Web安全/OA办公/通达OA/通达%20OA%20任意文件上传漏洞详细分析.md)
+  - [通达 OA 俩 SQL 注入复现与分析](Web安全/OA办公/通达OA/通达%20OA%20俩%20SQL%20注入复现与分析.md)
+  - [通达 OA 漏洞比 getshell 还要牛的 system 权限](Web安全/OA办公/通达OA/通达%20OA%20漏洞比%20getshell%20还要牛的%20system%20权限.md)
+  - [通达 OA 远程命令执行漏洞分析](Web安全/OA办公/通达OA/通达%20OA%20远程命令执行漏洞分析.md)
+  - [通达OA 11.6文件删除+文件上传getshell](Web安全/OA办公/通达OA/通达OA%2011.6文件删除+文件上传getshell.md)
+  - [通达OA 11.7存在sql注入](Web安全/OA办公/通达OA/通达OA%2011.7存在sql注入.md)
+  - [通达OA < 11.5.200417 任意用户登录漏洞](Web安全/OA办公/通达OA/通达OA%20<%2011.5.200417%20任意用户登录漏洞.md)
+  - [通达OA v11.2 upload.php 后台任意文件上传漏洞](Web安全/OA办公/通达OA/通达OA%20v11.2%20upload.php%20后台任意文件上传漏洞.md)
+  - [通达OA v11.5 logincheck_code.php 登陆绕过漏洞](Web安全/OA办公/通达OA/通达OA%20v11.5%20logincheck_code.php%20登陆绕过漏洞.md)
+  - [通达OA v11.5 swfupload_new.php SQL注入漏洞](Web安全/OA办公/通达OA/通达OA%20v11.5%20swfupload_new.php%20SQL注入漏洞.md)
+  - [通达OA v11.6 report_bi.func.php SQL注入漏洞](Web安全/OA办公/通达OA/通达OA%20v11.6%20report_bi.func.php%20SQL注入漏洞.md)
+  - [通达OA v11.7 在线用户登录漏洞](Web安全/OA办公/通达OA/通达OA%20v11.7%20在线用户登录漏洞.md)
+  - [通达OA v11.7后台SQL注入到RCE[0day]](Web安全/OA办公/通达OA/通达OA%20v11.7后台SQL注入到RCE[0day].md)
+  - [通达OA v11.8 api.ali.php 任意文件上传漏洞](Web安全/OA办公/通达OA/通达OA%20v11.8%20api.ali.php%20任意文件上传漏洞.md)
+  - [通达OA v11.8 getway.php 远程文件包含漏洞](Web安全/OA办公/通达OA/通达OA%20v11.8%20getway.php%20远程文件包含漏洞.md)
+  - [通达OA v11.8 存储型XSS 与 命令执行](Web安全/OA办公/通达OA/通达OA%20v11.8%20存储型XSS%20与%20命令执行.md)
+  - [通达OA 漏洞预警](Web安全/OA办公/通达OA/通达OA%20漏洞预警.md)
+  - [通达OA 部分漏洞信息整合](Web安全/OA办公/通达OA/通达OA%20部分漏洞信息整合.md)
+  - [通达OA-v11.2-upload.php-后台任意文件上传漏洞](Web安全/OA办公/通达OA/通达OA-v11.2-upload.php-后台任意文件上传漏洞.md)
+  - [通达OA-v11.5-login_code.php-任意用户登录](Web安全/OA办公/通达OA/通达OA-v11.5-login_code.php-任意用户登录.md)
+  - [通达OA-v11.5-logincheck_code.php-登陆绕过漏洞](Web安全/OA办公/通达OA/通达OA-v11.5-logincheck_code.php-登陆绕过漏洞.md)
+  - [通达OA-v11.5-swfupload_new.php-SQL注入漏洞](Web安全/OA办公/通达OA/通达OA-v11.5-swfupload_new.php-SQL注入漏洞.md)
+  - [通达OA-v11.6-print.php-任意文件删除&RCE](Web安全/OA办公/通达OA/通达OA-v11.6-print.php-任意文件删除&RCE.md)
+  - [通达OA-v11.6-report_bi.func.php-SQL注入漏洞](Web安全/OA办公/通达OA/通达OA-v11.6-report_bi.func.php-SQL注入漏洞.md)
+  - [通达OA-v11.7-auth_mobi.php-在线用户登录漏洞](Web安全/OA办公/通达OA/通达OA-v11.7-auth_mobi.php-在线用户登录漏洞.md)
+  - [通达OA-v11.7-delete_cascade.php-后台SQL注入](Web安全/OA办公/通达OA/通达OA-v11.7-delete_cascade.php-后台SQL注入.md)
+  - [通达OA-v11.8-api.ali.php-任意文件上传漏洞](Web安全/OA办公/通达OA/通达OA-v11.8-api.ali.php-任意文件上传漏洞.md)
+  - [通达OA-v11.8-getway.php-远程文件包含漏洞](Web安全/OA办公/通达OA/通达OA-v11.8-getway.php-远程文件包含漏洞.md)
+  - [通达OA-v11.8-update.php-后台文件包含XSS漏洞](Web安全/OA办公/通达OA/通达OA-v11.8-update.php-后台文件包含XSS漏洞.md)
+  - [通达OA-v11.8-update.php-后台文件包含命令执行漏洞](Web安全/OA办公/通达OA/通达OA-v11.8-update.php-后台文件包含命令执行漏洞.md)
+  - [通达OA-v11.9-upsharestatus-后台SQL注入漏洞](Web安全/OA办公/通达OA/通达OA-v11.9-upsharestatus-后台SQL注入漏洞.md)
+  - [通达OA-v2017-action_upload.php-任意文件上传漏洞](Web安全/OA办公/通达OA/通达OA-v2017-action_upload.php-任意文件上传漏洞.md)
+  - [通达OA2017前台任意用户登录漏洞](Web安全/OA办公/通达OA/通达OA2017前台任意用户登录漏洞.md)
+  - [通达OA前台任意用户伪造登录漏洞批量检测](Web安全/OA办公/通达OA/通达OA前台任意用户伪造登录漏洞批量检测.md)
+  - [通达oa 11.2 后台getshell](Web安全/OA办公/通达OA/通达oa%2011.2%20后台getshell.md)
+  - [通达oa 11.5 sql注入漏洞](Web安全/OA办公/通达OA/通达oa%2011.5%20sql注入漏洞.md)
+  - [通达oa 11.5 未授权访问漏洞](Web安全/OA办公/通达OA/通达oa%2011.5%20未授权访问漏洞.md)
+  - [通达oa 11.6 远程命令执行漏洞](Web安全/OA办公/通达OA/通达oa%2011.6%20远程命令执行漏洞.md)
+  - [通达oa 11.7 后台getshell](Web安全/OA办公/通达OA/通达oa%2011.7%20后台getshell.md)
+  - [通达oa 11.7 后台sql注入漏洞&rce](Web安全/OA办公/通达OA/通达oa%2011.7%20后台sql注入漏洞&rce.md)
+  - [通达oa 2007 sql注入漏洞](Web安全/OA办公/通达OA/通达oa%202007%20sql注入漏洞.md)
+  - [通达oa 2011-2013 通杀GETSHELL](Web安全/OA办公/通达OA/通达oa%202011-2013%20通杀GETSHELL.md)
+  - [通达oa XFF导致日志混淆](Web安全/OA办公/通达OA/通达oa%20XFF导致日志混淆.md)
+  - [通达oa sql注入](Web安全/OA办公/通达OA/通达oa%20sql注入.md)
+  - [通达oa xss](Web安全/OA办公/通达OA/通达oa%20xss.md)
+  - [通达oa ⻚面敏感信息泄露](Web安全/OA办公/通达OA/通达oa%20⻚面敏感信息泄露.md)
+  - [通达oa 任意⽂件上传漏洞](Web安全/OA办公/通达OA/通达oa%20任意⽂件上传漏洞.md)
+  - [通达oa 任意文件上传+rce+文件包含](Web安全/OA办公/通达OA/通达oa%20任意文件上传+rce+文件包含.md)
+  - [通达oa 任意账号跳转](Web安全/OA办公/通达OA/通达oa%20任意账号跳转.md)
+  - [通达oa 小技巧](Web安全/OA办公/通达OA/通达oa%20小技巧.md)
+  - [通达oa 数据库脚本导⼊getshell](Web安全/OA办公/通达OA/通达oa%20数据库脚本导⼊getshell.md)
+  - [通达oa 文件包含漏洞](Web安全/OA办公/通达OA/通达oa%20文件包含漏洞.md)
+  - [通达oa 越权访问](Web安全/OA办公/通达OA/通达oa%20越权访问.md)
+  - [（WooYun-2014-82678）通达oa未授权获取帐号](Web安全/OA办公/通达OA/（WooYun-2014-82678）通达oa未授权获取帐号.md)
+- **通达OA研究**（1）
+  - [从某达 OA 到 Yii2 框架的 cookie 反序列化漏洞研究](Web安全/OA办公/通达OA研究/从某达%20OA%20到%20Yii2%20框架的%20cookie%20反序列化漏洞研究.md)
 - **通过 ROP 实现**（1）
   - [通过 ROP 实现 RCE](Web安全/其他软件/通过%20ROP%20实现/通过%20ROP%20实现%20RCE.md)
 - **通过沙箱逃逸在 n8n 上实现**（1）
@@ -2871,7 +2661,7 @@
   - [速达软件技术（广州）有限公司多款产品存在代码执行](Web安全/其他软件/速达软件技术（广州）有限公司/速达软件技术（广州）有限公司多款产品存在代码执行.md)
   - [速达软件技术（广州）有限公司多款产品存在文件上传漏洞](Web安全/其他软件/速达软件技术（广州）有限公司/速达软件技术（广州）有限公司多款产品存在文件上传漏洞.md)
 - **邦永PM2**（1）
-  - [邦永PM2项目管理系统Global_UserLogin.aspxSQL注入漏洞](Web安全/开发框架/邦永PM2/邦永PM2项目管理系统Global_UserLogin.aspxSQL注入漏洞.md)
+  - [邦永PM2项目管理系统Global_UserLogin.aspxSQL注入漏洞](Web安全/商业软件/邦永PM2/邦永PM2项目管理系统Global_UserLogin.aspxSQL注入漏洞.md)
 - **郑州时空智友信息技术有限公司**（2）
   - [时空WMS-仓储精细化管理系统ImageAdd存在文件上传漏洞](Web安全/商业软件/郑州时空智友信息技术有限公司/时空WMS-仓储精细化管理系统ImageAdd存在文件上传漏洞.md)
   - [时空WMS-仓储精细化管理系统SaveCrash存在文件上传漏洞](Web安全/商业软件/郑州时空智友信息技术有限公司/时空WMS-仓储精细化管理系统SaveCrash存在文件上传漏洞.md)
@@ -2879,25 +2669,25 @@
   - [重大工控漏洞曝光，工业网络安全如何保障？](Web安全/其他软件/重大工控/重大工控漏洞曝光，工业网络安全如何保障？.md)
 - **金万维**（1）
   - [金万维-云联应用系统接入平台 GNRemote.dll 前台RCE漏洞](Web安全/其他软件/金万维/金万维-云联应用系统接入平台%20GNRemote.dll%20前台RCE漏洞.md)
+- **金中软件**（3）
+  - [广西金中软件集团有限公司智慧医养服务平台UpLoaderAction存在任意文件上传漏洞](Web安全/商业软件/金中软件/广西金中软件集团有限公司智慧医养服务平台UpLoaderAction存在任意文件上传漏洞.md)
+  - [广西金中软件集团有限公司智慧医养服务平台Uploader存在任意文件上传漏洞](Web安全/商业软件/金中软件/广西金中软件集团有限公司智慧医养服务平台Uploader存在任意文件上传漏洞.md)
+  - [广西金中软件集团有限公司智慧医养服务平台Uploads存在任意文件上传漏洞](Web安全/商业软件/金中软件/广西金中软件集团有限公司智慧医养服务平台Uploads存在任意文件上传漏洞.md)
 - **金华迪加 现场大屏互动系统 mobile.do.php**（1）
   - [金华迪加 现场大屏互动系统 mobile.do.php 任意文件上传漏洞](Web安全/其他软件/金华迪加%20现场大屏互动系统%20mobile.do.php/金华迪加%20现场大屏互动系统%20mobile.do.php%20任意文件上传漏洞.md)
 - **金华迪加网络科技有限公司**（1）
   - [金华迪加网络科技有限公司现场大屏互动系统mobile.do.php接口存在文件上传漏洞](Web安全/其他软件/金华迪加网络科技有限公司/金华迪加网络科技有限公司现场大屏互动系统mobile.do.php接口存在文件上传漏洞.md)
-- **金和**（2）
-  - [金和OA C6 IncentivePlanFulfill.aspx SQL注入漏洞](Web安全/OA办公/金和/金和OA%20C6%20IncentivePlanFulfill.aspx%20SQL注入漏洞.md)
-  - [金和OA-C6-download.jsp-任意文件读取漏洞](Web安全/OA办公/金和/金和OA-C6-download.jsp-任意文件读取漏洞.md)
-- **金和 OA C6 GetHomeInfo**（1）
-  - [金和 OA C6 GetHomeInfo SQL 注入漏洞](Web安全/OA办公/金和%20OA%20C6%20GetHomeInfo/金和%20OA%20C6%20GetHomeInfo%20SQL%20注入漏洞.md)
-- **金和 OA C6 后台越权敏感文件遍历**（2）
-  - [金和 OA C6 后台越权敏感文件遍历漏洞 (没啥用的 0day~)](Web安全/OA办公/金和%20OA%20C6%20后台越权敏感文件遍历/金和%20OA%20C6%20后台越权敏感文件遍历漏洞%20%28没啥用的%200day~%29.md)
-  - [金和 OA C6 后台越权敏感文件遍历漏洞](Web安全/OA办公/金和%20OA%20C6%20后台越权敏感文件遍历/金和%20OA%20C6%20后台越权敏感文件遍历漏洞.md)
-- **金和OA**（4）
+- **金和OA**（10）
+  - [金和 OA C6 GetHomeInfo SQL 注入漏洞](Web安全/OA办公/金和OA/金和%20OA%20C6%20GetHomeInfo%20SQL%20注入漏洞.md)
+  - [金和 OA C6 后台越权敏感文件遍历漏洞 (没啥用的 0day~)](Web安全/OA办公/金和OA/金和%20OA%20C6%20后台越权敏感文件遍历漏洞%20%28没啥用的%200day~%29.md)
+  - [金和 OA C6 后台越权敏感文件遍历漏洞](Web安全/OA办公/金和OA/金和%20OA%20C6%20后台越权敏感文件遍历漏洞.md)
   - [金和C6 CallSystemShow.aspx SQL注入漏洞](Web安全/OA办公/金和OA/金和C6%20CallSystemShow.aspx%20SQL注入漏洞.md)
+  - [金和OA C6 ApproveRemindSetExec.aspx XXE漏洞复现(CNVD-2024-40568)](Web安全/OA办公/金和OA/金和OA%20C6%20ApproveRemindSetExec.aspx%20XXE漏洞复现%28CNVD-2024-40568%29.md)
+  - [金和OA C6 IncentivePlanFulfill.aspx SQL注入漏洞](Web安全/OA办公/金和OA/金和OA%20C6%20IncentivePlanFulfill.aspx%20SQL注入漏洞.md)
   - [金和OA C6 download.jsp 任意文件读取漏洞](Web安全/OA办公/金和OA/金和OA%20C6%20download.jsp%20任意文件读取漏洞.md)
   - [金和OA-C6 IncentivePlanFulfillAppprove sql注入漏洞](Web安全/OA办公/金和OA/金和OA-C6%20IncentivePlanFulfillAppprove%20sql注入漏洞.md)
   - [金和OA-C6-OpenFile.aspx-后台越权敏感文件遍历漏洞](Web安全/OA办公/金和OA/金和OA-C6-OpenFile.aspx-后台越权敏感文件遍历漏洞.md)
-- **金和OA C6 ApproveRemindSetExec.aspx XXE漏洞复现(CNVD**（1）
-  - [金和OA C6 ApproveRemindSetExec.aspx XXE漏洞复现(CNVD-2024-40568)](Web安全/OA办公/金和OA%20C6%20ApproveRemindSetExec.aspx%20XXE漏洞复现%28CNVD/金和OA%20C6%20ApproveRemindSetExec.aspx%20XXE漏洞复现%28CNVD-2024-40568%29.md)
+  - [金和OA-C6-download.jsp-任意文件读取漏洞](Web安全/OA办公/金和OA/金和OA-C6-download.jsp-任意文件读取漏洞.md)
 - **金山 V8 终端安全系统**（2）
   - [金山 V8 终端安全系统 get_file_content.php 任意文件读取漏洞](Web安全/其他软件/金山%20V8%20终端安全系统/金山%20V8%20终端安全系统%20get_file_content.php%20任意文件读取漏洞.md)
   - [金山 V8 终端安全系统 任意文件读取漏洞](Web安全/其他软件/金山%20V8%20终端安全系统/金山%20V8%20终端安全系统%20任意文件读取漏洞.md)
@@ -2911,51 +2701,49 @@
   - [金山VGM防毒墙downFile存在任意文件读取漏洞](Web安全/其他软件/金山VGM防毒墙downFile/金山VGM防毒墙downFile存在任意文件读取漏洞.md)
 - **金山终端安全系统V9.0**（1）
   - [金山终端安全系统V9.0SQL注入漏洞](Web安全/其他软件/金山终端安全系统V9.0/金山终端安全系统V9.0SQL注入漏洞.md)
-- **金盘图书馆系统**（1）
-  - [金盘图书馆系统download存在任意文件下载漏洞](Web安全/OA办公/金盘图书馆系统/金盘图书馆系统download存在任意文件下载漏洞.md)
+- **金盘图书馆**（2）
+  - [金盘图书馆系统doUpload存在任意文件上传漏洞](Web安全/商业软件/金盘图书馆/金盘图书馆系统doUpload存在任意文件上传漏洞.md)
+  - [金盘图书馆系统download存在任意文件下载漏洞](Web安全/商业软件/金盘图书馆/金盘图书馆系统download存在任意文件下载漏洞.md)
 - **金盘微信管理平台getsysteminfo接口**（1）
   - [金盘微信管理平台getsysteminfo接口未授权访问漏洞](Web安全/其他软件/金盘微信管理平台getsysteminfo接口/金盘微信管理平台getsysteminfo接口未授权访问漏洞.md)
-- **金航网上阅卷系统fileUpload**（1）
-  - [金航网上阅卷系统fileUpload任意文件上传漏洞](Web安全/OA办公/金航网上阅卷系统fileUpload/金航网上阅卷系统fileUpload任意文件上传漏洞.md)
-- **金蝶**（6）
+- **金航阅卷系统**（1）
+  - [金航网上阅卷系统fileUpload任意文件上传漏洞](Web安全/商业软件/金航阅卷系统/金航网上阅卷系统fileUpload任意文件上传漏洞.md)
+- **金蝶**（8）
   - [(166 条消息) 金蝶云星空 RCE 漏洞复现 OidBoy G 的博客 - CSDN 博客](Web安全/ERP企业/金蝶/%28166%20条消息%29%20金蝶云星空%20RCE%20漏洞复现%20OidBoy%20G%20的博客%20-%20CSDN%20博客.md)
   - [成功复现 金蝶云星空反序列化远程代码执行漏洞](Web安全/ERP企业/金蝶/成功复现%20金蝶云星空反序列化远程代码执行漏洞.md)
   - [漏洞复现： 金蝶 OA server file 目录遍历漏洞](Web安全/ERP企业/金蝶/漏洞复现：%20金蝶%20OA%20server%20file%20目录遍历漏洞.md)
   - [金蝶OA-EAS系统-uploadLogo.action-任意文件上传漏洞](Web安全/ERP企业/金蝶/金蝶OA-EAS系统-uploadLogo.action-任意文件上传漏洞.md)
   - [金蝶云星空反序列化远程代码执行漏洞复现](Web安全/ERP企业/金蝶/金蝶云星空反序列化远程代码执行漏洞复现.md)
   - [金蝶云星空远程代码执行漏洞](Web安全/ERP企业/金蝶/金蝶云星空远程代码执行漏洞.md)
+  - [金蝶OA EAS系统 uploadLogo.action 任意文件上传漏洞](Web安全/OA办公/金蝶/金蝶OA%20EAS系统%20uploadLogo.action%20任意文件上传漏洞.md)
+  - [金蝶OA云星空-ScpSupRegHandler-任意文件上传漏洞](Web安全/OA办公/金蝶/金蝶OA云星空-ScpSupRegHandler-任意文件上传漏洞.md)
 - **金蝶 EAS**（1）
   - [金蝶 EAS 反序列化 RCE 漏洞](Web安全/ERP企业/金蝶%20EAS/金蝶%20EAS%20反序列化%20RCE%20漏洞.md)
 - **金蝶-K3Cloud-BinaryFormatter**（1）
   - [金蝶-K3Cloud-BinaryFormatter-反序列化漏洞](Web安全/ERP企业/金蝶-K3Cloud-BinaryFormatter/金蝶-K3Cloud-BinaryFormatter-反序列化漏洞.md)
 - **金蝶EAS系统接口**（1）
   - [金蝶EAS系统接口任意文件读取](Web安全/ERP企业/金蝶EAS系统接口/金蝶EAS系统接口任意文件读取.md)
-- **金蝶OA EAS系统 uploadLogo.action**（1）
-  - [金蝶OA EAS系统 uploadLogo.action 任意文件上传漏洞](Web安全/OA办公/金蝶OA%20EAS系统%20uploadLogo.action/金蝶OA%20EAS系统%20uploadLogo.action%20任意文件上传漏洞.md)
-- **金蝶OA云星空-ScpSupRegHandler**（1）
-  - [金蝶OA云星空-ScpSupRegHandler-任意文件上传漏洞](Web安全/OA办公/金蝶OA云星空-ScpSupRegHandler/金蝶OA云星空-ScpSupRegHandler-任意文件上传漏洞.md)
 - **针对 0day Windows 内核特权提升**（1）
   - [针对 0day Windows 内核特权提升漏洞 (CVE-2024-21338) 的 PoC 漏洞发布](Web安全/其他软件/针对%200day%20Windows%20内核特权提升/针对%200day%20Windows%20内核特权提升漏洞%20%28CVE-2024-21338%29%20的%20PoC%20漏洞发布.md)
 - **针对WordPress插件**（1）
   - [针对WordPress插件漏洞的攻击数量激增](Web安全/CMS内容/针对WordPress插件/针对WordPress插件漏洞的攻击数量激增.md)
 - **银澎云计算 好视通视频会议系统**（1）
   - [银澎云计算 好视通视频会议系统 任意文件下载 (0day 来啦~)](Web安全/其他软件/银澎云计算%20好视通视频会议系统/银澎云计算%20好视通视频会议系统%20任意文件下载%20%280day%20来啦~%29.md)
-- **锐捷**（1）
+- **锐捷**（8）
+  - [关于锐捷命令执行漏洞的安全告知](Web安全/网络设备/锐捷/关于锐捷命令执行漏洞的安全告知.md)
+  - [接上一篇文章 锐捷 RG-EW1200G 其他两个 CVE 补充 有 RCE 附 POC](Web安全/网络设备/锐捷/接上一篇文章%20锐捷%20RG-EW1200G%20其他两个%20CVE%20补充%20有%20RCE%20附%20POC.md)
+  - [锐捷 SSL VPN 越权访问漏洞复现](Web安全/网络设备/锐捷/锐捷%20SSL%20VPN%20越权访问漏洞复现.md)
+  - [锐捷 Smartweb 管理系统 密码信息泄露漏洞 CNVD-2021-17369 (1day~)](Web安全/网络设备/锐捷/锐捷%20Smartweb%20管理系统%20密码信息泄露漏洞%20CNVD-2021-17369%20%281day~%29.md)
+  - [锐捷 Smartweb 管理系统 密码信息泄露漏洞 CNVD-2021-17369](Web安全/网络设备/锐捷/锐捷%20Smartweb%20管理系统%20密码信息泄露漏洞%20CNVD-2021-17369.md)
+  - [锐捷 云课堂主机 pool 目录遍历漏洞   孤桜懶契](Web安全/网络设备/锐捷/锐捷%20云课堂主机%20pool%20目录遍历漏洞%20%20%20孤桜懶契.md)
   - [锐捷RG-UAC统一上网行为管理审计系统账号密码信息泄露漏洞 CNVD-2021-14536](Web安全/网络设备/锐捷/锐捷RG-UAC统一上网行为管理审计系统账号密码信息泄露漏洞%20CNVD-2021-14536.md)
-- **锐捷 Smartweb 管理系统 密码信息**（2）
-  - [锐捷 Smartweb 管理系统 密码信息泄露漏洞 CNVD-2021-17369 (1day~)](Web安全/开发框架/锐捷%20Smartweb%20管理系统%20密码信息/锐捷%20Smartweb%20管理系统%20密码信息泄露漏洞%20CNVD-2021-17369%20%281day~%29.md)
-  - [锐捷 Smartweb 管理系统 密码信息泄露漏洞 CNVD-2021-17369](Web安全/开发框架/锐捷%20Smartweb%20管理系统%20密码信息/锐捷%20Smartweb%20管理系统%20密码信息泄露漏洞%20CNVD-2021-17369.md)
-- **锐捷 SSL VPN 越权访问**（1）
-  - [锐捷 SSL VPN 越权访问漏洞复现](Web安全/网络设备/锐捷%20SSL%20VPN%20越权访问/锐捷%20SSL%20VPN%20越权访问漏洞复现.md)
-- **锐捷 云课堂主机 pool 目录遍历**（1）
-  - [锐捷 云课堂主机 pool 目录遍历漏洞   孤桜懶契](Web安全/网络设备/锐捷%20云课堂主机%20pool%20目录遍历/锐捷%20云课堂主机%20pool%20目录遍历漏洞%20%20%20孤桜懶契.md)
-- **锐捷云课堂主机 目录遍历**（1）
-  - [锐捷云课堂主机 目录遍历漏洞](Web安全/网络设备/锐捷云课堂主机%20目录遍历/锐捷云课堂主机%20目录遍历漏洞.md)
+  - [锐捷云课堂主机 目录遍历漏洞](Web安全/网络设备/锐捷/锐捷云课堂主机%20目录遍历漏洞.md)
 - **锐明**（1）
   - [深圳市锐明技术股份有限公司Mangrove系统存在任意用户添加漏洞](Web安全/其他软件/锐明/深圳市锐明技术股份有限公司Mangrove系统存在任意用户添加漏洞.md)
-- **锦铭泰软件**（2）
+- **锦铭泰**（1）
+  - [广州锦铭泰软件科技有限公司F22服装管理软件系统index_login.asp存在信息泄漏漏洞](Web安全/商业软件/锦铭泰/广州锦铭泰软件科技有限公司F22服装管理软件系统index_login.asp存在信息泄漏漏洞.md)
+- **锦铭泰软件**（1）
   - [广州锦铭泰软件科技有限公司F22服装管理软件系统openfile.aspx前台任意文件下载](Web安全/其他软件/锦铭泰软件/广州锦铭泰软件科技有限公司F22服装管理软件系统openfile.aspx前台任意文件下载.md)
-  - [广州锦铭泰软件科技有限公司F22服装管理软件系统index_login.asp存在信息泄漏漏洞](Web安全/开发框架/锦铭泰软件/广州锦铭泰软件科技有限公司F22服装管理软件系统index_login.asp存在信息泄漏漏洞.md)
 - **附 EXP 常见的**（1）
   - [附 EXP 常见的未授权访问漏洞](Web安全/其他软件/附%20EXP%20常见的/附%20EXP%20常见的未授权访问漏洞.md)
 - **零视科技**（1）
@@ -2964,8 +2752,8 @@
   - [零视科技-H5S视频平台-GetUserInfo-信息泄漏漏洞-CNVD-2020-67113](Web安全/其他软件/零视科技-H5S视频平台-GetUserInfo-信息泄漏/零视科技-H5S视频平台-GetUserInfo-信息泄漏漏洞-CNVD-2020-67113.md)
 - **雷石天地电子**（1）
   - [北京雷石天地电子技术有限公司云视频管理系统存在目录遍历漏洞](Web安全/商业软件/雷石天地电子/北京雷石天地电子技术有限公司云视频管理系统存在目录遍历漏洞.md)
-- **青铜器RDM研发管理平台**（1）
-  - [青铜器RDM研发管理平台upload存在任意文件上传漏洞](Web安全/OA办公/青铜器RDM研发管理平台/青铜器RDM研发管理平台upload存在任意文件上传漏洞.md)
+- **青铜器RDM**（1）
+  - [青铜器RDM研发管理平台upload存在任意文件上传漏洞](Web安全/商业软件/青铜器RDM/青铜器RDM研发管理平台upload存在任意文件上传漏洞.md)
 - **顺景**（4）
   - [顺景ERP DownloadGetFile 任意文件读取漏洞](Web安全/OA办公/顺景/顺景ERP%20DownloadGetFile%20任意文件读取漏洞.md)
   - [顺景ERP UploadInvtSpBuzPlanFile 处任意文件上传致RCE漏洞](Web安全/OA办公/顺景/顺景ERP%20UploadInvtSpBuzPlanFile%20处任意文件上传致RCE漏洞.md)
@@ -2975,24 +2763,20 @@
   - [飞企互联-FE企业运营管理平台 uploadAttachmentServlet 任意文件上传漏洞](Web安全/OA办公/飞企互联/飞企互联-FE企业运营管理平台%20uploadAttachmentServlet%20任意文件上传漏洞.md)
 - **飞塔 FortiSandbox**（1）
   - [飞塔 FortiSandbox XSS漏洞允许攻击者执行任意命令](Web安全/网络设备/飞塔%20FortiSandbox/飞塔%20FortiSandbox%20XSS漏洞允许攻击者执行任意命令.md)
-- **飞视美-视频会议系统-Struts2**（1）
-  - [飞视美-视频会议系统-Struts2-远程命令执行漏洞](Web安全/开发框架/飞视美-视频会议系统-Struts2/飞视美-视频会议系统-Struts2-远程命令执行漏洞.md)
+- **飞视美**（1）
+  - [飞视美-视频会议系统-Struts2-远程命令执行漏洞](Web安全/商业软件/飞视美/飞视美-视频会议系统-Struts2-远程命令执行漏洞.md)
 - **飞讯云**（2）
   - [飞讯云-WMS MyDownMyImportData 前台SQL注入漏洞(XVE-2024-18113)](Web安全/商业软件/飞讯云/飞讯云-WMS%20MyDownMyImportData%20前台SQL注入漏洞%28XVE-2024-18113%29.md)
   - [飞讯云供应链平台MyImportData前台SQL注入](Web安全/商业软件/飞讯云/飞讯云供应链平台MyImportData前台SQL注入.md)
-- **飞鱼星**（6）
+- **飞鱼星**（8）
+  - [飞鱼星 企业级智能上网行为管理系统 权限绕过信息泄露漏洞](Web安全/网络设备/飞鱼星/飞鱼星%20企业级智能上网行为管理系统%20权限绕过信息泄露漏洞.md)
+  - [飞鱼星 家用智能路由 cookie-cgi 权限绕过](Web安全/网络设备/飞鱼星/飞鱼星%20家用智能路由%20cookie-cgi%20权限绕过.md)
   - [飞鱼星下一代防火墙安全网关aaa_portal_auth_wchat_submit存在远程命令执行漏洞](Web安全/网络设备/飞鱼星/飞鱼星下一代防火墙安全网关aaa_portal_auth_wchat_submit存在远程命令执行漏洞.md)
   - [飞鱼星家用智能路由存在敏感信息泄露漏洞](Web安全/网络设备/飞鱼星/飞鱼星家用智能路由存在敏感信息泄露漏洞.md)
   - [飞鱼星家用智能路由存在权限绕过漏洞](Web安全/网络设备/飞鱼星/飞鱼星家用智能路由存在权限绕过漏洞.md)
   - [飞鱼星智能上网行为管理系统send_order存在远程命令执行漏洞](Web安全/网络设备/飞鱼星/飞鱼星智能上网行为管理系统send_order存在远程命令执行漏洞.md)
   - [飞鱼星智能上网行为管理系统存在敏感信息泄露漏洞](Web安全/网络设备/飞鱼星/飞鱼星智能上网行为管理系统存在敏感信息泄露漏洞.md)
   - [飞鱼星智能上网行为管理系统存在权限绕过漏洞](Web安全/网络设备/飞鱼星/飞鱼星智能上网行为管理系统存在权限绕过漏洞.md)
-- **飞鱼星 企业级智能上网行为管理系统 权限**（1）
-  - [飞鱼星 企业级智能上网行为管理系统 权限绕过信息泄露漏洞](Web安全/网络设备/飞鱼星%20企业级智能上网行为管理系统%20权限/飞鱼星%20企业级智能上网行为管理系统%20权限绕过信息泄露漏洞.md)
-- **飞鱼星 家用智能路由 cookie-cgi 权限**（1）
-  - [飞鱼星 家用智能路由 cookie-cgi 权限绕过](Web安全/网络设备/飞鱼星%20家用智能路由%20cookie-cgi%20权限/飞鱼星%20家用智能路由%20cookie-cgi%20权限绕过.md)
-- **首发 1day GeoServer**（1）
-  - [首发 1day GeoServer 任意文件上传详解（附 poc）](Web安全/中间件/首发%201day%20GeoServer/首发%201day%20GeoServer%20任意文件上传详解（附%20poc）.md)
 - **首次分析 Apple 的 USB 限制模式**（1）
   - [首次分析 Apple 的 USB 限制模式绕过 (CVE-2025-24200)](Web安全/其他软件/首次分析%20Apple%20的%20USB%20限制模式/首次分析%20Apple%20的%20USB%20限制模式绕过%20%28CVE-2025-24200%29.md)
 - **驰骋**（1）
@@ -3011,17 +2795,13 @@
 - **高通修复已遭利用的高危0day**（1）
   - [高通修复已遭利用的高危0day漏洞](Web安全/其他软件/高通修复已遭利用的高危0day/高通修复已遭利用的高危0day漏洞.md)
 - **魔方网表**（1）
-  - [魔方网表mailupdate接口存在任意文件上传漏洞](Web安全/AI应用/魔方网表/魔方网表mailupdate接口存在任意文件上传漏洞.md)
+  - [魔方网表mailupdate接口存在任意文件上传漏洞](Web安全/商业软件/魔方网表/魔方网表mailupdate接口存在任意文件上传漏洞.md)
 - **黑客利用 Breeze Cache 插件**（1）
   - [黑客利用 Breeze Cache 插件漏洞（CVE-2026-3844）发起攻击，超 40 万个网站面临安全风险](Web安全/其他软件/黑客利用%20Breeze%20Cache%20插件/黑客利用%20Breeze%20Cache%20插件漏洞（CVE-2026-3844）发起攻击，超%2040%20万个网站面临安全风险.md)
 - **黑客利用 React Native CLI 的**（1）
   - [黑客利用 React Native CLI 的漏洞在公开披露前部署了 Rust 恶意软件](Web安全/其他软件/黑客利用%20React%20Native%20CLI%20的/黑客利用%20React%20Native%20CLI%20的漏洞在公开披露前部署了%20Rust%20恶意软件.md)
-- **黑客利用 Windows SmartScreen**（1）
-  - [黑客利用 Windows SmartScreen 漏洞投放 DarkGate 恶意软件](Web安全/开发框架/黑客利用%20Windows%20SmartScreen/黑客利用%20Windows%20SmartScreen%20漏洞投放%20DarkGate%20恶意软件.md)
 - **黑客利用Windows**（1）
   - [黑客利用Windows 漏洞-盲文“空格”进行零日攻击](Web安全/其他软件/黑客利用Windows/黑客利用Windows%20漏洞-盲文“空格”进行零日攻击.md)
-- **黑客可将**（1）
-  - [黑客可将存在漏洞的 LiteLLM AI 网关转化为获取 root 权限和窃取云凭证的途径](Web安全/AI应用/黑客可将/黑客可将存在漏洞的%20LiteLLM%20AI%20网关转化为获取%20root%20权限和窃取云凭证的途径.md)
 - **黑客正在利用 Wing FTP 服务器中的关键**（1）
   - [黑客正在利用 Wing FTP 服务器中的关键 RCE 漏洞(CVE-2025-47812)](Web安全/服务器软件/黑客正在利用%20Wing%20FTP%20服务器中的关键/黑客正在利用%20Wing%20FTP%20服务器中的关键%20RCE%20漏洞%28CVE-2025-47812%29.md)
 - **黑客自 8 月以来频繁利用公开**（1）
@@ -3042,40 +2822,25 @@
   - [龙采商城系统存在未授权修改文章title](Web安全/商业软件/龙采科技集团有限责任公司/龙采商城系统存在未授权修改文章title.md)
   - [龙采商城系统存在未授权添加会员登录](Web安全/商业软件/龙采科技集团有限责任公司/龙采商城系统存在未授权添加会员登录.md)
   - [龙采商城系统新人礼包权限开关处存在未授权SQL注入](Web安全/商业软件/龙采科技集团有限责任公司/龙采商城系统新人礼包权限开关处存在未授权SQL注入.md)
-- **Acmailer邮件系统**（1）
-  - [Acmailer邮件系统init_ctl存在远程命令执行漏洞](Web安全/AI应用/Acmailer邮件系统/Acmailer邮件系统init_ctl存在远程命令执行漏洞.md)
+- **Acmailer**（1）
+  - [Acmailer邮件系统init_ctl存在远程命令执行漏洞](Web安全/邮件系统/Acmailer/Acmailer邮件系统init_ctl存在远程命令执行漏洞.md)
 - **ACME**（1）
   - [ACME Mini_httpd 任意文件读取漏洞 CVE-2018-18778](Web安全/中间件/ACME/ACME%20Mini_httpd%20任意文件读取漏洞%20CVE-2018-18778.md)
 - **Acronis**（1）
   - [Acronis备份插件漏洞已被利用，攻击者可获取更高的Linux权限](Web安全/其他软件/Acronis/Acronis备份插件漏洞已被利用，攻击者可获取更高的Linux权限.md)
-- **Active**（3）
+- **Active**（2）
   - [Active UC index.action 远程命令执行漏洞](Web安全/其他软件/Active/Active%20UC%20index.action%20远程命令执行漏洞.md)
   - [利用 NTLM 反射掌控 Active Directory（CVE-2025-33073）](Web安全/其他软件/Active/利用%20NTLM%20反射掌控%20Active%20Directory（CVE-2025-33073）.md)
-  - [CVE-2026-20262_ CISCO Catalyst SD-WAN Flaw Under Active Targeted Explo](Web安全/网络设备/Active/CVE-2026-20262_%20CISCO%20Catalyst%20SD-WAN%20Flaw%20Under%20Active%20Targeted%20Explo.md)
-- **Active Directory Domain Se**（1）
-  - [Active Directory Domain Services 权限提升漏洞 (CVE-2025-21293)](Web安全/AI应用/Active%20Directory%20Domain%20Se/Active%20Directory%20Domain%20Services%20权限提升漏洞%20%28CVE-2025-21293%29.md)
+- **Active Directory**（1）
+  - [Active Directory Domain Services 权限提升漏洞 (CVE-2025-21293)](Web安全/云平台/Active%20Directory/Active%20Directory%20Domain%20Services%20权限提升漏洞%20%28CVE-2025-21293%29.md)
 - **Active Directory 域服务特权提升**（1）
   - [Active Directory 域服务特权提升漏洞 CVE-2022–26923](Web安全/其他软件/Active%20Directory%20域服务特权提升/Active%20Directory%20域服务特权提升漏洞%20CVE-2022–26923.md)
 - **Active-UC-index.action-**（1）
   - [Active-UC-index.action-远程命令执行漏洞](Web安全/其他软件/Active-UC-index.action-/Active-UC-index.action-远程命令执行漏洞.md)
-- **ActiveMQ**（15）
-  - [ACTI-视频监控images存在任意文件读取漏洞](Web安全/中间件/ActiveMQ/ACTI-视频监控images存在任意文件读取漏洞.md)
-  - [ActiveMQ 任意文件上传漏洞 - 白阁文库](Web安全/中间件/ActiveMQ/ActiveMQ%20任意文件上传漏洞%20-%20白阁文库.md)
-  - [ActiveMQ 漏洞总结](Web安全/中间件/ActiveMQ/ActiveMQ%20漏洞总结.md)
-  - [ActiveMQ物理路径泄漏漏洞](Web安全/中间件/ActiveMQ/ActiveMQ物理路径泄漏漏洞.md)
-  - [Apache ActiveMQ 任意文件写入漏洞 CVE-2016-3088](Web安全/中间件/ActiveMQ/Apache%20ActiveMQ%20任意文件写入漏洞%20CVE-2016-3088.md)
-  - [Apache ActiveMQ 反序列化漏洞 CVE-2015-5254](Web安全/中间件/ActiveMQ/Apache%20ActiveMQ%20反序列化漏洞%20CVE-2015-5254.md)
-  - [Apache ActiveMQ 远程代码执行漏洞 CVE-2023-46604](Web安全/中间件/ActiveMQ/Apache%20ActiveMQ%20远程代码执行漏洞%20CVE-2023-46604.md)
-  - [Apache-ActiveMQ-Jolokia-API-未授权访问漏洞-CVE-2024-32114](Web安全/中间件/ActiveMQ/Apache-ActiveMQ-Jolokia-API-未授权访问漏洞-CVE-2024-32114.md)
-  - [Apache-ActiveMQ-Jolokia-后台远程代码执行漏洞-CVE-2022-41678](Web安全/中间件/ActiveMQ/Apache-ActiveMQ-Jolokia-后台远程代码执行漏洞-CVE-2022-41678.md)
-  - [Apache-ActiveMQ-Jolokia-远程代码执行漏洞-CVE-2026-34197](Web安全/中间件/ActiveMQ/Apache-ActiveMQ-Jolokia-远程代码执行漏洞-CVE-2026-34197.md)
-  - [Apache-ActiveMQ-OpenWire-协议反序列化命令执行漏洞-CVE-2023-46604](Web安全/中间件/ActiveMQ/Apache-ActiveMQ-OpenWire-协议反序列化命令执行漏洞-CVE-2023-46604.md)
-  - [（CVE-2015-1830）ActiveMQ 路径遍历导致未经身份验证的rce](Web安全/中间件/ActiveMQ/（CVE-2015-1830）ActiveMQ%20路径遍历导致未经身份验证的rce.md)
-  - [（CVE-2015-5254）ActiveMQ 反序列化漏洞](Web安全/中间件/ActiveMQ/（CVE-2015-5254）ActiveMQ%20反序列化漏洞.md)
-  - [（CVE-2016-3088）ActiveMQ应用漏洞](Web安全/中间件/ActiveMQ/（CVE-2016-3088）ActiveMQ应用漏洞.md)
-  - [（CVE-2017-15709）ActiveMQ 信息泄漏漏洞](Web安全/中间件/ActiveMQ/（CVE-2017-15709）ActiveMQ%20信息泄漏漏洞.md)
 - **AD**（1）
   - [AD域内网渗透-三种漏洞利用方式](Web安全/其他软件/AD/AD域内网渗透-三种漏洞利用方式.md)
+- **Adaptec maxView**（1）
+  - [maxViewStorageManager系统dynamiccontent.properties.xhtml远程代码执行漏洞](Web安全/服务器软件/Adaptec%20maxView/maxViewStorageManager系统dynamiccontent.properties.xhtml远程代码执行漏洞.md)
 - **Adminer**（5）
   - [Adminer 任意文件读取漏洞](Web安全/数据库/Adminer/Adminer%20任意文件读取漏洞.md)
   - [Adminer-SSRF漏洞 CVE-2021-21311](Web安全/数据库/Adminer/Adminer-SSRF漏洞%20CVE-2021-21311.md)
@@ -3114,20 +2879,41 @@
   - [Afterlogic Aurora & WebMail Pro 文件上传漏洞 CVE-2021-26293](Web安全/邮件系统/Afterlogic/Afterlogic%20Aurora%20&%20WebMail%20Pro%20文件上传漏洞%20CVE-2021-26293.md)
   - [Afterlogic-Aurora-&-WebMail-Pro-任意文件读取-CVE-2021-26294](Web安全/邮件系统/Afterlogic/Afterlogic-Aurora-&-WebMail-Pro-任意文件读取-CVE-2021-26294.md)
   - [Afterlogic-Aurora-&-WebMail-Pro-文件上传漏洞-CVE-2021-26293](Web安全/邮件系统/Afterlogic/Afterlogic-Aurora-&-WebMail-Pro-文件上传漏洞-CVE-2021-26293.md)
-- **AI**（7）
-  - [AI大模型网关存在SQL注入漏洞、附 POC 复现、影响版本LiteLLM 1.81.16~1.83.7（CVE-2026-42208）](Web安全/AI应用/AI/AI大模型网关存在SQL注入漏洞、附%20POC%20复现、影响版本LiteLLM%201.81.16~1.83.7（CVE-2026-42208）.md)
-  - [AI机器人硬件开发 _ 网络安全攻防实战 _ 区块链技术文档教程 - 免费资源平台_哪吒监控面板高危漏洞（CVE-2026-53519）深度](Web安全/AI应用/AI/AI机器人硬件开发%20_%20网络安全攻防实战%20_%20区块链技术文档教程%20-%20免费资源平台_哪吒监控面板高危漏洞（CVE-2026-53519）深度.md)
-  - [AI用户务必关注，Langflow未授权RCE分析（CVE-2026-33017）](Web安全/AI应用/AI/AI用户务必关注，Langflow未授权RCE分析（CVE-2026-33017）.md)
-  - [CVE-2024-12856 四信Four-Faith路由器存在命令注入漏洞](Web安全/AI应用/AI/CVE-2024-12856%20四信Four-Faith路由器存在命令注入漏洞.md)
-  - [CVE-2025-26319：FlowiseAI未授权任意文件写入漏洞](Web安全/AI应用/AI/CVE-2025-26319：FlowiseAI未授权任意文件写入漏洞.md)
-  - [CVE-2026-22686：AI代理沙箱的完美逃逸](Web安全/AI应用/AI/CVE-2026-22686：AI代理沙箱的完美逃逸.md)
-  - [CVE-2026-42824：Copilot SearchLeak 漏洞，AI 化身数据窃密内鬼](Web安全/AI应用/AI/CVE-2026-42824：Copilot%20SearchLeak%20漏洞，AI%20化身数据窃密内鬼.md)
 - **AiPy**（1）
   - [AiPy 再获 OpenVPN 官方致谢：发现并协助修复多个安全漏洞](Web安全/AI应用/AiPy/AiPy 再获 OpenVPN 官方致谢：发现并协助修复多个安全漏洞.md)
+- **Airin Blog**（1）
+  - [DMC Airin Blog Plugin 反序列化 CVE-2024-52413分析](Web安全/CMS内容/Airin%20Blog/DMC%20Airin%20Blog%20Plugin%20反序列化%20CVE-2024-52413分析.md)
+- **AI综合**（8）
+  - [AI大模型网关存在SQL注入漏洞、附 POC 复现、影响版本LiteLLM 1.81.16~1.83.7（CVE-2026-42208）](Web安全/AI应用/AI综合/AI大模型网关存在SQL注入漏洞、附%20POC%20复现、影响版本LiteLLM%201.81.16~1.83.7（CVE-2026-42208）.md)
+  - [AI机器人硬件开发 _ 网络安全攻防实战 _ 区块链技术文档教程 - 免费资源平台_哪吒监控面板高危漏洞（CVE-2026-53519）深度](Web安全/AI应用/AI综合/AI机器人硬件开发%20_%20网络安全攻防实战%20_%20区块链技术文档教程%20-%20免费资源平台_哪吒监控面板高危漏洞（CVE-2026-53519）深度.md)
+  - [AI用户务必关注，Langflow未授权RCE分析（CVE-2026-33017）](Web安全/AI应用/AI综合/AI用户务必关注，Langflow未授权RCE分析（CVE-2026-33017）.md)
+  - [CVE-2024-12856 四信Four-Faith路由器存在命令注入漏洞](Web安全/AI应用/AI综合/CVE-2024-12856%20四信Four-Faith路由器存在命令注入漏洞.md)
+  - [CVE-2025-26319：FlowiseAI未授权任意文件写入漏洞](Web安全/AI应用/AI综合/CVE-2025-26319：FlowiseAI未授权任意文件写入漏洞.md)
+  - [CVE-2026-22686：AI代理沙箱的完美逃逸](Web安全/AI应用/AI综合/CVE-2026-22686：AI代理沙箱的完美逃逸.md)
+  - [CVE-2026-42824：Copilot SearchLeak 漏洞，AI 化身数据窃密内鬼](Web安全/AI应用/AI综合/CVE-2026-42824：Copilot%20SearchLeak%20漏洞，AI%20化身数据窃密内鬼.md)
+  - [LLM 推理引擎 llama.cpp 零点击 RCE 漏洞：从 Null Buffer 到绕过 PIE∕Full RELRO∕NX 利用链(](Web安全/AI应用/AI综合/LLM%20推理引擎%20llama.cpp%20零点击%20RCE%20漏洞：从%20Null%20Buffer%20到绕过%20PIE∕Full%20RELRO∕NX%20利用链%28.md)
 - **AJ-Report-认证**（1）
   - [AJ-Report-认证绕过与远程代码执行漏洞-CNVD-2024-15077](Web安全/其他软件/AJ-Report-认证/AJ-Report-认证绕过与远程代码执行漏洞-CNVD-2024-15077.md)
-- **Alibaba Nacos**（1）
+- **Alibaba Nacos**（19）
   - [Alibaba Nacos 权限认证绕过漏洞复现](Web安全/中间件/Alibaba%20Nacos/Alibaba%20Nacos%20权限认证绕过漏洞复现.md)
+  - [Nacos 惊现安全漏洞修复后问题仍旧存在 一个天秤座的架构师 - CSDN 博客](Web安全/中间件/Alibaba%20Nacos/Nacos%20惊现安全漏洞修复后问题仍旧存在%20一个天秤座的架构师%20-%20CSDN%20博客.md)
+  - [Nacos 漏洞利用 Poc 整理](Web安全/中间件/Alibaba%20Nacos/Nacos%20漏洞利用%20Poc%20整理.md)
+  - [Nacos 认证绕过漏洞 CVE-2021-29441](Web安全/中间件/Alibaba%20Nacos/Nacos%20认证绕过漏洞%20CVE-2021-29441.md)
+  - [Nacos-未授权接口命令执行漏洞-CVE-2021-29442](Web安全/中间件/Alibaba%20Nacos/Nacos-未授权接口命令执行漏洞-CVE-2021-29442.md)
+  - [Nacos-未授权访问漏洞](Web安全/中间件/Alibaba%20Nacos/Nacos-未授权访问漏洞.md)
+  - [NacosDerby远程命令执行漏洞(QVD-2024-26473)](Web安全/中间件/Alibaba%20Nacos/NacosDerby远程命令执行漏洞%28QVD-2024-26473%29.md)
+  - [Nacos存在Hessian反序列化漏洞](Web安全/中间件/Alibaba%20Nacos/Nacos存在Hessian反序列化漏洞.md)
+  - [Nacos存在SQL注入漏洞](Web安全/中间件/Alibaba%20Nacos/Nacos存在SQL注入漏洞.md)
+  - [Nacos存在SpringbootActuator未授权漏洞](Web安全/中间件/Alibaba%20Nacos/Nacos存在SpringbootActuator未授权漏洞.md)
+  - [Nacos存在serviceSync未授权访问漏洞](Web安全/中间件/Alibaba%20Nacos/Nacos存在serviceSync未授权访问漏洞.md)
+  - [Nacos存在未授权下载配置信息漏洞](Web安全/中间件/Alibaba%20Nacos/Nacos存在未授权下载配置信息漏洞.md)
+  - [Nacos存在版本信息泄露](Web安全/中间件/Alibaba%20Nacos/Nacos存在版本信息泄露.md)
+  - [Nacos存在默认口令漏洞](Web安全/中间件/Alibaba%20Nacos/Nacos存在默认口令漏洞.md)
+  - [Nacos未授权访问漏洞(CVE-2021-29441)](Web安全/中间件/Alibaba%20Nacos/Nacos未授权访问漏洞%28CVE-2021-29441%29.md)
+  - [Nacos默认key导致权限绕过登陆漏洞](Web安全/中间件/Alibaba%20Nacos/Nacos默认key导致权限绕过登陆漏洞.md)
+  - [Nacos默认key导致权限绕过登陆漏洞 附POC](Web安全/中间件/Alibaba%20Nacos/Nacos默认key导致权限绕过登陆漏洞 附POC.md)
+  - [漏洞分析 原创 Nacos 历史 + 最新漏洞详细分析 (附利用方法)](Web安全/中间件/Alibaba%20Nacos/漏洞分析%20原创%20Nacos%20历史%20+%20最新漏洞详细分析%20%28附利用方法%29.md)
+  - [那些年我们一起追过的 Nacos](Web安全/中间件/Alibaba%20Nacos/那些年我们一起追过的%20Nacos.md)
 - **Amazon**（1）
   - [打开一个恶意仓库就能偷走你的云账号：Amazon Q 插件高危漏洞分析](Web安全/其他软件/Amazon/打开一个恶意仓库就能偷走你的云账号：Amazon%20Q%20插件高危漏洞分析.md)
 - **Amcrest**（1）
@@ -3143,7 +2929,7 @@
   - [谷歌警告：Android内核漏洞正在被活跃攻击](Web安全/其他软件/Android/谷歌警告：Android内核漏洞正在被活跃攻击.md)
   - [魔形女再袭？最新Android通杀漏洞CVE-2024-31317分析与利用研究](Web安全/其他软件/Android/魔形女再袭？最新Android通杀漏洞CVE-2024-31317分析与利用研究.md)
   - [Android 安全（九）--WebView 远程代码执行漏洞](Web安全/桌面软件/Android/Android%20安全（九）--WebView%20远程代码执行漏洞.md)
-  - [Android、佳能漏洞已修复，Fortinet警告零日漏洞](Web安全/网络设备/Android/Android、佳能漏洞已修复，Fortinet警告零日漏洞.md)
+  - [Android、佳能漏洞已修复，Fortinet警告零日漏洞](Web安全/桌面软件/Android/Android、佳能漏洞已修复，Fortinet警告零日漏洞.md)
 - **AnyDesk**（2）
   - [AnyDesk 漏洞PoC发布，利用该漏洞通过壁纸获取管理员权限](Web安全/其他软件/AnyDesk/AnyDesk%20漏洞PoC发布，利用该漏洞通过壁纸获取管理员权限.md)
   - [CVE-2024-52940 AnyDesk信息泄露漏洞复现](Web安全/其他软件/AnyDesk/CVE-2024-52940%20AnyDesk信息泄露漏洞复现.md)
@@ -3207,28 +2993,44 @@
   - [（CVE-2007-6750）Apache ddos](Web安全/中间件/Apache/（CVE-2007-6750）Apache%20ddos.md)
   - [（CVE-2017-15715）Apache解析漏洞](Web安全/中间件/Apache/（CVE-2017-15715）Apache解析漏洞.md)
   - [（CVE-2019-0211）Apache HTTP 服务组件提权漏洞](Web安全/中间件/Apache/（CVE-2019-0211）Apache%20HTTP%20服务组件提权漏洞.md)
-- **Apache ActiveMQ**（3）
+- **Apache ActiveMQ**（20）
   - [ (429)](Web安全/中间件/Apache%20ActiveMQ/%20%28429%29.md)
+  - [ACTI-视频监控images存在任意文件读取漏洞](Web安全/中间件/Apache%20ActiveMQ/ACTI-视频监控images存在任意文件读取漏洞.md)
+  - [ActiveMQ 任意文件上传漏洞 - 白阁文库](Web安全/中间件/Apache%20ActiveMQ/ActiveMQ%20任意文件上传漏洞%20-%20白阁文库.md)
+  - [ActiveMQ 漏洞总结](Web安全/中间件/Apache%20ActiveMQ/ActiveMQ%20漏洞总结.md)
+  - [ActiveMQ物理路径泄漏漏洞](Web安全/中间件/Apache%20ActiveMQ/ActiveMQ物理路径泄漏漏洞.md)
+  - [Apache ActiveMQ Classic 重大 RCE 研究：CVE-2026-34197 及其补丁绕过 CVE-2026-42588](Web安全/中间件/Apache%20ActiveMQ/Apache%20ActiveMQ%20Classic%20重大%20RCE%20研究：CVE-2026-34197%20及其补丁绕过%20CVE-2026-42588.md)
   - [Apache ActiveMQ RCE 漏洞复现（附 EXP）](Web安全/中间件/Apache%20ActiveMQ/Apache%20ActiveMQ%20RCE%20漏洞复现（附%20EXP）.md)
+  - [Apache ActiveMQ 任意文件写入漏洞 CVE-2016-3088](Web安全/中间件/Apache%20ActiveMQ/Apache%20ActiveMQ%20任意文件写入漏洞%20CVE-2016-3088.md)
+  - [Apache ActiveMQ 反序列化漏洞 CVE-2015-5254](Web安全/中间件/Apache%20ActiveMQ/Apache%20ActiveMQ%20反序列化漏洞%20CVE-2015-5254.md)
   - [Apache ActiveMQ 漏洞让攻击者触发 DoS 条件](Web安全/中间件/Apache%20ActiveMQ/Apache%20ActiveMQ%20漏洞让攻击者触发%20DoS%20条件.md)
-- **Apache ActiveMQ Classic**（1）
-  - [Apache ActiveMQ Classic 重大 RCE 研究：CVE-2026-34197 及其补丁绕过 CVE-2026-42588](Web安全/中间件/Apache%20ActiveMQ%20Classic/Apache%20ActiveMQ%20Classic%20重大%20RCE%20研究：CVE-2026-34197%20及其补丁绕过%20CVE-2026-42588.md)
+  - [Apache ActiveMQ 远程代码执行漏洞 CVE-2023-46604](Web安全/中间件/Apache%20ActiveMQ/Apache%20ActiveMQ%20远程代码执行漏洞%20CVE-2023-46604.md)
+  - [Apache-ActiveMQ-Jolokia-API-未授权访问漏洞-CVE-2024-32114](Web安全/中间件/Apache%20ActiveMQ/Apache-ActiveMQ-Jolokia-API-未授权访问漏洞-CVE-2024-32114.md)
+  - [Apache-ActiveMQ-Jolokia-后台远程代码执行漏洞-CVE-2022-41678](Web安全/中间件/Apache%20ActiveMQ/Apache-ActiveMQ-Jolokia-后台远程代码执行漏洞-CVE-2022-41678.md)
+  - [Apache-ActiveMQ-Jolokia-远程代码执行漏洞-CVE-2026-34197](Web安全/中间件/Apache%20ActiveMQ/Apache-ActiveMQ-Jolokia-远程代码执行漏洞-CVE-2026-34197.md)
+  - [Apache-ActiveMQ-OpenWire-协议反序列化命令执行漏洞-CVE-2023-46604](Web安全/中间件/Apache%20ActiveMQ/Apache-ActiveMQ-OpenWire-协议反序列化命令执行漏洞-CVE-2023-46604.md)
+  - [九维团队 - 红队（突破）  ActiveMQ RCE 漏洞利用](Web安全/中间件/Apache%20ActiveMQ/九维团队%20-%20红队（突破）%20%20ActiveMQ%20RCE%20漏洞利用.md)
+  - [（CVE-2015-1830）ActiveMQ 路径遍历导致未经身份验证的rce](Web安全/中间件/Apache%20ActiveMQ/（CVE-2015-1830）ActiveMQ%20路径遍历导致未经身份验证的rce.md)
+  - [（CVE-2015-5254）ActiveMQ 反序列化漏洞](Web安全/中间件/Apache%20ActiveMQ/（CVE-2015-5254）ActiveMQ%20反序列化漏洞.md)
+  - [（CVE-2016-3088）ActiveMQ应用漏洞](Web安全/中间件/Apache%20ActiveMQ/（CVE-2016-3088）ActiveMQ应用漏洞.md)
+  - [（CVE-2017-15709）ActiveMQ 信息泄漏漏洞](Web安全/中间件/Apache%20ActiveMQ/（CVE-2017-15709）ActiveMQ%20信息泄漏漏洞.md)
 - **Apache Airflow**（10）
-  - [ (326)](Web安全/AI应用/Apache%20Airflow/%20%28326%29.md)
-  - [ (419)](Web安全/AI应用/Apache%20Airflow/%20%28419%29.md)
-  - [ (474)](Web安全/AI应用/Apache%20Airflow/%20%28474%29.md)
-  - [ (68)](Web安全/AI应用/Apache%20Airflow/%20%2868%29.md)
-  - [Apache Airflow 示例DAG中的命令注入 CVE-2020-11978](Web安全/AI应用/Apache%20Airflow/Apache%20Airflow%20示例DAG中的命令注入%20CVE-2020-11978.md)
-  - [Apache-Airflow-Celery-消息中间件命令执行-CVE-2020-11981](Web安全/AI应用/Apache%20Airflow/Apache-Airflow-Celery-消息中间件命令执行-CVE-2020-11981.md)
-  - [Apache-Airflow-默认密钥导致的权限绕过-CVE-2020-17526](Web安全/AI应用/Apache%20Airflow/Apache-Airflow-默认密钥导致的权限绕过-CVE-2020-17526.md)
-  - [CVE-2022-24288：Apache Airflow OS 命令注入漏洞](Web安全/AI应用/Apache%20Airflow/CVE-2022-24288：Apache%20Airflow%20OS%20命令注入漏洞.md)
-  - [（CVE-2019-0216）Apache Airflow 储存型xss](Web安全/AI应用/Apache%20Airflow/（CVE-2019-0216）Apache%20Airflow%20储存型xss.md)
-  - [（CVE-2020-11978）Apache Airflow 命令注入漏洞](Web安全/AI应用/Apache%20Airflow/（CVE-2020-11978）Apache%20Airflow%20命令注入漏洞.md)
-- **Apache APISIX**（2）
+  - [ (326)](Web安全/中间件/Apache%20Airflow/%20%28326%29.md)
+  - [ (419)](Web安全/中间件/Apache%20Airflow/%20%28419%29.md)
+  - [ (474)](Web安全/中间件/Apache%20Airflow/%20%28474%29.md)
+  - [ (68)](Web安全/中间件/Apache%20Airflow/%20%2868%29.md)
+  - [Apache Airflow 示例DAG中的命令注入 CVE-2020-11978](Web安全/中间件/Apache%20Airflow/Apache%20Airflow%20示例DAG中的命令注入%20CVE-2020-11978.md)
+  - [Apache-Airflow-Celery-消息中间件命令执行-CVE-2020-11981](Web安全/中间件/Apache%20Airflow/Apache-Airflow-Celery-消息中间件命令执行-CVE-2020-11981.md)
+  - [Apache-Airflow-默认密钥导致的权限绕过-CVE-2020-17526](Web安全/中间件/Apache%20Airflow/Apache-Airflow-默认密钥导致的权限绕过-CVE-2020-17526.md)
+  - [CVE-2022-24288：Apache Airflow OS 命令注入漏洞](Web安全/中间件/Apache%20Airflow/CVE-2022-24288：Apache%20Airflow%20OS%20命令注入漏洞.md)
+  - [（CVE-2019-0216）Apache Airflow 储存型xss](Web安全/中间件/Apache%20Airflow/（CVE-2019-0216）Apache%20Airflow%20储存型xss.md)
+  - [（CVE-2020-11978）Apache Airflow 命令注入漏洞](Web安全/中间件/Apache%20Airflow/（CVE-2020-11978）Apache%20Airflow%20命令注入漏洞.md)
+- **Apache APISIX**（3）
+  - [0day EXP Apache APISIX 2.12.1 远程执行代码 （RCE）](Web安全/中间件/Apache%20APISIX/0day%20EXP%20Apache%20APISIX%202.12.1%20远程执行代码%20（RCE）.md)
   - [Apache APISIX Dashboard 任意命令执行工具分享学习](Web安全/中间件/Apache%20APISIX/Apache%20APISIX%20Dashboard%20任意命令执行工具分享学习.md)
   - [Apache APISIX 存在改写 X-REAL-IP header （CVE-2022-24112）](Web安全/中间件/Apache%20APISIX/Apache%20APISIX%20存在改写%20X-REAL-IP%20header%20（CVE-2022-24112）.md)
-- **Apache Avro SDK**（1）
-  - [Apache Avro SDK 中存在严重漏洞，可导致在 Java 应用中实现RCE](Web安全/中间件/Apache%20Avro%20SDK/Apache%20Avro%20SDK%20中存在严重漏洞，可导致在%20Java%20应用中实现RCE.md)
+- **Apache Avro**（1）
+  - [Apache Avro SDK 中存在严重漏洞，可导致在 Java 应用中实现RCE](Web安全/中间件/Apache%20Avro/Apache%20Avro%20SDK%20中存在严重漏洞，可导致在%20Java%20应用中实现RCE.md)
 - **Apache Axis**（1）
   - [（CVE-2019-0227）Apache Axis 1.4远程代码执行](Web安全/中间件/Apache%20Axis/（CVE-2019-0227）Apache%20Axis%201.4远程代码执行.md)
 - **Apache bRPC**（2）
@@ -3246,14 +3048,14 @@
   - [Apache CloudStack 中标识为 CVE-2024-41107 的严重漏洞的 PoC](Web安全/中间件/Apache%20CloudStack/Apache%20CloudStack%20中标识为%20CVE-2024-41107%20的严重漏洞的%20PoC.md)
 - **Apache Cocoon XML**（1）
   - [（CVE-2020-11991）Apache Cocoon XML 外部实体注入漏洞](Web安全/中间件/Apache%20Cocoon%20XML/（CVE-2020-11991）Apache%20Cocoon%20XML%20外部实体注入漏洞.md)
-- **Apache Commons**（3）
+- **Apache Commons**（4）
   - [ (488)](Web安全/中间件/Apache%20Commons/%20%28488%29.md)
   - [Apache-Commons-Configuration-远程命令执行漏洞-CVE-2022-33980](Web安全/中间件/Apache%20Commons/Apache-Commons-Configuration-远程命令执行漏洞-CVE-2022-33980.md)
   - [Apache Commons Fileupload拒绝服务漏洞（CVE-2023-24998）处置标准作业程序（SOP）](Web安全/开发框架/Apache%20Commons/Apache%20Commons%20Fileupload拒绝服务漏洞（CVE-2023-24998）处置标准作业程序（SOP）.md)
-- **Apache CVE-2023-25690**（1）
-  - [Apache CVE-2023-25690 漏洞手动调试分析](Web安全/中间件/Apache%20CVE-2023-25690/Apache%20CVE-2023-25690%20漏洞手动调试分析.md)
-- **Apache DolphinScheduler**（2）
+  - [Apache-Commons-Text-远程代码执行漏洞-CVE-2022-42889](Web安全/开发框架/Apache%20Commons/Apache-Commons-Text-远程代码执行漏洞-CVE-2022-42889.md)
+- **Apache DolphinScheduler**（3）
   - [(CVE-2020-13922)Apache DolphinScheduler 权限覆盖漏洞](Web安全/中间件/Apache%20DolphinScheduler/%28CVE-2020-13922%29Apache%20DolphinScheduler%20权限覆盖漏洞.md)
+  - [漏洞预警  Apache DolphinScheduler远程代码执行漏洞](Web安全/中间件/Apache%20DolphinScheduler/漏洞预警%20%20Apache%20DolphinScheduler远程代码执行漏洞.md)
   - [（CVE-2020-11974）Apache DolphinScheduler 远程代码执行漏洞](Web安全/中间件/Apache%20DolphinScheduler/（CVE-2020-11974）Apache%20DolphinScheduler%20远程代码执行漏洞.md)
 - **Apache Druid**（5）
   - [Apache Druid LoadData 任意文件读取漏洞 CVE-2021-36749](Web安全/中间件/Apache%20Druid/Apache%20Druid%20LoadData%20任意文件读取漏洞%20CVE-2021-36749.md)
@@ -3261,12 +3063,13 @@
   - [Apache Druid 远程代码执行漏洞 CVE-2021-26919](Web安全/中间件/Apache%20Druid/Apache%20Druid%20远程代码执行漏洞%20CVE-2021-26919.md)
   - [Apache Druid 远程代码执行漏洞（CVE-2021-25646）](Web安全/中间件/Apache%20Druid/Apache%20Druid%20远程代码执行漏洞（CVE-2021-25646）.md)
   - [Apache-Druid-远程代码执行漏洞-QVD-2023-9629](Web安全/中间件/Apache%20Druid/Apache-Druid-远程代码执行漏洞-QVD-2023-9629.md)
-- **Apache Dubbo**（7）
+- **Apache Dubbo**（8）
   - [ (362)](Web安全/中间件/Apache%20Dubbo/%20%28362%29.md)
   - [Apache Dubbo Hessian 反序列化漏洞 CVE-2020-1948](Web安全/中间件/Apache%20Dubbo/Apache%20Dubbo%20Hessian%20反序列化漏洞%20CVE-2020-1948.md)
   - [Apache Dubbo Java反序列化漏洞 CVE-2019-17564](Web安全/中间件/Apache%20Dubbo/Apache%20Dubbo%20Java反序列化漏洞%20CVE-2019-17564.md)
   - [Apache Dubbo 反序列化漏洞 (CVE-2023-23638)](Web安全/中间件/Apache%20Dubbo/Apache%20Dubbo%20反序列化漏洞%20%28CVE-2023-23638%29.md)
   - [CVE-2021-30179：Apache Dubbo RCE 复现](Web安全/中间件/Apache%20Dubbo/CVE-2021-30179：Apache%20Dubbo%20RCE%20复现.md)
+  - [安全验证  Dubbo CVE-2023-29234 反序列化漏洞分析](Web安全/中间件/Apache%20Dubbo/安全验证%20%20Dubbo%20CVE-2023-29234%20反序列化漏洞分析.md)
   - [（CVE-2019-17564）Apache Dubbo 反序列化漏洞](Web安全/中间件/Apache%20Dubbo/（CVE-2019-17564）Apache%20Dubbo%20反序列化漏洞.md)
   - [（CVE-2020-1948）Apache Dubbo Hessian 反序列化漏洞](Web安全/中间件/Apache%20Dubbo/（CVE-2020-1948）Apache%20Dubbo%20Hessian%20反序列化漏洞.md)
 - **Apache Flink**（6）
@@ -3284,7 +3087,8 @@
   - [Apache-HertzBeat-SnakeYaml-反序列化远程代码执行漏洞-CVE-2024-42323](Web安全/中间件/Apache%20HertzBeat/Apache-HertzBeat-SnakeYaml-反序列化远程代码执行漏洞-CVE-2024-42323.md)
 - **Apache HttpClient 5.6**（1）
   - [Apache HttpClient 5.6 中存在严重的身份验证绕过漏洞](Web安全/中间件/Apache%20HttpClient%205.6/Apache%20HttpClient%205.6%20中存在严重的身份验证绕过漏洞.md)
-- **Apache HTTPD**（2）
+- **Apache HTTPD**（3）
+  - [Apache CVE-2023-25690 漏洞手动调试分析](Web安全/中间件/Apache%20HTTPD/Apache%20CVE-2023-25690%20漏洞手动调试分析.md)
   - [Apache HTTPD 多后缀解析漏洞](Web安全/中间件/Apache%20HTTPD/Apache%20HTTPD%20多后缀解析漏洞.md)
   - [（CVE-2017-15715）Apache HTTPD 换行解析漏洞](Web安全/中间件/Apache%20HTTPD/（CVE-2017-15715）Apache%20HTTPD%20换行解析漏洞.md)
 - **Apache HugeGraph**（2）
@@ -3294,82 +3098,84 @@
   - [Apache Jackrabbit RMI 远程代码执行漏洞分析(CVE-2023-37895)](Web安全/中间件/Apache%20Jackrabbit%20RMI/Apache%20Jackrabbit%20RMI%20远程代码执行漏洞分析%28CVE-2023-37895%29.md)
 - **Apache JMeter**（1）
   - [（CVE-2018-1297）Apache Jmeter RMI 反序列化命令执行漏洞](Web安全/中间件/Apache%20JMeter/（CVE-2018-1297）Apache%20Jmeter%20RMI%20反序列化命令执行漏洞.md)
-- **Apache Kafka UI**（2）
-  - [Apache Kafka UI 中的远程代码执行 （RCE） - CVE-2023-52251、CVE-2024-32030](Web安全/中间件/Apache%20Kafka%20UI/Apache%20Kafka%20UI%20中的远程代码执行%20（RCE）%20-%20CVE-2023-52251、CVE-2024-32030.md)
-  - [Apache Kafka UI 远程代码执行漏洞(CVE-2024-32030)安全风险通告](Web安全/中间件/Apache%20Kafka%20UI/Apache%20Kafka%20UI%20远程代码执行漏洞%28CVE-2024-32030%29安全风险通告.md)
+- **Apache Kafka**（2）
+  - [Apache Kafka UI 中的远程代码执行 （RCE） - CVE-2023-52251、CVE-2024-32030](Web安全/中间件/Apache%20Kafka/Apache%20Kafka%20UI%20中的远程代码执行%20（RCE）%20-%20CVE-2023-52251、CVE-2024-32030.md)
+  - [Apache Kafka UI 远程代码执行漏洞(CVE-2024-32030)安全风险通告](Web安全/中间件/Apache%20Kafka/Apache%20Kafka%20UI%20远程代码执行漏洞%28CVE-2024-32030%29安全风险通告.md)
 - **Apache Kylin**（1）
   - [（CVE-2020-1956）Apache Kylin 远程命令执行漏洞](Web安全/中间件/Apache%20Kylin/（CVE-2020-1956）Apache%20Kylin%20远程命令执行漏洞.md)
-- **Apache Log**（1）
-  - [Apache Log4j2 从 RCE 到 RC1 绕过](Web安全/中间件/Apache%20Log/Apache%20Log4j2%20从%20RCE%20到%20RC1%20绕过.md)
-- **Apache Log4j**（5）
+- **Apache Log4j**（9）
   - [ (400)](Web安全/中间件/Apache%20Log4j/%20%28400%29.md)
   - [Apache Log4j Server 反序列化命令执行漏洞 CVE-2017-5645](Web安全/中间件/Apache%20Log4j/Apache%20Log4j%20Server%20反序列化命令执行漏洞%20CVE-2017-5645.md)
+  - [Apache Log4j2 从 RCE 到 RC1 绕过](Web安全/中间件/Apache%20Log4j/Apache%20Log4j2%20从%20RCE%20到%20RC1%20绕过.md)
   - [Apache-Log4j2-lookup-JNDI-注入漏洞-CVE-2021-44228](Web安全/中间件/Apache%20Log4j/Apache-Log4j2-lookup-JNDI-注入漏洞-CVE-2021-44228.md)
   - [（CVE-2017-5645）Log4j 2.X反序列化漏洞](Web安全/中间件/Apache%20Log4j/（CVE-2017-5645）Log4j%202.X反序列化漏洞.md)
   - [（CVE-2019-17571）Log4j 1.2.X反序列化漏洞](Web安全/中间件/Apache%20Log4j/（CVE-2019-17571）Log4j%201.2.X反序列化漏洞.md)
+  - [Log4j 和它的小伙伴们](Web安全/开发框架/Apache%20Log4j/Log4j%20和它的小伙伴们.md)
+  - [VMware 多个产品 Log4j2 RCE](Web安全/开发框架/Apache%20Log4j/VMware%20多个产品%20Log4j2%20RCE.md)
+  - [史上最全 log4j2 远程命令执行漏洞汇总报告](Web安全/开发框架/Apache%20Log4j/史上最全%20log4j2%20远程命令执行漏洞汇总报告.md)
 - **Apache MINA**（1）
   - [Apache MINA严重漏洞 ：CVE-2024-52046 (CVSS 10)，可能允许远程代码执行](Web安全/中间件/Apache%20MINA/Apache%20MINA严重漏洞%20：CVE-2024-52046%20%28CVSS%2010%29，可能允许远程代码执行.md)
-- **apache nginx iis 中间件**（1）
-  - [apache nginx iis 中间件漏洞 - 先知社区](Web安全/中间件/apache%20nginx%20iis%20中间件/apache%20nginx%20iis%20中间件漏洞%20-%20先知社区.md)
-- **Apache NiFi**（4）
+- **Apache NiFi**（5）
   - [ (252)](Web安全/中间件/Apache%20NiFi/%20%28252%29.md)
   - [Apache NiFi 连爆四漏洞，权限失控与内存炸弹问题亟待修复](Web安全/中间件/Apache%20NiFi/Apache%20NiFi%20连爆四漏洞，权限失控与内存炸弹问题亟待修复.md)
   - [CVE-2023-34212：通过 Apache NiFi 中的 JNDI 组件进行 Java 反序列化](Web安全/中间件/Apache%20NiFi/CVE-2023-34212：通过%20Apache%20NiFi%20中的%20JNDI%20组件进行%20Java%20反序列化.md)
   - [CVE-2026-54665：Apache NiFi 中的预认证主机头注入漏洞](Web安全/中间件/Apache%20NiFi/CVE-2026-54665：Apache%20NiFi%20中的预认证主机头注入漏洞.md)
-- **Apache Ofbiz**（12）
-  - [ (147)](Web安全/中间件/Apache%20Ofbiz/%20%28147%29.md)
-  - [ (206)](Web安全/中间件/Apache%20Ofbiz/%20%28206%29.md)
-  - [ (513)](Web安全/中间件/Apache%20Ofbiz/%20%28513%29.md)
-  - [Apache OFBiz RMI Bypass RCE CVE-2021-29200](Web安全/中间件/Apache%20Ofbiz/Apache%20OFBiz%20RMI%20Bypass%20RCE%20CVE-2021-29200.md)
-  - [Apache OFBiz 反序列化 CVE-2021-30128](Web安全/中间件/Apache%20Ofbiz/Apache%20OFBiz%20反序列化%20CVE-2021-30128.md)
-  - [Apache OfBiz 反序列化命令执行漏洞 CVE-2020-9496](Web安全/中间件/Apache%20Ofbiz/Apache%20OfBiz%20反序列化命令执行漏洞%20CVE-2020-9496.md)
-  - [Apache-OFBiz-RMI反序列化漏洞-CVE-2021-26295](Web安全/中间件/Apache%20Ofbiz/Apache-OFBiz-RMI反序列化漏洞-CVE-2021-26295.md)
-  - [Apache-OFBiz-SSRF-和远程代码执行漏洞-CVE-2024-45507](Web安全/中间件/Apache%20Ofbiz/Apache-OFBiz-SSRF-和远程代码执行漏洞-CVE-2024-45507.md)
-  - [Apache-OFBiz-目录遍历致代码执行漏洞-CVE-2024-36104](Web安全/中间件/Apache%20Ofbiz/Apache-OFBiz-目录遍历致代码执行漏洞-CVE-2024-36104.md)
-  - [Apache-OfBiz-反序列化命令执行漏洞-CVE-2023-49070](Web安全/中间件/Apache%20Ofbiz/Apache-OfBiz-反序列化命令执行漏洞-CVE-2023-49070.md)
-  - [Apache-OfBiz-鉴权绕过导致命令执行-CVE-2023-51467](Web安全/中间件/Apache%20Ofbiz/Apache-OfBiz-鉴权绕过导致命令执行-CVE-2023-51467.md)
-  - [（CVE-2020-9496）Apache Ofbiz 远程命令执行漏洞](Web安全/中间件/Apache%20Ofbiz/（CVE-2020-9496）Apache%20Ofbiz%20远程命令执行漏洞.md)
-- **Apache OfBiz CVE-2024-3211**（2）
-  - [Apache OfBiz CVE-2024-32113和CVE-2024-36104 漏洞 POC](Web安全/中间件/Apache%20OfBiz%20CVE-2024-3211/Apache%20OfBiz%20CVE-2024-32113和CVE-2024-36104%20漏洞%20POC.md)
-  - [CVE-2025-55182 Apache OFBiz SSRF与远程命令执行漏洞](Web安全/中间件/Apache%20OfBiz%20CVE-2024-3211/CVE-2025-55182%20Apache%20OFBiz%20SSRF与远程命令执行漏洞.md)
-- **Apache OFBiz XML-RPC**（1）
-  - [（CVE-2023-49070）Apache OFBiz XML-RPC 远程代码执行漏洞（附 POC）](Web安全/中间件/Apache%20OFBiz%20XML-RPC/（CVE-2023-49070）Apache%20OFBiz%20XML-RPC%20远程代码执行漏洞（附%20POC）.md)
+  - [漏洞情报  Apache NiFi 多个漏洞通告(CVE-2023-34468、CVE-2023-34212)](Web安全/中间件/Apache%20NiFi/漏洞情报%20%20Apache%20NiFi%20多个漏洞通告%28CVE-2023-34468、CVE-2023-34212%29.md)
+- **Apache OFBiz**（16）
+  - [ (147)](Web安全/中间件/Apache%20OFBiz/%20%28147%29.md)
+  - [ (206)](Web安全/中间件/Apache%20OFBiz/%20%28206%29.md)
+  - [ (513)](Web安全/中间件/Apache%20OFBiz/%20%28513%29.md)
+  - [Apache OFBiz RMI Bypass RCE CVE-2021-29200](Web安全/中间件/Apache%20OFBiz/Apache%20OFBiz%20RMI%20Bypass%20RCE%20CVE-2021-29200.md)
+  - [Apache OFBiz 反序列化 CVE-2021-30128](Web安全/中间件/Apache%20OFBiz/Apache%20OFBiz%20反序列化%20CVE-2021-30128.md)
+  - [Apache OfBiz CVE-2024-32113和CVE-2024-36104 漏洞 POC](Web安全/中间件/Apache%20OFBiz/Apache%20OfBiz%20CVE-2024-32113和CVE-2024-36104%20漏洞%20POC.md)
+  - [Apache OfBiz 反序列化命令执行漏洞 CVE-2020-9496](Web安全/中间件/Apache%20OFBiz/Apache%20OfBiz%20反序列化命令执行漏洞%20CVE-2020-9496.md)
+  - [Apache-OFBiz-RMI反序列化漏洞-CVE-2021-26295](Web安全/中间件/Apache%20OFBiz/Apache-OFBiz-RMI反序列化漏洞-CVE-2021-26295.md)
+  - [Apache-OFBiz-SSRF-和远程代码执行漏洞-CVE-2024-45507](Web安全/中间件/Apache%20OFBiz/Apache-OFBiz-SSRF-和远程代码执行漏洞-CVE-2024-45507.md)
+  - [Apache-OFBiz-目录遍历致代码执行漏洞-CVE-2024-36104](Web安全/中间件/Apache%20OFBiz/Apache-OFBiz-目录遍历致代码执行漏洞-CVE-2024-36104.md)
+  - [Apache-OfBiz-反序列化命令执行漏洞-CVE-2023-49070](Web安全/中间件/Apache%20OFBiz/Apache-OfBiz-反序列化命令执行漏洞-CVE-2023-49070.md)
+  - [Apache-OfBiz-鉴权绕过导致命令执行-CVE-2023-51467](Web安全/中间件/Apache%20OFBiz/Apache-OfBiz-鉴权绕过导致命令执行-CVE-2023-51467.md)
+  - [CVE-2025-55182 Apache OFBiz SSRF与远程命令执行漏洞](Web安全/中间件/Apache%20OFBiz/CVE-2025-55182%20Apache%20OFBiz%20SSRF与远程命令执行漏洞.md)
+  - [漏洞预警  Apache OFBiz 服务端模板注入漏洞（CVE-2025-26865）](Web安全/中间件/Apache%20OFBiz/漏洞预警%20%20Apache%20OFBiz%20服务端模板注入漏洞（CVE-2025-26865）.md)
+  - [（CVE-2020-9496）Apache Ofbiz 远程命令执行漏洞](Web安全/中间件/Apache%20OFBiz/（CVE-2020-9496）Apache%20Ofbiz%20远程命令执行漏洞.md)
+  - [（CVE-2023-49070）Apache OFBiz XML-RPC 远程代码执行漏洞（附 POC）](Web安全/中间件/Apache%20OFBiz/（CVE-2023-49070）Apache%20OFBiz%20XML-RPC%20远程代码执行漏洞（附%20POC）.md)
 - **Apache OpenNLP**（1）
   - [Apache OpenNLP 曝出一组高危漏洞，包括XXE注入](Web安全/中间件/Apache%20OpenNLP/Apache%20OpenNLP%20曝出一组高危漏洞，包括XXE注入.md)
-- **Apache Parquet**（1）
+- **Apache Parquet**（2）
+  - [Apache Parquet Java 漏洞 CVE-2025-46762 使系统暴露于远程代码执行攻击](Web安全/中间件/Apache%20Parquet/Apache%20Parquet%20Java%20漏洞%20CVE-2025-46762%20使系统暴露于远程代码执行攻击.md)
   - [Apache Parquet 允许远程执行代码漏洞](Web安全/中间件/Apache%20Parquet/Apache%20Parquet%20允许远程执行代码漏洞.md)
-- **Apache Parquet Java**（1）
-  - [Apache Parquet Java 漏洞 CVE-2025-46762 使系统暴露于远程代码执行攻击](Web安全/中间件/Apache%20Parquet%20Java/Apache%20Parquet%20Java%20漏洞%20CVE-2025-46762%20使系统暴露于远程代码执行攻击.md)
-- **Apache Pinot SQL**（1）
-  - [Apache Pinot SQL注入与远程代码执行漏洞分析](Web安全/中间件/Apache%20Pinot%20SQL/Apache%20Pinot%20SQL注入与远程代码执行漏洞分析.md)
+- **Apache Pinot**（1）
+  - [Apache Pinot SQL注入与远程代码执行漏洞分析](Web安全/中间件/Apache%20Pinot/Apache%20Pinot%20SQL注入与远程代码执行漏洞分析.md)
 - **Apache POI**（1）
   - [（CVE-2019-12415）Apache POI <= 4.1.0 XXE漏洞](Web安全/中间件/Apache%20POI/（CVE-2019-12415）Apache%20POI%20<=%204.1.0%20XXE漏洞.md)
-- **Apache RocketMQ**（2）
+- **Apache RocketMQ**（3）
   - [Apache-RocketMQ-Broker-远程命令执行漏洞-CVE-2023-33246](Web安全/中间件/Apache%20RocketMQ/Apache-RocketMQ-Broker-远程命令执行漏洞-CVE-2023-33246.md)
   - [Apache-RocketMQ-NameServer-任意文件写入漏洞-CVE-2023-37582](Web安全/中间件/Apache%20RocketMQ/Apache-RocketMQ-NameServer-任意文件写入漏洞-CVE-2023-37582.md)
-- **Apache Roller CVSS**（1）
-  - [Apache Roller CVSS 满分漏洞可用于获取持久性访问权限](Web安全/中间件/Apache%20Roller%20CVSS/Apache%20Roller%20CVSS%20满分漏洞可用于获取持久性访问权限.md)
+  - [漏洞预警  Apache Pulsar任意文件读取漏洞](Web安全/中间件/Apache%20RocketMQ/漏洞预警%20%20Apache%20Pulsar任意文件读取漏洞.md)
+- **Apache Roller**（1）
+  - [Apache Roller CVSS 满分漏洞可用于获取持久性访问权限](Web安全/中间件/Apache%20Roller/Apache%20Roller%20CVSS%20满分漏洞可用于获取持久性访问权限.md)
 - **Apache SeaTunnel**（2）
   - [ (90)](Web安全/中间件/Apache%20SeaTunnel/%20%2890%29.md)
   - [Apache SeaTunnel 漏洞允许未经授权的用户进行反序列化攻击](Web安全/中间件/Apache%20SeaTunnel/Apache%20SeaTunnel%20漏洞允许未经授权的用户进行反序列化攻击.md)
 - **Apache ShardingSphere**（1）
   - [（CVE-2020-1947）Apache ShardingSphere远程代码执行漏洞](Web安全/中间件/Apache%20ShardingSphere/（CVE-2020-1947）Apache%20ShardingSphere远程代码执行漏洞.md)
-- **Apache Shiro**（8）
+- **Apache Shiro**（10）
   - [ (153)](Web安全/中间件/Apache%20Shiro/%20%28153%29.md)
   - [Apache Shiro 1.2.4 反序列化漏洞 CVE-2016-4437](Web安全/中间件/Apache%20Shiro/Apache%20Shiro%201.2.4%20反序列化漏洞%20CVE-2016-4437.md)
+  - [Apache Shiro 两种姿势绕过认证分析（CVE-2020-17523）](Web安全/中间件/Apache%20Shiro/Apache%20Shiro%20两种姿势绕过认证分析（CVE-2020-17523）.md)
   - [Apache Shiro 认证绕过漏洞 CVE-2020-1957](Web安全/中间件/Apache%20Shiro/Apache%20Shiro%20认证绕过漏洞%20CVE-2020-1957.md)
   - [Apache-Shiro-认证绕过漏洞-CVE-2010-3863](Web安全/中间件/Apache%20Shiro/Apache-Shiro-认证绕过漏洞-CVE-2010-3863.md)
+  - [技术干货 - Apache Shiro 权限绕过漏洞分析 (CVE-2020-17523)](Web安全/中间件/Apache%20Shiro/技术干货%20-%20Apache%20Shiro%20权限绕过漏洞分析%20%28CVE-2020-17523%29.md)
   - [（CVE-2016-4437）Apache Shiro <=1.2.4 反序列化漏洞](Web安全/中间件/Apache%20Shiro/（CVE-2016-4437）Apache%20Shiro%20<=1.2.4%20反序列化漏洞.md)
   - [（CVE-2020-11989）Apache Shiro < 1.5.3 身份认证绕过漏洞](Web安全/中间件/Apache%20Shiro/（CVE-2020-11989）Apache%20Shiro%20<%201.5.3%20身份认证绕过漏洞.md)
   - [（CVE-2020-13933）Apache Shiro < 1.6.0 身份认证绕过漏洞](Web安全/中间件/Apache%20Shiro/（CVE-2020-13933）Apache%20Shiro%20<%201.6.0%20身份认证绕过漏洞.md)
   - [（CVE-2020-1957）Apache Shiro < 1.5.2 身份认证绕过漏洞](Web安全/中间件/Apache%20Shiro/（CVE-2020-1957）Apache%20Shiro%20<%201.5.2%20身份认证绕过漏洞.md)
-- **Apache Shiro 两种姿势**（1）
-  - [Apache Shiro 两种姿势绕过认证分析（CVE-2020-17523）](Web安全/中间件/Apache%20Shiro%20两种姿势/Apache%20Shiro%20两种姿势绕过认证分析（CVE-2020-17523）.md)
 - **Apache SIS XML**（1）
   - [Apache SIS XML外部实体（XXE）漏洞预警（CVE-2025-68280）](Web安全/中间件/Apache%20SIS%20XML/Apache%20SIS%20XML外部实体（XXE）漏洞预警（CVE-2025-68280）.md)
-- **Apache Skywalking 小于等于8.3**（1）
-  - [Apache Skywalking 小于等于8.3 SQL注入分析复现](Web安全/中间件/Apache%20Skywalking%20小于等于8.3/Apache%20Skywalking%20小于等于8.3%20SQL注入分析复现.md)
-- **Apache Solr**（26）
+- **Apache SkyWalking**（1）
+  - [Apache Skywalking 小于等于8.3 SQL注入分析复现](Web安全/中间件/Apache%20SkyWalking/Apache%20Skywalking%20小于等于8.3%20SQL注入分析复现.md)
+- **Apache Solr**（31）
+  - [Apache Solr -- 8-8-1 任意文件读取漏洞 POC 复现（从 1day 熬成了 Nday）](Web安全/中间件/Apache%20Solr/Apache%20Solr%20--%208-8-1%20任意文件读取漏洞%20POC%20复现（从%201day%20熬成了%20Nday）.md)
+  - [Apache Solr -- 8-8-2 任意文件删除漏洞复现](Web安全/中间件/Apache%20Solr/Apache%20Solr%20--%208-8-2%20任意文件删除漏洞复现.md)
   - [Apache Solr JMX服务 RCE CVE-2019-12409](Web安全/中间件/Apache%20Solr/Apache%20Solr%20JMX服务%20RCE%20CVE-2019-12409.md)
   - [Apache Solr RCE via Velocity Template Injection](Web安全/中间件/Apache%20Solr/Apache%20Solr%20RCE%20via%20Velocity%20Template%20Injection.md)
   - [Apache Solr RCE 远程命令执行漏洞 CVE-2017-12629](Web安全/中间件/Apache%20Solr/Apache%20Solr%20RCE%20远程命令执行漏洞%20CVE-2017-12629.md)
@@ -3379,8 +3185,10 @@
   - [Apache Solr XML 实体注入漏洞 CVE-2017-12629](Web安全/中间件/Apache%20Solr/Apache%20Solr%20XML%20实体注入漏洞%20CVE-2017-12629.md)
   - [Apache Solr 任意文件读取漏洞  1Day](Web安全/中间件/Apache%20Solr/Apache%20Solr%20任意文件读取漏洞%20%201Day.md)
   - [Apache Solr 任意文件读取漏洞复现](Web安全/中间件/Apache%20Solr/Apache%20Solr%20任意文件读取漏洞复现.md)
+  - [Apache Solr 最新任意文件读取漏洞](Web安全/中间件/Apache%20Solr/Apache%20Solr%20最新任意文件读取漏洞.md)
   - [Apache Solr 远程命令执行漏洞 CVE-2017-12629](Web安全/中间件/Apache%20Solr/Apache%20Solr%20远程命令执行漏洞%20CVE-2017-12629.md)
   - [Apache Solr 远程命令执行漏洞 CVE-2019-0193](Web安全/中间件/Apache%20Solr/Apache%20Solr%20远程命令执行漏洞%20CVE-2019-0193.md)
+  - [Apache Solr最新RCE漏洞分析 - FreeBuf网络安全行业门户](Web安全/中间件/Apache%20Solr/Apache%20Solr最新RCE漏洞分析%20-%20FreeBuf网络安全行业门户.md)
   - [Apache Solr未授权上传漏洞](Web安全/中间件/Apache%20Solr/Apache%20Solr未授权上传漏洞.md)
   - [Apache-Solr-RCE-未授权上传漏洞-CVE-2020-13957](Web安全/中间件/Apache%20Solr/Apache-Solr-RCE-未授权上传漏洞-CVE-2020-13957.md)
   - [Apache-Solr-RemoteStreaming-文件读取与SSRF漏洞](Web安全/中间件/Apache%20Solr/Apache-Solr-RemoteStreaming-文件读取与SSRF漏洞.md)
@@ -3389,6 +3197,7 @@
   - [Apache-Solr-认证绕过漏洞-CVE-2024-45216](Web安全/中间件/Apache%20Solr/Apache-Solr-认证绕过漏洞-CVE-2024-45216.md)
   - [CVE-2021-44548 Apache Solr 敏感信息泄露漏洞分析及复现](Web安全/中间件/Apache%20Solr/CVE-2021-44548%20Apache%20Solr%20敏感信息泄露漏洞分析及复现.md)
   - [CVE-2026-44825 _ Apache Solr AuthTool Hardcoded Credentials Vulnerabil](Web安全/中间件/Apache%20Solr/CVE-2026-44825%20_%20Apache%20Solr%20AuthTool%20Hardcoded%20Credentials%20Vulnerabil.md)
+  - [Solr 文件上传路径遍历漏洞（CVE-2024-52012）](Web安全/中间件/Apache%20Solr/Solr%20文件上传路径遍历漏洞（CVE-2024-52012）.md)
   - [solr_rce](Web安全/中间件/Apache%20Solr/solr_rce.md)
   - [（0day）Apache Solr 任意文件读取漏洞](Web安全/中间件/Apache%20Solr/（0day）Apache%20Solr%20任意文件读取漏洞.md)
   - [（CVE-2017-12629）Apache Solr rce&xxe 漏洞](Web安全/中间件/Apache%20Solr/（CVE-2017-12629）Apache%20Solr%20rce&xxe%20漏洞.md)
@@ -3396,20 +3205,13 @@
   - [（CVE-2019-0193）Apache Solr 远程命令执行漏洞](Web安全/中间件/Apache%20Solr/（CVE-2019-0193）Apache%20Solr%20远程命令执行漏洞.md)
   - [（CVE-2019-12409）Apache Solr 远程命令执行漏洞](Web安全/中间件/Apache%20Solr/（CVE-2019-12409）Apache%20Solr%20远程命令执行漏洞.md)
   - [（CVE-2019-17558）Apache Solr 代码注入漏洞](Web安全/中间件/Apache%20Solr/（CVE-2019-17558）Apache%20Solr%20代码注入漏洞.md)
-- **Apache Solr --**（2）
-  - [Apache Solr -- 8-8-1 任意文件读取漏洞 POC 复现（从 1day 熬成了 Nday）](Web安全/中间件/Apache%20Solr%20--/Apache%20Solr%20--%208-8-1%20任意文件读取漏洞%20POC%20复现（从%201day%20熬成了%20Nday）.md)
-  - [Apache Solr -- 8-8-2 任意文件删除漏洞复现](Web安全/中间件/Apache%20Solr%20--/Apache%20Solr%20--%208-8-2%20任意文件删除漏洞复现.md)
-- **Apache Solr 最新**（1）
-  - [Apache Solr 最新任意文件读取漏洞](Web安全/中间件/Apache%20Solr%20最新/Apache%20Solr%20最新任意文件读取漏洞.md)
-- **Apache Solr最新**（1）
-  - [Apache Solr最新RCE漏洞分析 - FreeBuf网络安全行业门户](Web安全/中间件/Apache%20Solr最新/Apache%20Solr最新RCE漏洞分析%20-%20FreeBuf网络安全行业门户.md)
-- **Apache Spark**（4）
+- **Apache Spark**（6）
+  - [Apache Spark RPC 协议中的反序列化漏洞分析 - 斗象能力中心](Web安全/中间件/Apache%20Spark/Apache%20Spark%20RPC%20协议中的反序列化漏洞分析%20-%20斗象能力中心.md)
   - [Apache Spark unTarUsingTar 命令注入漏洞 SPARK-38631](Web安全/中间件/Apache%20Spark/Apache%20Spark%20unTarUsingTar%20命令注入漏洞%20SPARK-38631.md)
   - [Apache Spark 未授权访问漏洞](Web安全/中间件/Apache%20Spark/Apache%20Spark%20未授权访问漏洞.md)
   - [Apache Spark 远程代码执行漏洞 (CVE-2023-32007)](Web安全/中间件/Apache%20Spark/Apache%20Spark%20远程代码执行漏洞%20%28CVE-2023-32007%29.md)
   - [Apache-Spark-create-未授权访问漏洞](Web安全/中间件/Apache%20Spark/Apache-Spark-create-未授权访问漏洞.md)
-- **Apache Spark RPC 协议中的**（1）
-  - [Apache Spark RPC 协议中的反序列化漏洞分析 - 斗象能力中心](Web安全/中间件/Apache%20Spark%20RPC%20协议中的/Apache%20Spark%20RPC%20协议中的反序列化漏洞分析%20-%20斗象能力中心.md)
+  - [Apache-Spark-unTarUsingTar-命令注入漏洞-SPARK-38631](Web安全/中间件/Apache%20Spark/Apache-Spark-unTarUsingTar-命令注入漏洞-SPARK-38631.md)
 - **Apache SSI**（1）
   - [Apache SSI 远程命令执行漏洞](Web安全/中间件/Apache%20SSI/Apache%20SSI%20远程命令执行漏洞.md)
 - **Apache StreamPipes**（1）
@@ -3446,49 +3248,90 @@
   - [（CVE-2019-0230）s2-09](Web安全/中间件/Apache%20Struts/（CVE-2019-0230）s2-09.md)
   - [（CVE-2020-17530）S2-061](Web安全/中间件/Apache%20Struts/（CVE-2020-17530）S2-061.md)
   - [（CVE-xxxx-xxxx）s2-002](Web安全/中间件/Apache%20Struts/（CVE-xxxx-xxxx）s2-002.md)
+- **Apache Submarine**（1）
+  - [漏洞预警  Apache Submarine SQL注入漏洞](Web安全/中间件/Apache%20Submarine/漏洞预警%20%20Apache%20Submarine%20SQL注入漏洞.md)
 - **Apache Superset**（1）
   - [Apache-Superset-硬编码-JWT-密钥导致认证绕过漏洞-CVE-2023-27524](Web安全/中间件/Apache%20Superset/Apache-Superset-硬编码-JWT-密钥导致认证绕过漏洞-CVE-2023-27524.md)
 - **Apache Syncope**（1）
   - [Apache Syncope 漏洞可用于劫持用户会话](Web安全/中间件/Apache%20Syncope/Apache%20Syncope%20漏洞可用于劫持用户会话.md)
-- **Apache Tomcat**（9）
+- **Apache Tomcat**（51）
   - [ (116)](Web安全/中间件/Apache%20Tomcat/%20%28116%29.md)
+  - [ (132)](Web安全/中间件/Apache%20Tomcat/%20%28132%29.md)
   - [ (278)](Web安全/中间件/Apache%20Tomcat/%20%28278%29.md)
   - [ (524)](Web安全/中间件/Apache%20Tomcat/%20%28524%29.md)
+  - [Apache Tomcat AJP 文件包含漏洞 CVE-2020-1938](Web安全/中间件/Apache%20Tomcat/Apache%20Tomcat%20AJP%20文件包含漏洞%20CVE-2020-1938.md)
+  - [Apache Tomcat PUT 方法任意写文件漏洞 CVE-2017-12615](Web安全/中间件/Apache%20Tomcat/Apache%20Tomcat%20PUT%20方法任意写文件漏洞%20CVE-2017-12615.md)
+  - [Apache Tomcat RCE via JSP Upload Bypass CVE-2017-12617](Web安全/中间件/Apache%20Tomcat/Apache%20Tomcat%20RCE%20via%20JSP%20Upload%20Bypass%20CVE-2017-12617.md)
+  - [Apache Tomcat 信息泄露漏洞 CVE-2021-24122](Web安全/中间件/Apache%20Tomcat/Apache%20Tomcat%20信息泄露漏洞%20CVE-2021-24122.md)
   - [Apache Tomcat 漏洞 CVE-2024-56337 导致服务器遭受 RCE 攻击](Web安全/中间件/Apache%20Tomcat/Apache%20Tomcat%20漏洞%20CVE-2024-56337%20导致服务器遭受%20RCE%20攻击.md)
   - [Apache Tomcat 漏洞允许绕过身份验证和 DoS 攻击](Web安全/中间件/Apache%20Tomcat/Apache%20Tomcat%20漏洞允许绕过身份验证和%20DoS%20攻击.md)
+  - [Apache Tomcat 远程代码执行漏洞 CVE-2025-24813](Web安全/中间件/Apache%20Tomcat/Apache%20Tomcat%20远程代码执行漏洞%20CVE-2025-24813.md)
   - [Apache Tomcat安全更新：修复拒绝服务与重写规则绕过漏洞](Web安全/中间件/Apache%20Tomcat/Apache%20Tomcat安全更新：修复拒绝服务与重写规则绕过漏洞.md)
   - [Apache Tomcat最新高版本身份验证绕过漏洞，POC价格接近3000](Web安全/中间件/Apache%20Tomcat/Apache%20Tomcat最新高版本身份验证绕过漏洞，POC价格接近3000.md)
+  - [Apache-Tomcat-RCE-via-JSP-Upload-Bypass](Web安全/中间件/Apache%20Tomcat/Apache-Tomcat-RCE-via-JSP-Upload-Bypass.md)
+  - [Apache-Tomcat-Tribes-EncryptInterceptor-绕过远程代码执行漏洞-CVE-2026-34486](Web安全/中间件/Apache%20Tomcat/Apache-Tomcat-Tribes-EncryptInterceptor-绕过远程代码执行漏洞-CVE-2026-34486.md)
+  - [Apache-Tomcat-WebSocket-拒绝服务漏洞-CVE-2020-13935](Web安全/中间件/Apache%20Tomcat/Apache-Tomcat-WebSocket-拒绝服务漏洞-CVE-2020-13935.md)
+  - [Apache-Tomcat-信息泄露漏洞-CVE-2021-24122](Web安全/中间件/Apache%20Tomcat/Apache-Tomcat-信息泄露漏洞-CVE-2021-24122.md)
+  - [Apache-Tomcat8-弱口令+后台getshell漏洞](Web安全/中间件/Apache%20Tomcat/Apache-Tomcat8-弱口令+后台getshell漏洞.md)
   - [CVE-2023-45648 和 CVE-2023-42795：Apache Tomcat 中的两个高严重性缺陷](Web安全/中间件/Apache%20Tomcat/CVE-2023-45648%20和%20CVE-2023-42795：Apache%20Tomcat%20中的两个高严重性缺陷.md)
   - [CVE-2026-34486 ( Apache Tomcat 集群加密绕过 RCE)](Web安全/中间件/Apache%20Tomcat/CVE-2026-34486%20%28%20Apache%20Tomcat%20集群加密绕过%20RCE%29.md)
+  - [Tomcat HttpServletRequest中几个解析URL的函数](Web安全/中间件/Apache%20Tomcat/Tomcat%20HttpServletRequest中几个解析URL的函数.md)
+  - [Tomcat URL 解析差异性攻击利用](Web安全/中间件/Apache%20Tomcat/Tomcat%20URL%20解析差异性攻击利用.md)
+  - [Tomcat getContextPath()的处理](Web安全/中间件/Apache%20Tomcat/Tomcat%20getContextPath%28%29的处理.md)
+  - [Tomcat getPathInfo()的处理](Web安全/中间件/Apache%20Tomcat/Tomcat%20getPathInfo%28%29的处理.md)
+  - [Tomcat getRequestURI()的处理](Web安全/中间件/Apache%20Tomcat/Tomcat%20getRequestURI%28%29的处理.md)
+  - [Tomcat getRequestURL()的处理](Web安全/中间件/Apache%20Tomcat/Tomcat%20getRequestURL%28%29的处理.md)
+  - [Tomcat getServletPath()的处理](Web安全/中间件/Apache%20Tomcat/Tomcat%20getServletPath%28%29的处理.md)
+  - [Tomcat 后台爆破](Web安全/中间件/Apache%20Tomcat/Tomcat%20后台爆破.md)
+  - [Tomcat 后台部署war木马getshell](Web安全/中间件/Apache%20Tomcat/Tomcat%20后台部署war木马getshell.md)
+  - [Tomcat 特殊字符的URL解析](Web安全/中间件/Apache%20Tomcat/Tomcat%20特殊字符的URL解析.md)
+  - [Tomcat-远程代码执行漏洞-CVE-2025-24813](Web安全/中间件/Apache%20Tomcat/Tomcat-远程代码执行漏洞-CVE-2025-24813.md)
+  - [Tomcat8-弱口令+后台getshell漏洞](Web安全/中间件/Apache%20Tomcat/Tomcat8-弱口令+后台getshell漏洞.md)
+  - [Tomcat对URL特殊字符的处理](Web安全/中间件/Apache%20Tomcat/Tomcat对URL特殊字符的处理.md)
+  - [Tomcat样例目录session操纵漏洞](Web安全/中间件/Apache%20Tomcat/Tomcat样例目录session操纵漏洞.md)
+  - [Tomcat漏洞允许攻击者通过HTTP∕0.9请求绕过安全限制](Web安全/中间件/Apache%20Tomcat/Tomcat漏洞允许攻击者通过HTTP∕0.9请求绕过安全限制.md)
+  - [基于Tomcat的内存Webshell 无文件攻击技术](Web安全/中间件/Apache%20Tomcat/基于Tomcat的内存Webshell%20无文件攻击技术.md)
+  - [漏洞分析  Apache Tomcat 信息泄露漏洞 (CVE-2024-21733)](Web安全/中间件/Apache%20Tomcat/漏洞分析%20%20Apache%20Tomcat%20信息泄露漏洞%20%28CVE-2024-21733%29.md)
+  - [漏洞预警  Apache Tomcat拒绝服务漏洞](Web安全/中间件/Apache%20Tomcat/漏洞预警%20%20Apache%20Tomcat拒绝服务漏洞.md)
+  - [简介](Web安全/中间件/Apache%20Tomcat/简介.md)
+  - [绕过 Tomcat 证书吊销：CVE-2026-24734 详解（含实战 PoC）](Web安全/中间件/Apache%20Tomcat/绕过%20Tomcat%20证书吊销：CVE-2026-24734%20详解（含实战%20PoC）.md)
+  - [通过jmx攻击Tomcat](Web安全/中间件/Apache%20Tomcat/通过jmx攻击Tomcat.md)
+  - [（CVE-2016-1240）Tomcat本地提权漏洞](Web安全/中间件/Apache%20Tomcat/（CVE-2016-1240）Tomcat本地提权漏洞.md)
+  - [（CVE-2016-8735）Tomcat 反序列化漏洞](Web安全/中间件/Apache%20Tomcat/（CVE-2016-8735）Tomcat%20反序列化漏洞.md)
+  - [（CVE-2017-12615）Tomcat PUT方法任意文件写入漏洞](Web安全/中间件/Apache%20Tomcat/（CVE-2017-12615）Tomcat%20PUT方法任意文件写入漏洞.md)
+  - [（CVE-2017-12616）Tomcat 信息泄露](Web安全/中间件/Apache%20Tomcat/（CVE-2017-12616）Tomcat%20信息泄露.md)
+  - [（CVE-2017-12617）Tomcat RCE via JSP Upload Bypass](Web安全/中间件/Apache%20Tomcat/（CVE-2017-12617）Tomcat%20RCE%20via%20JSP%20Upload%20Bypass.md)
+  - [（CVE-2018-1305）Tomcat 安全绕过漏洞](Web安全/中间件/Apache%20Tomcat/（CVE-2018-1305）Tomcat%20安全绕过漏洞.md)
+  - [（CVE-2019-0221）Apache Tomcat SSI printenv指令中的XSS](Web安全/中间件/Apache%20Tomcat/（CVE-2019-0221）Apache%20Tomcat%20SSI%20printenv指令中的XSS.md)
+  - [（CVE-2019-0232）Tomcat rce](Web安全/中间件/Apache%20Tomcat/（CVE-2019-0232）Tomcat%20rce.md)
+  - [（CVE-2020-1938）Apache Tomcat 文件包含漏洞](Web安全/中间件/Apache%20Tomcat/（CVE-2020-1938）Apache%20Tomcat%20文件包含漏洞.md)
+  - [（CVE-2020-9484）Tomcat session反序列化漏洞](Web安全/中间件/Apache%20Tomcat/（CVE-2020-9484）Tomcat%20session反序列化漏洞.md)
 - **Apache Traffic Control**（1）
   - [Apache Traffic Control存在严重的SQL注入漏洞，可在数据库中执行任意命令](Web安全/中间件/Apache%20Traffic%20Control/Apache%20Traffic%20Control存在严重的SQL注入漏洞，可在数据库中执行任意命令.md)
+- **Apache Unomi**（1）
+  - [CVE -2020-13942 (Apache Unomi 远程代码执行漏洞) 复现](Web安全/中间件/Apache%20Unomi/CVE%20-2020-13942%20%28Apache%20Unomi%20远程代码执行漏洞%29%20复现.md)
 - **Apache Zeppelin**（1）
   - [Apache Zeppelin 命令执行漏洞（CVE-2024-31861）](Web安全/中间件/Apache%20Zeppelin/Apache%20Zeppelin%20命令执行漏洞（CVE-2024-31861）.md)
-- **Apache-Commons-Text-**（1）
-  - [Apache-Commons-Text-远程代码执行漏洞-CVE-2022-42889](Web安全/开发框架/Apache-Commons-Text-/Apache-Commons-Text-远程代码执行漏洞-CVE-2022-42889.md)
+- **Apache ZooKeeper**（2）
+  - [漏洞预警  Apache ZooKeeper认证绕过漏洞](Web安全/中间件/Apache%20ZooKeeper/漏洞预警%20%20Apache%20ZooKeeper认证绕过漏洞.md)
+  - [漏洞预警  Apache ZooKeeper身份验证绕过漏洞](Web安全/中间件/Apache%20ZooKeeper/漏洞预警%20%20Apache%20ZooKeeper身份验证绕过漏洞.md)
 - **Apache-Druid-**（1）
   - [Apache-Druid-远程代码执行漏洞-CVE-2021-26919](Web安全/开发框架/Apache-Druid-/Apache-Druid-远程代码执行漏洞-CVE-2021-26919.md)
 - **Apache-OFBiz-**（1）
   - [Apache-OFBiz-反序列化-CVE-2021-30128](Web安全/服务器软件/Apache-OFBiz-/Apache-OFBiz-反序列化-CVE-2021-30128.md)
 - **Apache-OFBiz-RMI-Bypass-**（1）
   - [Apache-OFBiz-RMI-Bypass-RCE-CVE-2021-29200](Web安全/服务器软件/Apache-OFBiz-RMI-Bypass-/Apache-OFBiz-RMI-Bypass-RCE-CVE-2021-29200.md)
-- **Apache-Spark-unTarUsingTar**（1）
-  - [Apache-Spark-unTarUsingTar-命令注入漏洞-SPARK-38631](Web安全/中间件/Apache-Spark-unTarUsingTar/Apache-Spark-unTarUsingTar-命令注入漏洞-SPARK-38631.md)
-- **Apache-Tomcat-**（1）
-  - [Apache-Tomcat-RCE-via-JSP-Upload-Bypass](Web安全/中间件/Apache-Tomcat-/Apache-Tomcat-RCE-via-JSP-Upload-Bypass.md)
-- **Apache-Tomcat-信息**（1）
-  - [Apache-Tomcat-信息泄露漏洞-CVE-2021-24122](Web安全/中间件/Apache-Tomcat-信息/Apache-Tomcat-信息泄露漏洞-CVE-2021-24122.md)
 - **Apereo CAS**（2）
   - [Apereo CAS 4.X execution参数反序列化漏洞](Web安全/其他软件/Apereo%20CAS/Apereo%20CAS%204.X%20execution参数反序列化漏洞.md)
   - [Apereo-CAS-4.1-反序列化命令执行漏洞](Web安全/其他软件/Apereo%20CAS/Apereo-CAS-4.1-反序列化命令执行漏洞.md)
 - **Apktool**（1）
   - [Apktool任意文件写入漏洞分析 CVE-2024-21633](Web安全/其他软件/Apktool/Apktool任意文件写入漏洞分析%20CVE-2024-21633.md)
 - **Apple**（5）
-  - [Apple 修补了可能允许窃听的 AirPods 蓝牙漏洞](Web安全/AI应用/Apple/Apple%20修补了可能允许窃听的%20AirPods%20蓝牙漏洞.md)
   - [CVE-2020-9967-Apple macOS 6LowPAN 漏洞](Web安全/云平台/Apple/CVE-2020-9967-Apple%20macOS%206LowPAN%20漏洞.md)
   - [Apple发布针对间谍软件式0day漏洞的修复](Web安全/其他软件/Apple/Apple发布针对间谍软件式0day漏洞的修复.md)
   - [CVE-2023-42824：Apple iOS∕iPadOS 本地权限提升漏洞通告](Web安全/其他软件/Apple/CVE-2023-42824：Apple%20iOS∕iPadOS%20本地权限提升漏洞通告.md)
   - [被Coruna漏洞包利用的WebKit](Web安全/其他软件/Apple/被Coruna漏洞包利用的WebKit.md)
+  - [Apple 修补了可能允许窃听的 AirPods 蓝牙漏洞](Web安全/桌面软件/Apple/Apple%20修补了可能允许窃听的%20AirPods%20蓝牙漏洞.md)
 - **Apple kernel**（1）
   - [Apple kernel 安全特性绕过漏洞(CVE-2023-38606)安全风险通告](Web安全/其他软件/Apple%20kernel/Apple%20kernel%20安全特性绕过漏洞%28CVE-2023-38606%29安全风险通告.md)
 - **Apple Patches CVE-2025-433**（1）
@@ -3508,12 +3351,11 @@
 - **Aria2**（2）
   - [Aria2 任意文件写入漏洞](Web安全/其他软件/Aria2/Aria2%20任意文件写入漏洞.md)
   - [（CVE-2016-3088）Aria2 任意文件写入漏洞](Web安全/其他软件/Aria2/（CVE-2016-3088）Aria2%20任意文件写入漏洞.md)
-- **Array Networks SSL VPN**（1）
+- **Array Networks SSL VPN**（2）
   - [Array Networks SSL VPN 产品曝严重漏洞，已被黑客利用](Web安全/网络设备/Array%20Networks%20SSL%20VPN/Array%20Networks%20SSL%20VPN%20产品曝严重漏洞，已被黑客利用.md)
+  - [ArrayVPN存在任意文件读取漏洞](Web安全/网络设备/Array%20Networks%20SSL%20VPN/ArrayVPN存在任意文件读取漏洞.md)
 - **Array-Networks-APV**（1）
   - [Array-Networks-APV应用交付系统ping_hosts存在任意命令执行漏洞](Web安全/其他软件/Array-Networks-APV/Array-Networks-APV应用交付系统ping_hosts存在任意命令执行漏洞.md)
-- **ArrayVPN**（1）
-  - [ArrayVPN存在任意文件读取漏洞](Web安全/网络设备/ArrayVPN/ArrayVPN存在任意文件读取漏洞.md)
 - **Arris**（1）
   - [ArrisTR3300路由器basic_sett存在未授权信息泄露漏洞](Web安全/网络设备/Arris/ArrisTR3300路由器basic_sett存在未授权信息泄露漏洞.md)
 - **Arris VAP2500 diag_s 命令注入漏洞**（1）
@@ -3541,8 +3383,6 @@
   - [成功复现 Atlassian Confluence Center Server 远程代码执行漏洞 () CVE-2024-21683](Web安全/商业软件/Atlassian%20Confluence/成功复现%20Atlassian%20Confluence%20Center%20Server%20远程代码执行漏洞%20%28%29%20CVE-2024-21683.md)
 - **Atlassian Crowd**（1）
   - [CVE-2019-11580 Atlassian Crowd RCE](Web安全/其他软件/Atlassian%20Crowd/CVE-2019-11580%20Atlassian%20Crowd%20RCE.md)
-- **Atlassian fixed maximum se**（1）
-  - [Atlassian fixed maximum severity flaw CVE-2025-66516 in Apache Tika](Web安全/中间件/Atlassian%20fixed%20maximum%20se/Atlassian%20fixed%20maximum%20severity%20flaw%20CVE-2025-66516%20in%20Apache%20Tika.md)
 - **Atlassian Jira**（3）
   - [（CVE-2019-11581）Atlassian Jira 远程命令执行漏洞](Web安全/商业软件/Atlassian%20Jira/（CVE-2019-11581）Atlassian%20Jira%20远程命令执行漏洞.md)
   - [（CVE-2019-8449）Atlassian Jira 信息泄露漏洞](Web安全/商业软件/Atlassian%20Jira/（CVE-2019-8449）Atlassian%20Jira%20信息泄露漏洞.md)
@@ -3555,16 +3395,14 @@
   - [（CVE-2019-12169）ATutor学习内容管理系统 任意文件上传漏洞](Web安全/商业软件/ATutor/（CVE-2019-12169）ATutor学习内容管理系统%20任意文件上传漏洞.md)
 - **Autel MaxiCharger**（1）
   - [Autel MaxiCharger（CVE-2024-23967 ∕CVE-2024-23957解析）](Web安全/其他软件/Autel%20MaxiCharger/Autel%20MaxiCharger（CVE-2024-23967%20∕CVE-2024-23957解析）.md)
-- **Autonomous AI Tool Finds 2**（1）
-  - [Autonomous AI Tool Finds 2-Year-Old RCE Flaw in Redis (CVE-2026-23479)](Web安全/AI应用/Autonomous%20AI%20Tool%20Finds%202/Autonomous%20AI%20Tool%20Finds%202-Year-Old%20RCE%20Flaw%20in%20Redis%20%28CVE-2026-23479%29.md)
 - **AVideo**（3）
   - [ (436)](Web安全/其他软件/AVideo/%20%28436%29.md)
   - [ (447)](Web安全/其他软件/AVideo/%20%28447%29.md)
   - [AVideo平台中的关键零点击命令注入漏洞允许流媒体劫持](Web安全/其他软件/AVideo/AVideo平台中的关键零点击命令注入漏洞允许流媒体劫持.md)
 - **Axios**（1）
   - [Axios爆SSRF漏洞，特定条件下可导致RCE](Web安全/其他软件/Axios/Axios爆SSRF漏洞，特定条件下可导致RCE.md)
-- **Azure AI**（1）
-  - [Azure AI 语言会话创作SDK反序列化漏洞：CVE-2026-21531分析与PoC](Web安全/AI应用/Azure%20AI/Azure%20AI%20语言会话创作SDK反序列化漏洞：CVE-2026-21531分析与PoC.md)
+- **Azure**（1）
+  - [Azure AI 语言会话创作SDK反序列化漏洞：CVE-2026-21531分析与PoC](Web安全/云平台/Azure/Azure%20AI%20语言会话创作SDK反序列化漏洞：CVE-2026-21531分析与PoC.md)
 - **Azure RCE**（1）
   - [Azure RCE漏洞剖析：单一VM沦陷可致整个租户失守](Web安全/云平台/Azure%20RCE/Azure%20RCE漏洞剖析：单一VM沦陷可致整个租户失守.md)
 - **b1nhack starred farazsth98**（1）
@@ -3581,6 +3419,8 @@
   - [ (130)](Web安全/其他软件/BeyondTrust/%20%28130%29.md)
   - [BeyondTrust 严重漏洞可导致预认证RCE](Web安全/其他软件/BeyondTrust/BeyondTrust%20严重漏洞可导致预认证RCE.md)
   - [CVE-2026-40138 与 CVE-2026-40139：BeyondTrust 未经身份验证漏洞（CVSS 评分 9.2）](Web安全/其他软件/BeyondTrust/CVE-2026-40138%20与%20CVE-2026-40139：BeyondTrust%20未经身份验证漏洞（CVSS%20评分%209.2）.md)
+- **BigAnt**（1）
+  - [杭州九麒科技 BigAnt-Admin uploadMultipleFile.html 文件上传致RCE漏洞](Web安全/商业软件/BigAnt/杭州九麒科技%20BigAnt-Admin%20uploadMultipleFile.html%20文件上传致RCE漏洞.md)
 - **Billboard**（1）
   - [CVE-2025-49223 - Billboard.js 中的原型污染](Web安全/商业软件/Billboard/CVE-2025-49223%20-%20Billboard.js%20中的原型污染.md)
 - **BIND 9**（1）
@@ -3640,8 +3480,8 @@
   - [CatfishCMS后台csrf](Web安全/CMS内容/CatfishCMS/CatfishCMS后台csrf.md)
   - [CatfishCMS后台储存型xss](Web安全/CMS内容/CatfishCMS/CatfishCMS后台储存型xss.md)
   - [（CNVD-2019-06255）CatfishCMS远程命令执行](Web安全/CMS内容/CatfishCMS/（CNVD-2019-06255）CatfishCMS远程命令执行.md)
-- **CellinxNVT摄像机**（1）
-  - [CellinxNVT摄像机GetFileContent.cgi任意文件读取漏洞](Web安全/网络设备/CellinxNVT摄像机/CellinxNVT摄像机GetFileContent.cgi任意文件读取漏洞.md)
+- **Cellinx**（1）
+  - [CellinxNVT摄像机GetFileContent.cgi任意文件读取漏洞](Web安全/网络设备/Cellinx/CellinxNVT摄像机GetFileContent.cgi任意文件读取漏洞.md)
 - **CentreStack**（1）
   - [CentreStack 反序列化漏洞 (CVE-2025-30406)](Web安全/其他软件/CentreStack/CentreStack%20反序列化漏洞%20%28CVE-2025-30406%29.md)
 - **CERT**（1）
@@ -3700,11 +3540,13 @@
   - [Chrome V8 CVE-2026-0902 内存读取漏洞简析 & POC纪要](Web安全/商业软件/Chrome%20V8%20CVE-2026-0902/Chrome%20V8%20CVE-2026-0902%20内存读取漏洞简析%20&%20POC纪要.md)
 - **Chrome V8 Zero-Day CVE-202**（1）
   - [Chrome V8 Zero-Day CVE-2026-11645 Exploited in the Wild - Patch Now](Web安全/商业软件/Chrome%20V8%20Zero-Day%20CVE-202/Chrome%20V8%20Zero-Day%20CVE-2026-11645%20Exploited%20in%20the%20Wild%20-%20Patch%20Now.md)
+- **ChromeOS**（1）
+  - [微软详述严重的 ChromeOS 漏洞](Web安全/桌面软件/ChromeOS/微软详述严重的%20ChromeOS%20漏洞.md)
 - **ChurchCRM SQL**（1）
   - [ChurchCRM SQL注入漏洞（CNVD-2026-12565、CVE-2026-24854）](Web安全/商业软件/ChurchCRM%20SQL/ChurchCRM%20SQL注入漏洞（CNVD-2026-12565、CVE-2026-24854）.md)
 - **CHYbeta starred BishopFox**（1）
   - [CHYbeta starred BishopFox_CVE-2026-34908-check](Web安全/其他软件/CHYbeta%20starred%20BishopFox/CHYbeta%20starred%20BishopFox_CVE-2026-34908-check.md)
-- **CISA**（20）
+- **CISA**（18）
   - [CISA：Craft CMS代码注入漏洞已遭利用](Web安全/CMS内容/CISA/CISA：Craft%20CMS代码注入漏洞已遭利用.md)
   - [ (203)](Web安全/其他软件/CISA/%20%28203%29.md)
   - [CISA 和 Ivanti： Cloud Services Appliance 高危漏洞已遭利用](Web安全/其他软件/CISA/CISA%20和%20Ivanti：%20Cloud%20Services%20Appliance%20高危漏洞已遭利用.md)
@@ -3723,29 +3565,48 @@
   - [CISA警告3个工控软件系统存在严重漏洞](Web安全/桌面软件/CISA/CISA警告3个工控软件系统存在严重漏洞.md)
   - [CISA：Microsoft SharePoint 的关键漏洞已被积极利用](Web安全/桌面软件/CISA/CISA：Microsoft%20SharePoint%20的关键漏洞已被积极利用.md)
   - [CISA：Wing FTP 已遭利用漏洞可泄露服务器路径](Web安全/桌面软件/CISA/CISA：Wing%20FTP%20已遭利用漏洞可泄露服务器路径.md)
-  - [CISA 警告 Zyxel 防火墙漏洞可能被利用进行攻击](Web安全/网络设备/CISA/CISA%20警告%20Zyxel%20防火墙漏洞可能被利用进行攻击.md)
-  - [CISA 警告：Palo Alto 重大漏洞已被攻击者利用](Web安全/网络设备/CISA/CISA%20警告：Palo%20Alto%20重大漏洞已被攻击者利用.md)
 - **CISA Adds Actively Exploit**（1）
   - [CISA Adds Actively Exploited XSS Bug CVE-2021-26829 in OpenPLC ScadaBR](Web安全/桌面软件/CISA%20Adds%20Actively%20Exploit/CISA%20Adds%20Actively%20Exploited%20XSS%20Bug%20CVE-2021-26829%20in%20OpenPLC%20ScadaBR.md)
-- **CISA Flags TP-Link Router**（1）
-  - [CISA Flags TP-Link Router Flaws CVE-2023-50224 and CVE-2025-9377 as Ac](Web安全/网络设备/CISA%20Flags%20TP-Link%20Router/CISA%20Flags%20TP-Link%20Router%20Flaws%20CVE-2023-50224%20and%20CVE-2025-9377%20as%20Ac.md)
-- **CISA Warns of Two Malware**（1）
-  - [CISA Warns of Two Malware Strains Exploiting Ivanti EPMM CVE-2025-4427](Web安全/AI应用/CISA%20Warns%20of%20Two%20Malware/CISA%20Warns%20of%20Two%20Malware%20Strains%20Exploiting%20Ivanti%20EPMM%20CVE-2025-4427.md)
 - **CISA 称 Windows**（1）
   - [CISA 称 Windows 漏洞可能被利用于勒索软件攻击](Web安全/其他软件/CISA%20称%20Windows/CISA%20称%20Windows%20漏洞可能被利用于勒索软件攻击.md)
-- **Cisco**（8）
+- **Cisco**（31）
   - [ (333)](Web安全/网络设备/Cisco/%20%28333%29.md)
   - [ (341)](Web安全/网络设备/Cisco/%20%28341%29.md)
   - [ (41)](Web安全/网络设备/Cisco/%20%2841%29.md)
+  - [CVE-2020-27131 思科安全管理器反序列化漏洞 POC](Web安全/网络设备/Cisco/CVE-2020-27131%20思科安全管理器反序列化漏洞%20POC.md)
   - [CVE-2026-0866 Cisco ClamAV ZIP扫描引擎绕过漏洞](Web安全/网络设备/Cisco/CVE-2026-0866%20Cisco%20ClamAV%20ZIP扫描引擎绕过漏洞.md)
+  - [Cisco Patches CVE-2026-20230 in Unified CM as Exploit Code Goes Public](Web安全/网络设备/Cisco/Cisco%20Patches%20CVE-2026-20230%20in%20Unified%20CM%20as%20Exploit%20Code%20Goes%20Public.md)
+  - [Cisco Warns of New Firewall Attack Exploiting CVE-2025-20333 and CVE-2](Web安全/网络设备/Cisco/Cisco%20Warns%20of%20New%20Firewall%20Attack%20Exploiting%20CVE-2025-20333%20and%20CVE-2.md)
   - [Cisco 会议管理漏洞让攻击者能够将权限提升为管理员](Web安全/网络设备/Cisco/Cisco%20会议管理漏洞让攻击者能够将权限提升为管理员.md)
   - [Cisco邮件网关9.8分漏洞被在野利用：一封邮件直接拿root，没有任何绕过的余地](Web安全/网络设备/Cisco/Cisco邮件网关9.8分漏洞被在野利用：一封邮件直接拿root，没有任何绕过的余地.md)
   - [Relyze Software Limited - 高级软件分析：拥有具有 4 个漏洞链漏洞利用的 Cisco RV340](Web安全/网络设备/Cisco/Relyze%20Software%20Limited%20-%20高级软件分析：拥有具有%204%20个漏洞链漏洞利用的%20Cisco%20RV340.md)
   - [原创Paper  Cisco IOS XE 系统 WebUI 未授权命令执行漏洞分析](Web安全/网络设备/Cisco/原创Paper%20%20Cisco%20IOS%20XE%20系统%20WebUI%20未授权命令执行漏洞分析.md)
-- **CISCO ASA**（1）
-  - [（CVE-2020-3452）CISCO ASA远程任意文件读取](Web安全/网络设备/CISCO%20ASA/（CVE-2020-3452）CISCO%20ASA远程任意文件读取.md)
-- **Cisco Catalyst SD-WAN Mana**（1）
-  - [Cisco Catalyst SD-WAN Manager CVE-2026-20245 Flaw Actively Exploited –](Web安全/网络设备/Cisco%20Catalyst%20SD-WAN%20Mana/Cisco%20Catalyst%20SD-WAN%20Manager%20CVE-2026-20245%20Flaw%20Actively%20Exploited%20–.md)
+  - [思科 AnyConnect VPN 服务器漏洞可用于触发 DoS 条件](Web安全/网络设备/Cisco/思科%20AnyConnect%20VPN%20服务器漏洞可用于触发%20DoS%20条件.md)
+  - [思科 Unified CM 中存在满分漏洞，可用于获得root权限](Web安全/网络设备/Cisco/思科%20Unified%20CM%20中存在满分漏洞，可用于获得root权限.md)
+  - [思科严重漏洞可导致黑客在SEG设备上添加 root 用户](Web安全/网络设备/Cisco/思科严重漏洞可导致黑客在SEG设备上添加%20root%20用户.md)
+  - [思科修复 ClamAV 拒绝服务 (DoS) 漏洞，专家警告称概念验证 (PoC) 漏洞代码可用](Web安全/网络设备/Cisco/思科修复%20ClamAV%20拒绝服务%20%28DoS%29%20漏洞，专家警告称概念验证%20%28PoC%29%20漏洞代码可用.md)
+  - [思科修复企业协作解决方案中的严重漏洞](Web安全/网络设备/Cisco/思科修复企业协作解决方案中的严重漏洞.md)
+  - [思科修复已有 PoC 的根提权漏洞](Web安全/网络设备/Cisco/思科修复已有%20PoC%20的根提权漏洞.md)
+  - [思科修复已遭利用的 Unified CM RCE 0day漏洞](Web安全/网络设备/Cisco/思科修复已遭利用的%20Unified%20CM%20RCE%200day漏洞.md)
+  - [思科修复由NSA报送的两个高危漏洞](Web安全/网络设备/Cisco/思科修复由NSA报送的两个高危漏洞.md)
+  - [思科修补 VPN 产品中的高严重性漏洞](Web安全/网络设备/Cisco/思科修补%20VPN%20产品中的高严重性漏洞.md)
+  - [思科修补启用 Root CmdExec 和 PrivEsc 的关键 ISE 漏洞](Web安全/网络设备/Cisco/思科修补启用%20Root%20CmdExec%20和%20PrivEsc%20的关键%20ISE%20漏洞.md)
+  - [思科提醒 ISE 中的满分 RCE 漏洞](Web安全/网络设备/Cisco/思科提醒%20ISE%20中的满分%20RCE%20漏洞.md)
+  - [思科提醒严重的 ISE 和 CCP 漏洞](Web安全/网络设备/Cisco/思科提醒严重的%20ISE%20和%20CCP%20漏洞.md)
+  - [思科提醒满分 Secure FMC 漏洞可用于获取 root 权限](Web安全/网络设备/Cisco/思科提醒满分%20Secure%20FMC%20漏洞可用于获取%20root%20权限.md)
+  - [思科提醒通信软件中的严重 RCE 漏洞](Web安全/网络设备/Cisco/思科提醒通信软件中的严重%20RCE%20漏洞.md)
+  - [思科物联网无线AP遭遇严重命令注入漏洞](Web安全/网络设备/Cisco/思科物联网无线AP遭遇严重命令注入漏洞.md)
+  - [思科电话适配器易受 RCE 攻击，目前无修复方案](Web安全/网络设备/Cisco/思科电话适配器易受%20RCE%20攻击，目前无修复方案.md)
+  - [思科通告：本地智能软件管理器曝出高危漏洞，安全升级刻不容缓！](Web安全/网络设备/Cisco/思科通告：本地智能软件管理器曝出高危漏洞，安全升级刻不容缓！.md)
+  - [思科：满分ISE漏洞可导致未认证攻击者执行root 代码](Web安全/网络设备/Cisco/思科：满分ISE漏洞可导致未认证攻击者执行root%20代码.md)
+  - [思科：速修复满分 Secure Workload 未授权 API 访问漏洞](Web安全/网络设备/Cisco/思科：速修复满分%20Secure%20Workload%20未授权%20API%20访问漏洞.md)
+  - [（CVE-2020-3452）CISCO ASA远程任意文件读取](Web安全/网络设备/Cisco/（CVE-2020-3452）CISCO%20ASA远程任意文件读取.md)
+- **Cisco BroadWorks**（1）
+  - [思科 BroadWorks 受严重的认证绕过漏洞影响](Web安全/网络设备/Cisco%20BroadWorks/思科%20BroadWorks%20受严重的认证绕过漏洞影响.md)
+- **Cisco Catalyst SD-WAN**（3）
+  - [Cisco Catalyst SD-WAN Manager CVE-2026-20245 Flaw Actively Exploited –](Web安全/网络设备/Cisco%20Catalyst%20SD-WAN/Cisco%20Catalyst%20SD-WAN%20Manager%20CVE-2026-20245%20Flaw%20Actively%20Exploited%20–.md)
+  - [严重的思科 SD-WAN 漏洞可导致信息泄露](Web安全/网络设备/Cisco%20Catalyst%20SD-WAN/严重的思科%20SD-WAN%20漏洞可导致信息泄露.md)
+  - [思科Catalyst SD-WAN严重认证绕过漏洞遭长期入侵，可植入恶意节点控制网络](Web安全/网络设备/Cisco%20Catalyst%20SD-WAN/思科Catalyst%20SD-WAN严重认证绕过漏洞遭长期入侵，可植入恶意节点控制网络.md)
 - **Cisco HyperFlex**（1）
   - [Cisco-HyperFlex-HX-upload-任意文件上传漏洞-CVE-2021-1499](Web安全/网络设备/Cisco%20HyperFlex/Cisco-HyperFlex-HX-upload-任意文件上传漏洞-CVE-2021-1499.md)
 - **Cisco IMC**（2）
@@ -3753,12 +3614,11 @@
   - [Cisco IMC 存在严重漏洞，攻击者可绕过身份验证](Web安全/网络设备/Cisco%20IMC/Cisco%20IMC%20存在严重漏洞，攻击者可绕过身份验证.md)
 - **Cisco IOS XE Web UI**（1）
   - [Cisco IOS XE Web UI 命令执行漏洞(CVE-2023-20273)安全风险通告](Web安全/网络设备/Cisco%20IOS%20XE%20Web%20UI/Cisco%20IOS%20XE%20Web%20UI%20命令执行漏洞%28CVE-2023-20273%29安全风险通告.md)
-- **Cisco Patches CVE-2026-202**（1）
-  - [Cisco Patches CVE-2026-20230 in Unified CM as Exploit Code Goes Public](Web安全/网络设备/Cisco%20Patches%20CVE-2026-202/Cisco%20Patches%20CVE-2026-20230%20in%20Unified%20CM%20as%20Exploit%20Code%20Goes%20Public.md)
-- **Cisco Warns of New Firewal**（1）
-  - [Cisco Warns of New Firewall Attack Exploiting CVE-2025-20333 and CVE-2](Web安全/网络设备/Cisco%20Warns%20of%20New%20Firewal/Cisco%20Warns%20of%20New%20Firewall%20Attack%20Exploiting%20CVE-2025-20333%20and%20CVE-2.md)
-- **Cisco Webex**（1）
+- **Cisco Small Business**（1）
+  - [思科提醒Small Business路由器中的XSS漏洞](Web安全/网络设备/Cisco%20Small%20Business/思科提醒Small%20Business路由器中的XSS漏洞.md)
+- **Cisco Webex**（2）
   - [Cisco Webex 漏洞可让黑客通过会议链接获取代码执行权限](Web安全/网络设备/Cisco%20Webex/Cisco%20Webex%20漏洞可让黑客通过会议链接获取代码执行权限.md)
+  - [思科Webex爆9.8分漏洞：你的会议可能被老板窃听](Web安全/网络设备/Cisco%20Webex/思科Webex爆9.8分漏洞：你的会议可能被老板窃听.md)
 - **Citrix**（19）
   - [CVE-2022-27510：Citrix Gateway∕ADC身份认证绕过漏洞通告](Web安全/云平台/Citrix/CVE-2022-27510：Citrix%20Gateway∕ADC身份认证绕过漏洞通告.md)
   - [CVE-2025-5777](Web安全/云平台/Citrix/CVE-2025-5777.md)
@@ -3786,7 +3646,7 @@
 - **Claude Code 30**（1）
   - [Claude Code 30分钟挖出Vim用了三十年的0Day，收到陌生文件先别急着打开](Web安全/其他软件/Claude%20Code%2030/Claude%20Code%2030分钟挖出Vim用了三十年的0Day，收到陌生文件先别急着打开.md)
 - **Claude Code Router**（1）
-  - [Claude Code Router远程命令执行漏洞](Web安全/网络设备/Claude%20Code%20Router/Claude%20Code%20Router远程命令执行漏洞.md)
+  - [Claude Code Router远程命令执行漏洞](Web安全/AI应用/Claude%20Code%20Router/Claude%20Code%20Router远程命令执行漏洞.md)
 - **CLFS**（4）
   - [CLFS信息泄露漏洞CVE-2023-28266分析](Web安全/CMS内容/CLFS/CLFS信息泄露漏洞CVE-2023-28266分析.md)
   - [CVE-2022-37969 CLFS 提权漏洞](Web安全/CMS内容/CLFS/CVE-2022-37969%20CLFS%20提权漏洞.md)
@@ -3869,12 +3729,10 @@
   - [（CVE-2019-3394）Confluence 文件读取漏洞](Web安全/商业软件/Confluence/（CVE-2019-3394）Confluence%20文件读取漏洞.md)
   - [（CVE-2019-3396）Confluence 路径穿越与命令执行漏洞](Web安全/商业软件/Confluence/（CVE-2019-3396）Confluence%20路径穿越与命令执行漏洞.md)
   - [（CVE-2019-3398）Confluence 路径穿越漏洞](Web安全/商业软件/Confluence/（CVE-2019-3398）Confluence%20路径穿越漏洞.md)
-- **Consul**（1）
-  - [Consul-Service-API远程命令执行漏洞](Web安全/中间件/Consul/Consul-Service-API远程命令执行漏洞.md)
 - **Copy2Pwn 0day**（1）
   - [Copy2Pwn 0day 被用于绕过 Windows 防护措施](Web安全/其他软件/Copy2Pwn%200day/Copy2Pwn%200day%20被用于绕过%20Windows%20防护措施.md)
 - **Coremail**（1）
-  - [Coremail配置文件信息泄漏](Web安全/AI应用/Coremail/Coremail配置文件信息泄漏.md)
+  - [Coremail配置文件信息泄漏](Web安全/邮件系统/Coremail/Coremail配置文件信息泄漏.md)
 - **Couch**（1）
   - [Couch through 2.0存在路径泄露漏洞](Web安全/商业软件/Couch/Couch%20through%202.0存在路径泄露漏洞.md)
 - **Couchcms**（1）
@@ -3911,8 +3769,6 @@
   - [CrestronHDaj.html存在账号密码泄漏漏洞](Web安全/其他软件/Crestron/CrestronHDaj.html存在账号密码泄漏漏洞.md)
 - **Critical CVE-2025-5086 in**（1）
   - [Critical CVE-2025-5086 in DELMIA Apriso Actively Exploited, CISA Issue](Web安全/其他软件/Critical%20CVE-2025-5086%20in/Critical%20CVE-2025-5086%20in%20DELMIA%20Apriso%20Actively%20Exploited,%20CISA%20Issue.md)
-- **Critical CVE-2025-59367 fl**（1）
-  - [Critical CVE-2025-59367 flaw lets hackers access ASUS DSL routers remo](Web安全/网络设备/Critical%20CVE-2025-59367%20fl/Critical%20CVE-2025-59367%20flaw%20lets%20hackers%20access%20ASUS%20DSL%20routers%20remo.md)
 - **CRMEB**（2）
   - [CRMEB 任意文件读取漏洞（CVE-2024-52726](Web安全/商业软件/CRMEB/CRMEB%20任意文件读取漏洞（CVE-2024-52726.md)
   - [CRMEB开源电商系统SQL注入漏洞 附POC](Web安全/商业软件/CRMEB/CRMEB开源电商系统SQL注入漏洞%20附POC.md)
@@ -3926,8 +3782,6 @@
 - **CrushFtp**（2）
   - [CVE-2023-43177](Web安全/服务器软件/CrushFtp/CVE-2023-43177.md)
   - [CVE-2024-4040 CrushFTP 中的身份验证绕过和任意文件读取](Web安全/服务器软件/CrushFtp/CVE-2024-4040%20CrushFTP%20中的身份验证绕过和任意文件读取.md)
-- **CSRF**（1）
-  - [华为WS331a产品管理页面存在CSRF漏洞](Web安全/网络设备/CSRF/华为WS331a产品管理页面存在CSRF漏洞.md)
 - **CSZ CMS**（2）
   - [CSZ CMS 1.2.7 储存型xss](Web安全/CMS内容/CSZ%20CMS/CSZ%20CMS%201.2.7%20储存型xss.md)
   - [（CVE-2019-13086）CSZ CMS 1.2.2 sql注入漏洞](Web安全/CMS内容/CSZ%20CMS/（CVE-2019-13086）CSZ%20CMS%201.2.2%20sql注入漏洞.md)
@@ -3935,6 +3789,8 @@
   - [ctfshow web入门 命令执行2](Web安全/其他软件/ctfshow%20web/ctfshow%20web入门%20命令执行2.md)
   - [ctfshow web入门 命令执行4](Web安全/其他软件/ctfshow%20web/ctfshow%20web入门%20命令执行4.md)
   - [ctfshow web入门命令执行](Web安全/其他软件/ctfshow%20web/ctfshow%20web入门命令执行.md)
+- **CUDA**（1）
+  - [NVIDIA CUDA Toolkit 爆出 4 个高危漏洞：命令注入、任意代码执行，AI 服务器也不安全了](Web安全/桌面软件/CUDA/NVIDIA%20CUDA%20Toolkit%20爆出%204%20个高危漏洞：命令注入、任意代码执行，AI%20服务器也不安全了.md)
 - **Cuppa CMS-**（1）
   - [Cuppa CMS-任意文件读取CVE-2022-25401](Web安全/CMS内容/Cuppa%20CMS-/Cuppa%20CMS-任意文件读取CVE-2022-25401.md)
 - **CUPS**（1）
@@ -3948,28 +3804,25 @@
   - [CVE-2023-29059：3CXDesktop App 代码执行漏洞通告](Web安全/其他软件/CXDesktop%20App/CVE-2023-29059：3CXDesktop%20App%20代码执行漏洞通告.md)
 - **CyberPower PowerPanel Enterprise**（1）
   - [CyberPower PowerPanel Enterprise 存在SQL注入漏洞（CVE-2024-32737）](Web安全/ERP企业/CyberPower%20PowerPanel%20Enterprise/CyberPower%20PowerPanel%20Enterprise%20存在SQL注入漏洞（CVE-2024-32737）.md)
-- **D-Link**（10）
+- **D-Link**（18）
   - [ (228)](Web安全/网络设备/D-Link/%20%28228%29.md)
   - [ (32)](Web安全/网络设备/D-Link/%20%2832%29.md)
   - [ (470)](Web安全/网络设备/D-Link/%20%28470%29.md)
+  - [ (471)](Web安全/网络设备/D-Link/%20%28471%29.md)
   - [ (489)](Web安全/网络设备/D-Link/%20%28489%29.md)
   - [ (96)](Web安全/网络设备/D-Link/%20%2896%29.md)
   - [(9.1分) CVE-2026-93958：D-Link R95 路由器命令注入](Web安全/网络设备/D-Link/%289.1分%29%20CVE-2026-93958：D-Link%20R95%20路由器命令注入.md)
   - [CVE-2018-17066复现（D-Link命令注入漏洞）](Web安全/网络设备/D-Link/CVE-2018-17066复现（D-Link命令注入漏洞）.md)
   - [CVE-2023-4542：D-LINK-DAR-8000-10 远程命令执行 附 POC](Web安全/网络设备/D-Link/CVE-2023-4542：D-LINK-DAR-8000-10%20远程命令执行%20附%20POC.md)
+  - [D-Link DCS 系列监控 账号密码信息泄露漏洞 CVE-2020-25078](Web安全/网络设备/D-Link/D-Link%20DCS%20系列监控%20账号密码信息泄露漏洞%20CVE-2020-25078.md)
+  - [D-Link DIR803 getcfg.php 信息泄露漏洞(CVE-2025-14528)](Web安全/网络设备/D-Link/D-Link%20DIR803%20getcfg.php%20信息泄露漏洞%28CVE-2025-14528%29.md)
+  - [D-Link Go-RT-AC750 命令注入漏洞（CVE-2023-26822）复现](Web安全/网络设备/D-Link/D-Link%20Go-RT-AC750%20命令注入漏洞（CVE-2023-26822）复现.md)
+  - [D-Link NAS设备nas_sharing.cgi接口存在远程命令执行漏洞CVE-2024-3273](Web安全/网络设备/D-Link/D-Link%20NAS设备nas_sharing.cgi接口存在远程命令执行漏洞CVE-2024-3273.md)
+  - [D-Link-DIR-802-命令注入漏洞-CVE-2021-29379](Web安全/网络设备/D-Link/D-Link-DIR-802-命令注入漏洞-CVE-2021-29379.md)
   - [「1day」D-Link DIR 823G路由器存在未授权访问漏洞（CVE-2025-2360）](Web安全/网络设备/D-Link/「1day」D-Link%20DIR%20823G路由器存在未授权访问漏洞（CVE-2025-2360）.md)
   - [漏洞情报   D-Link 系列存在信息泄露 (CVE-2024-3274) 及命令执行(CVE-2024-3273)](Web安全/网络设备/D-Link/漏洞情报%20%20%20D-Link%20系列存在信息泄露%20%28CVE-2024-3274%29%20及命令执行%28CVE-2024-3273%29.md)
-- **D-Link DCS 系列监控 账号密码信息**（1）
-  - [D-Link DCS 系列监控 账号密码信息泄露漏洞 CVE-2020-25078](Web安全/网络设备/D-Link%20DCS%20系列监控%20账号密码信息/D-Link%20DCS%20系列监控%20账号密码信息泄露漏洞%20CVE-2020-25078.md)
-- **D-Link DIR803 getcfg.php**（1）
-  - [D-Link DIR803 getcfg.php 信息泄露漏洞(CVE-2025-14528)](Web安全/网络设备/D-Link%20DIR803%20getcfg.php/D-Link%20DIR803%20getcfg.php%20信息泄露漏洞%28CVE-2025-14528%29.md)
-- **D-Link Go-RT-AC**（2）
-  - [ (471)](Web安全/网络设备/D-Link%20Go-RT-AC/%20%28471%29.md)
-  - [D-Link Go-RT-AC750 命令注入漏洞（CVE-2023-26822）复现](Web安全/网络设备/D-Link%20Go-RT-AC/D-Link%20Go-RT-AC750%20命令注入漏洞（CVE-2023-26822）复现.md)
-- **D-Link NAS**（1）
-  - [D-Link NAS设备nas_sharing.cgi接口存在远程命令执行漏洞CVE-2024-3273](Web安全/网络设备/D-Link%20NAS/D-Link%20NAS设备nas_sharing.cgi接口存在远程命令执行漏洞CVE-2024-3273.md)
-- **D-Link-DIR-**（1）
-  - [D-Link-DIR-802-命令注入漏洞-CVE-2021-29379](Web安全/网络设备/D-Link-DIR-/D-Link-DIR-802-命令注入漏洞-CVE-2021-29379.md)
+  - [漏洞预警  D-Link DIR-868L远程代码执行漏洞](Web安全/网络设备/D-Link/漏洞预警%20%20D-Link%20DIR-868L远程代码执行漏洞.md)
+  - [漏洞预警  D-Link NAS设备远程代码执行漏洞](Web安全/网络设备/D-Link/漏洞预警%20%20D-Link%20NAS设备远程代码执行漏洞.md)
 - **DAS PWN**（1）
   - [DAS PWN出题思路&CVE-2023-40930的介绍](Web安全/其他软件/DAS%20PWN/DAS%20PWN出题思路&CVE-2023-40930的介绍.md)
 - **DataEase**（6）
@@ -3981,10 +3834,8 @@
   - [DataEase-H2-JDBC-远程命令执行漏洞-CVE-2025-32966](Web安全/数据库/DataEase/DataEase-H2-JDBC-远程命令执行漏洞-CVE-2025-32966.md)
 - **DataEase CVE-2025-49002 RC**（1）
   - [DataEase CVE-2025-49002 RCE](Web安全/其他软件/DataEase%20CVE-2025-49002%20RC/DataEase%20CVE-2025-49002%20RCE.md)
-- **DD-WRT-UPNP缓冲区溢出**（1）
-  - [DD-WRT-UPNP缓冲区溢出漏洞-CVE-2021-27137](Web安全/网络设备/DD-WRT-UPNP缓冲区溢出/DD-WRT-UPNP缓冲区溢出漏洞-CVE-2021-27137.md)
-- **dde-api-proxy**（1）
-  - [dde-api-proxy：Deepin D-Bus 代理服务中的身份验证绕过（CVE-2025-23222）](Web安全/中间件/dde-api-proxy/dde-api-proxy：Deepin%20D-Bus%20代理服务中的身份验证绕过（CVE-2025-23222）.md)
+- **DD-WRT**（1）
+  - [DD-WRT-UPNP缓冲区溢出漏洞-CVE-2021-27137](Web安全/网络设备/DD-WRT/DD-WRT-UPNP缓冲区溢出漏洞-CVE-2021-27137.md)
 - **Dedecms**（27）
   - [ (486)](Web安全/CMS内容/Dedecms/%20%28486%29.md)
   - [D-Link NAS 未授权RCE漏洞(CVE-2024-3273)](Web安全/CMS内容/Dedecms/D-Link%20NAS%20未授权RCE漏洞%28CVE-2024-3273%29.md)
@@ -4041,8 +3892,6 @@
   - [（CVE-2017-14706）DenyAll WAF < 6.3.0 远程命令执行漏洞](Web安全/安全设备/DenyAll%20WAF/（CVE-2017-14706）DenyAll%20WAF%20<%206.3.0%20远程命令执行漏洞.md)
 - **Dgraph**（1）
   - [Dgraph 数据库存在严重漏洞，攻击者可绕过身份验证](Web安全/其他软件/Dgraph/Dgraph%20数据库存在严重漏洞，攻击者可绕过身份验证.md)
-- **Dirty Frag**（1）
-  - [Dirty Frag的双漏洞组合](Web安全/AI应用/Dirty%20Frag/Dirty%20Frag的双漏洞组合.md)
 - **DirtyDecrypt Linux**（1）
   - [DirtyDecrypt Linux内核漏洞PoC利用代码公开](Web安全/其他软件/DirtyDecrypt%20Linux/DirtyDecrypt%20Linux内核漏洞PoC利用代码公开.md)
 - **Discuz**（28）
@@ -4074,31 +3923,28 @@
   - [Discuz-7.x6.x-全局变量防御绕过导致代码执行](Web安全/CMS内容/Discuz/Discuz-7.x6.x-全局变量防御绕过导致代码执行.md)
   - [Discuz_＜3.4_birthprovince_前台任意文件删除](Web安全/CMS内容/Discuz/Discuz_＜3.4_birthprovince_前台任意文件删除.md)
   - [（CVE-2018-14729）Discuz! X1.5 ~ X2.5 后台数据库备份功能远程命令执行 Getshell](Web安全/CMS内容/Discuz/（CVE-2018-14729）Discuz!%20X1.5%20~%20X2.5%20后台数据库备份功能远程命令执行%20Getshell.md)
-- **Django**（13）
+- **Django**（17）
+  - [CVE-2024-42005](Web安全/开发框架/Django/CVE-2024-42005.md)
+  - [CVE-2026-1312 Django order_by结合FilteredRelation使用导致的SQL注入漏洞](Web安全/开发框架/Django/CVE-2026-1312%20Django%20order_by结合FilteredRelation使用导致的SQL注入漏洞.md)
   - [Django  2.0.8 任意URL跳转漏洞 CVE-2018-14574](Web安全/开发框架/Django/Django%20%202.0.8%20任意URL跳转漏洞%20CVE-2018-14574.md)
   - [Django GIS SQL注入漏洞 CVE-2020-9402](Web安全/开发框架/Django/Django%20GIS%20SQL注入漏洞%20CVE-2020-9402.md)
   - [Django GIS SQL注入漏洞复现](Web安全/开发框架/Django/Django%20GIS%20SQL注入漏洞复现.md)
   - [Django JSONField  HStoreField SQL注入漏洞 CVE-2019-14234](Web安全/开发框架/Django/Django%20JSONField%20%20HStoreField%20SQL注入漏洞%20CVE-2019-14234.md)
   - [Django QuerySet.order_by() SQL注入漏洞 CVE-2021-35042](Web安全/开发框架/Django/Django%20QuerySet.order_by%28%29%20SQL注入漏洞%20CVE-2021-35042.md)
+  - [Django SQL注入漏洞（CVE-2022-28346）](Web安全/开发框架/Django/Django%20SQL注入漏洞（CVE-2022-28346）.md)
   - [Django debug page XSS漏洞 CVE-2017-12794](Web安全/开发框架/Django/Django%20debug%20page%20XSS漏洞%20CVE-2017-12794.md)
   - [Django-Trunc(kind)-and-Extract(lookup_name)-SQL注入漏洞-CVE-2022-34265](Web安全/开发框架/Django/Django-Trunc%28kind%29-and-Extract%28lookup_name%29-SQL注入漏洞-CVE-2022-34265.md)
   - [深入剖析 CVE-2026-1207：Django RasterField(PostGIS) 栅格查询 SQL 注入漏洞](Web安全/开发框架/Django/深入剖析%20CVE-2026-1207：Django%20RasterField%28PostGIS%29%20栅格查询%20SQL%20注入漏洞.md)
+  - [漏洞预警  Django拒绝服务和SQL注入漏洞](Web安全/开发框架/Django/漏洞预警%20%20Django拒绝服务和SQL注入漏洞.md)
   - [（CVE-2017-12794）Django debug page XSS漏洞](Web安全/开发框架/Django/（CVE-2017-12794）Django%20debug%20page%20XSS漏洞.md)
   - [（CVE-2018-14574）Django < 2.0.8 任意URL跳转漏洞](Web安全/开发框架/Django/（CVE-2018-14574）Django%20<%202.0.8%20任意URL跳转漏洞.md)
   - [（CVE-2019-14234）Django JSONField sql注入漏洞](Web安全/开发框架/Django/（CVE-2019-14234）Django%20JSONField%20sql注入漏洞.md)
   - [（CVE-2020-7471）Django sql注入漏洞](Web安全/开发框架/Django/（CVE-2020-7471）Django%20sql注入漏洞.md)
   - [（CVE-2020-9402）Django Geo sql注入](Web安全/开发框架/Django/（CVE-2020-9402）Django%20Geo%20sql注入.md)
-- **Django order**（1）
-  - [CVE-2026-1312 Django order_by结合FilteredRelation使用导致的SQL注入漏洞](Web安全/开发框架/Django%20order/CVE-2026-1312%20Django%20order_by结合FilteredRelation使用导致的SQL注入漏洞.md)
-- **Django SQL**（2）
-  - [CVE-2024-42005](Web安全/开发框架/Django%20SQL/CVE-2024-42005.md)
-  - [Django SQL注入漏洞（CVE-2022-28346）](Web安全/开发框架/Django%20SQL/Django%20SQL注入漏洞（CVE-2022-28346）.md)
 - **DLink**（1）
   - [ (358)](Web安全/其他软件/DLink/%20%28358%29.md)
 - **DLL 劫持原理及其**（1）
   - [DLL 劫持原理及其漏洞挖掘（一）](Web安全/其他软件/DLL%20劫持原理及其/DLL%20劫持原理及其漏洞挖掘（一）.md)
-- **DMC Airin Blog Plugin**（1）
-  - [DMC Airin Blog Plugin 反序列化 CVE-2024-52413分析](Web安全/AI应用/DMC%20Airin%20Blog%20Plugin/DMC%20Airin%20Blog%20Plugin%20反序列化%20CVE-2024-52413分析.md)
 - **DNS域传送漏洞**（1）
   - [DNS域传送漏洞](Web安全/其他软件/DNS域传送漏洞/DNS域传送漏洞.md)
 - **DocCMS**（1）
@@ -4126,18 +3972,18 @@
 - **Dolibarr**（2）
   - [CVE-2021-33618 Dolibarr ERP CRM 13.0.2 远程代码执行](Web安全/ERP企业/Dolibarr/CVE-2021-33618%20Dolibarr%20ERP%20CRM%2013.0.2%20远程代码执行.md)
   - [Dolibarr-edit.php-远程命令执行漏洞-CVE-2022-40871](Web安全/其他软件/Dolibarr/Dolibarr-edit.php-远程命令执行漏洞-CVE-2022-40871.md)
-- **DomainMod的XSS集合**（1）
-  - [DomainMod的XSS集合](Web安全/AI应用/DomainMod的XSS集合/DomainMod的XSS集合.md)
+- **DomainMod**（1）
+  - [DomainMod的XSS集合](Web安全/商业软件/DomainMod/DomainMod的XSS集合.md)
 - **DouPHP**（1）
   - [DouPHP（CVE-2024-7917、代码分析xss）漏洞复现](Web安全/CMS内容/DouPHP/DouPHP（CVE-2024-7917、代码分析xss）漏洞复现.md)
 - **Dovecot CVE-2025-30189**（1）
   - [Dovecot CVE-2025-30189_ Auth cache causes access to wrongaccount](Web安全/邮件系统/Dovecot%20CVE-2025-30189/Dovecot%20CVE-2025-30189_%20Auth%20cache%20causes%20access%20to%20wrongaccount.md)
-- **DrayTek**（3）
+- **DrayTek**（5）
   - [DrayTek 路由器爆远程代码执行漏洞](Web安全/网络设备/DrayTek/DrayTek%20路由器爆远程代码执行漏洞.md)
+  - [DrayTek企业网络设备-远程命令执行-CVE-2020-8515](Web安全/网络设备/DrayTek/DrayTek企业网络设备-远程命令执行-CVE-2020-8515.md)
   - [DraytekVigor2960路由器mainfunction任意文件读取漏洞](Web安全/网络设备/DrayTek/DraytekVigor2960路由器mainfunction任意文件读取漏洞.md)
   - [DraytekVigor2960路由器mainfunction远程命令执行漏洞](Web安全/网络设备/DrayTek/DraytekVigor2960路由器mainfunction远程命令执行漏洞.md)
-- **DrayTek企业网络设备**（1）
-  - [DrayTek企业网络设备-远程命令执行-CVE-2020-8515](Web安全/网络设备/DrayTek企业网络设备/DrayTek企业网络设备-远程命令执行-CVE-2020-8515.md)
+  - [Vigor3900 CVE-2021-43118 命令注入漏洞分析](Web安全/网络设备/DrayTek/Vigor3900%20CVE-2021-43118%20命令注入漏洞分析.md)
 - **Druid**（1）
   - [Druid 未授权访问漏洞](Web安全/开发框架/Druid/Druid%20未授权访问漏洞.md)
 - **Drupal**（13）
@@ -4156,8 +4002,8 @@
   - [（CVE-2019-6341）Drupal xss漏洞](Web安全/CMS内容/Drupal/（CVE-2019-6341）Drupal%20xss漏洞.md)
 - **DSN Injection**（1）
   - [DSN Injection(CVE-2022-3023)](Web安全/其他软件/DSN%20Injection/DSN%20Injection%28CVE-2022-3023%29.md)
-- **DTStack Taier 1.4.0 listNa**（1）
-  - [DTStack Taier 1.4.0 listNames sql注入分析(CVE-2024-41579)](Web安全/AI应用/DTStack%20Taier%201.4.0%20listNa/DTStack%20Taier%201.4.0%20listNames%20sql注入分析%28CVE-2024-41579%29.md)
+- **DTStack Taier**（1）
+  - [DTStack Taier 1.4.0 listNames sql注入分析(CVE-2024-41579)](Web安全/商业软件/DTStack%20Taier/DTStack%20Taier%201.4.0%20listNames%20sql注入分析%28CVE-2024-41579%29.md)
 - **Dutch NCSC Confirms Active**（1）
   - [Dutch NCSC Confirms Active Exploitation of Citrix NetScaler CVE-2025-6](Web安全/云平台/Dutch%20NCSC%20Confirms%20Active/Dutch%20NCSC%20Confirms%20Active%20Exploitation%20of%20Citrix%20NetScaler%20CVE-2025-6.md)
 - **Easy**（1）
@@ -4167,8 +4013,8 @@
 - **Easy File Sharing Web Server**（1）
   - [Easy File Sharing Web Server 7.2 - GET 缓冲区溢出 (SEH)](Web安全/其他软件/Easy%20File%20Sharing%20Web%20Server/Easy%20File%20Sharing%20Web%20Server%207.2%20-%20GET%20缓冲区溢出%20%28SEH%29.md)
 - **EasyCVR**（2）
-  - [EasyCVR-视频管理平台 taillog 任意文件读取漏洞](Web安全/AI应用/EasyCVR/EasyCVR-视频管理平台%20taillog%20任意文件读取漏洞.md)
   - [旭帆易云视信息科技有限公司 EasyCVR getbaseconfig 信息泄露漏洞(CVE-2025-1595)](Web安全/其他软件/EasyCVR/旭帆易云视信息科技有限公司%20EasyCVR%20getbaseconfig%20信息泄露漏洞%28CVE-2025-1595%29.md)
+  - [EasyCVR-视频管理平台 taillog 任意文件读取漏洞](Web安全/智能设备/EasyCVR/EasyCVR-视频管理平台%20taillog%20任意文件读取漏洞.md)
 - **EasyImage**（1）
   - [EasyImage manager.php 后台任意文件上传漏洞](Web安全/其他软件/EasyImage/EasyImage%20manager.php%20后台任意文件上传漏洞.md)
 - **EasyImage-manager.php-后台**（1）
@@ -4190,20 +4036,18 @@
   - [EduSoho-教培系统-app_dev.php-任意读取漏洞](Web安全/CMS内容/EduSoho-教培系统-app_dev.php/EduSoho-教培系统-app_dev.php-任意读取漏洞.md)
 - **EKUwu-CVE-2024-49019**（1）
   - [EKUwu-CVE-2024-49019](Web安全/其他软件/EKUwu-CVE-2024-49019/EKUwu-CVE-2024-49019.md)
-- **Elasticsearch**（7）
+- **Elasticsearch**（11）
   - [Adminer-ElasticSearch-和-ClickHouse-错误页面SSRF漏洞-CVE-2021-21311](Web安全/中间件/Elasticsearch/Adminer-ElasticSearch-和-ClickHouse-错误页面SSRF漏洞-CVE-2021-21311.md)
+  - [ElasticSearch Groovy 沙盒绕过 & 代码执行漏洞 CVE-2015-1427](Web安全/中间件/Elasticsearch/ElasticSearch%20Groovy%20沙盒绕过%20&%20代码执行漏洞%20CVE-2015-1427.md)
+  - [ElasticSearch Groovy 远程代码执行漏洞](Web安全/中间件/Elasticsearch/ElasticSearch%20Groovy%20远程代码执行漏洞.md)
+  - [ElasticSearch命令执行漏洞之CVE-2012-3120](Web安全/中间件/Elasticsearch/ElasticSearch命令执行漏洞之CVE-2012-3120.md)
   - [Elasticsearch 1.5.x 后台getshell](Web安全/中间件/Elasticsearch/Elasticsearch%201.5.x%20后台getshell.md)
   - [Elasticsearch存在任意文件写入漏洞](Web安全/中间件/Elasticsearch/Elasticsearch存在任意文件写入漏洞.md)
   - [Elasticsearch存在未授权访问导致的RCE](Web安全/中间件/Elasticsearch/Elasticsearch存在未授权访问导致的RCE.md)
   - [Elasticsearch未授权访问](Web安全/中间件/Elasticsearch/Elasticsearch未授权访问.md)
+  - [（CVE-2014-3120）ElasticSearch 命令执行漏洞](Web安全/中间件/Elasticsearch/（CVE-2014-3120）ElasticSearch%20命令执行漏洞.md)
   - [（CVE-2015-3337）ElasticSearch 目录穿越漏洞](Web安全/中间件/Elasticsearch/（CVE-2015-3337）ElasticSearch%20目录穿越漏洞.md)
   - [（CVE-2015-5531）ElasticSearch 目录穿越漏洞](Web安全/中间件/Elasticsearch/（CVE-2015-5531）ElasticSearch%20目录穿越漏洞.md)
-- **ElasticSearch**（3）
-  - [ElasticSearch Groovy 沙盒绕过 & 代码执行漏洞 CVE-2015-1427](Web安全/中间件/ElasticSearch/ElasticSearch%20Groovy%20沙盒绕过%20&%20代码执行漏洞%20CVE-2015-1427.md)
-  - [ElasticSearch命令执行漏洞之CVE-2012-3120](Web安全/中间件/ElasticSearch/ElasticSearch命令执行漏洞之CVE-2012-3120.md)
-  - [（CVE-2014-3120）ElasticSearch 命令执行漏洞](Web安全/中间件/ElasticSearch/（CVE-2014-3120）ElasticSearch%20命令执行漏洞.md)
-- **ElasticSearch Groovy**（1）
-  - [ElasticSearch Groovy 远程代码执行漏洞](Web安全/中间件/ElasticSearch%20Groovy/ElasticSearch%20Groovy%20远程代码执行漏洞.md)
 - **electrolink**（1）
   - [electrolink 信息泄露漏洞 (CVE-2025-28228)](Web安全/其他软件/electrolink/electrolink%20信息泄露漏洞%20%28CVE-2025-28228%29.md)
 - **Electron**（2）
@@ -4320,11 +4164,13 @@
   - [（CVE-2020-24616）FasterXML jackson-databind 远程命令执行漏洞](Web安全/开发框架/FasterXML%20jackson/（CVE-2020-24616）FasterXML%20jackson-databind%20远程命令执行漏洞.md)
   - [（CVE-2020-24750）FasterXML jackson-databind 远程命令执行漏洞](Web安全/开发框架/FasterXML%20jackson/（CVE-2020-24750）FasterXML%20jackson-databind%20远程命令执行漏洞.md)
   - [（CVE-2020-8840）FasterXML jackson-databind 远程代码执行漏洞](Web安全/开发框架/FasterXML%20jackson/（CVE-2020-8840）FasterXML%20jackson-databind%20远程代码执行漏洞.md)
-- **FastGPT NoSQL**（1）
-  - [FastGPT NoSQL注入致管理员登录绕过：CVE-2026-40351深度剖析](Web安全/AI应用/FastGPT%20NoSQL/FastGPT%20NoSQL注入致管理员登录绕过：CVE-2026-40351深度剖析.md)
-- **Fastjson**（26）
+- **FastGPT**（1）
+  - [FastGPT NoSQL注入致管理员登录绕过：CVE-2026-40351深度剖析](Web安全/AI应用/FastGPT/FastGPT%20NoSQL注入致管理员登录绕过：CVE-2026-40351深度剖析.md)
+- **Fastjson**（32）
   - [FastJSON(全系漏洞分析-截至2023-03-25)](Web安全/开发框架/Fastjson/FastJSON%28全系漏洞分析-截至2023-03-25%29.md)
   - [FastJson 渗透测试](Web安全/开发框架/Fastjson/FastJson%20渗透测试.md)
+  - [FastJson小于等于1.2.47RCE 细枝末节详细分析](Web安全/开发框架/Fastjson/FastJson小于等于1.2.47RCE%20细枝末节详细分析.md)
+  - [Fastjson - 初识 Fastjson-1.2.24 反序列化漏洞](Web安全/开发框架/Fastjson/Fastjson%20-%20初识%20Fastjson-1.2.24%20反序列化漏洞.md)
   - [Fastjson 1.2.22 - 1.2.24 反序列化漏洞](Web安全/开发框架/Fastjson/Fastjson%201.2.22%20-%201.2.24%20反序列化漏洞.md)
   - [Fastjson 1.2.66-1.2.83 @JSONType资源探测链RCE CVE-2026-16723](Web安全/开发框架/Fastjson/Fastjson%201.2.66-1.2.83%20@JSONType资源探测链RCE%20CVE-2026-16723.md)
   - [Fastjson 1.2.68 bypass autotype](Web安全/开发框架/Fastjson/Fastjson%201.2.68%20bypass%20autotype.md)
@@ -4332,33 +4178,27 @@
   - [Fastjson <=1.2.47 远程代码执行漏洞](Web安全/开发框架/Fastjson/Fastjson%20<=1.2.47%20远程代码执行漏洞.md)
   - [Fastjson <=1.2.60 DoS漏洞无损检测+Fastjson与Jackson组建区分](Web安全/开发框架/Fastjson/Fastjson%20<=1.2.60%20DoS漏洞无损检测+Fastjson与Jackson组建区分.md)
   - [Fastjson 多版本payload集合](Web安全/开发框架/Fastjson/Fastjson%20多版本payload集合.md)
+  - [Fastjson 小于等于 1.2.47 反序列化漏洞复现](Web安全/开发框架/Fastjson/Fastjson%20小于等于%201.2.47%20反序列化漏洞复现.md)
   - [Fastjson 远程代码执行漏洞 CVE-2022-25845](Web安全/开发框架/Fastjson/Fastjson%20远程代码执行漏洞%20CVE-2022-25845.md)
   - [Fastjson-1.2.24-反序列化导致任意命令执行漏洞](Web安全/开发框架/Fastjson/Fastjson-1.2.24-反序列化导致任意命令执行漏洞.md)
   - [Fastjson-1.2.47-远程命令执行漏洞](Web安全/开发框架/Fastjson/Fastjson-1.2.47-远程命令执行漏洞.md)
+  - [Fastjson-远程代码执行漏洞-CVE-2022-25845](Web安全/开发框架/Fastjson/Fastjson-远程代码执行漏洞-CVE-2022-25845.md)
   - [Fastjson1-2-47 反序列化漏洞复现](Web安全/开发框架/Fastjson/Fastjson1-2-47%20反序列化漏洞复现.md)
   - [Fastjson1-2-68 反序列化复现（文末送书）](Web安全/开发框架/Fastjson/Fastjson1-2-68%20反序列化复现（文末送书）.md)
   - [Fastjson2 FNV-1a哈希碰撞AutoType绕过RCE CVE-2026-44034](Web安全/开发框架/Fastjson/Fastjson2%20FNV-1a哈希碰撞AutoType绕过RCE%20CVE-2026-44034.md)
   - [HIKVISION-综合安防管理平台-applyCT-Fastjson远程命令执行漏洞](Web安全/开发框架/Fastjson/HIKVISION-综合安防管理平台-applyCT-Fastjson远程命令执行漏洞.md)
   - [README](Web安全/开发框架/Fastjson/README.md)
+  - [fastjson v1-2-68 RCE 利用链复现](Web安全/开发框架/Fastjson/fastjson%20v1-2-68%20RCE%20利用链复现.md)
   - [fastjson 之各个版本 payload 测试](Web安全/开发框架/Fastjson/fastjson%20之各个版本%20payload%20测试.md)
   - [一款FastJson反序列化漏洞利用和扫描探测工具漏洞探测](Web安全/开发框架/Fastjson/一款FastJson反序列化漏洞利用和扫描探测工具漏洞探测.md)
   - [两万字 零基础学 Fastjson 提高篇（一）](Web安全/开发框架/Fastjson/两万字%20零基础学%20Fastjson%20提高篇（一）.md)
+  - [两万字原创长文 完全零基础入门 Fastjson 系列漏洞（基础篇）](Web安全/开发框架/Fastjson/两万字原创长文%20完全零基础入门%20Fastjson%20系列漏洞（基础篇）.md)
   - [奇安信攻防社区 - Java 安全 - FastJson 系列详解](Web安全/开发框架/Fastjson/奇安信攻防社区%20-%20Java%20安全%20-%20FastJson%20系列详解.md)
   - [框架安全之 Fastjson 渗透](Web安全/开发框架/Fastjson/框架安全之%20Fastjson%20渗透.md)
   - [海康威视综合安防 Fastjson 不出网利用](Web安全/开发框架/Fastjson/海康威视综合安防%20Fastjson%20不出网利用.md)
   - [海康威视综合安防 Fastjson 内存马打法](Web安全/开发框架/Fastjson/海康威视综合安防%20Fastjson%20内存马打法.md)
   - [漏洞复现 Fastjson 系列](Web安全/开发框架/Fastjson/漏洞复现%20Fastjson%20系列.md)
   - [通过Dnslog判断是否使用fastjson](Web安全/开发框架/Fastjson/通过Dnslog判断是否使用fastjson.md)
-- **Fastjson - 初识 Fastjson-1.2.24**（1）
-  - [Fastjson - 初识 Fastjson-1.2.24 反序列化漏洞](Web安全/开发框架/Fastjson%20-%20初识%20Fastjson-1.2.24/Fastjson%20-%20初识%20Fastjson-1.2.24%20反序列化漏洞.md)
-- **fastjson v**（1）
-  - [fastjson v1-2-68 RCE 利用链复现](Web安全/开发框架/fastjson%20v/fastjson%20v1-2-68%20RCE%20利用链复现.md)
-- **Fastjson 小于等于 1.2.47**（1）
-  - [Fastjson 小于等于 1.2.47 反序列化漏洞复现](Web安全/开发框架/Fastjson%20小于等于%201.2.47/Fastjson%20小于等于%201.2.47%20反序列化漏洞复现.md)
-- **Fastjson-**（1）
-  - [Fastjson-远程代码执行漏洞-CVE-2022-25845](Web安全/开发框架/Fastjson-/Fastjson-远程代码执行漏洞-CVE-2022-25845.md)
-- **FastJson小于等于1.2.47**（1）
-  - [FastJson小于等于1.2.47RCE 细枝末节详细分析](Web安全/开发框架/FastJson小于等于1.2.47/FastJson小于等于1.2.47RCE%20细枝末节详细分析.md)
 - **FatFs**（1）
   - [FatFs漏洞使攻击者可利用特制USB∕SD卡镜像执行代码](Web安全/其他软件/FatFs/FatFs漏洞使攻击者可利用特制USB∕SD卡镜像执行代码.md)
 - **FCKeditor**（5）
@@ -4376,8 +4216,8 @@
   - [（CVE-2017-9993）Ffmpeg 任意文件读取漏洞](Web安全/桌面软件/Ffmpeg/（CVE-2017-9993）Ffmpeg%20任意文件读取漏洞.md)
 - **FH Admin**（1）
   - [FH Admin 任意文件上传漏洞](Web安全/其他软件/FH%20Admin/FH%20Admin%20任意文件上传漏洞.md)
-- **Fidelity**（1）
-  - [Fidelity充电桩AI量化理财系统存在前台任意文件上传漏洞](Web安全/AI应用/Fidelity/Fidelity充电桩AI量化理财系统存在前台任意文件上传漏洞.md)
+- **Fiber**（1）
+  - [这个严重的 Fiber Go 漏洞！](Web安全/开发框架/Fiber/这个严重的%20Fiber%20Go%20漏洞！.md)
 - **Finecms**（8）
   - [Finecms 5.0.10 sql注入漏洞](Web安全/CMS内容/Finecms/Finecms%205.0.10%20sql注入漏洞.md)
   - [Finecms 5.0.10 任意代码执行漏洞](Web安全/CMS内容/Finecms/Finecms%205.0.10%20任意代码执行漏洞.md)
@@ -4405,6 +4245,8 @@
   - [FLIR-AX8 res.php 命令执行漏洞](Web安全/其他软件/FLIR-AX/FLIR-AX8%20res.php%20命令执行漏洞.md)
   - [FLIR-AX8 任意文件下载](Web安全/其他软件/FLIR-AX/FLIR-AX8%20任意文件下载.md)
   - [FLIR-AX8-res.php-后台命令执行漏洞](Web安全/其他软件/FLIR-AX/FLIR-AX8-res.php-后台命令执行漏洞.md)
+- **Flowise**（1）
+  - [攻击者利用 Flowise 严重漏洞 CVE-2025-59528 实现远程代码执行](Web安全/AI应用/Flowise/攻击者利用%20Flowise%20严重漏洞%20CVE-2025-59528%20实现远程代码执行.md)
 - **Fluent Bit 0-day**（1）
   - [Fluent Bit 0-day漏洞使数十亿生产环境面临网络攻击威胁](Web安全/其他软件/Fluent%20Bit%200-day/Fluent%20Bit%200-day漏洞使数十亿生产环境面临网络攻击威胁.md)
 - **fnOS**（1）
@@ -4471,8 +4313,6 @@
   - [FreeScout 严重漏洞可导致服务器遭完全接管](Web安全/其他软件/FreeScout/FreeScout%20严重漏洞可导致服务器遭完全接管.md)
 - **Fuel**（1）
   - [Fuel CMS 1.4.1 远程代码执行漏洞](Web安全/CMS内容/Fuel/Fuel%20CMS%201.4.1%20远程代码执行漏洞.md)
-- **Fuzzing**（1）
-  - [Fuzzing 升级：谷歌通过AI找到更多漏洞](Web安全/AI应用/Fuzzing/Fuzzing%20升级：谷歌通过AI找到更多漏洞.md)
 - **Fuzzing101 Exercise 4 - Li**（1）
   - [Fuzzing101 Exercise 4 - LibTIFF CVE-2016-9297&CVE-2016-9448分析](Web安全/其他软件/Fuzzing101%20Exercise%204%20-%20Li/Fuzzing101%20Exercise%204%20-%20LibTIFF%20CVE-2016-9297&CVE-2016-9448分析.md)
 - **G.O.S.S.I.P**（1）
@@ -4481,14 +4321,15 @@
   - [Gakido CRLF注入漏洞允许攻击者绕过安全控制](Web安全/CMS内容/Gakido%20CRLF/Gakido%20CRLF注入漏洞允许攻击者绕过安全控制.md)
 - **gemini-mcp-tool**（1）
   - [gemini-mcp-tool 命令注入漏洞深度分析(CVE-2026-0755)](Web安全/其他软件/gemini-mcp-tool/gemini-mcp-tool%20命令注入漏洞深度分析%28CVE-2026-0755%29.md)
-- **GeoLocate CVE-2025-52465 -**（1）
-  - [GeoLocate CVE-2025-52465 - GeoServer漏洞利用](Web安全/中间件/GeoLocate%20CVE-2025-52465%20-/GeoLocate%20CVE-2025-52465%20-%20GeoServer漏洞利用.md)
-- **GeoServer**（3）
+- **GeoServer**（8）
+  - [GeoLocate CVE-2025-52465 - GeoServer漏洞利用](Web安全/中间件/GeoServer/GeoLocate%20CVE-2025-52465%20-%20GeoServer漏洞利用.md)
+  - [GeoServer WMS GetMap XML 外部实体注入漏洞（CVE-2025-58360）](Web安全/中间件/GeoServer/GeoServer%20WMS%20GetMap%20XML%20外部实体注入漏洞（CVE-2025-58360）.md)
   - [GeoServer-OGC-Filter-SQL注入漏洞-CVE-2023-25157](Web安全/中间件/GeoServer/GeoServer-OGC-Filter-SQL注入漏洞-CVE-2023-25157.md)
   - [GeoServer-TestWfsPost-接口未授权-SSRF-漏洞-CVE-2021-40822](Web安全/中间件/GeoServer/GeoServer-TestWfsPost-接口未授权-SSRF-漏洞-CVE-2021-40822.md)
   - [GeoServer-属性名表达式前台代码执行漏洞-CVE-2024-36401](Web安全/中间件/GeoServer/GeoServer-属性名表达式前台代码执行漏洞-CVE-2024-36401.md)
-- **GeoServer WMS GetMap XML**（1）
-  - [GeoServer WMS GetMap XML 外部实体注入漏洞（CVE-2025-58360）](Web安全/中间件/GeoServer%20WMS%20GetMap%20XML/GeoServer%20WMS%20GetMap%20XML%20外部实体注入漏洞（CVE-2025-58360）.md)
+  - [漏洞通告GeoServer SSRF和XXE漏洞](Web安全/中间件/GeoServer/漏洞通告GeoServer%20SSRF和XXE漏洞.md)
+  - [漏洞预警  GeoServer远程代码执行漏洞](Web安全/中间件/GeoServer/漏洞预警%20%20GeoServer远程代码执行漏洞.md)
+  - [首发 1day GeoServer 任意文件上传详解（附 poc）](Web安全/中间件/GeoServer/首发%201day%20GeoServer%20任意文件上传详解（附%20poc）.md)
 - **Gerapy**（2）
   - [Gerapy-project_clone-&-project_parse-后台远程命令执行漏洞-CVE-2021-32849](Web安全/其他软件/Gerapy/Gerapy-project_clone-&-project_parse-后台远程命令执行漏洞-CVE-2021-32849.md)
   - [Gerapy-project_file_read-后台任意文件读取漏洞](Web安全/其他软件/Gerapy/Gerapy-project_file_read-后台任意文件读取漏洞.md)
@@ -4535,24 +4376,23 @@
   - [CVE-2024-32002 Git远程代码执行漏洞分析](Web安全/ERP企业/GitHub%20Enterprise%20Server/CVE-2024-32002%20Git远程代码执行漏洞分析.md)
   - [GitHub Enterprise Server 中存在严重的认证漏洞](Web安全/ERP企业/GitHub%20Enterprise%20Server/GitHub%20Enterprise%20Server%20中存在严重的认证漏洞.md)
   - [GitHub Enterprise Server中存在严重漏洞，可越权访问实例](Web安全/ERP企业/GitHub%20Enterprise%20Server/GitHub%20Enterprise%20Server中存在严重漏洞，可越权访问实例.md)
-- **Gitlab**（9）
-  - [ (129)](Web安全/开发框架/Gitlab/%20%28129%29.md)
-  - [ (202)](Web安全/开发框架/Gitlab/%20%28202%29.md)
-  - [ (236)](Web安全/开发框架/Gitlab/%20%28236%29.md)
-  - [ (325)](Web安全/开发框架/Gitlab/%20%28325%29.md)
-  - [ (334)](Web安全/开发框架/Gitlab/%20%28334%29.md)
-  - [ (394)](Web安全/开发框架/Gitlab/%20%28394%29.md)
-  - [ (402)](Web安全/开发框架/Gitlab/%20%28402%29.md)
-  - [GitLab-Graphql邮箱信息泄露漏洞-CVE-2020-26413](Web安全/开发框架/Gitlab/GitLab-Graphql邮箱信息泄露漏洞-CVE-2020-26413.md)
-  - [Gitlab wiki 储存型xss](Web安全/开发框架/Gitlab/Gitlab%20wiki%20储存型xss.md)
-- **GitLab**（21）
+- **GitLab**（34）
+  - [ (129)](Web安全/开发框架/GitLab/%20%28129%29.md)
+  - [ (202)](Web安全/开发框架/GitLab/%20%28202%29.md)
+  - [ (236)](Web安全/开发框架/GitLab/%20%28236%29.md)
+  - [ (325)](Web安全/开发框架/GitLab/%20%28325%29.md)
+  - [ (334)](Web安全/开发框架/GitLab/%20%28334%29.md)
+  - [ (394)](Web安全/开发框架/GitLab/%20%28394%29.md)
+  - [ (402)](Web安全/开发框架/GitLab/%20%28402%29.md)
   - [CVE-2022-2185：GitLab 远程代码执行漏洞](Web安全/开发框架/GitLab/CVE-2022-2185：GitLab%20远程代码执行漏洞.md)
+  - [GitLab Graphql 邮箱信息泄露漏洞 CNVD-2021-14193](Web安全/开发框架/GitLab/GitLab%20Graphql%20邮箱信息泄露漏洞%20CNVD-2021-14193.md)
   - [GitLab SSRF漏洞 CVE-2021-22214](Web安全/开发框架/GitLab/GitLab%20SSRF漏洞%20CVE-2021-22214.md)
   - [GitLab 中的 Devfile 文件写入漏洞](Web安全/开发框架/GitLab/GitLab%20中的%20Devfile%20文件写入漏洞.md)
   - [GitLab 任意文件读取漏洞 CVE-2016-9086](Web安全/开发框架/GitLab/GitLab%20任意文件读取漏洞%20CVE-2016-9086.md)
   - [GitLab 任意用户密码重置漏洞复现（CVE-2023-7028）](Web安全/开发框架/GitLab/GitLab%20任意用户密码重置漏洞复现（CVE-2023-7028）.md)
   - [GitLab 多个漏洞允许绕过 2FA 和发起 DoS 攻击](Web安全/开发框架/GitLab/GitLab%20多个漏洞允许绕过%202FA%20和发起%20DoS%20攻击.md)
   - [GitLab 高危漏洞可导致账号遭接管](Web安全/开发框架/GitLab/GitLab%20高危漏洞可导致账号遭接管.md)
+  - [GitLab-Graphql邮箱信息泄露漏洞-CVE-2020-26413](Web安全/开发框架/GitLab/GitLab-Graphql邮箱信息泄露漏洞-CVE-2020-26413.md)
   - [GitLab-任意文件读取导致RCE-CVE-2020-10977](Web安全/开发框架/GitLab/GitLab-任意文件读取导致RCE-CVE-2020-10977.md)
   - [GitLab-远程命令执行漏洞-CVE-2021-22205](Web安全/开发框架/GitLab/GitLab-远程命令执行漏洞-CVE-2021-22205.md)
   - [GitLabAPI未授权SSRF漏洞(CVE-2021-22214)](Web安全/开发框架/GitLab/GitLabAPI未授权SSRF漏洞%28CVE-2021-22214%29.md)
@@ -4565,15 +4405,17 @@
   - [GitLab身份认证绕过漏洞(CVE-2024-6385)安全风险通告](Web安全/开发框架/GitLab/GitLab身份认证绕过漏洞%28CVE-2024-6385%29安全风险通告.md)
   - [GitLab身份认证绕过漏洞(CVE-2024-6678)安全风险通告](Web安全/开发框架/GitLab/GitLab身份认证绕过漏洞%28CVE-2024-6678%29安全风险通告.md)
   - [GitLab远程代码执行漏洞 (CVE-2022-2884) 安全风险通告](Web安全/开发框架/GitLab/GitLab远程代码执行漏洞%20%28CVE-2022-2884%29%20安全风险通告.md)
+  - [Gitlab wiki 储存型xss](Web安全/开发框架/GitLab/Gitlab%20wiki%20储存型xss.md)
   - [Gitlab 任意文件读取漏洞](Web安全/开发框架/GitLab/Gitlab%20任意文件读取漏洞.md)
+  - [Gitlab 常见漏洞复现及后利用](Web安全/开发框架/GitLab/Gitlab%20常见漏洞复现及后利用.md)
+  - [多个 GitLab 漏洞使攻击者能够发起 DoS 攻击](Web安全/开发框架/GitLab/多个%20GitLab%20漏洞使攻击者能够发起%20DoS%20攻击.md)
+  - [漏洞预警  GitLab未授权访问漏洞](Web安全/开发框架/GitLab/漏洞预警%20%20GitLab未授权访问漏洞.md)
   - [（CVE-2016-9086）Gitlab 任意文件读取漏洞](Web安全/开发框架/GitLab/（CVE-2016-9086）Gitlab%20任意文件读取漏洞.md)
-- **GitLab Graphql 邮箱信息**（1）
-  - [GitLab Graphql 邮箱信息泄露漏洞 CNVD-2021-14193](Web安全/开发框架/GitLab%20Graphql%20邮箱信息/GitLab%20Graphql%20邮箱信息泄露漏洞%20CNVD-2021-14193.md)
-- **Gitlab 常见**（1）
-  - [Gitlab 常见漏洞复现及后利用](Web安全/开发框架/Gitlab%20常见/Gitlab%20常见漏洞复现及后利用.md)
 - **Gitlist**（2）
   - [Gitlist 0.6.0 远程命令执行漏洞](Web安全/其他软件/Gitlist/Gitlist%200.6.0%20远程命令执行漏洞.md)
   - [Gitlist-0.6.0-远程命令执行漏洞-CVE-2018-1000533](Web安全/其他软件/Gitlist/Gitlist-0.6.0-远程命令执行漏洞-CVE-2018-1000533.md)
+- **GL-iNet**（1）
+  - [原创 Paper  GL-iNet 路由器 CVE-2024-39226 漏洞分析](Web安全/网络设备/GL-iNet/原创%20Paper%20%20GL-iNet%20路由器%20CVE-2024-39226%20漏洞分析.md)
 - **GlassFish**（1）
   - [GlassFish 任意文件读取漏洞](Web安全/服务器软件/GlassFish/GlassFish%20任意文件读取漏洞.md)
 - **Glibc**（4）
@@ -4595,13 +4437,11 @@
   - [GNU Inetutils Telnetd 认证绕过漏洞检测工具（CVE-2026-24061）1月28日更新](Web安全/服务器软件/GNU%20InetUtils%20telnetd/GNU%20Inetutils%20Telnetd%20认证绕过漏洞检测工具（CVE-2026-24061）1月28日更新.md)
 - **GNU telnetd**（1）
   - [CVE-2026-24061：GNU telnetd 远程身份验证绕过漏洞（高危）](Web安全/服务器软件/GNU%20telnetd/CVE-2026-24061：GNU%20telnetd%20远程身份验证绕过漏洞（高危）.md)
-- **Go FastDFS**（2）
+- **Go FastDFS**（4）
+  - [Go-fastdfs GetClientIp 未授权访问漏洞](Web安全/中间件/Go%20FastDFS/Go-fastdfs%20GetClientIp%20未授权访问漏洞.md)
   - [Go-fastdfs upload 任意文件上传漏洞 CVE-2023-1800](Web安全/中间件/Go%20FastDFS/Go-fastdfs%20upload%20任意文件上传漏洞%20CVE-2023-1800.md)
+  - [Go-fastdfs-GetClientIp-未授权访问漏洞](Web安全/中间件/Go%20FastDFS/Go-fastdfs-GetClientIp-未授权访问漏洞.md)
   - [Go-fastdfs-upload-任意文件上传漏洞-CVE-2023-1800](Web安全/中间件/Go%20FastDFS/Go-fastdfs-upload-任意文件上传漏洞-CVE-2023-1800.md)
-- **Go-fastdfs GetClientIp**（1）
-  - [Go-fastdfs GetClientIp 未授权访问漏洞](Web安全/中间件/Go-fastdfs%20GetClientIp/Go-fastdfs%20GetClientIp%20未授权访问漏洞.md)
-- **Go-fastdfs-GetClientIp-**（1）
-  - [Go-fastdfs-GetClientIp-未授权访问漏洞](Web安全/中间件/Go-fastdfs-GetClientIp-/Go-fastdfs-GetClientIp-未授权访问漏洞.md)
 - **GoAhead**（5）
   - [ （CVE-2019-5096） GoAhead远程代码溢出漏洞 ](Web安全/服务器软件/GoAhead/%20（CVE-2019-5096）%20GoAhead远程代码溢出漏洞%20.md)
   - [GoAhead Server 远程命令执行漏洞 CVE-2017-17562](Web安全/服务器软件/GoAhead/GoAhead%20Server%20远程命令执行漏洞%20CVE-2017-17562.md)
@@ -4649,26 +4489,23 @@
   - [Google Patches Chrome Zero-Day CVE-2025-10585 as Active V8 Exploit Thr](Web安全/商业软件/Google%20Patches%20Chrome%20Zero/Google%20Patches%20Chrome%20Zero-Day%20CVE-2025-10585%20as%20Active%20V8%20Exploit%20Thr.md)
 - **Google Project Zero**（1）
   - [Google Project Zero 研究人员发现针对三星设备的零点击漏洞](Web安全/其他软件/Google%20Project%20Zero/Google%20Project%20Zero%20研究人员发现针对三星设备的零点击漏洞.md)
-- **Grafana**（11）
+- **Grafana**（13）
   - [CVE-2020-13379Grafana 中未经身份验证的 SSRF](Web安全/开发框架/Grafana/CVE-2020-13379Grafana%20中未经身份验证的%20SSRF.md)
   - [CVE-2025-4123：Grafana 中通过开放重定向引发的 XSS](Web安全/开发框架/Grafana/CVE-2025-4123：Grafana%20中通过开放重定向引发的%20XSS.md)
   - [Grafana mysql 后台任意文件读取漏洞 CVE-2019-19499](Web安全/开发框架/Grafana/Grafana%20mysql%20后台任意文件读取漏洞%20CVE-2019-19499.md)
+  - [Grafana plugins 任意文件读取漏洞](Web安全/开发框架/Grafana/Grafana%20plugins%20任意文件读取漏洞.md)
   - [Grafana 提醒严重的认证绕过漏洞](Web安全/开发框架/Grafana/Grafana%20提醒严重的认证绕过漏洞.md)
   - [Grafana-8.x-插件模块目录穿越漏洞-CVE-2021-43798](Web安全/开发框架/Grafana/Grafana-8.x-插件模块目录穿越漏洞-CVE-2021-43798.md)
   - [Grafana-SQL-表达式远程代码执行漏洞-CVE-2024-9264](Web安全/开发框架/Grafana/Grafana-SQL-表达式远程代码执行漏洞-CVE-2024-9264.md)
+  - [Grafana-mysql-后台任意文件读取漏洞-CVE-2019-19499](Web安全/开发框架/Grafana/Grafana-mysql-后台任意文件读取漏洞-CVE-2019-19499.md)
   - [Grafana存在任意文件读取漏洞](Web安全/开发框架/Grafana/Grafana存在任意文件读取漏洞.md)
   - [Grafana存在未授权访问漏洞](Web安全/开发框架/Grafana/Grafana存在未授权访问漏洞.md)
   - [Grafana存在默认口令漏洞](Web安全/开发框架/Grafana/Grafana存在默认口令漏洞.md)
   - [Grafana管理后台SSRF](Web安全/开发框架/Grafana/Grafana管理后台SSRF.md)
   - [SQL 到 SSH：Grafana 中存在严重 CVSS 9.1 级远程代码执行漏洞，可将监控变成远程劫持](Web安全/开发框架/Grafana/SQL%20到%20SSH：Grafana%20中存在严重%20CVSS%209.1%20级远程代码执行漏洞，可将监控变成远程劫持.md)
-- **Grafana plugins**（1）
-  - [Grafana plugins 任意文件读取漏洞](Web安全/开发框架/Grafana%20plugins/Grafana%20plugins%20任意文件读取漏洞.md)
-- **Grafana-mysql-后台**（1）
-  - [Grafana-mysql-后台任意文件读取漏洞-CVE-2019-19499](Web安全/开发框架/Grafana-mysql-后台/Grafana-mysql-后台任意文件读取漏洞-CVE-2019-19499.md)
 - **Grav CMS**（1）
   - [Grav CMS 组合拳漏洞 CVE-2026-42613&CVE-2026-42607复现&研究](Web安全/CMS内容/Grav%20CMS/Grav%20CMS%20组合拳漏洞%20CVE-2026-42613&CVE-2026-42607复现&研究.md)
-- **green**（4）
-  - [green_XWiki SolrSearch Exploit Attempts (CVE-2025-24893) with link to](Web安全/中间件/green/green_XWiki%20SolrSearch%20Exploit%20Attempts%20%28CVE-2025-24893%29%20with%20link%20to.md)
+- **green**（3）
   - [green_CVE-2024-40766_ The Patch Fixed the Bug. Nobody Fixed the Config](Web安全/商业软件/green/green_CVE-2024-40766_%20The%20Patch%20Fixed%20the%20Bug.%20Nobody%20Fixed%20the%20Config.md)
   - [green_Honeypot_ FortiWeb CVE-2025-64446 Exploits, (Sat, Nov 15th)](Web安全/商业软件/green/green_Honeypot_%20FortiWeb%20CVE-2025-64446%20Exploits,%20%28Sat,%20Nov%2015th%29.md)
   - [green_Possible exploit variant for CVE-2024-9042 (Kubernetes OS Comman](Web安全/商业软件/green/green_Possible%20exploit%20variant%20for%20CVE-2024-9042%20%28Kubernetes%20OS%20Comman.md)
@@ -4693,32 +4530,29 @@
 - **H2O-3**（2）
   - [CVE-2024-45758&CVE-2024-10553 H2O-3反序列化漏洞](Web安全/数据库/H2O-3/CVE-2024-45758&CVE-2024-10553%20H2O-3反序列化漏洞.md)
   - [CVE-2025-6507&CVE-2025-6544 H2O-3反序列化漏洞](Web安全/数据库/H2O-3/CVE-2025-6507&CVE-2025-6544%20H2O-3反序列化漏洞.md)
-- **H3C**（14）
+- **H3C**（22）
   - [H3C CVM casfileUploadfd 文件上传致RCE漏洞(CNVD-2024-14168)](Web安全/网络设备/H3C/H3C%20CVM%20casfileUploadfd%20文件上传致RCE漏洞%28CNVD-2024-14168%29.md)
+  - [H3C HG659 lib 任意文件读取漏洞](Web安全/网络设备/H3C/H3C%20HG659%20lib%20任意文件读取漏洞.md)
   - [H3C IMC dynamiccontent.properties.xhtm 远程命令执行](Web安全/网络设备/H3C/H3C%20IMC%20dynamiccontent.properties.xhtm%20远程命令执行.md)
+  - [H3C Magic B1STV100R012 远程代码执行漏洞 (CVE-2023-34928)](Web安全/网络设备/H3C/H3C%20Magic%20B1STV100R012%20远程代码执行漏洞%20%28CVE-2023-34928%29.md)
   - [H3C SecParh 堡垒机 get detail view-php 任意用户登录漏洞](Web安全/网络设备/H3C/H3C%20SecParh%20堡垒机%20get%20detail%20view-php%20任意用户登录漏洞.md)
   - [H3C SecParh堡垒机 data_provider.php 远程命令执行漏洞](Web安全/网络设备/H3C/H3C%20SecParh堡垒机%20data_provider.php%20远程命令执行漏洞.md)
+  - [H3C iMC 智能管理中心 多接口 RCE](Web安全/网络设备/H3C/H3C%20iMC%20智能管理中心%20多接口%20RCE.md)
   - [H3C iMC智能管理中心 autoDeploy.xhtml 远程代码执行漏洞](Web安全/网络设备/H3C/H3C%20iMC智能管理中心%20autoDeploy.xhtml%20远程代码执行漏洞.md)
   - [H3C iMC智能管理中心 远程代码执行漏洞(XVE-2024-4567)](Web安全/网络设备/H3C/H3C%20iMC智能管理中心%20远程代码执行漏洞%28XVE-2024-4567%29.md)
   - [H3C-H100路由器-信息泄露漏洞](Web安全/网络设备/H3C/H3C-H100路由器-信息泄露漏洞.md)
+  - [H3C-IMC RCE 漏洞](Web安全/网络设备/H3C/H3C-IMC%20RCE%20漏洞.md)
+  - [H3C-IMC-dynamiccontent.properties.xhtm-远程命令执行](Web安全/网络设备/H3C/H3C-IMC-dynamiccontent.properties.xhtm-远程命令执行.md)
   - [H3CCVM前台任意文件上传漏洞](Web安全/网络设备/H3C/H3CCVM前台任意文件上传漏洞.md)
   - [H3CSecPath堡垒机data_provider.php远程命令执行漏洞](Web安全/网络设备/H3C/H3CSecPath堡垒机data_provider.php远程命令执行漏洞.md)
   - [H3CWeb网管登录系统aaa_portal_auth_wchat_submit存在远程命令执行漏洞](Web安全/网络设备/H3C/H3CWeb网管登录系统aaa_portal_auth_wchat_submit存在远程命令执行漏洞.md)
   - [H3CWeb网管登录系统jQuery-1.7.2存在任意文件读取](Web安全/网络设备/H3C/H3CWeb网管登录系统jQuery-1.7.2存在任意文件读取.md)
   - [H3CWeb网管登录系统sslvpn_client存在命令执行漏洞](Web安全/网络设备/H3C/H3CWeb网管登录系统sslvpn_client存在命令执行漏洞.md)
+  - [H3Chttp服务器 weblogin SQL注入漏洞](Web安全/网络设备/H3C/H3Chttp服务器%20weblogin%20SQL注入漏洞.md)
   - [H3C多系列路由器存在任意用户登录漏洞](Web安全/网络设备/H3C/H3C多系列路由器存在任意用户登录漏洞.md)
   - [H3C多系列路由器存在前台远程命令执行漏洞](Web安全/网络设备/H3C/H3C多系列路由器存在前台远程命令执行漏洞.md)
-- **H3C HG**（1）
-  - [H3C HG659 lib 任意文件读取漏洞](Web安全/网络设备/H3C%20HG/H3C%20HG659%20lib%20任意文件读取漏洞.md)
-- **H3C iMC 智能管理中心 多接口**（1）
-  - [H3C iMC 智能管理中心 多接口 RCE](Web安全/网络设备/H3C%20iMC%20智能管理中心%20多接口/H3C%20iMC%20智能管理中心%20多接口%20RCE.md)
-- **H3C Magic B**（1）
-  - [H3C Magic B1STV100R012 远程代码执行漏洞 (CVE-2023-34928)](Web安全/网络设备/H3C%20Magic%20B/H3C%20Magic%20B1STV100R012%20远程代码执行漏洞%20%28CVE-2023-34928%29.md)
-- **H3C-IMC**（2）
-  - [H3C-IMC RCE 漏洞](Web安全/网络设备/H3C-IMC/H3C-IMC%20RCE%20漏洞.md)
-  - [H3C-IMC-dynamiccontent.properties.xhtm-远程命令执行](Web安全/网络设备/H3C-IMC/H3C-IMC-dynamiccontent.properties.xhtm-远程命令执行.md)
-- **H3Chttp服务器 weblogin**（1）
-  - [H3Chttp服务器 weblogin SQL注入漏洞](Web安全/开发框架/H3Chttp服务器%20weblogin/H3Chttp服务器%20weblogin%20SQL注入漏洞.md)
+  - [新华三magicR100存在未授权RCE攻击](Web安全/网络设备/H3C/新华三magicR100存在未授权RCE攻击.md)
+  - [新华三magicR100存在未授权访问](Web安全/网络设备/H3C/新华三magicR100存在未授权访问.md)
 - **H5**（1）
   - [H5渗透实战：从复数金额漏洞到签名绕过](Web安全/其他软件/H5/H5渗透实战：从复数金额漏洞到签名绕过.md)
 - **Hackers Actively Exploitin**（1）
@@ -4734,6 +4568,8 @@
 - **Hashbrown CMS**（2）
   - [（CVE-2020-6948）HashBrown CMS 远程命令执行漏洞](Web安全/CMS内容/Hashbrown%20CMS/（CVE-2020-6948）HashBrown%20CMS%20远程命令执行漏洞.md)
   - [（CVE-2020-6949）HashBrown CMS postUser 函数存在提权漏洞](Web安全/CMS内容/Hashbrown%20CMS/（CVE-2020-6949）HashBrown%20CMS%20postUser%20函数存在提权漏洞.md)
+- **HashiCorp Consul**（1）
+  - [Consul-Service-API远程命令执行漏洞](Web安全/中间件/HashiCorp%20Consul/Consul-Service-API远程命令执行漏洞.md)
 - **Heybbs**（1）
   - [Heybbs 1.2 sql注入漏洞](Web安全/其他软件/Heybbs/Heybbs%201.2%20sql注入漏洞.md)
 - **Hfs**（1）
@@ -4750,12 +4586,11 @@
   - [HIKVISION-综合安防管理平台-report-任意文件上传漏洞](Web安全/智能设备/HIKVISION-综合安防管理平台-report/HIKVISION-综合安防管理平台-report-任意文件上传漏洞.md)
 - **HIKVISION-联网网关-downdb.php**（1）
   - [HIKVISION-联网网关-downdb.php-任意文件读取漏洞](Web安全/智能设备/HIKVISION-联网网关-downdb.php/HIKVISION-联网网关-downdb.php-任意文件读取漏洞.md)
-- **Horde Groupware**（2）
+- **Horde Groupware**（4）
+  - [0day RCE Horde Groupware Webmail Edition RCE](Web安全/邮件系统/Horde%20Groupware/0day%20RCE%20Horde%20Groupware%20Webmail%20Edition%20RCE.md)
   - [Horde Groupware Webmail 5.2.22低权限RCE漏洞](Web安全/邮件系统/Horde%20Groupware/Horde%20Groupware%20Webmail%205.2.22低权限RCE漏洞.md)
   - [Horde Groupware Webmail Edition 远程命令执行](Web安全/邮件系统/Horde%20Groupware/Horde%20Groupware%20Webmail%20Edition%20远程命令执行.md)
-- **Horde Groupware Webmail**（2）
-  - [0day RCE Horde Groupware Webmail Edition RCE](Web安全/AI应用/Horde%20Groupware%20Webmail/0day%20RCE%20Horde%20Groupware%20Webmail%20Edition%20RCE.md)
-  - [Horde Groupware Webmail 远程命令执行漏洞](Web安全/AI应用/Horde%20Groupware%20Webmail/Horde%20Groupware%20Webmail%20远程命令执行漏洞.md)
+  - [Horde Groupware Webmail 远程命令执行漏洞](Web安全/邮件系统/Horde%20Groupware/Horde%20Groupware%20Webmail%20远程命令执行漏洞.md)
 - **Hoverfly**（1）
   - [Hoverfly 任意文件读取漏洞（CVE-2024-45388）](Web安全/其他软件/Hoverfly/Hoverfly%20任意文件读取漏洞（CVE-2024-45388）.md)
 - **How Tenable Found a Way To**（1）
@@ -4768,7 +4603,7 @@
 - **HPE Instant On**（1）
   - [HPE Instant On设备存在硬编码凭证漏洞，可获取管理员权限](Web安全/其他软件/HPE%20Instant%20On/HPE%20Instant%20On设备存在硬编码凭证漏洞，可获取管理员权限.md)
 - **HSC**（1）
-  - [HSCMailinspectorloader存在任意文件读取漏洞(CVE-2024-34470)](Web安全/AI应用/HSC/HSCMailinspectorloader存在任意文件读取漏洞%28CVE-2024-34470%29.md)
+  - [HSCMailinspectorloader存在任意文件读取漏洞(CVE-2024-34470)](Web安全/安全设备/HSC/HSCMailinspectorloader存在任意文件读取漏洞%28CVE-2024-34470%29.md)
 - **HTTPoxy**（1）
   - [HTTPoxy-CGI-漏洞-CVE-2016-5385](Web安全/其他软件/HTTPoxy/HTTPoxy-CGI-漏洞-CVE-2016-5385.md)
 - **HTTP协议栈**（1）
@@ -4817,10 +4652,11 @@
   - [iDocview系统接口存在RCE](Web安全/桌面软件/iDocview/iDocview系统接口存在RCE.md)
 - **Ignition**（1）
   - [Ignition工控系统反序列化漏洞(CVE-2020-10644)](Web安全/其他软件/Ignition/Ignition工控系统反序列化漏洞%28CVE-2020-10644%29.md)
-- **IIS**（1）
+- **IIS**（2）
+  - [[网络安全] 十四. 文件上传漏洞 (3) 编辑器漏洞和 IIS 高版本漏洞及防御](Web安全/中间件/IIS/[网络安全]%20十四.%20文件上传漏洞%20%283%29%20编辑器漏洞和%20IIS%20高版本漏洞及防御.md)
   - [（CVE-2017-7269）IIS 6.0开启Webdav 缓存区溢出漏洞](Web安全/中间件/IIS/（CVE-2017-7269）IIS%206.0开启Webdav%20缓存区溢出漏洞.md)
-- **Ilevia EVE X1 Server login**（1）
-  - [Ilevia EVE X1 Server login.php 远程命令执行漏洞](Web安全/开发框架/Ilevia%20EVE%20X1%20Server%20login/Ilevia%20EVE%20X1%20Server%20login.php%20远程命令执行漏洞.md)
+- **Ilevia EVE**（1）
+  - [Ilevia EVE X1 Server login.php 远程命令执行漏洞](Web安全/其他软件/Ilevia%20EVE/Ilevia%20EVE%20X1%20Server%20login.php%20远程命令执行漏洞.md)
 - **IM**（5）
   - [CVE-2025-25065](Web安全/其他软件/IM/CVE-2025-25065.md)
   - [CVE-2025-60188-Atarim-插件-漏洞利用](Web安全/其他软件/IM/CVE-2025-60188-Atarim-插件-漏洞利用.md)
@@ -4861,8 +4697,6 @@
   - [Intel处理器安全漏洞频发：芯片巨头的信任危机](Web安全/其他软件/Intel/Intel处理器安全漏洞频发：芯片巨头的信任危机.md)
 - **Intelbras-Wireless-**（1）
   - [Intelbras-Wireless-未授权与密码泄露-CVE-2021-3017](Web安全/其他软件/Intelbras-Wireless-/Intelbras-Wireless-未授权与密码泄露-CVE-2021-3017.md)
-- **Interlock**（1）
-  - [Interlock勒索软件利用思科FMC零日漏洞CVE-2026-20131获取Root权限](Web安全/网络设备/Interlock/Interlock勒索软件利用思科FMC零日漏洞CVE-2026-20131获取Root权限.md)
 - **InvisionCommunity**（1）
   - [InvisionCommunity 远程代码执行漏洞 (CVE-2025-47916)](Web安全/其他软件/InvisionCommunity/InvisionCommunity%20远程代码执行漏洞%20%28CVE-2025-47916%29.md)
 - **IonizeCMS**（2）
@@ -4879,16 +4713,11 @@
 - **ipTIME**（2）
   - [ipTIME 未授权访问漏洞(CVE-2024-54763)](Web安全/其他软件/ipTIME/ipTIME%20未授权访问漏洞%28CVE-2024-54763%29.md)
   - [ipTIME 未授权访问漏洞(CVE-2024-54764)](Web安全/其他软件/ipTIME/ipTIME%20未授权访问漏洞%28CVE-2024-54764%29.md)
-- **IT**（4）
+- **IT**（3）
   - [CVE-2023-1713 Bitrix24远程命令执行漏洞分析(RCE)](Web安全/其他软件/IT/CVE-2023-1713%20Bitrix24远程命令执行漏洞分析%28RCE%29.md)
   - [CVE-2024-6980 Bitdefender GravityZone 存在严重漏洞](Web安全/其他软件/IT/CVE-2024-6980%20Bitdefender%20GravityZone%20存在严重漏洞.md)
   - [IT 服务管理软件 BMC FootPrints 被曝未授权 RCE 漏洞链（CVE-2025-71257 至 71260）](Web安全/其他软件/IT/IT%20服务管理软件%20BMC%20FootPrints%20被曝未授权%20RCE%20漏洞链（CVE-2025-71257%20至%2071260）.md)
-  - [CVE-2026-48907 and LiteSpeed cPanel Plugin Flaws Come Under Active Att](Web安全/开发框架/IT/CVE-2026-48907%20and%20LiteSpeed%20cPanel%20Plugin%20Flaws%20Come%20Under%20Active%20Att.md)
-- **Ivanti**（14）
-  - [Ivanti Connect Secure CVE-2023-46805 认证绕过 chained CVE-2024-21887 RCE](Web安全/AI应用/Ivanti/Ivanti%20Connect%20Secure%20CVE-2023-46805%20认证绕过%20chained%20CVE-2024-21887%20RCE.md)
-  - [Ivanti Connect Secure CVE-2024-21887 未授权命令注入](Web安全/AI应用/Ivanti/Ivanti%20Connect%20Secure%20CVE-2024-21887%20未授权命令注入.md)
-  - [Ivanti Connect Secure CVE-2025-0282 栈溢出远程代码执行](Web安全/AI应用/Ivanti/Ivanti%20Connect%20Secure%20CVE-2025-0282%20栈溢出远程代码执行.md)
-  - [Ivanti：！Avalanche MDM 解决方案中存在多个严重漏洞](Web安全/AI应用/Ivanti/Ivanti：！Avalanche%20MDM%20解决方案中存在多个严重漏洞.md)
+- **Ivanti**（16）
   - [ (171)](Web安全/其他软件/Ivanti/%20%28171%29.md)
   - [ (250)](Web安全/其他软件/Ivanti/%20%28250%29.md)
   - [ (498)](Web安全/其他软件/Ivanti/%20%28498%29.md)
@@ -4899,6 +4728,12 @@
   - [Ivanti 修复Endpoint Manager 中的严重RCE漏洞](Web安全/其他软件/Ivanti/Ivanti%20修复Endpoint%20Manager%20中的严重RCE漏洞.md)
   - [Ivanti 提醒已遭利用的两个 EPMM 漏洞](Web安全/其他软件/Ivanti/Ivanti%20提醒已遭利用的两个%20EPMM%20漏洞.md)
   - [暴露敏感数据的严重 Xtraction](Web安全/其他软件/Ivanti/暴露敏感数据的严重%20Xtraction.md)
+  - [Ivanti Connect Secure CVE-2023-46805 认证绕过 chained CVE-2024-21887 RCE](Web安全/安全设备/Ivanti/Ivanti%20Connect%20Secure%20CVE-2023-46805%20认证绕过%20chained%20CVE-2024-21887%20RCE.md)
+  - [Ivanti Connect Secure CVE-2024-21887 未授权命令注入](Web安全/安全设备/Ivanti/Ivanti%20Connect%20Secure%20CVE-2024-21887%20未授权命令注入.md)
+  - [Ivanti Connect Secure CVE-2025-0282 栈溢出远程代码执行](Web安全/安全设备/Ivanti/Ivanti%20Connect%20Secure%20CVE-2025-0282%20栈溢出远程代码执行.md)
+  - [Ivanti：！Avalanche MDM 解决方案中存在多个严重漏洞](Web安全/安全设备/Ivanti/Ivanti：！Avalanche%20MDM%20解决方案中存在多个严重漏洞.md)
+  - [lvanti VPN RCE 漏洞复现 (CVE-2024-21887) 影响较为严重！](Web安全/网络设备/Ivanti/lvanti%20VPN%20RCE%20漏洞复现%20%28CVE-2024-21887%29%20影响较为严重！.md)
+  - [研究人员称攻击者正在大规模利用新的Ivanti VPN漏洞，Fortinet警告APT 组织在攻击中利用FortiOS漏洞](Web安全/网络设备/Ivanti/研究人员称攻击者正在大规模利用新的Ivanti%20VPN漏洞，Fortinet警告APT%20组织在攻击中利用FortiOS漏洞.md)
 - **Ivanti Avalanche 目录便利**（1）
   - [Ivanti Avalanche 目录便利任意文件漏洞读取](Web安全/其他软件/Ivanti%20Avalanche%20目录便利/Ivanti%20Avalanche%20目录便利任意文件漏洞读取.md)
 - **Ivanti EPM**（2）
@@ -4912,35 +4747,34 @@
   - [Jackson-databind远程代码执行 CVE-2019-12384](Web安全/开发框架/Jackson/Jackson-databind远程代码执行%20CVE-2019-12384.md)
   - [jackson-databind-rce-cve-2020-9548](Web安全/开发框架/Jackson/jackson-databind-rce-cve-2020-9548.md)
 - **Java**（7）
-  - [Java RMI Registry 反序列化漏洞(=jdk8u111)](Web安全/AI应用/Java/Java%20RMI%20Registry%20反序列化漏洞%28=jdk8u111%29.md)
-  - [Java RMI Registry 反序列化漏洞(jdk8u232_b09)](Web安全/AI应用/Java/Java%20RMI%20Registry%20反序列化漏洞%28jdk8u232_b09%29.md)
-  - [Java反序列化漏洞Gadget Chain可视化图谱工具](Web安全/AI应用/Java/Java反序列化漏洞Gadget%20Chain可视化图谱工具.md)
   - [CVE-2022-41853 分析：通过 Java 反序列化和远程代码库攻击使用静态函数获取 RCE](Web安全/其他软件/Java/CVE-2022-41853%20分析：通过%20Java%20反序列化和远程代码库攻击使用静态函数获取%20RCE.md)
   - [三万字原创长文 完全零基础从 0 到 1 掌握 Java 内存马（1）](Web安全/其他软件/Java/三万字原创长文%20完全零基础从%200%20到%201%20掌握%20Java%20内存马（1）.md)
   - [三万字原创长文 完全零基础从 0 到 1 掌握 Java 内存马（2）](Web安全/其他软件/Java/三万字原创长文%20完全零基础从%200%20到%201%20掌握%20Java%20内存马（2）.md)
   - [重大供应链威胁！这个 Java 开源框架存在严重漏洞](Web安全/商业软件/Java/重大供应链威胁！这个%20Java%20开源框架存在严重漏洞.md)
+  - [Java RMI Registry 反序列化漏洞(=jdk8u111)](Web安全/开发框架/Java/Java%20RMI%20Registry%20反序列化漏洞%28=jdk8u111%29.md)
+  - [Java RMI Registry 反序列化漏洞(jdk8u232_b09)](Web安全/开发框架/Java/Java%20RMI%20Registry%20反序列化漏洞%28jdk8u232_b09%29.md)
+  - [Java反序列化漏洞Gadget Chain可视化图谱工具](Web安全/开发框架/Java/Java反序列化漏洞Gadget%20Chain可视化图谱工具.md)
 - **Java Apps**（1）
   - [Java Apps 严重漏洞可用于劫持会话](Web安全/其他软件/Java%20Apps/Java%20Apps%20严重漏洞可用于劫持会话.md)
 - **JAVA RMI**（1）
   - [JAVA RMI 反序列化攻击 and JEP290 Bypass 分析 - 先知社区](Web安全/商业软件/JAVA%20RMI/JAVA%20RMI%20反序列化攻击%20and%20JEP290%20Bypass%20分析%20-%20先知社区.md)
-- **Java 之 SpringBoot**（1）
-  - [Java 之 SpringBoot 漏洞利用姿势合集总结详细版](Web安全/开发框架/Java%20之%20SpringBoot/Java%20之%20SpringBoot%20漏洞利用姿势合集总结详细版.md)
 - **Java-RMI-Registry-**（1）
   - [Java-RMI-Registry-反序列化漏洞(=jdk8u111)](Web安全/其他软件/Java-RMI-Registry-/Java-RMI-Registry-反序列化漏洞%28=jdk8u111%29.md)
-- **Jboss**（13）
-  - [JBoss 4.x JBossMQ JMS 反序列化漏洞 CVE-2017-7504](Web安全/中间件/Jboss/JBoss%204.x%20JBossMQ%20JMS%20反序列化漏洞%20CVE-2017-7504.md)
-  - [JBoss 5.x 6.x 反序列化漏洞 CVE-2017-12149](Web安全/中间件/Jboss/JBoss%205.x%206.x%20反序列化漏洞%20CVE-2017-12149.md)
-  - [JBoss Administration Console 弱口令 Getshell](Web安全/中间件/Jboss/JBoss%20Administration%20Console%20弱口令%20Getshell.md)
-  - [JBoss JMX Console未授权访问Getshell](Web安全/中间件/Jboss/JBoss%20JMX%20Console未授权访问Getshell.md)
-  - [JBoss JMXInvokerServlet 反序列化漏洞 CVE-2015-7501](Web安全/中间件/Jboss/JBoss%20JMXInvokerServlet%20反序列化漏洞%20CVE-2015-7501.md)
-  - [Jboss 漏洞利用总结](Web安全/中间件/Jboss/Jboss%20漏洞利用总结.md)
-  - [JexBoss - JBoss (and others Java Deserialization Vulnerabilities) verify and EXploitation Tool](Web安全/中间件/Jboss/JexBoss%20-%20JBoss%20%28and%20others%20Java%20Deserialization%20Vulnerabilities%29%20verify%20and%20EXploitation%20Tool.md)
-  - [（CVE-2007-1036）JBoss JMX Console HtmlAdaptor Getshell](Web安全/中间件/Jboss/（CVE-2007-1036）JBoss%20JMX%20Console%20HtmlAdaptor%20Getshell.md)
-  - [（CVE-2010-0738）JBoss JMX控制台安全验证绕过漏洞](Web安全/中间件/Jboss/（CVE-2010-0738）JBoss%20JMX控制台安全验证绕过漏洞.md)
-  - [（CVE-2013-4810）JBoss EJBInvokerServle 反序列化漏洞](Web安全/中间件/Jboss/（CVE-2013-4810）JBoss%20EJBInvokerServle%20反序列化漏洞.md)
-  - [（CVE-2015-7501）JBoss JMXInvokerServlet 反序列化漏洞](Web安全/中间件/Jboss/（CVE-2015-7501）JBoss%20JMXInvokerServlet%20反序列化漏洞.md)
-  - [（CVE-2017-12149）JBosS AS 6.X 反序列化漏洞](Web安全/中间件/Jboss/（CVE-2017-12149）JBosS%20AS%206.X%20反序列化漏洞.md)
-  - [（CVE-2017-7504）JBoss 4.x JBossMQ JMS 反序列化漏洞](Web安全/中间件/Jboss/（CVE-2017-7504）JBoss%204.x%20JBossMQ%20JMS%20反序列化漏洞.md)
+- **JBoss**（14）
+  - [JBoss 4.x JBossMQ JMS 反序列化漏洞 CVE-2017-7504](Web安全/中间件/JBoss/JBoss%204.x%20JBossMQ%20JMS%20反序列化漏洞%20CVE-2017-7504.md)
+  - [JBoss 5.x 6.x 反序列化漏洞 CVE-2017-12149](Web安全/中间件/JBoss/JBoss%205.x%206.x%20反序列化漏洞%20CVE-2017-12149.md)
+  - [JBoss Administration Console 弱口令 Getshell](Web安全/中间件/JBoss/JBoss%20Administration%20Console%20弱口令%20Getshell.md)
+  - [JBoss JMX Console未授权访问Getshell](Web安全/中间件/JBoss/JBoss%20JMX%20Console未授权访问Getshell.md)
+  - [JBoss JMXInvokerServlet 反序列化漏洞 CVE-2015-7501](Web安全/中间件/JBoss/JBoss%20JMXInvokerServlet%20反序列化漏洞%20CVE-2015-7501.md)
+  - [Jboss 漏洞利用总结](Web安全/中间件/JBoss/Jboss%20漏洞利用总结.md)
+  - [JexBoss - JBoss (and others Java Deserialization Vulnerabilities) verify and EXploitation Tool](Web安全/中间件/JBoss/JexBoss%20-%20JBoss%20%28and%20others%20Java%20Deserialization%20Vulnerabilities%29%20verify%20and%20EXploitation%20Tool.md)
+  - [中间件常见漏洞之 JBOSS](Web安全/中间件/JBoss/中间件常见漏洞之%20JBOSS.md)
+  - [（CVE-2007-1036）JBoss JMX Console HtmlAdaptor Getshell](Web安全/中间件/JBoss/（CVE-2007-1036）JBoss%20JMX%20Console%20HtmlAdaptor%20Getshell.md)
+  - [（CVE-2010-0738）JBoss JMX控制台安全验证绕过漏洞](Web安全/中间件/JBoss/（CVE-2010-0738）JBoss%20JMX控制台安全验证绕过漏洞.md)
+  - [（CVE-2013-4810）JBoss EJBInvokerServle 反序列化漏洞](Web安全/中间件/JBoss/（CVE-2013-4810）JBoss%20EJBInvokerServle%20反序列化漏洞.md)
+  - [（CVE-2015-7501）JBoss JMXInvokerServlet 反序列化漏洞](Web安全/中间件/JBoss/（CVE-2015-7501）JBoss%20JMXInvokerServlet%20反序列化漏洞.md)
+  - [（CVE-2017-12149）JBosS AS 6.X 反序列化漏洞](Web安全/中间件/JBoss/（CVE-2017-12149）JBosS%20AS%206.X%20反序列化漏洞.md)
+  - [（CVE-2017-7504）JBoss 4.x JBossMQ JMS 反序列化漏洞](Web安全/中间件/JBoss/（CVE-2017-7504）JBoss%204.x%20JBossMQ%20JMS%20反序列化漏洞.md)
 - **JDWP**（3）
   - [JD-FreeFuck-后台命令执行漏洞](Web安全/其他软件/JDWP/JD-FreeFuck-后台命令执行漏洞.md)
   - [JDWP 远程代码执行漏洞](Web安全/其他软件/JDWP/JDWP%20远程代码执行漏洞.md)
@@ -4974,8 +4808,9 @@
 - **Jellyfin**（2）
   - [Jellyfin-RemoteImageController.cs-SSRF漏洞-CVE-2021-29490](Web安全/其他软件/Jellyfin/Jellyfin-RemoteImageController.cs-SSRF漏洞-CVE-2021-29490.md)
   - [Jellyfin-任意文件读取漏洞-CVE-2021-21402](Web安全/其他软件/Jellyfin/Jellyfin-任意文件读取漏洞-CVE-2021-21402.md)
-- **Jenkins**（20）
+- **Jenkins**（23）
   - [ (310)](Web安全/开发框架/Jenkins/%20%28310%29.md)
+  - [CVE-2024-23897 Jenkins 未授权任意文件读取漏洞分析](Web安全/开发框架/Jenkins/CVE-2024-23897%20Jenkins%20未授权任意文件读取漏洞分析.md)
   - [Jenkins RCE 通过未经身份验证的 API](Web安全/开发框架/Jenkins/Jenkins%20RCE%20通过未经身份验证的%20API.md)
   - [Jenkins XStream 反序列化漏洞 CVE-2016-0792](Web安全/开发框架/Jenkins/Jenkins%20XStream%20反序列化漏洞%20CVE-2016-0792.md)
   - [Jenkins checkScript 远程命令执行漏洞 CVE-2018-1000861](Web安全/开发框架/Jenkins/Jenkins%20checkScript%20远程命令执行漏洞%20CVE-2018-1000861.md)
@@ -4990,29 +4825,25 @@
   - [Jenkins 远程命令执行漏洞 CVE-2018-1000861](Web安全/开发框架/Jenkins/Jenkins%20远程命令执行漏洞%20CVE-2018-1000861.md)
   - [Jenkins-CI 远程代码执行漏洞 CVE-2017-1000353](Web安全/开发框架/Jenkins/Jenkins-CI%20远程代码执行漏洞%20CVE-2017-1000353.md)
   - [Jenkins-CLI-接口任意文件读取漏洞-CVE-2024-23897](Web安全/开发框架/Jenkins/Jenkins-CLI-接口任意文件读取漏洞-CVE-2024-23897.md)
+  - [Jenkins-XStream-反序列化漏洞-CVE-2016-0792](Web安全/开发框架/Jenkins/Jenkins-XStream-反序列化漏洞-CVE-2016-0792.md)
+  - [Jenkins-远程代码执行漏洞-CVE-2015-8103](Web安全/开发框架/Jenkins/Jenkins-远程代码执行漏洞-CVE-2015-8103.md)
   - [cve-2019-1003000-jenkins远程命令执行](Web安全/开发框架/Jenkins/cve-2019-1003000-jenkins远程命令执行.md)
   - [（CVE-2017-1000353）Jenkins-CI 远程代码执行漏洞](Web安全/开发框架/Jenkins/（CVE-2017-1000353）Jenkins-CI%20远程代码执行漏洞.md)
   - [（CVE-2018-1000861）Jenkins 远程命令执行漏洞](Web安全/开发框架/Jenkins/（CVE-2018-1000861）Jenkins%20远程命令执行漏洞.md)
   - [（CVE-2019-1003000）Jenkins 远程代码执行漏洞](Web安全/开发框架/Jenkins/（CVE-2019-1003000）Jenkins%20远程代码执行漏洞.md)
   - [（CVE-2019-10475）反射xss](Web安全/开发框架/Jenkins/（CVE-2019-10475）反射xss.md)
-- **Jenkins-**（1）
-  - [Jenkins-远程代码执行漏洞-CVE-2015-8103](Web安全/开发框架/Jenkins-/Jenkins-远程代码执行漏洞-CVE-2015-8103.md)
-- **Jenkins-XStream-**（2）
-  - [CVE-2024-23897 Jenkins 未授权任意文件读取漏洞分析](Web安全/开发框架/Jenkins-XStream-/CVE-2024-23897%20Jenkins%20未授权任意文件读取漏洞分析.md)
-  - [Jenkins-XStream-反序列化漏洞-CVE-2016-0792](Web安全/开发框架/Jenkins-XStream-/Jenkins-XStream-反序列化漏洞-CVE-2016-0792.md)
 - **JetBrains**（3）
-  - [ (242)](Web安全/AI应用/JetBrains/%20%28242%29.md)
-  - [CVE-2024-27198 和 CVE-2024-27199 身份验证绕过 -- JetBrains 之前的版本中的 RCE](Web安全/AI应用/JetBrains/CVE-2024-27198%20和%20CVE-2024-27199%20身份验证绕过%20--%20JetBrains%20之前的版本中的%20RCE.md)
-  - [JetBrains 发布补丁，修复影响 1500 万开发者的 CVSS 满分（10）身份验证绕过漏洞](Web安全/AI应用/JetBrains/JetBrains%20发布补丁，修复影响%201500%20万开发者的%20CVSS%20满分（10）身份验证绕过漏洞.md)
+  - [ (242)](Web安全/开发框架/JetBrains/%20%28242%29.md)
+  - [CVE-2024-27198 和 CVE-2024-27199 身份验证绕过 -- JetBrains 之前的版本中的 RCE](Web安全/开发框架/JetBrains/CVE-2024-27198%20和%20CVE-2024-27199%20身份验证绕过%20--%20JetBrains%20之前的版本中的%20RCE.md)
+  - [JetBrains 发布补丁，修复影响 1500 万开发者的 CVSS 满分（10）身份验证绕过漏洞](Web安全/开发框架/JetBrains/JetBrains%20发布补丁，修复影响%201500%20万开发者的%20CVSS%20满分（10）身份验证绕过漏洞.md)
 - **JetBrains TeamCity**（1）
-  - [JetBrains-TeamCity-身份验证绕过漏洞-CVE-2024-27198](Web安全/AI应用/JetBrains%20TeamCity/JetBrains-TeamCity-身份验证绕过漏洞-CVE-2024-27198.md)
-- **Jetty**（4）
+  - [JetBrains-TeamCity-身份验证绕过漏洞-CVE-2024-27198](Web安全/开发框架/JetBrains%20TeamCity/JetBrains-TeamCity-身份验证绕过漏洞-CVE-2024-27198.md)
+- **Jetty**（5）
   - [CVE-2021-34429：Jetty WEB-INF 文件读取复现](Web安全/中间件/Jetty/CVE-2021-34429：Jetty%20WEB-INF%20文件读取复现.md)
   - [Jetty WEB-INF 敏感信息泄露漏洞 CVE-2021-34429](Web安全/中间件/Jetty/Jetty%20WEB-INF%20敏感信息泄露漏洞%20CVE-2021-34429.md)
   - [Jetty-WEB-INF-敏感信息泄露漏洞-CVE-2021-28164](Web安全/中间件/Jetty/Jetty-WEB-INF-敏感信息泄露漏洞-CVE-2021-28164.md)
+  - [Jetty-WEB-INF-敏感信息泄露漏洞-CVE-2021-34429](Web安全/中间件/Jetty/Jetty-WEB-INF-敏感信息泄露漏洞-CVE-2021-34429.md)
   - [Jetty-通用-Servlets-组件-ConcatServlet-信息泄露漏洞-CVE-2021-28169](Web安全/中间件/Jetty/Jetty-通用-Servlets-组件-ConcatServlet-信息泄露漏洞-CVE-2021-28169.md)
-- **Jetty-WEB-INF-敏感信息**（1）
-  - [Jetty-WEB-INF-敏感信息泄露漏洞-CVE-2021-34429](Web安全/中间件/Jetty-WEB-INF-敏感信息/Jetty-WEB-INF-敏感信息泄露漏洞-CVE-2021-34429.md)
 - **JieLink**（1）
   - [JieLink+智能终端操作平台 DeleteIpPool SQL注入漏洞](Web安全/桌面软件/JieLink/JieLink+智能终端操作平台%20DeleteIpPool%20SQL注入漏洞.md)
 - **JimuReport**（1）
@@ -5081,8 +4912,8 @@
   - [ (65)](Web安全/桌面软件/jsPDF/%20%2865%29.md)
   - [jsPDF库两大漏洞可致代码注入与系统崩溃，千万开发者需立即升级](Web安全/桌面软件/jsPDF/jsPDF库两大漏洞可致代码注入与系统崩溃，千万开发者需立即升级.md)
   - [jsPDF漏洞使数百万开发者面临对象注入攻击风险](Web安全/桌面软件/jsPDF/jsPDF漏洞使数百万开发者面临对象注入攻击风险.md)
-- **JTL-Shop-Sm**（1）
-  - [CVE-2026-54390-JTL-Shop-Smarty-SSTI-远程代码执行](Web安全/开发框架/JTL-Shop-Sm/CVE-2026-54390-JTL-Shop-Smarty-SSTI-远程代码执行.md)
+- **JTL-Shop**（1）
+  - [CVE-2026-54390-JTL-Shop-Smarty-SSTI-远程代码执行](Web安全/CMS内容/JTL-Shop/CVE-2026-54390-JTL-Shop-Smarty-SSTI-远程代码执行.md)
 - **Jumpserver**（3）
   - [ (455)](Web安全/运维面板/Jumpserver/%20%28455%29.md)
   - [CVE-2024-29201and29202：JumpServer 后台 RCE 漏洞](Web安全/运维面板/Jumpserver/CVE-2024-29201and29202：JumpServer%20后台%20RCE%20漏洞.md)
@@ -5099,16 +4930,13 @@
   - [Jumpserver 未授权访问漏洞](Web安全/运维面板/JumpServer/Jumpserver%20未授权访问漏洞.md)
 - **JumpServer-**（1）
   - [JumpServer-远程命令执行漏洞](Web安全/运维面板/JumpServer-/JumpServer-远程命令执行漏洞.md)
-- **Juniper**（3）
+- **Juniper**（6）
   - [ (466)](Web安全/网络设备/Juniper/%20%28466%29.md)
+  - [Juniper Networks Junos OS EX 远程命令执行漏洞 (CVE-2023-36845)](Web安全/网络设备/Juniper/Juniper%20Networks%20Junos%20OS%20EX%20远程命令执行漏洞%20%28CVE-2023-36845%29.md)
+  - [Juniper Networks PTX严重漏洞可导致路由器遭完全接管](Web安全/网络设备/Juniper/Juniper%20Networks%20PTX严重漏洞可导致路由器遭完全接管.md)
   - [Juniper 修复Session Smart 路由器中严重的认证绕过漏洞](Web安全/网络设备/Juniper/Juniper%20修复Session%20Smart%20路由器中严重的认证绕过漏洞.md)
   - [Juniper 提醒防火墙和交换机中的严重RCE漏洞](Web安全/网络设备/Juniper/Juniper%20提醒防火墙和交换机中的严重RCE漏洞.md)
-- **Juniper Networks Junos OS EX**（1）
-  - [Juniper Networks Junos OS EX 远程命令执行漏洞 (CVE-2023-36845)](Web安全/网络设备/Juniper%20Networks%20Junos%20OS%20EX/Juniper%20Networks%20Junos%20OS%20EX%20远程命令执行漏洞%20%28CVE-2023-36845%29.md)
-- **Juniper Networks PTX**（1）
-  - [Juniper Networks PTX严重漏洞可导致路由器遭完全接管](Web安全/网络设备/Juniper%20Networks%20PTX/Juniper%20Networks%20PTX严重漏洞可导致路由器遭完全接管.md)
-- **Juniper SRX 防火墙和 EX 交换机**（1）
-  - [（CVE-2023-36845）Juniper SRX 防火墙和 EX 交换机远程代码执行漏洞（附 POC）](Web安全/网络设备/Juniper%20SRX%20防火墙和%20EX%20交换机/（CVE-2023-36845）Juniper%20SRX%20防火墙和%20EX%20交换机远程代码执行漏洞（附%20POC）.md)
+  - [（CVE-2023-36845）Juniper SRX 防火墙和 EX 交换机远程代码执行漏洞（附 POC）](Web安全/网络设备/Juniper/（CVE-2023-36845）Juniper%20SRX%20防火墙和%20EX%20交换机远程代码执行漏洞（附%20POC）.md)
 - **Jupyter**（1）
   - [Jupyter Notebook 未授权访问远程命令执行漏洞](Web安全/其他软件/Jupyter/Jupyter%20Notebook%20未授权访问远程命令执行漏洞.md)
 - **Jupyter-Notebook-**（1）
@@ -5149,21 +4977,19 @@
   - [KingPortal开发系统kingclient任意文件读取漏洞](Web安全/桌面软件/KingPortal开发系统kingclient/KingPortal开发系统kingclient任意文件读取漏洞.md)
 - **kkFileView**（1）
   - [kkFileView-ZipSlip-远程命令执行漏洞](Web安全/桌面软件/kkFileView/kkFileView-ZipSlip-远程命令执行漏洞.md)
-- **Konga**（1）
+- **Konga**（2）
   - [Konga 普通用户越权获取管理员权限漏洞](Web安全/中间件/Konga/Konga%20普通用户越权获取管理员权限漏洞.md)
-- **Konga-普通用户越权获取管理员权限**（1）
-  - [Konga-普通用户越权获取管理员权限漏洞](Web安全/中间件/Konga-普通用户越权获取管理员权限/Konga-普通用户越权获取管理员权限漏洞.md)
+  - [Konga-普通用户越权获取管理员权限漏洞](Web安全/中间件/Konga/Konga-普通用户越权获取管理员权限漏洞.md)
 - **KubeOperator**（1）
   - [KubeOperator kubeconfig 未授权访问漏洞 CVE-2023-22480](Web安全/桌面软件/KubeOperator/KubeOperator%20kubeconfig%20未授权访问漏洞%20CVE-2023-22480.md)
 - **KubeOperator-kubeconfig-**（1）
   - [KubeOperator-kubeconfig-未授权访问漏洞-CVE-2023-22480](Web安全/桌面软件/KubeOperator-kubeconfig-/KubeOperator-kubeconfig-未授权访问漏洞-CVE-2023-22480.md)
-- **KubePi**（2）
+- **KubePi**（3）
+  - [KubePi LoginLogsSearch 未授权访问漏洞 CVE-2023-22478](Web安全/云平台/KubePi/KubePi%20LoginLogsSearch%20未授权访问漏洞%20CVE-2023-22478.md)
+  - [KubePi-LoginLogsSearch-未授权访问漏洞-CVE-2023-22478](Web安全/云平台/KubePi/KubePi-LoginLogsSearch-未授权访问漏洞-CVE-2023-22478.md)
   - [KubePi JwtSigKey 登陆绕过漏洞 CVE-2023-22463](Web安全/其他软件/KubePi/KubePi%20JwtSigKey%20登陆绕过漏洞%20CVE-2023-22463.md)
-  - [KubePi LoginLogsSearch 未授权访问漏洞 CVE-2023-22478](Web安全/开发框架/KubePi/KubePi%20LoginLogsSearch%20未授权访问漏洞%20CVE-2023-22478.md)
 - **KubePi-JwtSigKey-登陆**（1）
   - [KubePi-JwtSigKey-登陆绕过漏洞-CVE-2023-22463](Web安全/其他软件/KubePi-JwtSigKey-登陆/KubePi-JwtSigKey-登陆绕过漏洞-CVE-2023-22463.md)
-- **KubePi-LoginLogsSearch-**（1）
-  - [KubePi-LoginLogsSearch-未授权访问漏洞-CVE-2023-22478](Web安全/开发框架/KubePi-LoginLogsSearch-/KubePi-LoginLogsSearch-未授权访问漏洞-CVE-2023-22478.md)
 - **Kubernetes**（15）
   - [ (243)](Web安全/服务器软件/Kubernetes/%20%28243%29.md)
   - [CVE-2020-8554  Kubernetes 中间人攻击漏洞复现与解析，附演示视频](Web安全/服务器软件/Kubernetes/CVE-2020-8554%20%20Kubernetes%20中间人攻击漏洞复现与解析，附演示视频.md)
@@ -5198,18 +5024,24 @@
   - [Label-Studio-任意文件读取漏洞-CVE-2025-25295](Web安全/其他软件/Label/Label-Studio-任意文件读取漏洞-CVE-2025-25295.md)
 - **LANDFALL spyware exploited**（1）
   - [LANDFALL spyware exploited Samsung zero-day CVE-2025-21042 in Middle E](Web安全/其他软件/LANDFALL%20spyware%20exploited/LANDFALL%20spyware%20exploited%20Samsung%20zero-day%20CVE-2025-21042%20in%20Middle%20E.md)
-- **Langflow**（6）
+- **Langflow**（9）
   - [ (260)](Web安全/AI应用/Langflow/%20%28260%29.md)
   - [ (274)](Web安全/AI应用/Langflow/%20%28274%29.md)
   - [Langflow-CSV-Agent-远程代码执行漏洞-CVE-2026-27966](Web安全/AI应用/Langflow/Langflow-CSV-Agent-远程代码执行漏洞-CVE-2026-27966.md)
   - [Langflow-code-API-未授权远程代码执行漏洞-CVE-2025-3248](Web安全/AI应用/Langflow/Langflow-code-API-未授权远程代码执行漏洞-CVE-2025-3248.md)
   - [Langflow-≤-1.6.9-CORS-配置错误导致令牌劫持和远程命令执行漏洞-CVE-2025-34291](Web安全/AI应用/Langflow/Langflow-≤-1.6.9-CORS-配置错误导致令牌劫持和远程命令执行漏洞-CVE-2025-34291.md)
   - [Langflow-服务器端请求伪造漏洞-CVE-2025-68477](Web安全/AI应用/Langflow/Langflow-服务器端请求伪造漏洞-CVE-2025-68477.md)
+  - [Unpatched Langflow Flaw CVE-2026-5027 Exploited for Unauthenticated RC](Web安全/AI应用/Langflow/Unpatched%20Langflow%20Flaw%20CVE-2026-5027%20Exploited%20for%20Unauthenticated%20RC.md)
+  - [已复现  Langflow post-auth RCE](Web安全/AI应用/Langflow/已复现%20%20Langflow%20post-auth%20RCE.md)
+  - [漏洞预警  Langflow身份验证缺失漏洞](Web安全/AI应用/Langflow/漏洞预警%20%20Langflow身份验证缺失漏洞.md)
 - **Lanproxy**（1）
   - [Lanproxy-目录遍历漏洞-CVE-2021-3019](Web安全/其他软件/Lanproxy/Lanproxy-目录遍历漏洞-CVE-2021-3019.md)
 - **Lantronix**（1）
   - [Lantronix工业设备高危漏洞遭在野利用，暴露OT设备补丁窗口期风险](Web安全/其他软件/Lantronix/Lantronix工业设备高危漏洞遭在野利用，暴露OT设备补丁窗口期风险.md)
-- **Laravel**（8）
+- **Laravel**（11）
+  - [Laravel -- v8-4-2 调试模式造成远程代码执行漏洞](Web安全/开发框架/Laravel/Laravel%20--%20v8-4-2%20调试模式造成远程代码执行漏洞.md)
+  - [Laravel Framework 8到11版本存在敏感信息泄露漏洞CVE-2024-29291 附POC](Web安全/开发框架/Laravel/Laravel%20Framework%208到11版本存在敏感信息泄露漏洞CVE-2024-29291%20附POC.md)
+  - [Laravel Reverb严重漏洞预警：CVSS 9.8高危反序列化RCE深度解析](Web安全/开发框架/Laravel/Laravel%20Reverb严重漏洞预警：CVSS%209.8高危反序列化RCE深度解析.md)
   - [Laravel 小于 8.4.2 Debug模式 _ignition 远程代码执行漏洞 CVE-2021-3129](Web安全/开发框架/Laravel/Laravel%20小于%208.4.2%20Debug模式%20_ignition%20远程代码执行漏洞%20CVE-2021-3129.md)
   - [Laravel-.env-配置文件泄露-CVE-2017-16894](Web安全/开发框架/Laravel/Laravel-.env-配置文件泄露-CVE-2017-16894.md)
   - [Laravel-Ignition-2.5.1-代码执行漏洞-CVE-2021-3129](Web安全/开发框架/Laravel/Laravel-Ignition-2.5.1-代码执行漏洞-CVE-2021-3129.md)
@@ -5218,16 +5050,12 @@
   - [高危！Laravel参数注入漏洞安全风险通告](Web安全/开发框架/Laravel/高危！Laravel参数注入漏洞安全风险通告.md)
   - [（CVE-2018-15133）Laravel 反序列化远程命令执行漏洞](Web安全/开发框架/Laravel/（CVE-2018-15133）Laravel%20反序列化远程命令执行漏洞.md)
   - [（CVE-2019-9081）Laravel 5.7 反序列化rce](Web安全/开发框架/Laravel/（CVE-2019-9081）Laravel%205.7%20反序列化rce.md)
-- **Laravel -- v**（1）
-  - [Laravel -- v8-4-2 调试模式造成远程代码执行漏洞](Web安全/开发框架/Laravel%20--%20v/Laravel%20--%20v8-4-2%20调试模式造成远程代码执行漏洞.md)
-- **Laravel Framework 8**（1）
-  - [Laravel Framework 8到11版本存在敏感信息泄露漏洞CVE-2024-29291 附POC](Web安全/开发框架/Laravel%20Framework%208/Laravel%20Framework%208到11版本存在敏感信息泄露漏洞CVE-2024-29291%20附POC.md)
-- **Laravel Reverb**（1）
-  - [Laravel Reverb严重漏洞预警：CVSS 9.8高危反序列化RCE深度解析](Web安全/开发框架/Laravel%20Reverb/Laravel%20Reverb严重漏洞预警：CVSS%209.8高危反序列化RCE深度解析.md)
 - **LazyHunter**（1）
   - [LazyHunter：自动漏洞扫描的工具](Web安全/其他软件/LazyHunter/LazyHunter：自动漏洞扫描的工具.md)
 - **LerxCMS**（1）
   - [LerxCMS 6.5 后台ssrf getshell](Web安全/CMS内容/LerxCMS/LerxCMS%206.5%20后台ssrf%20getshell.md)
+- **Letta AI**（1）
+  - [漏洞复现  Letta-ai letta代码注入漏洞(CVE-2025-51482)](Web安全/AI应用/Letta%20AI/漏洞复现%20%20Letta-ai%20letta代码注入漏洞%28CVE-2025-51482%29.md)
 - **LevelBlue SpiderLabs**（1）
   - [LevelBlue SpiderLabs_ SQL Injection in Orkes Conductor_ CVE-2025-66387](Web安全/其他软件/LevelBlue%20SpiderLabs/LevelBlue%20SpiderLabs_%20SQL%20Injection%20in%20Orkes%20Conductor_%20CVE-2025-66387.md)
 - **Lexmark**（2）
@@ -5267,7 +5095,7 @@
   - [linglong扫描系统存在JWT密钥硬编码登录绕过漏洞](Web安全/其他软件/linglong/linglong扫描系统存在JWT密钥硬编码登录绕过漏洞.md)
 - **Linksys**（1）
   - [Linksys-RE7000无线扩展器RCE(CVE-2024-25852)](Web安全/网络设备/Linksys/Linksys-RE7000无线扩展器RCE%28CVE-2024-25852%29.md)
-- **Linux**（34）
+- **Linux**（35）
   - [Linux 内核越界写入漏洞（ CVE-2025-0927 ）](Web安全/云平台/Linux/Linux%20内核越界写入漏洞（%20CVE-2025-0927%20）.md)
   - [Linux 系统中的 AD ResetNightmare (CVE-2026-27912) 和 KerberLoss (CVE-2026-2](Web安全/云平台/Linux/Linux%20系统中的%20AD%20ResetNightmare%20%28CVE-2026-27912%29%20和%20KerberLoss%20%28CVE-2026-2.md)
   - [Linux启动漏洞可绕过现代Linux系统的安全启动保护](Web安全/云平台/Linux/Linux启动漏洞可绕过现代Linux系统的安全启动保护.md)
@@ -5302,6 +5130,7 @@
   - [游戏工具变后门？InputPlumber高危漏洞曝光，Linux游戏玩家面临劫持风险](Web安全/其他软件/Linux/游戏工具变后门？InputPlumber高危漏洞曝光，Linux游戏玩家面临劫持风险.md)
   - [满分漏洞实录：一个缺失的配置项，如何让 Linux 服务器向所有人敞开大门](Web安全/其他软件/Linux/满分漏洞实录：一个缺失的配置项，如何让%20Linux%20服务器向所有人敞开大门.md)
   - [深度剖析 CVE-2025-21756：Linux 内核漏洞触发 Root 提权全流程](Web安全/商业软件/Linux/深度剖析%20CVE-2025-21756：Linux%20内核漏洞触发%20Root%20提权全流程.md)
+  - [Dirty Frag的双漏洞组合](Web安全/系统安全/Linux/Dirty%20Frag的双漏洞组合.md)
 - **Linux ssh-keysign-pwn**（1）
   - [Linux ssh-keysign-pwn漏洞在K8s中的影响](Web安全/服务器软件/Linux%20ssh-keysign-pwn/Linux%20ssh-keysign-pwn漏洞在K8s中的影响.md)
 - **Linux-eBPF-**（1）
@@ -5326,15 +5155,10 @@
   - [Livewire-组件属性-hydrate-远程代码执行漏洞-CVE-2025-54068](Web安全/其他软件/Livewire/Livewire-组件属性-hydrate-远程代码执行漏洞-CVE-2025-54068.md)
 - **Livewire Filemanager**（1）
   - [Livewire Filemanager 漏洞导致web 应用易受RCE攻击](Web安全/其他软件/Livewire%20Filemanager/Livewire%20Filemanager%20漏洞导致web%20应用易受RCE攻击.md)
-- **LLM**（1）
-  - [LLM 推理引擎 llama.cpp 零点击 RCE 漏洞：从 Null Buffer 到绕过 PIE∕Full RELRO∕NX 利用链(](Web安全/AI应用/LLM/LLM%20推理引擎%20llama.cpp%20零点击%20RCE%20漏洞：从%20Null%20Buffer%20到绕过%20PIE∕Full%20RELRO∕NX%20利用链%28.md)
 - **lodash**（1）
   - [lodash库原型污染漏洞（CVE-2019-10744）](Web安全/其他软件/lodash/lodash库原型污染漏洞（CVE-2019-10744）.md)
-- **Log**（2）
+- **Log**（1）
   - [Panalog 日志系统设备审计](Web安全/其他软件/Log/Panalog%20日志系统设备审计.md)
-  - [Log4j 和它的小伙伴们](Web安全/开发框架/Log/Log4j%20和它的小伙伴们.md)
-- **lvanti VPN**（1）
-  - [lvanti VPN RCE 漏洞复现 (CVE-2024-21887) 影响较为严重！](Web安全/网络设备/lvanti%20VPN/lvanti%20VPN%20RCE%20漏洞复现%20%28CVE-2024-21887%29%20影响较为严重！.md)
 - **lz520520 starred moiz-2x**（1）
   - [lz520520 starred moiz-2x_CVE-2025-24990_POC](Web安全/其他软件/lz520520%20starred%20moiz-2x/lz520520%20starred%20moiz-2x_CVE-2025-24990_POC.md)
 - **Maccms**（4）
@@ -5380,8 +5204,6 @@
   - [marktext编辑器XSS触发RCE命令执行](Web安全/服务器软件/marktext编辑器/marktext编辑器XSS触发RCE命令执行.md)
 - **MasterSAM**（1）
   - [MasterSAM任意文件下载漏洞](Web安全/其他软件/MasterSAM/MasterSAM任意文件下载漏洞.md)
-- **maxViewStorageManager**（1）
-  - [maxViewStorageManager系统dynamiccontent.properties.xhtml远程代码执行漏洞](Web安全/AI应用/maxViewStorageManager/maxViewStorageManager系统dynamiccontent.properties.xhtml远程代码执行漏洞.md)
 - **MediaTek MT7622**（1）
   - [MediaTek MT7622∕MT7915 芯片组驱动程序RCE 利用 CVE-2024-20017 4 种不同的方式](Web安全/其他软件/MediaTek%20MT7622/MediaTek%20MT7622∕MT7915%20芯片组驱动程序RCE%20利用%20CVE-2024-20017%204%20种不同的方式.md)
 - **Memcache**（1）
@@ -5414,8 +5236,7 @@
   - [Metinfo任意文件读取](Web安全/CMS内容/MetInfo/Metinfo任意文件读取.md)
 - **Micro**（1）
   - [Micro Focus Operations Bridge Manager 中的多个（RCE）漏洞](Web安全/桌面软件/Micro/Micro%20Focus%20Operations%20Bridge%20Manager%20中的多个（RCE）漏洞.md)
-- **Microsoft**（14）
-  - [CVE-2021-40444：Microsoft MSHTML RCE](Web安全/中间件/Microsoft/CVE-2021-40444：Microsoft%20MSHTML%20RCE.md)
+- **Microsoft**（13）
   - [ (155)](Web安全/其他软件/Microsoft/%20%28155%29.md)
   - [ (170)](Web安全/其他软件/Microsoft/%20%28170%29.md)
   - [ (327)](Web安全/其他软件/Microsoft/%20%28327%29.md)
@@ -5435,7 +5256,8 @@
   - [Microsoft Defender for Identity 漏洞可致未授权权限提升](Web安全/其他软件/Microsoft%20Defender%20for%20Ide/Microsoft%20Defender%20for%20Identity%20漏洞可致未授权权限提升.md)
 - **Microsoft Edge**（1）
   - [Microsoft Edge (Chromium-based) Elevation of Privilege Vulnerability(C](Web安全/桌面软件/Microsoft%20Edge/Microsoft%20Edge%20%28Chromium-based%29%20Elevation%20of%20Privilege%20Vulnerability%28C.md)
-- **Microsoft Exchange**（5）
+- **Microsoft Exchange**（6）
+  - [CVE-2020-17144-EXP - 远程代码执行](Web安全/邮件系统/Microsoft%20Exchange/CVE-2020-17144-EXP%20-%20远程代码执行.md)
   - [Microsoft Exchange 远程代码执行漏洞复现 (CVE-2020-17144) 东塔网络安全学院的博客 - CSDN 博客](Web安全/邮件系统/Microsoft%20Exchange/Microsoft%20Exchange%20远程代码执行漏洞复现%20%28CVE-2020-17144%29%20东塔网络安全学院的博客%20-%20CSDN%20博客.md)
   - [Microsoft Exchange 远程命令执行 CVE-2021-26855-26857-26858-27065](Web安全/邮件系统/Microsoft%20Exchange/Microsoft%20Exchange%20远程命令执行%20CVE-2021-26855-26857-26858-27065.md)
   - [Microsoft Exchange 远程命令执行 CVE-2021-27065 26857 26858 27065](Web安全/邮件系统/Microsoft%20Exchange/Microsoft%20Exchange%20远程命令执行%20CVE-2021-27065%2026857%2026858%2027065.md)
@@ -5471,6 +5293,9 @@
 - **Microsoft Word**（2）
   - [ (300)](Web安全/其他软件/Microsoft%20Word/%20%28300%29.md)
   - [Microsoft-Word-远程代码执行漏洞-CVE-2023-21716](Web安全/其他软件/Microsoft%20Word/Microsoft-Word-远程代码执行漏洞-CVE-2023-21716.md)
+- **MikroTik RouterOS**（2）
+  - [CVE-2026-67276  RouterOS SSH公钥认证绕过漏洞（POC）](Web安全/网络设备/MikroTik%20RouterOS/CVE-2026-67276%20%20RouterOS%20SSH公钥认证绕过漏洞（POC）.md)
+  - [利用RouterOS（CVE-2022-3496）漏洞，将符号链接作为挂载入口获取代码执行](Web安全/网络设备/MikroTik%20RouterOS/利用RouterOS（CVE-2022-3496）漏洞，将符号链接作为挂载入口获取代码执行.md)
 - **Milesight**（1）
   - [Milesight-VPN任意文件读取漏洞](Web安全/网络设备/Milesight/Milesight-VPN任意文件读取漏洞.md)
 - **MindsDB**（2）
@@ -5486,12 +5311,11 @@
   - [（CVE-2018-18778）Mini_httpd 任意文件读取漏洞](Web安全/中间件/Mini_httpd/（CVE-2018-18778）Mini_httpd%20任意文件读取漏洞.md)
 - **MiniCMS**（1）
   - [MiniCMS 1.10存在CSRF漏洞可增加管理员账户2](Web安全/CMS内容/MiniCMS/MiniCMS%201.10存在CSRF漏洞可增加管理员账户2.md)
-- **MINIO**（1）
-  - [CVE-2024-24747：MINIO权限提升漏洞](Web安全/中间件/MINIO/CVE-2024-24747：MINIO权限提升漏洞.md)
-- **Minio**（3）
-  - [MinIO-SSRF-漏洞-CVE-2021-21287](Web安全/中间件/Minio/MinIO-SSRF-漏洞-CVE-2021-21287.md)
-  - [MinIO-集群模式信息泄露漏洞-CVE-2023-28432](Web安全/中间件/Minio/MinIO-集群模式信息泄露漏洞-CVE-2023-28432.md)
-  - [MinIO存在默认口令漏洞](Web安全/中间件/Minio/MinIO存在默认口令漏洞.md)
+- **MinIO**（4）
+  - [CVE-2024-24747：MINIO权限提升漏洞](Web安全/中间件/MinIO/CVE-2024-24747：MINIO权限提升漏洞.md)
+  - [MinIO-SSRF-漏洞-CVE-2021-21287](Web安全/中间件/MinIO/MinIO-SSRF-漏洞-CVE-2021-21287.md)
+  - [MinIO-集群模式信息泄露漏洞-CVE-2023-28432](Web安全/中间件/MinIO/MinIO-集群模式信息泄露漏洞-CVE-2023-28432.md)
+  - [MinIO存在默认口令漏洞](Web安全/中间件/MinIO/MinIO存在默认口令漏洞.md)
 - **Mintinstall**（1）
   - [（CVE-2019-17080）Mintinstall object injection](Web安全/其他软件/Mintinstall/（CVE-2019-17080）Mintinstall%20object%20injection.md)
 - **MIP建站系统**（1）
@@ -5520,7 +5344,7 @@
 - **Mobilelron**（1）
   - [MobileIron MDM 未授权RCE EXP](Web安全/其他软件/Mobilelron/MobileIron%20MDM%20未授权RCE%20EXP.md)
 - **Modbus Slave**（1）
-  - [Modbus Slave 7.3.1 缓冲区溢出 POC](Web安全/中间件/Modbus%20Slave/Modbus%20Slave%207.3.1%20缓冲区溢出%20POC.md)
+  - [Modbus Slave 7.3.1 缓冲区溢出 POC](Web安全/智能设备/Modbus%20Slave/Modbus%20Slave%207.3.1%20缓冲区溢出%20POC.md)
 - **ModSecurity**（1）
   - [（CVE-2019-19886）ModSecurity 拒绝服务漏洞](Web安全/其他软件/ModSecurity/（CVE-2019-19886）ModSecurity%20拒绝服务漏洞.md)
 - **Mojarra**（1）
@@ -5607,26 +5431,6 @@
   - [CVE-2026-42232-n8n原型污染](Web安全/其他软件/n8n/CVE-2026-42232-n8n原型污染.md)
   - [n8n 最新严重漏洞允许攻击者执行任意命令](Web安全/其他软件/n8n/n8n%20最新严重漏洞允许攻击者执行任意命令.md)
   - [n8n-Content-Type-混淆任意文件读取至-RCE-漏洞-CVE-2026-21858](Web安全/其他软件/n8n/n8n-Content-Type-混淆任意文件读取至-RCE-漏洞-CVE-2026-21858.md)
-- **Nacos**（17）
-  - [Nacos 漏洞利用 Poc 整理](Web安全/中间件/Nacos/Nacos%20漏洞利用%20Poc%20整理.md)
-  - [Nacos 认证绕过漏洞 CVE-2021-29441](Web安全/中间件/Nacos/Nacos%20认证绕过漏洞%20CVE-2021-29441.md)
-  - [Nacos-未授权接口命令执行漏洞-CVE-2021-29442](Web安全/中间件/Nacos/Nacos-未授权接口命令执行漏洞-CVE-2021-29442.md)
-  - [Nacos-未授权访问漏洞](Web安全/中间件/Nacos/Nacos-未授权访问漏洞.md)
-  - [NacosDerby远程命令执行漏洞(QVD-2024-26473)](Web安全/中间件/Nacos/NacosDerby远程命令执行漏洞%28QVD-2024-26473%29.md)
-  - [Nacos存在Hessian反序列化漏洞](Web安全/中间件/Nacos/Nacos存在Hessian反序列化漏洞.md)
-  - [Nacos存在SQL注入漏洞](Web安全/中间件/Nacos/Nacos存在SQL注入漏洞.md)
-  - [Nacos存在SpringbootActuator未授权漏洞](Web安全/中间件/Nacos/Nacos存在SpringbootActuator未授权漏洞.md)
-  - [Nacos存在serviceSync未授权访问漏洞](Web安全/中间件/Nacos/Nacos存在serviceSync未授权访问漏洞.md)
-  - [Nacos存在未授权下载配置信息漏洞](Web安全/中间件/Nacos/Nacos存在未授权下载配置信息漏洞.md)
-  - [Nacos存在版本信息泄露](Web安全/中间件/Nacos/Nacos存在版本信息泄露.md)
-  - [Nacos存在默认口令漏洞](Web安全/中间件/Nacos/Nacos存在默认口令漏洞.md)
-  - [Nacos未授权访问漏洞(CVE-2021-29441)](Web安全/中间件/Nacos/Nacos未授权访问漏洞%28CVE-2021-29441%29.md)
-  - [Nacos默认key导致权限绕过登陆漏洞](Web安全/中间件/Nacos/Nacos默认key导致权限绕过登陆漏洞.md)
-  - [Nacos默认key导致权限绕过登陆漏洞 附POC](Web安全/中间件/Nacos/Nacos默认key导致权限绕过登陆漏洞 附POC.md)
-  - [漏洞分析 原创 Nacos 历史 + 最新漏洞详细分析 (附利用方法)](Web安全/中间件/Nacos/漏洞分析%20原创%20Nacos%20历史%20+%20最新漏洞详细分析%20%28附利用方法%29.md)
-  - [那些年我们一起追过的 Nacos](Web安全/中间件/Nacos/那些年我们一起追过的%20Nacos.md)
-- **Nacos 惊现安全**（1）
-  - [Nacos 惊现安全漏洞修复后问题仍旧存在 一个天秤座的架构师 - CSDN 博客](Web安全/中间件/Nacos%20惊现安全/Nacos%20惊现安全漏洞修复后问题仍旧存在%20一个天秤座的架构师%20-%20CSDN%20博客.md)
 - **NAVIDROME**（1）
   - [NAVIDROME 权限绕过漏洞(CVE-2025-27112)](Web安全/其他软件/NAVIDROME/NAVIDROME%20权限绕过漏洞%28CVE-2025-27112%29.md)
 - **Neo4j**（1）
@@ -5641,21 +5445,22 @@
   - [Netatalk CVE-2018-1160 复现及漏洞利用思路](Web安全/其他软件/Netatalk%20CVE-2018-1160/Netatalk%20CVE-2018-1160%20复现及漏洞利用思路.md)
 - **Netfilter Tunnel**（1）
   - [Netfilter Tunnel 之殇：CVE-2025-22056分析](Web安全/其他软件/Netfilter%20Tunnel/Netfilter%20Tunnel%20之殇：CVE-2025-22056分析.md)
-- **NETGEAR**（3）
+- **NETGEAR**（7）
   - [CVE-2021-33514：Netgear 多款交换机命令注入漏洞](Web安全/网络设备/NETGEAR/CVE-2021-33514：Netgear%20多款交换机命令注入漏洞.md)
   - [CVE-2021-35973：Netgear wac104 身份认证绕过](Web安全/网络设备/NETGEAR/CVE-2021-35973：Netgear%20wac104%20身份认证绕过.md)
+  - [NETGEAR-R7000-缓冲区溢出漏洞（CVE-2021-31802）](Web安全/网络设备/NETGEAR/NETGEAR-R7000-缓冲区溢出漏洞（CVE-2021-31802）.md)
+  - [Netgear R6220 认证绕过漏洞分析](Web安全/网络设备/NETGEAR/Netgear%20R6220%20认证绕过漏洞分析.md)
   - [SSD 咨询 - NETGEAR DGND3700v2 PreAuth Root 访问 - SSD 安全披露](Web安全/网络设备/NETGEAR/SSD%20咨询%20-%20NETGEAR%20DGND3700v2%20PreAuth%20Root%20访问%20-%20SSD%20安全披露.md)
-- **Netgear R**（1）
-  - [Netgear R6220 认证绕过漏洞分析](Web安全/网络设备/Netgear%20R/Netgear%20R6220%20认证绕过漏洞分析.md)
-- **NETGEAR-R7000-**（1）
-  - [NETGEAR-R7000-缓冲区溢出漏洞（CVE-2021-31802）](Web安全/网络设备/NETGEAR-R7000-/NETGEAR-R7000-缓冲区溢出漏洞（CVE-2021-31802）.md)
-- **NetMizer**（4）
+  - [漏洞预警  Netgear信息泄露漏洞](Web安全/网络设备/NETGEAR/漏洞预警%20%20Netgear信息泄露漏洞.md)
+  - [美国网件Netgear RAX30路由器RCE漏洞分析](Web安全/网络设备/NETGEAR/美国网件Netgear%20RAX30路由器RCE漏洞分析.md)
+- **Netis**（1）
+  - [漏洞预警  Netis Wifi路由器信息泄露漏洞](Web安全/网络设备/Netis/漏洞预警%20%20Netis%20Wifi路由器信息泄露漏洞.md)
+- **NetMizer**（5）
   - [NetMizer日志管理系统cmd存在命令执漏洞](Web安全/商业软件/NetMizer/NetMizer日志管理系统cmd存在命令执漏洞.md)
   - [NetMizer日志管理系统存在前台RCE漏洞](Web安全/商业软件/NetMizer/NetMizer日志管理系统存在前台RCE漏洞.md)
   - [NetMizer日志管理系统存在目录遍历漏洞](Web安全/商业软件/NetMizer/NetMizer日志管理系统存在目录遍历漏洞.md)
   - [NetMizer日志管理系统登录绕过漏洞](Web安全/商业软件/NetMizer/NetMizer日志管理系统登录绕过漏洞.md)
-- **NetMizer dologin.php sql**（1）
-  - [NetMizer dologin.php sql注入漏洞(XVE-2024-37672)](Web安全/开发框架/NetMizer%20dologin.php%20sql/NetMizer%20dologin.php%20sql注入漏洞%28XVE-2024-37672%29.md)
+  - [NetMizer dologin.php sql注入漏洞(XVE-2024-37672)](Web安全/网络设备/NetMizer/NetMizer%20dologin.php%20sql注入漏洞%28XVE-2024-37672%29.md)
 - **Nette 框架**（1）
   - [Nette 框架未授权任意代码执行漏洞分析](Web安全/其他软件/Nette%20框架/Nette%20框架未授权任意代码执行漏洞分析.md)
 - **New HybridPetya Ransomware**（1）
@@ -5675,52 +5480,36 @@
   - [深入研究 CVE-2023–46298 Next.js 中的拒绝服务漏洞](Web安全/其他软件/Next.js/深入研究%20CVE-2023–46298%20Next.js%20中的拒绝服务漏洞.md)
 - **Next.js ImageResponse**（1）
   - [Next.js ImageResponse曝RCE漏洞(CVE-2026-94545)，攻击者可控输入可导致容器内执行命令](Web安全/其他软件/Next.js%20ImageResponse/Next.js%20ImageResponse曝RCE漏洞%28CVE-2026-94545%29，攻击者可控输入可导致容器内执行命令.md)
-- **NextGen**（1）
-  - [NextGenMirthConnectXStream存在反序列化远程代码执行漏洞](Web安全/开发框架/NextGen/NextGenMirthConnectXStream存在反序列化远程代码执行漏洞.md)
-- **Nexus**（12）
-  - [Nexus Repository Manager 3 extdirect 远程命令执行漏洞 CVE-2019-7238](Web安全/开发框架/Nexus/Nexus%20Repository%20Manager%203%20extdirect%20远程命令执行漏洞%20CVE-2019-7238.md)
-  - [Nexus Repository Manager 3 extdirect 远程命令执行漏洞 CVE-2020-10204](Web安全/开发框架/Nexus/Nexus%20Repository%20Manager%203%20extdirect%20远程命令执行漏洞%20CVE-2020-10204.md)
-  - [Nexus Repository Manager 3 group 远程命令执行漏洞 CVE-2020-10199](Web安全/开发框架/Nexus/Nexus%20Repository%20Manager%203%20group%20远程命令执行漏洞%20CVE-2020-10199.md)
-  - [Nexus Repository Manger change-password 低权限修改管理员密码漏洞 CVE-2020-11444](Web安全/开发框架/Nexus/Nexus%20Repository%20Manger%20change-password%20低权限修改管理员密码漏洞%20CVE-2020-11444.md)
-  - [Nexus-Repository-Manager-3-未授权目录穿越漏洞-CVE-2024-4956](Web安全/开发框架/Nexus/Nexus-Repository-Manager-3-未授权目录穿越漏洞-CVE-2024-4956.md)
-  - [cve-2019-7238_命令执行](Web安全/开发框架/Nexus/cve-2019-7238_命令执行.md)
-  - [nexus oss 命令执行漏洞 (cve-2020-10199 && 10204)](Web安全/开发框架/Nexus/nexus%20oss%20命令执行漏洞%20%28cve-2020-10199%20&&%2010204%29.md)
-  - [（CVE-2019-5475）Nexus2 yum插件RCE漏洞](Web安全/开发框架/Nexus/（CVE-2019-5475）Nexus2%20yum插件RCE漏洞.md)
-  - [（CVE-2019-7238）Nexus Repository Manager 远程代码执行](Web安全/开发框架/Nexus/（CVE-2019-7238）Nexus%20Repository%20Manager%20远程代码执行.md)
-  - [（CVE-2020-10199）Nexus Repository Manager 远程代码执行漏洞](Web安全/开发框架/Nexus/（CVE-2020-10199）Nexus%20Repository%20Manager%20远程代码执行漏洞.md)
-  - [（CVE-2020-10204）Nexus Repository Manager 远程执行代码漏洞](Web安全/开发框架/Nexus/（CVE-2020-10204）Nexus%20Repository%20Manager%20远程执行代码漏洞.md)
-  - [（CVE-2020-11444）Nexus Repository Manager 远程代码执行漏洞](Web安全/开发框架/Nexus/（CVE-2020-11444）Nexus%20Repository%20Manager%20远程代码执行漏洞.md)
-- **Nexus Repository Manager**（1）
-  - [Nexus Repository Manager 3 远程代码执行漏洞复现](Web安全/开发框架/Nexus%20Repository%20Manager/Nexus%20Repository%20Manager%203%20远程代码执行漏洞复现.md)
-- **Nginx**（16）
+- **Nginx**（20）
   - [ (105)](Web安全/中间件/Nginx/%20%28105%29.md)
   - [ (437)](Web安全/中间件/Nginx/%20%28437%29.md)
   - [CVE-2026-33032：可实现Nginx服务器完全控制 (2)](Web安全/中间件/Nginx/CVE-2026-33032：可实现Nginx服务器完全控制%20%282%29.md)
+  - [CVE-2026-42530 NGINX 远程代码执行](Web安全/中间件/Nginx/CVE-2026-42530%20NGINX%20远程代码执行.md)
   - [Nginx 解析漏洞](Web安全/中间件/Nginx/Nginx%20解析漏洞.md)
   - [Nginx 配置错误漏洞 CRLF注入漏洞](Web安全/中间件/Nginx/Nginx%20配置错误漏洞%20CRLF注入漏洞.md)
   - [Nginx 配置错误漏洞 add_header被覆盖](Web安全/中间件/Nginx/Nginx%20配置错误漏洞%20add_header被覆盖.md)
   - [Nginx 配置错误漏洞 目录穿越漏洞](Web安全/中间件/Nginx/Nginx%20配置错误漏洞%20目录穿越漏洞.md)
   - [Nginx 配置错误漏洞](Web安全/中间件/Nginx/Nginx%20配置错误漏洞.md)
   - [Nginx-UI-未授权备份下载与加密密钥泄露漏洞-CVE-2026-27944](Web安全/中间件/Nginx/Nginx-UI-未授权备份下载与加密密钥泄露漏洞-CVE-2026-27944.md)
+  - [Nginx-poolslip 漏洞可导致拒绝服务攻击和代码执行攻击——立即修复！](Web安全/中间件/Nginx/Nginx-poolslip%20漏洞可导致拒绝服务攻击和代码执行攻击——立即修复！.md)
   - [Nginx中php配置错误导致的解析漏洞](Web安全/中间件/Nginx/Nginx中php配置错误导致的解析漏洞.md)
   - [Nginx文件名逻辑漏洞](Web安全/中间件/Nginx/Nginx文件名逻辑漏洞.md)
+  - [Nginx越界读取缓存漏洞 CVE-2017-7529](Web安全/中间件/Nginx/Nginx越界读取缓存漏洞%20CVE-2017-7529.md)
+  - [小鱼易连视频系统 - Nginx LUA 脚本远程命令执行](Web安全/中间件/Nginx/小鱼易连视频系统%20-%20Nginx%20LUA%20脚本远程命令执行.md)
   - [（CVE-2013-4547）Nginx URI Processing 安全绕过漏洞](Web安全/中间件/Nginx/（CVE-2013-4547）Nginx%20URI%20Processing%20安全绕过漏洞.md)
   - [（CVE-2016-1247）Nginx 提权漏洞](Web安全/中间件/Nginx/（CVE-2016-1247）Nginx%20提权漏洞.md)
   - [（CVE-2017-7529）Nginx 越界读取缓存漏洞](Web安全/中间件/Nginx/（CVE-2017-7529）Nginx%20越界读取缓存漏洞.md)
   - [（CVE-2019-20372）Nginx error_page 请求走私漏洞](Web安全/中间件/Nginx/（CVE-2019-20372）Nginx%20error_page%20请求走私漏洞.md)
   - [（CVE-2020-12440）Nginx <= 1.8.0 请求走私](Web安全/中间件/Nginx/（CVE-2020-12440）Nginx%20<=%201.8.0%20请求走私.md)
-- **Nginx UI**（1）
-  - [Nginx UI的未授权远程代码执行](Web安全/中间件/Nginx%20UI/Nginx%20UI的未授权远程代码执行.md)
-- **Nginx-poolslip**（2）
-  - [CVE-2026-42530 NGINX 远程代码执行](Web安全/中间件/Nginx-poolslip/CVE-2026-42530%20NGINX%20远程代码执行.md)
-  - [Nginx-poolslip 漏洞可导致拒绝服务攻击和代码执行攻击——立即修复！](Web安全/中间件/Nginx-poolslip/Nginx-poolslip%20漏洞可导致拒绝服务攻击和代码执行攻击——立即修复！.md)
+- **NginxWebUI**（2）
+  - [Nginx UI的未授权远程代码执行](Web安全/中间件/NginxWebUI/Nginx%20UI的未授权远程代码执行.md)
+  - [NginxWebUI 后台命令执行漏洞 and nginxWebUI runCmd 远程命令执行漏洞](Web安全/运维面板/NginxWebUI/NginxWebUI%20后台命令执行漏洞%20and%20nginxWebUI%20runCmd%20远程命令执行漏洞.md)
+- **nginxWebUI**（2）
+  - [在野 0day nginxWebUI  远程代码执行漏洞 poc 补充](Web安全/运维面板/nginxWebUI/在野%200day%20nginxWebUI%20%20远程代码执行漏洞%20poc%20补充.md)
+  - [在野 0day nginxWebUI runCmd 远程代码执行漏洞](Web安全/运维面板/nginxWebUI/在野%200day%20nginxWebUI%20runCmd%20远程代码执行漏洞.md)
 - **Nginxwebui**（2）
   - [Nginxwebui后台命令执行审计](Web安全/运维面板/Nginxwebui/Nginxwebui后台命令执行审计.md)
   - [nginxWebUI 3.6.5 版本审计与绕过](Web安全/运维面板/Nginxwebui/nginxWebUI%203.6.5%20版本审计与绕过.md)
-- **NginxWebUI**（1）
-  - [NginxWebUI 后台命令执行漏洞 and nginxWebUI runCmd 远程命令执行漏洞](Web安全/运维面板/NginxWebUI/NginxWebUI%20后台命令执行漏洞%20and%20nginxWebUI%20runCmd%20远程命令执行漏洞.md)
-- **Nginx越界读取缓存漏洞**（1）
-  - [Nginx越界读取缓存漏洞 CVE-2017-7529](Web安全/中间件/Nginx越界读取缓存漏洞/Nginx越界读取缓存漏洞%20CVE-2017-7529.md)
 - **Ni8mare**（1）
   - [Ni8mare高危漏洞曝光：n8n自动化平台面临未授权全面接管风险](Web安全/其他软件/Ni8mare/Ni8mare高危漏洞曝光：n8n自动化平台面临未授权全面接管风险.md)
 - **Niushop**（3）
@@ -5740,15 +5529,13 @@
   - [可能允许攻击者在Windows设备上执行恶意代码，Node.js披露一个命令注入漏洞](Web安全/开发框架/Node.js/可能允许攻击者在Windows设备上执行恶意代码，Node.js披露一个命令注入漏洞.md)
   - [命令注入漏洞使数百万Node.js系统面临攻击](Web安全/开发框架/Node.js/命令注入漏洞使数百万Node.js系统面临攻击.md)
   - [（CVE-2017-14849）Node.js 目录穿越漏洞](Web安全/开发框架/Node.js/（CVE-2017-14849）Node.js%20目录穿越漏洞.md)
-- **Nokia-G-120W-F-**（1）
-  - [Nokia-G-120W-F-路由器存储型XSS（CVE-2021-30003）](Web安全/网络设备/Nokia-G-120W-F-/Nokia-G-120W-F-路由器存储型XSS（CVE-2021-30003）.md)
+- **Nokia**（1）
+  - [Nokia-G-120W-F-路由器存储型XSS（CVE-2021-30003）](Web安全/网络设备/Nokia/Nokia-G-120W-F-路由器存储型XSS（CVE-2021-30003）.md)
 - **None**（1）
   - [CVE-2026-43948 None != None 为 False：一个让授权守卫静默失效的 Python 陷阱](Web安全/其他软件/None/CVE-2026-43948%20None%20!=%20None%20为%20False：一个让授权守卫静默失效的%20Python%20陷阱.md)
 - **Nostromo httpd**（2）
   - [（CVE-2019-16278）Nostromo httpd 命令执行](Web安全/中间件/Nostromo%20httpd/（CVE-2019-16278）Nostromo%20httpd%20命令执行.md)
   - [（CVE-2019-16279）Nostromo httpd dos](Web安全/中间件/Nostromo%20httpd/（CVE-2019-16279）Nostromo%20httpd%20dos.md)
-- **Not all CISA-linked alerts**（1）
-  - [Not all CISA-linked alerts are urgent_ ASUS Live Update CVE-2025-59374](Web安全/网络设备/Not%20all%20CISA-linked%20alerts/Not%20all%20CISA-linked%20alerts%20are%20urgent_%20ASUS%20Live%20Update%20CVE-2025-59374.md)
 - **Notepad**（3）
   - [ (439)](Web安全/桌面软件/Notepad/%20%28439%29.md)
   - [Notepad++提权漏洞POC及一键部署环境](Web安全/桌面软件/Notepad/Notepad++提权漏洞POC及一键部署环境.md)
@@ -5775,10 +5562,10 @@
   - [ (4)](Web安全/其他软件/NVIDIA/%20%284%29.md)
   - [ (517)](Web安全/其他软件/NVIDIA/%20%28517%29.md)
   - [NVIDIA GPU显示驱动程序 信息泄露 CVE-2021-1056](Web安全/其他软件/NVIDIA/NVIDIA%20GPU显示驱动程序%20信息泄露%20CVE-2021-1056.md)
+- **NVIDIA AI**（1）
+  - [揭秘NVIDIA AI安全漏洞：CVE-2024-0132深度剖析](Web安全/AI应用/NVIDIA%20AI/揭秘NVIDIA%20AI安全漏洞：CVE-2024-0132深度剖析.md)
 - **NVIDIA Container Toolkit**（1）
-  - [NVIDIA Container Toolkit漏洞可导致权限提升任意代码执行](Web安全/AI应用/NVIDIA%20Container%20Toolkit/NVIDIA%20Container%20Toolkit漏洞可导致权限提升任意代码执行.md)
-- **NVIDIA CUDA Toolkit**（1）
-  - [NVIDIA CUDA Toolkit 爆出 4 个高危漏洞：命令注入、任意代码执行，AI 服务器也不安全了](Web安全/AI应用/NVIDIA%20CUDA%20Toolkit/NVIDIA%20CUDA%20Toolkit%20爆出%204%20个高危漏洞：命令注入、任意代码执行，AI%20服务器也不安全了.md)
+  - [NVIDIA Container Toolkit漏洞可导致权限提升任意代码执行](Web安全/云平台/NVIDIA%20Container%20Toolkit/NVIDIA%20Container%20Toolkit漏洞可导致权限提升任意代码执行.md)
 - **NVIDIA Megatron LM**（1）
   - [NVIDIA Megatron LM 让攻击者注入恶意代码漏洞](Web安全/其他软件/NVIDIA%20Megatron%20LM/NVIDIA%20Megatron%20LM%20让攻击者注入恶意代码漏洞.md)
 - **NVIDIA NeMo**（2）
@@ -5788,9 +5575,10 @@
   - [NVIDIA NSIGHT Graphics for Linux 漏洞允许代码执行攻击](Web安全/其他软件/NVIDIA%20NSIGHT%20Graphics%20for/NVIDIA%20NSIGHT%20Graphics%20for%20Linux%20漏洞允许代码执行攻击.md)
 - **NVIDIA-GPU显示驱动程序-信息**（1）
   - [NVIDIA-GPU显示驱动程序-信息泄露-CVE-2021-1056](Web安全/其他软件/NVIDIA-GPU显示驱动程序-信息/NVIDIA-GPU显示驱动程序-信息泄露-CVE-2021-1056.md)
-- **O2OA**（2）
+- **O2OA**（3）
   - [O2OA-invoke-后台远程命令执行漏洞-CNVD-2020-18740](Web安全/OA办公/O2OA/O2OA-invoke-后台远程命令执行漏洞-CNVD-2020-18740.md)
   - [O2OA-open-后台任意文件读取漏洞](Web安全/OA办公/O2OA/O2OA-open-后台任意文件读取漏洞.md)
+  - [兰德网络O2OA存在默认口令漏洞](Web安全/OA办公/O2OA/兰德网络O2OA存在默认口令漏洞.md)
 - **OfficeWeb**（1）
   - [OfficeWeb365-SaveDraw-任意文件上传漏洞](Web安全/桌面软件/OfficeWeb/OfficeWeb365-SaveDraw-任意文件上传漏洞.md)
 - **OfficeWeb365**（1）
@@ -5809,16 +5597,15 @@
   - [Okta 验证 Windows 远程代码执行 – CVE-2024-0980](Web安全/云平台/Okta/Okta%20验证%20Windows%20远程代码执行%20–%20CVE-2024-0980.md)
 - **Old Linux Kernel flaw CVE-**（1）
   - [Old Linux Kernel flaw CVE-2024-1086 resurfaces in ransomware attacks](Web安全/其他软件/Old%20Linux%20Kernel%20flaw%20CVE-/Old%20Linux%20Kernel%20flaw%20CVE-2024-1086%20resurfaces%20in%20ransomware%20attacks.md)
-- **Ollama**（7）
+- **Ollama**（8）
   - [ (380)](Web安全/AI应用/Ollama/%20%28380%29.md)
   - [Ollama 未授权访问漏洞 CNVD-2025-04094](Web安全/AI应用/Ollama/Ollama%20未授权访问漏洞%20CNVD-2025-04094.md)
   - [Ollama-extractFromZipFile-目录穿越漏洞-CVE-2024-45436](Web安全/AI应用/Ollama/Ollama-extractFromZipFile-目录穿越漏洞-CVE-2024-45436.md)
   - [Ollama-文件存在性泄露漏洞-CVE-2024-39719](Web安全/AI应用/Ollama/Ollama-文件存在性泄露漏洞-CVE-2024-39719.md)
   - [Ollama-文件存在性泄露漏洞-CVE-2024-39722](Web安全/AI应用/Ollama/Ollama-文件存在性泄露漏洞-CVE-2024-39722.md)
+  - [Ollama-未授权访问漏洞-CNVD-2025-04094](Web安全/AI应用/Ollama/Ollama-未授权访问漏洞-CNVD-2025-04094.md)
   - [Ollama-目录遍历致代码执行漏洞-CVE-2024-37032](Web安全/AI应用/Ollama/Ollama-目录遍历致代码执行漏洞-CVE-2024-37032.md)
   - [大语言模型（如DeepSeek）OLLAMA 未授权访问（CNVD-2025-04094）](Web安全/AI应用/Ollama/大语言模型（如DeepSeek）OLLAMA%20未授权访问（CNVD-2025-04094）.md)
-- **Ollama-**（1）
-  - [Ollama-未授权访问漏洞-CNVD-2025-04094](Web安全/AI应用/Ollama-/Ollama-未授权访问漏洞-CNVD-2025-04094.md)
 - **Omnissa Workspace ONE UEM**（1）
   - [Omnissa Workspace ONE UEM存在敏感信息泄漏漏洞（CVE-2025-25231） 附POC](Web安全/其他软件/Omnissa%20Workspace%20ONE%20UEM/Omnissa%20Workspace%20ONE%20UEM存在敏感信息泄漏漏洞（CVE-2025-25231）%20附POC.md)
 - **OneThink**（2）
@@ -5829,7 +5616,6 @@
 - **OpenAI**（1）
   - [OpenAI大语言模型漏洞挖掘](Web安全/AI应用/OpenAI/OpenAI大语言模型漏洞挖掘.md)
 - **OpenClaw**（10）
-  - [你配置的AI白名单一文不值：CVE-2026-28363让OpenClaw授权控制全面失效](Web安全/AI应用/OpenClaw/你配置的AI白名单一文不值：CVE-2026-28363让OpenClaw授权控制全面失效.md)
   - [ (263)](Web安全/其他软件/OpenClaw/%20%28263%29.md)
   - [ (383)](Web安全/其他软件/OpenClaw/%20%28383%29.md)
   - [ (389)](Web安全/其他软件/OpenClaw/%20%28389%29.md)
@@ -5839,6 +5625,7 @@
   - [OpenClaw 曝出四大漏洞，可导致数据窃取、权限提升与持久化攻击](Web安全/其他软件/OpenClaw/OpenClaw%20曝出四大漏洞，可导致数据窃取、权限提升与持久化攻击.md)
   - [OpenClaw安全实战系列(四)：幽灵连通性 — 揭秘CVE-2026-32038沙箱网络隔离绕过与靶标实战](Web安全/其他软件/OpenClaw/OpenClaw安全实战系列%28四%29：幽灵连通性%20—%20揭秘CVE-2026-32038沙箱网络隔离绕过与靶标实战.md)
   - [OpenClaw远程代码执行漏洞（CVE-2026-30741）！](Web安全/其他软件/OpenClaw/OpenClaw远程代码执行漏洞（CVE-2026-30741）！.md)
+  - [你配置的AI白名单一文不值：CVE-2026-28363让OpenClaw授权控制全面失效](Web安全/其他软件/OpenClaw/你配置的AI白名单一文不值：CVE-2026-28363让OpenClaw授权控制全面失效.md)
 - **OpenClaw AI**（1）
   - [OpenClaw AI框架曝出六大高危漏洞，含SSRF与认证绕过风险](Web安全/AI应用/OpenClaw%20AI/OpenClaw%20AI框架曝出六大高危漏洞，含SSRF与认证绕过风险.md)
 - **OpenCode**（1）
@@ -5909,8 +5696,8 @@
   - [Identity Manager 和 Web Services Manager 中的关键远程代码执行漏](Web安全/数据库/Oracle/Identity%20Manager%20和%20Web%20Services%20Manager%20中的关键远程代码执行漏.md)
   - [Oracle 修复已遭利用的 Agile PLM 0day](Web安全/数据库/Oracle/Oracle%20修复已遭利用的%20Agile%20PLM%200day.md)
   - [OracleJDEdwardsEnterpriseOneTools存在未授权获取管理员密码漏洞](Web安全/数据库/Oracle/OracleJDEdwardsEnterpriseOneTools存在未授权获取管理员密码漏洞.md)
-- **Oracle E-Business Suite Fl**（1）
-  - [Oracle E-Business Suite Flaw CVE-2026-46817 Actively Exploited in the](Web安全/中间件/Oracle%20E-Business%20Suite%20Fl/Oracle%20E-Business%20Suite%20Flaw%20CVE-2026-46817%20Actively%20Exploited%20in%20the.md)
+- **Oracle EBS**（1）
+  - [Oracle E-Business Suite Flaw CVE-2026-46817 Actively Exploited in the](Web安全/ERP企业/Oracle%20EBS/Oracle%20E-Business%20Suite%20Flaw%20CVE-2026-46817%20Actively%20Exploited%20in%20the.md)
 - **Oracle Java SE 代码执行**（1）
   - [Oracle Java SE 代码执行漏洞 () 利用难度大 CVE-2023-21939](Web安全/数据库/Oracle%20Java%20SE%20代码执行/Oracle%20Java%20SE%20代码执行漏洞%20%28%29%20利用难度大%20CVE-2023-21939.md)
 - **Oracle MySQL Server**（1）
@@ -5932,8 +5719,6 @@
   - [ournyx项目管理软件 soap_cgi.pyc XXE漏洞](Web安全/商业软件/ournyx/ournyx项目管理软件%20soap_cgi.pyc%20XXE漏洞.md)
 - **Output Messenger**（1）
   - [Output Messenger 漏洞被利用作为间谍攻击的零日漏洞](Web安全/商业软件/Output%20Messenger/Output%20Messenger%20漏洞被利用作为间谍攻击的零日漏洞.md)
-- **Over 28**（1）
-  - [Over 28,000 Citrix instances remain exposed to critical RCE flaw CVE-2](Web安全/AI应用/Over%2028/Over%2028,000%20Citrix%20instances%20remain%20exposed%20to%20critical%20RCE%20flaw%20CVE-2.md)
 - **ownCloud**（1）
   - [ownCloud-graphapi-信息泄露漏洞-CVE-2023-49103](Web安全/其他软件/ownCloud/ownCloud-graphapi-信息泄露漏洞-CVE-2023-49103.md)
 - **pac4j-jwt**（1）
@@ -5943,24 +5728,21 @@
 - **PageMyAdmin**（2）
   - [PageMyAdmin sql注入漏洞](Web安全/其他软件/PageMyAdmin/PageMyAdmin%20sql注入漏洞.md)
   - [PageMyAdmin文件上传getshell](Web安全/其他软件/PageMyAdmin/PageMyAdmin文件上传getshell.md)
-- **Palo Alto**（6）
+- **Palo Alto**（14）
+  - [ (376)](Web安全/网络设备/Palo%20Alto/%20%28376%29.md)
   - [CVE-2024-2432：Windows设备上Palo Alto 程序权限提升](Web安全/网络设备/Palo%20Alto/CVE-2024-2432：Windows设备上Palo%20Alto%20程序权限提升.md)
   - [CVE-2024-9465：Palo Alto Expedition 未经身份验证的 SQL 注入 POC](Web安全/网络设备/Palo%20Alto/CVE-2024-9465：Palo%20Alto%20Expedition%20未经身份验证的%20SQL%20注入%20POC.md)
+  - [CVE-2026-0257 _ Palo Alto Networks PAN-OS GlobalProtect Authentication](Web安全/网络设备/Palo%20Alto/CVE-2026-0257%20_%20Palo%20Alto%20Networks%20PAN-OS%20GlobalProtect%20Authentication.md)
+  - [Palo Alto Networks PAN-OS 命令注入漏洞分析（CVE-2024-3400）](Web安全/网络设备/Palo%20Alto/Palo%20Alto%20Networks%20PAN-OS%20命令注入漏洞分析（CVE-2024-3400）.md)
+  - [Palo Alto Networks PAN-OS存在远程命令执行漏洞CVE-2024-9474 附POC](Web安全/网络设备/Palo%20Alto/Palo%20Alto%20Networks%20PAN-OS存在远程命令执行漏洞CVE-2024-9474%20附POC.md)
+  - [Palo Alto Networks 防火墙漏洞允许攻击者强制防火墙进入重启循环](Web安全/网络设备/Palo%20Alto/Palo%20Alto%20Networks%20防火墙漏洞允许攻击者强制防火墙进入重启循环.md)
+  - [Palo Alto Networks修复了多个权限提升漏洞](Web安全/网络设备/Palo%20Alto/Palo%20Alto%20Networks修复了多个权限提升漏洞.md)
   - [Palo Alto 修复已遭利用的严重PAN-OS DoS 漏洞](Web安全/网络设备/Palo%20Alto/Palo%20Alto%20修复已遭利用的严重PAN-OS%20DoS%20漏洞.md)
   - [PaloAlto-Expedition OS命令注入漏洞 (CVE-2025-0107)](Web安全/网络设备/Palo%20Alto/PaloAlto-Expedition%20OS命令注入漏洞%20%28CVE-2025-0107%29.md)
   - [利用正当时！Palo Alto防火墙今年首爆0day漏洞](Web安全/网络设备/Palo%20Alto/利用正当时！Palo%20Alto防火墙今年首爆0day漏洞.md)
+  - [漏洞预警  Palo Alto Networks Expedition命令注入、SQL注入和明文存储漏洞](Web安全/网络设备/Palo%20Alto/漏洞预警%20%20Palo%20Alto%20Networks%20Expedition命令注入、SQL注入和明文存储漏洞.md)
   - [高危漏洞打包兜售，Palo Alto、Fortinet、Linux等关键系统在列](Web安全/网络设备/Palo%20Alto/高危漏洞打包兜售，Palo%20Alto、Fortinet、Linux等关键系统在列.md)
-- **Palo Alto Networks**（3）
-  - [Palo Alto Networks 防火墙漏洞允许攻击者强制防火墙进入重启循环](Web安全/网络设备/Palo%20Alto%20Networks/Palo%20Alto%20Networks%20防火墙漏洞允许攻击者强制防火墙进入重启循环.md)
-  - [Palo Alto Networks修复了多个权限提升漏洞](Web安全/网络设备/Palo%20Alto%20Networks/Palo%20Alto%20Networks修复了多个权限提升漏洞.md)
-  - [高危漏洞，攻击者可致防火墙瘫痪](Web安全/网络设备/Palo%20Alto%20Networks/高危漏洞，攻击者可致防火墙瘫痪.md)
-- **Palo Alto Networks Expedition**（1）
-  - [漏洞预警  Palo Alto Networks Expedition命令注入、SQL注入和明文存储漏洞](Web安全/网络设备/Palo%20Alto%20Networks%20Expedition/漏洞预警%20%20Palo%20Alto%20Networks%20Expedition命令注入、SQL注入和明文存储漏洞.md)
-- **Palo Alto Networks PAN-OS**（4）
-  - [ (376)](Web安全/网络设备/Palo%20Alto%20Networks%20PAN-OS/%20%28376%29.md)
-  - [CVE-2026-0257 _ Palo Alto Networks PAN-OS GlobalProtect Authentication](Web安全/网络设备/Palo%20Alto%20Networks%20PAN-OS/CVE-2026-0257%20_%20Palo%20Alto%20Networks%20PAN-OS%20GlobalProtect%20Authentication.md)
-  - [Palo Alto Networks PAN-OS 命令注入漏洞分析（CVE-2024-3400）](Web安全/网络设备/Palo%20Alto%20Networks%20PAN-OS/Palo%20Alto%20Networks%20PAN-OS%20命令注入漏洞分析（CVE-2024-3400）.md)
-  - [Palo Alto Networks PAN-OS存在远程命令执行漏洞CVE-2024-9474 附POC](Web安全/网络设备/Palo%20Alto%20Networks%20PAN-OS/Palo%20Alto%20Networks%20PAN-OS存在远程命令执行漏洞CVE-2024-9474%20附POC.md)
+  - [高危漏洞，攻击者可致防火墙瘫痪](Web安全/网络设备/Palo%20Alto/高危漏洞，攻击者可致防火墙瘫痪.md)
 - **PAN-OS**（1）
   - [PAN-OS 高危缓冲溢出漏洞可导致任意代码执行](Web安全/其他软件/PAN-OS/PAN-OS%20高危缓冲溢出漏洞可导致任意代码执行.md)
 - **Panabit**（8）
@@ -6016,40 +5798,38 @@
   - [pgAdmin4-≤-9.10-后台-Restore-工具命令注入漏洞-CVE-2025-13780](Web安全/其他软件/pgAdmin4/pgAdmin4-≤-9.10-后台-Restore-工具命令注入漏洞-CVE-2025-13780.md)
 - **pgAdmin4＜9.2**（1）
   - [pgAdmin4＜9.2-后台远程代码执行漏洞-CVE-2025-2945](Web安全/其他软件/pgAdmin4＜9.2/pgAdmin4＜9.2-后台远程代码执行漏洞-CVE-2025-2945.md)
-- **PHICOMM K**（1）
-  - [PHICOMM K2 命令注入漏洞 (CVE-2023-40796)](Web安全/网络设备/PHICOMM%20K/PHICOMM%20K2%20命令注入漏洞%20%28CVE-2023-40796%29.md)
 - **PHP**（31）
-  - [ (55)](Web安全/开发框架/PHP/%20%2855%29.md)
-  - [HIKVISION-视频编码设备接入网关-showFile.php-任意文件下载漏洞](Web安全/开发框架/PHP/HIKVISION-视频编码设备接入网关-showFile.php-任意文件下载漏洞.md)
-  - [PHP 8-1-0-dev 后门远程命令执行漏洞复现](Web安全/开发框架/PHP/PHP%208-1-0-dev%20后门远程命令执行漏洞复现.md)
-  - [PHP imap 远程命令执行漏洞 CVE-2018-19518](Web安全/开发框架/PHP/PHP%20imap%20远程命令执行漏洞%20CVE-2018-19518.md)
-  - [PHP 绕过禁用函数漏洞的原理与利用分析](Web安全/开发框架/PHP/PHP%20绕过禁用函数漏洞的原理与利用分析.md)
-  - [PHP-8.1.0-dev-开发版本-zerodium-后门漏洞](Web安全/开发框架/PHP/PHP-8.1.0-dev-开发版本-zerodium-后门漏洞.md)
-  - [PHP-8.1.0-devzerodium后门命令执行漏洞](Web安全/开发框架/PHP/PHP-8.1.0-devzerodium后门命令执行漏洞.md)
-  - [PHP-FPM Fastcgi 未授权访问漏洞](Web安全/开发框架/PHP/PHP-FPM%20Fastcgi%20未授权访问漏洞.md)
-  - [PHP-FPM 远程代码执行漏洞 CVE-2019-11043](Web安全/开发框架/PHP/PHP-FPM%20远程代码执行漏洞%20CVE-2019-11043.md)
-  - [PHP-XDebug-远程调试模式导致代码执行](Web安全/开发框架/PHP/PHP-XDebug-远程调试模式导致代码执行.md)
-  - [PHP-利用-GNU-C-Iconv-将文件读取提升至-RCE-CVE-2024-2961](Web安全/开发框架/PHP/PHP-利用-GNU-C-Iconv-将文件读取提升至-RCE-CVE-2024-2961.md)
-  - [PHP-利用-phpinfo-包含临时文件-getshell](Web安全/开发框架/PHP/PHP-利用-phpinfo-包含临时文件-getshell.md)
-  - [PHP-环境-XML外部实体注入漏洞（XXE）](Web安全/开发框架/PHP/PHP-环境-XML外部实体注入漏洞（XXE）.md)
-  - [PHP序列化和反序列化语法差异问题](Web安全/开发框架/PHP/PHP序列化和反序列化语法差异问题.md)
-  - [Panalog 日志审计系统 libres_syn_delete.php RCE漏洞](Web安全/开发框架/PHP/Panalog%20日志审计系统%20libres_syn_delete.php%20RCE漏洞.md)
-  - [Panalog 日志审计系统 sprog_upstatus.php SQL 注入漏洞(XVE-2024-5232)](Web安全/开发框架/PHP/Panalog%20日志审计系统%20sprog_upstatus.php%20SQL%20注入漏洞%28XVE-2024-5232%29.md)
-  - [Php XDebug 远程调试漏洞](Web安全/开发框架/PHP/Php%20XDebug%20远程调试漏洞.md)
-  - [Php文件包含漏洞（利用phpinfo）](Web安全/开发框架/PHP/Php文件包含漏洞（利用phpinfo）.md)
-  - [WeiPHP微信开发框架Notice_index接口处存在远程代码执行漏洞](Web安全/开发框架/PHP/WeiPHP微信开发框架Notice_index接口处存在远程代码执行漏洞.md)
-  - [YourPHPCMSRegister_checkEmail存在sql注入漏洞](Web安全/开发框架/PHP/YourPHPCMSRegister_checkEmail存在sql注入漏洞.md)
-  - [YourPHPCMSlogin_checkEmail存在sql注入漏洞](Web安全/开发框架/PHP/YourPHPCMSlogin_checkEmail存在sql注入漏洞.md)
-  - [php mt_rand函数的安全问题探讨](Web安全/开发框架/PHP/php%20mt_rand函数的安全问题探讨.md)
-  - [一次一口吃掉大象：PHP中与JPEG相关的内存安全漏洞](Web安全/开发框架/PHP/一次一口吃掉大象：PHP中与JPEG相关的内存安全漏洞.md)
-  - [热门开源Dompdf PHP 库中存在严重漏洞](Web安全/开发框架/PHP/热门开源Dompdf%20PHP%20库中存在严重漏洞.md)
-  - [（CVE-2012-1823）PHP-CGI远程代码执行漏洞](Web安全/开发框架/PHP/（CVE-2012-1823）PHP-CGI远程代码执行漏洞.md)
-  - [（CVE-2018-19518）PHP imap 远程命令执行漏洞](Web安全/开发框架/PHP/（CVE-2018-19518）PHP%20imap%20远程命令执行漏洞.md)
-  - [（CVE-2019-11043）PHP 远程命令执行](Web安全/开发框架/PHP/（CVE-2019-11043）PHP%20远程命令执行.md)
-  - [（一）Php screw加密与破解工具（php-screw-brute）](Web安全/开发框架/PHP/（一）Php%20screw加密与破解工具（php-screw-brute）.md)
-  - [（三）通过IDA获取加密的key](Web安全/开发框架/PHP/（三）通过IDA获取加密的key.md)
-  - [（二）Php screw加密与破解工具（screw_decode）](Web安全/开发框架/PHP/（二）Php%20screw加密与破解工具（screw_decode）.md)
-  - [（四）php-screw加密文件](Web安全/开发框架/PHP/（四）php-screw加密文件.md)
+  - [ (55)](Web安全/其他软件/PHP/%20%2855%29.md)
+  - [HIKVISION-视频编码设备接入网关-showFile.php-任意文件下载漏洞](Web安全/其他软件/PHP/HIKVISION-视频编码设备接入网关-showFile.php-任意文件下载漏洞.md)
+  - [PHP 8-1-0-dev 后门远程命令执行漏洞复现](Web安全/其他软件/PHP/PHP%208-1-0-dev%20后门远程命令执行漏洞复现.md)
+  - [PHP imap 远程命令执行漏洞 CVE-2018-19518](Web安全/其他软件/PHP/PHP%20imap%20远程命令执行漏洞%20CVE-2018-19518.md)
+  - [PHP 绕过禁用函数漏洞的原理与利用分析](Web安全/其他软件/PHP/PHP%20绕过禁用函数漏洞的原理与利用分析.md)
+  - [PHP-8.1.0-dev-开发版本-zerodium-后门漏洞](Web安全/其他软件/PHP/PHP-8.1.0-dev-开发版本-zerodium-后门漏洞.md)
+  - [PHP-8.1.0-devzerodium后门命令执行漏洞](Web安全/其他软件/PHP/PHP-8.1.0-devzerodium后门命令执行漏洞.md)
+  - [PHP-FPM Fastcgi 未授权访问漏洞](Web安全/其他软件/PHP/PHP-FPM%20Fastcgi%20未授权访问漏洞.md)
+  - [PHP-FPM 远程代码执行漏洞 CVE-2019-11043](Web安全/其他软件/PHP/PHP-FPM%20远程代码执行漏洞%20CVE-2019-11043.md)
+  - [PHP-XDebug-远程调试模式导致代码执行](Web安全/其他软件/PHP/PHP-XDebug-远程调试模式导致代码执行.md)
+  - [PHP-利用-GNU-C-Iconv-将文件读取提升至-RCE-CVE-2024-2961](Web安全/其他软件/PHP/PHP-利用-GNU-C-Iconv-将文件读取提升至-RCE-CVE-2024-2961.md)
+  - [PHP-利用-phpinfo-包含临时文件-getshell](Web安全/其他软件/PHP/PHP-利用-phpinfo-包含临时文件-getshell.md)
+  - [PHP-环境-XML外部实体注入漏洞（XXE）](Web安全/其他软件/PHP/PHP-环境-XML外部实体注入漏洞（XXE）.md)
+  - [PHP序列化和反序列化语法差异问题](Web安全/其他软件/PHP/PHP序列化和反序列化语法差异问题.md)
+  - [Panalog 日志审计系统 libres_syn_delete.php RCE漏洞](Web安全/其他软件/PHP/Panalog%20日志审计系统%20libres_syn_delete.php%20RCE漏洞.md)
+  - [Panalog 日志审计系统 sprog_upstatus.php SQL 注入漏洞(XVE-2024-5232)](Web安全/其他软件/PHP/Panalog%20日志审计系统%20sprog_upstatus.php%20SQL%20注入漏洞%28XVE-2024-5232%29.md)
+  - [Php XDebug 远程调试漏洞](Web安全/其他软件/PHP/Php%20XDebug%20远程调试漏洞.md)
+  - [Php文件包含漏洞（利用phpinfo）](Web安全/其他软件/PHP/Php文件包含漏洞（利用phpinfo）.md)
+  - [WeiPHP微信开发框架Notice_index接口处存在远程代码执行漏洞](Web安全/其他软件/PHP/WeiPHP微信开发框架Notice_index接口处存在远程代码执行漏洞.md)
+  - [YourPHPCMSRegister_checkEmail存在sql注入漏洞](Web安全/其他软件/PHP/YourPHPCMSRegister_checkEmail存在sql注入漏洞.md)
+  - [YourPHPCMSlogin_checkEmail存在sql注入漏洞](Web安全/其他软件/PHP/YourPHPCMSlogin_checkEmail存在sql注入漏洞.md)
+  - [php mt_rand函数的安全问题探讨](Web安全/其他软件/PHP/php%20mt_rand函数的安全问题探讨.md)
+  - [一次一口吃掉大象：PHP中与JPEG相关的内存安全漏洞](Web安全/其他软件/PHP/一次一口吃掉大象：PHP中与JPEG相关的内存安全漏洞.md)
+  - [热门开源Dompdf PHP 库中存在严重漏洞](Web安全/其他软件/PHP/热门开源Dompdf%20PHP%20库中存在严重漏洞.md)
+  - [（CVE-2012-1823）PHP-CGI远程代码执行漏洞](Web安全/其他软件/PHP/（CVE-2012-1823）PHP-CGI远程代码执行漏洞.md)
+  - [（CVE-2018-19518）PHP imap 远程命令执行漏洞](Web安全/其他软件/PHP/（CVE-2018-19518）PHP%20imap%20远程命令执行漏洞.md)
+  - [（CVE-2019-11043）PHP 远程命令执行](Web安全/其他软件/PHP/（CVE-2019-11043）PHP%20远程命令执行.md)
+  - [（一）Php screw加密与破解工具（php-screw-brute）](Web安全/其他软件/PHP/（一）Php%20screw加密与破解工具（php-screw-brute）.md)
+  - [（三）通过IDA获取加密的key](Web安全/其他软件/PHP/（三）通过IDA获取加密的key.md)
+  - [（二）Php screw加密与破解工具（screw_decode）](Web安全/其他软件/PHP/（二）Php%20screw加密与破解工具（screw_decode）.md)
+  - [（四）php-screw加密文件](Web安全/其他软件/PHP/（四）php-screw加密文件.md)
 - **PHP on Windows**（1）
   - [PHP on Windows 保留设备名未拒绝导致 DoS(CVE-2026-17545)](Web安全/其他软件/PHP%20on%20Windows/PHP%20on%20Windows%20保留设备名未拒绝导致%20DoS%28CVE-2026-17545%29.md)
 - **PHP 开发服务器 小于等于 7.4.21**（1）
@@ -6088,9 +5868,9 @@
 - **phpIPAM**（1）
   - [phpIPAM跨站脚本漏洞及解决方法（CNVD-2025-06929、CVE-2024-55093）](Web安全/其他软件/phpIPAM/phpIPAM跨站脚本漏洞及解决方法（CNVD-2025-06929、CVE-2024-55093）.md)
 - **PHPMailer**（3）
-  - [PHPMailer 远程命令执行漏洞复现](Web安全/AI应用/PHPMailer/PHPMailer%20远程命令执行漏洞复现.md)
-  - [（CVE-2016-10033）PHPMailer < 5.2.18 远程命令执行漏洞](Web安全/AI应用/PHPMailer/（CVE-2016-10033）PHPMailer%20<%205.2.18%20远程命令执行漏洞.md)
-  - [（CVE-2017-5223）PHPMailer <= 5.2.21 任意文件读取漏洞](Web安全/AI应用/PHPMailer/（CVE-2017-5223）PHPMailer%20<=%205.2.21%20任意文件读取漏洞.md)
+  - [PHPMailer 远程命令执行漏洞复现](Web安全/开发框架/PHPMailer/PHPMailer%20远程命令执行漏洞复现.md)
+  - [（CVE-2016-10033）PHPMailer < 5.2.18 远程命令执行漏洞](Web安全/开发框架/PHPMailer/（CVE-2016-10033）PHPMailer%20<%205.2.18%20远程命令执行漏洞.md)
+  - [（CVE-2017-5223）PHPMailer <= 5.2.21 任意文件读取漏洞](Web安全/开发框架/PHPMailer/（CVE-2017-5223）PHPMailer%20<=%205.2.21%20任意文件读取漏洞.md)
 - **Phpmyadmin**（15）
   - [CVE-2020-0554：phpMyAdmin后台SQL注入](Web安全/数据库/Phpmyadmin/CVE-2020-0554：phpMyAdmin后台SQL注入.md)
   - [Phpmyadmin < 4.8.3 XSS](Web安全/数据库/Phpmyadmin/Phpmyadmin%20<%204.8.3%20XSS.md)
@@ -6113,11 +5893,12 @@
   - [PHPOK 5.3 前台无限制注入](Web安全/CMS内容/PHPOK/PHPOK%205.3%20前台无限制注入.md)
   - [PHPOK 5.3 前台注入](Web安全/CMS内容/PHPOK/PHPOK%205.3%20前台注入.md)
   - [PHPOK 5.5 csrf+反序列化漏洞getshell](Web安全/CMS内容/PHPOK/PHPOK%205.5%20csrf+反序列化漏洞getshell.md)
-- **Phpstudy**（6）
-  - [PHPStudy-后台管理页面-one-click-RCE](Web安全/中间件/Phpstudy/PHPStudy-后台管理页面-one-click-RCE.md)
-  - [Phpstudy nginx 解析漏洞](Web安全/中间件/Phpstudy/Phpstudy%20nginx%20解析漏洞.md)
-  - [Phpstudy 后门（非官方后门！！！）](Web安全/中间件/Phpstudy/Phpstudy%20后门（非官方后门！！！）.md)
-  - [phpStudy nginx 解析漏洞](Web安全/中间件/Phpstudy/phpStudy%20nginx%20解析漏洞.md)
+- **phpstudy**（4）
+  - [PHPStudy-后台管理页面-one-click-RCE](Web安全/运维面板/phpstudy/PHPStudy-后台管理页面-one-click-RCE.md)
+  - [Phpstudy nginx 解析漏洞](Web安全/运维面板/phpstudy/Phpstudy%20nginx%20解析漏洞.md)
+  - [Phpstudy 后门（非官方后门！！！）](Web安全/运维面板/phpstudy/Phpstudy%20后门（非官方后门！！！）.md)
+  - [phpStudy nginx 解析漏洞](Web安全/运维面板/phpstudy/phpStudy%20nginx%20解析漏洞.md)
+- **Phpstudy**（2）
   - [phpstudy_backdoor](Web安全/其他软件/Phpstudy/phpstudy_backdoor.md)
   - [phpstudy敏感信息泄露](Web安全/其他软件/Phpstudy/phpstudy敏感信息泄露.md)
 - **PHPUnit**（1）
@@ -6147,7 +5928,7 @@
 - **Pluck cms**（2）
   - [Pluck CMS 4.7.10 后台 文件包含+文件上传导致getshell](Web安全/CMS内容/Pluck%20cms/Pluck%20CMS%204.7.10%20后台%20文件包含+文件上传导致getshell.md)
   - [Pluck CMS后台另两处任意代码执行](Web安全/CMS内容/Pluck%20cms/Pluck%20CMS后台另两处任意代码执行.md)
-- **PoC**（17）
+- **PoC**（16）
   - [ (54)](Web安全/其他软件/PoC/%20%2854%29.md)
   - [2020HW 期间公布漏洞总结（附部分漏洞 Poc、Exp）](Web安全/其他软件/PoC/2020HW%20期间公布漏洞总结（附部分漏洞%20Poc、Exp）.md)
   - [CVE-2024-2330漏洞复现（POC）](Web安全/其他软件/PoC/CVE-2024-2330漏洞复现（POC）.md)
@@ -6164,12 +5945,9 @@
   - [记一次 Fake-POC 投毒项目的追溯](Web安全/其他软件/PoC/记一次%20Fake-POC%20投毒项目的追溯.md)
   - [CVE-2024-25735漏洞复现（附POC）](Web安全/服务器软件/PoC/CVE-2024-25735漏洞复现（附POC）.md)
   - [CVE-2026-24061｜Telnetd存在远程认证绕过漏洞（POC）](Web安全/服务器软件/PoC/CVE-2026-24061｜Telnetd存在远程认证绕过漏洞（POC）.md)
-  - [​网御 ACM 上网行为管理系统 bottomframe.cgi 接口存在 SQL 注入漏洞 附 POC](Web安全/网络设备/PoC/​网御%20ACM%20上网行为管理系统%20bottomframe.cgi%20接口存在%20SQL%20注入漏洞%20附%20POC.md)
 - **PoC  Commvault**（2）
   - [CVE-2025-33053 Poc复现研究细节](Web安全/服务器软件/PoC%20%20Commvault/CVE-2025-33053%20Poc复现研究细节.md)
   - [PoC  Commvault 远程代码执行 CVE-2025-34028（9.0）](Web安全/服务器软件/PoC%20%20Commvault/PoC%20%20Commvault%20远程代码执行%20CVE-2025-34028（9.0）.md)
-- **poc  Windows**（1）
-  - [poc  Windows 远程桌面网关 (RD Gateway) CVE-2025-21297介绍](Web安全/中间件/poc%20%20Windows/poc%20%20Windows%20远程桌面网关%20%28RD%20Gateway%29%20CVE-2025-21297介绍.md)
 - **Podman**（2）
   - [ (494)](Web安全/服务器软件/Podman/%20%28494%29.md)
   - [CVE-2025-11395 Podman任意文件写入漏洞](Web安全/服务器软件/Podman/CVE-2025-11395%20Podman任意文件写入漏洞.md)
@@ -6204,32 +5982,28 @@
 - **Praetorian**（2）
   - [Praetorian_CVE-2025-52493_ When Password FieldsAren’t Enough – Client-](Web安全/桌面软件/Praetorian/Praetorian_CVE-2025-52493_%20When%20Password%20FieldsAren’t%20Enough%20–%20Client-.md)
   - [Praetorian_How I Found the Worst ASP.NET Vulnerability — A $10K Bug (C](Web安全/桌面软件/Praetorian/Praetorian_How%20I%20Found%20the%20Worst%20ASP.NET%20Vulnerability%20—%20A%20$10K%20Bug%20%28C.md)
-- **Primeton EOS Platform jmx**（1）
-  - [Primeton EOS Platform jmx反序列化远程代码执行](Web安全/中间件/Primeton%20EOS%20Platform%20jmx/Primeton%20EOS%20Platform%20jmx反序列化远程代码执行.md)
-- **Progress**（9）
-  - [ (113)](Web安全/中间件/Progress/%20%28113%29.md)
-  - [ (212)](Web安全/中间件/Progress/%20%28212%29.md)
-  - [ (308)](Web安全/中间件/Progress/%20%28308%29.md)
-  - [ (311)](Web安全/中间件/Progress/%20%28311%29.md)
-  - [ (432)](Web安全/中间件/Progress/%20%28432%29.md)
-  - [LoadMaster 的超危RCE](Web安全/中间件/Progress/LoadMaster%20的超危RCE.md)
-  - [Progress 提醒Telerik Report Server中的严重RCE漏洞](Web安全/中间件/Progress/Progress%20提醒Telerik%20Report%20Server中的严重RCE漏洞.md)
-  - [Progress修复OpenEdge AdminServer远程命令执行漏洞（CVE-2025-7388）](Web安全/中间件/Progress/Progress修复OpenEdge%20AdminServer远程命令执行漏洞（CVE-2025-7388）.md)
-  - [速修复！Progress Telerik 中存在严重的认证绕过漏洞](Web安全/中间件/Progress/速修复！Progress%20Telerik%20中存在严重的认证绕过漏洞.md)
-- **Progress Software**（1）
+- **Primeton EOS**（1）
+  - [Primeton EOS Platform jmx反序列化远程代码执行](Web安全/中间件/Primeton%20EOS/Primeton%20EOS%20Platform%20jmx反序列化远程代码执行.md)
+- **Progress Software**（10）
+  - [ (113)](Web安全/中间件/Progress%20Software/%20%28113%29.md)
+  - [ (212)](Web安全/中间件/Progress%20Software/%20%28212%29.md)
+  - [ (308)](Web安全/中间件/Progress%20Software/%20%28308%29.md)
+  - [ (311)](Web安全/中间件/Progress%20Software/%20%28311%29.md)
+  - [ (432)](Web安全/中间件/Progress%20Software/%20%28432%29.md)
+  - [LoadMaster 的超危RCE](Web安全/中间件/Progress%20Software/LoadMaster%20的超危RCE.md)
   - [Progress Software修复了多个高严重性的LoadMaster漏洞](Web安全/中间件/Progress%20Software/Progress%20Software修复了多个高严重性的LoadMaster漏洞.md)
+  - [Progress 提醒Telerik Report Server中的严重RCE漏洞](Web安全/中间件/Progress%20Software/Progress%20提醒Telerik%20Report%20Server中的严重RCE漏洞.md)
+  - [Progress修复OpenEdge AdminServer远程命令执行漏洞（CVE-2025-7388）](Web安全/中间件/Progress%20Software/Progress修复OpenEdge%20AdminServer远程命令执行漏洞（CVE-2025-7388）.md)
+  - [速修复！Progress Telerik 中存在严重的认证绕过漏洞](Web安全/中间件/Progress%20Software/速修复！Progress%20Telerik%20中存在严重的认证绕过漏洞.md)
 - **Prometheus**（1）
   - [Prometheus 未授权访问漏洞处理](Web安全/服务器软件/Prometheus/Prometheus%20未授权访问漏洞处理.md)
 - **Pulse Secure**（1）
   - [（CVE-2019-11510）Pulse Secure SSL VPN 任意文件读取](Web安全/安全设备/Pulse%20Secure/（CVE-2019-11510）Pulse%20Secure%20SSL%20VPN%20任意文件读取.md)
+- **pyLoad**（1）
+  - [漏洞预警  pyLoad远程代码执行漏洞](Web安全/运维面板/pyLoad/漏洞预警%20%20pyLoad远程代码执行漏洞.md)
 - **Pyspider**（1）
   - [pyspider未授权访问](Web安全/其他软件/Pyspider/pyspider未授权访问.md)
 - **Python**（15）
-  - [Python Gradio 任意文件读取漏洞 CVE-2024-1561](Web安全/AI应用/Python/Python%20Gradio%20任意文件读取漏洞%20CVE-2024-1561.md)
-  - [Python-Gradio-目录穿越漏洞-CVE-2023-51449](Web安全/AI应用/Python/Python-Gradio-目录穿越漏洞-CVE-2023-51449.md)
-  - [Python-aiohttp-目录遍历漏洞-CVE-2024-23334](Web安全/AI应用/Python/Python-aiohttp-目录遍历漏洞-CVE-2024-23334.md)
-  - [Python标准库tarfile模块存在任意文件写入高危漏洞，PoC已公开](Web安全/AI应用/Python/Python标准库tarfile模块存在任意文件写入高危漏洞，PoC已公开.md)
-  - [pythonGradio插件存在任意文件读取漏洞(CVE-2024-1561)](Web安全/AI应用/Python/pythonGradio插件存在任意文件读取漏洞%28CVE-2024-1561%29.md)
   - [ (194)](Web安全/其他软件/Python/%20%28194%29.md)
   - [ (20)](Web安全/其他软件/Python/%20%2820%29.md)
   - [ (386)](Web安全/其他软件/Python/%20%28386%29.md)
@@ -6240,6 +6014,11 @@
   - [Python pip install RCE 漏洞 CVE-2013-1629](Web安全/其他软件/Python/Python%20pip%20install%20RCE%20漏洞%20CVE-2013-1629.md)
   - [Python unpickle 造成任意命令执行漏洞](Web安全/其他软件/Python/Python%20unpickle%20造成任意命令执行漏洞.md)
   - [Python漏洞导致Windows系统越界写入](Web安全/其他软件/Python/Python漏洞导致Windows系统越界写入.md)
+  - [Python Gradio 任意文件读取漏洞 CVE-2024-1561](Web安全/开发框架/Python/Python%20Gradio%20任意文件读取漏洞%20CVE-2024-1561.md)
+  - [Python-Gradio-目录穿越漏洞-CVE-2023-51449](Web安全/开发框架/Python/Python-Gradio-目录穿越漏洞-CVE-2023-51449.md)
+  - [Python-aiohttp-目录遍历漏洞-CVE-2024-23334](Web安全/开发框架/Python/Python-aiohttp-目录遍历漏洞-CVE-2024-23334.md)
+  - [Python标准库tarfile模块存在任意文件写入高危漏洞，PoC已公开](Web安全/开发框架/Python/Python标准库tarfile模块存在任意文件写入高危漏洞，PoC已公开.md)
+  - [pythonGradio插件存在任意文件读取漏洞(CVE-2024-1561)](Web安全/开发框架/Python/pythonGradio插件存在任意文件读取漏洞%28CVE-2024-1561%29.md)
 - **Python URL**（1）
   - [Python URL 解析漏洞可导致命令执行攻击](Web安全/其他软件/Python%20URL/Python%20URL%20解析漏洞可导致命令执行攻击.md)
 - **Python-PIL-**（1）
@@ -6258,8 +6037,8 @@
   - [QCMS 3.0 任意文件上传](Web安全/CMS内容/QCMS/QCMS%203.0%20任意文件上传.md)
   - [QCMS 3.0 任意文件读取](Web安全/CMS内容/QCMS/QCMS%203.0%20任意文件读取.md)
   - [QCMS 3.0 留言板xss](Web安全/CMS内容/QCMS/QCMS%203.0%20留言板xss.md)
-- **QDocs Smart School**（1）
-  - [QDocs Smart School SQL 注入漏洞复现 (付 nuclei poc)](Web安全/开发框架/QDocs%20Smart%20School/QDocs%20Smart%20School%20SQL%20注入漏洞复现%20%28付%20nuclei%20poc%29.md)
+- **QDocs**（1）
+  - [QDocs Smart School SQL 注入漏洞复现 (付 nuclei poc)](Web安全/商业软件/QDocs/QDocs%20Smart%20School%20SQL%20注入漏洞复现%20%28付%20nuclei%20poc%29.md)
 - **QdPM**（1）
   - [（CVE-2020-7246）QdPM <9.1 远程代码执行漏洞](Web安全/其他软件/QdPM/（CVE-2020-7246）QdPM%20<9.1%20远程代码执行漏洞.md)
 - **QNAP**（5）
@@ -6287,11 +6066,8 @@
   - [r0eXpeR-redteam vul： 红队作战中比较常遇到的一些重点系统漏洞整理。](Web安全/其他软件/r0eXpeR-redteam/r0eXpeR-redteam%20vul：%20红队作战中比较常遇到的一些重点系统漏洞整理。.md)
 - **RabbitMQ**（1）
   - [RabbitMQ Web管理csrf漏洞](Web安全/中间件/RabbitMQ/RabbitMQ%20Web管理csrf漏洞.md)
-- **RaidenMAILD邮件服务器**（1）
-  - [RaidenMAILD邮件服务器v.4.9.4存在任意文件读取漏洞](Web安全/AI应用/RaidenMAILD邮件服务器/RaidenMAILD邮件服务器v.4.9.4存在任意文件读取漏洞.md)
-- **Rails**（2）
-  - [Rails Accept 任意文件读取漏洞 CVE-2019-5418](Web安全/AI应用/Rails/Rails%20Accept%20任意文件读取漏洞%20CVE-2019-5418.md)
-  - [Rails sprockets 任意文件读取漏洞 CVE-2018-3760](Web安全/AI应用/Rails/Rails%20sprockets%20任意文件读取漏洞%20CVE-2018-3760.md)
+- **RaidenMAILD**（1）
+  - [RaidenMAILD邮件服务器v.4.9.4存在任意文件读取漏洞](Web安全/邮件系统/RaidenMAILD/RaidenMAILD邮件服务器v.4.9.4存在任意文件读取漏洞.md)
 - **Rapid7**（1）
   - [Rapid7一线实录：CVE-2025-59718 FortiGate 防火墙入侵事件深度剖析](Web安全/安全设备/Rapid7/Rapid7一线实录：CVE-2025-59718%20FortiGate%20防火墙入侵事件深度剖析.md)
 - **RaspAP**（1）
@@ -6314,7 +6090,7 @@
   - [Reactor Netty HTTP Server 目录遍历漏洞(CVE-2023-34062)](Web安全/中间件/Reactor%20Netty%20HTTP%20Server/Reactor%20Netty%20HTTP%20Server%20目录遍历漏洞%28CVE-2023-34062%29.md)
 - **Realtek Sdk CVE-2021-35392**（1）
   - [Realtek Sdk CVE-2021-35392漏洞分析](Web安全/其他软件/Realtek%20Sdk%20CVE-2021-35392/Realtek%20Sdk%20CVE-2021-35392漏洞分析.md)
-- **Redis**（13）
+- **Redis**（14）
   - [ (393)](Web安全/中间件/Redis/%20%28393%29.md)
   - [ (490)](Web安全/中间件/Redis/%20%28490%29.md)
   - [CVE-2026-93435 redis-parser 拒绝服务漏洞](Web安全/中间件/Redis/CVE-2026-93435%20redis-parser%20拒绝服务漏洞.md)
@@ -6328,15 +6104,13 @@
   - [Redis曝高危漏洞，认证客户端可致服务中断](Web安全/中间件/Redis/Redis曝高危漏洞，认证客户端可致服务中断.md)
   - [redis未授权访问漏洞](Web安全/中间件/Redis/redis未授权访问漏洞.md)
   - [尽快更新Redis，最新漏洞可导致服务器遭受拒绝服务攻击（CVE-2025-21605）](Web安全/中间件/Redis/尽快更新Redis，最新漏洞可导致服务器遭受拒绝服务攻击（CVE-2025-21605）.md)
+  - [漏洞预警  Redis hyperloglog 远程代码执行漏洞(CVE-2025-32023)](Web安全/中间件/Redis/漏洞预警%20%20Redis%20hyperloglog%20远程代码执行漏洞%28CVE-2025-32023%29.md)
 - **Rejetto**（1）
   - [RejettoHTTP文件服务器search存在命令执行漏洞(CVE-2024-23692)](Web安全/其他软件/Rejetto/RejettoHTTP文件服务器search存在命令执行漏洞%28CVE-2024-23692%29.md)
-- **RG-EW**（2）
+- **RG-EW**（1）
   - [RG-EW1200G 远程代码执行漏洞 (CVE-2023-3306)](Web安全/其他软件/RG-EW/RG-EW1200G%20远程代码执行漏洞%20%28CVE-2023-3306%29.md)
-  - [接上一篇文章 锐捷 RG-EW1200G 其他两个 CVE 补充 有 RCE 附 POC](Web安全/网络设备/RG-EW/接上一篇文章%20锐捷%20RG-EW1200G%20其他两个%20CVE%20补充%20有%20RCE%20附%20POC.md)
-- **RichMail企业邮箱**（1）
-  - [RichMail企业邮箱敏感信息泄漏漏洞](Web安全/AI应用/RichMail企业邮箱/RichMail企业邮箱敏感信息泄漏漏洞.md)
-- **RouterOS S**（1）
-  - [CVE-2026-67276  RouterOS SSH公钥认证绕过漏洞（POC）](Web安全/网络设备/RouterOS%20S/CVE-2026-67276%20%20RouterOS%20SSH公钥认证绕过漏洞（POC）.md)
+- **RichMail**（1）
+  - [RichMail企业邮箱敏感信息泄漏漏洞](Web安全/邮件系统/RichMail/RichMail企业邮箱敏感信息泄漏漏洞.md)
 - **Roxy**（2）
   - [同一个 URL，两种不同的理解——CVE-2026-42882 s3-proxy 认证绕过的三条路径](Web安全/云平台/Roxy/同一个%20URL，两种不同的理解——CVE-2026-42882%20s3-proxy%20认证绕过的三条路径.md)
   - [Roxy-Wi-options.py-远程命令执行漏洞-CVE-2022-31137](Web安全/其他软件/Roxy/Roxy-Wi-options.py-远程命令执行漏洞-CVE-2022-31137.md)
@@ -6345,44 +6119,48 @@
 - **Rsync**（1）
   - [Rsync 未授权访问漏洞](Web安全/ERP企业/Rsync/Rsync%20未授权访问漏洞.md)
 - **Ruby**（3）
-  - [Ruby On Rails 路径穿越与任意文件读取漏洞 CVE-2019-5418](Web安全/AI应用/Ruby/Ruby%20On%20Rails%20路径穿越与任意文件读取漏洞%20CVE-2019-5418.md)
-  - [Ruby On Rails 路径穿越漏洞 CVE-2018-3760](Web安全/AI应用/Ruby/Ruby%20On%20Rails%20路径穿越漏洞%20CVE-2018-3760.md)
+  - [Ruby On Rails 路径穿越与任意文件读取漏洞 CVE-2019-5418](Web安全/开发框架/Ruby/Ruby%20On%20Rails%20路径穿越与任意文件读取漏洞%20CVE-2019-5418.md)
+  - [Ruby On Rails 路径穿越漏洞 CVE-2018-3760](Web安全/开发框架/Ruby/Ruby%20On%20Rails%20路径穿越漏洞%20CVE-2018-3760.md)
   - [Ruby NetFTP 模块命令注入漏洞 CVE-2017-17405](Web安全/服务器软件/Ruby/Ruby%20NetFTP%20模块命令注入漏洞%20CVE-2017-17405.md)
-- **Ruby On Rails**（2）
-  - [（CVE-2018-3760）Ruby On Rails 任意文件读取漏洞](Web安全/AI应用/Ruby%20On%20Rails/（CVE-2018-3760）Ruby%20On%20Rails%20任意文件读取漏洞.md)
-  - [（CVE-2019-5418）Ruby on Rails 路径穿越与任意文件读取漏洞](Web安全/AI应用/Ruby%20On%20Rails/（CVE-2019-5418）Ruby%20on%20Rails%20路径穿越与任意文件读取漏洞.md)
+- **Ruby On Rails**（4）
+  - [Rails Accept 任意文件读取漏洞 CVE-2019-5418](Web安全/开发框架/Ruby%20On%20Rails/Rails%20Accept%20任意文件读取漏洞%20CVE-2019-5418.md)
+  - [Rails sprockets 任意文件读取漏洞 CVE-2018-3760](Web安全/开发框架/Ruby%20On%20Rails/Rails%20sprockets%20任意文件读取漏洞%20CVE-2018-3760.md)
+  - [（CVE-2018-3760）Ruby On Rails 任意文件读取漏洞](Web安全/开发框架/Ruby%20On%20Rails/（CVE-2018-3760）Ruby%20On%20Rails%20任意文件读取漏洞.md)
+  - [（CVE-2019-5418）Ruby on Rails 路径穿越与任意文件读取漏洞](Web安全/开发框架/Ruby%20On%20Rails/（CVE-2019-5418）Ruby%20on%20Rails%20路径穿越与任意文件读取漏洞.md)
+- **Ruby SAML**（1）
+  - [Ruby-SAML Bypass && GitLab SAML Bypass(CVE-2024-45409)](Web安全/开发框架/Ruby%20SAML/Ruby-SAML%20Bypass%20&&%20GitLab%20SAML%20Bypass%28CVE-2024-45409%29.md)
 - **ruby-saml**（1）
   - [ruby-saml 身份认证绕过漏洞(CVE-2025-25291、CVE-2025-25292)安全风险通告](Web安全/其他软件/ruby-saml/ruby-saml%20身份认证绕过漏洞%28CVE-2025-25291、CVE-2025-25292%29安全风险通告.md)
-- **Ruby-SAML Bypass**（1）
-  - [Ruby-SAML Bypass && GitLab SAML Bypass(CVE-2024-45409)](Web安全/开发框架/Ruby-SAML%20Bypass/Ruby-SAML%20Bypass%20&&%20GitLab%20SAML%20Bypass%28CVE-2024-45409%29.md)
-- **RuoYi**（4）
+- **RuoYi**（7）
   - [RuoYi 后台SQL注入漏洞系列2](Web安全/开发框架/RuoYi/RuoYi%20后台SQL注入漏洞系列2.md)
   - [SpringKill的0day若依后台定时任务存在SSRF漏洞](Web安全/开发框架/RuoYi/SpringKill的0day若依后台定时任务存在SSRF漏洞.md)
   - [安全通告！RuoYi-AI框架曝任意文件上传漏洞()，可导致服务器沦陷（含POC） CVE-2025-6466](Web安全/开发框架/RuoYi/安全通告！RuoYi-AI框架曝任意文件上传漏洞%28%29，可导致服务器沦陷（含POC）%20CVE-2025-6466.md)
   - [最新Ruoyi漏洞复现](Web安全/开发框架/RuoYi/最新Ruoyi漏洞复现.md)
+  - [若依 (RuoYi) 管理系统后台 sql 注入漏洞分析](Web安全/开发框架/RuoYi/若依%20%28RuoYi%29%20管理系统后台%20sql%20注入漏洞分析.md)
+  - [若依(RuoYi)管理系统 后台任意文件读取](Web安全/开发框架/RuoYi/若依%28RuoYi%29管理系统%20后台任意文件读取.md)
+  - [若依系统前后台漏洞大全](Web安全/开发框架/RuoYi/若依系统前后台漏洞大全.md)
 - **RuoYi CMS**（2）
   - [RuoYi CMS 任意文件读取](Web安全/CMS内容/RuoYi%20CMS/RuoYi%20CMS%20任意文件读取.md)
   - [若依管理系统-后台任意文件读取-CNVD-2021-01931](Web安全/CMS内容/RuoYi%20CMS/若依管理系统-后台任意文件读取-CNVD-2021-01931.md)
 - **Rust**（2）
-  - [CVE-2026-88592：kkFileView 跨域文件代理绕TrustHostFilter 全解析](Web安全/开发框架/Rust/CVE-2026-88592：kkFileView%20跨域文件代理绕TrustHostFilter%20全解析.md)
-  - [Rust 严重漏洞可导致 Windows 命令注入攻击](Web安全/开发框架/Rust/Rust%20严重漏洞可导致%20Windows%20命令注入攻击.md)
+  - [CVE-2026-88592：kkFileView 跨域文件代理绕TrustHostFilter 全解析](Web安全/桌面软件/Rust/CVE-2026-88592：kkFileView%20跨域文件代理绕TrustHostFilter%20全解析.md)
+  - [Rust 严重漏洞可导致 Windows 命令注入攻击](Web安全/桌面软件/Rust/Rust%20严重漏洞可导致%20Windows%20命令注入攻击.md)
 - **RustFS**（2）
   - [RustFS 控制台中的存储型 XSS 漏洞使 S3 管理员凭据面临风险](Web安全/云平台/RustFS/RustFS%20控制台中的存储型%20XSS%20漏洞使%20S3%20管理员凭据面临风险.md)
   - [ (69)](Web安全/其他软件/RustFS/%20%2869%29.md)
-- **S-CMS**（8）
+- **S-CMS**（7）
   - [S-CMS PHP v3.0存在SQL注入漏洞](Web安全/CMS内容/S-CMS/S-CMS%20PHP%20v3.0存在SQL注入漏洞.md)
-  - [S-CMS PHP v3.0存在SQL注入漏洞.md.dup](Web安全/CMS内容/S-CMS/S-CMS%20PHP%20v3.0存在SQL注入漏洞.md.dup.md)
   - [S-CMS sql注入漏洞（一）](Web安全/CMS内容/S-CMS/S-CMS%20sql注入漏洞（一）.md)
   - [S-CMS sql注入漏洞（二）](Web安全/CMS内容/S-CMS/S-CMS%20sql注入漏洞（二）.md)
   - [S-CMS xxe漏洞](Web安全/CMS内容/S-CMS/S-CMS%20xxe漏洞.md)
   - [S-CMS 学校建站系统 v5.0 邮箱短信轰炸逻辑漏洞](Web安全/CMS内容/S-CMS/S-CMS%20学校建站系统%20v5.0%20邮箱短信轰炸逻辑漏洞.md)
   - [S-CMS企业建站系统PHP版v3.0后台存在CSRF可添加管理员权限账号](Web安全/CMS内容/S-CMS/S-CMS企业建站系统PHP版v3.0后台存在CSRF可添加管理员权限账号.md)
-  - [S-CMS企业建站系统PHP版v3.0后台存在CSRF可添加管理员权限账号.md.dup](Web安全/CMS内容/S-CMS/S-CMS企业建站系统PHP版v3.0后台存在CSRF可添加管理员权限账号.md.dup.md)
+  - [S-CMS企业建站系统PHP版v3.0后台存在CSRF可添加管理员权限账号.md](Web安全/CMS内容/S-CMS/S-CMS企业建站系统PHP版v3.0后台存在CSRF可添加管理员权限账号.md.md)
 - **S2-**（1）
   - [S2-002 漏洞分析](Web安全/其他软件/S2-/S2-002%20漏洞分析.md)
 - **S2-062**（1）
   - [(63条消息) S2-062 远程命令执行漏洞复现(cve-2021-31805) 半只特立独行的猪的博客-CSDN博客](Web安全/其他软件/S2-062/%2863条消息%29%20S2-062%20远程命令执行漏洞复现%28cve-2021-31805%29%20半只特立独行的猪的博客-CSDN博客.md)
-- **SaltStack**（8）
+- **SaltStack**（9）
   - [SaltStack Minion 命令注入漏洞 CVE-2021-31607](Web安全/服务器软件/SaltStack/SaltStack%20Minion%20命令注入漏洞%20CVE-2021-31607.md)
   - [SaltStack 命令注入漏洞 CVE-2020-16846](Web安全/服务器软件/SaltStack/SaltStack%20命令注入漏洞%20CVE-2020-16846.md)
   - [SaltStack 水平权限绕过漏洞 CVE-2020-11651](Web安全/服务器软件/SaltStack/SaltStack%20水平权限绕过漏洞%20CVE-2020-11651.md)
@@ -6391,8 +6169,7 @@
   - [Saltstack 远程命令执行漏洞 CVE-2020-11651 11652](Web安全/服务器软件/SaltStack/Saltstack%20远程命令执行漏洞%20CVE-2020-11651%2011652.md)
   - [Saltstack-未授权RCE漏洞-CVE-2021-25281~25283](Web安全/服务器软件/SaltStack/Saltstack-未授权RCE漏洞-CVE-2021-25281~25283.md)
   - [（CVE-2020-11651）SaltStack远程命令执行漏洞](Web安全/服务器软件/SaltStack/（CVE-2020-11651）SaltStack远程命令执行漏洞.md)
-- **SaltStack-Minion-**（1）
-  - [SaltStack-Minion-命令注入漏洞-CVE-2021-31607](Web安全/中间件/SaltStack-Minion-/SaltStack-Minion-命令注入漏洞-CVE-2021-31607.md)
+  - [SaltStack-Minion-命令注入漏洞-CVE-2021-31607](Web安全/运维面板/SaltStack/SaltStack-Minion-命令注入漏洞-CVE-2021-31607.md)
 - **Samba**（1）
   - [Samba 远程命令执行漏洞 CVE-2017-7494](Web安全/服务器软件/Samba/Samba%20远程命令执行漏洞%20CVE-2017-7494.md)
 - **Samlify SSO**（1）
@@ -6447,14 +6224,14 @@
   - [Semcms v3.8 sql注入漏洞](Web安全/CMS内容/Semcms/Semcms%20v3.8%20sql注入漏洞.md)
 - **Seo**（1）
   - [Seo-Panel-4.8.0-反射型XSS漏洞-CVE-2021-3002](Web安全/其他软件/Seo/Seo-Panel-4.8.0-反射型XSS漏洞-CVE-2021-3002.md)
-- **ServiceNow AI**（1）
-  - [ServiceNow AI平台关键漏洞可实现远程代码执行](Web安全/AI应用/ServiceNow%20AI/ServiceNow%20AI平台关键漏洞可实现远程代码执行.md)
+- **ServiceNow**（1）
+  - [ServiceNow AI平台关键漏洞可实现远程代码执行](Web安全/商业软件/ServiceNow/ServiceNow%20AI平台关键漏洞可实现远程代码执行.md)
 - **ServiceNowUI**（1）
   - [ServiceNowUIJelly模板注入漏洞(CVE-2024-4879)](Web安全/其他软件/ServiceNowUI/ServiceNowUIJelly模板注入漏洞%28CVE-2024-4879%29.md)
 - **Setuptools**（1）
   - [Setuptools 漏洞导致数百万 Python 用户易受RCE攻击](Web安全/其他软件/Setuptools/Setuptools%20漏洞导致数百万%20Python%20用户易受RCE攻击.md)
-- **SGLang AI**（1）
-  - [SGLang AI 基础设施的严重 9.8 级远程代码执行威胁](Web安全/AI应用/SGLang%20AI/SGLang%20AI%20基础设施的严重%209.8%20级远程代码执行威胁.md)
+- **SGLang**（1）
+  - [SGLang AI 基础设施的严重 9.8 级远程代码执行威胁](Web安全/AI应用/SGLang/SGLang%20AI%20基础设施的严重%209.8%20级远程代码执行威胁.md)
 - **SharePoint**（5）
   - [ (510)](Web安全/其他软件/SharePoint/%20%28510%29.md)
   - [CVE-2026-20963](Web安全/其他软件/SharePoint/CVE-2026-20963.md)
@@ -6476,11 +6253,11 @@
   - [ShokoServerwithpath存在任意文件读取漏洞](Web安全/其他软件/ShokoServer/ShokoServerwithpath存在任意文件读取漏洞.md)
 - **ShopXO**（5）
   - [ShopXO download 任意文件读取漏洞 CNVD-2021-15822](Web安全/商业软件/ShopXO/ShopXO%20download%20任意文件读取漏洞%20CNVD-2021-15822.md)
-  - [ShopXO download 任意文件读取漏洞 CNVD-2021-15822.md.dup](Web安全/商业软件/ShopXO/ShopXO%20download%20任意文件读取漏洞%20CNVD-2021-15822.md.dup.md)
+  - [ShopXO download 任意文件读取漏洞 CNVD-2021-15822.md](Web安全/商业软件/ShopXO/ShopXO%20download%20任意文件读取漏洞%20CNVD-2021-15822.md.md)
   - [ShopXO v1.8.0 后台getshell](Web安全/商业软件/ShopXO/ShopXO%20v1.8.0%20后台getshell.md)
   - [ShopXO 任意文件读取漏洞 CNVD-2021-15822](Web安全/商业软件/ShopXO/ShopXO%20任意文件读取漏洞%20CNVD-2021-15822.md)
   - [ShopXO-download-任意文件读取漏洞-CNVD-2021-15822](Web安全/商业软件/ShopXO/ShopXO-download-任意文件读取漏洞-CNVD-2021-15822.md)
-- **ShowDoc**（9）
+- **ShowDoc**（8）
   - [ShowDoc 前台文件上传漏洞](Web安全/CMS内容/ShowDoc/ShowDoc%20前台文件上传漏洞.md)
   - [ShowDoc-3.2.5-SQL注入漏洞](Web安全/CMS内容/ShowDoc/ShowDoc-3.2.5-SQL注入漏洞.md)
   - [ShowDoc-AdminUpdateController.class.php-任意文件上传漏洞-CVE-2021-36440](Web安全/CMS内容/ShowDoc/ShowDoc-AdminUpdateController.class.php-任意文件上传漏洞-CVE-2021-36440.md)
@@ -6489,7 +6266,6 @@
   - [ShowDoc-前台任意文件上传-CNVD-2020-26585](Web安全/CMS内容/ShowDoc/ShowDoc-前台任意文件上传-CNVD-2020-26585.md)
   - [ShowDocPageController存在任意文件上传漏洞](Web安全/CMS内容/ShowDoc/ShowDocPageController存在任意文件上传漏洞.md)
   - [showdoc的api_page存在任意文件上传getshell](Web安全/CMS内容/ShowDoc/showdoc的api_page存在任意文件上传getshell.md)
-  - [showdoc的api_page存在任意文件上传getshell.md.dup](Web安全/CMS内容/ShowDoc/showdoc的api_page存在任意文件上传getshell.md.dup.md)
 - **Sitecore**（3）
   - [CVE-2024-46938](Web安全/其他软件/Sitecore/CVE-2024-46938.md)
   - [Sitecore 曝零日漏洞，可执行任意代码攻击](Web安全/其他软件/Sitecore/Sitecore%20曝零日漏洞，可执行任意代码攻击.md)
@@ -6503,26 +6279,23 @@
 - **SkyWalking**（2）
   - [Apache-SkyWalking-7.0.0-graphql-SQL注入漏洞-CVE-2020-9483](Web安全/服务器软件/SkyWalking/Apache-SkyWalking-7.0.0-graphql-SQL注入漏洞-CVE-2020-9483.md)
   - [Apache-Skywalking-8.3.0-graphql-SQL注入漏洞](Web安全/服务器软件/SkyWalking/Apache-Skywalking-8.3.0-graphql-SQL注入漏洞.md)
-- **smanga**（3）
-  - [SmangamediaId存在SQL注入漏洞](Web安全/AI应用/smanga/SmangamediaId存在SQL注入漏洞.md)
+- **smanga**（2）
   - [Smangaget-file-flow存在任意文件读取漏洞](Web安全/其他软件/smanga/Smangaget-file-flow存在任意文件读取漏洞.md)
   - [Smanga未授权远程代码执行漏洞(CVE-2023-36076)](Web安全/安全设备/smanga/Smanga未授权远程代码执行漏洞%28CVE-2023-36076%29.md)
-- **smart**（3）
-  - [CVE-2023-4414：Smart S85F 管理系统 远程命令执行 附 POC](Web安全/开发框架/smart/CVE-2023-4414：Smart%20S85F%20管理系统%20远程命令执行%20附%20POC.md)
-  - [smart管理平台多版本任意文件上传-CVE-2024-0939](Web安全/开发框架/smart/smart管理平台多版本任意文件上传-CVE-2024-0939.md)
-  - [漏洞预警  百卓网络Smart多业务安全网关智能管理平台文件上传漏洞](Web安全/开发框架/smart/漏洞预警%20%20百卓网络Smart多业务安全网关智能管理平台文件上传漏洞.md)
 - **Smart Slider 3 WordPress**（1）
   - [Smart Slider 3 WordPress 插件任意文件读取漏洞  CVE-2026-3098复现&研究](Web安全/CMS内容/Smart%20Slider%203%20WordPress/Smart%20Slider%203%20WordPress%20插件任意文件读取漏洞%20%20CVE-2026-3098复现&研究.md)
-- **smart-web**（1）
-  - [smart-web2 简单 OA 系统未授权漏洞的最简单挖掘](Web安全/开发框架/smart-web/smart-web2%20简单%20OA%20系统未授权漏洞的最简单挖掘.md)
-- **Smartbi**（1）
+- **Smartbi**（7）
+  - [Smartbi内置用户登陆绕过漏洞](Web安全/商业软件/Smartbi/Smartbi内置用户登陆绕过漏洞.md)
+  - [CVE-2023-4414：Smart S85F 管理系统 远程命令执行 附 POC](Web安全/开发框架/Smartbi/CVE-2023-4414：Smart%20S85F%20管理系统%20远程命令执行%20附%20POC.md)
+  - [Smartbi 身份认证绕过漏洞](Web安全/开发框架/Smartbi/Smartbi%20身份认证绕过漏洞.md)
   - [Smartbi-RMIServlet-登陆绕过漏洞](Web安全/开发框架/Smartbi/Smartbi-RMIServlet-登陆绕过漏洞.md)
-- **Smartbi 身份认证**（1）
-  - [Smartbi 身份认证绕过漏洞](Web安全/开发框架/Smartbi%20身份认证/Smartbi%20身份认证绕过漏洞.md)
+  - [smart-web2 简单 OA 系统未授权漏洞的最简单挖掘](Web安全/开发框架/Smartbi/smart-web2%20简单%20OA%20系统未授权漏洞的最简单挖掘.md)
+  - [smart管理平台多版本任意文件上传-CVE-2024-0939](Web安全/开发框架/Smartbi/smart管理平台多版本任意文件上传-CVE-2024-0939.md)
+  - [漏洞预警  百卓网络Smart多业务安全网关智能管理平台文件上传漏洞](Web安全/开发框架/Smartbi/漏洞预警%20%20百卓网络Smart多业务安全网关智能管理平台文件上传漏洞.md)
 - **SmarterMail**（3）
-  - [ (30)](Web安全/AI应用/SmarterMail/%20%2830%29.md)
-  - [CVE-2026-23760](Web安全/AI应用/SmarterMail/CVE-2026-23760.md)
-  - [SmarterMail 认证绕过新漏洞被用于劫持管理员账号](Web安全/AI应用/SmarterMail/SmarterMail%20认证绕过新漏洞被用于劫持管理员账号.md)
+  - [ (30)](Web安全/邮件系统/SmarterMail/%20%2830%29.md)
+  - [CVE-2026-23760](Web安全/邮件系统/SmarterMail/CVE-2026-23760.md)
+  - [SmarterMail 认证绕过新漏洞被用于劫持管理员账号](Web安全/邮件系统/SmarterMail/SmarterMail%20认证绕过新漏洞被用于劫持管理员账号.md)
 - **Smarty**（1）
   - [（CVE-2017-1000480）Smarty<=3.1.31 命令执行RCE](Web安全/开发框架/Smarty/（CVE-2017-1000480）Smarty<=3.1.31%20命令执行RCE.md)
 - **SnakeYaml**（1）
@@ -6544,19 +6317,28 @@
   - [SolarWinds Orion API 远程代码执行漏洞（CVE-2020-10148）](Web安全/其他软件/SolarWinds%20Orion%20API/SolarWinds%20Orion%20API%20远程代码执行漏洞（CVE-2020-10148）.md)
 - **SolarWinds Releases Hotfix**（1）
   - [SolarWinds Releases Hotfix for Critical CVE-2025-26399 Remote Code Exe](Web安全/其他软件/SolarWinds%20Releases%20Hotfix/SolarWinds%20Releases%20Hotfix%20for%20Critical%20CVE-2025-26399%20Remote%20Code%20Exe.md)
-- **Solr**（1）
-  - [Solr 文件上传路径遍历漏洞（CVE-2024-52012）](Web安全/中间件/Solr/Solr%20文件上传路径遍历漏洞（CVE-2024-52012）.md)
-- **Sonatype**（1）
-  - [SonatypeNexusRepository3存在目录遍历漏洞](Web安全/开发框架/Sonatype/SonatypeNexusRepository3存在目录遍历漏洞.md)
-- **SonicOS SSLVPN**（1）
-  - [SonicOS SSLVPN 认证绕过漏洞(CVE-2024-53704)安全风险通告](Web安全/网络设备/SonicOS%20SSLVPN/SonicOS%20SSLVPN%20认证绕过漏洞%28CVE-2024-53704%29安全风险通告.md)
-- **SonicWall**（4）
+- **Sonatype Nexus**（14）
+  - [Nexus Repository Manager 3 extdirect 远程命令执行漏洞 CVE-2019-7238](Web安全/开发框架/Sonatype%20Nexus/Nexus%20Repository%20Manager%203%20extdirect%20远程命令执行漏洞%20CVE-2019-7238.md)
+  - [Nexus Repository Manager 3 extdirect 远程命令执行漏洞 CVE-2020-10204](Web安全/开发框架/Sonatype%20Nexus/Nexus%20Repository%20Manager%203%20extdirect%20远程命令执行漏洞%20CVE-2020-10204.md)
+  - [Nexus Repository Manager 3 group 远程命令执行漏洞 CVE-2020-10199](Web安全/开发框架/Sonatype%20Nexus/Nexus%20Repository%20Manager%203%20group%20远程命令执行漏洞%20CVE-2020-10199.md)
+  - [Nexus Repository Manager 3 远程代码执行漏洞复现](Web安全/开发框架/Sonatype%20Nexus/Nexus%20Repository%20Manager%203%20远程代码执行漏洞复现.md)
+  - [Nexus Repository Manger change-password 低权限修改管理员密码漏洞 CVE-2020-11444](Web安全/开发框架/Sonatype%20Nexus/Nexus%20Repository%20Manger%20change-password%20低权限修改管理员密码漏洞%20CVE-2020-11444.md)
+  - [Nexus-Repository-Manager-3-未授权目录穿越漏洞-CVE-2024-4956](Web安全/开发框架/Sonatype%20Nexus/Nexus-Repository-Manager-3-未授权目录穿越漏洞-CVE-2024-4956.md)
+  - [SonatypeNexusRepository3存在目录遍历漏洞](Web安全/开发框架/Sonatype%20Nexus/SonatypeNexusRepository3存在目录遍历漏洞.md)
+  - [cve-2019-7238_命令执行](Web安全/开发框架/Sonatype%20Nexus/cve-2019-7238_命令执行.md)
+  - [nexus oss 命令执行漏洞 (cve-2020-10199 && 10204)](Web安全/开发框架/Sonatype%20Nexus/nexus%20oss%20命令执行漏洞%20%28cve-2020-10199%20&&%2010204%29.md)
+  - [（CVE-2019-5475）Nexus2 yum插件RCE漏洞](Web安全/开发框架/Sonatype%20Nexus/（CVE-2019-5475）Nexus2%20yum插件RCE漏洞.md)
+  - [（CVE-2019-7238）Nexus Repository Manager 远程代码执行](Web安全/开发框架/Sonatype%20Nexus/（CVE-2019-7238）Nexus%20Repository%20Manager%20远程代码执行.md)
+  - [（CVE-2020-10199）Nexus Repository Manager 远程代码执行漏洞](Web安全/开发框架/Sonatype%20Nexus/（CVE-2020-10199）Nexus%20Repository%20Manager%20远程代码执行漏洞.md)
+  - [（CVE-2020-10204）Nexus Repository Manager 远程执行代码漏洞](Web安全/开发框架/Sonatype%20Nexus/（CVE-2020-10204）Nexus%20Repository%20Manager%20远程执行代码漏洞.md)
+  - [（CVE-2020-11444）Nexus Repository Manager 远程代码执行漏洞](Web安全/开发框架/Sonatype%20Nexus/（CVE-2020-11444）Nexus%20Repository%20Manager%20远程代码执行漏洞.md)
+- **SonicWall**（6）
   - [CVE-2024-45318](Web安全/网络设备/SonicWall/CVE-2024-45318.md)
   - [CVE-2025-40602_ SonicWall Secure Mobile Access (SMA) 1000 Zero-Day Exp](Web安全/网络设备/SonicWall/CVE-2025-40602_%20SonicWall%20Secure%20Mobile%20Access%20%28SMA%29%201000%20Zero-Day%20Exp.md)
+  - [SonicOS SSLVPN 认证绕过漏洞(CVE-2024-53704)安全风险通告](Web安全/网络设备/SonicWall/SonicOS%20SSLVPN%20认证绕过漏洞%28CVE-2024-53704%29安全风险通告.md)
+  - [SonicWall SSL-VPN 远程命令执行漏洞](Web安全/网络设备/SonicWall/SonicWall%20SSL-VPN%20远程命令执行漏洞.md)
   - [SonicWall 呼吁立即修补可能被利用的严重 CVE-2025-23006 缺陷](Web安全/网络设备/SonicWall/SonicWall%20呼吁立即修补可能被利用的严重%20CVE-2025-23006%20缺陷.md)
   - [网络安全厂商SonicWall修复SMA 100系列设备高危漏洞 攻击者可组合利用执行任意代码](Web安全/网络设备/SonicWall/网络安全厂商SonicWall修复SMA%20100系列设备高危漏洞%20攻击者可组合利用执行任意代码.md)
-- **SonicWall SSL-VPN**（1）
-  - [SonicWall SSL-VPN 远程命令执行漏洞](Web安全/网络设备/SonicWall%20SSL-VPN/SonicWall%20SSL-VPN%20远程命令执行漏洞.md)
 - **Sophos**（2）
   - [CVE-2024-12727](Web安全/其他软件/Sophos/CVE-2024-12727.md)
   - [Sophos 修复位于 Sophos Web Appliance 设备中的三个漏洞](Web安全/其他软件/Sophos/Sophos%20修复位于%20Sophos%20Web%20Appliance%20设备中的三个漏洞.md)
@@ -6570,12 +6352,11 @@
   - [SPIP插件porte_plume存在任意PHP执行漏洞(CVE-2024-7954)](Web安全/其他软件/SPIP/SPIP插件porte_plume存在任意PHP执行漏洞%28CVE-2024-7954%29.md)
 - **SPIP spip.php**（1）
   - [SPIP spip.php 存在远程命令执行漏洞复现poc CVE-2026-77806](Web安全/其他软件/SPIP%20spip.php/SPIP%20spip.php%20存在远程命令执行漏洞复现poc%20CVE-2026-77806.md)
-- **Splunk**（3）
+- **Splunk**（4）
   - [Splunk 企业版修复多个高危漏洞](Web安全/其他软件/Splunk/Splunk%20企业版修复多个高危漏洞.md)
   - [Splunk 高危漏洞：攻击者可通过文件上传执行任意代码](Web安全/其他软件/Splunk/Splunk%20高危漏洞：攻击者可通过文件上传执行任意代码.md)
   - [Splunk远程代码执行漏洞使系统易受攻击者任意执行shell命令的攻击](Web安全/其他软件/Splunk/Splunk远程代码执行漏洞使系统易受攻击者任意执行shell命令的攻击.md)
-- **Splunk AI Toolkit**（1）
-  - [Splunk AI Toolkit曝高危漏洞：CVSS 9.1，可远程执行任意系统命令](Web安全/AI应用/Splunk%20AI%20Toolkit/Splunk%20AI%20Toolkit曝高危漏洞：CVSS%209.1，可远程执行任意系统命令.md)
+  - [Splunk AI Toolkit曝高危漏洞：CVSS 9.1，可远程执行任意系统命令](Web安全/商业软件/Splunk/Splunk%20AI%20Toolkit曝高危漏洞：CVSS%209.1，可远程执行任意系统命令.md)
 - **Splunk Enterprise for Wind**（1）
   - [Splunk Enterprise for Windows 漏洞允许攻击者劫持 DLL 并获得系统访问权限](Web安全/ERP企业/Splunk%20Enterprise%20for%20Wind/Splunk%20Enterprise%20for%20Windows%20漏洞允许攻击者劫持%20DLL%20并获得系统访问权限.md)
 - **Splunk Enterprise Unauthen**（1）
@@ -6584,21 +6365,30 @@
   - [Splunk Universal Forwarder for Windows 漏洞授予非管理员用户完全内容访问权限](Web安全/其他软件/Splunk%20Universal%20Forwarder/Splunk%20Universal%20Forwarder%20for%20Windows%20漏洞授予非管理员用户完全内容访问权限.md)
 - **SplunkEnterprise**（1）
   - [SplunkEnterprise任意文件读取漏洞(CVE-2024-36991)](Web安全/ERP企业/SplunkEnterprise/SplunkEnterprise任意文件读取漏洞%28CVE-2024-36991%29.md)
-- **Spring**（6）
+- **Spring**（12）
   - [ (101)](Web安全/开发框架/Spring/%20%28101%29.md)
   - [ (329)](Web安全/开发框架/Spring/%20%28329%29.md)
   - [ (518)](Web安全/开发框架/Spring/%20%28518%29.md)
   - [CVE-2023-39106：Nacos-Spring 远程命令执行漏洞 附 POC](Web安全/开发框架/Spring/CVE-2023-39106：Nacos-Spring%20远程命令执行漏洞%20附%20POC.md)
+  - [Spring 全家桶各类 RCE 漏洞浅析](Web安全/开发框架/Spring/Spring%20全家桶各类%20RCE%20漏洞浅析.md)
+  - [Spring 框架漏洞集合 ~ Misaki's Blog](Web安全/开发框架/Spring/Spring%20框架漏洞集合%20~%20Misaki's%20Blog.md)
+  - [Spring 框架相关漏洞合集   红队技术](Web安全/开发框架/Spring/Spring%20框架相关漏洞合集%20%20%20红队技术.md)
+  - [Spring-Framework-安全绕过漏洞-CVE-2023-20860](Web安全/开发框架/Spring/Spring-Framework-安全绕过漏洞-CVE-2023-20860.md)
   - [Spring4Shell常见问题解答：Spring 框架远程代码执行漏洞(CVE-2022-22965)](Web安全/开发框架/Spring/Spring4Shell常见问题解答：Spring%20框架远程代码执行漏洞%28CVE-2022-22965%29.md)
+  - [Spring框架远程命令执行漏洞复现及分析](Web安全/开发框架/Spring/Spring框架远程命令执行漏洞复现及分析.md)
+  - [spring 常见漏洞总结](Web安全/开发框架/Spring/spring%20常见漏洞总结.md)
   - [『渗透测试』Spring-boot 几种常见的利用方式](Web安全/开发框架/Spring/『渗透测试』Spring-boot%20几种常见的利用方式.md)
-- **Spring Boot**（69）
+- **Spring Boot**（73）
+  - [ (241)](Web安全/开发框架/Spring%20Boot/%20%28241%29.md)
   - [ (269)](Web安全/开发框架/Spring%20Boot/%20%28269%29.md)
   - [CVE-2020-5398-Spring MVC的RFD（反射文件下载）](Web安全/开发框架/Spring%20Boot/CVE-2020-5398-Spring%20MVC的RFD（反射文件下载）.md)
   - [CVE-2024-22263：Spring Cloud Dataflow中路径遍历导致的任意文件写入漏洞](Web安全/开发框架/Spring%20Boot/CVE-2024-22263：Spring%20Cloud%20Dataflow中路径遍历导致的任意文件写入漏洞.md)
   - [CVE-2026-22738 — Spring AI SimpleVectorStore 中的 SpEL 注入远程代码执行漏洞](Web安全/开发框架/Spring%20Boot/CVE-2026-22738%20—%20Spring%20AI%20SimpleVectorStore%20中的%20SpEL%20注入远程代码执行漏洞.md)
+  - [Java 之 SpringBoot 漏洞利用姿势合集总结详细版](Web安全/开发框架/Spring%20Boot/Java%20之%20SpringBoot%20漏洞利用姿势合集总结详细版.md)
   - [Spring Boot Actuator hikari配置不当导致的远程命令执行漏洞](Web安全/开发框架/Spring%20Boot/Spring%20Boot%20Actuator%20hikari配置不当导致的远程命令执行漏洞.md)
   - [Spring Boot Actuator jolokia 配置不当导致的XXE漏洞](Web安全/开发框架/Spring%20Boot/Spring%20Boot%20Actuator%20jolokia%20配置不当导致的XXE漏洞.md)
   - [Spring Boot Actuator jolokia 配置不当导致的rce漏洞](Web安全/开发框架/Spring%20Boot/Spring%20Boot%20Actuator%20jolokia%20配置不当导致的rce漏洞.md)
+  - [Spring Boot Actuators 配置不当导致 RCE 漏洞复现 - JF ' blog](Web安全/开发框架/Spring%20Boot/Spring%20Boot%20Actuators%20配置不当导致%20RCE%20漏洞复现%20-%20JF%20'%20blog.md)
   - [Spring Boot Actuator未授权访问漏洞](Web安全/开发框架/Spring%20Boot/Spring%20Boot%20Actuator未授权访问漏洞.md)
   - [Spring Boot Thymeleaf 模板注入](Web安全/开发框架/Spring%20Boot/Spring%20Boot%20Thymeleaf%20模板注入.md)
   - [Spring Boot Tomcat导致的JNDI注入](Web安全/开发框架/Spring%20Boot/Spring%20Boot%20Tomcat导致的JNDI注入.md)
@@ -6651,6 +6441,7 @@
   - [SpringBladeuser-list存在敏感信息泄露漏洞](Web安全/开发框架/Spring%20Boot/SpringBladeuser-list存在敏感信息泄露漏洞.md)
   - [SpringBladeusual-list存在SQL注入漏洞](Web安全/开发框架/Spring%20Boot/SpringBladeusual-list存在SQL注入漏洞.md)
   - [SpringBlade存在硬编码密钥漏洞](Web安全/开发框架/Spring%20Boot/SpringBlade存在硬编码密钥漏洞.md)
+  - [SpringBoot 漏洞](Web安全/开发框架/Spring%20Boot/SpringBoot%20漏洞.md)
   - [SpringBootjolokiaRealmJNDI远程代码执行漏洞](Web安全/开发框架/Spring%20Boot/SpringBootjolokiaRealmJNDI远程代码执行漏洞.md)
   - [SpringDataMongoDBSpEL表达式注入漏洞](Web安全/开发框架/Spring%20Boot/SpringDataMongoDBSpEL表达式注入漏洞.md)
   - [Springbootgateway存在命令执行漏洞](Web安全/开发框架/Spring%20Boot/Springbootgateway存在命令执行漏洞.md)
@@ -6661,17 +6452,15 @@
   - [漏洞复现：Spring Boot Actuator H2 RCE](Web安全/开发框架/Spring%20Boot/漏洞复现：Spring%20Boot%20Actuator%20H2%20RCE.md)
   - [漏洞验证-SpringBlade框架JWT认证缺陷(CVE-2021-44910)](Web安全/开发框架/Spring%20Boot/漏洞验证-SpringBlade框架JWT认证缺陷%28CVE-2021-44910%29.md)
   - [自证安全，聊聊 Spring Framework 鸡肋漏洞 CVE-2024-38816∕CVE-2024-38819 的破局之道](Web安全/开发框架/Spring%20Boot/自证安全，聊聊%20Spring%20Framework%20鸡肋漏洞%20CVE-2024-38816∕CVE-2024-38819%20的破局之道.md)
-- **Spring Boot Actuators 配置不当导致**（1）
-  - [Spring Boot Actuators 配置不当导致 RCE 漏洞复现 - JF ' blog](Web安全/开发框架/Spring%20Boot%20Actuators%20配置不当导致/Spring%20Boot%20Actuators%20配置不当导致%20RCE%20漏洞复现%20-%20JF%20'%20blog.md)
-- **Spring Cloud**（5）
+- **Spring Cloud**（8）
   - [ (151)](Web安全/开发框架/Spring%20Cloud/%20%28151%29.md)
+  - [CVE-2023-2598 io_uring内核提权分析](Web安全/开发框架/Spring%20Cloud/CVE-2023-2598%20io_uring内核提权分析.md)
+  - [Spring Cloud Function SPEL 远程命令执行漏洞](Web安全/开发框架/Spring%20Cloud/Spring%20Cloud%20Function%20SPEL%20远程命令执行漏洞.md)
   - [Spring Cloud SnakeYAML RCE](Web安全/开发框架/Spring%20Cloud/Spring%20Cloud%20SnakeYAML%20RCE.md)
+  - [Spring-Cloud-Function SPEL 注入漏洞的一点想法](Web安全/开发框架/Spring%20Cloud/Spring-Cloud-Function%20SPEL%20注入漏洞的一点想法.md)
   - [（CVE-2019-3799）Spring Cloud Config Server 任意文件读取 ](Web安全/开发框架/Spring%20Cloud/（CVE-2019-3799）Spring%20Cloud%20Config%20Server%20任意文件读取%20.md)
   - [（CVE-2020-5405）Spring Cloud Config Server 目录穿越漏洞](Web安全/开发框架/Spring%20Cloud/（CVE-2020-5405）Spring%20Cloud%20Config%20Server%20目录穿越漏洞.md)
   - [（CVE-2020-5410）Spring Cloud Config 目录穿越漏洞](Web安全/开发框架/Spring%20Cloud/（CVE-2020-5410）Spring%20Cloud%20Config%20目录穿越漏洞.md)
-- **Spring Cloud Function SPEL**（2）
-  - [CVE-2023-2598 io_uring内核提权分析](Web安全/开发框架/Spring%20Cloud%20Function%20SPEL/CVE-2023-2598%20io_uring内核提权分析.md)
-  - [Spring Cloud Function SPEL 远程命令执行漏洞](Web安全/开发框架/Spring%20Cloud%20Function%20SPEL/Spring%20Cloud%20Function%20SPEL%20远程命令执行漏洞.md)
 - **Spring Data**（2）
   - [（CVE-2017-8046）Spring Data Rest 远程命令执行漏洞](Web安全/开发框架/Spring%20Data/（CVE-2017-8046）Spring%20Data%20Rest%20远程命令执行漏洞.md)
   - [（CVE-2018-1273）Spring Data Commons组件远程代码执行漏洞](Web安全/开发框架/Spring%20Data/（CVE-2018-1273）Spring%20Data%20Commons组件远程代码执行漏洞.md)
@@ -6683,29 +6472,12 @@
   - [（CVE-2019-3778）Spring Security OAuth2 开放重定向](Web安全/开发框架/Spring%20Security/（CVE-2019-3778）Spring%20Security%20OAuth2%20开放重定向.md)
 - **Spring WebFlow**（1）
   - [（CVE-2017-4971）Spring WebFlow 远程代码执行漏洞](Web安全/开发框架/Spring%20WebFlow/（CVE-2017-4971）Spring%20WebFlow%20远程代码执行漏洞.md)
-- **Spring 全家桶各类**（1）
-  - [Spring 全家桶各类 RCE 漏洞浅析](Web安全/开发框架/Spring%20全家桶各类/Spring%20全家桶各类%20RCE%20漏洞浅析.md)
-- **spring 常见**（1）
-  - [spring 常见漏洞总结](Web安全/开发框架/spring%20常见/spring%20常见漏洞总结.md)
-- **Spring 框架**（1）
-  - [Spring 框架漏洞集合 ~ Misaki's Blog](Web安全/开发框架/Spring%20框架/Spring%20框架漏洞集合%20~%20Misaki's%20Blog.md)
-- **Spring 框架相关**（1）
-  - [Spring 框架相关漏洞合集   红队技术](Web安全/开发框架/Spring%20框架相关/Spring%20框架相关漏洞合集%20%20%20红队技术.md)
-- **Spring-Cloud-Function SPEL**（1）
-  - [Spring-Cloud-Function SPEL 注入漏洞的一点想法](Web安全/开发框架/Spring-Cloud-Function%20SPEL/Spring-Cloud-Function%20SPEL%20注入漏洞的一点想法.md)
-- **Spring-Framework-安全**（1）
-  - [Spring-Framework-安全绕过漏洞-CVE-2023-20860](Web安全/开发框架/Spring-Framework-安全/Spring-Framework-安全绕过漏洞-CVE-2023-20860.md)
-- **SpringBoot**（2）
-  - [ (241)](Web安全/开发框架/SpringBoot/%20%28241%29.md)
-  - [SpringBoot 漏洞](Web安全/开发框架/SpringBoot/SpringBoot%20漏洞.md)
-- **Spring框架**（1）
-  - [Spring框架远程命令执行漏洞复现及分析](Web安全/开发框架/Spring框架/Spring框架远程命令执行漏洞复现及分析.md)
 - **SQL Server**（1）
   - [（CVE-2020-0618）SQL Server 远程代码执行漏洞 ](Web安全/其他软件/SQL%20Server/（CVE-2020-0618）SQL%20Server%20远程代码执行漏洞%20.md)
 - **SQLite**（2）
   - [SQLite拒绝服务漏洞(CVE-2022-35737)安全风险通告](Web安全/数据库/SQLite/SQLite拒绝服务漏洞%28CVE-2022-35737%29安全风险通告.md)
   - [谷歌AI “Big Sleep” 提前阻止严重的SQLite 漏洞遭利用](Web安全/数据库/SQLite/谷歌AI%20“Big%20Sleep”%20提前阻止严重的SQLite%20漏洞遭利用.md)
-- **SQL注入**（29）
+- **SQL注入**（28）
   - [「漏洞复现」海洋CMS ∕js∕player∕dmplayer∕dmku∕ SQL注入漏洞(CVE-2024-29275)](Web安全/CMS内容/SQL注入/「漏洞复现」海洋CMS%20∕js∕player∕dmplayer∕dmku∕%20SQL注入漏洞%28CVE-2024-29275%29.md)
   - [漏洞验证-铭飞CMS cms∕category∕list接口存在SQL注入(CVE-2022-4375)](Web安全/CMS内容/SQL注入/漏洞验证-铭飞CMS%20cms∕category∕list接口存在SQL注入%28CVE-2022-4375%29.md)
   - [安科瑞环保用电监管云平台 GetEnterpriseInfoById SQL注入漏洞](Web安全/ERP企业/SQL注入/安科瑞环保用电监管云平台%20GetEnterpriseInfoById%20SQL注入漏洞.md)
@@ -6734,7 +6506,6 @@
   - [魅思视频管理系统getOrderStatus存在SQL注入漏洞](Web安全/商业软件/SQL注入/魅思视频管理系统getOrderStatus存在SQL注入漏洞.md)
   - [宝塔云WAFserver_name存在SQL注入漏洞](Web安全/安全设备/SQL注入/宝塔云WAFserver_name存在SQL注入漏洞.md)
   - [网康科技 NS-ASG 应用安全网关 add_ikev2.php SQL注入漏洞(CVE-2024-3458)](Web安全/安全设备/SQL注入/网康科技%20NS-ASG%20应用安全网关%20add_ikev2.php%20SQL注入漏洞%28CVE-2024-3458%29.md)
-  - [皓峰防火墙login.php存在SQL注入漏洞](Web安全/开发框架/SQL注入/皓峰防火墙login.php存在SQL注入漏洞.md)
 - **Squid**（2）
   - [CVE-2026-47729 _ Squid Heap Buffer Overread Vulnerability](Web安全/中间件/Squid/CVE-2026-47729%20_%20Squid%20Heap%20Buffer%20Overread%20Vulnerability.md)
   - [（CVE-2019-18679）Squid 敏感信息泄漏](Web安全/中间件/Squid/（CVE-2019-18679）Squid%20敏感信息泄漏.md)
@@ -6799,10 +6570,9 @@
 - **Synology**（2）
   - [Synology 网络文件系统漏洞允许读取任何文件](Web安全/其他软件/Synology/Synology%20网络文件系统漏洞允许读取任何文件.md)
   - [Synology：速修复零点击RCE漏洞，影响数百万 NAS 设备](Web安全/其他软件/Synology/Synology：速修复零点击RCE漏洞，影响数百万%20NAS%20设备.md)
-- **SysAid**（1）
-  - [SysAid 本地预授权 RCE 链（CVE-2025-2775 及其相关漏洞）- watchTowr 实验室](Web安全/AI应用/SysAid/SysAid%20本地预授权%20RCE%20链（CVE-2025-2775%20及其相关漏洞）-%20watchTowr%20实验室.md)
-- **SysAid On-Prem XML**（1）
-  - [SysAid On-Prem XML注入漏洞 (CVE-2025-2776)](Web安全/AI应用/SysAid%20On-Prem%20XML/SysAid%20On-Prem%20XML注入漏洞%20%28CVE-2025-2776%29.md)
+- **SysAid**（2）
+  - [SysAid On-Prem XML注入漏洞 (CVE-2025-2776)](Web安全/商业软件/SysAid/SysAid%20On-Prem%20XML注入漏洞%20%28CVE-2025-2776%29.md)
+  - [SysAid 本地预授权 RCE 链（CVE-2025-2775 及其相关漏洞）- watchTowr 实验室](Web安全/商业软件/SysAid/SysAid%20本地预授权%20RCE%20链（CVE-2025-2775%20及其相关漏洞）-%20watchTowr%20实验室.md)
 - **TamronOS**（1）
   - [TamronOSIPTV系统ping存在命令执行漏洞](Web安全/其他软件/TamronOS/TamronOSIPTV系统ping存在命令执行漏洞.md)
 - **taocms 3.0.1**（1）
@@ -6818,28 +6588,28 @@
   - [TeamViewer 远程管理漏洞 (CVE-2025-36537) 可导致权限提升](Web安全/桌面软件/TeamViewer/TeamViewer%20远程管理漏洞%20%28CVE-2025-36537%29%20可导致权限提升.md)
 - **Telegram**（1）
   - [Telegram曝隐藏漏洞,1次点击绕过代理暴露用户真实IP, Android和iOS均中招](Web安全/其他软件/Telegram/Telegram曝隐藏漏洞,1次点击绕过代理暴露用户真实IP,%20Android和iOS均中招.md)
-- **Telesquare**（2）
+- **Telerik UI**（1）
+  - [CVE-2019-18935 通过 Telerik UI 中的不安全反序列化进行远程代码执行](Web安全/开发框架/Telerik%20UI/CVE-2019-18935%20通过%20Telerik%20UI%20中的不安全反序列化进行远程代码执行.md)
+- **Telesquare**（3）
+  - [Telesquare TLR-2005KSH路由器 RCE漏洞(CVE-2024-29269)](Web安全/网络设备/Telesquare/Telesquare%20TLR-2005KSH路由器%20RCE漏洞%28CVE-2024-29269%29.md)
   - [TelesquareSDT-CW3B1无线路由器admin.cgi远程命令执行漏洞(CVE-2021-46422)](Web安全/网络设备/Telesquare/TelesquareSDT-CW3B1无线路由器admin.cgi远程命令执行漏洞%28CVE-2021-46422%29.md)
   - [TelesquareTLR-2005Ksh路由器getUsernamePassword信息泄露漏洞](Web安全/网络设备/Telesquare/TelesquareTLR-2005Ksh路由器getUsernamePassword信息泄露漏洞.md)
-- **Telesquare TLR**（1）
-  - [Telesquare TLR-2005KSH路由器 RCE漏洞(CVE-2024-29269)](Web安全/网络设备/Telesquare%20TLR/Telesquare%20TLR-2005KSH路由器%20RCE漏洞%28CVE-2024-29269%29.md)
 - **TencentOS**（1）
-  - [TencentOS 科维斯AI首秀：SCTPhantom——潜伏18年的Linux内核提权与容器逃逸漏洞](Web安全/AI应用/TencentOS/TencentOS%20科维斯AI首秀：SCTPhantom——潜伏18年的Linux内核提权与容器逃逸漏洞.md)
-- **Tenda**（2）
+  - [TencentOS 科维斯AI首秀：SCTPhantom——潜伏18年的Linux内核提权与容器逃逸漏洞](Web安全/服务器软件/TencentOS/TencentOS%20科维斯AI首秀：SCTPhantom——潜伏18年的Linux内核提权与容器逃逸漏洞.md)
+- **Tenda**（5）
+  - [CVE-2018-18708 TENDA缓冲区溢出漏洞](Web安全/网络设备/Tenda/CVE-2018-18708%20TENDA缓冲区溢出漏洞.md)
+  - [Tenda F453路由器高危漏洞](Web安全/网络设备/Tenda/Tenda%20F453路由器高危漏洞.md)
   - [Tenda堆栈缓冲区溢出漏洞 (CVE-2024-2986)](Web安全/网络设备/Tenda/Tenda堆栈缓冲区溢出漏洞%20%28CVE-2024-2986%29.md)
+  - [原创 Paper  Tenda-FH1201 多处命令注入漏洞分析和复现](Web安全/网络设备/Tenda/原创%20Paper%20%20Tenda-FH1201%20多处命令注入漏洞分析和复现.md)
   - [路由器把 IPv6 地址当密码用：Tenda AC8 认证绕过漏洞分析](Web安全/网络设备/Tenda/路由器把%20IPv6%20地址当密码用：Tenda%20AC8%20认证绕过漏洞分析.md)
-- **Tenda F453**（2）
-  - [CVE-2018-18708 TENDA缓冲区溢出漏洞](Web安全/网络设备/Tenda%20F453/CVE-2018-18708%20TENDA缓冲区溢出漏洞.md)
-  - [Tenda F453路由器高危漏洞](Web安全/网络设备/Tenda%20F453/Tenda%20F453路由器高危漏洞.md)
-- **TerraMaster**（4）
-  - [TerraMaster TOS createRaid 远程命令执行漏洞 CVE-2022-24989](Web安全/AI应用/TerraMaster/TerraMaster%20TOS%20createRaid%20远程命令执行漏洞%20CVE-2022-24989.md)
-  - [TerraMaster-TOS-makecvs.php-远程命令执行漏洞-CVE-2020-28188](Web安全/AI应用/TerraMaster/TerraMaster-TOS-makecvs.php-远程命令执行漏洞-CVE-2020-28188.md)
+- **TerraMaster**（5）
+  - [TerraMaster TOS createRaid 远程命令执行漏洞 CVE-2022-24989](Web安全/云平台/TerraMaster/TerraMaster%20TOS%20createRaid%20远程命令执行漏洞%20CVE-2022-24989.md)
+  - [TerraMaster-TOS-createRaid-远程命令执行漏洞-CVE-2022-24989](Web安全/云平台/TerraMaster/TerraMaster-TOS-createRaid-远程命令执行漏洞-CVE-2022-24989.md)
+  - [TerraMaster-TOS-makecvs.php-远程命令执行漏洞-CVE-2020-28188](Web安全/云平台/TerraMaster/TerraMaster-TOS-makecvs.php-远程命令执行漏洞-CVE-2020-28188.md)
   - [TerraMaster TOS 信息泄漏漏洞 CVE-2022-24990](Web安全/其他软件/TerraMaster/TerraMaster%20TOS%20信息泄漏漏洞%20CVE-2022-24990.md)
   - [漏洞复现 TerraMaster TOS api.php 信息泄露和远程命令执行](Web安全/其他软件/TerraMaster/漏洞复现%20TerraMaster%20TOS%20api.php%20信息泄露和远程命令执行.md)
 - **TerraMaster TOS 多个**（1）
   - [TerraMaster TOS 多个漏洞复现](Web安全/其他软件/TerraMaster%20TOS%20多个/TerraMaster%20TOS%20多个漏洞复现.md)
-- **TerraMaster-TOS-createRaid**（1）
-  - [TerraMaster-TOS-createRaid-远程命令执行漏洞-CVE-2022-24989](Web安全/AI应用/TerraMaster-TOS-createRaid/TerraMaster-TOS-createRaid-远程命令执行漏洞-CVE-2022-24989.md)
 - **TerraMaster-TOS-信息泄漏**（1）
   - [TerraMaster-TOS-信息泄漏漏洞-CVE-2022-24990](Web安全/其他软件/TerraMaster-TOS-信息泄漏/TerraMaster-TOS-信息泄漏漏洞-CVE-2022-24990.md)
 - **TerraMasterTOS**（1）
@@ -6958,81 +6728,36 @@
   - [Tiki-Wiki-CMS-Groupware-认证绕过漏洞-CVE-2020-15906](Web安全/CMS内容/Tiki/Tiki-Wiki-CMS-Groupware-认证绕过漏洞-CVE-2020-15906.md)
 - **TikTok**（1）
   - [TikTok 账户恢复机制中的身份验证绕过漏洞分析 $12,000](Web安全/其他软件/TikTok/TikTok%20账户恢复机制中的身份验证绕过漏洞分析%20$12,000.md)
-- **Tomcat**（38）
-  - [ (132)](Web安全/中间件/Tomcat/%20%28132%29.md)
-  - [Apache Tomcat AJP 文件包含漏洞 CVE-2020-1938](Web安全/中间件/Tomcat/Apache%20Tomcat%20AJP%20文件包含漏洞%20CVE-2020-1938.md)
-  - [Apache Tomcat PUT 方法任意写文件漏洞 CVE-2017-12615](Web安全/中间件/Tomcat/Apache%20Tomcat%20PUT%20方法任意写文件漏洞%20CVE-2017-12615.md)
-  - [Apache Tomcat RCE via JSP Upload Bypass CVE-2017-12617](Web安全/中间件/Tomcat/Apache%20Tomcat%20RCE%20via%20JSP%20Upload%20Bypass%20CVE-2017-12617.md)
-  - [Apache Tomcat 信息泄露漏洞 CVE-2021-24122](Web安全/中间件/Tomcat/Apache%20Tomcat%20信息泄露漏洞%20CVE-2021-24122.md)
-  - [Apache Tomcat 远程代码执行漏洞 CVE-2025-24813](Web安全/中间件/Tomcat/Apache%20Tomcat%20远程代码执行漏洞%20CVE-2025-24813.md)
-  - [Apache-Tomcat-Tribes-EncryptInterceptor-绕过远程代码执行漏洞-CVE-2026-34486](Web安全/中间件/Tomcat/Apache-Tomcat-Tribes-EncryptInterceptor-绕过远程代码执行漏洞-CVE-2026-34486.md)
-  - [Apache-Tomcat-WebSocket-拒绝服务漏洞-CVE-2020-13935](Web安全/中间件/Tomcat/Apache-Tomcat-WebSocket-拒绝服务漏洞-CVE-2020-13935.md)
-  - [Apache-Tomcat8-弱口令+后台getshell漏洞](Web安全/中间件/Tomcat/Apache-Tomcat8-弱口令+后台getshell漏洞.md)
-  - [Tomcat HttpServletRequest中几个解析URL的函数](Web安全/中间件/Tomcat/Tomcat%20HttpServletRequest中几个解析URL的函数.md)
-  - [Tomcat URL 解析差异性攻击利用](Web安全/中间件/Tomcat/Tomcat%20URL%20解析差异性攻击利用.md)
-  - [Tomcat getContextPath()的处理](Web安全/中间件/Tomcat/Tomcat%20getContextPath%28%29的处理.md)
-  - [Tomcat getPathInfo()的处理](Web安全/中间件/Tomcat/Tomcat%20getPathInfo%28%29的处理.md)
-  - [Tomcat getRequestURI()的处理](Web安全/中间件/Tomcat/Tomcat%20getRequestURI%28%29的处理.md)
-  - [Tomcat getRequestURL()的处理](Web安全/中间件/Tomcat/Tomcat%20getRequestURL%28%29的处理.md)
-  - [Tomcat getServletPath()的处理](Web安全/中间件/Tomcat/Tomcat%20getServletPath%28%29的处理.md)
-  - [Tomcat 后台爆破](Web安全/中间件/Tomcat/Tomcat%20后台爆破.md)
-  - [Tomcat 后台部署war木马getshell](Web安全/中间件/Tomcat/Tomcat%20后台部署war木马getshell.md)
-  - [Tomcat 特殊字符的URL解析](Web安全/中间件/Tomcat/Tomcat%20特殊字符的URL解析.md)
-  - [Tomcat-远程代码执行漏洞-CVE-2025-24813](Web安全/中间件/Tomcat/Tomcat-远程代码执行漏洞-CVE-2025-24813.md)
-  - [Tomcat8-弱口令+后台getshell漏洞](Web安全/中间件/Tomcat/Tomcat8-弱口令+后台getshell漏洞.md)
-  - [Tomcat对URL特殊字符的处理](Web安全/中间件/Tomcat/Tomcat对URL特殊字符的处理.md)
-  - [Tomcat样例目录session操纵漏洞](Web安全/中间件/Tomcat/Tomcat样例目录session操纵漏洞.md)
-  - [Tomcat漏洞允许攻击者通过HTTP∕0.9请求绕过安全限制](Web安全/中间件/Tomcat/Tomcat漏洞允许攻击者通过HTTP∕0.9请求绕过安全限制.md)
-  - [基于Tomcat的内存Webshell 无文件攻击技术](Web安全/中间件/Tomcat/基于Tomcat的内存Webshell%20无文件攻击技术.md)
-  - [简介](Web安全/中间件/Tomcat/简介.md)
-  - [绕过 Tomcat 证书吊销：CVE-2026-24734 详解（含实战 PoC）](Web安全/中间件/Tomcat/绕过%20Tomcat%20证书吊销：CVE-2026-24734%20详解（含实战%20PoC）.md)
-  - [通过jmx攻击Tomcat](Web安全/中间件/Tomcat/通过jmx攻击Tomcat.md)
-  - [（CVE-2016-1240）Tomcat本地提权漏洞](Web安全/中间件/Tomcat/（CVE-2016-1240）Tomcat本地提权漏洞.md)
-  - [（CVE-2016-8735）Tomcat 反序列化漏洞](Web安全/中间件/Tomcat/（CVE-2016-8735）Tomcat%20反序列化漏洞.md)
-  - [（CVE-2017-12615）Tomcat PUT方法任意文件写入漏洞](Web安全/中间件/Tomcat/（CVE-2017-12615）Tomcat%20PUT方法任意文件写入漏洞.md)
-  - [（CVE-2017-12616）Tomcat 信息泄露](Web安全/中间件/Tomcat/（CVE-2017-12616）Tomcat%20信息泄露.md)
-  - [（CVE-2017-12617）Tomcat RCE via JSP Upload Bypass](Web安全/中间件/Tomcat/（CVE-2017-12617）Tomcat%20RCE%20via%20JSP%20Upload%20Bypass.md)
-  - [（CVE-2018-1305）Tomcat 安全绕过漏洞](Web安全/中间件/Tomcat/（CVE-2018-1305）Tomcat%20安全绕过漏洞.md)
-  - [（CVE-2019-0221）Apache Tomcat SSI printenv指令中的XSS](Web安全/中间件/Tomcat/（CVE-2019-0221）Apache%20Tomcat%20SSI%20printenv指令中的XSS.md)
-  - [（CVE-2019-0232）Tomcat rce](Web安全/中间件/Tomcat/（CVE-2019-0232）Tomcat%20rce.md)
-  - [（CVE-2020-1938）Apache Tomcat 文件包含漏洞](Web安全/中间件/Tomcat/（CVE-2020-1938）Apache%20Tomcat%20文件包含漏洞.md)
-  - [（CVE-2020-9484）Tomcat session反序列化漏洞](Web安全/中间件/Tomcat/（CVE-2020-9484）Tomcat%20session反序列化漏洞.md)
 - **Tosei**（1）
   - [Tosei自助洗衣机web管理端network_test.php文件host参数远程命令执行漏洞](Web安全/其他软件/Tosei/Tosei自助洗衣机web管理端network_test.php文件host参数远程命令执行漏洞.md)
-- **TOTOLink**（2）
+- **TOTOLink**（3）
   - [(9.9分) CVE-2026-90605：Totolink路由器formFilter缓冲区溢出](Web安全/网络设备/TOTOLink/%289.9分%29%20CVE-2026-90605：Totolink路由器formFilter缓冲区溢出.md)
+  - [TOTOLink X5000R 远程命令执行 附 POC](Web安全/网络设备/TOTOLink/TOTOLink%20X5000R%20远程命令执行%20附%20POC.md)
   - [TOTOLink-多个设备-download.cgi-远程命令执行漏洞-CVE-2022-25084](Web安全/网络设备/TOTOLink/TOTOLink-多个设备-download.cgi-远程命令执行漏洞-CVE-2022-25084.md)
-- **TOTOLink X**（1）
-  - [TOTOLink X5000R 远程命令执行 附 POC](Web安全/网络设备/TOTOLink%20X/TOTOLink%20X5000R%20远程命令执行%20附%20POC.md)
 - **tp**（1）
   - [tp6-0-8 反序列化漏洞分析](Web安全/其他软件/tp/tp6-0-8%20反序列化漏洞分析.md)
-- **TP-link**（4）
-  - [ (522)](Web安全/网络设备/TP-link/%20%28522%29.md)
-  - [ (57)](Web安全/网络设备/TP-link/%20%2857%29.md)
-  - [TP-Link云摄像头NCXXX系列存在命令注⼊漏洞](Web安全/网络设备/TP-link/TP-Link云摄像头NCXXX系列存在命令注⼊漏洞.md)
-  - [获取 TP-Link Tapo C260 摄像头的 Shell (CVE-2026-0651, CVE-2026-0652, CVE-202](Web安全/网络设备/TP-link/获取%20TP-Link%20Tapo%20C260%20摄像头的%20Shell%20%28CVE-2026-0651,%20CVE-2026-0652,%20CVE-202.md)
-- **TP-Link**（2）
+- **TP-Link**（13）
+  - [ (522)](Web安全/网络设备/TP-Link/%20%28522%29.md)
+  - [ (57)](Web安全/网络设备/TP-Link/%20%2857%29.md)
+  - [CISA Flags TP-Link Router Flaws CVE-2023-50224 and CVE-2025-9377 as Ac](Web安全/网络设备/TP-Link/CISA%20Flags%20TP-Link%20Router%20Flaws%20CVE-2023-50224%20and%20CVE-2025-9377%20as%20Ac.md)
+  - [CVE-2024-5035 TP-Link Archer C5400X RCE 漏洞分析](Web安全/网络设备/TP-Link/CVE-2024-5035%20TP-Link%20Archer%20C5400X%20RCE%20漏洞分析.md)
   - [CVE-2026-0629：TP-Link VIGI漏洞允许攻击者重置管理员密码](Web安全/网络设备/TP-Link/CVE-2026-0629：TP-Link%20VIGI漏洞允许攻击者重置管理员密码.md)
+  - [TP-Link Archer MR600 v5 命令注入漏洞预警（CVE-2025-14756）](Web安全/网络设备/TP-Link/TP-Link%20Archer%20MR600%20v5%20命令注入漏洞预警（CVE-2025-14756）.md)
+  - [TP-Link TL-WR840N EU v5 远程代码执行](Web安全/网络设备/TP-Link/TP-Link%20TL-WR840N%20EU%20v5%20远程代码执行.md)
   - [TP-Link 多个漏洞使攻击者能够触发拒绝服务攻击并导致路由器崩溃](Web安全/网络设备/TP-Link/TP-Link%20多个漏洞使攻击者能够触发拒绝服务攻击并导致路由器崩溃.md)
-- **TP-Link Archer MR600 v5**（2）
-  - [CVE-2024-5035 TP-Link Archer C5400X RCE 漏洞分析](Web安全/网络设备/TP-Link%20Archer%20MR600%20v5/CVE-2024-5035%20TP-Link%20Archer%20C5400X%20RCE%20漏洞分析.md)
-  - [TP-Link Archer MR600 v5 命令注入漏洞预警（CVE-2025-14756）](Web安全/网络设备/TP-Link%20Archer%20MR600%20v5/TP-Link%20Archer%20MR600%20v5%20命令注入漏洞预警（CVE-2025-14756）.md)
-- **TP-Link TL-WR**（1）
-  - [TP-Link TL-WR840N EU v5 远程代码执行](Web安全/网络设备/TP-Link%20TL-WR/TP-Link%20TL-WR840N%20EU%20v5%20远程代码执行.md)
-- **TP-Link-SR**（1）
-  - [TP-Link-SR20-远程命令执行](Web安全/网络设备/TP-Link-SR/TP-Link-SR20-远程命令执行.md)
-- **TP-Link-TL-WR**（1）
-  - [TP-Link-TL-WR841N-远程代码执行漏洞-CVE-2020-35576](Web安全/网络设备/TP-Link-TL-WR/TP-Link-TL-WR841N-远程代码执行漏洞-CVE-2020-35576.md)
+  - [TP-Link-SR20-远程命令执行](Web安全/网络设备/TP-Link/TP-Link-SR20-远程命令执行.md)
+  - [TP-Link-TL-WR841N-远程代码执行漏洞-CVE-2020-35576](Web安全/网络设备/TP-Link/TP-Link-TL-WR841N-远程代码执行漏洞-CVE-2020-35576.md)
+  - [TP-Link云摄像头NCXXX系列存在命令注⼊漏洞](Web安全/网络设备/TP-Link/TP-Link云摄像头NCXXX系列存在命令注⼊漏洞.md)
+  - [攻击者持续一年攻击TP-Link路由器漏洞CVE-2023-33538仍未得逞](Web安全/网络设备/TP-Link/攻击者持续一年攻击TP-Link路由器漏洞CVE-2023-33538仍未得逞.md)
+  - [获取 TP-Link Tapo C260 摄像头的 Shell (CVE-2026-0651, CVE-2026-0652, CVE-202](Web安全/网络设备/TP-Link/获取%20TP-Link%20Tapo%20C260%20摄像头的%20Shell%20%28CVE-2026-0651,%20CVE-2026-0652,%20CVE-202.md)
 - **TP5**（1）
   - [TP5_RCE合集](Web安全/其他软件/TP5/TP5_RCE合集.md)
 - **Traggo**（1）
-  - [TraggoServer任意文件读取漏洞(CVE-2023-34843)](Web安全/AI应用/Traggo/TraggoServer任意文件读取漏洞%28CVE-2023-34843%29.md)
+  - [TraggoServer任意文件读取漏洞(CVE-2023-34843)](Web安全/商业软件/Traggo/TraggoServer任意文件读取漏洞%28CVE-2023-34843%29.md)
 - **TsojanScan-Plus**（1）
   - [TsojanScan-Plus：基于原 Burp 漏洞插件二开，新增多漏洞扫描与权限绕过检测](Web安全/其他软件/TsojanScan-Plus/TsojanScan-Plus：基于原%20Burp%20漏洞插件二开，新增多漏洞扫描与权限绕过检测.md)
-- **TunnelVision**（1）
-  - [TunnelVision漏洞曝光，几乎可监听所有VPN](Web安全/网络设备/TunnelVision/TunnelVision漏洞曝光，几乎可监听所有VPN.md)
-- **TurboMail邮件**（1）
-  - [TurboMail邮件系统viewfile文件读取漏洞](Web安全/AI应用/TurboMail邮件/TurboMail邮件系统viewfile文件读取漏洞.md)
+- **TurboMail**（1）
+  - [TurboMail邮件系统viewfile文件读取漏洞](Web安全/邮件系统/TurboMail/TurboMail邮件系统viewfile文件读取漏洞.md)
 - **TVT数码科技**（1）
   - [TVT数码科技NVMS-1000路径遍历漏洞(CVE-2019-20085)](Web安全/其他软件/TVT数码科技/TVT数码科技NVMS-1000路径遍历漏洞%28CVE-2019-20085%29.md)
 - **TVT数码科技-NVMS-1000-路径遍历**（1）
@@ -7047,6 +6772,8 @@
   - [Typesetter CMS任意文件上传](Web安全/CMS内容/Typesetter%20CMS/Typesetter%20CMS任意文件上传.md)
 - **Typora**（1）
   - [Typora 远程代码执行漏洞 (CVE-2023-2317)](Web安全/其他软件/Typora/Typora%20远程代码执行漏洞%20%28CVE-2023-2317%29.md)
+- **Ubiquiti**（1）
+  - [19.9 美元路由拆到 RCE：Dbit N300 UART + Boa 溢出（CVE-2026-20374）](Web安全/网络设备/Ubiquiti/19.9%20美元路由拆到%20RCE：Dbit%20N300%20UART%20+%20Boa%20溢出（CVE-2026-20374）.md)
 - **Ubuntu**（4）
   - [ (266)](Web安全/其他软件/Ubuntu/%20%28266%29.md)
   - [ (451)](Web安全/其他软件/Ubuntu/%20%28451%29.md)
@@ -7080,14 +6807,10 @@
   - [unitalk存在任意用户密码修改漏洞](Web安全/其他软件/unitalk/unitalk存在任意用户密码修改漏洞.md)
   - [unitalk存在任意用户添加漏洞](Web安全/其他软件/unitalk/unitalk存在任意用户添加漏洞.md)
   - [unitalk存在敏感信息泄露漏洞](Web安全/其他软件/unitalk/unitalk存在敏感信息泄露漏洞.md)
-- **Unpatched Langflow Flaw CV**（1）
-  - [Unpatched Langflow Flaw CVE-2026-5027 Exploited for Unauthenticated RC](Web安全/AI应用/Unpatched%20Langflow%20Flaw%20CV/Unpatched%20Langflow%20Flaw%20CVE-2026-5027%20Exploited%20for%20Unauthenticated%20RC.md)
 - **URL**（1）
   - [URL 编码的双重身份：SiYuan Tooltip XSS 与 Electron RCE 深度解析](Web安全/其他软件/URL/URL%20编码的双重身份：SiYuan%20Tooltip%20XSS%20与%20Electron%20RCE%20深度解析.md)
 - **UserPlus**（1）
   - [UserPlus = 2.0 – 未经身份验证的权限提升 (CVE-2024-9518)](Web安全/ERP企业/UserPlus/UserPlus%20=%202.0%20–%20未经身份验证的权限提升%20%28CVE-2024-9518%29.md)
-- **UserVerifica**（1）
-  - [CVE-2026-7458-UserVerificationByPickPlugins-认证绕过漏洞分析报告](Web安全/开发框架/UserVerifica/CVE-2026-7458-UserVerificationByPickPlugins-认证绕过漏洞分析报告.md)
 - **UsualToolcms**（13）
   - [UsualToolCMS-8.0 a_templetex.php sql注入漏洞](Web安全/CMS内容/UsualToolcms/UsualToolCMS-8.0%20a_templetex.php%20sql注入漏洞.md)
   - [UsualToolCMS-8.0 sql注⼊漏洞](Web安全/CMS内容/UsualToolcms/UsualToolCMS-8.0%20sql注⼊漏洞.md)
@@ -7106,7 +6829,7 @@
   - [uWSGI 未授权访问漏洞](Web安全/其他软件/uWSGI/uWSGI%20未授权访问漏洞.md)
   - [（CVE-2018-7490）uWSGI PHP目录穿越漏洞](Web安全/其他软件/uWSGI/（CVE-2018-7490）uWSGI%20PHP目录穿越漏洞.md)
 - **vBulletin**（7）
-  - [CVE-2020-17496 vBulletin Pre-Auth RCE 漏洞在野利用](Web安全/中间件/vBulletin/CVE-2020-17496%20vBulletin%20Pre-Auth%20RCE%20漏洞在野利用.md)
+  - [CVE-2020-17496 vBulletin Pre-Auth RCE 漏洞在野利用](Web安全/CMS内容/vBulletin/CVE-2020-17496%20vBulletin%20Pre-Auth%20RCE%20漏洞在野利用.md)
   - [CVSS10分！vBulletin远程代码执行漏洞安全风险通告](Web安全/其他软件/vBulletin/CVSS10分！vBulletin远程代码执行漏洞安全风险通告.md)
   - [vBulletin 存在严重身份验证前远程代码执行漏洞，可执行任意 PHP 代码](Web安全/其他软件/vBulletin/vBulletin%20存在严重身份验证前远程代码执行漏洞，可执行任意%20PHP%20代码.md)
   - [（CVE-2015-7808）VBulletin 远程命令执行漏洞](Web安全/其他软件/vBulletin/（CVE-2015-7808）VBulletin%20远程命令执行漏洞.md)
@@ -7117,7 +6840,6 @@
   - [vCenter2021 几个漏洞及后渗透   daidaitiehanhan's blog](Web安全/云平台/vCenter/vCenter2021%20几个漏洞及后渗透%20%20%20daidaitiehanhan's%20blog.md)
   - [集权系统 Vcenter 打法总结](Web安全/云平台/vCenter/集权系统%20Vcenter%20打法总结.md)
 - **Veeam**（10）
-  - [CVE-2022-26500 Veeam Backup and Replication RCE - Y4er的博客](Web安全/中间件/Veeam/CVE-2022-26500%20Veeam%20Backup%20and%20Replication%20RCE%20-%20Y4er的博客.md)
   - [ (183)](Web安全/其他软件/Veeam/%20%28183%29.md)
   - [ (81)](Web安全/其他软件/Veeam/%20%2881%29.md)
   - [CVE-2026-64633 漏洞Veeam ONE 未授权远程代码执行,CVSS 评分达到满分 10.0](Web安全/其他软件/Veeam/CVE-2026-64633%20漏洞Veeam%20ONE%20未授权远程代码执行,CVSS%20评分达到满分%2010.0.md)
@@ -7127,27 +6849,27 @@
   - [​Veeam 备份服务器现重大漏洞，速更新补丁！](Web安全/其他软件/Veeam/​Veeam%20备份服务器现重大漏洞，速更新补丁！.md)
   - [最低权限也能拿下备份服务器：Veeam 高危漏洞 CVE-2026-21708 分析](Web安全/其他软件/Veeam/最低权限也能拿下备份服务器：Veeam%20高危漏洞%20CVE-2026-21708%20分析.md)
   - [没有秘密  利用 Veeam CVE-2024-29855](Web安全/其他软件/Veeam/没有秘密%20%20利用%20Veeam%20CVE-2024-29855.md)
+  - [CVE-2022-26500 Veeam Backup and Replication RCE - Y4er的博客](Web安全/服务器软件/Veeam/CVE-2022-26500%20Veeam%20Backup%20and%20Replication%20RCE%20-%20Y4er的博客.md)
 - **VEXUS多语言货币交易所**（1）
   - [VEXUS多语言货币交易所存在未授权访问漏洞](Web安全/其他软件/VEXUS多语言货币交易所/VEXUS多语言货币交易所存在未授权访问漏洞.md)
 - **Viessmann**（1）
   - [ViessmannVitogateRCE漏洞（CVE-2023-45852）](Web安全/桌面软件/Viessmann/ViessmannVitogateRCE漏洞（CVE-2023-45852）.md)
 - **ViewState**（1）
   - [ViewState 反序列化复现踩坑记录](Web安全/桌面软件/ViewState/ViewState%20反序列化复现踩坑记录.md)
-- **Vigor3900 CVE-2021-43118**（1）
-  - [Vigor3900 CVE-2021-43118 命令注入漏洞分析](Web安全/网络设备/Vigor3900%20CVE-2021-43118/Vigor3900%20CVE-2021-43118%20命令注入漏洞分析.md)
 - **Vite**（3）
   - [Vite-开发服务器任意文件读取漏洞-CNVD-2022-44615](Web安全/其他软件/Vite/Vite-开发服务器任意文件读取漏洞-CNVD-2022-44615.md)
   - [Vite-开发服务器任意文件读取漏洞绕过-CVE-2025-30208](Web安全/其他软件/Vite/Vite-开发服务器任意文件读取漏洞绕过-CVE-2025-30208.md)
   - [Vite-开发服务器通过-Hash-字符绕过任意文件读取漏洞-CVE-2025-32395](Web安全/其他软件/Vite/Vite-开发服务器通过-Hash-字符绕过任意文件读取漏洞-CVE-2025-32395.md)
 - **Vivotek**（1）
   - [Vivotek 严重漏洞授予 root 权限 (CVE-2026-22755)](Web安全/智能设备/Vivotek/Vivotek%20严重漏洞授予%20root%20权限%20%28CVE-2026-22755%29.md)
-- **vLLM**（1）
+- **vLLM**（2）
   - [vLLM 的 Mooncake 存在严重 RCE 漏洞（10)](Web安全/AI应用/vLLM/vLLM%20的%20Mooncake%20存在严重%20RCE%20漏洞（10%29.md)
-- **vm2**（1）
-  - [vm2沙箱逃逸满分漏洞？AI有点东西](Web安全/AI应用/vm2/vm2沙箱逃逸满分漏洞？AI有点东西.md)
+  - [漏洞预警  vLLM远程代码执行漏洞](Web安全/AI应用/vLLM/漏洞预警%20%20vLLM远程代码执行漏洞.md)
 - **VM2**（2）
   - [VM2远程代码执行漏洞曝光](Web安全/其他软件/VM2/VM2远程代码执行漏洞曝光.md)
   - [vm2 沙箱严重漏洞可导致在宿主机执行代码](Web安全/其他软件/VM2/vm2%20沙箱严重漏洞可导致在宿主机执行代码.md)
+- **vm2**（1）
+  - [vm2沙箱逃逸满分漏洞？AI有点东西](Web安全/开发框架/vm2/vm2沙箱逃逸满分漏洞？AI有点东西.md)
 - **VM2 JavaScript**（1）
   - [VM2 JavaScript 沙箱库中存在严重的 RCE 漏洞](Web安全/其他软件/VM2%20JavaScript/VM2%20JavaScript%20沙箱库中存在严重的%20RCE%20漏洞.md)
 - **vm2 Node.js**（1）
@@ -7198,13 +6920,8 @@
   - [VMware vCenter Server 远程代码执行漏洞安全预警（CVE-2024-37079）](Web安全/云平台/VMware%20vCenter%20Server/VMware%20vCenter%20Server%20远程代码执行漏洞安全预警（CVE-2024-37079）.md)
 - **VMware vRealize Operations**（1）
   - [VMware vRealize Operations多个漏洞安全风险通告](Web安全/桌面软件/VMware%20vRealize%20Operations/VMware%20vRealize%20Operations多个漏洞安全风险通告.md)
-- **VMware 多个产品 Log4j2**（1）
-  - [VMware 多个产品 Log4j2 RCE](Web安全/开发框架/VMware%20多个产品%20Log4j2/VMware%20多个产品%20Log4j2%20RCE.md)
 - **VoIPmonitor**（1）
   - [VoIPmonitor-远程命令执行漏洞-CVE-2021-30461](Web安全/其他软件/VoIPmonitor/VoIPmonitor-远程命令执行漏洞-CVE-2021-30461.md)
-- **VPN**（2）
-  - [CVE-2026-25803：3DP-MANAGER 硬编码默认凭据导致 VPN 管理后台完全接管](Web安全/网络设备/VPN/CVE-2026-25803：3DP-MANAGER%20硬编码默认凭据导致%20VPN%20管理后台完全接管.md)
-  - [VPN漏洞频发，威努特零信任如何守护企业数字边界？](Web安全/网络设备/VPN/VPN漏洞频发，威努特零信任如何守护企业数字边界？.md)
 - **VS Code**（1）
   - [VS Code的Live Server扩展存在漏洞，可被用于窃取本地文件（CVE-2025-65717）](Web安全/其他软件/VS%20Code/VS%20Code的Live%20Server扩展存在漏洞，可被用于窃取本地文件（CVE-2025-65717）.md)
 - **Vvveb CMS**（1）
@@ -7245,70 +6962,70 @@
   - [已遭利用的 WebKit 0day](Web安全/桌面软件/Webkit/已遭利用的%20WebKit%200day.md)
   - [苹果修复了iOS、macOS和Safari的30多个漏洞，其中包括人工智能发现的WebKit漏洞](Web安全/桌面软件/Webkit/苹果修复了iOS、macOS和Safari的30多个漏洞，其中包括人工智能发现的WebKit漏洞.md)
   - [（CVE-2018-4441）Webkit shiftCountWithArrayStorage](Web安全/桌面软件/Webkit/（CVE-2018-4441）Webkit%20shiftCountWithArrayStorage.md)
-- **Weblogic**（55）
-  - [ (131)](Web安全/中间件/Weblogic/%20%28131%29.md)
-  - [ (146)](Web安全/中间件/Weblogic/%20%28146%29.md)
-  - [ (456)](Web安全/中间件/Weblogic/%20%28456%29.md)
-  - [ (52)](Web安全/中间件/Weblogic/%20%2852%29.md)
-  - [ (8)](Web安全/中间件/Weblogic/%20%288%29.md)
-  - [CVE-2020-14882 weblogic 未授权命令执行复现](Web安全/中间件/Weblogic/CVE-2020-14882%20weblogic%20未授权命令执行复现.md)
-  - [CVE-2020-14882and14883weblogic 未授权命令执行漏洞复现](Web安全/中间件/Weblogic/CVE-2020-14882and14883weblogic%20未授权命令执行漏洞复现.md)
-  - [CVE-2021-2394：Weblogic 反序列化漏洞复现](Web安全/中间件/Weblogic/CVE-2021-2394：Weblogic%20反序列化漏洞复现.md)
-  - [CVE-2024-21181](Web安全/中间件/Weblogic/CVE-2024-21181.md)
-  - [CVE-2025-21535](Web安全/中间件/Weblogic/CVE-2025-21535.md)
-  - [Oracle WebLogic CVE-2024-21182 Added to KEV Catalog After Active Explo](Web安全/中间件/Weblogic/Oracle%20WebLogic%20CVE-2024-21182%20Added%20to%20KEV%20Catalog%20After%20Active%20Explo.md)
-  - [Oracle WebLogic Server Proxy Plug-in身份认证绕过漏洞（CVE-2026-21962）的风险预警](Web安全/中间件/Weblogic/Oracle%20WebLogic%20Server%20Proxy%20Plug-in身份认证绕过漏洞（CVE-2026-21962）的风险预警.md)
-  - [WebLogic T3 反序列化漏洞 CVE-2016-3510](Web安全/中间件/Weblogic/WebLogic%20T3%20反序列化漏洞%20CVE-2016-3510.md)
-  - [WebLogic UniversalExtractor反序列化漏洞(CVE-2020-14645)](Web安全/中间件/Weblogic/WebLogic%20UniversalExtractor反序列化漏洞%28CVE-2020-14645%29.md)
-  - [Weblogic  10.3.6 wls-wsat XMLDecoder 反序列化漏洞 CVE-2017-10271](Web安全/中间件/Weblogic/Weblogic%20%2010.3.6%20wls-wsat%20XMLDecoder%20反序列化漏洞%20CVE-2017-10271.md)
-  - [Weblogic CVE-2023-21931 漏洞挖掘技巧：后反序列化利用](Web安全/中间件/Weblogic/Weblogic%20CVE-2023-21931%20漏洞挖掘技巧：后反序列化利用.md)
-  - [Weblogic WLS Core Components 反序列化命令执行漏洞 CVE-2018-2628](Web安全/中间件/Weblogic/Weblogic%20WLS%20Core%20Components%20反序列化命令执行漏洞%20CVE-2018-2628.md)
-  - [Weblogic XMLDecoder 反序列化远程代码执行漏洞 CVE-2019-2725](Web安全/中间件/Weblogic/Weblogic%20XMLDecoder%20反序列化远程代码执行漏洞%20CVE-2019-2725.md)
-  - [Weblogic XMLDecoder 远程代码执行漏洞 CVE-2017-10271](Web安全/中间件/Weblogic/Weblogic%20XMLDecoder%20远程代码执行漏洞%20CVE-2017-10271.md)
-  - [Weblogic 任意文件上传漏洞 CVE-2018-2894](Web安全/中间件/Weblogic/Weblogic%20任意文件上传漏洞%20CVE-2018-2894.md)
-  - [Weblogic 反序列化漏洞分析（CVE-2021-2135）](Web安全/中间件/Weblogic/Weblogic%20反序列化漏洞分析（CVE-2021-2135）.md)
-  - [Weblogic 弱口令+前台任意文件读取](Web安全/中间件/Weblogic/Weblogic%20弱口令+前台任意文件读取.md)
-  - [Weblogic 懂？](Web安全/中间件/Weblogic/Weblogic%20懂？.md)
-  - [Weblogic 管理控制台未授权远程命令执行漏洞 CVE-2020-14882+CVE-2020-14883](Web安全/中间件/Weblogic/Weblogic%20管理控制台未授权远程命令执行漏洞%20CVE-2020-14882+CVE-2020-14883.md)
-  - [Weblogic-2020-14882](Web安全/中间件/Weblogic/Weblogic-2020-14882.md)
-  - [Weblogic-LDAP-远程代码执行漏洞-CVE-2021-2109](Web安全/中间件/Weblogic/Weblogic-LDAP-远程代码执行漏洞-CVE-2021-2109.md)
-  - [Weblogic-Server远程代码执行漏洞-CVE-2020-14756](Web安全/中间件/Weblogic/Weblogic-Server远程代码执行漏洞-CVE-2020-14756.md)
-  - [Weblogic-uddiexplorer-SSRF漏洞-CVE-2014-4210](Web安全/中间件/Weblogic/Weblogic-uddiexplorer-SSRF漏洞-CVE-2014-4210.md)
-  - [Weblogic-二次反序列化漏洞-CVE-2021-2394](Web安全/中间件/Weblogic/Weblogic-二次反序列化漏洞-CVE-2021-2394.md)
-  - [Weblogic-未授权远程代码执行漏洞-CVE-2023-21839](Web安全/中间件/Weblogic/Weblogic-未授权远程代码执行漏洞-CVE-2023-21839.md)
-  - [Weblogic反序列化漏洞CNVD-C-2019-48814](Web安全/中间件/Weblogic/Weblogic反序列化漏洞CNVD-C-2019-48814.md)
-  - [cve 2020-14841 weblogic jndi注入](Web安全/中间件/Weblogic/cve%202020-14841%20weblogic%20jndi注入.md)
-  - [weblogic CVE-2020-2963、CNVD-2020-23019  反序列化漏洞分析与复现](Web安全/中间件/Weblogic/weblogic%20CVE-2020-2963、CNVD-2020-23019%20%20反序列化漏洞分析与复现.md)
-  - [weblogic爆破](Web安全/中间件/Weblogic/weblogic爆破.md)
-  - [第155篇：Weblogic反序列化漏洞的多种回显方法总结（上篇）](Web安全/中间件/Weblogic/第155篇：Weblogic反序列化漏洞的多种回显方法总结（上篇）.md)
-  - [通过weblogic历史漏洞cve-2015-4852学习java反序列化漏洞](Web安全/中间件/Weblogic/通过weblogic历史漏洞cve-2015-4852学习java反序列化漏洞.md)
-  - [（CVE-2017-10271）Weblogic XMLDecoder 反序列化漏洞](Web安全/中间件/Weblogic/（CVE-2017-10271）Weblogic%20XMLDecoder%20反序列化漏洞.md)
-  - [（CVE-2017-3248）Weblogic 反序列化漏洞](Web安全/中间件/Weblogic/（CVE-2017-3248）Weblogic%20反序列化漏洞.md)
-  - [（CVE-2017-3506）Weblogic反序列化漏洞](Web安全/中间件/Weblogic/（CVE-2017-3506）Weblogic反序列化漏洞.md)
-  - [（CVE-2018-2628）Weblogic反序列化漏洞](Web安全/中间件/Weblogic/（CVE-2018-2628）Weblogic反序列化漏洞.md)
-  - [（CVE-2018-2893）Weblogic WLS核心组件反序列化漏洞](Web安全/中间件/Weblogic/（CVE-2018-2893）Weblogic%20WLS核心组件反序列化漏洞.md)
-  - [（CVE-2018-2894）Weblogic任意文件上传](Web安全/中间件/Weblogic/（CVE-2018-2894）Weblogic任意文件上传.md)
-  - [（CVE-2018-3191）Weblogic远程代码执行漏洞](Web安全/中间件/Weblogic/（CVE-2018-3191）Weblogic远程代码执行漏洞.md)
-  - [（CVE-2018-3245）Weblogic反序列化远程代码执行漏洞](Web安全/中间件/Weblogic/（CVE-2018-3245）Weblogic反序列化远程代码执行漏洞.md)
-  - [（CVE-2019-2615）Weblogic 任意文件读取漏洞](Web安全/中间件/Weblogic/（CVE-2019-2615）Weblogic%20任意文件读取漏洞.md)
-  - [（CVE-2019-2618）Weblogic任意文件上传漏洞](Web安全/中间件/Weblogic/（CVE-2019-2618）Weblogic任意文件上传漏洞.md)
-  - [（CVE-2019-2725）（CNVD-C-2019-48814）Weblogic反序列化远程代码执行漏洞](Web安全/中间件/Weblogic/（CVE-2019-2725）（CNVD-C-2019-48814）Weblogic反序列化远程代码执行漏洞.md)
-  - [（CVE-2019-2729）Weblogic反序列化漏洞](Web安全/中间件/Weblogic/（CVE-2019-2729）Weblogic反序列化漏洞.md)
-  - [（CVE-2019-2888）Weblogic EJBTaglibDescriptor XXE漏洞](Web安全/中间件/Weblogic/（CVE-2019-2888）Weblogic%20EJBTaglibDescriptor%20XXE漏洞.md)
-  - [（CVE-2019-2890）Weblogic反序列化漏洞](Web安全/中间件/Weblogic/（CVE-2019-2890）Weblogic反序列化漏洞.md)
-  - [（CVE-2020-14825）Weblogic反序列化漏洞](Web安全/中间件/Weblogic/（CVE-2020-14825）Weblogic反序列化漏洞.md)
-  - [（CVE-2020-14882） weblogic 未授权命令执行](Web安全/中间件/Weblogic/（CVE-2020-14882）%20weblogic%20未授权命令执行.md)
-  - [（CVE-2020-2551）Weblogic CVE-2020-2551 IIOP协议反序列化rce](Web安全/中间件/Weblogic/（CVE-2020-2551）Weblogic%20CVE-2020-2551%20IIOP协议反序列化rce.md)
-  - [（CVE-2020-2555）Oracle Coherence&Weblogic 反序列化远程代码执行漏洞](Web安全/中间件/Weblogic/（CVE-2020-2555）Oracle%20Coherence&Weblogic%20反序列化远程代码执行漏洞.md)
-  - [（CVE-2020-2883）Weblogic 远程代码执行漏洞](Web安全/中间件/Weblogic/（CVE-2020-2883）Weblogic%20远程代码执行漏洞.md)
-- **weblogic 中间件**（1）
-  - [weblogic 中间件漏洞总结](Web安全/中间件/weblogic%20中间件/weblogic%20中间件漏洞总结.md)
-- **Weblogic-**（1）
-  - [Weblogic-CVE-2023-21839 - 远程代码执行复现（排坑）](Web安全/中间件/Weblogic-/Weblogic-CVE-2023-21839%20-%20远程代码执行复现（排坑）.md)
-- **WebLogic-T**（1）
-  - [WebLogic-T3-反序列化漏洞-CVE-2016-3510](Web安全/中间件/WebLogic-T/WebLogic-T3-反序列化漏洞-CVE-2016-3510.md)
-- **WebLogic-XMLDecoder**（1）
-  - [WebLogic-XMLDecoder 反序列化漏洞分析](Web安全/中间件/WebLogic-XMLDecoder/WebLogic-XMLDecoder%20反序列化漏洞分析.md)
+- **WebLogic**（63）
+  - [ (131)](Web安全/中间件/WebLogic/%20%28131%29.md)
+  - [ (146)](Web安全/中间件/WebLogic/%20%28146%29.md)
+  - [ (456)](Web安全/中间件/WebLogic/%20%28456%29.md)
+  - [ (52)](Web安全/中间件/WebLogic/%20%2852%29.md)
+  - [ (8)](Web安全/中间件/WebLogic/%20%288%29.md)
+  - [CVE-2020-14882 weblogic 未授权命令执行复现](Web安全/中间件/WebLogic/CVE-2020-14882%20weblogic%20未授权命令执行复现.md)
+  - [CVE-2020-14882and14883weblogic 未授权命令执行漏洞复现](Web安全/中间件/WebLogic/CVE-2020-14882and14883weblogic%20未授权命令执行漏洞复现.md)
+  - [CVE-2021-2394：Weblogic 反序列化漏洞复现](Web安全/中间件/WebLogic/CVE-2021-2394：Weblogic%20反序列化漏洞复现.md)
+  - [CVE-2024-21181](Web安全/中间件/WebLogic/CVE-2024-21181.md)
+  - [CVE-2025-21535](Web安全/中间件/WebLogic/CVE-2025-21535.md)
+  - [Oracle WebLogic CVE-2024-21182 Added to KEV Catalog After Active Explo](Web安全/中间件/WebLogic/Oracle%20WebLogic%20CVE-2024-21182%20Added%20to%20KEV%20Catalog%20After%20Active%20Explo.md)
+  - [Oracle WebLogic Server Proxy Plug-in身份认证绕过漏洞（CVE-2026-21962）的风险预警](Web安全/中间件/WebLogic/Oracle%20WebLogic%20Server%20Proxy%20Plug-in身份认证绕过漏洞（CVE-2026-21962）的风险预警.md)
+  - [WebLogic T3 反序列化漏洞 CVE-2016-3510](Web安全/中间件/WebLogic/WebLogic%20T3%20反序列化漏洞%20CVE-2016-3510.md)
+  - [WebLogic UniversalExtractor反序列化漏洞(CVE-2020-14645)](Web安全/中间件/WebLogic/WebLogic%20UniversalExtractor反序列化漏洞%28CVE-2020-14645%29.md)
+  - [WebLogic-T3-反序列化漏洞-CVE-2016-3510](Web安全/中间件/WebLogic/WebLogic-T3-反序列化漏洞-CVE-2016-3510.md)
+  - [WebLogic-XMLDecoder 反序列化漏洞分析](Web安全/中间件/WebLogic/WebLogic-XMLDecoder%20反序列化漏洞分析.md)
+  - [Weblogic  10.3.6 wls-wsat XMLDecoder 反序列化漏洞 CVE-2017-10271](Web安全/中间件/WebLogic/Weblogic%20%2010.3.6%20wls-wsat%20XMLDecoder%20反序列化漏洞%20CVE-2017-10271.md)
+  - [Weblogic CVE-2023-21931 漏洞挖掘技巧：后反序列化利用](Web安全/中间件/WebLogic/Weblogic%20CVE-2023-21931%20漏洞挖掘技巧：后反序列化利用.md)
+  - [Weblogic WLS Core Components 反序列化命令执行漏洞 CVE-2018-2628](Web安全/中间件/WebLogic/Weblogic%20WLS%20Core%20Components%20反序列化命令执行漏洞%20CVE-2018-2628.md)
+  - [Weblogic XMLDecoder 反序列化远程代码执行漏洞 CVE-2019-2725](Web安全/中间件/WebLogic/Weblogic%20XMLDecoder%20反序列化远程代码执行漏洞%20CVE-2019-2725.md)
+  - [Weblogic XMLDecoder 远程代码执行漏洞 CVE-2017-10271](Web安全/中间件/WebLogic/Weblogic%20XMLDecoder%20远程代码执行漏洞%20CVE-2017-10271.md)
+  - [Weblogic 任意文件上传漏洞 CVE-2018-2894](Web安全/中间件/WebLogic/Weblogic%20任意文件上传漏洞%20CVE-2018-2894.md)
+  - [Weblogic 反序列化漏洞分析（CVE-2021-2135）](Web安全/中间件/WebLogic/Weblogic%20反序列化漏洞分析（CVE-2021-2135）.md)
+  - [Weblogic 弱口令+前台任意文件读取](Web安全/中间件/WebLogic/Weblogic%20弱口令+前台任意文件读取.md)
+  - [Weblogic 懂？](Web安全/中间件/WebLogic/Weblogic%20懂？.md)
+  - [Weblogic 管理控制台未授权远程命令执行漏洞 CVE-2020-14882+CVE-2020-14883](Web安全/中间件/WebLogic/Weblogic%20管理控制台未授权远程命令执行漏洞%20CVE-2020-14882+CVE-2020-14883.md)
+  - [Weblogic-2020-14882](Web安全/中间件/WebLogic/Weblogic-2020-14882.md)
+  - [Weblogic-CVE-2023-21839 - 远程代码执行复现（排坑）](Web安全/中间件/WebLogic/Weblogic-CVE-2023-21839%20-%20远程代码执行复现（排坑）.md)
+  - [Weblogic-LDAP-远程代码执行漏洞-CVE-2021-2109](Web安全/中间件/WebLogic/Weblogic-LDAP-远程代码执行漏洞-CVE-2021-2109.md)
+  - [Weblogic-Server远程代码执行漏洞-CVE-2020-14756](Web安全/中间件/WebLogic/Weblogic-Server远程代码执行漏洞-CVE-2020-14756.md)
+  - [Weblogic-uddiexplorer-SSRF漏洞-CVE-2014-4210](Web安全/中间件/WebLogic/Weblogic-uddiexplorer-SSRF漏洞-CVE-2014-4210.md)
+  - [Weblogic-二次反序列化漏洞-CVE-2021-2394](Web安全/中间件/WebLogic/Weblogic-二次反序列化漏洞-CVE-2021-2394.md)
+  - [Weblogic-未授权远程代码执行漏洞-CVE-2023-21839](Web安全/中间件/WebLogic/Weblogic-未授权远程代码执行漏洞-CVE-2023-21839.md)
+  - [Weblogic反序列化漏洞CNVD-C-2019-48814](Web安全/中间件/WebLogic/Weblogic反序列化漏洞CNVD-C-2019-48814.md)
+  - [cve 2020-14841 weblogic jndi注入](Web安全/中间件/WebLogic/cve%202020-14841%20weblogic%20jndi注入.md)
+  - [weblogic CVE-2020-2963、CNVD-2020-23019  反序列化漏洞分析与复现](Web安全/中间件/WebLogic/weblogic%20CVE-2020-2963、CNVD-2020-23019%20%20反序列化漏洞分析与复现.md)
+  - [weblogic 中间件漏洞总结](Web安全/中间件/WebLogic/weblogic%20中间件漏洞总结.md)
+  - [weblogic爆破](Web安全/中间件/WebLogic/weblogic爆破.md)
+  - [中间件常见漏洞之 weblogic](Web安全/中间件/WebLogic/中间件常见漏洞之%20weblogic.md)
+  - [基于Weblogic的一系列漏洞复现总结（一）](Web安全/中间件/WebLogic/基于Weblogic的一系列漏洞复现总结（一）.md)
+  - [干货 - 最全的 Weblogic 漏洞复现](Web安全/中间件/WebLogic/干货%20-%20最全的%20Weblogic%20漏洞复现.md)
+  - [第155篇：Weblogic反序列化漏洞的多种回显方法总结（上篇）](Web安全/中间件/WebLogic/第155篇：Weblogic反序列化漏洞的多种回显方法总结（上篇）.md)
+  - [超详细  Weblogic 未授权命令执行漏洞复现 CVE-2020-14882](Web安全/中间件/WebLogic/超详细%20%20Weblogic%20未授权命令执行漏洞复现%20CVE-2020-14882.md)
+  - [通过weblogic历史漏洞cve-2015-4852学习java反序列化漏洞](Web安全/中间件/WebLogic/通过weblogic历史漏洞cve-2015-4852学习java反序列化漏洞.md)
+  - [（CVE-2017-10271）Weblogic XMLDecoder 反序列化漏洞](Web安全/中间件/WebLogic/（CVE-2017-10271）Weblogic%20XMLDecoder%20反序列化漏洞.md)
+  - [（CVE-2017-3248）Weblogic 反序列化漏洞](Web安全/中间件/WebLogic/（CVE-2017-3248）Weblogic%20反序列化漏洞.md)
+  - [（CVE-2017-3506）Weblogic反序列化漏洞](Web安全/中间件/WebLogic/（CVE-2017-3506）Weblogic反序列化漏洞.md)
+  - [（CVE-2018-2628）Weblogic反序列化漏洞](Web安全/中间件/WebLogic/（CVE-2018-2628）Weblogic反序列化漏洞.md)
+  - [（CVE-2018-2893）Weblogic WLS核心组件反序列化漏洞](Web安全/中间件/WebLogic/（CVE-2018-2893）Weblogic%20WLS核心组件反序列化漏洞.md)
+  - [（CVE-2018-2894）Weblogic任意文件上传](Web安全/中间件/WebLogic/（CVE-2018-2894）Weblogic任意文件上传.md)
+  - [（CVE-2018-3191）Weblogic远程代码执行漏洞](Web安全/中间件/WebLogic/（CVE-2018-3191）Weblogic远程代码执行漏洞.md)
+  - [（CVE-2018-3245）Weblogic反序列化远程代码执行漏洞](Web安全/中间件/WebLogic/（CVE-2018-3245）Weblogic反序列化远程代码执行漏洞.md)
+  - [（CVE-2019-2615）Weblogic 任意文件读取漏洞](Web安全/中间件/WebLogic/（CVE-2019-2615）Weblogic%20任意文件读取漏洞.md)
+  - [（CVE-2019-2618）Weblogic任意文件上传漏洞](Web安全/中间件/WebLogic/（CVE-2019-2618）Weblogic任意文件上传漏洞.md)
+  - [（CVE-2019-2725）（CNVD-C-2019-48814）Weblogic反序列化远程代码执行漏洞](Web安全/中间件/WebLogic/（CVE-2019-2725）（CNVD-C-2019-48814）Weblogic反序列化远程代码执行漏洞.md)
+  - [（CVE-2019-2729）Weblogic反序列化漏洞](Web安全/中间件/WebLogic/（CVE-2019-2729）Weblogic反序列化漏洞.md)
+  - [（CVE-2019-2888）Weblogic EJBTaglibDescriptor XXE漏洞](Web安全/中间件/WebLogic/（CVE-2019-2888）Weblogic%20EJBTaglibDescriptor%20XXE漏洞.md)
+  - [（CVE-2019-2890）Weblogic反序列化漏洞](Web安全/中间件/WebLogic/（CVE-2019-2890）Weblogic反序列化漏洞.md)
+  - [（CVE-2020-14825）Weblogic反序列化漏洞](Web安全/中间件/WebLogic/（CVE-2020-14825）Weblogic反序列化漏洞.md)
+  - [（CVE-2020-14882） weblogic 未授权命令执行](Web安全/中间件/WebLogic/（CVE-2020-14882）%20weblogic%20未授权命令执行.md)
+  - [（CVE-2020-2551）Weblogic CVE-2020-2551 IIOP协议反序列化rce](Web安全/中间件/WebLogic/（CVE-2020-2551）Weblogic%20CVE-2020-2551%20IIOP协议反序列化rce.md)
+  - [（CVE-2020-2555）Oracle Coherence&Weblogic 反序列化远程代码执行漏洞](Web安全/中间件/WebLogic/（CVE-2020-2555）Oracle%20Coherence&Weblogic%20反序列化远程代码执行漏洞.md)
+  - [（CVE-2020-2883）Weblogic 远程代码执行漏洞](Web安全/中间件/WebLogic/（CVE-2020-2883）Weblogic%20远程代码执行漏洞.md)
 - **Webmin**（5）
   - [CVE-2020-35606 Webmin 命令执行](Web安全/运维面板/Webmin/CVE-2020-35606%20Webmin%20命令执行.md)
   - [Webmin password_change.cgi 远程命令执行漏洞 CVE-2019-15107](Web安全/运维面板/Webmin/Webmin%20password_change.cgi%20远程命令执行漏洞%20CVE-2019-15107.md)
@@ -7318,9 +7035,9 @@
 - **Webmin-多个高危**（1）
   - [Webmin-多个高危漏洞-CVE-2021-31760~62](Web安全/运维面板/Webmin-多个高危/Webmin-多个高危漏洞-CVE-2021-31760~62.md)
 - **WebSocket**（3）
-  - [CVE-2026-29793：一枚藏在 WebSocket 里的 NoSQL 注入](Web安全/AI应用/WebSocket/CVE-2026-29793：一枚藏在%20WebSocket%20里的%20NoSQL%20注入.md)
   - [OpenClaw-跨站-WebSocket-劫持漏洞-CVE-2026-25253](Web安全/其他软件/WebSocket/OpenClaw-跨站-WebSocket-劫持漏洞-CVE-2026-25253.md)
   - [Vite-开发服务器-WebSocket-任意文件读取漏洞-CVE-2026-39363](Web安全/其他软件/WebSocket/Vite-开发服务器-WebSocket-任意文件读取漏洞-CVE-2026-39363.md)
+  - [CVE-2026-29793：一枚藏在 WebSocket 里的 NoSQL 注入](Web安全/开发框架/WebSocket/CVE-2026-29793：一枚藏在%20WebSocket%20里的%20NoSQL%20注入.md)
 - **WebSphere**（4）
   - [ (7)](Web安全/中间件/WebSphere/%20%287%29.md)
   - [CVE-2020-4276 4362 IBM WebSphere远程代码执行漏洞](Web安全/中间件/WebSphere/CVE-2020-4276%204362%20IBM%20WebSphere远程代码执行漏洞.md)
@@ -7334,8 +7051,9 @@
   - [WeCenter 3.3.4 远程命令执行](Web安全/其他软件/WeCenter/WeCenter%203.3.4%20远程命令执行.md)
 - **Weiphp**（1）
   - [Weiphp5-0 任意用户 Cookie 伪造 CNVD-2021-09693](Web安全/桌面软件/Weiphp/Weiphp5-0%20任意用户%20Cookie%20伪造%20CNVD-2021-09693.md)
-- **WeiPHP**（5）
+- **WeiPHP**（6）
   - [WeiPHP3.0-session_id-任意文件上传漏洞](Web安全/CMS内容/WeiPHP/WeiPHP3.0-session_id-任意文件上传漏洞.md)
+  - [WeiPHP5.0 download_imgage 前台文件任意读取 CNVD-2020-68596](Web安全/CMS内容/WeiPHP/WeiPHP5.0%20download_imgage%20前台文件任意读取%20CNVD-2020-68596.md)
   - [WeiPHP5.0-download_imgage-前台文件任意读取-CNVD-2020-68596](Web安全/CMS内容/WeiPHP/WeiPHP5.0-download_imgage-前台文件任意读取-CNVD-2020-68596.md)
   - [WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693](Web安全/CMS内容/WeiPHP/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693.md)
   - [Weiphp5 未授权访问 - Y4er的博客](Web安全/CMS内容/WeiPHP/Weiphp5%20未授权访问%20-%20Y4er的博客.md)
@@ -7344,8 +7062,7 @@
   - [Weiphp exp表达式注入 - Y4er的博客](Web安全/其他软件/Weiphp%20exp表达式/Weiphp%20exp表达式注入%20-%20Y4er的博客.md)
 - **WeiPHP3.0**（1）
   - [WeiPHP3.0 session_id 任意文件上传漏洞](Web安全/其他软件/WeiPHP3.0/WeiPHP3.0%20session_id%20任意文件上传漏洞.md)
-- **WeiPHP5.0**（2）
-  - [WeiPHP5.0 download_imgage 前台文件任意读取 CNVD-2020-68596](Web安全/OA办公/WeiPHP5.0/WeiPHP5.0%20download_imgage%20前台文件任意读取%20CNVD-2020-68596.md)
+- **WeiPHP5.0**（1）
   - [WeiPHP5.0 任意用户Cookie伪造 CNVD-2021-09693](Web安全/桌面软件/WeiPHP5.0/WeiPHP5.0%20任意用户Cookie伪造%20CNVD-2021-09693.md)
 - **WellCMS**（2）
   - [WellCMS 1.1.02 任意用户密码重置漏洞](Web安全/CMS内容/WellCMS/WellCMS%201.1.02%20任意用户密码重置漏洞.md)
@@ -7363,6 +7080,9 @@
   - [Win 内核 LPE 漏洞 PoC 公开，从 Chrome 沙箱也能提权](Web安全/商业软件/Win/Win%20内核%20LPE%20漏洞%20PoC%20公开，从%20Chrome%20沙箱也能提权.md)
 - **Win11 RCE**（1）
   - [Win11 RCE漏洞复现CVE-2023-38146](Web安全/其他软件/Win11%20RCE/Win11%20RCE漏洞复现CVE-2023-38146.md)
+- **Windows**（2）
+  - [CVE-2021-40444：Microsoft MSHTML RCE](Web安全/桌面软件/Windows/CVE-2021-40444：Microsoft%20MSHTML%20RCE.md)
+  - [黑客利用 Windows SmartScreen 漏洞投放 DarkGate 恶意软件](Web安全/桌面软件/Windows/黑客利用%20Windows%20SmartScreen%20漏洞投放%20DarkGate%20恶意软件.md)
 - **Windows BitLocker**（4）
   - [CVE-2016-2183 windows漏洞修复指南](Web安全/其他软件/Windows%20BitLocker/CVE-2016-2183%20windows漏洞修复指南.md)
   - [CVE-2021-31956 Windows 内核漏洞（NTFS 与 WNF）利用 —— 第一部分](Web安全/其他软件/Windows%20BitLocker/CVE-2021-31956%20Windows%20内核漏洞（NTFS%20与%20WNF）利用%20——%20第一部分.md)
@@ -7475,11 +7195,12 @@
   - [（CVE-2020-12462）WordPress Plugin - Ninja Forms CSRF to XSS](Web安全/CMS内容/Wordpress/（CVE-2020-12462）WordPress%20Plugin%20-%20Ninja%20Forms%20CSRF%20to%20XSS.md)
   - [（CVE-2020-4046）WordPress  5.3.4 储型XSS](Web安全/CMS内容/Wordpress/（CVE-2020-4046）WordPress%20%205.3.4%20储型XSS.md)
   - [（从xss到getshell） xss的深层次利用与探讨](Web安全/CMS内容/Wordpress/（从xss到getshell）%20xss的深层次利用与探讨.md)
-- **WordPress**（27）
+- **WordPress**（28）
   - [CVE-2023-6063分析WordPress WP Fastest Cache 插件导致的SQL注入](Web安全/CMS内容/WordPress/CVE-2023-6063分析WordPress%20WP%20Fastest%20Cache%20插件导致的SQL注入.md)
   - [CVE-2024-3552 WordPress-Web Directory Free SQL注入漏洞复现](Web安全/CMS内容/WordPress/CVE-2024-3552%20WordPress-Web%20Directory%20Free%20SQL注入漏洞复现.md)
   - [CVE-2025-22777 (CVSS 9.8)：WordPress  GiveWP 插件的严重漏洞](Web安全/CMS内容/WordPress/CVE-2025-22777%20%28CVSS%209.8%29：WordPress%20%20GiveWP%20插件的严重漏洞.md)
   - [CVE-2025-6389 — WordPress 严重零日漏洞（远程代码执行）](Web安全/CMS内容/WordPress/CVE-2025-6389%20—%20WordPress%20严重零日漏洞（远程代码执行）.md)
+  - [WP Shuffle plugin SQL注入漏洞及解决办法（CNVD-2025-06478、CVE-2025-28873）](Web安全/CMS内容/WordPress/WP%20Shuffle%20plugin%20SQL注入漏洞及解决办法（CNVD-2025-06478、CVE-2025-28873）.md)
   - [WordPress Course Booking System SQL注入漏洞 (CVE-2025-22785)](Web安全/CMS内容/WordPress/WordPress%20Course%20Booking%20System%20SQL注入漏洞%20%28CVE-2025-22785%29.md)
   - [WordPress Dokan Pro插件 SQL注入漏洞(CVE-2024-3922)](Web安全/CMS内容/WordPress/WordPress%20Dokan%20Pro插件%20SQL注入漏洞%28CVE-2024-3922%29.md)
   - [WordPress Elementor Page Builder Plus 身份验证绕过 CVE-2021-24175](Web安全/CMS内容/WordPress/WordPress%20Elementor%20Page%20Builder%20Plus%20身份验证绕过%20CVE-2021-24175.md)
@@ -7535,8 +7256,6 @@
   - [WordPress 评论插件 wpDiscuz 任意文件上传复现](Web安全/CMS内容/WordPress%20评论插件%20wpDiscuz/WordPress%20评论插件%20wpDiscuz%20任意文件上传复现.md)
 - **WordPress-SuperForms-**（1）
   - [WordPress-SuperForms-4.9-任意文件上传到远程代码执行](Web安全/CMS内容/WordPress-SuperForms-/WordPress-SuperForms-4.9-任意文件上传到远程代码执行.md)
-- **WP Shuffle plugin SQL**（1）
-  - [WP Shuffle plugin SQL注入漏洞及解决办法（CNVD-2025-06478、CVE-2025-28873）](Web安全/开发框架/WP%20Shuffle%20plugin%20SQL/WP%20Shuffle%20plugin%20SQL注入漏洞及解决办法（CNVD-2025-06478、CVE-2025-28873）.md)
 - **WPS Office**（1）
   - [WPS Office两个严重漏洞曝光，已被武器化且在野利用](Web安全/桌面软件/WPS%20Office/WPS%20Office两个严重漏洞曝光，已被武器化且在野利用.md)
 - **WSO2**（2）
@@ -7575,16 +7294,16 @@
   - [CVE-2026-0695：ConnectWise PSA 2026.1 中修复了高危 XSS 漏洞](Web安全/其他软件/XSS/CVE-2026-0695：ConnectWise%20PSA%202026.1%20中修复了高危%20XSS%20漏洞.md)
   - [XSS 漏洞练习靶场，覆盖反射型、存储型、DOM 型、SVG、CSP、框架注入、协议绕过等多种场景](Web安全/其他软件/XSS/XSS%20漏洞练习靶场，覆盖反射型、存储型、DOM%20型、SVG、CSP、框架注入、协议绕过等多种场景.md)
   - [严重漏洞预警  Microchip TimePictra 存储型 XSS 漏洞影响关键基础设施管理系统](Web安全/商业软件/XSS/严重漏洞预警%20%20Microchip%20TimePictra%20存储型%20XSS%20漏洞影响关键基础设施管理系统.md)
-- **XStream**（6）
+- **XStream**（9）
   - [(CVE-2020-26217)XStream XML反序列化远程代码执行](Web安全/开发框架/XStream/%28CVE-2020-26217%29XStream%20XML反序列化远程代码执行.md)
   - [XStream SSRF 反序列化漏洞 CVE-2020-26258](Web安全/开发框架/XStream/XStream%20SSRF%20反序列化漏洞%20CVE-2020-26258.md)
   - [XStream 任意文件删除 反序列化漏洞 CVE-2020-26259](Web安全/开发框架/XStream/XStream%20任意文件删除%20反序列化漏洞%20CVE-2020-26259.md)
+  - [XStream-SSRF-反序列化漏洞-CVE-2020-26258](Web安全/开发框架/XStream/XStream-SSRF-反序列化漏洞-CVE-2020-26258.md)
+  - [XStream-任意文件删除-反序列化漏洞-CVE-2020-26259](Web安全/开发框架/XStream/XStream-任意文件删除-反序列化漏洞-CVE-2020-26259.md)
   - [XStream-反序列化命令执行漏洞-CVE-2021-21351](Web安全/开发框架/XStream/XStream-反序列化命令执行漏洞-CVE-2021-21351.md)
   - [XStream-反序列化命令执行漏洞-CVE-2021-29505](Web安全/开发框架/XStream/XStream-反序列化命令执行漏洞-CVE-2021-29505.md)
+  - [漏洞预警  XStream栈溢出漏洞](Web安全/开发框架/XStream/漏洞预警%20%20XStream栈溢出漏洞.md)
   - [（CVE-2019-10173）Xstream 远程代码执行漏洞](Web安全/开发框架/XStream/（CVE-2019-10173）Xstream%20远程代码执行漏洞.md)
-- **XStream-**（2）
-  - [XStream-SSRF-反序列化漏洞-CVE-2020-26258](Web安全/开发框架/XStream-/XStream-SSRF-反序列化漏洞-CVE-2020-26258.md)
-  - [XStream-任意文件删除-反序列化漏洞-CVE-2020-26259](Web安全/开发框架/XStream-/XStream-任意文件删除-反序列化漏洞-CVE-2020-26259.md)
 - **XWiki**（2）
   - [ (528)](Web安全/商业软件/XWiki/%20%28528%29.md)
   - [XWikiDatabaseSearch存在远程命令执行漏洞（CVE-2024-31982）](Web安全/商业软件/XWiki/XWikiDatabaseSearch存在远程命令执行漏洞（CVE-2024-31982）.md)
@@ -7699,27 +7418,27 @@
   - [（CVE-2019-9621）（CVE-2019-9670）Zimbra 远程代码执行漏洞](Web安全/邮件系统/Zimbra/（CVE-2019-9621）（CVE-2019-9670）Zimbra%20远程代码执行漏洞.md)
 - **Zkteco百傲瑞达安防管理系统平台**（1）
   - [Zkteco百傲瑞达安防管理系统平台存在shiro反序列化漏洞](Web安全/商业软件/Zkteco百傲瑞达安防管理系统平台/Zkteco百傲瑞达安防管理系统平台存在shiro反序列化漏洞.md)
-- **Zoho**（1）
+- **Zoho**（2）
+  - [CVE-2020-10189 Zoho ManageEngine反序列化RCE](Web安全/开发框架/Zoho/CVE-2020-10189%20Zoho%20ManageEngine反序列化RCE.md)
   - [Zoho：立即修复这个严重的ManageEngine漏洞！](Web安全/开发框架/Zoho/Zoho：立即修复这个严重的ManageEngine漏洞！.md)
-- **Zoho ManageEngine**（1）
-  - [CVE-2020-10189 Zoho ManageEngine反序列化RCE](Web安全/开发框架/Zoho%20ManageEngine/CVE-2020-10189%20Zoho%20ManageEngine反序列化RCE.md)
 - **ZoneMinder**（2）
   - [CVE-2026-27470(Zoneminder-二阶注入)研究 (2)](Web安全/其他软件/ZoneMinder/CVE-2026-27470%28Zoneminder-二阶注入%29研究%20%282%29.md)
   - [ZoneMinderindex存在SQL注入漏洞](Web安全/其他软件/ZoneMinder/ZoneMinderindex存在SQL注入漏洞.md)
 - **Zoom**（1）
   - [Zoom客户端惊现高危漏洞，数百万用户数据或泄露！](Web安全/其他软件/Zoom/Zoom客户端惊现高危漏洞，数百万用户数据或泄露！.md)
-- **Zyxel**（7）
+- **Zyxel**（12）
   - [ (213)](Web安全/网络设备/Zyxel/%20%28213%29.md)
   - [ (214)](Web安全/网络设备/Zyxel/%20%28214%29.md)
   - [CVE-2025-11730：在ZYXEL防火墙中玩文字游戏通过DDNS配置获取Root权限](Web安全/网络设备/Zyxel/CVE-2025-11730：在ZYXEL防火墙中玩文字游戏通过DDNS配置获取Root权限.md)
+  - [Zyxel CPE 设备遭遇大规模攻击：关键漏洞（CVE-2024-40891）仍未修复！](Web安全/网络设备/Zyxel/Zyxel%20CPE%20设备遭遇大规模攻击：关键漏洞（CVE-2024-40891）仍未修复！.md)
   - [Zyxel 防火墙 CVE-2022-30525 setWanPortStat 未授权命令执行](Web安全/网络设备/Zyxel/Zyxel%20防火墙%20CVE-2022-30525%20setWanPortStat%20未授权命令执行.md)
   - [Zyxel-NBG2105-身份验证绕过-CVE-2021-3297](Web安全/网络设备/Zyxel/Zyxel-NBG2105-身份验证绕过-CVE-2021-3297.md)
   - [Zyxel-硬编码后门账户漏洞-CVE-2020-29583](Web安全/网络设备/Zyxel/Zyxel-硬编码后门账户漏洞-CVE-2020-29583.md)
+  - [ZyxelNBG2105身份验证绕过](Web安全/网络设备/Zyxel/ZyxelNBG2105身份验证绕过.md)
+  - [原创 Paper  Zyxel Telnet 漏洞分析(CVE-2025-0890、CVE‑2024‑40891)](Web安全/网络设备/Zyxel/原创%20Paper%20%20Zyxel%20Telnet%20漏洞分析%28CVE-2025-0890、CVE‑2024‑40891%29.md)
+  - [合勤科技修复NAS 设备中的高危漏洞](Web安全/网络设备/Zyxel/合勤科技修复NAS%20设备中的高危漏洞.md)
+  - [合勤：影响十几款路由器的严重RCE漏洞](Web安全/网络设备/Zyxel/合勤：影响十几款路由器的严重RCE漏洞.md)
   - [尽快更新！Zyxel 路由器曝出 OS 命令注入漏洞，影响多个版本](Web安全/网络设备/Zyxel/尽快更新！Zyxel%20路由器曝出%20OS%20命令注入漏洞，影响多个版本.md)
-- **Zyxel CPE**（1）
-  - [Zyxel CPE 设备遭遇大规模攻击：关键漏洞（CVE-2024-40891）仍未修复！](Web安全/网络设备/Zyxel%20CPE/Zyxel%20CPE%20设备遭遇大规模攻击：关键漏洞（CVE-2024-40891）仍未修复！.md)
-- **Zyxel(合勤)**（1）
-  - [ZyxelNBG2105身份验证绕过](Web安全/网络设备/Zyxel%28合勤%29/ZyxelNBG2105身份验证绕过.md)
 - **ZZCMS**（7）
   - [ZZCMS201910 SQL注入](Web安全/CMS内容/ZZCMS/ZZCMS201910%20SQL注入.md)
   - [Zzcms 2018 最新版重装getshell](Web安全/CMS内容/ZZCMS/Zzcms%202018%20最新版重装getshell.md)
@@ -7741,10 +7460,8 @@
   - [zzzcms-v1.7.5-前台远程命令执行漏洞](Web安全/CMS内容/Zzzcms/zzzcms-v1.7.5-前台远程命令执行漏洞.md)
 - **zzzcms(asp)前台Getshell**（1）
   - [zzzcms(asp)前台Getshell](Web安全/CMS内容/zzzcms%28asp%29前台Getshell/zzzcms%28asp%29前台Getshell.md)
-- **0day**（23）
-  - [使用开源AI探寻0day的艺术](Web安全/AI应用/0day/使用开源AI探寻0day的艺术.md)
+- **0day**（19）
   - [LMXCMS 代码审计 --- 送‘0day’啦](Web安全/CMS内容/0day/LMXCMS%20代码审计%20---%20送‘0day’啦.md)
-  - [漏洞复现 - （通用 0day）金和 C6 协同 OA 管理平台后台存在水平越权漏洞](Web安全/OA办公/0day/漏洞复现%20-%20（通用%200day）金和%20C6%20协同%20OA%20管理平台后台存在水平越权漏洞.md)
   - [ (273)](Web安全/其他软件/0day/%20%28273%29.md)
   - [HW-0day Hytec Inter HWL-2511-SS RCE POC](Web安全/其他软件/0day/HW-0day%20Hytec%20Inter%20HWL-2511-SS%20RCE%20POC.md)
   - [“三角测量行动”利用 iOS 0day漏洞（CVE-2023-32434）部署后门](Web安全/其他软件/0day/“三角测量行动”利用%20iOS%200day漏洞（CVE-2023-32434）部署后门.md)
@@ -7763,8 +7480,6 @@
   - [谷歌：Pixel 固件0day漏洞已遭活跃利用](Web安全/其他软件/0day/谷歌：Pixel%20固件0day漏洞已遭活跃利用.md)
   - [黑客早在2022年10月就利用0day 攻击 Barracuda ESG 设备](Web安全/其他软件/0day/黑客早在2022年10月就利用0day%20攻击%20Barracuda%20ESG%20设备.md)
   - [黑客正在利用 TBK DVR 设备中五年未修复的 0day](Web安全/智能设备/0day/黑客正在利用%20TBK%20DVR%20设备中五年未修复的%200day.md)
-  - [思科：已遭利用的满分 SD-WAN 新 0day](Web安全/网络设备/0day/思科：已遭利用的满分%20SD-WAN%20新%200day.md)
-  - [高危无补丁0day影响思科数据中心交换机，可导致加密流量遭篡改](Web安全/网络设备/0day/高危无补丁0day影响思科数据中心交换机，可导致加密流量遭篡改.md)
 - **0day   XVE-2023-23743**（1）
   - [0day   XVE-2023-23743 RCE 漏洞（附 EXP）](Web安全/其他软件/0day%20%20%20XVE-2023-23743/0day%20%20%20XVE-2023-23743%20RCE%20漏洞（附%20EXP）.md)
 - **0day Casdoor**（1）
@@ -7773,8 +7488,6 @@
   - [0day EXP Ivanti Endpoint Manager 4.6原创命令执行漏洞利用程序](Web安全/其他软件/0day%20EXP/0day%20EXP%20Ivanti%20Endpoint%20Manager%204.6原创命令执行漏洞利用程序.md)
   - [0day EXP Printix Client 1.3.1106.0命令执行漏洞](Web安全/桌面软件/0day%20EXP/0day%20EXP%20Printix%20Client%201.3.1106.0命令执行漏洞.md)
   - [0day EXP SQL注入 Multi-Vendor Online Groceries Management System](Web安全/桌面软件/0day%20EXP/0day%20EXP%20SQL注入%20Multi-Vendor%20Online%20Groceries%20Management%20System.md)
-- **0day EXP Apache APISIX 2.12.1**（1）
-  - [0day EXP Apache APISIX 2.12.1 远程执行代码 （RCE）](Web安全/中间件/0day%20EXP%20Apache%20APISIX%202.12.1/0day%20EXP%20Apache%20APISIX%202.12.1%20远程执行代码%20（RCE）.md)
 - **0day EXP Pluck CMS 4.7.16**（1）
   - [0day EXP Pluck CMS 4.7.16 远程执行代码 （RCE）](Web安全/CMS内容/0day%20EXP%20Pluck%20CMS%204.7.16/0day%20EXP%20Pluck%20CMS%204.7.16%20远程执行代码%20（RCE）.md)
 - **0day EXP Xerte3.9**（1）
@@ -7783,12 +7496,33 @@
   - [0day 帆软未授权命令执行 RCE 附 poc](Web安全/其他软件/0day%20帆软/0day%20帆软未授权命令执行%20RCE%20附%20poc.md)
 - **0day 畅捷 CRM**（1）
   - [0day 畅捷 CRM SQL 注入漏洞复现](Web安全/商业软件/0day%20畅捷%20CRM/0day%20畅捷%20CRM%20SQL%20注入漏洞复现.md)
+- **0day情报**（24）
+  - [Cyber​​Panel filemanagerupload 远程命令执行漏洞](Web安全/OA办公/0day情报/Cyber​​Panel%20filemanagerupload%20远程命令执行漏洞.md)
+  - [天融信-TopApp-LB-enable_tool_debug.php-远程命令执行漏洞](Web安全/OA办公/0day情报/天融信-TopApp-LB-enable_tool_debug.php-远程命令执行漏洞.md)
+  - [漏洞复现 - （通用 0day）金和 C6 协同 OA 管理平台后台存在水平越权漏洞](Web安全/OA办公/0day情报/漏洞复现%20-%20（通用%200day）金和%20C6%20协同%20OA%20管理平台后台存在水平越权漏洞.md)
+  - [CISA 警告 Zyxel 防火墙漏洞可能被利用进行攻击](Web安全/其他软件/0day情报/CISA%20警告%20Zyxel%20防火墙漏洞可能被利用进行攻击.md)
+  - [CISA 警告：Palo Alto 重大漏洞已被攻击者利用](Web安全/其他软件/0day情报/CISA%20警告：Palo%20Alto%20重大漏洞已被攻击者利用.md)
+  - [CVE-2026-20262_ CISCO Catalyst SD-WAN Flaw Under Active Targeted Explo](Web安全/其他软件/0day情报/CVE-2026-20262_%20CISCO%20Catalyst%20SD-WAN%20Flaw%20Under%20Active%20Targeted%20Explo.md)
+  - [CVE-2026-25803：3DP-MANAGER 硬编码默认凭据导致 VPN 管理后台完全接管](Web安全/其他软件/0day情报/CVE-2026-25803：3DP-MANAGER%20硬编码默认凭据导致%20VPN%20管理后台完全接管.md)
+  - [Critical CVE-2025-59367 flaw lets hackers access ASUS DSL routers remo](Web安全/其他软件/0day情报/Critical%20CVE-2025-59367%20flaw%20lets%20hackers%20access%20ASUS%20DSL%20routers%20remo.md)
+  - [Interlock勒索软件利用思科FMC零日漏洞CVE-2026-20131获取Root权限](Web安全/其他软件/0day情报/Interlock勒索软件利用思科FMC零日漏洞CVE-2026-20131获取Root权限.md)
+  - [Not all CISA-linked alerts are urgent_ ASUS Live Update CVE-2025-59374](Web安全/其他软件/0day情报/Not%20all%20CISA-linked%20alerts%20are%20urgent_%20ASUS%20Live%20Update%20CVE-2025-59374.md)
+  - [TunnelVision漏洞曝光，几乎可监听所有VPN](Web安全/其他软件/0day情报/TunnelVision漏洞曝光，几乎可监听所有VPN.md)
+  - [VPN漏洞频发，威努特零信任如何守护企业数字边界？](Web安全/其他软件/0day情报/VPN漏洞频发，威努特零信任如何守护企业数字边界？.md)
+  - [​网御 ACM 上网行为管理系统 bottomframe.cgi 接口存在 SQL 注入漏洞 附 POC](Web安全/其他软件/0day情报/​网御%20ACM%20上网行为管理系统%20bottomframe.cgi%20接口存在%20SQL%20注入漏洞%20附%20POC.md)
+  - [中科网威 锐捷 网域 等多个设备 账号密码泄露漏洞 (好久不更新了，补一下啦~)](Web安全/其他软件/0day情报/中科网威%20锐捷%20网域%20等多个设备%20账号密码泄露漏洞%20%28好久不更新了，补一下啦~%29.md)
+  - [如何获取Tenda AX18系列的Telnet密码](Web安全/其他软件/0day情报/如何获取Tenda%20AX18系列的Telnet密码.md)
+  - [引导加载程序存在高危漏洞，影响思科100多个交换机机型](Web安全/其他软件/0day情报/引导加载程序存在高危漏洞，影响思科100多个交换机机型.md)
+  - [思科：已遭利用的满分 SD-WAN 新 0day](Web安全/其他软件/0day情报/思科：已遭利用的满分%20SD-WAN%20新%200day.md)
+  - [恶意软件利用零日漏洞感染报废的AVTECH IP 摄像机](Web安全/其他软件/0day情报/恶意软件利用零日漏洞感染报废的AVTECH%20IP%20摄像机.md)
+  - [攻击者利用新零日漏洞劫持Fortinet防火墙](Web安全/其他软件/0day情报/攻击者利用新零日漏洞劫持Fortinet防火墙.md)
+  - [新的UEFI漏洞使得针对技嘉、微星、华硕和华擎主板的预启动攻击成为焦点](Web安全/其他软件/0day情报/新的UEFI漏洞使得针对技嘉、微星、华硕和华擎主板的预启动攻击成为焦点.md)
+  - [核弹级漏洞预警 苹果、微信、支付宝、小米浏览器、携程应用等均存在任意文件读取漏洞](Web安全/其他软件/0day情报/核弹级漏洞预警%20苹果、微信、支付宝、小米浏览器、携程应用等均存在任意文件读取漏洞.md)
+  - [漏洞速递   CVE-2022-42475 VPN 远程代码执行漏洞](Web安全/其他软件/0day情报/漏洞速递%20%20%20CVE-2022-42475%20VPN%20远程代码执行漏洞.md)
+  - [高危无补丁0day影响思科数据中心交换机，可导致加密流量遭篡改](Web安全/其他软件/0day情报/高危无补丁0day影响思科数据中心交换机，可导致加密流量遭篡改.md)
+  - [！华硕DriverHub曝高危漏洞，请立即更新！—远程攻击者可通过HTTP请求劫持你的主板驱动管理](Web安全/其他软件/0day情报/！华硕DriverHub曝高危漏洞，请立即更新！—远程攻击者可通过HTTP请求劫持你的主板驱动管理.md)
 - **0day预警  Windows WIFI驱动**（1）
   - [0day预警  Windows WIFI驱动远程代码执行（CVE-2024-30078）](Web安全/其他软件/0day预警%20%20Windows%20WIFI驱动/0day预警%20%20Windows%20WIFI驱动远程代码执行（CVE-2024-30078）.md)
-- **19.9 美元路由拆到**（1）
-  - [19.9 美元路由拆到 RCE：Dbit N300 UART + Boa 溢出（CVE-2026-20374）](Web安全/网络设备/19.9%20美元路由拆到/19.9%20美元路由拆到%20RCE：Dbit%20N300%20UART%20+%20Boa%20溢出（CVE-2026-20374）.md)
-- **1day 迪普 VPN Service**（1）
-  - [1day 迪普 VPN Service 任意文件读取漏洞复现（附 nuclei poc）](Web安全/网络设备/1day%20迪普%20VPN%20Service/1day%20迪普%20VPN%20Service%20任意文件读取漏洞复现（附%20nuclei%20poc）.md)
 - **1Panel**（1）
   - [1Panel-控制面板-SQL-注入漏洞-CVE-2024-39907](Web安全/运维面板/1Panel/1Panel-控制面板-SQL-注入漏洞-CVE-2024-39907.md)
 - **360**（3）
@@ -7821,7 +7555,7 @@
 - **7Zip**（1）
   - [CVE-2024-11477 7Zip 中的“代码执行”漏洞 Writeup](Web安全/桌面软件/7Zip/CVE-2024-11477%207Zip%20中的“代码执行”漏洞%20Writeup.md)
 
-## 系统安全（89 篇）
+## 系统安全（90 篇）
 
 - **其他组件**（15）
   - [Firebird数据库提权姿势总结   技术精选0128](系统安全/其他漏洞/其他组件/Firebird数据库提权姿势总结%20%20%20技术精选0128.md)
@@ -7890,7 +7624,8 @@
   - [Kubernetes + Ubuntu 18.04 漏洞环境搭建](系统安全/其他漏洞/Ubuntu/Kubernetes%20+%20Ubuntu%2018.04%20漏洞环境搭建.md)
 - **v8**（1）
   - [v8 漏洞在 windows 微信下利用的研究](系统安全/其他漏洞/v8/v8%20漏洞在%20windows%20微信下利用的研究.md)
-- **Windows**（17）
+- **Windows**（18）
+  - [poc  Windows 远程桌面网关 (RD Gateway) CVE-2025-21297介绍](系统安全/Windows/poc%20%20Windows%20远程桌面网关%20%28RD%20Gateway%29%20CVE-2025-21297介绍.md)
   - [CVE-2020-1337](系统安全/其他漏洞/Windows/CVE-2020-1337.md)
   - [Windows 远程桌面服务漏洞 CVE-2019-0708](系统安全/其他漏洞/Windows/Windows%20远程桌面服务漏洞%20CVE-2019-0708.md)
   - [Windows-CryptoAPI-欺骗漏洞-CVE-2020-0601](系统安全/其他漏洞/Windows/Windows-CryptoAPI-欺骗漏洞-CVE-2020-0601.md)

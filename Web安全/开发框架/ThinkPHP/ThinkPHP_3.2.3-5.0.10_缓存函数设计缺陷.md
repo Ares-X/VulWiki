@@ -27,7 +27,7 @@ source: "白阁文库 BaizeSec/bylibrary"
 
 下一步需要对缓存的文件名进行猜解，文件名的生成规则是缓存的key的MD5，所以黑盒情况下可以先算一些关键词的MD5，然后批量HEAD请求，发现响应200则说明存在这个缓存文件，或者结合源代码泄露漏洞进行利用，在这里我们直接从源码文件看到生成的文件：
 
-![poc1.png](./.resource/ThinkPHP_3.2.3-5.0.10_缓存函数设计缺陷/media/poc1.png)
+
 
 文件名 也正是 缓存 key （name） 的MD5 值：
 
@@ -35,7 +35,7 @@ source: "白阁文库 BaizeSec/bylibrary"
 
 最后，可以看到 b068931cc450442b63f5b3d276ea4297.php 的 内容为之前写进去的一句话木马：
 
-![poc2.png](./.resource/ThinkPHP_3.2.3-5.0.10_缓存函数设计缺陷/media/poc2.png)
+
 
 
 ## References

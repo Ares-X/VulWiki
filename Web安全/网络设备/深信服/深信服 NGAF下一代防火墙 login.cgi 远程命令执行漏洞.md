@@ -22,7 +22,7 @@ source: "Threekiii/Awesome-POC"
 
 登陆页面
 
-![image-20231115101204343](./.resource/深信服NGAF下一代防火墙loadfile.php任意文件读取漏洞/media/image-20231115101204343.png)
+![image-20231115101204343](./.resource/深信服NGAF下一代防火墙login.cgi远程命令执行漏洞/media/image-20231115101204343.png)
 
 poc
 

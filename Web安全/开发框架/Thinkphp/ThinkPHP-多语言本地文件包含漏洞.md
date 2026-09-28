@@ -26,14 +26,14 @@ docker-compose up -d
 
 环境启动后，访问 `http://your-ip:8080` 即可查看到 ThinkPHP 默认的欢迎页面。
 
-![image-20230504110841526](./.resource/ThinkPHP-多语言本地文件包含漏洞/media/image-20230504110841526.png)
+
 
 
 ## 漏洞利用
 
 首先，ThinkPHP 多语言特性不是默认开启的，所以我们可以尝试包含 `public/index.php` 文件来确认文件包含漏洞是否存在：
 
-![image-20230504111549577](./.resource/ThinkPHP-多语言本地文件包含漏洞/media/image-20230504111549577.png)
+
 
 
 如果漏洞存在，则服务器会出错，返回 500 页面。
@@ -58,12 +58,12 @@ Cache-Control: max-age=0
 
 如果服务器返回 pearcmd 的命令行执行结果，说明漏洞利用成功：
 
-![image-20230504111600929](./.resource/ThinkPHP-多语言本地文件包含漏洞/media/image-20230504111600929.png)
+
 
 
 此时访问 `http://your-ip:8080/shell.php` 即可发现已经成功写入文件：
 
-![image-20230504111609053](./.resource/ThinkPHP-多语言本地文件包含漏洞/media/image-20230504111609053.png)
+
 
 
 ---

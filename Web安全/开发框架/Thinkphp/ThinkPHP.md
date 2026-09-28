@@ -92,7 +92,7 @@ source: "Mr-xn/Penetration_Testing_POC"
 >
 >结果
 >
->![20170703.png](./.resource/ThinkPHP/media/2017-07-03.png)
+>
 
 #### ThinkPHP5.0.10-3.2.3_缓存函数设计缺陷可导致Getshell 
 
@@ -134,11 +134,11 @@ source: "Mr-xn/Penetration_Testing_POC"
   >
   >结果
   >
-  >![img](./.resource/ThinkPHP/media/2017-08-09-1.png)
   >
-  >![img](./.resource/ThinkPHP/media/2017-08-09-2.png)
   >
-  >![img](./.resource/ThinkPHP/media/2017-08-09-3.png)
+  >
+  >
+  >
   >
   >其中文件路径和名称是 b0+68931cc450442b63f5b3d276ea4297 而
   >
@@ -176,7 +176,7 @@ source: "Mr-xn/Penetration_Testing_POC"
 >
 >结果
 >
->![img](./.resource/ThinkPHP/media/2018-04-09.png)
+>
 
 #### ThinkPHP5.X_order_by注入漏洞
 
@@ -211,7 +211,7 @@ source: "Mr-xn/Penetration_Testing_POC"
 >
 >结果
 >
->![img](./.resource/ThinkPHP/media/2018-08-23.png)
+>
 
 #### ThinkPHP5.X_远程代码执行
 
@@ -243,7 +243,7 @@ source: "Mr-xn/Penetration_Testing_POC"
 >
 >结果
 >
->![img](./.resource/ThinkPHP/media/2018-12-10.png)
+>
 
 
 ---
