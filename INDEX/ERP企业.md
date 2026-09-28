@@ -1,4 +1,4 @@
-# Web安全 / ERP企业
+# ERP企业
 
 
 ## CyberPower PowerPanel Enterprise
@@ -59,17 +59,9 @@
 
 - [SplunkEnterprise任意文件读取漏洞(CVE-2024-36991)](Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/SplunkEnterprise/SplunkEnterprise%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E%28CVE-2024-36991%29.md)
 
-## ThinVnc
-
-- [CVE-2019-17662-ThinVNC 1.0b1 - Authentication Bypass](Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/ThinVnc/CVE-2019-17662-ThinVNC%201.0b1%20-%20Authentication%20Bypass.md)
-
 ## UserPlus
 
 - [UserPlus = 2.0 – 未经身份验证的权限提升 (CVE-2024-9518)](Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/UserPlus/UserPlus%20%3D%202.0%20%E2%80%93%20%E6%9C%AA%E7%BB%8F%E8%BA%AB%E4%BB%BD%E9%AA%8C%E8%AF%81%E7%9A%84%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87%20%28CVE-2024-9518%29.md)
-
-## 东胜物流
-
-- [东胜物流软件 AttributeAdapter.aspx SQL 注入漏洞](Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E4%B8%9C%E8%83%9C%E7%89%A9%E6%B5%81/%E4%B8%9C%E8%83%9C%E7%89%A9%E6%B5%81%E8%BD%AF%E4%BB%B6%20AttributeAdapter.aspx%20SQL%20%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md)
 
 ## 严重的SAP
 
