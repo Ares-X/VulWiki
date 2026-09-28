@@ -1,23 +1,23 @@
 ---
 cve: "CVE-2019-12860"
-source: "白阁文库 BaizeSec/bylibrary"
+source: "Mr-xn/Penetration_Testing_POC"
 ---
 
 # S-CMS PHP v3.0存在SQL注入漏洞
 
-### 漏洞简介 
+### 漏洞简介  
 
 |漏洞名称|上报日期|漏洞发现者|产品首页|软件链接|版本|CVE编号|
 --------|--------|---------|--------|-------|----|------|
 |S-CMS PHP v3.0存在SQL注入漏洞|2019-05-31|zhhhy|[https://www.s-cms.cn/download.html?code=php](https://www.s-cms.cn/download.html?code=php) | [https://www.s-cms.cn/download.html?code=php](https://www.s-cms.cn/download.html?code=php) |PHP v3.0| [CVE-2019-12860](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12860)|  
 
-#### 漏洞概述 
+#### 漏洞概述  
 
-> 漏洞代码位置：/js/scms.php 第182-204行,在第83行处，变量$pageid接受使用POST方式传递的pageid的值。而在第87行和第95行处，变量$pageid被直接拼接进SQL语句之中，从而产生注入。而由于是数字型注入，避免使用单引号等符号以至于绕过了防御。 
+> 漏洞代码位置：/js/scms.php 第182-204行,在第83行处，变量$pageid接受使用POST方式传递的pageid的值。而在第87行和第95行处，变量$pageid被直接拼接进SQL语句之中，从而产生注入。而由于是数字型注入，避免使用单引号等符号以至于绕过了防御。   
 
-### POC实现代码如下： 
+### POC实现代码如下：  
 
-> 构造如下poc.py 
+> 构造如下poc.py  
 
 ``` python
 import requests
@@ -73,8 +73,9 @@ def getDatabaseName():
     return databasename
 getDatabaseName() 
 ```
+### 漏洞详情：[PDF版详情](POC_Details/S-CMS%20PHP%20v30存在SQL注入漏洞.pdf)
 
 
 ---
 
-> 来源：白阁文库 BaizeSec/bylibrary
+> 来源：Mr-xn/Penetration_Testing_POC
