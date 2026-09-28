@@ -1,0 +1,181 @@
+---
+cve: "CVE-2023-50386"
+source: "gelusus/wxvl 公众号漏洞文库"
+---
+
+#  【漏洞通告】Apache Solr Backup/Restore APIs 远程命令执行漏洞CVE-2023-50386   
+深瞳漏洞实验室  深信服千里目安全技术中心   2024-02-20 16:27  
+  
+![](https://mmbiz.qpic.cn/mmbiz_gif/w8NHw6tcQ5yoagUMdkvic6NeTEc5P2pbWJxH8Hg7cnpDuLNDa5SXdiadzJJuhWCbHdrt0yCM7z9l7NokBiaI5Cgfg/640?wx_fmt=gif&from=appmsg "")  
+  
+**漏洞名称：**  
+  
+Apache Solr Backup/Restore APIs远程命令执行漏洞(CVE-2023-50386)  
+  
+**组件名称：**  
+  
+Apache Solr  
+  
+**影响范围：**  
+  
+6.0.0 ≤ Apache Solr < 8.11.3  
+  
+9.0.0 ≤ Apache Solr < 9.4.1  
+  
+**漏洞类型：**  
+  
+命令执行  
+  
+**利用条件：**  
+  
+1、用户认证：需要用户认证  
+  
+2、前置条件：默认配置  
+  
+3、触发方式：远程  
+  
+**综合评价：**  
+  
+<综合评定利用难度>：简单，需要低权限。  
+  
+<综合评定威胁等级>：高危，能造成远程命令执行。  
+  
+**官方解决方案：**  
+  
+已发布  
+  
+  
+  
+  
+  
+**漏洞分析**  
+  
+![](https://mmbiz.qpic.cn/mmbiz_gif/w8NHw6tcQ5yoagUMdkvic6NeTEc5P2pbWELQVIDTWqw4jNiboIfOsYARqfWwqYiaZ52VGia5oibyS6Ihd8M46o9Nialg/640?wx_fmt=gif&from=appmsg "")  
+  
+**组件介绍**  
+  
+Apache Solr是一个基于Java开发的高性能全文搜索服务器，是Apache Lucene项目的开源企业搜索平台。  
+  
+![](https://mmbiz.qpic.cn/mmbiz_gif/w8NHw6tcQ5yoagUMdkvic6NeTEc5P2pbWELQVIDTWqw4jNiboIfOsYARqfWwqYiaZ52VGia5oibyS6Ihd8M46o9Nialg/640?wx_fmt=gif&from=appmsg "")  
+  
+**漏洞简介**  
+  
+2024年2月20日，深瞳漏洞实验室监测到一则Apache Solr组件存在远程命令执行漏洞的信息，漏洞编号：CVE-2023-50386，漏洞威胁等级：高危。  
+  
+该漏洞是由于Apache Solr的备份功能可以导出并加载上传的Java文件，**攻击者可利用该漏洞在获得权限的情况下，构造恶意class文件上传并使用备份功能加载，最终获取服务器权限****。**  
+  
+  
+**影响范围**  
+  
+目前受影响的Apache Solr版本：  
+  
+6.0.0 ≤Apache Solr < 8.11.3  
+  
+9.0.0 ≤ Apache Solr < 9.4.1  
+  
+  
+**解决方案**  
+  
+![](https://mmbiz.qpic.cn/mmbiz_gif/w8NHw6tcQ5yoagUMdkvic6NeTEc5P2pbWELQVIDTWqw4jNiboIfOsYARqfWwqYiaZ52VGia5oibyS6Ihd8M46o9Nialg/640?wx_fmt=gif&from=appmsg "")  
+  
+**如何检测组件系统版本**  
+  
+  
+访问主页Dashboard即可查看。  
+  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/w8NHw6tcQ5yoagUMdkvic6NeTEc5P2pbWqqLxRtHNibVCicibGIEzlOUpBmEDRQuvo3BglOdmpg7eO9CXUH8jmEJQg/640?wx_fmt=png&from=appmsg "")  
+  
+  
+![](https://mmbiz.qpic.cn/mmbiz_gif/w8NHw6tcQ5yoagUMdkvic6NeTEc5P2pbWELQVIDTWqw4jNiboIfOsYARqfWwqYiaZ52VGia5oibyS6Ihd8M46o9Nialg/640?wx_fmt=gif&from=appmsg "")  
+  
+**官方修复建议**  
+  
+  
+当前官方已发布最新版本，建议受影响的用户及时更新升级到最新版本。链接如下：  
+  
+https://solr.apache.org/  
+  
+![](https://mmbiz.qpic.cn/mmbiz_gif/w8NHw6tcQ5yoagUMdkvic6NeTEc5P2pbWELQVIDTWqw4jNiboIfOsYARqfWwqYiaZ52VGia5oibyS6Ihd8M46o9Nialg/640?wx_fmt=gif&from=appmsg "")  
+  
+**深信服解决方案**  
+  
+  
+**1.风险资产发现**  
+  
+支持对Apache Solr的主动检测，可**批量检出**业务场景中该事件的受影响资产情况，相关产品如下：  
+  
+**【深信服云镜YJ】**已发布资产检测方案。  
+  
+**【深信服漏洞评估工具TSS】**已发布资产检测方案。  
+  
+****  
+**2.漏洞主动扫描**  
+  
+支持对Apache Solr Backup/Restore APIs远程命令执行漏洞(CVE-2023-50386)的主动扫描，可**批量快速检出**业务场景中是否存在漏洞风险，相关产品如下：  
+  
+**【深信服云镜YJ】**预计 2024年2月25日发布扫描方案。  
+  
+**【深信服漏洞评估工具TSS】**预计2024年2月25日发布扫描方案。  
+  
+**【深信服安全托管服务MSS】**预计2024年2月29日发布扫描方案,（需要具备TSS组件能力）。  
+  
+**【深信服安全检测与响应平台XDR】**预计2024年2月25日发布扫描方案/已发布扫描方案,（需要具备云镜组件能力）。  
+  
+****  
+**3.漏洞安全监测**  
+  
+支持对Apache Solr Backup/Restore APIs远程命令执行漏洞(CVE-2023-50386)的监测，可依据流量收集实时监控业务场景中的**受影响资产情况，快速检查受影响范围，**相关产品及服务如下：  
+  
+**【深信服安全感知管理平台SIP】**预计2024年2月28日发布监测方案。  
+  
+**【深信服安全托管服务MSS】**预计2024年2月28日发布监测方案（需要具备SIP组件能力）。  
+  
+**【深信服安全检测与响应平台XDR】**预计2024年2月28日发布监测方案。  
+  
+****  
+**4.漏洞安全防护**  
+  
+支持对Apache Solr Backup/Restore APIs远程命令执行漏洞(CVE-2023-50386)的防御，**可阻断攻击者针对该事件的入侵行为，**相关产品及服务如下：  
+  
+**【深信服下一代防火墙AF】**预计2024年2月28日发布防护方案。  
+  
+**【深信服Web应用防火墙WAF】**预计2024年2月28日发布防护方案。  
+  
+**【深信服安全托管服务MSS】**预计2024年2月28日发布防护方案（需要具备AF组件能力）。  
+  
+**【深信服安全检测与响应平台XDR】**预计2024年2月28日发布防护方案（需要具备AF组件能力）。  
+  
+  
+**参考链接**  
+  
+  
+https://solr.apache.org/security.html#cve-2023-50386-apache-solr-backuprestore-apis-allow-for-deployment-of-executables-in-malicious-configsets  
+  
+  
+**时间轴**  
+  
+  
+  
+**2024/2/20**  
+  
+深瞳漏洞实验室监测到Apache Solr Backup/Restore APIs远程命令执行漏洞(CVE-2023-50386)攻击信息。  
+  
+  
+**2024/2/20**  
+  
+深瞳漏洞实验室发布漏洞通告。  
+  
+点击**阅读原文**，及时关注并登录深信服**智安全平台**，可轻松查询漏洞相关解决方案。  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/w8NHw6tcQ5yoagUMdkvic6NeTEc5P2pbWhuJLLLVIgPtYXiask5sTcJOu85u6iaqvLdQIewBAcicGfF7DRGBuwRjAQ/640?wx_fmt=png&from=appmsg "")  
+  
+![](https://mmbiz.qpic.cn/mmbiz_jpg/w8NHw6tcQ5yoagUMdkvic6NeTEc5P2pbWPnCchwv14E5GUBDN6ic7fl7lYPibjxAcibtAc1HVDS5yTxHSjSQs66nGg/640?wx_fmt=jpeg&from=appmsg "")  
+  
+  
+  
+
+
+---
+
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）

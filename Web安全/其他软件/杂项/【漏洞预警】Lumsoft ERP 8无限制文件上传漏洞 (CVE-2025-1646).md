@@ -1,0 +1,44 @@
+---
+cve: "CVE-2025-1646"
+source: "gelusus/wxvl 公众号漏洞文库"
+---
+
+#  【漏洞预警】Lumsoft ERP 8无限制文件上传漏洞 (CVE-2025-1646)   
+cexlife  飓风网络安全   2025-02-25 12:34  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/ibhQpAia4xu01DPs8QIt5iaREdIOicB4S4X2EdcdiaD9YNHGNMCoyW0DfFWpmXp67A9O3oKibuwGXOn64EjicMmmXIyng/640?wx_fmt=png&from=appmsg "")  
+  
+漏洞描述:  
+  
+在Lumѕоft ERP 8中发现了一个被分类为严重的漏洞,这个问题影响了组件ASPX文件处理器中文件/Aрi/TinуMсе/UрlоаdAјахAPI.аѕhх的一些未知功能,操纵参数filе导致无限制的上传,攻击者可能远程发起该漏洞已被公开披露,并且可能被利用。  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/ibhQpAia4xu01DPs8QIt5iaREdIOicB4S4X2w0S1pTo4fPNmgh8Zbl9ibZ6SoNJwLLOcwyeZGsoJP3m7zcibNCodnNibw/640?wx_fmt=png&from=appmsg "")  
+  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/ibhQpAia4xu01DPs8QIt5iaREdIOicB4S4X227X3S0zevdVd6ASEAyKr92SocTy2OG0ibibDYWqOpe668TicDhlO0LmGw/640?wx_fmt=png&from=appmsg "")  
+  
+攻击场景:  
+  
+攻击者可能通过上传恶意文件来攻击系统,例如通过未知功能的文件上传API。  
+  
+影响产品:  
+  
+ERP==8   
+  
+修复方案:  
+  
+安装补丁:  
+  
+请访问Lumѕоft官方网站以获取最新的安全补丁和更新,其他修复方法:  
+  
+实施文件类型验证,要求文件上传端点进行身份验证,进行内容检查,配置上传目录权限,实施日志记录和监控。  
+  
+建议立即采取措施修复该漏洞,包括实施严格的文件类型验证和身份验证机制,以防止未授权的文件上传。  
+  
+  
+  
+
+
+---
+
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）

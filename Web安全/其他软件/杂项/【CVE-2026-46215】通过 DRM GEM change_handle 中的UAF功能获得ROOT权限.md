@@ -1,0 +1,268 @@
+---
+cve: "CVE-2026-46215"
+source: "gelusus/wxvl 公众号漏洞文库"
+---
+
+#  【CVE-2026-46215】通过 DRM GEM change_handle 中的UAF功能获得ROOT权限  
+原创 骨哥说事
+                    骨哥说事  骨哥说事   2026-07-10 01:49  
+  
+<table><tbody><tr><td data-colwidth="557" width="557" valign="top" style="word-break: break-all;"><h1 data-selectable-paragraph="" style="white-space: normal;outline: 0px;max-width: 100%;font-family: -apple-system, system-ui, &#34;Helvetica Neue&#34;, &#34;PingFang SC&#34;, &#34;Hiragino Sans GB&#34;, &#34;Microsoft YaHei UI&#34;, &#34;Microsoft YaHei&#34;, Arial, sans-serif;letter-spacing: 0.544px;background-color: rgb(255, 255, 255);box-sizing: border-box !important;overflow-wrap: break-word !important;"><strong style="outline: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;"><span style="outline: 0px;max-width: 100%;font-size: 18px;box-sizing: border-box !important;overflow-wrap: break-word !important;"><span style="color: rgb(255, 0, 0);"><strong><span style="font-size: 15px;"><span leaf="">声明：</span></span></strong></span></span></strong><span style="outline: 0px;max-width: 100%;font-size: 18px;box-sizing: border-box !important;overflow-wrap: break-word !important;"><span style="font-size: 15px;"><span leaf="">文章中涉及的程序(方法)可能带有攻击性，仅供安全研究与教学之用，读者将其信息做其他用途，由用户承担全部法律及连带责任，文章作者不承担任何法律及连带责任。</span></span></span></h1></td></tr></tbody></table>#   
+  
+#   
+  
+****# 防走失：https://gugesay.com/  
+  
+**不想错过任何消息？设置星标****↓ ↓ ↓**  
+#   
+  
+  
+![](https://mmbiz.qpic.cn/sz_mmbiz_png/hZj512NN8jlbXyV4tJfwXpicwdZ2gTB6XtwoqRvbaCy3UgU1Upgn094oibelRBGyMs5GgicFKNkW1f62QPCwGwKxA/640?wx_fmt=png&from=appmsg "")  
+  
+> 报告至 security@kernel.org, 2026年4月12日 · 已修复于主线 ( 5e28b7b ), 2026年5月, Cc: stable · 修复了 53096728 · 影响范围: v6.18-rc1 到修复版本之间 · CVE-2026-46215 (独立报告；归属于另一位研究者，见披露部分)  
+  
+## 摘要  
+  
+DRM GEM核心ioctl DRM_IOCTL_GEM_CHANGE_HANDLE  
+ 中的一个释放后重用漏洞，允许任何能访问渲染节点的本地用户提升至root权限。drm_gem_change_handle_ioctl()  
+ 将一个GEM对象从一个句柄移动到另一个句柄，但它从未调整对象的 handle_count  
+。在一个短暂的窗口期内，该对象有两个IDR条目，而其句柄计数仍显示为1，此时对旧句柄的并发 DRM_IOCTL_GEM_CLOSE  
+ 会将该计数降至0并释放对象，而新句柄仍指向该对象。这个悬垂的句柄就造成了释放后重用。  
+  
+这两个ioctl都标记为 DRM_RENDER_ALLOW  
+，因此任何能打开 /dev/dri/renderD*  
+ 的人都能触发此漏洞。在所有主流的桌面发行版上，systemd-logind 默认授予活动会话读写该节点的权限，因此普通登录用户无需任何特殊权限即可触达此漏洞。我编写的利用链获取被释放的对象，通过喷洒 pipe_buffer  
+ 数组来回收其slab槽位，泄漏一个内核指针以绕过KASLR，设置 PIPE_BUF_FLAG_CAN_MERGE  
+ 来绕过DirtyPipe修复，并通过页面缓存覆盖只读的 /etc/passwd  
+。结果是从一个无特权的进程中，以约99%的成功率获得无密码root权限。  
+  
+Puttimet Thammasaeng 报告了同一个漏洞并先到一步，因此上游的 Reported-by  
+ 归属和CVE-2026-46215归他所有。我是独立发现并报告的，下文是我的分析和漏洞利用。更多信息请见披露部分。  
+## 一个未授权的本地攻击面  
+  
+大多数有趣的内核漏洞都需要某种权限才能触及。这个漏洞却不需要。DRM渲染节点的存在，正是为了让无特权的客户端（你的合成器、浏览器的GPU进程、任何执行GPU工作的程序）能够提交命令，而无需通过有权限的主节点。systemd-logind在登录时向活动控制台用户授予 /dev/dri/renderD128  
+ 的ACL（访问控制列表），而此竞争涉及的两个ioctl都带有 DRM_RENDER_ALLOW  
+ 标志，意味着它们明确允许在渲染节点上执行。  
+  
+所以，威胁模型是本地漏洞所能拥有的最强模型：标准桌面上的普通用户会话，无任何能力（capabilities），无需setuid辅助程序，无需容器逃逸。只要你已登录，你就能打开该节点，而如果你能打开该节点，你就能发起竞争。  
+## change_handle ioctl  
+  
+GEM（图形执行管理器）对象是DRM子系统提供给用户空间的缓冲区对象。进程通过存储在每文件IDR (file_priv->object_idr  
+) 中的整数句柄来引用它们。每个句柄持有对该对象的引用，这个引用独立于对象的内核引用计数，由一个名为 handle_count  
+ 的字段追踪。当最后一个句柄消失时，handle_count  
+ 变为0，对象的句柄计数引用被释放，这最终导致对象被释放。  
+  
+句柄的生命周期通常由一小部分辅助函数驱动，这些函数保持 handle_count  
+ 和IDR同步：drm_gem_handle_create_tail()  
+ 用于发布一个句柄（它调用 drm_gem_object_handle_get()  
+ 来增加计数），drm_gem_handle_delete()  
+ 用于删除一个句柄（它调用 drm_gem_object_release_handle()  
+ 和 drm_gem_object_handle_put_unlocked()  
+ 来减少计数）。这些辅助函数的存在是因为很容易搞错操作顺序，而后果正是你所预期的那种引用计数漏洞。  
+  
+DRM_IOCTL_GEM_CHANGE_HANDLE  
+ (ioctl编号 0xD2) 是新增的。它在v6.18-rc1中由提交 53096728b891  
+ 为AMD的CRIU（检查点/恢复）工作添加，以便检查点/恢复可以将GEM对象重新分配到一个特定的句柄编号。它做了现有辅助函数都没做的事情：原地将一个对象从一个句柄移动到另一个句柄。然而在这个过程中，它没有通过生命周期辅助函数，而是直接编写了句柄操作代码。  
+## 漏洞：一个从未改变的引用计数  
+  
+简化来看，该ioctl查找对象，插入新的IDR条目，移除旧的条目，然后释放其查找引用：  
+```
+/* drm_gem_change_handle_ioctl()，简化，修复前 */obj = drm_gem_object_lookup(file_priv, args->handle);   /* +1 查找引用 */spin_lock(&file_priv->table_lock);idr_alloc(&file_priv->object_idr, obj, new_handle, ...); /* 新条目 */spin_unlock(&file_priv->table_lock);/* ... 在 prime.lock 下进行prime簿记 ... */spin_lock(&file_priv->table_lock);idr_remove(&file_priv->object_idr, args->handle);       /* 旧条目 */spin_unlock(&file_priv->table_lock);drm_gem_object_put(obj);                                 /* -1 查找引用 */
+```  
+  
+它从未为新的句柄调用 drm_gem_object_handle_get()  
+，也从未为旧的句柄调用 drm_gem_object_handle_put_unlocked()  
+。handle_count  
+ 在整个操作期间始终保持为1。孤立地看，这没有问题，因为一个句柄消失的同时出现了另一个句柄，所以最终计数确实是1。问题出在中间。  
+  
+在 idr_alloc  
+ 和 idr_remove  
+ 之间，该对象有两个活跃的IDR条目（旧句柄和新句柄），而 handle_count  
+ 却显示为1。table_lock  
+ 自旋锁在单个IDR操作之间被释放，没有任何序列化机制来确保这个复合操作序列与 drm_gem_handle_delete()  
+ 中的复合序列互斥。因此，第二个线程可以在该窗口期内对旧句柄调用 GEM_CLOSE  
+。关闭路径会移除其IDR条目并运行 drm_gem_object_release_handle()  
+，这会将 handle_count  
+ 从1减到0，释放句柄计数引用，并释放对象。新的IDR条目便指向了已释放的内存。  
+  
+值得具体说明一下锁的情况，因为锁之间的间隙就是整个漏洞所在。change_handle  
+ 在整个操作期间持有 prime.lock  
+，但只在每个IDR调用周围获取 table_lock  
+，在调用之间释放它。drm_gem_handle_delete()  
+ 为 idr_replace  
+ 获取 table_lock  
+，然后为 handle_count  
+ 递减获取 object_name_lock  
+。没有任何单一的锁在整个复合序列期间被持有，所以它们可以自由交错，关闭操作可以将释放操作正好塞在 change_handle 的两个IDR操作之间。  
+  
+一个对象，handle_count = 1，两个IDR条目复合移动操作未与复合关闭操作序列化，且锁在步骤之间被释放。1. 在 change_handle 窗口期内2. 一个对旧句柄的并发 GEM_CLOSE旧句柄 -> 对象新句柄 -> 对象drm_gem_objecthandle_count = 1旧句柄被移除新句柄 -> 已释放的内存已释放的对象handle_count = 0change_handle 执行 idr_alloc(新)，然后 idr_remove(旧)，但从未触及 handle_count。在间隙期间，对旧句柄的 GEM_CLOSE 运行 release_handle，将 handle_count 从 1 降至 0并释放对象。新的IDR条目现在引用了已释放的内存：一个悬垂句柄，稍后会在 drm_gem_object_release_handle() 中被解引用。这就是释放后重用。活跃的即将被关闭已释放 / 悬垂  
+  
+移动操作留下两个IDR条目而handle_count为1；竞争的关闭操作在旧句柄下释放对象，导致新句柄悬垂。  
+  
+被释放的对象是一个 kmalloc-512  
+ 分配（用于virtio-gpu和nouveau缓冲区的GEM对象后备存储落在该缓存中）。在一个2核虚拟机上，竞争大约100次迭代内就能稳定获胜。PoC中的校准逻辑测量两个ioctl的单独延迟并错开线程，使它们在 table_lock  
+ 上发生碰撞，从而进一步提高胜率。  
+## 回收对象  
+  
+一旦对象被释放但仍可通过悬垂句柄访问，下一步就是在其位置放置一些有用的东西。目标是 struct pipe_buffer  
+，当管道增长时，它也会落在 kmalloc-512  
+ 中：一个包含八个槽位的管道持有一个八元素的 pipe_buffer  
+ 数组，每个元素40字节，该数组恰好位于512字节缓存中。  
+  
+为了使回收可靠，我首先用一个 msg_msg  
+ 喷洒来调理缓存（分配几百个512字节的System V消息，然后释放少量，后进先出，以便被释放对象的槽位靠近空闲列表顶部），接着喷洒管道，其缓冲区数组会落入该空洞。之后，悬垂的GEM句柄和一个 pipe_buffer  
+ 数组别名为同一512字节内存。  
+## 泄漏指针：结构体重叠  
+  
+当这两个结构体重叠时，字段的对齐方式为漏洞利用的后续两个阶段都提供了便利。这些数字来自 pahole  
+，在6.18到7.0版本是稳定的：  
+```
+#define GEM_SIZE_OFF        216   /* drm_gem_object.size            */#define GEM_NAME_OFF        224   /* drm_gem_object.name            */#define PIPEBUF_SIZE_ACTUAL 40    /* sizeof(struct pipe_buffer)     */#define OVERLAP_IDX         5#define PIPEBUF_OPS_OFF     16    /* pipe_buffer.ops   -> 5*40+16 = 216 */#define PIPEBUF_FLAGS_OFF   24    /* pipe_buffer.flags -> 5*40+24 = 224 */
+```  
+  
+对象的 size  
+ 字段在偏移216处，正好位于 pipe_buf[5].ops  
+ 之上；对象的 name  
+ 字段在偏移224处，正好位于 pipe_buf[5].flags  
+ 之上。ops  
+ 字段是一个指向内核 .text  
+ 段中 anon_pipe_buf_ops  
+ 的指针，因此读取它会得到一个已知的内核符号，从而获得KASLR基址。驱动程序免费提供此信息：virtio-gpu的 RESOURCE_INFO  
+ ioctl（以及nouveau的 GEM_INFO  
+）返回GEM对象的 size  
+ 字段，该字段现在就是 pipe_buf[5].ops  
+。  
+  
+相同的512字节，两种解读悬垂的GEM句柄与喷洒的 pipe_buffer 数组别名于已释放的槽位。字段对齐。视为 drm_gem_objectsize@216name@224视为 pipe_buffer[8] (每个40字节)buf[0]buf[1]buf[2]buf[3]buf[4]buf[5].ops@216.flags@224buf[6]buf[7]size (216) = buf[5].ops: 一个指向内核.text段的指针。通过 RESOURCE_INFO 读回 -> 得到 KASLR 基址。name (224) = buf[5].flags: FLINK 分配的 name 16 = 0x10 = PIPE_BUF_FLAG_CAN_MERGE。一个泄漏原语和一个写入原语，均来自同一字段重叠。  
+  
+size@216 落在 pipe_buf[5].ops 上（泄漏）；name@224 落在 pipe_buf[5].flags 上（CAN_MERGE 写入）。  
+## 绕过DirtyPipe修复  
+  
+DirtyPipe（CVE-2022-0847）滥用一个陈旧的 PIPE_BUF_FLAG_CAN_MERGE  
+ 标志来写入只读文件的页面缓存。修复措施确保了该标志始终被初始化，因此你不再可能意外地发现它被设置。但在这里，我不依赖一个陈旧的标志，而是通过重叠来故意设置它。  
+  
+PIPE_BUF_FLAG_CAN_MERGE  
+ 是 0x10  
+，即十进制的16。GEM名称作为小的顺序整数从IDR中分配。因此，如果我预先通过一些一次性FLINK来分配名称1到15，然后再FLINK悬垂句柄，它会获得名称16。这个值被写到对象的 name  
+ 字段，也就是 pipe_buf[5].flags  
+，于是 flags  
+ 变成 0x10  
+，CAN_MERGE  
+ 就被设置在一个活跃的管道缓冲区上：  
+```
+/* 预先分配名称 1..15，使悬垂句柄的FLINK获得名称 16 */for (i = 0; i < 15; i++) {        h = create_gem_bo(fd);        ioctl(fd, DRM_IOCTL_GEM_FLINK, &(struct drm_gem_flink){ .handle = h });}struct drm_gem_flink fl = { .handle = dangling };ioctl(fd, DRM_IOCTL_GEM_FLINK, &fl);     /* fl.name == 16 == 0x10 *//* 将16写入 gem.name @224 == pipe_buf[5].flags -> 设置 PIPE_BUF_FLAG_CAN_MERGE */
+```  
+  
+从这里开始，就是DirtyPipe的老路子了。我将目标只读文件的一个字节拼接（splice）到喷洒的管道中，使每个管道都锚定到一个页面缓存页，然后通过它们进行写入。具有 CAN_MERGE  
+ 设置的缓冲区将我的数据合并到文件的缓存页中，覆盖它，而该页从未被标记为脏页或通过文件系统权限检查写回。  
+## 漏洞利用链  
+1. 竞态 GEM_CHANGE_HANDLE  
+ 和 GEM_CLOSE  
+，在新句柄仍引用对象时释放它。  
+  
+1. 用喷洒的 pipe_buffer  
+ 数组回收 kmalloc-512  
+ 槽位（使用msg_msg风水，然后拼接填充的管道）。  
+  
+1. 通过驱动程序的info ioctl回读 size  
+ 字段。它现在是 pipe_buf[5].ops  
+，一个指向内核 .text  
+ 段的指针，从而得到KASLR基址。  
+  
+1. FLINK悬垂句柄，使其名称（16 = 0x10  
+）落在 pipe_buf[5].flags  
+ 上，从而设置 PIPE_BUF_FLAG_CAN_MERGE  
+。  
+  
+1. 通过拼接的管道写入，将攻击者数据合并到只读的 /etc/passwd  
+ 的页面缓存中。root行的密码字段被移除。  
+  
+泄漏使得利用链是确定性的而非猜测性：地址在运行时返回，因此开启KASLR也能工作，只是每次启动时值会改变。演示中为了输出稳定可读，用 nokaslr  
+ 将其固定。  
+## 证据  
+  
+驱动程序无关的KASAN触发器竞态这两个ioctl，然后关闭文件描述符以解引用悬垂句柄。在带有 CONFIG_KASAN=y  
+ 的Linux 7.0-rc7下，使用QEMU并带有virtio-gpu，它报告：  
+```
+BUG: KASAN: slab-use-after-free in drm_gem_object_release_handle+0x24/0x100在地址 ffff888104769d60 处读取大小为 8 的数据，由任务 kasan_trigger/75 执行由任务 75 分配:  virtio_gpu_create_object -> __drm_gem_shmem_create ->  virtio_gpu_mode_dumb_create -> drm_mode_create_dumb_ioctl由任务 39 释放:  kfree -> virtio_gpu_dequeue_ctrl_func -> process_one_work问题地址属于大小为 512 的缓存 kmalloc-512 所有
+```  
+  
+完整的利用链在没有KASAN的情况下运行（其隔离机制会阻碍管道喷洒的回收），并能可靠地获得root权限。在100次全新启动中，成功了99次。PoC内部会重试：如果泄漏失败，它会重新发起竞争以获得一个新的悬垂对象，而不是重新喷洒一个已死的槽位，最多进行200轮，每轮几十毫秒。大多数启动在第一次竞争中获胜。约1%的失败是内核竞争UAF固有的缺点，即输掉了交错时机，导致虚拟机僵死，可通过断电重启恢复。  
+```
+[!] 竞争获胜 (迭代 977): handle=132049[!] KASLR: pipe_buf_ops = 0xffffffff82428400[!] FLINK: 16 = 0x10[*] /etc/passwd:    root::0:0:pwned:/root:/bin/sh[!] LPE 已确认
+```  
+## 修复  
+  
+已发布的修复基本保持了 change_handle  
+ 的原貌，但阻止了新句柄在竞争窗口期内指向活跃对象。它为新的槽位分配，立即用NULL替换，只有在完成prime簿记后才提交真正的对象。如果并发关闭抢先到达，它会注意到并回滚：  
+```
+ret = idr_alloc(&file_priv->object_idr, obj, handle, handle + 1, GFP_NOWAIT);if (ret < 0) { ... }idrobj = idr_replace(&file_priv->object_idr, NULL, handle);if (idrobj != obj) {        /* 并发的关闭已经占用了这个槽位 */        idr_replace(&file_priv->object_idr, idrobj, handle);        idr_remove(&file_priv->object_idr, args->new_handle);        ret = -ENOENT;        goto out_unlock;}
+```  
+## 我的建议与实际发布的内容  
+  
+对我来说更有趣的部分是我提交的修复与实际发布的修复之间的差异，因为它们以相当不同的方式解决了同一个漏洞。  
+  
+我的直觉是让 change_handle  
+ 不再是一个特例。这个漏洞存在的根本原因是它直接编写句柄移动代码，而不是通过生命周期辅助函数。因此，我提交的补丁围绕这些辅助函数重建它：用 drm_gem_object_handle_get()  
+ 获取句柄计数引用，以create_tail的方式发布新句柄（先 idr_alloc(NULL)  
+ ，然后 idr_replace(obj)  
+ ），连接create_tail所做的每个句柄位的设置（drm_vma_node_allow()  
+, obj->funcs->open()  
+），并通过 drm_gem_handle_delete()  
+ 的路径拆除旧句柄。基本上，使其看起来像文件中其他所有句柄操作一样。这可行，但对于一个小漏洞来说改动太大了。  
+  
+David Francis和Dave Airlie发布的修复更小，而且说实话，更巧妙。他们没有重建整个操作，而是直接关闭了窗口：上述两步 idr_replace  
+ ，确保新槽位在prime工作期间永远不会是活跃的，再加上如果发生竞争关闭则干净地回滚。他们的提交解释了为什么这里不需要更完整的create_tail机制，而这正是我没有考虑透彻的地方。create_tail  
+ 必须先将IDR槽位分配为NULL，因为在设置过程中可能有其他东西与之竞争。在 change_handle  
+ 中，在操作期间唯一能与之竞争的是dr_prime簿记，而该ioctl在整个过程中已经持有了prime锁，因此它可以走一个捷径，这是create_tail做不到的。对漏洞的理解相同，但修复的改动量要小得多。我选择了大锤；他们找到了小锤。  
+  
+然后他们比任何一方都走得更远。change_handle  
+ 在7.1版本中被彻底禁用。这是一个小众接口，几个版本前为AMD的CRIU/ROCm工作添加，但已多次成为竞争漏洞的根源，因此维护者没有继续加固它，而是直接将其移除。删除唯一的调用者是最彻底的修复，并且这是正确的决定。  
+## 披露时间线  
+  
+我于2026年4月12日将报告发送至 security@kernel.org，包含分析、KASAN触发器、完整的LPE概念验证和建议的修复方案。Willy Tarreau于4月13日确认并转发给DRM维护者（Maarten Lankhorst, Maxime Ripard, Thomas Zimmermann）。  
+  
+修复由AMD的David Francis于4月28日编写，与Dave Airlie合作，在最终工作版本之前经历了不止一次修订（考虑到安全角度，大部分修订未在公开列表中讨论）。它于2026年5月下旬进入主线（mainline）和稳定版（stable）：上游提交 5e28b7b94408  
+，稳定版提交 672464dd5323  
+，标记为 Fixes: 53096728b891  
+ 并Cc给stable。它带有 Reported-by: Puttimet Thammasaeng  
+。  
+  
+这个署名是需要诚实说明的部分：Puttimet报告了同一个漏洞并先到一步，因此 Reported-by  
+ 和CVE-2026-46215归属他们，这很公平。我是独立发现并报告的，我所得到的是本文中的分析和漏洞利用链，这对我来说已经足够了。修复版本分别是6.18.32、7.0.9以及7.1-rc3之后。  
+## 一个更广泛的模式  
+  
+这个漏洞的模式是复合的、非原子性的引用计数对象操作：两个或多个必须一起发生的步骤（插入新引用、移除旧引用、调整计数）被分割到不同的锁获取之间，并发的销毁操作可以在它们之间交错进行。这是引用计数上的TOCTTOU（检查时间 vs. 使用时间）。检查（handle_count == 1，即存在一个句柄）在序列开始时为真，但序列本身创建了一个暂态（两个IDR条目，计数仍为1）使得检查的假设不成立，并且没有任何机制阻止其他线程基于这个暂态采取行动。  
+  
+内核到处都有这种模式。任何通过计数和查找结构（IDR、XArray、红黑树）来追踪对象所有权的子系统都有一组辅助函数，它们通过适当的锁来保持两者同步：DRM中的 drm_gem_handle_create_tail  
+ 和 drm_gem_handle_delete  
+，通用代码中与 kref_get  
+ / kref_put  
+ 配对的 idr_alloc  
+ / idr_remove  
+，文件描述符表中的 fget  
+ / fput  
+ 和 fd_install  
+ / close_fd  
+。这些辅助函数之所以存在，是因为复合操作很容易出错，它们编码了确保安全的排序和锁定规则。每当一个新操作直接编写相同的操作代码，而不是通过它们时，它就是在从头重新实现这套规则，而步骤之间的任何间隙都是并发关闭操作释放对象，使其脱离活跃引用的窗口。  
+  
+因此，需要grep搜索的并不是漏洞本身，而是其先决条件：一个新的ioctl、系统调用或回调，它在子系统已提供的辅助函数之外，以分离的步骤操作引用计数对象的查找条目及其计数。change_handle  
+ 就是一个教科书般的例子。它围绕每个IDR调用单独获取 table_lock  
+，在调用之间释放它，并且从未触及 handle_count  
+。两个IDR操作之间释放了锁，就是以释放一个仍被活跃句柄引用的对象，并将打开渲染节点变成root权限。  
+  
+感谢应当归于：Puttimet先到一步，David Francis和Dave Airlie提供了更简洁的修复并决定弃用该ioctl而非持续修补，以及内核安全人员快速的周转。该竞态漏洞已在6.18.32、7.0.9和7.1-rc3中修复，并且 change_handle  
+ 在7.1中已被移除。概念验证：github.com/0xCyberstan/CVE-2026-46215-POC。  
+  
+原文：  
+https://cyberstan.co.uk/drm-lpe-linux/  
+  
+- END -  
+  
+**感谢阅读，如果觉得还不错的话，动动手指给个三连吧～**  
+  
+
+
+---
+
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）

@@ -1,0 +1,199 @@
+---
+cve: "CVE-2026-3854"
+source: "gelusus/wxvl 公众号漏洞文库"
+---
+
+#  [技术深潜] git push 即沦陷：拆解 CVE-2026-3854  
+原创 极客零零七
+                    极客零零七  极客零零七   2026-05-07 23:27  
+  
+> **导语：**  
+对于全球 1 亿多名开发者来说，git push  
+ 是每天下班前最具仪式感的一个动作。伴随着代码推送到远端，一天的工作宣告结束。  
+> 但你有没有想过，如果在这个看似人畜无害的命令背后，隐藏着一颗能炸穿全球最大代码托管平台的“核弹”呢？  
+  
+  
+**4 月 28 日**  
+，云安全巨头Wiz公开披露了一个针对 GitHub 内部基础设施的史诗级远程代码执行（RCE）漏洞——**CVE-2026-3854**  
+（漏洞早在 3 月 4 日就被秘密报告，GitHub 当日就给云端打上了热补丁）。黑客只需要一个普通的开发者 Token，敲下一个精心构造的 git push  
+，就能直接在 GitHub 服务器底层派生一个高权限 Shell，甚至跨租户窃取其他公司的核心源码。  
+  
+今天，【极客零零七】带你硬核扒开 GitHub 的底裤，看看这起“血案”到底是怎么发生的。  
+## 01. 漏洞档案：一枚高危的“深水炸弹”  
+- **漏洞编号**  
+：CVE-2026-3854  
+  
+- **漏洞类型**  
+：内部头部字段注入 → 沙箱绕过 → Hook 路径劫持 → 远程代码执行（RCE）  
+  
+- **CVSS 评分**  
+：8.8 (高危)  
+  
+- **影响范围**  
+：GitHub.com 核心云平台 及 GitHub Enterprise Server (企业私有化部署版)  
+  
+- **发现团队**  
+：Wiz Research  
+  
+在漏洞曝光前，GitHub 在安全界的形象一直是一座坚不可摧的堡垒。它拥有极其严苛的沙箱隔离机制、复杂的 CI/CD 安全校验和世界顶级的红队。但 CVE-2026-3854 证明了：**再坚固的堡垒，也往往是从内部最繁杂的基础设施管道中被攻破的。**  
+## 02. 原理深扒：一个 git push 是如何变成恶意代码的？  
+  
+要理解这个漏洞，我们必须先弄懂当你在终端敲下 git push  
+ 时，GitHub 的服务器端到底发生了什么。  
+### 危险的“接收管道” (The Push Pipeline)  
+  
+当你推送代码时，你的本地 Git 客户端会与 GitHub 的服务器建立连接，并发送一个包含了所有变更的包文件（Packfile）和引用更新（Refs，如分支名、Tag 名）。  
+  
+GitHub 收到这些数据后，不能直接落盘。它必须经过一条极长的数据处理管道：  
+1. 验证你的身份和权限。  
+  
+1. 触发 **Git Hooks（钩子函数）**  
+，例如 pre-receive  
+ 钩子，来检查你的代码是否符合规范（比如有没有超大文件，有没有违规代码）。  
+  
+1. 解析并更新内部数据库中的提交历史。  
+  
+![CVE-2026-3854-20260507190596.png](https://mmbiz.qpic.cn/mmbiz_png/L7VicJKsiaibFADZULWtic7QGphDB8Ioj0m1GWP2flib7DicGkM7OiaqZGnyjB4XSowH8UqlTFgCPFTN06120oodDfZKRIAb410iaJyKicRp1R4iawdbs/640?from=appmsg "")  
+  
+**CVE-2026-3854 的命门，就出在 GitHub 内部处理这些 Git 对象的“后端流水线”上。**  
+### 致命的内部头部注入：X-Stat 三步链  
+  
+根据 Wiz Research 的技术报告，CVE-2026-3854 的真正命门**不在分支名，也不在 Commit Metadata**  
+，而在一个内部 HTTP 头部 X-Stat  
+。  
+  
+GitHub 内部的 git 代理 **babeld**  
+ 在转发 git push  
+ 时，会把客户端通过 **git push --push-option（简写 -o）**  
+ 传过来的键值对**原样拼接进 X-Stat 头部**  
+——格式形如：  
+```
+X-Stat: foo=bar;baz=qux;...
+```  
+  
+字段之间以分号 ;  
+ 分隔。问题是：**用户输入里的 ; 没有被转义**  
+。攻击者只要在 push option 里塞一个分号，就能"挤进" X-Stat 头部，注入任意内部字段。后端 pre-receive  
+ 服务读这个头部时使用"后写覆盖（last-write-wins）"语义，导致攻击者能精准劫持以下三个字段，串成完整利用链：  
+1. **rails_env=development**  
+：把进程从 production 沙箱路径切到非沙箱路径，直接获得 git 服务用户对全文件系统的访问能力；  
+  
+1. **custom_hooks_dir=/path/attacker/controls**  
+：劫持 hook 脚本的查找根目录；  
+  
+1. **路径穿越（Path Traversal）**  
+：让二进制读到攻击者预先写入的恶意 hook 脚本。  
+  
+三步组合 → **以 git 服务用户身份在 GitHub 后端执行任意代码**  
+。  
+  
+**Boom！一个反弹 Shell (Reverse Shell) 就此建立。黑客直接杀入了 GitHub 的后端容器。**  
+## 03. 攻击链路推演：离“供应链核爆”只差半步  
+  
+很多人可能会问：“这个漏洞需要 push  
+ 权限啊，黑客又没有我公司的代码仓库权限，有什么好怕的？”  
+  
+**这正是现代网络安全最残酷的现实：开发者凭据，是全宇宙最容易泄露的东西。**  
+  
+让我们来推演一下黑客利用 CVE-2026-3854 的真实攻击链路：  
+1. **获取初始立足点（Token 窃取）**  
+：  
+  
+黑客根本不需要费力去破解密码。他们只需要通过钓鱼邮件、恶意浏览器插件、或者直接去暗网购买因为开发者电脑中了信息窃取木马（Info-stealer）而泄露的 **GitHub Personal Access Token (PAT) 或 SSH 密钥**  
+。  
+  
+1. **构造畸形 push option**  
+：  
+  
+黑客用这个偷来的 Token 登录，向自己控制的（或滥用 push 权限的）仓库执行一条带恶意 --push-option  
+ 的命令——形态形如：  
+```
+git push -o "foo=bar;rails_env=development;custom_hooks_dir=/tmp/attacker;..."
+```  
+  
+分号在用户输入里没有被转义，会"挤进"内部 X-Stat 头部，注入额外字段。  
+  
+1. **完成 RCE 与跨租户渗透**  
+：  
+  
+GitHub 后端 pre-receive  
+ 服务解析被污染的 X-Stat 头部，先跳出沙箱，再加载攻击者的 hook 脚本，落地拿到 git 服务用户级 Shell。  
+  
+在 GitHub.com 的多租户共享存储节点上，这一步直接可以**跨租户（Cross-tenant）读取数百万个仓库**  
+——同一物理节点上其他公司的私有源码（包括微软、OpenAI 等）尽收眼底。在 GHES 上更夸张：**整台服务器全沦陷，仓库 + 内部 secret 全裸**  
+。  
+  
+这不仅是一次服务器入侵，更是对全球软件供应链的一次潜在“核打击”。如果黑客在开源框架的源码中静默植入后门，影响将是毁灭性的。  
+## 04. 给开发和运维的“保命指南”  
+  
+GitHub 官方在收到 Wiz 报告的**同一天**  
+就紧急热修复了 GitHub.com（响应速度可圈可点），公开调查未发现真实野外利用。**但**  
+——如果你使用的是 **GitHub Enterprise Server（企业本地私有化版本）**  
+，麻烦事还远没结束：**披露当天仍有约 88% 的 GHES 实例未打补丁**  
+。请立刻升级到以下任一版本或更新：**GHES 3.14.24 / 3.15.19 / 3.16.15 / 3.17.12 / 3.18.6 / 3.19.3+**  
+。  
+  
+对于我们普通的开发者和企业安全团队，这个史诗级漏洞留下了三个血淋淋的教训：  
+1. **废弃永久 Token，拥抱细粒度权限**  
+  
+不要再生成那种“永不过期、拥有全库读写权限”的 Personal Access Token (PAT) 了！立刻切换到 GitHub 推出的 **Fine-grained PAT**  
+，为 Token 设置极短的过期时间，并且只赋予某个特定代码库的特定权限。  
+  
+1. **严查代码库里的“影子身份”**  
+  
+很多企业的 CI/CD 流水线（如 Jenkins、GitHub Actions）中硬编码了拥有极大权限的机器账号（Bot Account）。一旦这些凭据泄露，黑客就能名正言顺地执行致命的 git push  
+。引入密钥扫描工具（如 TruffleHog），干掉那些散落在代码历史中的明文密码。  
+  
+1. **永远不要盲目信任云服务商的绝对安全**  
+  
+连 GitHub 这样的顶流大厂，也会在底层的命令行转义上翻车。企业不能把安全底线全部押宝在 SaaS 供应商身上。核心代码的备份、多因素认证（MFA）的强制开启，任何时候都不能省。  
+  
+**极客点评：**  
+  
+在大模型（LLM）和 AI 满天飞的 2026 年，CVE-2026-3854 用一种极其复古的姿态（**一个没转义的分号**  
+）给我们上了一课：**越是复杂的基础设施，越容易在最基础的字符串拼接上溃堤。**  
+  
+下次下班前，当你习惯性地敲下 git commit -m "update" && git push  
+ 时，不妨敬畏一下这个贯穿了全球互联网命脉的命令。  
+  
+  
+> 关注「极客零零七」，每周实战攻防干货。  
+  
+回复「提权」获取 Windows + Linux 提权速查表  
+  
+  
+  
+## 参考资料  
+- https://www.wiz.io/blog/github-rce-vulnerability-cve-2026-3854]  
+  
+- https://github.blog/security/securing-the-git-push-pipeline-responding-to-a-critical-remote-code-execution-vulnerability  
+  
+- https://thehackernews.com/2026/04/researchers-discover-critical-github.html  
+  
+- https://www.cycognito.com/blog/emerging-threat-cve-2026-3854-github-enterprise-server-rce-via-git-push-injection  
+  
+- https://securityaffairs.com/191434/security/cve-2026-3854-github-flaw-enables-remote-code-execution.html  
+  
+往期推荐  
+  
+[[技术深潜] 潜伏9年的Copy-Fail：内核0-Day通杀Root](https://mp.weixin.qq.com/s?__biz=Mzk2NDgwNjA2NA==&mid=2247486454&idx=1&sn=7e34cb7fef20cd52fc7c1c81693fbba7&scene=21#wechat_redirect)  
+  
+  
+[从网线到域控：一次完整AD渗透的全流程复盘](https://mp.weixin.qq.com/s?__biz=Mzk2NDgwNjA2NA==&mid=2247486427&idx=1&sn=5dd26ea21c47551f083043733db14b8a&scene=21#wechat_redirect)  
+  
+  
+[AD攻击武器库：从侦察到持久化，每个阶段该用什么工具](https://mp.weixin.qq.com/s?__biz=Mzk2NDgwNjA2NA==&mid=2247486426&idx=1&sn=88d4b61526980b0a91ae6f1d4a74e23e&scene=21#wechat_redirect)  
+  
+  
+[AD委派攻击三部曲：从非约束委派到RBCD，一条被低估的域控攻击路径](https://mp.weixin.qq.com/s?__biz=Mzk2NDgwNjA2NA==&mid=2247486365&idx=1&sn=6a2dc4019688fa1927fab16a41ac02a2&scene=21#wechat_redirect)  
+  
+  
+[【干货收藏】大模型时代的安全护城河：2026 顶级 AI 安全学习与认证指南](https://mp.weixin.qq.com/s?__biz=Mzk2NDgwNjA2NA==&mid=2247486328&idx=1&sn=969fa34025b366f5941d931a848837cb&scene=21#wechat_redirect)  
+  
+  
+  
+
+
+---
+
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）

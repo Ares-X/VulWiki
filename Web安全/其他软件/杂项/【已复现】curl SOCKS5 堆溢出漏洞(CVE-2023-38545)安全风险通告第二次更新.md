@@ -1,0 +1,249 @@
+---
+cve: "CVE-2023-38545"
+source: "gelusus/wxvl 公众号漏洞文库"
+---
+
+#  【已复现】curl SOCKS5 堆溢出漏洞(CVE-2023-38545)安全风险通告第二次更新   
+原创 QAX CERT  奇安信 CERT   2023-10-12 17:15  
+  
+●   
+点击↑蓝字关注我们，获取更多安全风险通告  
+  
+  
+<table><tbody><tr><td valign="middle" align="center" rowspan="1" colspan="4" style="background-color: #4676d9;border-color: #4676d9;"><p style="line-height: 1em;"><span style="color: #ffffff;letter-spacing: 0px;"><strong><span style="font-size: 13px;letter-spacing: 0px;">漏洞概述</span></strong><br/></span></p></td></tr><tr><td valign="middle" align="left" style="border-color: #4676d9;" width="135"><p style="line-height: 1em;"><span style="font-size: 13px;letter-spacing: 0px;"><strong><span style="font-size: 13px;letter-spacing: 0px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">漏洞名称</span></strong></span></p></td><td valign="middle" align="left" rowspan="1" colspan="3" style="border-color: #4676d9;"><p style="line-height: 1em;"><span style="color: #000000;font-size: 13px;text-align: -webkit-left;caret-color: #ff0000;text-decoration-thickness: initial;letter-spacing: 0px;display: inline !important;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;"><span style="color: rgba(0, 0, 0, 0.9);font-size: 13px;text-align: -webkit-left;caret-color: #ff0000;text-decoration-thickness: initial;display: inline !important;font-family: system-ui, -apple-system, BlinkMacSystemFont, &#34;Helvetica Neue&#34;, &#34;PingFang SC&#34;, &#34;Hiragino Sans GB&#34;, &#34;Microsoft YaHei UI&#34;, &#34;Microsoft YaHei&#34;, Arial, sans-serif;">curl SOCKS5 堆溢出漏洞</span></span></p></td></tr><tr><td valign="middle" align="left" rowspan="1" colspan="1" style="border-color: #4676d9;" width="135"><p style="line-height:1em;"><span style="font-size: 13px;letter-spacing: 0px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;"><strong>漏洞编号</strong></span></p></td><td valign="middle" align="left" rowspan="1" colspan="3" style="border-color: #4676d9;"><p style="line-height:1em;"><span style="color: #000000;font-size: 13px;text-align: -webkit-left;caret-color: #ff0000;text-decoration-thickness: initial;display: inline !important;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;"><span style="color: #000000;font-size: 13px;letter-spacing: 0.544px;text-align: -webkit-left;caret-color: #ff0000;text-decoration-thickness: initial;display: inline !important;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">QVD-2023-23751、CVE-2023-38545</span></span></p></td></tr><tr><td valign="middle" align="left" style="border-color: #4676d9;" width="135"><p style="line-height: 1em;"><span style="font-size: 13px;"><strong><span style="font-size: 13px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">公开时间</span></strong></span></p></td><td valign="middle" align="left" style="border-color: #4676d9;" width="151"><p style="line-height: 1em;"><span style="font-size: 13px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">2023-10-10</span></p></td><td valign="middle" align="left" style="border-color: #4676d9;" width="177"><p style="line-height: 1em;"><span style="font-size: 13px;"><strong><span style="font-size: 13px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">影响对象数量级</span></strong></span></p></td><td valign="middle" align="left" style="border-color: #4676d9;" width="94"><p style="line-height: 1em;"><span style="font-size: 13px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">亿级</span></p></td></tr><tr><td valign="middle" align="left" style="border-color: #4676d9;" width="135"><p style="line-height: 1em;"><span style="font-size: 13px;"><strong><span style="font-size: 13px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">奇安信评级</span></strong></span></p></td><td valign="middle" align="left" style="border-color: #4676d9;" width="151"><p style="line-height: 1em;"><span style="font-size: 13px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;"><strong style="max-inline-size: 100%;margin: 0px;padding: 0px;box-sizing: border-box !important;overflow-wrap: break-word !important;outline: none 0px !important;cursor: text;color: #000000;font-size: 13px;text-align: -webkit-left;caret-color: #ff0000;text-decoration-thickness: initial;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;, sans-serif;"><span style="max-inline-size: 100%;margin: 0px;padding: 0px;box-sizing: border-box !important;overflow-wrap: break-word !important;outline: none 0px !important;cursor: text;color: #ff0000;font-size: 13px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">高危</span></strong></span></p></td><td valign="middle" align="left" style="border-color: #4676d9;" width="177"><p style="line-height: 1em;"><span style="font-size: 13px;"><strong><span style="font-size: 13px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;"><strong style="max-inline-size: 100%;margin: 0px;padding: 0px;box-sizing: border-box !important;overflow-wrap: break-word !important;outline: none 0px !important;cursor: text;color: #000000;font-size: 13px;text-align: -webkit-left;caret-color: #ff0000;text-decoration-thickness: initial;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;, sans-serif;">CVSS 3.1分数</strong></span></strong></span></p></td><td valign="middle" align="left" style="border-color: #4676d9;" width="94"><p style="line-height: 1em;"><span style="color:#ff0000;font-family:微软雅黑, Microsoft YaHei;"><span style="font-size: 13px;color: #000000;">7.0</span></span></p></td></tr><tr><td valign="middle" align="left" style="border-color: #4676d9;" width="135"><p style="line-height: 1em;"><span style="font-size:13px;"><strong><span style="font-size: 13px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">威胁类型</span></strong><strong><span style="font-size: 13px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;"></span></strong></span></p></td><td valign="middle" align="left" style="border-color: #4676d9;" width="151"><p style="line-height: 1em;"><span style="font-size:13px;">代码执行</span></p></td><td valign="middle" align="left" style="border-color: #4676d9;" width="177"><p style="line-height:1em;"><strong><span style="font-size:13px;">利用可能性</span></strong></p></td><td valign="middle" align="left" style="border-color: #4676d9;" width="94"><p style="line-height: 1em;"><span style="color: #4676d9;"><strong><span style="font-size: 13px;">低</span></strong></span></p></td></tr><tr><td valign="middle" colspan="1" rowspan="1" align="left" style="border-color: #4676d9;" width="135"><p style="line-height: 1em;"><span style="font-size: 13px;"><strong><span style="font-size: 13px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">POC状态</span></strong></span></p></td><td valign="middle" colspan="1" rowspan="1" align="left" style="border-color: #4676d9;" width="151"><p style="line-height: 1em;"><span style="color: #ff0000;font-size: 13px;"><strong><span style="color: #ff0000;font-size: 13px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">已公开</span></strong></span></p></td><td valign="middle" colspan="1" rowspan="1" align="left" style="border-color: #4676d9;" width="177"><p style="line-height: 1em;"><span style="font-size: 13px;"><strong><span style="font-size: 13px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">在野利用状态</span></strong></span></p></td><td valign="middle" colspan="1" rowspan="1" align="left" style="border-color: #4676d9;" width="94"><p style="line-height: 1em;"><span style="font-size: 13px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">未发现</span></p></td></tr><tr><td valign="middle" colspan="1" rowspan="1" align="left" style="border-color: #4676d9;" width="135"><p style="line-height: 1em;"><span style="font-size: 13px;"><strong><span style="font-size: 13px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">EXP状态</span></strong></span></p></td><td valign="middle" colspan="1" rowspan="1" align="left" style="border-color: #4676d9;" width="151"><p style="line-height: 1em;"><span style="font-size: 13px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">未公开</span></p></td><td valign="middle" colspan="1" rowspan="1" align="left" style="border-color: #4676d9;" width="177"><p style="line-height: 1em;"><span style="font-size: 13px;"><strong><span style="font-size: 13px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">技术细节状态</span></strong></span></p></td><td valign="middle" colspan="1" rowspan="1" align="left" style="border-color: #4676d9;" width="94"><p style="line-height: 1em;"><span style="font-size: 13px;"><strong><span style="color: #ff0000;font-size: 13px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">已公开</span></strong></span></p></td></tr><tr><td valign="middle" colspan="4" rowspan="1" align="left" style="border-color: #4676d9;"><p style="line-height:1em;"><strong><span style="font-size:13px;">利用条件：</span></strong><span style="color: rgba(0, 0, 0, 0.9);font-size: 13px;letter-spacing: 0.544px;text-align: -webkit-left;text-decoration-thickness: initial;display: inline !important;font-family: system-ui, -apple-system, BlinkMacSystemFont, &#34;Helvetica Neue&#34;, &#34;PingFang SC&#34;, &#34;Hiragino Sans GB&#34;, &#34;Microsoft YaHei UI&#34;, &#34;Microsoft YaHei&#34;, Arial, sans-serif;"><span style="color: rgba(0, 0, 0, 0.9);font-size: 13px;letter-spacing: 0.544px;text-align: -webkit-left;text-decoration-thickness: initial;display: inline !important;font-family: system-ui, -apple-system, BlinkMacSystemFont, &#34;Helvetica Neue&#34;, &#34;PingFang SC&#34;, &#34;Hiragino Sans GB&#34;, &#34;Microsoft YaHei UI&#34;, &#34;Microsoft YaHei&#34;, Arial, sans-serif;">需要通过socks5代理，且url可控。</span></span></p></td></tr></tbody></table>  
+  
+  
+**（注：奇安信CERT的漏洞深度分析报告包含此漏洞的POC及技术细节，订阅方式见文末。）**  
+  
+  
+**0****1**  
+  
+**漏洞详情**  
+  
+**>**  
+**>**  
+**>**  
+**>**  
+  
+**影响组件**  
+  
+curl 从 1998 年维护至今，已经成为 HTTP 请求命令行工具的事实标准，具有丰富的 Api 和 Abi(应用程序二进制接口)。curl被用于汽车、电视机、路由器、打印机、音频设备、手机、平板电脑、医疗设备、机顶盒、电脑游戏、媒体播放器等各种设备中，并且在超过200亿个安装中作为互联网传输引擎被成千上万的软件应用程序使用。  
+  
+  
+libcurl是curl的一个开发库，它提供了用于进行网络通信和数据传输的API和功能。libcurl库允许开发人员在自己的应用程序中集成curl的功能，以便进行HTTP、FTP、SMTP等协议的数据传输。通过libcurl，开发人员可以方便地执行各种网络操作，例如发送HTTP请求、下载文件、上传文件等。libcurl是一个非常流行和广泛使用的网络库，常用于编写网络应用程序和客户端。  
+  
+  
+**>**  
+**>**  
+**>**  
+**>**  
+  
+**漏洞描述**  
+  
+近日，奇安信CERT监测到官方发布新版本修复**curl SOCKS5 堆溢出漏洞(CVE-2023-38545)**  
+，当使用socks5代理时，如果主机名大于255则curl会尝试使用本地解析代替远程解析，但没有按照预期工作，导致内存损坏，攻击者可以构造恶意主机名触发漏洞，成功利用该漏洞将造成代码执行。  
+  
+  
+**鉴于此漏洞影响范围较大，建议客户尽快做好自查，经奇安信CERT研判漏洞利用条件苛刻，客户不必惊慌，可酌情排期修复。**  
+  
+  
+**本次更新内容：**  
+  
+**新增产品线解决方案；**  
+  
+**新增排查建议。**  
+  
+  
+  
+**02**  
+  
+**影响范围**  
+  
+**>**  
+**>**  
+**>**  
+**>**  
+  
+**影响版本**  
+  
+7.69.0 <= libcurl <= 8.3.0  
+  
+  
+**>**  
+**>**  
+**>**  
+**>**  
+  
+**不受影响版本**  
+  
+Libcurl >= 8.4.0  
+  
+Libcurl < 7.69.0  
+  
+  
+**>**  
+**>**  
+**>**  
+**>**  
+  
+**其他受影响组件**  
+  
+大多数现代操作系统都使用 libcurl，包括但不限于：  
+  
+Android、Chrome OS、Cisco IOS、iOS、ipadOS、Linux、macOS、OpenBSD、RISC OS、SunOS、tvOS、ucLinux、vxWorks、WebOS、Windows、Xbox System。  
+  
+  
+将libcurl用作依赖项的软件包数量同样巨大，包括但不限于：  
+  
+git, libcurl4-gnutls-dev, python-pycurl, libcurl4-openssl-dev, rng-tools, gnupg2, zabbix-agent, systemd, apache2-bin, xmlrpc-c-client, sssd-common, ipa-client, certmonger, php-curl, fwupd, libfwupd2, libreoffice-core, librepo, libraptor2-0, libcmis-0.5-5v5, python3-pycurl, passenger, geoipupdate, libappstream4, rsyslog, NetworkManager, python3-librepo, php8.1-curl, elfutils-debuginfod-client, cargo, python27-pycurl, git-core, mariadb-connector-c, apt-transport-https, php7.0-curl, google-chrome-stable, NetworkManager-cloud-setup, google-compute-engine-oslogin, qemu-block-extra, tpm2-tss, strongswan, syslog-ng-core, libcfitsio8, libcurl-devel, gnupg1。  
+  
+  
+  
+**03**  
+  
+**复现情况**  
+  
+目前，奇安信CERT已成功复现**curl SOCKS5 堆溢出漏洞(CVE-2023-38545)**，截图如下：  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/EkibxOB3fs4icibqyqkbfAauRCNJhSmwicFmn4icSZ2KkqJNP4WYKUL61Q1ozvpIiaASKJ5KnicBwnBc3sQqYtxXCfYdg/640 "")  
+  
+  
+  
+  
+**04**  
+  
+**处置建议**  
+  
+**>**  
+**>**  
+**>**  
+**>**  
+  
+**安全更新**  
+  
+目前官方已发布最新版本，建议受影响用户升级至 **libcurl >= 8.4.0：**  
+  
+git clone https://github.com/curl/curl.git  
+  
+./configure –withguntls  
+  
+make && make install  
+  
+  
+**暂时无法升级的用户建议：**  
+  
+不要与 CURLPROXY_SOCKS5_HOSTNAME 代理一起使用；  
+  
+不要将代理环境变量http_proxy、all_proxy和https_proxy设置为socks5h://  
+  
+  
+**>**  
+**>**  
+**>**  
+**>**  
+  
+**排查方案**  
+  
+依赖libcurl的软件可能会动态依赖系统lib目录下的libcurl或者静态打包入内，可以使用如下python脚本扫描/lib目录内含有受影响libcurl版本的so并输出对应so路径：  
+```
+import re
+import os
+import subprocess
+
+
+libcurl_pattern = r"^libcurl\/(7\.(?:6[9]|([7-9]\d)|[1-9]\d{2,})\.\d+|8\.(?:([0-2]\.\d+|3\.0)))$"
+libcurl_regex = re.compile(libcurl_pattern)
+so_pattern = r".*\.so(\.\d+)*$"
+so_regex = re.compile(so_pattern)
+
+
+root_dir = "/lib/"
+
+
+
+
+for root, dirs, files in os.walk(root_dir):
+    for file in files:
+        if so_regex.match(file):
+            file_path = os.path.join(root, file)
+            p = subprocess.Popen(["strings", file_path],
+                                 stdout=subprocess.PIPE)
+            p2 = subprocess.Popen(
+                ["grep", "-P", "^libcurl\/(7\.(?:6[9]|([7-9]\d)|[1-9]\d{2,})\.\d+|8\.(?:([0-2]\.\d+|3\.0)))$"], stdin=p.stdout, stdout=subprocess.PIPE)
+            output = p2.communicate()[0].decode('utf-8')
+            if "curl" in output:
+                # print(output)
+                print("vulnerable .so path:"+file_path +
+                      "\tversion "+output.strip())
+print("Done!")
+```  
+  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/EkibxOB3fs4icibqyqkbfAauRCNJhSmwicFmSzOYrc5OhiafROWHYkTXKI61UzqUQia1snWEXxTJLZIiaHSQ2NSDHCJ3A/640 "")  
+  
+Debian系统可以使用包管理器查找依赖libcurl的包：  
+  
+dpkg -l | grep libcurl  
+  
+  
+**>**  
+**>**  
+**>**  
+**>**  
+  
+**产品解决方案**  
+  
+**奇安信开源卫士已支持**  
+  
+奇安信开源卫士20231011. 408版本已支持对curl SOCKS5 堆溢出漏洞 (CVE-2023-38545)的检测。  
+  
+  
+**05**  
+  
+**参考资料**  
+  
+[1]https://curl.se/docs/CVE-2023-38545.html  
+  
+  
+  
+**06**  
+  
+**时间线**  
+  
+2023年10月11日，奇安信 CERT发布安全风险通告；  
+  
+2023年10月12日，奇安信 CERT发布安全风险通告第二次更新。  
+  
+  
+  
+**07**  
+  
+**漏洞情报服务**  
+  
+奇安信ALPH  
+A威胁分析平台已支持漏洞情报订阅服务：  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/EkibxOB3fs4icM1qqu1P5wbVeJwibXCXia3VbmsZAZ1OvMKXxb3wicRLgu9Cugsc1Ys4qswSONNVwncfviaDVh2xgP8g/640 "漏洞订阅上线.png")  
+  
+  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/3tG2LbK7WG3tezJEzJsicLSWCGsIggLbcfk4LB5WK7pdSwMksxPOAoHuibjQpBlEId4nyIIw52n2J8N8MowYZcjA/640 "")  
+  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/EkibxOB3fs4ibxnFKyL0cylepIkNH3tqMABkQWXeznrWzcvy7X8s6C56n8zbhtLFicQI4dN3ToN52icS7EqtysYW7A/640 "CERT LOGO.png")  
+  
+**奇安信 CERT**  
+  
+**致力于**  
+第一时间为企业级用户提供**权威**漏洞情报和**有效**  
+解决方案。  
+  
+  
+点击↓**阅读原文**，到**ALPHA威胁分析平台**  
+查看更多漏洞信息。  
+  
+
+
+---
+
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）

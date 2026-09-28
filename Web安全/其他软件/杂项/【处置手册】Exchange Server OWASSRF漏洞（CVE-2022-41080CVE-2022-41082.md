@@ -1,0 +1,193 @@
+---
+cve: "CVE-2022-41080"
+source: "gelusus/wxvl 公众号漏洞文库"
+---
+
+#  【处置手册】Exchange Server OWASSRF漏洞（CVE-2022-41080/CVE-2022-41082）   
+原创 NS-CERT  绿盟科技CERT   2022-12-29 19:43  
+  
+**通告编号:NS-2022-0034**  
+  
+2022-12-29  
+  
+<table><tbody><tr><td style="box-sizing: border-box;margin: 5px 10px;border-color: rgb(216, 216, 216);word-break: break-all;" valign="top" width="106"><strong><span style="font-size: 14px;">TA</span></strong><strong><span style="font-size: 14px;">G：</span></strong></td><td style="box-sizing: border-box;margin: 5px 10px;border-color: rgb(216, 216, 216);word-break: break-all;" valign="top" width="464"><p style="vertical-align: inherit;line-height: 1.75em;font-size: 14px;color: rgb(0, 0, 0);font-family: 微软雅黑;"><strong style="caret-color: red;line-height: 1.5em;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">Exchange Server、OWA、任意代码执行、SSRF</strong></p></td></tr><tr><td style="margin: 5px 10px;border-color: rgb(216, 216, 216);word-break: break-all;" valign="top"><span style="color: rgb(0, 0, 0);"><strong><span style="font-size: 14px;">漏洞危害：</span></strong></span></td><td style="margin: 5px 10px;border-color: rgb(216, 216, 216);word-break: break-all;" valign="top" width="171"><p><strong style="caret-color: red;font-size: 14px;line-height: 1.5em;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">攻击者利用此漏洞可实现任意命令执行</strong></p></td></tr><tr><td style="margin: 5px 10px;border-color: rgb(216, 216, 216);word-break: break-all;" valign="top"><strong><span style="font-size: 14px;">版本：</span></strong></td><td style="margin: 5px 10px;border-color: rgb(216, 216, 216);word-break: break-all;" valign="top" width="171"><strong><span style="font-size: 14px;">1.0<br/></span></strong></td></tr></tbody></table>  
+  
+**1**  
+  
+  
+**漏洞概述**  
+  
+  
+近日，绿盟科技CERT监测发现国外安全团队公开披露了对Exchange Server漏洞的利用链的技术细节。经过身份认证的远程攻击者利用Exchange Server权限提升漏洞(CVE-2022-41080)，在端点Outlook Web Application (OWA)获得在系统上下文中执行PowerShell的权限。之后具有执行PowerShell权限的攻击者通过Exchange Server远程代码执行漏洞(CVE-2022-41082)在目标系统上执行任意代码。以上利用链可绕过微软官方为"ProxyNotShell"所提供的缓解措施。请受影响的用户尽快采取措施进行防护。  
+  
+  
+参考链接：  
+  
+https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2022-41080  
+  
+https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2022-41082  
+  
+  
+**SEE MORE →******  
+  
+**2****影响范围**  
+  
+**受影响版本：**  
+  
+- Microsoft Exchange Server 2013 Cumulative Update 23  
+  
+- Microsoft Exchange Server 2016 Cumulative Update 22  
+  
+- Microsoft Exchange Server 2016 Cumulative Update 23  
+  
+- Microsoft Exchange Server 2019 Cumulative Update 11  
+  
+- Microsoft Exchange Server 2019 Cumulative Update 12  
+   
+  
+  
+  
+**3****攻击排查**  
+  
+**3.1 排查方法**  
+  
+1、访问链接，下载脚本：https://github.com/CrowdStrike/OWASSRF/blob/main/Rps_Http-IOC.ps1  
+  
+2、运行脚本（需要注意如果直接下载可能会出现&符号的问题导致无法运行，建议直接复制以下代码并写入新的ps1文件中）  
+  
+powershell C:\Users\admin\Desktop\Rps_Http-IOC.ps1  
+  
+ 日志所在路径，默认为：  
+  
+C:\Program Files\Microsoft\Exchange Server\V15\Logging\CmdletInfra\Powershell-Proxy\Http  
+  
+3、运行结果如下图所示：  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/VvfsuOanecpqKF9kfC3vicoxQw7nmMFETU2Qf7OJlvLL9ERZIwBVjqxmClmC03V3tyn9TLHzibUW6KBRdEFrh75Q/640?wx_fmt=png "")  
+       
+可以清晰看出被攻击的邮箱，攻击来源以及攻击过程，成功次数等。  
+  
+  
+**4****漏洞检测**  
+  
+**4.1 产品检测**  
+  
+绿盟科技远程安全评估系统（RSAS）与WEB应用漏洞扫描系统(WVSS)、网络入侵检测系统（IDS）、综合威胁探针（UTS）已具备对此次漏洞的扫描与检测能力，请有部署以上设备的用户升级至最新版本。  
+<table><tbody><tr><td valign="center" style="padding: 0px 7px;border-left-style: double;border-left-color: windowtext;border-right-color: windowtext;border-top-style: double;border-top-color: windowtext;border-bottom: none;background: rgb(217, 217, 217);" width="81"><br/></td><td valign="center" style="padding: 0px 7px;border-left: none;border-right-color: windowtext;border-top-style: double;border-top-color: windowtext;border-bottom: none;background: rgb(217, 217, 217);" width="96"><p style="line-height: 1.75em;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;"><strong>升级包版本号</strong></span></p></td><td valign="center" style="padding: 0px 7px;border-left: none;border-right-style: double;border-right-color: windowtext;border-top-style: double;border-top-color: windowtext;border-bottom: none;background: rgb(217, 217, 217);" width="303"><p style="line-height: 1.75em;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;"><strong>升级包下载链接</strong></span></p></td></tr><tr><td valign="top" style="padding: 0px 7px;border-left-style: double;border-color: windowtext;background: rgb(230, 230, 230);" width="91"><p style="text-align:left;line-height: 1.75em;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;"><strong>RSAS V6系统插件包</strong></span></p></td><td valign="top" style="padding: 0px 7px;border-color: windowtext;" width="96"><p style="text-align:left;line-height: 1.75em;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">V6.0R02F01.2906</span></p></td><td valign="top" style="padding: 0px 7px;border-right-style: double;border-color: windowtext;" width="303"><p style="text-align:left;line-height: 1.75em;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">http://update.nsfocus.com/update/listRsasDetail/v/vulsys</span></p></td></tr><tr><td valign="top" style="padding: 0px 7px;border-left-style: double;border-color: windowtext;background: rgb(230, 230, 230);" width="91"><p style="text-align:left;line-height: 1.75em;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;"><strong>RSAS V6 Web插件包</strong></span></p></td><td valign="top" style="padding: 0px 7px;border-color: windowtext;" width="96"><p style="text-align:left;line-height: 1.75em;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">V6.0R02F00.2804</span></p></td><td valign="top" style="padding: 0px 7px;border-right-style: double;border-color: windowtext;" width="303"><p style="text-align:left;line-height: 1.75em;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">http://update.nsfocus.com/update/listRsasDetail/v/vulweb</span></p></td></tr><tr><td valign="top" style="padding: 0px 7px;border-left-style: double;border-color: windowtext;background: rgb(230, 230, 230);" width="91"><p style="text-align:left;margin-bottom: 10px;line-height: 1.75em;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;"><strong>WVSS V6插件升级包</strong></span></p></td><td valign="top" style="padding: 0px 7px;border-color: windowtext;" width="96"><p style="text-align:left;margin-bottom: 10px;line-height: 1.75em;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">V6.0R03F00.265</span></p></td><td valign="top" style="padding: 0px 7px;border-right-style: double;border-color: windowtext;" width="303"><p style="text-align:left;margin-bottom: 10px;line-height: 1.75em;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">http://update.nsfocus.com/update/listWvssDetail/v/6/t/plg</span></p></td></tr><tr><td valign="top" rowspan="2" style="padding: 0px 7px;border-left-style: double;border-color: windowtext;background: rgb(230, 230, 230);" width="91"><p style="text-align:justify;line-height: 1.75em;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;"><strong>I</strong><strong>DS</strong></span></p></td><td valign="top" style="padding: 0px 7px;border-color: windowtext;" width="96"><p style="text-align:left;line-height: 1.75em;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">5.6.11.28923</span></p></td><td valign="top" style="padding: 0px 7px;border-right-style: double;border-color: windowtext;" width="303"><p style="text-align:left;line-height: 1.75em;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">http://update.nsfocus.com/update/downloads/id/135638</span></p></td></tr><tr><td valign="top" style="padding: 0px 7px;border-color: windowtext;" width="44"><p style="text-align:left;line-height: 1.75em;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">5.6.10.28923</span></p></td><td valign="top" style="padding: 0px 7px;border-right-style: double;border-color: windowtext;" width="302"><p style="text-align:left;line-height: 1.75em;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">http://update.nsfocus.com/update/downloads/id/135637</span></p></td></tr><tr><td valign="center" style="padding: 0px 7px;border-bottom-style: double;border-left-style: double;border-color: windowtext;background: rgb(230, 230, 230);" width="93"><p style="text-align:left;line-height: 1.75em;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;"><strong>U</strong><strong>TS</strong></span></p></td><td valign="top" style="padding: 0px 7px;border-bottom-style: double;border-color: windowtext;" width="112"><p style="text-align:left;line-height: 1.75em;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">5.6.10.28923</span></p></td><td valign="top" style="padding: 0px 7px;border-right-style: double;border-bottom-style: double;border-color: windowtext;" width="303"><p style="line-height: 1.75em;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">http://update.nsfocus.com/update/downloads/id/135667</span></p></td></tr></tbody></table>  
+关于RSAS的升级配置指导，请参考如下链接：  
+  
+https://mp.weixin.qq.com/s/SgOaCZeKrNn-4uR8Yj_C3Q  
+  
+  
+**5****漏洞防护**  
+  
+**5.1 官方升级**  
+  
+目前微软官方已针对受支持的产品版本发布了修复该漏洞的安全补丁，建议受影响用户开启系统自动更新安装补丁进行防护。  
+  
+注：由于网络问题、计算机环境问题等原因，Windows Update的补丁更新可能出现失败。用户在安装补丁后，应及时检查补丁是否成功更新。右键点击Windows徽标，选择“设置(N)”，选择“更新和安全”-“Windows更新”，查看该页面上的提示信息，也可点击“查看更新历史记录”查看历史更新情况。  
+  
+针对未成功安装更新补丁的情况，可直接下载离线安装包进行更新，下载链接如下：  
+<table><tbody><tr><td valign="top" style="border-top-width: 2px;border-left-width: 2px;border-color: windowtext;padding: 0px 7px;" width="163"><p style="text-align:justify;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;"><strong>产品更新</strong></span></p></td><td valign="top" style="border-top-width: 2px;border-top-color: windowtext;border-left: none;border-bottom-color: windowtext;border-right-color: windowtext;padding: 0px 7px;" width="120"><p style="text-align:justify;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;"><strong>补丁编号</strong></span></p></td><td valign="top" style="border-top-width: 2px;border-top-color: windowtext;border-left: none;border-bottom-color: windowtext;border-right-width: 2px;border-right-color: windowtext;padding: 0px 7px;" width="181"><p style="text-align:justify;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;"><strong>补丁下载链接</strong></span></p></td></tr><tr><td valign="top" style="border-top: none;border-left-width: 2px;border-left-color: windowtext;border-bottom-color: windowtext;border-right-color: windowtext;padding: 0px 7px;" width="163"><p style="text-align:left;line-height: 125%;"><span style="line-height: 125%;font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">Microsoft Exchange Server 2013 Cumulative Update 23</span></p></td><td valign="top" style="border-top: none;border-left: none;border-bottom-color: windowtext;border-right-color: windowtext;padding: 0px 7px;" width="120"><p style="text-align:justify;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">KB5019758</span></p></td><td valign="top" style="border-top: none;border-left: none;border-bottom-color: windowtext;border-right-width: 2px;border-right-color: windowtext;padding: 0px 7px;" width="176"><p style="text-align:justify;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">https://www.microsoft.com/en-us/download/details.aspx?id=104729</span></p></td></tr><tr><td valign="top" style="border-top: none;border-left-width: 2px;border-left-color: windowtext;border-bottom-color: windowtext;border-right-color: windowtext;padding: 0px 7px;" width="163"><p style="text-align:left;line-height: 125%;"><span style="line-height: 125%;font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">Microsoft Exchange Server 2016 Cumulative Update 22</span></p></td><td valign="top" style="border-top: none;border-left: none;border-bottom-color: windowtext;border-right-color: windowtext;padding: 0px 7px;" width="120"><p style="text-align:justify;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">KB5019758</span></p></td><td valign="top" style="border-top: none;border-left: none;border-bottom-color: windowtext;border-right-width: 2px;border-right-color: windowtext;padding: 0px 7px;" width="176"><p style="text-align:justify;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">https://www.microsoft.com/en-us/download/details.aspx?id=104728</span></p></td></tr><tr><td valign="top" style="border-top: none;border-left-width: 2px;border-left-color: windowtext;border-bottom-color: windowtext;border-right-color: windowtext;padding: 0px 7px;" width="163"><p style="text-align:left;line-height: 125%;"><span style="line-height: 125%;font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">Microsoft Exchange Server 2016 Cumulative Update 23</span></p></td><td valign="top" style="border-top: none;border-left: none;border-bottom-color: windowtext;border-right-color: windowtext;padding: 0px 7px;" width="120"><p style="text-align:justify;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">KB5019758</span></p></td><td valign="top" style="border-top: none;border-left: none;border-bottom-color: windowtext;border-right-width: 2px;border-right-color: windowtext;padding: 0px 7px;" width="176"><p style="text-align:justify;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">https://www.microsoft.com/en-us/download/details.aspx?id=104727</span></p></td></tr><tr><td valign="top" style="border-top: none;border-left-width: 2px;border-left-color: windowtext;border-bottom-color: windowtext;border-right-color: windowtext;padding: 0px 7px;" width="163"><p style="text-align:left;line-height: 125%;"><span style="line-height: 125%;font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">Microsoft Exchange Server 2019 Cumulative Update 11</span></p></td><td valign="top" style="border-top: none;border-left: none;border-bottom-color: windowtext;border-right-color: windowtext;padding: 0px 7px;" width="120"><p style="text-align:justify;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">KB5019758</span></p></td><td valign="top" style="border-top: none;border-left: none;border-bottom-color: windowtext;border-right-width: 2px;border-right-color: windowtext;padding: 0px 7px;" width="176"><p style="text-align:justify;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">https://www.microsoft.com/en-us/download/details.aspx?id=104726</span></p></td></tr><tr><td valign="top" style="border-top: none;border-left-width: 2px;border-left-color: windowtext;border-bottom-width: 2px;border-bottom-color: windowtext;border-right-color: windowtext;padding: 0px 7px;" width="163"><p style="text-align:left;line-height: 125%;"><span style="line-height: 125%;font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">Microsoft Exchange Server 2019 Cumulative Update 12</span></p></td><td valign="top" style="border-top: none;border-left: none;border-bottom-width: 2px;border-bottom-color: windowtext;border-right-color: windowtext;padding: 0px 7px;" width="120"><p style="text-align:justify;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">KB5019758</span></p></td><td valign="top" style="border-top: none;border-left: none;border-bottom-width: 2px;border-bottom-color: windowtext;border-right-width: 2px;border-right-color: windowtext;padding: 0px 7px;" width="176"><p style="text-align:justify;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">https://www.microsoft.com/en-us/download/details.aspx?id=104725</span></p></td></tr></tbody></table>  
+【注】：建议您在安装补丁前做好数据备份工作，避免出现意外。  
+  
+**5.2 产品防护**  
+  
+针对上述漏洞，绿盟科技网络入侵防护系统(IPS)、WEB应用防护系统(WAF)与下一代防火墙 (NF)已发布规则升级包，请相关用户升级规则包至最新版，以形成安全产品防护能力。安全防护产品规则版本号如下：  
+   
+<table><tbody><tr><td valign="center" style="padding: 0px 7px;border-left-style: double;border-left-color: windowtext;border-right-color: windowtext;border-top-style: double;border-top-color: windowtext;border-bottom: none;background: rgb(217, 217, 217);" width="121"><p style="text-align:center;line-height: 1.75em;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;"><strong>安全</strong><strong>防护产品</strong></span></p></td><td valign="center" style="padding: 0px 7px;border-left: none;border-right-color: windowtext;border-top-style: double;border-top-color: windowtext;border-bottom: none;background: rgb(217, 217, 217);" width="113"><p style="text-align:center;line-height: 1.75em;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;"><strong>规则</strong><strong>版本号</strong></span></p></td><td valign="center" style="padding: 0px 7px;border-left: none;border-right-color: windowtext;border-top-style: double;border-top-color: windowtext;border-bottom: none;background: rgb(217, 217, 217);" width="262"><p style="text-align:center;line-height: 1.75em;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;"><strong>升级包下载链接</strong></span></p></td><td valign="center" style="padding: 0px 7px;border-left: none;border-right-style: double;border-right-color: windowtext;border-top-style: double;border-top-color: windowtext;border-bottom: none;background: rgb(217, 217, 217);" width="58"><p style="text-align:center;line-height: 1.75em;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;"><strong>规则编号</strong></span></p></td></tr><tr style="height:37px;"><td valign="center" rowspan="2" style="padding: 0px 7px;border-top-style: double;border-left-style: double;border-color: windowtext;background: rgb(217, 217, 217);" width="121"><p style="text-align:left;line-height: 1.75em;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;"><strong>IPS</strong></span></p></td><td valign="top" style="padding: 0px 7px;border-left: none;border-right-color: windowtext;border-top-style: double;border-top-color: windowtext;border-bottom: none;" width="113"><p style="text-align:left;line-height: 1.75em;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">5.6.11.28923</span></p></td><td valign="top" style="padding: 0px 7px;border-left: none;border-right-color: windowtext;border-top-style: double;border-top-color: windowtext;border-bottom: none;" width="262"><p style="text-align:left;line-height: 1.75em;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">http://update.nsfocus.com/update/downloads/id/135638</span></p></td><td valign="center" rowspan="2" style="padding: 0px 7px;border-left: none;border-right-style: double;border-right-color: windowtext;border-top-style: double;border-top-color: windowtext;border-bottom-color: windowtext;" width="58"><p style="text-align:left;line-height: 1.75em;"><br/></p><p style="text-align:left;line-height: 1.75em;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">[25803]</span></p><p style="text-align:left;line-height: 1.75em;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">[25802]</span></p><p style="text-align:left;line-height: 1.75em;"><br/></p></td></tr><tr><td valign="top" style="padding: 0px 7px;border-left: none;border-right-color: windowtext;border-top-style: double;border-top-color: windowtext;border-bottom: none;" width="113"><p style="text-align:left;line-height: 1.75em;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">5.6.10.28923</span></p></td><td valign="top" style="padding: 0px 7px;border-left: none;border-right-color: windowtext;border-top-style: double;border-top-color: windowtext;border-bottom: none;" width="262"><p style="text-align:left;line-height: 1.75em;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">http://update.nsfocus.com/update/downloads/id/135637</span></p></td></tr><tr style="height:37px;"><td valign="center" rowspan="2" style="padding: 0px 7px;border-left-style: double;border-color: windowtext;background: rgb(217, 217, 217);" width="121"><p style="text-align:left;line-height: 1.75em;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;"><strong>W</strong><strong>AF</strong></span></p></td><td valign="center" style="padding: 0px 7px;border-left: none;border-right-color: windowtext;border-top-color: windowtext;border-bottom-color: windowtext;" width="113"><p style="text-align:left;line-height: 1.75em;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">6.0.7.3.58018</span></p></td><td valign="center" style="padding: 0px 7px;border-left: none;border-right-color: windowtext;border-top-color: windowtext;border-bottom-color: windowtext;" width="262"><p style="text-align:left;line-height: 1.75em;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">http://update.nsfocus.com/update/downloads/id/135588</span></p></td><td valign="center" rowspan="2" style="padding: 0px 7px;border-left: none;border-right-style: double;border-right-color: windowtext;border-top-color: windowtext;border-bottom-color: windowtext;" width="58"><p style="text-align:left;line-height: 1.75em;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">27005147</span></p></td></tr><tr style="height:42px;"><td valign="center" style="padding: 0px 7px;border-left: none;border-right-color: windowtext;border-top: none;border-bottom-color: windowtext;" width="113"><p style="text-align:left;line-height: 1.75em;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">6.0.7.0.58018</span></p></td><td valign="center" style="padding: 0px 7px;border-left: none;border-right-color: windowtext;border-top: none;border-bottom-color: windowtext;" width="262"><p style="text-align:left;line-height: 1.75em;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">http://update.nsfocus.com/update/downloads/id/135589</span></p></td></tr><tr style="height:42px;"><td valign="center" rowspan="2" style="padding: 0px 7px;border-left-style: double;border-color: windowtext;background: rgb(217, 217, 217);" width="121"><p style="text-align:left;line-height: 1.75em;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;"><strong>N</strong><strong>F</strong></span></p></td><td valign="center" style="padding: 0px 7px;border-left: none;border-right-color: windowtext;border-top: none;border-bottom-color: windowtext;" width="113"><p style="text-align:left;line-height: 1.75em;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">6.0.1.890</span></p></td><td valign="center" style="padding: 0px 7px;border-left: none;border-right-color: windowtext;border-top: none;border-bottom-color: windowtext;" width="262"><p style="text-align:left;line-height: 1.75em;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">http://update.nsfocus.com/update/downloads/id/135633</span></p></td><td valign="center" rowspan="2" style="padding: 0px 7px;border-left: none;border-right-style: double;border-right-color: windowtext;border-top-color: windowtext;border-bottom-color: windowtext;" width="58"><p style="text-align:left;line-height: 1.75em;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">25807</span></p></td></tr><tr style="height:42px;"><td valign="center" style="padding: 0px 7px;border-left: none;border-right-color: windowtext;border-top: none;border-bottom-color: windowtext;" width="113"><p style="text-align:left;line-height: 1.75em;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">6.0.2.890</span></p></td><td valign="center" style="padding: 0px 7px;border-left: none;border-right-color: windowtext;border-top: none;border-bottom-color: windowtext;" width="262"><p style="text-align:left;line-height: 1.75em;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">http://update.nsfocus.com/update/downloads/id/135634</span></p></td></tr></tbody></table>  
+产品规则升级的操作步骤详见如下链接：  
+  
+IPS：https://mp.weixin.qq.com/s/DxQ3aaap8aujqZf-3VbNJg  
+  
+WAF：https://mp.weixin.qq.com/s/7F8WCzWsuJ5T2E9e01wNog  
+  
+NF：https://mp.weixin.qq.com/s/R3k_KJm4O52bxy794jjo4A  
+  
+**5.3 临时防护措施**  
+  
+1.若暂时无法应用补丁，建议禁用OWA来缓解此漏洞  
+  
+2.禁止非管理员用户使用远程PowerShell访问  
+  
+微软官方强烈建议Exchange Server用户禁用组织中的非管理员用户进行远程 PowerShell访问：  
+  
+- 使用Exchange命令行管理程序为单个用户禁用远程PowerShell访问  
+  
+  
+<table><tbody><tr style="height:16px;"><td valign="top" style="border-width: 2px;border-color: windowtext;background: rgb(191, 191, 191);padding: 0px 7px;" height="16" width="550"><p style="text-align:left;line-height: 1.75em;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">Set-User &#34;&lt;username&gt;&#34;   -RemotePowerShellEnabled $false</span></p></td></tr></tbody></table>  
+例：禁用用户名为“Therese Lindqvist”的远程PowerShell访问：  
+<table><tbody><tr style="height:16px;"><td valign="top" style="border-width: 2px;border-color: windowtext;background: rgb(191, 191, 191);padding: 0px 7px;" height="16" width="543"><p style="text-align:left;line-height: 1.75em;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">Set-User &#34;Therese Lindqvist&#34;   -RemotePowerShellEnabled $false</span></p></td></tr></tbody></table>  
+- 使用Exchange命令行管理程序为多个用户禁用远程PowerShell访问  
+  
+  
+  
+(1)根据现有属性对多个用户禁用：  
+  
+步骤一：  
+<table><tbody><tr style="height:16px;"><td valign="top" style="border-width: 2px;border-color: windowtext;background: rgb(191, 191, 191);padding: 0px 7px;" height="16" width="546"><p style="text-align:left;line-height: 1.75em;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">$&lt;VariableName&gt; = &lt;Get-Mailbox |   Get-User&gt; -ResultSize unlimited -Filter &lt;Filter&gt;</span></p></td></tr></tbody></table>  
+步骤二：  
+<table><tbody><tr style="height:16px;"><td valign="top" style="border-width: 2px;border-color: windowtext;background: rgb(191, 191, 191);padding: 0px 7px;" height="16" width="537"><p style="text-align:left;line-height: 1.75em;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">$&lt;VariableName&gt; | foreach {Set-User   -RemotePowerShellEnabled $false}</span></p></td></tr></tbody></table>  
+例：删除 Title 属性包含值“Sales Associate”的所有用户对远程 PowerShell 的访问：  
+  
+步骤一：  
+<table><tbody><tr style="height:16px;"><td valign="top" style="border-width: 2px;border-color: windowtext;background: rgb(191, 191, 191);padding: 0px 7px;" height="16" width="532"><p style="text-align:left;line-height: 1.75em;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">$DSA = Get-User -ResultSize unlimited   -Filter &#34;(RecipientType -eq &#39;UserMailbox&#39;) -and (Title -like &#39;*Sales   Associate*&#39;)&#34;</span></p></td></tr></tbody></table>  
+步骤二：  
+<table><tbody><tr style="height:16px;"><td valign="top" style="border-width: 2px;border-color: windowtext;background: rgb(191, 191, 191);padding: 0px 7px;" height="16" width="530"><p style="text-align:left;line-height: 1.75em;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">$DSA | foreach {Set-User   -RemotePowerShellEnabled $false}</span></p></td></tr></tbody></table>  
+(2)根据对特定的用户列表来禁用：  
+  
+步骤一：  
+<table><tbody><tr style="height:16px;"><td valign="top" style="border-width: 2px;border-color: windowtext;background: rgb(191, 191, 191);padding: 0px 7px;" height="16" width="532"><p style="text-align:left;line-height: 1.75em;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">$&lt;VariableName&gt; = Get-Content   &lt;text file&gt;</span></p></td></tr></tbody></table>  
+步骤二：  
+<table><tbody><tr style="height:16px;"><td valign="top" style="border-width: 2px;border-color: windowtext;background: rgb(191, 191, 191);padding: 0px 7px;" height="16" width="529"><p style="text-align:left;line-height: 1.75em;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">$&lt;VariableName&gt; | foreach {Set-User   -RemotePowerShellEnabled $false</span></p></td></tr></tbody></table>  
+例：删除位于C:\My Documents\NoPowerShell.txt中的所有用户对远程 PowerShell 的访问：  
+  
+步骤一：  
+<table><tbody><tr style="height:16px;"><td valign="top" style="border-width: 2px;border-color: windowtext;background: rgb(191, 191, 191);padding: 0px 7px;" height="16" width="527"><p style="text-align:left;line-height: 1.75em;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">$NPS = Get-Content &#34;C:\My   Documents\NoPowerShell.txt&#34;</span></p></td></tr></tbody></table>  
+步骤二：  
+<table><tbody><tr style="height:16px;"><td valign="top" style="border-width: 2px;border-color: windowtext;background: rgb(191, 191, 191);padding: 0px 7px;" height="16" width="522"><p style="text-align:left;line-height: 1.75em;"><span style="font-size: 14px;font-family: 微软雅黑, &#34;Microsoft YaHei&#34;;">$NPS | foreach {Set-User   -RemotePowerShellEnabled $false}</span></p></td></tr></tbody></table>  
+对于以上禁用用户远程PowerShell访问操作，详情可参考如下链接：https://learn.microsoft.com/en-us/powershell/exchange/control-remote-powershell-access-to-exchange-servers?view=exchange-ps&viewFallbackFrom=exchange-ps%22%20%5Cl%20%22use-the-exchange-management-shell-to-enable-or-disable-remote-powershell-access-for-a-user  
+  
+3.确保X-Forwarded-For HTTP请求头记录真实的外部IP地址  
+  
+4.除此之外CrowdStrike已开发脚本用于监视IIS及Powershell日志：https://github.com/CrowdStrike/OWASSRF  
+  
+  
+  
+**END**  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/qR4ORTNELImFwJM2rh6GKbnrurdFA28jJ8chUPyC1U6aW3jhenqEiaXkmeGVmfOnvAJy8j3My901JQ7emHaicYzA/640?wx_fmt=png "")  
+           
+  
+![](https://mmbiz.qpic.cn/mmbiz_jpg/qR4ORTNELImFwJM2rh6GKbnrurdFA28jib7icfic0lJJHh3eLRpIXiaia08KqOSEibBsz64vlOH9aqicu3lmjccEeAFWQ/640?wx_fmt=jpeg "")  
+          
+  
+**声明**  
+  
+本安全公告仅用来描述可能存在的安全问题，绿盟科技不为此安全公告提供任何保证或承诺。由于传播、利用此安全公告所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，绿盟科技以及安全公告作者不为此承担任何责任。              
+  
+绿盟科技拥有对此安全公告的修改和解释权。如欲转载或传播此安全公告，必须保证此安全公告的完整性，包括版权声明等全部内容。未经绿盟科技允许，不得任意修改或者增减此安全公告内容，不得以任何方式将其用于商业目的。              
+  
+![](https://mmbiz.qpic.cn/mmbiz_jpg/qR4ORTNELImFwJM2rh6GKbnrurdFA28jib7icfic0lJJHh3eLRpIXiaia08KqOSEibBsz64vlOH9aqicu3lmjccEeAFWQ/640?wx_fmt=jpeg "")  
+  
+  
+**绿盟科技CERT**  
+****  
+∣  
+微信公众号  
+  
+![](https://mmbiz.qpic.cn/mmbiz_jpg/VvfsuOanecpqKF9kfC3vicoxQw7nmMFETewlvcmSXOicfppSRiaXnFOY8b6GdqZlSN7NNkaNv7RzoXSUeg77Qrgng/640?wx_fmt=jpeg "绿盟科技CERT公众号.jpg")  
+  
+![](https://mmbiz.qpic.cn/mmbiz/Hu8hctxHqSW0nSJn8p8OHVEQwHicSwTibFJMBE650AxdzfISoeY8woe2QsgCINIBrccBOOUft2HuU0GsNQWibSG7g/640?wx_fmt=png "")  
+  
+长按识别二维码，关注网络安全威胁信息  
+  
+  
+  
+  
+  
+
+
+---
+
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）

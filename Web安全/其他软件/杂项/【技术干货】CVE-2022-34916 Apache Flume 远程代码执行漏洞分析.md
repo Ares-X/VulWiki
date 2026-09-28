@@ -1,0 +1,125 @@
+---
+cve: "CVE-2022-34916"
+source: "gelusus/wxvl 公众号漏洞文库"
+---
+
+#  【技术干货】CVE-2022-34916 Apache Flume 远程代码执行漏洞分析   
+ 星阑科技   2022-09-29 10:01  
+  
+![](https://mmbiz.qpic.cn/mmbiz_gif/Cc8QqLUKOeiaFHTFtiatmEIxZQcXOHfyr6GOBM88IeMm28ybjSAHEJKicuQxPxN5L5NFZ5mza2NOnuokf9ant2fUQ/640?wx_fmt=gif "")  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/wfFYMXc5G1NSkNgX8voWSJmuSUlcQtsLKWSxBUmsxRCOqbNibhhXFuhtfXiak5ibYGMcEGD9yzzIy4qVq1Q5a63IQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/wfFYMXc5G1NSkNgX8voWSJmuSUlcQtsLgZE9TXJrsxHuabVS0UbocSyplzJJ0pxtQQZpAzIBdZwlByjZ3qUUAQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1 "好看的图.png")  
+  
+**xxhzz**  
+  
+**@PortalLab实验室**  
+  
+**项目介绍**  
+  
+Apache Flume 是一个分布式的，可靠的，并且可用于高效地收集，汇总和移动大量日志数据的软件。它具有基于流数据流的简单而灵活的体系结构。它具有可调的可靠性机制以及许多故障转移和恢复机制，并且具有健壮性和容错性。它使用一个简单的可扩展数据模型，该模型允许进行在线分析应用程序。  
+  
+**漏洞描述**  
+  
+在7月22日，Apache发布安全公告，修复了一个存在于Apache Flume中的远程代码执行漏洞，CVE编号为CVE-2022-34916。当攻击者控制目标 LDAP 服务器时，如果配置使用带有 JNDI LDAP 数据源 URI 的 JMS 源，Apache Flume 版本 1.4.0 到 1.10.0 很容易受到远程代码执行 (RCE) 攻击。  
+  
+**利用范围**  
+  
+1.4.0 <= Apache Flume <= 1.10.0  
+  
+**漏洞分析**  
+## 环境搭建  
+  
+从GitHub上下载1.10.0版本，导入IDEA。  
+  
+项目jdk使用1.8，然后修改TestIntegrationActiveMQ 测试类中的DESTINATION_NAME，因为destinationName是由DESTINATION_NAME 定义；修改JNDI_PREFIX为ldap://  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/wfFYMXc5G1Pk9ibticKNMibuficGppHyicrHI2g9Aj3RukkyVWialXFAL3wMH2PVibhh9KPMe66eGyq5UeNicIib5LoibmUg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+  
+在JMSMessageConsumerTestBase.java中将destinationLocator = JMSDestinationLocator.CDI;修改为destinationLocator = JMSDestinationLocator.JNDI;  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/wfFYMXc5G1Pk9ibticKNMibuficGppHyicrHIvQM7SBONIP51AxvgQFy5Usp7FmG4nqbH4SYib6sthQ36ia8O9XRdcOKQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+  
+  
+最后运行TestIntegrationActiveMQ 测试类即可。  
+## 漏洞原理  
+  
+根据Apache Flume漏洞描述，可以确定问题是出现在了JMSMessageConsumer中。  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/wfFYMXc5G1Pk9ibticKNMibuficGppHyicrHIpHKuYZ9bDY3dI3sLjLamVsoKrTs5h4mrVOyiaJtvxssYyaMkKVuiawyw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+  
+查看DIff（https://github.com/apache/flume/commit/7fe9af49）记录发现，修复方式是在JMSMessageConsumer中的else分支下，在initialContext.lookup(destinationName)前新增了对destinationName的校验。  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/wfFYMXc5G1Pk9ibticKNMibuficGppHyicrHIa9icjRg1nibGL5B39VlxzXAZhc6dSjeb8AkOwoP0wfZVia9Qg0ia5GgKlQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+  
+那么漏洞触发点已经很明确了，在没有增加校验前，只要进入JMSMessageConsumer中else分支，控制destinationName参数，即可实现JNDI注入。  
+## 代码分析  
+  
+知道了漏洞原理后，分析一下代码。  
+  
+首先在TestJMSMessageConsumer#testCreateDurableSubscription 初始化了 JMSMessageConsumer 并传入 destinationLocator  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/wfFYMXc5G1Pk9ibticKNMibuficGppHyicrHIlp5GfibQ5GAbykjJaUIYTJlyLs74ACZcZvpQQrBzcIeCKhHJeQZR32Q/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+  
+destinationLocator的定义是在JMSMessageConsumerTestBase.java中。  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/wfFYMXc5G1Pk9ibticKNMibuficGppHyicrHIMI6ep1s58K4sJMwUPlO0clGAx0QiasoWjd8gXWPSibx0ChyVjMICicbFA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+  
+在搭建环境时，我们是将destinationLocator = JMSDestinationLocator.CDI；修改为了destinationLocator = JMSDestinationLocator.JNDI；![](https://mmbiz.qpic.cn/mmbiz_png/wfFYMXc5G1Pk9ibticKNMibuficGppHyicrHIX6bJccQickQ4t95IdgY4o4ianT8u3FJWX4UAfRe3z9HaDTGNdqkRMJeQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+  
+  
+这样配置，是为了在JMSMessageConsumer中不满足if条件后，能够进入到else，到达漏洞触发点。  
+  
+而在官方提供的测试类中，TestIntegrationActiveMQ 类存在 testQueueLocatedWithJndi，将作为source点传入参数。  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/wfFYMXc5G1Pk9ibticKNMibuficGppHyicrHIqdQZ2jkhYUiaHVZmOVFU2vtjYwjYy99EsbTib2vwbdjXosJds60OFLHQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+  
+修改DESTINATION_NAME为恶意JNDI地址，将JNDI_PREFIX修改为ldap://  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/wfFYMXc5G1Pk9ibticKNMibuficGppHyicrHIKqD4libJn03Bl5NraxraGhjg63m8fniaK7rkr0dxbdL8zWlMFqAOfClw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+  
+通过参数的传入，经过如上分析的流程，到达else后，由于没有校验，直接触发initialContext.lookup，造成JNDI注入，从而执行恶意远程代码。  
+  
+**漏洞复现**  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/wfFYMXc5G1Pk9ibticKNMibuficGppHyicrHIkeHvU5KpSiaOQb9ubeqEjib4D33UdmezsTG7gR4nwia731bFNIYrM6RAg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+  
+**修复建议**  
+  
+官方已发布安全版本，请尽快更新至安全版本，下载链接：https://flume.apache.org/download.html  
+  
+**参考材料**  
+  
+1.https://github.com/apache/flume/commit/7fe9af49  
+  
+2.https://issues.apache.org/jira/browse/FLUME-3428  
+  
+  
+**更多技术干货，欢迎关注“星阑PortalLab”公众号**  
+  
+  
+**关于Portal Lab**  
+  
+星阑科技 Portal Lab 致力于前沿安全技术研究及能力工具化。主要研究方向为API 安全、应用安全、攻防对抗等领域。实验室成员研究成果曾发表于BlackHat、HITB、BlueHat、KCon、XCon等国内外知名安全会议，并多次发布开源安全工具。未来，Portal Lab将继续以开放创新的态度积极投入各类安全技术研究，持续为安全社区及企业级客户提供高质量技术输出。  
+  
+  
+**往期 · 推荐**  
+  
+  
+  
+[](http://mp.weixin.qq.com/s?__biz=Mzg5NjEyMjA5OQ==&mid=2247492888&idx=1&sn=219ad26c37836f5cdefc5f41dea620c0&chksm=c0074884f770c192f60f651f3e0c6a0f293b38a59d9499a89cd1b9c2e2d8cbc4dd4620783ed1&scene=21#wechat_redirect)  
+  
+[](http://mp.weixin.qq.com/s?__biz=Mzg5NjEyMjA5OQ==&mid=2247492771&idx=1&sn=5bc86cbf62a83db69b1b1919ad86273b&chksm=c007493ff770c0290f199daef6b03bd09f9f85e35c5179c3ca8fe062623ecc27522b45850f0a&scene=21#wechat_redirect)  
+  
+[](http://mp.weixin.qq.com/s?__biz=Mzg5NjEyMjA5OQ==&mid=2247492691&idx=1&sn=7f4fdf863953280d024c2ae7144badff&chksm=c00749cff770c0d98d9848f5415e2c7b395add84d39e4ab51172549c024d36cfc80af23ad43e&scene=21#wechat_redirect)  
+  
+[](http://mp.weixin.qq.com/s?__biz=Mzg5NjEyMjA5OQ==&mid=2247492617&idx=1&sn=103b4a185c02f1435ddcc1778bd038e6&chksm=c0074995f770c08374efe7cda4e53a8991a867e2b1b73fe05f0f4a32335756a56c77483ee75f&scene=21#wechat_redirect)  
+  
+  
+![](https://mmbiz.qpic.cn/mmbiz_gif/Cc8QqLUKOehwcHoxicoOah5mxDjLHMZ9RHUxNeibERphRXOj3AEupxt7JyOt3LF1RmmWQibYmicTv2DxM93iaEJhLxw/640?wx_fmt=gif&wxfrom=5&wx_lazy=1 "")  
+
+
+---
+
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）

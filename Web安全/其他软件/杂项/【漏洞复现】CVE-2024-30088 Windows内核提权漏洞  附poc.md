@@ -1,0 +1,191 @@
+---
+cve: "CVE-2024-30088"
+source: "gelusus/wxvl 公众号漏洞文库"
+---
+
+#  【漏洞复现】CVE-2024-30088 Windows内核提权漏洞 | 附poc   
+原创 loser  网安鲲为帝   2024-07-06 17:13  
+  
+**0x00****免责声明**  
+  
+!  
+  
+![](https://mmbiz.qpic.cn/mmbiz_svg/1MLz0YkS76HN2mDzsc3eKehjJJTibD6cvzwcAQjFRKJibj2hFeFx9xqPxeAVNLIWWM7ia8XD9YUsUYyFLonA46ewoicJrmJO2oNx/640?wx_fmt=svg&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+  
+  
+  
+本  
+文  
+仅  
+用  
+于  
+技  
+术  
+讨  
+论  
+与  
+学  
+习  
+，  
+利  
+用  
+此  
+文  
+所  
+提  
+供  
+的  
+信  
+息  
+而  
+造  
+成  
+的  
+任  
+何  
+直  
+接  
+或  
+者  
+间  
+接  
+的  
+后  
+果  
+及  
+损  
+失  
+，  
+均  
+由  
+使  
+用  
+者  
+本  
+人  
+负  
+责  
+，  
+文  
+章  
+作  
+者  
+及  
+本  
+公  
+众  
+号  
+团  
+队  
+不  
+为  
+此  
+承  
+担  
+任  
+何  
+责  
+任  
+。  
+  
+  
+**0x01 漏洞描述**  
+  
+!  
+  
+![](https://mmbiz.qpic.cn/mmbiz_svg/1MLz0YkS76HN2mDzsc3eKehjJJTibD6cvzwcAQjFRKJibj2hFeFx9xqPxeAVNLIWWM7ia8XD9YUsUYyFLonA46ewoicJrmJO2oNx/640?wx_fmt=svg&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+  
+  
+  
+该漏洞存在于 NtQueryInformationToken 函数中，特别是在处理AuthzBasepCopyoutInternalSecurityAttributes 函数时，该漏洞源于内核在操作对象时对锁定机制的不当管理，这一失误可能导致恶意实体意外提升权限。  
+  
+  
+**0x02 漏洞影响范围**  
+  
+!  
+  
+![](https://mmbiz.qpic.cn/mmbiz_svg/1MLz0YkS76HN2mDzsc3eKehjJJTibD6cvzwcAQjFRKJibj2hFeFx9xqPxeAVNLIWWM7ia8XD9YUsUYyFLonA46ewoicJrmJO2oNx/640?wx_fmt=svg&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+  
+  
+  
+Windows Server 2016、  
+W  
+ind  
+ows Server 2022、  
+W  
+ind  
+ows Server 2019  
+  
+Windows 10、Windows 11  
+  
+  
+**0x03 漏洞复现**  
+  
+!  
+  
+![](https://mmbiz.qpic.cn/mmbiz_svg/1MLz0YkS76HN2mDzsc3eKehjJJTibD6cvzwcAQjFRKJibj2hFeFx9xqPxeAVNLIWWM7ia8XD9YUsUYyFLonA46ewoicJrmJO2oNx/640?wx_fmt=svg&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+  
+  
+  
+创建一个test用户，普通权限，如下：  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/uIXF7K92VELlCyZF6zKl3oDpoU38bzRUicibAiawtsD32DmRicH8QuUzxgqbVO9AsF8ibvF13NiawDfJbjgXNoc288KQ/640?wx_fmt=png&from=appmsg "")  
+  
+  
+使用poc，利用条件竞争提权，故需要等一会。成功提权后，会弹出一个管理员运行的命令行窗口，如下图，查询权限已是system权限  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/uIXF7K92VELlCyZF6zKl3oDpoU38bzRU60yficaF05zkJcxf854bjEYtXjibp6BJLrewwGkNEtiaV7ZdN0GOdZmicA/640?wx_fmt=png&from=appmsg "")  
+  
+  
+  
+**0x04 修复意见**  
+  
+!  
+  
+![](https://mmbiz.qpic.cn/mmbiz_svg/1MLz0YkS76HN2mDzsc3eKehjJJTibD6cvzwcAQjFRKJibj2hFeFx9xqPxeAVNLIWWM7ia8XD9YUsUYyFLonA46ewoicJrmJO2oNx/640?wx_fmt=svg&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+  
+  
+  
+关注官方补丁：  
+```
+https://msrc.microsoft.com/update-guide/zh-cn/vulnerability/CVE-2024-30088
+```  
+  
+  
+**0x05 验证工具获取**  
+  
+!  
+  
+![](https://mmbiz.qpic.cn/mmbiz_svg/1MLz0YkS76HN2mDzsc3eKehjJJTibD6cvzwcAQjFRKJibj2hFeFx9xqPxeAVNLIWWM7ia8XD9YUsUYyFLonA46ewoicJrmJO2oNx/640?wx_fmt=svg&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+  
+  
+  
+github地址：  
+  
+```
+https://github.com/Zombie-Kaiser/CVE-2024-30088-Windows-poc?tab=readme-ov-file
+```  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/uIXF7K92VELiclpicHoicoYfvibSxRClmxsZuCkLVI6mxpttTQj03nf0QAapfvd228MSTuPoqHVz2eKSwxM5ib18CAw/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1 "")  
+  
+  
+**0x06 欢迎进群交流**  
+  
+!  
+  
+![](https://mmbiz.qpic.cn/mmbiz_svg/1MLz0YkS76HN2mDzsc3eKehjJJTibD6cvzwcAQjFRKJibj2hFeFx9xqPxeAVNLIWWM7ia8XD9YUsUYyFLonA46ewoicJrmJO2oNx/640?wx_fmt=svg&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+  
+  
+  
+添加微信进群：  
+  
+![](https://mmbiz.qpic.cn/mmbiz_jpg/uIXF7K92VEJdfiaGbzW6sp0kFvhYC7ejuJuS6lWyHyUGg40F2QVic6goic34EbYceQ2WE4eyMZ8oxbswQkhzJLhNQ/640?wx_fmt=other&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
+  
+  
+      
+  
+
+
+---
+
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）

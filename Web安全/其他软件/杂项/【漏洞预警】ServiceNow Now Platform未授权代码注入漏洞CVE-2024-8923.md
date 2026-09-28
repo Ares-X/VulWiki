@@ -1,0 +1,21 @@
+---
+cve: "CVE-2024-8923"
+source: "gelusus/wxvl 公众号漏洞文库"
+---
+
+#  【漏洞预警】ServiceNow Now Platform未授权代码注入漏洞CVE-2024-8923   
+cexlife  飓风网络安全   2024-10-31 22:11  
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/ibhQpAia4xu01KdlKovDEZkJfACVDBXp7tDV6og8l2LqibmpogARia16egcExRQ0LQvBMZicqwmQtQn3TCExXxCzqtg/640?wx_fmt=png&from=appmsg "")  
+  
+**漏洞描述:**  
+  
+ServiceNow发布安全公告,修复了2个安全漏洞,其中包括一个代码注入漏洞,此漏洞可能允许未认证的用户在Now Platform 的上下文中执行任意代码,或检索敏感信息,鉴于今年早期有利用ServiceNow Now Platform漏洞（CVE-2024-4879，CVE-2024-5217和CVE-2024-5178）对企业和信息中心进行攻击的情况,建议受此漏洞影响用户及时采取防护措施。  
+  
+**修复建议:正式防护方案:**针对此漏洞,官方已经发布了漏洞修复版本,请立即更新到安全版本:ServiceNow Xanadu >= Xanadu GA ReleaseServiceNow Washington DC >= Washington DC Patch 4 Hot Fix 1a    ServiceNow Washington DC >= Washington DC Patch 5  ServiceNow Vancouver >= Vancouver Patch 9 Hot Fix 2aServiceNow Vancouver >= Vancouver Patch 10**下载链接:**https://support.servicenow.com/kb?id=kb_article_view&sysparm_article=KB1706070安装前，请确保备份所有关键数据，并按照官方指南进行操作。安装后，进行全面测试以验证漏洞已被彻底修复，并确保系统其他功能正常运行。  
+  
+
+
+---
+
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
