@@ -26,17 +26,22 @@ VulWiki 收录有**完整漏洞信息和复现/利用方式**的中文漏洞文�
 
 ```
 Web安全/
-├── 命令执行/          # RCE/命令注入/表达式注入/SSTI
-│   ├── Apache Struts2/
-│   │   ├── S2-045 远程代码执行漏洞.md
-│   │   └── .resource/
-├── SQL注入/           # 各类SQL注入
-├── 文件上传/
-├── 反序列化/          # Fastjson/Shiro/Jackson/Hessian
-├── 权限绕过/          # 未授权/认证绕过/越权
-├── ...共17个类型
-└── 其他漏洞/          # 未归类的待人工细分
-系统安全/  # Windows/Linux提权等
+├── OA办公/          # 致远/泛微/通达/蓝凌/万户/金和… 453篇
+├── ERP企业/         # 用友/金蝶/SAP/浪潮/明源… 197篇
+├── CMS内容/         # WordPress/Discuz/DedeCMS… 634篇
+├── 中间件/          # WebLogic/Tomcat/Nginx/Solr… 491篇
+├── 开发框架/        # Spring/Struts2/Fastjson/Shiro… 425篇
+├── 网络设备/        # Cisco/华为/华三/锐捷/Fortinet… 334篇
+├── 商业软件/        # 商城/CRM/工单/进销存… 305篇
+├── AI应用/          # Langflow/Ollama/ComfyUI/vLLM… 153篇
+├── 桌面软件/        # WinRAR/WPS/浏览器/阅读器… 148篇
+├── 安全设备/        # WAF/堡垒机/EDR/杀毒… 140篇
+├── 云平台/          # VMware/K8s/Docker/OSS… 115篇
+├── 服务器软件/      # Exim/Samba/SSH/Zabbix… 112篇
+├── 数据库/          # MySQL/Oracle/Redis/达梦… 89篇
+├── 智能设备/  邮件系统/  运维面板/
+└── 其他软件/        # 未归类的待人工细分
+系统安全/  # Windows/Linux提权
 IOT安全/   # 摄像头/路由器/工控
 ```
 
