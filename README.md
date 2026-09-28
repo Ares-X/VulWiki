@@ -17,7 +17,7 @@ VulWiki 收录有**完整漏洞信息和复现/利用方式**的中文漏洞文�
 
 ## 快速检索（三索引）
 
-- [INDEX.md](INDEX.md) — 按分类/字母/组件浏览
+- [INDEX.md](INDEX.md) — 按漏洞类型→组件浏览（命令执行/SQL注入/文件上传…17类）
 - [INDEX-CVE.md](INDEX-CVE.md) — 按 CVE 年份定位（3894 个 CVE）
 - [INDEX-FOFA.md](INDEX-FOFA.md) — 按网络测绘指纹反查漏洞（446 条），FOFA/Hunter/Quake 直接可用
 - 命令行：`grep -r 'cve: "CVE-2024-21887"'` / `grep -r 'fofa' --include='*.md' -l`
@@ -25,16 +25,20 @@ VulWiki 收录有**完整漏洞信息和复现/利用方式**的中文漏洞文�
 ## 目录结构
 
 ```
-Web安全/          # Web应用、中间件、框架、组件漏洞
-  字母F/Fastjson/ # 组件目录按首字母分片，浏览不卡
-  字母Y/用友/
-  中文/泛微oa/
-IOT安全/          # 网络设备、摄像头、路由器、工控（46 类厂商）
-系统安全/         # 系统提权、容器逃逸、后门利用
-INDEX.md          # 全库索引（分类 → 组件 → 文章）
+Web安全/
+├── 命令执行/          # RCE/命令注入/表达式注入/SSTI
+│   ├── Apache Struts2/
+│   │   ├── S2-045 远程代码执行漏洞.md
+│   │   └── .resource/
+├── SQL注入/           # 各类SQL注入
+├── 文件上传/
+├── 反序列化/          # Fastjson/Shiro/Jackson/Hessian
+├── 权限绕过/          # 未授权/认证绕过/越权
+├── ...共17个类型
+└── 其他漏洞/          # 未归类的待人工细分
+系统安全/  # Windows/Linux提权等
+IOT安全/   # 摄像头/路由器/工控
 ```
-
-查找方式：**INDEX.md 目录导航** / **grep CVE 号** / **grep FOFA 指纹**（frontmatter 已索引）。
 
 ## 如何添加新的文章
 
