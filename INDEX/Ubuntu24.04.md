@@ -1,0 +1,3 @@
+# Ubuntu24.04
+
+- [Ubuntu24.04 提权漏洞实例分析](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Ubuntu24.04/Ubuntu24.04%20%E6%8F%90%E6%9D%83%E6%BC%8F%E6%B4%9E%E5%AE%9E%E4%BE%8B%E5%88%86%E6%9E%90.md)

@@ -1,0 +1,3 @@
+# 微软发布针对 Windows BitLocker 安全
+
+- [微软发布针对 Windows BitLocker 安全绕过零日漏洞的缓解措施](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/%E5%BE%AE%E8%BD%AF%E5%8F%91%E5%B8%83%E9%92%88%E5%AF%B9%20Windows%20BitLocker%20%E5%AE%89%E5%85%A8/%E5%BE%AE%E8%BD%AF%E5%8F%91%E5%B8%83%E9%92%88%E5%AF%B9%20Windows%20BitLocker%20%E5%AE%89%E5%85%A8%E7%BB%95%E8%BF%87%E9%9B%B6%E6%97%A5%E6%BC%8F%E6%B4%9E%E7%9A%84%E7%BC%93%E8%A7%A3%E6%8E%AA%E6%96%BD.md)
