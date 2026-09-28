@@ -1,5 +1,8 @@
-WordPress Plugin - NextGEN Gallery \<= 3.2.2 RCE
-================================================
+---
+source: "hatch 补库批 20260928"
+---
+
+# WordPress Plugin - NextGEN Gallery \<= 3.2.2 RCE
 
 一、漏洞简介
 ------------

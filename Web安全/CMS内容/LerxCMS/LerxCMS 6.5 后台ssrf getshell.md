@@ -1,5 +1,8 @@
-LerxCMS 6.5 后台ssrf getshell
-=============================
+---
+source: "hatch 补库批 20260928"
+---
+
+# LerxCMS 6.5 后台ssrf getshell
 
 一、漏洞简介
 ------------

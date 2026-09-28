@@ -1,5 +1,8 @@
-Joomla com\_hdwplayer 4.2 - \'search.php\' sql注入
-==================================================
+---
+source: "hatch 补库批 20260928"
+---
+
+# Joomla com\_hdwplayer 4.2 - \'search.php\' sql注入
 
 一、漏洞简介
 ------------

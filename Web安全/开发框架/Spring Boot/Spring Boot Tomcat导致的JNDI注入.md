@@ -1,5 +1,8 @@
-Spring Boot Tomcat导致的JNDI注入
-================================
+---
+source: "hatch 补库批 20260928"
+---
+
+# Spring Boot Tomcat导致的JNDI注入
 
 一、漏洞简介
 ------------

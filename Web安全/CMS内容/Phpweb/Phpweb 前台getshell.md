@@ -1,5 +1,8 @@
-Phpweb 前台getshell
-===================
+---
+source: "hatch 补库批 20260928"
+---
+
+# Phpweb 前台getshell
 
 一、漏洞简介
 ------------

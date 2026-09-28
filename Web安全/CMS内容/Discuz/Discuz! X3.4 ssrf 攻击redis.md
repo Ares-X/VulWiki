@@ -1,5 +1,8 @@
-Discuz! X3.4 ssrf 攻击redis
-===========================
+---
+source: "hatch 补库批 20260928"
+---
+
+# Discuz! X3.4 ssrf 攻击redis
 
 一、漏洞简介
 ------------

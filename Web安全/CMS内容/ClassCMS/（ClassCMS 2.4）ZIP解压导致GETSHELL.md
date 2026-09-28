@@ -1,5 +1,8 @@
-（ClassCMS 2.4）ZIP解压导致GETSHELL
-=============================
+---
+source: "hatch 补库批 20260928"
+---
+
+# （ClassCMS 2.4）ZIP解压导致GETSHELL
 
 一、漏洞简介
 ------------

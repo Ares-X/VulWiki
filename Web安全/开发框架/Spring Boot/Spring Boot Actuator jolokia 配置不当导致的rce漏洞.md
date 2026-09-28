@@ -1,5 +1,8 @@
-Spring Boot Actuator jolokia 配置不当导致的rce漏洞
-==================================================
+---
+source: "hatch 补库批 20260928"
+---
+
+# Spring Boot Actuator jolokia 配置不当导致的rce漏洞
 
 一、漏洞简介
 ------------

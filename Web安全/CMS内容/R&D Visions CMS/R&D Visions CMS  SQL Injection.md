@@ -1,5 +1,8 @@
-R&D Visions CMS SQL Injection
-=============================
+---
+source: "hatch 补库批 20260928"
+---
+
+# R&D Visions CMS SQL Injection
 
 一、漏洞简介
 ------------

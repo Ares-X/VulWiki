@@ -1,5 +1,8 @@
-Thinkphp 3.2.3 select&find&delete 注入漏洞
-==========================================
+---
+source: "hatch 补库批 20260928"
+---
+
+# Thinkphp 3.2.3 select&find&delete 注入漏洞
 
 一、漏洞简介
 ------------

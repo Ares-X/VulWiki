@@ -1,5 +1,8 @@
-FastAdmin 第三方插件后台getshell
-================================
+---
+source: "hatch 补库批 20260928"
+---
+
+# FastAdmin 第三方插件后台getshell
 
 **0x01 前言**
 

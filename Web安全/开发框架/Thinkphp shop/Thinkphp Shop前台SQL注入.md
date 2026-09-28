@@ -1,5 +1,8 @@
-Thinkphp Shop前台SQL注入
-========================
+---
+source: "hatch 补库批 20260928"
+---
+
+# Thinkphp Shop前台SQL注入
 
 一、漏洞简介
 ------------

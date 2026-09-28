@@ -1,5 +1,8 @@
-Thinkphp 专用shell
-==================
+---
+source: "hatch 补库批 20260928"
+---
+
+# Thinkphp 专用shell
 
 一、漏洞简介
 ------------

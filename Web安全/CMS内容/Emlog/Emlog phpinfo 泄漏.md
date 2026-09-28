@@ -1,5 +1,8 @@
-Emlog phpinfo 泄漏
-==================
+---
+source: "hatch 补库批 20260928"
+---
+
+# Emlog phpinfo 泄漏
 
 一、漏洞简介
 ------------

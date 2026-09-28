@@ -1,5 +1,8 @@
-Apache Struts 漏洞列表快速查阅
-==============================
+---
+source: "hatch 补库批 20260928"
+---
+
+# Apache Struts 漏洞列表快速查阅
 
 -   [S2-001](https://cwiki.apache.org/confluence/display/WW/S2-001) ---
     Remote code exploit on form validation error

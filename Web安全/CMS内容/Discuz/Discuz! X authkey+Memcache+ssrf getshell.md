@@ -1,5 +1,8 @@
-Discuz! X authkey+Memcache+ssrf getshell
-========================================
+---
+source: "hatch 补库批 20260928"
+---
+
+# Discuz! X authkey+Memcache+ssrf getshell
 
 一、漏洞简介
 ------------

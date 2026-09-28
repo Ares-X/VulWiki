@@ -1,5 +1,8 @@
-Spring Boot h2 database query rce
-=================================
+---
+source: "hatch 补库批 20260928"
+---
+
+# Spring Boot h2 database query rce
 
 一、漏洞简介
 ------------

@@ -1,5 +1,8 @@
-weblogic爆破
-============
+---
+source: "hatch 补库批 20260928"
+---
+
+# weblogic爆破
 
 一、部署weblogic
 ----------------

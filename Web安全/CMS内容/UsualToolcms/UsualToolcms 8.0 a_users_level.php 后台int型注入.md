@@ -1,5 +1,8 @@
-UsualToolcms 8.0 a\_users\_level.php 后台int型注入
-==================================================
+---
+source: "hatch 补库批 20260928"
+---
+
+# UsualToolcms 8.0 a\_users\_level.php 后台int型注入
 
 一、漏洞简介
 ------------

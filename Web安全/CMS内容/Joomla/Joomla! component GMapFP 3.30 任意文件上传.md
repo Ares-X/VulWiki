@@ -1,5 +1,8 @@
-Joomla component GMapFP 3.30 任意文件上传
-=========================================
+---
+source: "hatch 补库批 20260928"
+---
+
+# Joomla component GMapFP 3.30 任意文件上传
 
 一、漏洞简介
 ------------

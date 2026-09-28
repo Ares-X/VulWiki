@@ -1,5 +1,8 @@
-Wordpress \<= 4.7.4 XML-RPC API POST META 未校验漏洞
-====================================================
+---
+source: "hatch 补库批 20260928"
+---
+
+# Wordpress \<= 4.7.4 XML-RPC API POST META 未校验漏洞
 
 一、漏洞简介
 ------------

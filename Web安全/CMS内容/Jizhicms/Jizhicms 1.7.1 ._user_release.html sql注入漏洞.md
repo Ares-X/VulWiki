@@ -1,5 +1,8 @@
-Jizhicms 1.7.1 ./user/release.html sql注入漏洞
-==============================================
+---
+source: "hatch 补库批 20260928"
+---
+
+# Jizhicms 1.7.1 ./user/release.html sql注入漏洞
 
 一、漏洞简介
 ------------

@@ -1,5 +1,8 @@
-ueditor ssrf
-============
+---
+source: "hatch 补库批 20260928"
+---
+
+# ueditor ssrf
 
 一、漏洞简介
 ------------

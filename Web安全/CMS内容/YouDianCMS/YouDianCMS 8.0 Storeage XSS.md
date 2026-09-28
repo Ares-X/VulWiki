@@ -1,5 +1,8 @@
-YouDianCMS 8.0 Storeage XSS
-===========================
+---
+source: "hatch 补库批 20260928"
+---
+
+# YouDianCMS 8.0 Storeage XSS
 
 一、漏洞简介
 ------------

@@ -1,5 +1,8 @@
-Spring Cloud SnakeYAML RCE
-==========================
+---
+source: "hatch 补库批 20260928"
+---
+
+# Spring Cloud SnakeYAML RCE
 
 一、漏洞简介
 ------------

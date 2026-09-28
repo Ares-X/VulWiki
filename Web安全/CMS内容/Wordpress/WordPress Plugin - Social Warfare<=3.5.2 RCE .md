@@ -1,5 +1,8 @@
-WordPress Plugin - Social Warfare\<=3.5.2 RCE
-=============================================
+---
+source: "hatch 补库批 20260928"
+---
+
+# WordPress Plugin - Social Warfare\<=3.5.2 RCE
 
 一、漏洞简介
 ------------

@@ -1,5 +1,8 @@
-Spring Boot Thymeleaf 模板注入
-==============================
+---
+source: "hatch 补库批 20260928"
+---
+
+# Spring Boot Thymeleaf 模板注入
 
 一、漏洞简介
 ------------

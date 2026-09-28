@@ -1,5 +1,8 @@
-Discuz! X3.4 Weixin Plugin ssrf
-===============================
+---
+source: "hatch 补库批 20260928"
+---
+
+# Discuz! X3.4 Weixin Plugin ssrf
 
 一、漏洞简介
 ------------

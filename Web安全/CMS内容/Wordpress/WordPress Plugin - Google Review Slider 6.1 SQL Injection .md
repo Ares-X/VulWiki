@@ -1,5 +1,8 @@
-WordPress Plugin - Google Review Slider 6.1 SQL Injection
-=========================================================
+---
+source: "hatch 补库批 20260928"
+---
+
+# WordPress Plugin - Google Review Slider 6.1 SQL Injection
 
 一、漏洞简介
 ------------

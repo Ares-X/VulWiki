@@ -1,5 +1,8 @@
-JBoss Administration Console 弱口令 Getshell
-============================================
+---
+source: "hatch 补库批 20260928"
+---
+
+# JBoss Administration Console 弱口令 Getshell
 
 一、漏洞简介
 ------------

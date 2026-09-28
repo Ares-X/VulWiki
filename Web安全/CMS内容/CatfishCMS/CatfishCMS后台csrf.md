@@ -1,5 +1,8 @@
-CatfishCMS后台csrf
-==================
+---
+source: "hatch 补库批 20260928"
+---
+
+# CatfishCMS后台csrf
 
 一、漏洞简介
 ------------

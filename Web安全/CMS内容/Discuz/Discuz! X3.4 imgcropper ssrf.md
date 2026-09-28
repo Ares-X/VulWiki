@@ -1,5 +1,8 @@
-Discuz! X3.4 imgcropper ssrf
-============================
+---
+source: "hatch 补库批 20260928"
+---
+
+# Discuz! X3.4 imgcropper ssrf
 
 一、漏洞简介
 ------------

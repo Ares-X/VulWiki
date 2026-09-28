@@ -1,5 +1,8 @@
-Thinkphp \< 6.0.2 session id未作过滤导致getshell
-================================================
+---
+source: "hatch 补库批 20260928"
+---
+
+# Thinkphp \< 6.0.2 session id未作过滤导致getshell
 
 一、漏洞简介
 ------------

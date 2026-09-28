@@ -1,5 +1,8 @@
-Phpcms V9.6.3 install.php 没有即使删除导致的getshell
-====================================================
+---
+source: "hatch 补库批 20260928"
+---
+
+# Phpcms V9.6.3 install.php 没有即使删除导致的getshell
 
 一、漏洞简介
 ------------

@@ -1,5 +1,8 @@
-JBoss JMX Console未授权访问Getshell
-===================================
+---
+source: "hatch 补库批 20260928"
+---
+
+# JBoss JMX Console未授权访问Getshell
 
 一、漏洞简介
 ------------

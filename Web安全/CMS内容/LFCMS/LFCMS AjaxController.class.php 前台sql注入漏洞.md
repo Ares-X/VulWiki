@@ -1,5 +1,8 @@
-LFCMS AjaxController.class.php 前台sql注入漏洞
-==============================================
+---
+source: "hatch 补库批 20260928"
+---
+
+# LFCMS AjaxController.class.php 前台sql注入漏洞
 
 一、漏洞简介
 ------------

@@ -1,5 +1,8 @@
-Tomcat 后台部署war木马getshell
-==============================
+---
+source: "hatch 补库批 20260928"
+---
+
+# Tomcat 后台部署war木马getshell
 
 一、漏洞简介
 ------------

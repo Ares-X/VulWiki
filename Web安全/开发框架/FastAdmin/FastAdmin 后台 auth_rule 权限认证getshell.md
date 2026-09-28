@@ -1,5 +1,8 @@
-FastAdmin 后台 auth\_rule 权限认证getshell
-==========================================
+---
+source: "hatch 补库批 20260928"
+---
+
+# FastAdmin 后台 auth\_rule 权限认证getshell
 
 一、漏洞简介
 ------------

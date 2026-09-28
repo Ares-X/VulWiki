@@ -1,5 +1,8 @@
-FastAdmin 会员中心前台getshell
-==============================
+---
+source: "hatch 补库批 20260928"
+---
+
+# FastAdmin 会员中心前台getshell
 
 一、漏洞简介
 ------------

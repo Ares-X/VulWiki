@@ -1,5 +1,8 @@
-Jizhicms 1.7.1 后台getshell
-===========================
+---
+source: "hatch 补库批 20260928"
+---
+
+# Jizhicms 1.7.1 后台getshell
 
 一、漏洞简介
 ------------

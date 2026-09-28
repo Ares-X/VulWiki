@@ -1,5 +1,8 @@
-Spring Boot sql
-===============
+---
+source: "hatch 补库批 20260928"
+---
+
+# Spring Boot sql
 
 一、漏洞简介
 ------------

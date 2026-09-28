@@ -1,5 +1,8 @@
-WordPress Plugin - Easy WP SMTP 反序列化漏洞
-============================================
+---
+source: "hatch 补库批 20260928"
+---
+
+# WordPress Plugin - Easy WP SMTP 反序列化漏洞
 
 一、漏洞简介
 ------------

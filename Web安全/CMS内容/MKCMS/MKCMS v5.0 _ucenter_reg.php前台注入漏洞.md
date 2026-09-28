@@ -1,5 +1,8 @@
-MKCMS v5.0 /ucenter/reg.php前台sql注入漏洞
-==========================================
+---
+source: "hatch 补库批 20260928"
+---
+
+# MKCMS v5.0 /ucenter/reg.php前台sql注入漏洞
 
 一、漏洞简介
 ------------

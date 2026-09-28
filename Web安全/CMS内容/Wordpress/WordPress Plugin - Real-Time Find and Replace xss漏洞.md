@@ -1,5 +1,8 @@
-WordPress Plugin - Real-Time Find and Replace xss漏洞
-=====================================================
+---
+source: "hatch 补库批 20260928"
+---
+
+# WordPress Plugin - Real-Time Find and Replace xss漏洞
 
 一、漏洞简介
 ------------

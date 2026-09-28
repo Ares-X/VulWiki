@@ -1,5 +1,8 @@
-（一）Php screw加密与破解工具（php-screw-brute）
-================================================
+---
+source: "hatch 补库批 20260928"
+---
+
+# （一）Php screw加密与破解工具（php-screw-brute）
 
 > 项目地址
 

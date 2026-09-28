@@ -1,5 +1,8 @@
-Gitlab wiki 储存型xss
-=====================
+---
+source: "hatch 补库批 20260928"
+---
+
+# Gitlab wiki 储存型xss
 
 一、漏洞简介
 ------------

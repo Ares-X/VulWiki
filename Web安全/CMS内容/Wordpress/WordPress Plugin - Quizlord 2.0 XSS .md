@@ -1,5 +1,8 @@
-WordPress Plugin - Quizlord 2.0 XSS
-===================================
+---
+source: "hatch 补库批 20260928"
+---
+
+# WordPress Plugin - Quizlord 2.0 XSS
 
 一、漏洞简介
 ------------

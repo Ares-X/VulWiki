@@ -1,5 +1,8 @@
-POSCMS 3.2.0 ssrf漏洞getshell
-=============================
+---
+source: "hatch 补库批 20260928"
+---
+
+# POSCMS 3.2.0 ssrf漏洞getshell
 
 一、漏洞简介
 ------------

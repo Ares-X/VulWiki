@@ -1,5 +1,8 @@
-WordPress Plugin - AutoSuggest sql注入
-======================================
+---
+source: "hatch 补库批 20260928"
+---
+
+# WordPress Plugin - AutoSuggest sql注入
 
 一、漏洞简介
 ------------

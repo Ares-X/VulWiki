@@ -1,5 +1,8 @@
-PbootCMS csrf
-=============
+---
+source: "hatch 补库批 20260928"
+---
+
+# PbootCMS csrf
 
 一、漏洞简介
 ------------

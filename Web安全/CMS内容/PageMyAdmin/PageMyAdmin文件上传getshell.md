@@ -1,5 +1,8 @@
-PageMyAdmin文件上传getshell
-===========================
+---
+source: "hatch 补库批 20260928"
+---
+
+# PageMyAdmin文件上传getshell
 
 一、漏洞简介
 ------------

@@ -1,5 +1,8 @@
-Spring Boot eureka xstream deserialization rce
-==============================================
+---
+source: "hatch 补库批 20260928"
+---
+
+# Spring Boot eureka xstream deserialization rce
 
 一、漏洞简介
 ------------

@@ -1,5 +1,8 @@
-WordPress Plugin - Search Meter 2.13.2 CSV Injection
-====================================================
+---
+source: "hatch 补库批 20260928"
+---
+
+# WordPress Plugin - Search Meter 2.13.2 CSV Injection
 
 一、漏洞简介
 ------------

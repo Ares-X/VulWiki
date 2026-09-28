@@ -1,5 +1,8 @@
-1、FCKeditor/editor/fckeditor.html
-==================================
+---
+source: "hatch 补库批 20260928"
+---
+
+# 1、FCKeditor/editor/fckeditor.html
 
 FCKeditor/editor/fckeditor.html不可以上传文件，可以点击上传图片按钮再选择浏览服务器即可跳转至可上传文件页，可以查看已经上传的文件。
 

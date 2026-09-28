@@ -1,5 +1,8 @@
-MetInfo 5.3.12 member/login.php sql注入漏洞
-===========================================
+---
+source: "hatch 补库批 20260928"
+---
+
+# MetInfo 5.3.12 member/login.php sql注入漏洞
 
 一、漏洞简介
 ------------

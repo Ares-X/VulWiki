@@ -1,5 +1,8 @@
-ThinkCMF 缓存Getshell
-=====================
+---
+source: "hatch 补库批 20260928"
+---
+
+# ThinkCMF 缓存Getshell
 
 一、漏洞简介
 ------------

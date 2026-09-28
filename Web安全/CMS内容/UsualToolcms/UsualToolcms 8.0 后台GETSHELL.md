@@ -1,5 +1,8 @@
-UsualToolcms 8.0 后台GETSHELL
-=============================
+---
+source: "hatch 补库批 20260928"
+---
+
+# UsualToolcms 8.0 后台GETSHELL
 
 一、漏洞简介
 ------------

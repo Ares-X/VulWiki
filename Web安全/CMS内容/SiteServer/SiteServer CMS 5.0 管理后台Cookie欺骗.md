@@ -1,5 +1,8 @@
-SiteServer CMS 5.0 管理后台Cookie欺骗
-=====================================
+---
+source: "hatch 补库批 20260928"
+---
+
+# SiteServer CMS 5.0 管理后台Cookie欺骗
 
 一、漏洞简介
 ------------
