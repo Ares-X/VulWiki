@@ -4,20 +4,20 @@
 
 **收录标准**：描述清楚漏洞原理/影响 + 提供利用方式（复现步骤/POC/EXP/验证方法）即收录；篇幅长短不是门槛。纯预警、无利用细节的条目不收。
 
-[![articles](https://img.shields.io/badge/文章-6082-blue)](INDEX.md) [![last](https://img.shields.io/badge/更新-持续-green)](#change-log)
+[![articles](https://img.shields.io/badge/文章-6057-blue)](INDEX.md) [![last](https://img.shields.io/badge/更新-持续-green)](#change-log)
 
 ## 简介
 
 VulWiki 收录有**完整漏洞信息和复现/利用方式**的中文漏洞文章。纯漏洞预警、无利用细节的条目一律不入库。
 
-- 总量 **6082 篇**：Web安全 5740 / IOT安全 253 / 系统安全 89
+- 总量 **6057 篇**：Web安全 5607 / 系统安全 225 / IOT安全 225
 - 覆盖 CVE ~950 条（2021:102 2022:50 2023:57 2024:66 2025:44 2026:17）
 - 每篇含：漏洞描述 / 影响版本 / 网络测绘(FOFA) / 复现步骤或 POC / 参考链接
 - 多数文章带 YAML frontmatter（`cve` / `version` / `fofa`），可 grep 精确定位
 
 ## 快速检索（三索引）
 
-- [INDEX.md](INDEX.md) — 按漏洞类型→组件浏览（命令执行/SQL注入/文件上传…17类）
+- [INDEX.md](INDEX.md) — 按漏洞类型→组件浏览（OA办公/ERP/中间件/CMS…17产品类型）
 - [INDEX-CVE.md](INDEX-CVE.md) — 按 CVE 年份定位（3894 个 CVE）
 - [INDEX-FOFA.md](INDEX-FOFA.md) — 按网络测绘指纹反查漏洞（446 条），FOFA/Hunter/Quake 直接可用
 - 命令行：`grep -r 'cve: "CVE-2024-21887"'` / `grep -r 'fofa' --include='*.md' -l`
