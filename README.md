@@ -26,20 +26,22 @@ VulWiki 收录有**完整漏洞信息和复现/利用方式**的中文漏洞文�
 
 ```
 Web安全/
-├── OA办公/          # 致远/泛微/通达/蓝凌/万户/金和… 410篇
-├── ERP企业/         # 用友/金蝶/SAP/浪潮/明源… 194篇
-├── CMS内容/         # WordPress/Discuz/DedeCMS… 679篇
-├── 中间件/          # WebLogic/Tomcat/Nginx/Solr… 533篇
-├── 开发框架/        # Spring/Struts2/Fastjson/Shiro… 553篇
-├── 网络设备/        # Cisco/华为/华三/锐捷/Fortinet… 364篇
-├── 商业软件/        # 商城/CRM/工单/进销存… 324篇
-├── AI应用/          # Langflow/Ollama/ComfyUI/vLLM… 136篇
-├── 桌面软件/        # WinRAR/WPS/浏览器/阅读器… 143篇
-├── 安全设备/        # WAF/堡垒机/EDR/杀毒… 143篇
-├── 云平台/          # VMware/K8s/Docker/OSS… 106篇
-├── 服务器软件/      # Exim/Samba/SSH/Zabbix… 140篇
-├── 数据库/          # MySQL/Oracle/Redis/达梦… 94篇
-├── 智能设备/  邮件系统/  运维面板/
+├── OA办公/          # 致远/泛微/通达/蓝凌/万户/金和… 322 篇
+├── ERP企业/         # 用友/金蝶/SAP/浪潮/明源… 233 篇
+├── CMS内容/         # WordPress/Discuz/DedeCMS… 788 篇
+├── 中间件/          # WebLogic/Tomcat/Nginx/Solr… 549 篇
+├── 开发框架/        # Spring/Struts2/Fastjson/Shiro… 704 篇
+├── 网络设备/        # Cisco/华为/华三/锐捷/Fortinet… 419 篇
+├── 商业软件/        # 商城/CRM/工单/进销存… 609 篇
+├── AI应用/          # Langflow/Ollama/ComfyUI/vLLM… 84 篇
+├── 桌面软件/        # WinRAR/WPS/浏览器/阅读器… 235 篇
+├── 安全设备/        # WAF/堡垒机/EDR/杀毒… 151 篇
+├── 云平台/          # VMware/K8s/Docker/OSS… 138 篇
+├── 服务器软件/      # Exim/Samba/SSH/Zabbix… 195 篇
+├── 数据库/          # MySQL/Oracle/Redis/达梦… 109 篇
+├── 智能设备/        # 海康/大华/摄像机/DVR/NVR… 121 篇
+├── 邮件系统/        # Exchange/ zimbra/ postfix… 56 篇
+├── 运维面板/        # 宝塔/1panel/nginxWebUI… 82 篇
 └── 其他软件/        # 未归类的待人工细分
 系统安全/  # Windows/Linux提权
 IOT安全/   # 摄像头/路由器/工控
