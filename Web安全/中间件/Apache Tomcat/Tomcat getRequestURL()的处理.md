@@ -1,3 +1,7 @@
+---
+source: "历史归档批(无原始出处标注)"
+---
+
 ### Tomcat getRequestURL()的处理
 
 在getRequestURL()函数中是调用了Request.getRequestURL()函数的：

@@ -1,6 +1,6 @@
 ---
 cnvd: "QVD-2024-44346"
-fofa: "app="
+
 source: "SourByte05/Vulnerability-Wiki-PoC"
 ---
 

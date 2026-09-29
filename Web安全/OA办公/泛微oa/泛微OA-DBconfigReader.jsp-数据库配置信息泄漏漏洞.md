@@ -1,5 +1,4 @@
 ---
-version: "## 漏洞复现"
 source: "Threekiii/Vulnerability-Wiki"
 ---
 

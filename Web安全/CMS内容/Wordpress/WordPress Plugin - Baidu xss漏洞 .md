@@ -1,3 +1,7 @@
+---
+source: "历史归档批(无原始出处标注)"
+---
+
 WordPress Plugin - Baidu xss漏洞
 
 一、漏洞简介

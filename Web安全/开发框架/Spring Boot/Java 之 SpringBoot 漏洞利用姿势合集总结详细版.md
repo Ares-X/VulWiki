@@ -1,5 +1,4 @@
 ---
-version: "javac -source 1.5 -target 1.5 JNDIObject.java"
 source: "MrWQ/vulnerability-paper"
 ---
 

@@ -1,5 +1,5 @@
 ---
-fofa: "app="
+
 ---
 
 致远 OA A8 htmlofficeservlet getshell 漏洞

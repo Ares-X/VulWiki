@@ -1,6 +1,5 @@
 ---
 cnvd: "CNVD-2021-49104"
-version: "POST /general/index/UploadFile.php?m=uploadPicture&uploadType=eoffice_logo&userI"
 source: "MrWQ/vulnerability-paper"
 ---
 

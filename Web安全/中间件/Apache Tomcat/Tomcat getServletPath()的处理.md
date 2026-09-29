@@ -1,3 +1,7 @@
+---
+source: "历史归档批(无原始出处标注)"
+---
+
 ### Tomcat getServletPath()的处理
 
 在getServletPath()函数中是调用了Request.getServletPath()函数的：

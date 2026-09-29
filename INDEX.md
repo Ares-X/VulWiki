@@ -1,4 +1,4 @@
-> 全库 6057 篇。按 [产品类型](INDEX/) / [CVE 年份](INDEX-CVE/year/) / [FOFA 指纹](INDEX-FOFA.md) 三视图检索。
+> 全库 6053 篇。按 [产品类型](INDEX/) / [CVE 年份](INDEX-CVE/year/) / [FOFA 指纹](INDEX-FOFA.md) 三视图检索。
 - [360](INDEX/360.md)
 - [AI应用](INDEX/AI%E5%BA%94%E7%94%A8.md)
 - [Amazon](INDEX/Amazon.md)

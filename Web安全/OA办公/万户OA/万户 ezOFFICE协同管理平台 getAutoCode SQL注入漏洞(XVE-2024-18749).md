@@ -1,6 +1,6 @@
 ---
 cnvd: "XVE-2024-18749"
-fofa: "app="
+
 source: "SourByte05/Vulnerability-Wiki-PoC"
 ---
 

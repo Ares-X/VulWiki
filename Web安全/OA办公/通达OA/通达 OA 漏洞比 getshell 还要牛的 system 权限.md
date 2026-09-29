@@ -1,6 +1,5 @@
 ---
 cnvd: "CNVD-2020-26562"
-version: "<?php<br style='overflow-wrap: break-word !important;'>ob_start();<br style='ove"
 fofa: "的搜索可以看到通达 OA 系统应用非常广泛, 这就给同学们提供了大量的实战环境. 当然大家一定要做一个正直的白帽子."
 source: "MrWQ/vulnerability-paper"
 ---

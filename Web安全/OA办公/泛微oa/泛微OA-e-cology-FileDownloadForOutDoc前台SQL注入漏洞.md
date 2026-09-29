@@ -1,5 +1,4 @@
 ---
-version: "## 网络测绘"
 source: "Threekiii/Vulnerability-Wiki"
 ---
 

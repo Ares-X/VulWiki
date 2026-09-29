@@ -1,6 +1,5 @@
 ---
 cve: "CVE-2020-15257"
-version: "curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-"
 source: "Threekiii/Awesome-POC"
 ---
 

@@ -1,6 +1,6 @@
 ---
 cnvd: "CNVD-2021-09693"
-fofa: "app="
+
 source: "MrWQ/vulnerability-paper"
 ---
 

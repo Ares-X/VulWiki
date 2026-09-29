@@ -1,3 +1,7 @@
+---
+source: "历史归档批(无原始出处标注)"
+---
+
 ### Tomcat getRequestURI()的处理
 
 我们直接在index.jsp中调用getRequestURI()函数的地方打上断点调试即可。

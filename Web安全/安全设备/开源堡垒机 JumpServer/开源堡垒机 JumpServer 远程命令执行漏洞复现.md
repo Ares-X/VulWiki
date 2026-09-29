@@ -1,5 +1,4 @@
 ---
-version: "jumpserver-release/compose/config_static/http_server.conf"
 source: "MrWQ/vulnerability-paper"
 ---
 

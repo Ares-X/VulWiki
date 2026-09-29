@@ -1,6 +1,6 @@
 ---
 version: "**二、网络测绘**"
-fofa: "app="
+
 source: "MrWQ/vulnerability-paper"
 ---
 

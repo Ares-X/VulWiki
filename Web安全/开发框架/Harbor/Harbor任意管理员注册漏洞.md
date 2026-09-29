@@ -1,6 +1,5 @@
 ---
 cve: "CVE-2019-16097"
-version: "wget https://storage.googleapis.com/harbor-releases/release-1.8.0/harbor-online-"
 source: "白阁文库 BaizeSec/bylibrary"
 ---
 

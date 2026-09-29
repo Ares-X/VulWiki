@@ -1,5 +1,4 @@
 ---
-version: "<!--#include file='../../../inc/zzz_class.asp'-->"
 source: "Mr-xn/Penetration_Testing_POC"
 ---
 

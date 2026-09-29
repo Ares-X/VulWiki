@@ -1,5 +1,4 @@
 ---
-version: "POST /PW/SaveDraw?path=../../Content/img&idx=1.aspx HTTP/1.1"
 source: "wy876漏洞文库镜像"
 ---
 

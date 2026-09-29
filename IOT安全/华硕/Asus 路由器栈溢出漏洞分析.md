@@ -1,5 +1,4 @@
 ---
-version: "#coding=utf-8"
 source: "MrWQ/vulnerability-paper"
 ---
 

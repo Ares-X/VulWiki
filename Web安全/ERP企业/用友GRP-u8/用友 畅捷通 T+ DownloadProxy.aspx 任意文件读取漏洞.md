@@ -1,6 +1,6 @@
 ---
 version: "用友 畅捷通T+"
-fofa: "app="
+
 source: "MrWQ/vulnerability-paper"
 ---
 

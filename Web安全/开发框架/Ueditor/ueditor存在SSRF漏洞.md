@@ -1,5 +1,4 @@
 ---
-version: "POST /ueditor/jsp/controller.jsp?action=uploadfile&encode=utf-8 HTTP/1.1"
 source: "wy876 漏洞文库"
 ---
 

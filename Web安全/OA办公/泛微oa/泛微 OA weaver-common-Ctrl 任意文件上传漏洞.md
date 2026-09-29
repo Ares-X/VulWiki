@@ -1,5 +1,5 @@
 ---
-fofa: "app="
+
 source: "MrWQ/vulnerability-paper"
 ---
 

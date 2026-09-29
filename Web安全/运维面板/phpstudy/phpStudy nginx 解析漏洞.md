@@ -1,5 +1,4 @@
 ---
-version: "### 环境搭建"
 source: "白阁文库 BaizeSec/bylibrary"
 ---
 

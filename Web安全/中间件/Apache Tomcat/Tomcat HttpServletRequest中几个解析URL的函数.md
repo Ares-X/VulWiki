@@ -1,3 +1,7 @@
+---
+source: "历史归档批(无原始出处标注)"
+---
+
 ### Tomcat HttpServletRequest中几个解析URL的函数
 
 在Servlet处理URL请求的路径时，HTTPServletRequest有如下几个常用的函数：

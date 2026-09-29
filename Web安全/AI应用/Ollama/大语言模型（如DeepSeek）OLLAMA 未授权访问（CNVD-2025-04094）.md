@@ -1,6 +1,6 @@
 ---
 cnvd: "CNVD-2025-04094"
-fofa: "app="
+
 source: "SourByte05/Vulnerability-Wiki-PoC"
 ---
 

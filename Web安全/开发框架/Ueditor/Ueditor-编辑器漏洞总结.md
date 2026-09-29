@@ -1,5 +1,4 @@
 ---
-version: "POST http://xxx/Public/static/ueditor/php/getRemoteImage.php HTTP/1.1"
 source: "Threekiii/Vulnerability-Wiki"
 ---
 

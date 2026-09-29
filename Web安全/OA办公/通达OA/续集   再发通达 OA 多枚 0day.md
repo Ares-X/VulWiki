@@ -1,5 +1,4 @@
 ---
-version: "POST /general/appbuilder/web/meeting/meetingmanagement/meetingreceipt HTTP/1.1"
 source: "MrWQ/vulnerability-paper"
 ---
 

@@ -1,5 +1,4 @@
 ---
-version: "## 插件名"
 source: "Threekiii/Vulnerability-Wiki"
 ---
 

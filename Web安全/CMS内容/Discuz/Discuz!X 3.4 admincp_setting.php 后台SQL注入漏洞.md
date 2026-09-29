@@ -1,5 +1,4 @@
 ---
-version: "## 环境搭建"
 source: "Threekiii/Awesome-POC"
 ---
 

@@ -1,3 +1,7 @@
+---
+source: "历史归档批(无原始出处标注)"
+---
+
 # PHP 利用 phpinfo 包含临时文件 getshell
 
 ## 漏洞描述

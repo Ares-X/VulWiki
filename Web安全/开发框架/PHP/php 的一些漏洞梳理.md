@@ -1,5 +1,4 @@
 ---
-version: "#直接为包含对象添加jpg后缀，然后进行包含"
 source: "MrWQ/vulnerability-paper"
 ---
 

@@ -1,6 +1,6 @@
 ---
 cnvd: "CNVD-2024-02175"
-fofa: "app="
+
 source: "wy876 漏洞文库"
 ---
 

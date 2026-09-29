@@ -1,5 +1,4 @@
 ---
-version: "https://downloads.wordpress.org/plugin/wpdiscuz.7.0.7.zip"
 source: "MrWQ/vulnerability-paper"
 ---
 

@@ -1,5 +1,4 @@
 ---
-version: "jdbc:mysql://your-vps-ip:3306/mysql?characterEncoding=utf8&useSSL=false&queryInt"
 source: "MrWQ/vulnerability-paper"
 ---
 

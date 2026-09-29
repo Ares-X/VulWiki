@@ -1,6 +1,5 @@
 ---
-version: "# 普通应用配置：{WebROOT}\Kingdee\K3Cloud\WebSite\App_Data\Common.config"
-fofa: "app="
+
 source: "MrWQ/vulnerability-paper"
 ---
 

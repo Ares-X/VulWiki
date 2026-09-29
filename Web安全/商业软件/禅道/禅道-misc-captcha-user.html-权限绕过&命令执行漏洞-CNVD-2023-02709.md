@@ -1,6 +1,5 @@
 ---
 cnvd: "CNVD-2023-02709"
-version: "http://your-ip:8084/?mode=getconfig"
 source: "Threekiii/Vulnerability-Wiki"
 ---
 

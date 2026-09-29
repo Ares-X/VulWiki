@@ -56,7 +56,6 @@ Step3：
 ```
 '''
 Author: Tao
-version: python3
 # 本脚本执行返回user()信息
 '''
 import requests

@@ -1,6 +1,5 @@
 ---
 cnvd: "CNVD-2020-18740"
-version: "POST /x_program_center/jaxrs/invoke?v=6.1 HTTP/1.1"
 source: "Threekiii/Vulnerability-Wiki"
 ---
 

@@ -1,5 +1,4 @@
 ---
-version: "https://www.weaver.com.cn/cs/package/Ecology_security_20230711_v9.0_v10.58.1_det"
 source: "MrWQ/vulnerability-paper"
 ---
 

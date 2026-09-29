@@ -44,7 +44,6 @@ siteid=1&modelid=11&username=Tao&password=123456&email=Tao@qq.com&info[content]=
 
 ```
 '''
-version: python3
 Author: Tao
 '''
 import requests

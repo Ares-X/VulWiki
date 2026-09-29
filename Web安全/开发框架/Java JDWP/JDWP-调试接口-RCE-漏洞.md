@@ -1,5 +1,4 @@
 ---
-version: "nmap -sT -sV 192.168.192.1 -p 8000"
 source: "Threekiii/Vulnerability-Wiki"
 ---
 

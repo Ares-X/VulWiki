@@ -1,5 +1,4 @@
 ---
-version: "http://localhost:8080/AdminPage/conf/runCmd?cmd=calc"
 source: "MrWQ/vulnerability-paper"
 ---
 

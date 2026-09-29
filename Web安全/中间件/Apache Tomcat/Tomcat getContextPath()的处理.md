@@ -1,3 +1,7 @@
+---
+source: "历史归档批(无原始出处标注)"
+---
+
 ### Tomcat getContextPath()的处理
 
 在getContextPath()函数中，调用了Request.getContextPath()函数：

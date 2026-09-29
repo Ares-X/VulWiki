@@ -1,6 +1,5 @@
 ---
 cnvd: "CNVD-2025-04094"
-version: "## 环境搭建"
 source: "Threekiii/Vulnerability-Wiki"
 ---
 

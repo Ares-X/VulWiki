@@ -1,5 +1,4 @@
 ---
-version: "nmap -p 7001,7002 -v -n --script weblogic-t3-info 10.10.10.130"
 source: "MrWQ/vulnerability-paper"
 ---
 

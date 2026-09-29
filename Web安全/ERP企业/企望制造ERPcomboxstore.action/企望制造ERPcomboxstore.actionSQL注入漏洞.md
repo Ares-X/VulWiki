@@ -1,5 +1,4 @@
 ---
-version: "POST /mainFunctions/comboxstore.action HTTP/1.1"
 fofa: "app.name="
 source: "wy876 漏洞文库"
 ---

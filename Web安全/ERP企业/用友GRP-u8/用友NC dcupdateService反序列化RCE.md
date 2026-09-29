@@ -1,5 +1,5 @@
 ---
-fofa: "app="
+
 source: "SourByte05/Vulnerability-Wiki-PoC"
 ---
 
