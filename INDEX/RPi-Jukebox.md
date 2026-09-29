@@ -1,0 +1,3 @@
+# RPi-Jukebox
+
+- [（CVE-2025-10327）RPi-Jukebox-RFID shuffle接口命令注入漏洞](../IOT%E5%AE%89%E5%85%A8/RPi-Jukebox/%EF%BC%88CVE-2025-10327%EF%BC%89RPi-Jukebox-RFID%20shuffle%E6%8E%A5%E5%8F%A3%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md)

@@ -1,0 +1,3 @@
+# Firebird
+
+- [Firebird数据库提权姿势总结   技术精选0128](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Firebird/Firebird%E6%95%B0%E6%8D%AE%E5%BA%93%E6%8F%90%E6%9D%83%E5%A7%BF%E5%8A%BF%E6%80%BB%E7%BB%93%20%20%20%E6%8A%80%E6%9C%AF%E7%B2%BE%E9%80%890128.md)
