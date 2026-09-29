@@ -1,4 +1,4 @@
-> 全库 6053 篇。按 [产品类型](INDEX/) / [CVE 年份](INDEX-CVE/year/) / [FOFA 指纹](INDEX-FOFA.md) 三视图检索。
+> 全库 5673 篇。按 [产品类型](INDEX/) / [CVE 年份](INDEX-CVE/year/) / [FOFA 指纹](INDEX-FOFA.md) 三视图检索。
 - [360](INDEX/360.md)
 - [AI应用](INDEX/AI%E5%BA%94%E7%94%A8.md)
 - [Amazon](INDEX/Amazon.md)
@@ -17,7 +17,6 @@
 - [FLIR](INDEX/FLIR.md)
 - [Finetree](INDEX/Finetree.md)
 - [Firebird](INDEX/Firebird.md)
-- [Firebox](INDEX/Firebox.md)
 - [H3C](INDEX/H3C.md)
 - [Huawei](INDEX/Huawei.md)
 - [Intelight](INDEX/Intelight.md)
@@ -33,7 +32,6 @@
 - [PAM劫持SSH密码](INDEX/PAM%E5%8A%AB%E6%8C%81SSH%E5%AF%86%E7%A0%81.md)
 - [PHICOMM](INDEX/PHICOMM.md)
 - [Panabit](INDEX/Panabit.md)
-- [ProFTPD](INDEX/ProFTPD.md)
 - [QEMU](INDEX/QEMU.md)
 - [RPi-Jukebox](INDEX/RPi-Jukebox.md)
 - [Ruijie](INDEX/Ruijie.md)
@@ -73,4 +71,3 @@
 - [网络设备](INDEX/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87.md)
 - [运维面板](INDEX/%E8%BF%90%E7%BB%B4%E9%9D%A2%E6%9D%BF.md)
 - [邮件系统](INDEX/%E9%82%AE%E4%BB%B6%E7%B3%BB%E7%BB%9F.md)
-- [高通](INDEX/%E9%AB%98%E9%80%9A.md)
