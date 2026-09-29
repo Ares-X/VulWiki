@@ -9,7 +9,7 @@ source: "Threekiii/Vulnerability-Wiki"
 
 当 pod 以可写权限挂载了宿主机的 `/var/log` 目录，且 pod 里的 service account 有权限访问该 pod 在宿主机上的日志时，攻击者可以通过在容器内创建符号链接来完成简单逃逸。
 
-下图展示了 `kubectl logs <pod-name>` 如何从 pod 中检索日志：
+下图展示了 `kubectl logs <pod-name>` 如何从 pod 中检索日志：
 
 ![](./.resource/挂载-log-目录导致容器逃逸/media/image-20250520141902202.png)
 

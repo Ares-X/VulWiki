@@ -16,11 +16,11 @@ source: "MrWQ/vulnerability-paper"
 
 **用友 NC bsh.servlet.BshServlet 存在远程命令执行漏洞，通过 BeanShell 执行远程命令获取服务器权限**
 
-**二:  漏洞影响🐇**
+**二:  漏洞影响🐇**
 
 **用友 NC**
 
-**三:  漏洞复现🐋**
+**三:  漏洞复现🐋**
 
 ```
 FOFA: icon_hash="1085941792"
@@ -38,7 +38,7 @@ FOFA: icon_hash="1085941792"
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el4lnhQIaJmttclv4dRBhmx53yfqX114sCTNAicMiafQvRnsibyJOviaDp4fFONZj6elbcPQgFhsOVlNAw/640?wx_fmt=png)
 
- ****四:  关于文库🦉****
+ ****四:  关于文库🦉****
 
  **在线文库：**
 
@@ -69,7 +69,7 @@ FOFA: icon_hash="1085941792"
 
 **由于传播、利用此文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，文章作者不为此承担任何责任。**
 
-**PeiQi 文库 拥有对此文章的修改和解释权如欲转载或传播此文章，必须保证此文章的完整性，包括版权声明等全部内容。未经作者允许，不得任意修改或者增减此文章内容，不得以任何方式将其用于商业目的。**
+**PeiQi 文库 拥有对此文章的修改和解释权如欲转载或传播此文章，必须保证此文章的完整性，包括版权声明等全部内容。未经作者允许，不得任意修改或者增减此文章内容，不得以任何方式将其用于商业目的。**
 
 ---
 

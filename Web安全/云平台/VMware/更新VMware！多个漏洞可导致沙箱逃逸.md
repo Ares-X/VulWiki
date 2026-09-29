@@ -59,7 +59,7 @@ https://www.vmware.com/security/advisories/VMSA-2024-0006.html
   
 **每日涨知识**  
   
- 后门(backdoor)  
+ 后门(backdoor)  
   
 后门是没有被记录到文挡的命令序列，允许软件开发人员绕过正常的访问限制。后门可  
 以由制造商放置和留下，或者由黑客使用漏洞来放置。  

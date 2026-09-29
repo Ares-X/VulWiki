@@ -17,7 +17,7 @@ source: "MrWQ/vulnerability-paper"
 **Windows Server 2012 R2 X64**
 ------------------------------
 
-**范围：宝塔 Windows <= 6.5    或 liunx 只要有 IIS8.5 这个中间件的版本**
+**范围：宝塔 Windows <= 6.5    或 liunx 只要有 IIS8.5 这个中间件的版本**
 -------------------------------------------------------
 
 **宝塔选择：MySQL + PHP-5.4+ IIS 8.5**

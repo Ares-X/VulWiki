@@ -44,7 +44,7 @@ http://192.168.3.142:8088/123.gif/xxx.php
 3、最重要的一点是 php-fpm.conf 中的 security.limit_extensions 配置项限制了 fastcgi 解析文件的类型（即指定什么类型的文件当做代码解析），此项设置为空的时候才允许 fastcgi 将 .png 等文件当做代码解析.
 ```
 
-​    分类:             [Web安全](https://www.cnblogs.com/Yang34/category/1392865.html)
+    分类:             [Web安全](https://www.cnblogs.com/Yang34/category/1392865.html)
 
 
 ---

@@ -15,12 +15,12 @@ source: "gelusus/wxvl 公众号漏洞文库"
 **SAP NetWeaver Application Server 身份验证缺陷漏洞**  
   
   
-**【 漏洞编号 】**  
+**【 漏洞编号 】**  
   
 CVE-2025-0070  
   
   
-**【 情报等级 】**  
+**【 情报等级 】**  
   
 **高危**  
   

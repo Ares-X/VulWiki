@@ -315,7 +315,7 @@ public void listRemindType() {
 
 ![图片](https://mmbiz.qpic.cn/mmbiz_svg/ofvnGicEPbfRGPiboDKmcUcP5ffotWXFYIf0LcATCrLwqia4rtEqOqeibrXvCfFFw5KfKGHCA2gaUDqt8NrdkM9lfXibtFURCtNg5/640?wx_fmt=svg)
 
- 认证绕过分析
+ 认证绕过分析
 
 在上面有埋下一个坑，就是在使用 BurpSuite Intruder 请求多个不同的目标的 / mobile/plugin/browser.jsp 时，发现有很多返回 404 状态码的站。
 

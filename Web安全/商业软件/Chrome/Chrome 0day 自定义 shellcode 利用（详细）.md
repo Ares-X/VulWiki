@@ -161,7 +161,7 @@ chrome.exe -no-sandbox
 ```
 测试环境
 Windows10 x64 
-Chrome 89.0.4389.128
+Chrome 89.0.4389.128
 ```
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/rJALXSMzgelgYXUwsxribAz956ruaQGZZrQIEicgr0SBrJMribYKnGQx1fMgQxBNfVmTyamKIyib1w5h6EX9NqUT2w/640?wx_fmt=png)

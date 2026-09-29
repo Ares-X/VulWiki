@@ -7,13 +7,13 @@ source: "MrWQ/vulnerability-paper"
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/ThSxC22JsrRE50N21WR24Q)
 
-**点击蓝字 ·  关注我们**
+**点击蓝字 ·  关注我们**
 
 **01**
 
 漏洞简述
 
-Apache  Log4j2 是一款 Apache 软件基金会的开源基础框架, 用于 Java 日志记录的工具。日志记录主要用来监视代码中变量的变化情况，周期性的记录到文件中供其他应用进行统计分析工作；跟踪代码运行时轨迹，作为日后审计的依据；担当集成开发环境中的调试器的作用，向文件或控制台打印代码的调试信息。其在 JAVA 生态环境中应用极其广泛, 影响巨大。
+Apache  Log4j2 是一款 Apache 软件基金会的开源基础框架, 用于 Java 日志记录的工具。日志记录主要用来监视代码中变量的变化情况，周期性的记录到文件中供其他应用进行统计分析工作；跟踪代码运行时轨迹，作为日后审计的依据；担当集成开发环境中的调试器的作用，向文件或控制台打印代码的调试信息。其在 JAVA 生态环境中应用极其广泛, 影响巨大。
 
 VMware 众多产品受此漏洞影响，VM 可在未授权的情况下达到远程命令执行的效果。
 
@@ -24,43 +24,43 @@ VMware 众多产品受此漏洞影响，VM 可在未授权的情况下达到远�
   
 
 ```
-VMware Horizon
-VMware vCenter Server
-VMware HCX
-VMware NSX-T Data Center
-VMware Unified Access Gateway
-VMware WorkspaceOne Access
-VMware Identity Manager`
-VMware vRealize Operations
-VMware vRealize Operations Cloud Proxy
-VMware vRealize Log Insight
-VMware vRealize Automation
-VMware vRealize Lifecycle Manager
-VMware Telco Cloud Automation
-VMware Site Recovery Manager
-VMware Carbon Black Cloud Workload Appliance
-VMware Carbon Black EDR Server
-VMware Tanzu GemFire
-VMware Tanzu Greenplum
-VMware Tanzu Operations Manager
-VMware Tanzu Application Service for VMs
-VMware Tanzu Kubernetes Grid Integrated Edition
-VMware Tanzu Observability by Wavefront Nozzle
-Healthwatch for Tanzu Application Service
-Spring Cloud Services for VMware Tanzu
-Spring Cloud Gateway for VMware Tanzu
-Spring Cloud Gateway for Kubernetes
-API Portal for VMware Tanzu
+VMware Horizon
+VMware vCenter Server
+VMware HCX
+VMware NSX-T Data Center
+VMware Unified Access Gateway
+VMware WorkspaceOne Access
+VMware Identity Manager`
+VMware vRealize Operations
+VMware vRealize Operations Cloud Proxy
+VMware vRealize Log Insight
+VMware vRealize Automation
+VMware vRealize Lifecycle Manager
+VMware Telco Cloud Automation
+VMware Site Recovery Manager
+VMware Carbon Black Cloud Workload Appliance
+VMware Carbon Black EDR Server
+VMware Tanzu GemFire
+VMware Tanzu Greenplum
+VMware Tanzu Operations Manager
+VMware Tanzu Application Service for VMs
+VMware Tanzu Kubernetes Grid Integrated Edition
+VMware Tanzu Observability by Wavefront Nozzle
+Healthwatch for Tanzu Application Service
+Spring Cloud Services for VMware Tanzu
+Spring Cloud Gateway for VMware Tanzu
+Spring Cloud Gateway for Kubernetes
+API Portal for VMware Tanzu
 Single Sign-On for VMware Tanzu Application Service
-App Metrics
-VMware vCenter Cloud Gateway
-VMware Tanzu SQL with MySQL for VMs
-VMware vRealize Orchestrator
-VMware Cloud Foundation
-VMware Workspace ONE Access Connector
-VMware Horizon DaaS
-VMware Horizon Cloud Connector
-(Additional products will be added)
+App Metrics
+VMware vCenter Cloud Gateway
+VMware Tanzu SQL with MySQL for VMs
+VMware vRealize Orchestrator
+VMware Cloud Foundation
+VMware Workspace ONE Access Connector
+VMware Horizon DaaS
+VMware Horizon Cloud Connector
+(Additional products will be added)
 ```
 
 **03**

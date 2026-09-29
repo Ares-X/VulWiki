@@ -131,11 +131,11 @@ sourceId</code，就等于控制了文件系统的访问目标。
 ![](https://mmbiz.qpic.cn/mmbiz_png/tbTbtBE6TibeSpanuFp3rOUakB45vqPr1As90EBRPppGIynwrKAYoM7c0xkcsnkhrS2Gj2AS0HnOreptk2DiazaUVbOceB5DIz1BMqJ4sicEMA/640?wx_fmt=png&from=appmsg "")  
 ## 影响范围  
   
-此漏洞直接影响所有运行EspoCRM **9.3.4之前版本**  
+此漏洞直接影响所有运行EspoCRM **9.3.4之前版本**  
 的实例。具体影响组件包括：  
 - **核心功能**  
 ：公式脚本引擎（record\update  
-, record\attribute  
+, record\attribute  
 函数）。  
   
 - **文件存储组件**  

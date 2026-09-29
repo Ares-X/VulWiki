@@ -10,11 +10,11 @@ source: "gelusus/wxvl 公众号漏洞文库"
   
 2022年**Pwn2Own**比赛前一天，Netgear官方修复了RAX30设备多个高危漏洞。  
   
-**设备品牌:** Netgear  
+**设备品牌:** Netgear  
   
-**设备型号:** RAX30  
+**设备型号:** RAX30  
   
-固件版本:  [RAX30 1.0.7.70](  
+固件版本:  [RAX30 1.0.7.70](  
 Nighthawk RAX30 | WiFi 6 Router | NETGEAR Support  
 )  
 ##   
@@ -56,7 +56,7 @@ support->后台技术支持后门账户
 ### 漏洞原理  
   
 Web服务在获取客户端请求包中User-Agent数据字段未能有效筛选危险字符导致设备任意命令执行。  
-### 2.2 CVE-2022-47209  
+### 2.2 CVE-2022-47209  
   
 硬编码  
 ```

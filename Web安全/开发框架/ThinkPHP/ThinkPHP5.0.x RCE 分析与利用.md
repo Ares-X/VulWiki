@@ -12,7 +12,7 @@ source: "MrWQ/vulnerability-paper"
 
 >>>>
 
-ThinkPHP 5.0.x(<=5.0.23) RCE 分析
+ThinkPHP 5.0.x(<=5.0.23) RCE 分析
 
 ### **漏洞原理分析**
 
@@ -49,7 +49,7 @@ private function filterValue(&$value, $key, $filters)
                 }
 ```
 
-将该方法的第三个参数 (array) 取出键值作为 call_user_func 的方法，并且将第一个参数 $value 作为回调函数的参数传入，最后将回调函数的返回重新赋值给 $value 现在全局搜索，哪些方法调用了该 filterValue 方法
+将该方法的第三个参数 (array) 取出键值作为 call_user_func 的方法，并且将第一个参数 $value 作为回调函数的参数传入，最后将回调函数的返回重新赋值给 $value 现在全局搜索，哪些方法调用了该 filterValue 方法
 
 /thinkphp/library/think/Request.php 中存在 input 方法，其中调用 filterValue 方法
 
@@ -279,7 +279,7 @@ APP::run()
 可知如果开了调试模式的话，在启动执行应用程序时会自动调用 $request->param() 方法。因此当开启调式模式时，我们的分析利用链到此时已经结束，可以构造相应 payload
 
 ```
-POST:_method=__construct&filter[]=system&get[]=whoami  or _method=__construct&filter[]=system&route[]=whoami
+POST:_method=__construct&filter[]=system&get[]=whoami  or _method=__construct&filter[]=system&route[]=whoami
 ```
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5iby1CibzqOJb7UaSicQYJE8UkAms0X9Egjg1BEWjZdXclyXJfObjRiacQvG3QxJIgXIgLn7G7F992Cg/640?wx_fmt=png)
@@ -340,11 +340,11 @@ APP:run() 中跟进 routeCheck() 方法：
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5iby1CibzqOJb7UaSicQYJE8UTOq4Jhc8q5sQcqJYRrCQZyGheyK6dexdrYkCwaez84k0iaHVUA9qCLQ/640?wx_fmt=png)
 
-当我们需要 $dispatch[‘type’] 等于 controller 或者 method 时，最终跟进到 Route::parseRule 方法
+当我们需要 $dispatch[‘type’] 等于 controller 或者 method 时，最终跟进到 Route::parseRule 方法
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5iby1CibzqOJb7UaSicQYJE8UWMp4KJVGMSlRGQlvKVxjPC4uQsAfUq0PxEuLWAhuEdgDOHicKIdTj3w/640?wx_fmt=png)
 
-当路由执行为路由到方法或者路由到控制器时都能使得 $result['type'] 满足，即最后 $dispatch[‘type’] 等于 controller 或者 method 而调用 param 方法。
+当路由执行为路由到方法或者路由到控制器时都能使得 $result['type'] 满足，即最后 $dispatch[‘type’] 等于 controller 或者 method 而调用 param 方法。
 
 ThinkPHP 路由地址表示定义的路由表达式最终需要路由到的地址以及一些需要的额外参数，支持下面 5 种方式定义：
 
@@ -396,7 +396,7 @@ _method=__construct&method=GET&filter[]=think\__include_file&server[REQUEST_METH
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5iby1CibzqOJb7UaSicQYJE8UPTH00gNJycPCoYh2U8WpWgZwn1rZJVF8u4EtkVgLTXaZsyz2aiaOBJQ/640?wx_fmt=png)
 
- method 方法本来是 false 默认参数，现在参数为 true，我们跟进看一下其逻辑:
+ method 方法本来是 false 默认参数，现在参数为 true，我们跟进看一下其逻辑:
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5iby1CibzqOJb7UaSicQYJE8Uiaka7IoGtuhGQ1Uk73v91JBBMp8fyictUWMzvmUibsicsMFa6nHOv7SDww/640?wx_fmt=png)
 

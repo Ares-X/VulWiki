@@ -61,7 +61,7 @@ Connection: close
 
 通用修补建议
 
-升级到  Sonic SMA 8.0.0.4
+升级到  Sonic SMA 8.0.0.4
 
 临时修补建议
 
@@ -81,7 +81,7 @@ location  /cgi-bin/jarrewrite.sh {
 
 参考：
 
- https://my.oschina.net/u/4600927/blog/4927559
+ https://my.oschina.net/u/4600927/blog/4927559
 
 免责声明：本站提供安全工具、程序 (方法) 可能带有攻击性，仅供安全研究与教学之用，风险自负!
 

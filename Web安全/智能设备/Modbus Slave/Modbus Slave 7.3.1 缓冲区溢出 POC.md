@@ -23,11 +23,11 @@ Windows XP SP3 - Windows 7 Professional x86 SP1 - Windows 10 x64
 
 重现步骤：
 
-#1. - 下载并安装 Modbus Slave 
+#1. - 下载并安装 Modbus Slave 
 
 # 2. - 运行 python 脚本，它将创建 modbus.txt 文件。
 
-# 3. - Modbus Slave 7.3.1 < 7.4.2 
+# 3. - Modbus Slave 7.3.1 < 7.4.2 
 
 # 4. - 连接 -> 连接
 

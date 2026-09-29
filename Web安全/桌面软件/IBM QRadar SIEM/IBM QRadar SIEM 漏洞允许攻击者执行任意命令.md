@@ -47,7 +47,7 @@ IBM 发布了 QRadar 7.5.0 UP12 IF02 作为所有已识别漏洞的最终修复�
   
 原文来自: cybersecuritynews.com  
   
-原文链接:   
+原文链接:   
 https://cybersecuritynews.com/ibm-qradar-siem-vulnerability-2/  
   
 欢迎收藏并分享朋友圈，让五邑人网络更安全  

@@ -51,7 +51,7 @@ Apache 团队建议启用 RESTful API-v2 功能，其中包括改进的安全控
   
 原文来自: cybersecuritynews.com  
   
-原文链接:   
+原文链接:   
 https://cybersecuritynews.com/apache-seatunnel-vulnerability/  
   
 欢迎收藏并分享朋友圈，让五邑人网络更安全  

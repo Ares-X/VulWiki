@@ -42,7 +42,7 @@ payload：
 
 ```
 GET /webapi/v1/system/accountmanage/account HTTP/1.1
-Host: ip:port
+Host: ip:port
 Sec-Ch-Ua: "Chromium";v="113", "Not-A.Brand";v="24"
 Sec-Ch-Ua-Mobile: ?0
 Sec-Ch-Ua-Platform: "macOS"

@@ -49,7 +49,7 @@ source: "MrWQ/vulnerability-paper"
 
 从开源项目本地搭建来进行审计，源码下载地址：
 
-百度网盘 https://pan.baidu.com/s/1jlild9uyGdQ7H2yaMx76zw  提取码: 814g  
+百度网盘 https://pan.baidu.com/s/1jlild9uyGdQ7H2yaMx76zw  提取码: 814g  
 
   
 
@@ -82,7 +82,7 @@ com.jsh.erp.filter.LogCostFilter
 ```
 
 ```
-python3 华夏ERP授权绕过2.py http://ip:port
+python3 华夏ERP授权绕过2.py http://ip:port
 ```
 
 下面我们需要将 url 开头设置为数组中的内容即可：

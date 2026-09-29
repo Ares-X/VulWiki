@@ -60,12 +60,12 @@ source: "gelusus/wxvl 公众号漏洞文库"
 ：135.0.7049.95  
   
 **手动更新步骤：**  
-1. 打开Chrome，点击右上角 **⋮**  
- 菜单  
+1. 打开Chrome，点击右上角 **⋮**  
+ 菜单  
   
-1. 选择 **帮助 > 关于Google Chrome**  
+1. 选择 **帮助 > 关于Google Chrome**  
   
-1. 自动下载更新后，点击 **重新启动**  
+1. 自动下载更新后，点击 **重新启动**  
   
 **企业建议：**  
 - 通过组策略（GPO）或Chrome Enterprise强制部署更新  
@@ -88,7 +88,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
   
 原文来自: cybersecuritynews.com  
   
-原文链接:   
+原文链接:   
 https://cybersecuritynews.com/critical-chrome-vulnerability-steal-data/  
   
 欢迎收藏并分享朋友圈，让五邑人网络更安全  

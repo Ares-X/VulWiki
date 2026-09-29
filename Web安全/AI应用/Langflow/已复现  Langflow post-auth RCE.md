@@ -70,7 +70,7 @@ https://github.com/langflow-ai/langflow/releases
   
 1、若业务可暂时不使用自定义组件，将环境变量 LANGFLOW_ALLOW_CUSTOM_COMPONENTS 设为 false，阻止新建/修改自定义组件代码。  
   
- 2、收紧可登录并创建自定义组件的账号面：仅保留业务所需账号，回收不再使用的账号与 API token。  
+ 2、收紧可登录并创建自定义组件的账号面：仅保留业务所需账号，回收不再使用的账号与 API token。  
   
 微步产品支撑  
   
@@ -89,7 +89,7 @@ https://github.com/langflow-ai/langflow/releases
 S3100184607  
 ，  
 模型/规则高于：  
-20260916000000   
+20260916000000   
 可检出。  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/T4OSm0sXdEP701aR24F7wr2XHzgEJLxnlrh2dcbibAwqD9VmrJko1qNEbPhQuCF47LicXMGNaaRzqYRXp0IO9D4x29dG790UEFLfNNpymCuO0/640?wx_fmt=png&from=appmsg "")  
@@ -101,9 +101,9 @@ S3100184607
 3100  
 184607  
   
-微步云原生应用安全平台 OneCloud 已于   
+微步云原生应用安全平台 OneCloud 已于   
 2026-09-16  
- 支持检测该漏洞。  
+ 支持检测该漏洞。  
   
 ![](https://mmbiz.qpic.cn/mmbiz_png/T4OSm0sXdEOxyFcYTNRQkiaIqcSib4jrYovhRgboqJ2tqPj1djg9xx3BicwfoqZ57In17Bm11dhtf0mo7nIefHXvhheAdFoaGkMfjVTFEXxQYM/640?wx_fmt=png&from=appmsg "")  
   

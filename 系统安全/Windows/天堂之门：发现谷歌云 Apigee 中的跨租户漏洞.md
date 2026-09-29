@@ -35,9 +35,9 @@ Apigee 的主要组件是消息处理器，在图中以黄色高亮显示。
   
 消息处理器是位于最终用户和后端服务之间的 API 代理所有通过 Apigee 的最终用户请求都由它处理。所有其他组件的存在都是为了使其按预期工作提供最新的配置，并将分析数据流回谷歌。  
   
-Apigee 默认会为所有代理请求添加 X-Forwarded-For  
- ，导致元数据端点拒绝该请求，作为针对服务器端请求伪造的防御机制。可以使用 AssignMessage  
- Apigee 策略来绕过它，该策略可用于在请求发送到后端之前移除请求头。  
+Apigee 默认会为所有代理请求添加 X-Forwarded-For  
+ ，导致元数据端点拒绝该请求，作为针对服务器端请求伪造的防御机制。可以使用 AssignMessage  
+ Apigee 策略来绕过它，该策略可用于在请求发送到后端之前移除请求头。  
   
 在消息处理器的元数据端点暴露后，可以与该工作负载关联的服务账户令牌：  
   
@@ -53,8 +53,8 @@ gcpwn 是一个有用的权限枚举工具，可以迭代服务账户可能拥�
   
 - 对 PubSub 主题的写入权限。  
   
-权限可以列出和读取磁盘、快照等资源，并控制知道名称的存储桶的内容。这是使用 Apigee 服务账户令牌在租户项目上运行 gcloud compute disks list  
- 命令的输出：  
+权限可以列出和读取磁盘、快照等资源，并控制知道名称的存储桶的内容。这是使用 Apigee 服务账户令牌在租户项目上运行 gcloud compute disks list  
+ 命令的输出：  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/PkfClzhSYiczWdqe5jlwb6DKXrkRr79NOSEqk6r98MkbFTiauuv2BKkNA3H3Hzm4VLzlLpJlQslHiaQJiciafmO44HwkenSVeP3iaUUkDzSXmCC4E/640?wx_fmt=other&from=appmsg "")  
   
@@ -69,8 +69,8 @@ gcpwn 是一个有用的权限枚举工具，可以迭代服务账户可能拥�
   
 1. 挂载磁盘并查看其内容。  
   
-通过浏览转储文件中的所有日志和配置文件探索， boot-json.log  
- 的文件，其中包含有关分析计算实例行为的日志：  
+通过浏览转储文件中的所有日志和配置文件探索， boot-json.log  
+ 的文件，其中包含有关分析计算实例行为的日志：  
   
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/PkfClzhSYiczXCE8MlYDNZ1esgicmicjAtL6ficEKb1JImDqiakhchRwS4WqViatpHNqlHRWZ27dWjOzZ4TJ6zaZUQbCwP50Igef3ajAAy9OW4zSo/640?wx_fmt=other&from=appmsg "")  
   
@@ -81,8 +81,8 @@ gcpwn 是一个有用的权限枚举工具，可以迭代服务账户可能拥�
   
 下载 JAR 文件的存储桶位于租户项目中，Apigee 服务账户拥有对其的读写权限。利用这些权限，用恶意代码修补其中一个 JAR 文件，从而在 Dataflow 计算实例上实现远程代码执行。  
   
-转储文件中的另一个文件 pipeline_options.json  
- 显示，Dataflow 管道由另一个服务账户执行：apigee-analytics@TENANT-PROJECT.iam.gserviceaccount.com  
+转储文件中的另一个文件 pipeline_options.json  
+ 显示，Dataflow 管道由另一个服务账户执行：apigee-analytics@TENANT-PROJECT.iam.gserviceaccount.com  
 ：  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/PkfClzhSYicyI9lvRkucZXvOVPjia52fQ22os2G7kEnQiareqv8KZSibibnry48W6nShy5J1n0vfGkAR1AicD2IWUkh2CiaDJR0HGQOiaLoYH08euEM/640?wx_fmt=other&from=appmsg "")  
@@ -96,21 +96,21 @@ gcpwn 是一个有用的权限枚举工具，可以迭代服务账户可能拥�
   
 Apigee 服务账户拥有对存储 Dataflow 管道执行的 JAR 文件的存储桶的写入权限。  
   
-将权限提升到 Dataflow 服务账户，该存储桶下载 Dataflow JAR 文件，使用诸如 Recaf  
- 之类的 Java 修补程序对它们进行修补。恶意实现将简单地访问 Dataflow 计算实例的元数据端点，检索 Dataflow 服务账户的令牌，并将其上传到控制的远程服务器。  
+将权限提升到 Dataflow 服务账户，该存储桶下载 Dataflow JAR 文件，使用诸如 Recaf  
+ 之类的 Java 修补程序对它们进行修补。恶意实现将简单地访问 Dataflow 计算实例的元数据端点，检索 Dataflow 服务账户的令牌，并将其上传到控制的远程服务器。  
   
 修补 JAR 文件后，我们可以使用 Apigee 服务账户覆盖存储桶中现有的文件：  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/PkfClzhSYicwOnvjSEibDa7tiaASMOdZWlVURmM8Yvkd0icS12icQEsibOvbPWcohicL2IuKbeKuPGNYYlHJmooib5Zeu4289tB8HEjSJsq6ibayw2ZY/640?wx_fmt=other&from=appmsg "")  
 ## 影响  
   
-令牌可以访问跨租户的元数据存储桶，在存储桶的 tenantToTenantGroup  
- 文件夹下的缓存目录中，许多不相关的 GCP 项目名称 + Apigee 环境名称，被分组在一起：  
+令牌可以访问跨租户的元数据存储桶，在存储桶的 tenantToTenantGroup  
+ 文件夹下的缓存目录中，许多不相关的 GCP 项目名称 + Apigee 环境名称，被分组在一起：  
   
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/PkfClzhSYicxwzL3KeEYoRdprIicxdd08rTW1pHmjqq8mNRVnn6wVIDZgcM4EKVhvr5pfVeoxYQlc04WRR0M6jM0FCIVthDZwT4KvNvONdgrY/640?wx_fmt=other&from=appmsg "")  
   
-在 customFields  
- 文件夹下，所有不同 Apigee 租户的所有自定义分析字段都是可访问的。这是其中一个租户的自定义分析字段示例：  
+在 customFields  
+ 文件夹下，所有不同 Apigee 租户的所有自定义分析字段都是可访问的。这是其中一个租户的自定义分析字段示例：  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/PkfClzhSYicxDZmsdHrTLsnvrJEMo7xuHGtcU2QCqm6M9E2iaU7pb50PklwXsNvQUCKCIFME4G2ZiceDYb5oZCYBDqmFxRgByUrpo5XMX0zM5w/640?wx_fmt=other&from=appmsg "")  
   

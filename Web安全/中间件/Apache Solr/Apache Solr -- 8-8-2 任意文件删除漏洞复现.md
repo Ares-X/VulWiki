@@ -49,7 +49,7 @@ https://mirrors.tuna.tsinghua.edu.cn/apache/lucene/solr/8.8.2/
 2、开一个有 core 的实例, 我这里用的是 DataImportHandler 的范例配置，进入 bin 目录下执行  
 
 ```
-solr.cmd -e dih
+solr.cmd -e dih
 ```
 
 访问：http://IP:8983/solr/#/

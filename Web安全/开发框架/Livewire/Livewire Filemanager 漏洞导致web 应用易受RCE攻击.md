@@ -7,7 +7,7 @@ Abinaya
                     Abinaya  代码卫士   2026-01-20 10:11  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
-    
+    
 聚焦源代码安全，网罗国内外最新资讯！  
   
 **编译：代码卫士**  
@@ -49,12 +49,12 @@ Abinaya
 使用 Livewire Filemanager的组织机构应当立即在应用程序层执行文件上传限制机制（独立于Livewire功能）；执行严格的白名单策略，仅限上传安全的文件类型并应用全面的 MIME 类型验证。将上传的文件存储在 web 可访问目录之外。如果操作无需使用 web 服务，则关闭公开存储链接。  
   
   
- 开源  
+ 开源  
 卫士试用地址：  
 https://oss.qianxin.com/#/login  
   
   
- 代码卫士试用地址：https://sast.qianxin.com/#/login  
+ 代码卫士试用地址：https://sast.qianxin.com/#/login  
   
   
   
@@ -107,9 +107,9 @@ e
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
   
-   
+   
 觉得不错，就点个 “  
 在看  
 ” 或 "  

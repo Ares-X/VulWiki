@@ -60,7 +60,7 @@ ActiveMQ 团队已经实施了一个修复程序，可以在解组期间正确�
   
 原文来自: cybersecuritynews.com  
   
-原文链接:   
+原文链接:   
 https://cybersecuritynews.com/apache-activemq-vulnerability-2/  
   
 欢迎收藏并分享朋友圈，让五邑人网络更安全  

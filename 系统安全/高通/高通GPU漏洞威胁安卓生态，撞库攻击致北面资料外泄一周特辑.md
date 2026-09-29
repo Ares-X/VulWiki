@@ -165,9 +165,9 @@ Kettering Health拥有超过15,000名员工（含1,800多名医生），运营�
   
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/vEkwp3V9UtvAicTR00TE1IibKH7aWmUoXkpZvstGG9eUJuSz5yDgibp3wLdhy1hH2HjyevHyhRv0RzjsqDzuBKsfw/640?wx_fmt=jpeg&from=appmsg "")  
   
-渠道合作咨询   田先生 15611262709  
+渠道合作咨询   田先生 15611262709  
   
-稿件合作   微信：shushu12121  
+稿件合作   微信：shushu12121  
   
 
 

@@ -97,7 +97,7 @@ SQL 代码就是在此处拼接完成的，具体拼接流程是这两行：
 
 ```
 plainSelect.setOrderByElements(orderByElementsReturn);
- return plainSelect.toString();
+ return plainSelect.toString();
 ```
 
 orderByElementsReturn 就是我们传入的 payload 数组，plainSelect 是 mybatis 中的原始 sql 语句，此处先将 orderByElementsReturn，set 到 plainSelect 的属性中，之后重写了 toString 方法，跟入 toString：

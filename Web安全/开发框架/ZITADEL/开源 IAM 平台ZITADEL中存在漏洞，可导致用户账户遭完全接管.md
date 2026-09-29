@@ -7,7 +7,7 @@ Ddos
                     Ddos  代码卫士   2026-03-09 09:31  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
-    
+    
 聚焦源代码安全，网罗国内外最新资讯！  
   
 **编译：代码卫士**  
@@ -54,12 +54,12 @@ ZITADEL 广泛用于管理复杂的身份验证需求，能够以开箱即用的
 如果无法立即升级，且所在组织机构不需要 SAML IdP 集成，研究人员建议部署 Web 应用防火墙或反向代理规则，阻止所有对 /saml-post 端点的访问。  
   
   
- 开源  
+ 开源  
 卫士试用地址：  
 https://oss.qianxin.com/#/login  
   
   
- 代码卫士试用地址：https://sast.qianxin.com/#/login  
+ 代码卫士试用地址：https://sast.qianxin.com/#/login  
   
   
   
@@ -109,9 +109,9 @@ e
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
   
-   
+   
 觉得不错，就点个 “  
 在看  
 ” 或 "  

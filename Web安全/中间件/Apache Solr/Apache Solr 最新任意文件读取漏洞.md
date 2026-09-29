@@ -33,7 +33,7 @@ Apache Solr 是一个开源搜索服务引擎，默认安装未授权情况下�
 
 **复制下方链接，靶场实战**
 
-https://www.hetianlab.com/expc.do?ec=ECIDde9d-11f0-4ac2-921f-b04f7e137c75&pk_campaign=weixin-wemedia#stu  
+https://www.hetianlab.com/expc.do?ec=ECIDde9d-11f0-4ac2-921f-b04f7e137c75&pk_campaign=weixin-wemedia#stu  
 
 Apache Solr 是一个开源的搜索服务器。具有高度可靠、可伸缩和容错的，提供分布式索引、复制和负载平衡查询、自动故障转移和恢复、集中配置等功能。
 

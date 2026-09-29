@@ -76,7 +76,7 @@ _**
 在执行的 SQL语句中  
 
 ```
-$sql = 'SELECT SID FROM user_online WHERE UID = \'' . $uid . '\' and CLIENT = \'' . $P_VER . '\'';
+$sql = 'SELECT SID FROM user_online WHERE UID = \'' . $uid . '\' and CLIENT = \'' . $P_VER . '\'';
 ```
 
   

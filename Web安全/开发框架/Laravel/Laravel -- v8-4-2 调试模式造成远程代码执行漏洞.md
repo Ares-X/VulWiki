@@ -7,7 +7,7 @@ source: "MrWQ/vulnerability-paper"
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/ytyV5Q_q5OfuEiSMEbkfdg)
 
-            2020 年 11 月底, 在为我们的一个客户进行安全审计时, 我们发现了一个基于 Laravel 的网站. 虽然这个网站的安全状态很好, 但我们注意到它是在调试模式下运行的, 因此显示了大量的错误信息, 包括堆栈痕迹:
+            2020 年 11 月底, 在为我们的一个客户进行安全审计时, 我们发现了一个基于 Laravel 的网站. 虽然这个网站的安全状态很好, 但我们注意到它是在调试模式下运行的, 因此显示了大量的错误信息, 包括堆栈痕迹:
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/aPmkR80bcV0DMibZdYtRkibN9E7M48U2icHianvlWxTqAyjj9fPj11qZRp3r6tCbmKIjFdlbQ1fiagxzJqEHPuhWUfA/640?wx_fmt=png)
 
@@ -15,7 +15,7 @@ source: "MrWQ/vulnerability-paper"
 
 **Ignition <= 2.5.1**
 
-            除了显示漂亮的堆栈痕迹, Ignition 还附带了解决方案, 小段的代码可以解决你在开发应用时可能遇到的问题. 例如，如果我们在模板中使用一个未知变量，会发生这样的情况：
+            除了显示漂亮的堆栈痕迹, Ignition 还附带了解决方案, 小段的代码可以解决你在开发应用时可能遇到的问题. 例如，如果我们在模板中使用一个未知变量，会发生这样的情况：
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/aPmkR80bcV0DMibZdYtRkibN9E7M48U2icHgbJmE7G2QniblXdobjPbrTdib7uXz3dicIPSCtJ9YIF6CtvXgvC9mAlcg/640?wx_fmt=png)
 
@@ -127,7 +127,7 @@ $ php artisan serve
 
 **PHP 包装器：更改文件**
 
-            现在，大家可能都听说过蔡橙子演示的上传进度技术。它利用 php://filter 来改变文件的内容，然后再返回。我们可以利用这一点，用我们的 exploitation primitive 来改造文件的内容：
+            现在，大家可能都听说过蔡橙子演示的上传进度技术。它利用 php://filter 来改变文件的内容，然后再返回。我们可以利用这一点，用我们的 exploitation primitive 来改造文件的内容：
 
 ```
 $ echo test | base64 | base64 > /path/to/file.txt
@@ -148,7 +148,7 @@ $ cat /path/to/file.txt
 test
 ```
 
-            我们已经改变了文件的内容 ! 遗憾的是，这将会应用两次转换。阅读文档后，我们发现有一种方法可以只应用一次：
+            我们已经改变了文件的内容 ! 遗憾的是，这将会应用两次转换。阅读文档后，我们发现有一种方法可以只应用一次：
 
 ```
 # To base64-decode once, use:
@@ -176,7 +176,7 @@ test
 
 **编写日志文件**
 
-            默认情况下，Laravel 的日志文件包含每一个 PHP 错误和堆栈跟踪，存储在存储 / log/laravel.log 中。让我们通过尝试加载一个不存在的文件来产生错误, SOME_TEXT_OF_OUR_CHOICE:
+            默认情况下，Laravel 的日志文件包含每一个 PHP 错误和堆栈跟踪，存储在存储 / log/laravel.log 中。让我们通过尝试加载一个不存在的文件来产生错误, SOME_TEXT_OF_OUR_CHOICE:
 
 ```
 [2021-01-11 12:39:44] local.ERROR: file_get_contents(SOME_TEXT_OF_OUR_CHOICE): failed to open stream: No such file or directory {"exception":"[object] (ErrorException(code: 0): file_get_contents(SOME_TEXT_OF_OUR_CHOICE): failed to open stream: No such file or directory at /work/pentest/laravel/laravel/vendor/facade/ignition/src/Solutions/MakeViewVariableOptionalSolution.php:75)

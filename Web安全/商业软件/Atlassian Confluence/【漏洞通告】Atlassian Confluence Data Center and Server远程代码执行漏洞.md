@@ -69,7 +69,7 @@ Atlassian Confluence是一种企业级的协作软件，用于创建、组织和
   
 2023年12月6日，深瞳漏洞实验室监测到一则Atlassian Confluence Data Center and Server组件存在远程代码执行漏洞的信息，漏洞编号：CVE-2023-22522，漏洞威胁等级：严重。  
   
-该漏洞是由于Atlassian Confluence Data Center and Server对用户的输入过滤不严导致，**攻击者（包括具有匿名访问权限的攻击者）可利用该漏洞在未授权的情况下，构造恶意数据执行远程代码执行攻击，最终获取服务器权限，进而执行任意命令。**  
+该漏洞是由于Atlassian Confluence Data Center and Server对用户的输入过滤不严导致，**攻击者（包括具有匿名访问权限的攻击者）可利用该漏洞在未授权的情况下，构造恶意数据执行远程代码执行攻击，最终获取服务器权限，进而执行任意命令。**  
   
   
 **影响范围**  

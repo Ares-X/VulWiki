@@ -50,7 +50,7 @@ IBM 强烈建议组织立即升级以解决这些漏洞，因为没有可用的�
   
 原文来自: cybersecuritynews.com  
   
-原文链接:   
+原文链接:   
 https://cybersecuritynews.com/ibm-cognos-analytics-vulnerability-2/  
   
 欢迎收藏并分享朋友圈，让五邑人网络更安全  

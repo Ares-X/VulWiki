@@ -80,7 +80,7 @@ pgAdmin 后台提供了一个文件管理器，在菜单的 “Tools -> Storage 
 最后拼接出的绝对路径为`/var/lib/pgadmin/storage/vulhub_example.com/";id;#`，这个文件存在可以绕过`os.path.exists()`，并传入`subprocess.getoutput()`执行的完整命令是：
 
 ```
-"/var/lib/pgadmin/storage/vulhub_example.com/";id;#" --version
+"/var/lib/pgadmin/storage/vulhub_example.com/";id;#" --version
 
 
 ```

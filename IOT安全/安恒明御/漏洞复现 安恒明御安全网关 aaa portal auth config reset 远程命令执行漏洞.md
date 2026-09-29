@@ -130,7 +130,7 @@ requests:
 运行 POC
 
 ```
-nuclei.exe -t mypoc/安恒/dbapp-mingyu-aaa_portal_auth_config_reset-rce.yaml -u http://192.168.40.130:8080
+nuclei.exe -t mypoc/安恒/dbapp-mingyu-aaa_portal_auth_config_reset-rce.yaml -u http://192.168.40.130:8080
 
 ```
 

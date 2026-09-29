@@ -124,7 +124,7 @@ print(res)
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8GV4iab3yZUZwzPW15rUj0ouo5hH1Ey7w6ILY95eUm59hJ8YkAtsM9XCl6tTbYgiaLcQibcBKzt1gLRg/640?wx_fmt=png)
 
 ```
-  /\/check?.*cmd[\s]*?=(?:ping|nslookup).*?(?:\.\.\/|\.\.\\)/
+  /\/check?.*cmd[\s]*?=(?:ping|nslookup).*?(?:\.\.\/|\.\.\\)/
 ```
 
 **编写 Goby 脚本**  
@@ -210,7 +210,7 @@ suricata -r sunlogin_rce_multi_payload.pcap
 测试 pcre 正则：
 
 ```
-  Sysmon64.exe -i
+  Sysmon64.exe -i
 ```
 
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8GV4iab3yZUZwzPW15rUj0ouEYmvmFZBPNdytB6cIssvfoTqUQwmQzleBwIWmnsXuRtYX4ruUhHv0g/640?wx_fmt=png)
@@ -256,7 +256,7 @@ https://github.com/arkime/arkime
 windows 下的事件监控可以用 sysmon，Linux 下则可以用 auditd，然后借助 wazuh 来管理日志。
 
 ```
-  Sysmon64.exe -i
+  Sysmon64.exe -i
 ```
 
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/1UG7KPNHN8GV4iab3yZUZwzPW15rUj0ouqCjMM6baxHOH2Gic2lkAs6znd8jiaedaUkSYY81Dibk1euaL9Vlgnb1Uw/640?wx_fmt=png)

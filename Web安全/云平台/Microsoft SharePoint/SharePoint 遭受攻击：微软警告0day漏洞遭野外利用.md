@@ -33,7 +33,7 @@ Palo Alto Networks Unit42 团队周六表示，他们还发现影响 Microsoft S
   
   
 微软在其安全公告中解释道： “为了保护本地 SharePoint Server 环境，建议客户在 SharePoint 中配置 AMSI集成，并在所有 SharePoint 服务器上部署Defender AV  
-    
+    
 。这将阻止未经身份验证的攻击者利用此漏洞。”  
   
   
@@ -116,7 +116,7 @@ Fancy Bear 黑客组织利用先进工具攻击政府和军事实体
 https://gbhackers.com/fancy-bear-hackers-target-governments-and-military-entities/  
   
   
-Ivanti   
+Ivanti   
 0day  
 漏洞被利用来投放 MDifyLoader 并发起 Cobalt Strike 攻击  
   

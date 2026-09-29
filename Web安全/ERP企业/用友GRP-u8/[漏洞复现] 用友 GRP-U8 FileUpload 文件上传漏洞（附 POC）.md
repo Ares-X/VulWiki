@@ -151,7 +151,7 @@ requests:
 运行 POC
 
 ```
-nuclei.exe -t yonyou-grp-u8-fileupload-fileupload.yaml -u http://192.168.30.102:112
+nuclei.exe -t yonyou-grp-u8-fileupload-fileupload.yaml -u http://192.168.30.102:112
 
 ```
 

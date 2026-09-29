@@ -39,7 +39,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
   
   
 ```
-ksyms = open(r"D:\47F7.kallsyms")for line in ksyms:    addr = int(line[0:8],16)    name = line[11:-1]print(f"addr:{hex(addr)},{name}")if not ida_funcs.add_func(addr):print(f"Warning: Failed to add function at {hex(addr)}")if not idc.set_name(addr, name, idc.SN_NOWARN):print(f"Warning: Failed to set name at {hex(addr)}")
+ksyms = open(r"D:\47F7.kallsyms")for line in ksyms:    addr = int(line[0:8],16)    name = line[11:-1]print(f"addr:{hex(addr)},{name}")if not ida_funcs.add_func(addr):print(f"Warning: Failed to add function at {hex(addr)}")if not idc.set_name(addr, name, idc.SN_NOWARN):print(f"Warning: Failed to set name at {hex(addr)}")
 ```  
   
   
@@ -80,7 +80,7 @@ CVE-2015-1805
   
   
 ```
-struct offsets {char* devname; //ro.product.modelchar* kernelver; // /proc/versionunion {void* fsync; //ptmx_fops -> fsyncvoid* check_flags; //ptmx_fops -> check_flags    };#if (__LP64__)void* joploc; //gadget location, see getroot.cvoid* jopret; //return to setfl after check_flags() (fcntl.c), usually inlined in sys_fcntl#endifvoid* sidtab; //optional, for selinux contenxtvoid* policydb; //optional, for selinux contextvoid* selinux_enabled;void* selinux_enforcing;};
+struct offsets {char* devname; //ro.product.modelchar* kernelver; // /proc/versionunion {void* fsync; //ptmx_fops -> fsyncvoid* check_flags; //ptmx_fops -> check_flags    };#if (__LP64__)void* joploc; //gadget location, see getroot.cvoid* jopret; //return to setfl after check_flags() (fcntl.c), usually inlined in sys_fcntl#endifvoid* sidtab; //optional, for selinux contenxtvoid* policydb; //optional, for selinux contextvoid* selinux_enabled;void* selinux_enforcing;};
 ```  
   
   
@@ -117,9 +117,9 @@ CVE-2017-8890
   
 https://bbs.kanxue.com/user-home-802108.htm  
   
-*本文为看雪论坛优秀文章，由   
+*本文为看雪论坛优秀文章，由   
 0x指纹  
-   
+   
 原创，转载请注明来自看雪社区  
   
   

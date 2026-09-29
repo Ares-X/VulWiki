@@ -7,7 +7,7 @@ Bill Toulas
                     Bill Toulas  代码卫士   2026-01-23 10:36  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
-    
+    
 聚焦源代码安全，网罗国内外最新资讯！  
   
 **编译：代码卫士**  
@@ -46,12 +46,12 @@ SmarterMail 是一款自由 SmarterTools 开发的托管 Windows 邮件服务器
 两周前，研究人员曾发现了位于 SmarterMail 中的一个严重的预认证RCE漏洞CVE-2025-52691，且受该漏洞启发而发现了目前的这个认证绕过漏洞。建议 SmarterMail 用户升级至1月15日发布的最新版本 Build 9511，修复这两个漏洞。  
   
   
- 开源  
+ 开源  
 卫士试用地址：  
 https://oss.qianxin.com/#/login  
   
   
- 代码卫士试用地址：https://sast.qianxin.com/#/login  
+ 代码卫士试用地址：https://sast.qianxin.com/#/login  
   
   
   
@@ -101,9 +101,9 @@ e
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
   
-   
+   
 觉得不错，就点个 “  
 在看  
 ” 或 "  

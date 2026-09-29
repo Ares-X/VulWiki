@@ -7,7 +7,7 @@ source: "MrWQ/vulnerability-paper"
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/LaTNNjwDT1VzN6uA0Gq0-Q)
 
-这是 **酒仙桥六号部队** 的第 **123** 篇文章。
+这是 **酒仙桥六号部队** 的第 **123** 篇文章。
 
 全文共计 3172 个字，预计阅读时长 9 分钟。
 
@@ -57,7 +57,7 @@ call_user_func 是代码执行点，我们基本上所有 PHP 自带的可利用
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/WTOrX1w0s56NzmiamhvnDuDA7TKE3ian76yicLxyP6JJN4flhvRbqDMQv0NSrD1vP6hNTeNM9KqDbaXUWEgleWuHg/640?wx_fmt=png)
 
-**方法一 thinkphp\library\think\Build::module**
+**方法一 thinkphp\library\think\Build::module**
 
 我们可以这样通过调用这个类的静态方法 module，来实现写文件的操作。
 
@@ -111,7 +111,7 @@ payload 如下可示：
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/WTOrX1w0s56NzmiamhvnDuDA7TKE3ian762SqbKccRrCXqyhBH4miaX6TaEaJUyeSnKwvYbS8gE9Z1HaHgR0bA5ZA/640?wx_fmt=png)
 
-**方法二 使用注释符绕过语法产生的错误**
+**方法二 使用注释符绕过语法产生的错误**
 
 payload 如下：
 
@@ -119,7 +119,7 @@ payload 如下：
 
 这样就会使用注释符注释掉后面的语法错误，然后使用`?>`包裹住，后面跟上自己用的 payload 即可。但是这样会产生一个问题，无法在 win 环境下使用，win 下文件夹中不能带这些字符`/ \ : * ? " < > |`
 
-**方法三 文件包含 & php 伪协议**
+**方法三 文件包含 & php 伪协议**
 
 这种操作就是，我们通过之前的`think\Build::module`写文件进去，写入的内容是我们 rot13 编码过的。然后通过`think\__include_file`调用我们写入文件的内容，因为这个过滤不够完全，可以让我们包含我们所写的内容。
 
@@ -127,7 +127,7 @@ payload 如下：
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/WTOrX1w0s56NzmiamhvnDuDA7TKE3ian768etE6NDibc6aRwicuC6nSjoo6ib9a4OXbgJamCWl2huGGnd1HJ8xLviaJQ/640?wx_fmt=png)
 
-**方法四 覆盖日志路径写入**
+**方法四 覆盖日志路径写入**
 
 因为题目将 error_log 函数 ban 掉了，所以这个非预期解是在不 ban 掉 error_log 函数的情况下所实现的。
 
@@ -159,7 +159,7 @@ payload 具体如下：
 
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/WTOrX1w0s56NzmiamhvnDuDA7TKE3ian76CmzzSRhtgAtfzsukRVrYicDiaahS5ohlsCttPQtnLRcDHNDMI1CUcKSA/640?wx_fmt=jpeg)
 
-**方法五  :: 竟然可以调用非静态方法**
+**方法五  :: 竟然可以调用非静态方法**
 
 下面是个简单的例子。
 

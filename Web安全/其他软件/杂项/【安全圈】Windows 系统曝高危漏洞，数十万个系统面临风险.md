@@ -28,7 +28,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
 虽然微软已经修复了这个漏洞，但该公司还建议无法紧急应用更新的管理员禁用 Windows MSMQ 服务。无法禁用 MSMQ 或安装 Microsoft 修补程序的组织可以使用防火墙规则阻止来自不受信任来源的 1801/TCP 连接。  
   
   
-   END    
+   END    
   
   
 阅读推荐  

@@ -11,14 +11,14 @@ source: "MrWQ/vulnerability-paper"
 一、漏洞描述
 ------
 
-nginxWebUI 是一款图形化管理 nginx 配置的工具，能通过网页快速配置 nginx 的各种功能，包括 HTTP 和 TCP 协议转发、反向代理、负载均衡、静态 HTML 服务器以及 SSL 证书的自动申请、续签和配置，配置完成后可以一键生成 nginx.conf 文件，并控制 nginx 使用此文件进行启动和重载。 
+nginxWebUI 是一款图形化管理 nginx 配置的工具，能通过网页快速配置 nginx 的各种功能，包括 HTTP 和 TCP 协议转发、反向代理、负载均衡、静态 HTML 服务器以及 SSL 证书的自动申请、续签和配置，配置完成后可以一键生成 nginx.conf 文件，并控制 nginx 使用此文件进行启动和重载。 
 
 nginxWebUI 后台提供执行 nginx 相关命令的接口，由于未对用户的输入进行过滤，导致可在后台执行任意命令。并且该系统权限校验存在问题，导致存在权限绕过，在前台可直接调用后台接口，最终可以达到无条件远程命令执行的效果。
 
 二、影响版本
 ------
 
-nginxWebUI < 3.5.2 未授权命令执行漏洞（网上公开为 3.5.0 但下载后发现作者已删除 GITEE 中 3.5.0 的相应代码，下载 3.5.0 版本 jar 包反编译后发现并没有对权限绕过进行修复） 
+nginxWebUI < 3.5.2 未授权命令执行漏洞（网上公开为 3.5.0 但下载后发现作者已删除 GITEE 中 3.5.0 的相应代码，下载 3.5.0 版本 jar 包反编译后发现并没有对权限绕过进行修复） 
 
 nginxWebUI 全版本均存在命令执行漏洞 (文章截止最新版 3.6.0)
 
@@ -191,7 +191,7 @@ public class AppFilter implements Filter {
 
 ```
 
-根据以上源码可知若访问 path 中包含 `/lib/ /adminPage/ /api/`且不包含`/lib/ /doc/ /js/ /img/ /css/`则进行权限校验，又因 Solon 对大小写不敏感 [1]，故可使用大小写绕过权限校验
+根据以上源码可知若访问 path 中包含 `/lib/ /adminPage/ /api/`且不包含`/lib/ /doc/ /js/ /img/ /css/`则进行权限校验，又因 Solon 对大小写不敏感 [1]，故可使用大小写绕过权限校验
 
 #### 3.5.2 之后版本
 
@@ -270,7 +270,7 @@ http://localhost:8080/AdminPage/conf/runCmd?cmd=calc
 
 注：
 
-• 原始路径为：`adminPage/conf/runCmd?cmd=calc%26%26nginx` 只需更改大小写使`adminPage`不为`adminPage`即可绕过权限校验 •calc 为要执行的恶意命令请自行更换
+• 原始路径为：`adminPage/conf/runCmd?cmd=calc%26%26nginx` 只需更改大小写使`adminPage`不为`adminPage`即可绕过权限校验 •calc 为要执行的恶意命令请自行更换
 
 ### 3.4.7 -- 3.5.2
 
@@ -281,7 +281,7 @@ http://localhost:8080/AdminPage/conf/runCmd?cmd=calc%26%26nginx
 
 注：
 
-• 原始路径为：`adminPage/conf/runCmd?cmd=calc%26%26nginx` 只需更改大小写使`adminPage`不为`adminPage`即可绕过权限校验 •calc 为要执行的恶意命令请自行更换 • 作者已删除 GITEE 中 3.5.0 的相应代码，下载 3.5.0 版本 jar 包反编译后发现并没有对权限绕过进行修复
+• 原始路径为：`adminPage/conf/runCmd?cmd=calc%26%26nginx` 只需更改大小写使`adminPage`不为`adminPage`即可绕过权限校验 •calc 为要执行的恶意命令请自行更换 • 作者已删除 GITEE 中 3.5.0 的相应代码，下载 3.5.0 版本 jar 包反编译后发现并没有对权限绕过进行修复
 
 ### 3.5.2 之后版本
 
@@ -298,7 +298,7 @@ http://localhost:8080/adminPage/conf/runCmd?cmd=calc%26%26nginx
 
 ### References
 
-`[1]` Solon 对大小写不敏感: _https://solon.noear.org/article/504_
+`[1]` Solon 对大小写不敏感: _https://solon.noear.org/article/504_
 
 ---
 

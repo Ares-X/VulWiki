@@ -35,7 +35,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
   
 原文来自: cybersecuritynews.com  
   
-原文链接:   
+原文链接:   
 https://cybersecuritynews.com/windows-remote-desktop-gateway-vulnerability/  
   
 欢迎收藏并分享朋友圈，让五邑人网络更安全  

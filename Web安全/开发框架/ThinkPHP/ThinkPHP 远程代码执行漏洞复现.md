@@ -151,7 +151,7 @@ http://xx.xx.xx.xx:8081/public/index.php?lang=../../../../../../../../usr/local/
 
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/szicQ7q9y2nN21VibypEpR9v4gJHQnrcictqxRIOZFDFgVxafUHichRkWd6OIsFFaia7PcbRwlcYpb45UtOicOribHiadA/640?wx_fmt=jpeg)
 
-        这里主要是利用 pearcmd.php 这个 pecl/pear 中的文件。pecl 是 PHP 中用于管理扩展而使用的命令行工具，而 pear 是 pecl 依赖的类库。在 7.3 及以前，pecl/pear 是默认安装的；在 7.4 及以后，需要我们在编译 PHP 的时候指定 --with-pear 才会安装。
+        这里主要是利用 pearcmd.php 这个 pecl/pear 中的文件。pecl 是 PHP 中用于管理扩展而使用的命令行工具，而 pear 是 pecl 依赖的类库。在 7.3 及以前，pecl/pear 是默认安装的；在 7.4 及以后，需要我们在编译 PHP 的时候指定 --with-pear 才会安装。
 
 不过，在 Docker 任意版本镜像中，pcel/pear 都会被默认安装，安装的路径在 / usr/local/lib/php。由此看来该漏洞对 Docker 中运行的启用了多语言模块的 ThinkPHP 影响较大。
 

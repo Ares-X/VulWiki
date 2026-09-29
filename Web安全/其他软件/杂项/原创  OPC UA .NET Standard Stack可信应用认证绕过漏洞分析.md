@@ -28,16 +28,16 @@ architecture 6.1.3
 【2】  
 :  
   
-An Application decides if another application is trusted
-by checking whether the Application Instance Certificate for the
+An Application decides if another application is trusted
+by checking whether the Application Instance Certificate for the
 other application is trusted. Applications shall rely on lists
-of Certificates provided by the Administrator to determine
+of Certificates provided by the Administrator to determine
 trust. There are two separate lists: a list of
-trusted Applications and a list of
-trusted Certificate Authorities (CAs). If an application is not
-directly trusted (i.e. its Certificate is not in the list of trusted
+trusted Applications and a list of
+trusted Certificate Authorities (CAs). If an application is not
+directly trusted (i.e. its Certificate is not in the list of trusted
 applications) then the application shall build a chain
-of Certificates back to a trusted CA.  
+of Certificates back to a trusted CA.  
   
 OPC UA 标准规范详细规定了如何判定一个应用证书是否可信，如下图2所示：  
   
@@ -149,7 +149,7 @@ Server的应用证书信息（可在OPC UA客户端认证的时候获得），�
 转载请注明来源  
 ：网络安全应急技术国家工程研究中心  
   
-“投稿联系方式：孙中豪 010-82992251   sunzhonghao@cert.org.cn”  
+“投稿联系方式：孙中豪 010-82992251   sunzhonghao@cert.org.cn”  
   
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/GoUrACT176njVOPvfib4X3jQ6GIHLtX8SSDvbpmcpr4uu3X7ELG7PDjdaLVeq4Er02ZoicTPvxrC6KCVH3bssUVw/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1 "")  
   

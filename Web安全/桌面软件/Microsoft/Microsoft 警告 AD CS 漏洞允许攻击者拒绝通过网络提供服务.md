@@ -59,7 +59,7 @@ Microsoft 已将可利用性评估为“不可能利用”，并确认该漏洞�
   
 原文来自: cybersecuritynews.com  
   
-原文链接:   
+原文链接:   
 https://cybersecuritynews.com/microsoft-warns-of-ad-cs-vulnerability/  
   
 欢迎收藏并分享朋友圈，让五邑人网络更安全  

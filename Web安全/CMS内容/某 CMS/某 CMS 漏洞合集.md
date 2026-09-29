@@ -134,78 +134,78 @@ if (empty($tag_indexmetatit)){$indextitle=$tag_indexkey;}else{$indextitle=$tag_i
 *   include_once
     
 
-文件操作函数: 文件系统函数
+文件操作函数: 文件系统函数
 
-*   copy — 拷贝文件
+*   copy — 拷贝文件
     
-*   delete — 参见 unlink 或 unset
+*   delete — 参见 unlink 或 unset
     
-*   fflush — 将缓冲内容输出到文件
+*   fflush — 将缓冲内容输出到文件
     
-*   file_get_contents — 将整个文件读入一个字符串
+*   file_get_contents — 将整个文件读入一个字符串
     
-*   file_put_contents — 将一个字符串写入文件
+*   file_put_contents — 将一个字符串写入文件
     
-*   fputcsv — 将行格式化为 CSV 并写入文件指针
+*   fputcsv — 将行格式化为 CSV 并写入文件指针
     
-*   fputs — fwrite 的别名
+*   fputs — fwrite 的别名
     
-*   fread — 读取文件（可安全用于二进制文件）
+*   fread — 读取文件（可安全用于二进制文件）
     
-*   fscanf — 从文件中格式化输入
+*   fscanf — 从文件中格式化输入
     
-*   fwrite — 写入文件（可安全用于二进制文件）
+*   fwrite — 写入文件（可安全用于二进制文件）
     
-*   move_uploaded_file — 将上传的文件移动到新位置
+*   move_uploaded_file — 将上传的文件移动到新位置
     
-*   readfile — 输出文件
+*   readfile — 输出文件
     
-*   rename — 重命名一个文件或目录
+*   rename — 重命名一个文件或目录
     
-*   rmdir — 删除目录
+*   rmdir — 删除目录
     
-*   unlink — 删除文件
+*   unlink — 删除文件
     
 
 代码注入函数:
 
-*   eval — 把字符串作为 PHP 代码执行
+*   eval — 把字符串作为 PHP 代码执行
     
-*   assert — 检查一个断言是否为 false
+*   assert — 检查一个断言是否为 false
     
-*   preg_replace — 执行一个正则表达式的搜索和替换
+*   preg_replace — 执行一个正则表达式的搜索和替换
     
 
 命令执行函数: 程序执行函数
 
-*   escapeshellarg — 把字符串转码为可以在 shell 命令里使用的参数
+*   escapeshellarg — 把字符串转码为可以在 shell 命令里使用的参数
     
-*   escapeshellcmd — shell 元字符转义
+*   escapeshellcmd — shell 元字符转义
     
-*   exec — 执行一个外部程序
+*   exec — 执行一个外部程序
     
-*   passthru — 执行外部程序并且显示原始输出
+*   passthru — 执行外部程序并且显示原始输出
     
-*   proc_close — 关闭由 proc_open 打开的进程并且返回进程退出码
+*   proc_close — 关闭由 proc_open 打开的进程并且返回进程退出码
     
-*   proc_get_status — 获取由 proc_open 函数打开的进程的信息
+*   proc_get_status — 获取由 proc_open 函数打开的进程的信息
     
-*   proc_nice — 修改当前进程的优先级
+*   proc_nice — 修改当前进程的优先级
     
 *   proc_open — 执行一个命令，并且打开用来输入 / 输出的文件指针。
     
-*   proc_terminate — 杀除由 proc_open 打开的进程
+*   proc_terminate — 杀除由 proc_open 打开的进程
     
 *   shell_exec — 通过 shell 环境执行命令，并且将完整的输出以字符串的方式返回。
     
-*   system — 执行外部程序，并且显示输出
+*   system — 执行外部程序，并且显示输出
     
 
 变量覆盖:
 
-*   extract — 从数组中将变量导入到当前的符号表
+*   extract — 从数组中将变量导入到当前的符号表
     
-*   parse_str — 将字符串解析成多个变量
+*   parse_str — 将字符串解析成多个变量
     
 
 ### 0x3.1 后台 GetShell

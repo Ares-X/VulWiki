@@ -10,7 +10,7 @@ source: "MrWQ/vulnerability-paper"
 
 **漏洞说明**
 
-Smartbi 是一款企业级报表平台产品，旨在帮助企业用户快速搭建企业报表平台，将企业内部流转的数据转化为可视化的报表，以便于企业决策者进行数据分析和决策。  
+Smartbi 是一款企业级报表平台产品，旨在帮助企业用户快速搭建企业报表平台，将企业内部流转的数据转化为可视化的报表，以便于企业决策者进行数据分析和决策。  
 
 Smartbi 的功能包括：格式化的中国式报表、电子表格功能、随时查看报表、数据透视表、多维分析等。  
 
@@ -36,11 +36,11 @@ Cookie: JSESSIONID=B49B33FAF5B8F0EBA546D2D149200A30
 Content-Length: 67
 Cache-Control: max-age=0
 Sec-Ch-Ua: 
-Content-Type: application/x-www-form-urlencoded;charset=UTF-8
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.110 Safari/537.36Sec-Ch-Ua-Platform: ""
+Content-Type: application/x-www-form-urlencoded;charset=UTF-8
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.110 Safari/537.36Sec-Ch-Ua-Platform: ""
 Sec-Fetch-Site: same-origin
 Sec-Fetch-Mode: cors
-Sec-Fetch-Dest: empty
+Sec-Fetch-Dest: empty
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9
 Connection: close

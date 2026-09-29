@@ -7,7 +7,7 @@ Ddos
                     Ddos  代码卫士   2026-02-09 10:31  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
-    
+    
 聚焦源代码安全，网罗国内外最新资讯！  
   
 **编译：代码卫士**  
@@ -46,12 +46,12 @@ BeyondTrust 已在2026年2月2日为所有SaaS 版本推送补丁。不过使用
 运行远程支持21.3之前版本或PRA 22.1之前版本的客户无法直接应用补丁修复漏洞，而是“需要升级至更新版本来应用补丁”。鉴于该漏洞的CVSS评分高达9.9，IT管理员应立即检查设备接口并确保应用BT26-02-RS补丁或BT26-02-PRA补丁。  
   
   
- 开源  
+ 开源  
 卫士试用地址：  
 https://oss.qianxin.com/#/login  
   
   
- 代码卫士试用地址：https://sast.qianxin.com/#/login  
+ 代码卫士试用地址：https://sast.qianxin.com/#/login  
   
   
   
@@ -104,9 +104,9 @@ e
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
   
-   
+   
 觉得不错，就点个 “  
 在看  
 ” 或 "  

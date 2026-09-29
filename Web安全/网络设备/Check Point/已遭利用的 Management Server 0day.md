@@ -7,7 +7,7 @@ Sergiu Gatlan
                     Sergiu Gatlan  代码卫士   2026-09-23 05:53  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
-    
+    
 聚焦源代码安全，网罗国内外最新资讯！  
   
 编译：代码卫士  
@@ -15,94 +15,94 @@ Sergiu Gatlan
 **Check Point****软件公司发布紧急热修复程序，修复了一个严重的安全管理服务器漏洞****(CVE-2026-93616)****，可导致攻击者运行任意脚本。**  
   
 安全管理服务器是一个中央存储库，用于存储和管理安全策略、处理管理员更改，并收集企业网络中的系统日志。该路径遍历漏洞可导致未经身份验证的威胁行动者在易受攻击的  
- Check Point   
+ Check Point   
 管理服务器上上传任意脚本，并在低复杂度攻击中执行这些脚本。  
   
 自  
- 2024   
+ 2024   
 年  
- 5   
+ 5   
 月以来，美国网络安全和基础设施安全局  
- (CISA)   
+ (CISA)   
 和联邦调查局  
- (FBI)   
+ (FBI)   
 就一直敦促软件公司在发布产品前消除路径遍历弱点，称此类安全问题  
 “  
 至少自  
- 2007   
+ 2007   
 年以来就被称为  
 ‘  
 不可原谅  
 ’”  
 。  
   
-Check Point   
+Check Point   
 公司已在  
- R82.20   
+ R82.20   
 安全热修复方案中修复该漏洞，并表示受影响产品的完整列表包括安全管理服务器、多域安全管理服务器、日志服务器、多域日志服务器和  
- SmartEvent  
+ SmartEvent  
 。  
   
 该公司在安全公告中提到，“该漏洞正遭在野利用，  
-Check Point   
+Check Point   
 已知有少数客户遭到攻击。”该公司同时建议安全团队使用安全公告中共享的入侵指标检查网络，寻找成功利用的证据。  
   
-Check Point   
+Check Point   
 还为无法立即在易受攻击系统上部署热修复程序的客户提供临时缓解措施，包括将易受攻击系统置于防火墙之后，并在  
- SmartConsole   
+ SmartConsole   
 仪表板的  
 “  
 管理  
- &   
+ &   
 设置  
- >   
+ >   
 权限  
- &   
+ &   
 管理员  
- >   
+ >   
 受信任客户端  
 ”  
 中限制只有受信任  
- IP   
+ IP   
 地址可以访问，从而加固这些系统以抵御攻击。  
   
 近几个月，  
-Check Point   
+Check Point   
 还提醒客户注意正遭在野活跃利用的漏洞。两年前，  
-CISA   
+CISA   
 将  
- Check Point Quantum   
+ Check Point Quantum   
 安全网关中的一个漏洞  
- (CVE-2024-24919)   
+ (CVE-2024-24919)   
 标记为已被勒索软件团伙积极利用，并证实了  
- Orange Cyberdefense CERT  
+ Orange Cyberdefense CERT  
 将这些攻击与  
- NailaoLocker   
+ NailaoLocker   
 勒索软件关联起来的一份报告。  
   
-Qilin   
+Qilin   
 勒索软件附属组织自  
- 6   
+ 6   
 月以来还利用了身份验证绕过漏洞  
- (CVE-2026-50751) 0day  
+ (CVE-2026-50751) 0day  
 漏洞，而第二个身份验证绕过  
- 0day   
+ 0day   
 漏洞  
- (CVE-2026-16232)  
+ (CVE-2026-16232)  
 至少自  
- 7   
+ 7   
 月以来一直被利用，以管理员权限对  
- SmartConsole   
+ SmartConsole   
 管理面板进行身份验证。  
   
 两周前，荷兰国家网络安全中心  
- (NCSC-NL)   
+ (NCSC-NL)   
 也提醒各组织机构紧急修复两个严重的  
- Check Point VPN   
+ Check Point VPN   
 漏洞（  
-CVE-2026-85102   
+CVE-2026-85102   
 和  
- CVE-2026-85103  
+ CVE-2026-85103  
 ），因为该中心  
 “  
 预计利用尝试很快就会发生  
@@ -110,15 +110,15 @@ CVE-2026-85102 
 。  
   
 上周五，  
-Check Point   
+Check Point   
 公司发布安全更新，修复安全管理服务器和安全网关登录过程中的另一个严重身份验证绕过漏洞  
- (CVE-2026-16232)  
+ (CVE-2026-16232)  
 ，它可导致攻击者在管理系统上以  
- root   
+ root   
 权限执行代码。  
   
 虽然该公司尚未将  
- CVE-2026-16232   
+ CVE-2026-16232   
 标记为正在遭活跃利用，但认为安全团队可以通过在审计和管理员登录日志中查找  
 “Administrator failed to log in: Username too long  
 （管理员登录失败：用户名太长）  
@@ -182,16 +182,16 @@ e
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
   
   
   
-   
+   
 觉得不错，就点个 “  
 在看  
 ” 或 "  
 赞  
-”   
+”   
   
 
 

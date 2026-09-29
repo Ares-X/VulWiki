@@ -9,10 +9,10 @@ source: "gelusus/wxvl 公众号漏洞文库"
 ![](https://mmbiz.qpic.cn/mmbiz_gif/bL2iaicTYdZn7gtxSFZlfuCW6AdQib8Q1onbR0U2h9icP1eRO6wH0AcyJmqZ7USD0uOYncCYIH7ZEE8IicAOPxyb9IA/640?wx_fmt=gif "")  
   
 这篇文章详细介绍了识别和利用CVE-2024-0402  
-的过程   
+的过程   
 。  
   
-GitLab 中的漏洞已于 2024 年 1 月 25 日通过   
+GitLab 中的漏洞已于 2024 年 1 月 25 日通过   
 关键安全版本  
 修复。  
   
@@ -20,15 +20,15 @@ GitLab 中的漏洞已于 2024 年 1 月 25 日通过 
 ## 起点：依赖关系  
   
 这次冒险从查看主项目  
- 的  
+ 的  
 依赖关系  
 GitLab  
 开始。  
   
-在项目依赖项中寻找一些容易实现的成果时，我   
-注意到devfile   
+在项目依赖项中寻找一些容易实现的成果时，我   
+注意到devfile   
 Gem  
-通过   
+通过   
 使用  
 .调用外部二进制文件对我来说是一个典型的危险信号，有很多事情可能会出现问题。例如，命令或参数注入，或者来自被调用二进制文件的鲜为人知的功能的其他意外。更不用说二进制文件或其依赖项中的实际漏洞了。  
   
@@ -39,14 +39,14 @@ Gem 是
 在 GitLab 内部  
 编写的。对存储库的快速审查揭示了  
 一些基于 Go 的代码  
- ，从中devfile  
+ ，从中devfile  
 创建了 Ruby Gem 调用的二进制文件。  
 此时我对  
 Devfiles  
 还不太了解。  
 我脑子里只有一个模糊的概念：这些是用于描述  
 GitLab 工作区  
- 功能环境的 YAML 文件。  
+ 功能环境的 YAML 文件。  
   
 工作区是基于 Web 的隔离开发环境，由 GitLab 应用程序部署到 Kubernetes 集群中。缩小一点我们有：  
 - Devfiles：用于描述 Kubernetes 环境中工作区的 YAML 文件  
@@ -55,20 +55,20 @@ GitLab 工作区
   
 快速检查  
 调用 Go 二进制文件的 Ruby 代码  
- 表明没有任何意外或容易实现的成果。直接调用二进制文件，不涉及 shell，简单的命令注入是不可能的。此外，Go 二进制文件没有机会进行参数注入。  
+ 表明没有任何意外或容易实现的成果。直接调用二进制文件，不涉及 shell，简单的命令注入是不可能的。此外，Go 二进制文件没有机会进行参数注入。  
 ## 深层挖掘  
   
 有时，开始尝试一个软件来了解潜在的漏洞是件好事。Gem  
 的设计devfile  
 让这一切变得简单。我可以使用包含的基于 Go 的二进制文件并为其提供一些 YAML。深入  
 研究文档  
- 并寻找一些要使用的示例文件，我发现了允许  
+ 并寻找一些要使用的示例文件，我发现了允许  
 指定parent  
- 另一个的功能。devfile  
+ 另一个的功能。devfile  
 然后该文件将用作当前devfile  
 .我将  
 文档  
-中的示例   
+中的示例   
 与devfile  
 Gem 中的二进制文件一起使用，如下所示：  
 ```
@@ -93,7 +93,7 @@ joern@host2:~/projects/deps/ruby/3.2.0/gems/devfile-0.0.25.pre.alpha1-x86_64-lin
 devfile/registry  
 存储库  
 中的目录  
- 已复制到我运行./devfile  
+ 已复制到我运行./devfile  
 命令的工作目录中。就在那时，我想我可能会做一些值得花更多时间的事情。  
 ## 退一步，进三步  
   
@@ -103,7 +103,7 @@ parse a devfile
   
 因此，我更深入地研究了  
 GitLab 的主要 Ruby on Rails 代码库  
-，只是为了发现有一个验证可以防止 parent  
+，只是为了发现有一个验证可以防止 parent  
 在devfile  
 .这真的很不方便，我几乎看到  
 那行代码  
@@ -116,7 +116,7 @@ return err(_("Inheriting from 'parent' is not yet supported")) if devfile['paren
 Jake Miller  
 一篇 关于 JSON 解析器中解析器差异的博客文章的启发，因为 JSON 和 YAML 在它们的用例中有些相似，但 YAML 更复杂一些，我认为从解析器差异的角度来看 YAML 可能是值得的。  
 当时  
- 我能够制作一个 YAML 文件，该文件在 Ruby 和 Python 中的解析方式不同。然而，它在 Ruby 和 Go 中解析相同的内容，所以我“只是”需要在 Go 和 Ruby 中找到类似的解析器差异。我们首先看一下针对 Ruby/Go 与 Python 的初始 YAML 文件：  
+ 我能够制作一个 YAML 文件，该文件在 Ruby 和 Python 中的解析方式不同。然而，它在 Ruby 和 Go 中解析相同的内容，所以我“只是”需要在 Go 和 Ruby 中找到类似的解析器差异。我们首先看一下针对 Ruby/Go 与 Python 的初始 YAML 文件：  
 ```
 joern@host2:~/projects/devfile$ cat 1.yaml 
 test: python
@@ -161,7 +161,7 @@ test: ruby & go
 ```  
   
 这里非常简单的“秘密武器”是使用符号!!binary  
- 来引入 Base64 编码密钥：  
+ 来引入 Base64 编码密钥：  
 ```
 test: python
 !!binary dGVzdA==: ruby & go
@@ -169,7 +169,7 @@ test: python
   
 解码后  
 变为  
-Base64 ( !!binary  
+Base64 ( !!binary  
 ) 字符串。  
 在 Ruby 和 Go 中，这将覆盖之前定义的  
 值。但在 Python 中会发生以下情况：dGVzdA==  
@@ -184,7 +184,7 @@ python -c 'import yaml;y = yaml.safe_load(open("1.yaml"));print(y)'
 符号将  
 在 Python 中创建一个与字符串不同的  
 Binary Sequence  
- ( )   
+ ( )   
 。因此，我们将有两个键，  
 而  
 不是像 Ruby 和 Go 中那样一个键覆盖另一个键。b'test'  
@@ -197,7 +197,7 @@ b'test'
   
 我花了一些时间阅读  
 YAML 中的标签  
- ，并注意到了这一行Local tags start with “!”  
+ ，并注意到了这一行Local tags start with “!”  
 。好吧，然后我想，让我们尝试看看当我使用!binary  
 而不是时会发生什么!!binary  
 ：  
@@ -230,7 +230,7 @@ joern@host2:~/projects/devfile$ ruby -ryaml -e 'x = YAML.safe_load(File.read("wh
   
 该!binary  
 值已被解码为二进制密钥"\xA5\xAA\xDE\x9E"  
-，现在，   
+，现在，   
 Go 解析器的  
 鼓声：  
 ```
@@ -249,7 +249,7 @@ Devfile YAML 中密钥
 现在我们已经能够parent  
 通过 Ruby 偷偷摸摸地进入 Go 代码了，现在是时候深入研究 devfile 库以及我之前注意到的向工作目录写入奇怪的文件行为了。  
   
-首先，我想知道 devfile  
+首先，我想知道 devfile  
 在 GitLab 实例上调用 Gem 中的二进制文件时工作目录在哪里。我希望从利用的角度来看它会是一些有用的目录。  
   
 为了找到这一点，我查看了  
@@ -258,7 +258,7 @@ Devfile YAML 中密钥
 .  
   
 这两部分就位后，我们可以将minkube  
-具有   
+具有   
 GitLab 代理  
 的集群连接到 GitLab 实例上的组中的项目。在同一组的另一个中，我们可以创建一个.devfile.yaml  
 包含以下内容的：  
@@ -297,11 +297,11 @@ parent
 很快就确定了解析 Devfile 中密钥  
 的主要逻辑。  
 它开始于parseParentAndPlugin()  
-.该函数的名称已经表明了另一个与 类似的功能 parent  
+.该函数的名称已经表明了另一个与 类似的功能 parent  
 ，即plugin  
 .由于这两个功能，parent  
 并且在 switch 语句 for  
- 和 forplugin  
+ 和 forplugin  
 中具有几乎相同的底层逻辑  
 ：plugin  
 parent  
@@ -319,10 +319,10 @@ default:
 ```  
   
 我更深入地研究了这些parseFrom*  
-方法。起初我查看了 parseFromURI  
+方法。起初我查看了 parseFromURI  
 ，我认为从中下载 Devfile 的 URI 应该很容易。令人惊讶的是，事情并没有那么容易。该parseFromURI  
 函数  
- 涉及很多有关本地和远程 URL 的逻辑。引起我注意的  
+ 涉及很多有关本地和远程 URL 的逻辑。引起我注意的  
 是  
 ：  
 ```
@@ -349,7 +349,7 @@ if tool.downloadGitResources {
 、github.com  
 或  
 Devfile 库之一的简单 URL 会发挥其魔力，并尝试  
- 相应的存储库来获取引用的文件。raw.githubusercontent.com  
+ 相应的存储库来获取引用的文件。raw.githubusercontent.com  
 bitbucket.org  
 git clone  
   
@@ -421,16 +421,16 @@ func IsGitProviderRepo(url string) bool {
   
 因此，我没有深入研究go-git  
 这里的路径，而是使用存储库中的符号链接执行了一些简单的检查，看看这是否会给我带来任何进一步的帮助。事实并非如此，所以接下来我开始研究parseFromRegistry  
-。Devfiles 的注册表 基于开放容器计划 (OCI) 规范，其行为与 Docker 注册表非常相似。  
+。Devfiles 的注册表 基于开放容器计划 (OCI) 规范，其行为与 Docker 注册表非常相似。  
   
 parseFromRegistry  
 当我面临依赖的另一个依赖时，投入迅速升级。parseFromRegistry  
 调用getResourcesFromRegistry  
- 本身就把繁重的工作留给 了registryLibrary  
-.这个库也是 registry-support  
-由 Devfile 项目开发的，我决定看一下它。遵循代码流程后，我到达了该 PullStackFromRegistry  
- 函数，该函数调用该decompress  
- 函数，该函数tar.gz  
+ 本身就把繁重的工作留给 了registryLibrary  
+.这个库也是 registry-support  
+由 Devfile 项目开发的，我决定看一下它。遵循代码流程后，我到达了该 PullStackFromRegistry  
+ 函数，该函数调用该decompress  
+ 函数，该函数tar.gz  
 从注册表库中获取存档并提取该存档内的文件。让我们看一下这个decompress  
 函数：  
 ```
@@ -487,8 +487,8 @@ target := path.Join(targetDir, filepath.Clean(header.Name))
 w, err := os.OpenFile(target, os.O_CREATE|os.O_RDWR, os.FileMode(header.Mode))
 ```  
   
-gosec规则304 , File path provided as taint input  
-, 已在此发出警报，开发人员已指示 gosec 扫描仪忽略该发现。该注释甚至为我们提供了这样做的原因： target is produced using path.Join which cleans the dir path  
+gosec规则304 , File path provided as taint input  
+, 已在此发出警报，开发人员已指示 gosec 扫描仪忽略该发现。该注释甚至为我们提供了这样做的原因： target is produced using path.Join which cleans the dir path  
 ，它引用了如何filepath.Clean(header.Name)  
 在代码流的早期使用。  
   
@@ -545,7 +545,7 @@ SAST 扫描仪这一次是正确的。路径遍历并未被阻止filepath.Clean
 在我内部报告基于注册表解析器的文件写入问题几天后，  
 go-git 漏洞（  
 CVE-2023-49569  
- ）就被披露了。该漏洞与解析器差异结合使用可能是另一种将文件写入不属于的地方的方法。这里的信息有两个方面：虽然可能不可能找到所有错误，但在足够大的代码库中通常有足够的错误来实现您的目标。;)  
+ ）就被披露了。该漏洞与解析器差异结合使用可能是另一种将文件写入不属于的地方的方法。这里的信息有两个方面：虽然可能不可能找到所有错误，但在足够大的代码库中通常有足够的错误来实现您的目标。;)  
 ### 大家继续挖掘  
   
 最后，我想强调的是，为了找到漏洞，总是值得深入研究源代码、阅读它并尝试理解它的开发假设。真正困难的部分是“知道”在哪里寻找以及何时停止寻找。  

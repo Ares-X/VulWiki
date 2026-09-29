@@ -71,7 +71,7 @@ variable=1&tpl=<?php phpinfo(); ob_flush();?>/r/n<qscms/company_show 列表名="
 
 我们来 POST 一下看看
 
- 可以看到返回了错误，日志已经记录了
+ 可以看到返回了错误，日志已经记录了
 
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/wQuKRAE0ouMUia0v5ARmBm1jiaX9h7sjGicrxOfnV3cBe7QicQ22G0T0nATsXkI39odfFWhH7uCmI82M69G7UVftEg/640?wx_fmt=png)
 
@@ -91,7 +91,7 @@ variable=1&tpl=<?php phpinfo(); ob_flush();?>/r/n<qscms/company_show 列表名="
 POST 参数：
 
 ```
-日志路径: \upload\data\Runtime\Logs\Home
+日志路径: \upload\data\Runtime\Logs\Home
 ```
 
 我们来 POST 一下看看

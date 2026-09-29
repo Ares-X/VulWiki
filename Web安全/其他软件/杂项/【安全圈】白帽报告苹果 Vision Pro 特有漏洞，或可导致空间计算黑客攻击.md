@@ -35,7 +35,7 @@ Ravichandran在 X上发布帖子指出，这是世界上第一个针对 Vision P
   
 苹果公司强烈警告用户不要安装任何修改 visionOS 的软件，且由于未经授权修改 visionOS 违反了 visionOS 软件许可协议，因此可能会导致 Apple Vision Pro拒绝提供服务。苹果警告说，黑客攻击耳机可能导致iCloud、FaceTime和Apple Pay等服务中断，而使用推送通知的第三方应用程序也可能受到影响。  
   
-   END    
+   END    
   
   
 阅读推荐  

@@ -181,7 +181,7 @@ Fofa:
 文件服务器管理登录页面：
 
 ```
- http://x.x.x.x/fs/
+ http://x.x.x.x/fs/
 ```
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/h8P1KUHOKuYRKD1CKhhNVWGuqLwF0leeA9e3cC8VX1c7ibibYpyX3EnttYJHRf5shXiaBdv8ISibzM7vkw9kZg7uWQ/640?wx_fmt=png)
@@ -434,11 +434,11 @@ POC:
 
 **关注福利：**  
 
-**回复 “****app****" 获取  app 渗透和 app 抓包教程**
+**回复 “****app****" 获取  app 渗透和 app 抓包教程**
 
 **回复 “****渗透字典** **" 获取 针对一些字典重新划分处理，收集了几个密码管理字典生成器用来扩展更多字典的仓库。**
 
-**回复 “****书籍** **" 获取 网络安全相关经典书籍电子版 pdf**
+**回复 “****书籍** **" 获取 网络安全相关经典书籍电子版 pdf**
 
 往期文章：
 

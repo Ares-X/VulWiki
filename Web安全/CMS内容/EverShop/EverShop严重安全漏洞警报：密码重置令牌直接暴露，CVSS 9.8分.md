@@ -24,7 +24,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
 ：GHSA-cg73-g723-39jw****  
   
 **披露时间**  
-：2026年2月26日      **CVSS评分**  
+：2026年2月26日      **CVSS评分**  
 ：9.8（严重）****  
   
 **漏洞类型**  
@@ -54,7 +54,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
   
 当用户请求密码重置时，服务器的API响应居然直接包含了重置令牌：  
 ```
-POST /api/forgotPassword{  "email": "victim@example.com"}响应：{  "success": true,  "message": "Password reset email sent",  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."}
+POST /api/forgotPassword{  "email": "victim@example.com"}响应：{  "success": true,  "message": "Password reset email sent",  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."}
 ```  
   
 这意味着，攻击者只需要：  
@@ -83,7 +83,7 @@ POST /api/forgotPassword{  "email": "victim@example.com"}响应：{  "succe
   
 攻击者可以编写简单的自动化脚本，对大量用户发起密码重置请求：  
 ```
-for email in user_email_list:    response = requests.post(        "https://target-shop.com/api/forgotPassword",        json={"email": email}    )    token = response.json()["token"]    reset_password(token, "hacker_password")
+for email in user_email_list:    response = requests.post(        "https://target-shop.com/api/forgotPassword",        json={"email": email}    )    token = response.json()["token"]    reset_password(token, "hacker_password")
 ```  
   
 几分钟内即可劫持数百个账户。  
@@ -174,7 +174,7 @@ for email in user_email_list:    response = requests.post(        "htt
   
 如果你正在使用EverShop，立即检查版本：  
 ```
-cd /your-evershop-directorynpm list @evershop/evershop
+cd /your-evershop-directorynpm list @evershop/evershop
 ```  
   
 如果显示版本 < 2.1.1，则**受影响**  
@@ -184,7 +184,7 @@ cd /your-evershop-directorynpm list @evershop/evershop
 在**测试环境**  
 中执行以下测试（切勿在未授权系统上测试）：  
 ```
-curl -X POST https://your-shop.com/api/forgotPassword \  -H "Content-Type: application/json" \  -d '{"email":"test@example.com"}' | jq .
+curl -X POST https://your-shop.com/api/forgotPassword \  -H "Content-Type: application/json" \  -d '{"email":"test@example.com"}' | jq .
 ```  
   
 如果响应中包含token  
@@ -224,7 +224,7 @@ pm2 restart evershop# 或systemctl restart evershop
 1. **验证修复**  
   
 ```
-curl -X POST https://your-shop.com/api/forgotPassword \  -H "Content-Type: application/json" \  -d '{"email":"test@example.com"}' | jq .
+curl -X POST https://your-shop.com/api/forgotPassword \  -H "Content-Type: application/json" \  -d '{"email":"test@example.com"}' | jq .
 ```  
   
 确认响应中**不包含**token  
@@ -237,7 +237,7 @@ curl -X POST https://your-shop.com/api/forgotPassword \  -H "Content-Type: app
   
 在Nginx中配置：  
 ```
-location /api/forgotPassword {    # 限制请求频率    limit_req zone=password_reset burst=5;    # 过滤响应中的token    body_filter_by_lua_block {        local body = ngx.arg[1]        if body then            body = string.gsub(body, '"token":"[^"]*",?', '')            ngx.arg[1] = body        end    }    proxy_pass http://backend;}
+location /api/forgotPassword {    # 限制请求频率    limit_req zone=password_reset burst=5;    # 过滤响应中的token    body_filter_by_lua_block {        local body = ngx.arg[1]        if body then            body = string.gsub(body, '"token":"[^"]*",?', '')            ngx.arg[1] = body        end    }    proxy_pass http://backend;}
 ```  
   
 **2. 添加CAPTCHA验证**  
@@ -248,7 +248,7 @@ location /api/forgotPassword {    # 限制请求频率    limit_req zone=pas
   
 使用fail2ban或iptables限制单个IP的请求频率：  
 ```
-# 每个IP每分钟最多5次请求iptables -A INPUT -p tcp --dport 3000 -m string \  --string "POST /api/forgotPassword" --algo bm \  -m hashlimit --hashlimit-above 5/min \  --hashlimit-mode srcip -j DROP
+# 每个IP每分钟最多5次请求iptables -A INPUT -p tcp --dport 3000 -m string \  --string "POST /api/forgotPassword" --algo bm \  -m hashlimit --hashlimit-above 5/min \  --hashlimit-mode srcip -j DROP
 ```  
   
 **4. 增强监控**  
@@ -266,19 +266,19 @@ location /api/forgotPassword {    # 限制请求频率    limit_req zone=pas
 **反模式**  
 （错误做法）：  
 ```
-return response.json({  success: true,  token: resetToken,  // 危险！  userId: user.id     // 危险！});
+return response.json({  success: true,  token: resetToken,  // 危险！  userId: user.id     // 危险！});
 ```  
   
 **正确做法**  
 ：  
 ```
-return response.json({  success: true,  message: "If an account exists, an email has been sent"  // 不返回任何敏感信息});
+return response.json({  success: true,  message: "If an account exists, an email has been sent"  // 不返回任何敏感信息});
 ```  
 ### 2. 实施响应数据白名单  
   
 不要直接序列化内部对象，而是明确指定可返回的字段：  
 ```
-// 错误：直接返回对象return response.json(internalObject);// 正确：白名单机制const safeResponse = {  success: internalObject.success,  message: internalObject.message};return response.json(safeResponse);
+// 错误：直接返回对象return response.json(internalObject);// 正确：白名单机制const safeResponse = {  success: internalObject.success,  message: internalObject.message};return response.json(safeResponse);
 ```  
 ### 3. 安全代码审查清单  
   
@@ -354,7 +354,7 @@ npm sbom --package-lock-only > sbom.json
   
 使用Dependabot或Renovate自动创建更新PR：  
 ```
-# .github/dependabot.ymlversion: 2updates:  - package-ecosystem: npm    directory: "/"    schedule:      interval: daily    open-pull-requests-limit: 10
+# .github/dependabot.ymlversion: 2updates:  - package-ecosystem: npm    directory: "/"    schedule:      interval: daily    open-pull-requests-limit: 10
 ```  
   
 **4. 补丁管理SLA**  
@@ -376,7 +376,7 @@ npm sbom --package-lock-only > sbom.json
 1. **密码重置日志**  
   
 ```
-grep "forgotPassword" /var/log/evershop/access.log | \  awk '{print $1}' | sort | uniq -c | sort -rn
+grep "forgotPassword" /var/log/evershop/access.log | \  awk '{print $1}' | sort | uniq -c | sort -rn
 ```  
 1. **异常登录活动**  
   
@@ -398,7 +398,7 @@ grep "forgotPassword" /var/log/evershop/access.log | \  awk '{print $1}' | 
 1. 暂时禁用密码重置功能  
   
 ```
-location /api/forgotPassword {    return 503 "Service temporarily unavailable";}
+location /api/forgotPassword {    return 503 "Service temporarily unavailable";}
 ```  
 1. 强制所有用户下次登录时修改密码  
   

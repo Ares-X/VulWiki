@@ -17,7 +17,7 @@ Citrix SD-WAN 有可用的软件、虚拟或硬件设备版本。企业通过使
 Citrix SD-WAN 安全功能
 ------------------
 
-该产品附带的 Citrix 防火墙达到他们公司防火墙硬件标准，同时也已经通过了 ICSA 实验室的认证。根据 ICSA 的一份报告，Citrix SD-WAN 410 设备起初因为防火墙没有为记录的事件提供足够的信息。 最初未能满足 set 安全性和功能性要求。但后来的版本通过固件升级把两个问题都解决了。
+该产品附带的 Citrix 防火墙达到他们公司防火墙硬件标准，同时也已经通过了 ICSA 实验室的认证。根据 ICSA 的一份报告，Citrix SD-WAN 410 设备起初因为防火墙没有为记录的事件提供足够的信息。 最初未能满足 set 安全性和功能性要求。但后来的版本通过固件升级把两个问题都解决了。
 
 通过 Citrix 的合作伙伴（如 Palo Alto Networks 或 Zscaler）合作，Citrix SD-WAN 编排服务可以在分支站点和基于公共云的安全网关之间创建 IPsec 隧道。提供针对高级威胁保护和威胁情报的优质服务。
 
@@ -27,7 +27,7 @@ Citrix SD-WAN 安全功能
 
 2 影响范围
 
-**影响范围** : Citrix SD-WAN 11.2 before 11.2.2
+**影响范围** : Citrix SD-WAN 11.2 before 11.2.2
 
 Citrix SD-WAN 11.1 before 11.1.2b
 
@@ -37,7 +37,7 @@ Citrix SD-WAN 10.2 before 10.2.8
 
 使用福林表哥提供的脚本 脚本暂时不予提供 各位师傅可以去 github 找找  
 
-python url 'whoami'  
+python url 'whoami'  
 
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/7XAvvlbibo1QLSJeewYic79537eaQABI0iaibk3jUibKfNFwqqawhOgn0QlQtnXakC3IvBhkmkbdtxxU0ROtiatDJ7GA/640?wx_fmt=jpeg)
 
@@ -49,9 +49,9 @@ https://support.citrix.com/article/CTX285061=
 
 澄清说明
 
-阿乐你好公众号一直与零组团队一起战斗 这个复现其实昨天都搞好了 因为这个憨批让我 tm 没心情发了  造谣一张嘴 辟谣跑断腿
+阿乐你好公众号一直与零组团队一起战斗 这个复现其实昨天都搞好了 因为这个憨批让我 tm 没心情发了  造谣一张嘴 辟谣跑断腿
 
-暂时没有盈利例如公众号接一些广告 知识星球 昨天就出了一个神人 喷我公众号接盈利性广告  还有 2 个啥都不知道就就在那跟风 既然说从我公众号进来的 
+暂时没有盈利例如公众号接一些广告 知识星球 昨天就出了一个神人 喷我公众号接盈利性广告  还有 2 个啥都不知道就就在那跟风 既然说从我公众号进来的 
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/7XAvvlbibo1QLSJeewYic79537eaQABI0iagPZMRCLlibZPqRPEkFXd0D1eQvZic8b8qq73IEmFOXWJuq5ykdrtCL6g/640?wx_fmt=png)
 

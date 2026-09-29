@@ -51,130 +51,130 @@ source: "MrWQ/vulnerability-paper"
 同样实现于`libcms_cli` 我们具体分析一下这个函数  
 
 ```
-int __fastcall cmsCli_authenticate(int a1, int a2)  
+int __fastcall cmsCli_authenticate(int a1, int a2)  
 {  
-  int v3; // r0  
-  int String; // r4  
-  int v5; // r0  
-  int CurrentLoginCfg; // r0  
-  int result; // r0  
-  int v8; // r9  
-  int v9; // r4  
-  int v10; // r3  
-  int v11; // r1  
-  char *v12; // r0  
-  size_t v13; // r0  
-  int v14; // r0  
-  char v15; // r3  
-  char *s; // [sp+1Ch] [bp-8h]  
-  int v18; // [sp+20h] [bp-4h] BYREF  
-  int v19[7]; // [sp+24h] [bp+0h] BYREF  
-  char v20[256]; // [sp+40h] [bp+1Ch] BYREF  
-  char dest[256]; // [sp+140h] [bp+11Ch] BYREF  
+  int v3; // r0  
+  int String; // r4  
+  int v5; // r0  
+  int CurrentLoginCfg; // r0  
+  int result; // r0  
+  int v8; // r9  
+  int v9; // r4  
+  int v10; // r3  
+  int v11; // r1  
+  char *v12; // r0  
+  size_t v13; // r0  
+  int v14; // r0  
+  char v15; // r3  
+  char *s; // [sp+1Ch] [bp-8h]  
+  int v18; // [sp+20h] [bp-4h] BYREF  
+  int v19[7]; // [sp+24h] [bp+0h] BYREF  
+  char v20[256]; // [sp+40h] [bp+1Ch] BYREF  
+  char dest[256]; // [sp+140h] [bp+11Ch] BYREF  
   
-  memset(v19, 0, sizeof(v19));  
-  v18 = 0;  
-  exitOnIdleTimeout = a2;  
-  v3 = cmsLck_acquireLockWithTimeoutTraced("cmsCli_authenticate", 6000);  
-  String = v3;  
-  if ( v3 )  
-  {  
-    v5 = log_log(3, "cmsCli_authenticate", 118, "failed to get lock, ret=%d", v3);  
+  memset(v19, 0, sizeof(v19));  
+  v18 = 0;  
+  exitOnIdleTimeout = a2;  
+  v3 = cmsLck_acquireLockWithTimeoutTraced("cmsCli_authenticate", 6000);  
+  String = v3;  
+  if ( v3 )  
+  {  
+    v5 = log_log(3, "cmsCli_authenticate", 118, "failed to get lock, ret=%d", v3);  
 LABEL_20:  
-    cmsLck_dumpInfo(v5);  
-    return String;  
-  }  
-  CurrentLoginCfg = cmsDal_getCurrentLoginCfg(&glbWebVar);  
-  String = CurrentLoginCfg;  
-  if ( CurrentLoginCfg )  
-  {  
-    log_log(3, "cmsCli_authenticate", 125, "failed to get login info, ret=%d", CurrentLoginCfg);  
-    return String;  
-  }  
-  cmsLck_releaseLockTraced("cmsCli_authenticate");  
-  if ( a1 != 3 || (result = j_cli_readString((int)v20, 0x100u)) == 0 )  
-  {  
-    v8 = 0;  
-    while ( 1 )  
-    {  
-      v20[0] = 0;  
-      dest[0] = 0;  
-      printf("Login: ");  
-      fflush((FILE *)stdout);  
-      String = j_cli_readString((int)v20, 0x100u);  
-      if ( String )  
-        return String;  
-      v12 = getpass("Password: ");  
-      if ( v12 )  
-      {  
-        s = v12;  
-        strcpy(dest, v12);  
-        v13 = strlen(s);  
-        memset(s, 0, v13);  
-      }  
-      v14 = cmsLck_acquireLockWithTimeoutTraced("cmsCli_authenticate", 6000);  
-      ++v8;  
-      String = v14;  
-      if ( v14 )  
-      {  
-        v5 = log_log(3, "cmsCli_authenticate", 191, "failed to get lock, ret=%d", v14);  
-        goto LABEL_20;  
-      }  
-      v9 = cmsDal_authenticate((int)&v18, a1, (int)v20, (int)dest);  
-      cmsLck_releaseLockTraced("cmsCli_authenticate");  
-      v19[4] = (int)v20;  
-      v19[2] = (int)&currAppName;  
-      v10 = v19[6];  
-      v19[6] |= 0x28u;  
-      if ( currAppPort )  
-      {  
-        v19[1] = (unsigned __int16)currAppPort;  
-        v19[6] = v10 | 0x2E;  
-        v19[3] = (int)&currIpAddr;  
-      }  
-      if ( v9 == 1 )  
-        break;  
-      if ( v8 <= 2 )  
-      {  
-        cmsLog_security(4, v19, 0);  
-        puts("Login incorrect. Try again.");  
-        fflush((FILE *)stdout);  
-      }  
-      else  
-      {  
-        v11 = v8;  
-        v8 = 0;  
-        printf("Authorization failed after trying %d times!!!.\n", v11);  
-        fflush((FILE *)stdout);  
-        cmsLog_security(6, v19, 0);  
-        sleep(3u);  
-        cmsLog_security(7, v19, 0);  
-      }  
-    }  
-    cmsLog_security(3, v19, 0);  
-    cmsUtl_strncpy(currUser, v20, 64);  
-    if ( !strcmp(currUser, byte_2D9D0) )  
-    {  
-      v15 = 0x80;  
-    }  
-    else  
-    {  
-      if ( strcmp(currUser, &byte_2D9D0[64]) )  
-      {  
-        if ( !strcmp(currUser, &byte_2D9D0[128]) )  
-          currPerm = 1;  
-        else  
-          log_log(3, "cmsCli_authenticate", 226, "unrecognized user %s, unable to set permission", currUser);  
-        goto LABEL_30;  
-      }  
-      v15 = 64;  
-    }  
-    currPerm = v15;  
+    cmsLck_dumpInfo(v5);  
+    return String;  
+  }  
+  CurrentLoginCfg = cmsDal_getCurrentLoginCfg(&glbWebVar);  
+  String = CurrentLoginCfg;  
+  if ( CurrentLoginCfg )  
+  {  
+    log_log(3, "cmsCli_authenticate", 125, "failed to get login info, ret=%d", CurrentLoginCfg);  
+    return String;  
+  }  
+  cmsLck_releaseLockTraced("cmsCli_authenticate");  
+  if ( a1 != 3 || (result = j_cli_readString((int)v20, 0x100u)) == 0 )  
+  {  
+    v8 = 0;  
+    while ( 1 )  
+    {  
+      v20[0] = 0;  
+      dest[0] = 0;  
+      printf("Login: ");  
+      fflush((FILE *)stdout);  
+      String = j_cli_readString((int)v20, 0x100u);  
+      if ( String )  
+        return String;  
+      v12 = getpass("Password: ");  
+      if ( v12 )  
+      {  
+        s = v12;  
+        strcpy(dest, v12);  
+        v13 = strlen(s);  
+        memset(s, 0, v13);  
+      }  
+      v14 = cmsLck_acquireLockWithTimeoutTraced("cmsCli_authenticate", 6000);  
+      ++v8;  
+      String = v14;  
+      if ( v14 )  
+      {  
+        v5 = log_log(3, "cmsCli_authenticate", 191, "failed to get lock, ret=%d", v14);  
+        goto LABEL_20;  
+      }  
+      v9 = cmsDal_authenticate((int)&v18, a1, (int)v20, (int)dest);  
+      cmsLck_releaseLockTraced("cmsCli_authenticate");  
+      v19[4] = (int)v20;  
+      v19[2] = (int)&currAppName;  
+      v10 = v19[6];  
+      v19[6] |= 0x28u;  
+      if ( currAppPort )  
+      {  
+        v19[1] = (unsigned __int16)currAppPort;  
+        v19[6] = v10 | 0x2E;  
+        v19[3] = (int)&currIpAddr;  
+      }  
+      if ( v9 == 1 )  
+        break;  
+      if ( v8 <= 2 )  
+      {  
+        cmsLog_security(4, v19, 0);  
+        puts("Login incorrect. Try again.");  
+        fflush((FILE *)stdout);  
+      }  
+      else  
+      {  
+        v11 = v8;  
+        v8 = 0;  
+        printf("Authorization failed after trying %d times!!!.\n", v11);  
+        fflush((FILE *)stdout);  
+        cmsLog_security(6, v19, 0);  
+        sleep(3u);  
+        cmsLog_security(7, v19, 0);  
+      }  
+    }  
+    cmsLog_security(3, v19, 0);  
+    cmsUtl_strncpy(currUser, v20, 64);  
+    if ( !strcmp(currUser, byte_2D9D0) )  
+    {  
+      v15 = 0x80;  
+    }  
+    else  
+    {  
+      if ( strcmp(currUser, &byte_2D9D0[64]) )  
+      {  
+        if ( !strcmp(currUser, &byte_2D9D0[128]) )  
+          currPerm = 1;  
+        else  
+          log_log(3, "cmsCli_authenticate", 226, "unrecognized user %s, unable to set permission", currUser);  
+        goto LABEL_30;  
+      }  
+      v15 = 64;  
+    }  
+    currPerm = v15;  
 LABEL_30:  
-    log_log(7, "cmsCli_authenticate", 244, "current logged in user %s perm=0x%x", currUser, (unsigned __int8)currPerm);  
-    return 0;  
-  }  
-  return result;  
+    log_log(7, "cmsCli_authenticate", 244, "current logged in user %s perm=0x%x", currUser, (unsigned __int8)currPerm);  
+    return 0;  
+  }  
+  return result;  
 }  
 
 ```
@@ -210,10 +210,10 @@ LABEL_30:
 对于AX18系列设备，Telnet的认证流程如下：
 
 ```
-tphttpd: goform/telnet  
-telnetd: cmsCli_printWelcomeBanner -> cmsCli_authenticate  
-libcms_cli.so: cmsCli_authenticate-> cmsDal_authenticate  
-libcms_dal.so: cmsDal_authenticate()  
+tphttpd: goform/telnet  
+telnetd: cmsCli_printWelcomeBanner -> cmsCli_authenticate  
+libcms_cli.so: cmsCli_authenticate-> cmsDal_authenticate  
+libcms_dal.so: cmsDal_authenticate()  
 
 ```
 
@@ -227,9 +227,9 @@ end
 
 招新小广告
 
-ChaMd5 Venom 招收大佬入圈
+ChaMd5 Venom 招收大佬入圈
 
-新成立组IOT+工控+样本分析 长期招新  
+新成立组IOT+工控+样本分析 长期招新  
 
 欢迎联系admin@chamd5.org
 

@@ -9,7 +9,7 @@ source: "MrWQ/vulnerability-paper"
 
   
 
-网安引领时代，弥天点亮未来   
+网安引领时代，弥天点亮未来   
 
   
 
@@ -61,7 +61,7 @@ Weaver E-Office 9.5 版本
 
 2. 对漏洞进行复现
 
- **Poc （POST）**
+ **Poc （POST）**
 
  **路径 1 /webservice/upload/upload.php**
 
@@ -90,7 +90,7 @@ POST 请求，响应存在漏洞
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hCr0Z5PWtibbNSRyRjDXywzyH2vszOpIIzLWnWBDO3LBia8nKuD5fpT88AgXPtS23bibXnCxibggOCNXg/640?wx_fmt=png)
 
-        解析 php 文件 
+        解析 php 文件 
 
 ```
 http://10.211.55.3:8082/attachment/870392248/pufh.php4
@@ -119,7 +119,7 @@ Content-Type: application/octet-stream
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hCr0Z5PWtibbNSRyRjDXywzyTXAvqMFNtFEJHaEXFV7nvib3yj6iaLQwYnX07Kia7x7eXAoKVux7rc3Ag/640?wx_fmt=png)
 
-解析解 php 文件 
+解析解 php 文件 
 
 ```
 http://10.211.55.3:8082/attachment/2085157518/pufh.php4
@@ -162,7 +162,7 @@ https://wy.zone.ci/bug_detail.php?wybug_id=wooyun-2015-0125592
 
 口号 网安引领时代，弥天点亮未来
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/b96CibCt70iaaqjXT4YxgHVARD1NNv0RvKtiaAvXhmruVqgavPY3stwrfvLKetGycKUfxIq3Xc6F6dhU7eb4oh2gg/640?wx_fmt=gif&wxfrom=5&wx_lazy=1) 
+![](https://mmbiz.qpic.cn/mmbiz_gif/b96CibCt70iaaqjXT4YxgHVARD1NNv0RvKtiaAvXhmruVqgavPY3stwrfvLKetGycKUfxIq3Xc6F6dhU7eb4oh2gg/640?wx_fmt=gif&wxfrom=5&wx_lazy=1) 
 
 知识分享完了
 
@@ -174,7 +174,7 @@ https://wy.zone.ci/bug_detail.php?wybug_id=wooyun-2015-0125592
 
 必降弥天之润！
 
-   弥  天
+   弥  天
 
 安全实验室  
 

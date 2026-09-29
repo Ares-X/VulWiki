@@ -19,7 +19,7 @@ Android的多用户机制是指系统支持在同一台设备上创建多个用�
   
   
   
-2.1   
+2.1   
 基本类型  
   
 Android系统定义了多种用户类型：  
@@ -40,7 +40,7 @@ Android系统定义了多种用户类型：
   
 - 普通三方应用无法通过Intent、ContentProvider 等越权访问其他用户的数据或服务。  
   
-## 2.2 保护机制  
+## 2.2 保护机制  
   
 Android系统实施了多种保护机制以防止跨用户的非法资源访问。在Android中，URI的访问权限是由ContentProvider统一管理和控制的。当用户A的应用携带特定URI发起某个动作请求时，系统组件会通过调用链进入queryContentProviders方法来验证该URI的访问权限。  
   
@@ -84,10 +84,10 @@ deskclock apk
 AOSP  
 通用铃声系统应用，供应用进行拓展铃声自定义设置。  
 ```
-<activity-alias android:name="com.android.deskclock.HandleSetAlarmApiCalls" android:permission="com.android.alarm.permission.SET_ALARM" android:exported="true" android:targetActivity="com.android.deskclock.HandleApiCalls">
+<activity-alias android:name="com.android.deskclock.HandleSetAlarmApiCalls" android:permission="com.android.alarm.permission.SET_ALARM" android:exported="true" android:targetActivity="com.android.deskclock.HandleApiCalls">
 <intent-filter>
-<action android:name="android.intent.action.SET_ALARM" />
-<action android:name="android.intent.action.SET_TIMER" />
+<action android:name="android.intent.action.SET_ALARM" />
+<action android:name="android.intent.action.SET_TIMER" />
 ```  
   
   
@@ -97,9 +97,9 @@ HandleSetAlarmApiCalls/HandleSetAlarm.onCreate
   
 └──> handleSetAlarm(intent)  
   
- └──> updateAlarmFromIntent(intent, alarm)  
+ └──> updateAlarmFromIntent(intent, alarm)  
   
-  └──>alarm.alert=getAlertFromIntent(intent, alarm.alert)  
+  └──>alarm.alert=getAlertFromIntent(intent, alarm.alert)  
   
 由于  
 getAlertFromIntent  
@@ -179,7 +179,7 @@ Goolge
 月  
 8  
 日  
-    
+    
 Goolge  
 确认漏洞评级以及高危奖励。  
   

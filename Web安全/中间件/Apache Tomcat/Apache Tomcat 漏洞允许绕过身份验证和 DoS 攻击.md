@@ -59,7 +59,7 @@ CVE-2025-49125 漏洞允许攻击者绕过对在 Web 应用程序根目录之外
   
 原文来自: cybersecuritynews.com  
   
-原文链接:   
+原文链接:   
 https://cybersecuritynews.com/apache-tomcat-vulnerabilities/  
   
 欢迎收藏并分享朋友圈，让五邑人网络更安全  

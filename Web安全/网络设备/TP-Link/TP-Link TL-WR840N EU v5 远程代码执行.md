@@ -7,21 +7,21 @@ source: "MrWQ/vulnerability-paper"
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/1WCQ7rpJUmGWFZUigTZ_gA)
 
-型号： TP-Link TL-WR840N EU v5  
-易受攻击的固件版本： TL-WR840N(EU)_V5_171211 / 0.9.1 3.16 v0001.0 Build 171211 Rel.58800n
+型号： TP-Link TL-WR840N EU v5  
+易受攻击的固件版本： TL-WR840N(EU)_V5_171211 / 0.9.1 3.16 v0001.0 Build 171211 Rel.58800n
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/aPmkR80bcV1iaKxLTFVrQOU34xPCeA7A38a672qqh6cC0IqeDXjyfLLGk53GK5WdeXJYMM9tPMD1Fpib2fJw6z8A/640?wx_fmt=png)
 
 通过 UART 轻松 root
 ---------------
 
-        使用 FT232 设备来获取对设备的 root 访问权限，这个控制台在漏洞利用开发过程中非常有用。
+        使用 FT232 设备来获取对设备的 root 访问权限，这个控制台在漏洞利用开发过程中非常有用。
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/aPmkR80bcV1iaKxLTFVrQOU34xPCeA7A3358ZVzym9EyQCc7y5LmX6tcakFkmnI7yXChOf3dhU9zibVCQnrJibibjw/640?wx_fmt=png)
 
 ```
-# check serial port
-screen /dev/tty.usbserial-AB0LR7NH 115200
+# check serial port
+screen /dev/tty.usbserial-AB0LR7NH 115200
 ```
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/aPmkR80bcV1iaKxLTFVrQOU34xPCeA7A3xiaOWK0UUGNtcqmITq2TSJlrmoyRibEayssqibkNibHARnMlCwUpeayJSA/640?wx_fmt=png)
@@ -30,7 +30,7 @@ screen /dev/tty.usbserial-AB0LR7NH 115200
 
 以下屏幕截图包含 GUI 上的相关输入参数，用户提供的输入参数不会在服务器端清理，它用于执行 PING 命令。
 
-注意： WAN 线必须插好，路由器 IP 地址为 192.168.1.1。
+注意： WAN 线必须插好，路由器 IP 地址为 192.168.1.1。
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/aPmkR80bcV1iaKxLTFVrQOU34xPCeA7A3prvykltGQ5HDq4uv7ia0K1W3XCMCFy1RayjRCuLsC9tHXUmedxuWyGA/640?wx_fmt=png)
 

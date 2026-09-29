@@ -22,10 +22,10 @@ prometheus收集所有exporter的指标数据，汇总后通常由grafana去调�
 wget https://github.com/prometheus/prometheus/releases/download/v3.0.0/prometheus-3.0.0.linux-amd64.tar.gz
 ##解压
 tar -zxf prometheus-3.0.0.linux-amd64.tar.gz
-cd prometheus-3.0.0.linux-amd64
-mv prometheus.yml  prometheus.yml_bak
+cd prometheus-3.0.0.linux-amd64
+mv prometheus.yml  prometheus.yml_bak
 ##拷贝生产prometheus.yml到新版目录下
-cp ../prometheus-2.17.1.linux-amd64/prometheus.yml .
+cp ../prometheus-2.17.1.linux-amd64/prometheus.yml .
 ##修改systemctl配置文件
 vim /etc/systemd/system/multi-user.target.wants/prometheus.service
 -----
@@ -37,18 +37,18 @@ After=network.target
 Type=simple
 User=prometheus
 ExecStart=/usr/local/prometheus-3.0.0.linux-amd64/prometheus \
-                   --config.file=/usr/local/prometheus-3.0.0.linux-amd64/prometheus.yml \
-                   --storage.tsdb.path=/usr/local/prometheus-3.0.0.linux-amd64/data \
-                   --web.console.templates=/usr/local/prometheus-3.0.0.linux-amd64/consoles \
-                   --web.console.libraries=/usr/local/prometheus-3.0.0.linux-amd64/console_libraries \
-                   --storage.tsdb.retention.time=90d
+                   --config.file=/usr/local/prometheus-3.0.0.linux-amd64/prometheus.yml \
+                   --storage.tsdb.path=/usr/local/prometheus-3.0.0.linux-amd64/data \
+                   --web.console.templates=/usr/local/prometheus-3.0.0.linux-amd64/consoles \
+                   --web.console.libraries=/usr/local/prometheus-3.0.0.linux-amd64/console_libraries \
+                   --storage.tsdb.retention.time=90d
 Restart=on-failure
 
 [Install]
 WantedBy=multi-user.target
 -----
-cd ..
-chown -R prometheus:prometheus prometheus-3.0.0.linux-amd64
+cd ..
+chown -R prometheus:prometheus prometheus-3.0.0.linux-amd64
 systemctl daemon-reload
 systemctl stop prometheus
 systemctl start prometheus
@@ -72,7 +72,7 @@ systemctl start prometheus
 ## 生成bcrypt哈希值  
 ```
 yum -y install httpd-tools
-htpasswd -nBC 12 ‘’ | tr -d ‘:\n’
+htpasswd -nBC 12 ‘’ | tr -d ‘:\n’
 强烈建议密码写到草稿上，再复制粘贴进去两遍
 
 ```  
@@ -106,12 +106,12 @@ After=network.target
 Type=simple
 User=prometheus
 ExecStart=/usr/local/prometheus-3.0.0.linux-amd64/prometheus \
-                   --config.file=/usr/local/prometheus-3.0.0.linux-amd64/prometheus.yml \
-                   --storage.tsdb.path=/usr/local/prometheus-3.0.0.linux-amd64/data \
-                   --web.console.templates=/usr/local/prometheus-3.0.0.linux-amd64/consoles \
-                   --web.console.libraries=/usr/local/prometheus-3.0.0.linux-amd64/console_libraries \
-                   --storage.tsdb.retention.time=90d \
-                   --web.config.file=/usr/local/prometheus-3.0.0.linux-amd64/web-auth.yml
+                   --config.file=/usr/local/prometheus-3.0.0.linux-amd64/prometheus.yml \
+                   --storage.tsdb.path=/usr/local/prometheus-3.0.0.linux-amd64/data \
+                   --web.console.templates=/usr/local/prometheus-3.0.0.linux-amd64/consoles \
+                   --web.console.libraries=/usr/local/prometheus-3.0.0.linux-amd64/console_libraries \
+                   --storage.tsdb.retention.time=90d \
+                   --web.config.file=/usr/local/prometheus-3.0.0.linux-amd64/web-auth.yml
 Restart=on-failure
 
 [Install]

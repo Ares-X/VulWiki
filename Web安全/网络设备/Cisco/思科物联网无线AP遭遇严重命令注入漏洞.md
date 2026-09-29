@@ -60,19 +60,19 @@ URWB 接入点渠道商没有技术支持能力，请联系 Cisco
   
 截至目前，思科的产品安全事故响应小组（PSIRT）表示，它没有发现任何针对该漏洞的漏洞利用。  
   
-* 本文为闫志坤编译，原文地址：https://www.networkworld.com/article/3600993/cisco-iot-wireless-access-points-hit-by-severe-command-injection-flaw.html                        注：图片均来源于网络，无法联系到版权持有者。如有侵权，请与后台联系，做删除处理。  
+* 本文为闫志坤编译，原文地址：https://www.networkworld.com/article/3600993/cisco-iot-wireless-access-points-hit-by-severe-command-injection-flaw.html                        注：图片均来源于网络，无法联系到版权持有者。如有侵权，请与后台联系，做删除处理。  
   
-— 【 THE END 】—  
+— 【 THE END 】—  
   
 🎉 大家期盼很久的#  
 **数字安全交流群**  
 来了！快来加入我们的粉丝群吧！  
   
-🎁 **多种报告，产业趋势、技术趋势**  
+🎁 **多种报告，产业趋势、技术趋势**  
   
 这里汇聚了行业内的精英，共同探讨最新产业趋势、技术趋势等热门话题。我们还有准备了专属福利，只为回馈最忠实的您！  
   
-👉   
+👉   
 扫码立即加入，精彩不容错过！  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/Y9btpvDIDqqPJv9p5ibKIhJXQjWHJmSlibSdib80Llfp8mlV0ibf7m47jyaVeGoFeorddtIuxS5liafTJRKHeSdLnaQ/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1 "")  

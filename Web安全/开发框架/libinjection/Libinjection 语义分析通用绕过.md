@@ -85,20 +85,20 @@ source: "hatch 补库批 20260928"
         if (slen == 0) {
             return FALSE;
         }
-    ​
+    
         //初始化
         st_clear(current);
         sf->current = current;
-    ​
+    
         if (*pos == 0 && (sf->flags & (FLAG_QUOTE_SINGLE | FLAG_QUOTE_DOUBLE))) {
             *pos = parse_string_core(s, slen, 0, current, flag2delim(sf->flags), 0);
             printf("单引号双引号进入");
             sf->stats_tokens += 1;
             return TRUE;
         }
-    ​
+    
         while (*pos < slen) {
-    ​
+    
             /*
              * get current character
              */
@@ -134,7 +134,7 @@ source: "hatch 补库批 20260928"
         const char *cs = sf->s;
         const size_t slen = sf->slen;
         size_t pos = sf->pos;
-    ​
+    
         if (pos + 2 < slen && cs[pos + 1] == '-' && char_is_white(cs[pos+2]) ) {
             return parse_eol_comment(sf);
         } else if (pos +2 == slen && cs[pos + 1] == '-') {

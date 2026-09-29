@@ -68,7 +68,7 @@ Palo Alto Networks PAN-OS GlobalProtect 是 Palo Alto Networks 的一款防火�
   
 **漏洞描述**  
   
-4月12日，官方披露了 Palo Alto Networks GlobalProtect 命令注入漏洞，CVE编号为  
+4月12日，官方披露了 Palo Alto Networks GlobalProtect 命令注入漏洞，CVE编号为  
 CVE-2024-3400。在特定 PAN-OS 版本和不同功能配置下，  
 **未经身份验证的攻击者可能利用此漏洞在防火墙上以root权限执行任意代码。**  
   

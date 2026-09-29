@@ -6,7 +6,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
 Ddos  代码卫士   2026-01-12 10:20  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
-    
+    
 聚焦源代码安全，网罗国内外最新资讯！  
   
 **编译：代码卫士**  
@@ -38,12 +38,12 @@ Red Hat 将该漏洞评级为“重要”级别，因为它可导致攻击者无
 该漏洞严重影响受影响系统的机密性和完整性，如Red Hat Jboss 企业应用平台8.1版本和多个程序包相关组件包括 eap8-undertow、eap8-wildfly和其它相关库等。Red Hat 已发布补丁修复该漏洞。组织机构应当立即应用2026年1月8日发布的更新，相关安全公告为 RHSA-2026:0386和RHSA-2026:0383。目前尚不存在满足 Red Hat 关于易用性和稳定性安全标准的缓解措施，因此用户应立即应用所推荐的补丁。  
   
   
- 开源  
+ 开源  
 卫士试用地址：  
 https://oss.qianxin.com/#/login  
   
   
- 代码卫士试用地址：https://sast.qianxin.com/#/login  
+ 代码卫士试用地址：https://sast.qianxin.com/#/login  
   
   
   
@@ -93,9 +93,9 @@ e
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
   
-   
+   
 觉得不错，就点个 “  
 在看  
 ” 或 "  

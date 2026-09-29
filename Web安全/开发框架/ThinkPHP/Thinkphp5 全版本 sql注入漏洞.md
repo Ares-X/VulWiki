@@ -82,7 +82,7 @@ ThinkPHP5全版本
 
 ![2.png](./.resource/Thinkphp5全版本sql注入漏洞/media/rId28.png)
 
-上面的 **\$this-\>builder** 为 **\\think\\db\\builder\\Mysql** 类，该类继承于 **Builder** 类，所以接着会调用 **Builder** 类的
+上面的 **\$this-\>builder** 为 **\\think\\db\\builder\\Mysql** 类，该类继承于 **Builder** 类，所以接着会调用 **Builder** 类的
 **select** 方法。在 **select** 方法中，程序会对 **SQL**
 语句模板用变量填充，其中用来填充 **%WHERE%**
 的变量中存在用户输入的数据。我们跟进这个 **where**

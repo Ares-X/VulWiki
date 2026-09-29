@@ -52,11 +52,11 @@ docker compose up -d
 
 ## 漏洞复现
 
-Ollama 公开了多个执行各种操作的 [API endpoints](https://github.com/ollama/ollama/blob/main/docs/api.md)：
+Ollama 公开了多个执行各种操作的 [API endpoints](https://github.com/ollama/ollama/blob/main/docs/api.md)：
 
 ![](./.resource/Ollama未授权访问漏洞CNVD-2025-04094/media/image-20241107094826037.png)
 
- 通过 `/api/tags` 列出所有模型：
+ 通过 `/api/tags` 列出所有模型：
 
 ```
 http://your-ip:11434/api/tags

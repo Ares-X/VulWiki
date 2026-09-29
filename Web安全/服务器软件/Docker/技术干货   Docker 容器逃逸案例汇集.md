@@ -65,7 +65,7 @@ Docker 容器逃逸案例：
 
 ### **二、配置不当引发的docker逃逸**
 
-**2.1  docker remote api未授权访问**
+**2.1  docker remote api未授权访问**
 
 漏洞简述：docker remote api可以执行docker命令，docker守护进程监听在0.0.0.0，可直接调用API来操作docker。
 
@@ -379,7 +379,7 @@ Docker版本 < 18.09.2，runc版本< 1.0-rc6，一般情况下，可通过 docke
 
 
 ```
-curl https://gist.githubusercontent.com/thinkycx/e2c9090f035d7b09156077903d6afa51/raw -o install.sh && bash install.sh
+curl https://gist.githubusercontent.com/thinkycx/e2c9090f035d7b09156077903d6afa51/raw -o install.sh && bash install.sh
 ```
 
 

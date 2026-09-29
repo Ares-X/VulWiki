@@ -7,7 +7,7 @@ Ravie Lakshmanan
                     Ravie Lakshmanan  代码卫士   2026-06-26 06:53  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
-    
+    
 聚焦源代码安全，网罗国内外最新资讯！  
   
 **编译：代码卫士**  
@@ -25,11 +25,11 @@ Ravie Lakshmanan
 比利时网络安全中心表示：“这些漏洞可能导致远程攻击者在受影响系统上进行未经授权的系统更改、访问敏感文件、泄露信息或执行任意命令，对目标设备的机密性、完整性和可用性造成严重影响。鉴于UniFi OS设备通常集中集成在网络中，成功入侵可能使攻击者进行横向移动并导致更广泛的网络攻陷。”  
   
   
- 开源  
+ 开源  
 卫士试用地址：  
 https://oss.qianxin.com/#/login  
   
- 代码卫士试用地址：https://sast.qianxin.com/#/login  
+ 代码卫士试用地址：https://sast.qianxin.com/#/login  
   
   
   
@@ -82,10 +82,10 @@ e
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
   
   
-   
+   
 觉得不错，就点个 “  
 在看  
 ” 或 "  

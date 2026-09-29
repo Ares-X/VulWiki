@@ -62,7 +62,7 @@ _json_params={"v47":{"@type":"java.lang.Class","val":"com.sun.rowset.JdbcRowSetI
 2）减少参数方法  
   {"name":"S", "age":21}//Fastjson 是不会报错  
   {"name":"S", "age":21,"xxx":123}// Jackson 语法相对比较严格, 会报错  
-3）fastjson 报错关键词: 
+3）fastjson 报错关键词: 
 
 com.alibaba.fastjson.JSONException , 触发方式如下  
  {"x":"  
@@ -200,7 +200,7 @@ com.alibaba.fastjson.JSONException , 触发方式如下
 
 https://www.secrss.com/articles/30425
 
-http://service.seeyon.com/patchtools/tp.html# /patchList?type=%E5%AE%89%E5%85%A8%E8%A1%A5%E4%B8%81&id=12 
+http://service.seeyon.com/patchtools/tp.html# /patchList?type=%E5%AE%89%E5%85%A8%E8%A1%A5%E4%B8%81&id=12 
 
 [https://mp.weixin.qq.com/s/f2scum8wWcCeOOOR7nKHaQ](https://mp.weixin.qq.com/s?__biz=MzI4OTQ5Njc2Mw==&mid=2247484291&idx=1&sn=9b4b226517f4c63c071a5c4a21ea0156&scene=21#wechat_redirect)
 
@@ -215,17 +215,17 @@ https://mp.weixin.qq.com/s?__biz=MzI4OTQ5Njc2Mw==&mid=2247484291&idx=1&sn=9b4b22
 **安恒雷神众测 SRC 运营（实习生）**  
 ————————  
 【职责描述】  
-1.  负责 SRC 的微博、微信公众号等线上新媒体的运营工作，保持用户活跃度，提高站点访问量；  
-2.  负责白帽子提交漏洞的漏洞审核、Rank 评级、漏洞修复处理等相关沟通工作，促进审核人员与白帽子之间友好协作沟通；  
-3.  参与策划、组织和落实针对白帽子的线下活动，如沙龙、发布会、技术交流论坛等；  
-4.  积极参与雷神众测的品牌推广工作，协助技术人员输出优质的技术文章；  
-5.  积极参与公司媒体、行业内相关媒体及其他市场资源的工作沟通工作。  
-【任职要求】   
- 1.  责任心强，性格活泼，具备良好的人际交往能力；  
- 2.  对网络安全感兴趣，对行业有基本了解；  
- 3.  良好的文案写作能力和活动组织协调能力。
+1.  负责 SRC 的微博、微信公众号等线上新媒体的运营工作，保持用户活跃度，提高站点访问量；  
+2.  负责白帽子提交漏洞的漏洞审核、Rank 评级、漏洞修复处理等相关沟通工作，促进审核人员与白帽子之间友好协作沟通；  
+3.  参与策划、组织和落实针对白帽子的线下活动，如沙龙、发布会、技术交流论坛等；  
+4.  积极参与雷神众测的品牌推广工作，协助技术人员输出优质的技术文章；  
+5.  积极参与公司媒体、行业内相关媒体及其他市场资源的工作沟通工作。  
+【任职要求】   
+ 1.  责任心强，性格活泼，具备良好的人际交往能力；  
+ 2.  对网络安全感兴趣，对行业有基本了解；  
+ 3.  良好的文案写作能力和活动组织协调能力。
 
-简历投递至 
+简历投递至 
 
 bountyteam@dbappsecurity.com.cn
 
@@ -247,7 +247,7 @@ bountyteam@dbappsecurity.com.cn
 学历要求：本科及以上  
 工作年限：1 年及以上，条件优秀者可放宽
 
-简历投递至 
+简历投递至 
 
 bountyteam@dbappsecurity.com.cn
 

@@ -19,28 +19,28 @@ OneUptime 是一款定位为"全家桶"的开源统一监控平台，旨在以�
   
 要理解这个漏洞，需要先了解 OneUptime 是如何执行用户提交的 Playwright 脚本的。  
   
-系统将用户脚本放在 Node.js 的 vm  
- 模块构建的沙箱中运行，本意是隔离不可信代码。然而，系统在执行时把宿主进程真实的 Playwright browser  
- 和 page  
- 对象直接注入到了这个沙箱的上下文里。  
+系统将用户脚本放在 Node.js 的 vm  
+ 模块构建的沙箱中运行，本意是隔离不可信代码。然而，系统在执行时把宿主进程真实的 Playwright browser  
+ 和 page  
+ 对象直接注入到了这个沙箱的上下文里。  
   
-问题在于，Playwright 的 browser.browserType().launch()  
- 方法接受一个 executablePath  
- 参数，允许指定任意可执行文件路径作为"浏览器"来启动。攻击者只需在脚本里写：  
+问题在于，Playwright 的 browser.browserType().launch()  
+ 方法接受一个 executablePath  
+ 参数，允许指定任意可执行文件路径作为"浏览器"来启动。攻击者只需在脚本里写：  
 ```
 browser.browserType().launch({
-    executablePath: "/bin/sh",
-    ignoreDefaultArgs: true,
-    args: ["-c", "你的任意命令"]
+    executablePath: "/bin/sh",
+    ignoreDefaultArgs: true,
+    args: ["-c", "你的任意命令"]
 });
 
 ```  
   
-系统就会把 /bin/sh  
- 当作一个浏览器去调用，而攻击者的命令已经在 Probe 服务器的操作系统上执行完毕。  
+系统就会把 /bin/sh  
+ 当作一个浏览器去调用，而攻击者的命令已经在 Probe 服务器的操作系统上执行完毕。  
   
 这里不需要任何沙箱逃逸技巧。vm  
- 模块本就不是安全边界——Node.js 官方文档明确说明这一点——而向沙箱注入具备宿主权限的 Playwright 对象，相当于把车钥匙直接插进了理论上应该被隔离的沙盒里。  
+ 模块本就不是安全边界——Node.js 官方文档明确说明这一点——而向沙箱注入具备宿主权限的 Playwright 对象，相当于把车钥匙直接插进了理论上应该被隔离的沙盒里。  
   
 漏洞类型归属于 CWE-749（暴露危险方法或函数）。  
 ## 攻击者需要什么条件  
@@ -55,8 +55,8 @@ browser.browserType().launch({
 更值得注意的是：如果目标实例开启了默认的开放注册功能，攻击者甚至不需要已有账号，自行注册即可完成全部前置条件，利用门槛实质降为零。  
 ## 得手之后能做什么  
   
-Probe 服务通常以 network_mode: host  
- 模式运行（与宿主机共享网络），同时在环境变量中存储有整个集群的凭证：  
+Probe 服务通常以 network_mode: host  
+ 模式运行（与宿主机共享网络），同时在环境变量中存储有整个集群的凭证：  
 ```
 ONEUPTIME_SECRET
 DATABASE_PASSWORD
@@ -68,9 +68,9 @@ CLICKHOUSE_PASSWORD
 这意味着攻击者一旦在 Probe 上执行代码，就自动拿到了访问 PostgreSQL 数据库、Redis 缓存、ClickHouse 分析库的全部钥匙，并可借助 host 网络模式直接连接到这些内部服务，实现从单个 Probe 容器到整个后端基础设施的横向移动。  
 ## 组合利用：与另一个 9.9 分漏洞配合使用  
   
-同批披露的 CVE-2026-30956（CVSS 9.9）是一个授权绕过漏洞。攻击者可以通过伪造 HTTP 请求头中的 is-multi-tenant-query  
- 和 projectid  
- 字段，绕过 OneUptime 的全部鉴权检查，读取任意用户的账号重置 Token，进而接管任意账号。  
+同批披露的 CVE-2026-30956（CVSS 9.9）是一个授权绕过漏洞。攻击者可以通过伪造 HTTP 请求头中的 is-multi-tenant-query  
+ 和 projectid  
+ 字段，绕过 OneUptime 的全部鉴权检查，读取任意用户的账号重置 Token，进而接管任意账号。  
   
 将两个漏洞组合使用时，即便目标实例关闭了开放注册，攻击者也可以先通过 CVE-2026-30956 接管一个已有项目成员账号，再利用 CVE-2026-30957 实施 RCE，整条攻击链无需任何社会工程学手段。  
 ## 这不是第一次，也不是最后一次  
@@ -87,7 +87,7 @@ OneUptime 官方已于 2026 年 3 月 8 日发布 10.0.21 版本修复此漏洞�
   
 Docker Compose 部署的实例可执行以下操作：  
 ```
-cd /path/to/oneuptime
+cd /path/to/oneuptime
 git pull
 git checkout 10.0.21
 docker compose pull
@@ -100,25 +100,25 @@ docker compose up -d
   
 - 严格审查项目成员权限，移除不必要的 Synthetic Monitor 创建和编辑权限  
   
-- 将 Probe 容器从 network_mode: host  
- 改为独立网络，限制其访问内部服务的范围  
+- 将 Probe 容器从 network_mode: host  
+ 改为独立网络，限制其访问内部服务的范围  
   
 - 为 Probe 单独配置最小权限数据库账号，不使用集群管理员凭证  
   
 **检测是否已遭利用：**  
   
-检查 Monitor 配置中是否存在包含 executablePath  
+检查 Monitor 配置中是否存在包含 executablePath  
 、ignoreDefaultArgs  
 、/bin/sh  
 、/bin/bash  
- 等字符串的 Synthetic Monitor 脚本；检查 Probe 宿主机的进程历史，是否存在由 Node.js 进程产生的非正常 shell 子进程记录。  
+ 等字符串的 Synthetic Monitor 脚本；检查 Probe 宿主机的进程历史，是否存在由 Node.js 进程产生的非正常 shell 子进程记录。  
 ## 给开发者的思考  
   
-这一系列漏洞揭示了一个在工程实践中被反复低估的问题：Node.js 的 vm  
- 模块从来都不是安全沙箱。官方文档在第一行就写明了这一点，但仍有大量项目将其用于执行不可信代码。  
+这一系列漏洞揭示了一个在工程实践中被反复低估的问题：Node.js 的 vm  
+ 模块从来都不是安全沙箱。官方文档在第一行就写明了这一点，但仍有大量项目将其用于执行不可信代码。  
   
-真正的用户代码隔离需要在更低的层次上实现，例如使用基于 V8 Isolate 的 isolated-vm  
- 库（提供独立的内存隔离），或在独立的容器中运行用户脚本并通过 IPC 交换数据。向沙箱注入具备宿主权限的对象，无论代理包装做得多么精细，本质上都是在用一个带漏洞的栅栏守护城堡大门。  
+真正的用户代码隔离需要在更低的层次上实现，例如使用基于 V8 Isolate 的 isolated-vm  
+ 库（提供独立的内存隔离），或在独立的容器中运行用户脚本并通过 IPC 交换数据。向沙箱注入具备宿主权限的对象，无论代理包装做得多么精细，本质上都是在用一个带漏洞的栅栏守护城堡大门。  
 ## 参考资料  
 - 官方安全公告（GHSA-jw8q-gjvg-8w4q）：https://github.com/OneUptime/oneuptime/security/advisories/GHSA-jw8q-gjvg-8w4q  
   

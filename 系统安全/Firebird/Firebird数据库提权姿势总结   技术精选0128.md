@@ -75,7 +75,7 @@ Firebird脱胎于Borland公司的开源版数据库Interbase6.0，是一个完�
   
 
 ```
-sudo apt-get -y install firebird3.0-utils
+sudo apt-get -y install firebird3.0-utils
 ```
 
   

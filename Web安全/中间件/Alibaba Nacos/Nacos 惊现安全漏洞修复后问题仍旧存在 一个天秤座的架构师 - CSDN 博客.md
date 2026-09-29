@@ -234,7 +234,7 @@ urlKey 这个 key，是否能从 urlLookup 这个 ConcurrentHashMap 中获取到
 }
 ```
 
-  2. 添加新用户
+  2. 添加新用户
 
 ```
 curl -XPOST 'http://127.0.0.1:8848/nacos/v1/auth/users?username=test&password=test'

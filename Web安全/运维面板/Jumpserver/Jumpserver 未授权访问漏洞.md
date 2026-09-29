@@ -15,7 +15,7 @@ MNTMDEV
 
 **漏洞原理**
 
-Vulnerability Theory
+Vulnerability Theory
 
 jumpserver 在 web 终端自动登录时缓存了登录密码。根据日志泄露此次 task 的 system_user、user、asset 字段，能模拟到 jumpserver 服务器登录过的资产，即复用 ssh 登录。
 

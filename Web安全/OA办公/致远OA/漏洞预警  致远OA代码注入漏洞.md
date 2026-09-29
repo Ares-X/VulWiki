@@ -33,8 +33,8 @@ CVE-2025-4531
 致远OA的Beetl模板处理组件中的文件ROOT\WEB-INF\classes\com\ours\www\ehr\salary\service\data\EhrSalaryPayrollServiceImpl.class内postData功能的payrollId参数被恶意操控可导致代码注入攻击。攻击者可通过远程方式执行任意代码。  
   
 **0x04 影响版本**  
-- 致远OA   
-8.1   
+- 致远OA   
+8.1   
 SP2  
   
 **0x05 POC状态**  

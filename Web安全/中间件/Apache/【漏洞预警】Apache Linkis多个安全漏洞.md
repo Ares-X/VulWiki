@@ -5,7 +5,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
 #  【漏洞预警】Apache Linkis多个安全漏洞   
 安识科技  SecPulse安全脉搏   2023-04-12 13:48  
   
-1. **通告信息**  
+1. **通告信息**  
   
   
   
@@ -16,7 +16,7 @@ Team团队监测到Apache官方发布安全公告，修复了Linkis中的多个�
 对此，安识科技建议广大用户及时升级到安全版本，并做好资产自查以及预防工作，以免遭受黑客攻击。  
 ##   
   
-2. **漏洞概述**  
+2. **漏洞概述**  
   
   
   
@@ -36,7 +36,7 @@ CVE编号：
 CVE-2023-27603  
   
 简述：  
-Manager 模块 engineConn 材料上传没有检查 zip 路径，可能导致Zip Slip 漏洞，造成RCE。  
+Manager 模块 engineConn 材料上传没有检查 zip 路径，可能导致Zip Slip 漏洞，造成RCE。  
   
 漏洞名称：  
 Apache Linkis Gateway模块身份验证绕过漏洞  
@@ -69,21 +69,21 @@ CVE-2023-29216
 MySQL数据源和恶意参数配置新的数据源以触发反序列化漏洞，最终导致远程代码执行。  
 ##   
   
-3. **漏洞危害**  
+3. **漏洞危害**  
   
   
   
 这些漏洞可能导致文件上传、身份验证绕过和远程代码执行。  
 ##   
   
-4. **影响版本**  
+4. **影响版本**  
   
   
   
 Apache Linkis版本：<=1.3.1  
 ##   
   
-5. **解决方案**  
+5. **解决方案**  
   
   
   
@@ -95,7 +95,7 @@ Apache Linkis版本：>=1.3.2
 https://github.com/apache/linkis/releases  
 ##   
   
-6. **时间轴**  
+6. **时间轴**  
   
   
   
@@ -109,7 +109,7 @@ https://github.com/apache/linkis/releases
 -】2023年04月12日 安识科技A-Team团队发布安全通告  
   
   
-         
+         
   
 
 

@@ -55,7 +55,7 @@ attacker"，密码为" attacker"。
 
 ![](./.resource/从xss到getshellxss的深层次利用与探讨/media/rId28.png)xss的深层次利用与探讨/media/rId28.png)
 
-然后，攻击者可以将现有的php文件修改为Webshel​​l，并使用该Webshel​​l来控制Web服务器。
+然后，攻击者可以将现有的php文件修改为Webshell，并使用该Webshell来控制Web服务器。
 
 图4.使用攻击者的帐户添加一个Web Shell
 

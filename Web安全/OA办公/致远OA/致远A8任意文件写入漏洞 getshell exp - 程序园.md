@@ -21,7 +21,7 @@ source: "MrWQ/vulnerability-paper"
 
 验证是否存在漏洞的方法：访问URL /seeyon/htmlofficeservlet 出现如下内容可能存在漏洞
 
-DBSTEP V3.0     0            21               0             htmoffice operate err
+DBSTEP V3.0     0            21               0             htmoffice operate err
 
 下面贴上一段野外poc：
 

@@ -24,7 +24,7 @@ Pack2TheRoot (CVE-2026-41651) — Linux 系统中利用PackageKit服务中的 TO
 该 PoC 创建两个本地软件包：一个虚拟软件包和一个有效载荷软件包。前者用于通过安全检查simulate模式。后者包含一个 postinst 有效载荷，该有效载荷在上下文中执行packagekitd。在已发布的 PoC 中，该命令  
   
 ```
-install -m 4755 /bin/bash /tmp/.suid_bash
+install -m 4755 /bin/bash /tmp/.suid_bash
 ```  
   
   
@@ -39,14 +39,14 @@ simulateg_variant_new("(u^as)", 4, ...) g_variant_new("(u^as)", 0, ...) g_dbus_c
 在 Debian/Ubuntu 系统上，界面如下所示：  
   
 ```
-/bin/sh /var/lib/dpkg/info/<package>.postinst configure
+/bin/sh /var/lib/dpkg/info/<package>.postinst configure
 ```  
   
   
 关于转速系统：  
   
 ```
-/bin/sh /var/tmp/rpm-tmp.*
+/bin/sh /var/tmp/rpm-tmp.*
 ```  
   
   
@@ -65,7 +65,7 @@ simulateg_variant_new("(u^as)", 4, ...) g_variant_new("(u^as)", 0, ...) g_dbus_c
 其他 IoC 可以是 PackageKit 日志中关于身份验证失败的条目，这些条目是在漏洞利用过程中产生的：  
   
 ```
-May 23 13:00:00 hostname PackageKit[PID]: uid 1000 is trying to obtain org.freedesktop.packagekit.package-install-untrusted auth (only_trusted:0)May 23 13:00:01 hostname  PackageKit[PID]: uid 1000 failed to obtain auth
+May 23 13:00:00 hostname PackageKit[PID]: uid 1000 is trying to obtain org.freedesktop.packagekit.package-install-untrusted auth (only_trusted:0)May 23 13:00:01 hostname  PackageKit[PID]: uid 1000 failed to obtain auth
 ```  
   
   
@@ -77,11 +77,11 @@ May 23 13:00:00 hostname PackageKit[PID]: uid 1000 is trying to obtain�
   
 公众号内容都来自国外平台-所有文章可通过点击阅读原文到达原文地址或参考地址  
   
-排版 编辑 | Ots 小安   
+排版 编辑 | Ots 小安   
   
 采集 翻译 | Ots Ai牛马  
   
-公众号 |   
+公众号 |   
 AnQuan7 (Ots安全)  
   
 

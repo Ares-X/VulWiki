@@ -14,11 +14,11 @@ source: "MrWQ/vulnerability-paper"
 
 GitLab 中存在 Graphql 接口 输入构造的数据时会泄露用户邮箱和用户名
 
-**二:  漏洞影响🐇**
+**二:  漏洞影响🐇**
 
 **GitLab 13.4 - 13.6.2**
 
-**三:  漏洞复现🐋**
+**三:  漏洞复现🐋**
 
 **转 CNVD 的时候发现一个 Github 半公开的信息泄露漏洞**
 
@@ -26,7 +26,7 @@ GitLab 中存在 Graphql 接口 输入构造的数据时会泄露用户邮箱和
 
 在 Hackone 中看到了有关的报告和修复方法
 
-地址: https://gitlab.com/gitlab-org/gitlab/-/issues/244275  
+地址: https://gitlab.com/gitlab-org/gitlab/-/issues/244275  
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7oF2l5ktS9dTWiaYTocYmtNXAxrD1ibjG6VKFF2G547zibQsuJrJflTekpbVhcPuzD8Gp3QTkbtkthg/640?wx_fmt=png)
 
@@ -84,7 +84,7 @@ Content-Type: application/json
 
 成功返回数据，造成 Gitlab 的用户邮箱信息泄露  
 
-****四:  漏洞 POC🦉****
+****四:  漏洞 POC🦉****
 
 ```
 import requests
@@ -141,12 +141,12 @@ if __name__ == '__main__':
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7oF2l5ktS9dTWiaYTocYmtNgy9whWZoVuXt8zfsjlvjLaBWpiaLiaUEkdOj6iaTq64KrDib9wvAXjca0Q/640?wx_fmt=png)
 
- ****五:  Goby & POC🦉****
+ ****五:  Goby & POC🦉****
 
 ```
-GitLab Graphql邮箱信息泄露漏洞 CVE-2020-26413
+GitLab Graphql邮箱信息泄露漏洞 CVE-2020-26413
 EXP放在 Goby & POC 目录中可一键导入Goby扫描 
-阅读原文 ----> Github ----> Goby & POC 目录
+阅读原文 ----> Github ----> Goby & POC 目录
 ```
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7oF2l5ktS9dTWiaYTocYmtNDHfVn6pGmZib42ZTNicHUYH7icz8FG6TxwHyciafYjgz1h1kw6kUMpHTAg/640?wx_fmt=png)

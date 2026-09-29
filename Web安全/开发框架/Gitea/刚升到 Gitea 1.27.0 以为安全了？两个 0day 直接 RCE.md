@@ -8,11 +8,11 @@ source: "gelusus/wxvl 公众号漏洞文库"
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/LAQpgdWQSctVS8Ps0NsFTqMiasz8uDibcvoib0spt17ORFYGT7Lk8y0JElHpWukiczXboIicO8mrOUut0DwfE4PvMwpuReeibS0yQHqN8Tictdm4Z4/640?wx_fmt=png&from=appmsg "")  
   
-前两天刚写完 Gitea CVE-2026-58443 的分析，告诉大家升到   
+前两天刚写完 Gitea CVE-2026-58443 的分析，告诉大家升到   
 v1.27.0 就安全了  
-。结果今天外网直接甩出来两个新的   
+。结果今天外网直接甩出来两个新的   
 0day  
-，一个远程代码执行（RCE），一个任意文件读取（Path Traversal / LFI）。PoC 目标版本明明白白写着   
+，一个远程代码执行（RCE），一个任意文件读取（Path Traversal / LFI）。PoC 目标版本明明白白写着   
 v1.27.0  
 ，也就是上一轮的「修复版」。不需要管理员权限，只要能建仓库或者能提交代码的普通用户就能打。自托管的 Gitea 和 Gitea.com SaaS 都中招。补丁还没出，CVE 也还没分配。  
   
@@ -20,7 +20,7 @@ v1.27.0
   
 这次不是一个小洞，是两个高危 0day 组合拳。研究者在外网公开披露的信息很明确：  
 Remote Code Execution  
- +   
+ +   
 File Inclusion  
 ，无需管理员权限，任何能创建仓库或向已有仓库提交代码的用户都能触发。  
   
@@ -28,29 +28,29 @@ File Inclusion
   
 0day-A · 远程代码执行（RCE）  
   
-PoC 脚本 gitea_rce_poc.py  
- 以普通用户身份登录目标实例后自动完成全套利用：创建仓库、投递两段 payload commit、触发服务端执行命令。截图里跑的是 id; uname -a  
-，成功拿到 uid=1000(git)  
- 的 shell。这意味着攻击者可以在 Gitea 服务端以 git 用户身份执行任意系统命令。  
+PoC 脚本 gitea_rce_poc.py  
+ 以普通用户身份登录目标实例后自动完成全套利用：创建仓库、投递两段 payload commit、触发服务端执行命令。截图里跑的是 id; uname -a  
+，成功拿到 uid=1000(git)  
+ 的 shell。这意味着攻击者可以在 Gitea 服务端以 git 用户身份执行任意系统命令。  
   
 0day-B · 任意文件读取（File Inclusion / Path Traversal）  
   
-PoC 脚本 gitea-file-inclusion-poc.py  
- 同样用普通用户身份，指定 --path /etc/passwd  
- 参数后，成功读出服务端完整 passwd 文件内容。这意味着攻击者可以遍历读取服务端文件系统上的敏感文件（配置文件、密钥、数据库凭证等）。  
+PoC 脚本 gitea-file-inclusion-poc.py  
+ 同样用普通用户身份，指定 --path /etc/passwd  
+ 参数后，成功读出服务端完整 passwd 文件内容。这意味着攻击者可以遍历读取服务端文件系统上的敏感文件（配置文件、密钥、数据库凭证等）。  
   
 影响范围  
- 研究者明确指出两个漏洞同时影响：  
+ 研究者明确指出两个漏洞同时影响：  
   
 · 自托管 Gitea 部署（所有已知版本，含最新发布版 v1.27.0）  
   
 · Gitea.com 官方 SaaS 托管服务  
   
 CVE 状态  
- 尚未分配 CVE 编号，补丁尚未发布。研究者表示将在补丁发布后公开技术细节和完整 write-up。  
+ 尚未分配 CVE 编号，补丁尚未发布。研究者表示将在补丁发布后公开技术细节和完整 write-up。  
   
 CVSS 预估  
- 10.0 Critical（网络可达 + 无需认证/低权限 + 无交互 + 作用域变更 + 全影响面）。最终分值以官方分配为准。  
+ 10.0 Critical（网络可达 + 无需认证/低权限 + 无交互 + 作用域变更 + 全影响面）。最终分值以官方分配为准。  
 <table><tbody><tr style="background-color: rgb(243, 245, 248);"><td style="border: 1px solid rgb(231, 233, 238);padding: 8px 10px;font-weight: bold;color: rgb(31, 35, 41);"><section><span leaf="">版本区间</span></section></td><td style="border: 1px solid rgb(231, 233, 238);padding: 8px 10px;font-weight: bold;color: rgb(31, 35, 41);"><section><span leaf="">状态</span></section></td></tr><tr><td style="border: 1px solid rgb(231, 233, 238);padding: 8px 10px;"><section><span leaf="">≤ v1.26.4</span></section></td><td style="border: 1px solid rgb(231, 233, 238);padding: 8px 10px;color: rgb(214, 58, 47);font-weight: bold;"><section><span leaf="">受影响（含旧 CVE-2026-58443）</span></section></td></tr><tr><td style="border: 1px solid rgb(231, 233, 238);padding: 8px 10px;"><section><span leaf="">v1.27.0（当前最新版）</span></section></td><td style="border: 1px solid rgb(231, 233, 238);padding: 8px 10px;color: rgb(214, 58, 47);font-weight: bold;"><section><span leaf="">受影响（新 0day 已验证）</span></section></td></tr><tr><td style="border: 1px solid rgb(231, 233, 238);padding: 8px 10px;"><section><span leaf="">暂无安全版本</span></section></td><td style="border: 1px solid rgb(231, 233, 238);padding: 8px 10px;color: rgb(214, 58, 47);font-weight: bold;"><section><span leaf="">⚠️ 补丁待发布</span></section></td></tr></tbody></table>  
 ⚠️ 风险定性，  
 这是目前 Gitea 最严重的安全事件之一。上一轮 CVE-2026-58443 还只是授权绕过写私有仓，这次直接是 RCE + 读任意文件，而且打的正是大家刚升上去的「安全版」v1.27.0。不需要管理员权限意味着任何有正常代码提交权限的账号都可能成为攻击入口。如果你在运维 Gitea，不管什么版本，现在就应该按下方临时缓解措施行动起来。  
@@ -59,8 +59,8 @@ CVSS 预估
   
 背景：上一轮 CVE-2026-58443（已修，但修了个寂寞）  
   
-先快速回顾一下上周那个洞。Gitea 的 PR 更新接口 POST /api/v1/repos/{owner}/{repo}/pulls/{index}/update  
- 在做 public-only 令牌校验时只检查了路由里的公开基础仓库，没在服务端合并变基到私有头分支时再把令牌限制套一遍，导致 public-only 令牌越权写私有分支。CVSS 9.6，v1.27.0 修了它（补丁 [#38406]()  
+先快速回顾一下上周那个洞。Gitea 的 PR 更新接口 POST /api/v1/repos/{owner}/{repo}/pulls/{index}/update  
+ 在做 public-only 令牌校验时只检查了路由里的公开基础仓库，没在服务端合并变基到私有头分支时再把令牌限制套一遍，导致 public-only 令牌越权写私有分支。CVSS 9.6，v1.27.0 修了它（补丁 [#38406]()  
 ）。当时我们说「升到 1.27.0 就安全了」。  
   
 新 0day：完全不同的攻击面  
@@ -86,21 +86,21 @@ v1.27.0 修的是令牌授权边界的问题（public-only bypass），但这两
 1  
 探测目标  
   
-PoC 脚本首先连接目标 Gitea 实例（如 http://localhost:3000  
+PoC 脚本首先连接目标 Gitea 实例（如 http://localhost:3000  
 ），确认可达并识别版本为 1.27.0。  
   
 2  
 普通用户认证  
   
-使用普通用户名密码登录（截图中为用户 shai  
-），日志显示 logged in as Shai (1.27.0)  
+使用普通用户名密码登录（截图中为用户 shai  
+），日志显示 logged in as Shai (1.27.0)  
 。全程不需要管理员或任何特殊权限。  
   
 3  
 创建仓库  
   
-脚本自动创建一个新仓库（RCE PoC 中为 Shai/test-repo-0325669374  
-，LFI PoC 中为 shai/rd-1784979808  
+脚本自动创建一个新仓库（RCE PoC 中为 Shai/test-repo-0325669374  
+，LFI PoC 中为 shai/rd-1784979808  
 ），作为投递 payload 的载体。  
   
 4  
@@ -108,7 +108,7 @@ PoC 脚本首先连接目标 Gitea 实例（如 http://localhost:3000
   
 RCE 路线  
 ：分两阶段投递 payload（delivering payload 1/2... payload accepted  
- → delivering payload 2/2... payload accepted  
+ → delivering payload 2/2... payload accepted  
 ），每个 payload 以独立 commit 形式写入仓库。两段 payload 组合后在服务端拼接成可执行的攻击链。  
   
 LFI 路线  
@@ -120,13 +120,13 @@ LFI 路线
   
 RCE 结果  
 ：retrieving output... operation complete  
-，输出 id=1000(git) gid=1000(git)  
- + 完整 uname 信息。攻击者在服务端拿到了 git 用户的 shell。  
+，输出 id=1000(git) gid=1000(git)  
+ + 完整 uname 信息。攻击者在服务端拿到了 git 用户的 shell。  
   
 LFI 结果  
 ：retrieving file...  
-，输出 /etc/passwd  
- 完整内容（root 到 nobody 全部用户条目）。服务端文件系统被穿透。  
+，输出 /etc/passwd  
+ 完整内容（root 到 nobody 全部用户条目）。服务端文件系统被穿透。  
   
 📌 关键认知，  
 这两条攻击链最可怕的地方在于门槛极低且无法靠「升级」规避。上一轮的 CVE-2026-58443 你还能升到 1.27.0 来修，但这两个 0day 打的就是 1.27.0 本身。任何有正常仓库操作权限的用户都是潜在攻击者，而任何允许用户自注册或自由创建仓库的 Gitea 实例都暴露在攻击面上。Gitea.com 的 SaaS 用户同样不能幸免。  
@@ -158,7 +158,7 @@ curl -s https://<你的Gitea域名>/api/v1/version
   
 ✅ 排查判定  
   
-· 开放自助注册 + 允许普通用户创建仓库 →   
+· 开放自助注册 + 允许普通用户创建仓库 →   
 攻击面完全敞开  
 ，立即执行下方临时缓解措施。  
   

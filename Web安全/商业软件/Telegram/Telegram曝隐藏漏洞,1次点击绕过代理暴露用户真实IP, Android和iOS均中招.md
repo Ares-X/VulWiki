@@ -51,7 +51,7 @@ Android 与 iOS 客户端均受影响，波及大量依赖 Telegram 进行隐私
   
 (2).网络层面  
   
-使用系统级防火墙, 强制 Telegram **所有出站流量只能走 VPN / tun 设备。通过 Telegram 的更新日志****关注补丁**  
+使用系统级防火墙, 强制 Telegram **所有出站流量只能走 VPN / tun 设备。通过 Telegram 的更新日志****关注补丁**  
 。  
   
 (3).风险意识  

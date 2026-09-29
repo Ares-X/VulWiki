@@ -11,7 +11,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
   
 已在 PHP 的 libxml 流中发现了一个严重漏洞，该漏洞可能会影响依赖 DOM 或 SimpleXML 扩展进行 HTTP 请求的 Web 应用程序。  
   
-该漏洞被跟踪为  CVE-2025-1219，涉及在请求重定向资源时错误地处理标头，从而导致文档误读和验证绕过等安全风险。content-type  
+该漏洞被跟踪为  CVE-2025-1219，涉及在请求重定向资源时错误地处理标头，从而导致文档误读和验证绕过等安全风险。content-type  
   
 该漏洞影响 PHP 版本：  
 - 低于 8.1.32  
@@ -46,7 +46,7 @@ content-type
 - 如果文档解析不正确，则可能会绕过验证过程。  
   
 - 使用类似 的方法导出此类文档可能会导致保留原始字符集的意外输出。->saveHtml()  
-使用 PHP 的 DOM 或 SimpleXML 扩展进行   
+使用 PHP 的 DOM 或 SimpleXML 扩展进行   
 HTTP 请求的应用程序特别容易受到攻击。  
 ## 概念验证  
   
@@ -72,7 +72,7 @@ PHP 开发人员已在以下版本中解决了此问题：
   
 为了防范 CVE-2025-1219，强烈建议用户将其 PHP 安装更新到上面列出的补丁版本之一：  
 1. 使用 检查当前版本。php -v  
-1. 通过软件包管理器更新您的系统，或从   
+1. 通过软件包管理器更新您的系统，或从   
 php.net下载更新的二进制文件。  
   
 1. 更新后重新启动任何依赖 PHP 的服务。  
@@ -81,7 +81,7 @@ CVE-2025-1219 突出了 PHP 使用 libxml 流处理 HTTP 重定向的方式中�
   
 原文来自: cybersecuritynews.com  
   
-原文链接:   
+原文链接:   
 https://cybersecuritynews.com/critical-php-vulnerability-let-hackers-bypass-the-validation/  
   
 欢迎收藏并分享朋友圈，让五邑人网络更安全  

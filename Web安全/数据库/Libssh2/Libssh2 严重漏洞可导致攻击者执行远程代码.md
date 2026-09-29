@@ -7,7 +7,7 @@ Abinaya
                     Abinaya  代码卫士   2026-06-24 09:06  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
-    
+    
 聚焦源代码安全，网罗国内外最新资讯！  
   
 **编译：代码卫士**  
@@ -39,11 +39,11 @@ VulnCheck发布安全公告提到，该漏洞可能导致堆内存损坏，引�
 该漏洞已在提交97acf3dfda80c91c3a8c9f2372546301d4a1a7a8引入的补丁中修复，该补丁对packet_length值实施了严格验证，以防止整数溢出和缓冲区溢出。强烈建议组织尽快将libssh2升级到已打补丁的版本。此外，安全团队应审查系统中静态链接或捆绑的libssh2版本，监控SSH流量中是否存在异常情况（如异常大的数据包大小），并在无法立即打补丁的情况下实施网络层控制措施。  
   
   
- 开源  
+ 开源  
 卫士试用地址：  
 https://oss.qianxin.com/#/login  
   
- 代码卫士试用地址：https://sast.qianxin.com/#/login  
+ 代码卫士试用地址：https://sast.qianxin.com/#/login  
   
   
   
@@ -93,10 +93,10 @@ e
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
   
   
-   
+   
 觉得不错，就点个 “  
 在看  
 ” 或 "  

@@ -15,12 +15,12 @@ source: "gelusus/wxvl 公众号漏洞文库"
 **Fortinet FortiSwitch 凭证管理不当漏洞 可导致远程代码执行**  
   
   
-**【 漏洞编号 】**  
+**【 漏洞编号 】**  
   
 CVE-2023-37936  
   
   
-**【 情报等级 】**  
+**【 情报等级 】**  
   
 **高危**  
   
@@ -38,17 +38,17 @@ CVE-2023-37936
   
 针对此漏洞，官方已经发布了漏洞修复版本，请立即更新到**安全版本****：**  
   
-Fortinet  FortiSwitch >= 7.4.1   
+Fortinet  FortiSwitch >= 7.4.1   
   
-Fortinet  FortiSwitch >= 7.2.6   
+Fortinet  FortiSwitch >= 7.2.6   
   
-Fortinet  FortiSwitch >= 7.0.8   
+Fortinet  FortiSwitch >= 7.0.8   
   
-Fortinet  FortiSwitch >= 6.4.14   
+Fortinet  FortiSwitch >= 6.4.14   
   
-Fortinet  FortiSwitch >= 6.2.8   
+Fortinet  FortiSwitch >= 6.2.8   
   
-Fortinet  FortiSwitch 6.0.x 版本用户请迁移到以上版本   
+Fortinet  FortiSwitch 6.0.x 版本用户请迁移到以上版本   
   
 安装前，请确保备份所有关键数据，并按照官方指南进行操作。安装后，进行全面测试以验证漏洞已被彻底修复，并确保系统其他功能正常运行。  
   

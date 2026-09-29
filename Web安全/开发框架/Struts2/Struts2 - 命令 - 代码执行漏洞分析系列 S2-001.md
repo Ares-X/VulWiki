@@ -43,7 +43,7 @@ WebWork 2.1 (with altSyntax enabled), WebWork 2.2.0 - WebWork 2.2.5, Struts 2.0.
 进行解析，然后重新填充到对应的表单数据中。例如注册或登录页面，提交失败后端一般会默认返回之前提交的数据，由于后端使用 %{value}
 
   
-对提交的数据执行了一次 OGNL 表达式解析，所以可以直接构造 Payload 进行命令执行 
+对提交的数据执行了一次 OGNL 表达式解析，所以可以直接构造 Payload 进行命令执行 
 
   
 **利用过程：**  

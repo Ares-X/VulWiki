@@ -17,7 +17,7 @@ cve: "CVE-2014-6324"
 
   
 
-大家好，这里是 **渗透攻击红队** 的第 **36** 篇文章，本公众号会记录一些我学习红队攻击的复现笔记（由浅到深），不出意外每天一更
+大家好，这里是 **渗透攻击红队** 的第 **36** 篇文章，本公众号会记录一些我学习红队攻击的复现笔记（由浅到深），不出意外每天一更
 
 ![](https://mmbiz.qpic.cn/mmbiz_gif/7QRTvkK2qC4T65TNkYZsPg2BJ2VwibZicuBhV9DGqxlsxwG0n2ibhLuBsiamU7S0SqvAp6p33ucxPkuiaDiaKD6ibJGaQ/640?wx_fmt=gif)
 
@@ -45,7 +45,7 @@ PyKEY 是一个利用 Kerberos 协议进行渗透测试的工具包。
 
 #### 工具说明
 
-ms14-068.py 是 PyKEY 工具包中的 MS14-068 漏洞利用脚本。 
+ms14-068.py 是 PyKEY 工具包中的 MS14-068 漏洞利用脚本。 
 
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/dzeEUCA16LLfUuA8geDU4PUA88ciatSqxPuW4M2Q1cfYvHJCkRwKRdEwn9jNJgoj6ysSsLJ0GSagLGxJLlnQOmQ/640?wx_fmt=png)
 

@@ -1,6 +1,6 @@
 ---
 cnvd: "CNVD-2023-08743"
-version: "用友 KSOA V9.0"
+version: "用友 KSOA V9.0"
 fofa: "空间搜索引擎语句"
 source: "MrWQ/vulnerability-paper"
 ---
@@ -16,14 +16,14 @@ source: "MrWQ/vulnerability-paper"
 
 用友时空 KSOA 是建立在 SOA 理念指导下研发的新一代产品, 是根据流通企业前沿的 IT 需求推出的统一的 IT 基础架构, 它可以让流通企业各个时期建立的 IT 系统之间彼此轻松对话。用友时空 KSOA 平台 ImageUpload 处存在任意文件上传漏洞，攻击者通过漏洞可以获取服务器权限。
 
-0x02 影响版本
+0x02 影响版本
 
 ```
-用友 KSOA V9.0
+用友 KSOA V9.0
 
 ```
 
-0x03 漏洞复现
+0x03 漏洞复现
 
 FOFA 空间搜索引擎语句  
 
@@ -65,7 +65,7 @@ http://ip/pictures/\{\{文件名随便起\}\}
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ukiacpKckBCDMKErH19icyYsxNuVVcnUYHGxW9HWykQmONXiaknjkI100Ycs5BYAec1jbib5ZnDhBFIqGzJTkKKsgA/640?wx_fmt=png)
 
-0x04 修复方案
+0x04 修复方案
 
 ```
 建议及时更新至最新版本

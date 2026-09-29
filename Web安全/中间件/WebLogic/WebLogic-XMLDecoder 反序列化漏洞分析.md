@@ -87,9 +87,9 @@ XML 标签、属性介绍
 
 ### object 标签
 
-通过 `<object>` 标签表示对象， `class` 属性指定具体类 (用于调用其内部方法)，`method` 属性指定具体方法名称 (比如构造函数的的方法名为 `new` )
+通过 `<object>` 标签表示对象， `class` 属性指定具体类 (用于调用其内部方法)，`method` 属性指定具体方法名称 (比如构造函数的的方法名为 `new` )
 
-`new JButton("Hello,xml")` 对应的`XML`文档:
+`new JButton("Hello,xml")` 对应的`XML`文档:
 
 ```
 <object class="javax.swing.JButton" method="new">
@@ -102,9 +102,9 @@ XML 标签、属性介绍
 void 标签
 =======
 
-通过 `void` 标签表示函数调用、赋值等操作， `method` 属性指定具体的方法名称。
+通过 `void` 标签表示函数调用、赋值等操作， `method` 属性指定具体的方法名称。
 
-`JButton b = new JButton();b.setText("Hello, world");` 对应的`XML`文档:
+`JButton b = new JButton();b.setText("Hello, world");` 对应的`XML`文档:
 
 ```
 <object class="javax.swing.JButton">
@@ -118,8 +118,8 @@ void 标签
 
 ### array 标签
 
-通过 `array` 标签表示数组， `class` 属性指定具体类，内部 `void` 标签的 `index` 属性表示根据指定数组索引赋值。  
-`String[] s = new String[3];s[1] = "Hello,xml";` 对应的`XML`文档:
+通过 `array` 标签表示数组， `class` 属性指定具体类，内部 `void` 标签的 `index` 属性表示根据指定数组索引赋值。  
+`String[] s = new String[3];s[1] = "Hello,xml";` 对应的`XML`文档:
 
 ```
 <array class="java.lang.String" length="3">
@@ -315,9 +315,9 @@ CVE-2017-3506&CVE-2017-10271
 *   WebLogic 12.2.1.2
     
 
-`CVE-2017-3506`和`CVE-2017-10271`均是 `XMLDecoder` 反序列化漏洞，`CVE-2017-3506`修补方案为禁用 `object` 标签。
+`CVE-2017-3506`和`CVE-2017-10271`均是 `XMLDecoder` 反序列化漏洞，`CVE-2017-3506`修补方案为禁用 `object` 标签。
 
-`CVE-2017-10271`是通过 `void` 、 `new` 标签对`CVE-2017-3506`补丁的绕过。
+`CVE-2017-10271`是通过 `void` 、 `new` 标签对`CVE-2017-3506`补丁的绕过。
 
 这里以`CVE-2017-10271`为例进行漏洞分析
 
@@ -325,7 +325,7 @@ wls-wsat.war!/WEB-INF/web.xml
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/GzdTGmQpRic2yqxwSXicicJiatWkGvAvvu4zYcEcojBfibaMuVMLblhqzVtU9iaxkuWAwRcz42IDckon6pFabTO24b3Q/640?wx_fmt=png)
 
-查看 `web.xml` ，可以发现存在漏洞的 `wls-wsat` 组件中包含不同的路由，均能触发漏洞  
+查看 `web.xml` ，可以发现存在漏洞的 `wls-wsat` 组件中包含不同的路由，均能触发漏洞  
 
 weblogic.wsee.jaxws.workcontext.WorkContextServerTube#processRequest
 
@@ -600,7 +600,7 @@ array limitation.");
 
 ```
 
-这里同样使用了黑名单禁用了`class`标签，使用 `<array method =“forName">` 代替 class 标签即可
+这里同样使用了黑名单禁用了`class`标签，使用 `<array method =“forName">` 代替 class 标签即可
 
 exp 就是上面 cve-2019-2725 的 exp
 

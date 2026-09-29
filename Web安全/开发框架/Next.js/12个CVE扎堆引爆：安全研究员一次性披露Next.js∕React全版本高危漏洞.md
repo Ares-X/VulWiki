@@ -16,9 +16,9 @@ Jack Stone
   
 2026年5月7日，Vercel 核心维护者 Tim Neutkens 通过 GitHub 安全公告系列（GHSA 编号范围：GHSA-8h8q-6873-q5fj 至 GHSA-3g8h-86w9-wvmq）发布了 Next.js 安全补丁，修复版本为 15.5.16 和 16.2.5，覆盖 Next.js 13.x 至 16.x 全分支。  
   
-2026年5月8日，安全研究员 **dwisiswant0**  
- 在 GitHub 发布 next-16.2.4-pocs[1]  
- 仓库，将上述 12 个漏洞的反向工程 PoC 材料全部公开。该仓库由 ProjectDiscovery 的 Neo 工具辅助完成逆向分析，每个 CVE 对应独立目录，包含漏洞描述、补丁差异、可运行利用脚本及最小复现应用。  
+2026年5月8日，安全研究员 **dwisiswant0**  
+ 在 GitHub 发布 next-16.2.4-pocs[1]  
+ 仓库，将上述 12 个漏洞的反向工程 PoC 材料全部公开。该仓库由 ProjectDiscovery 的 Neo 工具辅助完成逆向分析，每个 CVE 对应独立目录，包含漏洞描述、补丁差异、可运行利用脚本及最小复现应用。  
   
 **补丁修复版本一览：**  
 <table><thead><tr><th style="border: 1px solid rgb(217, 223, 228);padding: 9px 12px;font-size: 0.75em;line-height: 22px;vertical-align: top;text-align: center;font-weight: bold;color: rgb(72, 112, 172);background: rgb(247, 247, 247);"><section><span leaf="">受影响组件</span></section></th><th style="border: 1px solid rgb(217, 223, 228);padding: 9px 12px;font-size: 0.75em;line-height: 22px;vertical-align: top;text-align: center;font-weight: bold;color: rgb(72, 112, 172);background: rgb(247, 247, 247);"><section><span leaf="">修复版本</span></section></th></tr></thead><tbody><tr><td style="border: 1px solid rgb(217, 223, 228);padding: 9px 12px;font-size: 0.75em;line-height: 22px;vertical-align: top;"><section><span leaf="">Next.js 15.x 分支</span></section></td><td style="border: 1px solid rgb(217, 223, 228);padding: 9px 12px;font-size: 0.75em;line-height: 22px;vertical-align: top;"><strong style="color: rgb(72, 112, 172);"><span leaf="">15.5.16</span></strong></td></tr><tr><td style="border: 1px solid rgb(217, 223, 228);padding: 9px 12px;font-size: 0.75em;line-height: 22px;vertical-align: top;"><section><span leaf="">Next.js 16.x 分支</span></section></td><td style="border: 1px solid rgb(217, 223, 228);padding: 9px 12px;font-size: 0.75em;line-height: 22px;vertical-align: top;"><strong style="color: rgb(72, 112, 172);"><span leaf="">16.2.5</span></strong><section><span leaf="">（Turbopack 用户须升级至 16.2.6）</span></section></td></tr><tr><td style="border: 1px solid rgb(217, 223, 228);padding: 9px 12px;font-size: 0.75em;line-height: 22px;vertical-align: top;"><section><span leaf="">react-server-dom-webpack</span></section></td><td style="border: 1px solid rgb(217, 223, 228);padding: 9px 12px;font-size: 0.75em;line-height: 22px;vertical-align: top;"><section><span leaf="">19.0.6 / 19.1.7 / 19.2.6</span></section></td></tr><tr><td style="border: 1px solid rgb(217, 223, 228);padding: 9px 12px;font-size: 0.75em;line-height: 22px;vertical-align: top;"><section><span leaf="">react-server-dom-parcel</span></section></td><td style="border: 1px solid rgb(217, 223, 228);padding: 9px 12px;font-size: 0.75em;line-height: 22px;vertical-align: top;"><section><span leaf="">19.0.6 / 19.1.7 / 19.2.6</span></section></td></tr><tr><td style="border: 1px solid rgb(217, 223, 228);padding: 9px 12px;font-size: 0.75em;line-height: 22px;vertical-align: top;"><section><span leaf="">react-server-dom-turbopack</span></section></td><td style="border: 1px solid rgb(217, 223, 228);padding: 9px 12px;font-size: 0.75em;line-height: 22px;vertical-align: top;"><section><span leaf="">19.0.6 / 19.1.7 / 19.2.6</span></section></td></tr></tbody></table>  
@@ -53,8 +53,8 @@ CVE-2026-23870 是一个"修复之后再修复"的典型案例。dwisiswant0 的
   
 这意味着已完成上一轮 DoS 补丁升级的组织，若不跟进本次升级，仍然暴露。  
   
-CVE-2026-44579 则瞄准 Cache Components 的 Partial Prerendering 特性，恶意 POST 请求可触发请求体死锁，导致服务连接耗尽。Vercel 建议在边缘层拦截所有包含 Next-Resume  
- 请求头的入站请求作为临时缓解。  
+CVE-2026-44579 则瞄准 Cache Components 的 Partial Prerendering 特性，恶意 POST 请求可触发请求体死锁，导致服务连接耗尽。Vercel 建议在边缘层拦截所有包含 Next-Resume  
+ 请求头的入站请求作为临时缓解。  
 ### 中间件绕过三连击：CVE-2026-44574 / CVE-2026-44575 / CVE-2026-44573  
   
 三组不同的绕过技术覆盖了 Next.js 几乎所有的路由架构：  
@@ -80,8 +80,8 @@ dwisiswant0 的 PoC 仓库是本次事件的重要转折点。在 PoC 公开前�
 ：Next.js 至 15.5.16 / 16.2.5（Turbopack 用户 16.2.6）；RSC 包至 19.0.6 / 19.1.7 / 19.2.6  
   
 1. **边缘缓解**  
-：在反向代理层拦截含 Next-Resume  
- 头的入站请求  
+：在反向代理层拦截含 Next-Resume  
+ 头的入站请求  
   
 1. **SSRF 缓解**  
 ：阻断未授权 WebSocket 升级请求，剥离内部响应头  
@@ -100,7 +100,7 @@ dwisiswant0 的 PoC 仓库是本次事件的重要转折点。在 PoC 公开前�
 ### 引用链接  
   
 [1]  
-next-16.2.4-pocs: https://github.com/dwisiswant0/next-16.2.4-pocs  
+next-16.2.4-pocs: https://github.com/dwisiswant0/next-16.2.4-pocs  
   
 
 

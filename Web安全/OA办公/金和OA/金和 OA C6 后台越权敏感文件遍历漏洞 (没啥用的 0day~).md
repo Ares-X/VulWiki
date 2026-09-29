@@ -13,11 +13,11 @@ source: "MrWQ/vulnerability-paper"
 
 **金和 OA C6 存在后台越权敏感文件遍历漏洞，普通用户通过遍历特殊参数可以获取其他用户上传的敏感文件**
 
-**二:  漏洞影响🐇**
+**二:  漏洞影响🐇**
 
 **金和 OA C6**
 
-**三:  漏洞复现🐋**
+**三:  漏洞复现🐋**
 
 **登录后点击信息交流，发起协同页面**
 
@@ -78,7 +78,7 @@ http://xxx.xxx.xxx.xxx/C6/control/OpenFile.aspx?id=1200&name=&type=pdf
 
 **于是只需要通过刚刚的 ID 遍历，获取两个关键参数就能下载其他人发送的敏感文件，且只需要普通用户权限**
 
- ****四:  漏洞 POC🦉****
+ ****四:  漏洞 POC🦉****
 
 ```
 POC只检测是否存在漏洞，且漏洞存在于后台需要登录
@@ -143,7 +143,7 @@ if __name__ == '__main__':
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7YmG0oicA5Gib9brhhvwQOE8dsvhF7kytMNZGyREG9Uia7R8BxlAUv7gFZCxicNJia3ZJAxRv4XCZoiaNg/640?wx_fmt=png)
 
- ****五:  关于文库🦉****
+ ****五:  关于文库🦉****
 
 **在线文库：**
 

@@ -6,7 +6,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
 原创 abc123info  希潭实验室   2024-04-24 12:03  
   
 ![](https://mmbiz.qpic.cn/mmbiz_png/OAz0RNU450ATcz6jUJnFNeOxRzVZ9Lbc0INLwTJTZT1GaNutZrfDn6csvjBoS2ox0efLUEexXqPEcVbYfbLo8w/640?wx_fmt=png "")  
-##  Part1 前言   
+##  Part1 前言   
   
 **大家好，我是ABC_123**  
 。Shiro反序列化漏洞  
@@ -20,7 +20,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
   
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/OAz0RNU450Dq1Q8s4COc7InkMO0jIGjiaGho1fcJicpibWB4vzvIM1wAib9TiakVECbIM5S0mHCTTeGJJibWtCe25vXw/640?wx_fmt=jpeg&from=appmsg "")  
   
-##  Part2 技术研究过程   
+##  Part2 技术研究过程   
   
 这里ABC_123直接把绕过方法给大家贴出来，不做过多分析，因为让我再使用intellij idea把shiro源码跑起来分析一下，太费精力了。如下图所示，这是本地搭建的测试环境，放在Tomcat7.x中间件上。  
   
@@ -74,14 +74,14 @@ source: "gelusus/wxvl 公众号漏洞文库"
   
 ![](https://mmbiz.qpic.cn/mmbiz_png/OAz0RNU450BNXDJlEZvOpWw2PiaZuibfzKorhzI5M221wicibHMtYO0d8TJdxQjNEKCdlUHDvuJpH9PE9NcrVOBA0w/640?wx_fmt=png&from=appmsg "")  
   
-##  Part3 总结   
+##  Part3 总结   
   
 **1.**  
-    
+    
 文中提到的添加点号等特殊字符绕过waf的思路，对于Struts2框架同样适用，这是之前ABC_123调试Struts2框架时偶然发现的，后面会写文章给大家分享。  
   
 **2.**  
-    
+    
 除了上述绕过waf方法之外，还有其它更复杂的方法，后续ABC_123会继续写文章分享，敬请期待。  
   
   

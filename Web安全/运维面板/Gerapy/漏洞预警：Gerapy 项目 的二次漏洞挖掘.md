@@ -35,17 +35,17 @@ source: "MrWQ/vulnerability-paper"
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/4R3RgYzzCgG6fvduwiaD0Uzhd9MCO2xZfIttlKGLlzCNCTnAXk4QJyeBoRuDmSMgIMrBricSrdV6F5tH6OGGj80g/640?wx_fmt=png)
 
-二:  漏洞影响🐇
+二:  漏洞影响🐇
 
   
 
-Gerapy <= 0.9.7
+Gerapy <= 0.9.7
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/64HEibicwoTVPB8smnhdVoc7JbSaYqwqvrUcgmufsMThIEejT2UyKBJha6pdibPxAIGLoTibtmG5CvC73DzZ0ubv1Q/640?wx_fmt=png)
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/4R3RgYzzCgG6fvduwiaD0Uzhd9MCO2xZfIttlKGLlzCNCTnAXk4QJyeBoRuDmSMgIMrBricSrdV6F5tH6OGGj80g/640?wx_fmt=png)
 
-三:  漏洞复现🐋
+三:  漏洞复现🐋
 
   
 
@@ -55,7 +55,7 @@ Gerapy <= 0.9.7
 
   
 
-我们首先先查看关键接口文件 gerapy/server/core/urls.py
+我们首先先查看关键接口文件 gerapy/server/core/urls.py
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7oBu04EUNfWTibexlPznqkvJ1zAGPFCBMyzfkvBZQrjpfL1AqTTkiaK5kYnMOYH8BiaHQzuIXD43gPw/640?wx_fmt=png)
 
@@ -63,7 +63,7 @@ Gerapy <= 0.9.7
 
 可以看到 api/project/file/read 接口可能与文件读取相关，查看调用的文件  
 
-gerapy/server/core/views.py 中的 project_file_read 方法  
+gerapy/server/core/views.py 中的 project_file_read 方法  
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7oBu04EUNfWTibexlPznqkvTOVMkfupQeOialAQTQGUyR0Uviczibwv7Ax5mpKkKtyLXhILAqtfJjeLg/640?wx_fmt=png)
 
@@ -117,7 +117,7 @@ Connection: close
 
   
 
-我们找到一个参数  spider 为可控参数，使用 Popen 命令执行时我们可以拼接命令造成命令注入，看一下方法对应的 URl 接口  
+我们找到一个参数  spider 为可控参数，使用 Popen 命令执行时我们可以拼接命令造成命令注入，看一下方法对应的 URl 接口  
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7oBu04EUNfWTibexlPznqkvG1d1yic7REEDecVC42UOwoqjSVHibQU5peXLNN9VA3E3CTm0Tvt6tQgQ/640?wx_fmt=png)
 
@@ -150,7 +150,7 @@ Content-Length: 18
 
   
 
-path lable code 参数均为用户可控，就导致了任意文件的写入了, 一般项目权限为 root，可以通过写定时任务等方法反弹 shell，用之前任意文件读取确认文件的写入  
+path lable code 参数均为用户可控，就导致了任意文件的写入了, 一般项目权限为 root，可以通过写定时任务等方法反弹 shell，用之前任意文件读取确认文件的写入  
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7oBu04EUNfWTibexlPznqkvjCorcbJykibrSrFlES2ZOtGaNIgZVLicX2VGJh5zsacZtHibkplLB5v2g/640?wx_fmt=png)
 
@@ -160,7 +160,7 @@ path lable code 参数均为用户可控，就导致了任意文件的写入了,
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/4R3RgYzzCgG6fvduwiaD0Uzhd9MCO2xZfIttlKGLlzCNCTnAXk4QJyeBoRuDmSMgIMrBricSrdV6F5tH6OGGj80g/640?wx_fmt=png)
 
- 四:  关于文库🦉
+ 四:  关于文库🦉
 
   
 
@@ -187,7 +187,7 @@ https://www.yuque.com/peiqiwiki
 
 **由于传播、利用此文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，文章作者不为此承担任何责任。**
 
-**PeiQi 文库 拥有对此文章的修改和解释权如欲转载或传播此文章，必须保证此文章的完整性，包括版权声明等全部内容。未经作者允许，不得任意修改或者增减此文章内容，不得以任何方式将其用于商业目的。**
+**PeiQi 文库 拥有对此文章的修改和解释权如欲转载或传播此文章，必须保证此文章的完整性，包括版权声明等全部内容。未经作者允许，不得任意修改或者增减此文章内容，不得以任何方式将其用于商业目的。**
 
 ---
 

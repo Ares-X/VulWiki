@@ -6,9 +6,9 @@ source: "gelusus/wxvl 公众号漏洞文库"
 #  【漏洞预警】Atlassian Bamboo Data Center And Server 文件包含漏洞   
 原创 聚焦网络安全情报  安全聚   2024-07-17 17:07  
   
-预警公告 **高危**  
+预警公告 **高危**  
   
-近日，安全聚实验室监测到Atlassian Bamboo Data Center And Server 存在文件包含漏洞 ，编号为：CVE-2024-21687，CVSS:8.1  允许经过身份验证的攻击者获取应用程序显示本地文件的内容，或执行已存储在本地服务器上的其他文件。  
+近日，安全聚实验室监测到Atlassian Bamboo Data Center And Server 存在文件包含漏洞 ，编号为：CVE-2024-21687，CVSS:8.1  允许经过身份验证的攻击者获取应用程序显示本地文件的内容，或执行已存储在本地服务器上的其他文件。  
   
   
 **01**  

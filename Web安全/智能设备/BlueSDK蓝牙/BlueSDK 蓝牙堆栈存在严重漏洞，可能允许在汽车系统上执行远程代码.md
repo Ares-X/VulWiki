@@ -11,7 +11,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
   
 渗透测试和威胁情报公司 PCA Cyber  
   
- Security（前身为 PCAutomotive）研究人员发现，影响广泛使用的蓝牙堆栈严重漏洞可被用来远程入侵数百万辆汽车。  
+ Security（前身为 PCAutomotive）研究人员发现，影响广泛使用的蓝牙堆栈严重漏洞可被用来远程入侵数百万辆汽车。  
   
   
 研究人员对 OpenSynergy 开发的 BlueSDK 蓝牙框架进行分析，发现多个漏洞，包括允许远程代码执行、绕过安全机制和信息泄露的漏洞。  

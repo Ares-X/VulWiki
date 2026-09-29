@@ -7,7 +7,7 @@ Bill Toulas
                     Bill Toulas  代码卫士   2026-04-13 10:41  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
-    
+    
 聚焦源代码安全，网罗国内外最新资讯！  
   
 **编译：代码卫士**  
@@ -58,11 +58,11 @@ Marimo 在今年4月8日披露了该漏洞，并在近日发布0.23.0版本修�
 建议 Marimo 用户立即升级到 0.23.0 版本，同时监控指向 ‘/terminal/ws’ 的 WebSocket 连接，通过防火墙限制外部访问，并更改所有已泄露的密钥。如无法升级，则可通过完全拦截或禁用 “/terminal/ws” 端点的方式，有效缓解该漏洞。  
   
   
- 开源  
+ 开源  
 卫士试用地址：  
 https://oss.qianxin.com/#/login  
   
- 代码卫士试用地址：https://sast.qianxin.com/#/login  
+ 代码卫士试用地址：https://sast.qianxin.com/#/login  
   
   
   
@@ -112,10 +112,10 @@ e
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
   
   
-   
+   
 觉得不错，就点个 “  
 在看  
 ” 或 "  

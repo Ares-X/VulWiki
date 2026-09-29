@@ -6,7 +6,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
 Ddos  代码卫士   2026-01-05 10:34  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
-    
+    
 聚焦源代码安全，网罗国内外最新资讯！  
   
 **编译：代码卫士**  
@@ -36,7 +36,7 @@ Qfiling路径遍历漏洞（CVE-2025-59384，CVSS评分8.1）影响威联通自�
   
 多应用恢复服务 (MARS) SQL注入漏洞（CVE-2025-59387，CVSS评分8.1）可被远程攻击者用于“执行未授权代码或命令”，从而可能获取系统深层访问权限。该漏洞已在MARS 1.2.1.1686及以上版本（注：新版本已更名为“HDP for WordPress”）中修复。  
   
-依赖QNAP桌面工具的Mac用户也需立即更新。威联通在适用于macOS系统的Qfinder Pro、Qsync和QVPN Device Client中发现了一个路径遍历漏洞（CVE-2025-53594）。虽然该漏洞因需要本地用户账户才能利用，严重性评级较低（CVSS 4.4），但仍存在风险。威联通在公告中提醒称：“若本地攻击者获取用户账户，可利用此漏洞读取意外文件或系统数据内容。”   
+依赖QNAP桌面工具的Mac用户也需立即更新。威联通在适用于macOS系统的Qfinder Pro、Qsync和QVPN Device Client中发现了一个路径遍历漏洞（CVE-2025-53594）。虽然该漏洞因需要本地用户账户才能利用，严重性评级较低（CVSS 4.4），但仍存在风险。威联通在公告中提醒称：“若本地攻击者获取用户账户，可利用此漏洞读取意外文件或系统数据内容。”   
   
 已修复版本包括：  
   
@@ -59,12 +59,12 @@ Qfiling路径遍历漏洞（CVE-2025-59384，CVSS评分8.1）影响威联通自�
 这两个漏洞均已在License Center 2.0.36版本中修复。威联通建议所有用户立即登录QTS或QuTS hero管理员界面，打开App Center并应用所有可用更新，保护设备安全。  
   
   
- 开源  
+ 开源  
 卫士试用地址：  
 https://oss.qianxin.com/#/login  
   
   
- 代码卫士试用地址：https://sast.qianxin.com/#/login  
+ 代码卫士试用地址：https://sast.qianxin.com/#/login  
   
   
   
@@ -112,9 +112,9 @@ https://securityonline.info/qnap-patches-high-severity-sql-injection-and-path-tr
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
   
-   
+   
 觉得不错，就点个 “  
 在看  
 ” 或 "  

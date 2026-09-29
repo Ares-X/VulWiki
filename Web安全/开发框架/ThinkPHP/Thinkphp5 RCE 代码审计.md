@@ -8,7 +8,7 @@ source: "MrWQ/vulnerability-paper"
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/4G6mKlJxHP_aunfgzKBQkg)
 
-               
+               
 
 **前言**
 
@@ -78,9 +78,9 @@ Routecheck方法：
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/yYePiaZj2cHibyJSrMiayWWTARicQ4qu1TXzMa8rO8JhnIBT5nnPa5MeQctMxpWAH4hbCJuzZJaiazfibQHCKiaBca6oQ/640?wx_fmt=png)
 
-调用path()方法获取到url的pathinfo信息，返回path=” index/think\app/invokefunction” 
+调用path()方法获取到url的pathinfo信息，返回path=” index/think\app/invokefunction” 
 
-格式为模块名：index  
+格式为模块名：index  
 
 控制器名：think\app
 
@@ -98,15 +98,15 @@ Routecheck()方法载入路由，对比pathinfo以生成调度信息
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/yYePiaZj2cHibyJSrMiayWWTARicQ4qu1TXzNHZ4ZwQVYjiceQ1LSjwlwS7l1wpLiaCYu67fbRxg1Ce7nPQEHeCbL5UQ/640?wx_fmt=png)
 
-跟进parseURL，parseURL中调用了parseUrlPath来解析url，此时url= “index|think\app|invokefunction”。 parseurlPath将url解析为数组形式，$path:{“index”,”think\app”,”invokefunction”},分别为模块、控制器、操作
+跟进parseURL，parseURL中调用了parseUrlPath来解析url，此时url= “index|think\app|invokefunction”。 parseurlPath将url解析为数组形式，$path:{“index”,”think\app”,”invokefunction”},分别为模块、控制器、操作
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/yYePiaZj2cHibyJSrMiayWWTARicQ4qu1TXztYmlRA4NQRFvE2c5hhGO1LFXU0icKjuoLJ2VNLiakygBOvsQFs6VGucQ/640?wx_fmt=png)
 
-ParseURL对parseURLpath返回的数组$path进行模块、控制器、操作的解析，得到结果：模块$module = “index”  控制器$controller=”think\app”  操作 $action = “invokefunction”
+ParseURL对parseURLpath返回的数组$path进行模块、控制器、操作的解析，得到结果：模块$module = “index”  控制器$controller=”think\app”  操作 $action = “invokefunction”
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/yYePiaZj2cHibyJSrMiayWWTARicQ4qu1TXzvdRpgicbFCYHDzAkCUYHh5jF413hCIWraFOCwTuuLgAPkRxzX0SwEoQ/640?wx_fmt=png)
 
-随后对获取的信息进行路由封装，得到$route = {“index“,”think\app”,”invokefunction”}
+随后对获取的信息进行路由封装，得到$route = {“index“,”think\app”,”invokefunction”}
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/yYePiaZj2cHibyJSrMiayWWTARicQ4qu1TXzkhqKwBERIxmuuJlrm603nMHZIw2sia7paJ9wt4SrxYjR8ajPqsibRaBw/640?wx_fmt=png)
 
@@ -156,7 +156,7 @@ Exec方法：
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/yYePiaZj2cHibyJSrMiayWWTARicQ4qu1TXzib2cU4w58ib8jFYQFVewBFvHfgsEibmKpjFfhFMvZwQ4LDfZMI1iaPKGbw/640?wx_fmt=png)
 
-再次调用invokeargs()方法，成功调用call_user_func(system(“whoami”))达到远程代码执行的目的 
+再次调用invokeargs()方法，成功调用call_user_func(system(“whoami”))达到远程代码执行的目的 
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/yYePiaZj2cHibyJSrMiayWWTARicQ4qu1TXzUugmiaLrVqYz9mDBpDhE1iamyvX2uD9e4p1rTBJXuicFIJuz0tK104Vuw/640?wx_fmt=png)
 

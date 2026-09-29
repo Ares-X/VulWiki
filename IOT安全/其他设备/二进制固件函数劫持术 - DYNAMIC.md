@@ -84,7 +84,7 @@ Program Header 中保存有 Dynamic Segment 的相关结构体信息
 
 Program Header 结构体
 
-展开该结构体，可以找到 Dynamic 段在文件中的偏移量 0x140h 
+展开该结构体，可以找到 Dynamic 段在文件中的偏移量 0x140h 
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/3RhuVysG9Lfsb5hrumNFjJ5kgiazyavZ2jS65RNw7l4vXj3fIr7ibRKydKJWoENmy03mKbudL2wjxvbu9icyzibibpw/640?wx_fmt=png)
 
@@ -304,7 +304,7 @@ all: elf.h analyse_ph.c
 
 rand 函数的头文件是 stdlib.h
 
-编写 rand.c 
+编写 rand.c 
 
 ```
 #include<stdio.h>

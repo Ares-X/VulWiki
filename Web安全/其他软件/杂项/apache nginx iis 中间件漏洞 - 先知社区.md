@@ -521,7 +521,7 @@ cer asa cdx 都会当做asp文件解析
 
 漏洞原因:
 
-​ 当访问不存在文件时返回 404, 访问不存在短文件名时返回 400
+ 当访问不存在文件时返回 404, 访问不存在短文件名时返回 400
 
 [![](https://xzfile.aliyuncs.com/media/upload/picture/20201216100323-e072f796-3f42-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201216100323-e072f796-3f42-1.png)
 

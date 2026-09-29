@@ -58,7 +58,7 @@ Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
 Connection: close
 ```
 
-第二步：判断是否存在漏洞: 返回 200 并且包含 This response format is experimental.  It is likely to change in the future 可能存在，需要进一步的去读取 / etc/passwd 或者其他进行确认最终是否存在读取漏洞
+第二步：判断是否存在漏洞: 返回 200 并且包含 This response format is experimental.  It is likely to change in the future 可能存在，需要进一步的去读取 / etc/passwd 或者其他进行确认最终是否存在读取漏洞
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjcxRotctQ6trC30PIPRE0ibOniaWmgChzgtUvEhOTXqp5dNQe35hiaxuXHt8oojwu6EAXLLbY2JOMrmQ/640?wx_fmt=png)
 

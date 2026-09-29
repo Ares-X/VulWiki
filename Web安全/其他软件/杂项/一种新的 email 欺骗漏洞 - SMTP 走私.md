@@ -21,7 +21,7 @@ https://sec-consult.com/vulnerability-lab/responsible-disclosure-polic
 
 **SMTP 走私漏洞详情：**
 
-总的来说就是通过利用 SMTP 协议的解释差异，可以实现走私 / 发送伪造的电子邮件 ，且同时仍可通过 SPF 对齐检查。在此研究中，发现了两种类型的 SMTP 走私，即出站和入站。这些允许从数百万个域（例如 admin@outlook.com）向数百万个接收 SMTP 服务器（例如 Amazon、PayPal、eBay）发送伪造的电子邮件。
+总的来说就是通过利用 SMTP 协议的解释差异，可以实现走私 / 发送伪造的电子邮件 ，且同时仍可通过 SPF 对齐检查。在此研究中，发现了两种类型的 SMTP 走私，即出站和入站。这些允许从数百万个域（例如 admin@outlook.com）向数百万个接收 SMTP 服务器（例如 Amazon、PayPal、eBay）发送伪造的电子邮件。
 
 说 SMTP 走私漏洞前先提下 HTTP 走私漏洞，利用 HTTP 协议中请求和响应的解析和处理方式的不一致性。攻击者通过构造特定的恶意请求，以欺骗服务器和代理服务器，从而绕过安全机制，执行未经授权的操作。HTTP 请求走私漏洞通常涉及两个或多个 HTTP 请求的组合，攻击者可以利用 HTTP 报文中的头部或其他元数据来混淆和欺骗服务器或代理服务器的解析逻辑。如下图是 PortSwigger 对 http 请求走私的简单例子（https://portswigger.net/web-security/request-smuggling）：
 
@@ -43,40 +43,40 @@ https://sec-consult.com/vulnerability-lab/responsible-disclosure-polic
 
 我们在支持通过 SMTP 提交邮件的各电子邮件提供商注册电子邮件帐户（与 Tutanota 和 ProtonMail 不同），这个研究项目使用了以下提供商:
 
-*   outlook.com 
+*   outlook.com 
     
-*   gmail.com 
+*   gmail.com 
     
-*   gmx.net 
+*   gmx.net 
     
-*   icloud.com 
+*   icloud.com 
     
-*   zoho.com 
+*   zoho.com 
     
-*   fastmail.com 
+*   fastmail.com 
     
-*   runbox.com 
+*   runbox.com 
     
-*   startmail.com 
+*   startmail.com 
     
-*   mailbox.org 
+*   mailbox.org 
     
-*   aol.com 
+*   aol.com 
     
-*   yahoo.com 
+*   yahoo.com 
     
-*   web.de 
+*   web.de 
     
 
 通过向这些提供商的出站 SMTP 服务器发送电子邮件，并在入站 SMTP 分析服务器上接收，我们可以看到 SMTP 协议实现的初步差异。
 
 查看 SMTP 分析客户端后，可以立即看到一些 SMTP 产品与其他产品 “不同”。例如，以下是发送 DATA SMTP 命令后从电子邮件提供商收到的响应：
 
-*   -250 以 <CR><LF>.<CR><LF> 结束数据
+*   -250 以 <CR><LF>.<CR><LF> 结束数据
     
-*   -250 开始邮件输入；以 <CRLF>.<CRLF> 结束数据
+*   -250 开始邮件输入；以 <CRLF>.<CRLF> 结束数据
     
-*   -250 以 <CRLF>.<CRLF> 结尾并发送数据
+*   -250 以 <CRLF>.<CRLF> 结尾并发送数据
     
 
 这结果的 SMTP 走私漏洞测试来说并不理想
@@ -88,9 +88,9 @@ https://sec-consult.com/vulnerability-lab/responsible-disclosure-polic
 *   - 输入邮件，以 "." 结尾，一行一个
     
 
-这个就很有价值了，因不同的操作系统对 “行” 有不同的理解。Windows 上的 "." 行将通过两个回车换行符 (<CR><LF>.<CR><LF> 或 \r\n.\r\n) 进行分隔，而 Linux 上的 "." 行将通过两个换行符 (<LF>.<LF> 或 \n.\n) 进行分隔。
+这个就很有价值了，因不同的操作系统对 “行” 有不同的理解。Windows 上的 "." 行将通过两个回车换行符 (<CR><LF>.<CR><LF> 或 \r\n.\r\n) 进行分隔，而 Linux 上的 "." 行将通过两个换行符 (<LF>.<LF> 或 \n.\n) 进行分隔。
 
-因此，我们试着使用 <LF>.<LF> 来结束电子邮件的消息数据，如下
+因此，我们试着使用 <LF>.<LF> 来结束电子邮件的消息数据，如下
 
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/ESFRPeynAv6ZYkJ9rDERXHOYJEl9ia3tyCa2gOBcgq9wEsZaibZxEs9A1bumKuEqFgdgaf0iaydtgQiaPkMUic24ctg/640?wx_fmt=png&from=appmsg)
 
@@ -283,9 +283,9 @@ payloda 的可以用：
 <CR><LF>\x00.<CR><LF>  
 <CR><LF>.\x00<CR><LF>  
 使用不完整 CRLF 的数据结尾序列:  
-<LF> <LF>  
+<LF> <LF>  
 <CR><LF>.<CR>  
-<CR> <LF>  
+<CR> <LF>  
 消息头中的数据结尾序列等
 
 比如利用空字节结尾数据如下：  
@@ -351,17 +351,17 @@ Authentication-Results-Original: mx4.atos.net; dkim=none (message not signed)
 
 **简单统计了下：**  
 
-通过 **GMX 和 Ionos** 电子邮件服务进行 SMTP 走私允许来自大约 135 万个不同域的 SMTP 走私，且 MX 记录到 Ionos，以下这些 SPF 记录都允许_spf-eu.ionos.com 发送电子邮件
+通过 **GMX 和 Ionos** 电子邮件服务进行 SMTP 走私允许来自大约 135 万个不同域的 SMTP 走私，且 MX 记录到 Ionos，以下这些 SPF 记录都允许_spf-eu.ionos.com 发送电子邮件
 
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/ESFRPeynAv6ZYkJ9rDERXHOYJEl9ia3ty4oqBBDFfwoPqttSfaojpyHP9s0Sk2EW3NEetCJSsPczOlPicX7q9wlg/640?wx_fmt=png&from=appmsg)
 
-支持入站 SMTP 服务：**Fastmail , Runbox**，不过在对一些流行的电子邮件软件的默认配置进行测试后，发现 Postfix 和 Sendmail 可以走私。从全球来看涉及到很多很多。
+支持入站 SMTP 服务：**Fastmail , Runbox**，不过在对一些流行的电子邮件软件的默认配置进行测试后，发现 Postfix 和 Sendmail 可以走私。从全球来看涉及到很多很多。
 
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/ESFRPeynAv6ZYkJ9rDERXHOYJEl9ia3tyO6wiajOvLQYN58KkNCGJAiaS1kOmQLtDnhtMjXBSbWibsoQUj0EksypSA/640?wx_fmt=png&from=appmsg)
 
 **微软 Exchange：**
 
-这两个巨头影响就更大了，涉及域名过百万，还有些价值非常高的目标，如 microsoft .com、msn.com、github.com、outlook.com、office365.com、openai.com 等，还有客户的域，如 tesla.com、mastercard.com、nike.com 等，在 shodan 上简单搜了下设计 postifix 的，如下：
+这两个巨头影响就更大了，涉及域名过百万，还有些价值非常高的目标，如 microsoft .com、msn.com、github.com、outlook.com、office365.com、openai.com 等，还有客户的域，如 tesla.com、mastercard.com、nike.com 等，在 shodan 上简单搜了下设计 postifix 的，如下：
 
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/ESFRPeynAv6ZYkJ9rDERXHOYJEl9ia3typlIv2PPKPv1FibUQWKd0HzKmcZNJuCKn7ltSOufFtgJ2cSxjfb1qicNA/640?wx_fmt=png&from=appmsg)
 
@@ -369,73 +369,73 @@ Authentication-Results-Original: mx4.atos.net; dkim=none (message not signed)
 
 思科安全电子邮件网关及其云对应产品思科安全电子邮件云网关均 “易受攻击”。简单通过 DNS 被动数据库里找了下，大概 4 万条涉及的域名，其实中 Alexa TOP 1000 中有至少以下 35 个，这还是不考虑没有 MX 记录的服务，更没找 SMTP 服务器：
 
-*   amazon.com 
+*   amazon.com 
     
-*   amazon.co.jp 
+*   amazon.co.jp 
     
-*   amazon.co.uk 
+*   amazon.co.uk 
     
-*   amazon.it 
+*   amazon.it 
     
-*   amazon.fr 
+*   amazon.fr 
     
-*   marriott.com 
+*   marriott.com 
     
-*   cisco.com 
+*   cisco.com 
     
-*   amazon.co.jp 
+*   amazon.co.jp 
     
-*   amazon.in 
+*   amazon.in 
     
-*   paypal.com 
+*   paypal.com 
     
-*   amazon.ca 
+*   amazon.ca 
     
-*   goodreads.com 
+*   goodreads.com 
     
-*   webex.com 
+*   webex.com 
     
-*   custhelp.com 
+*   custhelp.com 
     
-*   amazon.in 
+*   amazon.in 
     
-*   imdb.com 
+*   imdb.com 
     
-*   intuit.com 
+*   intuit.com 
     
-*   ndtv.com 
+*   ndtv.com 
     
-*   amazon.cn 
+*   amazon.cn 
     
-*   makemytrip.com 
+*   makemytrip.com 
     
-*   amazon.com.au 
+*   amazon.com.au 
     
-*   amazon.com 
+*   amazon.com 
     
-*   amazonaws.com 
+*   amazonaws.com 
     
-*   primevideo.com 
+*   primevideo.com 
     
-*   amazon.es 
+*   amazon.es 
     
-*   irs.gov 
+*   irs.gov 
     
-*   amazon.com.br 
+*   amazon.com.br 
     
-*   aastocks.com 
+*   aastocks.com 
     
-*   ebay.com 
+*   ebay.com 
     
-*   amazon.de 
+*   amazon.de 
     
-*   ebay.de 
+*   ebay.de 
     
-*   ebay.co.uk 
+*   ebay.co.uk 
     
-*   ebay.com.au 
+*   ebay.com.au 
     
-*   mayoclinic.org 
+*   mayoclinic.org 
     
 *   audible.com
     

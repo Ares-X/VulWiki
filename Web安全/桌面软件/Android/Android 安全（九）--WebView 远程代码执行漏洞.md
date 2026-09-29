@@ -12,35 +12,35 @@ source: "MrWQ/vulnerability-paper"
 1\. WebView 远程代码执行漏洞描述
 ----------------------
 
-      Android API level 16 以及之前的版本存在远程代码执行安全漏洞，该漏洞源于程序没有正确限制使用 WebView.addJavascriptInterface 方法，远程攻击者可通过使用 Java Reflection API 利用该漏洞执行任意 Java 对象的方法，简单的说就是通过 addJavascriptInterface 给 WebView 加入一个 JavaScript 桥接接口，JavaScript 通过调用这个接口可以直接操作本地的 JAVA 接口。
+      Android API level 16 以及之前的版本存在远程代码执行安全漏洞，该漏洞源于程序没有正确限制使用 WebView.addJavascriptInterface 方法，远程攻击者可通过使用 Java Reflection API 利用该漏洞执行任意 Java 对象的方法，简单的说就是通过 addJavascriptInterface 给 WebView 加入一个 JavaScript 桥接接口，JavaScript 通过调用这个接口可以直接操作本地的 JAVA 接口。
 
 2\. WebView 远程代码执行影响范围
 ----------------------
 
-      Android API level 小于 17 (即 Android 4.2 之前的系统版本)  
+      Android API level 小于 17 (即 Android 4.2 之前的系统版本)  
 
 3.WebView 远程代码执行漏洞详情
 --------------------
 
 ### 1) WebView 远程代码执行漏洞位置:
 
-      WebView.addJavascriptInterface(Object obj, String interfaceName)   
+      WebView.addJavascriptInterface(Object obj, String interfaceName)   
 
 ### 2)WebView 远程代码执行漏洞触发前提条件：
 
-      使用 addJavascriptInterface 方法注册可供 JavaScript 调用的 Java 对象；  
-      使用 WebView 加载外部网页或者本地网页；  
-      Android 系统版本低于 4.2；  
+      使用 addJavascriptInterface 方法注册可供 JavaScript 调用的 Java 对象；  
+      使用 WebView 加载外部网页或者本地网页；  
+      Android 系统版本低于 4.2；  
 
 ### 3) WebView 远程代码执行漏洞原理：
 
-      Android 系统通过 WebView.addJavascriptInterface 方法注册可供 JavaScript 调用的 Java 对象，以用于增强 JavaScript 的功能。但是系统并没有对注册 Java 类的方法调用的限制。导致攻击者可以利用反射机制调用未注册的其它任何 Java 类，最终导致 JavaScript 能力的无限增强。攻击者利用该漏洞可以根据客户端能力为所欲为。  
+      Android 系统通过 WebView.addJavascriptInterface 方法注册可供 JavaScript 调用的 Java 对象，以用于增强 JavaScript 的功能。但是系统并没有对注册 Java 类的方法调用的限制。导致攻击者可以利用反射机制调用未注册的其它任何 Java 类，最终导致 JavaScript 能力的无限增强。攻击者利用该漏洞可以根据客户端能力为所欲为。  
 
 4\. WebView 远程代码执行漏洞 POC
 ------------------------
 
-      1) 利用 addJavascriptInterface 方法注册可供 JavaScript 调用的 java 对象 “injectedObj”，利用反射机制调用 Android API sendTextMessage 来发送短信。  
-      java 代码：  
+      1) 利用 addJavascriptInterface 方法注册可供 JavaScript 调用的 java 对象 “injectedObj”，利用反射机制调用 Android API sendTextMessage 来发送短信。  
+      java 代码：  
 
 ```
 mWebView = new WebView(this);
@@ -49,7 +49,7 @@ mWebView.addJavascriptInterface(this, "injectedObj");
 mWebView.loadUrl("file:///android\_asset/www/index.html");
 ```
 
-      EXP 的 JavaScript 代码：  
+      EXP 的 JavaScript 代码：  
 
 ```
 <html>
@@ -62,8 +62,8 @@ mWebView.loadUrl("file:///android\_asset/www/index.html");
 </html>
 ```
 
-      2) 利用 addJavascriptInterface 方法注册可供 JavaScript 调用的 java 对象 “injectedObj”，利用反射机制调用 Android API getRuntime 执行 shell 命令：  
-      EXP 的 JavaScript 代码：  
+      2) 利用 addJavascriptInterface 方法注册可供 JavaScript 调用的 java 对象 “injectedObj”，利用反射机制调用 Android API getRuntime 执行 shell 命令：  
+      EXP 的 JavaScript 代码：  
 
 ```
 <html>
@@ -81,10 +81,10 @@ mWebView.loadUrl("file:///android\_asset/www/index.html");
 </html>
 ```
 
-      利用后的执行结果：   
+      利用后的执行结果：   
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/p5qELRDe5icnRBnle9hbcfwiaUrkxtHoQbDjZfVn0fCOXks02TnNNTXNKXo8niaY13VsuMhYypFLJ6m9CxviaABV1A/640?wx_fmt=jpeg)  
-      3) 利用 addJavascriptInterface 方法注册可供 JavaScript 调用的 java 对象 “injectedObj”，利用反射机制调用 Android API getRuntime 执行 shell 命令，达到反弹一个手机端的 shell 到远程控制端的目的：  
-      EXP 的 JavaScript 代码：  
+      3) 利用 addJavascriptInterface 方法注册可供 JavaScript 调用的 java 对象 “injectedObj”，利用反射机制调用 Android API getRuntime 执行 shell 命令，达到反弹一个手机端的 shell 到远程控制端的目的：  
+      EXP 的 JavaScript 代码：  
 
 ```
 <html>
@@ -100,10 +100,10 @@ mWebView.loadUrl("file:///android\_asset/www/index.html");
 </html>
 ```
 
-      执行后的结果：  
- ![](https://mmbiz.qpic.cn/mmbiz_jpg/p5qELRDe5icnRBnle9hbcfwiaUrkxtHoQbCwQFtrwUpmsibaFo9tPchibsUPGIlE7MUOHG3BClF78NuCFVcicvtia7xA/640?wx_fmt=jpeg)  
-      4) 利用 addJavascriptInterface 方法注册可供 JavaScript 调用的 java 对象 “injectedObj”，利用反射机制调用 Android API getRuntime 执行 shell 命令进行挂马：a 安装木马应用 APK, b 安装执行 ELF 可执行程序；  
-      简单的安装发送短信木马 APK，EXP 的 JavaScript 代码：  
+      执行后的结果：  
+ ![](https://mmbiz.qpic.cn/mmbiz_jpg/p5qELRDe5icnRBnle9hbcfwiaUrkxtHoQbCwQFtrwUpmsibaFo9tPchibsUPGIlE7MUOHG3BClF78NuCFVcicvtia7xA/640?wx_fmt=jpeg)  
+      4) 利用 addJavascriptInterface 方法注册可供 JavaScript 调用的 java 对象 “injectedObj”，利用反射机制调用 Android API getRuntime 执行 shell 命令进行挂马：a 安装木马应用 APK, b 安装执行 ELF 可执行程序；  
+      简单的安装发送短信木马 APK，EXP 的 JavaScript 代码：  
 
 ```
 <html>
@@ -122,12 +122,12 @@ mWebView.loadUrl("file:///android\_asset/www/index.html");
 </html>
 ```
 
-      由下图可得知我们已经拼接成了一个 APK 程序，并伪装成一张 png 图片：  
- ![](https://mmbiz.qpic.cn/mmbiz_jpg/p5qELRDe5icnRBnle9hbcfwiaUrkxtHoQbHYfcViaEkMzWicEdzHAjjRCcyLuIqNlN77FYLtpjtalbv0a1BW8nJEhw/640?wx_fmt=jpeg)  
-      由下图可知，我们已经成功安装 fake.png APK 程序：  
- ![](https://mmbiz.qpic.cn/mmbiz_jpg/p5qELRDe5icnRBnle9hbcfwiaUrkxtHoQbCwj4qzZ5uERCzqSVt75Nv0YGrVtfXIm3gz5pGhr8Ut5Zzu5wtYHy4A/640?wx_fmt=jpeg)  
-      例如网上流行的 Androrat 远程控制程序，攻击者利用上述漏洞即可简单的安装此远程控制木马应用 APK 即可达到远程控制用户手机的目的。     
-      利用漏洞拼接可执行 ELF 程序，并执行该 ELF 程序达到为所欲为的目的，博文 Abusing WebView JavaScript Bridges【3】还实现了在非 root 情况下利用 ELF 可执行程序偷取 sdcard 的文件的 POC，由此可见，该漏洞的危害性极大：  
+      由下图可得知我们已经拼接成了一个 APK 程序，并伪装成一张 png 图片：  
+ ![](https://mmbiz.qpic.cn/mmbiz_jpg/p5qELRDe5icnRBnle9hbcfwiaUrkxtHoQbHYfcViaEkMzWicEdzHAjjRCcyLuIqNlN77FYLtpjtalbv0a1BW8nJEhw/640?wx_fmt=jpeg)  
+      由下图可知，我们已经成功安装 fake.png APK 程序：  
+ ![](https://mmbiz.qpic.cn/mmbiz_jpg/p5qELRDe5icnRBnle9hbcfwiaUrkxtHoQbCwj4qzZ5uERCzqSVt75Nv0YGrVtfXIm3gz5pGhr8Ut5Zzu5wtYHy4A/640?wx_fmt=jpeg)  
+      例如网上流行的 Androrat 远程控制程序，攻击者利用上述漏洞即可简单的安装此远程控制木马应用 APK 即可达到远程控制用户手机的目的。     
+      利用漏洞拼接可执行 ELF 程序，并执行该 ELF 程序达到为所欲为的目的，博文 Abusing WebView JavaScript Bridges【3】还实现了在非 root 情况下利用 ELF 可执行程序偷取 sdcard 的文件的 POC，由此可见，该漏洞的危害性极大：  
 EXP 的 JavaScript 代码：  
 
 ```
@@ -148,31 +148,31 @@ EXP 的 JavaScript 代码：
 </html>
 ```
 
-      “testBin” 文件已拼接生成，如下图所示：   
+      “testBin” 文件已拼接生成，如下图所示：   
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/p5qELRDe5icnRBnle9hbcfwiaUrkxtHoQbPz9Cm82Y670WnoLDvZ7bx587UTgI6c8TSvibWG573UL710d5tl8siaGA/640?wx_fmt=jpeg)  
 
-      执行之后的结果如下：
+      执行之后的结果如下：
 
- ![](https://mmbiz.qpic.cn/mmbiz_jpg/p5qELRDe5icnRBnle9hbcfwiaUrkxtHoQbULX3HXpLI8petia1EkZSqibPe3Rnuib68pLwlddajshLrjH3SXpmACFaA/640?wx_fmt=jpeg)
+ ![](https://mmbiz.qpic.cn/mmbiz_jpg/p5qELRDe5icnRBnle9hbcfwiaUrkxtHoQbULX3HXpLI8petia1EkZSqibPe3Rnuib68pLwlddajshLrjH3SXpmACFaA/640?wx_fmt=jpeg)
 
 5\. WebView 远程代码执行漏洞修复建议
 ------------------------
 
 ### 1\. API Level 等于或低于 17 的 Android 系统【4】
 
-      出于安全考虑，为了防止 Java 层的函数被随便调用，Google 在 4.2 版本之后，规定允许被调用的函数必须以 @JavascriptInterface 进行注解，所以如果某应用依赖的 API Level 为 17 或者以上，就不会受该问题的影响（注：Android 4.2 中 API Level 小于 17 的应用也会受影响）。
+      出于安全考虑，为了防止 Java 层的函数被随便调用，Google 在 4.2 版本之后，规定允许被调用的函数必须以 @JavascriptInterface 进行注解，所以如果某应用依赖的 API Level 为 17 或者以上，就不会受该问题的影响（注：Android 4.2 中 API Level 小于 17 的应用也会受影响）。
 
 ### 2\. API Level 等于或低于 17 的 Android 系统
 
-      建议不要使用 addJavascriptInterface 接口，以免带来不必要的安全隐患。  
-      如果一定要使用 addJavascriptInterface 接口:  
-      1) 如果使用 HTTPS 协议加载 URL，应进行证书校验防止访问的页面被篡改挂马；  
-      2) 如果使用 HTTP 协议加载 URL，应进行白名单过滤、完整性校验等防止访问的页面被篡改；  
-      3) 如果加载本地 Html，应将 html 文件内置在 APK 中，以及进行对 html 页面完整性的校验；  
+      建议不要使用 addJavascriptInterface 接口，以免带来不必要的安全隐患。  
+      如果一定要使用 addJavascriptInterface 接口:  
+      1) 如果使用 HTTPS 协议加载 URL，应进行证书校验防止访问的页面被篡改挂马；  
+      2) 如果使用 HTTP 协议加载 URL，应进行白名单过滤、完整性校验等防止访问的页面被篡改；  
+      3) 如果加载本地 Html，应将 html 文件内置在 APK 中，以及进行对 html 页面完整性的校验；  
 
 ### 3\. 移除 Android 系统内部的默认内置接口
 
-      同时，在 2014 年发现在 Android 系统中 webkit 中默认内置的一个 searchBoxJavaBridge\_ 接口同时存在远程代码执行漏洞，该漏洞公布于 CVE-2014-1939\[7\], 建议开发者通过以下方式移除该 Javascript 接口:    
+      同时，在 2014 年发现在 Android 系统中 webkit 中默认内置的一个 searchBoxJavaBridge\_ 接口同时存在远程代码执行漏洞，该漏洞公布于 CVE-2014-1939\[7\], 建议开发者通过以下方式移除该 Javascript 接口:    
 
 ```
 removeJavascriptInterface("searchBoxJavaBridge\_")

@@ -20,7 +20,7 @@ cve: "CVE-2022-28571"
 起因是我想复现D-link DIR882 的那几个漏洞 比如：CVE-2021-45998， 但当我抓包以后发现DIR882 对包的检查很严格，每个请求的AUTH好像只能请求一次，试了一下发现漏洞确实存在，但当我想弹个shell回来的时候出了点问题，我用老一套命令
 
 ```
-telnetd -l /bin/sh -p 2333  
+telnetd -l /bin/sh -p 2333  
 
 ```
 
@@ -57,185 +57,185 @@ telnetd -l /bin/sh -p 2333
 我们可以发现sub_465960获取了uname, 这说明系统的用户名是`dlinkrouter` 加上后面的引用，我们就可以找到telnetd的调用过程了  
 
 ```
- login();                                    // readusername  
-    do  
-    {  
-      if ( *(_DWORD *)(_stdin + 72) )  
-      {  
-        v11 = *(unsigned __int8 **)(_stdin + 16);  
-        if ( (unsigned int)v11 < *(_DWORD *)(_stdin + 24) )  
-        {  
-          v12 = *v11;  
-          *(_DWORD *)(_stdin + 16) = v11 + 1;  
-          goto LABEL_27;  
-        }  
-        v13 = (int (*)(void))&_fgetc_unlocked;  
-      }  
-      else  
-      {  
-        v13 = (int (*)(void))&fgetc;  
-      }  
-      v12 = v13();  
-      if ( v12 == -1 )  
-        goto LABEL_67;  
+ login();                                    // readusername  
+    do  
+    {  
+      if ( *(_DWORD *)(_stdin + 72) )  
+      {  
+        v11 = *(unsigned __int8 **)(_stdin + 16);  
+        if ( (unsigned int)v11 < *(_DWORD *)(_stdin + 24) )  
+        {  
+          v12 = *v11;  
+          *(_DWORD *)(_stdin + 16) = v11 + 1;  
+          goto LABEL_27;  
+        }  
+        v13 = (int (*)(void))&_fgetc_unlocked;  
+      }  
+      else  
+      {  
+        v13 = (int (*)(void))&fgetc;  
+      }  
+      v12 = v13();  
+      if ( v12 == -1 )  
+        goto LABEL_67;  
 LABEL_27:  
-      if ( v12 == 10 )  
-      {  
-        if ( !--v10 )  
-          goto LABEL_67;  
-        goto LABEL_20;  
-      }  
-    }  
-    while ( isspace(v12) );  
-    username[0] = v12;  
-    if ( !fgets(&username[1], 30, stdin) || (v14 = &username[1], !strchr(&username[1], 10)) )  
+      if ( v12 == 10 )  
+      {  
+        if ( !--v10 )  
+          goto LABEL_67;  
+        goto LABEL_20;  
+      }  
+    }  
+    while ( isspace(v12) );  
+    username[0] = v12;  
+    if ( !fgets(&username[1], 30, stdin) || (v14 = &username[1], !strchr(&username[1], 10)) )  
 LABEL_67:  
-      exit(1);  
-    while ( isgraph((unsigned __int8)*v14) )  
-      ++v14;  
-    *v14 = 0;  
+      exit(1);  
+    while ( isgraph((unsigned __int8)*v14) )  
+      ++v14;  
+    *v14 = 0;  
 LABEL_37:  
-    user_struct = getpwnam(username);           // 从密码文件中取得指定账号的数据  
-                                                // #include <sys/types.h>  
-                                                // #include <pwd.h>  
-                                                // struct passwd  
-                                                // {  
-                                                //   char *pw_name;                /* 用户登录名 */  
-                                                //   char *pw_passwd;              /* 密码(加密后) */  
-                                                //   __uid_t pw_uid;               /* 用户ID */  
-                                                //   __gid_t pw_gid;               /* 组ID */  
-                                                //   char *pw_gecos;               /* 详细用户名 */  
-                                                //   char *pw_dir;                 /* 用户目录 */  
-                                                //   char *pw_shell;               /* Shell程序名 */  
-                                                // };  
-                                                //   
-    pw_name = user_struct;  
-    if ( !user_struct )  
-    {  
-      strcpy(username, "UNKNOWN");  
-      goto LABEL_49;  
-    }  
-    v17 = **(unsigned __int8 **)(user_struct + 4);  
-    if ( v17 != 0x21 && v17 != 0x2A )  
-    {  
-      if ( (v5 & 1) != 0 )  
-        goto LABEL_53;  
-      if ( *(_DWORD *)(pw_name + 8) )  
-        goto LABEL_82;  
-      v26 = "/etc/securetty";  
-      v18 = (_DWORD *)sub_463D20("/etc/securetty", sub_4063C8);  
-      while ( sub_463DE4(v18, &v26, 459009, "# \t") && strcmp(v26, dword_485294) )  
-        v26 = 0;  
-      sub_463D74(v18);  
-      if ( v26 )  
-      {  
+    user_struct = getpwnam(username);           // 从密码文件中取得指定账号的数据  
+                                                // #include <sys/types.h>  
+                                                // #include <pwd.h>  
+                                                // struct passwd  
+                                                // {  
+                                                //   char *pw_name;                /* 用户登录名 */  
+                                                //   char *pw_passwd;              /* 密码(加密后) */  
+                                                //   __uid_t pw_uid;               /* 用户ID */  
+                                                //   __gid_t pw_gid;               /* 组ID */  
+                                                //   char *pw_gecos;               /* 详细用户名 */  
+                                                //   char *pw_dir;                 /* 用户目录 */  
+                                                //   char *pw_shell;               /* Shell程序名 */  
+                                                // };  
+                                                //   
+    pw_name = user_struct;  
+    if ( !user_struct )  
+    {  
+      strcpy(username, "UNKNOWN");  
+      goto LABEL_49;  
+    }  
+    v17 = **(unsigned __int8 **)(user_struct + 4);  
+    if ( v17 != 0x21 && v17 != 0x2A )  
+    {  
+      if ( (v5 & 1) != 0 )  
+        goto LABEL_53;  
+      if ( *(_DWORD *)(pw_name + 8) )  
+        goto LABEL_82;  
+      v26 = "/etc/securetty";  
+      v18 = (_DWORD *)sub_463D20("/etc/securetty", sub_4063C8);  
+      while ( sub_463DE4(v18, &v26, 459009, "# \t") && strcmp(v26, dword_485294) )  
+        v26 = 0;  
+      sub_463D74(v18);  
+      if ( v26 )  
+      {  
 LABEL_82:  
-        if ( **(_BYTE **)(pw_name + 4) )        // pw_passwd  
-        {  
+        if ( **(_BYTE **)(pw_name + 4) )        // pw_passwd  
+        {  
 LABEL_49:  
-          if ( !sub_45D554(pw_name) )  
-            goto LABEL_50;  
-        }  
+          if ( !sub_45D554(pw_name) )  
+            goto LABEL_50;  
+        }  
 LABEL_53:  
-        alarm(0);  
-        if ( v4 || access("/etc/nologin", 0) )  
-        {  
-          fchown(0, *(_DWORD *)(pw_name + 8), *(_DWORD *)(pw_name + 12));  
-          fchmod(0, 384);  
-          sub_45C9AC(pw_name);  
-          v22 = *(const char **)(pw_name + 24);  
-          if ( !v22 || !*v22 )  
-            v22 = "/bin/sh";  
-          sub_465A64(v22, (v5 & 4) == 0, 1, pw_name);  
-          v23 = open("/etc/motd", 0);  
-          if ( v23 >= 0 )  
-          {  
-            fflush(stdout);  
-            sub_407824(v23, 1);  
-            close(v23);  
-          }  
-          if ( !*(_DWORD *)(pw_name + 8) )  
-            syslog(6, "root login%s", v8);  
-          signal(14, 0);  
-          signal(2, 0);  
-          if ( v3 )  
-            v24 = *(const char **)(pw_name + 24);  
-          else  
-            v24 = "/usr/bin/cli";  
-          sub_465810(v24, 1, 0, 0);  
-        }  
-        v19 = (_DWORD *)sub_4063C8((int)"/etc/nologin");  
-        if ( !v19 )  
-        {  
-          puts("\r\nSystem closed for routine maintenance\r");  
-          goto LABEL_67;  
-        }  
-        while ( 2 )  
-        {  
-          if ( v19[18] )  
-          {  
-            v21 = (unsigned __int8 *)v19[4];  
-            if ( (unsigned int)v21 < v19[6] )  
-            {  
-              v20 = *v21;  
-              v19[4] = v21 + 1;  
+        alarm(0);  
+        if ( v4 || access("/etc/nologin", 0) )  
+        {  
+          fchown(0, *(_DWORD *)(pw_name + 8), *(_DWORD *)(pw_name + 12));  
+          fchmod(0, 384);  
+          sub_45C9AC(pw_name);  
+          v22 = *(const char **)(pw_name + 24);  
+          if ( !v22 || !*v22 )  
+            v22 = "/bin/sh";  
+          sub_465A64(v22, (v5 & 4) == 0, 1, pw_name);  
+          v23 = open("/etc/motd", 0);  
+          if ( v23 >= 0 )  
+          {  
+            fflush(stdout);  
+            sub_407824(v23, 1);  
+            close(v23);  
+          }  
+          if ( !*(_DWORD *)(pw_name + 8) )  
+            syslog(6, "root login%s", v8);  
+          signal(14, 0);  
+          signal(2, 0);  
+          if ( v3 )  
+            v24 = *(const char **)(pw_name + 24);  
+          else  
+            v24 = "/usr/bin/cli";  
+          sub_465810(v24, 1, 0, 0);  
+        }  
+        v19 = (_DWORD *)sub_4063C8((int)"/etc/nologin");  
+        if ( !v19 )  
+        {  
+          puts("\r\nSystem closed for routine maintenance\r");  
+          goto LABEL_67;  
+        }  
+        while ( 2 )  
+        {  
+          if ( v19[18] )  
+          {  
+            v21 = (unsigned __int8 *)v19[4];  
+            if ( (unsigned int)v21 < v19[6] )  
+            {  
+              v20 = *v21;  
+              v19[4] = v21 + 1;  
 LABEL_57:  
-              if ( v20 == 10 )  
-                LOBYTE(v20) = 13;  
-              sub_407048(v20);  
-              continue;  
-            }  
-            v20 = ((int (__fastcall *)(_DWORD *))_fgetc_unlocked)(v19);  
-          }  
-          else  
-          {  
-            v20 = ((int (__fastcall *)(_DWORD *))fgetc)(v19);  
-          }  
-          break;  
-        }  
-        if ( v20 == -1 )  
-        {  
-          fflush(stdout);  
-          fclose(v19);  
-          goto LABEL_67;  
-        }  
-        goto LABEL_57;  
-      }  
-    }
+              if ( v20 == 10 )  
+                LOBYTE(v20) = 13;  
+              sub_407048(v20);  
+              continue;  
+            }  
+            v20 = ((int (__fastcall *)(_DWORD *))_fgetc_unlocked)(v19);  
+          }  
+          else  
+          {  
+            v20 = ((int (__fastcall *)(_DWORD *))fgetc)(v19);  
+          }  
+          break;  
+        }  
+        if ( v20 == -1 )  
+        {  
+          fflush(stdout);  
+          fclose(v19);  
+          goto LABEL_67;  
+        }  
+        goto LABEL_57;  
+      }  
+    }
 ```
 
 ```
-BOOL __fastcall sub_45D554(int a1)  
+BOOL __fastcall sub_45D554(int a1)  
 {  
-  const char *pw_passwd; // $s2  
-  BOOL v2; // $s0  
-  int v3; // $s1  
-  int v4; // $s3  
-  int v5; // $v0  
+  const char *pw_passwd; // $s2  
+  BOOL v2; // $s0  
+  int v3; // $s1  
+  int v4; // $s3  
+  int v5; // $v0  
   
-  if ( a1 )  
-  {  
-    pw_passwd = *(const char **)(a1 + 4);  
-    v2 = 1;  
-    if ( !*pw_passwd )  
-      return v2;  
-  }  
-  else  
-  {  
-    pw_passwd = "aa";  
-  }  
-  v3 = sub_468334(0, (int)"Password: ");  
-  v2 = 0;  
-  if ( v3 )  
-  {  
-    v4 = sub_46521C();                          // v4 = enc(password,slat)  
-                                                // slat= "aa" || user->uid  
-    v2 = strcmp(v4, pw_passwd) == 0;  
-    free(v4);  
-    v5 = strlen(v3);  
-    memset(v3, 0, v5);  
-  }  
-  return v2;  
+  if ( a1 )  
+  {  
+    pw_passwd = *(const char **)(a1 + 4);  
+    v2 = 1;  
+    if ( !*pw_passwd )  
+      return v2;  
+  }  
+  else  
+  {  
+    pw_passwd = "aa";  
+  }  
+  v3 = sub_468334(0, (int)"Password: ");  
+  v2 = 0;  
+  if ( v3 )  
+  {  
+    v4 = sub_46521C();                          // v4 = enc(password,slat)  
+                                                // slat= "aa" || user->uid  
+    v2 = strcmp(v4, pw_passwd) == 0;  
+    free(v4);  
+    v5 = strlen(v3);  
+    memset(v3, 0, v5);  
+  }  
+  return v2;  
 }  
 
 ```
@@ -256,63 +256,63 @@ BOOL __fastcall sub_45D554(int a1)
 使用登录密码拼上那串字符我们就可以登录进Dlink 882的Telnet，进去之后发现是一个cli. 分析busybox我们发现  
 
 ```
- if ( !*(_DWORD *)(pw_name + 8) )  
-            syslog(6, "root login%s", v8);  
-          signal(14, 0);  
-          signal(2, 0);  
-          if ( v3 )  
-            v24 = *(const char **)(pw_name + 24);  
-          else  
-            v24 = "/usr/bin/cli";  
-          sub_465810(v24, 1, 0, 0);  
-        }
+ if ( !*(_DWORD *)(pw_name + 8) )  
+            syslog(6, "root login%s", v8);  
+          signal(14, 0);  
+          signal(2, 0);  
+          if ( v3 )  
+            v24 = *(const char **)(pw_name + 24);  
+          else  
+            v24 = "/usr/bin/cli";  
+          sub_465810(v24, 1, 0, 0);  
+        }
 ```
 
 是`/usr/bin/cli` ,上了个大当。我们继续分析cli
 
 ```
-int __fastcall cmd_ping(int a1, const char *a2, _DWORD *a3, int a4)  
+int __fastcall cmd_ping(int a1, const char *a2, _DWORD *a3, int a4)  
 {  
-  int v8; // $s0  
-  int v9; // $s1  
-  char v11[128]; // [sp+18h] [-80h] BYREF  
+  int v8; // $s0  
+  int v9; // $s1  
+  char v11[128]; // [sp+18h] [-80h] BYREF  
   
-  memset(v11, 0, sizeof(v11));  
-  v8 = snprintf(v11, 128, "%s ", a2);  
-  if ( a4 > 0 )  
-  {  
-    v9 = 0;  
-    do  
-    {  
-      ++v9;  
-      v8 += snprintf(&v11[v8], 128 - v8, "%s ", *a3++);  
-    }  
-    while ( v9 != a4 );  
-  }  
-  systemCmd(a1, (int)v11);  
-  return 0;  
+  memset(v11, 0, sizeof(v11));  
+  v8 = snprintf(v11, 128, "%s ", a2);  
+  if ( a4 > 0 )  
+  {  
+    v9 = 0;  
+    do  
+    {  
+      ++v9;  
+      v8 += snprintf(&v11[v8], 128 - v8, "%s ", *a3++);  
+    }  
+    while ( v9 != a4 );  
+  }  
+  systemCmd(a1, (int)v11);  
+  return 0;  
 }  
-int __fastcall systemCmd(int a1, int a2)  
+int __fastcall systemCmd(int a1, int a2)  
 {  
-  int v4; // $s2  
-  int v5; // $s0  
-  char v7[256]; // [sp+18h] [-100h] BYREF  
+  int v4; // $s2  
+  int v5; // $s0  
+  char v7[256]; // [sp+18h] [-100h] BYREF  
   
-  v4 = -1;  
-  memset(v7, 0, sizeof(v7));  
-  if ( a2 )  
-  {  
-    v5 = popen(a2, "r");  
-    if ( v5 )  
-    {  
-      while ( fgets(v7, 256, v5) )  
-        cli_bufprint(a1, "%s", v7);  
-      v4 = 0;  
-      cli_print(a1, "  ", v7);  
-      pclose(v5);  
-    }  
-  }  
-  return v4;  
+  v4 = -1;  
+  memset(v7, 0, sizeof(v7));  
+  if ( a2 )  
+  {  
+    v5 = popen(a2, "r");  
+    if ( v5 )  
+    {  
+      while ( fgets(v7, 256, v5) )  
+        cli_bufprint(a1, "%s", v7);  
+      v4 = 0;  
+      cli_print(a1, "  ", v7);  
+      pclose(v5);  
+    }  
+  }  
+  return v4;  
 }  
 
 ```
@@ -324,7 +324,7 @@ int __fastcall systemCmd(int a1, int a2)
 后面发现如果要用telnetd反弹shell的话，在Dlink中命令要这样拼
 
 ```
-telnetd -l /bin/sh -p 2333 -b 0.0.0.0  
+telnetd -l /bin/sh -p 2333 -b 0.0.0.0  
 
 ```
 
@@ -339,9 +339,9 @@ end
 
 招新小广告
 
-ChaMd5 Venom 招收大佬入圈
+ChaMd5 Venom 招收大佬入圈
 
-新成立组IOT+工控+样本分析 长期招新  
+新成立组IOT+工控+样本分析 长期招新  
 
 欢迎联系admin@chamd5.org
 

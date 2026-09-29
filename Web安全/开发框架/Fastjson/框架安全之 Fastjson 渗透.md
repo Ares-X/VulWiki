@@ -519,7 +519,7 @@ this.id_card = id_card;
 测试发送 json 数据
 
 ```
-curl http://192.168.112.140:8080/fastjson -H "Content-Type: application/json" --data '{"name":"xiaoming", "age":18}'
+curl http://192.168.112.140:8080/fastjson -H "Content-Type: application/json" --data '{"name":"xiaoming", "age":18}'
 ```
 
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/qq5rfBadR3icfiaC2TEFqM7T31ciavUJGUaOj6yag99fkaRBd5ffREvCd95VwjhX7QGMGVN0aSU8mzia9Eeict6pjEg/640?wx_fmt=jpeg)  

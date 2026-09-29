@@ -20,8 +20,8 @@ source: "MrWQ/vulnerability-paper"
 影响版本：
 
 ```
-帆软FineReport V10、V11（最新版）
-FineDataLink 4.1.10.3 及以下版本
+帆软FineReport V10、V11（最新版）
+FineDataLink 4.1.10.3 及以下版本
 
 ```
 

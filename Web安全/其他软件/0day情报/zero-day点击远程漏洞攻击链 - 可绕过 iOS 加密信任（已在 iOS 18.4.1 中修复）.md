@@ -81,7 +81,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
 日志：  
   
 ```
-IDSDaemon    BlastDoor: Disabled for framing messagesSpamFilter Blackhole disabled; user has disabled filtering unknown senders.
+IDSDaemon    BlastDoor: Disabled for framing messagesSpamFilter Blackhole disabled; user has disabled filtering unknown senders.
 ```  
   
   
@@ -94,7 +94,7 @@ IDSDaemon    BlastDoor: Disabled for framing messagesSpamFilter Blackhole disa
 日志：  
   
 ```
-AudioConverterService ACMP4AACBaseDecoder.cpp: Input format:2 ch, 44100 Hz, aacAudioConverterService ACMP4AACBaseDecoder.cpp: inMagicCookie=0x0, inMagicCookieByteSize=39
+AudioConverterService ACMP4AACBaseDecoder.cpp: Input format:2 ch, 44100 Hz, aacAudioConverterService ACMP4AACBaseDecoder.cpp: inMagicCookie=0x0, inMagicCookieByteSize=39
 ```  
   
   
@@ -127,7 +127,7 @@ CoreAudio 开始处理后，IMTransferAgent 会解密音频文件并将其写入
 日志：  
   
 ```
-IMTransferAgent Succeeded decrypting input URL: file:///var/mobile/tmp/com.apple.messages/<GUID_REDACTED>/.../<FILE_REDACTED>.m4a
+IMTransferAgent Succeeded decrypting input URL: file:///var/mobile/tmp/com.apple.messages/<GUID_REDACTED>/.../<FILE_REDACTED>.m4a
 ```  
   
   
@@ -135,21 +135,21 @@ IMTransferAgent Succeeded decrypting input URL: file:///var/mobile/tmp/com.ap
   
 CoreAudio 的内存损坏是通过错误的 AMPDU 状态处理链接到 AppleBCMWLAN Wi-Fi 驱动程序的。该驱动程序无法处理意外的 AMPDU 状态类型，导致内存损坏转化为内核代码执行，最终造成系统完全瘫痪。  
   
-日志：      
+日志：      
   
 ```
-IO80211ControllerMonitor::setAMPDUstat unhandled kAMPDUStat_ type14IO80211ControllerMonitor::setAMPDUstat unhandled kAMPDUStat_ type13
+IO80211ControllerMonitor::setAMPDUstat unhandled kAMPDUStat_ type14IO80211ControllerMonitor::setAMPDUstat unhandled kAMPDUStat_ type13
 ```  
   
   
-4.a 观察到无线对等体操纵（AWDL /   
+4.a 观察到无线对等体操纵（AWDL /   
 madrid  
 ）  
   
 根据内核级异常情况，identityservicesd 日志显示，无线对等节点发现和令牌状态被用于识别或验证设备身份。这种行为可能促进了下游密钥操作和 CryptoTokenKit 签名活动。  
   
 ```
-IDSDaemon identityservicesd: Noting peer token {shouldNoteToken: YES, token: <TOKEN_REDACTED>, service: com.apple.madrid, fromIdentifier: <ID_REDACTED>}PeerLookup_DBCache identityservicesd: DB Cache Hit { service: com.apple.madrid, fromURI: <URI_REDACTED>, toURI: <URI_REDACTED> }PeerLookup_SwiftData identityservicesd: Checking peer token: <TOKEN_REDACTED>for URI: <URI_REDACTED> (Tokens:<REDACTED>)PeerLookup_SwiftData identityservicesd: => Good togo, we have it
+IDSDaemon identityservicesd: Noting peer token {shouldNoteToken: YES, token: <TOKEN_REDACTED>, service: com.apple.madrid, fromIdentifier: <ID_REDACTED>}PeerLookup_DBCache identityservicesd: DB Cache Hit { service: com.apple.madrid, fromURI: <URI_REDACTED>, toURI: <URI_REDACTED> }PeerLookup_SwiftData identityservicesd: Checking peer token: <TOKEN_REDACTED>for URI: <URI_REDACTED> (Tokens:<REDACTED>)PeerLookup_SwiftData identityservicesd: => Good togo, we have it
 ```  
   
   
@@ -163,7 +163,7 @@ IDSDaemon identityservicesd: Noting peer token {shouldNoteToken: YES, token: <T
 攻击者利用内核控制，identityservicesd通过 CryptoTokenKit 使用安全隔离区支持的密钥，冒充用户并调用加密签名操作。虽然没有导出任何密钥材料，但签名请求无需用户授权即可执行，从而可以伪造身份令牌并冒充设备。  
   
 ```
-identityservicesd Decrypting message <GUID_REDACTED> of encryption type"pair-tetra"identityservicesd begins key management operations (sending/receiving decryption keys)identityservicesd Query for encryption with IDs of remote/local devicesCryptoTokenKit operation:2 algo:algid:sign:ECDSA:digest-X962:SHA256CryptoTokenKit <sepk:p256(d) kid=<KID_REDACTED>> parsed for identityservicesd
+identityservicesd Decrypting message <GUID_REDACTED> of encryption type"pair-tetra"identityservicesd begins key management operations (sending/receiving decryption keys)identityservicesd Query for encryption with IDs of remote/local devicesCryptoTokenKit operation:2 algo:algid:sign:ECDSA:digest-X962:SHA256CryptoTokenKit <sepk:p256(d) kid=<KID_REDACTED>> parsed for identityservicesd
 ```  
   
   
@@ -204,11 +204,11 @@ https://github.com/JGoyd/iOS-Attack-Chain-CVE-2025-31200-CVE-2025-31201/tree/mai
   
 公众号内容都来自国外平台-所有文章可通过点击阅读原文到达原文地址或参考地址  
   
-排版 编辑 | Ots 小安   
+排版 编辑 | Ots 小安   
   
 采集 翻译 | Ots Ai牛马  
   
-公众号 |   
+公众号 |   
 AnQuan7 (Ots安全)  
   
 

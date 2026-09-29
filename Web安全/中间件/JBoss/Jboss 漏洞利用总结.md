@@ -217,7 +217,7 @@ Apache Group Commons Collections 4.0
 ```
 
 漏洞探测  
-此漏洞存在于 JBoss 中 /invoker/JMXInvokerServlet 路径。访问若提示下载 JMXInvokerServlet，则可能存在漏洞。
+此漏洞存在于 JBoss 中 /invoker/JMXInvokerServlet 路径。访问若提示下载 JMXInvokerServlet，则可能存在漏洞。
 
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDAeLkAOpClBP4m1AY226iauhho08A3ntByFkkR6Fg6sanOmzvJd4YPKwVd132mnicEun3GhMn8KWSLQ/640?wx_fmt=png)
 
@@ -260,7 +260,7 @@ Apache Group Commons Collections 4.0
 ```
 
 漏洞利用  
-跟 CVE-2015-7501 利⽤⽅法⼀样，只是路径不⼀样，这个漏洞利⽤路径是 /invoker/EJBInvokerServlet
+跟 CVE-2015-7501 利⽤⽅法⼀样，只是路径不⼀样，这个漏洞利⽤路径是 /invoker/EJBInvokerServlet
 
 JBOSSMQ JMS CVE-2017-7504 集群反序列化漏洞 4.X
 
@@ -272,7 +272,7 @@ JBoss AS 4.x 及之前版本
 
 漏洞利用  
 1、首先验证目标 jboss 是否存在此漏洞, 直接访问  
-/jbossmq-httpil/HTTPServerILServlet 路径下。若访问 200，则可能存在漏洞。
+/jbossmq-httpil/HTTPServerILServlet 路径下。若访问 200，则可能存在漏洞。
 
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDAeLkAOpClBP4m1AY226iauhgibibHuUGAX8AC7YrcACbibBWnQB1o9YSbUiaXKg6n1EIKiauXhkTZp0fHw/640?wx_fmt=png)
 
@@ -337,7 +337,7 @@ curl http://www.target.net/invoker/readonly --data-binary @ReverseShellCommonsCo
 https://blog.csdn.net/qq\_36119192/article/details/103899123  
 https://www.freebuf.com/articles/web/240174.html
 
-渗透测试 红队攻防 免杀 权限维持 等等技术 
+渗透测试 红队攻防 免杀 权限维持 等等技术 
 
 及时分享最新漏洞复现以及 EXP 国内外最新技术分享!!!
 

@@ -7,7 +7,7 @@ source: "Threekiii/Vulnerability-Wiki"
 
 ## 漏洞描述
 
-该技术来源于 ["RSAC 2020: Advanced Persistence Threats: The Future of Kubernetes Attacks"](https://www.youtube.com/watch?v=CH7S5rE3j8w)，思路是在拥有 Master 节点上的 create pod 权限时，可创建一个具有 API Server 功能的 Pod，使得后续命令可以通过新创建的 shadow api server 进行下发，绕过 K8s 的日志审计，更加具有隐蔽性。
+该技术来源于 ["RSAC 2020: Advanced Persistence Threats: The Future of Kubernetes Attacks"](https://www.youtube.com/watch?v=CH7S5rE3j8w)，思路是在拥有 Master 节点上的 create pod 权限时，可创建一个具有 API Server 功能的 Pod，使得后续命令可以通过新创建的 shadow api server 进行下发，绕过 K8s 的日志审计，更加具有隐蔽性。
 
 参考链接：
 

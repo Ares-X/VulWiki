@@ -45,10 +45,10 @@ Clouddriver是“肥肉”，因为它手里攥着访问生产环境的云凭证
 攻击者发一个恶意的请求，比如：  
   
 {
-    "type": "git/repo",
-    "reference": "https://example.com/repo.git",
-    "version": "main; touch /tmp/pwned;",
-    "artifactAccount": "某个已有的凭证名"
+    "type": "git/repo",
+    "reference": "https://example.com/repo.git",
+    "version": "main; touch /tmp/pwned;",
+    "artifactAccount": "某个已有的凭证名"
 }  
   
 问题在于，version 字段（比如分支名）被直接拼接到shell命令里，没做任何过滤。在某些认证模式下，Spinnaker会用sh -c来执行git命令，于是分号;就被shell解析，后面的touch /tmp/pwned就执行了。  

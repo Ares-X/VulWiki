@@ -98,18 +98,18 @@ variable=1&tpl=data/Runtime/Logs/Home/20_12_12.log
 /* 系统变量名称设置 */
     'VAR_MODULE'            =>  'm',     // 默认模块获取变量
     'VAR_ADDON'             =>  'addon',     // 默认的插件控制器命名空间变量
-    'VAR_CONTROLLER'        =>  'c',    // 默认控制器获取变量
-    'VAR_ACTION'            =>  'a',    // 默认操作获取变量
-    'VAR_AJAX_SUBMIT'       =>  'ajax',  // 默认的AJAX提交变量
-    'VAR_JSONP_HANDLER'     =>  'callback',
-    'VAR_PATHINFO'          =>  's',    // 兼容模式PATHINFO获取变量，例如 ?s=/module/action/id/1 后面的参数取决于URL_PATHINFO_DEPR
-    'VAR_TEMPLATE'          =>  't',    // 默认模板切换变
-    'VAR_AUTO_STRING'       =>  false,  // 输入变量是否自动强制转换为字符串 如果开启则数组变量需要手动传入变量修饰符获取变量
+    'VAR_CONTROLLER'        =>  'c',    // 默认控制器获取变量
+    'VAR_ACTION'            =>  'a',    // 默认操作获取变量
+    'VAR_AJAX_SUBMIT'       =>  'ajax',  // 默认的AJAX提交变量
+    'VAR_JSONP_HANDLER'     =>  'callback',
+    'VAR_PATHINFO'          =>  's',    // 兼容模式PATHINFO获取变量，例如 ?s=/module/action/id/1 后面的参数取决于URL_PATHINFO_DEPR
+    'VAR_TEMPLATE'          =>  't',    // 默认模板切换变
+    'VAR_AUTO_STRING'       =>  false,  // 输入变量是否自动强制转换为字符串 如果开启则数组变量需要手动传入变量修饰符获取变量
 
     'HTTP_CACHE_CONTROL'    =>  'private',  // 网页缓存控制
-    'CHECK_APP_DIR'         =>  true,       // 是否检查应用目录是否创建
-    'FILE_UPLOAD_TYPE'      =>  'Local',    // 文件上传方式
-    'DATA_CRYPT_TYPE'       =>  'Think',    // 数据加密方式
+    'CHECK_APP_DIR'         =>  true,       // 是否检查应用目录是否创建
+    'FILE_UPLOAD_TYPE'      =>  'Local',    // 文件上传方式
+    'DATA_CRYPT_TYPE'       =>  'Think',    // 数据加密方式
 ```
 
 调用控制器中的某个方法便可以使用如下请求形式：

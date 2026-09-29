@@ -7,7 +7,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
  SecPulse安全脉搏   2023-05-10 12:01  
   
 ****  
-1. **通告信息**  
+1. **通告信息**  
   
   
   
@@ -17,7 +17,7 @@ A-Team团队监测到Apache官方发布安全公告，修复了bRPC中的一个�
 对此，安识科技建议广大用户及时升级到安全版本，并做好资产自查以及预防工作，以免遭受黑客攻击。  
 ##   
   
-2. **漏洞概述**  
+2. **漏洞概述**  
   
   
   
@@ -33,7 +33,7 @@ Apache bRPC 是由百度主导并开源的一款工业级C++ RPC框架，常用�
 Apache bRPC版本<1.5.0（所有平台）中，威胁者如果能够影响bRPC服务器启动时的ServerOptions pid_file参数，则可以使用bRPC进程的权限执行任意代码。  
 ##   
   
-3. **漏洞危害**  
+3. **漏洞危害**  
   
   
 ##    
@@ -42,7 +42,7 @@ Apache bRPC版本<1.5.0（所有平台）中，威胁者如果能够影响bRPC�
 bRPC服务器启动时的ServerOptions pid_file参数，进而使用bRPC进程的权限执行任意代码。  
 ##   
   
-4. **影响版本**  
+4. **影响版本**  
   
   
 ##   
@@ -51,11 +51,11 @@ bRPC服务器启动时的ServerOptions pid_file参数，进而使用bRPC进程�
 Apache bRPC版本：  
   
 Apache bRPC  
-   
+   
 < 1.5.0（所有平台）  
 ##   
   
-5. **解决方案**  
+5. **解决方案**  
   
   
 ##   
@@ -79,7 +79,7 @@ https://github.com/apache/brpc/pull/2218
 brpc::ServerOptions::pid_file。  
 ##   
   
-6. **时间轴**  
+6. **时间轴**  
   
   
 ##    

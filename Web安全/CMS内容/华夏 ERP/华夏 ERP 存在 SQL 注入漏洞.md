@@ -49,7 +49,7 @@ source: "MrWQ/vulnerability-paper"
 
 从开源项目本地搭建来进行审计，源码下载地址：
 
-百度网盘 https://pan.baidu.com/s/1jlild9uyGdQ7H2yaMx76zw  提取码: 814g  
+百度网盘 https://pan.baidu.com/s/1jlild9uyGdQ7H2yaMx76zw  提取码: 814g  
 
   
 
@@ -89,7 +89,7 @@ Accept-Encoding: gzip, deflate
 X-Requested-With: XMLHttpRequest
 Connection: close
 Referer: http://47.116.69.14/pages/manage/user.html
-Cookie: Hm_lvt_1cd9bcbaae133f03a6eb19da6579aaba=1615274745; JSESSIONID=C5EBD91E0E68081AA25F206F2FECAC82; Hm_lpvt_1cd9bcbaae133f03a6eb19da6579aaba=1615274770
+Cookie: Hm_lvt_1cd9bcbaae133f03a6eb19da6579aaba=1615274745; JSESSIONID=C5EBD91E0E68081AA25F206F2FECAC82; Hm_lpvt_1cd9bcbaae133f03a6eb19da6579aaba=1615274770
 ```
 
 使用 sleep 延时注入
@@ -106,7 +106,7 @@ Accept-Encoding: gzip, deflate
 X-Requested-With: XMLHttpRequest
 Connection: close
 Referer: http://47.116.69.14/pages/manage/user.html
-Cookie: Hm_lvt_1cd9bcbaae133f03a6eb19da6579aaba=1615274745; JSESSIONID=C5EBD91E0E68081AA25F206F2FECAC82; Hm_lpvt_1cd9bcbaae133f03a6eb19da6579aaba=1615274770
+Cookie: Hm_lvt_1cd9bcbaae133f03a6eb19da6579aaba=1615274745; JSESSIONID=C5EBD91E0E68081AA25F206F2FECAC82; Hm_lpvt_1cd9bcbaae133f03a6eb19da6579aaba=1615274770
 ```
 
 3、漏洞代码

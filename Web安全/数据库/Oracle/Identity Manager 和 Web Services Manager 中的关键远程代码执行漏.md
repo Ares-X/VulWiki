@@ -8,7 +8,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
 ![](https://mmbiz.qpic.cn/mmbiz_png/WibvcdjxgJnto4BLeffzXvy0ZBoSjfC0WcDgz9DfbWk1ibY0zfG4WicNibo9aeLSOaZSbiaj4UYGvlEB0PRzGLPAKgpAWVVTWeiceibudTiczNYmuBk/640?wx_fmt=png&from=appmsg "")  
   
 Oracle  
- 发布了一则紧急（带外）安全警报，修复一个严重的远程代码执行（RCE）漏洞   
+ 发布了一则紧急（带外）安全警报，修复一个严重的远程代码执行（RCE）漏洞   
 CVE-2026-21992  
 。该漏洞影响两个广泛部署的 Fusion Middleware 组件：Oracle Identity Manager 和 Oracle Web Services Manager。  
   

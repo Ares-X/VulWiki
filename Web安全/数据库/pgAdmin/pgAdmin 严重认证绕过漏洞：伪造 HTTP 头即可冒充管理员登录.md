@@ -9,8 +9,8 @@ source: "gelusus/wxvl 公众号漏洞文库"
   
 pgAdmin 4 中存在一个严重漏洞：未认证的攻击者只需提供一个恶意的 HTTP 身份头，即可冒充任意用户——包括已有的管理员账户。  
   
-该漏洞编号为 CVE-2026-86863，影响使用 pgAdmin **Webserver**  
- 认证模式的部署环境，CVSS 3.1 评分为 9.8（满分 10）。受影响的版本为 pgAdmin 4 的 6.2 至 9.17，官方已在 9.18 版本中完成修复。  
+该漏洞编号为 CVE-2026-86863，影响使用 pgAdmin **Webserver**  
+ 认证模式的部署环境，CVSS 3.1 评分为 9.8（满分 10）。受影响的版本为 pgAdmin 4 的 6.2 至 9.17，官方已在 9.18 版本中完成修复。  
 ### pgAdmin 严重认证绕过漏洞  
   
 pgAdmin 的 Webserver 认证源，原本是为“由上游 Web 服务器或反向代理先完成用户认证、再将请求转发给 pgAdmin”的部署场景设计的。上游组件会通过 CGI 或 WSGI 环境变量，把已认证的用户名传递给 pgAdmin。  
@@ -18,15 +18,15 @@ pgAdmin 的 Webserver 认证源，原本是为“由上游 Web 服务器或反�
 但问题在于，存在漏洞的实现未能可靠地区分“可信服务器提供的环境变量值”与“远程客户端通过 HTTP 头直接提交的身份值”。  
   
 WebserverAuthentication.get_user()  
- 函数会先尝试从请求环境中读取配置好的 WEBSERVER_REMOTE_USER  
- 值；如果查找失败，就会回退（fallback）到从传入的请求头中读取同名项。  
+ 函数会先尝试从请求环境中读取配置好的 WEBSERVER_REMOTE_USER  
+ 值；如果查找失败，就会回退（fallback）到从传入的请求头中读取同名项。  
   
 由于 HTTP 请求头完全由发送方控制，只要能访问 pgAdmin 实例，攻击者就可以构造一个包含目标账户用户名的头，从而在无需密码、多因素认证或其他有效凭据的情况下，以该账户身份完成登录。  
   
-如果管理员将 WEBSERVER_REMOTE_USER  
- 配置成了带 HTTP_  
- 前缀或含连字符的值（例如 HTTP_X_FORWARDED_USER  
- 或 X-Forwarded-User  
+如果管理员将 WEBSERVER_REMOTE_USER  
+ 配置成了带 HTTP_  
+ 前缀或含连字符的值（例如 HTTP_X_FORWARDED_USER  
+ 或 X-Forwarded-User  
 ），风险会进一步加剧。因为 WSGI 服务器通常会把客户端提供的头以这类名称暴露为环境变量——这意味着，即便还没走到回退逻辑，身份来源本身就可能已被攻击者掌控。  
   
 成功利用该漏洞后，攻击者可以获取管理员或其他高权限用户的 pgAdmin 会话。进入系统后，攻击者便有可能查看、篡改或删除该账户有权访问的数据库对象与数据。  
@@ -35,20 +35,20 @@ WebserverAuthentication.get_user()
 <table><thead><tr><th><section><span leaf="">评分体系</span></section></th><th><section><span leaf="">严重等级</span></section></th><th><section><span leaf="">分数</span></section></th></tr></thead><tbody><tr><td><section><span leaf="">CVSS 3.1</span></section></td><td><section><span leaf="">Critical（严重）</span></section></td><td><section><span leaf="">9.8</span></section></td></tr><tr><td><section><span leaf="">CVSS 4.0</span></section></td><td><section><span leaf="">Critical（严重）</span></section></td><td><section><span leaf="">9.3</span></section></td></tr></tbody></table>  
 CVSS 3.1 向量显示：该漏洞可远程利用、攻击复杂度低、无需任何权限和用户交互，且可能对机密性、完整性和可用性造成重大影响。  
   
-需要注意的是，此问题仅在 pgAdmin 的 AUTHENTICATION_SOURCES  
- 配置中启用了 webserver 时才会触发。使用其他 pgAdmin 认证机制的组织不受这一特定 Webserver 认证缺陷的影响。  
+需要注意的是，此问题仅在 pgAdmin 的 AUTHENTICATION_SOURCES  
+ 配置中启用了 webserver 时才会触发。使用其他 pgAdmin 认证机制的组织不受这一特定 Webserver 认证缺陷的影响。  
   
 9.18 版本改变了 pgAdmin 处理“断言身份”的方式：更新后的程序会区分真正的 CGI/WSGI 变量与从头派生的值，并且默认只信任前者。  
   
-管理员如果确实需要使用头提供的身份，必须显式启用 WEBSERVER_REMOTE_USER_FROM_HEADER  
-。同时，该选项应配合 WEBSERVER_TRUSTED_PROXIES  
- 的可信代理配置一起使用；部署时还可能需要设置共享密钥头，并通过 WEBSERVER_SHARED_SECRET  
- 进行校验。  
+管理员如果确实需要使用头提供的身份，必须显式启用 WEBSERVER_REMOTE_USER_FROM_HEADER  
+。同时，该选项应配合 WEBSERVER_TRUSTED_PROXIES  
+ 的可信代理配置一起使用；部署时还可能需要设置共享密钥头，并通过 WEBSERVER_SHARED_SECRET  
+ 进行校验。  
   
-此外，修复后的代码会检查实际的套接字对端地址，而不再依赖 request.remote_addr  
-——后者可能因攻击者操控的 X-Forwarded-For  
- 值而被伪造。作为额外防护，pgAdmin 现在还会阻止 Webserver 认证方式登录那些 auth_source  
- 未设为 webserver 的账户。  
+此外，修复后的代码会检查实际的套接字对端地址，而不再依赖 request.remote_addr  
+——后者可能因攻击者操控的 X-Forwarded-For  
+ 值而被伪造。作为额外防护，pgAdmin 现在还会阻止 Webserver 认证方式登录那些 auth_source  
+ 未设为 webserver 的账户。  
   
 应立即升级到 pgAdmin 9.18（原文写为 4.18，结合上下文应为 9.18）或最新的已修复版本，并审查反向代理的认证设置。  
   

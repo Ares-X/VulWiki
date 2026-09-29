@@ -18,7 +18,7 @@ source: "MrWQ/vulnerability-paper"
 
 目前受影响的版本：
 
-畅捷通 Tplus 13.0 
+畅捷通 Tplus 13.0 
 
 畅捷通 Tplus 16.0
 

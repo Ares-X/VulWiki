@@ -409,7 +409,7 @@ Tomcat 运行在 Windows 主机上，且启用了 HTTP PUT 请求方法，可通
 tomcat 文件夹下的 / conf/web.xml 文件插入：
 
 ```
-    <init-param>           <param-name>readonly</param-name>           <param-value>false</param-value>     </init-param>
+    <init-param>           <param-name>readonly</param-name>           <param-value>false</param-value>     </init-param>
 ```
 
 重启 tomcat 服务。

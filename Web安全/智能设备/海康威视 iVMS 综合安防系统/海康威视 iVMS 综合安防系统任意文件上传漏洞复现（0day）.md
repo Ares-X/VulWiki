@@ -11,11 +11,11 @@ source: "MrWQ/vulnerability-paper"
 
 0x01 产品简介  
 
-        海康威视 iVMS 集中监控应用管理平台，是以安全防范业务应用为导向，以视频图像应用为基础手段，综合视频监控、联网报警、智能分析、运维管理等多种安全防范应用系统，构建的多业务应用综合管理平台。
+        海康威视 iVMS 集中监控应用管理平台，是以安全防范业务应用为导向，以视频图像应用为基础手段，综合视频监控、联网报警、智能分析、运维管理等多种安全防范应用系统，构建的多业务应用综合管理平台。
 
 0x02 漏洞概述
 
-    海康威视 iVMS 系统存在在野 0day 漏洞，攻击者通过获取密钥任意构造 token，请求 / resourceOperations/upload 接口任意上传文件，导致获取服务器 webshell 权限，同时可远程进行恶意代码执行。
+    海康威视 iVMS 系统存在在野 0day 漏洞，攻击者通过获取密钥任意构造 token，请求 / resourceOperations/upload 接口任意上传文件，导致获取服务器 webshell 权限，同时可远程进行恶意代码执行。
 
 0x03 影响范围
 ---------
@@ -31,7 +31,7 @@ source: "MrWQ/vulnerability-paper"
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/byXNVsHKA4r5bGpNjUfImPmZGLHicNqvtexwpqsTURgjgVKcvQJT2BLZNsjLAc8mkNIkTbTXGO8uydlGKZaMyjA/640?wx_fmt=png)
 
-0x05 漏洞复现 
+0x05 漏洞复现 
 ----------
 
 检测脚本 PoC:https://github.com/sccmdaveli/hikvision-poc
@@ -108,11 +108,11 @@ python3 ivms-poc.py -f file.txt
 
 ```
 
- 效果：
+ 效果：
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/byXNVsHKA4r5bGpNjUfImPmZGLHicNqvtNvIEROb4z9Jtic67MLZG2SSsEDHLOyNwE3CjrXkUe18YPeozLzNmlCg/640?wx_fmt=png)
 
-手动复现 
+手动复现 
 
 漏洞 url:/eps/api/resourceOperations/upload
 
@@ -136,7 +136,7 @@ service=http%3A%2F%2Fx.x.x.x%3Ax%2Fhome%2Findex.action
 
 ```
 
-构造 token 绕过认证  （内部机制：如果 token 值与请求 url+secretkey 的 md5 值相同就可以绕过认证）
+构造 token 绕过认证  （内部机制：如果 token 值与请求 url+secretkey 的 md5 值相同就可以绕过认证）
 
 secretkey 是代码里写死的（默认值：secretKeyIbuilding）
 
@@ -225,7 +225,7 @@ test
 0x07 修复建议
 ---------
 
-      关闭互联网暴露面访问的权限，文件上传模块做好权限强认证。
+      关闭互联网暴露面访问的权限，文件上传模块做好权限强认证。
 
 原文链接：https://blog.csdn.net/qq_41904294/article/details/130807691
 

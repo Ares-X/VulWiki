@@ -3,7 +3,7 @@ cve: "CVE-2026-63649"
 source: "gelusus/wxvl 公众号漏洞文库"
 ---
 
-#  AiPy 再获 OpenVPN 官方致谢：发现并协助修复多个安全漏洞  
+#  AiPy 再获 OpenVPN 官方致谢：发现并协助修复多个安全漏洞  
  知道创宇   2026-09-08 05:57  
   
 AI智赋未来 · 安全守护信息化  
@@ -15,7 +15,7 @@ AI智赋未来 · 安全守护信息化
 ，进一步巩固了 AiPy 在 VPN 核心协议栈与跨平台服务安全领域的领先地位。  
   
   
-01   
+01   
 CVE-2026-63649：OpenVPN Windows 服务权限绕过漏洞  
   
 根据 OpenVPN 官方安全公告，本次 AiPy 发现并报告的漏洞为：  
@@ -33,7 +33,7 @@ OpenVPN 官方在安全公告中明确致谢：
 Bug found by 章鱼哥 (www.aipyaipy.com)  
   
   
-02   
+02   
 回顾：AiPy 在 OpenVPN 中的持续深耕  
   
 除本次新增的 CVE-2026-63649 外，AiPy 此前已在 OpenVPN 中多次获得官方致谢：  
@@ -55,7 +55,7 @@ OpenVPN 与内核之间在特定时序下可能触发ASSERT()
 从 Windows 服务架构到 DNS 配置管理，从控制通道内存安全到证书验证逻辑，再到内核态密钥状态同步——AiPy 在 OpenVPN 中展现的不仅是单点漏洞挖掘能力，更是对 VPN 全技术栈的系统性安全分析实力。  
   
   
-03   
+03   
 持续深耕，做全球开源生态的“可信守护者”  
   
 从 Apple macOS 的内核内存管理，到 QEMU 的虚拟化边界，再到 PostgreSQL 的数据库引擎、Firefox 与 Chrome 两大浏览器内核，以及在 OpenVPN 网络协议栈中的持续深耕——AiPy 的安全研究触角已经完成了对计算基础设施从应用层到系统层的全链路覆盖。  

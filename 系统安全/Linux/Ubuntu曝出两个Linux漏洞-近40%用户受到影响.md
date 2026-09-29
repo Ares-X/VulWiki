@@ -2,7 +2,7 @@
 source: "gelusus/wxvl 公众号漏洞文库"
 ---
 
-#  【安全圈】Ubuntu 曝出两个Linux漏洞，近 40% 用户受到影响   
+#  【安全圈】Ubuntu 曝出两个Linux漏洞，近 40% 用户受到影响   
  安全圈   2023-07-27 19:00  
   
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/aBHpjnrGylgSxa9I02IBd3bgLEhwfJCeRibw3LEjMujeAhD2CvyiaVCZJVHGHODbkPx3pViaX0sAibZsDun6sicUzdQ/640?wx_fmt=jpeg "")  
@@ -33,7 +33,7 @@ Wiz 研究人员警告称这两个漏洞源于 Ubuntu 对 OverlayFS 模块的单
 近期，Ubuntu 发布了一份关于最新版本Ubuntu Linux 内核中存在六个漏洞的安全公告，并提供了修复更新版本， 建议尚不清楚如何重新安装和激活第三方内核模块的用户通过包管理器执行更新（包管理器应负责所有依赖项和安装后配置）。此外， 用户要注意安装 Linux 内核更新后，需要重新启动才能在Ubuntu 上生效。  
   
   
-   END    
+   END    
   
   
 阅读推荐  

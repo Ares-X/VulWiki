@@ -17,7 +17,7 @@ source: "MrWQ/vulnerability-paper"
 
 ![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/zkGUVUGR8rHvYyG0HCudf6IApkqsG6ib5PIjXTEAQsdRsjy7ic0CfiaE3qxMyM3XMENBGyGYTzOhIsFMicCNu3hicbw/640?wx_fmt=png&from=appmsg)
 
-奇安信 天擎管理中心 <=V6.7.0.4130 版本的 rptsvr 接口存在任意文件上传漏洞，可上传恶意至服务器，执行脚本文件。
+奇安信 天擎管理中心 <=V6.7.0.4130 版本的 rptsvr 接口存在任意文件上传漏洞，可上传恶意至服务器，执行脚本文件。
 
 **01**
 
@@ -27,7 +27,7 @@ source: "MrWQ/vulnerability-paper"
 
 FoFa
 
-banner="QiAnXin web server" || banner="360 web server"  || body="appid\":\"skylar6" || body="/task/index/detail?id={item.id}" || body="已过期或者未授权，购买请联系 4008-136-360"
+banner="QiAnXin web server" || banner="360 web server"  || body="appid\":\"skylar6" || body="/task/index/detail?id={item.id}" || body="已过期或者未授权，购买请联系 4008-136-360"
 
 **02**
 

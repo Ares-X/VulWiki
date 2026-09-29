@@ -7,13 +7,13 @@ source: "MrWQ/vulnerability-paper"
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/_KCqGJnHaCBjCZ0VPo898Q)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif) 聚焦源代码安全，网罗国内外最新资讯！
+![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif) 聚焦源代码安全，网罗国内外最新资讯！
 
   
 
 漏洞简介
 
-PHP 发布公告，旧版本的 php_array_merge_recursive 函数中存在 UAF 风险，被利用可能导致用来绕过禁用函数。
+PHP 发布公告，旧版本的 php_array_merge_recursive 函数中存在 UAF 风险，被利用可能导致用来绕过禁用函数。
 
 **受影响的版本**
 
@@ -27,7 +27,7 @@ PHP 7.2 - 7.4.9
 
 **一、array_merge_recursive 函数实现**
 
-在 array_merge_recursive 函数的实现中，通过遍历源数组键值，如果键值不存在，则将对应的值直接插入目标数组；如果键值存在，则查询相应的目标数组。在目标数组不存在此键值时，将键值与相应的值插入目标数组；如果存在相同的键值，则会尝试将相应的值加入到目标数组中。具体处理如下图，在目标值为 NULL 时，将其转变为数组类型并在数组中加入 NULL，在源数组中的值为对象类型时将其转换为数组类型，尝试为 src_entry 添加引用后将 src_zval 添加到数组中；如果源数组中的值类型为数组则递归调用 php_array_merge_recursive 函数。
+在 array_merge_recursive 函数的实现中，通过遍历源数组键值，如果键值不存在，则将对应的值直接插入目标数组；如果键值存在，则查询相应的目标数组。在目标数组不存在此键值时，将键值与相应的值插入目标数组；如果存在相同的键值，则会尝试将相应的值加入到目标数组中。具体处理如下图，在目标值为 NULL 时，将其转变为数组类型并在数组中加入 NULL，在源数组中的值为对象类型时将其转换为数组类型，尝试为 src_entry 添加引用后将 src_zval 添加到数组中；如果源数组中的值类型为数组则递归调用 php_array_merge_recursive 函数。
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/oBANLWYScMQG1jMe23NIBFayvOpTc7yocwExcc4MteicvLUE89bIia6UKwOL5SJXovPSTgmo89jQzS9KVz97H7Nw/640?wx_fmt=png)
 
@@ -123,7 +123,7 @@ PHP 7.2 - 7.4.9
 
 那么，你将得到：
 
-> *     富有竞争力的薪酬，期望赏金猎人上线
+> *     富有竞争力的薪酬，期望赏金猎人上线
 >     
 > *   补充医疗保险 + 定期体检 ---- 你的健康我来保障  
 >     
@@ -136,7 +136,7 @@ PHP 7.2 - 7.4.9
 
 **注：工作地点为北京、西安。**
 
-心动不如行动！不要犹豫！赶紧给 **zhuqian@qianxin.com** 投简历吧！我们会在 3 个工作日内找到你~
+心动不如行动！不要犹豫！赶紧给 **zhuqian@qianxin.com** 投简历吧！我们会在 3 个工作日内找到你~
 
 **推荐阅读**
 
@@ -160,7 +160,7 @@ PHP 7.2 - 7.4.9
 
 产品线。
 
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif) 觉得不错，就点个 “在看” 吧~
+   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif) 觉得不错，就点个 “在看” 吧~
 
 ---
 

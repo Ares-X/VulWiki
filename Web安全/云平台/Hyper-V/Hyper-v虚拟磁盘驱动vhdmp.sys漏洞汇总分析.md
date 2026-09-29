@@ -13,7 +13,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
   
 ## 复现环境  
   
-Windows 11 24h2 canary preview Built by:   27764 .1000  支持smb quic模式  
+Windows 11 24h2 canary preview Built by:   27764 .1000  支持smb quic模式  
   
 Windows 10 22h2  
   
@@ -568,7 +568,7 @@ https://bbs.kanxue.com/user-home-609565.htm
   
   
   
-# 往期推荐  
+# 往期推荐  
   
 1、[一种基于unicorn的寄存器间接跳转混淆去除方式](https://mp.weixin.qq.com/s?__biz=MjM5NTc2MDYxMw==&mid=2458590669&idx=1&sn=347a710061251090dc435a48bdd6fb9f&scene=21#wechat_redirect)  
   

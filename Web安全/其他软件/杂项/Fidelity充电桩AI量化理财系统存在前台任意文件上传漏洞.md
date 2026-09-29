@@ -30,7 +30,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
   
 ****  
 ```
-public function uploadFile(){  $token=$this->request->post('token');  $_user=Token::get($token);  $userModel=new \app\admin\model\User();  $user = $userModel->where(['id'=>$_user['user_id']])->find();if ($user) {    $file = request()->file('file');    $info = $file->move(ROOT_PATH . 'public' . DS . 'uploadss');    if($info){      $update_date = [];      $update_date['avatar'] = '/uploadss/'.$info->getSaveName();      $userModel->where(['id'=>$user['id']])->update($update_date);      // return $this->return_msg("OK", $result['data'], 0, 200);      $this->success('ok',$update_date['avatar']);    }else{      // 上传失败获取错误信息      $this->error('上传失败！');    }  } else {    $this->error('正在加载',[],-1);  } }
+public function uploadFile(){  $token=$this->request->post('token');  $_user=Token::get($token);  $userModel=new \app\admin\model\User();  $user = $userModel->where(['id'=>$_user['user_id']])->find();if ($user) {    $file = request()->file('file');    $info = $file->move(ROOT_PATH . 'public' . DS . 'uploadss');    if($info){      $update_date = [];      $update_date['avatar'] = '/uploadss/'.$info->getSaveName();      $userModel->where(['id'=>$user['id']])->update($update_date);      // return $this->return_msg("OK", $result['data'], 0, 200);      $this->success('ok',$update_date['avatar']);    }else{      // 上传失败获取错误信息      $this->error('上传失败！');    }  } else {    $this->error('正在加载',[],-1);  } }
 ```  
   
   

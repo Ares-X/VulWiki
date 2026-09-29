@@ -174,7 +174,7 @@ https://ia801309.us.archive.org/15/items/RouterHG532e/router%20HG532e.rar
 ```
 
 
-`mount -o bind /dev ./squashfs-root/dev mount -t proc /proc ./squashfs-root/proc`
+`mount -o bind /dev ./squashfs-root/dev mount -t proc /proc ./squashfs-root/proc`
 
 
 ```

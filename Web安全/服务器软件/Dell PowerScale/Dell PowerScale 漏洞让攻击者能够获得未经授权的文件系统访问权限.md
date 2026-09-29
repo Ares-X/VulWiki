@@ -55,7 +55,7 @@ Dell Technologies 已将 NFS 授权漏洞归类为严重漏洞，并强烈建议
   
 原文来自: cybersecuritynews.com  
   
-原文链接:   
+原文链接:   
 https://cybersecuritynews.com/dell-powerscale-vulnerability/  
   
 欢迎收藏并分享朋友圈，让五邑人网络更安全  

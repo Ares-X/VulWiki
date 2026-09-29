@@ -7,7 +7,7 @@ source: "Threekiii/Vulnerability-Wiki"
 
 ## 漏洞描述
 
-在具有 `CAP_SYS_ADMIN` 权限的容器中，通过挂载并重写容器内的 `/sys/fs/cgroup/devices/devices.allow` 文件，解除 cgroup 设备访问限制，从而逃逸特权容器并访问宿主机内的文件。
+在具有 `CAP_SYS_ADMIN` 权限的容器中，通过挂载并重写容器内的 `/sys/fs/cgroup/devices/devices.allow` 文件，解除 cgroup 设备访问限制，从而逃逸特权容器并访问宿主机内的文件。
 
 devices 子系统用于配制允许或者阻止 cgroup 中的 task 访问某个设备，起到黑白名单的作用，主要包含以下文件：
 
@@ -143,7 +143,7 @@ kubectl exec -n metarget -it cap-sys-admin-container -- chmod +x /cdk
 ![](./.resource/挂载重写-cgroup-devices.allow-导致容器逃逸/media/image-20250603143413513.png)
 
 
-重写当前容器内的 `/sys/fs/cgroup/devices/devices.allow`，逃逸特权容器访问宿主机内的文件：
+重写当前容器内的 `/sys/fs/cgroup/devices/devices.allow`，逃逸特权容器访问宿主机内的文件：
 
 ![](./.resource/挂载重写-cgroup-devices.allow-导致容器逃逸/media/image-20250603143435283.png)
 

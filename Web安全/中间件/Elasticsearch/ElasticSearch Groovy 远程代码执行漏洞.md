@@ -9,7 +9,7 @@ cve: "CVE-2015-1427"
 
 ![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/zg4ibGYrEa24an9TvS6grA3sWoTRYSQr4oCwuZgRaUPIJV1AesaAsTmry4zs6pvkE64q5U77Dz3TdpLFhEcdcRA/640?wx_fmt=jpeg)
 
-**（ElasticSearch Groovy 远程代码执行漏洞   CVE-2015-1427）**
+**（ElasticSearch Groovy 远程代码执行漏洞   CVE-2015-1427）**
 
 **前言：**  
 

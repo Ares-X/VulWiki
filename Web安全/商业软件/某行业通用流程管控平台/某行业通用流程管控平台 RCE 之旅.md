@@ -14,7 +14,7 @@ source: "MrWQ/vulnerability-paper"
 
 · 基础稿费、额外激励、推荐作者、连载均有奖励，年度投稿 top3 还有神秘大奖！
 
-· 将稿件提交至奇安信攻防社区（点击底部 阅读原文 ，加入社区）
+· 将稿件提交至奇安信攻防社区（点击底部 阅读原文 ，加入社区）
 
 [点击链接了解征稿详情](https://mp.weixin.qq.com/s?__biz=MzI2NzY5MDI3NQ==&mid=2247489051&idx=1&sn=0f4d1ba03debd5bbe4d7da69bc78f4f8&scene=21#wechat_redirect)
 
@@ -51,7 +51,7 @@ source: "MrWQ/vulnerability-paper"
 
 ![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/WdbaA7b2IE7fupM77icRcd9R9s0gNp46qaoqIu17fNXibn8WhOwaXMW8pH4zjQQeuecLAWrxrt9cwfaicdzoGdm7g/640?wx_fmt=jpeg)  
 也就是说只需要找到一个 SSRF，本地调用即可。  
-7iny 帮我找到一个利用点，`/common/ueditor1_3_5-utf8/` 发现一个 ueditor
+7iny 帮我找到一个利用点，`/common/ueditor1_3_5-utf8/` 发现一个 ueditor
 
 ![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/WdbaA7b2IE7fupM77icRcd9R9s0gNp46qPyC8SVssLxexicyWpZ1kKhMiciaGxgMxZ9ZLYR4wWecK0Ih9N0L7kxHrw/640?wx_fmt=jpeg)
 
@@ -106,7 +106,7 @@ http://localhost:8080/remote.jsp?upfile=http://127.0.0.1:8080/axis/services/Admi
 最终拼接后为：  
 ![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/WdbaA7b2IE7fupM77icRcd9R9s0gNp46qW2N03z01gEhrPm9t1F59IKvgNSDClDOhRakQuI8VHPofPsAScL0jww/640?wx_fmt=jpeg)  
 刚好把第一个 payload 注释，第二个生效。现在我们只需要做填空题。在结尾拼接就行`<xxx.jpg></xxx.jpg`即可，当然结尾的 > 会给我们自动闭合，刚好以. jpg 结尾，所以新的 payload 如下：  
-所以我们只需要在结尾加上`><xx.jpg></xx.jpg` 即可  
+所以我们只需要在结尾加上`><xx.jpg></xx.jpg` 即可  
 ![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/WdbaA7b2IE7fupM77icRcd9R9s0gNp46qn9WicD1v31WalY5cicLuRBHruLPWH74icgbOmtLTA2DgkOv1CTicfD5rlA/640?wx_fmt=jpeg)
 
 使用 %0d，以及我们拼接的 xx.jpg payload 来提交，debug 后发现 %0d 后的东西丢了

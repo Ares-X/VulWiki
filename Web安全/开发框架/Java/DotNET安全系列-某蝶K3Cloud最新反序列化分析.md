@@ -32,7 +32,7 @@ K3Cloud 采⽤ ASP.NET 开发，由多个 Web App 组成，安装后可在 IIS �
 
 ### 二、handler 处理
 
-本次反序列化漏洞影响只限于 K3Cloud(前台) , ManageSite(后台) 两个应⽤程序。漏洞路径出现在 `Kingdee.BOS.ServiceFacade.ServicesStub.DevReportService.GetBusinessObjectData.common.kdsvc`, 由 kdsvc 后缀结尾，根据 web.config ⾥的 handler 配置信息
+本次反序列化漏洞影响只限于 K3Cloud(前台) , ManageSite(后台) 两个应⽤程序。漏洞路径出现在 `Kingdee.BOS.ServiceFacade.ServicesStub.DevReportService.GetBusinessObjectData.common.kdsvc`, 由 kdsvc 后缀结尾，根据 web.config ⾥的 handler 配置信息
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/SHI5wib3tvAOEyF3yJPt4kCiaHFzft5OzArHx8ww8UpAXibYhsReMxAbFElVjpLupfSfb1lmJOvERsDBfMlnymibMA/640?wx_fmt=png)
 
@@ -40,7 +40,7 @@ K3Cloud 采⽤ ASP.NET 开发，由多个 Web App 组成，安装后可在 IIS �
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/SHI5wib3tvAOEyF3yJPt4kCiaHFzft5OzAg6bGHAYlqWCUSEicNsTicqJNvVysbCVjZmRMPkkDAyKic5eofH6rRePuQ/640?wx_fmt=png)
 
-使⽤ DnsPy 进⾏反编译后可以看到，KDServiceHandler ⼜根据开头和结尾字符再次将请求交给不同的 Handler 去处理。 `Kingdee.BOS.ServiceFacade.ServicesStub.DevReportService.GetBusinessObjectData.common.kdsvc`路径并不满⾜上⾯对应的结尾和开头，因此交给 KDSVCHandler 进⾏处理
+使⽤ DnsPy 进⾏反编译后可以看到，KDServiceHandler ⼜根据开头和结尾字符再次将请求交给不同的 Handler 去处理。 `Kingdee.BOS.ServiceFacade.ServicesStub.DevReportService.GetBusinessObjectData.common.kdsvc`路径并不满⾜上⾯对应的结尾和开头，因此交给 KDSVCHandler 进⾏处理
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/SHI5wib3tvAOEyF3yJPt4kCiaHFzft5OzAOYQJEZ9zGIHzTrcK17gCuCqVaW3qXLTLWc8PvGDHomvsJR7uCcb2xA/640?wx_fmt=png)
 
@@ -136,7 +136,7 @@ JQueryRequestExtractor 类中再次根据 POST 和 GET 选择对应的处理⽅�
 
 ### Qestion
 
-**参数传递过程中必须要设置成 ap0？** 根据传递⽅式进⾏设置，具体看 ExecuteServiceModule 类中的处理
+**参数传递过程中必须要设置成 ap0？** 根据传递⽅式进⾏设置，具体看 ExecuteServiceModule 类中的处理
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/SHI5wib3tvAOEyF3yJPt4kCiaHFzft5OzAiaictDyejuDRjCtyNvAAPSibQDysxzZHicD5kWgMkFVqVcoZfrXYiagokZg/640?wx_fmt=png)
 

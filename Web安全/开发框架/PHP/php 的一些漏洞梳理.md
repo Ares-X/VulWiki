@@ -84,7 +84,7 @@ include($test);
     
 
 ```
-# 常见敏感文件l
+# 常见敏感文件l
 http://192.168.1.3/fileinclude/news.php?id=c:\\\\1.txt
 www.test.com/test.php?test=../../../../../etc/passwod
 www.test.com/test.php?test=/etc/shadow
@@ -389,7 +389,7 @@ PHP 伪协议指的是 PHP 所支持的协议与封装协议，在 web 渗透漏
 
 *   allow\_url\_fopen ：on # 默认开启 ，表示允许 url 里的封装协议访问文件；
     
-*   allow\_url\_include：off  # 默认关闭，表示不允许包含 url 里的封装协议包含文件；
+*   allow\_url\_include：off  # 默认关闭，表示不允许包含 url 里的封装协议包含文件；
     
 
 **②常用伪协议条件及方法  

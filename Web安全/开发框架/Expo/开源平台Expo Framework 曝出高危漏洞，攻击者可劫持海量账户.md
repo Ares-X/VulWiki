@@ -25,7 +25,7 @@ Salt Security 的研究机构 Salt Labs 解释说，在发现该漏洞后，它�
 Expo 在一份公告中表示，它在 2023 年 2 月 18 日负责任地披露后数小时内部署了一个修补程序。还建议用户从使用AuthSession API 代理迁移到直接向第三方身份验证提供商注册深层链接 URL 方案以启用 SSO 功能.![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/Ok4fxxCpBb69E3NPQ5e4RV4BnhmpqKXaRQ2cNhNtbo5b0ocOHSB700fok3GYWE82kUG6EpLPTqFv9kDvoDboiaw/640?wx_fmt=jpeg "")  
   
   
-值得一提的是，该漏洞是在 Expo 的开放授权 (OAuth) 社交登录功能的实施方式中发现的。 安全专家表示，随着 OAuth 迅速成为行业常态，恶意人士不断寻找其中的安全漏洞。  
+值得一提的是，该漏洞是在 Expo 的开放授权 (OAuth) 社交登录功能的实施方式中发现的。 安全专家表示，随着 OAuth 迅速成为行业常态，恶意人士不断寻找其中的安全漏洞。  
   
 “OAuth 的错误实施可能会对公司和客户产生重大影响，因为他们会暴露宝贵的数据，而且组织必须随时了解其平台中存在的安全风险。”  
   

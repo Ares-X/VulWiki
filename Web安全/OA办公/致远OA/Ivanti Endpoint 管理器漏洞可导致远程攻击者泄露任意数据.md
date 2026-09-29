@@ -6,7 +6,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
  代码卫士   2026-02-12 10:13  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
-    
+    
 聚焦源代码安全，网罗国内外最新资讯！  
   
 **编译：代码卫士**  
@@ -41,12 +41,12 @@ Ivanti 公司已通过 Ivanti 许可系统 (ILS) 发布已修复版本 EPM 2024 
 这些漏洞说明了企业软件安全所面临的挑战，尤其是在处理特权访问和敏感组织机构数据的端点管理解决方案方面更是如此。其中认证绕过漏洞无需提前获得身份验证，可导致攻击者获得对凭据存储的初始访问权限，因此更令人担忧。目前尚不存在与这些漏洞相关的妥协指标。Ivanti 表示并未发现在野利用迹象。不过由于这两个漏洞的技术详情已发布，因此组织机构应尽快部署可用补丁。用户应优先更新至版本2024 SU5 并开展安全审计，确保在打补丁前没有发生未授权访问的情况。  
   
   
- 开源  
+ 开源  
 卫士试用地址：  
 https://oss.qianxin.com/#/login  
   
   
- 代码卫士试用地址：https://sast.qianxin.com/#/login  
+ 代码卫士试用地址：https://sast.qianxin.com/#/login  
   
   
   
@@ -99,9 +99,9 @@ e
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
   
-   
+   
 觉得不错，就点个 “  
 在看  
 ” 或 "  

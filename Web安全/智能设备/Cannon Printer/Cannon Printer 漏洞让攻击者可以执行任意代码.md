@@ -24,7 +24,7 @@ Canon 已发布一个重要的安全公告，内容涉及在其多个打印机�
   
 该漏洞不仅可能破坏打印作，还可能成为更复杂攻击的切入点，允许未经授权的代码执行，从而损害系统完整性和数据安全性。  
   
-Canon 感谢   
+Canon 感谢   
 Microsoft 进攻性研究和安全工程团队 （MORSE） 负责任地报告此漏洞，特别感谢研究人员 Robert Ord 为识别 CVE-2025-1268 做出的贡献。  
   
 漏洞摘要如下：  
@@ -53,7 +53,7 @@ Canon 已开发更新的打印机驱动程序来解决此安全问题。该公�
   
 原文来自: cybersecuritynews.com  
   
-原文链接:   
+原文链接:   
 https://cybersecuritynews.com/cannon-printer-vulnerability-arbitrary-code/  
   
 欢迎收藏并分享朋友圈，让五邑人网络更安全  

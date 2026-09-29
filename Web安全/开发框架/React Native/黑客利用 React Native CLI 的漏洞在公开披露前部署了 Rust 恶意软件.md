@@ -25,7 +25,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
 “React Native Community CLI 打开的 Metro 开发服务器默认绑定到外部接口。该服务器暴露了一个易受操作系统命令注入攻击的端点。这使得未经身份验证的网络攻击者可以向服务器发送 POST 请求并运行任意可执行文件。”  
   
   
- 安全公告指出。 “在 Windows 系统上，攻击者还可以执行带有完全可控参数的任意 shell 命令。”  
+ 安全公告指出。 “在 Windows 系统上，攻击者还可以执行带有完全可控参数的任意 shell 命令。”  
   
   
 Metro 是 React Native 使用的 JavaScript 打包器和开发服务器。默认情况下，它会暴露一个端点，允许未经身份验证的攻击者在 Windows 上运行操作系统命令。  
@@ -38,7 +38,7 @@ VulnCheck 于 2025 年 12 月 21 日和 1 月两次发现 CVE-2025-11953 (Metro4
   
   
 VulnCheck发布的公告指出： “在漏洞首次被利用一个多月后，EPSS仍然将其利用概率评为 0.00405的低值。这种实际利用与更广泛认知之间的差距至关重要，尤其对于那些易于利用且如互联网 搜索数据显示已在公共互联网上暴露的漏洞而言。”  
-    
+    
   
   
 VulnCheck 发现 CVE-2025-11953 漏洞已被持续利用，表明该漏洞已被用于实际攻击而非测试。  
@@ -77,7 +77,7 @@ https://securityaffairs.com/187587/hacking/hackers-abused-react-native-cli-flaw-
 Advanced Persistent Threat  
   
 曹县APT  
-37   
+37   
 利用LNK文件部署复杂的恶意软件针对专注于半岛事务的专业人士  
   
 https://gbhackers.com/chollima-apt-hackers/  

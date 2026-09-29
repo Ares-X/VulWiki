@@ -19,16 +19,16 @@ source: "MrWQ/vulnerability-paper"
 ![](https://mmbiz.qpic.cn/mmbiz_png/sGfPWsuKAffh9uzG2HspxKlibwWVBib5bZxGtmtNt7blK7ECMBQPYS4kvKXXWQyHA9nfSqmVqeQGcdww4Vibt6ZpA/640?wx_fmt=png)代码审计不知道该如何入手，所以去看了 cnvd, 在 cnvd 上看到 seacms10.1 有个前台注入，于是尝试分析了一波，全部弄完发现作者发布了最后一版  
 
 > 更新日期：2020 年 06 月 08 日 v11  
-> 更新新域名 https://www.seacms.org  
+> 更新新域名 https://www.seacms.org  
 > 以后不再更新, 从此山高水长，有缘再见。
 
 至于 V11，一模一样的漏洞，这次标题完全可以改成 seacmsV0.1&V11 前台注入漏洞。
 
 ### 过程
 
-用 seay 源代码审计系统先看看哪些地方容易出现注入，但内容太多了，因为看到的是前台 sql 注入，于是在审计时把`admin`目录下的内容全删除了，内容太多，所以先分析`select`, 在弄其他的。 
+用 seay 源代码审计系统先看看哪些地方容易出现注入，但内容太多了，因为看到的是前台 sql 注入，于是在审计时把`admin`目录下的内容全删除了，内容太多，所以先分析`select`, 在弄其他的。 
 
-入口点分析： 
+入口点分析： 
 
 之前分析过 6.45-6.55 的代码执行，所以轻易找到处理传参的地方`/include/common.php`：
 
@@ -48,7 +48,7 @@ foreach($\_REQUEST as $\_k=>$\_v)
 
 ```
 
-输出报错从`err0`写道`err7`。   
+输出报错从`err0`写道`err7`。   
 
 随便构造个语句，比如`?di=1 union select`看看防护在哪。注: 语句瞎写的，用来找防护在哪。
 
@@ -70,13 +70,13 @@ $getfilter = "\\\\<.+javascript:window\\\\\[.{1}\\\\\\\\x|<.\*=(&#\\\\d+?;?)+?>|
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/sGfPWsuKAffh9uzG2HspxKlibwWVBib5bZVDGbtZUqTSl9aRHyicBkneV9OzXFpFaY6MkicrdyB2tv7e9euejB0M9g/640?wx_fmt=png)
 
-虽然不知道能不能用，最起码检测过去了。 
+虽然不知道能不能用，最起码检测过去了。 
 
 解下来看看有哪些地方执行了`sql语句`，在`seay`没跑完的时候，已经出来一堆了相关语句了。
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/sGfPWsuKAffh9uzG2HspxKlibwWVBib5bZxibvPQ16WN7CmadUWMpZ72AvpZMNtCF6w59vD3LiaeVFKr1n2wJicL3PA/640?wx_fmt=png)
 
-感觉看完头肯定会很凉，而且我代码很菜，sql 语句也很菜，所以先尝试去看看和`select`相关的地方。 
+感觉看完头肯定会很凉，而且我代码很菜，sql 语句也很菜，所以先尝试去看看和`select`相关的地方。 
 
 访问`Upload/member.php`
 
@@ -148,17 +148,17 @@ if (stripos($clean, '@') !== FALSE  OR stripos($clean,'char(')!== FALSE  OR stri
 
 ```
 
-根据代码可知，只要有`$s$$s$`就会中断执行。 
+根据代码可知，只要有`$s$$s$`就会中断执行。 
 
-后面试了很多方法，都不行，各位有好方法还请赐教。而且页面试了其他地方的，也不行，很多参数都是直接读取的，没法控制。 
+后面试了很多方法，都不行，各位有好方法还请赐教。而且页面试了其他地方的，也不行，很多参数都是直接读取的，没法控制。 
 
-换一个地方，找一个数字型的地方试试。 
+换一个地方，找一个数字型的地方试试。 
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/sGfPWsuKAffh9uzG2HspxKlibwWVBib5bZYVM2u5yVSPHgUrP2SGtkQMjXh0iciclxfLaoiaFEibsm5UtJ43JA7qvWCw/640?wx_fmt=png)
 
-查看`Upload/comment/api/index.php`文件，用到`select`的地方只有 4 个，待会儿挨个查看。 
+查看`Upload/comment/api/index.php`文件，用到`select`的地方只有 4 个，待会儿挨个查看。 
 
-开头`$gid $page $type`进行了判断，但是`is_numeric`是弱类型，可以使用 16 进制绕过。 
+开头`$gid $page $type`进行了判断，但是`is_numeric`是弱类型，可以使用 16 进制绕过。 
 
 ```
 $id = (isset($gid) && is\_numeric($gid)) ? $gid : 0;
@@ -173,7 +173,7 @@ $type = (isset($type) && is\_numeric($type)) ? $type : 1;
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/sGfPWsuKAffh9uzG2HspxKlibwWVBib5bZmouugVe624sQUqxia1vibmJHTBVna0ZwS2BuAG9FeBAAwT6gBqgSMClw/640?wx_fmt=png)
 
-发现经过上述 4 条语句中的前两条，尝试使用 16 进制做判断，测试了很多方法，用了好久都不行，后来直接在数据库里构造也没弄出合适的语句 
+发现经过上述 4 条语句中的前两条，尝试使用 16 进制做判断，测试了很多方法，用了好久都不行，后来直接在数据库里构造也没弄出合适的语句 
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/sGfPWsuKAffh9uzG2HspxKlibwWVBib5bZTbru1VhBZ9o0YlfdksjPiaB3P2xPrth8EMD57M3QTAIITia1jd3OUVkA/640?wx_fmt=png)
 
@@ -190,7 +190,7 @@ $sql = "SELECT id,uid,username,dtime,reply,msg,agree,anti,pic,vote,ischeck FROM 
 
 梳理下过程，函数运行到 18 行`$h = ReadData($id,$page);`之后，在第 19 行开始赋值`$rlist = array();`, 一路运行到 24 行`die($h);`重新运行`$h = ReadData($id,$page);`此时`$rlist`是一个空数组。
 
-在函数`ReadData`中 
+在函数`ReadData`中 
 
 ```
 function ReadData($id,$page)
@@ -277,7 +277,7 @@ sea\_admin-- \\') AND ischeck=1 ORDER BY id DESC
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/sGfPWsuKAffh9uzG2HspxKlibwWVBib5bZ5hLz7nDicZqgkk5njObiaZ8NiapNfibia3IaVOPO23P8avOPO2f1xqfQCXQ/640?wx_fmt=png)
 
-分析可知，多了个单引号，这个单引号虽然有助于绕过 80sec 防注入，但是在数据库里会出问题，尝试注释搞掉它 因为有过滤，所以试着用下面的方式进行注释
+分析可知，多了个单引号，这个单引号虽然有助于绕过 80sec 防注入，但是在数据库里会出问题，尝试注释搞掉它 因为有过滤，所以试着用下面的方式进行注释
 
 ```
 /comment/api/index.php?gid=1&page=2&type=1&rlist\[\]=1)@\`/\`@\`\*\`@\`'\`@\`\*\`@\`/\`UNION--%0ASELECT%23%0A1,2,3,4,5,6,7,8,9,10,11%23%0Afrom%23%0Asea\_admin-- '
@@ -400,7 +400,7 @@ sea\_admin-- \\') AND ischeck=1 ORDER BY id DESC
 
 4、构造能顺利执行的语句，反推如何输入
 
-这是我学代码审计的第二周，也是我审计的第三个 cms, 在这过程中深刻体会到一句话: **漏洞的本质在于输入和输出的控制**, 道阻且长，代码多不胜数，慢慢记吧。
+这是我学代码审计的第二周，也是我审计的第三个 cms, 在这过程中深刻体会到一句话: **漏洞的本质在于输入和输出的控制**, 道阻且长，代码多不胜数，慢慢记吧。
 
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/sGfPWsuKAfeibiahLB2ygmQDWKPibocFLVp3xWu8OuId8iciazic5rhcfajBpcK3iaYicN55UQEZPnVJ5icAvVKcib9Ieacw/640?wx_fmt=jpeg)
 

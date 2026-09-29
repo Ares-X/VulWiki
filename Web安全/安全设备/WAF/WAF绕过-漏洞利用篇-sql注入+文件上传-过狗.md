@@ -187,7 +187,7 @@ php
 1.  
 php  
 ”的双引号变为  
- 1.php  
+ 1.php  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/b9ibb0kbHCIkDXC07oJaZhO7ZGeBjjdub7RdwTplSibGgUh4uKrDB07z1yLSR7smQk1NbQP3TefxdMa2Xyl3QVRg/640?wx_fmt=png&from=appmsg "")  
   
@@ -293,19 +293,19 @@ log4j
 [  
 精华版  
 ]  
-    
+    
 开业大吉！  
   
 每一个插件都是非常实用的，有没有用作者也已经通过  
   
 企业  
-src   
+src   
 漏洞的挖掘来证明了，并且只需要开启插件  
   
 点击鼠标就可以全自动挖掘漏洞。  
   
 需要获取插件的小伙伴可以扫描下方二维码加入我的知识星球，星球  
- 99  
+ 99  
 元  
 /  
 年  
@@ -313,7 +313,7 @@ src 
 ，前  
 50  
 个加入的  
- 77  
+ 77  
 元  
 /  
 年。  

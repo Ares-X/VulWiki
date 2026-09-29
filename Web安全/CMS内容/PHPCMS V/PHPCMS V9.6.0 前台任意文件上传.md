@@ -136,7 +136,7 @@ $pos = strpos($surl,'#');
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/PJcQz9vmUicl97QZCNujeDOjFHtHKReQJ2kc4ibHlFtruetSYtuhw0kCicyUKia549RqIoDWEAtmbp9TiaQI2pumicvQ/640?wx_fmt=png)
 
-而 fopen 一般都是可用的，如果开启了 allow_url_fopen，这个漏洞就构成了，然而大部分环境都默认开启了 allow_url_fopen。 
+而 fopen 一般都是可用的，如果开启了 allow_url_fopen，这个漏洞就构成了，然而大部分环境都默认开启了 allow_url_fopen。 
 
 最终在插入注册信息时因为混入了未知的参数而导致插入失败，报错就显示出了这个未知的参数至此，该漏洞分析完成。
 

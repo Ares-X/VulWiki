@@ -18,7 +18,7 @@ GPU Operator中的两个高危漏洞，攻击者可利用这些漏洞以提升�
   
 这两个编号为CVE-2025-23266和CVE-2025-23267的漏洞，影响所有运行  
 NVIDIA Container Toolkit  
-   
+   
 1.17.7及以下版本和GPU Operator 25.3.0及以下版本的平台，可能导致权限提升、数据篡改、信息泄露和拒绝服务攻击等严重风险。  
   
   
@@ -48,7 +48,7 @@ Min Yao
   
   
 NVIDIA已发布新版本来修复这些漏洞。  
-NVIDIA Container Toolkit   
+NVIDIA Container Toolkit   
 用户需从1.17.7及以下版本升级至1.17.8版本。Linux平台上的NVIDIA GPU Operator用户需从25.3.0及以下版本升级至25.3.1版本。值得注意的是，CDI模式漏洞仅影响容器工具包1.17.5之前版本和GPU Operator 25.3.0之前版本。  
   
   
@@ -94,7 +94,7 @@ https://cybersecuritynews.com/nvidia-container-toolkit-vulnerability-2/
   
 ![图片](https://mmbiz.qpic.cn/mmbiz_gif/qq5rfBadR3icF8RMnJbsqatMibR6OicVrUDaz0fyxNtBDpPlLfibJZILzHQcwaKkb4ia57xAShIJfQ54HjOG1oPXBew/640?wx_fmt=gif&wxfrom=5&wx_lazy=1&tp=webp "")  
   
-   
+   
   
 
 

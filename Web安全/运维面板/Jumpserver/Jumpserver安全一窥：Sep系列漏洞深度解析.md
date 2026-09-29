@@ -42,10 +42,10 @@ Jumpserver是中国国内公司开发的一个开源项目，在开源堡垒机�
   
 我们来看看django-simple-captcha的工作流程。首先，开发者需要为需要验证码的Django表单（forms）增加一个CaptchaField字段：  
 ```
-class UserForm(forms.Form):
-    username = forms.CharField(...)
-    captcha = CaptchaField(widget=CustomCaptchaTextInput, label=_('Captcha'))
-    ...
+class UserForm(forms.Form):
+    username = forms.CharField(...)
+    captcha = CaptchaField(widget=CustomCaptchaTextInput, label=_('Captcha'))
+    ...
 
 ```  
   
@@ -53,14 +53,14 @@ class UserForm(forms.Form):
   
 然后，challenge和response会按照如下算法生成一个唯一的hashkey：  
 ```
-randrange = random.SystemRandom().randrange
-key_ = (
-    smart_text(randrange(0, MAX_RANDOM_KEY))
-    + smart_text(time.time())
-    + smart_text(self.challenge, errors="ignore")
-    + smart_text(self.response, errors="ignore")
+randrange = random.SystemRandom().randrange
+key_ = (
+    smart_text(randrange(0, MAX_RANDOM_KEY))
+    + smart_text(time.time())
+    + smart_text(self.challenge, errors="ignore")
+    + smart_text(self.response, errors="ignore")
 ).encode("utf8")
-self.hashkey = hashlib.sha1(key_).hexdigest()
+self.hashkey = hashlib.sha1(key_).hexdigest()
 
 ```  
   
@@ -73,17 +73,17 @@ self.hashkey = hashlib.sha1(key_).hexdigest()
   
 captcha_image视图只接收一个参数，即为用户传入的key：  
 ```
-def captcha_image(request, key, scale=1):
-    if scale == 2 and not settings.CAPTCHA_2X_IMAGE:
-        raise Http404
-    try:
-        store = CaptchaStore.objects.get(hashkey=key)
-    except CaptchaStore.DoesNotExist:
-        # HTTP 410 Gone status so that crawlers don't index these expired urls.
-        return HttpResponse(status=410)
+def captcha_image(request, key, scale=1):
+    if scale == 2 and not settings.CAPTCHA_2X_IMAGE:
+        raise Http404
+    try:
+        store = CaptchaStore.objects.get(hashkey=key)
+    except CaptchaStore.DoesNotExist:
+        # HTTP 410 Gone status so that crawlers don't index these expired urls.
+        return HttpResponse(status=410)
 
-    random.seed(key)  # Do not generate different images for the same key
-    #...
+    random.seed(key)  # Do not generate different images for the same key
+    #...
 
 ```  
   
@@ -142,23 +142,23 @@ def captcha_image(request, key, scale=1):
   
 如果你看过Vulhub中复现CVE-2023-42820的过程，你应该记得这两个步骤——用户在第一个页面输入账号和验证码后，会生成一个随机的Token附于跳转URL中：  
 ```
-class UserForgotPasswordPreviewingView(FormView):
-    template_name = 'users/forgot_password_previewing.html'
-    form_class = forms.UserForgotPasswordPreviewingForm
+class UserForgotPasswordPreviewingView(FormView):
+    template_name = 'users/forgot_password_previewing.html'
+    form_class = forms.UserForgotPasswordPreviewingForm
 
-    @staticmethod
-    def get_redirect_url(token):
-        return reverse('authentication:forgot-password') + '?token=%s' % token
+    @staticmethod
+    def get_redirect_url(token):
+        return reverse('authentication:forgot-password') + '?token=%s' % token
 
-    def form_valid(self, form):
-        username = form.cleaned_data['username']
-        user = get_object_or_none(User, username=username)
-        ...
+    def form_valid(self, form):
+        username = form.cleaned_data['username']
+        user = get_object_or_none(User, username=username)
+        ...
 
-        token = random_string(36)
-        user_map = {'username': user.username, 'phone': user.phone, 'email': user.email}
-        cache.set(token, user_map, 5 * 60)
-        return redirect(self.get_redirect_url(token))
+        token = random_string(36)
+        user_map = {'username': user.username, 'phone': user.phone, 'email': user.email}
+        cache.set(token, user_map, 5 * 60)
+        return redirect(self.get_redirect_url(token))
 
 ```  
   
@@ -181,24 +181,24 @@ Jumpserver使用ansible来管理主机，playbook是ansible中用于管理主机
   
 这个漏洞就是后者，但它其实和playbook没啥关系，主要问题还是出在Jumpserver本身的代码中。Jumpserver支持用户在Web页面中上传、下载、浏览playbook模板文件，比如ops.api.playbook.PlaybookFileBrowserAPIView这个视图：  
 ```
-class PlaybookFileBrowserAPIView(APIView):
-    def get(self, request, **kwargs):
-        playbook_id = kwargs.get('pk')
-        playbook = get_object_or_404(Playbook, id=playbook_id)
-        work_path = playbook.work_dir
-        file_key = request.query_params.get('key', '')
-        if file_key:
-            file_path = os.path.join(work_path, file_key)
-            with open(file_path, 'r') as f:
-                try:
-                    content = f.read()
-                except UnicodeDecodeError:
-                    content = _('Unsupported file content')
-                return Response({'content': content})
-        else:
-            expand_key = request.query_params.get('expand', '')
-            nodes = self.generate_tree(playbook, work_path, expand_key)
-            return Response(nodes)
+class PlaybookFileBrowserAPIView(APIView):
+    def get(self, request, **kwargs):
+        playbook_id = kwargs.get('pk')
+        playbook = get_object_or_404(Playbook, id=playbook_id)
+        work_path = playbook.work_dir
+        file_key = request.query_params.get('key', '')
+        if file_key:
+            file_path = os.path.join(work_path, file_key)
+            with open(file_path, 'r') as f:
+                try:
+                    content = f.read()
+                except UnicodeDecodeError:
+                    content = _('Unsupported file content')
+                return Response({'content': content})
+        else:
+            expand_key = request.query_params.get('expand', '')
+            nodes = self.generate_tree(playbook, work_path, expand_key)
+            return Response(nodes)
 
 ```  
   
@@ -275,46 +275,46 @@ class PlaybookFileBrowserAPIView(APIView):
   
 Koko是Go开发的组件，其ssh终端服务基于github.com/gliderlabs/ssh：  
 ```
-import "github.com/gliderlabs/ssh"
+import "github.com/gliderlabs/ssh"
 
-func NewSSHServer(jmsService *service.JMService) *Server {
- ...
- sshHandler := handler.NewServer(termCfg, jmsService)
- srv := &ssh.Server{
-  Addr:                       addr,
-  KeyboardInteractiveHandler: auth.SSHKeyboardInteractiveAuth,
-  PasswordHandler:            sshHandler.PasswordAuth,
-  PublicKeyHandler:           sshHandler.PublicKeyAuth,
-  ...
- }
- return &Server{srv, sshHandler}
+func NewSSHServer(jmsService *service.JMService) *Server {
+ ...
+ sshHandler := handler.NewServer(termCfg, jmsService)
+ srv := &ssh.Server{
+  Addr:                       addr,
+  KeyboardInteractiveHandler: auth.SSHKeyboardInteractiveAuth,
+  PasswordHandler:            sshHandler.PasswordAuth,
+  PublicKeyHandler:           sshHandler.PublicKeyAuth,
+  ...
+ }
+ return &Server{srv, sshHandler}
 }
 
 ```  
   
 其中两个配置函数PasswordHandler和PublicKeyHandler用于校验用户身份，用户连接SSH端口并输入密码后，会调用PasswordHandler来验证密码是否正确，对于密钥的认证则是使用PublicKeyHandler：  
 ```
-func (s *Server) PasswordAuth(ctx ssh.Context, password string) ssh.AuthResult {
- ctx.SetValue(ctxID, ctx.SessionID())
- tConfig := s.GetTerminalConfig()
- if !tConfig.PasswordAuth {
-  logger.Info("Core API disable password auth auth")
-  return ssh.AuthFailed
- }
- sshAuthHandler := auth.SSHPasswordAndPublicKeyAuth(s.jmsService)
- return sshAuthHandler(ctx, password, "")
+func (s *Server) PasswordAuth(ctx ssh.Context, password string) ssh.AuthResult {
+ ctx.SetValue(ctxID, ctx.SessionID())
+ tConfig := s.GetTerminalConfig()
+ if !tConfig.PasswordAuth {
+  logger.Info("Core API disable password auth auth")
+  return ssh.AuthFailed
+ }
+ sshAuthHandler := auth.SSHPasswordAndPublicKeyAuth(s.jmsService)
+ return sshAuthHandler(ctx, password, "")
 }
 
-func (s *Server) PublicKeyAuth(ctx ssh.Context, key ssh.PublicKey) ssh.AuthResult {
- ctx.SetValue(ctxID, ctx.SessionID())
- tConfig := s.GetTerminalConfig()
- if !tConfig.PublicKeyAuth {
-  logger.Info("Core API disable publickey auth")
-  return ssh.AuthFailed
- }
- sshAuthHandler := auth.SSHPasswordAndPublicKeyAuth(s.jmsService)
- value := string(gossh.MarshalAuthorizedKey(key))
- return sshAuthHandler(ctx, "", value)
+func (s *Server) PublicKeyAuth(ctx ssh.Context, key ssh.PublicKey) ssh.AuthResult {
+ ctx.SetValue(ctxID, ctx.SessionID())
+ tConfig := s.GetTerminalConfig()
+ if !tConfig.PublicKeyAuth {
+  logger.Info("Core API disable publickey auth")
+  return ssh.AuthFailed
+ }
+ sshAuthHandler := auth.SSHPasswordAndPublicKeyAuth(s.jmsService)
+ value := string(gossh.MarshalAuthorizedKey(key))
+ return sshAuthHandler(ctx, "", value)
 }
 
 ```  
@@ -325,36 +325,36 @@ func (s *Server) PublicKeyAuth(ctx ssh.Context, key ssh.PublicKey) ssh.Au
   
 在Jumpserver的配置中，我们可以看到它支持多个认证后端：  
 ```
-RBAC_BACKEND = 'rbac.backends.RBACBackend'
-AUTH_BACKEND_MODEL = 'authentication.backends.base.JMSModelBackend'
-AUTH_BACKEND_PUBKEY = 'authentication.backends.pubkey.PublicKeyAuthBackend'
-AUTH_BACKEND_LDAP = 'authentication.backends.ldap.LDAPAuthorizationBackend'
-AUTH_BACKEND_OIDC_PASSWORD = 'authentication.backends.oidc.OIDCAuthPasswordBackend'
-AUTH_BACKEND_OIDC_CODE = 'authentication.backends.oidc.OIDCAuthCodeBackend'
-AUTH_BACKEND_RADIUS = 'authentication.backends.radius.RadiusBackend'
-AUTH_BACKEND_CAS = 'authentication.backends.cas.CASBackend'
-AUTH_BACKEND_SSO = 'authentication.backends.sso.SSOAuthentication'
-AUTH_BACKEND_WECOM = 'authentication.backends.sso.WeComAuthentication'
-AUTH_BACKEND_DINGTALK = 'authentication.backends.sso.DingTalkAuthentication'
-AUTH_BACKEND_FEISHU = 'authentication.backends.sso.FeiShuAuthentication'
-AUTH_BACKEND_AUTH_TOKEN = 'authentication.backends.sso.AuthorizationTokenAuthentication'
-AUTH_BACKEND_SAML2 = 'authentication.backends.saml2.SAML2Backend'
-AUTH_BACKEND_OAUTH2 = 'authentication.backends.oauth2.OAuth2Backend'
-AUTH_BACKEND_TEMP_TOKEN = 'authentication.backends.token.TempTokenAuthBackend'
-AUTH_BACKEND_CUSTOM = 'authentication.backends.custom.CustomAuthBackend'
+RBAC_BACKEND = 'rbac.backends.RBACBackend'
+AUTH_BACKEND_MODEL = 'authentication.backends.base.JMSModelBackend'
+AUTH_BACKEND_PUBKEY = 'authentication.backends.pubkey.PublicKeyAuthBackend'
+AUTH_BACKEND_LDAP = 'authentication.backends.ldap.LDAPAuthorizationBackend'
+AUTH_BACKEND_OIDC_PASSWORD = 'authentication.backends.oidc.OIDCAuthPasswordBackend'
+AUTH_BACKEND_OIDC_CODE = 'authentication.backends.oidc.OIDCAuthCodeBackend'
+AUTH_BACKEND_RADIUS = 'authentication.backends.radius.RadiusBackend'
+AUTH_BACKEND_CAS = 'authentication.backends.cas.CASBackend'
+AUTH_BACKEND_SSO = 'authentication.backends.sso.SSOAuthentication'
+AUTH_BACKEND_WECOM = 'authentication.backends.sso.WeComAuthentication'
+AUTH_BACKEND_DINGTALK = 'authentication.backends.sso.DingTalkAuthentication'
+AUTH_BACKEND_FEISHU = 'authentication.backends.sso.FeiShuAuthentication'
+AUTH_BACKEND_AUTH_TOKEN = 'authentication.backends.sso.AuthorizationTokenAuthentication'
+AUTH_BACKEND_SAML2 = 'authentication.backends.saml2.SAML2Backend'
+AUTH_BACKEND_OAUTH2 = 'authentication.backends.oauth2.OAuth2Backend'
+AUTH_BACKEND_TEMP_TOKEN = 'authentication.backends.token.TempTokenAuthBackend'
+AUTH_BACKEND_CUSTOM = 'authentication.backends.custom.CustomAuthBackend'
 
-AUTHENTICATION_BACKENDS = [
-    # 只做权限校验
-    RBAC_BACKEND,
-    # 密码形式
-    AUTH_BACKEND_MODEL, AUTH_BACKEND_PUBKEY, AUTH_BACKEND_LDAP, AUTH_BACKEND_RADIUS,
-    # 跳转形式
-    AUTH_BACKEND_CAS, AUTH_BACKEND_OIDC_PASSWORD, AUTH_BACKEND_OIDC_CODE, AUTH_BACKEND_SAML2,
-    AUTH_BACKEND_OAUTH2,
-    # 扫码模式
-    AUTH_BACKEND_WECOM, AUTH_BACKEND_DINGTALK, AUTH_BACKEND_FEISHU,
-    # Token模式
-    AUTH_BACKEND_AUTH_TOKEN, AUTH_BACKEND_SSO, AUTH_BACKEND_TEMP_TOKEN,
+AUTHENTICATION_BACKENDS = [
+    # 只做权限校验
+    RBAC_BACKEND,
+    # 密码形式
+    AUTH_BACKEND_MODEL, AUTH_BACKEND_PUBKEY, AUTH_BACKEND_LDAP, AUTH_BACKEND_RADIUS,
+    # 跳转形式
+    AUTH_BACKEND_CAS, AUTH_BACKEND_OIDC_PASSWORD, AUTH_BACKEND_OIDC_CODE, AUTH_BACKEND_SAML2,
+    AUTH_BACKEND_OAUTH2,
+    # 扫码模式
+    AUTH_BACKEND_WECOM, AUTH_BACKEND_DINGTALK, AUTH_BACKEND_FEISHU,
+    # Token模式
+    AUTH_BACKEND_AUTH_TOKEN, AUTH_BACKEND_SSO, AUTH_BACKEND_TEMP_TOKEN,
 ]
 
 ```  
@@ -365,49 +365,49 @@ AUTHENTICATION_BACKENDS = [
   
 Koko在请求Core组件时，使用到的后端是authentication.backends.base.JMSModelBackend和authentication.backends.pubkey.PublicKeyAuthBackend。前者继承传统的数据库认证后端，传入账号、密码后进行校验；后者则使用公钥进行认证，相关代码如下：  
 ```
-class JMSBaseAuthBackend:
-    ...
-    
-    def user_can_authenticate(self, user):
-        return True
+class JMSBaseAuthBackend:
+    ...
+    
+    def user_can_authenticate(self, user):
+        return True
 
-class PublicKeyAuthBackend(JMSBaseAuthBackend):
-    ...
-    
-    def authenticate(self, request, username=None, public_key=None, **kwargs):
-        if not public_key:
-            return None
-        if username is None:
-            username = kwargs.get(UserModel.USERNAME_FIELD)
-        try:
-            user = UserModel._default_manager.get_by_natural_key(username)
-        except UserModel.DoesNotExist:
-            return None
-        else:
-            if user.check_public_key(public_key) and \
-                  self.user_can_authenticate(user):
-                return user
+class PublicKeyAuthBackend(JMSBaseAuthBackend):
+    ...
+    
+    def authenticate(self, request, username=None, public_key=None, **kwargs):
+        if not public_key:
+            return None
+        if username is None:
+            username = kwargs.get(UserModel.USERNAME_FIELD)
+        try:
+            user = UserModel._default_manager.get_by_natural_key(username)
+        except UserModel.DoesNotExist:
+            return None
+        else:
+            if user.check_public_key(public_key) and \
+                  self.user_can_authenticate(user):
+                return user
 
 
-class AuthMixin:
-    ...
-    
-    @staticmethod
-    def get_public_key_body(key):
-        for i in key.split():
-            if len(i) > 256:
-                return i
-        return key
+class AuthMixin:
+    ...
+    
+    @staticmethod
+    def get_public_key_body(key):
+        for i in key.split():
+            if len(i) > 256:
+                return i
+        return key
 
-    def check_public_key(self, key):
-        if not self.public_key:
-            return False
-        key = self.get_public_key_body(key)
-        key_saved = self.get_public_key_body(self.public_key)
-        if key == key_saved:
-            return True
-        else:
-            return False
+    def check_public_key(self, key):
+        if not self.public_key:
+            return False
+        key = self.get_public_key_body(key)
+        key_saved = self.get_public_key_body(self.public_key)
+        if key == key_saved:
+            return True
+        else:
+            return False
 
 ```  
   
@@ -451,9 +451,9 @@ CVE-2023-42818漏洞和前面这个漏洞很像，都是攻击者只需要知道
   
 Koko为了实现SSH登录的二次认证，魔改了下面两个项目：  
 ```
-replace (
- github.com/gliderlabs/ssh => github.com/LeeEirc/ssh v0.1.2-0.20220323091501-23b956e1e5a8
- golang.org/x/crypto => github.com/LeeEirc/crypto v0.0.0-20230406074824-78021579524f
+replace (
+ github.com/gliderlabs/ssh => github.com/LeeEirc/ssh v0.1.2-0.20220323091501-23b956e1e5a8
+ golang.org/x/crypto => github.com/LeeEirc/crypto v0.0.0-20230406074824-78021579524f
 )
 
 ```  
@@ -530,14 +530,14 @@ DRF的Permission基础权限接口存在两个函数：
   
 在Jumpserver中，IsSessionAssignee继承了基础权限类：  
 ```
-from rest_framework import permissions
+from rest_framework import permissions
 
-class IsSessionAssignee(permissions.BasePermission):
-    def has_object_permission(self, request, view, obj):
-        try:
-            return obj.ticket_relation.first().ticket.has_all_assignee(request.user)
-        except:
-            return False
+class IsSessionAssignee(permissions.BasePermission):
+    def has_object_permission(self, request, view, obj):
+        try:
+            return obj.ticket_relation.first().ticket.has_all_assignee(request.user)
+        except:
+            return False
 
 
 ```  
@@ -546,27 +546,27 @@ class IsSessionAssignee(permissions.BasePermission):
   
 全局搜索IsSessionAssignee，可见有一个视图使用了这个类：  
 ```
-class SessionViewSet(OrgBulkModelViewSet):
-    model = Session
-    serializer_classes = {
-        'default': serializers.SessionSerializer,
-        'display': serializers.SessionDisplaySerializer,
-    }
-    search_fields = [
-        "user", "asset", "account", "remote_addr",
-        "protocol", "is_finished", 'login_from',
-    ]
-    filterset_class = SessionFilterSet
-    date_range_filter_fields = [
-        ('date_start', ('date_from', 'date_to'))
-    ]
-    extra_filter_backends = [DatetimeRangeFilter]
-    rbac_perms = {
-        'download': ['terminal.download_sessionreplay']
-    }
-    permission_classes = [RBACPermission | IsSessionAssignee]
-    
-    ...
+class SessionViewSet(OrgBulkModelViewSet):
+    model = Session
+    serializer_classes = {
+        'default': serializers.SessionSerializer,
+        'display': serializers.SessionDisplaySerializer,
+    }
+    search_fields = [
+        "user", "asset", "account", "remote_addr",
+        "protocol", "is_finished", 'login_from',
+    ]
+    filterset_class = SessionFilterSet
+    date_range_filter_fields = [
+        ('date_start', ('date_from', 'date_to'))
+    ]
+    extra_filter_backends = [DatetimeRangeFilter]
+    rbac_perms = {
+        'download': ['terminal.download_sessionreplay']
+    }
+    permission_classes = [RBACPermission | IsSessionAssignee]
+    
+    ...
 
 ```  
   
@@ -579,45 +579,45 @@ class SessionViewSet(OrgBulkModelViewSet):
   
 如果想要下载某个session的录像，我们需要访问media中对应的文件。在jumpserver/urls.py中可以看到静态文件相关的路由：  
 ```
-urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-urlpatterns += [
-    # Protect media
-    path('media/', include(private_storage.urls)),
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+urlpatterns += [
+    # Protect media
+    path('media/', include(private_storage.urls)),
 ]
 
 ```  
   
 这里使用了django-private-storage这个第三方模块来管理静态文件，这个模块的作用就是保证静态文件只允许被有权限的用户下载访问。其权限校验相关回调函数在PRIVATE_STORAGE_AUTH_FUNCTION中，我们全局搜索一下这个配置：  
 ```
-PRIVATE_STORAGE_ROOT = MEDIA_ROOT
-PRIVATE_STORAGE_AUTH_FUNCTION = 'jumpserver.rewriting.storage.permissions.allow_access'
+PRIVATE_STORAGE_ROOT = MEDIA_ROOT
+PRIVATE_STORAGE_AUTH_FUNCTION = 'jumpserver.rewriting.storage.permissions.allow_access'
 
 ```  
   
 跟进jumpserver.rewriting.storage.permissions.allow_access：  
 ```
-path_perms_map = {
-    'xpack': '*',
-    'settings': '*',
-    'replay': 'default',
-    'applets': 'terminal.view_applet',
-    'playbooks': 'ops.view_playbook'
+path_perms_map = {
+    'xpack': '*',
+    'settings': '*',
+    'replay': 'default',
+    'applets': 'terminal.view_applet',
+    'playbooks': 'ops.view_playbook'
 }
 
-def allow_access(private_file):
-    request = private_file.request
-    request_path = private_file.request.path
-    path_list = str(request_path)[1:].split('/')
-    path_base = path_list[1] if len(path_list) > 1 else None
-    path_perm = path_perms_map.get(path_base, None)
+def allow_access(private_file):
+    request = private_file.request
+    request_path = private_file.request.path
+    path_list = str(request_path)[1:].split('/')
+    path_base = path_list[1] if len(path_list) > 1 else None
+    path_perm = path_perms_map.get(path_base, None)
 
-    if not path_perm:
-        return False
-    if path_perm == '*' or request.user.has_perms([path_perm]):
-        return True
-    if path_perm == 'default':
-        return request.user.is_authenticated and request.user.is_staff
-    return False
+    if not path_perm:
+        return False
+    if path_perm == '*' or request.user.has_perms([path_perm]):
+        return True
+    if path_perm == 'default':
+        return request.user.is_authenticated and request.user.is_staff
+    return False
 
 
 ```  

@@ -30,7 +30,7 @@ https://github.com/wy876/POC/blob/main/JFinalCMS/JFinalCMS%20%E4%BB%BB%E6%84%8F%
 ，获取了当前参数fileKey  
 。  
   
-接下来就是分析 renderFile  
+接下来就是分析 renderFile  
 函数，点击进去，然后定位代码位置。  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/Tb6OwBlojE9l8genYQbiasb6yV5QdXZs9XTQClrGticBNx7en3QgNm4azJVL275POCL8IOxJ4wFveuHDx78cmdVQ/640?wx_fmt=png&from=appmsg "")  

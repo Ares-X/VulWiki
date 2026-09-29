@@ -6,7 +6,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
 Abinaya  代码卫士   2026-01-05 10:34  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
-    
+    
 聚焦源代码安全，网罗国内外最新资讯！  
   
 **编译：代码卫士**  
@@ -37,12 +37,12 @@ Abinaya  代码卫士   2026-01-05 10:34
 CISA敦促相关组织机构和个人立即采取防御措施以降低被攻击风险。CISA 提到的主要建议包括：通过确保设备无法从互联网访问来减少网络暴露面、为控制系统部署防火墙，以及在必须进行远程访问时使用安全的虚拟专用网络 (VPN)。用户应直接联系WHILL公司获取具体的缓解指导和可能的固件更新信息。相关组织机构在部署防护措施前，必须进行全面的影响分析和风险评估。CISA强调称，虽然目前尚未出现已知的公开攻击案例，但鉴于其严重级别，应立即处理。  
   
   
- 开源  
+ 开源  
 卫士试用地址：  
 https://oss.qianxin.com/#/login  
   
   
- 代码卫士试用地址：https://sast.qianxin.com/#/login  
+ 代码卫士试用地址：https://sast.qianxin.com/#/login  
   
   
   
@@ -87,9 +87,9 @@ https://cybersecuritynews.com/cisa-warns-of-whill-model-c2-wheelchairs-vulnerabi
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
   
-   
+   
 觉得不错，就点个 “  
 在看  
 ” 或 "  

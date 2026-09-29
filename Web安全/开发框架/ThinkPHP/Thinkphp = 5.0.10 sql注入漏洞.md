@@ -71,11 +71,11 @@ select 1,user()\#** 链接，即可触发 **SQL注入漏洞** 。（没开启
 
 ### 漏洞分析
 
-首先在官方发布的 **5.0.11** 版本更新说明中，发现其中提到该版本包含了一个安全更新，我们可以查阅其 **commit** 记录，发现其修改的 **Request.php** 文件代码比较可疑。
+首先在官方发布的 **5.0.11** 版本更新说明中，发现其中提到该版本包含了一个安全更新，我们可以查阅其 **commit** 记录，发现其修改的 **Request.php** 文件代码比较可疑。
 
 ![2.png](./.resource/Thinkphp=5.0.10sql注入漏洞/media/rId27.png)
 
-接着我们直接跟着上面的攻击 **payload** 来看看漏洞原理。首先，不管以哪种方式传递数据给服务器，这些数据在
+接着我们直接跟着上面的攻击 **payload** 来看看漏洞原理。首先，不管以哪种方式传递数据给服务器，这些数据在
 **ThinkPHP** 中都会经过 **Request** 类的 **input**
 方法。数据不仅会被强制类型转换，还都会经过 **filterValue**
 方法的处理。该方法是用来过滤表单中的表达式，但是我们仔细看其代码，会发现少过滤了
@@ -90,16 +90,16 @@ select 1,user()\#** 链接，即可触发 **SQL注入漏洞** 。（没开启
 
 ![4.png](./.resource/Thinkphp=5.0.10sql注入漏洞/media/rId29.png)
 
-上面的 **\$this-\>builder** 为 **\\think\\db\\builder\\Mysql** 类，该类继承于 **Builder** 类，所以接着会调用 **Builder** 类的 **select** 方法。在 **select** 方法中，程序会对 **SQL** 语句模板用变量填充，其中用来填充 **%WHERE%** 的变量中存在用户输入的数据。我们跟进这个 **where** 分析函数，会发现其会调用生成查询条件 **SQL** 语句的 **buildWhere** 函数。
+上面的 **\$this-\>builder** 为 **\\think\\db\\builder\\Mysql** 类，该类继承于 **Builder** 类，所以接着会调用 **Builder** 类的 **select** 方法。在 **select** 方法中，程序会对 **SQL** 语句模板用变量填充，其中用来填充 **%WHERE%** 的变量中存在用户输入的数据。我们跟进这个 **where** 分析函数，会发现其会调用生成查询条件 **SQL** 语句的 **buildWhere** 函数。
 
 ![5.png](./.resource/Thinkphp=5.0.10sql注入漏洞/media/rId30.png)
 
-继续跟进 **buildWhere** 函数，发现用户可控数据又被传入了 **parseWhereItem** where子单元分析函数，该函数的返回结果存储在
+继续跟进 **buildWhere** 函数，发现用户可控数据又被传入了 **parseWhereItem** where子单元分析函数，该函数的返回结果存储在
 **\$str** 变量中，并被拼接进 **SQL** 语句。（下图 **第16、20行**）
 
 ![6.png](./.resource/Thinkphp=5.0.10sql注入漏洞/media/rId31.png)
 
-我们跟进 **parseWhereItem** 方法，发现当操作符等于 **NOT LIKE**
+我们跟进 **parseWhereItem** 方法，发现当操作符等于 **NOT LIKE**
 时，程序所使用的 **MYSQL** 逻辑操作符竟然可由用户传来的变量控制（下图
 **第23行** ），这样也就直接导致了 **SQL注入漏洞** 的发生。
 

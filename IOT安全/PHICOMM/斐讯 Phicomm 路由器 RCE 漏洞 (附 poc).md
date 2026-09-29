@@ -166,7 +166,7 @@ http:
 运行 POC
 
 ```
-.\nuclei.exe -t .\CVE-2023-40796.yaml -u http://x.x.x.x:30005
+.\nuclei.exe -t .\CVE-2023-40796.yaml -u http://x.x.x.x:30005
 
 ```
 

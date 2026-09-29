@@ -29,7 +29,7 @@ CISA的第二个公告涉及诺基亚ASIK AirScale 5G通用系统模块的三个
 ：E  
 安全  
   
-“投稿联系方式：孙中豪 010-82992251   sunzhonghao@cert.org.cn”  
+“投稿联系方式：孙中豪 010-82992251   sunzhonghao@cert.org.cn”  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/iaz5iaQYxGogucKMiatGyfBHlfj74r3CyPxEBrV0oOOuHICibgHwtoIGayOIcmJCIsAn02z2yibtfQylib07asMqYAEw/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1 "")  
   

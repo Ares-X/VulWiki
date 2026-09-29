@@ -33,7 +33,7 @@ source: "MrWQ/vulnerability-paper"
 
 panabit 是一款用于流量控制的实用软件工具，panabit 缓存加速产品是一款基于派网公司自研的操作系统（PanaOS）上研发的内容缓存产品。iXCache 依靠高稳定性、高可靠性两大特点，可缓存丰富的资源，目前支持 Web 视频、移动视频、Web 音乐、移动音乐、软件下载、应用商店、游戏补丁等八大类资源的缓存。部署灵活、支持交换机镜像和 Panabit 牵引两种模式，满足不同级别的用户需求。
 
-panabit iXCache 系统 **date_config 存在命令执行漏洞**，攻击者在获取 Web 权限的情况下，可通过构造 payload 进行远程命令注入，获取设备 root 权限。
+panabit iXCache 系统 **date_config 存在命令执行漏洞**，攻击者在获取 Web 权限的情况下，可通过构造 payload 进行远程命令注入，获取设备 root 权限。
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hDCVZx96ZMibcJI8GEwNnAyx4yiavy2qelCaTeSAibEeFrVtpyibBCicjbzwDkmBJDj9xBWJ6ff10OTQ2w/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
 
@@ -78,7 +78,7 @@ POST 请求，响应存在漏洞
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hA8803KxcQScEShwxphsvibHB9J19osM2lospcNqRe0FbPAOwZclglibUxXxGR7TI8KXAImu57DV5uw/640?wx_fmt=png)
 
-        执行 id 命令，前端页面
+        执行 id 命令，前端页面
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hA8803KxcQScEShwxphsvibHmzyhElHyWtXEx7ghdIhey4MUIicmxqT25dF7gEtWB4CQgUxNCFwDdeQ/640?wx_fmt=png)
 
@@ -105,7 +105,7 @@ https://www.panabit.com
 
 口号 网安引领时代，弥天点亮未来
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/b96CibCt70iaaqjXT4YxgHVARD1NNv0RvKtiaAvXhmruVqgavPY3stwrfvLKetGycKUfxIq3Xc6F6dhU7eb4oh2gg/640?wx_fmt=gif&wxfrom=5&wx_lazy=1) 
+![](https://mmbiz.qpic.cn/mmbiz_gif/b96CibCt70iaaqjXT4YxgHVARD1NNv0RvKtiaAvXhmruVqgavPY3stwrfvLKetGycKUfxIq3Xc6F6dhU7eb4oh2gg/640?wx_fmt=gif&wxfrom=5&wx_lazy=1) 
 
 知识分享完了
 
@@ -117,7 +117,7 @@ https://www.panabit.com
 
 必降弥天之润！
 
-   弥  天
+   弥  天
 
 安全实验室  
 

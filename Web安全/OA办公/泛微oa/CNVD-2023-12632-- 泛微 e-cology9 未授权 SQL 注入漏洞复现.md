@@ -41,7 +41,7 @@ Ecology9 <=10.55
 这里的 poc 经过三次 url 全字符编码，原语句为：
 
 ```
-a' union select 1,''+(select 'SQL_EXISTS')+'
+a' union select 1,''+(select 'SQL_EXISTS')+'
 
 ```
 

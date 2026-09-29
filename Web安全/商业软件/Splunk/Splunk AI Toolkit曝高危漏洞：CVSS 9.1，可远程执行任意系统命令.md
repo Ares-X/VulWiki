@@ -32,7 +32,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
   
 其核心逻辑类似：  
 ```
-command = f"some_tool {user_input}"
+command = f"some_tool {user_input}"
 os.system(command)
 ```  
   

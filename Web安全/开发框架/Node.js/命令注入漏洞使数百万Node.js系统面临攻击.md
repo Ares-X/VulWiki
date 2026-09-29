@@ -20,8 +20,8 @@ SSID: a " | %SystemDrive%\a\a.exe &
   
 一旦连接到恶意Wi-Fi网络，使用该软件包在应用程序中执行易受攻击的功能，例如：  
 ```
-const si = require('systeminformation');
-si.networkInterfaces((net) => { console.log(net) });
+const si = require('systeminformation');
+si.networkInterfaces((net) => { console.log(net) });
 ```  
   
 可以触发攻击，在受害者的机器上运行有效载荷。  

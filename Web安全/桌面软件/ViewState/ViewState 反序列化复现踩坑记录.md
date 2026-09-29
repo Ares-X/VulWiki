@@ -90,7 +90,7 @@ enableViewStateMac=false，viewStateEncryptionMode=Always
 
   
 
-**0x02 攻击准备**
+**0x02 攻击准备**
 
 **获取目标网站的 ViewState 信息：**
 
@@ -106,7 +106,7 @@ viewstate-editor 是一个可查看和编辑`ViewState`的 BurpSuite 插件，�
 
 **ViewState 插件使用：**
 
-BurpSuite 设置好监听并开启抓包，访问测试地址 http://192.168.1.110/hello.aspx 提交数据包，然后点击这插件的`ViewState`，如果是`MAC is not enabled`说明`ViewStateMac`已禁用。
+BurpSuite 设置好监听并开启抓包，访问测试地址 http://192.168.1.110/hello.aspx 提交数据包，然后点击这插件的`ViewState`，如果是`MAC is not enabled`说明`ViewStateMac`已禁用。
 
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/XOPdGZ2MYOcgCmjt82D0Vsksic8TnUUKEcU3rhE8icJAqmO3ib25W4ODlzcO4w7sDm6Krlq2XGU9QAaGqkCHjdLiaA/640?wx_fmt=png&from=appmsg)
 
@@ -216,7 +216,7 @@ ysoserial.exe -o base64 -g TypeConfuseDelegate -f LosFormatter -c "echo 123 > C:
 
 ```
 
-**0x05 踩坑记录**
+**0x05 踩坑记录**
 
 记录下我在本地测试遇到的坑，看了很多文章都是将文件写到`C:\Windows\temp`临时目录下，但我在测试时就死活写不进去，这里坑了我很久，原以为是环境有问题，测试了几台机器都这样，使用原应用池和新建应用池以及修改为`SYSTEM`权限还是写不进去......，`SharpViewStateKing`倒是可以正常连接，不知道大家有没有遇到过这个问题，还是遇到了没人记录这个问题......。
 

@@ -145,7 +145,7 @@ Connection: close
 ![](https://mmbiz.qpic.cn/mmbiz_png/RpxgdDjibJqfzOpKyjk6fdIU0IUlDvqzensMDET1UxFhvmibh55SFBJhdEZHFib0nHyPBaACfYibVszR2fcgQmdE9Q/640?wx_fmt=png)
 
   
-漏洞文件：**webroot\general\appbuilder\modules\report\controllers\RepdetailController.php**，**actionEdit 函数**中存在 一个 $_GET["id"];  未经过滤，拼接到 SQL 查询中，造成了 SQL 注入。  
+漏洞文件：**webroot\general\appbuilder\modules\report\controllers\RepdetailController.php**，**actionEdit 函数**中存在 一个 $_GET["id"];  未经过滤，拼接到 SQL 查询中，造成了 SQL 注入。  
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/RpxgdDjibJqfzOpKyjk6fdIU0IUlDvqzeZicX69dWonCYQyLKwWZibBp4ew3FMPetbLBj6Hf3C8NUxCqAEztC739g/640?wx_fmt=png)
 

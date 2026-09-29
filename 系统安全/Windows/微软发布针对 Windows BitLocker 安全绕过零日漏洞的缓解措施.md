@@ -38,9 +38,9 @@ source: "gelusus/wxvl 公众号漏洞文库"
 1. reagentc /disable通过运行以下命令重新建立 BitLocker 信任：reagentc /enable  
 除了修补 WinRE 之外，微软强烈建议将仅使用 TPM 的 BitLocker 保护器升级到 TPM+PIN 配置。  
   
-管理员可以通过 PowerShell ( Add-BitLockerKeyProtector C: -TpmAndPinProtector)、命令提示符 ( manage-bde -protectors -add C: -TPMAndPIN) 或控制面板中的 BitLocker 驱动器加密来实现此功能。  
+管理员可以通过 PowerShell ( Add-BitLockerKeyProtector C: -TpmAndPinProtector)、命令提示符 ( manage-bde -protectors -add C: -TPMAndPIN) 或控制面板中的 BitLocker 驱动器加密来实现此功能。  
   
-如果组策略阻止 PIN 配置，管理员必须先启用“启动时需要额外身份验证” gpedit.msc，并将“配置 TPM 启动 PIN”设置为“使用 TPM 启动 PIN 时需要 PIN”，然后才能继续。  
+如果组策略阻止 PIN 配置，管理员必须先启用“启动时需要额外身份验证” gpedit.msc，并将“配置 TPM 启动 PIN”设置为“使用 TPM 启动 PIN 时需要 PIN”，然后才能继续。  
   
 对于非托管设备，Microsoft Intune 和基于组策略的 BitLocker 部署都支持大规模强制执行 TPM+PIN 配置。  
   

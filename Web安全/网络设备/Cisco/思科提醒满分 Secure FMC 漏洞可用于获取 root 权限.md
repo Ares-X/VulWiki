@@ -7,7 +7,7 @@ Sergiu Gatlan
                     Sergiu Gatlan  代码卫士   2026-03-05 09:42  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
-    
+    
 聚焦源代码安全，网罗国内外最新资讯！  
   
 **编译：代码卫士**  
@@ -28,12 +28,12 @@ CVE-2026-20079的安全公告提到，“攻击者可通过向受影响设备发
 去年8月，思科还修复了另外一个满分的Secure FMC 漏洞，并提醒该漏洞可导致未经身份验证的远程攻击者注入可在未修复设备上执行的任意 shell 命令。今年1月份，思科还修复了一个 AsyncOS 0day漏洞，该漏洞自去年11月起已遭利用，目前已修复。上个月，思科 Catalyst SD-WAN 认证绕过漏洞也在0day 状态下遭利用，可导致远程攻击者攻陷控制器并向目标网络添加恶意欺诈对等节点。  
   
   
- 开源  
+ 开源  
 卫士试用地址：  
 https://oss.qianxin.com/#/login  
   
   
- 代码卫士试用地址：https://sast.qianxin.com/#/login  
+ 代码卫士试用地址：https://sast.qianxin.com/#/login  
   
   
   
@@ -86,9 +86,9 @@ e
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
   
-   
+   
 觉得不错，就点个 “  
 在看  
 ” 或 "  

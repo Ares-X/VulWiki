@@ -28,8 +28,8 @@ source: "gelusus/wxvl 公众号漏洞文库"
 ：通过 net/skbuff 的共享分片克隆机制缺陷来实现提权。  
   
 - **Fragnesia (CVE-2026-46300)**  
-：针对 XFRM ESP-in-TCP 子系统中的逻辑 Bug 进行利用。代码会通过 page cache 直接覆写 /usr/bin/su  
- 等文件来获取 Root 权限。  
+：针对 XFRM ESP-in-TCP 子系统中的逻辑 Bug 进行利用。代码会通过 page cache 直接覆写 /usr/bin/su  
+ 等文件来获取 Root 权限。  
   
 - **COW / Pedit (CVE-2026-46331)**  
 ：利用 net/sched 下 act_pedit 模块的缺陷，覆写内核中的脏数据。  
@@ -55,11 +55,11 @@ source: "gelusus/wxvl 公众号漏洞文库"
   
 ## 示例  
   
-将二进制文件传到目标机器后，直接使用 -list  
- 命令即可查看支持的漏洞清单。  
+将二进制文件传到目标机器后，直接使用 -list  
+ 命令即可查看支持的漏洞清单。  
   
-如果已经确定目标系统的内核版本及对应漏洞，用 -e  
- 参数指定 CVE 编号或漏洞别名即可触发。例如：  
+如果已经确定目标系统的内核版本及对应漏洞，用 -e  
+ 参数指定 CVE 编号或漏洞别名即可触发。例如：  
 /roothawkx_linux_amd64 -e CVE-2026-46331  
 ![CVE-2026-46331](https://mmbiz.qpic.cn/mmbiz_png/JCFOeHWnhFPQU3eiceVaHGiaGoyMRCyZ4oGSCbge4eDwyuNbLFBtpM2nFKnhAdEXDa2XuL3QpYxEVTqbjMhfXnbfciaUCE4QTnzkfSS3Rj9iacg/640?wx_fmt=png&from=appmsg "")  
   
@@ -70,11 +70,11 @@ source: "gelusus/wxvl 公众号漏洞文库"
 ![Dirtyclone](https://mmbiz.qpic.cn/mmbiz_png/JCFOeHWnhFP4Eb1V5zo6DM0sPD9F3nIHutc4B2DS10D6jcCJWfmFksJI9dVQ07roCkviamb4MaZEBBLPyrU8k9HkwZiaWXhb3Via1jKVRHfdyc/640?wx_fmt=png&from=appmsg "")  
   
   
-遇到不确定漏洞情况的盲测场景，可以直接附加 -any  
- 参数。工具会按照内置的漏洞列表依次执行利用尝试。  
+遇到不确定漏洞情况的盲测场景，可以直接附加 -any  
+ 参数。工具会按照内置的漏洞列表依次执行利用尝试。  
   
-针对 ssh-keysign-pwn 漏洞，工具提供了 -target shadow  
-（读取哈希）和 -target key  
+针对 ssh-keysign-pwn 漏洞，工具提供了 -target shadow  
+（读取哈希）和 -target key  
 （窃取私钥）两种运行模式，可以根据任务需求灵活切换。  
   
 ./roothawkx_linux_amd64 -e keysign  

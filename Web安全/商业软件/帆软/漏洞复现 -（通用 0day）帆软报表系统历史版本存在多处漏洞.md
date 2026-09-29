@@ -272,13 +272,13 @@ https://www.fanruan.com/support
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/wKOZZiacmHTc9LIKRXddrzz6MosLdiaH4EQNQgzsrSXHObdAia8yeIlLz6MbK9FxNDr44G7FNb2DBufqkjpwiczAibA/640?wx_fmt=png)
 
-**![](https://mmbiz.qpic.cn/mmbiz_gif/b96CibCt70iaaJcib7FH02wTKvoHALAMw4fK0c7kH8Aa77gpMcYib3IVwvicSKgwrRupZFeUBUExiaYwOvagt09602icg/640?wx_fmt=gif)**  [实战 | 我的 SRC 挖掘 - 如何一个洞拿下百分 QAQ](http://mp.weixin.qq.com/s?__biz=Mzg5NjU3NzE3OQ==&mid=2247485758&idx=1&sn=cafc83acbfd9de667bdceb85c04b9d77&chksm=c07fb2caf7083bdc18f1beae464118405003a18aa47aa6edbf51929a7da1ff47042a8b2190ae&scene=21#wechat_redirect)
+**![](https://mmbiz.qpic.cn/mmbiz_gif/b96CibCt70iaaJcib7FH02wTKvoHALAMw4fK0c7kH8Aa77gpMcYib3IVwvicSKgwrRupZFeUBUExiaYwOvagt09602icg/640?wx_fmt=gif)**  [实战 | 我的 SRC 挖掘 - 如何一个洞拿下百分 QAQ](http://mp.weixin.qq.com/s?__biz=Mzg5NjU3NzE3OQ==&mid=2247485758&idx=1&sn=cafc83acbfd9de667bdceb85c04b9d77&chksm=c07fb2caf7083bdc18f1beae464118405003a18aa47aa6edbf51929a7da1ff47042a8b2190ae&scene=21#wechat_redirect)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/b96CibCt70iaaJcib7FH02wTKvoHALAMw4fK0c7kH8Aa77gpMcYib3IVwvicSKgwrRupZFeUBUExiaYwOvagt09602icg/640?wx_fmt=gif)  [记一次相对完整的渗透测试](http://mp.weixin.qq.com/s?__biz=Mzg5NjU3NzE3OQ==&mid=2247485464&idx=2&sn=23ac41201aa38ba22881c06632d60ce0&chksm=c07fb3ecf7083afa9b32725c4b288b11e376550f1d88b96243c649f5fe91ba9ea13be7b10d75&scene=21#wechat_redirect)  
+![](https://mmbiz.qpic.cn/mmbiz_gif/b96CibCt70iaaJcib7FH02wTKvoHALAMw4fK0c7kH8Aa77gpMcYib3IVwvicSKgwrRupZFeUBUExiaYwOvagt09602icg/640?wx_fmt=gif)  [记一次相对完整的渗透测试](http://mp.weixin.qq.com/s?__biz=Mzg5NjU3NzE3OQ==&mid=2247485464&idx=2&sn=23ac41201aa38ba22881c06632d60ce0&chksm=c07fb3ecf7083afa9b32725c4b288b11e376550f1d88b96243c649f5fe91ba9ea13be7b10d75&scene=21#wechat_redirect)  
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/b96CibCt70iaaJcib7FH02wTKvoHALAMw4fK0c7kH8Aa77gpMcYib3IVwvicSKgwrRupZFeUBUExiaYwOvagt09602icg/640?wx_fmt=gif) [实战 | SQL 注入 - BOOL 盲注 - 一个小细节](http://mp.weixin.qq.com/s?__biz=Mzg5NjU3NzE3OQ==&mid=2247485586&idx=1&sn=148764c1aab126a76b0c459ec67dc1f8&chksm=c07fb366f7083a70301714c87c8d09d3ee2c0dd2567360a46e87372c62a0f0415074ca06631a&scene=21#wechat_redirect)
+![](https://mmbiz.qpic.cn/mmbiz_gif/b96CibCt70iaaJcib7FH02wTKvoHALAMw4fK0c7kH8Aa77gpMcYib3IVwvicSKgwrRupZFeUBUExiaYwOvagt09602icg/640?wx_fmt=gif) [实战 | SQL 注入 - BOOL 盲注 - 一个小细节](http://mp.weixin.qq.com/s?__biz=Mzg5NjU3NzE3OQ==&mid=2247485586&idx=1&sn=148764c1aab126a76b0c459ec67dc1f8&chksm=c07fb366f7083a70301714c87c8d09d3ee2c0dd2567360a46e87372c62a0f0415074ca06631a&scene=21#wechat_redirect)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/b96CibCt70iaaJcib7FH02wTKvoHALAMw4fK0c7kH8Aa77gpMcYib3IVwvicSKgwrRupZFeUBUExiaYwOvagt09602icg/640?wx_fmt=gif)  [实战 | 一次简单的信息收集到 getshell 的过程](http://mp.weixin.qq.com/s?__biz=Mzg5NjU3NzE3OQ==&mid=2247485252&idx=1&sn=88464e7c793a168d7f1c2506414c1695&chksm=c07fbcb0f70835a6a768376c3ee586e384b4e314d59aedaed0c04a2d6c9237e7314205e0f9dc&scene=21#wechat_redirect)
+![](https://mmbiz.qpic.cn/mmbiz_gif/b96CibCt70iaaJcib7FH02wTKvoHALAMw4fK0c7kH8Aa77gpMcYib3IVwvicSKgwrRupZFeUBUExiaYwOvagt09602icg/640?wx_fmt=gif)  [实战 | 一次简单的信息收集到 getshell 的过程](http://mp.weixin.qq.com/s?__biz=Mzg5NjU3NzE3OQ==&mid=2247485252&idx=1&sn=88464e7c793a168d7f1c2506414c1695&chksm=c07fbcb0f70835a6a768376c3ee586e384b4e314d59aedaed0c04a2d6c9237e7314205e0f9dc&scene=21#wechat_redirect)
 
 右下角求赞求好看，喵~
 

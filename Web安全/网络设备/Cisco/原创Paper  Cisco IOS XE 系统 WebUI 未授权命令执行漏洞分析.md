@@ -20,7 +20,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
 我去年购入一台Cisco ISR 4300路由器进行研究，分析其后台命令执行的1day，正好这个路由器也是Cisco IOS XE系统，所以可以直接用Cisco ISR的环境来进行研究。  
   
 如果想搭虚拟环境也简单，可以在Google，Zoomeye搜索文件名关键字，不带版本标识，就可以搜到很多旧版本的ova  
-, qcow2  
+, qcow2  
 文件，不过缺点就是没办法搜到最新版的固件，如果要研究最新版固件，只能在闲鱼上购买。  
   
 **2. CVE-2023-20273******  
@@ -93,7 +93,7 @@ location /lua5 {        internal;        if ($scheme = http) {                re
 路径最终会根据http  
 或者https  
 来选择访问/webui_wsma_http(s)  
- 路径，同样，该路径也是没办法通过外部访问，这部分nginx配置理论上无法绕过。  
+ 路径，同样，该路径也是没办法通过外部访问，这部分nginx配置理论上无法绕过。  
   
 不过，/webui_wsma_http(s)  
 路径也不是最终执行cli命令的地方，最终是通过访问http(s)://192.168.1.6  
@@ -229,28 +229,28 @@ $ ip netns exec 8 curl -kv http://192.168.1.6/%...> GET /% HTTP/1.1> Host: 192.1
 参考资料  
   
 随后对该漏洞在野利用情况进行了研究，在ZoomEye上导出了4w的目标，判断目标是否能RCE，进行无害探测，结果如下：  
->   date: 2023/11/02 success : 12360 / 48636  
+>   date: 2023/11/02 success : 12360 / 48636  
   
   
 使用logon_hash  
 探测法，判断目标是否存在后门，结果如下：  
->   date: 2023/11/02 success : 22205 / 48636  
+>   date: 2023/11/02 success : 22205 / 48636  
   
   
 对存在后门的目标进行%  
 百分号404探测，结果如下：  
->   date: 2023/11/02 success : 22195 / 22205  
+>   date: 2023/11/02 success : 22195 / 22205  
   
   
 手工检测失败的10个目标，发现其失败都是因为网络问题导致的。  
   
 接着对4w的目标进行百分号404探测，结果如下：  
->   date: 2023/11/02 success : 25341 / 48636  
+>   date: 2023/11/02 success : 25341 / 48636  
   
   
 接着对这2.5w的目标进行logon_hash  
 探测，结果如下：  
->   date: 2023/11/02 success : 21441 / 25341  
+>   date: 2023/11/02 success : 21441 / 25341  
   
   
 对失败的目标进行研究，发现有大量的蜜罐，能通过百分号404探测，所以导致了大量的误报，排除掉蜜罐目标，剩下的目标进行手动测试，失败原因都是因为网络问题导致的。  
@@ -320,7 +320,7 @@ ASR1000 Software (X86_64_LINUX_IOSD-UNIVERSALK9_NPE_NOLI-M)ISR Software (X86_64_
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/3k9IT3oQhT0Z79Hq9GCticVica4ufkjk5xiarRicG97E3oEcibNSrgdGSsdicWibkc8ycazhQiaA81j3o0cvzR5x4kRIcQ/640?wx_fmt=gif&wxfrom=5&wx_lazy=1 "")  
   
-**往 期 热 门******  
+**往 期 热 门******  
   
 (点击图片跳转）  
   

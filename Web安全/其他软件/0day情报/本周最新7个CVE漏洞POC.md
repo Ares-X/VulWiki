@@ -33,7 +33,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
 **0x06**  
   
 [CVE-2024-22120 POC EXP]()  
-**0x07**[CVE-2024-4323  POC EXP]()  
+**0x07**[CVE-2024-4323  POC EXP]()  
   
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/SEVwkT7gYkmWcuXecnWxn0nNnjEURxV7KLRE6NxNK9w6J4bAMqaUCzzsp3t7IWxr1ibTcch3adgLOm6xWhFjaCQ/640?wx_fmt=jpeg&from=appmsg "")  
@@ -78,12 +78,12 @@ source: "gelusus/wxvl 公众号漏洞文库"
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/SEVwkT7gYkmWcuXecnWxn0nNnjEURxV7EoXVnjl2TLtoKZPLuuic5QJFhTIHKuClkF6tyovqF8A1aD1ibT2IUzVQ/640?wx_fmt=jpeg&from=appmsg "")  
   
-                  
+                  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_gif/SEVwkT7gYkmWcuXecnWxn0nNnjEURxV71Iib6iao3ITicrXIicQBhom8mN6WXiacJDDf2GVsT02tg6dcgmN1UywFTwg/640?wx_fmt=gif&from=appmsg "")  
-     
+     
 **请扫码关注“重生者安全”**  
-   ![](https://mmbiz.qpic.cn/sz_mmbiz_gif/SEVwkT7gYkmWcuXecnWxn0nNnjEURxV71Iib6iao3ITicrXIicQBhom8mN6WXiacJDDf2GVsT02tg6dcgmN1UywFTwg/640?wx_fmt=gif&from=appmsg "")  
+   ![](https://mmbiz.qpic.cn/sz_mmbiz_gif/SEVwkT7gYkmWcuXecnWxn0nNnjEURxV71Iib6iao3ITicrXIicQBhom8mN6WXiacJDDf2GVsT02tg6dcgmN1UywFTwg/640?wx_fmt=gif&from=appmsg "")  
   
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz/SEVwkT7gYkmWcuXecnWxn0nNnjEURxV7AKkJumlqDKTY37vPfLHIrianwiatvVxlQiaAUyAfOUfHZ1tvFU1n8tW6Q/640?wx_fmt=jpeg&from=appmsg "")  

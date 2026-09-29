@@ -40,7 +40,7 @@ CVE-2006-4304
 ## 用法  
 ## 在您的计算机上，克隆存储库：  
 ```
-git clone --recursive https://github.com/TheOfficialFloW/PPPwn
+git clone --recursive https://github.com/TheOfficialFloW/PPPwn
 ```  
   
 安装要求：  

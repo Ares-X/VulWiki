@@ -12,21 +12,21 @@ source: "MrWQ/vulnerability-paper"
 
 
 
- 
+ 
 
 **二、漏洞简介：**
 
 可以绕过身份认证,，然后即可上传任意文件，配合文件包含即可造成 RCE 远程代码执行漏洞
 
- 
+ 
 
 **影响版本：**
 
 V11 版、2017 版、2016 版、2015 版、2013 增强版、2013 版
 
- 
+ 
 
- 
+ 
 
 **三、漏洞复现：**
 
@@ -60,7 +60,7 @@ V11 版、2017 版、2016 版、2015 版、2013 增强版、2013 版
 
 [![](http://common.cnblogs.com/images/copycode.gif)](javascript:void(0); "复制代码")
 
- 
+ 
 
 **②将以下内容保存为 shell.jpg:**
 
@@ -79,13 +79,13 @@ echo $stroutput;
 
 [![](http://common.cnblogs.com/images/copycode.gif)](javascript:void(0); "复制代码")
 
- 
+ 
 
 **③利用 html 文件上传 shell.jpg：**
 
 
 
- 
+ 
 
 **返回上传 shell.jpg 后的文件名信息：**
 
@@ -99,7 +99,7 @@ echo $stroutput;
 /ispirit/interface/gateway.php
 ```
 
- 
+ 
 
 **访问漏洞页面，并且把 GET 改成 POST，并修改、构造数据包，注意 Content-Type 是要手动加上的：**
 
@@ -127,13 +127,13 @@ json={"url":"/general/../../attach/im/2006/209898972.shell.jpg"}&cmd=whoami
 
 json 中的值，根据返回的文件名进行构造，例如： 2006_209898972|shell.jpg，那么就是上面这样构造
 
- 
+ 
 
 然后就可以进行 RCE 了，以系统权限执行任何命令
 
- 
+ 
 
- 
+ 
 
 **4、利用脚本进行攻击（自己写的，支持的功能：①直接执行命令、②文件包含生成 webshell）：**
 
@@ -144,7 +144,7 @@ json 中的值，根据返回的文件名进行构造，例如： 2006_209898972
 2017版本：/mac/gateway.php
 ```
 
-  **脚本使用方法:**
+  **脚本使用方法:**
 
 ```
 python3 TDoa_RCE 目标url -f 选择的功能
@@ -154,7 +154,7 @@ python3 TDoa_RCE 目标url -f 选择的功能
 
 生成 webshell
 
- ![](https://img2020.cnblogs.com/blog/2063846/202007/2063846-20200723113337751-1493871276.png)
+ ![](https://img2020.cnblogs.com/blog/2063846/202007/2063846-20200723113337751-1493871276.png)
 
 脚本就不直接放在这了... 需要的可以联系我 (QQ 或者 wx 公众号后台留言)，注意：仅作为学习和讨论使用，禁止任何违法行为，与作者无关！
 

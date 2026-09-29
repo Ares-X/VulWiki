@@ -52,15 +52,15 @@ Content-Disposition: form-data; name="file"; filename="poc.txt"
 pwn
 ------NewBoundary123456789--
 
-![image-20241101112321259](./.resource/Cyber​​Panelfilemanagerupload远程命令执行漏洞/media/image-20241101112321259.png)
+![image-20241101112321259](./.resource/CyberPanelfilemanagerupload远程命令执行漏洞/media/image-20241101112321259.png)
 
 
-![image-20241101112349821](./.resource/Cyber​​Panelfilemanagerupload远程命令执行漏洞/media/image-20241101112349821.png)
+![image-20241101112349821](./.resource/CyberPanelfilemanagerupload远程命令执行漏洞/media/image-20241101112349821.png)
 
 
 影响资产超15w,可直接命令执行，危害极大。
 
-![image-20241101112513189](./.resource/Cyber​​Panelfilemanagerupload远程命令执行漏洞/media/image-20241101112513189.png)
+![image-20241101112513189](./.resource/CyberPanelfilemanagerupload远程命令执行漏洞/media/image-20241101112513189.png)
 
 
 # 修复方案

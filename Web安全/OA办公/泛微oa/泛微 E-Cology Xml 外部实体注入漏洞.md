@@ -64,7 +64,7 @@ source: "MrWQ/vulnerability-paper"
 
 2. 对漏洞进行复现
 
- **Poc （POST）**
+ **Poc （POST）**
 
 ```
 POST /rest/ofs/deleteUserRequestInfoByXml HTTP/1.1
@@ -88,7 +88,7 @@ POST 请求，响应存在漏洞
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hBfmeoArW4W8GWqtARyCPAnuqo9b4hyiatpPnwOlVUuibZuDYOPVe6UAAJLQgGDaYdVEstXyxfskp1A/640?wx_fmt=png)
 
-        yakit 生成测试域名
+        yakit 生成测试域名
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hBfmeoArW4W8GWqtARyCPAnHJrlkWuF9SUlLSMHLz5BjwDFDDVEics12LBCT5AVicl3AoHsOGcHEFKw/640?wx_fmt=png)
 
@@ -119,7 +119,7 @@ https://www.weaver.com.cn/cs/package/Ecology_security_20230711_v9.0_v10.58.1_det
 
 口号 网安引领时代，弥天点亮未来
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/b96CibCt70iaaqjXT4YxgHVARD1NNv0RvKtiaAvXhmruVqgavPY3stwrfvLKetGycKUfxIq3Xc6F6dhU7eb4oh2gg/640?wx_fmt=gif&wxfrom=5&wx_lazy=1) 
+![](https://mmbiz.qpic.cn/mmbiz_gif/b96CibCt70iaaqjXT4YxgHVARD1NNv0RvKtiaAvXhmruVqgavPY3stwrfvLKetGycKUfxIq3Xc6F6dhU7eb4oh2gg/640?wx_fmt=gif&wxfrom=5&wx_lazy=1) 
 
 知识分享完了
 
@@ -131,7 +131,7 @@ https://www.weaver.com.cn/cs/package/Ecology_security_20230711_v9.0_v10.58.1_det
 
 必降弥天之润！
 
-   弥  天
+   弥  天
 
 安全实验室  
 

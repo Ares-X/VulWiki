@@ -78,7 +78,7 @@ YonBIP：YonBIP 高级版 2207、2305、2312、2505
   
 官方已发布补丁，商业化产品，请联系官方获取更新补丁。  
   
- https://security.yonyou.com/#/noticeInfo?id=766  
+ https://security.yonyou.com/#/noticeInfo?id=766  
   
   
 **06**  

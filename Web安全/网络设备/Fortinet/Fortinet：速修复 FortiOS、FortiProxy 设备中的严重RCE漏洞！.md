@@ -7,7 +7,7 @@ Bill Toulas  代码卫士   2023-07-13 18:22
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
   
-   
+   
 聚焦源代码安全，网罗国内外最新资讯！****  
   
 **编译：代码卫士**  
@@ -89,7 +89,7 @@ https://codesafe.qianxin.com
 https://www.bleepingcomputer.com/news/security/fortinet-warns-of-critical-rce-flaw-in-fortios-fortiproxy-devices/  
   
   
-题图：Pexels License  
+题图：Pexels License  
   
   
 **本文由奇安信编译，不代表奇安信观点。转载请注明“转自奇安信代码卫士 https://codesafe.qianxin.com”。**  
@@ -105,10 +105,10 @@ https://www.bleepingcomputer.com/news/security/fortinet-warns-of-critical-rce-fl
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
   
-   
-觉得不错，就点个 “  
+   
+觉得不错，就点个 “  
 在看  
 ” 或 "  
 赞  

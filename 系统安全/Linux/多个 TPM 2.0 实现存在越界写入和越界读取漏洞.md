@@ -87,7 +87,7 @@ Nuvoton为其NPCT65x TPM芯片发布了安全咨询SA-003。
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/wpkib3J60o28DibcyN5ZcepcwaRHibZd9JZ4w3NfjcJDQrtLq8w55jOiaXc4t9ebshCYaBwI6aOmh56nf8lIF6Mib7g/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1 "")  
   
-如下图所示，在TPM 2.0参考实现中，ExecCommand.c中的ExecuteCommand函数检查sessionArea的authorizationSize字段是否至少为9（[1]）。之后，在[2]中，它计算parameterArea的开始（位于sessionArea之后），并将其保存到parmBufferStart变量中。在[3]中，它计算parameterArea的大小，并将其保存到parmBufferSize变量中。然后它调用ParseSessionBuffer() ([3])，传递parmBufferStart和parmBufferSize作为参数([5], [6])。  
+如下图所示，在TPM 2.0参考实现中，ExecCommand.c中的ExecuteCommand函数检查sessionArea的authorizationSize字段是否至少为9（[1]）。之后，在[2]中，它计算parameterArea的开始（位于sessionArea之后），并将其保存到parmBufferStart变量中。在[3]中，它计算parameterArea的大小，并将其保存到parmBufferSize变量中。然后它调用ParseSessionBuffer() ([3])，传递parmBufferStart和parmBufferSize作为参数([5], [6])。  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/wpkib3J60o28DibcyN5ZcepcwaRHibZd9JZJPpmjqRuyQxyMxMXjia8iby0ibRiaDyHzHr4uwyVA7QVhLWx2AHMruicE7g/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1 "")  
   
@@ -103,7 +103,7 @@ CryptUtil.c中的函数CryptParameterDecryption对加密的命令参数执行就
   
 此函数中出现的两个安全漏洞  
   
-漏洞1：OOB read (CVE-2023-1018): 在[1]中，函数使用BYTE_ARRAY_TO_UINT16宏从parmBufferStart指向的缓冲区中读取16位字段(cipherSize)，而不检查是否有任何参数数据超过会话区域。之前在函数ExecuteCommand中执行了唯一的长度检查，但该检查只验证了命令的sessionArea至少有9个字节。因此，如果格式错误的命令不包含越过sessionArea的parameterArea，它将触发越界内存读取，使TPM在命令结束后访问内存。  
+漏洞1：OOB read (CVE-2023-1018): 在[1]中，函数使用BYTE_ARRAY_TO_UINT16宏从parmBufferStart指向的缓冲区中读取16位字段(cipherSize)，而不检查是否有任何参数数据超过会话区域。之前在函数ExecuteCommand中执行了唯一的长度检查，但该检查只验证了命令的sessionArea至少有9个字节。因此，如果格式错误的命令不包含越过sessionArea的parameterArea，它将触发越界内存读取，使TPM在命令结束后访问内存。  
   
 请注意，BYTE_ARRAY_TO_INT16宏不执行任何边界检查：  
   
@@ -159,7 +159,7 @@ https://blog.quarkslab.com/vulnerabilities-in-the-tpm-20-reference-implementatio
   
 原文来源：嘶吼专业版  
   
-“投稿联系方式：孙中豪 010-82992251   sunzhonghao@cert.org.cn”  
+“投稿联系方式：孙中豪 010-82992251   sunzhonghao@cert.org.cn”  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/iaz5iaQYxGogucKMiatGyfBHlfj74r3CyPxEBrV0oOOuHICibgHwtoIGayOIcmJCIsAn02z2yibtfQylib07asMqYAEw/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1 "")  
   

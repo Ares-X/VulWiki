@@ -116,7 +116,7 @@ Webshell执行id命令
 
 （2）在解压缩目录下搜索是否存在 spring-beans-*.jar 格式的jar文件（例如spring-beans-5.3.16.jar）,如存在则说明业务系统使用了spring框架进行开发。
 
-（3）如果spring-beans-*.jar 文件不存在，则在解压缩目录下搜索CachedIntrospectionResuLts.class 文件是否存在，如存在则说明业务系统使用了Spring框架开发。 
+（3）如果spring-beans-*.jar 文件不存在，则在解压缩目录下搜索CachedIntrospectionResuLts.class 文件是否存在，如存在则说明业务系统使用了Spring框架开发。 
 
 2.如果业务系统项目以jar包形式直接独立运行，按照如下步骤进行判断。
 

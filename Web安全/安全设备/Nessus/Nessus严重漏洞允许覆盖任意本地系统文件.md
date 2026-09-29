@@ -44,15 +44,15 @@ CVSSv3评分：6.5，
 CVE-2025-24855
 ```  
 ```
-CVSSv3评分：7.8，影响Nessus 10.8.4及更早版本，Nessus XSLT转换操作使用的libxslt第三方组件漏洞  
-CVSSv3评分：7.8，影响Nessus 10.8.4及更早版本，Nessus XSLT转换操作使用的libxslt第三方组件漏洞  
-CVSSv3评分：7.8，影响Nessus 10.8.4及更早版本，Nessus XSLT转换操作使用的libxslt第三方组件漏洞  
+CVSSv3评分：7.8，影响Nessus 10.8.4及更早版本，Nessus XSLT转换操作使用的libxslt第三方组件漏洞  
+CVSSv3评分：7.8，影响Nessus 10.8.4及更早版本，Nessus XSLT转换操作使用的libxslt第三方组件漏洞  
+CVSSv3评分：7.8，影响Nessus 10.8.4及更早版本，Nessus XSLT转换操作使用的libxslt第三方组件漏洞  
 CVSSv3评分：7.8，
 CVSSv3评分：7.8，
 CVSSv3评分：7.8，
-Nessus 10.8.4及更早版本，Nessus XSLT转换操作使用的libxslt第三方组件漏洞  
-  
-  
+Nessus 10.8.4及更早版本，Nessus XSLT转换操作使用的libxslt第三方组件漏洞  
+  
+  
 ```  
 ```
 
@@ -120,7 +120,7 @@ https://cybersecuritynews.com/nessus-windows-vulnerabilities/
   
 ![图片](https://mmbiz.qpic.cn/mmbiz_gif/qq5rfBadR3icF8RMnJbsqatMibR6OicVrUDaz0fyxNtBDpPlLfibJZILzHQcwaKkb4ia57xAShIJfQ54HjOG1oPXBew/640?wx_fmt=gif&wxfrom=5&wx_lazy=1&tp=webp "")  
   
-   
+   
   
 
 

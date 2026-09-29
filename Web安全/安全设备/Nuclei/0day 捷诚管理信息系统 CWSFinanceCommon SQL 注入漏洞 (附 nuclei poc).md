@@ -123,7 +123,7 @@ http:
 运行 POC
 
 ```
-nuclei.exe -t mypoc/其他/jiecheng-CWSFinanceCommon-sqli.yaml -u http://192.168.86.128:9001
+nuclei.exe -t mypoc/其他/jiecheng-CWSFinanceCommon-sqli.yaml -u http://192.168.86.128:9001
 
 ```
 

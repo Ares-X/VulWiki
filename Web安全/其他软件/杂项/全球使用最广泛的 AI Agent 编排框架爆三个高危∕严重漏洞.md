@@ -85,28 +85,28 @@ LangChain 的dumps()/dumpd()序列化函数在处理用户输入字典时，未�
   
 {  
   
-    
+    
 "additional_kwargs"  
 : {  
   
-      
+      
 "lc"  
 : 1,  
   
-      
+      
 "type"  
 :  
 "secret"  
 ,  
   
-      
+      
 "id"  
 : [  
 "OPENAI_API_KEY"  
-]     
+]     
 # 目标：任意环境变量  
   
-  }  
+  }  
   
 }  
   
@@ -120,7 +120,7 @@ chain.
 astream_events  
 (...):  
   
-    process(event)     
+    process(event)     
 # ← 此处触发，OPENAI_API_KEY 已外泄  
   
 CVE-2026-34070：路径遍历  
@@ -131,13 +131,13 @@ LangChain 的load_prompt_from_config()在加载外部提示模板文件（JSON/Y
   
 {  
   
-    
+    
 "input_variables"  
 : [  
 "query"  
 ],  
   
-    
+    
 "template_path"  
 :  
 "../../../.docker/config.json"  
@@ -254,11 +254,11 @@ pip show langgraph-checkpoint-sqlite | grep Version
   
 pip install --upgrade \  
   
-  langchain-core>=1.2.22 \  
+  langchain-core>=1.2.22 \  
   
-  langgraph-checkpoint-sqlite>=3.0.1 \  
+  langgraph-checkpoint-sqlite>=3.0.1 \  
   
-  langchain-community>=0.0.28  
+  langchain-community>=0.0.28  
   
   
 # ③ 验证升级结果  
@@ -294,16 +294,16 @@ loads
   
 safe_obj = loads(  
   
-    data,  
+    data,  
   
-    secrets_map={},                
+    secrets_map={},                
 # 不允许读取任何密钥  
   
-    valid_namespaces=[  
+    valid_namespaces=[  
 "langchain_openai"  
 ,  
 "langchain_core"  
-]    
+]    
 # 白名单  
   
 )  
@@ -325,21 +325,21 @@ safe_load_prompt(template_path: str, base_dir: str =
 "/app/prompts"  
 ):  
   
-    resolved = Path(base_dir).resolve() / template_path  
+    resolved = Path(base_dir).resolve() / template_path  
   
-      
+      
 if  
 not  
 str(resolved).startswith(str(Path(base_dir).resolve())):  
   
-          
+          
 raise  
 PermissionError  
 (  
 f"路径越界访问被拦截: {template_path}"  
 )  
   
-      
+      
 return  
 load_prompt_from_config(str(resolved))  
   
@@ -358,26 +358,26 @@ ALLOWED_FILTER_KEYS = {
 def  
 safe_search_checkpoints(filters: dict):  
   
-      
+      
 for  
 key  
 in  
 filters:  
   
-          
+          
 if  
 key  
 not in  
 ALLOWED_FILTER_KEYS:  
   
-              
+              
 raise  
 ValueError  
 (  
 f"非法过滤键: {key}"  
 )  
   
-      
+      
 return  
 checkpointer.list(config, filter=filters)  
   

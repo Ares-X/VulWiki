@@ -6,7 +6,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
 原创 ZM
                     ZM  暗镜   2026-01-21 01:00  
   
-Cloudflare 已修复影响其自动证书管理环境 ( ACME ) 验证逻辑的安全漏洞，该漏洞使得绕过安全控制和访问源服务器成为可能。  
+Cloudflare 已修复影响其自动证书管理环境 ( ACME ) 验证逻辑的安全漏洞，该漏洞使得绕过安全控制和访问源服务器成为可能。  
   
 “漏洞根源在于我们边缘网络处理发往 ACME HTTP-01 挑战路径 (/.well-known/acme-challenge/*) 的请求的方式，”网络基础设施公司的 Hrushikesh Deshpande、Andrew Mitchell 和 Leland Garofalo 表示。  
   

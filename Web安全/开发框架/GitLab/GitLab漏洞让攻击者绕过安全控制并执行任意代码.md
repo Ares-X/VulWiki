@@ -42,7 +42,7 @@ GitLab 确认这允许“绕过安全控制并在特定条件下在用户的浏�
 三个中等严重性漏洞加剧了风险态势：  
 - CVE-2024-8186 漏洞：通过子项目搜索 （CVSS 5.4） 进行 HTML 注入，从而在自托管实例中启用有限的 XSS。  
   
-- CVE-2024-10925 漏洞： 来宾用户访问安全策略 YAML 文件 （CVSS 5.3），从而公开合规性规则。  
+- CVE-2024-10925 漏洞： 来宾用户访问安全策略 YAML 文件 （CVSS 5.3），从而公开合规性规则。  
   
 - CVE-2025-0307 漏洞：Planner 角色访问代码审查分析 （CVSS 4.3），揭示敏感指标。  
   
@@ -52,10 +52,10 @@ GitLab 发布了修补版本 17.9.1、17.8.4 和 17.7.6。安全分析师警告�
   
 所有使用受影响 GitLab 版本的组织都应将此视为关键基础设施更新。考虑到已发布的漏洞利用详细信息和地下论坛中现有的概念验证代码，将修补延迟到 48 小时以上会显著增加泄露风险。  
   
-原文来自:   
+原文来自:   
 cybersecuritynews.com  
   
-原文链接: https://cybersecuritynews.com/gitlab-vulnerabilities-bypass-security-controls/  
+原文链接: https://cybersecuritynews.com/gitlab-vulnerabilities-bypass-security-controls/  
   
 欢迎收藏并分享朋友圈，让五邑人网络更安全  
   

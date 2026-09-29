@@ -27,35 +27,35 @@ source: "MrWQ/vulnerability-paper"
 
   
 
-+ article_view.php 文章详情页模板
++ article_view.php 文章详情页模板
 
-+ category_news.php 栏目页模板（新闻）
++ category_news.php 栏目页模板（新闻）
 
-+ category_view.php 栏目页模板（默认）
++ category_view.php 栏目页模板（默认）
 
-+ footer.php 公用底部文件
++ footer.php 公用底部文件
 
-+ header.php 公用顶部文件（top.php和index.php调用的）
++ header.php 公用顶部文件（top.php和index.php调用的）
 
-+ index.php 首页模板文件
++ index.php 首页模板文件
 
-+ search_index.php 搜索主页模板
++ search_index.php 搜索主页模板
 
-+ search_list.php 搜索列表页模板（搜索结果页模板）
++ search_list.php 搜索列表页模板（搜索结果页模板）
 
-+ single_about.php 单页关于我们
++ single_about.php 单页关于我们
 
-+ single_case.php 单页成功案例
++ single_case.php 单页成功案例
 
-+ single_contactus.php 单页联系我们
++ single_contactus.php 单页联系我们
 
-+ single_service.php 单页服务
++ single_service.php 单页服务
 
 + tags_index.php tag标签首页访问地址：/tags.html
 
-+ tags_list.php tag列表模板
++ tags_list.php tag列表模板
 
-+ top.php 公用顶部模板
++ top.php 公用顶部模板
 
 ![图片](https://mmbiz.qpic.cn/mmbiz_png/Rhl7Fe1Ew2icdiaxAoicRDTOcic6uZqjKNRuQTmL2KnOQaSBwas6DeYNdq479WEFto9n2bssQXlvVic2bGGlQghxWVg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
 
@@ -75,15 +75,15 @@ source: "MrWQ/vulnerability-paper"
 
 1. 系统前台采用伪静态方式 伪静态规则详见.htaccess
 
-2. 网站安装地址: http://IP/install.php 
+2. 网站安装地址: http://IP/install.php 
 
 3. 如果没有这个文件,请直接输入: http://IP/application/install/index.php
 
 4. 网站后台登录地址:
 
-    - 如果有admin.php可以直接访问 http://IP/admin.php；
+    - 如果有admin.php可以直接访问 http://IP/admin.php；
 
-    - 如果没有admin.php请采用真实地址访问：http://IP/index.php?admin-master-login
+    - 如果没有admin.php请采用真实地址访问：http://IP/index.php?admin-master-login
 
 5. 默认账号chaojicms/默认密码chaojicms
 

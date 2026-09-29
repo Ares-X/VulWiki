@@ -8,7 +8,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
   
 DarkGate 恶意软件操作发起的新一波攻击，利用现已修复的 Windows Defender SmartScreen 漏洞来绕过安全检查，并自动安装虚假软件安装程序。  
   
-SmartScreen 是一项 Windows 安全功能，当用户尝试运行从 Internet 下载的无法识别或可疑文件时，它会显示警告。   
+SmartScreen 是一项 Windows 安全功能，当用户尝试运行从 Internet 下载的无法识别或可疑文件时，它会显示警告。   
   
 被追踪为 CVE-2024-21412 的缺陷是 Windows Defender SmartScreen 缺陷，允许特制的下载文件绕过这些安全警告。  
   
@@ -66,7 +66,7 @@ https://www.bleepingcomputer.com/news/security/hackers-exploit-windows-smartscre
 原文来源  
 ：嘶吼专业版  
   
-“投稿联系方式：010-82992251   sunzhonghao@cert.org.cn”  
+“投稿联系方式：010-82992251   sunzhonghao@cert.org.cn”  
   
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/GoUrACT176n1NvL0JsVSB8lNDX2FCGZjW0HGfDVnFao65ic4fx6Rv4qylYEAbia4AU3V2Zz801UlicBcLeZ6gS6tg/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
   

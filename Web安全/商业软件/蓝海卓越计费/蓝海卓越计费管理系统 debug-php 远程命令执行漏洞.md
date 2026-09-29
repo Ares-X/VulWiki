@@ -15,11 +15,11 @@ source: "MrWQ/vulnerability-paper"
 
 **蓝海卓越计费管理系统 debug.php 存在命令调试页面，导致攻击者可以远程命令执行**
 
-**二:  漏洞影响🐇**
+**二:  漏洞影响🐇**
 
 **蓝海卓越计费管理系统**
 
-**三:  漏洞复现🐋**
+**三:  漏洞复现🐋**
 
 ```
 title=="蓝海卓越计费管理系统"
@@ -37,7 +37,7 @@ title=="蓝海卓越计费管理系统"
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7AypxkJXHR3icoKpTSZrJFuamLLD97rqCZ4k7AD26zNoweiaiclGCY88tmSPDp50ShAd1peMcUXM9mw/640?wx_fmt=png)
 
- ****四:  漏洞 POC🦉****
+ ****四:  漏洞 POC🦉****
 
 ```
 https://github.com/PeiQi0/PeiQi-WIKI-POC
@@ -45,7 +45,7 @@ https://github.com/PeiQi0/PeiQi-WIKI-POC
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7AypxkJXHR3icoKpTSZrJFuibCP0y00DTiaq9lBtqNBP9cRFegYhibRV91CjBeUD5AGprm1Vbooq2X9A/640?wx_fmt=png)
 
- ****五:  关于文库🦉****
+ ****五:  关于文库🦉****
 
  **在线文库：**
 
@@ -76,7 +76,7 @@ https://github.com/PeiQi0/PeiQi-WIKI-POC
 
 **由于传播、利用此文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，文章作者不为此承担任何责任。**
 
-**PeiQi 文库 拥有对此文章的修改和解释权如欲转载或传播此文章，必须保证此文章的完整性，包括版权声明等全部内容。未经作者允许，不得任意修改或者增减此文章内容，不得以任何方式将其用于商业目的。**
+**PeiQi 文库 拥有对此文章的修改和解释权如欲转载或传播此文章，必须保证此文章的完整性，包括版权声明等全部内容。未经作者允许，不得任意修改或者增减此文章内容，不得以任何方式将其用于商业目的。**
 
 ---
 

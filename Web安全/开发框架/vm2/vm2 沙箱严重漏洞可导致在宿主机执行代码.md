@@ -7,7 +7,7 @@ Bill Toulas
                     Bill Toulas  代码卫士   2026-05-07 10:17  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
-    
+    
 聚焦源代码安全，网罗国内外最新资讯！  
   
 **编译：代码卫士**  
@@ -44,11 +44,11 @@ vm2 使用广泛，在 Node.js 的默认命令行包管理器 npm 上的每周�
 今年年初，vm2 被指受另一个严重的沙箱逃逸漏洞（CVE-2026-22709）影响，可导致攻击者在底层宿主机系统上执行任意代码。此前影响该库的沙箱逃逸漏洞还包括 CVE-2023-30547、CVE-2023-29017 和 CVE-2022-36067，凸显了在 JavaScript 沙箱环境中安全隔离不受信任代码所面临的挑战。  
   
   
- 开源  
+ 开源  
 卫士试用地址：  
 https://oss.qianxin.com/#/login  
   
- 代码卫士试用地址：https://sast.qianxin.com/#/login  
+ 代码卫士试用地址：https://sast.qianxin.com/#/login  
   
   
   
@@ -98,10 +98,10 @@ e
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
   
   
-   
+   
 觉得不错，就点个 “  
 在看  
 ” 或 "  

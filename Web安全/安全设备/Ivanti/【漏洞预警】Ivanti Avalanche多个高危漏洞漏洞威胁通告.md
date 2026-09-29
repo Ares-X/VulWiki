@@ -7,7 +7,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
   
 ##   
   
-1. **通告信息**  
+1. **通告信息**  
   
   
   
@@ -19,7 +19,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
 ,并做好资产自查以及预防工作，以免遭受黑客攻击。  
 ##   
   
-2. **漏洞概述**  
+2. **漏洞概述**  
   
   
   
@@ -59,7 +59,7 @@ CVE-2023-32566：Ivanti Avalanche SecureFilter allowedPassThrough身份验证绕
 Ivanti Avalanche SecureFilter allowedPassThrough方法中，由于做出授权决策时字符串匹配不正确，远程威胁者可通过发送特制请求，绕过系统上的部分身份验证。  
 ##   
   
-3. **漏洞危害**  
+3. **漏洞危害**  
   
   
   
@@ -67,14 +67,14 @@ Ivanti Avalanche SecureFilter allowedPassThrough方法中，由于做出授权�
 发缓冲区溢出并在目标系统上执行任意代码，或绕过身份认证。  
 ##   
   
-4. **影响版本**  
+4. **影响版本**  
   
   
   
 Ivanti Avalanche版本 <= 6.4.0  
 ##   
   
-5. **解决方案**  
+5. **解决方案**  
   
   
   
@@ -88,7 +88,7 @@ Ivanti Avalanche版本 >= 6.4.1.207
 https://forums.ivanti.com/s/avalanche-powered-by-wavelink?language=en_US  
 ##   
   
-6. **时间轴**  
+6. **时间轴**  
   
   
   

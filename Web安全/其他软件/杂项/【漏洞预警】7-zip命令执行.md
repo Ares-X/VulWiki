@@ -25,7 +25,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
   
 <威胁等级>：  
 **高危**  
- **能获取服务器权限**  
+ **能获取服务器权限**  
   
   
 **#1**  
@@ -37,7 +37,7 @@ Windows平台 7-Zip（v21.07） 允许将扩展名为 .7z 的文件被拖到HELP
 7-zip 软件中包含的零日漏洞是基于 7z.dll 的错误配置和堆溢出。7-zip软件安装后，HELP>contents内容中的帮助文件通过Windows HTML Helper文件工作，但是命令注入后，7zFM.exe进程下出现了一个子进程。  
   
   
-**#2 解决方案**  
+**#2 解决方案**  
   
   
 **第一种方法**：如果 7-zip 没有更新，删除 7-zip.chm 文件就足以关闭漏洞。  
@@ -45,7 +45,7 @@ Windows平台 7-Zip（v21.07） 允许将扩展名为 .7z 的文件被拖到HELP
 **第二种方法：**7-zip 程序应该只有读取和运行权限。（适用于所有用户）。  
   
   
-**#3 参考资料**  
+**#3 参考资料**  
   
   
 https://github.com/kagancapar/CVE-2022-29072  
@@ -55,7 +55,7 @@ https://github.com/kagancapar/CVE-2022-29072
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/2CRGGNuQruD6rSnJpSL57NHjuX79JSjjyYviaibNeS3xmGzPfoict6VdnvyuYEq6JdjQqre3WkicWWU7hjpicS2ByibQ/640?wx_fmt=gif "")  
   
-**推 荐 阅 读**  
+**推 荐 阅 读**  
   
   
   

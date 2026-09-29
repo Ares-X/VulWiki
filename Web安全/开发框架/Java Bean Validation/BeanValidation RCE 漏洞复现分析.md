@@ -23,7 +23,7 @@ cve: "CVE-2018-16621"
 
   
 
-**Bean Validation**  
+**Bean Validation**  
 
   
 
@@ -49,25 +49,25 @@ Bean Validation 为 JavaBean 验证定义了相应的元数据模型和 API，�
 举一个类示例：
 
 ```
-class Customer {  
- @Email  
- private String email;   
+class Customer {  
+ @Email  
+ private String email;   
   
- @NotBlank  
- private String name;  
-     
- @ListNotHasNull  //自定义注解  
- private List<String> info;  
- // ...  
+ @NotBlank  
+ private String name;  
+     
+ @ListNotHasNull  //自定义注解  
+ private List<String> info;  
+ // ...  
 }
 ```
 
 为了验证一个对象是否有效，Bean Validation会将它传递给一个Validator来检查是否满足要求，不满足则抛出异常，例如：
 
 ```
-Set<ConstraintViolation<Input>> violations = validator.validate(customer);  
-if (!violations.isEmpty()) {  
- throw new ConstraintViolationException(violations);  
+Set<ConstraintViolation<Input>> violations = validator.validate(customer);  
+if (!violations.isEmpty()) {  
+ throw new ConstraintViolationException(violations);  
 }
 ```
 
@@ -78,24 +78,24 @@ if (!violations.isEmpty()) {
 ```
 @Service  
 @Validated  
-class ValidatingService{  
-   void validateInput(@Valid Customer customer){  
-     // do something  
-  }  
+class ValidatingService{  
+   void validateInput(@Valid Customer customer){  
+     // do something  
+  }  
 }
 ```
 
 而Validator可以使用内置的也可以使用自定义的验证器对Bean进行验证，例如上面举例的Customer类中的自定义注解@ListNotHasNull中需要指定由哪个类进行验证
 
 ```
-@Target({ FIELD })  
+@Target({ FIELD })  
 @Retention(RUNTIME)  
-@Constraint(validatedBy = ListNotHasNullValidatorImpl.class)  
+@Constraint(validatedBy = ListNotHasNullValidatorImpl.class)  
 @Documented  
-public @interface ListNotHasNull {  
- String message() default "";  
- Class<?>[] groups() default { };  
- Class<? extends Payload>[] payload() default { };  
+public @interface ListNotHasNull {  
+ String message() default "";  
+ Class<?>[] groups() default { };  
+ Class<? extends Payload>[] payload() default { };  
   
 }
 ```
@@ -103,23 +103,23 @@ public @interface ListNotHasNull {
 @Constraint指向接口实现的注解ConstraintValidator，像这里指定了约束条件ListNotHasNullValidatorImpl类验证器进行验证，用于判断List集合中是否含有null元素，值得的注意的是验证器需要继承自`ConstraintValidator` 接口，第一个参数是自定义的注解，第二个参数是校验的数据类型
 
 ```
-public class ListNotHasNullValidatorImpl implements ConstraintValidator<ListNotHasNull, List> {  
-   private int value;  
+public class ListNotHasNullValidatorImpl implements ConstraintValidator<ListNotHasNull, List> {  
+   private int value;  
   
-   @Override  
-   public void initialize(ListNotHasNull constraintAnnotation) {  
-       //传入value 值，可以在校验中使用  
-       this.value = constraintAnnotation.value();  
-  }  
-   public boolean isValid(List list, ConstraintValidatorContext context) {  
-       for (Object object : list) {  
-           if (object == null) {  
-               //如果List集合中含有Null元素，校验失败  
-               return false;  
-          }  
-      }  
-       return true;  
-  }  
+   @Override  
+   public void initialize(ListNotHasNull constraintAnnotation) {  
+       //传入value 值，可以在校验中使用  
+       this.value = constraintAnnotation.value();  
+  }  
+   public boolean isValid(List list, ConstraintValidatorContext context) {  
+       for (Object object : list) {  
+           if (object == null) {  
+               //如果List集合中含有Null元素，校验失败  
+               return false;  
+          }  
+      }  
+       return true;  
+  }  
 }
 ```
 
@@ -185,19 +185,19 @@ Cookie: Hm_lvt_866c9be12d4a814454792b1fd0fed295=1641052730; Hm_lvt_df6f78cfc7b28
 Connection: close  
   
 {  
-  "action": "coreui_User",  
-  "method": "create",  
-  "data": [{  
-      "userId": "admin",  
-      "version": "2",  
-      "firstName": "admin",  
-      "lastName": "User",  
-      "email": "admin@example.org",  
-      "status": "active",  
-      "roles": ["exp|${111*2}|"]  
-  }],  
-  "type": "rpc",  
-  "tid": 11  
+  "action": "coreui_User",  
+  "method": "create",  
+  "data": [{  
+      "userId": "admin",  
+      "version": "2",  
+      "firstName": "admin",  
+      "lastName": "User",  
+      "email": "admin@example.org",  
+      "status": "active",  
+      "roles": ["exp|${111*2}|"]  
+  }],  
+  "type": "rpc",  
+  "tid": 11  
 }
 ```
 
@@ -281,7 +281,7 @@ Connection: close
 
 ```
 context.disableDefaultConstraintViolation();  
-context.buildConstraintViolationWithTemplate("Missing roles: " + missing).addConstraintViolation();
+context.buildConstraintViolationWithTemplate("Missing roles: " + missing).addConstraintViolation();
 ```
 
 而我们构造的表达式注入payload也作为参数传入了context.buildConstraintViolationWithTemplate，并且调用了addConstraintViolation
@@ -335,7 +335,7 @@ context.buildConstraintViolationWithTemplate("Missing roles: " + missing).addC
 调试完整漏洞后就可以发现，实际上是在开发者自定义验证处理时，把验证后的错误信息传入以下这行代码造成的  
 
 ```
-context.buildConstraintViolationWithTemplate("Missing roles: " + missing).addConstraintViolation();
+context.buildConstraintViolationWithTemplate("Missing roles: " + missing).addConstraintViolation();
 ```
 
 于是我们可以再寻找其他类似的Validator，比如PrivilegesExistValidator
@@ -379,7 +379,7 @@ Connection: close
 
   
 
-**CVE-2020-10204 分析**
+**CVE-2020-10204 分析**
 
 这个漏洞影响版本Nexus Repository Manager OSS/Pro 3.x -3.21.1，实际上是对上面的漏洞修复后的绕过
 
@@ -395,7 +395,7 @@ Connection: close
 
 **总结**
 
-        通过调试以及参考网上文章分析，对Nexus3的漏洞有了一个大体了解，问题主要是出现在利用Bean Validation进行验证数据时，在自定义的Validator处理逻辑中将错误信息被当作EL表达式进行执行。在进行漏洞挖掘时可以通过全局搜索漏洞根源代码中的关键字`buildConstraintViolationWithTemplate` 定位审计点，判断是否将错误信息传入以及是否有过滤处理，再向上溯源查找bean传入点，构造请求数据包进行调试。
+        通过调试以及参考网上文章分析，对Nexus3的漏洞有了一个大体了解，问题主要是出现在利用Bean Validation进行验证数据时，在自定义的Validator处理逻辑中将错误信息被当作EL表达式进行执行。在进行漏洞挖掘时可以通过全局搜索漏洞根源代码中的关键字`buildConstraintViolationWithTemplate` 定位审计点，判断是否将错误信息传入以及是否有过滤处理，再向上溯源查找bean传入点，构造请求数据包进行调试。
 
 
 

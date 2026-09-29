@@ -17,39 +17,39 @@ source: "gelusus/wxvl 公众号漏洞文库"
 ### 更新日志：  
 ####   
 ```
-改进了 Elmah 安全检查以检查 Elmah 的变体
+改进了 Elmah 安全检查以检查 Elmah 的变体
 
-OpenCms Chemistry Solr XML 外部实体 (XXE) (CVE-2023-42346)
+OpenCms Chemistry Solr XML 外部实体 (XXE) (CVE-2023-42346)
 
-OwnCloud phpinfo 信息泄露( CVE-2023-49103 )
+OwnCloud phpinfo 信息泄露( CVE-2023-49103 )
 
-TorchServe 管理 API SSRF ( CVE-2023-43654 )
+TorchServe 管理 API SSRF ( CVE-2023-43654 )
 
-更新了 WordPress 核心和 WordPress 插件的漏洞
+更新了 WordPress 核心和 WordPress 插件的漏洞
 
-Ofbiz PreAuth RCE ( CVE-2023-49070 )
+Ofbiz PreAuth RCE ( CVE-2023-49070 )
 
-F5 BIG-IP 请求走私( CVE-2023-46747 )
+F5 BIG-IP 请求走私( CVE-2023-46747 )
 
-Sitecore XP 模板解析器 RCE ( CVE-2023-35813 )
+Sitecore XP 模板解析器 RCE ( CVE-2023-35813 )
 
-通过 PDF 生成添加了对 SSRF/LFI 的检查
+通过 PDF 生成添加了对 SSRF/LFI 的检查
 
-当响应显示在 PDF 中时添加了对文件包含/路径遍历的检查
+当响应显示在 PDF 中时添加了对文件包含/路径遍历的检查
 
 ```  
 #### 改进  
 ```
 
-更新至 Chromium 119.0.6045.199/200
+更新至 Chromium 119.0.6045.199/200
 
-用户可以选择接收直接下载链接，而不是 PDF 报告附件（仅限本地）
+用户可以选择接收直接下载链接，而不是 PDF 报告附件（仅限本地）
 
-改进了使用 React 的单页应用程序 (SPA) 的抓取
+改进了使用 React 的单页应用程序 (SPA) 的抓取
 
-改进了使用 Angular 框架的单页应用程序 (SPA) 的抓取
+改进了使用 Angular 框架的单页应用程序 (SPA) 的抓取
 
-改进了使用 Vue.js 框架的单页应用程序 (SPA) 的抓取
+改进了使用 Vue.js 框架的单页应用程序 (SPA) 的抓取
 
 新的用户配置文件设计
 

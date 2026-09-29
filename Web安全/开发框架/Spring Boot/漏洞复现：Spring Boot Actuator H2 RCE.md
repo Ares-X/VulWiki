@@ -37,9 +37,9 @@ Spring Boot >= 1.5
 
 开始之前，要思考一个问题，如何判断目标站点是否使用 Spring Boot 框架。Spring Boot 框架通常有两个特征点：
 
-    1. 网站 ico 文件是一片绿叶
+    1. 网站 ico 文件是一片绿叶
 
-    2. 特有的报错信息 “Whitelabel Error Page”
+    2. 特有的报错信息 “Whitelabel Error Page”
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ccX15AUPS2wIkV5jyFy5znjfkjUmlJHFGeTRZdtLiaUx9Np6Yp6cQSSpnKGvDJuIOlNRxThHbMVHda2M0cicXLQw/640?wx_fmt=png)
 
@@ -49,7 +49,7 @@ Spring Boot >= 1.5
 
 Spring Boot 1.x 版本的端口是在根 URL 下注册的，而 Spring Boot 2.x 版本的端口移至 / actuator 路径下，为此也专门特制了一份关于 Spring Boot 的目录字典。但是，在实战中遇到的情况却是端口路径可能存放于多级目录下，这就加大了利用的难度。
 
-(1) 访问：http://192.168.100.133:8080/actuator
+(1) 访问：http://192.168.100.133:8080/actuator
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ccX15AUPS2wIkV5jyFy5znjfkjUmlJHFoflJ9oHriajn5AhSdmLwNKHWz0oicg4alXL5E9LYmgHRic1Gwtl1UiavwA/640?wx_fmt=png)
 

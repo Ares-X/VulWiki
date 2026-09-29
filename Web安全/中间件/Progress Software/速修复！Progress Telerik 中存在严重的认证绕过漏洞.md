@@ -7,7 +7,7 @@ Bill Toulas  代码卫士   2024-06-04 17:34
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
   
-   
+   
 聚焦源代码安全，网罗国内外最新资讯！  
   
 **编译：代码卫士**  
@@ -31,7 +31,7 @@ CVE-2024-4358可被用于在无需检查的情况下创建管理员账号。Khei
   
 因此，组织机构必须尽快应用更新，即更新到10.1.24.514或后续版本，修复这两个漏洞。  
   
-Progress 还建议，尽管并未有CVE-2024-4358遭利用的报告，但系统管理员应当查看 Report Server的用户列表中是否存在无法识别的任何新增Local 用户被添加到  '{host}/Users/Index'。  
+Progress 还建议，尽管并未有CVE-2024-4358遭利用的报告，但系统管理员应当查看 Report Server的用户列表中是否存在无法识别的任何新增Local 用户被添加到  '{host}/Users/Index'。  
   
 Progress Software 中的严重漏洞一般都不会被高级别网络犯罪分子忽略，因为该厂商的产品应用于全球大量组织机构中。例如，Clop 勒索团伙在2023年3月利用 MOVEit Transfer 平台中的一个0day，成为历史上规模最大的勒索事件，受害者超过2770名且间接影响全球9600名人员。  
   
@@ -79,7 +79,7 @@ https://www.bleepingcomputer.com/news/security/exploit-for-critical-progress-tel
   
 题图：  
 Pexels  
- License  
+ License  
   
 ****  
 **本文由奇安信编译，不代表奇安信观点。转载请注明“转自奇安信代码卫士 https://codesafe.qianxin.com”。**  
@@ -95,10 +95,10 @@ Pexels
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
   
-   
-觉得不错，就点个 “  
+   
+觉得不错，就点个 “  
 在看  
 ” 或 "  
 赞  

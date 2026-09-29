@@ -8,7 +8,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
   
 影响多家 Android 原始设备制造商 (OEM) 的本地特权提升缺陷的概念验证 (PoC) 漏洞现已在 GitHub 上公布。然而，由于该漏洞需要本地访问，因此其发布将主要对专业研究人员有所帮助。  
   
-该漏洞的编号为 CVE-2023-45779，由 Meta 的 Red Team X 于 2023 年 9 月上旬发现，并在 Android  2023 年 12 月的安全更新中得到解决 ，但没有披露攻击者可用来识别和利用该漏洞的详细信息。  
+该漏洞的编号为 CVE-2023-45779，由 Meta 的 Red Team X 于 2023 年 9 月上旬发现，并在 Android  2023 年 12 月的安全更新中得到解决 ，但没有披露攻击者可用来识别和利用该漏洞的详细信息。  
   
 该漏洞的存在是由于使用测试密钥对 APEX 模块进行不安全签名，允许攻击者向平台组件推送恶意更新，从而导致本地权限提升。尽管该漏洞无法直接远程利用，但它凸显了兼容性测试套件 (CTS) 和 Android 开源项目 (AOSP) 文档中的弱点，Google 计划在即将发布的 Android 15 版本中解决这些弱点。  
   
@@ -45,7 +45,7 @@ https://www.bleepingcomputer.com/news/security/exploit-released-for-android-loca
 原文来源  
 ：嘶吼专业版  
   
-“投稿联系方式：010-82992251   sunzhonghao@cert.org.cn”  
+“投稿联系方式：010-82992251   sunzhonghao@cert.org.cn”  
   
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/GoUrACT176n1NvL0JsVSB8lNDX2FCGZjW0HGfDVnFao65ic4fx6Rv4qylYEAbia4AU3V2Zz801UlicBcLeZ6gS6tg/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1 "")  
   

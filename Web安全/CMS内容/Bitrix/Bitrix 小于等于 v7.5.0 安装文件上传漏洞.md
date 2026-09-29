@@ -42,7 +42,7 @@ source: "MrWQ/vulnerability-paper"
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/uicic8KPZnD5cbbsZPyGbqwFjVFLYe2LBjhgZtYK0jrt4ibwzRrhoxWuHdCjGPqJN1W2BCdgEJKxiaUNUiatRwVWFPw/640?wx_fmt=png)
 
-**实际上就是 move_uploaded_file** **直接能传****.**
+**实际上就是 move_uploaded_file** **直接能传****.**
 
 ```
   elseif ($source == 'upload')
@@ -81,7 +81,7 @@ source: "MrWQ/vulnerability-paper"
     showMsg(getMsg('LOADER_SUBTITLE1'), $text);
     ?><script>reloadPage(2, 1);</script><?
     die();
-  }
+  }
 
 ``` 
 

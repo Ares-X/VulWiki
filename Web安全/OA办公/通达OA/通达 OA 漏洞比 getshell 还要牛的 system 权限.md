@@ -26,7 +26,7 @@ source: "MrWQ/vulnerability-paper"
 
 今天的主角通达 OA, 前段时间黑产界的杀手, 开始吧！
 
-**0x00 漏洞简介**
+**0x00 漏洞简介**
 
 CNVD:CNVD-2020-26562
 

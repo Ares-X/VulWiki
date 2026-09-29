@@ -11,24 +11,24 @@ source: "MrWQ/vulnerability-paper"
 
 **一****：漏洞描述🐑**
 
-通达 OA v11.8 以下存在文件上传接口, 对文件后缀过滤不充分导致了允许上传 .user.ini 文件导致文件包含恶意文件
+通达 OA v11.8 以下存在文件上传接口, 对文件后缀过滤不充分导致了允许上传 .user.ini 文件导致文件包含恶意文件
 
-**二:  漏洞影响🐇**
+**二:  漏洞影响🐇**
 
-**通达 OA V11.8 以下版本**
+**通达 OA V11.8 以下版本**
 
-**三:  漏洞复现🐋**
+**三:  漏洞复现🐋**
 
 这个漏洞我使用了通达 OA v11.6 v11.7 v11.8 三个版本进行测试
 
 其中发现了如下几点
 
 ```
-v11.6 对文件上传位置不限制，可上传文件导致命令执行和XSS
-v11.7 v11.8 都对文件上传位置做了限制，可上传文件导致命令执行和XSS
+v11.6 对文件上传位置不限制，可上传文件导致命令执行和XSS
+v11.7 v11.8 都对文件上传位置做了限制，可上传文件导致命令执行和XSS
 
-在 v11.7 v11.8 中上传的 webshell 我没有绕过OA的过滤，但XSS可使用
-而 v11.6 可以XSS任意页面，命令执行的webshell可绕过
+在 v11.7 v11.8 中上传的 webshell 我没有绕过OA的过滤，但XSS可使用
+而 v11.6 可以XSS任意页面，命令执行的webshell可绕过
 ```
 
 通达 OA v11.6 下载链接如下，Windows 下载安装，账号为 admin 密码为空
@@ -108,22 +108,22 @@ Content-Disposition: form-data;
 
 这里上传了文件名为 .user.ini（此文件的作用可自行搜索）
 
-目录为 /general/reportshop/workshop/report/attachment-remark  
+目录为 /general/reportshop/workshop/report/attachment-remark  
 
 这里可以发现我们已经成功上传了文件，通过这个文件我们可以包含 peiqi.log 文件执行恶意代码
 
 我们先利用 XSS 漏洞持续获取用户的 Cookie 来维持权限
 
-因为过滤的不同在 v11.6 和 v11.7 及以上有不同的利用方法
+因为过滤的不同在 v11.6 和 v11.7 及以上有不同的利用方法
 
-查看文件 webroot/inc/utility_file.php
+查看文件 webroot/inc/utility_file.php
 
 **v11.6 的此接口无过滤  
 **
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el5CgwFQGMV3P6Cwu9hynOXibeMcor9zVXepaNyac30r5FXhm31yIQPYcqkib7O01bfnRvbJJQaeZvuQ/640?wx_fmt=png)
 
-**v11.6 以上版本则规定了这个接口上传的路径必须包含 webroot 和 attachment**  
+**v11.6 以上版本则规定了这个接口上传的路径必须包含 webroot 和 attachment**  
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el5CgwFQGMV3P6Cwu9hynOXibw61vNVHPoD4L06wvETtXlC1RsZaUZ4DNJK82womWxmfJeOic4OOAxkg/640?wx_fmt=png)
 
@@ -140,7 +140,7 @@ if ((strpos($source, "webroot") !== false) && (strpos($source, "attachment") ===
 
 **因为没有上传位置限制我们就可以利用漏洞在主页面或管理员页面插入 XSS 语句钓鱼或者获取 Cookie 等敏感信息**
 
-**首先上传 .user.ini 在管理员界面 /general 目录下**
+**首先上传 .user.ini 在管理员界面 /general 目录下**
 
 ```
 POST /general/hr/manage/staff_info/update.php?USER_ID=../../general/.user HTTP/1.1
@@ -202,7 +202,7 @@ Content-Disposition: form-data;
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el5CgwFQGMV3P6Cwu9hynOXibyNib8U8VWBiaHxoKe9FkzgNEbOrusc4vA1dR80KSicV4lmzuXT5wOjlbQ/640?wx_fmt=png)
 
-**刚刚我们说到版本的不同利用点不同，我们只能在 webroot 目录下查找带有 **attachment** 的目录**
+**刚刚我们说到版本的不同利用点不同，我们只能在 webroot 目录下查找带有 **attachment** 的目录**
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el5CgwFQGMV3P6Cwu9hynOXibEpB7ia8icO9hW6VFs3QVXaqHYlVxT1BHHW3hDoZ8jDFlqQgwrVGVlrTg/640?wx_fmt=png)
 
@@ -225,7 +225,7 @@ Content-Disposition: form-data;
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el5CgwFQGMV3P6Cwu9hynOXibBfSDCtqApzlKrbjKibpEaxBpyIeVahLAHdBFia2gHjtCt7wVQDyibsiaYQ/640?wx_fmt=png)
 
-就像刚刚上面的方法， 11.6 -11.8 版本中都有这个上传的漏洞
+就像刚刚上面的方法， 11.6 -11.8 版本中都有这个上传的漏洞
 
 于是我们可以包含 PHP 代码文件达到命令执行  
 
@@ -263,19 +263,19 @@ Tips
 v11.6 木马可上传任意位置，可以上传在登录页面相同目录，不需要权限即可执行命令
 v11.7 v11.8 木马绕过第一时间发文
 
-v11.6 XSS在登录页面和管理员页面均可，XSS语句怎么好用怎么来
-v11.7 v11.8 XSS位置有限制，不过也有机会
+v11.6 XSS在登录页面和管理员页面均可，XSS语句怎么好用怎么来
+v11.7 v11.8 XSS位置有限制，不过也有机会
 
-之前爆出的通达OA 11.7任意用户登录也可以利用上
-可以写脚本检测目标一但上线 XSS 与 webshell 一起上传
+之前爆出的通达OA 11.7任意用户登录也可以利用上
+可以写脚本检测目标一但上线 XSS 与 webshell 一起上传
 ```
 
 ```
-上面的思路参考了 LoRexxar 师傅的文章，大家可以看一下
+上面的思路参考了 LoRexxar 师傅的文章，大家可以看一下
 https://paper.seebug.org/1499/
 ```
 
-****四:  漏洞 POC🦉****
+****四:  漏洞 POC🦉****
 
 ```
 由于是后台漏洞，测试时请修改POC中的Cookie
@@ -381,7 +381,7 @@ if __name__ == '__main__':
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el5CgwFQGMV3P6Cwu9hynOXibH8w8bcmQR1vh8ibtvVBNQOloYlGiaG6SynocmVe9t73LZud0J805cwwQ/640?wx_fmt=png)
 
-**通达 OA 命令执行 POC  
+**通达 OA 命令执行 POC  
 **
 
 ```
@@ -512,7 +512,7 @@ if __name__ == '__main__':
 2. 熟悉 Web 攻防，对网络流量日志分析有一定经验；  
 3. 有过护网 / 攻防演练防守经验优先；  
 4. 有实际工作经验 1 年及以上，有 HW 经验优先；  
-5. 具备应急响应、溯源分析能力、反制能力 优先；  
+5. 具备应急响应、溯源分析能力、反制能力 优先；  
 薪资待遇：2K-5K / 天，包差旅费，技术好，大牛上不封顶（基于面试结果）  
 工资不拖欠，面试通过即可谈工资、谈地点、签合同定下来。
 

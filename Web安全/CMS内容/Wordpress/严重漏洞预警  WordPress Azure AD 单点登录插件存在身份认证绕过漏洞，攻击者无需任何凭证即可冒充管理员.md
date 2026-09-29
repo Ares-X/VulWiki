@@ -14,7 +14,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
   
 2026 年 3 月 2 日，一个影响 WordPress 企业级单点登录插件的严重身份认证绕过漏洞正式公开披露，编号 CVE-2026-2628，CVSS v3.1 基础评分 9.8（满分 10 分）。  
   
-受影响插件为 **All-in-One Microsoft 365 & Entra ID / Azure AD SSO Login**  
+受影响插件为 **All-in-One Microsoft 365 & Entra ID / Azure AD SSO Login**  
 （WordPress.org 插件 slug：login-with-azure），由 miniOrange 开发，用于将 WordPress 站点与 Microsoft Azure Active Directory（Entra ID）进行单点登录集成。该插件支持 OAuth 2.0、OpenID Connect 和 SAML 2.0 协议，同时集成 SharePoint、Power BI、Outlook、Teams、Dynamics 365 等 Microsoft 365 企业服务。  
   
 漏洞影响该插件所有版本直至 2.2.5。**官方修复版本 2.2.6 已于 2026 年 2 月 19 日发布，早于公开披露。**  

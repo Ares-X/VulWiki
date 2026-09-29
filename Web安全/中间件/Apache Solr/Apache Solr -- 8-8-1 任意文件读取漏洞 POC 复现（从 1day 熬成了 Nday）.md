@@ -91,7 +91,7 @@ curl "http://127.0.0.1:8983/solr/your_core_name/debug/dump?param=ContentStreams"
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/e9icbmGX0KNIibKH6Kb4Miaqn4TbN5sPN93N2lQeS7iaicDNQHh8gu5qIribmQPKS3U82Bypxr7on6B0bukLTvn0gnrg/640?wx_fmt=png)
 
- 可以看到这里是访问的我们刚才那个 core 的名字，那如何自动去获取到 core 名字呢。  
+ 可以看到这里是访问的我们刚才那个 core 的名字，那如何自动去获取到 core 名字呢。  
 
 那这里的 Core name 就可以通过这个接口来查询
 
@@ -113,7 +113,7 @@ curl "http://127.0.0.1:8983/solr/your_core_name/debug/dump?param=ContentStreams"
 
 识别二维码，快上车就完事了
 
-也可 **赞赏** **转发** **在看****↘**
+也可 **赞赏** **转发** **在看****↘**
 
 ---
 

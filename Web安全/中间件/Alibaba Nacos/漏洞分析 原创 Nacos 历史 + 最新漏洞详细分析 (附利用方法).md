@@ -7,7 +7,7 @@ source: "MrWQ/vulnerability-paper"
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/thlRGXwJPevB0wvMN5koFQ)
 
-**0x01 Nacos < 2.2.0 默认 jwt 密钥未授权访问**
+**0x01 Nacos < 2.2.0 默认 jwt 密钥未授权访问**
 
 ****部署 Nacos****
 
@@ -283,7 +283,7 @@ curl 'http://10.10.84.207:8848/nacos/v1/auth/users?pageNo=1&pageSize=9&accessTok
 
 ##### ****漏洞复现****
 
-选择使用单独的 nacos-client 1.4.1
+选择使用单独的 nacos-client 1.4.1
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/5icW96HKeciaq0GiaTyZwF90XuD7gUZOCW9FWlr3qKWJw5aSURXCUibVXvZIKiaNV5GWGkUAbGMLVAmzrAdTS7E0qgA/640?wx_fmt=png)
 
@@ -393,13 +393,13 @@ END
 
 [技术分享 | Windows 文件 / 文件夹隐藏技巧，无需借助三方软件](http://mp.weixin.qq.com/s?__biz=Mzg5Njg5ODM0OQ==&mid=2247485035&idx=1&sn=b0a75ee79d31949d7d1665e846fb35c9&chksm=c07b4229f70ccb3f5c5828bebf8152dde198481c413c5dc7a8a98a88406ae45e92d12a2aaaf0&scene=21#wechat_redirect)
 
-[技术分享 | 利用子域接管漏洞赚取 2000 美金，子域接管漏洞讲解！](http://mp.weixin.qq.com/s?__biz=Mzg5Njg5ODM0OQ==&mid=2247485141&idx=1&sn=56fc9882f11d11ae475a6957c75d4dc2&chksm=c07b4297f70ccb81210552f43294630210381c03b8434abb10c8f7c3d91c82ef1d03bba4ebd5&scene=21#wechat_redirect)  
+[技术分享 | 利用子域接管漏洞赚取 2000 美金，子域接管漏洞讲解！](http://mp.weixin.qq.com/s?__biz=Mzg5Njg5ODM0OQ==&mid=2247485141&idx=1&sn=56fc9882f11d11ae475a6957c75d4dc2&chksm=c07b4297f70ccb81210552f43294630210381c03b8434abb10c8f7c3d91c82ef1d03bba4ebd5&scene=21#wechat_redirect)  
 
 [漏洞分析 | (CVE-2021-4206)QEMU QXL 整数溢出导致堆溢出漏洞](http://mp.weixin.qq.com/s?__biz=Mzg5Njg5ODM0OQ==&mid=2247484793&idx=1&sn=1e812cd70aac173e002b2d739c3c9f6c&chksm=c07b413bf70cc82d1ec68780d7c08de6baeaad84b81a2d52fa28a1d186556275e53361f3394e&scene=21#wechat_redirect)
 
 <table><tbody><tr><td width="558" valign="top"><h1 data-selectable-paragraph="" id="sr-toc-0"><strong>免责声明：</strong>文章中涉及的程序 (方法) 可能带有攻击性，仅供安全研究与教学之用，读者将其信息做其他用途，由读者承担全部法律及连带责任，文章作者和本公众号不承担任何法律及连带责任，望周知！！！</h1></td></tr></tbody></table>
 
-点赞是鼓励 在看是认同 分享是传递知识
+点赞是鼓励 在看是认同 分享是传递知识
 
 **看完点个** **“在看”** **![](https://mmbiz.qpic.cn/mmbiz_gif/8gt9uOic7ib7Puxs35EZDJOvFZ9Mq3IictsibD3HNIwVics6uoEbOkGAsBB3sKlwxYUT6BiaibwZ0NRMWHM7u6jMNROVA/640?wx_fmt=gif&wxfrom=5&wx_lazy=1) 分享给更多人![](https://mmbiz.qpic.cn/mmbiz_gif/WvOwYJPuJLcBglNp6W9DN3Hibico0cg75E2jukNE8PiamQzSPjdRPbPicnFHjGRW3VUZajianYDCaFiaicoTCQibgex5wg/640?wx_fmt=gif&wxfrom=5&wx_lazy=1)**
 

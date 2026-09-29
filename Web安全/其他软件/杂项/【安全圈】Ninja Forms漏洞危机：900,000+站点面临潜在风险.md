@@ -15,7 +15,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
 漏洞危机  
   
   
-      专家警告说，WordPress的Ninja Forms插件受到多个漏洞的影响（跟踪为CVE-2023-37979、CVE-2023-3 8386和CVE-202-3 8393），黑客可以利用这些漏洞升级权限并窃取敏感数据。  
+      专家警告说，WordPress的Ninja Forms插件受到多个漏洞的影响（跟踪为CVE-2023-37979、CVE-2023-3 8386和CVE-202-3 8393），黑客可以利用这些漏洞升级权限并窃取敏感数据。  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/QmbJGbR2j6xtWmCkDAlwhuNrcWX7eM8ibC4pQfSDyqGlNSTibrEpCOnuXq8HddyDcFSiasR1t58JzE4H3xR3GWTuA/640?wx_fmt=png "")  
   
@@ -24,7 +24,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
 ![](https://mmbiz.qpic.cn/sz_mmbiz_gif/QmbJGbR2j6xtWmCkDAlwhuNrcWX7eM8ibOq8ib5DYlK0AsDDsezibVH7CWq7JBOPPoyVzKTeLh7XKFAKKfEVKXWsg/640?wx_fmt=gif "")  
   
   
-      WordPress插件Ninja Forms是最受欢迎的表单生成器插件，它有超过900000个活动安装。开发人员可以使用此插件创建任何类型的表单，包括联系表单和付款表单。  
+      WordPress插件Ninja Forms是最受欢迎的表单生成器插件，它有超过900000个活动安装。开发人员可以使用此插件创建任何类型的表单，包括联系表单和付款表单。  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/QmbJGbR2j6xtWmCkDAlwhuNrcWX7eM8ibjonJ2vkCjby7l1DIQZSENLFtmxRULPNiaq4pDXPsWj9KgjZWSF4XChQ/640?wx_fmt=png "")  
   
@@ -33,21 +33,21 @@ source: "gelusus/wxvl 公众号漏洞文库"
 ![](https://mmbiz.qpic.cn/sz_mmbiz_gif/QmbJGbR2j6xtWmCkDAlwhuNrcWX7eM8ibOq8ib5DYlK0AsDDsezibVH7CWq7JBOPPoyVzKTeLh7XKFAKKfEVKXWsg/640?wx_fmt=gif "")  
   
   
-    第一个漏洞被追踪为CVE-2023-37979，是一个基于POST的反射XSS，未经身份验证的用户可以利用它窃取敏感信息，在本例中，可以在WordPress网站上升级权限，攻击者以此诱骗特权用户访问精心制作的网站来触发该问题。  
+    第一个漏洞被追踪为CVE-2023-37979，是一个基于POST的反射XSS，未经身份验证的用户可以利用它窃取敏感信息，在本例中，可以在WordPress网站上升级权限，攻击者以此诱骗特权用户访问精心制作的网站来触发该问题。  
   
-     第二个和第三个漏洞被追踪为CVE-2023-38393和CVE-2023-3 8386，是对表单提交导出功能的访问控制中断。订阅者和参与者用户可以利用这些漏洞导出WordPress网站上提交的所有Ninja表单。  
+     第二个和第三个漏洞被追踪为CVE-2023-38393和CVE-2023-3 8386，是对表单提交导出功能的访问控制中断。订阅者和参与者用户可以利用这些漏洞导出WordPress网站上提交的所有Ninja表单。  
   
-      这些漏洞在3.6.26版本中得到了解决。  
+      这些漏洞在3.6.26版本中得到了解决。  
   
-      在某些情况下，插件或主题代码需要从用户提供的字符串中调用特定的函数或类，服务商应始终检查并限制用户可以直接调用的函数或类目，还要格外注意导出数据操作，并始终对相关函数进行权限或访问控制检查。  
+      在某些情况下，插件或主题代码需要从用户提供的字符串中调用特定的函数或类，服务商应始终检查并限制用户可以直接调用的函数或类目，还要格外注意导出数据操作，并始终对相关函数进行权限或访问控制检查。  
   
-      以下是上述问题的时间表：  
+      以下是上述问题的时间表：  
 ◆2023年6月22日，发现了该漏洞，并联系了插件供应商。  
 ◆2023年7月4日，Inja Forms 3.6.26版发布，以修补报告的问题。  
 ◆2021年7月25日将漏洞添加到Patchstack漏洞数据库中。  
 ◆2021年7月27日公开发布的安全咨询文章。  
   
-   END    
+   END    
   
   
 阅读推荐  

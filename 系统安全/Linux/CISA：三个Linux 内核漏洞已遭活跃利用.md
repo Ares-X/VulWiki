@@ -7,76 +7,76 @@ Bill Toulas
                     Bill Toulas  代码卫士   2026-09-22 09:36  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
-    
+    
 聚焦源代码安全，网罗国内外最新资讯！  
   
 编译：代码卫士  
   
 **美国网络安全和基础设施安全局****(CISA)****警告称，三个****Linux****内核漏洞正遭利用，严重性评级从中等到严重不等，其中****CVE-2025-39964****，已在****Linux****内核中存在****14****年。**  
   
-CISA   
+CISA   
 将这三个漏洞都标记为联邦机构的最高优先级，要求昨天前应用可用的安全更新和缓解措施。  
   
 这三个漏洞分别是：  
   
 - CVE-2025-39964  
 ：位于内核  
- AF_ALG   
+ AF_ALG   
 加密套接字接口中的竞争条件，允许并发写入破坏每个套接字的状态，并可能导致系统崩溃或改变加密结果。  
   
 - CVE-2026-53266  
 ：位于  
-Linux   
+Linux   
 内核  
- ebtables SNAT   
+ ebtables SNAT   
 实现中的越界写入漏洞，可能导致  
- ARP   
+ ARP   
 地址重写修改共享的文件后备内存，而没有先使受影响的数据包范围变为可写。  
   
 - CVE-2025-39682  
 ：  
-Linux   
+Linux   
 内核  
- TLS   
+ TLS   
 接收路径逻辑缺陷，因错误处理排队等待后续处理的零长度记录导致，可能允许在使用  
- kTLS   
+ kTLS   
 时将不同的  
- TLS   
+ TLS   
 记录类型一起处理。  
   
   
   
-CISA   
+CISA   
 表示这些漏洞已在攻击中被利用，但未透露任何关于事件或威胁行为者性质的细节。安全公司  
- STAR Labs   
+ STAR Labs   
 发现了  
- CVE-2025-39964  
+ CVE-2025-39964  
 ，称研究人员在没有  
- AI   
+ AI   
 系统帮助的情况下发现了该漏洞。研究人员通过在  
- Google   
+ Google   
 的  
- kernelCTF   
+ kernelCTF   
 中实现权限提升和容器逃逸演示了该漏洞。  
   
 CVE-2025-39682  
 已存在公开利用代码，  
-Red Hat   
+Red Hat   
 在安全公告中也确认了这一点。  
-Red Hat   
+Red Hat   
 还确认  
- CVE-2026-53266   
+ CVE-2026-53266   
 存在已知利用代码。研究员  
- Kimmo Suominen   
+ Kimmo Suominen   
 已在  
- GitHub   
+ GitHub   
 上发布了  
- CVE-2026-53266   
+ CVE-2026-53266   
 的技术分析和补丁状态跟踪，概述了一条可能涉及修改文件后备内存的权限提升路径。然而，该研究员指出，所提出的利用链是通过与  
- Dirty Pipe   
+ Dirty Pipe   
 类比推断出来的，尚未用公开利用代码演示。  
   
-CISA   
+CISA   
 已将这三个漏洞都标记为需要  
 “  
 取证分类  
@@ -142,16 +142,16 @@ e
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
   
   
   
-   
+   
 觉得不错，就点个 “  
 在看  
 ” 或 "  
 赞  
-”   
+”   
   
 
 

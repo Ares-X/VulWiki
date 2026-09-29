@@ -19,15 +19,15 @@ http://admin.target.com:8443
   
 http://admin.target.com:8443/admin/faces/jsf/login.xhtml  
   
-登录页没发现什么问题，我决定继续在 /admin/  
- 路径下 fuzz。很快我发现了一个端点：  
+登录页没发现什么问题，我决定继续在 /admin/  
+ 路径下 fuzz。很快我发现了一个端点：  
   
 http://admin.target.com:8443/admin/download  
   
 返回的是 200 状态码，但内容为空。  
   
-从接口名字就能猜出是下载接口，但我们不知道参数名和文件路径。因为它在 /admin/  
- 下，我就试着访问一些后台常见的文件，比如：  
+从接口名字就能猜出是下载接口，但我们不知道参数名和文件路径。因为它在 /admin/  
+ 下，我就试着访问一些后台常见的文件，比如：  
   
 /admin/js/main.js  
   
@@ -36,11 +36,11 @@ http://admin.target.com:8443/admin/download
 /admin/download?filename=/admin/js/main.js  
   
   
-发现文件成功返回，说明参数是 filename  
+发现文件成功返回，说明参数是 filename  
 ，而且存在一个**受限的路径遍历漏洞**  
- —— 只能访问 /admin/  
- 下的内容，外部路径如 /etc/passwd  
- 是访问不到的。  
+ —— 只能访问 /admin/  
+ 下的内容，外部路径如 /etc/passwd  
+ 是访问不到的。  
 ## 持续探索：路径遍历读配置文件  
   
 由于目标是 Java 应用，我尝试读取：  
@@ -54,12 +54,12 @@ http://admin.target.com:8443/admin/download?filename=/WEB-INF/web.xml
   
 在这个 XML 配置中，我发现了几个关键路径，包括：  
 - /admin/faces/jsf/login.xhtml  
- （我们已经知道）  
+ （我们已经知道）  
   
 - /admin/incident-report  
   
-访问 /admin/incident-report  
- 居然自动触发了一个日志文件的下载，名为：  
+访问 /admin/incident-report  
+ 居然自动触发了一个日志文件的下载，名为：  
   
 incident-report-xxxxx.zip  
   
@@ -74,16 +74,16 @@ incident-report-xxxxx.zip
 21232f297a57a5a743894a0e4a801fc3:admin （MD5，加密过期）2a92e4f4ecc321db24c8f389a287d793:Glglgl123  
   
   
-于是我尝试用账号 admin  
- 和密码 Glglgl123  
- 登录：  
+于是我尝试用账号 admin  
+ 和密码 Glglgl123  
+ 登录：  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/VVS29J221xQNRqnicIicFkg1cYqxhw6eFGs0fK4MtOC3WMPNwJl8JNdR8k7e97B5RsvwrgMqquAPsAPe057hSolQ/640?wx_fmt=png&from=appmsg "")  
   
 http://admin.target.com:8443/admin/faces/jsf/login.xhtml  
   
 **成功登录后台！**  
- 拿到了完整管理员权限！  
+ 拿到了完整管理员权限！  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/VVS29J221xQNRqnicIicFkg1cYqxhw6eFG7EmfR4zeZA0sHwHSvBy4OhA4yaicL3JkEPuuG9wa02GZzUsO5cu7nBg/640?wx_fmt=png&from=appmsg "")  
 ## 后台发现 groovy console —— 开启 RCE 的大门  
@@ -108,8 +108,8 @@ print "id".execute().textprint "cat /etc/passwd".execute().text
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/VVS29J221xQNRqnicIicFkg1cYqxhw6eFGkhJQhwxw0OzL5S4k7y0ymTIicpN53FaNNhL34Ej12ZztbNjibqSjEm0Q/640?wx_fmt=png&from=appmsg "")  
 ## 关键突破：RCE 输出藏在日志文件里！  
   
-这时我突然想到前面提到的 /admin/incident-report  
- —— 每次访问会下载实时日志。  
+这时我突然想到前面提到的 /admin/incident-report  
+ —— 每次访问会下载实时日志。  
   
 我马上执行命令后访问该接口，下载最新日志一看：**命令执行输出就在那里！**  
   
@@ -124,8 +124,8 @@ print "id".execute().textprint "cat /etc/passwd".execute().text
 print "whoami".execute().text
 ```  
   
-1. 去 /admin/incident-report  
- 下载日志  
+1. 去 /admin/incident-report  
+ 下载日志  
   
 1. 查看日志中命令执行的输出  
   

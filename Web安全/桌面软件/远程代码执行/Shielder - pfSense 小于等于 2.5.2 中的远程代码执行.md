@@ -125,7 +125,7 @@ CVE(s)
     
     ### 影响
     
-    经过身份验证的攻击者可以将任意文件写入 pfSense 磁盘。这可以被滥用来编写一个 webshel​​l 来执行任意代码/命令。
+    经过身份验证的攻击者可以将任意文件写入 pfSense 磁盘。这可以被滥用来编写一个 webshell 来执行任意代码/命令。
     
     应该注意的是，由于缺乏针对易受攻击的端点的跨站点请求伪造 (CSRF) 保护，攻击者可能会欺骗经过身份验证的管理员访问恶意网站，以通过受害者的会话/浏览器利用该漏洞。跨站点请求伪造咨询中提供了更多详细信息。
     
@@ -146,7 +146,7 @@ CVE(s)
     
     3.  `<target>`通过替换为目标 pfSense 实例的 IP 地址/域来访问以下 URL，并注意 404 错误：`http://<target>/a.php?a=id`
     4.  在网络服务器上托管在步骤 2 中创建的 HTML 页面，并在用于其他步骤的同一浏览器中访问它
-    5.  请注意，Arbitrary File Write 已被利用在其中创建 webshel​​l，`/usr/local/www/a.php`受害者被重定向到 webshel​​l ( `http://<target>/a.php?a=id`) 以执行`id`命令
+    5.  请注意，Arbitrary File Write 已被利用在其中创建 webshell，`/usr/local/www/a.php`受害者被重定向到 webshell ( `http://<target>/a.php?a=id`) 以执行`id`命令
     
     ### 整治
     

@@ -32,7 +32,7 @@ body="inp_verification" 或 icon_hash="1819219374"
 
 **影响版本**
 
-Crocus 
+Crocus 
 =======
 
 **PART.****0****5**
@@ -52,7 +52,7 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/w
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9
 Cookie: JSESSIONID=07F19D6F7EDC273FDD7B2DBF5F9EB561
-Connection: close
+Connection: close
 
 ```
 

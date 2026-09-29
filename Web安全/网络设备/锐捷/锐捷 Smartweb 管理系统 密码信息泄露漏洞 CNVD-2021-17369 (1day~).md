@@ -15,11 +15,11 @@ source: "MrWQ/vulnerability-paper"
 
 **锐捷网络股份有限公司无线 smartweb 管理系统存在逻辑缺陷漏洞，攻击者可从漏洞获取到管理员账号密码，从而以管理员权限登录。**
 
-**二:  漏洞影响🐇**
+**二:  漏洞影响🐇**
 
 **锐捷网络股份有限公司 无线 smartweb 管理系统**
 
-**三:  漏洞复现🐋**
+**三:  漏洞复现🐋**
 
 ```
 FOFA: title="无线smartWeb--登录页面"
@@ -34,7 +34,7 @@ FOFA: title="无线smartWeb--登录页面"
 **翻文件的过程中发现一个文件很有意思，运行命令查看**
 
 ```
-more /web/xml/webuser-auth.xml
+more /web/xml/webuser-auth.xml
 ```
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7u5y5KbaqpHBzTN4nGDKG30c4teS9LWDOnFBDfr7KRDOQzLfLFhLyXsqRia2OxCHeLcB8srjbRGjA/640?wx_fmt=png)
@@ -58,7 +58,7 @@ Cookie: login=1; oid=1.3.6.1.4.1.4881.1.1.10.1.3; type=WS5302; auth=Z3Vlc3Q6Z3Vl
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7u5y5KbaqpHBzTN4nGDKG3LvfiaJ0xOGYz3Q27COtibpbib6dl2jPYBfuZIBV2C4kvP1jlOiaE7UIKpA/640?wx_fmt=png)
 
- ****四:  Goby & POC🦉****
+ ****四:  Goby & POC🦉****
 
 ```
 已上传 https://github.com/PeiQi0/PeiQi-WIKI-POC Goby & POC 目录中
@@ -69,7 +69,7 @@ Ruijie_smartweb_password_information_disclosure
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7u5y5KbaqpHBzTN4nGDKG3vcLkH0iagWFia8GTmWYbH5cSZD4DHdSaNic73RiaHqWFkorxuKIo8dicBxA/640?wx_fmt=png)
 
- ****五:  关于文库🦉****
+ ****五:  关于文库🦉****
 
 **在线文库：**
 

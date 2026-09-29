@@ -35,7 +35,7 @@ Sonar未透露该漏洞的技术细节，以便让更多的Joomla管理员应用
   
   
   
-   END    
+   END    
   
   
 阅读推荐  
@@ -57,7 +57,7 @@ Sonar未透露该漏洞的技术细节，以便让更多的Joomla管理员应用
   
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/aBHpjnrGylgliav9nRhJpn54X9ndTPw1FAkNuI5icb1JKhoggEwrib3xlibiccmCqwsz7kWOVPbvJvQ8vnv8MbSyuAQ/640?wx_fmt=png&from=appmsg "")  
-[【安全圈】注意！苹果快捷方式漏洞 (CVE-2024-23204) 可以暴露敏感数据](http://mp.weixin.qq.com/s?__biz=MzIzMzE4NDU1OQ==&mid=2652054348&idx=4&sn=954e62d1619b2db694807191fd923070&chksm=f36e0f0cc419861ac6103656430bfaa0fd714deb38e2c1ed06ff8f00c8d83aa1862b63590f68&scene=21#wechat_redirect)  
+[【安全圈】注意！苹果快捷方式漏洞 (CVE-2024-23204) 可以暴露敏感数据](http://mp.weixin.qq.com/s?__biz=MzIzMzE4NDU1OQ==&mid=2652054348&idx=4&sn=954e62d1619b2db694807191fd923070&chksm=f36e0f0cc419861ac6103656430bfaa0fd714deb38e2c1ed06ff8f00c8d83aa1862b63590f68&scene=21#wechat_redirect)  
   
   
   

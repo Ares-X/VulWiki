@@ -27,9 +27,9 @@ Himmelblau 是一款开源的 Linux 身份认证互操作套件，专为企业�
   
 问题在于，这个"无配置"状态没有区分本地场景和远程网络场景。  
   
-Himmelblau 的配置文件 /etc/himmelblau/himmelblau.conf  
- 中，[global]  
- 段有一个关键字段：  
+Himmelblau 的配置文件 /etc/himmelblau/himmelblau.conf  
+ 中，[global]  
+ 段有一个关键字段：  
 ```
 [global]
 domain = your-org.onmicrosoft.com
@@ -56,8 +56,8 @@ domain = your-org.onmicrosoft.com
   
 ## 攻击是怎么发生的  
   
-当一台运行 Himmelblau 3.0.x 且未配置 domain  
- 字段的 Linux 主机开放了 SSH 远程访问，攻击过程如下：  
+当一台运行 Himmelblau 3.0.x 且未配置 domain  
+ 字段的 Linux 主机开放了 SSH 远程访问，攻击过程如下：  
   
 攻击者以自己控制的 Entra ID 账户发起 SSH 登录：  
 ```
@@ -65,40 +65,40 @@ ssh attacker@attacker.onmicrosoft.com@target-host
 
 ```  
   
-Himmelblau 的认证守护进程 himmelblaud  
- 收到请求后，从用户名中提取域名 attacker.onmicrosoft.com  
+Himmelblau 的认证守护进程 himmelblaud  
+ 收到请求后，从用户名中提取域名 attacker.onmicrosoft.com  
 ，向微软的 OIDC 发现端点发起查询，获取这个租户的认证元数据，然后在运行时将这个租户动态注册为合法的认证提供者，随后完成 OAuth2 认证流程。  
   
 微软的 OIDC 端点响应是完全合法的，整个认证协议的流转也没有任何异常。问题就在于 Himmelblau 自身：它从未验证这个租户是否是管理员预期的那个。  
   
 认证通过，攻击者获得了目标主机的 Shell。  
   
-这个过程还有一个隐蔽之处：成功注册的攻击者租户信息会被缓存到 /var/cache/himmelblaud/himmelblau.conf  
-。即使管理员事后补充了正确的 domain  
- 配置，这份缓存不会自动清除，攻击者的租户可能仍然有效，需要手动审计和删除。  
+这个过程还有一个隐蔽之处：成功注册的攻击者租户信息会被缓存到 /var/cache/himmelblaud/himmelblau.conf  
+。即使管理员事后补充了正确的 domain  
+ 配置，这份缓存不会自动清除，攻击者的租户可能仍然有效，需要手动审计和删除。  
 ## 还可以更严重  
   
-如果目标系统配置了基于 Entra ID 组名的权限映射，比如将名为 LinuxAdmins  
- 的组映射为本地管理员，攻击者只需要在自己控制的租户里创建一个同名组并将自己加入，就可以在认证成功后满足组成员验证条件，直接获得管理员权限。  
+如果目标系统配置了基于 Entra ID 组名的权限映射，比如将名为 LinuxAdmins  
+ 的组映射为本地管理员，攻击者只需要在自己控制的租户里创建一个同名组并将自己加入，就可以在认证成功后满足组成员验证条件，直接获得管理员权限。  
   
-更进一步，CVE-2026-31957 在同一天还有一个伴随漏洞被披露：CVE-2026-31979，评分 8.8，是 Himmelblau 的本地提权漏洞。攻击者通过 CVE-2026-31957 获得普通用户 Shell 之后，可以利用 CVE-2026-31979 中 himmelblaud-tasks  
- 守护进程对 /tmp  
- 目录写入时缺乏符号链接保护的缺陷，将可控路径通过符号链接重定向，触发以 root 权限运行的进程执行 chown 操作，最终获得系统最高权限。  
+更进一步，CVE-2026-31957 在同一天还有一个伴随漏洞被披露：CVE-2026-31979，评分 8.8，是 Himmelblau 的本地提权漏洞。攻击者通过 CVE-2026-31957 获得普通用户 Shell 之后，可以利用 CVE-2026-31979 中 himmelblaud-tasks  
+ 守护进程对 /tmp  
+ 目录写入时缺乏符号链接保护的缺陷，将可控路径通过符号链接重定向，触发以 root 权限运行的进程执行 chown 操作，最终获得系统最高权限。  
   
 两个漏洞组合，形成了一条从外部网络到完整系统控制的攻击链，全程无需已知账户，无需任何特殊工具。  
 ## 从披露到补丁只有 9 天  
   
 漏洞窗口期是 3.0.0 稳定版发布（3月2日）到 3.1.0 修复版发布（3月11日），共 9 天。  
   
-安全研究员 @khronosd  
- 通过负责任披露方式报告了这两个漏洞。维护团队响应及时，9 天内完成了代码修复、版本发布和安全公告，并附带了官方的缓存检测 Python 脚本，用于识别漏洞利用窗口期内是否有未授权租户被注入。  
+安全研究员 @khronosd  
+ 通过负责任披露方式报告了这两个漏洞。维护团队响应及时，9 天内完成了代码修复、版本发布和安全公告，并附带了官方的缓存检测 Python 脚本，用于识别漏洞利用窗口期内是否有未授权租户被注入。  
   
 修复的核心逻辑非常直接，提交描述为：fix(auth): require configured provider; revert config-less startup  
 。  
   
-新版本在处理任何认证请求前，首先检查 [global] domain  
- 或 [global] oidc_issuer_url  
- 是否已配置，若均未设置，则拒绝认证，不再进入动态注册流程。  
+新版本在处理任何认证请求前，首先检查 [global] domain  
+ 或 [global] oidc_issuer_url  
+ 是否已配置，若均未设置，则拒绝认证，不再进入动态注册流程。  
   
 动态 OIDC 提供者注册这个特性本身被保留了，只是现在被约束在显式配置的范围内。  
 ## 这个漏洞说明了什么  
@@ -124,12 +124,12 @@ himmelblaud --version
   
 **第二步，检查配置：**  
 ```
-grep -E "^\s*domain\s*=" /etc/himmelblau/himmelblau.conf
+grep -E "^\s*domain\s*=" /etc/himmelblau/himmelblau.conf
 
 ```  
   
-若无输出，说明 domain  
- 未配置，无论是否已升级都需要立即补充。  
+若无输出，说明 domain  
+ 未配置，无论是否已升级都需要立即补充。  
   
 **第三步，审计缓存：**  
 ```
@@ -143,7 +143,7 @@ cat /var/cache/himmelblaud/himmelblau.conf
   
 检查 3.0.0 部署后至修复应用前这段时间内，是否存在来自非预期租户的认证成功记录：  
 ```
-journalctl -u himmelblaud --since "2026-03-02" | grep -i "success"
+journalctl -u himmelblaud --since "2026-03-02" | grep -i "success"
 
 ```  
 ## 参考资料  

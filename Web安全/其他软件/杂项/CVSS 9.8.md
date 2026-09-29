@@ -11,7 +11,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
   
 Avada Builder（fusion-builder）是 Avada 主题配套的页面构建插件，全球最畅销的 WordPress 商业插件之一。版本 ≤ 3.15.2 中，`Fusion_Builder_Conditional_Render_Helper::get_value()` 在处理 `wp_conditional_tags` 分支时，将攻击者 base64 编码的 JSON 数据直接传入 `call_user_func()` 执行，未做任何白名单校验。攻击者通过 `fusion_get_widget_markup` AJAX 接口（无认证注册）发送精心构造的 payload 即可实现远程代码执行。CVSS 评分 9.8。  
   
-CVSS 评分 9.8  
+CVSS 评分 9.8  
 # 二 影响版本  
 ```
 插件: Avada Builder (fusion-builder)

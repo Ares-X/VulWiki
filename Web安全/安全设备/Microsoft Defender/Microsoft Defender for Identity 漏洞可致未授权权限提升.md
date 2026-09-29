@@ -46,7 +46,7 @@ NetSPI 解释称："MDI 传感器将向攻击者系统进行认证，并通过�
   
 原文来自: securityonline.info  
   
-原文链接:   
+原文链接:   
 https://securityonline.info/microsoft-defender-for-identity-flaw-cve-2025-26685-allows-unauthenticated-privilege-escalation/  
   
 欢迎收藏并分享朋友圈，让五邑人网络更安全  

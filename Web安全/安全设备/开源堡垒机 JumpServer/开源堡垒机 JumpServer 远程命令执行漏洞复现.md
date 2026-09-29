@@ -61,7 +61,7 @@ https://www.o2oxy.cn/wp-content/uploads/2021/01/quick_start.zip
 或者执行官网脚本
 
 ```
-curl -sSL https://github.com/jumpserver/jumpserver/releases/download/v2.6.1/quick_start.sh| bash
+curl -sSL https://github.com/jumpserver/jumpserver/releases/download/v2.6.1/quick_start.sh| bash
 ```
 
   
@@ -209,7 +209,7 @@ async def recv_loop(ws):
             awaitaioconsole.aprint(ret["data"], end="")
 ```
 
-# 客户端主逻辑  
+# 客户端主逻辑  
 
 ```
 async def main_logic():
@@ -310,7 +310,7 @@ location /api/v1/users/connection-token/ {
 }
 ```
 
-# 新增以上这些 
+# 新增以上这些 
 
 ```
 location /api/ {

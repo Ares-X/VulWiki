@@ -7,7 +7,7 @@ Lawrence Abrams
                     Lawrence Abrams  代码卫士   2026-01-23 10:36  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
-    
+    
 聚焦源代码安全，网罗国内外最新资讯！  
   
 **编译：代码卫士**  
@@ -40,7 +40,7 @@ Lawrence Abrams
   
 ![](https://mmbiz.qpic.cn/mmbiz_png/oBANLWYScMS78Rq3GiaAMZce95JhZO3ENaTAhrZpibWZwDo8fz9fcGqgYibdlUJIsNDb9JQaJxOR9eibX8mNzcdn0w/640?wx_fmt=png&from=appmsg "")  
   
-                                             
+                                             
   
 Cisco Unity Connection 发布：  
   
@@ -52,12 +52,12 @@ Cisco Unity Connection 发布：
 美国网络安全和基础设施安全局 (CISA) 已将该漏洞纳入其必修清单，并督促联邦机构在2026年2月11日前部署更新。本月早些时候，思科还修复了一个已存在利用代码的 ISE 漏洞，以及一个自11月起就遭利用的 AsyncOS 0day漏洞。  
   
   
- 开源  
+ 开源  
 卫士试用地址：  
 https://oss.qianxin.com/#/login  
   
   
- 代码卫士试用地址：https://sast.qianxin.com/#/login  
+ 代码卫士试用地址：https://sast.qianxin.com/#/login  
   
   
   
@@ -110,9 +110,9 @@ e
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
   
-   
+   
 觉得不错，就点个 “  
 在看  
 ” 或 "  

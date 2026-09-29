@@ -346,7 +346,7 @@ Google 所有服务都通过一套名为 Stubby 的远程过程调用（RPC）�
   
 如果 ticket 里带的是你的 Gaia 用户 ID，后端就会以那个用户的身份来授权。  
   
-时序图 · 一方 API 的信任传递：前端出借身份，后端认 ticket终端用户前端服务后端 borgtask1带 Cookie + SAPISIDHASH 调一方 API2前端用自己的 service identity 发起 Stubby 调用3用户上下文装进 security ticket 一并带过去4ticket 是 GAIA_MINT → 按该 Gaia 用户授权5查 RpcSecurityPolicy 决定是否放行唯一闸门6返回该用户有权访问的数据  
+时序图 · 一方 API 的信任传递：前端出借身份，后端认 ticket终端用户前端服务后端 borgtask1带 Cookie + SAPISIDHASH 调一方 API2前端用自己的 service identity 发起 Stubby 调用3用户上下文装进 security ticket 一并带过去4ticket 是 GAIA_MINT → 按该 Gaia 用户授权5查 RpcSecurityPolicy 决定是否放行唯一闸门6返回该用户有权访问的数据  
   
 下面是两段从 Google API 错误响应里泄露出来的 security ticket，一段匿名、一段带一方认证，可以先对比着看 peer 块的差别：  
   
@@ -373,7 +373,7 @@ Security Context:
   
 　　　　delegate = ValidatedIamSecurityContext  
   
-　　　　　user  = anonymous  
+　　　　　user  = anonymous  
   
 　　　　　creds = EndUserCreds  
   
@@ -387,19 +387,19 @@ Security Context:
   
 　　　　　peer =  
   
-　　　　　　protocol                = loas  
+　　　　　　protocol                = loas  
   
-　　　　　　level                   = strong_privacy_and_integrity  
+　　　　　　level                   = strong_privacy_and_integrity  
   
-　　　　　　host                    = jxcbu6.prod.google.com  
+　　　　　　host                    = jxcbu6.prod.google.com  
   
-　　　　　　role                    = cloud-commerce-catalog  
+　　　　　　role                    = cloud-commerce-catalog  
   
-　　　　　　user                    = cloud-boq-clientapi-catalog  
+　　　　　　user                    = cloud-boq-clientapi-catalog  
   
-　　　　　　is_delegated            = true  
+　　　　　　is_delegated            = true  
   
-　　　　　　jobname_chosen_by_user  = prod.cloud-commerce-catalog  
+　　　　　　jobname_chosen_by_user  = prod.cloud-commerce-catalog  
   
 ●  
 ●  
@@ -428,7 +428,7 @@ Security Context:
   
 　　　　　　delegate = ValidatedIamSecurityContext  
   
-　　　　　　　user  = gaiauser/0xaa22527678  
+　　　　　　　user  = gaiauser/0xaa22527678  
   
 　　　　　　　creds = EndUserCreds  
   
@@ -440,23 +440,23 @@ Security Context:
   
 　　　　　　　peer =  
   
-　　　　　　　　protocol                = loas  
+　　　　　　　　protocol                = loas  
   
-　　　　　　　　level                   = strong_privacy_and_integrity  
+　　　　　　　　level                   = strong_privacy_and_integrity  
   
-　　　　　　　　host                    = pjf8.prod.google.com  
+　　　　　　　　host                    = pjf8.prod.google.com  
   
-　　　　　　　　role                    = commerceorggovernance-clh  
+　　　　　　　　role                    = commerceorggovernance-clh  
   
-　　　　　　　　gaiaId                  = 640201889743  
+　　　　　　　　gaiaId                  = 640201889743  
   
-　　　　　　　　security_realm          = campus-dls  
+　　　　　　　　security_realm          = campus-dls  
   
-　　　　　　　　is_delegated            = false  
+　　　　　　　　is_delegated            = false  
   
-　　　　　　　　borgcell                = pj  
+　　　　　　　　borgcell                = pj  
   
-　　　　　　　　jobname_chosen_by_user  = prod.commerceorggovernance-clh  
+　　　　　　　　jobname_chosen_by_user  = prod.commerceorggovernance-clh  
   
 两段里 peer 块展示的都是发起内部 Stubby 调用的 prod service identity，差别只在终端用户上下文：第一张 ticket 是 ANONYMOUS；第二张携带了 GAIA_MINT 凭据。  
   
@@ -1292,7 +1292,7 @@ Content-Type: application/x-protobuf
   
 　　　　　"defaultValue": {  
   
-　　　　　　"jsonValue": "{\n  \"OldSKU\": \"300465\",\n  \"orderid\": \"7fe9ffa9-d122-484b-96df-9ef85cd3aa8a\",\n  ...\n}"  
+　　　　　　"jsonValue": "{\n  \"OldSKU\": \"300465\",\n  \"orderid\": \"7fe9ffa9-d122-484b-96df-9ef85cd3aa8a\",\n  ...\n}"  
   
 　　　　　},  
   
@@ -1414,27 +1414,27 @@ $ python extract_by_id.py --token "<redacted>" --project 273897706296 --location
   
 Test case: 60413427-4d07-4c36-bce0-66cfcdd81879  
   
-Parent:    projects/273897706296/locations/us-central1/integrations/x/versions/-  
+Parent:    projects/273897706296/locations/us-central1/integrations/x/versions/-  
   
   
 Verified: target found. Starting binary search...  
   
   
-　[ 4/32] fb1d0000-0000-0000-0000-000000000000  (16 reqs)  
+　[ 4/32] fb1d0000-0000-0000-0000-000000000000  (16 reqs)  
   
-　[ 8/32] fb1dc5f3-0000-0000-0000-000000000000  (32 reqs)  
+　[ 8/32] fb1dc5f3-0000-0000-0000-000000000000  (32 reqs)  
   
-　[12/32] fb1dc5f3-0380-0000-0000-000000000000  (48 reqs)  
+　[12/32] fb1dc5f3-0380-0000-0000-000000000000  (48 reqs)  
   
-　[16/32] fb1dc5f3-0380-491c-0000-000000000000  (64 reqs)  
+　[16/32] fb1dc5f3-0380-491c-0000-000000000000  (64 reqs)  
   
-　[20/32] fb1dc5f3-0380-491c-af90-000000000000  (80 reqs)  
+　[20/32] fb1dc5f3-0380-491c-af90-000000000000  (80 reqs)  
   
-　[24/32] fb1dc5f3-0380-491c-af90-5a1400000000  (96 reqs)  
+　[24/32] fb1dc5f3-0380-491c-af90-5a1400000000  (96 reqs)  
   
-　[28/32] fb1dc5f3-0380-491c-af90-5a141aa00000  (112 reqs)  
+　[28/32] fb1dc5f3-0380-491c-af90-5a141aa00000  (112 reqs)  
   
-　[32/32] fb1dc5f3-0380-491c-af90-5a141aa02f56  (128 reqs)  
+　[32/32] fb1dc5f3-0380-491c-af90-5a141aa02f56  (128 reqs)  
   
   
 workflow_id: fb1dc5f3-0380-491c-af90-5a141aa02f56  
@@ -1755,11 +1755,11 @@ com.google.enterprise.crm.exceptions.IpCanonicalCodeException:
   
 GenericStubbyTypedTaskV2.buildRequest():  
   
-　　line 219: setServerAddress(serverSpec)  → ExecuteStubbyCallRequest.java:1123  
+　　line 219: setServerAddress(serverSpec)  → ExecuteStubbyCallRequest.java:1123  
   
-　　line 220: setServiceName(serviceName)   → ExecuteStubbyCallRequest.java:1219  
+　　line 220: setServiceName(serviceName)   → ExecuteStubbyCallRequest.java:1219  
   
-　　line 221: setMethodName(serviceMethod)  → ExecuteStubbyCallRequest.java:1313  
+　　line 221: setMethodName(serviceMethod)  → ExecuteStubbyCallRequest.java:1313  
   
 那是不是还有某个参数是必需的？  
   

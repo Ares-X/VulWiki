@@ -128,78 +128,78 @@ public function method($method = false)
 
 ```
 public function input($data = [], $name = '', $default = null, $filter = '')
-    {
-        if (false === $name) {
-            // 获取原始数据
-            return $data;
-        }
-        $name = (string) $name;
-        if ('' != $name) {
-            // 解析name
-            if (strpos($name, '/')) {
-                list($name, $type) = explode('/', $name);
-            } else {
-                $type = 's';
-            }
-            // 按.拆分成多维数组进行判断
-            foreach (explode('.', $name) as $val) {
-                if (isset($data[$val])) {
-                    $data = $data[$val];
-                } else {
-                    // 无输入数据，返回默认值
-                    return $default;
-                }
-            }
-            if (is_object($data)) {
-                return $data;
-            }
-        }
+    {
+        if (false === $name) {
+            // 获取原始数据
+            return $data;
+        }
+        $name = (string) $name;
+        if ('' != $name) {
+            // 解析name
+            if (strpos($name, '/')) {
+                list($name, $type) = explode('/', $name);
+            } else {
+                $type = 's';
+            }
+            // 按.拆分成多维数组进行判断
+            foreach (explode('.', $name) as $val) {
+                if (isset($data[$val])) {
+                    $data = $data[$val];
+                } else {
+                    // 无输入数据，返回默认值
+                    return $default;
+                }
+            }
+            if (is_object($data)) {
+                return $data;
+            }
+        }
 
-        // 解析过滤器
-        $filter = $this->getFilter($filter, $default);
+        // 解析过滤器
+        $filter = $this->getFilter($filter, $default);
 
-        if (is_array($data)) {
-            array_walk_recursive($data, [$this, 'filterValue'], $filter);
-            reset($data);
-        } else {
-            $this->filterValue($data, $name, $filter);
-        }
+        if (is_array($data)) {
+            array_walk_recursive($data, [$this, 'filterValue'], $filter);
+            reset($data);
+        } else {
+            $this->filterValue($data, $name, $filter);
+        }
 
-        if (isset($type) && $data !== $default) {
-            // 强制类型转换
-            $this->typeCast($data, $type);
-        }
-        return $data;
-    }
+        if (isset($type) && $data !== $default) {
+            // 强制类型转换
+            $this->typeCast($data, $type);
+        }
+        return $data;
+    }
 
 private function filterValue(&$value, $key, $filters)
 {
-        $default = array_pop($filters);
-        foreach ($filters as $filter) {
-            if (is_callable($filter)) {
-                // 调用函数或者方法过滤
-                $value = call_user_func($filter, $value);
-            } elseif (is_scalar($value)) {
-                if (false !== strpos($filter, '/')) {
-                    // 正则过滤
-                    if (!preg_match($filter, $value)) {
-                        // 匹配不成功返回默认值
-                        $value = $default;
-                        break;
-                    }
-                } elseif (!empty($filter)) {
-                    // filter函数不存在时, 则使用filter_var进行过滤
-                    // filter为非整形值时, 调用filter_id取得过滤id
-                    $value = filter_var($value, is_int($filter) ? $filter : filter_id($filter));
-                    if (false === $value) {
-                        $value = $default;
-                        break;
-                    }
-                }
-            }
-        }
-        return $this->filterExp($value);
-    }
+        $default = array_pop($filters);
+        foreach ($filters as $filter) {
+            if (is_callable($filter)) {
+                // 调用函数或者方法过滤
+                $value = call_user_func($filter, $value);
+            } elseif (is_scalar($value)) {
+                if (false !== strpos($filter, '/')) {
+                    // 正则过滤
+                    if (!preg_match($filter, $value)) {
+                        // 匹配不成功返回默认值
+                        $value = $default;
+                        break;
+                    }
+                } elseif (!empty($filter)) {
+                    // filter函数不存在时, 则使用filter_var进行过滤
+                    // filter为非整形值时, 调用filter_id取得过滤id
+                    $value = filter_var($value, is_int($filter) ? $filter : filter_id($filter));
+                    if (false === $value) {
+                        $value = $default;
+                        break;
+                    }
+                }
+            }
+        }
+        return $this->filterExp($value);
+    }
 ```
 
 **NO.3 POC2**
@@ -361,17 +361,17 @@ _method=__construct&method=get&filter=system&route[]=whoami
 **安恒雷神众测 SRC 运营（实习生）**  
 ————————  
 【职责描述】  
-1.  负责 SRC 的微博、微信公众号等线上新媒体的运营工作，保持用户活跃度，提高站点访问量；  
-2.  负责白帽子提交漏洞的漏洞审核、Rank 评级、漏洞修复处理等相关沟通工作，促进审核人员与白帽子之间友好协作沟通；  
-3.  参与策划、组织和落实针对白帽子的线下活动，如沙龙、发布会、技术交流论坛等；  
-4.  积极参与雷神众测的品牌推广工作，协助技术人员输出优质的技术文章；  
-5.  积极参与公司媒体、行业内相关媒体及其他市场资源的工作沟通工作。  
-【任职要求】   
- 1.  责任心强，性格活泼，具备良好的人际交往能力；  
- 2.  对网络安全感兴趣，对行业有基本了解；  
- 3.  良好的文案写作能力和活动组织协调能力。
+1.  负责 SRC 的微博、微信公众号等线上新媒体的运营工作，保持用户活跃度，提高站点访问量；  
+2.  负责白帽子提交漏洞的漏洞审核、Rank 评级、漏洞修复处理等相关沟通工作，促进审核人员与白帽子之间友好协作沟通；  
+3.  参与策划、组织和落实针对白帽子的线下活动，如沙龙、发布会、技术交流论坛等；  
+4.  积极参与雷神众测的品牌推广工作，协助技术人员输出优质的技术文章；  
+5.  积极参与公司媒体、行业内相关媒体及其他市场资源的工作沟通工作。  
+【任职要求】   
+ 1.  责任心强，性格活泼，具备良好的人际交往能力；  
+ 2.  对网络安全感兴趣，对行业有基本了解；  
+ 3.  良好的文案写作能力和活动组织协调能力。
 
-简历投递至 
+简历投递至 
 
 bountyteam@dbappsecurity.com.cn
 
@@ -393,7 +393,7 @@ bountyteam@dbappsecurity.com.cn
 学历要求：本科及以上  
 工作年限：1 年及以上，条件优秀者可放宽
 
-简历投递至 
+简历投递至 
 
 bountyteam@dbappsecurity.com.cn
 

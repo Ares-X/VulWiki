@@ -16,9 +16,9 @@ source: "gelusus/wxvl 公众号漏洞文库"
   
   
 **核心导读：**  
-近日，美国网络安全和基础设施安全局（CISA）正式将 **Zyxel GS1900 系列网络交换机栈缓冲区溢出漏洞（CVE-2026-7273）**  
- 列入已知被利用漏洞目录（KEV），确认其正遭到在途黑客利用；与此同时，网络安全机构 Arctic Wolf 发布紧急警报，企业级备份基础设施 **Veeam Agent for Windows 本地提权漏洞（CVE-2026-32996）**  
- 亦被黑客团伙结合野外武器化 PoC 滥用，从普通日志泄露直通 SYSTEM 最高权限。网络硬件与核心备份的双重沦陷，使得勒索软件具备了极具破坏性的打击支点。  
+近日，美国网络安全和基础设施安全局（CISA）正式将 **Zyxel GS1900 系列网络交换机栈缓冲区溢出漏洞（CVE-2026-7273）**  
+ 列入已知被利用漏洞目录（KEV），确认其正遭到在途黑客利用；与此同时，网络安全机构 Arctic Wolf 发布紧急警报，企业级备份基础设施 **Veeam Agent for Windows 本地提权漏洞（CVE-2026-32996）**  
+ 亦被黑客团伙结合野外武器化 PoC 滥用，从普通日志泄露直通 SYSTEM 最高权限。网络硬件与核心备份的双重沦陷，使得勒索软件具备了极具破坏性的打击支点。  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/sbq02iadgfyEXCUNoBNZY65PdP1mdzXE7yEc3wfDcUQ8NOLv61g3mRSRvsYtyOy0ItndYtTCpGJS2yWzvpLUF2cFkiaIlfE4XQt0icFiaoEwONw/640?wx_fmt=other&from=appmsg "")  
 ## 01 / Zyxel 交换机栈溢出（CVE-2026-7273）：CGI 边界被破  
@@ -26,7 +26,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
 Zyxel（合勤科技）GS1900 系列智能网管交换机广泛部署于中小型企业和分支机构的核心接入层。中国科学院软件研究所（ISCAS）安全研究团队披露，该系列交换机固件内置的 Web CGI 接口程序存在**栈缓冲区溢出缺陷**  
 。  
   
-📋   
+📋   
 Zyxel 核心漏洞情报档案  
   
 漏洞编号  
@@ -44,12 +44,12 @@ CVSS 8.8 HIGH
 合规督办  
 CISA 要求美国联邦机构（FCEB）于 2026年9月24日前强制修补  
   
-受影响的设备型号包含 GS1900-8、8HP、10HP、16、24、24E、24EP、24HPv2、48 及 48HPv2 的 2.90(AAxx.1)C0  
- 及更早版本。攻击者只要处在可触达交换机 Web 管理端口的网络拓扑中，便可远程接管硬件底层 Linux 操作系统，将交换机转化为内网监听与流量劫持的持久化据点。  
+受影响的设备型号包含 GS1900-8、8HP、10HP、16、24、24E、24EP、24HPv2、48 及 48HPv2 的 2.90(AAxx.1)C0  
+ 及更早版本。攻击者只要处在可触达交换机 Web 管理端口的网络拓扑中，便可远程接管硬件底层 Linux 操作系统，将交换机转化为内网监听与流量劫持的持久化据点。  
 ## 02 / Veeam 备份提权（CVE-2026-32996）：从命名管道直通 SYSTEM  
   
-如果说交换机失陷打破了网络隔离，那么备份系统的失陷则是勒索团伙彻底击溃企业容灾防线的杀手锏。Arctic Wolf 监控显示，针对 Veeam Agent for Microsoft Windows 的 **CVE-2026-32996（CVSS 7.3）**  
- 提权利用已广泛扩散。  
+如果说交换机失陷打破了网络隔离，那么备份系统的失陷则是勒索团伙彻底击溃企业容灾防线的杀手锏。Arctic Wolf 监控显示，针对 Veeam Agent for Microsoft Windows 的 **CVE-2026-32996（CVSS 7.3）**  
+ 提权利用已广泛扩散。  
   
 该漏洞源于 Veeam 端点备份服务（Veeam Endpoint Backup service  
 ）在处理本地 gRPC 命名管道通信时的安全盲区：  
@@ -68,9 +68,9 @@ C:\ProgramData\Veeam\Endpoint\Svc.VeeamEndpointBackup.log
   
 读取日志提取 UID，向命名管道重放请求，以 SYSTEM 运行任意命令  
   
-由于 GitHub 上已有成熟的公开 PoC（可通过提取日志 UID 运行 whoami  
- 并写入任意文件），黑客团伙在获取低权限终端（如钓鱼木马落盘）后，可数秒内无感提升至 Windows 最顶层的 NT AUTHORITY\SYSTEM  
- 权限，随后停止或篡改备份任务，加密原始数据库。  
+由于 GitHub 上已有成熟的公开 PoC（可通过提取日志 UID 运行 whoami  
+ 并写入任意文件），黑客团伙在获取低权限终端（如钓鱼木马落盘）后，可数秒内无感提升至 Windows 最顶层的 NT AUTHORITY\SYSTEM  
+ 权限，随后停止或篡改备份任务，加密原始数据库。  
 ## 03 / 威胁图景：网络通道失守与勒索定点清除  
   
 将这两起在途漏洞置于真实的攻防对抗场景中，勒索攻击组织（如 Akira、LockBit 衍生团伙）典型的入侵链路已被极大缩短：  
@@ -89,28 +89,28 @@ C:\ProgramData\Veeam\Endpoint\Svc.VeeamEndpointBackup.log
   
 🛡️ 1. Zyxel GS1900 系列固件升级  
   
-全面下载并刷写 2.90(AAxx.2)C0  
- 补丁版本（例如 GS1900-8 升级至 2.90(AAHH.2)C0  
-，GS1900-24 升级至 2.90(AAHL.2)C0  
- 等）。严格限制交换机 Web 管理后台只能通过独立的带外管理网络（OOBM）或隔离 VLAN 访问，切勿将 HTTP/HTTPS 端口暴露于办公 LAN 或公网。  
+全面下载并刷写 2.90(AAxx.2)C0  
+ 补丁版本（例如 GS1900-8 升级至 2.90(AAHH.2)C0  
+，GS1900-24 升级至 2.90(AAHL.2)C0  
+ 等）。严格限制交换机 Web 管理后台只能通过独立的带外管理网络（OOBM）或隔离 VLAN 访问，切勿将 HTTP/HTTPS 端口暴露于办公 LAN 或公网。  
   
 🔒 2. Veeam Agent for Windows 紧急更新与权限收缩  
   
-更新 Veeam 客户端至官方已修复的最新热补丁版本。在未能立刻更新的主机上，手动检查 C:\ProgramData\Veeam\Endpoint\  
- 目录的 NTFS 访问控制列表（ACL），移除 Users  
- 组的“读取”权限，仅保留 SYSTEM  
- 和 Administrators  
- 组访问权限，直接斩断 PoC 凭据提取路径。  
+更新 Veeam 客户端至官方已修复的最新热补丁版本。在未能立刻更新的主机上，手动检查 C:\ProgramData\Veeam\Endpoint\  
+ 目录的 NTFS 访问控制列表（ACL），移除 Users  
+ 组的“读取”权限，仅保留 SYSTEM  
+ 和 Administrators  
+ 组访问权限，直接斩断 PoC 凭据提取路径。  
   
 🔍 3. 关键日志回溯与告警部署  
   
-核查网络设备近期是否有异常 HTTP POST 崩溃记录与重启日志；在 Windows 端监控非备份服务进程对 ServiceConnectionPipe  
- 命名管道的句柄申请行为，防范内网潜伏横向。  
+核查网络设备近期是否有异常 HTTP POST 崩溃记录与重启日志；在 Windows 端监控非备份服务进程对 ServiceConnectionPipe  
+ 命名管道的句柄申请行为，防范内网潜伏横向。  
   
 ****  
   
   
-   END    
+   END    
   
   
 阅读推荐  

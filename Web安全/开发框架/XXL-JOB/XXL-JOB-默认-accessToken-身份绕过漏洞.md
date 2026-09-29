@@ -9,7 +9,7 @@ source: "Threekiii/Vulnerability-Wiki"
 
 XXL-JOB 是一个分布式任务调度平台，其核心设计目标是开发迅速、学习简单、轻量级、易扩展。现已开放源代码并接入多家公司线上产品线，开箱即用。XXL-JOB 分为 admin 和 executor 两端，前者为后台管理页面，后者是任务执行的客户端。
 
-XXL-JOB 默认配置下，用于调度通讯的 accessToken 不是随机生成的，而是使用 application.properties 配置文件中的默认值。在实际使用中，如果没有修改默认值，攻击者可绕过认证调用 executor，执行任意命令，从而获取服务器权限。
+XXL-JOB 默认配置下，用于调度通讯的 accessToken 不是随机生成的，而是使用 application.properties 配置文件中的默认值。在实际使用中，如果没有修改默认值，攻击者可绕过认证调用 executor，执行任意命令，从而获取服务器权限。
 
 ## 披露时间
 
@@ -54,7 +54,7 @@ xxl.job.accessToken=default_token
 ![](./.resource/XXL-JOB-默认-accessToken-身份绕过漏洞/media/image-20241112173432704.png)
 
 
-在实际使用中，如果没有修改默认值，攻击者可绕过认证调用 executor，执行任意命令，从而获取服务器权限。
+在实际使用中，如果没有修改默认值，攻击者可绕过认证调用 executor，执行任意命令，从而获取服务器权限。
 
 首先，我们不带 `XXL-JOB-ACCESS-TOKEN`，对 executor 未授权访问漏洞进行利用，探测目标是否出网。此处运行模式为 GLUE 模式 (Python)，其他方式均可，主要取决于目标环境。
 
@@ -131,7 +131,7 @@ HTTP Status Code 200，成功：
 
 ## 漏洞修复
 
-修改调度中心和执行器配置项 `xxl.job.accessToken` 的默认值，注意要设置相同的值。
+修改调度中心和执行器配置项 `xxl.job.accessToken` 的默认值，注意要设置相同的值。
 
 参考 [官方文档](https://www.xuxueli.com/xxl-job/#5.10%20%E8%AE%BF%E9%97%AE%E4%BB%A4%E7%89%8C%EF%BC%88AccessToken%EF%BC%89) 中 5.10 章节关于访问令牌（AccessToken）的相关描述：
 

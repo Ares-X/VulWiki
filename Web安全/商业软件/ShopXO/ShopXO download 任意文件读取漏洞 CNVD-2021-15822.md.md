@@ -16,11 +16,11 @@ source: "MrWQ/vulnerability-paper"
 
 **ShopXO 是一套开源的企业级开源电子商务系统。ShopXO 存在任意文件读取漏洞，攻击者可利用该漏洞获取敏感信息**
 
-**二:  漏洞影响🐇**
+**二:  漏洞影响🐇**
 
 **ShopXO**
 
-**三:  漏洞复现🐋**
+**三:  漏洞复现🐋**
 
 ```
 app="ShopXO企业级B2C电商系统提供商"
@@ -47,7 +47,7 @@ Upgrade-Insecure-Requests: 1
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7htH9AibquAMvoqJYD5h1Kb1mNQyhQhA2IIo8TmKMGb5ogibEK6RPTbtbXCDgzOr1dKicgLtKYqkaSg/640?wx_fmt=png)
 
- ****四:  Goby & POC🦉****
+ ****四:  Goby & POC🦉****
 
 ```
 https://github.com/PeiQi0
@@ -55,7 +55,7 @@ https://github.com/PeiQi0
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7htH9AibquAMvoqJYD5h1KbNKa3mtwcib8NmjBt8NlaWOoUiaiahrvDTGGsMmntQoy11s1ibibGhjoIDpg/640?wx_fmt=png)
 
- ****五:  关于文库🦉****
+ ****五:  关于文库🦉****
 
  **在线文库：**
 
@@ -84,7 +84,7 @@ https://github.com/PeiQi0
 
 **由于传播、利用此文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，文章作者不为此承担任何责任。**
 
-**PeiQi 文库 拥有对此文章的修改和解释权如欲转载或传播此文章，必须保证此文章的完整性，包括版权声明等全部内容。未经作者允许，不得任意修改或者增减此文章内容，不得以任何方式将其用于商业目的。**
+**PeiQi 文库 拥有对此文章的修改和解释权如欲转载或传播此文章，必须保证此文章的完整性，包括版权声明等全部内容。未经作者允许，不得任意修改或者增减此文章内容，不得以任何方式将其用于商业目的。**
 
 ---
 

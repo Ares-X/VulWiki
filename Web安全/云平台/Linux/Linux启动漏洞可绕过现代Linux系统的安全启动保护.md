@@ -117,7 +117,7 @@ https://cybersecuritynews.com/linux-boot-vulnerability-allows-bypass-of-secure-b
   
 ![图片](https://mmbiz.qpic.cn/mmbiz_gif/qq5rfBadR3icF8RMnJbsqatMibR6OicVrUDaz0fyxNtBDpPlLfibJZILzHQcwaKkb4ia57xAShIJfQ54HjOG1oPXBew/640?wx_fmt=gif&wxfrom=5&wx_lazy=1&tp=webp "")  
   
-   
+   
   
 
 

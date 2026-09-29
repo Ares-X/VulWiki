@@ -121,7 +121,7 @@ JDK18场景下实现命令执行和打入多种内存马。
   
 - 一键击溃火绒进程  
   
--    
+-    
 CobaltStrike免杀加载器  
   
 - 数据库直连工具免杀版  
@@ -131,7 +131,7 @@ CobaltStrike免杀加载器
 - jsp文件  
 自动上线cobaltbrike  
   
-- 哥斯拉免杀工具   
+- 哥斯拉免杀工具   
 XlByPassGodzilla  
   
 - 冰蝎免杀工具 XlByPassBehinder  
@@ -168,9 +168,9 @@ XlByPassGodzilla
   
 ![图片](https://mmbiz.qpic.cn/mmbiz_png/MuoJjD4x9x3siaaGcOb598S56dSGAkNBwpF7IKjfj1vFmfagbF6iaiceKY4RGibdwBzJyeLS59NlowRF39EPwSCbeQ/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp#imgIndex=11 "")  
   
-     
+     
 往期推荐  
-     
+     
   
   
 1.[加量不加价 | 星落免杀第二期，助你打造专属免杀武器库](https://mp.weixin.qq.com/s?__biz=MzkwNjczOTQwOA==&mid=2247495969&idx=1&sn=d3379e8f69c2cefb6d0564299e13d579&scene=21#wechat_redirect)  

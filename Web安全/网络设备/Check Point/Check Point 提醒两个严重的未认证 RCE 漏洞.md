@@ -7,117 +7,117 @@ Swati Khandelwal
                     Swati Khandelwal  代码卫士   2026-09-11 08:42  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
-    
+    
 聚焦源代码安全，网罗国内外最新资讯！  
   
 编译：代码卫士  
   
 **Check Point****已修复因防火墙和管理产品处理****VPN****证书方式引发的两个严重漏洞（****CVE-2026-85102****和****CVE-2026-85103****）。该公司表示，这两个漏洞都可能导致未经身份验证的远程攻击者运行代码，但仅限于该公司并未描述的****“****特定条件****”****下。**  
   
-Check Point   
+Check Point   
 于  
- 9   
+ 9   
 月  
- 9   
+ 9   
 日在向客户社区发布的通知中披露了这些漏洞，并于同日开始提供修复程序。该公司表示，这两个漏洞都由内部发现，且未有迹象表明其中任何一个已被用于攻击。  
   
-CVE-2026-85102   
+CVE-2026-85102   
 是在  
- VPN   
+ VPN   
 协商期间未能正确验证证书信任。未经身份验证的远程攻击者可能能够在防火墙设备  
- Security Gateway   
+ Security Gateway   
 上运行代码。  
-CVE-2026-85103   
+CVE-2026-85103   
 是一个基于堆的缓冲区溢出，发生在产品解码  
- VPN   
+ VPN   
 证书的  
- ASN.1   
+ ASN.1   
 结构时未经身份验证的远程攻击者可能能够在  
- Quantum Security Management   
+ Quantum Security Management   
 和  
- Quantum Security Gateway   
+ Quantum Security Gateway   
 系统上运行代码。这两个漏洞的  
- CVSS   
+ CVSS   
 评分均为  
- 9.8  
+ 9.8  
 。  
-Check Point   
+Check Point   
 自行分配了这些标识符和评分。  
   
 这两个漏洞的受影响版本相同，如下：  
   
-- R82.10   
+- R82.10   
 搭配  
- Jumbo Hotfix Take 43   
+ Jumbo Hotfix Take 43   
 或更低版本  
   
-- R82   
+- R82   
 搭配  
- Jumbo Hotfix Take 125   
+ Jumbo Hotfix Take 125   
 或更低版本  
   
-- R81.20   
+- R81.20   
 搭配  
- Jumbo Hotfix Take 165   
+ Jumbo Hotfix Take 165   
 或更低版本  
   
   
   
 以上版本是受影响版本，并非包含修复的版本。该列表涵盖三个  
- Quantum   
+ Quantum   
 分支，并未提供其它任何版本信息。加拿大网络安全中心当晚发布的公告列出了更广泛的产品，但并未提供版本信息。它列出了  
- Security Gateway  
+ Security Gateway  
 、  
-Security Management Server   
+Security Management Server   
 和  
- Spark Firewall  
+ Spark Firewall  
 ，即  
- Check Point   
+ Check Point   
 的小型企业产品线。  
-Spark   
+Spark   
 出现了两次，一次针对使用站点到站点或远程访问  
- VPN   
+ VPN   
 的部署，一次针对没有该条件的情况。  
   
 在同一社区帖子中，一名  
- Check Point   
+ Check Point   
 员工被问及关闭了  
- VPN   
+ VPN   
 软件刀片的网关是否受  
- CVE-2026-85103   
+ CVE-2026-85103   
 漏洞的影响。该员工回复称，该问题涉及证书处理，因此理论上，在没有  
- VPN   
+ VPN   
 但存在  
- VPN   
+ VPN   
 证书的环境中也可能被触发。  
   
-Check Point   
+Check Point   
 为客户提供了两条修复途径。第一种是  
- Check Point Live Patch  
+ Check Point Live Patch  
 。该公司表示，使用它的客户会随着  
- rollout   
+ rollout   
 开始而自动受到保护，该  
- rollout   
+ rollout   
 已于  
- 9   
+ 9   
 月  
- 9   
+ 9   
 日开始。一名  
- Check Point   
+ Check Point   
 员工在帖子中表示，它可以安装在  
- R81.20  
+ R81.20  
 、  
-R82.00   
+R82.00   
 和  
- R82.10   
+ R82.10   
 的任何  
- Jumbo Hotfix   
+ Jumbo Hotfix   
 级别之上，并且只列出了这三个版本。第二种是  
- Jumbo Hotfix  
+ Jumbo Hotfix  
 。  
 Check Point 告知  
 客户称，应尽早安装部署版本的最新  
- Jumbo Hotfix 。  
+ Jumbo Hotfix 。  
   
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_gif/t5z0xV2OYfURibmDD0SEO03KcIxibfEAUEqdh7fPwozlKpqWqAju2c7Czdfia4BFKHJL8icTs7oicw07r9ibC7a7zwUCyQg5CibupibZUmGKbJ7WQcI/640?wx_fmt=gif&from=appmsg "")  
@@ -130,87 +130,87 @@ Check Point 告知
   
   
 两名客户在帖子中表示，他们正在运行  
- R81.10  
+ R81.10  
 ，并且数周内不会迁移离开该版本。其中一人表示，该分支没有可用的  
- Jumbo Hotfix  
+ Jumbo Hotfix  
 ，也没有  
- Live Patch  
+ Live Patch  
 ，因此缓解措施是唯一选择。  
   
 该客户称，公告中的缓解措施是关闭  
- VPN   
+ VPN   
 的未明确规则，并称其过于含糊，无法据此采取行动，还询问应注释掉哪些配置行。另一人询问如何在不影响远程用户的情况下应用该缓解措施。这两个问题在帖子中都没有得到回答。几名客户还表示，自动  
- rollout   
+ rollout   
 尚未覆盖他们。五个不同账户报告称，在公告发布当天，网关仍停留在紧急安全更新包的  
- Take 18   
+ Take 18   
 或  
- Take 17  
+ Take 17  
 ；其中一人发布了一份更新日志，显示  
- Take 18   
+ Take 18   
 于  
- 9   
+ 9   
 月  
- 1   
+ 1   
 日安装，此后没有任何更新。  
   
 几名客户报告称，两份公告中的下载链接对他们无效，一名  
- Check Point   
+ Check Point   
 员工回复称，链接已经过检查并且可用。一名客户随后表示，公告链接在两个浏览器中仍然失败，而  
- Live Patch   
+ Live Patch   
 文章中的链接则可用。  
   
-6   
+6   
 月和  
- 7   
+ 7   
 月，  
-Check Point   
+Check Point   
 修复了这些产品中的严重漏洞，并称在宣布时这些漏洞已被利用。  
-6   
+6   
 月的是  
- CVE-2026-50751  
+ CVE-2026-50751  
 ，是  
- Remote Access VPN   
+ Remote Access VPN   
 和  
- Mobile Access   
+ Mobile Access   
 证书验证中的身份验证绕过漏洞。美国网络安全和基础设施安全局  
- (CISA)   
+ (CISA)   
 于  
- 6   
+ 6   
 月  
- 8   
+ 8   
 日将其加入已知被利用漏洞目录。  
   
-7   
+7   
 月的是  
- CVE-2026-16232  
+ CVE-2026-16232  
 ，是一个  
- SmartConsole   
+ SmartConsole   
 身份验证绕过漏洞，  
-CISA   
+CISA   
 在其披露当天将其加入同一目录。这是  
- Check Point   
+ Check Point   
 当月修复的三个漏洞之一，其中两个影响  
- Security Management Server  
+ Security Management Server  
 ，也就是  
- CVE-2026-85103   
+ CVE-2026-85103   
 所触及的同一组件。  
   
-Check Point   
+Check Point   
 尚未发布这两个新漏洞的妥协指标。当在帖子中被问及日志是否会显示利用它们的尝试时，一名员工表示，公司没有看到外部利用的证据，并且妥协指标只适用于已经存在的利用。  
   
-Check Point   
+Check Point   
 的通知以及本文审阅的任何公开记录，均未说明哪些  
- Spark   
+ Spark   
 或  
- Security Management   
+ Security Management   
 版本受影响、哪些构建包含修复，或该公司所称这些漏洞需要哪些具体条件。这些材料中也没有任何内容说明安装修复程序是否会移除攻击者可能已经获得的访问权限。  
   
 客户可参见  
-Check Point   
+Check Point   
 的公告  
- sk1000117   
+ sk1000117   
 和  
- sk1000118  
+ sk1000118  
 ，获取受影响产品、缓解指导和修复步骤的文件指南。  
   
   
@@ -273,11 +273,11 @@ e
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
   
   
   
-   
+   
 觉得不错，就点个 “  
 在看  
 ” 或 "  

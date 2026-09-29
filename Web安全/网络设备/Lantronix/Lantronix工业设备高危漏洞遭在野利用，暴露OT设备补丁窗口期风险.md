@@ -9,7 +9,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
   
 美国网络安全和基础设施安全局（CISA）近日确认，工业联网设备厂商**Lantronix**  
 一项高危漏洞已被攻击者在真实环境中利用，并将其列入**已知被利用漏洞（Known Exploited Vulnerabilities，KEV）目录。该漏洞编号为CVE-2025-67038**  
-，影响Lantronix **EDS5000**  
+，影响Lantronix **EDS5000**  
 系列串口转IP（Serial-to-IP）设备服务器，攻击者无需身份认证即可通过命令注入漏洞，以Root权限执行任意系统命令，从而完全控制设备。  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/hfjKPyxBDjoRoX21GTWBIMJibaTSj86mnsNqRyotYDclMqHY2VTtdO7qvUZbYAickHwiaicoLlhgJtrrvJIiccAtHdqOS2HcvbhIsO58YuQs94QM/640?wx_fmt=png&from=appmsg "")  

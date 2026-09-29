@@ -23,7 +23,7 @@ CVE-2023-51437定时攻击
   
 Apache cooccon 项目中发现  
 CVE-2022-45135  
- SQL 注入攻击  
+ SQL 注入攻击  
   
   
   
@@ -47,7 +47,7 @@ CVE-2024-27317文件覆盖漏洞
   
 在上面的例子中！我将 Apache Airflow 项目中存在 XSS 漏洞的代码片段输入到 CodeAstra 模型中，并且 CodeAstra 模型已成功识别 XSS 漏洞。  
   
-发现 CVE-2021-37678 不安全的 yaml 反序列化漏洞，导致   
+发现 CVE-2021-37678 不安全的 yaml 反序列化漏洞，导致   
 TensorFlow 项目中出现 RCE  
   
   

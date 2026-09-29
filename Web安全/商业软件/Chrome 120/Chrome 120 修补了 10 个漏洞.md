@@ -38,7 +38,7 @@ Google 的公告
   
 这家互联网巨头没有提及任何已解决的漏洞被用于恶意攻击。  
 上周，谷歌推出了 Chrome 安全更新，以解决 CVE-2023-6345，这  
-是 2023 年浏览器中记录的   
+是 2023 年浏览器中记录的   
 第七个零日漏洞。  
   
 [90个网络和数据安全相关法律法规打包下载](http://mp.weixin.qq.com/s?__biz=MzA5MzU5MzQzMA==&mid=2652099357&idx=1&sn=5c38f6917d6b84e84632bb47344d3714&chksm=8bbcf924bccb7032f6ff66449cc927e65c853c9fc88b03c8569061bcd8048ef8fcefb48eb778&scene=21#wechat_redirect)  

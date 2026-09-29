@@ -53,7 +53,7 @@ FOFA 语法：(title="用户自助服务" && body="/selfservice/javax.faces.reso
 
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Melo944GVOJECe5vg2C5YWgpyo1D5bCkEPVCSE8TicyQLuettC2pcGgfe3PY8L2lHia8ZWLcNr1Fz7p3pb69Voow/640?wx_fmt=gif&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1)
 
-1. /selfservice/login.jsf 接口
+1. /selfservice/login.jsf 接口
 
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/Melo944GVOLYckibk3WSib4nj4TrzXlOvkqPl8T2icB0BcKia7iaeB02sCZ4dyLaJoibBFJr0icRzR2lqC7yQsyKwXxPA/640?wx_fmt=other&from=appmsg)
 
@@ -98,7 +98,7 @@ FOFA 语法：(title="用户自助服务" && body="/selfservice/javax.faces.reso
 
 **1、最新漏洞情报：**提供最新的漏洞情报，第一时间复现和分析互联网暴露的重点高危漏洞，确保大家能第一时间掌握最新的漏洞动态
 
-**2、内部漏洞知识库：**漏洞知识库正在持续建设中，我们将会提供详细的漏洞复现教程和 poc，帮助大家深入理解漏洞的工作原理和利用方式。所有漏洞都是我们自己成功复现才会添加到知识库中，减少大家试错时间成本，我们将收集相对完整的漏洞信息、漏洞描述、分析以及针对每个漏洞的利用方法和防护建议，致力于打造一个全面且专业的漏洞知识库。 
+**2、内部漏洞知识库：**漏洞知识库正在持续建设中，我们将会提供详细的漏洞复现教程和 poc，帮助大家深入理解漏洞的工作原理和利用方式。所有漏洞都是我们自己成功复现才会添加到知识库中，减少大家试错时间成本，我们将收集相对完整的漏洞信息、漏洞描述、分析以及针对每个漏洞的利用方法和防护建议，致力于打造一个全面且专业的漏洞知识库。 
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/Melo944GVOIhIqialXOQXWAkxoVr7t6q9eibfquDx4FZlibMakPt41tX7VsRibv1u4qDjTh4HrK1uYB8CrWlibAslgQ/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
 

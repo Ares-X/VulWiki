@@ -9,7 +9,7 @@ source: "Threekiii/Vulnerability-Wiki"
 
 Gerapy 是一款基于 Scrapy、Scrapyd、Django 和 Vue.js 的分布式爬虫管理框架。
 
-Gerapy < 0.9.9 存在任意文件读取漏洞，函数 `project_file_read` 的 `path` 和 `label` 参数可控，经过身份验证的攻击者可以读取任意文件。
+Gerapy < 0.9.9 存在任意文件读取漏洞，函数 `project_file_read` 的 `path` 和 `label` 参数可控，经过身份验证的攻击者可以读取任意文件。
 
 参考链接：
 

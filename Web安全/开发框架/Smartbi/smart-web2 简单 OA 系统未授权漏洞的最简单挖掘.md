@@ -44,7 +44,7 @@ smart-web2
 1、漏洞代码位置
 
 ```
-cn.com.smart.web.interceptor.ACLInterceptor 
+cn.com.smart.web.interceptor.ACLInterceptor 
 ```
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibCKkJGNgw4Xz5Gficpxm4BHx0oDztgO1ibfqdQzB0xPnTPsFX1GbvDn2jzytylpDKoqJ4iciaU7LvLZEA/640?wx_fmt=png)

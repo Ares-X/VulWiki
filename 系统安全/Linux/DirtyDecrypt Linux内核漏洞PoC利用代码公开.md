@@ -59,11 +59,11 @@ Moselwal特别指出，在容器环境中操作时威胁显著升级。在运行
 主要修复方案是更新包含4月25日上游补丁的内核版本：  
 ```
 # Fedora
-sudo dnf upgrade --refresh kernel kernel-core kernel-modules && sudo systemctl reboot
+sudo dnf upgrade --refresh kernel kernel-core kernel-modules && sudo systemctl reboot
 # Arch Linux
-sudo pacman -Syu linux linux-headers && sudo systemctl reboot
+sudo pacman -Syu linux linux-headers && sudo systemctl reboot
 # openSUSE Tumbleweed
-sudo zypper dup && sudo systemctl reboot
+sudo zypper dup && sudo systemctl reboot
 ```  
   
 对于无法立即打补丁的系统，可通过黑名单禁用rxrpc、esp4和esp6内核模块作为临时解决方案，但这会导致IPsec VPN连接和AFS挂载功能中断。Kubernetes运维人员应使用已修复内核重建工作节点镜像，并在集群范围内强制实施Pod安全标准（restricted配置），确保所有工作负载默认设置allowPrivilegeEscalation: false。  

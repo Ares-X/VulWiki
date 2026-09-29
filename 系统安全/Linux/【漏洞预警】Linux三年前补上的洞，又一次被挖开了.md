@@ -10,30 +10,30 @@ YGnight
   
 ## 一、漏洞描述  
   
-收到一个linux的提权漏洞的情报，目前POC已被公开，编号是CVE-2026-52933，  这个漏洞产生的位置在 Linux 内核 io_uring 的 poll  请求所有权判断上。请求被取消后，内核本该拦住后续唤醒，实际测试发现是拦不住的，唤醒路径还能再拿走一次。请求完成两遍，文件引用跟着释放两次，用户态剩下的描述符成了悬空指针。  
+收到一个linux的提权漏洞的情报，目前POC已被公开，编号是CVE-2026-52933，  这个漏洞产生的位置在 Linux 内核 io_uring 的 poll  请求所有权判断上。请求被取消后，内核本该拦住后续唤醒，实际测试发现是拦不住的，唤醒路径还能再拿走一次。请求完成两遍，文件引用跟着释放两次，用户态剩下的描述符成了悬空指针。  
 <table><tbody><tr><th style="padding:10px 12px;border:1px solid #d1d5db;text-align:left;font-weight:bold;color:#1a1a1a;background-color:#f3f4f6;white-space:nowrap;"><section><span leaf="">CVE 编号</span></section></th><td style="padding:10px 12px;border:1px solid #d1d5db;color:#333;"><section><span leaf="">CVE-2026-52933，评分 7.8 高危，向量 AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H</span></section></td></tr><tr><th style="padding:10px 12px;border:1px solid #d1d5db;text-align:left;font-weight:bold;color:#1a1a1a;background-color:#f3f4f6;white-space:nowrap;"><section><span leaf="">影响组件</span></section></th><td style="padding:10px 12px;border:1px solid #d1d5db;color:#333;"><section><span leaf="">io_uring/poll.c 的 io_poll_get_ownership()</span></section></td></tr><tr><th style="padding:10px 12px;border:1px solid #d1d5db;text-align:left;font-weight:bold;color:#1a1a1a;background-color:#f3f4f6;white-space:nowrap;"><section><span leaf="">成因</span></section></th><td style="padding:10px 12px;border:1px solid #d1d5db;color:#333;"><section><span leaf="">有符号比较让取消标记失效，请求重复完成，文件引用重复释放</span></section></td></tr><tr><th style="padding:10px 12px;border:1px solid #d1d5db;text-align:left;font-weight:bold;color:#1a1a1a;background-color:#f3f4f6;white-space:nowrap;"><section><span leaf="">引入版本</span></section></th><td style="padding:10px 12px;border:1px solid #d1d5db;color:#333;"><section><span leaf="">提交 a26a35e9 之后，该提交本身是 CVE-2023-0468 的修复补丁</span></section></td></tr><tr><th style="padding:10px 12px;border:1px solid #d1d5db;text-align:left;font-weight:bold;color:#1a1a1a;background-color:#f3f4f6;white-space:nowrap;"><section><span leaf="">受影响版本</span></section></th><td style="padding:10px 12px;border:1px solid #d1d5db;color:#dc2626;font-weight:bold;"><section><span leaf="">主线 6.1 到 7.0；5.15.82 起的 5.15.y，6.0.11 起的 6.0.y</span></section></td></tr><tr><th style="padding:10px 12px;border:1px solid #d1d5db;text-align:left;font-weight:bold;color:#1a1a1a;background-color:#f3f4f6;white-space:nowrap;"><section><span leaf="">修复版本</span></section></th><td style="padding:10px 12px;border:1px solid #d1d5db;color:#16a34a;font-weight:bold;"><section><span leaf="">6.1.175、6.6.140、6.12.86、6.18.27、7.0.4，主线 7.1 起不受影响</span></section></td></tr><tr><th style="padding:10px 12px;border:1px solid #d1d5db;text-align:left;font-weight:bold;color:#1a1a1a;background-color:#f3f4f6;white-space:nowrap;"><section><span leaf="">利用条件</span></section></th><td style="padding:10px 12px;border:1px solid #d1d5db;color:#333;"><section><span leaf="">本地账号且能调用 io_uring，完整链条还要 perf_event_open 与 mmap 开放</span></section></td></tr><tr><th style="padding:10px 12px;border:1px solid #d1d5db;text-align:left;font-weight:bold;color:#1a1a1a;background-color:#f3f4f6;white-space:nowrap;"><section><span leaf="">情报备注</span></section></th><td style="padding:10px 12px;border:1px solid #d1d5db;color:#333;"><section><span leaf="">NVD 归到 CWE-835，与成因不符，去重别按此标签合并</span></section></td></tr></tbody></table>## 二、漏洞原理  
   
 io_uring 给每个 poll 请求挂了一个 32 位的计数器，叫 poll_refs。一个变量塞了三样东西。  
   
-bit 31     取消标记  
-bit 30     重试标记  
-bit 29~0   引用计数  
+bit 31     取消标记  
+bit 30     重试标记  
+bit 29~0   引用计数  
 [#define]()  
- IO_POLL_CANCEL_FLAG BIT(31)       /* 0x80000000 */  
+ IO_POLL_CANCEL_FLAG BIT(31)       /* 0x80000000 */  
 [#define]()  
- IO_POLL_RETRY_FLAG  BIT(30)      /* 0x40000000 */  
+ IO_POLL_RETRY_FLAG  BIT(30)      /* 0x40000000 */  
 [#define]()  
- IO_POLL_REF_MASK    GENMASK(29, 0)  
+ IO_POLL_REF_MASK    GENMASK(29, 0)  
 [#define]()  
- IO_POLL_REF_BIAS    128  
+ IO_POLL_REF_BIAS    128  
   
 低 30 位是引用计数，同时兼作所有权标记。谁要动这个请求，得先把计数从 0 加成 1，抢到的那个才算拿到所有权。入口长这样。  
   
 static inline bool io_poll_get_ownership(struct io_kiocb *req)  
 {  
-    if (unlikely(atomic_read(&req->poll_refs) >= IO_POLL_REF_BIAS))  
-        return io_poll_get_ownership_slowpath(req);  
-    return !(atomic_fetch_inc(&req->poll_refs) & IO_POLL_REF_MASK);  
+    if (unlikely(atomic_read(&req->poll_refs) >= IO_POLL_REF_BIAS))  
+        return io_poll_get_ownership_slowpath(req);  
+    return !(atomic_fetch_inc(&req->poll_refs) & IO_POLL_REF_MASK);  
 }  
   
 第一行是道闸。当前值看着大于等于 128，就不硬加了，交给慢路径。慢路径会先看低 30 位是不是还被人占着，占着直接拒绝。第二行是正常情况下的抢锁动作。  
@@ -47,23 +47,23 @@ static inline bool io_poll_get_ownership(struct io_kiocb *req)
   
 1. 父进程发一个 ASYNC_CANCEL 把请求标成已取消。完成任务挂在停住的任务上，一直跑不掉。  
   
-1. 往 eventfd 里灌唤醒，数量取 2 的 30 次方减一，也就是 (1ULL << 30) - 1  
+1. 往 eventfd 里灌唤醒，数量取 2 的 30 次方减一，也就是 (1ULL << 30) - 1  
 。  
   
 慢路径被跳过后，每来一次唤醒，第二行都老老实实把计数加一。加到 2 的 30 次方，低 30 位绕回 0，整个值只剩最高位那个取消标记。有符号比较照样把它当负数放行。唤醒回调看到低 30 位是 0，认定这是个空闲请求，同一个完成任务被挂了第二次。  
   
 两次完成跑完，文件引用减了两次，eventfd 的 struct file 提前回收，用户态描述符成了悬空指针。  
   
-从悬空指针到  root 还有一段路。公开利用拿 perf_event_open 批量开事件，把刚空出来的 file 槽位占回去，再用 kcmp  逐个比对，确认哪个 perf 描述符跟那个悬空描述符指向同一个对象。接着关掉两个描述符，perf 的缓冲区释放了，之前 mmap  出来的映射还活着。再堆 4096 个 2MB  的共享内存，把那页抢回来当页表页。页表项归攻击者改，等于能把任意物理地址映射进用户空间，内核地址随机化形同虚设。最后把 SELinux 的  enforcing 字节清零，把 core_pattern 改成 |/proc/%P/exe %P  
+从悬空指针到  root 还有一段路。公开利用拿 perf_event_open 批量开事件，把刚空出来的 file 槽位占回去，再用 kcmp  逐个比对，确认哪个 perf 描述符跟那个悬空描述符指向同一个对象。接着关掉两个描述符，perf 的缓冲区释放了，之前 mmap  出来的映射还活着。再堆 4096 个 2MB  的共享内存，把那页抢回来当页表页。页表项归攻击者改，等于能把任意物理地址映射进用户空间，内核地址随机化形同虚设。最后把 SELinux 的  enforcing 字节清零，把 core_pattern 改成 |/proc/%P/exe %P  
 ，故意崩一次，内核以 root 身份把攻击者自己的程序拉起来。  
   
 这条链全程没用用户命名空间。利用代码里注明 perf_event_open 和 mmap 在 uid 65534 上就能用，perf_event_paranoid 是 2。靠禁用非特权命名空间挡内核提权的常规做法，对这条链不起作用。  
 ## 三、修复建议  
 1. **参考漏洞描述中的修复版本进行升级到对应的兼容版本。**  
 1. **暂时无法升级的先把 io_uring 关了。**  
-可以参考这段命令   
+可以参考这段命令   
 ```
-sysctl -w kernel.io_uring_disabled=2
+sysctl -w kernel.io_uring_disabled=2
 ```  
   
 1.   

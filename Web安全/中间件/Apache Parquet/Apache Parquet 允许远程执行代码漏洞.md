@@ -5,8 +5,8 @@ source: "gelusus/wxvl 公众号漏洞文库"
 #  Apache Parquet 允许远程执行代码漏洞   
  网安百色   2025-04-06 19:25  
   
-   
-   
+   
+   
 ![图片](https://mmbiz.qpic.cn/mmbiz_png/1QIbxKfhZo5lNbibXUkeIxDGJmD2Md5vK9ZGS15PBzhF8gRBMk6V7TXMVsSxyqn3vpLuXTg82nHzLRYicg7QtVJQ/640?wx_fmt=other&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
   
 点击上方  

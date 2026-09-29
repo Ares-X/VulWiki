@@ -7,7 +7,7 @@ Guru Baran
                     Guru Baran  代码卫士   2026-02-11 10:32  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
-    
+    
 聚焦源代码安全，网罗国内外最新资讯！  
   
 **编译：代码卫士**  
@@ -32,13 +32,13 @@ Guru Baran
   
   
 该漏洞是位于  
-png_set_quantize()   
+png_set_quantize()   
 函数中的堆缓冲区溢出问题，可导致应用程序崩溃或使攻击者执行任意代码。该漏洞自从函数  
-png_set_quantize()   
+png_set_quantize()   
 （此前被命名为  
- png_set_dither()  
+ png_set_dither()  
 ）诞生之日起就已存在，影响该库之前的所有版本。维护人员已发布  
- libpng 1.6.55   
+ libpng 1.6.55   
 修复该漏洞，并建议直接升级。  
   
   
@@ -110,12 +110,12 @@ libpng
   
   
   
- 开源  
+ 开源  
 卫士试用地址：  
 https://oss.qianxin.com/#/login  
   
   
- 代码卫士试用地址：https://sast.qianxin.com/#/login  
+ 代码卫士试用地址：https://sast.qianxin.com/#/login  
   
   
   
@@ -168,9 +168,9 @@ e
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
   
-   
+   
 觉得不错，就点个 “  
 在看  
 ” 或 "  

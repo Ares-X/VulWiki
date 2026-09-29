@@ -10,9 +10,9 @@ source: "gelusus/wxvl 公众号漏洞文库"
 漏洞概况  
   
   
-今天Apple官方发布   
+今天Apple官方发布   
 Apple iOS、iPadOS、macOS  
- 26.5.2版，修复了WebKit、Kernel 等组件的多个漏洞。  
+ 26.5.2版，修复了WebKit、Kernel 等组件的多个漏洞。  
 其中CVE-2026-43722由微步XGPT发现并报送Apple官方。  
   
 ![](https://mmbiz.qpic.cn/mmbiz_png/T4OSm0sXdEOH9tDgfo5FUN2FdIlbaxbpAeH9XbLicWnEkAy08GGpKA251dMia7kYc1CqCUP8Ta9wlMju2DCKfTibb0xR2Ch76GsEXtrqzSIdC0/640?wx_fmt=png&from=appmsg "")  

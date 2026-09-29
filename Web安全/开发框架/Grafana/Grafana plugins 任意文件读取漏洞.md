@@ -33,7 +33,7 @@ Grafana 存在任意文件读取漏洞，通过默认存在的插件，可构造
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/4R3RgYzzCgG6fvduwiaD0Uzhd9MCO2xZfIttlKGLlzCNCTnAXk4QJyeBoRuDmSMgIMrBricSrdV6F5tH6OGGj80g/640?wx_fmt=png)
 
-二:  漏洞影响🐇
+二:  漏洞影响🐇
 
   
 
@@ -43,7 +43,7 @@ Grafana 8.x
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/4R3RgYzzCgG6fvduwiaD0Uzhd9MCO2xZfIttlKGLlzCNCTnAXk4QJyeBoRuDmSMgIMrBricSrdV6F5tH6OGGj80g/640?wx_fmt=png)
 
-三:  漏洞复现🐋
+三:  漏洞复现🐋
 
   
 
@@ -69,7 +69,7 @@ r.Get("/public/plugins/:pluginId/*", hs.getPluginAssets)
 
   
 
-从请求路径中获取 / public/plugins/ 后的参数赋值给 pluginID, 然后再被拼接至 pluginFilePath 进入文件读取片段
+从请求路径中获取 / public/plugins/ 后的参数赋值给 pluginID, 然后再被拼接至 pluginFilePath 进入文件读取片段
 
 ```
 requestedFile := filepath.Clean(web.Params(c.Req)["*"])
@@ -92,7 +92,7 @@ if !exists {
 
   
 
-插件路径 public/app/plugins/panel  
+插件路径 public/app/plugins/panel  
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el6Zg92HR6cXR3bQ8CPQ0N66hic7t1ytpia7GFuxgKEhsXRC5uyB692Cq3KQ6gLibia1jV6eP7fEjKPhPw/640?wx_fmt=png)
 
@@ -107,7 +107,7 @@ if !exists {
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/4R3RgYzzCgG6fvduwiaD0Uzhd9MCO2xZfIttlKGLlzCNCTnAXk4QJyeBoRuDmSMgIMrBricSrdV6F5tH6OGGj80g/640?wx_fmt=png)
 
- 四:  关于文库🦉
+ 四:  关于文库🦉
 
   
 
@@ -134,7 +134,7 @@ https://www.yuque.com/peiqiwiki
 
 **由于传播、利用此文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，文章作者不为此承担任何责任。**
 
-**PeiQi 文库 拥有对此文章的修改和解释权如欲转载或传播此文章，必须保证此文章的完整性，包括版权声明等全部内容。未经作者允许，不得任意修改或者增减此文章内容，不得以任何方式将其用于商业目的。**
+**PeiQi 文库 拥有对此文章的修改和解释权如欲转载或传播此文章，必须保证此文章的完整性，包括版权声明等全部内容。未经作者允许，不得任意修改或者增减此文章内容，不得以任何方式将其用于商业目的。**
 
 ---
 

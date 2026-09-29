@@ -8,13 +8,13 @@ source: "MrWQ/vulnerability-paper"
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/mSMqHFqBPkx89XZ7VFUkjQ)
 
-**0x01 阅读须知**
+**0x01 阅读须知**
 
 **融云安全的技术文章仅供参考，此文所提供的信息只为网络安全人员对自己所负责的网站、服务器等（包括但不限于）进行检测或维护参考，未经授权请勿利用文章中的技术资料对任何计算机系统进行入侵操作。利用此文所提供的信息而造成的直接或间接后果和损失，均由使用者本人负责。本文所提供的工具仅用于学习，禁止用于其他！！！**
 
 **0x02 漏洞描述**
 
-TerramasterTOS 是中国深圳市图美电子技术（Terramaster）公司的一款基于 Linux 平台的，专用于 erraMaster 云存储 NAS 服务器的操作系统。TerramasterTOS 系统 api.php 存在信息泄露 / 远程代码执行漏洞，攻击者通过漏洞可以获取服务器权限，导致服务器失陷。
+TerramasterTOS 是中国深圳市图美电子技术（Terramaster）公司的一款基于 Linux 平台的，专用于 erraMaster 云存储 NAS 服务器的操作系统。TerramasterTOS 系统 api.php 存在信息泄露 / 远程代码执行漏洞，攻击者通过漏洞可以获取服务器权限，导致服务器失陷。
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/GWXBjgPE49w3OdpLXhuTdN0aM8vS372ZtO6xicjVjsPLGZdyQaYJic9Z7RG5TLRhaRVDLVvVUN4Zibl7r5hVY5cEg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
 
@@ -105,10 +105,10 @@ nuclei.exe -t CVE-2022-24989.yaml -l subs.txt -stats
 
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/GWXBjgPE49zs4eNkNzwGvylxKjRnH2aibQqdbEUPicwHRpyuIhk7YdcECWw9kZGCibot3aRDzS4ADTmywx57c7QBw/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)
 
-**0x04 ****公司简介******
+**0x04 ****公司简介******
 
 江西渝融云安全科技有限公司，2017 年发展至今，已成为了一家集云安全、物联网安全、数据安全、等保建设、风险评估、信息技术应用创新及网络安全人才培训为一体的本地化高科技公司，是江西省信息安全产业链企业和江西省政府部门重点行业网络安全事件应急响应队伍成员。  
-    公司现已获得信息安全集成三级、信息系统安全运维三级、风险评估三级等多项资质认证，拥有软件著作权十八项；荣获 2020 年全国工控安全深度行安全攻防对抗赛三等奖；庆祝建党 100 周年活动信息安全应急保障优秀案例等荣誉......
+    公司现已获得信息安全集成三级、信息系统安全运维三级、风险评估三级等多项资质认证，拥有软件著作权十八项；荣获 2020 年全国工控安全深度行安全攻防对抗赛三等奖；庆祝建党 100 周年活动信息安全应急保障优秀案例等荣誉......
 
 **编制：sm**
 

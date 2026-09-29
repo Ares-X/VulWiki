@@ -40,7 +40,7 @@ source: "MrWQ/vulnerability-paper"
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5hEPHe4k2CYU6qlUyOPdgjqG1q5R1Rv2ak9tvicgWWiboK8G04CaNLn0BEGUBOt0d0wicju1aMdBv4Q/640?wx_fmt=png)
 
-这段代码在处理 Send_RPC_command_length 过程中，在发送 RPC_Command 前会先发送 RPC commad 的长度，接收 size 值后，会先判断是否大于 0x10000，然后判断是否大于 RPCI 结构体中记录的 size，注意这些比较都是以四字节 int 的比较，但是在给 realloc 传参数的时候却以 word，即两字节传入，会导致一个问题是，如果发送的 size=0xffff，可以通过第一步 size<=0x10000 检查，并且在 realloc 传参时，LOWORD（v31）= (0xffff+1) & 0xffff ，即 v31=0 。
+这段代码在处理 Send_RPC_command_length 过程中，在发送 RPC_Command 前会先发送 RPC commad 的长度，接收 size 值后，会先判断是否大于 0x10000，然后判断是否大于 RPCI 结构体中记录的 size，注意这些比较都是以四字节 int 的比较，但是在给 realloc 传参数的时候却以 word，即两字节传入，会导致一个问题是，如果发送的 size=0xffff，可以通过第一步 size<=0x10000 检查，并且在 realloc 传参时，LOWORD（v31）= (0xffff+1) & 0xffff ，即 v31=0 。
 
 分析到这里，攻击思路如下，先 Send_RPC_command_length 设置一个 size，然后 Send_RPC_command_length，size=0xffff ，即将前面申请的堆块释放，并且指针残留在了 RPCI 结构体中，造成 UAF 的可能。
 
@@ -144,7 +144,7 @@ Vmx 可执行文件中处理 rpc 指令的函数为下图函数，地址为 0x18
 *   #### **小结**
     
 
-这部分分析是为了理清 backdoor 机制中 host 与 guest 的交互机制，尤其是涉及到内存分配与回收操作的部分，以及 patch 部分代码要尤其关注，漏洞点一定是在 patch 代码附近，以本样本为例，主要部分为 case 01 set len , 尤其注意 realoc（） 函数。
+这部分分析是为了理清 backdoor 机制中 host 与 guest 的交互机制，尤其是涉及到内存分配与回收操作的部分，以及 patch 部分代码要尤其关注，漏洞点一定是在 patch 代码附近，以本样本为例，主要部分为 case 01 set len , 尤其注意 realoc（） 函数。
 
 **0×2****EXP 编写**
 
@@ -178,13 +178,13 @@ Vmx 可执行文件中处理 rpc 指令的函数为下图函数，地址为 0x18
 
 利用过程同样类似，打开 channel_0 的用来申请一个 size0 的堆块，释放后用 channel_1 申请回来，然后 channel_0 再次释放，造成 UAF，利用 channel_1 来写入数据，修改 tcache 的 fd，造成任意地址写，channel_2 申请一次，channel_3 申请到伪造 fd 处。
 
-那么如何伪造 fd。调试中发现，在 后，会 call [r8+rax*1+0x8] ，并且第一个参数 rdi = [rdi+rax] 。
+那么如何伪造 fd。调试中发现，在 后，会 call [r8+rax*1+0x8] ，并且第一个参数 rdi = [rdi+rax] 。
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5hEPHe4k2CYU6qlUyOPdgj5nFw1k39SSDoQn500oMAuJljG7A5T2AQ3argotphaicKic5Q7u18d6yg/640?wx_fmt=png)
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5hEPHe4k2CYU6qlUyOPdgjatlVGXdNBj8ib3zxXcEH396dFEBY9AicygMJUokyRTEn4r9BIw25enicA/640?wx_fmt=png)
 
-Rdi 与 r8 寄存器中地址相近，rax=0，那么如果将 fd 伪造到 r8 处，在 r8+8 处写入 system 地址，rdi 处写入 gnome-calculator\x00 即可弹出计算器。
+Rdi 与 r8 寄存器中地址相近，rax=0，那么如果将 fd 伪造到 r8 处，在 r8+8 处写入 system 地址，rdi 处写入 gnome-calculator\x00 即可弹出计算器。
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/Ok4fxxCpBb5hEPHe4k2CYU6qlUyOPdgjapqMaR6OXblqXfcVt98wFvfVEOoJwiaVQWTZcrzOzmNVdjVZialAGdEw/640?wx_fmt=png)
 

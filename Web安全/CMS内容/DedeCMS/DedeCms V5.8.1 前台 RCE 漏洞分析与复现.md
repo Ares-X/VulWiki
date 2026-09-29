@@ -19,7 +19,7 @@ DedeCMS v5.8.1 beta 1 内测版
 
 **# 漏洞分析**
 
-这个漏洞发生在 ShowMsg() 函数中，我们来看一下 / plus/flink.php 脚本
+这个漏洞发生在 ShowMsg() 函数中，我们来看一下 / plus/flink.php 脚本
 
 ```
 if ($dopost == 'save') {
@@ -53,7 +53,7 @@ function ShowMsg($msg, $gourl, $onlymsg = 0, $limittime = 0)
     }
 ```
 
-从 $gourl = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : ''; 可以看到，如果 $gourl 的值为 - 1 ，那么我就可以通过引入 REFERER 字段，控制 REFERER 字段的值，而且可以看到 REFERER 字段并未经过任何过滤处理，也就意味着 $gourl 可以注入我们的恶意语句，接着看看下一处调用 $gourl 的地方。
+从 $gourl = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : ''; 可以看到，如果 $gourl 的值为 - 1 ，那么我就可以通过引入 REFERER 字段，控制 REFERER 字段的值，而且可以看到 REFERER 字段并未经过任何过滤处理，也就意味着 $gourl 可以注入我们的恶意语句，接着看看下一处调用 $gourl 的地方。
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ccX15AUPS2wrJKnIU1swcvg4NXia0q1Y1lbGeHPRd9MrlGJibUZq3CERjVV6B8MtRQUvsCRbXzmyIrklmYTqPKxQ/640?wx_fmt=png)
 

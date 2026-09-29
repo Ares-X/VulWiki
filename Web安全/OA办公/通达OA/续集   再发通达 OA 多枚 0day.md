@@ -10,7 +10,7 @@ source: "MrWQ/vulnerability-paper"
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/RpxgdDjibJqczeflvHvDexuf2BhBEBYlJCdjJS6aVZ0w6ooY5QwK27L2khaJWEOVdw2kunkBTviakCv6QeGxYjHg/640?wx_fmt=png)  
 
-**这是继：" 全网首发 | 通达 OA 多枚 0day 分享 "   对通达 OA 系统更加深入的一次审计，重新审计后又发现一些问题。**  
+**这是继：" 全网首发 | 通达 OA 多枚 0day 分享 "   对通达 OA 系统更加深入的一次审计，重新审计后又发现一些问题。**  
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/RpxgdDjibJqcNGbibLvLMAyLEUTCdsTPhsPUvJSpbZb7NeaHsZwbCCeyqvb7LYb2Jg61obhEibO1rmRuPMsriaI0Hg/640?wx_fmt=png)
 

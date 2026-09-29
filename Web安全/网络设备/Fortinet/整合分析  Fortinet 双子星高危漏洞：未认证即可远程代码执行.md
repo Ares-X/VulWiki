@@ -7,9 +7,9 @@ source: "gelusus/wxvl 公众号漏洞文库"
   
 ## 执行摘要  
   
-Fortinet 于 2026 年 5 月 13 日发布安全公告，披露两个 CVSS 评分高达 **9.1**  
- 的关键未认证远程代码执行漏洞，分别影响 **FortiSandbox 沙箱分析平台**  
-和 **FortiAuthenticator 身份认证系统**  
+Fortinet 于 2026 年 5 月 13 日发布安全公告，披露两个 CVSS 评分高达 **9.1**  
+ 的关键未认证远程代码执行漏洞，分别影响 **FortiSandbox 沙箱分析平台**  
+和 **FortiAuthenticator 身份认证系统**  
 ，作为企业安全架构的两大核心组件，上述产品被攻陷将导致整个威胁检测和身份管控体系陷入瘫痪。  
   
 关键发现  
@@ -19,12 +19,12 @@ Fortinet 于 2026 年 5 月 13 日发布安全公告，披露两个 CVSS 评分�
 - **CVE-2026-44277**  
 （FortiAuthenticator）：不当访问控制漏洞（CWE-284），影响 6.5.x 至 8.0.x 全版本线。  
   
-- CISA KEV 目录已收录 **24 个 Fortinet 漏洞**  
-被在野利用，其中 **13 个与勒索软件攻击直接关联。**  
+- CISA KEV 目录已收录 **24 个 Fortinet 漏洞**  
+被在野利用，其中 **13 个与勒索软件攻击直接关联。**  
   
 - Fortinet 设备历来是 APT 组织和经济利益驱动威胁行为体的首选目标，漏洞从披露到武器化的时间窗口极短。  
   
-虽然暂无在野利用报告，但鉴于历史攻击模式，建议组织 **立即执行紧急修复**  
+虽然暂无在野利用报告，但鉴于历史攻击模式，建议组织 **立即执行紧急修复**  
 ，而非等待完整评估。  
 ## 一、漏洞技术深度解析  
 ### 1.1 CVE-2026-26083：FortiSandbox 缺失授权远程代码执行  
@@ -97,7 +97,7 @@ Fortinet漏洞
 **CVE-2026-35616（FortiClient EMS 认证绕过）：**  
 2026年4月初，CISA 发布紧急指令，要求联邦机构在限定时间内修复，被归类为已主动利用漏洞，存在在野攻击活动。  
 ### 2.3 APT 组织攻击模式分析（MITRE ATT&CK）  
-<table><thead><tr style="background:#7b2d8b;color:#fff;"><th style="padding:8px 12px;border:1px solid #e8e8e8;text-align:left;font-weight:bold;"><section><span leaf=""><span textstyle="" style="color: #000000;">ATT&amp;CK 战术</span></span></section></th><th style="padding:8px 12px;border:1px solid #e8e8e8;text-align:left;font-weight:bold;"><section><span leaf=""><span textstyle="" style="color: #000000;">关联技术</span></span></section></th><th style="padding:8px 12px;border:1px solid #e8e8e8;text-align:left;font-weight:bold;"><section><span leaf=""><span textstyle="" style="color: #000000;">利用方式</span></span></section></th></tr></thead><tbody><tr><td style="padding:7px 12px;border:1px solid #e8e8e8;color:#333;font-weight:bold;"><section><span leaf="">初始访问</span></section></td><td style="padding:7px 12px;border:1px solid #e8e8e8;color:#555;"><section><span leaf="">T1190</span></section></td><td style="padding:7px 12px;border:1px solid #e8e8e8;color:#555;"><section><span leaf="">直接利用未认证 RCE 漏洞</span></section></td></tr><tr style="background:#f9f9f9;"><td style="padding:7px 12px;border:1px solid #e8e8e8;color:#333;font-weight:bold;"><section><span leaf="">执行</span></section></td><td style="padding:7px 12px;border:1px solid #e8e8e8;color:#555;"><section><span leaf="">T1059</span></section></td><td style="padding:7px 12px;border:1px solid #e8e8e8;color:#555;"><section><span leaf="">触发系统命令执行</span></section></td></tr><tr><td style="padding:7px 12px;border:1px solid #e8e8e8;color:#333;font-weight:bold;"><section><span leaf="">持久化</span></section></td><td style="padding:7px 12px;border:1px solid #e8e8e8;color:#555;"><section><span leaf="">T1098</span></section></td><td style="padding:7px 12px;border:1px solid #e8e8e8;color:#555;"><section><span leaf="">利用 FortiAuthenticator 创建后门账户</span></section></td></tr><tr style="background:#f9f9f9;"><td style="padding:7px 12px;border:1px solid #e8e8e8;color:#333;font-weight:bold;"><section><span leaf="">防御规避</span></section></td><td style="padding:7px 12px;border:1px solid #e8e8e8;color:#555;"><section><span leaf="">T1070</span></section></td><td style="padding:7px 12px;border:1px solid #e8e8e8;color:#555;"><section><span leaf="">篡改 FortiSandbox 检测日志</span></section></td></tr><tr><td style="padding:7px 12px;border:1px solid #e8e8e8;color:#333;font-weight:bold;"><section><span leaf="">横向移动</span></section></td><td style="padding:7px 12px;border:1px solid #e8e8e8;color:#555;"><section><span leaf="">T1021</span></section></td><td style="padding:7px 12px;border:1px solid #e8e8e8;color:#555;"><section><span leaf="">通过 FortiGate VPN 扩大攻击范围</span></section></td></tr><tr style="background:#f9f9f9;"><td style="padding:7px 12px;border:1px solid #e8e8e8;color:#333;font-weight:bold;"><section><span leaf="">收集</span></section></td><td style="padding:7px 12px;border:1px solid #e8e8e8;color:#555;"><section><span leaf="">T1005</span></section></td><td style="padding:7px 12px;border:1px solid #e8e8e8;color:#555;"><section><span leaf="">导出身份认证凭证和配置数据</span></section></td></tr><tr><td style="padding:7px 12px;border:1px solid #e8e8e8;color:#333;font-weight:bold;"><section><span leaf="">命令与控制</span></section></td><td style="padding:7px 12px;border:1px solid #e8e8e8;color:#555;"><section><span leaf="">T1071</span></section></td><td style="padding:7px 12px;border:1px solid #e8e8e8;color:#555;"><section><span leaf="">利用 Fortinet 管理协议建立后门通道</span></section></td></tr></tbody></table>### 2.4 经济利益驱动威胁行为体（勒索软件）  
+<table><thead><tr style="background:#7b2d8b;color:#fff;"><th style="padding:8px 12px;border:1px solid #e8e8e8;text-align:left;font-weight:bold;"><section><span leaf=""><span textstyle="" style="color: #000000;">ATT&amp;CK 战术</span></span></section></th><th style="padding:8px 12px;border:1px solid #e8e8e8;text-align:left;font-weight:bold;"><section><span leaf=""><span textstyle="" style="color: #000000;">关联技术</span></span></section></th><th style="padding:8px 12px;border:1px solid #e8e8e8;text-align:left;font-weight:bold;"><section><span leaf=""><span textstyle="" style="color: #000000;">利用方式</span></span></section></th></tr></thead><tbody><tr><td style="padding:7px 12px;border:1px solid #e8e8e8;color:#333;font-weight:bold;"><section><span leaf="">初始访问</span></section></td><td style="padding:7px 12px;border:1px solid #e8e8e8;color:#555;"><section><span leaf="">T1190</span></section></td><td style="padding:7px 12px;border:1px solid #e8e8e8;color:#555;"><section><span leaf="">直接利用未认证 RCE 漏洞</span></section></td></tr><tr style="background:#f9f9f9;"><td style="padding:7px 12px;border:1px solid #e8e8e8;color:#333;font-weight:bold;"><section><span leaf="">执行</span></section></td><td style="padding:7px 12px;border:1px solid #e8e8e8;color:#555;"><section><span leaf="">T1059</span></section></td><td style="padding:7px 12px;border:1px solid #e8e8e8;color:#555;"><section><span leaf="">触发系统命令执行</span></section></td></tr><tr><td style="padding:7px 12px;border:1px solid #e8e8e8;color:#333;font-weight:bold;"><section><span leaf="">持久化</span></section></td><td style="padding:7px 12px;border:1px solid #e8e8e8;color:#555;"><section><span leaf="">T1098</span></section></td><td style="padding:7px 12px;border:1px solid #e8e8e8;color:#555;"><section><span leaf="">利用 FortiAuthenticator 创建后门账户</span></section></td></tr><tr style="background:#f9f9f9;"><td style="padding:7px 12px;border:1px solid #e8e8e8;color:#333;font-weight:bold;"><section><span leaf="">防御规避</span></section></td><td style="padding:7px 12px;border:1px solid #e8e8e8;color:#555;"><section><span leaf="">T1070</span></section></td><td style="padding:7px 12px;border:1px solid #e8e8e8;color:#555;"><section><span leaf="">篡改 FortiSandbox 检测日志</span></section></td></tr><tr><td style="padding:7px 12px;border:1px solid #e8e8e8;color:#333;font-weight:bold;"><section><span leaf="">横向移动</span></section></td><td style="padding:7px 12px;border:1px solid #e8e8e8;color:#555;"><section><span leaf="">T1021</span></section></td><td style="padding:7px 12px;border:1px solid #e8e8e8;color:#555;"><section><span leaf="">通过 FortiGate VPN 扩大攻击范围</span></section></td></tr><tr style="background:#f9f9f9;"><td style="padding:7px 12px;border:1px solid #e8e8e8;color:#333;font-weight:bold;"><section><span leaf="">收集</span></section></td><td style="padding:7px 12px;border:1px solid #e8e8e8;color:#555;"><section><span leaf="">T1005</span></section></td><td style="padding:7px 12px;border:1px solid #e8e8e8;color:#555;"><section><span leaf="">导出身份认证凭证和配置数据</span></section></td></tr><tr><td style="padding:7px 12px;border:1px solid #e8e8e8;color:#333;font-weight:bold;"><section><span leaf="">命令与控制</span></section></td><td style="padding:7px 12px;border:1px solid #e8e8e8;color:#555;"><section><span leaf="">T1071</span></section></td><td style="padding:7px 12px;border:1px solid #e8e8e8;color:#555;"><section><span leaf="">利用 Fortinet 管理协议建立后门通道</span></section></td></tr></tbody></table>### 2.4 经济利益驱动威胁行为体（勒索软件）  
   
 根据CISA分析数据，13个Fortinet漏洞与勒索软件攻击存在关联。攻击者典型利用链：  
   
@@ -143,14 +143,14 @@ CVE-2026-26083（FortiSandbox）：
 Fortinet 本次披露的两个 CVSS 9.1 分值漏洞，直接针对企业安全架构的核心组件。FortiAuthenticator 的认证体系中枢地位和 FortiSandbox 的威胁检测管道角色，使其成为高价值攻击目标。  
   
 鉴于：  
-- CISA KEV 目录中 **24 个 Fortinet 漏洞**  
+- CISA KEV 目录中 **24 个 Fortinet 漏洞**  
 已被在野利用；  
   
 - 近期 CVE-2026-21643 在修复后一个月即被标记为活跃利用；  
   
 - 未认证 RCE 漏洞的低利用门槛特性。  
   
-强烈建议组织将本次修复置于最高优先级，在 **72 小时**  
+强烈建议组织将本次修复置于最高优先级，在 **72 小时**  
 内完成关键资产的补丁部署。同时，对历史 Fortinet 设备漏洞（如 CVE-2026-35616）保持持续监控，防范供应链攻击和凭证重用。  
 ## 六、参考链接  
   

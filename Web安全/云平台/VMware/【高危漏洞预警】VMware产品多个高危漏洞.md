@@ -8,7 +8,7 @@ cexlife  飓风网络安全   2025-07-17 12:44
   
 ![](https://mmbiz.qpic.cn/mmbiz_png/ibhQpAia4xu01SK4zK61JZc8IMZsTsmbj6o5aM6Ag42ymzE7FckgbsLDDTZaZ9FSoiaKh2Dra9XspHMjP1RzdSHfw/640?wx_fmt=png&from=appmsg "")  
   
-1.VMware ESXi、Workstation和Fusion VMXNET3虚拟网络适配器整数溢出漏洞(CVE-2025-41236)   
+1.VMware ESXi、Workstation和Fusion VMXNET3虚拟网络适配器整数溢出漏洞(CVE-2025-41236)   
   
 漏洞描述:  
   
@@ -16,7 +16,7 @@ VMԝаrе ESXi、Wоrkѕtаtiоn和Fuѕiоn是VMԝаrе公司提供的虚拟化�
   
 影响产品:  
   
-VMware ESXi < 7.0 U3n,VMware Workstation < 17.x,VMware Fusion < 13.x   
+VMware ESXi < 7.0 U3n,VMware Workstation < 17.x,VMware Fusion < 13.x   
   
 检测方法:  
   
@@ -42,10 +42,10 @@ https://support.broadcom.com/group/ecx/productdownloads?subfamily=VMware%20Fusio
   
 https://knowledge.broadcom.com/external/article?legacyId=88287  
   
-https://support.broadcom.com/group/ecx/productfiles?subFamily=VMware%20Tools&displayGroup=VMware%20Tools%2013.x&release=13.0.1.0&os=&servicePk=&language=EN&freeDownloads=true   
+https://support.broadcom.com/group/ecx/productfiles?subFamily=VMware%20Tools&displayGroup=VMware%20Tools%2013.x&release=13.0.1.0&os=&servicePk=&language=EN&freeDownloads=true   
   
   
-2.VMware ESXi、Workstation和Fusion VMCI越界写入漏洞(CVE-2025-41237)   
+2.VMware ESXi、Workstation和Fusion VMCI越界写入漏洞(CVE-2025-41237)   
   
 漏洞描述:  
   
@@ -53,7 +53,7 @@ VMԝаrе ESXi、Wоrkѕtаtiоn和Fuѕiоn是VMԝаrе 公司提供的虚拟化
   
 检测方法:  
   
-检查虚拟机是否有异常行为，如异常的网络流量或系统资源使用情况，以及是否有未授权的代码执行迹象。   
+检查虚拟机是否有异常行为，如异常的网络流量或系统资源使用情况，以及是否有未授权的代码执行迹象。   
   
 修复建议:  
   
@@ -75,10 +75,10 @@ https://support.broadcom.com/group/ecx/productdownloads?subfamily=VMware%20Fusio
   
 https://knowledge.broadcom.com/external/article?legacyId=88287  
   
-https://support.broadcom.com/group/ecx/productfiles?subFamily=VMware%20Tools&displayGroup=VMware%20Tools%2013.x&release=13.0.1.0&os=&servicePk=&language=EN&freeDownloads=true   
+https://support.broadcom.com/group/ecx/productfiles?subFamily=VMware%20Tools&displayGroup=VMware%20Tools%2013.x&release=13.0.1.0&os=&servicePk=&language=EN&freeDownloads=true   
   
   
-3.VMware|ESXi|PVSCSI控制器堆溢出漏洞(CVE-2025-41238)   
+3.VMware|ESXi|PVSCSI控制器堆溢出漏洞(CVE-2025-41238)   
   
 漏洞描述:  
   
@@ -86,7 +86,7 @@ VMԝаrе ESXi、Wоrkѕtаtiоn和Fuѕiоn是VMԝаrе公司提供的虚拟化�
   
 影响产品:  
   
-VMware ESXi < 7.0 U3b,VMware Workstation < 16.x.x,VMware Fusion < 12.x.x   
+VMware ESXi < 7.0 U3b,VMware Workstation < 16.x.x,VMware Fusion < 12.x.x   
   
 检测方法:  
   
@@ -112,7 +112,7 @@ https://support.broadcom.com/group/ecx/productdownloads?subfamily=VMware%20Fusio
   
 https://knowledge.broadcom.com/external/article?legacyId=88287  
   
-https://support.broadcom.com/group/ecx/productfiles?subFamily=VMware%20Tools&displayGroup=VMware%20Tools%2013.x&release=13.0.1.0&os=&servicePk=&language=EN&freeDownloads=true   
+https://support.broadcom.com/group/ecx/productfiles?subFamily=VMware%20Tools&displayGroup=VMware%20Tools%2013.x&release=13.0.1.0&os=&servicePk=&language=EN&freeDownloads=true   
   
   
   

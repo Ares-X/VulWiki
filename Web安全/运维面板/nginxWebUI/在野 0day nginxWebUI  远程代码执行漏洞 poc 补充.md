@@ -299,7 +299,7 @@ http://localhost:8080/AdminPage/conf/checkBase
 
 ```
 
-可通过../ 控制文件上传路径，上传计划任务 
+可通过../ 控制文件上传路径，上传计划任务 
 
 注：
 

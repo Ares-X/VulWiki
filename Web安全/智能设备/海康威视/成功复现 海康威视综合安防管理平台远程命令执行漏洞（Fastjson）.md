@@ -9,7 +9,7 @@ source: "MrWQ/vulnerability-paper"
 
   
 
-网安引领时代，弥天点亮未来   
+网安引领时代，弥天点亮未来   
 
   
 
@@ -60,7 +60,7 @@ HIKVISION - 综合安防管理平台
 
 2. 对漏洞进行复现
 
- **Poc （POST）**
+ **Poc （POST）**
 
 ```
 POST /bic/ssoService/v1/keepAlive HTTP/1.1
@@ -118,7 +118,7 @@ https://www.hikvision.com/en/support/cybersecurity/security-advisory/security-no
 
 口号 网安引领时代，弥天点亮未来
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/b96CibCt70iaaqjXT4YxgHVARD1NNv0RvKtiaAvXhmruVqgavPY3stwrfvLKetGycKUfxIq3Xc6F6dhU7eb4oh2gg/640?wx_fmt=gif&wxfrom=5&wx_lazy=1&tp=webp) 
+![](https://mmbiz.qpic.cn/mmbiz_gif/b96CibCt70iaaqjXT4YxgHVARD1NNv0RvKtiaAvXhmruVqgavPY3stwrfvLKetGycKUfxIq3Xc6F6dhU7eb4oh2gg/640?wx_fmt=gif&wxfrom=5&wx_lazy=1&tp=webp) 
 
 知识分享完了
 
@@ -130,7 +130,7 @@ https://www.hikvision.com/en/support/cybersecurity/security-advisory/security-no
 
 必降弥天之润！
 
-   弥  天
+   弥  天
 
 安全实验室  
 

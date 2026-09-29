@@ -339,7 +339,7 @@ var net = require("net"), sh = require("child_process").exec("cmd.exe");var clie
 
 【超详细】Fastjson1.2.24反序列化漏洞复现
 
-  记一次HW实战笔记 | 艰难的提权爬坑
+  记一次HW实战笔记 | 艰难的提权爬坑
 
 【漏洞速递+检测脚本 | CVE-2021-49104】泛微E-Office任意文件上传漏洞
 

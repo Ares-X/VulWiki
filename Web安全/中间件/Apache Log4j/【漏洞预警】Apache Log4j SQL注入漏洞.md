@@ -45,7 +45,7 @@ Apache Log4j是美国阿帕奇（Apache）基金会的一款基于Java的开源�
 Apache Log4j 存在SQL注入漏洞，该漏洞源于 Log4j 1.2.x 中的 JDBCAppender 接受 SQL 语句作为配置参数，其中要插入的值是来自 PatternLayout 的转换器。消息转换器 \\%m 可能总是包含在内。这允许攻击者通过将精心制作的字符串输入到记录的应用程序的输入字段或标题中来操纵 SQL，从而允许执行意外的 SQL 查询。请注意，此问题仅在专门配置为使用 JDBCAppender（不是默认设置）时才会影响 Log4j 1.x。从 2.0-beta8 版本开始，重新引入了 JDBCAppender，适当支持参数化 SQL 查询，并进一步自定义写入日志的列。Apache Log4j 1.2 已于 2015 年 8 月结束生命周期。用户应升级到 Log4j 2，因为它解决了以前版本中的许多其他问题。  
   
   
-**#2 解决方案**  
+**#2 解决方案**  
   
   
 目前厂商已发布升级补丁以修复漏洞，补丁获取链接：  
@@ -53,7 +53,7 @@ Apache Log4j 存在SQL注入漏洞，该漏洞源于 Log4j 1.2.x 中的 JDBCAppe
 https://lists.apache.org/thread/pt6lh3pbsvxqlwlp4c5l798dv2hkc85y  
   
   
-**#3 参考资料**  
+**#3 参考资料**  
   
   
 https://security.netapp.com/advisory/ntap-20220217-0007/  
@@ -63,7 +63,7 @@ https://lists.apache.org/thread/pt6lh3pbsvxqlwlp4c5l798dv2hkc85y
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/2CRGGNuQruD6rSnJpSL57NHjuX79JSjjyYviaibNeS3xmGzPfoict6VdnvyuYEq6JdjQqre3WkicWWU7hjpicS2ByibQ/640?wx_fmt=gif "")  
   
-**推 荐 阅 读**  
+**推 荐 阅 读**  
   
   
   

@@ -7,7 +7,7 @@ Cisco
                     Cisco  代码卫士   2026-05-21 06:41  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
-    
+    
 聚焦源代码安全，网罗国内外最新资讯！  
   
 **编译：代码卫士**  
@@ -34,15 +34,15 @@ Cisco
 思科提到，该漏洞（  
 CVE-2026-20223  
 ）位于  
- Secure Workload   
+ Secure Workload   
 内部  
- REST API   
+ REST API   
 的访问验证中，可导致未经身份认证的远程攻击者以站点管理员权限，访问站点资源。  
   
 该漏洞因在访问  
- REST API   
+ REST API   
 端点时的验证和认证不充分而引发。攻击者可通过向受影响端点发送构造  
- API   
+ API   
 请求的方式利用该漏洞，如利用成功，则可以站点管理员用户的权限读取敏感信息并跨租户边界进行配置更改。  
   
   
@@ -56,28 +56,28 @@ CVE-2026-20223
   
   
 该漏洞影响  
-Secure Workload Cluster Software   
+Secure Workload Cluster Software   
 任何配置下的  
-SaaS   
+SaaS   
 版本和本地部署。该漏洞仅影响内部  
- REST API  
+ REST API  
 ，并不影响基于  
- web   
+ web   
 的管理接口。  
-<table><tbody><tr><td data-colwidth="277" width="277" valign="top" style="border: 1px solid windowtext;padding:5px 10px;"><p style="text-align:left;text-indent: 0em;margin-bottom: 15px;display: block;"><span style="letter-spacing: 1px;font-size: 15px;"><strong><span leaf="">思科</span></strong><strong><span style="letter-spacing: 1px;font-size: 15px;"><span leaf="">Secure Workload </span></span></strong><strong><span leaf="">版本</span></strong></span></p></td><td data-colwidth="277" width="277" valign="top" style="border-top: 1px solid windowtext;border-right: 1px solid windowtext;border-bottom: 1px solid windowtext;border-image: initial;border-left: none;padding:5px 10px;"><p style="text-align:left;text-indent: 0em;margin-bottom: 15px;display: block;"><span style="letter-spacing: 1px;font-size: 15px;"><strong><span leaf="">首次已修复版本</span></strong></span></p></td></tr><tr style="height:22px;"><td data-colwidth="277" width="277" valign="top" style="border-right: 1px solid windowtext;border-bottom: 1px solid windowtext;border-left: 1px solid windowtext;border-image: initial;border-top: none;padding:5px 10px;"><p style="text-align:left;text-indent: 0em;margin-bottom: 15px;display: block;"><span style="letter-spacing: 1px;font-size: 15px;"><span style="letter-spacing: 1px;font-size: 15px;"><span leaf="">3.9</span></span><span leaf="">及更早版本</span></span></p></td><td data-colwidth="277" width="277" valign="top" style="border-top: none;border-left: none;border-bottom: 1px solid windowtext;border-right: 1px solid windowtext;padding:5px 10px;"><p style="text-align:left;text-indent: 0em;margin-bottom: 15px;display: block;"><span style="letter-spacing: 1px;font-size: 15px;"><span leaf="">迁移到已修复版本</span></span></p></td></tr><tr><td data-colwidth="277" width="277" valign="top" style="border-right: 1px solid windowtext;border-bottom: 1px solid windowtext;border-left: 1px solid windowtext;border-image: initial;border-top: none;padding:5px 10px;"><p style="text-align:left;text-indent: 0em;margin-bottom: 15px;display: block;"><span style="letter-spacing: 1px;font-size: 15px;"><span leaf="">3.10</span></span></p></td><td data-colwidth="277" width="277" valign="top" style="border-top: none;border-left: none;border-bottom: 1px solid windowtext;border-right: 1px solid windowtext;padding:5px 10px;"><p style="text-align:left;text-indent: 0em;margin-bottom: 15px;display: block;"><span style="letter-spacing: 1px;font-size: 15px;"><span leaf="">3.10.8.3</span></span></p></td></tr><tr><td data-colwidth="277" width="277" valign="top" style="border-right: 1px solid windowtext;border-bottom: 1px solid windowtext;border-left: 1px solid windowtext;border-image: initial;border-top: none;padding:5px 10px;"><p style="text-align:left;text-indent: 0em;margin-bottom: 15px;display: block;"><span style="letter-spacing: 1px;font-size: 15px;"><span leaf="">4.0</span></span></p></td><td data-colwidth="277" width="277" valign="top" style="border-top: none;border-left: none;border-bottom: 1px solid windowtext;border-right: 1px solid windowtext;padding:5px 10px;"><p style="text-align:left;text-indent: 0em;margin-bottom: 15px;display: block;"><span style="letter-spacing: 1px;font-size: 15px;"><span leaf="">4.0.3.1.7</span></span></p></td></tr></tbody></table>  
+<table><tbody><tr><td data-colwidth="277" width="277" valign="top" style="border: 1px solid windowtext;padding:5px 10px;"><p style="text-align:left;text-indent: 0em;margin-bottom: 15px;display: block;"><span style="letter-spacing: 1px;font-size: 15px;"><strong><span leaf="">思科</span></strong><strong><span style="letter-spacing: 1px;font-size: 15px;"><span leaf="">Secure Workload </span></span></strong><strong><span leaf="">版本</span></strong></span></p></td><td data-colwidth="277" width="277" valign="top" style="border-top: 1px solid windowtext;border-right: 1px solid windowtext;border-bottom: 1px solid windowtext;border-image: initial;border-left: none;padding:5px 10px;"><p style="text-align:left;text-indent: 0em;margin-bottom: 15px;display: block;"><span style="letter-spacing: 1px;font-size: 15px;"><strong><span leaf="">首次已修复版本</span></strong></span></p></td></tr><tr style="height:22px;"><td data-colwidth="277" width="277" valign="top" style="border-right: 1px solid windowtext;border-bottom: 1px solid windowtext;border-left: 1px solid windowtext;border-image: initial;border-top: none;padding:5px 10px;"><p style="text-align:left;text-indent: 0em;margin-bottom: 15px;display: block;"><span style="letter-spacing: 1px;font-size: 15px;"><span style="letter-spacing: 1px;font-size: 15px;"><span leaf="">3.9</span></span><span leaf="">及更早版本</span></span></p></td><td data-colwidth="277" width="277" valign="top" style="border-top: none;border-left: none;border-bottom: 1px solid windowtext;border-right: 1px solid windowtext;padding:5px 10px;"><p style="text-align:left;text-indent: 0em;margin-bottom: 15px;display: block;"><span style="letter-spacing: 1px;font-size: 15px;"><span leaf="">迁移到已修复版本</span></span></p></td></tr><tr><td data-colwidth="277" width="277" valign="top" style="border-right: 1px solid windowtext;border-bottom: 1px solid windowtext;border-left: 1px solid windowtext;border-image: initial;border-top: none;padding:5px 10px;"><p style="text-align:left;text-indent: 0em;margin-bottom: 15px;display: block;"><span style="letter-spacing: 1px;font-size: 15px;"><span leaf="">3.10</span></span></p></td><td data-colwidth="277" width="277" valign="top" style="border-top: none;border-left: none;border-bottom: 1px solid windowtext;border-right: 1px solid windowtext;padding:5px 10px;"><p style="text-align:left;text-indent: 0em;margin-bottom: 15px;display: block;"><span style="letter-spacing: 1px;font-size: 15px;"><span leaf="">3.10.8.3</span></span></p></td></tr><tr><td data-colwidth="277" width="277" valign="top" style="border-right: 1px solid windowtext;border-bottom: 1px solid windowtext;border-left: 1px solid windowtext;border-image: initial;border-top: none;padding:5px 10px;"><p style="text-align:left;text-indent: 0em;margin-bottom: 15px;display: block;"><span style="letter-spacing: 1px;font-size: 15px;"><span leaf="">4.0</span></span></p></td><td data-colwidth="277" width="277" valign="top" style="border-top: none;border-left: none;border-bottom: 1px solid windowtext;border-right: 1px solid windowtext;padding:5px 10px;"><p style="text-align:left;text-indent: 0em;margin-bottom: 15px;display: block;"><span style="letter-spacing: 1px;font-size: 15px;"><span leaf="">4.0.3.1.7</span></span></p></td></tr></tbody></table>  
   
 思科提到，已在  
- SaaS   
+ SaaS   
 版本中修复该漏洞，因此无需任何用户操作。另外，思科表示产品安全事件响应团队仅验证了所发布安全公告中列出的受影响和已修复版本信息。  
   
 该漏洞由思科在内部安全测试时发现。思科已发布软件更新修复该漏洞，目前尚无应变措施。思科表示尚未发现该漏洞遭在野利用的迹象。  
   
   
- 开源  
+ 开源  
 卫士试用地址：  
 https://oss.qianxin.com/#/login  
   
- 代码卫士试用地址：https://sast.qianxin.com/#/login  
+ 代码卫士试用地址：https://sast.qianxin.com/#/login  
   
   
   
@@ -133,10 +133,10 @@ e
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
   
   
-   
+   
 觉得不错，就点个 “  
 在看  
 ” 或 "  

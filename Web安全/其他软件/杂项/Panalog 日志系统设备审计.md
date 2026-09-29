@@ -10,7 +10,7 @@ source: "MrWQ/vulnerability-paper"
 
 0x00 前言
 
-**Fofa:app="Panabit-Panalog"   **影响版本: <=** **MARS r10p1Free****
+**Fofa:app="Panabit-Panalog"   **影响版本: <=** **MARS r10p1Free****
 
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/uicic8KPZnD5f6q5rHibYRXpQIwRyDvXWd5TClHMIKmicX9Y6h33gkBNibziaQvIwhGmfothBCEA3fr1VEt39dj1dLgQ/640?wx_fmt=png&from=appmsg)
 

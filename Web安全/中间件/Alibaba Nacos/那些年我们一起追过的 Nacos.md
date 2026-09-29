@@ -220,7 +220,7 @@ http://x.x.x.x/nacos/v1/auth/users?pageNo=1&pageSize=1
 
 #### 影响范围
 
-Nacos < 2.2.0 
+Nacos < 2.2.0 
 
 #### 漏洞类型
 

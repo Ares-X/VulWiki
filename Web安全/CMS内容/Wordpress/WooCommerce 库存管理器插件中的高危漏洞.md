@@ -26,7 +26,7 @@ WooCommerce 库存管理器插件是一个 WooCommerce 扩展程序，该插件�
 经过检查发现，该漏洞是由于插件没有正确检查导入造成的。由于插件中缺少对请求来源的验证，使得攻击者可以通过特制的上传请求，诱使网站管理员点击链接，触发漏洞，从而导致网站被入侵，同时对易受攻击的站点进行身份验证。
 
 ```
-<form method="post" action="" class="setting-form" enctype="multipart/form-data"> 
+<form method="post" action="" class="setting-form" enctype="multipart/form-data"> 
     <table class="table-bordered">
       <tr>
         <th><?php _e('Upload csv file', 'woocommerce-stock-manager'); ?></th>

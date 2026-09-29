@@ -63,13 +63,13 @@ https://www.weaver.com.cn/cs/securityDownload.html
   
   
 - 微步威胁感知平台TDP  
- 已支持检测，检测ID：S3100164213，模型/规则高于20250709000000可检出。  
+ 已支持检测，检测ID：S3100164213，模型/规则高于20250709000000可检出。  
   
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/fFyp1gWjicMKpVXmdib26icfXIfalericFI70D8OUBtDgh8QwEtWowwk7a6LRpgAgeMpLzhn2Apq4MkV0mgBWg8Jfw/640?wx_fmt=jpeg&from=appmsg "")  
   
 - END -  
   
-  //    
+  //    
   
 **微步漏洞情报订阅服务**  
   

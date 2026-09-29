@@ -36,10 +36,10 @@ Google 未披露这些漏洞是否已被实际利用（0Day 状态），在大�
   
 1. 确保浏览器检查更新并重启至 144.0.7559.132 或更高版本  
   
-原文来自:   
+原文来自:   
 cybersecuritynews.com  
   
-原文链接:   
+原文链接:   
 https://cybersecuritynews.com/chrome-vulnerabilities-arbitrary-code-2/  
   
 欢迎收藏并分享朋友圈，让五邑人网络更安全  

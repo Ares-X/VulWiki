@@ -126,7 +126,7 @@ docker ps
 
 #### 漏洞启动
 
-靶机：Ubuntu ip：192.168.9.234        攻击机：kali ip：192.168.10.65  
+靶机：Ubuntu ip：192.168.9.234        攻击机：kali ip：192.168.10.65  
 
 开启 fastjson 漏洞  
 

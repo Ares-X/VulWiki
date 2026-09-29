@@ -32,7 +32,7 @@ POC对应脚本
   
 360quake:  
 ```
-title="JieLink" AND (favicon: "2f809c4759399cae458a29f24490a114")
+title="JieLink" AND (favicon: "2f809c4759399cae458a29f24490a114")
 ```  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/wnJTy44dqwLtcG9Ik9geJ487AW19XX9E4sb3ocydrJP5fRzMTf2jkdVsjCKFGqibb8rVUbDwBk3B6yHmyjb1MgA/640?wx_fmt=png&from=appmsg "")  
@@ -82,35 +82,35 @@ xray
 **内部圈子介绍**  
   
   
-【Nday漏洞实战圈】🛠️   
+【Nday漏洞实战圈】🛠️   
   
 专注公开1day/Nday漏洞复现  
- · 工具链适配支持  
+ · 工具链适配支持  
   
- ✧━━━━━━━━━━━━━━━━✧   
+ ✧━━━━━━━━━━━━━━━━✧   
   
 🔍 资源内容  
   
- ▫️ 整合全网公开  
+ ▫️ 整合全网公开  
 1day/Nday  
 漏洞POC详情  
   
- ▫️ 适配Xray/Afrog/Nuclei检测脚本  
+ ▫️ 适配Xray/Afrog/Nuclei检测脚本  
   
- ▫️ 支持内置与自定义POC目录混合扫描   
+ ▫️ 支持内置与自定义POC目录混合扫描   
   
-🔄 更新计划   
+🔄 更新计划   
   
-▫️ 每周新增7-10个实用POC（来源公开平台）   
+▫️ 每周新增7-10个实用POC（来源公开平台）   
   
-▫️ 所有脚本经过基础测试，降低调试成本   
+▫️ 所有脚本经过基础测试，降低调试成本   
   
-🎯 适用场景   
+🎯 适用场景   
   
-▫️ 企业漏洞自查 ▫️ 渗透测试 ▫️ 红蓝对抗   
+▫️ 企业漏洞自查 ▫️ 渗透测试 ▫️ 红蓝对抗   
 ▫️ 安全运维  
   
-✧━━━━━━━━━━━━━━━━✧   
+✧━━━━━━━━━━━━━━━━✧   
   
 ⚠️ 声明：仅限合法授权测试，严禁违规使用！  
   

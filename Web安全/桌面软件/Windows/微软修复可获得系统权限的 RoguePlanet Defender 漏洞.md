@@ -7,7 +7,7 @@ Ravie Lakshmanan
                     Ravie Lakshmanan  代码卫士   2026-07-10 07:40  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
-    
+    
 聚焦源代码安全，网罗国内外最新资讯！  
   
 **编译：代码卫士**  
@@ -25,11 +25,11 @@ RoguePlanet是 Chaotic Eclipse披露的第四个Defender漏洞，此前三个分
 微软表示，安装该漏洞的更新，客户无需采取任何操作，该软件会频繁更新，保护客户免受新旧威胁的威胁。微软表示：“对于企业部署和终端用户，微软反恶意软件软件的默认配置有助于确保恶意软件定义和微软恶意软件保护引擎自动保持最新。根据所使用的微软反恶意软件软件及其配置方式，该软件在连接到互联网时，可每天检查一次引擎和定义更新，甚至每天多次检查。客户也可以随时选择手动检查更新。”  
   
   
- 开源  
+ 开源  
 卫士试用地址：  
 https://oss.qianxin.com/#/login  
   
- 代码卫士试用地址：https://sast.qianxin.com/#/login  
+ 代码卫士试用地址：https://sast.qianxin.com/#/login  
   
   
   
@@ -79,10 +79,10 @@ e
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
   
   
-   
+   
 觉得不错，就点个 “  
 在看  
 ” 或 "  

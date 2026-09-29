@@ -11,7 +11,7 @@ cve: "CVE-2021-1675"
 
 ![](https://mmbiz.qpic.cn/mmbiz_gif/iciaX2AzlFoVicsysTS4xsBxK7nGibNYbud0Tf6VicDlTs588KmyM8NxqYFuDX59ck0ORExDtoWeSVDC9CMmnZpt2jw/640)
 
-Windows Print Spooler 权限提升漏洞（PrintNightmare）
+Windows Print Spooler 权限提升漏洞（PrintNightmare）
 
   
 
@@ -23,9 +23,9 @@ Windows Print Spooler 权限提升漏洞（PrintNightmare）
 
 三：漏洞利用
 
-          漏洞过程  
+          漏洞过程  
 
-         创建匿名 SMB 共享  
+         创建匿名 SMB 共享  
 
 使用 python 脚本攻击
 
@@ -43,11 +43,11 @@ Windows Print Spooler 权限提升漏洞（PrintNightmare）
 
 漏洞概述
 
-       2021 年 6 月 9 日，微软发布 6 月安全更新补丁，修复了 50 个安全漏洞，其中包括一个 Windows Print Spooler 权限提升漏洞（CVE-2021-1675），该漏洞被标记为提权漏洞。普通用户可以利用此漏洞以管理员身份在运行打印后台处理程序服务的系统上执行代码。然而在 6 月 21 日，微软又将该漏洞升级为远程代码执行漏洞。
+       2021 年 6 月 9 日，微软发布 6 月安全更新补丁，修复了 50 个安全漏洞，其中包括一个 Windows Print Spooler 权限提升漏洞（CVE-2021-1675），该漏洞被标记为提权漏洞。普通用户可以利用此漏洞以管理员身份在运行打印后台处理程序服务的系统上执行代码。然而在 6 月 21 日，微软又将该漏洞升级为远程代码执行漏洞。
 
-      2021 年 6 月 29 日，有安全研究员在 github 公布了打印机漏洞利用 exp。但是令人没想到的是，该漏洞利用 exp 针对的漏洞是一个与 CVE-2021-1675 类似但不完全相同的漏洞，并且微软针对该漏洞并没有推送更新补丁，所以也就意味着这是一个 0day 漏洞，这个 0day 漏洞被称为 PrintNightmare，最新的漏洞编号为 CVE-2021-34527。
+      2021 年 6 月 29 日，有安全研究员在 github 公布了打印机漏洞利用 exp。但是令人没想到的是，该漏洞利用 exp 针对的漏洞是一个与 CVE-2021-1675 类似但不完全相同的漏洞，并且微软针对该漏洞并没有推送更新补丁，所以也就意味着这是一个 0day 漏洞，这个 0day 漏洞被称为 PrintNightmare，最新的漏洞编号为 CVE-2021-34527。
 
-    Print Spooler 是 Windows 系统中用于管理打印相关事务的服务，在 Windows 系统中用于后台执行打印作业并处理与打印机的交互，管理所有本地和网络打印队列及控制所有打印工作。该服务对应的进程 spoolsv.exe 以 SYSTEM 权限执行，其设计中存在的一个严重缺陷，由于 SeLoadDriverPrivilege 中鉴权存在代码缺陷，参数可以被攻击者控制，普通用户可以通过 RPC 触发 RpcAddPrinterDrive 绕过安全检查并写入恶意驱动程序。如果一个域中存在此漏洞，域中普通用户即可通过连接域控 Spooler 服务，向域控中添加恶意驱动，从而控制整个域环境。  
+    Print Spooler 是 Windows 系统中用于管理打印相关事务的服务，在 Windows 系统中用于后台执行打印作业并处理与打印机的交互，管理所有本地和网络打印队列及控制所有打印工作。该服务对应的进程 spoolsv.exe 以 SYSTEM 权限执行，其设计中存在的一个严重缺陷，由于 SeLoadDriverPrivilege 中鉴权存在代码缺陷，参数可以被攻击者控制，普通用户可以通过 RPC 触发 RpcAddPrinterDrive 绕过安全检查并写入恶意驱动程序。如果一个域中存在此漏洞，域中普通用户即可通过连接域控 Spooler 服务，向域控中添加恶意驱动，从而控制整个域环境。  
 
 ![](https://mmbiz.qpic.cn/mmbiz_gif/zibb4iaicdznzDBHw6juG8h2mltoSZY29HYr3M3VU05Z1V3ZxGfAB3uNHYs4ahQXkcYic9icnZ26VFIhibl0Anm9kib8Q/640)
 
@@ -59,46 +59,46 @@ Windows Print Spooler 权限提升漏洞（PrintNightmare）
 
 受影响版本
 
-- Windows Server 2012 R2 (Server Core installation)  
-- Windows Server 2012 R2  
-- Windows Server 2012 (Server Core installation)  
-- Windows Server 2012  
-- Windows Server 2008 R2 for x64-based Systems Service Pack 1 (Server Core installation)  
-- Windows Server 2008 R2 for x64-based Systems Service Pack 1  
-- Windows Server 2008 for x64-based Systems Service Pack 2 (Server Core installation)  
-- Windows Server 2008 for x64-based Systems Service Pack 2  
-- Windows Server 2008 for 32-bit Systems Service Pack 2 (Server Core installation)  
-- Windows Server 2008 for 32-bit Systems Service Pack 2  
-- Windows RT 8.1  
-- Windows 8.1 for x64-based systems  
-- Windows 8.1 for 32-bit systems  
-- Windows 7 for x64-based Systems Service Pack 1  
-- Windows 7 for 32-bit Systems Service Pack 1  
-- Windows Server 2016 (Server Core installation)  
-- Windows Server 2016  
-- Windows 10 Version 1607 for x64-based Systems  
-- Windows 10 Version 1607 for 32-bit Systems  
-- Windows 10 for x64-based Systems  
-- Windows 10 for 32-bit Systems  
-- Windows Server, version 20H2 (Server Core Installation)  
-- Windows 10 Version 20H2 for ARM64-based Systems  
-- Windows 10 Version 20H2 for 32-bit Systems  
-- Windows 10 Version 20H2 for x64-based Systems  
-- Windows Server, version 2004 (Server Core installation)  
-- Windows 10 Version 2004 for x64-based Systems  
-- Windows 10 Version 2004 for ARM64-based Systems  
-- Windows 10 Version 2004 for 32-bit Systems  
-- Windows 10 Version 21H1 for 32-bit Systems  
-- Windows 10 Version 21H1 for ARM64-based Systems  
-- Windows 10 Version 21H1 for x64-based Systems  
-- Windows 10 Version 1909 for ARM64-based Systems  
-- Windows 10 Version 1909 for x64-based Systems  
-- Windows 10 Version 1909 for 32-bit Systems  
-- Windows Server 2019 (Server Core installation)  
-- Windows Server 2019  
-- Windows 10 Version 1809 for ARM64-based Systems  
-- Windows 10 Version 1809 for x64-based Systems  
-- Windows 10 Version 1809 for 32-bit Systems
+- Windows Server 2012 R2 (Server Core installation)  
+- Windows Server 2012 R2  
+- Windows Server 2012 (Server Core installation)  
+- Windows Server 2012  
+- Windows Server 2008 R2 for x64-based Systems Service Pack 1 (Server Core installation)  
+- Windows Server 2008 R2 for x64-based Systems Service Pack 1  
+- Windows Server 2008 for x64-based Systems Service Pack 2 (Server Core installation)  
+- Windows Server 2008 for x64-based Systems Service Pack 2  
+- Windows Server 2008 for 32-bit Systems Service Pack 2 (Server Core installation)  
+- Windows Server 2008 for 32-bit Systems Service Pack 2  
+- Windows RT 8.1  
+- Windows 8.1 for x64-based systems  
+- Windows 8.1 for 32-bit systems  
+- Windows 7 for x64-based Systems Service Pack 1  
+- Windows 7 for 32-bit Systems Service Pack 1  
+- Windows Server 2016 (Server Core installation)  
+- Windows Server 2016  
+- Windows 10 Version 1607 for x64-based Systems  
+- Windows 10 Version 1607 for 32-bit Systems  
+- Windows 10 for x64-based Systems  
+- Windows 10 for 32-bit Systems  
+- Windows Server, version 20H2 (Server Core Installation)  
+- Windows 10 Version 20H2 for ARM64-based Systems  
+- Windows 10 Version 20H2 for 32-bit Systems  
+- Windows 10 Version 20H2 for x64-based Systems  
+- Windows Server, version 2004 (Server Core installation)  
+- Windows 10 Version 2004 for x64-based Systems  
+- Windows 10 Version 2004 for ARM64-based Systems  
+- Windows 10 Version 2004 for 32-bit Systems  
+- Windows 10 Version 21H1 for 32-bit Systems  
+- Windows 10 Version 21H1 for ARM64-based Systems  
+- Windows 10 Version 21H1 for x64-based Systems  
+- Windows 10 Version 1909 for ARM64-based Systems  
+- Windows 10 Version 1909 for x64-based Systems  
+- Windows 10 Version 1909 for 32-bit Systems  
+- Windows Server 2019 (Server Core installation)  
+- Windows Server 2019  
+- Windows 10 Version 1809 for ARM64-based Systems  
+- Windows 10 Version 1809 for x64-based Systems  
+- Windows 10 Version 1809 for 32-bit Systems
 
 ![](https://mmbiz.qpic.cn/mmbiz_gif/zibb4iaicdznzDBHw6juG8h2mltoSZY29HYr3M3VU05Z1V3ZxGfAB3uNHYs4ahQXkcYic9icnZ26VFIhibl0Anm9kib8Q/640)
 
@@ -117,8 +117,8 @@ Windows Print Spooler 权限提升漏洞（PrintNightmare）
 
 *   然后远程拉取我们设置的匿名共享的恶意 dll 文件
     
-*   py 脚本会将我们的恶意 dll 文件传到域控的 C:\Windows\System32\spool\drivers\x64\3\ 目录下并执行。  
-    而 mimikatz 则是将我们的恶意 dll 文件传到域控的 C:\Windows\System32\spool\drivers\x64\old\2\ 目录下并执行 (会创建 old\2 \ 目录)。
+*   py 脚本会将我们的恶意 dll 文件传到域控的 C:\Windows\System32\spool\drivers\x64\3\ 目录下并执行。  
+    而 mimikatz 则是将我们的恶意 dll 文件传到域控的 C:\Windows\System32\spool\drivers\x64\old\2\ 目录下并执行 (会创建 old\2 \ 目录)。
     
 
 **检测是否存在漏洞**

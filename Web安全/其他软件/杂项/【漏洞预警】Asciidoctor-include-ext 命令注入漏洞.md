@@ -8,7 +8,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
   
 ##   
   
-1. **通告信息**  
+1. **通告信息**  
   
   
   
@@ -22,9 +22,9 @@ Asciidoctor-include-ext 组件存在命令注入漏洞的信息，漏洞编号�
   
 对此，安识科技建议广大用户及时升级到安全版本，并做好资产自查以及预防工作，以免遭受黑客攻击。  
   
-   
+   
   
-2. **漏洞概述**  
+2. **漏洞概述**  
   
   
   
@@ -36,9 +36,9 @@ Asciidoctor是Asciidoctor组织的一款使用Ruby编写的文本处理器。该
   
 Asciidoctor-include-ext 0.4.0 之前的版本存在操作系统命令注入漏洞，该漏洞可能允许攻击者在主机操作系统上执行任意系统命令。  
   
-   
+   
   
-3. **漏洞危害**  
+3. **漏洞危害**  
   
   
   
@@ -46,9 +46,9 @@ Asciidoctor-include-ext 0.4.0 之前的版本存在操作系统命令注入漏�
 攻击者可利用该漏洞在未授权的情况下，构造恶意数据执行命令注入攻击，  
 导致在主机上执行任意系统命令。  
   
-   
+   
   
-4. **影响版本**  
+4. **影响版本**  
   
   
   
@@ -56,9 +56,9 @@ Asciidoctor-include-ext 0.4.0 之前的版本存在操作系统命令注入漏�
   
 Asciidoctor-include-ext ( RubyGems ) < 0.4.0  
   
-   
+   
   
-5. **解决方案**  
+5. **解决方案**  
   
   
   
@@ -67,9 +67,9 @@ Asciidoctor-include-ext ( RubyGems ) < 0.4.0
 0.4.0，下载链接如下：  
 https://github.com/jirutka/asciidoctor-include-ext/tags  
   
-   
+   
   
-6. **时间轴**  
+6. **时间轴**  
   
   
   

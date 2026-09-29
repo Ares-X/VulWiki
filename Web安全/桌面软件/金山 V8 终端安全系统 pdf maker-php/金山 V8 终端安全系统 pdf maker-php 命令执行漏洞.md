@@ -15,11 +15,11 @@ source: "MrWQ/vulnerability-paper"
 
 **金山 V8 终端安全系统 pdf_maker.php 存在命令执行漏洞，由于没有过滤危险字符，导致构造特殊字符即可进行命令拼接执行任意命令**
 
-**二:  漏洞影响🐇**
+**二:  漏洞影响🐇**
 
 **金山 V8 终端安全系统**
 
-**三:  漏洞复现🐋**
+**三:  漏洞复现🐋**
 
 ```
 V8安装包 地址
@@ -135,7 +135,7 @@ url=IiB8fCBpcGNvbmZpZyB8fA%3D%3D&fileName=xxx
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el4H0eAdwSujqLIvjNhHfb9xTib7ZQdUiaFhrpYYvO2mZUSd6AH8RczbDE1fsVsicbsjtQ2DzzQMZuKjA/640?wx_fmt=png)
 
- ****四:  漏洞 POC🦉****
+ ****四:  漏洞 POC🦉****
 
 ```
 import requests
@@ -180,7 +180,7 @@ if __name__ == '__main__':
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el4H0eAdwSujqLIvjNhHfb9xzYrdhQ7LWrqibgwiae6h9AyV1mG0rnC2yCKKfmq0lvaMlRpXh7ia6c6AA/640?wx_fmt=png)
 
-****六:  Goby & POC🦉****
+****六:  Goby & POC🦉****
 
 ```
 https://github.com/PeiQi0/PeiQi-WIKI-POC
@@ -189,7 +189,7 @@ Goby & POC 目录中
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el4H0eAdwSujqLIvjNhHfb9xItq0ciaRMpfPRkFXP8myDmtdCzDAbselQH1bDsqXrACpbHfq6ZnBIgg/640?wx_fmt=png)
 
- ****六:  关于文库🦉****
+ ****六:  关于文库🦉****
 
 **在线文库：**
 
@@ -212,7 +212,7 @@ Goby & POC 目录中
 
 **由于传播、利用此文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，文章作者不为此承担任何责任。**
 
-**PeiQi 文库 拥有对此文章的修改和解释权如欲转载或传播此文章，必须保证此文章的完整性，包括版权声明等全部内容。未经作者允许，不得任意修改或者增减此文章内容，不得以任何方式将其用于商业目的。**
+**PeiQi 文库 拥有对此文章的修改和解释权如欲转载或传播此文章，必须保证此文章的完整性，包括版权声明等全部内容。未经作者允许，不得任意修改或者增减此文章内容，不得以任何方式将其用于商业目的。**
 
 ---
 

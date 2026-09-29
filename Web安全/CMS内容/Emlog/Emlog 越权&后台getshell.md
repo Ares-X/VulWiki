@@ -17,14 +17,14 @@ source: "hatch 补库批 20260928"
 
 #### 安装漏洞
 
-​ 其实一般Code Auditing都是从安装文件开始审计，一般安装脚本主要存在如下漏洞：
+ 其实一般Code Auditing都是从安装文件开始审计，一般安装脚本主要存在如下漏洞：
 
     无验证功能，任意重装覆盖
     表单不做过滤写入config.php导致getshell
     $_GET['step']跳过限制步骤
     漏洞文件：install.php
 
-​​首先我们直奔第一个点能否任意重装，我们可以看到必须常量DEL\_INSTALLER为1的时候才会触发删除install.php,那么我们追踪DEL\_INSTALLER看看
+首先我们直奔第一个点能否任意重装，我们可以看到必须常量DEL\_INSTALLER为1的时候才会触发删除install.php,那么我们追踪DEL\_INSTALLER看看
 
 ![](./.resource/Emlog越权&后台getshell/media/rId26.png)
 
@@ -34,7 +34,7 @@ source: "hatch 补库批 20260928"
 
 #### 越权漏洞
 
-​​在安装完毕后打开config.php看到两个比较奇怪的常量定义：AUTH\_KEY和AUTH\_COOKIE\_NAME从名字来看这连个常量肯定是有一定联系的。如下图：
+在安装完毕后打开config.php看到两个比较奇怪的常量定义：AUTH\_KEY和AUTH\_COOKIE\_NAME从名字来看这连个常量肯定是有一定联系的。如下图：
 
 ![](./.resource/Emlog越权&后台getshell/media/rId29.png)
 
@@ -59,12 +59,12 @@ source: "hatch 补库批 20260928"
 \$expiration
 \$hash拼接而成，而\$expiration是cookie的生存时间，\$user\_login是用户名。这里可以得知\$key、\$user\_login、\$expiration都是固定的那么只要知道AUTH\_KEY就有伪造cookie造成越权的可能。
 
-​例如我们准备两个靶机，一个靶机登陆，获取这个靶机的cookie即可越权登陆另外一个靶机。前提是两个靶机的AUTH\_KEY得一致。这里有点鸡肋但是还是有利用的可能。我们将两个靶机的cookie拿出来比较确实是一样的。​![](./.resource/Emlog越权&后台getshell/media/rId34.png)
+例如我们准备两个靶机，一个靶机登陆，获取这个靶机的cookie即可越权登陆另外一个靶机。前提是两个靶机的AUTH\_KEY得一致。这里有点鸡肋但是还是有利用的可能。我们将两个靶机的cookie拿出来比较确实是一样的。![](./.resource/Emlog越权&后台getshell/media/rId34.png)
 
 #### 后台getshell（一）
 
-​​其实上诉两个漏洞已经能够让我们进入后台了，现在的任务就是如何Getshell了。这里我随便看了一下发现后台有设置上传附件后缀的功能。​![](./.resource/Emlog越权&后台getshell/media/rId36.png)​​
-但是测试发现，加入php后缀你发现会将phpt替换为X,从源码中可有很直观看到这点。​![](./.resource/Emlog越权&后台getshell/media/rId37.png)​​此时我注意到了备份功能，这个后缀是保存在数据库中的，既然我不能直接将后缀写入数据库，那么我能不能通过数据备份恢复的方法写入数据库呢。​​ 这里直接备份所有表，下载下来然后找到写入后缀的语句，加上php,如下​![](./.resource/Emlog越权&后台getshell/media/rId38.png)​![](./.resource/Emlog越权&后台getshell/media/rId39.png)​​ 导入备份后发现设置中的上传后缀有php​![](./.resource/Emlog越权&后台getshell/media/rId40.png)​​ 直接在文章发表出上传PHP文件即可getshell​![](./.resource/Emlog越权&后台getshell/media/rId41.png)
+其实上诉两个漏洞已经能够让我们进入后台了，现在的任务就是如何Getshell了。这里我随便看了一下发现后台有设置上传附件后缀的功能。![](./.resource/Emlog越权&后台getshell/media/rId36.png)
+但是测试发现，加入php后缀你发现会将phpt替换为X,从源码中可有很直观看到这点。![](./.resource/Emlog越权&后台getshell/media/rId37.png)此时我注意到了备份功能，这个后缀是保存在数据库中的，既然我不能直接将后缀写入数据库，那么我能不能通过数据备份恢复的方法写入数据库呢。 这里直接备份所有表，下载下来然后找到写入后缀的语句，加上php,如下![](./.resource/Emlog越权&后台getshell/media/rId38.png)![](./.resource/Emlog越权&后台getshell/media/rId39.png) 导入备份后发现设置中的上传后缀有php![](./.resource/Emlog越权&后台getshell/media/rId40.png) 直接在文章发表出上传PHP文件即可getshell![](./.resource/Emlog越权&后台getshell/media/rId41.png)
 
 #### 后台getshell（二）
 

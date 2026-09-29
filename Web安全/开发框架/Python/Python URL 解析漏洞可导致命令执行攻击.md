@@ -7,7 +7,7 @@ THN  代码卫士   2023-08-14 17:46
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
   
-   
+   
 聚焦源代码安全，网罗国内外最新资讯！****  
   
 **编译：代码卫士**  
@@ -22,7 +22,7 @@ CERT/CC 在上周五发布安全公告指出，“当整个URL以空字符开头
   
 发现和报送该漏洞的研究员 Yebo Cao 表示，该漏洞已在如下版本中修复：  
   
--  >= 3.12  
+-  >= 3.12  
   
 - 3.11.x >= 3.11.4  
   
@@ -104,10 +104,10 @@ https://thehackernews.com/2023/08/new-python-url-parsing-flaw-enables.html
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
   
-   
-觉得不错，就点个 “  
+   
+觉得不错，就点个 “  
 在看  
 ” 或 "  
 赞  

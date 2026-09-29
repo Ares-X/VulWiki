@@ -52,7 +52,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
   
 **下载链接**  
   
-https://github.com/iamunixtz/Lazy-Hunter   
+https://github.com/iamunixtz/Lazy-Hunter   
   
   
 ![图片](https://mmbiz.qpic.cn/sz_mmbiz_gif/LYy9xnADcdhic61NkXCWKufScrUrmmsG8tztWD8fDRiatPUaljxxpKc1PpnYNFjPibU5FwJmcuO4mZoQg5aXsAcog/640?wx_fmt=gif&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  

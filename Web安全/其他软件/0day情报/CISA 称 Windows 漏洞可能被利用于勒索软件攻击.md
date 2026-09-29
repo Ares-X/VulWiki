@@ -48,7 +48,7 @@ https://www.bleepingcomputer.com/news/security/cisa-warns-of-windows-bug-exploit
 原文来源  
 ：嘶吼专业版  
   
-“投稿联系方式：010-82992251   sunzhonghao@cert.org.cn”  
+“投稿联系方式：010-82992251   sunzhonghao@cert.org.cn”  
   
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/GoUrACT176n1NvL0JsVSB8lNDX2FCGZjW0HGfDVnFao65ic4fx6Rv4qylYEAbia4AU3V2Zz801UlicBcLeZ6gS6tg/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
   

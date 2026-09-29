@@ -97,12 +97,12 @@ ACME Client 完成操作，CA 访问指定 URL，验证 token 内容，验证通
   
 # Cloudflare漏洞利用细节  
 ## 漏洞原因  
-##      当请求指向 `/.well-known/acme-challenge/` 目录时，即使客户配置的WAF规则明确阻止了所有其他流量，请求仍可抵达源站。这一路径普遍存在于现代网站中，用于自动化证书管理环境（ACME）协议执行SSL/TLS证书验证。其设计初衷仅限于证书颁发机构（CA）的验证机器人访问特定令牌文件，而非作为通往源站的开放通道。  
+##      当请求指向 `/.well-known/acme-challenge/` 目录时，即使客户配置的WAF规则明确阻止了所有其他流量，请求仍可抵达源站。这一路径普遍存在于现代网站中，用于自动化证书管理环境（ACME）协议执行SSL/TLS证书验证。其设计初衷仅限于证书颁发机构（CA）的验证机器人访问特定令牌文件，而非作为通往源站的开放通道。  
   
-      
+      
 Cloudflare中，  
 漏洞根源在于Cloudflare边缘网络处理ACME HTTP-01挑战路径的逻辑缺陷。当Cloudflare为其自身管理的证书订单提供挑战令牌时，系统会禁用WAF功能以防止干扰CA验证流程。  
-然而，当请求的令牌与Cloudflare管理的证书订单不匹配时，请求竟会完全跳过WAF评估，直接转发至客户源站。这一逻辑错误使得原本狭窄的证书验证例外情况，演变为影响所有受Cloudflare保护主机的广泛安全绕过。    
+然而，当请求的令牌与Cloudflare管理的证书订单不匹配时，请求竟会完全跳过WAF评估，直接转发至客户源站。这一逻辑错误使得原本狭窄的证书验证例外情况，演变为影响所有受Cloudflare保护主机的广泛安全绕过。    
   
 ![0](https://mmbiz.qpic.cn/sz_mmbiz_png/9MnpyqibuMRYzGsXXwKAyT5UibiadTHeKqlzcdiaGO3qGxBxHttt7P99ohUupPiaNxQwrxvO6ZgS1Wr22SphKhFE6OA/640?wx_fmt=png&from=appmsg "")  
 ## 利用细节  
@@ -120,17 +120,17 @@ Cloudflare中，
 ![0](https://mmbiz.qpic.cn/sz_mmbiz_png/9MnpyqibuMRYzGsXXwKAyT5UibiadTHeKqlpZB1CM2iaqPEicnM5KicryuNibKJqKzLoUqnpHFBfZwSJyFjBK6VK66NUQ/640?wx_fmt=png&from=appmsg "")  
 ## 如何获取一个Challenge Token  
   
-    Cloudflare的SSL/TLS自定义主机名功能允许您管理指向您域名的第三方CNAME记录及其证书。我们添加了名为cf-well-known.fearsoff.org的自定义主机名，并明确选择了HTTP验证方式。下图展示了添加流程及最终呈现的"验证待处理"状态。  
+    Cloudflare的SSL/TLS自定义主机名功能允许您管理指向您域名的第三方CNAME记录及其证书。我们添加了名为cf-well-known.fearsoff.org的自定义主机名，并明确选择了HTTP验证方式。下图展示了添加流程及最终呈现的"验证待处理"状态。  
   
 ![0](https://mmbiz.qpic.cn/sz_mmbiz_png/9MnpyqibuMRYzGsXXwKAyT5UibiadTHeKqlQ6iaSeyj6aHDn1g3x0Fbkmib4RJJl9cibL9AdHEVTHqI8h1QJ3qh1tsrQ/640?wx_fmt=png&from=appmsg "")  
   
 ![0](https://mmbiz.qpic.cn/sz_mmbiz_png/9MnpyqibuMRYzGsXXwKAyT5UibiadTHeKqleTrYek4Y3lyudLrial07sv5x1Dd2YZFKeKZr8NjkyCNpJA7xG2hgcfg/640?wx_fmt=png&from=appmsg "")  
   
-    未为 cf-well-known.fearsoff.org 创建 DNS 记录，因此证书签发状态将无限期保持待处理状态。在此待处理状态下，Cloudflare 会显示验证机器人最终将请求的 HTTP‑01 网址，例如：  
+    未为 cf-well-known.fearsoff.org 创建 DNS 记录，因此证书签发状态将无限期保持待处理状态。在此待处理状态下，Cloudflare 会显示验证机器人最终将请求的 HTTP‑01 网址，例如：  
   
 http://cf-well-known.fearsoff.org/.well-known/acme-challenge/yMnWOcR2yv0yW-...Jm5QksreNRDUmqKfKPTk  
   
-    可以使用  
+    可以使用  
 /.well-known/acme-challenge/yMnWOcR2yv0yW-...Jm5QksreNRDUmqKfKPTk ，对目标域名进行探测。  
 ## 漏洞危害  
   
@@ -143,7 +143,7 @@ http://cf-well-known.fearsoff.org/.well-known/acme-challenge/yMnWOcR2yv0yW-...Jm
 ![0](https://mmbiz.qpic.cn/sz_mmbiz_png/9MnpyqibuMRYzGsXXwKAyT5UibiadTHeKqlUy9jFX5kgSqAtZ4QBw49GBH9dDiccmZqicQlvBxCwcw823unQrVvv2vQ/640?wx_fmt=png&from=appmsg "")  
 ## 官方修复方式  
   
-    为缓解此问题，已发布代码变更。该变更仅允许在请求匹配主机名的有效ACME HTTP-01挑战令牌时禁用安全功能集。此时，Cloudflare将返回相应的挑战响应。也就是不是随便一个token都可以让waf失效了  
+    为缓解此问题，已发布代码变更。该变更仅允许在请求匹配主机名的有效ACME HTTP-01挑战令牌时禁用安全功能集。此时，Cloudflare将返回相应的挑战响应。也就是不是随便一个token都可以让waf失效了  
 ## 参考文章  
   
 https://fearsoff.org/research/cloudflare-acme  

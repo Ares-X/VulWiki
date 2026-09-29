@@ -41,7 +41,7 @@ WaP9 安全搬砖客拥有对此文章的修改、删除和解释权限，如转
 
 攻击机器：kali(192.168.183.139)
 
-工业软件及版本：InduSoft Web Studio v7.1  
+工业软件及版本：InduSoft Web Studio v7.1  
 
 漏洞 exp：https://www.exploit-db.com/exploits/21837
 
@@ -76,12 +76,12 @@ WaP9 安全搬砖客拥有对此文章的修改、删除和解释权限，如转
 
 然后我们此时查看端口占用情况
 
-![](https://mmbiz.qpic.cn/mmbiz_png/OBIqhUW9z8wjibPVyLOxgNc4QC6BXKWUdqR3Ys8VUYIDicwiauDW4kWIsZx4Fqs0j7JAavDBbWMnxIQkQSibSa1uXQ/640?wx_fmt=png) 同时可以看到 4322 端口已开启  
+![](https://mmbiz.qpic.cn/mmbiz_png/OBIqhUW9z8wjibPVyLOxgNc4QC6BXKWUdqR3Ys8VUYIDicwiauDW4kWIsZx4Fqs0j7JAavDBbWMnxIQkQSibSa1uXQ/640?wx_fmt=png) 同时可以看到 4322 端口已开启  
 
 **1.3 子弹上膛**
 ------------
 
-在 kali 攻击中，如下目录放入下载的 exp 模块  
+在 kali 攻击中，如下目录放入下载的 exp 模块  
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/OBIqhUW9z8wjibPVyLOxgNc4QC6BXKWUdHScBWXBonic3wnjI5UdX8a46OjNHvMIEYOQiattOdXmXpKWG4LMTfWicw/640?wx_fmt=png)
 

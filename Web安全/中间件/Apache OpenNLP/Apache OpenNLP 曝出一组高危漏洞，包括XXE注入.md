@@ -16,19 +16,19 @@ CVE-2026-42440 是拒绝服务漏洞。AbstractModelReader 在处理恶意构造
   
 CVE-2026-42027 是权限提升漏洞。Model Manifest ExtensionLoader 在解析模型清单文件时存在权限提升路径。这个漏洞的利用前提是攻击者能够在目标系统上部署恶意模型文件——一旦成功加载，可能突破当前运行账户的权限限制执行更高权限操作。在多租户环境或内容处理平台中风险较高。  
   
-CVE-2026-40682 是 XXE 外部实体注入，这是最值得关注的。Dictionary Parser 在解析 XML 格式的字典文件时，未正确禁用外部实体引用。攻击者可以通过构造包含 SYSTEM  
- 或 ENTITY  
- 引用的恶意 XML 文件，诱使解析器读取服务器本地文件或发起内部网络请求。  
+CVE-2026-40682 是 XXE 外部实体注入，这是最值得关注的。Dictionary Parser 在解析 XML 格式的字典文件时，未正确禁用外部实体引用。攻击者可以通过构造包含 SYSTEM  
+ 或 ENTITY  
+ 引用的恶意 XML 文件，诱使解析器读取服务器本地文件或发起内部网络请求。  
   
 ![Apache OpenNLP XXE漏洞示意图](https://mmbiz.qpic.cn/sz_mmbiz_png/nGzNudUIJ6O1MlaZ9zn4rSCstcyIbuEDoEzcibXe5MuJCNtIwZ8fMQwprk38fyo0cKbRjAChA7k31LfMHlfEPKwCMRSP8bTDI3FH5IibFdeicQ/640?wx_fmt=png "Apache OpenNLP XXE漏洞示意图")  
   
 典型攻击 payload 是这样的：  
 ```
-<!DOCTYPE dictionary [  <!ENTITY xxe SYSTEM "file:///etc/passwd">]><dictionary>  <entry>    <word>&xxe;</word>  </entry></dictionary>
+<!DOCTYPE dictionary [  <!ENTITY xxe SYSTEM "file:///etc/passwd">]><dictionary>  <entry>    <word>&xxe;</word>  </entry></dictionary>
 ```  
   
 当 OpenNLP 的 Dictionary Parser 加载这个文件时，/etc/passwd  
- 的内容会被嵌入到解析结果中，攻击者间接获取了本地文件读取能力。如果你的 OpenNLP 部署允许用户上传或配置字典文件，这就是一个直接的 RCE 路径。  
+ 的内容会被嵌入到解析结果中，攻击者间接获取了本地文件读取能力。如果你的 OpenNLP 部署允许用户上传或配置字典文件，这就是一个直接的 RCE 路径。  
   
 OpenNLP 在企业中的典型使用场景包括：文档处理平台自动提取合同和报告中的关键信息、客服系统的 NLP 驱动意图识别和自动回复、内容审核的文本分类和敏感词检测、以及搜索引擎的文本预处理和索引优化。如果模型文件和字典文件来自不可信来源（如用户上传），则直接面临漏洞利用风险。  
   

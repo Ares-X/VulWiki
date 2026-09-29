@@ -142,7 +142,7 @@ sh2493770457
 [基于腾讯云函数 (SCF) 的分布式 IP 代理池。用于绕过 WAF IP限制，支持安全扫描工具调用2026-02-02](https://mp.weixin.qq.com/s?__biz=Mzk0ODM0NDIxNQ==&mid=2247496237&idx=1&sn=a6ae0ce228701005bfb51116a83430bb&scene=21#wechat_redirect)  
 [一个专为 AWD/AWDP 设计的竞赛自动化平台，提供 IP探测、WebShell 管理、SSH 终端、基线加固、Flag 读取等核心功能2026-01-30](https://mp.weixin.qq.com/s?__biz=Mzk0ODM0NDIxNQ==&mid=2247496226&idx=1&sn=ecafcf54d1f1045ba48d79fa9a93c017&scene=21#wechat_redirect)  
 [一款专为红队渗透测试人员和安全研究员设计的自动化信息泄露侦察工具。2026-01-29](https://mp.weixin.qq.com/s?__biz=Mzk0ODM0NDIxNQ==&mid=2247496206&idx=1&sn=2f66c041839790707f33a08c7a846352&scene=21#wechat_redirect)  
-[GUI | CVE-2026-24061  telnetd 身份验证绕过漏洞检测与利用工具2026-01-28](https://mp.weixin.qq.com/s?__biz=Mzk0ODM0NDIxNQ==&mid=2247496195&idx=1&sn=f2688674fc322b4513d7895fdbde7aa6&scene=21#wechat_redirect)  
+[GUI | CVE-2026-24061  telnetd 身份验证绕过漏洞检测与利用工具2026-01-28](https://mp.weixin.qq.com/s?__biz=Mzk0ODM0NDIxNQ==&mid=2247496195&idx=1&sn=f2688674fc322b4513d7895fdbde7aa6&scene=21#wechat_redirect)  
   
   
 ![](https://mmbiz.qpic.cn/mmbiz_png/OAmMqjhMehrtxRQaYnbrvafmXHe0AwWLr2mdZxcg9wia7gVTfBbpfT6kR2xkjzsZ6bTTu5YCbytuoshPcddfsNg/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&random=0.8399406679299557&tp=webp "")  

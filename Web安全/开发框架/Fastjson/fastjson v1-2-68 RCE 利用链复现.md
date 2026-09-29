@@ -434,7 +434,7 @@ ctrl+alt+shift+s 打开项目结构窗口, 配置如下图.
 *   https://github.com/LandGrey/spring-boot-upload-file-lead-to-rce-tricks
     
 
-说明: 文章不保证内容完全准确, 文中如有错误还请多多指出, 共同进步.
+说明: 文章不保证内容完全准确, 文中如有错误还请多多指出, 共同进步.
 
 公众号
 

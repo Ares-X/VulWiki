@@ -35,7 +35,7 @@ Hytec Inter HWL-2511-SS 是日本 Hytec Inter 公司的一种工业 LTE 路由�
 ![](https://mmbiz.qpic.cn/mmbiz_gif/4yJaCArQwpACMJuBxI11jPgvHCxQZFQxPrt5iaQRibgGl0aIzFo4hDCYcFuyViag6zhuqNEjjeasfMEAy1rkaOahw/640?wx_fmt=gif&wxfrom=5&wx_lazy=1)
 
 ```
-<= 当前最新版本
+<= 当前最新版本
 
 ```
 

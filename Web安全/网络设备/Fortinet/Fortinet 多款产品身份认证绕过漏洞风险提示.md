@@ -6,28 +6,28 @@ source: "gelusus/wxvl 公众号漏洞文库"
 安融技术
                     安融技术  安融技术   2026-01-29 03:38  
   
-FortiOS   
+FortiOS   
 是  
-Fortinet   
+Fortinet   
 公司推出的下一代防火墙操作系统，提供深度包检测、入侵防御、  
 SSL  
 解密、零信任网络访问等高级安全功能，广泛应用于企业边界防护。  
-FortiManager   
+FortiManager   
 是集中管理平台，用于统一配置和监控多台  
- Fortinet   
+ Fortinet   
 安全设备。  
-FortiAnalyzer   
+FortiAnalyzer   
 则是日志收集与分析系统，支持安全事件关联、合规审计和威胁可视化。  
-FortiProxy   
+FortiProxy   
 是安全  
- Web   
+ Web   
 网关解决方案，提供  
- URL   
+ URL   
 过滤、应用控制和恶意软件防护能力。这些产品共同构成  
- Fortinet Security Fabric   
+ Fortinet Security Fabric   
 的核心组件。  
   
-近期，Fortinet 多款产品身份认证绕过漏洞(CVE-2026-24858)  
+近期，Fortinet 多款产品身份认证绕过漏洞(CVE-2026-24858)  
 在野利用，  
 CVSS  
 评分高达  
@@ -157,12 +157,12 @@ FortiCloud
   
 关键利用前提  
   
-1.   
+1.   
 必须启用  
 FortiCloud SSO  
 认证（默认出厂关闭）。  
   
-2.   
+2.   
 重要触发场景：管理员通过设备  
 GUI  
 注册  
@@ -239,7 +239,7 @@ SSO
   
 五、修复与缓解方案  
   
-1.   
+1.   
 官方修复版本  
   
 已发布：  
@@ -256,7 +256,7 @@ FortiManager
 FortiAnalyzer  
 修复版本将陆续推出  
   
-2.   
+2.   
 临时缓解措施（至关重要）  
   
 GUI  

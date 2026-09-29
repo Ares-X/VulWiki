@@ -7,20 +7,20 @@ Abinaya
                     Abinaya  代码卫士   2026-07-14 09:41  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
-    
+    
 聚焦源代码安全，网罗国内外最新资讯！  
   
 **编译：代码卫士**  
   
 **ServiceNow****披露并修复了位于****AI****平台中的一个严重的沙箱逃逸漏洞（****CVE-2026-6875****），可导致未经身份认证的攻击者在受影响的****ServiceNow****环境中执行代码。该漏洞影响托管和自托管****ServiceNow****部署版本。**  
   
-ServiceNow   
+ServiceNow   
 被企业广泛用于  
 IT  
 服务管理、工作流自动化、客户运营、安全运营和内部业务流程。  
-ServiceNow   
+ServiceNow   
 公司表示，该漏洞可导致攻击者规避平台限制条件并在特定情况下绕过平台预设的限制并执行代码。由于利用无需进行身份认证，因此该漏洞可导致尚未收到安全更新的  
- ServiceNow   
+ ServiceNow   
 实例遭暴露。  
   
 成功的远程代码执行攻击可使攻击者破坏工作流、访问敏感数据、修改记录或将受陷环境作为进一步实施攻击活动的入口点。  
@@ -36,9 +36,9 @@ ServiceNow 
   
   
 该漏洞位于  
- ServiceNow AI   
+ ServiceNow AI   
 平台中。不过  
-ServiceNow   
+ServiceNow   
 公司并未发布关于漏洞底层根因的技术详情。该公司在  
 2026  
 年  
@@ -47,7 +47,7 @@ ServiceNow 
 13  
 日发布安全公告，仅将技术详情告知数量有限的客户，以便客户能够在攻击者开发出可靠利用前打补丁。  
   
-ServiceNow   
+ServiceNow   
 已将安全更新部署到所托管的实例中。该公司还为自托管客户和合作伙伴提供了相关更新。自行管理  
 ServiceNow  
 环境的组织应审查当前的系列版本，并尽快安装相应的补丁或升级到已修复的版本。该问题已在  
@@ -99,11 +99,11 @@ KB2930740
 中查阅。及时修复仍是防范潜在漏洞利用的最有效防御措施。  
   
   
- 开源  
+ 开源  
 卫士试用地址：  
 https://oss.qianxin.com/#/login  
   
- 代码卫士试用地址：https://sast.qianxin.com/#/login  
+ 代码卫士试用地址：https://sast.qianxin.com/#/login  
   
   
   
@@ -156,10 +156,10 @@ e
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
   
   
-   
+   
 觉得不错，就点个 “  
 在看  
 ” 或 "  

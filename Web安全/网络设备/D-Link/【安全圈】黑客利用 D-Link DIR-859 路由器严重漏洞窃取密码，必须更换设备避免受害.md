@@ -19,7 +19,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
   
   
 该安全问题于一月份披露，目前编号为CVE-2024-0769  
-  （严重程度评分为 9.8），这是一个导致信息泄露的路径遍历漏洞。  
+  （严重程度评分为 9.8），这是一个导致信息泄露的路径遍历漏洞。  
   
   
 尽管 D-Link DIR-859 WiFi路由器型号已到达使用寿命（EoL）并且不再接收任何更新，但该供应商仍然发布了安全公告 ，解释称该漏洞存在于设备的“fatlady.php”文件中，影响所有固件版本，并允许攻击者泄露会话数据，实现权限提升，并通过管理面板获得完全控制权。  
@@ -91,7 +91,7 @@ END
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/aBHpjnrGyliaDLQW996nP0FknIKIIsrFD3VwzNKKXfrFofVmNpN9FDv7oicUk0TrIOG4Hzqrq8Dt0nF0qZEOwlkw/640?wx_fmt=jpeg "")  
 [【安全圈】Juniper 警告存在严重身份验证绕过漏洞（CVE-2024-2973，CVSS 评分为 10）](http://mp.weixin.qq.com/s?__biz=MzIzMzE4NDU1OQ==&mid=2652062520&idx=4&sn=33ecb849545820707a62bfcb0b8c9a95&chksm=f36e6f78c419e66eebbbded12a5cc5f0ec54f274fdd57fa651a96f8090a6cf2cb8b0bddfd7b0&scene=21#wechat_redirect)  
-                                                            
+                                                            
   
   
   

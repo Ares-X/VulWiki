@@ -12,7 +12,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
   
 EcoStruxure  
 ™  
- IT DataCenter Expert  
+ IT DataCenter Expert  
 是施耐德电气推出的本地化数据中心集中监控解决方案，专为供电、制冷、安防及环境系统而设计。它以可视化报告、动态图表和即时告警为核心，帮助运维团队在第一时间发现、定位并处置故障，持续守护关键基础设施的高可用性。  
   
 近日，启明星辰  
@@ -54,7 +54,7 @@ CVSS v3.1 Base Score 7.2 | High
   
 施耐德在EcoStruxure  
 ™  
- IT Data Center Expert 9.0  
+ IT Data Center Expert 9.0  
 版本中对该漏洞进行了修复，受影响的厂商应及时更新到该版本以防止相关的漏洞利用。  
   
 ![](https://mmbiz.qpic.cn/mmbiz_png/VuRGkncX57Pekpnybu4qLmvFpVt35rHUaEa9Pv9o0A399Ll18viaJB5q9K5nqSvMLq92WMxJeBoUcdg0YGic9zicQ/640?wx_fmt=png&from=appmsg "")  

@@ -7,7 +7,7 @@ Eduard Kovacs  代码卫士   2023-05-08 17:48
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
   
-   
+   
 聚焦源代码安全，网罗国内外最新资讯！  
   
 **编译：代码卫士**  
@@ -75,7 +75,7 @@ https://codesafe.qianxin.com
 [Trion 幕后黑手瞄准美国和亚太地区的电力设施](http://mp.weixin.qq.com/s?__biz=MzI2NTg4OTc5Nw==&mid=2247490202&idx=3&sn=2e30c0a60b10d7862a53a6fcb485059f&chksm=ea972bf0dde0a2e6009237ee74c58cd32c7b2722430559e42605c73b22438320a225143af2f2&scene=21#wechat_redirect)  
   
   
-[电力网防护公司  SEL 修复多个严重的软件缺陷](http://mp.weixin.qq.com/s?__biz=MzI2NTg4OTc5Nw==&mid=2247487585&idx=3&sn=1fbaae2b20bb762f317d95481be9af89&chksm=ea97210bdde0a81d040d430035676951eef8378746af7f12029d279cebd6265639719b6b1f75&scene=21#wechat_redirect)  
+[电力网防护公司  SEL 修复多个严重的软件缺陷](http://mp.weixin.qq.com/s?__biz=MzI2NTg4OTc5Nw==&mid=2247487585&idx=3&sn=1fbaae2b20bb762f317d95481be9af89&chksm=ea97210bdde0a81d040d430035676951eef8378746af7f12029d279cebd6265639719b6b1f75&scene=21#wechat_redirect)  
   
   
   
@@ -101,10 +101,10 @@ https://www.securityweek.com/critical-siemens-rtu-vulnerability-could-allow-hack
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
   
-   
-觉得不错，就点个 “  
+   
+觉得不错，就点个 “  
 在看  
 ” 或 "  
 赞  

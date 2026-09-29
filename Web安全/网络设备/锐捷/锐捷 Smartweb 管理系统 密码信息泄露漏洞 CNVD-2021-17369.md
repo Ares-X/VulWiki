@@ -58,7 +58,7 @@ _**
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzCffCVIoqDakaLe9OZ5Q6Z57oe2MLpAedeHZGWe7ibQelWcZ2V0Y6ibUntbMicDdU6g6REXJBJbN1WKA/640?wx_fmt=png)
 
-于是网上找设备登录页面的截图，发现标题为   **无线 smartWeb-- 登录页面**
+于是网上找设备登录页面的截图，发现标题为   **无线 smartWeb-- 登录页面**
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzCffCVIoqDakaLe9OZ5Q6Z5tTgfZCzXHO1m4GIlo882ngkElD8Lia5iaNLecicpjWNAbjBSWDjPFL9ibg/640?wx_fmt=png)
 
@@ -113,10 +113,10 @@ Cookie: login=1; oid=1.3.6.1.4.1.4881.1.1.10.1.3; type=WS5302; auth=Z3Vlc3Q6Z3Vl
 **_Goby & POC_**
 
 ```
-Goby & POC 已经同步到 Github仓库中的 Goby & POC 目录
+Goby & POC 已经同步到 Github仓库中的 Goby & POC 目录
 https://github.com/PeiQi0/PeiQi-WIKI-POC
 https://github.com/wgpsec/wiki
-其中包含CNVD-2020-56167 和 CNVD-2021-17369
+其中包含CNVD-2020-56167 和 CNVD-2021-17369
 ```
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzCffCVIoqDakaLe9OZ5Q6Z5Lbg57vTqdtxtj5vHppUJT68icKxUqVPmBOIjE7npO9BSaCynkwqnxeA/640?wx_fmt=png)

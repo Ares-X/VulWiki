@@ -7,7 +7,7 @@ Bill Toulas
                     Bill Toulas  代码卫士   2026-02-27 10:16  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
-    
+    
 聚焦源代码安全，网罗国内外最新资讯！  
   
 **编译：代码卫士**  
@@ -47,12 +47,12 @@ Juniper 的安全事件响应团队表示，在发布安全公告时，未发现
 由于该网络设备由需要高宽带的服务提供商如云数据中心和大型企业使用，因此Juniper Networks 产品通常是高阶黑客颇具吸引力的目标。2025年1月，一场名为 "J-magic" 的恶意软件活动瞄准了半导体、能源、制造和 IT 领域使用的 Juniper VPN 网关，部署了在接收到 "魔法包" 时激活的网络嗅探恶意软件。2024年12月，Juniper Networks 的智能路由器成为 Mirai 僵尸网络活动的目标，被纳入分布式拒绝服务攻击集群。  
   
   
- 开源  
+ 开源  
 卫士试用地址：  
 https://oss.qianxin.com/#/login  
   
   
- 代码卫士试用地址：https://sast.qianxin.com/#/login  
+ 代码卫士试用地址：https://sast.qianxin.com/#/login  
   
   
   
@@ -105,9 +105,9 @@ e
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
   
-   
+   
 觉得不错，就点个 “  
 在看  
 ” 或 "  

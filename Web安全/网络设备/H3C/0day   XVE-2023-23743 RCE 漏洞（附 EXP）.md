@@ -15,9 +15,9 @@ source: "MrWQ/vulnerability-paper"
 
 IDocView 在线文档预览系统是由北京卓软在线信息技术有限公司开发的一套系统，用于在 Web 环境中展示和预览各种文档类型，如文本文档、电子表格、演示文稿、PDF 文件等。该系统存在 RCE 漏洞，可直接控制服务器权限。
 
-**0x02 漏洞影响**
+**0x02 漏洞影响**
 
-    影响版本
+    影响版本
 
 ```
 iDocView < 13.10.1_20231115
@@ -106,14 +106,14 @@ Connection: close
 
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/zHibqAQoXRagX4Mos9eUlbRVEsPJpDk78Ex8yn7XqOTDMTjSVsws9D5FDEu7w744iaLZQEBv04FtMAxVheeARrrg/640?wx_fmt=png&from=appmsg)
 
-**0x04 修复方案**
+**0x04 修复方案**
 
 ```
-请升级最新版本。 
+请升级最新版本。 
 
 ```
 
-**0x05 下载地址**
+**0x05 下载地址**
 
 **点击下方名片进入公众号**
 

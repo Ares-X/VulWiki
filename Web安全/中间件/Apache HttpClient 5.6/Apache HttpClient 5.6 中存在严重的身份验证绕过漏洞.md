@@ -19,7 +19,7 @@ HttpClient 是传统 Commons HttpClient 的继任者，它是一款高性能、�
   
 由于 HttpClient 通常深深嵌入到其他 Java 应用程序和微服务中，这种绕过行为可能会对企业数据管道的安全性产生连锁反应。  
   
-Apache HttpComponents 项目已发布修复程序，以解决缺失的验证逻辑问题。强烈建议用户和开发人员立即升级到 Apache HttpClient 5.6.1，以恢复正确的双向身份验证验证。  
+Apache HttpComponents 项目已发布修复程序，以解决缺失的验证逻辑问题。强烈建议用户和开发人员立即升级到 Apache HttpClient 5.6.1，以恢复正确的双向身份验证验证。  
   
 参考链接：  
   

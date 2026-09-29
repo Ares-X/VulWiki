@@ -126,7 +126,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
   
 **05**  
   
-**总  结**  
+**总  结**  
   
   
 在数字化进程加速和网络威胁日益复杂的背景下，传统基于固定边界的安全防护模式已难以应对无边界网络中的高级攻击。VPN技术频繁暴露的漏洞揭示出“一次认证、长期信任”模型的结构性风险。威努特零信任架构以“永不信任，持续验证”为核心，通过SPA单包授权实现服务隐身与访问收敛，依托动态身份与终端环境感知实现持续自适应的权限控制，并结合端到端加密保障数据传输全过程安全。实现更精细、动态且覆盖全链路的身份与访问管理，为数字化转型构建可信接入基础。  
@@ -137,9 +137,9 @@ source: "gelusus/wxvl 公众号漏洞文库"
   
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/vEkwp3V9UttXgFVDLqzpCCmfwZictWHmSKsWXOJyFSnsuhSKfdu1A0J3IuzK13ic96NQ4P0xltKuNkficbfKGondg/640?wx_fmt=jpeg&from=appmsg "")  
   
-渠道合作咨询   田先生 15611262709  
+渠道合作咨询   田先生 15611262709  
   
-稿件合作   微信:shushu12121  
+稿件合作   微信:shushu12121  
   
 
 

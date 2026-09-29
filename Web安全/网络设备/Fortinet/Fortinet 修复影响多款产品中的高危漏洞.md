@@ -7,7 +7,7 @@ Ionut Arghire  代码卫士   2023-09-19 17:47
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
   
-   
+   
 聚焦源代码安全，网罗国内外最新资讯！****  
   
 **编译：代码卫士**  
@@ -68,7 +68,7 @@ https://www.securityweek.com/fortinet-patches-high-severity-vulnerabilities-in-f
   
 题图：  
 Pixabay  
- License  
+ License  
   
 ****  
 **本文由奇安信编译，不代表奇安信观点。转载请注明“转自奇安信代码卫士 https://codesafe.qianxin.com”。**  
@@ -84,10 +84,10 @@ Pixabay
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
   
-   
-觉得不错，就点个 “  
+   
+觉得不错，就点个 “  
 在看  
 ” 或 "  
 赞  

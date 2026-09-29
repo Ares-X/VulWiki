@@ -90,7 +90,7 @@ https://ubuntu.com/security/CVE-2024-35235
   
 CVE-2024-5290：  
   
-https://ubuntu.com/security/CVE-2024-5290    
+https://ubuntu.com/security/CVE-2024-5290    
   
   
   
@@ -205,7 +205,7 @@ Group选项指定了CUPS在执行外部命令时所使用的用户名和用户�
 ```
 Group group-name-or-number
         Specifies the group name or ID that will be used when executing external programs.         The default group is operating system specific but is usually "lp" or "nobody".
-User username
+User username
         Specifies the user name or ID that is used when running external programs. The       default is "lp".
 ```  
   
@@ -221,8 +221,8 @@ root，但是发现执行被拦截了，这是由于CUPS中以下的代码片段
                 "%d of %s for security reasons.  You must use a "
                 "non-privileged account instead.",
                         value, linenum, CupsFilesFile);        
-        if (FatalErrors & CUPSD_FATAL_CONFIG)          
-        return (0);
+        if (FatalErrors & CUPSD_FATAL_CONFIG)          
+        return (0);
       }
 ```  
   

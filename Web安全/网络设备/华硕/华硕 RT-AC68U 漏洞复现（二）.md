@@ -9,7 +9,7 @@ cve: "CVE-2018-20334"
 
   
 
-**点击蓝字 ·  关注我们**
+**点击蓝字 ·  关注我们**
 
   
 
@@ -24,18 +24,18 @@ cve: "CVE-2018-20334"
 
 ASUS RT-AC68U 固件版本3.0.0.4.384.45708 
 安全性修正
-- 修正 CVE-2018-20334
-- 修正 CVE-2018-20336
-- 修正 null pointer 问题. 感谢 CodeBreaker of STARLabs
-- 修正 AiCloud 缓冲区溢位漏洞 感谢Resecurity International
+- 修正 CVE-2018-20334
+- 修正 CVE-2018-20336
+- 修正 null pointer 问题. 感谢 CodeBreaker of STARLabs
+- 修正 AiCloud 缓冲区溢位漏洞 感谢Resecurity International
 
 问题修正
-- 修正路由器使用 IPv6 WAN 时的 AiMesh LAN IP 问题
-- 修正AiMesh 连线问题
-- 修正网路地图相关问题
-- 修正Download Master 图示消失问题
-- 修正当启用Samba 服务时LAN PC 无法在网路芳邻找到路由器之问题
-- 修正LAN LED 灯号不显示问题
+- 修正路由器使用 IPv6 WAN 时的 AiMesh LAN IP 问题
+- 修正AiMesh 连线问题
+- 修正网路地图相关问题
+- 修正Download Master 图示消失问题
+- 修正当启用Samba 服务时LAN PC 无法在网路芳邻找到路由器之问题
+- 修正LAN LED 灯号不显示问题
 
 请先将档案解压缩後再用原始固件档案进行MD5确认
 
@@ -50,7 +50,7 @@ CVE 官网：
 
 <table width="964"><thead><tr cid="n22" mdtype="table_row"><th>CVE-ID</th></tr></thead><tbody><tr cid="n24" mdtype="table_row"><td>CVE-2018-20336</td></tr><tr cid="n26" mdtype="table_row"><td><strong>Description</strong></td></tr><tr cid="n28" mdtype="table_row"><td>An issue was discovered in ASUSWRT 3.0.0.4.384.20308. There is a &nbsp;stack-based buffer overflow issue in parse_req_queries function in &nbsp;wanduck.c via a long string over UDP, which may lead to an information &nbsp;leak.</td></tr></tbody></table>
 
-wanduck.c 文件的‘parse_req_queries’函数存在缓冲区错误漏洞。该漏洞源于网络系统或产品在内存上执行操作时，未正确验证数据边界，导致向关联的其他内存位置上执行了错误的读写操作。攻击者可利用该漏洞导致缓冲区溢出或堆溢出等。                                                   
+wanduck.c 文件的‘parse_req_queries’函数存在缓冲区错误漏洞。该漏洞源于网络系统或产品在内存上执行操作时，未正确验证数据边界，导致向关联的其他内存位置上执行了错误的读写操作。攻击者可利用该漏洞导致缓冲区溢出或堆溢出等。                                                   
 
 **02**
 
@@ -83,7 +83,7 @@ preferred_lang=CN¤t_page=Advanced_Feedback.asp&action_mode=apply&action_script=
 ```
 
   
-       在 http 的处理流程中，会在 except_mime_handlers 列表中进行匹配，其中包含了一些访问的 cgi 和 asp，对应有设置 flag。
+       在 http 的处理流程中，会在 except_mime_handlers 列表中进行匹配，其中包含了一些访问的 cgi 和 asp，对应有设置 flag。
 
 ```
 for ( exhandler = except_mime_handlers; exhandler->pattern; ++exhandler )

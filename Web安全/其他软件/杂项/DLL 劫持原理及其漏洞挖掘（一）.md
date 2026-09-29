@@ -44,9 +44,9 @@ source: "MrWQ/vulnerability-paper"
 > 
 > 动态库的好处与静态库相对。
 > 
-> Linux 下静态库名字一般是: libxxx.a window 则是: *.lib、*.h
+> Linux 下静态库名字一般是: libxxx.a window 则是: *.lib、*.h
 > 
-> Linux 下动态库名字一般是: libxxx.so window 则是: .dll、.OCX(..etc)
+> Linux 下动态库名字一般是: libxxx.so window 则是: .dll、.OCX(..etc)
 
 **0x2 DLL 的用途**
 ---------------
@@ -159,7 +159,7 @@ int main()
 
 可以看到成功加载了我们写的 msg 函数。
 
-有关代码中更多的细节的解释可以参考: C++ 编写 DLL 文件
+有关代码中更多的细节的解释可以参考: C++ 编写 DLL 文件
 
 **0x4 DLL 劫持漏洞**
 ----------------
@@ -172,7 +172,7 @@ int main()
 
 ### 0x4.2 查找 DLL 目录的顺序
 
-正如动态链接库安全 、动态链接库搜索顺序微软的官方文档所说,
+正如动态链接库安全 、动态链接库搜索顺序微软的官方文档所说,
 
 在 Windows XP SP2 之前 (不包括), 默认未启用 DLL 搜索模式。
 
@@ -182,13 +182,13 @@ Windows 查找 DLL 目录及其顺序如下:
 >     
 > 2.  The current directory.
 >     
-> 3.  The system directory. Use the GetSystemDirectory function to get the path of this directory.
+> 3.  The system directory. Use the GetSystemDirectory function to get the path of this directory.
 >     
 > 4.  The 16-bit system directory. There is no function that obtains the path of this directory, but it is searched.
 >     
-> 5.  The Windows directory. Use the GetWindowsDirectory function to get the path of this directory.
+> 5.  The Windows directory. Use the GetWindowsDirectory function to get the path of this directory.
 >     
-> 6.  The directories that are listed in the PATH environment variable. Note that this does not include the per-application path specified by the App Paths registry key. The App Paths key is not used when computing the DLL search path.
+> 6.  The directories that are listed in the PATH environment variable. Note that this does not include the per-application path specified by the App Paths registry key. The App Paths key is not used when computing the DLL search path.
 >     
 
 在 Windows 下, 几乎每一种文件类型都会关联一个对应的处理程序。
@@ -201,15 +201,15 @@ Windows 查找 DLL 目录及其顺序如下:
 
 > 1.  The directory from which the application loaded.
 >     
-> 2.  The system directory. Use the GetSystemDirectory function to get the path of this directory.
+> 2.  The system directory. Use the GetSystemDirectory function to get the path of this directory.
 >     
 > 3.  The 16-bit system directory. There is no function that obtains the path of this directory, but it is searched.
 >     
-> 4.  The Windows directory. Use the GetWindowsDirectory function to get the path of this directory.
+> 4.  The Windows directory. Use the GetWindowsDirectory function to get the path of this directory.
 >     
 > 5.  The current directory.
 >     
-> 6.  The directories that are listed in the PATH environment variable. Note that this does not include the per-application path specified by the App Paths registry key. The App Paths key is not used when computing the DLL search path.
+> 6.  The directories that are listed in the PATH environment variable. Note that this does not include the per-application path specified by the App Paths registry key. The App Paths key is not used when computing the DLL search path.
 >     
 
 可以看到当前目录被放置在了后面, 对系统 dll 起到一定的保护作用。

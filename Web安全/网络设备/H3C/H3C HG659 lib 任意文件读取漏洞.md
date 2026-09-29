@@ -15,11 +15,11 @@ source: "MrWQ/vulnerability-paper"
 
 **HUAWEI HG659 lib 存在任意文件读取漏洞，攻击者通过漏洞可以读取任意文件**
 
-**二:  漏洞影响🐇**
+**二:  漏洞影响🐇**
 
 **H3C HG659**
 
-**三:  漏洞复现🐋**
+**三:  漏洞复现🐋**
 
 ```
 app="HUAWEI-Home-Gateway-HG659"
@@ -37,7 +37,7 @@ app="HUAWEI-Home-Gateway-HG659"
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el6rDLq3fMxBFycSZ15UYADJ2eGwh0QczdP7mJnqu5plJWx8LjdOibcOHR6Vfm90cqvB6Uel4dSbH0A/640?wx_fmt=png)
 
- ****四:  关于文库🦉****
+ ****四:  关于文库🦉****
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el6rDLq3fMxBFycSZ15UYADJj7ruJokEib2icTNw5HjpkOB0AM8Je6ZBm0Aa00wf63SIPgSBOibR90zfQ/640?wx_fmt=png)
 
@@ -70,7 +70,7 @@ app="HUAWEI-Home-Gateway-HG659"
 
 **由于传播、利用此文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，文章作者不为此承担任何责任。**
 
-**PeiQi 文库 拥有对此文章的修改和解释权如欲转载或传播此文章，必须保证此文章的完整性，包括版权声明等全部内容。未经作者允许，不得任意修改或者增减此文章内容，不得以任何方式将其用于商业目的。**
+**PeiQi 文库 拥有对此文章的修改和解释权如欲转载或传播此文章，必须保证此文章的完整性，包括版权声明等全部内容。未经作者允许，不得任意修改或者增减此文章内容，不得以任何方式将其用于商业目的。**
 
 ---
 

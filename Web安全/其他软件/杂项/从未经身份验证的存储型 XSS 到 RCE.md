@@ -68,7 +68,7 @@ longitude。尽管我现在对 HESK 软件源有些熟悉，但我发现通过 B
   
 让我们通过将有效负载更改为来修复它：  
 ```
-1;alert('stored XSS are the best!')
+1;alert('stored XSS are the best!')
 1;alert('but how much space is available?')
 ```  
   

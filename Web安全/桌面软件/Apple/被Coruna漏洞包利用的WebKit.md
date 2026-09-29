@@ -56,7 +56,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
 - iPad Pro 12.9英寸（第一代）  
   
 ![iPhone安全更新示意图](https://mmbiz.qpic.cn/sz_mmbiz_png/nGzNudUIJ6NMoAeKZCup2RUMhuibQIru6fFHhdqX7M1AKcAMJxmDibbL515DfgdhbYy3Qcsa12hBLd0MhqPzV8qplnG2vgJMPfVwKaKJytp7I/640?wx_fmt=png "iPhone安全更新示意图")  
- # 版权：本文配图  
+ # 版权：本文配图  
 ## 三、修复的漏洞详情  
 ### 3.1 核心漏洞：CVE-2023-43010  
   

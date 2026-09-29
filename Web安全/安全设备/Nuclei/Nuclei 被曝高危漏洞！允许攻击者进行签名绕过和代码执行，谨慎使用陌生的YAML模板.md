@@ -8,7 +8,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/myic1rJ84UQib1h8I5Re97yPxU4o2fzIk9oZ62CvkvzianGcPoDtrqFdXWicFKmKdvPyCWibpfmHYy3JFpkiatI1ImiaQ/640?wx_fmt=gif "")  
   
-“ Nuclei 被披露了一个高度严重的安全漏洞， CVE-2024-43405，CVSS 评分为 7.4 分。它会影响 3.0.0 之后的所有 Nuclei 版本。”  
+“ Nuclei 被披露了一个高度严重的安全漏洞， CVE-2024-43405，CVSS 评分为 7.4 分。它会影响 3.0.0 之后的所有 Nuclei 版本。”  
   
   
 **Nuclei**  
@@ -19,7 +19,7 @@ Nuclei是一种用于自动化漏洞扫描和发现的工具，它可以帮助�
   
 Nuclei 被曝高危漏洞  
   
-Nuclei于2024年底被爆出一个新的高危漏洞，它被跟踪为 CVE-2024-43405，CVSS 评分为 7.4 分，它会影响 3.0.0 之后的所有 Nuclei 版本。  
+Nuclei于2024年底被爆出一个新的高危漏洞，它被跟踪为 CVE-2024-43405，CVSS 评分为 7.4 分，它会影响 3.0.0 之后的所有 Nuclei 版本。  
   
 该漏洞产生于签名验证过程与 YAML 解析器处理换行符的方式之间的差异，以及对多个签名的处理方式。这使得攻击者能够在模板中注入恶意内容，同时仍然保持模板的合法部分具有有效的签名。  
   
@@ -40,7 +40,7 @@ Goldenberg 还提到，“验证逻辑只检查第一行的“# digest:”，后
   
 最新进展  
   
-在漏洞披露之后，ProjectDiscovery 于 2024 年 9 月 4 日以   
+在漏洞披露之后，ProjectDiscovery 于 2024 年 9 月 4 日以   
 3.3.2 版本  
 解决了这个问题，Nuclei 的当前版本是 3.3.7。对于仍在使用旧版Nuclei的朋友，强烈建议更新至最新版本。  
   
@@ -53,7 +53,7 @@ Goldenberg 还提到，“验证逻辑只检查第一行的“# digest:”，后
   
 ![](https://mmbiz.qpic.cn/mmbiz_png/myic1rJ84UQib8G9YWAjAJNlhX1Wzmb7gpHLnoov6uvXfnyrfaUibbZexLulXjzVQ5B4zv1QpddvuyJTEghvDyuMw/640?wx_fmt=png&from=appmsg "")  
   
-   
+   
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/myic1rJ84UQicYaPaTeJcNOszM43NvF6J88CEtytnRDQFhIaP9S6PoyVrOhehRWcPz4iacSbJoian440fYTx8OGvSg/640?wx_fmt=other&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1 "")  
   
   

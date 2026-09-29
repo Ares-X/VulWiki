@@ -26,7 +26,7 @@ rest_cherrypy:
 ```
 
 其中，/run 终端非常重要。它通过 salt-ssh 子系统发出命令，而 salt-ssh 子系统会使用 SSH 来执行 Salt 例程。  
-发送到 / run API 的 POST 请求将调用 salt.netapi.rest_cherrypy.app.Run 类的 POST() 方法，这个类最终会调用 salt.netapi.NetapiClient 的 run() 方法：
+发送到 / run API 的 POST 请求将调用 salt.netapi.rest_cherrypy.app.Run 类的 POST() 方法，这个类最终会调用 salt.netapi.NetapiClient 的 run() 方法：
 
 ```
 class NetapiClient(object): 

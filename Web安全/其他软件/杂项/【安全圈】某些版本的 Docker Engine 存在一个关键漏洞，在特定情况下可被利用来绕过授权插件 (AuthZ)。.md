@@ -15,7 +15,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
 安全漏洞  
   
   
-在某些版本的 Docker 引擎中，被跟踪为   
+在某些版本的 Docker 引擎中，被跟踪为   
 CVE-2024-41110（CVSS 评分为 10.0）的漏洞可允许攻击者在特定情况下绕过授权插件 （AuthZ）。  
   
 Moby Project 维护者发布的公告中写道：“攻击者可以使用 Content-Length 设置为 0 的 API 请求来利用绕过漏洞，导致 Docker 守护程序将没有正文的请求转发到 AuthZ 插件，该插件可能会错误地批准该请求。“使用特制的 API 请求，Engine API 客户端可以使守护进程将请求或响应转发到授权插件，而无需正文。在某些情况下，授权插件可能会允许一个请求，如果正文被转发给它，它本来会被拒绝。  
@@ -64,7 +64,7 @@ Docker Desktop 4.32.0 及之前版本包含易受攻击的 Docker Engine 版本�
   
 - 确保未使用 AuthZ 插件，并且不要在没有保护的情况下通过 TCP 公开 Docker API。  
   
-- Docker Business 订阅者可以使用设置管理来强制实施安全设置。  
+- Docker Business 订阅者可以使用设置管理来强制实施安全设置。  
   
   
   
@@ -76,12 +76,12 @@ END
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/aBHpjnrGylhickkwIrLIB3GAHnldD5X9krF8cwzia67GeRdXJ5DGHWcvNlmUwEYKV1iaGguvbVxtmBHZvPs1Wic0MA/640?wx_fmt=jpeg "")  
 [【安全圈】这家网络公司开始聘用黑客？](http://mp.weixin.qq.com/s?__biz=MzIzMzE4NDU1OQ==&mid=2652063086&idx=1&sn=8b841b8242dff0f3af24fad49b952555&chksm=f36e692ec419e03882e468149cd84bb3bca83dc01adefb881762171e95f162781888daef50d8&scene=21#wechat_redirect)  
-                                      
+                                      
   
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/aBHpjnrGylhickkwIrLIB3GAHnldD5X9kjxbNcicHYj7FOklgiarSLrXGdFJhSmtsbHack2G1Ibnnn8uib77a8ttLA/640?wx_fmt=jpeg "")  
 [【安全圈】Crowdstrike蓝屏事件自查结果：错在流程而非人](http://mp.weixin.qq.com/s?__biz=MzIzMzE4NDU1OQ==&mid=2652063086&idx=2&sn=afcd1063623156c29769141ffa615a68&chksm=f36e692ec419e0384b2b7e668a91f93453fce5abdab9616d7f3dcbcc30a96ce7b4fd3611e744&scene=21#wechat_redirect)  
-          
+          
   
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/aBHpjnrGylhickkwIrLIB3GAHnldD5X9kVGxv8k3TQzKdbT8IN2buJLWickC74g2WKcicfibPzj2HVAljpPialUqaDQ/640?wx_fmt=jpeg "")  

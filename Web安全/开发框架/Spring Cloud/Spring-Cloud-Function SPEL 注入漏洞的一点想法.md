@@ -14,19 +14,19 @@ source: "MrWQ/vulnerability-paper"
 
 =======
 
-最近各大网站相继发出了漏洞预警信息，Spring Cloud Function  从3.0.0.RELEASE 到3.2版本都存在一个表达式注入漏洞，目前尚未发布新的修复版本。目前从官方补丁https://github.com/spring-cloud/spring-cloud-function/commit/0e89ee27b2e76138c16bcba6f4bca906c4f3744f  ，目前POC也已经公开了。
+最近各大网站相继发出了漏洞预警信息，Spring Cloud Function  从3.0.0.RELEASE 到3.2版本都存在一个表达式注入漏洞，目前尚未发布新的修复版本。目前从官方补丁https://github.com/spring-cloud/spring-cloud-function/commit/0e89ee27b2e76138c16bcba6f4bca906c4f3744f  ，目前POC也已经公开了。
 
 从补丁中可以看的出来其实开发者已经把sink点写出来了，因此主要是能够找到Source点。
 
 具体漏洞分析可以参考下面的文章，我就不再赘述了。
 
-@默安逐日实验室  [https://mp.weixin.qq.com/s/ssHcLC72wZqzt-ei_ZoLwg](https://mp.weixin.qq.com/s?__biz=MzkxMjI3MDgwOA==&mid=2247484117&idx=1&sn=ce28ada48e22b7af94b94dcd3f15b201&scene=21#wechat_redirect) ，需要在boot的配置文件中增加下面的代码
+@默安逐日实验室  [https://mp.weixin.qq.com/s/ssHcLC72wZqzt-ei_ZoLwg](https://mp.weixin.qq.com/s?__biz=MzkxMjI3MDgwOA==&mid=2247484117&idx=1&sn=ce28ada48e22b7af94b94dcd3f15b201&scene=21#wechat_redirect) ，需要在boot的配置文件中增加下面的代码
 
 ```
 spring.cloud.function.definition=functionRouter
 ```
 
- 然后使用POC，请求任意路径（包括不存在的）都可以触发；  
+ 然后使用POC，请求任意路径（包括不存在的）都可以触发；  
 
 以及
 
@@ -60,7 +60,7 @@ result = ((Function)this.target).apply(convertedInput);
 
 看下 RoutingFunction 原型是实现了 Function 接口，输入和输出参数都要求是Object类。
 
-因此如果代码里function方法参数是字符型等非Object的话，即使配置文件里配置了functionRouter 
+因此如果代码里function方法参数是字符型等非Object的话，即使配置文件里配置了functionRouter 
 
 ```
 spring.cloud.function.definition=functionRouter 

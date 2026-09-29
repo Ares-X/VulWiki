@@ -7,7 +7,7 @@ Ravie Lakshmanan
                     Ravie Lakshmanan  代码卫士   2026-08-19 07:42  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
-    
+    
 聚焦源代码安全，网罗国内外最新资讯！  
   
 编译：代码卫士  
@@ -47,11 +47,11 @@ MLflow
 中的一个未认证服务器端请求伪造漏洞，可导致攻击者访问  
 Tracking Server  
 （  
-mlflow   
+mlflow   
 服务器）的攻击者向任意内部云元数据端点发出  
 HTTP  
 请求，并提取敏感数据。（影响版本  
- < 3.15.0  
+ < 3.15.0  
 ）  
   
 - CVE-2026-25895  
@@ -62,7 +62,7 @@ CVSS
 ）是位于  
 FUXA  
 中的一个关键功能缺少身份验证以及路径遍历漏洞，可导致未认证的远程攻击者向服务器文件系统写入任意文件，并实现远程代码执行。（影响版本  
- <= 1.2.9  
+ <= 1.2.9  
 ）  
   
   
@@ -216,11 +216,11 @@ e
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
   
   
   
-   
+   
 觉得不错，就点个 “  
 在看  
 ” 或 "  

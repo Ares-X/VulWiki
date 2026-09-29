@@ -50,7 +50,7 @@ NginxWebUI 环境搭建：docker-compose.yml
 version: "3.2"
 services:
   nginxWebUi-server:
-    image: cym1102/nginxwebui:3.5.0
+    image: cym1102/nginxwebui:3.5.0
     volumes:
       - type: bind
         source: "/home/nginxWebUI"

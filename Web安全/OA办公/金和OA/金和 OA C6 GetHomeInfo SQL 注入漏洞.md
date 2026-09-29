@@ -26,7 +26,7 @@ source: "MrWQ/vulnerability-paper"
 
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/f99C5hg1oLNDZJenq13YIYzsCMJkEL7ChzaKl0OIpkKGx0ibsjDMsPSbQHSk8SYgseTcDpDNCvwq7G5Wuxs2oyQ/640?wx_fmt=png)
 
-        金和网络是专业信息化服务商，为城市监管部门提供了互联网 + 监管解决方案，为企事业单位提供组织协同 OA 系统升开发平台，电子政务一体化平台智慧电商平台等服务。金和 OA C6 GetHomeInfo 接口处存在 SQL 注入漏洞，攻击者除了可以利用 SQL 注入漏洞获取数据库中的信息（例如，管理员后台密码、站点的用户个人信息）之外，甚至在高权限的情况可向服务器中写入木马，进一步获取服务器系统权限。
+        金和网络是专业信息化服务商，为城市监管部门提供了互联网 + 监管解决方案，为企事业单位提供组织协同 OA 系统升开发平台，电子政务一体化平台智慧电商平台等服务。金和 OA C6 GetHomeInfo 接口处存在 SQL 注入漏洞，攻击者除了可以利用 SQL 注入漏洞获取数据库中的信息（例如，管理员后台密码、站点的用户个人信息）之外，甚至在高权限的情况可向服务器中写入木马，进一步获取服务器系统权限。
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/6RaZ4vPeOmSVjiaqZGLNX4d3vWbaxFZJvfRGwaibvubSsH0Z8ZYFOBuLwIuicrggnMBcgnaA5ssdXZo2Nv9EQgJibQ/640?wx_fmt=png)
 

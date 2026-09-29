@@ -72,7 +72,7 @@ msf5 exploit(multi/handler) > exploit
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjcOs6KRgHrcLIZBSj7uFiaZ2NglLRz2ERUXYEIpq8dsUoDJVU4ht7Eo87wqcOqxOTzxX4UuLTpcyeg/640?wx_fmt=png)
 
-3、上传 Jar 包，并且提交
+3、上传 Jar 包，并且提交
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRjcOs6KRgHrcLIZBSj7uFiaZ2ISveMsiau7Y6ADiaA0z1BKy99iaLZHibklQaxXZgZxgDUFdo0LjWBCKy3w/640?wx_fmt=png)
 

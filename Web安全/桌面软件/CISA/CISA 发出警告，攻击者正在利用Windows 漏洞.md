@@ -17,7 +17,7 @@ Bleeping Computer 消息称，美国网络安全和基础设施安全局（CISA�
   
 上周，CISA 将 Windows 通用日志文件系统驱动程序中另一个特权升级漏洞也添加到野外利用漏洞列表中，此漏洞由 CrowdStrike 和美国国家安全局（NSA）报告，目前微软已经修补。  
   
- 联邦机构给予三周时间修补   
+ 联邦机构给予三周时间修补   
   
 根据美国 11 月发布的一项具有项约束力操作指令（BOD 22-01），所有联邦民事行政部门机构（FCEB）都必须保护其系统，免受 CISA 已知利用漏洞 (KEV) 目录中安全漏洞的影响。  
   
@@ -39,7 +39,7 @@ https://www.bleepingcomputer.com/news/security/cisa-warns-of-attackers-now-explo
   
 原文来源：FreeBuf  
   
-“投稿联系方式：孙中豪 010-82992251   sunzhonghao@cert.org.cn”  
+“投稿联系方式：孙中豪 010-82992251   sunzhonghao@cert.org.cn”  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/iaz5iaQYxGogucKMiatGyfBHlfj74r3CyPxEBrV0oOOuHICibgHwtoIGayOIcmJCIsAn02z2yibtfQylib07asMqYAEw/640?wx_fmt=jpeg "")  
 

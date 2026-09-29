@@ -16,7 +16,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
   
 ![Parallels Desktop 本地提权漏洞警示](https://mmbiz.qpic.cn/mmbiz_png/nGzNudUIJ6P1s7AzDmHvA9ogrcYBEgYArvXAH3eia2g870lUZmUGZgU2LYTia6UL6j6RB1jYtsAAB6UV1NsLVDACWVaMszLrIB42kicl6VcVPw/640?from=appmsg "Parallels Desktop 本地提权漏洞警示")  
   
-漏洞出在 Mac 端后端服务 prl_disp_service  
+漏洞出在 Mac 端后端服务 prl_disp_service  
 （派发服务）上，负责给虚拟机搭宿主机网络、解压应用包，所以必须以 root（macOS 最高管理员账户）身份跑。JFrog 在 Parallels Desktop 26.4.0（build 57513）的 Apple Silicon 机器上验证成功，并明确表态："任何还在暴露同一个 InstallAppliance（应用安装接口）解压模板和派发器 Unix 套接字的桌面安装，都视为在攻击范围内。"  
   
 更讽刺的是 Parallels 至今没发任何官方声明。按他们政策"漏洞公开后才讨论"，但补丁在公告前一个月就悄悄进了 27.0.0。  
@@ -27,19 +27,19 @@ JFrog 把这个漏洞归类为"漏洞链"——单看每一处都不致命，叠
 ![ParaShells 攻击链路示意图](https://mmbiz.qpic.cn/sz_mmbiz_png/nGzNudUIJ6MAdt0yb63C9pd2mrkicGQea4xT1NIBQjG8VWicLWoM3KicF6dpib9jVvb9ZTHklV6ib1ULUhgVDOYtQtOJdKK2XrjfwusDhxIIHvNU/640?from=appmsg "ParaShells 攻击链路示意图")  
   
 **第一处，Unix 套接字权限失控。**  
- 派发服务监听 /var/run/prl_disp_service.socket  
-，权限位 srwxrwxrwx  
+ 派发服务监听 /var/run/prl_disp_service.socket  
+，权限位 srwxrwxrwx  
 ——任何本地进程都能连。能连进 root 服务的套接字就是攻击入口。  
   
 **第二处，登录鉴权只看内核。**  
- 调用 PrlSrv_LoginLocal  
+ 调用 PrlSrv_LoginLocal  
 （Parallels 本地登录接口），只核对内核报告的进程凭据，连 Parallels 自己的代码签名都不验。访客账户都能过这关。  
   
 **第三处，InstallAppliance 命令拼接。**  
- 解压应用包时按 tar -xf "%1" -C "%2"  
- 拼一行命令，%2  
- 是用户指定的安装目录，再用 Qt（C++ 图形界面框架）的 QProcess::splitCommand  
- 拆回参数数组。攻击者在目录名里塞个双引号，比如 ~/Documents/Victim" --use-compress-program=/tmp/evil.sh  
+ 解压应用包时按 tar -xf "%1" -C "%2"  
+ 拼一行命令，%2  
+ 是用户指定的安装目录，再用 Qt（C++ 图形界面框架）的 QProcess::splitCommand  
+ 拆回参数数组。攻击者在目录名里塞个双引号，比如 ~/Documents/Victim" --use-compress-program=/tmp/evil.sh  
 ——引号提前闭合，剩下的字符就成了 tar 的额外参数。--use-compress-program  
 （指定 tar 调用其他解压程序）让 tar 把归档交给任意程序执行，而此时 tar 跑的是 root，调用出来的程序也是 root。  
   
@@ -48,9 +48,9 @@ JFrog 的 PoC（概念验证代码）就是写一条免密码 sudo 规则，再�
   
 漏洞利用门槛低到让人不适——装上 Parallels Desktop、派发服务在跑、有个低权限账户就够了。攻击过程不用启动任何虚拟机，也不用进 Parallels 界面。  
   
-实际操作四步：写一个 shell 脚本到 /tmp/evil.sh  
-（写免密码 sudo 规则 + 弹 root shell）；在"文档"目录下建一个名字精心构造的文件夹，里面塞双引号 + --use-compress-program=/tmp/evil.sh  
-；调用 InstallAppliance 接口，把这个目录作为目标路径传给派发服务；等待——派发服务以 root 执行 tar，tar 顺手调用 /tmp/evil.sh  
+实际操作四步：写一个 shell 脚本到 /tmp/evil.sh  
+（写免密码 sudo 规则 + 弹 root shell）；在"文档"目录下建一个名字精心构造的文件夹，里面塞双引号 + --use-compress-program=/tmp/evil.sh  
+；调用 InstallAppliance 接口，把这个目录作为目标路径传给派发服务；等待——派发服务以 root 执行 tar，tar 顺手调用 /tmp/evil.sh  
 ，root shell 弹出。  
   
 整个链条没有 0day（未公开漏洞）味道，全是老掉牙的套路——套接字权限过宽、身份校验过松、命令拼接未转义——但堆在一起就是教科书级的 LPE（本地权限提升）。这暴露了 macOS 上第三方系统扩展类软件的通病：跑在最高权限里，写代码的人用最低标准。JFrog 文末也提到 App Store 版"底层风险是同一类问题"。  
@@ -68,13 +68,13 @@ Parallels 8 月 25 日发过声明："Parallels Desktop 26 今天完全支持 In
 ## 五、自检与防御建议  
   
 两条只读命令能立刻判断 Mac 是否暴露：defaults read "/Applications/Parallels Desktop.app/Contents/Info" CFBundleShortVersionString  
- 查版本，ls -l /var/run/prl_disp_service.socket  
- 查套接字权限位。JFrog 的判定标准是：版本在 26.4.0 附近且套接字显示 srwxrwxrwx  
+ 查版本，ls -l /var/run/prl_disp_service.socket  
+ 查套接字权限位。JFrog 的判定标准是：版本在 26.4.0 附近且套接字显示 srwxrwxrwx  
 ，就视为暴露，直到确认升级到带修复的版本。两条命令只能反映暴露面，不能反映是否已被攻破。  
   
-防御建议分三档。Apple Silicon 用户尽快升到 27.0.1（build 58670，9 月 1 日）；用 MDM 推送升级的先确认版本规则不会把 v27 推到 Intel Mac。Intel Mac 用户短期内没有补丁，建议限制能本地登录的账户，同时排查所有装了 Parallels 的 Mac 建立资产清单，必要时临时卸掉换 UTM 或 VMware Fusion。所有用户都应检查 launchd 持久化痕迹，看 /Library/LaunchDaemons/  
- 和 /Library/LaunchAgents/  
- 下有没有创建时间异常的 plist；已被 root 过的机器，备份数据后重装最稳。  
+防御建议分三档。Apple Silicon 用户尽快升到 27.0.1（build 58670，9 月 1 日）；用 MDM 推送升级的先确认版本规则不会把 v27 推到 Intel Mac。Intel Mac 用户短期内没有补丁，建议限制能本地登录的账户，同时排查所有装了 Parallels 的 Mac 建立资产清单，必要时临时卸掉换 UTM 或 VMware Fusion。所有用户都应检查 launchd 持久化痕迹，看 /Library/LaunchDaemons/  
+ 和 /Library/LaunchAgents/  
+ 下有没有创建时间异常的 plist；已被 root 过的机器，备份数据后重装最稳。  
 ## 六、总结  
   
 ParaShells 不是那种让人惊掉下巴的 0day——它甚至有点"老套"。JFrog 这份报告真正敲打的，是软件厂商对旧硬件用户的态度：一边砍掉 Intel 支持，一边不承诺 26.x 线的安全更新，等于在 Intel Mac 用户头顶挂了一把没柄的剑。  

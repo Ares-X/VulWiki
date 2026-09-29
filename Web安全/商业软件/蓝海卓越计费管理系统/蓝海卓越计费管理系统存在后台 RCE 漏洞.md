@@ -72,14 +72,14 @@ app="蓝海卓越计费管理系统"
 端口一般开在 6070
 
 ```
-Hostname=114.114.114.114|ls -la&physicalInterface=1&pingCount=1
+Hostname=114.114.114.114|ls -la&physicalInterface=1&pingCount=1
 ```
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibDxhica5PCFc53hQ1NxSibkCvo3UAgEfx6saXCvicoicEH8maKiabesOzngKQiaptyYckKt6YryQauzCGbA/640?wx_fmt=png)
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibDxhica5PCFc53hQ1NxSibkCvkHItOVFudcYH6cP5xj9ealddJrYxtAh70TH8dswqpmEiauHBazb9Y6g/640?wx_fmt=png)
 
-           ![](https://mmbiz.qpic.cn/mmbiz/yqVAqoZvDibF4Yt2FQ7OXEVdYnmw5luVibtn7s5Xgo37kJ8QS8Yv3TocRISibmUrXAGf0s3gTia1reAGvbW3x6O0kw/640?wx_fmt=gif)          
+           ![](https://mmbiz.qpic.cn/mmbiz/yqVAqoZvDibF4Yt2FQ7OXEVdYnmw5luVibtn7s5Xgo37kJ8QS8Yv3TocRISibmUrXAGf0s3gTia1reAGvbW3x6O0kw/640?wx_fmt=gif)          
 
 漏洞文库：wiki.xypbk.com
 
@@ -93,19 +93,19 @@ Hostname=114.114.114.114|ls -la&physicalInterface=1&pingCount=1
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibDxhica5PCFc53hQ1NxSibkCvuRz1qDSFibSggh7Mj4vdgXXzAKC78oSbexuTjCBGUHLpQPF7UPCZANQ/640?wx_fmt=png)
 
-    本站开设的起因是因为某一次 HW，查漏洞真的太麻烦了，就想起来做了一个站点，本意就是自己用来快速检索漏洞详情的，为了方便大家就公开了，但是这样就又会被不法份子利用，和影响一些大佬的权益。  
+    本站开设的起因是因为某一次 HW，查漏洞真的太麻烦了，就想起来做了一个站点，本意就是自己用来快速检索漏洞详情的，为了方便大家就公开了，但是这样就又会被不法份子利用，和影响一些大佬的权益。  
 
-    为防止黑产份子的非法利用漏洞，不给国家安全添麻烦，本站从此开启授权访问。
+    为防止黑产份子的非法利用漏洞，不给国家安全添麻烦，本站从此开启授权访问。
 
-    如若因漏洞利用产生重大影响，会根据登录 IP、请求内容、申请授权等信息进行查证，查证后将对号主进行追责，故不要分享账号，终害己身。  
+    如若因漏洞利用产生重大影响，会根据登录 IP、请求内容、申请授权等信息进行查证，查证后将对号主进行追责，故不要分享账号，终害己身。  
 
-    虽然比较麻烦了些，但会稍微对黑产份子有一些限制，保证了本站安全，也保证国家安全。同时有些敏感东西也能第一时间放出来了，还请大家谅解。
+    虽然比较麻烦了些，但会稍微对黑产份子有一些限制，保证了本站安全，也保证国家安全。同时有些敏感东西也能第一时间放出来了，还请大家谅解。
 
-    同时本站承诺永远不会出现买卖账号等利益相关的事情，本站永不割韭菜，永久免费检索，坚决抵制安全圈的歪风邪气。
+    同时本站承诺永远不会出现买卖账号等利益相关的事情，本站永不割韭菜，永久免费检索，坚决抵制安全圈的歪风邪气。
 
-    最后，若大家对此有意见请后台留言，本站将及时改正，若内容有侵犯您的权益，请及时提出，进行删除处理。  
+    最后，若大家对此有意见请后台留言，本站将及时改正，若内容有侵犯您的权益，请及时提出，进行删除处理。  
 
-    本站能坚持多久全看大家是否滥用，内容若更新较慢也请谅解，本人有工作有生活，会尽量坚持更新的。
+    本站能坚持多久全看大家是否滥用，内容若更新较慢也请谅解，本人有工作有生活，会尽量坚持更新的。
 
   
 
@@ -121,7 +121,7 @@ Qingy 之安全
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/Y8TRQVNlpCW6icC4vu5Pl5JWXPyWdYvGAyfVstVJJvibaT4gWn3Mc0yqMQtWpmzrxibqciazAr5Yuibwib5wILBINfuQ/640?wx_fmt=png)
 
-                                   ![](https://mmbiz.qpic.cn/mmbiz_gif/nMQkaGYuOibDxhica5PCFc53hQ1NxSibkCvwcmL5Lb7OCb4UibtoT1ATGNwpSlJjCQM2dKHqeW9XpalKgocYvNIeibw/640?wx_fmt=gif)
+                                   ![](https://mmbiz.qpic.cn/mmbiz_gif/nMQkaGYuOibDxhica5PCFc53hQ1NxSibkCvwcmL5Lb7OCb4UibtoT1ATGNwpSlJjCQM2dKHqeW9XpalKgocYvNIeibw/640?wx_fmt=gif)
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/3pKe8enqDsSibzOy1GzZBhppv9xkibfYXeOiaiaA8qRV6QNITSsAebXibwSVQnwRib6a2T4M8Xfn3MTwTv1PNnsWKoaw/640?wx_fmt=png)
 

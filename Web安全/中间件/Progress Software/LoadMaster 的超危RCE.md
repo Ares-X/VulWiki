@@ -7,12 +7,12 @@ Bill Toulas  代码卫士   2024-09-09 17:46
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  
   
-   
+   
 聚焦源代码安全，网罗国内外最新资讯！  
   
 **编译：代码卫士**  
   
-**Progress Software 公司紧急修复了影响 LoadMaster 和 LoadMaster Mult-Tenant (MT)  Hypervisor产品的CVSS满分漏洞 (CVE-2024-7591)，它可导致攻击者在设备上远程执行命令。**  
+**Progress Software 公司紧急修复了影响 LoadMaster 和 LoadMaster Mult-Tenant (MT)  Hypervisor产品的CVSS满分漏洞 (CVE-2024-7591)，它可导致攻击者在设备上远程执行命令。**  
   
   
 该漏洞被归类为输入验证不当漏洞，可导致未认证的远程攻击者使用特殊构造的 HTTP 请求访问 LoadMaster的管理接口。然而，缺乏用户输入清理还可导致攻击者在易受攻击的端点上执行任意系统命令。  
@@ -65,7 +65,7 @@ https://www.bleepingcomputer.com/news/security/progress-loadmaster-vulnerable-to
   
 题图：  
 Pixabay  
- License  
+ License  
   
 ****  
 **本文由奇安信编译，不代表奇安信观点。转载请注明“转自奇安信代码卫士 https://codesafe.qianxin.com”。**  
@@ -81,10 +81,10 @@ Pixabay
   
 国内首个专注于软件开发安全的产品线。  
   
-   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
+   ![](https://mmbiz.qpic.cn/mmbiz_gif/oBANLWYScMQ5iciaeKS21icDIWSVd0M9zEhicFK0rbCJOrgpc09iaH6nvqvsIdckDfxH2K4tu9CvPJgSf7XhGHJwVyQ/640?wx_fmt=gif "")  
   
-   
-觉得不错，就点个 “  
+   
+觉得不错，就点个 “  
 在看  
 ” 或 "  
 赞  

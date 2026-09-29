@@ -9,7 +9,7 @@ source: "MrWQ/vulnerability-paper"
 
 **本文章由兄弟团队凌晨安全的一灯师傅搜集整理**  
 
-一、 chrome(最新版可用) 0day 上线 cs
+一、 chrome(最新版可用) 0day 上线 cs
 
 参考：https://mp.weixin.qq.com/s/LOpAu8vs8ob85W3sCmXMew
 
@@ -116,7 +116,7 @@ source: "MrWQ/vulnerability-paper"
 
 ![图片](https://mmbiz.qpic.cn/mmbiz_png/gqALwUU9cicwic9L79bylTHllIvbgqXTFtvXy3O75EDThhmoHHv2O2lWYBYj98AH1cEnueXqcBuMWOUTlkbkGwEA/640?wx_fmt=png)
 
-4、打开生成的 payload 取出 shellcode 部分 使用全局替换功能将 “\” 为改为 “,0”。 
+4、打开生成的 payload 取出 shellcode 部分 使用全局替换功能将 “\” 为改为 “,0”。 
 
 ![图片](https://mmbiz.qpic.cn/mmbiz_png/gqALwUU9cicwic9L79bylTHllIvbgqXTFtXKAVk9wzzn8tRH4Ca1xv00RgEqsRfDLPBTGFibLSNO5VZeQbFnrNLqg/640?wx_fmt=png)
 
@@ -144,11 +144,11 @@ source: "MrWQ/vulnerability-paper"
 
 8、临时修复方案：
 
-    ①、建议不要点击别人发送的快捷方式
+    ①、建议不要点击别人发送的快捷方式
 
-    ②、不要关闭 chrome 沙箱
+    ②、不要关闭 chrome 沙箱
 
-二、 WX 0da 上线 CS
+二、 WX 0da 上线 CS
 
 微信 exp
 
@@ -405,9 +405,9 @@ Windows 版微信: 小于等于 3.2.1.141 版本
 
 6、修复建议：
 
-    ①、将 Windows 版本微信更新到 3.2.1.141 以上的最新版本。
+    ①、将 Windows 版本微信更新到 3.2.1.141 以上的最新版本。
 
-    ②、建议不要乱点别人发送的链接。
+    ②、建议不要乱点别人发送的链接。
 
 * * *
 

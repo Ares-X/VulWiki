@@ -60,7 +60,7 @@ ls -alh /
 (2) 通过查询系统进程 cgroup 判断：
 
 ```
-cat /proc/1/cgroup |grep "docker"  
+cat /proc/1/cgroup |grep "docker"  
 #看看返回接结果是否差不多都包含docker
 
 ```
@@ -68,9 +68,9 @@ cat /proc/1/cgroup |grep "docker"  
 (3) 进程枚举：
 
 ```
-ps aux 
+ps aux 
 #检查进程数是否少于5个
-ps -pl 
+ps -pl 
 #查看当前pid为1的进程（pid为1的进程是否为常规init/system进程）
 
 ```
@@ -101,7 +101,7 @@ getpcaps $$
 ```
 df -h 
 mount |grep '/  type'   #如果有内容说明是docker 
-filesystgem  #挂载的设备 Mounted on 伪文件系统名称
+filesystgem  #挂载的设备 Mounted on 伪文件系统名称
 
 ```
 
@@ -149,13 +149,13 @@ uname -a        查看内核版本
 
 ```
 
-（8）其他： 
+（8）其他： 
 
 ```
 docke start 容器ID  #启动docker 
 docker stop 容器ID #关闭docker
 docker exec -ti 容器ID /bin/bash  #进入容器
-docker ps -a   #查看当前所有容器 
+docker ps -a   #查看当前所有容器 
 
 ```
 
@@ -187,7 +187,7 @@ _**2.1 逃逸方法一：配置不当，开启 Privilege 提权模式**_
 
 运维使用特权模式启动的容器时（docker run --privileged），Docker 将允许容器访问宿主机上的所有设备 (获取大量设备文件访问权限)，使容器拥有与那些直接运行在宿主机上的进程几乎相同的访问权限。
 
-因此 docker 管理员可通过 mount 命令将外部宿主机磁盘设备挂载进容器内部，从而获取对整个宿主机的文件读写权限，然后可直接通过 chroot 切换根目录、写 ssh 公钥和 crontab 计划任务方法逃逸到宿主机。 
+因此 docker 管理员可通过 mount 命令将外部宿主机磁盘设备挂载进容器内部，从而获取对整个宿主机的文件读写权限，然后可直接通过 chroot 切换根目录、写 ssh 公钥和 crontab 计划任务方法逃逸到宿主机。 
 
 PS：可能有些人会问：” 为什么还有人用特权用户开 docker？我都没用过这玩意。” 主要是一些特殊场景下，确实需要用到该功能。例如使用 systemctl 功能等。
 
@@ -197,7 +197,7 @@ PS：可能有些人会问：” 为什么还有人用特权用户开 docker？�
 
 **漏洞验证：**
 
-判断是否特权模式启动，CapEff 对应的掩码值为 0000003fffffffff 表示当前配置为提权模式。 
+判断是否特权模式启动，CapEff 对应的掩码值为 0000003fffffffff 表示当前配置为提权模式。 
 
 执行命令：
 
@@ -232,8 +232,8 @@ docker run --privileged <容器image name>
 查看当前设备的所有分区内容和操作分区：
 
 ```
-fdisk -l 
-//如果是非特权模式无法使用，可以通过df -h 获取磁盘信息
+fdisk -l 
+//如果是非特权模式无法使用，可以通过df -h 获取磁盘信息
 
 ```
 
@@ -291,7 +291,7 @@ _**2.2 逃逸方法二：配置不当 - 挂载敏感目录导致 Docker**_ _**�
 
 **影响范围：**
 
- 一般可以利用点：
+ 一般可以利用点：
 
 a、宿主机 / var/run/docker.sock 文件被挂载到容器中， find / -name docker.sock。
 
@@ -312,7 +312,7 @@ find / -name docker.sock
 
 ![图片](https://mmbiz.qpic.cn/mmbiz_png/hiaiaLeG6N1zLykKiasmym7UFiccL7ClEbkylibrnzAjx1g5ibN21yEco61XxMR7JcHylghl2OkFBSLKK0Bu2ZCjZlsQ/640?wx_fmt=png)
 
-在 docker 中使用命令查看宿主机拉取的镜像。 
+在 docker 中使用命令查看宿主机拉取的镜像。 
 
 ```
 docker -H unix://var/run/docker.sock images
@@ -333,11 +333,11 @@ ls /test
 
 后续参考之前的特权用户逃逸，是同样的利用手法。
 
-利用二：挂载宿主机 procfs 逃逸 
+利用二：挂载宿主机 procfs 逃逸 
 
 procfs 是一个伪文件系统，它动态反映着系统内进程及其他组件的状态，其中有许多敏感文件。
 
-procfs 中的 / proc/sys/kernel/core_pattern 负责配置进程崩溃时内存转储数据的导出方式。从 2.6.19 内核版本开始，如果该文件中的首个字符是管道符 | ，那么该行的剩余内容将被当作用户空间程序或脚本解释并执行。但逃逸的触发条件比较苛刻，需要有进程崩溃才能触发。 
+procfs 中的 / proc/sys/kernel/core_pattern 负责配置进程崩溃时内存转储数据的导出方式。从 2.6.19 内核版本开始，如果该文件中的首个字符是管道符 | ，那么该行的剩余内容将被当作用户空间程序或脚本解释并执行。但逃逸的触发条件比较苛刻，需要有进程崩溃才能触发。 
 
 检查是否存在漏洞：
 
@@ -444,7 +444,7 @@ echo -e "|/var/lib/docker/overlay2/db944ef403ea1d31dcb81a408763980582637b40c8c8c
 *   因为 Linux 转储机制是对 / proc/sys/kernel/core_pattern 内程序的查找是在宿主机文件系统进行的，因此需要将路径换成宿主机的路径。
     
 
-*   添加 \\r 隐藏攻击。在 Bashshell 中，\\r 是回车符的转义字符。其作用是将光标移动到当前行的开头，当字符串 |/var/tmp/.t.py \\rcore 被写入文件时，回车符会使其后面的部分 core 覆盖前面的部分。直接 cat 只会显示 core 内容。如果想看完整内容，需要使用编辑器查看。
+*   添加 \\r 隐藏攻击。在 Bashshell 中，\\r 是回车符的转义字符。其作用是将光标移动到当前行的开头，当字符串 |/var/tmp/.t.py \\rcore 被写入文件时，回车符会使其后面的部分 core 覆盖前面的部分。直接 cat 只会显示 core 内容。如果想看完整内容，需要使用编辑器查看。
     
 
 执行触发崩溃的 C 文件，成功反弹 shell。
@@ -455,22 +455,22 @@ _**2.3 逃逸方法三：相关启动参数存在安全问题**_
 
 **漏洞描述：** 
 
-Docker 中存在一些比较高危的启动命令，赋予容器较高权限，允许执行一些特权操作，在一定的条件下，可能导致 docker 逃逸。 
+Docker 中存在一些比较高危的启动命令，赋予容器较高权限，允许执行一些特权操作，在一定的条件下，可能导致 docker 逃逸。 
 
 注：这些启动参数本身并非一定不安全，只是它们可能增加了容器被攻击的风险。
 
 **影响范围：**
 
-Docker 通过 Linux namespace 实现 6 项资源隔离，包括主机名、用户权限、文件系统、网络、进程号、进程间通讯。不安全的风险参数可能会突破这种资源隔离。 
+Docker 通过 Linux namespace 实现 6 项资源隔离，包括主机名、用户权限、文件系统、网络、进程号、进程间通讯。不安全的风险参数可能会突破这种资源隔离。 
 
 启用的一些风险参数：
 
 ```
---privileged 
+--privileged 
 在容器中启用特权模式
---cap-add 和--cap-drop 
+--cap-add 和--cap-drop 
 用于向容器添加或删除特定的内核功能（capabilities），容器内进程可能获取高权限。
---network=host 
+--network=host 
 容器与宿主机共享网络命名空间，容器直接访问宿主机的网络资源。
 
 ```
@@ -479,13 +479,13 @@ Docker 通过 Linux namespace 实现 6 项资源隔离，包括主机名、用�
 
 **漏洞利用：**
 
-这里的问题其实会与前两中手法有重复。例如：利用手法 1 提到了是使用 --privileged 特权模式参，手法 2 中是使用 -v /path1:/path2 挂载目录参数，主要是为了让自己能更好的理解，又写了一部分。
+这里的问题其实会与前两中手法有重复。例如：利用手法 1 提到了是使用 --privileged 特权模式参，手法 2 中是使用 -v /path1:/path2 挂载目录参数，主要是为了让自己能更好的理解，又写了一部分。
 
-（1）--privileged 在容器中启用特权模式。 
+（1）--privileged 在容器中启用特权模式。 
 
 Docker 容器被允许可以访问主机上的所有设备、可以获取大量设备文件的访问权限、并可以执行 mount 命令在容器内挂载宿主机的文件，进行修改。例如写入计划任务到宿主机，利用手法参考前面即可。
 
-（2）--cap-add 和 --cap-drop 用于向容器添加或删除特定的内核功能（capabilities） 。
+（2）--cap-add 和 --cap-drop 用于向容器添加或删除特定的内核功能（capabilities） 。
 
 Dockcer 容器的功能机制（Capabilities）主要思想在于分割 root 用户的特权，打破了 UNIX/LINUX 操作系统中超级用户与普通用户的概念，允许普通用户执行超级用户权限方能运行的命令。与 --privileged 区别在于 privileged 是权限全开，而 --cap-add 是将权限功能进行更加的颗粒度细化，需要什么开什么。根据添加的参数不同，权限不同，其参数非常多。
 
@@ -497,7 +497,7 @@ https://docs.docker.com/engine/reference/run/
 
 * 左右滑动查看更多
 
-列举几个可以被逃逸的情况： 
+列举几个可以被逃逸的情况： 
 
 *   以 --cap-add=SYS_ADMIN 启动，允许对系统进行管理员级别的操作。Container 进程就被允许执行 mount、umount 等一系列系统管理命令。
     
@@ -509,7 +509,7 @@ https://docs.docker.com/engine/reference/run/
 因为根据 --cap-add 赋予的不同的权限情况，需要对应的利用手法都不太一样。这里举例 --cap-add=SYS_ADMIN 的手法，其他的利用手法可以参考下面的链接：
 
 ```
-https://www.freebuf.com/vuls/264843.html Docker SYS_ADMIN 容器逃逸原理解析
+https://www.freebuf.com/vuls/264843.html Docker SYS_ADMIN 容器逃逸原理解析
 https://book.hacktricks.xyz/linux-hardening/privilege-escalation/linux-capabilities#privesc-container-escape
 https://blog.csdn.net/qq_55316925/article/details/128511304 SYS_PTRACE+SYS_Module的docker逃逸
 
@@ -648,7 +648,7 @@ cat /proc/1/status | grep Cap
 
 ```
 
-查看当前的 Capabilities 权限： 
+查看当前的 Capabilities 权限： 
 
 ![图片](https://mmbiz.qpic.cn/mmbiz_png/hiaiaLeG6N1zLykKiasmym7UFiccL7ClEbkyfmk3CyjhBQT2UrM7Kia0D65wc0SB5ovcBictUKxicJyn7I2rlfvOU2Q0w/640?wx_fmt=png)
 
@@ -661,15 +661,15 @@ cat /proc/1/status | grep Cap
 *   CapBnd（边界集 capabilities）：表示限制当前用户可使用的 capabilities 的一个范围。
     
 
-再通过 capsh --decode=00000000a80425fb 命令的输出来确定当前用户的 capabilities（功能权限）。 
+再通过 capsh --decode=00000000a80425fb 命令的输出来确定当前用户的 capabilities（功能权限）。 
 
 ![图片](https://mmbiz.qpic.cn/mmbiz_png/hiaiaLeG6N1zLykKiasmym7UFiccL7ClEbkysZH1OsyGpVVRIp0j7mNg1RxcZI5ZFetibIoaLciaaLXrficC07xtJd0Og/640?wx_fmt=png)
 
-也可以直接通过 getpcaps $$ 获取。 
+也可以直接通过 getpcaps $$ 获取。 
 
 ![图片](https://mmbiz.qpic.cn/mmbiz_png/hiaiaLeG6N1zLykKiasmym7UFiccL7ClEbkyeUPfxaOTYgumFV3aeQibtQsI19gEr8WH2jQr0rxUjGr0P4uu39QmqJA/640?wx_fmt=png)
 
-一些常见的权限判断示例： 
+一些常见的权限判断示例： 
 
 案例：
 
@@ -689,19 +689,19 @@ p 表示 permitted（允许权限），表示进程可以拥有的权限。这�
 
 * 左右滑动查看更多
 
-1、判断是否具有特定的 capability： 
+1、判断是否具有特定的 capability： 
 
-查找 CapPrm 字段中是否包含需要判断的 capability，如果存在，则表示当前用户具有该 capability 权限。 
+查找 CapPrm 字段中是否包含需要判断的 capability，如果存在，则表示当前用户具有该 capability 权限。 
 
 ![图片](https://mmbiz.qpic.cn/mmbiz_png/hiaiaLeG6N1zLykKiasmym7UFiccL7ClEbkysZH1OsyGpVVRIp0j7mNg1RxcZI5ZFetibIoaLciaaLXrficC07xtJd0Og/640?wx_fmt=png)
 
-2、判断是否具有执行特定命令的权限： 
+2、判断是否具有执行特定命令的权限： 
 
-查找 CapEff 字段中是否具有与执行特定命令相关的 capability。例如，如果要判断当前用户是否具有执行网络相关命令的权限，可以检查 CapEff 中是否具有 CAP_NET_ADMIN 或 CAP_NET_RAW 这样的网络相关 capability。 
+查找 CapEff 字段中是否具有与执行特定命令相关的 capability。例如，如果要判断当前用户是否具有执行网络相关命令的权限，可以检查 CapEff 中是否具有 CAP_NET_ADMIN 或 CAP_NET_RAW 这样的网络相关 capability。 
 
 但需要注意 capabilities 只是 Linux 系统中一个细分的权限控制机制，判断当前用户的权限还与用户所属的用户组、文件权限等因素有关。所以判断当前用户的权限还需要综合考虑多个方面，包括用户身份、用户组、文件权限、capabilities 等。
 
-3、-network=host 容器与宿主机共享网络命名空间，容器直接访问宿主机的网络资源。   
+3、-network=host 容器与宿主机共享网络命名空间，容器直接访问宿主机的网络资源。   
 
 容器内的进程可以直接访问主机网络上的所有资源，包括其他容器和主机上的服务。当获取 docker 权限后等同于进入了一个内网段，而不是整个网段内只能探测到当前一台 docker 主机。其利用手法可以看下文中的 Docker Containerd 漏洞 CVE-2020-15257。
 
@@ -713,20 +713,20 @@ p 表示 permitted（允许权限），表示进程可以拥有的权限。这�
 CVE-2019-5736 runc容器逃逸漏洞分析
 https://x3fwy.bitcron.com/post/runc-malicious-container-escape
 渗透测试之Docker逃逸
-https://xz.aliyun.com/t/8558# toc-0
-『杂项』Docker 逃逸方法汇总
+https://xz.aliyun.com/t/8558# toc-0
+『杂项』Docker 逃逸方法汇总
 https://mp.weixin.qq.com/s/FeOsaMgTMI0AwN7UzTjxAg
 脏牛漏洞-Docker逃逸POC（dirtycow-vdso)代码分析
 https://blog.csdn.net/enjoy5512/article/details/53196047
-【云原生渗透】- containerd-shim容器逃逸漏洞(CVE-2020-15257)
+【云原生渗透】- containerd-shim容器逃逸漏洞(CVE-2020-15257)
 https://zhuanlan.zhihu.com/p/471532280
 host模式容器逃逸漏洞（CVE-2020-15257）技术分析
 https://mp.weixin.qq.com/s/WmSaLPnG4o4Co1xRiYCOnQ
 CVE-2019-14271分析与复现
 https://ssst0n3.github.io/post/网络安全/安全研究/容器安全/进程容器/服务器容器/docker/历史漏洞分析与复现/docker-software/plumbing/docker-cp/CVE-2019-14271/分析/CVE-2019-14271分析与复现.html
-CVE-2019-5736 runc容器逃逸漏洞分析
+CVE-2019-5736 runc容器逃逸漏洞分析
 https://x3fwy.bitcron.com/post/runc-malicious-container-escape
-Docker SYS_ADMIN 容器逃逸原理解析
+Docker SYS_ADMIN 容器逃逸原理解析
 https://www.freebuf.com/vuls/264843.html
 Docker安全性与攻击面分析
 https://zhuanlan.zhihu.com/p/152052618
@@ -741,7 +741,7 @@ _**一、安全研究工程师实习生（25/26 届）**_
 
 **工作地点：深圳  
 岗位职责：**  
-1、具有较强的责任感、具备能够独立的开展工作的能力、自学能力强、做事踏实认真；   
+1、具有较强的责任感、具备能够独立的开展工作的能力、自学能力强、做事踏实认真；   
 2、对防御对抗、反溯源、攻击利用等相关红队工具进行研究和开发；  
 3、熟悉 OWASP TOP 10，具有网络安全、系统安全、Web 安全等方面的理论基础；  
 4、熟悉常见编程语言中的一种（Java、Python、PHP、GO），并能够熟练写出针对性的测试脚本；  
@@ -752,7 +752,7 @@ _**一、安全研究工程师实习生（25/26 届）**_
 1、具有渗透测试经验或逆向分析能力或溯源分析能力，曾经参与过大型的红蓝对抗项目;  
 2、熟悉 Java、Python、PHP、GO 等编程，并有良好的编程习惯和丰富的代码经验；  
 3、具备钻研精神，愿意在安全领域做出技术突破；  
-4、具有较强的责任感、具备能够独立的开展工作的能力、自学能力强、做事踏实认真；   
+4、具有较强的责任感、具备能够独立的开展工作的能力、自学能力强、做事踏实认真；   
 
 _**二、代码审计工程师实习生（25/26 届）**_**  
 工作地点：深圳  

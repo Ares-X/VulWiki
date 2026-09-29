@@ -86,14 +86,14 @@ methodParams 获取传入方法的参数，如果参数异常会报错导致无�
 [*   methodParams = "aaa"
 
 最终执行的反射代码为：Class.forName("java.lang.xxx").getDeclaredMethod("func", String.class).invoke(Class.forName("java.lang.xxx").newInstance(), "aaa")  
-​
+
 
 3、由于反射时所需要的：类、方法、参数都是我们可控的，所以我们只需传入一个能够执行命令的类方法就能达到 getshell 的目的，该类只需要满足如下几点要求即可：
 
 *   具有 public 类型的无参构造方法
 *   自身具有 public 类型且可以执行命令的方法
 
-​
+
 
 ](https://cdn.nlark.com/yuque/0/2021/png/357973/1639818296854-9ce2ab6a-6de9-43eb-a7d5-6c2f22258529.png#clientId=ue68eae55-4845-4&from=paste&height=900&id=u65218cab&margin=%5Bobject%20Object%5D&><img class=)
 

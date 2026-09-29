@@ -22,7 +22,7 @@ llama.cpp 曝出 RPC 服务零点击远程代码执行漏洞（CVE-2026-34159，
   
 - 攻击者能够访问RPC端口  
   
-目前 **360漏洞挖掘智能体已成功复现该漏洞**  
+目前 **360漏洞挖掘智能体已成功复现该漏洞**  
 。本文包含完整影响范围、修复方案、技术原理与复现细节，建议用户立即升级。  
   
   
@@ -61,30 +61,30 @@ llama.cpp 曝出 RPC 服务零点击远程代码执行漏洞（CVE-2026-34159，
   
 **核心代码（ggml-rpc.cpp:1158）：**  
 ```
-ggml_tensor * rpc_server::deserialize_tensor(struct ggml_context * ctx, const rpc_tensor * tensor){
+ggml_tensor * rpc_server::deserialize_tensor(struct ggml_context * ctx, const rpc_tensor * tensor){
 // [1] 解析 buffer 句柄
-    result->buffer = reinterpret_cast<ggml_backend_buffer_t>(tensor->buffer);
-if (result->buffer && buffers.find(result->buffer) == buffers.end()) {
-        result->buffer = nullptr;
-    }
+    result->buffer = reinterpret_cast<ggml_backend_buffer_t>(tensor->buffer);
+if (result->buffer && buffers.find(result->buffer) == buffers.end()) {
+        result->buffer = nullptr;
+    }
 // [2] 关键逻辑点：仅在 buffer != 0 时才执行边界校验 (Bounds Check)
-if (result->buffer) {
-uint64_t tensor_size  = (uint64_t) ggml_nbytes(result);
-uint64_t buffer_start = (uint64_t) ggml_backend_buffer_get_base(result->buffer);
-        GGML_ASSERT(tensor->data >= buffer_start && tensor->data + tensor_size <= buffer_start + buffer_size);
-    }
+if (result->buffer) {
+uint64_t tensor_size  = (uint64_t) ggml_nbytes(result);
+uint64_t buffer_start = (uint64_t) ggml_backend_buffer_get_base(result->buffer);
+        GGML_ASSERT(tensor->data >= buffer_start && tensor->data + tensor_size <= buffer_start + buffer_size);
+    }
 // ^^^^ 如果攻击者设置 tensor->buffer = 0，上述安全检查将被完全绕过
 // [3] 漏洞点：地址赋值无条件执行
-    result->data = reinterpret_cast<void *>(tensor->data); // <-- 攻击者完全控制的任意地址
-return result; 
+    result->data = reinterpret_cast<void *>(tensor->data); // <-- 攻击者完全控制的任意地址
+return result; 
 }
 ```  
   
 通过将 buffer 设为 0，攻击者可以使 result->data 指向进程空间的**任意虚拟地址**  
 。配合 GGML_OP_CPY 指令，攻击者可构造出针对服务器内存的任意读写原语。  
   
-在防御绕过层面，由于 **Full RELRO**  
- 仅保护 GOT 表，攻击者针对堆上分配的 ggml_backend_buffer_i 结构体（包含大量函数指针且可写）进行攻击。  
+在防御绕过层面，由于 **Full RELRO**  
+ 仅保护 GOT 表，攻击者针对堆上分配的 ggml_backend_buffer_i 结构体（包含大量函数指针且可写）进行攻击。  
   
 **ASLR 绕过**  
 ：泄露堆上虚表指针，逆向扫描 \x7fELF 确定库基址。  
