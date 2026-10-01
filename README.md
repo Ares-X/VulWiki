@@ -1,47 +1,47 @@
 # VulWiki
 
-> 中文漏洞知识库 · 实战导向 · 全部条目含漏洞信息与复现/利用方式
+> 中文漏洞知识库 · 实战导向 · 漏洞原理与复现资料
 
 **收录标准**：描述清楚漏洞原理/影响 + 提供利用方式（复现步骤/POC/EXP/验证方法）即收录；篇幅长短不是门槛。纯预警、无利用细节的条目不收。
 
-[![articles](https://img.shields.io/badge/文章-6057-blue)](INDEX.md) [![last](https://img.shields.io/badge/更新-持续-green)](#change-log)
+[![articles](https://img.shields.io/badge/内容Markdown-5596-blue)](INDEX.md) [![last](https://img.shields.io/badge/更新-持续-green)](#change-log)
 
 ## 简介
 
-VulWiki 收录有**完整漏洞信息和复现/利用方式**的中文漏洞文章。纯漏洞预警、无利用细节的条目一律不入库。
+VulWiki 以收录有**完整漏洞信息和复现/利用方式**的中文漏洞文章为目标。纯漏洞预警、无利用细节的条目不符合收录标准；历史批量导入内容正在按此标准复核，目录中的条目不代表已验证可利用。
 
-- 总量 **5673 篇**：Web安全 5233 / 系统安全 215 / IOT安全 225
-- 覆盖 CVE ~950 条（2021:102 2022:50 2023:57 2024:66 2025:44 2026:17）
-- 每篇含：漏洞描述 / 影响版本 / 网络测绘(FOFA) / 复现步骤或 POC / 参考链接
+- 2026-10-01 文件快照：**5596 个内容 Markdown**，Web安全 5157 / 系统安全 215 / IOT安全 224；含产品内 README，不含根目录概览与查询索引。站点侧栏数量随构建从文件生成。
+- CVE 查询见年份索引；正文提及的历史 CVE、主 CVE 字段和已验证漏洞不是同一统计口径。部分主 CVE 字段仍待校正。
+- 完整条目应含：漏洞描述 / 影响版本及前提 / 复现步骤或验证方法 / 参考来源；网络测绘指纹按实际情况提供，不适用时不应填充占位内容。
 - 多数文章带 YAML frontmatter（`cve` / `version` / `fofa`），可 grep 精确定位
 
 ## 快速检索（三索引）
 
 - [INDEX.md](INDEX.md) — 按漏洞类型→组件浏览（OA办公/ERP/中间件/CMS…17产品类型）
-- [INDEX-CVE.md](INDEX-CVE.md) — 按 CVE 年份定位（3894 个 CVE）
-- [INDEX-FOFA.md](INDEX-FOFA.md) — 按网络测绘指纹反查漏洞（446 条），FOFA/Hunter/Quake 直接可用
+- [INDEX-CVE.md](INDEX-CVE.md) — 按 CVE 年份定位
+- [INDEX-FOFA.md](INDEX-FOFA.md) — 按网络测绘指纹反查漏洞；使用前核对语法、测绘平台和适用范围
 - 命令行：`grep -r 'cve: "CVE-2024-21887"'` / `grep -r 'fofa' --include='*.md' -l`
 
 ## 目录结构
 
 ```
 Web安全/
-├── OA办公/          # 致远/泛微/通达/蓝凌/万户/金和… 322 篇
-├── ERP企业/         # 用友/金蝶/SAP/浪潮/明源… 233 篇
-├── CMS内容/         # WordPress/Discuz/DedeCMS… 788 篇
-├── 中间件/          # WebLogic/Tomcat/Nginx/Solr… 549 篇
-├── 开发框架/        # Spring/Struts2/Fastjson/Shiro… 704 篇
-├── 网络设备/        # Cisco/华为/华三/锐捷/Fortinet… 419 篇
-├── 商业软件/        # 商城/CRM/工单/进销存… 609 篇
-├── AI应用/          # Langflow/Ollama/ComfyUI/vLLM… 84 篇
-├── 桌面软件/        # WinRAR/WPS/浏览器/阅读器… 235 篇
-├── 安全设备/        # WAF/堡垒机/EDR/杀毒… 151 篇
-├── 云平台/          # VMware/K8s/Docker/OSS… 138 篇
-├── 服务器软件/      # Exim/Samba/SSH/Zabbix… 195 篇
-├── 数据库/          # MySQL/Oracle/Redis/达梦… 109 篇
-├── 智能设备/        # 海康/大华/摄像机/DVR/NVR… 121 篇
-├── 邮件系统/        # Exchange/ zimbra/ postfix… 56 篇
-├── 运维面板/        # 宝塔/1panel/nginxWebUI… 82 篇
+├── OA办公/          # 致远/泛微/通达/蓝凌/万户/金和…
+├── ERP企业/         # 用友/金蝶/SAP/浪潮/明源…
+├── CMS内容/         # WordPress/Discuz/DedeCMS…
+├── 中间件/          # WebLogic/Tomcat/Nginx/Solr…
+├── 开发框架/        # Spring/Struts2/Fastjson/Shiro…
+├── 网络设备/        # Cisco/华为/华三/锐捷/Fortinet…
+├── 商业软件/        # 商城/CRM/工单/进销存…
+├── AI应用/          # Langflow/Ollama/ComfyUI/vLLM…
+├── 桌面软件/        # WinRAR/WPS/浏览器/阅读器…
+├── 安全设备/        # WAF/堡垒机/EDR/杀毒…
+├── 云平台/          # VMware/K8s/Docker/OSS…
+├── 服务器软件/      # Exim/Samba/SSH/Zabbix…
+├── 数据库/          # MySQL/Oracle/Redis/达梦…
+├── 智能设备/        # 海康/大华/摄像机/DVR/NVR…
+├── 邮件系统/        # Exchange/ zimbra/ postfix…
+├── 运维面板/        # 宝塔/1panel/nginxWebUI…
 └── 其他软件/        # 未归类的待人工细分
 系统安全/  # Windows/Linux提权
 IOT安全/   # 摄像头/路由器/工控
@@ -49,7 +49,7 @@ IOT安全/   # 摄像头/路由器/工控
 
 ## 如何添加新的文章
 
-1. 找到对应分类与组件目录（没有就新建，放入对应字母分片）
+1. 找到对应分类与产品目录（没有就新建；勿用文章标题截断片段作为产品名称）
 2. Markdown 文件名即漏洞标题；正文含：漏洞描述、影响版本、网络测绘、复现/POC、参考
 3. 图片存放在当前 Markdown 同级 `.resource/文章名去括号/media/`，正文相对路径引用
 4. 文首加 frontmatter（cve / version / fofa / source），按时间倒序在 Change Log 添加记录
@@ -71,7 +71,7 @@ IOT安全/   # 摄像头/路由器/工控
 | [Vulhub](https://github.com/vulhub/vulhub) | 部分 docker 复现环境参考 |
 | 先知社区 / 跳跳糖 / Seebug / 安全客 / Y4er Blog 等 | 部分文章原始出处（文内已逐篇标注） |
 
-每篇文末的 `> 来源：` 脚注保留原始出处；引用内容仅作学习研究用途，严禁非法使用。
+每篇应通过 `source` 字段或文末 `> 来源：` 脚注保留逐篇原始出处；只写补库批次不能替代来源，历史缺失项待补齐。引用内容仅作学习研究用途，严禁非法使用。
 
 ## Change Log
 

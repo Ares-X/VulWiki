@@ -1,5 +1,5 @@
 ---
-version: "$res = preg_replace('@(\w+)'.$depr.'([^'.$depr.'\/]+)@e', '$var[\'\\1\']='\\2';'"
+version: "$res = preg_replace('@(\\w+)'.$depr.'([^'.$depr.'\\/]+)@e', '$var[\\'\\\\1\\']='\\\\2';'"
 source: "Threekiii/Vulnerability-Wiki"
 ---
 

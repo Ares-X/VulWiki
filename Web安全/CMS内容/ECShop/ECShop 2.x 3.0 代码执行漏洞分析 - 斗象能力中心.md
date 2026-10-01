@@ -1,5 +1,5 @@
 ---
-version: "$arr\[‘num’\] = intval($arr\[‘num’\]);"
+version: "$arr\\[‘num’\\] = intval($arr\\[‘num’\\]);"
 source: "MrWQ/vulnerability-paper"
 ---
 

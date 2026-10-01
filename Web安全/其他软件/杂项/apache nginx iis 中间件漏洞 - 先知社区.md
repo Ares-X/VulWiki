@@ -1,5 +1,5 @@
 ---
-version: "location ~ \.php$ {"
+version: "location ~ \\.php$ {"
 source: "MrWQ/vulnerability-paper"
 ---
 

@@ -1,5 +1,5 @@
 ---
-version: "vendor\laravel\framework\src\Illuminate\Foundation\Testing\PendingCommand.php"
+version: "vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Testing\\PendingCommand.php"
 source: "MrWQ/vulnerability-paper"
 ---
 

