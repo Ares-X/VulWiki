@@ -1,38 +1,36 @@
 ---
-source: "TD0U/WeaverScan"
+cve: ""
+fofa: "app=\"泛微-协同办公OA\""
+version: "未知"
+source: "https://github.com/PeiQi0/PeiQi-WIKI-Book/blob/90103c248a2c52bb0a060d0ee95d5a67e4579c3d/docs/wiki/oa/%E6%B3%9B%E5%BE%AEOA/%E6%B3%9B%E5%BE%AEOA%20E-Cology%20users.data%20%E6%95%8F%E6%84%9F%E4%BF%A1%E6%81%AF%E6%B3%84%E6%BC%8F.md"
 ---
 
 # 泛微OA users.data 敏感信息泄漏漏洞
 
 ## 漏洞描述
 
-泛微OA 的 `/messager/users.data` 接口存在未授权访问漏洞（缺陷编号 wooyun-2015-0129483）。该接口无需登录即可访问，返回经过 XML+base64 编码的用户信息数据，攻击者可解码获取系统中的用户账号等敏感信息。
+公开资料记录泛微 E-Cology 的 `/messager/users.data` 可暴露用户数据。响应中的编码不构成访问控制；解码后若包含不应向当前调用者公开的人员记录，即造成信息泄漏。
 
-## 漏洞影响
+## 影响范围与前提
 
-```
-泛微OA E-Cology
-```
+产品：泛微 E-Cology；具体受影响版本与修复范围未知。公开复现资料描述可直接下载，但仍需核对实际部署的认证状态和数据可见权限。
 
-## 网络测绘
+## 公开验证资料
 
-```
-app="泛微-协同办公OA"
-```
-
-## 漏洞复现
-
-```
+```http
 GET /messager/users.data HTTP/1.1
+Host: oa.example.com
 ```
 
-响应返回 XML 格式数据，其中用户信息经 base64 编码。解码后可获取用户账号、姓名等敏感信息，为进一步攻击（如密码碰撞、社工）提供基础数据。
+公开资料要求先作 Base64 解码，再按 GBK 解释文本。应根据实际响应结构提取待解码数据，不假定所有版本使用固定 XML 包装。只有解码后可识别出真实、非公开的用户记录，才能确认泄漏；HTTP 200、非空响应或 XML 标签均不足以判断。解码工作可离线进行，无需把数据发送至外部解码服务。
 
-参考 PoC（Go，来源 TD0U/WeaverScan）：
+## 修复建议
 
-```go
-func UsersData(target string) {
-    url := target + "/messager/users.data"
-    // GET 请求，响应 200 即存在未授权信息泄漏
-}
-```
+向厂商核对当前版本和对应安全更新；在修复前限制该接口的访问，并检查相关访问日志。
+
+## 参考来源
+
+- [公开资料 1](https://github.com/PeiQi0/PeiQi-WIKI-Book/blob/90103c248a2c52bb0a060d0ee95d5a67e4579c3d/docs/wiki/oa/%E6%B3%9B%E5%BE%AEOA/%E6%B3%9B%E5%BE%AEOA%20E-Cology%20users.data%20%E6%95%8F%E6%84%9F%E4%BF%A1%E6%81%AF%E6%B3%84%E6%BC%8F.md)
+- [公开资料 2](https://github.com/TD0U/WeaverScan/blob/5360245b20d5a6425c7684d104bf5fa7001d74fc/vulners/Wc11.go)
+
+来源已于 2026-10-02 静态核对；本文未在目标环境执行请求，公开 PoC 不代表本地复现通过。

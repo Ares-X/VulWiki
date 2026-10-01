@@ -1,40 +1,38 @@
 ---
+source: "https://github.com/R4gd0ll/I-Wanna-Get-All/blob/d8b866af4baed03a338ce8485c25b53875461776/src/main/java/exp/oa/yongyou/grp/yongyou_grpu8_dialogmoreUsercheck_sqli.java"
+version: "具体受影响版本范围未披露"
 fofa: "app=\"用友-GRP-U8\""
-source: "I-Wanna-Get-All/R4gd0ll"
 ---
 
 # 用友 GRP-U8 dialog_moreUser_check.jsp SQL注入漏洞
 
-# 漏洞描述
+## 漏洞描述
 
-用友 GRP-U8 /u8qx/dialog_moreUser_check.jsp 接口 mlid 参数存在 SQL 注入漏洞。攻击者可通过时间盲注执行任意 SQL 语句，获取数据库敏感信息。
+用友 GRP-U8 的 `/u8qx/dialog_moreUser_check.jsp` 接口存在 SQL 注入风险。公开 Java PoC 在 `mlid` 参数中使用 MSSQL 延时表达式。成功注入可能影响数据库数据；来源没有提供系统命令执行证据。
 
-# 影响版本
+## 影响范围
 
-用友 GRP-U8
+具体受影响版本范围未披露。本文按公开 PoC 所列产品记录，不据此扩展为全版本受影响。
 
-# **漏洞状态**
+## 公开验证方法
 
-| 漏洞细节 | 漏洞POC | 漏洞EXP | 在野利用 |
-|------|-------|-------|------|
-| 是 | 已公开 | 未公开 | 未知 |
-
-# 漏洞复现
-
-FOFA：app="用友-GRP-U8"
-
-POC/EXP：
-
-```
-GET /u8qx/dialog_moreUser_check.jsp?mlid=1';waitfor/**/+delay/**/+'0:0:3'-- HTTP/1.1
-Host: {{Hostname}}
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36
-Accept-Encoding: gzip, deflate
-Connection: close
+```http
+GET /u8qx/dialog_moreUser_check.jsp?mlid=1';WAITFOR+DELAY+'0:0:3'-- HTTP/1.1
+Host: example.invalid
 ```
 
-若响应延迟约 3 秒，则存在时间盲注；可进一步构造 MSSQL 报错/联合注入语句提取数据。
+原始代码使用大于 3000 毫秒的响应时长作为判定，未做基线或重复对照。公开模板中的延时条件属于检测线索。验证时需记录正常请求基线并重复对照，确认延时随注入值变化；单次慢响应、超时或 200 状态码均不足以确认 SQL 注入。本条目未进行本地复现。
 
-# 漏洞修复
+## 修复建议
 
-联系用友官方获取安全补丁，对 mlid 参数使用预编译语句并做严格过滤。
+向用友获取适用于当前版本的安全更新。修复时在对应数据库查询处使用参数化语句，并以最小权限数据库账户运行；修复后复核同一参数的正常请求与异常输入。
+
+## 参考链接
+
+- [R4gd0ll/I-Wanna-Get-All 原始 PoC（固定提交）](https://github.com/R4gd0ll/I-Wanna-Get-All/blob/d8b866af4baed03a338ce8485c25b53875461776/src/main/java/exp/oa/yongyou/grp/yongyou_grpu8_dialogmoreUsercheck_sqli.java)
+
+## 网络测绘
+
+```text
+app="用友-GRP-U8"
+```

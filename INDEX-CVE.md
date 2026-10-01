@@ -7,7 +7,7 @@ source: "历史归档批(无原始出处标注)"
 - [2026 年（531 条）](INDEX-CVE/year/2026.md)
 - [2025 年（479 条）](INDEX-CVE/year/2025.md)
 - [2024 年（550 条）](INDEX-CVE/year/2024.md)
-- [2023 年（299 条）](INDEX-CVE/year/2023.md)
+- [2023 年（300 条）](INDEX-CVE/year/2023.md)
 - [2022 年（162 条）](INDEX-CVE/year/2022.md)
 - [2021 年（192 条）](INDEX-CVE/year/2021.md)
 - [2020 年（222 条）](INDEX-CVE/year/2020.md)

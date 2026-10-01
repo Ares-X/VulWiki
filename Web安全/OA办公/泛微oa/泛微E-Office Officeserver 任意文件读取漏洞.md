@@ -1,53 +1,39 @@
 ---
-source: "7hang《安全研究 - 泛微OA》（博客园，wooyun-2015-0125638）"
+cve: ""
+fofa: "app=\"泛微-EOffice\""
+version: "未知"
+source: "https://github.com/PeiQi0/PeiQi-WIKI-Book/blob/90103c248a2c52bb0a060d0ee95d5a67e4579c3d/docs/wiki/oa/%E6%B3%9B%E5%BE%AEOA/%E6%B3%9B%E5%BE%AEOA%20E-Office%20officeserver.php%20%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E.md"
 ---
 
 # 泛微E-Office Officeserver 任意文件读取漏洞
 
 ## 漏洞描述
 
-泛微 E-Office 的 `/iweboffice/officeserver.php` 接口存在多处缺陷（缺陷编号 wooyun-2015-0125638）：
+泛微 E-Office 的 `/iweboffice/officeserver.php` 文件下载功能接收 `FILENAME`。公开资料使用 `OPTION=LOADFILE` 与相对路径读取程序目录之外的数据库配置文件，表明下载路径可能缺乏有效限制。
 
-**1. 任意文件读取**：`OPTION` 参数支持 `LOADFILE`、`LOADTEMPLATE`、`GETFILE` 三种读取模式，`FILENAME` 参数可控且未做有效过滤，攻击者无需登录即可读取服务器上的任意文件。
+## 影响范围与前提
 
-**2. 任意文件上传**：`OPTION=SAVEFILE` 模式下，`FILENAME` 参数可控，攻击者可将任意内容写入服务器指定路径，上传 Webshell 到 `/attachment/` 目录。
+产品：泛微 E-Office；具体版本和补丁范围未知。读取范围受服务进程权限约束，且目标文件必须存在。公开请求未携带 Cookie，具体部署的认证要求仍需核对。
 
-注：VulWiki 已收录该接口的 `OfficeServer.php` 文件上传变体（`weaver.common.OfficeServer` 类），本条目为同一接口的文件读取变体。
+## 公开验证资料
 
-## 漏洞影响
-
-```
-泛微 E-Office
-```
-
-## 网络测绘
-
-```
-app="泛微-EOffice"
-```
-
-## 漏洞复现
-
-**任意文件读取（三种模式）：**
-
-```
+```http
 GET /iweboffice/officeserver.php?OPTION=LOADFILE&FILENAME=../mysql_config.ini HTTP/1.1
+Host: oa.example.com
 ```
 
-```
-GET /iweboffice/officeserver.php?OPTION=LOADTEMPLATE&FILENAME=../mysql_config.ini HTTP/1.1
-```
+确认时应核对响应是否为目标配置文件的实际内容，例如具有相应 INI 结构及 `datauser`、`datapassword` 键值，而非错误页或 DBSTEP 协议头。HTTP 200 或 `DBSTEP` 单独出现不足以证明读取成功。
 
-```
-GET /iweboffice/officeserver.php?OPTION=GETFILE&FILENAME=../mysql_config.ini HTTP/1.1
-```
+此条只记录 `LOADFILE` 读取流程；没有把 Java 类 `weaver.common.OfficeServer`、其他 PHP 上传入口或未核实的 `SAVEFILE`、`GETFILE`、`LOADTEMPLATE` 行为混为同一漏洞。
 
-响应中将返回目标文件的内容，可读取数据库配置文件等敏感信息。
+## 修复建议
 
-**任意文件上传：**
+向厂商核对当前版本和对应安全更新；在修复前限制该接口的访问，并检查相关访问日志。
 
-```
-GET /iweboffice/officeserver.php?OPTION=SAVEFILE&FILENAME=../attachment/shell.php HTTP/1.1
-```
+## 参考来源
 
-配合写入 Webshell 内容，上传成功后访问 `/attachment/shell.php` 即可获取服务器控制权限。
+- [公开资料 1](https://github.com/PeiQi0/PeiQi-WIKI-Book/blob/90103c248a2c52bb0a060d0ee95d5a67e4579c3d/docs/wiki/oa/%E6%B3%9B%E5%BE%AEOA/%E6%B3%9B%E5%BE%AEOA%20E-Office%20officeserver.php%20%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E.md)
+- [公开资料 2](https://github.com/projectdiscovery/nuclei-templates/blob/8b9d065ccb0492d39f7680c908b3030a97ddfe1b/http/vulnerabilities/weaver/weaver-officeserver-lfi.yaml)
+- [公开资料 3](https://github.com/TD0U/WeaverScan/blob/5360245b20d5a6425c7684d104bf5fa7001d74fc/vulners/Wo6.go)
+
+来源已于 2026-10-02 静态核对；本文未在目标环境执行请求，公开 PoC 不代表本地复现通过。
