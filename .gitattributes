@@ -1,0 +1,3 @@
+# Markdown hard line breaks and preserved HTTP/PoC examples may use trailing spaces.
+# Keep those bytes; continue checking other whitespace problems.
+*.md whitespace=-blank-at-eol
