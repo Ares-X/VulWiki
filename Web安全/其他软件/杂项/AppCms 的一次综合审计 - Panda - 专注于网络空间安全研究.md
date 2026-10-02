@@ -1,8 +1,63 @@
 ---
 source: "MrWQ/vulnerability-paper"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "AppCms 的一次综合审计 - Panda - 专注于网络空间安全研究"
+product: "AppCMS PHP应用"
+record_type: "roundup"
+document_type: "CMS多漏洞综合审计"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "本地PHP5.2.17且magic_quotes_gpc关闭用于NUL截断；匿名上传与模板包含组合，具体CMS版本缺失"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/AppCms%20%E7%9A%84%E4%B8%80%E6%AC%A1%E7%BB%BC%E5%90%88%E5%AE%A1%E8%AE%A1%20-%20Panda%20-%20%E4%B8%93%E6%B3%A8%E4%BA%8E%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E5%AE%89%E5%85%A8%E7%A0%94%E7%A9%B6.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+source_url: "https://www.cnpanda.net/codeaudit/3.html"
+id: "vw-5448f36fa122ce49961911fd"
+entity_id: "ve-5448f36fa122ce49961911fd"
+schema_version: "1"
 ---
 
 # AppCms 的一次综合审计 - Panda - 专注于网络空间安全研究
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：AppCMS PHP应用
+- 文献类型：CMS多漏洞综合审计
+- 版本、权限及部署边界：本地PHP5.2.17且magic_quotes_gpc关闭用于NUL截断；匿名上传与模板包含组合，具体CMS版本缺失
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. pic.php使用readfile而不是include/require，不能执行PHP木马；正文把读取当文件包含RCE是核心技术错误
+2. 所示代码Base64解码后未再次URL解码，percent编码绕php/NUL过滤并自动变文件名的推断缺中间处理；Base64不是加密
+3. Content-Type image/php只影响客户端解释，不会让PHP解释器输出自身源码，所谓修改type直接下载源文件因果错误
+4. 真实index.php模板require链受.php后缀/NUL版本约束，作者创建phpinfo后成功不能证明任意敏感文件读取；上传随机名是明确前提
+5. 过滤对象为url尾扩展名，正文却称type限制四格式；代码和说明正则损坏且大量转义下划线/方括号不可运行
+6. 两个XSS来自同一模板链且重复同图，需区分sink与可直接访问入口；输入过滤不是所有HTML上下文的充分修复
+7. 保留原作者链接与失败SQLi观察，补精确版本/补丁；open_basedir不是通用修复，移除支付二维码
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://www.cnpanda.net/codeaudit/3.html>
+- 原文参考链接（未重新核验）：<http://ksria.com/simpread/>
+- 原文参考链接（未重新核验）：<https://github.com/MrWQ/vulnerability-paper>
+
+### 归档技术正文
 
 <meta name="referrer" content="no-referrer"/>
 \> 本文由 \[简悦 SimpRead\](http://ksria.com/simpread/) 转码， 原文地址 \[www.cnpanda.net\](https://www.cnpanda.net/codeaudit/3.html)
@@ -193,7 +248,7 @@ if(isset($\_GET\['url'\]) && trim($\_GET\['url'\]) != '' && isset($\_GET\['type'
 
 直接构建 playload：
 
-> [http://localhost/app/templates/m/search.php?q](http://localhost/app/templates/m/search.php?q)\="/><script>alert('xss')</script>
+> [http://localhost/app/templates/m/search.php?q](http://localhost/app/templates/m/search.php?q)\="/>&lt;script&gt;alert('xss')&lt;/script&gt;
 
 成功触发漏洞。
 
@@ -210,7 +265,7 @@ if(isset($\_GET\['url'\]) && trim($\_GET\['url'\]) != '' && isset($\_GET\['type'
 
 同上，直接构造 playload：
 
-> [http://localhost/app/templates/m/search.php?q=a<](http://localhost/app/templates/m/search.php?q=a%3C);/title><script>alert('xss')</script>
+> [http://localhost/app/templates/m/search.php?q=a<](http://localhost/app/templates/m/search.php?q=a%3C);/title>&lt;script&gt;alert('xss')&lt;/script&gt;
 
 成功触发漏洞。
 

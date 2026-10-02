@@ -1,8 +1,66 @@
 ---
 source: "MrWQ/vulnerability-paper"
+cve: "CVE-2022-0135;CVE-2022-0175"
+identifier_role: "primary"
+primary_identifiers: "CVE-2022-0135;CVE-2022-0175"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "3D GPU  加速QEMU逃逸"
+product: "virglrenderer与QEMU virtio-gpu"
+record_type: "analysis"
+document_type: "GPU虚拟化逃逸源码研究"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "Guest具render设备访问且宿主启用virgl 3D；Ubuntu特定virglrenderer与堆布局，四缺陷中两项整数下溢无编号"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/3D%20GPU%20%20%E5%8A%A0%E9%80%9FQEMU%E9%80%83%E9%80%B8.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+source_url: "https://vul.360.net/archives/368"
+id: "vw-5c37d2b365edb02a43d407a2"
+entity_id: "ve-5c37d2b365edb02a43d407a2"
+schema_version: "1"
 ---
 
 # 3D GPU  加速QEMU逃逸
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：virglrenderer与QEMU virtio-gpu
+- 文献类型：GPU虚拟化逃逸源码研究
+- 版本、权限及部署边界：Guest具render设备访问且宿主启用virgl 3D；Ubuntu特定virglrenderer与堆布局，四缺陷中两项整数下溢无编号
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 主产品为virglrenderer，QEMU是集成环境；四缺陷只有两CVE，需四候选实体及两漏洞实际组合关系
+2. PIPE_TEXTURE_2D_ARRAY采样值说明与紧前映射表不一致：文字nr_samples1为GL_TEXTURE_2D，表中正值为MULTISAMPLE_ARRAY，需按源码纠正
+3. RESOURCE_ATTACH_BACKING调用链写virgl_cmd_ctx_attach_resource与前表命令映射不一致，可能抄错函数
+4. 虽根因/原语/补丁追踪独立完整，缺QEMU/virglrenderer/glibc精确版本、启动参数、包修复矩阵及完整PoC附件
+5. Guest用户态可达不等于任意Guest均有权限，宿主QEMU进程执行不自动宿主root，需沙箱配置
+6. 保留历史披露与上下游补丁漏同步经验；2021/2022当时未修复不能写作当前状态，原作者推测开发者行为应保留推测标记
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://vul.360.net/archives/368>
+- 原文参考链接（未重新核验）：<http://ksria.com/simpread/>
+- 原文参考链接（未重新核验）：<https://gsec.hitb.org/materials/sg2017/D2%20-%20Qiang%20Li%20and%20ZhiBin%20Hu%20-%20QEMU%20Attack%20Surface%20and%20Security%20Internals.pdf>
+- 原文参考链接（未重新核验）：<https://www.blackhat.com/asia-20/briefings/schedule/index.html#d-red-pill--a-guest-to-host-escape-on-qemukvm-virtio-device-18583>
+- 原文参考链接（未重新核验）：<https://gitlab.freedesktop.org/virgl/virglrenderer/-/commit/673f4d0c1dfe78f66e8d7f036c619065800022de>
+- 原文参考链接（未重新核验）：<https://github.com/MrWQ/vulnerability-paper>
+
+### 归档技术正文
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [vul.360.net](https://vul.360.net/archives/368)
