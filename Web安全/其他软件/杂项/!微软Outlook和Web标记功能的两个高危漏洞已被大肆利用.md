@@ -1,9 +1,64 @@
 ---
-cve: "CVE-2023-23397"
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2023-23397;CVE-2023-24880;CVE-2023-23415;CVE-2023-23392;CVE-2023-23416;CVE-2022-43552;CVE-2022-23257;CVE-2022-23825;CVE-2022-23816"
+identifier_role: "primary"
+primary_identifiers: "CVE-2023-23397;CVE-2023-24880;CVE-2023-23415;CVE-2023-23392;CVE-2023-23416;CVE-2022-43552;CVE-2022-23257;CVE-2022-23825;CVE-2022-23816"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "微软Outlook和Web标记功能的两个高危漏洞已被大肆利用"
+product: "Microsoft Outlook、SmartScreen及Windows组件"
+record_type: "roundup"
+document_type: "月度补丁多漏洞新闻"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "2023-03更新；Outlook自动处理邮件，其他组件各自条件未完整给出"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/%21%E5%BE%AE%E8%BD%AFOutlook%E5%92%8CWeb%E6%A0%87%E8%AE%B0%E5%8A%9F%E8%83%BD%E7%9A%84%E4%B8%A4%E4%B8%AA%E9%AB%98%E5%8D%B1%E6%BC%8F%E6%B4%9E%E5%B7%B2%E8%A2%AB%E5%A4%A7%E8%82%86%E5%88%A9%E7%94%A8.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-9cc54428aa66de1e03a31f3c"
+entity_id: "ve-9cc54428aa66de1e03a31f3c"
+schema_version: "1"
 ---
 
-#  紧急修复!微软Outlook和Web标记功能的两个高危漏洞已被大肆利用   
+# 微软Outlook和Web标记功能的两个高危漏洞已被大肆利用
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Microsoft Outlook、SmartScreen及Windows组件
+- 文献类型：月度补丁多漏洞新闻
+- 版本、权限及部署边界：2023-03更新；Outlook自动处理邮件，其他组件各自条件未完整给出
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 元数据只23397但正文含九项更新及未编号EoP，需多实体，旧四项是此次修订而非全新漏洞
+2. Outlook在客户端处理恶意邮件触发却称电子邮件服务器端触发，明确技术层级错误；Net-NLMv2笔误
+3. 23415省略原始套接字应用监听条件，23392省略HTTP3/I/O缓冲，范围因省略而扩大
+4. Net-NTLMv2挑战响应不等于直接明文或密码哈希，冒充还需中继/破解条件
+5. 74/85及6/9统计已解释口径不同，保留该差异勿当必然错误；24/72小时是厂商建议非统一标准
+6. 微软具体KB/公告缺失，保留ZDI/Automox/媒体源，关联桌面178简报但保留额外更新内容
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://www.darkreading.com/vulnerabilities-threats/microsoft-zero-day-bugs-security-feature-bypass>
+- 原文参考链接（未重新核验）：<https://www.automox.com/blog/patch-tuesday-march-2023>
+- 原文参考链接（未重新核验）：<https://www.zerodayinitiative.com/blog/2023/3/14/the-march-2023-security-update-review>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
  网络安全应急技术国家工程中心   2023-03-17 14:44  
   
 微软在本月的补丁星期二发布延续了自2022年6月以来修复零日漏洞的趋势。3月14日的补丁星期二共修复了85个漏洞，其中9个是关键漏洞。其中两个被积极利用的零日漏洞尤其显眼，一个（CVE-2023-23397）在几乎无处不在的Outlook应用程序中，允许攻击者在窃取用户的Net-NTLMv2哈希。另一个（CVE-2023-24880）是绕过Windows SmartScreen中的另一个安全功能。在尚未被利用的关键漏洞中，还有一个影响互联网控制消息协议(ICMP)中大多数Windows操作系统的关键远程代码执行漏洞CVE-2023-23415。网络安全专家建议组织在24小时内修补上述两个已被利用的零日漏洞。   
@@ -22,7 +77,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
   
 该错误之所以危险，是因为攻击者只需发送一封特制的电子邮件即可触发它，Outlook会在用户甚至在预览窗格中查看它之前检索并处理该电子邮件。  
   
-“这是因为该漏洞是在电子邮件服务器端触发的，这意味着在受害者查看恶意电子邮件之前就会发生利用，”Tenable高级研究工程师Satnam Narang在一封电子邮件评论中说。攻击者可以使用受害者的Net-NLMv2哈希进行攻击，利用NTLM质询-响应机制并允许对手以用户身份进行身份验证。  
+“这是因为该漏洞是在Outlook 客户端处理恶意邮件时触发的，这意味着在受害者查看恶意电子邮件之前就会发生利用，”Tenable高级研究工程师Satnam Narang在一封电子邮件评论中说。攻击者可以使用受害者的Net-NTLMv2哈希进行攻击，利用NTLM质询-响应机制并允许对手以用户身份进行身份验证。  
   
 ZDI研究员Dustin Childs在一篇总结了微软3月补丁星期二更新中最重要漏洞的博客文章中补充说，这使得该错误更像是一个身份验证绕过漏洞，而不是特权升级问题。禁用预览窗格选项不会减轻威胁，因为该漏洞甚至在此之前就已被触发。  
   
@@ -82,4 +137,4 @@ Automox还建议组织在72小时内解决CVE-2023-23416，这是Windows加密�
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）
