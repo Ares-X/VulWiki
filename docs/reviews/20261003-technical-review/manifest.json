@@ -1,0 +1,64 @@
+{
+  "package": "VulWiki round 3 audit package",
+  "baseline_commit": "d8178134424d0d2f6e051454d8ea761bc2049901",
+  "article_count": 2960,
+  "unique_identifier_evidence_rows": 1951,
+  "raw_official_json_bundled": 0,
+  "raw_official_json_records_available_for_hash_checked_retrieval": 1804,
+  "raw_official_json_source_bytes_hash_checked": 21492232,
+  "version_review_rows": 46,
+  "product_mismatch_review_articles": 13,
+  "product_mismatch_pairs": 14,
+  "mismatch_source_lines_verified": 28,
+  "ledger_official_evidence_references": 1951,
+  "identifier_cache_status_counts": {
+    "no_cached_record": 142,
+    "downloaded": 1791,
+    "http_error": 5,
+    "downloaded_root_supplement": 13
+  },
+  "portable_files": {
+    "README.md": {
+      "sha256": "98d745cef5c77210ae7395fe3078b1993234d2de7e519c84d39c05fb2e975782",
+      "bytes": 3850
+    },
+    "article-ledger.jsonl": {
+      "sha256": "52b9c5df37a13bd893ff0d847455f1671e4586113464803603b6626c611c9980",
+      "bytes": 13521330
+    },
+    "official-evidence-index.jsonl": {
+      "sha256": "63dba959a279c0ecb028883abc0f86c9b15cd2d47342c556d6a3feee873c445d",
+      "bytes": 5129256
+    },
+    "product-mismatch-review.jsonl": {
+      "sha256": "e390d26f4e395e5b7f93f97ffdee32b802352eb686426459ea278e3a36a5f1ca",
+      "bytes": 44428
+    },
+    "version-review.jsonl": {
+      "sha256": "6910de00d401551c74efedea0b83eb91de695ecc1ec058fe3e58fa1f05a3d8cb",
+      "bytes": 274473
+    }
+  },
+  "source_artifact_provenance": {
+    "ledger": {
+      "original_tmp_path": "/tmp/vulwiki-round3-official-review.normalized-ledger-v6.jsonl",
+      "sha256": "11275b47c527653f493be88e8e72d6e57f1d238e17feaf5af9a247055989b1bb",
+      "bytes": 7535652
+    },
+    "evidence_index": {
+      "original_tmp_path": "/tmp/vulwiki-round3-official-review.cve-evidence-index-v5.jsonl",
+      "sha256": "034656e2ff0cfbdb8329b0c0dec323e8622f1b16df90025204e6118ee666a4ca",
+      "bytes": 4356649
+    },
+    "version_review": {
+      "original_tmp_path": "/tmp/vulwiki-round3-official-review.version-priority-annotated-v3.jsonl",
+      "sha256": "c830f299f380da1b5a09c052aef95b0e333df3ccef25b9d4c0fca5228781f934",
+      "bytes": 308508
+    },
+    "mismatch_review": {
+      "original_tmp_path": "/tmp/vulwiki-round3-official-review.product-mismatch-manual-batch01.jsonl",
+      "sha256": "8c85c4abe86b4d8d21ce7b5f92967dbcea75a7f828a5cb1c517242f5341b7dd7",
+      "bytes": 30155
+    }
+  }
+}

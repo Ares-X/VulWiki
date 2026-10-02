@@ -1,0 +1,107 @@
+[
+  {
+    "path": "Web安全/OA办公/致远OA/OpenPrinting-Cups-Browsed-PDD-FoomaticRIPCommandLine-参数导致远程命令执行漏洞-CVE-2024-47177.md",
+    "key": "2c6e433518ba95c870e4cc75",
+    "code": "identifier_inactive",
+    "cve": "CVE-2024-47177",
+    "reason": "Pre-existing historical identifier was retained with an unverified/active status. Official CNA rejection is now confirmed and remains visible as identifier_inactive warning; no scanner rule or fatal gate changed.",
+    "evidence": [
+      {
+        "cve": "CVE-2024-47177",
+        "state": "REJECTED",
+        "rejected_reasons": [
+          {
+            "lang": "en",
+            "value": "** REJECT ** DO NOT USE THIS CANDIDATE NUMBER. ConsultIDs: CVE-2024-47076, CVE-2024-47175, CVE-2024-47176. Reason: This candidate is a duplicate of CVE-2024-47076, CVE-2024-47175, and CVE-2024-47176. Notes: All CVE users should reference CVE-2024-47076, CVE-2024-47175, and/or CVE-2024-47176 instead of this candidate. This CVE was issued to a vulnerability that is dependent on CVE-2024-47076, CVE-2024-47175, and CVE-2024-47176. According to rule 4.2.15 of the CVE CNA rules, \\\"CNAs MUST NOT assign a different CVE ID to a Vulnerability that is fully interdependent with another Vulnerability. The Vulnerabilities are effectively the same single Vulnerability and MUST use one CVE ID."
+          }
+        ],
+        "sha256": "8d3dec12fbd98a45fb38739bb424723204c2201094b8150a6aef06a9daf34620",
+        "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2024/47xxx/CVE-2024-47177.json"
+      }
+    ]
+  },
+  {
+    "path": "Web安全/安全设备/360/【技术干货】CVE-2022-41852 Apache Commons Jxpath命令执行漏洞分析.md",
+    "key": "8df01b434ee0047f445df67e",
+    "code": "identifier_inactive",
+    "cve": "CVE-2022-41852",
+    "reason": "Pre-existing historical identifier was retained with an unverified/active status. Official CNA rejection is now confirmed and remains visible as identifier_inactive warning; no scanner rule or fatal gate changed.",
+    "evidence": [
+      {
+        "cve": "CVE-2022-41852",
+        "state": "REJECTED",
+        "rejected_reasons": [
+          {
+            "lang": "en",
+            "value": "DO NOT USE THIS CANDIDATE NUMBER. ConsultIDs: none. Reason: This candidate was withdrawn by its CNA. Further investigation showed that it was not a security issue. Notes: none."
+          }
+        ],
+        "sha256": "9f57eeb5602eb299ad1194eacdac3f851de3ab024d1ca855fefaa69789deda49",
+        "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2022/41xxx/CVE-2022-41852.json"
+      }
+    ]
+  },
+  {
+    "path": "Web安全/开发框架/Laravel/（CVE-2019-9081）Laravel 5.7 反序列化rce.md",
+    "key": "763571605708b341b76b50b7",
+    "code": "identifier_inactive",
+    "cve": "CVE-2019-9081",
+    "reason": "Pre-existing historical identifier was retained with an unverified/active status. Official CNA rejection is now confirmed and remains visible as identifier_inactive warning; no scanner rule or fatal gate changed.",
+    "evidence": [
+      {
+        "cve": "CVE-2019-9081",
+        "state": "REJECTED",
+        "rejected_reasons": [
+          {
+            "lang": "en",
+            "value": "DO NOT USE THIS CANDIDATE NUMBER. ConsultIDs: none. Reason: This candidate was withdrawn by its CNA. Further investigation showed that it was not a security issue. Notes: none"
+          }
+        ],
+        "sha256": "4199575939e27a744712c771e2f4cea0b53eea7489b0cc68ffc287a1a2440607",
+        "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2019/9xxx/CVE-2019-9081.json"
+      }
+    ]
+  },
+  {
+    "path": "Web安全/服务器软件/Linux/Linux 内核越界写入漏洞(CVE-2025-0927).md",
+    "key": "52944ea06ade42c11a80616b",
+    "code": "identifier_inactive",
+    "cve": "CVE-2025-0927",
+    "reason": "Pre-existing historical identifier was retained with an unverified/active status. Official CNA rejection is now confirmed and remains visible as identifier_inactive warning; no scanner rule or fatal gate changed.",
+    "evidence": [
+      {
+        "cve": "CVE-2025-0927",
+        "state": "REJECTED",
+        "rejected_reasons": [
+          {
+            "lang": "en",
+            "value": "This CVE ID has been rejected or withdrawn by its CVE Numbering Authority. Filesystem bugs due to corrupt images are not considered a CVE for any filesystem that is only mountable by CAP_SYS_ADMIN in the initial user namespace. That includes delegated mounting."
+          }
+        ],
+        "sha256": "058cdde95c869388fb85e3ca0f5efa59bd6f2cb383ef634a281fc9c620b5ec8a",
+        "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2025/0xxx/CVE-2025-0927.json"
+      }
+    ]
+  },
+  {
+    "path": "Web安全/网络设备/Cisco/CVE-2026-0866 Cisco ClamAV ZIP扫描引擎绕过漏洞.md",
+    "key": "ff4e3b10e7898c2fad5cf928",
+    "code": "identifier_inactive",
+    "cve": "CVE-2026-0866",
+    "reason": "Pre-existing historical identifier was retained with an unverified/active status. Official CNA rejection is now confirmed and remains visible as identifier_inactive warning; no scanner rule or fatal gate changed.",
+    "evidence": [
+      {
+        "cve": "CVE-2026-0866",
+        "state": "REJECTED",
+        "rejected_reasons": [
+          {
+            "lang": "en",
+            "value": "After the publication of the PoC by the researcher and further analysis, we have determined that this issue does not constitute a valid vulnerability. The technique described is an obfuscation method and does not bypass or impact any implicit or explicit security controls."
+          }
+        ],
+        "sha256": "723e8effc0f879e30b8ca873bbb1502f9992edd357e08c8c8dd54cbcaf991ca0",
+        "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2026/0xxx/CVE-2026-0866.json"
+      }
+    ]
+  }
+]

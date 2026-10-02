@@ -6,21 +6,19 @@
   "indexed_sources": 5595,
   "issues": {
     "embedded_code_candidate": 1,
-    "empty_fence": 176,
+    "empty_fence": 91,
     "fingerprint_unverified": 800,
-    "identifier_inactive": 22,
+    "identifier_inactive": 27,
     "identifier_role_unknown": 216,
-    "image_missing": 1,
-    "link_missing": 4,
     "noncontent_link_candidate": 34,
     "path_legacy": 2,
     "site_relative_link": 81,
     "source_missing": 3856,
     "unrecognized_identifier_namespace": 88
   },
-  "primary_cve_identifiers": 3152,
+  "primary_cve_identifiers": 3143,
   "primary_entries": 5501,
   "schema_version": 1,
-  "source_digest": "44c6fb834d8cd3091dfe9991471f2f4215b6adee9bd1e34343dc2eb9e3f6717c",
+  "source_digest": "9152fc4ffe2a1847f993afabef155be489684b3de676e525f431812394326945",
   "verification": "offline-static-only"
 }

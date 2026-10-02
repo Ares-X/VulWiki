@@ -28,6 +28,10 @@
 
 - [D-Link DIR-818LW / DIR-822 命令注入（CVE-2018-19986）](../IOT%E5%AE%89%E5%85%A8/D-Link/%EF%BC%88CVE-2018-19986%EF%BC%89D-Link%20DIR-818LW%26828%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md) [vulnerability; not-reproduced; needs-review]
 
+## D-Link DIR-859
+
+- [D-Link DIR-859 未认证信息泄露（CVE-2019-20213；原题为 rce）](../IOT%E5%AE%89%E5%85%A8/D-Link/%EF%BC%88CVE-2019%E2%80%9320213%EF%BC%89D-Link%20DIR-859%20rce.md) [vulnerability; not-reproduced; needs-review]
+
 ## D-Link DIR619L RevB/DIR605L RevB
 
 - [（CVE-2018-20056）D-Link DIR-619L&605L 栈溢出漏洞](../IOT%E5%AE%89%E5%85%A8/D-Link/%EF%BC%88CVE-2018-20056%EF%BC%89D-Link%20DIR-619L%26605L%20%E6%A0%88%E6%BA%A2%E5%87%BA%E6%BC%8F%E6%B4%9E.md) [analysis; not-reproduced; needs-review]
@@ -59,10 +63,6 @@
 ## D-Link DIR859 MIPS32
 
 - [D-Link DIR-859 UPnP 命令注入（CVE-2019-17621）](../IOT%E5%AE%89%E5%85%A8/D-Link/%EF%BC%88CVE-2019%E2%80%9317621%EF%BC%89D-Link%20DIR-859%20rce.md) [analysis; not-reproduced; needs-review]
-
-## D-Link DIR859声称
-
-- [（CVE-2019–20213）D-Link DIR-859 rce](../IOT%E5%AE%89%E5%85%A8/D-Link/%EF%BC%88CVE-2019%E2%80%9320213%EF%BC%89D-Link%20DIR-859%20rce.md) [vulnerability; not-reproduced; needs-review]
 
 ## D-Link DIR895L A1_102b07
 

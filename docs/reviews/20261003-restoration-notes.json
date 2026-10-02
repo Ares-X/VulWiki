@@ -1,0 +1,86 @@
+[
+  {
+    "path": "Web安全/网络设备/MikroTik RouterOS/利用RouterOS（CVE-2022-3496）漏洞，将符号链接作为挂载入口获取代码执行.md",
+    "fields": {},
+    "note": "本轮已按公开原文逐段恢复原有 14 处空代码块中的 14 处，仍有 0 处无法确认原文对应内容。恢复只填入已有空围栏，原有正文、解释、代码和公开测试值均保留；原归档已经存在的占位符不猜补。下文早期校订中关于代码缺失的描述属于恢复前状态，本次逐块处理结果见仓库审计清单 docs/reviews/20261003-empty-block-dispositions.json。本库未执行这些代码，也未据恢复内容将文章标记为已复现。",
+    "evidence": {
+      "manifest": "docs/reviews/20261003-empty-block-restoration.json",
+      "original_empty_blocks": 14,
+      "restored": 14,
+      "remaining": 0
+    },
+    "before_sha256": "1402a2839434456fc1b65b33baf55322dec725066b548df0aa9a02b337c92f21",
+    "after_sha256": "5f81e3a6bdc09080283f55afae47b41af1102342fe928929211c38861a0034d7",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/网络设备/D-Link/【技术分享】CVE-2019-10999 Dlink IP 摄像头缓冲区溢出.md",
+    "fields": {},
+    "note": "本轮已按公开原文逐段恢复原有 8 处空代码块中的 7 处，仍有 1 处无法确认原文对应内容。恢复只填入已有空围栏，原有正文、解释、代码和公开测试值均保留；原归档已经存在的占位符不猜补。下文早期校订中关于代码缺失的描述属于恢复前状态，本次逐块处理结果见仓库审计清单 docs/reviews/20261003-empty-block-dispositions.json。本库未执行这些代码，也未据恢复内容将文章标记为已复现。",
+    "evidence": {
+      "manifest": "docs/reviews/20261003-empty-block-restoration.json",
+      "original_empty_blocks": 8,
+      "restored": 7,
+      "remaining": 1
+    },
+    "before_sha256": "d3f02ce23ae3520b5c5906e0538df7ec541570f8688aaeecd204579c50af5bac",
+    "after_sha256": "87bc074e2a27d19fc8f8dbc094aacc5e2bf8df68858c52b2e4b482131b767033",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/开发框架/Git/CVE-2026-31900：一个过于宽松的正则表达式如何在 psf-black 的 GitHub Action 中导致 RCE.md",
+    "fields": {},
+    "note": "本轮已按公开原文逐段恢复原有 29 处空代码块中的 23 处，仍有 6 处无法确认原文对应内容。恢复只填入已有空围栏，原有正文、解释、代码和公开测试值均保留；原归档已经存在的占位符不猜补。下文早期校订中关于代码缺失的描述属于恢复前状态，本次逐块处理结果见仓库审计清单 docs/reviews/20261003-empty-block-dispositions.json。本库未执行这些代码，也未据恢复内容将文章标记为已复现。 恢复的验证脚本会启动 pip 子进程；pip 的 --dry-run 不保证不联网，因此原文“不会产生网络请求”的表述不能作为运行保证。",
+    "evidence": {
+      "manifest": "docs/reviews/20261003-empty-block-restoration.json",
+      "original_empty_blocks": 29,
+      "restored": 23,
+      "remaining": 6
+    },
+    "before_sha256": "c70ca7704453701007be14acdb5fdf9698579922f16d8690a2fe16ba9cb23f79",
+    "after_sha256": "d01aef7cc624f4fe8dbc81e273e1dbca7d4bad51658d1f00bfa6fe2cf90dd6bf",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/网络设备/D-Link/CVE-2018-17066复现（D-Link命令注入漏洞）.md",
+    "fields": {},
+    "note": "本轮已按公开原文逐段恢复原有 23 处空代码块中的 16 处，仍有 7 处无法确认原文对应内容。恢复只填入已有空围栏，原有正文、解释、代码和公开测试值均保留；原归档已经存在的占位符不猜补。下文早期校订中关于代码缺失的描述属于恢复前状态，本次逐块处理结果见仓库审计清单 docs/reviews/20261003-empty-block-dispositions.json。本库未执行这些代码，也未据恢复内容将文章标记为已复现。",
+    "evidence": {
+      "manifest": "docs/reviews/20261003-empty-block-restoration.json",
+      "original_empty_blocks": 23,
+      "restored": 16,
+      "remaining": 7
+    },
+    "before_sha256": "6ab8104980077f685a0ba4a58614a5772e46f290a504fa738d21a0647a33d924",
+    "after_sha256": "9909ad6787e85a443ddff42d23ce5108f39397057c2dc066105ae50a82e6da8f",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/开发框架/GitLab/GitLab-任意文件读取导致RCE-CVE-2020-10977.md",
+    "fields": {},
+    "note": "本轮已按公开原文逐段恢复原有 1 处空代码块中的 1 处，仍有 0 处无法确认原文对应内容。恢复只填入已有空围栏，原有正文、解释、代码和公开测试值均保留；原归档已经存在的占位符不猜补。下文早期校订中关于代码缺失的描述属于恢复前状态，本次逐块处理结果见仓库审计清单 docs/reviews/20261003-empty-block-dispositions.json。本库未执行这些代码，也未据恢复内容将文章标记为已复现。",
+    "evidence": {
+      "manifest": "docs/reviews/20261003-empty-block-restoration.json",
+      "original_empty_blocks": 1,
+      "restored": 1,
+      "remaining": 0
+    },
+    "before_sha256": "c1390db365e1d1557034ecba168127627416a679d9b96cd628d880be39008481",
+    "after_sha256": "51c54ad276255efca0654893d4365e22d802f93fe2478641cd0980ea28e0c769",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/网络设备/DrayTek/Vigor3900 CVE-2021-43118 命令注入漏洞分析.md",
+    "fields": {},
+    "note": "本轮已按公开原文逐段恢复原有 24 处空代码块中的 24 处，仍有 0 处无法确认原文对应内容。恢复只填入已有空围栏，原有正文、解释、代码和公开测试值均保留；原归档已经存在的占位符不猜补。下文早期校订中关于代码缺失的描述属于恢复前状态，本次逐块处理结果见仓库审计清单 docs/reviews/20261003-empty-block-dispositions.json。本库未执行这些代码，也未据恢复内容将文章标记为已复现。 其中 5 个恢复块是原文用于标示小节的文字，计为文本恢复，不计为新增可执行代码。",
+    "evidence": {
+      "manifest": "docs/reviews/20261003-empty-block-restoration.json",
+      "original_empty_blocks": 24,
+      "restored": 24,
+      "remaining": 0
+    },
+    "before_sha256": "3134dc7979e30a161ec8dfc0e8b10fd2afe070ec2ce87fd07fe2e9237ffcf769",
+    "after_sha256": "05defa38dc252abb1104b93fc5fa872048d121a81003123b5272e351310b7958",
+    "original_body_preserved": true
+  }
+]

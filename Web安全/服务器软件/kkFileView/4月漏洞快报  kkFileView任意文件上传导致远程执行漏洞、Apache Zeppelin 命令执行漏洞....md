@@ -7,9 +7,9 @@ review_status: "text-reviewed"
 verification_status: "not-reproduced"
 content_status: "needs-review"
 identifier_status: "active"
-primary_identifiers: "CVE-2024-3400; CVE-2024-31861; CVE-2024-27980"
-referenced_identifiers: ""
-identifier_role: "primary"
+primary_identifiers: "CVE-2024-3400; CVE-2024-27980"
+referenced_identifiers: "CVE-2024-31861"
+identifier_role: "reference"
 cve: "CVE-2024-3400; CVE-2024-31861; CVE-2024-27980"
 prerequisites: "kkFileView上传/解压启用及可写转换脚本；PAN-OS特定GlobalProtect配置；Zeppelin可建sh解释器Notebook；Node Windows批处理+受控参数"
 source_status: "unknown"
@@ -18,6 +18,10 @@ id: "vw-4122e3d1065a993ad665cb11"
 entity_id: "ve-4122e3d1065a993ad665cb11"
 schema_version: "1"
 ---
+
+## 2026-10-03 编号核验
+
+Apache 已于 2024-06-21 撤销 CVE-2024-31861，理由是进一步调查确认该项不是安全问题。因此该编号仅作为历史引用保留，不再进入本篇主漏洞编号索引；正文对 Zeppelin sh 解释器正常命令执行能力的描述不应继续被当成该 CVE 有效成立的证明。此处理仅针对 Zeppelin 编号，保留本篇 PAN-OS CVE-2024-3400、Node.js CVE-2024-27980 的主编号和全部原归档材料；不由一个撤销编号否定其余产品章节。
 
 # 4月漏洞快报 | kkFileView任意文件上传导致远程执行漏洞、Apache Zeppelin 命令执行漏洞...
 

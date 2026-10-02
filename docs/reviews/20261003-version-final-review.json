@@ -1,0 +1,26 @@
+{
+  "reviewed_manifest": "docs/reviews/20261003-version-corrections.json",
+  "review_scope": "Read-only item-by-item comparison of all 41 version corrections against current frontmatter, manifest evidence, pinned CNA cache hashes, and the parent agent's recorded primary-source decisions. No PoC or live target was used.",
+  "result": "No actionable version-field or editorial factual error found in the 41 applied corrections.",
+  "checks": {
+    "manifest_items": 41,
+    "after_sha256_matches_current_file": 41,
+    "current_version_field_matches_manifest_after": 41,
+    "official_record_sha256_checked": 47,
+    "official_record_hash_failures": 0,
+    "body_original_preservation_flag": "true on all manifest rows"
+  },
+  "review_points": [
+    "Struts CVE-2024-53677 uses CNA's 2.0.0 before 6.4.0 boundary and retains the old FileUploadInterceptor prerequisite; this matches the CNA description and avoids merging the preceding CVE's separate patch ranges.",
+    "Tomcat CVE-2021-24122 records the project security page's 7.0.0-7.0.106 boundary while explicitly preserving the contradictory CNA structured lessThan value in the note.",
+    "Tomcat CVE-2025-24813 distinguishes the CNA-listed 8.5 EOL branch from unsupported earlier EOL/10.0 branches, which remain unknown.",
+    "PHP, Spring 6.0, WSO2, MongoDB old branches, JumpServer articles without CVEs, and unnumbered/older branches retain source-claimed or unknown limits rather than turning missing CNA ranges into unaffected claims.",
+    "RocketMQ CVE-2023-33246 note and metadata include the CNA description's 4.x upgrade boundary; the two RocketMQ CVEs remain separately scoped.",
+    "Evidence cache JSON hashes checked against files on disk all matched the manifest values."
+  ],
+  "audit_note": "The manifest before_sha256 differs from HEAD d817 for the two Tomcat CVE-2025-24813 articles only; their after_sha256 matches current files. These paths already had pre-version working-tree edits before this review batch, so d817 is not the immediate pre-edit state for those two records. This is provenance context, not a version-content defect.",
+  "limitations": [
+    "This was static review; no vulnerability reproduction or runtime testing was performed.",
+    "Kylin and some other evidence refers to vendor advisory pages rather than a CNA raw record; this review checks the version recommendation and recorded source pointer, not live web availability."
+  ]
+}

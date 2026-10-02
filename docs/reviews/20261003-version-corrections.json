@@ -1,0 +1,1728 @@
+[
+  {
+    "path": "Web安全/CMS内容/Craft CMS/Craft-CMS-generate-transform-反序列化代码执行漏洞-CVE-2025-32432.md",
+    "fields": {
+      "version": {
+        "before": "3.0.0-RC1 <= Craft <= 3.9.14",
+        "after": "Craft CMS 3.0.0-RC1 ≤ v < 3.9.15；Craft CMS 4.0.0-RC1 ≤ v < 4.14.15；Craft CMS 5.0.0-RC1 ≤ v < 5.6.17"
+      }
+    },
+    "note": null,
+    "evidence": {
+      "records": [
+        {
+          "cve": "CVE-2025-32432",
+          "sha256": "bd984a735fb8c4b05d7fc5cc35670bcd0de0d5157bff56771ccac1046d03d5d5",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2025/32xxx/CVE-2025-32432.json"
+        },
+        {
+          "cve": "CVE-2024-56145",
+          "sha256": "67fe327df6d6db2130b15e56d8b5ad306eb637ec8194d8b1e3397cd9fe7555c6",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2024/56xxx/CVE-2024-56145.json"
+        }
+      ],
+      "baseline_evidence": [
+        {
+          "line": 59,
+          "text": "3.0.0-RC1 <= Craft <= 3.9.14"
+        },
+        {
+          "line": 60,
+          "text": "4.0.0-RC1 <= Craft <= 4.14.14"
+        },
+        {
+          "line": 61,
+          "text": "5.0.0-RC1 <= Craft <= 5.6.16"
+        }
+      ],
+      "review_scope": "Static branch-by-branch comparison; no reproduction."
+    },
+    "before_sha256": "56745706a2cc85e44ffc923d7bdff9f4fbad14903b94e8ad1d54bbf2813b96c2",
+    "after_sha256": "54c961afe69171a109bd5097ca8db17c1fba119ee358ab46f69b0e56fc643012",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/CMS内容/Craft CMS/CraftCMS-register_argc_argv-远程代码执行漏洞-CVE-2024-56145.md",
+    "fields": {
+      "version": {
+        "before": "5.0.0-RC1 <= Craft CMS < 5.5.2",
+        "after": "Craft CMS 3.0.0 ≤ v < 3.9.14；Craft CMS 4.0.0-RC1 ≤ v < 4.13.2；Craft CMS 5.0.0-RC1 ≤ v < 5.5.2"
+      }
+    },
+    "note": "版本索引补齐 CNA 列明的 3.x、4.x、5.x 分支；需启用 PHP register_argc_argv，不能按版本号单独判定。正文原有 4.x/5.x 说明保留。",
+    "evidence": {
+      "records": [
+        {
+          "cve": "CVE-2024-56145",
+          "sha256": "67fe327df6d6db2130b15e56d8b5ad306eb637ec8194d8b1e3397cd9fe7555c6",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2024/56xxx/CVE-2024-56145.json"
+        }
+      ],
+      "baseline_evidence": [
+        {
+          "line": 57,
+          "text": "5.0.0-RC1 <= Craft CMS < 5.5.2"
+        },
+        {
+          "line": 58,
+          "text": "4.0.0-RC1 <= Craft CMS < 4.13.2"
+        }
+      ],
+      "review_scope": "Static branch-by-branch comparison; no reproduction."
+    },
+    "before_sha256": "ab3c87252e505be2928234ba08e6883bd11400e8e86ce6e57ff9b99a17ede617",
+    "after_sha256": "019d8af19a9473fa25916eeae7be267659fb91dce4448ad5fa4d6e2b330a2cd8",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/中间件/Apache/Apache Kylin CubeService.java 命令注入漏洞 CVE-2020-1956.md",
+    "fields": {
+      "version": {
+        "before": "Apache Kylin 2.3.0 ~ 2.3.2",
+        "after": "Apache Kylin 2.3.0–2.3.2；2.4.0–2.4.1；2.5.0–2.5.2；2.6.0–2.6.5；3.0.0-alpha、3.0.0-alpha2、3.0.0-beta、3.0.0、3.0.1"
+      },
+      "affected_versions": {
+        "before": "Apache Kylin 2.3.0 ~ 2.3.2",
+        "after": "Apache Kylin 2.3.0–2.3.2；2.4.0–2.4.1；2.5.0–2.5.2；2.6.0–2.6.5；3.0.0-alpha、3.0.0-alpha2、3.0.0-beta、3.0.0、3.0.1"
+      }
+    },
+    "note": "版本索引补齐原文遗漏的分支，并按 Apache Kylin 公告补入 3.0.0-alpha2、3.0.0-beta、3.0.0、3.0.1；对应修复为 2.6.6 或 3.0.2。旧正文的 3.0.0-alpha 单项并非完整范围。",
+    "evidence": {
+      "records": [
+        {
+          "cve": "CVE-2020-1956",
+          "sha256": "e24e65fc43876f07124ab21191ea67b4dfa14f4c256d19bc0dec4e3e6a85c419",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2020/1xxx/CVE-2020-1956.json"
+        }
+      ],
+      "baseline_evidence": [
+        {
+          "line": 64,
+          "text": "Apache Kylin 2.3.0 ~ 2.3.2"
+        },
+        {
+          "line": 65,
+          "text": "Apache Kylin 2.4.0 ~ 2.4.1"
+        },
+        {
+          "line": 66,
+          "text": "Apache Kylin 2.5.0 ~ 2.5.2"
+        },
+        {
+          "line": 67,
+          "text": "Apache Kylin 2.6.0 ~ 2.6.5"
+        },
+        {
+          "line": 68,
+          "text": "Apache Kylin 3.0.0-alpha"
+        }
+      ],
+      "review_scope": "Static branch-by-branch comparison; no reproduction."
+    },
+    "before_sha256": "2b4b9bb548f86a1741d258c35447389f8424cfbe95185d27406acf8090d33a0b",
+    "after_sha256": "b2b98dd0cdc7bbf90f9dec55cfeda3eb0c76b9992eb4b9e81fe14718a2050dcd",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/中间件/Apache/Apache-CXF-Aegis-DataBinding-服务端请求伪造漏洞-CVE-2024-28752.md",
+    "fields": {
+      "version": {
+        "before": "Apache CXF ＜ 4.0.4",
+        "after": "Apache CXF 4.0.x < 4.0.4；Apache CXF 3.6.x < 3.6.3；Apache CXF 3.5.x < 3.5.8"
+      },
+      "affected_versions": {
+        "before": "Apache CXF ＜ 4.0.4",
+        "after": "Apache CXF 4.0.x < 4.0.4；Apache CXF 3.6.x < 3.6.3；Apache CXF 3.5.x < 3.5.8"
+      }
+    },
+    "note": null,
+    "evidence": {
+      "records": [
+        {
+          "cve": "CVE-2024-28752",
+          "sha256": "c5ec315a6e8058caab8d28d76671eda2fb3bc0fc36a12c1d309ecfbc4340abe9",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2024/28xxx/CVE-2024-28752.json"
+        }
+      ],
+      "baseline_evidence": [
+        {
+          "line": 66,
+          "text": "Apache CXF ＜ 4.0.4"
+        },
+        {
+          "line": 67,
+          "text": "Apache CXF ＜ 3.6.3"
+        },
+        {
+          "line": 68,
+          "text": "Apache CXF ＜ 3.5.8"
+        }
+      ],
+      "review_scope": "Static branch-by-branch comparison; no reproduction."
+    },
+    "before_sha256": "ebdce7a31fe88334752e0870569952f3d8958c1e1bb81ae2dbe54a99f6ccbe26",
+    "after_sha256": "0f1a4131d63f9123bc47ef835c6a671c09890abcf47ea66bc84a1598fb284ed9",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/中间件/Apache ActiveMQ/Apache ActiveMQ 远程代码执行漏洞 CVE-2023-46604.md",
+    "fields": {
+      "version": {
+        "before": "Apache ActiveMQ 5.18.0 < 5.18.3",
+        "after": "Apache ActiveMQ 5.18.0 ≤ v < 5.18.3；Apache ActiveMQ 5.17.0 ≤ v < 5.17.6；Apache ActiveMQ 5.16.0 ≤ v < 5.16.7；Apache ActiveMQ v < 5.15.16；ActiveMQ Legacy OpenWire Module 5.18.0 ≤ v < 5.18.3；Legacy OpenWire Module 5.17.0 ≤ v < 5.17.6；Legacy OpenWire Module 5.16.0 ≤ v < 5.16.7；Legacy OpenWire Module 5.8.0 ≤ v < 5.15.16"
+      },
+      "affected_versions": {
+        "before": "Apache ActiveMQ 5.18.0 < 5.18.3",
+        "after": "Apache ActiveMQ 5.18.0 ≤ v < 5.18.3；Apache ActiveMQ 5.17.0 ≤ v < 5.17.6；Apache ActiveMQ 5.16.0 ≤ v < 5.16.7；Apache ActiveMQ v < 5.15.16；ActiveMQ Legacy OpenWire Module 5.18.0 ≤ v < 5.18.3；Legacy OpenWire Module 5.17.0 ≤ v < 5.17.6；Legacy OpenWire Module 5.16.0 ≤ v < 5.16.7；Legacy OpenWire Module 5.8.0 ≤ v < 5.15.16"
+      }
+    },
+    "note": null,
+    "evidence": {
+      "records": [
+        {
+          "cve": "CVE-2023-46604",
+          "sha256": "db4b30df64d38df51a0219828cc91f106a506fd951b976a000aca01a7bad7d3d",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2023/46xxx/CVE-2023-46604.json"
+        }
+      ],
+      "baseline_evidence": [
+        {
+          "line": 70,
+          "text": "Apache ActiveMQ 5.18.0 < 5.18.3"
+        },
+        {
+          "line": 71,
+          "text": "Apache ActiveMQ 5.17.0 < 5.17.6"
+        },
+        {
+          "line": 72,
+          "text": "Apache ActiveMQ 5.16.0 < 5.16.7"
+        },
+        {
+          "line": 73,
+          "text": "Apache ActiveMQ < 5.15.16"
+        },
+        {
+          "line": 74,
+          "text": "Apache ActiveMQ Legacy OpenWire Module 5.18.0 < 5.18.3"
+        },
+        {
+          "line": 75,
+          "text": "Apache ActiveMQ Legacy OpenWire Module 5.17.0 < 5.17.6"
+        },
+        {
+          "line": 76,
+          "text": "Apache ActiveMQ Legacy OpenWire Module 5.16.0 < 5.16.7"
+        },
+        {
+          "line": 77,
+          "text": "Apache ActiveMQ Legacy OpenWire Module 5.8.0 < 5.15.16"
+        }
+      ],
+      "review_scope": "Static branch-by-branch comparison; no reproduction."
+    },
+    "before_sha256": "1d792efe7c048ab492b59e3807606775c013144e0e718a38e2a837d9b8e2fe79",
+    "after_sha256": "20de569704b2f547b014809e52198e415489ee60989aa2247d942845951a5fbb",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/中间件/Apache ActiveMQ/Apache-ActiveMQ-Jolokia-后台远程代码执行漏洞-CVE-2022-41678.md",
+    "fields": {
+      "version": {
+        "before": "5.16.0<=Apache ActiveMQ<5.16.6",
+        "after": "Apache ActiveMQ < 5.16.6；Apache ActiveMQ 5.17.0 ≤ v < 5.17.4"
+      },
+      "affected_versions": {
+        "before": "5.16.0<=Apache ActiveMQ<5.16.6",
+        "after": "Apache ActiveMQ < 5.16.6；Apache ActiveMQ 5.17.0 ≤ v < 5.17.4"
+      }
+    },
+    "note": "CNA 给出的较早分支范围为 Apache ActiveMQ < 5.16.6，另有 5.17.0 ≤ v < 5.17.4；原文仅从 5.16.0 起列举，不能反推更早版本不受影响。利用还需认证到 Jolokia，并满足相应 MBean 和 Java 环境条件。",
+    "evidence": {
+      "records": [
+        {
+          "cve": "CVE-2022-41678",
+          "sha256": "e94590bf55d392c57b0d6e7e13a13972e8821ff56f35079f98031c5cab638ab1",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2022/41xxx/CVE-2022-41678.json"
+        }
+      ],
+      "baseline_evidence": [
+        {
+          "line": 70,
+          "text": "5.16.0<=Apache ActiveMQ<5.16.6"
+        },
+        {
+          "line": 71,
+          "text": "5.17.0<=Apache ActiveMQ<5.17.4"
+        }
+      ],
+      "review_scope": "Static branch-by-branch comparison; no reproduction."
+    },
+    "before_sha256": "4abf97f59381c015470c9283f2bd736e03b76a343271128df63574a443da94c6",
+    "after_sha256": "3f032c42b12b27319f03dec4992dea5ad0b071fd276f996c66e9c266582d5560",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/中间件/Apache ActiveMQ/Apache-ActiveMQ-Jolokia-远程代码执行漏洞-CVE-2026-34197.md",
+    "fields": {
+      "version": {
+        "before": "Apache ActiveMQ < 5.19.4",
+        "after": "Apache ActiveMQ < 5.19.4；Apache ActiveMQ 6.0.0 ≤ v < 6.2.3"
+      },
+      "affected_versions": {
+        "before": "Apache ActiveMQ < 5.19.4",
+        "after": "Apache ActiveMQ < 5.19.4；Apache ActiveMQ 6.0.0 ≤ v < 6.2.3"
+      }
+    },
+    "note": null,
+    "evidence": {
+      "records": [
+        {
+          "cve": "CVE-2026-34197",
+          "sha256": "8157759b46e93a6b8f9e3f384d2348c9adadbbf105fc0fdc5bcc97bbbc23514f",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2026/34xxx/CVE-2026-34197.json"
+        },
+        {
+          "cve": "CVE-2024-32114",
+          "sha256": "3f1d8210799f25728dc3126568a95a5c1b33f1d47910ffec3ebe30300142970b",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2024/32xxx/CVE-2024-32114.json"
+        }
+      ],
+      "baseline_evidence": [
+        {
+          "line": 67,
+          "text": "Apache ActiveMQ < 5.19.4  "
+        },
+        {
+          "line": 68,
+          "text": "6.0.0 <= Apache ActiveMQ < 6.2.3"
+        }
+      ],
+      "review_scope": "Static branch-by-branch comparison; no reproduction."
+    },
+    "before_sha256": "3213acb152119b9b58810adec5d5b902cbc2ebee26f0432dac9464b9aca94d8f",
+    "after_sha256": "90114be1801ad0fe7175cf6ac27e15cd280dd06443db56c029e65c63ca604304",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/中间件/Apache RocketMQ/Apache-RocketMQ-Broker-远程命令执行漏洞-CVE-2023-33246.md",
+    "fields": {
+      "version": {
+        "before": "Apache RocketMQ <= 5.1.0",
+        "after": "Apache RocketMQ 5.x ≤ 5.1.0；Apache RocketMQ 4.x ≤ 4.9.5"
+      },
+      "affected_versions": {
+        "before": "Apache RocketMQ <= 5.1.0",
+        "after": "Apache RocketMQ 5.x ≤ 5.1.0；Apache RocketMQ 4.x ≤ 4.9.5"
+      }
+    },
+    "note": null,
+    "evidence": {
+      "records": [
+        {
+          "cve": "CVE-2023-33246",
+          "sha256": "d038f8993f954bd03fa9ad47900d2e598c059fa1cf91082afdeccb7863f1b125",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2023/33xxx/CVE-2023-33246.json"
+        }
+      ],
+      "baseline_evidence": [
+        {
+          "line": 73,
+          "text": "Apache RocketMQ <= 5.1.0"
+        },
+        {
+          "line": 74,
+          "text": "Apache RocketMQ <= 4.9.5"
+        }
+      ],
+      "review_scope": "Static branch-by-branch comparison; no reproduction."
+    },
+    "before_sha256": "ffa28050fd243416d1802f23bf38acf7ae9eba722832a38e11576d6c9666ddcc",
+    "after_sha256": "88639c56b21df436374a178c359e4b2acfc35273e51525fd292c8e4e48766f27",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/中间件/Apache RocketMQ/Apache-RocketMQ-NameServer-任意文件写入漏洞-CVE-2023-37582.md",
+    "fields": {
+      "version": {
+        "before": "RocketMQ < 4.9.7",
+        "after": "Apache RocketMQ NameServer 4.x < 4.9.7；Apache RocketMQ NameServer 5.x < 5.1.2"
+      },
+      "affected_versions": {
+        "before": "RocketMQ < 4.9.7",
+        "after": "Apache RocketMQ NameServer 4.x < 4.9.7；Apache RocketMQ NameServer 5.x < 5.1.2"
+      }
+    },
+    "note": null,
+    "evidence": {
+      "records": [
+        {
+          "cve": "CVE-2023-37582",
+          "sha256": "155b25cc36898174ad85b5a18a2181a44f94aec407fee149df32d9025aa94119",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2023/37xxx/CVE-2023-37582.json"
+        },
+        {
+          "cve": "CVE-2023-33246",
+          "sha256": "d038f8993f954bd03fa9ad47900d2e598c059fa1cf91082afdeccb7863f1b125",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2023/33xxx/CVE-2023-33246.json"
+        }
+      ],
+      "baseline_evidence": [
+        {
+          "line": 66,
+          "text": "RocketMQ < 4.9.7"
+        },
+        {
+          "line": 67,
+          "text": "RocketMQ < 5.1.2"
+        }
+      ],
+      "review_scope": "Static branch-by-branch comparison; no reproduction."
+    },
+    "before_sha256": "39ca7dd5dec10dc1fb2d3043902504f2a7b0f778453ec48d5ebdadeb597fcba8",
+    "after_sha256": "840df1ac5116fb2a9a8ba32897b902776fe1a50fe5bf31982fd0ca364329988e",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/中间件/Apache Solr/Apache Solr Replication handler SSRF CVE-2021-27905.md",
+    "fields": {
+      "version": {
+        "before": "Apache Solr 7.0.0 - 7.7.3",
+        "after": "Apache Solr < 8.8.2（CNA）；原文列举 7.0.0–7.7.3、8.0.0–8.8.1"
+      },
+      "affected_versions": {
+        "before": "Apache Solr 7.0.0 - 7.7.3",
+        "after": "Apache Solr < 8.8.2（CNA）；原文列举 7.0.0–7.7.3、8.0.0–8.8.1"
+      }
+    },
+    "note": "CNA 将此问题描述为 8.8.2 之前的 Solr 版本；原文的 7.x/8.x 列举保留，但不能作为全部历史受影响分支的穷尽清单。",
+    "evidence": {
+      "records": [
+        {
+          "cve": "CVE-2021-27905",
+          "sha256": "122636cdf5d0cf3d0a9d40e170eada3fde4bd8feb1f2bc19449afb01ada371e1",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2021/27xxx/CVE-2021-27905.json"
+        }
+      ],
+      "baseline_evidence": [
+        {
+          "line": 61,
+          "text": "Apache Solr 7.0.0 - 7.7.3 "
+        },
+        {
+          "line": 62,
+          "text": "Apache Solr 8.0.0 - 8.8.1"
+        }
+      ],
+      "review_scope": "Static branch-by-branch comparison; no reproduction."
+    },
+    "before_sha256": "8e18f5235b587c408c05b00d97f3c4c8d8fa760e990742eac2c2091b701a171b",
+    "after_sha256": "37e52174f5403b04c4bd2492a752e70e08a9f35cdf5f22623e05e3d87f256399",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/中间件/Apache Solr/Apache-Solr-认证绕过漏洞-CVE-2024-45216.md",
+    "fields": {
+      "version": {
+        "before": "5.3.0 <= Apache Solr < 8.11.4",
+        "after": "Apache Solr 5.3.0 ≤ v < 8.11.4；Apache Solr 9.0.0 ≤ v < 9.7.0"
+      },
+      "affected_versions": {
+        "before": "5.3.0 <= Apache Solr < 8.11.4",
+        "after": "Apache Solr 5.3.0 ≤ v < 8.11.4；Apache Solr 9.0.0 ≤ v < 9.7.0"
+      }
+    },
+    "note": null,
+    "evidence": {
+      "records": [
+        {
+          "cve": "CVE-2024-45216",
+          "sha256": "29fb9549a6bcaa64d9a25ddef8abe2fcef811031c6bbf2adf6d728bdf827a356",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2024/45xxx/CVE-2024-45216.json"
+        }
+      ],
+      "baseline_evidence": [
+        {
+          "line": 60,
+          "text": "5.3.0 <= Apache Solr < 8.11.4"
+        },
+        {
+          "line": 61,
+          "text": "9.0.0 <= Apache Solr < 9.7.0"
+        }
+      ],
+      "review_scope": "Static branch-by-branch comparison; no reproduction."
+    },
+    "before_sha256": "6d25fb405356560bef89b2346f83c2b4cc12cfc350c300cdf2b72720cc367ffa",
+    "after_sha256": "822f9feaba978ef5b3f009d22a8b5df82562d1c9ed435cef8e52aa38437548b5",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/中间件/Apache Struts/Apache-Struts-S2-066-远程代码执行漏洞-CVE-2023-50164.md",
+    "fields": {
+      "version": {
+        "before": "Struts 2.0.0-2.3.37",
+        "after": "Apache Struts 2.0.0 ≤ v ≤ 2.5.32；Apache Struts 6.0.0 ≤ v ≤ 6.3.0.1"
+      },
+      "affected_versions": {
+        "before": "Struts 2.0.0-2.3.37",
+        "after": "Apache Struts 2.0.0 ≤ v ≤ 2.5.32；Apache Struts 6.0.0 ≤ v ≤ 6.3.0.1"
+      }
+    },
+    "note": "CNA 列明的范围为 Struts 2.0.0–2.5.32、6.0.0–6.3.0.1，修复版本为 2.5.33、6.3.0.2。原文 6.x 仅列到 6.3.0，版本索引已补上 6.3.0.1；上传后能否代码执行仍取决于应用条件。",
+    "evidence": {
+      "records": [
+        {
+          "cve": "CVE-2023-50164",
+          "sha256": "8a831faf6e6bb0ac187aef97a4caa157c2fcdba34a58356d6f81ec53fb6b7a66",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2023/50xxx/CVE-2023-50164.json"
+        }
+      ],
+      "baseline_evidence": [
+        {
+          "line": 69,
+          "text": "Struts 2.0.0-2.3.37"
+        },
+        {
+          "line": 70,
+          "text": "Strust 2.5.0-2.5.32"
+        },
+        {
+          "line": 71,
+          "text": "Strust 6.0.0-6.3.0"
+        }
+      ],
+      "review_scope": "Static branch-by-branch comparison; no reproduction."
+    },
+    "before_sha256": "34a4fe4d008281bfcc28f1a08ac937c71042d3bb039c4de9b55d997d328db408",
+    "after_sha256": "7b22b4f771d85b090f1c9e59ab9145f3d861eca7e5c0984861b98192adf74e59",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/中间件/Apache Struts/Apache-Struts-S2-067-远程代码执行漏洞-CVE-2024-53677.md",
+    "fields": {
+      "version": {
+        "before": "Struts 2.0.0 - Struts 2.3.37",
+        "after": "Apache Struts 2.0.0 ≤ v < 6.4.0（旧 FileUploadInterceptor 上传机制）"
+      },
+      "affected_versions": {
+        "before": "Struts 2.0.0 - Struts 2.3.37",
+        "after": "Apache Struts 2.0.0 ≤ v < 6.4.0（旧 FileUploadInterceptor 上传机制）"
+      }
+    },
+    "note": "CVE-2024-53677 的 CNA 范围为 Struts 2.0.0 ≤ v < 6.4.0，且涉及旧 FileUploadInterceptor 上传逻辑；官方要求升级并迁移上传机制。原文按旧分支列举的范围和前一编号 CVE-2023-50164 继续保留，不能拿前一编号的补丁界限替代本条。",
+    "evidence": {
+      "records": [
+        {
+          "cve": "CVE-2024-53677",
+          "sha256": "745114c7b62deba1f854cb828257692facc56d4a57ae1984bed38a7da6559f29",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2024/53xxx/CVE-2024-53677.json"
+        },
+        {
+          "cve": "CVE-2023-50164",
+          "sha256": "8a831faf6e6bb0ac187aef97a4caa157c2fcdba34a58356d6f81ec53fb6b7a66",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2023/50xxx/CVE-2023-50164.json"
+        }
+      ],
+      "baseline_evidence": [
+        {
+          "line": 71,
+          "text": "Struts 2.0.0 - Struts 2.3.37"
+        },
+        {
+          "line": 72,
+          "text": "Struts 2.5.0- Struts 2.5.33"
+        },
+        {
+          "line": 73,
+          "text": "Struts 6.0.0- Struts 6.3.0.2"
+        }
+      ],
+      "review_scope": "Static branch-by-branch comparison; no reproduction."
+    },
+    "before_sha256": "9a77c5788be51ac864bf4107ccc3d7f15414b866f25e09dcb9f1554ee01c0426",
+    "after_sha256": "ae63ccca2732bc40b0612e9948980a80d81268059ab7fa76d45ddee85859e8a3",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/中间件/Apache Struts/Apache-Struts-S2-069-XML-外部实体注入漏洞-CVE-2025-68493.md",
+    "fields": {
+      "version": {
+        "before": "2.0.0 <= Apache Struts <= 2.3.37（EOL）",
+        "after": "com.opensymphony:xwork 2.0.0 ≤ v < 2.2.1；org.apache.struts.xwork:xwork-core 2.2.1 ≤ v ≤ 6.1.0"
+      },
+      "affected_versions": {
+        "before": "2.0.0 <= Apache Struts <= 2.3.37（EOL）",
+        "after": "com.opensymphony:xwork 2.0.0 ≤ v < 2.2.1；org.apache.struts.xwork:xwork-core 2.2.1 ≤ v ≤ 6.1.0"
+      }
+    },
+    "note": "CNA 按两个 Maven 包分别记录范围：com.opensymphony:xwork 2.0.0 ≤ v < 2.2.1、org.apache.struts.xwork:xwork-core 2.2.1 ≤ v ≤ 6.1.0；两段均为受影响状态。版本索引按包名区分，原文按 Struts 分支的列举保留。",
+    "evidence": {
+      "records": [
+        {
+          "cve": "CVE-2025-68493",
+          "sha256": "00994615c8206bb72f63130f8aa8358e995954675fb1b66c5be20f1057f6d30e",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2025/68xxx/CVE-2025-68493.json"
+        }
+      ],
+      "baseline_evidence": [
+        {
+          "line": 79,
+          "text": "2.0.0 <= Apache Struts <= 2.3.37（EOL）"
+        },
+        {
+          "line": 80,
+          "text": "2.5.0 <= Apache Struts <= 2.5.33（EOL）"
+        },
+        {
+          "line": 81,
+          "text": "6.0.0 <= Apache Struts <= 6.1.0"
+        }
+      ],
+      "review_scope": "Static branch-by-branch comparison; no reproduction."
+    },
+    "before_sha256": "8426e687a9d5dafdc687fb7b9d1f933f6971c3a703ec014298f79ff7133a78d6",
+    "after_sha256": "ec0161c7694100a2bad2ff29744dad1dc7ead60182a5eae4e9fda13a2d4e0c25",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/中间件/Apache Tomcat/Apache Tomcat 信息泄露漏洞 CVE-2021-24122.md",
+    "fields": {
+      "version": {
+        "before": "Apache Tomcat 10.0.0-M1-10.0.0-M9",
+        "after": "Apache Tomcat 10.0.0-M1–10.0.0-M9；Tomcat 9.0.0.M1–9.0.39；Tomcat 8.5.0–8.5.59；Tomcat 7.0.0–7.0.106（项目安全公告）"
+      },
+      "affected_versions": {
+        "before": "Apache Tomcat 10.0.0-M1-10.0.0-M9",
+        "after": "Apache Tomcat 10.0.0-M1–10.0.0-M9；Tomcat 9.0.0.M1–9.0.39；Tomcat 8.5.0–8.5.59；Tomcat 7.0.0–7.0.106（项目安全公告）"
+      }
+    },
+    "note": "Tomcat 项目安全公告将 7.0.0–7.0.106 列为受影响，修复为 7.0.107。CNA 的自然语言描述与该公告一致，但结构化 lessThan 写成 7.0.106；本页版本索引采用项目公告并保留该证据差异。还需满足 NTFS 网络位置及文内特定配置条件。",
+    "evidence": {
+      "records": [
+        {
+          "cve": "CVE-2021-24122",
+          "sha256": "e2d1c2c6ea095fecbbceb875e520b899a6c622adea9bd8312332b8c0563a63a0",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2021/24xxx/CVE-2021-24122.json"
+        },
+        {
+          "vendor_url": "https://tomcat.apache.org/security-7.html#Fixed_in_Apache_Tomcat_7.0.107",
+          "section": "CVE-2021-24122; Affects 7.0.0 to 7.0.106"
+        }
+      ],
+      "baseline_evidence": [
+        {
+          "line": 53,
+          "text": "Apache Tomcat 10.0.0-M1-10.0.0-M9"
+        },
+        {
+          "line": 54,
+          "text": "Apache Tomcat 9.0.0.M1-9.0.39"
+        },
+        {
+          "line": 55,
+          "text": "Apache Tomcat 8.5.0-8.5.59"
+        },
+        {
+          "line": 56,
+          "text": "Apache Tomcat 7.0.0-7.0.106"
+        }
+      ],
+      "review_scope": "Static branch-by-branch comparison; no reproduction."
+    },
+    "before_sha256": "96b3b16803298e71450af64221eab2a25b75845a2de92075ce2fead60bc157a0",
+    "after_sha256": "7e36e6c3fab49c58dae96d7dc46b68b06c0d83d20fb45c037974f932fa282f54",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/中间件/Apache Tomcat/Apache Tomcat 远程代码执行漏洞 CVE-2025-24813.md",
+    "fields": {
+      "version": {
+        "before": "11.0.0-M1 ≤ Apache Tomcat ≤ 11.0.2; 10.1.0-M1 ≤ Apache Tomcat ≤ 10.1.34; 9.0.0.M1 ≤ Apache Tomcat ≤ 9.0.98",
+        "after": "Apache Tomcat 11.0.0-M1–11.0.2；Tomcat 10.1.0-M1–10.1.34；Tomcat 9.0.0.M1–9.0.98；Tomcat 8.5.0–8.5.100（EOL）"
+      },
+      "affected_versions": {
+        "before": "11.0.0-M1 ≤ Apache Tomcat ≤ 11.0.2; 10.1.0-M1 ≤ Apache Tomcat ≤ 10.1.34; 9.0.0.M1 ≤ Apache Tomcat ≤ 9.0.98",
+        "after": "Apache Tomcat 11.0.0-M1–11.0.2；Tomcat 10.1.0-M1–10.1.34；Tomcat 9.0.0.M1–9.0.98；Tomcat 8.5.0–8.5.100（EOL）"
+      }
+    },
+    "note": "本轮 CNA 记录除 11.x、10.1.x、9.x 外，还明确列出已停止支持的 8.5.0–8.5.100 受影响，版本索引补入该分支。更早 EOL 版本及 10.0.x 在记录中仍为 unknown；不能因没有修复分支条目就认定不受影响。原文的写入、partial PUT、会话持久化和反序列化库等前提继续适用。",
+    "evidence": {
+      "records": [
+        {
+          "cve": "CVE-2025-24813",
+          "sha256": "99343fb96dd8b468b7025f856d149594e3b148d8ee3bbb94cd1d962f5796083c",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2025/24xxx/CVE-2025-24813.json"
+        }
+      ],
+      "baseline_evidence": [
+        {
+          "line": 81,
+          "text": "11.0.0-M1 ≤ Apache Tomcat ≤ 11.0.2"
+        },
+        {
+          "line": 82,
+          "text": "10.1.0-M1 ≤ Apache Tomcat ≤ 10.1.34"
+        },
+        {
+          "line": 83,
+          "text": "9.0.0.M1 ≤ Apache Tomcat ≤ 9.0.98"
+        }
+      ],
+      "review_scope": "Static branch-by-branch comparison; no reproduction."
+    },
+    "before_sha256": "1a70b4540d0d232495c2d5f0d78e706a49eada0961081520ecef1ea66dc4baf7",
+    "after_sha256": "bca9aade62a07b53edba51854128509c1a7ad22de8ea3bdd98791b11de8edd64",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/中间件/Apache Tomcat/Apache-Tomcat-WebSocket-拒绝服务漏洞-CVE-2020-13935.md",
+    "fields": {
+      "version": {
+        "before": "Apache Tomcat 10.0.0-M1-10.0.0-M6",
+        "after": "Apache Tomcat 10.0.0-M1–10.0.0-M6；Tomcat 9.0.0.M1–9.0.36；Tomcat 8.5.0–8.5.56；Tomcat 7.0.27–7.0.104"
+      },
+      "affected_versions": {
+        "before": "Apache Tomcat 10.0.0-M1-10.0.0-M6",
+        "after": "Apache Tomcat 10.0.0-M1–10.0.0-M6；Tomcat 9.0.0.M1–9.0.36；Tomcat 8.5.0–8.5.56；Tomcat 7.0.27–7.0.104"
+      }
+    },
+    "note": null,
+    "evidence": {
+      "records": [
+        {
+          "cve": "CVE-2020-13935",
+          "sha256": "efd511cd997fd2dcc5157daeae2045d3e13936579969bd2437b6f01685c54415",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2020/13xxx/CVE-2020-13935.json"
+        }
+      ],
+      "baseline_evidence": [
+        {
+          "line": 59,
+          "text": "Apache Tomcat 10.0.0-M1-10.0.0-M6"
+        },
+        {
+          "line": 60,
+          "text": "Apache Tomcat 9.0.0.M1-9.0.36"
+        },
+        {
+          "line": 61,
+          "text": "Apache Tomcat 8.5.0-8.5.56"
+        },
+        {
+          "line": 62,
+          "text": "Apache Tomcat 7.0.27-7.0.104"
+        }
+      ],
+      "review_scope": "Static branch-by-branch comparison; no reproduction."
+    },
+    "before_sha256": "2abda6068867da7affc125d798d8fe85264fdd6a4ededd315e46b67136427220",
+    "after_sha256": "30f84c024cfd25a5b63e1e929c82a60cd9e9aab3ff6a80b8b92316f3f1be8e05",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/中间件/Apache Tomcat/Tomcat-远程代码执行漏洞-CVE-2025-24813.md",
+    "fields": {
+      "version": {
+        "before": "11.0.0-M1 ≤ Apache Tomcat ≤ 11.0.2; 10.1.0-M1 ≤ Apache Tomcat ≤ 10.1.34; 9.0.0.M1 ≤ Apache Tomcat ≤ 9.0.98",
+        "after": "Apache Tomcat 11.0.0-M1–11.0.2；Tomcat 10.1.0-M1–10.1.34；Tomcat 9.0.0.M1–9.0.98；Tomcat 8.5.0–8.5.100（EOL）"
+      },
+      "affected_versions": {
+        "before": "11.0.0-M1 ≤ Apache Tomcat ≤ 11.0.2; 10.1.0-M1 ≤ Apache Tomcat ≤ 10.1.34; 9.0.0.M1 ≤ Apache Tomcat ≤ 9.0.98",
+        "after": "Apache Tomcat 11.0.0-M1–11.0.2；Tomcat 10.1.0-M1–10.1.34；Tomcat 9.0.0.M1–9.0.98；Tomcat 8.5.0–8.5.100（EOL）"
+      }
+    },
+    "note": "本轮 CNA 记录除 11.x、10.1.x、9.x 外，还明确列出已停止支持的 8.5.0–8.5.100 受影响，版本索引补入该分支。更早 EOL 版本及 10.0.x 在记录中仍为 unknown；不能因没有修复分支条目就认定不受影响。原文的写入、partial PUT、会话持久化和反序列化库等前提继续适用。",
+    "evidence": {
+      "records": [
+        {
+          "cve": "CVE-2025-24813",
+          "sha256": "99343fb96dd8b468b7025f856d149594e3b148d8ee3bbb94cd1d962f5796083c",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2025/24xxx/CVE-2025-24813.json"
+        }
+      ],
+      "baseline_evidence": [
+        {
+          "line": 80,
+          "text": "11.0.0-M1 ≤ Apache Tomcat ≤ 11.0.2"
+        },
+        {
+          "line": 81,
+          "text": "10.1.0-M1 ≤ Apache Tomcat ≤ 10.1.34"
+        },
+        {
+          "line": 82,
+          "text": "9.0.0.M1 ≤ Apache Tomcat ≤ 9.0.98"
+        }
+      ],
+      "review_scope": "Static branch-by-branch comparison; no reproduction."
+    },
+    "before_sha256": "5d1bd0123e266bb2486d36c1fc48c5be7c83764da5b5d142dfdd903d986dbb70",
+    "after_sha256": "2ebb6d18c21c7bd9fba28511fe89a82c2b0c046f65d45809c4c0cc175a93b0cd",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/中间件/GeoServer/GeoServer-TestWfsPost-接口未授权-SSRF-漏洞-CVE-2021-40822.md",
+    "fields": {
+      "version": {
+        "before": "GeoServer <= 2.18.5",
+        "after": "GeoServer ≤ 2.18.5；GeoServer 2.19.x ≤ 2.19.2（正文声称下界2.19.0）"
+      },
+      "affected_versions": {
+        "before": "GeoServer <= 2.18.5",
+        "after": "GeoServer ≤ 2.18.5；GeoServer 2.19.x ≤ 2.19.2（正文声称下界2.19.0）"
+      }
+    },
+    "note": null,
+    "evidence": {
+      "records": [
+        {
+          "cve": "CVE-2021-40822",
+          "sha256": "cf26a817019ba637bbcf5815e498798a53c18256fff1e1883c04db361754c2d9",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2021/40xxx/CVE-2021-40822.json"
+        }
+      ],
+      "baseline_evidence": [
+        {
+          "line": 65,
+          "text": "GeoServer <= 2.18.5"
+        },
+        {
+          "line": 66,
+          "text": "GeoServer >= 2.19.0, <= 2.19.2"
+        }
+      ],
+      "review_scope": "Static branch-by-branch comparison; no reproduction."
+    },
+    "before_sha256": "013051e3d6da9a76739fb5fb7ab513012ed8ef4c3e58bd21455328d118ab3c8b",
+    "after_sha256": "7cb2834429067ba16ff754edfafe9fd349cf64ebcf125e1884c028bb84da7a25",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/中间件/Jetty/Jetty WEB-INF 敏感信息泄露漏洞 CVE-2021-34429.md",
+    "fields": {
+      "version": {
+        "before": "9.4.37 ≤ Eclipse Jetty ≤ 9.4.42",
+        "after": "Eclipse Jetty 9.4.37–9.4.42；Eclipse Jetty 10.0.1–10.0.5；Eclipse Jetty 11.0.1–11.0.5"
+      },
+      "affected_versions": {
+        "before": "9.4.37 ≤ Eclipse Jetty ≤ 9.4.42",
+        "after": "Eclipse Jetty 9.4.37–9.4.42；Eclipse Jetty 10.0.1–10.0.5；Eclipse Jetty 11.0.1–11.0.5"
+      }
+    },
+    "note": null,
+    "evidence": {
+      "records": [
+        {
+          "cve": "CVE-2021-34429",
+          "sha256": "7d4388d9e0b911a5ac482c5027135d744319fba0aa6bfcafc5e82ad3e691fc92",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2021/34xxx/CVE-2021-34429.json"
+        },
+        {
+          "cve": "CVE-2021-28164",
+          "sha256": "b0056a42403219c13ddfc868a197b6fb16ee1a565becade2579b56d41afbe9d0",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2021/28xxx/CVE-2021-28164.json"
+        }
+      ],
+      "baseline_evidence": [
+        {
+          "line": 78,
+          "text": "9.4.37 ≤ Eclipse Jetty ≤ 9.4.42"
+        },
+        {
+          "line": 79,
+          "text": "10.0.1 ≤ Eclipse Jetty ≤ 10.0.5"
+        },
+        {
+          "line": 80,
+          "text": "11.0.1 ≤ Eclipse Jetty ≤ 11.0.5"
+        }
+      ],
+      "review_scope": "Static branch-by-branch comparison; no reproduction."
+    },
+    "before_sha256": "751eabb1b4fa755cb27ad0f51188faf7b02c159092c39b01e51598f58a14068f",
+    "after_sha256": "7f3df3622f36554d8789a6ebb9a542171ce389525316a090364f40bf6dbbd962",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/中间件/WSO2/WSO2-fileupload-任意文件上传漏洞-CVE-2022-29464.md",
+    "fields": {
+      "version": {
+        "before": "WSO2 API Manager 2.2.0 and above",
+        "after": "WSO2 API Manager 2.2.0–4.0.0；WSO2 Identity Server 5.2.0–5.11.0；WSO2 Identity Server Analytics 5.4.0、5.4.1、5.5.0、5.6.0；WSO2 Identity Server as Key Manager 5.3.0–5.11.0；WSO2 Enterprise Integrator 6.2.0–6.6.0"
+      },
+      "affected_versions": {
+        "before": "WSO2 API Manager 2.2.0 and above",
+        "after": "WSO2 API Manager 2.2.0–4.0.0；WSO2 Identity Server 5.2.0–5.11.0；WSO2 Identity Server Analytics 5.4.0、5.4.1、5.5.0、5.6.0；WSO2 Identity Server as Key Manager 5.3.0–5.11.0；WSO2 Enterprise Integrator 6.2.0–6.6.0"
+      }
+    },
+    "note": "原文五个 WSO2 产品的“and above”没有上界。版本索引改按 CNA 描述记录各产品的已列范围，不能推断其后所有发行版受影响；各产品的更新或补丁状态还需对应检查。原文、端点与文件上传说明保留。",
+    "evidence": {
+      "records": [
+        {
+          "cve": "CVE-2022-29464",
+          "sha256": "d818eef14b795c0e9264ac105073d21e1a3e7cafeb46326fceda73869d77f7b4",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2022/29xxx/CVE-2022-29464.json"
+        }
+      ],
+      "baseline_evidence": [
+        {
+          "line": 62,
+          "text": "WSO2 API Manager 2.2.0 and above"
+        },
+        {
+          "line": 63,
+          "text": "WSO2 Identity Server 5.2.0 and above"
+        },
+        {
+          "line": 64,
+          "text": "WSO2 Identity Server Analytics 5.4.0, 5.4.1, 5.5.0, 5.6.0"
+        },
+        {
+          "line": 65,
+          "text": "WSO2 Identity Server as Key Manager 5.3.0 and above"
+        },
+        {
+          "line": 66,
+          "text": "WSO2 Enterprise Integrator 6.2.0 and above"
+        }
+      ],
+      "review_scope": "Static branch-by-branch comparison; no reproduction."
+    },
+    "before_sha256": "0ff2b9632a431cc2b760c5db4bf053f31d2b92898df90039cc4a6dc41de85df8",
+    "after_sha256": "1a79765d5571e228ad020749024ed7b212abed16820fdfa5c9892de15db02f37",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/云平台/Citrix/Citrix XenMobile 任意文件读取 CVE-2020-8209.md",
+    "fields": {
+      "version": {
+        "before": "RP2之前的XenMobile服务器10.12",
+        "after": "Citrix XenMobile Server 10.12 < RP2；10.11 < RP4；10.10 < RP6；10.9 < RP5（官方措辞：before 10.9 RP5）"
+      },
+      "affected_versions": {
+        "before": "RP2之前的XenMobile服务器10.12",
+        "after": "Citrix XenMobile Server 10.12 < RP2；10.11 < RP4；10.10 < RP6；10.9 < RP5（官方措辞：before 10.9 RP5）"
+      }
+    },
+    "note": "原文把 XenMobile 10.10 与 10.9 连在一起并遗漏 RP5 对应分支。版本索引按 CNA 描述拆为 10.12 before RP2、10.11 before RP4、10.10 before RP6、10.9 before RP5；原始文本保留。",
+    "evidence": {
+      "records": [
+        {
+          "cve": "CVE-2020-8209",
+          "sha256": "5f6984d422cb2c4cb0639cb90a501f01698aa383a79978a03e94e04dc1543d0f",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2020/8xxx/CVE-2020-8209.json"
+        }
+      ],
+      "baseline_evidence": [
+        {
+          "line": 51,
+          "text": "RP2之前的XenMobile服务器10.12"
+        },
+        {
+          "line": 52,
+          "text": "RP4之前的XenMobile服务器10.11"
+        },
+        {
+          "line": 53,
+          "text": "RP6之前的XenMobile服务器10.1010.9"
+        },
+        {
+          "line": 54,
+          "text": "RP5之前的XenMobile服务器"
+        }
+      ],
+      "review_scope": "Static branch-by-branch comparison; no reproduction."
+    },
+    "before_sha256": "172779570d22e0b5dee5156000bef56f020ec6d6c393da5b8aafd68e36010256",
+    "after_sha256": "4b673cddefffe852ba1de85cc2eea27641394542d9985b72d8597a2089280570",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/云平台/Citrix/Citrix 远程命令执行漏洞 CVE-2019-19781.md",
+    "fields": {
+      "version": {
+        "before": "Citrix NetScaler ADC and NetScaler Gateway version 10.5",
+        "after": "Citrix ADC / Gateway 10.5；11.1；12.0；12.1；13.0（CNA描述列举的版本族；build边界unknown）"
+      },
+      "affected_versions": {
+        "before": "Citrix NetScaler ADC and NetScaler Gateway version 10.5",
+        "after": "Citrix ADC / Gateway 10.5；11.1；12.0；12.1；13.0（CNA描述列举的版本族；build边界unknown）"
+      }
+    },
+    "note": "版本索引补齐 CNA 描述中列举的 ADC / Gateway 10.5、11.1、12.0、12.1、13.0 版本族。该描述没有给出逐 build 修复界限，这里不把版本族命中等同于某个具体构建受影响。",
+    "evidence": {
+      "records": [
+        {
+          "cve": "CVE-2019-19781",
+          "sha256": "309eba61073cea01a071d4c2461602bf562d6edc3f50355d0c86014f1a6a4986",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2019/19xxx/CVE-2019-19781.json"
+        }
+      ],
+      "baseline_evidence": [
+        {
+          "line": 56,
+          "text": "Citrix NetScaler ADC and NetScaler Gateway version 10.5"
+        },
+        {
+          "line": 57,
+          "text": "Citrix ADC and NetScaler Gateway version 11.1 , 12.0 , 12.1"
+        },
+        {
+          "line": 58,
+          "text": "Citrix ADC and Citrix Gateway version 13.0"
+        }
+      ],
+      "review_scope": "Static branch-by-branch comparison; no reproduction."
+    },
+    "before_sha256": "1dd422998ead99280a738aa9c696de54529aa546b6dc7993670d84a3bc24cb04",
+    "after_sha256": "697a2ea7f55bff157232e23cb55a18cc1ecb2e0ffca660fa3d104aaba4cec816",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/云平台/Citrix/Citrix-NetScaler-ADC-&-Gateway-信息泄露漏洞-CVE-2023-4966.md",
+    "fields": {
+      "version": {
+        "before": "NetScaler ADC 和 NetScaler Gateway 14.1 < 14.1-8.50",
+        "after": "NetScaler ADC and Gateway 14.1 < 14.1-8.50；NetScaler ADC and Gateway 13.1 < 13.1-49.15；NetScaler ADC and Gateway 13.0 < 13.0-92.19；NetScaler ADC 13.1-FIPS < 13.1-37.164；NetScaler ADC 12.1-FIPS < 12.1-55.300；NetScaler ADC 12.1-NDcPP < 12.1-55.300"
+      },
+      "affected_versions": {
+        "before": "NetScaler ADC 和 NetScaler Gateway 14.1 < 14.1-8.50",
+        "after": "NetScaler ADC and Gateway 14.1 < 14.1-8.50；NetScaler ADC and Gateway 13.1 < 13.1-49.15；NetScaler ADC and Gateway 13.0 < 13.0-92.19；NetScaler ADC 13.1-FIPS < 13.1-37.164；NetScaler ADC 12.1-FIPS < 12.1-55.300；NetScaler ADC 12.1-NDcPP < 12.1-55.300"
+      }
+    },
+    "note": null,
+    "evidence": {
+      "records": [
+        {
+          "cve": "CVE-2023-4966",
+          "sha256": "7735090e7dc5d9c0df986ce4465cf9d40d1f086647ce71f5b0aaa865b1b4fada",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2023/4xxx/CVE-2023-4966.json"
+        }
+      ],
+      "baseline_evidence": [
+        {
+          "line": 63,
+          "text": "NetScaler ADC 和 NetScaler Gateway 14.1 < 14.1-8.50"
+        },
+        {
+          "line": 64,
+          "text": "NetScaler ADC 和 NetScaler Gateway 13.1 < 13.1-49.15"
+        },
+        {
+          "line": 65,
+          "text": "NetScaler ADC 和 NetScaler Gateway 13.0 < 13.0-92.19"
+        },
+        {
+          "line": 66,
+          "text": "NetScaler ADC 13.1-FIPS < 13.1-37.164"
+        },
+        {
+          "line": 67,
+          "text": "NetScaler ADC 12.1-FIPS < 12.1-55.300"
+        },
+        {
+          "line": 68,
+          "text": "NetScaler ADC 12.1-NDcPP < 12.1-55.300"
+        }
+      ],
+      "review_scope": "Static branch-by-branch comparison; no reproduction."
+    },
+    "before_sha256": "6e8fa29eb40f2ddfa28815c5fadecfc7ff41d9bdfb78634b2d4567c9e6008945",
+    "after_sha256": "8159fd33ce24a5609fb3b944a3469aae48c507267b91c851373fcf21f98711af",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/云平台/VMware/VMware vCenter Server 远程代码执行漏洞 CVE-2021-21972.md",
+    "fields": {
+      "version": {
+        "before": "VMware vCenter Server 7.0系列 < 7.0.U1c",
+        "after": "VMware vCenter Server 7.x < 7.0 U1c；vCenter Server 6.7 < 6.7 U3l；vCenter Server 6.5 < 6.5 U3n"
+      },
+      "affected_versions": {
+        "before": "VMware vCenter Server 7.0系列 < 7.0.U1c",
+        "after": "VMware vCenter Server 7.x < 7.0 U1c；vCenter Server 6.7 < 6.7 U3l；vCenter Server 6.5 < 6.5 U3n"
+      }
+    },
+    "note": null,
+    "evidence": {
+      "records": [
+        {
+          "cve": "CVE-2021-21972",
+          "sha256": "fa4dcdd1f69a855d33c8b82639da9aed15e426d60bada69565cde867e747681c",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2021/21xxx/CVE-2021-21972.json"
+        }
+      ],
+      "baseline_evidence": [
+        {
+          "line": 64,
+          "text": "VMware vCenter Server 7.0系列 < 7.0.U1c"
+        },
+        {
+          "line": 65,
+          "text": "VMware vCenter Server 6.7系列 < 6.7.U3l"
+        },
+        {
+          "line": 66,
+          "text": "VMware vCenter Server 6.5系列 < 6.5 U3n"
+        }
+      ],
+      "review_scope": "Static branch-by-branch comparison; no reproduction."
+    },
+    "before_sha256": "1b508b2ca9c0c99a3a798aeb07361d693388e471c535e6f4e7bdab370cc71eb2",
+    "after_sha256": "04dfb6b234b46ca206cf60b6ba43fafa93b2eba89f118b18a924b998996d7f94",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/云平台/VMware/VMware-vCenter-Server-服务器端请求伪造漏洞-CVE-2021-21973.md",
+    "fields": {
+      "version": {
+        "before": "vCenter Server: 6.5, 6.5 U1, 6.5 U3, 6.5.0, 6.5.0a, 6.5.0b, 6.5.0c, 6.5.0d, 6.5u",
+        "after": "VMware vCenter Server 7.x < 7.0 U1c；VMware vCenter Server 6.7 < 6.7 U3l；VMware vCenter Server 6.5 < 6.5 U3n"
+      },
+      "affected_versions": {
+        "before": "vCenter Server: 6.5, 6.5 U1, 6.5 U3, 6.5.0, 6.5.0a, 6.5.0b, 6.5.0c, 6.5.0d, 6.5u",
+        "after": "VMware vCenter Server 7.x < 7.0 U1c；VMware vCenter Server 6.7 < 6.7 U3l；VMware vCenter Server 6.5 < 6.5 U3n"
+      }
+    },
+    "note": "版本字段原先截断于 6.5u，现按 CNA 的 vCenter Server 三条分支边界记录。原文完整 build 列表仍保留；Cloud Foundation 的单独产品范围不并入 vCenter Server。",
+    "evidence": {
+      "records": [
+        {
+          "cve": "CVE-2021-21973",
+          "sha256": "0d3d7d561f61a9260c65400209dcf987092badb9b1c07dd217162454c42deb13",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2021/21xxx/CVE-2021-21973.json"
+        }
+      ],
+      "baseline_evidence": [
+        {
+          "line": 60,
+          "text": "vCenter Server: 6.5, 6.5 U1, 6.5 U3, 6.5.0, 6.5.0a, 6.5.0b, 6.5.0c, 6.5.0d, 6.5u2c, 6.7, 6.7 U3, 6.7.0, 6.7.0d, 6.7u3f, 7.0"
+        }
+      ],
+      "review_scope": "Static branch-by-branch comparison; no reproduction."
+    },
+    "before_sha256": "977f76035d79a14a8d22327a57938045ab4867f20bf03eedfb114cc7af9962dc",
+    "after_sha256": "921697af90f1b3a4af82501218edcee401ad09984f2819d17ba8212e92a7cd74",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/云平台/VMware/VMware-vRealize-Operations-Manager-SSRF漏洞-CVE-2021-21975.md",
+    "fields": {
+      "version": {
+        "before": "VMware:vRealize_operations_manager: 8.0.0, 8.0.1, 8.3.0, 8.1.0, 8.1.1, 8.2.0, 7.",
+        "after": "VMware vRealize Operations < 8.4"
+      },
+      "affected_versions": {
+        "before": "VMware:vRealize_operations_manager: 8.0.0, 8.0.1, 8.3.0, 8.1.0, 8.1.1, 8.2.0, 7.",
+        "after": "VMware vRealize Operations < 8.4"
+      }
+    },
+    "note": "版本字段原先截断于 7.，现按 CNA 记录为 vRealize Operations 8.4 之前；原文列举的 7.5.0 与各 8.x build 保留。",
+    "evidence": {
+      "records": [
+        {
+          "cve": "CVE-2021-21975",
+          "sha256": "c4b2eb61c104143786eb26b53296903e7c42bdb3be134ce3d6a588b6719d97ad",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2021/21xxx/CVE-2021-21975.json"
+        }
+      ],
+      "baseline_evidence": [
+        {
+          "line": 61,
+          "text": "VMware:vRealize_operations_manager: 8.0.0, 8.0.1, 8.3.0, 8.1.0, 8.1.1, 8.2.0, 7.5.0"
+        }
+      ],
+      "review_scope": "Static branch-by-branch comparison; no reproduction."
+    },
+    "before_sha256": "5ea42a96ca215adbacc1bfaf8423b23cc503ffd337f5e8f4fe6b617b726b68c5",
+    "after_sha256": "578f29470263c17955d63505371c88981bcf9e5d85918e653cd6ab02946aa0c1",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/开发框架/Django/Django JSONField  HStoreField SQL注入漏洞 CVE-2019-14234.md",
+    "fields": {
+      "version": {
+        "before": "Django (1.11.x) Version < 1.11.23",
+        "after": "Django 1.11.x < 1.11.23；Django 2.1.x < 2.1.11；Django 2.2.x < 2.2.4"
+      }
+    },
+    "note": null,
+    "evidence": {
+      "records": [
+        {
+          "cve": "CVE-2019-14234",
+          "sha256": "17f7fed2ad349edebd7cb2f8065575231ab35a918ec4d3ab9cf50cf7aa81044a",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2019/14xxx/CVE-2019-14234.json"
+        }
+      ],
+      "baseline_evidence": [
+        {
+          "line": 55,
+          "text": "Django (1.11.x) Version < 1.11.23"
+        },
+        {
+          "line": 56,
+          "text": "Django (2.1.x) Version < 2.1.11"
+        },
+        {
+          "line": 57,
+          "text": "Django (2.2.x) Version < 2.2.4"
+        }
+      ],
+      "review_scope": "Static branch-by-branch comparison; no reproduction."
+    },
+    "before_sha256": "36cf954898802b46b8835d55348674d87bf70c97028c0953eaaa972e2aaf3574",
+    "after_sha256": "06d02a8269ee8b4825aaee672963b9c41d9abb629e146932bd2aec9fb6945d43",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/开发框架/PHP/PHP-FPM 远程代码执行漏洞 CVE-2019-11043.md",
+    "fields": {
+      "version": {
+        "before": "另外，PHP 5.6 版本也受此漏洞影响，但目前只能 Crash，不可以远程代码执行。",
+        "after": "PHP 7.1.x < 7.1.33；PHP 7.2.x < 7.2.24；PHP 7.3.x < 7.3.11；原文另称 PHP 7.0 受影响、PHP 5.6 仅 Crash（这两项本轮未核实）"
+      }
+    },
+    "note": "CNA 明确列出 PHP 7.1.x < 7.1.33、7.2.x < 7.2.24、7.3.x < 7.3.11，且需特定 FPM 配置。原文关于 PHP 7.0 及“PHP 5.6 仅 Crash、不能 RCE”的说法保留为来源主张，本轮没有独立确认；不能把 Crash 与 RCE 合并。",
+    "evidence": {
+      "records": [
+        {
+          "cve": "CVE-2019-11043",
+          "sha256": "e8d8d1fad493f57d35e5cdb576d336278f91b6373d7756c354c6a345d19a882b",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2019/11xxx/CVE-2019-11043.json"
+        }
+      ],
+      "baseline_evidence": [
+        {
+          "line": 60,
+          "text": "PHP 7.0 版本"
+        },
+        {
+          "line": 61,
+          "text": "PHP 7.1 版本"
+        },
+        {
+          "line": 62,
+          "text": "PHP 7.2 版本"
+        },
+        {
+          "line": 63,
+          "text": "PHP 7.3 版本"
+        }
+      ],
+      "review_scope": "Static branch-by-branch comparison; no reproduction."
+    },
+    "before_sha256": "008c7443bb24d78946228f5dd748b17fab6f4438bb14ef5c605070c8e240985e",
+    "after_sha256": "598b7f9712eed054b67fb4c738dda51c17cc716700557eb3d6fdb1d22c3fb948",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/开发框架/Spring Boot/Spring-框架因-Jetty-URI-解析不一致导致的路径穿越漏洞-CVE-2025-41242.md",
+    "fields": {
+      "version": {
+        "before": "org.springframework:spring-webmvc >= 6.2.0, < 6.2.10",
+        "after": "Spring Framework 6.2.x < 6.2.10；Spring Framework 6.1.x < 6.1.22；Spring Framework 5.3.x < 5.3.44；原文另列 6.0.0–6.0.29（本轮 CNA 未确认）"
+      }
+    },
+    "note": "CNA 记录支持 6.2、6.1、5.3 分支；原文另列 6.0.0–6.0.29，本轮仍待核。还需应用通过 Spring 处理静态资源，且所用 Servlet 容器未拒绝可疑路径序列。官方说明 Tomcat / Jetty 保持默认安全功能时不受该利用影响，不能仅凭标题中的 Jetty 或版本号判定。",
+    "evidence": {
+      "records": [
+        {
+          "cve": "CVE-2025-41242",
+          "sha256": "bbb6d9ca4eb424a3dac0bbfb628fee52a0bf50cd0f53190b5320b5c2b3595668",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2025/41xxx/CVE-2025-41242.json"
+        }
+      ],
+      "baseline_evidence": [
+        {
+          "line": 60,
+          "text": "org.springframework:spring-webmvc >= 6.2.0, < 6.2.10"
+        },
+        {
+          "line": 61,
+          "text": "org.springframework:spring-webmvc >= 6.1.0, <= 6.1.21"
+        },
+        {
+          "line": 62,
+          "text": "org.springframework:spring-webmvc >= 6.0.0, <= 6.0.29"
+        },
+        {
+          "line": 63,
+          "text": "org.springframework:spring-webmvc >= 5.3.0, <= 5.3.43"
+        }
+      ],
+      "review_scope": "Static branch-by-branch comparison; no reproduction."
+    },
+    "before_sha256": "bac955768b8911d53f4c5194bfbcfb2ae5b06b6f8b15adedcc76d6c3e38dc0a2",
+    "after_sha256": "3cdc21467ddb9a58d7eb8668b08dcecbe6baa83d6ea241fd15613f2fb7516652",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/开发框架/Spring Cloud/Spring Cloud Config 目录遍历漏洞 CVE-2019-3799.md",
+    "fields": {
+      "version": {
+        "before": "Spring Cloud Config 2.1.0 to 2.1.1",
+        "after": "Spring Cloud Config 2.1.x < 2.1.2.RELEASE；Spring Cloud Config 2.0.x < 2.0.4.RELEASE；Spring Cloud Config 1.4.x < 1.4.6.RELEASE"
+      }
+    },
+    "note": null,
+    "evidence": {
+      "records": [
+        {
+          "cve": "CVE-2019-3799",
+          "sha256": "44ffca9a51a59ef9e636c9bfa91d8bf566e2ef21c2fd120a7d50d82cee45625b",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2019/3xxx/CVE-2019-3799.json"
+        }
+      ],
+      "baseline_evidence": [
+        {
+          "line": 48,
+          "text": "Spring Cloud Config 2.1.0 to 2.1.1"
+        },
+        {
+          "line": 49,
+          "text": "Spring Cloud Config 2.0.0 to 2.0.3"
+        },
+        {
+          "line": 50,
+          "text": "Spring Cloud Config 1.4.0 to 1.4.5"
+        }
+      ],
+      "review_scope": "Static branch-by-branch comparison; no reproduction."
+    },
+    "before_sha256": "8d6f94db63e9f57a116189ad72d88f9e01cf9779c125117440021639ec7efd4d",
+    "after_sha256": "70cbf4776ce24c4f867141085f484e71237bdce110af517b03863937e79002ac",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/数据库/MongoDB/MongoDB-Zlib-压缩协议堆内存信息泄露漏洞-CVE-2025-14847.md",
+    "fields": {
+      "version": {
+        "before": "MongoDB Server 3.6",
+        "after": "MongoDB Server 3.6；MongoDB Server 4.0；MongoDB Server 4.2；MongoDB Server 4.4.x < 4.4.30；5.0.x < 5.0.32；6.0.x < 6.0.27；7.0.x < 7.0.28；8.0.x < 8.0.17；8.2.x < 8.2.3"
+      },
+      "affected_versions": {
+        "before": "MongoDB Server 3.6",
+        "after": "MongoDB Server 3.6；MongoDB Server 4.0；MongoDB Server 4.2；MongoDB Server 4.4.x < 4.4.30；5.0.x < 5.0.32；6.0.x < 6.0.27；7.0.x < 7.0.28；8.0.x < 8.0.17；8.2.x < 8.2.3"
+      }
+    },
+    "note": null,
+    "evidence": {
+      "records": [
+        {
+          "cve": "CVE-2025-14847",
+          "sha256": "2e74a620c338173d3314a755edc68aa2aa243845b4a16e293df87ba8cc83bf66",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2025/14xxx/CVE-2025-14847.json"
+        }
+      ],
+      "baseline_evidence": [
+        {
+          "line": 68,
+          "text": "MongoDB Server 3.6"
+        },
+        {
+          "line": 69,
+          "text": "MongoDB Server 4.0"
+        },
+        {
+          "line": 70,
+          "text": "MongoDB Server 4.2"
+        },
+        {
+          "line": 71,
+          "text": "4.4.0 <= MongoDB < 4.4.30"
+        },
+        {
+          "line": 72,
+          "text": "5.0.0 <= MongoDB < 5.0.32"
+        },
+        {
+          "line": 73,
+          "text": "6.0.0 <= MongoDB < 6.0.27"
+        },
+        {
+          "line": 74,
+          "text": "7.0.0 <= MongoDB < 7.0.28"
+        },
+        {
+          "line": 75,
+          "text": "8.0.0 <= MongoDB < 8.0.17"
+        },
+        {
+          "line": 76,
+          "text": "8.2.0 <= MongoDB < 8.2.3"
+        }
+      ],
+      "review_scope": "Static branch-by-branch comparison; no reproduction."
+    },
+    "before_sha256": "5b99085f5c86bfdcd1f61b8c1de7efc8acfd975052b9a38d843866e608962741",
+    "after_sha256": "01951653d9ce76e9f7c53fa9dc1dcdaca11610183bd247f5c39363080f8336bb",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/数据库/Mysql/MySQL-身份认证绕过漏洞-CVE-2012-2122.md",
+    "fields": {
+      "version": {
+        "before": "MariaDB 5.1.62, 5.2.12, 5.3.6, 5.5.23",
+        "after": "Oracle MySQL 5.1.x < 5.1.63；Oracle MySQL 5.5.x < 5.5.24；Oracle MySQL 5.6.x < 5.6.6；MariaDB 5.1.x < 5.1.62；MariaDB 5.2.x < 5.2.12；MariaDB 5.3.x < 5.3.6；MariaDB 5.5.x < 5.5.23"
+      },
+      "affected_versions": {
+        "before": "MariaDB 5.1.62, 5.2.12, 5.3.6, 5.5.23",
+        "after": "Oracle MySQL 5.1.x < 5.1.63；Oracle MySQL 5.5.x < 5.5.24；Oracle MySQL 5.6.x < 5.6.6；MariaDB 5.1.x < 5.1.62；MariaDB 5.2.x < 5.2.12；MariaDB 5.3.x < 5.3.6；MariaDB 5.5.x < 5.5.23"
+      }
+    },
+    "note": "原文“漏洞影响”列出的 MySQL 5.1.63、5.5.24、5.6.6 和 MariaDB 5.1.62、5.2.12、5.3.6、5.5.23 是 CNA 的修复界限：受影响范围为相应分支中这些版本之前。索引已加上 before 边界；是否可利用还取决于运行环境的 memcmp 实现，不能泛化到所有构建。",
+    "evidence": {
+      "records": [
+        {
+          "cve": "CVE-2012-2122",
+          "sha256": "329dc5264c0a7f84d10d3b066294b87a7101db30e3fbede7c232750f3ca11c32",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2012/2xxx/CVE-2012-2122.json"
+        }
+      ],
+      "baseline_evidence": [
+        {
+          "line": 61,
+          "text": "MariaDB 5.1.62, 5.2.12, 5.3.6, 5.5.23"
+        },
+        {
+          "line": 62,
+          "text": "MySQL 5.1.63, 5.5.24, 5.6.6"
+        }
+      ],
+      "review_scope": "Static branch-by-branch comparison; no reproduction."
+    },
+    "before_sha256": "0b30f0488837685732550e0601c5f4fcf309add78e8614d5ce03fcb4703bf2fe",
+    "after_sha256": "487df5cc17b692e2eccebada57af926fc0da3a1348f99b1b5928628e5f01d79e",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/服务器软件/Docker/Containerd-漏洞导致容器逃逸-CVE-2020-15257.md",
+    "fields": {
+      "version": {
+        "before": "containerd < 1.4.3",
+        "after": "containerd v < 1.3.9；containerd 1.4.x ≥ 1.4.0 且 < 1.4.3"
+      },
+      "affected_versions": {
+        "before": "containerd < 1.4.3",
+        "after": "containerd v < 1.3.9；containerd 1.4.x ≥ 1.4.0 且 < 1.4.3"
+      }
+    },
+    "note": null,
+    "evidence": {
+      "records": [
+        {
+          "cve": "CVE-2020-15257",
+          "sha256": "6f830c39fc4a8dfa9684dc934c5a5bb18ae4d821c171935b44e40c75e4c08a84",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2020/15xxx/CVE-2020-15257.json"
+        }
+      ],
+      "baseline_evidence": [
+        {
+          "line": 67,
+          "text": "containerd < 1.4.3"
+        },
+        {
+          "line": 68,
+          "text": "containerd < 1.3.9"
+        }
+      ],
+      "review_scope": "Static branch-by-branch comparison; no reproduction."
+    },
+    "before_sha256": "c7ac74e7cbf2547782c86a516f1c588c3ce03f4bcce4e64b36ea026b026306c8",
+    "after_sha256": "275eaff83dbabbb0877d6c16912cf296c5cb3dea69853c09c90270af61123b25",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/服务器软件/Docker/Docker-runC-漏洞导致容器逃逸-CVE-2019-5736.md",
+    "fields": {
+      "version": {
+        "before": "docker version <= 18.09.2",
+        "after": "runc ≤ 1.0-rc6；Docker < 18.09.2"
+      }
+    },
+    "note": "CNA 将 Docker 的界限写为 before 18.09.2，原文 ≤ 18.09.2 把修复版本包含在内。版本索引已改为 Docker < 18.09.2，同时保留 runc through 1.0-rc6 的组件界限。原文代码及容器内 root / 写入条件保留。",
+    "evidence": {
+      "records": [
+        {
+          "cve": "CVE-2019-5736",
+          "sha256": "21109de79628578cf931f0ff0b26b43a60913ca7922067cf16c50884d196225c",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2019/5xxx/CVE-2019-5736.json"
+        }
+      ],
+      "baseline_evidence": [
+        {
+          "line": 66,
+          "text": "docker version <= 18.09.2 "
+        },
+        {
+          "line": 67,
+          "text": "RunC version <= 1.0-rc6"
+        }
+      ],
+      "review_scope": "Static branch-by-branch comparison; no reproduction."
+    },
+    "before_sha256": "d1d4e9bc74b6d612d7658066805451ac8fd139874e5e25cc771762e4b2dd8ada",
+    "after_sha256": "8a2ce908026d45eb069bd8154aa263356e22f1d367fe6ba02d7ad80807b22d45",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/服务器软件/Erlang/Erlang-OTP-SSH未授权远程代码执行漏洞-CVE-2025-32433.md",
+    "fields": {
+      "version": {
+        "before": "<= OTP 27.3.2",
+        "after": "Erlang/OTP 27.0-rc1 ≤ v < 27.3.3；OTP 26.0-rc1 ≤ v < 26.2.5.11；OTP < 25.3.2.20（CNA）"
+      },
+      "affected_versions": {
+        "before": "<= OTP 27.3.2",
+        "after": "Erlang/OTP 27.0-rc1 ≤ v < 27.3.3；OTP 26.0-rc1 ≤ v < 26.2.5.11；OTP < 25.3.2.20（CNA）"
+      }
+    },
+    "note": "CNA 明确列出 27.0-rc1 至 27.3.3 之前、26.0-rc1 至 26.2.5.11 之前、25.3.2.20 之前三段。版本索引采用这些范围；原文“>= OTP 17.0 and older (likely)”的含混推测保留在原文，不据此另造起始界限。还需使用受影响 Erlang/OTP SSH 服务。",
+    "evidence": {
+      "records": [
+        {
+          "cve": "CVE-2025-32433",
+          "sha256": "f56d1a7360da99ab5414e51904c3a5c01fbc2bde301ad0724ef9a718af5165ba",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2025/32xxx/CVE-2025-32433.json"
+        }
+      ],
+      "baseline_evidence": [
+        {
+          "line": 72,
+          "text": "<= OTP 27.3.2"
+        },
+        {
+          "line": 73,
+          "text": "<= OTP 26.2.5.10"
+        },
+        {
+          "line": 74,
+          "text": "<= OTP 25.3.2.19"
+        },
+        {
+          "line": 75,
+          "text": ">= OTP 17.0 and older (likely)"
+        }
+      ],
+      "review_scope": "Static branch-by-branch comparison; no reproduction."
+    },
+    "before_sha256": "4277283a2d9c44978b70f9faeb9e6fbc6bc563ffbf0f753ddd6eff474b00c2d9",
+    "after_sha256": "b72555946cd7b6218c345cfd8a2e86f5e8a436c36ec2f2376b6db4c7c5a2af66",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/服务器软件/SRS流媒体/SRS-api-server-服务器命令执行漏洞-CVE-2023-34105.md",
+    "fields": {
+      "version": {
+        "before": "SRS v5.0.137~v5.0.156",
+        "after": "SRS 5.0.137 ≤ v < 5.0.157；SRS 6.0.18 ≤ v < 6.0.48；SRS < 5.0-b1（CNA）"
+      },
+      "affected_versions": {
+        "before": "SRS v5.0.137~v5.0.156",
+        "after": "SRS 5.0.137 ≤ v < 5.0.157；SRS 6.0.18 ≤ v < 6.0.48；SRS < 5.0-b1（CNA）"
+      }
+    },
+    "note": "版本索引除原文两条 5.x/6.x 范围外，补入 CNA 单独列出的 SRS < 5.0-b1；三条分支分别以 5.0.157、6.0.48、5.0-b1 为修复界限，不能混为一个连续版本区间。",
+    "evidence": {
+      "records": [
+        {
+          "cve": "CVE-2023-34105",
+          "sha256": "7712857e24423142fe248e43278b49abf4a2d5dd14a41f8f47c9d200e8f2c32c",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2023/34xxx/CVE-2023-34105.json"
+        }
+      ],
+      "baseline_evidence": [
+        {
+          "line": 63,
+          "text": "SRS v5.0.137~v5.0.156"
+        },
+        {
+          "line": 64,
+          "text": "SRS v6.0.18~v6.0.47"
+        }
+      ],
+      "review_scope": "Static branch-by-branch comparison; no reproduction."
+    },
+    "before_sha256": "9b861cb08920ee47a34a8a388c225aab40be9276e30167439e417cdbd0bc7361",
+    "after_sha256": "ddeac3981bc265bae769f7092690388c93bd63c0d202915002d05947e5663917",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/服务器软件/SkyWalking/Apache-SkyWalking-7.0.0-graphql-SQL注入漏洞-CVE-2020-9483.md",
+    "fields": {
+      "version": {
+        "before": "Apache SkyWalking 6.0.0~6.6.0",
+        "after": "Apache SkyWalking 6.0.0–6.6.0；Apache SkyWalking 7.0.0"
+      },
+      "affected_versions": {
+        "before": "Apache SkyWalking 6.0.0~6.6.0",
+        "after": "Apache SkyWalking 6.0.0–6.6.0；Apache SkyWalking 7.0.0"
+      }
+    },
+    "note": null,
+    "evidence": {
+      "records": [
+        {
+          "cve": "CVE-2020-9483",
+          "sha256": "954ff246fca998dd4f2aade3d10d5709930ef353e22a8f983842b01ffa6a300c",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2020/9xxx/CVE-2020-9483.json"
+        }
+      ],
+      "baseline_evidence": [
+        {
+          "line": 63,
+          "text": "Apache SkyWalking 6.0.0~6.6.0"
+        },
+        {
+          "line": 64,
+          "text": "Apache SkyWalking 7.0.0"
+        }
+      ],
+      "review_scope": "Static branch-by-branch comparison; no reproduction."
+    },
+    "before_sha256": "74bfd7cb9d44e5decd1e2373ccab8c74b4fc0b80c3a895791992aaae5a926e40",
+    "after_sha256": "cb5f5879843b59c69f7ae1e2a5b0ec37cca0a99a5b1d6ea7988c8ab62606e9bd",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/服务器软件/Zabbix/Zabbix-SAML身份绕过漏洞-CVE-2022-23131.md",
+    "fields": {
+      "version": {
+        "before": "Zabbix 4.0.36",
+        "after": "Zabbix Frontend 5.4.0–5.4.8；Zabbix Frontend 6.0.0alpha1"
+      },
+      "affected_versions": {
+        "before": "Zabbix 4.0.36",
+        "after": "Zabbix Frontend 5.4.0–5.4.8；Zabbix Frontend 6.0.0alpha1"
+      }
+    },
+    "note": "Zabbix 官方公告对 CVE-2022-23131 列出 5.4.0–5.4.8 与 6.0.0alpha1，并要求启用非默认的 SAML SSO；原文列出的 4.0.36 未获该公告支持，不再作为本编号的已确认影响范围。仍须知道有效用户名，或使用已开启的 guest 账号。",
+    "evidence": {
+      "records": [
+        {
+          "cve": "CVE-2022-23131",
+          "sha256": "580566e7921331665bb303d6ecaa94ba2717269353989b2abb093e5268174013",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2022/23xxx/CVE-2022-23131.json"
+        }
+      ],
+      "baseline_evidence": [
+        {
+          "line": 56,
+          "text": "Zabbix 4.0.36"
+        },
+        {
+          "line": 57,
+          "text": "Zabbix 5.4.0"
+        },
+        {
+          "line": 58,
+          "text": "Zabbix 5.4.8"
+        },
+        {
+          "line": 59,
+          "text": "Zabbix 6.0.0alpha1"
+        }
+      ],
+      "review_scope": "Static branch-by-branch comparison; no reproduction."
+    },
+    "before_sha256": "42a2e234eb7ec5259408c4c4760222fdf461d45d1816329fe4e4035e5a046627",
+    "after_sha256": "6dc3608bb30da919f8bdc72e65527b5644feea4032fa9d6d53e2f4e017afb454",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/网络设备/DrayTek/DrayTek企业网络设备-远程命令执行-CVE-2020-8515.md",
+    "fields": {
+      "version": {
+        "before": "Vigor2960 < v1.5.1",
+        "after": "DrayTek Vigor2960 < 1.5.1；Vigor300B < 1.5.1；Vigor3900 < 1.5.1"
+      }
+    },
+    "note": "DrayTek 官方 DSA-2020-001 仅确认 Vigor2960、Vigor300B、Vigor3900，并在 1.5.1 修复；公告说明未发现其他产品受影响。原文 VigorSwitch 型号列表未获该编号支持，保留为历史内容，不并入已确认范围。",
+    "evidence": {
+      "records": [
+        {
+          "cve": "CVE-2020-8515",
+          "sha256": "3759ee7595ead9c8fd1e10273a84ef9448cb62e7bb4eea584783e892321c464a",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2020/8xxx/CVE-2020-8515.json"
+        }
+      ],
+      "baseline_evidence": [
+        {
+          "line": 64,
+          "text": "Vigor2960 < v1.5.1"
+        },
+        {
+          "line": 65,
+          "text": "Vigor300B < v1.5.1"
+        },
+        {
+          "line": 66,
+          "text": "Vigor3900 < v1.5.1"
+        },
+        {
+          "line": 67,
+          "text": "VigorSwitch20P2121 <= v2.3.2"
+        },
+        {
+          "line": 68,
+          "text": "VigorSwitch20G1280 <= v2.3.2"
+        },
+        {
+          "line": 69,
+          "text": "VigorSwitch20P1280 <= v2.3.2"
+        },
+        {
+          "line": 70,
+          "text": "VigorSwitch20G2280 <= v2.3.2"
+        },
+        {
+          "line": 71,
+          "text": "VigorSwitch20P2280 <= v2.3.2"
+        }
+      ],
+      "review_scope": "Static branch-by-branch comparison; no reproduction."
+    },
+    "before_sha256": "feec1acdbec9bd4eea903b95dc6b276f648989b5624f46594bf4969623e1be8d",
+    "after_sha256": "16785a69eaa3d8202131505216cd7276cf3d97b292e2accf82cc2c082adafdbf",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/运维面板/Jumpserver/JumpServer-连接令牌泄漏漏洞-CVE-2025-62712.md",
+    "fields": {
+      "version": {
+        "before": "JumpServer < v3.10.20-lts",
+        "after": "JumpServer < 3.10.20-lts；JumpServer 4.0.0 ≤ v < 4.10.11-lts"
+      },
+      "affected_versions": {
+        "before": "JumpServer < v3.10.20-lts",
+        "after": "JumpServer < 3.10.20-lts；JumpServer 4.0.0 ≤ v < 4.10.11-lts"
+      }
+    },
+    "note": null,
+    "evidence": {
+      "records": [
+        {
+          "cve": "CVE-2025-62712",
+          "sha256": "95a955dffc2971542b174c0f4aaef2fb3e53d29552113c5e9ea4b7c9222c4b88",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2025/62xxx/CVE-2025-62712.json"
+        }
+      ],
+      "baseline_evidence": [
+        {
+          "line": 70,
+          "text": "JumpServer < v3.10.20-lts"
+        },
+        {
+          "line": 71,
+          "text": "JumpServer < 4.10.11-lts"
+        }
+      ],
+      "review_scope": "Static branch-by-branch comparison; no reproduction."
+    },
+    "before_sha256": "2d507a0f172b5a96440318976ea63ab5275096f32f806797b43762cf908a38be",
+    "after_sha256": "8cc9f7ce98c127ffbc41bf8e549110a046fa1b5a5c07d06886488e3f836feaad",
+    "original_body_preserved": true
+  }
+]
