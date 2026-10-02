@@ -27,8 +27,8 @@
       "bytes": 13521330
     },
     "official-evidence-index.jsonl": {
-      "sha256": "63dba959a279c0ecb028883abc0f86c9b15cd2d47342c556d6a3feee873c445d",
-      "bytes": 5129256
+      "sha256": "d2a5dd7f98a27eebfa412bd51055e1fbc2b46015d88a4d68118ed7dfaf2615db",
+      "bytes": 5278674
     },
     "product-mismatch-review.jsonl": {
       "sha256": "e390d26f4e395e5b7f93f97ffdee32b802352eb686426459ea278e3a36a5f1ca",
@@ -43,22 +43,34 @@
     "ledger": {
       "original_tmp_path": "/tmp/vulwiki-round3-official-review.normalized-ledger-v6.jsonl",
       "sha256": "11275b47c527653f493be88e8e72d6e57f1d238e17feaf5af9a247055989b1bb",
-      "bytes": 7535652
+      "bytes": 7535652,
+      "portable_equivalent": "article-ledger.jsonl"
     },
     "evidence_index": {
       "original_tmp_path": "/tmp/vulwiki-round3-official-review.cve-evidence-index-v5.jsonl",
       "sha256": "034656e2ff0cfbdb8329b0c0dec323e8622f1b16df90025204e6118ee666a4ca",
-      "bytes": 4356649
+      "bytes": 4356649,
+      "portable_equivalent": "official-evidence-index.jsonl"
     },
     "version_review": {
       "original_tmp_path": "/tmp/vulwiki-round3-official-review.version-priority-annotated-v3.jsonl",
       "sha256": "c830f299f380da1b5a09c052aef95b0e333df3ccef25b9d4c0fca5228781f934",
-      "bytes": 308508
+      "bytes": 308508,
+      "portable_equivalent": "version-review.jsonl"
     },
     "mismatch_review": {
       "original_tmp_path": "/tmp/vulwiki-round3-official-review.product-mismatch-manual-batch01.jsonl",
       "sha256": "8c85c4abe86b4d8d21ce7b5f92967dbcea75a7f828a5cb1c517242f5341b7dd7",
-      "bytes": 30155
+      "bytes": 30155,
+      "portable_equivalent": "product-mismatch-review.jsonl"
+    }
+  },
+  "root_verification": {
+    "records": 1804,
+    "method": "Independent explicit snake_case to CNA camelCase mapping, compare directly to original raw bytes by SHA256. Rejected reasons, problem types and replacement fields checked. No raw record is bundled.",
+    "packaging_fields_corrected": {
+      "rejected_reasons": 10,
+      "replaced_by": 1
     }
   }
 }
