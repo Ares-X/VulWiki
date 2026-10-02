@@ -1,6 +1,43 @@
 ---
 source: "历史归档批(无原始出处标注)"
+title: "Tomcat对URL特殊字符的处理"
+product: "Apache Tomcat"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-7b0a69adf565d3aefed05583"
+entity_id: "ve-7b0a69adf565d3aefed05583"
+schema_version: "1"
 ---
+
+# Tomcat对URL特殊字符的处理
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 证据范围：与323测试和315自定义ACL利用相互补足，是同一教程拆片，非独立漏洞。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 未标源码tag/版本，反斜杠允许或拒绝受配置影响，文字只说转换为/遗漏条件
+- 代码与关键分支均图片，未视检
+- normalize返回boolean且原地修改，尾部概述为返回URL路径不严谨
+- 原文来源缺失
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 ### Tomcat对URL特殊字符的处理
 

@@ -1,6 +1,38 @@
 ---
 source: "hatch 补库批 20260928"
+product: "ThinkCMF X1.6.0/X2.1.0/X2.2.0–2.2.2"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "ThinkCMF 框架上的任意内容包含漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：Homebase公开display/fetch可路由；templateFile存在，模板引擎Think，缓存目录可写"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-243f0aba38c5d1b260c733ea"
+entity_id: "ve-243f0aba38c5d1b260c733ea"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：Homebase公开display/fetch可路由；templateFile存在，模板引擎Think，缓存目录可写
+
+- **结论使用边界（1）**：前半添加test_public只是路由机制演示而非原版漏洞，必须与后面原生display/fetch区分。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **结论使用边界（2）**：末文说fetch不需知道文件路径但最终payload仍给templateFilepublic/index，需明确存在性要求。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **结论使用边界（3）**：TMPL_ENGINE_TYPE=Think可纠正416误称Smarty；文件内容包含与恶意模板执行需分能力。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **事实待核（4）**：无原始来源/修复版/实际最终执行响应文本。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # ThinkCMF 框架上的任意内容包含漏洞
 

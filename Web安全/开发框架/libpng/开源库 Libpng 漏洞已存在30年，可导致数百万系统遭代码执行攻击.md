@@ -1,6 +1,40 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+product: "libpng / png_set_quantize"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2026-25646"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "开源库 Libpng 漏洞已存在30年，可导致数百万系统遭代码执行攻击"
+prerequisites: "来源所述条件，未列明部分仍待核：称所有<1.6.55；需PLTE无hIST、请求量化且颜色比例特定"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-0e9d23adf83e8a8503f0f0a1"
+entity_id: "ve-0e9d23adf83e8a8503f0f0a1"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：称所有&lt;1.6.55；需PLTE无hIST、请求量化且颜色比例特定
+
+代码与实验材料：无PoC，详细索引映射说明但只有二手文字
+
+来源证据范围：CybersecurityNews来源，无官方advisory/patch
+
+- **结论使用边界（1）**：标题已实现RCE与正文能力不一致；依据：正文具体描述max_d越界读取、最可能崩溃，仅“可能更严重”，标题却断言数百万系统代码执行。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **结论使用边界（2）**：类型和规模需校准；依据：称堆缓冲区溢出但实际叙述越界读；库部署普遍不等于调用量化路径。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **事实待核（3）**：CVE不在元数据；依据：frontmatter只有source；30年和修复版需主源核验。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 #  开源库 Libpng 漏洞已存在30年，可导致数百万系统遭代码执行攻击  
 Guru Baran

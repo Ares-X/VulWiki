@@ -1,9 +1,62 @@
 ---
-
 source: "MrWQ/vulnerability-paper"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "Panalog 日志系统设备审计"
+product: "Panabit Panalog"
+record_type: "roundup"
+document_type: "多漏洞代码审计"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "文称<=MARS r10p1Free；3前台RCE、3后台RCE、1后台删除；默认凭据另项"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/Panalog%20%E6%97%A5%E5%BF%97%E7%B3%BB%E7%BB%9F%E8%AE%BE%E5%A4%87%E5%AE%A1%E8%AE%A1.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+source_url: "https://mp.weixin.qq.com/s/8FVXJGOMUSemP7al3UrceQ"
+id: "vw-91575aee0046f57a75776a07"
+entity_id: "ve-91575aee0046f57a75776a07"
+schema_version: "1"
 ---
 
 # Panalog 日志系统设备审计
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Panabit Panalog
+- 文献类型：多漏洞代码审计
+- 版本、权限及部署边界：文称<=MARS r10p1Free；3前台RCE、3后台RCE、1后台删除；默认凭据另项
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 七个入口和鉴权条件不同应拆实体关联，不强合并同产品RCE；源码/固件版本hash和补丁缺
+2. 删除包含chksession()所有文件会破坏审计语境，且无该字符串不证明无上层/include鉴权，应静态追调用而非此筛选推出匿名
+3. 前台第二项判断条件代码是触发拒绝条件，文称符合即可执行容易倒置；fetchfile示例缺nodeip，accountlist描述参数与实际errname不一致
+4. PoC多为只有路径+body非完整HTTP、后台Cookie没展示；创建多个输出文件及deletefile为状态改变
+5. 后台删除仅5.txt未证实任意路径；所有关键源代码与成功截图未视检；官方源码下载链接和原文可保留
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://mp.weixin.qq.com/s/8FVXJGOMUSemP7al3UrceQ>
+- 原文参考链接（未重新核验）：<http://ksria.com/simpread/>
+- 原文参考链接（未重新核验）：<https://www.panabit.com/cn/product/2021/0107/379.html****>
+- 原文参考链接（未重新核验）：<https://github.com/MrWQ/vulnerability-paper>
+
+### 归档技术正文
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/8FVXJGOMUSemP7al3UrceQ)

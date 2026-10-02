@@ -1,9 +1,47 @@
 ---
-cve: "CVE-2026-25056"
+cve: "CVE-2026-25056; CVE-2026-25053; CVE-2026-25049"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "热门平台 n8n 遭遇三重远程代码执行漏洞威胁"
+product: "n8n"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2026-25056; CVE-2026-25053; CVE-2026-25049"
+referenced_identifiers: ""
+identifier_role: "primary"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-2518d1a2b7849ac985c0a98e"
+entity_id: "ve-2518d1a2b7849ac985c0a98e"
+schema_version: "1"
 ---
 
-#  热门平台 n8n 遭遇三重远程代码执行漏洞威胁  
+# 热门平台 n8n 遭遇三重远程代码执行漏洞威胁
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 本次正文校订
+
+- 按该篇完整正文及逐篇审阅区分主问题与背景编号，补全结构化主标识；不把标识归属校订等同运行复现。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 不同修复分支不可混
+- 25049缺修复版本和第三GHSA
+- 须工作流编辑权限
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 sec随谈
                     sec随谈  sec随谈   2026-02-06 01:40  
   

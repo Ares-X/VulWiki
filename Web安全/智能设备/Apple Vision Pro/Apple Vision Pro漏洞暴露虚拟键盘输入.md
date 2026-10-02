@@ -1,8 +1,52 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-08b75cca03c6df6c8cb0fdb5"
+entity_id: "ve-08b75cca03c6df6c8cb0fdb5"
+schema_version: "1"
+title: "Apple Vision Pro漏洞暴露虚拟键盘输入"
+product: "Apple Vision Pro visionOS Presence/Persona"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2024-40865"
+referenced_identifiers: ""
+prerequisites: "共享虚拟Persona视频并使用注视键盘；修复visionOS1.3"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%99%BA%E8%83%BD%E8%AE%BE%E5%A4%87/Apple%20Vision%20Pro/Apple%20Vision%20Pro%E6%BC%8F%E6%B4%9E%E6%9A%B4%E9%9C%B2%E8%99%9A%E6%8B%9F%E9%94%AE%E7%9B%98%E8%BE%93%E5%85%A5.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 #  Apple Vision Pro漏洞暴露虚拟键盘输入   
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Apple Vision Pro visionOS Presence/Persona
+- 本文讨论：CVE-2024-40865 GAZEploit
+- 版本、权限与配置前提：共享虚拟Persona视频并使用注视键盘；修复visionOS1.3
+- 资料类型：侧信道研究新闻；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 元数据未录CVE；重构准确率/实验限制缺失，密码提取应保持可能性而非确定性
+- 只有THN二手来源，无Apple公告/学术论文直链；明显错字刀子
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 1.3补丁机制、推断成功率与环境限制待原研核验
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 THN  代码卫士   2024-09-14 17:52  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

@@ -1,8 +1,60 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2026-0877;CVE-2026-0878;CVE-2026-0879;CVE-2026-0880;CVE-2026-0881;CVE-2026-0882;CVE-2026-0891;CVE-2026-0892"
+identifier_role: "primary"
+primary_identifiers: "CVE-2026-0877;CVE-2026-0878;CVE-2026-0879;CVE-2026-0880;CVE-2026-0881;CVE-2026-0882;CVE-2026-0891;CVE-2026-0892"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "Firefox 147发布时修复了16个允许任意代码执行的漏洞"
+product: "Firefox/Firefox ESR；Thunderbird"
+record_type: "roundup"
+document_type: "多漏洞补丁摘要"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "文称Firefox147/ESR140.7、Thunderbird对应版本；具体组件前置条件不详"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Firefox/Firefox%20147%E5%8F%91%E5%B8%83%E6%97%B6%E4%BF%AE%E5%A4%8D%E4%BA%8616%E4%B8%AA%E5%85%81%E8%AE%B8%E4%BB%BB%E6%84%8F%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E7%9A%84%E6%BC%8F%E6%B4%9E.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-899dd8c1208112c9b1db8831"
+entity_id: "ve-899dd8c1208112c9b1db8831"
+schema_version: "1"
 ---
 
-#  Firefox 147发布时修复了16个允许任意代码执行的漏洞  
+# Firefox 147发布时修复了16个允许任意代码执行的漏洞
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Firefox/Firefox ESR；Thunderbird
+- 文献类型：多漏洞补丁摘要
+- 版本、权限及部署边界：文称Firefox147/ESR140.7、Thunderbird对应版本；具体组件前置条件不详
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 标题16个任意代码执行过度，正文含信息泄露/DoS/UI欺骗；六高危全称沙箱逃逸也需逐项公告证据
+2. 元数据为空，明确编号仅八项（含范围展开），其余不能猜补；漏洞集合与CVE条目数亦需区分
+3. Firefox与Thunderbird通道不能统一套全部漏洞范围，ESR/平台及脚本默认设置需各自矩阵
+4. 脚注4/14/18/20/1/9残留却无文献表，官方下载页也没URL，来源不可追溯
+5. Linux长期目录Bug259356不一定是安全漏洞；ETP/WDAC/关扩展为一般措施不证明可缓解这些CVE
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
  网安百色   2026-01-17 11:08  
   
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/1QIbxKfhZo49E74BLfrEBM3Nko9RBqsZiahDV6k6P3AW3Z8IY3JZ3XmjrFzSyqKSyMDmmvJSLd9OFS3qJJz4L3w/640?wx_fmt=jpeg&from=appmsg "")  
@@ -81,4 +133,4 @@ Firefox采用多进程架构和沙箱机制来隔离不同组件，防止恶意�
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

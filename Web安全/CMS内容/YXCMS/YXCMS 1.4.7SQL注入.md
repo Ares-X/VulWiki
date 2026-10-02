@@ -1,6 +1,42 @@
 ---
 source: "hatch 补库批 20260928"
+product: "YXCMS1.4.7"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "YXCMS 1.4.7SQL注入"
+prerequisites: "来源所述条件，未列明部分仍待核：authenticated fragmentdelete; POSTdelidarray; DNSexfilWindowsUNC/FILEpermission/egress"
+side_effects: "未执行；本文需注意的操作影响：OOB载荷依WindowsUNC与DB FILE/网络配置未写；删除操作可实际删数据；HTTPbody末尾粘中文说明、Referer含[url]、URL吞中文、两不同payload/外带域，需恢复排版"
+source_status: "unknown"
+id: "vw-83434a6adff8b54b90d80920"
+entity_id: "ve-83434a6adff8b54b90d80920"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；遮罩后的历史值不能作为可用登录凭据。原操作、请求方法和攻击表达式保留。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：authenticated fragmentdelete; POSTdelidarray; DNSexfilWindowsUNC/FILEpermission/egress
+
+- **结论使用边界（1）**：真正未过滤分支是POSTimplode字符串where；作者起初跟GETintval安全分支易误导。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **结论使用边界（2）**：称escape函数只有数组才过滤错误，escape标量也mysql_real_escape_string；风险是parseCondition字符串分支不调用escape。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **操作与副作用边界（3）**：OOB载荷依WindowsUNC与DB FILE/网络配置未写；删除操作可实际删数据。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+- **结论使用边界（4）**：HTTPbody末尾粘中文说明、Referer含\[url\]、URL吞中文、两不同payload/外带域，需恢复排版。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **事实待核（5）**：有完整调用链价值但缺来源/补丁和测试版本。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # YXCMS 1.4.7SQL注入
 
@@ -189,7 +225,7 @@ post包
     Content-Type: application/x-www-form-urlencoded
     Content-Length: 188
     Referer: [url]http://127.0.0.1/index.php?r=admin/fragment/index[/url]
-    Cookie: PHPSESSID=bbei6n32cuevaf1lbi0n79rdj2; 
+    Cookie: PHPSESSID=bbe********************dj2; 
     Connection: close
     Upgrade-Insecure-Requests: 1
 

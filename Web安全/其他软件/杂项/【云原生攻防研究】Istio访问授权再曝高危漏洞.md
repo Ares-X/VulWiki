@@ -1,8 +1,63 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "【云原生攻防研究】Istio访问授权再曝高危漏洞"
+product: "Istio JWT path triggerRules CVE-2020-8595"
+record_type: "analysis"
+document_type: "技术文章（细分类待核）"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "实测1.4.2和修复1.4.4/1.3.8清楚，需分支范围不能跨分支简单大于"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/%E3%80%90%E4%BA%91%E5%8E%9F%E7%94%9F%E6%94%BB%E9%98%B2%E7%A0%94%E7%A9%B6%E3%80%91Istio%E8%AE%BF%E9%97%AE%E6%8E%88%E6%9D%83%E5%86%8D%E6%9B%9D%E9%AB%98%E5%8D%B1%E6%BC%8F%E6%B4%9E.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-04cb711fa184c72d19950325"
+entity_id: "ve-04cb711fa184c72d19950325"
+schema_version: "1"
 ---
 
-#  【云原生攻防研究】Istio访问授权再曝高危漏洞   
+# 【云原生攻防研究】Istio访问授权再曝高危漏洞
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Istio JWT path triggerRules CVE-2020-8595
+- 文献类型：技术文章（细分类待核）
+- 版本、权限及部署边界：实测1.4.2和修复1.4.4/1.3.8清楚，需分支范围不能跨分支简单大于
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 2024转载却去年/今年沿用2020语境，主CVE2020-8595缺元数据，三个2019CVE仅背景
+2. 实测1.4.2和修复1.4.4/1.3.8清楚，需分支范围不能跨分支简单大于
+3. 根因未剥离query与正文写将query分类处理互相矛盾，应准确说使用含query的请求目标精确比较
+4. 普通浏览器/curl URL片段#不会发送到服务器，单加#绕过需原始request-target特殊构造证据
+5. /apps策略exact却用/apps/证明401不一致，metadata.name jwt尾空格无效
+6. 命令/YAML混入行号、响应多行黏连，无法直接复制
+7. JWT签名不是加密，JWT也可采用JWE，CVSS不是机构
+8. 同Pod可访问localhost不自动意味着传播或提权
+9. 官方公告与研究引用完整，清理广告并保留作者归属
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
  黑伞安全   2024-12-13 14:33  
   
 一、概述  
@@ -509,4 +564,4 @@ https://istio.io/news/security
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

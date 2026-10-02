@@ -1,6 +1,40 @@
 ---
 source: "白阁文库 BaizeSec/bylibrary"
+product: "FineCMS5.0.8"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "FineCMS_v5.0.8两处getshell"
+prerequisites: "来源所述条件，未列明部分仍待核：第一入口需可预测/默认SYS_KEY；第二需注册会员；上传目录执行PHP"
+side_effects: "未执行；本文需注意的操作影响：与172同文主体，两条漏洞分别API默认密钥与会员头像上传，应独立关联"
+source_status: "unknown"
+id: "vw-d090f4eae1acbe2410a4e397"
+entity_id: "ve-d090f4eae1acbe2410a4e397"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 明确缺图：原文 HTML 引用 `FineCMS最新版5.0.8两处getshell/2.png` 未在基线 Git 树中找到；对应资源只有 1.png、3.png，截图 2 需回原源补齐。本次保留该引用，不猜造图像，也不称所有图片完整。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：第一入口需可预测/默认SYS_KEY；第二需注册会员；上传目录执行PHP
+
+- **适用与权限边界（1）**：与172同文主体，两条漏洞分别API默认密钥与会员头像上传，应独立关联。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **证据待核（2）**：SYS_KEY硬编码是否所有安装统一未给安装生成逻辑；base64描述把移除的result\[1\]误当解码对象。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **结论使用边界（3）**：第一脚本200且code子串、第二只status键判成功均不证明PHP执行，第二未取实际shell路径。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **证据待核（4）**：HTML img使用旧相对目录（非Markdown图片统计范围）需Git树另核对；末尾github无实际链接。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # FineCMS_v5.0.8两处getshell
 

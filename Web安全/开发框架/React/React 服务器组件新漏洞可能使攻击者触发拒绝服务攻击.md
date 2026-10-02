@@ -1,7 +1,39 @@
 ---
 cve: "CVE-2026-23869"
 source: "gelusus/wxvl 公众号漏洞文库"
+product: "React Server Components/资源消耗"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2026-23869"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "React 服务器组件新漏洞可能使攻击者触发拒绝服务攻击"
+prerequisites: "来源所述条件，未列明部分仍待核：列19.0.0–4/19.1.0–5/19.2.0–4，修复19.0.5/19.1.6/19.2.5；仅三个server-dom包"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-907e33c3421c0885fa8ae50d"
+entity_id: "ve-907e33c3421c0885fa8ae50d"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：列19.0.0–4/19.1.0–5/19.2.0–4，修复19.0.5/19.1.6/19.2.5；仅三个server-dom包
+
+代码与实验材料：无PoC，单请求一分钟CPU属于未核量化声明；客户端不受影响限制明确
+
+来源证据范围：只有公众号归档，无一手来源
+
+- **事实待核（1）**：修复时效与证据需限定；依据：本条修复版本在264被列为23870受影响，应说明只针对23869而非整体安全。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **结论使用边界（2）**：RSC包名称不是普通服务器DOM；依据：将server-dom解释为服务器端DOM包易混同通用SSR，需强调Flight/Server Function入口。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 #  React 服务器组件新漏洞可能使攻击者触发拒绝服务攻击  
 原创 网络安全9527

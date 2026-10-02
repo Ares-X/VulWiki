@@ -1,8 +1,59 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2024-33899;CVE-2024-36052"
+identifier_role: "primary"
+primary_identifiers: "CVE-2024-33899;CVE-2024-36052"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "研究员披露WinRAR中的ANSI转义序列注入漏洞"
+product: "RAR/WinRAR终端输出"
+record_type: "advisory"
+document_type: "技术混写的新闻"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "文中Windows与Linux/Unix两编号，7.00前；用户处理恶意归档"
+side_effects: "终端不可用或应用拒绝服务不能升级为系统崩溃"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/WinRAR/%E7%A0%94%E7%A9%B6%E5%91%98%E6%8A%AB%E9%9C%B2WinRAR%E4%B8%AD%E7%9A%84ANSI%E8%BD%AC%E4%B9%89%E5%BA%8F%E5%88%97%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-b300511efe4e5756e0e6fb21"
+entity_id: "ve-b300511efe4e5756e0e6fb21"
+schema_version: "1"
 ---
 
-#  研究员披露WinRAR中的ANSI转义序列注入漏洞   
+# 研究员披露WinRAR中的ANSI转义序列注入漏洞
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：RAR/WinRAR终端输出
+- 文献类型：技术混写的新闻
+- 版本、权限及部署边界：文中Windows与Linux/Unix两编号，7.00前；用户处理恶意归档
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 缺两个CVE元数据，需按平台/可执行程序建实体
+2. 同166混入ShellExecute错误扩展名执行脚本，与ANSI控制终端内容不构成所述直接因果
+3. 终端不可用或应用拒绝服务不能升级为系统崩溃
+4. sdushantha.github.io与cybersecuritynews只是站名无文章链接；与166重复，保留额外平台映射但先核验
+
+### 操作风险
+
+终端不可用或应用拒绝服务不能升级为系统崩溃
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 看雪学苑  看雪学苑   2024-05-28 17:59  
   
 近日，安全研究员Siddharth Dushantha发现WinRAR这款流行文件压缩软件中存在ANSI转义序列注入漏洞，可能被利用来欺骗用户或是导致系统崩溃。  
@@ -67,4 +118,4 @@ source: "gelusus/wxvl 公众号漏洞文库"
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

@@ -1,9 +1,45 @@
 ---
 cve: "CVE-2024-6409"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "OpenSSH 易受RCE新漏洞影响"
+product: "OpenSSH privsep子进程/发行版补丁"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2024-6409"
+referenced_identifiers: "CVE-2024-6387"
+identifier_role: "primary"
+prerequisites: "受影响OpenSSH/下游配置、认证宽限期信号竞争；代码执行身份为降权privsep用户"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-21f45c823607b7c7aa014b44"
+entity_id: "ve-21f45c823607b7c7aa014b44"
+schema_version: "1"
 ---
 
-#  OpenSSH 易受RCE新漏洞影响   
+# OpenSSH 易受RCE新漏洞影响
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：受影响OpenSSH/下游配置、认证宽限期信号竞争；代码执行身份为降权privsep用户
+- 证据范围：明确与6387不同且降权身份，值得保留独立条目；仅RHEL9影响说法需官方分发矩阵核对
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 缺具体OpenSSH包/修复版本及发行版公告
+- 末尾6387在野利用不是本6409状态，需明确日期与原始证据
+- 入宫客户端/信号句柄等翻译错误
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 THN  代码卫士   2024-07-10 17:40  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

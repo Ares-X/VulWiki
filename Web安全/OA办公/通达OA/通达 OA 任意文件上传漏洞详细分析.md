@@ -1,10 +1,51 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "通达OA ispirit/im upload绕过及gateway本地包含"
+product: "通达OA"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "上传2013–2017/V11；称仅2017/V11有包含；Windows COM"
+prerequisites: "P非空绕过"
+side_effects: "文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行；在线解密或外部服务可能收到凭据及敏感内容"
+review_date: "2026-10-02"
+source_url: "https://github.com/MrWQ/vulnerability-paper"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E9%80%9A%E8%BE%BEOA/%E9%80%9A%E8%BE%BE%20OA%20%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E%E8%AF%A6%E7%BB%86%E5%88%86%E6%9E%90.md"
+category_recommendation: "OA / 通达"
+id: "vw-9fc7080a026a5ed46331c092"
+entity_id: "ve-9fc7080a026a5ed46331c092"
+schema_version: "1"
 ---
 
-# 通达 OA 任意文件上传漏洞详细分析
+# 通达OA ispirit/im upload绕过及gateway本地包含
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：通达OA；ispirit/im upload绕过及gateway本地包含
+- 版本、配置及部署条件：上传2013–2017/V11；称仅2017/V11有包含；Windows COM
+- 认证与权限前提：P非空绕过
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 参数/路径分析较完整但源码多为截图；DEST_UID条件需保留实际代码
+- 脚本固定2003目录、断行字符串、Markdown转义导致不可直接复用
+- 在线解密会传源码给第三方，应提示保密风险优先本地
+- 与234版本范围冲突，上传/包含/COM条件分开
+
+## 操作风险
+
+文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行；在线解密或外部服务可能收到凭据及敏感内容。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 \> 本文由 \[简悦 SimpRead\](http://ksria.com/simpread/) 转码， 原文地址 \[mp.weixin.qq.com\](https://mp.weixin.qq.com/s/gurRWW4HPFYIsEBGrboYug)
 
 影响

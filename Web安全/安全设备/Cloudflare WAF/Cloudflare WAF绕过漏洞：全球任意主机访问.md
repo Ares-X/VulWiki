@@ -1,8 +1,55 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-68308f611b4ad232e7d9eab5"
+entity_id: "ve-68308f611b4ad232e7d9eab5"
+schema_version: "1"
+title: "Cloudflare WAF绕过漏洞：全球任意主机访问"
+product: "Cloudflare WAF ACME验证路径"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+prerequisites: "受控Custom Hostnames pending token、特定ACME路径；2025-10-27修复"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%AE%89%E5%85%A8%E8%AE%BE%E5%A4%87/Cloudflare%20WAF/Cloudflare%20WAF%E7%BB%95%E8%BF%87%E6%BC%8F%E6%B4%9E%EF%BC%9A%E5%85%A8%E7%90%83%E4%BB%BB%E6%84%8F%E4%B8%BB%E6%9C%BA%E8%AE%BF%E9%97%AE.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_url: "https://fearsoff.org/research/cloudflare-acme"
+source_status: "recorded"
 ---
 
 #  Cloudflare WAF绕过漏洞：全球任意主机访问  
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Cloudflare WAF ACME验证路径
+- 本文讨论：跨主机活动挑战token绕过
+- 版本、权限与配置前提：受控Custom Hostnames pending token、特定ACME路径；2025-10-27修复
+- 资料类型：FearsOff研究翻译加摘要；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 摘要称任意请求/全球任意主机易误解为任意互联网主机，正文限Cloudflare代理主机与有效token
+- HTTP-01被解释成HTTPS取令牌，协议表述不准确
+- 摘要添加的单段..;/或裸路径LFI例子未经正文完整请求支持，源站必须另有路由/漏洞
+- AI潜力评论不是已观察利用事实；重复摘要与正文较多
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 截图与原FearsOff/Cloudflare细节待核；本审阅未向演示域名请求
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 fearsoff
                     fearsoff  赛博知识驿站   2026-01-21 02:00  
   

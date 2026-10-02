@@ -1,8 +1,63 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Apache OpenNLP 曝出一组高危漏洞，包括XXE注入"
+product: "Apache OpenNLP"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2026-42440; CVE-2026-42027; CVE-2026-40682"
+referenced_identifiers: ""
+identifier_role: "primary"
+cve: "CVE-2026-42440; CVE-2026-42027; CVE-2026-40682"
+prerequisites: "加载不可信模型/字典；42027还需classpath存在有危险静态初始化副作用的类；不是任意文本分析入口"
+verification_source: "https://solr.apache.org/vex.html; https://opennlp.apache.org/security.html"
+source_status: "unknown"
+side_effects: "含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。"
+id: "vw-f5931779ca7b923b65cce607"
+entity_id: "ve-f5931779ca7b923b65cce607"
+schema_version: "1"
 ---
 
-#  Apache OpenNLP 曝出一组高危漏洞，包括XXE注入  
+# Apache OpenNLP 曝出一组高危漏洞，包括XXE注入
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：加载不可信模型/字典；42027还需classpath存在有危险静态初始化副作用的类；不是任意文本分析入口
+- 证据范围：三个风险真实但文章把任意类加载夸成OS提权，把XXE读取夸成直接RCE。
+
+### 已有来源支持的更正
+
+- Apache VEX说明三项分别为OOM、任意classpath类初始化、XXE；修复含1.9.5回补、2.5.9与3.0.0-M3
+- 官方明确库使用宿主进程权限，模型/字典为受信配置输入，不具有独立服务/账号边界
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 42027并不自动突破运行账户权限，应为模型manifest触发类初始化
+- 40682文件读取/SSRF不等于直接RCE，正文未给额外执行链
+- 42440主要是不受限数组分配导致OOM，普通线程异常表述漏根因
+- 无需认证是应用输入边界条件，OpenNLP本身是库而非有账户的服务器
+- 缺三项frontmatter和修复版本；旧笼统<=2.5.8无法体现1.9.5安全回补
+- 没有官方源直链
+
+### 核验来源
+
+- https://solr.apache.org/vex.html
+- https://opennlp.apache.org/security.html
+
+### 操作风险与资料使用
+
+- 含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 原创 A译
                     A译  黑白之道   2026-05-04 00:55  
   

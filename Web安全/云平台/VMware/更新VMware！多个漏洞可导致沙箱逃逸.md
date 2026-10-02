@@ -1,8 +1,44 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "更新VMware！多个漏洞可导致沙箱逃逸"
+product: "VMware ESXi Workstation Fusion"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-ab25f8ad27fb3eead3d36b4a"
+entity_id: "ve-ab25f8ad27fb3eead3d36b4a"
+schema_version: "1"
 ---
 
-#  更新VMware！多个漏洞可导致沙箱逃逸   
+# 更新VMware！多个漏洞可导致沙箱逃逸
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 四主CVE未元数据化
+- guest管理员到VMX和VMX逃逸是不同边界不能概括均直接宿主root
+- 修复列表VCF3.x仅分支无具体补丁
+- 移除USB只适用相关控制器漏洞需逐项
+- 有VMSA原始链接保留，后门通识广告删除
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 看雪学苑  看雪学苑   2024-03-07 17:59  
   
 3月5日，虚拟化巨头VMware针对虚拟机逃逸漏洞发布了紧急安全更新，漏洞影响范围包括VMware的ESXi、Workstation、Fusion和Cloud Foundation。  

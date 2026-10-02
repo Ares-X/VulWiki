@@ -1,27 +1,66 @@
 ---
-version: "亿赛通 电子文档安全管理系统"
 source: "Threekiii/Vulnerability-Wiki"
+title: "亿赛通电子文档安全管理系统内置Apache Solr dataimport脚本执行"
+product: "亿赛通电子文档安全管理系统内置Apache Solr"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "DIH/脚本可用及dataConfig许可；版本未知"
+prerequisites: "Solr管理接口暴露条件未知"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+source_url: "https://github.com/Threekiii/Vulnerability-Wiki"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/%E4%BA%BF%E8%B5%9B%E9%80%9A/%E4%BA%BF%E8%B5%9B%E9%80%9A-%E7%94%B5%E5%AD%90%E6%96%87%E6%A1%A3%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F-dataimport-%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md"
+id: "vw-a9945bd672521e5fcc38f8ad"
+entity_id: "ve-a9945bd672521e5fcc38f8ad"
+schema_version: "1"
 ---
 
-# 亿赛通 电子文档安全管理系统 dataimport 远程命令执行漏洞
+# 亿赛通电子文档安全管理系统内置Apache Solr dataimport脚本执行
 
-## 漏洞描述
+## 条目说明
+
+- 对象与具体问题：亿赛通电子文档安全管理系统内置Apache Solr；dataimport脚本执行
+- 版本、配置及部署条件：DIH/脚本可用及dataConfig许可；版本未知
+- 认证与权限前提：Solr管理接口暴露条件未知
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- streamsrc与streamsrc1引用不一致；XML响应正则脆弱且缺wt/格式指定，异常隐藏成请求失败
+- core_name获取后URL仍写core=tika，需明确是否必要与环境关联
+- 缺亿赛通发行版本到Solr版本映射/厂商补丁，不能仅按title指纹确定受影响
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
+### 漏洞描述
 
 亿赛通 电子文档安全管理系统 dataimport 存在远程命令执行漏洞，攻击者通过构造特定的请求可执行任意命令
 
-## 漏洞影响
+### 漏洞影响
 
 ```
 亿赛通 电子文档安全管理系统
 ```
 
-## 网络测绘
+### 网络测绘
 
 ```
 title="电子文档安全管理系统"
 ```
 
-## 漏洞复现
+### 漏洞复现
 
 登录页面如下
 
@@ -48,7 +87,7 @@ title="电子文档安全管理系统"
 ![](./.resource/亿赛通-电子文档安全管理系统-dataimport-远程命令执行漏洞/media/202202091906902.png)
 
 
-## 漏洞POC
+### 漏洞POC
 
 
 ```python

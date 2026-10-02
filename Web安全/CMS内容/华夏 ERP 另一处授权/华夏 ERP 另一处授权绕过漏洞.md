@@ -1,6 +1,44 @@
 ---
 source: "MrWQ/vulnerability-paper"
+product: "华夏ERP / jshERP"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+category_recommendation: "Web安全/ERP企业"
+title: "华夏 ERP 另一处授权绕过漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：LogCostFilter rawprefixallowlist vsdownstreamnormalization;deploymentversionunknown"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/-g7qxNoS-oa_mqh_msmaag"
+id: "vw-8d8f9314b5a4734b231a50c9"
+entity_id: "ve-8d8f9314b5a4734b231a50c9"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 分类更正：本文实际对象是 华夏ERP / jshERP，原 CMS 内容目录不能代替产品归属；只修正字段和分类建议，路径、来源和技术方法继续保留。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：LogCostFilter rawprefixallowlist vsdownstreamnormalization;deploymentversionunknown
+
+- **事实待核（1）**：ERP不是CMS，应移企业应用/ERP；目录名完整文章标题造成产品碎片。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **证据待核（2）**：请求/user/login/../../可能被requests/urllib3预先规范化，需原始路径发送证据，否则脚本会失去前缀绕过。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **结论使用边界（3）**：¤tPage实体污染应为currentPage参数；完全重复两份Python应合并。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **适用与权限边界（4）**：只200即成功未确认用户数据/权限差异，缺受影响版本和补丁。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **来源与引用处置（5）**：公网靶场IP/账号只实验资料不当授权，推广较长且源码仅网盘未锁版本。保留这部分来源材料并与技术结论分开；其引用或宣传内容不能补足本文漏洞的证据。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # 华夏 ERP 另一处授权绕过漏洞
 

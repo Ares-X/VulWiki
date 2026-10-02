@@ -1,10 +1,51 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "禅道ZenTao repo Subversion client执行及多种反连示例"
+product: "禅道ZenTao"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "开源17.4–18beta1/旗舰3.4–4beta1/企业7.4–8beta1，Docker18beta1实验"
+prerequisites: "前置会话绕过步骤仅图片/未文本说明"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+source_url: "https://mp.weixin.qq.com/s/jfxJSx1diFrpXTFXi3SNGQ"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/%E7%A6%85%E9%81%93/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0%20%E5%88%A9%E7%94%A8%E7%A6%85%E9%81%93%E7%B3%BB%E7%BB%9F%20RCE%20%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E%E5%8F%8D%E5%BC%B9%20shell.md"
+id: "vw-b5d67ae893df180b5c5c29b6"
+entity_id: "ve-b5d67ae893df180b5c5c29b6"
+schema_version: "1"
 ---
 
-# 【漏洞复现】利用禅道系统 RCE 命令执行漏洞反弹 shell
+# 禅道ZenTao repo Subversion client执行及多种反连示例
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：禅道ZenTao；repo Subversion client执行及多种反连示例
+- 版本、配置及部署条件：开源17.4–18beta1/旗舰3.4–4beta1/企业7.4–8beta1，Docker18beta1实验
+- 认证与权限前提：前置会话绕过步骤仅图片/未文本说明
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 需链接明确captcha或认证前提
+- 说payload必须无&却后续PHP/Perl/openssl多含&，实际表单编码与shell层级问题，绝对结论矛盾
+- Docker不必都是精简环境或无wget/ifconfig，列测试镜像条件而非普遍限制
+- 模板命令与#样例粘连，弱MYSQL_ROOT_PASSWORD仅隔离实验；外部下载shell/证书/命名管道有副作用
+- 修复>beta1过宽需具体安全发布/公告，不能保证每后续分支
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/jfxJSx1diFrpXTFXi3SNGQ)
 
 **0x00**

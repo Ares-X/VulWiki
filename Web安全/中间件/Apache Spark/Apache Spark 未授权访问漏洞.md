@@ -1,8 +1,50 @@
 ---
 source: "hatch 补库批 20260928"
+title: "Apache Spark 未授权访问漏洞"
+product: "Apache Spark standalone"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "REST6066显式可用或RPC7077未受有效保护、worker可拉取JAR并运行，worker日志可访问"
+source_status: "unknown"
+side_effects: "含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。"
+id: "vw-a278ba43093eec605140af13"
+entity_id: "ve-a278ba43093eec605140af13"
+schema_version: "1"
+canonical: "Web安全/中间件/Apache Spark/Apache Spark 未授权访问漏洞.md"
 ---
 
 # Apache Spark 未授权访问漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：REST6066显式可用或RPC7077未受有效保护、worker可拉取JAR并运行，worker日志可访问
+- 证据范围：解释提交在master、执行及日志在worker，区分两端入口，有用；不能把正常作业代码执行本身称设计漏洞。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 未启动ACL与未认证混为一谈，UI ACL、RPC共享密钥、REST访问控制应分开
+- 无影响版本，REST默认开启应按历史版本限定
+- spark.master写6066混用REST与Spark RPC地址，需说明client fallback及实际服务配置
+- msf srvhost值多1；外部JAR来源/构建依赖不完整
+- Runtime.exec非shell，waitFor先于读取输出可能阻塞；示例会实际调度/生成日志有副作用
+
+### 操作风险与资料使用
+
+- 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 一、漏洞简介
 ------------

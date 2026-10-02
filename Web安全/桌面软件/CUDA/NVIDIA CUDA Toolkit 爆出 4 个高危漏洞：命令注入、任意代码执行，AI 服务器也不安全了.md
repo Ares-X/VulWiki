@@ -1,8 +1,59 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "NVIDIA CUDA Toolkit 爆出 4 个高危漏洞：命令注入、任意代码执行，AI 服务器也不安全了"
+product: "NVIDIA CUDA Toolkit及Nsight工具"
+record_type: "advisory"
+document_type: "泛化安全新闻"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "恶意输入文件、可控路径/DLL加载、工具运行权限等各自前提；文称<13.1"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/CUDA/NVIDIA%20CUDA%20Toolkit%20%E7%88%86%E5%87%BA%204%20%E4%B8%AA%E9%AB%98%E5%8D%B1%E6%BC%8F%E6%B4%9E%EF%BC%9A%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5%E3%80%81%E4%BB%BB%E6%84%8F%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%EF%BC%8CAI%20%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B9%9F%E4%B8%8D%E5%AE%89%E5%85%A8%E4%BA%86.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-17d8cd948572f2717b94d150"
+entity_id: "ve-17d8cd948572f2717b94d150"
+schema_version: "1"
 ---
 
-#  NVIDIA CUDA Toolkit 爆出 4 个高危漏洞：命令注入、任意代码执行，AI 服务器也不安全了  
+# NVIDIA CUDA Toolkit 爆出 4 个高危漏洞：命令注入、任意代码执行，AI 服务器也不安全了
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：NVIDIA CUDA Toolkit及Nsight工具
+- 文献类型：泛化安全新闻
+- 版本、权限及部署边界：恶意输入文件、可控路径/DLL加载、工具运行权限等各自前提；文称<13.1
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 声称4个漏洞但没有任何CVE、公告URL、逐漏洞组件/平台映射，当前无法建立可靠四实体
+2. 把Nsight命令注入、DLL劫持和nvdisasm/cuobjdump/nvJPEG越界混为所有Windows/Linux所有<13.1均受影响，需逐组件核对
+3. 本地高权限运行或可写搜索路径是前提，不是工具默认必然root/可远程接管AI服务器；DoS不能等同全系统瘫痪
+4. 致谢研究者不构成可复现实证；唯一可升级无workaround的绝对说法无公告依据
+5. 标题和正文危害推演多于可追溯事实，缺真实触发证据但新闻无需编造PoC
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 云梦DC
                     云梦DC  云梦安全   2026-01-28 01:00  
   
@@ -147,4 +198,4 @@ CUDA Toolkit 这次的漏洞，本质上暴露了一个老问题：
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

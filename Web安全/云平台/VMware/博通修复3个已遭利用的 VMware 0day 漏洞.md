@@ -1,8 +1,44 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "博通修复3个已遭利用的 VMware 0day 漏洞"
+product: "VMware ESXi Workstation Fusion"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-f2798b994f0850574cd5c37a"
+entity_id: "ve-f2798b994f0850574cd5c37a"
+schema_version: "1"
 ---
 
-#  博通修复3个已遭利用的 VMware 0day 漏洞   
+# 博通修复3个已遭利用的 VMware 0day 漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 三个主CVE未提取
+- 22225任意内核写被写成任意文件写，类型明确错
+- 已经在野与无攻击信息应指无公开细节非无利用
+- 原文链接指向Windows/Cisco新闻与本文不符
+- 缺版本补丁矩阵
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 Sergiu Gatlan  代码卫士   2025-03-05 18:15  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

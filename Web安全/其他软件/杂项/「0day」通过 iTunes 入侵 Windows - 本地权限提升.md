@@ -1,8 +1,66 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2024-44193"
+identifier_role: "primary"
+primary_identifiers: "CVE-2024-44193"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "「0day」通过 iTunes 入侵 Windows - 本地权限提升"
+product: "Apple Mobile Device Support/iTunes Windows"
+record_type: "analysis"
+document_type: "本地提权链技术分析"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "测试iTunes12.13.2.3；低权可写Lockdown并触发安装修复重启SYSTEM服务，junction/oplock+MSI回滚链"
+side_effects: "非特权触发修复需安装模式/WindowsInstaller/UAC策略实证，管理员ProcessHacker重启不能单独证明低权可触发；官方Apple链接和ZDI/ProjectZero工具来源较充分，但缺修复版号、Windowsbuild、完整环境；破坏Config.MSI/覆盖HID需要恢复说明，截图未视检"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/%E3%80%8C0day%E3%80%8D%E9%80%9A%E8%BF%87%20iTunes%20%E5%85%A5%E4%BE%B5%20Windows%20-%20%E6%9C%AC%E5%9C%B0%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-df05089a37e219440afe00b3"
+entity_id: "ve-df05089a37e219440afe00b3"
+schema_version: "1"
 ---
 
-#  「0day」通过 iTunes 入侵 Windows - 本地权限提升   
+# 「0day」通过 iTunes 入侵 Windows - 本地权限提升
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Apple Mobile Device Support/iTunes Windows
+- 文献类型：本地提权链技术分析
+- 版本、权限及部署边界：测试iTunes12.13.2.3；低权可写Lockdown并触发安装修复重启SYSTEM服务，junction/oplock+MSI回滚链
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 标题0day与文称2024-09-12已修、发布10-08不符，应历史漏洞；实际服务为AppleMobileDeviceService不是Windows本体漏洞
+2. 早段任意删除等于SYSTEM执行跳步，后段才有MSI回滚/HID.DLL完整补充，需明确链接而非同一原语
+3. 不属于该路径所有文件删除措辞不准确，正常递归内部文件与链接越界区分；NTFSjunction非所有种类symlink等价
+4. 非特权触发修复需安装模式/WindowsInstaller/UAC策略实证，管理员ProcessHacker重启不能单独证明低权可触发
+5. 路径长度限制未查明、改工具常量属实验限制应保留；FolderOrFileDeletionToSystem拼名与工具不同、cmd单引号路径行为需Shell标注
+6. 官方Apple链接和ZDI/ProjectZero工具来源较充分，但缺修复版号、Windowsbuild、完整环境；破坏Config.MSI/覆盖HID需要恢复说明，截图未视检
+
+### 操作风险
+
+非特权触发修复需安装模式/WindowsInstaller/UAC策略实证，管理员ProcessHacker重启不能单独证明低权可触发；官方Apple链接和ZDI/ProjectZero工具来源较充分，但缺修复版号、Windowsbuild、完整环境；破坏Config.MSI/覆盖HID需要恢复说明，截图未视检
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://support.apple.com/en-us/121328>
+- 原文参考链接（未重新核验）：<https://learn.microsoft.com/en-us/sysinternals/>
+- 原文参考链接（未重新核验）：<https://github.com/thezdi/PoC/tree/main/FilesystemEoPs>
+- 原文参考链接（未重新核验）：<https://github.com/googleprojectzero/symboliclink-testing-tools/tree/main/SetOpLock>
+- 原文参考链接（未重新核验）：<https://www.zerodayinitiative.com/blog/2022/3/16/abusing-arbitrary-file-deletes-to-escalate-privilege-and-other-great-tricks>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 原创 7coinSec  7coinSec   2024-10-08 23:54  
   
 ## 免责声明  
@@ -248,4 +306,4 @@ https://www.zerodayinitiative.com/blog/2022/3/16/abusing-arbitrary-file-deletes-
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

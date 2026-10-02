@@ -1,8 +1,57 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "浅析不同情况下Docker的逃逸方法"
+product: "Docker daemon、Linux cgroup v1、runc"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2019-5736"
+referenced_identifiers: ""
+identifier_role: "primary"
+cve: "CVE-2019-5736"
+prerequisites: "每节不同权限/挂载/LSM/内核条件；runc需后续host exec触发"
+source_url: "https://mp.weixin.qq.com/s/RWFeEYvcnhuvQjc4iAnUNg"
+source_status: "recorded"
+side_effects: "含计划任务、启动项或 SSH 授权文件写入：会改变后续执行或登录行为。测试前备份原文件，结束后恢复原内容、权限与属主，不覆盖生产文件。; 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。"
+id: "vw-4bfc2ced0ad2ef8a09860458"
+entity_id: "ve-4bfc2ced0ad2ef8a09860458"
+schema_version: "1"
 ---
 
 # 浅析不同情况下Docker的逃逸方法
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：每节不同权限/挂载/LSM/内核条件；runc需后续host exec触发
+- 证据范围：六情形完整阅读，含不同内核CapEff差异的独立实验观察；大量代码被行内反引号与换行丢失损坏
+
+### 本次正文校订
+
+- 按实际内容修正 10 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- Swarm默认开放0.0.0.0:2375不成立，应写显式危险daemon配置
+- docker<=18.09.2/runc<=rc6范围需纠正分支补丁边界
+- notify_on_release不是仅顶层才有；正文与示例子cgroup自相矛盾
+- 缺AppArmor否则将允许mount语句反向；需同时考虑seccomp/SELinux/rootless/userns
+- chroot不是自动取得全部宿主权限；cron shell重定向/发行版路径另有限制
+- 目录浅析不同情况下错误，归Docker；脚本/安装命令不执行
+
+### 操作风险与资料使用
+
+- 含计划任务、启动项或 SSH 授权文件写入：会改变后续执行或登录行为。测试前备份原文件，结束后恢复原内容、权限与属主，不覆盖生产文件。
+- 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/RWFeEYvcnhuvQjc4iAnUNg)
@@ -23,7 +72,7 @@ source: "MrWQ/vulnerability-paper"
 
   
 
-```
+```shell
 git clone https://github.com/vulhub/vulhub.git 
 ```
 
@@ -33,7 +82,7 @@ git clone https://github.com/vulhub/vulhub.git
 
   
 
-```
+```shell
 docker-compose build docker-compose up -d 
 ```
 
@@ -47,7 +96,7 @@ docker-compose build docker-compose up -d
 
   
 
-```
+```shell
 docker ps -a | grep rce 
 ```
 
@@ -190,7 +239,7 @@ _https://mozillazg.com/2021/11/docker-container-difference-between-privileged-mo
 
   
 
-```
+```shell
 docker run -it --privileged ubuntu:18.04 
 ```
 
@@ -326,7 +375,7 @@ Docker 守护进程可以通过三种不同类型的 Socket 监听 Docker Engine
 
   
 
-```
+```shell
 docker run -it -v /var/run/docker.sock:/var/run/docker.sock ubuntu:18.04 
 ```
 
@@ -360,7 +409,7 @@ docker run -it -v /var/run/docker.sock:/var/run/docker.sock ubuntu:18.04
 
   
 
-```
+```shell
 docker run -it -v /:/uzju ubuntu:18.04 /bin/bash 
 ```
 
@@ -416,7 +465,7 @@ crontab -e
 
   
 
-```
+```shell
 docker run -it -v /:/uzju/ ubuntu:18.04 chroot /uzju/ 
 ```
 
@@ -459,7 +508,7 @@ docker run -it -v /:/uzju/ ubuntu:18.04 chroot /uzju/
 
   
 
-```
+```shell
 docker run --rm -it --cap-add=SYS_ADMIN --security-opt apparmor=unconfined ubuntu:18.04 
 ```
 
@@ -536,7 +585,7 @@ docker version <=18.09.2 RunC version <=1.0-rc6
 
   
 
-```
+```shell
 curl https://gist.githubusercontent.com/thinkycx/e2c9090f035d7b09156077903d6afa51/raw -o install.sh && bash install.sh 
 ```
 
@@ -554,7 +603,7 @@ curl https://gist.githubusercontent.com/thinkycx/e2c9090f035d7b09156077903d6afa5
 
   
 
-```
+```shell
 git clone https://github.com/Frichetten/CVE-2019-5736-PoC CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build main.go 
 ```
 

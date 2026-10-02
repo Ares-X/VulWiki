@@ -1,9 +1,62 @@
 ---
 cve: "CVE-2022-3602"
 source: "gelusus/wxvl 公众号漏洞文库"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "漏洞复现无垠智能模糊测试系统实战复现OpenSSL高危漏洞"
+product: "OpenSSL CVE-2022-3602/3786 商业模糊测试演示"
+record_type: "unknown"
+document_type: "技术文章（细分类待核）"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: ">255邮箱普通长字符串不足说明punycode触发，memmove off-by-one具体条件应给真实代码；证书校验过程需证书链签名已通过或应用忽略验证失败等条件未列，不能任意证书直接网络RCE"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0%E6%97%A0%E5%9E%A0%E6%99%BA%E8%83%BD%E6%A8%A1%E7%B3%8A%E6%B5%8B%E8%AF%95%E7%B3%BB%E7%BB%9F%E5%AE%9E%E6%88%98%E5%A4%8D%E7%8E%B0OpenSSL%E9%AB%98%E5%8D%B1%E6%BC%8F%E6%B4%9E.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-09dfb39b35c93d7239c8e7d7"
+entity_id: "ve-09dfb39b35c93d7239c8e7d7"
+schema_version: "1"
 ---
 
-#  漏洞复现|无垠智能模糊测试系统实战复现OpenSSL高危漏洞   
+# 漏洞复现无垠智能模糊测试系统实战复现OpenSSL高危漏洞
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：OpenSSL CVE-2022-3602/3786 商业模糊测试演示
+- 文献类型：技术文章（细分类待核）
+- 版本、权限及部署边界：>255邮箱普通长字符串不足说明punycode触发，memmove off-by-one具体条件应给真实代码；证书校验过程需证书链签名已通过或应用忽略验证失败等条件未列，不能任意证书直接网络RCE
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 多处中文堆缓冲区溢出配英文stack，实际根因叙述为栈，需统一
+2. >255邮箱普通长字符串不足说明punycode触发，memmove off-by-one具体条件应给真实代码
+3. 证书校验过程需证书链签名已通过或应用忽略验证失败等条件未列，不能任意证书直接网络RCE
+4. 3.0.0–3.0.6及3.0.7修复明确但披露2022年10月需区别预告与11月正式
+5. 3786是另一个实际测试主实体，Log4j/BlueKeep等只是RCE背景
+6. 2分钟/AI完全对齐只有截图无seed/harness/build/重复实验，属厂商演示不是性能验证
+7. 参考全二手没有OpenSSL官方公告，清营销和空推荐链接
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 原创 Yannis  云起无垠   2025-05-22 08:30  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/4vD467VsKgIyZ1VBWSEZ5D9CyVs2zCHdLWiaMbScsTP8jMicqnXH6icLycxZot7Q1CTPogdBQ0CduHPiaR62fe4I2g/640?wx_fmt=gif "")  
@@ -266,4 +319,4 @@ https://snyk.io/blog/breaking-down-openssl-vulnerability/
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

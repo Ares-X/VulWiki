@@ -1,7 +1,47 @@
 ---
-fofa: "搜索语句"
+fofa: ""
 source: "MrWQ/vulnerability-paper"
+product: "Casdoor static traversal"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+fofa_unverified: "搜索语句"
+title: "0day Casdoor 任意文件读取漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：Explicitly unknown; response October8,2023; platform/static-handler prerequisites unstated"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/ewd7rttOKxNDFEmFNRNaeA"
+id: "vw-d7ae410844b5dfe7fda6d032"
+entity_id: "ve-d7ae410844b5dfe7fda6d032"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；默认公开示例、攻击表达式和其他 Cookie 语义保持原样。
+
+- 测绘字段处置：原 fofa 字段为残缺表达式、错误平台语法或当前解析器不支持的形式，原值完整保留到 fofa_unverified，不把它当作已校验查询或受影响资产证据。正文检索方法保留；具体问题见下列原审阅项。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：Explicitly unknown; response October8,2023; platform/static-handler prerequisites unstated
+
+代码与实验材料：Full unauthenticated GET and passwd-like response; nuclei file gated by social reply and absent
+
+来源证据范围：Original WeChat URL; no vendor advisory/patch
+
+- **结论使用边界（1）**：Metadata extraction replaced usable query with heading；依据：fofa: 搜索语句 versus body title=Casdoor。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **结论使用边界（2）**：Generic remediation does not prevent traversal and confuses read primitive with command execution；依据：绝对路径...将防止; open/read/write替代system/exec。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **事实待核（3）**：No version/build or primary confirmation; remove current0day implication。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # 【0day】Casdoor 任意文件读取漏洞
 
@@ -79,7 +119,7 @@ Accept-Ranges: bytes
 Content-Type: text/plain; charset=utf-8
 Date: Sun, 08 Oct 2023 03:59:53 GMT
 Last-Modified: Mon, 21 Aug 2023 06:20:56 GMT
-Set-Cookie: casdoor_session_id=e242bf06ee7f075f4dd6f206ebb7c95e; Path=/; Expires=Tue, 07 Nov 2023 03:59:53 GMT; Max-Age=2592000; HttpOnly
+Set-Cookie: casdoor_session_id=e24**************************95e; Path=/; Expires=Tue, 07 Nov 2023 03:59:53 GMT; Max-Age=2592000; HttpOnly
 root:x:0:0:root:/root:/bin/ash
 bin:x:1:1:bin:/bin:/sbin/nologin
 daemon:x:2:2:daemon:/sbin:/sbin/nologin

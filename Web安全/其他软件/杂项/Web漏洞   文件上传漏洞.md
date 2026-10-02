@@ -1,8 +1,63 @@
 ---
 source: "MrWQ/vulnerability-paper"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "Web漏洞   文件上传漏洞"
+product: "Web上传功能与upload-labs"
+record_type: "vulnerability"
+document_type: "通用文件上传教学"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "多历史条件：旧PHP<5.3.4、Windows命名、Apache.htaccess启用及具体handler；非统一产品漏洞"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/Web%E6%BC%8F%E6%B4%9E%20%20%20%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+source_url: "https://mp.weixin.qq.com/s/ZE7a8OsRD168UdXaSOWEug"
+id: "vw-add274ff70562b2a87af6757"
+entity_id: "ve-add274ff70562b2a87af6757"
+schema_version: "1"
 ---
 
 # Web漏洞   文件上传漏洞
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Web上传功能与upload-labs
+- 文献类型：通用文件上传教学
+- 版本、权限及部署边界：多历史条件：旧PHP<5.3.4、Windows命名、Apache.htaccess启用及具体handler；非统一产品漏洞
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 定义限定上传可执行脚本过窄，后文HTML存储XSS已不需服务器代码执行；必须区分上传成功和脚本执行
+2. JFIF并非所有JPEG唯一文件头，PNG头不是%PNG；getimagesize是图像结构探测不是完整安全验证；示范Content-Type来自客户端且代码缺闭合括号
+3. %00字面串不会在任意multipart文件名自动变NUL，需API解码及旧PHP/magicquotes条件；php2解析/.htaccess需明确配置
+4. 服务器不可执行权限应指Web脚本解析禁用而非仅Unix执行位；单独域需Cookie/认证隔离；前端校验不是安全边界
+5. upload-libs多次错名实际upload-labs；关卡映射随仓库版本变化需固定commit；靶场链接和未链接详情需补
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://mp.weixin.qq.com/s/ZE7a8OsRD168UdXaSOWEug>
+- 原文参考链接（未重新核验）：<http://ksria.com/simpread/>
+- 原文参考链接（未重新核验）：<http://ctf5.shiyanbar.com/web/upload/>
+- 原文参考链接（未重新核验）：<https://github.com/c0ny1/upload-labs>
+- 原文参考链接（未重新核验）：<https://github.com/MrWQ/vulnerability-paper>
+
+### 归档技术正文
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/ZE7a8OsRD168UdXaSOWEug)

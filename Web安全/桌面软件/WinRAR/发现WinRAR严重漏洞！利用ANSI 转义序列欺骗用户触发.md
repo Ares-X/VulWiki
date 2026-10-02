@@ -1,9 +1,60 @@
 ---
-cve: "CVE-2024-36052"
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2024-36052"
+identifier_role: "primary"
+primary_identifiers: "CVE-2024-36052"
+referenced_identifiers: "CVE-2024-33899"
+identifier_status: "unknown"
+title: "发现WinRAR严重漏洞！利用ANSI 转义序列欺骗用户触发"
+product: "WinRAR/RAR终端输出"
+record_type: "advisory"
+document_type: "技术混写的新闻"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "文中WinRAR7.00前、恶意ZIP文件名含ANSI转义；具体GUI/命令行程序须明确"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/WinRAR/%E5%8F%91%E7%8E%B0WinRAR%E4%B8%A5%E9%87%8D%E6%BC%8F%E6%B4%9E%EF%BC%81%E5%88%A9%E7%94%A8ANSI%20%E8%BD%AC%E4%B9%89%E5%BA%8F%E5%88%97%E6%AC%BA%E9%AA%97%E7%94%A8%E6%88%B7%E8%A7%A6%E5%8F%91.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-4873fce84b7910d80f38e640"
+entity_id: "ve-4873fce84b7910d80f38e640"
+schema_version: "1"
 ---
 
-#  发现WinRAR严重漏洞！利用ANSI 转义序列欺骗用户触发   
+# 发现WinRAR严重漏洞！利用ANSI 转义序列欺骗用户触发
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：WinRAR/RAR终端输出
+- 文献类型：技术混写的新闻
+- 版本、权限及部署边界：文中WinRAR7.00前、恶意ZIP文件名含ANSI转义；具体GUI/命令行程序须明确
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. ANSI终端输出欺骗与后半ShellExecute错误参数执行隐藏脚本之间未建立因果，明显混入另一种扩展名执行链，需与38831分析分离核验
+2. 区分Windows WinRAR GUI、rar命令行与Unix RAR产品，不能统称Linux版WinRAR
+3. 新闻称严重但无CVSS/原始报告，缺研究者原文与厂商修复链接，版本范围待核验
+4. 与下一篇同来源机制及段落高度重复，不能双份计为独立技术证据
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://cybersecuritynews.com/winrar-flaw-deceive-users/>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 安全客  安全客   2024-05-24 18:55  
   
 Windows 上流行的文件压缩和归档实用程序 WinRAR 中发现了一个严重漏洞。  
@@ -60,4 +111,4 @@ WinRAR 的 Linux 和 UNIX 版本也容易受到通过 ANSI 转义序列的屏幕
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

@@ -1,6 +1,48 @@
 ---
 source: "hatch 补库批 20260928"
+product: "鱼跃CMS/Catfish-based"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "（鱼跃CMS）后台多处文件上传导致GETSHELL"
+prerequisites: "来源所述条件，未列明部分仍待核：administratorcheckUser; theme/plugin/systemupdateZIPinstall; writablewebcode andPHPexec"
+side_effects: "未执行；本文需注意的操作影响：保留头像白名单失败与三实际落点差异的价值，不应全部简化任意上传"
+source_status: "unknown"
+id: "vw-682585b87cec5e7531f1250e"
+entity_id: "ve-682585b87cec5e7531f1250e"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；遮罩后的历史值不能作为可用登录凭据。原操作、请求方法和攻击表达式保留。
+
+- 明确边界：三个成功点均为管理员安装主题、插件、系统升级的代码部署能力；还未证明越权、违反预期的路径逃逸或包来源信任问题，不能只因 ZIP 有 PHP 就确认漏洞。
+- 原“禁止解压 .php/禁整个主题插件目录 PHP 解析”的通用建议会破坏正常部署，应以管理权限、来源信任、官方包签名/目录约束为评估对象；保留原建议但不作为已验证修复。
+- 头像白名单失败与三个不同落点保留。ZIP 含 tt/1.php 而访问根 /1.php 的层级不一致、缺结束 boundary、ZipArchive 术语和原文链接声明矛盾均需回源，未修造成可用链。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：administratorcheckUser; theme/plugin/systemupdateZIPinstall; writablewebcode andPHPexec
+
+- **适用与权限边界（1）**：三成功点都是管理员安装主题/插件/系统升级的正常代码部署通道，未证明越权/预期禁止代码/路径逃逸，不能仅因ZIP含PHP定性漏洞。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **适用与权限边界（2）**：修复建议禁止解压.php或禁止主题/插件/根目录PHP解析会破坏正常运行，应先定义信任边界并验证官方包签名/权限。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **结论使用边界（3）**：保留头像白名单失败与三实际落点差异的价值，不应全部简化任意上传。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **适用与权限边界（4）**：PoC ZIP含tt/1.php却系统升级访问根/1.php，文件层级不一致需核；请求占位未含结束边界。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **事实待核（5）**：ZipArchive create/open的overwrit/e术语不准确需原代码；CNVD编号/版本/补丁未知已诚实标明。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **证据待核（6）**：附录说原文链接未保留但又给share907，自相矛盾；PDF镜像可补准确证据。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # （鱼跃CMS）后台多处文件上传导致GETSHELL
 
@@ -64,7 +106,7 @@ Content-Length: 71759
 Origin: http://localhost
 Connection: close
 Referer: http://localhost/index.php/admin/index/themes.html
-Cookie: PHPSESSID=utce61jeq73k9pcbc8engkha85; yuyuelang=zh-cn
+Cookie: PHPSESSID=utc********************a85; yuyuelang=zh-cn
 
 -----------------------------61892826940153563153275250174
 Content-Disposition: form-data; name="file"; filename="tt.zip"
@@ -110,7 +152,7 @@ Content-Length: 71762
 Origin: http://localhost
 Connection: close
 Referer: http://localhost/index.php/admin/index/systemupgrade.html
-Cookie: yuyuelang=zh-cn; PHPSESSID=9jj6dorn39d4dn8aedtfq8ujd5
+Cookie: yuyuelang=zh-cn; PHPSESSID=9jj********************jd5
 
 -----------------------------28825598831172074626047113642
 Content-Disposition: form-data; name="file"; filename="tt.zip"

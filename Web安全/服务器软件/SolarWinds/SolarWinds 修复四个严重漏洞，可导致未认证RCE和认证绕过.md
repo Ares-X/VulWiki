@@ -1,8 +1,45 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "SolarWinds 修复四个严重漏洞，可导致未认证RCE和认证绕过"
+product: "SolarWinds Web Help Desk"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2025-40536; CVE-2025-40537; CVE-2025-40551; CVE-2025-40552; CVE-2025-40553; CVE-2025-40554"
+referenced_identifiers: "CVE-2024-28986; CVE-2024-28987; CVE-2024-28988; CVE-2025-26399"
+identifier_role: "primary"
+cve: "CVE-2025-40536; CVE-2025-40537; CVE-2025-40551; CVE-2025-40552; CVE-2025-40553; CVE-2025-40554"
+prerequisites: "各实体不同，文称2026.1修复；40551链有匿名会话/组件创建条件"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-f0fd0a4adec88afa16c4f08d"
+entity_id: "ve-f0fd0a4adec88afa16c4f08d"
+schema_version: "1"
 ---
 
-#  SolarWinds 修复四个严重漏洞，可导致未认证RCE和认证绕过  
+# SolarWinds 修复四个严重漏洞，可导致未认证RCE和认证绕过
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：各实体不同，文称2026.1修复；40551链有匿名会话/组件创建条件
+- 证据范围：四个严重指9.8等级四项，并非只四个漏洞；需多实体建模
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- CVE-2025-40553被换行拆为C/VE，元数据未提取全部实体
+- 缺具体受影响版本区间和厂家直链
+- 产品试用/二维码尾部噪声可删除
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 Ravie Lakshmanan
                     Ravie Lakshmanan  代码卫士   2026-01-30 09:36  
   

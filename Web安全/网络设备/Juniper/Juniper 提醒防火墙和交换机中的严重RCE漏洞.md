@@ -1,8 +1,53 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-2ee7f1880a4341fa5626f92f"
+entity_id: "ve-2ee7f1880a4341fa5626f92f"
+schema_version: "1"
+title: "Juniper 提醒注意防火墙和交换机中的严重RCE漏洞"
+product: "Juniper SRX/EX J-Web"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2024-21591"
+referenced_identifiers: "CVE-2023-36844; CVE-2023-36845; CVE-2023-36846; CVE-2023-36847"
+prerequisites: "预认证内存破坏RCE/DoS，管理J-Web可达；完整修复分支表"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/Juniper/Juniper%20%E6%8F%90%E9%86%92%E9%98%B2%E7%81%AB%E5%A2%99%E5%92%8C%E4%BA%A4%E6%8D%A2%E6%9C%BA%E4%B8%AD%E7%9A%84%E4%B8%A5%E9%87%8DRCE%E6%BC%8F%E6%B4%9E.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 #  Juniper 提醒注意防火墙和交换机中的严重RCE漏洞   
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Juniper SRX/EX J-Web
+- 本文讨论：CVE-2024-21591
+- 版本、权限与配置前提：预认证内存破坏RCE/DoS，管理J-Web可达；完整修复分支表
+- 资料类型：新闻通告；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 旧四漏洞链被描述为四个都组合利用，需要核验不同平台配对而非强制四洞
+- 8200/9000为暴露数不是已确认21591漏洞数
+- 无官方公告直链，年份需从2024新闻推回2023事件
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 旧链CVE配对与当前公告范围待核验
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 Sergiu Gatlan  代码卫士   2024-01-15 17:33  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

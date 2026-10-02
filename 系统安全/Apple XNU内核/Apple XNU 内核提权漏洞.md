@@ -1,9 +1,59 @@
 ---
-cve: "CVE-2025-31219"
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2025-31219"
+identifier_role: "primary"
+primary_identifiers: "CVE-2025-31219"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "Apple XNU 内核提权漏洞"
+product: "Apple XNU vm_map"
+record_type: "advisory"
+document_type: "安全新闻"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "本地低权限代码执行；列macOS/iOS/iPadOS/watchOS/tvOS/visionOS修复版本"
+side_effects: "iPadOS表格17.7.7和建议18.5是不同分支，需分清覆盖范围而非单值覆盖"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Apple%20XNU%E5%86%85%E6%A0%B8/Apple%20XNU%20%E5%86%85%E6%A0%B8%E6%8F%90%E6%9D%83%E6%BC%8F%E6%B4%9E.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-28d07d62c1555320e070626c"
+entity_id: "ve-28d07d62c1555320e070626c"
+schema_version: "1"
 ---
 
-#  Apple XNU 内核提权漏洞   
+# Apple XNU 内核提权漏洞
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Apple XNU vm_map
+- 文献类型：安全新闻
+- 版本、权限及部署边界：本地低权限代码执行；列macOS/iOS/iPadOS/watchOS/tvOS/visionOS修复版本
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 表格把watchOS11.5/macOS15.5等已修补版本标成受影响产品，与后文修复说明冲突，是关键版本语义错误
+2. iPadOS表格17.7.7和建议18.5是不同分支，需分清覆盖范围而非单值覆盖
+3. 根因vm_map竞态和ZDI署名可追溯线索，但无ZDI或Apple公告链接；CVSS与具体各平台漏洞映射待核验
+4. 重复空泛风险段、机翻作系统/@用户名岁、HTML属性和免责声明噪声
+
+### 操作风险
+
+iPadOS表格17.7.7和建议18.5是不同分支，需分清覆盖范围而非单值覆盖
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
  网安百色   2025-05-25 11:30  
   
 Apple 的 XNU 内核中的一个严重安全漏洞已被披露。它允许本地攻击者提升权限，并可能以内核级访问权限执行任意代码。  
@@ -63,4 +113,4 @@ Apple 已通过改进所有受影响平台上的内存处理机制解决了此�
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

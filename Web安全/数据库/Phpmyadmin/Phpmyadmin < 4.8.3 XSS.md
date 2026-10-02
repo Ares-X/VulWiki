@@ -1,8 +1,45 @@
 ---
 source: "hatch 补库批 20260928"
+title: "Phpmyadmin \\< 4.8.3 XSS"
+product: "phpMyAdmin user-privilege UI"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "lab4.8.2；能ALTER mysql.user及写记录，触发管理员页面；特定导航配置"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-3dead57afedc57b4f2b5a473"
+entity_id: "ve-3dead57afedc57b4f2b5a473"
+schema_version: "1"
 ---
 
 # Phpmyadmin \< 4.8.3 XSS
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：lab4.8.2；能ALTER mysql.user及写记录，触发管理员页面；特定导航配置
+- 证据范围：完整数据流，但最后触发URL/图片HTML严重损坏；作者仅说与某CVE相似
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 重大权限前提未放摘要：能修改mysql.user结构远高于普通登录用户
+- 标题<4.8.3但文称大于4.8.3修复，边界不明
+- 最后payload只显示img标记而无执行事件，最终触发内容被HTML残片覆盖，不能确认XSS效果
+- 缺ShowDatabasesNavigationAsTree配置条件及官方补丁
+- 不得猜测对应CVE或把此独立分析误并其他phpMyAdmin XSS
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 一、漏洞简介
 ------------

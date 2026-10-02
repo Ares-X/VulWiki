@@ -1,6 +1,40 @@
 ---
 source: "Threekiii/Vulnerability-Wiki"
+product: "Java/JDWP调试端口暴露配置风险"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "JDWP-调试接口-RCE-漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：区分JDK9前后监听语法，Tomcat8.5.43仅实验；需要可达无认证调试服务"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-91439e66179c9ef8e1d573ae"
+entity_id: "ve-91439e66179c9ef8e1d573ae"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：区分JDK9前后监听语法，Tomcat8.5.43仅实验；需要可达无认证调试服务
+
+代码与实验材料：有握手检测、breakpoint及sleeping单步区别；检测本身占用调试连接，执行工具会改VM状态
+
+来源证据范围：补天分析及IOActive/Lz1y原始仓库
+
+- **代码与转录边界（1）**：配置和payload拼写可致失败；依据：JDPA_ADDRESS应核Tomcat实际JPDA_ADDRESS；nc命令端口4444后多%；break-on java.lang.String.indexof大小写需对照真实方法。相应原代码作为存在此问题的历史样本保留，不能直接当作可运行、成功复现的 PoC；缺失内容需回原稿核对，不据此补造可执行攻击链。
+
+- **证据待核（2）**：旧实验安装与开放端口风险缺提示；依据：HTTP镜像下载旧Tomcat、address=*:8000对外开放，未限定隔离实验；Telnet回车可能附加协议外字符，不能笼统推荐。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **结论使用边界（3）**：握手检测可靠性与效果范围；依据：单recv完全相等判断且无timeout；无回显是具体工具而非JDWP协议必然限制。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # JDWP 调试接口 RCE 漏洞
 

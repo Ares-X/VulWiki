@@ -1,6 +1,40 @@
 ---
 source: "hatch 补库批 20260928"
+product: "ThinkPHP / PHP文件缓存"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "Thinkphp 3.2.3 缓存漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：示例3.2.3；需缓存内容可控、未压缩、PHP缓存文件web可达可执行和可猜路径"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-eb6bb939a3e2caccff326c5b"
+entity_id: "ve-eb6bb939a3e2caccff326c5b"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：示例3.2.3；需缓存内容可控、未压缩、PHP缓存文件web可达可执行和可猜路径
+
+代码与实验材料：完整set源码及自定义POST a3控制器，CRLF跳出注释，图片证据未视检
+
+来源证据范围：有h3art3ars原稿
+
+- **结论使用边界（1）**：总结请求与实验控制器不对应；依据：实验index读取POST a3，总结却GET /get?id，未提供该方法。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **适用与权限边界（2）**：关键条件缺失；依据：set中有gzcompress分支，未说明需禁用；也未限制webroot可达与PHP解析。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **实验改动边界（3）**：代码格式严重噪声；依据：PHP作为列表项穿插{=html}空注释围栏。以下步骤按原实验条件保留；人工改动后的行为只支持该修改环境，不用于证明未修改发行版默认可利用。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Thinkphp 3.2.3 缓存漏洞
 

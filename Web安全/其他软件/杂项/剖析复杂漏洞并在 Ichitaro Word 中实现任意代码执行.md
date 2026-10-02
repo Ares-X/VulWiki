@@ -1,8 +1,64 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "剖析复杂漏洞并在 Ichitaro Word 中实现任意代码执行"
+product: "JustSystems Ichitaro CVE-2023-35126 / TALOS-2023-1825"
+record_type: "analysis"
+document_type: "技术文章（细分类待核）"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "产品Ichitaro不是Microsoft Word，测试Ichitaro2023 1.0.1.59372和2023-10-19修复日期明确，须补厂商精确更新版本/公告；读取恶意jtd须用户打开，依赖32位特定模块无ASLR、可写表及DEP绕过，不能泛化全部现代版本；安全讨论将DEP等同严格W^X、无ASLR等同任意地址可写、一个UAF可利用推所有同类可利用均须限定权限和上下文"
+side_effects: "记录2008越界对象索引结合5/7子类型、帧指针覆盖、后续流读取和恢复上下文链有细致反汇编支撑，应保留方法论"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/%E5%89%96%E6%9E%90%E5%A4%8D%E6%9D%82%E6%BC%8F%E6%B4%9E%E5%B9%B6%E5%9C%A8%20Ichitaro%20Word%20%E4%B8%AD%E5%AE%9E%E7%8E%B0%E4%BB%BB%E6%84%8F%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-b4bd1241a97ece333b2bbe61"
+entity_id: "ve-b4bd1241a97ece333b2bbe61"
+schema_version: "1"
 ---
 
-#  剖析复杂漏洞并在 Ichitaro Word 中实现任意代码执行   
+# 剖析复杂漏洞并在 Ichitaro Word 中实现任意代码执行
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：JustSystems Ichitaro CVE-2023-35126 / TALOS-2023-1825
+- 文献类型：技术文章（细分类待核）
+- 版本、权限及部署边界：产品Ichitaro不是Microsoft Word，测试Ichitaro2023 1.0.1.59372和2023-10-19修复日期明确，须补厂商精确更新版本/公告；读取恶意jtd须用户打开，依赖32位特定模块无ASLR、可写表及DEP绕过，不能泛化全部现代版本；安全讨论将DEP等同严格W^X、无ASLR等同任意地址可写、一个UAF可利用推所有同类可利用均须限定权限和上下文
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 主35126缺元数据，34366/38127/38128为同类背景不是本链必需
+2. 产品Ichitaro不是Microsoft Word，测试Ichitaro2023 1.0.1.59372和2023-10-19修复日期明确，须补厂商精确更新版本/公告
+3. 读取恶意jtd须用户打开，依赖32位特定模块无ASLR、可写表及DEP绕过，不能泛化全部现代版本
+4. 记录2008越界对象索引结合5/7子类型、帧指针覆盖、后续流读取和恢复上下文链有细致反汇编支撑，应保留方法论
+5. 大量专有IDA接口/重命名含括号变量属伪代码且所需扩展环境未说明，完整exploit明确不公开不算丢失
+6. StackReceiver初始化self.__sender但只定义sender，receive_word(dyn.block(adjust)))多闭合括号，示例代码有确定错误
+7. 开头0x3C1FAF0F被称parseStream3a76be后文实际processStreams77af0f地址，0x42缓冲界限/0x46记录大小及负0x1088栈调整翻译混杂应按原文校对
+8. 安全讨论将DEP等同严格W^X、无ASLR等同任意地址可写、一个UAF可利用推所有同类可利用均须限定权限和上下文
+9. Talos/JP CERT评分争议有具体向量却未链接任一原报告，引用MS-CFB/工具/政策均仅文字，缺最重要原英文研究URL
+10. 末尾推广可移除，避免把未公开完整代码当审计已验证RCE
+
+### 操作风险
+
+记录2008越界对象索引结合5/7子类型、帧指针覆盖、后续流读取和恢复上下文链有细致反汇编支撑，应保留方法论
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
  Ots安全   2024-03-28 12:09  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/bL2iaicTYdZn7gtxSFZlfuCW6AdQib8Q1onbR0U2h9icP1eRO6wH0AcyJmqZ7USD0uOYncCYIH7ZEE8IicAOPxyb9IA/640?wx_fmt=gif "")  
@@ -1947,4 +2003,4 @@ JSAPRUN.DLL    0x6100104f: leave; ret;
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

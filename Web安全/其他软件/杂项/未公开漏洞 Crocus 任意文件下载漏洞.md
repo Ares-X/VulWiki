@@ -1,9 +1,61 @@
 ---
-fofa: "搜索语句**"
 source: "MrWQ/vulnerability-paper"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "未公开漏洞 Crocus 任意文件下载漏洞"
+product: "Crocus moffice"
+record_type: "unknown"
+document_type: "技术文章（细分类待核）"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "正文只有Crocus无版本；请求带JSESSIONID需区分已登录和未认证；任意下载受服务文件权限限制"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/%E6%9C%AA%E5%85%AC%E5%BC%80%E6%BC%8F%E6%B4%9E%20Crocus%20%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD%E6%BC%8F%E6%B4%9E.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+fofa_unverified: "搜索语句**"
+source_url: "https://mp.weixin.qq.com/s/odKa_ruxUqgl-1Nq7SzKYA"
+id: "vw-dcda8d6bd25a4de3f705a6c0"
+entity_id: "ve-dcda8d6bd25a4de3f705a6c0"
+schema_version: "1"
 ---
 
-# 【未公开漏洞】Crocus 任意文件下载漏洞
+# 未公开漏洞 Crocus 任意文件下载漏洞
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Crocus moffice
+- 文献类型：技术文章（细分类待核）
+- 版本、权限及部署边界：正文只有Crocus无版本；请求带JSESSIONID需区分已登录和未认证；任意下载受服务文件权限限制
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. FOFA字段误抓搜索语句标题
+2. 正文只有Crocus无版本
+3. 请求带JSESSIONID需区分已登录和未认证
+4. 任意下载受服务文件权限限制
+5. 未公开为历史标题非当前状态
+6. 缺修复和响应文字，清广告
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://mp.weixin.qq.com/s/odKa_ruxUqgl-1Nq7SzKYA>
+
+### 归档技术正文
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/odKa_ruxUqgl-1Nq7SzKYA)
@@ -51,7 +103,7 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9
-Cookie: JSESSIONID=07F19D6F7EDC273FDD7B2DBF5F9EB561
+Cookie: JSESSIONID=07F**************************561
 Connection: close
 
 ```

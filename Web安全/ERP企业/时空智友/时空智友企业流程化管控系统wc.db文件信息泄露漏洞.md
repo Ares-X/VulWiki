@@ -1,22 +1,63 @@
 ---
-fofa: "web.icon=="
 source: "wy876 漏洞文库"
+title: "时空智友部署 .svn/wc.db暴露线索"
+product: "时空智友部署"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "无版本，依赖部署遗留.svn目录"
+prerequisites: "未说明"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+source_url: "https://www.yuque.com/xiaokp7/ocvun2/igpfbscu4lzfazkv"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E6%97%B6%E7%A9%BA%E6%99%BA%E5%8F%8B/%E6%97%B6%E7%A9%BA%E6%99%BA%E5%8F%8B%E4%BC%81%E4%B8%9A%E6%B5%81%E7%A8%8B%E5%8C%96%E7%AE%A1%E6%8E%A7%E7%B3%BB%E7%BB%9Fwc.db%E6%96%87%E4%BB%B6%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2%E6%BC%8F%E6%B4%9E.md"
+fofa_unverified: "web.icon=="
+hunter: "web.icon==\"2464cbce5dd2681dd4fb62d055520d78\""
+id: "vw-67602e7467c0c5c3437ce2ba"
+entity_id: "ve-67602e7467c0c5c3437ce2ba"
+schema_version: "1"
 ---
 
-# 时空智友企业流程化管控系统 wc.db 文件信息泄露漏洞
+# 时空智友部署 .svn/wc.db暴露线索
 
-# 一、漏洞简介
+## 条目说明
+
+- 对象与具体问题：时空智友部署；.svn/wc.db暴露线索
+- 版本、配置及部署条件：无版本，依赖部署遗留.svn目录
+- 认证与权限前提：未说明
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 属于SVN工作副本部署暴露配置问题，不当然是所有产品版本漏洞
+- 只有路径无响应SQLite特征或公开范围，缺证据
+- 测绘错误同族
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
+## 一、漏洞简介
 时空智友企业流程化管控系统是一个用于企业流程管理和控制的软件系统。它旨在帮助企业实现流程的规范化、自动化和优化，从而提高工作效率、降低成本并提升管理水平。时空智友企业流程化管控系统wc.db 信息泄露漏洞，攻击者可利用该漏洞获取系统的敏感信息等。
 
-# 二、影响版本
+## 二、影响版本
 + 时空智友企业流程化管控系统
 
-# 三、资产测绘
+## 三、资产测绘
 + hunter`web.icon=="2464cbce5dd2681dd4fb62d055520d78"`
 + 登录页面
 
 
-# 四、漏洞复现
+## 四、漏洞复现
 ```plain
 /.svn/wc.db
 ```

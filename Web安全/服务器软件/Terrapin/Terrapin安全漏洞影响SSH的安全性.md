@@ -1,8 +1,46 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Terrapin安全漏洞影响SSH的安全性"
+product: "SSH协议及受影响实现"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2023-48795"
+referenced_identifiers: ""
+identifier_role: "primary"
+cve: "CVE-2023-48795"
+prerequisites: "主动网络中间人、特定协商加密/MAC模式；不是单凭暴露SSH端口可利用"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-fd6d2fda811e2dad9bdd5ff4"
+entity_id: "ve-fd6d2fda811e2dad9bdd5ff4"
+schema_version: "1"
 ---
 
-#  Terrapin安全漏洞影响SSH的安全性   
+# Terrapin安全漏洞影响SSH的安全性
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：主动网络中间人、特定协商加密/MAC模式；不是单凭暴露SSH端口可利用
+- 证据范围：前缀截断与序列号补偿说明基本自洽，AsyncSSH状态机是另加实现漏洞不能泛化所有SSH接管
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 连接必须是安全的或通过...明显翻译损坏；CBC还需明确MAC模式
+- 序列化应为序列号
+- 元数据漏主CVE；缺strict KEX及版本修复说明
+- AsyncSSH独立编号和条件未提供，应另核实体
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
  网络安全应急技术国家工程中心   2024-01-03 15:37  
   
 SSH是提供网络服务的安全访问的互联网标准，主要用于远程终端登录和文件传输，应用于超过1.5亿服务器。来自德国波鸿鲁尔大学的安全研究人员在SSH协议中发现了一个安全漏洞——Terrapin，攻击者利用该漏洞可以打破SSH协议安全通道的完整性以影响SSH的安全性。  

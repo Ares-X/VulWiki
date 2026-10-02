@@ -1,6 +1,38 @@
 ---
 source: "hatch 补库批 20260928"
+product: "Yunucms2.0.7"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "Yunucms v2.0.7 数据库泄露"
+prerequisites: "来源所述条件，未列明部分仍待核：adminpreviouslycreatesDBbackup;publicdata/ accessible; known/guessabletimestamppluspart/compressionextension"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-5daa90cd18fb7fcbdae3b0ee"
+entity_id: "ve-5daa90cd18fb7fcbdae3b0ee"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：adminpreviouslycreatesDBbackup;publicdata/ accessible; known/guessabletimestamppluspart/compressionextension
+
+- **适用与权限边界（1）**：时间可预测不是充分泄漏条件，需HTTP目录权限/完整命名模式与是否压缩分卷。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **适用与权限边界（2）**：后台主动备份是准备条件，匿名攻击者不能据此直接调用export；应区分创建权限与下载权限。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **证据待核（3）**：最后图片引用rId29.shtml扩展异常需查真实媒体类型，目标存在不等于适合作图片，未视查不判坏。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **事实待核（4）**：完整export前半和REQUEST_TIME解释有价值；缺公开下载URL/响应与修复。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Yunucms v2.0.7 数据库泄露
 

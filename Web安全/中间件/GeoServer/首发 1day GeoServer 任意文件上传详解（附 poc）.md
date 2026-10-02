@@ -1,8 +1,50 @@
 ---
 cve: "CVE-2023-51444"
+title: "首发【1day】GeoServer 任意文件上传详解（附 poc）"
+product: "GeoServer CoverageStore REST上传"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2023-51444"
+referenced_identifiers: ""
+identifier_role: "primary"
+prerequisites: "管理员或具相应REST上传权限；StructuredGridCoverage2DReader类型coverage store，绝对路径触发ResourceAdaptor分支；RCE还需可写可执行Web目录"
+source_url: "https://mp.weixin.qq.com/s/tLXlemWT1Suius0necplEw"
+source_status: "recorded"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-799b7d2a781de29f97f34ce5"
+entity_id: "ve-799b7d2a781de29f97f34ce5"
+schema_version: "1"
 ---
 
 # 首发【1day】GeoServer 任意文件上传详解（附 poc）
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：管理员或具相应REST上传权限；StructuredGridCoverage2DReader类型coverage store，绝对路径触发ResourceAdaptor分支；RCE还需可写可执行Web目录
+- 证据范围：详细解释FileSystemResource与ResourceAdaptor验证差异有独立价值；标题附PoC但作者明确最后不公布，需标部分机制分析非完整复现。
+
+### 本次正文校订
+
+- 按实际内容修正 3 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 标题未披露认证后；示例admin:geoserver是测试凭据不应作默认普适前提
+- 两个curlURL均未闭合引号、首个截在?file，且展示失败请求而非完整成功PoC
+- 2.22.x浮动镜像不能固定漏洞实验版本，应pin tag/digest
+- 关键成功配置/数据样例/源码多在图片，未视检
+- 缺修复章节与上传恢复，付费圈广告占后部
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/tLXlemWT1Suius0necplEw)
@@ -35,7 +77,7 @@ https://docs.geoserver.org/2.22.x/en/user/installation/docker.html
 
 直接拿来用
 
-```
+```shell
 docker pull docker.osgeo.org/geoserver:2.22.x
 docker run --mount type=bind,src=/MY/DATADIRECTORY,target=/opt/geoserver_data -it -p8080:8080 docker.osgeo.org/geoserver:2.22.x
 
@@ -63,7 +105,7 @@ docker run --mount type=bind,src=/MY/DATADIRECTORY,target=/opt/geoserver_data -i
 
 既然找到了接口函数，接下来直接构造一个请求即可了
 
-```
+```shell
 curl -v -H"Content-Type:" -u "admin:geoserver" --data-binary @1.zip "http://localhost:8080/geoserver/rest/workspaces/xxx/coveragestores/xtest/file.a?file
 
 ```
@@ -84,7 +126,7 @@ curl -v -H"Content-Type:" -u "admin:geoserver" --data-binary @1.zip "http://loca
 
 用下面命令发送上传请求后  
 
-```
+```shell
 curl -v -XPOST -H "Content-type: multipart/form-data" -F "file=@2.jsp" -u "admin:geoserver" "http://localhost:8080/geoserver/rest/workspaces/xxx/coveragestores/xtest/file.a?filename=../../../2.jsp
 
 ```

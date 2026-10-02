@@ -1,6 +1,47 @@
 ---
 source: "MrWQ/vulnerability-paper"
+product: "Nette Application / nette"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2020-15227"
+referenced_identifiers: "CVE-2020-8816"
+identifier_role: "primary"
+identifier_status: "unknown"
+cve: "CVE-2020-15227"
+fixed_version: "nette/application: 3.0.6; 2.4.16; 2.3.14; 2.2.10; nette/nette: 2.1.13; 2.0.19"
+title: "Nette 框架未授权任意代码执行漏洞分析"
+prerequisites: "来源所述条件，未列明部分仍待核：列3.0.6、2.4.16、2.3.14、2.2.10、2.1.13、2.0.19但不写比较符，疑把修复版本列作受影响；实验web-project3.0.0不能代替application锁定版本"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-1ae886da2bbe3ef8dcae4846"
+entity_id: "ve-1ae886da2bbe3ef8dcae4846"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 明确更正：原影响表中的 3.0.6、2.4.16、2.3.14、2.2.10、2.1.13、2.0.19 是官方要求升级到的修复版本，不应反列为受影响样本；前四组为 nette/application，2.1/2.0 对应 nette/nette。
+- 官方还列 3.0.2.1、3.1.0-RC2 等替代修复线；应核实际安装包与锁文件，web-project 3.0.0 模板版本不能代替 application 版本。主编号 CVE-2020-15227 来自正文参考和官方公告，图中最终请求未转录部分仍未补造。
+
+核对来源：[Nette 官方安全发布](https://blog.nette.org/en/cve-2020-15227-potential-remote-code-execution-vulnerability)
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：列3.0.6、2.4.16、2.3.14、2.2.10、2.1.13、2.0.19但不写比较符，疑把修复版本列作受影响；实验web-project3.0.0不能代替application锁定版本
+
+代码与实验材料：完整路由到MicroPresenter调用链叙述，关键源码及最终请求均图片；PHP内部参数名随版本需核实
+
+来源证据范围：含Nette官方CVE公告和中文文档，来源可追溯未外查
+
+- **事实待核（1）**：影响范围可能反向列出修复版本；依据：影响范围中逐个列3.0.6(or3.0.2.1,3.1.0-RC2 or dev)等发布版本，没有&lt;关系；需以官方公告校正。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **证据待核（2）**：复现缺依赖锁与文本请求；依据：composer create-project web-project3.0.0@dev不能锁定所有依赖，最终shell_exec请求仅图。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **事实待核（3）**：转义残留和元数据漏主CVE；依据：来源Markdown反斜杠、类名双重转义；主CVE藏参考链接。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Nette 框架未授权任意代码执行漏洞分析
 

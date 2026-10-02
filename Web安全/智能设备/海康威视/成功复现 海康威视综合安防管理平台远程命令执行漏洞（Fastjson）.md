@@ -1,8 +1,56 @@
 ---
 source: "MrWQ/vulnerability-paper"
+id: "vw-e3c117f6b4db353d8fb8b544"
+entity_id: "ve-e3c117f6b4db353d8fb8b544"
+schema_version: "1"
+title: "【成功复现】海康威视综合安防管理平台远程命令执行漏洞（Fastjson）"
+product: "Hikvision综合安防管理平台"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+prerequisites: "BCEL类加载器/DBCP2可用，JDK及Fastjson版本未给"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%99%BA%E8%83%BD%E8%AE%BE%E5%A4%87/%E6%B5%B7%E5%BA%B7%E5%A8%81%E8%A7%86/%E6%88%90%E5%8A%9F%E5%A4%8D%E7%8E%B0%20%E6%B5%B7%E5%BA%B7%E5%A8%81%E8%A7%86%E7%BB%BC%E5%90%88%E5%AE%89%E9%98%B2%E7%AE%A1%E7%90%86%E5%B9%B3%E5%8F%B0%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E%EF%BC%88Fastjson%EF%BC%89.md"
+review_date: "2026-10-02"
+side_effects: "执行文中载荷可能以目标进程权限启动命令或加载代码；权限受认证角色、操作系统账户及依赖版本约束，不能把 root/200 等通用字符串当成功证据；回连样例可能向外部地址发送网络请求或建立会话；应使用自己的隔离回连服务，DNS/LDAP 到达只能证明相应交互，不能单独证明 RCE"
+source_url: "https://mp.weixin.qq.com/s/Pzl9US6WLLHcI8JLo_UUJw"
+source_status: "recorded"
 ---
 
 # 【成功复现】海康威视综合安防管理平台远程命令执行漏洞（Fastjson）
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Hikvision综合安防管理平台
+- 本文讨论：bic/ssoService/v1/keepAlive Fastjson反序列化；WebLogic21839仅外链参考
+- 版本、权限与配置前提：BCEL类加载器/DBCP2可用，JDK及Fastjson版本未给
+- 资料类型：Fastjson复现补充；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 明确声明BCEL有删减且JSON收尾转义/括号异常，不能作可直接复现完整包
+- DNS回连不单独证明任意命令执行，cmd头和字节码行为未释
+- 修复链接标题是某些海康产品命令注入，与Fastjson平台是否对应待核；泛化版本栏
+- 已落实的文本修订：HTTP 报文围栏改为 http。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
+
+### 操作风险与恢复
+
+- 执行文中载荷可能以目标进程权限启动命令或加载代码；权限受认证角色、操作系统账户及依赖版本约束，不能把 root/200 等通用字符串当成功证据
+- 回连样例可能向外部地址发送网络请求或建立会话；应使用自己的隔离回连服务，DNS/LDAP 到达只能证明相应交互，不能单独证明 RCE
+
+### 待核与来源
+
+- 原字节码、JDK/组件条件与官方补丁映射待查
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/Pzl9US6WLLHcI8JLo_UUJw)
@@ -62,7 +110,7 @@ HIKVISION - 综合安防管理平台
 
  **Poc （POST）**
 
-```
+```http
 POST /bic/ssoService/v1/keepAlive HTTP/1.1
 Content-Type: application/json
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36

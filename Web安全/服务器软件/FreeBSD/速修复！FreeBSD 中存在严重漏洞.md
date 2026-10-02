@@ -1,8 +1,46 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "速修复！FreeBSD 中存在严重漏洞"
+product: "FreeBSD bhyve USB XHCI模拟"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2024-41721"
+referenced_identifiers: "CVE-2024-43102; CVE-2020-7468"
+identifier_role: "primary"
+cve: "CVE-2024-41721"
+prerequisites: "虚拟机配置XHCI设备模拟，攻击者有guest内相应特权；host进程仍受Capsicum限制"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-d1e18210835a1b3f9852eaf3"
+entity_id: "ve-d1e18210835a1b3f9852eaf3"
+schema_version: "1"
 ---
 
-#  速修复！FreeBSD 中存在严重漏洞   
+# 速修复！FreeBSD 中存在严重漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：虚拟机配置XHCI设备模拟，攻击者有guest内相应特权；host进程仍受Capsicum限制
+- 证据范围：guest到host进程影响与不使用USB模拟不受影响有明确说明；不是未认证网络漏洞
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 来源URL明显与FreeBSD正文无关，需恢复正确原文及官方公告
+- 主CVE缺元数据
+- CVSS9.8缺评分来源/向量，应核对本地guest前提
+- STABLE主分支及RELEASE-P应加固定修复提交和规范p写法
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 DO SON  代码卫士   2024-09-23 18:15  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

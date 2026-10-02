@@ -1,11 +1,51 @@
 ---
-cnvd: "CNVD-2023-12632"
 source: "MrWQ/vulnerability-paper"
+title: "泛微e-cology browser.jsp未授权SQL注入"
+product: "泛微e-cology"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CNVD-2023-12632"
+referenced_identifiers: "QVD-2023-5012"
+identifier_status: "unknown"
+affected_scope: "Ecology9<=10.55"
+prerequisites: "前台；空格路径和三层编码绕过"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+identifier_role: "primary"
+source_url: "https://mp.weixin.qq.com/s/_NzNyWjMrx4DhMtrYGZlVQ"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E6%B3%9B%E5%BE%AEoa/CNVD-2023-12632--%20%E6%B3%9B%E5%BE%AE%20e-cology9%20%E6%9C%AA%E6%8E%88%E6%9D%83%20SQL%20%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0.md"
+id: "vw-7e3057ae07db29046ba7133f"
+entity_id: "ve-7e3057ae07db29046ba7133f"
+schema_version: "1"
 ---
 
-# CNVD-2023-12632-- 泛微 e-cology9 未授权 SQL 注入漏洞复现
+# 泛微e-cology browser.jsp未授权SQL注入
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：泛微e-cology；browser.jsp未授权SQL注入
+- 版本、配置及部署条件：Ecology9<=10.55
+- 认证与权限前提：前台；空格路径和三层编码绕过
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 同接口与QVD-2023-5012文章互相引用，应主实体关联两标识而非凭编号制造两漏洞
+- 区别普通路径与/mobile/%20/plugin绕过条件须保留
+- tamper有独立中文顿号导致Python语法错误；HTTP无头体空行；缺补丁精确边界
+- 新增SQL_EXISTS回显证据与编码解释，合并时保留
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/_NzNyWjMrx4DhMtrYGZlVQ)
 
 **声明：请勿利用文章内的相关技术从事非法测试，由于传播、利用此文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责**
@@ -19,7 +59,7 @@ source: "MrWQ/vulnerability-paper"
 
 在这放 poc 及脚本。
 
-```
+```http
 POST /mobile/%20/plugin/browser.jsp HTTP/1.1
 Host: \{\{Hostname\}\}
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/109.0

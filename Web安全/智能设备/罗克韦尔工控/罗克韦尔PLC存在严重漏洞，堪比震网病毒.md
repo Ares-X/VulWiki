@@ -1,8 +1,54 @@
 ---
 cve: "CVE-2022-1161"
+id: "vw-1e1073ae00228ce8dfd26c1d"
+entity_id: "ve-1e1073ae00228ce8dfd26c1d"
+schema_version: "1"
+title: "罗克韦尔PLC存在严重漏洞，堪比震网病毒"
+product: "Rockwell Logix控制器与Studio5000 Logix Designer"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2022-1161; CVE-2022-1159"
+referenced_identifiers: ""
+prerequisites: "1161需程序修改路径；1159需工程站管理员；v28起软件，型号详列"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%99%BA%E8%83%BD%E8%AE%BE%E5%A4%87/%E7%BD%97%E5%85%8B%E9%9F%A6%E5%B0%94%E5%B7%A5%E6%8E%A7/%E7%BD%97%E5%85%8B%E9%9F%A6%E5%B0%94PLC%E5%AD%98%E5%9C%A8%E4%B8%A5%E9%87%8D%E6%BC%8F%E6%B4%9E%EF%BC%8C%E5%A0%AA%E6%AF%94%E9%9C%87%E7%BD%91%E7%97%85%E6%AF%92.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_url: "https://mp.weixin.qq.com/s/CRdxeWMr8g3kid_JTBV0zQ"
+source_status: "recorded"
 ---
 
 # 罗克韦尔PLC存在严重漏洞，堪比震网病毒
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Rockwell Logix控制器与Studio5000 Logix Designer
+- 本文讨论：CVE-2022-1161/1159；2021-22681为通信链参考
+- 版本、权限与配置前提：1161需程序修改路径；1159需工程站管理员；v28起软件，型号详列
+- 资料类型：双漏洞技术新闻；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 开头远程利用概括容易覆盖1159既有本地管理员前提
+- 升级检测差异功能是检测/缓解，不等于彻底阻止恶意下载
+- 受影响型号多但固件具体范围未给；震网类比非同漏洞或真实攻击事件
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 官方型号/固件及工具版本矩阵待查
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/CRdxeWMr8g3kid_JTBV0zQ)

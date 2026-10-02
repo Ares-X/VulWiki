@@ -1,8 +1,47 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "在野 0day nginxWebUI runCmd 远程代码执行漏洞"
+product: "nginxWebUI"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "Pre3.5.2 unauth chain claimed;later through3.6.0 authenticated;3.4.7 command-filter transition"
+source_url: "https://mp.weixin.qq.com/s/pjc0qykPQjr3CkBOZXJ_rA"
+source_status: "recorded"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-a7c74e14670ce4b27622d2db"
+entity_id: "ve-a7c74e14670ce4b27622d2db"
+schema_version: "1"
 ---
 
 # 在野 0day nginxWebUI runCmd 远程代码执行漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：Pre3.5.2 unauth chain claimed;later through3.6.0 authenticated;3.4.7 command-filter transition
+- 证据范围：Substantial source comparisons complement64's additional endpoints;not duplicate whole article
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- Contradiction:section3.5.2 fix but prose says3.5.0 fixed while earlier explicitly says3.5.0 not fixed
+- Boundary '3.4.7--3.5.2' ambiguous inclusion;state actual fixed release/commit
+- 'All versions' limited to historical3.6.0 cutoff
+- Filter explanation includes/lib both positive and exclusion, unlike shown code
+- No CVE/vendor advisory;in-the-wild0day assertion lacks dated source
+- Trailing image.png residue and concatenated numbered conditions
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/pjc0qykPQjr3CkBOZXJ_rA)

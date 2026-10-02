@@ -1,10 +1,49 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "金和C6 OpenFile id附件水平越权"
+product: "金和C6"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "C6无build"
+prerequisites: "普通用户登录且越过文件授权"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+source_url: "https://mp.weixin.qq.com/s/90HM3LqODBN35iqRBRE1HA"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E9%87%91%E5%92%8COA/%E9%87%91%E5%92%8C%20OA%20C6%20%E5%90%8E%E5%8F%B0%E8%B6%8A%E6%9D%83%E6%95%8F%E6%84%9F%E6%96%87%E4%BB%B6%E9%81%8D%E5%8E%86%E6%BC%8F%E6%B4%9E%20%28%E6%B2%A1%E5%95%A5%E7%94%A8%E7%9A%84%200day~%29.md"
+id: "vw-1e28f5310d1b5efc789a0355"
+entity_id: "ve-1e28f5310d1b5efc789a0355"
+schema_version: "1"
 ---
 
-# 金和 OA C6 后台越权敏感文件遍历漏洞 (没啥用的 0day~)
+# 金和C6 OpenFile id附件水平越权
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：金和C6；OpenFile id附件水平越权
+- 版本、配置及部署条件：C6无build
+- 认证与权限前提：普通用户登录且越过文件授权
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- Python URL字符串缺结束引号及name/type片段，不能运行
+- file path取末3字符扩展名不通用；Cookie正则强依赖尾分号
+- 仅发现文件不证明越权，需两账号ACL对照；枚举元数据同样涉及敏感信息
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/90HM3LqODBN35iqRBRE1HA)
 
 ![](https://mmbiz.qpic.cn/mmbiz_gif/ibicicIH182el5PaBkbJ8nfmXVfbQx819qWWENXGA38BxibTAnuZz5ujFRic5ckEltsvWaKVRqOdVO88GrKT6I0NTTQ/640?wx_fmt=gif)

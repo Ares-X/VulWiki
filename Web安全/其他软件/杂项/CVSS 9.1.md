@@ -1,9 +1,59 @@
 ---
-cve: "CVE-2026-46376"
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2026-46376"
+identifier_role: "primary"
+primary_identifiers: "CVE-2026-46376"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "CVSS 9.1"
+product: "FreePBX userman/UCP"
+record_type: "advisory"
+document_type: "漏洞通告"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "文称userman16<16.0.45、17<17.0.7；启用UCP通用模板且未改默认凭据"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/CVSS%209.1.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-d40e8b815f0b9f1f78cadd7b"
+entity_id: "ve-d40e8b815f0b9f1f78cadd7b"
+schema_version: "1"
 ---
 
-#  CVSS 9.1 【严重】CVE-2026-46376 FreePBX userman 模块硬编码凭证漏洞：企业电话系统门户全网裸奔  
+# CVSS 9.1
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：FreePBX userman/UCP
+- 文献类型：漏洞通告
+- 版本、权限及部署边界：文称userman16<16.0.45、17<17.0.7；启用UCP通用模板且未改默认凭据
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 版本实为userman模块版本，应避免混为整个FreePBX版本；文称2021引入但范围无下界
+2. 没有公告AV26-474/GHSA/补丁链接，也没默认账户或复现步骤；安装时随机化是否迁移既有模板密码须核验
+3. 4.5万搜索资产≠受影响实例；无交互指受害者而非没有登录步骤；横向移动取决于获得账户权限
+4. 标题仅CVSS9.1缺可检索产品；代码围栏错配，模板广告删减
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 原创 chicken
                     chicken  爱坤sec   2026-05-23 18:30  
   
@@ -58,4 +108,4 @@ FreePBX 部署于全球大量企业 VoIP 通信环境、呼叫中心和托管 PB
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

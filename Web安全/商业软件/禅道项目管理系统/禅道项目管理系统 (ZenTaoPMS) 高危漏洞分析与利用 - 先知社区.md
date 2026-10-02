@@ -1,17 +1,60 @@
 ---
-cve: "CVE-2020-7361"
 source: "MrWQ/vulnerability-paper"
+title: "禅道ZenTao多版本 历史多漏洞分析：block SQL 注入、getModel文件操作、客户端与仓库命令执行"
+product: "禅道ZenTao多版本"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2020-7361;CNVD-C-2020-121325"
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "8.2–9.2.1、11.6边界矛盾、10.x至12.4.3、Pro<=8.8.2，分链需单列"
+prerequisites: "block匿名；getModel低权限；客户端下载及Pro仓库管理员"
+side_effects: "文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行；命令/代码执行示例可能改变主机状态"
+review_date: "2026-10-02"
+identifier_role: "primary"
+source_url: "https://xz.aliyun.com/t/8692"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/%E7%A6%85%E9%81%93%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/%E7%A6%85%E9%81%93%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%20%28ZenTaoPMS%29%20%E9%AB%98%E5%8D%B1%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90%E4%B8%8E%E5%88%A9%E7%94%A8%20-%20%E5%85%88%E7%9F%A5%E7%A4%BE%E5%8C%BA.md"
+id: "vw-e1dd5acfd66baa672d0cdddf"
+entity_id: "ve-e1dd5acfd66baa672d0cdddf"
+schema_version: "1"
 ---
 
-# 禅道项目管理系统 (ZenTaoPMS) 高危漏洞分析与利用 - 先知社区
+# 禅道ZenTao多版本 历史多漏洞分析：block SQL 注入、getModel文件操作、客户端与仓库命令执行
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：禅道ZenTao多版本；历史多漏洞分析：block SQLi、getModel文件操作、客户端与仓库命令执行
+- 版本、配置及部署条件：8.2–9.2.1、11.6边界矛盾、10.x至12.4.3、Pro<=8.8.2，分链需单列
+- 认证与权限前提：block匿名；getModel低权限；客户端下载及Pro仓库管理员
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 多漏洞文不可全部归CVE-2020-7361，另含CNVD-C-2020-121325及无编号的独立问题
+- getModel <=11.6 / <11.6 / 修复>11.6互相不一致；各产品兼容不证明全部受影响
+- 客户端下载先称管理员后称任意登录者冲突；作者提供权限对比应保留
+- SQLi落盘依MySQL写权限/路径；加固版禁止执行不等于任意写/读影响消失
+- 4.4先称path参数实际client，cmd1/cmd2是占位符；SYSTEM是实验条件不是通用结论
+- 40k资产及75%暴露属历史统计缺样本；以下三个实际四产品；data/cliten拼写和Markdown链接吞HTTP句子需修复
+- 自2018都需登录属过度概括；关键源码图片未视检；保留原分析与致谢，删产品营销
+
+## 操作风险
+
+文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行；命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [xz.aliyun.com](https://xz.aliyun.com/t/8692)
 
 一、组件介绍
 ------
 
-### 1.1 基本信息
+#### 1.1 基本信息
 
 ZenTaoPMS（ZenTao Project Management System），中文名为禅道项目管理软件。ZenTaoPMS 是易软天创公司为了解决众多企业在管理过程中出现的混乱，无序的现象，开发出来的一套项目管理软件。
 
@@ -19,7 +62,7 @@ ZenTaoPMS（ZenTao Project Management System），中文名为禅道项目管理
 
 禅道还首次创造性的将产品、项目、测试这三者的概念明确分开，产品人员、开发团队、测试人员，这三者分立，互相配合，又互相制约，通过需求、任务、bug 来进行交相互动，最终通过项目拿到合格的产品。
 
-### 1.2 版本介绍
+#### 1.2 版本介绍
 
 禅道项目管理软件基于自主研发的 PHP 开发框架 --- 禅道 PHP 框架开发而成，企业或者第三方的开发者可以通过这套框架，灵活的对禅道进行功能的修改或者扩展。经过逐年演化，禅道项目管理软件发展成为四大系列、功能完善的项目管理软件。禅道项目管理软件发展至今其核心开发系列共有以下三个，即禅道企业版、禅道专业版、禅道集团版、禅道开源版。其中禅道开源版是基础版本；而专业版、企业版是根据禅道开源版进行二次开发而成，其间仅存在功能性上的不同，所以专业版、企业版是兼容同级开源版的；而集团版仅为部署架构上的不同，核心还是企业版，具体如下：
 
@@ -34,7 +77,7 @@ ZenTaoPMS（ZenTao Project Management System），中文名为禅道项目管理
 版本细分如下图所示：  
 [![](https://xzfile.aliyuncs.com/media/upload/picture/20201221162133-8926c6d0-4365-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201221162133-8926c6d0-4365-1.png)
 
-### 1.3 使用量及使用分布
+#### 1.3 使用量及使用分布
 
 根据全网数据统计，使用 ZenTaoPMS 的网站多达 4 万余个，其中大部分集中在国内，约占使用量的 75% 以上。其中，广东、浙江、北京、上海四省市使用量最高，由此可见，ZenTaoPMS 在国内被广泛应用。通过网络空间搜索引擎的数据统计和柱状图表，如下图所示。
 
@@ -59,7 +102,7 @@ ZenTaoPMS（ZenTao Project Management System），中文名为禅道项目管理
 
 基于 ZenTaoPMS 高危漏洞，我们可以得出几种可以利用的高危利用链。
 
-#### 3.1 无需权限
+##### 3.1 无需权限
 
 [![](https://xzfile.aliyuncs.com/media/upload/picture/20201221162258-bbc70618-4365-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201221162258-bbc70618-4365-1.png)
 
@@ -68,7 +111,7 @@ ZenTaoPMS（ZenTao Project Management System），中文名为禅道项目管理
 *   首先明确 ZenTao 框架系列版本, 访问该路径可获取版本信息：`/zentao/index.php?mode=getconfig`
 *   如果利用此漏洞，需要系统有文件写入权限。
 
-#### 3.2 仅需低权限
+##### 3.2 仅需低权限
 
 [![](https://xzfile.aliyuncs.com/media/upload/picture/20201221162341-d5151de4-4365-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201221162341-d5151de4-4365-1.png)
 
@@ -77,7 +120,7 @@ ZenTaoPMS（ZenTao Project Management System），中文名为禅道项目管理
 *   首先明确 ZenTao 框架系列版本, 访问该路径可获取版本信息：`/zentao/index.php?mode=getconfig`
 *   需要获取到 ZenTaoPMS 的后台用户登录账号密码或者 cookie，执行以上漏洞生成 shell，最终可 getshell。
 
-#### 3.3 需要管理员权限
+##### 3.3 需要管理员权限
 
 [![](https://xzfile.aliyuncs.com/media/upload/picture/20201221162415-e9bef332-4365-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201221162415-e9bef332-4365-1.png)
 
@@ -95,7 +138,7 @@ ZenTaoPMS（ZenTao Project Management System），中文名为禅道项目管理
 四、高可利用漏洞分析
 ----------
 
-### 4.0 技术背景：禅道项目管理系统路由模式
+#### 4.0 技术背景：禅道项目管理系统路由模式
 
 禅道有两种路由模式 PATH_INFO、GET 方式，其中 GET 方式为常见的 m=module&f=method 形式传递模块和方法名，而 PATH_INFO 则是通过路径和分隔符的方式传递模块和方法名，路由方式及分隔符定义在 config/config.php 中。
 
@@ -148,9 +191,9 @@ parseRequest() 函数首先用于解析判断 url 是否采用了'GET'或者是'
 
 [![](https://xzfile.aliyuncs.com/media/upload/picture/20201221163025-c5edc7ca-4366-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201221163025-c5edc7ca-4366-1.png)
 
-### 4.1 禅道 8.2-9.2.1 SQL 注入漏洞导致 Getshell
+#### 4.1 禅道 8.2-9.2.1 SQL 注入漏洞导致 Getshell
 
-#### 4.1.1 漏洞简介
+##### 4.1.1 漏洞简介
 
 漏洞名称：禅道 8.2-9.2.1SQL 注入前台 Getshell  
 漏洞编号：无  
@@ -158,19 +201,19 @@ parseRequest() 函数首先用于解析判断 url 是否采用了'GET'或者是'
 CVSS 评分：无  
 漏洞危害等级：高危
 
-#### 4.1.2 漏洞概述
+##### 4.1.2 漏洞概述
 
 禅道项目管理软件集产品管理、项目管理、质量管理、文档管理、组织管理和事务管理于一体，是一款功能完备的项目管理软件。该漏洞影响版本为禅道 8.2--9.2.1。漏洞出现在系统 orm 框架中，在拼接 order by 的语句过程的时候，未对 limit 部分过滤并直接拼接，导致攻击者构造执行 SQL 语句。在 mysql 权限配置不当的情况下，攻击者可利用该漏洞获取 webshell。
 
-#### 4.1.3 漏洞影响
+##### 4.1.3 漏洞影响
 
 禅道 8.2 - 9.2.1
 
-#### 4.1.4 漏洞修复
+##### 4.1.4 漏洞修复
 
 1. 建议受影响的用户升级至 ZenTao 9.2.1 以上版本或打上对应补丁包，下载地址：[https://www.zentao.net/download.html](https://www.zentao.net/download.html)
 
-#### 4.1.5 漏洞利用过程
+##### 4.1.5 漏洞利用过程
 
 0x0：随便访问一个不存在的路径，返回页面会出现报错，报错回显出文件的存放路径为。
 
@@ -192,7 +235,7 @@ CVSS 评分：无
 http://siteserver/zentao/index.php?m=block&f=main&mode=getblockdata&blockid=case&param=base64加密字符串
 ```
 
-#### 4.1.6 代码分析
+##### 4.1.6 代码分析
 
 我们根据漏洞 PoC 来跟踪漏洞执行流程，从技术背景中的路由解析我们可以定位到漏洞存在的模块是 block 模块中的 main 方法，在经过路由解析后，系统将通过 loadModule() 方法加载对应模块，如下图所示：
 
@@ -238,9 +281,9 @@ http://siteserver/zentao/index.php?m=block&f=main&mode=getblockdata&blockid=case
 
 [![](https://xzfile.aliyuncs.com/media/upload/picture/20201221164155-61b3cf28-4368-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201221164155-61b3cf28-4368-1.png)
 
-### 4.2 禅道 后台代码注入漏洞
+#### 4.2 禅道 后台代码注入漏洞
 
-#### 4.2.1 漏洞简介
+##### 4.2.1 漏洞简介
 
 漏洞名称：禅道后台代码注入漏洞  
 漏洞编号：无  
@@ -248,19 +291,19 @@ http://siteserver/zentao/index.php?m=block&f=main&mode=getblockdata&blockid=case
 CVSS 评分：无  
 漏洞危害等级：高危
 
-#### 4.2.2 漏洞概述
+##### 4.2.2 漏洞概述
 
 禅道项目管理软件集产品管理、项目管理、质量管理、文档管理、组织管理和事务管理于一体，是一款功能完备的项目管理软件。漏洞属于一种越权调用，普通权限（用户组为 1-10）的攻击者可通过 module/api/control.php 中 getModel 方法，越权调用 module 目录下所有的 model 模块和方法，从而实现 SQL 注入、任意文件读取、远程代码执行、文件包含等攻击。
 
-#### 4.2.3 漏洞影响
+##### 4.2.3 漏洞影响
 
 禅道开源版 < 11.6
 
-#### 4.2.4 漏洞修复
+##### 4.2.4 漏洞修复
 
 1. 建议受影响的用户升级至 ZenTao 11.6 以上版本，下载地址：[https://www.zentao.net/download.html](https://www.zentao.net/download.html)
 
-#### 4.2.5 漏洞利用过程
+##### 4.2.5 漏洞利用过程
 
 0x0：首先登陆获取登陆 cookie：zentaosid。
 
@@ -268,7 +311,7 @@ CVSS 评分：无
 
 0x2：最后访问 api-getModel-api-getMethod-filePath=，最后文件包含 shell，执行 PHP 代码。
 
-#### 4.2.6 代码分析
+##### 4.2.6 代码分析
 
 我们根据漏洞 PoC 来跟踪漏洞执行流程，从技术背景中的路由解析我们可以定位到漏洞存在的模块是 api 模块中的 getModel 方法，在经过路由解析后，系统将通过 loadModule() 方法加载对应模块，如下图所示：
 
@@ -302,9 +345,9 @@ CVSS 评分：无
 
 [![](https://xzfile.aliyuncs.com/media/upload/picture/20201221164644-0d87fd1a-4369-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201221164644-0d87fd1a-4369-1.png)
 
-### 4.3 禅道 后台文件上传漏洞
+#### 4.3 禅道 后台文件上传漏洞
 
-#### 4.3.1 漏洞简介
+##### 4.3.1 漏洞简介
 
 漏洞名称：禅道后台代码注入漏洞  
 漏洞编号：CNVD-C-2020-121325  
@@ -312,19 +355,19 @@ CVSS 评分：无
 CVSS 评分：无  
 漏洞危害等级：高危
 
-#### 4.3.2 漏洞概述
+##### 4.3.2 漏洞概述
 
 禅道官方发布了开源版 12.4.3 的更新公告，本次安全更新禅道官方修复了一个高危漏洞：禅道任意文件上传漏洞，漏洞编号：CNVD-C-2020-121325。登录后的任意攻击者可通过 fopen/fread/fwrite 方法结合 FTP、File 等协议上传或读取任意文件，成功利用该漏洞可以执行任意代码，最终获取服务器最高权限。
 
-#### 4.3.3 漏洞影响
+##### 4.3.3 漏洞影响
 
 10.x < 禅道开源版 < 12.4.3
 
-#### 4.3.4 漏洞修复
+##### 4.3.4 漏洞修复
 
 1. 建议受影响的用户升级至 ZenTao 12.4.3 及以上版本，下载地址：[https://www.zentao.net/download.html](https://www.zentao.net/download.html)
 
-#### 4.3.5 漏洞利用过程
+##### 4.3.5 漏洞利用过程
 
 0x0：首先登陆获取登陆 cookie：zentaosid。
 
@@ -332,7 +375,7 @@ CVSS 评分：无
 
 0x2：最后访问 data/cliten/1 / 文件，执行 PHP 代码。
 
-#### 4.3.6 代码分析
+##### 4.3.6 代码分析
 
 我们根据漏洞 PoC 来跟踪漏洞执行流程，从技术背景中的路由解析我们可以定位到漏洞存在的模块是 client 模块中的 download 方法，在经过路由解析后，系统将通过 loadModule() 方法加载对应模块：
 
@@ -354,9 +397,9 @@ CVSS 评分：无
 
 [![](https://xzfile.aliyuncs.com/media/upload/picture/20201221164913-669385fa-4369-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201221164913-669385fa-4369-1.png)
 
-### 4.4 禅道 Pro 版本任意命令执行漏洞
+#### 4.4 禅道 Pro 版本任意命令执行漏洞
 
-#### 4.4.1 漏洞简介
+##### 4.4.1 漏洞简介
 
 漏洞名称：禅道项目管理软件 Pro 版本任意命令执行漏洞  
 漏洞编号：CVE-2020-7361  
@@ -364,21 +407,21 @@ CVSS 评分：无
 CVSS 评分：CVSS 2.0:9.0; CVSS 3.x:8.8  
 漏洞危害等级：高危
 
-#### 4.4.2 漏洞概述
+##### 4.4.2 漏洞概述
 
 EasyCorp ZenTao Pro 是中国自然易软网络技术（EasyCorp）公司的一套开源项目管理软件。该软件包括产品管理、项目管理、质量管理和文档管理等功能。EasyCorp ZenTao Pro 8.8.2 及之前版本中的 / pro/repo-create.html 文件存在操作系统命令注入漏洞。攻击者可借助‘path’参数利用该漏洞以 SYSTEM 权限执行任意命令。
 
-#### 4.4.3 漏洞影响
+##### 4.4.3 漏洞影响
 
 禅道 Pro <= 8.8.2
 
-#### 4.4.4 漏洞修复
+##### 4.4.4 漏洞修复
 
 目前厂商已发布升级补丁以修复漏洞，补丁获取链接：
 
 1. 建议受影响的用户升级至 ZenTao pro 8.8.2 以上版本，下载地址：[https://www.zentao.net/download.html](https://www.zentao.net/download.html)
 
-#### 4.4.5 漏洞利用过程
+##### 4.4.5 漏洞利用过程
 
 0x0：首先登陆到管理员账户。
 
@@ -394,7 +437,7 @@ SCM=Git&name=test2&path=C%3A%5CProgramData&encoding=utf-8&client=cmd1
 SCM=Git&name=test2&path=C%3A%5CProgramData&encoding=utf-8&client=cmd2
 ```
 
-#### 4.4.6 代码分析
+##### 4.4.6 代码分析
 
 我们根据漏洞 PoC 来跟踪漏洞执行流程，从技术背景中的路由解析我们可以定位到漏洞存在的模块是 repo 模块中的 create 方法，在经过路由解析后，系统将通过 loadModule() 方法加载对应模块，如下图所示：
 

@@ -1,8 +1,45 @@
 ---
 source: "hatch 补库批 20260928"
+title: "Horde Groupware Webmail 远程命令执行漏洞"
+product: "Horde Groupware Webmail Edition IMP"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "Low-privilege authenticated account; test5.2.22 pear, Debian9, Apache2.4.25/PHP7.0.33"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-86b4cc4be4ed4024a45c91cf"
+entity_id: "ve-86b4cc4be4ed4024a45c91cf"
+schema_version: "1"
+canonical: "Web安全/邮件系统/Horde Groupware/Horde Groupware Webmail 远程命令执行漏洞.md"
 ---
 
 # Horde Groupware Webmail 远程命令执行漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：Low-privilege authenticated account; test5.2.22 pear, Debian9, Apache2.4.25/PHP7.0.33
+- 证据范围：More complete upstream header/attribution and test environment than mail7/8; same code chain
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- Empty impact section despite test environment embedded in script
+- Repeated transcript in prose and script docstring
+- Invocation IP and printed targeting IP disagree
+- Keep full upstream attribution/tested environment while deduplicating other Horde reprints
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 一、漏洞简介
 ------------

@@ -1,6 +1,38 @@
 ---
 source: "hatch 补库批 20260928"
+product: "Emlog kl_album plugin"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "Emlog 相册插件前台SQL注入+Getshell"
+prerequisites: "来源所述条件，未列明部分仍待核：安装易受影响kl_album；前台上传分支在ROLE检查前；PHP目录执行/SQL报错显示；附脚本Python2及旧PHP preg_replace/e"
+side_effects: "未执行；本文需注意的操作影响：产品与插件版本全缺；任意上传和文件名SQL注入是两原语组合，应拆关联；完整源码支持角色检查晚于上传及未使用$type验证的逻辑；保留而勿仅存简版PoC"
+source_status: "unknown"
+id: "vw-6a1c1419ff6b8d7875b22094"
+entity_id: "ve-6a1c1419ff6b8d7875b22094"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：安装易受影响kl_album；前台上传分支在ROLE检查前；PHP目录执行/SQL报错显示；附脚本Python2及旧PHP preg_replace/e
+
+- **事实待核（1）**：产品与插件版本全缺；任意上传和文件名SQL注入是两原语组合，应拆关联。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **证据待核（2）**：rand范围0–65535泛化无运行环境依据。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **证据待核（3）**：代码有unction缺f，HTML οnclick首字符为希腊字母导致事件失效；Python编码声明重复，失败一概判不存在漏洞。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **适用与权限边界（4）**：完整源码支持角色检查晚于上传及未使用$type验证的逻辑；保留而勿仅存简版PoC。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Emlog 相册插件前台SQL注入+Getshell
 

@@ -1,10 +1,52 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "通达OA 在线会话冒用→路径泄漏→photo.php读取→img_download SSRF→Redis写入链"
+product: "通达OA"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "11.7；需用户在线、读取Redis配置、gopher支持、Redis CONFIG及Web写权限"
+prerequisites: "先在线用户会话冒用，后续借会话"
+side_effects: "含清空数据库或修改数据库结构的破坏性示例；命令/代码执行示例可能改变主机状态"
+review_date: "2026-10-02"
+source_url: "https://mp.weixin.qq.com/s/97UTw_gS-skIYpN3q9Jakg"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E6%B3%9B%E5%BE%AEoa/%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90%20XX%20OA11.7%20%E7%BB%84%E5%90%88%E6%8B%B3%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89.md"
+category_recommendation: "OA / 通达"
+id: "vw-41cae254e3ec3d57a4619fad"
+entity_id: "ve-41cae254e3ec3d57a4619fad"
+schema_version: "1"
 ---
 
-# 【漏洞分析】XX OA11.7 组合拳漏洞分析学习（一）
+# 通达OA 在线会话冒用→路径泄漏→photo.php读取→img_download SSRF→Redis写入链
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：通达OA；在线会话冒用→路径泄漏→photo.php读取→img_download SSRF→Redis写入链
+- 版本、配置及部署条件：11.7；需用户在线、读取Redis配置、gopher支持、Redis CONFIG及Web写权限
+- 认证与权限前提：先在线用户会话冒用，后续借会话
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 明确错分泛微；通达版本和auth_mobi.php等接口直接识别
+- 五环链应多实体关联，不能合并成单一RCE；代码/具体返回很多仅截图
+- Redis payload含flushall清空数据库，破坏性严重，必须警告/隔离而非示例检测
+- Header Content-Disposition片段语法坏、Windows绝对路径及Redis口令为环境特定，需占位/前提说明
+- 保留在线用户限制与逐步前提，不能写任意离线用户登录
+
+## 操作风险
+
+含清空数据库或修改数据库结构的破坏性示例；命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/97UTw_gS-skIYpN3q9Jakg)
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ehibzaP4CvW645Awh5Uw6ic0ezf8jXIl77LS3FfS4kyibZiaF1G7Rib4xZntBBJR7iaonIib1z1sUU9w11UoIZZAO7Vjg/640?wx_fmt=png)

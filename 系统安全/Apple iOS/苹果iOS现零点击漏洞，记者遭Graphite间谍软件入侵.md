@@ -1,9 +1,60 @@
 ---
-cve: "CVE-2025-43200"
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2025-43200"
+identifier_role: "primary"
+primary_identifiers: "CVE-2025-43200"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "苹果iOS现零点击漏洞，记者遭Graphite间谍软件入侵"
+product: "Apple iOS iMessage"
+record_type: "incident"
+document_type: "攻击事件新闻"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "零点击消息链；称18.3.1修复；特定记者取证案例"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Apple%20iOS/%E8%8B%B9%E6%9E%9CiOS%E7%8E%B0%E9%9B%B6%E7%82%B9%E5%87%BB%E6%BC%8F%E6%B4%9E%EF%BC%8C%E8%AE%B0%E8%80%85%E9%81%ADGraphite%E9%97%B4%E8%B0%8D%E8%BD%AF%E4%BB%B6%E5%85%A5%E4%BE%B5.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-59a1649e31f9fb83204e9312"
+entity_id: "ve-59a1649e31f9fb83204e9312"
+schema_version: "1"
 ---
 
-#  苹果iOS现零点击漏洞，记者遭Graphite间谍软件入侵  
+# 苹果iOS现零点击漏洞，记者遭Graphite间谍软件入侵
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Apple iOS iMessage
+- 文献类型：攻击事件新闻
+- 版本、权限及部署边界：零点击消息链；称18.3.1修复；特定记者取证案例
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 零点击漏洞被等同单漏洞自动安装Graphite，完整链/阶段未交代，需避免把成品间谍软件能力当单漏洞效果
+2. ATTACKER1应标研究中的匿名占位账号，IOC与指纹有时点，不能当当前普遍指标
+3. WhatsApp受攻击第三名记者不等于同iMessage漏洞取证；应区分已验证2例与其他报道
+4. Citizen Lab/Apple及原报道均未带URL，仅图片/媒体名；来源追溯待补
+5. 保留事件关联，删除点赞宣传，不应因无PoC判为无效新闻
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 看雪学苑  看雪学苑   2025-06-13 10:04  
   
 近日，一款名为Graphite的间谍软件被曝光利用苹果iOS系统的零点击漏洞对记者展开攻击。据调查，这款间谍软件背后的开发者是Paragon公司，其攻击目标中至少包括三位欧洲记者，其中两例已经通过取证分析得到了验证。  
@@ -70,4 +121,4 @@ cybersecuritynews
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

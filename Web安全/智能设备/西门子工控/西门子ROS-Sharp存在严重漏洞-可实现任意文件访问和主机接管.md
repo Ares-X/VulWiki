@@ -1,9 +1,52 @@
 ---
 cve: "CVE-2026-41551"
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-314ea76091bf106c8397ff0c"
+entity_id: "ve-314ea76091bf106c8397ff0c"
+schema_version: "1"
+title: "西门子 ROS# 存在严重漏洞，可实现任意文件访问和主机接管"
+product: "Siemens ROS# FileServer .NET/ROS库"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2026-41551"
+referenced_identifiers: ""
+prerequisites: "<2.2.2，FileServer启用且不可信网络可达，服务账户权限"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%99%BA%E8%83%BD%E8%AE%BE%E5%A4%87/%E8%A5%BF%E9%97%A8%E5%AD%90%E5%B7%A5%E6%8E%A7/%E8%A5%BF%E9%97%A8%E5%AD%90ROS-Sharp%E5%AD%98%E5%9C%A8%E4%B8%A5%E9%87%8D%E6%BC%8F%E6%B4%9E-%E5%8F%AF%E5%AE%9E%E7%8E%B0%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AE%BF%E9%97%AE%E5%92%8C%E4%B8%BB%E6%9C%BA%E6%8E%A5%E7%AE%A1.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 #  西门子 ROS# 存在严重漏洞，可实现任意文件访问和主机接管  
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Siemens ROS# FileServer .NET/ROS库
+- 本文讨论：CVE-2026-41551路径读写
+- 版本、权限与配置前提：&lt;2.2.2，FileServer启用且不可信网络可达，服务账户权限
+- 资料类型：库文件服务漏洞公告；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 应按ROS#库/文件服务归类，非泛指西门子PLC
+- 任意文件写入能否主机接管取决可写位置/执行链；风险指数增长无量化依据
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 官方修复、启用默认值与受影响起始范围待核
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 sec随谈
                     sec随谈  sec随谈   2026-05-13 00:57  
   

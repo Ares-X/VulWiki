@@ -1,9 +1,47 @@
 ---
-cve: "CVE-2026-45502"
+cve: "CVE-2026-45502; CVE-2026-45504"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "邮件服务器预警：Exchange 多个 SSRF 漏洞利用细节已公开"
+product: "Microsoft Exchange Server2016/2019/Subscription Edition"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2026-45502; CVE-2026-45504"
+referenced_identifiers: ""
+identifier_role: "primary"
+prerequisites: "Low-privilege mailbox/EWS; InstallApp/ManifestUrl premise primarily45502; per-build thresholds supplied"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-7eae61b142741229062afd7d"
+entity_id: "ve-7eae61b142741229062afd7d"
+schema_version: "1"
 ---
 
-#  邮件服务器预警：Exchange 多个 SSRF 漏洞利用细节已公开  
+# 邮件服务器预警：Exchange 多个 SSRF 漏洞利用细节已公开
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：Low-privilege mailbox/EWS; InstallApp/ManifestUrl premise primarily45502; per-build thresholds supplied
+- 证据范围：Bulletin separates two effects but screenshots contain actual reproduction; body45504 mechanism vague
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- Opening assigns InstallApp workflow to both CVEs; body says different behavior; map prerequisites per CVE
+- HTML table dominated by inline style, convert to semantic table
+- Claims complete repro details but payloads/results only images
+- Windows Update default/automatic servicing instructions are generic and deployment-dependent
+- Related mail16 says only2019 while this lists2016/2019/SE; authoritative product matrix needed
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 原创 360漏洞研究院
                     360漏洞研究院  360漏洞研究院   2026-06-24 07:58  
   

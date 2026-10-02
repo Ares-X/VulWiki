@@ -1,9 +1,46 @@
 ---
 cve: "CVE-2024-27894"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "漏洞预警 | Apache Pulsar任意文件读取漏洞"
+product: "Apache Pulsar Functions Worker"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2024-27894"
+referenced_identifiers: ""
+identifier_role: "primary"
+prerequisites: "已认证且具有相关Functions Worker API权限的用户；组件开启/可达"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-192048dea6c64dc8bb623eb3"
+entity_id: "ve-192048dea6c64dc8bb623eb3"
+schema_version: "1"
 ---
 
-#  漏洞预警 | Apache Pulsar任意文件读取漏洞   
+# 漏洞预警 | Apache Pulsar任意文件读取漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：已认证且具有相关Functions Worker API权限的用户；组件开启/可达
+- 证据范围：分支版本列举清楚，但无读取端点或操作细节，只是通告。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 严重错分类：Pulsar条目置于RocketMQ目录，必须迁移产品归属
+- 经过认证不说明精确角色/租户权限，需公告核对
+- 官网首页不是安全公告，应补每分支修复版本及直接公告
+- 未展示证据不能将任意本地文件无条件泛化到全部Pulsar节点
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 浅安  浅安安全   2024-03-16 08:00  
   
 **0x00 漏洞编号**  

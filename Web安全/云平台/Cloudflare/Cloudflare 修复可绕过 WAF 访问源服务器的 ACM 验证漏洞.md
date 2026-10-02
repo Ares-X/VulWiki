@@ -1,8 +1,46 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Cloudflare 修复可绕过 WAF 访问源服务器的 ACM 验证漏洞"
+product: "Cloudflare ACME验证"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-a1839f7dd8893d04737c89a6"
+entity_id: "ve-a1839f7dd8893d04737c89a6"
+schema_version: "1"
 ---
 
-#  Cloudflare 修复可绕过 WAF 访问源服务器的 ACM 验证漏洞  
+# Cloudflare 修复可绕过 WAF 访问源服务器的 ACM 验证漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 标题ACM应为ACME
+- HTTP-01例子https与端口80描述不一致
+- 任意请求完全绕过措辞忽略有效跨区域令牌条件
+- 源服务器可达不直接推出所有敏感文件可读
+- 2025-10-27已修复和2026-01报道区分
+- 缺Cloudflare原始公告链接
+- 清广告
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 Ravie Lakshmanan
                     Ravie Lakshmanan  代码卫士   2026-01-21 10:15  
   

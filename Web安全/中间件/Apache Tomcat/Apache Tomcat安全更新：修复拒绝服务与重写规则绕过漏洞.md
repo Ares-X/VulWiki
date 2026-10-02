@@ -1,8 +1,51 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Apache Tomcat安全更新：修复拒绝服务与重写规则绕过漏洞"
+product: "Apache Tomcat HTTP优先级/RewriteValve"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2025-31650; CVE-2025-31651"
+referenced_identifiers: ""
+identifier_role: "primary"
+cve: "CVE-2025-31650; CVE-2025-31651"
+prerequisites: "31650特定HTTP优先级处理路径；31651不常见重写配置且用于安全约束，两者范围不同"
+source_status: "unknown"
+side_effects: "含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。"
+id: "vw-7651f969c223f1e8f8fe6900"
+entity_id: "ve-7651f969c223f1e8f8fe6900"
+schema_version: "1"
 ---
 
-#  Apache Tomcat安全更新：修复拒绝服务与重写规则绕过漏洞   
+# Apache Tomcat安全更新：修复拒绝服务与重写规则绕过漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：31650特定HTTP优先级处理路径；31651不常见重写配置且用于安全约束，两者范围不同
+- 证据范围：分别列分支范围和修复、9.0.103未发布需9.0.104的细节值得保留，无复现。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 两个主CVE漏frontmatter
+- HTTP优先级具体协议/HTTP2配置应补，不能当任意HTTP头均受影响
+- Java内存错误通常OutOfMemoryError，文中OutOfMemoryException需核实精确名称
+- 缺官方公告/提交及特殊rewrite规则边界，不能声称普遍鉴权绕过
+- 历史最低修复版本应有发布日期，不称当前最新；推广与空行可清理
+
+### 操作风险与资料使用
+
+- 含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
  FreeBuf   2025-04-29 10:09  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/qq5rfBadR38jUokdlWSNlAjmEsO1rzv3srXShFRuTKBGDwkj4gvYy34iajd6zQiaKl77Wsy9mjC0xBCRg0YgDIWg/640?wx_fmt=gif "")  

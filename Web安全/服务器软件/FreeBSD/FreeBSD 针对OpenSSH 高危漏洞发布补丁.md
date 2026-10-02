@@ -1,9 +1,50 @@
 ---
 cve: "CVE-2024-7589"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "FreeBSD 针对OpenSSH 高危漏洞发布紧急补丁"
+product: "FreeBSD OpenSSH blacklistd集成"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2024-7589"
+referenced_identifiers: "CVE-2024-6387"
+identifier_role: "primary"
+prerequisites: "FreeBSD特定sshd信号路径，超LoginGraceTime；缓解设0会增加DoS风险"
+source_status: "unknown"
+side_effects: "含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。"
+id: "vw-9dbe4cbb9b9157d4f7fe319f"
+entity_id: "ve-9dbe4cbb9b9157d4f7fe319f"
+schema_version: "1"
 ---
 
-#  FreeBSD 针对OpenSSH 高危漏洞发布紧急补丁   
+# FreeBSD 针对OpenSSH 高危漏洞发布紧急补丁
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：FreeBSD特定sshd信号路径，超LoginGraceTime；缓解设0会增加DoS风险
+- 证据范围：前半区分FreeBSD变体，但后半把上游6387版本表/修复与主漏洞混排，易导致错误修补
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 称所有<9.8p1均受影响与自己列4.4p1至8.5p1不受影响直接冲突
+- 不能用上游9.8p1代替FreeBSD-SA补丁级别
+- 1400万暴露不等同已验证受影响实例；深度学习提高成功率是推测
+- 缺FreeBSD官方公告链接，landian链接尾混入中文标点编码
+
+### 操作风险与资料使用
+
+- 含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 小薯条  FreeBuf   2024-08-13 19:03  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/qq5rfBadR38jUokdlWSNlAjmEsO1rzv3srXShFRuTKBGDwkj4gvYy34iajd6zQiaKl77Wsy9mjC0xBCRg0YgDIWg/640?wx_fmt=gif "")  

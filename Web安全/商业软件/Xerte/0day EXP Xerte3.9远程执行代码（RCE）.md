@@ -1,10 +1,52 @@
 ---
-cve: "CVE-2021-44664"
+title: "Xerte Online Toolkits 上传mediapath遍历覆盖语言文件远程代码执行"
+product: "Xerte Online Toolkits"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2021-44664"
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "3.9或up until3.9边界含混；链接为3.8.5-33；en-GB语言"
+prerequisites: "需项目创建权限；可启用guest或有效PHP会话"
+side_effects: "请求可能删除/覆盖数据、修改账号或持久改变业务状态；文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行；命令/代码执行示例可能改变主机状态"
+review_date: "2026-10-02"
+identifier_role: "primary"
+source: "原收录资料；原始作者及出处待核实"
+source_url: "https://mp.weixin.qq.com/s/_XqhyucSnoZH6Kfn3R-LFA"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/Xerte/0day%20EXP%20Xerte3.9%E8%BF%9C%E7%A8%8B%E6%89%A7%E8%A1%8C%E4%BB%A3%E7%A0%81%EF%BC%88RCE%EF%BC%89.md"
+id: "vw-15282b3ed88cadf06688b69d"
+entity_id: "ve-15282b3ed88cadf06688b69d"
+schema_version: "1"
 ---
 
-# 【0day EXP】Xerte3.9远程执行代码（RCE）
+# Xerte Online Toolkits 上传mediapath遍历覆盖语言文件远程代码执行
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：Xerte Online Toolkits；上传mediapath遍历覆盖语言文件RCE
+- 版本、配置及部署条件：3.9或up until3.9边界含混；链接为3.8.5-33；en-GB语言
+- 认证与权限前提：需项目创建权限；可启用guest或有效PHP会话
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 0day标题与已分配CVE/公开转载冲突，应历史日期化
+- multipart Content-Disposition两处丢name及filename属性，关键上传体损坏；反斜杠续行后空白亦需核
+- 脚本创建项目并覆盖languages/en-GB/index.inc为持久命令文件，破坏/恢复步骤缺失
+- 成功仅response包含success并输出URL未验证执行；索引[0]缺异常处理
+- 删除大量Valentines装饰和招群；保留作者/语言/guest前提
+
+## 操作风险
+
+请求可能删除/覆盖数据、修改账号或持久改变业务状态；文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行；命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/_XqhyucSnoZH6Kfn3R-LFA)
 
 VALENTINE'S DAY

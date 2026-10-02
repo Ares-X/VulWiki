@@ -1,8 +1,65 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+identifier_role: "reference"
+primary_identifiers: ""
+referenced_identifiers: "CVE-2023-35829;CVE-2023-20871"
+identifier_status: "unknown"
+title: "Linux 内核漏洞虚假 PoC 发 GitHub，专门攻击研究员"
+product: "恶意GitHub PoC下载器"
+record_type: "incident"
+document_type: "恶意伪PoC安全事件"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "受害者下载/构建伪PoC，Makefile执行恶意程序；非真实内核利用条件"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/Linux%20%E5%86%85%E6%A0%B8%E6%BC%8F%E6%B4%9E%E8%99%9A%E5%81%87%20PoC%20%E5%8F%91%20GitHub%EF%BC%8C%E4%B8%93%E9%97%A8%E6%94%BB%E5%87%BB%E7%A0%94%E7%A9%B6%E5%91%98.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+source_url: "https://thehackernews.com/2023/07/blog-post.html"
+id: "vw-b109d6d211d7aa740c49ad33"
+entity_id: "ve-b109d6d211d7aa740c49ad33"
+schema_version: "1"
 ---
 
-#  Linux 内核漏洞虚假 PoC 发 GitHub，专门攻击研究员   
+# Linux 内核漏洞虚假 PoC 发 GitHub，专门攻击研究员
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：恶意GitHub PoC下载器
+- 文献类型：恶意伪PoC安全事件
+- 版本、权限及部署边界：受害者下载/构建伪PoC，Makefile执行恶意程序；非真实内核利用条件
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. CVE只是诱饵名称，本篇应归恶意PoC/供应链事件，不应当35829可用漏洞复现
+2. 给后门kworker、bashrc、authorized_keys痕迹但无样本hash/研究报告原链，需补Uptycs一手来源
+3. 获取月越权SSH密钥显然转码/译文损坏，清理建议不可照抄；不要盲删所有kworker同名进程
+4. THN来源存在但需核对完整URL；fork次数和下架状态必须带2023时点，推广尾部剥离
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://thehackernews.com/2023/07/blog-post.html>
+- 原文参考链接（未重新核验）：<https://codesafe.qianxin.com>
+- 原文参考链接（未重新核验）：<https://oss.qianxin.com>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzI2NTg4OTc5Nw==&mid=2247516678&idx=1&sn=5b9e480c386161b1e105f9818b2a5a3d&chksm=ea94b36cdde33a7a05cafa9918733669252a02611c222b02bc6e66cbb508ee3fbf748453ee7a&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzI2NTg4OTc5Nw==&mid=2247515374&idx=1&sn=8b491039bc40f1e5d4e1b29d8c95f9e7&chksm=ea948d84dde30492f8a6c9953f69dbed1f483b6bc9b4480cab641fbc69459d46bab41cdc4859&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzI2NTg4OTc5Nw==&mid=2247516737&idx=2&sn=368349f3292248a0829924a329eab306&chksm=ea94b32bdde33a3d73ce830890ee3113abe962086d9059767525a81c0884679a6ca038ff9aa7&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzI2NTg4OTc5Nw==&mid=2247514298&idx=1&sn=3d322fa315badc08e34fe3379e76ae57&chksm=ea9489d0dde300c6fded68537221742713d3743c01794692f8d10a0e21ebc41bf42bee26c42d&scene=21#wechat_redirect>
+
+### 归档技术正文
+
 THN  代码卫士   2023-07-14 17:21  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

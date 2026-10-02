@@ -1,7 +1,39 @@
 ---
 version: "CmsEasy V7.7.5_20210919"
 source: "Threekiii/Vulnerability-Wiki"
+product: "CmsEasy"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "CmsEasy-update_admin.php-后台任意文件上传漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：7.7.5_20210919; admin update permission; reachable attacker archive; executable extraction destination"
+side_effects: "未执行；本文需注意的操作影响：Function downloads and extracts remote archive rather than direct multipart upload; classify correctly；Updating endpoint has cache/deletion/SQL side effects visible in code, which reproduction must disclose"
+source_status: "unknown"
+id: "vw-8539aa3d9e88a93750fe376a"
+entity_id: "ve-8539aa3d9e88a93750fe376a"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：7.7.5_20210919; admin update permission; reachable attacker archive; executable extraction destination
+
+- **结论使用边界（1）**：Function downloads and extracts remote archive rather than direct multipart upload; classify correctly。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **结论使用边界（2）**：Encoding helper not reproduced and hardcoded encrypted URL hides destination; link companion service.php analysis。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **操作与副作用边界（3）**：Updating endpoint has cache/deletion/SQL side effects visible in code, which reproduction must disclose。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+- **事实待核（4）**：Secondary source only; no fixed version。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # CmsEasy update_admin.php 后台任意文件上传漏洞
 

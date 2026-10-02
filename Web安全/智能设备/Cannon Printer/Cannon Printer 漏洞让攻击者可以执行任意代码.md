@@ -1,8 +1,55 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-0ac535aa6491d36a83b19d1c"
+entity_id: "ve-0ac535aa6491d36a83b19d1c"
+schema_version: "1"
+title: "Cannon Printer 漏洞让攻击者可以执行任意代码"
+product: "Canon Generic Plus Windows打印驱动"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2025-1268"
+referenced_identifiers: ""
+prerequisites: "驱动≤3.12；需处理恶意打印数据，文章声称无需交互/权限"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%99%BA%E8%83%BD%E8%AE%BE%E5%A4%87/Cannon%20Printer/Cannon%20Printer%20%E6%BC%8F%E6%B4%9E%E8%AE%A9%E6%94%BB%E5%87%BB%E8%80%85%E5%8F%AF%E4%BB%A5%E6%89%A7%E8%A1%8C%E4%BB%BB%E6%84%8F%E4%BB%A3%E7%A0%81.md"
+review_date: "2026-10-02"
+category_recommendation: "系统安全/驱动/Canon"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 #  Cannon Printer 漏洞让攻击者可以执行任意代码   
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Canon Generic Plus Windows打印驱动
+- 本文讨论：CVE-2025-1268 EMF处理越界
+- 版本、权限与配置前提：驱动≤3.12；需处理恶意打印数据，文章声称无需交互/权限
+- 资料类型：打印驱动漏洞新闻；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- Cannon标题/目录品牌拼错且与Canon目录重复分类
+- 表格列四驱动，后文多PS一类，产品范围内部不一致
+- 元数据漏CVE；9.4写CVSS3.1及远程零交互条件需官方核验；无固定版/Canon直链
+- 实际受影响主机驱动，不是打印机固件
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- CVSS体系、PS是否受影响和攻击向量/修复版本待厂商确认
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 邑安科技  邑安全   2025-04-01 17:23  
   
 更多全球网络安全资讯尽在邑安全  

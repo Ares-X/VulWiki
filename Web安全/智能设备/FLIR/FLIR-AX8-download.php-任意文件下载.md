@@ -1,9 +1,53 @@
 ---
 version: "FLIR-AX8"
 source: "Threekiii/Vulnerability-Wiki"
+id: "vw-669141b7aefe3b2b4da08f6d"
+entity_id: "ve-669141b7aefe3b2b4da08f6d"
+schema_version: "1"
+title: "FLIR-AX8 download.php 任意文件下载"
+product: "FLIR AX8"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+prerequisites: "Web层鉴权未知；可读取服务账户权限内已存在文件"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%99%BA%E8%83%BD%E8%AE%BE%E5%A4%87/FLIR/FLIR-AX8-download.php-%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 # FLIR-AX8 download.php 任意文件下载
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：FLIR AX8
+- 本文讨论：download.php未约束file路径
+- 版本、权限与配置前提：Web层鉴权未知；可读取服务账户权限内已存在文件
+- 资料类型：文件下载完整源码分析；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 任意文件需限定OS权限及is_file；无版本/原始固件或修复
+- 源码作者许可不是FLIR受影响固件来源
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 源码来自哪一固件及上游授权配置待核验
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 
 ## 漏洞描述
 

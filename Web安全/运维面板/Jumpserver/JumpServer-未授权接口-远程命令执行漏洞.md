@@ -1,9 +1,57 @@
 ---
 version: "JumpServer < v2.6.2"
 source: "Threekiii/Vulnerability-Wiki"
+title: "JumpServer 未授权接口 远程命令执行漏洞"
+product: "JumpServer core/Koko"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "Same branches as10;lab2.6.1; IDs in historical logs required"
+affected_versions: "JumpServer < v2.6.2"
+source_status: "unknown"
+side_effects: "含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。"
+id: "vw-322e42afd8e4faed029f6b05"
+entity_id: "ve-a962bc76d2301a2c718e6fc2"
+schema_version: "1"
+canonical: "Web安全/运维面板/Jumpserver/JumpServer 未授权接口 远程命令执行漏洞.md"
+relation_type: "duplicate_of"
 ---
 
 # JumpServer 未授权接口 远程命令执行漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：Same branches as10;lab2.6.1; IDs in historical logs required
+- 证据范围：Same PeiQi narrative/code as10; log path and display logic changed, additional environment setup
+
+### 本次正文校订
+
+- 修正正文中的 amdin → admin 转录错误，资源路径保持原样。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- Default username typo amdin
+- Version frontmatter first threshold only; branch bounds needed
+- POC says patched when user answersN or any exception, which is false inference
+- Claims logs filtered yet prints every message before conditional duplicate print
+- Preserve log-path variant but merge common article; same strip/http and magic-receive limitations
+
+### 操作风险与资料使用
+
+- 含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 ## 漏洞描述
 
@@ -42,7 +90,7 @@ cd /opt/jumpserver-installer-v2.6.1
 
 等待安装完毕访问 http://xxx.xxx.xxx.xxxx:8080
 
-默认账号密码 amdin:admin
+默认账号密码 admin:admin
 
 ## 漏洞复现
 

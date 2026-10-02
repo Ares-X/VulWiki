@@ -1,8 +1,50 @@
 ---
-cve: "CVE-2020-28188"
+cve: "CVE-2020-28188; CVE-2020-28187; CVE-2020-28186; CVE-2020-28185; CVE-2020-15568"
+title: "TerraMaster TOS 多个漏洞复现"
+product: "TerraMaster TOS"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2020-28188; CVE-2020-28187; CVE-2020-28186; CVE-2020-28185; CVE-2020-15568"
+referenced_identifiers: ""
+identifier_role: "primary"
+source_url: "https://mp.weixin.qq.com/s/GAOliqwEqXOsQ4LeNDCQaw"
+source_status: "recorded"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。"
+id: "vw-6c329657131d01cbecf34345"
+entity_id: "ve-6c329657131d01cbecf34345"
+schema_version: "1"
 ---
 
 # TerraMaster TOS 多个漏洞复现
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 元数据只28188，另15568/28185/28186/28187缺
+- 影响范围只产品名无各版本
+- Python缩进破坏，response在函数外未定义，try后while不缩进
+- 关键重置密码请求和用户枚举仅截图
+- 账号重置/写php文件有实际修改副作用，删除未验证
+- 28188是Event命令注入而非文件上传根因
+- 保留IHTeam原始分析并清营销
+
+### 操作风险与资料使用
+
+- 含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/GAOliqwEqXOsQ4LeNDCQaw)

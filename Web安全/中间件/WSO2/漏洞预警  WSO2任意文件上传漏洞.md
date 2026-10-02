@@ -1,9 +1,47 @@
 ---
 cve: "CVE-2025-3125"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "漏洞预警 | WSO2任意文件上传漏洞"
+product: "WSO2 CarbonAppUploader and affected WSO2 product families"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2025-3125"
+referenced_identifiers: ""
+identifier_role: "primary"
+prerequisites: "CarbonAppUploader management-service access; authentication/role requirements absent"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-03a2e51decbcf2e531484b4c"
+entity_id: "ve-03a2e51decbcf2e531484b4c"
+schema_version: "1"
 ---
 
-#  漏洞预警 | WSO2任意文件上传漏洞  
+# 漏洞预警 | WSO2任意文件上传漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：CarbonAppUploader management-service access; authentication/role requirements absent
+- 证据范围：Brief advisory shell names eight product families and an upload-to-code-execution impact, but provides no reproducer or version boundaries.
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- Affected products have no versions or patch levels
+- Authentication and required privileges omitted
+- Claims public PoC without linking it
+- Generic vendor homepage is not a vulnerability advisory or patch reference
+- Do not merge with CVE-2022-29464: different upload component and identity
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 浅安
                     浅安  浅安安全   2026-01-27 00:00  
   

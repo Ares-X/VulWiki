@@ -1,8 +1,53 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Kubernetes 通过 nodes/proxy GET 权限在集群任意 Pod 中执行命令（RCE）"
+product: "Kubernetes kubelet/RBAC"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "主体持有效nodes/proxy get权限、能连接目标节点10250、支持WebSocket exec；权限resourceNames及节点可达范围限制影响；实验1.34/1.35"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-0a997ec24ba696f036db60fb"
+entity_id: "ve-0a997ec24ba696f036db60fb"
+schema_version: "1"
 ---
 
-#  Kubernetes 通过 nodes/proxy GET 权限在集群任意 Pod 中执行命令（RCE）  
+# Kubernetes 通过 nodes/proxy GET 权限在集群任意 Pod 中执行命令（RCE）
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：主体持有效nodes/proxy get权限、能连接目标节点10250、支持WebSocket exec；权限resourceNames及节点可达范围限制影响；实验1.34/1.35
+- 证据范围：已完整读取106145字符含所有HTML、代码、披露信及Helm附录。保留研究者与安全团队不同立场，不能擅改为官方已确认授权绕过漏洞；与85基础nodes/proxy教程关联但独立WebSocket细节应保留
+
+### 本次正文校订
+
+- 按实际内容修正 5 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- YAML/Bash/HTTP全面合并，脚本含forargin等黏连，无法直接运行
+- 将节点proxy端点和标准pods/exec混用论证：示例审计URI其实标准pods/exec，不能证明任意metrics请求产生exec事件
+- 比较API代理POST和直连WebSocket GET同时改变两变量，不能单凭此对照证明只因访问路径产生差异
+- 所有Pod/完整集群接管必须限制在可达且获授权的节点以及容器能力/凭据条件
+- 直连不产生pods/exec审计不等于毫无日志，文内明确仍有SubjectAccessReview；摘要应保留
+- 检测脚本链接缺失；69个图表只是权限配置候选，非69个已验证可利用部署
+- KEP阶段/1.36预计发布属于2026-01时点，不可当当前状态
+- 附录大量style和重复中英图注可规范化
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 grahamhelton
                     grahamhelton  securitainment   2026-01-31 12:37  
   
@@ -142,7 +187,7 @@ nodes/proxy
 资源还授予对 Kubelet API 的直接访问。请记住，每个节点都有一个 Kubelet 进程负责告诉容器运行时要创建哪些容器。  
   
 Kubelet 公开了各种 API 端点，提供与 API 服务器代理类似的信息。例如，我们可以通过直接查询 Kubelet API 返回与之前相同的指标数据。  
-```
+```shell
 curl -sk -H "Authorization: Bearer $TOKEN" https://$NODE_IP:10250/metrics | head -n 10
 ```  
   
@@ -272,7 +317,7 @@ apiVersion: rbac.authorization.k8s.io/v1kind: ClusterRolemetadata:name: nodes-pr
 这意味着在任何 WebSocket 连接建立中发送的初始请求是带有 Connection: Upgrade  
 头的 HTTP GET  
 ：  
-```
+```http
 GET /exec HTTP/1.1Host: example.comUpgrade: websocketConnection: Upgrade<snip>
 ```  
   
@@ -314,7 +359,7 @@ nginx{"metadata":{},"status":"Success"}
 相比之下，当使用 POST（映射到 RBAC CREATE  
 动词）请求到同一 /exec  
 端点时，请求被拒绝。  
-```
+```shell
 curl -sk -X POST \  -H "Authorization: Bearer $TOKEN"\"https://$NODE_IP:10250/exec/default/nginx/nginx?command=hostname&stdout=true&stderr=true"
 ```  
 ```
@@ -580,12 +625,12 @@ Online walkthrough
 为了演示，让我们尝试使用 API 服务器代理路径运行 hostname  
 。注意我们指示 curl 将其作为 POST  
 请求发送。发送的请求将如下所示：  
-```
+```http
 POST /api/v1/nodes/minikube-m02/proxy/exec/default/nginx/nginx?command=hostname&stdout=true HTTP/2Host: 10.96.0.1User-Agent: curl/8.5.0Accept: */*Authorization: Bearer $TOKEN
 ```  
   
 使用 curl 发送请求：  
-```
+```shell
 curl -sk -X POST \  -H "Authorization: Bearer $TOKEN" \  "$APISERVER/api/v1/nodes/$NODE_NAME/proxy/exec/default/nginx/nginx?command=hostname&stdout=true"
 ```  
 ```

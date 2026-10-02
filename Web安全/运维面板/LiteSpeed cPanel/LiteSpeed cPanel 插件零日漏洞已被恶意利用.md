@@ -1,9 +1,46 @@
 ---
 cve: "CVE-2026-54420"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "LiteSpeed cPanel 插件零日漏洞已被恶意利用"
+product: "LiteSpeed user-end cPanel plugin"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2026-54420"
+referenced_identifiers: ""
+identifier_role: "primary"
+prerequisites: "Limited tenant access/FTP/webshell;API chaining/CageFS conditions;fixedplugin2.4.8 bundledWHM5.3.2.1"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-03f68dee741bdf654046408f"
+entity_id: "ve-03f68dee741bdf654046408f"
+schema_version: "1"
 ---
 
-#  LiteSpeed cPanel 插件零日漏洞已被恶意利用  
+# LiteSpeed cPanel 插件零日漏洞已被恶意利用
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：Limited tenant access/FTP/webshell;API chaining/CageFS conditions;fixedplugin2.4.8 bundledWHM5.3.2.1
+- 证据范围：Distinct generateEcCert/packageUserSize chain and exploitation timeline, not same48172
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- No affected lower/range or primary advisory link
+- 7-10 concurrent requests described as detection heuristic without evidence/specific log source
+- Preserve tenant isolation/config prerequisites and distinguish plugin from WHM packaging
+- Do not merge with48172 based product/root impact alone
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 原创 网络安全9527
                     网络安全9527  安全圈的那点事儿   2026-06-16 11:10  
   

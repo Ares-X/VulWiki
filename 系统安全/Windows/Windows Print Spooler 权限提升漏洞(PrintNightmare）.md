@@ -1,8 +1,65 @@
 ---
-cve: "CVE-2021-1675"
+cve: "CVE-2021-34527"
+identifier_role: "primary"
+primary_identifiers: "CVE-2021-34527"
+referenced_identifiers: "CVE-2021-1675"
+identifier_status: "unknown"
+title: "Windows Print Spooler 权限提升漏洞(PrintNightmare）"
+product: "Windows Print Spooler"
+record_type: "vulnerability"
+document_type: "PrintNightmare历史与工具复现"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "普通认证用户、目标Spooler/RPC和可达SMB载荷共享；报告Server2016/2019成功、2012仅上传、2008失败，未给具体构建/策略"
+side_effects: "匿名共享步骤改安全策略/覆盖多字符串需隔离环境及恢复说明；当前未执行"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Windows/Windows%20Print%20Spooler%20%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87%E6%BC%8F%E6%B4%9E%28PrintNightmare%EF%BC%89.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+source_url: "https://mp.weixin.qq.com/s/Vceup70C9USoM4JwK-6Z9w"
+id: "vw-ce00e27df4560131a396430e"
+entity_id: "ve-ce00e27df4560131a396430e"
+schema_version: "1"
 ---
 
-# Windows Print Spooler 权限提升漏洞（ PrintNightmare）
+# Windows Print Spooler 权限提升漏洞(PrintNightmare）
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Windows Print Spooler
+- 文献类型：PrintNightmare历史与工具复现
+- 版本、权限及部署边界：普通认证用户、目标Spooler/RPC和可达SMB载荷共享；报告Server2016/2019成功、2012仅上传、2008失败，未给具体构建/策略
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 正文明确PrintNightmare是34527并非1675，但frontmatter及所有修复官方链接仍1675，属于可确认主CVE抽取/修复链接错配
+2. MS-RPRN存在只是攻击面并非漏洞检测结论；结果须结合补丁/PointAndPrint策略，不能在检测标题下当存在漏洞
+3. 与Timeline实验及1675通告同族，但本篇有Python/Mimikatz差异和失败平台观察，整合时保留
+4. Python密码含@且认证串未引用/编码需按工具解析验证；RpcAddPrinterDrive拼写不完整，驱动目录路径差异需确认版本
+5. 匿名共享步骤改安全策略/覆盖多字符串需隔离环境及恢复说明；当前未执行
+6. 未给原始工具固定版本或身份输出文字；时间线未修补/已修补需分日期，去装饰GIF，图未视检
+
+### 操作风险
+
+匿名共享步骤改安全策略/覆盖多字符串需隔离环境及恢复说明；当前未执行
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://mp.weixin.qq.com/s/Vceup70C9USoM4JwK-6Z9w>
+- 原文参考链接（未重新核验）：<http://ksria.com/simpread/>
+- 原文参考链接（未重新核验）：<https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2021-1675>
+- 原文参考链接（未重新核验）：<http://blog.nsfocus.net/windows-print-spoolercve/>
+- 原文参考链接（未重新核验）：<https://github.com/hhlxf/PrintNightmare>
+- 原文参考链接（未重新核验）：<https://msrc.microsoft.com/update-guide/zh-cn/vulnerability/CVE-2021-1675>
+
+### 归档技术正文
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/Vceup70C9USoM4JwK-6Z9w)

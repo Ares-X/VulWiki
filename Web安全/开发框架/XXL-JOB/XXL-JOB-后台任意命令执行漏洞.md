@@ -1,7 +1,41 @@
 ---
 version: "docker-compose up -d"
 source: "Threekiii/Vulnerability-Wiki"
+product: "XXL-JOB / admin GLUE"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "XXL-JOB-后台任意命令执行漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：实验2.2.0，主要前提弱admin密码而非全产品RCE"
+side_effects: "未执行；本文需注意的操作影响：改端口不是授权控制；建议更换默认端口不能代替鉴权、访问限制；任务和脚本需清理"
+source_status: "unknown"
+id: "vw-1d3246c238a35759817ef331"
+entity_id: "ve-1d3246c238a35759817ef331"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：实验2.2.0，主要前提弱admin密码而非全产品RCE
+
+代码与实验材料：完整compose和GUI流程，新增任务/脚本有持久影响
+
+来源证据范围：上游issue2979和公众号来源
+
+- **适用与权限边界（1）**：修复建议不针对主风险；依据：只启executor accessToken/改端口/限制IP，未要求改admin默认密码或保护管理端；已获admin仍能下发合法GLUE。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **事实待核（2）**：version抽取错误；依据：字段docker-compose up -d。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **适用与权限边界（3）**：改端口不是授权控制；依据：建议更换默认端口不能代替鉴权、访问限制；任务和脚本需清理。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # XXL-JOB 后台任意命令执行漏洞
 

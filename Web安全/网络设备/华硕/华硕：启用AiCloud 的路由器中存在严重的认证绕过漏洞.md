@@ -1,8 +1,53 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-89aca5585b644e709f1a1bc8"
+entity_id: "ve-89aca5585b644e709f1a1bc8"
+schema_version: "1"
+title: "华硕：启用AiCloud 的路由器中存在严重的认证绕过漏洞"
+product: "ASUS AiCloud路由器"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2025-2492"
+referenced_identifiers: ""
+prerequisites: "AiCloud启用；列382/386/388/102固件分支未到具体build"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/%E5%8D%8E%E7%A1%95/%E5%8D%8E%E7%A1%95%EF%BC%9A%E5%90%AF%E7%94%A8AiCloud%20%E7%9A%84%E8%B7%AF%E7%94%B1%E5%99%A8%E4%B8%AD%E5%AD%98%E5%9C%A8%E4%B8%A5%E9%87%8D%E7%9A%84%E8%AE%A4%E8%AF%81%E7%BB%95%E8%BF%87%E6%BC%8F%E6%B4%9E.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 #  华硕：启用AiCloud 的路由器中存在严重的认证绕过漏洞   
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：ASUS AiCloud路由器
+- 本文讨论：CVE-2025-2492
+- 版本、权限与配置前提：AiCloud启用；列382/386/388/102固件分支未到具体build
+- 资料类型：认证绕过新闻预警；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 元数据漏主CVE；受影响具体型号及固定build未列，只有二手链接
+- 未授权函数执行不能自行升级为任意系统命令执行
+- 关闭全部WAN相关服务是广义加固，需与该洞必要缓解区分
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 具体影响和补丁/无利用状态待官方时点核验
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 Bill Toulas  代码卫士   2025-04-21 09:32  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

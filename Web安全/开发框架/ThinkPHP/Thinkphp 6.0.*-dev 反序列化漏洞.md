@@ -1,6 +1,40 @@
 ---
 source: "hatch 补库批 20260928"
+product: "ThinkORM / Model lazySave gadget"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "Thinkphp 6.0.*-dev 反序列化漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：6.0.*-dev浮动，核心路径vendor/topthink/think-orm；需反序列化入口和数据库连接上下文"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-dc1e033f16631d91c80461ec"
+entity_id: "ve-dc1e033f16631d91c80461ec"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：6.0.*-dev浮动，核心路径vendor/topthink/think-orm；需反序列化入口和数据库连接上下文
+
+代码与实验材料：完整析构save→update→db→suffix→withAttr结构，但PHP生成器末尾namespace未闭合
+
+来源证据范围：Packagist，无精确原始研究链接，代码署名wh1t3P1g
+
+- **代码与转录边界（1）**：PoC截断；依据：namespace {最后echo后未闭合}，不是可运行PHP。相应原代码作为存在此问题的历史样本保留，不能直接当作可运行、成功复现的 PoC；缺失内容需回原稿核对，不据此补造可执行攻击链。
+
+- **事实待核（2）**：浮动依赖无法复核；依据：框架6.0.*-dev不足标识think-orm版本，需composer.lock和commit。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **适用与权限边界（3）**：依赖与前提缺失；依据：self::$db-&gt;connect先于suffix求值，数据库/配置初始化条件未说明；应用不可信unserialize入口未提供。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Thinkphp 6.0.\*-dev 反序列化漏洞
 

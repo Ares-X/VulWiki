@@ -1,9 +1,45 @@
 ---
-cve: "CVE-2024-42448"
+cve: "CVE-2024-42448; CVE-2024-42449"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Veeam 针对服务提供商控制台中的严重 RCE 漏洞发布补丁"
+product: "Veeam Service Provider Console"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2024-42448; CVE-2024-42449"
+referenced_identifiers: ""
+identifier_role: "primary"
+prerequisites: "42448从已获服务器授权的管理agent机器进入，不是任意公网匿名用户；42449条件需另核"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-7159af6599704dbf1e3da413"
+entity_id: "ve-7159af6599704dbf1e3da413"
+schema_version: "1"
 ---
 
-#  Veeam 针对服务提供商控制台中的严重 RCE 漏洞发布补丁   
+# Veeam 针对服务提供商控制台中的严重 RCE 漏洞发布补丁
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：42448从已获服务器授权的管理agent机器进入，不是任意公网匿名用户；42449条件需另核
+- 证据范围：列VSPC7/8至8.1.0.21377及修复8.1.0.21999，RCE与NTLM泄露/删除文件分开叙述
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 元数据漏42449，需按每个CVE标注代理授权前提
+- 厂家无缓解方案表述应标当时状态及来源
+- 长HTML调查/广告占正文主要篇幅，应清理
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
  信息安全大事件   2024-12-04 11:53  
   
 Veeam 发布了安全更新，以解决影响服务提供商控制台 （VSPC） 的关键缺陷，该缺陷可能为在易受攻击的实例上远程执行代码铺平道路。  

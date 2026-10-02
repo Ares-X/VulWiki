@@ -1,9 +1,53 @@
 ---
 version: "Apache Spark 3.1.2, 3.2.1, 3.3.0"
 source: "Threekiii/Vulnerability-Wiki"
+title: "Apache Spark create 未授权访问漏洞"
+product: "Apache Spark standalone"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "REST显式开启或未认证RPC、可调度worker及下载JAR；仅UI可见不足证明"
+affected_versions: "Apache Spark 3.1.2, 3.2.1, 3.3.0"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-0b1b101cee92138fc650e5f8"
+entity_id: "ve-a278ba43093eec605140af13"
+schema_version: "1"
+canonical: "Web安全/中间件/Apache Spark/Apache Spark 未授权访问漏洞.md"
+relation_type: "duplicate_of"
 ---
 
 # Apache Spark create 未授权访问漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：REST显式开启或未认证RPC、可调度worker及下载JAR；仅UI可见不足证明
+- 证据范围：与226主方法文字/代码高度同源，仅新增版本列表不具独立证据。
+
+### 本次正文校订
+
+- 按实际内容修正 2 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 版本3.1.2/3.2.1/3.3.0无依据且请求clientSparkVersion2.3.1，不能作为精确受影响集合
+- 未开ACL不等于无RPC认证；REST6066默认启用说法应按版本限定
+- 两种提交方法应区分认证及网络配置，不能称6066受限必然可用7077绕过
+- 正文未给安全修复/配置建议，外部JAR需可核验构建来源
+- 操作启动任务并写日志，非只读检测
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 ## 漏洞描述
 
@@ -30,7 +74,7 @@ app="APACHE-Spark-Jobs"
 
 Vulhub 执行如下命令，将以 standalone 模式启动一个 Apache Spark 集群，集群里有一个 master 与一个 slave：
 
-```
+```shell
 docker-compose up -d
 ```
 
@@ -90,7 +134,7 @@ public class Exploit {
 
 standalone 模式下，master 将在 6066 端口启动一个 HTTP 服务器，我们向这个端口提交 REST 格式的 API：
 
-```
+```http
 POST /v1/submissions/create HTTP/1.1
 Host: your-ip:6066
 Accept-Encoding: gzip, deflate

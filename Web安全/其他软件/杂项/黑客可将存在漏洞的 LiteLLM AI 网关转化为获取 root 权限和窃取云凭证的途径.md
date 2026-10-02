@@ -1,8 +1,61 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "黑客可将存在漏洞的 LiteLLM AI 网关转化为获取 root 权限和窃取云凭证的途径"
+product: "LiteLLM多漏洞/配置风险"
+record_type: "unknown"
+document_type: "技术文章（细分类待核）"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "294默认key与191无认证比例不应总括近十分之一且重叠未知；KEV已利用及版本1.84.0/1.82.0无一手来源需核；root限容器内服务权限，非宿主root"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/%E9%BB%91%E5%AE%A2%E5%8F%AF%E5%B0%86%E5%AD%98%E5%9C%A8%E6%BC%8F%E6%B4%9E%E7%9A%84%20LiteLLM%20AI%20%E7%BD%91%E5%85%B3%E8%BD%AC%E5%8C%96%E4%B8%BA%E8%8E%B7%E5%8F%96%20root%20%E6%9D%83%E9%99%90%E5%92%8C%E7%AA%83%E5%8F%96%E4%BA%91%E5%87%AD%E8%AF%81%E7%9A%84%E9%80%94%E5%BE%84.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-49e9bb6425fff81a06a19380"
+entity_id: "ve-49e9bb6425fff81a06a19380"
+schema_version: "1"
 ---
 
-#  黑客可将存在漏洞的 LiteLLM AI 网关转化为获取 root 权限和窃取云凭证的途径  
+# 黑客可将存在漏洞的 LiteLLM AI 网关转化为获取 root 权限和窃取云凭证的途径
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：LiteLLM多漏洞/配置风险
+- 文献类型：技术文章（细分类待核）
+- 版本、权限及部署边界：294默认key与191无认证比例不应总括近十分之一且重叠未知；KEV已利用及版本1.84.0/1.82.0无一手来源需核；root限容器内服务权限，非宿主root
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 59822/35029缺元数据，护栏漏洞未编号
+2. 294默认key与191无认证比例不应总括近十分之一且重叠未知
+3. 扫描组织日期/原报告缺失
+4. KEV已利用及版本1.84.0/1.82.0无一手来源需核
+5. 管理员直通IMDS是配置能力不是独立CVE本文已有边界应保留
+6. root限容器内服务权限，非宿主root
+7. 35029修复版本未给
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 原创 ZM
                     ZM  暗镜   2026-09-12 22:38  
   
@@ -43,4 +96,4 @@ LiteLLM 网关应被视为一级基础设施。它们位于应用程序工作负
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

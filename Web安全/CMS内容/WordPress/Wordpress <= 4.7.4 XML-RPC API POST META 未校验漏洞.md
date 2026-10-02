@@ -1,6 +1,40 @@
 ---
 source: "hatch 补库批 20260928"
+product: "WordPress core / optional WordPress Importer"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "Wordpress <= 4.7.4 XML-RPC API POST META 未校验漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：author-level with own media and nonce; XMLRPC<=4.7.4 route or importer with separately required import permissions; downstream vulnerable SQL formatter"
+side_effects: "未执行；本文需注意的操作影响：XMLRPC写元数据与SQL格式串是两个链环；importer任意WP版本说法只涉及替代写入口，不表示所有版本都存在SQLi"
+source_status: "unknown"
+id: "vw-24f0e5ce934585d46902528d"
+entity_id: "ve-24f0e5ce934585d46902528d"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：author-level with own media and nonce; XMLRPC&lt;=4.7.4 route or importer with separately required import permissions; downstream vulnerable SQL formatter
+
+- **结论使用边界（1）**：中文PoC_thumbnail_id写xxx，而英文实际写5 %1$%s hello，翻译丢失关键载荷。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **凭据与会话边界（2）**：中文称通过_wpnonce参数注入错误，真实触发是media\[\]及存储缩略图元值，nonce是防CSRF令牌。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+
+- **事实待核（3）**：XMLRPC写元数据与SQL格式串是两个链环；importer任意WP版本说法只涉及替代写入口，不表示所有版本都存在SQLi。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **适用与权限边界（4）**：英文完整保留限制与来源，可作为主文；需要区分import能力通常比作者权限高。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **结论使用边界（5）**：末尾一query足以取关键DB值是推论，无完整数据提取验证。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Wordpress \<= 4.7.4 XML-RPC API POST META 未校验漏洞
 

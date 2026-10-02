@@ -1,8 +1,54 @@
 ---
 cve: "CVE-2022-28571"
+id: "vw-0fa37be5026e8040afe5fbe6"
+entity_id: "ve-0fa37be5026e8040afe5fbe6"
+schema_version: "1"
+title: "如何在DIR 882中拿到一个方便调试的shell"
+product: "D-Link DIR-882"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2022-28571"
+referenced_identifiers: "CVE-2022-28572; CVE-2022-28573; CVE-2021-45998"
+prerequisites: "开启Telnet无认证但登录需Web密码+后缀；CLI ping注入；缺固件号"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/D-Link/%E5%A6%82%E4%BD%95%E5%9C%A8DIR%20882%E4%B8%AD%E6%8B%BF%E5%88%B0%E4%B8%80%E4%B8%AA%E6%96%B9%E4%BE%BF%E8%B0%83%E8%AF%95%E7%9A%84shell.md"
+review_date: "2026-10-02"
+side_effects: "回连样例可能向外部地址发送网络请求或建立会话；应使用自己的隔离回连服务，DNS/LDAP 到达只能证明相应交互，不能单独证明 RCE"
+source_url: "https://mp.weixin.qq.com/s/4-sdnN4_WdXzOcRb7RpC0A"
+source_status: "recorded"
 ---
 
 # 如何在DIR 882中拿到一个方便调试的shell
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：D-Link DIR-882
+- 本文讨论：CVE-2022-28571
+- 版本、权限与配置前提：开启Telnet无认证但登录需Web密码+后缀；CLI ping注入；缺固件号
+- 资料类型：漏洞挖掘研究；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 虽时间线提补版本后获得CVE，文章仍无具体固件
+- 把监听telnetd称反弹shell，方向术语错误
+- 标题Telnetd过滤与实际CLI命令拼接应区分；其他CVE仅开头引用
+
+### 操作风险与恢复
+
+- 回连样例可能向外部地址发送网络请求或建立会话；应使用自己的隔离回连服务，DNS/LDAP 到达只能证明相应交互，不能单独证明 RCE
+
+### 待核与来源
+
+- 固件、密码派生和CVE映射待核验
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/4-sdnN4_WdXzOcRb7RpC0A)

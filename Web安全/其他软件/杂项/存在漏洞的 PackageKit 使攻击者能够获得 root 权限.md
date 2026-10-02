@@ -1,8 +1,60 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "存在漏洞的 PackageKit 使攻击者能够获得 root 权限"
+product: "PackageKit Pack2TheRoot41651"
+record_type: "unknown"
+document_type: "技术文章（细分类待核）"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "无受影响/修复版本及PoC原始链接"
+side_effects: "安装恶意包/创建SUID文件为持久变更需清理"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/%E5%AD%98%E5%9C%A8%E6%BC%8F%E6%B4%9E%E7%9A%84%20PackageKit%20%E4%BD%BF%E6%94%BB%E5%87%BB%E8%80%85%E8%83%BD%E5%A4%9F%E8%8E%B7%E5%BE%97%20root%20%E6%9D%83%E9%99%90.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-943b64e3648262edaea2b4f3"
+entity_id: "ve-943b64e3648262edaea2b4f3"
+schema_version: "1"
 ---
 
-#  存在漏洞的 PackageKit 使攻击者能够获得 root 权限  
+# 存在漏洞的 PackageKit 使攻击者能够获得 root 权限
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：PackageKit Pack2TheRoot41651
+- 文献类型：技术文章（细分类待核）
+- 版本、权限及部署边界：无受影响/修复版本及PoC原始链接
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. CVE缺元数据
+2. 两个事务与重用同事务对象表述冲突需明确对象生命周期
+3. RPM误译转速，API和参数粘连
+4. 无受影响/修复版本及PoC原始链接
+5. 安装恶意包/创建SUID文件为持久变更需清理
+6. 合法包postinst/rpm-tmp和SUID安装不独立证明入侵，检测需关联低权发起及事务异常
+
+### 操作风险
+
+安装恶意包/创建SUID文件为持久变更需清理
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
  Ots安全   2026-06-18 06:21  
   
 **威胁简报**  
@@ -88,4 +140,4 @@ AnQuan7 (Ots安全)
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

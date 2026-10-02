@@ -1,8 +1,59 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2026-46242"
+identifier_role: "primary"
+primary_identifiers: "CVE-2026-46242"
+referenced_identifiers: "CVE-2026-43074;CVE-2026-31431;CVE-2026-31694;CVE-2026-4747"
+identifier_status: "unknown"
+title: "新的“糟糕的”Linux内核漏洞让非特权用户获得Root，打击Android"
+product: "Linux epoll / Android"
+record_type: "advisory"
+document_type: "研究新闻及相关漏洞综述"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "称Linux>=6.4，6.1不受影响；本地低权限；Linux PoC与Android仍开发明确区分"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Android/%E6%96%B0%E7%9A%84%E2%80%9C%E7%B3%9F%E7%B3%95%E7%9A%84%E2%80%9DLinux%E5%86%85%E6%A0%B8%E6%BC%8F%E6%B4%9E%E8%AE%A9%E9%9D%9E%E7%89%B9%E6%9D%83%E7%94%A8%E6%88%B7%E8%8E%B7%E5%BE%97Root%EF%BC%8C%E6%89%93%E5%87%BBAndroid.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-e5e9b1dfeeeb400c54d5debf"
+entity_id: "ve-e5e9b1dfeeeb400c54d5debf"
+schema_version: "1"
 ---
 
-#  新的“糟糕的”Linux内核漏洞让非特权用户获得Root，打击Android  
+# 新的“糟糕的”Linux内核漏洞让非特权用户获得Root，打击Android
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Linux epoll / Android
+- 文献类型：研究新闻及相关漏洞综述
+- 版本、权限及部署边界：称Linux>=6.4，6.1不受影响；本地低权限；Linux PoC与Android仍开发明确区分
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 主CVE在正文存在而frontmatter未列，其他编号为背景比较不应误归主漏洞
+2. Linux99%成功率来自所述测试而非所有Android；Android利用仍开发，标题需避免暗示已验证Android root
+3. 六指令窗口/KASAN/AI发现等研究断言无原始报告或上游补丁URL，缺精确受影响与已修复内核分支
+4. 免费后使用等翻译错误及两者指代混乱；Epoll不能关闭所以没有解决办法过于绝对，应限定为原文未提供缓解
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 HackSee安全团队
                     HackSee安全团队  HackSee安全生活   2026-07-06 07:42  
   
@@ -63,4 +114,4 @@ Bad Epoll是一个有用的对位。这表明竞争条件在每个阶段都很�
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

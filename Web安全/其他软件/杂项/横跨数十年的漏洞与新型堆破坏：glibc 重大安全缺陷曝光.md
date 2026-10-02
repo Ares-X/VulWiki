@@ -1,8 +1,60 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "横跨数十年的漏洞与新型堆破坏：glibc 重大安全缺陷曝光"
+product: "glibc0861/0915"
+record_type: "unknown"
+document_type: "技术文章（细分类待核）"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "两参数可控极大尺寸与DNS后端零网络/通信观察前提写得清楚须保留；缺一手glibc公告修复commit/发行版回补版本，只有来源域名不可追溯"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/%E6%A8%AA%E8%B7%A8%E6%95%B0%E5%8D%81%E5%B9%B4%E7%9A%84%E6%BC%8F%E6%B4%9E%E4%B8%8E%E6%96%B0%E5%9E%8B%E5%A0%86%E7%A0%B4%E5%9D%8F%EF%BC%9Aglibc%20%E9%87%8D%E5%A4%A7%E5%AE%89%E5%85%A8%E7%BC%BA%E9%99%B7%E6%9B%9D%E5%85%89.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-ab3331e1b7c9a6365d58f8c5"
+entity_id: "ve-ab3331e1b7c9a6365d58f8c5"
+schema_version: "1"
 ---
 
-#  横跨数十年的漏洞与新型堆破坏：glibc 重大安全缺陷曝光  
+# 横跨数十年的漏洞与新型堆破坏：glibc 重大安全缺陷曝光
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：glibc0861/0915
+- 文献类型：技术文章（细分类待核）
+- 版本、权限及部署边界：两参数可控极大尺寸与DNS后端零网络/通信观察前提写得清楚须保留；缺一手glibc公告修复commit/发行版回补版本，只有来源域名不可追溯
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 两个主CVE都未入元数据
+2. 两参数可控极大尺寸与DNS后端零网络/通信观察前提写得清楚须保留
+3. 绝大多数Linux仅库存在不代表应用可利用
+4. ASLR绕过是潜在链不能直接当已验证
+5. 缺一手glibc公告修复commit/发行版回补版本，只有来源域名不可追溯
+6. 清营销
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 看雪学苑
                     看雪学苑  看雪学苑   2026-01-19 10:03  
   
@@ -67,4 +119,4 @@ securityonline.info
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

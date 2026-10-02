@@ -1,8 +1,62 @@
 ---
 cve: "CVE-2016-4977"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "常见框架漏洞复现——Spring"
+product: "Spring多组件漏洞复现合集"
+record_type: "roundup"
+document_type: "技术文章（细分类待核）"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "OAuth2是授权框架不是独立认证协议，JWT是token格式并非认证方案；Spring4Shell缺WAR部署等链条件，清空pattern不是恢复原日志配置且残留JSP；大量反引号连串HTTP不可复制，图片应存在处留空，缺对应补丁版本/官方公告但有具体vulhub环境源"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/%E5%B8%B8%E8%A7%81%E6%A1%86%E6%9E%B6%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0%E2%80%94%E2%80%94Spring.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+source_url: "https://mp.weixin.qq.com/s/9vAdMAaSTS-RhW2-KtK_7g"
+id: "vw-fd0528481b68bc4ea676e2f8"
+entity_id: "ve-fd0528481b68bc4ea676e2f8"
+schema_version: "1"
 ---
 
 # 常见框架漏洞复现——Spring
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Spring多组件漏洞复现合集
+- 文献类型：技术文章（细分类待核）
+- 版本、权限及部署边界：OAuth2是授权框架不是独立认证协议，JWT是token格式并非认证方案；Spring4Shell缺WAR部署等链条件，清空pattern不是恢复原日志配置且残留JSP；大量反引号连串HTTP不可复制，图片应存在处留空，缺对应补丁版本/官方公告但有具体vulhub环境源
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 最后Spring4Shell22965误复用CloudFunction22963标题，实际JDK9+/Tomcat日志链且参考10指22965
+2. 主元数据4977漏4971/1270/1273/22947/22963/22965多主实体
+3. OAuth2是授权框架不是独立认证协议，JWT是token格式并非认证方案
+4. 4977admin默认仅vulhub，Windows例URL有空格/固定substring依环境
+5. WebFlow需会话/flowkey，Messaging作者自认不懂且仅非通用脚本，需明确broker配置
+6. Spring4Shell缺WAR部署等链条件，清空pattern不是恢复原日志配置且残留JSP
+7. Gateway新增路由刷新/删除均改状态，GET回读重复描述为触发不准
+8. 大量反引号连串HTTP不可复制，图片应存在处留空，缺对应补丁版本/官方公告但有具体vulhub环境源
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://mp.weixin.qq.com/s/9vAdMAaSTS-RhW2-KtK_7g>
+
+### 归档技术正文
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/9vAdMAaSTS-RhW2-KtK_7g)

@@ -1,8 +1,64 @@
 ---
 source: "MrWQ/vulnerability-paper"
+identifier_role: "reference"
+primary_identifiers: ""
+referenced_identifiers: "CVE-2014-1939"
+identifier_status: "unknown"
+title: "Android 安全（九）--WebView 远程代码执行漏洞"
+product: "Android WebView"
+record_type: "analysis"
+document_type: "历史技术分析"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "JavaScript启用、可被攻击者控制的页面、暴露Java桥；运行时Android/API与targetSdk须区分；代码通常继承应用权限"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Android/Android%20%E5%AE%89%E5%85%A8%EF%BC%88%E4%B9%9D%EF%BC%89--WebView%20%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-b84d4f2083e131eaf8227af9"
+entity_id: "ve-b84d4f2083e131eaf8227af9"
+schema_version: "1"
 ---
 
 # Android 安全（九）--WebView 远程代码执行漏洞
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Android WebView
+- 文献类型：历史技术分析
+- 版本、权限及部署边界：JavaScript启用、可被攻击者控制的页面、暴露Java桥；运行时Android/API与targetSdk须区分；代码通常继承应用权限
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 正文先按API<=16/<17划界，后承认Android4.2且targetAPI<17仍可受影响；两个小标题都写API<=17，需重新区分运行时与targetSdk
+2. 发送短信依赖应用权限；静默安装示例调用su，本身已假定root，不能概括为桥接漏洞直接获取系统最高权限
+3. getM ethod、android\_asset与JS转义残留、getContents缺失，二进制示例含省略占位，不能作为完整可运行PoC
+4. 本地内置页面须说明攻击者如何控制；反向连接示例假定nc/mkfifo及可写目录，未交代设备条件
+5. [3][4][7]缺参考映射，缺官方修复文档；应归移动系统而非桌面软件
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<http://ksria.com/simpread/>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzUyMTA0MjQ4NA==&mid=2247493235&idx=1&sn=39a28e6b6be63621faba9893bc3549a1&chksm=f9e38928ce94003e8a6fcb2253dfc26276075b3d047600e03ebbc6588d07c0535c23c31e9fda&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzUyMTA0MjQ4NA==&mid=2247493235&idx=2&sn=38f3f7c95c235191589e4b2461ca5ca8&chksm=f9e38928ce94003ead029ad2b7add44117a0a06d4e1869438134305cd17abea9e2524767884b&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzUyMTA0MjQ4NA==&mid=2247493298&idx=1&sn=1c64ebdfa70b81e80fa6773609e46b3e&chksm=f9e389e9ce9400ff35dc49cf7807b2e2d8e1b74a2ed489b7e95938f58f388703539210118f38&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzUyMTA0MjQ4NA==&mid=2247493298&idx=2&sn=9a415b6e7dce40801e0d270af78fbdb5&chksm=f9e389e9ce9400ffca0b0be144db5c0556e2b1ab0b2d141fa66d56b58fa82c2b81f8163cc634&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzUyMTA0MjQ4NA==&mid=2247493408&idx=1&sn=90fb5495e7bb8f0aa98519a3002b25d4&chksm=f9e3887bce94016de5f9f1cfec8197a54736b1a716cc2e0d608d6b2e3466989427c5da08e8d3&scene=21#wechat_redirect>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
 
 <meta name="referrer" content="no-referrer"/>
 \> 本文由 \[简悦 SimpRead\](http://ksria.com/simpread/) 转码， 原文地址 \[mp.weixin.qq.com\](https://mp.weixin.qq.com/s?\_\_biz=MzUyMTA0MjQ4NA==&mid=2247494408&idx=4&sn=164730d27202b87ca6d5eb453efc7300&chksm=f9e38453ce940d452c2128b4076ce2b8eb1117f9db5c82ac184b9921d58aaf367ef5ffd1e040&xtrack=1&scene=90&subscene=93&sessionid=1602460613&clicktime=1602461038&enterid=1602461038&ascene=56&devicetype=android-29&version=2700133e&nettype=WIFI&abtest\_cookie=AAACAA%3D%3D&lang=zh\_CN&exportkey=AWYzc4aP69lznA3dHbIppA8%3D&pass\_ticket=pnZyakhq2QtF7v%2BQGAstZmv9NWQqvCbmLpFuJMx7SDuTICrEgZVu5Jm0CpXMMg4E&wx\_header=1)

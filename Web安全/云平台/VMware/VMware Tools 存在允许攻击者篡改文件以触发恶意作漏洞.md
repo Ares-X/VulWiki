@@ -1,9 +1,49 @@
 ---
 cve: "CVE-2025-22247"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "VMware Tools 存在允许攻击者篡改文件以触发恶意作漏洞"
+product: "VMware Tools/open-vm-tools"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2025-22247"
+referenced_identifiers: ""
+identifier_role: "primary"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-ace876bd5b20686b0d1cc27a"
+entity_id: "ve-ace876bd5b20686b0d1cc27a"
+schema_version: "1"
 ---
 
-#  VMware Tools 存在允许攻击者篡改文件以触发恶意作漏洞   
+# VMware Tools 存在允许攻击者篡改文件以触发恶意作漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 本次正文校订
+
+- 按该篇完整正文及逐篇审阅区分主问题与背景编号，补全结构化主标识；不把标识归属校订等同运行复现。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 全文操字丢失并有机翻详/冲击字段
+- 补Broadcom公告直链
+- 按Windows64/32位和Linux发行版拆分修复范围，不能统一12.5.2
+- 来宾内本地文件篡改不等于跨租户或逃逸
+- 22224/43590为背景CVE勿混主条目
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
  网安百色   2025-05-13 11:36  
   
 VMware Tools 中存在一个中等严重性漏洞，该漏洞可能允许具有有限权限的攻击者在虚拟机中纵文件并触发不安全的作。  

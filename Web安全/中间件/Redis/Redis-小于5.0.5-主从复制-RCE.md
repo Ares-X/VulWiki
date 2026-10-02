@@ -1,9 +1,47 @@
 ---
 version: "Redis <= 5.0.5"
 source: "Threekiii/Vulnerability-Wiki"
+title: "Redis 小于5.0.5 主从复制 RCE"
+product: "Redis4+/5复制与模块加载"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "无需认证或已取得适当命令权限、目标可回连恶意主机、兼容模块.so"
+affected_versions: "Redis <= 5.0.5"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-bea56169912126391d1739a6"
+entity_id: "ve-bea56169912126391d1739a6"
+schema_version: "1"
 ---
 
 # Redis 小于5.0.5 主从复制 RCE
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：无需认证或已取得适当命令权限、目标可回连恶意主机、兼容模块.so
+- 证据范围：与462同工具README节选及465同技术链，不能仅6379端口开放就认定脆弱。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 标题<5.0.5与影响<=5.0.5矛盾，缺4.0模块引入下界
+- 2019WCTF故事链接到2018Zeronights材料，时间/出处需标不同场次
+- 第三方浮动latest实验镜像未明确版本，日志digest不能证明后来pull仍相同
+- --rhost与--lhost同IP需说明本地实验/不同机器，否则回连方向易错
+- 没有模块编译步骤及原主从数据恢复
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 ## 漏洞描述
 

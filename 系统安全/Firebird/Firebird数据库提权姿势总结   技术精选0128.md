@@ -1,8 +1,65 @@
 ---
 source: "MrWQ/vulnerability-paper"
+cve: "CVE-2017-6369"
+identifier_role: "primary"
+primary_identifiers: "CVE-2017-6369"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "Firebird数据库提权姿势总结   技术精选0128"
+product: "Firebird数据库"
+record_type: "vulnerability"
+document_type: "多方法数据库安全教学"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "Windows Server2019+Firebird3.0.7为环境；多方法需数据库凭据/文件写入权限/Web可执行目录；Linux UDF限2.5.x<2.5.7和3.0.x<3.0.2"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Firebird/Firebird%E6%95%B0%E6%8D%AE%E5%BA%93%E6%8F%90%E6%9D%83%E5%A7%BF%E5%8A%BF%E6%80%BB%E7%BB%93%20%20%20%E6%8A%80%E6%9C%AF%E7%B2%BE%E9%80%890128.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+source_url: "https://mp.weixin.qq.com/s/Jgj-It1ONQApWPLVt6ZdCg"
+id: "vw-c5b394db3991318272d5e14f"
+entity_id: "ve-c5b394db3991318272d5e14f"
+schema_version: "1"
 ---
 
 # Firebird数据库提权姿势总结   技术精选0128
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Firebird数据库
+- 文献类型：多方法数据库安全教学
+- 版本、权限及部署边界：Windows Server2019+Firebird3.0.7为环境；多方法需数据库凭据/文件写入权限/Web可执行目录；Linux UDF限2.5.x<2.5.7和3.0.x<3.0.2
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 实际数据库教程误入系统安全；应分开默认口令/有权写数据库文件/非默认外部表/UDF历史漏洞，不等同一个无认证CVE
+2. SQL关键词与代码行粘连，内部反引号嵌套，SQL示例的FIRST与LIMIT混用待语法核验，不能直接当可用PoC
+3. 称最新版本有效实际测试版本3.0.7，应锁定测试时间/版本；写webshell需Web根目录及脚本解释器存在
+4. 明确默认配置阻止外部表及新版本限制Windows UDF值得保留，修复链接追溯至官方文档/CORE-5474
+5. 原公众号URL可追溯；截图缺失/留白与广告清理
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://mp.weixin.qq.com/s/Jgj-It1ONQApWPLVt6ZdCg>
+- 原文参考链接（未重新核验）：<http://ksria.com/simpread/>
+- 原文参考链接（未重新核验）：<http://firebirdsql.org/en/firebird-3-0-7/>
+- 原文参考链接（未重新核验）：<https://github.com/mariuz/flamerobin/releases>
+- 原文参考链接（未重新核验）：<https://www.firebirdsql.org/file/documentation/html/en/firebirddocs/qsg3/firebird-3-quickstartguide.html>
+- 原文参考链接（未重新核验）：<https://www.firebirdsql.org/file/documentation/html/en/refdocs/fblangref25/firebird-25-language-reference.html#fblangref25-ddl-tbl-external>
+
+### 归档技术正文
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/Jgj-It1ONQApWPLVt6ZdCg)

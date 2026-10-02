@@ -1,8 +1,63 @@
 ---
 source: "MrWQ/vulnerability-paper"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "漏洞梳理篇之 XXE"
+product: "XXE/XML基础与利用防御教学"
+record_type: "unknown"
+document_type: "技术文章（细分类待核）"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "PHP/JAVA/Python函数下划线转义污染，PHP旧禁用函数版本适用与Java仅setExpandEntityReferences不足覆盖外部DTD/SSRF，关键词黑名单不是可靠防护"
+side_effects: "PHP/JAVA/Python函数下划线转义污染，PHP旧禁用函数版本适用与Java仅setExpandEntityReferences不足覆盖外部DTD/SSRF，关键词黑名单不是可靠防护"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/%E6%BC%8F%E6%B4%9E%E6%A2%B3%E7%90%86%E7%AF%87%E4%B9%8B%20XXE.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+source_url: "https://mp.weixin.qq.com/s/ne08FH-bFOA3v\\_h3C0YCLg"
+id: "vw-96e76c332edbb3fd72ee90c5"
+entity_id: "ve-96e76c332edbb3fd72ee90c5"
+schema_version: "1"
 ---
 
 # 漏洞梳理篇之 XXE
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：XXE/XML基础与利用防御教学
+- 文献类型：技术文章（细分类待核）
+- 版本、权限及部署边界：PHP/JAVA/Python函数下划线转义污染，PHP旧禁用函数版本适用与Java仅setExpandEntityReferences不足覆盖外部DTD/SSRF，关键词黑名单不是可靠防护
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 开头XML定义误写为XSD，CDATA忽略含义不准确且定界符文本消失/代码反斜杠污染
+2. 外部note.dtd不应再包DOCTYPE内部子集
+3. &copyright被转成©right，参数实体放文档正文不会替换
+4. 一般外部实体指向含DTD声明的文件不等于载入DTD，示例DOCTYPE根与根元素也不匹配
+5. OOB定义all却调用未定义int，%嵌套缺字符引用编码、base64filter跨行和无根元素，无法照抄
+6. PHP/JAVA/Python函数下划线转义污染，PHP旧禁用函数版本适用与Java仅setExpandEntityReferences不足覆盖外部DTD/SSRF，关键词黑名单不是可靠防护
+7. HTTP访问RDP/SMB超时或HTTPfailed不能证明端口关闭
+8. 命令执行需额外wrapper/扩展不是XXE必然
+9. 公众号编辑后台tokenURL属非公开引用应清理，Base64称解密错误
+
+### 操作风险
+
+PHP/JAVA/Python函数下划线转义污染，PHP旧禁用函数版本适用与Java仅setExpandEntityReferences不足覆盖外部DTD/SSRF，关键词黑名单不是可靠防护
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://mp.weixin.qq.com/s/ne08FH-bFOA3v\_h3C0YCLg>
+
+### 归档技术正文
 
 <meta name="referrer" content="no-referrer"/>
 \> 本文由 \[简悦 SimpRead\](http://ksria.com/simpread/) 转码， 原文地址 \[mp.weixin.qq.com\](https://mp.weixin.qq.com/s/ne08FH-bFOA3v\_h3C0YCLg)

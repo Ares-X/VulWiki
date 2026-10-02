@@ -1,9 +1,66 @@
 ---
-version: "web.config文件中的enableViewStateMac（.NET≤4.5）："
 source: "MrWQ/vulnerability-paper"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "ViewState 反序列化复现踩坑记录"
+product: "ASP.NET Web Forms ViewState"
+record_type: "analysis"
+document_type: "配置教程与复现踩坑"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "需要应用接受攻击者可控ViewState且MAC校验关闭或密钥已知；实际.NET/IIS/补丁与应用池权限未明确"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/ViewState/ViewState%20%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E5%A4%8D%E7%8E%B0%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+version_unverified: "web.config文件中的enableViewStateMac（.NET≤4.5）："
+source_url: "https://mp.weixin.qq.com/s/uwnD1CkkhyDd5XcQS_kPZw"
+id: "vw-04d3a22857bef32b18df6b4f"
+entity_id: "ve-04d3a22857bef32b18df6b4f"
+schema_version: "1"
 ---
 
 # ViewState 反序列化复现踩坑记录
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：ASP.NET Web Forms ViewState
+- 文献类型：配置教程与复现踩坑
+- 版本、权限及部署边界：需要应用接受攻击者可控ViewState且MAC校验关闭或密钥已知；实际.NET/IIS/补丁与应用池权限未明确
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. frontmatter版本字段实际是配置小标题，不能作为版本范围
+2. 示例控件未设置ID，代码却引用TextArea1/Label1，示例不能直接编译；enableViewState=false与仍处理恶意状态的关系没有解释
+3. MAC完整性与加密保密性混淆，未加密并不等于可伪造；IIS版本决定自动加密的说法需纠正核验
+4. 称Java ysoserial适用于该链混淆平台；伪造高权限令牌、应用池默认高权限及土豆提权并不是ViewState漏洞自动成立的结果
+5. 安全建议要求多节点共享显式machineKey，示例却用AutoGenerate,IsolateApps；全局关闭安全校验应限定隔离实验并提供恢复说明
+6. 结尾同时改了Base64填充和目标路径后成功，无法归因于等号；需隔离表单编码、路径权限等变量
+7. 保留踩坑过程但补精确环境、应用身份、原始响应、工具版本及来源；截图未视检
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://mp.weixin.qq.com/s/uwnD1CkkhyDd5XcQS_kPZw>
+- 原文参考链接（未重新核验）：<http://ksria.com/simpread/>
+- 原文参考链接（未重新核验）：<http://www.w3.org/1999/xhtml>
+- 原文参考链接（未重新核验）：<https://github.com/pwntester/ysoserial.net>
+- 原文参考链接（未重新核验）：<https://github.com/MrWQ/vulnerability-paper>
+
+### 归档技术正文
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/uwnD1CkkhyDd5XcQS_kPZw)<table data-mpa-powered-by="yiban.io"><tbody><tr><td width="557" valign="top" height="62"><section><strong>声明：</strong>该公众号大部分文章来自作者日常学习笔记，也有部分文章是经过作者授权和其他公众号白名单转载，未经授权，严禁转载，如需转载，联系开白。</section><section>请勿利用文章内的相关技术从事非法测试，如因此产生的一切不良后果与文章作者和本公众号无关。</section></td></tr></tbody></table>

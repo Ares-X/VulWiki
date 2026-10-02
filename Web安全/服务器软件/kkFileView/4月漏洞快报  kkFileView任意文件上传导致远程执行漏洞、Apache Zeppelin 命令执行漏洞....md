@@ -1,8 +1,46 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "4月漏洞快报 | kkFileView任意文件上传导致远程执行漏洞、Apache Zeppelin 命令执行漏洞..."
+product: "kkFileView、PAN-OS GlobalProtect、Apache Zeppelin、Node.js"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2024-3400; CVE-2024-31861; CVE-2024-27980"
+referenced_identifiers: ""
+identifier_role: "primary"
+cve: "CVE-2024-3400; CVE-2024-31861; CVE-2024-27980"
+prerequisites: "kkFileView上传/解压启用及可写转换脚本；PAN-OS特定GlobalProtect配置；Zeppelin可建sh解释器Notebook；Node Windows批处理+受控参数"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-4122e3d1065a993ad665cb11"
+entity_id: "ve-4122e3d1065a993ad665cb11"
+schema_version: "1"
 ---
 
-#  4月漏洞快报 | kkFileView任意文件上传导致远程执行漏洞、Apache Zeppelin 命令执行漏洞...   
+# 4月漏洞快报 | kkFileView任意文件上传导致远程执行漏洞、Apache Zeppelin 命令执行漏洞...
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：kkFileView上传/解压启用及可写转换脚本；PAN-OS特定GlobalProtect配置；Zeppelin可建sh解释器Notebook；Node Windows批处理+受控参数
+- 证据范围：四独立实体不能全归kkFileView或共享一个漏洞条件；Zeppelin普通shell功能与安全缺陷边界描述不足
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- kkFileView描述到4.4beta但范围写<4.4beta，与179/180<=冲突
+- 覆盖uno.py获取所有python代码应为执行所写代码，语义错误
+- 禁上传是缓解不是修复；Node排除所有其他Windows执行方式过宽
+- 三CVE未元数据，PAN分支需完整热修复矩阵；无源链
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 原创 梆梆安全  梆梆安全   2024-04-24 16:30  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/YpfGdibD1mRlEhUENIEoRKT24icXeO3JJwibGtsO8Joic50gqlSvLmCHJreMjPSJ65ya8RqWGTpurGMxXM3xJN7faQ/640?wx_fmt=gif&wxfrom=5&wx_lazy=1&tp=webp "")  

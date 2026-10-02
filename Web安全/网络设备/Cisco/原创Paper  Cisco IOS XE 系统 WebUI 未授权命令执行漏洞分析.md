@@ -1,9 +1,56 @@
 ---
 cve: "CVE-2023-20198"
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-930156bc7faf3691bcb8c6b9"
+entity_id: "ve-930156bc7faf3691bcb8c6b9"
+schema_version: "1"
+title: "原创Paper | Cisco IOS XE 系统 WebUI 未授权命令执行漏洞分析"
+product: "Cisco IOS XE Web UI"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2023-20198; CVE-2023-20273"
+referenced_identifiers: ""
+prerequisites: "ISR4300实物分析，Web UI可达；20273已授权管理员，20198未认证Cisco CLI；未列固件号"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/Cisco/%E5%8E%9F%E5%88%9BPaper%20%20Cisco%20IOS%20XE%20%E7%B3%BB%E7%BB%9F%20WebUI%20%E6%9C%AA%E6%8E%88%E6%9D%83%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 #  原创Paper | Cisco IOS XE 系统 WebUI 未授权命令执行漏洞分析   
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Cisco IOS XE Web UI
+- 本文讨论：CVE-2023-20198；CVE-2023-20273
+- 版本、权限与配置前提：ISR4300实物分析，Web UI可达；20273已授权管理员，20198未认证Cisco CLI；未列固件号
+- 资料类型：双漏洞原理与在野研究；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- frontmatter只收20198，遗漏同等主漏洞20273
+- 多段Lua/nginx/HTTP代码丢换行，出现trueend和注释吞命令；无法直接复用
+- 关键反汇编/补丁/后门证据只在未查看图片
+- 无测试固件版本与安全版本；后门检测统计有蜜罐误报且后文新增规避，不能概括为可靠通用检测
+- 称SHA1验证应靠哈希碰撞不准确，找满足固定哈希的值属于原像问题
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 图中源码、研究样本固件、统计方法及过时探测结论待核验
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
  白帽子   2023-11-25 00:02  
   
 **作者：Hcamael@知道创宇404实验室**  

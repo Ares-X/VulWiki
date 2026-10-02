@@ -1,6 +1,40 @@
 ---
 source: "hatch 补库批 20260928"
+product: "WordPress WP File Manager / bundled elFinder"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "WordPress Plugin - File Manager 任意文件上传漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：free6.0–6.8 claimed; exposed connector, writable l1 volume, PHP execution; Pro range uncertain"
+side_effects: "未执行；本文需注意的操作影响：与25213短PoC同入口，但本篇有Windows调用链/目标目录及t1_禁止upload负条件，属于互补应保留；uploadOrder先deny后allow不是普遍允许全部的充分条件，应结合当前allow/deny列表"
+source_status: "unknown"
+id: "vw-b8b442960ac7669f0e00f5a1"
+entity_id: "ve-b8b442960ac7669f0e00f5a1"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：free6.0–6.8 claimed; exposed connector, writable l1 volume, PHP execution; Pro range uncertain
+
+- **结论使用边界（1）**：Pro受影响V7.6-V7.0区间倒置，需原始公告核对，不能按字面采纳。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **结论使用边界（2）**：文字先写args\['FILE'\]后源码实际FILES，术语及变量错字；Base64应称解码非解密。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **适用与权限边界（3）**：与25213短PoC同入口，但本篇有Windows调用链/目标目录及t1_禁止upload负条件，属于互补应保留。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **事实待核（4）**：无主CVE及来源/补丁；最后复现请求截图未转文本。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **适用与权限边界（5）**：uploadOrder先deny后allow不是普遍允许全部的充分条件，应结合当前allow/deny列表。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # WordPress Plugin - File Manager 任意文件上传漏洞
 

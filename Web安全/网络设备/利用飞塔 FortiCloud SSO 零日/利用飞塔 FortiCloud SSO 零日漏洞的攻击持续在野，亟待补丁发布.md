@@ -1,9 +1,54 @@
 ---
 cve: "CVE-2026-24858"
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-ca744a54eb5977aeee120333"
+entity_id: "ve-ca744a54eb5977aeee120333"
+schema_version: "1"
+title: "利用飞塔 FortiCloud SSO 零日漏洞的攻击持续在野，亟待补丁发布"
+product: "FortiCloud SSO / FortiOS/FortiManager/FortiAnalyzer"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2026-24858"
+referenced_identifiers: ""
+prerequisites: "SSO启用、攻击者持FortiCloud账户和注册设备；报道2026-01-28补丁开发中"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/%E5%88%A9%E7%94%A8%E9%A3%9E%E5%A1%94%20FortiCloud%20SSO%20%E9%9B%B6%E6%97%A5/%E5%88%A9%E7%94%A8%E9%A3%9E%E5%A1%94%20FortiCloud%20SSO%20%E9%9B%B6%E6%97%A5%E6%BC%8F%E6%B4%9E%E7%9A%84%E6%94%BB%E5%87%BB%E6%8C%81%E7%BB%AD%E5%9C%A8%E9%87%8E%EF%BC%8C%E4%BA%9F%E5%BE%85%E8%A1%A5%E4%B8%81%E5%8F%91%E5%B8%83.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 #  利用飞塔 FortiCloud SSO 零日漏洞的攻击持续在野，亟待补丁发布  
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：FortiCloud SSO / FortiOS/FortiManager/FortiAnalyzer
+- 本文讨论：CVE-2026-24858；59718是历史对照
+- 版本、权限与配置前提：SSO启用、攻击者持FortiCloud账户和注册设备；报道2026-01-28补丁开发中
+- 资料类型：零日攻击事件与IOC综述；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 误单独以新闻标题建厂商目录，应归Fortinet实体
+- 声称所有SAML SSO受影响却给仅admin-forticloud-sso-login开关，缓解作用范围不相符需官方回源
+- 无PSIRT/ArcticWolf原文链接或版本，IOC应带来源时点避免同名账户自动定罪
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- SAML范围、修复发布与服务器端缓解有效期需原始公告核验
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 原创 Lawrence Abrams
                     Lawrence Abrams  暗镜   2026-01-28 00:29  
   

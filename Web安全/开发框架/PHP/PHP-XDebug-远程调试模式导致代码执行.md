@@ -1,6 +1,40 @@
 ---
 source: "历史归档批(无原始出处标注)"
+product: "Xdebug/DBGp反连"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "PHP-XDebug-远程调试模式导致代码执行"
+prerequisites: "来源所述条件，未列明部分仍待核：配置名为Xdebug2时代remote_*，需标版本，Xdebug3配置不同"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-a2af3ee728823d77e3507f58"
+entity_id: "ve-a2af3ee728823d77e3507f58"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：配置名为Xdebug2时代remote_*，需标版本，Xdebug3配置不同
+
+代码与实验材料：完整Python3 listener与trigger，shell引号示例错误，DBGp XML解析假设固定四块可能挂起/越界
+
+来源证据范围：Xdebug官方、ricterz研究和Vulhub脚本，来源较好
+
+- **结论使用边界（1）**：命令示例引号破坏PHP代码；依据：-c 'shell_exec('id');'在shell拼接后丢失PHP字符串引号。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **结论使用边界（2）**：无法用HTTP复现措辞过绝对；依据：HTTP用于触发，命令交互用DBGp；反连可达不必必须公网IP。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **适用与权限边界（3）**：版本与协议失败边界需明示；依据：remote_connect_back只适用旧配置；无数据时blocks\[3\]访问和固定NUL分帧假设脆弱。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # PHP XDebug 远程调试模式导致代码执行
 

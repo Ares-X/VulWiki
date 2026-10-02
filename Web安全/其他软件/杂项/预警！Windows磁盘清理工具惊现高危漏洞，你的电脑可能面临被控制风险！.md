@@ -1,9 +1,63 @@
 ---
 cve: "CVE-2025-21420"
 source: "gelusus/wxvl 公众号漏洞文库"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "预警！Windows磁盘清理工具惊现高危漏洞，你的电脑可能面临被控制风险！"
+product: "Windows cleanmgr CVE-2025-21420"
+record_type: "advisory"
+document_type: "技术文章（细分类待核）"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "无官方公告/KB/影响Windows版本，修复全为猜测"
+side_effects: "泛日志清除/持久化是攻击扩展非必要验证，Sysmon签名字符串过滤不足判攻击"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/%E9%A2%84%E8%AD%A6%EF%BC%81Windows%E7%A3%81%E7%9B%98%E6%B8%85%E7%90%86%E5%B7%A5%E5%85%B7%E6%83%8A%E7%8E%B0%E9%AB%98%E5%8D%B1%E6%BC%8F%E6%B4%9E%EF%BC%8C%E4%BD%A0%E7%9A%84%E7%94%B5%E8%84%91%E5%8F%AF%E8%83%BD%E9%9D%A2%E4%B8%B4%E8%A2%AB%E6%8E%A7%E5%88%B6%E9%A3%8E%E9%99%A9%EF%BC%81.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-8cd3e8f2e3855921b9b7e77f"
+entity_id: "ve-8cd3e8f2e3855921b9b7e77f"
+schema_version: "1"
 ---
 
-#  紧急预警！Windows磁盘清理工具惊现高危漏洞，你的电脑可能面临被控制风险！   
+# 预警！Windows磁盘清理工具惊现高危漏洞，你的电脑可能面临被控制风险！
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Windows cleanmgr CVE-2025-21420
+- 文献类型：技术文章（细分类待核）
+- 版本、权限及部署边界：无官方公告/KB/影响Windows版本，修复全为猜测
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 无官方公告/KB/影响Windows版本，修复全为猜测
+2. 仅用户目录同名System32嵌套路径不会自动变系统目录，缺实际加载调用/路径构造证据
+3. 手动cleanmgr及默认schtasks未指定SYSTEM并不证明提权
+4. CreateProcessW第二参数使用不可写字符串且导出签名简化，与声称精确导出表不符
+5. mkdir -p/Windows路径混shell，sageset只设置不等于执行清理
+6. 合法DLL签名不可复制到已修改恶意DLL
+7. CWDIllegalInDllSearch不是SetDefaultDllDirectories/组策略，数值及作用需核，icacls无法证明阻止所有变体
+8. 泛日志清除/持久化是攻击扩展非必要验证，Sysmon签名字符串过滤不足判攻击
+
+### 操作风险
+
+泛日志清除/持久化是攻击扩展非必要验证，Sysmon签名字符串过滤不足判攻击
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 云梦DC  云梦安全   2025-02-28 00:48  
   
 漏洞概述  
@@ -208,4 +262,4 @@ YARA：编写规则检测恶意DLL特征。
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

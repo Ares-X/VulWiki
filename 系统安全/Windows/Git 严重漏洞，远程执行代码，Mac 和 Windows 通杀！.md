@@ -1,8 +1,64 @@
 ---
 cve: "CVE-2024-32002"
+identifier_role: "primary"
+primary_identifiers: "CVE-2024-32002"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "Git 严重漏洞，远程执行代码，Mac 和 Windows 通杀！"
+product: "Git 子模块/符号链接"
+record_type: "vulnerability"
+document_type: "Git漏洞科普与复现说明"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "受影响Git分支；递归子模块克隆，大小写不敏感文件系统及符号链接支持；非所有Windows/macOS配置"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Windows/Git%20%E4%B8%A5%E9%87%8D%E6%BC%8F%E6%B4%9E%EF%BC%8C%E8%BF%9C%E7%A8%8B%E6%89%A7%E8%A1%8C%E4%BB%A3%E7%A0%81%EF%BC%8CMac%20%E5%92%8C%20Windows%20%E9%80%9A%E6%9D%80%EF%BC%81.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+source_url: "https://mp.weixin.qq.com/s/IstZ4r2ljR-uZbMC211qEw"
+id: "vw-07d8fde522681ba62f053034"
+entity_id: "ve-07d8fde522681ba62f053034"
+schema_version: "1"
 ---
 
 # Git 严重漏洞，远程执行代码，Mac 和 Windows 通杀！
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Git 子模块/符号链接
+- 文献类型：Git漏洞科普与复现说明
+- 版本、权限及部署边界：受影响Git分支；递归子模块克隆，大小写不敏感文件系统及符号链接支持；非所有Windows/macOS配置
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 主产品Git应按开发工具分类，Windows/macOS只是受影响环境；标题通杀和只要clone过宽，正文实际要求--recursive与文件系统/符号链接条件
+2. 对hooks、子模块和大小写冲突的科普有价值，但默认.git路径解释未含自定义hooksPath/工作树等情况，应标常见布局
+3. 受影响版本以跨分支<=写法重叠，缺各维护分支明确下限/修复版本及Git官方公告
+4. 直接邀请执行恶意仓库克隆应改为受控研究说明；链接未固定提交，文中截图证据未经审阅验证
+5. 原始研究PoC作者可追溯，缺原始技术公告；删标题党和推广尾部
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://mp.weixin.qq.com/s/IstZ4r2ljR-uZbMC211qEw>
+- 原文参考链接（未重新核验）：<http://ksria.com/simpread/>
+- 原文参考链接（未重新核验）：<https://mp.weixin.qq.com/s?__biz=MzIyNjMxOTY0NA==&mid=2247500286&idx=1&sn=394d9893064030f695ef9bc7cf2c28c1&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<https://mp.weixin.qq.com/s?__biz=MzIyNjMxOTY0NA==&mid=2247493241&idx=1&sn=25a4f5e770dabb10a8abe96f692d7391&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<https://mp.weixin.qq.com/s?__biz=MzIyNjMxOTY0NA==&mid=2247495061&idx=1&sn=692ba561fed0f7ae6865f2b8da8fbffd&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<https://mp.weixin.qq.com/s?__biz=MzIyNjMxOTY0NA==&mid=2247486528&idx=1&sn=3f7b09eb21969fdb16f5b0805ff69fed&scene=21#wechat_redirect>
+
+### 归档技术正文
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/IstZ4r2ljR-uZbMC211qEw)

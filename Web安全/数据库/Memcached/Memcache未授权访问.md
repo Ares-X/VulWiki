@@ -1,8 +1,46 @@
 ---
 source: "hatch 补库批 20260928"
+title: "Memcache未授权访问"
+product: "Memcached"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "11211可达且未限制访问/认证；协议及版本条件未列"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-47f904c7334ead471f73bddf"
+entity_id: "ve-47f904c7334ead471f73bddf"
+schema_version: "1"
 ---
 
 # Memcache未授权访问
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：11211可达且未限制访问/认证；协议及版本条件未列
+- 证据范围：协议、缓存读写和部署加固综合说明；扫描代码存在明显复制错误
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- P0脚本缺import socket且main调用Elasticsearch_check而非Memcache_check，无法按文运行
+- telnet/nc示例缺目标主机；0.0.0.0扫描目标含糊
+- 防火墙先-A允许后-I拒绝会把拒绝置顶，次序可能阻断全部流量
+- SASL链接指向Postfix手册而非Memcached，缺协议/启动选项说明
+- 修改端口不是认证防护；root启动示例与最小权限建议冲突
+- 影响范围为空，区分配置暴露与产品CVE；flush_all有破坏性
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 一、漏洞简介
 ------------

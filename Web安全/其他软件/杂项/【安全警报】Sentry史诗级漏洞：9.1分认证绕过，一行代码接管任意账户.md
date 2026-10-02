@@ -1,9 +1,63 @@
 ---
 cve: "CVE-2026-42354"
 source: "gelusus/wxvl 公众号漏洞文库"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "【安全警报】Sentry史诗级漏洞：9.1分认证绕过，一行代码接管任意账户"
+product: "Sentry CVE-2026-42354 SAML账户链接"
+record_type: "unknown"
+document_type: "技术文章（细分类待核）"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "明确self-hosted多组织21.12.0–26.4.0与26.4.1修复/SaaS不受影响但全无官方GHSA/commit链接；正文一面需诱使目标用户登录一面称只邮箱无会话，实际交互条件未厘清；CVSS高分不预测武器化速度，用户总数不是受影响实例"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/%E3%80%90%E5%AE%89%E5%85%A8%E8%AD%A6%E6%8A%A5%E3%80%91Sentry%E5%8F%B2%E8%AF%97%E7%BA%A7%E6%BC%8F%E6%B4%9E%EF%BC%9A9.1%E5%88%86%E8%AE%A4%E8%AF%81%E7%BB%95%E8%BF%87%EF%BC%8C%E4%B8%80%E8%A1%8C%E4%BB%A3%E7%A0%81%E6%8E%A5%E7%AE%A1%E4%BB%BB%E6%84%8F%E8%B4%A6%E6%88%B7.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-ac9c2ed594affd2d01262262"
+entity_id: "ve-ac9c2ed594affd2d01262262"
+schema_version: "1"
 ---
 
-#  【安全警报】Sentry史诗级漏洞：9.1分认证绕过，一行代码接管任意账户  
+# 【安全警报】Sentry史诗级漏洞：9.1分认证绕过，一行代码接管任意账户
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Sentry CVE-2026-42354 SAML账户链接
+- 文献类型：技术文章（细分类待核）
+- 版本、权限及部署边界：明确self-hosted多组织21.12.0–26.4.0与26.4.1修复/SaaS不受影响但全无官方GHSA/commit链接；正文一面需诱使目标用户登录一面称只邮箱无会话，实际交互条件未厘清；CVSS高分不预测武器化速度，用户总数不是受影响实例
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 明确self-hosted多组织21.12.0–26.4.0与26.4.1修复/SaaS不受影响但全无官方GHSA/commit链接
+2. 需能在同实例控制组织SAML配置，不能概括只知邮箱零门槛
+3. 正文一面需诱使目标用户登录一面称只邮箱无会话，实际交互条件未厘清
+4. 本地MFA不保证阻止SAML身份绑定绕过，不能称终极防线
+5. CVSS高分不预测武器化速度，用户总数不是受影响实例
+6. 高并发导致脱敏漏网/Claude Cursor9秒删库无依据串文
+7. 标题一行代码全文无PoC
+8. 其他cPanel/CopyFail为背景不入主实体
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 茶话君
                     茶话君  黑客茶话会   2026-05-08 02:33  
   
@@ -87,4 +141,4 @@ Sentry漏洞只是冰山一角。它暴露的，是整个开发者工具链长�
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

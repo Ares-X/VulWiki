@@ -1,6 +1,43 @@
 ---
 source: "MrWQ/vulnerability-paper"
+product: "Yii2 / BatchQueryResult + Guzzle + PHPUnit"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "Yii 反序列化漏洞复现到新利用链发现"
+prerequisites: "来源所述条件，未列明部分仍待核：Yii2.0.35+PHP7.4.3，称2.0.38修复；必须自建unserialize、特定Guzzle/PHPUnit开发依赖"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/KCGGMBxmW5LSIey5nN7BDg"
+id: "vw-01c4600fd360c67c14355852"
+entity_id: "ve-01c4600fd360c67c14355852"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：Yii2.0.35+PHP7.4.3，称2.0.38修复；必须自建unserialize、特定Guzzle/PHPUnit开发依赖
+
+代码与实验材料：完整FnStream/phpinfo与MockTrait.generate两种代码，作者遇throw并提出未证猜测
+
+来源证据范围：官方GHSA/release、JOHNSON/补天原文
+
+- **证据待核（1）**：新链成功证据与异常原因未厘清；依据：声称加phpinfo即可解决异常，猜大输出触发分段传输，没有说明FnStream防反序列化或异常析构行为；不能当验证已成功。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **事实待核（2）**：依赖版本与生产可达性缺失；依据：Guzzle FnStream及PHPUnit MockTrait是关键且可能仅dev依赖，不能只按Yii版本判断。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **结论使用边界（3）**：源码检索正则不代表数据可控；依据：\[^if \]\[^foreach \]等是字符类不是排除关键字，找到调用并不证明污点可达。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **结论使用边界（4）**：需前置自建入口限定；依据：文章确实手加unserialize，标题应说明gadget研究而不是原生应用自动可利用。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Yii 反序列化漏洞复现到新利用链发现
 

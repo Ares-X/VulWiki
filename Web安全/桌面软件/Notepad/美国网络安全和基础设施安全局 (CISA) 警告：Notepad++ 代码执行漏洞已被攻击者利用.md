@@ -1,9 +1,60 @@
 ---
-cve: "CVE-2025-15556"
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2025-15556"
+identifier_role: "primary"
+primary_identifiers: "CVE-2025-15556"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "美国网络安全和基础设施安全局 (CISA) 警告：Notepad++ 代码执行漏洞已被攻击者利用"
+product: "Notepad++ WinGUp更新器"
+record_type: "advisory"
+document_type: "在野利用与更新器漏洞新闻"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "攻击者能拦截/重定向更新链路，受害者执行更新；文称8.8.9修复、主要8.6–8.8.8"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Notepad/%E7%BE%8E%E5%9B%BD%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%92%8C%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E5%AE%89%E5%85%A8%E5%B1%80%20%28CISA%29%20%E8%AD%A6%E5%91%8A%EF%BC%9ANotepad%2B%2B%20%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E%E5%B7%B2%E8%A2%AB%E6%94%BB%E5%87%BB%E8%80%85%E5%88%A9%E7%94%A8.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-e6a8d9c9598d1235961e2bc1"
+entity_id: "ve-e6a8d9c9598d1235961e2bc1"
+schema_version: "1"
 ---
 
-#  美国网络安全和基础设施安全局 (CISA) 警告：Notepad++ 代码执行漏洞已被攻击者利用  
+# 美国网络安全和基础设施安全局 (CISA) 警告：Notepad++ 代码执行漏洞已被攻击者利用
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Notepad++ WinGUp更新器
+- 文献类型：在野利用与更新器漏洞新闻
+- 版本、权限及部署边界：攻击者能拦截/重定向更新链路，受害者执行更新；文称8.8.9修复、主要8.6–8.8.8
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 无用户交互却排除例行更新这一限定需清楚，签名验证缺失也不自动证明任意网络中间人能突破TLS，链路控制前提未说明
+2. 禁用自动更新仍有风险与建议临时禁用WinGUp要区分手动旧更新器触发和完全不运行更新器；不能混为无条件持续入口
+3. BOD22-01误称云集成服务约束，适用FCEB而非所有组织；KEV日期/期限和在野状态无CISA直接链接
+4. 只有厂商域名字符串，没有官方修复/社区/NVD/CISA可追溯页；所有补丁前版本范围过泛
+5. 新版本安装不等排除既有供应链感染；需把预防完整性与事件响应分开，CVSS待定保留
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 原创 网络安全9527
                     网络安全9527  安全圈的那点事儿   2026-02-13 05:39  
   
@@ -34,4 +85,4 @@ CISA 敦促立即应用供应商补丁，遵守云集成服务的约束性操作
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

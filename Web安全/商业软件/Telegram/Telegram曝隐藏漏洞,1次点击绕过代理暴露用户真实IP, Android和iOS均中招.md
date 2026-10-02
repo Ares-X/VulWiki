@@ -1,15 +1,57 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Telegram mobile 代理链接连通探测泄露出口IP报道"
+product: "Telegram mobile"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "Android/iOS无具体版本，未提供研究/修复来源"
+prerequisites: "需用户点击特制代理链接"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+source_status: "unknown"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/Telegram/Telegram%E6%9B%9D%E9%9A%90%E8%97%8F%E6%BC%8F%E6%B4%9E%2C1%E6%AC%A1%E7%82%B9%E5%87%BB%E7%BB%95%E8%BF%87%E4%BB%A3%E7%90%86%E6%9A%B4%E9%9C%B2%E7%94%A8%E6%88%B7%E7%9C%9F%E5%AE%9EIP%2C%20Android%E5%92%8CiOS%E5%9D%87%E4%B8%AD%E6%8B%9B.md"
+id: "vw-de4b445a55fe05c47cd383d1"
+entity_id: "ve-de4b445a55fe05c47cd383d1"
+schema_version: "1"
 ---
 
-#  Telegram曝隐藏漏洞,1次点击绕过代理暴露用户真实IP, Android和iOS均中招  
+# Telegram mobile 代理链接连通探测泄露出口IP报道
+
+## 条目说明
+
+- 对象与具体问题：Telegram mobile；代理链接连通探测泄露出口IP报道
+- 版本、配置及部署条件：Android/iOS无具体版本，未提供研究/修复来源
+- 认证与权限前提：需用户点击特制代理链接
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 应用代理绕过不等于绕过系统VPN；声称忽略VPN却建议强制VPN有逻辑范围冲突
+- 原生网络栈请求仍受系统路由/VPN约束，应分别验证split/full tunnel、kill switch
+- 源IP推地理位置仅估计，NTLM类比不等于凭据泄露
+- 无实际请求、代码、版本/披露链接；未修复/9.5亿用户为文章时点未经核实
+- 删针对人群追踪营销化叙述，定位隐私风险通告
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 原创 suntiger  二进制空间安全   2026-01-13 03:38  
   
 将二进制空间安全设为"星标⭐️"  
   
 第一时间收到文章更新  
-### 事件背景  
-###   
+#### 事件背景  
+####   
   
 Telegram 移动客户端中存在一个隐蔽漏洞, 攻击者只需一次点击就能看到用户的真实IP地址, 甚至包括使用代理隐藏身份的用户。该漏洞被称为“一键 IP泄露”，会把看似无害的用户名链接变成功能强大的追踪工具。  
   

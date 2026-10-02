@@ -1,8 +1,50 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "GitHub Enterprise Server SAML XML签名包装认证绕过及更新新闻"
+product: "GitHub Enterprise Server"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2024-6800"
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "<3.14说法需按3.13.3/3.12.8/3.11.4/3.10.16分支修复解析"
+prerequisites: "直接网络+特定IdP SAML"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+identifier_role: "primary"
+source_status: "unknown"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/GitHub%20Enterprise%20Server/GitHub%20Enterprise%20Server%20%E4%B8%AD%E5%AD%98%E5%9C%A8%E4%B8%A5%E9%87%8D%E7%9A%84%E8%AE%A4%E8%AF%81%E6%BC%8F%E6%B4%9E.md"
+id: "vw-b3d8439f3bfaab4620e6440a"
+entity_id: "ve-b3d8439f3bfaab4620e6440a"
+schema_version: "1"
 ---
 
-#  GitHub Enterprise Server 中存在严重的认证漏洞   
+# GitHub Enterprise Server SAML XML签名包装认证绕过及更新新闻
+
+## 条目说明
+
+- 对象与具体问题：GitHub Enterprise Server；SAML XML签名包装认证绕过及更新新闻
+- 版本、配置及部署条件：<3.14说法需按3.13.3/3.12.8/3.11.4/3.10.16分支修复解析
+- 认证与权限前提：直接网络+特定IdP SAML
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 源代码托管不是ERP，移开发平台
+- 有主6800和两个未编号中危问题，不能单实体吞并
+- 版本<3.14不能把已修复旧维护版继续标漏洞；缺官方公告链接/IdP条件
+- 新闻无PoC正常，但需文档类型标公告和删广告
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 Ryan Naraine  代码卫士   2024-08-22 17:58  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

@@ -1,7 +1,42 @@
 ---
 version: "@Overridepublic StringBuilder toSerializable(final LogEvent event, final StringB"
 source: "MrWQ/vulnerability-paper"
+product: "Log4j2 JNDI; keep historical RC1/RC2 context"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "Apache Log4j2 从 RCE 到 RC1 绕过"
+prerequisites: "来源所述条件，未列明部分仍待核：2.15.0-rc1 bypass requires explicitly enabled lookups; rc2 URISyntaxException returns null"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/0wTxODQBvHrJuV2qtqNnNA"
+id: "vw-b11881f93d323436983bc41c"
+entity_id: "ve-b11881f93d323436983bc41c"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：2.15.0-rc1 bypass requires explicitly enabled lookups; rc2 URISyntaxException returns null
+
+代码与实验材料：Detailed logger→formatter→JNDI flow and explicit lookups demonstration; code collapsed to single lines with escaped braces; exact JDK and exploitable LDAP response not pinned
+
+来源证据范围：Original WeChat URL and xz.aliyun.com/t/10649 present
+
+- **事实待核（1）**：Frontmatter version contains code, not version；依据：version: @Overridepublic StringBuilder...。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **事实待核（2）**：Historical prerelease finding needs date and advisory association, not a current all-version bypass claim。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **结论使用边界（3）**：Absolute exploit mechanism statement unsupported and should be limited to demonstrated chain；依据：RCE一定需要加载远程对象。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Apache Log4j2 从 RCE 到 RC1 绕过
 

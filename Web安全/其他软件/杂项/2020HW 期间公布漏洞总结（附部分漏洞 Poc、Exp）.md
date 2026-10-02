@@ -1,8 +1,68 @@
 ---
-cve: "CVE-2020-11974"
+cve: "CVE-2020-11974;CVE-2020-11991;CVE-2020-13922;CVE-2020-0618;CVE-2020-3980;CVE-2020-7115;CVE-2020-13948;CVE-2020-15148;CVE-2020-1472;CVE-2020-2040;CVE-2020-11107;CVE-2020-16875;CVE-2020-24616;CVE-2020-13933;CVE-2020-11995;CVE-2019-0230;CVE-2020-13699;CVE-2020-13921;CVE-2020-13925;CVE-2020-1350;CVE-2020-14645;CVE-2020-8194;CVE-2020-10977;CVE-2020-8193;CVE-2020-5902;CVE-2020-9498;CVE-2020-9480;CVE-2020-11989;CVE-2020-1948;CVE-2020-9483;CVE-2020-4450;CVE-2020-3956;CVE-2020-5410;CVE-2020-1956;CVE-2020-9484;CVE-2020-11651;CVE-2020-11652;CVE-2020-4362;CVE-2020-1947;CVE-2020-0796;CVE-2020-0688;CVE-2020-1938;CVE-2019-17564;CVE-2020-0601;CVE-2020-2551;CVE-2020-2555;CVE-2020-9951;CVE-2020-9992;CVE-2020-8245;CVE-2020-8246;CVE-2020-8247;CVE-2020-11861;CVE-2020-11699;CVE-2020-1035;CVE-2020-1048;CVE-2020-1092;CVE-2020-8028;CVE-2020-25751;CVE-2020-16860;CVE-2020-15920;CVE-2020-12109;CVE-2020-5421;CVE-2020-25790;CVE-2020-4643"
+cnnvd: "CNNVD-202009-1177;CNNVD-202009-1176;CNNVD-202009-1175"
+identifier_role: "primary"
+primary_identifiers: "CVE-2020-11974;CVE-2020-11991;CVE-2020-13922;CVE-2020-0618;CVE-2020-3980;CVE-2020-7115;CVE-2020-13948;CVE-2020-15148;CVE-2020-1472;CVE-2020-2040;CVE-2020-11107;CVE-2020-16875;CVE-2020-24616;CVE-2020-13933;CVE-2020-11995;CVE-2019-0230;CVE-2020-13699;CVE-2020-13921;CVE-2020-13925;CVE-2020-1350;CVE-2020-14645;CVE-2020-8194;CVE-2020-10977;CVE-2020-8193;CVE-2020-5902;CVE-2020-9498;CVE-2020-9480;CVE-2020-11989;CVE-2020-1948;CVE-2020-9483;CVE-2020-4450;CVE-2020-3956;CVE-2020-5410;CVE-2020-1956;CVE-2020-9484;CVE-2020-11651;CVE-2020-11652;CVE-2020-4362;CVE-2020-1947;CVE-2020-0796;CVE-2020-0688;CVE-2020-1938;CVE-2019-17564;CVE-2020-0601;CVE-2020-2551;CVE-2020-2555;CVE-2020-9951;CVE-2020-9992;CVE-2020-8245;CVE-2020-8246;CVE-2020-8247;CVE-2020-11861;CVE-2020-11699;CVE-2020-1035;CVE-2020-1048;CVE-2020-1092;CVE-2020-8028;CVE-2020-25751;CVE-2020-16860;CVE-2020-15920;CVE-2020-12109;CVE-2020-5421;CVE-2020-25790;CVE-2020-4643;CNNVD-202009-1177;CNNVD-202009-1176;CNNVD-202009-1175"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "2020HW 期间公布漏洞总结（附部分漏洞 Poc、Exp）"
+product: "多厂商网络设备、Web应用和系统"
+record_type: "vulnerability"
+document_type: "历史大规模漏洞汇总与残缺PoC"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "2020HW历史资料；各条版本/鉴权各异，多数只标题，部分含特定接口和配置前提"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/2020HW%20%E6%9C%9F%E9%97%B4%E5%85%AC%E5%B8%83%E6%BC%8F%E6%B4%9E%E6%80%BB%E7%BB%93%EF%BC%88%E9%99%84%E9%83%A8%E5%88%86%E6%BC%8F%E6%B4%9E%20Poc%E3%80%81Exp%EF%BC%89.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+source_url: "https://mp.weixin.qq.com/s/bz\\_prNH6Y3LBd3Sj7V5uFQ"
+id: "vw-ed79ecd10b11545f49330f37"
+entity_id: "ve-ed79ecd10b11545f49330f37"
+schema_version: "1"
 ---
 
 # 2020HW 期间公布漏洞总结（附部分漏洞 Poc、Exp）
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：多厂商网络设备、Web应用和系统
+- 文献类型：历史大规模漏洞汇总与残缺PoC
+- 版本、权限及部署边界：2020HW历史资料；各条版本/鉴权各异，多数只标题，部分含特定接口和配置前提
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 单CVE11974元数据错误代表跨几十产品大汇总，应拆为候选实体与原有条目交叉关联，保留汇总出处
+2. 两组清单大量重复：11699连续四次、7115/0688/1350/4450/13933等重复；编号74–77、111缺号，不能按序号计独立漏洞
+3. 天融信NGFW及山石SG6000明确辟谣，不得生成确定漏洞；未编号泛化标题也不能按词匹配认定CVE
+4. TeamViewer13699标全版本无密码连接、Citrix8193直接RCE等危害映射需核对原公告，不应照标题入实体
+5. VPN两项清单写Pre Auth而详情明确需要登录账号，保留认证前提冲突；手机号修改与密码重置不强并
+6. 大量PoC只剩br，SharePoint XML缺属性/标签并含转义破坏，联软URL粘连，WebSphere DTD引号嵌套与内容需恢复；不是完整PoC库
+7. 目录枚举与路径遍历概念混淆，泛微列目录不自动是新的独立漏洞；共享同根因应关联
+8. 来源层级补天/白泽/IDLab/HACK之道混合，多数无原始链接与补丁，已有issue/Seebug链接应保留
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://mp.weixin.qq.com/s/bz\_prNH6Y3LBd3Sj7V5uFQ>
+- 原文参考链接（未重新核验）：<http://ksria.com/simpread/>
+- 原文参考链接（未重新核验）：<http://IP:80/uai/newDevRegist/updateDevUploadinfo.htm（只有201904-1SP起才存在该漏洞）http://IP:80/uai/download/uploadfileToPath.htm（受影响的版本都存在该漏洞）http://IP:80/uai/newDevRegist/newDevRegist/newDevRegist/..;/..;/updateDevUploadinfo.htm（只有201904-1SP起才存在该漏洞）http://IP:80/uai/download/download/download/..;/..;/uploadfileToPath.htm>
+- 原文参考链接（未重新核验）：<http://www.w3.org/2001/XMLSchema>
+- 原文参考链接（未重新核验）：<http://www.w3.org/2001/XMLSchema-instance>
+- 原文参考链接（未重新核验）：<https://srcincite.io/pocs/zdi-20-1051.py.txt>
+
+### 归档技术正文
 
 <meta name="referrer" content="no-referrer"/>
 \> 本文由 \[简悦 SimpRead\](http://ksria.com/simpread/) 转码， 原文地址 \[mp.weixin.qq.com\](https://mp.weixin.qq.com/s/bz\_prNH6Y3LBd3Sj7V5uFQ)

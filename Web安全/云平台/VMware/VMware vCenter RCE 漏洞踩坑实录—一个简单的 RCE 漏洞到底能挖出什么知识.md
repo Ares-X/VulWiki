@@ -1,8 +1,51 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "VMware vCenter RCE 漏洞踩坑实录—一个简单的 RCE 漏洞到底能挖出什么知识"
+product: "VMware vCenter Server"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+source_url: "https://paper.seebug.org/1500/"
+source_status: "recorded"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-00013b8e2ebd9b9db10b0233"
+entity_id: "ve-00013b8e2ebd9b9db10b0233"
+schema_version: "1"
 ---
 
 # VMware vCenter RCE 漏洞踩坑实录—一个简单的 RCE 漏洞到底能挖出什么知识
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 本次正文校订
+
+- 按实际内容修正 2 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 全文未明确CVE元数据需按原来源确认21972
+- HTML上传input缺name=uploadFile与正文要求矛盾，实际不会提交该字段
+- 桥接+root/root仅实验经验不应作通用推荐，旧漏洞环境宜隔离
+- 7.0无解和一定成功过于绝对应限定2021构建/部署方式
+- 保留vsphere-ui写权限边界和tar checksum独特内容
+- tar magic/version混GNU/POSIX需明确格式
+- 表格文件大小00000000020八进制16与hacked_by_tunan14字节不一致
+- 缺厂商修复矩阵，删除IP自动测绘链接噪声
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [paper.seebug.org](https://paper.seebug.org/1500/)
@@ -147,7 +190,7 @@ _手动修改上传数据包导致失败和使用 macOS 的 tar 打包会出问�
 
 但是实际上你很难创建一个名为`../a.txt`的文件并将其压缩成 tar，所以可以通过以下代码去创建一个压缩包并释放到我们想释放的地方：
 
-```
+```python
 import tarfile
 import os
 from io import BytesIO
@@ -206,7 +249,7 @@ with tarfile.open("test.tar", 'w') as tar:
 
 所以我读 tar 的各种实现的时候可以看到这样的代码：
 
-```
+```python
 def calc_chksums(buf):
     """Calculate the checksum for a member's header by summing up all
        characters except for the chksum field which is treated as if

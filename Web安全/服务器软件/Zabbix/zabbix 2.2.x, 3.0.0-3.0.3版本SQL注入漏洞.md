@@ -1,8 +1,45 @@
 ---
 source: "白阁文库 BaizeSec/bylibrary"
+title: "zabbix 2.2.x, 3.0.0-3.0.3版本SQL注入漏洞"
+product: "Zabbix Web jsrpc.php"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2016-10134"
+referenced_identifiers: ""
+identifier_role: "primary"
+cve: "CVE-2016-10134"
+prerequisites: "受影响2.2.x/3.0.0–.3、SQL错误回显、可取得有效高权限session后才可后台脚本"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-e4cfc7b1b2f5b03780c4b94e"
+entity_id: "ve-e4cfc7b1b2f5b03780c4b94e"
+schema_version: "1"
 ---
 
 # zabbix 2.2.x, 3.0.0-3.0.3版本SQL注入漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：受影响2.2.x/3.0.0–.3、SQL错误回显、可取得有效高权限session后才可后台脚本
+- 证据范围：从SQL错误直接跳管理员脚本缺会话接管步骤；脚本补读哈希/session但SQL limit0,1不保证管理员或有效会话
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- Python所有块缩进丢失，不能直接运行
+- username取name显示名且passwd是哈希，输出标签管理员用户名密码误导
+- URL被硬换行拆词，标题###无空格
+- 2.2.x不能笼统覆盖所有补丁版；缺主CVE核实/修复矩阵
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 ###漏洞详情 ###
 Zabbix 是由 Alexei Vladishev 开发的一种网络监视、管理系统，基于 Server-Client 架构。可用于监视各种网络服务、服务器和网络机器等状态。本着其开源、安装简单等特点被广泛使用， zabbix安装完成后，超级管理员账号默认为：

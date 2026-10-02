@@ -1,8 +1,45 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "破解云端加密：亚马逊 AWS-LC 库中发现未经身份验证的绕过漏洞"
+product: "AWS-LC加密库"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-8304c531142e8614e1580fe8"
+entity_id: "ve-8304c531142e8614e1580fe8"
+schema_version: "1"
 ---
 
-#  破解云端加密：亚马逊 AWS-LC 库中发现未经身份验证的绕过漏洞  
+# 破解云端加密：亚马逊 AWS-LC 库中发现未经身份验证的绕过漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 3336/3337/3338均缺元数据，3337正文编号夹空格
+- 密码学消息/标签验证问题不等于云账户认证绕过或破解所有AWS加密
+- 可利用性依应用使用PKCS7_verify/AES-CCM等前提
+- authenticated attributes译已验证属性易混签名结果
+- FIPS绑定包名和版本待AWS原始公告核
+- HTML样式大量噪声但表格值需保留
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 sec随谈
                     sec随谈  sec随谈   2026-03-06 01:08  
   

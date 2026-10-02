@@ -1,6 +1,40 @@
 ---
 source: "Threekiii/Vulnerability-Wiki"
+product: "Grafana/数据源代理SSRF风险"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "Grafana管理后台SSRF"
+prerequisites: "来源所述条件，未列明部分仍待核：实验8.5.4，配置匿名org_role=Admin；真实需数据源管理权限，不是任意登录用户"
+side_effects: "未执行；本文需注意的操作影响：PoC有持久配置和外连副作用；创建SSRF-TESTING、更新Metadata头后删除；默认外部burpcollaborator地址和示例session不应原样使用；异常路径可能遗留配置"
+source_status: "unknown"
+id: "vw-d27f01fe07b5964ded551098"
+entity_id: "ve-d27f01fe07b5964ded551098"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：实验8.5.4，配置匿名org_role=Admin；真实需数据源管理权限，不是任意登录用户
+
+代码与实验材料：脚本新建/更新/删除数据源并发代理请求，固定外部回连默认值、批量目标文件、禁TLS验证；非只读检测
+
+来源证据范围：RandomRobbieBF原始PoC与Threekiii/Vulhub衍生实验
+
+- **适用与权限边界（1）**：权限边界与漏洞分类需明示；依据：靶场特意启用匿名Admin，却写只要成功登录即可利用；未说明管理员配置任意数据源属于设计能力还是绕过限制。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **操作与副作用边界（2）**：PoC有持久配置和外连副作用；依据：创建SSRF-TESTING、更新Metadata头后删除；默认外部burpcollaborator地址和示例session不应原样使用；异常路径可能遗留配置。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+- **适用与权限边界（3）**：检测可靠性不足；依据：非502即输出结果，无目标命中证据；无timeout、JSON异常处理，files和默认URL可能都运行。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Grafana管理后台SSRF
 

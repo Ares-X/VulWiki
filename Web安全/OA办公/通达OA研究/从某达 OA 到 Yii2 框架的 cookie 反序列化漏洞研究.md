@@ -1,10 +1,52 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "Yii2及通达OA集成 签名Cookie反序列化链研究"
+product: "Yii2及通达OA集成"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "Yii2具体版本缺；示例PHP<7，需已知cookieValidationKey及可用gadget"
+prerequisites: "密钥泄露/默认值，部分链需active session"
+side_effects: "命令/代码执行示例可能改变主机状态"
+review_date: "2026-10-02"
+source_url: "https://www.freebuf.com/vuls/378878.html"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E9%80%9A%E8%BE%BEOA%E7%A0%94%E7%A9%B6/%E4%BB%8E%E6%9F%90%E8%BE%BE%20OA%20%E5%88%B0%20Yii2%20%E6%A1%86%E6%9E%B6%E7%9A%84%20cookie%20%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%BC%8F%E6%B4%9E%E7%A0%94%E7%A9%B6.md"
+category_recommendation: "OA / 通达"
+id: "vw-a15b2d2178b5c27a94b3f7ef"
+entity_id: "ve-a15b2d2178b5c27a94b3f7ef"
+schema_version: "1"
 ---
 
-# 从某达 OA 到 Yii2 框架的 cookie 反序列化漏洞研究
+# Yii2及通达OA集成 签名Cookie反序列化链研究
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：Yii2及通达OA集成；签名Cookie反序列化链研究
+- 版本、配置及部署条件：Yii2具体版本缺；示例PHP<7，需已知cookieValidationKey及可用gadget
+- 认证与权限前提：密钥泄露/默认值，部分链需active session
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 500不是链存在必要或充分条件，其他错误也500且利用可无500，属于严重判据错误
+- 有PHPSESSID不自动等于session_status ACTIVE，文章全链必须加Cookie泛化不充分
+- HMAC称加密不准；PHP>=7特定入口allowed_classes限制不能推所有反序列化都安全
+- run代码缺闭括号，明文序列化丢NUL/转义损坏；key固定声明缺通达build证据
+- 主为框架研究应跨引Yii2，去大量推广和冗长ChatGPT函数解释
+
+## 操作风险
+
+命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/CSifD9cvO2MLxrgwGzcPNw)
 
 免费 & 进群
@@ -22,7 +64,7 @@ source: "MrWQ/vulnerability-paper"
 一、反序列化的入口与条件
 ------------
 
-### 1.hash 验证数据
+#### 1.hash 验证数据
 
 我们在 cookie 处提交的参数，被送到了这个 validateData 方法处，在这里 $data 的内容会被拆分。在期间其经历了一次 hash 值校验。我们只要用它提供的加密算法和密钥进行加密，生成数据，就能通过所有的校验，然后进入我们期望的 `return $pureData;` 环节。
 
@@ -54,7 +96,7 @@ public function validateData($data, $key, $rawHash = false)
 
 ```
 
-### 2.php 版本限制
+#### 2.php 版本限制
 
 上面的 validateData 方法，返回结果后，就回到了 loadCookies 方法。这里存在一个反序列化入口，就是下图 else 分支的内容，我们上一方法得到的反序列化数据会进入我们的反序列化入口（注意，allowed_classes 被设置为 false，则在反序列化过程中不会创建对象，只会还原基本数据类型，例如字符串、整数、数组等）。所以我们可以发现，在 Yii2 框架默认的环境下要进行这个反序列化操作，对 php 的版本是有所限制的，如下图，可以发现我们的版本中 PHP_VERSION_ID 要小于 70000 才能到达我们期望的反序列化入口。
 

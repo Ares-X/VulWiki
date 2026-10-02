@@ -1,6 +1,41 @@
 ---
 source: "MrWQ/vulnerability-paper"
+product: "WeiPHP / WebBase initWeb"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "Weiphp5 未授权访问 - Y4er的博客"
+prerequisites: "来源所述条件，未列明部分仍待核：2019-12-10官网5.0；仅继承WebBase且缺其他校验的页面，Admin独立校验例外明确"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "recorded"
+source_url: "https://y4er.com/post/weiphp5-unauthorized/"
+id: "vw-6e9fd6392bb30325409f71a2"
+entity_id: "ve-6e9fd6392bb30325409f71a2"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：2019-12-10官网5.0；仅继承WebBase且缺其他校验的页面，Admin独立校验例外明确
+
+代码与实验材料：完整继承链与IS_GET条件，GET跳登录/POST返回对照；无完整原始HTTP包
+
+来源证据范围：Y4er原文，具体修复commit缺
+
+- **适用与权限边界（1）**：末尾“几乎全部通杀”超过证据；依据：正文明确Admin模块及其他限制，不能由一个initWeb条件断言所有动作可越权。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **适用与权限边界（2）**：状态码/页面不等于所有敏感操作权限；依据：需要具体响应数据和角色对照，正文两例主要图片。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **事实待核（3）**：影响版本应固定；依据：日期最新版未给不可变commit，后续修复不明。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Weiphp5 未授权访问 - Y4er的博客
 

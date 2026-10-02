@@ -1,10 +1,50 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "泛微e-cology AST辅助前台SQL注入挖掘方法及WorkflowCenterTreeData示例"
+product: "泛微e-cology"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "Ecology8.100.0531；声称Ecology_security_20200102_v10.24后失效"
+prerequisites: "研究筛选HTTP200前台页面；200并不能独自证明无认证"
+side_effects: "请求可能删除/覆盖数据、修改账号或持久改变业务状态"
+review_date: "2026-10-02"
+source_url: "https://github.com/MrWQ/vulnerability-paper"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E5%8C%BF%E5%90%8DOA%E7%A0%94%E7%A9%B6/%E4%BB%8E%20AST%20%E5%88%B0%20100%20%E4%B8%AA%E6%9F%90%E7%9F%A5%E5%90%8D%20OA%20%E5%89%8D%E5%8F%B0%E6%B3%A8%E5%85%A5%20-%20%E6%96%97%E8%B1%A1%E8%83%BD%E5%8A%9B%E4%B8%AD%E5%BF%83.md"
+id: "vw-df9827480f4ba31f37d3b8a1"
+entity_id: "ve-df9827480f4ba31f37d3b8a1"
+schema_version: "1"
 ---
 
-# 从 AST 到 100 个某知名 OA 前台注入 - 斗象能力中心
+# 泛微e-cology AST辅助前台SQL注入挖掘方法及WorkflowCenterTreeData示例
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：泛微e-cology；AST辅助前台SQL注入挖掘方法及WorkflowCenterTreeData示例
+- 版本、配置及部署条件：Ecology8.100.0531；声称Ecology_security_20200102_v10.24后失效
+- 认证与权限前提：研究筛选HTTP200前台页面；200并不能独自证明无认证
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 不是100个独立已验证漏洞清单：正文明确160候选注入点、48成功EXP，候选及成果不应统一计数
+- 代码块大量反斜线转义导致Python/Java不可直接使用；示例rs.executeSql语句在mc_处截断
+- 正文自述不跨文件/未覆盖Java Token；仅按函数名判断source/repair、忽略控制流会产生误报/漏报，不能视为完整自动审计工具
+- 代码分段解释后又完整贴JavaParse有内部重复，可拆附录；保留方法论与局限而非与接口简报合并删除
+
+## 操作风险
+
+请求可能删除/覆盖数据、修改账号或持久改变业务状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 \> 本文由 \[简悦 SimpRead\](http://ksria.com/simpread/) 转码， 原文地址 \[blog.riskivy.com\](https://blog.riskivy.com/%e4%bb%8east%e5%88%b0100%e4%b8%aa%e6%9f%90%e7%9f%a5%e5%90%8doa%e5%89%8d%e5%8f%b0%e6%b3%a8%e5%85%a5/)
 
 > 2019 年 2 月在写这篇文章 [挖掘暗藏 ThinkPHP 中的反序列利用链](https://blog.riskivy.com/%e6%8c%96%e6%8e%98%e6%9a%97%e8%97%8fthinkphp%e4%b8%ad%e7%9a%84%e5%8f%8d%e5%ba%8f%e5%88%97%e5%88%a9%e7%94%a8%e9%93%be/) , 寻找 PHP 反序列化的`POP Chain`时, 我就在想这种纯粹的体力劳动可不可以更现代化一点, 不仅仅是`Ctrl+Shift+F`这种机械重复的体力劳动, 当时了解了一些相关的项目 / 论文, 包括不限于`Navex`, `Prvd`, `Cobra`, `Codeql`. 鉴于 Cobra 代码开源, 也相对简单, 后来有一阵子某知名 OA 漏洞爆发, 于是参考了`Cobra`的`PHP Parser`尝试实现一个通过遍历 Java AST(抽象语法树) 进行漏洞挖掘的工具, 没想到效果出奇的好, 筛选出 160 个前台注入点, 手工编写了约 50 个前台注入 EXP.
@@ -14,13 +54,13 @@ source: "MrWQ/vulnerability-paper"
 预备知识
 ----
 
-### 某知名 OA 介绍
+#### 某知名 OA 介绍
 
 某知名 OA 是使用 Java 编写的一个 OA 套件, 代码相对古老, 其中 sql 查询语句多是拼接, 且代码中没有过滤, 其过滤是通过统一的`Filter`实现的, 存在一些绕过的情况.
 
 某知名 OA 的主体功能是通过 JSP 实现的, 这里是目前只有`PMD`支持解析, 但是没有尝试, 从 idea 的的解析结果来看, 大概是解析不到具体函数逻辑的, 好在 JSP 可以编译成`Java Servlet`, 某知名 OA 使用的`Resin Server` 也会缓存编译好的`Java Servlet`, 这里倒是省了不少麻烦.
 
-### 编译原理基础
+#### 编译原理基础
 
 了解过编译原理的同学都知道, 一般语言的编译都是通过 `词法分析`,`语法分析`, 然后解析成`AST(抽象语法树)`, 这里包含了一个程序源文件的所有结构化信息, 通过遍历 AST 的方式, 我们可以精确的取出我们需要的信息, 而不是笨拙的使用全局搜索, 正则表达式这种会丢失上下文信息的方式.
 
@@ -35,7 +75,7 @@ source: "MrWQ/vulnerability-paper"
 
 默认配置安装完成就 OK 了
 
-### 遍历某知名 OA 的 JSP 文件路径
+#### 遍历某知名 OA 的 JSP 文件路径
 
 先使用 Python 获取到某知名 OA 文件夹中的 JSP 文件路径, 这里可以自己过滤一下
 
@@ -85,7 +125,7 @@ Request Payload    Status Error  Timeout    Length Comment
 
 ![](https://blog.riskivy.com/wp-content/uploads/2020/05/a61568ab99d868e38e4ab247c6f42250.png)
 
-### 获取 Resin 生成的 Servlet.java
+#### 获取 Resin 生成的 Servlet.java
 
 获取到 JSP 文件的访问权限列表的同时, 某知名 OA 的目录`D:\WEAVER\ecology\WEB-INF\work\_jsp`中也生成了对应的 JSP Servlet
 
@@ -96,7 +136,7 @@ Request Payload    Status Error  Timeout    Length Comment
 参考`Cobra`的`PHP Parser`
 ----------------------
 
-### Cobra 源码理解
+#### Cobra 源码理解
 
 [cobra/parser.py](https://github.com/WhaleShark-Team/cobra/blob/master/cobra/parser.py)
 
@@ -794,7 +834,7 @@ def scan\_parser(code\_content, sensitive\_func, vul\_lineno, repair):
 
 ```
 
-### 数据流分析基础知识
+#### 数据流分析基础知识
 
 使用数据流分析进行漏洞挖掘一般知道 4 个关键词就可以了
 
@@ -840,7 +880,7 @@ Java AST 解析器选择 Python 的`javalang`库
 
 <table><thead><tr><th>phply</th><th>javalang</th><th>解释</th><th>可迭代 / 参数</th><th>类型递归</th></tr></thead><tbody><tr><td>php.Variable</td><td>MemberReference</td><td>变量引用 member</td><td></td><td></td></tr><tr><td>php.FunctionCall</td><td>MethodInvocation</td><td>函数直接调用 member arguments</td><td>arguments</td><td></td></tr><tr><td>php.BinaryOp</td><td>BinaryOperation</td><td>二元操作 operandl operandr operator</td><td></td><td>operandl operandr</td></tr><tr><td></td><td>ArrayInitializer</td><td>数组初始化</td><td></td><td></td></tr><tr><td>php.ArrayOffset</td><td>ArraySelector</td><td>数组赋值操作 / 不需要</td><td>children</td><td></td></tr><tr><td>php.Block</td><td>BlockStatement</td><td>一些局部语句块,{} statements</td><td>statements</td><td></td></tr><tr><td>php.Print</td><td></td><td>Java 中应当没有, 应该是函数调用 sout</td><td></td><td></td></tr><tr><td>php.Assignment</td><td>Assignment</td><td>赋值语句</td><td></td><td>expressionl</td></tr><tr><td>php.Eval</td><td></td><td>这个 java 里没有, 有就是 beanshell/jshell</td><td></td><td></td></tr><tr><td>php.Silence</td><td></td><td>准备执行函数调用而不显示错误消息 https://www.php.net/manual/en/internals2.opcodes.begin-silence.php</td><td></td><td></td></tr><tr><td>php.Echo</td><td></td><td>Java 中应当没有, 应该是函数调用 sout</td><td></td><td></td></tr><tr><td>php.Include</td><td></td><td>import 暂不考虑</td><td></td><td></td></tr><tr><td>php.Require</td><td></td><td>import 暂不考虑</td><td></td><td></td></tr><tr><td>php.While</td><td>WhileStatement</td><td>body.statements condition</td><td>body.statements</td><td></td></tr><tr><td>php.For</td><td>ForStatement</td><td></td><td></td><td><blockstatement>body</blockstatement></td></tr><tr><td>php.Function</td><td>MethodDeclaration</td><td>phply: 函数名称 java 没有</td><td>body</td><td></td></tr><tr><td>php.Method</td><td>MethodDeclaration</td><td>phply: 类名称与函数名称 java 类方法</td><td>body</td><td></td></tr><tr><td>php.Class</td><td>ClassDeclaration</td><td>类定义</td><td>body</td><td></td></tr><tr><td>php.Cast</td><td>Cast</td><td>强制类型转换 $foo = (int) $bar;</td><td></td><td></td></tr><tr><td>php.If</td><td>IfStatement</td><td>then_statement else_statement</td><td></td><td>then_statement else_statement</td></tr><tr><td></td><td>DoStatement</td><td>do{}While 结构, 基本等同 While 处理</td><td>body.statements</td><td></td></tr><tr><td></td><td>Statement</td><td></td><td></td><td>expression</td></tr><tr><td></td><td>CompilationUnit</td><td>整个树</td><td>children[-1]</td><td></td></tr><tr><td></td><td>StatementExpression</td><td>是直接赋值给变量 (没变量类型声明开头) (代指一行?</td><td></td><td>expression</td></tr><tr><td></td><td>LocalVariableDeclaration</td><td>声明变量且初始化</td><td>declarators</td><td>declarators[0].initializer</td></tr><tr><td></td><td>This</td><td>代指当前类 / 类变量也是 This 的实例</td><td></td><td></td></tr><tr><td></td><td>SwitchStatement</td><td></td><td>cases:[SwitchStatementCase]</td><td></td></tr><tr><td></td><td>SwitchStatementCase</td><td></td><td>statements</td><td></td></tr><tr><td>php.Block</td><td>BlockStatement</td><td></td><td>statements</td><td></td></tr></tbody></table>
 
-### `scan_parser`配置`sink`, `repair`启动扫描
+#### `scan_parser`配置`sink`, `repair`启动扫描
 
 ```
 def scan\_parser(self, code\_content, sensitive\_func, vul\_lineno, repair):
@@ -871,7 +911,7 @@ def scan\_parser(self, code\_content, sensitive\_func, vul\_lineno, repair):
 
 ```
 
-### `analysis`分析器主函数
+#### `analysis`分析器主函数
 
 ```
 def analysis(self, nodes, vul\_function, back\_node, vul\_lineo, function\_params=None):
@@ -944,7 +984,7 @@ def analysis(self, nodes, vul\_function, back\_node, vul\_lineo, function\_param
 
 ```
 
-### `anlysis_function`分析函数调用
+#### `anlysis_function`分析函数调用
 
 ```
 def anlysis\_function(self, node, back\_node, vul\_function, function\_params, vul\_lineno):
@@ -977,7 +1017,7 @@ def anlysis\_function(self, node, back\_node, vul\_function, function\_params, v
 
 ```
 
-### `analysis_variable_node`分析变量节点
+#### `analysis_variable_node`分析变量节点
 
 ```
 def analysis\_variable\_node(self, node, back\_node, vul\_function, vul\_lineno, function\_params=None):
@@ -999,7 +1039,7 @@ def analysis\_variable\_node(self, node, back\_node, vul\_function, vul\_lineno,
 
 ```
 
-### `get_expr_name`获取赋值表达式中的参数名
+#### `get_expr_name`获取赋值表达式中的参数名
 
 ```
 def get\_expr\_name(self, node):  # expr为'expr'中的值
@@ -1055,7 +1095,7 @@ def get\_expr\_name(self, node):  # expr为'expr'中的值
 
 ```
 
-### `get_node_name`获取变量节点的变量名
+#### `get_node_name`获取变量节点的变量名
 
 ```
 def get\_node\_name(self, node):  # node为'node'中的元组
@@ -1072,7 +1112,7 @@ def get\_node\_name(self, node):  # node为'node'中的元组
 
 ```
 
-### `parameters_back`实现变量回溯
+#### `parameters_back`实现变量回溯
 
 ```
     def parameters\_back(self, param, nodes, function\_params=None, node\_lineno=-1):  # 用来得到回溯过程中的被赋值的变量是否与敏感函数变量相等,param是当前需要跟踪的污点
@@ -1159,7 +1199,7 @@ def get\_node\_name(self, node):  # node为'node'中的元组
 
 ```
 
-### `analysis_functioncall_node`处理函数调用节点
+#### `analysis_functioncall_node`处理函数调用节点
 
 ```
 def analysis\_functioncall\_node(self, node, back\_node, vul\_function, vul\_lineno, function\_params=None):
@@ -1181,7 +1221,7 @@ def analysis\_functioncall\_node(self, node, back\_node, vul\_function, vul\_lin
 
 ```
 
-### `get_function_params`提取函数的参数
+#### `get_function_params`提取函数的参数
 
 ```
 def get\_function\_params(self, nodes):
@@ -1199,7 +1239,7 @@ def get\_function\_params(self, nodes):
 
 ```
 
-### `get_all_params`获取函数的参数列表
+#### `get_all_params`获取函数的参数列表
 
 ```
 def get\_all\_params(self, nodes):  # 用来获取调用函数的参数列表，nodes为参数列表
@@ -1224,7 +1264,7 @@ def get\_all\_params(self, nodes):  # 用来获取调用函数的参数列表，
 
 ```
 
-### `get_all_funcs`获取节点下所有函数调用
+#### `get_all_funcs`获取节点下所有函数调用
 
 ```
 def get\_all\_funcs(self, node, tmp=\[\]):
@@ -1241,7 +1281,7 @@ def get\_all\_funcs(self, node, tmp=\[\]):
 
 ```
 
-### `analysis_binaryop_node`处理二元运算
+#### `analysis_binaryop_node`处理二元运算
 
 ```
 def analysis\_binaryop\_node(self, node, back\_node, vul\_function, vul\_lineno, function\_params=None):
@@ -1266,7 +1306,7 @@ def analysis\_binaryop\_node(self, node, back\_node, vul\_function, vul\_lineno,
 
 ```
 
-### `get_binaryop_deep_params`处理多层二元运算
+#### `get_binaryop_deep_params`处理多层二元运算
 
 ```
 def get\_binaryop\_deep\_params(self, node, params):  # 取出right，left不为变量时，对象结构中的变量
@@ -1286,7 +1326,7 @@ def get\_binaryop\_deep\_params(self, node, params):  # 取出right，left不为
 
 ```
 
-### `get_binaryop_params`提取二元运算涉及的变量
+#### `get_binaryop_params`提取二元运算涉及的变量
 
 ```
 def get\_binaryop\_params(self, node):  # 当为BinaryOp类型时，分别对left和right进行处理，取出需要的变量
@@ -1320,7 +1360,7 @@ def get\_binaryop\_params(self, node):  # 当为BinaryOp类型时，分别对lef
 
 ```
 
-### `analysis_if_else`分析判断语句
+#### `analysis_if_else`分析判断语句
 
 ```
 def analysis\_if\_else(self, node, vul\_function, back\_node, vul\_lineno, function\_params=None):
@@ -1337,7 +1377,7 @@ def analysis\_if\_else(self, node, vul\_function, back\_node, vul\_lineno, funct
 
 ```
 
-### `is_sink_function`判断函数入参是否进入
+#### `is_sink_function`判断函数入参是否进入
 
 ```
 def is\_sink\_function(self, param\_expr, function\_params):
@@ -1360,7 +1400,7 @@ def is\_sink\_function(self, param\_expr, function\_params):
 
 ```
 
-### `is_controllable`判断复制表达式是否可控
+#### `is_controllable`判断复制表达式是否可控
 
 ```
 def is\_controllable(self, expr):  # 获取表达式中的变量，看是否在用户可控变量列表中
@@ -1392,7 +1432,7 @@ def is\_controllable(self, expr):  # 获取表达式中的变量，看是否在�
 
 ```
 
-### `is_repair`判断赋值表达式中是否有过滤函数
+#### `is_repair`判断赋值表达式中是否有过滤函数
 
 ```
 def is\_repair(self, expr):
@@ -1428,7 +1468,7 @@ def is\_sink\_function(self, param\_expr, function\_params):
 
 ```
 
-### `set_scan_results`存储结果
+#### `set_scan_results`存储结果
 
 ```
 def set\_scan\_results(self, is\_co, cp, expr\_lineno, sink, param, vul\_lineno):
@@ -1466,7 +1506,7 @@ def set\_scan\_results(self, is\_co, cp, expr\_lineno, sink, param, vul\_lineno)
 测试代码
 ----
 
-### 测试文件
+#### 测试文件
 
 历史漏洞: [某知名 OA e-cology WorkflowCenterTreeData 前台接口 SQL 注入漏洞复现_数据库_小龙人 - CSDN 博客](https://blog.csdn.net/zycdn/article/details/102494037)
 
@@ -1684,7 +1724,7 @@ public class \_workflowcentertreedata\_\_jsp extends com.caucho.jsp.JavaPage {
 
 ```
 
-### 分析代码
+#### 分析代码
 
 `java_parser_class.py`
 
@@ -2296,7 +2336,7 @@ if \_\_name\_\_ == '\_\_main\_\_':
 
 ```
 
-### 分析结果
+#### 分析结果
 
 可以很明显的看出, 存在如下注入点
 
@@ -2348,13 +2388,13 @@ executeSql in java\_src/\_workflowcentertreedata\_\_jsp.java:105
 总体分析结果
 ------
 
-### 过滤后结果
+#### 过滤后结果
 
 结合前台访问响应码为 200 的 jsp 文件列表, 且直接为注入点, 不包含`二次sink`注入的注入点, 一个文件多个注入点没有去重, 共计 **160 处注入点**
 
 ![](https://blog.riskivy.com/wp-content/uploads/2020/05/45f5b07f30d683053fd37324ce7ceba2.png)
 
-### 手工构造注入 EXP
+#### 手工构造注入 EXP
 
 经过手工构造注入, 去掉`某知名OA中表不存在`, `del语句注入`, `同一个文件不同注入点`, 剩余 **48 个成功 EXP**
 
@@ -2365,12 +2405,12 @@ PS. 由于漏洞过多, /weaver / 接口下面映射 Servlet 就没有再继续�
 优缺点分析
 -----
 
-### 优点
+#### 优点
 
 1\. 相比正则匹配漏洞, 通过遍历 AST 抽象语法树的形式, 能够获得代码中的上下文关系, 可以更准确的定位漏洞  
 2\. 操作 AST 语法树, 可以更灵活的进行代码分析, 格式化的代码可以更好的为其他分析手段提供支撑, 比如机器学习分析 AST/CFG/IR
 
-### 缺点
+#### 缺点
 
 1.AST 处理的性能消耗较大  
 2\. 目前的代码不能很好的跨文件处理, 仅限于单个文件, 虽然有办法可以二次解析  

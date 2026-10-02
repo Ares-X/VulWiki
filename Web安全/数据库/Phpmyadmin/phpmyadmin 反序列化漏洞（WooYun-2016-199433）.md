@@ -1,8 +1,47 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "phpmyadmin 反序列化漏洞（WooYun-2016-199433）"
+product: "phpMyAdmin"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "可访问旧版 scripts/setup.php；影响版本与鉴权条件缺失"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-3cbc23ca4ce70ad11040979a"
+entity_id: "ve-3cbc23ca4ce70ad11040979a"
+schema_version: "1"
 ---
 
 # phpmyadmin 反序列化漏洞（WooYun-2016-199433）
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：可访问旧版 scripts/setup.php；影响版本与鉴权条件缺失
+- 证据范围：版本及代码审计章节只剩数字1；序列化字符串含转义下划线且 source 后用逗号，按正文复制不能作为有效 PoC
+
+### 本次正文校订
+
+- 按实际内容修正 1 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 转义污染破坏 PMA_Config 类名及 HTTP 通配符
+- 版本/原理章节丢失
+- 复现结果依赖未视检外链图
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 \> 本文由 \[简悦 SimpRead\](http://ksria.com/simpread/) 转码， 原文地址 \[www.cnblogs.com\](https://www.cnblogs.com/xhds/archive/2004/01/13/12579425.html)
@@ -53,7 +92,7 @@ http://192.168.52.129:8080/scripts/setup.php
 
 [![](http://common.cnblogs.com/images/copycode.gif)](javascript:void(0); "复制代码")
 
-```
+```http
 POST /scripts/setup.php HTTP/1.1
 Host: your-ip:8080
 Accept-Encoding: gzip, deflate

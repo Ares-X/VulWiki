@@ -1,9 +1,49 @@
 ---
 cve: "CVE-2024-38109"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Microsoft Azure Health曝出严重漏洞，可能导致横向移动"
+product: "Azure Health Bot Service"
+record_type: "incident"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2024-38109"
+referenced_identifiers: ""
+identifier_role: "primary"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-931a8e4a6afd1baf5f2b694d"
+entity_id: "ve-931a8e4a6afd1baf5f2b694d"
+schema_version: "1"
 ---
 
-#  Microsoft Azure Health曝出严重漏洞，可能导致横向移动   
+# Microsoft Azure Health曝出严重漏洞，可能导致横向移动
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 本次正文校订
+
+- 按该篇完整正文及逐篇审阅区分主问题与背景编号，补全结构化主标识；不把标识归属校订等同运行复现。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 需配置数据连接功能权限，非任意未认证访客
+- 2024年7月已由服务端修复应突出无需客户补丁
+- FHIR第二问题应独立关联而非默认同CVE
+- 没有原始Tenable/MSRC精确链接
+- 清广告空标题和空锚点
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 小薯条  FreeBuf   2024-08-15 19:01  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/qq5rfBadR38jUokdlWSNlAjmEsO1rzv3srXShFRuTKBGDwkj4gvYy34iajd6zQiaKl77Wsy9mjC0xBCRg0YgDIWg/640?wx_fmt=gif "")  

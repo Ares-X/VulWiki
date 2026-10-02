@@ -1,8 +1,45 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "NVIDIA NeMo曝安全漏洞，系统面临命令注入攻击风险"
+product: "NVIDIA NeMo"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-e9b0b36badb2d99f950f7257"
+entity_id: "ve-e9b0b36badb2d99f950f7257"
+schema_version: "1"
 ---
 
-#  NVIDIA NeMo曝安全漏洞，系统面临命令注入攻击风险  
+# NVIDIA NeMo曝安全漏洞，系统面临命令注入攻击风险
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 三CVE缺metadata
+- 开头24252所有平台与后文仅Linux冲突
+- 远程RCE叙述与AV:L本地权限冲突
+- 2.7.2/2.7.3需公告
+- 无具体验证方法和原始公告
+- 庞大HTML表格和宣传
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
  网安百色   2026-06-17 10:44  
   
 ![](https://mmbiz.qpic.cn/mmbiz_png/WibvcdjxgJntOzcDykIw1C0I1ic6gRtQD8eq5AWibSGUYjkRkRng9uViaXVOmuGn1aQCju2xyClbre0zuaxCyja6BEhZZjbMbtK5nuSubPKAYq4/640?wx_fmt=png&from=appmsg "")  

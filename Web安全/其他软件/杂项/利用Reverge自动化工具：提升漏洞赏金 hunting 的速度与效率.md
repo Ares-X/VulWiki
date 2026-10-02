@@ -1,8 +1,61 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+identifier_role: "reference"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "利用Reverge自动化工具：提升漏洞赏金 hunting 的速度与效率"
+product: "Reverge 攻击面管理工具教程"
+record_type: "unknown"
+document_type: "技术文章（细分类待核）"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "自定义乘法模板仅图无yaml/固定版本，8*8回显证明表达式执行不直接证明完整RCE；公网发现资产并不等于赏金授权范围，流程缺程序范围过滤；有watchTowr/Wiz具体研究，但无Securifera原教程链接/版本，产品自述效率非独立测评"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/%E5%88%A9%E7%94%A8Reverge%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7%EF%BC%9A%E6%8F%90%E5%8D%87%E6%BC%8F%E6%B4%9E%E8%B5%8F%E9%87%91%20hunting%20%E7%9A%84%E9%80%9F%E5%BA%A6%E4%B8%8E%E6%95%88%E7%8E%87.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-b3c3bff53e1dd1ada334537b"
+entity_id: "ve-b3c3bff53e1dd1ada334537b"
+schema_version: "1"
 ---
 
-#  利用Reverge自动化工具：提升漏洞赏金 hunting 的速度与效率  
+# 利用Reverge自动化工具：提升漏洞赏金 hunting 的速度与效率
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Reverge 攻击面管理工具教程
+- 文献类型：技术文章（细分类待核）
+- 版本、权限及部署边界：自定义乘法模板仅图无yaml/固定版本，8*8回显证明表达式执行不直接证明完整RCE；公网发现资产并不等于赏金授权范围，流程缺程序范围过滤；有watchTowr/Wiz具体研究，但无Securifera原教程链接/版本，产品自述效率非独立测评
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 正文例为Ivanti EPMM4427+4428，开头摘要却Fortinet32756，明显跨产品CVE污染
+2. 无人机战事和Medium技能研究与工具效果无直接证据，像无来源附加摘要
+3. Shodan图标仅候选，后续Java过滤/截图核实说明较谨慎但会漏指纹不足实例
+4. 自定义乘法模板仅图无yaml/固定版本，8*8回显证明表达式执行不直接证明完整RCE
+5. 公网发现资产并不等于赏金授权范围，流程缺程序范围过滤
+6. Reverge译反向传播错误
+7. 有watchTowr/Wiz具体研究，但无Securifera原教程链接/版本，产品自述效率非独立测评
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
  Ots安全   2025-06-10 06:26  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/bL2iaicTYdZn7gtxSFZlfuCW6AdQib8Q1onbR0U2h9icP1eRO6wH0AcyJmqZ7USD0uOYncCYIH7ZEE8IicAOPxyb9IA/640?wx_fmt=gif "")  
@@ -135,4 +188,4 @@ source: "gelusus/wxvl 公众号漏洞文库"
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

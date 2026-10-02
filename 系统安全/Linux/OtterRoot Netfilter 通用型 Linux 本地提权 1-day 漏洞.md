@@ -1,8 +1,67 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2024-26809"
+identifier_role: "primary"
+primary_identifiers: "CVE-2024-26809"
+referenced_identifiers: "CVE-2023-4004;CVE-2023-0461"
+identifier_status: "unknown"
+title: "OtterRoot Netfilter 通用型 Linux 本地提权 1-day 漏洞"
+product: "Linux nf_tables pipapo"
+record_type: "analysis"
+document_type: "深度利用研究译文"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "本地nf_tables管理能力/命名空间前提需补；kernelCTF LTS固定ROP与amd64通用物理读写方案分别说明"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/OtterRoot%20Netfilter%20%E9%80%9A%E7%94%A8%E5%9E%8B%20Linux%20%E6%9C%AC%E5%9C%B0%E6%8F%90%E6%9D%83%201-day%20%E6%BC%8F%E6%B4%9E.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-42f5996ffec12819c45889f9"
+entity_id: "ve-42f5996ffec12819c45889f9"
+schema_version: "1"
 ---
 
-#  OtterRoot Netfilter 通用型 Linux 本地提权 1-day 漏洞   
+# OtterRoot Netfilter 通用型 Linux 本地提权 1-day 漏洞
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Linux nf_tables pipapo
+- 文献类型：深度利用研究译文
+- 版本、权限及部署边界：本地nf_tables管理能力/命名空间前提需补；kernelCTF LTS固定ROP与amd64通用物理读写方案分别说明
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. frontmatter漏正文主CVE，标题OtterRoot别名需绑定26809；其他CVE是借鉴技术参考
+2. 详细区分引入错误代码commit与后续变为可利用的commit，标准化不可粗暴压成一个introduced_at
+3. 源码片段和13个来源/补丁/完整EXP链接丰富，保留kernelCTF与通用方案不同证据
+4. 任何目标系统无需改动过强，正文结论实际所有测试目标且依赖amd64物理对齐、布局/配置，应补测试矩阵
+5. 缺受影响/修复版本和USER_NS/CAP_NET_ADMIN配置；披露时间线月日缺年份，需锁2024而非当前
+6. 可核对代码if(count=read(...)<0)优先级与原源码；普通长文应去断行但保留技术细节
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://google.github.io/security-research/kernelctf/rules.html>
+- 原文参考链接（未重新核验）：<https://github.com/conlonialC>
+- 原文参考链接（未重新核验）：<https://lkmidas.github.io/posts/20210123-linux-kernel-pwn-part-1/>
+- 原文参考链接（未重新核验）：<https://pwning.tech/nftables>
+- 原文参考链接（未重新核验）：<https://starlabs.sg/blog/2023/09-nftables-adventures-bug-hunting-and-n-day-exploitation>
+- 原文参考链接（未重新核验）：<https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=b0e256f3dd2ba6532f37c5c22e07cb07a36031ee>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 Pedro Pinto  securitainment   2024-12-21 05:37  
   
 > OtterRoot Netfilter Universal Root 1-day  
@@ -815,4 +874,4 @@ GitHub:https://github.com/otter-sec/OtterRoot/blob/master/universal/exploit.c
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

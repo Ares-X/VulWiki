@@ -1,8 +1,49 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "用友iUFO Cloud集成U8Cloud 权限绕过及上传限制公告"
+product: "用友iUFO Cloud集成U8Cloud"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "LDYVUL-2026-00018565"
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "2.0–5.1sp所列；需iUFO组件暴露"
+prerequisites: "公告无条件，不代表无组件前提"
+side_effects: "文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行"
+review_date: "2026-10-02"
+identifier_role: "primary"
+source_status: "unknown"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E7%94%A8%E5%8F%8BGRP-u8/%E7%8B%AC%E5%AE%B6%E5%A4%8D%E7%8E%B0%20%E7%94%A8%E5%8F%8B%E4%BC%81%E4%B8%9A%E6%8A%A5%E8%A1%A8iUFO%20Cloud%28U8Cloud%29%E6%97%A0%E6%9D%A1%E4%BB%B6%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E.md"
+id: "vw-1e54a675e98332ccee2d31d0"
+entity_id: "ve-1e54a675e98332ccee2d31d0"
+schema_version: "1"
 ---
 
-#  【独家复现】用友企业报表iUFO Cloud(U8Cloud)无条件任意文件上传漏洞  
+# 用友iUFO Cloud集成U8Cloud 权限绕过及上传限制公告
+
+## 条目说明
+
+- 对象与具体问题：用友iUFO Cloud集成U8Cloud；权限绕过及上传限制公告
+- 版本、配置及部署条件：2.0–5.1sp所列；需iUFO组件暴露
+- 认证与权限前提：公告无条件，不代表无组件前提
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 错GRP-U8目录，主研究ID LDYVUL2026-00018565应独立类型
+- 已说明PoC/EXP/技术未公开且未见在野，应保留该边界
+- 截图不代替公开技术证明，去产品广告/把发布日期和规则计划分开
+
+## 操作风险
+
+文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 原创 画船听雨眠
                     画船听雨眠  360漏洞研究院   2026-02-03 07:12  
   

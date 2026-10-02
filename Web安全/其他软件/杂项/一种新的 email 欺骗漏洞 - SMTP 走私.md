@@ -1,8 +1,61 @@
 ---
 source: "MrWQ/vulnerability-paper"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "一种新的 email 欺骗漏洞 - SMTP 走私"
+product: "SMTP Smuggling / 多邮件服务协议解析差异"
+record_type: "unknown"
+document_type: "技术文章（细分类待核）"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "文章有2023时间背景和原始SEC Consult研究链接但无修复状态/版本/厂商缓解建议，不能作为当前所有服务均受影响证据"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/%E4%B8%80%E7%A7%8D%E6%96%B0%E7%9A%84%20email%20%E6%AC%BA%E9%AA%97%E6%BC%8F%E6%B4%9E%20-%20SMTP%20%E8%B5%B0%E7%A7%81.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+source_url: "https://mp.weixin.qq.com/s/XZA4QVcUrBGsiG5Qo1IHig"
+id: "vw-1ab0d1a014a0210243c883fa"
+entity_id: "ve-1ab0d1a014a0210243c883fa"
+schema_version: "1"
 ---
 
 # 一种新的 email 欺骗漏洞 - SMTP 走私
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：SMTP Smuggling / 多邮件服务协议解析差异
+- 文献类型：技术文章（细分类待核）
+- 版本、权限及部署边界：文章有2023时间背景和原始SEC Consult研究链接但无修复状态/版本/厂商缓解建议，不能作为当前所有服务均受影响证据
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 关键终止序列多处丢失点号，CRLF.CRLF被写成CRLFCRLF及LF.LF被写LFLF，影响技术准确性
+2. DATA等待正文标准响应354却列250，BDAT能力误写POOLING而应核对CHUNKING
+3. Linux换行习惯不等于SMTP协议规范，漏洞取决于两端解析组合
+4. 伪造admin发件人不等于接管管理员账号，SPF通过也需与可见From对齐才能论DMARC
+5. 文章有2023时间背景和原始SEC Consult研究链接但无修复状态/版本/厂商缓解建议，不能作为当前所有服务均受影响证据
+6. 给出的至少35域名列表有重复、暴露量与可利用量混用
+7. responsible-disclosure-polic链接截断，关键完整SMTP会话依赖图片
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://mp.weixin.qq.com/s/XZA4QVcUrBGsiG5Qo1IHig>
+
+### 归档技术正文
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/XZA4QVcUrBGsiG5Qo1IHig)
@@ -215,7 +268,7 @@ $dig _spf-eu.ionos.com TXT
 
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/ESFRPeynAv6ZYkJ9rDERXHOYJEl9ia3tyOhkqv6uZgrUr9qcs7s8vVs6rMlThBqnzPbcnecVtaxFXxvAbcxucKg/640?wx_fmt=png&from=appmsg)
 
-即使这阻止了我们向某些入站 SMTP 服务器进行走私，但如果入站 SMTP 服务器支持 BDAT 命令，则 BDAT 命令只能由 Outlook 使用。如果入站 SMTP 服务器没有通过返回 POOLING 功能来表明支持 BDAT，则使用 DATA 作为后备。
+即使这阻止了我们向某些入站 SMTP 服务器进行走私，但如果入站 SMTP 服务器支持 BDAT 命令，则 BDAT 命令只能由 Outlook 使用。如果入站 SMTP 服务器没有通过返回 CHUNKING 扩展来表明支持 BDAT（原文误写为 POOLING），则使用 DATA 作为后备。
 
 因此，我们寻找一个入站 SMTP 服务器，会解释数据结束序列，并且不支持 BDAT。
 

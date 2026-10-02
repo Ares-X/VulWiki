@@ -1,9 +1,51 @@
 ---
-cve: "CVE-2024-0333"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Chrome CRX/Minizip 0333 ZIP64签名解析差异"
+product: "Chrome CRX/Minizip"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2024-0333"
+referenced_identifiers: "CVE-2022-32427;CVE-2022-32972"
+identifier_status: "unknown"
+affected_scope: "小于64kB有效CRX；企业HTTP扩展更新；120.0.6099.216修复"
+prerequisites: "能替换企业更新源/网络前提"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+identifier_role: "primary"
+source_status: "unknown"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/Chrome/%E6%BC%8F%E6%B4%9E%E8%A7%A3%E9%87%8A%EF%BC%9A%E9%92%88%E5%AF%B9%20Google%20Chrome%20%E6%89%A9%E5%B1%95%E7%A8%8B%E5%BA%8F%E7%9A%84%20ZIP%20%E5%B5%8C%E5%85%A5%E6%94%BB%E5%87%BB.md"
+category_recommendation: "桌面软件 / 浏览器"
+id: "vw-b3768f6ee747bab4fdbfa6ff"
+entity_id: "ve-b3768f6ee747bab4fdbfa6ff"
+schema_version: "1"
 ---
 
-#  漏洞解释：针对 Google Chrome 扩展程序的 ZIP 嵌入攻击   
+# Chrome CRX/Minizip 0333 ZIP64签名解析差异
+
+## 条目说明
+
+- 对象与具体问题：Chrome CRX/Minizip；0333 ZIP64签名解析差异
+- 版本、配置及部署条件：小于64kB有效CRX；企业HTTP扩展更新；120.0.6099.216修复
+- 认证与权限前提：能替换企业更新源/网络前提
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 作者明确没实现本地提权，不能因Elevation Service背景标LPE
+- Chrome商店和组件签名额外保护须保留，不推广所有扩展均可劫持
+- 所称视频演练未附视频；代码脚本未收录，属于研究说明
+- 32427/32972为作者往年研究引用；保留Synack主源去GIF
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
  Ots安全   2024-04-16 18:00  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/bL2iaicTYdZn7gtxSFZlfuCW6AdQib8Q1onbR0U2h9icP1eRO6wH0AcyJmqZ7USD0uOYncCYIH7ZEE8IicAOPxyb9IA/640?wx_fmt=gif "")  

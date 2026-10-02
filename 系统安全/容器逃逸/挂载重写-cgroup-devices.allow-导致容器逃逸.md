@@ -1,9 +1,67 @@
 ---
-version: "Docker version: 18.09.3"
 source: "Threekiii/Vulnerability-Wiki"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "挂载重写-cgroup-devices.allow-导致容器逃逸"
+product: "Linux cgroup v1 devices / 容器capabilities"
+record_type: "analysis"
+document_type: "cgroup设备控制危险配置逃逸教程"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "CAP_SYS_ADMIN、可挂载/修改devices层级、CAP_MKNOD/设备及LSM允许；示例AppArmor unconfined、K8s1.32/旧Docker组合，cgroupv1"
+side_effects: "devices.list是当前允许规则列表，不是同时列黑白名单；devices.allow/deny是写入调整接口应准确表述；SYS_ADMIN/AppArmor配置和latest镜像需固定环境，CDK实际命令仅图；直接挂载正在使用文件系统可能损坏数据，未说明只读/副作用"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/%E5%AE%B9%E5%99%A8%E9%80%83%E9%80%B8/%E6%8C%82%E8%BD%BD%E9%87%8D%E5%86%99-cgroup-devices.allow-%E5%AF%BC%E8%87%B4%E5%AE%B9%E5%99%A8%E9%80%83%E9%80%B8.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+version_unverified: "Docker version: 18.09.3"
+id: "vw-2406cde84fb9857a9d64b46c"
+entity_id: "ve-2406cde84fb9857a9d64b46c"
+schema_version: "1"
 ---
 
-# 挂载重写 cgroup devices.allow 导致容器逃逸
+# 挂载重写-cgroup-devices.allow-导致容器逃逸
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Linux cgroup v1 devices / 容器capabilities
+- 文献类型：cgroup设备控制危险配置逃逸教程
+- 版本、权限及部署边界：CAP_SYS_ADMIN、可挂载/修改devices层级、CAP_MKNOD/设备及LSM允许；示例AppArmor unconfined、K8s1.32/旧Docker组合，cgroupv1
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. YAML只加SYS_ADMIN并解除AppArmor，不等于privileged:true；标题/描述特权容器与实际配置应区分
+2. 机制依赖cgroup v1 devices控制器，不能适用统一cgroupv2；父cgroup约束/namespace挂载权限未说明，单SYS_ADMIN不保证成功
+3. devices.list是当前允许规则列表，不是同时列黑白名单；devices.allow/deny是写入调整接口应准确表述
+4. 第二步与第三步提示符中的Pod/容器ID变化，可能混用两次实验，应保持同一会话证据
+5. mountinfo awk固定列8/grep/etc不稳健，major/minor对应Minikube节点哪一层磁盘需说明，不能自动指用户物理宿主盘
+6. SYS_ADMIN/AppArmor配置和latest镜像需固定环境，CDK实际命令仅图；直接挂载正在使用文件系统可能损坏数据，未说明只读/副作用
+7. 删除Pod/namespace不足恢复设备策略或宿主定时任务等修改；保留完整YAML/源链接，图片未视检
+
+### 操作风险
+
+devices.list是当前允许规则列表，不是同时列黑白名单；devices.allow/deny是写入调整接口应准确表述；SYS_ADMIN/AppArmor配置和latest镜像需固定环境，CDK实际命令仅图；直接挂载正在使用文件系统可能损坏数据，未说明只读/副作用
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://github.com/cdk-team/CDK/wiki/Exploit:-rewrite-cgroup-devices>
+- 原文参考链接（未重新核验）：<https://blog.nsfocus.net/docker/>
+- 原文参考链接（未重新核验）：<https://github.com/Threekiii/Awesome-POC/blob/master/%E4%BA%91%E5%AE%89%E5%85%A8%E6%BC%8F%E6%B4%9E/Kubernetes%20%2B%20Ubuntu%2018.04%20%E6%BC%8F%E6%B4%9E%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA.md>
+- 原文参考链接（未重新核验）：<https://github.com/cdk-team/CDK>
+- 原文参考链接（未重新核验）：<https://github.com/Metarget/metarget/blob/master/vulns_cn/configs/pods/cap_sys_admin-container.yaml>
+- 原文参考链接（未重新核验）：<https://github.com/Threekiii/Vulnerability-Wiki>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
 
 ## 漏洞描述
 

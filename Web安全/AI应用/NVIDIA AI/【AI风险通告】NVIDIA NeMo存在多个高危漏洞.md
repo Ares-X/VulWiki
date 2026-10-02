@@ -1,8 +1,50 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "【AI风险通告】NVIDIA NeMo存在多个高危漏洞"
+product: "NVIDIA NeMo"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+verification_source: "https://nvidia.custhelp.com/app/answers/detail/a_id/5641"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-f19f37930d8c7ce8b2e60e3b"
+entity_id: "ve-f19f37930d8c7ce8b2e60e3b"
+schema_version: "1"
 ---
 
-#  【AI风险通告】NVIDIA NeMo存在多个高危漏洞   
+# 【AI风险通告】NVIDIA NeMo存在多个高危漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 23251在HTML被拆成2325与1需文本节点拼接后识别
+- 开头因果措辞含混；核验发现NVIDIA原始公告也如此，不能归咎转载翻译或擅改为已证实根因
+- 引用CVE-2024-12084为无关Rsync需移除
+- 25.02与UI要求未结构化，下载根仓库不能定位修复
+- 仅风险公告无具体触发或PoC，保持source-reported状态
+- HTML约占大多数内容，应清除样式但保留三表关系
+
+### 核验来源
+
+- https://nvidia.custhelp.com/app/answers/detail/a_id/5641
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 安恒研究院  安恒信息CERT   2025-04-24 10:00  
   
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/JAzzLj4nXevrbRSvWKlpibU238wmrQ8Fo2AbDkPzia3P6AsR4MxML7J2nQPTkiazI1yJhmKib873btfcAkZ7wocYgA/640?wx_fmt=jpeg&from=appmsg "")  

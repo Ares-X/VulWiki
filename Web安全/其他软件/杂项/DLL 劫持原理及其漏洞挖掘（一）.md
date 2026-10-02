@@ -1,8 +1,64 @@
 ---
 source: "MrWQ/vulnerability-paper"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "DLL 劫持原理及其漏洞挖掘（一）"
+product: "Windows DLL加载机制；EasyConnectInstaller示例"
+record_type: "analysis"
+document_type: "DLL劫持入门教程"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "需攻击者可写先行搜索目录并受害程序加载；VS2017教程、EasyConnect版本不明"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/DLL%20%E5%8A%AB%E6%8C%81%E5%8E%9F%E7%90%86%E5%8F%8A%E5%85%B6%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%EF%BC%88%E4%B8%80%EF%BC%89.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+source_url: "https://mp.weixin.qq.com/s/BdmrN-8lR9AXM8jX3yxJAA"
+id: "vw-74baea312a08dad821a7e398"
+entity_id: "ve-74baea312a08dad821a7e398"
+schema_version: "1"
 ---
 
 # DLL 劫持原理及其漏洞挖掘（一）
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Windows DLL加载机制；EasyConnectInstaller示例
+- 文献类型：DLL劫持入门教程
+- 版本、权限及部署边界：需攻击者可写先行搜索目录并受害程序加载；VS2017教程、EasyConnect版本不明
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 严重拼接错误：创建SafeDllSearchMode注册表项下面实际放的是Procmon过滤器文本，应回源恢复而非照做
+2. 当前工作目录不等于打开文档所在目录；非系统盘安装不自动意味着低权限可写；缺ACL和进程权限边界
+3. KnownDLLs始于Windows7、绝对路径即可防御等概括需微软原文核验；未涵盖依赖DLL搜索及加载API旗标差异
+4. *.h不是静态库；THREAD_ATTACH/DETACH不是DLL被某线程加载卸载；PE64/静态导入与延迟加载的简介不完整
+5. 多个参考只有名字无链接；EasyConnect实际缺失DLL名、版本和权限仅截图，不能据此认定通用产品漏洞；保留工具漏检负结果
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://mp.weixin.qq.com/s/BdmrN-8lR9AXM8jX3yxJAA>
+- 原文参考链接（未重新核验）：<http://ksria.com/simpread/>
+- 原文参考链接（未重新核验）：<https://github.com/sensepost/rattler/releases/>
+- 原文参考链接（未重新核验）：<https://github.com/anhkgg/anhkgg-tools]>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzA5ODA0NDE2MA==&mid=2649736957&idx=1&sn=ccbf22ab5e3576c28bf65b549e96801a&chksm=888cf692bffb7f84a811f0ea7cb15d6d954d29938a3ca6818073d1bdc2a51d15fed7ee03d691&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzA5ODA0NDE2MA==&mid=2649736836&idx=1&sn=fdd6150c8b5981b4de1ea4f7825f7de4&chksm=888cf6ebbffb7ffd0886d857a75cb49cc0edeef0bffc969f82f031db9ab0cfcdb4df2b5f80d4&scene=21#wechat_redirect>
+
+### 归档技术正文
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/BdmrN-8lR9AXM8jX3yxJAA)
@@ -216,9 +272,9 @@ Windows 查找 DLL 目录及其顺序如下:
 
 注:
 
-> 强制关闭 SafeDllSearchMode 的方法:
+> Procmon 过滤器示例（原文误贴在 SafeDllSearchMode 注册表说明下）:
 > 
-> 创建注册表项:
+> 以下为 Procmon 过滤条件，不是注册表设置；缺失的 SafeDllSearchMode 操作不猜补，也不建议据此关闭安全搜索模式:
 > 
 > ```
 > Include the following filters:

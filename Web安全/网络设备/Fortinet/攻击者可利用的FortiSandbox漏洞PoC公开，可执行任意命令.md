@@ -1,9 +1,54 @@
 ---
 cve: "CVE-2026-39808"
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-45a7bced74e8719c589c0221"
+entity_id: "ve-45a7bced74e8719c589c0221"
+schema_version: "1"
+title: "攻击者可利用的FortiSandbox漏洞PoC公开，可执行任意命令"
+product: "FortiSandbox"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2026-39808"
+referenced_identifiers: ""
+prerequisites: "4.4.0–4.4.8；未认证jid参数命令注入"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/Fortinet/%E6%94%BB%E5%87%BB%E8%80%85%E5%8F%AF%E5%88%A9%E7%94%A8%E7%9A%84FortiSandbox%E6%BC%8F%E6%B4%9EPoC%E5%85%AC%E5%BC%80%EF%BC%8C%E5%8F%AF%E6%89%A7%E8%A1%8C%E4%BB%BB%E6%84%8F%E5%91%BD%E4%BB%A4.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 #  攻击者可利用的FortiSandbox漏洞PoC公开，可执行任意命令  
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：FortiSandbox
+- 本文讨论：CVE-2026-39808
+- 版本、权限与配置前提：4.4.0–4.4.8；未认证jid参数命令注入
+- 资料类型：新闻/单请求PoC；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 仅给二手新闻链接，官方FG编号及PoC作者名字未附直链
+- 升级4.4.8以上不等于确切首修版；无可见响应验证
+- 写web根后读回步骤只描述未给实际响应
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 端点、root权限及修复版本待核验
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
  FreeBuf   2026-04-20 10:04  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/qq5rfBadR38jUokdlWSNlAjmEsO1rzv3srXShFRuTKBGDwkj4gvYy34iajd6zQiaKl77Wsy9mjC0xBCRg0YgDIWg/640?wx_fmt=gif "")  

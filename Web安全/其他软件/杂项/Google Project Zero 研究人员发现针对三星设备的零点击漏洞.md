@@ -1,8 +1,63 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2024-49415"
+identifier_role: "primary"
+primary_identifiers: "CVE-2024-49415"
+referenced_identifiers: "CVE-2024-49413;CVE-2024-44068"
+identifier_status: "unknown"
+title: "Google Project Zero 研究人员发现针对三星设备的零点击漏洞"
+product: "Samsung libsaped.so APE decoder"
+record_type: "advisory"
+document_type: "漏洞研究新闻"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "Android12/13/14中SMR Dec2024 Release1之前；S24且Google Messages启用RCS自动转录路径"
+side_effects: "保留研究者明确可利用性不清、已观察媒体进程崩溃；不得标题零点击直接等同稳定RCE或所有三星型号"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/Google%20Project%20Zero%20%E7%A0%94%E7%A9%B6%E4%BA%BA%E5%91%98%E5%8F%91%E7%8E%B0%E9%92%88%E5%AF%B9%E4%B8%89%E6%98%9F%E8%AE%BE%E5%A4%87%E7%9A%84%E9%9B%B6%E7%82%B9%E5%87%BB%E6%BC%8F%E6%B4%9E.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-d08419fc5ea181e112d49380"
+entity_id: "ve-d08419fc5ea181e112d49380"
+schema_version: "1"
 ---
 
-#  Google Project Zero 研究人员发现针对三星设备的零点击漏洞   
+# Google Project Zero 研究人员发现针对三星设备的零点击漏洞
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Samsung libsaped.so APE decoder
+- 文献类型：漏洞研究新闻
+- 版本、权限及部署边界：Android12/13/14中SMR Dec2024 Release1之前；S24且Google Messages启用RCS自动转录路径
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 每样本字节数24应核实为24位/3字节，现文字与最多3*blocks计算矛盾
+2. 保留研究者明确可利用性不清、已观察媒体进程崩溃；不得标题零点击直接等同稳定RCE或所有三星型号
+3. 49413SmartSwitch和44068处理器历史在野为背景，不能把后者在野状态赋给49415
+4. ProjectZero原始issue和三星公告链接完整，月度公告应固定历史日期/条目；无本地PoC且截图未视检
+
+### 操作风险
+
+保留研究者明确可利用性不清、已观察媒体进程崩溃；不得标题零点击直接等同稳定RCE或所有三星型号
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://project-zero.issues.chromium.org/issues/368695689>
+- 原文参考链接（未重新核验）：<https://security.samsungmobile.com/securityUpdate.smsb>
+- 原文参考链接（未重新核验）：<https://thehackernews.com/2025/01/google-project-zero-researcher-uncovers.html>
+- 原文参考链接（未重新核验）：<https://securityaffairs.com/172909/hacking/samsung-zero-click-flaw.html>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 会杀毒的单反狗  军哥网络安全读报   2025-01-11 01:03  
   
 **导****读**  
@@ -83,4 +138,4 @@ https://securityaffairs.com/172909/hacking/samsung-zero-click-flaw.html
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

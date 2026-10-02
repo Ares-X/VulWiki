@@ -1,8 +1,44 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "漏洞爆料！微软SharePoint又被高手秒杀，Pwn2Own单招就破防！"
+product: "SharePoint ToolShell"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-d2103d3b4306015f2993ac56"
+entity_id: "ve-d2103d3b4306015f2993ac56"
+schema_version: "1"
 ---
 
-#  漏洞爆料！微软SharePoint又被高手秒杀，Pwn2Own单招就破防！  
+# 漏洞爆料！微软SharePoint又被高手秒杀，Pwn2Own单招就破防！
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 两个主CVE均未提取
+- 2025-07-15新闻与之后53770/53771补丁绕过分时间
+- 仅截图无完整请求，RCE声明需原始CODEWHITE/竞赛研究链接
+- 版本和修复build缺失
+- F5类比和广告无实质技术价值
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
  Ots安全   2025-07-15 10:38  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/bL2iaicTYdZn7gtxSFZlfuCW6AdQib8Q1onbR0U2h9icP1eRO6wH0AcyJmqZ7USD0uOYncCYIH7ZEE8IicAOPxyb9IA/640?wx_fmt=gif "")  

@@ -1,8 +1,60 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2024-8811;CVE-2024-11477"
+identifier_role: "primary"
+primary_identifiers: "CVE-2024-8811;CVE-2024-11477"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "winzip、7z 压缩软件存在漏洞需以及一条不可信的 Linux 0day 漏洞预警"
+product: "WinZip与7-Zip"
+record_type: "vulnerability"
+document_type: "多产品漏洞简报及未证实传闻"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "WinZip文中76.8修复；7-Zip24.07修复Zstandard整数下溢；各自需处理不可信归档"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/WinZip/winzip%E3%80%817z%20%E5%8E%8B%E7%BC%A9%E8%BD%AF%E4%BB%B6%E5%AD%98%E5%9C%A8%E6%BC%8F%E6%B4%9E%E9%9C%80%E4%BB%A5%E5%8F%8A%E4%B8%80%E6%9D%A1%E4%B8%8D%E5%8F%AF%E4%BF%A1%E7%9A%84%20Linux%200day%20%E6%BC%8F%E6%B4%9E%E9%A2%84%E8%AD%A6.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-9de89083d17c2736d48fd8ac"
+entity_id: "ve-9de89083d17c2736d48fd8ac"
+schema_version: "1"
 ---
 
-#  winzip、7z 压缩软件存在漏洞需警惕以及一条不可信的 Linux 0day 漏洞预警   
+# winzip、7z 压缩软件存在漏洞需以及一条不可信的 Linux 0day 漏洞预警
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：WinZip与7-Zip
+- 文献类型：多产品漏洞简报及未证实传闻
+- 版本、权限及部署边界：WinZip文中76.8修复；7-Zip24.07修复Zstandard整数下溢；各自需处理不可信归档
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 两独立产品CVE无元数据且放同一WinZip目录，应拆实体保留简报
+2. WinZip76.8与常见发行版本体系关系需核验，不可凭常识直接改数字；缺两份ZDI原始链接
+3. 7-Zip为Zstandard解析内存缺陷，不应按同文WinZip MotW归类；使用者调用库与GUI交互条件不同
+4. Linux0day售卖只是无PoC低信誉账号传闻，作者已明确不可信，不得生成确定漏洞实体
+5. 保留各表时间线/作者，清理内联样式与重复叙述；关联既有7-Zip11477文章
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
  独眼情报   2024-11-23 07:09  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/KgxDGkACWnTNNicdRDCjuRO46761bVq60uyWOvYxspDyt1lHzDdGw8RA63e84jGRo2LibdySVg73G9tnfg1zvkTw/640?wx_fmt=png&from=appmsg "")  
@@ -51,4 +103,4 @@ source: "gelusus/wxvl 公众号漏洞文库"
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

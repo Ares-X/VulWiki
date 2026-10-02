@@ -1,9 +1,52 @@
 ---
-fofa: "中通过搜索关键字：title="
+fofa: "title=\"jumpserver\""
 source: "MrWQ/vulnerability-paper"
+title: "【漏洞复现】jumpserver 未授权访问漏洞"
+product: "JumpServer2021 log/token chain"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "Same vulnerable branches; logs/asset IDs;1.5.9 before/after repack distinction"
+source_url: "https://mp.weixin.qq.com/s/MIP43dVMfAUgsiwjzSFgHw"
+source_status: "recorded"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-d7b941d096cb199e7b166833"
+entity_id: "ve-d7b941d096cb199e7b166833"
+schema_version: "1"
 ---
 
 # 【漏洞复现】jumpserver 未授权访问漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：Same vulnerable branches; logs/asset IDs;1.5.9 before/after repack distinction
+- 证据范围：Own log-failure notes and mitigation; code copied from panel13 with formatting corruption
+
+### 本次正文校订
+
+- 从本文明确展示的查询恢复完整 FOFA 元数据；资产指纹只用于识别，不是漏洞命中证据。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- Affected and unaffected both list1.5.9, explaining number unchanged but no build/commit/date discriminator
+- Flat branch ranges contradictory without bounds
+- fofa metadata includes truncated prose '中通过搜索关键字:title='
+- Code rendered as table-pipe debris; extra indentation before asyncio call invalidates Python
+- Scope of current-admin-session prerequisite unproven; distinguish log availability
+- Retain own mitigation/lab notes while deduplicating reused code
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/MIP43dVMfAUgsiwjzSFgHw)

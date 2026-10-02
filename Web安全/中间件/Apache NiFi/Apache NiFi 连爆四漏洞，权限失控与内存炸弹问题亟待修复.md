@@ -1,8 +1,61 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Apache NiFi 连爆四漏洞，权限失控与内存炸弹问题亟待修复"
+product: "Apache NiFi"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2026-62354; CVE-2026-68981; CVE-2026-68979; CVE-2026-68980"
+referenced_identifiers: ""
+identifier_role: "primary"
+cve: "CVE-2026-62354; CVE-2026-68981; CVE-2026-68979; CVE-2026-68980"
+prerequisites: "各漏洞版本及权限不同；参数/组件级细粒度授权有关，gzip请求为另一入口"
+verification_source: "https://nifi.apache.org/documentation/security/"
+source_status: "unknown"
+side_effects: "含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。"
+id: "vw-fd445e6abc99cb59264a1bd4"
+entity_id: "ve-fd445e6abc99cb59264a1bd4"
+schema_version: "1"
 ---
 
-#  Apache NiFi 连爆四漏洞，权限失控与内存炸弹问题亟待修复  
+# Apache NiFi 连爆四漏洞，权限失控与内存炸弹问题亟待修复
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：各漏洞版本及权限不同；参数/组件级细粒度授权有关，gzip请求为另一入口
+- 证据范围：四个漏洞应分实体关联；版本与2.11.0修复经官方确认，部分解释失真。
+
+### 已有来源支持的更正
+
+- 核对四项编号、版本/权限边界、2.11.0修复；70469为后续2.11.0 gzip检查绕过，修复2.12.0
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 四个主CVE均未入frontmatter
+- 压缩前体积说反，应为压缩后的请求体与解压后的输出大小
+- 验证请求临时采用参数不等于永久修改配置
+- 跨上下文资产删除是越权能力，称误删/乌龙指弱化攻击本质
+- 官方明确参数权限问题有细粒度授权适用条件，非所有部署
+- 2.11.0只是本批初始修复，当前官方又披露gzip检查绕过70469并于2.12.0修复，原历史公告应保留日期与后续关联
+
+### 核验来源
+
+- https://nifi.apache.org/documentation/security/
+
+### 操作风险与资料使用
+
+- 含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 看雪学苑
                     看雪学苑  看雪学苑   2026-08-04 09:59  
   

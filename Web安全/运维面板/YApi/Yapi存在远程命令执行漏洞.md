@@ -1,9 +1,47 @@
 ---
-
 source: "wy876 漏洞文库"
+title: "Yapi存在远程命令执行漏洞"
+product: "YApi"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "Registered/logged-in account/project;versionunknown"
+source_status: "unknown"
+side_effects: "含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。"
+id: "vw-72a222af5f1ecc358f3dd4d6"
+entity_id: "ve-72a222af5f1ecc358f3dd4d6"
+schema_version: "1"
 ---
 
 # Yapi存在远程命令执行漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：Registered/logged-in account/project;versionunknown
+- 证据范围：Sameconstructorchain as52/53, different commands and secondexample;noresult
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- No advancedMock insertionpoint stated;lesscomplete workflow than52
+- Java fence forJavaScript;loopbackcallback mustbe explicitplaceholder
+- No versions orfix;mergecommonmechanism preservevariant provenance
+
+### 操作风险与资料使用
+
+- 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 # 一、漏洞简介
 Yapi存在远程命令执行漏洞

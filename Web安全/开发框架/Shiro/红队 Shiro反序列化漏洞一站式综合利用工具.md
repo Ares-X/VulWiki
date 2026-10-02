@@ -1,6 +1,38 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+product: "ShiroExploit/FightingLzn9"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "红队 Shiro反序列化漏洞一站式综合利用工具"
+prerequisites: "来源所述条件，未列明部分仍待核：未固定版本和运行时依赖"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-006bae679b88f8f79890d89a"
+entity_id: "ve-006bae679b88f8f79890d89a"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：未固定版本和运行时依赖
+
+代码与实验材料：同九条功能，使用只一图，无独立技术证据
+
+来源证据范围：GitHub直链，声称来自网络安全性自测并非已核验
+
+- **结论使用边界（1）**：危险操作被无侵入性与RCE保证淡化；依据：列内存马、改key/限制、反序列化炸弹，不能当安全只读扫描。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **来源与引用处置（2）**：重复广告占主要篇幅；依据：九条清单后大量工具推荐及重复GIF，无额外复现。保留这部分来源材料并与技术结论分开；其引用或宣传内容不能补足本文漏洞的证据。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 #  【红队】Shiro反序列化漏洞一站式综合利用工具  
 FightingLzn9

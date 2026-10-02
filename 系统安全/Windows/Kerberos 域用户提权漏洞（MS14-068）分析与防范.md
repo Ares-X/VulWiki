@@ -1,8 +1,63 @@
 ---
 cve: "CVE-2014-6324"
+identifier_role: "primary"
+primary_identifiers: "CVE-2014-6324"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "Kerberos 域用户提权漏洞（MS14-068）分析与防范"
+product: "Windows Active Directory Kerberos KDC"
+record_type: "analysis"
+document_type: "Kerberos实验与工具使用教程"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "域用户有效凭证/SID、未修复KDC可达；示例Win7域成员，DC构建未列；票据注入与远程执行权限上下文需说明"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Windows/Kerberos%20%E5%9F%9F%E7%94%A8%E6%88%B7%E6%8F%90%E6%9D%83%E6%BC%8F%E6%B4%9E%EF%BC%88MS14-068%EF%BC%89%E5%88%86%E6%9E%90%E4%B8%8E%E9%98%B2%E8%8C%83.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+source_url: "https://mp.weixin.qq.com/s/T4HU6k10m4x5CLNuLuGrfQ"
+id: "vw-0969e89db1664494cffa3ed0"
+entity_id: "ve-0969e89db1664494cffa3ed0"
+schema_version: "1"
 ---
 
 # Kerberos 域用户提权漏洞（MS14-068）分析与防范
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Windows Active Directory Kerberos KDC
+- 文献类型：Kerberos实验与工具使用教程
+- 版本、权限及部署边界：域用户有效凭证/SID、未修复KDC可达；示例Win7域成员，DC构建未列；票据注入与远程执行权限上下文需说明
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 所有Windows服务器均受影响过宽，应限定有漏洞KDC版本/补丁状态；宿主shell是本文实验方式而非漏洞唯一前提
+2. 根因概括为未验证签名过于粗略，应恢复PAC签名/校验和类型验证缺陷；多处将TGT称服务票据，需区分
+3. 仅缺KB3011780不能证明当前未修复，要考虑累积/替代补丁；弱密码/杀软不代替KDC补丁
+4. PyKEY应统一PyKEK；示例DC192.168.2.25而后psexec rhosts改.24需解释目标变化，bakcgroud等拼写清理
+5. 与另一MS14-068文重叠但本篇独有Metasploit路径，保留作为关联工具变体；来源有微软公告和源码，截图未视检
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://mp.weixin.qq.com/s/T4HU6k10m4x5CLNuLuGrfQ>
+- 原文参考链接（未重新核验）：<http://ksria.com/simpread/>
+- 原文参考链接（未重新核验）：<https://github.com/mubix/pykek>
+- 原文参考链接（未重新核验）：<https://technet.microsoft.com/library/security/ms14-068>
+- 原文参考链接（未重新核验）：<https://github.com/MrWQ/vulnerability-paper>
+
+### 归档技术正文
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/T4HU6k10m4x5CLNuLuGrfQ)

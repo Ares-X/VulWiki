@@ -1,9 +1,49 @@
 ---
 cve: "CVE-2026-52830"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "fast-mcp-telegram 存在严重漏洞，攻击者无需令牌即可访问 Telegram 会话"
+product: "fast-mcp-telegram"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2026-52830"
+referenced_identifiers: ""
+identifier_role: "primary"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-97427b581ba85128835ddcfe"
+entity_id: "ve-97427b581ba85128835ddcfe"
+schema_version: "1"
 ---
 
-#  fast-mcp-telegram 存在严重漏洞，攻击者无需令牌即可访问 Telegram 会话  
+# fast-mcp-telegram 存在严重漏洞，攻击者无需令牌即可访问 Telegram 会话
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 本次正文校订
+
+- 修正正文中的 Gitbub → GitHub 转录错误，资源路径保持原样。
+- 按该篇完整正文及逐篇审阅区分主问题与背景编号，补全结构化主标识；不把标识归属校订等同运行复现。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- CVE/GHSA及受影响<=0.19.0、修复0.19.1未完整结构化
+- 存在GHSA编号但无直接公告URL，原文URL缺失
+- HTTP模式、会话文件存在和已知路径是利用前提，不应笼统无需令牌访问所有部署
+- 代码标识符和路径未代码格式化；正文ast-mcp-telegram与Gitbub拼写错误
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 原创 ZM
                     ZM  暗镜   2026-07-10 22:00  
   
@@ -37,7 +77,7 @@ SessionFileTokenVerifier.verify_token() 中的易受攻击逻辑首先会拒绝�
   
 同时，未添加前缀的呼叫仍然会被正确拒绝。这证实了该漏洞存在于会话选择和身份验证中，而不是工具前缀强制执行中。  
   
-该漏洞影响 fast-mcp-telegram 版本 0.19.0 及更早版本；版本 0.19.1 引入了更严格的验证，将 bearer token 视为不透明标识符，DavidCarliez 在 Gitbub 中报告了此问题。  
+该漏洞影响 fast-mcp-telegram 版本 0.19.0 及更早版本；版本 0.19.1 引入了更严格的验证，将 bearer token 视为不透明标识符，DavidCarliez 在 GitHub 中报告了此问题。  
   
 
 

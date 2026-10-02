@@ -1,6 +1,47 @@
 ---
 source: "MrWQ/vulnerability-paper"
+product: "Java安全研究参考/Tomcat与Spring生命周期"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "三万字原创长文 完全零基础从 0 到 1 掌握 Java 内存马（1）"
+prerequisites: "来源所述条件，未列明部分仍待核：声明JDK8u202+Tomcat9.0.85，嵌入实验实际9.0.83；Spring Boot/Framework/Reactor版本多依赖截图，需分别固定"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/hdqwsYtBN_IpaH2DGZLPoA"
+id: "vw-f0cbf901d032c61e7f8d7fc1"
+entity_id: "ve-f0cbf901d032c61e7f8d7fc1"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：声明JDK8u202+Tomcat9.0.85，嵌入实验实际9.0.83；Spring Boot/Framework/Reactor版本多依赖截图，需分别固定
+
+代码与实验材料：2289行全文读完；主要正常组件demo与需已有代码执行的运行时修改研究，不能视为Tomcat/Spring无需认证新漏洞；未编译/运行任何代码
+
+来源证据范围：W01fh4cker作者博客/微信原文、su18分类、ApacheCON资料及大量具名研究来源，少量链接有空格污染
+
+- **结论使用边界（1）**：Filter/Interceptor比较表包含实质错误；依据：表称Filter在容器初始化时只调用一次，与前文每次doFilter流程矛盾；action/值栈概念混入Spring拦截器，且声称Filter不能获取IOC bean过于绝对。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **事实待核（2）**：Spring MVC九大组件列表与初始化体系不符；依据：把DispatcherServlet、Controller、ModelAndView、HandlerInterceptor列入九个，却遗漏异常/多部件等策略；应按同版本initStrategies源码校对。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **结论使用边界（3）**：响应式API说明和示例类型错误；依据：Mono.delay被称创建空Mono，Mono.whenDelayError例赋Mono&lt;String&gt;；fromCallable并不自行保证异步；WebFlux接口返回必须Mono/Flux与BeanFactory/ApplicationContext全部懒/全部预热均过度概括。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **结论使用边界（4）**：组件生命周期与示例用途需校准；依据：@WebListener("/test")值不是URL映射；Wrapper定义注册不等于Servlet实例init；addFilterMapBefore不保证超过所有既有before映射。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **适用与权限边界（5）**：实验演示不能直接证明生产注入路径；依据：Tomcat Upgrade独立例只是Servlet里new MyUpgrade().accept而没注册Upgrade协议；Executor例是应用自建线程池而非实际替换容器executor；须区分原理demo与后续已有RCE条件。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **适用与权限边界（6）**：平台细节与排版需整理；依据：称Valve要配web.xml、默认AJP8009需要版本/配置依据；线程数组索引仅单次调试快照；部分方法名为空、image时间戳尾巴、多截图串行影响阅读。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # 【三万字原创长文】完全零基础从 0 到 1 掌握 Java 内存马（1）
 

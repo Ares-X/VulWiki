@@ -1,6 +1,40 @@
 ---
 source: "hatch 补库批 20260928"
+product: "PHPOK5.3"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "PHPOK 5.3 前台注入"
+prerequisites: "来源所述条件，未列明部分仍待核：后台已设置api_code启用API；m_picplayer等调用标识有效，公共token_f可签token"
+side_effects: "未执行；本文需注意的操作影响：多图指PHPOK5.5反序列化资源，需核对；数据流有价值但需回源恢复代码"
+source_status: "unknown"
+id: "vw-28211a3825f522fb1c19340d"
+entity_id: "ve-28211a3825f522fb1c19340d"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；默认公开示例、攻击表达式和其他 Cookie 语义保持原样。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：后台已设置api_code启用API；m_picplayer等调用标识有效，公共token_f可签token
+
+- **结论使用边界（1）**：大量PHP被机器翻译成公共功能/开关/打破、全角运算符与变量空格，不可当源码复用。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **适用与权限边界（2）**：前台并非无条件，必须有API配置；没开启可CSRF开启仅一句无PoC/浏览器条件不能视既成链。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **事实待核（3）**：与331sort注入同产品但sqlext不同入口，不应合并；固定token含+应URL编码。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **证据待核（4）**：多图指PHPOK5.5反序列化资源，需核对；数据流有价值但需回源恢复代码。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # PHPOK 5.3 前台注入
 
@@ -332,7 +366,7 @@ POC：
     Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
     Accept-Encoding: gzip, deflate
     Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7
-    Cookie: PHPSESSION=l87bngd1u307g20iudfmphisu4
+    Cookie: PHPSESSION=l87********************su4
     Connection: close
 
 四、参考链接

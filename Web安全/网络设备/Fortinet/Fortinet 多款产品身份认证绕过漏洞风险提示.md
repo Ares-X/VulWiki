@@ -1,8 +1,53 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-f83b53598444eca5358eab92"
+entity_id: "ve-f83b53598444eca5358eab92"
+schema_version: "1"
+title: "Fortinet 多款产品身份认证绕过漏洞风险提示"
+product: "FortiOS/FortiManager/FortiAnalyzer/FortiProxy FortiCloud SSO"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2026-24858"
+referenced_identifiers: "CVE-2025-59718"
+prerequisites: "攻击者合法FortiCloud账号+注册设备，目标启SSO（出厂关但注册可启）；有各分支范围"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/Fortinet/Fortinet%20%E5%A4%9A%E6%AC%BE%E4%BA%A7%E5%93%81%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81%E7%BB%95%E8%BF%87%E6%BC%8F%E6%B4%9E%E9%A3%8E%E9%99%A9%E6%8F%90%E7%A4%BA.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 #  Fortinet 多款产品身份认证绕过漏洞风险提示  
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：FortiOS/FortiManager/FortiAnalyzer/FortiProxy FortiCloud SSO
+- 本文讨论：CVE-2026-24858
+- 版本、权限与配置前提：攻击者合法FortiCloud账号+注册设备，目标启SSO（出厂关但注册可启）；有各分支范围
+- 资料类型：风险通告；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 无任何官方/CISA来源URL，十万设备影响缺依据
+- 修复与云服务时间线为1月29快照，不能当当前状态
+- GUI/CLI缓解全图化；不能把无目标凭据误写为攻击者无需账户
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 评分来源、云端措施和各产品修复时间待核验
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 安融技术
                     安融技术  安融技术   2026-01-29 03:38  
   

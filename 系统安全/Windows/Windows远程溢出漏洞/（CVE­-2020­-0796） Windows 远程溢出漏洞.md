@@ -1,6 +1,66 @@
 ---
-cve: "CVE-2008-4250"
+cve: "CVE-2020-0796"
+identifier_role: "primary"
+primary_identifiers: "CVE-2020-0796"
+referenced_identifiers: "CVE-2008-4250"
+identifier_status: "unknown"
+title: "（CVE­-2020­-0796） Windows 远程溢出漏洞"
+product: "Windows SMB srv2.sys"
+record_type: "analysis"
+document_type: "SMBGhost原理拼编与双路径复现"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "远程样例Win10 1903x64，本地1909x64；SMB3.1.1压缩/网络可达；固定内核布局及工具依赖"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Windows/Windows%E8%BF%9C%E7%A8%8B%E6%BA%A2%E5%87%BA%E6%BC%8F%E6%B4%9E/%EF%BC%88CVE%C2%AD-2020%C2%AD-0796%EF%BC%89%20Windows%20%E8%BF%9C%E7%A8%8B%E6%BA%A2%E5%87%BA%E6%BC%8F%E6%B4%9E.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-a8288657be59b661ef5f50db"
+entity_id: "ve-a8288657be59b661ef5f50db"
+schema_version: "1"
 ---
+
+# （CVE­-2020­-0796） Windows 远程溢出漏洞
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Windows SMB srv2.sys
+- 文献类型：SMBGhost原理拼编与双路径复现
+- 版本、权限及部署边界：远程样例Win10 1903x64，本地1909x64；SMB3.1.1压缩/网络可达；固定内核布局及工具依赖
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. frontmatter错填CVE-2008-4250，正文主漏洞0796含软连字符，优先纠正抽取及标题标识
+2. 多处图链接指其他CVE资源目录并带多余路径残片；代码被Markdown引用符/反斜线、软连字符、全角标点破坏，源码不能直接复制
+3. 开机在线即入侵过宽，需SMB可达/受影响压缩；协议3.11检测脚本只能发现协议支持不能确认漏洞/补丁
+4. 称反弹shell却命令bind_tcp，方向错误；git clone*、-ip软连字符等命令损坏
+5. 前段ZecOps本地技术译文说尚未找到RCE与后段另源RCE拼接，应注明来源/时间线，不当一名作者同一实验
+6. 临时DisableCompression仅服务端缓解，客户端风险不能一并消除；保留KB4551762但补平台矩阵，第三方ZIP/镜像未核
+7. 与SMBGhost长文152及本地索引172重复机制但独有详细背景，宜合并有来源分节，截图未视检
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://github.com/ianxtianxt/SMBGhost_RCE_PoC.git`>
+- 原文参考链接（未重新核验）：<https://download.0-sec.org/系统安全/Windows/CVE-2020-0796提权poc.zip>
+- 原文参考链接（未重新核验）：<http://dl.qianxin.com/skylar6/CVE­2020­0796­Scanner.zip*>
+- 原文参考链接（未重新核验）：<https://gist.githubusercontent.com/nikallass/40f3215e6294e94cde78ca60dbe07394/raw/84d803de9\>
+- 原文参考链接（未重新核验）：<https://gist.githubusercontent.com/nikallass/40f3215e6294e94cde78ca60dbe07394/raw/84d803de937f5b6810df4441cc84f0fa63991e2e/check-smb-v3.11.sh>
+- 原文参考链接（未重新核验）：<https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB4551762>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
 
 （CVE­-2020­-0796） Windows 远程溢出漏洞
 ----------------------------------------

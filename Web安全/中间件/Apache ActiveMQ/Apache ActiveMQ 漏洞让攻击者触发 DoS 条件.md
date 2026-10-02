@@ -1,8 +1,51 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Apache ActiveMQ 漏洞让攻击者触发 DoS 条件"
+product: "Apache ActiveMQ Classic OpenWire unmarshalling"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2025-27533"
+referenced_identifiers: "CVE-2020-0796"
+identifier_role: "primary"
+cve: "CVE-2025-27533"
+prerequisites: "可达OpenWire解码路径，认证前处理；mTLS限制无证书攻击者但不防合法客户端恶意消息"
+source_url: "https://cybersecuritynews.com/apache-activemq-vulnerability-2/"
+source_status: "recorded"
+side_effects: "含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。"
+id: "vw-e5e66e4a3600e5b146d05c44"
+entity_id: "ve-e5e66e4a3600e5b146d05c44"
+schema_version: "1"
 ---
 
-#  Apache ActiveMQ 漏洞让攻击者触发 DoS 条件   
+# Apache ActiveMQ 漏洞让攻击者触发 DoS 条件
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：可达OpenWire解码路径，认证前处理；mTLS限制无证书攻击者但不防合法客户端恶意消息
+- 证据范围：说明frame size与内嵌byte sequence长度不同检查，合理区分DoS非RCE；文本版本列表翻译反向
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 5.18.0之前的5.18.7、5.17.0之前的5.17.7上下限反了，表格与正文冲突
+- CVSS分数栏填高而非数字，主CVE漏元数据
+- mTLS使漏洞利用无效过绝对，需限无凭据远程攻击者
+- 5.19.0及更高不受影响需分支语义，不能覆盖6.0等已受影响版
+
+### 操作风险与资料使用
+
+- 含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 邑安科技  邑安全   2025-05-09 05:33  
   
 更多全球网络安全资讯尽在邑安全  

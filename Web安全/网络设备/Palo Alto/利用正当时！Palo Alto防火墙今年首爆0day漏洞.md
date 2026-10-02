@@ -1,9 +1,54 @@
 ---
 cve: "CVE-2026-0300"
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-f953b180d57ebf0b35bea5d1"
+entity_id: "ve-f953b180d57ebf0b35bea5d1"
+schema_version: "1"
+title: "利用正当时！Palo Alto防火墙今年首爆0day漏洞"
+product: "PAN-OS Captive/Authentication Portal"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2026-0300"
+referenced_identifiers: ""
+prerequisites: "PA/VM系列、认证门户启用且攻击者可达；补丁是2026-05-07报道时计划"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/Palo%20Alto/%E5%88%A9%E7%94%A8%E6%AD%A3%E5%BD%93%E6%97%B6%EF%BC%81Palo%20Alto%E9%98%B2%E7%81%AB%E5%A2%99%E4%BB%8A%E5%B9%B4%E9%A6%96%E7%88%860day%E6%BC%8F%E6%B4%9E.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 #  利用正当时！Palo Alto防火墙今年首爆0day漏洞  
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：PAN-OS Captive/Authentication Portal
+- 本文讨论：CVE-2026-0300；其他九个CVE为历史引用
+- 版本、权限与配置前提：PA/VM系列、认证门户启用且攻击者可达；补丁是2026-05-07报道时计划
+- 资料类型：零日新闻；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 标题“首爆”及有限利用推断国家级组织缺直接归因依据
+- 历史CVE清单、数千台/48小时下线等高强度叙述未逐项来源
+- 未列具体版本，暴露数量不等于已确认易受影响数量
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 官方补丁实际发布情况、KEV时点和历史攻击数据需核验
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 原创 网空闲话
                     网空闲话  网空闲话plus   2026-05-07 03:28  
   

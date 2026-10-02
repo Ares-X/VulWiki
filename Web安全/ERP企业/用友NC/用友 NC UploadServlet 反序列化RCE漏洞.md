@@ -1,36 +1,75 @@
 ---
 source: "https://github.com/zan8in/afrog-pocs/blob/253291be2d307a6c836d5997bbb838f1e846f9ba/vulnerability/yonyou-nc-uploadservlet-rce.yaml"
-version: "具体受影响版本范围未披露"
+title: "用友NC UploadServlet反序列化"
+product: "用友NC"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "未知；~ic与~baseapp分支"
+prerequisites: "接口鉴权未核"
+side_effects: "命令/代码执行示例可能改变主机状态"
+review_date: "2026-10-02"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E7%94%A8%E5%8F%8BNC/%E7%94%A8%E5%8F%8B%20NC%20UploadServlet%20%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96RCE%E6%BC%8F%E6%B4%9E.md"
 fofa: "app=\"用友-NC\""
+id: "vw-95990e0e6ff7291b7759c76b"
+entity_id: "ve-95990e0e6ff7291b7759c76b"
+schema_version: "1"
+source_url: "https://github.com/zan8in/afrog-pocs/blob/253291be2d307a6c836d5997bbb838f1e846f9ba/vulnerability/yonyou-nc-uploadservlet-rce.yaml"
 ---
 
-# 用友 NC UploadServlet 反序列化RCE漏洞
+# 用友NC UploadServlet反序列化
 
-## 漏洞描述
+## 条目说明
+
+- 对象与具体问题：用友NC；UploadServlet反序列化
+- 版本、配置及部署条件：未知；~ic与~baseapp分支
+- 认证与权限前提：接口鉴权未核
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- r2 mehtod拼写使~baseapp分支未验证，文本已正确指出
+- 链接FileReceive关联分析但UploadServlet路由独立保留
+- 完整blob留源，响应头判据与算术条件清楚；修复build缺
+
+## 操作风险
+
+命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
+### 漏洞描述
 
 公开 afrog PoC 将用友 NC 的 `/servlet/~ic/nc.document.pub.fileSystem.servlet.UploadServlet` 列为 Java 反序列化代码执行入口。请求向接口提交特定的序列化字节流，并用计算结果回显判断执行路径。风险受目标依赖、接口可达性及部署配置影响；来源没有给出完整的受影响版本清单。
 
-## 影响范围
+### 影响范围
 
 具体受影响版本范围未披露。本文按公开 PoC 所列产品记录，不据此扩展为全版本受影响。
 
-## 公开验证方法
+### 公开验证方法
 
 完整的序列化数据、请求与匹配表达式均保存在文末固定提交的 YAML 中。关键字段为 `set.rb`、`rules.r0`、`rules.r1`；不能把任意 Commons-Collections 数据替换进去并期待相同回显。
 
 原始模板通过请求头 `X-T0KEN-INF0` 传入算术表达式，再检查**响应头**包含 `X-T0KEN` 和预期结果的 Base64 值。返回 200、接口可达或出现 Java 异常均不足以确认代码执行。模板还列出 `~baseapp` 路径，但 r2 的 `method` 被误拼成 `mehtod`；该分支不能视为已验证可运行，本条目不将它等同于前述 `~ic` 分支。本文仅静态核对公开源码，未发送序列化数据、执行命令或进行本地复现。
 
-## 修复建议
+### 修复建议
 
 向用友获取针对当前版本的修复。限制相关 Servlet 的外部访问，避免对不可信请求直接反序列化，并依据厂商方案限制可反序列化类型及更新受影响组件。
 
-## 参考链接
+### 参考链接
 
 - [相关分析：FileReceiveServlet 与 UploadServlet 的反序列化及回显机制](%E7%94%A8%E5%8F%8B-NC-FileReceiveServlet-%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96RCE%E6%BC%8F%E6%B4%9E.md)；本文补充具体 `~ic` 路由、固定版本验证模板及其限制。
 
 - [zan8in/afrog-pocs 原始 PoC（固定提交）](https://github.com/zan8in/afrog-pocs/blob/253291be2d307a6c836d5997bbb838f1e846f9ba/vulnerability/yonyou-nc-uploadservlet-rce.yaml)
 
-## 网络测绘
+### 网络测绘
 
 ```text
 app="用友-NC"

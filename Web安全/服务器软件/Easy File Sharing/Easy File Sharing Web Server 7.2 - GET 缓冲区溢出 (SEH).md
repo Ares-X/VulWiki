@@ -1,6 +1,48 @@
 ---
 source: "白阁文库 BaizeSec/bylibrary"
+title: "Easy File Sharing Web Server 7.2 - GET 缓冲区溢出 (SEH)"
+product: "Easy File Sharing Web Server 7.2"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "脚本测试XP SP3英文版、特定pop-pop-ret地址/模块布局；其他平台不可推定"
+runtime: "历史示例含 Python 2 专用依赖；未进行运行验证"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-6970830c6a602e8c51a72567"
+entity_id: "ve-6970830c6a602e8c51a72567"
+schema_version: "1"
 ---
+
+# Easy File Sharing Web Server 7.2 - GET 缓冲区溢出 (SEH)
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：脚本测试XP SP3英文版、特定pop-pop-ret地址/模块布局；其他平台不可推定
+- 证据范围：完整读Python2脚本与原始shellcode字节，未执行或反汇编；标题calc行为为作者标注
+
+### 本次正文校订
+
+- 运行时标注：原示例含 Python 2 专用语法或模块，不能直接按 Python 3 运行；不在本次校订中迁移或执行。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 无受影响范围/修复版本/根因与响应证据
+- entire=4500未使用，padding公式减20两次却实际加19和7，总长不等宣称4500
+- 没有参数校验和Python2依赖说明
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 ### Easy File Sharing Web Server 7.2 - GET 缓冲区溢出 (SEH)
 

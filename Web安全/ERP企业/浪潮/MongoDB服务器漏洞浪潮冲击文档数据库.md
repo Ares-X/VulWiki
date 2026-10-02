@@ -1,9 +1,49 @@
 ---
-cve: "CVE-2026-11933"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "MongoDB Server 四缺陷UAF/递归DoS/元数据/聚合崩溃公告"
+product: "MongoDB Server"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2026-11933;CVE-2026-9740;CVE-2026-9750;CVE-2026-9743"
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "7/8各分支；8.0.26/8.2.11/8.3.4修复声明逐CVE待核"
+prerequisites: "11933需认证读权限JS，9740未认证，其他认证条件不同"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+identifier_role: "primary"
+source_status: "unknown"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E6%B5%AA%E6%BD%AE/MongoDB%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%BC%8F%E6%B4%9E%E6%B5%AA%E6%BD%AE%E5%86%B2%E5%87%BB%E6%96%87%E6%A1%A3%E6%95%B0%E6%8D%AE%E5%BA%93.md"
+category_recommendation: "数据库 / MongoDB"
+id: "vw-16ac431ce83ce7b7505ef4a8"
+entity_id: "ve-16ac431ce83ce7b7505ef4a8"
+schema_version: "1"
 ---
 
-#  MongoDB服务器漏洞浪潮冲击文档数据库  
+# MongoDB Server 四缺陷UAF/递归DoS/元数据/聚合崩溃公告
+
+## 条目说明
+
+- 对象与具体问题：MongoDB Server；四缺陷UAF/递归DoS/元数据/聚合崩溃公告
+- 版本、配置及部署条件：7/8各分支；8.0.26/8.2.11/8.3.4修复声明逐CVE待核
+- 认证与权限前提：11933需认证读权限JS，9740未认证，其他认证条件不同
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 一个SERVER链接未涵盖所有缺陷版本，需逐项官方公告
+- 无复现属新闻，别将一漏洞未认证扩展四项
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 sec随谈
                     sec随谈  sec随谈   2026-06-17 00:26  
   

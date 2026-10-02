@@ -1,7 +1,46 @@
 ---
 version: "POST:_method=__construct&filter[]=assert&get[]=assert($_POST[1]);"
 source: "MrWQ/vulnerability-paper"
+product: "ThinkPHP / Request 方法覆盖"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "ThinkPHP5.0.x RCE 分析与利用"
+prerequisites: "来源所述条件，未列明部分仍待核：<=5.0.23，修复5.0.24；debug或captcha路由；assert依PHP版本和断言配置"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/itfVog0HMNf5CizM7-QF5w"
+id: "vw-cfd79327cf7c5e5c846142fa"
+entity_id: "ve-cfd79327cf7c5e5c846142fa"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：&lt;=5.0.23，修复5.0.24；debug或captcha路由；assert依PHP版本和断言配置
+
+代码与实验材料：507行全文，源码完整，文件包含与assert变体独立，但若干明确错误
+
+来源证据范围：微信原文，缺官方commit，图片承载部分路由证据
+
+- **事实待核（1）**：version抽成攻击参数；依据：frontmatter为POST:_method...assert载荷。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **结论使用边界（2）**：示例请求存在直接错误；依据：文件包含server\[REQUEST_METHOD\]==/etc/passwd多等号，实际值变=/etc/passwd；captcha整条POST写成查询字符串，而入口代码读$_POST。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **结论使用边界（3）**：源码解释键值顺序反转；依据：称array_walk_recursive把键名作为value，实际value是值、key是键。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **适用与权限边界（4）**：PHP能力断言过度；依据：call_user_func(phpinfo(),1)作为字符串带括号不是合法回调；file_get_contents并非永不禁用，URL读取需allow_url_fopen，assert执行字符串也有版本/配置条件。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **适用与权限边界（5）**：失败原因无证据；依据：AntSword连接失败被猜为只支持eval，未给客户端配置或抓包；不应作为事实。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # ThinkPHP5.0.x RCE 分析与利用
 

@@ -1,8 +1,57 @@
 ---
 cve: "CVE-2015-1427"
+title: "ElasticSearch Groovy 远程代码执行漏洞"
+product: "Elasticsearch"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2015-1427"
+referenced_identifiers: "CVE-2014-3120"
+identifier_role: "primary"
+verification_source: "https://github.com/elastic/elasticsearch/issues/9655"
+source_url: "https://mp.weixin.qq.com/s/gaLFPkLpeIy1SC3dmBY9VA"
+source_status: "recorded"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-1b7566296b9fb97c9550be6c"
+entity_id: "ve-1b7566296b9fb97c9550be6c"
+schema_version: "1"
 ---
 
 # ElasticSearch Groovy 远程代码执行漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 证据范围：与357同漏洞不同转载，反射读取输出链应作为变体；修复sandbox=false看似反直觉但原厂确实如此，不应误判为错误。
+
+### 已有来源支持的更正
+
+- 原厂明确sandbox.enabled=false并重启为历史缓解；确认完整影响范围与修复版本
+
+### 本次正文校订
+
+- 按实际内容修正 1 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- JSON闭合括号前带反斜杠，非法JSON
+- 影响表只列1.3.7漏1.3.0–.6；缺索引至少一条匹配数据的前提
+- 禁用sandbox意为该引擎不再被信任以默认沙盒策略拒绝动态执行，需解释旧版配置语义，避免理解成允许无沙盒任意脚本
+- 来源原文可追溯，但广告及HTML表格可整理
+
+### 核验来源
+
+- https://github.com/elastic/elasticsearch/issues/9655
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/gaLFPkLpeIy1SC3dmBY9VA)
@@ -25,7 +74,7 @@ Elasticsearch 是一个基于 Lucene 的搜索服务器。它提供了一个分�
 
 POC:
 
-```
+```http
 POST /_search?pretty HTTP/1.1
 Host: ip:9200
 User-Agent: python-requests/2.21.0

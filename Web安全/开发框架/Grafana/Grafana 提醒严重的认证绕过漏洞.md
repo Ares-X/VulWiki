@@ -1,6 +1,38 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+product: "Grafana/Azure AD 多租户账号映射认证绕过"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2023-3128"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "Grafana 提醒严重的认证绕过漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：6.7.0引入，列固定10.0.1/9.5.5/9.4.13/9.3.16/9.2.20/8.5.27；需多租户Azure OAuth且无allowed_groups限制"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-7a7822d307fa8993d9006089"
+entity_id: "ve-7a7822d307fa8993d9006089"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：6.7.0引入，列固定10.0.1/9.5.5/9.4.13/9.3.16/9.2.20/8.5.27；需多租户Azure OAuth且无allowed_groups限制
+
+代码与实验材料：无PoC，解释跨租户相同邮件映射及单租户/allowed_groups缓解
+
+来源证据范围：代码卫士译Bill Toulas/BleepingComputer，链接英文新闻但不链接官方公告
+
+- **事实待核（1）**：版本分支概括不完整；依据：叙述列8.5、9.2、9.3、9.5、10.0却漏后面实际列出的9.4；各分支的或后续版本应明确限定分支。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **适用与权限边界（2）**：配置位置和时效需明确；依据：allowed_groups称Azure AD设置，应给Grafana配置节；Grafana云已修为2023-06-25历史状态。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 #  Grafana 提醒注意严重的认证绕过漏洞   
 Bill Toulas  代码卫士   2023-06-25 17:51  

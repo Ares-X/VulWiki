@@ -1,9 +1,56 @@
 ---
 version: "rConfig"
 source: "Threekiii/Vulnerability-Wiki"
+id: "vw-d412c66e84c9362eee86074c"
+entity_id: "ve-d412c66e84c9362eee86074c"
+schema_version: "1"
+title: "rConfig ajaxArchiveFiles.php 后台远程命令执行漏洞"
+product: "rConfig网络配置管理"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2019-19509"
+referenced_identifiers: ""
+prerequisites: "登录；脚本先用独立任意账户创建，无固件/软件版本"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/rConfig/rConfig-ajaxArchiveFiles.php-%E5%90%8E%E5%8F%B0%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md"
+review_date: "2026-10-02"
+side_effects: "执行文中载荷可能以目标进程权限启动命令或加载代码；权限受认证角色、操作系统账户及依赖版本约束，不能把 root/200 等通用字符串当成功证据"
+source_status: "unknown"
 ---
 
 # rConfig ajaxArchiveFiles.php 后台远程命令执行漏洞
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：rConfig网络配置管理
+- 本文讨论：ajaxArchiveFiles path/ext命令注入，关联CVE-2019-19509候选
+- 版本、权限与配置前提：登录；脚本先用独立任意账户创建，无固件/软件版本
+- 资料类型：源码与组合PoC；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- “因为sudo而root执行”与展示sudo -u apache源码不符，另加分号命令继承PHP进程权限
+- success由glob剩余文件数决定而非命令成功，脚本据此判断有误
+- userprocess链副作用未分离，缺版本及修复
+- 已落实的文本修订：HTTP 报文围栏改为 http。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
+- 样例会话、令牌或共享秘密已按具体值遮罩中段并保留首尾；不能直接用于请求。公开默认/测试凭据与算法常量不因长得像密码而改写；其用途仍须按原文说明判断
+
+### 操作风险与恢复
+
+- 执行文中载荷可能以目标进程权限启动命令或加载代码；权限受认证角色、操作系统账户及依赖版本约束，不能把 root/200 等通用字符串当成功证据
+
+### 待核与来源
+
+- 和19509是否同修复点及账户创建适用范围待确认
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 
 ## 漏洞描述
 
@@ -96,10 +143,10 @@ $commandString = "sudo -u apache zip -r -j " . $archiveMainPath . "filename" . $
 
 请求包为
 
-```plain
+```http
 GET /lib/ajaxHandlers/ajaxArchiveFiles.php?path=1&ext=;ls%3E../../test.txt HTTP/1.1
 Host: 
-Cookie: cookname=testtest; cookid=a13be657db5e18e453c66c564467b0f2; PHPSESSID=lr7j5r2beat1eprpklrhiorq71
+Cookie: cookname=testtest; cookid=a13**************************0f2; PHPSESSID=lr7********************q71
 Cache-Control: max-age=0
 Sec-Ch-Ua: " Not A;Brand";v="99", "Chromium";v="90", "Google Chrome";v="90"
 Sec-Ch-Ua-Mobile: ?0

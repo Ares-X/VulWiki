@@ -1,9 +1,61 @@
 ---
-cve: "CVE-2025-49144"
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2025-49144"
+identifier_role: "primary"
+primary_identifiers: "CVE-2025-49144"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "Notepad++提权漏洞POC及一键部署环境"
+product: "Notepad++安装程序"
+record_type: "vulnerability"
+document_type: "安装器路径劫持实验说明"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "攻击者能写安装包同目录、用户提升权限运行安装器；文称<=8.8.1、8.8.2修复"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Notepad/Notepad%2B%2B%E6%8F%90%E6%9D%83%E6%BC%8F%E6%B4%9EPOC%E5%8F%8A%E4%B8%80%E9%94%AE%E9%83%A8%E7%BD%B2%E7%8E%AF%E5%A2%83.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-ce871408adaa4c54fc38778d"
+entity_id: "ve-ce871408adaa4c54fc38778d"
+schema_version: "1"
 ---
 
-#  Notepad++提权漏洞POC及一键部署环境【CVE-2025-49144】  
+# Notepad++提权漏洞POC及一键部署环境
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Notepad++安装程序
+- 文献类型：安装器路径劫持实验说明
+- 版本、权限及部署边界：攻击者能写安装包同目录、用户提升权限运行安装器；文称<=8.8.1、8.8.2修复
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 默认安装器管理员令牌不等NT AUTHORITY SYSTEM，全文从普通用户到SYSTEM未给真实令牌证据，须区分部署服务与交互安装
+2. regsvr32.exe可执行文件搜索路径劫持被误称DLL搜索顺序劫持，Windows默认优先当前目录的概括也不准确
+3. 缺regsvr32_loader.c源码/可信下载和一键环境脚本，标题一键部署无对应交付
+4. 安装卡住不能证明提权成功；截图位置占位、没有whoami/令牌输出，图片未视检
+5. 发现4月/修复5月和8.8.2版本时间须官方核对，所有历史版本断言无引入分析；只官网根链接
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://notepad-plus-plus.org>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 原创 赵小龙  红岸基地网络安全   2025-07-05 02:00  
   
 # Notepad++ 提权漏洞深度分析  
@@ -193,4 +245,4 @@ https://notepad-plus-plus.org
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

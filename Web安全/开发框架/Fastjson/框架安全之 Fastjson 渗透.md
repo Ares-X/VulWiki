@@ -1,7 +1,42 @@
 ---
 version: "cd /opt"
 source: "MrWQ/vulnerability-paper"
+product: "Fastjson JNDI/cache bypass"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2017-18349"
+referenced_identifiers: "CVE-2018-3149"
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "框架安全之 Fastjson 渗透"
+prerequisites: "来源所述条件，未列明部分仍待核：Vulhub1.2.24/47, Java8u102 Linux and8u161 Windows;62/66 appendix lacks dependencies/precise scope"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/4T52S_yzIo4uYSKkLhtudQ"
+id: "vw-7947720d82c5a57dc1c79e0b"
+entity_id: "ve-7947720d82c5a57dc1c79e0b"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：Vulhub1.2.24/47, Java8u102 Linux and8u161 Windows;62/66 appendix lacks dependencies/precise scope
+
+代码与实验材料：Spring controller, explicit RMI/LDAP requests and marker/shell examples; command blocks substantially shifted into next headings; no current fix section
+
+来源证据范围：Original WeChat, official IDE/Maven/tool links; bibliography mostly plain titles without URLs
+
+- **操作与副作用边界（1）**：Destructive unverified system-JDK replacement instructions unsuitable without isolation/rollback；依据：rm -rf /usr/bin/java* and third-party HTTP JDK tarball。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+- **结论使用边界（2）**：Many shifted code blocks:66 EXP is Maven build command,47 listener is XBean payload,compile section contains LDAP command; Content-Length0 with body。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **代码与转录边界（3）**：Community edition vs30-day trial mismatch, malformed User.toString, missing first HTTP server step, incorrect metadata。相应原代码作为存在此问题的历史样本保留，不能直接当作可运行、成功复现的 PoC；缺失内容需回原稿核对，不据此补造可执行攻击链。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # 框架安全之 Fastjson 渗透
 

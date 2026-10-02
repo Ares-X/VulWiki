@@ -1,7 +1,39 @@
 ---
 cve: "CVE-2018-7736"
 source: "白阁文库 BaizeSec/bylibrary"
+product: "Z-BlogPHP1.5.1.1740"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2018-7736"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "Z-Blog 1.5.1.1740存在XSS漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：settingsadminandvalidtoken; fieldsZC_BLOG_SUBNAME/ZC_UPLOAD_FILETYPE; outputcontextunknown"
+side_effects: "未执行；本文需注意的操作影响：修改整站大量无关配置易有副作用，标准化需最小字段请求及说明"
+source_status: "unknown"
+id: "vw-0fdb440803203fe7a90c97c8"
+entity_id: "ve-0fdb440803203fe7a90c97c8"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：settingsadminandvalidtoken; fieldsZC_BLOG_SUBNAME/ZC_UPLOAD_FILETYPE; outputcontextunknown
+
+- **事实待核（1）**：应精确产品Z-BlogPHP非ASP分支，源码链接已指明。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **凭据与会话边界（2）**：只有token化POST数据无Cookie/最低角色/二次显示位置，不能辨自XSS/跨权限范围。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+
+- **来源与引用处置（3）**：修改整站大量无关配置易有副作用，标准化需最小字段请求及说明。保留这部分来源材料并与技术结论分开；其引用或宣传内容不能补足本文漏洞的证据。
+
+- **事实待核（4）**：两个输入同CVE可一文保留，缺修复版本/响应/成因，有MITRE链接。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Z-Blog 1.5.1.1740存在XSS漏洞
 

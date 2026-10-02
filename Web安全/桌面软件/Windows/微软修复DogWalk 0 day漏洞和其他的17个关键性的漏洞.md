@@ -1,9 +1,62 @@
 ---
-cve: "CVE-2022-34713"
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2022-34713;CVE-2022-35804;CVE-2022-34715"
+identifier_role: "primary"
+primary_identifiers: "CVE-2022-34713;CVE-2022-35804;CVE-2022-34715"
+referenced_identifiers: "CVE-2022-30190"
+identifier_status: "unknown"
+title: "微软修复DogWalk 0 day漏洞和其他的17个关键性的漏洞"
+product: "Microsoft Windows MSDT、SMB、NFS与Exchange"
+record_type: "roundup"
+document_type: "多漏洞补丁新闻"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "DogWalk需诱导文件交互；SMB/NFS需相应服务配置；Exchange三项未列编号"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Windows/%E5%BE%AE%E8%BD%AF%E4%BF%AE%E5%A4%8DDogWalk%200%20day%E6%BC%8F%E6%B4%9E%E5%92%8C%E5%85%B6%E4%BB%96%E7%9A%8417%E4%B8%AA%E5%85%B3%E9%94%AE%E6%80%A7%E7%9A%84%E6%BC%8F%E6%B4%9E.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-aaae59389d595ab31f8a0bec"
+entity_id: "ve-aaae59389d595ab31f8a0bec"
+schema_version: "1"
 ---
 
-#  微软修复"DogWalk "0 day漏洞和其他的17个关键性的漏洞   
+# 微软修复DogWalk 0 day漏洞和其他的17个关键性的漏洞
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Microsoft Windows MSDT、SMB、NFS与Exchange
+- 文献类型：多漏洞补丁新闻
+- 版本、权限及部署边界：DogWalk需诱导文件交互；SMB/NFS需相应服务配置；Exchange三项未列编号
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 主元数据只34713但正文多个漏洞应拆实体，Follina30190只是背景
+2. 同段声称DogWalk只能物理访问又可远程邮件触发矛盾，后文MSDT URL调用Word疑混入Follina且调用方向错误
+3. 2020报告与一直在野利用不能画等号，DogWalk变种说法和利用起点需原公告
+4. 补丁重要/严重等级误称CVSS评级；NFS评分8.5–9.8混合来源未说明
+5. SMB客户端/服务器混述，禁用压缩缓解和Windows11受影响范围需具体公告；不得推定所有机器默认运行可攻击服务
+6. 121/17/101统计需日期与类别；缺Exchange三CVE及微软公告链接
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://threatpost.com/microsoft-patches-dogwalk-zero-day-and-17-critical-flaws/180378/>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
  网络安全应急技术国家工程中心   2022-08-22 15:33  
   
 微软正在敦促用户修补一个名为Dogwalk的0 day漏洞，该漏洞目前在野外一直被大量攻击利用。该漏洞(CVE-2022-34713)与微软Windows支持诊断工具有关，它允许远程攻击者在有漏洞的系统上执行任意代码。  
@@ -54,4 +107,4 @@ https://threatpost.com/microsoft-patches-dogwalk-zero-day-and-17-critical-flaws/
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

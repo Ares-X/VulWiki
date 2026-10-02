@@ -1,6 +1,43 @@
 ---
 source: "MrWQ/vulnerability-paper"
+product: "ThinkPHP / Request方法覆盖"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "Thinkphp5-0-0-5-0-18 RCE 分析"
+prerequisites: "来源所述条件，未列明部分仍待核：标题5.0.0–5.0.18，实际5.0.5_full+PHP5.4.45 Windows；第二链需captcha及旧PHP静态调用语义"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/qI10_Wtc1wrcNvAP_MBURQ"
+id: "vw-a8b83a8269ef93f041766679"
+entity_id: "ve-a8b83a8269ef93f041766679"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：标题5.0.0–5.0.18，实际5.0.5_full+PHP5.4.45 Windows；第二链需captcha及旧PHP静态调用语义
+
+代码与实验材料：206行全文，system及set_error_handler/self::path/Php.display变体，结果依图
+
+来源证据范围：Panacea/Gcow署名，参考两条为同一CSDN链接
+
+- **适用与权限边界（1）**：范围外推与触发条件不全；依据：只列5.0.5环境，未解释5.0.13后debug/路由变化，也未证5.0.18边界。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **来源与引用处置（2）**：静态调用解释不能推广至现代PHP；依据：::调用非静态方法的旧PHP表现需限定版本，示例本身有this并报错，不是通用安全规则。保留这部分来源材料并与技术结论分开；其引用或宣传内容不能补足本文漏洞的证据。
+
+- **结论使用边界（3）**：代码抽取及请求不完整；依据：People示例&lt;?phpclass和转义大括号破损；第二payload只表单体，captcha路径仅叙述中出现。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **证据待核（4）**：来源去重；依据：参考链接完全重复。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Thinkphp5-0-0-5-0-18 RCE 分析
 

@@ -1,6 +1,38 @@
 ---
 source: "hatch 补库批 20260928"
+product: "Fastjson<=1.2.47 cache/JNDI"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "Fastjson <=1.2.47 远程代码执行漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：Title<=1.2.47 vs body<1.2.47; several older version variants lackAutoType/dependency constraints"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-8efc9960b33e360e8d3782c0"
+entity_id: "ve-8efc9960b33e360e8d3782c0"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：Title&lt;=1.2.47 vs body&lt;1.2.47; several older version variants lackAutoType/dependency constraints
+
+代码与实验材料：LDAP workflow/custom shell class; extra closing braces, RowSetImpl vs JdbcRowSetImpl, callback888 vs listener8888; missing image placeholders
+
+来源证据范围：2ianxtianxt repos, no original advisory
+
+- **代码与转录边界（1）**：Version endpoint contradiction and wrong class/port/payload syntax hinder reproduction。相应原代码作为存在此问题的历史样本保留，不能直接当作可运行、成功复现的 PoC；缺失内容需回原稿核对，不据此补造可执行攻击链。
+
+- **适用与权限边界（2）**：JDK1.8 generic requirement too broad;1.2.45 MyBatis dependency absent。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Fastjson \<=1.2.47 远程代码执行漏洞
 

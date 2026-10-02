@@ -1,7 +1,41 @@
 ---
 version: "快排 CMS <= 1.2"
 source: "Threekiii/Vulnerability-Wiki"
+product: "快排CMS<=1.2"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "快排CMS-后台任意文件上传漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：adminsession; index/upload; writableexecutableuploadpath;defaultpasswordonlylab"
+side_effects: "未执行；本文需注意的操作影响：任意找上传点过宽，只证明index/upload示例；整冰蝎载荷和固定key不是验证最小必要内容，可换非持久证据但不在本轮改仓库"
+source_status: "unknown"
+id: "vw-502216caa4615927d8dea97f"
+entity_id: "ve-502216caa4615927d8dea97f"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：adminsession; index/upload; writableexecutableuploadpath;defaultpasswordonlylab
+
+- **结论使用边界（1）**：直接归因ThinkPHP File.php不查后缀不足，需看调用方是否设置validate规则，不是所有TP文件类漏洞。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **结论使用边界（2）**：任意找上传点过宽，只证明index/upload示例。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **来源与引用处置（3）**：Accept把image/avif等替换成OSSURL明显全局文本替换污染；Cookie/无关XFF四头应简化。保留这部分来源材料并与技术结论分开；其引用或宣传内容不能补足本文漏洞的证据。
+
+- **操作与副作用边界（4）**：整冰蝎载荷和固定key不是验证最小必要内容，可换非持久证据但不在本轮改仓库。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+- **适用与权限边界（5）**：源码Gitee源明确，缺官方修复/准确版本边界，RCE依PHP执行配置。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # 快排CMS 后台任意文件上传漏洞
 

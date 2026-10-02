@@ -1,8 +1,43 @@
 ---
 source: "hatch 补库批 20260928"
+title: "Tomcat 后台部署war木马getshell"
+product: "Apache Tomcat Manager"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "持有具部署权限的管理凭据；不是单凭任何登录令牌就能部署"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-93988be1777bcfa559104524"
+entity_id: "ve-93988be1777bcfa559104524"
+schema_version: "1"
 ---
 
 # Tomcat 后台部署war木马getshell
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：持有具部署权限的管理凭据；不是单凭任何登录令牌就能部署
+- 证据范围：同321来源的后续章节应合并；前篇host-manager路径与本篇manager应用部署功能混写。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 所有图片错误复用Tomcat后台爆破资源rId24–29，需视觉核对是否内容错位，非资源不存在
+- 简介/影响为空，参考链接标题转义损坏
+- 缺权限条件、工具版本、部署卸载与恢复说明
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 一、漏洞简介
 ------------

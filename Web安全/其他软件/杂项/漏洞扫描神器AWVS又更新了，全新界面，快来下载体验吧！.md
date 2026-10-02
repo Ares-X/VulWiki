@@ -1,8 +1,59 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "漏洞扫描神器AWVS又更新了，全新界面，快来下载体验吧！"
+product: "Acunetix AWVS 24.1.240111130 工具推广"
+record_type: "advisory"
+document_type: "技术文章（细分类待核）"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "原文未给出可确认的版本、认证及部署边界；保留待核"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/%E6%BC%8F%E6%B4%9E%E6%89%AB%E6%8F%8F%E7%A5%9E%E5%99%A8AWVS%E5%8F%88%E6%9B%B4%E6%96%B0%E4%BA%86%EF%BC%8C%E5%85%A8%E6%96%B0%E7%95%8C%E9%9D%A2%EF%BC%8C%E5%BF%AB%E6%9D%A5%E4%B8%8B%E8%BD%BD%E4%BD%93%E9%AA%8C%E5%90%A7%EF%BC%81.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-0ddf4e045f574bd1b34c6462"
+entity_id: "ve-0ddf4e045f574bd1b34c6462"
+schema_version: "1"
 ---
 
-#  漏洞扫描神器AWVS又更新了，全新界面，快来下载体验吧！   
+# 漏洞扫描神器AWVS又更新了，全新界面，快来下载体验吧！
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Acunetix AWVS 24.1.240111130 工具推广
+- 文献类型：技术文章（细分类待核）
+- 版本、权限及部署边界：原文未给出可确认的版本、认证及部署边界；保留待核
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 是扫描器发布说明与破解安装推广，无AWVS主漏洞
+2. 列出OpenCMS/ownCloud/TorchServe/OFBiz/BIGIP/Sitecore CVE均为新增检测对象，不可提成AWVS漏洞
+3. 要求管理员运行crack.bat但无官方下载/签名/哈希，来源和许可风险未说明，不能据此断言恶意软件
+4. 公众号取包及Fortify/Nessus等破解广告占篇幅
+5. CVE-2023-36025侧栏不是本文主漏洞
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 原创 有手不行  信安404   2024-01-21 09:03  
   
 ## 免责声明：  
@@ -116,4 +167,4 @@ AWVS
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

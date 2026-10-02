@@ -1,9 +1,53 @@
 ---
 cve: "CVE-2018-13379"
 source: "白阁文库 BaizeSec/bylibrary"
+id: "vw-2dfd7df9add4b253069013e6"
+entity_id: "ve-2dfd7df9add4b253069013e6"
+schema_version: "1"
+title: "Fortigate SSL VPN多个漏洞"
+product: "Fortinet FortiOS SSL VPN"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2018-13379; CVE-2018-13380; CVE-2018-13382"
+referenced_identifiers: ""
+prerequisites: "SSL VPN可达；13379有范围，13380/13382简介范围与影响节相反"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/Fortinet/Fortigate%20SSL%20VPN%E5%A4%9A%E4%B8%AA%E6%BC%8F%E6%B4%9E.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 # Fortigate SSL VPN多个漏洞
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Fortinet FortiOS SSL VPN
+- 本文讨论：CVE-2018-13379；CVE-2018-13380；CVE-2018-13382
+- 版本、权限与配置前提：SSL VPN可达；13379有范围，13380/13382简介范围与影响节相反
+- 资料类型：三漏洞PoC合集；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 13380/13382影响节列6.2/6.0.5/5.6.8等疑修复版本，与简介受影响范围明显冲突
+- 元数据只13379，遗漏两主漏洞
+- 改密码脚本Python2且需依赖，无副作用/恢复说明；不存在完整原始出处/修复方案
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 各版本边界、magic改密账号范围待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 
 ## **Fortigate**
 

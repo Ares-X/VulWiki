@@ -1,8 +1,63 @@
 ---
 source: "MrWQ/vulnerability-paper"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "海洋 CMS 代码审计过程分析"
+product: "SeaCMS 10.1/11 comment rlist SQLi审计"
+record_type: "analysis"
+document_type: "技术文章（细分类待核）"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "is_numeric十六进制可绕过依赖PHP版本且无SQLi成功，不应泛称弱类型；密码找回段源码截在where user且额外花括号，开启smtp仅探索失败支线不可当正式前提；11列查询和sea_admin表只是示例环境，缺PHP/MySQL版本/表前缀/补丁/精确CNVD"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/%E6%B5%B7%E6%B4%8B%20CMS%20%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1%E8%BF%87%E7%A8%8B%E5%88%86%E6%9E%90.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+source_url: "https://mp.weixin.qq.com/s/PMutZvYD\\_C6NXrs87Z8W6Q"
+id: "vw-a593e7982aceb8bef7547be3"
+entity_id: "ve-a593e7982aceb8bef7547be3"
+schema_version: "1"
 ---
 
 # 海洋 CMS 代码审计过程分析
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：SeaCMS 10.1/11 comment rlist SQLi审计
+- 文献类型：技术文章（细分类待核）
+- 版本、权限及部署边界：is_numeric十六进制可绕过依赖PHP版本且无SQLi成功，不应泛称弱类型；密码找回段源码截在where user且额外花括号，开启smtp仅探索失败支线不可当正式前提；11列查询和sea_admin表只是示例环境，缺PHP/MySQL版本/表前缀/补丁/精确CNVD
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 开头v10.1后标题建议写v0.1明显笔误
+2. is_numeric十六进制可绕过依赖PHP版本且无SQLi成功，不应泛称弱类型
+3. 说明m_eregi不允许小写但转大写能过需wrapper实现/flags证据，不能只凭名称或截图断言
+4. ReadData先使用后清空rlist再调用的根因需明确第一次可控，die(h)不会重新运行函数，叙述时序混乱
+5. 密码找回段源码截在where user且额外花括号，开启smtp仅探索失败支线不可当正式前提
+6. 所有PHP/SQL/URL大量反斜杠污染，首最终payload不可直接复制
+7. 11列查询和sea_admin表只是示例环境，缺PHP/MySQL版本/表前缀/补丁/精确CNVD
+8. 2020停更为历史引用，不推现状
+9. 与同洞简PoC应保留深度试错差异
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://mp.weixin.qq.com/s/PMutZvYD\_C6NXrs87Z8W6Q>
+
+### 归档技术正文
 
 <meta name="referrer" content="no-referrer"/>
 \> 本文由 \[简悦 SimpRead\](http://ksria.com/simpread/) 转码， 原文地址 \[mp.weixin.qq.com\](https://mp.weixin.qq.com/s/PMutZvYD\_C6NXrs87Z8W6Q)

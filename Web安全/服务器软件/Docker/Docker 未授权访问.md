@@ -1,8 +1,50 @@
 ---
 source: "hatch 补库批 20260928"
+title: "Docker 未授权访问"
+product: "Docker daemon Remote API"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "显式暴露TCP API且无认证/授权、守护进程权限允许宿主挂载；cron/SSH后利用另需相关服务配置"
+source_status: "unknown"
+side_effects: "含计划任务、启动项或 SSH 授权文件写入：会改变后续执行或登录行为。测试前备份原文件，结束后恢复原内容、权限与属主，不覆盖生产文件。; 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。"
+id: "vw-51ba507cce496d49b323d878"
+entity_id: "ve-51ba507cce496d49b323d878"
+schema_version: "1"
 ---
 
 # Docker 未授权访问
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：显式暴露TCP API且无认证/授权、守护进程权限允许宿主挂载；cron/SSH后利用另需相关服务配置
+- 证据范围：源于历史Swarm部署配置，不是Swarm必然开放漏洞；与31同源材料重叠但含更多脚本选项/缓解
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 仅改端口不构成有效认证控制；内网本身不替代认证
+- 低权限账户运行Docker须使用支持的rootless机制，不能随意改daemon用户即可
+- /etc/crontabs/root是发行版相关路径，nc -e存在性也依宿主
+- 多个GitHub链接直接黏连，官方防护链接截断Rem
+- docker-py包与DockerClient新API应说明兼容版本
+
+### 操作风险与资料使用
+
+- 含计划任务、启动项或 SSH 授权文件写入：会改变后续执行或登录行为。测试前备份原文件，结束后恢复原内容、权限与属主，不覆盖生产文件。
+- 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 一、漏洞简介
 ------------

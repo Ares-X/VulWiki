@@ -1,6 +1,39 @@
 ---
 source: "MrWQ/vulnerability-paper"
+product: "PHPCMS9.6.0"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "PHPCMS V9-6-0 任意文件上传漏洞分析"
+prerequisites: "来源所述条件，未列明部分仍待核：注册与choosemodel启用、modelid能选到editor content、远程copy/allow_url_fopen、上传目录执行PHP；路径回显需注册成功进入缺列SQL错误"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/f4MghsGAzHkeu62_5cp0VA"
+id: "vw-6c4c794549fdf40465868363"
+entity_id: "ve-6c4c794549fdf40465868363"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：注册与choosemodel启用、modelid能选到editor content、远程copy/allow_url_fopen、上传目录执行PHP；路径回显需注册成功进入缺列SQL错误
+
+- **适用与权限边界（1）**：正文PoCmodelid11脚本modelid1，正常流程10，模型配置映射至关重要但没解释1与11差别，不能把任意ID视通用。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **结论使用边界（2）**：脚本无返回仍打印success，正则贪婪匹配img且无实际执行验证；用户名/邮箱随机碰撞可能导致不回路径。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **结论使用边界（3）**：正常birthday INSERT出现'2021-03-13'php是文本污染。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **事实待核（4）**：详述phpsso故障/重复用户不回路径与文件已写区别，应保留；9.6.1修复仅图可补官方出处。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # PHPCMS V9-6-0 任意文件上传漏洞分析
 

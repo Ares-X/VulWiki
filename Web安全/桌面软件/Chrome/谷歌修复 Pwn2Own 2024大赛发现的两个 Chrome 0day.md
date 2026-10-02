@@ -1,8 +1,66 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2024-2887;CVE-2024-2886"
+identifier_role: "primary"
+primary_identifiers: "CVE-2024-2887;CVE-2024-2886"
+referenced_identifiers: "CVE-2024-0519"
+identifier_status: "unknown"
+title: "谷歌修复 Pwn2Own 2024大赛发现的两个 Chrome 0day"
+product: "Chrome WebAssembly/WebCodecs"
+record_type: "advisory"
+document_type: "竞赛漏洞修复新闻"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "恶意HTML；Pwn2Own竞赛；Chrome123.0.6312.86/.87；Edge另需厂商版本"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Chrome/%E8%B0%B7%E6%AD%8C%E4%BF%AE%E5%A4%8D%20Pwn2Own%202024%E5%A4%A7%E8%B5%9B%E5%8F%91%E7%8E%B0%E7%9A%84%E4%B8%A4%E4%B8%AA%20Chrome%200day.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+source_url: "https://www.bleepingcomputer.com/news/security/google-fixes-chrome-zero-days-exploited-at-pwn2own-2024/"
+id: "vw-0c28abed576424a4419700a0"
+entity_id: "ve-0c28abed576424a4419700a0"
+schema_version: "1"
 ---
 
-#  谷歌修复 Pwn2Own 2024大赛发现的两个 Chrome 0day   
+# 谷歌修复 Pwn2Own 2024大赛发现的两个 Chrome 0day
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Chrome WebAssembly/WebCodecs
+- 文献类型：竞赛漏洞修复新闻
+- 版本、权限及部署边界：恶意HTML；Pwn2Own竞赛；Chrome123.0.6312.86/.87；Edge另需厂商版本
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 主两CVE元数据空；竞赛0day不等确认在野攻击，0519是历史背景
+2. 漏洞位于Chrome WebAssembly实现，不应归开放标准自身；双击RCE可能是双目标/双漏洞措辞误译，须对照原文确认
+3. Firefox修复它们指其竞赛漏洞，不能暗示Firefox也修了同一Chrome两个CVE
+4. 有BleepingComputer原新闻，缺Chrome/ZDI/Edge公告；保留渲染器执行与完整系统控制区分，去推广
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://www.bleepingcomputer.com/news/security/google-fixes-chrome-zero-days-exploited-at-pwn2own-2024/>
+- 原文参考链接（未重新核验）：<https://codesafe.qianxin.com>
+- 原文参考链接（未重新核验）：<https://oss.qianxin.com>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzI2NTg4OTc5Nw==&mid=2247519154&idx=1&sn=3f4209efe9a510274abec479b51dcceb&chksm=ea94bad8dde333cec265a5c93f4ed89b687c3a2301fd4d5045252f76ea8505a6aa3b125f9070&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzI2NTg4OTc5Nw==&mid=2247519143&idx=1&sn=aa2842286dc5aa1063e21f010ec15ad1&chksm=ea94bacddde333db812ea8c9e259e4db299453970f32514ee6a500f954af29886650c4989674&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzI2NTg4OTc5Nw==&mid=2247518760&idx=1&sn=6cd42f69e9c80855853ab33b6174315c&chksm=ea94bb42dde33254903f662caac710b4135af49d3a67e8d4b13022bca1218dbb61096abe171a&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzI2NTg4OTc5Nw==&mid=2247518705&idx=1&sn=e649874fdf57424ba03ada25dffb2bfe&chksm=ea94b89bdde3318dd2b64edb99c68dcc49c35026d1c9ae2d594ec1601dfb265af9708d1d7fca&scene=21#wechat_redirect>
+
+### 归档技术正文
+
 Sergiu Gatlan  代码卫士   2024-03-28 17:29  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

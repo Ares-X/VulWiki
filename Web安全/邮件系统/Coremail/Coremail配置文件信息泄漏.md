@@ -1,8 +1,44 @@
 ---
 source: "hatch 补库批 20260928"
+title: "Coremail配置文件信息泄漏"
+product: "Coremail XT"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "XT3.0.1-XT5.0.9 claimed, fixed5.0.9a; no auth required per article"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-a43908f6b72592e4d84029b6"
+entity_id: "ve-a43908f6b72592e4d84029b6"
+schema_version: "1"
 ---
 
 # Coremail配置文件信息泄漏
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：XT3.0.1-XT5.0.9 claimed, fixed5.0.9a; no auth required per article
+- 证据范围：Single request plus image-dependent result; source advisory and repair version present
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- Vendor advisory URL contains escaped underscore; normalize URL
+- Source/date/version/auth metadata absent from frontmatter
+- Replace live-looking demonstration hostname with explicitly designated lab placeholder
+- Results are screenshot-only and images were not reviewed
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 一、漏洞简介
 ------------

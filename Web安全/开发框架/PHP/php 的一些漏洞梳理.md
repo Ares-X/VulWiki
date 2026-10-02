@@ -1,6 +1,42 @@
 ---
 source: "MrWQ/vulnerability-paper"
+product: "PHP/应用LFI、反序列化与stream wrapper"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "php 的一些漏洞梳理"
+prerequisites: "来源所述条件，未列明部分仍待核：声称PHP5.2–5.7但不存在5.7发行系列；作者承认没记录每例版本，不能总括>5.2"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-e949c12b176717c176685b26"
+entity_id: "ve-e949c12b176717c176685b26"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：声称PHP5.2–5.7但不存在5.7发行系列；作者承认没记录每例版本，不能总括&gt;5.2
+
+代码与实验材料：全部代码/载荷已读，多处反斜杠破坏PHP、章节代码错位；部分示例有持久webshell写入
+
+来源证据范围：微信公众号及两个博客，原文长会话参数应清理；无官方API依据
+
+- **适用与权限边界（1）**：多项核心概念错误；依据：require称程序启动即包含；LFI列allow_url_fopen为必需；base64称加密；include不会报毒/永久权限维持是无依据断言。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **结论使用边界（2）**：示例与讲述机制不一致；依据：include($test).'.php'不是括号内显式后缀；__wakeup只写shell.php却称直接执行phpinfo且称构造函数；序列化字符串长度与URL内容不同。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **结论使用边界（3）**：wrapper标题与载荷错位；依据：data章节给php://filter，filter章节给file://，file章节给data://；ZIP附加.jpg例又传php.jpg会双后缀。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **代码与转录边界（4）**：大量转义、路径和配置拼写错误；依据：$\_GET、print\_r、magic_quotes_gps、/etc/passwod、/porc/config.gz，无法复制即用。相应原代码作为存在此问题的历史样本保留，不能直接当作可运行、成功复现的 PoC；缺失内容需回原稿核对，不据此补造可执行攻击链。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # php 的一些漏洞梳理
 

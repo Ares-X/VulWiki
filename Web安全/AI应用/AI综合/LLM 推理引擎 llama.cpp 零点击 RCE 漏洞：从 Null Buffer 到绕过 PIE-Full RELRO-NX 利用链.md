@@ -1,9 +1,52 @@
 ---
 cve: "CVE-2026-34159"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "LLM 推理引擎 llama.cpp 零点击 RCE 漏洞：从 Null Buffer 到绕过 PIE/Full RELRO/NX 利用链(CVE-2026-34159)"
+product: "llama.cpp"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2026-34159"
+referenced_identifiers: ""
+identifier_role: "primary"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。"
+id: "vw-75773a0a17113481b8ec698b"
+entity_id: "ve-75773a0a17113481b8ec698b"
+schema_version: "1"
 ---
 
-#  LLM 推理引擎 llama.cpp 零点击 RCE 漏洞：从 Null Buffer 到绕过 PIE/Full RELRO/NX 利用链(CVE-2026-34159)  
+# LLM 推理引擎 llama.cpp 零点击 RCE 漏洞：从 Null Buffer 到绕过 PIE/Full RELRO/NX 利用链(CVE-2026-34159)
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- RPC进程启用和端口可达前提需字段化
+- b8492修复与影响范围未提取
+- 所谓核心代码省略result和buffer_size声明应标片段
+- 任意读写到system参数布局缺复现代码需核原研究
+- 完整EXP已公开但仅截图/NVD未给代码URL
+- 作者已复现不等本库验证
+- Full RELRO仅保护GOT过度简化
+- HTML表和营销内容膨胀
+
+### 操作风险与资料使用
+
+- 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 原创 360漏洞研究院
                     360漏洞研究院  360漏洞研究院   2026-04-28 08:23  
   

@@ -1,6 +1,38 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+product: "GitLab/安全更新汇总"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2025-0993; CVE-2025-3111; CVE-2025-2853; CVE-2024-7803; CVE-2024-12093; CVE-2025-4979; CVE-2025-0679; CVE-2024-9163; CVE-2025-1110"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "多个 GitLab 漏洞使攻击者能够发起 DoS 攻击"
+prerequisites: "来源所述条件，未列明部分仍待核：称修复18.0.1、17.11.3、17.10.7，未逐漏洞列影响边界"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-deb9e030d861f01e47fa580b"
+entity_id: "ve-deb9e030d861f01e47fa580b"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：称修复18.0.1、17.11.3、17.10.7，未逐漏洞列影响边界
+
+代码与实验材料：无 PoC，混合 DoS、SAML/2FA、CI变量及信息泄露
+
+来源证据范围：2025-05-22 转载新闻，缺具体原文与 GitLab 公告链接
+
+- **事实待核（1）**：多实体统计和严重性表述互相冲突；依据：称11个漏洞但列9个编号；导语称三个高危DoS，后文将其中两个归中危。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **证据待核（2）**：统一受影响范围和扩展运维建议证据不足；依据：把全部旧安装模式概括为受影响，附极狐/FIPS/Runner/Elasticsearch/Nginx建议但未给对应公告依据。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 #  多个 GitLab 漏洞使攻击者能够发起 DoS 攻击   
  网安百色   2025-05-22 11:30  

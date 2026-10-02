@@ -1,8 +1,52 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-338ab3aba4298dc3c22b9888"
+entity_id: "ve-338ab3aba4298dc3c22b9888"
+schema_version: "1"
+title: "终止支持版本无补丁：CISA警告称USR-W610物联网设备存在严重（9.8级）漏洞"
+product: "PUSR USR-W610串口Wi-Fi服务器"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2026-25715; CVE-2026-24455; CVE-2026-26049; CVE-2026-26048"
+referenced_identifiers: ""
+prerequisites: "≤3.1.1.0声称；25715须先将管理凭据置空，嗅探需网络位置，去认证需无线邻近"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%AE%89%E5%85%A8%E8%AE%BE%E5%A4%87/CISA/%E7%BB%88%E6%AD%A2%E6%94%AF%E6%8C%81%E7%89%88%E6%9C%AC%E6%97%A0%E8%A1%A5%E4%B8%81%EF%BC%9ACISA%E8%AD%A6%E5%91%8A%E7%A7%B0USR-W610%E7%89%A9%E8%81%94%E7%BD%91%E8%AE%BE%E5%A4%87%E5%AD%98%E5%9C%A8%E4%B8%A5%E9%87%8D%EF%BC%889.8%E7%BA%A7%EF%BC%89%E6%BC%8F%E6%B4%9E.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 #  终止支持版本无补丁：CISA警告称USR-W610物联网设备存在严重（9.8级）漏洞  
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：PUSR USR-W610串口Wi-Fi服务器
+- 本文讨论：CVE-2026-25715/24455/26049/26048
+- 版本、权限与配置前提：≤3.1.1.0声称；25715须先将管理凭据置空，嗅探需网络位置，去认证需无线邻近
+- 资料类型：EOL设备多漏洞公告；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- CISA是来源，应归PUSR设备
+- 标题9.8不可覆盖四漏洞各分值和前提；置空配置不等于默认未认证接管
+- 无补丁/EOL为公告时状态，永久存在漏洞是过度绝对化
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 厂商身份译名、EOL状态与四项版本/向量待核
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 sec随谈
                     sec随谈  sec随谈   2026-02-24 00:59  
   

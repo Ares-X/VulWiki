@@ -1,8 +1,49 @@
 ---
 source: "Mr-xn/Penetration_Testing_POC"
+title: "通达OA 扫码UID登录伪造批量脚本说明"
+product: "通达OA"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "<11.5.200417及2017"
+prerequisites: "未授权"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+source_status: "unknown"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E9%80%9A%E8%BE%BEOA/%E9%80%9A%E8%BE%BEOA%E5%89%8D%E5%8F%B0%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E4%BC%AA%E9%80%A0%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%89%B9%E9%87%8F%E6%A3%80%E6%B5%8B.md"
+category_recommendation: "OA / 通达"
+id: "vw-f1682cdb56da2733b81a5a62"
+entity_id: "ve-f1682cdb56da2733b81a5a62"
+schema_version: "1"
 ---
 
-# 通达OA前台任意用户伪造登录漏洞批量检测
+# 通达OA 扫码UID登录伪造批量脚本说明
+
+## 条目说明
+
+- 对象与具体问题：通达OA；扫码UID登录伪造批量脚本说明
+- 版本、配置及部署条件：<11.5.200417及2017
+- 认证与权限前提：未授权
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 片段缺imports/left/countLines/path_out/colored等上下文，不可独立运行
+- URL以冒号拆分只适配特殊host:port格式，https处理也错误
+- 同版本SESSIONID可通用/向下兼容说法无证据，可能混淆已建立会话与漏洞分支
+- user_id字符串判据弱，手动改general/index.php加UID步骤与扫码链混淆
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
 
 **背景**
 通达OA是一套办公系统。2020年04月17日, 通达OA官方在更新了一个v11版本安全补丁, 其中修复了一个任意用户伪造登录漏洞。

@@ -1,8 +1,50 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "cPanel高危漏洞可致文件泄露与远程代码执行，数千服务器面临风险"
+product: "cPanel/WHM"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2026-29201; CVE-2026-29202; CVE-2026-29203"
+referenced_identifiers: "CVE-2026-41940"
+identifier_role: "primary"
+cve: "CVE-2026-29201; CVE-2026-29202; CVE-2026-29203"
+prerequisites: "Per issue credentials/feature rights insufficiently specified;fixed11.136.0.9/11.134.0.25/11.132.0.31 claimed"
+source_status: "unknown"
+side_effects: "含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。"
+id: "vw-28fb5bce27e0aec30a36c00e"
+entity_id: "ve-28fb5bce27e0aec30a36c00e"
+schema_version: "1"
 ---
 
-#  cPanel高危漏洞可致文件泄露与远程代码执行，数千服务器面临风险  
+# cPanel高危漏洞可致文件泄露与远程代码执行，数千服务器面临风险
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：Per issue credentials/feature rights insufficiently specified;fixed11.136.0.9/11.134.0.25/11.132.0.31 claimed
+- 证据范围：Distinct read/Perl-code/symlink permission issues, contextual separate authbypass
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- P0 contradictory identity:41940 called MicrosoftDefender/CVSS9.3 then cPanel authbypass in same section
+- Different primary vulnerabilities and incident background must remain distinct
+- No vendor patch matrix;nonexploitation claims as-of articledate only
+- Remove empty headings/recommendations
+
+### 操作风险与资料使用
+
+- 含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
  FreeBuf   2026-05-11 11:48  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/qq5rfBadR38jUokdlWSNlAjmEsO1rzv3srXShFRuTKBGDwkj4gvYy34iajd6zQiaKl77Wsy9mjC0xBCRg0YgDIWg/640?wx_fmt=gif "")  

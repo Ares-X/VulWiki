@@ -1,6 +1,44 @@
 ---
 source: "hatch 补库批 20260928"
+product: "YzmCMS5.4"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+version: "YzmCMS 5.4，作者改缓存 mode2 为 mode1 的非默认实验"
+title: "YzmCMS V5.4 后台getshell（一）"
+prerequisites: "来源所述条件，未列明部分仍待核：admincustomconfig;filecachemode1 nondefault(manuallychanged frommode2);writableexecutablecache"
+side_effects: "未执行；本文需注意的操作影响：明确更正：实验先把默认缓存 mode2 人为改为 mode1，因此结论只覆盖非默认文件缓存配置；不能写成默认安装无条件 getshell。"
+source_status: "unknown"
+id: "vw-ebca3f05fa67cb2dd45bae5d"
+entity_id: "ve-ebca3f05fa67cb2dd45bae5d"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 明确更正：实验先把默认缓存 mode2 人为改为 mode1，因此结论只覆盖非默认文件缓存配置；不能写成默认安装无条件 getshell。
+- 保留原文被过滤的失败入口与 mode1 成功路径差异；还需要管理员自定义配置、缓存可写且可执行。截图路径跨入其他版本/漏洞目录，只标需视觉核对，不直接判错图。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：admincustomconfig;filecachemode1 nondefault(manuallychanged frommode2);writableexecutablecache
+
+- **适用与权限边界（1）**：作者手动改mode1后成功，不能写默认安装直接可利用；这一非默认前提必须标题/元数据突出。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **证据待核（2）**：核心_fileputcontents只图，补丁换行如何阻止PHP执行未文本解释。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **事实待核（3）**：大量图指3.6RCE和5.7SQLi目录，需视觉核是否错配。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **结论使用边界（4）**：部分setcache入口被过滤而失败是有价值负结果，不应全部泛化。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **适用与权限边界（5）**：独立于645默认配置写backreference方法，勿合并消掉差异；缺修复版本。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # YzmCMS V5.4 后台getshell（一）
 

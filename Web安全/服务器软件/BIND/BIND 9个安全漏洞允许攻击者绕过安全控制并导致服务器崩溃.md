@@ -1,8 +1,50 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "BIND 9个安全漏洞允许攻击者绕过安全控制并导致服务器崩溃"
+product: "ISC BIND 9"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2026-1519; CVE-2026-3119; CVE-2026-3591"
+referenced_identifiers: ""
+identifier_role: "primary"
+cve: "CVE-2026-1519; CVE-2026-3119; CVE-2026-3591"
+prerequisites: "1519解析器DNSSEC验证；3119有效配置TSIG密钥；3591需相应SIG(0)/ACL环境"
+source_status: "unknown"
+side_effects: "含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。"
+id: "vw-cc655358b8c3cb6400587e1b"
+entity_id: "ve-cc655358b8c3cb6400587e1b"
+schema_version: "1"
 ---
 
-#  BIND 9个安全漏洞允许攻击者绕过安全控制并导致服务器崩溃  
+# BIND 9个安全漏洞允许攻击者绕过安全控制并导致服务器崩溃
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：1519解析器DNSSEC验证；3119有效配置TSIG密钥；3591需相应SIG(0)/ACL环境
+- 证据范围：版本矩阵和条件较清楚，标题BIND 9个安全漏洞容易误读为九个，正文实际三个；没有技术PoC
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 缺三个主CVE元数据
+- 标题应改BIND 9的三个漏洞
+- 默认允许ACL如何成为受限资源绕过需更精确解释
+- 应补官方分支公告核对版本和无变通措施断言
+
+### 操作风险与资料使用
+
+- 含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 原创 网络安全9527
                     网络安全9527  安全圈的那点事儿   2026-03-29 05:32  
   

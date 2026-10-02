@@ -1,8 +1,51 @@
 ---
 source: "Threekiii/Awesome-POC"
+title: "Apache HTTPd 多后缀解析漏洞"
+product: "Apache HTTPd mod_mime/AddHandler及PHP"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "AddHandler .php、上传校验只查最后后缀且不重命名、目录允许执行PHP"
+source_status: "unknown"
+side_effects: "含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。"
+id: "vw-236fbe78b8d6cd80896b770d"
+entity_id: "ve-236fbe78b8d6cd80896b770d"
+schema_version: "1"
 ---
 
 # Apache HTTPd 多后缀解析漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：AddHandler .php、上传校验只查最后后缀且不重命名、目录允许执行PHP
+- 证据范围：准确说明正常多扩展名特性结合上传弱校验，不应建成所有HTTPd版本统一CVE
+
+### 本次正文校订
+
+- 按实际内容修正 1 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 稳定版未固定具体镜像版本/配置目录
+- 应补不执行上传目录或严格FilesMatch等防护及配置差异
+- 上传phpinfo执行证据依赖图片，不能泛化其他PHP部署方式
+
+### 操作风险与资料使用
+
+- 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 ## 漏洞描述
 
@@ -27,7 +70,7 @@ AddHandler application/x-httpd-php .php
 
 Vulhub运行如下命令启动一个稳定版Apache，并附带PHP 7.3环境：
 
-```
+```shell
 docker-compose up -d
 ```
 

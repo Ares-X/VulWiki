@@ -1,8 +1,52 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "第155篇：Weblogic反序列化漏洞的多种回显方法总结（上篇）"
+product: "Oracle WebLogic classloading/JNDI/request context"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "Already working code execution/deserialization gadget, compatible JVM/classes, filesystem or JNDI-binding rights depending method"
+source_status: "unknown"
+side_effects: "涉及 LDAP/RMI/DNS/HTTP 外带：回连只证明相应网络交互，不能单独证明命令执行；使用自控接收端，避免把日志、凭据或真实业务数据发送给第三方。"
+id: "vw-8eca673130c186cbe38d5122"
+entity_id: "ve-8eca673130c186cbe38d5122"
+schema_version: "1"
 ---
 
-#  第155篇：Weblogic反序列化漏洞的多种回显方法总结（上篇）  
+# 第155篇：Weblogic反序列化漏洞的多种回显方法总结（上篇）
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：Already working code execution/deserialization gadget, compatible JVM/classes, filesystem or JNDI-binding rights depending method
+- 证据范围：Five reusable response techniques, not five independent vulnerabilities. Important compatibility limitations acknowledged, but examples are intentionally partial.
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- Different URLClassLoader payloads do not change current JVM classfile compatibility; distinguish attacker runtime from target runtime
+- Typo Weblogic12.2.30 and one-to-one product/JDK version assignments overgeneralized
+- Payload byte arrays/base64/classes redacted, missing helper/source links
+- Last try block incomplete; first branch base64-encodes output while second does not, contradicting uniform encoded-response description
+- Decoding strips -/* instead of reversing substitutions; algorithm must be documented rather than assumed
+- HTTP servlet-context echo requires HTTP processing, not arbitrary T3/IIOP thread
+- Persistent JNDI binding/files require unbind/removal; no cleanup
+
+### 操作风险与资料使用
+
+- 涉及 LDAP/RMI/DNS/HTTP 外带：回连只证明相应网络交互，不能单独证明命令执行；使用自控接收端，避免把日志、凭据或真实业务数据发送给第三方。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
  嗨嗨安全   2026-02-02 12:41  
   
 ![](https://mmbiz.qpic.cn/mmbiz_png/OAz0RNU450ATcz6jUJnFNeOxRzVZ9LbcCCMJ6Af2WYicgMPA32IwibF8mI2ibC9h8jaHkhxnZzZuqctMLRTxDudicA/640?wx_fmt=png "")  

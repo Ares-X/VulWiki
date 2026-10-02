@@ -1,8 +1,48 @@
 ---
 source: "hatch 补库批 20260928"
+title: "Hadoop未授权访问"
+product: "Apache Hadoop HDFS / YARN"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "安全认证关闭、相应服务可达；各组件接口和端口依版本/配置变化"
+source_status: "unknown"
+side_effects: "含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。"
+id: "vw-ba55480eff9fac19b816da0a"
+entity_id: "ve-ba55480eff9fac19b816da0a"
+schema_version: "1"
 ---
 
 # Hadoop未授权访问
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：安全认证关闭、相应服务可达；各组件接口和端口依版本/配置变化
+- 证据范围：文件访问与 YARN 作业提交应分别编目，脚本与139相同；Kerberos/网络控制建议有用。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 50070/50075 与旧 MapReduce端口表不代表所有Hadoop版本
+- 任意文件应限定为HDFS中权限可访问数据，不能理解为任意主机文件
+- 影响范围空白，无原始来源链接
+- HDSF 拼错；仅更新补丁不能替代对未鉴权功能配置修复
+
+### 操作风险与资料使用
+
+- 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 一、漏洞简介
 ------------

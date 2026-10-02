@@ -1,9 +1,61 @@
 ---
-cve: "CVE-2026-22765"
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2026-22765;CVE-2026-22766"
+identifier_role: "primary"
+primary_identifiers: "CVE-2026-22765;CVE-2026-22766"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "Dell Wyse 管理套件：从业务逻辑缺陷到未授权远程代码执行"
+product: "Dell Wyse Management Suite私有云"
+record_type: "analysis"
+document_type: "多步骤权限提升与RCE分析"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "私有云空令牌注册与租户默认状态；SMTP可出站或Pro LDAP已有域凭据；管理员改仓库及重启服务；文称5.5发布修复"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Dell%20Wyse/Dell%20Wyse%20%E7%AE%A1%E7%90%86%E5%A5%97%E4%BB%B6%EF%BC%9A%E4%BB%8E%E4%B8%9A%E5%8A%A1%E9%80%BB%E8%BE%91%E7%BC%BA%E9%99%B7%E5%88%B0%E6%9C%AA%E6%8E%88%E6%9D%83%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-81f4b1030ea6807e7f37c8b3"
+entity_id: "ve-81f4b1030ea6807e7f37c8b3"
+schema_version: "1"
 ---
 
-#  Dell Wyse 管理套件：从业务逻辑缺陷到未授权远程代码执行  
+# Dell Wyse 管理套件：从业务逻辑缺陷到未授权远程代码执行
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Dell Wyse Management Suite私有云
+- 文献类型：多步骤权限提升与RCE分析
+- 版本、权限及部署边界：私有云空令牌注册与租户默认状态；SMTP可出站或Pro LDAP已有域凭据；管理员改仓库及重启服务；文称5.5发布修复
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 元数据漏22766；独立低权提权/高权RCE与组合未认证链须分层，不能都标无需认证
+2. 最后从任意网络无需任何凭据到最高控制权过宽：接口可达、SMTP分支/LDAP域凭据、目录写权限和服务身份均必需
+3. 私有云OnPrem不应存在AD路由与Pro私有云LDAP分支叙述需澄清授权产品差异；密码用户属性却称importADUserGroups导入疑接口名串错
+4. 关键签名算法、端点参数和上传/改路径请求未给，主要源码仅截图；这是叙事分析非完整复现
+5. 缺厂商公告/原作者URL和精确受影响范围；5.5发布日期不自动证明全部旧版受影响
+6. 管理服务器产品应归Web/终端管理，非桌面客户端
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
  幻泉之洲   2026-03-24 05:58  
   
 >   
@@ -116,4 +168,4 @@ WMS 用设备组来管理大量的瘦客户端。想要注册设备到特定组�
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

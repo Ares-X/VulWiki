@@ -1,9 +1,45 @@
 ---
 cve: "CVE-2026-23525"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "漏洞预警 | 1Panel跨站脚本漏洞"
+product: "1Panel MdEditor"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2026-23525"
+referenced_identifiers: ""
+identifier_role: "primary"
+prerequisites: "previewOnly rendering;<=2.0.16 and<=1.10.33-lts claimed; attacker input/victim role unspecified"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-4739c9fdc4f00b2a5d03ae36"
+entity_id: "ve-4739c9fdc4f00b2a5d03ae36"
+schema_version: "1"
 ---
 
-#  漏洞预警 | 1Panel跨站脚本漏洞  
+# 漏洞预警 | 1Panel跨站脚本漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：previewOnly rendering;<=2.0.16 and<=1.10.33-lts claimed; attacker input/victim role unspecified
+- 证据范围：Short XSS description but asserts command execution without chain evidence
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- XSS/browser script execution conflated with server RCE; document any privileged UI/action chain or narrow impact
+- No fixed release/advisory link despite 'fixed' claim
+- Duplicate product names and broken heading syntax
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 浅安
                     浅安  浅安安全   2026-03-16 00:02  
   

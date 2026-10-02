@@ -1,8 +1,60 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2026-28950"
+identifier_role: "primary"
+primary_identifiers: "CVE-2026-28950"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "iOS 漏洞会导致已删除通知残留，苹果现已推出修复更新"
+product: "Apple iOS/iPadOS通知服务"
+record_type: "advisory"
+document_type: "隐私漏洞新闻"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "设备物理访问/取证及显示消息通知；称26.4.2与18.7.8修复"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Apple%20iOS/iOS%20%E6%BC%8F%E6%B4%9E%E4%BC%9A%E5%AF%BC%E8%87%B4%E5%B7%B2%E5%88%A0%E9%99%A4%E9%80%9A%E7%9F%A5%E6%AE%8B%E7%95%99%EF%BC%8C%E8%8B%B9%E6%9E%9C%E7%8E%B0%E5%B7%B2%E6%8E%A8%E5%87%BA%E4%BF%AE%E5%A4%8D%E6%9B%B4%E6%96%B0.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-c441eb883b4c6d10387023e5"
+entity_id: "ve-c441eb883b4c6d10387023e5"
+schema_version: "1"
 ---
 
-#  iOS 漏洞会导致已删除通知残留，苹果现已推出修复更新  
+# iOS 漏洞会导致已删除通知残留，苹果现已推出修复更新
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Apple iOS/iPadOS通知服务
+- 文献类型：隐私漏洞新闻
+- 版本、权限及部署边界：设备物理访问/取证及显示消息通知；称26.4.2与18.7.8修复
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. frontmatter遗漏正文主CVE；Signal是受通知缓存影响应用，不是加密协议被破解，应分清受影响组件
+2. 发布日期2026-04-24却将涉案事件写今年7月，时间线矛盾
+3. 设备表把第五代iPad mini与A17 Pro、第七代iPad与A16混合，且iPhone11起始与XR/XS列表冲突
+4. 推送服务器传明文与设备本地解密通知被混叙，需Signal/Apple一手来源；苹果/Signal表态、取证报道均无链接
+5. 无PoC符合新闻性质，保留接收通知范围不要泛化全聊天恢复
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 鹏鹏同学
                     鹏鹏同学  黑猫安全   2026-04-24 00:54  
   
@@ -40,4 +92,4 @@ Signal 在 X 平台发文表示：“我们高度认可苹果今日发布的补�
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

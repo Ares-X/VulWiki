@@ -1,7 +1,49 @@
 ---
-version: "docker compose up -d"
+version: ""
 source: "MrWQ/vulnerability-paper"
+product: "ThinkPHP / 多根因"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+version_notes: "docker compose up -d"
+title: "漏洞复现   ThinkPHP 全版本漏洞复现"
+prerequisites: "来源所述条件，未列明部分仍待核：2.x、5.0.9 SQL、5.x两RCE、6.0.1 session、<=6.0.13多语言；标题全版本夸大"
+side_effects: "未执行；本文需注意的操作影响：副作用与来源需补；多处写shell和改系统composer全局源，缺恢复；原生请求与截图可作变体附件"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/A23P3EWTSTLkL5N0xXoIWg"
+id: "vw-2712bc7cbd3ff00b5e6562e5"
+entity_id: "ve-2712bc7cbd3ff00b5e6562e5"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 明确更正：原 version 字段抽入命令、源码、路径、配置或普通叙述，不是版本号，已清空机器版本字段并原样保留于 version_notes；实际版本/分支条件见本节逐篇记录，未从代码猜造版本。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：2.x、5.0.9 SQL、5.x两RCE、6.0.1 session、&lt;=6.0.13多语言；标题全版本夸大
+
+代码与实验材料：537行全读，包含完整GET/头/Cookie实验，session第一方案明确失败，保留失败说明
+
+来源证据范围：微信原文，提Vulhub但无精确出处
+
+- **实验改动边界（1）**：人为绕过依赖兼容检查不宜作为安装建议；依据：作者修改70400版本检查以PHP7.3强行运行，可能掩盖实际依赖不兼容，需固定可兼容环境。以下步骤按原实验条件保留；人工改动后的行为只支持该修改环境，不用于证明未修改发行版默认可利用。
+
+- **事实待核（2）**：version元数据为命令；依据：字段docker compose up -d而非版本。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **适用与权限边界（3）**：实验范围与标题不符；依据：只选若干版本，不能“全版本”；5.0.9 SQL与511&lt;5.0.9边界需核验。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **结论使用边界（4）**：请求长度明显未随body更新；依据：写shell包Content-Length73但body远长于id示例；不应原样复制。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **操作与副作用边界（5）**：副作用与来源需补；依据：多处写shell和改系统composer全局源，缺恢复；原生请求与截图可作变体附件。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # 漏洞复现   ThinkPHP 全版本漏洞复现
 

@@ -1,9 +1,61 @@
 ---
 cve: "CVE-2024-32004"
 source: "gelusus/wxvl 公众号漏洞文库"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "本周最新7个CVE漏洞POC"
+product: "七CVE PoC链接聚合"
+record_type: "unknown"
+document_type: "技术文章（细分类待核）"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "没有任一PoC正文/产品/版本/条件/公告，不能作为七篇完整漏洞材料"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/%E6%9C%AC%E5%91%A8%E6%9C%80%E6%96%B07%E4%B8%AACVE%E6%BC%8F%E6%B4%9EPOC.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-013e6941365ba59018553c1e"
+entity_id: "ve-013e6941365ba59018553c1e"
+schema_version: "1"
 ---
 
-#  本周最新7个CVE漏洞POC   
+# 本周最新7个CVE漏洞POC
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：七CVE PoC链接聚合
+- 文献类型：技术文章（细分类待核）
+- 版本、权限及部署边界：没有任一PoC正文/产品/版本/条件/公告，不能作为七篇完整漏洞材料
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 0x00–07共8项且4323重复，实际7唯一CVE但全部主链接href为空
+2. 没有任一PoC正文/产品/版本/条件/公告，不能作为七篇完整漏洞材料
+3. 32004元数据只是第一列表项，32002/29895/27130/4323/4367/22120均并列引用
+4. 后部推荐有22120和29895具体公众号链接可作追回候选但不是丢失PoC地址
+5. 同一推荐URL被标CTF与苹果iOS内核等不同标题，链接标题错配需核
+6. 剩余大量推广不支撑技术内容
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 原创 Fighter001  重生者安全   2024-05-26 13:17  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/SEVwkT7gYkmWcuXecnWxn0nNnjEURxV7TX3vdfb7rcBt6ictlV3xxPdcVS8cXFG8Tq6TicR92PHnFDmnsu2icKf7A/640?wx_fmt=png&from=appmsg "")  
@@ -105,4 +157,4 @@ source: "gelusus/wxvl 公众号漏洞文库"
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

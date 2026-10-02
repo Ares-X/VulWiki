@@ -1,10 +1,59 @@
 ---
 cnvd: "CNVD-2021-30167"
-fofa: "”工程师"
 source: "MrWQ/vulnerability-paper"
+id: "vw-5695d90e857f7a0c7a45fd5b"
+entity_id: "ve-5695d90e857f7a0c7a45fd5b"
+schema_version: "1"
+fofa_unverified: "”工程师"
+title: "分享   蚁剑 RCE 反制复现"
+product: "AntSword客户端≤2.0.7，PHPCMS为实验宿主"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+prerequisites: "用户用受影响客户端连接攻击者可控服务响应；测试Win10，关闭防护是实验条件"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%AE%89%E5%85%A8%E8%AE%BE%E5%A4%87/%E4%B8%AD%E5%9B%BD%E8%9A%81%E5%89%91/%E5%88%86%E4%BA%AB%20%20%20%E8%9A%81%E5%89%91%20RCE%20%E5%8F%8D%E5%88%B6%E5%A4%8D%E7%8E%B0.md"
+review_date: "2026-10-02"
+side_effects: "回连样例可能向外部地址发送网络请求或建立会话；应使用自己的隔离回连服务，DNS/LDAP 到达只能证明相应交互，不能单独证明 RCE"
+source_url: "https://mp.weixin.qq.com/s/thLttnT09Qr53bTKejw5BA"
+source_status: "recorded"
 ---
 
 # 分享   蚁剑 RCE 反制复现
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：AntSword客户端≤2.0.7，PHPCMS为实验宿主
+- 本文讨论：HTTP500错误HTML渲染至Node执行，无主CVE/CNVD证据
+- 版本、权限与配置前提：用户用受影响客户端连接攻击者可控服务响应；测试Win10，关闭防护是实验条件
+- 资料类型：AntSword恶意响应XSS到客户端执行实验；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- frontmatter CNVD-2021-30167来自页尾用友NC推荐，错误套给蚁剑；FOFA值也是推荐标题碎片
+- PHP片段&lt;?phpheader缺分隔，不能正确按PHP开放标签解析
+- 大篇拓扑/反向连接配置掩盖客户端根因，关闭杀软不能作为通用必需前提
+- ≤2.0.7与文中v2.0需区分启动器/核心版本；2.0.7不能装Linux断言无来源
+- 示例公网地址及实验材料应去敏，蓝队反制不是泛授权
+- 已落实的文本修订：残缺指纹退出可执行索引并保留原值。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
+
+### 操作风险与恢复
+
+- 回连样例可能向外部地址发送网络请求或建立会话；应使用自己的隔离回连服务，DNS/LDAP 到达只能证明相应交互，不能单独证明 RCE
+
+### 待核与来源
+
+- 真实版本范围、修复及截图执行证据待核
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/thLttnT09Qr53bTKejw5BA)

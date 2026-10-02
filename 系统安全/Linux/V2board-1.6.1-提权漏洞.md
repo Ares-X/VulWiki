@@ -1,9 +1,64 @@
 ---
-version: "docker-compose up -d"
 source: "Threekiii/Vulnerability-Wiki"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "V2board-1.6.1-提权漏洞"
+product: "V2board 1.6.1 Web管理面板"
+record_type: "vulnerability"
+document_type: "应用鉴权复现"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "必须普通账号，先登录获取auth_data再访问user/info写缓存后调用admin API"
+side_effects: "所谓所有管理员API需限定已测试接口和源码覆盖，不以单例推断全量"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/V2board-1.6.1-%E6%8F%90%E6%9D%83%E6%BC%8F%E6%B4%9E.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+version_unverified: "docker-compose up -d"
+id: "vw-d3f4c9aeaa1ac0664c97741a"
+entity_id: "ve-d3f4c9aeaa1ac0664c97741a"
+schema_version: "1"
 ---
 
-# V2board 1.6.1 提权漏洞
+# V2board-1.6.1-提权漏洞
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：V2board 1.6.1 Web管理面板
+- 文献类型：应用鉴权复现
+- 版本、权限及部署边界：必须普通账号，先登录获取auth_data再访问user/info写缓存后调用admin API
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 确定误归Linux系统提权，实际Web应用普通用户升管理员，与OS root无关
+2. frontmatter version为docker-compose up -d命令而非1.6.1
+3. 认证前提、缓存热身步骤、修复commit清楚，技术流程可保留；缺Vulhub具体目录/commit和发行修复版本
+4. 硬编码Authorization示例包含认证材料样式，应以TOKEN占位；成功证据仅图片未查看
+5. 所谓所有管理员API需限定已测试接口和源码覆盖，不以单例推断全量
+
+### 操作风险
+
+所谓所有管理员API需限定已测试接口和源码覆盖，不以单例推断全量
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://github.com/v2board/v2board/commit/5976bcc65a61f7942ed4074b9274236d9d55d5f0>
+- 原文参考链接（未重新核验）：<http://your-ip:8080`即可查看到其登录页面>
+- 原文参考链接（未重新核验）：<http://your-ip:8080/api/v1/passport/auth/login>
+- 原文参考链接（未重新核验）：<http://your-ip:8080/api/v1/admin/user/fetch`>
+- 原文参考链接（未重新核验）：<https://github.com/Threekiii/Vulnerability-Wiki>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
 
 ## 漏洞描述
 

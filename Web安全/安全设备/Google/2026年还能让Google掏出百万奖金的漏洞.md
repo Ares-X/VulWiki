@@ -1,9 +1,57 @@
 ---
 cve: "CVE-2026-2031"
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-bc22f366b6aaf0abcf5df879"
+entity_id: "ve-bc22f366b6aaf0abcf5df879"
+schema_version: "1"
+title: "2026年还能让Google掏出百万奖金的漏洞"
+product: "Google Cloud Application Integration/内部CRM Integration Platform"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2026-2031"
+referenced_identifiers: ""
+prerequisites: "需Google账户、一方认证或项目Bearer权限；两账号发布、内部RPC仍受peer政策限制；云端分阶段修复"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%AE%89%E5%85%A8%E8%AE%BE%E5%A4%87/Google/2026%E5%B9%B4%E8%BF%98%E8%83%BD%E8%AE%A9Google%E6%8E%8F%E5%87%BA%E7%99%BE%E4%B8%87%E5%A5%96%E9%87%91%E7%9A%84%E6%BC%8F%E6%B4%9E.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 #  2026年还能让Google掏出百万奖金的漏洞  
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Google Cloud Application Integration/内部CRM Integration Platform
+- 本文讨论：文统称StubZero CVE-2026-2031，含schema/队列泄露、ACL、IDOR与内部Stubby任务多原语
+- 版本、权限与配置前提：需Google账户、一方认证或项目Bearer权限；两账号发布、内部RPC仍受peer政策限制；云端分阶段修复
+- 资料类型：Google Cloud研究长篇改编；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 安全设备/Google分类过宽，实际云编排服务；元数据单CVE未说明两轮多原语映射
+- 标题百万奖金未标币种，正文累计148337美元，不宜直接认为百万美元
+- 正文明确两轮未实际执行服务器代码且第二轮由厂商确认后叫停，摘要完整RCE需标厂商定级与作者实证区别
+- 第二轮IDOR与创建自己内部任务可能是独立路径，流程图画成必经串行链过度
+- 部分JSON含全角空格/省略号及图表压平不可直接复用；示例2026-05-01与3月升级/4月奖励时间需解释为重测
+- 几乎必然提权与全球任意资源范围超出展示证据；公开API key和业务对象标识仍需去敏审查
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- CVE是否覆盖所有原语、厂商确认/奖励邮件与修复完成状态待原源核验；本审阅未调用文中任何API
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 原创 一个不正经的黑客
                     一个不正经的黑客  一个不正经的黑客   2026-09-14 00:30  
   

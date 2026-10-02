@@ -1,8 +1,56 @@
 ---
 source: "MrWQ/vulnerability-paper"
+id: "vw-9bb7f01b3616758edf1afa4d"
+entity_id: "ve-9bb7f01b3616758edf1afa4d"
+schema_version: "1"
+title: "二进制固件函数劫持术 - DYNAMIC"
+product: "TOTOLink N210RE样例，D-Link为方法参考"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+prerequisites: "本地可改ELF、动态链接、适当空闲区、正确架构/端序及库路径"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/IOT%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%AE%BE%E5%A4%87/%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%9B%BA%E4%BB%B6%E5%87%BD%E6%95%B0%E5%8A%AB%E6%8C%81%E6%9C%AF%20-%20DYNAMIC.md"
+review_date: "2026-10-02"
+side_effects: "文中写入/上传步骤会创建或覆盖目标文件；须先核对服务账户写权限、保存路径和脚本解析条件，验证后按原路径核查残留"
+source_url: "https://mp.weixin.qq.com/s/wKNc8zy8U-946ac1QLiySg"
+source_status: "recorded"
 ---
 
 # 二进制固件函数劫持术 - DYNAMIC
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：TOTOLink N210RE样例，D-Link为方法参考
+- 本文讨论：非独立漏洞；ELF DT_NEEDED修改实现函数替代
+- 版本、权限与配置前提：本地可改ELF、动态链接、适当空闲区、正确架构/端序及库路径
+- 资料类型：固件仿真方法教程；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- DT列表前缀1–5容易被误认枚举值，除NEEDED外与真实tag不一致，应区分序号和值；DT_HASH与GNU_HASH不是同一项
+- 自定义elf.h/Elf_Ehdr别名未附；e_phnum未按16位端序转换；空指针/文件边界未校验
+- 移动未显式保留末尾DT_NULL或更新段大小，依赖恰好空闲零区域；不能泛称任意文件可用
+- Makefile空格缩进、printf地址格式不严谨；patchelf限制应注明工具版本
+- 并非网络攻击漏洞，不能赋予产品漏洞编号
+
+### 操作风险与恢复
+
+- 文中写入/上传步骤会创建或覆盖目标文件；须先核对服务账户写权限、保存路径和脚本解析条件，验证后按原路径核查残留
+
+### 待核与来源
+
+- 原样本段布局、ELF手册及工具版本待核；未编译/执行
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/wKNc8zy8U-946ac1QLiySg)

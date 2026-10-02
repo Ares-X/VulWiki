@@ -1,9 +1,61 @@
 ---
 cve: "CVE-2025-54322"
 source: "gelusus/wxvl 公众号漏洞文库"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "全球首例！AI智能体自主发现满级评分RCE漏洞"
+product: "CVE-2025-54322 AI发现新闻，产品未命名"
+record_type: "unknown"
+document_type: "技术文章（细分类待核）"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "全文没有厂商/产品/固件版本或可识别HTTP入口；预认证RCE只有概括，无法确认认证绕过与命令执行链，隔离/WAF建议泛化"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/%E5%85%A8%E7%90%83%E9%A6%96%E4%BE%8B%EF%BC%81AI%E6%99%BA%E8%83%BD%E4%BD%93%E8%87%AA%E4%B8%BB%E5%8F%91%E7%8E%B0%E6%BB%A1%E7%BA%A7%E8%AF%84%E5%88%86RCE%E6%BC%8F%E6%B4%9E.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-d8d57623702f5e8e8c6aef74"
+entity_id: "ve-d8d57623702f5e8e8c6aef74"
+schema_version: "1"
 ---
 
-#  全球首例！AI智能体自主发现满级评分RCE漏洞  
+# 全球首例！AI智能体自主发现满级评分RCE漏洞
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：CVE-2025-54322 AI发现新闻，产品未命名
+- 文献类型：技术文章（细分类待核）
+- 版本、权限及部署边界：全文没有厂商/产品/固件版本或可识别HTTP入口；预认证RCE只有概括，无法确认认证绕过与命令执行链，隔离/WAF建议泛化
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 全文没有厂商/产品/固件版本或可识别HTTP入口
+2. 全球首例/自治全流程/数万暴露/无补丁均无可追溯技术报告和测绘日期
+3. 仅来源安全客与pwn.ai名称，不是精确来源
+4. CVSS10无向量/评分出处
+5. 预认证RCE只有概括，无法确认认证绕过与命令执行链，隔离/WAF建议泛化
+6. 可归AI安全新闻并补正式漏洞实体，不凭编号猜产品
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
  鼎信安全   2026-01-07 08:27  
   
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/M9f1oMd7Vxic2eXcicYMnEBEa4mzm4tnVsA20rqtdzXPCX06vhFZfh2aMr8W56Pya9FMUhiatvib8KBhnxcPDD0lxQ/640?wx_fmt=jpeg "")  
@@ -124,4 +176,4 @@ pwn.ai
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

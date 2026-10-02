@@ -1,6 +1,38 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+product: "GitLab2FA bypass/DoS"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2026-0723; CVE-2025-13927; CVE-2025-13928; CVE-2025-13335; CVE-2026-1102"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "GitLab警告：存在高危双因素认证绕过和拒绝服务漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：Fix18.8.2/18.7.2/18.6.4; no affectedranges; Jan29,2026"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-d2f57dc242cf14eaa057d699"
+entity_id: "ve-d2f57dc242cf14eaa057d699"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：Fix18.8.2/18.7.2/18.6.4; no affectedranges; Jan29,2026
+
+代码与实验材料：No PoC; forgeddeviceresponse concept
+
+来源证据范围：BleepingComputer named only
+
+- **凭据与会话边界（1）**：TargetaccountID conflated withcredentialID withinsamearticle; patch/dateconsistency needsprimaryvalidation。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+
+- **证据待核（2）**：Exposurefingerprints6000/45000 are not confirmedvulnerableassets; no sourceURL。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 #  GitLab警告：存在高危双因素认证绕过和拒绝服务漏洞  
 Rhinoer

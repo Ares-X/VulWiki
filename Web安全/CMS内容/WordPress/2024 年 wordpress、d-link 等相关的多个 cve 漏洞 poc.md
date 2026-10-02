@@ -1,6 +1,41 @@
 ---
 cve: "CVE-2024-10914"
+product: "D-Link NAS；Altenergy Power Control；WordPress multiple plugins"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2024-10914; CVE-2024-11305; CVE-2024-10793; CVE-2024-11199; CVE-2024-11381; CVE-2024-43919; CVE-2024-52433; CVE-2024-9935"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "2024 年 wordpress、d-link 等相关的多个 cve 漏洞 poc"
+prerequisites: "来源所述条件，未列明部分仍待核：各产品/插件分别；shortcode需可编辑内容角色，PHP对象注入需加载目标类/POP，NAS/工控配置未述"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/Pj3X-PpW6qH-EZF01ugZ1w"
+id: "vw-da6a38b938ed29856ee2de23"
+entity_id: "ve-da6a38b938ed29856ee2de23"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：各产品/插件分别；shortcode需可编辑内容角色，PHP对象注入需加载目标类/POP，NAS/工控配置未述
+
+- **事实待核（1）**：WordPress目录收NAS和能源软件，frontmatter只D-Link首CVE，需拆八实体而非强归WP。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **事实待核（2）**：10914/11305把日期当版本上界，缺真实固件/发行范围。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **凭据与会话边界（3）**：Altenergy SQL载荷相邻CHAR函数无连接运算，需核实际方言；audit-log AJAX未Cookie/nonce权限未解释。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+
+- **事实待核（4）**：两个shortcode没插件名字/版本；MyGeoPosts假想PHP_Object_Injection类不是目标gadget证据；Elementor页面固定ID84。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **来源与引用处置（5）**：所有条目无来源/响应/修复，广告占后半，状态应未验证线索。保留这部分来源材料并与技术结论分开；其引用或宣传内容不能补足本文漏洞的证据。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # 2024 年 wordpress、d-link 等相关的多个 cve 漏洞 poc
 

@@ -1,10 +1,50 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "亿赛通电子文档安全管理系统内置Apache Solr dataimport脚本执行"
+product: "亿赛通电子文档安全管理系统内置Apache Solr"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "未列亿赛通/Solr/JDK版本；DIH/脚本和配置参数启用"
+prerequisites: "Solr管理及core端点可达/鉴权条件未知"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+source_url: "https://mp.weixin.qq.com/s/thL73Cr594vJ9dwSq1l59Q"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/%E4%BA%BF%E8%B5%9B%E9%80%9A/%E4%BA%BF%E8%B5%9B%E9%80%9A%20%E7%94%B5%E5%AD%90%E6%96%87%E6%A1%A3%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%20dataimport%20%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md"
+id: "vw-4c278d8ba4b0657ad48d1d99"
+entity_id: "ve-4c278d8ba4b0657ad48d1d99"
+schema_version: "1"
 ---
 
-# 亿赛通 电子文档安全管理系统 dataimport 远程命令执行漏洞
+# 亿赛通电子文档安全管理系统内置Apache Solr dataimport脚本执行
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：亿赛通电子文档安全管理系统内置Apache Solr；dataimport脚本执行
+- 版本、配置及部署条件：未列亿赛通/Solr/JDK版本；DIH/脚本和配置参数启用
+- 认证与权限前提：Solr管理及core端点可达/鉴权条件未知
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- datasource声明streamsrc引用streamsrc1不一致，core路径动态而core=tika固定需核
+- Solr组件漏洞应与亿赛通嵌入影响映射，不可泛化所有版本
+- full-import即使clean/commit false仍是任务状态操作，需影响提示
+- 缺官方根因/CVE/修复；去推广，保留署名
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/thL73Cr594vJ9dwSq1l59Q)
 
 ![](https://mmbiz.qpic.cn/mmbiz_gif/ibicicIH182el5PaBkbJ8nfmXVfbQx819qWWENXGA38BxibTAnuZz5ujFRic5ckEltsvWaKVRqOdVO88GrKT6I0NTTQ/640?wx_fmt=gif)

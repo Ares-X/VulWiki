@@ -1,8 +1,53 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-e5166102982496a497ada039"
+entity_id: "ve-e5166102982496a497ada039"
+schema_version: "1"
+title: "尽快更新！Zyxel 路由器曝出 OS 命令注入漏洞，影响多个版本"
+product: "Zyxel AP/USG LITE60AX及ATP/USG FLEX"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2024-7261"
+referenced_identifiers: ""
+prerequisites: "7261无认证；其他有管理员/CLI/FTP条件；42057用户PSK模式及长用户名"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/Zyxel/%E5%B0%BD%E5%BF%AB%E6%9B%B4%E6%96%B0%EF%BC%81Zyxel%20%E8%B7%AF%E7%94%B1%E5%99%A8%E6%9B%9D%E5%87%BA%20OS%20%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%EF%BC%8C%E5%BD%B1%E5%93%8D%E5%A4%9A%E4%B8%AA%E7%89%88%E6%9C%AC.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 #  尽快更新！Zyxel 路由器曝出 OS 命令注入漏洞，影响多个版本   
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Zyxel AP/USG LITE60AX及ATP/USG FLEX
+- 本文讨论：CVE-2024-7261；6343/7203/42057-42061亦主列表
+- 版本、权限与配置前提：7261无认证；其他有管理员/CLI/FTP条件；42057用户PSK模式及长用户名
+- 资料类型：多产品多漏洞补丁综述；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 多型号公用一个固件分支代码，需逐型号核验，&lt;7.00不能表达7.00早期build
+- ATP拼APT，用户PSK中文翻译破损；元数据未录任何CVE
+- 防火墙修复矩阵仅图片，缺官方公告直链
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 各CVE准确型号和hotfix、长用户名配置条件待官方确认
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 小薯条  FreeBuf   2024-09-06 19:12  
   
 ****  

@@ -1,9 +1,61 @@
 ---
-cve: "CVE-2025-5601"
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2025-5601"
+identifier_role: "primary"
+primary_identifiers: "CVE-2025-5601"
+referenced_identifiers: "CVE-2025-1492"
+identifier_status: "unknown"
+title: "Wireshark漏洞可通过恶意数据包注入引发拒绝服务攻击"
+product: "Wireshark列工具模块"
+record_type: "advisory"
+document_type: "安全新闻"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "处理注入流量或恶意pcap；文中4.4.0–4.4.6和4.2.0–4.2.12受影响"
+side_effects: "7.8评分、CWE120及内部测试来源未给依据；column工具与特定解析器崩溃措辞需统一"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Wireshark/Wireshark%E6%BC%8F%E6%B4%9E%E5%8F%AF%E9%80%9A%E8%BF%87%E6%81%B6%E6%84%8F%E6%95%B0%E6%8D%AE%E5%8C%85%E6%B3%A8%E5%85%A5%E5%BC%95%E5%8F%91%E6%8B%92%E7%BB%9D%E6%9C%8D%E5%8A%A1%E6%94%BB%E5%87%BB.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-a93ebbb18c4fea26e1b5152f"
+entity_id: "ve-a93ebbb18c4fea26e1b5152f"
+schema_version: "1"
 ---
 
-#  Wireshark漏洞可通过恶意数据包注入引发拒绝服务攻击  
+# Wireshark漏洞可通过恶意数据包注入引发拒绝服务攻击
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Wireshark列工具模块
+- 文献类型：安全新闻
+- 版本、权限及部署边界：处理注入流量或恶意pcap；文中4.4.0–4.4.6和4.2.0–4.2.12受影响
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 4.2.12同时列为受影响上界与推荐修复版本，明确自相矛盾需原公告纠正
+2. 7.8评分、CWE120及内部测试来源未给依据；column工具与特定解析器崩溃措辞需统一
+3. 1492仅历史比较不能列本次主漏洞，多个解析器是否同编号需核验
+4. 引用wnpa-sec-2025-02却无链接，来源仅freebuf站名；数百万为估计非受影响计数
+5. 可信来源抓包不能保证流量可信；保留DoS而勿扩展RCE，清理广告
+
+### 操作风险
+
+7.8评分、CWE120及内部测试来源未给依据；column工具与特定解析器崩溃措辞需统一
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://mp.weixin.qq.com/s?__biz=MzI5NTM4OTQ5Mg==&mid=2247633989&idx=1&sn=cd6647451cec618b20dd28533702603b&scene=21#wechat_redirect>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
  商密君   2025-06-08 10:35  
   
 ### Part01  
@@ -91,4 +143,4 @@ Wireshark基金会已发布补丁修复该漏洞，强烈建议用户立即升�
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

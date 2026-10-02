@@ -1,9 +1,60 @@
 ---
-cve: "CVE-2025-24091"
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2025-24091"
+identifier_role: "primary"
+primary_identifiers: "CVE-2025-24091"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "一行代码即可让iPhone“变砖”：iOS高危漏洞解析"
+product: "Apple iOS Darwin notifications"
+record_type: "advisory"
+document_type: "拒绝服务新闻解读"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "恶意应用被安装并启动/小组件后台执行；称iOS18.3修复"
+side_effects: "永久禁用与完整系统恢复可修复自相矛盾，应描述持久重启循环/拒绝服务而非永久硬件损坏"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Apple%20iOS/%E4%B8%80%E8%A1%8C%E4%BB%A3%E7%A0%81%E5%8D%B3%E5%8F%AF%E8%AE%A9iPhone%E2%80%9C%E5%8F%98%E7%A0%96%E2%80%9D%EF%BC%9AiOS%E9%AB%98%E5%8D%B1%E6%BC%8F%E6%B4%9E%E8%A7%A3%E6%9E%90.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-e8d8a247a61e5e75c89463d8"
+entity_id: "ve-e8d8a247a61e5e75c89463d8"
+schema_version: "1"
 ---
 
-#  一行代码即可让iPhone“变砖”：iOS高危漏洞解析   
+# 一行代码即可让iPhone“变砖”：iOS高危漏洞解析
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Apple iOS Darwin notifications
+- 文献类型：拒绝服务新闻解读
+- 版本、权限及部署边界：恶意应用被安装并启动/小组件后台执行；称iOS18.3修复
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 永久禁用与完整系统恢复可修复自相矛盾，应描述持久重启循环/拒绝服务而非永久硬件损坏
+2. 一行代码仅在未查看图片，文本没有代码；VeryEvilNotify无链接，不能标成全文PoC
+3. 非远程无条件攻击，需恶意应用及小组件执行；Darwin Nuke只是历史对比
+4. 厂商公告/原研究缺失，FreeBuf仅媒体名；授权前缀与修复版本需官方核验；清理征文/卖报告广告
+
+### 操作风险
+
+永久禁用与完整系统恢复可修复自相矛盾，应描述持久重启循环/拒绝服务而非永久硬件损坏
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://mp.weixin.qq.com/s?__biz=MzI5NTM4OTQ5Mg==&mid=2247633989&idx=1&sn=cd6647451cec618b20dd28533702603b&scene=21#wechat_redirect>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
  商密君   2025-05-04 11:45  
   
 iOS系统存在一个高危漏洞（CVE-2025-24091），恶意应用仅需执行一行代码即可永久禁用iPhone。该漏洞通过操作系统的Darwin通知机制触发无限重启循环，导致设备"变砖"，必须通过完整系统恢复才能修复。  
@@ -126,4 +177,4 @@ FreeBuf
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

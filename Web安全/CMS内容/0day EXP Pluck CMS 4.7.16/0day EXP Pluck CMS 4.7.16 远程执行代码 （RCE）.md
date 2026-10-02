@@ -1,6 +1,42 @@
 ---
 cve: "CVE-2022-26965"
+product: "Pluck CMS"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2022-26965"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "Pluck CMS 主题安装代码执行实验（需管理员；版本边界待核）"
+version: "4.7.16 与 before 4.7.16 原文冲突，待核"
+prerequisites: "来源所述条件，未列明部分仍待核：Admin password; theme installation; title 4.7.16 but code says before 4.7.16"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/F0JmusxHqdF88OkYvX-n4Q"
+id: "vw-ad8ae0725029d982fa0c4579"
+entity_id: "ve-ad8ae0725029d982fa0c4579"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 明确边界：所贴主题安装 EXP 明示需要管理员密码/权限，不是匿名 RCE 证据。标题 4.7.16 与注释 before 4.7.16 矛盾，准确上下界待公告；所需 shell.tar 未提供，原 multipart 声明与提交裸归档的构造也未证明正确。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：Admin password; theme installation; title 4.7.16 but code says before 4.7.16
+
+- **事实待核（1）**：Version boundary internally inconsistent (4.7.16 vs before 4.7.16)。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **适用与权限边界（2）**：Headline omits authenticated/admin requirement explicit in embedded exploit。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **适用与权限边界（3）**：shell.tar is required but not supplied or its multipart construction explained; raw archive submitted under multipart content type needs checking。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **来源与引用处置（4）**：Repeated Valentine's Day slogans and disclaimer dominate front matter。保留这部分来源材料并与技术结论分开；其引用或宣传内容不能补足本文漏洞的证据。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # 【0day EXP】Pluck CMS 4.7.16 远程执行代码 （RCE）
 

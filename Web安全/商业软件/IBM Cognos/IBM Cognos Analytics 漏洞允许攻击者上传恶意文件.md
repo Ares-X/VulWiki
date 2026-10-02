@@ -1,8 +1,50 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "IBM Cognos Analytics 40695上传与51466 EL注入双通告"
+product: "IBM Cognos Analytics"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2024-40695;CVE-2024-51466"
+referenced_identifiers: "CVE-2020-0796"
+identifier_status: "unknown"
+affected_scope: "11.2.0–11.2.4FP4/12.0.0–12.0.4；FP5/IF1修复声明"
+prerequisites: "上传PR:L/UI:R；EL匿名声明"
+side_effects: "文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行；命令/代码执行示例可能改变主机状态"
+review_date: "2026-10-02"
+identifier_role: "primary"
+source_status: "unknown"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/IBM%20Cognos/IBM%20Cognos%20Analytics%20%E6%BC%8F%E6%B4%9E%E5%85%81%E8%AE%B8%E6%94%BB%E5%87%BB%E8%80%85%E4%B8%8A%E4%BC%A0%E6%81%B6%E6%84%8F%E6%96%87%E4%BB%B6.md"
+id: "vw-ffccfb16d707d86a6f9ffed9"
+entity_id: "ve-ffccfb16d707d86a6f9ffed9"
+schema_version: "1"
 ---
 
-#  IBM Cognos Analytics 漏洞允许攻击者上传恶意文件   
+# IBM Cognos Analytics 40695上传与51466 EL注入双通告
+
+## 条目说明
+
+- 对象与具体问题：IBM Cognos Analytics；40695上传与51466 EL注入双通告
+- 版本、配置及部署条件：11.2.0–11.2.4FP4/12.0.0–12.0.4；FP5/IF1修复声明
+- 认证与权限前提：上传PR:L/UI:R；EL匿名声明
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 标题偏上传但含两漏洞，应双主ID；元数据缺编号
+- 上传可执行文件发送给受害者不等于服务器自动RCE；正文不能泛化两漏洞都执行代码
+- CVSS上传向量3.0但表写3.1；特权用户与PR:L要解释实际角色
+- 仅媒体原链无IBM通告/插件链接，0796推荐分离，去广告
+
+## 操作风险
+
+文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行；命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 邑安科技  邑安全   2025-05-09 05:33  
   
 更多全球网络安全资讯尽在邑安全  

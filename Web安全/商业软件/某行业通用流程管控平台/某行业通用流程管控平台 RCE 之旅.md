@@ -1,11 +1,53 @@
 ---
-fofa: ", 有一千多个。"
 source: "MrWQ/vulnerability-paper"
+title: "未公开身份流程管控平台/UEditor/Apache Axis session泄露及SSRF到Axis管理部署链"
+product: "未公开身份流程管控平台/UEditor/Apache Axis"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "平台版本未知；UEditor1.3.5、Axis≤1.4泛称，JDK Rhino依赖"
+prerequisites: "session泄露与Axis loopback管理为不同路径"
+side_effects: "命令/代码执行示例可能改变主机状态"
+review_date: "2026-10-02"
+source_url: "https://mp.weixin.qq.com/s/sesveh4L_8osXt7HpVC9Nw"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/%E6%9F%90%E8%A1%8C%E4%B8%9A%E9%80%9A%E7%94%A8%E6%B5%81%E7%A8%8B%E7%AE%A1%E6%8E%A7%E5%B9%B3%E5%8F%B0/%E6%9F%90%E8%A1%8C%E4%B8%9A%E9%80%9A%E7%94%A8%E6%B5%81%E7%A8%8B%E7%AE%A1%E6%8E%A7%E5%B9%B3%E5%8F%B0%20RCE%20%E4%B9%8B%E6%97%85.md"
+fofa_unverified: ", 有一千多个。"
+id: "vw-5d84f1cb81b6678c53fdea00"
+entity_id: "ve-5d84f1cb81b6678c53fdea00"
+schema_version: "1"
 ---
 
-# 某行业通用流程管控平台 RCE 之旅
+# 未公开身份流程管控平台/UEditor/Apache Axis session泄露及SSRF到Axis管理部署链
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：未公开身份流程管控平台/UEditor/Apache Axis；session泄露及SSRF到Axis管理部署链
+- 版本、配置及部署条件：平台版本未知；UEditor1.3.5、Axis≤1.4泛称，JDK Rhino依赖
+- 认证与权限前提：session泄露与Axis loopback管理为不同路径
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 不应从某行业猜厂商，标匿名案例/研究而非商业产品实体；FOFA字段抽成一千多个废值
+- Axis1.4存在RCE不能忽略AdminService本地限制、可注册服务及JDK类可用条件
+- 编码payload含x mlns/x ml/s cript/j avas cript/e val插入空格，按原样类名/XML无效，需要合法原文核对
+- getRemoteImage.jsp与实验remote.jsp路径不同应注明自建复现；空指针断言只能框架原因过度推论
+- 双编码/CR处理与SSRF后缀绕过为有价值研究，服务部署造成持久配置变化须清理
+- 作者版权保留，删征稿/推荐导航；关键最终服务调用只图片无文字
+
+## 操作风险
+
+命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/sesveh4L_8osXt7HpVC9Nw)
 
 **本文首发于****奇安信攻防社区**  
@@ -24,7 +66,7 @@ source: "MrWQ/vulnerability-paper"
 某一天 7iny 好兄弟找到一套源代码 (安装包)，看了一下不少问题。就从这套系统代码开始渗透吧。看了一下 fofa, 有一千多个。  
 ![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/WdbaA7b2IE7fupM77icRcd9R9s0gNp46q7KsgZB7pqrIMQT6w2ViabBVvVUUSgiapex1iaKu1Suo6icyuuBGKWicxKzg/640?wx_fmt=jpeg)
 
-### **step1**
+#### **step1**
 
 收到源码后发现几个有意思的功能：
 
@@ -42,7 +84,7 @@ source: "MrWQ/vulnerability-paper"
 ![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/WdbaA7b2IE7fupM77icRcd9R9s0gNp46qSaL9uIdeOd8vFibfkDu0fluZQwb2Wzgk5HKQbsk6WNU5n2kAcPljKWA/640?wx_fmt=jpeg)  
 进去后很可惜发现没有可 RCE 的点。
 
-### **step2**
+#### **step2**
 
 1.  发现了一个 AXIS 服务。  
     ![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/WdbaA7b2IE7fupM77icRcd9R9s0gNp46qqzTQVfWbjQvKwgiatwLDENdyZEHCqY9KiaKgD9MA2vEw1dFKaibib8tAuQ/640?wx_fmt=jpeg)  
@@ -60,11 +102,11 @@ source: "MrWQ/vulnerability-paper"
 使用 AXIS 的 get 型 payload 尝试一下，发现图片类型不正确。  
 ![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/WdbaA7b2IE7fupM77icRcd9R9s0gNp46qObCF93HTTqHhiaIz5DjyicicQKZMfeY4gaoE9rqTcmd2WeRPiccR6vakaQ/640?wx_fmt=jpeg)
 
-### **step3**
+#### **step3**
 
 知道是 AXIS, 有`getRemoteImage.jsp`的源码，本地搭建一个环境来 debug, 开启 debug 模式`./catalina.sh jpda start`
 
-#### _**第一次尝试 (先盲猜一下)**_**：**
+##### _**第一次尝试 (先盲猜一下)**_**：**
 
 既然是需要结尾需要一个. jpg。我们在 URL 后直接加. jpg 结尾。也就是：&xx=xx.jpg
 
@@ -74,7 +116,7 @@ http://127.0.0.1:8080/axis/services/AdminService?method=!--%3E%3Cdeployment%20x 
 
 发现还是被 ban。还是提示图片类型不正确。预料之中。
 
-##### _**第二次尝试**_**：**
+###### _**第二次尝试**_**：**
 
 看一下 remote.jsp 的源码。很简单，就是远程下载一个图片，依次遍历每个参数，并且判断是不是以”.gif” , “.png” , “.jpg” , “.jpeg” , “.bmp” 这些结尾。如果不是图片或者不正确则报错。
 
@@ -97,7 +139,7 @@ http://localhost:8080/remote.jsp?upfile=http://127.0.0.1:8080/axis/services/Admi
 
 发现还是空指针。后面通过尝试，只有 %0d 可以，%0a 不行。是不是真的能否作为 x ml 的分隔符现在还不知道。![](https://mmbiz.qpic.cn/sz_mmbiz_png/WdbaA7b2IE7fupM77icRcd9R9s0gNp46qkI8q0VdsNhTdRAJ4dXBv7Df8333H0aJ6bt57QxtS5IiaKKkzd1SERjA/640?wx_fmt=png)
 
-##### _**第三次尝试：**_
+###### _**第三次尝试：**_
 
 开始绕过图片为结尾的后缀，在 get 类型的 payload 中，发现开头有一个!—>，debug 一下跟到代码处，发现是为了做一个拼合。  
 ![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/WdbaA7b2IE7fupM77icRcd9R9s0gNp46qBZeibFQQerHRAsKZicyC5C3ehs0zUKuHib4kwgxmKgbF1icPib9dN6T5VsQ/640?wx_fmt=jpeg)  
@@ -118,7 +160,7 @@ http://localhost:8080/remote.jsp?upfile=http://localhost:8080/axis/services/Admi
 访问  
 ![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/WdbaA7b2IE7fupM77icRcd9R9s0gNp46qTib4ZbtqzI3sfic54vKBl4YcbSnliac6EtEMKaEjmrIrUpnmickEquv55A/640?wx_fmt=jpeg)
 
-##### _**第四次尝试：**_
+###### _**第四次尝试：**_
 
 咋办??
 
@@ -135,12 +177,12 @@ http://localhost:8080/remote.jsp?upfile=http://127.0.0.1:8080/axis/services/Admi
 成功注册服务  
 ![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/WdbaA7b2IE7fupM77icRcd9R9s0gNp46qCMkjmliaxmC91AcaYQ7ib5s3Saa9DlLtGe4uphI2ppGFFM8Zp0OosGpw/640?wx_fmt=jpeg)
 
-##### _**第五次尝试：**_
+###### _**第五次尝试：**_
 
 接下来，直接访问我们部署的服务即可。执行 whoami。  
 ![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/WdbaA7b2IE7fupM77icRcd9R9s0gNp46qHndT3rVTIo5yQ2ZicIsWODRfAyvb3nicyMAQrZgYZtW2BcibBFhOk194A/640?wx_fmt=jpeg)
 
-### _**总结**_
+#### _**总结**_
 
 觉得这个漏洞可以作为 CTF 来出，挺有意思的一个漏洞，关键点，.jpg 绕过，%20 处理。
 

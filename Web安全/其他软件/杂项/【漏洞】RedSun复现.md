@@ -1,9 +1,64 @@
 ---
 cve: "CVE-2026-33825"
 source: "gelusus/wxvl 公众号漏洞文库"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "【漏洞】RedSun复现"
+product: "Microsoft Defender RedSun本地提权，标注CVE-2026-33825待映射核验"
+record_type: "unknown"
+document_type: "技术文章（细分类待核）"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "无Windows/Defender引擎版本及补丁范围，实时防护/VSS/Cloud Files/目标服务可用性与本地普通用户为关键前提；前置VSS示例明确需管理员，不能误算漏洞本身起始权限，wmic新系统缺省可用性未说明；正文称持GENERIC_WRITE句柄复制实际先CloseHandle再CopyFile，须解释持久ACL/文件创建条件，不可混为句柄能力"
+side_effects: "正文称持GENERIC_WRITE句柄复制实际先CloseHandle再CopyFile，须解释持久ACL/文件创建条件，不可混为句柄能力；覆盖System32服务会破坏系统文件，未给原文件备份恢复/实验隔离，成功截图不代表全部版本"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/%E3%80%90%E6%BC%8F%E6%B4%9E%E3%80%91RedSun%E5%A4%8D%E7%8E%B0.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-e4120be43c9db5a96c0ea553"
+entity_id: "ve-e4120be43c9db5a96c0ea553"
+schema_version: "1"
 ---
 
-#  【漏洞】RedSun复现  
+# 【漏洞】RedSun复现
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Microsoft Defender RedSun本地提权，标注CVE-2026-33825待映射核验
+- 文献类型：技术文章（细分类待核）
+- 版本、权限及部署边界：无Windows/Defender引擎版本及补丁范围，实时防护/VSS/Cloud Files/目标服务可用性与本地普通用户为关键前提；前置VSS示例明确需管理员，不能误算漏洞本身起始权限，wmic新系统缺省可用性未说明；正文称持GENERIC_WRITE句柄复制实际先CloseHandle再CopyFile，须解释持久ACL/文件创建条件，不可混为句柄能力
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 仅以NVD通用描述将RedSun等同33825，无MSRC/原PoC编号对应证据，应核对代号/CVE避免混配
+2. 无Windows/Defender引擎版本及补丁范围，实时防护/VSS/Cloud Files/目标服务可用性与本地普通用户为关键前提
+3. 前置VSS示例明确需管理员，不能误算漏洞本身起始权限，wmic新系统缺省可用性未说明
+4. Defender隔离总是走VSS及占位文件完全不可操作均过泛，EICAR内容不是云标签，云占位另由DoCloudStuff设置
+5. 普通CreateFile可经Win32设备/全局根路径打开部分对象，完全访问不到对象命名空间表述过度
+6. 多个空代码块和长串空列表、WakeByAddress关键步骤缺代码，必要函数仅外链
+7. 正文称持GENERIC_WRITE句柄复制实际先CloseHandle再CopyFile，须解释持久ACL/文件创建条件，不可混为句柄能力
+8. 覆盖System32服务会破坏系统文件，未给原文件备份恢复/实验隔离，成功截图不代表全部版本
+9. 官方API文档和原PoC链接有用，可归操作系统本地权限
+
+### 操作风险
+
+正文称持GENERIC_WRITE句柄复制实际先CloseHandle再CopyFile，须解释持久ACL/文件创建条件，不可混为句柄能力；覆盖System32服务会破坏系统文件，未给原文件备份恢复/实验隔离，成功截图不代表全部版本
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 原创 joe1sn
                         joe1sn  不止Sec   2026-05-03 12:41  
   
@@ -27,8 +82,7 @@ https://github.com/Joe1sn/CVE-2026-33825
 Windows 内核维护一个全局的  
 **分层命名空间**  
 ，管理所有内核对象（设备、文件、事件、信号量等）。结构类似于文件系统：  
-```
-```  
+> 原文此处代码块为空，内容未归档；无法从空块证明或复现所述结果。
   
 这个命名空间存在于内核内存中，普通的   
 CreateFile  
@@ -246,20 +300,17 @@ TieringEngineService
 - WaitOnAddress  
   
 等待指定地址处的值更改。  
-```
-```  
+> 原文此处代码块为空，内容未归档；无法从空块证明或复现所述结果。
   
 - GetOverlappedResult  
   
 检索指定文件、命名管道或通信设备上重叠操作的结果。  
-```
-```  
+> 原文此处代码块为空，内容未归档；无法从空块证明或复现所述结果。
   
 - FSCTL_SET_REPARSE_POINT IOCTL  
   
 设置文件或目录上的重新分析点。  
-```
-```  
+> 原文此处代码块为空，内容未归档；无法从空块证明或复现所述结果。
   
 ## 提前流程  
   
@@ -640,8 +691,7 @@ ShadowCopyFinderThread
 收到后(接2.4)，通过  
 WakeByAddressAll  
 唤醒等待gEvent改变的主线程，最后修饰退出  
-```
-```  
+> 原文此处代码块为空，内容未归档；无法从空块证明或复现所述结果。
 ### 6. 重建文件夹  
   
 将就文件夹移动至  
@@ -861,4 +911,4 @@ https://learn.microsoft.com/zh-cn/windows/win32/cfApi/cloud-files-api-portal
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

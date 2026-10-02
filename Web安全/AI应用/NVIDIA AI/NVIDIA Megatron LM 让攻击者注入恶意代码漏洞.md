@@ -1,9 +1,49 @@
 ---
-cve: "CVE-2025-23264"
+cve: "CVE-2025-23264; CVE-2025-23265"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "NVIDIA Megatron LM 让攻击者注入恶意代码漏洞"
+product: "NVIDIA Megatron-LM"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2025-23264; CVE-2025-23265"
+referenced_identifiers: ""
+identifier_role: "primary"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-053bd82b15e3bd77ed31ef1f"
+entity_id: "ve-053bd82b15e3bd77ed31ef1f"
+schema_version: "1"
 ---
 
-#  NVIDIA Megatron LM 让攻击者注入恶意代码漏洞  
+# NVIDIA Megatron LM 让攻击者注入恶意代码漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 本次正文校订
+
+- 按该篇完整正文及逐篇审阅区分主问题与背景编号，补全结构化主标识；不把标识归属校订等同运行复现。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- <0.12.0与建议0.12.1有版本空档需原公告
+- 本地低权限与标题未授权需清楚
+- 只泛称Python注入无具体漏洞函数/PoC
+- HTML样式/摘要粘连/广告污染
+- 缺厂商原始链接
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
  网安百色   2025-06-26 11:41  
   
 NVIDIA Megatron LM 大型语言模型框架中存在严重安全漏洞，可能允许攻击者注入恶意代码并获得未经授权的系统访问权限。  

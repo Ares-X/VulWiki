@@ -1,27 +1,66 @@
 ---
-version: "泛微 E-Cology v9"
 source: "Threekiii/Vulnerability-Wiki"
+title: "泛微e-cology9 browser.jsp keyword SQL注入"
+product: "泛微e-cology9"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "v9泛称，具体补丁未列"
+prerequisites: "前台空格路径+三层URL编码"
+side_effects: "请求可能删除/覆盖数据、修改账号或持久改变业务状态"
+review_date: "2026-10-02"
+source_url: "https://github.com/Threekiii/Vulnerability-Wiki"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E6%B3%9B%E5%BE%AEoa/%E6%B3%9B%E5%BE%AEOA-v9-E-Cology-browser.jsp-SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md"
+id: "vw-338f4d8ddd73098590f0bca1"
+entity_id: "ve-338f4d8ddd73098590f0bca1"
+schema_version: "1"
 ---
 
-# 泛微OA v9 E-Cology browser.jsp SQL注入漏洞
+# 泛微e-cology9 browser.jsp keyword SQL注入
 
-## 漏洞描述
+## 条目说明
+
+- 对象与具体问题：泛微e-cology9；browser.jsp keyword SQL注入
+- 版本、配置及部署条件：v9泛称，具体补丁未列
+- 认证与权限前提：前台空格路径+三层URL编码
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 与CNVD/QVD browser.jsp同接口/browserTypeId269；本篇补充源码等价明文查询
+- 不应按缺ID另建漏洞；将敏感密码查询可留历史证据但标准验证宜常量
+- 版本仅v9丢失<=10.55及补丁覆盖历史，合并详文补足
+
+## 操作风险
+
+请求可能删除/覆盖数据、修改账号或持久改变业务状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
+### 漏洞描述
 
 泛微OA E-Cology browser.jsp 存在SQL注入漏洞，攻击者通过漏洞可以获取数据库敏感信息，进一步进行攻击
 
-## 漏洞影响
+### 漏洞影响
 
 ```
 泛微 E-Cology v9
 ```
 
-## 网络测绘
+### 网络测绘
 
 ```
 product="泛微-协同商务系统"
 ```
 
-## 漏洞复现
+### 漏洞复现
 
 登陆页面
 

@@ -1,11 +1,51 @@
 ---
-fofa: "搜索语句"
 source: "MrWQ/vulnerability-paper"
+title: "QDocs Smart School filterRecords searchfield SQL注入"
+product: "QDocs Smart School"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "6.4.1示例，MySQL XPath错误回显"
+prerequisites: "请求匿名示例"
+side_effects: "命令/代码执行示例可能改变主机状态"
+review_date: "2026-10-02"
+source_url: "https://mp.weixin.qq.com/s/5axvlF97KieYz97q3xyRuA"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/QDocs/QDocs%20Smart%20School%20SQL%20%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0%20%28%E4%BB%98%20nuclei%20poc%29.md"
+fofa_unverified: "搜索语句"
+id: "vw-a5ab8e0fa5193d86b6ba7388"
+entity_id: "ve-a5ab8e0fa5193d86b6ba7388"
+schema_version: "1"
 ---
 
-# QDocs Smart School SQL 注入漏洞复现 (付 nuclei poc)
+# QDocs Smart School filterRecords searchfield SQL注入
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：QDocs Smart School；filterRecords searchfield SQL注入
+- 版本、配置及部署条件：6.4.1示例，MySQL XPath错误回显
+- 认证与权限前提：请求匿名示例
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 正文响应包含真实查询及MD5截断片段，证据强于仅500；500本身不能判定
+- Nuclei双引号路径含\{转义为非法YAML转义/模板转存损坏，应修复后再标可用
+- 标题附POC，verified true是作者断言未独立验证；max-request 3与单请求不一致
+- RCE是可能后果需DB文件权限等额外条件；修复无明确版本；FOFA抽取残缺
+
+## 操作风险
+
+命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/5axvlF97KieYz97q3xyRuA)
 
 免责申明：**本文内容为学习笔记分享，仅供技术学习参考，请勿用作违法用途，任何个人和组织利用此文所提供的信息而造成的直接或间接后果和损失，均由使用者本人负责，与作者无关！！！**
@@ -59,7 +99,7 @@ body="close closebtnmodal"
 
 poc 如下，计算 123456 的 MD5 值
 
-```
+```http
 POST /course/filterRecords/ HTTP/1.1
 Host: x.x.x.x
 User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
@@ -85,7 +125,7 @@ Date: Tue, 14 Nov 2023 02:21:35 GMT
 Expires: Thu, 19 Nov 1981 08:52:00 GMT
 Pragma: no-cache
 Server: Apache
-Set-Cookie: ci_session=0fbd043af961fa6feb7ba1a8b5c5a3b2c0cff392; expires=Tue, 14-Nov-2023 04:21:35 GMT; Max-Age=7200; path=/; HttpOnly
+Set-Cookie: ci_session=0**************************************2; expires=Tue, 14-Nov-2023 04:21:35 GMT; Max-Age=7200; path=/; HttpOnly
 Upgrade: h2,h2c
 Vary: Accept-Encoding
 X-Powered-By: PHP/7.4.33

@@ -1,8 +1,53 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-faa89d138cc70b3affa4786c"
+entity_id: "ve-faa89d138cc70b3affa4786c"
+schema_version: "1"
+title: "Microsoft Defender for Identity 漏洞可致未授权权限提升"
+product: "Microsoft Defender for Identity传感器"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2025-26685"
+referenced_identifiers: ""
+prerequisites: "DNS注册、网络访问、触发DC事件；需可中继目标/ADCS配置才能升级"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%AE%89%E5%85%A8%E8%AE%BE%E5%A4%87/Microsoft%20Defender/Microsoft%20Defender%20for%20Identity%20%E6%BC%8F%E6%B4%9E%E5%8F%AF%E8%87%B4%E6%9C%AA%E6%8E%88%E6%9D%83%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 #  Microsoft Defender for Identity 漏洞可致未授权权限提升  
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Microsoft Defender for Identity传感器
+- 本文讨论：CVE-2025-26685；ADCS ESC8是环境配置链
+- 版本、权限与配置前提：DNS注册、网络访问、触发DC事件；需可中继目标/ADCS配置才能升级
+- 资料类型：MDI认证诱导链分析新闻；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 捕获Net-NTLM响应不等于可事后离线中继哈希，应区分实时中继与离线破解
+- 获取TGT通常需证书/密钥后续条件，不能捕获即得
+- 迁移v3与传统传感器改WMI混叙，缺具体修复版本；只给二手链接无NetSPI/MSRC
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 官方传感器变更、gMSA仅降低破解不阻止中继及实际权限待核
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 邑安科技  邑安全   2025-06-16 08:34  
   
 更多全球网络安全资讯尽在邑安全  

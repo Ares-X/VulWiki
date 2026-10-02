@@ -1,8 +1,62 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "恶意推送脚本，Windows 修复漏洞"
+product: "Vidar借Windows更新错误投毒新闻"
+record_type: "unknown"
+document_type: "技术文章（细分类待核）"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "原文未给出可确认的版本、认证及部署边界；保留待核"
+side_effects: "标题Windows紧急修复与正文主线假修复投毒不符"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/%E6%81%B6%E6%84%8F%E6%8E%A8%E9%80%81%E8%84%9A%E6%9C%AC%EF%BC%8CWindows%20%E4%BF%AE%E5%A4%8D%E6%BC%8F%E6%B4%9E.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-3d575485da1ad903e8da9b58"
+entity_id: "ve-3d575485da1ad903e8da9b58"
+schema_version: "1"
 ---
 
-#  恶意推送脚本，Windows 紧急修复漏洞   
+# 恶意推送脚本，Windows 修复漏洞
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Vidar借Windows更新错误投毒新闻
+- 文献类型：技术文章（细分类待核）
+- 版本、权限及部署边界：原文未给出可确认的版本、认证及部署边界；保留待核
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 标题Windows紧急修复与正文主线假修复投毒不符
+2. CVE2024-20666是引诱受害者更新失败背景不是所执行PoC
+3. 0x80070643原因只适该WinRE补丁情境不能概括所有此错误
+4. 称发现两个网站却列五域名数量错
+5. 所有账户被盗是过度确定，应区分可窃凭据与成功滥用
+6. 隐藏KB5034441只止提示不修漏洞，作为最佳办法缺风险说明/官方后续处置
+7. 无eSentire/微软精确源链接，恶意脚本全图无hash/采集时间
+8. 域名已去活化较好，清调查HTML
+
+### 操作风险
+
+标题Windows紧急修复与正文主线假修复投毒不符
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
  信息安全大事件   2024-07-03 22:03  
   
 虚假的   
@@ -109,4 +163,4 @@ http://www.jsgjxx.com
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

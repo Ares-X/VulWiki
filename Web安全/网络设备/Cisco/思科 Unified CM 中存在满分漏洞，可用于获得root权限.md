@@ -1,8 +1,52 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-91e845a2623a6a3da5c17973"
+entity_id: "ve-91e845a2623a6a3da5c17973"
+schema_version: "1"
+title: "思科 Unified CM 中存在满分漏洞，可用于获得root权限"
+product: "Cisco Unified CM/SME"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2025-20309"
+referenced_identifiers: "CVE-2025-20281; CVE-2025-20282"
+prerequisites: "15.0.1.13010-1至15.0.1.13017-1；开发root静态凭据"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/Cisco/%E6%80%9D%E7%A7%91%20Unified%20CM%20%E4%B8%AD%E5%AD%98%E5%9C%A8%E6%BB%A1%E5%88%86%E6%BC%8F%E6%B4%9E%EF%BC%8C%E5%8F%AF%E7%94%A8%E4%BA%8E%E8%8E%B7%E5%BE%97root%E6%9D%83%E9%99%90.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 #  思科 Unified CM 中存在满分漏洞，可用于获得root权限  
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Cisco Unified CM/SME
+- 本文讨论：CVE-2025-20309
+- 版本、权限与配置前提：15.0.1.13010-1至15.0.1.13017-1；开发root静态凭据
+- 资料类型：新闻通告；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 缺修复版本及官方公告URL
+- root登录日志为调查线索，不能仅凭root事件确认利用此漏洞；营销噪声
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 确切补丁与登录条件待核验
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 Ravie Lakshmanan  代码卫士   2025-07-03 10:55  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

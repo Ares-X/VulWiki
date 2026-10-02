@@ -1,8 +1,67 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2022-2587"
+identifier_role: "primary"
+primary_identifiers: "CVE-2022-2587"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "微软详述严重的 ChromeOS 漏洞"
+product: "ChromeOS CRAS音频服务"
+record_type: "advisory"
+document_type: "漏洞技术新闻"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "恶意媒体identity元数据；浏览器播放或已配对蓝牙设备路径；RCE需额外利用能力"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/ChromeOS/%E5%BE%AE%E8%BD%AF%E8%AF%A6%E8%BF%B0%E4%B8%A5%E9%87%8D%E7%9A%84%20ChromeOS%20%E6%BC%8F%E6%B4%9E.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+source_url: "https://www.securityweek.com/microsoft-shares-details-critical-chromeos-vulnerability"
+id: "vw-03beeebe22b6e6a43449b12c"
+entity_id: "ve-03beeebe22b6e6a43449b12c"
+schema_version: "1"
 ---
 
-#  微软详述严重的 ChromeOS 漏洞   
+# 微软详述严重的 ChromeOS 漏洞
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：ChromeOS CRAS音频服务
+- 文献类型：漏洞技术新闻
+- 版本、权限及部署边界：恶意媒体identity元数据；浏览器播放或已配对蓝牙设备路径；RCE需额外利用能力
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 元数据漏2587；实际ChromeOS系统CRAS，不是Chrome桌面浏览器或微软产品漏洞
+2. 正文明确堆布局困难且RCE需结合其他漏洞，应保留不能按CVSS9.8写成无条件单洞接管
+3. D-Bus是服务通信接口，不宜说漏洞存在于通用D-Bus；identity误拼identigy
+4. 只写6月修复无系统版本/构建和受影响范围；有两家新闻源无微软原研究/Chromium补丁
+5. 微软未见利用限于报道日期；大段营销/推荐清理
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://www.securityweek.com/microsoft-shares-details-critical-chromeos-vulnerability>
+- 原文参考链接（未重新核验）：<https://codesafe.qianxin.com>
+- 原文参考链接（未重新核验）：<https://oss.qianxin.com>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzI2NTg4OTc5Nw==&mid=2247513606&idx=2&sn=eb7c5b8b8637ed62d0be305f14e2ba9e&chksm=ea94876cdde30e7ac31840c96b22a9c1872036aff023b5d8f88d53f211f15811f84aede4f150&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzI2NTg4OTc5Nw==&mid=2247513028&idx=3&sn=79c8d781d604e70522630b58315bf010&chksm=ea9482aedde30bb8b7d8d21ea1ae630e8716995afec64599d4e6d5bff0cf26c5c6cdbfd6fd6a&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzI2NTg4OTc5Nw==&mid=2247512717&idx=1&sn=90d9ee1cbcb33e3442cfd9d4d4c1d958&chksm=ea9483e7dde30af103b74637ffdefd0a6d62164388d12598a2a74b18e802f659d18f3e11a70f&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzI2NTg4OTc5Nw==&mid=2247512301&idx=2&sn=8692c38f4cf01bc6ae31e903937819f7&chksm=ea948187dde30891f434d90835b849b48564c5b0c642973efc1eb86324af13f3c4f1bfaefbe9&scene=21#wechat_redirect>
+
+### 归档技术正文
+
 综合编译  代码卫士   2022-08-23 17:45  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

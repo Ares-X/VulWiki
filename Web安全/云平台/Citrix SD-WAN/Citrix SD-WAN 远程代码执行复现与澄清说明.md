@@ -1,8 +1,43 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "Citrix SD-WAN 远程代码执行复现与澄清说明"
+product: "Citrix SD-WAN"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-763e174bbc68361c1e7d2844"
+entity_id: "ve-763e174bbc68361c1e7d2844"
+schema_version: "1"
 ---
 
 # Citrix SD-WAN 远程代码执行复现与澄清说明
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 缺CVE、具体端点、认证条件和根因
+- python url whoami缺脚本名且未提供脚本
+- 官方链接CTX285061末尾多等号
+- 大量个人澄清争论与技术记录无关
+- 应归网络设备
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 \> 本文由 \[简悦 SimpRead\](http://ksria.com/simpread/) 转码， 原文地址 \[mp.weixin.qq.com\](https://mp.weixin.qq.com/s/ylKR7zdefIsSJ8y8Mi6KMw)

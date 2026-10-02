@@ -1,8 +1,47 @@
 ---
 source: "Threekiii/Awesome-POC"
+title: "DNS域传送漏洞"
+product: "DNS AXFR；实验BIND9"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "权威DNS允许未经授权来源AXFR且TCP53可达；掌握区域名"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-8e8d31eba2738c4f85a40be7"
+entity_id: "ve-8e8d31eba2738c4f85a40be7"
+schema_version: "1"
 ---
 
 # DNS域传送漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：权威DNS允许未经授权来源AXFR且TCP53可达；掌握区域名
+- 证据范围：清楚表明非BIND专属；属于配置错误，不应分配泛化产品CVE
+
+### 本次正文校订
+
+- 按实际内容修正 1 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- DNS支持TCP/UDP不代表AXFR同时走UDP，应明确AXFR传送TCP
+- 所有子域名记录应限定本区域可传送记录，不含未知委派区域全部内容
+- 预期结果图位置空白，compose环境路径缺失
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 ## 漏洞描述
 
@@ -19,7 +58,7 @@ axfr：DNS Zone Transfer Protocol (AXFR)，dns的全量更新协议，dns主从�
 
 Vulhub使用[Bind9](https://wiki.debian.org/Bind9)来搭建dns服务器，但不代表只有Bind9支持AXFR记录。运行DNS服务器：
 
-```
+```shell
 docker-compose up -d
 ```
 

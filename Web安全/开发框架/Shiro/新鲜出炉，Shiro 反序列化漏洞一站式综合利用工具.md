@@ -1,6 +1,38 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+product: "ShiroExploit/FightingLzn9"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "新鲜出炉，Shiro 反序列化漏洞一站式综合利用工具"
+prerequisites: "来源所述条件，未列明部分仍待核：高版本Shiro密钥重启必变忽略应用显式配置持久密钥；工具未锁版本"
+side_effects: "未执行；本文需注意的操作影响：密钥行为和控制影响泛化；高版本不一定每次重启随机，取决cipherKey配置；改key可破坏登录状态并非安全修复"
+source_status: "unknown"
+id: "vw-02b2eb027d19c9e6c21a1a13"
+entity_id: "ve-02b2eb027d19c9e6c21a1a13"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：高版本Shiro密钥重启必变忽略应用显式配置持久密钥；工具未锁版本
+
+代码与实验材料：改key前后截图及超时后验证有独立观察，仍无源码和运行环境细节
+
+来源证据范围：直接GitHub工具链接，作者使用笔记
+
+- **操作与副作用边界（1）**：密钥行为和控制影响泛化；依据：高版本不一定每次重启随机，取决cipherKey配置；改key可破坏登录状态并非安全修复。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+- **证据待核（2）**：功能保障缺限制；依据：同有key/gadget即RCE、无侵入性和炸弹探测声明应降调；非必要不改key警告应保留。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 #  新鲜出炉，Shiro 反序列化漏洞一站式综合利用工具  
  进击的HACK   2026-01-22 23:51  

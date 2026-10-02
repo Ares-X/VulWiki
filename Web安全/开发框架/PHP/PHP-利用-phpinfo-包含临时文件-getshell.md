@@ -1,6 +1,44 @@
 ---
 source: "历史归档批(无原始出处标注)"
+product: "PHP/LFI加phpinfo临时上传竞争"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "PHP-利用-phpinfo-包含临时文件-getshell"
+prerequisites: "来源所述条件，未列明部分仍待核：实验PHP7.2不能证明版本无关；依file_uploads、phpinfo输出、并行worker、缓冲代理与LFI条件"
+side_effects: "未执行；本文需注意的操作影响：明显持久化与负载副作用；脚本写eval后门/tmp/g、100并发最多1000次，教程缺清理和中止条件"
+source_status: "unknown"
+id: "vw-8a6ea856ed16f560de13f6ad"
+entity_id: "ve-8a6ea856ed16f560de13f6ad"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 附件待补：原文相对 `exp.py` 链接在本目录没有对应文件；保留链接和正文方法，但不能称已提供该外部脚本或据其验证成功。需回原作者出处获取、核对版本与完整性。
+
+- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；遮罩后的历史值不能作为可用登录凭据。原操作、请求方法和攻击表达式保留。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：实验PHP7.2不能证明版本无关；依file_uploads、phpinfo输出、并行worker、缓冲代理与LFI条件
+
+代码与实验材料：完整Python2竞争脚本，默认1000次/示例100线程，永久写/tmp/g后门；tmp路径切片固定14字节，异常易泄socket
+
+来源证据范围：PacketStorm原论文和Vulhub背景；相对exp.py普通链接应检验目标
+
+- **事实待核（1）**：输出缓冲及版本结论过度简化；依据：4096输出缓冲不等于每次socket返回4096，PHP7.2成功不能推出所有版本与部署均可。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **操作与副作用边界（2）**：明显持久化与负载副作用；依据：脚本写eval后门/tmp/g、100并发最多1000次，教程缺清理和中止条件。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+- **结论使用边界（3）**：基线只读passwd不等于证明include；依据：读取/etc/passwd本身也可能是readfile，需确认LFI实际执行PHP；tmp_name格式和文件名长度是硬编码。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # PHP 利用 phpinfo 包含临时文件 getshell
 
@@ -77,7 +115,7 @@ Content-Type: text/plain\r
 -----------------------------7dbff1ded0714--\r""" % PAYLOAD
     padding="A" * 5000
     REQ1="""POST /phpinfo.php?a="""+padding+""" HTTP/1.1\r
-Cookie: PHPSESSID=q249llvfromc1or39t6tvnun42; othercookie="""+padding+"""\r
+Cookie: PHPSESSID=q24********************n42; othercookie="""+padding+"""\r
 HTTP_ACCEPT: """ + padding + """\r
 HTTP_USER_AGENT: """+padding+"""\r
 HTTP_ACCEPT_LANGUAGE: """+padding+"""\r

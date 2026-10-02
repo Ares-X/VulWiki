@@ -1,8 +1,53 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-4bea493f62edc36064b73299"
+entity_id: "ve-4bea493f62edc36064b73299"
+schema_version: "1"
+title: "Check Point 紧急修复已遭利用的 Management Server 0day"
+product: "Check Point Management / Log Server / SmartEvent"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2026-93616"
+referenced_identifiers: "CVE-2024-24919; CVE-2026-50751; CVE-2026-16232; CVE-2026-85102; CVE-2026-85103"
+prerequisites: "未认证路径遍历上传执行；仅说R82.20安全热修复，未列完整受影响范围"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/Check%20Point/%E5%B7%B2%E9%81%AD%E5%88%A9%E7%94%A8%E7%9A%84%20Management%20Server%200day.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 #  Check Point 紧急修复已遭利用的 Management Server 0day  
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Check Point Management / Log Server / SmartEvent
+- 本文讨论：CVE-2026-93616
+- 版本、权限与配置前提：未认证路径遍历上传执行；仅说R82.20安全热修复，未列完整受影响范围
+- 资料类型：新闻通告；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 同文先称CVE-2026-16232从7月已在野利用，后称上周五修复且尚未标记活跃利用，自相矛盾
+- 结尾CVE-2026-16232+Username too long日志疑似误引CVE-2026-91843，与相邻独立通告对不上
+- 没有直接官方通告及热修复构建号；网页营销噪声
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 主漏洞版本及引用编号冲突待官方核验
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 Sergiu Gatlan
                     Sergiu Gatlan  代码卫士   2026-09-23 05:53  
   

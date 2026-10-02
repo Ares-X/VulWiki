@@ -1,8 +1,55 @@
 ---
 source: "MrWQ/vulnerability-paper"
+id: "vw-717a16980ba24ec48368781d"
+entity_id: "ve-717a16980ba24ec48368781d"
+schema_version: "1"
+title: "开源堡垒机 JumpServer 远程命令执行漏洞复现"
+product: "JumpServer及Koko资产会话"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+prerequisites: "2.6<2.6.2/2.5<2.5.4/2.4<2.4.5及1.5.9声称，测试2.6.1；需有可连接资产与日志ID"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%AE%89%E5%85%A8%E8%AE%BE%E5%A4%87/%E5%BC%80%E6%BA%90%E5%A0%A1%E5%9E%92%E6%9C%BA%20JumpServer/%E5%BC%80%E6%BA%90%E5%A0%A1%E5%9E%92%E6%9C%BA%20JumpServer%20%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0.md"
+review_date: "2026-10-02"
+side_effects: "读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要且已脱敏的响应，不能由接口可达推定敏感内容已泄露"
+source_url: "https://mp.weixin.qq.com/s/1K4qMViaMShvv-Nh-XKoYw"
+source_status: "recorded"
 ---
 
 # 开源堡垒机 JumpServer 远程命令执行漏洞复现
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：JumpServer及Koko资产会话
+- 本文讨论：未授权日志读取+连接token越权
+- 版本、权限与配置前提：2.6&lt;2.6.2/2.5&lt;2.5.4/2.4&lt;2.4.5及1.5.9声称，测试2.6.1；需有可连接资产与日志ID
+- 资料类型：JumpServer历史漏洞搭建及链复现；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 各分支上界不能当三个嵌套全版本区间，需明确分支和1.5.9补丁情况
+- Python多处awaitclient/returnFalse/withwebsockets粘连、缩进破损；nginx proxy_passhttp和wgethttps也损坏
+- 安装器2.6.2/应用2.6.1分层应明示；资产root是实验配置不自动所有环境root
+- 临时只封token接口仍未解决日志泄露，location顺序不是一般前缀匹配的唯一依据
+
+### 操作风险与恢复
+
+- 读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要且已脱敏的响应，不能由接口可达推定敏感内容已泄露
+
+### 待核与来源
+
+- 官方版本/编号、配置缓解覆盖和截图待核
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/1K4qMViaMShvv-Nh-XKoYw)

@@ -1,12 +1,51 @@
 ---
-cnvd: "CNVD-2021-10543"
-fofa: "title="
 source: "MrWQ/vulnerability-paper"
+title: "MessageSolution EEA 10543 authenticationserverservlet凭据泄露"
+product: "MessageSolution EEA"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CNVD-2021-10543"
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "版本未知；Windows信息声明"
+prerequisites: "匿名请求"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+identifier_role: "primary"
+source_url: "https://mp.weixin.qq.com/s/B6h1deYLt6e3I4ho43tFBw"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/MessageSolution/MessageSolution%20%20%E9%82%AE%E4%BB%B6%E5%BD%92%E6%A1%A3%E7%B3%BB%E7%BB%9F%20EEA%20%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2%E6%BC%8F%E6%B4%9E%20CNVD-2021-10543.md"
+fofa_unverified: "title="
+id: "vw-e306f128273fc6aa1580241f"
+entity_id: "ve-e306f128273fc6aa1580241f"
+schema_version: "1"
 ---
 
-# MessageSolution  邮件归档系统 EEA 信息泄露漏洞 CNVD-2021-10543
+# MessageSolution EEA 10543 authenticationserverservlet凭据泄露
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：MessageSolution EEA；10543 authenticationserverservlet凭据泄露
+- 版本、配置及部署条件：版本未知；Windows信息声明
+- 认证与权限前提：匿名请求
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 200且administrator字串不够证明凭据泄露；日志直接打印全响应可能暴露秘密
+- admin hash与web明文密码区分，不能把hash当直接登录密码
+- 无厂商修复/版本，去推广但保留必要署名来源
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/B6h1deYLt6e3I4ho43tFBw)
 
 **点击蓝字**

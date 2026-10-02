@@ -1,9 +1,65 @@
 ---
-fofa: "body="
 source: "MrWQ/vulnerability-paper"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "H3C IMC dynamiccontent-properties-xhtm 远程命令执行"
+product: "H3C iMC PrimeFaces dynamiccontent"
+record_type: "vulnerability"
+document_type: "简要PoC转载"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "iMC具体版本缺；请求含JSESSIONID，未说明必须登录或匿名会话；依PrimeFaces加密配置"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/H3C%20IMC%20dynamiccontent-properties-xhtm%20%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+fofa_unverified: "body="
+fofa: "body=\"/imc/javax.faces.resource/images/login_help.png.jsf?ln=primefaces-imc-new-webui\""
+source_url: "https://mp.weixin.qq.com/s/BP9_H3lpluqIwL5OMIJlIw"
+id: "vw-5c455fef0d74866a6d89d282"
+entity_id: "ve-5c455fef0d74866a6d89d282"
+schema_version: "1"
 ---
 
 # H3C IMC dynamiccontent-properties-xhtm 远程命令执行
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：H3C iMC PrimeFaces dynamiccontent
+- 文献类型：简要PoC转载
+- 版本、权限及部署边界：iMC具体版本缺；请求含JSESSIONID，未说明必须登录或匿名会话；依PrimeFaces加密配置
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 标题dynamiccontent-properties-xhtm与实际dynamiccontent.properties.xhtml不一致；frontmatter body=残缺而正文完整
+2. 大量不透明pfdrid密文没有生成方式/键/适用版本，固定Cookie无效，回显仅截图，不能视为通用可用PoC
+3. 与misc65标H3C Magic34928的IMC payload明显关联；应修复65错产品/错CVE而非将IMC归路由器
+4. 无厂商公告和修复版本，PoC链接指仓库根；清理文库营销保留原作者来源
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://mp.weixin.qq.com/s/BP9_H3lpluqIwL5OMIJlIw>
+- 原文参考链接（未重新核验）：<http://ksria.com/simpread/>
+- 原文参考链接（未重新核验）：<https://github.com/PeiQi0/PeiQi-WIKI-POC>
+- 原文参考链接（未重新核验）：<http://wiki.peiqi.tech**>
+- 原文参考链接（未重新核验）：<https://github.com/PeiQi0/PeiQi-WIKI-POC**>
+- 原文参考链接（未重新核验）：<https://github.com/MrWQ/vulnerability-paper>
+
+### 归档技术正文
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/BP9_H3lpluqIwL5OMIJlIw)
@@ -45,7 +101,7 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/w
 Sec-Fetch-Site: none
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh-TW;q=0.9,zh;q=0.8
-Cookie: oam.Flash.RENDERMAP.TOKEN=jw7ysel68; JSESSIONID=EB4E60FA4F333FF21B488E9937B4C739; currentThemeName=imc-new-webui
+Cookie: oam.Flash.RENDERMAP.TOKEN=jw7ysel68; JSESSIONID=EB4**************************739; currentThemeName=imc-new-webui
 Content-Type: application/x-www-form-urlencoded
 Content-Length: 1564
 

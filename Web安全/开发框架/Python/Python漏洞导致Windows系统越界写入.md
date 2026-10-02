@@ -1,6 +1,38 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+product: "CPython/Windows asyncio"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2026-3298"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "Python漏洞导致Windows系统越界写入"
+prerequisites: "来源所述条件，未列明部分仍待核：未列任何受影响/修复版本；Windows3.8默认Proactor不等于该API从3.8均受影响"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-347d7da0fc13f7deb4dc078a"
+entity_id: "ve-347d7da0fc13f7deb4dc078a"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：未列任何受影响/修复版本；Windows3.8默认Proactor不等于该API从3.8均受影响
+
+代码与实验材料：nbytes与buffer边界概述，没有调用、样本或崩溃证据
+
+来源证据范围：声称官方邮件公告，只有CVE地址文本无公告链接
+
+- **适用与权限边界（1）**：边界检查描述方向易错；依据：根因是nbytes可能大于真实buffer，结尾却称不超过nbytes定义的缓冲区大小，需区分两者。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **适用与权限边界（2）**：影响被泛化为所有Windows网络服务；依据：实际要调用sock_recvfrom_into并给不安全nbytes，默认事件循环并不能证明可达。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 #  Python漏洞导致Windows系统越界写入  
  网安百色   2026-04-27 11:06  

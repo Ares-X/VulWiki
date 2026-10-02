@@ -1,9 +1,49 @@
 ---
 cve: "CVE-2026-64564"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "TencentOS 科维斯AI首秀：SCTPhantom——潜伏18年的Linux内核提权与容器逃逸漏洞"
+product: "Linux内核SCTP，非TencentOS独占"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2026-64564"
+referenced_identifiers: "CVE-2026-64531"
+identifier_role: "primary"
+prerequisites: "本地低权限或特定容器配置、SCTP功能可用；RHEL实验需预加载模块"
+source_status: "unknown"
+side_effects: "含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。"
+id: "vw-d36df9123df0ee63f986e77e"
+entity_id: "ve-d36df9123df0ee63f986e77e"
+schema_version: "1"
 ---
 
-#  TencentOS 科维斯AI首秀：SCTPhantom——潜伏18年的Linux内核提权与容器逃逸漏洞  
+# TencentOS 科维斯AI首秀：SCTPhantom——潜伏18年的Linux内核提权与容器逃逸漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：本地低权限或特定容器配置、SCTP功能可用；RHEL实验需预加载模块
+- 证据范围：明确crash≠可利用、发行版/防护/容器配置边界，研究者报告root验证但未公布完整技术细节；表格和时间线仅图片未视检
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 应归Linux内核/SCTP并关联TencentOS，64531是另一漏洞不可合并
+- 缺上游commit、各发行版修复包、容器配置的文本记录
+- 18年无人发现/Agent对比等宣传性断言不等于可独立验证事实；保留研究者归因
+
+### 操作风险与资料使用
+
+- 含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 朱雀实验室
                     朱雀实验室  腾讯安全应急响应中心   2026-08-05 04:17  
   

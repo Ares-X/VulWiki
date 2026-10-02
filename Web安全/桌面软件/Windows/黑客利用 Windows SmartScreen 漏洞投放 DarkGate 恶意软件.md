@@ -1,9 +1,61 @@
 ---
-cve: "CVE-2024-21412"
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2024-21412"
+identifier_role: "primary"
+primary_identifiers: "CVE-2024-21412"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "黑客利用 Windows SmartScreen 漏洞投放 DarkGate 恶意软件"
+product: "Windows SmartScreen Internet快捷方式"
+record_type: "advisory"
+document_type: "威胁活动分析新闻"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "钓鱼PDF链接、快捷方式处理与后续MSI执行链；修复为2024-02 Windows更新"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Windows/%E9%BB%91%E5%AE%A2%E5%88%A9%E7%94%A8%20Windows%20SmartScreen%20%E6%BC%8F%E6%B4%9E%E6%8A%95%E6%94%BE%20DarkGate%20%E6%81%B6%E6%84%8F%E8%BD%AF%E4%BB%B6.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-20b78ecc37850484a524a1b2"
+entity_id: "ve-20b78ecc37850484a524a1b2"
+schema_version: "1"
 ---
 
-#  黑客利用 Windows SmartScreen 漏洞投放 DarkGate 恶意软件   
+# 黑客利用 Windows SmartScreen 漏洞投放 DarkGate 恶意软件
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Windows SmartScreen Internet快捷方式
+- 文献类型：威胁活动分析新闻
+- 版本、权限及部署边界：钓鱼PDF链接、快捷方式处理与后续MSI执行链；修复为2024-02 Windows更新
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 漏洞实体是安全特性绕过，DarkGate6.1.7属于载荷版本不可混为受影响软件版本
+2. 前文SMB后文WebDAV传输路径不同，需准确区分特定攻击链，不将全部快捷方式泛化自动执行
+3. 自动安装叙述须说明点击/确认及UAC上下文；DLL侧载属于后续手法，不自动是同一CVE或另一个已确认漏洞
+4. 分析师/IOC/原始报告未直接链接，只有媒体转载；截图流程和配置未视检
+5. 保留独立活动情报并关联漏洞基础条目，补具体系统KB
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://www.bleepingcomputer.com/news/security/hackers-exploit-windows-smartscreen-flaw-to-drop-darkgate-malware/>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
  网络安全应急技术国家工程中心   2024-04-17 14:46  
   
 DarkGate 恶意软件操作发起的新一波攻击，利用现已修复的 Windows Defender SmartScreen 漏洞来绕过安全检查，并自动安装虚假软件安装程序。  
@@ -74,4 +126,4 @@ https://www.bleepingcomputer.com/news/security/hackers-exploit-windows-smartscre
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

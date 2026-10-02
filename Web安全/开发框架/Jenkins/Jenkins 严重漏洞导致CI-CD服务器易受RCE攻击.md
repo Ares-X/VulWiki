@@ -1,6 +1,38 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+product: "Jenkins core与LoadNinja插件"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2026-33001; CVE-2026-33002; CVE-2026-33003; CVE-2026-33004"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "Jenkins 严重漏洞导致CI-CD服务器易受RCE攻击"
+prerequisites: "来源所述条件，未列明部分仍待核：core<=2.554/LTS<=2.541.2，固定2.555/2.541.3；LoadNinja<=2.1固定2.2"
+side_effects: "未执行；本文需注意的操作影响：归档到RCE链细节不准确；写JENKINS_HOME/init/groovy.d/directory路径，需核实际init.groovy.d目录和触发重启/加载条件；写文件不是即时必然RCE"
+source_status: "unknown"
+id: "vw-46e1de9f81f56593ebfac145"
+entity_id: "ve-46e1de9f81f56593ebfac145"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：core&lt;=2.554/LTS&lt;=2.541.2，固定2.555/2.541.3；LoadNinja&lt;=2.1固定2.2
+
+代码与实验材料：无PoC；33001需Item/Configure或agent控制，33002需受害浏览器DNS重绑定且匿名权限决定命令效果，插件需Extended Read
+
+来源证据范围：SecurityOnline译文，无Jenkins官方公告直接URL
+
+- **操作与副作用边界（1）**：归档到RCE链细节不准确；依据：写JENKINS_HOME/init/groovy.d/directory路径，需核实际init.groovy.d目录和触发重启/加载条件；写文件不是即时必然RCE。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+- **结论使用边界（2）**：四漏洞组件/效果需单独映射；依据：33003/33004分别存储与界面泄密被合并，33002范围沿用core但未独立确认；匿名命令不等于普遍管理员执行。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 #  Jenkins 严重漏洞导致CI/CD服务器易受RCE攻击  
 Ddos

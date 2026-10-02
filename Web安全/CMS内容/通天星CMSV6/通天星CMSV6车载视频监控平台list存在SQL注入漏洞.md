@@ -1,7 +1,45 @@
 ---
-fofa: "web.body="
+fofa: ""
 source: "wy876 漏洞文库"
+product: "通天星 CMSV6 车载视频监控平台"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+fofa_unverified: "web.body="
+category_recommendation: "IOT安全/其他设备"
+title: "通天星CMSV6车载视频监控平台list存在SQL注入漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：dynamic_monitoring_ledgerlist;statisticTimequote;matrixsuffix/XFFauthunknown"
+side_effects: "未执行；本文需注意的操作影响：分类更正：CMSV6 在本文指车载定位/视频监控行业平台，不是通用内容管理系统。其设备、调度或记录接口的业务状态和权限需按本文具体路由判断，不能只按名称 CMS 归类。"
+source_status: "unknown"
+id: "vw-9c29d1419f7ce50b563dcdf6"
+entity_id: "ve-9c29d1419f7ce50b563dcdf6"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 分类更正：CMSV6 在本文指车载定位/视频监控行业平台，不是通用内容管理系统。其设备、调度或记录接口的业务状态和权限需按本文具体路由判断，不能只按名称 CMS 归类。
+
+- 测绘字段处置：原 fofa 字段为残缺表达式、错误平台语法或当前解析器不支持的形式，原值完整保留到 fofa_unverified，不把它当作已校验查询或受影响资产证据。正文检索方法保留；具体问题见下列原审阅项。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：dynamic_monitoring_ledgerlist;statisticTimequote;matrixsuffix/XFFauthunknown
+
+- **结论使用边界（1）**：POSTContent-Length5与两份实际body均不符，无法原样重放。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **结论使用边界（2）**：与734complex同参数/载荷不同endpoint，需证实共享sink后再合并。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **事实待核（3）**：无响应/时延/版本/修复，正常/攻击请求仅素材非已验证结果。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **结论使用边界（4）**：标题list过泛应加ledger，行业类别/Hunter元数据需修。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # 通天星CMSV6车载视频监控平台 list存在SQL注入漏洞
 

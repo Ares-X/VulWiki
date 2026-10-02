@@ -1,8 +1,61 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "极有可能被黑客利用，Outlook远程代码执行漏洞"
+product: "Outlook CVE-2024-21413 MonikerLink 通告"
+record_type: "unknown"
+document_type: "技术文章（细分类待核）"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "0click泄露到RCE需NTLM出站/中继目标签名等条件或密码破解，用户交互COM链也非任意COM组件都能RCE；04漏洞复现标题后无内容，后半所有节/版本/补丁URL粘连，21413后紧跟2导致URL错误"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/%E6%9E%81%E6%9C%89%E5%8F%AF%E8%83%BD%E8%A2%AB%E9%BB%91%E5%AE%A2%E5%88%A9%E7%94%A8%EF%BC%8COutlook%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-3629e3c617712dc2cb4854ac"
+entity_id: "ve-3629e3c617712dc2cb4854ac"
+schema_version: "1"
 ---
 
-#  极有可能被黑客利用，Outlook远程代码执行漏洞   
+# 极有可能被黑客利用，Outlook远程代码执行漏洞
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Outlook CVE-2024-21413 MonikerLink 通告
+- 文献类型：技术文章（细分类待核）
+- 版本、权限及部署边界：0click泄露到RCE需NTLM出站/中继目标签名等条件或密码破解，用户交互COM链也非任意COM组件都能RCE；04漏洞复现标题后无内容，后半所有节/版本/补丁URL粘连，21413后紧跟2导致URL错误
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. frontmatter漏21413，23397为相似历史利用不能作为21413已在野证据
+2. 0click泄露到RCE需NTLM出站/中继目标签名等条件或密码破解，用户交互COM链也非任意COM组件都能RCE
+3. 表暂无攻击与极可能或已经要分猜测/观测
+4. 04漏洞复现标题后无内容，后半所有节/版本/补丁URL粘连，21413后紧跟2导致URL错误
+5. 产品侧XVE-2023-37874与本篇XVE-2024-2628不一致疑串文
+6. Office四分支缺具体KB/build，需MSRC矩阵
+7. 百万影响无测量来源，保留时间点资讯
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 原创 微步情报局  微步在线研究响应中心   2024-02-22 11:48  
   
 ![](https://mmbiz.qpic.cn/mmbiz_png/fFyp1gWjicMKNkm4Pg1Ed6nv0proxQLEKJ2CUCIficfAwKfClJ84puialc9eER0oaibMn1FDUpibeK1t1YvgZcLYl3A/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1 "")  
@@ -38,4 +91,4 @@ Microsoft Outlook是微软办公软件套装的组件之一，用于收发电子
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

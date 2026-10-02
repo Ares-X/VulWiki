@@ -1,8 +1,54 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-f3a0b61234707fb34204d61f"
+entity_id: "ve-f3a0b61234707fb34204d61f"
+schema_version: "1"
+title: "CISA 发出警告，攻击者正在利用Windows 漏洞"
+product: "Windows Print Spooler"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2022-22718"
+referenced_identifiers: ""
+prerequisites: "本地提权，2022年2月补丁；具体Windows版本未列"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%AE%89%E5%85%A8%E8%AE%BE%E5%A4%87/CISA/CISA%20%E5%8F%91%E5%87%BA%E8%AD%A6%E5%91%8A%EF%BC%8C%E6%94%BB%E5%87%BB%E8%80%85%E6%AD%A3%E5%9C%A8%E5%88%A9%E7%94%A8Windows%20%E6%BC%8F%E6%B4%9E.md"
+review_date: "2026-10-02"
+category_recommendation: "系统安全/Windows"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 #  CISA 发出警告，攻击者正在利用Windows 漏洞   
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Windows Print Spooler
+- 本文讨论：CVE-2022-22718主；PrintNightmare与CLFS仅背景
+- 版本、权限与配置前提：本地提权，2022年2月补丁；具体Windows版本未列
+- 资料类型：KEV新闻；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- CISA是通报机构，不是受影响安全设备，应重分类Windows
+- 新增另外两CVE只在图片，全文元数据缺主CVE；所有Windows版本过泛
+- 修补三周需保留2022历史日期，FCEB适用范围不可扩大
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 官方KEV加入/截止日期与补丁KB待核
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
  关键基础设施安全应急响应中心   2022-04-22 14:30  
   
 Bleeping Computer 消息称，美国网络安全和基础设施安全局（CISA）在其积极利用漏洞列表中新增三个安全漏洞，**其中包括 Windows Print Spooler 中的本地权限提升漏洞。**  

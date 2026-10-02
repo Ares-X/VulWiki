@@ -1,6 +1,39 @@
 ---
 source: "MrWQ/vulnerability-paper"
+product: "PbootCMS3.0.4"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "PbootCMS 3-0-4 SQL 注入漏洞复现"
+prerequisites: "来源所述条件，未列明部分仍待核：搜索标签使用索引where数组；作者将默认SQLite改为MySQL"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/EHn4ScNOEr9lyda2bnGWPQ"
+id: "vw-badc72c38b5a60d8fc845539"
+entity_id: "ve-badc72c38b5a60d8fc845539"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：搜索标签使用索引where数组；作者将默认SQLite改为MySQL
+
+- **结论使用边界（1）**：源码定位段错误给static/backup/*.sql作为方法所在文件，明显复制错置。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **适用与权限边界（2）**：默认SQLite被换MySQL必须保留，MySQL REGEXP/hex载荷不能代表默认数据库复现。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **适用与权限边界（3）**：regepx拼错regexp，0x5E612E2A应^a.*却解释^a；账号密码实际哈希边界未说明。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **来源与引用处置（4）**：PoC/请求/源码几乎全图，重复两场景同图片URL；大段文库授权推广应剥离。保留这部分来源材料并与技术结论分开；其引用或宣传内容不能补足本文漏洞的证据。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # PbootCMS 3-0-4 SQL 注入漏洞复现
 

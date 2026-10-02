@@ -1,6 +1,45 @@
 ---
 source: "MrWQ/vulnerability-paper"
+product: "金蝶 K3Cloud"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+category_recommendation: "Web安全/ERP企业/金蝶"
+title: "DotNET安全系列-某蝶K3Cloud最新反序列化分析"
+prerequisites: "来源所述条件，未列明部分仍待核：分析称仅K3Cloud/ManageSite两应用；8.0及以上有KingdeeXml路径，缺具体实验build、原始受影响及固定版本"
+side_effects: "未执行；本文需注意的操作影响：保留关键补丁边界：`EnabledKDSVCBinary=false` 不能单独证明所有路径安全，原文还讨论 format4 经 KingdeeXMLPack 到 BinaryFormatter。最低角色、ServiceType/Module 认证和具体构建号仍待补；调试时改配置/重启 IIS 会中断业务。"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/pNDqKKCWfRBS50vxKMg1nA"
+id: "vw-7fbaaf7c891f138cd8312421"
+entity_id: "ve-7fbaaf7c891f138cd8312421"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 明确更正：本文是金蝶 K3Cloud 的 .NET/IIS/BinaryFormatter 分析；ProcessRequestInternal 是否执行由上层代码调用决定，不是 ASP.NET 自动优先级。
+- 保留关键补丁边界：`EnabledKDSVCBinary=false` 不能单独证明所有路径安全，原文还讨论 format4 经 KingdeeXMLPack 到 BinaryFormatter。最低角色、ServiceType/Module 认证和具体构建号仍待补；调试时改配置/重启 IIS 会中断业务。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：分析称仅K3Cloud/ManageSite两应用；8.0及以上有KingdeeXml路径，缺具体实验build、原始受影响及固定版本
+
+代码与实验材料：详细handler→format→代理→DeserializeParameters链及ap0/parameters差异；请求/关键源码主要图片，没有完整文本PoC
+
+来源证据范围：微信原文，微软调试文档URL疑漏连字符，无厂商公告/补丁
+
+- **事实待核（1）**：明显分类错误与补丁风险应单列；依据：全文ASP.NET/IIS/BinaryFormatter放Java；EnabledKDSVCBinary=false仍可由format4经KingdeeXMLPack到BinaryFormatter，此绕过结论具重要独立价值需补版本证据。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **适用与权限边界（2）**：技术描述与认证边界不足；依据：ProcessRequestInternal不是ASP.NET自动优先级而需代码调用；是否安全ServiceType及Module认证流程未解释，不能由链条推无需认证。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **实验改动边界（3）**：时效性与截图依赖；依据：标题最新/近日无日期，代码仅图；调试重启IIS/配置改动应注明实验环境操作。以下步骤按原实验条件保留；人工改动后的行为只支持该修改环境，不用于证明未修改发行版默认可利用。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # .NET 安全系列 | 某蝶 K3Cloud 最新反序列化分析
 

@@ -1,7 +1,39 @@
 ---
 cve: "CVE-2026-31790"
 source: "gelusus/wxvl 公众号漏洞文库"
+product: "OpenSSL/密码库RSA KEM"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2026-31790"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "OpenSSL 多个漏洞暴露 RSA KEM 处理中的敏感数据"
+prerequisites: "来源所述条件，未列明部分仍待核：文列3.0.20/3.3.7/3.4.5/3.5.6/3.6.2修复、1.0.2/1.1.1不受影响，FIPS含在影响内均待核"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-dac8ea7fbe2dd80b727cf6f0"
+entity_id: "ve-dac8ea7fbe2dd80b727cf6f0"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：文列3.0.20/3.3.7/3.4.5/3.5.6/3.6.2修复、1.0.2/1.1.1不受影响，FIPS含在影响内均待核
+
+代码与实验材料：有返回-1被当真机制，无最小程序、公钥样本或泄漏结果
+
+来源证据范围：声称2026-04-07官方公告却无链接
+
+- **证据待核（1）**：内存来源和数据对象表述不准确；依据：未初始化密文缓冲区称为有效密钥，先前应用程序进程内存措辞易误解为跨进程任意读取。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **事实待核（2）**：影响矩阵缺来源且标题复数错误；依据：只有31790一个实体，精确安全版本和FIPS范围无公告佐证。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 #  OpenSSL 多个漏洞暴露 RSA KEM 处理中的敏感数据  
 原创 网络安全9527

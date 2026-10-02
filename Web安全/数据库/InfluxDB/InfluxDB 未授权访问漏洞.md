@@ -1,8 +1,51 @@
 ---
 source: "Threekiii/Awesome-POC"
+title: "InfluxDB 未授权访问漏洞"
+product: "InfluxDB"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2019-20933"
+referenced_identifiers: ""
+identifier_role: "primary"
+cve: "CVE-2019-20933"
+prerequisites: "认证开启但shared-secret为空；已存在用户名；lab1.6.6"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-565acc5b80a9f415fdc05df1"
+entity_id: "ve-39de8feced832d74291b9445"
+schema_version: "1"
+canonical: "Web安全/数据库/InfluxDB/InfluxDB-JWT-认证绕过漏洞-CVE-2019-20933.md"
+relation_type: "duplicate_of"
 ---
 
 # InfluxDB 未授权访问漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：认证开启但shared-secret为空；已存在用户名；lab1.6.6
+- 证据范围：与22共同Vulhub式叙述，证据请求仅图片
+
+### 本次正文校订
+
+- 按实际内容修正 1 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 遗漏CVE及完整版本/修复范围
+- JWT签名误称加密；过期时间只是历史样例
+- 同22重复正文，22补了HTTP请求和更多来源，可择优合并
+- 保留认证开启、空密钥及存在用户前提
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 ## 漏洞描述
 
@@ -19,7 +62,7 @@ JWT，全称是JSON Web Token，是一种易于使用、无状态的鉴权方式
 
 执行如下命令启动influxdb 1.6.6：
 
-```
+```shell
 docker-compose up -d
 ```
 

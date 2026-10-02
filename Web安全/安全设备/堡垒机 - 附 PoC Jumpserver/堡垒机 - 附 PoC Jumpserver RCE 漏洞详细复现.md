@@ -1,9 +1,57 @@
 ---
-fofa: "” 工程师](http://mp.weixin.qq.com/s?__biz=MzI1NTM4ODIxMw==&mid=2247485135&idx=1&sn=f872054b31"
 source: "MrWQ/vulnerability-paper"
+id: "vw-19859575ba50c15482befb6d"
+entity_id: "ve-19859575ba50c15482befb6d"
+schema_version: "1"
+fofa_unverified: "” 工程师](http://mp.weixin.qq.com/s?__biz=MzI1NTM4ODIxMw==&mid=2247485135&idx=1&sn=f872054b31"
+title: "【堡垒机 - 附 PoC】Jumpserver RCE 漏洞详细复现"
+product: "JumpServer WebSocket日志/连接token及Koko"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+prerequisites: "日志存在可用资产/user/system_user ID，关联资产可连接、token短有效期，版本未给"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%AE%89%E5%85%A8%E8%AE%BE%E5%A4%87/%E5%A0%A1%E5%9E%92%E6%9C%BA%20-%20%E9%99%84%20PoC%20Jumpserver/%E5%A0%A1%E5%9E%92%E6%9C%BA%20-%20%E9%99%84%20PoC%20Jumpserver%20RCE%20%E6%BC%8F%E6%B4%9E%E8%AF%A6%E7%BB%86%E5%A4%8D%E7%8E%B0.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_url: "https://mp.weixin.qq.com/s/JrkTNuFw-tK5lWcAlbeCZQ"
+source_status: "recorded"
 ---
 
 # 【堡垒机 - 附 PoC】Jumpserver RCE 漏洞详细复现
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：JumpServer WebSocket日志/连接token及Koko
+- 本文讨论：未授权日志读+connection-token越权，主CVE未标
+- 版本、权限与配置前提：日志存在可用资产/user/system_user ID，关联资产可连接、token短有效期，版本未给
+- 资料类型：JumpServer日志泄露到资产会话链；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 命令实际在被管资产对应系统用户上下文，不等于JumpServer服务器本机RCE
+- 流程user-only=1但代码None，参数作用不明；只有ws/http替换不支持https/wss
+- 日志正则贪婪且groupdict未校None，固定收4条可能阻塞；示例端口用全角冒号
+- 手改三个ID/硬编码日志路径、未给修复范围；FOFA元数据取自页尾推荐链接
+- 已落实的文本修订：残缺指纹退出可执行索引并保留原值。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 官方CVE/版本、token参数语义和日志格式待核
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/JrkTNuFw-tK5lWcAlbeCZQ)

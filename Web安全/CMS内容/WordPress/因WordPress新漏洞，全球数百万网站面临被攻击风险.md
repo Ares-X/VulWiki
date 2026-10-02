@@ -1,6 +1,38 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+product: "WordPress W3 Total Cache"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2024-12365"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "因WordPress新漏洞，全球数百万网站面临被攻击风险"
+prerequisites: "来源所述条件，未列明部分仍待核：<=2.8.1 fixed2.8.2 claimed; authenticated subscriber+; nonce and downstream admin actions"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-f1446bb37e95718fc1d55ff1"
+entity_id: "ve-f1446bb37e95718fc1d55ff1"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：&lt;=2.8.1 fixed2.8.2 claimed; authenticated subscriber+; nonce and downstream admin actions
+
+- **事实待核（1）**：主CVE未进元数据；标题数百万不符文中百万安装量且无实际受影响测量。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **适用与权限边界（2）**：正文明确已认证订阅者，开头未经授权不能误解为无需认证。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **适用与权限边界（3）**：权限缺失→nonce→SSRF/配额耗尽链仅摘要，无具体action/请求。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **事实待核（4）**：有CVE.org精确引用，应核补丁日期和每项后果而非通用风险扩大。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 #  因WordPress新漏洞，全球数百万网站面临被攻击风险   
 BaizeSec  白泽安全实验室   2025-01-20 15:31  

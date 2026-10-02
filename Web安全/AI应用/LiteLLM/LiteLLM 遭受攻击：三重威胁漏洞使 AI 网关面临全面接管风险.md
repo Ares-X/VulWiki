@@ -1,8 +1,44 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "LiteLLM 遭受攻击：三重威胁漏洞使 AI 网关面临全面接管风险"
+product: "LiteLLM"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-58864ff555349a49547cd92c"
+entity_id: "ve-58864ff555349a49547cd92c"
+schema_version: "1"
 ---
 
-#  LiteLLM 遭受攻击：三重威胁漏洞使 AI 网关面临全面接管风险  
+# LiteLLM 遭受攻击：三重威胁漏洞使 AI 网关面临全面接管风险
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 正文存在CVE-2026-35030和35029，frontmatter却无编号
+- 三项问题仅两条GHSA引用，需建立逐项对应，不猜第三编号
+- OIDC默认关闭/需要已登录等前提不同，不能合成一个未授权RCE结论
+- 统一升级1.83.0说法需分别核对各漏洞版本
+- 标题遭受攻击未提供明确在野证据；缺原文URL
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 sec随谈
                     sec随谈  sec随谈   2026-04-14 00:54  
   

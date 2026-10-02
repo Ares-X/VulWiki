@@ -1,0 +1,41 @@
+name: Content quality
+on:
+  push:
+    paths:
+      - '**.md'
+      - 'docs/**'
+      - 'scripts/**'
+      - 'tests/**'
+      - '.github/workflows/content-quality.yml'
+      - '**/.resource/**'
+  pull_request:
+    paths:
+      - '**.md'
+      - 'docs/**'
+      - 'scripts/**'
+      - 'tests/**'
+      - '.github/workflows/content-quality.yml'
+      - '**/.resource/**'
+permissions:
+  contents: read
+jobs:
+  offline-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Unit tests (does not execute article code)
+        run: python -m unittest discover -s tests -v
+      - name: Report all debt and reject new issues
+        run: python scripts/wiki.py check --baseline docs/quality-baseline.json --report /tmp/wiki-quality.json
+      - name: Verify deterministic generated indexes
+        run: python scripts/wiki.py build --check
+      - name: Preserve complete quality report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: wiki-quality-report
+          path: /tmp/wiki-quality.json
+          if-no-files-found: warn

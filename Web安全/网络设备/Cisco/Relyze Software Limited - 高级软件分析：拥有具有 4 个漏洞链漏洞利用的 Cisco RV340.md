@@ -1,8 +1,55 @@
 ---
 cve: "CVE-2022-20707"
+id: "vw-709a45bfc165949bb2fc1e24"
+entity_id: "ve-709a45bfc165949bb2fc1e24"
+schema_version: "1"
+title: "Relyze Software Limited - 高级软件分析：拥有具有 4 个漏洞链漏洞利用的 Cisco RV340"
+product: "Cisco RV340/RV系列"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2022-20705; CVE-2022-20707; CVE-2022-20700; CVE-2022-20712"
+referenced_identifiers: ""
+prerequisites: "RV34X 1.0.03.22测试；LAN端，目录需曾创建或内置guest登录触发；各CVE型号范围不同"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/Cisco/Relyze%20Software%20Limited%20-%20%E9%AB%98%E7%BA%A7%E8%BD%AF%E4%BB%B6%E5%88%86%E6%9E%90%EF%BC%9A%E6%8B%A5%E6%9C%89%E5%85%B7%E6%9C%89%204%20%E4%B8%AA%E6%BC%8F%E6%B4%9E%E9%93%BE%E6%BC%8F%E6%B4%9E%E5%88%A9%E7%94%A8%E7%9A%84%20Cisco%20RV340.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_url: "https://blog.relyze.com/2022/04/pwning-cisco-rv340-with-4-bug-chain.html"
+source_status: "recorded"
 ---
 
 # Relyze Software Limited - 高级软件分析：拥有具有 4 个漏洞链漏洞利用的 Cisco RV340
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Cisco RV340/RV系列
+- 本文讨论：CVE-2022-20705；CVE-2022-20707；CVE-2022-20700；CVE-2022-20712
+- 版本、权限与配置前提：RV34X 1.0.03.22测试；LAN端，目录需曾创建或内置guest登录触发；各CVE型号范围不同
+- 资料类型：四漏洞利用链研究转载；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- frontmatter仅CVE-2022-20707，遗漏其他三主漏洞
+- 自动翻译破坏命令与配置：dumpimage/tar变中文、NGINX关键字翻译、Shell变量赋值和选项空格错误、Ruby % Q与nil ?
+- 归因json-c未转义单引号应表述为调用方混用JSON和Shell上下文，不能称JSON本身编码缺陷
+- 高亮颜色指代已丢失；无修复固件版本矩阵
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 机器翻译代码不可直接用于复现；原文与补丁版本待核验
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [blog.relyze.com](https://blog.relyze.com/2022/04/pwning-cisco-rv340-with-4-bug-chain.html)

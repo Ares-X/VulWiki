@@ -1,8 +1,56 @@
 ---
 source: "hatch 补库批 20260928"
+title: "MongoDB未授权访问"
+product: "MongoDB"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "绑定外网地址、端口可达、认证关闭；旧版配置/客户端API"
+runtime: "历史示例含 Python 2 专用依赖；未进行运行验证"
+source_status: "unknown"
+side_effects: "含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。"
+id: "vw-dcf77dda0ff474d40d31bb53"
+entity_id: "ve-dcf77dda0ff474d40d31bb53"
+schema_version: "1"
 ---
 
 # MongoDB未授权访问
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：绑定外网地址、端口可达、认证关闭；旧版配置/客户端API
+- 证据范围：通用部署风险和扫描脚本；未执行
+
+### 本次正文校订
+
+- 修正正文中的 –config → --config 转录错误，资源路径保持原样。
+- 运行时标注：原示例含 Python 2 专用语法或模块，不能直接按 Python 3 运行；不在本次校订中迁移或执行。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- P0 Shodan脚本实际查询redis，明显复制错误
+- 默认公开/无认证断言没有版本及发行包条件；影响范围为空
+- nohttpinterface=false与禁用HTTP建议相矛盾
+- 示例–config使用Unicode破折号；PyMongo database_names与Python2需标运行版本
+- 修改端口不替代认证；HTTP/REST/审计特性受版本/版本类型限制
+- 配置绑定0.0.0.0需标脆弱实验设置，不能混入加固指导
+
+### 操作风险与资料使用
+
+- 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 一、漏洞简介
 ------------
@@ -47,7 +95,7 @@ MongoDB
     ##fork = true
     bind_ip = 0.0.0.0
 
-    ./mongod –config mongodb.conf //启动mongodb加载配置mongodb.conf
+    ./mongod --config mongodb.conf //启动mongodb加载配置mongodb.conf
 
 ##### 1.1 基础
 

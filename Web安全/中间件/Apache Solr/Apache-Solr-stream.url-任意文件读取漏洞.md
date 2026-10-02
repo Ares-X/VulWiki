@@ -1,9 +1,52 @@
 ---
 version: "Apache Solr <= 8.8.1"
 source: "Threekiii/Vulnerability-Wiki"
+title: "Apache Solr stream.url 任意文件读取漏洞"
+product: "Apache Solr"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "Config API可写、core与dump handler存在，进程能读取目标；默认remote streaming需启用"
+affected_versions: "Apache Solr <= 8.8.1"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-16bb4dead266e9dc599c5e96"
+entity_id: "ve-16bb4dead266e9dc599c5e96"
+schema_version: "1"
 ---
 
 # Apache Solr stream.url 任意文件读取漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：Config API可写、core与dump handler存在，进程能读取目标；默认remote streaming需启用
+- 证据范围：与203正文/脚本高度同源，此版修复JSON括号但新增Python2脚本；去重应保留修正与实质差异。
+
+### 本次正文校订
+
+- 按实际内容修正 2 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- <=8.8.1不是充分受影响条件，需配置/权限边界
+- 手动JSON多无意义olrkzv64tv属性、curl file://etc/passwd路径不正确
+- POC1依赖This格式提示易误判，不检查真实配置状态；无core只说明环境条件不满足
+- POC2 keys()[0]与print语法仅Python2，未声明，和POC1Python3混放
+- 原始请求残留公网Origin/Referer，持久配置改变无恢复
+- 保留最完整主文并将近同文203合并，不与27905按文件读取混并
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 ## 漏洞描述
 
@@ -49,7 +92,7 @@ http://xxx.xxx.xxx.xxx/solr/admin/cores?indexInfo=false&wt=json
 
 请求包如下
 
-```plain
+```http
 POST /solr/ckan/config HTTP/1.1
 Host: xxx.xxx.xxx:8983
 Content-Length: 99
@@ -74,7 +117,7 @@ Connection: close
 
 请求包如下
 
-```plain
+```http
 POST /solr/ckan/debug/dump?param=ContentStreams HTTP/1.1
 Host: xxx.xxx.xxx.xxx:8983
 Content-Length: 29

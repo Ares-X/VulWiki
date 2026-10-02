@@ -1,27 +1,67 @@
 ---
-version: "通达OA < v11.7"
 source: "Threekiii/Vulnerability-Wiki"
+title: "通达OA auth_mobi会话泄露与staff_info组合"
+product: "通达OA"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "11.7测试与<11.7矛盾；后链<11.8声明"
+prerequisites: "未授权但目标在线，后链需写权限"
+side_effects: "文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行"
+review_date: "2026-10-02"
+source_url: "https://github.com/Threekiii/Vulnerability-Wiki"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E9%80%9A%E8%BE%BEOA/%E9%80%9A%E8%BE%BEOA-v11.7-auth_mobi.php-%E5%9C%A8%E7%BA%BF%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E.md"
+category_recommendation: "OA / 通达"
+id: "vw-7375ab2761fd36b646c35a8f"
+entity_id: "ve-7375ab2761fd36b646c35a8f"
+schema_version: "1"
 ---
 
-# 通达OA v11.7 auth_mobi.php 在线用户登录漏洞
+# 通达OA auth_mobi会话泄露与staff_info组合
 
-## 漏洞描述
+## 条目说明
+
+- 对象与具体问题：通达OA；auth_mobi会话泄露与staff_info组合
+- 版本、配置及部署条件：11.7测试与<11.7矛盾；后链<11.8声明
+- 认证与权限前提：未授权但目标在线，后链需写权限
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 新增2021-03-11链补充及UID权限差异须保留
+- 200空响应判据不够，无限轮询；后段植入文件不是只读检测
+- 分别列会话泄露和文件写入版本/条件
+
+## 操作风险
+
+文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
+### 漏洞描述
 
 通达OA v11.7 中存在某接口查询在线用户，当用户在线时会返回 PHPSESSION使其可登录后台系统
 
-## 漏洞影响
+### 漏洞影响
 
 ```
 通达OA < v11.7
 ```
 
-## 环境搭建
+### 环境搭建
 
 [通达OA v11.7下载链接](https://cdndown.tongda2000.com/oa/2019/TDOA11.7.exe)
 
 下载后按步骤安装即可
 
-## 漏洞复现
+### 漏洞复现
 
 漏洞有关文件 **MYOA\webroot\mobile\auth_mobi.php**
 
@@ -97,7 +137,7 @@ $sql = 'SELECT SID FROM user_online WHERE UID = \'' . $uid . '\' and CLIENT = \'
 
 通过此思路可以持续发包监控此页面来获取在线用户的Cookie
 
-## 漏洞POC
+### 漏洞POC
 
 5秒一次测试用户是否在线
 

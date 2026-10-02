@@ -1,6 +1,38 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+product: "Jenkins core/Update Center存储XSS链"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2023-27898; CVE-2023-27905"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "Jenkins 出现严重漏洞，可导致代码执行攻击"
+prerequisites: "来源所述条件，未列明部分仍待核：声称<2.319.2均影响，未拆core与Update Center版本，缺固定版本"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-68e971141b85c97ec0d4c2ef"
+entity_id: "ve-68e971141b85c97ec0d4c2ef"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：声称&lt;2.319.2均影响，未拆core与Update Center版本，缺固定版本
+
+代码与实验材料：无PoC；需攻击者能影响被展示插件元数据、兼容/排序条件、受害用户打开插件页面及其权限
+
+来源证据范围：The Hacker News原文链接，Aqua和厂商原报告缺直接引用
+
+- **适用与权限边界（1）**：两组件范围及XSS到RCE前提不充分；依据：统一套2.319.2版本；scriptConsole执行取决于受害者管理员权限；未安装插件仍需浏览插件列表不能叫无交互。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **适用与权限边界（2）**：历史叙述与翻译；依据：因为XSS也是存储型XSS循环描述；Jenkins公司/Update Center可被注入的发布信任边界不清。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 #  Jenkins 出现严重漏洞，可导致代码执行攻击   
 Ravie Lakshmanan  代码卫士   2023-03-09 17:39  

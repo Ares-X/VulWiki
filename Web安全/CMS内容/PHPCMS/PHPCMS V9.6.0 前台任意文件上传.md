@@ -1,6 +1,39 @@
 ---
 source: "MrWQ/vulnerability-paper"
+product: "PHPCMS9.6.0"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "PHPCMS V9.6.0 前台任意文件上传"
+prerequisites: "来源所述条件，未列明部分仍待核：注册/editor模型启用、allow_url_fopen、远程文件可达；上传PHP可执行"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/sH0-JfD07AzMzpknqWME1w"
+id: "vw-874b16805ccbf65e0c6b94a9"
+entity_id: "ve-874b16805ccbf65e0c6b94a9"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：注册/editor模型启用、allow_url_fopen、远程文件可达；上传PHP可执行
+
+- **适用与权限边界（1）**：与311同漏洞独立分析，本文补allow_url_fopen及Seebug编号，311补模型/回显失败条件，宜整合互补。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **结论使用边界（2）**：利用方式1/2只是Burp/Hackbar工具差异，不是两漏洞。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **适用与权限边界（3）**：利用条件仅影响范围应用过空，未列choosemodel/唯一用户名/SSO；pocsuite脚本被公众号回复门槛替代。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **结论使用边界（4）**：new_stripslashes被描述引号转义与实际去斜线含义反，扩展提取流程重复说明。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # PHPCMS V9.6.0 前台任意文件上传
 

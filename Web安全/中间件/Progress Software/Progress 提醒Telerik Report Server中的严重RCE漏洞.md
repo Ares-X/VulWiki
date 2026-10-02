@@ -1,8 +1,57 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Progress 提醒注意Telerik Report Server中的严重RCE漏洞"
+product: "Progress Telerik Report Server"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2024-6327"
+referenced_identifiers: "CVE-2019-18935; CVE-2024-4358; CVE-2024-1800"
+identifier_role: "primary"
+cve: "CVE-2024-6327"
+verification_source: "https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2024-q2-10-1-24-709"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。"
+id: "vw-6be7241e61998cdfe5599e7d"
+entity_id: "ve-6be7241e61998cdfe5599e7d"
+schema_version: "1"
 ---
 
-#  Progress 提醒注意Telerik Report Server中的严重RCE漏洞   
+# Progress 提醒注意Telerik Report Server中的严重RCE漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 证据范围：主漏洞6327与历史Telerik UI18935、ReportServer4358+1800链须分开，不将历史已利用套到6327。
+
+### 已有来源支持的更正
+
+- 厂商发行记录确认10.1.24.709修复6327
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- AppPool降权只能降低执行影响，不能消除反序列化漏洞，文章称临时缓解应说明残余风险
+- 无厂商公告直链/精确临时账号配置步骤，历史没在野信息需日期
+- 部分图片重复/大量广告；后端报告产品可按产品独立目录
+
+### 核验来源
+
+- https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2024-q2-10-1-24-709
+
+### 操作风险与资料使用
+
+- 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 Sergiu Gatlan  代码卫士   2024-07-26 17:41  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

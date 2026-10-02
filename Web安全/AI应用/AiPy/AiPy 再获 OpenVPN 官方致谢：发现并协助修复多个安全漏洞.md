@@ -1,9 +1,46 @@
 ---
-cve: "CVE-2026-63649"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "AiPy 再获 OpenVPN 官方致谢：发现并协助修复多个安全漏洞"
+product: "OpenVPN"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: "CVE-2026-63649"
+identifier_role: "reference"
+category: "系统安全"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-a187d4e7bf0ca21ea6db84bf"
+entity_id: "ve-a187d4e7bf0ca21ea6db84bf"
+schema_version: "1"
 ---
 
-#  AiPy 再获 OpenVPN 官方致谢：发现并协助修复多个安全漏洞  
+# AiPy 再获 OpenVPN 官方致谢：发现并协助修复多个安全漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+AiPy 是被致谢的研究工具，受影响产品是 OpenVPN。此页为多项修复的新闻参考，具体编号应分别对照发行说明，不能按首个编号视为单一可运行复现。
+
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 发现工具AiPy被误当受影响产品
+- 含多个CVE和非CVE改进，主记录只保存一个编号，需区分主次
+- 无具体复现/验证步骤，不满足README核心收录标准
+- 包含宣传段落；逐篇原文URL缺失，现有链接是发行说明和产品官网
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
  知道创宇   2026-09-08 05:57  
   
 AI智赋未来 · 安全守护信息化  

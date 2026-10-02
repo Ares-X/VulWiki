@@ -1,8 +1,45 @@
 ---
 source: "Mr-xn/Penetration_Testing_POC"
+title: "solr_rce"
+product: "Apache Solr VelocityResponseWriter"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "Python2、Config API可写、core/Velocity可用；命令和输出受运行时影响"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-fbb8bb745650e3801794afcc"
+entity_id: "ve-fbb8bb745650e3801794afcc"
+schema_version: "1"
 ---
 
 # solr_rce
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：Python2、Config API可写、core/Velocity可用；命令和输出受运行时影响
+- 证据范围：代码完整读过，核心同197/200但输出条件反向。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- send_exp仅在400或500打印输出，正常200却称发送失败，成功判断错误
+- if中and/or优先级导致400无须有内容也进入；无实际执行标志
+- Python2 print未声明，Python3下语法错误
+- 命令未URL编码，缺超时/鉴权/参数数量检查，proxies定义未用
+- 会遍历修改全部core配置无恢复；标题solr_rce太泛缺版本/CVE
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 ## solr_rce.py  
 

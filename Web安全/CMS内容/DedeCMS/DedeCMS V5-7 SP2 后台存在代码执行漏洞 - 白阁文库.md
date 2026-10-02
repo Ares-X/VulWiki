@@ -1,6 +1,39 @@
 ---
 source: "MrWQ/vulnerability-paper"
+product: "DedeCMS"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "DedeCMS V5-7 SP2 后台存在代码执行漏洞 - 白阁文库"
+prerequisites: "来源所述条件，未列明部分仍待核：5.7SP2; admin permission and CSRF token; writable include/taglib; PHP execution"
+side_effects: "未执行；本文需注意的操作影响：Token step uses /uploads base while exploit paths omit it; normalize deployment base"
+source_status: "recorded"
+source_url: "https://www.bylibrary.cn/%E6%BC%8F%E6%B4%9E%E5%BA%93/01-CMS%E6%BC%8F%E6%B4%9E/DedeCMS/DedeCMS%20V5.7%20SP2%E5%90%8E%E5%8F%B0%E5%AD%98%E5%9C%A8%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E/"
+id: "vw-a204d0fb7630316dc383036f"
+entity_id: "ve-a204d0fb7630316dc383036f"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：5.7SP2; admin permission and CSRF token; writable include/taglib; PHP execution
+
+- **适用与权限边界（1）**：Good explicit admin/token requirement and source sink。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **结论使用边界（2）**：Speculation that tagname should be filename doesn't establish security fix; removing suffix doesn't resolve arbitrary executable content。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **结论使用边界（3）**：Token step uses /uploads base while exploit paths omit it; normalize deployment base。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **证据待核（4）**：Freebuf original reference available; site chrome residues。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # DedeCMS V5-7 SP2 后台存在代码执行漏洞 - 白阁文库
 

@@ -1,8 +1,44 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Cloudflare 0Day漏洞可绕过防护直接访问任意主机服务器"
+product: "Cloudflare ACME WAF"
+record_type: "incident"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-410bde153ce099168e6f8f98"
+entity_id: "ve-410bde153ce099168e6f8f98"
+schema_version: "1"
 ---
 
-#  Cloudflare 0Day漏洞可绕过防护直接访问任意主机服务器  
+# Cloudflare 0Day漏洞可绕过防护直接访问任意主机服务器
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 第三篇同事件，有受控演示主机和框架差异补充
+- 路径被下划线污染，修复全部路径仍与有效token例外矛盾
+- 保留Oct2025修复Jan2026披露区分
+- 不把404响应等于读取敏感文件
+- 需原厂/研究直链
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
  FreeBuf   2026-01-21 10:31  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/qq5rfBadR38jUokdlWSNlAjmEsO1rzv3srXShFRuTKBGDwkj4gvYy34iajd6zQiaKl77Wsy9mjC0xBCRg0YgDIWg/640?wx_fmt=gif "")  

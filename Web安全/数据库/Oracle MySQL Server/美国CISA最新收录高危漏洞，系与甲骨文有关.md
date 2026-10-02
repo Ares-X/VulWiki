@@ -1,9 +1,47 @@
 ---
 cve: "CVE-2021-35587"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "美国CISA最新收录高危漏洞，系与甲骨文有关"
+product: "Oracle Access Manager / Fusion Middleware"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2021-35587"
+referenced_identifiers: ""
+identifier_role: "primary"
+prerequisites: "列11.1.2.3.0/12.2.1.3.0/12.2.1.4.0；HTTP可达，无认证"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-cde1cdd1ffa6d4b6460b5adf"
+entity_id: "ve-cde1cdd1ffa6d4b6460b5adf"
+schema_version: "1"
 ---
 
-#  美国CISA最新收录高危漏洞，系与甲骨文有关   
+# 美国CISA最新收录高危漏洞，系与甲骨文有关
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：列11.1.2.3.0/12.2.1.3.0/12.2.1.4.0；HTTP可达，无认证
+- 证据范围：风险/披露背景，无实际PoC；视频只有图片说明
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- P0错归Oracle MySQL Server，应是Oracle Access Manager
+- CISA不是分配CVE/发现漏洞主体，须区分KEV收录与披露
+- '最高服务器权限'无服务身份依据；30000资产不等于漏洞实例
+- yizhi、身份4、Manage等转录错误
+- KEV数量/联邦期限是历史时点信息，补原始来源并与当前适用性分开
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
  关键基础设施安全应急响应中心   2022-12-01 16:00  
   
 近日，美国网络安全和基础设施安全局 （CISA） 将一个影响美国甲骨文（Oracle）公司融合中间件的严重漏洞跟踪为CVE-2021-35587（CVSS 3.1 基本分数 9.8）。该漏洞是由于yizhi Access Manager（Oracle融合中间件）未对HTTP请求进行有效的验证，攻击者可利用该漏洞在未授权的情况下，构造恶意数据进行远程代码执行漏洞攻击，最终获取服务器最高权限。  

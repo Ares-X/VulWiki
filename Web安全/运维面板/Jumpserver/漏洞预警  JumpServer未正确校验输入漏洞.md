@@ -1,9 +1,46 @@
 ---
 cve: "CVE-2023-48193"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "漏洞预警 | JumpServer未正确校验输入漏洞"
+product: "JumpServer command filtering"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2023-48193"
+referenced_identifiers: ""
+identifier_role: "primary"
+prerequisites: "Authorized user able to create/run shell script on managed host;<=3.8.0 claimed"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-048e56d0069ba37fcd07c230"
+entity_id: "ve-048e56d0069ba37fcd07c230"
+schema_version: "1"
 ---
 
-#  漏洞预警 | JumpServer未正确校验输入漏洞   
+# 漏洞预警 | JumpServer未正确校验输入漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：Authorized user able to create/run shell script on managed host;<=3.8.0 claimed
+- 证据范围：Policy-filter bypass claim, not demonstrated bastion-server RCE
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- Clarify execution location and intended command-filter security boundary; don't label generic serverRCE
+- No precise fix/build or vendor advisory supporting patched claim
+- No PoC or result despite broad arbitrary-command statement
+- Remove empty headings and duplicate formatting
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 浅安  浅安安全   2023-12-02 08:00  
   
 **0x00 漏洞编号**  

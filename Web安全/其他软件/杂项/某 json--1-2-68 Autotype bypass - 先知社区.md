@@ -1,8 +1,64 @@
 ---
 source: "MrWQ/vulnerability-paper"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "某 json--1-2-68 Autotype bypass - 先知社区"
+product: "Fastjson1.2.68 AutoType绕过原理及1.2.47回顾"
+record_type: "unknown"
+document_type: "技术文章（细分类待核）"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "JNDI需具体JDK信任限制/可用factory或gadget、出站条件，JDK11文件写链缺精确build及反射模块配置；safeMode示例可作本版本缓解但需应用实际ParserConfig且代码先处理customhandler，不能声称无条件所有入口封死；具体来源和commit多，缺官方修复版/完整受影响范围，归开发框架"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/%E6%9F%90%20json--1-2-68%20Autotype%20bypass%20-%20%E5%85%88%E7%9F%A5%E7%A4%BE%E5%8C%BA.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+source_url: "https://xz.aliyun.com/t/9476"
+id: "vw-78db73f88729ca76f140423c"
+entity_id: "ve-78db73f88729ca76f140423c"
+schema_version: "1"
 ---
 
 # 某 json--1-2-68 Autotype bypass - 先知社区
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Fastjson1.2.68 AutoType绕过原理及1.2.47回顾
+- 文献类型：技术文章（细分类待核）
+- 版本、权限及部署边界：JNDI需具体JDK信任限制/可用factory或gadget、出站条件，JDK11文件写链缺精确build及反射模块配置；safeMode示例可作本版本缓解但需应用实际ParserConfig且代码先处理customhandler，不能声称无条件所有入口封死；具体来源和commit多，缺官方修复版/完整受影响范围，归开发框架
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 标题匿名某json应明确Fastjson，1.2.47缓存示例为旧版回顾不能算1.2.68有效链
+2. 正文把(autoTypeSupport||expectClassFlag)解成未开启AutoType，后续if(!autoTypeSupport)又解成开启，与贴码明确相反
+3. 称此处之前没出现autoTypeSupport判断与前贴源码冲突，expectClassFlag为false不等于该类绝不能作为期望类
+4. 自定义ViaThrowable/ViaAutoCloseable/ExecRunnable/RefRCE均主动写恶意getter且需目标类路径存在，只示范机制不证明默认依赖直接RCE
+5. JNDI需具体JDK信任限制/可用factory或gadget、出站条件，JDK11文件写链缺精确build及反射模块配置
+6. $ref节首个SSRF示例并无$ref，JSON.parseObject到JSON对象的getter调用与getInstance/getInputStream混写，应明确parse与parseObject行为
+7. Git不记录大写十六进制断言错误，改变表示为了阻研究的动机无证据，不能当事实
+8. safeMode示例可作本版本缓解但需应用实际ParserConfig且代码先处理customhandler，不能声称无条件所有入口封死
+9. Throwable是类而非Exception接口，AutoCloseable大小写/AUtoCloseable拼写、Markdown围栏及GitHub提交链接掺中文需修复
+10. 具体来源和commit多，缺官方修复版/完整受影响范围，归开发框架
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://xz.aliyun.com/t/9476>
+
+### 归档技术正文
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [xz.aliyun.com](https://xz.aliyun.com/t/9476)

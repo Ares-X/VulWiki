@@ -1,10 +1,53 @@
 ---
-cve: "CVE-2019-8451"
 version: "WSO2 Identity Server 5.2.0 , 5.3.0 , 5.4.0 , 5.4.1 , 5.5.0 , 5.6.0 , 5.7.0"
 source: "Threekiii/Vulnerability-Wiki"
+title: "WSO2 proxy SSRF漏洞 WSO2-2019-0598"
+product: "WSO2 Identity Server / Identity Server as Key Manager"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "WSO2-2019-0598"
+referenced_identifiers: "CVE-2019-8451"
+identifier_role: "primary"
+prerequisites: "Reachable Shindig proxy endpoint; experiment uses Identity Server 5.6.0-rc3"
+affected_versions: "WSO2 Identity Server 5.2.0 , 5.3.0 , 5.4.0 , 5.4.1 , 5.5.0 , 5.6.0 , 5.7.0"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-37c52bf062aa58a1225a5437"
+entity_id: "ve-37c52bf062aa58a1225a5437"
+schema_version: "1"
 ---
 
 # WSO2 proxy SSRF漏洞 WSO2-2019-0598
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+本文主问题是 WSO2-2019-0598。CVE-2019-8451 仅用于 Jira 失败对比，不属于 WSO2 主漏洞。外站抓取示例证明出站 HTTP 能力，不自动证明任意内网资源访问。
+
+- 适用前提：Reachable Shindig proxy endpoint; experiment uses Identity Server 5.6.0-rc3
+- 证据范围：Independent ProxyServlet SSRF analysis; Jira CVE-2019-8451 is only a failed comparison route, not this vulnerability's identity. Code includes URL validation and proxy safety checks, requiring more precise description of their bypass or insufficient destination restriction.
+
+### 本次正文校订
+
+- 按实际内容修正 1 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- Wrong frontmatter primary CVE: remove Jira CVE-2019-8451 from main identity
+- External Baidu fetch proves outbound request, not arbitrary internal resource reachability
+- Only GET proxy reproduction is supplied; POST appears in source but is not independently demonstrated
+- Release-candidate test build is not identified as distinct from final release in version claims
+- No remediation or fixed builds
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 ## 漏洞描述
 
@@ -76,7 +119,7 @@ https://github.com/wso2/product-is/releases/download/v5.6.0-rc3/wso2is-5.6.0-rc3
 
 发送请求包，打断点看一下处理流程
 
-```
+```http
 GET /shindig/gadgets/proxy?container=default&url=https://www.baidu.com HTTP/1.1
 Host: localhost:9443
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9

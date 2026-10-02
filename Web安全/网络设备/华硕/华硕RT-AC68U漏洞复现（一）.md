@@ -1,8 +1,55 @@
 ---
 cve: "CVE-2018-14710"
+id: "vw-56473b766db4690b69601553"
+entity_id: "ve-56473b766db4690b69601553"
+schema_version: "1"
+title: "华硕RT-AC68U漏洞复现（一）"
+product: "ASUS RT-AC68U及参考RT-AC3200"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2018-14710; CVE-2018-14711; CVE-2018-14712; CVE-2018-14713; CVE-2018-14714"
+referenced_identifiers: ""
+prerequisites: "实际复现384.10007，32738部分已修；声明45149修复；部分漏洞需认证/CSRF受害者"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/%E5%8D%8E%E7%A1%95/%E5%8D%8E%E7%A1%95RT-AC68U%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0%EF%BC%88%E4%B8%80%EF%BC%89.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_url: "https://mp.weixin.qq.com/s/K5j4wu75m9H4ro02u1e7LA"
+source_status: "recorded"
 ---
 
 # 华硕RT-AC68U漏洞复现（一）
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：ASUS RT-AC68U及参考RT-AC3200
+- 本文讨论：CVE-2018-14710–14714；17020–17022相关对照
+- 版本、权限与配置前提：实际复现384.10007，32738部分已修；声明45149修复；部分漏洞需认证/CSRF受害者
+- 资料类型：多漏洞固件源码研究；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 开头将load_script命令注入写14713，详细段正确14714；14713实际格式化字符串
+- 元数据只14710；17022明确AC68U无该接口，应只关联AC3200不能归AC68U受影响
+- 代码大量反引号逐词包裹且黏行，影响可读/复制；无ISE原始公告链接
+- 14712溢出不能直接等同命令注入，应与地址泄露链区分
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- CVE-型号-版本对应和各auth条件需官方/ISE原文确认
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/K5j4wu75m9H4ro02u1e7LA)

@@ -1,6 +1,40 @@
 ---
 source: "hatch 补库批 20260928"
+product: "FastAdmin member-center template inclusion"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "FastAdmin 会员中心前台getshell"
+prerequisites: "来源所述条件，未列明部分仍待核：V1.0.0.20200506_beta; usercenter true, authenticated avatar upload, controllable _empty name; Linux public/user directory caveat"
+side_effects: "未执行；本文需注意的操作影响：Missing textual inclusion request; classify controllable template path plus upload, not generic string SSTI"
+source_status: "unknown"
+id: "vw-d04bc9d3235fba5ae8479090"
+entity_id: "ve-d04bc9d3235fba5ae8479090"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；遮罩后的历史值不能作为可用登录凭据。原操作、请求方法和攻击表达式保留。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：V1.0.0.20200506_beta; usercenter true, authenticated avatar upload, controllable _empty name; Linux public/user directory caveat
+
+代码与实验材料：_empty/fetch source and multipart image+PHP tag; critical final inclusion URL only screenshot
+
+来源证据范围：cnpanda.net/codeaudit/777.html
+
+- **证据待核（1）**：Missing textual inclusion request; classify controllable template path plus upload, not generic string SSTI。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **实验改动边界（2）**：is_file Windows/all&gt;2^32 claims overbroad; Linux directory creation is modified lab assumption。以下步骤按原实验条件保留；人工改动后的行为只支持该修改环境，不用于证明未修改发行版默认可利用。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # FastAdmin 会员中心前台getshell
 
@@ -110,7 +144,7 @@ V1.0.0.20200506\_beta
     Referer: http://103.40.247.24/index/user/profile.html
     Accept-Encoding: gzip, deflate
     Accept-Language: zh-CN,zh;q=0.9
-    Cookie: Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1600651554; PHPSESSID=e42uhkmhirv29cpd82qbubigd7; uid=3; token=251be91c-040b-4231-b955-76c3ecfaf4f4; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1600651809
+    Cookie: Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1600651554; PHPSESSID=e42********************gd7; uid=3; token=251******************************4f4; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1600651809
     Connection: close
     
     ------WebKitFormBoundaryJ60Dcmopu4qDLQwq

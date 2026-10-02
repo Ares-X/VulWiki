@@ -1,8 +1,45 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "热门开源PDF库 Ghostscript中存在严重的RCE漏洞"
+product: "Ghostscript路径归一化/pipe"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "disputed"
+primary_identifiers: "CVE-2023-36664"
+referenced_identifiers: "CVE-2023-3664"
+identifier_role: "primary"
+cve: "CVE-2023-36664"
+prerequisites: "文称<10.01.2并处理恶意EPS；嵌入应用是否调用解释器与策略有关"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-2e861f5bd0640878fca8016e"
+entity_id: "ve-2e861f5bd0640878fca8016e"
+schema_version: "1"
 ---
 
-#  热门开源PDF库 Ghostscript中存在严重的RCE漏洞   
+# 热门开源PDF库 Ghostscript中存在严重的RCE漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：文称<10.01.2并处理恶意EPS；嵌入应用是否调用解释器与策略有关
+- 证据范围：gp_file_name_reduce路径与gp_validate_path机制及Kroll研究可识别，但正文编号两处少一位，与引用仓库36664不符
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 主编号需回源纠正为36664并补元数据，不按3664合并
+- 任何使用Ghostscript应用打开EPS都触发过度泛化，应列实际处理链
+- 发行版可能回移补丁，无需一律建议自行编译最新版
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 Bill Toulas  代码卫士   2023-07-13 18:22  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

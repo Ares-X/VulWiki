@@ -1,8 +1,49 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "NVIDIA Container Toolkit漏洞可导致权限提升任意代码执行"
+product: "NVIDIA Container Toolkit/GPU Operator"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。"
+id: "vw-2367ba990c072a6faf2220c7"
+entity_id: "ve-2367ba990c072a6faf2220c7"
+schema_version: "1"
 ---
 
-#  NVIDIA Container Toolkit漏洞可导致权限提升任意代码执行  
+# NVIDIA Container Toolkit漏洞可导致权限提升任意代码执行
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 两CVE均未提取
+- 两个钩子不同，禁enable-cuda-compat不能未核就视均缓解
+- CDI例外/版本应逐组件逐CVE矩阵
+- 与AI文GPUOperator25.3.1受影响说法冲突需厂商核
+- Nir/Shir报告者与ZDI/Wiz归属需准确
+- 缓解仅截图，只有二手来源
+
+### 操作风险与资料使用
+
+- 含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
  FreeBuf   2025-07-18 10:31  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/qq5rfBadR38jUokdlWSNlAjmEsO1rzv3srXShFRuTKBGDwkj4gvYy34iajd6zQiaKl77Wsy9mjC0xBCRg0YgDIWg/640?wx_fmt=gif "")  

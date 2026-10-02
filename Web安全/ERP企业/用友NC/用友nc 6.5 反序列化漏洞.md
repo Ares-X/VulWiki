@@ -1,8 +1,48 @@
 ---
 source: "hatch 补库批 20260928"
+title: "用友NC ServiceDispatcherServlet/JNDI调用链研究"
+product: "用友NC"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "NC6.5；JDK/JNDI远程加载与依赖版本未列"
+prerequisites: "未知"
+side_effects: "命令/代码执行示例可能改变主机状态"
+review_date: "2026-10-02"
+source_status: "unknown"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E7%94%A8%E5%8F%8BNC/%E7%94%A8%E5%8F%8Bnc%206.5%20%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%BC%8F%E6%B4%9E.md"
+id: "vw-d4197cab3ae2b52639c0df10"
+entity_id: "ve-d4197cab3ae2b52639c0df10"
+schema_version: "1"
 ---
 
-# 用友nc 6.5 反序列化漏洞
+# 用友NC ServiceDispatcherServlet/JNDI调用链研究
+
+## 条目说明
+
+- 对象与具体问题：用友NC；ServiceDispatcherServlet/JNDI调用链研究
+- 版本、配置及部署条件：NC6.5；JDK/JNDI远程加载与依赖版本未列
+- 认证与权限前提：未知
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 保留安装配置和NCLocator客户端追踪，服务端反序列化/JNDI sink并未给出
+- PoC核心为lookup外部JNDI，标题笼统反序列化需区分机制；客户端读回对象亦有风险
+- Java public类poc与explpit.java文件名不符；/bin/sh下bash特性命令可移植性需核
+- 示例DBA授权/弱口令只宜隔离实验说明；无修复，Pandoc HTML占位噪声
+
+## 操作风险
+
+命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
 
 一、漏洞简介
 ------------
@@ -15,7 +55,7 @@ source: "hatch 补库批 20260928"
 三、复现过程
 ------------
 
-### 环境搭建
+#### 环境搭建
 
 -   1.执行NC安装包根目录下setup.bat文件（要求安装盘同级目下有ufjdk文件或者设置JAVA\_HOME环境变量），安装时，出现如下图界面;
 
@@ -80,7 +120,7 @@ source: "hatch 补库批 20260928"
 
 ![7.png](./.resource/用友nc6.5反序列化漏洞/media/rId31.png)
 
-### 漏洞分析
+#### 漏洞分析
 
 下载UClient并安装后，进入启动页面，选择添加应用。
 
@@ -236,7 +276,7 @@ args)方法
 可以看到该方法中将 ii
 序列化输出，发送到服务端，然后获取服务端返回的反序列化结果并回显到客户端。
 
-### poc
+#### poc
 
 ![mov.gif](./.resource/用友nc6.5反序列化漏洞/media/rId44.gif)
 

@@ -1,7 +1,44 @@
 ---
 cve: "CVE-2026-48019"
 source: "gelusus/wxvl 公众号漏洞文库"
+product: "Laravel / Symfony Mailer"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2026-48019"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+category_recommendation: "Web安全/开发框架"
+title: "一个CRLF注入漏洞，竟能够进行密码重置邮件的操作？"
+prerequisites: "来源所述条件，未列明部分仍待核：Laravel12/13claimedfixed12.60/13.10; validator/mailtransportacceptCRLF; accountlookupmapping musthold"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-ed16522e321a42e910fbcf34"
+entity_id: "ve-ed16522e321a42e910fbcf34"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 分类更正：本文实际对象是 Laravel / Symfony Mailer，原 CMS 内容目录不能代替产品归属；只修正字段和分类建议，路径、来源和技术方法继续保留。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：Laravel12/13claimedfixed12.60/13.10; validator/mailtransportacceptCRLF; accountlookupmapping musthold
+
+- **结论使用边界（1）**：错误放CMS，应移开发框架Laravel并关联Symfony依赖。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **证据待核（2）**：示例邮箱带Bcc和额外@example.com，未解释如何匹配受害已注册email并触发reset，关键链缺口。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **证据待核（3）**：validateEmail片段仅filter_var与全文RFC/Symfony接受换行断言无官方补丁/源码链接支持。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **结论使用边界（4）**：30秒完成、受害无异常、SPF/DKIM均不报警是绝对化无测试数据；SPF/DKIM本来不直接判应用授权。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **事实待核（5）**：请求头/体全挤一行，修复str_replace两行无diff，需回权威源核CVE/产品/范围。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 #  一个CRLF注入漏洞，竟能够进行密码重置邮件的操作？  
 原创 HeArt

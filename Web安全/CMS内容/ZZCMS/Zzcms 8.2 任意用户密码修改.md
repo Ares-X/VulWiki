@@ -1,6 +1,40 @@
 ---
 source: "hatch 补库批 20260928"
+product: "ZZCMS8.2"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "Zzcms 8.2 任意用户密码修改"
+prerequisites: "来源所述条件，未列明部分仍待核：knownusername; samePHPsession acrossstep1/3; step2proofnotrequired; captchaevaluationorder"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-a080a357a8a6dd29fddca2c0"
+entity_id: "ve-a080a357a8a6dd29fddca2c0"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：knownusername; samePHPsession acrossstep1/3; step2proofnotrequired; captchaevaluationorder
+
+- **证据待核（1）**：核心step1设置username后直接step3缺验证状态门槛，链解释清楚。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **凭据与会话边界（2）**：$_SESSION在checkyzm之前赋值，验证码是否真必要须核失败退出/会话保存；不能只说取session即可。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+
+- **代码与转录边界（3）**：关键UPDATE代码在SESSIONusername字符串中途截断，文章末尾利用此漏洞只需也截断。相应原代码作为存在此问题的历史样本保留，不能直接当作可运行、成功复现的 PoC；缺失内容需回原稿核对，不据此补造可执行攻击链。
+
+- **证据待核（4）**：完整请求全图，passwordtrue明文存储是可见次要风险但不等同主重置缺陷。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **事实待核（5）**：缺修复/原始源。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Zzcms 8.2 任意用户密码修改
 

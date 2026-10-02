@@ -1,9 +1,62 @@
 ---
-cve: "CVE-2026-43284"
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2026-43284;CVE-2026-43500"
+identifier_role: "primary"
+primary_identifiers: "CVE-2026-43284;CVE-2026-43500"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "Dirty Frag的双漏洞组合"
+product: "Linux xfrm-ESP / RxRPC"
+record_type: "advisory"
+document_type: "双路径利用新闻"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "本地低权限；ESP需命名空间权限，RxRPC需可用模块；版本/补丁未列"
+side_effects: "把Ubuntu非特权namespace与各发行版覆盖做全称判断缺版本/策略限定，代码模块自动加载不能只按当前未加载判断安全；失败不崩溃/成功极高/几秒root为未给测试矩阵的推广断言，不能记录为验证结论；页缓存篡改与持久磁盘改变需区别，容器逃逸依赖环境；CopyFail只是历史同类非同CVE"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/Dirty%20Frag%E7%9A%84%E5%8F%8C%E6%BC%8F%E6%B4%9E%E7%BB%84%E5%90%88.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-640f1c68b15a2a77cc54df96"
+entity_id: "ve-640f1c68b15a2a77cc54df96"
+schema_version: "1"
 ---
 
-#  Dirty Frag的双漏洞组合  
+# Dirty Frag的双漏洞组合
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Linux xfrm-ESP / RxRPC
+- 文献类型：双路径利用新闻
+- 版本、权限及部署边界：本地低权限；ESP需命名空间权限，RxRPC需可用模块；版本/补丁未列
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. frontmatter漏第二主CVE；标题双漏洞长攻击链但所示main实际二选一/失败回退，应称互补利用路径而非两洞必串联
+2. 把Ubuntu非特权namespace与各发行版覆盖做全称判断缺版本/策略限定，代码模块自动加载不能只按当前未加载判断安全
+3. 失败不崩溃/成功极高/几秒root为未给测试矩阵的推广断言，不能记录为验证结论
+4. GitHub项目链接存在，但只节选调度和mmap非完整机制分析；缺上游补丁/官方公告
+5. 页缓存篡改与持久磁盘改变需区别，容器逃逸依赖环境；CopyFail只是历史同类非同CVE
+
+### 操作风险
+
+把Ubuntu非特权namespace与各发行版覆盖做全称判断缺版本/策略限定，代码模块自动加载不能只按当前未加载判断安全；失败不崩溃/成功极高/几秒root为未给测试矩阵的推广断言，不能记录为验证结论；页缓存篡改与持久磁盘改变需区别，容器逃逸依赖环境；CopyFail只是历史同类非同CVE
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://github.com/V4bel/dirtyfrag>
+- 原文参考链接（未重新核验）：<https://github.com/V4bel/dirtyfrag.git>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 whoami
                     whoami  船山信安   2026-05-14 04:10  
   
@@ -91,4 +144,4 @@ git clone https://github.com/V4bel/dirtyfrag.git && cd dirtyfrag && gcc -O0 -Wal
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

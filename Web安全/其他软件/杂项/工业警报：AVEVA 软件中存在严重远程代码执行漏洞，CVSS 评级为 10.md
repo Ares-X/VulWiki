@@ -1,9 +1,60 @@
 ---
 cve: "CVE-2025-61937"
 source: "gelusus/wxvl 公众号漏洞文库"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "工业警报：AVEVA 软件中存在严重远程代码执行漏洞，CVSS 评级为 10"
+product: "AVEVA Process Optimization"
+record_type: "unknown"
+document_type: "技术文章（细分类待核）"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "认证/本地权限/恶意文件各前提不同不能统称无登录全控；SQLServer管理员权限与OS SYSTEM分清；一份版本2024.1<=/2025修复需按每CVE厂商PDF矩阵核"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/%E5%B7%A5%E4%B8%9A%E8%AD%A6%E6%8A%A5%EF%BC%9AAVEVA%20%E8%BD%AF%E4%BB%B6%E4%B8%AD%E5%AD%98%E5%9C%A8%E4%B8%A5%E9%87%8D%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E%EF%BC%8CCVSS%20%E8%AF%84%E7%BA%A7%E4%B8%BA%2010.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-04ed6902ffe165732ab58556"
+entity_id: "ve-04ed6902ffe165732ab58556"
+schema_version: "1"
 ---
 
-#  工业警报：AVEVA 软件中存在严重远程代码执行漏洞，CVSS 评级为 10  
+# 工业警报：AVEVA 软件中存在严重远程代码执行漏洞，CVSS 评级为 10
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：AVEVA Process Optimization
+- 文献类型：技术文章（细分类待核）
+- 版本、权限及部署边界：认证/本地权限/恶意文件各前提不同不能统称无登录全控；SQLServer管理员权限与OS SYSTEM分清；一份版本2024.1<=/2025修复需按每CVE厂商PDF矩阵核
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 元数据只有61937缺64691/61943/65118/64769/65117/64729
+2. 认证/本地权限/恶意文件各前提不同不能统称无登录全控
+3. SQLServer管理员权限与OS SYSTEM分清
+4. 一份版本2024.1<=/2025修复需按每CVE厂商PDF矩阵核
+5. 无PoC应标公告，保留AVEVA原始PDF
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 sec随谈
                     sec随谈  sec随谈   2026-01-20 00:57  
   
@@ -36,4 +87,4 @@ https://www.aveva.com/content/dam/aveva/documents/support/cyber-security-updates
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

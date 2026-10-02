@@ -1,10 +1,62 @@
 ---
-cnvd: "XVE-2024-16919"
-fofa: "header="
 source: "SourByte05/Vulnerability-Wiki-PoC"
+xve: "XVE-2024-16919"
+identifier_role: "primary"
+primary_identifiers: "XVE-2024-16919"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "PEPM Cookie 远程代码执行漏洞(XVE-2024-16919)"
+product: "PEPM Web系统"
+record_type: "vulnerability"
+document_type: "Cookie反序列化RCE请求"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "<V6.7.3.20240507.Release；可控auth Cookie反序列化及phpseclib gadget依赖"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/PEPM/PEPM%20Cookie%20%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E%28XVE-2024-16919%29.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+fofa_unverified: "header="
+fofa: "header=\"pepm\""
+id: "vw-1b5caf7e772a8c2eb5fe072a"
+entity_id: "ve-1b5caf7e772a8c2eb5fe072a"
+schema_version: "1"
 ---
 
 # PEPM Cookie 远程代码执行漏洞(XVE-2024-16919)
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：PEPM Web系统
+- 文献类型：Cookie反序列化RCE请求
+- 版本、权限及部署边界：<V6.7.3.20240507.Release；可控auth Cookie反序列化及phpseclib gadget依赖
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. cnvd字段装XVE编号属于命名空间错误，不应当作CNVD或CVE；fofa header=残缺而正文完整
+2. 与PEPM系统Cookie请求头RCE篇auth序列化载荷相同，本篇补版本/XVE/截图，另一篇补原始语雀来源
+3. 在野已知没有案例/来源佐证，PoC/EXP公开和实际在野利用须分开
+4. 缺phpseclib/PHP版本与入口鉴权说明，任意PHP执行上下文受服务权限，缺可读结果文本
+5. 请求未围栏、版本修复无厂商公告；实际Web服务非桌面
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://github.com/SourByte05/Vulnerability-Wiki-PoC>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
 
 # 漏洞描述
 

@@ -1,8 +1,51 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "npm/pnpm/vlt/Bun PackageGate 四包管理器六类防护绕过新闻"
+product: "npm/pnpm/vlt/Bun PackageGate"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2025-69263;CVE-2025-69264"
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "未列任何受影响/修复版本，Git/tarball依赖安装前提"
+prerequisites: "需受害构建安装攻击者控制依赖，不是裸网络服务RCE"
+side_effects: "请求可能删除/覆盖数据、修改账号或持久改变业务状态"
+review_date: "2026-10-02"
+identifier_role: "primary"
+source_status: "unknown"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/%E7%83%AD%E9%97%A8%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8%E4%B8%AD/%E7%83%AD%E9%97%A8%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8%E4%B8%AD%E5%AD%98%E5%9C%A8%E5%A4%9A%E4%B8%AA%E6%BC%8F%E6%B4%9E%EF%BC%8CJavaScript%20%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F%E6%98%93%E5%8F%97%E4%BE%9B%E5%BA%94%E9%93%BE%E6%94%BB%E5%87%BB.md"
+id: "vw-6fb5d6ce5343fdc2bef54d52"
+entity_id: "ve-6fb5d6ce5343fdc2bef54d52"
+schema_version: "1"
 ---
 
-#  热门包管理器中存在多个漏洞，JavaScript 生态系统易受供应链攻击  
+# npm/pnpm/vlt/Bun PackageGate 四包管理器六类防护绕过新闻
+
+## 条目说明
+
+- 对象与具体问题：npm/pnpm/vlt/Bun PackageGate；四包管理器六类防护绕过新闻
+- 版本、配置及部署条件：未列任何受影响/修复版本，Git/tarball依赖安装前提
+- 认证与权限前提：需受害构建安装攻击者控制依赖，不是裸网络服务RCE
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 开头NLT后文VLT不一致应核vlt正式名，目录取标题错误，迁供应链/开发工具
+- 两主CVE69263/69264是pnpm，不能分配给全部六漏洞；其他无编号问题应独立实体
+- 六项按工具分为脚本执行、路径遍历、完整性缺失不同根因，避免同PackageGate全部合并一漏洞
+- npm设计预期与GitHub称正在修问题的表述需原始来源澄清，保留双方意见及历史日期
+- 只有SecurityWeek链接无Koi/官方GHSA/补丁，删除长重复推荐/产品推广
+
+## 操作风险
+
+请求可能删除/覆盖数据、修改账号或持久改变业务状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 Ionut Arghire
                     Ionut Arghire  代码卫士   2026-01-28 10:25  
   

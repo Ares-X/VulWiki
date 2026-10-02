@@ -1,6 +1,39 @@
 ---
 source: "MrWQ/vulnerability-paper"
+product: "LMXCMS1.2"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "LMXCMS 代码审计 --- 送‘0day’啦"
+prerequisites: "来源所述条件，未列明部分仍待核：后台Book查询、上传和Ad广告编辑权限；PHP5.6/Xdebug2.5.5为实验环境"
+side_effects: "未执行；本文需注意的操作影响：SQLi有id载荷但无完整路由/请求；上传声称容易getshell却承认按钮无响应未完整复现，不能记已验证RCE"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/fIqTOs5S0Kk7SzlvYZItrA"
+id: "vw-20d62f0cf1df2513830f9638"
+entity_id: "ve-20d62f0cf1df2513830f9638"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：后台Book查询、上传和Ad广告编辑权限；PHP5.6/Xdebug2.5.5为实验环境
+
+- **结论使用边界（1）**：SQLi有id载荷但无完整路由/请求；上传声称容易getshell却承认按钮无响应未完整复现，不能记已验证RCE。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **证据待核（2）**：XSS remarks根因叙述清楚但payload/源码仅图片；三类问题应分实体。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **事实待核（3）**：0day标题无披露/补丁日期依据；下载自行找缺软件哈希/版本来源。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **来源与引用处置（4）**：调试安装教程占多，群推广/奖励/推荐文章应与技术分离；超时600仅Fcgid部署适用。保留这部分来源材料并与技术结论分开；其引用或宣传内容不能补足本文漏洞的证据。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # LMXCMS 代码审计 --- 送‘0day’啦
 

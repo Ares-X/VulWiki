@@ -1,7 +1,45 @@
 ---
-fofa: "body="
+fofa: ""
 source: "SourByte05/Vulnerability-Wiki-PoC"
+product: "科拓全智能停车收费系统"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+fofa_unverified: "body="
+category_recommendation: "IOT安全/其他设备"
+title: "科拓全智能停车收费系统 T_SellFrom.aspx SQL注入漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：T_SellFrom.aspx accessible;filerSQL;MySQLSLEEPdialectclaimed;versions/authunknown"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-0522374a4d1e828f38761b8e"
+entity_id: "ve-0522374a4d1e828f38761b8e"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 分类更正：本文实际对象是 科拓全智能停车收费系统，原 CMS 内容目录不能代替产品归属；只修正字段和分类建议，路径、来源和技术方法继续保留。
+
+- 测绘字段处置：原 fofa 字段为残缺表达式、错误平台语法或当前解析器不支持的形式，原值完整保留到 fofa_unverified，不把它当作已校验查询或受影响资产证据。正文检索方法保留；具体问题见下列原审阅项。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：T_SellFrom.aspx accessible;filerSQL;MySQLSLEEPdialectclaimed;versions/authunknown
+
+- **结论使用边界（1）**：停车收费管理系统不是CMS，应移行业应用/停车。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **事实待核（2）**：fofa元数据仅body=残缺，正文完整；无具体版本。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **证据待核（3）**：payload使用MySQLSLEEP+#与ASPX并非必矛盾但必须核实际数据库/堆叠支持，未给源码/响应文字。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **事实待核（4）**：在野已知/进一步服务器控制无出处；升级安全版本无版本号。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 #  科拓全智能停车收费系统 T_SellFrom.aspx SQL注入漏洞 
 

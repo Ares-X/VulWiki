@@ -1,7 +1,44 @@
 ---
 cve: "CVE-2016-10033"
 source: "Threekiii/Vulnerability-Wiki"
+product: "WordPress4.6 using PHPMailer and Exim mail transport"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2016-10033"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "Wordpress-4.6-任意命令执行漏洞-PwnScriptum"
+prerequisites: "来源所述条件，未列明部分仍待核：existing username, vulnerable PHPMailer mail path, Exim-specific expansion/mail setup; command case/special-char restrictions"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-97a641ca44c3bd7db6b2ad83"
+entity_id: "ve-97a641ca44c3bd7db6b2ad83"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 明确更正：标题中的 WordPress 4.6 不是充分条件，示例 `${run}`/spool_directory 依赖具体 Exim 邮件传输配置、PHPMailer 路径和已有用户名。
+- 坏代码保留：`len(sys.argv)<1` 后取 argv[1]、`<2` 后取 argv[2] 均有越界；session.allow_redirects 属性不是 requests 各调用的重定向参数。长破折号、脚本文件名不一致和命令字符限制未被修成利用代码。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：existing username, vulnerable PHPMailer mail path, Exim-specific expansion/mail setup; command case/special-char restrictions
+
+- **适用与权限边界（1）**：标题WP4.6任意命令省略关键Exim邮件传输配置，载荷${run}/spool_directory明确依赖该环境。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **结论使用边界（2）**：脚本len(sys.argv)&lt;1再访问argv1、&lt;2再访问argv2均off-by-one，无参/单参会IndexError。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **结论使用边界（3）**：session.allow_redirects=False不是requests每次请求的redirect参数，可能未生效。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **适用与权限边界（4）**：命令绝对路径/小写限制及用户名前提写得清楚应保留；Vulhub环境路径和修复范围未给。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **证据待核（5）**：反弹脚本占位含长破折号且命令文件名wordpress.py与链接exploit.py不一致，应规范示例。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Wordpress 4.6 任意命令执行漏洞 PwnScriptum
 

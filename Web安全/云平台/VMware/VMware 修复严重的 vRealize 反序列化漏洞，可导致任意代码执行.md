@@ -1,8 +1,49 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "VMware 修复严重的 vRealize 反序列化漏洞，可导致任意代码执行"
+product: "VMware Aria Operations for Logs"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。"
+id: "vw-4a08d239dcd92cff03aa9398"
+entity_id: "ve-4a08d239dcd92cff03aa9398"
+schema_version: "1"
 ---
 
-#  VMware 修复严重的 vRealize 反序列化漏洞，可导致任意代码执行   
+# VMware 修复严重的 vRealize 反序列化漏洞，可导致任意代码执行
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 主CVE均缺元数据
+- 20864只8.10.2与20865其他版本不可混影响范围
+- 20865需管理员而20864无认证
+- 31706/31704/31711/31710为背景链另行关联
+- 不存在在野证据是2023时点状态
+- 补厂商公告并清广告
+
+### 操作风险与资料使用
+
+- 含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 Sergiu Gatlan  代码卫士   2023-04-21 16:30  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

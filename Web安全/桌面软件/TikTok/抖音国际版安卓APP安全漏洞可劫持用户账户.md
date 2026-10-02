@@ -1,8 +1,61 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2022-28799"
+identifier_role: "primary"
+primary_identifiers: "CVE-2022-28799"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "抖音国际版安卓APP安全漏洞可劫持用户账户"
+product: "TikTok Android应用"
+record_type: "analysis"
+document_type: "Android深链与WebView漏洞分析"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "用户单击恶意深链、应用已登录、URL白名单绕过与JSBridge；文称23.7.3修复"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/TikTok/%E6%8A%96%E9%9F%B3%E5%9B%BD%E9%99%85%E7%89%88%E5%AE%89%E5%8D%93APP%E5%AE%89%E5%85%A8%E6%BC%8F%E6%B4%9E%E5%8F%AF%E5%8A%AB%E6%8C%81%E7%94%A8%E6%88%B7%E8%B4%A6%E6%88%B7.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-78ed554edaefd0e0e15c758d"
+entity_id: "ve-78ed554edaefd0e0e15c758d"
+schema_version: "1"
 ---
 
-#  抖音国际版安卓APP安全漏洞可劫持用户账户   
+# 抖音国际版安卓APP安全漏洞可劫持用户账户
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：TikTok Android应用
+- 文献类型：Android深链与WebView漏洞分析
+- 版本、权限及部署边界：用户单击恶意深链、应用已登录、URL白名单绕过与JSBridge；文称23.7.3修复
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 元数据漏28799，实际TikTok Android而非桌面/国内抖音，须精确分类
+2. 内部深链单独不是漏洞，链条还需两个被隐去参数和暴露bridge能力；保留各阶段边界
+3. token外泄/profile修改是演示，不宜扩成无需交互任意操作系统代码执行；账号接管范围以会话能力为准
+4. [redacted]方案/类/参数和代码只截图故不是完整可重现PoC，不能猜补被隐去信息
+5. 有微软原始报告和明确修复版是优点；具体受影响包名/地区变种与构建、2022未见在野需时间限定
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://www.microsoft.com/security/blog/2022/08/31/vulnerability-in-tiktok-android-app-could-lead-to-one-click-account-hijacking/>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 ang010ela  嘶吼专业版   2022-09-06 12:05  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/wpkib3J60o297rwgIksvLibPOwR24tqI8dGRUah80YoBLjTBJgws2n0ibdvfvv3CCm0MIOHTAgKicmOB4UHUJ1hH5g/640?wx_fmt=gif "")  
@@ -76,4 +129,4 @@ TikTok安卓版使用多种deeplink方案，其中部分通过mainfest导出，�
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

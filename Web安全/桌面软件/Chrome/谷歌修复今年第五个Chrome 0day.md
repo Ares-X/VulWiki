@@ -1,8 +1,66 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2022-2856"
+identifier_role: "primary"
+primary_identifiers: "CVE-2022-2856"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "谷歌修复今年第五个Chrome 0day"
+product: "Chrome Intents"
+record_type: "advisory"
+document_type: "历史零日修复新闻"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "Chrome104.0.5112.101修复；具体平台/输入触发条件未列"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Chrome/%E8%B0%B7%E6%AD%8C%E4%BF%AE%E5%A4%8D%E4%BB%8A%E5%B9%B4%E7%AC%AC%E4%BA%94%E4%B8%AAChrome%200day.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+source_url: "https://portswigger.net/daily-swig/multiple-cloud-vendors-impacted-by-postgresql-vulnerability-that-exposed-enterprise-databases"
+id: "vw-b28de04ad29e07597f087ca8"
+entity_id: "ve-b28de04ad29e07597f087ca8"
+schema_version: "1"
 ---
 
-#  谷歌修复今年第五个Chrome 0day   
+# 谷歌修复今年第五个Chrome 0day
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Chrome Intents
+- 文献类型：历史零日修复新闻
+- 版本、权限及部署边界：Chrome104.0.5112.101修复；具体平台/输入触发条件未列
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 原文链接指向PostgreSQL云数据库漏洞，和Chrome2856主题明显不符，是来源串文
+2. 元数据漏2856；第五个须2022时点，不得与2024同名文章按标题合并
+3. Candiru归因属于前一个7月漏洞，不是本文2856；另十项补丁无编号不应猜配
+4. 缺Google官方公告和准确逐平台范围；推广占大半，新闻无需补PoC
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://portswigger.net/daily-swig/multiple-cloud-vendors-impacted-by-postgresql-vulnerability-that-exposed-enterprise-databases>
+- 原文参考链接（未重新核验）：<https://codesafe.qianxin.com>
+- 原文参考链接（未重新核验）：<https://oss.qianxin.com****>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzI2NTg4OTc5Nw==&mid=2247513028&idx=3&sn=79c8d781d604e70522630b58315bf010&chksm=ea9482aedde30bb8b7d8d21ea1ae630e8716995afec64599d4e6d5bff0cf26c5c6cdbfd6fd6a&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzI2NTg4OTc5Nw==&mid=2247512717&idx=1&sn=90d9ee1cbcb33e3442cfd9d4d4c1d958&chksm=ea9483e7dde30af103b74637ffdefd0a6d62164388d12598a2a74b18e802f659d18f3e11a70f&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzI2NTg4OTc5Nw==&mid=2247510517&idx=1&sn=01c2fbf5b20d5383ef9f1327cf138481&chksm=ea94989fdde3118908c671a6ba54f925e7f1d26b06e99a98e1118e0a92b57448f4537309eef6&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzI2NTg4OTc5Nw==&mid=2247508832&idx=2&sn=35432117540e416637e9bf098b7328ef&chksm=ea94920adde31b1c3d02d93bacf14fcb010212a7eda50a6d71baa5f86ea35683c090df4ced46&scene=21#wechat_redirect>
+
+### 归档技术正文
+
 Eduard Kovacs  代码卫士   2022-08-18 19:01  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

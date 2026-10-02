@@ -1,8 +1,53 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "ActiveMQ OpenWire 历史利用链分析（CVE-2023-46604；XML 样例缺字段）"
+product: "ActiveMQ OpenWire与Jetty集成"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2023-46604"
+referenced_identifiers: ""
+identifier_role: "primary"
+cve: "CVE-2023-46604"
+prerequisites: "OpenWire可达且Spring可加载远程XML；特定内存Filter链依Jetty/JDK及作者要求Web认证/可达，不能推广为基础RCE前提"
+source_url: "https://mp.weixin.qq.com/s/Dv4ENwD5_dW5DnS79S5ITg"
+source_status: "recorded"
+side_effects: "含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。"
+id: "vw-eab9a7d039e8ad1504c29218"
+entity_id: "ve-eab9a7d039e8ad1504c29218"
+schema_version: "1"
 ---
 
-# 九维团队 - 红队（突破）  ActiveMQ RCE 漏洞利用
+# ActiveMQ OpenWire 历史利用链分析（CVE-2023-46604；XML 样例缺字段）
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+本文保留 OpenWire 到 Spring XML 的历史链条说明和工具交互资料，作为待核分析收录。归档 XML 缺失 bean 的 id/class 等字段，内嵌字节码未独立审定，不能作为直接可运行的脚本；基础漏洞与后续 Jetty/JDK 内存组件链的条件须分开判断。
+
+- 适用前提：OpenWire可达且Spring可加载远程XML；特定内存Filter链依Jetty/JDK及作者要求Web认证/可达，不能推广为基础RCE前提
+- 证据范围：全文含两大base64类原文已读，未解码/反编译/运行；XML明显丢失bean id/class使变量未定义，不能称当前文本直接可复现
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 回显base64Str/cookie和内存ClassBase64Str未定义，前置bean缺id/class
+- 反弹bean缺ProcessBuilder class，同84转码问题
+- 主编号现已记录 CVE-2023-46604；正文四个小于号范围须按分支解释，否则会包含已修复版本
+- 大量重复GIF、滑动提示/广告冗余；payload源码缺失、字节码行为未独立审定
+- JDK11是此工具构建/反射链条件；配置Web外网不应作为通用必需操作
+
+### 操作风险与资料使用
+
+- 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/Dv4ENwD5_dW5DnS79S5ITg)

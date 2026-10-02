@@ -1,8 +1,61 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "博通： Vmware Windows Tools 中的认证绕过漏洞"
+product: "VMware Tools Windows22230"
+record_type: "unknown"
+document_type: "技术文章（细分类待核）"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "主CVE缺元数据且无影响/固定Tools版本"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/%E5%8D%9A%E9%80%9A%EF%BC%9A%20Vmware%20Windows%20Tools%20%E4%B8%AD%E7%9A%84%E8%AE%A4%E8%AF%81%E7%BB%95%E8%BF%87%E6%BC%8F%E6%B4%9E.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+source_url: "https://www.bleepingcomputer.com/news/security/broadcom-warns-of-authentication-bypass-in-vmware-windows-tools/"
+id: "vw-ce508b329503c1936c02b9a1"
+entity_id: "ve-ce508b329503c1936c02b9a1"
+schema_version: "1"
 ---
 
-#  博通：注意 Vmware Windows Tools 中的认证绕过漏洞   
+# 博通： Vmware Windows Tools 中的认证绕过漏洞
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：VMware Tools Windows22230
+- 文献类型：技术文章（细分类待核）
+- 版本、权限及部署边界：主CVE缺元数据且无影响/固定Tools版本
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 主CVE缺元数据且无影响/固定Tools版本
+2. Windows来宾本地低权高权操作不等于宿主逃逸
+3. 22224/22225/22226与38812/38813为其他产品背景不可合并
+4. 公开ESXi计数非主漏洞资产数
+5. 研究公司制裁理由无关且需来源，删除非技术插话
+6. 补Broadcom公告
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://www.bleepingcomputer.com/news/security/broadcom-warns-of-authentication-bypass-in-vmware-windows-tools/>
+
+### 归档技术正文
+
 Sergiu Gatlan  代码卫士   2025-03-26 18:20  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

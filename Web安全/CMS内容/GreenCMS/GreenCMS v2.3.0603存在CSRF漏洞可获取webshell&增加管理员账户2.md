@@ -1,7 +1,40 @@
 ---
-cve: "CVE-2018-11670"
+cve: "CVE-2018-11670; CVE-2018-11671"
 source: "Mr-xn/Penetration_Testing_POC"
+product: "GreenCMS2.3.0603"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2018-11670; CVE-2018-11671"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "GreenCMS v2.3.0603存在CSRF漏洞可获取webshell&增加管理员账户2"
+prerequisites: "来源所述条件，未列明部分仍待核：已登录有媒体写入/新增管理员权限的受害者；跨站Cookie；手动提交按钮"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-0338a61a51e80b0b5e143776"
+entity_id: "ve-0338a61a51e80b0b5e143776"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 明确更正：CSRF 需要已登录且有相应管理权限的受害者访问攻击页面；两个漏洞 CVE-2018-11670/11671 应分别关联 issue108/109，不共用一次未证明的成功链。
+- 原表单没有自动提交，mkfile 的 GET 与 put 的 POST 先后完成未证；外围 span、全角空白、邮箱 value 中 `%40` 再编码问题均按坏样本保留，附注 CSRF+XSS 没有独立 XSS 证据。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：已登录有媒体写入/新增管理员权限的受害者；跨站Cookie；手动提交按钮
+
+- **结论使用边界（1）**：frontmatter漏11671，需两实体分别关联官方issue108/109。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **证据待核（2）**：概述省略已登录受害者；表单非自动提交，mkfile脚本GET与put POST先后成功未证实。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **实验改动边界（3）**：HTML代码有span外围和全角空白，邮箱value写123%40Qq.com会二次编码成字面%40；注释另称CSRF+XSS未给独立证据。以下步骤按原实验条件保留；人工改动后的行为只支持该修改环境，不用于证明未修改发行版默认可利用。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # GreenCMS v2.3.0603存在CSRF漏洞可获取webshell&增加管理员账户2
 

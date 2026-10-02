@@ -1,8 +1,56 @@
 ---
 cve: "CVE-2023-40796"
+id: "vw-b4e5cb4dd016ed0d2f6de2de"
+entity_id: "ve-b4e5cb4dd016ed0d2f6de2de"
+schema_version: "1"
+title: "斐讯 Phicomm 路由器 RCE 漏洞 (附 poc)"
+product: "Phicomm LuCI路由器"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2023-40796"
+referenced_identifiers: ""
+prerequisites: "默认admin密码Base64值登录，提取stok/会话；型号固件缺失"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/IOT%E5%AE%89%E5%85%A8/PHICOMM/%E6%96%90%E8%AE%AF%20Phicomm%20%E8%B7%AF%E7%94%B1%E5%99%A8%20RCE%20%E6%BC%8F%E6%B4%9E%20%28%E9%99%84%20poc%29.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_url: "https://mp.weixin.qq.com/s/wc6pRvxcB-Rp6jfrrd7x7A"
+source_status: "recorded"
 ---
 
 # 斐讯 Phicomm 路由器 RCE 漏洞 (附 poc)
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Phicomm LuCI路由器
+- 本文讨论：CVE-2023-40796 wifireboot注入
+- 版本、权限与配置前提：默认admin密码Base64值登录，提取stok/会话；型号固件缺失
+- 资料类型：后台PoC/Nuclei模板；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 正文称页面只有用户名，模板却提交password=YWRtaW4=，需纠正为凭据要求
+- multipart缺全部字段名和空行；Nuclei变量被反斜杠转义，reference None类型不规范，max-request1却2请求
+- verified:true只是作者声明；uid/gid子串匹配不能替代真实命令输出
+- 同722一个入口，Nuclei登录流程可互补但当前损坏
+- 已落实的文本修订：HTTP 报文围栏改为 http。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 原始模板、固件及CVE归属待核
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/wc6pRvxcB-Rp6jfrrd7x7A)
@@ -64,7 +112,7 @@ icon_hash="-1344736688"
 
 第二步，发送如下数据包，在目标机器上执行 id 命令（POC14 行）  
 
-```
+```http
 POST /cgi-bin/luci/;stok=bcd6ccd2fa5d212ce6431ca22f10b96d/admin/wifireboot HTTP/1.1
 Host: x.x.x.x
 Cookie: sysauth=第一步登录获取的cookie

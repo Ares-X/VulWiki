@@ -1,6 +1,45 @@
 ---
 source: "MrWQ/vulnerability-paper"
+product: "74CMS骑士CMS<6.0.48"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "骑士 CMS 模板包含漏洞分析"
+prerequisites: "来源所述条件，未列明部分仍待核：publicassign_resume_tpl viahome;existingcontrollablelog/image/doc; registeredaccountforresumeupload;Thinkengine/templatecachewritable"
+side_effects: "未执行；本文需注意的操作影响：保留且前置补丁边界：原文指出 is_file 加删除日志路径只能阻断日志写法，已上传图片/doc 的包含分支仍可能存在；不能由一个补丁或 <6.0.48 概括所有变体已修复。；注册实验注释短信校验属于改动环境；图片/doc 上传分支仍需真实账号与上传权限，日志分支前提须单列。最终 include 的是编译缓存，不是简单直接包含原上传文件；THEME_PATH 分支须结合 content 是否为空解释。"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/7ZUMjN8xyaGUF-ZTh-7Csg"
+id: "vw-6bdf6517560cebf3c2dd7a86"
+entity_id: "ve-6bdf6517560cebf3c2dd7a86"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 保留且前置补丁边界：原文指出 is_file 加删除日志路径只能阻断日志写法，已上传图片/doc 的包含分支仍可能存在；不能由一个补丁或 <6.0.48 概括所有变体已修复。
+- 注册实验注释短信校验属于改动环境；图片/doc 上传分支仍需真实账号与上传权限，日志分支前提须单列。最终 include 的是编译缓存，不是简单直接包含原上传文件；THEME_PATH 分支须结合 content 是否为空解释。
+- GET/POST、日志转义与模板大小写的差异保留为待核实验差异，不能只因同漏洞将这份独立补丁分析吞并。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：publicassign_resume_tpl viahome;existingcontrollablelog/image/doc; registeredaccountforresumeupload;Thinkengine/templatecachewritable
+
+- **事实待核（1）**：清楚指出官方is_file+删日志路径补丁只挡日志写法、不挡已上传图片/doc包含，这个不完全修复证据必须保留而非统称&lt;6.0.48已全修。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **实验改动边界（2）**：注册实验直接注释短信验证码，是改动环境；图片/doc分支仍需真实可注册账号/上传权限，日志分支才无需登录。以下步骤按原实验条件保留；人工改动后的行为只支持该修改环境，不用于证明未修改发行版默认可利用。
+
+- **适用与权限边界（3）**：把最终include称上传原文件不精确，实际包含编译缓存；THEME_PATH赋值分支解释与源码content为空条件有错置。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **代码与转录边界（4）**：日志payload/r/n和qsCMS大小写/中文属性需核真实模板语法；GET与754POST必要说法不同要保留实测差异。相应原代码作为存在此问题的历史样本保留，不能直接当作可运行、成功复现的 PoC；缺失内容需回原稿核对，不据此补造可执行攻击链。
+
+- **事实待核（5）**：完整调用链有价值，缺官方精确补丁commit/最终安全版本；与694/754/755同漏洞不同深度不直接去重。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # 骑士 CMS 模板包含漏洞分析
 

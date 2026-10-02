@@ -1,9 +1,49 @@
 ---
-cve: "CVE-2026-24002"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Grist-Core Pyodide 24002公式沙箱逃逸"
+product: "Grist-Core Pyodide"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2026-24002"
+referenced_identifiers: "CVE-2025-68668"
+identifier_status: "unknown"
+affected_scope: "1.7.9修复；仅pyodide，gvisor不受影响声明"
+prerequisites: "可写公式或诱使打开恶意文档"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+identifier_role: "primary"
+source_status: "unknown"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/Grist/Grist-Core%20%E4%B8%A5%E9%87%8D%E6%BC%8F%E6%B4%9E%E5%85%81%E8%AE%B8%E9%80%9A%E8%BF%87%E7%94%B5%E5%AD%90%E8%A1%A8%E6%A0%BC%E5%85%AC%E5%BC%8F%E8%BF%9B%E8%A1%8C%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%94%BB%E5%87%BB.md"
+id: "vw-14670dacccfa6a6c9865e52f"
+entity_id: "ve-14670dacccfa6a6c9865e52f"
+schema_version: "1"
 ---
 
-#  Grist-Core 严重漏洞允许通过电子表格公式进行远程代码执行攻击  
+# Grist-Core Pyodide 24002公式沙箱逃逸
+
+## 条目说明
+
+- 对象与具体问题：Grist-Core Pyodide；24002公式沙箱逃逸
+- 版本、配置及部署条件：1.7.9修复；仅pyodide，gvisor不受影响声明
+- 认证与权限前提：可写公式或诱使打开恶意文档
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 保留GRIST_SANDBOX_FLAVOR与SKIP_DENO=1关键条件，不能只凭版本判受影响
+- 没有研究/官方通告链接或PoC，只新闻引语；68668为n8n对比引用
+- 主机运行时权限/容器与物理宿主边界未说明，别自动升为宿主root
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 原创 Ravie Lakshmanan
                     Ravie Lakshmanan  暗镜   2026-01-29 03:00  
   

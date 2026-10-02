@@ -1,8 +1,60 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2025-21225"
+identifier_role: "primary"
+primary_identifiers: "CVE-2025-21225"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "Windows远程桌面网关出现重大漏洞"
+product: "Windows Remote Desktop Gateway"
+record_type: "advisory"
+document_type: "RD Gateway DoS通告"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "需启用网关角色及网络可达；竞争时序，认证条件未明确；文列Server2016–2025"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/Windows%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E7%BD%91%E5%85%B3%E5%87%BA%E7%8E%B0%E9%87%8D%E5%A4%A7%E6%BC%8F%E6%B4%9E.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-e4ac3f5b8e24ea52960a1810"
+entity_id: "ve-e4ac3f5b8e24ea52960a1810"
+schema_version: "1"
 ---
 
-#  Windows远程桌面网关出现重大漏洞   
+# Windows远程桌面网关出现重大漏洞
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Windows Remote Desktop Gateway
+- 文献类型：RD Gateway DoS通告
+- 版本、权限及部署边界：需启用网关角色及网络可达；竞争时序，认证条件未明确；文列Server2016–2025
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 不是任意开启RDP的Windows；类型混淆与竞争关系缺代码说明，不能把根因写成已验证
+2. 现有连接保持/新连接阻断具有具体影响信息，应与普通系统DoS区别保留但需微软原文
+3. KB和build明细未给MSRC链接，未公开PoC和未见在野限2025-01-15；MFA不必修复预认证DoS
+4. 补CVE元数据并清营销；与misc251不同CVE不同机制不可因标题相似合并
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://mp.weixin.qq.com/s?__biz=MjM5NjA0NjgyMA==&mid=2651253272&idx=1&sn=82468d927062b7427e3ca8a912cb2dc7&scene=21#wechat_redirect>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 跳舞的花栗鼠  FreeBuf   2025-01-15 10:57  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/qq5rfBadR38jUokdlWSNlAjmEsO1rzv3srXShFRuTKBGDwkj4gvYy34iajd6zQiaKl77Wsy9mjC0xBCRg0YgDIWg/640?wx_fmt=gif&wxfrom=5&wx_lazy=1&tp=webp "")  
@@ -111,4 +163,4 @@ FreeBuf盲盒、大象公仔......
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

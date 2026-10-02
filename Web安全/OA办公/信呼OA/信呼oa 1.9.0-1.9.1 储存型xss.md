@@ -1,8 +1,47 @@
 ---
 source: "hatch 补库批 20260928"
+title: "信呼OA 登录失败日志X-Forwarded-For存储型XSS"
+product: "信呼OA"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "1.9.0-1.9.1；管理员访问日志触发"
+prerequisites: "注入通过登录失败可能无需登录；受害者后台查看"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+source_status: "unknown"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E4%BF%A1%E5%91%BCOA/%E4%BF%A1%E5%91%BCoa%201.9.0-1.9.1%20%E5%82%A8%E5%AD%98%E5%9E%8Bxss.md"
+id: "vw-3f41a426570fb2aae060d293"
+entity_id: "ve-3f41a426570fb2aae060d293"
+schema_version: "1"
 ---
 
-# 信呼oa 1.9.0-1.9.1 储存型xss
+# 信呼OA 登录失败日志X-Forwarded-For存储型XSS
+
+## 条目说明
+
+- 对象与具体问题：信呼OA；登录失败日志X-Forwarded-For存储型XSS
+- 版本、配置及部署条件：1.9.0-1.9.1；管理员访问日志触发
+- 认证与权限前提：注入通过登录失败可能无需登录；受害者后台查看
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 漏洞简介空白；核心代码/完整请求/触发页面均主要靠截图
+- 应写清攻击者与受害者权限，不能把研究者登录混同利用前提
+- 外部XSS收集地址应换占位；正文有转码噪声
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
 
 一、漏洞简介
 ------------

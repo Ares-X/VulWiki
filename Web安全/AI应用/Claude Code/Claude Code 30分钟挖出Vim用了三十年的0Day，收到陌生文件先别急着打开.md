@@ -1,9 +1,57 @@
 ---
 cve: "CVE-2026-34982"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Claude Code 30分钟挖出Vim用了三十年的0Day，收到陌生文件先别急着打开"
+product: "Vim"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2026-34982"
+referenced_identifiers: ""
+identifier_role: "primary"
+category: "Web安全/桌面软件"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。"
+id: "vw-3cdb53b716b35ffd3be4adb2"
+entity_id: "ve-3cdb53b716b35ffd3be4adb2"
+schema_version: "1"
 ---
 
-#  Claude Code 30分钟挖出Vim用了三十年的0Day，收到陌生文件先别急着打开  
+# Claude Code 30分钟挖出Vim用了三十年的0Day，收到陌生文件先别急着打开
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+受影响产品是 Vim；Claude Code 是用于发现问题的工具。触发仍受 modeline 配置等条件限制，题名中的历史年数不是受影响版本范围。
+
+
+### 本次正文校订
+
+- 按该篇完整正文及逐篇审阅区分主问题与背景编号，补全结构化主标识；不把标识归属校订等同运行复现。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- Claude Code是发现工具非受影响产品
+- 标题三十年与实际版本范围9.2.0至9.2.0272概念不同
+- 无modeline必要配置或PoC原文，打开任意文件表述过广
+- 只有媒体名没有具体原文链接
+- 补丁版本缺失且禁modeline不影响任何使用绝对化
+- 大量F5/监管/供应链杂项污染单CVE正文与检索
+
+### 操作风险与资料使用
+
+- 含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 数据安全研究组
                     数据安全研究组  数据安全合规交流部落   2026-04-02 11:52  
   

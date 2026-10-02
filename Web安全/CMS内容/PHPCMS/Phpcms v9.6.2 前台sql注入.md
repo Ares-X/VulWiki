@@ -1,6 +1,38 @@
 ---
 source: "hatch 补库批 20260928"
+product: "PHPCMS9.6.2 member foreground"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "Phpcms v9.6.2 前台sql注入"
+prerequisites: "来源所述条件，未列明部分仍待核：已获系统auth_key、知道Cookie前缀与服务看到的IP；本文取key方式Windows读文件链"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-0ce408e9d3a53cbc6fad4df8"
+entity_id: "ve-0ce408e9d3a53cbc6fad4df8"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：已获系统auth_key、知道Cookie前缀与服务看到的IP；本文取key方式Windows读文件链
+
+- **结论使用边界（1）**：只能Windows是前置文件读取链限制，不是SQLi原语自身OS限制，应分开。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **结论使用边界（2）**：简述新key仅auth_key+IP MD5遗漏get_auth_key函数再加login前缀二次MD5，代码与解释不一致。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **证据待核（3）**：固定密钥/IP/密文/尾字符串是实验样例必须替换，不能复制直接用；缺完整最终HTTP请求。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **结论使用边界（4）**：9.6.3强转补丁及双层密钥分析有独立价值，不与960down SQLi合并。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Phpcms v9.6.2 前台sql注入
 

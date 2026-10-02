@@ -1,8 +1,54 @@
 ---
 source: "Threekiii/Vulnerability-Wiki"
+title: "Apache Tomcat8 弱口令+后台getshell漏洞"
+product: "Apache Tomcat Manager"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "管理员配置弱口令并开放远程Manager、账户具manager-gui/script部署权限；正常安装无用户"
+source_status: "unknown"
+side_effects: "含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。"
+id: "vw-6d318e58e9b67420ad3d2db4"
+entity_id: "ve-6d318e58e9b67420ad3d2db4"
+schema_version: "1"
+canonical: "Web安全/中间件/Apache Tomcat/Apache-Tomcat8-弱口令+后台getshell漏洞.md"
 ---
 
 # Apache Tomcat8 弱口令+后台getshell漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：管理员配置弱口令并开放远程Manager、账户具manager-gui/script部署权限；正常安装无用户
+- 证据范围：明确非默认配置，是良好前提披露；WAR部署是授权管理功能，不应作独立Tomcat8代码漏洞。
+
+### 本次正文校订
+
+- 按实际内容修正 1 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 影响Tomcat8.0只是实验版本，配置风险跨版本需归类而非漏洞版本范围
+- 示例给同用户所有manager/admin权限过宽，应标仅实验，尤其GUI与脚本角色分离原则待官方核对
+- 弱口令尝试、部署持久WAR/冰蝎有明确写入风险，缺卸载/恢复访问限制
+- shell.jsp内容和工具版本外部依赖缺完整来源，截图未视检
+- 缺强口令/最小权限/网络限制的修复章节
+
+### 操作风险与资料使用
+
+- 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 ## 漏洞描述
 
@@ -53,7 +99,7 @@ Tomcat版本：8.0
 
 Vulhub无需编译，直接启动整个环境：
 
-```
+```shell
 docker-compose up -d
 ```
 

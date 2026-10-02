@@ -1,8 +1,45 @@
 ---
 cve: "CVE-2023-38408"
+title: "OpenSSH 的 ssh-agent 涉远程代码执行漏洞"
+product: "OpenSSH ssh-agent/PKCS#11"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2023-38408"
+referenced_identifiers: ""
+identifier_role: "primary"
+prerequisites: "用户将agent转发到攻击者可控服务器、ENABLE_PKCS11及本地特定共享库组合；执行发生在agent端"
+source_url: "https://mp.weixin.qq.com/s/1erfTwXhvClzH8Jc5SqNig"
+source_status: "recorded"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-73eb997c08a267ae7bd87425"
+entity_id: "ve-73eb997c08a267ae7bd87425"
+schema_version: "1"
 ---
 
 # OpenSSH 的 ssh-agent 涉远程代码执行漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：用户将agent转发到攻击者可控服务器、ENABLE_PKCS11及本地特定共享库组合；执行发生在agent端
+- 证据范围：四种dlopen/dlclose副作用组合给出较详细概述，非完整PoC；应与103设备依赖通告关联保留
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 旧文摘出现令人惊讶行为2/3/4但前置定义缺失
+- 加载库在用户工作站而非恶意远程服务器，译文某句因果倒置需修订
+- 防病毒扫描不是漏洞修复或可靠暴露检测，不应与升级/限制转发并列等效措施
+- 共享库链平台/软件包特定，不能只凭ENABLE_PKCS11宣布可利用
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/1erfTwXhvClzH8Jc5SqNig)

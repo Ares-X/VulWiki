@@ -1,6 +1,38 @@
 ---
 source: "白阁文库 BaizeSec/bylibrary"
+product: "Typecho version unspecified"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "typecho反序列化漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：install.php?finish入口/Referer、PHPassert gadget，写p0.php目录可写"
+side_effects: "未执行；本文需注意的操作影响：Python2reload/setdefaultencoding与注释Python3混淆；所谓POC检测实际落持久webshell"
+source_status: "unknown"
+id: "vw-8830959fa2dda5b7707fc5b6"
+entity_id: "ve-8830959fa2dda5b7707fc5b6"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：install.php?finish入口/Referer、PHPassert gadget，写p0.php目录可写
+
+- **结论使用边界（1）**：urlsss计算install.php?finish=1却根本未请求，真正GET只self.url，若输入根地址不会触发；若输入完整入口又拼/p0.php错误。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **证据待核（2）**：Semaphore只有release没有acquire，宣称最大10线程实际未限；所有线程共享Session。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **实验改动边界（3）**：Python2reload/setdefaultencoding与注释Python3混淆；所谓POC检测实际落持久webshell。以下步骤按原实验条件保留；人工改动后的行为只支持该修改环境，不用于证明未修改发行版默认可利用。
+
+- **事实待核（4）**：缺版本/出处与执行结果，需替换为准确历史实现而非继续跑。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 ### typecho反序列化漏洞  
 

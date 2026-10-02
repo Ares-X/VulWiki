@@ -1,6 +1,43 @@
 ---
 source: "hatch 补库批 20260928"
+product: "YzmCMS3.6"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "YzmCMS v3.6 csrf"
+prerequisites: "来源所述条件，未列明部分仍待核：victimadminvisitsCSRFpage;SQLexecuteenabled; DBadmin/SUPERforgloballog,webwritepath/PHPexecution"
+side_effects: "未执行；本文需注意的操作影响：CSRF 加管理员与后台 SQL 控制台日志写入是不同阶段：后者要求 sql_execute 配置门槛、数据库高权限、日志路径可写和 PHP 解析。SET GLOBAL 会改变实际日志目标，需记录并还原旧值；默认口令不代表所有安装。"
+source_status: "unknown"
+id: "vw-f461f120d0ca47bb00c193da"
+entity_id: "ve-f461f120d0ca47bb00c193da"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 明确更正：HTML 中 `οnlοad` 使用希腊 omicron，不是 ASCII onload 事件名，不能按原样触发自动提交。原字符串保留在代码内。
+- CSRF 加管理员与后台 SQL 控制台日志写入是不同阶段：后者要求 sql_execute 配置门槛、数据库高权限、日志路径可写和 PHP 解析。SET GLOBAL 会改变实际日志目标，需记录并还原旧值；默认口令不代表所有安装。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：victimadminvisitsCSRFpage;SQLexecuteenabled; DBadmin/SUPERforgloballog,webwritepath/PHPexecution
+
+- **结论使用边界（1）**：HTML οnlοad含希腊omicron非onload，自动提交不会按预期触发。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **结论使用边界（2）**：文章混CSRF加管理员与后台SQL控制台日志RCE两原语，需分层而非单csrf漏洞。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **适用与权限边界（3）**：代码有sql_execute配置门槛未在利用前提列出，默认yzmcms口令非所有站点事实。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **操作与副作用边界（4）**：SET GLOBAL日志需高DB权限且会改变持久日志目标，缺恢复/权限说明；CONCAT表达式赋系统变量需按MySQL版本核。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+- **结论使用边界（5）**：代码混行号和oufile错字，CSRF目标回环应占位。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # YzmCMS v3.6 csrf
 

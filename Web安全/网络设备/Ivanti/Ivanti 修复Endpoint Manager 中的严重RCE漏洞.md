@@ -1,8 +1,53 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-b40d506cc9abc580ce887b41"
+entity_id: "ve-b40d506cc9abc580ce887b41"
+schema_version: "1"
+title: "Ivanti 修复Endpoint Manager 中的严重RCE漏洞"
+product: "Ivanti EPM Core（主）、Avalanche/ITSM/客户端等"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2024-29822; CVE-2024-29823; CVE-2024-29824; CVE-2024-29825; CVE-2024-29826; CVE-2024-29827; CVE-2024-29828; CVE-2024-29829; CVE-2024-29830"
+referenced_identifiers: "CVE-2024-4701; CVE-2023-5389; CVE-2023-5390"
+prerequisites: "EPM2022SU5及以前；六个SQL洞同网段未认证，其余四需认证"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/Ivanti/Ivanti%20%E4%BF%AE%E5%A4%8DEndpoint%20Manager%20%E4%B8%AD%E7%9A%84%E4%B8%A5%E9%87%8DRCE%E6%BC%8F%E6%B4%9E.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 #  Ivanti 修复Endpoint Manager 中的严重RCE漏洞   
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Ivanti EPM Core（主）、Avalanche/ITSM/客户端等
+- 本文讨论：CVE-2024-29822至29830及29846
+- 版本、权限与配置前提：EPM2022SU5及以前；六个SQL洞同网段未认证，其余四需认证
+- 资料类型：多产品修复新闻；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 多个独立产品/漏洞不能以首CVE合并，Netflix Genie/Honeywell为独立副新闻
+- EPM无具体首修补丁，Avalanche6.4.3.602是受影响还是修复描述不明确
+- 只有二手THN来源，缺各公告直链
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 各CVE版本/认证/同网段条件逐项待核验
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 THN  代码卫士   2024-05-24 17:24  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

@@ -1,8 +1,66 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2024-0031;CVE-2023-6229;CVE-2023-6230;CVE-2023-6231;CVE-2023-6232;CVE-2023-6233;CVE-2023-6234;CVE-2024-0244;CVE-2024-21762;CVE-2024-23113"
+identifier_role: "primary"
+primary_identifiers: "CVE-2024-0031;CVE-2023-6229;CVE-2023-6230;CVE-2023-6231;CVE-2023-6232;CVE-2023-6233;CVE-2023-6234;CVE-2024-0244;CVE-2024-21762;CVE-2024-23113"
+referenced_identifiers: "CVE-2022-42475;CVE-2023-27997"
+identifier_status: "unknown"
+title: "Android、佳能漏洞已修复，Fortinet警告零日漏洞"
+product: "Android；Canon打印机；FortiOS"
+record_type: "advisory"
+document_type: "多产品漏洞新闻汇编"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "Android2024年2月补丁；Canon固件<=03.07需型号匹配；FortiOS多个分支及SSLVPN暴露"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Android/Android%E3%80%81%E4%BD%B3%E8%83%BD%E6%BC%8F%E6%B4%9E%E5%B7%B2%E4%BF%AE%E5%A4%8D%EF%BC%8CFortinet%E8%AD%A6%E5%91%8A%E9%9B%B6%E6%97%A5%E6%BC%8F%E6%B4%9E.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-b47126d839687b0279efd681"
+entity_id: "ve-b47126d839687b0279efd681"
+schema_version: "1"
 ---
 
-#  Android、佳能漏洞已修复，Fortinet警告零日漏洞   
+# Android、佳能漏洞已修复，Fortinet警告零日漏洞
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Android；Canon打印机；FortiOS
+- 文献类型：多产品漏洞新闻汇编
+- 版本、权限及部署边界：Android2024年2月补丁；Canon固件<=03.07需型号匹配；FortiOS多个分支及SSLVPN暴露
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 无CVE元数据，至少十个明确主漏洞跨移动系统、打印机和网络设备，应建立多实体记录
+2. Canon没有各型号修复固件；所谓只影响无路由器直连互联网的设备过窄，网络可达与私网并不等于修复
+3. FortiOS只列大分支，缺修复子版本；在2024年2月背景下7.6不受影响的陈述需核对日期/原公告
+4. FortiOS缓解明确区分禁用全部SSLVPN与仅禁用Web模式，须保留；可能在野利用的置信表述不能升级
+5. 文中谷歌/JVN/厂商公告未保留直接链接，现有大量链接是无关推荐；删除法律犯罪/广告长尾，给相对日期绝对时间
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzA5MzU5MzQzMA==&mid=2652099357&idx=1&sn=5c38f6917d6b84e84632bb47344d3714&chksm=8bbcf924bccb7032f6ff66449cc927e65c853c9fc88b03c8569061bcd8048ef8fcefb48eb778&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzA5MzU5MzQzMA==&mid=2652104571&idx=1&sn=b2b0a1465e8d4856f593fa7a3b7fcd6c&chksm=8bbccd42bccb44540a72239af3de30db90adafde6d5c4217aa1b15600ba47feb550f5fa659bd&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzA5MzU5MzQzMA==&mid=2652098579&idx=1&sn=56da5aedb263c64196a74c5f148af682&chksm=8bbcfa2abccb733ca8dd898d7c0b06d98244ca76bd7be343482369fa80546554cced706fa74c&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzA5MzU5MzQzMA==&mid=2652103736&idx=1&sn=9862de51a047cfde70c4575815ecb5c5&chksm=8bbcce01bccb4717a7bb7941cfd80fb25e9d0da8139c184e4ad245bf53fc91b1d6944bc85916&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzA5MzU5MzQzMA==&mid=2652102246&idx=1&sn=6da86a0ad9a923edca47618aedac0ac9&chksm=8bbcf45fbccb7d49635a50913000dde2fc38b1beadf4172d7877b8093c721f727c1819cf1e0f&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzA5MzU5MzQzMA==&mid=2652103384&idx=1&sn=391073e6109ff105f02be9029e01c697&chksm=8bbcc8e1bccb41f7fe478a3d22757d61f10dcf42548c1c02c0579b8f161277e527ba98ccb542&scene=21#wechat_redirect>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 原创 何威风  祺印说信安   2024-02-19 00:00  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/rTibWNx9ARWmFDREcQO6P5V4u2M1YnDFZoLrFQcy9ibg4kz4lEbpX591P0E5trazfJPicpN0T92q1FMmJeVXlVSZw/640?wx_fmt=png&from=appmsg "")  
@@ -269,4 +327,4 @@ Fortinet 尚未分享有关可能利用 CVE-2024-21762 的攻击的任何信息�
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

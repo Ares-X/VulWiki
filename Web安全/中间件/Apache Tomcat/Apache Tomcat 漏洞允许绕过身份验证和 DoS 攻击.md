@@ -1,8 +1,62 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Apache Tomcat 漏洞允许绕过身份验证和 DoS 攻击"
+product: "Apache Tomcat multipart、Windows installer、WebResource挂载"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2025-48976; CVE-2025-48988; CVE-2025-49124; CVE-2025-49125"
+referenced_identifiers: "CVE-2020-0796"
+identifier_role: "primary"
+cve: "CVE-2025-48976; CVE-2025-48988; CVE-2025-49124; CVE-2025-49125"
+prerequisites: "两DoS需multipart处理；49124需本地可写搜索路径并运行Windows安装器；49125非根Web挂载资源/约束路径"
+verification_source: "https://tomcat.apache.org/security-9.html?force_isolation=true"
+source_url: "https://cybersecuritynews.com/apache-tomcat-vulnerabilities/"
+source_status: "recorded"
+side_effects: "含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。"
+id: "vw-9d18db0f2a55bca5fe1c6b5a"
+entity_id: "ve-9d18db0f2a55bca5fe1c6b5a"
+schema_version: "1"
 ---
 
-#  Apache Tomcat 漏洞允许绕过身份验证和 DoS 攻击  
+# Apache Tomcat 漏洞允许绕过身份验证和 DoS 攻击
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：两DoS需multipart处理；49124需本地可写搜索路径并运行Windows安装器；49125非根Web挂载资源/约束路径
+- 证据范围：四种条件不同，不应统一说所有Tomcat实例任意远程利用；限制参数和首次修复版本是历史公告摘要。
+
+### 已有来源支持的更正
+
+- 官方逐项核对9.x范围、报告/公开日期、49124 Low和非根挂载边界
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 四个主CVE均漏frontmatter，0796无关
+- Mark Thomas于6月16日报告所有问题不准确，官方报告日期分别5月16/30，6月16为公开日期
+- 49124官方Low且9.x从9.0.23起，不能与其余版本统一；是本地安装旁加载不是远程认证绕过
+- 49125为挂载点非Web根目录，不等于资源物理文件必然在Web应用根之外
+- 百万应用受影响无测量来源；每部分内存估算只是示意而非测得漏洞效果
+- maxPartCount10与512字节为当次默认，非当前所有版本固定默认；需标日期
+
+### 核验来源
+
+- https://tomcat.apache.org/security-9.html?force_isolation=true
+
+### 操作风险与资料使用
+
+- 含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 邑安科技  邑安全   2025-06-17 09:20  
   
 更多全球网络安全资讯尽在邑安全  

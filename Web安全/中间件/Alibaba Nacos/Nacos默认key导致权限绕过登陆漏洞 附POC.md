@@ -1,8 +1,51 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Nacos默认key导致权限绕过登陆漏洞 附POC"
+product: "Nacos默认token secret"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "QVD-2023-6271"
+referenced_identifiers: ""
+identifier_role: "primary"
+prerequisites: "<=2.2.0所称范围且仍用默认JWT密钥，伪造sub必须对应有效用户/权限"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-b50ed791f7e4032cc4a957ac"
+entity_id: "ve-b50ed791f7e4032cc4a957ac"
+schema_version: "1"
+canonical: "Web安全/中间件/Alibaba Nacos/Nacos默认key导致权限绕过登陆漏洞 附POC.md"
 ---
 
-#  Nacos默认key导致权限绕过登陆漏洞 附POC  
+# Nacos默认key导致权限绕过登陆漏洞 附POC
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：<=2.2.0所称范围且仍用默认JWT密钥，伪造sub必须对应有效用户/权限
+- 证据范围：固定长寿命token加客户端替换登录响应，不足以证明后续受保护API成功；与24近同流程
+
+### 本次正文校订
+
+- 按实际内容修正 1 处代码围栏语言标记，保留其中方法与请求内容。
+- 移除 2 组不含任何正文的空代码围栏；保留全部非空代码。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- HTTP头body间空行丢失；空代码块多
+- JWT构造步骤/实际密钥字节未解释，无法确认所给token适用条件
+- 登录页面变化不是服务器授权证据；完整控制/植入代码需后续链
+- 缺明确修复版、密钥轮换要求，升级未必改现有配置
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 安服仔
                     安服仔  北风漏洞复现文库   2026-02-04 03:03  
   
@@ -65,7 +108,7 @@ app="Nacos"
   
 POC  
   
-```
+```http
 POST /nacos/v1/auth/users/login HTTP/1.1
 Host: 127.0.0.1
 Content-Length: 28
@@ -77,8 +120,6 @@ Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9
 Connection: close
 username=nacos&password=1111
-```  
-```
 ```  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/dV0OibMDwBhIgKRN9ZP9hictPQO2sg8WOrjflr7ibUKDnkrWv5ia9l8ZwbRmibLsw0W9yiae0tZSMq2tMyvVa42FaNeA/640?wx_fmt=png&from=appmsg "")  
@@ -99,9 +140,6 @@ username=nacos&password=1111
 ```  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/dV0OibMDwBhIgKRN9ZP9hictPQO2sg8WOr7Riaa7OEkcn0ucjkAM4uHkKl2PCnHes4mkKxTQ3MiabkhRdA5u41Fukw/640?wx_fmt=png&from=appmsg "")  
-```
-
-```  
   
 06  
   

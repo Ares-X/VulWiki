@@ -1,6 +1,36 @@
 ---
 source: "hatch 补库批 20260928"
+product: "PbootCMS3.0.1"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "PbootCMS v3.0.1 远程代码执行漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：后台站点信息写入，PbootSystem/sessionID可设system，PHPcontrol-char调用解析/array_filter可用"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-bae3feabf5881ad77d09bb9e"
+entity_id: "ve-bae3feabf5881ad77d09bb9e"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：后台站点信息写入，PbootSystem/sessionID可设system，PHPcontrol-char调用解析/array_filter可用
+
+- **结论使用边界（1）**：payload&lt;0x01&gt;是占位不是实际控制字节，应显式解释替换，不能直接复制。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **结论使用边界（2）**：绕冒号替换的例子正文丢反斜杠但最终payload保留；session_start/session_id调用状态需说明。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **适用与权限边界（3）**：后台权限与图片/代码运行PHP版本遗漏；较2.0.9新增getallheaders黑名单及替代session链是互补不是同文。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # PbootCMS v3.0.1 远程代码执行漏洞
 

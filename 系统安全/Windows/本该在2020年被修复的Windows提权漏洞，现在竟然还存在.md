@@ -1,9 +1,62 @@
 ---
-cve: "CVE-2020-17103"
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2020-17103"
+identifier_role: "primary"
+primary_identifiers: "CVE-2020-17103"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "本该在2020年被修复的Windows提权漏洞，现在竟然还存在"
+product: "Windows Cloud Filter cldflt.sys"
+record_type: "advisory"
+document_type: "MiniPlasma旧漏洞回归疑似通告"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "本地普通用户，CfAbortHydration/HsmOsBlockPlaceholderAccess竞态；声称已打2026-05补丁Win11Pro/Server2025成功，Canary失败"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Windows/%E6%9C%AC%E8%AF%A5%E5%9C%A82020%E5%B9%B4%E8%A2%AB%E4%BF%AE%E5%A4%8D%E7%9A%84Windows%E6%8F%90%E6%9D%83%E6%BC%8F%E6%B4%9E%EF%BC%8C%E7%8E%B0%E5%9C%A8%E7%AB%9F%E7%84%B6%E8%BF%98%E5%AD%98%E5%9C%A8.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-0c8ed62b54795ef077bde957"
+entity_id: "ve-0c8ed62b54795ef077bde957"
+schema_version: "1"
 ---
 
-#  本该在2020年被修复的Windows提权漏洞，现在竟然还存在  
+# 本该在2020年被修复的Windows提权漏洞，现在竟然还存在
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Windows Cloud Filter cldflt.sys
+- 文献类型：MiniPlasma旧漏洞回归疑似通告
+- 版本、权限及部署边界：本地普通用户，CfAbortHydration/HsmOsBlockPlaceholderAccess竞态；声称已打2026-05补丁Win11Pro/Server2025成功，Canary失败
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 标题与首段断言旧漏洞仍存在，正文却标疑似旧漏洞修复失效/影响待官方确认，应统一为待确认回归或不完整修复，不自行复用旧CVE定论
+2. 缺精确Windows/驱动build、原始2020ProjectZero与当前研究仓库/PoC链接，无法核无需修改即可运行
+3. 只给SYSTEM截图/媒体两链接，无可检索完整利用证据，注册表写原语到代码执行链未展开
+4. 日期当前最新/等待补丁必须固定为2026-05-18，不能当持续当前状态；Canary失败属实验观察非所有预览版免疫
+5. 本地低权必要条件清楚，保留，移除机构长宣传/群二维码，图未视检
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://www.bleepingcomputer.com/news/microsoft/new-windows-miniplasma-zero-day-exploit-gives-system-access-poc-released/>
+- 原文参考链接（未重新核验）：<https://securityonline.info/miniplasma-zero-day-poc-exploit-code-and-vulnerability-details-publicly-disclosed-for-windows-11/>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 原创 360漏洞研究院
                     360漏洞研究院  360漏洞研究院   2026-05-18 07:50  
   
@@ -92,4 +145,4 @@ https://securityonline.info/miniplasma-zero-day-poc-exploit-code-and-vulnerabili
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

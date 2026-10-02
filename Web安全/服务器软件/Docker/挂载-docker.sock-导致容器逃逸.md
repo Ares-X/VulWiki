@@ -1,9 +1,45 @@
 ---
 version: "Docker version: 18.09.3"
 source: "Threekiii/Vulnerability-Wiki"
+title: "挂载 docker.sock 导致容器逃逸"
+product: "Docker daemon socket / Kubernetes配置"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "socket挂载可访问且进程有权限，daemon能创建特权/host挂载容器；示例逃逸终点是minikube VM"
+affected_versions: "Docker version: 18.09.3"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-d006f86358e410819fa14bac"
+entity_id: "ve-d006f86358e410819fa14bac"
+schema_version: "1"
 ---
 
 # 挂载 docker.sock 导致容器逃逸
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：socket挂载可访问且进程有权限，daemon能创建特权/host挂载容器；示例逃逸终点是minikube VM
+- 证据范围：明确minikube不是物理宿主，提供YAML和复现实例；版本为实验环境不代表漏洞边界
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 环境复原误删k8s_node_proxy.yaml而非创建的namespace，且未清理直接docker创建sock-test容器
+- version元数据实验18.09.3易误当影响版本
+- 应交代K8s1.32使用旧Docker的CRI适配和minikube驱动
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 ## 漏洞描述
 

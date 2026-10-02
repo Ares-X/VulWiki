@@ -1,8 +1,50 @@
 ---
 source: "hatch 补库批 20260928"
+title: "Mssql 模拟登录提权"
+product: "Microsoft SQL Server IMPERSONATE"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "已有登录及对高权限LOGIN的IMPERSONATE授权；不是产品认证绕过"
+source_status: "unknown"
+side_effects: "含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。"
+id: "vw-337301742fabcece1224c3bc"
+entity_id: "ve-337301742fabcece1224c3bc"
+schema_version: "1"
 ---
 
 # Mssql 模拟登录提权
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：已有登录及对高权限LOGIN的IMPERSONATE授权；不是产品认证绕过
+- 证据范围：明确称配置风险而非漏洞；示范EXECUTE AS和REVERT，另附持久角色升级脚本
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- P0枚举SQL把grantor_principal_id联到被模拟用户，混淆授权者和被授权对象；未按当前grantee过滤，不能证明显示账号皆可模拟
+- LOGIN与数据库USER语境应分清，执行范围不同
+- 脚本Query入参被内部查询覆盖，宣称的自定义查询能力未实现
+- 脚本注释保留double-run/alternate-credentials TODO，不能视为可靠一键工具
+- REVERT只回退当前会话身份，不撤销脚本新账号/持久sysadmin授权
+- 缺具体实验SQLServer版本/原始文章链接，统一Mssql/SQL Server目录
+
+### 操作风险与资料使用
+
+- 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 0x01 前提
 ---------

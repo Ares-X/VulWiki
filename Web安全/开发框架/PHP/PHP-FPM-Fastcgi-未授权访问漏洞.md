@@ -1,6 +1,40 @@
 ---
 source: "Threekiii/Vulnerability-Wiki"
+product: "PHP-FPM/FastCGI网络暴露"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "PHP-FPM-Fastcgi-未授权访问漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：无固定受影响版本，需FastCGI监听可达、客户端限制不足及已知存在PHP脚本路径"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-ee15a2f3b70321a91a4fc937"
+entity_id: "ve-ee15a2f3b70321a91a4fc937"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：无固定受影响版本，需FastCGI监听可达、客户端限制不足及已知存在PHP脚本路径
+
+代码与实验材料：完整Python2/3客户端，PHP_VALUE/ADMIN_VALUE请求；socket单次send、读到关闭、错误状态索引不一致等限制
+
+来源证据范围：Leavesongs分析与原客户端GitHub署名，较好
+
+- **结论使用边界（1）**：协议和复现入口说明错误；依据：要求浏览器访问http://your-ip:9000，而9000实验端口是FastCGI协议不是HTTP。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **适用与权限边界（2）**：前提及修复缺失；依据：参数file要求真实PHP绝对路径且受security.limit_extensions等限制；没有监听地址/allowed_clients加固说明。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **结论使用边界（3）**：脚本协议处理脆弱；依据：按EOF收包而不是END_REQUEST、未检查完整8字节头；STDERR写self.requests\[state\]而非请求状态。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # PHP-FPM Fastcgi 未授权访问漏洞
 

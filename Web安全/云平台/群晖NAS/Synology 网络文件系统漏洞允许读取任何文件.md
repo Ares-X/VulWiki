@@ -1,9 +1,50 @@
 ---
 cve: "CVE-2025-1021"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Synology 网络文件系统漏洞允许读取任何文件"
+product: "Synology DSM synocopy"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2025-1021"
+referenced_identifiers: ""
+identifier_role: "primary"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-5ec8d6103a7c80c25e10489a"
+entity_id: "ve-5ec8d6103a7c80c25e10489a"
+schema_version: "1"
 ---
 
-#  Synology 网络文件系统漏洞允许读取任何文件   
+# Synology 网络文件系统漏洞允许读取任何文件
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 本次正文校订
+
+- 按该篇完整正文及逐篇审阅区分主问题与背景编号，补全结构化主标识；不把标识归属校订等同运行复现。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 机器翻译将DSM译为帝斯曼且操字丢失
+- 须突出可写NFS服务可达前提，不是任意NAS互联网裸读
+- 三分支固定版本应结构化
+- CVSS字符串全角冒号不可直接机器解析
+- 补Synology公告准确URL和原始发布日期更新日期
+- 无PoC标公告
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
  网安百色   2025-04-24 11:30  
   
 Synology 的 DiskStation Manager （DSM） 软件中发现了一个严重的安全漏洞。此漏洞允许远程攻击者在未经适当授权的情况下通过网络文件系统 （NFS） 服务读取任意文件。  

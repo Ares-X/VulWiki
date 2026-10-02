@@ -1,8 +1,44 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Cloudflare修复了ACME验证漏洞，该漏洞允许绕过WAF访问源服务器"
+product: "Cloudflare ACME"
+record_type: "incident"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-5e2c07e1e9ea7dd0c9614977"
+entity_id: "ve-5e2c07e1e9ea7dd0c9614977"
+schema_version: "1"
 ---
 
-#  Cloudflare修复了ACME验证漏洞，该漏洞允许绕过WAF访问源服务器  
+# Cloudflare修复了ACME验证漏洞，该漏洞允许绕过WAF访问源服务器
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- HTTP01描述用httpsURL却说HTTP80，需区分初始请求与重定向
+- 绕WAF不等可读取所有源站敏感文件，须有可达路由/源站缺陷
+- 这些特性前缺完整解释，疑截段
+- 无Cloudflare原文URL/修复时间，托管修复无本地版本
+- 保留无已知恶用为来源声明
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 原创 ZM
                     ZM  暗镜   2026-01-21 01:00  
   

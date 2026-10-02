@@ -1,6 +1,43 @@
 ---
 source: "白阁文库 BaizeSec/bylibrary"
+title: "phpmyadmin_defaultpwd"
+product: "phpStudy 捆绑的 phpMyAdmin/MySQL"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "部署使用脚本指定路径、数据库 [用户名/密码组合已隐藏] 凭据并允许该来源登录"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-7ebf717241b4c682a771c86b"
+entity_id: "ve-7ebf717241b4c682a771c86b"
+schema_version: "1"
 ---
+
+# phpmyadmin_defaultpwd
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：部署使用脚本指定路径、数据库 [用户名/密码组合已隐藏] 凭据并允许该来源登录
+- 证据范围：脚本尝试登录后以导航字符串判断成功；异常直接当不存在，main 未输出返回结果，不能据此证明可写 shell
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 应归类特定发行包/部署弱凭据而非 phpMyAdmin 通用默认密码
+- HTML 代码围栏实际为 Python
+- 没有版本、成功样例或权限影响论证
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 ```HTML
 #!/usr/bin/env python

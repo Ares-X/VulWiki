@@ -1,8 +1,45 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "谷歌AI “Big Sleep” 提前阻止严重的SQLite 漏洞遭利用"
+product: "SQLite；Google Big Sleep 为发现工具"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2025-6965"
+referenced_identifiers: ""
+identifier_role: "primary"
+cve: "CVE-2025-6965"
+prerequisites: "文称可注入任意 SQL 语句，SQLite<3.50.2；嵌入应用的可达性依赖具体权限边界"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-71e953a1a78e19198510127b"
+entity_id: "ve-71e953a1a78e19198510127b"
+schema_version: "1"
 ---
 
-#  谷歌AI “Big Sleep” 提前阻止严重的SQLite 漏洞遭利用  
+# 谷歌AI “Big Sleep” 提前阻止严重的SQLite 漏洞遭利用
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：文称可注入任意 SQL 语句，SQLite<3.50.2；嵌入应用的可达性依赖具体权限边界
+- 证据范围：主体为AI发现新闻与代理安全白皮书背景，不是技术复现；2024年另一个 SQLite 栈下溢应保留为背景独立事件
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 主 CVE 缺 frontmatter
+- 提前阻止利用与文内指标显示正在利用的叙述需回到Google原始表述核对，不能直接标在野状态
+- 建议将长篇代理安全讨论/推广与漏洞实体摘要分离
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 Ravie Lakshmanan  代码卫士   2025-07-18 10:35  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

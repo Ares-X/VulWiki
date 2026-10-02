@@ -1,9 +1,61 @@
 ---
-cve: "CVE-2025-14321"
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2025-14321"
+identifier_role: "primary"
+primary_identifiers: "CVE-2025-14321"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "漏洞利用代码公开：Firefox WebRTC 严重漏洞可导致远程代码执行 (CVSS 9.8)"
+product: "Firefox RTCEncodedFrameBase/RTCRtpScriptTransform"
+record_type: "advisory"
+document_type: "WebRTC UAF PoC发布新闻"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "恶意网页、encoded transform和Worker API可用；具体Firefox/ESR修复版未给"
+side_effects: "读取/写入原语是RCE基础，不等直接完全控制系统，缺沙箱逃逸和权限链"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Mozilla/%E6%BC%8F%E6%B4%9E%E5%88%A9%E7%94%A8%E4%BB%A3%E7%A0%81%E5%85%AC%E5%BC%80%EF%BC%9AFirefox%20WebRTC%20%E4%B8%A5%E9%87%8D%E6%BC%8F%E6%B4%9E%E5%8F%AF%E5%AF%BC%E8%87%B4%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%20%28CVSS%209.8%29.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-57087c2fed6312d197850d54"
+entity_id: "ve-57087c2fed6312d197850d54"
+schema_version: "1"
 ---
 
-#  漏洞利用代码公开：Firefox WebRTC 严重漏洞可导致远程代码执行 (CVSS 9.8)  
+# 漏洞利用代码公开：Firefox WebRTC 严重漏洞可导致远程代码执行 (CVSS 9.8)
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Firefox RTCEncodedFrameBase/RTCRtpScriptTransform
+- 文献类型：WebRTC UAF PoC发布新闻
+- 版本、权限及部署边界：恶意网页、encoded transform和Worker API可用；具体Firefox/ESR修复版未给
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 页面引用poc-minimal-worker.js但未附关键worker实现，只有建连接和监听leak，不能独立触发/验证核心UAF
+2. 读取/写入原语是RCE基础，不等直接完全控制系统，缺沙箱逃逸和权限链
+3. 原始引用是undetached ArrayBuffer生命周期问题，正文自行加竞争条件等应标推测，非自动确认根因
+4. CVSS9.8来源/向量未列；只建议最新版缺可判定范围，已有AISLE原研究链接应保留并补Mozilla公告
+5. AI自主发现贡献为研究团队主张，新闻不要求补造完整RCE
+
+### 操作风险
+
+读取/写入原语是RCE基础，不等直接完全控制系统，缺沙箱逃逸和权限链
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://aisle.com/blog/firefox-webrtc-encoded-transforms-uaf-via-undetached-arraybuffer-cve-2025-14321>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 sec随谈
                     sec随谈  sec随谈   2026-01-27 00:40  
   
@@ -100,4 +152,4 @@ https://aisle.com/blog/firefox-webrtc-encoded-transforms-uaf-via-undetached-arra
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

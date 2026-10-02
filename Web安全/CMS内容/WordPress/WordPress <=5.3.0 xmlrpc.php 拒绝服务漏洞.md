@@ -1,6 +1,41 @@
 ---
 source: "hatch 补库批 20260928"
+product: "WordPress XML-RPC pingback"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "WordPress <=5.3.0 xmlrpc.php 拒绝服务漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：xmlrpc/pingback enabled and accessible, valid target post/external callback; <=5.3 claim unverified"
+side_effects: "未执行；本文需注意的操作影响：持续循环会消耗目标资源和带宽，保留原方法但只能在授权隔离资源限额内使用；标题 ≤5.3.0、≤5.3.x 和正文 ≤5.3 并非同一范围，版本与资源耗尽根因待核。"
+source_status: "unknown"
+id: "vw-0df5364ead8c14a4276e561c"
+entity_id: "ve-0df5364ead8c14a4276e561c"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 明确更正：脚本结尾 `main(*get_args()` 缺右括号，原文截断，不能原样运行；不能根据版本探测打印和非 200 响应确认 DoS。
+- 持续循环会消耗目标资源和带宽，保留原方法但只能在授权隔离资源限额内使用；标题 ≤5.3.0、≤5.3.x 和正文 ≤5.3 并非同一范围，版本与资源耗尽根因待核。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：xmlrpc/pingback enabled and accessible, valid target post/external callback; &lt;=5.3 claim unverified
+
+- **结论使用边界（1）**：文件名&lt;=5.3.0、标题&lt;=5.3.x、正文&lt;=5.3和脚本5.3.?范围不一致。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **代码与转录边界（2）**：最后main(*get_args()缺右括号，脚本明确截断。相应原代码作为存在此问题的历史样本保留，不能直接当作可运行、成功复现的 PoC；缺失内容需回原稿核对，不据此补造可执行攻击链。
+
+- **结论使用边界（3）**：check仅打印响应让人自行判断，不是自动确认；非200不能证明DoS，持续攻击循环不能当安全检测。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **事实待核（4）**：简介空白、缺原始漏洞公告/修复与资源耗尽机制；脚本作者行只有域名。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # WordPress \<=5.3.x xmlrpc.php拒绝服务漏洞
 

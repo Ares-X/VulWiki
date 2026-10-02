@@ -1,9 +1,50 @@
 ---
-cve: "CVE-2026-2699"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "ShareFile StorageZones Controller 2699认证绕过与2701文件写入执行"
+product: "ShareFile StorageZones Controller"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2026-2699;CVE-2026-2701"
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "文称5.x≤5.12.3；ASP.NET/Web目录执行配置"
+prerequisites: "2699匿名；2701独立鉴权条件未列"
+side_effects: "文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行"
+review_date: "2026-10-02"
+identifier_role: "primary"
+source_status: "unknown"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/Progress%20ShareFile/%E6%BC%8F%E6%B4%9E%E9%A2%84%E8%AD%A6%20%20Progress%20ShareFile%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81%E7%BB%95%E8%BF%87%E5%92%8C%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E.md"
+id: "vw-8c673b413b6ae30776e9efb8"
+entity_id: "ve-8c673b413b6ae30776e9efb8"
+schema_version: "1"
 ---
 
-#  漏洞预警 | Progress ShareFile身份认证绕过和文件上传漏洞  
+# ShareFile StorageZones Controller 2699认证绕过与2701文件写入执行
+
+## 条目说明
+
+- 对象与具体问题：ShareFile StorageZones Controller；2699认证绕过与2701文件写入执行
+- 版本、配置及部署条件：文称5.x≤5.12.3；ASP.NET/Web目录执行配置
+- 认证与权限前提：2699匿名；2701独立鉴权条件未列
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 两主CVE应共同进入元数据，不能只2699
+- 软件全平台与自托管StorageZones Controller区别；不要泛化到所有云ShareFile
+- Response.Redirect false未终止解释需源码出处，上传解压链只有概述
+- POC已公开无链接，修复仅docs首页无安全版本/公告
+
+## 操作风险
+
+文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 浅安
                     浅安  浅安安全   2026-04-15 23:50  
   

@@ -1,9 +1,46 @@
 ---
 cve: "CVE-2026-40542"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Apache HttpClient 5.6 中存在严重的身份验证绕过漏洞"
+product: "Apache HttpClient"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2026-40542"
+referenced_identifiers: ""
+identifier_role: "primary"
+prerequisites: "文章称仅5.6，使用 SCRAM-SHA-256，攻击者能够冒充服务端；需官方确认实际连接/信任条件"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-e0023f0ca65507a179dbaf00"
+entity_id: "ve-e0023f0ca65507a179dbaf00"
+schema_version: "1"
 ---
 
-#  Apache HttpClient 5.6 中存在严重的身份验证绕过漏洞  
+# Apache HttpClient 5.6 中存在严重的身份验证绕过漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：文章称仅5.6，使用 SCRAM-SHA-256，攻击者能够冒充服务端；需官方确认实际连接/信任条件
+- 证据范围：描述缺少服务端认证响应校验、5.6.1修复；无PoC，适合作为公告摘要。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- HttpClient 是客户端库，描述为HTTP代理不准确
+- 服务端身份验证绕过不等同任意目标服务器登录绕过，标题须明确方向
+- 版本5.6放在产品目录中会制造产品实体碎片，应归Apache HttpClient并把版本结构化
+- 紧急/严重用语与正文 Important 等级应分清，风险传播推测不能当已验证影响
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 sec随谈
                     sec随谈  sec随谈   2026-04-24 00:57  
   

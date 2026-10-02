@@ -1,8 +1,48 @@
 ---
 source: "hatch 补库批 20260928"
+title: "PHPYun 微信XML字段进入SQL的注入"
+product: "PHPYun"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "3.1 build14061；微信接口与MySQL"
+prerequisites: "正文注册登录，是否必要未说明"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+source_status: "unknown"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/PhpYun/Phpyun%20v3.1%20xml%20%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md"
+id: "vw-64f46e5ba8c9df2cb03e7d87"
+entity_id: "ve-64f46e5ba8c9df2cb03e7d87"
+schema_version: "1"
 ---
 
-# Phpyun v3.1 xml 注入漏洞
+# PHPYun 微信XML字段进入SQL的注入
+
+## 条目说明
+
+- 对象与具体问题：PHPYun；微信XML字段进入SQL的注入
+- 版本、配置及部署条件：3.1 build14061；微信接口与MySQL
+- 认证与权限前提：正文注册登录，是否必要未说明
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 标题XML注入易误解为XXE，代码实际是FromUserName/wxid拼SQL且未展示实体声明
+- XML样例丢失所有子元素标签，无法对应FromUserName/MsgType/EventKey；源码转义及链接字符串破坏
+- Content-type XML不保证绕过WAF；把phypyun_member首条视为管理员无角色证据
+- 应补实际POST端点、鉴权、完整请求与响应，原截图未视检
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
 
 一、漏洞简介
 ------------
@@ -17,7 +57,7 @@ source: "hatch 补库批 20260928"
 三、复现过程
 ------------
 
-### 漏洞分析
+#### 漏洞分析
 
 本次漏洞文件位于 `weixin/model/index.class.php` ，代码如下：
 
@@ -131,7 +171,7 @@ private function isBind(\$wxid=\'\') {
 
     Content-type:text/xml;charset=utf-8
 
-### 漏洞复现
+#### 漏洞复现
 
 我们首先打开目标站点，点击网页左侧注册按钮，首先注册一个账号：
 
@@ -142,9 +182,9 @@ private function isBind(\$wxid=\'\') {
 
 ![](./.resource/Phpyunv3.1xml注入漏洞/media/rId27.png)
 
-#### payload文件:
+##### payload文件:
 
-##### 注:payload文件内容需手动输入相应位置
+###### 注:payload文件内容需手动输入相应位置
 
     <?xml version="1.0" encoding="utf-8"?>
       <xml>

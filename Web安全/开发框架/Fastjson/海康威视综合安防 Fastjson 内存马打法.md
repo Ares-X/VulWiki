@@ -1,6 +1,39 @@
 ---
 source: "MrWQ/vulnerability-paper"
+product: "Hikvision iVMS-8700/iSecure Center"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "海康威视综合安防 Fastjson 内存马打法"
+prerequisites: "来源所述条件，未列明部分仍待核：iVMS2.0.0–2.9.2/iSecure1.0.0–1.7.0 claimed; JDK/Fastjson/Tomcat dependencies unspecified"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/Y5wo2yZKaQ6mKAvy5zh9Eg"
+id: "vw-30ec3a8d732a8e4a91ab93ca"
+entity_id: "ve-30ec3a8d732a8e4a91ab93ca"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：iVMS2.0.0–2.9.2/iSecure1.0.0–1.7.0 claimed; JDK/Fastjson/Tomcat dependencies unspecified
+
+代码与实验材料：applyCT LDAP echo and memory-shell requests; proprietary modified JNDI/Behinder explicitly unavailable; headers merged and code escaped
+
+来源证据范围：Original WeChat, no vendor patch/advisory
+
+- **实验改动边界（1）**：Reproduction depends on undisclosed modified tools; does not independently establish claimed full version range。以下步骤按原实验条件保留；人工改动后的行为只支持该修改环境，不用于证明未修改发行版默认可利用。
+
+- **证据待核（2）**：Merged Connection/Accept, split User-Agent and missing header/body separator; no cleanup/remediation。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # 海康威视综合安防 Fastjson 内存马打法
 

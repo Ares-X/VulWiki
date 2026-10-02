@@ -1,9 +1,61 @@
 ---
-cve: "CVE-2024-57727"
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2024-57727;CVE-2024-57728;CVE-2024-57726"
+identifier_role: "primary"
+primary_identifiers: "CVE-2024-57727;CVE-2024-57728;CVE-2024-57726"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "关键的 SimpleHelp 缺陷允许文件盗窃、权限提升和 RCE 攻击"
+product: "SimpleHelp远程支持服务器"
+record_type: "advisory"
+document_type: "三漏洞修复新闻"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "57727未认证文件读；57726低权限技术员升admin；57728管理员上传；修复5.3.9/5.4.10/5.5.8"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/SimpleHelp/%E5%85%B3%E9%94%AE%E7%9A%84%20SimpleHelp%20%E7%BC%BA%E9%99%B7%E5%85%81%E8%AE%B8%E6%96%87%E4%BB%B6%E7%9B%97%E7%AA%83%E3%80%81%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87%E5%92%8C%20RCE%20%E6%94%BB%E5%87%BB.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-b6b70f56db5a6eff5fd52998"
+entity_id: "ve-b6b70f56db5a6eff5fd52998"
+schema_version: "1"
 ---
 
-#  关键的 SimpleHelp 缺陷允许文件盗窃、权限提升和 RCE 攻击   
+# 关键的 SimpleHelp 缺陷允许文件盗窃、权限提升和 RCE 攻击
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：SimpleHelp远程支持服务器
+- 文献类型：三漏洞修复新闻
+- 版本、权限及部署边界：57727未认证文件读；57726低权限技术员升admin；57728管理员上传；修复5.3.9/5.4.10/5.5.8
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. frontmatter只有57727，三不同权限/效果的实体应拆开，57726+57728链保留
+2. 正文很好区分未认证读取和已认证链，不应标题统一成未认证RCE
+3. Horizon3及厂商报告文字没有URL，缺受影响分支边界/原始公告；PoC细节当时保留未公开要有2025-01-15时点
+4. 哈希泄露与改密码建议有因果，但不能自动假定全部账户已失陷；新闻无PoC正常
+5. 巨量HTML调研/二维码和服务广告可剥离；实际远程管理应用非操作系统本身
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<http://www.jsgjxx.com>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
  信息安全大事件   2025-01-15 19:50  
   
 网络安全研究人员披露了   
@@ -59,4 +111,4 @@ http://www.jsgjxx.com
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

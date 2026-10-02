@@ -1,9 +1,48 @@
 ---
 cve: "CVE-2026-87886"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Acronis备份插件漏洞已被利用，攻击者可获取更高的Linux权限"
+product: "Acronis Backup cPanel WHM/Plesk插件"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2026-87886"
+referenced_identifiers: ""
+identifier_role: "primary"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-10fabc6dc97d7c9d38698ab9"
+entity_id: "ve-10fabc6dc97d7c9d38698ab9"
+schema_version: "1"
 ---
 
-#  Acronis备份插件漏洞已被利用，攻击者可获取更高的Linux权限  
+# Acronis备份插件漏洞已被利用，攻击者可获取更高的Linux权限
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 本次正文校订
+
+- 按该篇完整正文及逐篇审阅区分主问题与背景编号，补全结构化主标识；不把标识归属校订等同运行复现。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 缺影响/修复版本以及SEC10986原始链接，正文结尾可能截取未全
+- 本地低权限条件明确应保留
+- cPanel已利用和Plesk未观察须分产品/时间，不能推断所有云服务受影响
+- 需要厂商核验CVE和状态
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 原创 ZM
                     ZM  暗镜   2026-09-22 22:00  
   

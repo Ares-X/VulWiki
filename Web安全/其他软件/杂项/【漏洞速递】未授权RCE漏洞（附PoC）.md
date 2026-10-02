@@ -1,8 +1,62 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "【漏洞速递】未授权RCE漏洞（附PoC）"
+product: "Open Web Analytics CVE-2022-24637 Ladon联动"
+record_type: "unknown"
+document_type: "技术文章（细分类待核）"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "原文未给出可确认的版本、认证及部署边界；保留待核"
+side_effects: "自动重设管理员密码、改日志配置、写持久PHP/反弹，无恢复且硬编码/var/www/html/owa，应标intrusive而非验证"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/%E3%80%90%E6%BC%8F%E6%B4%9E%E9%80%9F%E9%80%92%E3%80%91%E6%9C%AA%E6%8E%88%E6%9D%83RCE%E6%BC%8F%E6%B4%9E%EF%BC%88%E9%99%84PoC%EF%BC%89.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-a0961fe1dda21af1579badfe"
+entity_id: "ve-a0961fe1dda21af1579badfe"
+schema_version: "1"
 ---
 
-#  【漏洞速递】未授权RCE漏洞（附PoC）   
+# 【漏洞速递】未授权RCE漏洞（附PoC）
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Open Web Analytics CVE-2022-24637 Ladon联动
+- 文献类型：技术文章（细分类待核）
+- 版本、权限及部署边界：原文未给出可确认的版本、认证及部署边界；保留待核
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 标题泛未授权RCE且OWA易误会Outlook，正文是OpenWebAnalytics<1.7.4，主CVE未入元数据
+2. Ladon -c示例只target而脚本仍要求两个位置攻击者IP/PORT，-i不存在且-p是重设密码非端口，按文无法运行
+3. 所谓密码hash实际temp_passkey重置令牌，脚本还会泄露其他用户令牌
+4. 自动重设管理员密码、改日志配置、写持久PHP/反弹，无恢复且硬编码/var/www/html/owa，应标intrusive而非验证
+5. 缓存Base64正则w不含+/=且username正则固定s:5只适5字节名
+6. 未校验POST结果就打印成功/无timeout易误报
+7. 作者明确无本地环境直接跑公开目标，其声明不作本审授权
+8. 有ExploitDB精确源，与其他同CVE分析保留联动差异
+
+### 操作风险
+
+自动重设管理员密码、改日志配置、写持久PHP/反弹，无恢复且硬编码/var/www/html/owa，应标intrusive而非验证
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
  LemonSec   2024-08-07 15:09  
   
 本文主要教大家如何配置Ladon的INI插件，实现快速批量验证POC。该漏洞除了练手或提交SRC，可能没什么用，OWA登陆界面如下  
@@ -356,4 +410,4 @@ else:
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

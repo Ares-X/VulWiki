@@ -1,6 +1,38 @@
 ---
 source: "hatch 补库批 20260928"
+product: "PHPCMS9.5.8"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "Phpcms V9.5.8 后台getshell"
+prerequisites: "来源所述条件，未列明部分仍待核：管理员登录、可见栏目树存在叶节点，旧PHP assert/string interpolation；跨站诱导还需会话/令牌条件"
+side_effects: "未执行；本文需注意的操作影响：源码展示menuid进str到eval明确；复制文本按钮残留可清理"
+source_status: "unknown"
+id: "vw-55cd6a38286bb74dfdc79610"
+entity_id: "ve-55cd6a38286bb74dfdc79610"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：管理员登录、可见栏目树存在叶节点，旧PHP assert/string interpolation；跨站诱导还需会话/令牌条件
+
+- **结论使用边界（1）**：源码展示menuid进str到eval明确；复制文本按钮残留可清理。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **结论使用边界（2）**：说assert只执行一句所以前加eval不严谨；多载荷不同shell口令1/2和外带域不一致需要逐项标注。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **适用与权限边界（3）**：管理员访问即写shell的CSRF式扩展未分析pc_hash/SameSite；标题后台前提末文才明确。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **适用与权限边界（4）**：base64不等于加密，旧PHP/目录写权限未列。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Phpcms V9.5.8 后台getshell
 

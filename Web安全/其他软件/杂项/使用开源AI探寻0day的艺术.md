@@ -1,8 +1,60 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "使用开源AI探寻0day的艺术"
+product: "CodeAstra7B辅助审计方法"
+record_type: "unknown"
+document_type: "技术文章（细分类待核）"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "原文未给出可确认的版本、认证及部署边界；保留待核"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/%E4%BD%BF%E7%94%A8%E5%BC%80%E6%BA%90AI%E6%8E%A2%E5%AF%BB0day%E7%9A%84%E8%89%BA%E6%9C%AF.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-f2256872faed7c78074960bd"
+entity_id: "ve-f2256872faed7c78074960bd"
+schema_version: "1"
 ---
 
-#  使用开源AI探寻0day的艺术   
+# 使用开源AI探寻0day的艺术
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：CodeAstra7B辅助审计方法
+- 文献类型：技术文章（细分类待核）
+- 版本、权限及部署边界：原文未给出可确认的版本、认证及部署边界；保留待核
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 多处上面例子但所有代码/输出/图缺失，无法支撑效果
+2. 已知CVE识别不证明发现0day，需训练泄漏/OOS/误报评估
+3. 模型无仓库/权重/提示词/环境
+4. Semgrep不能发现业务逻辑而AI轻松能过度绝对
+5. Airflow编号长破折号
+6. 多CVE只案例不得全部建成该文已验证漏洞，保留为待补证概念文章
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 原创 破天KK  KK安全说   2024-08-03 16:55  
   
 将分享如何使用经过微调的用于查找漏洞的开源 AI 模型  
@@ -103,4 +155,4 @@ LLM 基本上非常擅长识别代码中的潜在攻击面，并且人类可以�
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

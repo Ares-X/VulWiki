@@ -1,8 +1,44 @@
 ---
 source: "hatch 补库批 20260928"
+title: "Nginx 配置错误漏洞 CRLF注入漏洞"
+product: "NGINX配置"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "配置return302使用解码$uri，具体NGINX版本与请求解析允许该路径"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-679f223528c15c9dc3b70b43"
+entity_id: "ve-679f223528c15c9dc3b70b43"
+schema_version: "1"
 ---
 
 # Nginx 配置错误漏洞 CRLF注入漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：配置return302使用解码$uri，具体NGINX版本与请求解析允许该路径
+- 证据范围：与429相同教程第一片段，变量语义有解释可保留；非无条件NGINX代码漏洞。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 第二场景源/目标URL完全一样，却说统一域名，原始例子被替换坏
+- %0a%0d是LFCR而非规范CRLF，需明确测试实现对换行容忍性
+- 影响范围/修复为空，应给安全变量配置和适用版本
+- 原文链接清楚，结果仅截图未视检
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 一、漏洞简介
 ------------

@@ -1,8 +1,55 @@
 ---
 source: "hatch 补库批 20260928"
+title: "基于Tomcat的内存Webshell 无文件攻击技术"
+product: "Apache Tomcat运行时Filter与自定义反序列化入口"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "可运行任意字节码的反序列化链、CC3.2.1等依赖、兼容Tomcat/JDK内部类与反射权限；非Tomcat默认暴露接口"
+source_status: "unknown"
+side_effects: "含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。"
+id: "vw-ce613935a95b4f5fb716c1e4"
+entity_id: "ve-ce613935a95b4f5fb716c1e4"
+schema_version: "1"
 ---
 
 # 基于Tomcat的内存Webshell 无文件攻击技术
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：可运行任意字节码的反序列化链、CC3.2.1等依赖、兼容Tomcat/JDK内部类与反射权限；非Tomcat默认暴露接口
+- 证据范围：较完整两阶段技术分析，应保留研究价值并从具体产品漏洞计数分离；通杀措辞超过实际测试。第一阶段准备ThreadLocal并不自动解决Shiro Filter阶段第二次仍无法取得request的问题，需要明确实际入口时序。
+
+### 本次正文校订
+
+- 只修正截断的生命周期常量，保留原本正确的 STARTED 代码。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 未给Tomcat/JDK测试版本，反射Field.modifiers和javax.servlet依赖强版本相关
+- 正文提到恢复LifecycleState.STARTE是拼写错误，完整代码STARTED正确
+- 状态恢复不在finally，异常可能令服务停留错误状态；filterStart重建全部Filter有副作用
+- 两阶段输出文件名TomcatShellInject/TomcatEchoInject颠倒；最后使用示例jar命令换行缺续行
+- 参数说明threedram与实际threedr3am不一致
+- 没有卸载Filter/恢复静态字段/服务恢复说明
+- 500仅可能伴随执行，不是单独的执行成功依据
+
+### 操作风险与资料使用
+
+- 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 0x01 tomcat通用的获取request和response
 --------------------------------------
@@ -297,7 +344,7 @@ ysoserial.GeneratePayload\#main：
 
 因为`this.context.getState()`在运行时返回的state已经是`LifecycleState.STARTED`了，所以直接就抛异常了，filter根本就添加不进去。
 
-不过问题不大，因为`this.context.getState()`获取的是ServletContext实现对象的context字段，从其中获取出state，那么，我们在其添加filter前，通过反射设置成`LifecycleState.STARTING_PREP`，在其顺利添加完成后，再把其恢复成`LifecycleState.STARTE`，这里必须要恢复，要不然会造成服务不可用。
+不过问题不大，因为`this.context.getState()`获取的是ServletContext实现对象的context字段，从其中获取出state，那么，我们在其添加filter前，通过反射设置成`LifecycleState.STARTING_PREP`，在其顺利添加完成后，再把其恢复成`LifecycleState.STARTED`，这里必须要恢复，要不然会造成服务不可用。
 
 其实上面的反射设置state值，也可以不做，因为我们看代码中，只是执行了`this.context.addFilterDef(filterDef)`，我们完全也可以通过反射context这个字段自行添加filterDef。
 

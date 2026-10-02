@@ -1,9 +1,62 @@
 ---
-cve: "CVE-2024-44175"
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2024-44175"
+identifier_role: "primary"
+primary_identifiers: "CVE-2024-44175"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "macOS 磁盘仲裁中的 TOCTOU 漏洞可通过利用符号链接进行沙箱逃逸和权限升级攻击"
+product: "macOS diskarbitrationd与UserFS/fskitd"
+record_type: "analysis"
+document_type: "磁盘仲裁TOCTOU调试分析"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "本地挂载UserFS、可控挂载目录并赢得竞态；演示通过调试器人为停住特权进程，arm64e"
+side_effects: "挂载覆盖目录视图并不等于改写底层目录内容；后续CUPS日志到sudoers需额外权限与文件模式条件"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/macOS/macOS%20%E7%A3%81%E7%9B%98%E4%BB%B2%E8%A3%81%E4%B8%AD%E7%9A%84%20TOCTOU%20%E6%BC%8F%E6%B4%9E%E5%8F%AF%E9%80%9A%E8%BF%87%E5%88%A9%E7%94%A8%E7%AC%A6%E5%8F%B7%E9%93%BE%E6%8E%A5%E8%BF%9B%E8%A1%8C%E6%B2%99%E7%AE%B1%E9%80%83%E9%80%B8%E5%92%8C%E6%9D%83%E9%99%90%E5%8D%87%E7%BA%A7%E6%94%BB%E5%87%BB.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-f141f396510eb2adfc4e7c36"
+entity_id: "ve-f141f396510eb2adfc4e7c36"
+schema_version: "1"
 ---
 
-#  macOS 磁盘仲裁中的 TOCTOU 漏洞可通过利用符号链接进行沙箱逃逸和权限升级攻击   
+# macOS 磁盘仲裁中的 TOCTOU 漏洞可通过利用符号链接进行沙箱逃逸和权限升级攻击
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：macOS diskarbitrationd与UserFS/fskitd
+- 文献类型：磁盘仲裁TOCTOU调试分析
+- 版本、权限及部署边界：本地挂载UserFS、可控挂载目录并赢得竞态；演示通过调试器人为停住特权进程，arm64e
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 开头14.x<14.7.1与结尾14.7已修复矛盾，15.1 beta2亦应与正式分支区分
+2. 调试附加root守护进程需要额外权限/系统设置，该演示不是无权限稳定利用，不应直接当完整LPE PoC
+3. 挂载覆盖目录视图并不等于改写底层目录内容；后续CUPS日志到sudoers需额外权限与文件模式条件
+4. 核心代码含Markdown星号，翻译断句损坏；沙箱逃逸Terminal偏好链步骤主要截图，缺完整操作证据
+5. 保留Kandji原始研究与调试轨迹，补补丁官方出处和实验恢复警示
+
+### 操作风险
+
+挂载覆盖目录视图并不等于改写底层目录内容；后续CUPS日志到sudoers需额外权限与文件模式条件
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://nvd.nist.gov/vuln/detail/CVE-2024-44175>
+- 原文参考链接（未重新核验）：<https://www.kandji.io/blog/macos-audit-story-part1>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
  Ots安全   2024-11-28 09:06  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/bL2iaicTYdZn7gtxSFZlfuCW6AdQib8Q1onbR0U2h9icP1eRO6wH0AcyJmqZ7USD0uOYncCYIH7ZEE8IicAOPxyb9IA/640?wx_fmt=gif "")  
@@ -354,4 +407,4 @@ https://www.kandji.io/blog/macos-audit-story-part1
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

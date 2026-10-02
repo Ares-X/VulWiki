@@ -1,6 +1,38 @@
 ---
 source: "hatch 补库批 20260928"
+product: "POSCMS version unspecified / CodeIgniter"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "POSCMS 任意sql语句执行漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：通过d=admin路由基类SuperClass未认证；数据库管理接口可达，outfile另需FILE权限和目录可写"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-fea016a420aa837d5a55c12f"
+entity_id: "ve-fea016a420aa837d5a55c12f"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：通过d=admin路由基类SuperClass未认证；数据库管理接口可达，outfile另需FILE权限和目录可写
+
+- **适用与权限边界（1）**：声明SuperClass没有权限检查但未给其完整代码，不能仅正常CI路由反射推断所有管理员功能未授权。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **事实待核（2）**：无POSCMS版本；任意API调用应限实际可达controller/method及初始化。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **结论使用边界（3）**：PoC把&amp;amp;实体放反引号代码且GET/Post/sql粘一起，原样请求错误。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **适用与权限边界（4）**：outfile绕正则有思路，但DB/Windows路径权限缺，不等于任意部署文件写。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # POSCMS 任意sql语句执行漏洞
 

@@ -1,9 +1,53 @@
 ---
 cve: "CVE-2020-12110"
 source: "白阁文库 BaizeSec/bylibrary"
+id: "vw-87af743ccfe5547f3697cb6b"
+entity_id: "ve-87af743ccfe5547f3697cb6b"
+schema_version: "1"
+title: "TP-Link云摄像头NCXXX系列存在命令注⼊漏洞"
+product: "TP-Link NCXXX云摄像头"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2020-12109"
+referenced_identifiers: ""
+prerequisites: "已认证；NC200/220/230/250及NC260/450直接，NC210需额外配置写入"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/TP-Link/TP-Link%E4%BA%91%E6%91%84%E5%83%8F%E5%A4%B4NCXXX%E7%B3%BB%E5%88%97%E5%AD%98%E5%9C%A8%E5%91%BD%E4%BB%A4%E6%B3%A8%E2%BC%8A%E6%BC%8F%E6%B4%9E.md"
+review_date: "2026-10-02"
+side_effects: "执行文中载荷可能以目标进程权限启动命令或加载代码；权限受认证角色、操作系统账户及依赖版本约束，不能把 root/200 等通用字符串当成功证据"
+source_status: "unknown"
 ---
 
 # TP-Link云摄像头NCXXX系列存在命令注⼊漏洞
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：TP-Link NCXXX云摄像头
+- 本文讨论：CVE-2020-12109 Bonjour命令注入；12110仅NC210配合链
+- 版本、权限与配置前提：已认证；NC200/220/230/250及NC260/450直接，NC210需额外配置写入
+- 资料类型：截断Metasploit模块转载；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- frontmatter误把引用链CVE-2020-12110当主漏洞，模块References明确12109
+- 每行带行号，PASSWORD配置及登录正则被截断，代码内混入“33.SpamTitan 7.07多个RCE漏洞”
+- 无固件/修复矩阵，摄像头分类错置网络设备
+
+### 操作风险与恢复
+
+- 执行文中载荷可能以目标进程权限启动命令或加载代码；权限受认证角色、操作系统账户及依赖版本约束，不能把 root/200 等通用字符串当成功证据
+
+### 待核与来源
+
+- 原模块版本、NC210链及安全固件待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 
 ```
 1 ##

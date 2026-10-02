@@ -1,9 +1,66 @@
 ---
-cve: "CVE-2026-31957"
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2026-31957;CVE-2026-31979"
+identifier_role: "primary"
+primary_identifiers: "CVE-2026-31957;CVE-2026-31979"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "满分漏洞实录：一个缺失的配置项，如何让 Linux 服务器向所有人敞开大门"
+product: "Himmelblau Entra ID认证套件"
+record_type: "analysis"
+document_type: "认证绕过与关联链解读"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "Himmelblau3.0.x且未配置预期provider/域、SSH集成可达；外部租户账户；管理员映射/本地符号链接链另有条件"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/%E6%BB%A1%E5%88%86%E6%BC%8F%E6%B4%9E%E5%AE%9E%E5%BD%95%EF%BC%9A%E4%B8%80%E4%B8%AA%E7%BC%BA%E5%A4%B1%E7%9A%84%E9%85%8D%E7%BD%AE%E9%A1%B9%EF%BC%8C%E5%A6%82%E4%BD%95%E8%AE%A9%20Linux%20%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%90%91%E6%89%80%E6%9C%89%E4%BA%BA%E6%95%9E%E5%BC%80%E5%A4%A7%E9%97%A8.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-c3667d72fea609decc9f8891"
+entity_id: "ve-c3667d72fea609decc9f8891"
+schema_version: "1"
 ---
 
-#  满分漏洞实录：一个缺失的配置项，如何让 Linux 服务器向所有人敞开大门  
+# 满分漏洞实录：一个缺失的配置项，如何让 Linux 服务器向所有人敞开大门
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Himmelblau Entra ID认证套件
+- 文献类型：认证绕过与关联链解读
+- 版本、权限及部署边界：Himmelblau3.0.x且未配置预期provider/域、SSH集成可达；外部租户账户；管理员映射/本地符号链接链另有条件
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. frontmatter漏相关提权实体，实际Himmelblau产品而非全部Linux服务器
+2. 主故事domain缺失即任意租户，但修复逻辑接受domain或oidc_issuer_url；仅grep domain无输出不充分证明漏洞/必须配置，需同时查issuer和配置节
+3. 发布到修复9天不等于披露到补丁9天，标题小节混淆时间概念；需原报告时间线
+4. 缓存持续有效、同名组管理员映射和31979链均需分别官方证据，不能把潜在条件链当默认完整控制
+5. 官方两个GHSA链接优点；3.1.0链接实际通用releases应精确tag，日志grep success只是线索非充分审计
+6. 双标题和重复泛化叙述可压缩，保留租户授权边界及缓存审计要点
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://nvd.nist.gov/vuln/detail/CVE-2026-31957>
+- 原文参考链接（未重新核验）：<https://github.com/himmelblau-idm/himmelblau/security/advisories/GHSA-q746-m2wv-qh4v>
+- 原文参考链接（未重新核验）：<https://github.com/himmelblau-idm/himmelblau/security/advisories/GHSA-44wm-q286-ghq3>
+- 原文参考链接（未重新核验）：<https://github.com/himmelblau-idm/himmelblau/releases>
+- 原文参考链接（未重新核验）：<https://www.thehackerwire.com/himmelblau-critical-auth-misconfiguration-cve-2026-31957/>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 原创 CVE-SEC
                     CVE-SEC  CVE-SEC   2026-03-13 00:00  
   
@@ -164,4 +221,4 @@ journalctl -u himmelblaud --since "2026-03-02" | grep -i "success"
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

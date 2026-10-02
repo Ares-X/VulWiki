@@ -1,8 +1,53 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-a94f6d5d70e4f8a69fad56a4"
+entity_id: "ve-a94f6d5d70e4f8a69fad56a4"
+schema_version: "1"
+title: "严重的蓝牙漏洞已存在多年，可用于接管安卓、iOS 和 Linux 设备"
+product: "Android/Linux/macOS/iOS相关蓝牙HID实现"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2023-45866"
+referenced_identifiers: ""
+prerequisites: "蓝牙范围内，具体OS配对/发现状态未逐平台列"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%99%BA%E8%83%BD%E8%AE%BE%E5%A4%87/%E8%93%9D%E7%89%99/%E4%B8%A5%E9%87%8D%E7%9A%84%E8%93%9D%E7%89%99%E6%BC%8F%E6%B4%9E%E5%B7%B2%E5%AD%98%E5%9C%A8%E5%A4%9A%E5%B9%B4%EF%BC%8C%E5%8F%AF%E7%94%A8%E4%BA%8E%E6%8E%A5%E7%AE%A1%E5%AE%89%E5%8D%93%E3%80%81iOS%20%E5%92%8C%20Linux%20%E8%AE%BE%E5%A4%87.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 #  严重的蓝牙漏洞已存在多年，可用于接管安卓、iOS 和 Linux 设备   
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Android/Linux/macOS/iOS相关蓝牙HID实现
+- 本文讨论：CVE-2023-45866
+- 版本、权限与配置前提：蓝牙范围内，具体OS配对/发现状态未逐平台列
+- 资料类型：蓝牙漏洞新闻；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 以远程接管表述省略邻近无线前提，跨平台条件不可共用
+- 未给Marc Newlin原研究与逐平台补丁，主来源SCMagazine而导语称Darkreading
+- 无PoC是2023-12报道状态，应加时间；无关专家评论与广告冗余
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 各平台版本、是否需既有配对/可发现及补丁待原研究核对
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 Steve Zurier  代码卫士   2023-12-11 17:12  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

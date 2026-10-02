@@ -1,8 +1,53 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-11381d1c412a2a8f20a39406"
+entity_id: "ve-11381d1c412a2a8f20a39406"
+schema_version: "1"
+title: "QNAP QVR Pro 严重漏洞可导致系统遭远程访问"
+product: "QNAP QVR Pro应用"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2026-22898"
+referenced_identifiers: ""
+prerequisites: "2.7.x声称，修复2.7.4.1485+；未认证可达端点"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%99%BA%E8%83%BD%E8%AE%BE%E5%A4%87/QNAP%20QVR/QNAP%20QVR%20Pro%20%E4%B8%A5%E9%87%8D%E6%BC%8F%E6%B4%9E%E5%8F%AF%E5%AF%BC%E8%87%B4%E7%B3%BB%E7%BB%9F%E9%81%AD%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 #  QNAP QVR Pro 严重漏洞可导致系统遭远程访问  
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：QNAP QVR Pro应用
+- 本文讨论：CVE-2026-22898
+- 版本、权限与配置前提：2.7.x声称，修复2.7.4.1485+；未认证可达端点
+- 资料类型：监控软件认证缺失新闻；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 从未授权关键功能访问直接扩展到完全攻陷/恶意载荷，无具体功能或链证据
+- 元数据漏CVE；仅二级媒体来源，无QNAP公告
+- 所有2.7.x立即更新需排除已修复2.7.4.1485+
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 具体关键功能、版本范围和官方修复待核验
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 Abinaya
                     Abinaya  代码卫士   2026-03-24 10:12  
   

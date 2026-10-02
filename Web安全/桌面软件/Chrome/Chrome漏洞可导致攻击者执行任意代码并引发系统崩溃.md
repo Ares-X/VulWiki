@@ -1,8 +1,60 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2026-1862;CVE-2026-1861"
+identifier_role: "primary"
+primary_identifiers: "CVE-2026-1862;CVE-2026-1861"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "Chrome漏洞可导致攻击者执行任意代码并引发系统崩溃"
+product: "Chrome V8/libvpx"
+record_type: "roundup"
+document_type: "双漏洞更新新闻"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "恶意网页/视频；144.0.7559.132/.133；沙箱内执行"
+side_effects: "元数据空、系统崩溃标题过强、未披露在野状态须保留；空推荐链接/小标题/广告删除"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Chrome/Chrome%E6%BC%8F%E6%B4%9E%E5%8F%AF%E5%AF%BC%E8%87%B4%E6%94%BB%E5%87%BB%E8%80%85%E6%89%A7%E8%A1%8C%E4%BB%BB%E6%84%8F%E4%BB%A3%E7%A0%81%E5%B9%B6%E5%BC%95%E5%8F%91%E7%B3%BB%E7%BB%9F%E5%B4%A9%E6%BA%83.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-0dc2f172ede6087345ca3e6e"
+entity_id: "ve-0dc2f172ede6087345ca3e6e"
+schema_version: "1"
 ---
 
-#  Chrome漏洞可导致攻击者执行任意代码并引发系统崩溃  
+# Chrome漏洞可导致攻击者执行任意代码并引发系统崩溃
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Chrome V8/libvpx
+- 文献类型：双漏洞更新新闻
+- 版本、权限及部署边界：恶意网页/视频；144.0.7559.132/.133；沙箱内执行
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 与邑安全篇正文基本相同且同CyberSecurityNews链接，非独立研究
+2. 漏洞表仅截图未视检，比同组文本表信息可检索性差，合并选文本表保留
+3. 元数据空、系统崩溃标题过强、未披露在野状态须保留；空推荐链接/小标题/广告删除
+
+### 操作风险
+
+元数据空、系统崩溃标题过强、未披露在野状态须保留；空推荐链接/小标题/广告删除
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://cybersecuritynews.com/chrome-vulnerabilities-arbitrary-code-2/>
+- 原文参考链接（未重新核验）：<https://mp.weixin.qq.com/s?__biz=MjM5NjA0NjgyMA==&mid=2651334777&idx=1&sn=e052da512a608ee2d0ee20b662e93404&scene=21#wechat_redirect>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
  FreeBuf   2026-02-05 10:05  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/qq5rfBadR38jUokdlWSNlAjmEsO1rzv3srXShFRuTKBGDwkj4gvYy34iajd6zQiaKl77Wsy9mjC0xBCRg0YgDIWg/640?wx_fmt=gif "")  
@@ -91,4 +143,4 @@ https://cybersecuritynews.com/chrome-vulnerabilities-arbitrary-code-2/
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

@@ -1,9 +1,59 @@
 ---
-cve: "CVE-2026-45829"
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2026-45829"
+identifier_role: "primary"
+primary_identifiers: "CVE-2026-45829"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "CVSS 10.0"
+product: "ChromaDB Python FastAPI server"
+record_type: "advisory"
+document_type: "漏洞通告与示意请求"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "文称>=1.0.0截至1.5.8未修；Python前端模型加载路径，Rust前端差异需验证"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/CVSS%2010.0.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-02fb39ec316bf3cef5d1ea63"
+entity_id: "ve-02fb39ec316bf3cef5d1ea63"
+schema_version: "1"
 ---
 
-#  CVSS 10.0 【严重】CVE-2026-45829 ChromaDB 爆出未授权 RCE：ChromaToast 横扫 AI 基础设施  
+# CVSS 10.0
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：ChromaDB Python FastAPI server
+- 文献类型：漏洞通告与示意请求
+- 版本、权限及部署边界：文称>=1.0.0截至1.5.8未修；Python前端模型加载路径，Rust前端差异需验证
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 只有攻击叙述没有HiddenLayer/厂商/原研究链接，真实调用链、schema及鉴权顺序尚待核验
+2. EXP地址为作者本机/opt/aikunsec路径，无法取得；恶意模型占位名不构成完整复现
+3. 嵌套Markdown围栏错乱，JSON标python，请求头正文缺空行；修复排版
+4. 4500搜索结果不能直接计可利用资产；将截至文章日期的未修状态时间化，不扩大到所有ChromaDB/Rust部署
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 原创 chicken
                     chicken  爱坤sec   2026-05-22 18:30  
   
@@ -30,7 +80,7 @@ app="Chroma-ChromaDB"
 ![](https://mmbiz.qpic.cn/mmbiz_png/uqtLGQlJSxXXI2r8J2P1LVsVvib4n1ssyBn7hIo9cicH6Qrn3h9s0EaSferGKIEq4oaDMiafLVaf9RIAUe9ibBMQmibWicNg5wgk5cnGR22A4C7icI/640?wx_fmt=png&from=appmsg "")  
   
 五 漏洞利用  
-```
+
 **【根因】** 两个独立缺陷叠加：
 1. 服务器无条件信任客户端提交的模型标识符（`model_name`），未做任何校验
 2. 模型加载在**鉴权之前**执行，鉴权检查形同虚设
@@ -65,7 +115,7 @@ Content-Type: application/json
 }
 ```
 HiddenLayer 于 2026 年 2 月 17 日向 ChromaDB 报告，独立研究员 Azraelxuemo 更早在 2025 年 11 月报告，均未获回应。截至 ChromaDB 1.5.8 **仍未修复**。
-```  
+
   
 临时缓解：限制网络访问、禁止暴露 Python FastAPI 端口到公网、使用 Rust 前端替代。  
   
@@ -77,4 +127,4 @@ HiddenLayer 于 2026 年 2 月 17 日向 ChromaDB 报告，独立研究员 Azrae
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

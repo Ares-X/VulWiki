@@ -1,8 +1,46 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "攻击者利用 MLflow 漏洞窃取云凭据和机密信息"
+product: "MLflow/FUXA"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-59847f11f413fd4d69b6a626"
+entity_id: "ve-59847f11f413fd4d69b6a626"
+schema_version: "1"
 ---
 
-#  攻击者利用 MLflow 漏洞窃取云凭据和机密信息  
+# 攻击者利用 MLflow 漏洞窃取云凭据和机密信息
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 主CVE64849/25895皆缺metadata
+- FUXA部分不属于MLflow
+- 后段33831和33821自相矛盾应查证
+- 恶意扫描/文件覆盖与RCE利用证据不同
+- 版本、利用观察日期需字段
+- 缺原始watchTowr/VulnCheck链接
+- 长广告与断行影响阅读
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 Ravie Lakshmanan
                     Ravie Lakshmanan  代码卫士   2026-08-19 07:42  
   

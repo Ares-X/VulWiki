@@ -1,8 +1,53 @@
 ---
 source: "Threekiii/Awesome-POC"
+title: "Aria2 任意文件写入漏洞"
+product: "aria2"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "RPC可访问并具有操作权限/未配认证，aria2进程对目标目录可写；cron链需root目录权限及cron服务"
+source_status: "unknown"
+side_effects: "含计划任务、启动项或 SSH 授权文件写入：会改变后续执行或登录行为。测试前备份原文件，结束后恢复原内容、权限与属主，不覆盖生产文件。; 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。"
+id: "vw-85faa1b16e16e1750fd68f0d"
+entity_id: "ve-85faa1b16e16e1750fd68f0d"
+schema_version: "1"
+canonical: "Web安全/服务器软件/Aria2/Aria2 任意文件写入漏洞.md"
 ---
 
 # Aria2 任意文件写入漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：RPC可访问并具有操作权限/未配认证，aria2进程对目标目录可写；cron链需root目录权限及cron服务
+- 证据范围：下载工具预期可指定路径，风险核心是RPC暴露与进程权限；不能无条件当所有版本产品漏洞
+
+### 本次正文校订
+
+- 按实际内容修正 1 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 缺RPC认证配置与运行用户说明
+- 外部托管UI处理目标地址/凭据有信任边界，应提供本地UI替代
+- cron任务文件执行受命名/属主/权限/格式影响，不是目录任意文件都必执行
+
+### 操作风险与资料使用
+
+- 含计划任务、启动项或 SSH 授权文件写入：会改变后续执行或登录行为。测试前备份原文件，结束后恢复原内容、权限与属主，不覆盖生产文件。
+- 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 ## 漏洞描述
 
@@ -14,7 +59,7 @@ Aria2是一个命令行下轻量级、多协议、多来源的下载工具（支
 
 Vulhub启动漏洞环境：
 
-```
+```shell
 docker-compose up -d
 ```
 

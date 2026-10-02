@@ -1,8 +1,51 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "N-Able Take Control Agent 高危漏洞可用于 Windows 系统提权"
+product: "N-able Take Control Agent Windows updater"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2023-27470"
+referenced_identifiers: ""
+identifier_role: "primary"
+cve: "CVE-2023-27470"
+prerequisites: "Local low-privileged attacker;<=7.0.41.1141;fixed7.0.43 claimed;race/symlink and MSI rollback chain"
+source_status: "unknown"
+side_effects: "含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。"
+id: "vw-610c6820b4f217d392b52aec"
+entity_id: "ve-610c6820b4f217d392b52aec"
+schema_version: "1"
 ---
 
-#  N-Able Take Control Agent 高危漏洞可用于 Windows 系统提权   
+# N-Able Take Control Agent 高危漏洞可用于 Windows 系统提权
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：Local low-privileged attacker;<=7.0.41.1141;fixed7.0.43 claimed;race/symlink and MSI rollback chain
+- 证据范围：Explains arbitrary SYSTEM delete->local elevation; not web panel remote flaw
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- Reclassify/cross-link local Windows privilege escalation; not remote panel RCE
+- CVE/date/version absent metadata
+- No direct Mandiant/vendor advisory link
+- Translation '保护提升的Command Prompt' unclear; retain file deletion vs chained code execution distinction
+- Remove ads/unrelated news
+
+### 操作风险与资料使用
+
+- 含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 THN  代码卫士   2023-09-15 17:24  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

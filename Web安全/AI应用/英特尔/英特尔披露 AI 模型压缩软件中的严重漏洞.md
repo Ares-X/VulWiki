@@ -1,8 +1,44 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "英特尔披露 AI 模型压缩软件中的严重漏洞"
+product: "Intel Neural Compressor"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-a94e878c5186a111eeec0f9b"
+entity_id: "ve-a94e878c5186a111eeec0f9b"
+schema_version: "1"
 ---
 
-#  英特尔披露 AI 模型压缩软件中的严重漏洞   
+# 英特尔披露 AI 模型压缩软件中的严重漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 主漏洞22476与21792需分列，UEFI漏洞属背景
+- 正文称2.5.0修复但无厂商公告链接
+- 缺具体受影响输入和函数
+- 压缩与隔离术语翻译不准确，不能推导根因
+- 广告和无关推荐应剥离
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 Jai Vijayan  代码卫士   2024-05-20 17:37  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

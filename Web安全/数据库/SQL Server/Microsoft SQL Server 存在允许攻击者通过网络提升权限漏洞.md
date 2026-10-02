@@ -1,8 +1,46 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Microsoft SQL Server 存在允许攻击者通过网络提升权限漏洞"
+product: "Microsoft SQL Server"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2026-20803"
+referenced_identifiers: ""
+identifier_role: "primary"
+cve: "CVE-2026-20803"
+prerequisites: "已认证高权限账户及网络访问；文称2022/2025相关分支"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-25c8e0b48e986e0ad3e65b7d"
+entity_id: "ve-25c8e0b48e986e0ad3e65b7d"
+schema_version: "1"
 ---
 
-#  Microsoft SQL Server 存在允许攻击者通过网络提升权限漏洞  
+# Microsoft SQL Server 存在允许攻击者通过网络提升权限漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：已认证高权限账户及网络访问；文称2022/2025相关分支
+- 证据范围：描述关键功能鉴权缺失和CU/GDR更新，无机制源码/请求；不能从新闻推定具体利用路径
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 主 CVE frontmatter 缺失
+- 高权限认证用户与绕过身份验证需解释不同权限边界
+- 调试、内存转储以及加密数据影响缺直接公告引用
+- 需按 CU/GDR 分支核对16.0.4230.2/16.0.1165.1/17.0.1050.2与KB
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
  网安百色   2026-01-15 11:47  
   
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/1QIbxKfhZo4tv2I8icIGyC9JYH01gxjPlnGj5LEUpN0QMUayYo53qFuz9vYdiachkyC9wjE1IIpsDYkKSSib10dgQ/640?wx_fmt=jpeg&from=appmsg "")  

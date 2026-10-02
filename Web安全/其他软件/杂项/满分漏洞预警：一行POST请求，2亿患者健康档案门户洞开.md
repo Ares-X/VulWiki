@@ -1,9 +1,62 @@
 ---
 cve: "CVE-2026-24898"
 source: "gelusus/wxvl 公众号漏洞文库"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "满分漏洞预警：一行POST请求，2亿患者健康档案门户洞开"
+product: "OpenEMR MedEx CVE-2026-24898"
+record_type: "advisory"
+document_type: "技术文章（细分类待核）"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "Token权限只及MedEx业务不能推整个EHR全库，未展示API实际权限范围；HIPAA自动可报告、即时报告/统一150万美元上限及刑事条件过度法律确定性，无监管源，应另请合规判断"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/%E6%BB%A1%E5%88%86%E6%BC%8F%E6%B4%9E%E9%A2%84%E8%AD%A6%EF%BC%9A%E4%B8%80%E8%A1%8CPOST%E8%AF%B7%E6%B1%82%EF%BC%8C2%E4%BA%BF%E6%82%A3%E8%80%85%E5%81%A5%E5%BA%B7%E6%A1%A3%E6%A1%88%E9%97%A8%E6%88%B7%E6%B4%9E%E5%BC%80.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-4b2a0403435a9426c97ffd39"
+entity_id: "ve-4b2a0403435a9426c97ffd39"
+schema_version: "1"
 ---
 
-#  满分漏洞预警：一行POST请求，2亿患者健康档案门户洞开  
+# 满分漏洞预警：一行POST请求，2亿患者健康档案门户洞开
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：OpenEMR MedEx CVE-2026-24898
+- 文献类型：技术文章（细分类待核）
+- 版本、权限及部署边界：Token权限只及MedEx业务不能推整个EHR全库，未展示API实际权限范围；HIPAA自动可报告、即时报告/统一150万美元上限及刑事条件过度法律确定性，无监管源，应另请合规判断
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 有GHSA精确来源/<8.0.0与8.0.0修复，需有效MedEx集成凭据而非所有2亿患者或所有OpenEMR实例
+2. 非404不证明MedEx启用，本文自己说启用检查是修复后新增，因此旧版在后台关闭是否有效不能默认
+3. Token权限只及MedEx业务不能推整个EHR全库，未展示API实际权限范围
+4. 补丁仍不验证共享密钥却称实际危害彻底消除过强，仍需评估未授权触发同步
+5. HIPAA自动可报告、即时报告/统一150万美元上限及刑事条件过度法律确定性，无监管源，应另请合规判断
+6. 正常Webhook也匹配POST日志不能作攻击证据
+7. 正文一行请求标题与枚举两步可分PoC和发现流程
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 原创 CVE-SEC
                     CVE-SEC  CVE-SEC   2026-03-09 00:01  
   
@@ -199,4 +252,4 @@ NVD详情：https://nvd.nist.gov/vuln/detail/CVE-2026-24898
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

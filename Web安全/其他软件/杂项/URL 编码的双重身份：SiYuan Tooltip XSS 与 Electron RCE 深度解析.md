@@ -1,9 +1,61 @@
 ---
-cve: "CVE-2026-44588"
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2026-44588"
+identifier_role: "primary"
+primary_identifiers: "CVE-2026-44588"
+referenced_identifiers: "CVE-2026-34585;CVE-2026-44670"
+identifier_status: "unknown"
+title: "URL 编码的双重身份：SiYuan Tooltip XSS 与 Electron RCE 深度解析"
+product: "SiYuan Electron desktop"
+record_type: "analysis"
+document_type: "推演性深度分析"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "文称<3.7.0；攻击者可写恶意文档标题，受害者悬停；桌面渲染Node开放与浏览器版应区别"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/URL%20%E7%BC%96%E7%A0%81%E7%9A%84%E5%8F%8C%E9%87%8D%E8%BA%AB%E4%BB%BD%EF%BC%9ASiYuan%20Tooltip%20XSS%20%E4%B8%8E%20Electron%20RCE%20%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-caba71259254291fb1d3af68"
+entity_id: "ve-caba71259254291fb1d3af68"
+schema_version: "1"
 ---
 
-#  URL 编码的双重身份：SiYuan Tooltip XSS 与 Electron RCE 深度解析  
+# URL 编码的双重身份：SiYuan Tooltip XSS 与 Electron RCE 深度解析
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：SiYuan Electron desktop
+- 文献类型：推演性深度分析
+- 版本、权限及部署边界：文称<3.7.0；攻击者可写恶意文档标题，受害者悬停；桌面渲染Node开放与浏览器版应区别
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 只有GHSA编号无源URL/commit；escapeAriaLabel自称近似、tooltip伪码与行号未固定版本；不能当原始代码证据
+2. 官方修复被描述为删除decode或改textContent二选一，显示未明确核对补丁；必须验证具体变更
+3. 评分因绕过旧补丁更高不是CVSS指标，需完整向量；Node配置不是XSS根因，关Node也不消除XSS
+4. 共享同步仓库/S3凭据写权能否篡改加密同步内容、共享笔记本及.sy.zip导入需产品实际功能证据，不能当已证实攻击载体
+5. 所有<3.7.0安装受影响需区分桌面/浏览器、CSP和到达路径；文件访问仍受OS沙箱/ACL，三配置不决定所有XSS最终等级
+6. 检测grep仅固定两路径且大小写有限易漏，搜索命中也可能笔记正常内容；前驱和后继保持独立关联
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 原创 CVE-SEC
                     CVE-SEC  CVE-SEC   2026-05-15 05:30  
   
@@ -117,12 +169,12 @@ decodeURIComponent
  得到：%3Cimg src=x onerror=alert(1)%3E  
   
 - decodeURIComponent(...)  
- 解码为：<img src=x onerror=alert(1)>  
+ 解码为：&lt;img src=x onerror=alert(1)&gt;  
   
 - messageElement.innerHTML = ...  
  将真实 HTML 标签注入 DOM  
   
-HTML5 解析器遇到 <img src=x onerror=alert(1)>  
+HTML5 解析器遇到 &lt;img src=x onerror=alert(1)&gt;  
 ，创建一个 img 元素，src 属性值 x  
  不是有效图片，加载失败，触发 onerror  
  事件处理器，执行 JavaScript alert(1)  
@@ -237,4 +289,4 @@ CVE-2026-44588 展示了一个由编码层不一致引发的精妙漏洞：生�
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

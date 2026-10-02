@@ -1,8 +1,55 @@
 ---
 cve: "CVE-2019-17137"
+id: "vw-6b8611017fb136a7ede4680c"
+entity_id: "ve-6b8611017fb136a7ede4680c"
+schema_version: "1"
+title: "Netgear R6220 认证绕过漏洞分析"
+product: "NETGEAR R6220"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2019-17137"
+referenced_identifiers: ""
+prerequisites: "邻接、未认证；实机1.1.0.68，对比.86与.92Beta"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/NETGEAR/Netgear%20R6220%20%E8%AE%A4%E8%AF%81%E7%BB%95%E8%BF%87%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_url: "https://mp.weixin.qq.com/s/AQINciJ9i9IOsZ2F11r_Bw"
+source_status: "recorded"
 ---
 
 # Netgear R6220 认证绕过漏洞分析
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：NETGEAR R6220
+- 本文讨论：CVE-2019-17137 / PSV-2019-0109
+- 版本、权限与配置前提：邻接、未认证；实机1.1.0.68，对比.86与.92Beta
+- 资料类型：补丁对比研究；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 相关工具节实际放HTTP PoC，结构误位；currentsetting.htm/.html混写
+- 简介把1.1.0.86扩大到所有以前版本仅有.68实验支撑，需官方范围
+- 结尾LAN/WAN扩大攻击面应说明远程管理启用条件
+- 已落实的文本修订：HTTP 报文围栏改为 http。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- .92Beta与正式修复关系、WAN配置及图证待核验
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/AQINciJ9i9IOsZ2F11r_Bw)
@@ -48,7 +95,7 @@ Version 1.1.0.92（已修复）：http://support.netgear.cn/Upfilepath/R6220-V1.
 
 3、相关工具
 
-```
+```http
 GET /index.htm%00currentsetting.htm HTTP/1.1
 Host: 192.168.1.1
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:78.0) Gecko/20100101 Firefox/78.0

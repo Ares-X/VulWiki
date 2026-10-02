@@ -1,6 +1,38 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+product: "WordPress LiteSpeed Cache"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2023-40000"
+referenced_identifiers: "CVE-2023-4372"
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "WordPress 插件 LiteSpeed 漏洞影响500万个站点"
+prerequisites: "来源所述条件，未列明部分仍待核：40000 fixed5.7.0.1 claimed; stored admin-notice needs privileged victim viewing wp-admin;4372contributor+ separate"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-d6d5a56c5f31da47ae772079"
+entity_id: "ve-d6d5a56c5f31da47ae772079"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：40000 fixed5.7.0.1 claimed; stored admin-notice needs privileged victim viewing wp-admin;4372contributor+ separate
+
+- **事实待核（1）**：标题500万是插件安装量非确认受影响实例，应加时间和口径。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **事实待核（2）**：主CVE未进元数据；4372是历史不同漏洞，不应混为同一修复。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **适用与权限边界（3）**：单HTTP请求提权表述省略管理员查看注入通知这一触发条件。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **事实待核（4）**：新闻原文精确但无Patchstack原公告；2024最新6.1应历史化。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 #  WordPress 插件 LiteSpeed 漏洞影响500万个站点   
 THN  代码卫士   2024-02-28 18:01  

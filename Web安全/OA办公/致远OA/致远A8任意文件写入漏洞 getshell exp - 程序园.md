@@ -1,10 +1,50 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "致远A8 htmlofficeservlet路径写入"
+product: "致远A8"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "A8-V5 6.1sp1、A8+7.0各SP/7.1；Windows固定目录"
+prerequisites: "声明无需登录"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+source_url: "http://www.voidcn.com/article/p-wuabvojx-bya.html"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E8%87%B4%E8%BF%9COA/%E8%87%B4%E8%BF%9CA8%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E5%86%99%E5%85%A5%E6%BC%8F%E6%B4%9E%20getshell%20exp%20-%20%E7%A8%8B%E5%BA%8F%E5%9B%AD.md"
+id: "vw-1d3d16efccf55012adb4d45d"
+entity_id: "ve-1d3d16efccf55012adb4d45d"
+schema_version: "1"
 ---
 
-# 致远A8任意文件写入漏洞 getshell exp - 程序园
+# 致远A8 htmlofficeservlet路径写入
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：致远A8；htmlofficeservlet路径写入
+- 版本、配置及部署条件：A8-V5 6.1sp1、A8+7.0各SP/7.1；Windows固定目录
+- 认证与权限前提：声明无需登录
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 同htmlofficeservlet多报告；Python每行带行号及弯引号导致语法错误
+- 生成file_name但payload仅剩FILE行，文件名插入代码丢失，不能完成写入
+- DBSTEP错误只表入口可达；所谓加密实为自定义Base64编码
+- 需合并完整请求/分析，保留版本和原博客出处
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [www.voidcn.com](http://www.voidcn.com/article/p-wuabvojx-bya.html) 
 
 近期爆出致远 OA 系统的一些版本存在任意文件写入漏洞，远程攻击者在无需登录的情况下可通过向 URL /seeyon/htmlofficeservlet POST 精心构造的数据即可向目标服务器写入任意文件，写入成功后可执行任意系统命令进而控制目标服务器。

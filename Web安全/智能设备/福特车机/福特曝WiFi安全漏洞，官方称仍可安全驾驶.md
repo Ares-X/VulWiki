@@ -1,16 +1,61 @@
 ---
 cve: "CVE-2023-29468"
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-b5a35c21200dec807d6d1c95"
+entity_id: "ve-b5a35c21200dec807d6d1c95"
+schema_version: "1"
+title: "福特曝WiFi安全漏洞，官方称仍可安全驾驶"
+product: "Ford/Lincoln SYNC3 WL18xx MCP驱动"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2023-29468"
+referenced_identifiers: ""
+prerequisites: "Wi-Fi范围内，车辆点火且Wi-Fi开启；车型表仅图片"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%99%BA%E8%83%BD%E8%AE%BE%E5%A4%87/%E7%A6%8F%E7%89%B9%E8%BD%A6%E6%9C%BA/%E7%A6%8F%E7%89%B9%E6%9B%9DWiFi%E5%AE%89%E5%85%A8%E6%BC%8F%E6%B4%9E%EF%BC%8C%E5%AE%98%E6%96%B9%E7%A7%B0%E4%BB%8D%E5%8F%AF%E5%AE%89%E5%85%A8%E9%A9%BE%E9%A9%B6.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 #  福特曝WiFi安全漏洞，官方称仍可安全驾驶   
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Ford/Lincoln SYNC3 WL18xx MCP驱动
+- 本文讨论：CVE-2023-29468；大众/TPMS等历史事件无关
+- 版本、权限与配置前提：Wi-Fi范围内，车辆点火且Wi-Fi开启；车型表仅图片
+- 资料类型：车载Wi-Fi安全新闻；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 历史其他品牌/TPMS漏洞混入会误扩大本CVE物理安全影响
+- 未给驱动/固件修复号，车型范围图像依赖；无利用证据不能由技术难度直接推出
+- SYNC3误拼YNC3
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 车型表、补丁状态和厂商安全边界声明待核
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
  网络安全应急技术国家工程中心   2023-08-15 15:40  
   
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/GoUrACT176m06s9cYGGYVzkNdD8PENS17PeicuWC2OfrrNbd1AoXYhvWRicdR0viaSxv726JR5ys6IamhUuXhleGA/640?wx_fmt=jpeg "")  
   
 据bleepingcomputer消息，福特汽车供应商的安全人员向福特公司报告了一个安全漏洞，漏洞编号 CVE-2023-29468。该漏洞位于汽车信息娱乐系统集成的 WiFi 系统 WL18xx MCP 驱动程序中，允许 WiFi 范围内的攻击者使用特制的帧触发缓冲区溢出。  
   
-资料显示，SYNC3 是一款现代信息娱乐系统，支持车载 WiFi 热点、电话连接、语音命令、第三方应用程序等，YNC3 信息娱乐系统被广泛应用于多款福特和林肯汽车上。  
+资料显示，SYNC3 是一款现代信息娱乐系统，支持车载 WiFi 热点、电话连接、语音命令、第三方应用程序等，SYNC3 信息娱乐系统被广泛应用于多款福特和林肯汽车上。  
   
 受影响的汽车型号如下所示：  
   

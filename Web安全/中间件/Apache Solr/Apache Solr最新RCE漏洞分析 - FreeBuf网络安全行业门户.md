@@ -1,8 +1,45 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "Apache Solr最新RCE漏洞分析 - FreeBuf网络安全行业门户"
+product: "Apache Solr VelocityResponseWriter"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "实验8.1.1，core、Config API写能力与Velocity模板loader启用"
+source_url: "https://www.freebuf.com/vuls/218730.html"
+source_status: "recorded"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-4c1fd0251695097c127a7afa"
+entity_id: "ve-4c1fd0251695097c127a7afa"
+schema_version: "1"
 ---
 
 # Apache Solr最新RCE漏洞分析 - FreeBuf网络安全行业门户
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：实验8.1.1，core、Config API写能力与Velocity模板loader启用
+- 证据范围：从SolrConfigHandler到writer/engine/template.merge的独立调用链值得保留，不应与纯PoC全文去重。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 标题最新0day/尚无补丁是2019历史状态，应加时间标签与后续17558公告关联
+- Velocity基础语法含弯引号和缺$示例，非可直接执行代码
+- 需区分params与configset资源loader并解释是否两项都是该利用的必要条件
+- 缺权限/持久修改恢复及后续修复版本
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [www.freebuf.com](https://www.freebuf.com/vuls/218730.html) Apache Solr最新RCE漏洞分析 [平安银行应用安全团队](https://www.freebuf.com/author/平安银行应用安全团队) 2019-11-01 13:30:59 367535 3

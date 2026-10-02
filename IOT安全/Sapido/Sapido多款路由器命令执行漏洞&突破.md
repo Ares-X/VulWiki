@@ -1,8 +1,54 @@
 ---
 source: "历史归档批(无原始出处标注)"
+id: "vw-ddf7b837a7c20312397c46a5"
+entity_id: "ve-ddf7b837a7c20312397c46a5"
+schema_version: "1"
+title: "Sapido多款路由器命令执行漏洞&突破"
+product: "Sapido BR270n/BRC76n/GR297/RB1732"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+prerequisites: "列BR270n2.1.03/BRC76n2.1.03/GR2972.1.3/RB1732 2.0.43及之前；结尾BR270n/RB需登录，另两款无登录"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/IOT%E5%AE%89%E5%85%A8/Sapido/Sapido%E5%A4%9A%E6%AC%BE%E8%B7%AF%E7%94%B1%E5%99%A8%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E%26%E7%AA%81%E7%A0%B4.md"
+review_date: "2026-10-02"
+side_effects: "执行文中载荷可能以目标进程权限启动命令或加载代码；权限受认证角色、操作系统账户及依赖版本约束，不能把 root/200 等通用字符串当成功证据"
+source_status: "unknown"
 ---
 
 # Sapido多款路由器命令执行漏洞&突破
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Sapido BR270n/BRC76n/GR297/RB1732
+- 本文讨论：formSysCmd系统命令接口授权缺陷
+- 版本、权限与配置前提：列BR270n2.1.03/BRC76n2.1.03/GR2972.1.3/RB1732 2.0.43及之前；结尾BR270n/RB需登录，另两款无登录
+- 资料类型：多型号逆向/PoC教程；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 认证差异仅结尾交代，RB1732脚本却无会话，需补认证步骤
+- 正文因翻译/转码出现状语从句等语义噪声但可读；apmib_get存在不足单独证明Boa，webs也未必临时文件
+- Python2 print与脆弱textarea偏移，无请求异常处理
+- syscmd是管理功能，漏洞需明确未授权/权限边界而非仅system存在
+
+### 操作风险与恢复
+
+- 执行文中载荷可能以目标进程权限启动命令或加载代码；权限受认证角色、操作系统账户及依赖版本约束，不能把 root/200 等通用字符串当成功证据
+
+### 待核与来源
+
+- 原实验室报告、各版本边界/服务器组件识别待核
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 
 # 一、漏洞简介
 

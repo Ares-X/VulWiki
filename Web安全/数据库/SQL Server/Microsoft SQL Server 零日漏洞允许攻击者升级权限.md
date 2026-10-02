@@ -1,9 +1,45 @@
 ---
 cve: "CVE-2026-21262"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Microsoft SQL Server 零日漏洞允许攻击者升级权限"
+product: "Microsoft SQL Server"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2026-21262"
+referenced_identifiers: ""
+identifier_role: "primary"
+prerequisites: "低权限已认证网络用户；文列2016至2025不同CU/GDR分支"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-e223a9fe4f58a7942369f2db"
+entity_id: "ve-e223a9fe4f58a7942369f2db"
+schema_version: "1"
 ---
 
-#  Microsoft SQL Server 零日漏洞允许攻击者升级权限  
+# Microsoft SQL Server 零日漏洞允许攻击者升级权限
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：低权限已认证网络用户；文列2016至2025不同CU/GDR分支
+- 证据范围：给出版本KB与MSRC链接，属于公告摘要，未提供PoC；零日、公开披露、不在野利用应保持区分
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 零日称谓应注明所依据的公开披露/补丁时间，不应推定已有野外攻击
+- KB逐项缺可点击原始补丁链接
+- 未具体说明必要的显式权限
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 sec随谈
                     sec随谈  sec随谈   2026-03-12 01:36  
   

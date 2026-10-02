@@ -1,7 +1,44 @@
 ---
 version: "{"
 source: "MrWQ/vulnerability-paper"
+product: "Fastjson parser/cache/BCEL/file-write and post-exploitation examples"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "奇安信攻防社区 - Java 安全 - FastJson 系列详解"
+prerequisites: "来源所述条件，未列明部分仍待核：<=24,25–41,42,43,25–47 cache boundary32/33,68 and62/66; JDK8u65/181, TomcatDBCP9.0.63, CommonsIO2.5 and variants"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "recorded"
+source_url: "https://forum.butian.net/share/2858"
+id: "vw-873ca7d1db87aaa96207e53f"
+entity_id: "ve-873ca7d1db87aaa96207e53f"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：&lt;=24,25–41,42,43,25–47 cache boundary32/33,68 and62/66; JDK8u65/181, TomcatDBCP9.0.63, CommonsIO2.5 and variants
+
+代码与实验材料：Student demos, setter/getter distinctions, source traces, Templates/BCEL and Spring mapping code; blank C3P0 section; several code fragments intentionally incomplete but unlabeled
+
+来源证据范围：Butian2858 original plus mi1k7ea/goodapple/Y4er/research links; images hosted Qianxin
+
+- **适用与权限边界（1）**：Unqualified Object.class can instantiate all classes and all getter/setter claims ignore version/filters/config; SafeMode later-defaulttrue claim unsupported。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **证据待核（2）**：Multiple source snippets fail as written or lack correct invocation/type handling；依据：defineClass name Test vs embedded org/example/Test; open -a calculator as single executable; raw Map.Entry values assigned arrays。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **适用与权限边界（3）**：Explicit getter/property examples do not inspect private values yet conclude equal behavior; BCEL requires JDK class availability; modern JDK version parsing uses legacy second dotted segment。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **代码与转录边界（4）**：Empty C3P0 heading, absent fixes, truncated CommonsIO JSON and erroneous final Templates field ordering/types。相应原代码作为存在此问题的历史样本保留，不能直接当作可运行、成功复现的 PoC；缺失内容需回原稿核对，不据此补造可执行攻击链。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # 奇安信攻防社区 - Java 安全 - FastJson 系列详解
 

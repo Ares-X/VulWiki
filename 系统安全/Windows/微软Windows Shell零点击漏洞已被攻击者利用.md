@@ -1,8 +1,60 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2026-32202"
+identifier_role: "primary"
+primary_identifiers: "CVE-2026-32202"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "微软Windows Shell零点击漏洞已被攻击者利用"
+product: "Windows Shell"
+record_type: "advisory"
+document_type: "KEV收录新闻"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "声称2026-04-28入KEV、05-12联邦期限；未给技术入口、认证/交互边界和影响版本"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Windows/%E5%BE%AE%E8%BD%AFWindows%20Shell%E9%9B%B6%E7%82%B9%E5%87%BB%E6%BC%8F%E6%B4%9E%E5%B7%B2%E8%A2%AB%E6%94%BB%E5%87%BB%E8%80%85%E5%88%A9%E7%94%A8.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-4e2b78693a38ae73a607a16b"
+entity_id: "ve-4e2b78693a38ae73a607a16b"
+schema_version: "1"
 ---
 
-#  微软Windows Shell零点击漏洞已被攻击者利用  
+# 微软Windows Shell零点击漏洞已被攻击者利用
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Windows Shell
+- 文献类型：KEV收录新闻
+- 版本、权限及部署边界：声称2026-04-28入KEV、05-12联邦期限；未给技术入口、认证/交互边界和影响版本
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. frontmatter遗漏正文CVE；标题零点击却正文只有网络欺骗泛化与诱骗用户互动，没有零点击机制证据
+2. CISA/KEV期限、在野状态与CWE693均无直接官方URL，应优先核原始记录，不把转载当事实确认
+3. 拦截数据、绕访问控制、提权、横移属泛泛威胁链，缺此CVE具体能力证据，应删扩张推断
+4. 联邦民事机构期限已说明受众，但BOD22-01与联网云服务关系表述需核；不能建议所有用户无差别停用整个Windows
+5. 缺修复KB/官方供应商说明链接、技术PoC非必要；首字国残缺、重复紧急话术清理
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 原创 网络安全9527
                     网络安全9527  安全圈的那点事儿   2026-04-30 04:05  
   
@@ -61,4 +113,4 @@ Windows Shell 是操作系统的一个基本组件，它管理图形用户界面
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

@@ -1,7 +1,39 @@
 ---
 version: "{'@type':'java.net.Inet4Address','val':'dnslog'}"
 source: "Threekiii/Vulnerability-Wiki"
+product: "Fastjson1.2.24"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "Fastjson-1.2.24-反序列化导致任意命令执行漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：Lab1.2.24/Java8u102; latest1.2.67 fingerprint statement dated implicitly"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-b0cd05161643c39c450af976"
+entity_id: "ve-b0cd05161643c39c450af976"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：Lab1.2.24/Java8u102; latest1.2.67 fingerprint statement dated implicitly
+
+代码与实验材料：Marker and shell class/HTTP/RMI requests; timing29vs396ms only one sample; DNS indicates lookup not RCE
+
+来源证据范围：FreeBuf,xxlegend malformed space URL,zeo,marshalsec
+
+- **事实待核（1）**：Wrong version metadata and unreliable one-sample timing fingerprint。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **结论使用边界（2）**：HTTP8888/RMI8888/9999 ports change between stages andURLdropsHTTPport; hardcoded base64 callback/Java fragment formatting。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Fastjson 1.2.24 反序列化导致任意命令执行漏洞
 

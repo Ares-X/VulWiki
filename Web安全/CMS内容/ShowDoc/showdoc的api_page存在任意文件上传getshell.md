@@ -1,6 +1,36 @@
 ---
 source: "白阁文库 BaizeSec/bylibrary"
+product: "ShowDoc2.6.7 api/page/upload"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "showdoc的api_page存在任意文件上传getshell"
+prerequisites: "来源所述条件，未列明部分仍待核：登录、page_id存在且具有item项目权限；上传目录执行PHP"
+side_effects: "未执行；本文需注意的操作影响：源码明显校验editormd-image-file但实际上传file，字段错配比没有任何过滤描述更精确；与uploadImg <>绕过不同权限/入口/根因，必须独立保留"
+source_status: "unknown"
+id: "vw-b7dd91959f3ee24abd862355"
+entity_id: "ve-b7dd91959f3ee24abd862355"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：登录、page_id存在且具有item项目权限；上传目录执行PHP
+
+- **事实待核（1）**：源码明显校验editormd-image-file但实际上传file，字段错配比没有任何过滤描述更精确。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **适用与权限边界（2）**：与uploadImg &lt;&gt;绕过不同权限/入口/根因，必须独立保留。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **事实待核（3）**：HTTP只有multipart片段无headers/token且内容只是PNG头，未给PHP执行证明；master源码链接会漂移但版本tag明确。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # showdoc的api_page存在任意文件上传getshell
 

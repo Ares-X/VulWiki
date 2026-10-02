@@ -1,8 +1,63 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2025-33117;CVE-2025-33121;CVE-2025-36050"
+identifier_role: "primary"
+primary_identifiers: "CVE-2025-33117;CVE-2025-33121;CVE-2025-36050"
+referenced_identifiers: "CVE-2020-0796"
+identifier_status: "unknown"
+title: "IBM QRadar SIEM 漏洞允许攻击者执行任意命令"
+product: "IBM QRadar SIEM服务器"
+record_type: "advisory"
+document_type: "三漏洞安全更新新闻"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "33117高权管理员；33121已认证；36050本地访问；文称7.5至UP12IF01受影响、IF02修复"
+side_effects: "元数据空；三条不同初始权限/影响必须分实体，标题命令执行不能覆盖后两信息泄露"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/IBM%20QRadar%20SIEM/IBM%20QRadar%20SIEM%20%E6%BC%8F%E6%B4%9E%E5%85%81%E8%AE%B8%E6%94%BB%E5%87%BB%E8%80%85%E6%89%A7%E8%A1%8C%E4%BB%BB%E6%84%8F%E5%91%BD%E4%BB%A4.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+source_url: "https://cybersecuritynews.com/ibm-qradar-siem-vulnerability-2/"
+id: "vw-5dbc369398608bb5a668fdb3"
+entity_id: "ve-5dbc369398608bb5a668fdb3"
+schema_version: "1"
 ---
 
-#  IBM QRadar SIEM 漏洞允许攻击者执行任意命令  
+# IBM QRadar SIEM 漏洞允许攻击者执行任意命令
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：IBM QRadar SIEM服务器
+- 文献类型：三漏洞安全更新新闻
+- 版本、权限及部署边界：33117高权管理员；33121已认证；36050本地访问；文称7.5至UP12IF01受影响、IF02修复
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 元数据空；三条不同初始权限/影响必须分实体，标题命令执行不能覆盖后两信息泄露
+2. 日志本地访问且PR:N不等不需要任何OS访问能力，应解释应用认证和本地接触区别
+3. 声称研究者已证明完整控制却无原研究/验证；只有新闻源，没有IBM安全公告核对三项相同修复范围
+4. 没有公布workaround不意味着唯一防御只有升级，版本/访问限制等缓解与根治分开
+5. CVE证书/冲击/报道者机器翻译、HTML样式及推荐清理，SIEM管理服务迁Web/安全平台
+
+### 操作风险
+
+元数据空；三条不同初始权限/影响必须分实体，标题命令执行不能覆盖后两信息泄露
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://cybersecuritynews.com/ibm-qradar-siem-vulnerability-2/>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzUyMzczNzUyNQ==&mid=2247488913&idx=1&sn=acbf595a4a80dcaba647c7a32fe5e06b&chksm=fa39554bcd4edc5dc90019f33746404ab7593dd9d90109b1076a4a73f2be0cb6fa90e8743b50&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzUyMzczNzUyNQ==&mid=2247483652&idx=1&sn=b2f2ec90db499e23cfa252e9ee743265&chksm=fa3941decd4ec8c83a268c3480c354a621d515262bcbb5f35e1a2dde8c828bdc7b9011cb5072&scene=21#wechat_redirect>
+
+### 归档技术正文
+
 邑安科技  邑安全   2025-06-20 09:37  
   
 更多全球网络安全资讯尽在邑安全  

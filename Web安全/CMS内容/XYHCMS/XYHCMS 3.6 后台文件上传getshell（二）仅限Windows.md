@@ -1,6 +1,38 @@
 ---
 source: "hatch 补库批 20260928"
+product: "XYHCMS3.6"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "XYHCMS 3.6 后台文件上传getshell（二）仅限Windows"
+prerequisites: "来源所述条件，未列明部分仍待核：WindowsNTFS/PHPuploadAPIbehavior; adminextensionconfig; PHPexecution"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-617b99f9d1785d9dc315b127"
+entity_id: "ve-617b99f9d1785d9dc315b127"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：WindowsNTFS/PHPuploadAPIbehavior; adminextensionconfig; PHPexecution
+
+- **代码与转录边界（1）**：Windows总会忽略::$DATA过泛，ADS语法/文件API/版本需限定。相应原代码作为存在此问题的历史样本保留，不能直接当作可运行、成功复现的 PoC；缺失内容需回原稿核对，不据此补造可执行攻击链。
+
+- **结论使用边界（2）**：允许附件类型通常是扩展，文中填shell.php::$DATA整文件名与pathinfo实际后缀如何匹配需核。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **结论使用边界（3）**：无完整multipart/落盘响应，不能仅去掉后缀URL证明执行。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **结论使用边界（4）**：与618同黑名单但平台绕过独立应保留；无原始源/补丁。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # XYHCMS 3.6 后台文件上传getshell（二）仅限Windows
 

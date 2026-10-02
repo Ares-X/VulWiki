@@ -1,9 +1,61 @@
 ---
-cve: "CVE-2024-34331"
 source: "gelusus/wxvl 公众号漏洞文库"
+identifier_role: "reference"
+primary_identifiers: ""
+referenced_identifiers: "CVE-2024-34331"
+identifier_status: "unknown"
+title: "【真 0day】Parallels Desktop Repack提权0day漏洞"
+product: "Parallels Desktop repack脚本"
+record_type: "analysis"
+document_type: "历史补丁绕过与本地提权研究"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "本地低权、Parallels特权服务与GUI repack；19.4.0原路径、19.4.1新manual路径、文称20.2.1再次原路径；TCC权限未知"
+side_effects: "脚本成功依赖精确目录/时序、已有临时目录状态和TCC App Management；改写Parallels自身7z有持久破坏风险且无恢复步骤"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Parallels%20Desktop/%E3%80%90%E7%9C%9F%200day%E3%80%91Parallels%20Desktop%20Repack%E6%8F%90%E6%9D%830day%E6%BC%8F%E6%B4%9E.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-8d8c0b741e498d79fa95f9ae"
+entity_id: "ve-8d8c0b741e498d79fa95f9ae"
+schema_version: "1"
 ---
 
-#  【真 0day】Parallels Desktop Repack提权0day漏洞   
+# 【真 0day】Parallels Desktop Repack提权0day漏洞
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Parallels Desktop repack脚本
+- 文献类型：历史补丁绕过与本地提权研究
+- 版本、权限及部署边界：本地低权、Parallels特权服务与GUI repack；19.4.0原路径、19.4.1新manual路径、文称20.2.1再次原路径；TCC权限未知
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 元数据旧CVE34331不能自动作为新绕过身份，本文两条实现/版本切换须独立记录并关联旧补丁
+2. 开篇TOCTOU和Apple签名DYLIB两设想，实际第二段改为CFBundleDisplayName路径遍历/符号链接竞态，不能当已演示任意Apple二进制DYLIB注入
+3. 脚本成功依赖精确目录/时序、已有临时目录状态和TCC App Management；改写Parallels自身7z有持久破坏风险且无恢复步骤
+4. 最新20.2.1只限2025-02-20披露时点，不能当当前未修复；厂商/ZDI回应为作者自述，缺原报告全文证据
+5. 末尾演示视频为空，原发现者34331链接在但本文绕过原作者/原博客缺失；无OS架构/补丁版本完整表
+6. 原理多处行号引用经过省略代码后不匹配，保留节选标识；root shell只自述/截图未视检
+
+### 操作风险
+
+脚本成功依赖精确目录/时序、已有临时目录状态和TCC App Management；改写Parallels自身7z有持久破坏风险且无恢复步骤
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://khronokernel.com/macos/2024/05/30/CVE-2024-34331.html>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
  独眼情报   2025-02-21 03:57  
   
 今天我要披露一个**0day漏洞**  
@@ -369,4 +421,4 @@ Parallels
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

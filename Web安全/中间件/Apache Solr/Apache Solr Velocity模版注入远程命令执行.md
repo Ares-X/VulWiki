@@ -1,8 +1,46 @@
 ---
 source: "hatch 补库批 20260928"
+title: "Apache Solr Velocity模版注入远程命令执行"
+product: "Apache Solr VelocityResponseWriter"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "测试8.1.1/8.2.0，core可用、Config API可写、Velocity相关类存在"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-c835b5a4c7c25c07708fe896"
+entity_id: "ve-c835b5a4c7c25c07708fe896"
+schema_version: "1"
 ---
 
 # Apache Solr Velocity模版注入远程命令执行
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：测试8.1.1/8.2.0，core可用、Config API可写、Velocity相关类存在
+- 证据范围：相同手动PoC加遍历core脚本，无独立全版本证据，代码本身严重损坏。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 推测全版本影响错误，需改固定历史实测/公告范围
+- 代码开头docstring起始引号丢失，auth/version文本造成SyntaxError
+- res.json解析失败即判RCE成功，可将任意HTML页误报
+- 命令直接拼入URL未正确编码，配置POST未设置JSON类型
+- get_nodes空列表state仍1，会对None迭代；缺鉴权支持和有效结果验证
+- 将core称node、端口写成URL路径/8983、持久修改全部core且无恢复
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 一、漏洞简介
 ------------

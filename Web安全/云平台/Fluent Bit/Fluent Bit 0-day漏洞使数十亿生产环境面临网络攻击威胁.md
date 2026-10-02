@@ -1,8 +1,49 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Fluent Bit 0-day漏洞使数十亿生产环境面临网络攻击威胁"
+product: "Fluent Bit"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。"
+id: "vw-f5fbf12a90f887b4e720b9f2"
+entity_id: "ve-f5fbf12a90f887b4e720b9f2"
+schema_version: "1"
 ---
 
-#  Fluent Bit 0-day漏洞使数十亿生产环境面临网络攻击威胁   
+# Fluent Bit 0-day漏洞使数十亿生产环境面临网络攻击威胁
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 两个主CVE缺元数据
+- 开头均空指针与后文堆损坏/内存泄露机制混写
+- 3.0.4/2.2.3补丁可能混另一漏洞需原公告核
+- 下载量/日部署数不能推定数十亿受影响生产实例
+- PoC配置与fuzzer均截图未转文字
+- 缺原研究链接，作者归属Ebryx/Tenable混杂
+
+### 操作风险与资料使用
+
+- 含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 e安在线  e安在线   2025-02-26 03:26  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/1Y08O57sHWiahTldalExhOyzXNMO6kcO7ULmiclhSZfg8zVMLHEMUGBu3lBjFbjib8vsYDZzplofMSC7epkHHWpibw/640?wx_fmt=png&from=appmsg "")  

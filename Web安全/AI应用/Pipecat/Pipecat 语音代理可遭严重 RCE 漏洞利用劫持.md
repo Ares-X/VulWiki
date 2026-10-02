@@ -1,8 +1,45 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Pipecat 语音代理可遭严重 RCE 漏洞利用劫持"
+product: "Pipecat"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-1cd3ae821687a9d1a3935a43"
+entity_id: "ve-1cd3ae821687a9d1a3935a43"
+schema_version: "1"
 ---
 
-#  Pipecat 语音代理可遭严重 RCE 漏洞利用劫持  
+# Pipecat 语音代理可遭严重 RCE 漏洞利用劫持
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 正文CVE-2025-62373未进metadata
+- 显式启用LivekitFrameSerializer与网络入口前提应标明
+- 修复0.0.94需GHSA核验
+- 只有二手securityonline来源
+- 无具体验证步骤
+- 大段广告/公众号模板/空白清理
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 DDoS
                     DDoS  代码卫士   2026-04-28 10:12  
   

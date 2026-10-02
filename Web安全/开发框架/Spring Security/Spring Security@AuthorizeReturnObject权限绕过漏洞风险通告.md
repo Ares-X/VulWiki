@@ -1,6 +1,38 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+product: "Spring Security / 方法安全代理"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2024-38810"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "Spring Security@AuthorizeReturnObject权限绕过漏洞风险通告"
+prerequisites: "来源所述条件，未列明部分仍待核：影响 6.3.0、6.3.1，建议 6.3.2；列 AutoProxyCreator、FactoryBean、EnableMethodSecurity 和返回对象代理四项组合条件"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-aaf9c3106fc81a8916c45f2a"
+entity_id: "ve-aaf9c3106fc81a8916c45f2a"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：影响 6.3.0、6.3.1，建议 6.3.2；列 AutoProxyCreator、FactoryBean、EnableMethodSecurity 和返回对象代理四项组合条件
+
+代码与实验材料：无 PoC，明确未复现；四项前提记录完整
+
+来源证据范围：有官方 CVE、GitHub 6.3.2、NVD、GHSA
+
+- **事实待核（1）**：编号未进入元数据和标题；依据：正文两次给 CVE-2024-38810，frontmatter 只有 source，文件名也没有 CVE。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **事实待核（2）**：最新版本表述须历史化；依据：2024-08-22 称最新 6.3.2，不应持续当作当前升级建议。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 #  Spring Security@AuthorizeReturnObject权限绕过漏洞风险通告   
 你信任的  亚信安全   2024-08-22 16:55  

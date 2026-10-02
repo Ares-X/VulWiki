@@ -1,8 +1,67 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2024-35235;CVE-2024-5290"
+identifier_role: "primary"
+primary_identifiers: "CVE-2024-35235;CVE-2024-5290"
+referenced_identifiers: "CVE-2023-29360;CVE-2024-3446"
+identifier_status: "unknown"
+title: "Ubuntu24.04 提权漏洞实例分析"
+product: "CUPS + wpa_supplicant (Ubuntu配置)"
+record_type: "roundup"
+document_type: "双漏洞链深入复现"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "Ubuntu24.04本地可调用CupsPkHelper配置接口，AppArmor路径限制、netdev D-Bus策略/服务组；22.04特定包对照失败"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/Ubuntu24.04%20%E6%8F%90%E6%9D%83%E6%BC%8F%E6%B4%9E%E5%AE%9E%E4%BE%8B%E5%88%86%E6%9E%90.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-5823c23416ad9f076244913b"
+entity_id: "ve-5823c23416ad9f076244913b"
+schema_version: "1"
 ---
 
-#  Ubuntu24.04 提权漏洞实例分析   
+# Ubuntu24.04 提权漏洞实例分析
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：CUPS + wpa_supplicant (Ubuntu配置)
+- 文献类型：双漏洞链深入复现
+- 版本、权限及部署边界：Ubuntu24.04本地可调用CupsPkHelper配置接口，AppArmor路径限制、netdev D-Bus策略/服务组；22.04特定包对照失败
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. frontmatter缺两个主CVE；非Linux内核漏洞，主实体应CUPS和wpa_supplicant，保留利用链关联
+2. 35235速览引用wpa的Launchpad链接为错配，文末有正确CUPS GHSA需重新指向
+3. 详细保留22.04与24.04服务配置差异及失败尝试，很有价值，不能只按同CVE与简稿删重
+4. 开始CUPS D-Bus ServerSetSettings权限/polkit会话条件未充分列，假设普通用户任意调用需补；root阶段只为分组件测试，不能当独立LPE证据
+5. 缺精确CUPS/wpa包修复版本与完整PPD/编译步骤；关键图证未查看；代码块嵌套三引号/命令无空格需恢复
+6. Group netdev不是用户netdev，叙述混称应纠正；保留上游/Snyk/Ubuntu来源和恢复配置提示
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://snyk.io/blog/abusing-ubuntu-root-privilege-escalation/。文章作者通过利用两个漏洞（CVE-2024-35235和>
+- 原文参考链接（未重新核验）：<https://bugs.launchpad.net/ubuntu/+source/wpa/+bug/2067613，这是一个存在于CUPS（Common>
+- 原文参考链接（未重新核验）：<https://bugs.launchpad.net/ubuntu/+source/wpa/+bug/2067613，该漏洞允许攻击者在运行wpa_supplicant时加载任意共享对象文件（shared>
+- 原文参考链接（未重新核验）：<https://ubuntu.com/security/CVE-2024-35235>
+- 原文参考链接（未重新核验）：<https://ubuntu.com/security/CVE-2024-5290>
+- 原文参考链接（未重新核验）：<http://www.freedesktop.org/standards/dbus/1.0/busconfig.dtd>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 原创 戴勤明  华为安全应急响应中心   2025-02-20 10:10  
   
 **1**  
@@ -385,10 +444,10 @@ Call failed: wpa_supplicant couldn't grab this interface.
   
 发现原来是wpa_supplicant的配置文件的问题，在ubuntu22.04上（2:2.10-6ubuntu2.1 updates），并不存在以下的配置代码更新：  
   
-```
-```
+> 原文此处代码块为空，内容未归档；无法从空块证明或复现所述结果。
 to allow `netdev` users access to the wpa_supplicant which gets started as a service
-```diff --git a/wpa_supplicant/systemd/wpa_supplicant.service.in b/wpa_supplicant/systemd/wpa_supplicant.service.in
+```diff
+diff --git a/wpa_supplicant/systemd/wpa_supplicant.service.in b/wpa_supplicant/systemd/wpa_supplicant.service.in
 index 18cbc11..f02bc15 100644
 --- a/wpa_supplicant/systemd/wpa_supplicant.service.in
 +++ b/wpa_supplicant/systemd/wpa_supplicant.service.in
@@ -405,7 +464,6 @@ index 18cbc11..f02bc15 100644
 
  [Install]
  WantedBy=multi-user.target
-```
 ```  
   
   
@@ -544,4 +602,4 @@ https://w1.fi/wpa_supplicant/devel/dbus.html
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

@@ -1,9 +1,67 @@
 ---
-version: "winver"
 source: "MrWQ/vulnerability-paper"
+identifier_role: "reference"
+primary_identifiers: ""
+referenced_identifiers: "CVE-2019-0708;CVE-2020-0796"
+identifier_status: "unknown"
+title: "[系统安全] 十五- Chrome 密码保存功能渗透解析、Chrome 蓝屏漏洞及音乐软件漏洞复现"
+product: "Chrome密码存储；Windows ConDrv；网易云音乐缓存"
+record_type: "vulnerability"
+document_type: "多主题安全科普与复现"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "2021年历史环境；同Windows用户本地解密；ConDrv低权限本地路径访问；已播放歌曲缓存读取"
+side_effects: "得到服务器权限就无需考虑证书/身份过宽，用户上下文和密钥材料仍关键；历史DPAPI实现不能覆盖所有Chrome版本"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Chrome/%5B%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%5D%20%E5%8D%81%E4%BA%94-%20Chrome%20%E5%AF%86%E7%A0%81%E4%BF%9D%E5%AD%98%E5%8A%9F%E8%83%BD%E6%B8%97%E9%80%8F%E8%A7%A3%E6%9E%90%E3%80%81Chrome%20%E8%93%9D%E5%B1%8F%E6%BC%8F%E6%B4%9E%E5%8F%8A%E9%9F%B3%E4%B9%90%E8%BD%AF%E4%BB%B6%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+version_unverified: "winver"
+source_url: "https://mp.weixin.qq.com/s/-E4_NSiXrGtnZqcWk8zo0A"
+id: "vw-b849881d04f4c7aa84f46aa2"
+entity_id: "ve-b849881d04f4c7aa84f46aa2"
+schema_version: "1"
 ---
 
 # [系统安全] 十五- Chrome 密码保存功能渗透解析、Chrome 蓝屏漏洞及音乐软件漏洞复现
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Chrome密码存储；Windows ConDrv；网易云音乐缓存
+- 文献类型：多主题安全科普与复现
+- 版本、权限及部署边界：2021年历史环境；同Windows用户本地解密；ConDrv低权限本地路径访问；已播放歌曲缓存读取
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. version元数据winver是查询命令不是受影响版本；三主题需分记录，ConDrv应归Windows非Chrome根因
+2. 同用户DPAPI解密属于已登录用户权限边界，不能直接当Chrome漏洞；密码字段加密不等整个SQLite文件加密，Windows密码也不是简单常量主密钥
+3. 得到服务器权限就无需考虑证书/身份过宽，用户上下文和密钥材料仍关键；历史DPAPI实现不能覆盖所有Chrome版本
+4. Python2脚本坍成单行且以#开头整体被注释；源码多截图未视检，缺Chrome构建/提交
+5. ConDrv为DoS，正文明确RCE/提权未知须保留；微软尚未修复限于2021-01-21，缺后续修复编号
+6. 音乐A3异或示例把十六进制A写01100001，概念错；简单混淆与可播放缓存不等绕过服务器付费授权，缺客户端版本和原始鬼手文章链接
+7. 建议易记密码、旧TrueCrypt/管理器方案须标历史并重新核验安全性；广告/前文列表和断裂GitHub路径清理
+
+### 操作风险
+
+得到服务器权限就无需考虑证书/身份过宽，用户上下文和密钥材料仍关键；历史DPAPI实现不能覆盖所有Chrome版本
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://mp.weixin.qq.com/s/-E4_NSiXrGtnZqcWk8zo0A>
+- 原文参考链接（未重新核验）：<http://ksria.com/simpread/>
+- 原文参考链接（未重新核验）：<https://blog.csdn.net/eastmount/category_9183790.html>
+- 原文参考链接（未重新核验）：<https://github.com/eastmountyxz/>
+- 原文参考链接（未重新核验）：<https://blog.csdn.net/u013761036/article/details/53822036>
+- 原文参考链接（未重新核验）：<http://download.csdn.net/detail/u013761036/9719029>
+
+### 归档技术正文
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/-E4_NSiXrGtnZqcWk8zo0A)

@@ -1,9 +1,47 @@
 ---
 cve: "CVE-2025-3928"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "突发！国家级黑客利用零日漏洞入侵Commvault Azure环境，数据安全再响警报"
+product: "Commvault Web Server与SaaS Azure环境"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "quarantined"
+identifier_status: "active"
+primary_identifiers: "CVE-2025-3928"
+referenced_identifiers: ""
+identifier_role: "primary"
+prerequisites: "已有有效凭据、Web服务可达；公网暴露是报道场景非漏洞固有必要条件"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-a62398ecc6b764ef557abc50"
+entity_id: "ve-a62398ecc6b764ef557abc50"
+schema_version: "1"
 ---
 
-#  突发！国家级黑客利用零日漏洞入侵Commvault Azure环境，数据安全再响警报   
+# 突发！国家级黑客利用零日漏洞入侵Commvault Azure环境，数据安全再响警报
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：已有有效凭据、Web服务可达；公网暴露是报道场景非漏洞固有必要条件
+- 证据范围：列IP/补丁/KEV期限却完全无来源链接，猜测初始凭据来源和横向后果，不能当已证攻击全链
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 国家级归因、无客户数据被窃等须具名官方原始证据和时点
+- 某安全实验室发言人引语不可追溯；利用成本高/数年窗口属于无证据泛论
+- 强制所有相关账号重置并同步客户端密钥不具体，可能误导轮换方式
+- 需核各补丁分支/IOC原文；截止5月19应明确2025及监管适用范围
+- 目录突发应改Commvault，重复装饰/法规长尾清理
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 原创 道玄安全  道玄网安驿站   2025-05-01 23:00  
   
 **“**  

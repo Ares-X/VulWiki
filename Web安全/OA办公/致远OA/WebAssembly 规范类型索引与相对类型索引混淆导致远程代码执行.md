@@ -1,27 +1,68 @@
 ---
-cve: "CVE-2024-12053"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Chromium/V8 WebAssembly canonical/relative类型索引混淆"
+product: "Chromium/V8 WebAssembly"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2024-12053"
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "声称Chrome131/132/133，134修复；需V8准确提交和sandbox链"
+prerequisites: "浏览器执行恶意Wasm，RCE及沙箱逃逸是分层条件"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+identifier_role: "primary"
+source_status: "unknown"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E8%87%B4%E8%BF%9COA/WebAssembly%20%E8%A7%84%E8%8C%83%E7%B1%BB%E5%9E%8B%E7%B4%A2%E5%BC%95%E4%B8%8E%E7%9B%B8%E5%AF%B9%E7%B1%BB%E5%9E%8B%E7%B4%A2%E5%BC%95%E6%B7%B7%E6%B7%86%E5%AF%BC%E8%87%B4%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C.md"
+id: "vw-f7ab002da8aff0e29b6f2190"
+entity_id: "ve-f7ab002da8aff0e29b6f2190"
+schema_version: "1"
 ---
 
-#  WebAssembly 规范类型索引与相对类型索引混淆导致远程代码执行  
+# Chromium/V8 WebAssembly canonical/relative类型索引混淆
+
+## 条目说明
+
+- 对象与具体问题：Chromium/V8 WebAssembly；canonical/relative类型索引混淆
+- 版本、配置及部署条件：声称Chrome131/132/133，134修复；需V8准确提交和sandbox链
+- 认证与权限前提：浏览器执行恶意Wasm，RCE及沙箱逃逸是分层条件
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 错分致远OA；不是WebAssembly标准本身通用漏洞，应定位V8实现
+- 正文在AddRecursiveSingletonGroup函数签名中途截断，真正索引混淆触发/利用结尾未收录
+- 大段C++/JS/WAT没有代码围栏且模板类型尖括号被吞/行粘连，难以重构
+- CVE2024-12053与Chrome131–134、在野利用及issue361862752关联缺任何原始链接，需要优先核实，不能将未证链当已证
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
  幻泉之洲   2026-05-01 01:05  
   
 >   
   
-## 漏洞概述  
+### 漏洞概述  
   
 CVE-2024-12053 是一个WebAssembly类型混淆漏洞，由规范索引（canonical index）和相对索引（relative index）的混淆引发。Chromium团队指出，该漏洞已在野外被利用，配合沙箱逃逸技术（issue 361862752）实现了远程代码执行。  
 >   
   
-## 厂商回应  
+### 厂商回应  
   
 Chrome build 134 中已经修复了这个CVE。  
-## 来源  
+### 来源  
 - 漏洞分析：SSD Lab韩国团队 Aaron Cho  
-## 受影响版本  
+### 受影响版本  
 - Chrome build 133, 132, 131  
-## 技术分析：CVE-2024-12053  
-### WebAssembly 类型规范化  
+### 技术分析：CVE-2024-12053  
+#### WebAssembly 类型规范化  
   
 WebAssembly 用了一套类型系统来提升内存效率、保证类型安全。类型五花八门，各有各的用途。  
   
@@ -76,7 +117,7 @@ WasmJs::Install() 把 js_tag_object 的签名规范化了。
 ![](https://mmbiz.qpic.cn/mmbiz_png/tbTbtBE6TibeCt05mUrohl8S5kzTvyGmWdVfm8uEgO5OhJ0mVicZUuPS4HXCXStOkiadib65A6FahGd1JMZAIuye1MicPySBkpNicsBjHKbBmCUibc/640?wx_fmt=png&from=appmsg "")  
   
 这种情况下类型是函数签名，所以同时加到了 canonical_singleton_groups_ 和 canonical_function_sigs_ 里。加到 canonical_function_sigs_ 时，索引和 canonical_singleton_groups_ 里的一样，即使这是加进去的第一个函数签名。所以 canonical_function_sigs_ 的前两个槽位是空的。  
-### 规范化递归单例组  
+#### 规范化递归单例组  
   
 d8.file.execute("v8/test/mjsunit/wasm/wasm-module-builder.js");let builder = new WasmModuleBuilder();// recursive singleton groupbuilder.startRecGroup();let type = builder.nextTypeIndex();builder.addType(makeSig([], [wasmRefType(type)]));builder.endRecGroup();builder.instantiate();  
   
@@ -134,7 +175,7 @@ CanonicalizeTypeDef() 返回的 CanonicalType 对象被传给 AddRecursiveGroup(
 ![](https://mmbiz.qpic.cn/mmbiz_png/tbTbtBE6TibciadtIK6KibphD6EeZjicyAzVQqsVlk4HxzHGfmwmzsf7UJrRqcaBK2qar1RRX1DWAQuNheXmFBgyyia2TlFEeECFLykexIU2bicibI/640?wx_fmt=png&from=appmsg "")  
   
 AddRecursiveGroup() 创建一个包含该类型的单例组，加到 canonical_singleton_groups_。如果类型是函数签名，同时加到 canonical_function_sigs_。  
-### 规范化单个类型  
+#### 规范化单个类型  
   
 /* src/wasm/wasm-constants.h:58-65 */// Binary encoding of type definitions.constexpr uint8_t kSharedFlagCode = 0x65;constexpr uint8_t kWasmFunctionTypeCode = 0x60;constexpr uint8_t kWasmStructTypeCode = 0x5f;constexpr uint8_t kWasmArrayTypeCode = 0x5e;constexpr uint8_t kWasmSubtypeCode = 0x50;constexpr uint8_t kWasmSubtypeFinalCode = 0x4f;constexpr uint8_t kWasmRecursiveTypeGroupCode = 0x4e;  
   

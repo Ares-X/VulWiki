@@ -1,6 +1,38 @@
 ---
 source: "hatch 补库批 20260928"
+product: "PHPCMS9.6.0"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "Phpcms v9.6.0 sql注入"
+prerequisites: "来源所述条件，未列明部分仍待核：attachments/content-down可达；WAP或mood签发加密Cookie；后续接管需仍在线后台session"
+side_effects: "未执行；本文需注意的操作影响：与312同三阶段根因，本文新增WAP关闭仍可签Cookie与删除WAP后的mood入口，必须保留互补"
+source_status: "unknown"
+id: "vw-f5f788afccf44d48e1f657a6"
+entity_id: "ve-f5f788afccf44d48e1f657a6"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：attachments/content-down可达；WAP或mood签发加密Cookie；后续接管需仍在线后台session
+
+- **凭据与会话边界（1）**：与312同三阶段根因，本文新增WAP关闭仍可签Cookie与删除WAP后的mood入口，必须保留互补。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+
+- **结论使用边界（2）**：mood参数构造作者明确未展开，不能当现成完整PoC；检查$_SESSION roleid和$userid相等的变量语义应对源码核验。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **结论使用边界（3）**：session表userid=1不应泛化所有管理员，依实验账号；注销导致链失效重要。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **事实待核（4）**：多图引用9.6.2条目资源，需核图文；9.6.1补丁支持320版本冲突待核。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Phpcms v9.6.0 sql注入
 

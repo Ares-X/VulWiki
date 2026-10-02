@@ -1,6 +1,36 @@
 ---
 source: "hatch 补库批 20260928"
+product: "UsualToolCMS8.0Release login"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "UsualToolcms 8.0 绕过后台验证码爆破"
+prerequisites: "来源所述条件，未列明部分仍待核：同时删除ucode与Cookie使服务端验证码态缺失，正确用户名密码仍需要"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-8746b82d22d7edfe6c80095a"
+entity_id: "ve-8746b82d22d7edfe6c80095a"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：同时删除ucode与Cookie使服务端验证码态缺失，正确用户名密码仍需要
+
+- **凭据与会话边界（1）**：简介只删验证码参数，正文实际连Cookie都删，关键双空状态条件不能漏。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+
+- **结论使用边界（2）**：验证码绕过不等于免密码登录，爆破还依赖无其他限速/锁定。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **代码与转录边界（3）**：最终upass=admi疑截断，Content-Length23与正文不符；源码/响应和原出处缺。相应原代码作为存在此问题的历史样本保留，不能直接当作可运行、成功复现的 PoC；缺失内容需回原稿核对，不据此补造可执行攻击链。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # UsualToolcms 8.0 绕过后台验证码爆破
 

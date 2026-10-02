@@ -1,7 +1,53 @@
 ---
-version: "<%@ page import='java.lang.reflect.Field' %>"
+version: ""
 source: "MrWQ/vulnerability-paper"
+product: "Java安全研究参考/Tomcat与Spring运行时状态"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+version_notes: "<%@ page import='java.lang.reflect.Field' %>"
+title: "三万字原创长文 完全零基础从 0 到 1 掌握 Java 内存马（2）"
+prerequisites: "来源所述条件，未列明部分仍待核：承接204的JDK8/Tomcat9实验，POM9.0.83；声称Tomcat7及以上兼容需分别核Servlet包迁移/内部API"
+side_effects: "未执行；本文需注意的操作影响：示例会破坏正常业务且缺风险/恢复说明；两Valve例无cmd时不调用下一节点；Filter无参数仍执行cmd并关闭响应后继续链；重复访问注入点新增随机组件/替换线程池，未移除或恢复；反射修饰符解释错误；先清FINAL再用当前值&FINAL，不能恢复原修饰符，文字却称恢复封装性；还把修饰符位与setAccessible混为一谈；线程池/响应关联及阻塞副作用未交代；Executor读取socket后再塞缓冲、遍历processors把结果加到各response，可能误写其他请求；WebFlux里阻塞读进程输出，破坏响应式线程假设"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/DVG_xiviGp0s_MrP5T_ssg"
+id: "vw-ba597ac33bf8191822f9ab8f"
+entity_id: "ve-ba597ac33bf8191822f9ab8f"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 明确更正：原 version 字段抽入命令、源码、路径、配置或普通叙述，不是版本号，已清空机器版本字段并原样保留于 version_notes；实际版本/分支条件见本节逐篇记录，未从代码猜造版本。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：承接204的JDK8/Tomcat9实验，POM9.0.83；声称Tomcat7及以上兼容需分别核Servlet包迁移/内部API
+
+代码与实验材料：1702行全文及全部Java/JSP/Flask代码已读；需要预先部署可执行JSP或恶意应用类，属于已有代码执行后的演示，不是独立远程漏洞
+
+来源证据范围：作者博客/微信双篇互链、大量原始研究参考，部分URL含空格或仅IP站点
+
+- **事实待核（1）**：元数据提取错把JSP作为版本；依据：version值为&lt;%@ page import='java.lang.reflect.Field' %&gt;。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **证据待核（2）**：示例会破坏正常业务且缺风险/恢复说明；依据：两Valve例无cmd时不调用下一节点；Filter无参数仍执行cmd并关闭响应后继续链；重复访问注入点新增随机组件/替换线程池，未移除或恢复。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **证据待核（3）**：演示可能混淆正常部署与动态注入证明；依据：MemoryShellFilter本身是@Configuration且实现WebFilter，正常组件扫描即可生效；在每次/evil请求又doInject，缺独立证明新增实例造成结果的对照。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **结论使用边界（4）**：反射修饰符解释错误；依据：先清FINAL再用当前值&amp;FINAL，不能恢复原修饰符，文字却称恢复封装性；还把修饰符位与setAccessible混为一谈。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **事实待核（5）**：实验运行时兼容性与可观察性不足；依据：Java8私有反射/Field.modifiers与Tomcat内部层级依赖，Spring映射构造器依赖版本；大量catch ignored让失败不可辨，不能泛称7+或8+全部适用。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **操作与副作用边界（6）**：线程池/响应关联及阻塞副作用未交代；依据：Executor读取socket后再塞缓冲、遍历processors把结果加到各response，可能误写其他请求；WebFlux里阻塞读进程输出，破坏响应式线程假设。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+- **结论使用边界（7）**：结构与例子编辑质量；依据：3.2.2标题仍写servlet；两种方法列三种；硬编码Windows/GBK、localhost/test URL与端口，完整系列需明确适用环境。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # 【三万字原创长文】完全零基础从 0 到 1 掌握 Java 内存马（2）
 

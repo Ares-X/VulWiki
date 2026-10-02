@@ -1,8 +1,61 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "这谁防得住？Wi-Fi 联盟官方测试套件中存在命令注入漏洞"
+product: "Wi-Fi Alliance Test Suite41992"
+record_type: "unknown"
+document_type: "技术文章（细分类待核）"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "只有带测试套件且可达设备受影响非所有WiFi；缺CERT/SSD一手链接和准确固件版本，未补丁为2024时点"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/%E8%BF%99%E8%B0%81%E9%98%B2%E5%BE%97%E4%BD%8F%EF%BC%9FWi-Fi%20%E8%81%94%E7%9B%9F%E5%AE%98%E6%96%B9%E6%B5%8B%E8%AF%95%E5%A5%97%E4%BB%B6%E4%B8%AD%E5%AD%98%E5%9C%A8%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+source_url: "https://thehackernews.com/2024/10/researchers-discover-command-injection.html"
+id: "vw-74f1991100c377bf309b2072"
+entity_id: "ve-74f1991100c377bf309b2072"
+schema_version: "1"
 ---
 
-#  这谁防得住？Wi-Fi 联盟官方测试套件中存在命令注入漏洞   
+# 这谁防得住？Wi-Fi 联盟官方测试套件中存在命令注入漏洞
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Wi-Fi Alliance Test Suite41992
+- 文献类型：技术文章（细分类待核）
+- 版本、权限及部署边界：只有带测试套件且可达设备受影响非所有WiFi；缺CERT/SSD一手链接和准确固件版本，未补丁为2024时点
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 主CVE缺元数据
+2. 本地攻击者可能指邻接网络需按CERT向量核，不能混本地账号
+3. 只有带测试套件且可达设备受影响非所有WiFi
+4. 9.0套件修复不等于Arcadyan固件已修
+5. 缺CERT/SSD一手链接和准确固件版本，未补丁为2024时点
+6. 清广告空白
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://thehackernews.com/2024/10/researchers-discover-command-injection.html>
+
+### 归档技术正文
+
  数世咨询   2024-10-30 16:00  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/Y9btpvDIDqq2iapicRLibUerLjfFtibvYgO8VAq9ewTicIfuB5mGYZ6gkwv9WiaHXfpX225LtDia4ib8FNjNp0kHEcrNqA/640?wx_fmt=png&from=appmsg "")  

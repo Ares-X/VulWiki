@@ -1,7 +1,39 @@
 ---
 cve: "CVE-2025-27218"
 source: "gelusus/wxvl 公众号漏洞文库"
+product: "Sitecore XM/XP8.2–10.4 unpatched"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2025-27218"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "Sitecore 曝零日漏洞，可执行任意代码攻击"
+prerequisites: "来源所述条件，未列明部分仍待核：ThumbnailsAccessToken处理器可达、BinaryFormatter gadget组件适用；补丁KB1002844状态"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-54353971cca4112a32eb61d7"
+entity_id: "ve-54353971cca4112a32eb61d7"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：ThumbnailsAccessToken处理器可达、BinaryFormatter gadget组件适用；补丁KB1002844状态
+
+- **结论使用边界（1）**：前称10.4未打补丁受影响，后建议升级10.4或补丁存在误导，必须明确10.4补丁层级。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **适用与权限边界（2）**：把IIS应用池权限称完全服务器控制/可横移过强，受进程权限网络约束。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **结论使用边界（3）**：声称微软建议Binder限制作为缓解需官方核实，不能保证BinaryFormatter安全。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **来源与引用处置（4）**：零日标签与截至3月6日无在野确认时点应区分；无Assetnote/KB精确链接，征文广告可剥离。保留这部分来源材料并与技术结论分开；其引用或宣传内容不能补足本文漏洞的证据。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 #  Sitecore 曝零日漏洞，可执行任意代码攻击   
 FreeBuf  商密君   2025-03-09 23:55  

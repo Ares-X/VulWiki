@@ -1,8 +1,63 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2023-34039"
+identifier_role: "primary"
+primary_identifiers: "CVE-2023-34039"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "VMware Aria Operations for Networks 身份认证绕过漏洞通告"
+product: "VMware Aria Operations for Networks"
+record_type: "advisory"
+document_type: "SSH认证绕过通告"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "网络可达SSH；非唯一密钥；文称<6.11.0，6.11.0修复"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/VMware%20Aria%20Operations%20for/VMware%20Aria%20Operations%20for%20Networks%20%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81%E7%BB%95%E8%BF%87%E6%BC%8F%E6%B4%9E%E9%80%9A%E5%91%8A.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-8f6078a59ff572305f185cac"
+entity_id: "ve-8f6078a59ff572305f185cac"
+schema_version: "1"
 ---
 
-#  VMware Aria Operations for Networks 身份认证绕过漏洞通告   
+# VMware Aria Operations for Networks 身份认证绕过漏洞通告
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：VMware Aria Operations for Networks
+- 文献类型：SSH认证绕过通告
+- 版本、权限及部署边界：网络可达SSH；非唯一密钥；文称<6.11.0，6.11.0修复
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 元数据漏34039，Networks与Logs不同产品，截断父目录不得混并
+2. 缺乏唯一加密密钥应具体区分SSH认证密钥/复用凭据，不能笼统说破坏全部加密；得到CLI不自动root
+3. 只给<6.11.0缺分支/构建适用范围，官方VMSA和KB94152可用于核对补丁回补
+4. 没有PoC和实际输出，正常为通告，无需编造；营销大于正文，迁云平台/网络管理
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://kb.vmware.com/s/article/94152>
+- 原文参考链接（未重新核验）：<http://360.net>
+- 原文参考链接（未重新核验）：<https://www.vmware.com/security/advisories/VMSA-2023-0018.html>
+- 原文参考链接（未重新核验）：<https://cert.360.cn/>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 原创 360CERT  三六零CERT   2023-08-31 16:35  
   
 **赶紧点击上方话题进行订阅吧！**  
@@ -166,4 +221,4 @@ https://cert.360.cn/
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

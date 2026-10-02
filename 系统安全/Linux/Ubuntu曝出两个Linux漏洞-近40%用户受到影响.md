@@ -1,8 +1,64 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2023-32629;CVE-2023-2640"
+identifier_role: "primary"
+primary_identifiers: "CVE-2023-32629;CVE-2023-2640"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "Ubuntu曝出两个Linux漏洞-近40%用户受到影响"
+product: "Ubuntu定制OverlayFS"
+record_type: "roundup"
+document_type: "双漏洞新闻"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "本地低权限，Ubuntu特定OverlayFS补丁组合；未给内核/发行版具体范围"
+side_effects: "更新后重启提醒有价值；尾部推荐和动画噪声可剥离"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/Ubuntu%E6%9B%9D%E5%87%BA%E4%B8%A4%E4%B8%AALinux%E6%BC%8F%E6%B4%9E-%E8%BF%9140%25%E7%94%A8%E6%88%B7%E5%8F%97%E5%88%B0%E5%BD%B1%E5%93%8D.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-77666de7944980028a06ad31"
+entity_id: "ve-77666de7944980028a06ad31"
+schema_version: "1"
 ---
 
-#  【安全圈】Ubuntu 曝出两个Linux漏洞，近 40% 用户受到影响   
+# Ubuntu曝出两个Linux漏洞-近40%用户受到影响
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Ubuntu定制OverlayFS
+- 文献类型：双漏洞新闻
+- 版本、权限及部署边界：本地低权限，Ubuntu特定OverlayFS补丁组合；未给内核/发行版具体范围
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. frontmatter缺两主CVE；32629被归内存管理子系统与后文OverlayFS主题不一致需核对
+2. 包括Ubuntufork在内其他发行版安全的全称结论不可靠，应按是否继承易受影响补丁确认
+3. 40%用户/4000万用户无数据来源和时间基准，不能作为可靠影响规模
+4. Wiz/BleepingComputer/Ubuntu公告仅名字无实际URL，PoC武器化声明无证据链接
+5. 更新后重启提醒有价值；尾部推荐和动画噪声可剥离
+
+### 操作风险
+
+更新后重启提醒有价值；尾部推荐和动画噪声可剥离
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzIzMzE4NDU1OQ==&mid=2652040378&idx=1&sn=5c9ef0d7dcb2b1b63eca5db4c4eed405&chksm=f36fc0fac41849ec4a8a80658dfa5379ff9ec33e94cf57cfbb094586d90792f7ab83fd20a15c&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzIzMzE4NDU1OQ==&mid=2652040378&idx=2&sn=1709ae32ec52bb9307dd7c088ede4ccd&chksm=f36fc0fac41849ecbedef074d12e6a3b4ecb1b44605e1a815610f0f8b393b02d37ac08664e15&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzIzMzE4NDU1OQ==&mid=2652040378&idx=3&sn=513ca6d7945c3a9d8c66ea8a681b4ee3&chksm=f36fc0fac41849ecfbf7c4760fd771120e56d4fdcebad3fc2420be2f610a95a960c8eaa8956a&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzIzMzE4NDU1OQ==&mid=2652040378&idx=4&sn=a6770cb53a5583f0e8b921778dacfca5&chksm=f36fc0fac41849ecaefef66e916873551746f8c0e7a59be9c75cb86aab177b0f7d36120b18f8&scene=21#wechat_redirect>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
  安全圈   2023-07-27 19:00  
   
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/aBHpjnrGylgSxa9I02IBd3bgLEhwfJCeRibw3LEjMujeAhD2CvyiaVCZJVHGHODbkPx3pViaX0sAibZsDun6sicUzdQ/640?wx_fmt=jpeg "")  
@@ -90,4 +146,4 @@ Wiz 研究人员警告称这两个漏洞源于 Ubuntu 对 OverlayFS 模块的单
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

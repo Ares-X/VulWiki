@@ -1,8 +1,46 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Veeam 修复5个严重漏洞"
+product: "VBR、Veeam ONE、VSPC及插件"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2024-40711; CVE-2024-42024; CVE-2024-42019; CVE-2024-38650; CVE-2024-39714"
+referenced_identifiers: ""
+identifier_role: "primary"
+cve: "CVE-2024-40711; CVE-2024-42024; CVE-2024-42019; CVE-2024-38650; CVE-2024-39714"
+prerequisites: "40711未认证，42024需agent服务凭据，另各低权限或服务NTLM泄露条件不同"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-90167671d5d502fcaa48621c"
+entity_id: "ve-90167671d5d502fcaa48621c"
+schema_version: "1"
 ---
 
-#  Veeam 修复5个严重漏洞   
+# Veeam 修复5个严重漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：40711未认证，42024需agent服务凭据，另各低权限或服务NTLM泄露条件不同
+- 证据范围：列五主要CVE和六产品修复版本但不能将版本与每个漏洞笼统一一对应
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 五个都可RCE的总述超出其中两个NTLM泄露直接影响，须描述链条件
+- VPSC缩写应VSPC
+- 全部主CVE缺元数据；18项只列五项，不应称全量详单
+- 去推荐/产品推广
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 THN  代码卫士   2024-09-06 17:02  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

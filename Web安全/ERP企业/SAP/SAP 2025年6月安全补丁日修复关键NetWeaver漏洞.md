@@ -1,9 +1,50 @@
 ---
-cve: "CVE-2025-42989"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "SAP NetWeaver AS ABAP及多组件 RFC授权缺失和月度补丁集合"
+product: "SAP NetWeaver AS ABAP及多组件"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2025-42989;CVE-2025-42982;CVE-2025-42983;CVE-2025-23192;CVE-2025-42977;CVE-2025-42994"
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "2025-06；具体组件/版本缺，Note3600840"
+prerequisites: "主漏洞需认证及tRFC/qRFC条件"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+identifier_role: "primary"
+source_status: "unknown"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/SAP/SAP%202025%E5%B9%B46%E6%9C%88%E5%AE%89%E5%85%A8%E8%A1%A5%E4%B8%81%E6%97%A5%E4%BF%AE%E5%A4%8D%E5%85%B3%E9%94%AENetWeaver%E6%BC%8F%E6%B4%9E.md"
+id: "vw-7e157400623a87ca55bf15a6"
+entity_id: "ve-7e157400623a87ca55bf15a6"
+schema_version: "1"
 ---
 
-#  SAP 2025年6月安全补丁日修复关键NetWeaver漏洞  
+# SAP NetWeaver AS ABAP及多组件 RFC授权缺失和月度补丁集合
+
+## 条目说明
+
+- 对象与具体问题：SAP NetWeaver AS ABAP及多组件；RFC授权缺失和月度补丁集合
+- 版本、配置及部署条件：2025-06；具体组件/版本缺，Note3600840
+- 认证与权限前提：主漏洞需认证及tRFC/qRFC条件
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 主42989与五个其他CVE不能全标同产品同前提
+- 声称修五高危另六中两低需对公告计数，暂无链接
+- 无在野声明明确保留，不把高CVSS当已利用
+- 应按Note和组件矩阵整理，重复序号格式修复
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 鹏鹏同学  黑猫安全   2025-06-12 01:20  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/8dBEfDPEceibIHGEHhMzClCFv0WQBE8TGbvCjae2LEklBZD5j4Pxu5LoiaicOE8JGXDbGFKRLibj6ZGy89uo6B0wrQ/640?wx_fmt=png&from=appmsg "")  

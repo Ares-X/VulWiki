@@ -1,9 +1,50 @@
 ---
 cve: "CVE-2024-37085"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "勒索软件正在利用VMware漏洞，通过VPN访问发动攻击"
+product: "VMware ESXi/BlackByte事件"
+record_type: "incident"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2024-37085"
+referenced_identifiers: ""
+identifier_role: "primary"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-9e9b0117ba0a923b209659e0"
+entity_id: "ve-9e9b0117ba0a923b209659e0"
+schema_version: "1"
 ---
 
-#  勒索软件正在利用VMware漏洞，通过VPN访问发动攻击   
+# 勒索软件正在利用VMware漏洞，通过VPN访问发动攻击
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 本次正文校订
+
+- 按该篇完整正文及逐篇审阅区分主问题与背景编号，补全结构化主标识；不把标识归属校订等同运行复现。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 目录为新闻句子不是产品
+- 省略AD域集成及相关组控制前提容易误读为纯远程认证绕过
+- VPN凭据入口与ESXi漏洞为攻击链不同阶段
+- 无受影响/修复版本
+- 缺Talos原始研究链接
+- 大段HTML调查推广应剔除
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
  信息安全大事件   2024-08-30 20:16  
   
 Hackread报道，近期Cisco Talos（思科威胁情报团队）发现，BlackByte勒索软件正在对全球企业发起新一轮攻击。  

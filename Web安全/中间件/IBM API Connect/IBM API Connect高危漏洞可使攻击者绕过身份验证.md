@@ -1,9 +1,47 @@
 ---
 cve: "CVE-2025-13915"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "IBM API Connect高危漏洞可使攻击者绕过身份验证"
+product: "IBM API Connect"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2025-13915"
+referenced_identifiers: ""
+identifier_role: "primary"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-2cc04900c8d61400e0ba5bc2"
+entity_id: "ve-2cc04900c8d61400e0ba5bc2"
+schema_version: "1"
 ---
 
-#  IBM API Connect高危漏洞可使攻击者绕过身份验证  
+# IBM API Connect高危漏洞可使攻击者绕过身份验证
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 证据范围：仅风险新闻，没有根因/受影响组件级别细节或独立PoC，不能从CVSS推导所有后端全面被控制。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- CWE-305并不意为主流身份验证机制，应为主弱点身份验证绕过语义
+- 9.8属Critical但不是CVSS数值最高10.0，最高等级应区别最高分
+- 影响10.0.8.0但修复步骤从.1起，.0升级路径遗漏
+- 未给IBM公告、iFix编号和下载直链，门户自注册缓解是否充分待官方核对
+- 数日必须完成修复及大规模自动化威胁为作者建议，非已证实利用态势
+- 多余表格字样、HTML样式噪声
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
  网安百色   2026-01-02 11:04  
   
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/1QIbxKfhZo5n7ss8dnaic2VeRZgwEficrdbOpfLIIuOnXn5c1CibQxWm9ZVSq5icAWd8pFRLbzfsUnnknLuickTbqMQ/640?wx_fmt=jpeg&from=appmsg "")  

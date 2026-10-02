@@ -1,6 +1,38 @@
 ---
 source: "wy876 漏洞文库"
+product: "SpringBlade/blade-system/tenant/list"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "SpringBladetenant-list存在SQL注入漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：仅产品名，无版本/修复范围；提供管理员声明JWT，但没有说明有效登录或硬编码密钥伪造前提"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-c1aebc73e809e777691b1b6f"
+entity_id: "ve-c1aebc73e809e777691b1b6f"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：仅产品名，无版本/修复范围；提供管理员声明JWT，但没有说明有效登录或硬编码密钥伪造前提
+
+代码与实验材料：updatexml(md5(123456))与截断MD5前缀，无HTTP响应上下文
+
+来源证据范围：转载/语雀来源可追溯，未给对应官方修复提交或完整权限模型
+
+- **代码与转录边界（1）**：截断摘要应解释而非当完整值；依据：e10adc...f883非完整32位MD5，可能错误消息长度所致，需原始响应。相应原代码作为存在此问题的历史样本保留，不能直接当作可运行、成功复现的 PoC；缺失内容需回原稿核对，不据此补造可执行攻击链。
+
+- **适用与权限边界（2）**：版本与租户权限未证；依据：管理员JWT固定tenant000000，不能据此证明跨租户或未认证读取。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # SpringBlade tenant-list存在SQL注入漏洞
 

@@ -1,9 +1,53 @@
 ---
 cve: "CVE-2026-34980"
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-be55b5be27e04018f239330b"
+entity_id: "ve-be55b5be27e04018f239330b"
+schema_version: "1"
+title: "CUPS漏洞链使远程攻击者能够以root用户身份执行恶意代码"
+product: "CUPS打印服务软件"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2026-34980; CVE-2026-34990"
+referenced_identifiers: ""
+prerequisites: "≤2.4.16声称；需特意共享旧PostScript队列，lp后本地令牌/race提权"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%99%BA%E8%83%BD%E8%AE%BE%E5%A4%87/CUPS/CUPS%E6%BC%8F%E6%B4%9E%E9%93%BE%E4%BD%BF%E8%BF%9C%E7%A8%8B%E6%94%BB%E5%87%BB%E8%80%85%E8%83%BD%E5%A4%9F%E4%BB%A5root%E7%94%A8%E6%88%B7%E8%BA%AB%E4%BB%BD%E6%89%A7%E8%A1%8C%E6%81%B6%E6%84%8F%E4%BB%A3%E7%A0%81.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 #  CUPS漏洞链使远程攻击者能够以root用户身份执行恶意代码  
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：CUPS打印服务软件
+- 本文讨论：CVE-2026-34980、34990
+- 版本、权限与配置前提：≤2.4.16声称；需特意共享旧PostScript队列，lp后本地令牌/race提权
+- 资料类型：CUPS双漏洞链新闻；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 元数据漏34990；无研究/官方公告URL，版本/零日/无补丁状态不可追溯
+- 打印软件不是物理智能设备，应组件分类；root任意覆盖到代码执行仍需最后路径说明
+- MAC缓解取决策略，不是所有AppArmor/SELinux必然有效
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- CVE真实性/范围、默认本地策略和完整提权链待官方核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 原创 网络安全9527
                     网络安全9527  安全圈的那点事儿   2026-04-08 11:17  
   

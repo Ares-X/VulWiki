@@ -1,9 +1,66 @@
 ---
-version: "pip install socksio pysocks"
 source: "Threekiii/Vulnerability-Wiki"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "browser-use-WebUI-pickle-反序列化漏洞"
+product: "browser-use WebUI AI Agent服务"
+record_type: "vulnerability"
+document_type: "不安全反序列化复现"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "文中<1.7，测试v1.6、Python3.11、Gradio5.23.0，网络可达配置加载接口且无额外认证"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/%E6%B5%8F%E8%A7%88%E5%99%A8/browser-use-WebUI-pickle-%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%BC%8F%E6%B4%9E.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+version_unverified: "pip install socksio pysocks"
+id: "vw-904b64800832b3df6c2b2f27"
+entity_id: "ve-904b64800832b3df6c2b2f27"
+schema_version: "1"
 ---
 
-# browser-use WebUI pickle 反序列化漏洞
+# browser-use-WebUI-pickle-反序列化漏洞
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：browser-use WebUI AI Agent服务
+- 文献类型：不安全反序列化复现
+- 版本、权限及部署边界：文中<1.7，测试v1.6、Python3.11、Gradio5.23.0，网络可达配置加载接口且无额外认证
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 版本字段误抽pip install命令；实际AI Web服务并非浏览器本体，关联AI目录实体
+2. 启动仅127.0.0.1却称your-ip远程可访问，应明确本机实验与外部暴露条件；无鉴权要绑定部署设置
+3. Windows copy命令与后续Unix env|curl载荷平台混用，缺实际服务OS说明
+4. pickle.load之前缺校验才是关键，之后isinstance(dict)无防护作用；推荐禁用不可信pickle或安全格式，升级需落实1.7/提交
+5. 披露时间2025-04-28与参考研究04-23不同，应区分文库日期/首次公开
+6. 来源commit与原始研究完整，独立环境兼容经验保留；外发env样例可能包含凭据，不宜作为最小验证
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://github.com/browser-use/web-ui/commit/7fdf95edaeaf2505b36c10966b7b8d65359f1de6>
+- 原文参考链接（未重新核验）：<https://research.kudelskisecurity.com/2025/04/23/getting-rce-on-browser-use-web-ui-ai-agent-instances/>
+- 原文参考链接（未重新核验）：<https://github.com/browser-use/web-ui/tree/v1.6>
+- 原文参考链接（未重新核验）：<https://github.com/browser-use/web-ui.git>
+- 原文参考链接（未重新核验）：<http://your-ip:7788/`，此时>
+- 原文参考链接（未重新核验）：<https://github.com/trailofbits/fickling>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
 
 ## 漏洞描述
 

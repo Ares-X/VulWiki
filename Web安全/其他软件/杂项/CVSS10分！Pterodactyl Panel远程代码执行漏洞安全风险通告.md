@@ -1,8 +1,62 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2025-49132"
+identifier_role: "primary"
+primary_identifiers: "CVE-2025-49132"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "CVSS10分！Pterodactyl Panel远程代码执行漏洞安全风险通告"
+product: "Pterodactyl Panel"
+record_type: "advisory"
+document_type: "安全厂商通告"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "文称Panel<1.11.11、未经认证locale/namespace请求"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/CVSS10%E5%88%86%EF%BC%81Pterodactyl%20Panel%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E%E5%AE%89%E5%85%A8%E9%A3%8E%E9%99%A9%E9%80%9A%E5%91%8A.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-b651439ae03a40e5326fec08"
+entity_id: "ve-b651439ae03a40e5326fec08"
+schema_version: "1"
 ---
 
-#  CVSS10分！Pterodactyl Panel远程代码执行漏洞安全风险通告  
+# CVSS10分！Pterodactyl Panel远程代码执行漏洞安全风险通告
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Pterodactyl Panel
+- 文献类型：安全厂商通告
+- 版本、权限及部署边界：文称Panel<1.11.11、未经认证locale/namespace请求
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 产品是游戏面板而非其管理的Minecraft等服务；补CVE元数据
+2. 公告和发布链接明确，可保留摘要；CVSS3.0版本及RCE完整利用前提需对公告核验
+3. 表中PoC公开而细节未公开/未复现须保留截至时间及来源；本文没有PoC不能标本站复现
+4. TDA检测规则升级不是修复Panel；大段防护厂商产品广告和HTML表格应简化
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://github.com/pterodactyl/panel/releases/tag/v1.11.11>
+- 原文参考链接（未重新核验）：<https://github.com/advisories/GHSA-24wv-6c99-f843>
+- 原文参考链接（未重新核验）：<https://vulners.com/cve/CVE-2025-49132>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 应急响应中心  亚信安全   2025-06-26 03:49  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/iczzp36h0nbH0ZVtiaicJYib933Zj5hlKa5icoOicK5pd2s0xIfKC7KCjKl3qGtYYmZGFphxLtRZGABA1iamjpdNbLO4g/640?wx_fmt=jpeg "")  
@@ -103,4 +157,4 @@ https://github.com/pterodactyl/panel/releases/tag/v1.11.11
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

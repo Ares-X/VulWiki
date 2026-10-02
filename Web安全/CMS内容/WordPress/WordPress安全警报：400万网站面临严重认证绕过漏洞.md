@@ -1,6 +1,40 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+product: "WordPress Really Simple Security；WordPress WPLMS theme"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2024-10924"
+referenced_identifiers: "CVE-2024-10470"
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "WordPress安全警报：400万网站面临严重认证绕过漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：ReallySimple9.0.0–9.1.1.1,2FAenabled,fixed9.1.2;WPLMS<4.963 separate file read/delete"
+side_effects: "未执行；本文需注意的操作影响：大量HTML推荐/宣传宜剥离，删除配置到接管仍有安装前提"
+source_status: "unknown"
+id: "vw-06da4374b0c69a9be2c7c2af"
+entity_id: "ve-06da4374b0c69a9be2c7c2af"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：ReallySimple9.0.0–9.1.1.1,2FAenabled,fixed9.1.2;WPLMS&lt;4.963 separate file read/delete
+
+- **事实待核（1）**：主CVE未进元数据，WPLMS是独立背景漏洞不应归ReallySimple。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **事实待核（2）**：标题400万按总安装量，须限定2FA开启且受影响版本。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **实验改动边界（3）**：11月6日披露与公开披露前强制更新混用，需区分私下报告与公开时间。以下步骤按原实验条件保留；人工改动后的行为只支持该修改环境，不用于证明未修改发行版默认可利用。
+
+- **实验改动边界（4）**：强制更新所有旧站点是绝对断言需核；有新闻来源但无Wordfence原公告。以下步骤按原实验条件保留；人工改动后的行为只支持该修改环境，不用于证明未修改发行版默认可利用。
+
+- **操作与副作用边界（5）**：大量HTML推荐/宣传宜剥离，删除配置到接管仍有安装前提。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 #  WordPress安全警报：400万网站面临严重认证绕过漏洞   
  安全客   2024-11-18 16:03  

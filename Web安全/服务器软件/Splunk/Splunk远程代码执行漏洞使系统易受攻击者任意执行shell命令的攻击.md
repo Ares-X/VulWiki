@@ -1,9 +1,45 @@
 ---
 cve: "CVE-2026-20163"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Splunk远程代码执行漏洞使系统易受攻击者任意执行shell命令的攻击"
+product: "Splunk Enterprise/Cloud upload indexing preview"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2026-20163"
+referenced_identifiers: ""
+identifier_role: "primary"
+prerequisites: "edit_cmd能力而非任何普通账号，unarchive_cmd处理路径可达；文列10.0/9.4/9.3分支"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-c0e6c74630373f86f89cbb29"
+entity_id: "ve-c0e6c74630373f86f89cbb29"
+schema_version: "1"
 ---
 
-#  Splunk远程代码执行漏洞使系统易受攻击者任意执行shell命令的攻击  
+# Splunk远程代码执行漏洞使系统易受攻击者任意执行shell命令的攻击
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：edit_cmd能力而非任何普通账号，unarchive_cmd处理路径可达；文列10.0/9.4/9.3分支
+- 证据范围：给端点/参数及能力前提但无请求与响应，属于公告摘要
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- edit_cmd是能力不是账户名，也未必仅内置admin
+- 完全接管服务器应限服务账号权限
+- 列受影响最高版本但无完整修复建议/官方依据；10.2不受影响需验证
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 原创 网络安全9527
                     网络安全9527  安全圈的那点事儿   2026-03-12 11:15  
   

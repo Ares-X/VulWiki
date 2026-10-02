@@ -1,9 +1,46 @@
 ---
-cve: "CVE-2025-20229"
+cve: "CVE-2025-20229; CVE-2025-20231"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Splunk 高危漏洞：攻击者可通过文件上传执行任意代码"
+product: "Splunk Enterprise/Cloud与Secure Gateway App"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2025-20229; CVE-2025-20231"
+referenced_identifiers: ""
+identifier_role: "primary"
+prerequisites: "已认证低权限且相关上传/搜索权限；CVSS两项UI:R，20231需受害者浏览器请求和日志访问"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-3a00d8c7009b50f5695e469e"
+entity_id: "ve-3a00d8c7009b50f5695e469e"
+schema_version: "1"
 ---
 
-#  Splunk 高危漏洞：攻击者可通过文件上传执行任意代码   
+# Splunk 高危漏洞：攻击者可通过文件上传执行任意代码
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：已认证低权限且相关上传/搜索权限；CVSS两项UI:R，20231需受害者浏览器请求和日志访问
+- 证据范围：20229上传RCE和20231日志令牌泄露应独立建模，后半详情不能误归标题主CVE
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 表格Cloud受影响低于.113/.207与正文修复.114/.208存在边界差一
+- 20229为何UI:R正文未解释，不能写只需上传就必然RCE
+- 元数据漏20231；9.4.0与9.4.1是不同漏洞修复要求需明确归属
+- 大段调查表HTML/广告可移除
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
  信息安全大事件   2025-03-28 18:02  
   
 Splunk 近日发布补丁，修复了影响 Splunk Enterprise 和 Splunk Cloud Platform 的高危远程代码执行（RCE）漏洞。该漏洞编号为 CVE-2025-20229，可能允许低权限用户通过上传恶意文件执行任意代码。  

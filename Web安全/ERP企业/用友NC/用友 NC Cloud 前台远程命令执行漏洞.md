@@ -1,11 +1,51 @@
 ---
-fofa: "语句**"
 source: "MrWQ/vulnerability-paper"
+title: "用友NCCloud jsinvoke saveXStreamConfig文件写入至EL/BeanShell执行"
+product: "用友NCCloud"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "版本只有截图，路径/BeanShell/CommonsIO可用条件"
+prerequisites: "无Cookie示例，前台声明"
+side_effects: "文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行"
+review_date: "2026-10-02"
+source_url: "https://mp.weixin.qq.com/s/M057A5KF4LN9Crd_SlS4ZQ"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E7%94%A8%E5%8F%8BNC/%E7%94%A8%E5%8F%8B%20NC%20Cloud%20%E5%89%8D%E5%8F%B0%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md"
+fofa_unverified: "语句**"
+id: "vw-9412a98bdb29b2b0db78c93e"
+entity_id: "ve-9412a98bdb29b2b0db78c93e"
+schema_version: "1"
 ---
 
-# 用友 NC Cloud 前台远程命令执行漏洞
+# 用友NCCloud jsinvoke saveXStreamConfig文件写入至EL/BeanShell执行
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：用友NCCloud；jsinvoke saveXStreamConfig文件写入至EL/BeanShell执行
+- 版本、配置及部署条件：版本只有截图，路径/BeanShell/CommonsIO可用条件
+- 认证与权限前提：无Cookie示例，前台声明
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 第一步写123456789.jsp第二步访问823780482.jsp，链路径自相矛盾
+- 两HTTP都缺头体空行，JSON配form-urlencoded须按服务解析解释
+- 任意方法调用/文件写入是根因链，不普通上传；执行依赖EL/BeanShell
+- FOFA误标题，缺修复build，关联同IBaseSPService稿
+
+## 操作风险
+
+文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/M057A5KF4LN9Crd_SlS4ZQ)
 
 **漏洞简介**
@@ -33,7 +73,7 @@ app="用友-NC-Cloud"
 
 上传 123456789.jsp 的 webshell
 
-```
+```http
 POST /uapjs/jsinvoke/?action=invoke HTTP/1.1
 Host: ****
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/115.0
@@ -54,7 +94,7 @@ Content-Type: application/x-www-form-urlencoded
 
 执行 ipconfig 命令
 
-```
+```http
 POST /823780482.jsp?error=bsh.Interpreter HTTP/1.1
 Host: *****
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/115.0

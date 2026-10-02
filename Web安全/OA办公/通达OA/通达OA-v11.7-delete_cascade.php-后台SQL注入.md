@@ -1,25 +1,65 @@
 ---
-version: "通达OA v11.7"
 source: "Threekiii/Vulnerability-Wiki"
+title: "通达OA delete_cascade SQL 注入到日志写文件"
+product: "通达OA"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "11.7及旧mysql.user结构"
+prerequisites: "登录及高权限应用DB"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+source_url: "https://github.com/Threekiii/Vulnerability-Wiki"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E9%80%9A%E8%BE%BEOA/%E9%80%9A%E8%BE%BEOA-v11.7-delete_cascade.php-%E5%90%8E%E5%8F%B0SQL%E6%B3%A8%E5%85%A5.md"
+category_recommendation: "OA / 通达"
+id: "vw-d64eae695b98476cf8742537"
+entity_id: "ve-d64eae695b98476cf8742537"
+schema_version: "1"
 ---
 
-# 通达OA v11.7 delete_cascade.php 后台SQL注入
+# 通达OA delete_cascade SQL 注入到日志写文件
 
-## 漏洞描述
+## 条目说明
+
+- 对象与具体问题：通达OA；delete_cascade SQLi到日志写文件
+- 版本、配置及部署条件：11.7及旧mysql.user结构
+- 认证与权限前提：登录及高权限应用DB
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 日志变量只设F:/OA/webroot/目录缺文件名，不足写所述文件
+- password_expired=Y人为导致重授权；远程DB可达条件未明
+- SQL URL/强调格式损坏，关键根因图未视检；无恢复
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
+### 漏洞描述
 
 通达OA v11.7后台存在SQL注入，可通过此漏洞写入恶意后门文件攻击目标服务器
 
-## 漏洞影响
+### 漏洞影响
 
 ```
 通达OA v11.7
 ```
 
-## 环境搭建
+### 环境搭建
 
 [环境地址](https://cdndown.tongda2000.com/oa/2019/TDOA11.7.exe)
 
-## 漏洞复现
+### 漏洞复现
 
 在 **general/hr/manage/query/delete_cascade.php** 文件中
 
@@ -113,7 +153,7 @@ show variables like '%general%';
 ![image-20220209111135417](./.resource/通达OA-v11.7-delete_cascade.php-后台SQL注入/media/202202091111491.png)
 
 
-## 参考文章
+### 参考文章
 
 [通达OA v11.7后台SQL注入到RCE[0day\]](https://mp.weixin.qq.com/s/8rvIT1y_odN2obJ1yAvLbw)
 

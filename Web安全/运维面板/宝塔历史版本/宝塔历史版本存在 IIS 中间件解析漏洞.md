@@ -1,8 +1,46 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "宝塔历史版本存在 IIS 中间件解析漏洞"
+product: "宝塔 Windows panel with IIS8.5/PHP5.4"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "WindowsServer2012R2;panel<=6.5 claimed;IIS8.5/PHP5.4;uploaddemo permits imageextension"
+source_url: "https://mp.weixin.qq.com/s/25ncF8PuXh4Aob49TPFfbw"
+source_status: "recorded"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-515922ecd31f82b6cf6282a1"
+entity_id: "ve-515922ecd31f82b6cf6282a1"
+schema_version: "1"
 ---
 
 # 宝塔历史版本存在 IIS 中间件解析漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：WindowsServer2012R2;panel<=6.5 claimed;IIS8.5/PHP5.4;uploaddemo permits imageextension
+- 证据范围：Upload disguised PHP then /.php suffix;needs handler/path-info settings to attribute rootcause
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- P0 platform claim 'Linux as long as IIS8.5' is inconsistent with named WindowsIIS environment
+- Conclusion says arbitraryfileupload but demonstrated gap is uploaded image parsed asPHP;separate primitives
+- No exact vulnerable handlerconfig or fixedpanelversion
+- Every line promoted to heading/bold;rawPHP not fenced
+- Screenshots alone show output; no textual HTTP evidence
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/25ncF8PuXh4Aob49TPFfbw)

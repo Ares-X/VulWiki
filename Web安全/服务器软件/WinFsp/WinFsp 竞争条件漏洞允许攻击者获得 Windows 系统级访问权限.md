@@ -1,9 +1,49 @@
 ---
 cve: "CVE-2026-3006"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "WinFsp 竞争条件漏洞允许攻击者获得 Windows 系统级访问权限"
+product: "WinFsp Windows文件系统驱动框架"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2026-3006"
+referenced_identifiers: ""
+identifier_role: "primary"
+prerequisites: "本地攻击者访问受影响驱动；文列<=2.1.25156及v2.2B1修复"
+source_status: "unknown"
+side_effects: "含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。"
+id: "vw-69f23518474e16f4d58dfc8d"
+entity_id: "ve-69f23518474e16f4d58dfc8d"
+schema_version: "1"
 ---
 
-#  WinFsp 竞争条件漏洞允许攻击者获得 Windows 系统级访问权限  
+# WinFsp 竞争条件漏洞允许攻击者获得 Windows 系统级访问权限
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：本地攻击者访问受影响驱动；文列<=2.1.25156及v2.2B1修复
+- 证据范围：明确本地不是远程，堆损坏到SYSTEM是潜在后果，无触发/栈/补丁细节
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 应归操作系统驱动/组件，不是服务器软件独占
+- 修复版本B1与稳定版关系、漏洞编号需厂家/CSA核验
+- 限制本地管理访问不能消除普通用户触发的风险，缓解建议泛化
+
+### 操作风险与资料使用
+
+- 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 原创 网络安全9527
                     网络安全9527  安全圈的那点事儿   2026-07-14 11:24  
   

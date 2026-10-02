@@ -1,8 +1,44 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Cloudflare曝零日漏洞：攻击者可借证书验证路径绕过WAF访问任意源站"
+product: "Cloudflare ACME WAF"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-f66099dcf347c9bcf7566ebb"
+entity_id: "ve-f66099dcf347c9bcf7566ebb"
+schema_version: "1"
 ---
 
-#  Cloudflare曝零日漏洞：攻击者可借证书验证路径绕过WAF访问任意源站  
+# Cloudflare曝零日漏洞：攻击者可借证书验证路径绕过WAF访问任意源站
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 同事件更完整2025-10-27修复时间线，另一篇补机制
+- 源站影响需框架路由/漏洞条件，不能泛化任意敏感文件
+- 特定有效挑战仍有例外却称所有路径统一WAF有内部矛盾
+- 仅媒体名缺原厂/研究URL
+- 已修复历史事件
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 看雪学苑
                     看雪学苑  看雪学苑   2026-01-20 09:59  
   

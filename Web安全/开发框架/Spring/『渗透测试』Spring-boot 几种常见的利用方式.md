@@ -1,7 +1,51 @@
 ---
-version: "辅助快速过滤分析，获得密码明文。成功获取`challengepassword`密码 `*.H......`"
+version: ""
 source: "MrWQ/vulnerability-paper"
+product: "Spring Boot / Spring Cloud / Jolokia"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+version_notes: "辅助快速过滤分析，获得密码明文。成功获取`challengepassword`密码 `*.H......`"
+title: "『渗透测试』Spring-boot 几种常见的利用方式"
+prerequisites: "来源所述条件，未列明部分仍待核：Whitelabel 列旧版；Eureka <1.8.7；JNDI/JDK 写不精确；多数链依写 env、refresh/restart 和类路径组合"
+side_effects: "未执行；本文需注意的操作影响：依赖和产品混淆；将 refresh/restart 归为只需 Boot starter-actuator；AWS 信息后却使用阿里云 AK/SK 工具，不能跨云等同；H2 副作用和前提未完整；需要 HikariCP+H2 的权限和编译支持，CREATE ALIAS 后 CALL 会持久改库，restart 影响可用性"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/1gR2QDquslj6fUmB6EpyOA"
+id: "vw-16c35d6ee33e16068d98eda5"
+entity_id: "ve-16c35d6ee33e16068d98eda5"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 明确更正：原 version 字段抽入命令、源码、路径、配置或普通叙述，不是版本号，已清空机器版本字段并原样保留于 version_notes；实际版本/分支条件见本节逐篇记录，未从代码猜造版本。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：Whitelabel 列旧版；Eureka &lt;1.8.7；JNDI/JDK 写不精确；多数链依写 env、refresh/restart 和类路径组合
+
+代码与实验材料：302 行全文；Eureka 完整 XML 结构尚在但 Python 被反引号压平；其他 XXE/JNDI 材料只在图片
+
+来源证据范围：有宸极实验室作者、LandGrey、Spac eraccoon（原文 spaceraccoon.dev）和 su18 来源
+
+- **来源与引用处置（1）**：version 元数据污染为密码描述；依据：frontmatter version 是获得密码明文的一句话，与任何版本无关。保留这部分来源材料并与技术结论分开；其引用或宣传内容不能补足本文漏洞的证据。
+
+- **证据待核（2）**：Whitelabel 文本 PoC 缺闭合定界；依据：${T(...exec(new String(...)) 最后没有 }，与上下文 #{...}/${...} 说明也混用。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **操作与副作用边界（3）**：依赖和产品混淆；依据：将 refresh/restart 归为只需 Boot starter-actuator；AWS 信息后却使用阿里云 AK/SK 工具，不能跨云等同。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+- **结论使用边界（4）**：Jolokia XXE 与 JNDI 两条链混写；依据：原理把 XML 外部实体解析与 insertFormJNDI 连为必然步骤，标签本身也拼错。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **适用与权限边界（5）**：代码抽取破坏复现；依据：OQL、Flask 程序逐行反引号全部挤在一行；JDK 6u201/7u191/8u182/11.0.1 的小于边界需官方确认。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **操作与副作用边界（6）**：H2 副作用和前提未完整；依据：需要 HikariCP+H2 的权限和编译支持，CREATE ALIAS 后 CALL 会持久改库，restart 影响可用性。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # 『渗透测试』Spring-boot 几种常见的利用方式
 

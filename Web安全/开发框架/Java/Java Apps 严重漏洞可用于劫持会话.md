@@ -1,6 +1,38 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+product: "应主归Undertow/WildFly-JBoss依赖关联"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2025-12543"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "Java Apps 严重漏洞可用于劫持会话"
+prerequisites: "来源所述条件，未列明部分仍待核：只写JBoss EAP8.1及相关包，未给Undertow影响/固定版本；需恶意Host进入相关应用流程及有限用户交互"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-3de5094930b59cc3415a6d2c"
+entity_id: "ve-3de5094930b59cc3415a6d2c"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：只写JBoss EAP8.1及相关包，未给Undertow影响/固定版本；需恶意Host进入相关应用流程及有限用户交互
+
+代码与实验材料：无PoC，仅概括Host校验与会话/缓存/内网后果，未提供完整利用链
+
+来源证据范围：SecurityOnline译文；RHSA编号可追溯但没有直接官方链接
+
+- **事实待核（1）**：过泛标题及范围缺失；依据：Java Apps标题像全Java问题，实际Undertow；两个RHSA涉及哪些包和修复构建未映射。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **凭据与会话边界（2）**：评分和下游影响来源需分层；依据：CVSS9.6与RedHat重要评级并存无评分版本/向量；会话劫持/内部扫描需要具体应用行为，不应一概必然。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 #  Java Apps 严重漏洞可用于劫持会话  
 Ddos  代码卫士   2026-01-12 10:20  

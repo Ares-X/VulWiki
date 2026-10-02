@@ -1,9 +1,54 @@
 ---
 cve: "CVE-2026-24733"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Tomcat漏洞允许攻击者通过HTTP/0.9请求绕过安全限制"
+product: "Apache Tomcat HTTP解析与安全约束"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2026-24733"
+referenced_identifiers: ""
+identifier_role: "primary"
+prerequisites: "同URI允许HEAD而禁止GET，端到端接收HTTP/0.9异常HEAD请求"
+verification_source: "https://tomcat.apache.org/security-9.html"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-5e1abcc0dc6638eb1b98a53c"
+entity_id: "ve-5e1abcc0dc6638eb1b98a53c"
+schema_version: "1"
 ---
 
-#  Tomcat漏洞允许攻击者通过HTTP/0.9请求绕过安全限制  
+# Tomcat漏洞允许攻击者通过HTTP/0.9请求绕过安全限制
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：同URI允许HEAD而禁止GET，端到端接收HTTP/0.9异常HEAD请求
+- 证据范围：明确低危和狭窄配置前提，内容与已查Tomcat9官方根因相符；不应升级成普适认证绕过。
+
+### 已有来源支持的更正
+
+- 官方确认24733低危、HEAD/GET约束组合、9.0.113修复；其他两分支待逐分支校验
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 缺可追溯官方公告链接，尾注原文见文首但无文章直链
+- HTML表格可规范化，pache首字残缺
+- 无请求/输出示例，只能作为新闻摘要
+
+### 核验来源
+
+- https://tomcat.apache.org/security-9.html
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 原创 ZM
                     ZM  暗镜   2026-02-20 22:58  
   

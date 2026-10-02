@@ -1,8 +1,60 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2024-54492;CVE-2024-54526;CVE-2024-54527;CVE-2024-54494;CVE-2024-54505;CVE-2024-44246"
+identifier_role: "primary"
+primary_identifiers: "CVE-2024-54492;CVE-2024-54526;CVE-2024-54527;CVE-2024-54494;CVE-2024-54505;CVE-2024-44246"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "苹果通过 iOS 18.2 更新修复了密码应用程序中的加密漏洞"
+product: "Apple Passwords及其他iOS组件"
+record_type: "advisory"
+document_type: "iOS补丁新闻"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "Passwords iOS18至18.2修复前；网络中间人位置；其余组件各自本地/Web前提"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Apple/%E8%8B%B9%E6%9E%9C%E9%80%9A%E8%BF%87%20iOS%2018.2%20%E6%9B%B4%E6%96%B0%E4%BF%AE%E5%A4%8D%E4%BA%86%E5%AF%86%E7%A0%81%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E4%B8%AD%E7%9A%84%E5%8A%A0%E5%AF%86%E6%BC%8F%E6%B4%9E.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-c290d126dae2d14d49c86b88"
+entity_id: "ve-c290d126dae2d14d49c86b88"
+schema_version: "1"
 ---
 
-#  苹果通过 iOS 18.2 更新修复了密码应用程序中的加密漏洞   
+# 苹果通过 iOS 18.2 更新修复了密码应用程序中的加密漏洞
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Apple Passwords及其他iOS组件
+- 文献类型：iOS补丁新闻
+- 版本、权限及部署边界：Passwords iOS18至18.2修复前；网络中间人位置；其余组件各自本地/Web前提
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 元数据漏全部CVE，主篇54492与后续五项补丁应主从关联或拆记录
+2. 网站图标HTTP/元数据泄露并不直接证明密码库明文或密码泄露，风险措辞需约束
+3. 伪造图标到用户被重定向恶意网站的因果缺演示，应保留可能性
+4. 研究者推文有链接但缺Apple/Tenable公告；iPad范围与其他组件受影响版本未逐项给出，空列表和小标题清理
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://twitter.com/mysk_co/status/1866970731478913277>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 很近也很远  网络研究观   2024-12-12 15:59  
   
 ![](https://mmbiz.qpic.cn/mmbiz_png/yvLFKBRPQxNgnFUp5qCia4zmeweWvdHkTQfYUMlwXkSRibaGQv5r7RB5wT504JKIbHceN4KexvrsmialGc3pZLDnw/640?wx_fmt=png&from=appmsg "")  
@@ -58,4 +110,4 @@ Apple 的iOS 18.2 更新还解决了不同组件中其他几个值得注意的�
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

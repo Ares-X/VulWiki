@@ -1,6 +1,40 @@
 ---
 source: "hatch 补库批 20260928"
+product: "PbootCMS1.2.1"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "PbootCMS sql注入"
+prerequisites: "来源所述条件，未列明部分仍待核：MySQL兼容updatexml；留言需有效验证码/10秒提交间隔；自定义表单需后台先配置；API启用且有appid/secret或关闭强制认证"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-d3b57d966a308cc508bdc0d9"
+entity_id: "ve-d3b57d966a308cc508bdc0d9"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：MySQL兼容updatexml；留言需有效验证码/10秒提交间隔；自定义表单需后台先配置；API启用且有appid/secret或关闭强制认证
+
+- **事实待核（1）**：标题/影响无版本而源码路径确定1.2.1；7入口为home留言/表单/首页ext_key/搜索和APIsearch/addmsg/addform，须逐端点记录。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **适用与权限边界（2）**：作者修改验证码验证用于测试，不能把无验证码请求当原版未认证复现；API前提后半段才给应上提。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **证据待核（3）**：多处根据6.0引用缺失，核心二维数组key进入insert的底层实现未贴；当前控制器顶层字段白名单需说明二级key如何变列名。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **结论使用边界（4）**：APIsearch说空POST但示例11=11，实际非空；addmsg载荷contentl疑列名拼错。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **操作与副作用边界（5）**：章节号混0x01/0x08/0x10，SQL工具/DB端配置未列；部分代码由作者改过应注明。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # PbootCMS sql注入
 

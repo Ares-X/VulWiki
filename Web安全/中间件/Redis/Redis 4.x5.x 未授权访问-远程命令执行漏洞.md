@@ -1,8 +1,48 @@
 ---
 source: "白阁文库 BaizeSec/bylibrary"
+title: "Redis Rogue Server"
+product: "Redis复制/模块加载管理能力"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "模块功能可用（4+）、可执行复制/CONFIG/MODULE命令、目标可连恶意主机并加载匹配架构.so，非所有无认证Redis均满足"
+source_status: "unknown"
+side_effects: "含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。"
+id: "vw-e97514964933f08ba2b5c842"
+entity_id: "ve-e97514964933f08ba2b5c842"
+schema_version: "1"
 ---
 
 # Redis Rogue Server
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：模块功能可用（4+）、可执行复制/CONFIG/MODULE命令、目标可连恶意主机并加载匹配架构.so，非所有无认证Redis均满足
+- 证据范围：工具使用文档应与漏洞实体分离；<=5.0.5没有4.0下界且未说明5.0.6变化，不能当通用影响范围。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- github获取文件却没有本工具仓库链接，只有依赖模块链接
+- 复制角色/持久化文件名变更可能导致同步覆盖数据，不是单纯检查，日志temporary cleaning不能证明完全恢复
+- 缺目标系统/架构、原始主从配置备份及模块卸载验证
+- 与465/466同复制模块链，保留工具差异不重复计漏洞
+
+### 操作风险与资料使用
+
+- 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 A exploit for Redis(<=5.0.5) RCE, inspired by [Redis post-exploitation](https://2018.zeronights.ru/wp-content/uploads/materials/15-redis-post-exploitation.pdf).
 

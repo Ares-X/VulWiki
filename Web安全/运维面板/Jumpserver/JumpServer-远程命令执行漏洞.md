@@ -1,9 +1,46 @@
 ---
 version: "JumpServer < v2.6.2"
 source: "Threekiii/Vulnerability-Wiki"
+title: "JumpServer 远程命令执行漏洞"
+product: "JumpServer core/Koko"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "Branch bounds as10; known valid asset/user/system_user IDs; asset session privileges"
+affected_versions: "JumpServer < v2.6.2"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-2690a97b57a3e07b85b0148d"
+entity_id: "ve-2690a97b57a3e07b85b0148d"
+schema_version: "1"
 ---
 
 # JumpServer 远程命令执行漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：Branch bounds as10; known valid asset/user/system_user IDs; asset session privileges
+- 证据范围：Different compact token/WebSocket script uses authentication route/user-only=None; required log discovery external
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- Hardcoded lab UUIDs without instructions to obtain them; reproduction incomplete alone
+- No exact affected-branch bounds; first-row-only metadata
+- Fixed20 receives can stall; no timeout; HTTPS handling malformed
+- Keep distinct route/parameter variant under canonical2021 chain instead of separate vulnerability
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 ## 漏洞描述
 

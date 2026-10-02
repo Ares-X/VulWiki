@@ -1,10 +1,49 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "企望制造ERP comboxsql任意SQL到xp_cmdshell链"
+product: "企望制造ERP"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "无版本；SQLServer命令过程/DB权限"
+prerequisites: "示例无Cookie但未证"
+side_effects: "命令/代码执行示例可能改变主机状态"
+review_date: "2026-10-02"
+source_url: "https://mp.weixin.qq.com/s/mXVpZ0gJ122VeCirZMa8Vg"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E4%BC%81%E6%9C%9B%E5%88%B6%E9%80%A0/%E4%BC%81%E6%9C%9B%E5%88%B6%E9%80%A0%20ERP%20%E7%B3%BB%E7%BB%9F%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md"
+id: "vw-e504ed74b60245671c89106d"
+entity_id: "ve-e504ed74b60245671c89106d"
+schema_version: "1"
 ---
 
-# 企望制造 ERP 系统远程命令执行漏洞
+# 企望制造ERP comboxsql任意SQL到xp_cmdshell链
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：企望制造ERP；comboxsql任意SQL到xp_cmdshell链
+- 版本、配置及部署条件：无版本；SQLServer命令过程/DB权限
+- 认证与权限前提：示例无Cookie但未证
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 标题RCE实际依赖SQL执行及xp_cmdshell可用，不是无条件
+- 请求缺头体空行/固定Content-Length不匹配，DNS域需占位
+- 只端点返回数据不能判漏洞；补丁链接软件聚合页不是厂商公告
+
+## 操作风险
+
+命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/mXVpZ0gJ122VeCirZMa8Vg)
 
   
@@ -57,7 +96,7 @@ source: "MrWQ/vulnerability-paper"
 
  **POC （POST）**
 
-```
+```http
 POST /mainFunctions/comboxstore.action HTTP/1.1
 Host: 127.0.0.1:8082
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36

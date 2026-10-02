@@ -1,10 +1,50 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "华夏/jshERP 静态后缀认证绕过+Fastjson DNS探测"
+product: "华夏/jshERP"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "无ERP版；Fastjson1.2.55源码与靶场不同已披露"
+prerequisites: "无Cookie绕过；代码执行还需gadget环境"
+side_effects: "命令/代码执行示例可能改变主机状态"
+review_date: "2026-10-02"
+source_url: "https://mp.weixin.qq.com/s/eHjaIrqgYFiw5DVLg7BY8w"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E5%8D%8E%E5%A4%8FERP/%E5%8D%8E%E5%A4%8F%20ERP%20%E6%BC%8F%E6%B4%9E%E4%B9%8B%E6%8E%88%E6%9D%83%E7%BB%95%E8%BF%87%E6%BC%8F%E6%B4%9E%20%2B%20%E5%90%8E%E5%8F%B0%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E%20-%20%E6%9C%AA%E6%8E%88%E6%9D%83%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C.md"
+id: "vw-6a66a8e9728efea74f53d1fa"
+entity_id: "ve-6a66a8e9728efea74f53d1fa"
+schema_version: "1"
 ---
 
-# 华夏 ERP 漏洞之授权绕过漏洞 + 后台命令执行漏洞 - 未授权命令执行
+# 华夏/jshERP 静态后缀认证绕过+Fastjson DNS探测
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：华夏/jshERP；静态后缀认证绕过+Fastjson DNS探测
+- 版本、配置及部署条件：无ERP版；Fastjson1.2.55源码与靶场不同已披露
+- 认证与权限前提：无Cookie绕过；代码执行还需gadget环境
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- Inet4Address DNS回连仅证明类型处理/解析，不足支持未授权命令执行标题
+- 认证POC末尾孤立三引号语法损坏；requests可能规范化/../需静态说明，不执行
+- 组合socket脚本含¤无法ascii编码，且GET含¤tPage转码错误
+- 不能把依赖版本或DNS结果自动推RCE；公开IP与默认凭据需占位
+
+## 操作风险
+
+命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/eHjaIrqgYFiw5DVLg7BY8w)
 
 开场还是这个测试靶场
@@ -97,7 +137,7 @@ com.jsh.erp.filter.LogCostFilter
 
 以上数据都为测试生成的数据，为虚假数据，如有雷同纯属巧合
 
-```
+```http
 GET /a.css/../systemConfig/list?search=%7B%22companyName%22%3A%22%22%7D¤tPage=1&pageSize=10 HTTP/1.1
 Host: 47.116.69.14
 Accept: application/json, text/javascript, */*; q=0.01

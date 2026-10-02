@@ -1,9 +1,61 @@
 ---
-cve: "CVE-2023-45779"
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2023-45779"
+identifier_role: "primary"
+primary_identifiers: "CVE-2023-45779"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "影响多个OEM的Android本地漏洞公布"
+product: "Android OEM APEX模块签名"
+record_type: "advisory"
+document_type: "漏洞新闻"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "本地攻击；测试私钥可公开获取；安装APEX所需权限、adb授权与物理接触须区分"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Android/%E5%BD%B1%E5%93%8D%E5%A4%9A%E4%B8%AAOEM%E7%9A%84Android%E6%9C%AC%E5%9C%B0%E6%BC%8F%E6%B4%9E%E5%85%AC%E5%B8%83.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-002dd490f0d19db74ef0dbc9"
+entity_id: "ve-002dd490f0d19db74ef0dbc9"
+schema_version: "1"
 ---
 
-#  影响多个OEM的Android本地漏洞公布   
+# 影响多个OEM的Android本地漏洞公布
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Android OEM APEX模块签名
+- 文献类型：漏洞新闻
+- 版本、权限及部署边界：本地攻击；测试私钥可公开获取；安装APEX所需权限、adb授权与物理接触须区分
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 以相同公钥即人人能伪造签名解释有误，核心是测试私钥公开而非公钥本身公开
+2. 部分受测OEM型号不能扩展到整个品牌；较早安全补丁日期也不自动证明受影响
+3. 物理访问不等于adb已授权，本地低权限应用与shell/安装模块权限未拆清
+4. 2023-12-05修复需映射OEM实际补丁；更换发行版/新机建议过宽
+5. 有BleepingComputer来源但缺Meta原研究、声称公开的GitHub与谷歌公告；迁移动系统
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://www.bleepingcomputer.com/news/security/exploit-released-for-android-local-elevation-flaw-impacting-7-oems/>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
  网络安全应急技术国家工程中心   2024-02-04 15:36  
   
 影响多家 Android 原始设备制造商 (OEM) 的本地特权提升缺陷的概念验证 (PoC) 漏洞现已在 GitHub 上公布。然而，由于该漏洞需要本地访问，因此其发布将主要对专业研究人员有所帮助。  
@@ -53,4 +105,4 @@ https://www.bleepingcomputer.com/news/security/exploit-released-for-android-loca
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

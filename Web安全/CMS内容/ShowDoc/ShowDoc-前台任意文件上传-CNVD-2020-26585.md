@@ -2,7 +2,37 @@
 cnvd: "CNVD-2020-26585"
 version: "Showdoc <= 2.8.6"
 source: "Threekiii/Vulnerability-Wiki"
+product: "ShowDoc<=2.8.6 tested2.8.2"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CNVD-2020-26585"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "ShowDoc-前台任意文件上传-CNVD-2020-26585"
+prerequisites: "来源所述条件，未列明部分仍待核：uploadImg未认证入口及上传目录可执行PHP"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-646dcac92dabbab969fa333d"
+entity_id: "ve-646dcac92dabbab969fa333d"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：uploadImg未认证入口及上传目录可执行PHP
+
+- **事实待核（1）**：与407同&lt;&gt;后缀机制但范围&lt;=2.8.6对&lt;2.8.3冲突，提供两修复commit有利核分支/补丁。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **证据待核（2）**：有完整HTTP和执行图比404损坏脚本强；PHP echo标签的phpinfo返回值不影响执行但应保持原码。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **适用与权限边界（3）**：初始登录用于安装不是利用认证，须区分；Content-Length固定需随payload计算。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # ShowDoc 前台任意文件上传 CNVD-2020-26585
 

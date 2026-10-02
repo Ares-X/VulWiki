@@ -1,8 +1,50 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Libssh2 严重漏洞可导致攻击者执行远程代码"
+product: "libssh2 SSH client library"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2026-55200"
+referenced_identifiers: "CVE-2018-10933"
+identifier_role: "primary"
+cve: "CVE-2026-55200"
+prerequisites: "<=1.11.1 claimed；接收恶意SSH对端数据；具体网络角色/编译平台未述"
+source_status: "unknown"
+side_effects: "含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。"
+id: "vw-923e4efc2bc824559e9329f6"
+entity_id: "ve-923e4efc2bc824559e9329f6"
+schema_version: "1"
 ---
 
-#  Libssh2 严重漏洞可导致攻击者执行远程代码  
+# Libssh2 严重漏洞可导致攻击者执行远程代码
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：<=1.11.1 claimed；接收恶意SSH对端数据；具体网络角色/编译平台未述
+- 证据范围：整数溢出到堆写和潜在RCE概述，无PoC/原始公告
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- P0分类错误：SSH客户端库不是数据库；亦不能与libssh混淆
+- 短commit7acf3df与完整97acf3df...前缀不一致
+- 客户端库攻击方向应说明恶意服务器/对端及连接条件
+- 缺厂商公告、准确安全发布版、利用成熟度依据；RCE仍为可能后果
+
+### 操作风险与资料使用
+
+- 含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 Abinaya
                     Abinaya  代码卫士   2026-06-24 09:06  
   

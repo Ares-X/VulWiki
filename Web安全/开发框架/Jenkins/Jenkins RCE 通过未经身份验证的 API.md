@@ -1,6 +1,41 @@
 ---
 source: "MrWQ/vulnerability-paper"
+product: "Jenkins/scriptText脚本控制台暴露"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "Jenkins RCE 通过未经身份验证的 API"
+prerequisites: "来源所述条件，未列明部分仍待核：仅测试1.626/1.638，CentOS6包；需要禁用安全或匿名Admin权限，不能称当前默认安装行为"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/H545vVAq8rzJPtT6oAopog"
+id: "vw-b8e3a1201dabd95cb6102af5"
+entity_id: "ve-b8e3a1201dabd95cb6102af5"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：仅测试1.626/1.638，CentOS6包；需要禁用安全或匿名Admin权限，不能称当前默认安装行为
+
+代码与实验材料：Groovy下载并执行Perl脚本及curl请求，历史命令输出显示jenkins OS用户；两段输出完全重复
+
+来源证据范围：微信转载，无原始英文研究/产品安全配置引用
+
+- **适用与权限边界（1）**：把历史/错误配置宣称默认无需认证RCE；依据：未展示securityRealm/authorizationStrategy；脚本控制台管理功能的预期权限边界缺失，不能泛化所有Jenkins。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **适用与权限边界（2）**：系统条件解释错误；依据：称Jenkins默认需要/tmp可执行，而perl解释器读取脚本不等同直接exec挂载权限；运行结果不是root。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **适用与权限边界（3）**：重复与缺修复；依据：相同终端日志重复两次，缺启用认证/收紧管理权限的说明。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Jenkins RCE 通过未经身份验证的 API
 

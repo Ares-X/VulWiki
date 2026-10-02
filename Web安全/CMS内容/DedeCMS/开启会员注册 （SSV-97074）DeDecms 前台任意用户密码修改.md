@@ -1,6 +1,40 @@
 ---
 source: "hatch 补库批 20260928"
+product: "DedeCMS"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "SSV-97074"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "开启会员注册 （SSV-97074）DeDecms 前台任意用户密码修改"
+prerequisites: "来源所述条件，未列明部分仍待核：Member function enabled; target security question0 and empty answer; ten-minute request throttle; PHP legacy comparison behavior; version unstated"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-820b6b4f2498c54dde0c3e48"
+entity_id: "ve-820b6b4f2498c54dde0c3e48"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 编号说明：保留原文明确使用的 SSV 条目编号作为文章主引用标识，SSV 与 CVE/CNVD 为不同编号体系；来源归属仍未独立核验。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：Member function enabled; target security question0 and empty answer; ten-minute request throttle; PHP legacy comparison behavior; version unstated
+
+- **证据待核（1）**：Detailed00/000/0.0 comparison explanation adds missing mechanics to70/71。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **事实待核（2）**：Generic PHP comparison examples are version-dependent and chained comparisons not runnable PHP as shown。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **证据待核（3）**：Impact section empty and all image links have trailing duplicated path fragments。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **证据待核（4）**：No direct source URL despite SSV identifier; member-only limitation correct。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # （SSV-97074）DeDecms 前台任意用户密码修改
 

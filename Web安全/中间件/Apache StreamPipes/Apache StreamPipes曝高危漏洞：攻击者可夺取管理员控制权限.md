@@ -1,8 +1,47 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Apache StreamPipes曝高危漏洞：攻击者可夺取管理员控制权限"
+product: "Apache StreamPipes"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2025-47411"
+referenced_identifiers: ""
+identifier_role: "primary"
+cve: "CVE-2025-47411"
+prerequisites: "文章称0.69.0–0.97.0，有合法非管理员账号且可利用用户ID/JWT映射问题；知道管理员标识"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-746146c6516f97229748baa5"
+entity_id: "ve-746146c6516f97229748baa5"
+schema_version: "1"
 ---
 
-#  Apache StreamPipes曝高危漏洞：攻击者可夺取管理员控制权限  
+# Apache StreamPipes曝高危漏洞：攻击者可夺取管理员控制权限
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：文章称0.69.0–0.97.0，有合法非管理员账号且可利用用户ID/JWT映射问题；知道管理员标识
+- 证据范围：用户ID设计缺陷与直接修改已签JWT用户名之间缺关键校验说明，步骤不足以证明。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 主CVE遗漏frontmatter
+- 宣称Apache要求72小时内修复却无原文证据，应删除或补来源
+- 直接篡改JWT为何签名仍可通过未解释，不能把base64字段修改当完整利用
+- 绕过所有访问控制/完全基础设施破坏过度泛化，限定应用管理员权限
+- 缺实际API/版本证据；强制密码重置与此漏洞旧令牌是否失效关系未说明
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
  网安百色   2026-01-02 11:04  
   
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/1QIbxKfhZo5n7ss8dnaic2VeRZgwEficrd7zh4FIBhUNP13SFXrnEWlTJqAGD11T5Tb3UTBLkztquG1CBAeGKafQ/640?wx_fmt=jpeg&from=appmsg "")  

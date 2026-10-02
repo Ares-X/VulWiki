@@ -1,6 +1,43 @@
 ---
 source: "历史归档批(无原始出处标注)"
+product: "WordPress Page Builder by SiteOrigin"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "WordPress Page Builder by SiteOrigin 实时编辑器 XSS 分析"
+prerequisites: "来源所述条件，未列明部分仍待核：victim permitted editor/admin session, live editor enabled and victim opens crafted page; affected plugin version missing"
+side_effects: "未执行；本文需注意的操作影响：`X-XSS-Protection: 0` 只关闭部分旧浏览器 XSS 过滤行为，不是任意 XSS 根因证明。实时预览中的反射/CSRF 与点击 Save Draft 后持久保存是不同阶段，保留该区别；具体受影响版本和补丁仍待核。"
+source_status: "unknown"
+id: "vw-66bafb577f4b7cfe53c1335b"
+entity_id: "ve-66bafb577f4b7cfe53c1335b"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 明确更正：全文分析 Page Builder by SiteOrigin 实时编辑器，标题 Baidu 是错误产品归属。
+- `X-XSS-Protection: 0` 只关闭部分旧浏览器 XSS 过滤行为，不是任意 XSS 根因证明。实时预览中的反射/CSRF 与点击 Save Draft 后持久保存是不同阶段，保留该区别；具体受影响版本和补丁仍待核。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：victim permitted editor/admin session, live editor enabled and victim opens crafted page; affected plugin version missing
+
+- **事实待核（1）**：文件名/标题Baidu XSS与全文SiteOrigin产品完全不符，明确归属错误。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **证据待核（2）**：简介与影响栏为空，核心代码/请求/payload只截图。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **结论使用边界（3）**：X-XSS-Protection:0仅关闭历史浏览器过滤器，不等于该响应允许任意XSS的根因。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **操作与副作用边界（4）**：需要区分实时预览CSRF反射链与持久保存；正文称保存另需Save Draft，应保留该边界。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+- **事实待核（5）**：原文链接精准但未附官方修复与版本。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 WordPress Plugin - Baidu xss漏洞
 

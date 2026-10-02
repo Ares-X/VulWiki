@@ -1,6 +1,41 @@
 ---
 source: "MrWQ/vulnerability-paper"
+product: "DedeCMS"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "DedeCMS-5.8.1 SSTI 模板注入导致 RCE - 先知社区"
+prerequisites: "来源所述条件，未列明部分仍待核：5.8.1beta1; ShowMsg error path with Referer; writable template cache; PHP7-style callable literal"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "recorded"
+source_url: "https://xz.aliyun.com/t/10519"
+id: "vw-e7b14ad608e2bdffd8bbf80d"
+entity_id: "ve-e7b14ad608e2bdffd8bbf80d"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；遮罩后的历史值不能作为可用登录凭据。原操作、请求方法和攻击表达式保留。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：5.8.1beta1; ShowMsg error path with Referer; writable template cache; PHP7-style callable literal
+
+- **结论使用边界（1）**：Utilization conditions section says only 'affected application', omitting runtime/cache details。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **证据待核（2）**：Remediation recommends5.7.80 for5.8.1 beta without evidence of branch migration/fix equivalence。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **证据待核（3）**：Clear complete source-to-cache/include flow; no source-author link for Steven Seeley attribution。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **结论使用边界（4）**：Large generic ParseTemplate listing could be condensed without losing root cause。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # DedeCMS-5.8.1 SSTI 模板注入导致 RCE - 先知社区
 
@@ -50,7 +85,7 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9
-Cookie: PHPSESSID=rh4vs9n0m1ihpuguuok4oinerr; _csrf_name_26859a31=736abb4d994bae3b85bba1781e8a50f9; _csrf_name_26859a31__ckMd5=0f32d9d2b18e1390
+Cookie: PHPSESSID=rh4********************err; _csrf_name_26859a31=736**************************0f9; _csrf_name_26859a31__ckMd5=0f3**********390
 Connection: close
 ```
 

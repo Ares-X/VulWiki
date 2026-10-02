@@ -1,6 +1,44 @@
 ---
 source: "白阁文库 BaizeSec/bylibrary"
+title: "phpstudy_backdoor"
+product: "Compromised phpStudy packages"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "Malicious DLL loaded;reachable PHP index endpoint;version/provenance absent"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-90bd3173dea0523e892320be"
+entity_id: "ve-90bd3173dea0523e892320be"
+schema_version: "1"
 ---
+
+# phpstudy_backdoor
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：Malicious DLL loaded;reachable PHP index endpoint;version/provenance absent
+- 证据范围：Marker execution probe returns status but main never prints result
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- Code fence labeledHTML thoughPython;no title/description/version context
+- Exceptions classified 'not present' instead of inconclusive
+- Probe executesPHP rather than passive integritycheck;label sideeffects
+- Same mechanism as70 but separate detector variant;link instead of dropping rich analysis
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 ```HTML
 #!/usr/bin/env python

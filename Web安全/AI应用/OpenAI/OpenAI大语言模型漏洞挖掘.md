@@ -1,9 +1,53 @@
 ---
 cve: "CVE-2025-37899"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "OpenAI大语言模型漏洞挖掘"
+product: "Linux ksmbd"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2025-37899"
+referenced_identifiers: "CVE-2025-37778"
+identifier_role: "primary"
+category: "系统安全/Linux"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-43faf0d6ca602dd7aa09b9d0"
+entity_id: "ve-43faf0d6ca602dd7aa09b9d0"
+schema_version: "1"
 ---
 
-#  OpenAI大语言模型漏洞挖掘   
+# OpenAI大语言模型漏洞挖掘
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+受影响组件是 Linux ksmbd，OpenAI 模型是用于发现问题的工具。CVE-2025-37778 属先前背景，不能把研究工具品牌归为漏洞产品。
+
+
+### 本次正文校订
+
+- 按该篇完整正文及逐篇审阅区分主问题与背景编号，补全结构化主标识；不把标识归属校订等同运行复现。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 受影响对象为ksmbd而非OpenAI
+- 37778为先前背景不可与37899混合
+- 列举内核版本未区分受影响快照和修复版本
+- EPSS无时间
+- 声称公开PoC却无原始链接
+- ROP和完整RCE等叙述缺直接证据
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 点击关注→  智探AI应用   2025-05-26 10:15  
   
 该事件引发了业内广泛关注，标志着AI在漏洞挖掘领域的实用能力正从理论走向现实。  

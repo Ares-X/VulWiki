@@ -1,9 +1,49 @@
 ---
-fofa: "title="
+fofa: "title=\"圣乔ERP系统\""
 source: "SourByte05/Vulnerability-Wiki-PoC"
+title: "圣乔ERP系统 login.action Struts2远程代码执行漏洞"
+product: "圣乔ERP（依赖Struts2）"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "disputed"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "产品受影响Struts版本/mapper可处理redirect前缀，端点无需有效认证；具体版本未给"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-83f95a315cc03ea0aa2003a1"
+entity_id: "ve-83f95a315cc03ea0aa2003a1"
+schema_version: "1"
 ---
 
 # 圣乔ERP系统 login.action Struts2远程代码执行漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：产品受影响Struts版本/mapper可处理redirect前缀，端点无需有效认证；具体版本未给
+- 证据范围：PoC呈S2-016风格，但产品版本和依赖编号缺证据，不能仅按payload补CVE。
+
+### 本次正文校订
+
+- 从本文明确展示的查询恢复完整 FOFA 元数据；资产指纹只用于识别，不是漏洞命中证据。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 主产品应归圣乔ERP/ERP类，Struts2作为依赖标签或关联，不以框架目录代替产品身份
+- 在野已知、影响面广等表格无来源/日期证据
+- 原始HTTP无代码块、Content-Length，截图未视检；版本只是产品名
+- 对参数限制/白名单是缓解，缺官方升级/组件修复方案
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 # 漏洞描述
 

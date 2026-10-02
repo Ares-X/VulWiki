@@ -1,9 +1,51 @@
 ---
 version: "rConfig"
 source: "Threekiii/Vulnerability-Wiki"
+title: "rConfig useradmin.inc.php 信息泄露漏洞"
+product: "rConfig Web用户管理组件"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "文件可直接Web访问、包含文件/全局路由未代为鉴权、数据库可用"
+affected_versions: "rConfig"
+source_status: "unknown"
+side_effects: "含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。"
+id: "vw-cd969d07bac7e294d4b2e743"
+entity_id: "ve-cd969d07bac7e294d4b2e743"
+schema_version: "1"
+canonical: "Web安全/服务器软件/rConfig/rConfig-useradmin.inc.php-信息泄露漏洞.md"
 ---
 
 # rConfig useradmin.inc.php 信息泄露漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：文件可直接Web访问、包含文件/全局路由未代为鉴权、数据库可用
+- 证据范围：所贴完整列表源码展示邮箱/用户名/角色/登录时间，不展示密码；鉴权缺失判断需包含依赖和路由上下文
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- version只写rConfig不是版本，影响范围空泛
+- PHP require ../classes暗示实际目录可能不是根，/useradmin.inc.php路径需核对
+- 代码片段没有权限检查不自动证明所有部署未经认证可达
+- 应归运维/网络配置管理产品类别
+
+### 操作风险与资料使用
+
+- 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 ## 漏洞描述
 

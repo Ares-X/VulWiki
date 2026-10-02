@@ -1,8 +1,62 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "工作流接口没登录就能执行命令：Orkes漏洞已遭利用"
+product: "Orkes Conductor CVE-2026-58138"
+record_type: "unknown"
+document_type: "技术文章（细分类待核）"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "合理区分扫描尝试与受害数、IP地理与归因、进程权限与root条件；Orkes商用与conductor-oss默认鉴权/任务类型配置应明确，不把所有Conductor接口都泛称无认证；关闭allowAllAccess/独立执行属于架构建议需具体版本支持"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/%E5%B7%A5%E4%BD%9C%E6%B5%81%E6%8E%A5%E5%8F%A3%E6%B2%A1%E7%99%BB%E5%BD%95%E5%B0%B1%E8%83%BD%E6%89%A7%E8%A1%8C%E5%91%BD%E4%BB%A4%EF%BC%9AOrkes%E6%BC%8F%E6%B4%9E%E5%B7%B2%E9%81%AD%E5%88%A9%E7%94%A8.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-0e64daf850f96409af24c267"
+entity_id: "ve-0e64daf850f96409af24c267"
+schema_version: "1"
 ---
 
-#  工作流接口没登录就能执行命令：Orkes漏洞已遭利用  
+# 工作流接口没登录就能执行命令：Orkes漏洞已遭利用
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Orkes Conductor CVE-2026-58138
+- 文献类型：技术文章（细分类待核）
+- 版本、权限及部署边界：合理区分扫描尝试与受害数、IP地理与归因、进程权限与root条件；Orkes商用与conductor-oss默认鉴权/任务类型配置应明确，不把所有Conductor接口都泛称无认证；关闭allowAllAccess/独立执行属于架构建议需具体版本支持
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 正文主CVE未入元数据
+2. 3.21.21<=v<3.30.2及修复明确，有FortiGuard两篇/NVD/官方release精确来源
+3. 合理区分扫描尝试与受害数、IP地理与归因、进程权限与root条件
+4. Orkes商用与conductor-oss默认鉴权/任务类型配置应明确，不把所有Conductor接口都泛称无认证
+5. 未给具体源码/请求是处置资讯非PoC，不必误标缺完整复现
+6. 关闭allowAllAccess/独立执行属于架构建议需具体版本支持
+7. 只查9月8–9日子进程遗漏更早8月已在野时段
+8. 已有认证环境需另看表达式沙箱风险
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 原创 tcode
                     tcode  字节脉搏实验室   2026-09-20 02:33  
   
@@ -67,4 +121,4 @@ source: "gelusus/wxvl 公众号漏洞文库"
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

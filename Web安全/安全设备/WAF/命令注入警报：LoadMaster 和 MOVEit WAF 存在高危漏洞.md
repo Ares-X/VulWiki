@@ -1,9 +1,53 @@
 ---
 cve: "CVE-2025-13444"
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-a87fe0c5398a51632e86717c"
+entity_id: "ve-a87fe0c5398a51632e86717c"
+schema_version: "1"
+title: "命令注入警报：LoadMaster 和 MOVEit WAF 存在高危漏洞"
+product: "Progress Kemp LoadMaster/MOVEit WAF"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2025-13444"
+referenced_identifiers: ""
+prerequisites: "UI/API管理权限未写；GA/LTSF/MT/VNF与MOVEit分支矩阵"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%AE%89%E5%85%A8%E8%AE%BE%E5%A4%87/WAF/%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5%E8%AD%A6%E6%8A%A5%EF%BC%9ALoadMaster%20%E5%92%8C%20MOVEit%20WAF%20%E5%AD%98%E5%9C%A8%E9%AB%98%E5%8D%B1%E6%BC%8F%E6%B4%9E.md"
+review_date: "2026-10-02"
+side_effects: "执行文中载荷可能以目标进程权限启动命令或加载代码；权限受认证角色、操作系统账户及依赖版本约束，不能把 root/200 等通用字符串当成功证据"
+source_status: "unknown"
 ---
 
 #  命令注入警报：LoadMaster 和 MOVEit WAF 存在高危漏洞  
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Progress Kemp LoadMaster/MOVEit WAF
+- 本文讨论：CVE-2025-13444 getcipherset；13447其他管理命令
+- 版本、权限与配置前提：UI/API管理权限未写；GA/LTSF/MT/VNF与MOVEit分支矩阵
+- 资料类型：双命令注入补丁公告；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 缺最重要鉴权/管理角色前提，远程不等于未认证
+- GA≤7.2.62.0与MOVEit7.2.62.1范围需按产品拆分，不能共用上界
+- 元数据只收一个主CVE
+
+### 操作风险与恢复
+
+- 执行文中载荷可能以目标进程权限启动命令或加载代码；权限受认证角色、操作系统账户及依赖版本约束，不能把 root/200 等通用字符串当成功证据
+
+### 待核与来源
+
+- 官方角色、版本矩阵及各命令影响待核
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 sec随谈  sec随谈   2026-01-15 00:56  
   
 Progress Software Corporation 于 2026 年 1 月 12 日发布补丁，对其网络基础设施产品进行了一项重要更新，拉开了 2026 年安全计划的序幕。该补丁修复了两个高危命令注入漏洞，这些漏洞可能允许远程攻击者在LoadMaster负载均衡器和MOVEit Web 应用程序防火墙(WAF)上执行恶意代码。  

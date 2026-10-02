@@ -1,8 +1,60 @@
 ---
 source: "MrWQ/vulnerability-paper"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "智能合约安全之 Re-Entrancy(重入攻击)"
+product: "Solidity EtherStore 重入教学案例"
+record_type: "unknown"
+document_type: "技术文章（细分类待核）"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "原文未给出可确认的版本、认证及部署边界；保留待核"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%AE%89%E5%85%A8%E4%B9%8B%20Re-Entrancy%28%E9%87%8D%E5%85%A5%E6%94%BB%E5%87%BB%29.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+source_url: "https://mp.weixin.qq.com/s/-n7d2qzHewptP0sSFREmiQ"
+id: "vw-4b80eae5f2c89c59188bdc04"
+entity_id: "ve-4b80eae5f2c89c59188bdc04"
+schema_version: "1"
 ---
 
 # 智能合约安全之 Re-Entrancy(重入攻击)
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Solidity EtherStore 重入教学案例
+- 文献类型：技术文章（细分类待核）
+- 版本、权限及部署边界：原文未给出可确认的版本、认证及部署边界；保留待核
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 两段代码粘成单行，第一段SPDX行注释吞所有代码，结尾反斜杠花括号非法
+2. 根因是外部调用前余额未更新，不是出现call就有漏洞
+3. transfer/send绝不可能重入及2300gas永久足够防御的断言不稳，应以CEI/锁为核心并考虑gas变化
+4. 0.8.13应区分fallback与receive，泛称无数据必fallback不准确
+5. attack只向目标存1ETH与叙述攻击者2ETH/总4ETH过程不符，资金到Attack合约且无提取函数不等于转入EOA
+6. 有原示例URL和参考，属于教学无主CVE
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://mp.weixin.qq.com/s/-n7d2qzHewptP0sSFREmiQ>
+
+### 归档技术正文
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/-n7d2qzHewptP0sSFREmiQ)

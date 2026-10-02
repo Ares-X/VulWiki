@@ -1,9 +1,49 @@
 ---
-cve: "CVE-2025-21381"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Microsoft Excel / Office 资源控制问题远程代码执行通告"
+product: "Microsoft Excel / Office"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2025-21381"
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "产品/版本列表拼接失去对应关系，需按MSRC重建各平台范围"
+prerequisites: "受害者下载打开特制文件交互"
+side_effects: "命令/代码执行示例可能改变主机状态"
+review_date: "2026-10-02"
+identifier_role: "primary"
+source_status: "unknown"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E8%87%B4%E8%BF%9COA/Microsoft%20Excel%20%E8%B5%84%E6%BA%90%E6%8E%A7%E5%88%B6%E4%B8%8D%E5%BD%93%E6%BC%8F%E6%B4%9E%20%E5%8F%AF%E5%AF%BC%E8%87%B4%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C.md"
+id: "vw-3e72e0ce0d59ed899cc321bb"
+entity_id: "ve-3e72e0ce0d59ed899cc321bb"
+schema_version: "1"
 ---
 
-#  Microsoft Excel 资源控制不当漏洞 可导致远程代码执行   
+# Microsoft Excel / Office 资源控制问题远程代码执行通告
+
+## 条目说明
+
+- 对象与具体问题：Microsoft Excel / Office；资源控制问题RCE通告
+- 版本、配置及部署条件：产品/版本列表拼接失去对应关系，需按MSRC重建各平台范围
+- 认证与权限前提：受害者下载打开特制文件交互
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 影响表重复大小写产品且3个版本阈值无对应关系，不能转成统一范围
+- 正文由本地用户文档攻击跳成服务器失陷，应区分Office Online Server与客户端
+- MSRC主来源链接明确，无PoC不算缺陷，应标情报通告
+
+## 操作风险
+
+命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
  上汽集团网络安全应急响应中心   2025-02-14 15:55  
   
 **漏洞情报**  

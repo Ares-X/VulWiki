@@ -1,8 +1,44 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "N/A｜kkFileView 任意文件上传导致远程代码执行漏洞（POC）"
+product: "kkFileView压缩包解压"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: "CVE-2024-3431; CVE-2024-3273; CVE-2024-29202"
+identifier_role: "reference"
+prerequisites: "文列4.2.0–4.4.0-beta，上传/预览开启且目标文件可写，RCE需后续加载"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-6abd703c04a65983a753557a"
+entity_id: "ve-6abd703c04a65983a753557a"
+schema_version: "1"
 ---
 
-#  N/A｜kkFileView 任意文件上传导致远程代码执行漏洞（POC）   
+# N/A｜kkFileView 任意文件上传导致远程代码执行漏洞（POC）
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：文列4.2.0–4.4.0-beta，上传/预览开启且目标文件可写，RCE需后续加载
+- 证据范围：仅外链PoC与图片，正文没有请求或执行过程；同178/180关联事件
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 标题任意上传应精确路径穿越文件覆盖链
+- 缺修复commit/版本与鉴权/部署条件
+- 推荐CVE不能当本漏洞编号；N/A不是产品名
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 alicy  信安百科   2024-04-20 21:36  
   
 **0x00 前言**  

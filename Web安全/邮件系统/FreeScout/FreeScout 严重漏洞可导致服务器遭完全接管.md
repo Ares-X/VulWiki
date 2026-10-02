@@ -1,8 +1,46 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "FreeScout 严重漏洞可导致服务器遭完全接管"
+product: "FreeScout helpdesk/shared mailbox"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2026-28289"
+referenced_identifiers: "CVE-2026-27636"
+identifier_role: "primary"
+cve: "CVE-2026-28289"
+prerequisites: "1.8.206 stated, fixed1.8.207; Apache AllowOverride All; inbound mail attachment ingestion"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-960490d95cd974f9fa4d99b7"
+entity_id: "ve-960490d95cd974f9fa4d99b7"
+schema_version: "1"
 ---
 
-#  FreeScout 严重漏洞可导致服务器遭完全接管  
+# FreeScout 严重漏洞可导致服务器遭完全接管
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：1.8.206 stated, fixed1.8.207; Apache AllowOverride All; inbound mail attachment ingestion
+- 证据范围：Explains filename check-before-sanitization and .htaccess execution; no PoC; news not a lab validation
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- Concrete Unicode contradiction: calls prefix U+2008 zero-width space, then says U+200B stripped; resolve with upstream before retaining
+- Main CVE/version/ref absent from frontmatter
+- Remove unrelated recommended articles, sales links, GIFs and footer
+- Clearly label product as helpdesk/shared mailbox and prior CVE as related not duplicate
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 Ionut Arghire
                     Ionut Arghire  代码卫士   2026-03-05 09:42  
   

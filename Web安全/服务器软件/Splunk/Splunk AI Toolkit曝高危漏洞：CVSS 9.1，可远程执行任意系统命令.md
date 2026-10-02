@@ -1,9 +1,49 @@
 ---
 cve: "CVE-2026-20266"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Splunk AI Toolkit曝高危漏洞：CVSS 9.1，可远程执行任意系统命令"
+product: "Splunk AI Toolkit btool configuration helper"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2026-20266"
+referenced_identifiers: ""
+identifier_role: "primary"
+prerequisites: "文列<5.7.4、Splunk管理员权限PR:H，不是匿名或普通用户RCE"
+source_status: "unknown"
+side_effects: "含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。"
+id: "vw-cce3f48d17b406b0470f73ce"
+entity_id: "ve-cce3f48d17b406b0470f73ce"
+schema_version: "1"
 ---
 
-#  Splunk AI Toolkit曝高危漏洞：CVSS 9.1，可远程执行任意系统命令  
+# Splunk AI Toolkit曝高危漏洞：CVSS 9.1，可远程执行任意系统命令
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：文列<5.7.4、Splunk管理员权限PR:H，不是匿名或普通用户RCE
+- 证据范围：伪代码明确称类似而非源码，但后文普遍推演SOC接管、AI风险没有漏洞专属实证；不是PoC
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 将管理员条件前置标题摘要；管理员权限≠宿主root权限
+- 应补官方公告和修复版本依据，切勿把示意os.system当真实代码
+- AI/Prompt/记忆投毒只是旁论，与本命令注入不同漏洞；删重复图片和广告
+
+### 操作风险与资料使用
+
+- 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 原创 安全ker
                     安全ker  安全客   2026-06-18 11:36  
   

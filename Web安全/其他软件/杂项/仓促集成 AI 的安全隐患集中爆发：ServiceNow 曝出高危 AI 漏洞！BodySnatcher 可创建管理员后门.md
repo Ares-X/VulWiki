@@ -1,9 +1,62 @@
 ---
 cve: "CVE-2025-12420"
 source: "gelusus/wxvl 公众号漏洞文库"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "仓促集成 AI 的安全隐患集中爆发：ServiceNow 曝出高危 AI 漏洞！BodySnatcher 可创建管理员后门"
+product: "ServiceNow BodySnatcher CVE-2025-12420"
+record_type: "unknown"
+document_type: "技术文章（细分类待核）"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "说明Auto-Linking邮箱+通用MessageAuth令牌+激活RecordManagementAgent+确认链，需明确插件版本/默认令牌未换等适用条件，非所有实例无凭据；首修5.1.18/5.2.19及3.15.2/4.0.4需分维护分支，不是任一大于小版本均安全；监督模式请继续不是独立认证绕过，根因仍身份与权限链"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/%E4%BB%93%E4%BF%83%E9%9B%86%E6%88%90%20AI%20%E7%9A%84%E5%AE%89%E5%85%A8%E9%9A%90%E6%82%A3%E9%9B%86%E4%B8%AD%E7%88%86%E5%8F%91%EF%BC%9AServiceNow%20%E6%9B%9D%E5%87%BA%E9%AB%98%E5%8D%B1%20AI%20%E6%BC%8F%E6%B4%9E%EF%BC%81BodySnatcher%20%E5%8F%AF%E5%88%9B%E5%BB%BA%E7%AE%A1%E7%90%86%E5%91%98%E5%90%8E%E9%97%A8.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-2eae0ccce63cd111a10db251"
+entity_id: "ve-2eae0ccce63cd111a10db251"
+schema_version: "1"
 ---
 
-#  仓促集成 AI 的安全隐患集中爆发：ServiceNow 曝出高危 AI 漏洞！BodySnatcher 可创建管理员后门  
+# 仓促集成 AI 的安全隐患集中爆发：ServiceNow 曝出高危 AI 漏洞！BodySnatcher 可创建管理员后门
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：ServiceNow BodySnatcher CVE-2025-12420
+- 文献类型：技术文章（细分类待核）
+- 版本、权限及部署边界：说明Auto-Linking邮箱+通用MessageAuth令牌+激活RecordManagementAgent+确认链，需明确插件版本/默认令牌未换等适用条件，非所有实例无凭据；首修5.1.18/5.2.19及3.15.2/4.0.4需分维护分支，不是任一大于小版本均安全；监督模式请继续不是独立认证绕过，根因仍身份与权限链
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 说明Auto-Linking邮箱+通用MessageAuth令牌+激活RecordManagementAgent+确认链，需明确插件版本/默认令牌未换等适用条件，非所有实例无凭据
+2. 首修5.1.18/5.2.19及3.15.2/4.0.4需分维护分支，不是任一大于小版本均安全
+3. 10月底/上周与2026-03发布日期相对时间无年份易错
+4. 称自托管更新、补丁仅删示例Agent但仍危险配置均未给ServiceNow/AppOmni直链需核
+5. 监督模式请继续不是独立认证绕过，根因仍身份与权限链
+6. 无代码/请求属分析新闻，不应称已复現
+7. 最严重AI漏洞/仓促必然结果为观点
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
  安全牛   2026-03-06 05:38  
   
 **点击蓝字 关注我们**  
@@ -137,4 +190,4 @@ BodySnatcher 并非个例，而是企业大规模集成 AI 智能体过程中重
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

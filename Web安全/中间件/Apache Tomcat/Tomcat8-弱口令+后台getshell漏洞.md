@@ -1,8 +1,53 @@
 ---
 source: "Threekiii/Vulnerability-Wiki"
+title: "Tomcat8 弱口令+后台getshell漏洞"
+product: "Apache Tomcat Manager"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "配置弱密码、远程可达、具管理部署角色；正文明确正常安装无用户"
+source_status: "unknown"
+side_effects: "含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。"
+id: "vw-9b98ce570ca41f3117c006c9"
+entity_id: "ve-6d318e58e9b67420ad3d2db4"
+schema_version: "1"
+canonical: "Web安全/中间件/Apache Tomcat/Apache-Tomcat8-弱口令+后台getshell漏洞.md"
+relation_type: "duplicate_of"
 ---
 
 # Tomcat8 弱口令+后台getshell漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：配置弱密码、远程可达、具管理部署角色；正文明确正常安装无用户
+- 证据范围：与312同文，择有出处版本归并；不是Tomcat8独立漏洞。
+
+### 本次正文校订
+
+- 按实际内容修正 1 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 影响8.0只是测试版本，不是配置风险的全部范围
+- 同用户给所有角色过宽，须限实验并说明最小权限
+- 缺部署卸载、恢复网络限制和强凭据措施
+
+### 操作风险与资料使用
+
+- 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 ## 漏洞描述
 
@@ -53,7 +98,7 @@ Tomcat版本：8.0
 
 Vulhub无需编译，直接启动整个环境：
 
-```
+```shell
 docker-compose up -d
 ```
 

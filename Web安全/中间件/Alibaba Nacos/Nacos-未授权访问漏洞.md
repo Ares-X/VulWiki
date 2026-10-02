@@ -1,9 +1,52 @@
 ---
 version: "Nacos <= 2.0.0-ALPHA.1"
 source: "Threekiii/Vulnerability-Wiki"
+title: "Nacos 未授权访问漏洞"
+product: "Nacos Server API"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2021-29441"
+referenced_identifiers: ""
+identifier_role: "primary"
+cve: "CVE-2021-29441"
+prerequisites: "文实验2.0.0-ALPHA.1；需明确auth.enabled及UA白名单配置"
+affected_versions: "Nacos <= 2.0.0-ALPHA.1"
+source_status: "unknown"
+side_effects: "含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。"
+id: "vw-aee31f0c0e193a6fda8f528f"
+entity_id: "ve-aee31f0c0e193a6fda8f528f"
+schema_version: "1"
 ---
 
 # Nacos 未授权访问漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：文实验2.0.0-ALPHA.1；需明确auth.enabled及UA白名单配置
+- 证据范围：作者称无UA仍创建用户，说明其证据不能归因UA绕过，应归未启用鉴权或另一路径
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- wget下载GitHub tag网页却当tar包解压
+- POST Content-Length:0与非空body冲突，Accept头断行错误
+- 脚本实际/v1但打印/nacos/v1，默认context不同需说明
+- 随机创建账号会改状态；多数企业去/nacos的统计无依据
+- 密码信息为哈希，漏洞类型与版本不可一概而论
+
+### 操作风险与资料使用
+
+- 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 ## 漏洞描述
 

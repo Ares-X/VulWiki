@@ -1,6 +1,36 @@
 ---
 source: "hatch 补库批 20260928"
+product: "CatfishCMS"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "CatfishCMS后台csrf"
+prerequisites: "来源所述条件，未列明部分仍待核：Victim admin login; version unknown; fixed verification token included"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-c2791930474e12820534a4f8"
+entity_id: "ve-c2791930474e12820534a4f8"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：Victim admin login; version unknown; fixed verification token included
+
+- **证据待核（1）**：A static verification token is supplied with no evidence it is reusable/ignored/obtainable cross-site; CSRF claim not established。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **证据待核（2）**：Impact/overview empty; after-state image replaced by bare image text。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **证据待核（3）**：No original source or role-transition explanation。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # CatfishCMS后台csrf
 

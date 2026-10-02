@@ -1,8 +1,53 @@
 ---
-cnvd: "QVD-2022-46174"
-version: "因此先进入容器进行查看是否满足前置条件"
+cnvd: ""
+version: ""
 source: "MrWQ/vulnerability-paper"
+product: "ThinkPHP / LoadLangPack"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "QVD-2022-46174"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+qvd: "QVD-2022-46174"
+version_notes: "因此先进入容器进行查看是否满足前置条件"
+title: "ThinkPHP 远程代码执行漏洞复现"
+prerequisites: "来源所述条件，未列明部分仍待核：写6.0.1<版本<6.0.13和5.0/5.1全支，实验6.0.12；需多语言、可包含pearcmd、argv与可写路径"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/zeyMQg-tbpQET6n07KjJeQ"
+id: "vw-3f1ec9f4d6edc4bd260ba82d"
+entity_id: "ve-3f1ec9f4d6edc4bd260ba82d"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 明确更正：原 version 字段抽入命令、源码、路径、配置或普通叙述，不是版本号，已清空机器版本字段并原样保留于 version_notes；实际版本/分支条件见本节逐篇记录，未从代码猜造版本。
+
+- 明确更正：旧 cnvd 字段装入另一命名空间编号，已按编号前缀移入对应字段；这只纠正编号类型，不表示外部归属已核实。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：写6.0.1&lt;版本&lt;6.0.13和5.0/5.1全支，实验6.0.12；需多语言、可包含pearcmd、argv与可写路径
+
+代码与实验材料：228行全读，GET/头/Cookie实验和config-create分析；后两种请求仅截图；写webshell有持久副作用
+
+来源证据范围：微信原文和三篇CSDN，缺官方补丁
+
+- **适用与权限边界（1）**：元数据编号类型和版本错；依据：QVD填入cnvd字段；version抽成进入容器查看条件的叙述。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **适用与权限边界（2）**：Docker/PHP默认行为过度泛化；依据：“Docker任意版本镜像都默认安装PEAR”不适用于任意镜像或定制镜像；php.ini存在不自动代表argv=Off。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **实验改动边界（3）**：配置检查不等于漏洞确认；依据：仅LoadLangPack未注释或lang_switch_on=true不能忽略修复版、文件存在、权限等条件。以下步骤按原实验条件保留；人工改动后的行为只支持该修改环境，不用于证明未修改发行版默认可利用。
+
+- **事实待核（4）**：版本上限与510冲突；依据：本篇&lt;6.0.13，510说6.0.13及以前，应查原始修复提交。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **结论使用边界（5）**：argv说明内部冲突；依据：先说明web模式可生效，又称argv,argc在web不适用，需区分CLI参数和CGI查询字符串解析。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # ThinkPHP 远程代码执行漏洞复现
 

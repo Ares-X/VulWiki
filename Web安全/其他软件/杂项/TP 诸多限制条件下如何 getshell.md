@@ -1,8 +1,61 @@
 ---
 source: "MrWQ/vulnerability-paper"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "TP 诸多限制条件下如何 getshell"
+product: "2020N1CTF Easy_tp5/定制ThinkPHP5.0.0"
+record_type: "analysis"
+document_type: "CTF题解"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "PHP7、定制函数禁用/文件包含限制、open_basedir、仅public可写；方法4明确不适用于原题禁用error_log"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/TP%20%E8%AF%B8%E5%A4%9A%E9%99%90%E5%88%B6%E6%9D%A1%E4%BB%B6%E4%B8%8B%E5%A6%82%E4%BD%95%20getshell.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+source_url: "https://mp.weixin.qq.com/s/LaTNNjwDT1VzN6uA0Gq0-Q"
+id: "vw-dfe96b2cf5f92b62f32c0f47"
+entity_id: "ve-dfe96b2cf5f92b62f32c0f47"
+schema_version: "1"
 ---
 
 # TP 诸多限制条件下如何 getshell
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：2020N1CTF Easy_tp5/定制ThinkPHP5.0.0
+- 文献类型：CTF题解
+- 版本、权限及部署边界：PHP7、定制函数禁用/文件包含限制、open_basedir、仅public可写；方法4明确不适用于原题禁用error_log
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 必须分类CTF定制环境，不把绕过滤器的方法直接记为所有ThinkPHP产品漏洞；源码和题目包未连
+2. error_reporting无论参数都返回0错误，其返回旧错误级别；弱比较/静态调用非静态方法是PHP版本相关行为不可外推PHP8
+3. 方法5先说无$this才可静态调用又使用self::path->$this，需解释调用上下文绑定而非普遍规则
+4. 方法1–5关键限制、代码、HTTP payload几乎仅图片，未视检，无法凭文字复现；应回源提取代码
+5. 保留Windows非法文件名字/不同Linux目录行为和方法4额外前提等互补证据，不机械合并5条路线
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://mp.weixin.qq.com/s/LaTNNjwDT1VzN6uA0Gq0-Q>
+- 原文参考链接（未重新核验）：<http://ksria.com/simpread/>
+- 原文参考链接（未重新核验）：<https://github.com/MrWQ/vulnerability-paper>
+
+### 归档技术正文
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/LaTNNjwDT1VzN6uA0Gq0-Q)

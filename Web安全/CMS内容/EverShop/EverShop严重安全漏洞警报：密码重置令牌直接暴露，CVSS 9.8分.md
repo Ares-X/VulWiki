@@ -1,7 +1,41 @@
 ---
 cve: "CVE-2026-28213"
 source: "gelusus/wxvl 公众号漏洞文库"
+product: "EverShop"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "GHSA-cg73-g723-39jw; CVE-2026-28213"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "EverShop严重安全漏洞警报：密码重置令牌直接暴露，CVSS 9.8分"
+prerequisites: "来源所述条件，未列明部分仍待核：文章称<2.1.1密码重置响应泄露token；具体端点/角色范围待官方公告核实"
+side_effects: "未执行；本文需注意的操作影响：API响应JWT与forgotPassword端点无真实抓包/源码支撑，自动化例子是伪代码reset_password未定义，不宜当已验证PoC"
+source_status: "unknown"
+id: "vw-4bfa042f3b45511f6e05ff1b"
+entity_id: "ve-4bfa042f3b45511f6e05ff1b"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：文章称&lt;2.1.1密码重置响应泄露token；具体端点/角色范围待官方公告核实
+
+- **操作与副作用边界（1）**：API响应JWT与forgotPassword端点无真实抓包/源码支撑，自动化例子是伪代码reset_password未定义，不宜当已验证PoC。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+- **结论使用边界（2）**：管理员、供应商账户接管和支付数据影响超出示例证明；几分钟数百账户及财务损失估算无模型/数据且货币区间文本损坏。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **实验改动边界（3）**：代码换行大量丢失，注释吞并命令、YAML/Python失去结构。以下步骤按原实验条件保留；人工改动后的行为只支持该修改环境，不用于证明未修改发行版默认可利用。
+
+- **凭据与会话边界（4）**：Nginx缓解依赖Lua模块且按响应分块字符串替换会漏跨块/空格、破坏JSON；限速/CAPTCHA不能消除单次token泄露。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+
+- **来源与引用处置（5）**：官方GHSA/release链接可作为核验入口，泛化建议/广告应与漏洞事实分离。保留这部分来源材料并与技术结论分开；其引用或宣传内容不能补足本文漏洞的证据。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 #  EverShop严重安全漏洞警报：密码重置令牌直接暴露，CVSS 9.8分  
 原创 CVE-SEC

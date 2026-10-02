@@ -1,6 +1,38 @@
 ---
 source: "hatch 补库批 20260928"
+product: "MKCMS5.0"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "MKCMS v5.0 任意密码重置漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：知道受害会员用户名和匹配邮箱；公开repass接口；无邮箱控制需求"
+side_effects: "未执行；本文需注意的操作影响：明确更正：正文源码读取 name、email 并要求 submit，而所贴 PoC 使用 u_name、u_email 且缺 submit，这份请求不能按所示代码触发。源码在发邮件前就把密码设为固定 123456 是另一项逻辑问题；密码重置会改变真实账号，保留代码但不能称原 PoC 已成功。"
+source_status: "unknown"
+id: "vw-766c8dbf5b56511667faa8ff"
+entity_id: "ve-766c8dbf5b56511667faa8ff"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 明确更正：正文源码读取 name、email 并要求 submit，而所贴 PoC 使用 u_name、u_email 且缺 submit，这份请求不能按所示代码触发。源码在发邮件前就把密码设为固定 123456 是另一项逻辑问题；密码重置会改变真实账号，保留代码但不能称原 PoC 已成功。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：知道受害会员用户名和匹配邮箱；公开repass接口；无邮箱控制需求
+
+- **证据待核（1）**：源码在邮件前将密码设固定123456，逻辑明确，但PoC字段u_name/u_email与源码name/email完全不匹配且缺submit，无法按示例触发。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **结论使用边界（2）**：表单需点击提交，访问HTML本身不提交；动作URL为外部实域应替换示例。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **结论使用边界（3）**：任意密码重置应限定会员及已知用户名邮箱，非无需任何信息的任意账号。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # MKCMS v5.0 任意密码重置漏洞
 

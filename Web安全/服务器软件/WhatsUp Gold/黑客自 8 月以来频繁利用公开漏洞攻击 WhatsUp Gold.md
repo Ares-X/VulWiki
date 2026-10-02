@@ -1,8 +1,46 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "黑客自 8 月以来频繁利用公开漏洞攻击 WhatsUp Gold"
+product: "Progress WhatsUp Gold"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2024-6670; CVE-2024-6671"
+referenced_identifiers: "CVE-2024-4885"
+identifier_role: "primary"
+cve: "CVE-2024-6670; CVE-2024-6671"
+prerequisites: "未认证SQL注入，后续账号接管并借合法PowerShell功能执行"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-ab4c37b08e990fbc06aea8f3"
+entity_id: "ve-ab4c37b08e990fbc06aea8f3"
+schema_version: "1"
 ---
 
-#  黑客自 8 月以来频繁利用公开漏洞攻击 WhatsUp Gold   
+# 黑客自 8 月以来频繁利用公开漏洞攻击 WhatsUp Gold
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：未认证SQL注入，后续账号接管并借合法PowerShell功能执行
+- 证据范围：描述补丁/PoC/攻击时序及RAT部署，研究人员归因未确定；不是漏洞复现
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 缺全部主CVE元数据和影响/修复版本
+- 野外开发应译在野利用；NmPoller.exe是否远程下载的句法疑误需回查
+- 两周前修复是相对报道时点，与9月18归档日期不同
+- 两个SQLi共享事件不能与4885RCE合成一漏洞
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 胡金鱼  嘶吼专业版   2024-09-18 14:01  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/wpkib3J60o297rwgIksvLibPOwR24tqI8dGRUah80YoBLjTBJgws2n0ibdvfvv3CCm0MIOHTAgKicmOB4UHUJ1hH5g/640?wx_fmt=gif "")  

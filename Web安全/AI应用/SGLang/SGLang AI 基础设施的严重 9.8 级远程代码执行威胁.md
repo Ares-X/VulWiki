@@ -1,9 +1,52 @@
 ---
 cve: "CVE-2026-5760"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "SGLang AI 基础设施的严重 9.8 级远程代码执行威胁"
+product: "SGLang"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2026-5760"
+referenced_identifiers: ""
+identifier_role: "primary"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。"
+id: "vw-5be0d9e6ffb8a05c0248bc53"
+entity_id: "ve-5be0d9e6ffb8a05c0248bc53"
+schema_version: "1"
 ---
 
-#  SGLang AI 基础设施的严重 9.8 级远程代码执行威胁  
+# SGLang AI 基础设施的严重 9.8 级远程代码执行威胁
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 本次正文校订
+
+- 按该篇完整正文及逐篇审阅区分主问题与背景编号，补全结构化主标识；不把标识归属校订等同运行复现。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 必须先加载恶意GGUF模型
+- GGUF术语误译
+- 缺影响版本/验证资料
+- 补丁未发布是历史状态需标时间
+
+### 操作风险与资料使用
+
+- 含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 sec随谈
                     sec随谈  sec随谈   2026-04-22 00:49  
   

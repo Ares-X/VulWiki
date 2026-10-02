@@ -1,6 +1,40 @@
 ---
 source: "hatch 补库批 20260928"
+product: "Spring Cloud Actuator→HikariCP→H2"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "Spring Boot Actuator hikari配置不当导致的远程命令执行漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：Boot2.x太宽，需Cloud可写env/restart、Hikari属性绑定、H2支持ALIAS及DB权限"
+side_effects: "未执行；本文需注意的操作影响：影响范围及默认端点错误泛化；并非所有Boot2.x都可POSTenv/restart，H2而非任意数据库才有该ALIAS语法；验证SQL失败可导致业务断连；正文承认失败不再返回其他查询，示例Scanner无输出抛异常且重启应用，缺恢复原值/清理ALIAS"
+source_status: "unknown"
+id: "vw-565aa3334fc3e08109407ddd"
+entity_id: "ve-565aa3334fc3e08109407ddd"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：Boot2.x太宽，需Cloud可写env/restart、Hikari属性绑定、H2支持ALIAS及DB权限
+
+代码与实验材料：完整测试SQL和env/restart请求，重启应用且持久创建ALIAS；GUI Calculator不输出可能验证SQL报错
+
+来源证据范围：先知7480及镜像实验仓库，没有依赖锁
+
+- **代码与转录边界（1）**：影响范围及默认端点错误泛化；依据：并非所有Boot2.x都可POSTenv/restart，H2而非任意数据库才有该ALIAS语法。相应原代码作为存在此问题的历史样本保留，不能直接当作可运行、成功复现的 PoC；缺失内容需回原稿核对，不据此补造可执行攻击链。
+
+- **操作与副作用边界（2）**：验证SQL失败可导致业务断连；依据：正文承认失败不再返回其他查询，示例Scanner无输出抛异常且重启应用，缺恢复原值/清理ALIAS。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+- **适用与权限边界（3）**：新建连接/借出连接时机简化；依据：connectionTestQuery并非每次借出必执行，要核Hikari版本及JDBC4验证配置。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Spring Boot Actuator hikari配置不当导致的远程命令执行漏洞
 
