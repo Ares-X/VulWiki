@@ -39,7 +39,7 @@ schema_version: "1"
 
 ## 操作风险
 
-文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -65,6 +65,7 @@ schema_version: "1"
 POST /mobile/api/api.ali.php HTTP/1.1
 Host: 
 User-Agent: Go-http-client/1.1
+Content-Length: 422
 Content-Type: multipart/form-data; boundary=502f67681799b07e4de6b503655f5cae
 Accept-Encoding: gzip
 
@@ -76,7 +77,7 @@ Content-Type: application/octet-stream
 --502f67681799b07e4de6b503655f5cae--
 ```
 
-> 请求长度说明：原资料 Content-Length 为 422；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 422；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 参数a base解码
 

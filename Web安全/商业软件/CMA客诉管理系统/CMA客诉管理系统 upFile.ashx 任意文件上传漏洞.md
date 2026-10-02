@@ -40,7 +40,7 @@ canonical: "Web安全/商业软件/CMA客诉管理系统/CMA客诉管理系统 u
 
 ## 操作风险
 
-文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -71,6 +71,7 @@ title="CMA客诉管理系统手机端"
 ```http
 POST /upFile/upFile.ashx HTTP/1.1
 Host: 
+Content-Length: 562
 Cache-Control: max-age=0
 Upgrade-Insecure-Requests: 1
 Origin: null
@@ -90,7 +91,7 @@ Content-Type: application/octet-stream
 ------WebKitFormBoundarymXf9pBIUlDVOYtnZ--
 ```
 
-> 请求长度说明：原资料 Content-Length 为 562；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 562；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 ![](./.resource/CMA客诉管理系统upFile.ashx任意文件上传漏洞/media/202205241430324.png)
 

@@ -42,7 +42,7 @@ schema_version: "1"
 
 ## 操作风险
 
-文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -62,6 +62,7 @@ schema_version: "1"
 POST /UpLoadPic.ashx HTTP/1.1
 Host: 
 User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36
+Content-Length: 431
 Accept: */*
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9
@@ -85,7 +86,7 @@ Content-Disposition: form-data; name="oldName"
 ------WebKitFormBoundarywt7cEu1eBdibB13u--
 ```
 
-> 请求长度说明：原资料 Content-Length 为 431；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 431；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 
 文件上传位置

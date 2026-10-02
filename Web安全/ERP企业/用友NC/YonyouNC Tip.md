@@ -43,7 +43,7 @@ schema_version: "1"
 
 ## 操作风险
 
-命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -222,7 +222,7 @@ Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate
 Connection: close
 Referer: http://x.x.x.x/fs/
-Cookie: JSESSIONID=FFAE8EF48BD3BEF7E94B5449B8F9BA90.ser
+Cookie: JSESSIONID=FFAE8EF48BD3BEF7E94B5449B8F9BA90.server
 Upgrade-Insecure-Requests: 1	
 ```
 

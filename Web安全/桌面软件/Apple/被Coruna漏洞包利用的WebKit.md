@@ -5,7 +5,7 @@ identifier_role: "primary"
 primary_identifiers: "CVE-2023-43010;CVE-2023-43000;CVE-2023-41974;CVE-2024-23222"
 referenced_identifiers: "CVE-2023-32434;CVE-2023-38606"
 identifier_status: "unknown"
-title: "被Coruna漏洞包利用的WebKit"
+title: "Apple为旧版iPhone/iPad发布紧急安全更新，修复被Coruna漏洞包利用的WebKit漏洞"
 product: "Apple旧版iOS/iPadOS WebKit与内核"
 record_type: "roundup"
 document_type: "多漏洞回补与利用包新闻"
@@ -23,7 +23,7 @@ entity_id: "ve-381b7e010d27232690468a9d"
 schema_version: "1"
 ---
 
-# 被Coruna漏洞包利用的WebKit
+#  Apple为旧版iPhone/iPad发布紧急安全更新，修复被Coruna漏洞包利用的WebKit漏洞  
 
 <!-- vulwiki-editorial-rebuild:system-misc -->
 ## 条目范围与校订

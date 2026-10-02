@@ -43,7 +43,7 @@ schema_version: "1"
 
 ## 操作风险
 
-文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -62,6 +62,7 @@ schema_version: "1"
 POST /api/POS/SetAiPosItemImage HTTP/1.1
 Host: 
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.5938.132 Safari/537.36
+Content-Length: 416
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9
@@ -73,7 +74,7 @@ x-forwarded-for: 127.0.0.1
 {"Body":{"pos_id":"test","file_data":"UEsDBBQAAAAIAJmoeFdm5m19YgAAAGQAAAATAAAAaW5pdC1jNTIyMjg1MzVhLmNzcwXBQQqEMAwAwLvgH3rcPXRJaV3Qk19JkxQLGsUqKuLfnekn4Yym0CqiBpXNZ8LTHpm3oXM+wHJ+77r6qRzF0rzrZpOTBjhBixJT5Cb9OXhHPgZwBBRvzmUZ8ep0Vnnq6nkBUEsBAj8AFAAAAAgAmah4V2bmbX1iAAAAZAAAABMAJAAAAAAAAAAgAAAAAAAAAGluaXQtYzUyMjI4NTM1YS5jc3MKACAAAAAAAAEAGADoFpjO1h7aAQAAAAAAAAAAAAAAAAAAAABQSwUGAAAAAAEAAQBlAAAAkwAAAAAA","last_time":""}}
 ```
 
-> 请求长度说明：原资料 Content-Length 为 416；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 416；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 
 上传文件位置
@@ -106,6 +107,7 @@ x-forwarded-for: 127.0.0.1
 POST /api/POS/SetAiPosItemImage HTTP/1.1
 Host: 
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.5938.132 Safari/537.36
+Content-Length: 444
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9
@@ -117,7 +119,7 @@ x-forwarded-for: 127.0.0.1
 {"Body":{"pos_id":"test","file_data":"UEsDBBQAAAgIABeAKli/64yUkwAAAKQAAAAIABAAc3RjLmFzcHhVWAwAEkeiZa5OnmX1ARQAs1FVSCvNSy7JzM9TcLUwN64ssszW0KwuSyxScHcN8LBVKs0rTlTSiXR09rZVSktV0nG2NDSwBUlpg8Ssi1JLSovyFECi1rUgXQGOkVbBJUWZeem2QamFpanFJdFKFUqx1nWpZYk5+lpRaYYGngaeVVEeWvoaQLU6CEs1rVXtbFQdAhLTUxV8EvPSS4EMW69gVTsAUEsBAhQDFAAACAgAF4AqWL/rjJSTAAAApAAAAAgADAAAAAAAAAAgAKSBAAAAAHN0Yy5hc3B4VVgIABJHomWuTp5lUEsFBgAAAAABAAEAQgAAAMkAAAAAAA==","last_time":""}}
 ```
 
-> 请求长度说明：原资料 Content-Length 为 444；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 444；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 
 上传文件位置

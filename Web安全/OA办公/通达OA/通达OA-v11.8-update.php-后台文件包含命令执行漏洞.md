@@ -41,7 +41,7 @@ schema_version: "1"
 
 ## 操作风险
 
-现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -131,6 +131,7 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate
 Content-Type: multipart/form-data; boundary=---------------------------17518323986548992951984057104
+Content-Length: 365
 Connection: close
 Cookie: USER_NAME_COOKIE=admin; OA_USER_ID=admin; PHPSESSID=kqfgar7u3c0ang0es41u3u67p4; SID_1=a63eb31
 Upgrade-Insecure-Requests: 1
@@ -147,7 +148,7 @@ Content-Disposition: form-data; name="submit"
 -----------------------------17518323986548992951984057104--
 ```
 
-> 请求长度说明：原资料 Content-Length 为 365；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 365；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 其中 **USER_ID=../../general/reportshop/workshop/report/attachment-remark/.user** 为上传路径
 

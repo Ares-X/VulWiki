@@ -42,7 +42,7 @@ schema_version: "1"
 
 ## 操作风险
 
-文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -95,9 +95,10 @@ Accept-Encoding: gzip, deflate
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
 Connection: keep-alive
 Accept-Language: zh-CN,zh;q=0.9
-Cookie: JSESSIONID=5******************************9
+Cookie: JSESSIONID=59227D2C93FE3E8C2626DA625CE710F9
 Content-Type: multipart/form-data
 Upgrade-Insecure-Requests: 1
+Content-Length: 177
 
 --ec126a48c5b7676dce1b676f5251358f
 Content-Disposition: form-data; 
@@ -108,7 +109,7 @@ Content-Disposition: form-data;
 
 ```
 
-> 请求长度说明：原资料 Content-Length 为 177；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 177；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/HsJDm7fvc3ZYcJcMC8amYzo7xLCdlEpa9VZLpV6pst5MXENicalOrn5tmI9uy48Mkd7DhapVvg1JSQic0X2PhLwA/640?wx_fmt=png)
 

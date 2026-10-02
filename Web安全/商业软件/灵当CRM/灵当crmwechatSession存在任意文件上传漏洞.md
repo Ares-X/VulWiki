@@ -41,7 +41,7 @@ schema_version: "1"
 
 ## 操作风险
 
-文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -64,6 +64,7 @@ User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:126.0) Gecko/201001
 Content-Type: multipart/form-data; boundary=---------------------------45250802924973458471174811279
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate
+Content-Length: 10338
 
 -----------------------------45250802924973458471174811279
 Content-Disposition: form-data; name="file"; filename="1.php"
@@ -73,7 +74,7 @@ Content-Type: image/jpeg
 -----------------------------45250802924973458471174811279
 ```
 
-> 请求长度说明：原资料 Content-Length 为 10338；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 10338；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 
 ```plain

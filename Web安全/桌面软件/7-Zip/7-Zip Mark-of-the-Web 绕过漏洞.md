@@ -5,7 +5,7 @@ identifier_role: "primary"
 primary_identifiers: "CVE-2025-0411"
 referenced_identifiers: "CVE-2025-0441"
 identifier_status: "unknown"
-title: "7-Zip Mark-of-the-Web 绕过漏洞"
+title: "7-Zip Mark-of-the-Web 绕过漏洞 [CVE-2025-0411] - POC"
 product: "7-Zip on Windows"
 record_type: "vulnerability"
 document_type: "MotW绕过PoC演示摘要"
@@ -23,7 +23,7 @@ entity_id: "ve-117e52e2782410f43913cf4a"
 schema_version: "1"
 ---
 
-# 7-Zip Mark-of-the-Web 绕过漏洞
+#  7-Zip Mark-of-the-Web 绕过漏洞 [CVE-2025-0411] - POC   
 
 <!-- vulwiki-editorial-rebuild:system-misc -->
 ## 条目范围与校订

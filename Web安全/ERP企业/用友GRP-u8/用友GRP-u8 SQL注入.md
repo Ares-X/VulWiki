@@ -39,7 +39,7 @@ schema_version: "1"
 
 ## 操作风险
 
-命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -49,6 +49,7 @@ Accept: Accept: */*
 Content-Type: application/x-www-form-urlencoded
 User-Agent: Mozilla/4.0 (compatible; MSIE 6.0;)
 Host: host
+Content-Length: 357
 Connection: Keep-Alive
 Cache-Control: no-cache
 
@@ -60,6 +61,6 @@ format="text">DataSetProviderData</DATA></PARAM><PARAM><NAME>Data</NAME
 user'</DATA></PARAM></PARAMS></R9FUNCTION></R9PACKET>
 ```
 
-> 请求长度说明：原资料 Content-Length 为 357；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 357；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 ![image-20201020120505719](./.resource/用友GRP-u8SQL注入/media/image-20201020120505719.png)

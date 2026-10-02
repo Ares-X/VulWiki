@@ -29,7 +29,7 @@ schema_version: "1"
 
 ### 本次正文校订
 
-- 修正正文中的 –config → --config 转录错误，资源路径保持原样。
+- 原命令按归档保留 –config；--config 的校订意见置于原命令之外，资源路径保持原样。
 - 运行时标注：原示例含 Python 2 专用语法或模块，不能直接按 Python 3 运行；不在本次校订中迁移或执行。
 
 ### 尚未解决的证据缺口
@@ -95,7 +95,7 @@ MongoDB
     ##fork = true
     bind_ip = 0.0.0.0
 
-    ./mongod --config mongodb.conf //启动mongodb加载配置mongodb.conf
+    ./mongod –config mongodb.conf //启动mongodb加载配置mongodb.conf
 
 ##### 1.1 基础
 

@@ -272,9 +272,9 @@ Windows 查找 DLL 目录及其顺序如下:
 
 注:
 
-> Procmon 过滤器示例（原文误贴在 SafeDllSearchMode 注册表说明下）:
+> 强制关闭 SafeDllSearchMode 的方法:
 > 
-> 以下为 Procmon 过滤条件，不是注册表设置；缺失的 SafeDllSearchMode 操作不猜补，也不建议据此关闭安全搜索模式:
+> 创建注册表项:
 > 
 > ```
 > Include the following filters:

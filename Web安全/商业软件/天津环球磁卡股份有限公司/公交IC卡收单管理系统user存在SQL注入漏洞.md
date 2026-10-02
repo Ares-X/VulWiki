@@ -40,7 +40,7 @@ schema_version: "1"
 
 ## 操作风险
 
-现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -63,7 +63,7 @@ Accept: application/json, text/javascript, */*; q=0.01
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 X-Requested-With: XMLHttpRequest
 Accept-Encoding: gzip, deflate
-Cookie: JSESSIONID=BE20D06711487C
+Cookie: JSESSIONID=BE20D06711487C9D6D5325C1129F244C
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:130.0) Gecko/20100101 Firefox/130.0
 Content-Type: application/x-www-form-urlencoded; charset=UTF-8
  

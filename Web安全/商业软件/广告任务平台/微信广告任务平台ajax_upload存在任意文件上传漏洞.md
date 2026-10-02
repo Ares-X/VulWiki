@@ -42,7 +42,7 @@ schema_version: "1"
 
 ## 操作风险
 
-文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行；在线解密或外部服务可能收到凭据及敏感内容。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行；在线解密或外部服务可能收到凭据及敏感内容。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -62,6 +62,7 @@ schema_version: "1"
 POST /index.php/Home/index/ajax_upload HTTP/1.1
 Host: 
 Connection: keep-alive
+Content-Length: 197
 Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryCc7iBZFp1mvojsxn
 Accept: */*
 Origin: http://127.0.0.1
@@ -77,7 +78,7 @@ Content-Type: image/jpeg
 ------WebKitFormBoundaryCc7iBZFp1mvojsxn--
 ```
 
-> 请求长度说明：原资料 Content-Length 为 197；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 197；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 
 ```java

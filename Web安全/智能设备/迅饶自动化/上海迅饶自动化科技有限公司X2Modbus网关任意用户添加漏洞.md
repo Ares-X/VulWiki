@@ -36,7 +36,7 @@ source_status: "recorded"
 
 - SQL设置密码stc123456，后文却称stc/stc登录，确定不一致
 - 原始SQL作为text/xml体缺协议解释和成功响应；FOFA字段残缺
-- 已落实的文本修订：“使用添加的账户`stc/stc`登录系统”改为“请求设置的测试账户为 `stc/stc123456`；此处按 SQL 中的值统一，创建与登录成功仍需响应证据”；HTTP 报文围栏改为 http；残缺指纹退出可执行索引并保留原值。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
+- 历史校订意见（原始示例按归档保留，下述改写不再应用于原始示例）：“使用添加的账户`stc/stc`登录系统”改为“请求设置的测试账户为 `stc/stc123456`；此处按 SQL 中的值统一，创建与登录成功仍需响应证据”；HTTP 报文围栏改为 http；残缺指纹退出可执行索引并保留原值。以上意见置于原始示例之外，不覆盖原文证据；未做运行验证
 
 ### 操作风险与恢复
 
@@ -80,7 +80,9 @@ insert into userid (USERNAME,PASSWORD,PURVIEW,LOGINDATE,LOGINTIME) values('stc',
 ```
 
 
-请求设置的测试账户为 `stc/stc123456`；此处按 SQL 中的值统一，创建与登录成功仍需响应证据
+使用添加的账户`stc/stc`登录系统
+
+> 校订说明：请求设置的测试账户为 `stc/stc123456`，与上方原文的 `stc/stc` 不一致；两处原值分别保留，创建与登录成功未独立验证。
 
 
 > 原文: <https://www.yuque.com/xiaokp7/ocvun2/lyagwfg3rha3y0xp>

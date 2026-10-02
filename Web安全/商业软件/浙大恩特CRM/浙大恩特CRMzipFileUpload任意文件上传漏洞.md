@@ -43,7 +43,7 @@ schema_version: "1"
 
 ## 操作风险
 
-请求可能删除/覆盖数据、修改账号或持久改变业务状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+请求可能删除/覆盖数据、修改账号或持久改变业务状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -65,6 +65,7 @@ User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Geck
 Content-Type: multipart/form-data; boundary=00content0boundary00
 Host: 
 Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+Content-Length: 260
 Connection: close
 
 --00content0boundary00
@@ -75,7 +76,7 @@ Content-Type: application/zip
 --00content0boundary00--
 ```
 
-> 请求长度说明：原资料 Content-Length 为 260；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 260；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 
 根据回显拼接上传文件位置

