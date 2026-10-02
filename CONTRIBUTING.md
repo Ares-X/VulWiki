@@ -49,3 +49,5 @@ python scripts/wiki.py baseline --reason "说明核查范围、历史原因和�
 - 前提、副作用、来源、主编号、版本是否有变化
 - 重复关系与保留的来源/差异
 - 测试结果、遗留债/未执行项、baseline 是否修改及理由
+
+结构 fatal 与活动 HTML 等 fatal 检查永远阻断：baseline 命令拒绝收录，check 即使看到旧基线包含同项也返回非零。不得以重建基线掩盖它们。
