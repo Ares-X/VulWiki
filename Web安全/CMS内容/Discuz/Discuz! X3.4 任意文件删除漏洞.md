@@ -28,7 +28,7 @@ schema_version: "1"
 
 - **适用与权限边界（2）**：&lt;=3.4 requires patch-date/commit cutoff; same version patched later。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
 
-- **凭据与会话边界（3）**：External upload.html depends on browser sending session cookie across origin; raw same-origin second request more reproducible。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+- **凭据与会话边界（3）**：External upload.html depends on browser sending session cookie across origin; raw same-origin second request more reproducible。抓包中的会话不能视为未认证访问证明。需重新取得授权测试会话，不能复用文中值。
 
 - **来源与引用处置（4）**：Image proof unviewed; no unrelated entity contamination。保留这部分来源材料并与技术结论分开；其引用或宣传内容不能补足本文漏洞的证据。
 

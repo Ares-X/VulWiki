@@ -38,7 +38,7 @@ schema_version: "1"
 - 明确错分泛微；通达版本和auth_mobi.php等接口直接识别
 - 五环链应多实体关联，不能合并成单一RCE；代码/具体返回很多仅截图
 - Redis payload含flushall清空数据库，破坏性严重，必须警告/隔离而非示例检测
-- Header Content-Disposition片段语法坏、Windows绝对路径及Redis口令为环境特定，需占位/前提说明
+- Header Content-Disposition片段语法坏、Windows绝对路径及Redis口令为环境特定，需说明相应环境前提
 - 保留在线用户限制与逐步前提，不能写任意离线用户登录
 
 ## 操作风险

@@ -16,7 +16,7 @@ referenced_identifiers: ""
 prerequisites: "y-forwarded-for伪本地，无Cookie，版本未知"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%AE%89%E5%85%A8%E8%AE%BE%E5%A4%87/%E6%B7%B1%E4%BF%A1%E6%9C%8DNGAF/%E6%B7%B1%E4%BF%A1%E6%9C%8D-NGAF%E4%B8%8B%E4%B8%80%E4%BB%A3%E9%98%B2%E7%81%AB%E5%A2%99-loadfile.php-%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E.md"
 review_date: "2026-10-02"
-side_effects: "读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要且已脱敏的响应，不能由接口可达推定敏感内容已泄露"
+side_effects: "读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要的响应，不能由接口可达推定敏感内容已泄露"
 source_status: "unknown"
 canonical: "Web安全/安全设备/深信服NGAF/深信服-NGAF下一代防火墙-loadfile.php-任意文件读取漏洞.md"
 ---
@@ -39,7 +39,7 @@ canonical: "Web安全/安全设备/深信服NGAF/深信服-NGAF下一代防火�
 
 ### 操作风险与恢复
 
-- 读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要且已脱敏的响应，不能由接口可达推定敏感内容已泄露
+- 读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要的响应，不能由接口可达推定敏感内容已泄露
 
 ### 待核与来源
 

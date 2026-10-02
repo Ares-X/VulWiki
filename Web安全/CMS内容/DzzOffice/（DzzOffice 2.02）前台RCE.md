@@ -20,7 +20,6 @@ schema_version: "1"
 
 ## 核对与使用边界
 
-- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；默认公开示例、攻击表达式和其他 Cookie 语义保持原样。
 
 本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
 
@@ -291,7 +290,7 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8
 Accept-Encoding: gzip, deflate
 Accept-Language: en-US,en;q=0.9
-Cookie: gGyk_2132_saltkey=xkBk27da; gGyk_2132_lastvisit=1658359791; gGyk_2132_sid=T09ZLe; gGyk_2132_lastact=1658363412%09misc.php%09seccode; gGyk_2132_seccodeST09ZLe0=212****************************************************************************9m0
+Cookie: gGyk_2132_saltkey=xkBk27da; gGyk_2132_lastvisit=1658359791; gGyk_2132_sid=T09ZLe; gGyk_2132_lastact=1658363412%09misc.php%09seccode; gGyk_2132_seccodeST09ZLe0=2121YXrez2Rb_00AasW9CQZdtAIM2HTcnuaPmShhMGHLfrWTtXnAkbq42XcqrY94rVDphUTYWnaK9OX9m0
 Connection: close
 Content-Length: 18
 Content-Type: application/x-www-form-urlencoded

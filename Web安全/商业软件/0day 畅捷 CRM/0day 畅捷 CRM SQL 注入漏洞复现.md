@@ -93,7 +93,7 @@ HTTP/1.1 200 OK
 Date: Fri, 15 Sep 2023 10:09:33 GMT
 Server: Apache/2.2.6 (Win32) PHP/5.2.10
 X-Powered-By: PHP/5.2.10
-Set-Cookie: PHPSESSID=7******************************3; path=/
+Set-Cookie: PHPSESSID=79c6ba39448dd8a73c3c2a9f85a07173; path=/
 Expires: Thu, 19 Nov 1981 08:52:00 GMT
 Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
 Pragma: no-cache

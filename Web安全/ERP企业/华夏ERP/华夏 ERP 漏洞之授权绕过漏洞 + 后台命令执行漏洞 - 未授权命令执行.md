@@ -37,7 +37,7 @@ schema_version: "1"
 - Inet4Address DNS回连仅证明类型处理/解析，不足支持未授权命令执行标题
 - 认证POC末尾孤立三引号语法损坏；requests可能规范化/../需静态说明，不执行
 - 组合socket脚本含¤无法ascii编码，且GET含¤tPage转码错误
-- 不能把依赖版本或DNS结果自动推RCE；公开IP与默认凭据需占位
+- 不能把依赖版本或DNS结果自动推RCE
 
 ## 操作风险
 

@@ -37,7 +37,7 @@ schema_version: "1"
 
 - 文件名qys.jpg而内容public class qiyuesuo004，需解释服务器编译/改名及触发加载时机，不能按普通Java编译假设直接成功
 - type TIMETASK为必要业务条件；静态初始化执行ping需类加载，未给响应/出站证据
-- 第三方ceye域名应换受控占位符，上传/任务创建有状态影响
+- 上传/任务创建有状态影响
 
 ## 操作风险
 

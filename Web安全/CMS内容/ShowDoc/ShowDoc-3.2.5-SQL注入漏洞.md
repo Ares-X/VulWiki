@@ -21,7 +21,6 @@ schema_version: "1"
 
 ## 核对与使用边界
 
-- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；默认公开示例、攻击表达式和其他 Cookie 语义保持原样。
 
 本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
 
@@ -97,7 +96,7 @@ python poc.py -u http://your-ip:8080
 添加 token：
 
 ```
-Cookie: cookie_token=38f**********************************************************f40
+Cookie: cookie_token=38f70784c511fe30f8686d5bf44bd0c5a830acd8e8c3efa9db63938f69e11f40
 ```
 
 ![](./.resource/ShowDoc-3.2.5-SQL注入漏洞/media/image-20240704161636254.png)

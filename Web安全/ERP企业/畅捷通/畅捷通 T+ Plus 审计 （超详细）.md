@@ -241,7 +241,7 @@ Cache-Control: no-cache
 Connection: keep-alive
 Content-Length: 775
 Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryMXNLGZirKX5UAvYG
-Cookie: LOGIN_LANG=cn; ASP.NET_SessionId=o**********************5; Hm_lvt_fd4ca40261bc424e2d120b806d985a14=1674191380,1674378083,1674393050,1674536169; Hm_lpvt_fd4ca40261bc424e2d120b806d985a14=1674543095
+Cookie: LOGIN_LANG=cn; ASP.NET_SessionId=oafhmiapxpe5vqesdwm4oms5; Hm_lvt_fd4ca40261bc424e2d120b806d985a14=1674191380,1674378083,1674393050,1674536169; Hm_lpvt_fd4ca40261bc424e2d120b806d985a14=1674543095
 Host: 127.0.0.0
 Origin: http://127.0.0.0
 Pragma: no-cache

@@ -28,7 +28,7 @@ schema_version: "1"
 
 来源证据范围：Cybersecuritynews exactarticle; noGitLabadvisory
 
-- **凭据与会话边界（1）**：document.cookie cannot generally readHttpOnlysessioncookie; inferredKubernetesdeploy/roleescalation require permissions/evidence。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+- **凭据与会话边界（1）**：document.cookie cannot generally readHttpOnlysessioncookie; inferredKubernetesdeploy/roleescalation require permissions/evidence。抓包中的会话不能视为未认证访问证明。需重新取得授权测试会话，不能复用文中值。
 
 - **结论使用边界（2）**：UndergroundPoC and48hour riskthreshold unsupported; browser script execution mustn't be indexed as generic serverRCE。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
 

@@ -37,7 +37,7 @@ schema_version: "1"
 
 - 影响以下/脚本<11.8与包含11.8测试矛盾，保留版本矩阵
 - 路径必须含webroot和attachment说法不等于实际拒绝条件
-- multipart丢name/filename；脚本另保留字段；第三方XSS收集域需替换惰性占位
+- multipart丢name/filename；脚本另保留字段
 - 标记输出不证明浏览器JS执行；XSS是文件写入后影响；删招聘
 
 ## 操作风险
@@ -135,7 +135,7 @@ Accept-Encoding: gzip, deflate
 Content-Type: multipart/form-data; boundary=---------------------------17518323986548992951984057104
 Content-Length: 365
 Connection: close
-Cookie: USER_NAME_COOKIE=admin; OA_USER_ID=admin; PHPSESSID=k************************4; SID_1=a63eb31
+Cookie: USER_NAME_COOKIE=admin; OA_USER_ID=admin; PHPSESSID=kqfgar7u3c0ang0es41u3u67p4; SID_1=a63eb31
 Upgrade-Insecure-Requests: 1
 -----------------------------17518323986548992951984057104
 Content-Disposition: form-data; 
@@ -192,7 +192,7 @@ Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate
 Content-Type: multipart/form-data; boundary=---------------------------17518323986548992951984057104
 Connection: close
-Cookie: USER_NAME_COOKIE=admin; OA_USER_ID=admin; PHPSESSID=k************************4; SID_1=a63eb31
+Cookie: USER_NAME_COOKIE=admin; OA_USER_ID=admin; PHPSESSID=kqfgar7u3c0ang0es41u3u67p4; SID_1=a63eb31
 Upgrade-Insecure-Requests: 1
 
 -----------------------------17518323986548992951984057104
@@ -222,7 +222,7 @@ Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate
 Content-Type: multipart/form-data; boundary=---------------------------17518323986548992951984057104
 Connection: close
-Cookie: USER_NAME_COOKIE=admin; OA_USER_ID=admin; creat_work=new; PHPSESSID=5************************6; SID_1=a663f5dc
+Cookie: USER_NAME_COOKIE=admin; OA_USER_ID=admin; creat_work=new; PHPSESSID=51v5lqch5eqvdj1cfh3eggpbt6; SID_1=a663f5dc
 Upgrade-Insecure-Requests: 1
 
 -----------------------------17518323986548992951984057104

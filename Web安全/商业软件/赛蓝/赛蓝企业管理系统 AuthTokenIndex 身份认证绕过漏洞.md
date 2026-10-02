@@ -39,7 +39,7 @@ schema_version: "1"
 - 已按原文中的具体接口、源码或上下文直接更正产品、根因或修复说明；未知版本和未经证明的影响仍明确保留为待核实。
 - 给一个静态token不解释生成/硬编码机制，不能据此称攻击者可构造任意token
 - 没有登录响应或受保护资源证明，超级管理员System角色需证据
-- 令牌性质未知应占位化避免当通用凭据；在野/修复均无来源
+- 令牌性质未知，不能当作通用凭据；在野/修复均无来源
 - 标题AuthTokenIndex丢路径斜杠；可归企业ERP产品
 
 ## 操作风险
@@ -77,7 +77,7 @@ FOFA：body="www.cailsoft.com" || body="赛蓝企业管理系统"
 
 POC/EXP：
 
-直接访问：/AuthToken/Index?loginName=System&token=c******************************f
+直接访问：/AuthToken/Index?loginName=System&token=c94ad0c0aee8b1f
 
 登录后台
 

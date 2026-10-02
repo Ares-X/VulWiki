@@ -79,7 +79,7 @@ Accept: */*
 Referer: http://ip:port/
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9
-Cookie: PHPSESSID=o************************7; KEY_RANDOMDATA=2220
+Cookie: PHPSESSID=omcivrbku8nr1oersk7gp4it17; KEY_RANDOMDATA=2220
 Connection: close
 
 ```

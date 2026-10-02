@@ -26,7 +26,7 @@ schema_version: "1"
 
 - **结论使用边界（1）**：Scope/fields and Seebug provenance clear。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
 
-- **凭据与会话边界（2）**：Payload and request text only images; 'steal admin cookie' additionally depends on cookie/browser protections。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+- **凭据与会话边界（2）**：Payload and request text only images; 'steal admin cookie' additionally depends on cookie/browser protections。抓包中的会话不能视为未认证访问证明。需重新取得授权测试会话，不能复用文中值。
 
 历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 

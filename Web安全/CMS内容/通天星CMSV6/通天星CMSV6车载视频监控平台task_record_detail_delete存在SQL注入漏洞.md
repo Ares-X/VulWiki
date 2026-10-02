@@ -25,7 +25,6 @@ schema_version: "1"
 
 - 测绘字段处置：原 fofa 字段为残缺表达式、错误平台语法或当前解析器不支持的形式，原值完整保留到 fofa_unverified，不把它当作已校验查询或受影响资产证据。正文检索方法保留；具体问题见下列原审阅项。
 
-- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；遮罩后的历史值不能作为可用登录凭据。原操作、请求方法和攻击表达式保留。
 
 - 具体副作用：本文 delete 路由会涉及 任务明细记录；把 ids=1 等正常参数当“安全对照”仍可能删除真实业务数据。原探针与方法保留，但测试对象必须是可恢复的隔离记录，须核事前/事后状态。
 - JSESSIONID、矩阵路径后缀与 X-Forwarded-For 的出现不能替代路由鉴权证明；只有 URL/请求或 sqlmap 标签，没有配对响应/时延证据，短延迟不能直接判 SQLi。
@@ -38,7 +37,7 @@ schema_version: "1"
 
 - **结论使用边界（2）**：示例只有URL和请求无时延/响应，不能证明漏洞；sqlmap标签不是运行结果。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
 
-- **凭据与会话边界（3）**：会话/suffix鉴权前提和具体版本未给，无修复。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+- **凭据与会话边界（3）**：会话/suffix鉴权前提和具体版本未给，无修复。抓包中的会话不能视为未认证访问证明。需重新取得授权测试会话，不能复用文中值。
 
 - **操作与副作用边界（4）**：行业分类/Hunterfofa元数据残缺，保留与其他delete不同业务路由。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
 
@@ -68,7 +67,7 @@ User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9,en;q=0.8
-Cookie: JSESSIONID=585**************************C40
+Cookie: JSESSIONID=58586A7CBD64C381945F9AAACFDF7C40
 Connection: close
 Content-Length: 0
 ```

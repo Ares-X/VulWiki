@@ -39,7 +39,7 @@ schema_version: "1"
 - FileReceive脚本multithreading参数file却open(filename)未定义，纯文本标记写jsp不足称Getshell
 - Xbrl脚本URL拼接语法错误、DNS长度字段硬编码且改域未更新；URLDNS仅证反序列化不证命令执行
 - 控制台改返回0为1仅客户端界面变化，必须服务端权限验证；XXE节只有WSDL无实体请求
-- 配置含示例加密密码需占位；BeanShell多模块路由是部署变体非几十独立漏洞
+- BeanShell多模块路由是部署变体非几十独立漏洞
 
 ## 操作风险
 
@@ -222,7 +222,7 @@ Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate
 Connection: close
 Referer: http://x.x.x.x/fs/
-Cookie: JSESSIONID=F*************************************r
+Cookie: JSESSIONID=FFAE8EF48BD3BEF7E94B5449B8F9BA90.ser
 Upgrade-Insecure-Requests: 1	
 ```
 

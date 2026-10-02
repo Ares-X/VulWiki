@@ -36,7 +36,7 @@ schema_version: "1"
 以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
 
 - 只有正常请求+sqlmap调用，注入类型/原始响应/根因只图
-- Cookie重复且密码固定编码来源不明应占位，不能默认必要
+- Cookie重复且密码固定编码来源不明，不能默认必要
 - NCCloud应与NC子产品字段区分；无修复build，去推广
 
 ## 操作风险
@@ -87,7 +87,7 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-TW;q=0.6
-Cookie: JSESSIONID=2*************************************r; JSESSIONID=0*************************************r
+Cookie: JSESSIONID=2CF7A25EE7F77A064A9DA55456B6994D.server; JSESSIONID=0F83D6A0F3D65B8CD4C26DFEE4FCBC3C.ser
 Connection: close
 ```
 

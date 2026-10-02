@@ -68,7 +68,7 @@ Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate
 Content-Type: multipart/form-data; boundary=---------------------------3243433393122674734542415452
 Connection: close
-Cookie: ASP.NET_SessionId=2**********************s
+Cookie: ASP.NET_SessionId=2gs
 Upgrade-Insecure-Requests: 1
 
 -----------------------------3243433393122674734542415452

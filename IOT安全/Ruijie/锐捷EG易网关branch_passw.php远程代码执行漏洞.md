@@ -36,7 +36,6 @@ source_status: "recorded"
 - 简介错贴cli，正文实际branch_passw
 - 固定test.txt文件无清理或旧文件对照；无输出证据
 - 已落实的文本修订：HTTP 报文围栏改为 http。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
-- 样例会话、令牌或共享秘密已按具体值遮罩中段并保留首尾；不能直接用于请求。公开默认/测试凭据与算法常量不因长得像密码而改写；其用途仍须按原文说明判断
 
 ### 操作风险与恢复
 
@@ -80,7 +79,7 @@ Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate
 DNT: 1
 Connection: close
-Cookie: LOCAL_LANG_COOKIE=zh; RUIJIEID=e2i********************273; user=admin; helpKey=home_sys
+Cookie: LOCAL_LANG_COOKIE=zh; RUIJIEID=e2iuc40kc25v8bosaf04ee7273; user=admin; helpKey=home_sys
 Upgrade-Insecure-Requests: 1
 Content-Type: application/x-www-form-urlencoded
 Content-Length: 24

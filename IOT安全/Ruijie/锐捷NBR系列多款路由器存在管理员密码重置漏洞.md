@@ -35,7 +35,7 @@ source_status: "recorded"
 
 - 请求除改密码还reboot=1、启用远程管理/9999端口和NTP重启，副作用远超标题
 - 正文无响应/登录证据，通用base_network.asp及wys_userid模板不能据标题确认品牌
-- 真实公网Referer需脱敏；isbase64=1却密码明文未解释
+- isbase64=1却密码明文未解释
 - 已落实的文本修订：HTTP 报文围栏改为 http。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
 
 ### 操作风险与恢复

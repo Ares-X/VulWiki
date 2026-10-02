@@ -45,10 +45,10 @@ schema_version: "1"
 6. 9蓝凌题名前台代码执行但payload只是file:///etc/passwd读取且JSON括号被转义，明显影响类型不对应
 7. 10WPS描述抄金山文档云产品，实际桌面WPS嵌入浏览器；host规则绕过与JS内存利用两层需分别来源/版本，HTML的new Function字符串跨行语法错误，PDF触发文件缺
 8. 11汉得两次tomcat.jsp设置会话需同Cookie及权限范围；12广联达后台上传缺Cookie、ContentDisposition name/filename丢失，落点不明
-9. 14/15泛微分别2648/2523不同上传口，14ContentType无boundary、两者部件元数据丢失/末边界缺--，15POST/及<?phpphpinfo?>损坏
+9. 14/15泛微分别2648/2523不同上传口，14ContentType无boundary、两者部件元数据丢失/末边界缺--，15POST/及`<?phpphpinfo?>`损坏
 10. 16辰信登录注入无原始响应对照、版本和参数编码说明；17安恒UnixSocket代理到xmlrpc新增用户，携USM会话鉴权条件未说明，角色101需释义
 11. 18/19海康report和files两个接口分别保留，zip只是JSP占位非合法归档且丢文件名，写入路径关系未证；不要据此生成可用EXP
-12. 无逐项原作者/公告/修复，只合集公众号；大段产品营销删，固定实际Host/Cookie应脱敏，不能把公开=确认在野
+12. 无逐项原作者/公告/修复，只合集公众号；大段产品营销删，不能把公开=确认在野
 
 ### 操作风险
 

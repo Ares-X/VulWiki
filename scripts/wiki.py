@@ -17,7 +17,7 @@ from pathlib import Path, PurePosixPath
 import re
 import subprocess
 import sys
-from urllib.parse import parse_qsl, quote, unquote, urlencode, urlsplit, urlunsplit
+from urllib.parse import quote, unquote, urlsplit
 
 ROOTS = ("Web安全", "系统安全", "IOT安全")
 GENERATED = "docs/generated"
@@ -336,42 +336,6 @@ def markdown_links(prose, with_lines=False):
     return links if with_lines else [(t, i) for t, i, _ in links]
 
 
-def mask_middle(value, keep=3):
-    """Manual helper only: preserve ends, mask middle, never rewrite articles."""
-    if len(value) < 3:
-        raise ValueError("too short for a meaningful prefix/suffix redaction")
-    keep = min(keep, max(1, (len(value) - 1) // 2))
-    return value[:keep] + "*" * (len(value) - 2 * keep) + value[-keep:]
-
-
-def safe_destination(target):
-    try:
-        parsed = urlsplit(target)
-        if parsed.scheme or parsed.netloc:
-            target = urlunsplit((parsed.scheme, parsed.netloc.rsplit("@", 1)[-1], parsed.path, "", ""))
-        else:
-            target = target.split("?", 1)[0].split("#", 1)[0]
-    except ValueError:
-        target = re.sub(r"//[^/@]*@", "//[userinfo-redacted]@", target.split("?", 1)[0])
-    target = re.sub(r"[A-Za-z0-9_-]{40,}", lambda m: m[0][:3] + "[REDACTED]" + m[0][-3:], target)
-    return target.replace("\n", " ").replace("\r", " ")[:200]
-
-
-def public_url(url):
-    """Redact auth-like URL query parameters in derived output, not source files."""
-    try:
-        parsed = urlsplit(url)
-    except ValueError:
-        return safe_destination(url)
-    sensitive = re.compile(r"(?i)^(?:api[-_]?key|access[-_]?token|refresh[-_]?token|auth|authorization|password|passwd|secret|token|session|sessionid|sid|jwt|signature|sig|credential|code)$")
-    cleaned = []
-    for key, value in parse_qsl(parsed.query, keep_blank_values=True):
-        if sensitive.fullmatch(key) and value:
-            value = mask_middle(value) if len(value) > 2 else "*" * len(value)
-        cleaned.append((key, value))
-    return urlunsplit((parsed.scheme, parsed.netloc.rsplit("@", 1)[-1], parsed.path, urlencode(cleaned, safe="*"), parsed.fragment))
-
-
 def source_candidates(metadata, body):
     found = {}
     pattern = re.compile(r"https?://[^\s<>\"'\]\[，。]+")
@@ -381,8 +345,8 @@ def source_candidates(metadata, body):
             url = match[0].rstrip(").;，。")
             try:
                 parsed = urlsplit(url)
-                if parsed.netloc and not parsed.username and not parsed.password and url not in found:
-                    found[url] = {"url": public_url(url), "basis": basis, "verification_status": "unverified-link"}
+                if parsed.netloc and url not in found:
+                    found[url] = {"url": url, "basis": basis, "verification_status": "unverified-link"}
             except ValueError:
                 continue
     for key in ("source_url", "ref", "verification_source"):
@@ -480,11 +444,11 @@ def scan(root):
             if meta.get("source_url"):
                 try:
                     parsed = urlsplit(meta["source_url"])
-                    bad = parsed.scheme not in {"http", "https"} or not parsed.netloc or parsed.username or parsed.password
+                    bad = parsed.scheme not in {"http", "https"} or not parsed.netloc
                 except ValueError:
                     bad = True
                 if bad:
-                    r.issue("source_url", "expected an http(s) URL without embedded credentials", "error")
+                    r.issue("source_url", "expected an http(s) URL with a host", "error")
             r.source_links = source_candidates(meta, body)
             if not meta.get("source_url") and meta.get("source_status") in {"unknown", "missing"}:
                 r.issue("source_missing", "original source URL explicitly " + meta["source_status"] + "; reference links are not confirmed provenance")
@@ -557,22 +521,22 @@ def scan(root):
                 try:
                     local = local_target(path, target)
                 except ValueError:
-                    r.issue("link_invalid", "invalid destination: " + safe_destination(target), "error", line)
+                    r.issue("link_invalid", "invalid destination: " + target, "error", line)
                     continue
                 if local is None:
                     continue
                 if local == "!site":
                     if not any(i.code == "site_relative_link" for i in r.issues):
-                        r.issue("site_relative_link", "origin-relative website links require original-site review; example: " + safe_destination(target), line=line)
+                        r.issue("site_relative_link", "origin-relative website links require original-site review; example: " + target, line=line)
                 elif local == "!outside":
-                    r.issue("link_outside", "relative destination escapes repository: " + safe_destination(target), "error", line)
+                    r.issue("link_outside", "relative destination escapes repository: " + target, "error", line)
                 elif not (root / local).exists() and local not in sparse:
                     if image and (not re.search(r"\.(?:png|jpe?g|gif|svg|webp|bmp|ico)(?:$|[?#])", target, re.I) or any(x in target for x in ('"', "'", "$", "<?"))):
-                        r.issue("embedded_code_candidate", "possible HTML/PHP example, inspect manually: " + safe_destination(target), line=line)
+                        r.issue("embedded_code_candidate", "possible HTML/PHP example, inspect manually: " + target, line=line)
                     elif not image and not re.search(r"\.(?:md|pdf|html?|txt|zip|py|sh)(?:$|[?#])", target, re.I):
-                        r.issue("noncontent_link_candidate", "possible source code or original-site route: " + safe_destination(target), line=line)
+                        r.issue("noncontent_link_candidate", "possible source code or original-site route: " + target, line=line)
                     else:
-                        r.issue("image_missing" if image else "link_missing", safe_destination(local), "error", line)
+                        r.issue("image_missing" if image else "link_missing", local, "error", line)
     by_id, by_path = defaultdict(list), {r.path: r for r in records}
     for r in records:
         by_id[r.article_id].append(r)
@@ -619,12 +583,12 @@ def catalog_record(r):
         "primary_identifiers": sorted(set(r.primary)) if m.get("identifier_status") not in {"rejected", "disputed"} else [],
         "identifier_status": m.get("identifier_status", "unknown"),
         "identifier_candidates": sorted(set(r.candidates)), "referenced_identifiers": sorted(set(r.references)),
-        "source": {"status": m.get("source_status", "recorded" if m.get("source_url") else "unknown"), "label": m.get("source", ""), "url": public_url(m["source_url"]) if m.get("source_url") and not any(i.code == "source_url" for i in r.issues) else "", "links": r.source_links},
+        "source": {"status": m.get("source_status", "recorded" if m.get("source_url") else "unknown"), "label": m.get("source", ""), "url": m["source_url"] if m.get("source_url") and not any(i.code == "source_url" for i in r.issues) else "", "links": r.source_links},
         "fingerprints": r.fingerprints,
     }
     for key in ("entity_id", "canonical", "relation_type", "category_recommendation", "prerequisites", "side_effects", "fixed_version", "verification_source"):
         if m.get(key):
-            result[key] = re.sub(r"https?://[^\s<>]+", lambda match: public_url(match[0]), m[key]) if key == "verification_source" else m[key]
+            result[key] = m[key]
     if m.get("version") and not any(i.code == "version_command" for i in r.issues):
         result["affected_version_claim"] = m["version"]
     return result

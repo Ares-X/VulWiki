@@ -44,7 +44,7 @@ schema_version: "1"
 ### 操作风险与资料使用
 
 - 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。
-- 文中的明文凭据、会话或密钥已用中段星号脱敏，保留首尾供比对；示例不能直接照抄登录。仅替换为自有隔离环境凭据，已暴露的真实凭据应撤销或轮换。
+- 验证须使用自有隔离环境的凭据；已暴露的真实凭据应撤销或轮换。
 
 本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
 <!-- vulwiki-editorial:end -->
@@ -140,7 +140,7 @@ POST /api/project/file/read HTTP/1.1
 Host: 
 Content-Length: 35
 Accept: application/json, text/plain, */*
-Authorization: Token 0f************************f0
+Authorization: Token 0fb31a60728efd8e6398349bea36fa7629bd8df0
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.55 Safari/537.36
 Content-Type: application/json;charset=UTF-8
 Accept-Encoding: gzip, deflate
@@ -178,7 +178,7 @@ Host:
 Pragma: no-cache
 Cache-Control: no-cache
 Accept: application/json, text/plain, */*
-Authorization: Token 0f************************f0
+Authorization: Token 0fb31a60728efd8e6398349bea36fa7629bd8df0
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.55 Safari/537.36
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-TW;q=0.6

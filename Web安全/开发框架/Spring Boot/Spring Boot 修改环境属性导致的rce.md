@@ -11,7 +11,7 @@ identifier_role: "unknown"
 identifier_status: "unknown"
 title: "Spring Boot 修改环境属性导致的rce"
 prerequisites: "来源所述条件，未列明部分仍待核：影响Boot2.x与/env表单旧接口混用，末称最新版本可用没有日期/组件范围"
-side_effects: "未执行；本文需注意的操作影响：外部载荷与状态风险；直接引用第三方yaml/jar和DNS而非自有占位，修改启动源且refresh无恢复"
+side_effects: "未执行；本文需注意的操作影响：外部载荷与状态风险；直接引用第三方yaml/jar和DNS，修改启动源且refresh无恢复"
 source_status: "unknown"
 id: "vw-837453fdfeeba179736a823d"
 entity_id: "ve-837453fdfeeba179736a823d"
@@ -30,7 +30,7 @@ schema_version: "1"
 
 - **事实待核（1）**：组件及版本严重泛化；依据：需SpringCloud可写env、bootstrap reload和不安全SnakeYAML，不是任意Boot2.x；最新一词不可长期使用。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
 
-- **结论使用边界（2）**：外部载荷与状态风险；依据：直接引用第三方yaml/jar和DNS而非自有占位，修改启动源且refresh无恢复。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+- **结论使用边界（2）**：外部载荷与状态风险；依据：直接引用第三方yaml/jar和DNS，修改启动源且refresh无恢复。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
 
 - **证据待核（3）**：不完整载体/请求；依据：Content-Length59与正文不符，Java仅构造器片段未给完整实现但称应包含字节码。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
 

@@ -80,7 +80,7 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-TW;q=0.6
-Cookie: ASP.NET_SessionId=5**********************c
+Cookie: ASP.NET_SessionId=54zwf05sd1g4zyfpiuxxdmuc
 x-forwarded-for: 127.0.0.1
 x-originating-ip: 127.0.0.1
 x-remote-ip: 127.0.0.1

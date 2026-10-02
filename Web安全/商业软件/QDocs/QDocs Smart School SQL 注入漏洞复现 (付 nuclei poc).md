@@ -125,7 +125,7 @@ Date: Tue, 14 Nov 2023 02:21:35 GMT
 Expires: Thu, 19 Nov 1981 08:52:00 GMT
 Pragma: no-cache
 Server: Apache
-Set-Cookie: ci_session=0**************************************2; expires=Tue, 14-Nov-2023 04:21:35 GMT; Max-Age=7200; path=/; HttpOnly
+Set-Cookie: ci_session=0fbd043af961fa6feb7ba1a8b5c5a3b2c0cff392; expires=Tue, 14-Nov-2023 04:21:35 GMT; Max-Age=7200; path=/; HttpOnly
 Upgrade: h2,h2c
 Vary: Accept-Encoding
 X-Powered-By: PHP/7.4.33

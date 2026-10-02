@@ -37,7 +37,7 @@ schema_version: "1"
 - HDFS 文件访问不能直接等同 YARN RCE，应分实体
 - 版本仅 Hadoop，无部署配置或来源证据
 - 第一个响应缺失，第二个 application-id硬编码未说明替换
-- Host/Content-Length 空值和真实公网回连地址应改明确占位，避免被误照搬
+- Host/Content-Length 为空，公网回连地址属于原实验环境，不能直接照搬
 
 ### 操作风险与资料使用
 

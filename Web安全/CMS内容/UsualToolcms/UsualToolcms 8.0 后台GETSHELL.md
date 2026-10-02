@@ -20,7 +20,6 @@ schema_version: "1"
 
 ## 核对与使用边界
 
-- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；遮罩后的历史值不能作为可用登录凭据。原操作、请求方法和攻击表达式保留。
 
 本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
 
@@ -78,7 +77,7 @@ UsualToolCMS-8.0-Release
     Accept-Encoding: gzip, deflate
     DNT: 1
     Referer: http://192.168.235.242/UsualToolCMS/cmsadmin/a_langx.php?lg=lg-en.json
-    Cookie: navleft=21; UTCMSLanguage=zh; PHPSESSID=1r5********************clo
+    Cookie: navleft=21; UTCMSLanguage=zh; PHPSESSID=1r5kk3jieflfbnseav3e5dnclo
     X-Forwarded-For: 8.8.8.8
     Connection: close
     Upgrade-Insecure-Requests: 1

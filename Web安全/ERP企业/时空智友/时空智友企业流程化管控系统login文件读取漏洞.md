@@ -38,7 +38,7 @@ schema_version: "1"
 
 - 两个变体路径前斜线不同需保留，可能内部转发而非任意OS文件读取
 - User-Agent被拆行，Accept-Encoding gzi残缺，固定Content-Length
-- 无返回内容/根因/修复；数据库配置敏感证据要脱敏
+- 无返回内容/根因/修复
 
 ## 操作风险
 

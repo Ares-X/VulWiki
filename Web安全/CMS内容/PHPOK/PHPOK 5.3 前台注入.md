@@ -20,7 +20,6 @@ schema_version: "1"
 
 ## 核对与使用边界
 
-- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；默认公开示例、攻击表达式和其他 Cookie 语义保持原样。
 
 本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
 
@@ -366,7 +365,7 @@ POC：
     Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
     Accept-Encoding: gzip, deflate
     Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7
-    Cookie: PHPSESSION=l87********************su4
+    Cookie: PHPSESSION=l87bngd1u307g20iudfmphisu4
     Connection: close
 
 四、参考链接

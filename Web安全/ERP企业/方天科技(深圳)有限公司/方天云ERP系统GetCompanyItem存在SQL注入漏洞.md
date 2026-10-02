@@ -63,7 +63,7 @@ Host:
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate
-Cookie: ASP.NET_SessionId=s**********************i
+Cookie: ASP.NET_SessionId=scc55si
 Upgrade-Insecure-Requests: 1
 Priority: u=0, i
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:128.0) Gecko/20100101 Firefox/128.0

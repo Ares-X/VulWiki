@@ -37,7 +37,7 @@ schema_version: "1"
 - 仅WSDL发现和arg0普通占位gero et请求，无SQLpayload/返回，不能证明SQLi
 - getContractSource为SOAP方法而非参数，arg0才是输入，需纠正术语
 - 外部wsdler.jar无版本/来源校验，不下载运行；空特征节
-- HIS产品版本及接口用途缺失，医疗行业高敏数据证据应脱敏最小化
+- HIS产品版本及接口用途缺失，医疗行业高敏数据证据应最小化
 
 ## 操作风险
 
@@ -82,7 +82,7 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/w
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate
 Connection: close
-Cookie: JSESSIONID=0******************************E
+Cookie: JSESSIONID=0A4C07C0C8A7CFF9A03AD7B586FFCBBE
 Upgrade-Insecure-Requests: 1
 SOAPAction: 
 Content-Type: text/xml;charset=UTF-8

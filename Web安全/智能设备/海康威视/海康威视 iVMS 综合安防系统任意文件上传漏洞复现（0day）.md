@@ -41,7 +41,6 @@ source_status: "recorded"
 - token描述url需含接口路径而非只站点；0day/在野状态缺日期和来源
 - 已落实的文本修订：HTTP 报文围栏改为 http。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
 - Cookie 字符串与 multipart 的字段在原文中缺失，不能猜出合法会话或完整表单。保留 URL 绑定摘要机制及原始片段，缺失数据标为待核；HTTP 200 不代表上传或执行成功。
-- 样例会话、令牌或共享秘密已按具体值遮罩中段并保留首尾；不能直接用于请求。公开默认/测试凭据与算法常量不因长得像密码而改写；其用途仍须按原文说明判断
 
 ### 操作风险与恢复
 
@@ -182,7 +181,7 @@ Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate
 Referer: http://you-ip
 Connection: close
-Cookie: ISMS_8700_Sessionname=763**************************BE9
+Cookie: ISMS_8700_Sessionname=7634604FBE659A8532E666FE4AA41BE9
 Upgrade-Insecure-Requests: 1
 Content-Length: 62
 service=http%3A%2F%2Fx.x.x.x%3Ax%2Fhome%2Findex.action
@@ -214,7 +213,7 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 F
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Connection: close
-Cookie: ISMS_8700_Sessionname=A29**************************988
+Cookie: ISMS_8700_Sessionname=A29E70BEA1FDA82E2CF0805C3A389988
 Content-Type: multipart/form-data;boundary=----WebKitFormBoundaryGEJwiloiPo
 Upgrade-Insecure-Requests: 1
 Content-Length: 174

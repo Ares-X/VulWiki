@@ -78,7 +78,7 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/w
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate, br
 Connection: close
-Cookie: ASP.NET_SessionId=t**********************c
+Cookie: ASP.NET_SessionId=t5b4ib4lqdfdo5h40mpp5djc
 Upgrade-Insecure-Requests: 1
 Priority: u=1
 Pragma: no-cache

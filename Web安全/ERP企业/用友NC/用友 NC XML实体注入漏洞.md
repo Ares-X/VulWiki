@@ -38,7 +38,7 @@ schema_version: "1"
 - 多接口声明引用漏洞接口.txt却正文无附件或内容，不能泛化
 - HTTP路径内**Markdown强调会污染复制请求，XML也未围栏
 - 外部XML取回不等任意本地文件泄漏，缺实际回显渠道/响应
-- Host121.0.0.1并非loopback应占位；在野/修复声明无证
+- Host121.0.0.1并非loopback，需核对实验环境；在野/修复声明无证
 
 ## 操作风险
 
@@ -96,7 +96,7 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9
-Cookie: JSESSIONID=0***********************************4
+Cookie: JSESSIONID=00005jPasWztH6Dks3U51sM0pFy:1h2s67gf4
 Connection: close
 ```
 

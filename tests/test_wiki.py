@@ -344,28 +344,31 @@ class WikiTests(unittest.TestCase):
             self.assertIsNone(wiki.local_target('Web安全/a.md', target))
         self.assertEqual(wiki.local_target('Web安全/a.md', '../../escape.md'), '!outside')
 
-    def test_source_query_credentials_masked_without_rewriting_article(self):
-        url = 'https://example.invalid/ref?token=abc123456789&topic=example'
-        path = self.article(source_url=url, verification_source=url)
-        result = wiki.catalog_record(self.scan()[0])
-        self.assertNotIn('abc123456789', json.dumps(result))
-        self.assertIn('abc******789', json.dumps(result))
-        self.assertIn('topic=example', result['source']['url'])
-        self.assertIn('abc123456789', (self.root / path).read_text())
-        for word in ('password', 'secret'):
-            self.assertNotIn(word, wiki.safe_destination('https://user:password@example.invalid/path?token=secret'))
+    def test_source_urls_preserve_values_and_encoding_without_rewriting_article(self):
+        urls = (
+            'https://example.invalid/ref?token=abc123456789&topic=example',
+            'https://user:password@example.invalid/ref?code=a%2Fb&code=a+b&empty=#part',
+        )
+        for url in urls:
+            path = self.article(source_url=url, verification_source=url)
+            original = (self.root / path).read_bytes()
+            result = wiki.catalog_record(self.scan()[0])
+            self.assertEqual(result['source']['url'], url)
+            self.assertEqual(result['verification_source'], url)
+            self.assertIn(url, [link['url'] for link in result['source']['links']])
+            self.assertEqual((self.root / path).read_bytes(), original)
+
+    def test_link_diagnostic_preserves_full_destination(self):
+        target = '/archive/' + 'test-value-' * 24 + '?token=example#fragment'
+        self.article(body=f'[original route]({target})\n')
+        issue = next(i for i in self.scan()[0].issues if i.code == 'site_relative_link')
+        self.assertIn(target, issue.detail)
 
     def test_active_html_excluded_from_effective_indexes(self):
         self.article(body='<img src=x onerror="alert(1)">')
         r = self.scan()[0]
         self.assertFalse(r.eligible)
         self.assertEqual(wiki.render_outputs([r])['docs/generated/records.jsonl'], '')
-
-    def test_middle_mask_retains_prefix_suffix(self):
-        self.assertEqual(wiki.mask_middle('abcdef123456'), 'abc******456')
-        self.assertEqual(wiki.mask_middle('abc'), 'a*c')
-        with self.assertRaises(ValueError):
-            wiki.mask_middle('ab')
 
     def test_command_in_version_excluded(self):
         self.article(version='curl https://example.invalid')

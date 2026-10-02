@@ -236,7 +236,7 @@ GET /fs/console?username=1&password=00PGRLxSTe3VroI21qJNymCrZfPX1UQ4ij0gIWn2Gc4%
  Accept-Encoding: gzip, deflate
  Connection: close
  Referer: http://x.x.x.x/fs/
- Cookie: JSESSIONID=F*************************************r
+ Cookie: JSESSIONID=FFAE8EF48BD3BEF7E94B5449B8F9BA90.ser
  Upgrade-Insecure-Requests: 1
 ```
 

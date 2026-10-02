@@ -37,7 +37,7 @@ schema_version: "1"
 以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
 
 1. 35489只是恶意仓库诱饵，不是本文利用该漏洞的证据；GitHub/Codeberg不是被证明有软件漏洞
-2. 文内公开完整API令牌及带凭据cloneURL是高优先级敏感内容问题，应脱敏/移除访问性信息，保留无秘密IoC；未尝试使用任何凭据或访问私库
+2. 文内API令牌及带凭据cloneURL按历史材料保留，不表示当前仍有效或已获访问授权；未尝试使用任何凭据或访问私库
 3. 硬重置+forcepush不能确保历史不可恢复/攻击者无法再得数据，与后文承认本地副本冲突；清除远端引用≠彻底删除所有副本
 4. 回侵私库、删除所有受害数据和灌垃圾不是可推广的事件响应流程，须改为历史行为描述并强调授权/证据保全，不能按文操作
 5. 叙述先说其他受害者不在权限范围又清空所有数据矛盾；token一个不证明攻击者只依赖一个凭据，回应不能证明特定实时监控机制
@@ -156,7 +156,7 @@ Codeberg
 API token  
 如下（此处给大家解答一下为什么能拿到token，因为程序上传就需要token，所以拿到应该是很容易的）  
 ```
-1a3**********************************704
+1a38a34c6d5dbefb112aa73f54824433f80bb704
 ```  
   
     通过使用这个token，我可以轻松的  
@@ -172,7 +172,7 @@ Codeberg
 api  
 接口，我更喜欢直接克隆  
 ```
-git clone https://oauth2:1a3**********************************704@codeberg.org/s1nk/sink.git
+git clone https://oauth2:1a38a34c6d5dbefb112aa73f54824433f80bb704@codeberg.org/s1nk/sink.git
 cd sink
 ```  
   
@@ -359,7 +359,7 @@ https://file.io/
   
 https://codeberg.org/api/v1/repos/s1nk/sink/contents/    
   
-https://ipinfo.io/?token=709********f64    
+https://ipinfo.io/?token=7092dca9adef64    
   
 https://ifconfig.me    
   
@@ -370,7 +370,7 @@ API TOKEN
   
 IRHTNTF.YQJYZQP-KVEMN8R-J2BYQPK-FSQZ3PP    
   
-1a3**********************************704    
+1a38a34c6d5dbefb112aa73f54824433f80bb704    
   
   
 Codeberg 仓库  

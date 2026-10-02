@@ -177,7 +177,7 @@ Cache-Control: private
 Date: Fri, 24 Nov 2023 02:17:21 GMT
 Expires: Thu, 01 Jan 1970 00:00:00 GMT
 Server: SY8045
-Set-Cookie: JSESSIONID=K*****************************J; Path=/mobile_portal; HttpOnly
+Set-Cookie: JSESSIONID=KXAIEP2JD16C9F6A38E975D109IKJ2J; Path=/mobile_portal; HttpOnly
 windows-n30l5ds\administrator
 windows-n30l5ds\administrator
 {"code":200,"data":[],"message":"success","time":1700792242558,"version":"1.0"}

@@ -82,7 +82,7 @@ JSONL 是 UTF-8 每行一个对象，不复制全文和图片。阅读全文依 
 
 `python scripts/wiki.py search CloudStack` 默认查主入口，可用 `--type analysis`、`--verification not-reproduced`、`--entity ENTITY-ID`。`--include-sources` 可查所有保留来源及完整版本/来源/指纹元数据。旧候选编号命中标为 `candidate-non-primary`，引用命中为 `reference-non-primary`；未进主 CVE 索引不代表编号不存在。
 
-派生来源 URL 的 token/api_key 等凭据型查询值作中段星号遮罩，诊断不输出 URL userinfo/查询串。这不是全库秘密扫描，也不表示凭据已撤销。真实敏感样例仍需人工确认与正文中的最小范围遮罩。
+派生来源 URL、verification_source 与诊断中的值保留原样，不脱敏、不截断，也不通过解析后重新编码改变查询串。该规则与正文保真规则一致；生成器不访问这些 URL。
 
 ## 离线校验与真实边界
 

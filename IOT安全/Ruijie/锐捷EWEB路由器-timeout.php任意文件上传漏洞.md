@@ -38,7 +38,6 @@ source_status: "unknown"
 - 所谓上传是表单content写入，Cookie误含path/HttpOnly；固定长度/重复Connection
 - 与timeout getFile不同动作，不能合并成一漏洞
 - 已落实的文本修订：HTTP 报文围栏改为 http；残缺指纹退出可执行索引并保留原值。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
-- 样例会话、令牌或共享秘密已按具体值遮罩中段并保留首尾；不能直接用于请求。公开默认/测试凭据与算法常量不因长得像密码而改写；其用途仍须按原文说明判断
 
 ### 操作风险与恢复
 
@@ -111,7 +110,7 @@ Accept-Encoding: gzip, deflate, br
 Accept-Language: zh-CN,zh;q=0.9
 Connection: keep-alive
 Content-Type: application/x-www-form-urlencoded
-Cookie: RUIJIEID=f7m********************qj4; path=/; HttpOnly; 
+Cookie: RUIJIEID=f7ma4hjcmm0ncqv7ljbejboqj4; path=/; HttpOnly; 
 X-Requested-With: XMLHttpRequest
 Connection: keep-alive
 

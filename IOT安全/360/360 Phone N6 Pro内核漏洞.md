@@ -35,7 +35,8 @@ source_status: "unknown"
 - 正文泛称攻击者却代码明示设备权限，不能普通APP/远程无条件触发
 - static command缺显式类型，system/close缺对应头，现代C编译会报错或警告；换行转义丢为n
 - 只有崩溃声明无堆栈/补丁/原始出处
-- 已落实的文本修订：“static command =”改为“static unsigned int command =”；“#include &lt;stdio.h&gt;”改为“#include &lt;stdio.h&gt; / #include &lt;stdlib.h&gt; / #include &lt;unistd.h&gt;”；“with errno %dn”改为“with errno %d\n”；“payload NULLn”改为“payload NULL\n”；“crash and reboot.n”改为“crash and reboot.\n”；“failed, %dn”改为“failed, %d\n”。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
+- 原始 `static command =` 声明按归档保留；它依赖旧式 C 的隐式类型规则，现代编译器及目标 ABI 的适用性未验证，不据排版修订改变其类型。
+- 已落实的文本修订：“#include &lt;stdio.h&gt;”改为“#include &lt;stdio.h&gt; / #include &lt;stdlib.h&gt; / #include &lt;unistd.h&gt;”；“with errno %dn”改为“with errno %d\n”；“payload NULLn”改为“payload NULL\n”；“crash and reboot.n”改为“crash and reboot.\n”；“failed, %dn”改为“failed, %d\n”。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
 - 本例只支持需要设备节点权限的本地内核崩溃线索，不是普通应用或互联网远程 RCE；仅静态修正 C 类型、头文件和换行转义，未编译或执行。
 
 ### 操作风险与恢复
@@ -83,7 +84,7 @@ source_status: "unknown"
 #include <sys/ioctl.h>
 
 const static char *driver = "/dev/block/mmcblk0rpmb";
-static unsigned int command = 3235427072; // 0xc0d8b300
+static command = 3235427072; // 0xc0d8b300
 
 int main(int argc, char **argv, char **env) {
 int fd = 0;

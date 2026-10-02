@@ -37,7 +37,6 @@ source_status: "recorded"
 - 两个同名JSESSIONID会话歧义；endTime2008早于startTime2014，业务前提不合理需解释
 - 无时延对照/结果；sqlmap标题下无实际命令；软件误归IoT
 - 已落实的文本修订：HTTP 报文围栏改为 http。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
-- 样例会话、令牌或共享秘密已按具体值遮罩中段并保留首尾；不能直接用于请求。公开默认/测试凭据与算法常量不因长得像密码而改写；其用途仍须按原文说明判断
 
 ### 操作风险与恢复
 
@@ -70,7 +69,7 @@ User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9,en;q=0.8
-Cookie: JSESSIONID=42E**************************480; JSESSIONID=061**************************0FB
+Cookie: JSESSIONID=42E7A33A54CABB1580E34F01B3D63480; JSESSIONID=0616C2E6B689FD5702EE3E2203D660FB
 Connection: close
 SOAPAction: 
 Content-Type: text/xml;charset=UTF-8
@@ -108,7 +107,7 @@ User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9,en;q=0.8
-Cookie: JSESSIONID=42E**************************480; JSESSIONID=061**************************0FB
+Cookie: JSESSIONID=42E7A33A54CABB1580E34F01B3D63480; JSESSIONID=0616C2E6B689FD5702EE3E2203D660FB
 Connection: close
 SOAPAction: 
 Content-Type: text/xml;charset=UTF-8

@@ -20,7 +20,6 @@ schema_version: "1"
 
 ## 核对与使用边界
 
-- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；遮罩后的历史值不能作为可用登录凭据。原操作、请求方法和攻击表达式保留。
 
 本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
 
@@ -30,7 +29,7 @@ schema_version: "1"
 
 - **操作与副作用边界（2）**：含多个a字段载荷却未说明各自输出点，保存弹窗不足证明持久跨用户而非本次反射。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
 
-- **凭据与会话边界（3）**：Cookie/hash固定值需脱敏且说明获取，最低角色/权限边界缺失。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+- **凭据与会话边界（3）**：Cookie/hash固定值需说明获取条件，最低角色/权限边界缺失。抓包中的会话不能视为未认证访问证明。需重新取得授权测试会话，不能复用文中值。
 
 - **代码与转录边界（4）**：有GitHubissue原源；Storeage拼写及正文跟踪自动回复语义需校订，无修复。相应原代码作为存在此问题的历史样本保留，不能直接当作可运行、成功复现的 PoC；缺失内容需回原稿核对，不据此补造可执行攻击链。
 
@@ -61,7 +60,7 @@ YouDianCMS 8.0
     Content-Length: 2207 
     DNT: 1 
     Connection: close 
-    Cookie: PHPSESSID=bkv********************0h2; youdianAdminLangSet=en; CKFinder_Path=Files%3A%2F%3A1; CKFinder_Settings=TNNDS; youdianMenuTopID=15
+    Cookie: PHPSESSID=bkv171om25ji6a51t7dql010h2; youdianAdminLangSet=en; CKFinder_Path=Files%3A%2F%3A1; CKFinder_Settings=TNNDS; youdianMenuTopID=15
 
     -----------------------------17443203555821 Content-Disposition: form-data; name="ReplyID"
 

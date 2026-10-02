@@ -41,7 +41,7 @@ schema_version: "1"
 2. Base64是编码不是加密；核心url/fileName进入shell的具体sink已给应保留
 3. Python data字符串被截断且未闭合，整段语法无效；200且Windows回显检测不足以证漏洞，不能断言不存在
 4. HTTP示例带PHPSESSID但Python无Cookie，是否未授权需要查看公共鉴权文件和对照响应
-5. V8总称无构建号、安全版本/公告，HTTP安装包链接需来源与哈希；源码内会话标识/IP脱敏
+5. V8总称无构建号、安全版本/公告，HTTP安装包链接需来源与哈希
 6. 清理大段广告，保留PeiQi原始文库来源与Apache执行分支
 
 ### 操作风险
@@ -185,7 +185,7 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/w
 Referer:
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-TW;q=0.6
-Cookie: PHPSESSID=noe********************n04
+Cookie: PHPSESSID=noei1ghcv9rqgp58jf79991n04
 
 url=IiB8fCBpcGNvbmZpZyB8fA%3D%3D&fileName=xxx
 ```

@@ -132,7 +132,7 @@ Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate
 Content-Type: multipart/form-data; boundary=---------------------------17518323986548992951984057104
 Connection: close
-Cookie: USER_NAME_COOKIE=admin; OA_USER_ID=admin; PHPSESSID=k************************4; SID_1=a63eb31
+Cookie: USER_NAME_COOKIE=admin; OA_USER_ID=admin; PHPSESSID=kqfgar7u3c0ang0es41u3u67p4; SID_1=a63eb31
 Upgrade-Insecure-Requests: 1
 
 -----------------------------17518323986548992951984057104

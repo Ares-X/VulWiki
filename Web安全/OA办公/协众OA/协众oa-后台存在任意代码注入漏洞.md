@@ -36,7 +36,7 @@ schema_version: "1"
 以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
 
 - 攻击流程只给修改请求，执行/触发位置及落地文件缺文本说明
-- 大量会话/键字段未占位，POC/EXP星号为模板噪声
+- POC/EXP星号为模板噪声
 - 在野利用/广影响结论无独立证据
 
 ## 操作风险
@@ -86,7 +86,7 @@ Content-Type: application/x-www-form-urlencoded; charset=UTF-8
 Origin: http://192.168.31.105:81
 Connection: close
 Referer: http://192.168.31.105:81/index.php
-Cookie: CNOAOASESSID=u************************9; CNOA_language=cn; CNOA_NY_KEY=356961; CNOA_LOGIN_USERNAME=czo1OiJhZG1pbiI7; SECKEY_ABVK=/420bq5LeWyiFjJwZBYhJUs0O9885JC+Hd3fRVGJFbc%3D; BMAP_SECKEY=41sAeDfHudS5GjbYSnCXMeNNGuF959mefSOfp7Q1BW-zmQLRDmZItO3r-vrtElKNrWcdKRzkMBtKmXskKosF1X5lBthRP4xgKXOf0aYSPx2b8f7GzDtdT2HYmOpB-v-oG0-tAmDPNy9dgxx34xryXMc-xflZJUjxr9fsdkzIsm9UfebGh-0URztMUHwuDzDOiNee0PzYZjfXeqOsRHtN0A; ys-CNOA_main_user_index_treeState=s%3A
+Cookie: CNOAOASESSID=uaj6jn0vojvh969ifeg0pa0de9; CNOA_language=cn; CNOA_NY_KEY=356961; CNOA_LOGIN_USERNAME=czo1OiJhZG1pbiI7; SECKEY_ABVK=/420bq5LeWyiFjJwZBYhJUs0O9885JC+Hd3fRVGJFbc%3D; BMAP_SECKEY=41sAeDfHudS5GjbYSnCXMeNNGuF959mefSOfp7Q1BW-zmQLRDmZItO3r-vrtElKNrWcdKRzkMBtKmXskKosF1X5lBthRP4xgKXOf0aYSPx2b8f7GzDtdT2HYmOpB-v-oG0-tAmDPNy9dgxx34xryXMc-xflZJUjxr9fsdkzIsm9UfebGh-0URztMUHwuDzDOiNee0PzYZjfXeqOsRHtN0A; ys-CNOA_main_user_index_treeState=s%3A
 X-Forwarded-For: 127.0.0.1
 sec-ch-ua-platform: "Windows"
 sec-ch-ua: "Google Chrome";v="113", "Chromium";v="113", "Not=A?Brand";v="24"

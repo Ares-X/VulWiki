@@ -38,7 +38,7 @@ schema_version: "1"
 - P0错归Oracle MySQL Server，实际JD Edwards
 - 无获取密文端点、响应结构和验证证据；--target直接取整页正文不能证明能自动提取
 - ASCII banner可能暗示编号但无明确CVE字段，不能据此猜主CVE
-- Python/命令块误标Java；示例密文及解密结果敏感性需脱敏
+- Python/命令块误标Java
 - 需重建版本/根因/补丁来源后保留
 
 本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。

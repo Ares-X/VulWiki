@@ -38,7 +38,6 @@ source_status: "recorded"
 - ls不证明root；未给回读/源码，路由修改可能有副作用
 - 与StaticRoute非nmc/IPv4编辑不同，不应按oldipmask去重；元数据残缺
 - 已落实的文本修订：HTTP 报文围栏改为 http；残缺指纹退出可执行索引并保留原值。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
-- 样例会话、令牌或共享秘密已按具体值遮罩中段并保留首尾；不能直接用于请求。公开默认/测试凭据与算法常量不因长得像密码而改写；其用途仍须按原文说明判断
 
 ### 操作风险与恢复
 
@@ -74,7 +73,7 @@ source_status: "recorded"
 ```http
 POST /view/networkConfig/RouteConfig/nmc_StaticRoute/static_route_edit_ipv6.php?action=modify HTTP/1.1
 Host: 
-Cookie: PHPSESSID=ae6**************************0f3
+Cookie: PHPSESSID=ae63a240e1fdfb5614107040d19120f3
 Content-Type: application/x-www-form-urlencoded
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7

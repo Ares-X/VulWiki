@@ -17,7 +17,7 @@ referenced_identifiers: ""
 prerequisites: "Windows服务路径处理不规范，无Cookie；软件版本未知"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/IOT%E5%AE%89%E5%85%A8/TVT%E6%95%B0%E7%A0%81%E7%A7%91%E6%8A%80/TVT%E6%95%B0%E7%A0%81%E7%A7%91%E6%8A%80%20NVMS-1000%20%E8%B7%AF%E5%BE%84%E9%81%8D%E5%8E%86%E6%BC%8F%E6%B4%9E.md"
 review_date: "2026-10-02"
-side_effects: "读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要且已脱敏的响应，不能由接口可达推定敏感内容已泄露"
+side_effects: "读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要的响应，不能由接口可达推定敏感内容已泄露"
 source_status: "unknown"
 canonical: "Web安全/智能设备/TVT/TVT数码科技-NVMS-1000-路径遍历漏洞.md"
 relation_type: "duplicate_of"
@@ -42,7 +42,7 @@ relation_type: "duplicate_of"
 
 ### 操作风险与恢复
 
-- 读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要且已脱敏的响应，不能由接口可达推定敏感内容已泄露
+- 读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要的响应，不能由接口可达推定敏感内容已泄露
 
 ### 待核与来源
 

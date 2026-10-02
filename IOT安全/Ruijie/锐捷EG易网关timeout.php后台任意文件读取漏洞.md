@@ -17,7 +17,7 @@ referenced_identifiers: ""
 prerequisites: "有效后台Cookie；版本未知"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/IOT%E5%AE%89%E5%85%A8/Ruijie/%E9%94%90%E6%8D%B7EG%E6%98%93%E7%BD%91%E5%85%B3timeout.php%E5%90%8E%E5%8F%B0%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E.md"
 review_date: "2026-10-02"
-side_effects: "读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要且已脱敏的响应，不能由接口可达推定敏感内容已泄露"
+side_effects: "读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要的响应，不能由接口可达推定敏感内容已泄露"
 source_url: "https://www.yuque.com/xiaokp7/ocvun2/oyykknetnegphzzm"
 source_status: "recorded"
 ---
@@ -38,11 +38,10 @@ source_status: "recorded"
 - ../etc/passwd基准目录未解释且无返回证据；fofa成HTML标签
 - 应与同文件upload动作独立
 - 已落实的文本修订：“2通过上一步获取的cookie执行命令”改为“2通过上一步获取的 Cookie 请求文件读取接口；这一步本身不是命令执行”；HTTP 报文围栏改为 http；残缺指纹退出可执行索引并保留原值；标题与正文证据对齐。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
-- 样例会话、令牌或共享秘密已按具体值遮罩中段并保留首尾；不能直接用于请求。公开默认/测试凭据与算法常量不因长得像密码而改写；其用途仍须按原文说明判断
 
 ### 操作风险与恢复
 
-- 读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要且已脱敏的响应，不能由接口可达推定敏感内容已泄露
+- 读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要的响应，不能由接口可达推定敏感内容已泄露
 
 ### 待核与来源
 
@@ -76,7 +75,7 @@ source_status: "recorded"
 POST /system_pi/timeout.php?a=getFile HTTP/1.1
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
 Content-Type: application/x-www-form-urlencoded
-Cookie: LOCAL_LANG_COOKIE=zh; RUIJIEID=bnr********************7a0; helpKey=home_sys;user=admin
+Cookie: LOCAL_LANG_COOKIE=zh; RUIJIEID=bnrul7jabde55u5moo2a4q57a0; helpKey=home_sys;user=admin
 X-Requested-With: XMLHttpRequest
 Host: 
 Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2

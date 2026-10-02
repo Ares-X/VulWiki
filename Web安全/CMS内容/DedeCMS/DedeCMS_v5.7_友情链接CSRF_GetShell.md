@@ -24,7 +24,7 @@ schema_version: "1"
 
 适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：5.7SP2 dated2017-03-15; attacker submits friendlink; admin clicks it; full Referer and cross-site session available; no token check in tested build
 
-- **凭据与会话边界（1）**：Shares savetagfile sink with index54 but54 explicitly requires CSRF token; retain version/build difference, not merge as same proof。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+- **凭据与会话边界（1）**：Shares savetagfile sink with index54 but54 explicitly requires CSRF token; retain version/build difference, not merge as same proof。抓包中的会话不能视为未认证访问证明。需重新取得授权测试会话，不能复用文中值。
 
 - **结论使用边界（2）**：Current browser Referrer-Policy may omit backend path; prerequisite absent。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
 

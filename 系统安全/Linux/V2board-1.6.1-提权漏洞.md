@@ -40,7 +40,7 @@ schema_version: "1"
 1. 确定误归Linux系统提权，实际Web应用普通用户升管理员，与OS root无关
 2. frontmatter version为docker-compose up -d命令而非1.6.1
 3. 认证前提、缓存热身步骤、修复commit清楚，技术流程可保留；缺Vulhub具体目录/commit和发行修复版本
-4. 硬编码Authorization示例包含认证材料样式，应以TOKEN占位；成功证据仅图片未查看
+4. 硬编码Authorization示例包含认证材料样式，需说明获取条件与权限；成功证据仅图片未查看
 5. 所谓所有管理员API需限定已测试接口和源码覆盖，不以单例推断全量
 
 ### 操作风险

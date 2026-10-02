@@ -36,7 +36,7 @@ schema_version: "1"
 
 - 源码来源网盘无版本，调用链图未视检；${}与参数绑定根因清楚但应补代码文本
 - currentPage被HTML实体转坏为¤tPage，HTTP需修
-- 测试公有IP/账号/会话应惰性占位，靶场说明不等当前许可
+- 靶场说明不等当前许可
 - 缺修复build/最小角色
 
 ## 操作风险
@@ -129,7 +129,7 @@ Accept-Encoding: gzip, deflate
 X-Requested-With: XMLHttpRequest
 Connection: close
 Referer: http://47.116.69.14/pages/manage/user.html
-Cookie: Hm_lvt_1cd9bcbaae133f03a6eb19da6579aaba=1615274745; JSESSIONID=C******************************2; Hm_lpvt_1cd9bcbaae133f03a6eb19da6579aaba=1615274770
+Cookie: Hm_lvt_1cd9bcbaae133f03a6eb19da6579aaba=1615274745; JSESSIONID=C5EBD91E0E68081AA25F206F2FECAC82; Hm_lpvt_1cd9bcbaae133f03a6eb19da6579aaba=1615274770
 ```
 
 使用 sleep 延时注入
@@ -146,7 +146,7 @@ Accept-Encoding: gzip, deflate
 X-Requested-With: XMLHttpRequest
 Connection: close
 Referer: http://47.116.69.14/pages/manage/user.html
-Cookie: Hm_lvt_1cd9bcbaae133f03a6eb19da6579aaba=1615274745; JSESSIONID=C******************************2; Hm_lpvt_1cd9bcbaae133f03a6eb19da6579aaba=1615274770
+Cookie: Hm_lvt_1cd9bcbaae133f03a6eb19da6579aaba=1615274745; JSESSIONID=C5EBD91E0E68081AA25F206F2FECAC82; Hm_lpvt_1cd9bcbaae133f03a6eb19da6579aaba=1615274770
 ```
 
 3、漏洞代码

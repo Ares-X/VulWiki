@@ -64,7 +64,7 @@ Host:
 Content-Type: multipart/form-data; boundary=---------------------------289666258334735365651210512949
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:127.0) Gecko/20100101 Firefox/127.0
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
-Cookie: ASP.NET_SessionId=v**********************3
+Cookie: ASP.NET_SessionId=vkp4usonpxcstreczz05g113
 Accept: */*
 Accept-Encoding: gzip, deflate
 X-Requested-With: XMLHttpRequest

