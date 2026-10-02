@@ -1,9 +1,59 @@
 ---
 version: "一、固件解包"
 source: "MrWQ/vulnerability-paper"
+id: "vw-85afc1380391478060f2a3b4"
+entity_id: "ve-85afc1380391478060f2a3b4"
+schema_version: "1"
+title: "DLink 815 系列路由器栈溢出漏洞分析与复现"
+product: "D-Link DIR-815 cgibin hedwig_cgi"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+prerequisites: "FW1.01b14_1.01b14，MIPSel/uClibc0.9.30.1，仿真显式关闭ASLR"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/IOT%E5%AE%89%E5%85%A8/D-Link/DLink%20815%20%E7%B3%BB%E5%88%97%E8%B7%AF%E7%94%B1%E5%99%A8%E6%A0%88%E6%BA%A2%E5%87%BA%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90%E4%B8%8E%E5%A4%8D%E7%8E%B0.md"
+review_date: "2026-10-02"
+side_effects: "畸形输入可能使进程/内核崩溃、设备重启或服务不可用；本文崩溃线索不自动证明稳定代码执行，需隔离环境和可恢复配置；回连样例可能向外部地址发送网络请求或建立会话；应使用自己的隔离回连服务，DNS/LDAP 到达只能证明相应交互，不能单独证明 RCE；文中还涉及重启、账户/SSH、防火墙或根目录配置变更；逐步核对具体命令及恢复方式，避免影响管理通道或业务网络"
+source_url: "https://mp.weixin.qq.com/s/ZhNCwVp7HKowmP2SWcr_lw"
+source_status: "recorded"
 ---
 
 # DLink 815 系列路由器栈溢出漏洞分析与复现
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：D-Link DIR-815 cgibin hedwig_cgi
+- 本文讨论：Cookie uid栈溢出，无CVE标注
+- 版本、权限与配置前提：FW1.01b14_1.01b14，MIPSel/uClibc0.9.30.1，仿真显式关闭ASLR
+- 资料类型：MIPS栈溢出仿真逆向教程；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 多段bash/config/Python/调试输出全丢换行，注释吞代码，不能照抄复现
+- 元数据version误抽一、固件解包；未引用官方CVE/修复
+- 固定libc基址/ROP偏移只支持改造仿真，不证明真实设备同条件
+- 大量清空防火墙/覆盖根目录文件操作仅应隔离实验说明，不宜通用搭建指令
+- 用户仿真1043与系统1009偏移变化需解释；sleep等同flush表述过简
+
+### 操作风险与恢复
+
+- 畸形输入可能使进程/内核崩溃、设备重启或服务不可用；本文崩溃线索不自动证明稳定代码执行，需隔离环境和可恢复配置
+- 回连样例可能向外部地址发送网络请求或建立会话；应使用自己的隔离回连服务，DNS/LDAP 到达只能证明相应交互，不能单独证明 RCE
+- 文中还涉及重启、账户/SSH、防火墙或根目录配置变更；逐步核对具体命令及恢复方式，避免影响管理通道或业务网络
+
+### 待核与来源
+
+- 固件哈希、原图汇编/偏移、实际ASLR及修复待核
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/ZhNCwVp7HKowmP2SWcr_lw)

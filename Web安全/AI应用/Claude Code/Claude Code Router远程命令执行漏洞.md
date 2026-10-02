@@ -2,9 +2,46 @@
 date: "2025-08-22"
 ref: "https://blog.xlab.app/p/70dc71dc/"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Claude Code Router远程命令执行漏洞"
+product: "Claude Code Router"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+source_url: "https://blog.xlab.app/p/70dc71dc/"
+source_status: "recorded"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-107b6a9c09b20807a98bf5c7"
+entity_id: "ve-107b6a9c09b20807a98bf5c7"
+schema_version: "1"
 ---
 
 # Claude Code Router远程命令执行漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- ref有原始文章，source需标转存来源
+- date2025-08-22与正文08-21需区分发布/采集
+- 原站导航和根相对链接大量污染
+- 代码被表格嵌套围栏损坏
+- CLAUDE_PATH明说未实现不能作为RCE证据，实际链是模型端点篡改与工具调用，需前提
+- GHSA和fix版本应metadata
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 [明天的乌云](/)
 

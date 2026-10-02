@@ -1,9 +1,48 @@
 ---
 cve: "CVE-2026-27893"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "漏洞预警 | vLLM远程代码执行漏洞"
+product: "vLLM"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2026-27893"
+referenced_identifiers: ""
+identifier_role: "primary"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-cd1d58588fbe2b5c585f4d58"
+entity_id: "ve-cd1d58588fbe2b5c585f4d58"
+schema_version: "1"
 ---
 
-#  漏洞预警 | vLLM远程代码执行漏洞  
+# 漏洞预警 | vLLM远程代码执行漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 本次正文校订
+
+- 按该篇完整正文及逐篇审阅区分主问题与背景编号，补全结构化主标识；不把标识归属校订等同运行复现。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 缺PoC/替代验证
+- 特定模型加载与trust_remote_code条件遗漏metadata
+- 版本和修复未完整
+- 缺原文链接
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 浅安
                     浅安  浅安安全   2026-03-31 23:50  
   

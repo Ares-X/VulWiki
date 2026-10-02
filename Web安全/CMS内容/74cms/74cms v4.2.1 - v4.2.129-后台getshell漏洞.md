@@ -1,6 +1,38 @@
 ---
 source: "hatch 补库批 20260928"
+product: "74cms"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "74cms v4.2.1 - v4.2.129-后台getshell漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：4.2.1–4.2.129 stated; admin Tpl/set access; optional file-read + SQL injection chain"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-a1fe13129c6979a6f3b576fd"
+entity_id: "ve-a1fe13129c6979a6f3b576fd"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：4.2.1–4.2.129 stated; admin Tpl/set access; optional file-read + SQL injection chain
+
+- **证据待核（1）**：Source-flow explanation almost entirely screenshots。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **证据待核（2）**：Several images point to another SQL-injection article's resource folder; verify content rather than assuming broken。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **适用与权限边界（3）**：Front-to-back chain depends on separate vulnerabilities and unsupported stacked-query claim; do not classify this admin endpoint as unauthenticated。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **证据待核（4）**：Upgrade instructions are run-on and lack historical date。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # 74cms v4.2.1-v4.2.129-后台getshell漏洞
 

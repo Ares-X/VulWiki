@@ -1,8 +1,57 @@
 ---
 cve: "CVE-2022-32548"
+id: "vw-5e92e6c68450b834dd95c86a"
+entity_id: "ve-5e92e6c68450b834dd95c86a"
+schema_version: "1"
+title: "记一次 Vigor3910 路由器敏感溢出分析"
+product: "DrayTek Vigor3910"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2022-32548"
+referenced_identifiers: ""
+prerequisites: "下载4.3.1.1、先解3.9.7.2、结构表为4.3.2_RC5a；需固件文件及解包工具，未展示远程漏洞条件"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/IOT%E5%AE%89%E5%85%A8/DrayTek/%E8%AE%B0%E4%B8%80%E6%AC%A1%20Vigor3910%20%E8%B7%AF%E7%94%B1%E5%99%A8%E6%95%8F%E6%84%9F%E6%BA%A2%E5%87%BA%E5%88%86%E6%9E%90.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_url: "https://mp.weixin.qq.com/s/XLbTzIO24BDYZbWUniOhkQ"
+source_status: "recorded"
 ---
 
 # 记一次 Vigor3910 路由器敏感溢出分析
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：DrayTek Vigor3910
+- 本文讨论：题引CVE-2022-32548，正文止于固件解密解包
+- 版本、权限与配置前提：下载4.3.1.1、先解3.9.7.2、结构表为4.3.2_RC5a；需固件文件及解包工具，未展示远程漏洞条件
+- 资料类型：固件提取/逆向笔记，未包含标题所称溢出分析；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 全文没有登录参数、溢出函数、触发请求或漏洞根因，标题/CVE与实际完成内容不符；适合归固件分析背景材料
+- checksum和两份Python代码缩进损坏、return越出函数；首解密脚本参数数量检查不覆盖argv[2]
+- LZ4称加密，实为压缩；所示ChaCha20密钥静态计数为32字节，长度本身无问题
+- 固件版本、nonce样例在不同片段切换，未标明来自不同样本；关键定位依赖未查看图片
+- 包含010 Editor破解无关段落，引用PDF链接与中文路径粘连
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 29型号影响和修复矩阵、Trellix原报告未核验
+- 无法从本文确认CVE根因或可利用性
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/XLbTzIO24BDYZbWUniOhkQ)

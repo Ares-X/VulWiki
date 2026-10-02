@@ -1,8 +1,53 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "MindsDB 文件路径处理漏洞预警：未授权信息泄露与拒绝服务风险"
+product: "MindsDB"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。"
+id: "vw-f9501597ff326624a7e61e22"
+entity_id: "ve-f9501597ff326624a7e61e22"
+schema_version: "1"
 ---
 
-#  MindsDB 文件路径处理漏洞预警：未授权信息泄露与拒绝服务风险  
+# MindsDB 文件路径处理漏洞预警：未授权信息泄露与拒绝服务风险
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 本次正文校订
+
+- 按实际内容修正 1 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- source_type/JSON路径分支有机制和PoC，版本latest不可复现
+- docker命令和Python重复粘成一行
+- 无CVE/原始公告/日期化未修复状态
+- 读取后移动文件需明确破坏性和文件类型/权限限制，不应称所有文件必然可读取
+- 风险等级无评分依据
+- 空标题
+
+### 操作风险与资料使用
+
+- 含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 原创 TT
                     TT  TtTeam   2026-01-24 08:33  
   
@@ -42,7 +87,7 @@ MindsDB 的文件上传 API 存在未授权路径遍历漏洞。攻击者无需�
 ### 1. 部署漏洞环境  
   
 拉取并运行最新版 MindsDB 容器：  
-```
+```shell
 docker pull mindsdb/mindsdb:latestdocker run --rm -it -p 47334:47334 --name mindsdb-poc mindsdb/mindsdb:latest
 docker pull mindsdb/mindsdb:latest
 docker run --rm -it -p 47334:47334 --name mindsdb-poc mindsdb/mindsdb:latest

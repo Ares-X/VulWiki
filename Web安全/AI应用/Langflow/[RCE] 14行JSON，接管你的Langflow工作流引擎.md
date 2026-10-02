@@ -1,9 +1,58 @@
 ---
-cve: "CVE-2026-0770"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "[RCE] 14行JSON，接管你的Langflow工作流引擎"
+product: "Langflow及Windows Shell"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "quarantined"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: "CVE-2026-0770"
+identifier_role: "reference"
+verification_source: "https://www.zerodayinitiative.com/advisories/ZDI-26-036/"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-d63bcde8467e4f5392a9101e"
+entity_id: "ve-d63bcde8467e4f5392a9101e"
+schema_version: "1"
 ---
 
-#  [RCE] 14行JSON，接管你的Langflow工作流引擎  
+# [RCE] 14行JSON，接管你的Langflow工作流引擎
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+ZDI 原始公告的入口为 validate 中的 exec_globals，原文 component/execute 示例与漏洞代码路径错配。原文还拼接多个其他问题，不能将整页按首个 CVE 当作已复现单漏洞，也不能把破坏性命令称为无害检测。
+
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 主要0770标题但含21510独立篇和2441摘要
+- 称反序列化但代码为exec且文字称eval
+- 示例function_name execute却未定义函数因而取local_scope会失败
+- 示例需要API凭证却没有明确鉴权前提
+- 破坏性命令与远程脚本不可标无害验证
+- 影响<=1.0.0及修复1.0.1需官方核验
+- 感染数量由暴露未修复比例推定已入侵不成立
+- 收益/企业数/赎金无来源
+- Windows无需交互与点击触发矛盾
+- 环境变量到SYSTEM缺链路依据
+- 代码围栏遗失
+- 已核ZDI原始公告：入口为validate处理exec_globals，不是文中component/execute；CVE描述与代码路径错配可确认。版本<=1.0.0/1.0.1修复仍无依据
+
+### 核验来源
+
+- https://www.zerodayinitiative.com/advisories/ZDI-26-036/
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 原创 北境
                         北境  0xArgus   2026-03-05 23:39  
   

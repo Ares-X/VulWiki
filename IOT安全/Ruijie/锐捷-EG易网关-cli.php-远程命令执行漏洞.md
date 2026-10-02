@@ -1,9 +1,57 @@
 ---
 version: "锐捷EG易网关"
 source: "Threekiii/Vulnerability-Wiki"
+id: "vw-9cdcb03323c38d02d1a8164b"
+entity_id: "ve-9cdcb03323c38d02d1a8164b"
+schema_version: "1"
+title: "锐捷 EG易网关 cli.php 远程命令执行漏洞"
+product: "Ruijie EG易网关"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+prerequisites: "后台权限，或组合泄露获得凭据；未列固件"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/IOT%E5%AE%89%E5%85%A8/Ruijie/%E9%94%90%E6%8D%B7-EG%E6%98%93%E7%BD%91%E5%85%B3-cli.php-%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md"
+review_date: "2026-10-02"
+side_effects: "执行文中载荷可能以目标进程权限启动命令或加载代码；权限受认证角色、操作系统账户及依赖版本约束，不能把 root/200 等通用字符串当成功证据；读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要且已脱敏的响应，不能由接口可达推定敏感内容已泄露"
+source_status: "unknown"
 ---
 
 # 锐捷 EG易网关 cli.php 远程命令执行漏洞
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Ruijie EG易网关
+- 本文讨论：cli.php shellAction任意程序调用，前置login.php密码泄露
+- 版本、权限与配置前提：后台权限，或组合泄露获得凭据；未列固件
+- 资料类型：源码/链式PoC；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- EscapeShellCmd确有调用；问题是允许控制整个命令，不应称完全没有过滤或依赖分隔符绕过
+- 需明确管理员Shell是预期功能还是越权边界，父控制器鉴权未展示
+- 脚本登录成功子串/headers正则及未编码密码有误判风险
+- 已落实的文本修订：HTTP 报文围栏改为 http。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
+- 样例会话、令牌或共享秘密已按具体值遮罩中段并保留首尾；不能直接用于请求。公开默认/测试凭据与算法常量不因长得像密码而改写；其用途仍须按原文说明判断
+
+### 操作风险与恢复
+
+- 执行文中载荷可能以目标进程权限启动命令或加载代码；权限受认证角色、操作系统账户及依赖版本约束，不能把 root/200 等通用字符串当成功证据
+- 读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要且已脱敏的响应，不能由接口可达推定敏感内容已泄露
+
+### 待核与来源
+
+- 功能权限设计、固件范围与认证层待核
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 
 ## 漏洞描述
 
@@ -156,13 +204,13 @@ command参数直接传入执行了命令
 
 发送请求包
 
-```plain
+```http
 POST /cli.php?a=shell HTTP/1.1
 Host: 
 User-Agent: Go-http-client/1.1
 Content-Length: 24
 Content-Type: application/x-www-form-urlencoded
-Cookie: RUIJIEID=nk5erth9i0pvcco3n7fbpa9bi0;user=admin; 
+Cookie: RUIJIEID=nk5********************bi0;user=admin; 
 X-Requested-With: XMLHttpRequest
 Accept-Encoding: gzip
 

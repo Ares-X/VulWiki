@@ -1,9 +1,54 @@
 ---
 version: "锐捷EG易网关"
 source: "Threekiii/Vulnerability-Wiki"
+id: "vw-eed88a8539a486321f5437cc"
+entity_id: "ve-eed88a8539a486321f5437cc"
+schema_version: "1"
+title: "锐捷 EG易网关 download.php 任意文件读取漏洞"
+product: "Ruijie EG易网关"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+prerequisites: "后台会话或login泄露前置；文件需存在且进程可读"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/IOT%E5%AE%89%E5%85%A8/Ruijie/%E9%94%90%E6%8D%B7-EG%E6%98%93%E7%BD%91%E5%85%B3-download.php-%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E.md"
+review_date: "2026-10-02"
+side_effects: "读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要且已脱敏的响应，不能由接口可达推定敏感内容已泄露"
+source_status: "unknown"
 ---
 
 # 锐捷 EG易网关 download.php 任意文件读取漏洞
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Ruijie EG易网关
+- 本文讨论：download.php read_txtAction任意文件读取
+- 版本、权限与配置前提：后台会话或login泄露前置；文件需存在且进程可读
+- 资料类型：源码/链式PoC；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- read_txt确实绕过indexAction的allow列表，应保留该动作区分，不能泛指所有download路径均无校验
+- 脚本版本banner误写cli.php RCE
+- 正文GET与脚本POST方法不同；helper v()是否支持二者需核；登录检测继承同样脆弱正则
+
+### 操作风险与恢复
+
+- 读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要且已脱敏的响应，不能由接口可达推定敏感内容已泄露
+
+### 待核与来源
+
+- 固件版本/修复和父控制器鉴权待核
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 
 ## 漏洞描述
 

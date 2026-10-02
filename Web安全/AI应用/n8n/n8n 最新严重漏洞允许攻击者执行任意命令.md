@@ -1,9 +1,57 @@
 ---
 cve: "CVE-2025-68668"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "n8n 最新严重漏洞允许攻击者执行任意命令"
+product: "n8n"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2025-68668"
+referenced_identifiers: ""
+identifier_role: "primary"
+affected_versions: "n8n ≥1.0.0、<2.0.0（已核官方 GHSA）"
+verification_source: "https://github.com/n8n-io/n8n/security/advisories/GHSA-62r4-hw23-cc8v"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-1408bbb5d1ee098fd67bad5a"
+entity_id: "ve-1408bbb5d1ee098fd67bad5a"
+schema_version: "1"
 ---
 
-#  n8n 最新严重漏洞允许攻击者执行任意命令  
+# n8n 最新严重漏洞允许攻击者执行任意命令
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+1.111.0 只是引入可选的新 Python 执行实现，并非此问题的受影响上界。利用还需创建或修改工作流的权限；具体缓解变量沿用已引用的官方公告。
+
+
+### 本次正文校订
+
+- 按该篇完整正文及逐篇审阅区分主问题与背景编号，补全结构化主标识；不把标识归属校订等同运行复现。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 已核验官方GHSA：影响>=1.0.0 <2.0.0；1.111.0只是引入可选新Python执行实现，原文误作影响上界
+- 条件包含创建修改工作流权限应结构化
+- 存在有用官方GHSA和缓解变量，可作为已有68668条目补充
+- 下半大段无关安全资讯和广告需剥离
+- 无具体PoC应归公告参考
+
+### 核验来源
+
+- https://github.com/n8n-io/n8n/security/advisories/GHSA-62r4-hw23-cc8v
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 会杀毒的单反狗  军哥网络安全读报   2026-01-07 01:04  
   
 **导****读**  

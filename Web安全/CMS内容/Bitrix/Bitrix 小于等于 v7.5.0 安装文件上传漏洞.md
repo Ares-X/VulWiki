@@ -1,7 +1,43 @@
 ---
-fofa: "body="
+fofa: ""
 source: "MrWQ/vulnerability-paper"
+product: "Bitrix restore/Virtual Appliance"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+fofa_unverified: "body="
+title: "Bitrix 小于等于 v7.5.0 安装文件上传漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：<=7.5.0 asserted; exposed installation/restore upload interface; webroot PHP execution"
+side_effects: "未执行；本文需注意的操作影响：Displayed move_uploaded_file sink is coherent; UI error alone not success proof"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/YELZB900vbbnrkeDgBToDg"
+id: "vw-b89321b833934140c86ef3bc"
+entity_id: "ve-b89321b833934140c86ef3bc"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 测绘字段处置：原 fofa 字段为残缺表达式、错误平台语法或当前解析器不支持的形式，原值完整保留到 fofa_unverified，不把它当作已校验查询或受影响资产证据。正文检索方法保留；具体问题见下列原审阅项。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：&lt;=7.5.0 asserted; exposed installation/restore upload interface; webroot PHP execution
+
+- **代码与转录边界（1）**：Frontmatter fofa body= is truncated while body has complete query。相应原代码作为存在此问题的历史样本保留，不能直接当作可运行、成功复现的 PoC；缺失内容需回原稿核对，不据此补造可执行攻击链。
+
+- **事实待核（2）**：Unclear whether7.5.0 refers to appliance or CMS product version。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **结论使用边界（3）**：No explanation of restore-interface accessibility/auth; cannot generalize to all installed sites。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **结论使用边界（4）**：Displayed move_uploaded_file sink is coherent; UI error alone not success proof。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Bitrix 小于等于 v7.5.0 安装文件上传漏洞
 

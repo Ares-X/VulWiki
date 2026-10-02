@@ -1,8 +1,59 @@
 ---
 source: "MrWQ/vulnerability-paper"
+id: "vw-0e27c9cce67bd554fb336fa4"
+entity_id: "ve-0e27c9cce67bd554fb336fa4"
+schema_version: "1"
+title: "Asus 路由器栈溢出漏洞分析"
+product: "ASUS RT-AC68U/RT-AC5300"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+prerequisites: "AC68U<3.0.0.4.385.20633、AC5300<3.0.0.4.384.82072；测试384.45713；时间窗/空MAC/NVRAM状态/固定地址"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/IOT%E5%AE%89%E5%85%A8/%E5%8D%8E%E7%A1%95/Asus%20%E8%B7%AF%E7%94%B1%E5%99%A8%E6%A0%88%E6%BA%A2%E5%87%BA%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90.md"
+review_date: "2026-10-02"
+side_effects: "畸形输入可能使进程/内核崩溃、设备重启或服务不可用；本文崩溃线索不自动证明稳定代码执行，需隔离环境和可恢复配置；执行文中载荷可能以目标进程权限启动命令或加载代码；权限受认证角色、操作系统账户及依赖版本约束，不能把 root/200 等通用字符串当成功证据"
+source_url: "https://mp.weixin.qq.com/s/xA0FS6hva4n2bLsI0ffJ_Q"
+source_status: "recorded"
 ---
 
 # Asus 路由器栈溢出漏洞分析
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：ASUS RT-AC68U/RT-AC5300
+- 本文讨论：blocking_request.cgi未认证RCE及blocking.cgi认证后DoS，未给CVE
+- 版本、权限与配置前提：AC68U&lt;3.0.0.4.385.20633、AC5300&lt;3.0.0.4.384.82072；测试384.45713；时间窗/空MAC/NVRAM状态/固定地址
+- 资料类型：双栈溢出逆向/利用分析；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 4740+40写4840算术不符；后续仍4740需按栈布局核
+- 时间函数Apr尾空格、Sept不合HTTP Sep、小时+8不处理跨日，且mktime本地时区易错
+- 原理文字说strcat不能00但构造p32值含00，需说明解析/内存布局如何兼容，不能只凭摘要断言不可用
+- POC Python2固定地址/命令长度依赖，作者已提示；用下载执行和chmod777有副作用
+- 官方2020补丁关联只是作者似乎推断，两个端点不同鉴权/影响不合并；视频未查看
+- 已落实的文本修订：“也就是4840* a”改为“也就是4780* a”；“tm_month == 'Apr '”改为“tm_month == 'Apr'”；“tm_month == 'Sept'”改为“tm_month == 'Sep'”。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
+- 4740 + 40 = 4780，已修正文中算术笔误；后续 PoC 仍使用 4740，该偏移必须结合目标栈布局核对，不能仅把代码数字改成 4780。月份拼写已修正，时区与跨日问题仍待核。
+
+### 操作风险与恢复
+
+- 畸形输入可能使进程/内核崩溃、设备重启或服务不可用；本文崩溃线索不自动证明稳定代码执行，需隔离环境和可恢复配置
+- 执行文中载荷可能以目标进程权限启动命令或加载代码；权限受认证角色、操作系统账户及依赖版本约束，不能把 root/200 等通用字符串当成功证据
+
+### 待核与来源
+
+- vendor确认图、地址/零字节机制和修复矩阵待核
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/xA0FS6hva4n2bLsI0ffJ_Q)
@@ -104,7 +155,7 @@ struct mime_handler {
 0x4 漏洞利用
 ========
 
-1.  第一次尝试填充4740 * a,查看栈中数据，还有40个字节需要填充，也就是4840* a + p32(addr)
+1.  第一次尝试填充4740 * a,查看栈中数据，还有40个字节需要填充，也就是4780* a + p32(addr)
     
 
 
@@ -201,7 +252,7 @@ def rematch(strTmp):
         tm_month = '02'  
     if tm_month == 'Mar':  
         tm_month = '03'  
-    if tm_month == 'Apr ':  
+    if tm_month == 'Apr':  
         tm_month = '04'  
     if tm_month == 'May':  
         tm_month = '05'  
@@ -211,7 +262,7 @@ def rematch(strTmp):
         tm_month = '07'  
     if tm_month == 'Aug':  
         tm_month = '08'  
-    if tm_month == 'Sept':  
+    if tm_month == 'Sep':  
         tm_month = '09'  
     if tm_month == 'Oct':  
         tm_month = '10'  

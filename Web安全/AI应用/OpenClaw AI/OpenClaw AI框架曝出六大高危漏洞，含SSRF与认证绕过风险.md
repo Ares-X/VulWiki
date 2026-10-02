@@ -1,8 +1,44 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "OpenClaw AI框架曝出六大高危漏洞，含SSRF与认证绕过风险"
+product: "OpenClaw"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-84360b117cce77cb4c787916"
+entity_id: "ve-84360b117cce77cb4c787916"
+schema_version: "1"
 ---
 
-#  OpenClaw AI框架曝出六大高危漏洞，含SSRF与认证绕过风险  
+# OpenClaw AI框架曝出六大高危漏洞，含SSRF与认证绕过风险
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 六漏洞缺独立ID、受影响/修复版本及PoC链接
+- 只指向CSO二手报道，声称研究者PoC全部公开但未给入口
+- 标题全部高危而正文含6.5及未评分，应核对分级和来源
+- 大量空标题/推荐阅读/宣传图污染
+- 产品社交媒体平台描述需查原产品定位
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
  FreeBuf   2026-02-21 04:31  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/qq5rfBadR38jUokdlWSNlAjmEsO1rzv3srXShFRuTKBGDwkj4gvYy34iajd6zQiaKl77Wsy9mjC0xBCRg0YgDIWg/640?wx_fmt=gif "")  

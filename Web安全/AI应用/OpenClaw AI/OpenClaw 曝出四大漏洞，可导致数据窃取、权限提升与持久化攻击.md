@@ -1,8 +1,44 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "OpenClaw 曝出四大漏洞，可导致数据窃取、权限提升与持久化攻击"
+product: "OpenClaw"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-9b4e24b72fb49bc3d58394c7"
+entity_id: "ve-9b4e24b72fb49bc3d58394c7"
+schema_version: "1"
 ---
 
-#  OpenClaw 曝出四大漏洞，可导致数据窃取、权限提升与持久化攻击  
+# OpenClaw 曝出四大漏洞，可导致数据窃取、权限提升与持久化攻击
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 正文4个CVE未进metadata
+- CVSS两个分值并列未解释向量/版本/评分主体
+- 需区分OpenShell托管后端问题归属与OpenClaw版本，防止笼统全产品影响
+- 含先在沙箱执行/本地客户端等前提，不能说任意互联网预认证链
+- 仅THN二手出处，补官方GHSA/修复依据；去掉推广和空标题
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
  FreeBuf   2026-05-16 10:02  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/qq5rfBadR38jUokdlWSNlAjmEsO1rzv3srXShFRuTKBGDwkj4gvYy34iajd6zQiaKl77Wsy9mjC0xBCRg0YgDIWg/640?wx_fmt=gif "")  

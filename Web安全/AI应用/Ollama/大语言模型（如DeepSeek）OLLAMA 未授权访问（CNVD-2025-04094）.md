@@ -1,10 +1,48 @@
 ---
 cnvd: "CNVD-2025-04094"
-
 source: "SourByte05/Vulnerability-Wiki-PoC"
+title: "大语言模型（如DeepSeek）OLLAMA 未授权访问（CNVD-2025-04094）"
+product: "Ollama"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CNVD-2025-04094"
+referenced_identifiers: ""
+identifier_role: "primary"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。"
+id: "vw-3beec95e3371acd6841cae22"
+entity_id: "ve-3beec95e3371acd6841cae22"
+schema_version: "1"
 ---
 
 # 大语言模型（如DeepSeek）OLLAMA 未授权访问（CNVD-2025-04094）
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 已知在野利用无证据链接/观察日期
+- 影响所有版本需要暴露且未设认证的限定，应建配置条件
+- config.yaml/settings.json限定IP说法无对应Ollama配置依据，需核对，不应给出无效修复命令
+- 请求未代码块化，JSON混注释；max_tokens参数需按API版本核实
+- 保留FOFA和额外接口，主条目关联两来源
+
+### 操作风险与资料使用
+
+- 含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 # 漏洞描述
 

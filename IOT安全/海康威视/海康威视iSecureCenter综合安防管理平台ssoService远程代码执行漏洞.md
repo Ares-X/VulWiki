@@ -1,9 +1,56 @@
 ---
-fofa: "查询语法：**"
 source: "wy876 漏洞文库"
+id: "vw-5b9d170b947d3f84b10e7d6f"
+entity_id: "ve-5b9d170b947d3f84b10e7d6f"
+schema_version: "1"
+fofa_unverified: "查询语法：**"
+title: "海康威视iSecure Center 综合安防管理平台ssoService远程代码执行漏洞"
+product: "Hikvision iSecure Center BIC"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+prerequisites: "需允许相应Fastjson类型、Tomcat dbcp2/BCEL ClassLoader和兼容JDK；产品版本未给"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/IOT%E5%AE%89%E5%85%A8/%E6%B5%B7%E5%BA%B7%E5%A8%81%E8%A7%86/%E6%B5%B7%E5%BA%B7%E5%A8%81%E8%A7%86iSecureCenter%E7%BB%BC%E5%90%88%E5%AE%89%E9%98%B2%E7%AE%A1%E7%90%86%E5%B9%B3%E5%8F%B0ssoService%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md"
+review_date: "2026-10-02"
+side_effects: "执行文中载荷可能以目标进程权限启动命令或加载代码；权限受认证角色、操作系统账户及依赖版本约束，不能把 root/200 等通用字符串当成功证据"
+source_url: "https://www.yuque.com/xiaokp7/ocvun2/zmt0o54zgh67dtl4"
+source_status: "recorded"
 ---
 
 # 海康威视iSecure Center 综合安防管理平台ssoService远程代码执行漏洞
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Hikvision iSecure Center BIC
+- 本文讨论：ssoService/v1/keepAlive CTGT反序列化RCE
+- 版本、权限与配置前提：需允许相应Fastjson类型、Tomcat dbcp2/BCEL ClassLoader和兼容JDK；产品版本未给
+- 资料类型：Fastjson反序列化载荷PoC；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 完整BCEL字符串静态解码为4121字节Java8 class，TomcatEcho含Testcmd/ProcessBuilder/响应反射；并非凭空无语义字符串，但未执行或验证完整字节码控制流
+- 正文未解释Fastjson/JDK/依赖版本及Tomcat线程反射限制，无响应/根因
+- 与智能设备keepAlive同入口关联，不能与applyCT仅因同BCEL模板合并
+- 元数据错抽查询说明
+- 已落实的文本修订：HTTP 报文围栏改为 http；残缺指纹退出可执行索引并保留原值。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
+
+### 操作风险与恢复
+
+- 执行文中载荷可能以目标进程权限启动命令或加载代码；权限受认证角色、操作系统账户及依赖版本约束，不能把 root/200 等通用字符串当成功证据
+
+### 待核与来源
+
+- 产品/Fastjson/JDK矩阵、认证和原始gadget调用链待核
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 
 # 1、漏洞描述
 <font style="color:rgb(0, 0, 0);">HIKVISION iSecure Center综合安防管理平台是一套“集成化”、“智能化”的平台，通过接入视频监控、一卡通、停车场、报警检测等系统的设备，获取边缘节点数据，实现安防信息化集成与联动，以电子地图为载体，融合各系统能力实现丰富的智能应用。HIKVISION iSecure Center平台基于“统一软件技术架构”先进理念设计，采用业务组件化技术，满足平台在业务上的弹性扩展。该平台适用于全行业通用综合安防业务，对各系统资源进行了整合和集中管理，实现统一部署、统一配置、统一管理和统一调度。海康威视isecure center 综合安防管理平台存在远程代码执行漏洞</font>
@@ -20,7 +67,7 @@ source: "wy876 漏洞文库"
 # 4、漏洞复现
 POC：
 
-```java
+```http
 POST /bic/ssoService/v1/keepAlive HTTP/1.1
 Host: xx.xx.xx.xx
 Accept-Encoding: gzip, deflate

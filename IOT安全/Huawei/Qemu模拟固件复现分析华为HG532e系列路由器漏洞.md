@@ -1,8 +1,54 @@
 ---
 source: "MrWQ/vulnerability-paper"
+id: "vw-8a85b1aabada300aefb6fb65"
+entity_id: "ve-8a85b1aabada300aefb6fb65"
+schema_version: "1"
+title: "Qemu模拟固件复现分析华为HG532e系列路由器漏洞"
+product: "Huawei HG532e"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2017-17215"
+referenced_identifiers: ""
+prerequisites: "HG532eV100R001C01B020，QEMU MIPS，37215 UPnP；认证细节缺失"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/IOT%E5%AE%89%E5%85%A8/Huawei/Qemu%E6%A8%A1%E6%8B%9F%E5%9B%BA%E4%BB%B6%E5%A4%8D%E7%8E%B0%E5%88%86%E6%9E%90%E5%8D%8E%E4%B8%BAHG532e%E7%B3%BB%E5%88%97%E8%B7%AF%E7%94%B1%E5%99%A8%E6%BC%8F%E6%B4%9E.md"
+review_date: "2026-10-02"
+side_effects: "执行文中载荷可能以目标进程权限启动命令或加载代码；权限受认证角色、操作系统账户及依赖版本约束，不能把 root/200 等通用字符串当成功证据"
+source_url: "https://mp.weixin.qq.com/s/As40BU6FlrU_YwRoloL5jg"
+source_status: "recorded"
 ---
 
 # Qemu模拟固件复现分析华为HG532e系列路由器漏洞
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Huawei HG532e
+- 本文讨论：DeviceUpgrade_1 NewStatusURL/NewDownloadURL命令注入；与CVE-2017-17215文章关联
+- 版本、权限与配置前提：HG532eV100R001C01B020，QEMU MIPS，37215 UPnP；认证细节缺失
+- 资料类型：仿真/逆向教程；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 多个shell命令与Python折叠粘连；Authorization值从Digest user处截断，PoC不能直接解析
+- snprintf/system根因文字明确，但摘要认证/硬编码凭据条件未说明
+- HG532e系列不是固件影响范围；参考Checkpoint未给原报告链接
+
+### 操作风险与恢复
+
+- 执行文中载荷可能以目标进程权限启动命令或加载代码；权限受认证角色、操作系统账户及依赖版本约束，不能把 root/200 等通用字符串当成功证据
+
+### 待核与来源
+
+- 真实设备与仿真鉴权一致性、版本范围待核
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/As40BU6FlrU_YwRoloL5jg)
