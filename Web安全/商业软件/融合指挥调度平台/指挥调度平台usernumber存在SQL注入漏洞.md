@@ -66,7 +66,7 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/w
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate
 Connection: close
-Cookie: PHPSESSID=4******************************d; authcode=3hqs
+Cookie: PHPSESSID=4c1e6025b94bac25c4ec63e4affec7cd; authcode=3hqs
 Upgrade-Insecure-Requests: 1
 Content-Type: application/x-www-form-urlencoded
 

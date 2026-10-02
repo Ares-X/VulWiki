@@ -17,7 +17,7 @@ referenced_identifiers: ""
 prerequisites: "后台权限，或组合泄露获得凭据；未列固件"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/IOT%E5%AE%89%E5%85%A8/Ruijie/%E9%94%90%E6%8D%B7-EG%E6%98%93%E7%BD%91%E5%85%B3-cli.php-%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md"
 review_date: "2026-10-02"
-side_effects: "执行文中载荷可能以目标进程权限启动命令或加载代码；权限受认证角色、操作系统账户及依赖版本约束，不能把 root/200 等通用字符串当成功证据；读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要且已脱敏的响应，不能由接口可达推定敏感内容已泄露"
+side_effects: "执行文中载荷可能以目标进程权限启动命令或加载代码；权限受认证角色、操作系统账户及依赖版本约束，不能把 root/200 等通用字符串当成功证据；读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要的响应，不能由接口可达推定敏感内容已泄露"
 source_status: "unknown"
 ---
 
@@ -37,12 +37,11 @@ source_status: "unknown"
 - 需明确管理员Shell是预期功能还是越权边界，父控制器鉴权未展示
 - 脚本登录成功子串/headers正则及未编码密码有误判风险
 - 已落实的文本修订：HTTP 报文围栏改为 http。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
-- 样例会话、令牌或共享秘密已按具体值遮罩中段并保留首尾；不能直接用于请求。公开默认/测试凭据与算法常量不因长得像密码而改写；其用途仍须按原文说明判断
 
 ### 操作风险与恢复
 
 - 执行文中载荷可能以目标进程权限启动命令或加载代码；权限受认证角色、操作系统账户及依赖版本约束，不能把 root/200 等通用字符串当成功证据
-- 读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要且已脱敏的响应，不能由接口可达推定敏感内容已泄露
+- 读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要的响应，不能由接口可达推定敏感内容已泄露
 
 ### 待核与来源
 
@@ -210,7 +209,7 @@ Host:
 User-Agent: Go-http-client/1.1
 Content-Length: 24
 Content-Type: application/x-www-form-urlencoded
-Cookie: RUIJIEID=nk5********************bi0;user=admin; 
+Cookie: RUIJIEID=nk5erth9i0pvcco3n7fbpa9bi0;user=admin; 
 X-Requested-With: XMLHttpRequest
 Accept-Encoding: gzip
 

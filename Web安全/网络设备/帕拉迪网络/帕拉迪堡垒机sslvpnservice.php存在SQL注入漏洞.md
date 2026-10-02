@@ -37,7 +37,6 @@ source_status: "recorded"
 - JSON acctid字符串内原始换行破坏JSON；User-Agent折行无合法续行
 - 单布尔载荷无真/假响应对照，令牌前提未述，缺修复
 - 已落实的文本修订：HTTP 报文围栏改为 http。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
-- 样例会话、令牌或共享秘密已按具体值遮罩中段并保留首尾；不能直接用于请求。公开默认/测试凭据与算法常量不因长得像密码而改写；其用途仍须按原文说明判断
 
 ### 操作风险与恢复
 
@@ -69,7 +68,7 @@ Host:
 User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML,
 like Gecko) Chrome/89.0.4389.90 Safari/537.36
 Connection: close
-Cookie: PHPSESSID=8fd********************872; think_language=zh-cn
+Cookie: PHPSESSID=8fdj8pske96v2qdg13g36u8872; think_language=zh-cn
 Content-Type: text/xml
 Content-Length: 580
 

@@ -91,7 +91,7 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9
-Cookie: ASP.NET_SessionId=x**********************b; _sid=admin
+Cookie: ASP.NET_SessionId=xf1qosdhzc432rynj3scyr4b; _sid=admin
 If-None-Match: W/"5987cf44-7aab"
 If-Modified-Since: Mon, 07 Aug 2017 02:24:04 GMT
 Connection: close

@@ -22,7 +22,6 @@ relation_type: "duplicate_of"
 
 ## 核对与使用边界
 
-- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；遮罩后的历史值不能作为可用登录凭据。原操作、请求方法和攻击表达式保留。
 
 本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
 
@@ -30,9 +29,9 @@ relation_type: "duplicate_of"
 
 - **事实待核（1）**：全文与655除标题/来源尾注相同，确认跨产品版本目录重复。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
 
-- **凭据与会话边界（2）**：VIP前提、完整相同Cookie/payload/原GitHubissue应合并到一个记录而不是两漏洞。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+- **凭据与会话边界（2）**：VIP前提、完整相同Cookie/payload/原GitHubissue应合并到一个记录而不是两漏洞。抓包中的会话不能视为未认证访问证明。需重新取得授权测试会话，不能复用文中值。
 
-- **凭据与会话边界（3）**：同样需脱敏混入metinfoCookie及补响应/修复，不能自动当已核漏洞。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+- **凭据与会话边界（3）**：混入metinfoCookie，需核对字段归属并补响应/修复，不能自动当已核漏洞。抓包中的会话不能视为未认证访问证明。需重新取得授权测试会话，不能复用文中值。
 
 历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
@@ -59,7 +58,7 @@ Content-Length: 45
 Origin: http://test.com
 Connection: close
 Referer: http://test.com/user/advzt_manage.php
-Cookie: Hm_lvt_f6f37dc3416ca514857b78d0b158037e=1576564072; Hm_lvt_520556228c0113270c0c772027905838=1576734687,1577071433; app_href_source=myapp/free; PHPSESSID=f0f**************************1a3; arrlanguage=metinfo; Hm_lpvt_520556228c0113270c0c772027905838=1577672843; acc_auth=4b9****************************************************************************************ZH0; acc_key=eXM7G4F; __tins__713776=%7B%22sid%22%3A%201577775703119%2C%20%22vd%22%3A%201%2C%20%22expires%22%3A%201577777503119%7D; __51cke__=; __51laig__=28; bdshare_firstime=1577771760963; UserName=test; PassWord=429**************************a93
+Cookie: Hm_lvt_f6f37dc3416ca514857b78d0b158037e=1576564072; Hm_lvt_520556228c0113270c0c772027905838=1576734687,1577071433; app_href_source=myapp/free; PHPSESSID=f0fb73cc2f2d41d2a3b1edb7340841a3; arrlanguage=metinfo; Hm_lpvt_520556228c0113270c0c772027905838=1577672843; acc_auth=4b90lwFZZGUdz47dUybObYz1MoB612Tg7bCn10U0P4BKoY%2FR9nnvQapvPIBF%2BB4w11KPOWCNH%2FLvwx9rH7424ZH0; acc_key=eXM7G4F; __tins__713776=%7B%22sid%22%3A%201577775703119%2C%20%22vd%22%3A%201%2C%20%22expires%22%3A%201577777503119%7D; __51cke__=; __51laig__=28; bdshare_firstime=1577771760963; UserName=test; PassWord=4297f44b13955235245b2497399d7a93
 Upgrade-Insecure-Requests: 1
 Pragma: no-cache
 Cache-Control: no-cache

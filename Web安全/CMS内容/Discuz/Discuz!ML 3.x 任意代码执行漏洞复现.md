@@ -26,11 +26,11 @@ schema_version: "1"
 
 适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：ML3.x, tested3.4/Windows2008/XAMPP; site-specific cookie prefix; PHP-executable writable directory
 
-- **凭据与会话边界（1）**：Cookie prefix called random token though it is namespace, not auth token。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+- **凭据与会话边界（1）**：Cookie prefix called random token though it is namespace, not auth token。抓包中的会话不能视为未认证访问证明。需重新取得授权测试会话，不能复用文中值。
 
-- **结论使用边界（2）**：Unencoded shell parameter shell but final connection password \[连接口令已隐藏\]; mismatch。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+- **结论使用边界（2）**：Unencoded shell parameter shell but final connection password webshell; mismatch。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
 
-- **凭据与会话边界（3）**：Encoded payload placeholders{1}/{2} not explained; bare language versus prefixed cookie must be consistent。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+- **凭据与会话边界（3）**：Encoded payload placeholders{1}/{2} not explained; bare language versus prefixed cookie must be consistent。抓包中的会话不能视为未认证访问证明。需重新取得授权测试会话，不能复用文中值。
 
 - **来源与引用处置（4）**：Precise CNVD/code/research sources; promotional footer。保留这部分来源材料并与技术结论分开；其引用或宣传内容不能补足本文漏洞的证据。
 

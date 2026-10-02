@@ -90,7 +90,7 @@ POST /general/file_folder/api.php HTTP/1.1
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36
 Referer: http://192.168.202.1/general/file_folder/public_folder.php?FILE_SORT=1&SORT_ID=59
 X-Resource-Type: xhr
-Cookie: PHPSESSID=g************************7; USER_NAME_COOKIE=admin; OA_USER_ID=admin; SID_1=fab32701
+Cookie: PHPSESSID=g1njm64pl94eietps80muet5d7; USER_NAME_COOKIE=admin; OA_USER_ID=admin; SID_1=fab32701
 Connection: close
 Host: 192.168.202.1
 Pragma: no-cache
@@ -129,7 +129,7 @@ POST /general/appbuilder/web/meeting/meetingmanagement/meetingreceipt HTTP/1.1
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36
 Referer: http://192.168.202.1/general/meeting/myapply/details.php?affair=true&id=5&nosign=true&reminding=true
 X-Resource-Type: xhr
-Cookie: PHPSESSID=g************************7; USER_NAME_COOKIE=admin; OA_USER_ID=admin; SID_1=fab32701
+Cookie: PHPSESSID=g1njm64pl94eietps80muet5d7; USER_NAME_COOKIE=admin; OA_USER_ID=admin; SID_1=fab32701
 Connection: close
 Host: 192.168.202.1
 Pragma: no-cache
@@ -171,7 +171,7 @@ POST /general/appbuilder/web/meeting/meetingmanagement/meetingreceipt HTTP/1.1
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36
 Referer: http://192.168.202.1/general/meeting/myapply/details.php?affair=true&id=5&nosign=true&reminding=true
 X-Resource-Type: xhr
-Cookie: PHPSESSID=g************************7; USER_NAME_COOKIE=admin; OA_USER_ID=admin; SID_1=fab32701
+Cookie: PHPSESSID=g1njm64pl94eietps80muet5d7; USER_NAME_COOKIE=admin; OA_USER_ID=admin; SID_1=fab32701
 Connection: close
 Host: 192.168.202.1
 Pragma: no-cache

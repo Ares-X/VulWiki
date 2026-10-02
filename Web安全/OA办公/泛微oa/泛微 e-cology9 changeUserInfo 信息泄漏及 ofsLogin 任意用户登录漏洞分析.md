@@ -376,7 +376,7 @@ Cache-Control: private
 X-Frame-Options: SAMEORIGIN
 X-XSS-Protection: 1
 X-UA-Compatible: IE=8
-Set-Cookie: ecology_JSessionid=a*******************y; path=/
+Set-Cookie: ecology_JSessionid=aaa18FCpyjT4M7qjA1VCy; path=/
 Content-Type: application/json; charset=UTF-8
 Content-Length: 17
 Connection: close
@@ -406,7 +406,7 @@ Cache-Control: private
 X-Frame-Options: SAMEORIGIN
 X-XSS-Protection: 1
 X-UA-Compatible: IE=8
-Set-Cookie: ecology_JSessionid=a*******************y; path=/
+Set-Cookie: ecology_JSessionid=aaazz3rlfOPGyh_GFNZly; path=/
 Content-Type: application/json; charset=UTF-8
 Content-Length: 16
 Connection: close
@@ -444,7 +444,7 @@ X-Frame-Options: SAMEORIGIN
 X-XSS-Protection: 1
 X-UA-Compatible: IE=8
 Expires: Thu, 01 Dec 1994 16:00:00 GMT
-Set-Cookie: ecology_JSessionid=a*******************y; path=/
+Set-Cookie: ecology_JSessionid=aaxctkRR1WUJ97SAqRRiy; path=/
 {"loginId":"xsijr","status":"1"}
 
 ```

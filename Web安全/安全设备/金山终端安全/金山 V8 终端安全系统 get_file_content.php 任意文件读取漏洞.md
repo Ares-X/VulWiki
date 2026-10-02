@@ -17,7 +17,7 @@ referenced_identifiers: ""
 prerequisites: "源码阻断..并open_basedir限制../，仅Web目录内读取，版本未细分"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%AE%89%E5%85%A8%E8%AE%BE%E5%A4%87/%E9%87%91%E5%B1%B1%E7%BB%88%E7%AB%AF%E5%AE%89%E5%85%A8/%E9%87%91%E5%B1%B1%20V8%20%E7%BB%88%E7%AB%AF%E5%AE%89%E5%85%A8%E7%B3%BB%E7%BB%9F%20get_file_content.php%20%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E.md"
 review_date: "2026-10-02"
-side_effects: "读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要且已脱敏的响应，不能由接口可达推定敏感内容已泄露"
+side_effects: "读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要的响应，不能由接口可达推定敏感内容已泄露"
 source_status: "unknown"
 canonical: "Web安全/安全设备/金山终端安全/金山 V8 终端安全系统 get_file_content.php 任意文件读取漏洞.md"
 ---
@@ -40,7 +40,7 @@ canonical: "Web安全/安全设备/金山终端安全/金山 V8 终端安全系�
 
 ### 操作风险与恢复
 
-- 读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要且已脱敏的响应，不能由接口可达推定敏感内容已泄露
+- 读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要的响应，不能由接口可达推定敏感内容已泄露
 
 ### 待核与来源
 

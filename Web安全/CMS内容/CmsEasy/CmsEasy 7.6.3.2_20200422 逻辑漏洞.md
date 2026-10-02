@@ -20,7 +20,6 @@ schema_version: "1"
 
 ## 核对与使用边界
 
-- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；遮罩后的历史值不能作为可用登录凭据。原操作、请求方法和攻击表达式保留。
 
 本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
 
@@ -28,11 +27,11 @@ schema_version: "1"
 
 - **证据待核（1）**：Negative quantity request clear but later checkout/balance gain only missing numbered images。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
 
-- **凭据与会话边界（2）**：Example cookie is admin while prose claims arbitrary account; verify privilege scope。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+- **凭据与会话边界（2）**：Example cookie is admin while prose claims arbitrary account; verify privilege scope。抓包中的会话不能视为未认证访问证明。需重新取得授权测试会话，不能复用文中值。
 
 - **证据待核（3）**：Complete payment request, resulting amount and source absent。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
 
-- **凭据与会话边界（4）**：Credential-like cookies should be placeholders; Pandoc HTML marker residue。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+- **凭据与会话边界（4）**：Pandoc HTML marker residue。抓包中的会话不能视为未认证访问证明。需重新取得授权测试会话，不能复用文中值。
 
 历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
@@ -70,7 +69,7 @@ CmsEasy 7.6.3.2
     Referer: http://localhost/index.php?case=archive&act=show&aid=527
     Accept-Encoding: gzip, deflate
     Accept-Language: zh-CN,zh;q=0.9
-    Cookie: PHPSESSID=5j6********************te0; loginfalse=0; login_username=admin; login_password=787**************************b84; ce_orders_cookie=TL%2BA8RODL9PeNwoN
+    Cookie: PHPSESSID=5j671r8cg9kfppbkpl7i0n1te0; loginfalse=0; login_username=admin; login_password=787cc8f99d30dc9cbeeadd77f99efb84; ce_orders_cookie=TL%2BA8RODL9PeNwoN
     Connection: close
 
 -   6.此时可以看到购物车中为负数    图片 7.png

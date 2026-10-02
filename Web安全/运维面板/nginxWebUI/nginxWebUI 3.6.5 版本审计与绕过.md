@@ -38,7 +38,7 @@ schema_version: "1"
 - Title3.6.5 versus repeated3.6.4 analysis/lab needs explicit tested-build clarification
 - Timeline years absent;3.6.6 claimed further fix does not establish complete remediation
 - HTTP requests omit header/body separator;short examples concatenate requestline/Host
-- Captured session tokens/DNS collector need placeholders
+- Captured session tokens and the DNS collector depend on the original environment and do not establish current validity or authorization
 - Preserve authenticated bypass scope separate from earlier pre-auth case-folding issue
 
 ### 操作风险与资料使用

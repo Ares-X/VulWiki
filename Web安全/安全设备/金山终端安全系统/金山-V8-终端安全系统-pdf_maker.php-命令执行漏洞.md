@@ -38,7 +38,6 @@ source_status: "unknown"
 - fileName=xxx解码为不明确字节，未解释有效文件名；服务路径依赖
 - 源码注释保留会话标识，精确V8构建和补丁缺失
 - 已落实的文本修订：“base64加密”改为“base64编码”；HTTP 报文围栏改为 http。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
-- 样例会话、令牌或共享秘密已按具体值遮罩中段并保留首尾；不能直接用于请求。公开默认/测试凭据与算法常量不因长得像密码而改写；其用途仍须按原文说明判断
 
 ### 操作风险与恢复
 
@@ -181,7 +180,7 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/w
 Referer:
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-TW;q=0.6
-Cookie: PHPSESSID=noe********************n04
+Cookie: PHPSESSID=noei1ghcv9rqgp58jf79991n04
 
 url=IiB8fCBpcGNvbmZpZyB8fA%3D%3D&fileName=xxx
 ```

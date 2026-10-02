@@ -37,7 +37,7 @@ source_url: "https://github.com/zan8in/afrog/blob/93e56607188ccfa4b26bc529c7fa10
 
 - 固定afrog提交与凭据标签判据清楚，不泛化所有文件
 - 请求行缺Host但可标片段；尚无代码根因/build
-- 敏感配置验证需隔离测试或脱敏
+- 敏感配置验证需隔离测试
 
 ## 操作风险
 

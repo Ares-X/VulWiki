@@ -31,7 +31,7 @@ schema_version: "1"
 以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
 
 - No advancedMock insertionpoint stated;lesscomplete workflow than52
-- Java fence forJavaScript;loopbackcallback mustbe explicitplaceholder
+- Java fence forJavaScript;the loopback callback requires an explanation of the execution environment
 - No versions orfix;mergecommonmechanism preservevariant provenance
 
 ### 操作风险与资料使用

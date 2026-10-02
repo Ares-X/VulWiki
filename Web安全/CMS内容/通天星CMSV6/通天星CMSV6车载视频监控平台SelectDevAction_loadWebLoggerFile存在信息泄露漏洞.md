@@ -27,13 +27,12 @@ schema_version: "1"
 
 - 测绘字段处置：原 fofa 字段为残缺表达式、错误平台语法或当前解析器不支持的形式，原值完整保留到 fofa_unverified，不把它当作已校验查询或受影响资产证据。正文检索方法保留；具体问题见下列原审阅项。
 
-- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；遮罩后的历史值不能作为可用登录凭据。原操作、请求方法和攻击表达式保留。
 
 本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
 
 适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：loadWebLoggerFile;JSESSIONIDincluded;versions/roleunknown
 
-- **凭据与会话边界（1）**：有有效样式Cookie且jsessionId空，鉴权条件不明，不能认匿名。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+- **凭据与会话边界（1）**：有有效样式Cookie且jsessionId空，鉴权条件不明，不能认匿名。抓包中的会话不能视为未认证访问证明。需重新取得授权测试会话，不能复用文中值。
 
 - **证据待核（2）**：与728是不同日志接口，需分别响应证据而非同名去重。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
 
@@ -68,7 +67,7 @@ User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (
 Content-Type: application/x-www-form-urlencoded; charset=UTF-8
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9
-Cookie: JSESSIONID=87F**************************457
+Cookie: JSESSIONID=87F04E406314662DEF40451BC5114457
 Connection: close
 
 page=1&rp=15&query=&qtype=&pagin=%257B%2522currentPage%2522%253A1%252C%2522pageRecords%2522%253A15%257D

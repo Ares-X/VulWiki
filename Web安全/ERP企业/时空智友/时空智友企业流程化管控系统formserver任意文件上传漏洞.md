@@ -66,7 +66,7 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/w
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate
 Connection: close
-Cookie: JSESSIONID=B******************************2; __qypid=""
+Cookie: JSESSIONID=BDC88B10942C62F82DA953E7503830B2; __qypid=""
 Upgrade-Insecure-Requests: 1
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>

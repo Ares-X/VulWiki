@@ -11,7 +11,7 @@ primary_identifiers: "CVE-2021-29441"
 referenced_identifiers: "CVE-2021-3156; CVE-2021-4206"
 identifier_role: "primary"
 cve: "CVE-2021-29441"
-prerequisites: "逐节明确auth.enabled/默认密钥[凭据或样例值已隐藏]选项；客户端链须控制订阅配置且触发Yaml变更监听"
+prerequisites: "逐节明确auth.enabled/默认密钥SecretKey012345678901234567890123456789012345678901234567890123456789选项；客户端链须控制订阅配置且触发Yaml变更监听"
 source_url: "https://mp.weixin.qq.com/s/thlRGXwJPevB0wvMN5koFQ"
 source_status: "recorded"
 side_effects: "含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。"
@@ -25,7 +25,7 @@ schema_version: "1"
 <!-- vulwiki-editorial:start -->
 ## 校订与适用边界
 
-- 适用前提：逐节明确auth.enabled/默认密钥[凭据或样例值已隐藏]选项；客户端链须控制订阅配置且触发Yaml变更监听
+- 适用前提：逐节明确auth.enabled/默认密钥SecretKey012345678901234567890123456789012345678901234567890123456789选项；客户端链须控制订阅配置且触发Yaml变更监听
 - 证据范围：提供正反认证对照和JWT secret先base64解码的重要细节，比登录响应替换文章可靠；核心证据截图未视检
 
 ### 本次正文校订

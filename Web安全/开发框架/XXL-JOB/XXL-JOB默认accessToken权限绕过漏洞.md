@@ -12,7 +12,7 @@ identifier_role: "unknown"
 identifier_status: "unknown"
 fofa_unverified: "app.name="
 title: "XXL-JOB默认accessToken权限绕过漏洞"
-prerequisites: "来源所述条件，未列明部分仍待核：只写XXL-JOB，缺精确版本且必须未改[默认令牌值已隐藏]"
+prerequisites: "来源所述条件，未列明部分仍待核：只写XXL-JOB，缺精确版本且必须未改default_token"
 side_effects: "未执行；本文需注意的操作影响：COVER_EARLY与jobId有副作用；固定大jobId运行任务，需标仅隔离验证及清理"
 source_status: "unknown"
 id: "vw-5b613e7f1bfe6870d8ff5257"
@@ -26,7 +26,7 @@ schema_version: "1"
 
 本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
 
-适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：只写XXL-JOB，缺精确版本且必须未改\[默认令牌值已隐藏\]
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：只写XXL-JOB，缺精确版本且必须未改default_token
 
 代码与实验材料：完整GLUE_SHELL DNS请求，无响应，固定长度及公开域名
 

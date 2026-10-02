@@ -116,7 +116,7 @@ Accept-Encoding: gzip, deflate
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
 Connection: close
 Accept-Language: zh-CN,zh-TW;q=0.9,zh;q=0.8,en-US;q=0.7,en;q=0.6
-Cookie: LOGIN_LANG=cn; PHPSESSID=0******************************8
+Cookie: LOGIN_LANG=cn; PHPSESSID=0acfd0a2a78
 Content-Type: multipart/form-data; boundary=e64bdf16c554bbc109cecef6451c26a4
 
 --e64bdf16c554bbc109cecef6451c26a4

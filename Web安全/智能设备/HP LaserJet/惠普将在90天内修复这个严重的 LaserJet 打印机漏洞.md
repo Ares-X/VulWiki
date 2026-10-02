@@ -16,7 +16,7 @@ referenced_identifiers: ""
 prerequisites: "FutureSmart5.6+IPsec+扫描发送远端；凭据泄露另需无TLS；临时回退5.5.0.3"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%99%BA%E8%83%BD%E8%AE%BE%E5%A4%87/HP%20LaserJet/%E6%83%A0%E6%99%AE%E5%B0%86%E5%9C%A890%E5%A4%A9%E5%86%85%E4%BF%AE%E5%A4%8D%E8%BF%99%E4%B8%AA%E4%B8%A5%E9%87%8D%E7%9A%84%20LaserJet%20%E6%89%93%E5%8D%B0%E6%9C%BA%E6%BC%8F%E6%B4%9E.md"
 review_date: "2026-10-02"
-side_effects: "读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要且已脱敏的响应，不能由接口可达推定敏感内容已泄露"
+side_effects: "读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要的响应，不能由接口可达推定敏感内容已泄露"
 source_status: "unknown"
 ---
 
@@ -37,7 +37,7 @@ source_status: "unknown"
 
 ### 操作风险与恢复
 
-- 读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要且已脱敏的响应，不能由接口可达推定敏感内容已泄露
+- 读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要的响应，不能由接口可达推定敏感内容已泄露
 
 ### 待核与来源
 

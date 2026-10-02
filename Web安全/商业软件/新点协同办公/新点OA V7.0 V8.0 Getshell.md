@@ -62,7 +62,7 @@ http://58.215.56.61/OA/ExcelExport/%E4%BA%BA%E5%91%98%E5%88%97%E8%A1%A8.xls
 
 
 使用burp，可以很轻易的跑出密码。
-我们使用用户：lih 密码：1***1登录。
+我们使用用户：lih 密码：11111登录。
 然后找到如下上传地址：
 
 [![上传.png](./.resource/新点OAV7.0V8.0Getshell/media/0101375166edbcb7bca2ff9c8b1e8d3aee3d63c4.png)](http://wooyun.laolisafe.com/upload/201508/0101375166edbcb7bca2ff9c8b1e8d3aee3d63c4.png)
@@ -100,6 +100,6 @@ http://58.215.56.61/OA/ExcelExport/%E4%BA%BA%E5%91%98%E5%88%97%E8%A1%A8.xls
 
 原文列出的历史目标（不构成当前测试授权，禁止直接验证）：
 http://61.183.36.24/oa8/ 8.0版本
-http://61.132.114.180:8080/mail/login.aspx?loginid=%B0%AE%B5%C4&password=a*+&tj=%B5%C7+%C2%BD 7.0版本
+http://61.132.114.180:8080/mail/login.aspx?loginid=%B0%AE%B5%C4&password=ad+&tj=%B5%C7+%C2%BD 7.0版本
 
 [![客户.png](./.resource/新点OAV7.0V8.0Getshell/media/010144487305199ba79e822bf79934a03cb3a57e.png)](http://wooyun.laolisafe.com/upload/201508/010144487305199ba79e822bf79934a03cb3a57e.png)

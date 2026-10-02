@@ -23,7 +23,6 @@ schema_version: "1"
 
 ## 核对与使用边界
 
-- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；默认公开示例、攻击表达式和其他 Cookie 语义保持原样。
 
 - 测绘字段处置：原 fofa 字段为残缺表达式、错误平台语法或当前解析器不支持的形式，原值完整保留到 fofa_unverified，不把它当作已校验查询或受影响资产证据。正文检索方法保留；具体问题见下列原审阅项。
 
@@ -119,7 +118,7 @@ Accept-Ranges: bytes
 Content-Type: text/plain; charset=utf-8
 Date: Sun, 08 Oct 2023 03:59:53 GMT
 Last-Modified: Mon, 21 Aug 2023 06:20:56 GMT
-Set-Cookie: casdoor_session_id=e24**************************95e; Path=/; Expires=Tue, 07 Nov 2023 03:59:53 GMT; Max-Age=2592000; HttpOnly
+Set-Cookie: casdoor_session_id=e242bf06ee7f075f4dd6f206ebb7c95e; Path=/; Expires=Tue, 07 Nov 2023 03:59:53 GMT; Max-Age=2592000; HttpOnly
 root:x:0:0:root:/root:/bin/ash
 bin:x:1:1:bin:/bin:/sbin/nologin
 daemon:x:2:2:daemon:/sbin:/sbin/nologin

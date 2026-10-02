@@ -37,7 +37,7 @@ schema_version: "1"
 以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
 
 - fofa metadata is truncated web.body= and actually sourced from Hunter query
-- Long embedded Blade-Auth JWT appears unrelated/captured credential artifact; redact and explain necessity rather than copy
+- Long embedded Blade-Auth JWT appears unrelated/captured credential artifact; explain whether it is an authentication prerequisite
 - Base64 encoding mislabeled encryption; =3D transport escaping needs correct layer description instead of arbitrary removal
 - HTTP and base64 blocks mislabeled java; version is only product name
 - Full account/password artifact should be sanitized in examples

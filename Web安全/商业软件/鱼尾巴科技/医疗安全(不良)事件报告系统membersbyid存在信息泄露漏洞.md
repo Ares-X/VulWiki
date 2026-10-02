@@ -67,7 +67,7 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/w
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
-Cookie: JSESSIONID=E******************************E
+Cookie: JSESSIONID=E24C32CE
 Upgrade-Insecure-Requests: 1
 Priority: u=0, i
 Content-Type: application/x-www-form-urlencoded

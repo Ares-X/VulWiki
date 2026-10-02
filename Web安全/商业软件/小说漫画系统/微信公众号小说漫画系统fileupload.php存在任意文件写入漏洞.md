@@ -66,7 +66,7 @@ Accept-Language: zh-CN,zh;q=0.9,ru;q=0.8,en;q=0.7
 Cache-Control: no-cache
 Connection: keep-alive
 Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryAW4kl2MUmkWNAgBW
-Cookie: PHPSESSID=b************************5; curIndex=3; uloginid=586639
+Cookie: PHPSESSID=bf13e78oe1uqp8nh3crld1gu55; curIndex=3; uloginid=586639
 Host: 
 Origin: http://127.0.0.1
 Pragma: no-cache

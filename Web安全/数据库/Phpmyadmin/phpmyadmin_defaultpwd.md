@@ -10,7 +10,7 @@ identifier_status: "unknown"
 primary_identifiers: ""
 referenced_identifiers: ""
 identifier_role: "unknown"
-prerequisites: "部署使用脚本指定路径、数据库 [用户名/密码组合已隐藏] 凭据并允许该来源登录"
+prerequisites: "部署使用脚本指定路径、数据库 root/root 凭据并允许该来源登录"
 source_status: "unknown"
 side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
 id: "vw-7ebf717241b4c682a771c86b"
@@ -23,7 +23,7 @@ schema_version: "1"
 <!-- vulwiki-editorial:start -->
 ## 校订与适用边界
 
-- 适用前提：部署使用脚本指定路径、数据库 [用户名/密码组合已隐藏] 凭据并允许该来源登录
+- 适用前提：部署使用脚本指定路径、数据库 root/root 凭据并允许该来源登录
 - 证据范围：脚本尝试登录后以导航字符串判断成功；异常直接当不存在，main 未输出返回结果，不能据此证明可写 shell
 
 ### 尚未解决的证据缺口

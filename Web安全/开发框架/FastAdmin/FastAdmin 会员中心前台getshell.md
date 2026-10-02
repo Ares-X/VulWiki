@@ -20,7 +20,6 @@ schema_version: "1"
 
 ## 核对与使用边界
 
-- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；遮罩后的历史值不能作为可用登录凭据。原操作、请求方法和攻击表达式保留。
 
 本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
 
@@ -144,7 +143,7 @@ V1.0.0.20200506\_beta
     Referer: http://103.40.247.24/index/user/profile.html
     Accept-Encoding: gzip, deflate
     Accept-Language: zh-CN,zh;q=0.9
-    Cookie: Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1600651554; PHPSESSID=e42********************gd7; uid=3; token=251******************************4f4; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1600651809
+    Cookie: Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1600651554; PHPSESSID=e42uhkmhirv29cpd82qbubigd7; uid=3; token=251be91c-040b-4231-b955-76c3ecfaf4f4; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1600651809
     Connection: close
     
     ------WebKitFormBoundaryJ60Dcmopu4qDLQwq

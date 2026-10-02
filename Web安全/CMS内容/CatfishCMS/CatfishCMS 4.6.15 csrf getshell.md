@@ -26,7 +26,7 @@ schema_version: "1"
 
 - **事实待核（1）**：Version evidence inconsistent throughout。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
 
-- **凭据与会话边界（2）**：Token read using same-origin XSS is session riding; not independent CSRF-token bypass vulnerability。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+- **凭据与会话边界（2）**：Token read using same-origin XSS is session riding; not independent CSRF-token bypass vulnerability。抓包中的会话不能视为未认证访问证明。需重新取得授权测试会话，不能复用文中值。
 
 - **结论使用边界（3）**：Script expects JSON for HTML pages it appends/parses; verify actual responses。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
 

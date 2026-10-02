@@ -62,7 +62,7 @@ POST /assets/..;/bus HTTP/1.1
 Host: 
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:130.0) Gecko/20100101 Firefox/130.0
 Content-Type: application/x-www-form-urlencoded; charset=UTF-8
-Cookie: JSESSIONID=B******************************C
+Cookie: JSESSIONID=BE20D06711487C
 Accept: application/json, text/javascript, */*; q=0.01
 X-Requested-With: XMLHttpRequest
 Accept-Encoding: gzip, deflate

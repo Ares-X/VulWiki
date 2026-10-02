@@ -62,7 +62,7 @@ schema_version: "1"
 ```http
 POST /admin/controller/ue_serve.php?action=image&encode=utf-8 HTTP/2
 Host: 
-Cookie: PHPSESSID=e************************r
+Cookie: PHPSESSID=ecq4ucplk5n6e3ipihvktl103r
 Sec-Ch-Ua: "Not;A=Brand";v="99", "Chromium";v="106"
 Sec-Ch-Ua-Platform: "Windows"
 Sec-Ch-Ua-Mobile: ?0

@@ -35,7 +35,7 @@ schema_version: "1"
 
 以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
 
-- <?phpinfo()；?>缺php开标记后的空白，可能按短标签解释或原文错误，不能直接当标准phpinfo有效代码
+- `<?phpinfo()；?>`缺php开标记后的空白，可能按短标签解释或原文错误，不能直接当标准phpinfo有效代码
 - FOFA把localhost URL的Markdown链接塞进查询，严重格式污染，需重建
 - Content-Length779与短multipart不符，UPLOAD_ERR_OK为客户端字段不代表服务器成功
 - 固定周目录路径无响应/执行结果，补版本/清理/修复

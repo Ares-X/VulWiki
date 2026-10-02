@@ -72,7 +72,7 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate
 Connection: close
-Cookie: Secure; JSESSIONID=a*******************w; Secure; testBanCookie=test
+Cookie: Secure; JSESSIONID=abc6xLBV7S2jvgm3CB50w; Secure; testBanCookie=test
 Upgrade-Insecure-Requests: 1
 Cache-Control: max-age=0
 Content-Type: multipart/form-data; boundary=--------1638451160

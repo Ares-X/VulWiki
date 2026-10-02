@@ -37,7 +37,7 @@ schema_version: "1"
 
 - 同CNVD01363文章同URL/正常请求/sqlmap验证，保留来源合并
 - ordeby拼错应orderby；HTTP误标sql；无实际注入参数及返回文本
-- 请求泄露手机号/会话Token/跟踪标识，建议脱敏，未实际发送任何请求
+- 请求泄露手机号/会话Token/跟踪标识，未实际发送任何请求
 
 ## 操作风险
 
@@ -88,7 +88,7 @@ Sec-Fetch-User: ?1
 Sec-Fetch-Dest: document
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-TW;q=0.6
-Cookie: UM_distinctid=1785f7392888e1-02ece8c7e9a996-5771031-1fa400-1785f73928943d; landray_danyuan=null; landray_guanjianci=null; landray_sorce=baidupinzhuanwy; landray_jihua=null; JSESSIONID=2******************************E; Hm_lvt_223eecc93377a093d4111a2d7ea28f51=1616509114,1616566341,1616566350; Hm_lpvt_223eecc93377a093d4111a2d7ea28f51=1616566350; Hm_lvt_d14cb406f01f8101884d7cf81981d8bb=1616509114,1616566341,1616566350; Hm_lpvt_d14cb406f01f8101884d7cf81981d8bb=1616566507; Hm_lvt_95f4f43e7aa1fe68a51c44ae4eed925d=1616509872,1616509969,1616509973,1616566507; Hm_lpvt_95f4f43e7aa1fe68a51c44ae4eed925d=1616566507; Hm_lvt_22f1fea4412727d23e6a998a4b46f2ab=1616509872,1616509969,1616509973,1616566507; Hm_lpvt_22f1fea4412727d23e6a998a4b46f2ab=1616566507; fd_name=%E5%95%8A%E7%9A%84%E5%93%88; fd_id=1785f817dd0f5a4beaa482646cb9a2d8; nc_phone=15572002383; j_lang=zh-CN; LtpaToken=A**********************************************************=; Hm_lvt_95cec2a2f107db33ad817ed8e4a3073b=1616510026,1616566523; Hm_lpvt_95cec2a2f107db33ad817ed8e4a3073b=1616566523; add_customer=0
+Cookie: UM_distinctid=1785f7392888e1-02ece8c7e9a996-5771031-1fa400-1785f73928943d; landray_danyuan=null; landray_guanjianci=null; landray_sorce=baidupinzhuanwy; landray_jihua=null; JSESSIONID=232B6933CF33B5422F9D2649739D48FE; Hm_lvt_223eecc93377a093d4111a2d7ea28f51=1616509114,1616566341,1616566350; Hm_lpvt_223eecc93377a093d4111a2d7ea28f51=1616566350; Hm_lvt_d14cb406f01f8101884d7cf81981d8bb=1616509114,1616566341,1616566350; Hm_lpvt_d14cb406f01f8101884d7cf81981d8bb=1616566507; Hm_lvt_95f4f43e7aa1fe68a51c44ae4eed925d=1616509872,1616509969,1616509973,1616566507; Hm_lpvt_95f4f43e7aa1fe68a51c44ae4eed925d=1616566507; Hm_lvt_22f1fea4412727d23e6a998a4b46f2ab=1616509872,1616509969,1616509973,1616566507; Hm_lpvt_22f1fea4412727d23e6a998a4b46f2ab=1616566507; fd_name=%E5%95%8A%E7%9A%84%E5%93%88; fd_id=1785f817dd0f5a4beaa482646cb9a2d8; nc_phone=15572002383; j_lang=zh-CN; LtpaToken=AAECAzYwNUFEOEZBNjA1QjgxQkFsdW9stJ5e1pcW1hgQi3cOa0iEyAhdZZs=; Hm_lvt_95cec2a2f107db33ad817ed8e4a3073b=1616510026,1616566523; Hm_lpvt_95cec2a2f107db33ad817ed8e4a3073b=1616566523; add_customer=0
 ```
 
 保存为文件，使用 Sqlmap 跑一下注入

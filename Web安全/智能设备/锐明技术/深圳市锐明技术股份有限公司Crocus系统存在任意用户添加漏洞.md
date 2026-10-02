@@ -38,7 +38,6 @@ source_status: "recorded"
 - 无角色对照/创建响应；登录结果仅文字
 - 元数据body残缺
 - 已落实的文本修订：残缺指纹退出可执行索引并保留原值。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
-- 样例会话、令牌或共享秘密已按具体值遮罩中段并保留首尾；不能直接用于请求。公开默认/测试凭据与算法常量不因长得像密码而改写；其用途仍须按原文说明判断
 
 ### 操作风险与恢复
 
@@ -71,7 +70,7 @@ X-Requested-With: XMLHttpRequest
 Token: d2Vic2VjOjE3MjQwNjk4NzE5NDk=
 Content-Type: application/x-www-form-urlencoded; charset=UTF-8
 Accept-Encoding: gzip, deflate
-Cookie: JSESSIONID=542**************************2F9; Saffron.U=VUlEPTImVU49d2Vic2VjJkdJRD0xNzI0MDY5ODcxOTQ5MSZSSUQ9MSZNPUJNYXAmSU5TPTE=
+Cookie: JSESSIONID=5420BDDEB39984240BE700F2E755F2F9; Saffron.U=VUlEPTImVU49d2Vic2VjJkdJRD0xNzI0MDY5ODcxOTQ5MSZSSUQ9MSZNPUJNYXAmSU5TPTE=
 Accept: application/json, text/javascript, */*; q=0.01
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
 Content-Length: 243

@@ -37,7 +37,6 @@ source_status: "unknown"
 - 片段chmod缺右括号、路径连接多+；array_key_exists缺参数需原源/运行版本确认
 - 请求含真实公网Origin/Referer应示例化；全局版本缺失
 - 已落实的文本修订：HTTP 报文围栏改为 http。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
-- 样例会话、令牌或共享秘密已按具体值遮罩中段并保留首尾；不能直接用于请求。公开默认/测试凭据与算法常量不因长得像密码而改写；其用途仍须按原文说明判断
 
 ### 操作风险与恢复
 
@@ -187,7 +186,7 @@ POST code 传参写入文件 test.php.yml, 请求包如下
 ```http
 POST /lib/ajaxHandlers/ajaxEditTemplate.php HTTP/1.1
 Host: 
-Cookie: PHPSESSID=fv8********************vj7
+Cookie: PHPSESSID=fv8j4c6r4gofug1vr9v3efdvj7
 Content-Length: 81
 Cache-Control: max-age=0
 Sec-Ch-Ua: " Not A;Brand";v="99", "Chromium";v="90", "Google Chrome";v="90"

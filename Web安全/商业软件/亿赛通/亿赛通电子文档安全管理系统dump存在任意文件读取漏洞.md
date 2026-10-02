@@ -67,7 +67,7 @@ Accept: image/avif,image/webp,*/*
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate, br
 Connection: close
-Cookie: JSESSIONID=3******************************F
+Cookie: JSESSIONID=31E80EEC9EE4DC0835A362E81A9D179F
 Content-Type: application/x-www-form-urlencoded
 
 stream.url=file:///C:\Program Files\

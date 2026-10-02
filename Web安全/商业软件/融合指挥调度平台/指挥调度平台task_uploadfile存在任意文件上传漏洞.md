@@ -64,7 +64,7 @@ Host: {hostname}
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36
 Connection: close
 Content-Type: multipart/form-data; boundary=----WebKitFormBoundary25qW4eG1Jt50iyf7
-Cookie: PHPSESSID=4******************************1
+Cookie: PHPSESSID=403fc1
 
 ------WebKitFormBoundary25qW4eG1Jt50iyf7
 Content-Disposition: form-data; name="uuid"

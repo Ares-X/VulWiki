@@ -37,7 +37,7 @@ schema_version: "1"
 以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
 
 - 只有accountname=1正常请求和sqlmap命令，无注入或响应输出，不能证明SQLi
-- Cookie __session等残留格式异常应清理；skip-waf参数不构成绕过证明
+- Cookie __session等残留格式异常需回原始报文核对；skip-waf参数不构成绕过证明
 - 标题厂商较明确但缺发行版本/补丁/数据库条件
 
 ## 操作风险
@@ -71,7 +71,7 @@ Accept-Encoding: gzip, deflate
 Content-Type: application/x-www-form-urlencoded; charset=UTF-8
 X-Requested-With: XMLHttpRequest
 Connection: close
-Cookie: JSESSIONID=C******************************C; __session:0.5376174871119012:=http:
+Cookie: JSESSIONID=CC105C5EED7D5DE8BFCB92D7F4BB74DC; __session:0.5376174871119012:=http:
 
 accountname=1
 ```

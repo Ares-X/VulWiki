@@ -28,7 +28,7 @@ schema_version: "1"
 
 来源证据范围：BleepingComputer named only
 
-- **凭据与会话边界（1）**：TargetaccountID conflated withcredentialID withinsamearticle; patch/dateconsistency needsprimaryvalidation。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+- **凭据与会话边界（1）**：TargetaccountID conflated withcredentialID withinsamearticle; patch/dateconsistency needsprimaryvalidation。抓包中的会话不能视为未认证访问证明。需重新取得授权测试会话，不能复用文中值。
 
 - **证据待核（2）**：Exposurefingerprints6000/45000 are not confirmedvulnerableassets; no sourceURL。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
 

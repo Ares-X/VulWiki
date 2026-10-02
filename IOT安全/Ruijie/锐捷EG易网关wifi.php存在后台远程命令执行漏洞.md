@@ -37,7 +37,6 @@ source_status: "recorded"
 - 简介误写cli；与branch_import相同province但动作不同不直接合并
 - 无响应/源码/版本
 - 已落实的文本修订：HTTP 报文围栏改为 http。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
-- 样例会话、令牌或共享秘密已按具体值遮罩中段并保留首尾；不能直接用于请求。公开默认/测试凭据与算法常量不因长得像密码而改写；其用途仍须按原文说明判断
 
 ### 操作风险与恢复
 
@@ -80,7 +79,7 @@ app="Ruijie-EG易网关"
 POST /itbox_pi/wifi.php?a=branch_wifi HTTP/1.1
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
 Content-Type: application/x-www-form-urlencoded
-Cookie: LOCAL_LANG_COOKIE=zh; RUIJIEID=ihv********************9f5; helpKey=home_sys;user=admin
+Cookie: LOCAL_LANG_COOKIE=zh; RUIJIEID=ihvlofd9j5bfjbikfrtng7p9f5; helpKey=home_sys;user=admin
 X-Requested-With: XMLHttpRequest
 Host: 
 Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2

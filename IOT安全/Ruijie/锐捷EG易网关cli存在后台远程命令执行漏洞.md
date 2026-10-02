@@ -37,7 +37,6 @@ source_status: "recorded"
 - 同735请求，缺根因/授权边界/响应
 - 缺版本及补丁
 - 已落实的文本修订：HTTP 报文围栏改为 http。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
-- 样例会话、令牌或共享秘密已按具体值遮罩中段并保留首尾；不能直接用于请求。公开默认/测试凭据与算法常量不因长得像密码而改写；其用途仍须按原文说明判断
 
 ### 操作风险与恢复
 
@@ -82,7 +81,7 @@ Host:
 User-Agent: Go-http-client/1.1
 Content-Length: 24
 Content-Type: application/x-www-form-urlencoded
-Cookie: LOCAL_LANG_COOKIE=zh; RUIJIEID=j4r********************r45; helpKey=home_sys;user=admin; 
+Cookie: LOCAL_LANG_COOKIE=zh; RUIJIEID=j4rjrjdtilmhj824o98sv11r45; helpKey=home_sys;user=admin; 
 X-Requested-With: XMLHttpRequest
 Accept-Encoding: gzip
 

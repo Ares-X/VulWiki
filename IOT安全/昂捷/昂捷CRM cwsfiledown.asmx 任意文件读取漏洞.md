@@ -17,7 +17,7 @@ referenced_identifiers: ""
 prerequisites: "Windows，偏移1长度100；无认证声明，版本未知"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/IOT%E5%AE%89%E5%85%A8/%E6%98%82%E6%8D%B7/%E6%98%82%E6%8D%B7CRM%20cwsfiledown.asmx%20%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E.md"
 review_date: "2026-10-02"
-side_effects: "读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要且已脱敏的响应，不能由接口可达推定敏感内容已泄露"
+side_effects: "读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要的响应，不能由接口可达推定敏感内容已泄露"
 source_status: "unknown"
 ---
 
@@ -41,7 +41,7 @@ source_status: "unknown"
 
 ### 操作风险与恢复
 
-- 读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要且已脱敏的响应，不能由接口可达推定敏感内容已泄露
+- 读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要的响应，不能由接口可达推定敏感内容已泄露
 
 ### 待核与来源
 

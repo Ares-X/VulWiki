@@ -84,7 +84,7 @@ Origin: http://x.x.x.x:8088
 Referer: http://x.x.x.x:8088/Login/Index
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9
-Cookie: ASP.NET_SessionId=o**********************1
+Cookie: ASP.NET_SessionId=otvxgfy0csmrw4i5y5t24oo1
 Connection: close
 
 strName=admin&strPwd=123456

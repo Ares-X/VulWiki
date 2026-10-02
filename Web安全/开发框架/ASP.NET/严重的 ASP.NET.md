@@ -30,7 +30,7 @@ schema_version: "1"
 
 来源证据范围：Named translator/author and BleepingComputer article URL; primary Microsoft advisory mentioned but not linked
 
-- **凭据与会话边界（1）**：Lead overstates execution/OS privilege consequences without a demonstrated chain；依据：获得系统权限 versus later application-cookie/signing discussion。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+- **凭据与会话边界（1）**：Lead overstates execution/OS privilege consequences without a demonstrated chain；依据：获得系统权限 versus later application-cookie/signing discussion。抓包中的会话不能视为未认证访问证明。需重新取得授权测试会话，不能复用文中值。
 
 - **代码与转录边界（2）**：Truncated filename and missing primary CVE/package metadata；依据：Filename 严重的 ASP.NET.md; body 微软紧急修复严重的 ASP.NET 漏洞。相应原代码作为存在此问题的历史样本保留，不能直接当作可运行、成功复现的 PoC；缺失内容需回原稿核对，不据此补造可执行攻击链。
 

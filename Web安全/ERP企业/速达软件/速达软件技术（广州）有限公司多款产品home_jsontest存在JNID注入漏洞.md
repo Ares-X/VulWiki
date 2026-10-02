@@ -74,7 +74,7 @@ Upgrade-Insecure-Requests: 1
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9
-Cookie: JSESSIONID=9******************************C
+Cookie: JSESSIONID=96BFB09D9ED705FAF1EFD3C
 Connection: close
 ```
 
@@ -98,7 +98,7 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/w
 Accept-Encoding: gzip, deflate
 cmd: whoami
 Accept-Language: zh-CN,zh;q=0.9
-Cookie: JSESSIONID=9******************************C
+Cookie: JSESSIONID=96BFB09D9ED705FAF1EFD3C
 Connection: close
 ```
 

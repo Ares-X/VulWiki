@@ -35,9 +35,8 @@ source_status: "recorded"
 
 - 简介误写cli
 - 样例ip末尾管道后续命令依赖服务端拼接，缺源码无法解释完整语法
-- 公网Host/会话需脱敏，写1.txt无回读输出或清理
+- 写1.txt无回读输出或清理
 - 已落实的文本修订：HTTP 报文围栏改为 http。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
-- 样例会话、令牌或共享秘密已按具体值遮罩中段并保留首尾；不能直接用于请求。公开默认/测试凭据与算法常量不因长得像密码而改写；其用途仍须按原文说明判断
 
 ### 操作风险与恢复
 
@@ -73,7 +72,7 @@ source_status: "recorded"
 POST /itbox_pi/vpn_quickset_service.php?a=set_vpn HTTP/1.1
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
 Content-Type: application/x-www-form-urlencoded
-Cookie: LOCAL_LANG_COOKIE=zh; RUIJIEID=bnr********************7a0; helpKey=home_sys;user=admin
+Cookie: LOCAL_LANG_COOKIE=zh; RUIJIEID=bnrul7jabde55u5moo2a4q57a0; helpKey=home_sys;user=admin
 X-Requested-With: XMLHttpRequest
 Host: 117.40.253.197:4430
 Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2

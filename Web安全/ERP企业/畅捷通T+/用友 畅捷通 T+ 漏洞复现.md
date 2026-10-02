@@ -94,7 +94,7 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/w
 Content-Type: application/x-www-form-urlencoded; charset=UTF-8
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9
-Cookie: ASP.NET_SessionId=g**********************g
+Cookie: ASP.NET_SessionId=gp3mxvri3leqbqazlatfx5jg
 
 {
 "pwdNew":"46f94c8de14fb36680850768ff1b7f2a"

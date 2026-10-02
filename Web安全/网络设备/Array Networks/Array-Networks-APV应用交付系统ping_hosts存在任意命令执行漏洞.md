@@ -37,7 +37,6 @@ source_status: "recorded"
 - 无成功响应/可观察结果证据；HTTP报文误标java
 - 仅转载来源，未有厂商/研究者公告
 - 已落实的文本修订：HTTP 报文围栏改为 http。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
-- 样例会话、令牌或共享秘密已按具体值遮罩中段并保留首尾；不能直接用于请求。公开默认/测试凭据与算法常量不因长得像密码而改写；其用途仍须按原文说明判断
 
 ### 操作风险与恢复
 
@@ -74,7 +73,7 @@ Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Connection: keep-alive
 Content-Length: 98
 
-["127.0.0.1| echo `whoami` received 2 3 4"]=1&csrfmiddlewaretoken=cXL**************************dWW
+["127.0.0.1| echo `whoami` received 2 3 4"]=1&csrfmiddlewaretoken=cXLnOdGshlksqOG0Ubnn4SlBvO8zOdWW
 ```
 
 

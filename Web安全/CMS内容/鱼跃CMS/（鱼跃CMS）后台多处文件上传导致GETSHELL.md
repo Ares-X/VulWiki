@@ -20,7 +20,6 @@ schema_version: "1"
 
 ## 核对与使用边界
 
-- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；遮罩后的历史值不能作为可用登录凭据。原操作、请求方法和攻击表达式保留。
 
 - 明确边界：三个成功点均为管理员安装主题、插件、系统升级的代码部署能力；还未证明越权、违反预期的路径逃逸或包来源信任问题，不能只因 ZIP 有 PHP 就确认漏洞。
 - 原“禁止解压 .php/禁整个主题插件目录 PHP 解析”的通用建议会破坏正常部署，应以管理权限、来源信任、官方包签名/目录约束为评估对象；保留原建议但不作为已验证修复。
@@ -106,7 +105,7 @@ Content-Length: 71759
 Origin: http://localhost
 Connection: close
 Referer: http://localhost/index.php/admin/index/themes.html
-Cookie: PHPSESSID=utc********************a85; yuyuelang=zh-cn
+Cookie: PHPSESSID=utce61jeq73k9pcbc8engkha85; yuyuelang=zh-cn
 
 -----------------------------61892826940153563153275250174
 Content-Disposition: form-data; name="file"; filename="tt.zip"
@@ -152,7 +151,7 @@ Content-Length: 71762
 Origin: http://localhost
 Connection: close
 Referer: http://localhost/index.php/admin/index/systemupgrade.html
-Cookie: yuyuelang=zh-cn; PHPSESSID=9jj********************jd5
+Cookie: yuyuelang=zh-cn; PHPSESSID=9jj6dorn39d4dn8aedtfq8ujd5
 
 -----------------------------28825598831172074626047113642
 Content-Disposition: form-data; name="file"; filename="tt.zip"

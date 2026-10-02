@@ -38,7 +38,6 @@ source_status: "recorded"
 - 新账号权限及是否可后台登录无证据；Content-Type表单却正文JSON需解释解析方式
 - fofa误录Hunter残缺字段
 - 已落实的文本修订：HTTP 报文围栏改为 http；残缺指纹退出可执行索引并保留原值。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
-- 样例会话、令牌或共享秘密已按具体值遮罩中段并保留首尾；不能直接用于请求。公开默认/测试凭据与算法常量不因长得像密码而改写；其用途仍须按原文说明判断
 
 ### 操作风险与恢复
 
@@ -76,7 +75,7 @@ panalog为北京派网软件有限公司，一款流量分析，日志分析管�
 ```http
 POST /singleuser_action.php HTTP/1.1
 Host: xx.xx.xx.xx
-Cookie: PHPSESSID=4dk********************rn6
+Cookie: PHPSESSID=4dkc7q5hu7lkdlsfm5a0tcirn6
 User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
 Accept-Language: zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3

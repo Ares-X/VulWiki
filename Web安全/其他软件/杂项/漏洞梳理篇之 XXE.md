@@ -45,7 +45,7 @@ schema_version: "1"
 6. PHP/JAVA/Python函数下划线转义污染，PHP旧禁用函数版本适用与Java仅setExpandEntityReferences不足覆盖外部DTD/SSRF，关键词黑名单不是可靠防护
 7. HTTP访问RDP/SMB超时或HTTPfailed不能证明端口关闭
 8. 命令执行需额外wrapper/扩展不是XXE必然
-9. 公众号编辑后台tokenURL属非公开引用应清理，Base64称解密错误
+9. 公众号编辑后台tokenURL不能作为可公开访问的来源依据，Base64称解密错误
 
 ### 操作风险
 

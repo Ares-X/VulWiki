@@ -20,13 +20,12 @@ schema_version: "1"
 
 ## 核对与使用边界
 
-- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；默认公开示例、攻击表达式和其他 Cookie 语义保持原样。
 
 本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
 
 适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：所给路由将输入反射入模板二次解析，lg=system Cookie控制函数；PHP允许系统调用
 
-- **凭据与会话边界（1）**：顶部Bypass exp缺lg Cookie及完整可触发路由，不是独立PoC。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+- **凭据与会话边界（1）**：顶部Bypass exp缺lg Cookie及完整可触发路由，不是独立PoC。抓包中的会话不能视为未认证访问证明。需重新取得授权测试会话，不能复用文中值。
 
 - **适用与权限边界（2）**：Linux/Windows两请求其实用不同路由/表达式，不应暗示只由OS区分；具体配置未给。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
 
@@ -61,7 +60,7 @@ X-Requested-With: XMLHttpRequest
 Referer: your-ip
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9
-Cookie: lg=system; PbootSystem=8ea********************6c6
+Cookie: lg=system; PbootSystem=8ea446nv2usihctikbjm7qg6c6
 Connection: close
 ```
 
@@ -76,7 +75,7 @@ X-Requested-With: XMLHttpRequest
 Referer:your-ip
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9
-Cookie: lg=system; PbootSystem=8ea********************6c6
+Cookie: lg=system; PbootSystem=8ea446nv2usihctikbjm7qg6c6
 Connection: close
 ```
 

@@ -64,7 +64,7 @@ POST /upload?dir=cmVwb3NpdG9yeQ==&name=ZGVtby5qc3A=&start=0&size=7000 HTTP/1.1
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36
 Content-Type: multipart/form-data; boundary=00content0boundary00
 Host: 
-Cookie: JSESSIONID=A******************************A
+Cookie: JSESSIONID=AB3CC11444E566879F70BE78C0C518CA
 Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
 Connection: close
 

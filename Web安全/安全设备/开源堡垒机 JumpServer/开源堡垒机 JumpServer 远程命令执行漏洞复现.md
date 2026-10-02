@@ -16,7 +16,7 @@ referenced_identifiers: ""
 prerequisites: "2.6<2.6.2/2.5<2.5.4/2.4<2.4.5及1.5.9声称，测试2.6.1；需有可连接资产与日志ID"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%AE%89%E5%85%A8%E8%AE%BE%E5%A4%87/%E5%BC%80%E6%BA%90%E5%A0%A1%E5%9E%92%E6%9C%BA%20JumpServer/%E5%BC%80%E6%BA%90%E5%A0%A1%E5%9E%92%E6%9C%BA%20JumpServer%20%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0.md"
 review_date: "2026-10-02"
-side_effects: "读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要且已脱敏的响应，不能由接口可达推定敏感内容已泄露"
+side_effects: "读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要的响应，不能由接口可达推定敏感内容已泄露"
 source_url: "https://mp.weixin.qq.com/s/1K4qMViaMShvv-Nh-XKoYw"
 source_status: "recorded"
 ---
@@ -40,7 +40,7 @@ source_status: "recorded"
 
 ### 操作风险与恢复
 
-- 读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要且已脱敏的响应，不能由接口可达推定敏感内容已泄露
+- 读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要的响应，不能由接口可达推定敏感内容已泄露
 
 ### 待核与来源
 

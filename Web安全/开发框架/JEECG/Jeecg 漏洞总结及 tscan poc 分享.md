@@ -21,7 +21,6 @@ schema_version: "1"
 
 ## 核对与使用边界
 
-- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；遮罩后的历史值不能作为可用登录凭据。原操作、请求方法和攻击表达式保留。
 
 本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
 
@@ -43,7 +42,7 @@ schema_version: "1"
 
 - **证据待核（6）**：影响结论超出提供的证据；依据：普通文本以jsp后缀上传/取回不证明JSP执行；目录fileTree只证明目录枚举；SQL注入至OS命令需要额外链条。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
 
-- **凭据与会话边界（7）**：巨大排版垃圾和凭据样本；依据：两行等号合计79274字符；多个长历史JWT、固定回连和不透明bytecode应标实验占位/来源，勿视为可直接复用。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+- **凭据与会话边界（7）**：巨大排版垃圾和凭据样本；依据：两行等号合计79274字符；多个长历史JWT、固定回连和不透明bytecode需核对实验环境与来源，勿视为可直接复用。抓包中的会话不能视为未认证访问证明。需重新取得授权测试会话，不能复用文中值。
 
 历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
@@ -671,7 +670,7 @@ User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:133.0) Gecko/201001
 Accept: application/json, text/plain, */*
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate, br
-X-Access-Token: eyJ*****************************************************************************************************************************2ao
+X-Access-Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MzYyMTcyNDQsInVzZXJuYW1lIjoiYWRtaW4ifQ.-Z6FINUMTWQkOR6u009cde9BFyb-l65VWRhUXDz_2ao
 Tenant-Id: 0
 Sec-Fetch-Dest: empty
 Sec-Fetch-Mode: cors
@@ -696,7 +695,7 @@ User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:133.0) Gecko/201001
 Accept: application/json, text/plain, */*
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate, br
-X-Access-Token: eyJ*****************************************************************************************************************************2ao
+X-Access-Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MzYyMTcyNDQsInVzZXJuYW1lIjoiYWRtaW4ifQ.-Z6FINUMTWQkOR6u009cde9BFyb-l65VWRhUXDz_2ao
 Tenant-Id: 0
 Sec-Fetch-Dest: empty
 Sec-Fetch-Mode: cors
@@ -721,7 +720,7 @@ User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:133.0) Gecko/201001
 Accept: application/json, text/plain, */*
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate, br
-X-Access-Token: eyJ*****************************************************************************************************************************2ao
+X-Access-Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MzYyMTcyNDQsInVzZXJuYW1lIjoiYWRtaW4ifQ.-Z6FINUMTWQkOR6u009cde9BFyb-l65VWRhUXDz_2ao
 Tenant-Id: 0
 Sec-Fetch-Dest: empty
 Sec-Fetch-Mode: cors

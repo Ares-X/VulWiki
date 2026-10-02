@@ -38,7 +38,6 @@ source_status: "unknown"
 - 登录成功以status/1子串、正则解析str(headers)脆弱，凭据未编码；写test_test.txt有残留且静态文件可能误报
 - 不能将前置login.php漏洞与后台branch入口合成一个免认证根因
 - 已落实的文本修订：“/etc/psswd”改为“/etc/passwd”；HTTP 报文围栏改为 http。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
-- 样例会话、令牌或共享秘密已按具体值遮罩中段并保留首尾；不能直接用于请求。公开默认/测试凭据与算法常量不因长得像密码而改写；其用途仍须按原文说明判断
 
 ### 操作风险与恢复
 
@@ -185,7 +184,7 @@ Host:
 User-Agent: Go-http-client/1.1
 Content-Length: 41
 Content-Type: application/x-www-form-urlencoded
-Cookie: RUIJIEID=522********************gk3;user=admin;
+Cookie: RUIJIEID=52222egp72ilkpf2de7qbrigk3;user=admin;
 X-Requested-With: XMLHttpRequest
 Accept-Encoding: gzip
 

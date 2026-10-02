@@ -38,7 +38,6 @@ source_status: "recorded"
 - 与812多itc前缀且产品不同，先关联组件族不要盲删
 - 元数据残缺，鉴权未定义
 - 已落实的文本修订：HTTP 报文围栏改为 http；残缺指纹退出可执行索引并保留原值。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
-- 样例会话、令牌或共享秘密已按具体值遮罩中段并保留首尾；不能直接用于请求。公开默认/测试凭据与算法常量不因长得像密码而改写；其用途仍须按原文说明判断
 
 ### 操作风险与恢复
 
@@ -68,7 +67,7 @@ source_status: "recorded"
 ```http
 GET /portal/itc/attachment_downloadByUrlAtt.action?filePath=file:/ HTTP/1.1
 Host: xx.xx.xx.xx
-Cookie: JSESSIONID=E62**************************990
+Cookie: JSESSIONID=E6205C47507484A3593288B704F31990
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/119.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2

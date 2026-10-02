@@ -36,7 +36,6 @@ source_status: "unknown"
 - 请求带会话未说明匿名或后台，任意文件范围取决进程权限
 - 影响版本仅产品名，图示响应未转录
 - 已落实的文本修订：HTTP 报文围栏改为 http。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
-- 样例会话、令牌或共享秘密已按具体值遮罩中段并保留首尾；不能直接用于请求。公开默认/测试凭据与算法常量不因长得像密码而改写；其用途仍须按原文说明判断
 
 ### 操作风险与恢复
 
@@ -89,7 +88,7 @@ Sec-Fetch-Mode: navigate
 Sec-Fetch-Dest: document
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-TW;q=0.6
-Cookie: __s_sessionid__=7rl********************0t7
+Cookie: __s_sessionid__=7rl7vvg1mlc00gf4pfmo74h0t7
 ```
 
 ![](./.resource/网神-下一代极速防火墙-pki_file_download-任意文件读取漏洞/media/202202162229183.png)

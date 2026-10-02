@@ -49,18 +49,6 @@
       "severity": "warning"
     },
     {
-      "code": "site_relative_link",
-      "count": 1,
-      "detail": "origin-relative website links require original-site review; example: /who-uses-nodezero",
-      "key": "0065b1ee0b11e6b22f42a84b",
-      "line": 99,
-      "lines": [
-        99
-      ],
-      "path": "Web安全/中间件/Apache Solr/CVE-2026-44825 _ Apache Solr AuthTool Hardcoded Credentials Vulnerabil.md",
-      "severity": "warning"
-    },
-    {
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly missing; reference links are not confirmed provenance",
@@ -1934,18 +1922,6 @@
       "severity": "warning"
     },
     {
-      "code": "site_relative_link",
-      "count": 1,
-      "detail": "origin-relative website links require original-site review; example: /who-uses-nodezero",
-      "key": "084ec1449065c19adb0b7df2",
-      "line": 109,
-      "lines": [
-        109
-      ],
-      "path": "Web安全/其他软件/杂项/CVE-2025-54309.md",
-      "severity": "warning"
-    },
-    {
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
@@ -2327,6 +2303,18 @@
         0
       ],
       "path": "Web安全/开发框架/Spring/【风险通告】Spring Security身份验证绕过漏洞CVE-2024-22234.md",
+      "severity": "warning"
+    },
+    {
+      "code": "site_relative_link",
+      "count": 1,
+      "detail": "origin-relative website links require original-site review; example: /login?return_to=https%3A%2F%2Fgithub.com%2FBishopFox%2FCVE-2026-34908-check",
+      "key": "09d79b95d88fe3127ebd0a4f",
+      "line": 71,
+      "lines": [
+        71
+      ],
+      "path": "Web安全/其他软件/杂项/CHYbeta starred BishopFox_CVE-2026-34908-check.md",
       "severity": "warning"
     },
     {
@@ -3514,18 +3502,6 @@
       "severity": "warning"
     },
     {
-      "code": "site_relative_link",
-      "count": 1,
-      "detail": "origin-relative website links require original-site review; example: /who-uses-nodezero",
-      "key": "0f75eeb4f347b47745a7e899",
-      "line": 111,
-      "lines": [
-        111
-      ],
-      "path": "Web安全/其他软件/杂项/CVE-2025-9316, CVE-2025-11700.md",
-      "severity": "warning"
-    },
-    {
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
@@ -4147,6 +4123,18 @@
         0
       ],
       "path": "Web安全/其他软件/杂项/【技术分享】Visual Studio Code本地代码执行漏洞(CVE-2019-1414).md",
+      "severity": "warning"
+    },
+    {
+      "code": "site_relative_link",
+      "count": 1,
+      "detail": "origin-relative website links require original-site review; example: /who-uses-nodezero#itops",
+      "key": "127c6b5e4af4d82724c51f00",
+      "line": 112,
+      "lines": [
+        112
+      ],
+      "path": "Web安全/其他软件/杂项/CVE-2025-14611.md",
       "severity": "warning"
     },
     {
@@ -5095,6 +5083,18 @@
         0
       ],
       "path": "Web安全/CMS内容/PbootCMS/PbootCMS v2.0.7 模板注入.md",
+      "severity": "warning"
+    },
+    {
+      "code": "site_relative_link",
+      "count": 1,
+      "detail": "origin-relative website links require original-site review; example: /who-uses-nodezero#itops",
+      "key": "1610e6b6adbd434dcd8013f0",
+      "line": 109,
+      "lines": [
+        109
+      ],
+      "path": "Web安全/其他软件/杂项/CVE-2025-54309.md",
       "severity": "warning"
     },
     {
@@ -7103,6 +7103,18 @@
       "severity": "warning"
     },
     {
+      "code": "site_relative_link",
+      "count": 1,
+      "detail": "origin-relative website links require original-site review; example: /who-uses-nodezero#itops",
+      "key": "1eab0ee42696d195e891978e",
+      "line": 111,
+      "lines": [
+        111
+      ],
+      "path": "Web安全/其他软件/杂项/CVE-2025-61757.md",
+      "severity": "warning"
+    },
+    {
       "code": "fingerprint_unverified",
       "count": 1,
       "detail": "fofa: retained unverified query excluded from fingerprint index",
@@ -7496,18 +7508,6 @@
         0
       ],
       "path": "Web安全/其他软件/杂项/工作流接口没登录就能执行命令：Orkes漏洞已遭利用.md",
-      "severity": "warning"
-    },
-    {
-      "code": "site_relative_link",
-      "count": 1,
-      "detail": "origin-relative website links require original-site review; example: /resources/con[REDACTED]6-2/",
-      "key": "1fd2751bf4c8536864ad2b68",
-      "line": 68,
-      "lines": [
-        68
-      ],
-      "path": "Web安全/桌面软件/Praetorian/Praetorian_How I Found the Worst ASP.NET Vulnerability — A $10K Bug C.md",
       "severity": "warning"
     },
     {
@@ -8436,18 +8436,6 @@
       "severity": "warning"
     },
     {
-      "code": "site_relative_link",
-      "count": 1,
-      "detail": "origin-relative website links require original-site review; example: /who-uses-nodezero",
-      "key": "241f4d15b7e2c1fc7bdfaf3f",
-      "line": 110,
-      "lines": [
-        110
-      ],
-      "path": "Web安全/其他软件/杂项/CVE-2025-59287.md",
-      "severity": "warning"
-    },
-    {
       "code": "fingerprint_unverified",
       "count": 1,
       "detail": "fofa: retained unverified query excluded from fingerprint index",
@@ -8469,18 +8457,6 @@
         0
       ],
       "path": "Web安全/CMS内容/MyuCMS/MyuCMS v2.1 文件上传漏洞.md",
-      "severity": "warning"
-    },
-    {
-      "code": "site_relative_link",
-      "count": 1,
-      "detail": "origin-relative website links require original-site review; example: /who-uses-nodezero",
-      "key": "2444a6ec58e0dd01b190c458",
-      "line": 109,
-      "lines": [
-        109
-      ],
-      "path": "Web安全/其他软件/杂项/CVE-2025-7776.md",
       "severity": "warning"
     },
     {
@@ -8805,6 +8781,18 @@
         0
       ],
       "path": "Web安全/商业软件/申瓯通信设备在线录音管理系统/申瓯通信设备在线录音管理系统-index-文件包含.md",
+      "severity": "warning"
+    },
+    {
+      "code": "site_relative_link",
+      "count": 1,
+      "detail": "origin-relative website links require original-site review; example: /resources/continuous-offensive-security-outlook-2026-2/?utm_source=homepage&utm_medium=website-banner&utm_content=continuous-offensive-security-2026&utm_campaign=2026-industry-outlook-report",
+      "key": "25ea132d5c159d90479f7db3",
+      "line": 68,
+      "lines": [
+        68
+      ],
+      "path": "Web安全/桌面软件/Praetorian/Praetorian_CVE-2025-52493_ When Password FieldsAren’t Enough – Client-.md",
       "severity": "warning"
     },
     {
@@ -9213,18 +9201,6 @@
         0
       ],
       "path": "Web安全/开发框架/FasterXML jackson/（CVE-2020-24750）FasterXML jackson-databind 远程命令执行漏洞.md",
-      "severity": "warning"
-    },
-    {
-      "code": "site_relative_link",
-      "count": 1,
-      "detail": "origin-relative website links require original-site review; example: /resources/con[REDACTED]6-2/",
-      "key": "276443ae261170f5f977b119",
-      "line": 68,
-      "lines": [
-        68
-      ],
-      "path": "Web安全/桌面软件/Praetorian/Praetorian_CVE-2025-52493_ When Password FieldsAren’t Enough – Client-.md",
       "severity": "warning"
     },
     {
@@ -11892,18 +11868,6 @@
       "severity": "warning"
     },
     {
-      "code": "site_relative_link",
-      "count": 1,
-      "detail": "origin-relative website links require original-site review; example: /who-uses-nodezero",
-      "key": "31d8a209c2d887e1df1aa263",
-      "line": 108,
-      "lines": [
-        108
-      ],
-      "path": "Web安全/网络设备/Check Point/CVE-2026-50751 _ Check Point Security Gateway Improper Authentication.md",
-      "severity": "warning"
-    },
-    {
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
@@ -11961,6 +11925,18 @@
         0
       ],
       "path": "Web安全/CMS内容/Craft CMS/CISA：Craft CMS代码注入漏洞已遭利用.md",
+      "severity": "warning"
+    },
+    {
+      "code": "site_relative_link",
+      "count": 1,
+      "detail": "origin-relative website links require original-site review; example: /resources/continuous-offensive-security-outlook-2026-2/?utm_source=homepage&utm_medium=website&utm_content=continuous-offensive-security-2026&utm_campaign=2026-industry-outlook-report",
+      "key": "323021b522f6788b1a92edcc",
+      "line": 68,
+      "lines": [
+        68
+      ],
+      "path": "Web安全/桌面软件/Praetorian/Praetorian_How I Found the Worst ASP.NET Vulnerability — A $10K Bug C.md",
       "severity": "warning"
     },
     {
@@ -13557,18 +13533,6 @@
         0
       ],
       "path": "Web安全/网络设备/Cisco/Cisco Webex 漏洞可让黑客通过会议链接获取代码执行权限.md",
-      "severity": "warning"
-    },
-    {
-      "code": "site_relative_link",
-      "count": 1,
-      "detail": "origin-relative website links require original-site review; example: /who-uses-nodezero",
-      "key": "396046b6b3c4820e237c9eec",
-      "line": 98,
-      "lines": [
-        98
-      ],
-      "path": "Web安全/中间件/Squid/CVE-2026-47729 _ Squid Heap Buffer Overread Vulnerability.md",
       "severity": "warning"
     },
     {
@@ -16945,18 +16909,6 @@
       "severity": "warning"
     },
     {
-      "code": "site_relative_link",
-      "count": 1,
-      "detail": "origin-relative website links require original-site review; example: /who-uses-nodezero",
-      "key": "4716d2f253c75aba3f66b981",
-      "line": 105,
-      "lines": [
-        105
-      ],
-      "path": "Web安全/网络设备/Palo Alto/CVE-2026-0257 _ Palo Alto Networks PAN-OS GlobalProtect Authentication.md",
-      "severity": "warning"
-    },
-    {
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
@@ -18817,6 +18769,18 @@
       "severity": "warning"
     },
     {
+      "code": "noncontent_link_candidate",
+      "count": 1,
+      "detail": "possible source code or original-site route: 1. [https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities](https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities)",
+      "key": "4ee1f64794a4e4ebc807aa06",
+      "line": 49,
+      "lines": [
+        49
+      ],
+      "path": "Web安全/服务器软件/Kubernetes/Kubernetes-privileged-特权容器导致容器逃逸.md",
+      "severity": "warning"
+    },
+    {
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
@@ -19534,6 +19498,18 @@
         0
       ],
       "path": "Web安全/中间件/Redis/Redis存在未授权访问导致的RCE.md",
+      "severity": "warning"
+    },
+    {
+      "code": "site_relative_link",
+      "count": 1,
+      "detail": "origin-relative website links require original-site review; example: /who-uses-nodezero#itops",
+      "key": "519f23e8db405606c6ee1e9d",
+      "line": 102,
+      "lines": [
+        102
+      ],
+      "path": "Web安全/数据库/Oracle MySQL Server/CVE-2026-35273 _ Oracle PeopleSoft PeopleTools Unauthenticated Remote.md",
       "severity": "warning"
     },
     {
@@ -21113,18 +21089,6 @@
       "severity": "warning"
     },
     {
-      "code": "site_relative_link",
-      "count": 1,
-      "detail": "origin-relative website links require original-site review; example: /who-uses-nodezero",
-      "key": "5838eae7f25a377fc3d1fd94",
-      "line": 111,
-      "lines": [
-        111
-      ],
-      "path": "Web安全/其他软件/杂项/CVE-2025-12480.md",
-      "severity": "warning"
-    },
-    {
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly missing; reference links are not confirmed provenance",
@@ -21998,6 +21962,18 @@
         0
       ],
       "path": "Web安全/商业软件/MyQ X打印管理/MyQ 打印服务器未经身份验证的 RCE (CVE-2024-28059).md",
+      "severity": "warning"
+    },
+    {
+      "code": "site_relative_link",
+      "count": 1,
+      "detail": "origin-relative website links require original-site review; example: /who-uses-nodezero#itops",
+      "key": "5ba1ded640e80aeb062c20be",
+      "line": 109,
+      "lines": [
+        109
+      ],
+      "path": "Web安全/其他软件/杂项/CVE-2025-8356.md",
       "severity": "warning"
     },
     {
@@ -23921,18 +23897,6 @@
       "severity": "warning"
     },
     {
-      "code": "noncontent_link_candidate",
-      "count": 1,
-      "detail": "possible source code or original-site route: 1. [https://docs.docker.com/engine/reference/run/",
-      "key": "637746de9d40cabd72eafdc5",
-      "line": 49,
-      "lines": [
-        49
-      ],
-      "path": "Web安全/服务器软件/Kubernetes/Kubernetes-privileged-特权容器导致容器逃逸.md",
-      "severity": "warning"
-    },
-    {
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
@@ -24158,6 +24122,18 @@
         0
       ],
       "path": "Web安全/云平台/fnOS NAS/fnOS路径穿越与命令执行漏洞利用分析.md",
+      "severity": "warning"
+    },
+    {
+      "code": "site_relative_link",
+      "count": 1,
+      "detail": "origin-relative website links require original-site review; example: /who-uses-nodezero#itops",
+      "key": "647bbe53d7d7ce61a642cbd2",
+      "line": 105,
+      "lines": [
+        105
+      ],
+      "path": "Web安全/网络设备/Palo Alto/CVE-2026-0257 _ Palo Alto Networks PAN-OS GlobalProtect Authentication.md",
       "severity": "warning"
     },
     {
@@ -24914,18 +24890,6 @@
         0
       ],
       "path": "Web安全/OA办公/万户OA/万户ezEIP企业管理系统 productlist.aspx SQL注入漏洞.md",
-      "severity": "warning"
-    },
-    {
-      "code": "site_relative_link",
-      "count": 1,
-      "detail": "origin-relative website links require original-site review; example: /who-uses-nodezero",
-      "key": "68229305b96dd53892d75402",
-      "line": 105,
-      "lines": [
-        105
-      ],
-      "path": "Web安全/网络设备/Ivanti/CVE-2026-10520 _ Ivanti Sentry Pre-Authenticated OS Command Injection.md",
       "severity": "warning"
     },
     {
@@ -30671,6 +30635,18 @@
       "severity": "warning"
     },
     {
+      "code": "site_relative_link",
+      "count": 1,
+      "detail": "origin-relative website links require original-site review; example: /who-uses-nodezero#itops",
+      "key": "8057f82b777a118cb6e28b3f",
+      "line": 98,
+      "lines": [
+        98
+      ],
+      "path": "Web安全/中间件/Squid/CVE-2026-47729 _ Squid Heap Buffer Overread Vulnerability.md",
+      "severity": "warning"
+    },
+    {
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
@@ -31856,18 +31832,6 @@
         0
       ],
       "path": "Web安全/开发框架/Shiro/别急着修！Apache Shiro 最新身份验证漏洞实际很难利用.md",
-      "severity": "warning"
-    },
-    {
-      "code": "site_relative_link",
-      "count": 1,
-      "detail": "origin-relative website links require original-site review; example: /who-uses-nodezero",
-      "key": "84a3f7a8669415ed06b6f340",
-      "line": 112,
-      "lines": [
-        112
-      ],
-      "path": "Web安全/其他软件/杂项/CVE-2025-14611.md",
       "severity": "warning"
     },
     {
@@ -33143,18 +33107,6 @@
       "severity": "warning"
     },
     {
-      "code": "site_relative_link",
-      "count": 1,
-      "detail": "origin-relative website links require original-site review; example: /login",
-      "key": "8a457104133f8a666f4a25d7",
-      "line": 71,
-      "lines": [
-        71
-      ],
-      "path": "Web安全/其他软件/杂项/b1nhack starred farazsth98_exploit-CVE-2025-39946.md",
-      "severity": "warning"
-    },
-    {
       "code": "fingerprint_unverified",
       "count": 1,
       "detail": "fofa: retained unverified query excluded from fingerprint index",
@@ -34427,6 +34379,18 @@
       "severity": "warning"
     },
     {
+      "code": "site_relative_link",
+      "count": 1,
+      "detail": "origin-relative website links require original-site review; example: /who-uses-nodezero#itops",
+      "key": "8ffa741eafe2453d641f1f21",
+      "line": 111,
+      "lines": [
+        111
+      ],
+      "path": "Web安全/其他软件/杂项/CVE-2025-9316, CVE-2025-11700.md",
+      "severity": "warning"
+    },
+    {
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
@@ -35192,6 +35156,18 @@
         0
       ],
       "path": "Web安全/开发框架/Spring Data/Spring Data Rest 远程命令执行漏洞 CVE-2017-8046.md",
+      "severity": "warning"
+    },
+    {
+      "code": "site_relative_link",
+      "count": 1,
+      "detail": "origin-relative website links require original-site review; example: /login?return_to=https%3A%2F%2Fgithub.com%2Fmoiz-2x%2FCVE-2025-24990_POC",
+      "key": "933d9a08fadf517e4cedbb93",
+      "line": 71,
+      "lines": [
+        71
+      ],
+      "path": "Web安全/其他软件/杂项/lz520520 starred moiz-2x_CVE-2025-24990_POC.md",
       "severity": "warning"
     },
     {
@@ -36933,6 +36909,18 @@
       "severity": "warning"
     },
     {
+      "code": "site_relative_link",
+      "count": 1,
+      "detail": "origin-relative website links require original-site review; example: /login?return_to=https%3A%2F%2Fgithub.com%2Ffarazsth98%2Fexploit-CVE-2025-39946",
+      "key": "9b2e862ff1b4f7999db5bdbd",
+      "line": 71,
+      "lines": [
+        71
+      ],
+      "path": "Web安全/其他软件/杂项/b1nhack starred farazsth98_exploit-CVE-2025-39946.md",
+      "severity": "warning"
+    },
+    {
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
@@ -37422,6 +37410,18 @@
         0
       ],
       "path": "Web安全/ERP企业/SAP/（CVE-2025-31324）SAP NetWeaver Visual Composer未授权文件上传远程代码执行漏洞.md",
+      "severity": "warning"
+    },
+    {
+      "code": "site_relative_link",
+      "count": 1,
+      "detail": "origin-relative website links require original-site review; example: /login?return_to=https%3A%2F%2Fgithub.com%2FD4m0n%2FCVE-2025-50168-pwn2own-berlin-2025",
+      "key": "9d8829f3ea19f608a8c62d23",
+      "line": 70,
+      "lines": [
+        70
+      ],
+      "path": "Web安全/其他软件/杂项/uknowsec starred D4m0n_CVE-2025-50168-pwn2own-berlin-2025.md",
       "severity": "warning"
     },
     {
@@ -39072,18 +39072,6 @@
       "severity": "warning"
     },
     {
-      "code": "site_relative_link",
-      "count": 1,
-      "detail": "origin-relative website links require original-site review; example: /login",
-      "key": "a42a4953d3f15b11d9da0f74",
-      "line": 71,
-      "lines": [
-        71
-      ],
-      "path": "Web安全/其他软件/杂项/CHYbeta starred BishopFox_CVE-2026-34908-check.md",
-      "severity": "warning"
-    },
-    {
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
@@ -40284,6 +40272,18 @@
       "severity": "warning"
     },
     {
+      "code": "site_relative_link",
+      "count": 1,
+      "detail": "origin-relative website links require original-site review; example: /who-uses-nodezero#itops",
+      "key": "a8ea625c2c3b8d08181d0f6b",
+      "line": 109,
+      "lines": [
+        109
+      ],
+      "path": "Web安全/其他软件/杂项/CVE-2025-7776.md",
+      "severity": "warning"
+    },
+    {
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly missing; reference links are not confirmed provenance",
@@ -41244,18 +41244,6 @@
         0
       ],
       "path": "Web安全/OA办公/泛微oa/泛微emobile6.5 6.6前台SQL注入漏洞分析.md",
-      "severity": "warning"
-    },
-    {
-      "code": "site_relative_link",
-      "count": 1,
-      "detail": "origin-relative website links require original-site review; example: /login",
-      "key": "ac9812ba8c03cb2c09a44c76",
-      "line": 70,
-      "lines": [
-        70
-      ],
-      "path": "Web安全/其他软件/杂项/uknowsec starred D4m0n_CVE-2025-50168-pwn2own-berlin-2025.md",
       "severity": "warning"
     },
     {
@@ -42435,18 +42423,6 @@
       "severity": "warning"
     },
     {
-      "code": "site_relative_link",
-      "count": 1,
-      "detail": "origin-relative website links require original-site review; example: /who-uses-nodezero",
-      "key": "b1cc8fda846d24e4dba8a98f",
-      "line": 109,
-      "lines": [
-        109
-      ],
-      "path": "Web安全/其他软件/杂项/CVE-2025-57819.md",
-      "severity": "warning"
-    },
-    {
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
@@ -43020,18 +42996,6 @@
         0
       ],
       "path": "Web安全/桌面软件/Apple/苹果CVE-2025-24104漏洞未完全修复，可以读取沙盒外的文件.md",
-      "severity": "warning"
-    },
-    {
-      "code": "site_relative_link",
-      "count": 1,
-      "detail": "origin-relative website links require original-site review; example: /who-uses-nodezero",
-      "key": "b3b20bdfb12a16e9d9a7bec1",
-      "line": 109,
-      "lines": [
-        109
-      ],
-      "path": "Web安全/其他软件/杂项/CVE-2025-8356.md",
       "severity": "warning"
     },
     {
@@ -44859,6 +44823,18 @@
       "severity": "warning"
     },
     {
+      "code": "site_relative_link",
+      "count": 1,
+      "detail": "origin-relative website links require original-site review; example: /who-uses-nodezero#itops",
+      "key": "bbd2e8a7ce23a4f6251e80bd",
+      "line": 93,
+      "lines": [
+        93
+      ],
+      "path": "Web安全/邮件系统/FreePBX/The FreePBX Rabbit Hole_ CVE-2025-66039 and others.md",
+      "severity": "warning"
+    },
+    {
       "code": "fingerprint_unverified",
       "count": 1,
       "detail": "fofa: retained unverified query excluded from fingerprint index",
@@ -45552,6 +45528,18 @@
         0
       ],
       "path": "Web安全/商业软件/Mtab/Mtab书签导航程序 LinkStoregetIcon SQL注入漏洞.md",
+      "severity": "warning"
+    },
+    {
+      "code": "site_relative_link",
+      "count": 1,
+      "detail": "origin-relative website links require original-site review; example: /who-uses-nodezero#itops",
+      "key": "be6f1f828888e02cee0e68bd",
+      "line": 110,
+      "lines": [
+        110
+      ],
+      "path": "Web安全/其他软件/杂项/CVE-2025-59287.md",
       "severity": "warning"
     },
     {
@@ -49724,6 +49712,18 @@
       "severity": "warning"
     },
     {
+      "code": "site_relative_link",
+      "count": 1,
+      "detail": "origin-relative website links require original-site review; example: /who-uses-nodezero#itops",
+      "key": "cffd3b825420af976f002277",
+      "line": 109,
+      "lines": [
+        109
+      ],
+      "path": "Web安全/其他软件/杂项/CVE-2025-57819.md",
+      "severity": "warning"
+    },
+    {
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
@@ -50213,18 +50213,6 @@
         0
       ],
       "path": "Web安全/CMS内容/Joomla/Joomla! paGO Commerce 2.5.9.0 存在SQL 注⼊.md",
-      "severity": "warning"
-    },
-    {
-      "code": "site_relative_link",
-      "count": 1,
-      "detail": "origin-relative website links require original-site review; example: /who-uses-nodezero",
-      "key": "d202522f816e8a323f3d5be1",
-      "line": 93,
-      "lines": [
-        93
-      ],
-      "path": "Web安全/邮件系统/FreePBX/The FreePBX Rabbit Hole_ CVE-2025-66039 and others.md",
       "severity": "warning"
     },
     {
@@ -50729,6 +50717,18 @@
         0
       ],
       "path": "Web安全/网络设备/F5 BIG-IP/F5-BIG-IP-远程代码执行漏洞-CVE-2021-22986.md",
+      "severity": "warning"
+    },
+    {
+      "code": "site_relative_link",
+      "count": 1,
+      "detail": "origin-relative website links require original-site review; example: /who-uses-nodezero#itops",
+      "key": "d43c05b4ea2755db91f20bc1",
+      "line": 105,
+      "lines": [
+        105
+      ],
+      "path": "Web安全/网络设备/Ivanti/CVE-2026-10520 _ Ivanti Sentry Pre-Authenticated OS Command Injection.md",
       "severity": "warning"
     },
     {
@@ -55127,6 +55127,18 @@
       "severity": "warning"
     },
     {
+      "code": "site_relative_link",
+      "count": 1,
+      "detail": "origin-relative website links require original-site review; example: /who-uses-nodezero#itops",
+      "key": "e632a59bb9e43712c0904846",
+      "line": 111,
+      "lines": [
+        111
+      ],
+      "path": "Web安全/其他软件/杂项/CVE-2025-12480.md",
+      "severity": "warning"
+    },
+    {
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly missing; reference links are not confirmed provenance",
@@ -55998,6 +56010,18 @@
         0
       ],
       "path": "Web安全/商业软件/亿赛通/亿赛通电子文档安全管理系统updateUserToOrganise存在后台SQL注入漏洞.md",
+      "severity": "warning"
+    },
+    {
+      "code": "site_relative_link",
+      "count": 1,
+      "detail": "origin-relative website links require original-site review; example: /who-uses-nodezero#itops",
+      "key": "e9aeb63b3f87773553e433ef",
+      "line": 99,
+      "lines": [
+        99
+      ],
+      "path": "Web安全/中间件/Apache Solr/CVE-2026-44825 _ Apache Solr AuthTool Hardcoded Credentials Vulnerabil.md",
       "severity": "warning"
     },
     {
@@ -57561,18 +57585,6 @@
       "severity": "warning"
     },
     {
-      "code": "site_relative_link",
-      "count": 1,
-      "detail": "origin-relative website links require original-site review; example: /who-uses-nodezero",
-      "key": "efe7c223db3b9dff88cfc743",
-      "line": 111,
-      "lines": [
-        111
-      ],
-      "path": "Web安全/其他软件/杂项/CVE-2025-61757.md",
-      "severity": "warning"
-    },
-    {
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
@@ -58230,6 +58242,18 @@
         0
       ],
       "path": "Web安全/商业软件/艾科思/艾科思（霆智科技）应用接入系统存在任意文件读取漏洞.md",
+      "severity": "warning"
+    },
+    {
+      "code": "site_relative_link",
+      "count": 1,
+      "detail": "origin-relative website links require original-site review; example: /who-uses-nodezero#itops",
+      "key": "f2dc10f4d28717691784f742",
+      "line": 108,
+      "lines": [
+        108
+      ],
+      "path": "Web安全/网络设备/Check Point/CVE-2026-50751 _ Check Point Security Gateway Improper Authentication.md",
       "severity": "warning"
     },
     {
@@ -59805,18 +59829,6 @@
       "severity": "warning"
     },
     {
-      "code": "site_relative_link",
-      "count": 1,
-      "detail": "origin-relative website links require original-site review; example: /who-uses-nodezero",
-      "key": "f93808e65921325821ffd3fd",
-      "line": 102,
-      "lines": [
-        102
-      ],
-      "path": "Web安全/数据库/Oracle MySQL Server/CVE-2026-35273 _ Oracle PeopleSoft PeopleTools Unauthenticated Remote.md",
-      "severity": "warning"
-    },
-    {
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
@@ -60897,18 +60909,6 @@
       "severity": "warning"
     },
     {
-      "code": "site_relative_link",
-      "count": 1,
-      "detail": "origin-relative website links require original-site review; example: /login",
-      "key": "fdaa2cc84cb764aac17ae935",
-      "line": 71,
-      "lines": [
-        71
-      ],
-      "path": "Web安全/其他软件/杂项/lz520520 starred moiz-2x_CVE-2025-24990_POC.md",
-      "severity": "warning"
-    },
-    {
       "code": "fingerprint_unverified",
       "count": 1,
       "detail": "fofa: retained unverified query excluded from fingerprint index",
@@ -61570,6 +61570,6 @@
     }
   ],
   "policy": "accepted historical debt, not a passing quality verdict; no new issues; fatal checks always block",
-  "reason": "Reviewed reconstruction baseline: five pre-existing absent local resources; unresolved provenance, identifier roles and fingerprints remain explicit. No fatal issue can be waived.; PR #4 review: remove 67 resolved occurrences only; no new exemptions.",
+  "reason": "Reviewed reconstruction baseline: five pre-existing absent local resources; unresolved provenance, identifier roles and fingerprints remain explicit. No fatal issue can be waived.; PR #4 review: remove 67 resolved occurrences only; no new exemptions.; 2026-10-03: migrate 23 existing diagnostic keys to preserve complete URLs; paths, check codes and occurrence counts unchanged; no new exemptions.",
   "schema_version": 1
 }

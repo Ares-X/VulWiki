@@ -41,7 +41,7 @@ schema_version: "1"
 
 1. version字段抽取Nginx配置代码，需删除；按产品/机制拆多记录，7269只是IIS一节不能覆盖全部
 2. mod_php每请求新进程错误，依MPM/已存worker；fastCGI管理器也非总由WebServer启动；TS/NTS与OS性能泛化
-3. .use.ini/.usr.ini均拼错.user.ini；防御<FileMatch>应核Apache实际FilesMatch语法；Windows示例加载Unix.so路径错位
+3. .use.ini/.usr.ini均拼错.user.ini；防御`<FileMatch>`应核Apache实际FilesMatch语法；Windows示例加载Unix.so路径错位
 4. 删除security.limit_extensions行不等于禁用默认限制；AddType/AddHandler/SetHandler与模块和目录Override条件应分别列
 5. Options+Indexes无空格、FcgidWrapper缺引号/alias块缺闭合、base64解码示例却给明文PHP；配置不可照抄
 6. IIS短名阈值>9/>4不符8.3规则；禁新建短名不清除既有，升级.NET4必安全过度；后缀解析章节误粘404/400短名原因

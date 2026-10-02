@@ -17,7 +17,7 @@ referenced_identifiers: ""
 prerequisites: "请求带sid，角色/版本未知"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/%E5%90%AF%E6%98%8E%E6%98%9F%E8%BE%B0/%E5%90%AF%E6%98%8E%E6%98%9F%E8%BE%B04A%E7%BB%9F%E4%B8%80%E5%AE%89%E5%85%A8%E7%AE%A1%E6%8E%A7%E5%B9%B3%E5%8F%B0getMaster.do%E4%BF%A1%E6%81%AF%E6%B3%84%E6%BC%8F.md"
 review_date: "2026-10-02"
-side_effects: "读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要且已脱敏的响应，不能由接口可达推定敏感内容已泄露"
+side_effects: "读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要的响应，不能由接口可达推定敏感内容已泄露"
 source_url: "https://www.yuque.com/xiaokp7/ocvun2/ic9nsb113n14pwvh"
 source_status: "recorded"
 ---
@@ -41,7 +41,7 @@ source_status: "recorded"
 
 ### 操作风险与恢复
 
-- 读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要且已脱敏的响应，不能由接口可达推定敏感内容已泄露
+- 读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要的响应，不能由接口可达推定敏感内容已泄露
 
 ### 待核与来源
 

@@ -35,13 +35,13 @@ schema_version: "1"
 - 拿到普通TGT不等于noPac已验证，应记录扫描器实际票据差异判据
 - MachineAccountQuota=0并不代表所有拥有既有机器账户权限的路径均失败
 - 将PetitPotam强制认证与ADCS中继后果混称单一CVE，缺EPA/签名及模板前提
-- PAC误称Privileged Attribute Certificate且多个NTLM散列长度疑似截断，样例凭据应脱敏占位
+- PAC误称Privileged Attribute Certificate且多个NTLM散列长度疑似截断
 - 受影响/修复版本缺失
 
 ### 操作风险与资料使用
 
 - 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。
-- 文中的明文凭据、会话或密钥已用中段星号脱敏，保留首尾供比对；示例不能直接照抄登录。仅替换为自有隔离环境凭据，已暴露的真实凭据应撤销或轮换。
+- 验证须使用自有隔离环境的凭据；已暴露的真实凭据应撤销或轮换。
 
 本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
 <!-- vulwiki-editorial:end -->
@@ -163,7 +163,7 @@ sudo python3 noPac.py INLANEFREIGHT.LOCAL/forend:Klmcargo2 -dc-ip 172.16.5.5  -d
   
   
 ![1744809426_67ffadd2c04abe5ff83d0.png!small](https://mmbiz.qpic.cn/mmbiz_jpg/5975bXHXfWElmicQfyttQ4ULfUdkaNe9BX8F1kAoiaLE4OQxtbwOicI5o9jNxgY2adEWP9V4Lo51edjpbjib8caObA/640?wx_fmt=jpeg&from=appmsg "")  
-> AS-REP 加密密钥：16************************be  
+> AS-REP 加密密钥：16950e24794e18ce18211c5ebf8ea22910b3854ffb9ce4c4ab0dcc8a5c390abe  
   
   
 TGT票据保存到了本地dc01.ccache 文件中。  

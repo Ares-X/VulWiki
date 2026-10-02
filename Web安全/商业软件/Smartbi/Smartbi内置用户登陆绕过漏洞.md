@@ -37,7 +37,7 @@ schema_version: "1"
 以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
 
 - 本篇result true加index.jsp会话访问比端点存在判定更完整，值得合并保留
-- Origin/Referer含第三方实例域名和固定会话，应替换占位符；Content-Length与正文长度需重算
+- Origin/Referer含第三方实例域名和固定会话，需核对同一实验会话的字段一致性；Content-Length与正文长度需重算
 - public/service/system只能从枚举中选择，随机构造用户名措辞不准
 - Hunter app.name被错误抽进fofa残缺字段，补精确修复版本
 
@@ -78,7 +78,7 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/w
 Accept-Encoding: identity
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Content-Type: application/x-www-form-urlencoded
-Cookie: JSESSIONID=B******************************C
+Cookie: JSESSIONID=B08E6669BFA8E9D85FB6BD98411C
 Origin: https://smartbi.cy-sys.cn
 Referer: https://smartbi.cy-sys.cn/smartbi/vision/RMIServlet
 Sec-Fetch-Dest: document

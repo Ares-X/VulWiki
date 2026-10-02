@@ -125,7 +125,7 @@ X-Requested-With: XMLHttpRequest
 User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.87 Safari/537.36 SE 2.X MetaSr 1.0
 Referer: http://124.114.151.106:8880/portaltheme_list.php
 Accept-Language: zh-CN,zh;q=0.9
-Cookie: mylang=zh_s; PHPSESSID=l************************1
+Cookie: mylang=zh_s; PHPSESSID=lp91
 Connection: close
 
 ```

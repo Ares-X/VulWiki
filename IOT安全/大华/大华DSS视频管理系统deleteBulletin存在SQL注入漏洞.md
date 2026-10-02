@@ -38,7 +38,6 @@ source_status: "recorded"
 - 重复Cookie身份不明；deleteBulletin可能删除公告，副作用需标
 - sqlmap段无命令；与智慧园区同方法/命名空间强关联但产品版本关系需证
 - 已落实的文本修订：HTTP 报文围栏改为 http；残缺指纹退出可执行索引并保留原值。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
-- 样例会话、令牌或共享秘密已按具体值遮罩中段并保留首尾；不能直接用于请求。公开默认/测试凭据与算法常量不因长得像密码而改写；其用途仍须按原文说明判断
 
 ### 操作风险与恢复
 
@@ -73,7 +72,7 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/w
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate
 Connection: close
-Cookie: JSESSIONID=0F2**************************B44; JSESSIONID=D08**************************EE6
+Cookie: JSESSIONID=0F29FE3B0C2BF1E508A7119E327E2B44; JSESSIONID=D08F471237625640BE6F9DE648EC1EE6
 Upgrade-Insecure-Requests: 1
 SOAPAction: 
 Content-Type: text/xml;charset=UTF-8
@@ -105,7 +104,7 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/w
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate
 Connection: close
-Cookie: JSESSIONID=0F2**************************B44; JSESSIONID=D08**************************EE6
+Cookie: JSESSIONID=0F29FE3B0C2BF1E508A7119E327E2B44; JSESSIONID=D08F471237625640BE6F9DE648EC1EE6
 Upgrade-Insecure-Requests: 1
 SOAPAction: 
 Content-Type: text/xml;charset=UTF-8

@@ -65,7 +65,7 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/w
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate, br
 Connection: close
-Cookie: _sid=t****************************2
+Cookie: _sid=tp_17002
 Upgrade-Insecure-Requests: 1
 Priority: u=1
 SOAPAction: http://tempuri.org/GetLshByTj
@@ -97,7 +97,7 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/w
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate, br
 Connection: close
-Cookie: _sid=t****************************2
+Cookie: _sid=tp_17002
 Upgrade-Insecure-Requests: 1
 Priority: u=1
 SOAPAction: http://tempuri.org/GetLshByTj

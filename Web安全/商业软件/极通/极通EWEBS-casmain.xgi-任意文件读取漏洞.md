@@ -81,7 +81,7 @@ Host:
 Content-Type: application/x-www-form-urlencoded
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-TW;q=0.6
-Cookie: PHPSESSID=9******************************8; CookieLanguageName=ZH-CN
+Cookie: PHPSESSID=923b86fa90ce1e14c82d4e36d1adc528; CookieLanguageName=ZH-CN
 
 Language_S=../../../../windows/system32/drivers/etc/hosts
 ```

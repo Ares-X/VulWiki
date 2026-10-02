@@ -67,7 +67,7 @@ Accept-Encoding: gzip, deflate, br
 Content-Type: application/x-www-form-urlencoded; charset=UTF-8
 X-Requested-With: XMLHttpRequest
 Connection: close
-Cookie: PHPSESSID=6************************4
+Cookie: PHPSESSID=6jvq6prlaoemtc00r7a876ntb4
 Priority: u=1
 
 cmd=id

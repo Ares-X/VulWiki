@@ -78,7 +78,7 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/w
 Accept-Encoding: gzip, deflate, br
 Accept-Language: zh-CN,zh;q=0.9
 cmd: whoami
-Cookie: JSESSIONID=9******************************B
+Cookie: JSESSIONID=95B
 Connection: close
 ```
 
@@ -105,7 +105,7 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/w
 Accept-Encoding: gzip, deflate, br
 Accept-Language: zh-CN,zh;q=0.9
 cmd: whoami
-Cookie: JSESSIONID=9******************************B
+Cookie: JSESSIONID=95B
 Connection: close
 ```
 

@@ -38,7 +38,6 @@ source_status: "unknown"
 - 有Cookie却无其未登录来源，匿名前提未被文本证明
 - 返回200可能为业务码或HTTP状态未区分，单200不足判定；应以新增账户登录为证据
 - 已落实的文本修订：HTTP 报文围栏改为 http。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
-- 样例会话、令牌或共享秘密已按具体值遮罩中段并保留首尾；不能直接用于请求。公开默认/测试凭据与算法常量不因长得像密码而改写；其用途仍须按原文说明判断
 
 ### 操作风险与恢复
 
@@ -88,7 +87,7 @@ Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-TW;q=0.6
 Content-Length: 58
 Content-Type: application/x-www-form-urlencoded
-Cookie: PHPSESSID=fn4********************fm6
+Cookie: PHPSESSID=fn4qnpv5c8a2jgvf53vs1gufm6
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36
 
 method=add&user=admin1234&pwd=admin1234&group=2&ptz_enable=0

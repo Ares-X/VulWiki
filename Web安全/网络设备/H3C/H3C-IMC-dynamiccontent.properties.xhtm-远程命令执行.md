@@ -36,7 +36,6 @@ source_status: "unknown"
 - 与134同密文payload，仅报文头不同；没有解释会话是否必要
 - 标题xhtm漏l；无载荷生成/库版本/补丁或官方来源
 - 已落实的文本修订：HTTP 报文围栏改为 http。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
-- 样例会话、令牌或共享秘密已按具体值遮罩中段并保留首尾；不能直接用于请求。公开默认/测试凭据与算法常量不因长得像密码而改写；其用途仍须按原文说明判断
 
 ### 操作风险与恢复
 
@@ -90,7 +89,7 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/w
 Sec-Fetch-Site: none
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh-TW;q=0.9,zh;q=0.8
-Cookie: oam.Flash.RENDERMAP.TOKEN=jw7ysel68; JSESSIONID=EB4**************************739; currentThemeName=imc-new-webui
+Cookie: oam.Flash.RENDERMAP.TOKEN=jw7ysel68; JSESSIONID=EB4E60FA4F333FF21B488E9937B4C739; currentThemeName=imc-new-webui
 Content-Type: application/x-www-form-urlencoded
 Content-Length: 1564
 

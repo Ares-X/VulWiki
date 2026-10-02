@@ -38,7 +38,6 @@ source_status: "recorded"
 - arg1仅占位webshell未说明编码；Cookie的必要性未说明
 - 最新1day无日期基准，推广页尾冗余
 - 已落实的文本修订：“访问 / url/kaisa.jsp”改为“访问 / url/kaisec.jsp”；“当访问接口时出现如下响应体时，基本可认定该漏洞存在。”改为“出现所示响应仅支持接口可达，不能单独确认越界上传或脚本执行；还需上传响应、保存路径与受控回读证据。”；HTTP 报文围栏改为 http。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
-- 样例会话、令牌或共享秘密已按具体值遮罩中段并保留首尾；不能直接用于请求。公开默认/测试凭据与算法常量不因长得像密码而改写；其用途仍须按原文说明判断
 
 ### 操作风险与恢复
 
@@ -84,7 +83,7 @@ source_status: "recorded"
 
 ```http
 POST /emap/webservice/gis/soap/poi HTTP/1.1
-Cookie: JSESSIONID=5C1**************************71E; JSESSIONID=423**************************B01
+Cookie: JSESSIONID=5C1C93DE5EC7F18FBD493CEFB322B71E; JSESSIONID=423EE6DD6937C1E0568CEF2FAB6E9B01
 Cache-Control: max-age=0
 Sec-Ch-Ua: "Google Chrome";v="113", "Chromium";v="113", "Not-A.Brand";v="24"
 Sec-Ch-Ua-Mobile: ?0
