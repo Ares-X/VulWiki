@@ -1,0 +1,369 @@
+"""Offline regression fixtures; never executes article payloads or contacts hosts."""
+import contextlib
+import importlib.util
+import io
+import json
+from pathlib import Path
+import subprocess
+import sys
+import tempfile
+import unittest
+
+SPEC = importlib.util.spec_from_file_location('wiki', Path(__file__).parents[1] / 'scripts/wiki.py')
+wiki = importlib.util.module_from_spec(SPEC)
+sys.modules[SPEC.name] = wiki
+SPEC.loader.exec_module(wiki)
+
+
+class WikiTests(unittest.TestCase):
+    def setUp(self):
+        self.temp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.temp.cleanup)
+        self.root = Path(self.temp.name)
+        subprocess.run(['git', 'init', '-q', str(self.root)], check=True)
+
+    def article(self, name='entry', body='# Example\n\nArticle text.\n', **fields):
+        meta = dict(id='article-' + name, product='Example Product', record_type='analysis',
+                    review_status='text-reviewed', verification_status='not-reproduced',
+                    content_status='needs-review', source_url='https://example.invalid/advisory')
+        meta.update(fields)
+        path = self.root / 'Web安全' / '测试' / 'Example Product' / (name + '.md')
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text('---\n' + ''.join(k + ': ' + json.dumps(v, ensure_ascii=False) + '\n' for k, v in meta.items()) + '---\n\n' + body, encoding='utf-8')
+        return path.relative_to(self.root).as_posix()
+
+    def scan(self):
+        return wiki.scan(self.root)
+
+    def run_cli(self, *args):
+        out, err = io.StringIO(), io.StringIO()
+        with contextlib.redirect_stdout(out), contextlib.redirect_stderr(err):
+            code = wiki.main(['--root', str(self.root), *args])
+        return code, out.getvalue(), err.getvalue()
+
+    def test_body_mentions_never_become_primary(self):
+        self.article(body='推荐阅读 CVE-2025-12345, CVE-2024-9999.\n')
+        r = self.scan()[0]
+        self.assertEqual(r.primary, [])
+        self.assertNotIn('2025 年', wiki.render_outputs([r])['INDEX-CVE.md'])
+
+    def test_legacy_cve_is_candidate(self):
+        self.article(cve='CVE-2025-12345')
+        r = self.scan()[0]
+        self.assertEqual(r.primary, [])
+        self.assertEqual(r.candidates, ['CVE-2025-12345'])
+
+    def test_explicit_legacy_reference(self):
+        self.article(cve='CVE-2025-12345', identifier_role='reference')
+        r = self.scan()[0]
+        self.assertEqual(r.candidates, [])
+        self.assertEqual(r.references, ['CVE-2025-12345'])
+
+    def test_explicit_legacy_primary(self):
+        self.article(cve='CVE-2025-12345', identifier_role='primary')
+        self.assertEqual(self.scan()[0].primary, ['CVE-2025-12345'])
+
+    def test_primary_and_references_separated(self):
+        self.article(primary_identifiers='CVE-2025-12345; CNVD-2025-12345', referenced_identifiers='CVE-2020-5555')
+        r = self.scan()[0]
+        self.assertEqual(len(r.primary), 2)
+        self.assertEqual(r.references, ['CVE-2020-5555'])
+        self.assertNotIn('2020.md', wiki.render_outputs([r])['INDEX-CVE.md'])
+
+    def test_namespaces_and_case_not_conflated(self):
+        self.article(primary_identifiers='cve-2025-12345; CNVD-C-2023-76801; TALOS-2024-1967; WSO2-2019-0598; AVD-2026-1850319')
+        r = self.scan()[0]
+        self.assertIn('CVE-2025-12345', r.primary)
+        self.assertIn('CNVD-C-2023-76801', r.primary)
+        self.assertIn('TALOS-2024-1967', r.primary)
+        self.assertEqual(sum(i.code == 'unrecognized_identifier_namespace' for i in r.issues), 3)
+        self.assertFalse(any(i.code == 'identifier_format' for i in r.issues))
+
+    def test_wrong_namespace_and_malformed_primary_excluded(self):
+        self.article(cve='CNVD-2025-12345', primary_identifiers='CVE-2025-12; CVE-2025-12345')
+        r = self.scan()[0]
+        self.assertEqual(r.primary, ['CVE-2025-12345'])
+        self.assertEqual(sum(i.code == 'identifier_format' for i in r.issues), 2)
+
+    def test_rejected_identifier_not_indexed(self):
+        self.article(primary_identifiers='CVE-2025-12345', identifier_status='rejected')
+        r = self.scan()[0]
+        self.assertEqual(wiki.catalog_record(r)['primary_identifiers'], [])
+        self.assertNotIn('2025.md', wiki.render_outputs([r])['INDEX-CVE.md'])
+
+    def test_quarantined_document_kept_only_in_queue(self):
+        path = self.article(content_status='quarantined', primary_identifiers='CVE-2025-12345')
+        outputs = wiki.render_outputs(self.scan())
+        self.assertEqual(outputs['docs/generated/records.jsonl'], '')
+        self.assertIn(path, outputs['docs/generated/excluded.jsonl'])
+        self.assertIn('entry', outputs['docs/REVIEW-QUEUE.md'])
+
+    def test_missing_verification_never_defaults_to_reproduced(self):
+        path = self.article()
+        (self.root / path).write_text('---\nproduct: Example\n---\n# Title\n')
+        self.assertEqual(wiki.catalog_record(self.scan()[0])['verification_status'], 'not-reproduced')
+
+    def test_reproduced_requires_evidence(self):
+        self.article(verification_status='reproduced')
+        r = self.scan()[0]
+        self.assertFalse(r.eligible)
+        self.assertEqual(sum(i.code == 'verification_evidence' for i in r.issues), 3)
+
+    def test_invalid_enum_blocks(self):
+        self.article(record_type='exploitable')
+        self.assertFalse(self.scan()[0].eligible)
+
+    def test_duplicate_stable_id_blocks(self):
+        self.article('one', id='same-article')
+        self.article('two', id='same-article')
+        self.assertTrue(all(not r.eligible for r in self.scan()))
+
+    def test_scalar_frontmatter_preserves_body(self):
+        body = "\n```python\nprint('x\\ny')\n```\n"
+        text = "---\nfoo: \"a: b\"\nbar: 'it''s OK'\n---\n" + body
+        meta, actual, errors = wiki.parse_frontmatter(text)
+        self.assertEqual(meta, {'foo': 'a: b', 'bar': "it's OK"})
+        self.assertEqual(actual, body)
+        self.assertEqual(errors, [])
+
+    def test_collections_numbers_and_duplicate_keys_rejected(self):
+        meta, _, errors = wiki.parse_frontmatter('---\nx: false\ny: [a,b]\nz: 10\na: "ok"\na: "second"\n---\nbody')
+        self.assertEqual(len(errors), 4)
+        self.assertEqual(meta, {'a': 'ok'})
+
+    def test_fingerprint_conservative_grammar(self):
+        for query in ['body="Example"', '(app="Example" || title="Portal") && port=443', 'icon_hash="-123"', '!(country="CN")']:
+            self.assertTrue(wiki.fingerprint_valid(query), query)
+        for query in ['body=', '搜索语句', 'body=""', 'body="x" &&', 'title="broken', '(app="x"', 'body="x" unexpected', 'body="x"; curl bad']:
+            self.assertFalse(wiki.fingerprint_valid(query), query)
+
+    def test_platforms_separated_and_bad_query_omitted(self):
+        self.article(fofa='body=', hunter='web.title="Example"')
+        r = self.scan()[0]
+        self.assertNotIn('fofa', r.fingerprints)
+        self.assertIn('hunter', r.fingerprints)
+
+    def test_local_encoded_image_and_spaced_link(self):
+        path = self.article(body='![a](.resource/image%20%281%29.png)\n[other](<other file.md>)\n')
+        parent = (self.root / path).parent
+        (parent / '.resource').mkdir()
+        (parent / '.resource/image (1).png').write_bytes(b'fixture')
+        (parent / 'other file.md').write_text('text')
+        r = next(r for r in self.scan() if r.path == path)
+        self.assertFalse(any(i.code in {'image_missing', 'link_missing'} for i in r.issues))
+
+    def test_fenced_payload_links_ignored(self):
+        self.article(body='```html\n<img src="missing.png">\n![fake](missing.png)\n```\n')
+        self.assertFalse(any(i.code.endswith('missing') for i in self.scan()[0].issues))
+
+    def test_reference_and_html_images(self):
+        links = wiki.markdown_links('![a][pic]\n[pic]: .resource/a.png\n<img src=".resource/b.png">\n')
+        self.assertIn(('.resource/a.png', True), links)
+        self.assertIn(('.resource/b.png', True), links)
+
+    def test_sparse_git_image_but_not_deleted_regular_file(self):
+        path = self.article(body='![a](.resource/a.png)\n![b](.resource/b.png)\n')
+        parent = (self.root / path).parent / '.resource'
+        parent.mkdir()
+        for name in ('a.png', 'b.png'):
+            (parent / name).write_bytes(b'fixture')
+        subprocess.run(['git', 'add', '.'], cwd=self.root, check=True)
+        subprocess.run(['git', '-c', 'user.name=Fixture', '-c', 'user.email=fixture@example.invalid', 'commit', '-qm', 'fixture'], cwd=self.root, check=True)
+        subprocess.run(['git', 'update-index', '--skip-worktree', '--', (parent / 'a.png').relative_to(self.root).as_posix()], cwd=self.root, check=True)
+        (parent / 'a.png').unlink()
+        (parent / 'b.png').unlink()
+        issues = [i for i in self.scan()[0].issues if i.code == 'image_missing']
+        self.assertEqual(len(issues), 1)
+        self.assertTrue(issues[0].detail.endswith('b.png'))
+
+    def test_missing_image_reports_position(self):
+        self.article(body='![a](.resource/missing.png)\n')
+        issues = [i for i in self.scan()[0].issues if i.code == 'image_missing']
+        self.assertEqual(len(issues), 1)
+        self.assertGreater(issues[0].line, 1)
+
+    def test_canonical_self_and_retained_duplicate(self):
+        main = 'Web安全/测试/Example Product/main.md'
+        self.article('main', canonical=main, entity_id='entity-example')
+        duplicate = self.article('source', canonical=main, relation_type='duplicate_of', entity_id='entity-example')
+        outputs = wiki.render_outputs(self.scan())
+        self.assertEqual(len(outputs['docs/generated/records.jsonl'].splitlines()), 1)
+        self.assertEqual(len(outputs['docs/generated/sources.jsonl'].splitlines()), 2)
+        self.assertIn('关联来源', outputs['INDEX/测试.md'])
+        self.assertEqual(json.loads(outputs['docs/generated/entities.jsonl'])['source_record_ids'], ['article-main', 'article-source'])
+        self.assertTrue((self.root / duplicate).exists())
+
+    def test_canonical_cycle_rejected(self):
+        one, two = 'Web安全/测试/Example Product/one.md', 'Web安全/测试/Example Product/two.md'
+        self.article('one', canonical=two, relation_type='duplicate_of')
+        self.article('two', canonical=one, relation_type='duplicate_of')
+        self.assertTrue(all(not r.eligible for r in self.scan()))
+
+    def test_other_relations_keep_independent_cves(self):
+        main = self.article('main', primary_identifiers='CVE-2025-12345')
+        for n, relation in enumerate(('analysis_of', 'chained_with', 'patch_bypass_of', 'supersedes')):
+            self.article('related' + str(n), canonical=main, relation_type=relation, primary_identifiers='CVE-2025-6789' + str(n))
+        outputs = wiki.render_outputs(self.scan())
+        self.assertEqual(len(outputs['docs/generated/records.jsonl'].splitlines()), 5)
+        self.assertIn('CVE-2025-67892', outputs['INDEX-CVE/year/2025.md'])
+
+    def test_default_search_labels_legacy_candidate(self):
+        self.article(cve='CVE-2025-12345')
+        wiki.build(self.root, self.scan())
+        code, out, _ = self.run_cli('search', 'CVE-2025-12345')
+        self.assertEqual(code, 0)
+        self.assertEqual(json.loads(out)['identifier_matches'][0]['role'], 'candidate-non-primary')
+
+    def test_shared_cve_does_not_merge_or_create_entity(self):
+        self.article('one', primary_identifiers='CVE-2025-12345')
+        self.article('two', primary_identifiers='CVE-2025-12345')
+        outputs = wiki.render_outputs(self.scan())
+        self.assertEqual(len(outputs['docs/generated/records.jsonl'].splitlines()), 2)
+        self.assertEqual(outputs['docs/generated/entities.jsonl'], '')
+        self.assertTrue(any(x['basis'] == 'shared-primary-identifier' for x in json.loads(outputs['docs/generated/duplicate-candidates.json'])))
+
+    def test_build_determinism_and_source_immutability(self):
+        path = self.article(body="```sh\nprintf 'keep exact\\n'\n```\n")
+        before = (self.root / path).read_bytes()
+        records = self.scan()
+        self.assertTrue(wiki.build(self.root, records))
+        self.assertEqual(wiki.build(self.root, records, check=True), [])
+        self.assertEqual(wiki.build(self.root, records), [])
+        self.assertEqual((self.root / path).read_bytes(), before)
+
+    def test_stale_index_keeps_url_without_stale_identifier(self):
+        file = self.root / 'INDEX-CVE/year/1999.md'
+        file.parent.mkdir(parents=True)
+        file.write_text('# stale CVE-1999-9999\n')
+        wiki.build(self.root, [])
+        self.assertTrue(file.exists())
+        self.assertNotIn('CVE-1999-9999', file.read_text())
+        self.assertEqual(wiki.build(self.root, [], check=True), [])
+
+    def test_baseline_delta_counts_new_and_resolved(self):
+        old = wiki.Issue('a.md', 'test', 'same', line=1)
+        moved = wiki.Issue('a.md', 'test', 'same', line=100)
+        new = wiki.Issue('b.md', 'test', 'new')
+        file = self.root / 'baseline.json'
+        wiki.write_baseline(file, [old], 'fixture')
+        baseline = json.loads(file.read_text())
+        added, resolved = wiki.baseline_delta([moved, new], baseline)
+        self.assertEqual(sum(added.values()), 1)
+        self.assertEqual(sum(resolved.values()), 0)
+        _, resolved = wiki.baseline_delta([], baseline)
+        self.assertEqual(sum(resolved.values()), 1)
+
+    def test_active_html_candidate_and_payload_preservation(self):
+        payload = '<img src=x onerror="alert(1)"><a href="javascript:alert(2)">test</a>'
+        path = self.article(body=payload + '\n')
+        before = (self.root / path).read_text()
+        r = self.scan()[0]
+        self.assertEqual(sum(i.code == 'active_html_example' for i in r.issues), 2)
+        self.assertTrue(all(i.line > 1 for i in r.issues if i.code == 'active_html_example'))
+        self.assertEqual((self.root / path).read_text(), before)
+        for body in ('```html\n' + payload + '\n```\n', '`' + payload + '`\n'):
+            self.article(body=body)
+            self.assertFalse(any(i.code == 'active_html_example' for i in self.scan()[0].issues))
+
+    def test_indented_html_and_jnlp_online_not_events(self):
+        self.article(body='Response:\n\n    HTTP/1.1 200 OK\n    <img src=x onerror="alert(1)">\n\n<shortcut online="true"></shortcut>\n')
+        self.assertFalse(any(i.code == 'active_html_example' for i in self.scan()[0].issues))
+
+    def test_normal_html_layout_not_active(self):
+        self.article(body='<table><tr><td><a href="https://example.invalid">Reference</a><a href="javascript.js">File</a></td></tr></table>')
+        self.assertFalse(any(i.code == 'active_html_example' for i in self.scan()[0].issues))
+
+    def test_legacy_draft_tags_compatible(self):
+        meta, _, errors = wiki.parse_frontmatter("---\ndraft: false\ntags: ['legacy']\n---\nBody")
+        self.assertEqual(errors, [])
+        self.assertEqual(meta['draft'], 'false')
+
+    def test_bad_fingerprint_quotes_do_not_exclude_article(self):
+        path = self.article()
+        file = self.root / path
+        file.write_text(file.read_text().replace('---\n', '---\nfofa: "\\_bad"\n', 1))
+        r = self.scan()[0]
+        self.assertTrue(r.eligible)
+        self.assertEqual(r.fingerprints, {})
+
+    def test_labelled_source_links_are_unverified(self):
+        self.article(body='## 参考来源\n[原文](https://example.invalid/original)\n', ref='https://example.invalid/archive')
+        r = self.scan()[0]
+        self.assertEqual(len(r.source_links), 3)
+        self.assertTrue(all(x['verification_status'] == 'unverified-link' for x in r.source_links))
+
+    def test_scheme_links_not_repository_escapes(self):
+        for target in ('javascript:void(0)', 'data:image/png;base64,AAAA', 'https://example.invalid/a'):
+            self.assertIsNone(wiki.local_target('Web安全/a.md', target))
+        self.assertEqual(wiki.local_target('Web安全/a.md', '../../escape.md'), '!outside')
+
+    def test_source_query_credentials_masked_without_rewriting_article(self):
+        url = 'https://example.invalid/ref?token=abc123456789&topic=example'
+        path = self.article(source_url=url, verification_source=url)
+        result = wiki.catalog_record(self.scan()[0])
+        self.assertNotIn('abc123456789', json.dumps(result))
+        self.assertIn('abc******789', json.dumps(result))
+        self.assertIn('topic=example', result['source']['url'])
+        self.assertIn('abc123456789', (self.root / path).read_text())
+        for word in ('password', 'secret'):
+            self.assertNotIn(word, wiki.safe_destination('https://user:password@example.invalid/path?token=secret'))
+
+    def test_active_html_excluded_from_effective_indexes(self):
+        self.article(body='<img src=x onerror="alert(1)">')
+        r = self.scan()[0]
+        self.assertFalse(r.eligible)
+        self.assertEqual(wiki.render_outputs([r])['docs/generated/records.jsonl'], '')
+
+    def test_middle_mask_retains_prefix_suffix(self):
+        self.assertEqual(wiki.mask_middle('abcdef123456'), 'abc******456')
+        self.assertEqual(wiki.mask_middle('abc'), 'a*c')
+        with self.assertRaises(ValueError):
+            wiki.mask_middle('ab')
+
+    def test_command_in_version_excluded(self):
+        self.article(version='curl https://example.invalid')
+        self.assertNotIn('affected_version_claim', wiki.catalog_record(self.scan()[0]))
+
+    def test_strict_check_reports_debt_not_pass(self):
+        self.article(fofa='body=')
+        self.assertEqual(self.run_cli('check')[0], 1)
+
+    def test_fatal_baseline_refused_without_overwriting_existing(self):
+        file = self.root / 'baseline.json'
+        file.write_text('existing reviewed baseline')
+        with self.assertRaises(ValueError):
+            wiki.write_baseline(file, [wiki.Issue('a.md', 'active_html_example', 'event', 'error')], 'must refuse')
+        self.assertEqual(file.read_text(), 'existing reviewed baseline')
+        self.article(record_type='invalid')
+        self.assertEqual(self.run_cli('baseline', '--reason', 'must refuse')[0], 2)
+        self.assertFalse((self.root / 'docs/quality-baseline.json').exists())
+
+    def test_forged_legacy_baseline_cannot_allow_fatal(self):
+        self.article(body='<img src=x onerror="alert(1)">')
+        issues, _ = wiki.issue_summary(self.scan())
+        file = self.root / 'baseline.json'
+        file.write_text(json.dumps({'issues': [{'key': i.key, 'count': 1} for i in issues]}))
+        code, out, _ = self.run_cli('check', '--baseline', str(file))
+        self.assertEqual(code, 1)
+        summary = json.loads(out)
+        self.assertEqual(summary['new_issues'], 0)
+        self.assertGreater(summary['fatal_issues'], 0)
+
+    def test_generated_markdown_single_final_newline(self):
+        self.article(primary_identifiers='CVE-2025-12345')
+        for name, text in wiki.render_outputs(self.scan()).items():
+            if name.endswith('.md'):
+                self.assertTrue(text.endswith('\n'), name)
+                self.assertFalse(text.endswith('\n\n'), name)
+
+    def test_corrected_title_in_every_display_index(self):
+        self.article('old-title', title='Corrected title', primary_identifiers='CVE-2025-12345', fofa='app="Example"')
+        outputs = wiki.render_outputs(self.scan())
+        for name in ('INDEX/测试.md', 'INDEX-CVE/year/2025.md', 'INDEX-FOFA.md'):
+            self.assertIn('[Corrected title]', outputs[name])
+            self.assertNotIn('[old-title]', outputs[name])
+        self.assertEqual(json.loads(outputs['docs/generated/records.jsonl'])['title'], 'Corrected title')
+
+
+if __name__ == '__main__':
+    unittest.main()
