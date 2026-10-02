@@ -1,6 +1,43 @@
 ---
 source: "https://xz.aliyun.com/news/92753"
+product: "JeecgBoot/Shiro后缀放行及字典SQL过滤"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "JeecgBoot 未授权权限绕过 + SQL 注入组合漏洞分析与复现"
+prerequisites: "来源所述条件，未列明部分仍待核：声称<=3.9.3，实验main c63277e与v3.9.2/7df07a8；v3.9.5/e3b9dc0于2026-08-26修复，需上游确认"
+side_effects: "未执行；本文需注意的操作影响：盲注字符数/字节数说明自相矛盾；LENGTH(password)=16且0x6362表示两个ASCII字符，却称16十六进制字符=8字节、循环共8字节可恢复16字符；需区分数据库字符串与解码后的摘要"
+source_url: "https://xz.aliyun.com/news/92753"
+source_status: "recorded"
+id: "vw-6b5f8d54b71f7e2f9936736e"
+entity_id: "ve-6b5f8d54b71f7e2f9936736e"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：声称&lt;=3.9.3，实验main c63277e与v3.9.2/7df07a8；v3.9.5/e3b9dc0于2026-08-26修复，需上游确认
+
+代码与实验材料：包含Shiro/MyBatis链、真/假对照和补丁源码；无脚本不算缺陷，但请求编码和签名重现说明不足
+
+来源证据范围：先知news/92753及长亭具体条目、官方repo；提交只短SHA无直接patch链接
+
+- **结论使用边界（1）**：盲注字符数/字节数说明自相矛盾；依据：LENGTH(password)=16且0x6362表示两个ASCII字符，却称16十六进制字符=8字节、循环共8字节可恢复16字符；需区分数据库字符串与解码后的摘要。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **事实待核（2）**：示例请求缺正确传输与签名说明；依据：原始URI含空格AND和#.js；浏览器中的#会成为fragment；X-Sign仅称dictCode的md5，缺实际规范化/时间戳/密钥算法或固定签名适用性。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **事实待核（3）**：证据范围与修复说明应收敛；依据：HTTP200对401仅说明路由放行，需业务响应证明访问；未展示isLiteral实现却断言其拒绝hex字面量；&lt;=所有旧版超出两提交实验。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **来源与引用处置（4）**：重复叙述与章节编号；依据：2.1重复讲两次匹配表；3.3标题第三步却缺第二步；引用2.4节实际不存在。保留这部分来源材料并与技术结论分开；其引用或宣传内容不能补足本文漏洞的证据。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # JeecgBoot 未授权权限绕过 + SQL 注入组合漏洞分析与复现
 > 来源：https://xz.aliyun.com/news/92753

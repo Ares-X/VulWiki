@@ -1,8 +1,62 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2025-0921"
+identifier_role: "primary"
+primary_identifiers: "CVE-2025-0921"
+referenced_identifiers: "CVE-2024-7587"
+identifier_status: "unknown"
+title: "SCADA系统中存在的特权文件系统漏洞"
+product: "ICONICS Suite AlarmWorX64 MMX Pager Agent"
+record_type: "analysis"
+document_type: "特权文件操作与DoS攻击链分析"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "本地低权可改IcoSetup64.ini或日志位置；GenBroker32权限缺陷是一个前置路径；高权SMS写日志/重启"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/SCADA/SCADA%E7%B3%BB%E7%BB%9F%E4%B8%AD%E5%AD%98%E5%9C%A8%E7%9A%84%E7%89%B9%E6%9D%83%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E6%BC%8F%E6%B4%9E.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-2109e7ee1fd05fbe70007716"
+entity_id: "ve-2109e7ee1fd05fbe70007716"
+schema_version: "1"
 ---
 
-#  SCADA系统中存在的特权文件系统漏洞  
+# SCADA系统中存在的特权文件系统漏洞
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：ICONICS Suite AlarmWorX64 MMX Pager Agent
+- 文献类型：特权文件操作与DoS攻击链分析
+- 版本、权限及部署边界：本地低权可改IcoSetup64.ini或日志位置；GenBroker32权限缺陷是一个前置路径；高权SMS写日志/重启
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 元数据空，0921主漏洞与7587提供可写路径的前置漏洞应分开，作者明确其他错误权限也可提供条件
+2. 10.97.2是ICONICS版本，结尾Microsoft Windows版本10.97.2措辞误导，应修正产品归属
+3. 特殊对象管理器符号链接+NTFS挂载点与普通文件symlink权限不同，不能一句不需管理员泛化
+4. cng.sys父目录优先加载及开机失败是特定Windows构建行为，缺测试OS/驱动加载证据；写日志到系统路径不自动证明所有系统必然无法启动
+5. 独立核心是高权文件破坏/DoS，不是已证RCE；无具体修复版/厂商补丁，Unit42原研究URL末尾双斜线需规范
+6. 关键权限/配置/结果均截图，文章对既有测试自述未在本次验证；保留条件链和影响边界
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://unit42.paloaltonetworks.com/iconics-suite-cve-2025-0921//>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 博智非攻研究院
                     博智非攻研究院  博智非攻研究院   2026-02-02 08:22  
   
@@ -125,4 +179,4 @@ https://unit42.paloaltonetworks.com/iconics-suite-cve-2025-0921//
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

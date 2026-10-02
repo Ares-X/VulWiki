@@ -1,10 +1,51 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "致远OA ajax.do路径鉴权绕过+formulaManager表达式执行写JSPX"
+product: "致远OA"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "列V5–V8/G6宽范围，具体补丁未明"
+prerequisites: "未登录利用声称，经autoinstall/..;路径"
+side_effects: "文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行；命令/代码执行示例可能改变主机状态"
+review_date: "2026-10-02"
+source_url: "https://mp.weixin.qq.com/s/dk6aZY2fuJ_08tSOOh1Vzw"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E8%87%B4%E8%BF%9COA/%E8%87%B4%E8%BF%9C%20OA%20ajax-do%20%E7%99%BB%E5%BD%95%E7%BB%95%E8%BF%87%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0.md"
+id: "vw-b270c3491a8483411f4f2240"
+entity_id: "ve-b270c3491a8483411f4f2240"
+schema_version: "1"
 ---
 
-# 致远 OA ajax-do 登录绕过任意文件上传
+# 致远OA ajax.do路径鉴权绕过+formulaManager表达式执行写JSPX
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：致远OA；ajax.do路径鉴权绕过+formulaManager表达式执行写JSPX
+- 版本、配置及部署条件：列V5–V8/G6宽范围，具体补丁未明
+- 认证与权限前提：未登录利用声称，经autoinstall/..;路径
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 完整文章大量相同压缩payload/Python/PHP块重复，宜合并去内部重复
+- 离线解码gzip正文确认formulaExpression用PrintWriter写JSPX，因此根因是代码执行后写文件，不是普通上传接口
+- Python vuln_url截断于&manager且引号未闭，脚本无法解析；所谓POC请求段实为JSON响应
+- NullPointerException/200/404都不能单独判漏洞或成功；需唯一文件结果及权限证明
+- PHP编码过程是压缩/编码不是加密，硬编码webshell凭证应明确非OA默认
+
+## 操作风险
+
+文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行；命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/dk6aZY2fuJ_08tSOOh1Vzw)
 
 **漏洞描述**
@@ -38,7 +79,7 @@ source: "MrWQ/vulnerability-paper"
 http://xxx.xxx.xxx.xxx/seeyon/thirdpartyController.do.css/..;/ajax.do
 ```
 
-```
+```http
 POST /seeyon/autoinstall.do.css/..;/ajax.do?method=ajaxAction&managerName=formulaManager&requestCompress=gzip HTTP/1.1
 Host: 127.0.0.1
 Connection: close

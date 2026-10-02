@@ -1,9 +1,56 @@
 ---
 version: "rConfig"
 source: "Threekiii/Vulnerability-Wiki"
+id: "vw-393debf72448d0e9aaac9ef6"
+entity_id: "ve-393debf72448d0e9aaac9ef6"
+schema_version: "1"
+title: "rConfig ajaxEditTemplate.php 后台远程命令执行漏洞"
+product: "rConfig"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+prerequisites: "有效会话；.php.yml执行须Web处理器配置；版本缺失"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/rConfig/rConfig-ajaxEditTemplate.php-%E5%90%8E%E5%8F%B0%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md"
+review_date: "2026-10-02"
+side_effects: "文中写入/上传步骤会创建或覆盖目标文件；须先核对服务账户写权限、保存路径和脚本解析条件，验证后按原路径核查残留"
+source_status: "unknown"
 ---
 
 # rConfig ajaxEditTemplate.php 后台远程命令执行漏洞
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：rConfig
+- 本文讨论：ajaxEditTemplate fileName目录穿越写入；userprocess链前置
+- 版本、权限与配置前提：有效会话；.php.yml执行须Web处理器配置；版本缺失
+- 资料类型：任意文件写入到RCE源码分析；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 称访问test.php.yml实际访问test.php不准确，应是双扩展处理映射，未给配置
+- 片段chmod缺右括号、路径连接多+；array_key_exists缺参数需原源/运行版本确认
+- 请求含真实公网Origin/Referer应示例化；全局版本缺失
+- 已落实的文本修订：HTTP 报文围栏改为 http。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
+- 样例会话、令牌或共享秘密已按具体值遮罩中段并保留首尾；不能直接用于请求。公开默认/测试凭据与算法常量不因长得像密码而改写；其用途仍须按原文说明判断
+
+### 操作风险与恢复
+
+- 文中写入/上传步骤会创建或覆盖目标文件；须先核对服务账户写权限、保存路径和脚本解析条件，验证后按原路径核查残留
+
+### 待核与来源
+
+- PHP/Apache版本、模板解析、原始CVE/修复待核验
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 
 ## 漏洞描述
 
@@ -137,10 +184,10 @@ file_put_contents($fullpath, $_POST['code']);
 
 POST code 传参写入文件 test.php.yml, 请求包如下
 
-```plain
+```http
 POST /lib/ajaxHandlers/ajaxEditTemplate.php HTTP/1.1
 Host: 
-Cookie: PHPSESSID=fv8j4c6r4gofug1vr9v3efdvj7
+Cookie: PHPSESSID=fv8********************vj7
 Content-Length: 81
 Cache-Control: max-age=0
 Sec-Ch-Ua: " Not A;Brand";v="99", "Chromium";v="90", "Google Chrome";v="90"

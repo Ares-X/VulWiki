@@ -1,6 +1,43 @@
 ---
 source: "MrWQ/vulnerability-paper"
+product: "ThinkPHP / Request 方法覆盖"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "ThinkPHP 远程代码执行分析"
+prerequisites: "来源所述条件，未列明部分仍待核：以5.0.13、5.0.21为变化点至5.0.23，5.0.24白名单修复；debug/验证码方法路由/完整版条件有细分"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/r64K2DjQJ0GfQY9sR5De0g"
+id: "vw-b37003f9651665231b73e64b"
+entity_id: "ve-b37003f9651665231b73e64b"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：以5.0.13、5.0.21为变化点至5.0.23，5.0.24白名单修复；debug/验证码方法路由/完整版条件有细分
+
+代码与实验材料：499行全读，完整method/input/filterValue源码及filter、construct、get/route/server变体；有独立分析价值
+
+来源证据范围：安恒雷神众测原文，缺精确版本commit或官方链接
+
+- **适用与权限边界（1）**：区间端点遗漏且总述与正文不一致；依据：总述用小于/大于5.0.13和5.0.21导致两边界版本空缺；debug样例写_method=construct少双下划线。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **适用与权限边界（2）**：部分变量流说明与源码不符；依据：称 getFilter 将 filter\[0\]=null，实际应在数组末尾追加默认值；construct分支说明又复用filter数组含system/whoami的旧叙述。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **证据待核（3）**：缺下限和依赖锁定；依据：写&lt;5.0.13易包含不可利用早期版，需按代码变化而非全范围推论。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **来源与引用处置（4）**：招聘广告占比大；依据：后半多岗位联系方式与漏洞无关，应与正文分离。保留这部分来源材料并与技术结论分开；其引用或宣传内容不能补足本文漏洞的证据。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # ThinkPHP 远程代码执行分析
 

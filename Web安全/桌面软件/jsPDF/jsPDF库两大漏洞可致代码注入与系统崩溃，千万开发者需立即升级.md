@@ -1,9 +1,60 @@
 ---
-cve: "CVE-2026-24737"
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2026-24737;CVE-2026-24133"
+identifier_role: "primary"
+primary_identifiers: "CVE-2026-24737;CVE-2026-24133"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "jsPDF库两大漏洞可致代码注入与系统崩溃，千万开发者需立即升级"
+product: "jsPDF AcroForm与BMP解码器"
+record_type: "roundup"
+document_type: "双漏洞新闻"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "不可信数据传入表单属性或addImage；文中4.1.0修复，PDF查看器脚本执行能力另为条件"
+side_effects: "图片内存耗尽需到达解码API，不是任意上传/链接都会触发；浏览器标签崩溃不等于操作系统崩溃"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/jsPDF/jsPDF%E5%BA%93%E4%B8%A4%E5%A4%A7%E6%BC%8F%E6%B4%9E%E5%8F%AF%E8%87%B4%E4%BB%A3%E7%A0%81%E6%B3%A8%E5%85%A5%E4%B8%8E%E7%B3%BB%E7%BB%9F%E5%B4%A9%E6%BA%83%EF%BC%8C%E5%8D%83%E4%B8%87%E5%BC%80%E5%8F%91%E8%80%85%E9%9C%80%E7%AB%8B%E5%8D%B3%E5%8D%87%E7%BA%A7.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-bcd7337409d0615ec2c84405"
+entity_id: "ve-bcd7337409d0615ec2c84405"
+schema_version: "1"
 ---
 
-#  jsPDF库两大漏洞可致代码注入与系统崩溃，千万开发者需立即升级  
+# jsPDF库两大漏洞可致代码注入与系统崩溃，千万开发者需立即升级
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：jsPDF AcroForm与BMP解码器
+- 文献类型：双漏洞新闻
+- 版本、权限及部署边界：不可信数据传入表单属性或addImage；文中4.1.0修复，PDF查看器脚本执行能力另为条件
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 元数据只24737，需两个实体；库属于依赖组件不是桌面应用
+2. PDF对象/脚本注入不等于生成端系统命令执行，查看器权限与JS策略决定后续影响
+3. 图片内存耗尽需到达解码API，不是任意上传/链接都会触发；浏览器标签崩溃不等于操作系统崩溃
+4. 声称官方但无公告链接，评分及影响起止需核验；千万开发者数字无依据
+5. 唯一可行缓解说法绝对化，亦可暂停相关不可信输入功能，修复建议需准确来源
+
+### 操作风险
+
+图片内存耗尽需到达解码API，不是任意上传/链接都会触发；浏览器标签崩溃不等于操作系统崩溃
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 看雪学苑
                     看雪学苑  看雪学苑   2026-02-06 09:59  
   
@@ -67,4 +118,4 @@ jsPDF维护团队已在新版本中修复了上述漏洞。官方强烈建议所
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

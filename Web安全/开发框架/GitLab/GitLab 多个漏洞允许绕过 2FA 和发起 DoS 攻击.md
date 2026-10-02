@@ -1,6 +1,38 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+product: "GitLab2FA/DoS patch bulletin"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2026-0723; CVE-2025-13927; CVE-2025-13928; CVE-2025-13335; CVE-2026-1102"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "GitLab 多个漏洞允许绕过 2FA 和发起 DoS 攻击"
+prerequisites: "来源所述条件，未列明部分仍待核：Claimsfix18.8.2/18.7.2/18.6.4; affected table ends18.8.x and may include patched releases; publicationJan22,2026 needs timeline check"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-0408e51c6598a9544ed45159"
+entity_id: "ve-0408e51c6598a9544ed45159"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：Claimsfix18.8.2/18.7.2/18.6.4; affected table ends18.8.x and may include patched releases; publicationJan22,2026 needs timeline check
+
+代码与实验材料：No PoC; credential-ID/device-response and fourDoS sketches
+
+来源证据范围：No original/vendor URL; admits unidentified repost origin
+
+- **适用与权限边界（1）**：Fix18.8.2 and publication date/version release consistency require validation; table includes fixed builds and prose conflates starting versions11.9/17.7 as range。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **适用与权限边界（2）**：2FA bypass still needs first-factor/context; vague '通过SSH认证未经身份验证' wording。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 #  GitLab 多个漏洞允许绕过 2FA 和发起 DoS 攻击  
  网安百色   2026-01-22 11:23  

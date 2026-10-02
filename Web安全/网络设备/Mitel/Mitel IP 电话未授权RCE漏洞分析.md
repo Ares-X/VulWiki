@@ -1,9 +1,55 @@
 ---
 cve: "CVE-2024-31963"
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-115ca569dd717a94d6d91477"
+entity_id: "ve-115ca569dd717a94d6d91477"
+schema_version: "1"
+title: "Mitel IP 电话未授权RCE漏洞分析"
+product: "Mitel 6867i IP电话及相关型号"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2024-31963; CVE-2024-31964; CVE-2024-31965; CVE-2024-31966; CVE-2024-31967"
+referenced_identifiers: ""
+prerequisites: "物理Admin设置注入仅调试入口；远程链favicon续会话+POST绕过+mac溢出；缺固件"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/Mitel/Mitel%20IP%20%E7%94%B5%E8%AF%9D%E6%9C%AA%E6%8E%88%E6%9D%83RCE%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 #  Mitel IP 电话未授权RCE漏洞分析   
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Mitel 6867i IP电话及相关型号
+- 本文讨论：CVE-2024-31963；CVE-2024-31964；CVE-2024-31965；CVE-2024-31966；CVE-2024-31967
+- 版本、权限与配置前提：物理Admin设置注入仅调试入口；远程链favicon续会话+POST绕过+mac溢出；缺固件
+- 资料类型：多漏洞逆向研究译文；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 五CVE仅首个入元数据，未逐漏洞对应阶段；Mitel安全公告文字无链接，原研究作者来源未给
+- 100%可靠未给样本/固件，固定lib地址和设备绑定不可推广
+- s.sh实际日志GET b.sh不一致；sudo su不会让父脚本自动变root，说明过度简化
+- 伪代码栈数组free等被刻意模糊，不能当真实可编译源码；实验会破坏MAC/设备启动，风险已述须保留
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 确切固件/漏洞编号阶段、稳定性及图证待核验
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 3bytes  3072   2024-06-16 11:00  
   
 ### 引言  

@@ -1,8 +1,45 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "VMware 修复严重的Carbon Black App Control漏洞"
+product: "VMware Carbon Black App Control"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-d9721139b0f7e7d981c8fbf3"
+entity_id: "ve-d9721139b0f7e7d981c8fbf3"
+schema_version: "1"
 ---
 
-#  VMware 修复严重的Carbon Black App Control漏洞   
+# VMware 修复严重的Carbon Black App Control漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- CVE-2023-20858未入元数据
+- 明确需要管理控制台权限
+- 只列8.7/8.8/8.9而无修复构建
+- 原始来源链接实际指向Apple文章
+- vRealize Orchestrator背景漏洞另行关联
+- 应归安全软件
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 Ryan Naraine  代码卫士   2023-02-22 17:19  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

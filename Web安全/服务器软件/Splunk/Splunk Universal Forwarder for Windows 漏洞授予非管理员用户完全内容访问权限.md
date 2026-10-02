@@ -1,9 +1,46 @@
 ---
 cve: "CVE-2025-20298"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Splunk Universal Forwarder for Windows 漏洞授予非管理员用户完全内容访问权限"
+product: "Splunk Universal Forwarder for Windows"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2025-20298"
+referenced_identifiers: ""
+identifier_role: "primary"
+prerequisites: "本机非管理员可访问UF目录，安装/升级遗留不当ACL；文列各9.x修复分支"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-42116311ccbc88b11c055b1c"
+entity_id: "ve-42116311ccbc88b11c055b1c"
+schema_version: "1"
 ---
 
-#  Splunk Universal Forwarder for Windows 漏洞授予非管理员用户完全内容访问权限   
+# Splunk Universal Forwarder for Windows 漏洞授予非管理员用户完全内容访问权限
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：本机非管理员可访问UF目录，安装/升级遗留不当ACL；文列各9.x修复分支
+- 证据范围：合理区分本地文件权限风险，但CVSS写AV:N/UI:R与严格本地描述存在需要官方解释的矛盾
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- icacls判断语句(F)(M)/Users/Everyone被转码拼乱
+- 移除BUILTIN Users的显式ACE不自动处理所有继承/其他组，不能声称仅管理员可访问
+- 版本矩阵有用需核对升级后现有ACL是否自动修复
+- 无在野利用应限定2025-06日期
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
  网安百色   2025-06-04 11:30  
   
 已针对 Splunk Universal Forwarder for Windows 发布了关键安全公告 （SVD-2025-0602），解决了一个高严重性漏洞 （CVE-2025-20298），该漏洞使 Windows 系统面临潜在的权限提升。  

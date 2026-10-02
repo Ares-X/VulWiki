@@ -1,21 +1,60 @@
 ---
-version: "用友NC"
 source: "Threekiii/Vulnerability-Wiki"
+title: "用友NC XbrlPersistenceServlet URLDNS迹象"
+product: "用友NC"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "实测6.5声明"
+prerequisites: "未知"
+side_effects: "命令/代码执行示例可能改变主机状态"
+review_date: "2026-10-02"
+source_url: "https://github.com/Threekiii/Vulnerability-Wiki"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E7%94%A8%E5%8F%8BNC/%E7%94%A8%E5%8F%8B-NC-XbrlPersistenceServlet%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96.md"
+id: "vw-60808234eba0b4c0b37b0479"
+entity_id: "ve-60808234eba0b4c0b37b0479"
+schema_version: "1"
 ---
 
-# 用友 NC XbrlPersistenceServlet反序列化
+# 用友NC XbrlPersistenceServlet URLDNS迹象
 
-## 漏洞描述
+## 条目说明
+
+- 对象与具体问题：用友NC；XbrlPersistenceServlet URLDNS迹象
+- 版本、配置及部署条件：实测6.5声明
+- 认证与权限前提：未知
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- dnslog引号和URL拼接语法损坏，说明文字放Python块
+- 固定序列化长度替换域未同步，binary str编码需核
+- URLDNS不能证RCE
+
+## 操作风险
+
+命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
+### 漏洞描述
 
 用友 NC XbrlPersistenceServlet反序列化漏洞
 
-## 漏洞影响
+### 漏洞影响
 
 ```
 用友NC
 ```
 
-## 漏洞复现
+### 漏洞复现
 
 ```python
 攻击队利用用友nc反序列利用

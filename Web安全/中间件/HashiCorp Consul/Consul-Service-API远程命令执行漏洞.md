@@ -1,8 +1,49 @@
 ---
 source: "Threekiii/Vulnerability-Wiki"
+title: "Consul Service API远程命令执行漏洞"
+product: "HashiCorp Consul Agent API"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "启用远程脚本检查，API可达且ACL/代理未阻止未授权服务注册"
+source_status: "unknown"
+side_effects: "含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。"
+id: "vw-0ffc96aecd5b3e694bd71874"
+entity_id: "ve-0ffc96aecd5b3e694bd71874"
+schema_version: "1"
 ---
 
 # Consul Service API远程命令执行漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：启用远程脚本检查，API可达且ACL/代理未阻止未授权服务注册
+- 证据范围：文本明确特定配置，但脚本只读EnableRemoteScriptChecks，不能据此认定未授权RCE；需要注册权限边界。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- EnableRemoteScriptChecks=true不足以证明可未授权注册，可能ACL保护
+- 任意异常都打印不存在混淆不可达/无权/非JSON与无漏洞
+- 所有版本表述忽略后续本地脚本与远程脚本配置区分，需按版本说明
+- 缺2018官方公告直链；禁PUT注册会影响业务且未覆盖其他脚本检查注册入口
+- 文中没有实际利用请求，工具外部依赖不可当复现成功
+
+### 操作风险与资料使用
+
+- 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 ## 漏洞描述
 

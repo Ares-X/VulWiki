@@ -1,9 +1,54 @@
 ---
 cve: "CVE-2025-20124"
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-b605ea0a27b8356b89c58a0b"
+entity_id: "ve-b605ea0a27b8356b89c58a0b"
+schema_version: "1"
+title: "思科修补启用 Root CmdExec 和 PrivEsc 的关键 ISE 漏洞"
+product: "Cisco ISE"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2025-20124; CVE-2025-20125"
+referenced_identifiers: ""
+prerequisites: "20124已认证Java反序列化root；20125有效只读凭据越权；3.1P10/3.2P7/3.3P4修复，3.4不受影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/Cisco/%E6%80%9D%E7%A7%91%E4%BF%AE%E8%A1%A5%E5%90%AF%E7%94%A8%20Root%20CmdExec%20%E5%92%8C%20PrivEsc%20%E7%9A%84%E5%85%B3%E9%94%AE%20ISE%20%E6%BC%8F%E6%B4%9E.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 #  思科修补启用 Root CmdExec 和 PrivEsc 的关键 ISE 漏洞   
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Cisco ISE
+- 本文讨论：CVE-2025-20124；CVE-2025-20125
+- 版本、权限与配置前提：20124已认证Java反序列化root；20125有效只读凭据越权；3.1P10/3.2P7/3.3P4修复，3.4不受影响
+- 资料类型：双漏洞通告；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 元数据只有20124；两漏洞已说明相互独立，不应误组成必需链
+- 无原始研究/厂商公告URL；后半推广HTML调查表噪声
+- 将任一缺陷均导致代码执行的总述超出20125敏感信息/配置/重启描述
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 20124具体所需权限及20125后果范围待核验
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
  信息安全大事件   2025-02-06 12:08  
   
 Cisco 发布了更新，以解决身份服务引擎 （ISE） 的两个关键安全漏洞，这些漏洞可能允许远程攻击者在易受攻击的设备上执行任意命令并提升权限。  

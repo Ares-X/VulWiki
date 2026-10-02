@@ -1,6 +1,42 @@
 ---
 source: "hatch 补库批 20260928"
+product: "ThinkPHP / 5.0.24 反序列化gadget"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "Thinkphp 5.0.24 反序列化漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：实验5.0.24；必须应用另行暴露unserialize；提供的文件名载荷Linux特定、还需目录可写与PHP解析条件"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-f15a9b33ba820f012c1ffda9"
+entity_id: "ve-f15a9b33ba820f012c1ffda9"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：实验5.0.24；必须应用另行暴露unserialize；提供的文件名载荷Linux特定、还需目录可写与PHP解析条件
+
+代码与实验材料：全文代码已读，Windows destructor→Pivot/HasOne→Output→Memcached→File两阶段tag写入，另有mkdir完整变体
+
+来源证据范围：althims、pines404、先知7082来源
+
+- **适用与权限边界（1）**：必须把自建反序列化入口放入标题/摘要；依据：开头称框架漏洞，实际明确自行添加unserialize(base64_decode(GET))；不是框架默认远程入口。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **来源与引用处置（2）**：Linux限定属于载荷而非所有gadget；依据：Windows限制来自文件名特殊字符，不能推广成整个POP链只能Linux。保留这部分来源材料并与技术结论分开；其引用或宣传内容不能补足本文漏洞的证据。
+
+- **适用与权限边界（3）**：短PHP标签前提缺失；依据：ROT13后以&lt;?php短写形式&lt;? 起始并使用未引号数组键，需说明short_open_tag和PHP兼容性。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **结论使用边界（4）**：链路入口表述不一致；依据：开头称需要Request.__call，实际完整链走Output.__call与File.set，并未使用Request。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Thinkphp 5.0.24 反序列化（任意文件写入）漏洞
 

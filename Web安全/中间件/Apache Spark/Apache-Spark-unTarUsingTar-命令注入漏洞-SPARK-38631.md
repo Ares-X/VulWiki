@@ -1,9 +1,46 @@
 ---
 version: "hadoop-common-2.7.4.jar!/org/apache/hadoop/fs/FileUtil.class"
 source: "Threekiii/Vulnerability-Wiki"
+title: "Apache Spark unTarUsingTar 命令注入漏洞 SPARK-38631"
+product: "Apache Spark调用Hadoop FileUtil"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "Linux tar解压路径、任务能控制归档文件名且调用Utils.unpack/addArchive；对应Hadoop依赖版本"
+affected_versions: "hadoop-common-2.7.4.jar!/org/apache/hadoop/fs/FileUtil.class"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-d5855c244b46a98ec4741ee7"
+entity_id: "ve-d5855c244b46a98ec4741ee7"
+schema_version: "1"
 ---
 
 # Apache Spark unTarUsingTar 命令注入漏洞 SPARK-38631
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：Linux tar解压路径、任务能控制归档文件名且调用Utils.unpack/addArchive；对应Hadoop依赖版本
+- 证据范围：文件名进入bash命令的危险拼接直观，但没有完整Spark提交/权限边界论证。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- Spark3.1.2/3.2.1/3.3.0是列举未给分支界限及修复版本
+- touch仅创建空文件而非有效tar，但命令拼接可先触发副作用，应说明演示目的
+- 单引号文件名中的\|保留反斜线，需核对实际文件名/二次shell解析
+- 能提交任意Spark代码者本就有执行能力，应说明新增安全边界，不自动等同未认证远程漏洞
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 ## 漏洞描述
 

@@ -1,8 +1,61 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "基于Weblogic的一系列漏洞复现总结（一）"
+product: "Oracle WebLogic / Redis chain"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2014-4210; CVE-2017-10271; CVE-2018-2628"
+referenced_identifiers: ""
+identifier_role: "primary"
+cve: "CVE-2014-4210; CVE-2017-10271; CVE-2018-2628"
+prerequisites: "Unauthenticated UDDI/WSAT or T3; Redis command/file/cron privileges; Jdk7u21 gadget-specific old target runtime"
+source_url: "https://mp.weixin.qq.com/s/cbrXknj3ubKZrHcUCSvHLQ"
+source_status: "recorded"
+side_effects: "含计划任务、启动项或 SSH 授权文件写入：会改变后续执行或登录行为。测试前备份原文件，结束后恢复原内容、权限与属主，不覆盖生产文件。; 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。; 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。"
+id: "vw-ba3091744183bd0d4470492c"
+entity_id: "ve-ba3091744183bd0d4470492c"
+schema_version: "1"
 ---
 
 # 基于Weblogic的一系列漏洞复现总结（一）
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：Unauthenticated UDDI/WSAT or T3; Redis command/file/cron privileges; Jdk7u21 gadget-specific old target runtime
+- 证据范围：Three distinct labs, with useful JRMP setup detail, but many claimed screenshots absent from Markdown and code corrupted by inline-backtick concatenation.
+
+### 本次正文校订
+
+- 按实际内容修正 3 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- No primary CVE metadata; SSRF section lacks4210 identifier
+- LFCR versus CRLF contradiction and four Redis commands called three
+- SOAP content-type error does not uniquely identify non-HTTP service
+- Redis root cron write constraints/destructive overwrite omitted
+- All SOAP/XML and first Redis code are wrapped in repeated backticks within code fences
+- 10271 webshell uses object-tag earlier-patch-state variant; buffer prints beyond actual read length
+- 2628 remediation links July2020 instead of originalApril2018 CPU; later cumulative patch may cover it but context missing
+- No exact JDK bound for chosen Jdk7u21 gadget, missing transport-script body
+- Recruitment footer much longer than useful content, primary screenshots largely gone
+
+### 操作风险与资料使用
+
+- 含计划任务、启动项或 SSH 授权文件写入：会改变后续执行或登录行为。测试前备份原文件，结束后恢复原内容、权限与属主，不覆盖生产文件。
+- 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。
+- 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/cbrXknj3ubKZrHcUCSvHLQ)
@@ -128,7 +181,7 @@ http://10.10.10.130:7001/wls-wsat/CoordinatorPortType，burpsuite拦截数据包
 
 （2）在发包前开启监听，成功反弹shell
 
-```
+```shell
 nc -lvnp 8899
 ```
 
@@ -182,7 +235,7 @@ Weblogic 12.2.1.3（项目列表）
 （1）启动vulhub漏洞环境。  
 （2）利用nmap检测目标资产，发现开放T3协议及WebLogic版本信息。
 
-```
+```shell
 nmap -p 7001,7002 -v -n --script weblogic-t3-info 10.10.10.130
 ```
 
@@ -234,7 +287,7 @@ java -jar ysoserial-0.1-cve-2018-2628-all.jar JRMPClient2 10.10.10.130:8888 | xx
 
 （8）攻击机上新开一个终端窗口，利用nc监听8899端口，再开一个终端窗口运行weblogic_poc.py，即可反弹shell
 
-```
+```shell
 python weblogic_poc.py
 ```
 

@@ -1,9 +1,52 @@
 ---
 version: "飞视美 视频会议系统"
 source: "Threekiii/Awesome-POC"
+title: "飞视美 视频会议系统 Struts2 远程命令执行漏洞"
+product: "飞视美视频会议系统（Struts2）"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "受影响Struts参数处理、业务action可达；ipconfig为Windows示例"
+affected_versions: "飞视美 视频会议系统"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-ffeed90fb297904d8674035f"
+entity_id: "ve-43c5312d2df6dc9f56a2ebe4"
+schema_version: "1"
+canonical: "Web安全/商业软件/飞视美/飞视美-视频会议系统-Struts2-远程命令执行漏洞.md"
+relation_type: "duplicate_of"
 ---
 
 # 飞视美 视频会议系统 Struts2 远程命令执行漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：受影响Struts参数处理、业务action可达；ipconfig为Windows示例
+- 证据范围：给出具体业务路径和八进制表达式，需独立产品版本证据；不应当通用Struts条目。
+
+### 本次正文校订
+
+- 按实际内容修正 1 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- version字段仅产品名，未提供任何版本边界
+- Host为空、HTTP长度硬编码；readFully强制51020字节可能EOF异常导致无回显
+- 无鉴权状态/响应文本/来源/修复，截图未视检
+- 建议主归飞视美产品并用Struts依赖关联，不能与同payload的其他产品直接删重
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 ## 漏洞描述
 
@@ -35,7 +78,7 @@ app="飞视美-视频会议系统"
 
 发送请求包
 
-```
+```http
 POST /confinfoaction!showallConfinfos.action HTTP/1.1
 User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0
 Content-Type: application/x-www-form-urlencoded

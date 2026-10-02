@@ -1,8 +1,49 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "MM-Wiki display document_id文档访问控制"
+product: "MM-Wiki"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "<=0.2.1声明；文档权限配置待证"
+prerequisites: "无Cookie样例"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+source_status: "unknown"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/MM-Wiki/MM-Wiki%20%E6%96%87%E6%A1%A3%E7%AE%A1%E7%90%86%E5%99%A8%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE%E6%BC%8F%E6%B4%9E%EF%BC%88%E9%99%84POC%EF%BC%89.md"
+fofa: "header=\"mmwikissid\""
+id: "vw-e849accc289949e0f84155a0"
+entity_id: "ve-e849accc289949e0f84155a0"
+schema_version: "1"
 ---
 
-#  MM-Wiki 文档管理器未授权访问漏洞（附POC）   
+# MM-Wiki display document_id文档访问控制
+
+## 条目说明
+
+- 对象与具体问题：MM-Wiki；display document_id文档访问控制
+- 版本、配置及部署条件：<=0.2.1声明；文档权限配置待证
+- 认证与权限前提：无Cookie样例
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 正常显示某document_id不能直接证明越权，须私密/无权限对照与实际内容
+- 枚举全站文档是额外影响需授权边界证据；脚本需公众号回复未入库
+- 厂商仓库主页不是具体补丁，去邀请码广告
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 原创 BeiZhe  SheYin   2024-04-27 09:00  
   
 **免责声明：**  
@@ -46,7 +87,7 @@ Fofa: header="mmwikissid"
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/fMIPoqZAkaR2xJ7BibAh8qEswvarnD3vRaz7Sr1qrvxzSia3tDAoOdeibfnZhEQD6ARhZfQZ5ajZHu6wuoicX4o1UQ/640?wx_fmt=png&from=appmsg "")  
   
 构造payload，发送数据包  
-```
+```http
 GET /page/display?document_id=1 HTTP/1.1
 Host: 
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36 Edg/124.0.0.0

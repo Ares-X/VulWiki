@@ -1,8 +1,49 @@
 ---
 source: "Threekiii/Vulnerability-Wiki"
+title: "Celery <4.0 Redis未授权访问+Pickle反序列化利用"
+product: "Celery/Kombu消息反序列化，Redis作为broker"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "可向正确Redis库/队列写任务、worker接受pickle serializer并消费，Python协议版本兼容；高版本显式启用pickle同有风险"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-b7d7ce88d3f5d09630173808"
+entity_id: "ve-b7d7ce88d3f5d09630173808"
+schema_version: "1"
 ---
 
 # Celery <4.0 Redis未授权访问+Pickle反序列化利用
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：可向正确Redis库/队列写任务、worker接受pickle serializer并消费，Python协议版本兼容；高版本显式启用pickle同有风险
+- 证据范围：根因消费端不安全反序列化与broker失控组合，不是Redis服务器自身RCE；应以Celery主产品索引保留。
+
+### 本次正文校订
+
+- 按实际内容修正 4 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- <4.0是默认serializer历史而非完整安全边界，accept_content实际配置决定能否消费
+- RocketMQ等broker例子需确认Celery/Kombu版本支持，不宜随意列举
+- redis-py依赖版本未固定；Python3默认pickle协议随版本改变，需说明worker兼容性
+- LPUSH写入生产队列可能影响业务，固定任务元数据/错误响应不代表无副作用，缺删除测试任务/文件说明
+- 文件名Celery-4.0易丢失小于号，正文应结构化版本
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 ## 漏洞描述
 
@@ -23,7 +64,7 @@ Celery 是一个简单、灵活且可靠的分布式系统，用于处理大量�
 
 Vulhub执行如下命令启动Celery 3.1.23 + Redis：
 
-```
+```shell
 docker-compose up -d
 ```
 
@@ -52,7 +93,7 @@ print(task_dict)
 r.lpush('celery',json.dumps(task_dict))
 ```
 
-```
+```shell
 pip install redis
 python exploit.py [主机IP]
 ```
@@ -62,7 +103,7 @@ python exploit.py [主机IP]
 
 查看结果：
 
-```
+```shell
 docker-compose logs celery
 ```
 
@@ -71,7 +112,7 @@ docker-compose logs celery
 ![image-20220301104801643](./.resource/Celery-4.0-Redis未授权访问+Pickle反序列化利用/media/202203011048739.png)
 
 
-```
+```shell
 docker-compose exec celery ls -l /tmp
 ```
 

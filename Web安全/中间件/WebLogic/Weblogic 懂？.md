@@ -1,8 +1,49 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "Weblogic 懂？"
+product: "Oracle WebLogic T3"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "quarantined"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "Python2, reachable T3 and undocumented target/JDK gadget compatibility"
+source_url: "https://mp.weixin.qq.com/s/2a5gwWyNN9HpInVUaE2MmQ"
+source_status: "recorded"
+side_effects: "含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。"
+id: "vw-ee62f45396649d3a906d6502"
+entity_id: "ve-ee62f45396649d3a906d6502"
+schema_version: "1"
 ---
 
 # Weblogic 懂？
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：Python2, reachable T3 and undocumented target/JDK gadget compatibility
+- 证据范围：Entire Markdown including long raw escaped object/class bytes was read. No bytecode decoding/execution performed; cannot infer exact vulnerable identity from vague title and opaque payload.
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- No CVE, affected versions, technical explanation, expected result, patch or payload source
+- Argument guard len<2 still allows missing port then IndexError
+- sock.send may transmit partial payload; final send-success is not exploit proof
+- Embedded serialized class lacks readable corresponding source and provenance
+
+### 操作风险与资料使用
+
+- 含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/2a5gwWyNN9HpInVUaE2MmQ)

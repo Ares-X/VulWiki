@@ -1,7 +1,46 @@
 ---
 cnvd: "CNVD-2016-04742"
 source: "MrWQ/vulnerability-paper"
+product: "Spring 生态 / SpEL 与 Actuator"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2018-1270; CVE-2018-1273; CNVD-2016-04742; CVE-2017-8046; CVE-2017-4971; CNVD-2019-11630"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "Spring 全家桶各类 RCE 漏洞浅析"
+prerequisites: "来源所述条件，未列明部分仍待核：列多实体范围但 Messaging、Data REST、WebFlow 相互矛盾；Actuator 用 Boot 1–1.4/2.x 粗略代替依赖权限矩阵"
+side_effects: "未执行；本文需注意的操作影响：元数据只覆盖单一 CNVD；一文有六个主实体，frontmatter 仅 CNVD-2016-04742"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/g3FKo1FkUEVdN8x2OM1H_Q"
+id: "vw-edd0a20fb7c7b42efa69371f"
+entity_id: "ve-edd0a20fb7c7b42efa69371f"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：列多实体范围但 Messaging、Data REST、WebFlow 相互矛盾；Actuator 用 Boot 1–1.4/2.x 粗略代替依赖权限矩阵
+
+代码与实验材料：601 行已全文读取；多处分析依源码截图，若干基础示例不完整，未执行
+
+来源证据范围：明确微信原文，并有 Misaki、Chybeta、Seebug 等十项参考，无逐项官方补丁链接
+
+- **适用与权限边界（1）**：漏洞版本疑似串项及边界错误；依据：8046 写 REST &lt;3.0.1/&lt;2.6.9，与 466 的 3.0RC3/2.6.7 不同，需排查后续修复；4971 又加 2.4.4–2.4.8，未独立标识后续问题；1270 上限与 481 不同。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **实验改动边界（2）**：基础代码存在明确缺失；依据：@Value 用 ${...} 却声称执行 SpEL；XML demo 没有 test.xml；context 变量声明被注释但后文使用。以下步骤按原实验条件保留；人工改动后的行为只支持该修改环境，不用于证明未修改发行版默认可利用。
+
+- **适用与权限边界（3）**：Spring 组件关系失真；依据：称 Framework 包含 Boot、Boot 内置默认 XML；Bean 示例仅 &lt;bean /&gt; 无 id/class。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **适用与权限边界（4）**：攻击前提和补丁效果泛化；依据：称 Boot 1.5 以后接口加授权即可解决所有链，忽略 Cloud 写端点配置、依赖和显式关闭鉴权；“多数不需复杂配置”与各段前提冲突。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **操作与副作用边界（5）**：元数据只覆盖单一 CNVD；依据：一文有六个主实体，frontmatter 仅 CNVD-2016-04742。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Spring 全家桶各类 RCE 漏洞浅析
 

@@ -1,9 +1,63 @@
 ---
-cve: "CVE-2022-31675"
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2022-31675;CVE-2022-31674;CVE-2022-31672"
+identifier_role: "primary"
+primary_identifiers: "CVE-2022-31675;CVE-2022-31674;CVE-2022-31672"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "VMware vRealize Operations多个漏洞安全风险通告"
+product: "VMware vRealize Operations"
+record_type: "advisory"
+document_type: "三漏洞组合风险通告"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "文称8.x<8.6.4；有效dashboard链接ID→认证绕过，低权限可访问日志，较高权限控制VCOPS_BASE触发脚本"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/VMware%20Aria%20Operations%20for/VMware%20vRealize%20Operations%E5%A4%9A%E4%B8%AA%E6%BC%8F%E6%B4%9E%E5%AE%89%E5%85%A8%E9%A3%8E%E9%99%A9%E9%80%9A%E5%91%8A.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-f9d6f1fa4d179a818fa593d7"
+entity_id: "ve-f9d6f1fa4d179a818fa593d7"
+schema_version: "1"
 ---
 
-#  VMware vRealize Operations多个漏洞安全风险通告   
+# VMware vRealize Operations多个漏洞安全风险通告
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：VMware vRealize Operations
+- 文献类型：三漏洞组合风险通告
+- 版本、权限及部署边界：文称8.x<8.6.4；有效dashboard链接ID→认证绕过，低权限可访问日志，较高权限控制VCOPS_BASE触发脚本
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 元数据只31675，另外日志凭据泄露及脚本提权必须三实体；不是Logs/Networks同产品，迁云管理Operations
+2. 开头和结尾未认证远程root略去有效仪表板ID、日志中可用凭据和后续触发权限，组合链每跳前提应列清
+3. 表单独列PR:N/Low/High不同，不应把单洞都标无权限；高危也写蓝色一般事件属于自有评级需明确不和CVSS混用
+4. 公开PoC状态有但未给研究/PoC链接或组合结果，只VMSA和官方下载页；不能当作者已复现全链
+5. 六大表重复名称/版本/影响，721样式属性造成正文膨胀，规范为三条紧凑结构；8.6.4及以上需其他版本线补丁映射
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://customerconnect.vmware.com/en/downloads/info/slug/infrastructure_operations_management/vmware_vrealize_operations/8_6>
+- 原文参考链接（未重新核验）：<https://www.vmware.com/security/advisories/VMSA-2022-0022.html>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzI4NDY2MDMwMw==&mid=2247499450&idx=2&sn=2da3ca2e0b4d4f9f56ea7f7579afc378&chksm=ebfab99adc8d308c3ba6e7a74bd41beadf39f1b0e38a39f7235db4c305c06caa49ff63a0cc1d&scene=21#wechat_redirect>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
  安全内参   2022-08-11 19:42  
   
 近日，奇安信CERT监测到VMware官方发布VMware vRealize Operations多个漏洞安全通告，其中包括：  
@@ -65,4 +119,4 @@ https://customerconnect.vmware.com/en/downloads/info/slug/infrastructure_operati
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

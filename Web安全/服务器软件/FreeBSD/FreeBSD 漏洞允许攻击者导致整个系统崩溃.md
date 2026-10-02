@@ -1,8 +1,47 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "FreeBSD 漏洞允许攻击者导致整个系统崩溃"
+product: "FreeBSD jail/nullfs"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2025-15576"
+referenced_identifiers: ""
+identifier_role: "primary"
+cve: "CVE-2025-15576"
+prerequisites: "两个兄弟jail共享nullfs挂载并有可协作进程通过Unix socket交换目录描述符"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-8156f960457be1accc36732d"
+entity_id: "ve-8156f960457be1accc36732d"
+schema_version: "1"
 ---
 
-#  FreeBSD 漏洞允许攻击者导致整个系统崩溃  
+# FreeBSD 漏洞允许攻击者导致整个系统崩溃
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：两个兄弟jail共享nullfs挂载并有可协作进程通过Unix socket交换目录描述符
+- 证据范围：正文主体是特定配置的jail逃逸，标题全系统崩溃与论证不匹配；目录边界绕过后仍需考虑文件权限
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 主CVE缺frontmatter
+- 标题应反映jail隔离绕过而非未经展示崩溃
+- freebsd-update安装命令被翻译损坏
+- 没有精确RELEASE-p补丁级别，只有2026-02-24后日期
+- 无临时缓解与避免传描述符的建议需区分局部降低风险/完整修复
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 O安全研究员
                     O安全研究员  O安全研究员   2026-02-27 11:42  
   

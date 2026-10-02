@@ -1,10 +1,63 @@
 ---
-cnvd: "CNVD-2021-30167"
-fofa: "” 工程师](http://mp.weixin.qq.com/s?__biz=MzI1NTM4ODIxMw==&mid=2247485135&idx=1&sn=f872054b31"
 source: "MrWQ/vulnerability-paper"
+identifier_role: "reference"
+primary_identifiers: ""
+referenced_identifiers: "CNVD-2021-30167"
+identifier_status: "unknown"
+title: "附 EXP 常见的未授权访问漏洞"
+product: "JBoss/Docker/FPM/rsync/Redis未认证配置合集转载"
+record_type: "roundup"
+document_type: "技术文章（细分类待核）"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "Redis连接成功不等于未认证且版本与模块能力混淆，FPM缺部署配置/现存PHP条件的准确限定"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/%E9%99%84%20EXP%20%E5%B8%B8%E8%A7%81%E7%9A%84%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE%E6%BC%8F%E6%B4%9E.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+fofa_unverified: "” 工程师](http://mp.weixin.qq.com/s?__biz=MzI1NTM4ODIxMw==&mid=2247485135&idx=1&sn=f872054b31"
+source_url: "https://mp.weixin.qq.com/s/hunuYAWkHliBCutCjymaQw"
+id: "vw-62aaeda5bdf51466a8cca985"
+entity_id: "ve-334288e20bd8a6fb86d5e82c"
+schema_version: "1"
+canonical: "Web安全/其他软件/杂项/常见的未授权访问漏洞.md"
+relation_type: "duplicate_of"
 ---
 
-# 【附 EXP】常见的未授权访问漏洞
+# 附 EXP 常见的未授权访问漏洞
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：JBoss/Docker/FPM/rsync/Redis未认证配置合集转载
+- 文献类型：技术文章（细分类待核）
+- 版本、权限及部署边界：Redis连接成功不等于未认证且版本与模块能力混淆，FPM缺部署配置/现存PHP条件的准确限定
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 已完整逐段复核：JBoss、Docker、FPM完整客户端、rsync、Redis的文本代码和图片引用与索引275同篇，新增仅往期推荐/推广，应作为同文转载而非独立分析
+2. CNVD-2021-30167仅尾部用友推荐链接，非本文漏洞，fofa字段抓入推荐文章标题和截断URL属错误元数据
+3. 共存java -jvf错误、中文JSP引号、Docker关闭命令缺失和Swarm混淆、Python转义括号、每分钟/15分钟不一致
+4. rsync17分误说等17分钟且缺脚本执行位，auth users不是只读
+5. Redis连接成功不等于未认证且版本与模块能力混淆，FPM缺部署配置/现存PHP条件的准确限定
+6. 细项沿用275独立审读记录，合并时保留原始转载链与图引用，无需保留广告重复
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://mp.weixin.qq.com/s/hunuYAWkHliBCutCjymaQw>
+
+### 归档技术正文
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/hunuYAWkHliBCutCjymaQw)

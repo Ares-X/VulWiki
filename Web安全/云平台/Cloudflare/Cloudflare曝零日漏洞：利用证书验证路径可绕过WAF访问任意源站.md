@@ -1,8 +1,50 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Cloudflare曝零日漏洞：利用证书验证路径可绕过WAF访问任意源站"
+product: "Cloudflare ACME验证"
+record_type: "incident"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-1d12233572bb44eedb8ea7eb"
+entity_id: "ve-1d12233572bb44eedb8ea7eb"
+schema_version: "1"
 ---
 
-#  Cloudflare曝零日漏洞：利用证书验证路径可绕过WAF访问任意源站  
+# Cloudflare曝零日漏洞：利用证书验证路径可绕过WAF访问任意源站
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 本次正文校订
+
+- 修正正文中的 /.wel-known → /.well-known 转录错误，资源路径保持原样。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 有原始FearsOff和Cloudflare链接及自定义主机名token细节应保留
+- 不是随便无效token，须区分他区有效token与本机不匹配
+- /.wel-known拼写错误
+- 示例token省略不可运行
+- 2026报道用零日标题需突出2025已修复
+- 90天证书概括过宽
+- 路径绕过是否适用取决于源站及规范化，不泛化任意敏感文件
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 原创 开发小鸡娃
                         开发小鸡娃  安全随心录   2026-01-28 14:10  
   
@@ -115,7 +157,7 @@ Cloudflare中，
   
 ![0](https://mmbiz.qpic.cn/sz_mmbiz_png/9MnpyqibuMRYzGsXXwKAyT5UibiadTHeKqlSP2RLKu1ZBDHwgI3Ha2RYPWqJAcczPvPtSHAbS16XPvrmGbL6pJmyA/640?wx_fmt=png&from=appmsg "")  
   
-但是通过 /.wel-known 绕过了waf的限制而直接到了源站，按照策略应该是被block的  
+但是通过 /.well-known 绕过了waf的限制而直接到了源站，按照策略应该是被block的  
   
 ![0](https://mmbiz.qpic.cn/sz_mmbiz_png/9MnpyqibuMRYzGsXXwKAyT5UibiadTHeKqlpZB1CM2iaqPEicnM5KicryuNibKJqKzLoUqnpHFBfZwSJyFjBK6VK66NUQ/640?wx_fmt=png&from=appmsg "")  
 ## 如何获取一个Challenge Token  

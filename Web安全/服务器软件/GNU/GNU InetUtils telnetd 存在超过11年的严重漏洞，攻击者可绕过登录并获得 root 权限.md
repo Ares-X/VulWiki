@@ -1,8 +1,45 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "GNU InetUtils telnetd 存在超过11年的严重漏洞，攻击者可绕过登录并获得 root 权限"
+product: "GNU Inetutils telnetd"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2026-24061"
+referenced_identifiers: ""
+identifier_role: "primary"
+cve: "CVE-2026-24061"
+prerequisites: "1.9.3至2.7和实际telnetd服务可达；具体login参数行为"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-e2852c38658ad56633f69f7d"
+entity_id: "ve-e2852c38658ad56633f69f7d"
+schema_version: "1"
 ---
 
-#  GNU InetUtils telnetd 存在超过11年的严重漏洞，攻击者可绕过登录并获得 root 权限  
+# GNU InetUtils telnetd 存在超过11年的严重漏洞，攻击者可绕过登录并获得 root 权限
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：1.9.3至2.7和实际telnetd服务可达；具体login参数行为
+- 证据范围：保留发现者、引入/报告时间与扫描观察，属于历史新闻；与源码/实验文章价值不同
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 主CVE缺元数据
+- 21个IP属于发布前24小时的扫描/利用尝试，不能作为当前数量或已入侵实例
+- 自定义login缓解应链接原始支持建议
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 会杀毒的单反狗
                     会杀毒的单反狗  军哥网络安全读报   2026-01-23 01:01  
   

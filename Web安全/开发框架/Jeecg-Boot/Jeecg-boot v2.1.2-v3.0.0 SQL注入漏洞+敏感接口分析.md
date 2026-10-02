@@ -1,6 +1,38 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+product: "JeecgBoot/NgAlain字典SQL注入与用户属性枚举"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "Jeecg-boot v2.1.2-v3.0.0 SQL注入漏洞+敏感接口分析"
+prerequisites: "来源所述条件，未列明部分仍待核：声称2.1.2至3.0.0，二开系统测试；需静态后缀anon规则和特定控制器存在"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-ca91a3f3366542b9b68081af"
+entity_id: "ve-ca91a3f3366542b9b68081af"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：声称2.1.2至3.0.0，二开系统测试；需静态后缀anon规则和特定控制器存在
+
+代码与实验材料：Controller/mapper片段、.js绕过及checkOnlyUser枚举；关键认证配置/结果依图，/api是实例上下文
+
+来源证据范围：chobits02/C4原创，无具体上游tag/patch
+
+- **结论使用边界（1）**：数据库和密码算法表述未被代码证明；依据：table参数是表表达式非任意数据库；仅PasswordUtil.encrypt签名不能证明带盐MD5算法，需要实际实现。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **适用与权限边界（2）**：指纹与版本范围过度泛化；依据：称唯一特征验证码接口；二开实例不能证明所有2.1.2至3.0.0默认配置相同；checkOnlyUser需要区分存在性布尔泄漏与直接返回敏感数据。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 #  Jeecg-boot v2.1.2-v3.0.0 SQL注入漏洞+敏感接口分析  
 原创 chobits02  C4安全   2025-07-21 06:21  

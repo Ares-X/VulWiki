@@ -1,8 +1,51 @@
 ---
 source: "hatch 补库批 20260928"
+title: "uWSGI 未授权访问漏洞"
+product: "uWSGI native uwsgi socket"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "Direct access to uwsgi TCP/Unix socket, application configuration allowing dynamic UWSGI_FILE execution; not plain HTTP listener"
+source_status: "unknown"
+side_effects: "含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。"
+id: "vw-63d1434dd187fbd35cd5b69c"
+entity_id: "ve-63d1434dd187fbd35cd5b69c"
+schema_version: "1"
 ---
 
 # uWSGI 未授权访问漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：Direct access to uwsgi TCP/Unix socket, application configuration allowing dynamic UWSGI_FILE execution; not plain HTTP listener
+- 证据范围：Full Python2/3-aware packet builder and explicit HTTP unsupported branch. Distinguish WSGI interface specification, uwsgi protocol and uWSGI server names.
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- Opening WSGI called server and uwsgi called container conflates three names
+- Affected/configuration section empty; no dangerous modifier/magic-variable configuration or mitigation details
+- No compose environment supplied, only references
+- Length prefix counts Unicode characters but encodes UTF8 bytes, wrong for nonASCII values
+- sock.send may be partial and no timeout/response proof
+- Script notes commands without output can crash uWSGI; consequence must be clear
+- Test file cleanup absent
+
+### 操作风险与资料使用
+
+- 含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 一、漏洞简介
 ------------

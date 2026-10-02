@@ -1,9 +1,51 @@
 ---
-cve: "CVE-2023-6508"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Google Chrome Chrome120多漏洞更新新闻"
+product: "Google Chrome"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2023-6508;CVE-2023-6509"
+referenced_identifiers: "CVE-2023-6345"
+identifier_status: "unknown"
+affected_scope: "120.0.6099.62/.63按平台历史修复"
+prerequisites: "恶意内容交互，缺细节"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+identifier_role: "primary"
+source_status: "unknown"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/Chrome/Chrome%20120%20%E4%BF%AE%E8%A1%A5%E4%BA%86%2010%20%E4%B8%AA%E6%BC%8F%E6%B4%9E.md"
+category_recommendation: "桌面软件 / 浏览器"
+id: "vw-0946e5fe5b8fc05bfcbf3588"
+entity_id: "ve-0946e5fe5b8fc05bfcbf3588"
+schema_version: "1"
 ---
 
-#  Chrome 120 修补了 10 个漏洞   
+# Google Chrome Chrome120多漏洞更新新闻
+
+## 条目说明
+
+- 对象与具体问题：Google Chrome；Chrome120多漏洞更新新闻
+- 版本、配置及部署条件：120.0.6099.62/.63按平台历史修复
+- 认证与权限前提：恶意内容交互，缺细节
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 不是单6508条目，6509亦主漏洞，6345是前次更新引用
+- 未提在野不等于证实无在野；沙箱逃逸需独立链，奖金不能直接量化严重度
+- Google公告名称缺实际链接；尾部大量法律/工控/供应链无关推荐远超正文
+- 移浏览器并按批次公告保留，多CVE实体关联
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 何威风  祺印说信安   2023-12-11 00:00  
   
 **谷歌周二宣布向稳定渠道发布 Chrome 120，并修复了 10 个漏洞。**  

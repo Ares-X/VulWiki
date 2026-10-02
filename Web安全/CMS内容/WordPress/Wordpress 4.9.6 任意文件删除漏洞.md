@@ -1,6 +1,40 @@
 ---
 source: "白阁文库 BaizeSec/bylibrary"
+product: "WordPress core"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "Wordpress 4.9.6 任意文件删除漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：4.9.6 tested/as-of2018-06-27; capability to upload/edit/delete attachment, valid edit/delete nonce; filesystem delete permissions"
+side_effects: "未执行；本文需注意的操作影响：源码和过程较完整，有RIPS原始链接；302只是跳转不等于删除成功，后续文件观察才证据；删除index.php仅在目录列举允许时泄露列表；删除wp-config到接管需安装/DB条件；javascript:void空链接及缺失截图位置需清理；basename临时补丁不宜宣称保证所有安全文件不删"
+source_status: "unknown"
+id: "vw-e8ccf76c9c8a01ea1c5c9ec6"
+entity_id: "ve-e8ccf76c9c8a01ea1c5c9ec6"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：4.9.6 tested/as-of2018-06-27; capability to upload/edit/delete attachment, valid edit/delete nonce; filesystem delete permissions
+
+- **适用与权限边界（1）**：只写需要登录且鸡肋，未明确最低角色/自己的附件边界，低权到接管意义不能据此淡化。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **事实待核（2）**：尚未修复明确2018历史时点，需标历史状态并补后续补丁而非当今日建议。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **操作与副作用边界（3）**：源码和过程较完整，有RIPS原始链接；302只是跳转不等于删除成功，后续文件观察才证据。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+- **操作与副作用边界（4）**：删除index.php仅在目录列举允许时泄露列表；删除wp-config到接管需安装/DB条件。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+- **证据待核（5）**：javascript:void空链接及缺失截图位置需清理；basename临时补丁不宜宣称保证所有安全文件不删。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # 0x01 Wordpress简介
 
@@ -16,7 +50,11 @@ WordPress是网络上最受欢迎的CMS。根据*w3tech*，大约30％的网站�
 
  
 
+
+```text
 [](javascript:void(0);)
+```
+
 
 ```
 function wp_delete_attachment( $post_id, $force_delete = false ) {
@@ -36,7 +74,11 @@ function wp_delete_attachment( $post_id, $force_delete = false ) {
 }
 ```
 
+
+```text
 [](javascript:void(0);)
+```
+
 
 `$meta['thumb']`来自与数据库，是图片的属性之一。代码未检查`$meta['thumb']`的内容，直接带入`unlink`函数，如果`$meta['thumb']`可控则可导致文件删除。
 
@@ -44,7 +86,11 @@ function wp_delete_attachment( $post_id, $force_delete = false ) {
 
 文件/wp-admin/post.php中：
 
+
+```text
 [](javascript:void(0);)
+```
+
 
 ```
 ...
@@ -61,7 +107,11 @@ switch($action) {
 ...
 ```
 
+
+```text
 [](javascript:void(0);)
+```
+
 
 `$newmeta['thumb']`来自于$_POST['thumb']，未经过滤直接将其存入数据库，即上一步的`$meta['thumb']`可控。
 
@@ -71,7 +121,11 @@ switch($action) {
 
  通过将修复程序添加到`functions.php`当前活动的主题/子主题的文件中，可以将修复程序集成到现有的WordPress安装中。
 
+
+```text
 [](javascript:void(0);)
+```
+
 
 ```
 add_filter( 'wp_update_attachment_metadata', 'rips_unlink_tempfix' );
@@ -85,7 +139,11 @@ function rips_unlink_tempfix( $data ) {
 }
 ```
 
+
+```text
 [](javascript:void(0);)
+```
+
 
 所提供的Hotfix所做的就是挂钩`wp_update_attachement_metadata()`调用并确保为元值提供的数据`thumb`不包含任何可以进行路径遍历的部分。因此，不能删除任何安全相关文件。
 

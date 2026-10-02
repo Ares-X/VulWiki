@@ -1,9 +1,64 @@
 ---
-cve: "CVE-2020-15257"
 source: "Threekiii/Awesome-POC"
+identifier_role: "reference"
+primary_identifiers: ""
+referenced_identifiers: "CVE-2020-15257;CVE-2019-14271;CVE-2022-0492;CVE-2019-13139;CVE-2025-1974"
+identifier_status: "unknown"
+title: "Kubernetes + Ubuntu 18.04 漏洞环境搭建"
+product: "Kubernetes / Docker / containerd / Ubuntu"
+record_type: "vulnerability"
+document_type: "漏洞实验环境搭建索引"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "Ubuntu18.04、Docker18.09.3/19.03.6、minikube1.35.0、kubectl1.32.3/server1.32.0；需隔离实验虚机和管理权限"
+side_effects: "表中配置错误/持久化技巧与CVE混列，应按场景类型区分，不能认为一套默认集群自动满足全部条件"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/Kubernetes%20%2B%20Ubuntu%2018.04%20%E6%BC%8F%E6%B4%9E%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-62b9c06d03e31b423966f662"
+entity_id: "ve-62b9c06d03e31b423966f662"
+schema_version: "1"
 ---
 
 # Kubernetes + Ubuntu 18.04 漏洞环境搭建
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Kubernetes / Docker / containerd / Ubuntu
+- 文献类型：漏洞实验环境搭建索引
+- 版本、权限及部署边界：Ubuntu18.04、Docker18.09.3/19.03.6、minikube1.35.0、kubectl1.32.3/server1.32.0；需隔离实验虚机和管理权限
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. frontmatter将索引中首个CVE当主漏洞，实际是多场景环境指南，应移云/容器实验环境而非单漏洞Linux条目
+2. 安装脚本固定Docker但containerd.io未固定，minikube用latest、kubectl可选latest、启动未固定Kubernetes版本，无法保证复现指定旧漏洞
+3. 表中配置错误/持久化技巧与CVE混列，应按场景类型区分，不能认为一套默认集群自动满足全部条件
+4. 依赖外链场景与本地.resource图片；图片未查看且需验证迁移后路径完整
+5. 卸载组件/改软件源/锁定旧版本脚本已有非生产警告，应补一次性虚机隔离和版本清单；未执行
+
+### 操作风险
+
+表中配置错误/持久化技巧与CVE混列，应按场景类型区分，不能认为一套默认集群自动满足全部条件
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://github.com/Threekiii/Awesome-POC/tree/master/%E4%BA%91%E5%AE%89%E5%85%A8%E6%BC%8F%E6%B4%9E>
+- 原文参考链接（未重新核验）：<https://github.com/Xyntax/CDK/wiki/Exploit:-docker-sock-check>
+- 原文参考链接（未重新核验）：<https://github.com/Xyntax/CDK/wiki/Exploit:-docker-sock-pwn>
+- 原文参考链接（未重新核验）：<https://github.com/Threekiii/Awesome-POC/blob/master/%E4%BA%91%E5%AE%89%E5%85%A8%E6%BC%8F%E6%B4%9E/%E6%8C%82%E8%BD%BD%20docker.sock%20%E5%AF%BC%E8%87%B4%E5%AE%B9%E5%99%A8%E9%80%83%E9%80%B8.md>
+- 原文参考链接（未重新核验）：<https://github.com/Threekiii/Awesome-POC/blob/master/%E4%BA%91%E5%AE%89%E5%85%A8%E6%BC%8F%E6%B4%9E/%E6%8C%82%E8%BD%BD%20log%20%E7%9B%AE%E5%BD%95%E5%AF%BC%E8%87%B4%E5%AE%B9%E5%99%A8%E9%80%83%E9%80%B8.md>
+- 原文参考链接（未重新核验）：<https://github.com/Xyntax/CDK/wiki/Exploit:-mount-procfs>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
 
 ## 前置知识
 

@@ -1,8 +1,62 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2022-45460"
+identifier_role: "primary"
+primary_identifiers: "CVE-2022-45460"
+referenced_identifiers: "CVE-2018-100881;CVE-2017-75773"
+identifier_status: "unknown"
+title: "通过 ROP 实现 RCE"
+product: "Xiongmai uc-httpd / Sofia IP摄像头固件"
+record_type: "analysis"
+document_type: "嵌入式ARM ROP利用研究译文"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "特定ARM32/uClibc固件；HTTP未鉴权入口、路径遍历可读/proc/self/maps辅助泄露，缺设备/固件与二进制哈希"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Windows/%E9%80%9A%E8%BF%87%20ROP%20%E5%AE%9E%E7%8E%B0%20RCE.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-f65a33af2482b0b7706eec31"
+entity_id: "ve-f65a33af2482b0b7706eec31"
+schema_version: "1"
 ---
 
-#  通过 ROP 实现 RCE   
+# 通过 ROP 实现 RCE
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Xiongmai uc-httpd / Sofia IP摄像头固件
+- 文献类型：嵌入式ARM ROP利用研究译文
+- 版本、权限及部署边界：特定ARM32/uClibc固件；HTTP未鉴权入口、路径遍历可读/proc/self/maps辅助泄露，缺设备/固件与二进制哈希
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. Windows目录完全错分类，正文是Linux ARM摄像头Sofia/uc-httpd；主45460应补frontmatter，前述另两CVE尾号疑脚注黏连，末尾4546016同样需清理脚注并核原号
+2. 从原.bss溢出转向另一栈溢出的研究转换应保留，不能将三个漏洞当同根因或一条已无条件适用链
+3. ARM32使用p32与4字节寄存器，fileno尾声却写5×8字节填充，明确与展示代码5个4字节槽不一致
+4. Thumb每条均16位/返回值统一r0-r3等架构教学过宽，需限定ARM版本/ABI；所有函数+4跳过序言只是此二进制分析不能通用化
+5. RaspberryPi栈权限与真实设备差异作者已承认，必须保留；7万Shodan实例不代表全可利用，缺日期/方法
+6. 源码此处/这里及脚注1–17全部丢URL，原作者born0monday只有名无源文地址；源gadget/地图参数未完整，图片未视检
+7. 独特同连接复用ROP有保留价值，stderr未完成是明确限制，不能补造完整链
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 born0monday  securitainment   2025-02-12 21:13  
   
 > ROPing our way to RCE  
@@ -461,4 +515,4 @@ p += p32(libc_base + 0x368dc) # mov r0, sp; blx r3
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

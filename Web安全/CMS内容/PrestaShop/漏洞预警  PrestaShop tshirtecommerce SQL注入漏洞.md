@@ -1,7 +1,37 @@
 ---
 cve: "CVE-2023-27637"
 source: "gelusus/wxvl 公众号漏洞文库"
+product: "PrestaShop tshirtecommerce2.1.4 module"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2023-27637"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "漏洞预警  PrestaShop tshirtecommerce SQL注入漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：安装相关designer模块；文章称未认证"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-a0b6f29ba4b42d5b08558232"
+entity_id: "ve-a0b6f29ba4b42d5b08558232"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：安装相关designer模块；文章称未认证
+
+- **结论使用边界（1）**：背景把tshirtecommerce描述成独立T恤店系统，需明确插件身份。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **事实待核（2）**：无注入参数/请求/响应/源码，POC已公开无链接；修复仅厂商主页无安全版。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **结论使用边界（3）**：不能据单2.1.4扩展所有PrestaShop核心。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 #  漏洞预警 | PrestaShop tshirtecommerce SQL注入漏洞   
 浅安  浅安安全   2025-06-02 23:00  

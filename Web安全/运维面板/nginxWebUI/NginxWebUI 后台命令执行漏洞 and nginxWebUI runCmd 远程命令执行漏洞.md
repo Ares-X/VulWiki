@@ -1,9 +1,52 @@
 ---
 version: "nginxWebUI <= 3.5.0"
 source: "MrWQ/vulnerability-paper"
+title: "NginxWebUI 后台命令执行漏洞 and nginxWebUI runCmd 远程命令执行漏洞"
+product: "nginxWebUI (cym1102 Java project)"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "<=3.5.0 claimed; front-end bypass separate from authenticated cmdOver; lab container privileged with host network/mount"
+affected_versions: "nginxWebUI <= 3.5.0"
+source_url: "https://mp.weixin.qq.com/s/Rc6xNGSuM9769T4_Hq_IjQ"
+source_status: "recorded"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-c136f990c3ebb7d67389df94"
+entity_id: "ve-c136f990c3ebb7d67389df94"
+schema_version: "1"
 ---
 
 # NginxWebUI 后台命令执行漏洞 and nginxWebUI runCmd 远程命令执行漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：<=3.5.0 claimed; front-end bypass separate from authenticated cmdOver; lab container privileged with host network/mount
+- 证据范围：Distinct backend and unauthenticated examples; boundary-crossing chain needs clear separation
+
+### 本次正文校订
+
+- 按实际内容修正 1 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- Missing exact fixed version/advisory mapping
+- HTTP request lacks blank line before body and carries captured session cookies
+- Generic product intro could confuse nginxWebUI with Nginx UI; identify repository explicitly
+- Privileged container lab settings materially affect host impact
+- Keep standalone backend versus auth-bypass chain prerequisites
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/Rc6xNGSuM9769T4_Hq_IjQ)
@@ -68,7 +111,7 @@ services:
 
 payload:
 
-```
+```http
 POST //adminPage/remote/cmdOver HTTP/1.1
 Host: ip:port
 Content-Length: 38

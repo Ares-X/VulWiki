@@ -1,9 +1,43 @@
 ---
-
 source: "SourByte05/Vulnerability-Wiki-PoC"
+title: "CyberPanel filemanagerupload 远程命令执行漏洞"
+product: "CyberPanel运维面板"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-23f431d2f72b25be9465dd52"
+entity_id: "ve-23f431d2f72b25be9465dd52"
+schema_version: "1"
 ---
 
 # CyberPanel filemanagerupload 远程命令执行漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 证据范围：应归运维面板；输入completePath纯curl是否到shell执行以及必要鉴权绕过步骤缺源码/响应文本，现文不充分。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 影响>=2.3.7与修复>=2.3.7完全重叠，关键版本信息自相矛盾
+- PoC未放代码块，<target>会被HTML吞掉，实际domainName前提未交代
+- 15万资产是搜索结果不等于受影响实例，在野利用/广泛性未给来源
+- 只给tag链接，需精确修复commit与版本；无清理上传文件说明
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 # 漏洞描述
 

@@ -1,9 +1,50 @@
 ---
-cve: "CVE-2024-52899"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "IBM Data Virtualization Manager/Security SOAR等 多产品漏洞更新新闻"
+product: "IBM Data Virtualization Manager/Security SOAR等"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2024-52899;CVE-2024-45801;CVE-2024-49353;CVE-2024-6119"
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "DVM z/OS1.1/1.2；SOAR51.0.4.0修复；其他未列"
+prerequisites: "DVM认证；各问题分开"
+side_effects: "命令/代码执行示例可能改变主机状态"
+review_date: "2026-10-02"
+identifier_role: "primary"
+source_status: "unknown"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/IBM/IBM%20%E4%BF%AE%E8%A1%A5%E6%95%B0%E6%8D%AE%E8%99%9A%E6%8B%9F%E5%8C%96%E7%AE%A1%E7%90%86%E5%99%A8%E3%80%81%E5%AE%89%E5%85%A8%20SOAR%20%E4%B8%AD%E7%9A%84%20RCE%20%E6%BC%8F%E6%B4%9E.md"
+id: "vw-ee9d790c215de63d2d223d0c"
+entity_id: "ve-ee9d790c215de63d2d223d0c"
+schema_version: "1"
 ---
 
-#  IBM 修补数据虚拟化管理器、安全 SOAR 中的 RCE 漏洞   
+# IBM Data Virtualization Manager/Security SOAR等 多产品漏洞更新新闻
+
+## 条目说明
+
+- 对象与具体问题：IBM Data Virtualization Manager/Security SOAR等；多产品漏洞更新新闻
+- 版本、配置及部署条件：DVM z/OS1.1/1.2；SOAR51.0.4.0修复；其他未列
+- 认证与权限前提：DVM认证；各问题分开
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 非单52899：45801/49353/6119均实质通告，其他无编号问题需独立待映射
+- DOMPurify原型污染直接称服务器RCE缺执行链，应核客户端XSS与服务器代码执行混淆
+- IBM公告/升级说明文字均无实际链接，z/OS1.1/1.2应避免混作操作系统版本
+- 正文后巨量无关法律/知识尾链剔除，未提利用不等于无利用
+
+## 操作风险
+
+命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 原创 何威风  祺印说信安   2024-11-26 16:00  
   
 **IBM 周一宣布修复其产品的多个漏洞，包括数据虚拟化管理器和安全 SOAR 中的两个高严重性远程代码执行 (RCE) 问题。**  

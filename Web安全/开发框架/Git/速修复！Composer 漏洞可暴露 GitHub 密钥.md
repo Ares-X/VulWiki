@@ -1,6 +1,41 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+product: "Composer"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2026-45793"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+category_recommendation: "Web安全/开发框架/PHP"
+title: "速修复！Composer 漏洞可暴露 GitHub 密钥"
+prerequisites: "来源所述条件，未列明部分仍待核：Fix2.9.8/2.2.28; invalid newly formattedGitHubtoken logged tostderr; affected lower bounds unspecified"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-45bb4d77a3182d3b243c86e4"
+entity_id: "ve-45bb4d77a3182d3b243c86e4"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 分类更正：正文研究对象为 Composer；目录中的语言/协议或其他产品名不能代替实际受影响产品。本次只更正元数据和分类建议，原材料保持原路径。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：Fix2.9.8/2.2.28; invalid newly formattedGitHubtoken logged tostderr; affected lower bounds unspecified
+
+代码与实验材料：No PoC, sample error described; no actual tokens present
+
+来源证据范围：SecurityOnline link, no Composer advisory/commit
+
+- **适用与权限边界（1）**：Misfiled underGit; token lifetime6h/24h and masking-bypass explanation require token-type-specific primary confirmation。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **证据待核（2）**：Broad disable-all-Composer-Actions recommendation lacks scoped evidence; missing affected matrix。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 #  速修复！Composer 漏洞可暴露 GitHub 密钥  
 DDoS

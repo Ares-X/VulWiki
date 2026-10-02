@@ -1,8 +1,65 @@
 ---
 cve: "CVE-2017-0145"
+identifier_role: "primary"
+primary_identifiers: "CVE-2017-0145"
+referenced_identifiers: "CVE-2017-0146;CVE-2017-0147;CVE-2017-0148"
+identifier_status: "unknown"
+title: "永恒之蓝 Windows10 版踩坑复现"
+product: "Windows SMB / worawit MS17-010 工具链"
+record_type: "unknown"
+document_type: "MS17-010 Win10工具适配与失败记录"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "Win10 1607x64，旧MSF或Python2 zzz_exploit、可匿名管道/共享；需SMB可达与未修补；具体MSF提交/系统build未列"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Windows/%E6%B0%B8%E6%81%92%E4%B9%8B%E8%93%9D%20Windows10%20%E7%89%88%E8%B8%A9%E5%9D%91%E5%A4%8D%E7%8E%B0.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+source_url: "https://mp.weixin.qq.com/s/H8cOsXmH0EzDPEBsPgvMrg"
+id: "vw-6073e500646f60b51b84c490"
+entity_id: "ve-6073e500646f60b51b84c490"
+schema_version: "1"
 ---
 
 # 永恒之蓝 Windows10 版踩坑复现
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Windows SMB / worawit MS17-010 工具链
+- 文献类型：MS17-010 Win10工具适配与失败记录
+- 版本、权限及部署边界：Win10 1607x64，旧MSF或Python2 zzz_exploit、可匿名管道/共享；需SMB可达与未修补；具体MSF提交/系统build未列
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. EternalBlue、MS17-010全公告、zzz_exploit不同利用变体混称，frontmatter0145不能仅因列表首项确认主CVE，应按实际链核映射
+2. 所有开机联网可侵/Win7成功近100%与Win10实战无用两极化结论无统计支持，需限定此次模块/配置
+3. 关闭Defender、更新、防火墙，匿名共享以及开放3389允许任何人属于人为弱化试验条件；3389与SMB漏洞机制无直接关系，不能当通用解决方案
+4. MSF5/6失败与作者借用他人截图混合，必须标自测/他人证据；图中修改源码行在正文缺失，无法独立重现
+5. 进程架构迁移后hashdump成功是后渗透差异，不是漏洞提权必要步骤；不应将未修漏洞建议为后门
+6. 保留Win10独立失败经验和worawit源码，补官方补丁/恢复说明及固定版本；截图未视检
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://mp.weixin.qq.com/s/H8cOsXmH0EzDPEBsPgvMrg>
+- 原文参考链接（未重新核验）：<http://ksria.com/simpread/>
+- 原文参考链接（未重新核验）：<https://www.freebuf.com/vuls/349281.html>
+- 原文参考链接（未重新核验）：<https://blog.csdn.net/shuryuu/article/details/121159254>
+- 原文参考链接（未重新核验）：<https://github.com/worawit/MS17-010>
+- 原文参考链接（未重新核验）：<https://github.com/MrWQ/vulnerability-paper>
+
+### 归档技术正文
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/H8cOsXmH0EzDPEBsPgvMrg)

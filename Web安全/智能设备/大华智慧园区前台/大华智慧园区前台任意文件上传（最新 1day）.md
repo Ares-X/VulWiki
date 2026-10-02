@@ -1,8 +1,57 @@
 ---
 source: "MrWQ/vulnerability-paper"
+id: "vw-b7b2549af0eccce68cc96607"
+entity_id: "ve-b7b2549af0eccce68cc96607"
+schema_version: "1"
+title: "大华智慧园区前台任意文件上传（最新 1day）"
+product: "大华智慧园区综合管理平台"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+prerequisites: "示例带两条会话Cookie，具体版本未给"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%99%BA%E8%83%BD%E8%AE%BE%E5%A4%87/%E5%A4%A7%E5%8D%8E%E6%99%BA%E6%85%A7%E5%9B%AD%E5%8C%BA%E5%89%8D%E5%8F%B0/%E5%A4%A7%E5%8D%8E%E6%99%BA%E6%85%A7%E5%9B%AD%E5%8C%BA%E5%89%8D%E5%8F%B0%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%EF%BC%88%E6%9C%80%E6%96%B0%201day%EF%BC%89.md"
+review_date: "2026-10-02"
+side_effects: "文中写入/上传步骤会创建或覆盖目标文件；须先核对服务账户写权限、保存路径和脚本解析条件，验证后按原路径核查残留"
+source_url: "https://mp.weixin.qq.com/s/yJfjckA_XXcvfa92_Oef1w"
+source_status: "recorded"
 ---
 
 # 大华智慧园区前台任意文件上传（最新 1day）
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：大华智慧园区综合管理平台
+- 本文讨论：emap/webservice/gis/soap/poi uploadPicFile路径写入
+- 版本、权限与配置前提：示例带两条会话Cookie，具体版本未给
+- 资料类型：SOAP上传复现转载；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 接口存在/响应特征不能直接认定漏洞
+- payload写kaisec.jsp而访问写kaisa.jsp，路径不一致
+- arg1仅占位webshell未说明编码；Cookie的必要性未说明
+- 最新1day无日期基准，推广页尾冗余
+- 已落实的文本修订：“访问 / url/kaisa.jsp”改为“访问 / url/kaisec.jsp”；“当访问接口时出现如下响应体时，基本可认定该漏洞存在。”改为“出现所示响应仅支持接口可达，不能单独确认越界上传或脚本执行；还需上传响应、保存路径与受控回读证据。”；HTTP 报文围栏改为 http。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
+- 样例会话、令牌或共享秘密已按具体值遮罩中段并保留首尾；不能直接用于请求。公开默认/测试凭据与算法常量不因长得像密码而改写；其用途仍须按原文说明判断
+
+### 操作风险与恢复
+
+- 文中写入/上传步骤会创建或覆盖目标文件；须先核对服务账户写权限、保存路径和脚本解析条件，验证后按原路径核查残留
+
+### 待核与来源
+
+- 响应、匿名写入与执行条件待核
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/yJfjckA_XXcvfa92_Oef1w)
@@ -27,15 +76,15 @@ source: "MrWQ/vulnerability-paper"
 
 **漏洞利用点为：**
 
-**/emap/webservice/gis/soap/poi 接口，当访问接口时出现如下响应体时，基本可认定该漏洞存在。**
+**/emap/webservice/gis/soap/poi 接口，出现所示响应仅支持接口可达，不能单独确认越界上传或脚本执行；还需上传响应、保存路径与受控回读证据。**
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/fRWdakrtBssucs5ZCVvvlAVSoaahFfzulLcHGs3sevxjcKLm4Vnhg43qsfD32kE5JZKmj3JvDGKfDZ0po2TfVw/640?wx_fmt=png)
 
 **exp：**
 
-```
+```http
 POST /emap/webservice/gis/soap/poi HTTP/1.1
-Cookie: JSESSIONID=5C1C93DE5EC7F18FBD493CEFB322B71E; JSESSIONID=423EE6DD6937C1E0568CEF2FAB6E9B01
+Cookie: JSESSIONID=5C1**************************71E; JSESSIONID=423**************************B01
 Cache-Control: max-age=0
 Sec-Ch-Ua: "Google Chrome";v="113", "Chromium";v="113", "Not-A.Brand";v="24"
 Sec-Ch-Ua-Mobile: ?0
@@ -70,7 +119,7 @@ Content-Length: 3117
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/fRWdakrtBssucs5ZCVvvlAVSoaahFfzu5Zc09BNjesQvicuVF7EicLqFwS5WaOia6bXD8C8fiar9Qzwib0xKgXv0EVQ/640?wx_fmt=png)
 
-**访问 / url/kaisa.jsp：**
+**访问 / url/kaisec.jsp：**
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/fRWdakrtBssucs5ZCVvvlAVSoaahFfzuFaYSbrHypdFDUGEspEVvIBUM49huwoxPjXtzYccibO5pvuLDBW7P9iaQ/640?wx_fmt=png)
 

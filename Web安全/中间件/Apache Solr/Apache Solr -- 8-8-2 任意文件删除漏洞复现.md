@@ -1,8 +1,46 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "Apache Solr -- 8-8-2 任意文件删除漏洞复现"
+product: "Apache Solr"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "Config API可修改handler，进程对目标文件具有写删权限；演示8.8.2 Windows"
+source_url: "https://mp.weixin.qq.com/s/JXBiQR3q7ykITVFBwm_9Vg"
+source_status: "recorded"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-686844c8d5e559163320045d"
+entity_id: "ve-686844c8d5e559163320045d"
+schema_version: "1"
 ---
 
 # Apache Solr -- 8-8-2 任意文件删除漏洞复现
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：Config API可修改handler，进程对目标文件具有写删权限；演示8.8.2 Windows
+- 证据范围：文件删除/创建与源码吻合，但无需把IOException捕获误作安全防护或漏洞免责依据。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- IOException兜底不阻止未授权文件删除，修复理由错误
+- <=8.8.2无版本边界来源，需要标实测版本与配置风险
+- 示例JSON注释及尾逗号应说明Solr解析器容忍度，不能当标准JSON
+- 第3步应访问新handler而非config API，/test与/test1名称不一致
+- 必须警示删除不可逆/重建改变内容与mtime、残留handler；无需运行破坏性验证
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/JXBiQR3q7ykITVFBwm_9Vg)

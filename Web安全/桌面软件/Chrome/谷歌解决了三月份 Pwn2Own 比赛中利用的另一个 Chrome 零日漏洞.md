@@ -1,9 +1,59 @@
 ---
-cve: "CVE-2024-3159"
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2024-3159;CVE-2024-3156;CVE-2024-3158"
+identifier_role: "primary"
+primary_identifiers: "CVE-2024-3159;CVE-2024-3156;CVE-2024-3158"
+referenced_identifiers: "CVE-2024-2886;CVE-2024-2887;CVE-2024-0519"
+identifier_status: "unknown"
+title: "谷歌解决了三月份 Pwn2Own 比赛中利用的另一个 Chrome 零日漏洞"
+product: "Chrome V8/Bookmarks"
+record_type: "advisory"
+document_type: "竞赛漏洞及补丁新闻"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "Chrome123.0.6312.105/.106/.107；恶意HTML；3159竞赛验证渲染器执行"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Chrome/%E8%B0%B7%E6%AD%8C%E8%A7%A3%E5%86%B3%E4%BA%86%E4%B8%89%E6%9C%88%E4%BB%BD%20Pwn2Own%20%E6%AF%94%E8%B5%9B%E4%B8%AD%E5%88%A9%E7%94%A8%E7%9A%84%E5%8F%A6%E4%B8%80%E4%B8%AA%20Chrome%20%E9%9B%B6%E6%97%A5%E6%BC%8F%E6%B4%9E.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-3a10908c25621f0a517e5f49"
+entity_id: "ve-3a10908c25621f0a517e5f49"
+schema_version: "1"
 ---
 
-#  谷歌解决了三月份 Pwn2Own 比赛中利用的另一个 Chrome 零日漏洞   
+# 谷歌解决了三月份 Pwn2Own 比赛中利用的另一个 Chrome 零日漏洞
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Chrome V8/Bookmarks
+- 文献类型：竞赛漏洞及补丁新闻
+- 版本、权限及部署边界：Chrome123.0.6312.105/.106/.107；恶意HTML；3159竞赛验证渲染器执行
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 元数据只有3159，当前另两修复需关联，2886/2887/0519是历史背景
+2. 写3月22日又称比赛第二天，日期/赛程需核对；奖励和成功叙述重复一次
+3. 原文明确渲染器任意代码执行，不能上升到完整系统；UAF译成使用后释放方向错误
+4. 缺所有Chrome/ZDI原链接，版本三个尾号要逐平台/通道精确对应；无PoC正常为新闻
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 鹏鹏同学  黑猫安全   2024-04-04 13:00  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/8dBEfDPEce91msiaK4yu85KZzM2b6EnjY39lBz9SHXzNa1I8icBAaUGImMnWjC2DE6XHfq0BdmUSkfwqZMtsdJSw/640?wx_fmt=png&from=appmsg "")  
@@ -33,4 +83,4 @@ source: "gelusus/wxvl 公众号漏洞文库"
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

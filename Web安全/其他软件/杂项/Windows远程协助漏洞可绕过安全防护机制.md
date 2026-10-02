@@ -1,8 +1,61 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2026-20824"
+identifier_role: "primary"
+primary_identifiers: "CVE-2026-20824"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "Windows远程协助漏洞可绕过安全防护机制"
+product: "Windows Remote Assistance"
+record_type: "advisory"
+document_type: "译文安全通告"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "本地向量、用户打开恶意文件；2026-01补丁，具体MOTW机制未证"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/Windows%E8%BF%9C%E7%A8%8B%E5%8D%8F%E5%8A%A9%E6%BC%8F%E6%B4%9E%E5%8F%AF%E7%BB%95%E8%BF%87%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4%E6%9C%BA%E5%88%B6.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-72f1fe68ef8f55df1d3ed692"
+entity_id: "ve-72f1fe68ef8f55df1d3ed692"
+schema_version: "1"
 ---
 
-#  Windows远程协助漏洞可绕过安全防护机制  
+# Windows远程协助漏洞可绕过安全防护机制
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Windows Remote Assistance
+- 文献类型：译文安全通告
+- 版本、权限及部署边界：本地向量、用户打开恶意文件；2026-01补丁，具体MOTW机制未证
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 与misc164同CVE互补新闻候选；AV:L不一定攻击者需已有本地账户，本文却说需本地访问，应校官方具体场景
+2. MOTW绕过根因无微软原始依据，只有二手媒体链接；不可自动扩展到SmartScreen或全部端点检测绕过
+3. Windows11KB选择主要依发行版本非仅架构；各KB映射需MSRC核验，29配置图未视检
+4. 紧急事项与标准窗口无需响应的建议应统一；必需更新分类不代表微软指定危机优先级；在野未见限截至文章日期
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://cybersecuritynews.com/windows-remote-assistance-vulnerability/>
+- 原文参考链接（未重新核验）：<https://mp.weixin.qq.com/s?__biz=MjM5NjA0NjgyMA==&mid=2651333596&idx=1&sn=a5f1d8decaf400a24f3b9e74a3a357e1&scene=21#wechat_redirect>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
  FreeBuf   2026-01-16 10:32  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/qq5rfBadR38jUokdlWSNlAjmEsO1rzv3srXShFRuTKBGDwkj4gvYy34iajd6zQiaKl77Wsy9mjC0xBCRg0YgDIWg/640?wx_fmt=gif "")  
@@ -96,4 +149,4 @@ https://cybersecuritynews.com/windows-remote-assistance-vulnerability/
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

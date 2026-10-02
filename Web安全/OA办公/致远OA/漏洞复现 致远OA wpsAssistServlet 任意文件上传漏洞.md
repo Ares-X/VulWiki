@@ -1,8 +1,49 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "致远A6/A8/A8N/G6/G6N wpsAssistServlet路径穿越文件上传"
+product: "致远A6/A8/A8N/G6/G6N"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "A6/A8/A8N V8.0SP2/8.1/8.1SP1；G6/G6N8.1/8.1SP1声称；ApacheJetspeed目录"
+prerequisites: "样本无凭证，实际认证未明"
+side_effects: "文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行"
+review_date: "2026-10-02"
+source_status: "unknown"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E8%87%B4%E8%BF%9COA/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0%20%E8%87%B4%E8%BF%9COA%20wpsAssistServlet%20%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E.md"
+id: "vw-72a8b9e105ad630ebff8b83a"
+entity_id: "ve-72a8b9e105ad630ebff8b83a"
+schema_version: "1"
 ---
 
-#  【漏洞复现】致远OA wpsAssistServlet 任意文件上传漏洞  
+# 致远A6/A8/A8N/G6/G6N wpsAssistServlet路径穿越文件上传
+
+## 条目说明
+
+- 对象与具体问题：致远A6/A8/A8N/G6/G6N；wpsAssistServlet路径穿越文件上传
+- 版本、配置及部署条件：A6/A8/A8N V8.0SP2/8.1/8.1SP1；G6/G6N8.1/8.1SP1声称；ApacheJetspeed目录
+- 认证与权限前提：样本无凭证，实际认证未明
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 已按原文中的具体接口、源码或上下文直接更正产品、根因或修复说明；未知版本和未经证明的影响仍明确保留为待核实。
+- multipart头体/part空行缺失；响应success:true只能是上传线索，后续JSP标记回显才支持解析
+- 近期被曝光在2026转载中缺历史时点，应与旧wpsAssistServlet/CVE条合并
+- 经测试均存在为作者声明，版本矩阵待厂商核
+
+## 操作风险
+
+文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 原创 xuzhiyang
                     xuzhiyang  玄武盾网络技术实验室   2026-01-16 06:52  
   
@@ -24,13 +65,13 @@ www.xwdjs.ysepan.com
   
 在企业数字化办公进程中，OA 系统作为核心协同工具，其安全性直接关系到企业数据资产与业务运营的稳定。致远 OA 作为国内广泛应用的办公协同管理软件，近期被曝光存在一处高危任意文件上传漏洞，涉及 wpsAssistServlet 接口，攻击者可利用该漏洞上传恶意文件，进而获取服务器控制权，引发严重安全风险。  
   
-## 一、漏洞核心信息  
-##   
-### （一）漏洞本质  
+### 一、漏洞核心信息  
+###   
+#### （一）漏洞本质  
   
 致远 OA 的 wpsAssistServlet 接口在处理文件上传请求时，未对上传路径与文件类型进行严格校验，存在路径穿越漏洞。攻击者通过构造特殊请求包，可绕过系统限制，将恶意脚本文件上传至服务器任意可访问目录，且文件能被服务器成功解析执行。  
   
-### （二）影响范围  
+#### （二）影响范围  
   
 经测试验证，以下致远 OA 版本均存在该漏洞：  
 - 致远 OA A6、A8、A8N（V8.0SP2、V8.1、V8.1SP1）  
@@ -38,14 +79,14 @@ www.xwdjs.ysepan.com
 - 致远 OA G6、G6N（V8.1、V8.1SP1）使用上述版本的企业用户需高度警惕，及时开展安全排查。  
   
 -   
-## 二、漏洞复现过程  
+### 二、漏洞复现过程  
   
 为帮助用户直观了解漏洞危害，以下为详细复现步骤（仅用于安全测试，严禁用于未授权攻击）：  
   
 1. **1、构造上传请求**  
 通过 POST 方法调用漏洞接口，在请求参数中指定穿越路径与恶意文件内容。请求包示例如下：  
   
-```
+```http
 POST /seeyon/wpsAssistServlet?flag=save&realFileType=../../../../ApacheJetspeed/webapps/ROOT/test.jsp&fileId=2 HTTP/1.1
 Host: 目标服务器IP
 Content-Length: 349
@@ -69,8 +110,8 @@ Content-Type: application/vnd.ms-excel
 1. ![](https://mmbiz.qpic.cn/mmbiz_png/UM0M1icqlo0lxt0ibYqVFodyiaLaT0UNgQz8HmFZQR4ykOKFHUibt64IkgyG91icQzxrh8J3pNHKEDaWgzXvjkc1l6Q/640?wx_fmt=png&from=appmsg "")  
   
   
-## 三、漏洞危害警示  
-##   
+### 三、漏洞危害警示  
+###   
   
 该漏洞属于高危级别，一旦被攻击者利用，可能引发多重严重后果：  
 - 服务器被完全控制，攻击者可窃取企业内部文档、客户数据、财务信息等敏感内容；  
@@ -79,12 +120,12 @@ Content-Type: application/vnd.ms-excel
   
 - 服务器被篡改页面、植入挖矿程序或沦为僵尸网络节点，造成企业声誉与经济损失。  
   
-## 四、安全防御方案  
-##   
+### 四、安全防御方案  
+###   
   
 为有效防范该漏洞带来的风险，建议企业采取以下紧急修复与长期防御措施：  
 1. **1、紧急访问控制**  
-暂时限制对/seeyon/htmlofficeservlet  
+暂时限制对/seeyon/wpsAssistServlet  
 路径的外部访问，可通过防火墙规则、服务器配置等方式实现，阻断漏洞利用入口。  
   
 1. **2、安装官方补丁**  

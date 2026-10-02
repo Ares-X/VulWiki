@@ -1,23 +1,65 @@
 ---
 source: "https://xz.aliyun.com/news/92746"
+title: "用友U9门户DataTransfer BinaryFormatter反序列化"
+product: "用友U9门户DataTransfer"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "Windows IIS .NET4；ea管理员数据迁移权限；版本被遮蔽"
+prerequisites: "明确高权限管理员"
+side_effects: "文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行；命令/代码执行示例可能改变主机状态"
+review_date: "2026-10-02"
+source_status: "unknown"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E7%94%A8%E5%8F%8BNC/%E7%94%A8%E5%8F%8BU9%E9%97%A8%E6%88%B7%E4%BE%A7%E6%95%B0%E6%8D%AE%E8%BF%81%E7%A7%BB%E6%8E%A5%E5%8F%A3%20BinaryFormatter%20%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md"
+id: "vw-8ca7e9285e84958ab850a337"
+entity_id: "ve-8ca7e9285e84958ab850a337"
+schema_version: "1"
 ---
 
-# 某 门户侧数据迁移接口 BinaryFormatter 反序列化远程代码执行漏洞
+# 用友U9门户DataTransfer BinaryFormatter反序列化
+
+## 条目说明
+
+- 对象与具体问题：用友U9门户DataTransfer；BinaryFormatter反序列化
+- 版本、配置及部署条件：Windows IIS .NET4；ea管理员数据迁移权限；版本被遮蔽
+- 认证与权限前提：明确高权限管理员
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 错放NC，正文匿名某系统但文件与U9应用池指向U9，需产品证据
+- 标完整Exp.cs却缺类定义/Main/cc/关键登录上传触发流程；附录文件缺链接，工具名U9Exp与Exp混用
+- InvalidCastException本身不证明RCE；Binder唯一防线/无Binder任意类型表述过强需技术核验
+- 不能因另一漏洞链取得管理员便直接把本漏洞PR:H改PR:L；需分开链式评分
+- 原厂修复信息及版本缺失；本地Evil示例依赖目标类型存在，文末有说明应保留
+
+## 操作风险
+
+文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行；命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 来源：https://xz.aliyun.com/news/92746
 
-## 1\. 产品介绍
+### 1\. 产品介绍
 
   
 某大型型企业级云 ERP 系统，提供「数据迁移」功能（`/mvc/DataTransfer/`），用于在组织间导入/导出业务数据。该功能的导入实现中使用了 .NET 的 `BinaryFormatter` 反序列化，且未做类型白名单限制，存在远程代码执行风险。  
   
 
-## 2\. 漏洞标题
+### 2\. 漏洞标题
 
   
 门户侧数据迁移接口（DataTransfer）BinaryFormatter 反序列化导致远程代码执行漏洞  
   
 
-## 3\. 漏洞描述
+### 3\. 漏洞描述
 
   
 某门户侧 `UFSoft.UBF.MVC.dll` 中的 `IoPackage.DecompressPackage(byte[])` 方法将外部上传的 `.bin` 文件解压后，直接交给 `BinaryFormatter.Deserialize()` 反序列化，且未设置 `SerializationBinder` 类型白名单。  
@@ -27,11 +69,11 @@ source: "https://xz.aliyun.com/news/92746"
 漏洞根因对应 CWE-502（不可信数据反序列化）；同一产品此前已修复 `CommandService` 一处同类型缺陷，但门户侧该入口被遗漏。  
   
 
-## 4\. 漏洞分析（根因定位）
+### 4\. 漏洞分析（根因定位）
 
   
 
-### 4.1 根因
+#### 4.1 根因
 
   
 反编译 `UFSoft.UBF.MVC.dll`：  
@@ -50,7 +92,7 @@ static IoPackage DecompressPackage(byte[] bytes)
 `BinaryFormatter` 反序列化按数据中的「类型全名」加载并实例化类型，`SerializationBinder` 是唯一可拦截「类型名 → Type」的钩子。未设置 Binder 即等价于允许加载任意类型。  
   
 
-### 4.2 触发链
+#### 4.2 触发链
 
   
 
@@ -63,13 +105,13 @@ POST /mvc/DataTransfer/ImportPackage  (PackageUploadId + DataManagerProjectId)
           → 加载 gadget 类型 → 反序列化回调 → Process.Start("cmd","/c <命令>")  ★ RCE
 ```
 
-### 4.3 gadget 原理（TextFormattingRunProperties）
+#### 4.3 gadget 原理（TextFormattingRunProperties）
 
   
 利用 WPF 的 `ObjectDataProvider`（`ObjectType=System.Diagnostics.Process`、`MethodName="Start"`、`MethodParameters=["cmd","/c <命令>"]`），反序列化求值时反射调用 `Process.Start`，将「类型实例化」转化为「命令执行」。  
   
 
-### 4.4 数据流
+#### 4.4 数据流
 
   
 
@@ -81,13 +123,13 @@ BinaryFormatter 流 = gadget 对象图（TextFormattingRunProperties → ObjectD
 `(IoPackage)Deserialize(...)` 中的 cast 在反序列化之后才发生，因此 gadget 代码在 cast 前已执行；攻击者实际观察到的 `InvalidCastException` 正是 RCE 已发生的表现。  
   
 
-## 5\. 影响版本
+### 5\. 影响版本
 
   
 ●\*\*\*  
   
 
-## 6\. 漏洞等级
+### 6\. 漏洞等级
 
   
 
@@ -103,17 +145,17 @@ BinaryFormatter 流 = gadget 对象图（TextFormattingRunProperties → ObjectD
 注：若评估场景中 `ea` 会话本身可通过其它低权限缺陷获取（漏洞链），PR 可降为 L，分数升至 8.8。  
   
 
-## 7\. 复现过程
+### 7\. 复现过程
 
   
 
-### 7.1 环境
+#### 7.1 环境
 
   
 ● Windows Server / IIS（`.NET Framework 4.x`）  
 ● 工具：`ysoserial.net`、`MakeBin.exe`、`U9Exp.exe`（本报告 PoC，见附录）  
 
-### 7.2 步骤
+#### 7.2 步骤
 
   
 1生成恶意载荷（ysoserial）：  
@@ -154,14 +196,14 @@ Exp.exe --cmd "cmd /c whoami > C:\temp\pwned.txt" --url http://<target>/U9C --us
   
   
 
-### 7.3 攻击场景（已实测）
+#### 7.3 攻击场景（已实测）
 
   
 ● 命令执行：`whoami` 回显 IIS 应用池身份。  
 ● 敏感数据窃取：`type web.config` 泄露多组数据库明文连接串。  
 ● 持久化：web 根可写，落 WebShell（`cmd.aspx`）建立 HTTP 命令通道。  
 
-## 8\. PoC
+### 8\. PoC
 
   
 ● `Exp.exe`：一键完成「登录 → 建项目 → 上传 `.bin` → 触发反序列化 → RCE」，支持任意命令。  
@@ -170,11 +212,11 @@ Exp.exe --cmd "cmd /c whoami > C:\temp\pwned.txt" --url http://<target>/U9C --us
   
   
 
-## 附录 B：PoC 明文源代码
+### 附录 B：PoC 明文源代码
 
   
 
-### B.1 Exp.cs（远程利用 exp，完整源码）
+#### B.1 Exp.cs（远程利用 exp，完整源码）
 
   
 
@@ -254,7 +296,7 @@ class ForceProxy : IWebProxy {
 }
 ```
 
-### B.2 MakeBin.cs（把 BF 载荷打成 .bin，ZIP 单 entry）
+#### B.2 MakeBin.cs（把 BF 载荷打成 .bin，ZIP 单 entry）
 
   
 
@@ -282,7 +324,7 @@ class MakeBin {
 }
 ```
 
-### B.3 反序列化回调 = 代码执行点的最小自证类型（本地 PoC 核心）
+#### B.3 反序列化回调 = 代码执行点的最小自证类型（本地 PoC 核心）
 
   
 下面的 `Evil` 类型说明了漏洞本质：`BinaryFormatter.Deserialize` 会调用类型的 `ISerializable` 特殊构造函数（反序列化回调），攻击者只要把「命令执行」写进这个回调即可。  

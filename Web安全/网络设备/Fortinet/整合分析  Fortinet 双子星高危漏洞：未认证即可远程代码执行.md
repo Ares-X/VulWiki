@@ -1,8 +1,53 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-ad7fba5ead2a19ae427a5c2d"
+entity_id: "ve-ad7fba5ead2a19ae427a5c2d"
+schema_version: "1"
+title: "整合分析 | Fortinet 双子星高危漏洞：未认证即可远程代码执行"
+product: "FortiSandbox / FortiAuthenticator"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2026-26083; CVE-2026-44277"
+referenced_identifiers: "CVE-2026-21643; CVE-2026-35616"
+prerequisites: "称匿名Web API RCE；Sandbox4.4/5.0、Authenticator6.5/6.6/8.0修复表"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/Fortinet/%E6%95%B4%E5%90%88%E5%88%86%E6%9E%90%20%20Fortinet%20%E5%8F%8C%E5%AD%90%E6%98%9F%E9%AB%98%E5%8D%B1%E6%BC%8F%E6%B4%9E%EF%BC%9A%E6%9C%AA%E8%AE%A4%E8%AF%81%E5%8D%B3%E5%8F%AF%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 #  整合分析 | Fortinet 双子星高危漏洞：未认证即可远程代码执行  
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：FortiSandbox / FortiAuthenticator
+- 本文讨论：CVE-2026-26083；CVE-2026-44277
+- 版本、权限与配置前提：称匿名Web API RCE；Sandbox4.4/5.0、Authenticator6.5/6.6/8.0修复表
+- 资料类型：双漏洞风险分析；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 同文CVE2026-21643先称FortiSandbox旧洞，后称FortiClient EMS，明确产品归属冲突
+- 无官方公告直链，参考含聚合站；所谓深度解析无真实端点/代码证据
+- 云多租户横向污染、所有2FA失效、APT技巧表与注册表项属于推测/通用模板却无证据标记
+- 24/13 KEV计数、2–4周武器化、72小时期限无具体分析依据；不能归官方要求
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 两个官方PSIRT、所有范围/云行为/统计待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
  奇安信 CERT   2026-05-13 08:10  
   
 ## 执行摘要  

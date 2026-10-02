@@ -1,8 +1,54 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "在野 0day nginxWebUI 远程代码执行漏洞 poc 补充"
+product: "nginxWebUI"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "<3.5.2 unauthenticated via path case;later through3.6.0 authenticated per article;service filesystem rights"
+source_url: "https://mp.weixin.qq.com/s/oKsR7bm3tleJIS675Qt0RA"
+source_status: "recorded"
+side_effects: "含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。"
+id: "vw-abf220b51d80b5ba5e2f27b1"
+entity_id: "ve-abf220b51d80b5ba5e2f27b1"
+schema_version: "1"
 ---
 
-# 在野 0day nginxWebUI  远程代码执行漏洞 poc 补充
+# 在野 0day nginxWebUI 远程代码执行漏洞 poc 补充
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：<3.5.2 unauthenticated via path case;later through3.6.0 authenticated per article;service filesystem rights
+- 证据范围：Distinct source-level expansion of2023 runCmd research;preserve several endpoints and tested platform differences
+
+### 本次正文校订
+
+- 按实际内容修正 1 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 'All versions' explicitly only through article's3.6.0 cutoff;do not generalize to current versions
+- Windows calc examples cannot establish Linux pipe/shell behavior through Runtime.exec
+- POST example lacks blank separator and includes session despite pre-auth case path;clarify demonstration mode
+- Uploads/config changes modify persistent state;cleanup/restoration omitted
+- No exact later fixes/CVEs;do not merge all vectors into one endpoint entry
+
+### 操作风险与资料使用
+
+- 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/oKsR7bm3tleJIS675Qt0RA)
@@ -143,7 +189,7 @@ public class ConfController extends BaseController {
 
 #### payload
 
-```
+```http
 POST /AdminPage/conf/check HTTP/1.1
 Host: 127.0.0.1:8080
 Content-Length: 151

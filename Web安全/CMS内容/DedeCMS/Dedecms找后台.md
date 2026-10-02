@@ -1,6 +1,38 @@
 ---
 source: "hatch 补库批 20260928"
+product: "DedeCMS"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "Dedecms找后台"
+prerequisites: "来源所述条件，未列明部分仍待核：Windows; known admin image; crafted _FILES accepted; version absent"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-46a593f5b00a986b3a8bccec"
+entity_id: "ve-46a593f5b00a986b3a8bccec"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：Windows; known admin image; crafted _FILES accepted; version absent
+
+- **结论使用边界（1）**：Repeats older wrong tmp_name bypass explanation corrected in67; actual request correctly uses name=0。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **代码与转录边界（2）**：Python2 syntax undocumented; permutations excludes repeated characters in guessed prefix and exponential search huge。相应原代码作为存在此问题的历史样本保留，不能直接当作可运行、成功复现的 PoC；缺失内容需回原稿核对，不据此补造可执行攻击链。
+
+- **证据待核（3）**：Last charset character breaks before testing; missing image/error text can create false positives。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **证据待核（4）**：Different script/image filename from67 is complementary evidence; no original source。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Dedecms找后台
 

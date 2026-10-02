@@ -1,8 +1,45 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Apache Traffic Control存在严重的SQL注入漏洞，可在数据库中执行任意命令"
+product: "Apache Traffic Control Traffic Ops"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2024-45387"
+referenced_identifiers: "CVE-2024-23945; CVE-2024-43441; CVE-2024-56337"
+identifier_role: "primary"
+cve: "CVE-2024-45387"
+prerequisites: "已有admin/federation/operations/portal/steering角色用户，8.0.0–8.0.1"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-8476e88ad5a598b33a7a83b0"
+entity_id: "ve-8476e88ad5a598b33a7a83b0"
+schema_version: "1"
 ---
 
-#  Apache Traffic Control存在严重的SQL注入漏洞，可在数据库中执行任意命令   
+# Apache Traffic Control存在严重的SQL注入漏洞，可在数据库中执行任意命令
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：已有admin/federation/operations/portal/steering角色用户，8.0.0–8.0.1
+- 证据范围：主体有鉴权前提和8.0.2修复版本；任意SQL语句不等于任意OS命令。后三编号是并列新闻简讯，不与主漏洞合并。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 标题任意命令容易误解，宜明确SQL命令
+- 未给注入参数/请求示例、Apache原始公告直链，只能当新闻
+- 大量产品广告与推荐文章噪声
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 综合编译  代码卫士   2024-12-26 10:23  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

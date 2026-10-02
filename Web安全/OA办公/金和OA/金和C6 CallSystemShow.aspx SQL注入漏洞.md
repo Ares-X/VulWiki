@@ -1,8 +1,48 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "金和C6 CallSystemShow SQL 注入线索"
+product: "金和C6"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "未披露"
+prerequisites: "未披露"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+source_status: "unknown"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E9%87%91%E5%92%8COA/%E9%87%91%E5%92%8CC6%20CallSystemShow.aspx%20SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md"
+id: "vw-7c497fd8d787c4c89207adf0"
+entity_id: "ve-7c497fd8d787c4c89207adf0"
+schema_version: "1"
 ---
 
-#  金和C6 CallSystemShow.aspx SQL注入漏洞  
+# 金和C6 CallSystemShow SQL 注入线索
+
+## 条目说明
+
+- 对象与具体问题：金和C6；CallSystemShow SQLi线索
+- 版本、配置及部署条件：未披露
+- 认证与权限前提：未披露
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 技术请求/参数/nuclei/afrog内容全截图未视检，正文无可核PoC
+- 无修复build，宣称高权限写木马只是潜在后果
+- 大量收费圈广告，原文链接未给
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 Superhero
                     Superhero  Nday Poc   2026-02-09 01:58  
   
@@ -73,7 +113,7 @@ afrog
   
 **内部圈子介绍**  
   
-### 【Nday漏洞实战圈】🛠️  
+#### 【Nday漏洞实战圈】🛠️  
   
 专注公开1day/Nday漏洞复现 · 工具链适配支持  
   

@@ -1,7 +1,41 @@
 ---
 cve: "CVE-2019-12860"
 source: "Mr-xn/Penetration_Testing_POC"
+product: "S-CMS PHP3.0"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2019-12860"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "S-CMS PHP v3.0存在SQL注入漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：js/scms.php jssdk公开可达；固定pageid1返回特定图片标识"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-08c7377a28a4e44d983656e2"
+entity_id: "ve-08c7377a28a4e44d983656e2"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 附件待补：原 `POC_Details/S-CMS PHP v30存在SQL注入漏洞.pdf` 未在仓库对应位置找到，现保留原链接并标缺附件；正文请求不能补足未读取的 PDF 证据，不猜造附件内容。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：js/scms.php jssdk公开可达；固定pageid1返回特定图片标识
+
+- **事实待核（1）**：描述定位182–204又称83/87/95行未解释版本差异。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **证据待核（2）**：脚本硬编码公网目标和页面图片作为布尔判据，不能通用；数据库名长度只试0–9，&gt;9返回None会异常。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **证据待核（3）**：rs.encode不是response.encoding，字符循环无break，缺超时/对照。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **证据待核（4）**：PDF相对链接不是Markdown图片，不在6301图验证范围需另检查目标；原始源码未在本篇。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # S-CMS PHP v3.0存在SQL注入漏洞
 

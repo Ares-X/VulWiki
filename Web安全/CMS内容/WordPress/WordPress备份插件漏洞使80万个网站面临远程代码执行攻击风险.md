@@ -1,7 +1,39 @@
 ---
 cve: "CVE-2026-1357"
 source: "gelusus/wxvl 公众号漏洞文库"
+product: "WordPress WPvivid Backup & Migration"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2026-1357"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "WordPress备份插件漏洞使80万个网站面临远程代码执行攻击风险"
+prerequisites: "来源所述条件，未列明部分仍待核：<=0.9.123 fixed0.9.124 claimed; receive-backups explicitly enabled, generated key valid<=24h; write/PHP execution"
+side_effects: "未执行；本文需注意的操作影响：表格字段译成场地、$key供应商等机器翻译污染；应清理但保留披露时间"
+source_status: "unknown"
+id: "vw-95c8cd0f155c6bf90e6c6bb6"
+entity_id: "ve-95c8cd0f155c6bf90e6c6bb6"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：&lt;=0.9.123 fixed0.9.124 claimed; receive-backups explicitly enabled, generated key valid&lt;=24h; write/PHP execution
+
+- **适用与权限边界（1）**：关键默认禁用且密钥24h条件埋在中段，却用风险最严重措辞而非明确必要门槛，标题80万范围过宽。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **结论使用边界（2）**：false到空字符串再AES密钥的字节处理需要原实现核验，不能仅凭概括归零字节密钥。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **事实待核（3）**：技术链有描述但无报文/完整源码；Wordfence时间与赏金无原始链接。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **事实待核（4）**：表格字段译成场地、$key供应商等机器翻译污染；应清理但保留披露时间。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 #  WordPress备份插件漏洞使80万个网站面临远程代码执行攻击风险  
 原创 网络安全9527

@@ -1,8 +1,54 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-a893e2fd0dd4a1f8a138b576"
+entity_id: "ve-a893e2fd0dd4a1f8a138b576"
+schema_version: "1"
+title: "CISA：Wing FTP 已遭利用漏洞可泄露服务器路径"
+product: "Wing FTP Server"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2025-47813"
+referenced_identifiers: ""
+prerequisites: "认证用户、长UID Cookie，≤7.4.3，7.4.4修复"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%AE%89%E5%85%A8%E8%AE%BE%E5%A4%87/CISA/CISA%EF%BC%9AWing%20FTP%20%E5%B7%B2%E9%81%AD%E5%88%A9%E7%94%A8%E6%BC%8F%E6%B4%9E%E5%8F%AF%E6%B3%84%E9%9C%B2%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%B7%AF%E5%BE%84.md"
+review_date: "2026-10-02"
+category_recommendation: "Web安全/服务器应用/Wing FTP"
+side_effects: "执行文中载荷可能以目标进程权限启动命令或加载代码；权限受认证角色、操作系统账户及依赖版本约束，不能把 root/200 等通用字符串当成功证据"
+source_status: "unknown"
 ---
 
 #  CISA：Wing FTP 已遭利用漏洞可泄露服务器路径  
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Wing FTP Server
+- 本文讨论：CVE-2025-47813主，47812可选RCE关联
+- 版本、权限与配置前提：认证用户、长UID Cookie，≤7.4.3，7.4.4修复
+- 资料类型：路径泄露KEV新闻；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 误归CISA/安全设备，应Wing FTP服务端
+- 需保留是否与47812在野串联未知，不能据共同修复推成实证链
+- 未给研究者PoC/官方版本/KEV直链，5月应标2025年
+
+### 操作风险与恢复
+
+- 执行文中载荷可能以目标进程权限启动命令或加载代码；权限受认证角色、操作系统账户及依赖版本约束，不能把 root/200 等通用字符串当成功证据
+
+### 待核与来源
+
+- KEV记录、操作系统路径长度差异和修复版本待核
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 Ravie Lakshmanan
                     Ravie Lakshmanan  代码卫士   2026-03-17 09:22  
   

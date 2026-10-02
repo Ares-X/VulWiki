@@ -1,7 +1,40 @@
 ---
 version: "ThinkCMF X1.6.0"
 source: "MrWQ/vulnerability-paper"
+product: "ThinkCMFX1.6.0/2.1.0/2.2.0–2.2.2 tested2.2.2"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "ThinkCMF 框架任意内容包含漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：public display/fetch routes exposed; existing template or error log, template cache writable; logging enabled"
+side_effects: "未执行；本文需注意的操作影响：日志写入与再次include顺序在第一方法中交叉混乱；第二方法依赖先前写入状态，不能独立复用"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/jmyGLRsH7NAH_KqiVH48uQ"
+id: "vw-ef2b7e4b11c1b5a3d96e0557"
+entity_id: "ve-ef2b7e4b11c1b5a3d96e0557"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：public display/fetch routes exposed; existing template or error log, template cache writable; logging enabled
+
+- **适用与权限边界（1）**：frontmatter仅X1.6.0丢后续版本；源码文件路径丢斜杠且Homebase流程提Adminbase需核对。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **适用与权限边界（2）**：声称templateFile可空却所有示例给public/index，模板存在条件含糊。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **结论使用边界（3）**：日志写入与再次include顺序在第一方法中交叉混乱；第二方法依赖先前写入状态，不能独立复用。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **事实待核（4）**：和417同根因但本文补日志链及protected修复，保留互补；网盘实验包无哈希。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # ThinkCMF 框架任意内容包含漏洞
 

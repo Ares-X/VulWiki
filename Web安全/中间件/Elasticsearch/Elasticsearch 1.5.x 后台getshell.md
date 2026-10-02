@@ -1,9 +1,47 @@
 ---
-cve: "CVE-2015-5531"
+title: "Elasticsearch 1.5.x 后台getshell"
+product: "Elasticsearch Snapshot Repository及同机Tomcat"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: "CVE-2015-5531"
+identifier_role: "reference"
+prerequisites: "具创建索引/仓库/快照API权限，旧版可选任意仓库目录，进程可写同机Web根且该服务器解析JSP"
+source_status: "missing"
+side_effects: "含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。"
+id: "vw-a4888c7e7e93a6991320b2da"
+entity_id: "ve-a4888c7e7e93a6991320b2da"
+schema_version: "1"
 ---
 
-Elasticsearch 1.5.x 后台getshell
-================================
+# Elasticsearch 1.5.x 后台getshell
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：具创建索引/仓库/快照API权限，旧版可选任意仓库目录，进程可写同机Web根且该服务器解析JSP
+- 证据范围：5531仅文中类似的读取漏洞，frontmatter误绑；该文是快照备份内容写入及同机JSP解释组合。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 题名1.5.x与正文1.5.1以后限制、1.5.x以前矛盾，需精确版界
+- 不构成Elasticsearch自身JSP执行，必须同机Web引擎和写权限
+- 创建索引、仓库、快照与Web文件均留状态，无清理
+- 不应称后台漏洞而省略API访问控制条件
+
+### 操作风险与资料使用
+
+- 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 一、漏洞简介
 ------------

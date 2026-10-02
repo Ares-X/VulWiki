@@ -1,6 +1,41 @@
 ---
 source: "MrWQ/vulnerability-paper"
+product: "XXL-JOB / executor配置"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "XXL-JOB executor 未授权访问 RCE 漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：<=2.2.0笼统；实际/run REST示例2.2.0，旧版接口不同"
+side_effects: "未执行；本文需注意的操作影响：实验可能打断既有任务；jobId1、COVER_EARLY、无超时及回连有可用性影响，缺清理"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/SQ7N52dizTC45oGI6gY3cg"
+id: "vw-fe7bde725e188eeffc89d9e0"
+entity_id: "ve-fe7bde725e188eeffc89d9e0"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：&lt;=2.2.0笼统；实际/run REST示例2.2.0，旧版接口不同
+
+代码与实验材料：完整GLUE_SHELL请求和回连截图；原包头体缺空行，固定jobId/COVER_EARLY会干预任务
+
+来源证据范围：微信原文，API说明无直接官方链接
+
+- **结论使用边界（1）**：旧版范围与接口兼容性未区分；依据：610明确&lt;2.2.0无此REST路径，本篇却整个&lt;=2.2.0使用同包。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **适用与权限边界（2）**：默认无认证须限定配置；依据：只有未配置accessToken且执行器可达才成立，GLUE执行本身是功能。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **证据待核（3）**：实验可能打断既有任务；依据：jobId1、COVER_EARLY、无超时及回连有可用性影响，缺清理。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # XXL-JOB executor 未授权访问 RCE 漏洞
 

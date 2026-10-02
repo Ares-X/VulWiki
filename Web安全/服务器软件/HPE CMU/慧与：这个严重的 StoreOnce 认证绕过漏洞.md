@@ -1,8 +1,46 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "慧与：注意这个严重的 StoreOnce 认证绕过漏洞"
+product: "HPE StoreOnce Software/VSA"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2025-37089; CVE-2025-37090; CVE-2025-37091; CVE-2025-37092; CVE-2025-37093; CVE-2025-37094; CVE-2025-37095; CVE-2025-37096"
+referenced_identifiers: ""
+identifier_role: "primary"
+cve: "CVE-2025-37089; CVE-2025-37090; CVE-2025-37091; CVE-2025-37092; CVE-2025-37093; CVE-2025-37094; CVE-2025-37095; CVE-2025-37096"
+prerequisites: "文称<4.3.11；部分漏洞需认证，可与37093组合的具体条件须分别记录"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-baa4926e17e399861cdffc88"
+entity_id: "ve-baa4926e17e399861cdffc88"
+schema_version: "1"
 ---
 
-#  慧与：注意这个严重的 StoreOnce 认证绕过漏洞   
+# 慧与：注意这个严重的 StoreOnce 认证绕过漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：文称<4.3.11；部分漏洞需认证，可与37093组合的具体条件须分别记录
+- 证据范围：清楚列八问题，但只深入认证绕过和两路径遍历，属于多实体通告而非八份复现
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 误归HPE CMU，不同产品应分目录
+- 八个主CVE元数据全缺
+- 应补HPE公告/ZDI各实体链接和鉴权条件
+- 无在野利用为新闻时点非持续现状
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 Bill Toulas  代码卫士   2025-06-04 10:41  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

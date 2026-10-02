@@ -1,8 +1,45 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "【已复现】kkFileView任意文件上传致远程代码执行漏洞"
+product: "kkFileView压缩包预览"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "4.2.0–4.4.0-beta、前台上传处理压缩包、目标路径可写并后续执行"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-903b03d22dfff829fe9e69b5"
+entity_id: "ve-903b03d22dfff829fe9e69b5"
+schema_version: "1"
 ---
 
-#  【已复现】kkFileView任意文件上传致远程代码执行漏洞   
+# 【已复现】kkFileView任意文件上传致远程代码执行漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：4.2.0–4.4.0-beta、前台上传处理压缩包、目标路径可写并后续执行
+- 证据范围：独有4.2.0文件名处理变更与修复commit，核心机制有用；复现章节空白
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 影响/解决方案/复现/产品支持全部黏成一段，结构需恢复
+- 已复现标题没有正文证据/截图；不能视作可复现条目
+- 未发布正式修复只适用于2024-04-17当时；4月16月笔误
+- 开发分支最新代码不等同稳定发布升级方案
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 长亭应急  黑伞安全   2024-04-17 17:50  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/FOh11C4BDicTDoBJh7aQJm2oibMRkWvoayyxLm0DtPjJZNlvX4icjkMoQUB4vnBODWABsicHibwxibUGEEalicAqrfGQw/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1 "")  

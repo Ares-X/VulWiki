@@ -1,8 +1,59 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2026-3913;CVE-2026-3914;CVE-2026-3915;CVE-2026-3916;CVE-2026-3917;CVE-2026-3918;CVE-2026-3919;CVE-2026-3921;CVE-2026-3922;CVE-2026-3923;CVE-2026-3924"
+identifier_role: "primary"
+primary_identifiers: "CVE-2026-3913;CVE-2026-3914;CVE-2026-3915;CVE-2026-3916;CVE-2026-3917;CVE-2026-3918;CVE-2026-3919;CVE-2026-3921;CVE-2026-3922;CVE-2026-3923;CVE-2026-3924"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "Chrome 安全更新 – 修复 29 个允许远程代码执行的漏洞"
+product: "Google Chrome WebML/WebSpeech/Proxy/WebMCP等"
+record_type: "roundup"
+document_type: "Chrome多漏洞补丁摘要"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "文称Chrome146.0.7680.71/.72修复；各组件路径、平台及初始权限未给"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Chrome/Chrome%20%E5%AE%89%E5%85%A8%E6%9B%B4%E6%96%B0%20%E2%80%93%20%E4%BF%AE%E5%A4%8D%2029%20%E4%B8%AA%E5%85%81%E8%AE%B8%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E7%9A%84%E6%BC%8F%E6%B4%9E.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-f63da60ba18486127ea4898f"
+entity_id: "ve-f63da60ba18486127ea4898f"
+schema_version: "1"
 ---
 
-#  Chrome 安全更新 – 修复 29 个允许远程代码执行的漏洞  
+# Chrome 安全更新 – 修复 29 个允许远程代码执行的漏洞
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Google Chrome WebML/WebSpeech/Proxy/WebMCP等
+- 文献类型：Chrome多漏洞补丁摘要
+- 版本、权限及部署边界：文称Chrome146.0.7680.71/.72修复；各组件路径、平台及初始权限未给
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 标题29个允许RCE把所有安全修复等同RCE，正文含OOB读、策略和UI问题，应逐项保留影响
+2. 声称11高危只明确列出10高危编号，加3913严重，共11已知实体；不要补猜漏号
+3. WebML频繁成为攻击目标、披露限制可防止逆向等措辞过度，修复不等于已在野利用
+4. 无Chrome官方公告或新闻来源链接，元数据空；版本、奖励和漏洞组件映射需核验
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 原创 网络安全9527
                     网络安全9527  安全圈的那点事儿   2026-03-12 11:01  
   
@@ -46,4 +97,4 @@ UAF 漏洞是指程序试图访问已被释放的内存时发生的漏洞，攻�
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

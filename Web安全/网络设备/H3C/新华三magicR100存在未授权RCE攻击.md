@@ -1,9 +1,55 @@
 ---
 cnvd: "CNVD-2022-33422"
 source: "MrWQ/vulnerability-paper"
+id: "vw-810ce5bc8619d09da0ecf56d"
+entity_id: "ve-810ce5bc8619d09da0ecf56d"
+schema_version: "1"
+title: "新华三magicR100存在未授权RCE攻击"
+product: "H3C Magic R100"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CNVD-2022-33422; CNVD-2022-33848"
+referenced_identifiers: ""
+prerequisites: "V100R005/V200R00；admin与Wi-Fi密码相同才能复用，之后开Telnet"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/H3C/%E6%96%B0%E5%8D%8E%E4%B8%89magicR100%E5%AD%98%E5%9C%A8%E6%9C%AA%E6%8E%88%E6%9D%83RCE%E6%94%BB%E5%87%BB.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_url: "https://mp.weixin.qq.com/s/PdUzTE0s8v_alex4k5f09Q"
+source_status: "recorded"
 ---
 
 # 新华三magicR100存在未授权RCE攻击
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：H3C Magic R100
+- 本文讨论：CNVD-2022-33422；CNVD-2022-33848
+- 版本、权限与配置前提：V100R005/V200R00；admin与Wi-Fi密码相同才能复用，之后开Telnet
+- 资料类型：固件分析/受限披露链；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 实际信息泄露→凭据复用→管理功能，标题未授权RCE掩盖重要前提
+- 多个image-...仅裸文本无链接；关键ajaxmsg故意隐去，不能完整复现
+- 固件命令R100V100R100与实际V100R005混写；Magci拼写；Content-Length空或78430错误
+- 与145大量相同研究，新增管理密码/WiFi与Telnet链应保留
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 两CNVD对应子漏洞、实际参数与默认密码关系待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/PdUzTE0s8v_alex4k5f09Q)

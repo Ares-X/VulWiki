@@ -1,6 +1,40 @@
 ---
 source: "hatch 补库批 20260928"
+product: "PHP Screw/构建"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "（四）php-screw加密文件"
+prerequisites: "来源所述条件，未列明部分仍待核：php_screw1.5与PHP扩展ABI20151012历史路径，未标PHP兼容范围"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-50e95d8fbb188aa205e6f334"
+entity_id: "ve-50e95d8fbb188aa205e6f334"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：php_screw1.5与PHP扩展ABI20151012历史路径，未标PHP兼容范围
+
+代码与实验材料：命令大小写、弯引号和tar长破折号有错，缺完整make与测试文件内容
+
+来源证据范围：镜像仓库及StudyCat原文
+
+- **代码与转录边界（1）**：批量操作及构建指令有风险/语法错误；依据：find使用弯引号、//中文被作为参数、xargs不处理空格；原地加密没有备份提示。相应原代码作为存在此问题的历史样本保留，不能直接当作可运行、成功复现的 PoC；缺失内容需回原稿核对，不据此补造可执行攻击链。
+
+- **结论使用边界（2）**：历史环境假设硬编码；依据：Phpize/Service大小写、/usr/lib/php/20151012固定ABI路径、sed只针对特定源码。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **证据待核（3）**：大量图片残串与缺代码；依据：我们写phpinfo内容是后无正文，图片尺寸属性残留。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # （四）php-screw加密文件
 

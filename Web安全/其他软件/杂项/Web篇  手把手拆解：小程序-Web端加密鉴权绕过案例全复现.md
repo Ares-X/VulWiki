@@ -1,8 +1,61 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+identifier_role: "reference"
+primary_identifiers: ""
+referenced_identifiers: "CVE-2025-32432;CVE-2025-30208;CVE-2025-24813"
+identifier_status: "unknown"
+title: "Web篇  手把手拆解：小程序-Web端加密鉴权绕过案例全复现"
+product: "匿名小程序/Web业务系统"
+record_type: "roundup"
+document_type: "六案例鉴权逆向合集"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "前提已登录或可取得客户端配置；六独立业务案例，无产品版本；案例5注销为破坏操作"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/Web%E7%AF%87%20%20%E6%89%8B%E6%8A%8A%E6%89%8B%E6%8B%86%E8%A7%A3%EF%BC%9A%E5%B0%8F%E7%A8%8B%E5%BA%8F-Web%E7%AB%AF%E5%8A%A0%E5%AF%86%E9%89%B4%E6%9D%83%E7%BB%95%E8%BF%87%E6%A1%88%E4%BE%8B%E5%85%A8%E5%A4%8D%E7%8E%B0.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-40dba16b755485c081c8cd68"
+entity_id: "ve-40dba16b755485c081c8cd68"
+schema_version: "1"
 ---
 
-#  Web篇 | 手把手拆解：小程序/Web端加密鉴权绕过案例全复现  
+# Web篇  手把手拆解：小程序-Web端加密鉴权绕过案例全复现
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：匿名小程序/Web业务系统
+- 文献类型：六案例鉴权逆向合集
+- 版本、权限及部署边界：前提已登录或可取得客户端配置；六独立业务案例，无产品版本；案例5注销为破坏操作
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 几乎全文压成一巨行，Python import/def和JS代码丢围栏换行，需回源重建六案例结构
+2. Hawk/HMAC、MD5是消息认证/摘要不是加密；算法可逆向或nonce可预测不等于HMAC安全性破坏，真正问题共享密钥与对象权限不足
+3. RSA公钥本来可公开，变量privatKey却setPublicKey，不能据有公钥认定密钥泄露；任意加密用户名冒充体现后端授权缺失
+4. 案例6所给AES-CBC-ZERO key/IV若Base64解码字节不满足AES16字节块/合法密钥长度，需明确按原文本使用还是解码；ur1错字
+5. Hawk脚本固定nonce违背文称每次必须变化；MD5返回唯一散列错误；RSA脚本定长字节输出与JS仅偶数长规则存在前导零差异
+6. 70k身份证/几万数据外泄声称无可核证据；引用的真实密钥/凭据样值应脱敏，别转载可用秘密；末尾CVE只推荐广告不主漏洞
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://example.com/api”，那么它会匹配>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 零日安全实验室  零日安全实验室   2026-01-10 11:48  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/MicZ6Q9ZW0xAFVtam88BvoJqciaibnFfJibO8vswlI7GnuYIiasyQ3j1wLia2xTMskDH09RVia2fHvykq1WCCMZgdoqjg/640?wx_fmt=png&from=appmsg "")  
@@ -35,4 +88,4 @@ source: "gelusus/wxvl 公众号漏洞文库"
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

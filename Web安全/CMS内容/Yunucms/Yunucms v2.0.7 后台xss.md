@@ -1,6 +1,38 @@
 ---
 source: "hatch 补库批 20260928"
+product: "Yunucms2.0.7"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "Yunucms v2.0.7 后台xss"
+prerequisites: "来源所述条件，未列明部分仍待核：backendtagmanage; victimrendersTAGlist; outputtemplateescapingnotshown"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-6581dd972e78c0aca5510ce8"
+entity_id: "ve-6581dd972e78c0aca5510ce8"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：backendtagmanage; victimrendersTAGlist; outputtemplateescapingnotshown
+
+- **证据待核（1）**：一路追PDO参数绑定不能证明XSS，根因还需要TAG列表输出上下文/转义，缺该关键源码。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **证据待核（2）**：官网链接错挂xz.aliyun.com/t/www.yunucms.com/...应校正，云账号/密码示例应脱敏不沿用。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **证据待核（3）**：安装图复用数据库泄漏条目可属共用环境，但不能当XSS证据；末尾image缺结果。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **适用与权限边界（4）**：payload仅截图，缺最低角色/修复/原始源。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Yunucms v2.0.7 后台xss
 

@@ -1,6 +1,40 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+product: "PHP/libxml HTTP charset处理"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2025-1219"
+referenced_identifiers: "CVE-2020-0796"
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "关键 PHP 漏洞允许黑客绕过验证以加载恶意内容"
+prerequisites: "来源所述条件，未列明部分仍待核：影响写8.3<8.3.18而修复写8.3.19，其他分支8.1.32/8.2.28/8.4.5；无下界"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-1ca3132a7c09d5d8ecde21a8"
+entity_id: "ve-1ca3132a7c09d5d8ecde21a8"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：影响写8.3&lt;8.3.18而修复写8.3.19，其他分支8.1.32/8.2.28/8.4.5；无下界
+
+代码与实验材料：重定向首Content-Type错误选取机制明确，PoC代码丢失只剩标识符
+
+来源证据范围：CybersecurityNews二手报道，无PHP公告
+
+- **事实待核（1）**：8.3分支版本自相矛盾；依据：8.3.18在影响上界与安全版本之间未被解释。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **代码与转录边界（2）**：转录/翻译损坏关键复现；依据：函数or、content-type漂移、PHP译作菲律宾语、redirect.php示例只三个词。相应原代码作为存在此问题的历史样本保留，不能直接当作可运行、成功复现的 PoC；缺失内容需回原稿核对，不据此补造可执行攻击链。
+
+- **证据待核（3）**：验证绕过影响缺实际应用上下文；依据：错误charset不等于所有DOM/SimpleXML使用均可加载恶意内容，需说明可控重定向与后续输出。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 #  关键 PHP 漏洞允许黑客绕过验证以加载恶意内容   
 邑安科技  邑安全   2025-04-01 17:23  
@@ -51,7 +85,9 @@ HTTP 请求的应用程序特别容易受到攻击。
 ## 概念验证  
   
 概念验证 （PoC） 演示了如何利用此漏洞：  
-1.重定向脚本 （） 发送指定 charset （） 的标头并重定向到另一个资源。```
+1.重定向脚本 （） 发送指定 charset （） 的标头并重定向到另一个资源。
+
+```
 redirect.php
 content-type
 utf-16

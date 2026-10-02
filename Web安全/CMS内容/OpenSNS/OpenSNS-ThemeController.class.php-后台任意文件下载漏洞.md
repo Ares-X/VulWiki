@@ -1,7 +1,37 @@
 ---
 version: "OpenSNS"
 source: "Threekiii/Vulnerability-Wiki"
+product: "OpenSNS Theme.packageDownload"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "OpenSNS-ThemeController.class.php-后台任意文件下载漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：后台主题打包权限、目标文件服务账号可读"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-75e3feb6a734e3a8f6436146"
+entity_id: "ve-75e3feb6a734e3a8f6436146"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：后台主题打包权限、目标文件服务账号可读
+
+- **适用与权限边界（1）**：文件路径写Admin/Model/ThemeController.class.php与Controller命名/职责矛盾，须核对目录。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **事实待核（2）**：版本未给；theme=../Conf/common.php有用但缺完整鉴权请求/ZIP响应。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **适用与权限边界（3）**：示例读取配置不等于无限制全服务器任意文件，需限定路径规范化与权限。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # OpenSNS ThemeController.class.php 后台任意文件下载漏洞
 

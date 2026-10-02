@@ -1,6 +1,41 @@
 ---
 source: "MrWQ/vulnerability-paper"
+product: "Laravel依赖Ignition/调试execute-solution文件流利用"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "Laravel -- v8-4-2 调试模式造成远程代码执行漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：正文Ignition<=2.5.1，称2.5.2修复；宿主Laravel标题8-4-2不应代替组件版本，需debug开启及相应PHP/流包装器依赖"
+side_effects: "未执行；本文需注意的操作影响：步骤标题与payload大面积错配；最终转换链下却是三重base64清日志；创建PHPGGC载荷下是viewFile:AA；清日志下是编码payload；创建日志条目下放转换/phar触发，需按原文恢复"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/ytyV5Q_q5OfuEiSMEbkfdg"
+id: "vw-0ad43b4e6b642dfa0f124c49"
+entity_id: "ve-0ad43b4e6b642dfa0f124c49"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：正文Ignition&lt;=2.5.1，称2.5.2修复；宿主Laravel标题8-4-2不应代替组件版本，需debug开启及相应PHP/流包装器依赖
+
+代码与实验材料：根因代码、PHP过滤器/日志PHAR与FTP被动模式到FPM两条独立路线，声明第一条在目标因日志名未知失败；多个步骤代码块顺序错位
+
+来源证据范围：Ambionics原研究直接链接、明确研究发现/披露日期与依赖版本，译文存在严重重排
+
+- **事实待核（1）**：步骤标题与payload大面积错配；依据：最终转换链下却是三重base64清日志；创建PHPGGC载荷下是viewFile:AA；清日志下是编码payload；创建日志条目下放转换/phar触发，需按原文恢复。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **适用与权限边界（2）**：实验破坏日志及组件前提需标明；依据：流程多次清空/重写laravel.log，不是无害读取；PHAR/PHP版本、monolog可用链、FTP网络与FPM监听条件决定可用性。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **适用与权限边界（3）**：代码解释与版本推论不精确；依据：Solution接口检查被描述为RunnableSolution；??误成?；默认日志路径storage/logs被译成存储/log；日期之后新装必安全忽略lockfile固定旧依赖。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Laravel -- v8-4-2 调试模式造成远程代码执行漏洞
 

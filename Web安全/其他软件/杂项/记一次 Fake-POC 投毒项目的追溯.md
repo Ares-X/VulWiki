@@ -1,9 +1,63 @@
 ---
 cve: "CVE-2021-21980"
 source: "gelusus/wxvl 公众号漏洞文库"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "记一次 Fake-POC 投毒项目的追溯"
+product: "疑似恶意CVE-2021-21980扫描器溯源案例"
+record_type: "unknown"
+document_type: "技术文章（细分类待核）"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "原文未给出可确认的版本、认证及部署边界；保留待核"
+side_effects: "给SHA1/检测比例/网络IP但无样本静态恶意逻辑/进程级外联时序/沙箱报告直链，不能确认投毒"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/%E8%AE%B0%E4%B8%80%E6%AC%A1%20Fake-POC%20%E6%8A%95%E6%AF%92%E9%A1%B9%E7%9B%AE%E7%9A%84%E8%BF%BD%E6%BA%AF.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-8c05b2574d09e7a2721277b3"
+entity_id: "ve-8c05b2574d09e7a2721277b3"
+schema_version: "1"
 ---
 
-#  记一次 Fake-POC 投毒项目的追溯  
+# 记一次 Fake-POC 投毒项目的追溯
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：疑似恶意CVE-2021-21980扫描器溯源案例
+- 文献类型：技术文章（细分类待核）
+- 版本、权限及部署边界：原文未给出可确认的版本、认证及部署边界；保留待核
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 21980是诱饵漏洞编号不是样本自身漏洞
+2. README把多个漏洞混写只说明标注不准不能证明后门
+3. 给SHA1/检测比例/网络IP但无样本静态恶意逻辑/进程级外联时序/沙箱报告直链，不能确认投毒
+4. 恶意样本连接同IP不证明该IP是恶意基础设施，应核CDN/云/更新/证书吊销及沙箱背景流量
+5. 与LockBit/MuddyWater通信重叠无法归因该项目，中文仓库不证明国籍
+6. 称实锤证据强度不足，2026发文分析2023样本需固定commit/采集日期
+7. 无外联不代表安全，不宜作为允许执行标准
+8. 未下载执行，本审不作恶意结论
+
+### 操作风险
+
+给SHA1/检测比例/网络IP但无样本静态恶意逻辑/进程级外联时序/沙箱报告直链，不能确认投毒
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
  蚁景网安   2026-04-27 08:48  
   
 0x01 前言  
@@ -220,4 +274,4 @@ virustotal的检测数据以及其他溯源博客等多个层面来看，该项�
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

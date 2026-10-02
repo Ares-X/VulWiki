@@ -1,9 +1,54 @@
 ---
 version: "Jupyter Notebook"
 source: "Threekiii/Vulnerability-Wiki"
+title: "Jupyter Notebook 未授权访问远程命令执行漏洞"
+product: "Jupyter Notebook"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "Unauthenticated publicly reachable notebook with terminal execution enabled; unspecified version/config"
+affected_versions: "Jupyter Notebook"
+source_status: "unknown"
+side_effects: "含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。"
+id: "vw-771fc6d7e0be5880aa346ea6"
+entity_id: "ve-771fc6d7e0be5880aa346ea6"
+schema_version: "1"
 ---
 
 # Jupyter Notebook 未授权访问远程命令执行漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：Unauthenticated publicly reachable notebook with terminal execution enabled; unspecified version/config
+- 证据范围：UI terminal is intended functionality when authenticated; security issue is exposure/configuration
+
+### 本次正文校订
+
+- 按实际内容修正 1 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 'No password' alone is insufficient prerequisite description; account for token/other authentication settings
+- Do not treat every Jupyter version as vulnerable; version metadata merely product name
+- Exact vulnerable config and image/compose source absent
+- Commands/results only screenshots; expected authority scope is notebook service user
+
+### 操作风险与资料使用
+
+- 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 ## 漏洞描述
 
@@ -27,7 +72,7 @@ app="Jupyter-Notebook" && body="Terminal"
 
 Vulhub运行测试环境：
 
-```
+```shell
 docker-compose up -d
 ```
 

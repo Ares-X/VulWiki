@@ -1,8 +1,50 @@
 ---
 source: "hatch 补库批 20260928"
+title: "MySQL LOAD DATA 读取客户端任意文件"
+product: "MySQL clients with LOCAL INFILE capability"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "客户端连接攻击者服务器且支持/允许LOCAL INFILE；labMySQL5.7.21/macOS10.14"
+runtime: "历史示例含 Python 2 专用依赖；未进行运行验证"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-f97441876cae11d8a266ecd8"
+entity_id: "ve-f97441876cae11d8a266ecd8"
+schema_version: "1"
 ---
 
 # MySQL LOAD DATA 读取客户端任意文件
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：客户端连接攻击者服务器且支持/允许LOCAL INFILE；labMySQL5.7.21/macOS10.14
+- 证据范围：详细协议数据包和独立修正PoC；比Adminer0更准确列client capability
+
+### 本次正文校订
+
+- 运行时标注：原示例含 Python 2 专用语法或模块，不能直接按 Python 3 运行；不在本次校订中迁移或执行。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- P0协议头解释错误：称长度1字节后3字节序号，应核对MySQL的长度/序号字段定义
+- 把LOCAL INFILE request叫ResponseTABULAR不准确，后文已有正式类型名
+- 列表所有客户端均适用过宽，依赖具体驱动版本和配置
+- 脚本Python2、固定包长和文件名，示例不宜当通用工具
+- 保留独立协议分析，关联Adminer入口条目而非按同攻击方式删重
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 一、漏洞简介
 ------------

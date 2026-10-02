@@ -1,8 +1,51 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Apache Hadoop 漏洞暴露系统，可能导致崩溃或数据损坏"
+product: "Apache Hadoop HDFS native client"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2025-27821"
+referenced_identifiers: ""
+identifier_role: "primary"
+cve: "CVE-2025-27821"
+prerequisites: "原文称3.2.0–3.4.1 native-client URI解析受控输入；实际输入可达性待官方核验"
+source_status: "unknown"
+side_effects: "含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。"
+id: "vw-acaf0cde9a82676527a3e1b6"
+entity_id: "ve-acaf0cde9a82676527a3e1b6"
+schema_version: "1"
 ---
 
-#  Apache Hadoop 漏洞暴露系统，可能导致崩溃或数据损坏  
+# Apache Hadoop 漏洞暴露系统，可能导致崩溃或数据损坏
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：原文称3.2.0–3.4.1 native-client URI解析受控输入；实际输入可达性待官方核验
+- 证据范围：报道内存越界写、HDFS-17754及3.4.2修复，但无原始公告链接或代码/复现。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 正文主 CVE 未进入 frontmatter
+- native client 应译本机代码客户端而非将攻击面等同本地客户端/整个集群
+- 所有部署均受影响、影响整个集群数据等表述超出展示证据
+- 日志监控是检测，不能直接声称降低触发风险；网络 URI 限制是否适用须依据实际入口
+- 需补 Apache 公告原链并删除免责声明/推广噪声
+
+### 操作风险与资料使用
+
+- 含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
  网安百色   2026-01-27 11:06  
   
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/1QIbxKfhZo7bxTiacQwTwlD54jiabA7H6pf72k7ZSibbZDbdVhiax1TnBeYDjsJdRdDbRxuRx8psg8IO2y5WbDJpUQ/640?wx_fmt=jpeg&from=appmsg "")  

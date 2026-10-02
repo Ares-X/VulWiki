@@ -2,7 +2,41 @@
 cve: "CVE-2017-11347"
 version: "switch($val[2]){"
 source: "Mr-xn/Penetration_Testing_POC"
+product: "MetInfo5.x incl5.3.19 patch bypass"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: "CVE-2017-11347"
+identifier_role: "reference"
+identifier_status: "unknown"
+title: "MetInfoCMS 5.X版本GETSHELL漏洞合集2"
+prerequisites: "来源所述条件，未列明部分仍待核：全部后台管理员；重装需删锁及DB条件；Copyfile绕过Windows路径；Copyindx和olupdate各自配置"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-9ef300fc131d52cad66ef133"
+entity_id: "ve-9ef300fc131d52cad66ef133"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：全部后台管理员；重装需删锁及DB条件；Copyfile绕过Windows路径；Copyindx和olupdate各自配置
+
+- **事实待核（1）**：frontmatter version竟为switch($val\[2\]){，明确代码污染；单CVE11347不能代表四类问题。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **适用与权限边界（2）**：锁文件0554自身权限不决定能否unlink，还看父目录/ACL，必须修正权限因果。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **证据待核（3）**：Copyindx节POC缺请求只shellURL；olupdate称tableid&gt;=44只特定表数，应按实际表数界定。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **适用与权限边界（4）**：Windows限定之后又给lamp默认目录，平台路径说明混乱；Copyindex/Copyindx/Copyfile需统一准确函数名。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **证据待核（5）**：6.0杜绝后台getshell和通杀为未证范围结论。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 MetInfoCMS 5.X版本GETSHELL漏洞合集  
 

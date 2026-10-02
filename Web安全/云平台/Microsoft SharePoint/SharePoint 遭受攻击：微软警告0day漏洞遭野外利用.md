@@ -1,9 +1,53 @@
 ---
 cve: "CVE-2025-53770"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "SharePoint 遭受攻击：微软警告0day漏洞遭野外利用"
+product: "Microsoft SharePoint/ToolShell"
+record_type: "incident"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2025-53770"
+referenced_identifiers: ""
+identifier_role: "primary"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。"
+id: "vw-ab54caa18abfba07e77637f2"
+entity_id: "ve-ab54caa18abfba07e77637f2"
+schema_version: "1"
 ---
 
-#  SharePoint 遭受攻击：微软警告0day漏洞遭野外利用  
+# SharePoint 遭受攻击：微软警告0day漏洞遭野外利用
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 本次正文校订
+
+- 按该篇完整正文及逐篇审阅区分主问题与背景编号，补全结构化主标识；不把标识归属校订等同运行复现。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 2025年7月未有补丁为历史状态需与现行修复分开
+- 53770/49706/49704变体及链关系需按MSRC精确对应
+- AMSI+Defender阻止措辞不应变成永久替代补丁
+- 机器密钥被窃后处置未完整给出
+- 保留Eye和MSRC原始链接及统计时间，清大量其他新闻导航
+
+### 操作风险与资料使用
+
+- 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 会杀毒的单反狗  军哥网络安全读报   2025-07-21 01:03  
   
 **导****读**  

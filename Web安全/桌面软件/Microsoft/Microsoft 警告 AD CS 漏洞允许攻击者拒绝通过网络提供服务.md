@@ -1,8 +1,64 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2025-29968"
+identifier_role: "primary"
+primary_identifiers: "CVE-2025-29968"
+referenced_identifiers: "CVE-2020-0796"
+identifier_status: "unknown"
+title: "Microsoft 警告 AD CS 漏洞允许攻击者拒绝通过网络提供服务"
+product: "Windows Server Active Directory Certificate Services"
+record_type: "advisory"
+document_type: "AD CS DoS修复新闻"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "AD CS角色已启用、网络可达、低权限已认证用户；无需另一用户交互"
+side_effects: "保留三个KB/构建映射作为待核验事实，有新闻链接但缺MSRC/KB原公告；ADCS服务中断不自动让所有既有证书通信都失效"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Microsoft/Microsoft%20%E8%AD%A6%E5%91%8A%20AD%20CS%20%E6%BC%8F%E6%B4%9E%E5%85%81%E8%AE%B8%E6%94%BB%E5%87%BB%E8%80%85%E6%8B%92%E7%BB%9D%E9%80%9A%E8%BF%87%E7%BD%91%E7%BB%9C%E6%8F%90%E4%BE%9B%E6%9C%8D%E5%8A%A1.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+source_url: "https://cybersecuritynews.com/microsoft-warns-of-ad-cs-vulnerability/"
+id: "vw-b933f5eea985b3fcc9157cf9"
+entity_id: "ve-b933f5eea985b3fcc9157cf9"
+schema_version: "1"
 ---
 
-#  Microsoft 警告 AD CS 漏洞允许攻击者拒绝通过网络提供服务   
+# Microsoft 警告 AD CS 漏洞允许攻击者拒绝通过网络提供服务
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Windows Server Active Directory Certificate Services
+- 文献类型：AD CS DoS修复新闻
+- 版本、权限及部署边界：AD CS角色已启用、网络可达、低权限已认证用户；无需另一用户交互
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 元数据漏29968，系统角色应归Windows服务器非桌面Microsoft
+2. Exploitation Unlikely译为不可能利用是确定翻译错误，需改可能性较低；无广泛利用不等无任何利用
+3. 评分6.5/5.7未说明基础与时间分或来源，Important是厂商等级不等CVSS高危
+4. WindowsServer2022包括23H2版本命名混淆需核对产品矩阵；老版本ESU/ServerCore角色适用性需分别确认
+5. 保留三个KB/构建映射作为待核验事实，有新闻链接但缺MSRC/KB原公告；ADCS服务中断不自动让所有既有证书通信都失效
+6. 表格翻译冲击/详与广告清理
+
+### 操作风险
+
+保留三个KB/构建映射作为待核验事实，有新闻链接但缺MSRC/KB原公告；ADCS服务中断不自动让所有既有证书通信都失效
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://cybersecuritynews.com/microsoft-warns-of-ad-cs-vulnerability/>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzUyMzczNzUyNQ==&mid=2247488913&idx=1&sn=acbf595a4a80dcaba647c7a32fe5e06b&chksm=fa39554bcd4edc5dc90019f33746404ab7593dd9d90109b1076a4a73f2be0cb6fa90e8743b50&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzUyMzczNzUyNQ==&mid=2247483652&idx=1&sn=b2f2ec90db499e23cfa252e9ee743265&chksm=fa3941decd4ec8c83a268c3480c354a621d515262bcbb5f35e1a2dde8c828bdc7b9011cb5072&scene=21#wechat_redirect>
+
+### 归档技术正文
+
 邑安科技  邑安全   2025-05-14 09:31  
   
 更多全球网络安全资讯尽在邑安全  

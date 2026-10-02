@@ -1,6 +1,45 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+product: "WordPress Forminator"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2024-28890; CVE-2024-31077; CVE-2024-31857"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+cve: "CVE-2024-28890; CVE-2024-31077; CVE-2024-31857"
+version: "28890: Forminator <1.29.0; 31077: <1.29.3; 31857: <1.15.4"
+title: "WordPress 插件 Forminator 中存在严重漏洞，影响30多万站点"
+prerequisites: "来源所述条件，未列明部分仍待核：upload<=1.29.0; SQLi administrator <=1.29.3 claimed; XSS<=1.15.4 victim click; separate ranges"
+side_effects: "未执行；本文需注意的操作影响：明确更正：JVN 公告分别给上传 CVE-2024-28890 影响 &lt;1.29.0、SQLi CVE-2024-31077 影响 &lt;1.29.3、XSS CVE-2024-31857 影响 &lt;1.15.4；原文将这些修复边界也包含为受影响有误。"
+source_status: "unknown"
+id: "vw-0cc30ce1e44e1096c0a90dc9"
+entity_id: "ve-0cc30ce1e44e1096c0a90dc9"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 明确更正：JVN 公告分别给上传 CVE-2024-28890 影响 &lt;1.29.0、SQLi CVE-2024-31077 影响 &lt;1.29.3、XSS CVE-2024-31857 影响 &lt;1.15.4；原文将这些修复边界也包含为受影响有误。
+- SQLi 需要管理员权限，XSS 需要用户交互，不能合并成匿名 RCE。安装数减下载次数不是未更新实例数，不能由此得“至少32万受影响”。
+
+核对来源：[JPCERT/IPA 协调公告](https://jvn.jp/en/jp/JVN50132400/)
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：upload&lt;=1.29.0; SQLi administrator &lt;=1.29.3 claimed; XSS&lt;=1.15.4 victim click; separate ranges
+
+- **适用与权限边界（1）**：同文称SQLi影响1.29.3及更早，又建议1.29.3修复全部，明确版本边界矛盾。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **结论使用边界（2）**：50万安装减18万下载得至少32万受影响不成立，下载次数不等于更新实例。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **适用与权限边界（3）**：主元数据缺三个CVE；勿将管理员SQLi或点击XSS归无条件匿名RCE。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **来源与引用处置（4）**：有新闻原文链接但缺JPCERT原始公告，广告/推荐段较长。保留这部分来源材料并与技术结论分开；其引用或宣传内容不能补足本文漏洞的证据。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 #  WordPress 插件 Forminator 中存在严重漏洞，影响30多万站点   
 Bill Toulas  代码卫士   2024-04-24 17:33  

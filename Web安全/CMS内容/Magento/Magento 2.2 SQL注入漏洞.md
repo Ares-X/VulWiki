@@ -1,6 +1,38 @@
 ---
 source: "hatch 补库批 20260928"
+product: "Magento2.2.0–2.3.0 per script"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "Magento 2.2 SQL注入漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：public synchronize source since2.2.0; from/to sink; active DB admin session needed only account takeover"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-dac1d6f2b7f3d0035bc979ee"
+entity_id: "ve-dac1d6f2b7f3d0035bc979ee"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：public synchronize source since2.2.0; from/to sink; active DB admin session needed only account takeover
+
+- **结论使用边界（1）**：标题/影响仅2.2而脚本2.2.0&lt;=2.3.0，应分测试与范围；Magento1.x sink存在不等于此入口适用。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **结论使用边界（2）**：正文BOOL实为错误状态布尔侧信道，脚本同时time备选，准确保留。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **凭据与会话边界（3）**：session_timeout900/26字符小写数字/表名无前缀硬编码，取session不等于可登录，缺会话绑定条件。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+
+- **事实待核（4）**：1秒延时阈值无基线易噪声；测试请求没有超时；原作者/source有保留但CVE未给。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Magento 2.2 SQL注入漏洞
 

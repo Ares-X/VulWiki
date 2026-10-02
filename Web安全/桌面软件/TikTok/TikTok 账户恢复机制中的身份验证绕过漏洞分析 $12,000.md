@@ -1,8 +1,60 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "TikTok 账户恢复机制中的身份验证绕过漏洞分析 $12,000"
+product: "TikTok账户恢复服务/Android入口"
+record_type: "analysis"
+document_type: "账户恢复漏洞报告解读与假设示例"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "文称仅已知用户名；实际原HackerOne报告前提未在正文证明"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/TikTok/TikTok%20%E8%B4%A6%E6%88%B7%E6%81%A2%E5%A4%8D%E6%9C%BA%E5%88%B6%E4%B8%AD%E7%9A%84%E8%BA%AB%E4%BB%BD%E9%AA%8C%E8%AF%81%E7%BB%95%E8%BF%87%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90%20%2412%2C000.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-072e8a1689518aa0b4c24a05"
+entity_id: "ve-072e8a1689518aa0b4c24a05"
+schema_version: "1"
 ---
 
-#  TikTok 账户恢复机制中的身份验证绕过漏洞分析 $12,000  
+# TikTok 账户恢复机制中的身份验证绕过漏洞分析 $12,000
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：TikTok账户恢复服务/Android入口
+- 文献类型：账户恢复漏洞报告解读与假设示例
+- 版本、权限及部署边界：文称仅已知用户名；实际原HackerOne报告前提未在正文证明
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 有HackerOne2443228原始链接，但全文没有真实端点/参数/响应/验证token流程，/account/recovery及new_password是泛化假设不能包装为实际PoC
+2. 示例JSON带注释且未围栏，不是合法请求；只给用户名即可接管是强断言需原报告逐项核对
+3. 未加密传输是条件猜想并非本文已确认根因，不能加入TLS漏洞分类
+4. 标题12000美元正文只泛谈赏金较高，无支付/报告状态证据；已修复且未被利用也缺日期/厂商说明
+5. 多段重复通用认证建议，Android只是入口真正受影响恢复服务，非桌面应用；无CVE不应强造编号
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://hackerone.com/reports/2443228>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 原创 css hacker  白帽子黑客   2026-01-11 01:19  
   
 # HackerOne 报告 #2443228 技术解读与漏洞赏金分析  
@@ -166,4 +218,4 @@ TikTok 身份验证绕过漏洞的分析与评估。希望对大家的安全研�
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

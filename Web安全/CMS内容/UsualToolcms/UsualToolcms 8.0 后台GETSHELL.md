@@ -1,6 +1,40 @@
 ---
 source: "hatch 补库批 20260928"
+product: "UsualToolCMS8.0Release"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "UsualToolcms 8.0 后台GETSHELL"
+prerequisites: "来源所述条件，未列明部分仍待核：后台语言编辑权限，lg路径可穿越写PHP；CSRF另需管理用户提交跨站表单"
+side_effects: "未执行；本文需注意的操作影响：说明a_lang.php界面而实际a_langx.php写入口应区分，完整请求body有价值；CSRF段是a_adminx新增管理员非直接语言写入，表单手动Submit无自动提交；两漏洞应分开"
+source_status: "unknown"
+id: "vw-16a23435772bb534fe272841"
+entity_id: "ve-16a23435772bb534fe272841"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；遮罩后的历史值不能作为可用登录凭据。原操作、请求方法和攻击表达式保留。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：后台语言编辑权限，lg路径可穿越写PHP；CSRF另需管理用户提交跨站表单
+
+- **结论使用边界（1）**：说明a_lang.php界面而实际a_langx.php写入口应区分，完整请求body有价值。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **结论使用边界（2）**：语言字段keys/values与后续key/value混用且Content-Length9189依实际编码变化，需原请求核对。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **适用与权限边界（3）**：CSRF段是a_adminx新增管理员非直接语言写入，表单手动Submit无自动提交；两漏洞应分开。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **代码与转录边界（4）**：长语言包原文有截断句/乱码Submit，首图指SQLi另文；缺原始来源/修复。相应原代码作为存在此问题的历史样本保留，不能直接当作可运行、成功复现的 PoC；缺失内容需回原稿核对，不据此补造可执行攻击链。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # UsualToolcms 8.0 后台GETSHELL
 
@@ -44,7 +78,7 @@ UsualToolCMS-8.0-Release
     Accept-Encoding: gzip, deflate
     DNT: 1
     Referer: http://192.168.235.242/UsualToolCMS/cmsadmin/a_langx.php?lg=lg-en.json
-    Cookie: navleft=21; UTCMSLanguage=zh; PHPSESSID=1r5kk3jieflfbnseav3e5dnclo
+    Cookie: navleft=21; UTCMSLanguage=zh; PHPSESSID=1r5********************clo
     X-Forwarded-For: 8.8.8.8
     Connection: close
     Upgrade-Insecure-Requests: 1

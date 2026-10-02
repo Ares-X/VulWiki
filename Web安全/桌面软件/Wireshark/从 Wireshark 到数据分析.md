@@ -1,8 +1,64 @@
 ---
 source: "MrWQ/vulnerability-paper"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "从 Wireshark 到数据分析"
+product: "Wireshark"
+record_type: "analysis"
+document_type: "工具入门与CTF流量分析"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "抓包接口权限和可见流量；CTF提供明文HTTP登录数据，软件版本未注明"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Wireshark/%E4%BB%8E%20Wireshark%20%E5%88%B0%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+source_url: "https://mp.weixin.qq.com/s/NFom2T7WBW-AaezT5BxNDw"
+id: "vw-ccc6eda684c5013df8245207"
+entity_id: "ve-ccc6eda684c5013df8245207"
+schema_version: "1"
 ---
 
 # 从 Wireshark 到数据分析
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Wireshark
+- 文献类型：工具入门与CTF流量分析
+- 版本、权限及部署边界：抓包接口权限和可见流量；CTF提供明文HTTP登录数据，软件版本未注明
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 不是Wireshark漏洞条目，应移工具教程/CTF而非制造CVE实体
+2. 多个显示过滤器缺空格如andtcp/andip、单等号、智能引号与转义下划线导致不可复制；vlan名称字段示例与注释不符需核对版本
+3. 混淆显示过滤与捕获过滤；Conversions应为Conversations，固定第1–5行协议层说明不是所有包通用
+4. WinPcap时代信息和不装C盘建议需日期化/依据；网卡一般选WLAN不能推广
+5. CTF数据仅公众号回复获取，无公开附件/哈希；展示的32位字符串需区分原始密码字段与哈希，TLS不等于可直接读取明文
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://mp.weixin.qq.com/s/NFom2T7WBW-AaezT5BxNDw>
+- 原文参考链接（未重新核验）：<http://ksria.com/simpread/>
+- 原文参考链接（未重新核验）：<https://www.wireshark.org>
+- 原文参考链接（未重新核验）：<https://www.jianshu.com/p/63f6f7d5deed>
+- 原文参考链接（未重新核验）：<https://mp.weixin.qq.com/s/tKsOm-xxe7ZBqgkKccjjZg>
+- 原文参考链接（未重新核验）：<https://adworld.xctf.org.cn/>
+
+### 归档技术正文
 
 <meta name="referrer" content="no-referrer"/>
 \> 本文由 \[简悦 SimpRead\](http://ksria.com/simpread/) 转码， 原文地址 \[mp.weixin.qq.com\](https://mp.weixin.qq.com/s/NFom2T7WBW-AaezT5BxNDw)

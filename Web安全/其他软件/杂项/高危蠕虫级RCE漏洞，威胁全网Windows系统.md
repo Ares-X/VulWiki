@@ -1,9 +1,61 @@
 ---
 cve: "CVE-2025-47981"
 source: "gelusus/wxvl 公众号漏洞文库"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "高危蠕虫级RCE漏洞，威胁全网Windows系统"
+product: "Windows SPNEGO/NEGOEX47981"
+record_type: "unknown"
+document_type: "技术文章（细分类待核）"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "PKU2U策略前提不可省略"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/%E9%AB%98%E5%8D%B1%E8%A0%95%E8%99%AB%E7%BA%A7RCE%E6%BC%8F%E6%B4%9E%EF%BC%8C%E5%A8%81%E8%83%81%E5%85%A8%E7%BD%91Windows%E7%B3%BB%E7%BB%9F.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-84c90ae89eb49d5ccf58f263"
+entity_id: "ve-84c90ae89eb49d5ccf58f263"
+schema_version: "1"
 ---
 
-#  微软紧急修复高危蠕虫级RCE漏洞，威胁全网Windows系统  
+# 高危蠕虫级RCE漏洞，威胁全网Windows系统
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Windows SPNEGO/NEGOEX47981
+- 文献类型：技术文章（细分类待核）
+- 版本、权限及部署边界：PKU2U策略前提不可省略
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 标题全网Windows和可蠕虫传播是风险推断不是已观测传播
+2. 正文明确披露时无公开利用/实战需保留
+3. PKU2U策略前提不可省略
+4. Server2022 23H2产品名不准确应核Server version23H2
+5. 各fixedbuild需MSRC，当前只有二手来源
+6. 9.8基础评分与带E/RL/RC时间向量分清
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
  网络安全与人工智能研究中心   2025-07-11 01:41  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/ezpQRXtYHibztA3hfhcEV95uic15Gs4MXFtGRmT68AQosiap9UZk1YOLno7GV99zz9Zx881BWfGtNGibjSXONSSKPQ/640?wx_fmt=gif&from=appmsg "")  
@@ -97,4 +149,4 @@ https://cybersecuritynews.com/microsoft-patches-wormable-rce-vulnerability/
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

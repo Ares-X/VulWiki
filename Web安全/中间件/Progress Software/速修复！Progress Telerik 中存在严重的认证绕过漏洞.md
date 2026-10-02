@@ -1,8 +1,51 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "速修复！Progress Telerik 中存在严重的认证绕过漏洞"
+product: "Progress Telerik Report Server"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2024-4358; CVE-2024-1800"
+referenced_identifiers: ""
+identifier_role: "primary"
+cve: "CVE-2024-4358; CVE-2024-1800"
+prerequisites: "4358 StartupController.Register在完成初始化后仍开放；1800原需低权限用户，组合由新建管理员满足"
+source_status: "unknown"
+side_effects: "含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。"
+id: "vw-a8359493855eba8b56ee5530"
+entity_id: "ve-a8359493855eba8b56ee5530"
+schema_version: "1"
 ---
 
-#  速修复！Progress Telerik 中存在严重的认证绕过漏洞   
+# 速修复！Progress Telerik 中存在严重的认证绕过漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：4358 StartupController.Register在完成初始化后仍开放；1800原需低权限用户，组合由新建管理员满足
+- 证据范围：两CVE都是本篇主链，时间与修补版本应分开保存，不与6327同为反序列化就合并。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 产品端对端加密属性无来源，不是核心产品定义
+- PoC公开却没有研究者/ZDI/仓库直链，仅二次新闻
+- 原文MOVEit事件月份和9600人数等背景统计需核，不能作本漏洞事实证据
+- 未发现4358利用只当时声明，修复建议10.1.24.514仅针对当时两漏洞不是长期安全最新版
+- 广告/重复推荐文章可清理
+
+### 操作风险与资料使用
+
+- 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 Bill Toulas  代码卫士   2024-06-04 17:34  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

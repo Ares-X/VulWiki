@@ -1,9 +1,47 @@
 ---
-cve: "CVE-2025-21505"
+cve: "CVE-2025-21505; CVE-2025-21548; CVE-2025-21534; CVE-2025-21493; CVE-2025-21555; CVE-2025-21495; CVE-2025-21500; CVE-2025-21523; CVE-2025-21536; CVE-2025-21499"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Oracle MySQL Server 漏洞"
+product: "MySQL Server, MySQL Connectors, MySQL Enterprise Firewall"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2025-21505; CVE-2025-21548; CVE-2025-21534; CVE-2025-21493; CVE-2025-21555; CVE-2025-21495; CVE-2025-21500; CVE-2025-21523; CVE-2025-21536; CVE-2025-21499"
+referenced_identifiers: ""
+identifier_role: "primary"
+prerequisites: "不同组件、分支及角色条件未分清；全部为公告摘录，无复现"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-ae272997f3a77be984df166c"
+entity_id: "ve-ae272997f3a77be984df166c"
+schema_version: "1"
 ---
 
-#  Oracle MySQL Server 漏洞   
+# Oracle MySQL Server 漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：不同组件、分支及角色条件未分清；全部为公告摘录，无复现
+- 证据范围：正文十项均主要实体，不是同漏洞；标题反复误用Server覆盖Connectors和Firewall
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- P0 21548应归Connector/Python，21495为Enterprise Firewall，不是Server组件
+- 21548标识被换行打断为CV/E-，提取器可能漏记
+- 每分支<=写法缺下界；未列所需权限/组件和准确补丁版本
+- 通用型/未明只是来源缺失，不应被归为已知技术弱点
+- 拆为CPU汇总页及十个关联实体，避免全文复制十次
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 一天  漏洞更新   2025-01-27 02:01  
   
 # Oracle MySQL是美国甲骨文（Oracle）公司的一套开源的关系数据库管理系统。MySQLServer是其中的一个数据库服务器组件。  

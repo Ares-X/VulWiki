@@ -1,6 +1,45 @@
 ---
 source: "MrWQ/vulnerability-paper"
+product: "ThinkPHP / SQL多实体"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "文库 - Thinkphp5-0-5-2sql 注入漏洞整理"
+prerequisites: "来源所述条件，未列明部分仍待核：insert两支、exp全5、NOT LIKE5.0.10、aggregate两支、order5.1.16–22、point5.1.6–部分5.1.8；标题5.2不代表独立5.2验证"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/PSDnBQNwDcOixsKmIFBJTQ"
+id: "vw-2a87f43b1391a4891dc26ae1"
+entity_id: "ve-2a87f43b1391a4891dc26ae1"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：insert两支、exp全5、NOT LIKE5.0.10、aggregate两支、order5.1.16–22、point5.1.6–部分5.1.8；标题5.2不代表独立5.2验证
+
+代码与实验材料：687行全文分段读完，DB和payload可见，控制器/require和多数源码只有图
+
+来源证据范围：掌控安全柚子微信稿，无Mochazz原始系列引用但大量同措辞/例子
+
+- **代码与转录边界（1）**：载荷和SQL明显截断/错字；依据：新版聚合变成datexml...缺前缀；orderby用了单引号替反引号；建表前写se tpdemo；最终UPDATE语句漏UPDATE。相应原代码作为存在此问题的历史样本保留，不能直接当作可运行、成功复现的 PoC；缺失内容需回原稿核对，不据此补造可执行攻击链。
+
+- **事实待核（2）**：原生exp应用误用被列为全版本框架漏洞；依据：正文承认官方视为功能，应独立作为不可信原生SQL误用而非未修复框架漏洞。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **适用与权限边界（3）**：版本和可重复环境不完整；依据：非最新5.1.8无commit；项目初始化只install而未提供基础composer，必要require/控制器在图。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **证据待核（4）**：来源/去重需回归原始系列；依据：insert、NOT LIKE、aggregate、order、point段与497/559/495/500/502的叙述和数据几乎逐段一致，需注明出处并保留独立实验图。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **事实待核（5）**：标题目录不规范；依据：作为专题汇编放ThinkPHP产品下，不另以文章标题建产品目录。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # 文库 - Thinkphp5-0-5-2sql 注入漏洞整理
 

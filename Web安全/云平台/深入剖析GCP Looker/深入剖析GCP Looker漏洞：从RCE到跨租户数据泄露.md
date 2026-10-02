@@ -1,8 +1,55 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "深入剖析GCP Looker漏洞：从RCE到跨租户数据泄露"
+product: "Google Looker"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。"
+id: "vw-7d02d5a540988dbbfc55dea9"
+entity_id: "ve-7d02d5a540988dbbfc55dea9"
+schema_version: "1"
 ---
 
-#  深入剖析GCP Looker漏洞：从RCE到跨租户数据泄露  
+# 深入剖析GCP Looker漏洞：从RCE到跨租户数据泄露
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 本次正文校订
+
+- 按实际内容修正 1 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 12743数据库授权绕过缺元数据，RCE链不能自动赋同CVE
+- 需开发/项目创建权限，非未认证入口
+- RCE不自动等于底层基础设施完全管理员
+- Git可执行位保存机制及JGit不支持hooks绝对说法需版本/源码限定
+- shell shebang与命令粘连不可执行
+- OFFSET逐行不是逐字节且updatexml输出长度限制需说明
+- 保留Google修复分支和两TRA一手链接，Looker Studio不受影响
+- 需清重复编号与营销
+
+### 操作风险与资料使用
+
+- 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 Dubito
                     Dubito  云原生安全指北   2026-02-06 00:36  
   
@@ -202,7 +249,7 @@ remote_dependency: git_hooks_creator {  url: "https://github.com/llooker/google_
 克隆此仓库的客户端（包括 Looker 服务器）都必须将该文件以可执行文件的形式写入磁盘。  
   
 我们在攻击者机器上使用了以下 Git 命令：  
-```
+```shell
 git update-index --chmod=+x hook
 ```  
   

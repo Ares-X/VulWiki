@@ -1,10 +1,63 @@
 ---
-cnvd: "CNVD-2021-09693"
-version: "Weiphp <= 5.0"
 source: "Threekiii/Awesome-POC"
+cnvd: "CNVD-2021-09693"
+identifier_role: "primary"
+primary_identifiers: "CNVD-2021-09693"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "WeiPHP5.0 任意用户Cookie伪造 CNVD-2021-09693"
+product: "WeiPHP Web应用"
+record_type: "vulnerability"
+document_type: "源码审计与条件攻击链"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "文中<=5.0；首先必须通过另一个文件读取漏洞或其他方式取得data_auth_key；目标用户ID需有效"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/WeiPHP5.0/WeiPHP5.0%20%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7Cookie%E4%BC%AA%E9%80%A0%20CNVD-2021-09693.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+version_unverified: "Weiphp <= 5.0"
+id: "vw-bb02eeeb714a37905d08d2aa"
+entity_id: "ve-b03d9433daff0c8fc52fb892"
+schema_version: "1"
+canonical: "Web安全/开发框架/WeiPHP/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693.md"
+relation_type: "duplicate_of"
 ---
 
 # WeiPHP5.0 任意用户Cookie伪造 CNVD-2021-09693
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：WeiPHP Web应用
+- 文献类型：源码审计与条件攻击链
+- 版本、权限及部署边界：文中<=5.0；首先必须通过另一个文件读取漏洞或其他方式取得data_auth_key；目标用户ID需有效
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 误归桌面软件；核心前提是密钥泄露，不是无条件任意用户伪造
+2. 上一篇任意文件读取未提供链接或编号，需建立独立漏洞与攻击链关系
+3. user_Id=1与Cookie user_id大小写混淆；文字称解密密钥错误，实际用密钥解密UID
+4. 示例硬编码密钥须标注实验值，不能误作跨安装通用密钥；uid1管理员身份需验证
+5. 提供完整加解密与登录路径有价值，但缺修复版本、官方编号来源和请求响应文字，截图未视检
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://www.weiphp.cn/doc/Initialization_database.html>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
 
 ## 漏洞描述
 

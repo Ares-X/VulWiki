@@ -1,6 +1,42 @@
 ---
 source: "hatch 补库批 20260928"
+product: "ThinkPHP / select-find-delete options 注入"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "Thinkphp 3.2.3 select&find&delete 注入漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：<=3.2.3粗范围；应用传入可控数组为options，复合主键/where非空条件有分析"
+side_effects: "未执行；本文需注意的操作影响：三张补丁图引用另一漏洞；delete/select/find分别引用Thinkphp3.1.3sql目录rId25/26/27，内容可能串图，应视检；delete alias PoC贴成where；标alias的URL实际只有id[where]，与上一项重复，缺真正别名变体；delete副作用需突出；注入端点自身执行删除，应只在隔离数据集验证"
+source_status: "unknown"
+id: "vw-222825c111b6da612a4de126"
+entity_id: "ve-222825c111b6da612a4de126"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：&lt;=3.2.3粗范围；应用传入可控数组为options，复合主键/where非空条件有分析
+
+代码与实验材料：完整parseOptions/parseTable/parseWhere/delete摘录与三个入口变体；未运行
+
+来源证据范围：有先知2629，修复commit只有截图
+
+- **操作与副作用边界（1）**：三张补丁图引用另一漏洞；依据：delete/select/find分别引用Thinkphp3.1.3sql目录rId25/26/27，内容可能串图，应视检。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+- **操作与副作用边界（2）**：delete alias PoC贴成where；依据：标alias的URL实际只有id\[where\]，与上一项重复，缺真正别名变体。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+- **事实待核（3）**：应用入口及修复范围不完整；依据：没有test控制器/模型创建、确切patch版本；“目测having/group可行”未经复现应保留推测标签。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **操作与副作用边界（4）**：delete副作用需突出；依据：注入端点自身执行删除，应只在隔离数据集验证。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Thinkphp 3.2.3 select&find&delete 注入漏洞
 

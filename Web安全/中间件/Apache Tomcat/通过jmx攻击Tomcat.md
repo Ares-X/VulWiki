@@ -1,8 +1,47 @@
 ---
 source: "hatch 补库批 20260928"
+title: "通过jmx攻击Tomcat"
+product: "Apache Tomcat JMX/UserDatabase"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "无认证JMX可达、UserDatabase可写、Manager远程可达，正文已列"
+source_status: "unknown"
+side_effects: "含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。"
+id: "vw-dbbe929b7d25c732c48eb783"
+entity_id: "ve-dbbe929b7d25c732c48eb783"
+schema_version: "1"
 ---
 
 # 通过jmx攻击Tomcat
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：无认证JMX可达、UserDatabase可写、Manager远程可达，正文已列
+- 证据范围：管理能力滥用，非独立Tomcat实现漏洞；版本无意义但配置必须完整。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 所有关键JMX操作参数在图片中未视检
+- 影响与来源缺失，无安全JMX/最小权限/账户清理说明
+- manager-gui是部署管理权限而非全局完全授权，应准确描述
+
+### 操作风险与资料使用
+
+- 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 一、漏洞简介
 ------------

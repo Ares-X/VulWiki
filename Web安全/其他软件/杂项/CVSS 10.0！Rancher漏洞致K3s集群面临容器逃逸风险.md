@@ -1,8 +1,67 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2025-62878"
+identifier_role: "primary"
+primary_identifiers: "CVE-2025-62878"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "CVSS 10.0！Rancher漏洞致K3s集群面临容器逃逸风险"
+product: "Rancher Local Path Provisioner"
+record_type: "advisory"
+document_type: "翻译技术通告"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "文标<0.0.34但pathPattern自0.0.27引入；需创建StorageClass高权限或已有注解模板+创建PVC权限；默认K3s不可直接利用"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/CVSS%2010.0%EF%BC%81Rancher%E6%BC%8F%E6%B4%9E%E8%87%B4K3s%E9%9B%86%E7%BE%A4%E9%9D%A2%E4%B8%B4%E5%AE%B9%E5%99%A8%E9%80%83%E9%80%B8%E9%A3%8E%E9%99%A9.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-a42635c75cc21d45fa203b46"
+entity_id: "ve-a42635c75cc21d45fa203b46"
+schema_version: "1"
 ---
 
-#  CVSS 10.0！Rancher漏洞致K3s集群面临容器逃逸风险  
+# CVSS 10.0！Rancher漏洞致K3s集群面临容器逃逸风险
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Rancher Local Path Provisioner
+- 文献类型：翻译技术通告
+- 版本、权限及部署边界：文标<0.0.34但pathPattern自0.0.27引入；需创建StorageClass高权限或已有注解模板+创建PVC权限；默认K3s不可直接利用
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 正文后半对默认K3s不可利用和CVSS前提的澄清非常重要，应前置，前半默认部署易利用及任意命名空间用户措辞过广
+2. ../../etc/cron.d从K3s深层base不一定到/etc；authorized_keys是文件不是可mkdir目录；攻击路径示例需校准
+3. 声称PodSecurity/OPA/PSP不能拦截因privileged=false过度，hostPath本身可受准入限制，应限定只检查privileged的策略
+4. PoC公开否与公告含可工作YAML自相矛盾；CWE-23链接实际22；源代码master链接应固定提交
+5. 检查StorageClass字面../会漏模板从PVC注解展开后的遍历；所有节点受影响须调度、卷挂载及主机权限前提，不等于单个PVC控制全部节点
+6. 保留公告/PR/版本链接及allowUnsafePathPattern显式重新开启风险；营销和重复序号删减
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://orca.security/resources/blog/cve-2025-62878-rancher-local-path-provisioner/>
+- 原文参考链接（未重新核验）：<https://github.com/advisories/GHSA-jr3w-9vfr-c746>
+- 原文参考链接（未重新核验）：<https://github.com/rancher/local-path-provisioner/pull/542>
+- 原文参考链接（未重新核验）：<https://github.com/rancher/local-path-provisioner/releases/tag/v0.0.34>
+- 原文参考链接（未重新核验）：<https://cwe.mitre.org/data/definitions/22.html>
+- 原文参考链接（未重新核验）：<https://github.com/rancher/local-path-provisioner>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 Dubito
                     Dubito  云原生安全指北   2026-02-12 00:35  
   
@@ -252,4 +311,4 @@ CVE-2025-62878[2]
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

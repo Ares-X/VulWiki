@@ -1,8 +1,60 @@
 ---
 cve: "CVE-2018-17190"
+title: "Apache Spark RPC 协议中的反序列化漏洞分析 - 斗象能力中心"
+product: "Apache Spark standalone RPC"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2018-17190"
+referenced_identifiers: ""
+identifier_role: "primary"
+prerequisites: "未启用spark.authenticate的standalone master可达；客户端方向需连接恶意服务端，且有可利用gadget"
+runtime: "历史示例含 Python 2 专用依赖；未进行运行验证"
+verification_source: "https://spark.apache.org/security.html"
+source_status: "missing"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-fab6a312aa10b21c7d8167de"
+entity_id: "ve-fab6a312aa10b21c7d8167de"
+schema_version: "1"
 ---
 
 # Apache Spark RPC 协议中的反序列化漏洞分析 - 斗象能力中心
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：未启用spark.authenticate的standalone master可达；客户端方向需连接恶意服务端，且有可利用gadget
+- 证据范围：请求/响应双向协议分析有独立价值，作者只证反序列化并承认gadget不足，不能扩大为已成功任意版本RCE。
+
+### 已有来源支持的更正
+
+- 官方17190聚焦未认证standalone master执行代码，认证启用不受此项影响
+
+### 本次正文校订
+
+- 按实际内容修正 1 处代码围栏语言标记，保留其中方法与请求内容。
+- 运行时标注：原示例含 Python 2 专用语法或模块，不能直接按 Python 3 运行；不在本次校订中迁移或执行。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 代码含大量Markdown转义反斜线、双转义字节串，无法原样解析为所述Python2协议脚本
+- 第一个脚本参数检查<3却访问argv[3]，数量校验错
+- invalid type code证明解析路径不等于已获得代码执行
+- 17190官方重点是本不应执行用户代码的master被执行；反向客户端研究不可未经核验自动归同CVE
+- 全版本须保留当时公告/未认证配置语境；反序列化终将成为历史是无依据预测
+
+### 核验来源
+
+- https://spark.apache.org/security.html
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 \> 本文由 \[简悦 SimpRead\](http://ksria.com/simpread/) 转码， 原文地址 \[blog.riskivy.com\](https://blog.riskivy.com/apache-spark-rpc%e5%8d%8f%e8%ae%ae%e4%b8%ad%e7%9a%84%e5%8f%8d%e5%ba%8f%e5%88%97%e5%8c%96%e6%bc%8f%e6%b4%9e%e5%88%86%e6%9e%90/)
@@ -149,7 +201,7 @@ if \_\_name\_\_ == '\_\_main\_\_':
 
 启动服务
 
-```
+```shell
 python evil\_spark\_server.py 1234 ser.bin
 
 

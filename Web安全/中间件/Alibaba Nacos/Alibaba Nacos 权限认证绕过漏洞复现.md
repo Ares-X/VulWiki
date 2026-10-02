@@ -1,9 +1,56 @@
 ---
 version: "参考链接："
 source: "MrWQ/vulnerability-paper"
+title: "Alibaba Nacos 权限认证绕过漏洞复现"
+product: "Alibaba Nacos认证过滤"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2021-29441"
+referenced_identifiers: ""
+identifier_role: "primary"
+cve: "CVE-2021-29441"
+prerequisites: "受影响UA白名单机制启用、API可达；实验2.0.0-ALPHA.1"
+affected_versions: "参考链接："
+source_url: "https://mp.weixin.qq.com/s/6IxFrlMrUWCd5qvVOVrcvw"
+source_status: "recorded"
+side_effects: "含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。"
+id: "vw-3bff7c5f3ccb616ba046fae3"
+entity_id: "ve-3bff7c5f3ccb616ba046fae3"
+schema_version: "1"
 ---
 
 # Alibaba Nacos 权限认证绕过漏洞复现
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：受影响UA白名单机制启用、API可达；实验2.0.0-ALPHA.1
+- 证据范围：创建新用户并登录是有状态演示；所引TrafficReviseFilter仅一层filter放行不足以单独证明全部鉴权被绕过，应核AuthFilter
+
+### 本次正文校订
+
+- 按实际内容修正 1 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- version抽取为参考链接：，缺主CVE
+- 第一处usename拼错，Content-Type form-urlencode少d
+- 无UA首次用户列表就能读可能是未启用认证，需明确基线/对照
+- 200不单独证明创建成功；修复版本未给
+
+### 操作风险与资料使用
+
+- 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/6IxFrlMrUWCd5qvVOVrcvw)
@@ -133,7 +180,7 @@ usename=test1&password=test1
   
 或者直接用 burp 打，构造数据包 poc 如下：
 
-```
+```http
 POST /nacos/v1/auth/users HTTP/1.1
 Host:your-ip:8848
 Cache-Control: max-age=0

@@ -1,9 +1,50 @@
 ---
 cve: "CVE-2026-35414"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "OpenSSH 漏洞暗藏 15 年，可致完全 root 权限访问"
+product: "OpenSSH SSH证书授权"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2026-35414"
+referenced_identifiers: ""
+identifier_role: "primary"
+prerequisites: "可信CA签发含特殊逗号principal证书、目标账号authorized_keys principals限制及相关配置；文称10.3修复"
+source_status: "unknown"
+side_effects: "含计划任务、启动项或 SSH 授权文件写入：会改变后续执行或登录行为。测试前备份原文件，结束后恢复原内容、权限与属主，不覆盖生产文件。"
+id: "vw-4c31966cb6f843851239c17b"
+entity_id: "ve-4c31966cb6f843851239c17b"
+schema_version: "1"
 ---
 
-#  OpenSSH 漏洞暗藏 15 年，可致完全 root 权限访问  
+# OpenSSH 漏洞暗藏 15 年，可致完全 root 权限访问
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：可信CA签发含特殊逗号principal证书、目标账号authorized_keys principals限制及相关配置；文称10.3修复
+- 证据范围：不能由任一可信CA有效证书推导所有主机root，目标账号/限制匹配必须清楚；无PoC或源码正文
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 日志不记录认证失败不等于无法检测，成功登录/证书标识仍可能可查
+- authorized_keys principals不是存储服务器信任密钥本身，术语混乱
+- 过去15年/所有受影响协议/全服务器root叙述缺精确配置与版本矩阵
+- 推测e为明显抓取/编辑噪声
+
+### 操作风险与资料使用
+
+- 含计划任务、启动项或 SSH 授权文件写入：会改变后续执行或登录行为。测试前备份原文件，结束后恢复原内容、权限与属主，不覆盖生产文件。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 HackerNews
                     HackerNews  安全威胁纵横   2026-04-28 08:49  
   

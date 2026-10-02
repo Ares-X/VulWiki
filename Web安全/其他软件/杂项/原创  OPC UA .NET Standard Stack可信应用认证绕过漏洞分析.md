@@ -1,8 +1,60 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "原创  OPC UA .NET Standard Stack可信应用认证绕过漏洞分析"
+product: "OPC UA .NET Standard Stack CVE-2022-29865"
+record_type: "analysis"
+document_type: "技术文章（细分类待核）"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "明确CA信任配置非默认自签、伪造应用证书，但不能把应用认证绕过等同所有用户身份授权绕过"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/%E5%8E%9F%E5%88%9B%20%20OPC%20UA%20.NET%20Standard%20Stack%E5%8F%AF%E4%BF%A1%E5%BA%94%E7%94%A8%E8%AE%A4%E8%AF%81%E7%BB%95%E8%BF%87%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-3ba877a6a118f58b1b0fae48"
+entity_id: "ve-3ba877a6a118f58b1b0fae48"
+schema_version: "1"
 ---
 
-#  原创 | OPC UA .NET Standard Stack可信应用认证绕过漏洞分析   
+# 原创  OPC UA .NET Standard Stack可信应用认证绕过漏洞分析
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：OPC UA .NET Standard Stack CVE-2022-29865
+- 文献类型：技术文章（细分类待核）
+- 版本、权限及部署边界：明确CA信任配置非默认自签、伪造应用证书，但不能把应用认证绕过等同所有用户身份授权绕过
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 主CVE未写元数据
+2. 测试1.4.368.53却说1.4.368已修复，缺完整四段修复号形成内在矛盾
+3. 明确CA信任配置非默认自签、伪造应用证书，但不能把应用认证绕过等同所有用户身份授权绕过
+4. Issuer元信息比较与X509Chain不一致组合讲解细致，DN忽略大小写本身不能单独认漏洞
+5. 伪证生成代码/字段和源码全图，缺可文本复现构造
+6. 精确修复commit及官方安全PDF/规范章节可追溯，属于高价值分析应补文本而非删除
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 原创 CISRC  网络安全应急技术国家工程中心   2022-10-25 15:26  
   
 **漏洞概述**  
@@ -157,4 +209,4 @@ Server的应用证书信息（可在OPC UA客户端认证的时候获得），�
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

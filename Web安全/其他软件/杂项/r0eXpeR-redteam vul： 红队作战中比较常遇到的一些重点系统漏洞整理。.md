@@ -1,10 +1,65 @@
 ---
-cve: "CVE-2020-17083"
-cnvd: "CNVD-2019-32204"
 source: "MrWQ/vulnerability-paper"
+identifier_role: "reference"
+primary_identifiers: ""
+referenced_identifiers: "CVE-2020-17083;CVE-2020-16875;CVE-2020-0688;CVE-2019-0192;CVE-2018-1335;CVE-2020-11989;CVE-2017-12615;CVE-2017-12616;CVE-2019-0232;CVE-2016-1240;CVE-2020-14882;CVE-2019-2725;CVE-2019-2618;CVE-2017-10271;CVE-2019-2615;CVE-2020-14644;CVE-2017-7504;CVE-2017-12149;CVE-2020-10977;CVE-2018-14364;CVE-2016-9086;CVE-2019-14994;CVE-2019-8451;CVE-2019-11581;CVE-2019-8449;CVE-2016-6663;CVE-2016-6664;CNVD-2019-32204"
+identifier_status: "unknown"
+title: "r0eXpeR-redteam vul： 红队作战中比较常遇到的一些重点系统漏洞整理。"
+product: "多产品漏洞参考索引"
+record_type: "roundup"
+document_type: "外链漏洞导航合集"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "全部只是外链标题/少数版本提示，未包含漏洞正文或验证；CNVD2019-32204也是索引项"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/r0eXpeR-redteam%20vul%EF%BC%9A%20%E7%BA%A2%E9%98%9F%E4%BD%9C%E6%88%98%E4%B8%AD%E6%AF%94%E8%BE%83%E5%B8%B8%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%87%8D%E7%82%B9%E7%B3%BB%E7%BB%9F%E6%BC%8F%E6%B4%9E%E6%95%B4%E7%90%86%E3%80%82.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+source_url: "https://github.com/r0eXpeR/redteam_vul"
+id: "vw-fcf4ddd6cc34da0fb2bf33c4"
+entity_id: "ve-fcf4ddd6cc34da0fb2bf33c4"
+schema_version: "1"
 ---
 
 # r0eXpeR-redteam vul： 红队作战中比较常遇到的一些重点系统漏洞整理。
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：多产品漏洞参考索引
+- 文献类型：外链漏洞导航合集
+- 版本、权限及部署边界：全部只是外链标题/少数版本提示，未包含漏洞正文或验证；CNVD2019-32204也是索引项
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 应保留导航而非单漏洞，frontmatter只17083/CNVD首命中误当主实体；不能算已读各外链全文
+2. Tomcat0232全版本标题过度，需WindowsCGI等条件；后台部署war/Redis未授权/UDF等配置或权限利用与软件缺陷分开
+3. JBoss7504同时标JMXInvoker与JBossMQ JMS，编号入口映射疑混；WebLogic14882应区分认证绕过到RCE链，dash非ASCII会漏索引
+4. Apache父类下混多个独立项目、phpMyAdmin不是MySQL本体；Oracle限Workflow注入等条件应保留
+5. 2618重复外链/7504重复主题需检查互补后关联，Sploitus搜索页不是稳定原始证据；蓝凌暂无占位可移到导航维护
+6. 历史年份/版本与动态持续更新区分，原repoURL可追溯需固定commit，别按外链列表自动扩PoC实体
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://github.com/r0eXpeR/redteam_vul>
+- 原文参考链接（未重新核验）：<http://ksria.com/simpread/>
+- 原文参考链接（未重新核验）：<https://github.com/ShiHuang-ESec/EHole](https://github.com/ShiHuang-ESec/EHole>
+- 原文参考链接（未重新核验）：<https://xz.aliyun.com/t/6560>
+- 原文参考链接（未重新核验）：<https://zhuanlan.zhihu.com/p/86082614>
+- 原文参考链接（未重新核验）：<https://www.cnblogs.com/whoami101/p/13361254.html>
+
+### 归档技术正文
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [github.com](https://github.com/r0eXpeR/redteam_vul)

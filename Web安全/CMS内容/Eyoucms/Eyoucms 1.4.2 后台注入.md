@@ -1,6 +1,36 @@
 ---
 source: "hatch 补库批 20260928"
+product: "EyouCMS1.4.2 Index.changeTableVal"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "Eyoucms 1.4.2 后台注入"
+prerequisites: "来源所述条件，未列明部分仍待核：后台会话和AJAX POST；所选表字段可更新，DB updatexml错误显示"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-4aac3005ed5c78186a027bc0"
+entity_id: "ve-4aac3005ed5c78186a027bc0"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：后台会话和AJAX POST；所选表字段可更新，DB updatexml错误显示
+
+- **凭据与会话边界（1）**：文本PoC未带X-Requested-With、field/value/会话；源码只在IS_AJAX_POST内运行。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+
+- **实验改动边界（2）**：id_value载荷用//连接不是文中解释的合法SQL空白/注释，须回原请求核对。以下步骤按原实验条件保留；人工改动后的行为只支持该修改环境，不用于证明未修改发行版默认可利用。
+
+- **证据待核（3）**：图引用1.0前台getshell资源；完整源码值得保留。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Eyoucms 1.4.2 后台注入
 

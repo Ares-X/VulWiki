@@ -1,11 +1,50 @@
 ---
-
 source: "MrWQ/vulnerability-paper"
+title: "金蝶云星空/K3Cloud kdsvc BinaryFormatter反序列化"
+product: "金蝶云星空/K3Cloud"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "6.x<6.2.1012.4，7/8区间；管理中心与普通应用；.NET gadget条件"
+prerequisites: "无Cookie示例"
+side_effects: "命令/代码执行示例可能改变主机状态"
+review_date: "2026-10-02"
+source_url: "https://blog.csdn.net/qq_41904294/article/details/131332436?spm=1001.2014.3001.5502"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E9%87%91%E8%9D%B6/%28166%20%E6%9D%A1%E6%B6%88%E6%81%AF%29%20%E9%87%91%E8%9D%B6%E4%BA%91%E6%98%9F%E7%A9%BA%20RCE%20%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0%20OidBoy%20G%20%E7%9A%84%E5%8D%9A%E5%AE%A2%20-%20CSDN%20%E5%8D%9A%E5%AE%A2.md"
+fofa: "app=\"金蝶云星空 - 管理中心\""
+id: "vw-509b5d19117245f2b8b0f746"
+entity_id: "ve-509b5d19117245f2b8b0f746"
+schema_version: "1"
 ---
 
-# (166 条消息) 金蝶云星空 RCE 漏洞复现 OidBoy G 的博客 - CSDN 博客
+# 金蝶云星空/K3Cloud kdsvc BinaryFormatter反序列化
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：金蝶云星空/K3Cloud；kdsvc BinaryFormatter反序列化
+- 版本、配置及部署条件：6.x<6.2.1012.4，7/8区间；管理中心与普通应用；.NET gadget条件
+- 认证与权限前提：无Cookie示例
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 标题含166条消息/CSDN博客网页噪声；序列化异常只说明解析路径，不能直接判可RCE
+- 代码源码和巨大Base64未相互验证，二进制仅按存储文本审阅未反编译
+- 7/8补丁顺序无直接官方引用
+
+## 操作风险
+
+命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [blog.csdn.net](https://blog.csdn.net/qq_41904294/article/details/131332436?spm=1001.2014.3001.5502)
 
 0x01 产品简介
@@ -47,7 +86,7 @@ FOFA：app="金蝶云星空 - 管理中心"
 
  PoC
 
-```
+```http
 POST /Kingdee.BOS.ServiceFacade.ServicesStub.DevReportService.GetBusinessObjectData.common.kdsvc HTTP/1.1
 Host: your-ip
 Content-Type: text/json
@@ -105,7 +144,7 @@ PS：通过接收 HTTP 请求中的 cmd 参数，将其作为命令行参数传�
 
  最终 exp:
 
-```
+```http
 POST /Kingdee.BOS.ServiceFacade.ServicesStub.DevReportService.GetBusinessObjectData.common.kdsvc HTTP/1.1
 Host: your-ip
 Content-Type: text/json
@@ -121,7 +160,7 @@ cmd: dir
 0x06 修复建议
 ---------
 
-### **临时缓解方案**
+#### **临时缓解方案**
 
 8.x 版本可通过手动添加安全配置并重启 IIS 的方式进行缓解，注意管理中心与普通应用配置文件均需添加：
 
@@ -134,7 +173,7 @@ EnabledKDSVCBinary = false
 
 由于该漏洞不仅影响管理中心（默认 8000 端口），也影响普通应用（默认 80 端口）。如果其它版本通过限制访问来源临时缓解漏洞，需要考虑是否会中断普通用户 Web 业务。
 
-### **升级修复方案**
+#### **升级修复方案**
 
 7.x 版本必须先安装全量补丁（修复代码）后安装临时补丁（添加安全配置）
 

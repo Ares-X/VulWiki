@@ -1,8 +1,49 @@
 ---
 source: "hatch 补库批 20260928"
+title: "weblogic爆破"
+product: "Oracle WebLogic domain credentials"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "quarantined"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "Local domain access, deliberately supplied boot credentials and domain encryption material"
+source_status: "unknown"
+side_effects: "含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。"
+id: "vw-3ec4bb3766d8895ff7876433"
+entity_id: "ve-3ec4bb3766d8895ff7876433"
+schema_version: "1"
 ---
 
 # weblogic爆破
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：Local domain access, deliberately supplied boot credentials and domain encryption material
+- 证据范围：Title calls this brute force but body creates known credentials then invokes a password decryptor; no online brute-force procedure exists.
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- Reclassify as offline credential-decryption lab, not product vulnerability or password cracking
+- Final decryption section empty and Java decryptor source/command unavailable in text
+- Inconsistent JDK paths .51/.9/.79 and embedded space before jre
+- Conflates storage shortage with memory; all error detail screenshots
+- No provenance link, exact file permissions or secret-handling warnings
+
+### 操作风险与资料使用
+
+- 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 一、部署weblogic
 ----------------
@@ -106,5 +147,3 @@ Password=weblogic123
 ![](./.resource/weblogic爆破/media/rId42.png)
 
 3.破解密码
-
-

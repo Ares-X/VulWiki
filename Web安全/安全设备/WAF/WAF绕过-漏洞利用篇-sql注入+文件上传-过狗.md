@@ -1,8 +1,54 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-d15838d0276e6dbe8ad58ac9"
+entity_id: "ve-d15838d0276e6dbe8ad58ac9"
+schema_version: "1"
+title: "WAF绕过-漏洞利用篇-sql注入+文件上传-过狗"
+product: "安全狗Apache版4.0及Pikachu靶场，其他WAF为背景"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+prerequisites: "特定规则配置/后端解析语义，部分方法明确4.0无效"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%AE%89%E5%85%A8%E8%AE%BE%E5%A4%87/WAF/WAF%E7%BB%95%E8%BF%87-%E6%BC%8F%E6%B4%9E%E5%88%A9%E7%94%A8%E7%AF%87-sql%E6%B3%A8%E5%85%A5%2B%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0-%E8%BF%87%E7%8B%97.md"
+review_date: "2026-10-02"
+side_effects: "文中写入/上传步骤会创建或覆盖目标文件；须先核对服务账户写权限、保存路径和脚本解析条件，验证后按原路径核查残留"
+source_status: "unknown"
 ---
 
 #  WAF绕过-漏洞利用篇-sql注入+文件上传-过狗  
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：安全狗Apache版4.0及Pikachu靶场，其他WAF为背景
+- 本文讨论：SQL/上传解析差异与配置绕过，无CVE
+- 版本、权限与配置前提：特定规则配置/后端解析语义，部分方法明确4.0无效
+- 资料类型：WAF绕过实验教程及营销；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 重要payload、配置和结果仅截图，无完整请求/规则版本
+- and替like不是通用等价替换；重复参数取最后与注释解析取决后端，不能概括所有WAF
+- 安全狗默认只检URL不检POST缺版本/配置证据；垃圾数据溢出未区分长度上限与内存漏洞
+- 35.2%/39.4%调查比例无日期/样本，机器语言误称机器学习；大量零成本插件广告
+
+### 操作风险与恢复
+
+- 文中写入/上传步骤会创建或覆盖目标文件；须先核对服务账户写权限、保存路径和脚本解析条件，验证后按原路径核查残留
+
+### 待核与来源
+
+- 截图、准确规则配置、具体成功范围与统计来源待核
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 原创 兰陵猪猪哼  小黑子安全   2025-07-22 04:13  
   
 WAF绕过主要集中在信息收集，漏洞发现，漏洞利用，权限控制四个阶段。  

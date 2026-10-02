@@ -1,9 +1,45 @@
 ---
-fofa: "app.name="
 source: "wy876 漏洞文库"
+title: "wgcloud 存在弱口令漏洞"
+product: "WGCLOUD"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "Version/config unknown;four guessed credentialpairs"
+fofa_unverified: "app.name="
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-201f696012992e9d748ed58e"
+entity_id: "ve-201f696012992e9d748ed58e"
+schema_version: "1"
 ---
 
 # wgcloud 存在弱口令漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：Version/config unknown;four guessed credentialpairs
+- 证据范围：No login endpoint,documented defaults or result;list alone not proof product vulnerability
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- P0 unsupported defaultcredential attribution;verify each against officialdocs before calling vulnerability
+- fofa field truncatedHunter app.name=
+- No versions,mandatory passwordchange behavior or test evidence
+- Classify as deployment hardening/configuration note rather than universal flaw
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 # 一、漏洞简介
 WGCLOUD设计思想为新一代极简运维监控系统，提倡快速部署，降低运维学习难度，全自动化运行，无模板和脚本。wgcloud 存在弱口令漏洞。

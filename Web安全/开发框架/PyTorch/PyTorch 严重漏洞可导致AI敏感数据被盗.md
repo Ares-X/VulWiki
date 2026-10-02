@@ -1,6 +1,38 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+product: "AI/PyTorch distributed RPC"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2024-5480"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "PyTorch 严重漏洞可导致AI敏感数据被盗"
+prerequisites: "来源所述条件，未列明部分仍待核：<=2.2.2，称最新2.3.1但没有明确修复版本，不能等同已修补"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-ade944700640068237d1fe44"
+entity_id: "ve-ade944700640068237d1fe44"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：&lt;=2.2.2，称最新2.3.1但没有明确修复版本，不能等同已修补
+
+代码与实验材料：PythonUDF执行流程叙述无样本，主/工作节点执行方向文字矛盾
+
+来源证据范围：SecurityWeek二手、Huntr/NIST引文无直接URL
+
+- **适用与权限边界（1）**：RPC信任边界与产品漏洞争议未说明；依据：分布式RPC本就调用远端函数，需明确是否允许不可信worker/网络节点及官方安全模型，不能直接泛化公网未认证RCE。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **事实待核（2）**：执行节点和修复状态不清；依据：主节点反序列化后使工作节点执行与后文攻陷主节点不一致；2.3.1只标最新未说修复。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 #  PyTorch 严重漏洞可导致AI敏感数据被盗   
 Ionut Arghire  代码卫士   2024-06-11 17:38  

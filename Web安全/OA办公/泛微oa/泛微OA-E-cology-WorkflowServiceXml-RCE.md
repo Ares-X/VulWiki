@@ -1,27 +1,68 @@
 ---
-version: "E-cology <= 9.0"
 source: "Threekiii/Vulnerability-Wiki"
+title: "泛微e-cology / XStream WorkflowServiceXml doCreateWorkflowRequest反序列化远程代码执行"
+product: "泛微e-cology / XStream"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "<=9.0泛称；具体测试版本仅截图；JavaFX/JDK内部类/BCEL链依赖"
+prerequisites: "声称未授权，services%20绕过"
+side_effects: "命令/代码执行示例可能改变主机状态"
+review_date: "2026-10-02"
+source_url: "https://github.com/Threekiii/Vulnerability-Wiki"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E6%B3%9B%E5%BE%AEoa/%E6%B3%9B%E5%BE%AEOA-E-cology-WorkflowServiceXml-RCE.md"
+id: "vw-e5f72c5d4c6e2182ed60559e"
+entity_id: "ve-e5f72c5d4c6e2182ed60559e"
+schema_version: "1"
 ---
 
-# 泛微OA E-cology WorkflowServiceXml RCE
+# 泛微e-cology / XStream WorkflowServiceXml doCreateWorkflowRequest反序列化远程代码执行
 
-## 漏洞描述
+## 条目说明
+
+- 对象与具体问题：泛微e-cology / XStream；WorkflowServiceXml doCreateWorkflowRequest反序列化RCE
+- 版本、配置及部署条件：<=9.0泛称；具体测试版本仅截图；JavaFX/JDK内部类/BCEL链依赖
+- 认证与权限前提：声称未授权，services%20绕过
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 完整文本含实体编码超长payload已离线解码阅读XML结构；内嵌BCEL字节码仅识别为不透明载荷，未反编译/执行
+- 叙述从SOAP接口追到XStream并以URLDNS验证，不能把DNS本身当RCE证明
+- Python data重复嵌套两层SOAP Envelope/Body/doCreateWorkflowRequest/web:string，只关闭一次，XML结构明显不平衡
+- Cmd头/net user和VulTest500判断依赖未说明的内嵌类，.format(cmd=cmd)正文没有对应占位符
+- 与x微短篇同根因但本篇分析更完整；保留源码逻辑，坏POC隔离，补JDK/XStream版本
+
+## 操作风险
+
+命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
+### 漏洞描述
 
 泛微E-cology OA系统的WorkflowServiceXml接口可被未授权访问，攻击者调用该接口，可构造特定的HTTP请求绕过泛微本身一些安全限制从而达成远程代码执行
 
-## 漏洞影响
+### 漏洞影响
 
 ```
 E-cology <= 9.0
 ```
 
-## 网络测绘
+### 网络测绘
 
 ```
 app="泛微-协同办公OA"
 ```
 
-## 漏洞复现
+### 漏洞复现
 
 漏洞原理来源
 
@@ -116,7 +157,7 @@ https://www.anquanke.com/post/id/239865
 ![11](./.resource/泛微OA-E-cology-WorkflowServiceXml-RCE/media/202202090150361.png)
 
 
-## 漏洞POC
+### 漏洞POC
 
 ```python
 #!/usr/bin/python3

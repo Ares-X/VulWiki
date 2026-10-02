@@ -2,7 +2,42 @@
 cnvd: "CNVD-2021-09693"
 version: "Weiphp <= 5.0"
 source: "Threekiii/Vulnerability-Wiki"
+product: "WeiPHP / 自定义自动登录"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CNVD-2021-09693"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693"
+prerequisites: "来源所述条件，未列明部分仍待核：<=5.0待核；必须已知data_auth_key、存在目标UID及相应cookie流程"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-b03d9433daff0c8fc52fb892"
+entity_id: "ve-b03d9433daff0c8fc52fb892"
+schema_version: "1"
+canonical: "Web安全/开发框架/WeiPHP/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693.md"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：&lt;=5.0待核；必须已知data_auth_key、存在目标UID及相应cookie流程
+
+代码与实验材料：完整加解密、is_login、生成器；示例密钥不应视为所有安装通用
+
+来源证据范围：归档来源，缺CNVD记录/patch，598保留PeiQi署名
+
+- **适用与权限边界（1）**：密钥泄露前提应明确且与主缺陷分离；依据：知道密钥后的伪造不能描述为无需前提任意用户登录，前序文件读取为另一实体。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **凭据与会话边界（2）**：示例密钥与UID被固化；依据：生成器忽略输入key参数用固定key；UID1不必然是管理员，Cookie大小写user_Id文字也不统一。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+
+- **凭据与会话边界（3）**：缺修复与安全认证设计说明；依据：未说明轮换已泄露key、清会话或升级；只列&lt;=5.0。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # WeiPHP5.0 任意用户Cookie伪造 CNVD-2021-09693
 

@@ -1,7 +1,41 @@
 ---
 version: "ShowDoc <= 3.2.5"
 source: "Threekiii/Vulnerability-Wiki"
+product: "ShowDoc<=3.2.5 tested2.8.2"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "ShowDoc-3.2.5-SQL注入漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：验证码每请求有效、item/pwd可公开调用、uid1存在活动token且64hex格式"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-9235635bb8ef2177ffdf592d"
+entity_id: "ve-9235635bb8ef2177ffdf592d"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；默认公开示例、攻击表达式和其他 Cookie 语义保持原样。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：验证码每请求有效、item/pwd可公开调用、uid1存在活动token且64hex格式
+
+- **结论使用边界（1）**：补丁commit明确，测试2.8.2与受影响&lt;=3.2.5兼容；需区分提取token与已知密码。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **结论使用边界（2）**：脚本urljoin绝对/server/index.php丢部署子路径，验证码错误无限重试无上限/超时。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **代码与转录边界（3）**：固定uid1/token64hex与user_token表假设，proxies变量未使用；不应把无token误判无漏洞。相应原代码作为存在此问题的历史样本保留，不能直接当作可运行、成功复现的 PoC；缺失内容需回原稿核对，不据此补造可执行攻击链。
+
+- **结论使用边界（4）**：ShowDoc文档协作系统分类可更准确。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # ShowDoc 3.2.5 SQL 注入漏洞
 
@@ -63,7 +97,7 @@ python poc.py -u http://your-ip:8080
 添加 token：
 
 ```
-Cookie: cookie_token=38f70784c511fe30f8686d5bf44bd0c5a830acd8e8c3efa9db63938f69e11f40
+Cookie: cookie_token=38f**********************************************************f40
 ```
 
 ![](./.resource/ShowDoc-3.2.5-SQL注入漏洞/media/image-20240704161636254.png)

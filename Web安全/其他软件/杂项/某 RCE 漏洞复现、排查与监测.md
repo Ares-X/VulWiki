@@ -1,10 +1,64 @@
 ---
 cnvd: "CNVD-2022-10270"
-fofa: "是一致的，这里匹配的是"
 source: "MrWQ/vulnerability-paper"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "某 RCE 漏洞复现、排查与监测"
+product: "向日葵Sunlogin CNVD-2022-10270 复现与检测"
+record_type: "unknown"
+document_type: "技术文章（细分类待核）"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "缺正式影响范围/修复版本与官方公告"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/%E6%9F%90%20RCE%20%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0%E3%80%81%E6%8E%92%E6%9F%A5%E4%B8%8E%E7%9B%91%E6%B5%8B.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+fofa_unverified: "是一致的，这里匹配的是"
+source_url: "https://mp.weixin.qq.com/s/46bVlM0J1m04UMpb5rSoKg"
+id: "vw-64cd30f740b9551c27911256"
+entity_id: "ve-64cd30f740b9551c27911256"
+schema_version: "1"
 ---
 
 # 某 RCE 漏洞复现、排查与监测
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：向日葵Sunlogin CNVD-2022-10270 复现与检测
+- 文献类型：技术文章（细分类待核）
+- 版本、权限及部署边界：缺正式影响范围/修复版本与官方公告
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 大量代码块整体错位：BPF位置是隐藏调试器、PsExec位置是FOFA、隐藏调试器位置是Python正则、Python位置是pcre工具、PCRE位置是Sysmon等，显著破坏操作
+2. fofa元数据抽成叙述句，正文完整指纹却在错误节
+3. 实验11.0.0.33162x64/Win7明确，监听49218与BPF49168不一致，端口可变需统一
+4. PCRE /check?未转义?会作用k而非字面问号，规则需核，作者已承认绕过风险
+5. 5条样本5告警不证明完整检测效果，原pcap/规则整体未附
+6. 源码路由/令牌请求多图无完整文本，nslookup扩展有独立价值
+7. PsExec需先管理员不是本漏洞提权方法
+8. 缺正式影响范围/修复版本与官方公告
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://mp.weixin.qq.com/s/46bVlM0J1m04UMpb5rSoKg>
+
+### 归档技术正文
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/46bVlM0J1m04UMpb5rSoKg)

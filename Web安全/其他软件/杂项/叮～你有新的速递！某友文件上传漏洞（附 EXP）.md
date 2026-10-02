@@ -1,11 +1,63 @@
 ---
-cnvd: "CNVD-2023-08743"
-version: "用友 KSOA V9.0"
-fofa: "空间搜索引擎语句"
 source: "MrWQ/vulnerability-paper"
+identifier_role: "reference"
+primary_identifiers: ""
+referenced_identifiers: "CNVD-2023-08743"
+identifier_status: "unknown"
+title: "叮～你有新的速递！某友文件上传漏洞（附 EXP）"
+product: "用友时空KSOA ImageUpload V9.0"
+record_type: "unknown"
+document_type: "技术文章（细分类待核）"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "需上传目录JSP解析/写权限等RCE前提；无官方漏洞公告/准确修复版本，标题匿名而正文明确产品"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/%E5%8F%AE%EF%BD%9E%E4%BD%A0%E6%9C%89%E6%96%B0%E7%9A%84%E9%80%9F%E9%80%92%EF%BC%81%E6%9F%90%E5%8F%8B%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E%EF%BC%88%E9%99%84%20EXP%EF%BC%89.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+version_unverified: "用友 KSOA V9.0"
+fofa_unverified: "空间搜索引擎语句"
+source_url: "https://mp.weixin.qq.com/s/fmokpW-Saw1Cwn5Vw6uP_w"
+id: "vw-8a022cd6099a61ac89e1ab1d"
+entity_id: "ve-8a022cd6099a61ac89e1ab1d"
+schema_version: "1"
 ---
 
 # 叮～你有新的速递！某友文件上传漏洞（附 EXP）
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：用友时空KSOA ImageUpload V9.0
+- 文献类型：技术文章（细分类待核）
+- 版本、权限及部署边界：需上传目录JSP解析/写权限等RCE前提；无官方漏洞公告/准确修复版本，标题匿名而正文明确产品
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. CNVD-2023-08743仅往期推荐，不能绑定本文ImageUpload
+2. fofa抽成空间搜索引擎语句但正文有完整app值
+3. 原请求带JSESSIONID，是否必需登录未说明
+4. HTTP缺头体空行且filename占位反斜杠污染，没有扩展名和可执行内容，1234567只证明上传不能称webshell
+5. 需上传目录JSP解析/写权限等RCE前提
+6. 无官方漏洞公告/准确修复版本，标题匿名而正文明确产品
+7. 推荐列表主体巨大且CVE/免杀工具均非本文漏洞实体
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://mp.weixin.qq.com/s/fmokpW-Saw1Cwn5Vw6uP_w>
+
+### 归档技术正文
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/fmokpW-Saw1Cwn5Vw6uP_w)
@@ -47,7 +99,7 @@ accept: */*
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9
-Cookie: JSESSIONID=D7B9314CC6B287CBD4D4F700211212E3
+Cookie: JSESSIONID=D7B**************************2E3
 Connection: close
 Content-Length: 7
 1234567

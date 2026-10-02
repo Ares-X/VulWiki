@@ -1,6 +1,40 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+product: "JsonExp Fastjson/Jackson tool"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "一款FastJson反序列化漏洞利用和扫描探测工具漏洞探测"
+prerequisites: "来源所述条件，未列明部分仍待核：Tool1.4.0 behavior discussed; no vulnerable product range"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-fb8b2d1da52a71e2013e4fc6"
+entity_id: "ve-fb8b2d1da52a71e2013e4fc6"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：Tool1.4.0 behavior discussed; no vulnerable product range
+
+代码与实验材料：Usage flags and callback modes, no source/test payload/result fixture; huge collapsed command/table paragraph
+
+来源证据范围：Only JNDIExploit repo; main binary download gated by public-account reply
+
+- **事实待核（1）**：No-real-attack disclaimer conflicts with active DNS/LDAP requests; callbacks don't establish RCE or a specific CVE。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **结论使用边界（2）**：Tool completely replaces manual vs cannot suit all cases contradiction; provenance/integrity unavailable。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **结论使用边界（3）**：Collapsed table/commands and marketing dominate。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 #  一款FastJson反序列化漏洞利用和扫描探测工具|漏洞探测   
 漏洞挖掘  渗透安全HackTwo   2024-04-11 00:01  

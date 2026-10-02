@@ -1,6 +1,42 @@
 ---
 source: "hatch 补库批 20260928"
+product: "PHP/mt_rand与rand误用"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "php mt_rand函数的安全问题探讨"
+prerequisites: "来源所述条件，未列明部分仍待核：示例工具输出适配PHP5.2.1–7.0/HHVM，正文未锁实际PHP；rand后续实现变化不能泛化"
+side_effects: "未执行；本文需注意的操作影响：空PHPSESSID推导空session_id不成立；session_start通常创建/恢复合法ID，不能未验证就令MD5只剩随机数"
+source_status: "unknown"
+id: "vw-08a9c050ad4f3264b4e8e496"
+entity_id: "ve-08a9c050ad4f3264b4e8e496"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：示例工具输出适配PHP5.2.1–7.0/HHVM，正文未锁实际PHP；rand后续实现变化不能泛化
+
+代码与实验材料：完整密钥预测与CTF片段、工具输出；结尾被截断，seed解释与数据冲突
+
+来源证据范围：php-mt_rand镜像及Sjoerd原研究，缺PHP官方随机API文档
+
+- **结论使用边界（1）**：随机输出范围误当种子范围；依据：先称seed0–2147483647，后成功seed4030923041，正文自身反证。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **结论使用边界（2）**：空PHPSESSID推导空session_id不成立；依据：session_start通常创建/恢复合法ID，不能未验证就令MD5只剩随机数。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **适用与权限边界（3）**：PRNG公式与版本范围过泛；依据：历史rand状态公式和受限0–30输出不能无条件直接线性相加预测，自动播种不意味着密码学安全。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **适用与权限边界（4）**：缺尾文和防御建议；依据：末句停在预；没有推荐密码学安全随机数、也未说明同进程序列/调用次数前提。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # php mt\_rand函数的安全问题探讨
 

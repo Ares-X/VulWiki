@@ -1,8 +1,45 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Primeton EOS Platform jmx反序列化远程代码执行"
+product: "普元EOS Platform JMX over HTTP"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "特定JMX HTTP端点开启可达，目标gadget/JRE/鉴权条件未提供"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-870c87b8927bcc1b0e96b573"
+entity_id: "ve-870c87b8927bcc1b0e96b573"
+schema_version: "1"
 ---
 
-#  Primeton EOS Platform jmx反序列化远程代码执行   
+# Primeton EOS Platform jmx反序列化远程代码执行
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：特定JMX HTTP端点开启可达，目标gadget/JRE/鉴权条件未提供
+- 证据范围：只有两截图且全文不含具体端点/载荷/响应，不能据标题和<=7.6认定复现完整。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 漏洞描述标题重复，无官方公告/修补版本/参考出处
+- 关键检测与利用仅图片未视检
+- 修复只说屏蔽JMX请求未区分HTTP管理接口与RMI端口
+- 后半几乎全是励志段落与技术无关，应清除
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 原创 SXdysq  南街老友   2024-04-28 21:20  
   
 **漏洞描述**  

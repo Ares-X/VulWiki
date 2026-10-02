@@ -1,6 +1,40 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+product: "vm2 / 异步错误与prepareStackTrace"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2023-29017"
+referenced_identifiers: "CVE-2022-36067"
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "VM2 JavaScript 沙箱库中存在严重的 RCE 漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：<=3.9.14、修复3.9.15，需应用执行攻击者提供代码"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-180e0edcff19392c91c68769"
+entity_id: "ve-180e0edcff19392c91c68769"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：&lt;=3.9.14、修复3.9.15，需应用执行攻击者提供代码
+
+代码与实验材料：仅描述两种PoC，无代码/精确链接，未独立核验
+
+来源证据范围：BleepingComputer译文，无官方advisory直链
+
+- **事实待核（1）**：编号未结构化；依据：frontmatter只有source；36067是历史背景不能当本篇主漏洞。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **适用与权限边界（2）**：远程RCE需要上层暴露执行入口；依据：沙箱逃逸是库边界缺陷，不等于安装vm2即网络可利用。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **事实待核（3）**：历史升级与规模需要时间戳；依据：1600万/月和3.9.15是2023-04-10语境，不可当当前安全版本结论。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 #  VM2 JavaScript 沙箱库中存在严重的 RCE 漏洞   
 Bill Toulas  代码卫士   2023-04-10 17:01  

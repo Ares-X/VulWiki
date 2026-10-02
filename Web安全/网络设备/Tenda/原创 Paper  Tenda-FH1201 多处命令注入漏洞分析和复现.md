@@ -1,9 +1,57 @@
 ---
 cve: "CVE-2024-41468"
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-320e3892e0b0e39d9eef65d7"
+entity_id: "ve-320e3892e0b0e39d9eef65d7"
+schema_version: "1"
+title: "原创 Paper | Tenda-FH1201 多处命令注入漏洞分析和复现"
+product: "Tenda FH1201 V1.2.0.14"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2024-41473"
+referenced_identifiers: ""
+prerequisites: "QEMU中patch check_network；真实设备认证前提未交代"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/Tenda/%E5%8E%9F%E5%88%9B%20Paper%20%20Tenda-FH1201%20%E5%A4%9A%E5%A4%84%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90%E5%92%8C%E5%A4%8D%E7%8E%B0.md"
+review_date: "2026-10-02"
+side_effects: "畸形输入可能使进程/内核崩溃、设备重启或服务不可用；本文崩溃线索不自动证明稳定代码执行，需隔离环境和可恢复配置；延时探针会占用线程或数据库连接；需记录基线和对照，单次慢响应或超时不足判定注入；文中还涉及重启、账户/SSH、防火墙或根目录配置变更；逐步核对具体命令及恢复方式，避免影响管理通道或业务网络"
+source_status: "unknown"
 ---
 
 #  原创 Paper | Tenda-FH1201 多处命令注入漏洞分析和复现   
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Tenda FH1201 V1.2.0.14
+- 本文讨论：CVE-2024-41473 WriteFacMac；41468 exeCommand；额外溢出未编号
+- 版本、权限与配置前提：QEMU中patch check_network；真实设备认证前提未交代
+- 资料类型：双命令注入及附带溢出研究；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 元数据只41468；安装/网桥/脚本命令与Python被黏行
+- 清空宿主全部iptables的环境脚本风险未隔离说明
+- 正文说fgets(v10,4096)可能溢出但v10本身4096，须区分安全读取与后续累计memcpy
+- 无固定版本；尾部混入无关单片机教学句
+
+### 操作风险与恢复
+
+- 畸形输入可能使进程/内核崩溃、设备重启或服务不可用；本文崩溃线索不自动证明稳定代码执行，需隔离环境和可恢复配置
+- 延时探针会占用线程或数据库连接；需记录基线和对照，单次慢响应或超时不足判定注入
+- 文中还涉及重启、账户/SSH、防火墙或根目录配置变更；逐步核对具体命令及恢复方式，避免影响管理通道或业务网络
+
+### 待核与来源
+
+- 原始固件认证、修复和额外溢出真实触发条件待确认
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 原创 404实验室  知道创宇404实验室   2024-08-13 17:21  
   
 **作者：****fan@知道创宇404实验室**  

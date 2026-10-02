@@ -1,9 +1,46 @@
 ---
-cve: "CVE-2026-48282"
+cve: "CVE-2026-48282; CVE-2026-48313; CVE-2026-48276"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Adobe ColdFusion 多个漏洞细节已公开，可导致远程代码执行"
+product: "Adobe ColdFusion RDS和CKEditor文件管理器"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "disputed"
+primary_identifiers: "CVE-2026-48282; CVE-2026-48313; CVE-2026-48276"
+referenced_identifiers: ""
+identifier_role: "primary"
+prerequisites: "48282/RDS读取须启用RDS且禁用RDS认证；CKEditor上传须显式启用；写路径受服务账户权限限制"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-8c68d52dcd7e9b8944bee262"
+entity_id: "ve-8c68d52dcd7e9b8944bee262"
+schema_version: "1"
 ---
 
-#  Adobe ColdFusion 多个漏洞细节已公开，可导致远程代码执行  
+# Adobe ColdFusion 多个漏洞细节已公开，可导致远程代码执行
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：48282/RDS读取须启用RDS且禁用RDS认证；CKEditor上传须显式启用；写路径受服务账户权限限制
+- 证据范围：明确两编号只是补丁比对推测，应保持不确定；所谓完整复现主要截图而非文本请求
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 2025U9/2023U20与修复U10/U21需Adobe官方确认，不能把推测CVE作为确证
+- RCE需CFML落在可访问/加载位置，并非任意位置写入即执行
+- 元数据只主CVE，多实体关联；厂商产品规则和推广可精简
+- 未发现利用、规则预计发布时间应绑定2026-07-03
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 原创 360漏洞研究院
                     360漏洞研究院  360漏洞研究院   2026-07-03 03:26  
   

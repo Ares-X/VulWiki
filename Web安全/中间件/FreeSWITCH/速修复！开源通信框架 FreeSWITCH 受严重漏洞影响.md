@@ -1,8 +1,50 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "速修复！开源通信框架 FreeSWITCH 受严重漏洞影响"
+product: "SignalWire FreeSWITCH"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2023-51443"
+referenced_identifiers: ""
+identifier_role: "primary"
+cve: "CVE-2023-51443"
+prerequisites: "DTLS-SRTP媒体协商场景及攻击者可向媒体端口发送恶意握手"
+source_status: "unknown"
+side_effects: "含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。"
+id: "vw-b784d256883ef48702a55b43"
+entity_id: "ve-b784d256883ef48702a55b43"
+schema_version: "1"
 ---
 
-#  速修复！开源通信框架 FreeSWITCH 受严重漏洞影响   
+# 速修复！开源通信框架 FreeSWITCH 受严重漏洞影响
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：DTLS-SRTP媒体协商场景及攻击者可向媒体端口发送恶意握手
+- 证据范围：描述无效CipherSuite触发握手竞态与新通话拒绝，未给独立PoC，宜保留公告摘要。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 5000企业使用量不能代表均受影响部署
+- 释放未验证地址数据包是含糊翻译，需核原始修复机制
+- 1.10.10及以前与1.10.11修复缺厂商公告链接，CVSS无向量
+- 广告/推荐文章比例较高，标题缺编号
+
+### 操作风险与资料使用
+
+- 含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 DO SON  代码卫士   2023-12-26 17:29  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

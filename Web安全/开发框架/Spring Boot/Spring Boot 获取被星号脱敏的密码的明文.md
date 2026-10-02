@@ -1,6 +1,40 @@
 ---
 source: "历史归档批(无原始出处标注)"
+product: "Spring Actuator/JMX与属性替换"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "Spring Boot 获取被星号脱敏的密码的明文"
+prerequisites: "来源所述条件，未列明部分仍待核：Boot1/2粗分；AdminMXBean需单独启用、Cloud EnvironmentManager需依赖；无精确版本"
+side_effects: "未执行；本文需注意的操作影响：秘密外传和业务状态恢复未说明；把凭据加入URL/Basic发到外部并修改Eureka/bootstrap，日志会留下敏感信息，需限定授权与恢复"
+source_status: "unknown"
+id: "vw-e22d1a51b9fea569dc746c7b"
+entity_id: "ve-e22d1a51b9fea569dc746c7b"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：Boot1/2粗分；AdminMXBean需单独启用、Cloud EnvironmentManager需依赖；无精确版本
+
+代码与实验材料：JMX getProperty与Eureka Basic/URL外带请求完整，含依赖前提；外带会改服务URL并泄露敏感值，无恢复
+
+来源证据范围：LandGrey原项目issue1支持第三种思路，正文源头未完整标注
+
+- **适用与权限边界（1）**：JMX调用前提少写注册与授权；依据：仅Jolokia存在并不保证SpringApplication Admin MBean启用或exec允许。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **代码与转录边界（2）**：特殊URL字符兼容性断言不可靠；依据：称bootstrap query适用于特殊URL字符，但#片段、&amp;参数分隔、空格/编码仍可破坏或截断秘密。相应原代码作为存在此问题的历史样本保留，不能直接当作可运行、成功复现的 PoC；缺失内容需回原稿核对，不据此补造可执行攻击链。
+
+- **凭据与会话边界（3）**：秘密外传和业务状态恢复未说明；依据：把凭据加入URL/Basic发到外部并修改Eureka/bootstrap，日志会留下敏感信息，需限定授权与恢复。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 获取被星号脱敏的密码的明文 (方法一)
 -----------------------------------

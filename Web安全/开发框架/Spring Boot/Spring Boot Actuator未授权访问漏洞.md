@@ -1,6 +1,38 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+product: "Spring Boot Actuator/管理端点暴露"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "Spring Boot Actuator未授权访问漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：影响版本全在截图，无文本；默认暴露按版本/端点不同"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-2d6b2583926f4c6ac7dfdb96"
+entity_id: "ve-2d6b2583926f4c6ac7dfdb96"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：影响版本全在截图，无文本；默认暴露按版本/端点不同
+
+代码与实验材料：只有GET/actuator根发现页面与图，不能证明敏感端点可读写；User-Agent折行不合法
+
+来源证据范围：公众号无官方文档或实验源
+
+- **适用与权限边界（1）**：根发现响应不能证明XXE/RCE或敏感未授权；依据：/actuator正常可见health等有限链接，需分别验证端点内容、访问控制和附加组件。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **适用与权限边界（2）**：升级不是错误暴露配置充分修复；依据：应按端点暴露、网络隔离和授权策略处理；图标指纹只提示技术栈。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 #  Spring Boot Actuator未授权访问漏洞  
 原创 安服仔

@@ -1,8 +1,63 @@
 ---
-cve: "CVE-2020-9483"
+title: "Apache Skywalking 小于等于8.3 SQL注入分析复现"
+product: "Apache SkyWalking"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: "CVE-2020-9483; CVE-2020-13921"
+identifier_role: "reference"
+prerequisites: "受影响queryLogs接口可达，使用H2且DB权限/文件写入与类加载满足；其他存储不可直接套用此RCE链"
+verification_source: "https://github.com/vulhub/vulhub/blob/master/environments.toml"
+source_url: "https://mp.weixin.qq.com/s/69JLJs1PW74U0sW5M6RjHw"
+source_status: "recorded"
+side_effects: "涉及 LDAP/RMI/DNS/HTTP 外带：回连只证明相应网络交互，不能单独证明命令执行；使用自控接收端，避免把日志、凭据或真实业务数据发送给第三方。"
+id: "vw-71ae3a091f4004245b7437ae"
+entity_id: "ve-71ae3a091f4004245b7437ae"
+schema_version: "1"
 ---
 
 # Apache Skywalking 小于等于8.3 SQL注入分析复现
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：受影响queryLogs接口可达，使用H2且DB权限/文件写入与类加载满足；其他存储不可直接套用此RCE链
+- 证据范围：SQL构造与DAO调用链有独立增量，frontmatter误把前序漏洞当当前编号。
+
+### 已有来源支持的更正
+
+- 8.3.0-sqli实验环境cve字段为空，不能作为9483绑定证据
+
+### 本次正文校订
+
+- 移除 1 组不含任何正文的空代码围栏；保留全部非空代码。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 9483/13921均在描述为前序不完全修复，不能据此赋9483为本篇主CVE；Vulhub当前manifest该环境cve为空
+- HTTP请求、Java/Python源码被反引号包裹并压成单行，不能直接复现
+- wget指向GitHub blob网页而非原始compose文件
+- 多处成功结果/调用栈位置空白，无图片引用
+- 一次静态初始化不重复不是简单双亲委派解释，应区分类缓存/初始化；换数据库只是阻断当前链不保证SQL注入修复
+- 需明确8.4.0修复来源与8.3完整版本范围
+
+### 核验来源
+
+- https://github.com/vulhub/vulhub/blob/master/environments.toml
+
+### 操作风险与资料使用
+
+- 涉及 LDAP/RMI/DNS/HTTP 外带：回连只证明相应网络交互，不能单独证明命令执行；使用自控接收端，避免把日志、凭据或真实业务数据发送给第三方。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/69JLJs1PW74U0sW5M6RjHw)
@@ -248,10 +303,6 @@ H2LogQueryDAO继承了ILogQueryDAO接口，所以最终走入H2LogQueryDAO类的
  `try (ResultSet resultSet = h2Client.executeQuery(connection, buildCountStatement(sql.toString()), parameters` `.toArray(new Object[0]))) {` `while (resultSet.next()) {` `logs.setTotal(resultSet.getInt("total"));` `}` `}`
 ```
 
-```
-  
-
-```
 
 buildCountStatement将sql语句拼入select count：  
 

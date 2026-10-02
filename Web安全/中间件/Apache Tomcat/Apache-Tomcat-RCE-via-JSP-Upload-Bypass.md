@@ -1,8 +1,49 @@
 ---
 cve: "CVE-2017-12617"
+title: "Apache Tomcat RCE via JSP Upload Bypass CVE-2017-12617"
+product: "Apache Tomcat DefaultServlet"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2017-12617"
+referenced_identifiers: ""
+identifier_role: "primary"
+prerequisites: "PUT启用/readonly=false、可写Web目录且JSP可执行；列7/8.0/8.5/9相应历史范围"
+source_status: "missing"
+side_effects: "含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。"
+id: "vw-ecfceae647e69e6dadbfabfd"
+entity_id: "ve-ecfceae647e69e6dadbfabfd"
+schema_version: "1"
 ---
 
 # Apache Tomcat RCE via JSP Upload Bypass CVE-2017-12617
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：PUT启用/readonly=false、可写Web目录且JSP可执行；列7/8.0/8.5/9相应历史范围
+- 证据范围：标题和范围较302正确，脚本区分检查/上传shell但检查本身落地JSP，绝非只读。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- Python3 getContent返回bytes而用str in con会TypeError；交互str(bytes)显示b前缀而非解码
+- 检查固定Poc.jsp可能覆盖已有文件，脚本无删除；pwn直接部署持久webshell
+- usage -pwn错误长参数应--pwn，hosts拼hotsts
+- URL拼接重复/且缺鉴权、timeout、网络错误处理，成功201只是创建不是执行证明
+- 缺对应修复版本/恢复readonly建议；与12615需区分平台与修复阶段
+
+### 操作风险与资料使用
+
+- 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 ## 漏洞描述
 

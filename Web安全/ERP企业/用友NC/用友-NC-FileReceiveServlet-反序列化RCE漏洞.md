@@ -1,27 +1,67 @@
 ---
-version: "用友NC 6.5"
 source: "Threekiii/Vulnerability-Wiki"
+title: "用友NC FileReceive反序列化上传与UploadServlet回显研究"
+product: "用友NC"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "6.5及CC/xalan/容器依赖"
+prerequisites: "未详述"
+side_effects: "文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行；命令/代码执行示例可能改变主机状态"
+review_date: "2026-10-02"
+source_url: "https://github.com/Threekiii/Vulnerability-Wiki"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E7%94%A8%E5%8F%8BNC/%E7%94%A8%E5%8F%8B-NC-FileReceiveServlet-%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96RCE%E6%BC%8F%E6%B4%9E.md"
+id: "vw-0fa292dde24a68823899a193"
+entity_id: "ve-0fa292dde24a68823899a193"
+schema_version: "1"
 ---
 
-# 用友 NC FileReceiveServlet 反序列化RCE漏洞
+# 用友NC FileReceive反序列化上传与UploadServlet回显研究
 
-## 漏洞描述
+## 条目说明
+
+- 对象与具体问题：用友NC；FileReceive反序列化上传与UploadServlet回显研究
+- 版本、配置及部署条件：6.5及CC/xalan/容器依赖
+- 认证与权限前提：未详述
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 两个Servlet需多实体关联；正常Map上传与gadget执行区分有价值
+- 客户端ObjectInputStream直接读目标响应也有不可信反序列化风险
+- 改动Locator占位、Java HttpClient/HttpResult依赖和cmd.jsp资源缺
+- Python str传二进制需编码核对；纯文本jsp不等Getshell，缺修复build
+
+## 操作风险
+
+文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行；命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
+### 漏洞描述
 
 用友NC 存在反序列化 RCE漏洞，攻击者可利用控制服务器
 
-## 漏洞影响
+### 漏洞影响
 
 ```
 用友NC 6.5
 ```
 
-## 网络测绘
+### 网络测绘
 
 ```
 app="用友-UFIDA-NC"
 ```
 
-## 漏洞复现
+### 漏洞复现
 
 首先从任意文件上传说起
 
@@ -92,7 +132,7 @@ out = new ObjectOutputStream(output);
         System.out.println(msg);
 ```
 
-### 文件上传EXP
+#### 文件上传EXP
 
 python exp：
 
@@ -199,7 +239,7 @@ public class App {
 }
 ```
 
-## 参考文章
+### 参考文章
 
 https://mp.weixin.qq.com/s/IdXYbjNVGVIasuwQH48Q1w
 

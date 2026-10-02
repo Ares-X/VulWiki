@@ -1,8 +1,50 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "Apache ActiveMQ RCE 漏洞复现（附 EXP）"
+product: "Apache ActiveMQ OpenWire"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2023-46604"
+referenced_identifiers: ""
+identifier_role: "primary"
+cve: "CVE-2023-46604"
+prerequisites: "受影响OpenWire端口可达、可取远程SpringXML、classpath可用；PoC JDK11是作者工具要求"
+source_url: "https://mp.weixin.qq.com/s/TiOSeATAKIkeHgPrw3-geg"
+source_status: "recorded"
+side_effects: "含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。"
+id: "vw-16bd2e97108bf811f023265a"
+entity_id: "ve-16bd2e97108bf811f023265a"
+schema_version: "1"
 ---
 
 # Apache ActiveMQ RCE 漏洞复现（附 EXP）
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：受影响OpenWire端口可达、可取远程SpringXML、classpath可用；PoC JDK11是作者工具要求
+- 证据范围：两个XML的bean均缺class=ProcessBuilder，给出的文本不能实现声称计算器/反弹；实际Java工具未公开正文
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 缺主CVE元数据；四个<版本应按分支界定
+- 必须JDK11不是漏洞固有条件，需分工具与目标JVM
+- XML关键class属性缺失，公众号回复获取EXP不可当已具备代码
+- 最近/很久等无发布日期语境，完整接管应限服务权限
+
+### 操作风险与资料使用
+
+- 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/TiOSeATAKIkeHgPrw3-geg)

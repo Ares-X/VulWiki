@@ -1,6 +1,40 @@
 ---
 source: "hatch 补库批 20260928"
+product: "ThinkPHP / 5.x PHP文件缓存"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "Thinkphp 5.0.5 缓存漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：5.0.5样例；需缓存数据可控、可写、webroot覆盖runtime并允许PHP执行"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-c78f9e8733712a71ba48747d"
+entity_id: "ve-c78f9e8733712a71ba48747d"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：5.0.5样例；需缓存数据可控、可写、webroot覆盖runtime并允许PHP执行
+
+代码与实验材料：给getCacheKey源码与CRLF载荷，控制器代码只在图片
+
+来源证据范围：与520同h3art3ars原稿
+
+- **结论使用边界（1）**：总结缓存文件路径计算错误；依据：正文正确b0/68931...，总结写b0/b068931...，重复前两位，与getCacheKey源码不符。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **适用与权限边界（2）**：默认webroot限制未说明；依据：请求/public/index.php但随后直接访问/runtime，需解释站点根在项目而不是public，否则不可达。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **适用与权限边界（3）**：缺完整控制器及结果文字；依据：只图片显示写con和连接，不能从文本确认配置。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Thinkphp 5.0.5 缓存漏洞
 

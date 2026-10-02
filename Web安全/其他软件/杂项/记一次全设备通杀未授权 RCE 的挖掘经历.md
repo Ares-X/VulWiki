@@ -1,9 +1,63 @@
 ---
-version: "暂不公开"
 source: "MrWQ/vulnerability-paper"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "记一次全设备通杀未授权 RCE 的挖掘经历"
+product: "锐捷eWeb/LuCI merge到unifyframe-sgi命令注入"
+record_type: "unknown"
+document_type: "技术文章（细分类待核）"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "虽匿名某捷但厂商公告URL明确锐捷，标题全设备应限共享该系统/版本而非所有锐捷产品；型号固件均xxx且version误抽PoC暂不公开，缺可核验受影响/修复矩阵，不应把刻意保留PoC当抓取损坏；Lua到IPC/异步popen及首补丁双引号$()绕过分析有独立价值，修复前后需标版本并补最终厂商依据"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/%E8%AE%B0%E4%B8%80%E6%AC%A1%E5%85%A8%E8%AE%BE%E5%A4%87%E9%80%9A%E6%9D%80%E6%9C%AA%E6%8E%88%E6%9D%83%20RCE%20%E7%9A%84%E6%8C%96%E6%8E%98%E7%BB%8F%E5%8E%86.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+version_unverified: "暂不公开"
+source_url: "https://mp.weixin.qq.com/s/DMYaM2LA5CySWPF8leqdpQ"
+id: "vw-9909c02186e442120b30fa79"
+entity_id: "ve-9909c02186e442120b30fa79"
+schema_version: "1"
 ---
 
 # 记一次全设备通杀未授权 RCE 的挖掘经历
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：锐捷eWeb/LuCI merge到unifyframe-sgi命令注入
+- 文献类型：技术文章（细分类待核）
+- 版本、权限及部署边界：虽匿名某捷但厂商公告URL明确锐捷，标题全设备应限共享该系统/版本而非所有锐捷产品；型号固件均xxx且version误抽PoC暂不公开，缺可核验受影响/修复矩阵，不应把刻意保留PoC当抓取损坏；Lua到IPC/异步popen及首补丁双引号$()绕过分析有独立价值，修复前后需标版本并补最终厂商依据
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 虽匿名某捷但厂商公告URL明确锐捷，标题全设备应限共享该系统/版本而非所有锐捷产品
+2. 型号固件均xxx且version误抽PoC暂不公开，缺可核验受影响/修复矩阵，不应把刻意保留PoC当抓取损坏
+3. Lua到IPC/异步popen及首补丁双引号$()绕过分析有独立价值，修复前后需标版本并补最终厂商依据
+4. 前文v20为data偏移24后却称v20为from_url偏移81，实际检查变量v19，明确变量笔误
+5. 代码function漏f、JSON右括号反斜杠及伪反编译零参数strdup等不能直接执行
+6. chmod -R777修改全固件权限使环境不再等同真机，chroot及bind/proc/dev不是完整安全隔离，部分仿真任取rg_device.json需说明结论边界
+7. mount解释源目标倒置，telnetd删除不等于消除命令注入，黑名单修补应与避免shell拼接区分
+8. 厂商所有固件加密算法相同是经验推断非保证，官方通告/真机截图可为证据入口但尚未外部核验
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://mp.weixin.qq.com/s/DMYaM2LA5CySWPF8leqdpQ>
+
+### 归档技术正文
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/DMYaM2LA5CySWPF8leqdpQ)

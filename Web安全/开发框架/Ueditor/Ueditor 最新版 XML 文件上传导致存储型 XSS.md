@@ -1,6 +1,40 @@
 ---
 source: "MrWQ/vulnerability-paper"
+product: "UEditor / 上传型存储XSS"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "Ueditor 最新版 XML 文件上传导致存储型 XSS"
+prerequisites: "来源所述条件，未列明部分仍待核：PHP1.4.3.3测试，JSP版本未记；“最新版”无日期"
+side_effects: "未执行；本文需注意的操作影响：最新版和危害泛化；仅PHP1.4.3.3及未记JSP，不能覆盖全部最新版；危害小/凑漏洞非基于权限和同源影响；缺浏览器返回头与域边界；只看上传成功和弹窗，需确认XML按何种MIME及origin提供"
+source_status: "unknown"
+id: "vw-cd7f9abf1994218aefe86562"
+entity_id: "ve-cd7f9abf1994218aefe86562"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：PHP1.4.3.3测试，JSP版本未记；“最新版”无日期
+
+代码与实验材料：两组完全相同的弹窗/跳转/外链JS代码在篇内重复，上传过程只图片
+
+来源证据范围：有fex-team仓库、CSDN先前报告和微信原文
+
+- **操作与副作用边界（1）**：最新版和危害泛化；依据：仅PHP1.4.3.3及未记JSP，不能覆盖全部最新版；危害小/凑漏洞非基于权限和同源影响。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+- **适用与权限边界（2）**：缺浏览器返回头与域边界；依据：只看上传成功和弹窗，需确认XML按何种MIME及origin提供。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **证据待核（3）**：篇内代码重复及长分享链接；依据：同三份payload复制两遍，原文URL含临时分享参数，宜规范保留可打开原始链接。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Ueditor 最新版 XML 文件上传导致存储型 XSS
 

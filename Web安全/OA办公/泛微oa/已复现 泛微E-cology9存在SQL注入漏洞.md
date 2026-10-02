@@ -1,8 +1,50 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "泛微e-cology9 未公开接口SQL注入通告"
+product: "泛微e-cology9"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "WM-202507-000054"
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "<v10.76；安全版本>=v10.76"
+prerequisites: "CVSS说明无需权限"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+identifier_role: "primary"
+source_status: "unknown"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E6%B3%9B%E5%BE%AEoa/%E5%B7%B2%E5%A4%8D%E7%8E%B0%20%E6%B3%9B%E5%BE%AEE-cology9%E5%AD%98%E5%9C%A8SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md"
+id: "vw-a4974de1fdf2f9544cda3e4f"
+entity_id: "ve-a4974de1fdf2f9544cda3e4f"
+schema_version: "1"
 ---
 
-#  【已复现】泛微E-cology9存在SQL注入漏洞  
+# 泛微e-cology9 未公开接口SQL注入通告
+
+## 条目说明
+
+- 对象与具体问题：泛微e-cology9；未公开接口SQL注入通告
+- 版本、配置及部署条件：<v10.76；安全版本>=v10.76
+- 认证与权限前提：CVSS说明无需权限
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 正文安全版本>=10.76与修复方案官方尚未发布自相矛盾，需回原公告核对时间/模板
+- WM-202507-000054为安恒ID，CVE/CNVD/CNNVD明确未分配，不应生成虚假编号
+- 标题泛化、截图无可读接口；与QVD同期同补丁只能候选关联，POC已发现不是已公开
+- HTML表格样式噪声应剥离
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 安恒研究院  安恒信息CERT   2025-07-09 11:04  
   
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/JAzzLj4nXevmL5H6C1I6nWLYOHeic25ZZq3Sju5Xs1LnOckux8PBqG1qYrBly0Nicx4verjADnLorl5g1ImeuTeg/640?wx_fmt=jpeg&from=appmsg&wx_&wx_ "")  

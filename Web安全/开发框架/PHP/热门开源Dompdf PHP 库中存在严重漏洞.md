@@ -1,6 +1,38 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+product: "Dompdf/错误放PHP"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2023-23924"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "热门开源Dompdf PHP 库中存在严重漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：文称<=2.0.1、2.0.2修复；PHP<8下PHAR元数据自动反序列化，需可用gadget"
+side_effects: "未执行；本文需注意的操作影响：删除能力被推导为任意覆写；称任意文件删除因此可覆写任意文件，缺额外写入机制；RCE仍依gadget及PHAR可达"
+source_status: "unknown"
+id: "vw-596f428a3dcf898bf904af10"
+entity_id: "ve-596f428a3dcf898bf904af10"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：文称&lt;=2.0.1、2.0.2修复；PHP&lt;8下PHAR元数据自动反序列化，需可用gadget
+
+代码与实验材料：无PoC文本，混合大小写SVG image绕过的描述有价值
+
+来源证据范围：SecurityOnline二手转载与维护者引文，无直接GHSA
+
+- **操作与副作用边界（1）**：删除能力被推导为任意覆写；依据：称任意文件删除因此可覆写任意文件，缺额外写入机制；RCE仍依gadget及PHAR可达。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+- **事实待核（2）**：分类、评级和范围需精确；依据：Dompdf第三方库不是PHP运行时；CVSS10同时称高危，应注明标准并查官方范围。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 #  热门开源Dompdf PHP 库中存在严重漏洞   
 DO SON  代码卫士   2023-02-03 18:13  

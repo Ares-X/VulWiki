@@ -1,8 +1,53 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-b4e932cce10523bbb81edd88"
+entity_id: "ve-b4e932cce10523bbb81edd88"
+schema_version: "1"
+title: "思科提醒注意 ISE 中的满分 RCE 漏洞"
+product: "Cisco ISE/ISE-PIC"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2025-20281; CVE-2025-20282"
+referenced_identifiers: ""
+prerequisites: "20281 3.3/3.4；20282仅3.4；未认证API；20264需有效SSO账户"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/Cisco/%E6%80%9D%E7%A7%91%E6%8F%90%E9%86%92%20ISE%20%E4%B8%AD%E7%9A%84%E6%BB%A1%E5%88%86%20RCE%20%E6%BC%8F%E6%B4%9E.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 #  思科提醒注意 ISE 中的满分 RCE 漏洞  
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Cisco ISE/ISE-PIC
+- 本文讨论：CVE-2025-20281；CVE-2025-20282
+- 版本、权限与配置前提：20281 3.3/3.4；20282仅3.4；未认证API；20264需有效SSO账户
+- 资料类型：多漏洞新闻；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 修复叙述把3.3 Patch6与patch4命名临时补丁、3.4 Patch2与patch1临时补丁放在括号等同，易混淆安装基线
+- 主/副漏洞不同版本和权限须独立索引
+- 未来2025-11补丁计划与未见利用状态属于历史快照；缺官方直链
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 热补丁安装要求、实际修复版本和后续更新待核验
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 Bill Toulas  代码卫士   2025-06-27 10:29  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

@@ -1,9 +1,65 @@
 ---
-cve: "CVE-2024-7262"
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2024-7262;CVE-2024-7263"
+identifier_role: "primary"
+primary_identifiers: "CVE-2024-7262;CVE-2024-7263"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "WPS Office两个严重漏洞曝光，已被武器化且在野利用"
+product: "Kingsoft WPS Office Windows"
+record_type: "roundup"
+document_type: "多漏洞新闻"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "打开诱导文档；文中7262范围12.2.0.13110–13489与修复16909关系未说明；7263范围至17153前"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/WPS%20Office/WPS%20Office%E4%B8%A4%E4%B8%AA%E4%B8%A5%E9%87%8D%E6%BC%8F%E6%B4%9E%E6%9B%9D%E5%85%89%EF%BC%8C%E5%B7%B2%E8%A2%AB%E6%AD%A6%E5%99%A8%E5%8C%96%E4%B8%94%E5%9C%A8%E9%87%8E%E5%88%A9%E7%94%A8.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-dde8f9b0d566d1ddaa79475c"
+entity_id: "ve-dde8f9b0d566d1ddaa79475c"
+schema_version: "1"
 ---
 
-#  WPS Office两个严重漏洞曝光，已被武器化且在野利用   
+# WPS Office两个严重漏洞曝光，已被武器化且在野利用
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Kingsoft WPS Office Windows
+- 文献类型：多漏洞新闻
+- 版本、权限及部署边界：打开诱导文档；文中7262范围12.2.0.13110–13489与修复16909关系未说明；7263范围至17153前
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 元数据只列7262而正文包含两个独立漏洞，需多实体
+2. 标题称两漏洞均已在野利用，正文仅为7262给出利用依据；7263的在野状态需单独核验
+3. 共同CVSS9.3、国际版限定与国内版不受影响均缺可靠原始支持，尤其不能据圈内消息排除风险
+4. 任意代码执行不自动意味着系统最高权限；需说明当前用户上下文
+5. 影响上界13489与修复16909间的版本空档需区分已测范围和首次修复，不直接猜测补全
+6. 补ESET与厂商原始公告及日期锚点，清理推广文案
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://securityonline.info/wps-office-vulnerabilities-expose-200-million-users-cve-2024-7262-exploited-in-the-wild/>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247494753&idx=1&sn=a9ee1d680adf601e9ee212fc3841387f&chksm=ce1f16fef9689fe8ad2926bc3739025b04955e5c29fee949f44be9fe8262d8723110eb50b6b9&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247494714&idx=1&sn=fe28fee45c1508a1645fd04c2b18ca82&chksm=ce1f16a5f9689fb3996529f7738a1b7dc3960f3fc5bd31c7d1505dbd3a179d5b3bfd6c66e5f3&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<https://mp.weixin.qq.com/s?__biz=MjM5NjA0NjgyMA==&mid=2651253272&idx=1&sn=82468d927062b7427e3ca8a912cb2dc7&scene=21#wechat_redirect>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 流苏  FreeBuf   2024-08-19 18:44  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/qq5rfBadR38jUokdlWSNlAjmEsO1rzv3srXShFRuTKBGDwkj4gvYy34iajd6zQiaKl77Wsy9mjC0xBCRg0YgDIWg/640?wx_fmt=gif "")  
@@ -108,4 +164,4 @@ FreeBuf盲盒、大象公仔......
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

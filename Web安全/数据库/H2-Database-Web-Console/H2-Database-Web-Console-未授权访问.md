@@ -1,9 +1,56 @@
 ---
 version: "import java.rmi.registry.*;"
 source: "Threekiii/Vulnerability-Wiki"
+title: "H2 Database Web Console 未授权访问"
+product: "H2 Database Web Console"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2021-42392"
+referenced_identifiers: ""
+identifier_role: "primary"
+cve: "CVE-2021-42392"
+prerequisites: "远程控制台；Java8u252、Tomcat BeanFactory/ELProcessor及JavaScript引擎"
+affected_versions: "import java.rmi.registry.*;"
+source_status: "unknown"
+side_effects: "涉及 LDAP/RMI/DNS/HTTP 外带：回连只证明相应网络交互，不能单独证明命令执行；使用自控接收端，避免把日志、凭据或真实业务数据发送给第三方。"
+id: "vw-88f4afc7e5cd8fdca20b8e80"
+entity_id: "ve-88f4afc7e5cd8fdca20b8e80"
+schema_version: "1"
 ---
 
 # H2 Database Web Console 未授权访问
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：远程控制台；Java8u252、Tomcat BeanFactory/ELProcessor及JavaScript引擎
+- 证据范围：独立高JDK本地gadget实验，不能按同CVE删掉独特环境证据
+
+### 本次正文校订
+
+- 按实际内容修正 1 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- P0 version元数据为import java.rmi.registry.*;，提取错误
+- 未说明H2受影响和修复版本，补主漏洞映射前先核源码版本
+- 开放Web界面不等于所有数据库SQL权限无认证，应区分登录前JNDI路径
+- 示例JNDI端口/对象与工具生成方式不同，应明确是两种变体
+- 保留JDK/Tomcat条件并关联15
+
+### 操作风险与资料使用
+
+- 涉及 LDAP/RMI/DNS/HTTP 外带：回连只证明相应网络交互，不能单独证明命令执行；使用自控接收端，避免把日志、凭据或真实业务数据发送给第三方。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 ## 漏洞描述
 
@@ -24,7 +71,7 @@ spring.h2.console.settings.web-allow-others=true
 
 执行如下命令启动一个 Springboot + h2database 环境：
 
-```
+```shell
 docker-compose up -d
 ```
 

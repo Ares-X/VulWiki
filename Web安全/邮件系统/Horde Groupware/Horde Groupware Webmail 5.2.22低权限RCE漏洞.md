@@ -1,8 +1,45 @@
 ---
 source: "白阁文库 BaizeSec/bylibrary"
+title: "0x00 简介"
+product: "Horde Groupware Webmail Edition IMP"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "Authenticated account; title says5.2.22, body does not establish range"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-0f3a75200f167173a12e470a"
+entity_id: "ve-86b4cc4be4ed4024a45c91cf"
+schema_version: "1"
+canonical: "Web安全/邮件系统/Horde Groupware/Horde Groupware Webmail 远程命令执行漏洞.md"
+relation_type: "duplicate_of"
 ---
 
 # 0x00 简介
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：Authenticated account; title says5.2.22, body does not establish range
+- 证据范围：Same substantive description and script as mail7, with added line-number contamination
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- Concatenated1-168 line numbers inside Python fence are scrape residue
+- Version5.2.22 only in filename; verify and make explicit
+- Same fixed preference replacement caveat as mail7
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 Horde Groupware Webmail是美国Horde公司的一套基于浏览器的企业级通信套件。 Horde Groupware  Webmail中存在代码注入漏洞。该漏洞源于外部输入数据构造代码段的过程中，网络系统或产品未正确过滤其中的特殊元素。攻击者可利用该漏洞生成非法的代码段，修改网络系统或组件的预期的执行控制流。
 

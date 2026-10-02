@@ -1,8 +1,54 @@
 ---
 source: "Threekiii/Vulnerability-Wiki"
+title: "PHPStudy 后台管理页面 one click RCE"
+product: "小皮/phpStudy Windows and Linux panels"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "Windows<=0.102/Linux<=X1.29 claimed;SQLi requires valid CAPTCHA;XSS requires authenticated admin rendering stored input"
+source_status: "unknown"
+side_effects: "含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。"
+id: "vw-f5d4804b017ed7dfbdffe2bf"
+entity_id: "ve-f5d4804b017ed7dfbdffe2bf"
+schema_version: "1"
 ---
 
 # PHPStudy 后台管理页面 one click RCE
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：Windows<=0.102/Linux<=X1.29 claimed;SQLi requires valid CAPTCHA;XSS requires authenticated admin rendering stored input
+- 证据范围：Two distinct routes to panel task execution;script also deletes logs
+
+### 本次正文校订
+
+- 按实际内容修正 1 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- Description focuses XSS but first method is separate SQLi;split identities/prerequisites
+- XSS trigger location/admin interaction not explained;logging in viaSQLi is demo step,not inherent prerequisite
+- PoC silently clears logs after command execution;must disclose destructive side effect
+- Script selects first existing task rather than returned newtask ID;execution evidence may refer wrongtask
+- Linux shell example does not establish Windows-version exploitability
+- No sourceadvisory/fix;MD5 called encryption
+
+### 操作风险与资料使用
+
+- 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 ## 漏洞描述
 
@@ -63,7 +109,7 @@ admin';UPDATE ADMINS set PASSWORD = 'c26be8aaf53b15054896983b43eb6a65' where use
 
 在 VPS 上放置 [poc.js](#漏洞POC)，监听 8888 端口，并通过以下命令启动 HTTP 服务：
 
-```
+```shell
 python3 -m http.server 9999
 ```
 

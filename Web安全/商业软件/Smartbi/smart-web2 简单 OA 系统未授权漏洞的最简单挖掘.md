@@ -1,10 +1,49 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "smart-web2 OA sso前缀匹配与目录规范化认证绕过"
+product: "smart-web2 OA"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "版本/提交未知；Servlet和代理规范化行为相关"
+prerequisites: "匿名声称"
+side_effects: "请求可能删除/覆盖数据、修改账号或持久改变业务状态"
+review_date: "2026-10-02"
+source_url: "https://mp.weixin.qq.com/s/6yAq3HzFKc4qefiL0bE0PA"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/Smartbi/smart-web2%20%E7%AE%80%E5%8D%95%20OA%20%E7%B3%BB%E7%BB%9F%E6%9C%AA%E6%8E%88%E6%9D%83%E6%BC%8F%E6%B4%9E%E7%9A%84%E6%9C%80%E7%AE%80%E5%8D%95%E6%8C%96%E6%8E%98.md"
+id: "vw-34c4219f3c18ae65c3059b76"
+entity_id: "ve-34c4219f3c18ae65c3059b76"
+schema_version: "1"
 ---
 
-# smart-web2 简单 OA 系统未授权漏洞的最简单挖掘
+# smart-web2 OA sso前缀匹配与目录规范化认证绕过
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：smart-web2 OA；sso前缀匹配与目录规范化认证绕过
+- 版本、配置及部署条件：版本/提交未知；Servlet和代理规范化行为相关
+- 认证与权限前提：匿名声称
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- ACLInterceptor和excludeMaps实际关键源码只有截图，若干文字代码块是说明非代码
+- /sso/../user/list需保留路径原貌，浏览器/代理规范化可能改变结果；缺完整请求响应与补丁
+- 删除公众号圈子争论/二维码，保留源链接
+
+## 操作风险
+
+请求可能删除/覆盖数据、修改账号或持久改变业务状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/6yAq3HzFKc4qefiL0bE0PA)
 
 **描述**

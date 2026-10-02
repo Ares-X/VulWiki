@@ -1,11 +1,55 @@
 ---
 cve: "CVE-2023-25194"
-cnvd: "QVD-2023-9629"
 version: "Apache Druid <= 25.0.0"
 source: "Threekiii/Vulnerability-Wiki"
+title: "Apache Druid 远程代码执行漏洞 QVD-2023-9629"
+product: "Druid内嵌Kafka Clients"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2023-25194; QVD-2023-9629"
+referenced_identifiers: ""
+identifier_role: "primary"
+prerequisites: "可配置Kafka输入sasl.jaas.config、受影响客户端库、LDAP出站及JNDI执行条件，Druid<=25范围需组件核对"
+affected_versions: "Apache Druid <= 25.0.0"
+source_status: "unknown"
+side_effects: "涉及 LDAP/RMI/DNS/HTTP 外带：回连只证明相应网络交互，不能单独证明命令执行；使用自控接收端，避免把日志、凭据或真实业务数据发送给第三方。"
+id: "vw-001cfa76f2d0c5139f091807"
+entity_id: "ve-001cfa76f2d0c5139f091807"
+schema_version: "1"
 ---
 
 # Apache Druid 远程代码执行漏洞 QVD-2023-9629
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：可配置Kafka输入sasl.jaas.config、受影响客户端库、LDAP出站及JNDI执行条件，Druid<=25范围需组件核对
+- 证据范围：与51同依赖漏洞/同sampler骨架，QVD不是新增独立根因；本篇仅DNSLog不是命令执行实证
+
+### 本次正文校订
+
+- 按实际内容修正 1 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- QVD放cnvd字段错误
+- 没有提供Kafka客户端/JDK版本及补丁建议，只隔离/认证不足以修复已授权注入
+- 1.1.1.1为真实公共服务地址应换保留示例
+- 将Kafka Connect与Kafka Clients可控参数范围混用需精确组件标记
+
+### 操作风险与资料使用
+
+- 涉及 LDAP/RMI/DNS/HTTP 外带：回连只证明相应网络交互，不能单独证明命令执行；使用自控接收端，避免把日志、凭据或真实业务数据发送给第三方。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 ## 漏洞描述
 
@@ -34,7 +78,7 @@ title="Apache Druid"
 
 poc：
 
-```
+```http
 POST /druid/indexer/v1/sampler?for=connect HTTP/1.1
 Host: your-ip
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/111.0

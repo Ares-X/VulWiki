@@ -1,7 +1,44 @@
 ---
-fofa: "body="
+fofa: ""
 source: "SourByte05/Vulnerability-Wiki-PoC"
+product: "SpringBlade/export-user"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+fofa_unverified: "body="
+title: "SpringBlade export-user SQL 注入漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：正文<=3.2.0，影响行反向>=3.2.0；需后台导出权限"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-133f9277100190b67500d5ab"
+entity_id: "ve-133f9277100190b67500d5ab"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 测绘字段处置：原 fofa 字段为残缺表达式、错误平台语法或当前解析器不支持的形式，原值完整保留到 fofa_unverified，不把它当作已校验查询或受影响资产证据。正文检索方法保留；具体问题见下列原审阅项。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：正文&lt;=3.2.0，影响行反向&gt;=3.2.0；需后台导出权限
+
+代码与实验材料：长查询JWT、updatexml(user())报错请求，没有Excel导出或响应；Basic客户端凭据额外出现
+
+来源证据范围：转载/语雀来源可追溯，未给对应官方修复提交或完整权限模型
+
+- **结论使用边界（1）**：影响比较符反向；依据：描述v3.2.0及以前，影响行却v3.2.0 &lt;= SpringBlade。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **证据待核（2）**：敏感导出与在野结论无证据；依据：仅错误注入请求，无Excel或用户名密码数据；状态表称已知在野无出处。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **代码与转录边界（3）**：FOFA截断及认证材料混入URL；依据：元数据body=；完整长期JWT在query，容易进日志，需占位。相应原代码作为存在此问题的历史样本保留，不能直接当作可运行、成功复现的 PoC；缺失内容需回原稿核对，不据此补造可执行攻击链。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # SpringBlade export-user SQL 注入漏洞预警
 

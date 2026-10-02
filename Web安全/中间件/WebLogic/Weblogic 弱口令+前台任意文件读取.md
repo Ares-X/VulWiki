@@ -1,8 +1,63 @@
 ---
 source: "Threekiii/Awesome-POC"
+title: "Weblogic 弱口令+前台任意文件读取"
+product: "WebLogic administrative deployment plus custom vulnerable JSP"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "Deliberately configured lab credentials or custom application file-read endpoint; not intrinsic WebLogic vulnerability"
+verification_source: "https://docs.oracle.com/cd/F25597_01/document/products/wls/docs100/schemaref/config/http.www.bea.com.ns.weblogic.920.domain/types/security-configurationtype.node-manager-password-encrypted.html"
+source_status: "unknown"
+side_effects: "含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。"
+id: "vw-061ba957a26d29339b6dc55d"
+entity_id: "ve-061ba957a26d29339b6dc55d"
+schema_version: "1"
 ---
 
 # Weblogic 弱口令+前台任意文件读取
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：Deliberately configured lab credentials or custom application file-read endpoint; not intrinsic WebLogic vulnerability
+- 证据范围：Tutorial distinguishes simulated setup initially, then overgeneralizes node-manager-password-encrypted as administrator password. Oracle documentation identifies it specifically as the credential Administration Server sends to Node Manager.
+
+### 已有来源支持的更正
+
+- Attribute documents Administration Server-to-Node Manager start/stop/restart authentication, not arbitrary administrative user password
+
+### 本次正文校订
+
+- 按实际内容修正 3 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- Correct Node Manager versus administrative-login password identity; reuse may occur in lab but is not guaranteed
+- Binary download does not inherently require Burp; browser is not categorically invalid
+- WAR files, file.jsp source, decrypt directory and compose checkout missing
+- Malformed weblogic.xml inline code and /test versus /hello inconsistency; final URL omits 7001
+- Many step descriptions have no associated image/text details
+- Keep as lab/configuration guide rather than assign all WebLogic installations this file read
+
+### 核验来源
+
+- https://docs.oracle.com/cd/F25597_01/document/products/wls/docs100/schemaref/config/http.www.bea.com.ns.weblogic.920.domain/types/security-configurationtype.node-manager-password-encrypted.html
+
+### 操作风险与资料使用
+
+- 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 ## 环境搭建
 
@@ -14,7 +69,7 @@ Java版本：1.6
 
 启动本环境：
 
-```
+```shell
 docker-compose up -d
 ```
 
@@ -86,14 +141,14 @@ weblogic 密码使用 AES（老版本 3DES）加密，对称加密可解密，�
 
 `SerializedSystemIni.dat`是一个二进制文件，所以一定要用 burpsuite 来读取，用浏览器直接下载可能引入一些干扰字符。在burp里选中读取到的那一串乱码，右键 copy to file 就可以保存成一个文件：
 
-```
+```http
 GET /hello/file.jsp?path=security/SerializedSystemIni.dat HTTP/1.1
 ```
 
 
 `config.xml`是base_domain的全局配置文件，所以乱七八糟的内容比较多，找到其中的`<node-manager-password-encrypted>`的值，即为加密后的管理员密码，不要找错了：
 
-```
+```http
 GET /hello/file.jsp?path=./config/config.xml HTTP/1.1
 ```
 

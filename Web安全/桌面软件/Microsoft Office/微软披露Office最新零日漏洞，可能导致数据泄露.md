@@ -1,8 +1,61 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2024-38200"
+identifier_role: "primary"
+primary_identifiers: "CVE-2024-38200"
+referenced_identifiers: "CVE-2024-38202;CVE-2024-21302"
+identifier_status: "unknown"
+title: "微软披露Office最新零日漏洞，可能导致数据泄露"
+product: "Microsoft Office NTLM凭据泄露"
+record_type: "advisory"
+document_type: "Office零日及同期安全新闻"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "诱导用户访问网页并打开文档；NTLM外发；2024-07-30 Feature Flighting与8月13正式补丁分阶段"
+side_effects: "NTLM策略罗列允许/阻止/审计却未明确防御需限制/阻止，审计或允许不是修复；Protected Users兼容性和SMB445只覆盖部分路径需说明；只有THN二手链接，缺MSRC、官方修复KB与Feature Flight覆盖验证；FreeBuf转载归属需明确"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Microsoft%20Office/%E5%BE%AE%E8%BD%AF%E6%8A%AB%E9%9C%B2Office%E6%9C%80%E6%96%B0%E9%9B%B6%E6%97%A5%E6%BC%8F%E6%B4%9E%EF%BC%8C%E5%8F%AF%E8%83%BD%E5%AF%BC%E8%87%B4%E6%95%B0%E6%8D%AE%E6%B3%84%E9%9C%B2.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-fa543d72142cb085fc1bbbe6"
+entity_id: "ve-fa543d72142cb085fc1bbbe6"
+schema_version: "1"
 ---
 
-#  微软披露Office最新零日漏洞，可能导致数据泄露   
+# 微软披露Office最新零日漏洞，可能导致数据泄露
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Microsoft Office NTLM凭据泄露
+- 文献类型：Office零日及同期安全新闻
+- 版本、权限及部署边界：诱导用户访问网页并打开文档；NTLM外发；2024-07-30 Feature Flighting与8月13正式补丁分阶段
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 元数据漏38200，Windows降级两CVE仅背景，SmartAppControl另一未编号设计问题不可归38200
+2. 开篇未修补与后文支持版本已通过功能分发保护应分阶段，不能永久标未修补或当确认在野利用
+3. NTLM策略罗列允许/阻止/审计却未明确防御需限制/阻止，审计或允许不是修复；Protected Users兼容性和SMB445只覆盖部分路径需说明
+4. 只有THN二手链接，缺MSRC、官方修复KB与Feature Flight覆盖验证；FreeBuf转载归属需明确
+5. 已利用自2018属于另一SmartScreen话题，不能污染Office利用状态
+
+### 操作风险
+
+NTLM策略罗列允许/阻止/审计却未明确防御需限制/阻止，审计或允许不是修复；Protected Users兼容性和SMB445只覆盖部分路径需说明；只有THN二手链接，缺MSRC、官方修复KB与Feature Flight覆盖验证；FreeBuf转载归属需明确
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://thehackernews.com/2024/08/microsoft-warns-of-unpatched-office.html>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
  关键基础设施安全应急响应中心   2024-08-13 15:22  
   
 近日，微软披露了 Office 中一个未修补的零日漏洞，如果被成功利用，可能导致敏感信息在未经授权的情况下泄露给恶意行为者。  
@@ -58,4 +111,4 @@ https://thehackernews.com/2024/08/microsoft-warns-of-unpatched-office.html
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

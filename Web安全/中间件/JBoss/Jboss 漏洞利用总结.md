@@ -1,9 +1,64 @@
 ---
 version: "Apache Group Commons Collections 4.0"
 source: "MrWQ/vulnerability-paper"
+title: "Jboss 漏洞利用总结"
+product: "JBoss AS控制台/Invoker/JBossMQ，含HP嵌入式部署编号误泛化"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2007-1036; CVE-2010-0738; CVE-2015-7501; CVE-2017-7504; CVE-2017-12149"
+referenced_identifiers: "CVE-2006-5750; CVE-2013-4810"
+identifier_role: "primary"
+cve: "CVE-2007-1036; CVE-2010-0738; CVE-2015-7501; CVE-2017-7504; CVE-2017-12149"
+affected_versions: "Apache Group Commons Collections 4.0"
+verification_source: "https://www.zerodayinitiative.com/advisories/ZDI-13-229/; https://access.redhat.com/security/cve/cve-2007-1036"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。; 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。"
+id: "vw-a28521e7a2df48a2b213f149"
+entity_id: "ve-a28521e7a2df48a2b213f149"
+schema_version: "1"
 ---
 
 # Jboss 漏洞利用总结
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 证据范围：多入口综述可作为导航保留，不能将若干相同payload视同漏洞；2013-4810被当泛JBoss EJB漏洞但原始披露对应HP产品。
+
+### 已有来源支持的更正
+
+- 原始4810披露为HP PCM+/ALM暴露EJB/JMX Invoker可部署应用，不能直接用CC版本替代HP产品范围
+- 1036为默认管理界面未设访问限制，安装器可选保护、原始包需管理员配置；非全版本无条件
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 7501/4810将依赖版本列成产品影响范围，并称主要6.x无依据
+- 2006-5750与2007-1036仅差methodIndex的归因未有厂商证据，不宜作为等价关系
+- store参数编号前后从arg0–3变arg1–4，还漏boolean参数说明
+- Jboss5开始JMX不能部署断言与同库JexBoss支持5/6相冲突，需按MBean具体能力核对
+- HEAD请求换行截断methodIndex、未编码JSP；JavaDeserH2HC作者/参数版本缺出处
+- 冗余控制台路径复制截断；公众号链接含跟踪/会话样式参数应只留规范来源；无部署清理
+
+### 核验来源
+
+- https://www.zerodayinitiative.com/advisories/ZDI-13-229/
+- https://access.redhat.com/security/cve/cve-2007-1036
+
+### 操作风险与资料使用
+
+- 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。
+- 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 \> 本文由 \[简悦 SimpRead\](http://ksria.com/simpread/) 转码， 原文地址 \[mp.weixin.qq.com\](https://mp.weixin.qq.com/s?\_\_biz=MzU4NTY4MDEzMw==&mid=2247486026&idx=1&sn=4506f56907afa88daa133119bbaae802&chksm=fd879e20caf0173643b991e9ea9300f2fff2e69ce0c12173a8a4c509292083ce7fa13fb74308&mpshare=1&scene=1&srcid=1023Tdls8JDF0KziT2zhJrvd&sharer\_sharetime=1603413026463&sharer\_shareid=c051b65ce1b8b68c6869c6345bc45da1&key=4cf40c946f4d610cff5979e68cb1cc4bbc9d97310eb3bb535533e1217c4f4a32d332e2ba715dc3ea50845869fbd2aa2491312a2dae859f77c069b1d03de16a31708d63587f3499ce236ba434def6fc136cf0b6403e9ab618120851bd9eb614e1ef5cb0890ec2c7f00e54a19f9d25bfba81831e1e0b8588c057ae801dc8e543a6&ascene=1&uin=ODk4MDE0MDEy&devicetype=Windows+10+x64&version=6300002f&lang=zh\_CN&exportkey=Adbz9Z4SiNjGBCooZifZUhI%3D&pass\_ticket=MIC5Ar%2FikzMcOH1F8HNnc411WxyFMo1Kw3L353SY3XmezYiEUuovrlDORbkreA49&wx\_header=0)

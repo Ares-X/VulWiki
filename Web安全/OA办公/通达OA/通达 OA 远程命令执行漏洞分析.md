@@ -1,10 +1,51 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "通达OA ispirit上传/gateway包含及补丁分析"
+product: "通达OA"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: "CVE-2020-0796"
+identifier_status: "unknown"
+affected_scope: "11.3实测，其余多个系列来源声明"
+prerequisites: "未授权；Windows/PHP环境"
+side_effects: "文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行"
+review_date: "2026-10-02"
+source_url: "https://mp.weixin.qq.com/s/w9k1pi0HtuznKAv9fGgw_g"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E9%80%9A%E8%BE%BEOA/%E9%80%9A%E8%BE%BE%20OA%20%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90.md"
+category_recommendation: "OA / 通达"
+id: "vw-8096fa46867453152ac24dcd"
+entity_id: "ve-8096fa46867453152ac24dcd"
+schema_version: "1"
 ---
 
-# 通达 OA 远程命令执行漏洞分析
+# 通达OA ispirit上传/gateway包含及补丁分析
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：通达OA；ispirit上传/gateway包含及补丁分析
+- 版本、配置及部署条件：11.3实测，其余多个系列来源声明
+- 认证与权限前提：未授权；Windows/PHP环境
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 有补丁前后认证及路径过滤对比与官方news/673链接，适合作互补证据
+- 所有关键代码/请求主要截图，文字p/P大小写应规范
+- 后缀解释称倒数3位，实际看最后点后3位；所述源码待截图核对
+- SMB CVE-2020-0796仅推广引用，不能主编号
+
+## 操作风险
+
+文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/w9k1pi0HtuznKAv9fGgw_g)
 
 更多全球网络安全资讯尽在邑安全
@@ -27,7 +68,7 @@ www.eansec.com
 > 
 > 提取码：ousi
 
-### 2.1 初步的代码审计
+#### 2.1 初步的代码审计
 
 安装好通达 OA v11.3 版本，安装后在 webroot 目录下找到源代码，查看源码，发现都是乱码，都是经过 zend 加密的，需要解密。解密工具可使用 SeayDzend，因为源码是 php 写的，最简单的是用 seay 源码审计工具粗略筛选一下，查找潜在的漏洞，代码审计时间较长，审计结果取了开头一小段，说明思路而已。如图 1 所示：
 
@@ -35,7 +76,7 @@ www.eansec.com
 
 图 1：代码审计
 
-### 2.2 文件上传漏洞
+#### 2.2 文件上传漏洞
 
 根据网上公开资料，直接定位到源码路径 C:\phpStudy\WWW\tongdaoa\webroot\ispirit\im\upload.php，查看源码, 如图 2：
 
@@ -55,7 +96,7 @@ www.eansec.com
 
 图 4：文件名黑名单
 
-### 2.3 文件包含漏洞
+#### 2.3 文件包含漏洞
 
 参考资料，该文件包含漏洞存在于源码 ispirit/interface/gateway.php。查看该处源码，如图 5：
 
@@ -68,7 +109,7 @@ www.eansec.com
 三、漏洞复现
 ------
 
-### 3.1 复现环境
+#### 3.1 复现环境
 
 测试主机：Win10 x64 english
 
@@ -80,7 +121,7 @@ www.eansec.com
 
 下面我们分别对两个漏洞分别进行复现。
 
-### 3.2 复现文件上传漏洞
+#### 3.2 复现文件上传漏洞
 
 通过通读 upload.php 源码，复现该漏洞需要满足以下条件：
 
@@ -112,7 +153,7 @@ www.eansec.com
 
 验证文件上传成功。此时有一个问题，就是上传的文件不在 webroot 目录下，远程是访问不了的。这是需要配合另一个漏洞 - 文件包含漏洞来完成路径穿越，访问到上传的文件。
 
-### 3.3 复现文件包含漏洞
+#### 3.3 复现文件包含漏洞
 
 按照之前代码分析，主要是构造 url 的 payload。假设访问 http://localhost/ispirit/interface/gateway.php, 用 burpsuite 截包，发送到 repeater, 构造文件包含漏洞的 payload2，payload2 里注意两处，一处是增加 Content-Type: application/x-www-form-urlencoded，另一处是 json 处 url 的构造。如图 9 所示，文件包含漏洞执行成功。
 
@@ -120,7 +161,7 @@ www.eansec.com
 
 图 9：文件包含漏洞复现
 
-### 3.4 获取目标 shell
+#### 3.4 获取目标 shell
 
 两个漏洞结合使用，可以远程获取 shell。提前准备好 php 木马以及冰蝎等远程连 shell 工具。思路：利用文件上传漏洞上传 php 木马，然后再利用文件包含漏洞，使得 web 访问到该 php 文件，再用冰蝎连接。(注意：不可以直接为. php, 根据代码分析结果，结尾为 php 的文件上传不上去）如图 10 所示：
 
@@ -155,7 +196,7 @@ www.eansec.com
 四、补丁比较 & 加固建议
 -------------
 
-### 4.1 补丁比较
+#### 4.1 补丁比较
 
 笔者本着学习的目的，下载了通达 OAv11.3 的补丁，并做了补丁比较，比较的结果如下：
 
@@ -171,7 +212,7 @@ www.eansec.com
 
 图 16：第二处补丁
 
-### 4.2 加固建议
+#### 4.2 加固建议
 
 建议使用受影响版本的通达 OA 用户登录通达 OA 官网，获取最新补丁。请根据当前 OA 版本选择所对应的程序文件，运行前请先做好备份。安全更新下载地址：http://www.tongda2000.com/news/673.php
 

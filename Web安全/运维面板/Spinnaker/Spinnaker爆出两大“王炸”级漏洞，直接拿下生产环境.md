@@ -1,9 +1,47 @@
 ---
-cve: "CVE-2026-32604"
+cve: "CVE-2026-32604; CVE-2026-32613"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Spinnaker爆出两大“王炸”级漏洞，直接拿下生产环境"
+product: "Spinnaker Clouddriver/Echo"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2026-32604; CVE-2026-32613"
+referenced_identifiers: ""
+identifier_role: "primary"
+prerequisites: "32604 valid artifact credential and certain shell-auth mode;32613 application-write/pipeline permission; internal-network reach varies"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-c2e63cc14d5a47955b484f26"
+entity_id: "ve-c2e63cc14d5a47955b484f26"
+schema_version: "1"
 ---
 
-#  Spinnaker爆出两大“王炸”级漏洞，直接拿下生产环境  
+# Spinnaker爆出两大“王炸”级漏洞，直接拿下生产环境
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：32604 valid artifact credential and certain shell-auth mode;32613 application-write/pipeline permission; internal-network reach varies
+- 证据范围：Separates git version command injection and SpEL context injection; impact constrained by service/cloud credentials
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- Opening anylowprivileged user overstates later app-write/auth-mode conditions
+- All backend traffic trusted claim overgeneralized without deployment/network/auth configurations
+- 94 public instances requires as-of query/method, not vulnerable count
+- Complete cloud takeover not automatic; depends credentials and authorization scope
+- Fix versions2026.0.1/2025.4.2/2025.3.2 need official release mapping
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
  幻泉之洲   2026-04-23 02:57  
   
 >   

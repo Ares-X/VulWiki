@@ -1,6 +1,39 @@
 ---
 cve: "CVE-2021-34619"
+product: "WooCommerce Stock Manager WordPress plugin"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2021-34619"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "WooCommerce 库存管理器插件中的高危漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：victim administrator session and interaction; PHP execution in upload directory; fixed2.6.0 claimed"
+side_effects: "未执行；本文需注意的操作影响：上传表单file及hidden输入的name属性缺失，与后端$_POST['upload']/$_FILES['uploadFile']不对应，示例不完整；仅说管理员点击链接，未说明跨站构造multipart文件上传所需浏览器机制和登录Cookie限制"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/60cG_ySte890v09ItNPRAg"
+id: "vw-d1920fa1641bee45ffd7de0e"
+entity_id: "ve-d1920fa1641bee45ffd7de0e"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：victim administrator session and interaction; PHP execution in upload directory; fixed2.6.0 claimed
+
+- **证据待核（1）**：上传表单file及hidden输入的name属性缺失，与后端$_POST\['upload'\]/$_FILES\['uploadFile'\]不对应，示例不完整。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **凭据与会话边界（2）**：仅说管理员点击链接，未说明跨站构造multipart文件上传所需浏览器机制和登录Cookie限制。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+
+- **代码与转录边界（3）**：源码在fgetcsv循环处截断，没有完整响应/触发请求。相应原代码作为存在此问题的历史样本保留，不能直接当作可运行、成功复现的 PoC；缺失内容需回原稿核对，不据此补造可执行攻击链。
+
+- **事实待核（4）**：总结突然称产品管理器，需统一为库存管理器；Wordfence原始公告链接缺失。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # WooCommerce 库存管理器插件中的高危漏洞
 

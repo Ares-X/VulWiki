@@ -1,9 +1,58 @@
 ---
-fofa: "app.name="
 source: "wy876 漏洞文库"
+id: "vw-1599e5977d59cceb0f63397a"
+entity_id: "ve-1599e5977d59cceb0f63397a"
+schema_version: "1"
+fofa_unverified: "app.name="
+title: "云安宝-云匣子 config 存在fastjson远程代码执行漏洞"
+product: "云安宝云匣子authService/config"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+prerequisites: "Referer匹配Host，c3p0与Commons Collections/Nashorn/Spring请求上下文及兼容JDK；无版本号"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%AE%89%E5%85%A8%E8%AE%BE%E5%A4%87/%E4%BA%91%E5%AE%89%E5%AE%9D/%E4%BA%91%E5%AE%89%E5%AE%9D-%E4%BA%91%E5%8C%A3%E5%AD%90config%E5%AD%98%E5%9C%A8fastjson%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_url: "https://www.yuque.com/xiaokp7/ocvun2/glgz0p4ynm6kfc1v"
+source_status: "recorded"
 ---
 
 # 云安宝-云匣子 config 存在fastjson远程代码执行漏洞
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：云安宝云匣子authService/config
+- 本文讨论：Fastjson到c3p0 HexAsciiSerializedMap/Commons Collections/JS引擎类加载链
+- 版本、权限与配置前提：Referer匹配Host，c3p0与Commons Collections/Nashorn/Spring请求上下文及兼容JDK；无版本号
+- 资料类型：Fastjson复合反序列化大载荷请求；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 近19KB十六进制载荷无构建来源/源码解释，读者难审副作用与依赖
+- 静态解码显示多库和JDK内部反射依赖，不能仅以Fastjson存在就判可利用
+- 嵌入类读取cmd头与Runtime执行/响应相关常量，但未提供实际响应或执行身份
+- Base64的java.util.Base64.newInstance分支可失败，依赖前后备选；JDK兼容性未说明
+- FOFA元数据误装残缺Hunter语法
+- 已落实的文本修订：HTTP 报文围栏改为 http；残缺指纹退出可执行索引并保留原值。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 仅离线解码hex/base64为文本与类常量，未实例化/执行或请求目标；嵌入字节码完整控制流未反编译
+- Fastjson版本/autoType、组件链与Referer必要性待核
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 
 # 一、漏洞简介
 云安宝-云匣子是租户连接云资源的安全管理工具，帮助云租户更加安全、精细的管理云上的虚拟机、数据库等资源。 该系统config接口存在fastjson 漏洞可执行任意系统命令。
@@ -18,7 +67,7 @@ source: "wy876 漏洞文库"
 # 四、漏洞复现
 <font style="color:rgb(51, 51, 51);">请求包中的 Referer 不能删，服务端会检测该字段，需要改为对应的Hostname，可修改cmd为系统命令，获取执行结果</font>
 
-```java
+```http
 POST /3.0/authService/config HTTP/2
 Host: xx.xx.xx.xx
 Accept: application/json, text/plain, */*

@@ -1,8 +1,53 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-fc18efccce54123bb642b7eb"
+entity_id: "ve-fc18efccce54123bb642b7eb"
+schema_version: "1"
+title: "Fortinet：注意FortiWLM漏洞，黑客可获得管理员权限"
+product: "FortiWLM"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2023-34990"
+referenced_identifiers: ""
+prerequisites: "未认证imagename路径遍历读含会话日志→会话劫持；8.6≤.5/8.5≤.4"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/Fortinet/Fortinet%EF%BC%9AFortiWLM%E6%BC%8F%E6%B4%9E%EF%BC%8C%E9%BB%91%E5%AE%A2%E5%8F%AF%E8%8E%B7%E5%BE%97%E7%AE%A1%E7%90%86%E5%91%98%E6%9D%83%E9%99%90.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 #  Fortinet：注意FortiWLM漏洞，黑客可获得管理员权限   
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：FortiWLM
+- 本文讨论：CVE-2023-34990
+- 版本、权限与配置前提：未认证imagename路径遍历读含会话日志→会话劫持；8.6≤.5/8.5≤.4
+- 资料类型：研究披露新闻；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 前称2024年3月仍未修复，后称补丁2023年9月已发，时间线自相矛盾
+- 2024年12月公告与2023补丁发布时间混写
+- 开头直称执行代码但本CVE步骤是读日志再借会话，需额外端点/会话有效前提；无一手链接
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 披露与修复日期、会话后续RCE条件待核验
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 Bill Toulas  代码卫士   2024-12-20 10:02  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

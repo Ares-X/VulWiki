@@ -1,8 +1,50 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "LiteSpeed Cache 插件中的严重漏洞正遭利用"
+product: "WordPress LiteSpeed Cache插件"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2024-28000"
+referenced_identifiers: "CVE-2023-40000"
+identifier_role: "primary"
+cve: "CVE-2024-28000"
+prerequisites: "受影响插件角色模拟/弱hash机制、可调用相关REST接口；平台与hash触发配置未详述"
+source_status: "unknown"
+side_effects: "含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。"
+id: "vw-780271278b41984b7e5ac40a"
+entity_id: "ve-780271278b41984b7e5ac40a"
+schema_version: "1"
 ---
 
-#  LiteSpeed Cache 插件中的严重漏洞正遭利用   
+# LiteSpeed Cache 插件中的严重漏洞正遭利用
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：受影响插件角色模拟/弱hash机制、可调用相关REST接口；平台与hash触发配置未详述
+- 证据范围：不是LiteSpeed Web服务器漏洞，应移动WordPress插件分类；40000是历史XSS攻击对照，不与28000合并。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 500万安装量和30%更新率不能直接等于当前数百万可利用实例，必须保留2024-08新闻时点与统计口径
+- 每秒3次遍历百万约3.9天，几小时仅是提前猜中的可能，不能混成保证耗时
+- 缺明确修复6.4版本及发现者原文链接，只有新闻二次转载
+- 作者/研究者姓名拼写与广告推广可整理
+
+### 操作风险与资料使用
+
+- 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 Bill Toulas  代码卫士   2024-08-26 17:58  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

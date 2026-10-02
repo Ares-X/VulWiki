@@ -1,8 +1,49 @@
 ---
 source: "hatch 补库批 20260928"
+title: "Apache Struts 漏洞列表快速查阅"
+product: "Apache Struts2"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "索引而非具体漏洞适用性判断；每条需打开独立公告确认条件"
+source_status: "unknown"
+side_effects: "含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。"
+id: "vw-1e27e3f1313d3fe29f4c7e98"
+entity_id: "ve-1e27e3f1313d3fe29f4c7e98"
+schema_version: "1"
 ---
 
 # Apache Struts 漏洞列表快速查阅
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：索引而非具体漏洞适用性判断；每条需打开独立公告确认条件
+- 证据范围：逐项读完S2-001至S2-058摘要及尾部S2-059占位。适合作导航资料，不纳入独立漏洞实体数或逐条复现证据。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- S2-059仅标题无链接/摘要，且无更新截止日期，明显不完整历史索引
+- S2-058是旧公告版本范围更正，不能当新增漏洞
+- 有些条目为默认配置调整/组合漏洞/示例应用，不能统一记RCE
+- 没有CVE/版本/修复/配置列，建议结构化但需逐公告核实，不能机械补全
+- 现有链接内容未逐条外部核验，全文审阅仅覆盖索引文本
+
+### 操作风险与资料使用
+
+- 含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 -   [S2-001](https://cwiki.apache.org/confluence/display/WW/S2-001) ---
     Remote code exploit on form validation error
@@ -219,5 +260,3 @@ source: "hatch 补库批 20260928"
     version ranges.
     
 - Struts2 S2-059
-
-    

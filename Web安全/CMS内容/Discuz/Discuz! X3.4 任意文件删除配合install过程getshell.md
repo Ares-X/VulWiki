@@ -1,6 +1,42 @@
 ---
 source: "hatch 补库批 20260928"
+product: "Discuz X3.4"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "Discuz! X3.4 任意文件删除配合install过程getshell"
+prerequisites: "来源所述条件，未列明部分仍待核：Registered user with profile deletion bug; install/index.php still present; deletable install.lock; valid reachable DB credentials; writable config"
+side_effects: "未执行；本文需注意的操作影响：Strong explicit admission installer normally deleted after admin visit; preserve restriction；Related to97 deletion primitive but complementary installation chain, not duplicate"
+source_status: "unknown"
+id: "vw-90bb2ee08e506db73c66c015"
+entity_id: "ve-90bb2ee08e506db73c66c015"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；遮罩后的历史值不能作为可用登录凭据。原操作、请求方法和攻击表达式保留。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：Registered user with profile deletion bug; install/index.php still present; deletable install.lock; valid reachable DB credentials; writable config
+
+- **操作与副作用边界（1）**：Strong explicit admission installer normally deleted after admin visit; preserve restriction。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+- **适用与权限边界（2）**：Script requires db_host/user/password/name but main prerequisite list omits database access。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **操作与副作用边界（3）**：Reinstall changes DB/admin config, potentially destructive; not merely harmless shell proof。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+- **操作与副作用边界（4）**：Related to97 deletion primitive but complementary installation chain, not duplicate。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+- **凭据与会话边界（5）**：Uses old PHP unquoted index and captured multi-site cookies。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Discuz! X3.4 任意文件删除配合install过程getshell
 
@@ -141,7 +177,7 @@ Server-\>数据库配置信息-\>安装过程，生成lock文件-\>检查
     ########## Customize these parameters ############
     target = 'http://localhost/discuzx'
     # login target site first, and copy the cookie here
-    cookie = "UM_distinctid=15bcd2339e93d6-07b5ae8b41447e-8373f6a-13c680-15bcd2339ea636; CNZZDATA1261218610=1456502094-1493792949-%7C1494255360; csrftoken=NotKIwodOQHO0gdMyCAxpMuObjs5RGdeEVxRlaGoRdOEeMSVRL0sfeTBqnlMjtlZ; Zy4Q_2132_saltkey=I9b3k299; Zy4Q_2132_lastvisit=1506763258; Zy4Q_2132_ulastactivity=0adb6Y1baPukQGRVYtBOZB3wmx4nVBRonRprfYWTiUaEbYlKzFWL; Zy4Q_2132_nofavfid=1; Zy4Q_2132_sid=rsQrgQ; Zy4Q_2132_lastact=1506787935%09home.php%09misc; 7Csx_2132_saltkey=U8nrO8Xr; TMT0_2132_saltkey=E3q5BpyX; PXMk_2132_saltkey=rGBnNWu7; b4Gi_2132_saltkey=adC4r05k; b4Gi_2132_lastvisit=1506796139; b4Gi_2132_onlineusernum=2; b4Gi_2132_sendmail=1; b4Gi_2132_seccode=1.8dab0a0c4ebfda651b; b4Gi_2132_sid=BywqMy; b4Gi_2132_ulastactivity=51c0lBFHqkUpD3mClFKDxwP%2BI0JGaY88XWTT1qtFBD6jAJUMphOL; b4Gi_2132_auth=6ebc2wCixg7l%2F6No7r54FCvtNKfp1e5%2FAdz2SlLqJRBimNpgrbxhSEnsH5%2BgP2mAvwVxOdrrpVVX3W5PqDhf; b4Gi_2132_creditnotice=0D0D2D0D0D0D0D0D0D1; b4Gi_2132_creditbase=0D0D0D0D0D0D0D0D0; b4Gi_2132_creditrule=%E6%AF%8F%E5%A4%A9%E7%99%BB%E5%BD%95; b4Gi_2132_lastcheckfeed=1%7C1506800134; b4Gi_2132_checkfollow=1; b4Gi_2132_lastact=1506800134%09misc.php%09seccode"
+    cookie = "UM_distinctid=15bcd2339e93d6-07b5ae8b41447e-8373f6a-13c680-15bcd2339ea636; CNZZDATA1261218610=1456502094-1493792949-%7C1494255360; csrftoken=Not**********************************************************tlZ; Zy4Q_2132_saltkey=I9b3k299; Zy4Q_2132_lastvisit=1506763258; Zy4Q_2132_ulastactivity=0adb6Y1baPukQGRVYtBOZB3wmx4nVBRonRprfYWTiUaEbYlKzFWL; Zy4Q_2132_nofavfid=1; Zy4Q_2132_sid=rsQrgQ; Zy4Q_2132_lastact=1506787935%09home.php%09misc; 7Csx_2132_saltkey=U8nrO8Xr; TMT0_2132_saltkey=E3q5BpyX; PXMk_2132_saltkey=rGBnNWu7; b4Gi_2132_saltkey=adC4r05k; b4Gi_2132_lastvisit=1506796139; b4Gi_2132_onlineusernum=2; b4Gi_2132_sendmail=1; b4Gi_2132_seccode=1.8dab0a0c4ebfda651b; b4Gi_2132_sid=BywqMy; b4Gi_2132_ulastactivity=51c0lBFHqkUpD3mClFKDxwP%2BI0JGaY88XWTT1qtFBD6jAJUMphOL; b4Gi_2132_auth=6ebc2wCixg7l%2F6No7r54FCvtNKfp1e5%2FAdz2SlLqJRBimNpgrbxhSEnsH5%2BgP2mAvwVxOdrrpVVX3W5PqDhf; b4Gi_2132_creditnotice=0D0D2D0D0D0D0D0D0D1; b4Gi_2132_creditbase=0D0D0D0D0D0D0D0D0; b4Gi_2132_creditrule=%E6%AF%8F%E5%A4%A9%E7%99%BB%E5%BD%95; b4Gi_2132_lastcheckfeed=1%7C1506800134; b4Gi_2132_checkfollow=1; b4Gi_2132_lastact=1506800134%09misc.php%09seccode"
     shell_password = randstr()
     db_host = ''
     db_user = ''

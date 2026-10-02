@@ -1,8 +1,66 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2023-35674"
+identifier_role: "primary"
+primary_identifiers: "CVE-2023-35674"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "谷歌修复已遭利用的安卓 0day漏洞"
+product: "Android Framework"
+record_type: "advisory"
+document_type: "Android补丁新闻"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "本地权限提升；版本与安全补丁级别未给；严重性评分情境与实际攻击条件分开"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Android/%E8%B0%B7%E6%AD%8C%E4%BF%AE%E5%A4%8D%E5%B7%B2%E9%81%AD%E5%88%A9%E7%94%A8%E7%9A%84%E5%AE%89%E5%8D%93%200day%E6%BC%8F%E6%B4%9E.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+source_url: "https://thehackernews.com/2023/09/zero-day-alert-latest-android-patch.html"
+id: "vw-a0e39e9862223f8e0d5a09fa"
+entity_id: "ve-a0e39e9862223f8e0d5a09fa"
+schema_version: "1"
 ---
 
-#  谷歌修复已遭利用的安卓 0day漏洞   
+# 谷歌修复已遭利用的安卓 0day漏洞
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Android Framework
+- 文献类型：Android补丁新闻
+- 版本、权限及部署边界：本地权限提升；版本与安全补丁级别未给；严重性评分情境与实际攻击条件分开
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 标题已遭活跃利用比正文谷歌可能有限定向利用表述更强，应保留证据置信度
+2. 另述未具名System无交互RCE及其他系统更新，不能归入35674或擅自补CVE
+3. 评分以防护禁用/绕过为假设不等于要求受害者主动禁用安全功能
+4. 缺Android范围、补丁级别和谷歌公告，只有THN新闻来源；品牌推荐长尾应去除
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://thehackernews.com/2023/09/zero-day-alert-latest-android-patch.html>
+- 原文参考链接（未重新核验）：<https://codesafe.qianxin.com>
+- 原文参考链接（未重新核验）：<https://oss.qianxin.com>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzI2NTg4OTc5Nw==&mid=2247517276&idx=1&sn=4af5856a408590c04f66b8cf7944909b&chksm=ea94b536dde33c20a349d0ce168088e20f1710c32321c5af387665d68fc566998f5763f5cf27&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzI2NTg4OTc5Nw==&mid=2247517155&idx=1&sn=9af2d4f8742d395b46b7d44e219d9b05&chksm=ea94b289dde33b9f559073d1207e8437f82e8b6acf046825ee7f690fcbe59f72977119ba7dae&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzI2NTg4OTc5Nw==&mid=2247517117&idx=2&sn=9648af1e020ddfe5352233463d1fb931&chksm=ea94b2d7dde33bc1487cfce641344cff8e95ae23edb203565f40f28f00d6daaefc02dd8d89b6&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzI2NTg4OTc5Nw==&mid=2247516769&idx=2&sn=4714ae37829a0d86ecc67fac45cde3fa&chksm=ea94b30bdde33a1dfa036205c64ef8ce7aa81a5958ce4c9fce8ec8a15cba40097e098fd45644&scene=21#wechat_redirect>
+
+### 归档技术正文
+
 THN  代码卫士   2023-09-07 17:46  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

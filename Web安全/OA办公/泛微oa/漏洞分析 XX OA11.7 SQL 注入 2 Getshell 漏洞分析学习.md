@@ -1,10 +1,50 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "通达OA delete_cascade.php后台任意SQL→数据库提权/日志写入链"
+product: "通达OA"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "TD OA11.7；MySQL高权限、远程端口可达、日志写Web目录"
+prerequisites: "明确需登录"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+source_url: "https://mp.weixin.qq.com/s/U34PNTUx1CXu80TZmmTwSQ"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E6%B3%9B%E5%BE%AEoa/%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90%20XX%20OA11.7%20SQL%20%E6%B3%A8%E5%85%A5%202%20Getshell%20%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90%E5%AD%A6%E4%B9%A0.md"
+category_recommendation: "OA / 通达"
+id: "vw-7ee05b65051eebd6794ca324"
+entity_id: "ve-7ee05b65051eebd6794ca324"
+schema_version: "1"
 ---
 
-# 【漏洞分析】XX OA11.7 SQL 注入 2 Getshell 漏洞分析学习
+# 通达OA delete_cascade.php后台任意SQL→数据库提权/日志写入链
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：通达OA；delete_cascade.php后台任意SQL→数据库提权/日志写入链
+- 版本、配置及部署条件：TD OA11.7；MySQL高权限、远程端口可达、日志写Web目录
+- 认证与权限前提：明确需登录
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 细致SQL过滤/错误真假对照与高权限条件有价值，与通达delete_cascade专题互补
+- 示例select if两句粘连，日志写shell的select正文变成空字符串，核心PHP内容丢失
+- 新建远程数据库账号、改权限、开日志和写文件有显著副作用，不能标安全检测；缺精确补丁/原始源码文本
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/U34PNTUx1CXu80TZmmTwSQ)
 
 一、漏洞简介：

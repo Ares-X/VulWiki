@@ -1,6 +1,36 @@
 ---
 source: "hatch 补库批 20260928"
+product: "EyouCMS1.3.9"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "Eyoucms 1.3.9 上传漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：后台开启插件并允许上传ZIP；图片管理能列出解压目录；PHP可执行"
+side_effects: "未执行；本文需注意的操作影响：影响章节描述create配置写代码，但复现是upload解压/目录披露两机制混贴"
+source_status: "unknown"
+id: "vw-d0f143786b5fd57720fc2f10"
+entity_id: "ve-d0f143786b5fd57720fc2f10"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：后台开启插件并允许上传ZIP；图片管理能列出解压目录；PHP可执行
+
+- **代码与转录边界（1）**：简介截断并写v1.3.7，与标题1.3.9冲突。相应原代码作为存在此问题的历史样本保留，不能直接当作可运行、成功复现的 PoC；缺失内容需回原稿核对，不据此补造可执行攻击链。
+
+- **适用与权限边界（2）**：影响章节描述create配置写代码，但复现是upload解压/目录披露两机制混贴。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **事实待核（3）**：没有完整请求/插件ZIP结构及原始来源，需拆分并核对版本。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Eyoucms 1.3.9 上传漏洞
 

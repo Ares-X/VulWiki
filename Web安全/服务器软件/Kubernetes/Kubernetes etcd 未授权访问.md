@@ -1,8 +1,49 @@
 ---
 source: "Threekiii/Awesome-POC"
+title: "Kubernetes etcd 未授权访问"
+product: "etcd / Kubernetes存储"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "etcd网络可达且读权限缺失；是否可获得明文secret取决于存储格式/静态加密及ServiceAccount令牌机制"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-1b90d86ec1dae4cc1d42a9d8"
+entity_id: "ve-1b90d86ec1dae4cc1d42a9d8"
+schema_version: "1"
 ---
 
 # Kubernetes etcd 未授权访问
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：etcd网络可达且读权限缺失；是否可获得明文secret取决于存储格式/静态加密及ServiceAccount令牌机制
+- 证据范围：条件性配置漏洞描述合理，但/version可读并不能证明数据未授权，且新旧etcd API与令牌用法混合
+
+### 本次正文校订
+
+- 按实际内容修正 1 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 静态pod路径/默认证书配置是kubeadm等部署特定，不是所有K8s默认
+- v2/keys可能关闭，v3数据读取需明确API版本
+- 从protobuf二进制用token?分割不是可靠解析
+- Authorization: Token缺Bearer及实际token占位，验证请求错误
+- 不是所有ServiceAccount都有长期Secret令牌，也非任一token可接管集群
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 ## 漏洞描述
 
@@ -58,7 +99,7 @@ https://your-ip:2379/v2/keys
 
 最终的 token 为 `token?` 和 `\#kubernetes.io/service-account-token` 之间的部分。可以使用 curl 验证 token 的有效性：
 
-```
+```shell
 curl --header "Authorization: Token" -X GET https://your-ip:6443/api -k
 ```
 

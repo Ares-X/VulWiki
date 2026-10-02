@@ -1,6 +1,44 @@
 ---
 source: "hatch 补库批 20260928"
+product: "Spring Cloud/Connector-J反序列化"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "Spring Boot mysql jdbc deserialization rce"
+prerequisites: "来源所述条件，未列明部分仍待核：只5.x/8.x，两不同拦截器名；需autoDeserialize、相容驱动、JDK/gadget及新连接"
+side_effects: "未执行；本文需注意的操作影响：副作用：恶意数据库可收到认证材料；改 JDBC URL、刷新配置及建立新连接可能中断业务。refresh 是否存在还取决于 Spring Cloud 等实际依赖，单有 actuator 不足。恢复 URL 后仍须确认配置生效、连接池和业务连接恢复。"
+source_status: "unknown"
+id: "vw-c39704b644482d81f544f7e8"
+entity_id: "ve-c39704b644482d81f544f7e8"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 明确更正：Jdk7u21/Jdk8u20 是工具中的链名称，不能当 classpath 包名；所有 Connector/J 5.x 或 8.x 并不共享同一拦截器和 autoDeserialize 行为。
+- 脚本原样保留：Python 3 下 `len(payload)/2` 得浮点数、`str+bytes` 不兼容；一次 `recv(1024)` 可能短读、截断或混入后续数据，不能说必然恰好一个完整 MySQL 包。
+- 副作用：恶意数据库可收到认证材料；改 JDBC URL、刷新配置及建立新连接可能中断业务。refresh 是否存在还取决于 Spring Cloud 等实际依赖，单有 actuator 不足。恢复 URL 后仍须确认配置生效、连接池和业务连接恢复。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：只5.x/8.x，两不同拦截器名；需autoDeserialize、相容驱动、JDK/gadget及新连接
+
+代码与实验材料：完整rogue server握手/结果包、六步及恢复提醒；脚本Python2语义，单recv/send假设TCP整包，无异常保护
+
+来源证据范围：LandGrey署名、0-sec下载ysoserial而非原项目，无版本hash
+
+- **事实待核（1）**：版本/依赖发现方法不可靠；依据：Jdk7u21/Jdk8u20是工具链名不是classpath依赖包，所有5.x/8.x不保证仍有拦截器/autoDeserialize行为。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **代码与转录边界（2）**：Python3兼容与协议边界缺失；依据：len(payload)/2传hex及str+bytes在Python3失败；固定1024recv可能截断/合包，脚本需明确版本。相应原代码作为存在此问题的历史样本保留，不能直接当作可运行、成功复现的 PoC；缺失内容需回原稿核对，不据此补造可执行攻击链。
+
+- **凭据与会话边界（3）**：数据库和凭据副作用需更完整；依据：正文正确警告服务不可用及恢复URL，但恢复还需生效/重连；恶意服务器可接收真实认证材料。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Spring Boot mysql jdbc deserialization rce
 

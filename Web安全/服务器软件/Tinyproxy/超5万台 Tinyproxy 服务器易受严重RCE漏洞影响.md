@@ -1,8 +1,46 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "超5万台 Tinyproxy 服务器易受严重RCE漏洞影响"
+product: "Tinyproxy remove_connection_headers"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2023-49606"
+referenced_identifiers: ""
+identifier_role: "primary"
+cve: "CVE-2023-49606"
+prerequisites: "受影响1.10.0/1.11.1、Connection头处理可达；鉴权/ACL及内存分配器影响可达性与后果"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-0d7c2219c8316aef51961c25"
+entity_id: "ve-0d7c2219c8316aef51961c25"
+schema_version: "1"
 ---
 
-#  超5万台 Tinyproxy 服务器易受严重RCE漏洞影响   
+# 超5万台 Tinyproxy 服务器易受严重RCE漏洞影响
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：受影响1.10.0/1.11.1、Connection头处理可达；鉴权/ACL及内存分配器影响可达性与后果
+- 证据范围：同时保留Talos未认证说法和维护者认证/ACL争议、已证DoS与潜在RCE边界；标题比正文更确定
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 52k/57%与列出18372+1390实例差距未解释，不能当完整实证数量
+- RCE尚无起作用利用的原文条件必须保留
+- 已更新的代码仅认证后触发的翻译可能模糊新旧代码，需回查上游
+- 缺主CVE元数据、去宣传尾部
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 Jai Vijayan  代码卫士   2024-05-08 17:56  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

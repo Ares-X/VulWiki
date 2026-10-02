@@ -1,8 +1,54 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-d9373f43ea2b74d3431e499b"
+entity_id: "ve-d9373f43ea2b74d3431e499b"
+schema_version: "1"
+title: "高危漏洞打包兜售，Palo Alto、Fortinet、Linux等关键系统在列"
+product: "跨产品漏洞包，表格产品映射严重可疑"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+prerequisites: "条件多数简化或缺失"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/Palo%20Alto/%E9%AB%98%E5%8D%B1%E6%BC%8F%E6%B4%9E%E6%89%93%E5%8C%85%E5%85%9C%E5%94%AE%EF%BC%8CPalo%20Alto%E3%80%81Fortinet%E3%80%81Linux%E7%AD%89%E5%85%B3%E9%94%AE%E7%B3%BB%E7%BB%9F%E5%9C%A8%E5%88%97.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 #  高危漏洞打包兜售，Palo Alto、Fortinet、Linux等关键系统在列  
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：跨产品漏洞包，表格产品映射严重可疑
+- 本文讨论：多个CVE情报引用，非单一PAN-OS漏洞
+- 版本、权限与配置前提：条件多数简化或缺失
+- 资料类型：暗网售卖情报汇总，非漏洞原研；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 表格CVE-2025-32756写Linux凭据恢复，与Fortinet PSIRT FG-IR-25-254的未认证代码执行不符
+- 表格6235写Citrix NetScaler信息泄露，与NVD的ExtremeControl XSS不符
+- 33073写Qualcomm需复核；55591范围7.0–7.2.12跨产品分支合写；0108所有型号忽略版本
+- 评分格残留access.redhat.com+15等引用拼接垃圾；唯一来源为售卖帖，不能支持技术断言
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 技术表已局部外部对照： https://fortiguard.fortinet.com/psirt/FG-IR-25-254 与 https://nvd.nist.gov/vuln/detail/cve-2025-6235；其余映射、交易真伪和在野状态未核验
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 原创 网空闲话  网空闲话plus   2025-06-12 10:23  
   
 2025年6月12日 13:27:46，威胁行为者“冰雹”在暗网市场Ramp4u上发布贴文，声称正在兜售一套包含多个高危CVE漏洞的“利用包（exploit pack）”，引发业界警惕。威胁行为者也声称可单独出售，具体要看买家能出多少银子。该漏洞包涉及多个主流系统和平台，包括Linux内核、Palo Alto PAN-OS、Fortinet FortiOS、WordPress插件、Apache Tomcat等，并涵盖本地权限提升（LPE）和远程代码执行（RCE）等严重攻击类型。  

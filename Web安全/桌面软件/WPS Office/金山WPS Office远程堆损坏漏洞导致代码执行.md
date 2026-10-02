@@ -1,8 +1,59 @@
 ---
 source: "白阁文库 BaizeSec/bylibrary"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "金山WPS Office远程堆损坏漏洞导致代码执行"
+product: "Kingsoft WPS Office内嵌QtCore4图片解析"
+record_type: "analysis"
+document_type: "历史崩溃与调试分析"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "Windows x86 WPS 11.2.0.9453测试，打开含恶意PNG的文档；声称2020-08-28修复版本11.2.0.9403"
+side_effects: "展示崩溃指令是越界读取，叙述把mov ecx,[ebp+arg_0]误作内存写入，ECX/EAX及崩溃地址描述亦混淆；大段调试证据有独立价值，但无PoC附件/哈希、原始研究报告和厂商修复公告，不能从崩溃直接确认RCE"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/WPS%20Office/%E9%87%91%E5%B1%B1WPS%20Office%E8%BF%9C%E7%A8%8B%E5%A0%86%E6%8D%9F%E5%9D%8F%E6%BC%8F%E6%B4%9E%E5%AF%BC%E8%87%B4%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-20a76a6755e68c71aede20e2"
+entity_id: "ve-20a76a6755e68c71aede20e2"
+schema_version: "1"
 ---
 
 # 金山WPS Office远程堆损坏漏洞导致代码执行
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Kingsoft WPS Office内嵌QtCore4图片解析
+- 文献类型：历史崩溃与调试分析
+- 版本、权限及部署边界：Windows x86 WPS 11.2.0.9453测试，打开含恶意PNG的文档；声称2020-08-28修复版本11.2.0.9403
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 厂商描述混入Microsoft，且正文保留第二段YAML元数据
+2. 声称修复版本9403低于已测易受影响9453，必须核对渠道、构建号与原始时间线
+3. 展示崩溃指令是越界读取，叙述把mov ecx,[ebp+arg_0]误作内存写入，ECX/EAX及崩溃地址描述亦混淆
+4. PNG签名仅标四字节但完整签名为八字节；堆布局输出不足以证明其声称的可控任意写或代码执行
+5. 大段调试证据有独立价值，但无PoC附件/哈希、原始研究报告和厂商修复公告，不能从崩溃直接确认RCE
+6. 时间线仅称申请CVE，不得补造编号；跨平台产品介绍不等于所有平台均受影响
+
+### 操作风险
+
+展示崩溃指令是越界读取，叙述把mov ecx,[ebp+arg_0]误作内存写入，ECX/EAX及崩溃地址描述亦混淆；大段调试证据有独立价值，但无PoC附件/哈希、原始研究报告和厂商修复公告，不能从崩溃直接确认RCE
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
 
 ---
 title: '金山WPS Office远程堆损坏漏洞导致代码执行'

@@ -1,9 +1,55 @@
 ---
 cve: "CVE-2026-12957"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "打开一个恶意仓库就能偷走你的云账号：Amazon Q 插件高危漏洞分析"
+product: "Amazon Q Developer VS Code"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2026-12957"
+referenced_identifiers: ""
+identifier_role: "primary"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。"
+id: "vw-e2208f94839d2f48bc921303"
+entity_id: "ve-e2208f94839d2f48bc921303"
+schema_version: "1"
 ---
 
-#  打开一个恶意仓库就能偷走你的云账号：Amazon Q 插件高危漏洞分析  
+# 打开一个恶意仓库就能偷走你的云账号：Amazon Q 插件高危漏洞分析
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 本次正文校订
+
+- 按该篇完整正文及逐篇审阅区分主问题与背景编号，补全结构化主标识；不把标识归属校订等同运行复现。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- aws sts get-caller-identity返回身份信息不返回访问密钥，不能凭该PoC证明偷走密钥或创建云后门
+- 命令执行影响取决于本地权限和可访问凭据，不是默认全云管理权
+- 环境变量不等于密钥文件本身
+- 语言服务端1.65.0与扩展版本应区分并补官方公告
+- JSON未围栏
+- 2020/2021扩展漏洞非同一时期AI事件
+- 保留Wiz原始研究链接
+
+### 操作风险与资料使用
+
+- 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
  幻泉之洲   2026-06-28 04:39  
   
 >   

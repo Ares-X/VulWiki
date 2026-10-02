@@ -1,6 +1,40 @@
 ---
 source: "hatch 补库批 20260928"
+product: "libinjection / SQL规范化"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "Libinjection 语义分析通用绕过"
+prerequisites: "来源所述条件，未列明部分仍待核：未给版本、commit、数据库版本或WAF集成方式"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-eed48a4e89fc56134077b352"
+entity_id: "ve-eed48a4e89fc56134077b352"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：未给版本、commit、数据库版本或WAF集成方式
+
+代码与实验材料：完整C tokenizer和注释解析源码，CLI测试含原样%0a且示例无URL解码；SQL成功只截图
+
+来源证据范围：client9仓库，无原始作者/patch
+
+- **证据待核（1）**：通用绕过证据不成立于所示规范化流程；依据：example.c直接读argv，未URL解码，payload中%0a不会变换行；若后端另解码是规范化差异，需证明libinjection实际收到字节及SQL最终字节。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **事实待核（2）**：缺不可变版本和数据库模式；依据：不能从未知版本SC指纹推所有WAF通用绕过。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **结论使用边界（3）**：演示说明内部不一致；依据：称四种模式却列五种；代码只打印检测成功，not sqli来自未附bin；example.c与gcc examples.c文件名不同。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Libinjection 语义分析通用绕过
 

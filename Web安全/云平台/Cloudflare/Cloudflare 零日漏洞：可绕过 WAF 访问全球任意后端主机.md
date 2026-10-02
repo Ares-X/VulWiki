@@ -1,8 +1,45 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Cloudflare 零日漏洞：可绕过 WAF 访问全球任意后端主机"
+product: "Cloudflare ACME验证"
+record_type: "incident"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-378e96740e4b9cf60c012344"
+entity_id: "ve-378e96740e4b9cf60c012344"
+schema_version: "1"
 ---
 
-#  Cloudflare 零日漏洞：可绕过 WAF 访问全球任意后端主机  
+# Cloudflare 零日漏洞：可绕过 WAF 访问全球任意后端主机
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 任意伪造token即可与后文获取有效pending token自相矛盾
+- token永远不失效无依据
+- HTTP-01写HTTPS忽略端口80起始
+- 修复后所有路径统一WAF与官方按主机有效挑战仍例外说法冲突
+- Spring/LFI等后果依额外配置或漏洞不能扩为全球任意主机
+- 译文我们搭建为FearsOff研究非本文作者实测，保留归因及原始链接
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 喜欢挖洞吗
                     喜欢挖洞吗  喜欢挖洞吗   2026-01-21 10:44  
   

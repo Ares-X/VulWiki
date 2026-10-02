@@ -1,6 +1,36 @@
 ---
 source: "hatch 补库批 20260928"
+product: "EmpireCMS Alipay module"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "EmpireCMS 任意充值漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：会员登录并建立订单及Cookie；支付key未配置/为0的特定状态"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-75c950bc12a662f92122049e"
+entity_id: "ve-75c950bc12a662f92122049e"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：会员登录并建立订单及Cookie；支付key未配置/为0的特定状态
+
+- **适用与权限边界（1）**：缺版本；核心条件是可预测/缺失密钥和签名逻辑，不应以未检测来自支付宝链接作为安全修复方向。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **结论使用边界（2）**：给定sign非标准32位MD5长度，声称GET数组MD5但代码实际按遍历顺序拼接并追加paykey，解释不准确。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **结论使用边界（3）**：代码包含print($sign)可能本身泄露签名，应核对是否调试插入；结果仅7.png8.png。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # EmpireCMS 任意充值漏洞
 

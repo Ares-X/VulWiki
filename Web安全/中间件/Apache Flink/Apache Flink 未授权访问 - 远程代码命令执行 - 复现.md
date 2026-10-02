@@ -1,8 +1,49 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "Apache Flink 未授权访问 - 远程代码命令执行 - 复现"
+product: "Apache Flink Dashboard"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "无外围认证、可上传及执行作业的 Dashboard，网络可回连"
+source_status: "unknown"
+side_effects: "含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。; 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。"
+id: "vw-7e3e4c9e826a762ef2ab3444"
+entity_id: "ve-7e3e4c9e826a762ef2ab3444"
+schema_version: "1"
 ---
 
 # Apache Flink 未授权访问 - 远程代码命令执行 - 复现
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：无外围认证、可上传及执行作业的 Dashboard，网络可回连
+- 证据范围：正常功能的访问控制风险，防火墙/代理鉴权建议有用；与 128/129 同一内容簇。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 受影响最新版本 <=1.9.1 是无日期旧快照
+- Meterpreter 生成器和 shell handler 不一致
+- 代码及 URL 残留 Markdown 转义反斜线，复制将破坏命令/链接
+- 上传执行参数仅图片；应压缩推广页脚
+
+### 操作风险与资料使用
+
+- 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。
+- 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 \> 本文由 \[简悦 SimpRead\](http://ksria.com/simpread/) 转码， 原文地址 \[mp.weixin.qq.com\](https://mp.weixin.qq.com/s/aomCajnZVA9WlnBqTE\_QPg)

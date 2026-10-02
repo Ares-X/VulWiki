@@ -1,9 +1,54 @@
 ---
 cve: "CVE-2026-20965"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Azure RCE漏洞剖析：单一VM沦陷可致整个租户失守"
+product: "Azure Windows Admin Center扩展"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2026-20965"
+referenced_identifiers: ""
+identifier_role: "primary"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。"
+id: "vw-2ee1c7e90518eff9c4a1a8f9"
+entity_id: "ve-2ee1c7e90518eff9c4a1a8f9"
+schema_version: "1"
 ---
 
-#  Azure RCE漏洞剖析：单一VM沦陷可致整个租户失守  
+# Azure RCE漏洞剖析：单一VM沦陷可致整个租户失守
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 本次正文校订
+
+- 按该篇完整正文及逐篇审阅区分主问题与背景编号，补全结构化主标识；不把标识归属校订等同运行复现。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 标题整个租户失守泛化，实际限被窃管理员有WAC权限且网络可达/安装易受影响扩展设备
+- 需要源VM本地管理员、管理员连接和攻击者自有租户PoP，不能简写无Azure凭据
+- 示例20.46.269.55非法IPv4需标匿名化
+- KQL未过滤WAC_且has用于域名匹配会误漏，应视初步狩猎线索不是验证规则
+- 产品检测场景上线日期前文同13日后文14日不一致
+- 缺MSRC和扩展版本验证方法，保留Cymulate原文，精简营销
+
+### 操作风险与资料使用
+
+- 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 Dubito
                     Dubito  云原生安全指北   2026-01-20 01:07  
   

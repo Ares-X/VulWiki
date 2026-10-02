@@ -1,8 +1,43 @@
 ---
 source: "hatch 补库批 20260928"
+title: "（WooYun-2016-199433）Phpmyadmin scripts/setup.php 反序列化漏洞"
+product: "phpMyAdmin"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "phpMyAdmin 2.x 且旧 scripts/setup.php 可访问；精确版本与鉴权限制待核验"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-766ad89e824480a92c5ce773"
+entity_id: "ve-766ad89e824480a92c5ce773"
+schema_version: "1"
 ---
 
 # （WooYun-2016-199433）Phpmyadmin scripts/setup.php 反序列化漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：phpMyAdmin 2.x 且旧 scripts/setup.php 可访问；精确版本与鉴权限制待核验
+- 证据范围：与66/76同一 setup.php payload，提供 Vulhub 原文定位；序列化 source 后逗号导致数据格式错误，不能按现文有效解析
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 只展示文件读取，声称任意代码执行缺少对应链条
+- 图片引用有重复残尾
+- 版本2.x过宽，应回源补边界
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 一、漏洞简介
 ------------

@@ -1,6 +1,48 @@
 ---
 source: "白阁文库 BaizeSec/bylibrary"
+title: "Easy Chat Server message长输入DoS"
+product: "Easy Chat Server"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "3.1 Windows7 x86/x64声明；80端口"
+prerequisites: "先GET建聊天会话"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+source_status: "unknown"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/Easy%20Chat%20Server/Easy%20Chat%20Server%203.1%20%E2%80%98message%E2%80%99%20Denial%20of%20Service.md"
+id: "vw-3eae9ee539851b74a011f8f2"
+entity_id: "ve-3eae9ee539851b74a011f8f2"
+schema_version: "1"
 ---
+
+# Easy Chat Server message长输入DoS
+
+## 条目说明
+
+- 对象与具体问题：Easy Chat Server；message长输入DoS
+- 版本、配置及部署条件：3.1 Windows7 x86/x64声明；80端口
+- 认证与权限前提：先GET建聊天会话
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 整篇只Python2脚本无解释标题/修复；POST无Content-Length需协议行为核验
+- 第一请求会话未保存Cookie而脚本依用户名状态，须说明前提
+- 8000字节消息意图崩溃，不能作为安全检测；recv异常也不能证明服务崩溃
+- 无CVE/供应商修复或崩溃栈
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
 
 ```
 #!/usr/bin/python

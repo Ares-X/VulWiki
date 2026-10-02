@@ -1,9 +1,64 @@
 ---
-cve: "CVE-2024-23225"
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2024-23225;CVE-2024-23296"
+identifier_role: "primary"
+primary_identifiers: "CVE-2024-23225;CVE-2024-23296"
+referenced_identifiers: "CVE-2023-23529;CVE-2023-28206;CVE-2023-28205;CVE-2023-32409;CVE-2023-28204;CVE-2023-32373;CVE-2023-32434;CVE-2023-32435;CVE-2023-32439;CVE-2023-37450;CVE-2023-38606;CVE-2023-41061;CVE-2023-41064;CVE-2023-41991;CVE-2023-41992;CVE-2023-41993;CVE-2023-42824;CVE-2023-5217;CVE-2023-42916;CVE-2023-42917"
+identifier_status: "unknown"
+title: "苹果曝出两个 iOS 系统 0-Day 漏洞"
+product: "Apple Kernel / RTKit"
+record_type: "roundup"
+document_type: "双漏洞补丁新闻及年度回顾"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "已有任意内核读写能力才能绕过内存保护；称17.4及16.7.6修复"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Apple%20iOS/%E8%8B%B9%E6%9E%9C%E6%9B%9D%E5%87%BA%E4%B8%A4%E4%B8%AA%20iOS%20%E7%B3%BB%E7%BB%9F%200-Day%20%E6%BC%8F%E6%B4%9E.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-d9c0a8643144676a46c9469b"
+entity_id: "ve-d9c0a8643144676a46c9469b"
+schema_version: "1"
 ---
 
-#  苹果曝出两个 iOS 系统 0-Day 漏洞   
+# 苹果曝出两个 iOS 系统 0-Day 漏洞
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Apple Kernel / RTKit
+- 文献类型：双漏洞补丁新闻及年度回顾
+- 版本、权限及部署边界：已有任意内核读写能力才能绕过内存保护；称17.4及16.7.6修复
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. frontmatter漏第二主CVE；20个2023历史编号为参考不应提取为本文主漏洞
+2. 修复版写成运行这些版本设备上的漏洞，且16.76/iPad16.7.6拼写错误，应明确fixed_in
+3. 需逐漏洞映射各OS支持分支，设备列表不可自动两者同范围
+4. 有BleepingComputer原报道，缺Apple公告；国家级间谍组织联系仅一般推测，不是本文归因证据
+5. 大段加群和推荐链接噪声，标题层级/括号损坏
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://www.bleepingcomputer.com/news/apple/apple-fixes-two-new-ios-zero-days-exploited-in-attacks-on-iphones/>
+- 原文参考链接（未重新核验）：<https://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247492479&idx=1&sn=633252b7c18b57ae92d15857699bd8f2&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=Mzg2MTAwNzg1Ng==&mid=2247492452&idx=1&sn=a097203d8764651efcbc134c51b89450&chksm=ce1f19fbf96890edd5319a931be92c41d07d67ecb5054b2b1a51f0aeee915706fac74fda523e&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<https://mp.weixin.qq.com/s?__biz=MjM5NjA0NjgyMA==&mid=2651253272&idx=1&sn=82468d927062b7427e3ca8a912cb2dc7&scene=21#wechat_redirect>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 小王斯基  FreeBuf   2024-03-06 19:07  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/qq5rfBadR38jUokdlWSNlAjmEsO1rzv3srXShFRuTKBGDwkj4gvYy34iajd6zQiaKl77Wsy9mjC0xBCRg0YgDIWg/640?wx_fmt=gif&wxfrom=5&wx_lazy=1 "")  
@@ -85,4 +140,4 @@ FreeBuf盲盒、大象公仔......
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

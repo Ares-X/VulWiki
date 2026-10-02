@@ -1,11 +1,51 @@
 ---
-fofa: "语句：body="
 source: "MrWQ/vulnerability-paper"
+title: "JeeWMS 动态数据源JDBC反序列化链"
+product: "JeeWMS"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "驱动5.1.27声明；可控URL/JDK/gadget/出网"
+prerequisites: "依85权限绕过"
+side_effects: "命令/代码执行示例可能改变主机状态"
+review_date: "2026-10-02"
+source_url: "https://mp.weixin.qq.com/s/xVIXGxMACM-n9iBu42KbMg"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/JEEWMS/jeewms%20%E5%AD%98%E5%9C%A8%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md"
+fofa_unverified: "语句：body="
+id: "vw-f96bc14e05e28a0e9333117b"
+entity_id: "ve-f96bc14e05e28a0e9333117b"
+schema_version: "1"
 ---
 
-# jeewms 存在命令执行漏洞
+# JeeWMS 动态数据源JDBC反序列化链
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：JeeWMS；动态数据源JDBC反序列化链
+- 版本、配置及部署条件：驱动5.1.27声明；可控URL/JDK/gadget/出网
+- 认证与权限前提：依85权限绕过
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- mysql.version5.1.27更可能是Connector/J依赖而非数据库服务器版本，须核pom
+- 仅收到DNS不能证明命令执行；可控JDBC URL本身不足证明反序列化RCE
+- 实际请求/生成参数全部图，不能称无害已验证；全版本无证
+- 章节误标题权限绕过且推广尾段过多，缺固定版本
+
+## 操作风险
+
+命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/xVIXGxMACM-n9iBu42KbMg)
 
 **1、描述**

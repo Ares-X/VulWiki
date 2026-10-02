@@ -1,8 +1,45 @@
 ---
 source: "hatch 补库批 20260928"
+title: "Phpmyadmin setup页面配置不当的利用姿势整合"
+product: "phpMyAdmin setup / PHP-CGI deployment (mixed)"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "quarantined"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "正文未给PHP CGI模式/版本，而仅列phpMyAdmin setup版本"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-4ddfe60c44ac5793803a5803"
+entity_id: "ve-4ddfe60c44ac5793803a5803"
+schema_version: "1"
 ---
 
 # Phpmyadmin setup页面配置不当的利用姿势整合
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：正文未给PHP CGI模式/版本，而仅列phpMyAdmin setup版本
+- 证据范围：标题和版本讲setup SSRF，实际全为?-d auto_prepend_file请求；不是同一机制
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- P0根因与复现完全不对应：PHP-CGI参数注入被套到phpMyAdmin setup SSRF版本上
+- 解释-d是在请求期设置选项，却称修改php.ini文件；技术含义错
+- 多张图误引用前一篇phpMyAdmin XSS目录
+- HTTP请求掺注释和固定长度；写入webshell需要文件权限且有持续副作用
+- 应隔离后按原始来源拆分，不能直接保留为已复现phpMyAdmin漏洞
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 一、漏洞简介
 ------------

@@ -1,6 +1,43 @@
 ---
 source: "MrWQ/vulnerability-paper"
+product: "Spring Cloud/Jolokia及Eureka XStream"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "Spring Boot Actuators 配置不当导致 RCE 漏洞复现 - JF ' blog"
+prerequisites: "来源所述条件，未列明部分仍待核：Eureka-client<1.8.7；Logback/JDK/XStream版本缺失，需可写env和refresh"
+side_effects: "未执行；本文需注意的操作影响：Jolokia核心配置丢失；insertFromJNDI只剩env-entry-，无法还原JNDI地址/as属性；多服务端口和外部代码依赖不清；Flask绑定172.31.245.127:2333又回连2333；PowerShell远程下载第三方main脚本未固定，改EurekaURL无恢复"
+source_status: "recorded"
+source_url: "https://jianfensec.com/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/Spring%20Boot%20Actuators%E9%85%8D%E7%BD%AE%E4%B8%8D%E5%BD%93%E5%AF%BC%E8%87%B4RCE%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/"
+id: "vw-15c33651319ddcf8e19712c2"
+entity_id: "ve-15c33651319ddcf8e19712c2"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：Eureka-client&lt;1.8.7；Logback/JDK/XStream版本缺失，需可写env和refresh
+
+代码与实验材料：正文提供Logback与Eureka两条链；Eureka XStream XML必要class属性丢失，不能直接复现；Windows PowerShell载体仍有独立变体价值，需回原文恢复。仅静态全文审阅，未执行。
+
+来源证据范围：JF原文、Veracode原研究和artsploit实验项目，较强
+
+- **证据待核（1）**：端点组件归属与检测判据错误；依据：称starter-actuator负责refresh，实际需Cloud管理支持；3秒返回与缺依赖不存在必然联系。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **适用与权限边界（2）**：Jolokia核心配置丢失；依据：insertFromJNDI只剩env-entry-，无法还原JNDI地址/as属性。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **结论使用边界（3）**：多服务端口和外部代码依赖不清；依据：Flask绑定172.31.245.127:2333又回连2333；PowerShell远程下载第三方main脚本未固定，改EurekaURL无恢复。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **证据待核（4）**：XStream XML必要类型属性抽取丢失；依据：398为&lt;value&gt;&lt;dataHandler&gt;&lt;dataSource&gt;&lt;is&gt;&lt;cipher&gt;等无class标签，402对应显式Base64Data/XMLMessage$XmlDataSource/CipherInputStream/NullCipher等类型。。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Spring Boot Actuators 配置不当导致 RCE 漏洞复现 - JF ' blog
 

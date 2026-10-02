@@ -1,9 +1,56 @@
 ---
-cve: "CVE-2023-42820"
+cve: "CVE-2023-42820; CVE-2023-43650; CVE-2023-42819; CVE-2023-43652; CVE-2023-42818; CVE-2023-43651; CVE-2023-42442"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Jumpserver安全一窥：Sep系列漏洞深度解析"
+product: "JumpServer Core/Koko and dependencies"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2023-42820; CVE-2023-43650; CVE-2023-42819; CVE-2023-43652; CVE-2023-42818; CVE-2023-43651; CVE-2023-42442"
+referenced_identifiers: ""
+identifier_role: "primary"
+prerequisites: "Distinct per issue: PRNG/email/reset flow without MFA; authenticated playbook read/write; public-key config/knowledge; MFA completion for42818; MongoDB session for43651; local media for42442"
+source_status: "unknown"
+side_effects: "含计划任务、启动项或 SSH 授权文件写入：会改变后续执行或登录行为。测试前备份原文件，结束后恢复原内容、权限与属主，不覆盖生产文件。"
+id: "vw-ef6e0e90d7496701c6e8ce4f"
+entity_id: "ve-ef6e0e90d7496701c6e8ce4f"
+schema_version: "1"
 ---
 
-#  Jumpserver安全一窥：Sep系列漏洞深度解析   
+# Jumpserver安全一窥：Sep系列漏洞深度解析
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：Distinct per issue: PRNG/email/reset flow without MFA; authenticated playbook read/write; public-key config/knowledge; MFA completion for42818; MongoDB session for43651; local media for42442
+- 证据范围：Rich independent source analysis explicitly distinguishes managed-asset functionality from bastion execution; retain complete multi-issue context
+
+### 本次正文校订
+
+- 按实际内容修正 2 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- No per-CVE affected/fixed version matrix or direct vendor GHSA links
+- CVE43650 residual-fix bypass opinion requires version/date qualification and independent validation
+- Early 'token' wording conflates36char flow token with6digit email verification code
+- MFA limitation stated initially but conclusion says arbitrary users; preserve restriction
+- Global claims about captcha library popularity and possible blog spam cause are anecdotal, not vulnerability evidence
+- Potential same-source relationship to original leavesongs multi-vulnerability article should be resolved with author/source attribution
+
+### 操作风险与资料使用
+
+- 含计划任务、启动项或 SSH 授权文件写入：会改变后续执行或登录行为。测试前备份原文件，结束后恢复原内容、权限与属主，不覆盖生产文件。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
  格格巫和蓝精灵   2023-10-09 15:55  
   
 Jumpserver是中国国内公司开发的一个开源项目，在开源堡垒机领域一家独大。在2023年9月官方集中修复了一系列安全问题，其中涉及到如下安全漏洞：  
@@ -72,7 +119,7 @@ self.hashkey = hashlib.sha1(key_).hexdigest()
   
   
 captcha_image视图只接收一个参数，即为用户传入的key：  
-```
+```python
 def captcha_image(request, key, scale=1):
     if scale == 2 and not settings.CAPTCHA_2X_IMAGE:
         raise Http404
@@ -529,7 +576,7 @@ DRF的Permission基础权限接口存在两个函数：
 - has_object_permission 判断数据库对象相关方法的权限  
   
 在Jumpserver中，IsSessionAssignee继承了基础权限类：  
-```
+```python
 from rest_framework import permissions
 
 class IsSessionAssignee(permissions.BasePermission):

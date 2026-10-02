@@ -1,8 +1,60 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "ASP.NET ViewState反序列化漏洞介绍"
+product: "ASP.NET Web Forms .NET Framework"
+record_type: "vulnerability"
+document_type: "ASP.NET ViewState机制与已知密钥实验"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "WinServer2019/IIS10/ASP.NET4.7样例，已知machineKey及路径/算法；旧MAC禁用和新版本条件不同"
+side_effects: "示例固定公开machineKey、debug/customErrorsOff仅用于隔离实验，不可作为部署安全模板；修改web.config虽不用手动重启仍可能应用回收/会话影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/ASP.NET%20ViewState/ASP.NET%20ViewState%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%BC%8F%E6%B4%9E%E4%BB%8B%E7%BB%8D.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-dc37dec5866697b39e4634d3"
+entity_id: "ve-dc37dec5866697b39e4634d3"
+schema_version: "1"
 ---
 
-#  ASP.NET ViewState反序列化漏洞介绍  
+# ASP.NET ViewState反序列化漏洞介绍
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：ASP.NET Web Forms .NET Framework
+- 文献类型：ASP.NET ViewState机制与已知密钥实验
+- 版本、权限及部署边界：WinServer2019/IIS10/ASP.NET4.7样例，已知machineKey及路径/算法；旧MAC禁用和新版本条件不同
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 应Web框架分类而非桌面；本文为配置/密钥泄露前提的通用技术不是单CVE
+2. 仅按<=4.5.1和>=4.5.2划MAC强制边界忽略安全更新/兼容设置回移，需官方依据；所谓.NET4.7.3版本需核实际ASP.NET构建号
+3. 发送AAAA得到MAC错误只能作信号，错误隐藏/代理/无ViewState路径会影响判断，不能反向以无错误判MAC禁用
+4. ViewState总先加密再MAC的流程过度泛化，加密非所有页面必选；已知密钥还需路径/purpose/UserKey及gadget依赖，不能只列四参数就保证RCE
+5. 示例固定公开machineKey、debug/customErrorsOff仅用于隔离实验，不可作为部署安全模板；修改web.config虽不用手动重启仍可能应用回收/会话影响
+6. 无微软文档/ysoserial源或固定版本，截图承担结果，服务上下文calc不能仅弹窗证明；HTML标签未转义/单行XML损坏可读性，缺防御/密钥轮换建议
+
+### 操作风险
+
+示例固定公开machineKey、debug/customErrorsOff仅用于隔离实验，不可作为部署安全模板；修改web.config虽不用手动重启仍可能应用回收/会话影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 原创 Ly4j
                     Ly4j  Ly4j攻防手记   2026-01-20 08:40  
   
@@ -198,4 +250,4 @@ burpsuite 插件
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

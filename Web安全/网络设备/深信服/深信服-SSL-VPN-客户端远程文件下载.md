@@ -1,9 +1,55 @@
 ---
 version: "深信服 SSL VPN"
 source: "Threekiii/Vulnerability-Wiki"
+id: "vw-b3677c8b0b277ad76c905821"
+entity_id: "ve-b3677c8b0b277ad76c905821"
+schema_version: "1"
+title: "深信服 SSL VPN 客户端远程文件下载"
+product: "Sangfor SSL VPN ECAgent.exe Windows客户端"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+prerequisites: "已安装特定客户端、受害者访问攻击页、127.0.0.1:54530可达/HTTPS信任条件；版本未知"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/%E6%B7%B1%E4%BF%A1%E6%9C%8D/%E6%B7%B1%E4%BF%A1%E6%9C%8D-SSL-VPN-%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%BF%9C%E7%A8%8B%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 # 深信服 SSL VPN 客户端远程文件下载
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Sangfor SSL VPN ECAgent.exe Windows客户端
+- 本文讨论：浏览器调用本地ECAgent更新下载执行
+- 版本、权限与配置前提：已安装特定客户端、受害者访问攻击页、127.0.0.1:54530可达/HTTPS信任条件；版本未知
+- 资料类型：Windows VPN客户端本地服务利用研究；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- JavaScript setTimeout(fetch(...),2000)会立即发fetch且不保证三个操作顺序，非延时链
+- 固定CheckReLogin token/密文可重用性未解释；自签HTTPS/浏览器跨源限制条件缺失
+- XXXUD.exe脱敏路径需真实产品匹配；缺客户端版本/安全更新
+- 不是VPN设备无交互RCE，应归客户端更新信任/本地接口
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 客户端签名/证书验证、token生成/重放、浏览器环境和修复待核验
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 
 ## 漏洞描述
 

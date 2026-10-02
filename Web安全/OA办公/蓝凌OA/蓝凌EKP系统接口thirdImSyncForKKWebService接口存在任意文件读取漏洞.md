@@ -1,8 +1,48 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "蓝凌EKP thirdImSyncForKKWebService XOP外部资源文件读取"
+product: "蓝凌EKP"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "影响版本只有截图未读取；需XOP/MTOM处理及文件权限"
+prerequisites: "声称无认证但Cookie含SESSION，需核必要性"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+source_status: "unknown"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E8%93%9D%E5%87%8COA/%E8%93%9D%E5%87%8CEKP%E7%B3%BB%E7%BB%9F%E6%8E%A5%E5%8F%A3thirdImSyncForKKWebService%E6%8E%A5%E5%8F%A3%E5%AD%98%E5%9C%A8%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E.md"
+id: "vw-a55e2bc8dd69c6fd1b72bfc3"
+entity_id: "ve-a55e2bc8dd69c6fd1b72bfc3"
+schema_version: "1"
 ---
 
-#  蓝凌EKP系统接口thirdImSyncForKKWebService接口存在任意文件读取漏洞  
+# 蓝凌EKP thirdImSyncForKKWebService XOP外部资源文件读取
+
+## 条目说明
+
+- 对象与具体问题：蓝凌EKP；thirdImSyncForKKWebService XOP外部资源文件读取
+- 版本、配置及部署条件：影响版本只有截图未读取；需XOP/MTOM处理及文件权限
+- 认证与权限前提：声称无认证但Cookie含SESSION，需核必要性
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 通过xop:Include fileURI，不是普通路径下载；应标外部资源解析/文件读取机制
+- HTTP头多处断行、multipart缩进且file:///c:windows缺斜杠，可能转写损坏
+- 无可读版本/修复号、响应仅截图；web.icon指纹须标所属平台而非默认FOFA
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 原创 安服仔
                     安服仔  北风漏洞复现文库   2026-01-24 15:59  
   
@@ -72,7 +112,7 @@ web.icon=="302464c3f6207d57240649926cfc7bd4"
   
 POC  
   
-```
+```http
 POST /sys/webservice/thirdImSyncForKKWebService HTTP/1.1
 Host: 域名:端口
 Cookie:

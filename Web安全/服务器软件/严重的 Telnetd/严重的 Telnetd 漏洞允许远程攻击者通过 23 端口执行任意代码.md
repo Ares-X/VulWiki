@@ -1,8 +1,46 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "严重的 Telnetd 漏洞允许远程攻击者通过 23 端口执行任意代码"
+product: "GNU Inetutils telnetd LINEMODE SLC"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2026-32746"
+referenced_identifiers: ""
+identifier_role: "primary"
+cve: "CVE-2026-32746"
+prerequisites: "受影响GNU telnetd服务可达、认证前SLC解析、运行身份决定后果"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-cfe93cbbbd82e6926da06c38"
+entity_id: "ve-cfe93cbbbd82e6926da06c38"
+schema_version: "1"
 ---
 
-#  严重的 Telnetd 漏洞允许远程攻击者通过 23 端口执行任意代码  
+# 严重的 Telnetd 漏洞允许远程攻击者通过 23 端口执行任意代码
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：受影响GNU telnetd服务可达、认证前SLC解析、运行身份决定后果
+- 证据范围：描述内存溢出及root风险，但无技术栈/PoC，不能将所有Telnet/ICS设备泛化为GNU受影响
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 目录严重的Telnetd应规范为GNU Inetutils，与24061不同实体
+- 缺影响版本和修复commit；4月1预计发布是2026-03-19历史状态
+- 超过90字节IDS阈值无来源/证据，不能作为确证入侵条件
+- CVSS/低复杂度与稳定RCE能力未经技术资料支持
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
  网安百色   2026-03-19 11:17  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/WibvcdjxgJnvd9hl8l4x0W1bwObK2Jd63wBMFliaORPwOibtnGRqyztp0tiaZyscicDN8TOYvYiaoKkuw3E9z1LKfMicU2JZS0Hpic2ficcpcPib4FKHM/640?wx_fmt=jpeg&from=appmsg "")  

@@ -1,6 +1,40 @@
 ---
 source: "hatch 补库批 20260928"
+product: "ThinkPHP / Request Hook gadget"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "Thinkphp 5.1.1 反序列化pop链构造"
+prerequisites: "来源所述条件，未列明部分仍待核：5.1.1与5.1.38对比；必须另有可输入反序列化入口；PHP/依赖范围未锁"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-b0f9139db2d7f6aa34ae49a7"
+entity_id: "ve-b0f9139db2d7f6aa34ae49a7"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：5.1.1与5.1.38对比；必须另有可输入反序列化入口；PHP/依赖范围未锁
+
+代码与实验材料：完整删除gadget、旧链和新Hook.get链源码，最后生成器还需匹配的GET a命令输入
+
+来源证据范围：无参考链接，仅hatch标签
+
+- **适用与权限边界（1）**：远程入口前提过晚且请求不完整；依据：文末才说需反序列化入口，未给入口实现；config Hook返回a但PoC未给GET a命令，append内calc.exe不是实际命令参数。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **事实待核（2）**：源码类型和版本叙述多处错误；依据：5.1.38多次写3.1.38；__call第二参数应为全部参数数组非第一个；filterValue调用call_user_func却写call_user_func_array。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **结论使用边界（3）**：变量流描述错置；依据：filter来自Request.filter/getFilter，正文称来自param数据；value也不是var_ajax字符串本身。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Thinkphp 5.1.1 反序列化pop链构造
 

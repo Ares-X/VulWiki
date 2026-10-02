@@ -1,7 +1,39 @@
 ---
 cve: "CVE-2024-52301"
 source: "gelusus/wxvl 公众号漏洞文库"
+product: "Laravel/HTTP请求argv环境选择注入"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2024-52301"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "高危！Laravel参数注入漏洞安全风险通告"
+prerequisites: "来源所述条件，未列明部分仍待核：<6.20.45、7<7.30.7、8<8.83.28、9<9.52.17、10<10.48.23、11<11.31.0；需register_argc_argv=on"
+side_effects: "未执行；本文需注意的操作影响：下游效果需说明；改变框架运行环境不等于直接OS环境变量任意写/RCE，所需.env或环境配置条件未展开"
+source_status: "unknown"
+id: "vw-920eeb311a28837ae3700fbe"
+entity_id: "ve-920eeb311a28837ae3700fbe"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：&lt;6.20.45、7&lt;7.30.7、8&lt;8.83.28、9&lt;9.52.17、10&lt;10.48.23、11&lt;11.31.0；需register_argc_argv=on
+
+代码与实验材料：无内嵌PoC，公告明确未复现，链接外部PoC；技术根因条件化清楚
+
+来源证据范围：Laravel11.31.0官方release、NVD、Nyamort仓库及二手新闻，亚信CERT2024-11-19
+
+- **来源与引用处置（1）**：补丁与商业检测规则应区分；依据：TDA规则号/离线包推广不是Laravel补丁；仅最新主线release未给六分支固定点原公告。保留这部分来源材料并与技术结论分开；其引用或宣传内容不能补足本文漏洞的证据。
+
+- **实验改动边界（2）**：下游效果需说明；依据：改变框架运行环境不等于直接OS环境变量任意写/RCE，所需.env或环境配置条件未展开。以下步骤按原实验条件保留；人工改动后的行为只支持该修改环境，不用于证明未修改发行版默认可利用。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 #  高危！Laravel参数注入漏洞安全风险通告   
 应急响应中心  亚信安全   2024-11-19 09:08  

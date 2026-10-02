@@ -1,8 +1,50 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "用友U9Cloud 硬编码MachineKey ViewState反序列化公告"
+product: "用友U9Cloud"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "WM-202507-000077"
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "U9V6.6企业/标准；需先615补丁再漏洞补丁"
+prerequisites: "PR无，页面/ViewState前提未公开"
+side_effects: "命令/代码执行示例可能改变主机状态"
+review_date: "2026-10-02"
+identifier_role: "primary"
+source_status: "unknown"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E7%94%A8%E5%8F%8BNC/%E5%B7%B2%E5%A4%8D%E7%8E%B0%20%E7%94%A8%E5%8F%8BU9%20Cloud%E5%AD%98%E5%9C%A8%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md"
+id: "vw-0c88911e0c607de3c4a5b493"
+entity_id: "ve-0c88911e0c607de3c4a5b493"
+schema_version: "1"
 ---
 
-#  【已复现】用友U9 Cloud存在远程代码执行漏洞  
+# 用友U9Cloud 硬编码MachineKey ViewState反序列化公告
+
+## 条目说明
+
+- 对象与具体问题：用友U9Cloud；硬编码MachineKey ViewState反序列化公告
+- 版本、配置及部署条件：U9V6.6企业/标准；需先615补丁再漏洞补丁
+- 认证与权限前提：PR无，页面/ViewState前提未公开
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 错NC目录；主研究ID WM202507000077非CVE，未分配编号应空
+- 明确自评CVSS8.6/未发现野利用/已复现为来源声明，保留时间和证据等级
+- 有notice705及615前置是重要修复顺序，不能只说升级最新
+- 技术细节未公开，不与147因同6.6合并
+
+## 操作风险
+
+命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 安恒研究院  安恒信息CERT   2025-07-15 11:20  
   
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/JAzzLj4nXevmL5H6C1I6nWLYOHeic25ZZq3Sju5Xs1LnOckux8PBqG1qYrBly0Nicx4verjADnLorl5g1ImeuTeg/640?wx_fmt=jpeg&from=appmsg&wx_&wx_ "")  

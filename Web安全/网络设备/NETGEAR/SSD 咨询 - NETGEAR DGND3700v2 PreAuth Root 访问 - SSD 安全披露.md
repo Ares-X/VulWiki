@@ -1,8 +1,56 @@
 ---
 source: "MrWQ/vulnerability-paper"
+id: "vw-bda07c29ba17700f8aa33866"
+entity_id: "ve-bda07c29ba17700f8aa33866"
+schema_version: "1"
+title: "SSD 咨询 - NETGEAR DGND3700v2 PreAuth Root 访问 - SSD 安全披露"
+product: "NETGEAR DGND3700v2"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+prerequisites: "称所有固件受影响，未枚举；LAN或暴露远程管理；跨站浏览器路径另需受害者访问恶意页面"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/NETGEAR/SSD%20%E5%92%A8%E8%AF%A2%20-%20NETGEAR%20DGND3700v2%20PreAuth%20Root%20%E8%AE%BF%E9%97%AE%20-%20SSD%20%E5%AE%89%E5%85%A8%E6%8A%AB%E9%9C%B2.md"
+review_date: "2026-10-02"
+side_effects: "文中写入/上传步骤会创建或覆盖目标文件；须先核对服务账户写权限、保存路径和脚本解析条件，验证后按原路径核查残留；执行文中载荷可能以目标进程权限启动命令或加载代码；权限受认证角色、操作系统账户及依赖版本约束，不能把 root/200 等通用字符串当成功证据；读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要且已脱敏的响应，不能由接口可达推定敏感内容已泄露；延时探针会占用线程或数据库连接；需记录基线和对照，单次慢响应或超时不足判定注入"
+source_url: "https://ssd-disclosure.com/ssd-advisory-netgear-dgnd3700v2-preauth-root-access/"
+source_status: "recorded"
 ---
 
 # SSD 咨询 - NETGEAR DGND3700v2 PreAuth Root 访问 - SSD 安全披露
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：NETGEAR DGND3700v2
+- 本文讨论：未编号：认证绕过、凭据泄露、ping命令注入链
+- 版本、权限与配置前提：称所有固件受影响，未枚举；LAN或暴露远程管理；跨站浏览器路径另需受害者访问恶意页面
+- 资料类型：研究转载与多漏洞链分析；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 代码片段常以机器翻译平铺、原文平铺、代码块重复三次；翻译后的JavaScript关键字不可执行，浏览器execute函数未附
+- passwordrecoverd/passwordrecovered及currentsettings/currentsetting路径拼写混用
+- all firmware泛化缺测试矩阵；脚本命名不一致
+
+### 操作风险与恢复
+
+- 文中写入/上传步骤会创建或覆盖目标文件；须先核对服务账户写权限、保存路径和脚本解析条件，验证后按原路径核查残留
+- 执行文中载荷可能以目标进程权限启动命令或加载代码；权限受认证角色、操作系统账户及依赖版本约束，不能把 root/200 等通用字符串当成功证据
+- 读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要且已脱敏的响应，不能由接口可达推定敏感内容已泄露
+- 延时探针会占用线程或数据库连接；需记录基线和对照，单次慢响应或超时不足判定注入
+
+### 待核与来源
+
+- 核验SSD原文及EOL、固件矩阵；最终Python脚本未执行，浏览器代码缺项需回源
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [ssd-disclosure.com](https://ssd-disclosure.com/ssd-advisory-netgear-dgnd3700v2-preauth-root-access/)

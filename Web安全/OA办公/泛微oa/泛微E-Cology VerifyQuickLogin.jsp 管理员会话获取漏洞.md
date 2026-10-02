@@ -1,21 +1,58 @@
 ---
-cve: ""
-fofa: "app=\"泛微-协同办公OA\""
-version: "未知"
 source: "https://github.com/PeiQi0/PeiQi-WIKI-Book/blob/90103c248a2c52bb0a060d0ee95d5a67e4579c3d/docs/wiki/oa/%E6%B3%9B%E5%BE%AEOA/%E6%B3%9B%E5%BE%AEOA%20E-Cology%20VerifyQuickLogin.jsp%20%E4%BB%BB%E6%84%8F%E7%AE%A1%E7%90%86%E5%91%98%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E.md"
+title: "泛微e-cology VerifyQuickLogin.jsp管理员会话签发"
+product: "泛微e-cology"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "版本补丁未知；identifier=1公开样本"
+prerequisites: "请求无凭证，实际会话身份仍需验证"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+source_status: "unknown"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E6%B3%9B%E5%BE%AEoa/%E6%B3%9B%E5%BE%AEE-Cology%20VerifyQuickLogin.jsp%20%E7%AE%A1%E7%90%86%E5%91%98%E4%BC%9A%E8%AF%9D%E8%8E%B7%E5%8F%96%E6%BC%8F%E6%B4%9E.md"
+fofa: "app=\"泛微-协同办公OA\""
+id: "vw-82f2a611d0f255586f18f999"
+entity_id: "ve-82f2a611d0f255586f18f999"
+schema_version: "1"
 ---
 
-# 泛微E-Cology VerifyQuickLogin.jsp 管理员会话获取漏洞
+# 泛微e-cology VerifyQuickLogin.jsp管理员会话签发
 
-## 漏洞描述
+## 条目说明
+
+- 对象与具体问题：泛微e-cology；VerifyQuickLogin.jsp管理员会话签发
+- 版本、配置及部署条件：版本补丁未知；identifier=1公开样本
+- 认证与权限前提：请求无凭证，实际会话身份仍需验证
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 正确限定/mobile/plugin入口及identifier=1证据，未泛化任意用户
+- 明确sessionkey/message/200仅线索不是成功；固定commit多源良好
+- 无完整响应文本，具体版本/修复边界仍待厂商核
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
+### 漏洞描述
 
 公开资料记录泛微 E-Cology 的 `/mobile/plugin/VerifyQuickLogin.jsp` 可通过快速登录请求返回管理员会话信息。风险在于会话签发缺少充分的身份校验；影响应以实际取得的会话身份及权限为准。
 
-## 影响范围与前提
+### 影响范围与前提
 
 产品：泛微 E-Cology；具体版本与补丁范围未知。公开请求不携带账号密码或 Cookie，但这不能替代对具体部署认证状态的验证。来源展示的是 `identifier=1`，没有证明将其替换成任意用户 ID 都有效。
 
-## 公开验证资料
+### 公开验证资料
 
 来源中的请求入口为 `/mobile/plugin/`，不是 `/login/`：
 
@@ -29,11 +66,11 @@ identifier=1&language=1&ipaddress=x.x.x.x
 
 `x.x.x.x` 是公开 PoC 使用的字面值。检测模板检查 JSON 中的 `sessionkey` 和 `message` 字段；字段存在或 HTTP 200 只构成线索。确认需要结合非空会话值、业务成功状态，以及隔离测试账号的实际会话身份，不能把错误信息中的字段名当作登录成功。完整请求和公开响应截图见来源。
 
-## 修复建议
+### 修复建议
 
 向厂商核对当前版本和对应安全更新；在修复前限制该接口的访问，并检查相关访问日志。
 
-## 参考来源
+### 参考来源
 
 - [公开资料 1](https://github.com/PeiQi0/PeiQi-WIKI-Book/blob/90103c248a2c52bb0a060d0ee95d5a67e4579c3d/docs/wiki/oa/%E6%B3%9B%E5%BE%AEOA/%E6%B3%9B%E5%BE%AEOA%20E-Cology%20VerifyQuickLogin.jsp%20%E4%BB%BB%E6%84%8F%E7%AE%A1%E7%90%86%E5%91%98%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E.md)
 - [公开资料 2](https://github.com/projectdiscovery/nuclei-templates/blob/8b9d065ccb0492d39f7680c908b3030a97ddfe1b/http/vulnerabilities/weaver/ecology-verifyquicklogin-auth-bypass.yaml)

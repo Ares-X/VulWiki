@@ -1,9 +1,66 @@
 ---
-cve: "CVE-2015-1805"
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2015-1805;CVE-2015-5195;CVE-2017-8890"
+identifier_role: "primary"
+primary_identifiers: "CVE-2015-1805;CVE-2015-5195;CVE-2017-8890"
+referenced_identifiers: "CVE-2015-3636"
+identifier_status: "unknown"
+title: "安卓旧系统 OTA 包分析与漏洞提权适配"
+product: "Android OEM内核"
+record_type: "analysis"
+document_type: "固件分析与历史提权适配"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "本地提权；具体ARM固件、内核符号及结构偏移需与运行内核一致；目标设备/OTA构建未给"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Android/%E5%AE%89%E5%8D%93%E6%97%A7%E7%B3%BB%E7%BB%9F%20OTA%20%E5%8C%85%E5%88%86%E6%9E%90%E4%B8%8E%E6%BC%8F%E6%B4%9E%E6%8F%90%E6%9D%83%E9%80%82%E9%85%8D.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-f27b4ebe48ba42faf010347f"
+entity_id: "ve-f27b4ebe48ba42faf010347f"
+schema_version: "1"
 ---
 
-#  安卓旧系统 OTA 包分析与漏洞提权适配  
+# 安卓旧系统 OTA 包分析与漏洞提权适配
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Android OEM内核
+- 文献类型：固件分析与历史提权适配
+- 版本、权限及部署边界：本地提权；具体ARM固件、内核符号及结构偏移需与运行内核一致；目标设备/OTA构建未给
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. frontmatter仅1805，正文三组适配；PingPong标2015-5195却使用fi01/CVE-2015-3636项目，CVE身份明确冲突须查原始项目
+2. 未给设备型号、OTA原件/哈希与补丁级别，ARM加载基址和固定八位地址解析不能推广所有Android
+3. IDA脚本及C结构/预处理器坍缩为单行，注释会吞掉后续内容；jni/inlcude疑拼写错，脚本也未区分数据符号与函数
+4. 关闭kptr_restrict需要权限，不能当成未提权用户天然具备的前置步骤；NDK r11c经验须注明个别环境
+5. 宣称三项成功却未保留执行身份/结果，作者也说明省略复现；适配价值应保留但不能标完整PoC；缺原项目与工具直接来源
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://bbs.kanxue.com/user-home-802108.htm>
+- 原文参考链接（未重新核验）：<https://mp.weixin.qq.com/s?__biz=MjM5NTc2MDYxMw==&mid=2458593263&idx=1&sn=b3503a7dded4e013a4cc644bedbabb48&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<https://mp.weixin.qq.com/s?__biz=MjM5NTc2MDYxMw==&mid=2458595995&idx=1&sn=7861e1699b2afe72b1973c8529e76cff&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<https://mp.weixin.qq.com/s?__biz=MjM5NTc2MDYxMw==&mid=2458595942&idx=1&sn=5474a50cdf6fa924e6cde1c034f06eef&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<https://mp.weixin.qq.com/s?__biz=MjM5NTc2MDYxMw==&mid=2458595872&idx=1&sn=27acee2988a95060ede7a8b826b9a11b&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<https://mp.weixin.qq.com/s?__biz=MjM5NTc2MDYxMw==&mid=2458595848&idx=1&sn=39c6196cfee31db5bd7add19ebf6be9c&scene=21#wechat_redirect>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 0x指纹  看雪学苑   2025-07-17 10:05  
   
 之前碰到一款安卓旧系统版本的设备，对其有提权调试需求，试了几款 Root 工具感觉不太好用，加上发现设备系统有检测措施会进行相应的保护，于是思路转向了通过 CVE 漏洞对设备进行临时提权。经过一番摸索分析，找到了还没有挂掉的系统 OTA 升级包的下载链接，恢复出来了内核符号表及地址，从而打开突破口，定位到 CVE 提权漏洞需要的符号信息，最后适配编译了 CVE-2015-1805（Pipe Read）、CVE-2015-5195（Ping Pong）和 CVE-2017-8890（Phoenix Talon）三个漏洞利用提权程序，可以成功提权，这里记录一下。  
@@ -170,4 +227,4 @@ https://bbs.kanxue.com/user-home-802108.htm
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

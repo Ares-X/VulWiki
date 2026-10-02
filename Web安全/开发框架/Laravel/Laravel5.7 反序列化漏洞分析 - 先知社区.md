@@ -1,7 +1,49 @@
 ---
-version: "vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Testing\\PendingCommand.php"
+version: ""
 source: "MrWQ/vulnerability-paper"
+product: "Laravel5.7/PendingCommand gadget研究，非默认可达漏洞"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+version_notes: "vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Testing\\PendingCommand.php"
+title: "Laravel5.7 反序列化漏洞分析 - 先知社区"
+prerequisites: "来源所述条件，未列明部分仍待核：实验Laravel5.7/PHP7.3.5（要求>=7.1.3）；需要应用已有不可信unserialize入口及Faker/Mockery测试依赖"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "recorded"
+source_url: "https://xz.aliyun.com/t/10578#toc-0"
+id: "vw-ae606020c3d3bcb9715dc8d0"
+entity_id: "ve-ae606020c3d3bcb9715dc8d0"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 明确更正：作者主动新增 /index 控制器并调用 unserialize($_GET[c])，这是人为提供入口的 Laravel 5.7 POP 链研究，不证明框架默认就公开该反序列化入口。第一份失败 PoC 与后续 bindings/instances 两种调试变体全部保留，不将失败稿改称成功。
+
+- 明确更正：原 version 字段抽入命令、源码、路径、配置或普通叙述，不是版本号，已清空机器版本字段并原样保留于 version_notes；实际版本/分支条件见本节逐篇记录，未从代码猜造版本。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：实验Laravel5.7/PHP7.3.5（要求&gt;=7.1.3）；需要应用已有不可信unserialize入口及Faker/Mockery测试依赖
+
+代码与实验材料：672行全文读完，手动新增/index控制器unserialize($_GET\[c\])；bindings反射构造和instances缓存两变体，第一失败PoC明确作为调试阶段
+
+来源证据范围：先知t/10578原文、laworigin/其他研究，未给精确framework/依赖锁文件
+
+- **事实待核（1）**：version元数据错抽源码路径；依据：vendor\laravel\framework\src\Illuminate\Foundation\Testing\PendingCommand.php被标版本。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **适用与权限边界（2）**：手工植入反序列化入口不能证明默认远程漏洞；依据：明确自己写TestController直接unserialize外部参数；只能证明gadget可用，不能称Laravel5.7默认RCE。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **事实待核（3）**：测试依赖与版本断言不充分；依据：需要Faker/Mockery且生产--no-dev未必存在；文末通杀5.4至5.8是外链概括未验证，不应当本篇范围。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **适用与权限边界（4）**：局部解释及编辑问题；依据：要求foreach返回数组却给expectedOutput=1举例；同调用链片段多次重复，反射实例化仍有类/构造函数条件非任意类。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Laravel5.7 反序列化漏洞分析 - 先知社区
 

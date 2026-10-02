@@ -1,6 +1,38 @@
 ---
 source: "历史归档批(无原始出处标注)"
+product: "Fastjson1.2.68"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "Fastjson 1.2.68 bypass autotype"
+prerequisites: "来源所述条件，未列明部分仍待核：1.2.68; SafeModeoff; Throwable/AutoCloseable custom gadgets, classpath dependent; later Runnable/Readable block change unclear release"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-be60b16c8c557d8e2a70b0d4"
+entity_id: "ve-be60b16c8c557d8e2a70b0d4"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：1.2.68; SafeModeoff; Throwable/AutoCloseable custom gadgets, classpath dependent; later Runnable/Readable block change unclear release
+
+代码与实验材料：Extensive checkAutoType source and custom ExecException/Closeable/Runnable/$ref getter demos; naturally present exploitable gadget explicitly still needed
+
+来源证据范围：Y4er image/source clues, chabug links, threedr3am commit; metadata says no original source
+
+- **结论使用边界（1）**：Artificial command-executing classes prove bypass, not universal deployment RCE; parsing overload/JDK must be pinned。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **证据待核（2）**：Missing main heading/fix section; exceptClass typo and source attribution restoration。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 基于期望类的特性
 

@@ -1,6 +1,40 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+product: "Livewire Filemanager/第三方组件"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2025-14894"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "Livewire Filemanager 漏洞导致web 应用易受RCE攻击"
+prerequisites: "来源所述条件，未列明部分仍待核：无受影响和修复版本，也无准确包坐标；鉴权前提未证明"
+side_effects: "未执行；本文需注意的操作影响：storage:link被直接等同于PHP执行；符号链接只暴露路径，执行PHP还依赖Web服务器处理规则、上传位置及访问权限"
+source_status: "unknown"
+id: "vw-1b7c6e807ef95db23bd5c5b1"
+entity_id: "ve-1b7c6e807ef95db23bd5c5b1"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：无受影响和修复版本，也无准确包坐标；鉴权前提未证明
+
+代码与实验材料：只有概述，无请求、代码或可追溯复现
+
+来源证据范围：代码卫士转载CybersecurityNews，缺CERT/CC及供应商直接说明
+
+- **结论使用边界（1）**：第三方组件与Livewire核心混淆；依据：实际对象是LivewireFilemanagerComponent.php，不是所有Livewire或Laravel应用。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **适用与权限边界（2）**：storage:link被直接等同于PHP执行；依据：符号链接只暴露路径，执行PHP还依赖Web服务器处理规则、上传位置及访问权限。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **适用与权限边界（3）**：厂商态度与默认未鉴权均缺一手证据；依据：声称厂商故意省略验证，正文仅二手报道且无端点、版本或配置。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 #  Livewire Filemanager 漏洞导致web 应用易受RCE攻击  
 Abinaya

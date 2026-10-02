@@ -1,8 +1,59 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2025-33206"
+identifier_role: "primary"
+primary_identifiers: "CVE-2025-33206"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "NVIDIA NSIGHT Graphics for Linux 漏洞允许代码执行攻击"
+product: "NVIDIA Nsight Graphics for Linux"
+record_type: "advisory"
+document_type: "本地命令注入修复新闻"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "本地访问且用户交互；文称<2025.5、2025.5修复"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/NVIDIA%E9%A9%B1%E5%8A%A8/NVIDIA%20NSIGHT%20Graphics%20for%20Linux%20%E6%BC%8F%E6%B4%9E%E5%85%81%E8%AE%B8%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%94%BB%E5%87%BB.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-b0a1a5beb7e9e3fcf45a3410"
+entity_id: "ve-b0a1a5beb7e9e3fcf45a3410"
+schema_version: "1"
 ---
 
-#  NVIDIA NSIGHT Graphics for Linux 漏洞允许代码执行攻击  
+# NVIDIA NSIGHT Graphics for Linux 漏洞允许代码执行攻击
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：NVIDIA Nsight Graphics for Linux
+- 文献类型：本地命令注入修复新闻
+- 版本、权限及部署边界：本地访问且用户交互；文称<2025.5、2025.5修复
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 目录NVIDIA驱动误分类，实际Nsight开发/图形分析工具非GPU内核驱动；元数据漏33206
+2. 以提升权限执行需目标工具具体运行上下文，命令注入不自动root；文中未说明触发操作和输入类型
+3. 没有NVIDIA公告或下载直接URL，修复范围及7.8应回查来源；所有旧版受影响缺引入下限
+4. 多次重复本地/UI/升级信息及声明广告可压缩，新闻无需虚构PoC
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
  网安百色   2026-01-22 11:23  
   
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/1QIbxKfhZo6UUCdfv40c21Kiakibex2zrEdkJVHWfyfoib7IkLxQvCEBUHUmP18sLSUrI7GQjh8VvlQY3bPEWicv1g/640?wx_fmt=jpeg&from=appmsg "")  
@@ -44,4 +95,4 @@ NVIDIA NSIGHT Graphics for Linux 中的漏洞允许攻击者注入命令。成�
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

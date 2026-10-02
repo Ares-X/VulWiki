@@ -1,9 +1,46 @@
 ---
 version: "Docker version: 18.09.3"
 source: "Threekiii/Vulnerability-Wiki"
+title: "Kubernetes 部署后门 CronJob"
+product: "Kubernetes CronJob正常功能滥用"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "在目标namespace有batch/cronjobs create权限且准入允许所请求Pod；实验授权ClusterRoleBinding"
+affected_versions: "Docker version: 18.09.3"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-10d4a99fd4ddda27d9065dbf"
+entity_id: "ve-10d4a99fd4ddda27d9065dbf"
+schema_version: "1"
 ---
 
 # Kubernetes 部署后门 CronJob
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：在目标namespace有batch/cronjobs create权限且准入允许所请求Pod；实验授权ClusterRoleBinding
+- 证据范围：完整创建与清理示例，本身非产品漏洞或认证绕过；工具被修改API版本，需记录固定版本
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 称>=1.21移除batch/v1beta1需官方核对，混淆GA引入与弃用移除时间
+- 每分钟起一个sleep10000且concurrencyPolicy=Allow会累积大量活跃Pod，实验资源副作用未说明
+- kubs-system拼错应kube-system
+- version实验Docker号不是漏洞版本
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 ## 漏洞描述
 

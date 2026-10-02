@@ -1,9 +1,48 @@
 ---
 version: "七牛云 logkit V1.4.1"
 source: "Threekiii/Awesome-POC"
+title: "七牛云 logkit log_path 任意文件读取漏洞"
+product: "七牛Logkit"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+affected_versions: "七牛云 logkit V1.4.1"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-ef67a9ba7c49682f0ad7f3f2"
+entity_id: "ve-ef67a9ba7c49682f0ad7f3f2"
+schema_version: "1"
 ---
 
 # 七牛云 logkit log_path 任意文件读取漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 本次正文校订
+
+- 按实际内容修正 1 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 同log_path采集到公共目录链，固定1.4.1仅测试版还是全范围未明确
+- PUT创建任务且持续采集，不是只读验证，应有停止清理
+- /app/public仅该镜像布局不是Docker通用默认
+- 认证/预期管理功能边界待核
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 ## 漏洞描述
 
@@ -29,7 +68,7 @@ title="七牛Logkit配置文件助手"
 
 发送请求包配置读取文件
 
-```
+```http
 PUT /logkit/configs/passwdread HTTP/1.1
 Host: 
 Accept: */*

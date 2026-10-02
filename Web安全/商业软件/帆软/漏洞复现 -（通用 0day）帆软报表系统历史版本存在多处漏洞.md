@@ -1,10 +1,52 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "FineReport7.0及来源未定招聘系统 旧版信息泄露/SSRF/默认口令及招聘越权"
+product: "FineReport7.0及来源未定招聘系统"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "FineReport7.0历史2012版本；招聘系统归属作者明确不确定"
+prerequisites: "报表匿名声称；招聘需注册登录"
+side_effects: "请求可能删除/覆盖数据、修改账号或持久改变业务状态"
+review_date: "2026-10-02"
+source_url: "https://mp.weixin.qq.com/s/nltw2N8_MB87UosnGDv6kA"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/%E5%B8%86%E8%BD%AF/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0%20-%EF%BC%88%E9%80%9A%E7%94%A8%200day%EF%BC%89%E5%B8%86%E8%BD%AF%E6%8A%A5%E8%A1%A8%E7%B3%BB%E7%BB%9F%E5%8E%86%E5%8F%B2%E7%89%88%E6%9C%AC%E5%AD%98%E5%9C%A8%E5%A4%9A%E5%A4%84%E6%BC%8F%E6%B4%9E.md"
+id: "vw-4d0fdf604ffaf6c6a9d0f9d2"
+entity_id: "ve-4d0fdf604ffaf6c6a9d0f9d2"
+schema_version: "1"
 ---
 
-# 漏洞复现 -（通用 0day）帆软报表系统历史版本存在多处漏洞
+# FineReport7.0及来源未定招聘系统 旧版信息泄露/SSRF/默认口令及招聘越权
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：FineReport7.0及来源未定招聘系统；旧版信息泄露/SSRF/默认口令及招聘越权
+- 版本、配置及部署条件：FineReport7.0历史2012版本；招聘系统归属作者明确不确定
+- 认证与权限前提：报表匿名声称；招聘需注册登录
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 多实体长文应拆报表多接口与独立招聘应用，不能把未知招聘系统用户泄露归帆软通用漏洞
+- sc_version_info是否能重置授权仅截图无修改请求，展示版本页不证明授权重置
+- 默认口令、资源SSRF、连接配置等各需独立响应；仅改密码不能修匿名入口
+- 招聘URL含未编码#会被浏览器视为fragment导致后续参数不发送，需区分代理原始请求和可点击URL
+- 特殊id2138/FM_SYS_ID是部署数据，不能通用化；实名电话身份证截图需充分脱敏复核
+- 通用0day与历史版本营销冲突，删抽奖/推广但保留原创署名/官方支持链接
+
+## 操作风险
+
+请求可能删除/覆盖数据、修改账号或持久改变业务状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/nltw2N8_MB87UosnGDv6kA)
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/OBLmObCsZtRhFM3KeDj0QMtHtS04jFyCfsXLsRytlX5oAxgTNL5dYAAe5swJaOREVqksBqdUW8nzibErssPRu5w/640?wx_fmt=png)

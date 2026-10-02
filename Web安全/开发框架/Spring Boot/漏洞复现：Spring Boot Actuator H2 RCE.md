@@ -1,6 +1,41 @@
 ---
 source: "MrWQ/vulnerability-paper"
+product: "Spring Cloud/Hikari/H2"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "漏洞复现：Spring Boot Actuator H2 RCE"
+prerequisites: "来源所述条件，未列明部分仍待核：Boot1.5切分默认端点不充分；缺H2/Hikari/Cloud版本"
+side_effects: "未执行；本文需注意的操作影响：报文长度与必要组件缺失；Content-Length356不等于{}，根Actuator可见不证明可写env/restart及H2；重启和持续SQL改变业务；创建EXEC别名及改连接测试SQL，失败可断连；缺原值恢复/ALIAS清理"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/ZcuHN-nd2KXh6khoD7Z_HQ"
+id: "vw-62569a4e5ae9d156aab4ebb9"
+entity_id: "ve-62569a4e5ae9d156aab4ebb9"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：Boot1.5切分默认端点不充分；缺H2/Hikari/Cloud版本
+
+代码与实验材料：env设置ALIAS→restart→DNS，restart长度356而body{}2字节，固定外部DNS
+
+来源证据范围：spaceraccoon原实验与o2oxy教程
+
+- **操作与副作用边界（1）**：报文长度与必要组件缺失；依据：Content-Length356不等于{}，根Actuator可见不证明可写env/restart及H2。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+- **操作与副作用边界（2）**：重启和持续SQL改变业务；依据：创建EXEC别名及改连接测试SQL，失败可断连；缺原值恢复/ALIAS清理。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+- **适用与权限边界（3）**：默认暴露推断泛化；依据：仅按Boot1.5分全部开放/两端点，忽略Security与配置。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # 漏洞复现：Spring Boot Actuator H2 RCE
 

@@ -1,9 +1,46 @@
 ---
-cve: "CVE-2025-40552"
+cve: "CVE-2025-40552; CVE-2025-40554; CVE-2025-40553; CVE-2025-40551; CVE-2025-40537"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "太阳风 SolarWinds警告称Web帮助台存在严重的远程代码执行和身份验证绕过漏洞"
+product: "SolarWinds Web Help Desk"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2025-40552; CVE-2025-40554; CVE-2025-40553; CVE-2025-40551; CVE-2025-40537"
+referenced_identifiers: "CVE-2025-26399; CVE-2024-28988; CVE-2024-28986"
+identifier_role: "primary"
+prerequisites: "按各漏洞区分，文列2026.1修复"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-af55f7c9dd940b8465767d6c"
+entity_id: "ve-af55f7c9dd940b8465767d6c"
+schema_version: "1"
 ---
 
-#  太阳风 SolarWinds警告称Web帮助台存在严重的远程代码执行和身份验证绕过漏洞  
+# 太阳风 SolarWinds警告称Web帮助台存在严重的远程代码执行和身份验证绕过漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：按各漏洞区分，文列2026.1修复
+- 证据范围：与141报道同批补丁但不同来源；缺40536且缺任何出处链接，补丁历史翻译混乱
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 元数据仅40552漏其余主漏洞
+- 把28986说成补丁绕过，方向与上下文相反，应为28988绕过28986、26399绕过28988
+- KEV句子指代模糊，易误认为26399在一年多前已被利用；应明确历史28986
+- 今天/9月须绑定2026-01-29报道时点
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 原创 Sergiu Gatlan
                     Sergiu Gatlan  暗镜   2026-01-29 16:00  
   

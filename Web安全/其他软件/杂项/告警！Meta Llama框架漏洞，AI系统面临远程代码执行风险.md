@@ -1,9 +1,62 @@
 ---
 cve: "CVE-2024-50050"
 source: "gelusus/wxvl 公众号漏洞文库"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "告警！Meta Llama框架漏洞，AI系统面临远程代码执行风险"
+product: "Meta Llama Stack50050"
+record_type: "unknown"
+document_type: "技术文章（细分类待核）"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "暴露ZeroMQ且接受不可信pickle为前提；6.3/9.3评分虽区分来源但未给向量/版本"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/%E5%91%8A%E8%AD%A6%EF%BC%81Meta%20Llama%E6%A1%86%E6%9E%B6%E6%BC%8F%E6%B4%9E%EF%BC%8CAI%E7%B3%BB%E7%BB%9F%E9%9D%A2%E4%B8%B4%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E9%A3%8E%E9%99%A9.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-f0c64337ab41c4da04243ad0"
+entity_id: "ve-f0c64337ab41c4da04243ad0"
+schema_version: "1"
 ---
 
-#  紧急告警！Meta Llama框架漏洞，AI系统面临远程代码执行风险   
+# 告警！Meta Llama框架漏洞，AI系统面临远程代码执行风险
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Meta Llama Stack50050
+- 文献类型：技术文章（细分类待核）
+- 版本、权限及部署边界：暴露ZeroMQ且接受不可信pickle为前提；6.3/9.3评分虽区分来源但未给向量/版本
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 组件Llama Stack非Llama模型本体
+2. 暴露ZeroMQ且接受不可信pickle为前提
+3. 声称pyzmq已修复应区分应用改JSON与上游正常pickle API
+4. ChatGPT爬虫DDoS被错误归入反序列化RCE，需删除错误共同根因
+5. 6.3/9.3评分虽区分来源但未给向量/版本
+6. 缺Meta/Oligo原始链接，0.0.41修复待核
+7. 大段泛AI评论不属技术证据
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 原创 sanlihesec  独角鲸网络安全实验室   2025-01-26 14:54  
   
 2024年9月，一位安全研究员在测试Meta的Llama框架时，意外发现了一个严重的安全漏洞。这个漏洞不仅威胁到了人工智能系统的安全性，还可能引发更广泛的网络安全问题。今天，我们就来深入探讨这个漏洞的细节及其潜在影响。  
@@ -37,4 +90,4 @@ Llama Stack组件存在一个高严重性安全漏洞，漏洞编号为CVE-2024-
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

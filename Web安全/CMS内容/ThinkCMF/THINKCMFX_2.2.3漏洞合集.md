@@ -1,6 +1,42 @@
 ---
 source: "hatch 补库批 20260928"
+product: "ThinkCMFX2.2.3 / ThinkPHP"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "THINKCMFX_2.2.3漏洞合集"
+prerequisites: "来源所述条件，未列明部分仍待核：文章编辑会员权限；Comment/Api继承fetch入口；头像删除需会员/Windows；UEditor上传明确登录及旧PHPexplode数组返回行为"
+side_effects: "未执行；本文需注意的操作影响：删除PoC mgurl漏i，源码是imgurl；未过滤反斜杠句子缺字符；上传allowed_exts数组传explode的警告/类型行为依PHP版本，必须限定而非任何运行时；序号称两处模板加SQLi/delete/upload应逐实体，通用模板路径清单只是候选"
+source_status: "unknown"
+id: "vw-17dbfc03abb80975c60d03f3"
+entity_id: "ve-17dbfc03abb80975c60d03f3"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：文章编辑会员权限；Comment/Api继承fetch入口；头像删除需会员/Windows；UEditor上传明确登录及旧PHPexplode数组返回行为
+
+- **事实待核（1）**：标题2.2.3、影响2.x、后文声称3版本蓝色界面均可用互相外推无证据；logo颜色不能判具体漏洞。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **适用与权限边界（2）**：将ThinkPHP默认模板说Smarty错误，本集合实际&lt;php&gt;Think引擎；HTTP200就成功RCE判据无效。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **操作与副作用边界（3）**：删除PoC mgurl漏i，源码是imgurl；未过滤反斜杠句子缺字符。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+- **事实待核（4）**：上传allowed_exts数组传explode的警告/类型行为依PHP版本，必须限定而非任何运行时。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **事实待核（5）**：模板文件必须存在与不存在可换路径说明重要，Linux不好用未给原因；多入口不能合单CVE。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **操作与副作用边界（6）**：序号称两处模板加SQLi/delete/upload应逐实体，通用模板路径清单只是候选。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # ThinkCMF 2.2.3 漏洞合集
 

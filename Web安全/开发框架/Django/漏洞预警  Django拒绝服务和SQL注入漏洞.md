@@ -1,7 +1,37 @@
 ---
 cve: "CVE-2024-53907"
 source: "gelusus/wxvl 公众号漏洞文库"
+product: "Django strip_tags DoS and Oracle HasKey SQLi"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2024-53907; CVE-2024-53908"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "漏洞预警  Django拒绝服务和SQL注入漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：5.1<5.1.4/5.0<5.0.10/4.2<4.2.17; malformed HTML versus Oracle untrusted lhs separate"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-3fb10dfe9329032379e17501"
+entity_id: "ve-3fb10dfe9329032379e17501"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：5.1&lt;5.1.4/5.0&lt;5.0.10/4.2&lt;4.2.17; malformed HTML versus Oracle untrusted lhs separate
+
+代码与实验材料：No PoC; publication-time unavailable claim; memory/stack-overflow mechanism unsupported
+
+来源证据范围：Django homepage only
+
+- **适用与权限边界（1）**：Two primary vulnerabilities collapsed; exact DoS mechanism and source require confirmation。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 #  漏洞预警 | Django拒绝服务和SQL注入漏洞   
 浅安  浅安安全   2024-12-13 00:02  

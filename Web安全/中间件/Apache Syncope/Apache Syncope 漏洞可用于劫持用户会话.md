@@ -1,8 +1,47 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Apache Syncope 漏洞可用于劫持用户会话"
+product: "Apache Syncope Client IdRepo Console"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2026-23795"
+referenced_identifiers: ""
+identifier_role: "primary"
+cve: "CVE-2026-23795"
+prerequisites: "需足够管理员权限创建/编辑Keymaster参数；声称3.0–3.0.15、4.0–4.0.3，修复3.0.16/4.0.4待官方核验"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-8169b020d098802132cad0e2"
+entity_id: "ve-8169b020d098802132cad0e2"
+schema_version: "1"
 ---
 
-#  Apache Syncope 漏洞可用于劫持用户会话  
+# Apache Syncope 漏洞可用于劫持用户会话
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：需足够管理员权限创建/编辑Keymaster参数；声称3.0–3.0.15、4.0–4.0.3，修复3.0.16/4.0.4待官方核验
+- 证据范围：管理员XXE与潜在会话凭据泄露应分证据层级；本页没有实际payload/劫持链。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 主CVE遗漏frontmatter
+- 标题会话劫持只是可能后果，不是所示已验证漏洞机制
+- 任意文件/凭据/整个认证基础设施影响应限定进程权限和可访问数据，缺实际链证据
+- 严重/关键措辞与正文官方中等定级需分别注明
+- 无厂商公告直链；大量空行、内联表格、广告和推荐阅读应压缩
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 Abinaya
                     Abinaya  代码卫士   2026-02-04 10:11  
   

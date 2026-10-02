@@ -1,8 +1,46 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Oracle 修复已遭利用的 Agile PLM 0day"
+product: "Oracle Agile PLM Framework"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2024-21287"
+referenced_identifiers: ""
+identifier_role: "primary"
+cve: "CVE-2024-21287"
+prerequisites: "9.3.6；HTTP可达；无认证；读取PLM应用账户有权读取的文件"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-24b502081ed4da3a33ef10dc"
+entity_id: "ve-24b502081ed4da3a33ef10dc"
+schema_version: "1"
 ---
 
-#  Oracle 修复已遭利用的 Agile PLM 0day   
+# Oracle 修复已遭利用的 Agile PLM 0day
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：9.3.6；HTTP可达；无认证；读取PLM应用账户有权读取的文件
+- 证据范围：厂商确认在野，技术细节未公开，文中如实说明
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- P0错归Oracle MySQL Server，应是Agile PLM企业应用
+- 缺Oracle专项公告/补丁链接；支持终止日期应核原厂政策
+- 保持应用权限范围，不扩大到所有系统文件
+- 去除推荐文章/广告噪声
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 Ionut Arghire  代码卫士   2024-11-21 09:35  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

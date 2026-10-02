@@ -1,6 +1,38 @@
 ---
 cnvd: "CNVD-2019-06251"
+product: "JYmusic2.0 bundled ThinkPHP"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CNVD-2019-06251"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "JYmusic 2.0 命令执行漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：ThinkPHP Request构造方法覆盖版本/路由可达；Windows dir/echo仅示例环境"
+side_effects: "未执行；本文需注意的操作影响：实际是ThinkPHP_method/__construct变量覆盖链，应关联框架而非独立JY逻辑；首页POST与POST/captcha入口混写；末尾回车导致失败结论未给依据；shell写入弯引号损坏"
+source_status: "missing"
+id: "vw-c23248af8df7b1e21ea93131"
+entity_id: "ve-c23248af8df7b1e21ea93131"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：ThinkPHP Request构造方法覆盖版本/路由可达；Windows dir/echo仅示例环境
+
+- **操作与副作用边界（1）**：实际是ThinkPHP_method/__construct变量覆盖链，应关联框架而非独立JY逻辑。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+- **证据待核（2）**：run/routeCheck叙述整句重复三次且chekc拼错；前图指1.x头像漏洞资源。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **证据待核（3）**：首页POST与POST/captcha入口混写；末尾回车导致失败结论未给依据；shell写入弯引号损坏。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **事实待核（4）**：未给具体ThinkPHP版本和补丁范围。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 （CNVD-2019-06251）JYmusic 2.0 命令执行漏洞
 ===========================================

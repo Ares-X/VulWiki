@@ -1,9 +1,49 @@
 ---
-fofa: "app.name="
 source: "wy876 漏洞文库"
+title: "Roxy-WI options.py远程命令执行漏洞"
+product: "Roxy-WI"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2022-31137"
+referenced_identifiers: ""
+identifier_role: "primary"
+cve: "CVE-2022-31137"
+prerequisites: "<6.1.1.0;no auth shown"
+fofa_unverified: "app.name="
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-4a9f33967365b6ac2ee1c70b"
+entity_id: "ve-4a9f33967365b6ac2ee1c70b"
+schema_version: "1"
 ---
 
 # Roxy-WI options.py远程命令执行漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：<6.1.1.0;no auth shown
+- 证据范围：Same alert_consumer/ipbackend request as36
+
+### 本次正文校订
+
+- 按实际内容修正 1 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- fofa metadata truncated Hunter app.name=
+- CVE omitted; confirm association with36 against primary source
+- HTTP block mislabeledJava; no response/fix reference
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 # 一、漏洞简介
 `Roxy-WI`是开源的一款用于管理`Haproxy`、`Nginx`和`Keepalive`服务器的`Web`界面。`Roxy-WI 6.1.1.0`之前版本`options.py`接口存在远程命令执行漏洞，攻击者可以执行命令获取服务器权限。
@@ -17,7 +57,7 @@ source: "wy876 漏洞文库"
 
 
 # 四、漏洞复现
-```java
+```http
 POST /app/options.py HTTP/1.1
 Host: xx.xx.xx.xx
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/117.0

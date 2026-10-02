@@ -1,10 +1,51 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "通达OA 扫码登录UID伪造及后台数据库日志写入链"
+product: "通达OA"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "2017及支持扫码登录的11.x<11.5；对比11.4/11.5"
+prerequisites: "初始无需登录，后段取得管理员后操作"
+side_effects: "命令/代码执行示例可能改变主机状态"
+review_date: "2026-10-02"
+source_url: "https://www.zrools.org/2020/04/23/%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1-%E9%80%9A%E8%BE%BEOA-%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%EF%BC%88%E5%8C%BF%E5%90%8DRCE%EF%BC%89%E5%88%86%E6%9E%90/"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E9%80%9A%E8%BE%BEOA/%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1%20-%20%E9%80%9A%E8%BE%BE%20OA%20%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%EF%BC%88%E5%8C%BF%E5%90%8D%20RCE%EF%BC%89%E5%88%86%E6%9E%90%20-%20zrools.md"
+category_recommendation: "OA / 通达"
+id: "vw-cf49960ec977ec77494086b9"
+entity_id: "ve-cf49960ec977ec77494086b9"
+schema_version: "1"
 ---
 
-# 代码审计 - 通达 OA 任意用户登录漏洞（匿名 RCE）分析 - zrools
+# 通达OA 扫码登录UID伪造及后台数据库日志写入链
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：通达OA；扫码登录UID伪造及后台数据库日志写入链
+- 版本、配置及部署条件：2017及支持扫码登录的11.x<11.5；对比11.4/11.5
+- 认证与权限前提：初始无需登录，后段取得管理员后操作
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 补丁token/Redis流程与前后端两个接口区分清楚，适合作为主分析
+- 根因代码主要截图；PoC/EXP仅命名和外链未收入正文
+- RCE还依赖DB日志权限与可写Web目录，不能由登录绕过自动推出
+- 扩展思考中的Redis/cache写入绕过是假设，不能当已验证新漏洞
+
+## 操作风险
+
+命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [www.zrools.org](https://www.zrools.org/2020/04/23/%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1-%E9%80%9A%E8%BE%BEOA-%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%EF%BC%88%E5%8C%BF%E5%90%8DRCE%EF%BC%89%E5%88%86%E6%9E%90/)
 
 官网更新了 v11.5 版本后，漏洞分析和 PoC 逐渐浮出了水面，其实这漏洞结合后台的一些功能是可以进一步实现匿名 RCE 的。
@@ -27,7 +68,7 @@ v11.5 更新修复了 2 个地方：
 *   客户端扫码登录接口；
 *   Web 端扫码登录接口。
 
-### [](#Web端扫码登录过程 "Web端扫码登录过程")Web 端扫码登录过程
+#### [](#Web端扫码登录过程 "Web端扫码登录过程")Web 端扫码登录过程
 
 Web 端扫码登录流程大致是这样：
 
@@ -53,7 +94,7 @@ Web 端登录请求脚本如下：
 
 可以看到最终的登录数据只发送了`UID`到服务端，从而导致了任意用户登录。
 
-### [](#Web端补丁分析 "Web端补丁分析")Web 端补丁分析
+#### [](#Web端补丁分析 "Web端补丁分析")Web 端补丁分析
 
 这里对比一下`v11.4`和`v11.5`修复前和修复后的源代码：
 
@@ -71,7 +112,7 @@ Web 端登录请求脚本如下：
 
 通过`PHPSESSID`从在线用户表`user_online`中取`UID`，然后封装数据 MD5 哈希后存入 redis 中。
 
-### [](#客户端补丁分析 "客户端补丁分析")客户端补丁分析
+#### [](#客户端补丁分析 "客户端补丁分析")客户端补丁分析
 
 客户端和 Web 端大同小异，登录也加了`token`校验：
 
@@ -93,7 +134,7 @@ Web 端登录请求脚本如下：
 *   将数据写入缓存： /general/login_code.php
 *   从缓存读取登录： /logincheck_code.php
 
-### [](#任意用户登录-PoC "任意用户登录 PoC")任意用户登录 PoC
+#### [](#任意用户登录-PoC "任意用户登录 PoC")任意用户登录 PoC
 
 知道了漏洞过程，那么实现 PoC 就很简单了，以获取 Web 目录绝对路径为例：
 
@@ -108,7 +149,7 @@ webroot:  C:\\MYOA\\webroot
 cookies:  PHPSESSID=xxxxx
 ```
 
-### [](#匿名-RCE-ExP "匿名 RCE ExP")匿名 RCE ExP
+#### [](#匿名-RCE-ExP "匿名 RCE ExP")匿名 RCE ExP
 
 有了后台管理权限和 Web 目录绝对路径，可以利用 MySQL 日志进一步写 Shell，实现匿名 RCE：
 
@@ -131,7 +172,7 @@ webshell: (GET) http://192.168.0.3:8080/api/test.php?cmd=ipconfig
 
 我们脑洞一下这个补丁是否可以绕过：
 
-### [](#认证地址一： "认证地址一：")认证地址一：
+#### [](#认证地址一： "认证地址一：")认证地址一：
 
 源文件： /logincheck_code.php
 
@@ -149,7 +190,7 @@ TRedis::redis()->setex($xxx, $xxx);
 
 而`td_authcode()`的 key 是固定的，从而就可以伪造`token`进行任意用户登录。
 
-### [](#认证地址二： "认证地址二：")认证地址二：
+#### [](#认证地址二： "认证地址二：")认证地址二：
 
 源文件： /ispirit/login_code_check.php
 

@@ -1,8 +1,45 @@
 ---
 source: "hatch 补库批 20260928"
+title: "Tomcat样例目录session操纵漏洞"
+product: "Apache Tomcat examples应用"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "自定义业务认证页必须与SessionExample共享相同Web应用Session，且依赖可伪造字符串属性；独立业务Web上下文一般不共享Session"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-2d24804876e9955ec98d56ab"
+entity_id: "ve-2d24804876e9955ec98d56ab"
+schema_version: "1"
 ---
 
 # Tomcat样例目录session操纵漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：自定义业务认证页必须与SessionExample共享相同Web应用Session，且依赖可伪造字符串属性；独立业务Web上下文一般不共享Session
+- 证据范围：文章自己把测试认证页面放在/examples/index.jsp，未证明能操作别的应用或任意用户会话。结论将同上下文实验推广为所有Tomcat任意用户伪造，缺关键边界。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 最重要的同Web应用/会话上下文前提完全未明确
+- 能改自己的示例Session并不等于能改所有用户Session
+- 影响版本空白，示例login.jsp有<inputtype及未闭合form语法
+- 末尾只强调猜属性名难，却遗漏真正隔离边界
+- 无原始出处与移除生产examples的处置说明
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 一、漏洞简介
 ------------

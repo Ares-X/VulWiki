@@ -1,8 +1,46 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Progress Software修复了多个高严重性的LoadMaster漏洞"
+product: "Progress Kemp LoadMaster/MT"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2024-56131; CVE-2024-56132; CVE-2024-56133; CVE-2024-56134; CVE-2024-56135"
+referenced_identifiers: "CVE-2024-1212"
+identifier_role: "primary"
+cve: "CVE-2024-56131; CVE-2024-56132; CVE-2024-56133; CVE-2024-56134; CVE-2024-56135"
+prerequisites: "已认证管理接口用户；56134为文件读取，其他为OS命令注入"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-435c75b0e0e98c2f4e6c9298"
+entity_id: "ve-435c75b0e0e98c2f4e6c9298"
+schema_version: "1"
 ---
 
-#  Progress Software修复了多个高严重性的LoadMaster漏洞   
+# Progress Software修复了多个高严重性的LoadMaster漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：已认证管理接口用户；56134为文件读取，其他为OS命令注入
+- 证据范围：多CVE同补丁公告应多实体，1212是既往在野新闻不可混合鉴权前提。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 版本表产品行XML验证文件明显译错，应属LTSF分支；下一产品名空白
+- 无厂商或新闻原文链接，2025-02-05修复表需追溯官方
+- 未发现野外攻击仅文章当时厂商声明
+- 缺任何注入点/请求，只能公告级别，HTML可转标准表
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 鹏鹏同学  黑猫安全   2025-02-12 01:29  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/8dBEfDPEceicvPuXb9EFFX3xqtQkPpsCGHjIeibTdmZomCw1lmDrqjJQGo5vfYxhE4WvgQiasFDGDFyhKLAesS01g/640?wx_fmt=png&from=appmsg "")  

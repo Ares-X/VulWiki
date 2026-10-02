@@ -1,8 +1,70 @@
 ---
-cve: "CVE-2023-4166"
+cve: "CVE-2023-4166;CVE-2023-4165;CVE-2023-2648;CVE-2023-2523"
+identifier_role: "primary"
+primary_identifiers: "CVE-2023-4166;CVE-2023-4165;CVE-2023-2648;CVE-2023-2523"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "hvv 期间已公开的漏洞集合"
+product: "网神/通达/深信服/广联达/绿盟/蓝凌/WPS/汉得/泛微/辰信/安恒/海康"
+record_type: "roundup"
+document_type: "19项PoC合集"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "多数无版本/认证/响应；WPS列两修复上界；不能全继承唯一frontmatter4166"
+side_effects: "3/4通达不同delete_log/delete_seal分别4166/4165，重查询延迟且删除接口有副作用，鉴权不能由无Cookie推出；18/19海康report和files两个接口分别保留，zip只是JSP占位非合法归档且丢文件名，写入路径关系未证；不要据此生成可用EXP"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/hvv%20%E6%9C%9F%E9%97%B4%E5%B7%B2%E5%85%AC%E5%BC%80%E7%9A%84%E6%BC%8F%E6%B4%9E%E9%9B%86%E5%90%88.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+source_url: "https://mp.weixin.qq.com/s/PRQsBp7Rf7pql_gmIhotLg"
+id: "vw-205a96d8b997864bbcbd16bd"
+entity_id: "ve-205a96d8b997864bbcbd16bd"
+schema_version: "1"
 ---
 
 # hvv 期间已公开的漏洞集合
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：网神/通达/深信服/广联达/绿盟/蓝凌/WPS/汉得/泛微/辰信/安恒/海康
+- 文献类型：19项PoC合集
+- 版本、权限及部署边界：多数无版本/认证/响应；WPS列两修复上界；不能全继承唯一frontmatter4166
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 应拆19节为候选实体并保留合集来源，6与13广联达GetIMDictionary正文payload完全重复应合一；5与7深信服同/rep/login但注入参数clsMode/userID不同待核同根因
+2. 1SecSSL改密码需解释伪造admin_id/ticket条件，实际改密码；2SecGate multipart名/filename丢失且payload占位，无法使用
+3. 3/4通达不同delete_log/delete_seal分别4166/4165，重查询延迟且删除接口有副作用，鉴权不能由无Cookie推出
+4. 5深信服缺HTTP版本/ContentType；7头部与body连在Content-Length行且声称版本限制却没给版本
+5. 6/13广联达DB读示例缺认证/版本/回显；8绿盟indexpath参数前疑缺?，无响应证据
+6. 9蓝凌题名前台代码执行但payload只是file:///etc/passwd读取且JSON括号被转义，明显影响类型不对应
+7. 10WPS描述抄金山文档云产品，实际桌面WPS嵌入浏览器；host规则绕过与JS内存利用两层需分别来源/版本，HTML的new Function字符串跨行语法错误，PDF触发文件缺
+8. 11汉得两次tomcat.jsp设置会话需同Cookie及权限范围；12广联达后台上传缺Cookie、ContentDisposition name/filename丢失，落点不明
+9. 14/15泛微分别2648/2523不同上传口，14ContentType无boundary、两者部件元数据丢失/末边界缺--，15POST/及<?phpphpinfo?>损坏
+10. 16辰信登录注入无原始响应对照、版本和参数编码说明；17安恒UnixSocket代理到xmlrpc新增用户，携USM会话鉴权条件未说明，角色101需释义
+11. 18/19海康report和files两个接口分别保留，zip只是JSP占位非合法归档且丢文件名，写入路径关系未证；不要据此生成可用EXP
+12. 无逐项原作者/公告/修复，只合集公众号；大段产品营销删，固定实际Host/Cookie应脱敏，不能把公开=确认在野
+
+### 操作风险
+
+3/4通达不同delete_log/delete_seal分别4166/4165，重查询延迟且删除接口有副作用，鉴权不能由无Cookie推出；18/19海康report和files两个接口分别保留，zip只是JSP占位非合法归档且丢文件名，写入路径关系未证；不要据此生成可用EXP
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://mp.weixin.qq.com/s/PRQsBp7Rf7pql_gmIhotLg>
+- 原文参考链接（未重新核验）：<http://ksria.com/simpread/>
+- 原文参考链接（未重新核验）：<http://xxx.com:8888/Services/Identification/Server/Incompatible.aspx>
+- 原文参考链接（未重新核验）：<http://test/wsrpc>
+- 原文参考链接（未重新核验）：<https://github.com/MrWQ/vulnerability-paper>
+
+### 归档技术正文
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/PRQsBp7Rf7pql_gmIhotLg)

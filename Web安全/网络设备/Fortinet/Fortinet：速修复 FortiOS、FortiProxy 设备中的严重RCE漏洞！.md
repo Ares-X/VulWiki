@@ -1,8 +1,53 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-3024d8fddfd9b9645fb9d615"
+entity_id: "ve-3024d8fddfd9b9645fb9d615"
+schema_version: "1"
+title: "Fortinet：速修复 FortiOS、FortiProxy 设备中的严重RCE漏洞！"
+product: "FortiOS/FortiProxy HTTP/2代理处理"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2023-33308"
+referenced_identifiers: ""
+prerequisites: "远程数据包，SSL检测profile启HTTP/2相关；分支范围/修复明确"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/Fortinet/Fortinet%EF%BC%9A%E9%80%9F%E4%BF%AE%E5%A4%8D%20FortiOS%E3%80%81FortiProxy%20%E8%AE%BE%E5%A4%87%E4%B8%AD%E7%9A%84%E4%B8%A5%E9%87%8DRCE%E6%BC%8F%E6%B4%9E%EF%BC%81.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 #  Fortinet：速修复 FortiOS、FortiProxy 设备中的严重RCE漏洞！   
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：FortiOS/FortiProxy HTTP/2代理处理
+- 本文讨论：CVE-2023-33308
+- 版本、权限与配置前提：远程数据包，SSL检测profile启HTTP/2相关；分支范围/修复明确
+- 资料类型：风险新闻通告；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- FortiOS不受影响列表夹入2.x/1.x疑属FortiProxy产品错配
+- Watchowr、输入腹泻、剃刀等转文文字错误
+- 关键代理/深度检测配置仅在缓解处出现，应前置为条件；无官方直链
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 具体SSL检测触发条件与产品版本归属待核验
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 Bill Toulas  代码卫士   2023-07-13 18:22  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

@@ -1,8 +1,46 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Apache Avro SDK 中存在严重漏洞，可导致在 Java 应用中实现RCE"
+product: "Apache Avro Java schema解析"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2024-47561"
+referenced_identifiers: "CVE-2024-38856; CVE-2024-36104"
+identifier_role: "primary"
+cve: "CVE-2024-47561"
+prerequisites: "应用允许不可信Avro schema且走相关ReflectData/SpecificData处理，classpath和调用路径决定RCE"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-18e58001be665c3d25fdf5b0"
+entity_id: "ve-18e58001be665c3d25fdf5b0"
+schema_version: "1"
 ---
 
-#  Apache Avro SDK 中存在严重漏洞，可导致在 Java 应用中实现RCE   
+# Apache Avro SDK 中存在严重漏洞，可导致在 Java 应用中实现RCE
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：应用允许不可信Avro schema且走相关ReflectData/SpecificData处理，classpath和调用路径决定RCE
+- 证据范围：限定Java实现和schema可控，不是所有Avro文件或所有语言受影响；无PoC是报道时点
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 主CVE缺元数据；ReflectDat应ReflectData且这些是类不是指令
+- 架构/图式/图示混译schema，avroAvro重复
+- 笼统清理schema不足完整缓解，需官方安全处理建议
+- <1.11.4与1.12.0修复分支关系可明确，不把所有更高版本一概推定
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 THN  代码卫士   2024-10-08 17:31  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

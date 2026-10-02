@@ -1,8 +1,66 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2024-28085"
+identifier_role: "primary"
+primary_identifiers: "CVE-2024-28085"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "Linux “wall” 漏洞已存在十年之久，可制造虚假的SUDO 提示并窃取密码"
+product: "util-linux wall"
+record_type: "advisory"
+document_type: "风险新闻"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "本地同机多终端用户，mesg开启且wall setgid；钓鱼密码需用户交互，剪贴板依赖终端支持"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/Linux%20%E2%80%9Cwall%E2%80%9D%20%E6%BC%8F%E6%B4%9E%E5%B7%B2%E5%AD%98%E5%9C%A8%E5%8D%81%E5%B9%B4%E4%B9%8B%E4%B9%85%EF%BC%8C%E5%8F%AF%E5%88%B6%E9%80%A0%E8%99%9A%E5%81%87%E7%9A%84SUDO%20%E6%8F%90%E7%A4%BA%E5%B9%B6%E7%AA%83%E5%8F%96%E5%AF%86%E7%A0%81.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+source_url: "https://www.bleepingcomputer.com/news/security/decade-old-linux-wall-bug-helps-make-fake-sudo-prompts-steal-passwords/"
+id: "vw-8de1096ede56de4658380769"
+entity_id: "ve-8de1096ede56de4658380769"
+schema_version: "1"
 ---
 
-#  Linux “wall” 漏洞已存在十年之久，可制造虚假的SUDO 提示并窃取密码   
+# Linux “wall” 漏洞已存在十年之久，可制造虚假的SUDO 提示并窃取密码
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：util-linux wall
+- 文献类型：风险新闻
+- 版本、权限及部署边界：本地同机多终端用户，mesg开启且wall setgid；钓鱼密码需用户交互，剪贴板依赖终端支持
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 2.40及之前受影响与升级2.40修复自相矛盾，必须纠正边界；linux-utils包名应util-linux
+2. frontmatter漏主CVE；漏洞是终端转义注入，不能按sudo产品漏洞归类
+3. 前提和非所有终端适用说明较完整，但Gnome剪贴板支持段易歧义，需对照研究
+4. 只有BleepingComputer来源，没有原研究/PoC链接，PoC公开声明待核对；删除推广推荐和空行
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://www.bleepingcomputer.com/news/security/decade-old-linux-wall-bug-helps-make-fake-sudo-prompts-steal-passwords/>
+- 原文参考链接（未重新核验）：<https://codesafe.qianxin.com>
+- 原文参考链接（未重新核验）：<https://oss.qianxin.com>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzI2NTg4OTc5Nw==&mid=2247519011&idx=1&sn=17a70a9a2f2ffda628277cf2e0884282&chksm=ea94ba49dde3335f1ba768295ca8970e7a2a3d6080ee433e0eaa41f8b52859e0ae9f0acd6635&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzI2NTg4OTc5Nw==&mid=2247518892&idx=2&sn=21e7796662495b4b807b3393dafd9890&chksm=ea94bbc6dde332d07356a2e54be40ffbdc88a3cac47f21912107d477815155335555fe2c827d&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzI2NTg4OTc5Nw==&mid=2247518790&idx=1&sn=3a59b1cc8580a5f1c75bb61edc82557b&chksm=ea94bb2cdde3323acc4f1a49e39fec5304d1b53e15b8b2a5cb36bf885ddd6a7b1432e0addc60&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzI2NTg4OTc5Nw==&mid=2247518385&idx=2&sn=9d0f5eba19662c208dce17056f8b6708&chksm=ea94b9dbdde330cd71a57d346d79ef4b39ec7ac907787ebe1f7a41fe47d6201ea4cfa4947e94&scene=21#wechat_redirect>
+
+### 归档技术正文
+
 Bill Toulas  代码卫士   2024-03-29 17:39  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

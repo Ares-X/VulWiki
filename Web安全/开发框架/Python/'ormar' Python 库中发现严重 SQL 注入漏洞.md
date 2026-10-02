@@ -1,7 +1,39 @@
 ---
 cve: "CVE-2026-26198"
 source: "gelusus/wxvl 公众号漏洞文库"
+product: "ormar/聚合字段SQL注入"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2026-26198"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "'ormar' Python 库中发现严重 SQL 注入漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：0.9.9–0.22.0、0.23.0修复；需不可信列名传min/max"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-1b432ed2a493d9fa7d22c5dd"
+entity_id: "ve-1b432ed2a493d9fa7d22c5dd"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：0.9.9–0.22.0、0.23.0修复；需不可信列名传min/max
+
+代码与实验材料：SelectAction.get_text_clause/sqlalchemy.text路径明确，无API样例或各DB验证
+
+来源证据范围：官方GHSA可追溯，未读取
+
+- **适用与权限边界（1）**：未认证及全数据库影响过度泛化；依据：认证由宿主API决定、数据库权限限制读取范围；文后已限定用户可选字段应提升到简介。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **代码与转录边界（2）**：历史时长和产品拼写错误；依据：2021-03到2026-02接近五年而称近四年；ORMA拼写不是ormar。相应原代码作为存在此问题的历史样本保留，不能直接当作可运行、成功复现的 PoC；缺失内容需回原稿核对，不据此补造可执行攻击链。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 #  'ormar' Python 库中发现严重 SQL 注入漏洞  
 sec随谈

@@ -1,9 +1,46 @@
 ---
 cve: "CVE-2025-60021"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Apache bRPC存在关键远程命令注入漏洞，影响1.15.0前所有平台版本"
+product: "Apache bRPC heap profiler built-in service"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2025-60021"
+referenced_identifiers: ""
+identifier_role: "primary"
+prerequisites: "jemalloc堆分析功能启用、/pprof/heap可达；extra_options进入命令执行"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-cd1539bf01ef0593b4afdc9e"
+entity_id: "ve-cd1539bf01ef0593b4afdc9e"
+schema_version: "1"
 ---
 
-#  Apache bRPC存在关键远程命令注入漏洞，影响1.15.0前所有平台版本  
+# Apache bRPC存在关键远程命令注入漏洞，影响1.15.0前所有平台版本
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：jemalloc堆分析功能启用、/pprof/heap可达；extra_options进入命令执行
+- 证据范围：版本标题<1.15与表格1.11–1.14矛盾需要保留下界；无请求或独立验证。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 关键/Important/高危及CVSS7.0–8.9范围混用，不是真实评分向量
+- 标题所有平台版本易掩盖jemalloc配置前提及1.11起始版本
+- 修复PR#3101无直链，测试建议只说特殊字符参数而无安全判据
+- 没有原始公告链接，大量HTML表格样式噪声
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
  网安百色   2026-01-20 11:22  
   
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/1QIbxKfhZo4x2icHa78mLXEj3fk2w4nZrTsraBLPaSZezGujaqBTP9UyEWM9eADjRxp5pztyLMQdXNb0EeFOtUA/640?wx_fmt=jpeg&from=appmsg "")  

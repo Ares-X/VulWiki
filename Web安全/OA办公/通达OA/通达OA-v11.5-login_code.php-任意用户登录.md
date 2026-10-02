@@ -1,22 +1,64 @@
 ---
 source: "Threekiii/Vulnerability-Wiki"
+title: "通达OA 扫码login_code/logincheck UID伪造"
+product: "通达OA"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "2017及11.x<11.5；11.4实验"
+prerequisites: "未授权扫码接口"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+source_url: "https://github.com/Threekiii/Vulnerability-Wiki"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E9%80%9A%E8%BE%BEOA/%E9%80%9A%E8%BE%BEOA-v11.5-login_code.php-%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95.md"
+category_recommendation: "OA / 通达"
+id: "vw-526065c8b8279ff9afab3df1"
+entity_id: "ve-526065c8b8279ff9afab3df1"
+schema_version: "1"
 ---
 
-# 通达OA v11.5 login_code.php 任意用户登录
+# 通达OA 扫码login_code/logincheck UID伪造
 
-## 漏洞描述
+## 条目说明
+
+- 对象与具体问题：通达OA；扫码login_code/logincheck UID伪造
+- 版本、配置及部署条件：2017及11.x<11.5；11.4实验
+- 认证与权限前提：未授权扫码接口
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 标题v11.5易误解为受影响，正文称11.5修复
+- Python只识别http://会破坏https URL；凭未出现中文未登录判成功不可靠
+- 巨大UA表与根因无关；无超时、宽异常、Cookie属性作为Cookie发送
+- 可读脚本可补223/241，保持原作者引用
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
+### 漏洞描述
 
 通达OA是一套办公系统。2020年04月17日, 通达OA官方在更新了一个v11版本安全补丁, 其中修复了一个任意用户伪造登录漏洞。
 该漏洞类型为任意用户伪造，未经授权的远程攻击者可以通过精心构造的请求包进行任意用户伪造登录。
 
-## 漏洞影响
+### 漏洞影响
 
 ```
 通达OA 2017版
 通达OA版本  V11.X < V11.5
 ```
 
-## 环境搭建
+### 环境搭建
 
 漏洞环境下载
 
@@ -29,7 +71,7 @@ https://cdndown.tongda2000.com/oa/2019/TDOA11.4.exe
 ![image-20220209105714403](./.resource/通达OA-v11.5-login_code.php-任意用户登录/media/202202091057824.png)
 
 
-## 漏洞复现
+### 漏洞复现
 
 使用[POC](https://github.com/NS-Sp4ce/TongDaOA-Fake-User/blob/master/POC.py)获取管理员的Cookie
 
@@ -43,7 +85,7 @@ root@kali:~/桌面# python3 1.py -v 11 -u http://xx.xxx.xxx.xxx
 ![image-20220209105731535](./.resource/通达OA-v11.5-login_code.php-任意用户登录/media/202202091057599.png)
 
 
-## 漏洞POC
+### 漏洞POC
 
 ```python
 '''

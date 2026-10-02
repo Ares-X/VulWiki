@@ -1,8 +1,50 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "泛微e-cology9 前台SQL注入通告，接口未公开"
+product: "泛微e-cology9"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "XVE-2025-26658"
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "补丁<10.76；声称默认配置"
+prerequisites: "无需认证/交互，通告声称无需绕过"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+identifier_role: "primary"
+source_status: "unknown"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E6%B3%9B%E5%BE%AEoa/%E6%B3%9B%E5%BE%AEE-cology9%20%E5%89%8D%E5%8F%B0SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md"
+id: "vw-019862712c3e95b5bdf0f30e"
+entity_id: "ve-019862712c3e95b5bdf0f30e"
+schema_version: "1"
 ---
 
-#  泛微E-cology9 前台SQL注入漏洞  
+# 泛微e-cology9 前台SQL注入通告，接口未公开
+
+## 条目说明
+
+- 对象与具体问题：泛微e-cology9；前台SQL注入通告，接口未公开
+- 版本、配置及部署条件：补丁<10.76；声称默认配置
+- 认证与权限前提：无需认证/交互，通告声称无需绕过
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- XVE-2025-26658是主ID应结构化，不误记CNVD
+- 属于微步通告，POC未公开/在野未发现；截图复现不等于仓库复现证据
+- 与QVD-2025-26680等7月10.76通告只有候选关联，暂不确定同根因
+- 保留厂商补丁链接和检测规则日期，裁掉服务营销尾部
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 原创 微步情报局  微步在线研究响应中心   2025-07-10 06:15  
   
 ![](https://mmbiz.qpic.cn/mmbiz_png/fFyp1gWjicMKNkm4Pg1Ed6nv0proxQLEKJ2CUCIficfAwKfClJ84puialc9eER0oaibMn1FDUpibeK1t1YvgZcLYl3A/640?wx_fmt=png "")  
@@ -54,7 +96,7 @@ source: "gelusus/wxvl 公众号漏洞文库"
 泛微官方已发布修复补丁，请尽快更新至v10.76版本补丁：  
   
 https://www.weaver.com.cn/cs/securityDownload.html  
-## 临时修复方案：  
+### 临时修复方案：  
 - 可配置防护策略，限制访问漏洞相关路径。完整漏洞利用路径请通过微步漏洞情报查询。  
   
 - 如非必要，避免将资产暴露在互联网。  

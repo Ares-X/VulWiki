@@ -1,6 +1,41 @@
 ---
 cve: "CVE-2018-18086"
+product: "EmpireCMS7.5"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2018-18086; CVE-2018-19462"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "Web安全   EmpireCMS漏洞常见漏洞分析及复现"
+prerequisites: "来源所述条件，未列明部分仍待核：后台模型导入/SQL执行权限；outfile需DB FILE、可写绝对路径、secure_file_priv；XSS需ehash或图片点击"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/gXixS1EAepl_QCx9vXKr0Q"
+id: "vw-00f5e8bb9225a4b0290f2590"
+entity_id: "ve-00f5e8bb9225a4b0290f2590"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：后台模型导入/SQL执行权限；outfile需DB FILE、可写绝对路径、secure_file_priv；XSS需ehash或图片点击
+
+- **结论使用边界（1）**：frontmatter只18086遗漏主章节19462；18086节开头误贴数据库表名备份RCE，实际源码是LoadInMod文件包含。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **结论使用边界（2）**：secure_file_priv被错说为能否往数据库里写SQL，实际文内后句导入导出才对应。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **证据待核（3）**：所有源码多行被反引号拼接污染；大量结果图位置空白。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **适用与权限边界（4）**：前台XSS应DOM型，未保留148默认关闭会员空间条件；多个独立漏洞不能按单CVE合并。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **适用与权限边界（5）**：安装说明建议全局权限弱密码账号和远程开放，不能作为生产防护指导；WAF500单一归因及通用编码即可绕过结论过强。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Web安全   EmpireCMS漏洞常见漏洞分析及复现
 

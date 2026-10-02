@@ -1,6 +1,38 @@
 ---
 source: "wy876 漏洞文库"
+product: "Jolokia/Tomcat JNDIRealm"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "SpringBootjolokiaRealmJNDI远程代码执行漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：Boot<1.5全未授权和>=1.5只health/info忽略Security/暴露配置；缺JDK/Tomcat/Jolokia版本"
+side_effects: "未执行；本文需注意的操作影响：状态修改与外部二进制风险未提示；Realm可改变容器认证，无恢复；附件来源不证明可安全运行"
+source_status: "unknown"
+id: "vw-339721273bd0a30fe60d8a8c"
+entity_id: "ve-339721273bd0a30fe60d8a8c"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：Boot&lt;1.5全未授权和&gt;=1.5只health/info忽略Security/暴露配置；缺JDK/Tomcat/Jolokia版本
+
+代码与实验材料：核心Python和jar只有语雀附件，没有源/hash，Realm过程未嵌入
+
+来源证据范围：wy876语雀无原研究/工具项目
+
+- **适用与权限边界（1）**：list关键词被直接当RCE证据；依据：还需exec/write允许、Realm操作和JNDI对象工厂/运行时条件。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **适用与权限边界（2）**：状态修改与外部二进制风险未提示；依据：Realm可改变容器认证，无恢复；附件来源不证明可安全运行。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Spring Boot jolokia Realm JNDI远程代码执行漏洞
 

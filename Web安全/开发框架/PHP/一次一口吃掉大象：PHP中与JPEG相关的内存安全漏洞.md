@@ -1,7 +1,41 @@
 ---
 cve: "CVE-2025-14177"
 source: "gelusus/wxvl 公众号漏洞文库"
+product: "PHP/ext.standard JPEG处理"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2025-14177"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "一次一口吃掉大象：PHP中与JPEG相关的内存安全漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：示例PHP8.6.0-dev调试构建，未列两缺陷的发行分支影响/修复版本"
+side_effects: "未执行；本文需注意的操作影响：缺发行版本与实际Web攻击前提；getimagesize需暴露APP信息给攻击者；iptcembed FIFO或可并发增长文件，不是任意静态JPEG上传都触发"
+source_status: "unknown"
+id: "vw-74ed2da8d1d85f7b05cc5044"
+entity_id: "ve-74ed2da8d1d85f7b05cc5044"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：示例PHP8.6.0-dev调试构建，未列两缺陷的发行分支影响/修复版本
+
+代码与实验材料：getimagesize源码、完整堆标记PoC与输出；无过滤器第二变体缺两脚本源码；iptcembed FIFO/ASAN触发明确，仅证明内存越界
+
+来源证据范围：PHP GHSA、issues20584/20582、官方函数文档和PositiveTechnologies原研究齐全
+
+- **事实待核（1）**：多缺陷元数据不能共用一个CVE；依据：后半iptcembed独立问题号无CVE，需拆实体关联。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **适用与权限边界（2）**：缺发行版本与实际Web攻击前提；依据：getimagesize需暴露APP信息给攻击者；iptcembed FIFO或可并发增长文件，不是任意静态JPEG上传都触发。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **结论使用边界（3）**：代码无围栏且第二PoC不完整；依据：大片C/PHP被当普通段落，webapp.php/attacker.php只有命令和输出。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 #  一次一口吃掉大象：PHP中与JPEG相关的内存安全漏洞  
  幻泉之洲   2026-05-17 07:09  

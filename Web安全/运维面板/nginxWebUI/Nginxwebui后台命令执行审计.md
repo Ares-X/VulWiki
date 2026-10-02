@@ -1,8 +1,48 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Nginxwebui后台命令执行审计"
+product: "nginxWebUI"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "Authenticated backend; tested3.9.8;3.9.9 applicability inferred not tested; filesystem/service permissions"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-8e26e18cb9099ad2c606f2ae"
+entity_id: "ve-8e26e18cb9099ad2c606f2ae"
+schema_version: "1"
 ---
 
-#  Nginxwebui后台命令执行审计   
+# Nginxwebui后台命令执行审计
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：Authenticated backend; tested3.9.8;3.9.9 applicability inferred not tested; filesystem/service permissions
+- 证据范围：Five distinct audit paths, mostly source/request/result screenshots; retain independent research
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- Do not elevate speculative3.9.9 applicability to confirmed affected range
+- All relevant code and requests mostly image-only; extract text before canonical reuse
+- Command execution mislabeled 'code execution' merely because Runtime.exec is used
+- Text says $(IFS), later${IFS}; distinguish typo and actual tested input
+- SSH login via writable authorized_keys depends SSH settings/service UID; not automatic universal root
+- Remediation list is concatenated, typo-heavy and relies on blacklist snippets; prefer vendor patch/validated canonical path containment
+- No CVE/fixed build/commit mapping; separate intended admin functionality from privilege boundary failure
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 uname  黑伞安全   2024-04-03 17:56  
   
 本文首发先知：https://xz.aliyun.com/t/14227  

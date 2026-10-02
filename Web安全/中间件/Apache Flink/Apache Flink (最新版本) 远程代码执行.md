@@ -1,8 +1,50 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "Apache Flink (最新版本) 远程代码执行"
+product: "Apache Flink"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "Dashboard 可达、上传/运行 JAR 能力未受访问控制，回连可达；权限取决于服务账户"
+source_url: "https://mp.weixin.qq.com/s/HPTVat9BwLjfFIqX_zZEIA"
+source_status: "recorded"
+side_effects: "含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。"
+id: "vw-0884839a3348baccf8fc6f84"
+entity_id: "ve-0884839a3348baccf8fc6f84"
+schema_version: "1"
 ---
 
 # Apache Flink (最新版本) 远程代码执行
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：Dashboard 可达、上传/运行 JAR 能力未受访问控制，回连可达；权限取决于服务账户
+- 证据范围：描述正常作业上传执行功能被未授权调用，不足以绑定路径遍历 CVE。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 标题最新版本和 <=1.9.1 为历史无日期快照，不能作当前影响范围
+- 生成 Meterpreter JAR 却使用 java/shell/reverse_tcp handler，载荷类型不一致
+- msfvenom 参数混用非 ASCII 横线，LPORT 与 -f 粘连
+- 直接 root 权限仅是实验运行用户，不是漏洞保证
+- 关键提交参数与 POC 仅图片
+
+### 操作风险与资料使用
+
+- 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/HPTVat9BwLjfFIqX_zZEIA)

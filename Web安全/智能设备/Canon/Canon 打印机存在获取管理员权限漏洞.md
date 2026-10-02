@@ -1,9 +1,55 @@
 ---
 cve: "CVE-2025-3078"
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-c347a04a6ffa7497700b712b"
+entity_id: "ve-c347a04a6ffa7497700b712b"
+schema_version: "1"
+title: "Canon 打印机已认证管理功能中的 SMTP / LDAP 凭据回传"
+product: "Canon imageRUNNER/imagePRESS/imageCLASS等"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2025-3078; CVE-2025-3079"
+referenced_identifiers: ""
+prerequisites: "已具管理权限并已配置外部服务凭据；版本缺失"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%99%BA%E8%83%BD%E8%AE%BE%E5%A4%87/Canon/Canon%20%E6%89%93%E5%8D%B0%E6%9C%BA%E5%AD%98%E5%9C%A8%E8%8E%B7%E5%8F%96%E7%AE%A1%E7%90%86%E5%91%98%E6%9D%83%E9%99%90%E6%BC%8F%E6%B4%9E.md"
+review_date: "2026-10-02"
+side_effects: "读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要且已脱敏的响应，不能由接口可达推定敏感内容已泄露"
+source_status: "unknown"
 ---
 
-#  Canon 打印机存在获取管理员权限漏洞   
+# Canon 打印机已认证管理功能中的 SMTP / LDAP 凭据回传
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Canon imageRUNNER/imagePRESS/imageCLASS等
+- 本文讨论：CVE-2025-3078、3079 SMTP/LDAP凭据回传
+- 版本、权限与配置前提：已具管理权限并已配置外部服务凭据；版本缺失
+- 资料类型：双CVE打印机凭据回传预警；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 标题获取管理员权限与实际管理员提取外部凭据相反，需纠正前提
+- 混入Vercel托管Next.js自动保护无关段落，明确内容拼贴污染
+- 元数据漏3079；EPSS0.03%无时间/来源，CVSS向量不完整；无厂商漏洞公告链接
+- 已落实的文本修订：标题与正文证据对齐。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
+
+### 操作风险与恢复
+
+- 读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要且已脱敏的响应，不能由接口可达推定敏感内容已泄露
+
+### 待核与来源
+
+- 型号固件、评分、补丁状态及外部认证协议前提待官方核验
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
  网安百色   2025-05-25 11:30  
   
 Canon Inc. 发布了一份重要的安全建议，警告客户注意影响其各种生产打印机、Office 多功能打印机和激光打印机的严重漏洞。  

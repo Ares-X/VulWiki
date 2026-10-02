@@ -1,10 +1,49 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "金和C6 DossierBaseInfoView UserID水平越权"
+product: "金和C6"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: "CVE-2021-1732"
+identifier_status: "unknown"
+affected_scope: "2021最新版无build"
+prerequisites: "普通用户登录"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+source_url: "https://mp.weixin.qq.com/s/gwHQVIZeMWfT8a5lBX_4WA"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E9%87%91%E5%92%8COA/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0%20-%20%EF%BC%88%E9%80%9A%E7%94%A8%200day%EF%BC%89%E9%87%91%E5%92%8C%20C6%20%E5%8D%8F%E5%90%8C%20OA%20%E7%AE%A1%E7%90%86%E5%B9%B3%E5%8F%B0%E5%90%8E%E5%8F%B0%E5%AD%98%E5%9C%A8%E6%B0%B4%E5%B9%B3%E8%B6%8A%E6%9D%83%E6%BC%8F%E6%B4%9E.md"
+id: "vw-97b213945a4d0944c4e7dcda"
+entity_id: "ve-97b213945a4d0944c4e7dcda"
+schema_version: "1"
 ---
 
-# 漏洞复现 - （通用 0day）金和 C6 协同 OA 管理平台后台存在水平越权漏洞
+# 金和C6 DossierBaseInfoView UserID水平越权
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：金和C6；DossierBaseInfoView UserID水平越权
+- 版本、配置及部署条件：2021最新版无build
+- 认证与权限前提：普通用户登录
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 普通用户与管理员对照明确，但实际权限策略/字段敏感性只图
+- 默认admin口令与其他账号弱口令是另问题，不应当越权必需条件
+- 0day缺原始日期/修复，推广CVE1732不是主漏洞
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/gwHQVIZeMWfT8a5lBX_4WA)
 
 _**前言**_

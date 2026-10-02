@@ -1,9 +1,64 @@
 ---
-cve: "CVE-2025-0411"
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2025-0411"
+identifier_role: "primary"
+primary_identifiers: "CVE-2025-0411"
+referenced_identifiers: "CVE-2025-0441"
+identifier_status: "unknown"
+title: "7-Zip Mark-of-the-Web 绕过漏洞"
+product: "7-Zip on Windows"
+record_type: "vulnerability"
+document_type: "MotW绕过PoC演示摘要"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "24.07与修复24.09对照；带MotW双层压缩包且受害者解压后执行载荷；用户交互必需"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/7-Zip/7-Zip%20Mark-of-the-Web%20%E7%BB%95%E8%BF%87%E6%BC%8F%E6%B4%9E.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-117e52e2782410f43913cf4a"
+entity_id: "ve-117e52e2782410f43913cf4a"
+schema_version: "1"
 ---
 
-#  7-Zip Mark-of-the-Web 绕过漏洞 [CVE-2025-0411] - POC   
+# 7-Zip Mark-of-the-Web 绕过漏洞
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：7-Zip on Windows
+- 文献类型：MotW绕过PoC演示摘要
+- 版本、权限及部署边界：24.07与修复24.09对照；带MotW双层压缩包且受害者解压后执行载荷；用户交互必需
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. NVD参考URL错为CVE-2025-0441，与全文0411不符，应纠正引用而非新增漏洞
+2. 安全标记不传播是主效果，后续用户运行加载器的代码执行不是7-Zip直接内存RCE，摘要需保留区分
+3. 声称24.09之前所有版本过宽需原公告版本下限/平台行为核对；精确24.07/24.09实验可保留
+4. 源ZDI和dhmosfunk源码齐全但未固定提交，主要证据GIF未视检；网站访问本身与打开/运行阶段关系需写清
+5. 送货等机翻标题和装饰尾部清理，补7-Zip官方版本公告
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://www.zerodayinitiative.com/advisories/ZDI-25-045/>
+- 原文参考链接（未重新核验）：<https://nvd.nist.gov/vuln/detail/CVE-2025-0441>
+- 原文参考链接（未重新核验）：<https://securityonline.info/cve-2025-0411-7-zip-security-vulnerability-enables-code-execution-update-now/>
+- 原文参考链接（未重新核验）：<https://github.com/dhmosfunk/7-Zip-CVE-2025-0411-POC>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
  Ots安全   2025-01-23 05:04  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/bL2iaicTYdZn7gtxSFZlfuCW6AdQib8Q1onbR0U2h9icP1eRO6wH0AcyJmqZ7USD0uOYncCYIH7ZEE8IicAOPxyb9IA/640?wx_fmt=gif "")  
@@ -90,4 +145,4 @@ https://github.com/dhmosfunk/7-Zip-CVE-2025-0411-POC
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

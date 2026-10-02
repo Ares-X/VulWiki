@@ -1,8 +1,55 @@
 ---
 source: "MrWQ/vulnerability-paper"
+id: "vw-bd34bda153477d569d63fbab"
+entity_id: "ve-bd34bda153477d569d63fbab"
+schema_version: "1"
+title: "嵌入式 HMI 软件 - InduSoft Web Studio RCE 漏洞复现"
+product: "InduSoft Web Studio Remote Agent"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+prerequisites: "WinXP/2003，手动开启4322 Remote Agent；试验7.1 vs原模块6.1SP6"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%99%BA%E8%83%BD%E8%AE%BE%E5%A4%87/InduSoft/%E5%B5%8C%E5%85%A5%E5%BC%8F%20HMI%20%E8%BD%AF%E4%BB%B6%20-%20InduSoft%20Web%20Studio%20RCE%20%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0.md"
+review_date: "2026-10-02"
+side_effects: "文中写入/上传步骤会创建或覆盖目标文件；须先核对服务账户写权限、保存路径和脚本解析条件，验证后按原路径核查残留；回连样例可能向外部地址发送网络请求或建立会话；应使用自己的隔离回连服务，DNS/LDAP 到达只能证明相应交互，不能单独证明 RCE"
+source_url: "https://mp.weixin.qq.com/s/q5SWUXN_7Ab2g7653bEjSA"
+source_status: "recorded"
 ---
 
 # 嵌入式 HMI 软件 - InduSoft Web Studio RCE 漏洞复现
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：InduSoft Web Studio Remote Agent
+- 本文讨论：EDB21837远程文件上传/MOF执行链；仅称2011CVE未给编号
+- 版本、权限与配置前提：WinXP/2003，手动开启4322 Remote Agent；试验7.1 vs原模块6.1SP6
+- 资料类型：工业HMI实验复现；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 日志显示no session，随后“这里需要开启一下”全赖截图，关键恢复步骤无文本
+- getsystem为后续提权，与原服务漏洞分开；不能把Windows主机当硬件漏洞
+- 安装包仅第三方下载站无哈希；没有固件/软件修复范围，推广占大段
+
+### 操作风险与恢复
+
+- 文中写入/上传步骤会创建或覆盖目标文件；须先核对服务账户写权限、保存路径和脚本解析条件，验证后按原路径核查残留
+- 回连样例可能向外部地址发送网络请求或建立会话；应使用自己的隔离回连服务，DNS/LDAP 到达只能证明相应交互，不能单独证明 RCE
+
+### 待核与来源
+
+- 正式CVE、服务权限、MOF执行及7.1准确build待原研核验
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/q5SWUXN_7Ab2g7653bEjSA)

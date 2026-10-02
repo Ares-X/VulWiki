@@ -1,6 +1,42 @@
 ---
 source: "hatch 补库批 20260928"
+product: "ThinkPHP / bind 表达式 update SQL 注入"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "Thinkphp 3.2.3 update注入漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：<=3.2.3未给引入下限；需要可控数组进入where且save触发bind替换"
+side_effects: "未执行；本文需注意的操作影响：SQL更新副作用须标识；payload经save改变用户和money字段，不能直接用于生产验证"
+source_status: "unknown"
+id: "vw-8e105508e529049170e65af9"
+entity_id: "ve-8e105508e529049170e65af9"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：&lt;=3.2.3未给引入下限；需要可控数组进入where且save触发bind替换
+
+代码与实验材料：完整where/save/parseWhereItem/update/execute摘录，构造用户和money更新案例；未执行
+
+来源证据范围：有安全客原始分析与官方3.2手册
+
+- **结论使用边界（1）**：示例源码转码受损；依据：namespace HomeController/use ThinkController丢反斜杠；execute里的三连单引号破坏原本转义。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **适用与权限边界（2）**：复现前提与修复不完整；依据：缺member建表语句、数据库驱动与精确patch；&lt;=3.2.3过宽。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **操作与副作用边界（3）**：SQL更新副作用须标识；依据：payload经save改变用户和money字段，不能直接用于生产验证。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+- **事实待核（4）**：历史热度表述应时间化；依据：“目前最广泛”没有日期或统计，不可视为当前事实。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Thinkphp 3.2.3 update注入漏洞
 

@@ -1,8 +1,45 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Oracle 紧急发布安全更新，修复 Identity Manager 和 Web Services Manager 中的关键远程代码执行漏洞"
+product: "Oracle Identity Manager and Web Services Manager"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2026-21992"
+referenced_identifiers: ""
+identifier_role: "primary"
+cve: "CVE-2026-21992"
+prerequisites: "相应REST/Web Services Security模块HTTP可达；12.2.1.4.0/14.1.2.1.0；声称无需认证"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-28f6c7e079befa77f2ed2a58"
+entity_id: "ve-28f6c7e079befa77f2ed2a58"
+schema_version: "1"
 ---
 
-#  Oracle 紧急发布安全更新，修复 Identity Manager 和 Web Services Manager 中的关键远程代码执行漏洞  
+# Oracle 紧急发布安全更新，修复 Identity Manager 和 Web Services Manager 中的关键远程代码执行漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：相应REST/Web Services Security模块HTTP可达；12.2.1.4.0/14.1.2.1.0；声称无需认证
+- 证据范围：公告摘要无PoC；同CVE覆盖两个明确产品
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- P0错归Oracle MySQL Server，实际Fusion Middleware身份/服务安全组件
+- 缺正式安全公告/补丁文档直链，末尾承认来源无法确定
+- 无需认证不等于必然全网横向控制，后续影响按部署权限限定
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
  网安百色   2026-03-21 10:29  
   
 ![](https://mmbiz.qpic.cn/mmbiz_png/WibvcdjxgJnto4BLeffzXvy0ZBoSjfC0WcDgz9DfbWk1ibY0zfG4WicNibo9aeLSOaZSbiaj4UYGvlEB0PRzGLPAKgpAWVVTWeiceibudTiczNYmuBk/640?wx_fmt=png&from=appmsg "")  

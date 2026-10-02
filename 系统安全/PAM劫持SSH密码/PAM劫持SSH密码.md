@@ -1,8 +1,63 @@
 ---
 source: "Mr-xn/Penetration_Testing_POC"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "PAM劫持SSH密码"
+product: "Linux PAM/sshLooterC"
+record_type: "analysis"
+document_type: "已获权限后的PAM凭据记录工具教程"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "需已可写系统PAM模块/配置等管理权限；Ubuntu16/CentOS7实验"
+side_effects: "这不是PAM/SSH漏洞或普通用户提权，而是已获管理员权限后凭据截获/持久化方法，应与漏洞库主体分开；禁SELinux/自动audit2allow扩权有安全副作用，不宜当通用修复方案；正文提供实验用途但缺清理/恢复与访问边界说明"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/PAM%E5%8A%AB%E6%8C%81SSH%E5%AF%86%E7%A0%81/PAM%E5%8A%AB%E6%8C%81SSH%E5%AF%86%E7%A0%81.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-fa395db68c324bec2eea2bdd"
+entity_id: "ve-fa395db68c324bec2eea2bdd"
+schema_version: "1"
 ---
 
-# 0x00 前言
+# PAM劫持SSH密码
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Linux PAM/sshLooterC
+- 文献类型：已获权限后的PAM凭据记录工具教程
+- 版本、权限及部署边界：需已可写系统PAM模块/配置等管理权限；Ubuntu16/CentOS7实验
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 这不是PAM/SSH漏洞或普通用户提权，而是已获管理员权限后凭据截获/持久化方法，应与漏洞库主体分开
+2. 两版本代码char message[1024]却snprintf长度2048是明确缓冲区边界错误；认证返回值只检查pam_get_user而不检查取密码调用
+3. 声称同so跨Ubuntu/CentOS通用未限定架构/ABI依赖；只有说明与外链，不完整源码构建锁定
+4. 禁SELinux/自动audit2allow扩权有安全副作用，不宜当通用修复方案；正文提供实验用途但缺清理/恢复与访问边界说明
+5. 如图位置无实际图片引用属于源文展示缺失，不是仓库图片缺档；原项目/文章/t00ls归属明确
+
+### 操作风险
+
+这不是PAM/SSH漏洞或普通用户提权，而是已获管理员权限后凭据截获/持久化方法，应与漏洞库主体分开；禁SELinux/自动audit2allow扩权有安全副作用，不宜当通用修复方案；正文提供实验用途但缺清理/恢复与访问边界说明
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://github.com/mthbernardes/sshLooterC>
+- 原文参考链接（未重新核验）：<https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/security-enhanced_linux/index>
+- 原文参考链接（未重新核验）：<https://mthbernardes.github.io/persistence/2018/02/10/stealing-ssh-credentials-another-approach.html>
+- 原文参考链接（未重新核验）：<https://github.com/mthbernardes/sshLooter>
+- 原文参考链接（未重新核验）：<https://www.t00ls.net/thread-56235-1-1.html>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
 
 使用strace来获取ssh密码的方法并不是100％有效的，因为strace的输出在不同linux发行版上会发生变化，需要有针对性的写匹配规则，于是乎就找到了另一种方法PAM劫持SSH密码。参考链接在最后。
 

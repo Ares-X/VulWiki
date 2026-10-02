@@ -1,6 +1,38 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+product: "ZK Framework主组件；ConnectWise/R1Soft下游链"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2022-36537"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "重大供应链威胁！这个 Java 开源框架存在严重漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：列9.6.1/9.6.0.1/9.5.1.3/9.0.1.2/8.6.4.1为受影响版本但缺分支范围运算符；ZK9.6.2及SBM6.16.4称修复"
+side_effects: "未执行；本文需注意的操作影响：框架缺陷与下游完整接管混淆风险；AuUploader读取并不等于每个ZK应用RCE；R1Soft高权限代理链条件必须分开"
+source_status: "unknown"
+id: "vw-ab07a7a0f4fb62c9448d6b3c"
+entity_id: "ve-ab07a7a0f4fb62c9448d6b3c"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：列9.6.1/9.6.0.1/9.5.1.3/9.0.1.2/8.6.4.1为受影响版本但缺分支范围运算符；ZK9.6.2及SBM6.16.4称修复
+
+代码与实验材料：无PoC，基础是Web上下文文件读取，下游R1Soft可结合密钥等到RCE与备份代理横向能力
+
+来源证据范围：仅DarkReading/FreeBuf二手链；CISA、Fox-IT、Huntress原始报告未直接链接
+
+- **适用与权限边界（1）**：框架缺陷与下游完整接管混淆风险；依据：AuUploader读取并不等于每个ZK应用RCE；R1Soft高权限代理链条件必须分开。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **事实待核（2）**：版本和事件统计需一手证据；依据：5000暴露与286后门是不同口径/日期，不能等同受影响数；已知已开发漏洞为KEV误译。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 #  重大供应链威胁！这个 Java 开源框架存在严重漏洞   
  关键基础设施安全应急响应中心   2023-03-03 14:37  

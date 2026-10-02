@@ -1,6 +1,38 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+product: "WordPress Advanced Custom Fields free/pro"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2023-30777"
+referenced_identifiers: "CVE-2023-30177; CVE-2023-31144; CVE-2023-29489"
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "WordPress 热门插件中存在漏洞，200多万网站受影响"
+prerequisites: "来源所述条件，未列明部分仍待核：victim authenticated user with access opens craftedURL; fixed6.1.6 claimed"
+side_effects: "未执行；本文需注意的操作影响：引用新闻原文但缺原始Patchstack公告，推荐阅读空链接文字及推广应清理"
+source_status: "unknown"
+id: "vw-09ef327cd0c6fb659e865b5d"
+entity_id: "ve-09ef327cd0c6fb659e865b5d"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：victim authenticated user with access opens craftedURL; fixed6.1.6 claimed
+
+- **事实待核（1）**：主CVE缺元数据，Craft/cPanel编号仅背景不可并入ACF漏洞。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **适用与权限边界（2）**：翻译称存储型向尽可能多攻击者分发恶意链接、可被提升至默认安装等语句错误或不通，应对原文校订。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **证据待核（3）**：200万是安装量而非逐站验证影响；没有完整affected范围。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **来源与引用处置（4）**：引用新闻原文但缺原始Patchstack公告，推荐阅读空链接文字及推广应清理。保留这部分来源材料并与技术结论分开；其引用或宣传内容不能补足本文漏洞的证据。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 #  WordPress 热门插件中存在漏洞，200多万网站受影响   
 Ravie Lakshmanan  代码卫士   2023-05-08 17:48  

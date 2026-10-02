@@ -1,8 +1,61 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "ctfshow web入门 命令执行4"
+product: "ctfshow PHP靶场"
+record_type: "analysis"
+document_type: "CTF题解Web71–77"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "依各关PHP/disable_functions/open_basedir/FFI及MySQL同主机FILE权限；UAF限特定PHP Unix构建"
+side_effects: "FFI需扩展加载且ffi.enable允许请求上下文，PHP7.4存在API不足以直接可用；有写1.txt副作用"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/ctfshow%20web%E5%85%A5%E9%97%A8%20%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C4.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-c67f66cf221875c6815fce94"
+entity_id: "ve-c67f66cf221875c6815fce94"
+schema_version: "1"
 ---
 
-#  ctfshow web入门 命令执行4  
+# ctfshow web入门 命令执行4
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：ctfshow PHP靶场
+- 文献类型：CTF题解Web71–77
+- 版本、权限及部署边界：依各关PHP/disable_functions/open_basedir/FFI及MySQL同主机FILE权限；UAF限特定PHP Unix构建
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 第二个Web72应核是否73，缺关卡编号；glob列目录与open_basedir文件读取、禁scandir与include是不同机制不能合并
+2. DirectoryIterator载荷被数学字体/丢$毁坏，长UAF源码全散行无围栏，原始作者/版本/CVE未标，不把通用PHP7.4当皆可UAF
+3. UAF硬编码对象布局和ELF读取需特定版本/架构；记录未执行且不提供修正实现
+4. PDO读取文件需DB账户FILE权限、secure_file_priv与数据库本机可见同路径，root/root仅靶场，不因information_schema默认就可读
+5. FFI需扩展加载且ffi.enable允许请求上下文，PHP7.4存在API不足以直接可用；有写1.txt副作用
+6. exit前输出flush依缓冲处理，ctfshow内exit使外ob_end_flush不可达；保留失败UAF与后续替代路径但不泛化
+7. 只有CSDN文章名无链接和大量未视检截图，需完整环境/源码
+
+### 操作风险
+
+FFI需扩展加载且ffi.enable允许请求上下文，PHP7.4存在API不足以直接可用；有写1.txt副作用
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 zoe
                     zoe  哦0吼   2026-02-12 02:10  
   
@@ -918,4 +971,4 @@ exit();
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

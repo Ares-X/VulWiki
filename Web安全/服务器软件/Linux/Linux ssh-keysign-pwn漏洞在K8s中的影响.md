@@ -1,9 +1,46 @@
 ---
 cve: "CVE-2026-46333"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Linux ssh-keysign-pwn漏洞在K8s中的影响"
+product: "Linux ptrace/pidfd_getfd；Kubernetes运行策略"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2026-46333"
+referenced_identifiers: ""
+identifier_role: "primary"
+prerequisites: "适用内核退出竞争、setuid实验helper、同容器非root进程，seccomp/NoNewPrivs/Yama条件决定可达性"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-7e7ac242be4189cad986e3cc"
+entity_id: "ve-7e7ac242be4189cad986e3cc"
+schema_version: "1"
 ---
 
-#  Linux ssh-keysign-pwn漏洞在K8s中的影响  
+# Linux ssh-keysign-pwn漏洞在K8s中的影响
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：适用内核退出竞争、setuid实验helper、同容器非root进程，seccomp/NoNewPrivs/Yama条件决定可达性
+- 证据范围：明确未证明host root、逃逸、真实Secrets和普遍云平台影响，较严谨；可保留独立控制矩阵，不因无代码称缺失PoC，作者明确不公开
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 日志换行合并，需恢复易于比对字段
+- 三方面提供帮助实际列四项，营销部分可独立
+- 测试内核版本是观测对象非完整影响/修复范围，应结构化为矩阵
+- 所有结果是来源作者声明，本次未测试；500次失败不证明Talos普遍免疫，正文已正确限定
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 Dubito
                     Dubito  云原生安全指北   2026-05-19 00:35  
   

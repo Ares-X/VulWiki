@@ -1,8 +1,53 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-d15b9edcd52c2d5139c56f1e"
+entity_id: "ve-d15b9edcd52c2d5139c56f1e"
+schema_version: "1"
+title: "Cloudflare WAF存在高危0day漏洞"
+product: "Cloudflare WAF ACME路径逻辑"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+prerequisites: "历史边缘逻辑、有效挑战token及特定路径；后续影响依赖源站缺陷"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%AE%89%E5%85%A8%E8%AE%BE%E5%A4%87/Cloudflare%20WAF/Cloudflare%20WAF%E5%AD%98%E5%9C%A8%E9%AB%98%E5%8D%B10day%E6%BC%8F%E6%B4%9E.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 #  Cloudflare WAF存在高危0day漏洞  
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Cloudflare WAF ACME路径逻辑
+- 本文讨论：2025 ACME跨主机挑战token绕过，无CVE
+- 版本、权限与配置前提：历史边缘逻辑、有效挑战token及特定路径；后续影响依赖源站缺陷
+- 资料类型：WAF绕过新闻摘要；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 2026年1月仍称存在0day，遗漏同组详文明确2025-10-27已修复的重要状态
+- 简化成所有token不匹配都会绕过，缺有效活动token/跨zone前提
+- 缺原研究/厂商链接，非所有现代站点必有HTTP-01路径
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 有效token范围、修复日期及客户影响待厂商原文核验
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
  网安百色   2026-01-20 11:22  
   
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/1QIbxKfhZo4x2icHa78mLXEj3fk2w4nZrjvOfeHZuYF6ticeQIuVh4V0xt9IcV25XMibgrPricZlmRf86eOgRicVFIQ/640?wx_fmt=jpeg&from=appmsg "")  

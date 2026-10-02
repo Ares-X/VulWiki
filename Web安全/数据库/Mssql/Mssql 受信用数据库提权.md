@@ -1,8 +1,50 @@
 ---
 source: "hatch 补库批 20260928"
+title: "Mssql 受信用数据库提权"
+product: "Microsoft SQL Server TRUSTWORTHY/EXECUTE AS OWNER"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "已有SQL登录、db_owner、TRUSTWORTHY ON，数据库owner为sysadmin；不是默认无凭据漏洞"
+source_status: "unknown"
+side_effects: "含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。"
+id: "vw-3a3825124e1b14986d05bfd7"
+entity_id: "ve-3a3825124e1b14986d05bfd7"
+schema_version: "1"
 ---
 
 # Mssql 受信用数据库提权
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：已有SQL登录、db_owner、TRUSTWORTHY ON，数据库owner为sysadmin；不是默认无凭据漏洞
+- 证据范围：详细脆弱实验设置与NetSPI脚本，脚本明确检查owner条件
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 开头漏数据库owner必须有sysadmin权限，完整脚本才说明
+- 启用xp_cmdshell并非此SQL角色提权必要条件，应移到可选后续影响/标注风险
+- 测试SQLServer版本只有图片，正文范围仅脚本声称2005以上
+- Mssql与SQL Server产品目录需合并归一
+- 脚本删除辅助存储过程但保留新管理员/角色变更；清理范围需说明
+- 无CVE，宜分类为危险配置/授权设计滥用而非单一版本漏洞
+
+### 操作风险与资料使用
+
+- 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 0x01 前提
 ---------

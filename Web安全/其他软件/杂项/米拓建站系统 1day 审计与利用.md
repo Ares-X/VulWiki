@@ -1,9 +1,61 @@
 ---
 cnvd: "CNVD-2021-01930"
 source: "MrWQ/vulnerability-paper"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "米拓建站系统 1day 审计与利用"
+product: "MetInfo 安装流程配置写入 CNVD-2021-01930关联"
+record_type: "unknown"
+document_type: "技术文章（细分类待核）"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "范围7.3.0-7.0.0逆序应规范，展示四版本不自动覆盖所有补丁；必须安装流程可达且安装锁/配置可写，正文未证明已安装站点能绕过锁或认证；末尾推荐SQLi非本文漏洞，保留多版本分析并去招稿/靶场广告"
+side_effects: "安装页面db_prefix到config_db.php写入链明确但关键源码全截图；范围7.3.0-7.0.0逆序应规范，展示四版本不自动覆盖所有补丁；CNVD被写为进一步深入关联，没有公告证明该编号就是本配置写入"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/%E7%B1%B3%E6%8B%93%E5%BB%BA%E7%AB%99%E7%B3%BB%E7%BB%9F%201day%20%E5%AE%A1%E8%AE%A1%E4%B8%8E%E5%88%A9%E7%94%A8.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+source_url: "https://mp.weixin.qq.com/s/n9g4zZs5a1H8qTbbwFBe5Q"
+id: "vw-e0813e7b33dc5a562222c5e3"
+entity_id: "ve-e0813e7b33dc5a562222c5e3"
+schema_version: "1"
 ---
 
 # 米拓建站系统 1day 审计与利用
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：MetInfo 安装流程配置写入 CNVD-2021-01930关联
+- 文献类型：技术文章（细分类待核）
+- 版本、权限及部署边界：范围7.3.0-7.0.0逆序应规范，展示四版本不自动覆盖所有补丁；必须安装流程可达且安装锁/配置可写，正文未证明已安装站点能绕过锁或认证；末尾推荐SQLi非本文漏洞，保留多版本分析并去招稿/靶场广告
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 安装页面db_prefix到config_db.php写入链明确但关键源码全截图
+2. 范围7.3.0-7.0.0逆序应规范，展示四版本不自动覆盖所有补丁
+3. 必须安装流程可达且安装锁/配置可写，正文未证明已安装站点能绕过锁或认证
+4. CNVD被写为进一步深入关联，没有公告证明该编号就是本配置写入
+5. payload起始中文引号可能转码损坏，原始HTTP和生成配置内容缺文本
+6. 末尾推荐SQLi非本文漏洞，保留多版本分析并去招稿/靶场广告
+
+### 操作风险
+
+安装页面db_prefix到config_db.php写入链明确但关键源码全截图；范围7.3.0-7.0.0逆序应规范，展示四版本不自动覆盖所有补丁；CNVD被写为进一步深入关联，没有公告证明该编号就是本配置写入
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://mp.weixin.qq.com/s/n9g4zZs5a1H8qTbbwFBe5Q>
+
+### 归档技术正文
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/n9g4zZs5a1H8qTbbwFBe5Q)

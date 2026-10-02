@@ -1,6 +1,40 @@
 ---
 source: "hatch 补库批 20260928"
+product: "ThinkPHP / session File驱动"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "Thinkphp < 6.0.2 session id未作过滤导致getshell"
+prerequisites: "来源所述条件，未列明部分仍待核：<6.0.2，比较6.0.1/6.0.2；需开启session、File存储、可控内容、web可达与解析"
+side_effects: "未执行；本文需注意的操作影响：“php后缀即可getshell”缺关键条件；只有可控PHP内容且缓存路径HTTP可达并可执行才成立，默认public根不当然覆盖runtime"
+source_status: "unknown"
+id: "vw-3b09a5bd3bab0dcfc3dc2925"
+entity_id: "ve-3b09a5bd3bab0dcfc3dc2925"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：&lt;6.0.2，比较6.0.1/6.0.2；需开启session、File存储、可控内容、web可达与解析
+
+代码与实验材料：完整save/write/getFileName及自建testsession2，URL name为空，内容仅图片
+
+来源证据范围：先知7109
+
+- **操作与副作用边界（1）**：“php后缀即可getshell”缺关键条件；依据：只有可控PHP内容且缓存路径HTTP可达并可执行才成立，默认public根不当然覆盖runtime。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+- **适用与权限边界（2）**：未明确启用SessionInit；依据：源码跟踪middleware但复现未说明默认关闭需要显式开启。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **适用与权限边界（3）**：载荷与结果依图片；依据：文字URL name=空，未提供真实内容或response，标题边界无下限。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Thinkphp \< 6.0.2 session id未作过滤导致getshell
 

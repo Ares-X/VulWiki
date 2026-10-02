@@ -1,8 +1,66 @@
 ---
 source: "MrWQ/vulnerability-paper"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "ToDesk 软件在权限提升中的应用"
+product: "ToDesk Windows3.0.1.0 Lite/完整版"
+record_type: "vulnerability"
+document_type: "远控配置滥用与本地提权场景"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "WindowsServer2008R2x64；场景1已有Administrator；场景2Users且目录完全可写、SYSTEM更新服务"
+side_effects: "涉及修改远控密码、自启、替换程序等持久变更与规避告警叙述，不宜当默认自查；清理操作/恢复未提供"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/ToDesk/ToDesk%20%E8%BD%AF%E4%BB%B6%E5%9C%A8%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+source_url: "https://mp.weixin.qq.com/s/dnatpGxOb73tmF_DS5PR7Q"
+id: "vw-8e9e4862b6b48b99e174b06e"
+entity_id: "ve-8e9e4862b6b48b99e174b06e"
+schema_version: "1"
 ---
 
 # ToDesk 软件在权限提升中的应用
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：ToDesk Windows3.0.1.0 Lite/完整版
+- 文献类型：远控配置滥用与本地提权场景
+- 版本、权限及部署边界：WindowsServer2008R2x64；场景1已有Administrator；场景2Users且目录完全可写、SYSTEM更新服务
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 场景1标题安装版低权限但正文明确Lite且已有Administrator，实为凭据/远控滥用不是新增低权提权，应拆清
+2. 场景2安装目录ACL缺陷、跨主机可恢复密码材料与更新程序替换是不同问题，应分别记录证据和初始权限
+3. 明文密码/远控设备ID/加密可复用配置和邮箱片段应脱敏，不能把公开文章中的敏感样本继续作为可操作凭据
+4. 自动更新后SYSTEM执行需精确触发/服务令牌记录，正文只截图，缺受影响范围/修复版本和厂商回应
+5. 新设备登录仍需用户批准这一负面结果应保留，不把复制账户配置宣称绕过MFA/所有认证
+6. 涉及修改远控密码、自启、替换程序等持久变更与规避告警叙述，不宜当默认自查；清理操作/恢复未提供
+7. 比较软件更稳定属无依据推广；剪贴板小问题与漏洞主体无关，删引流
+
+### 操作风险
+
+涉及修改远控密码、自启、替换程序等持久变更与规避告警叙述，不宜当默认自查；清理操作/恢复未提供
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://mp.weixin.qq.com/s/dnatpGxOb73tmF_DS5PR7Q>
+- 原文参考链接（未重新核验）：<http://ksria.com/simpread/>
+- 原文参考链接（未重新核验）：<https://www.todesk.com>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=Mzg4NTUwMzM1Ng==&mid=2247487086&idx=1&sn=37fa19dd8ddad930c0d60c84e63f7892&chksm=cfa6aa7df8d1236bb49410e03a1678d69d43014893a597a6690a9a97af6eb06c93e860aa6836&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=Mzg4NTUwMzM1Ng==&mid=2247486961&idx=1&sn=d02db4cfe2bdf3027415c76d17375f50&chksm=cfa6a9e2f8d120f4c9e4d8f1a7cd50a1121253cb28cc3222595e268bd869effcbb09658221ec&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=Mzg4NTUwMzM1Ng==&mid=2247486327&idx=1&sn=71fc57dc96c7e3b1806993ad0a12794a&chksm=cfa6af64f8d1267259efd56edab4ad3cd43331ec53d3e029311bae1da987b2319a3cb9c0970e&scene=21#wechat_redirect>
+
+### 归档技术正文
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/dnatpGxOb73tmF_DS5PR7Q)<table><tbody><tr><td width="557" valign="top" height="62"><section><strong>声明：</strong>该公众号大部分文章来自作者日常学习笔记，也有少部分文章是经过原作者授权和其他公众号白名单转载，未经授权，严禁转载，如需转载，联系开白。</section><section>请勿利用文章内的相关技术从事非法测试，如因此产生的一切不良后果与文章作者和本公众号无关。</section></td></tr></tbody></table>

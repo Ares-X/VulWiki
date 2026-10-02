@@ -1,13 +1,50 @@
 ---
-cnvd: "QVD-2023-5012"
-version: "泛微e-cology9<=10.55"
-fofa: "语句**"
 source: "MrWQ/vulnerability-paper"
+title: "泛微e-cology browser.jsp未授权SQL注入"
+product: "泛微e-cology"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "QVD-2023-5012"
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "e-cology9<=10.55"
+prerequisites: "声称无需认证；空格路径/多重编码"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+identifier_role: "primary"
+source_url: "https://mp.weixin.qq.com/s/GkyolTxMwj5qClEg80C5CQ"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E6%B3%9B%E5%BE%AEoa/QVD-2023-5012%E2%80%94%E6%B3%9B%E5%BE%AE%20e-cology9%20SQL%20%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md"
+fofa_unverified: "语句**"
+id: "vw-5c89289e995c5247d641564a"
+entity_id: "ve-5c89289e995c5247d641564a"
+schema_version: "1"
 ---
 
-# QVD-2023-5012—泛微 e-cology9 SQL 注入漏洞
+# 泛微e-cology browser.jsp未授权SQL注入
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：泛微e-cology；browser.jsp未授权SQL注入
+- 版本、配置及部署条件：e-cology9<=10.55
+- 认证与权限前提：声称无需认证；空格路径/多重编码
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- QVD-2023-5012错误放cnvd字段；fofa误抽为语句**
+- 代码缺头体空行，只有截图结果，重复免责声明很长
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/GkyolTxMwj5qClEg80C5CQ)
 
 **漏洞简介**
@@ -36,7 +73,7 @@ app="泛微-协同商务系统"
 
 POC：  
 
-```
+```http
 POST /mobile/%20/plugin/browser.jsp HTTP/1.1
 Host: ****
 Content-Type: application/x-www-form-urlencoded

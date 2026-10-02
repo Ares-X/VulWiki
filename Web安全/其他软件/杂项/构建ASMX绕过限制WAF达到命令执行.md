@@ -1,8 +1,58 @@
 ---
 source: "Mr-xn/Penetration_Testing_POC"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "构建ASMX绕过限制WAF达到命令执行"
+product: "ASP.NET ASMX上传链技巧"
+record_type: "unknown"
+document_type: "技术文章（细分类待核）"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "无具体WAF产品版本且依赖已存在任意文件上传及ASMX执行映射"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/%E6%9E%84%E5%BB%BAASMX%E7%BB%95%E8%BF%87%E9%99%90%E5%88%B6WAF%E8%BE%BE%E5%88%B0%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-28729e2869293697bd2c0be4"
+entity_id: "ve-28729e2869293697bd2c0be4"
+schema_version: "1"
 ---
 
 # 构建ASMX绕过限制WAF达到命令执行
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：ASP.NET ASMX上传链技巧
+- 文献类型：技术文章（细分类待核）
+- 版本、权限及部署边界：无具体WAF产品版本且依赖已存在任意文件上传及ASMX执行映射
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 无具体WAF产品版本且依赖已存在任意文件上传及ASMX执行映射
+2. WebService命名空间特性放New_Process而实际Service未标，SOAPAction可能不匹配
+3. e.Close在ReadToEnd前易关闭输出流，顺序读stdout/stderr有阻塞风险
+4. 只有源码无成功响应
+5. 应区分WAF特征绕过与根因上传缺陷并标落地脚本清理
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
 
 ### 以下信息来自倾旋知识星球，在此做整理  
 

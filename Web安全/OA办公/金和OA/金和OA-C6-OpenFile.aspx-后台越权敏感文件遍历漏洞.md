@@ -1,27 +1,67 @@
 ---
-version: "金和OA C6"
 source: "Threekiii/Vulnerability-Wiki"
+title: "金和C6 OpenFile附件IDOR"
+product: "金和C6"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "C6无build"
+prerequisites: "普通用户登录"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+source_url: "https://github.com/Threekiii/Vulnerability-Wiki"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E9%87%91%E5%92%8COA/%E9%87%91%E5%92%8COA-C6-OpenFile.aspx-%E5%90%8E%E5%8F%B0%E8%B6%8A%E6%9D%83%E6%95%8F%E6%84%9F%E6%96%87%E4%BB%B6%E9%81%8D%E5%8E%86%E6%BC%8F%E6%B4%9E.md"
+id: "vw-01b370511cd916c5a9ae0564"
+entity_id: "ve-01b370511cd916c5a9ae0564"
+schema_version: "1"
 ---
 
-# 金和OA C6 OpenFile.aspx 后台越权敏感文件遍历漏洞
+# 金和C6 OpenFile附件IDOR
 
-## 漏洞描述
+## 条目说明
+
+- 对象与具体问题：金和C6；OpenFile附件IDOR
+- 版本、配置及部署条件：C6无build
+- 认证与权限前提：普通用户登录
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 比289/290修复Python URL字符串，适合作合并正文
+- type固定pdf与需正确扩展说明冲突；只末3字符不能处理docx
+- 获得文件元数据不自动证明越权，需双账号ACL；Cookie正则尾分号条件脆弱
+- 默认口令独立配置风险，缺修复build
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
+### 漏洞描述
 
 金和OA C6 存在后台越权敏感文件遍历漏洞，普通用户通过遍历特殊参数可以获取其他用户上传的敏感文件
 
-## 漏洞影响
+### 漏洞影响
 
 ```
 金和OA C6
 ```
 
-## 网络测绘
+### 网络测绘
 
 ```
 app="Jinher-OA"
 ```
 
-## 漏洞复现
+### 漏洞复现
 
 默认用户口令：admin/000000
 
@@ -95,7 +135,7 @@ http://xxx.xxx.xxx.xxx/C6/control/OpenFile.aspx?id=1200&name=&type=pdf
 
 于是只需要通过刚刚的ID遍历，获取两个关键参数就能下载其他人发送的敏感文件，且只需要普通用户权限
 
-## 漏洞POC
+### 漏洞POC
 
 - POC只检测是否存在漏洞，且漏洞存在于后台需要登录
 - 运行后访问链接即可下载文件

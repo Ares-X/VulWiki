@@ -1,6 +1,41 @@
 ---
 cve: "CVE-2018-18086"
+product: "EmpireCMS7.5"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2018-18086; CVE-2018-19462"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "Web 安全 - EmpireCMS 漏洞常见漏洞分析及复现"
+prerequisites: "来源所述条件，未列明部分仍待核：后台模型/SQL权限及DB FILE/secure_file_priv；ehash或前台点击XSS"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/MY__BqmTsWzFP6Pg6bKDrw"
+id: "vw-118b550f0453d5be98bc2283"
+entity_id: "ve-118b550f0453d5be98bc2283"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：后台模型/SQL权限及DB FILE/secure_file_priv；ehash或前台点击XSS
+
+- **证据待核（1）**：与153同文核心/同图URL，本篇图更全；目录Web安全-EmpireCMS重复分类。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **结论使用边界（2）**：同18086混贴备份表名漏洞、frontmatter漏19462、secure_file_priv解释错。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **实验改动边界（3）**：代码换行全丢使双斜杠注释吞正文，部分括号有多余转义；不可直接运行。以下步骤按原实验条件保留；人工改动后的行为只支持该修改环境，不用于证明未修改发行版默认可利用。
+
+- **来源与引用处置（4）**：同弱密码全局DB授权/500归WAF等不严谨建议，课程抽奖推广可剥离。保留这部分来源材料并与技术结论分开；其引用或宣传内容不能补足本文漏洞的证据。
+
+- **适用与权限边界（5）**：前台是DOMXSS且需点击，缺默认关闭会员空间条件。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Web 安全 - EmpireCMS 漏洞常见漏洞分析及复现
 

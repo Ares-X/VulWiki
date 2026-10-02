@@ -1,8 +1,46 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "【Struts2 - 命令 - 代码执行漏洞分析系列】 S2-001"
+product: "Struts2 / WebWork"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "S2-001"
+referenced_identifiers: ""
+identifier_role: "primary"
+prerequisites: "altSyntax、s标签表单、Action验证失败回填、递归OGNL；列WebWork2.1及2.2.0–2.2.5、Struts2.0–2.0.8"
+source_url: "https://mp.weixin.qq.com/s/BLchiURuoh_PB8Qv-1Rt1g"
+source_status: "recorded"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-bded0f86a17bd0e9a9f34e01"
+entity_id: "ve-bded0f86a17bd0e9a9f34e01"
+schema_version: "1"
 ---
 
 # 【Struts2 - 命令 - 代码执行漏洞分析系列】 S2-001
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：altSyntax、s标签表单、Action验证失败回填、递归OGNL；列WebWork2.1及2.2.0–2.2.5、Struts2.0–2.0.8
+- 证据范围：触发条件和WebWork旧版本比245完整，实际仅演示信息获取表达式，不包含独立命令执行PoC。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 第一个payload被HTML span包裹且加号丢失为留白，需恢复
+- user.dir是工作目录不是固定Tomcat bin
+- 修复引述%{1 1}加号丢失，XWork2.0.4与Struts发布版本对应应明确
+- 缺完整表单字段/请求与环境清单，依赖Vulhub截图
+- 页脚S2-048仅推荐，不计主问题；推广分隔图应移除
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/BLchiURuoh_PB8Qv-1Rt1g)

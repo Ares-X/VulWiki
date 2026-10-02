@@ -1,9 +1,46 @@
 ---
 cve: "CVE-2024-13804"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "惠普HPE CMU曝高危漏洞：攻击者可绕过认证执行远程命令"
+product: "HPE Insight Cluster Management Utility"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2024-13804"
+referenced_identifiers: ""
+identifier_role: "primary"
+prerequisites: "CMUv8.2后端RMI可达，无需原有凭据；可修改客户端"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-be5fbea866c449d711bb7c92"
+entity_id: "ve-be5fbea866c449d711bb7c92"
+schema_version: "1"
 ---
 
-#  惠普HPE CMU曝高危漏洞：攻击者可绕过认证执行远程命令   
+# 惠普HPE CMU曝高危漏洞：攻击者可绕过认证执行远程命令
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：CMUv8.2后端RMI可达，无需原有凭据；可修改客户端
+- 证据范围：executeCmdLine直接从客户端调用说明服务端授权问题；代码返回isAdmin不变，重点是调用本身非简单return true
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 只有v8.2实验未列完整影响范围
+- EOL不修补结论需HPE公告支持
+- ifconfig回显本身不证明root，需要身份输出或服务配置
+- JNLP客户端与后端RMI端口/网络限制应明确
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
  FreeBuf   2025-04-01 18:15  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/qq5rfBadR38jUokdlWSNlAjmEsO1rzv3srXShFRuTKBGDwkj4gvYy34iajd6zQiaKl77Wsy9mjC0xBCRg0YgDIWg/640?wx_fmt=gif "")  

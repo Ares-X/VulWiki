@@ -1,9 +1,61 @@
 ---
-cve: "CVE-2024-27867"
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2024-27867;CVE-2024-27812"
+identifier_role: "primary"
+primary_identifiers: "CVE-2024-27867;CVE-2024-27812"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "Apple 修补了可能允许窃听的 AirPods 蓝牙漏洞"
+product: "Apple AirPods/Beats固件；visionOS ARKit Quick Look"
+record_type: "advisory"
+document_type: "双主题漏洞新闻"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "蓝牙近距离、耳机尝试连接历史配对设备；visionOS恶意Web内容及3D对象创建"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Apple/Apple%20%E4%BF%AE%E8%A1%A5%E4%BA%86%E5%8F%AF%E8%83%BD%E5%85%81%E8%AE%B8%E7%AA%83%E5%90%AC%E7%9A%84%20AirPods%20%E8%93%9D%E7%89%99%E6%BC%8F%E6%B4%9E.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-cbb52ab998f83ca26340636c"
+entity_id: "ve-cbb52ab998f83ca26340636c"
+schema_version: "1"
 ---
 
-#  Apple 修补了可能允许窃听的 AirPods 蓝牙漏洞   
+# Apple 修补了可能允许窃听的 AirPods 蓝牙漏洞
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Apple AirPods/Beats固件；visionOS ARKit Quick Look
+- 文献类型：双主题漏洞新闻
+- 版本、权限及部署边界：蓝牙近距离、耳机尝试连接历史配对设备；visionOS恶意Web内容及3D对象创建
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 元数据只27867，后半独立讨论visionOS27812，应拆开产品和漏洞实体
+2. 首句写固件更新可能允许未授权访问，语义反转，应明确更新修复此问题
+3. 将耳机访问直接解释为窃听缺具体音频输入/状态证据；须与厂商影响描述区分
+4. 列6A326/6F8但未逐型号映射，visionOS1.2修复范围与无交互条件需官方核验
+5. 苹果公告/研究者引用未保留链接；大量调查表/公众号广告与HTML样式噪声
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<http://www.jsgjxx.com>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
  信息安全大事件   2024-06-26 21:19  
   
 Apple 发布了 AirPods的固件更新，可能允许恶意行为者以未经授权的方式访问耳机。  
@@ -63,4 +115,4 @@ http://www.jsgjxx.com
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

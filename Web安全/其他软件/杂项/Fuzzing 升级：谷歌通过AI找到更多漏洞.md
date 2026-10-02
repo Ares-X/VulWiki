@@ -1,8 +1,65 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+identifier_role: "reference"
+primary_identifiers: ""
+referenced_identifiers: "CVE-2024-9143"
+identifier_status: "unknown"
+title: "Fuzzing 升级：谷歌通过AI找到更多漏洞"
+product: "Google OSS-Fuzz AI流程"
+record_type: "advisory"
+document_type: "研究新闻"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "历史报道2024-11；OpenSSL漏洞仅作为AI发现实例，无具体受影响API部署范围"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/Fuzzing%20%E5%8D%87%E7%BA%A7%EF%BC%9A%E8%B0%B7%E6%AD%8C%E9%80%9A%E8%BF%87AI%E6%89%BE%E5%88%B0%E6%9B%B4%E5%A4%9A%E6%BC%8F%E6%B4%9E.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+source_url: "https://www.theregister.com/2024/11/20/google_ossfuzz/"
+id: "vw-7ce3ec148caf3939c6040979"
+entity_id: "ve-7ce3ec148caf3939c6040979"
+schema_version: "1"
 ---
 
-#  Fuzzing 升级：谷歌通过AI找到更多漏洞   
+# Fuzzing 升级：谷歌通过AI找到更多漏洞
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Google OSS-Fuzz AI流程
+- 文献类型：研究新闻
+- 版本、权限及部署边界：历史报道2024-11；OpenSSL漏洞仅作为AI发现实例，无具体受影响API部署范围
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 此篇是模糊测试研究新闻，不是OSS-Fuzz自身漏洞，9143应是案例关联
+2. 将现有人类编写fuzz目标漏检夸大成人类无法通过fuzzing发现，正文引用实际限定现有targets，应收敛
+3. 2024开源OSS-Fuzz与开源LLM增强实验项目混淆可能；OpenSSL严重程度及26个bug是否全部安全漏洞需原始Google/OpenSSL源校验
+4. 有TheRegister原文而无Google原博客；删除产品试用/推荐噪声，保留当时自动化前4步而补丁尚计划的边界
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://www.theregister.com/2024/11/20/google_ossfuzz/>
+- 原文参考链接（未重新核验）：<https://codesafe.qianxin.com>
+- 原文参考链接（未重新核验）：<https://oss.qianxin.com>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzI2NTg4OTc5Nw==&mid=2247521381&idx=1&sn=dda99ba77206503fe0e0b1c0e5a0a35b&chksm=ea94a50fdde32c1962a406f9ce6e4f93f34ce95f0f4a77c0ceb6e383f9a6284d442c57816e28&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzI2NTg4OTc5Nw==&mid=2247521523&idx=2&sn=9222522f67aa6bada64bed055a3adfeb&chksm=ea94a599dde32c8f8d8f5599323d8cc50d3bb12bb0716412c69e77986c4f0d238aea4efec5fa&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzI2NTg4OTc5Nw==&mid=2247521484&idx=1&sn=19327f5e0d0275273114fd7a7e37da3f&chksm=ea94a5a6dde32cb0f0b1bd0f310958066fd5a8549d8aedabac5528fbd6f1b55d985e8385ecf6&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzI2NTg4OTc5Nw==&mid=2247521331&idx=1&sn=e13cd9f9dccd9d17953e551df9108205&chksm=ea94a559dde32c4f32a18c5ad4c3a2fc98f17fb29f69f73cac5c613c67ae28f36ab473d14936&scene=21#wechat_redirect>
+
+### 归档技术正文
+
 Thomas Claburn  代码卫士   2024-11-25 09:58  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

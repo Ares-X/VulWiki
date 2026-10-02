@@ -1,10 +1,51 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "通达OA staff_info/update路径写入.user.ini并与auth_mobi会话泄露组合"
+product: "通达OA"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "文称V11.8以下，标题11.8；链前置auth_mobi限11.7；需PHP支持.user.ini及create_function"
+prerequisites: "后台Cookie；链需目标用户在线"
+side_effects: "文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行"
+review_date: "2026-10-02"
+source_url: "https://mp.weixin.qq.com/s/5TxJ_4rEPvMyjU3KVflkbQ"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E9%80%9A%E8%BE%BEOA/%28%E8%A1%A5%E5%85%85%29%20%E9%80%9A%E8%BE%BE%20OA%20v11-8%20%E5%AD%98%E5%82%A8%E5%9E%8B%20XSS%20%E4%B8%8E%20%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C.md"
+category_recommendation: "OA / 通达"
+id: "vw-a5337bab2d500376ff000685"
+entity_id: "ve-a5337bab2d500376ff000685"
+schema_version: "1"
 ---
 
-# (补充) 通达 OA v11-8 存储型 XSS 与 命令执行
+# 通达OA staff_info/update路径写入.user.ini并与auth_mobi会话泄露组合
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：通达OA；staff_info/update路径写入.user.ini并与auth_mobi会话泄露组合
+- 版本、配置及部署条件：文称V11.8以下，标题11.8；链前置auth_mobi限11.7；需PHP支持.user.ini及create_function
+- 认证与权限前提：后台Cookie；链需目标用户在线
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 标题存储XSS但本文是文件写入补充，无XSS入口；应关联前篇而非独立XSS实体
+- 脚本硬编码会话，示例路由混合斜线，缺受影响版本边界及修复依据
+- 两段大量重复上传代码可整合；循环等待会话、植入Webshell须隔离示例
+- 最终URL无需登录不等于初始上传无需认证；需明确链条件
+
+## 操作风险
+
+文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/5TxJ_4rEPvMyjU3KVflkbQ)
 
 ![](https://mmbiz.qpic.cn/mmbiz_gif/ibicicIH182el5PaBkbJ8nfmXVfbQx819qWWENXGA38BxibTAnuZz5ujFRic5ckEltsvWaKVRqOdVO88GrKT6I0NTTQ/640?wx_fmt=gif)

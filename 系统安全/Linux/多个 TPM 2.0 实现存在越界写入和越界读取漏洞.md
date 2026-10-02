@@ -1,9 +1,62 @@
 ---
-cve: "CVE-2023-1017"
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2023-1017;CVE-2023-1018"
+identifier_role: "primary"
+primary_identifiers: "CVE-2023-1017;CVE-2023-1018"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "多个 TPM 2.0 实现存在越界写入和越界读取漏洞"
+product: "TCG TPM2.0参考实现及vTPM/硬件TPM"
+record_type: "roundup"
+document_type: "多实现双漏洞研究译文"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "可发TPM命令的本地/VM来宾应用；OOB读写各2字节；列Hyper-V10.0.19041.1415、VMware16.2.4等具体测试实现"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/%E5%A4%9A%E4%B8%AA%20TPM%202.0%20%E5%AE%9E%E7%8E%B0%E5%AD%98%E5%9C%A8%E8%B6%8A%E7%95%8C%E5%86%99%E5%85%A5%E5%92%8C%E8%B6%8A%E7%95%8C%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-26345356a8fef8e32d4167a4"
+entity_id: "ve-26345356a8fef8e32d4167a4"
+schema_version: "1"
 ---
 
-#  多个 TPM 2.0 实现存在越界写入和越界读取漏洞   
+# 多个 TPM 2.0 实现存在越界写入和越界读取漏洞
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：TCG TPM2.0参考实现及vTPM/硬件TPM
+- 文献类型：多实现双漏洞研究译文
+- 版本、权限及部署边界：可发TPM命令的本地/VM来宾应用；OOB读写各2字节；列Hyper-V10.0.19041.1415、VMware16.2.4等具体测试实现
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. frontmatter只1017；正文第二CVE出现2013-1018与203-1018两错号，后文2023-1018应统一核验
+2. 不属Linux专属，实际TPM公共实现跨Windows/虚拟化/硬件；主实体与受影响集成产品分层
+3. 完整区分不同缓冲布局/清零行为和硬件无法充分调试，云平台影响只是推测不得标已验证
+4. 概念验证称.zip含Python/C但无下载URL，关键源码仅图；补丁commit纯值缺直链，Quarkslab原研究URL可恢复
+5. BYTE_ARRAY_TO_UINT16/INT16、CryptXORObfuscation/Obfuscity、CreatePrimary名称不一致及翻译边界含混需校正
+6. VMware预计4月修复是报道时点，不可当前状态；保留原研究证据差异而非按CVE全产品合并
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://blog.quarkslab.com/vulnerabilities-in-the-tpm-20-reference-implementation-code.html>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
  关键基础设施安全应急响应中心   2023-04-18 15:09  
   
 我们将在本文中详细讨论在可信平台模块(TPM) 2.0参考实现代码中发现的两个漏洞。这两个漏洞，即越界写入（CVE-2023-1017）和越界读取（CVE-2013-1018），影响了多个TPM 2.0软件实现（如虚拟化软件使用的软件）以及多个硬件TPM。  
@@ -167,4 +220,4 @@ https://blog.quarkslab.com/vulnerabilities-in-the-tpm-20-reference-implementatio
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

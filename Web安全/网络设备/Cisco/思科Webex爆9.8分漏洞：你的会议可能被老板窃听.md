@@ -1,9 +1,55 @@
 ---
 cve: "CVE-2026-20184"
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-494339af4c74a0579cd33365"
+entity_id: "ve-494339af4c74a0579cd33365"
+schema_version: "1"
+title: "思科Webex爆9.8分漏洞：你的会议可能被\"老板\"窃听"
+product: "Cisco Webex Services SSO/Control Hub"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2026-20184"
+referenced_identifiers: ""
+prerequisites: "SSO Trust Anchors组织；声称已云端修复、需重配证书"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/Cisco/%E6%80%9D%E7%A7%91Webex%E7%88%869.8%E5%88%86%E6%BC%8F%E6%B4%9E%EF%BC%9A%E4%BD%A0%E7%9A%84%E4%BC%9A%E8%AE%AE%E5%8F%AF%E8%83%BD%E8%A2%AB%E8%80%81%E6%9D%BF%E7%AA%83%E5%90%AC.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 #  思科Webex爆9.8分漏洞：你的会议可能被"老板"窃听  
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Cisco Webex Services SSO/Control Hub
+- 本文讨论：CVE-2026-20184
+- 版本、权限与配置前提：SSO Trust Anchors组织；声称已云端修复、需重配证书
+- 资料类型：叙事化漏洞评论；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- David深夜电话/5000员工案例无来源且没有虚构标记，却称全球无数企业已发生事实
+- 正文从图示开始大量段落、表格、伪代码挤成单行
+- SSO流程把IdP验证证书当关键验证且称双向证书信任，伪代码未给真实根因证据
+- 冒充任意用户进入所有会议/访问所有数据等绝对影响未经权限验证
+- 只有公告ID和NVD名称，无漏洞官方直链；修复页面链接需核验；不是网络设备
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 真实利用前提、案例真实性、证书更新步骤和邮件前缀条件待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 小金星
                     小金星  船山信安   2026-04-25 05:34  
   

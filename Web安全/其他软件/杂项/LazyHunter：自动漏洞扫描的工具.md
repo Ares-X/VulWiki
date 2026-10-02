@@ -1,9 +1,59 @@
 ---
-cve: "CVE-2022-29020"
 source: "gelusus/wxvl 公众号漏洞文库"
+identifier_role: "reference"
+primary_identifiers: ""
+referenced_identifiers: "CVE-2022-29020;CVE-2020-1938;CVE-2021-40438"
+identifier_status: "unknown"
+title: "LazyHunter：自动漏洞扫描的工具"
+product: "Lazy-Hunter工具"
+record_type: "vulnerability"
+document_type: "工具推广与泛化安全随笔"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "无工具版本、测试配置或报告样本；CVE只是声称检出例子"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/LazyHunter%EF%BC%9A%E8%87%AA%E5%8A%A8%E6%BC%8F%E6%B4%9E%E6%89%AB%E6%8F%8F%E7%9A%84%E5%B7%A5%E5%85%B7.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-d5a81695ef805bb2a970eda8"
+entity_id: "ve-d5a81695ef805bb2a970eda8"
+schema_version: "1"
 ---
 
-#  LazyHunter：自动漏洞扫描的工具  
+# LazyHunter：自动漏洞扫描的工具
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Lazy-Hunter工具
+- 文献类型：工具推广与泛化安全随笔
+- 版本、权限及部署边界：无工具版本、测试配置或报告样本；CVE只是声称检出例子
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. frontmatter把29020当主漏洞污染，需删除主CVE关系并核对27017/MongoDB与该编号是否对应
+2. Shodan公网数据不能直接发现任意内网三台主机或推导横向移动路线；同版本不是已验证漏洞
+3. 出现历史对话提到、错误配置810等生成/引用残留；90%内网始于终端、修补40438连消三依赖漏洞及商业案例均无证据
+4. 有工具仓库但大量IDS、量子安全等概念不证明其功能，需与README版本核对；此文无实际漏洞复现，应移工具介绍
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://github.com/iamunixtz/Lazy-Hunter>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 原创 白帽学子  白帽学子   2025-06-08 00:11  
   
 之前hvv演练那阵子，咱们团队天天跟甲方资产清单较劲。你懂的，那些动不动就上万IP的扫描任务，光是端口服务识别就得折腾大半天。上周测试新工具的时候，LazyHunter倒是给我省了不少事。  
@@ -71,4 +121,4 @@ https://github.com/iamunixtz/Lazy-Hunter
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

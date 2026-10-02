@@ -1,9 +1,49 @@
 ---
 version: "Crawlab v0.0.1"
 source: "Threekiii/Vulnerability-Wiki"
+title: "Crawlab users 任意用户添加漏洞"
+product: "Crawlab"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "v0.0.1 claimed; anonymous PutUser routing; admin role accepted per request"
+affected_versions: "Crawlab v0.0.1"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-88f7610721b8370c4a9a0392"
+entity_id: "ve-88f7610721b8370c4a9a0392"
+schema_version: "1"
 ---
 
 # Crawlab users 任意用户添加漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：v0.0.1 claimed; anonymous PutUser routing; admin role accepted per request
+- 证据范围：PUT request creates admin account, routing/result screenshots; code not reproduced in text
+
+### 本次正文校订
+
+- 按实际内容修正 1 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- No upstream commit/advisory or fixed version
+- Irrelevant tracking cookies/spoofed headers and blank Host pollute minimal request
+- Clarify whether role=admin honored and whether signup itself intended; evidence images not viewed
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 ## 漏洞描述
 
@@ -42,7 +82,7 @@ authGroup	  中为认证可调用方法
 
 根据字段生成添加用户的请求
 
-```
+```http
 PUT /api/users HTTP/1.1
 Host: 
 Content-Length: 83

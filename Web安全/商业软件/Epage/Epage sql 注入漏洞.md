@@ -1,8 +1,49 @@
 ---
 source: "hatch 补库批 20260928"
+title: "Epage ptsearch wc序列化数组SQL 注入"
+product: "Epage"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "ZD-2020-00601"
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "MySQL5.0.8推测；产品版本未知"
+prerequisites: "无登录说明"
+side_effects: "命令/代码执行示例可能改变主机状态"
+review_date: "2026-10-02"
+identifier_role: "primary"
+source_status: "unknown"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/Epage/Epage%20sql%20%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md"
+id: "vw-7f6d6d0d375c58e33a23682a"
+entity_id: "ve-7f6d6d0d375c58e33a23682a"
+schema_version: "1"
 ---
 
-# Epage sql 注入漏洞
+# Epage ptsearch wc序列化数组SQL 注入
+
+## 条目说明
+
+- 对象与具体问题：Epage；ptsearch wc序列化数组SQLi
+- 版本、配置及部署条件：MySQL5.0.8推测；产品版本未知
+- 认证与权限前提：无登录说明
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 真假对照两段payload完全相同却称不同结果，证据断裂
+- 简介/影响为空，Python各循环缩进丢失无法直接解析，版本检测只取奇数位不可靠
+- PHP数组反序列化后SQLi不能直接叫对象反序列化RCE
+- 1.png等裸文件名无图链接；保留HITCON ZD2020-00601来源
+
+## 操作风险
+
+命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
 
 一、漏洞简介
 ------------
@@ -45,7 +86,7 @@ source: "hatch 补库批 20260928"
 
 证明存在Boolean Based Blind Injection漏洞，mysql版本为5.0.8
 
-### poc1 retrive database
+#### poc1 retrive database
 
 > 可通过poc解析server上的database名称与版本> 同理也可以进一步dump出每个栏位的资料
 
@@ -120,7 +161,7 @@ source: "hatch 补库批 20260928"
                 print(chr(k),end="")
             break
 
-### poc2 load etc/passwd
+#### poc2 load etc/passwd
 
     import requests
     import time

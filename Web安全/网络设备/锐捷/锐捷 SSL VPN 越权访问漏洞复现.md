@@ -1,8 +1,55 @@
 ---
 source: "MrWQ/vulnerability-paper"
+id: "vw-d29a78d74b2e7ade695272a9"
+entity_id: "ve-d29a78d74b2e7ade695272a9"
+schema_version: "1"
+title: "锐捷 SSL VPN 越权访问漏洞复现"
+product: "Ruijie SSL VPN"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+prerequisites: "需已存在用户名；无密码，固件未列"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/%E9%94%90%E6%8D%B7/%E9%94%90%E6%8D%B7%20SSL%20VPN%20%E8%B6%8A%E6%9D%83%E8%AE%BF%E9%97%AE%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_url: "https://mp.weixin.qq.com/s/-ZfUzM9WYo4P1d3Zq1UQjQ"
+source_status: "recorded"
 ---
 
 # 锐捷 SSL VPN 越权访问漏洞复现
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Ruijie SSL VPN
+- 本文讨论：main.cgi伪造UserName/SessionId访问资源与改资料
+- 版本、权限与配置前提：需已存在用户名；无密码，固件未列
+- 资料类型：已知用户名授权绕过研究转载；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 改密/绑定手机仅界面截图无提交请求或实际生效证明
+- showsvr URL含两个oper值，解析优先级未说明；跨用户名xm/liuw需一致
+- 无固定版本/官方公告
+- 已落实的文本修订：HTTP 报文围栏改为 http。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 伪造session有效条件、受限API和修复范围待确认
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/-ZfUzM9WYo4P1d3Zq1UQjQ)
@@ -67,7 +114,7 @@ icon_hash="884334722" || title="Ruijie SSL VPN"
 
 POC 请求包如下  
 
-```
+```http
 GET /cgi-bin/main.cgi?oper=getrsc HTTP/1.1
 Host: xxx.xxx.xxx.xxx
 Connection: close

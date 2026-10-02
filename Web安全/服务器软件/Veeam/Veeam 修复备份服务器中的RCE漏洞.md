@@ -1,8 +1,45 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Veeam 修复备份服务器中的RCE漏洞"
+product: "Veeam Backup & Replication13"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2025-59470; CVE-2025-55125; CVE-2025-59468"
+referenced_identifiers: "CVE-2024-40711"
+identifier_role: "primary"
+cve: "CVE-2025-59470; CVE-2025-55125; CVE-2025-59468"
+prerequisites: "Backup/Tape Operator高权限角色；59470以postgres身份执行"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-44485a0e2a6c5ebadd6c72a1"
+entity_id: "ve-44485a0e2a6c5ebadd6c72a1"
+schema_version: "1"
 ---
 
-#  Veeam 修复备份服务器中的RCE漏洞  
+# Veeam 修复备份服务器中的RCE漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：Backup/Tape Operator高权限角色；59470以postgres身份执行
+- 证据范围：保留厂商高危评级与他方严重表述差异及执行身份；文列<=13.0.1.180修复13.0.1.1071
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 三主CVE都缺元数据，postgres不是root
+- 缺厂家KB和各缺陷独立条件/版本矩阵
+- 历史勒索利用40711不代表本批漏洞已遭利用；广告尾部可删
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 Sergiu Gatlan  代码卫士   2026-01-08 10:03  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

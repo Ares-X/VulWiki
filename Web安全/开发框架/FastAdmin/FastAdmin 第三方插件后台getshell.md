@@ -1,6 +1,38 @@
 ---
 source: "hatch 补库批 20260928"
+product: "FastAdmin Fileix third-party file manager"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "FastAdmin 第三方插件后台getshell"
+prerequisites: "来源所述条件，未列明部分仍待核：FastAdmin/Fileix versions absent; plugin install/config/admin rights and executable path required"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-a280c992a24d6410602e0c1f"
+entity_id: "ve-a280c992a24d6410602e0c1f"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：FastAdmin/Fileix versions absent; plugin install/config/admin rights and executable path required
+
+代码与实验材料：Offline plugin installation, root reconfiguration, multipart upload; file content literal code not executable proof
+
+来源证据范围：Official FastAdmin/Fileix store links; article origin absent
+
+- **适用与权限边界（1）**：Authorized admin plugin installation/file editing not automatically a FastAdmin vulnerability; define violated boundary。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **代码与转录边界（2）**：Combined /admin/fileix?ref=addtabs/admin/fileix/lst URL malformed; no version/fix。相应原代码作为存在此问题的历史样本保留，不能直接当作可运行、成功复现的 PoC；缺失内容需回原稿核对，不据此补造可执行攻击链。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # FastAdmin 第三方插件后台getshell
 

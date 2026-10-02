@@ -1,7 +1,44 @@
 ---
 version: "参考链接："
 source: "MrWQ/vulnerability-paper"
+product: "FastAdmin chunk-upload path handling"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "FastAdmin 前台分片传输上传文件 getshell 复现"
+prerequisites: "来源所述条件，未列明部分仍待核：<V1.2.0.20210401_beta; low-priv account; chunking true(defaultfalse); webroot/path execution conditions"
+side_effects: "未执行；本文需注意的操作影响：Upload request missing required file/chunkid/chunkindex names; cannot reproduce as text"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/gAerDNnDSl6864oyvDy4nA"
+id: "vw-3b879b3cf426bb599e069b6b"
+entity_id: "ve-3b879b3cf426bb599e069b6b"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；遮罩后的历史值不能作为可用登录凭据。原操作、请求方法和攻击表达式保留。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：&lt;V1.2.0.20210401_beta; low-priv account; chunking true(defaultfalse); webroot/path execution conditions
+
+代码与实验材料：Upload and merge flow, Windows lab, traversal discussion; multipart Content-Disposition lost field names; discusses disabling patched code
+
+来源证据范围：Official package ZIP, original WeChat, XZ9395 and researcher article
+
+- **适用与权限边界（1）**：Upload request missing required file/chunkid/chunkindex names; cannot reproduce as text。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **实验改动边界（2）**：Modified patched source must not be presented as unmodified vulnerable-release proof。以下步骤按原实验条件保留；人工改动后的行为只支持该修改环境，不用于证明未修改发行版默认可利用。
+
+- **事实待核（3）**：Bad version metadata and webroot-dependent RCE inference。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # FastAdmin 前台分片传输上传文件 getshell 复现
 
@@ -86,7 +123,7 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryurpjX18wIurjSyEp
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9
-Cookie: PHPSESSID=rn1k8an9su59qb7ghosafer4vg; think_var=zh-cn; uid=2; token=aad3aa1e-1c65-4ee4-989a-bb3a82a4dd4a
+Cookie: PHPSESSID=rn1********************4vg; think_var=zh-cn; uid=2; token=aad******************************d4a
 Connection: close
 
 ------WebKitFormBoundaryurpjX18wIurjSyEp
@@ -127,7 +164,7 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 Content-Type: application/x-www-form-urlencoded
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9
-Cookie: PHPSESSID=mm4ejed8h7hubqq1stmogrut20; think_var=zh-cn; uid=2; token=f5a57bef-2ad2-496a-a4bc-66974bcc4a08
+Cookie: PHPSESSID=mm4********************t20; think_var=zh-cn; uid=2; token=f5a******************************a08
 Connection: close
 
 chunkid=test.php&chunkcount=1&action=merge

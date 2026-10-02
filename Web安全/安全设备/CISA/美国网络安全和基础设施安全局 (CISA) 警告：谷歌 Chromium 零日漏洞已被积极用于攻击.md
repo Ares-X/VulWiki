@@ -1,9 +1,55 @@
 ---
 cve: "CVE-2026-2441"
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-a49faac07ca4c8b00661af41"
+entity_id: "ve-a49faac07ca4c8b00661af41"
+schema_version: "1"
+title: "美国网络安全和基础设施安全局 (CISA) 警告：谷歌 Chromium 零日漏洞已被积极用于攻击"
+product: "Chromium CSS引擎"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2026-2441"
+referenced_identifiers: ""
+prerequisites: "访问恶意HTML，浏览器具体版本未给"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%AE%89%E5%85%A8%E8%AE%BE%E5%A4%87/CISA/%E7%BE%8E%E5%9B%BD%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%92%8C%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E5%AE%89%E5%85%A8%E5%B1%80%20%28CISA%29%20%E8%AD%A6%E5%91%8A%EF%BC%9A%E8%B0%B7%E6%AD%8C%20Chromium%20%E9%9B%B6%E6%97%A5%E6%BC%8F%E6%B4%9E%E5%B7%B2%E8%A2%AB%E7%A7%AF%E6%9E%81%E7%94%A8%E4%BA%8E%E6%94%BB%E5%87%BB.md"
+review_date: "2026-10-02"
+category_recommendation: "系统安全/浏览器/Chromium"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 #  美国网络安全和基础设施安全局 (CISA) 警告：谷歌 Chromium 零日漏洞已被积极用于攻击  
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Chromium CSS引擎
+- 本文讨论：CVE-2026-2441 UAF
+- 版本、权限与配置前提：访问恶意HTML，浏览器具体版本未给
+- 资料类型：浏览器KEV新闻；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 误归CISA安全设备，应Chromium/浏览器
+- 内存破坏到全系统代码执行未说明沙箱逃逸边界
+- 关闭CSS组件建议缺可行操作及有效性证据；Google不直接为各第三方浏览器发布其更新
+- 无官方公告/补丁版本和KEV直链
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- KEV日期、真实影响边界、浏览器发行版本待核
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 原创 网络安全9527
                     网络安全9527  安全圈的那点事儿   2026-02-19 00:02  
   

@@ -1,6 +1,38 @@
 ---
 source: "hatch 补库批 20260928"
+product: "NiuShop单商户2.2"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "Niushop 单商户 2.2 前台getshell"
+prerequisites: "来源所述条件，未列明部分仍待核：wap photoalbumupload可达、action=finish cookie；上传目录PHP可执行"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-b6bdde2906fa1b6de3f89cfd"
+entity_id: "ve-b6bdde2906fa1b6de3f89cfd"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：wap photoalbumupload可达、action=finish cookie；上传目录PHP可执行
+
+- **结论使用边界（1）**：Python载荷写&lt;? php空格而非&lt;?php，不能按正常PHP长标签执行；不能称脚本已证明RCE。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **结论使用边界（2）**：Python3中PNG以Unicode字符串构造可能UTF8变码，需明确Python2/bytes。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **证据待核（3）**：图片大小和中间放PHP要求不具体，脚本却将PHP放IEND之后；截图指MySQL爆破文章资源。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **证据待核（4）**：完整返回路径/执行验证未给，只有HTTP状态/正文打印。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Niushop 单商户 2.2 前台getshell
 

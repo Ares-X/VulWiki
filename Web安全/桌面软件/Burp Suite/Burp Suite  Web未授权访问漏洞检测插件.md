@@ -1,8 +1,64 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+identifier_role: "reference"
+primary_identifiers: ""
+referenced_identifiers: "CVE-2026-24061"
+identifier_status: "unknown"
+title: "Burp Suite  Web未授权访问漏洞检测插件"
+product: "Burp Suite未授权访问检测扩展"
+record_type: "vulnerability"
+document_type: "安全工具介绍"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "需要Burp扩展/API兼容与JAR运行环境；移除鉴权头并对比响应属于主动重放"
+side_effects: "所谓被动模式仍描述移除头重放请求，应披露额外请求和POST/PUT/DELETE副作用，状态码/长度相似只能线索不是确认越权"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Burp%20Suite/Burp%20Suite%20%20Web%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE%E6%BC%8F%E6%B4%9E%E6%A3%80%E6%B5%8B%E6%8F%92%E4%BB%B6.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-b28c3b2055b66730bba1f390"
+entity_id: "ve-b28c3b2055b66730bba1f390"
+schema_version: "1"
 ---
 
-#  Burp Suite | Web未授权访问漏洞检测插件  
+# Burp Suite  Web未授权访问漏洞检测插件
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Burp Suite未授权访问检测扩展
+- 文献类型：安全工具介绍
+- 版本、权限及部署边界：需要Burp扩展/API兼容与JAR运行环境；移除鉴权头并对比响应属于主动重放
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 这是检测插件不是Burp Suite本身漏洞，迁工具目录，不能据标题生成产品漏洞
+2. 所谓被动模式仍描述移除头重放请求，应披露额外请求和POST/PUT/DELETE副作用，状态码/长度相似只能线索不是确认越权
+3. 未处理请求体/URL令牌、缓存、动态页面等鉴权和误报条件，智能判断不等于语义验证
+4. 没有公开仓库/Release/哈希/作者可追溯下载，只让公众号回复关键词；安装前真实性无法核验
+5. 导出格式丢方法/头/令牌等上下文且可能含敏感数据，需说明；大量推广和重复效果图
+
+### 操作风险
+
+所谓被动模式仍描述移除头重放请求，应披露额外请求和POST/PUT/DELETE副作用，状态码/长度相似只能线索不是确认越权
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://mp.weixin.qq.com/s?__biz=Mzk0ODM0NDIxNQ==&mid=2247496244&idx=1&sn=e542fc8c3097f9d5ea2e17b6c3c04028&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<https://mp.weixin.qq.com/s?__biz=Mzk0ODM0NDIxNQ==&mid=2247496237&idx=1&sn=a6ae0ce228701005bfb51116a83430bb&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<https://mp.weixin.qq.com/s?__biz=Mzk0ODM0NDIxNQ==&mid=2247496226&idx=1&sn=ecafcf54d1f1045ba48d79fa9a93c017&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<https://mp.weixin.qq.com/s?__biz=Mzk0ODM0NDIxNQ==&mid=2247496206&idx=1&sn=2f66c041839790707f33a08c7a846352&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<https://mp.weixin.qq.com/s?__biz=Mzk0ODM0NDIxNQ==&mid=2247496195&idx=1&sn=f2688674fc322b4513d7895fdbde7aa6&scene=21#wechat_redirect>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 sh2493770457
                     sh2493770457  夜组安全   2026-02-04 00:04  
   
@@ -151,4 +207,4 @@ sh2493770457
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

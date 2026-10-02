@@ -1,9 +1,46 @@
 ---
 cve: "CVE-2024-6387"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "高危！OpenSSH远程代码执行漏洞风险通告"
+product: "OpenSSH sshd"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2024-6387"
+referenced_identifiers: "CVE-2006-5051; CVE-2008-4109"
+identifier_role: "primary"
+prerequisites: "未修旧<4.4p1或8.5p1至<9.8p1分支；信号竞争、libc/架构/分发补丁影响可利用性"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-572d2081c9f74170f246189a"
+entity_id: "ve-572d2081c9f74170f246189a"
+schema_version: "1"
 ---
 
-#  高危！OpenSSH远程代码执行漏洞风险通告   
+# 高危！OpenSSH远程代码执行漏洞风险通告
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：未修旧<4.4p1或8.5p1至<9.8p1分支；信号竞争、libc/架构/分发补丁影响可利用性
+- 证据范围：两段版本与历史补丁条件比泛化新闻准确，但表格区间符号把8.5p1写开区间与正文包含冲突；已复现无实验正文
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 受影响区间@(8.5p1,9.8p1)应明确左闭
+- 需补平台/架构与发行版回移，不是全平台一律RCE
+- PoC已公开与EXP未发现是发布时点声明，不能代表当前
+- 已复现只是通告发布者声明，本次无执行
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 你信任的  亚信安全   2024-07-02 18:31  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/iczzp36h0nbF2NfmHy98qZJYyzGcqFbibbMwxr0qgT4EScyqwuCaeZMWpAUuDMXgCvvg5iaqnvRmqZpxnSa2h35Vw/640?wx_fmt=jpeg "")  

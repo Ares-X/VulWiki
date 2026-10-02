@@ -1,8 +1,54 @@
 ---
 cve: "CVE-2021-41282"
+id: "vw-15fcc4e8fda35c4058f19d85"
+entity_id: "ve-15fcc4e8fda35c4058f19d85"
+schema_version: "1"
+title: "Shielder - pfSense 小于等于 2.5.2 中的远程代码执行"
+product: "pfSense CE/Plus diag_routes.php"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2021-41282"
+referenced_identifiers: ""
+prerequisites: "CE≤2.5.2，已认证路由诊断权限；CSRF需已登录管理员访问恶意页；CE2.6.0/Plus22.01修复"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%AE%89%E5%85%A8%E8%AE%BE%E5%A4%87/pfSense/Shielder%20-%20pfSense%20%E5%B0%8F%E4%BA%8E%E7%AD%89%E4%BA%8E%202.5.2%20%E4%B8%AD%E7%9A%84%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C.md"
+review_date: "2026-10-02"
+side_effects: "畸形输入可能使进程/内核崩溃、设备重启或服务不可用；本文崩溃线索不自动证明稳定代码执行，需隔离环境和可恢复配置"
+source_url: "https://www.shielder.it/advisories/pfsense-remote-command-execution/"
+source_status: "recorded"
 ---
 
 # Shielder - pfSense 小于等于 2.5.2 中的远程代码执行
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：pfSense CE/Plus diag_routes.php
+- 本文讨论：CVE-2021-41282；CSRF与ReDoS为关联问题
+- 版本、权限与配置前提：CE≤2.5.2，已认证路由诊断权限；CSRF需已登录管理员访问恶意页；CE2.6.0/Plus22.01修复
+- 资料类型：pfSense sed参数注入原研究翻译；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 预身份验证表述掩盖CSRF依赖受害者登录/交互，不是真正匿名直达
+- 日期12月8报告却8月13修复、6月10 ETA排在10月后，明显日月误译
+- CVE链接和HTML列表破损，代码夹行号/实体，生成sed命令显示与payload不一致
+- CSRF meta标签内容缺失，需恢复原文
+
+### 操作风险与恢复
+
+- 畸形输入可能使进程/内核崩溃、设备重启或服务不可用；本文崩溃线索不自动证明稳定代码执行，需隔离环境和可恢复配置
+
+### 待核与来源
+
+- 官方认证角色、原日期及完整CSRF示例待核
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [www.shielder.it](https://www.shielder.it/advisories/pfsense-remote-command-execution/)

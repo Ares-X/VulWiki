@@ -1,8 +1,53 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-d25a761b4e188df0c29ecb44"
+entity_id: "ve-d25a761b4e188df0c29ecb44"
+schema_version: "1"
+title: "太阳能监控产品存在三个RCE漏洞，影响数百家能源机构"
+product: "Contec SolarView"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2022-29303"
+referenced_identifiers: ""
+prerequisites: "29303至少4.0起至8.0前，旧描述仅6.0；按2023年7月报道"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%99%BA%E8%83%BD%E8%AE%BE%E5%A4%87/%E5%A4%AA%E9%98%B3%E8%83%BD%E7%9B%91%E6%8E%A7%E4%BA%A7%E5%93%81/%E5%A4%AA%E9%98%B3%E8%83%BD%E7%9B%91%E6%8E%A7%E4%BA%A7%E5%93%81%E5%AD%98%E5%9C%A8%E4%B8%89%E4%B8%AARCE%E6%BC%8F%E6%B4%9E%EF%BC%8C%E5%BD%B1%E5%93%8D%E6%95%B0%E7%99%BE%E5%AE%B6%E8%83%BD%E6%BA%90%E6%9C%BA%E6%9E%84.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 #  太阳能监控产品存在三个RCE漏洞，影响数百家能源机构   
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Contec SolarView
+- 本文讨论：CVE-2022-29303主；2023-23333/2022-44354关联
+- 版本、权限与配置前提：29303至少4.0起至8.0前，旧描述仅6.0；按2023年7月报道
+- 资料类型：三漏洞相关新闻；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 标题三个RCE但正文仅详细29303，另外两项只是提及，不能共用同一版本范围
+- 数百暴露设备≠数百机构已遭攻击；数据应保留观测日期
+- 推荐阅读/产品广告冗余，主来源是新闻非VulnCheck/厂商原文
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 修复8.0、在野利用与测绘统计需原研究核验
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 Eduard Kovacs  代码卫士   2023-07-06 17:56  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

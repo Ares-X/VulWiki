@@ -1,8 +1,50 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "Apache Solr 最新任意文件读取漏洞"
+product: "Apache Solr"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "实验8.8.0、创建core、远程配置可修改、debug/dump可调用"
+source_url: "https://mp.weixin.qq.com/s/06Ta6WhxrnJmhMYZ-jAS4A"
+source_status: "recorded"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-bb934e3ab38c682193973d5e"
+entity_id: "ve-bb934e3ab38c682193973d5e"
+schema_version: "1"
 ---
 
 # Apache Solr 最新任意文件读取漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：实验8.8.0、创建core、远程配置可修改、debug/dump可调用
+- 证据范围：无CVE，鉴权/网络控制建议有用，但全版本和默认直接可读夸大。
+
+### 本次正文校订
+
+- 按实际内容修正 1 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 任意版本没有依据，最新/0day应标历史日期
+- 实际需要显式启用RemoteStreaming，与默认可直接读取表述不一致
+- JSON含无效\}；正常stream.url示例http:/少斜线；文件读取body在代码块之外
+- 官方不承认声明无原始来源，需改为可证实的配置/访问控制条件
+- 培训广告占比高，建议去重压缩
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/06Ta6WhxrnJmhMYZ-jAS4A)
@@ -87,7 +129,7 @@ https://archive.apache.org/dist/lucene/solr/8.8.0/solr-8.8.0.tgz
 
 引入远程流，将 stream.url 的参数的内容作为流传递。正常情况下 stream.url 传入的内容为 “stream.url=http:/www.remotesite.com/path/to/file.pdf”, 构造传入的敏感文件
 
-```
+```http
 POST /solr/test/debug/dump?param=ContentStreams HTTP/1.1
 Host: 192.168.74.139:8983
 Upgrade-Insecure-Requests: 1

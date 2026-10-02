@@ -1,6 +1,38 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+product: "Jenkins core、Credentials与OpenID Connect插件"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2024-47803; CVE-2024-47804; CVE-2024-47805; CVE-2024-47806; CVE-2024-47807"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "Jenkins 中发布安全公告，修复多个安全漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：仅给固定core2.479/LTS2.462.3、Credentials1381.v2c3a_12074da_b_、OIDC4.355.v3a_fb_fca_b_96d4，缺各受影响起点/边界"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-8808c14da138d628099c8c0a"
+entity_id: "ve-8808c14da138d628099c8c0a"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：仅给固定core2.479/LTS2.462.3、Credentials1381.v2c3a_12074da_b_、OIDC4.355.v3a_fb_fca_b_96d4，缺各受影响起点/边界
+
+代码与实验材料：无PoC；信息泄漏/权限项目创建/ID token校验三类应分开
+
+来源证据范围：2024-10-04，直接链接官方10月2日安全公告
+
+- **适用与权限边界（1）**：权限及密文泄漏后果概括不足；依据：47805仅称查看加密值即暴露证书/秘密，未说明可解密条件；两个OIDC声明校验缺陷没区分具体claim与配置，管理员接管并非必然。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **事实待核（2）**：结构化映射缺失；依据：五CVE未进frontmatter，四固定版本列表未逐项指向相关CVE。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 #  Jenkins 中发布安全公告，修复多个安全漏洞   
  独眼情报   2024-10-04 09:58  

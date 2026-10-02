@@ -1,8 +1,61 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "微软：APT28 利用由NSA报送的 Windows 漏洞"
+product: "Windows Print Spooler CVE-2022-38028 利用新闻"
+record_type: "unknown"
+document_type: "技术文章（细分类待核）"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "缺Windows版本/KB/先获代码执行的边界，新闻本身非复现指南"
+side_effects: "主漏洞未写入frontmatter"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/%E5%BE%AE%E8%BD%AF%EF%BC%9AAPT28%20%E5%88%A9%E7%94%A8%E7%94%B1NSA%E6%8A%A5%E9%80%81%E7%9A%84%20Windows%20%E6%BC%8F%E6%B4%9E.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+source_url: "https://www.bleepingcomputer.com/news/security/microsoft-russian-apt28-hackers-exploit-windows-flaw-reported-by-nsa-using-gooseegg-tool/"
+id: "vw-3afd46da4c51122405e0e11b"
+entity_id: "ve-3afd46da4c51122405e0e11b"
+schema_version: "1"
 ---
 
-#  微软：APT28 利用由NSA报送的 Windows 漏洞   
+# 微软：APT28 利用由NSA报送的 Windows 漏洞
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Windows Print Spooler CVE-2022-38028 利用新闻
+- 文献类型：技术文章（细分类待核）
+- 版本、权限及部署边界：缺Windows版本/KB/先获代码执行的边界，新闻本身非复现指南
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 主漏洞未写入frontmatter
+2. 明确攻陷后本地提权，不可把后续RCE能力改成未授权远程入口
+3. 缺Windows版本/KB/先获代码执行的边界，新闻本身非复现指南
+4. 2019/2020开始利用与2022披露应保留历史时间语境，2022当时标在野的说法需微软源核
+5. 有具体BleepingComputer原文但无微软调查/公告直链
+6. 侧栏Exchange/Cisco等非主漏洞，修残余粗体和明显错字并清推广
+
+### 操作风险
+
+主漏洞未写入frontmatter
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://www.bleepingcomputer.com/news/security/microsoft-russian-apt28-hackers-exploit-windows-flaw-reported-by-nsa-using-gooseegg-tool/>
+
+### 归档技术正文
+
 Sergiu Gatlan  代码卫士   2024-04-24 17:33  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

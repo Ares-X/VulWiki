@@ -1,9 +1,67 @@
 ---
-cve: "CVE-2026-53266"
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2026-53266;CVE-2025-39682;CVE-2025-39964;CVE-2026-10747;CVE-2026-48908;CVE-2026-81657;CVE-2026-82340"
+identifier_role: "primary"
+primary_identifiers: "CVE-2026-53266;CVE-2025-39682;CVE-2025-39964;CVE-2026-10747;CVE-2026-48908;CVE-2026-81657;CVE-2026-82340"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "【热点安全风险】9月21日 Linux 内核三漏洞确认已遭在野利用，攻击者可借其本地提权并横向渗透内网服务器"
+product: "Linux三内核漏洞 / IBM MQ / Joomla SP Page Builder / IBM Guardium / 威胁事件"
+record_type: "vulnerability"
+document_type: "六主题安全风险日报"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "各项权限/版本不一，Linux本地；MQ/组件宣称未认证；事件另列"
+side_effects: "frontmatter仅首个CVE且Linux目录覆盖六主题，应拆多漏洞实体、新闻事件与摘要，不能当一个漏洞或自动编造PoC"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/%E3%80%90%E7%83%AD%E7%82%B9%E5%AE%89%E5%85%A8%E9%A3%8E%E9%99%A9%E3%80%919%E6%9C%8821%E6%97%A5%20Linux%20%E5%86%85%E6%A0%B8%E4%B8%89%E6%BC%8F%E6%B4%9E%E7%A1%AE%E8%AE%A4%E5%B7%B2%E9%81%AD%E5%9C%A8%E9%87%8E%E5%88%A9%E7%94%A8%EF%BC%8C%E6%94%BB%E5%87%BB%E8%80%85%E5%8F%AF%E5%80%9F%E5%85%B6%E6%9C%AC%E5%9C%B0%E6%8F%90%E6%9D%83%E5%B9%B6%E6%A8%AA%E5%90%91%E6%B8%97%E9%80%8F%E5%86%85%E7%BD%91%E6%9C%8D%E5%8A%A1%E5%99%A8.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-4ba4becb73fbb84b7067cad9"
+entity_id: "ve-4ba4becb73fbb84b7067cad9"
+schema_version: "1"
 ---
 
-#  【热点安全风险】9月21日 | Linux 内核三漏洞确认已遭在野利用，攻击者可借其本地提权并横向渗透内网服务器  
+# 【热点安全风险】9月21日 Linux 内核三漏洞确认已遭在野利用，攻击者可借其本地提权并横向渗透内网服务器
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Linux三内核漏洞 / IBM MQ / Joomla SP Page Builder / IBM Guardium / 威胁事件
+- 文献类型：六主题安全风险日报
+- 版本、权限及部署边界：各项权限/版本不一，Linux本地；MQ/组件宣称未认证；事件另列
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. frontmatter仅首个CVE且Linux目录覆盖六主题，应拆多漏洞实体、新闻事件与摘要，不能当一个漏洞或自动编造PoC
+2. TLS39682在同库技术稿为UAF7.1而此稿称内存泄漏9.8，修复6.12.3等与其他稿6.12.44等冲突，需官方核验优先
+3. 真实组合提权横移与CISA确认在野是不同证据等级，来源只第三方摘要非CISA记录，不能推导完整攻击链
+4. 总结CVE-2026-53266/39682/39964把后两2025编号隐式改成年2026，需完整逐条编号
+5. IBM全部当前版本与厂商已修复并述范围不清；Guardium缺IBM公告，SP PageBuilder应补厂商/KEV链接
+6. 重复泛化处置建议长于事实，保留摘要时带2026-09-21时点/独立来源
+
+### 操作风险
+
+frontmatter仅首个CVE且Linux目录覆盖六主题，应拆多漏洞实体、新闻事件与摘要，不能当一个漏洞或自动编造PoC
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://aviatrix.ai/threat-research-center/cisa-flags-three-linux-kernel-vulnerabilities-exploited-wild-2026>
+- 原文参考链接（未重新核验）：<https://aviatrix.ai/threat-research-center/shinyhunters-hacks-clop-leak-site-threatens-extort-ransomware-gang-2026/>
+- 原文参考链接（未重新核验）：<https://nvd.nist.gov/vuln/detail/CVE-2026-10747>
+- 原文参考链接（未重新核验）：<https://nvd.nist.gov/vuln/detail/CVE-2026-48908>
+- 原文参考链接（未重新核验）：<https://www.elastic.co/security-labs/telepuz-maas-malware-clickfix>
+- 原文参考链接（未重新核验）：<https://feed.craftedsignal.io/briefs/2026-09-ibm-guardium-rce>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
  华顺信安威胁情报中心   2026-09-20 23:30  
   
 **PART.****0****1**  
@@ -182,4 +240,4 @@ https://feed.craftedsignal.io/briefs/2026-09-ibm-guardium-rce
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

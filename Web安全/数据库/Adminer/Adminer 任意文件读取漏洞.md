@@ -1,8 +1,46 @@
 ---
 source: "hatch 补库批 20260928"
+title: "Adminer 任意文件读取漏洞"
+product: "MySQL client behavior exposed through Adminer/phpMyAdmin"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "User connects database UI to attacker server;client local-infile support;PHP filesystem restrictions;versions absent"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-7c88205943ef16ac26f0f425"
+entity_id: "ve-7c88205943ef16ac26f0f425"
+schema_version: "1"
 ---
 
 # Adminer 任意文件读取漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：User connects database UI to attacker server;client local-infile support;PHP filesystem restrictions;versions absent
+- 证据范围：Distinguishes client/server files initially but later examples omit LOCAL;independent explanation needs protocol corrections
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- Misstates secure_file_priv as prerequisite for client LOCAL read;verify client capability versus server file restrictions separately
+- Normal-flow example drops LOCAL and calls packet ResponseTABULAR;protocol identification needs correction
+- Empty impact section;Adminer/phpMyAdmin versions and remote-server configuration differ
+- open_basedir prerequisite versus later claimed bypass inconsistent
+- PoC archive URL misspells doanload and is unpinned;script not retained
+- Link to specific Adminer43008 entry but do not assume all UI/client versions affected
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 一、漏洞简介
 ------------

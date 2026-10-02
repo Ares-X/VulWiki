@@ -1,9 +1,61 @@
 ---
-cve: "CVE-2025-13292"
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2025-13292"
+identifier_role: "primary"
+primary_identifiers: "CVE-2025-13292"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "天堂之门：发现谷歌云 Apigee 中的跨租户漏洞"
+product: "GCP Apigee / Dataflow"
+record_type: "analysis"
+document_type: "云服务跨租户攻击链二次分析"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "需自身Apigee租户及API代理/AssignMessage策略修改能力、历史服务账户权限/网络可达/自动扩容条件；未说明厂商修复状态"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Windows/%E5%A4%A9%E5%A0%82%E4%B9%8B%E9%97%A8%EF%BC%9A%E5%8F%91%E7%8E%B0%E8%B0%B7%E6%AD%8C%E4%BA%91%20Apigee%20%E4%B8%AD%E7%9A%84%E8%B7%A8%E7%A7%9F%E6%88%B7%E6%BC%8F%E6%B4%9E.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-518a53d6a411b1b3ceb7462c"
+entity_id: "ve-518a53d6a411b1b3ceb7462c"
+schema_version: "1"
 ---
 
-#  天堂之门：发现谷歌云 Apigee 中的跨租户漏洞  
+# 天堂之门：发现谷歌云 Apigee 中的跨租户漏洞
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：GCP Apigee / Dataflow
+- 文献类型：云服务跨租户攻击链二次分析
+- 版本、权限及部署边界：需自身Apigee租户及API代理/AssignMessage策略修改能力、历史服务账户权限/网络可达/自动扩容条件；未说明厂商修复状态
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 放Windows目录完全错分类，主对象为GCP云服务，迁云平台并与同族研究关联
+2. 从外部进入的表述漏自己租户配置权限起点，不应读成互联网无认证任意Apigee攻击
+3. 从跨租户存储访问推全部租户每个请求/任何用户冒充过宽，取决于日志内容、令牌有效性/受众/权限，需限定原研究证据
+4. 攻击者可能已经窃取为未经证实历史暗示，应改潜在影响，原文展示能力不等于真实受害事件
+5. 只有omeramiad.com域名缺精确源文、Google公告/CVE及修复日期，必须优先核13292映射和披露范围
+6. 文字在取令牌处缺动词，步骤列表全部1；截图承担输出和跨租户证据且未读，云链完整性须保留来源归属
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
  SecureNexusLab   2026-02-10 01:44  
   
 #   
@@ -143,4 +195,4 @@ Apigee 服务账户拥有对存储 Dataflow 管道执行的 JAR 文件的存储�
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

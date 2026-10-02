@@ -1,8 +1,63 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "从未经身份验证的存储型 XSS 到 RCE"
+product: "Mods for HESK CVE-2020-13992/13994，13993为补充练习"
+record_type: "unknown"
+document_type: "技术文章（细分类待核）"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "版本范围需厂商补丁/归档核验，末尾只最新且不维护建议无确切修复号，原研究链接明确"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/%E4%BB%8E%E6%9C%AA%E7%BB%8F%E8%BA%AB%E4%BB%BD%E9%AA%8C%E8%AF%81%E7%9A%84%E5%AD%98%E5%82%A8%E5%9E%8B%20XSS%20%E5%88%B0%20RCE.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+source_url: "https://loca1gh0s7.github.io/MFH-from-XSS-to-RCE-loca1gh0st-exercise/"
+id: "vw-3aa157988a272ab9edc69a12"
+entity_id: "ve-3aa157988a272ab9edc69a12"
+schema_version: "1"
 ---
 
-#  从未经身份验证的存储型 XSS 到 RCE   
+# 从未经身份验证的存储型 XSS 到 RCE
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Mods for HESK CVE-2020-13992/13994，13993为补充练习
+- 文献类型：技术文章（细分类待核）
+- 版本、权限及部署边界：版本范围需厂商补丁/归档核验，末尾只最新且不维护建议无确切修复号，原研究链接明确
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 漏洞属于Mods for HESK而非HESK2.8.6核心，三个CVE缺元数据，13992+13994为实述链而13993只概述练习
+2. 匿名提交不等于无交互RCE，必须有可改设置的管理员查看工单或点击诱导消息，/cache还需PHP执行配置
+3. Python2代码与固定本地HTTP代理需明确依赖，验证码需要真实完成不能说仅换Burp就解决
+4. 简短外载脚本用自闭合script在HTML下不可靠，后续Python给显式闭合较正确，http外载受混合内容/CSP/浏览器可达性约束
+5. 上传和恢复设置两个异步请求未串行化可能竞争，恢复设置不删除PHP文件，Cleanup done不是清除后门
+6. 200响应成功判据作者已自认不可靠，应保留警示并用实际文件/执行验证而非断言
+7. 所有路径以站点根/admin硬编码与示例/hesk部署不一致
+8. 版本范围需厂商补丁/归档核验，末尾只最新且不维护建议无确切修复号，原研究链接明确
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://loca1gh0s7.github.io/MFH-from-XSS-to-RCE-loca1gh0st-exercise/>
+
+### 归档技术正文
+
  Ots安全   2024-05-18 13:24  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/bL2iaicTYdZn7gtxSFZlfuCW6AdQib8Q1onbR0U2h9icP1eRO6wH0AcyJmqZ7USD0uOYncCYIH7ZEE8IicAOPxyb9IA/640?wx_fmt=gif "")  

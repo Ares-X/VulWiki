@@ -1,6 +1,43 @@
 ---
 source: "MrWQ/vulnerability-paper"
+product: "Fastjson"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+version: "1.2.47 实验；实际 JDK、依赖与镜像构建待核"
+title: "Fastjson 小于等于 1.2.47 反序列化漏洞复现"
+prerequisites: "来源所述条件，未列明部分仍待核：Title<=47 vs intro<68; unpinned3rdparty image; RMI<8u121/LDAP<8u182 claims"
+side_effects: "未执行；本文需注意的操作影响：明确更正：`docker push` 是上传镜像，不是下载镜像；原下载步骤的命令作为历史误文保留。该 1.2.47 实验不能证明简介中所有 &lt; 1.2.68 均受同一链影响。"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/DqXbu0MRRoX_Iz0rgz214Q"
+id: "vw-a24186bc87878ae869ec12a4"
+entity_id: "ve-a24186bc87878ae869ec12a4"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 明确更正：`docker push` 是上传镜像，不是下载镜像；原下载步骤的命令作为历史误文保留。该 1.2.47 实验不能证明简介中所有 &lt; 1.2.68 均受同一链影响。
+- 实验不一致：回连地址写 1888，监听端口写 8089，二者不匹配；不将这份原样命令标成功。JNDI 限制应核对执行反序列化的服务端 JVM/JDK，不能只检查操作者本地 JDK；镜像 ID 未固定也不能代替依赖锁。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：Title&lt;=47 vs intro&lt;68; unpinned3rdparty image; RMI&lt;8u121/LDAP&lt;8u182 claims
+
+代码与实验材料：Full class/LDAP/payload, empty screenshot slots; docker push wrongly used to download; callback1888 vs listener8089
+
+来源证据范围：Original WeChat,lmxspace,marshalsec
+
+- **结论使用边界（1）**：docker push download instruction wrong; port mismatch; broader intro range not proven by47lab。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **证据待核（2）**：JDK caveat refers local rather than vulnerable process andLDAP boundary questionable; image ID not portable。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Fastjson 小于等于 1.2.47 反序列化漏洞复现
 

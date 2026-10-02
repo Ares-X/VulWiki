@@ -1,9 +1,48 @@
 ---
-cve: "CVE-2025-5384"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "JeeWMS 三处认证后SQL 注入通告"
+product: "JeeWMS"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2025-5384;CVE-2025-5386;CVE-2025-5388"
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "版本只产品名"
+prerequisites: "明确经认证"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+identifier_role: "primary"
+source_status: "unknown"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/JEEWMS/%E6%BC%8F%E6%B4%9E%E9%A2%84%E8%AD%A6%20%20JEEWMS%20SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md"
+id: "vw-4af686497452de8c1ebd83d2"
+entity_id: "ve-4af686497452de8c1ebd83d2"
+schema_version: "1"
 ---
 
-#  漏洞预警 | JEEWMS SQL注入漏洞   
+# JeeWMS 三处认证后SQL 注入通告
+
+## 条目说明
+
+- 对象与具体问题：JeeWMS；三处认证后SQLi通告
+- 版本、配置及部署条件：版本只产品名
+- 认证与权限前提：明确经认证
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- POC已公开却无链接或请求，无法内容复核
+- 修复给huayi-tec首页，需核厂商/分支归属及确切补丁，不得借其他rest绕过消除认证条件
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 浅安  浅安安全   2025-06-04 00:00  
   
 **0x00 漏洞编号**  

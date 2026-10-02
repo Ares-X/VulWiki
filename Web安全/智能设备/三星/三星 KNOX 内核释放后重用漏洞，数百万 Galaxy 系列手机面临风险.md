@@ -1,8 +1,53 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-5d8b4e2ddb76a43cd70b967f"
+entity_id: "ve-5d8b4e2ddb76a43cd70b967f"
+schema_version: "1"
+title: "三星 KNOX 内核释放后重用漏洞，数百万 Galaxy 系列手机面临风险"
+product: "Samsung KNOX/PROCA/FIVE与SecSettings映射冲突"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2026-20971"
+referenced_identifiers: ""
+prerequisites: "文称Android 13–16、SMR Jan-2026 Release 1前；本地执行/交互条件混杂"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%99%BA%E8%83%BD%E8%AE%BE%E5%A4%87/%E4%B8%89%E6%98%9F/%E4%B8%89%E6%98%9F%20KNOX%20%E5%86%85%E6%A0%B8%E9%87%8A%E6%94%BE%E5%90%8E%E9%87%8D%E7%94%A8%E6%BC%8F%E6%B4%9E%EF%BC%8C%E6%95%B0%E7%99%BE%E4%B8%87%20Galaxy%20%E7%B3%BB%E5%88%97%E6%89%8B%E6%9C%BA%E9%9D%A2%E4%B8%B4%E9%A3%8E%E9%99%A9.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 #  三星 KNOX 内核释放后重用漏洞，数百万 Galaxy 系列手机面临风险  
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Samsung KNOX/PROCA/FIVE与SecSettings映射冲突
+- 本文讨论：声称CVE-2026-20971
+- 版本、权限与配置前提：文称Android 13–16、SMR Jan-2026 Release 1前；本地执行/交互条件混杂
+- 资料类型：漏洞新闻及机制分析；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 同文一面解释PROCA/FIVE task_integrity内核UAF，一面称官方20971是SecSettings输入校验且需用户交互，组件与根因明显冲突
+- S9至S25及Exynos/Qualcomm广泛受影响断言无型号证据
+- 物理接触与本地恶意程序执行条件混同；未给官方或研究者原始链接
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- CVE官方描述、LucidBit研究、补丁及机型范围须原源对照
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 鹏鹏同学
                     鹏鹏同学  黑猫安全   2026-06-24 00:50  
   

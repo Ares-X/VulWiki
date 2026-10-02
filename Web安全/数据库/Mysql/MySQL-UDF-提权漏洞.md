@@ -1,9 +1,48 @@
 ---
 version: "在 MySQL 5.5 之前 secure_file_priv 默认是空，这个情况下可以向任意绝对路径写文件"
 source: "Threekiii/Vulnerability-Wiki"
+title: "MySQL UDF 提权漏洞"
+product: "MySQL loadable functions"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "数据库FILE/函数创建等权限、secure_file_priv允许导出、插件目录可写、匹配OS/架构库"
+affected_versions: "在 MySQL 5.5 之前 secure_file_priv 默认是空，这个情况下可以向任意绝对路径写文件"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-ddee7c31066087094f826697"
+entity_id: "ve-ddee7c31066087094f826697"
+schema_version: "1"
 ---
 
 # MySQL UDF 提权漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：数据库FILE/函数创建等权限、secure_file_priv允许导出、插件目录可写、匹配OS/架构库
+- 证据范围：完整SQL操作和大型十六进制ELF样本；仅文本检查，未解码/反汇编/运行二进制；输出为mysql用户
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- P0把5.5前后secure_file_priv默认空/NULL作为统一版本规则，缺发行包/版本配置依据
+- 这不是自动OS提权到root，实测输出mysql；应归危险权限配置/功能滥用
+- version元数据是一整句配置说明而非版本范围
+- 大型二进制blob无hash/构建来源/架构兼容性说明，应单独可信附件化
+- select * from func缺mysql库上下文；drop function不删除落地so文件
+- 缺具体数据库权限与清理插件文件说明
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 ## 漏洞描述
 

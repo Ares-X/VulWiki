@@ -1,9 +1,61 @@
 ---
 cve: "CVE-2026-9256"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Nginx-poolslip 漏洞可导致拒绝服务攻击和代码执行攻击——立即修复！"
+product: "NGINX ngx_http_rewrite_module及F5派生产品"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2026-9256"
+referenced_identifiers: "CVE-2026-42945"
+identifier_role: "primary"
+prerequisites: "特定重叠PCRE捕获组与多捕获替换配置；RCE还需适用堆布局、ASLR处理，默认不普遍触发"
+verification_source: "https://nginx.org/en/security_advisories.html"
+source_status: "unknown"
+side_effects: "含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。"
+id: "vw-8b6c3b407601e5acf8e35eda"
+entity_id: "ve-8b6c3b407601e5acf8e35eda"
+schema_version: "1"
 ---
 
-#  Nginx-poolslip 漏洞可导致拒绝服务攻击和代码执行攻击——立即修复！  
+# Nginx-poolslip 漏洞可导致拒绝服务攻击和代码执行攻击——立即修复！
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：特定重叠PCRE捕获组与多捕获替换配置；RCE还需适用堆布局、ASLR处理，默认不普遍触发
+- 证据范围：同模块不同漏洞编号应区分；文本将共享内存池利用面说成旧补丁没有修复底层问题，不能因此认定42945修复失败。
+
+### 已有来源支持的更正
+
+- 确认9256 rewrite溢出，0.1.17–1.31.0，1.31.1/1.30.2修复；42945另列不是同漏洞
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 影响版本开头句0.1.17存在1.30.1漏洞1.31.0语法残缺，表格才可读
+- F5派生产品的无/没有任何是未修复还是不受影响需核官方表列，不能缺来源直接推所有下游有漏洞
+- 没有F5或研究者原始链接，指针滑动机制和已传播PoC无代码/实证
+- 正文NGINX CVSS8.1/9.2与官方自身medium评分体系需标来源，不宜混用
+- 0.x无法修复应理解无官方支持修补而非技术不可能
+- HTML表格样式占多数内容，产品名NGINX网关架构/F5 DoS攻击翻译错误
+
+### 核验来源
+
+- https://nginx.org/en/security_advisories.html
+
+### 操作风险与资料使用
+
+- 含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 原创 网络安全9527
                     网络安全9527  安全圈的那点事儿   2026-05-24 09:12  
   

@@ -1,8 +1,45 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "PostgreSQL 高危漏洞可导致环境变量被利用"
+product: "PostgreSQL PL/Perl"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2024-10979"
+referenced_identifiers: ""
+identifier_role: "primary"
+cve: "CVE-2024-10979"
+prerequisites: "低权限数据库用户能使用相关 PL/Perl 功能；影响取决于扩展和环境"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-ac1f3f80c4af344a1425c1ce"
+entity_id: "ve-ac1f3f80c4af344a1425c1ce"
+schema_version: "1"
 ---
 
-#  PostgreSQL 高危漏洞可导致环境变量被利用   
+# PostgreSQL 高危漏洞可导致环境变量被利用
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：低权限数据库用户能使用相关 PL/Perl 功能；影响取决于扩展和环境
+- 证据范围：新闻说明影响和六个修复版本，非复现；应保留发表时间，不把当时未披露详情当现状
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 主 CVE 缺少 frontmatter
+- CREATE EXTENSIONS、CREATE FUNCTION 权限限制表述需用 PostgreSQL 实际权限模型核实
+- 大量推广/推荐文章与漏洞正文应分离
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 THN  代码卫士   2024-11-15 17:35  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

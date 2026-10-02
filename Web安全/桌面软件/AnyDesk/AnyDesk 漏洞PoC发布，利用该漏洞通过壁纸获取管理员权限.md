@@ -1,9 +1,60 @@
 ---
-cve: "CVE-2024-12754"
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2024-12754"
+identifier_role: "primary"
+primary_identifiers: "CVE-2024-12754"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "AnyDesk 漏洞PoC发布，利用该漏洞通过壁纸获取管理员权限"
+product: "AnyDesk Windows服务"
+record_type: "advisory"
+document_type: "漏洞PoC发布新闻"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "本地低权限攻击、SYSTEM服务、会话初始化壁纸处理、oplock/连接点竞态；卷影副本及敏感文件可读链需明确"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/AnyDesk/AnyDesk%20%E6%BC%8F%E6%B4%9EPoC%E5%8F%91%E5%B8%83%EF%BC%8C%E5%88%A9%E7%94%A8%E8%AF%A5%E6%BC%8F%E6%B4%9E%E9%80%9A%E8%BF%87%E5%A3%81%E7%BA%B8%E8%8E%B7%E5%8F%96%E7%AE%A1%E7%90%86%E5%91%98%E6%9D%83%E9%99%90.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-1e9c4897b7f2f2510417e297"
+entity_id: "ve-1e9c4897b7f2f2510417e297"
+schema_version: "1"
 ---
 
-#  AnyDesk 漏洞PoC发布，利用该漏洞通过壁纸获取管理员权限   
+# AnyDesk 漏洞PoC发布，利用该漏洞通过壁纸获取管理员权限
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：AnyDesk Windows服务
+- 文献类型：漏洞PoC发布新闻
+- 版本、权限及部署边界：本地低权限攻击、SYSTEM服务、会话初始化壁纸处理、oplock/连接点竞态；卷影副本及敏感文件可读链需明确
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 标题通过壁纸获取管理员权限超过正文CVSS5.5保密性影响与受保护文件复制证据；SAM哈希提取/破解与有效管理员登录是额外步骤
+2. 先说复制保留SYSTEM所有权导致普通用户不可读，后声称经重定向可读，缺源/目标路径、DACL与句柄时序解释
+3. 修复9.0.1+但缺完整受影响范围及厂商公告；声称PoC公开却缺研究者/仓库链接
+4. 应将受保护文件泄露与后续凭据利用分层，不把普通符号链接泛称等同完整oplock/对象命名空间链
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://cybersecuritynews.com/poc-exploit-released-for-anydesk-vulnerability-exploited/>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 会杀毒的单反狗  军哥网络安全读报   2025-02-11 01:01  
   
 **导****读**  
@@ -100,4 +151,4 @@ https://cybersecuritynews.com/poc-exploit-released-for-anydesk-vulnerability-exp
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

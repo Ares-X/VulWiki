@@ -1,9 +1,56 @@
 ---
 cve: "CVE-2023-29357"
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-07a3a6c3001064fa122984b7"
+entity_id: "ve-07a3a6c3001064fa122984b7"
+schema_version: "1"
+title: "CISA：Microsoft SharePoint 的关键漏洞已被积极利用"
+product: "Microsoft SharePoint Server"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2023-29357"
+referenced_identifiers: ""
+prerequisites: "伪造JWT认证；RCE需独立24955，版本未列"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%AE%89%E5%85%A8%E8%AE%BE%E5%A4%87/CISA/CISA%EF%BC%9AMicrosoft%20SharePoint%20%E7%9A%84%E5%85%B3%E9%94%AE%E6%BC%8F%E6%B4%9E%E5%B7%B2%E8%A2%AB%E7%A7%AF%E6%9E%81%E5%88%A9%E7%94%A8.md"
+review_date: "2026-10-02"
+category_recommendation: "Web安全/服务器应用/SharePoint"
+side_effects: "执行文中载荷可能以目标进程权限启动命令或加载代码；权限受认证角色、操作系统账户及依赖版本约束，不能把 root/200 等通用字符串当成功证据"
+source_status: "unknown"
 ---
 
 #  CISA：Microsoft SharePoint 的关键漏洞已被积极利用   
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Microsoft SharePoint Server
+- 本文讨论：CVE-2023-29357主，24955 RCE链
+- 版本、权限与配置前提：伪造JWT认证；RCE需独立24955，版本未列
+- 资料类型：SharePoint KEV新闻与每日资讯；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 误归CISA；大量其他事件新闻不应并为本漏洞
+- 正文称利用详情未知，页尾却列勒索组织利用标题，需独立来源核对不能相互佐证
+- 研究者姓名断裂、PoC/分析日期与同链另一文章相差一天
+- 无微软/STAR Labs/KEV直链
+
+### 操作风险与恢复
+
+- 执行文中载荷可能以目标进程权限启动命令或加载代码；权限受认证角色、操作系统账户及依赖版本约束，不能把 root/200 等通用字符串当成功证据
+
+### 待核与来源
+
+- 发布时间、勒索归因和补丁矩阵待核
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
  军哥网络安全读报   2024-01-13 09:19  
   
 **导****读**  

@@ -1,8 +1,49 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Primeton EOS Platform JMX over HTTP反序列化远程代码执行通告"
+product: "Primeton EOS Platform"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "EOS<=7.6；列三个安全补丁名称；JMX HTTP handler启用"
+prerequisites: "未说明精确认证条件"
+side_effects: "请求可能删除/覆盖数据、修改账号或持久改变业务状态；命令/代码执行示例可能改变主机状态"
+review_date: "2026-10-02"
+source_status: "unknown"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E8%87%B4%E8%BF%9COA/Primeton%20EOS%20Platform%20jmx%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E8%87%B4%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md"
+id: "vw-965998c6fa319394ea767006"
+entity_id: "ve-965998c6fa319394ea767006"
+schema_version: "1"
 ---
 
-#  Primeton EOS Platform jmx反序列化致远程代码执行漏洞   
+# Primeton EOS Platform JMX over HTTP反序列化远程代码执行通告
+
+## 条目说明
+
+- 对象与具体问题：Primeton EOS Platform；JMX over HTTP反序列化RCE通告
+- 版本、配置及部署条件：EOS<=7.6；列三个安全补丁名称；JMX HTTP handler启用
+- 认证与权限前提：未说明精确认证条件
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 错分致远OA，应普元EOS；无主CVE，不可因RCE同名合并
+- 成因/范围/修复/复现/产品支持全部粘连，handler XML需代码围栏否则可能被渲染吞掉
+- 删除JMX HTTP配置须先确认业务不用，不能仅凭HTTP用得少断言可安全删除
+- 在野去年利用为长亭声明无独立证据；复现标题无内容，属通告
+
+## 操作风险
+
+请求可能删除/覆盖数据、修改账号或持久改变业务状态；命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 长亭应急  黑伞安全   2024-04-25 08:30  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/FOh11C4BDicR8MyPCDib6oamTNyIg7iaxAeZXLC894lvZia17dJ4q7X6PB8WTrG0BT0ldJqCGQVAT8CAHRIzmicEAibg/640?wx_fmt=other&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1 "")  

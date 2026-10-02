@@ -1,9 +1,54 @@
 ---
-cve: "CVE-2023-2454"
+cve: "CVE-2024-7348"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "漏洞预警 | PostgreSQL竞争条件漏洞"
+product: "PostgreSQL pg_dump"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2024-7348"
+referenced_identifiers: "CVE-2023-2454"
+identifier_role: "primary"
+prerequisites: "可创建数据库对象，等待另一用户执行 pg_dump 并利用关系替换竞争"
+verification_source: "https://www.postgresql.org/support/security/CVE-2024-7348/; https://www.postgresql.org/support/security/CVE-2023-2454/"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-035575e5b92eb5c5912c39ca"
+entity_id: "ve-035575e5b92eb5c5912c39ca"
+schema_version: "1"
 ---
 
-#  漏洞预警 | PostgreSQL竞争条件漏洞   
+# 漏洞预警 | PostgreSQL竞争条件漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：可创建数据库对象，等待另一用户执行 pg_dump 并利用关系替换竞争
+- 证据范围：正文机制和16.4/15.8/14.13/13.16/12.20修复边界均与官方7348一致，与所标2454不一致
+
+### 已有来源支持的更正
+
+- 官方 pg_dump TOCTOU 机制与本文全部修复边界一致
+- 官方2454是 CREATE SCHEMA/search_path 提权，修于2023年15.3等，与本文不符
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 标题、frontmatter 与正文内 CVE-2023-2454 均应纠正，不能与真实2454合并
+
+### 核验来源
+
+- https://www.postgresql.org/support/security/CVE-2024-7348/
+- https://www.postgresql.org/support/security/CVE-2023-2454/
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 浅安  浅安安全   2024-08-16 08:00  
   
 **0x00 漏洞编号**  

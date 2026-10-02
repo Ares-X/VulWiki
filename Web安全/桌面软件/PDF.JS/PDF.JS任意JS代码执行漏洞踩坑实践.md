@@ -1,9 +1,66 @@
 ---
-cve: "CVE-2024-4367"
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2024-4367"
+identifier_role: "primary"
+primary_identifiers: "CVE-2024-4367"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "PDF.JS任意JS代码执行漏洞踩坑实践"
+product: "Web应用嵌入PDF.js"
+record_type: "vulnerability"
+document_type: "PDF.js部署踩坑实验"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "攻击者PDF被目标viewer渲染、远程取文件受CORS/CSP/源校验/混合内容限制；版本和eval配置未给"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/PDF.JS/PDF.JS%E4%BB%BB%E6%84%8FJS%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E%E8%B8%A9%E5%9D%91%E5%AE%9E%E8%B7%B5.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-b0e823218f672c7b210502ea"
+entity_id: "ve-b0e823218f672c7b210502ea"
+schema_version: "1"
 ---
 
-#  PDF.JS任意JS代码执行漏洞踩坑实践  
+# PDF.JS任意JS代码执行漏洞踩坑实践
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Web应用嵌入PDF.js
+- 文献类型：PDF.js部署踩坑实验
+- 版本、权限及部署边界：攻击者PDF被目标viewer渲染、远程取文件受CORS/CSP/源校验/混合内容限制；版本和eval配置未给
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. viewer.html?file URL只作组件线索不能确定PDF.js版本或漏洞存在
+2. 允许跨域的服务仅解决浏览器CORS一层，不能越过viewer额外源校验/CSP；换Chrome为Firefox不等绕过PDF.js修复，应区分浏览器内置PDF与站点库
+3. JWT不必存localStorage且键不一定token；document.cookie读不到HttpOnly，不能把弹窗等同全会话凭据泄露
+4. CORS Python代码在HTML表中丢缩进，命令缺参数引号/空格，复制不可直接运行；大量样式/行号噪声
+5. 代码执行只写需要条件没列Node集成/隔离条件，require在普通Web上下文不可用
+6. 缺影响/修复版本、实测库构建和结果文本；CORS失败经验有互补价值，不应当同CVE全文重复删掉
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<http://xxx.com/xxx/xxxx/html/web/viewer.html?file=>
+- 原文参考链接（未重新核验）：<https://github.com/LOURC0D3/CVE-2024-4367-PoC/blob/main/CVE-2024-4367.py>
+- 原文参考链接（未重新核验）：<http://xxx.com/web/viewer.html?file=http://xxx.com/poc.pdf>
+- 原文参考链接（未重新核验）：<https://www.4awl.net/13333.html>
+- 原文参考链接（未重新核验）：<https://mp.weixin.qq.com/s?__biz=MzU1ODk1MzI1NQ==&mid=2247493436&idx=1&sn=06457e0fc73b9a16493921008063c84d&scene=21#wechat_redirect>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 原创 ss
                     ss  shadowsec   2026-02-25 07:28  
   
@@ -98,4 +155,4 @@ https://www.4awl.net/13333.html
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

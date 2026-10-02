@@ -1,6 +1,45 @@
 ---
 source: "MrWQ/vulnerability-paper"
+product: "Java RMI/Registry/DGC历史JEP290过滤研究"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "JAVA RMI 反序列化攻击 and JEP290 Bypass 分析 - 先知社区"
+prerequisites: "来源所述条件，未列明部分仍待核：示例跨旧JDK、JDK8u131/CC3.2.1；标题UnicastRef<=8u231与后文8u231已加过滤冲突"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "recorded"
+source_url: "https://xz.aliyun.com/t/8706"
+id: "vw-ab6ef3b19548cf0831f5f4f3"
+entity_id: "ve-ab6ef3b19548cf0831f5f4f3"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：示例跨旧JDK、JDK8u131/CC3.2.1；标题UnicastRef&lt;=8u231与后文8u231已加过滤冲突
+
+代码与实验材料：全文1234行读完；四攻击方向、Registry白名单与DGC回连独立调试链，依赖旧JDK/CC和方法参数，不可泛化当前JDK
+
+来源证据范围：先知原文8706、OpenJDK JEP290、ysoserial源码、360绕过分析及多研究引用
+
+- **适用与权限边界（1）**：JEP290配置结论与自身分析矛盾；依据：先称必须手动设置否则全不过滤，随后展示Registry默认registryFilter；应区分全局应用过滤、Registry和DGC内置过滤。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **适用与权限边界（2）**：版本边界混乱；依据：UnicastRef标题jdk&lt;=8u231，下一节称8u231 dirty已修；CC1称1.8下不能用忽略具体更新边界，未逐实验记录精确JDK。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **结论使用边界（3）**：基础RMI概念有误；依据：动态代理对象仍实现接口；实现Remote不自动export；不必继承UnicastRemoteObject也可显式导出；序列化发送多次误写反序列化。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **结论使用边界（4）**：代码与链名称对应不一致；依据：JEP290实验代码是AnnotationInvocationHandler/TransformedMap却文字称CC5；getwork添加实现但原接口没同步给出；依赖反射fields\[0\]布局不稳定。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **适用与权限边界（5）**：教学代码返回值及配置路径需纠正；依据：动态InvocationHandler算returnValue却return null；conf/security/java.properties需核为java.security；笼统高JDK仅同机注册未给具体限制版本。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # JAVA RMI 反序列化攻击 and JEP290 Bypass 分析 - 先知社区
 

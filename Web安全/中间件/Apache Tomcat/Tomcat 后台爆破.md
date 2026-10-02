@@ -1,8 +1,44 @@
 ---
 source: "hatch 补库批 20260928"
+title: "Tomcat 后台爆破"
+product: "Apache Tomcat Host Manager"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "管理入口可达且人为配置了弱密码用户；需正确管理角色"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-57766161caa66e6401ef2ad5"
+entity_id: "ve-57766161caa66e6401ef2ad5"
+schema_version: "1"
 ---
 
 # Tomcat 后台爆破
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：管理入口可达且人为配置了弱密码用户；需正确管理角色
+- 证据范围：Basic认证编码教学，不是无条件Tomcat代码漏洞；host-manager与部署应用的manager入口不应混为一谈。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 两次将Base64编码称作加密/密文，错误
+- 简介和影响章节为空
+- 没有默认无用户/本地访问限制等配置前提
+- 只有爆破截图，无版本及锁定/清理/缓解说明
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 一、漏洞简介
 ------------

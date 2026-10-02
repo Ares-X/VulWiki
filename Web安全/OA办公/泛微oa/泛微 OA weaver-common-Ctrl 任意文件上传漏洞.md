@@ -1,11 +1,51 @@
 ---
-
 source: "MrWQ/vulnerability-paper"
+title: "泛微e-cology / cloudstore weaver.common.Ctrl ZIP路径穿越写入"
+product: "泛微e-cology / cloudstore"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "未给版本；Service_CheckApp.validateApp解压ZIP且JSP可执行"
+prerequisites: "声称前台，脚本无凭证"
+side_effects: "文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行"
+review_date: "2026-10-02"
+source_url: "https://mp.weixin.qq.com/s/WoWIZzY48C6GjCrbgnSErg"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E6%B3%9B%E5%BE%AEoa/%E6%B3%9B%E5%BE%AE%20OA%20weaver-common-Ctrl%20%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E.md"
+fofa: "app=\"泛微-协同办公OA\""
+id: "vw-ba9a1b3e7c10390abe6612ef"
+entity_id: "ve-ba9a1b3e7c10390abe6612ef"
+schema_version: "1"
 ---
 
-# 泛微 OA weaver-common-Ctrl 任意文件上传漏洞
+# 泛微e-cology / cloudstore weaver.common.Ctrl ZIP路径穿越写入
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：泛微e-cology / cloudstore；weaver.common.Ctrl ZIP路径穿越写入
+- 版本、配置及部署条件：未给版本；Service_CheckApp.validateApp解压ZIP且JSP可执行
+- 认证与权限前提：声称前台，脚本无凭证
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 根因应标Zip Slip/任意文件写入，不仅笼统上传
+- 完整Python显示../../../ZIP成员与cloudstore落点关系；只以200判断成功会误报
+- ZipFile未显式关闭/上下文管理，资源可靠性问题；原始HTTP只截图
+- 长宣传段可裁剪但保留来源和版权标注
+
+## 操作风险
+
+文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/WoWIZzY48C6GjCrbgnSErg)
 
 ![](https://mmbiz.qpic.cn/mmbiz_gif/ibicicIH182el5PaBkbJ8nfmXVfbQx819qWWENXGA38BxibTAnuZz5ujFRic5ckEltsvWaKVRqOdVO88GrKT6I0NTTQ/640?wx_fmt=gif)

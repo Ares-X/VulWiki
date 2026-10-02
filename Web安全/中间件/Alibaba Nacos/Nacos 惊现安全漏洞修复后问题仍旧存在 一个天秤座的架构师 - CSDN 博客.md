@@ -1,8 +1,53 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "Nacos 惊现安全漏洞修复后问题仍旧存在 一个天秤座的架构师 - CSDN 博客"
+product: "Alibaba Nacos AuthFilter/ControllerMethodsCache"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "认证开启、UA白名单关闭、serverIdentity key/value配置，过滤器路径缓存与Spring路由规范化不一致"
+source_url: "https://blog.csdn.net/u012921921/article/details/112769864"
+source_status: "recorded"
+side_effects: "含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。"
+id: "vw-6294f9dc5da3b278afda0361"
+entity_id: "ve-6294f9dc5da3b278afda0361"
+schema_version: "1"
 ---
 
 # Nacos 惊现安全漏洞修复后问题仍旧存在 一个天秤座的架构师 - CSDN 博客
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：认证开启、UA白名单关闭、serverIdentity key/value配置，过滤器路径缓存与Spring路由规范化不一致
+- 证据范围：method==null直接放行结合尾/是独立补丁绕过机制，不应和UA漏洞直接合成同文
+
+### 本次正文校订
+
+- 按实际内容修正 2 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 复现第2/3请求反而没尾斜杠，curl XGET缺减号；第1请求缺失仅误贴创建响应
+- 说明path生成处误嵌用户列表JSON
+- serverIdentity不匹配后继续普通用户认证可为设计，真正缺陷是method空即放行，不能笼统要求全部403
+- 缺修复版本/CVE映射，最新1.4.1应标历史时点
+
+### 操作风险与资料使用
+
+- 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [blog.csdn.net](https://blog.csdn.net/u012921921/article/details/112769864)
@@ -236,7 +281,7 @@ urlKey 这个 key，是否能从 urlLookup 这个 ConcurrentHashMap 中获取到
 
   2. 添加新用户
 
-```
+```shell
 curl -XPOST 'http://127.0.0.1:8848/nacos/v1/auth/users?username=test&password=test'
 ```
 
@@ -252,7 +297,7 @@ curl -XPOST 'http://127.0.0.1:8848/nacos/v1/auth/users?username=test&password=te
 
 3. 再次查看用户列表
 
-```
+```shell
 curl XGET 'http://127.0.0.1:8848/nacos/v1/auth/users?pageNo=1&pageSize=9'
 ```
 

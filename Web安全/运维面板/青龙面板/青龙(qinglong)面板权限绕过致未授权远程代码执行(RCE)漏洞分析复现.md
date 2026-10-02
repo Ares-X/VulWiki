@@ -1,8 +1,54 @@
 ---
 source: "Mr-xn/Penetration_Testing_POC"
+title: "Qinglong <= v2.20.1 安全审计报告"
+product: "Qinglong2.20.1"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "Version2.20.1 tested per report;container-root deployment;unauthenticated access depends bypass paths;many downstream operations are intended admin functions"
+source_status: "unknown"
+side_effects: "含计划任务、启动项或 SSH 授权文件写入：会改变后续执行或登录行为。测试前备份原文件，结束后恢复原内容、权限与属主，不覆盖生产文件。; 含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。"
+id: "vw-8b70d1da525f5a99fc40effe"
+entity_id: "ve-8b70d1da525f5a99fc40effe"
+schema_version: "1"
 ---
 
 # Qinglong <= v2.20.1 安全审计报告
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：Version2.20.1 tested per report;container-root deployment;unauthenticated access depends bypass paths;many downstream operations are intended admin functions
+- 证据范围：Detailed architecture/dataflow and twelve local finding IDs;test claims not independently reproducible from retained artifacts
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- P0 15/15 tests claimed but only illustrative [19:xx:xx] transcripts and missing tmp/poc_test.py artifact;do not treat as independently verified
+- Twelve finding count mixes root authorization bugs,downstream intended command/cron features and persistence consequences;avoid inflated unique vulnerability count
+- QL-2026-001 hardcodedJWT explicitly blocked by second auth layer,while 'all vulnerabilities tested' overstates result
+- QL-2026-005 only listed in table,not substantively analyzed;coverage mismatch
+- Initialization ordering described as race,although presented sequence is deterministic rewrite/check mismatch
+- Title<=2.20.1 not supported by single tested release;no fixed versions/patch commits
+- In-the-wild claims need direct supporting issue/evidence
+- Root in container does not imply host root;differentiate execution contexts
+- Suggested single whitelist for package names,URLs and cron commands conflicts with intended formats;validate remediation per interface
+
+### 操作风险与资料使用
+
+- 含计划任务、启动项或 SSH 授权文件写入：会改变后续执行或登录行为。测试前备份原文件，结束后恢复原内容、权限与属主，不覆盖生产文件。
+- 含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 > 
 > **目标版本**: Qinglong v2.20.1 (Docker: `whyour/qinglong:2.20.1`)

@@ -1,7 +1,46 @@
 ---
-version: "具体请求包如下，留意下`Content-Type: application/x-www-form-urlencoded`"
+version: ""
 source: "白阁文库 BaizeSec/bylibrary"
+product: "ThinkPHP / 控制器路由与 Request 方法覆盖"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+version_notes: "具体请求包如下，留意下`Content-Type: application/x-www-form-urlencoded`"
+title: "01-Thinkphp漏洞速查"
+prerequisites: "来源所述条件，未列明部分仍待核：第一类 5.0<5.0.23、5.1<5.1.31；第二类逐版 5.0.8–5.0.23 且 debug 条件，表格与下方矛盾"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-a592e0f0ee27299a8b47119e"
+entity_id: "ve-a592e0f0ee27299a8b47119e"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 明确更正：原 version 字段抽入命令、源码、路径、配置或普通叙述，不是版本号，已清空机器版本字段并原样保留于 version_notes；实际版本/分支条件见本节逐篇记录，未从代码猜造版本。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：第一类 5.0&lt;5.0.23、5.1&lt;5.1.31；第二类逐版 5.0.8–5.0.23 且 debug 条件，表格与下方矛盾
+
+代码与实验材料：完整方法覆盖请求，但多版本载荷粘连；写 webshell 属持久副作用
+
+来源证据范围：白阁来源，缺原始披露/补丁链接
+
+- **事实待核（1）**：version 元数据不是版本；依据：抽成“具体请求包如下，留意 Content-Type...”。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **结论使用边界（2）**：5.0.20 是否受影响自相矛盾；依据：表格 5.0.20 否，下文 payload 标 5.0.20–5.0.23；“5.0全系列”也与表格前八版否矛盾。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **事实待核（3）**：多条载荷丢分隔；依据：版本号、参数与或字连成一行，不可当原样请求。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **适用与权限边界（4）**：未分两种根因的独立实体；依据：控制器 invokefunction 和 Request __construct 应各标版本、前提、来源，不能统称一个 RCE。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # 目录
 

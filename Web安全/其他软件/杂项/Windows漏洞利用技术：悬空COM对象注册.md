@@ -1,9 +1,60 @@
 ---
-cve: "CVE-2026-66804"
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2026-66804"
+identifier_role: "primary"
+primary_identifiers: "CVE-2026-66804"
+referenced_identifiers: "CVE-2026-50343"
+identifier_status: "unknown"
+title: "Windows漏洞利用技术：悬空COM对象注册"
+product: "Windows CrossDevice COM registration"
+record_type: "analysis"
+document_type: "COM提权研究翻译"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "本地低权限，指定ProgramData路径可写，可启动CreateObjectTask并使SYSTEM COM服务允许自定义封送；Windows具体受影响build未列"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/Windows%E6%BC%8F%E6%B4%9E%E5%88%A9%E7%94%A8%E6%8A%80%E6%9C%AF%EF%BC%9A%E6%82%AC%E7%A9%BACOM%E5%AF%B9%E8%B1%A1%E6%B3%A8%E5%86%8C.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-136a777cc544735767dcf99a"
+entity_id: "ve-136a777cc544735767dcf99a"
+schema_version: "1"
 ---
 
-#  Windows漏洞利用技术：悬空COM对象注册  
+# Windows漏洞利用技术：悬空COM对象注册
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Windows CrossDevice COM registration
+- 文献类型：COM提权研究翻译
+- 版本、权限及部署边界：本地低权限，指定ProgramData路径可写，可启动CreateObjectTask并使SYSTEM COM服务允许自定义封送；Windows具体受影响build未列
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 保留50343 InstallService旧链与66804自定义编组新链差异，不能视为重复同一EXP
+2. 实际需本地可创建指定ProgramData子目录/DLL、可运行CreateObjectTask及自定义编组被允许；ProgramData公共位置不代表全部路径可写，取决ACL/现存目录
+3. 一处称找不启用自定义封送的服务与后文CustomMarshalAllowed True矛盾，应为未启用禁止自定义封送缓解
+4. 源码IMarshal片段为节选，完整EXP此处原始问题的链接丢失，Calif/DCOM原文也未连；没有修复KB/版本/作者实名
+5. LoadLibrary AsDataFile失败不只文件不存在，也可能格式/架构/权限，不能单次失败确诊悬空注册；保留25H2工具不兼容的限制
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
  Ots安全   2026-09-25 04:51  
   
 **威胁简报**  
@@ -159,4 +210,4 @@ AnQuan7 (Ots安全)
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

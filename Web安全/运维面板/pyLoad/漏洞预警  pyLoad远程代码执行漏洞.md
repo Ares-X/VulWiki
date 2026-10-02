@@ -1,9 +1,46 @@
 ---
 cve: "CVE-2023-47890"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "漏洞预警 | pyLoad远程代码执行漏洞"
+product: "pyLoad"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2023-47890"
+referenced_identifiers: ""
+identifier_role: "primary"
+prerequisites: "0.5.0 claimed;upload privileges/destination/execution conditions unstated"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-1f63aea1dcff2f3424a251f5"
+entity_id: "ve-1f63aea1dcff2f3424a251f5"
+schema_version: "1"
 ---
 
-#  漏洞预警 | pyLoad远程代码执行漏洞   
+# 漏洞预警 | pyLoad远程代码执行漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：0.5.0 claimed;upload privileges/destination/execution conditions unstated
+- 证据范围：Generic unrestricted upload-to-RCE summary;official GHSA linked but no text evidence
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- POC heading links advisory;distinguish actual PoC availability
+- Specify authenticated upload rights and exact affected dev/release builds from advisory
+- No fixed version despite claim fixed
+- Remove empty headings/broken bold formatting
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 浅安  浅安安全   2024-01-13 08:00  
   
 **0x00 漏洞编号**  

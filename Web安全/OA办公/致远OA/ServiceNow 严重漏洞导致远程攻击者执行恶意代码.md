@@ -1,8 +1,50 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "ServiceNow AI Platform 沙箱逃逸未认证代码执行通告"
+product: "ServiceNow AI Platform"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2026-6875"
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "Brazil EA/GA、Australia Patch2、Zurich7b/9、Yokohama12HF1b/13修复声称；托管/自托管"
+prerequisites: "声称未认证但具体触发受限未公开"
+side_effects: "命令/代码执行示例可能改变主机状态"
+review_date: "2026-10-02"
+identifier_role: "primary"
+source_status: "unknown"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E8%87%B4%E8%BF%9COA/ServiceNow%20%E4%B8%A5%E9%87%8D%E6%BC%8F%E6%B4%9E%E5%AF%BC%E8%87%B4%E8%BF%9C%E7%A8%8B%E6%94%BB%E5%87%BB%E8%80%85%E6%89%A7%E8%A1%8C%E6%81%B6%E6%84%8F%E4%BB%A3%E7%A0%81.md"
+id: "vw-a509c951c157fca1f2c8e13a"
+entity_id: "ve-a509c951c157fca1f2c8e13a"
+schema_version: "1"
 ---
 
-#  ServiceNow 严重漏洞导致远程攻击者执行恶意代码  
+# ServiceNow AI Platform 沙箱逃逸未认证代码执行通告
+
+## 条目说明
+
+- 对象与具体问题：ServiceNow AI Platform；沙箱逃逸未认证代码执行通告
+- 版本、配置及部署条件：Brazil EA/GA、Australia Patch2、Zurich7b/9、Yokohama12HF1b/13修复声称；托管/自托管
+- 认证与权限前提：声称未认证但具体触发受限未公开
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 错分致远OA；主CVE2026-6875及KB2930717/KB2930740应结构化
+- 产品系列/补丁的条件保留，不应统一成单数版本范围
+- 只链接二次新闻未给ServiceNow公告可点击链接，需权威核验
+- 公开技术细节受限，无PoC是通告属性；未在野截至2026-07-13而非当前保证
+
+## 操作风险
+
+命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 Abinaya
                     Abinaya  代码卫士   2026-07-14 09:41  
   

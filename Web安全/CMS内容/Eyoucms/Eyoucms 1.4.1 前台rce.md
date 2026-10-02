@@ -1,6 +1,40 @@
 ---
 source: "hatch 补库批 20260928"
+product: "EyouCMS1.4.1 / ThinkPHP template"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "Eyoucms 1.4.1 前台rce"
+prerequisites: "来源所述条件，未列明部分仍待核：AJAX POST get_tag_memberlist；模板编译/缓存写执行允许；原始assert载荷依赖PHP版本"
+side_effects: "未执行；本文需注意的操作影响：详细控制器到模板链应保留，不能与1.0Uploadify任意上传合并"
+source_status: "unknown"
+id: "vw-1a15d121bcfb60234210427b"
+entity_id: "ve-1a15d121bcfb60234210427b"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：AJAX POST get_tag_memberlist；模板编译/缓存写执行允许；原始assert载荷依赖PHP版本
+
+- **结论使用边界（1）**：首载荷html参数名与源码htmlcode不符，后文才正确；Controller拼成Controll。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **结论使用边界（2）**：base64字符串实际是assert调用，正文解码写eval且弯引号，载荷说明不一致。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **代码与转录边界（3）**：Python代码编码声明缺#、print字符串断行导致语法损坏，生成内容以&lt;php而非&lt;?php开头，HTTP200仅存活不是执行证明。相应原代码作为存在此问题的历史样本保留，不能直接当作可运行、成功复现的 PoC；缺失内容需回原稿核对，不据此补造可执行攻击链。
+
+- **证据待核（4）**：多图引用1.0前台getshell资源目录，应核对对应；正则W被错误解释为字母数字下划线。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **结论使用边界（5）**：详细控制器到模板链应保留，不能与1.0Uploadify任意上传合并。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Eyoucms 1.4.1 前台rce
 

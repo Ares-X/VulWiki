@@ -1,8 +1,52 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-60dd8e7a9a4da9aeb339962e"
+entity_id: "ve-60dd8e7a9a4da9aeb339962e"
+schema_version: "1"
+title: "TP-Link 多个漏洞使攻击者能够触发拒绝服务攻击并导致路由器崩溃"
+product: "TP-Link Tapo C520WS v2.6摄像头"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2026-34118"
+referenced_identifiers: ""
+prerequisites: "同网段；固件<1.2.4 Build260326 Rel.24666n"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/TP-Link/TP-Link%20%E5%A4%9A%E4%B8%AA%E6%BC%8F%E6%B4%9E%E4%BD%BF%E6%94%BB%E5%87%BB%E8%80%85%E8%83%BD%E5%A4%9F%E8%A7%A6%E5%8F%91%E6%8B%92%E7%BB%9D%E6%9C%8D%E5%8A%A1%E6%94%BB%E5%87%BB%E5%B9%B6%E5%AF%BC%E8%87%B4%E8%B7%AF%E7%94%B1%E5%99%A8%E5%B4%A9%E6%BA%83.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 #  TP-Link 多个漏洞使攻击者能够触发拒绝服务攻击并导致路由器崩溃  
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：TP-Link Tapo C520WS v2.6摄像头
+- 本文讨论：CVE-2026-34118/34119/34120/34121/34122/34124
+- 版本、权限与配置前提：同网段；固件&lt;1.2.4 Build260326 Rel.24666n
+- 资料类型：多漏洞预警；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 标题说路由器崩溃但正文全部是摄像头；分类及主实体提取错误
+- 无官方公告直链；各溢出接口/auth前提合并得过粗
+- 厂商不负责安全后果引述无可追溯出处
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 每CVE范围/前提及修复版本待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 原创 网络安全9527
                     网络安全9527  安全圈的那点事儿   2026-04-03 11:09  
   

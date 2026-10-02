@@ -1,6 +1,39 @@
 ---
 source: "MrWQ/vulnerability-paper"
+product: "狮子鱼CMS15.2.0lab"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "狮子鱼 CMS 多个漏洞复现"
+prerequisites: "来源所述条件，未列明部分仍待核：publicCKeditor/wxappupload andtwoAPIgoodsSQLclaimed;PHPuploadexec;initiallabadmincredentials"
+side_effects: "未执行；本文需注意的操作影响：上传multipart缺name/filename且结束边界长破折号不是--，原样请求不可用；SQL/第二上传只有URL短述无各自源码/完整响应，缺官方修复"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/kr8SGlvTqcG3pqOqpVKTTg"
+id: "vw-0c4759dd53b1aaccba468369"
+entity_id: "ve-0c4759dd53b1aaccba468369"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：publicCKeditor/wxappupload andtwoAPIgoodsSQLclaimed;PHPuploadexec;initiallabadmincredentials
+
+- **适用与权限边界（1）**：上传multipart缺name/filename且结束边界长破折号不是--，原样请求不可用。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **事实待核（2）**：四个入口分别对应706/707/711/712，按多漏洞关联，测试15.2.0可补其他无版本文但不能泛化所有。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **适用与权限边界（3）**：默认admin888只是提供的压缩包环境，源需公众号领取未hash锁定。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **事实待核（4）**：SQL/第二上传只有URL短述无各自源码/完整响应，缺官方修复。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # 狮子鱼 CMS 多个漏洞复现
 

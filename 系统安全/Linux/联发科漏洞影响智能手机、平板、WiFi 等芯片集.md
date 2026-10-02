@@ -1,8 +1,67 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2023-20754;CVE-2023-20755;CVE-2023-20753;CVE-2023-20756;CVE-2023-20757;CVE-2023-20758;CVE-2023-20759;CVE-2023-20760;CVE-2023-20761;CVE-2023-20766;CVE-2023-20767;CVE-2023-20768;CVE-2023-20771;CVE-2023-20772;CVE-2023-20773;CVE-2023-20774;CVE-2023-20775;CVE-2023-20689;CVE-2023-20690;CVE-2023-20691;CVE-2023-20692;CVE-2023-20693;CVE-2022-32666;CVE-2023-20748"
+identifier_role: "primary"
+primary_identifiers: "CVE-2023-20754;CVE-2023-20755;CVE-2023-20753;CVE-2023-20756;CVE-2023-20757;CVE-2023-20758;CVE-2023-20759;CVE-2023-20760;CVE-2023-20761;CVE-2023-20766;CVE-2023-20767;CVE-2023-20768;CVE-2023-20771;CVE-2023-20772;CVE-2023-20773;CVE-2023-20774;CVE-2023-20775;CVE-2023-20689;CVE-2023-20690;CVE-2023-20691;CVE-2023-20692;CVE-2023-20693;CVE-2022-32666;CVE-2023-20748"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "联发科漏洞影响智能手机、平板、WiFi 等芯片集"
+product: "MediaTek多芯片组件/Android集成"
+record_type: "roundup"
+document_type: "月度24漏洞公告摘要"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "20754/20755需system执行权限、Android11/12/13且列芯片；其余仅简短类型"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/%E8%81%94%E5%8F%91%E7%A7%91%E6%BC%8F%E6%B4%9E%E5%BD%B1%E5%93%8D%E6%99%BA%E8%83%BD%E6%89%8B%E6%9C%BA%E3%80%81%E5%B9%B3%E6%9D%BF%E3%80%81WiFi%20%E7%AD%89%E8%8A%AF%E7%89%87%E9%9B%86.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+source_url: "https://gbhackers.com/mediatek-security-flaws/"
+id: "vw-12e5214257b65cc91d5d3673"
+entity_id: "ve-12e5214257b65cc91d5d3673"
+schema_version: "1"
 ---
 
-#  联发科漏洞影响智能手机、平板、WiFi 等芯片集   
+# 联发科漏洞影响智能手机、平板、WiFi 等芯片集
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：MediaTek多芯片组件/Android集成
+- 文献类型：月度24漏洞公告摘要
+- 版本、权限及部署边界：20754/20755需system执行权限、Android11/12/13且列芯片；其余仅简短类型
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. frontmatter无CVE，实际24主漏洞公告需实体列表，不能只首项或按标题Linux归内核
+2. 两高危段需系统权限与本地提权因果表达不顺，应准确区分前置权限/影响，越界读不自动证明root
+3. 长芯片列表与软件版本应逐组件关联，不能将相同列表扩展给22个中危漏洞
+4. GBHackers原报道存在，缺MediaTek2023-07官方公告/修复版本；中危清单是索引线索无需编造PoC
+5. 重复同图三次、广告推荐等占比高；保留月度摘要与来源日
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://gbhackers.com/mediatek-security-flaws/>
+- 原文参考链接（未重新核验）：<https://codesafe.qianxin.com>
+- 原文参考链接（未重新核验）：<https://oss.qianxin.com>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzI2NTg4OTc5Nw==&mid=2247516678&idx=1&sn=5b9e480c386161b1e105f9818b2a5a3d&chksm=ea94b36cdde33a7a05cafa9918733669252a02611c222b02bc6e66cbb508ee3fbf748453ee7a&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzI2NTg4OTc5Nw==&mid=2247515374&idx=1&sn=8b491039bc40f1e5d4e1b29d8c95f9e7&chksm=ea948d84dde30492f8a6c9953f69dbed1f483b6bc9b4480cab641fbc69459d46bab41cdc4859&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzI2NTg4OTc5Nw==&mid=2247509419&idx=2&sn=2f9d2960d52a795a5895a28287b29b59&chksm=ea9494c1dde31dd746b7adc04dff58cb689164d449cf30114b367a650a1bdd1c05242ba45a83&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzI2NTg4OTc5Nw==&mid=2247515956&idx=1&sn=01fe340192b1659e658210ae4b02ac97&chksm=ea948e5edde30748775821e1c9ed1b389b2c0dd119e01cd78b9292d859542e3f209300000e4c&scene=21#wechat_redirect>
+
+### 归档技术正文
+
 Guru Baran  代码卫士   2023-07-05 17:23  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

@@ -1,8 +1,67 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2013-3900"
+identifier_role: "primary"
+primary_identifiers: "CVE-2013-3900"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "Windows漏洞十年未修复，3CX供应链攻击影响全球60多万家企业"
+product: "Windows WinVerifyTrust；3CX事件"
+record_type: "incident"
+document_type: "签名验证漏洞与供应链事件新闻"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "历史2023-04状态，需运行受篡改应用及信任未强制padding检查；修复opt-in配置"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/Windows%E6%BC%8F%E6%B4%9E%E5%8D%81%E5%B9%B4%E6%9C%AA%E4%BF%AE%E5%A4%8D%EF%BC%8C3CX%E4%BE%9B%E5%BA%94%E9%93%BE%E6%94%BB%E5%87%BB%E5%BD%B1%E5%93%8D%E5%85%A8%E7%90%8360%E5%A4%9A%E4%B8%87%E5%AE%B6%E4%BC%81%E4%B8%9A.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+source_url: "https://www.bleepingcomputer.com/news/microsoft/10-year-old-windows-bug-with-opt-in-fix-exploited-in-3cx-attack/"
+id: "vw-2e1e2d5fa6eccff69a74f9e4"
+entity_id: "ve-2e1e2d5fa6eccff69a74f9e4"
+schema_version: "1"
 ---
 
-#  Windows漏洞十年未修复，3CX供应链攻击影响全球60多万家企业   
+# Windows漏洞十年未修复，3CX供应链攻击影响全球60多万家企业
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Windows WinVerifyTrust；3CX事件
+- 文献类型：签名验证漏洞与供应链事件新闻
+- 版本、权限及部署边界：历史2023-04状态，需运行受篡改应用及信任未强制padding检查；修复opt-in配置
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 标题十年未修复与正文2013已有可选修复冲突，应写未默认强制；60多万企业是潜在客户规模不能当确认受陷数
+2. 将漏洞opt-in注册表开关解释成Windows10发布渠道/家庭用户同意更新，属于无关概念混入应删
+3. CVE-201303900格式错；Authenticode译Windows验证码不准确；签名有效不证明全文件无恶意，更非自动执行签名块尾部payload
+4. 升级Windows11删除开关的观察须限定具体升级版本及时间；记者单机无故障不证明企业兼容性无风险
+5. 有BleepingComputer原文但微软公告缺，ITPro链接断行；绝大多数尾部为相关阅读广告，应清除而非生成额外漏洞记录
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://www.bleepingcomputer.com/news/microsoft/10-year-old-windows-bug-with-opt-in-fix-exploited-in-3cx-attack/>
+- 原文参考链接（未重新核验）：<https://codesafe.qianxin.com>
+- 原文参考链接（未重新核验）：<https://oss.qianxin.com>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzI2NTg4OTc5Nw==&mid=2247511052&idx=3&sn=fb116392e405ae62e6c339117fffdb59&chksm=ea949d66dde31470758b6ee8f9dbecdb67ef6c0c8af277f26b83b60dbac95748d28db787a4b4&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzI2NTg4OTc5Nw==&mid=2247515374&idx=1&sn=8b491039bc40f1e5d4e1b29d8c95f9e7&chksm=ea948d84dde30492f8a6c9953f69dbed1f483b6bc9b4480cab641fbc69459d46bab41cdc4859&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzI2NTg4OTc5Nw==&mid=2247516096&idx=2&sn=e116004fbe089b4c4c2973cc6475b5ba&chksm=ea948eaadde307bcf9b88592627fc5ebcd68cade9ac4ccba9b66e8c0c2f74b16c35ef652bf36&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzI2NTg4OTc5Nw==&mid=2247513174&idx=1&sn=e474d1ea23ed7cce10e2ae2f872fc003&chksm=ea94853cdde30c2a963cfa00a536764ea55cdee7ba6ef4a7716a28f82a97ca630dc271ee5224&scene=21#wechat_redirect>
+
+### 归档技术正文
+
 Lawrence Abrams  代码卫士   2023-04-03 16:53  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

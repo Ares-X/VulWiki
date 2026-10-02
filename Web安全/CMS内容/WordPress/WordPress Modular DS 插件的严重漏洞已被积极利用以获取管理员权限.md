@@ -1,6 +1,38 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+product: "WordPress Modular DS"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2026-23550"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "WordPress Modular DS 插件的严重漏洞已被积极利用以获取管理员权限"
+prerequisites: "来源所述条件，未列明部分仍待核：<=2.5.1; site linked to Modular with existing/renewable token; direct-request route; fixed2.5.2 claimed"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-5f5b0a824cc5534175c0f99f"
+entity_id: "ve-5f5b0a824cc5534175c0f99f"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：&lt;=2.5.1; site linked to Modular with existing/renewable token; direct-request route; fixed2.5.2 claimed
+
+- **事实待核（1）**：正文有CVE但frontmatter遗漏。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **凭据与会话边界（2）**：文章保留站点已连接及令牌存在条件，应进入结构化前提，不能写任意安装均可直接接管。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+
+- **事实待核（3）**：Patchstack引述、安装量/活跃利用时间/IP均未附原始链接。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **事实待核（4）**：无完整请求或成功响应，新闻不能标作已验证PoC；IOC应保留观察时间和来源。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 #  WordPress Modular DS 插件的严重漏洞已被积极利用以获取管理员权限  
  TtTeam   2026-02-02 07:24  

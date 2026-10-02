@@ -1,9 +1,53 @@
 ---
-cve: "CVE-2024-28255"
+cve: "CVE-2024-28255; CVE-2024-28253; CVE-2024-28847; CVE-2024-28254; CVE-2024-28848"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "漏洞预警 | OpenMetadata身份验证绕过和SpEL表达式注入漏洞"
+product: "OpenMetadata JWT认证及SpEL表达式处理"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2024-28255; CVE-2024-28253; CVE-2024-28847; CVE-2024-28254; CVE-2024-28848"
+referenced_identifiers: ""
+identifier_role: "primary"
+verification_source: "https://securitylab.github.com/advisories/GHSL-2023-235_GHSL-2023-237_Open_Metadata/"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-4de8d9ef18c5a59f4753dc66"
+entity_id: "ve-4de8d9ef18c5a59f4753dc66"
+schema_version: "1"
 ---
 
-#  漏洞预警 | OpenMetadata身份验证绕过和SpEL表达式注入漏洞   
+# 漏洞预警 | OpenMetadata身份验证绕过和SpEL表达式注入漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 证据范围：五个独立入口/根因均主实体，正文正确分认证绕过和四个SpEL，但meta只留首个。不能自动推定四个表达式入口都能与绕过无认证组合。
+
+### 已有来源支持的更正
+
+- 已核尾部五CVE入口映射；源网页标题28845为其自身笔误而正文28847，不应反改本文正确28847
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 原始研究指出有些路径依赖getUserPrincipal，绕过后为null而NPE，不能泛称所有端点都成功执行
+- 修复<1.2.4与28253<1.3.1分组有价值，但修复只仓库首页缺release直链
+- 标题/粗体/空行污染需清理
+
+### 核验来源
+
+- https://securitylab.github.com/advisories/GHSL-2023-235_GHSL-2023-237_Open_Metadata/
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 浅安  浅安安全   2024-04-20 09:02  
   
 **0x00 漏洞编号**  

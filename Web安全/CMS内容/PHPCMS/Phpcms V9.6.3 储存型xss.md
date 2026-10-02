@@ -1,6 +1,38 @@
 ---
 source: "hatch 补库批 20260928"
+product: "PHPCMS9.6.3 / PHPSso credit queue"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "Phpcms V9.6.3 储存型xss"
+prerequisites: "来源所述条件，未列明部分仍待核：会员登录、积分兑换/SSO配置有效，管理员查看通信信息且鼠标移动事件"
+side_effects: "未执行；本文需注意的操作影响：无转义输出sink被作者略过，只展示队列写入，不能仅入库确认XSS；需用户交互onmousemove"
+source_status: "unknown"
+id: "vw-495df916767f4b8360798beb"
+entity_id: "ve-495df916767f4b8360798beb"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：会员登录、积分兑换/SSO配置有效，管理员查看通信信息且鼠标移动事件
+
+- **结论使用边界（1）**：fromvalue0.6/0.9截为0并非独立绕过任何积分安全，需和0提交比较。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **证据待核（2）**：payload from=1id=1...格式异常，与源码from==1判定依赖旧PHP弱比较；缺预期to下划线结构，要回源核对。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **结论使用边界（3）**：无转义输出sink被作者略过，只展示队列写入，不能仅入库确认XSS；需用户交互onmousemove。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **结论使用边界（4）**：源码/中文说明混在同代码块，双GPC环境未准确限定。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Phpcms V9.6.3 储存型xss
 

@@ -1,7 +1,43 @@
 ---
 cve: "CVE-2026-23870"
 source: "gelusus/wxvl 公众号漏洞文库"
+product: "Next.js及React Server Components"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2026-23870; CVE-2026-44572; CVE-2026-44573; CVE-2026-44574; CVE-2026-44575; CVE-2026-44576; CVE-2026-44577; CVE-2026-44578; CVE-2026-44579; CVE-2026-44580; CVE-2026-44581; CVE-2026-44582"
+referenced_identifiers: "CVE-2026-23869"
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "12个CVE扎堆引爆：安全研究员一次性披露Next.js-React全版本高危漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：Next15.5.16/16.2.5及Turbopack16.2.6、React19.0.6/19.1.7/19.2.6为文中修复，未逐CVE映射影响分支"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-0e122e6413600bbef76dff32"
+entity_id: "ve-0e122e6413600bbef76dff32"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：Next15.5.16/16.2.5及Turbopack16.2.6、React19.0.6/19.1.7/19.2.6为文中修复，未逐CVE映射影响分支
+
+代码与实验材料：仅指向dwisiswant0/next-16.2.4-pocs，没有本地证据；未确认仓库材料
+
+来源证据范围：声称官方GHSA、Cloudflare、NVD但只链接PoC仓库，需逐条来源核验
+
+- **结论使用边界（1）**：托管影响前后矛盾；依据：44578段明确Vercel不受影响，速查表Vercel列却写SSRF/Cache DoS不免疫且行对象是自托管。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **事实待核（2）**：全版本/几乎全部生产部署夸大适用面；依据：各项分别要求App Router、i18n、PPR等特定功能，不是所有React客户端应用。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **证据待核（3）**：评级与风险修辞混合；依据：导语3个高危而正文6个高危；High被称接近Critical但无向量或独立依据。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **证据待核（4）**：关键断言没有直接依据；依据：所有12个已收录、任何托管WAF均无法安全拦截、PoC前只有理论风险等均泛化或无直接链接。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 #  12个CVE扎堆引爆：安全研究员一次性披露Next.js/React全版本高危漏洞  
 Jack Stone

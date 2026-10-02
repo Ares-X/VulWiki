@@ -1,6 +1,38 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+product: "Setuptools/PackageIndex下载路径"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2025-47273"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "Setuptools 漏洞导致数百万 Python 用户易受RCE攻击"
+prerequisites: "来源所述条件，未列明部分仍待核：78.1.1修复，受影响下界未知；需已弃用easy_install/package_index调用及攻击者可控索引URL"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-cd3e30a71cedc075e70753d8"
+entity_id: "ve-cd3e30a71cedc075e70753d8"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：78.1.1修复，受影响下界未知；需已弃用easy_install/package_index调用及攻击者可控索引URL
+
+代码与实验材料：绝对路径覆盖os.path.join首参数机理明确，无样例或执行链；正文正确限定进程权限
+
+来源证据范围：标原文链接却指向VMware补丁新闻，明显错链；无Setuptools官方公告
+
+- **来源与引用处置（1）**：原文来源完全错配；依据：SecurityWeek URL nato-flagged-vulnerability-tops-latest-VMware-security-patch-batch与Setuptools主题无关。保留这部分来源材料并与技术结论分开；其引用或宣传内容不能补足本文漏洞的证据。
+
+- **结论使用边界（2）**：标题RCE和数百万用户需限定；依据：正文为旧下载路径任意写，在特定执行位置才RCE；安装setuptools本身不是暴露。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 #  Setuptools 漏洞导致数百万 Python 用户易受RCE攻击   
 Ddos  代码卫士   2025-05-22 09:32  

@@ -1,8 +1,46 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Linux启动漏洞可绕过现代Linux系统的安全启动保护"
+product: "Linux发行版引导链/initramfs配置"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "短暂物理接触、相应恢复shell、可修改未验证启动分区/镜像，之后合法用户解锁根分区"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-9883deb4483ce59f719e531d"
+entity_id: "ve-9883deb4483ce59f719e531d"
+schema_version: "1"
 ---
 
-#  Linux启动漏洞可绕过现代Linux系统的安全启动保护  
+# Linux启动漏洞可绕过现代Linux系统的安全启动保护
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：短暂物理接触、相应恢复shell、可修改未验证启动分区/镜像，之后合法用户解锁根分区
+- 证据范围：应定位启动链配置/设计风险而非所有Linux同一版本漏洞；不同发行版步骤与测试条件只新闻摘要
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- TPM记录PCR度量本身不是强制拒绝启动，需策略绑定/密钥封存或验证机制
+- panic=0禁恢复shell依赖具体initramfs实现，不可作通用内核保证
+- SSD原生加密不能无条件替代启动链完整性
+- OpenSUSE免疫应限测试默认配置，不是产品永远不受影响
+- 缺原研究/发行版官方缓解验证
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
  FreeBuf   2025-07-08 11:03  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/qq5rfBadR38jUokdlWSNlAjmEsO1rzv3srXShFRuTKBGDwkj4gvYy34iajd6zQiaKl77Wsy9mjC0xBCRg0YgDIWg/640?wx_fmt=gif "")  

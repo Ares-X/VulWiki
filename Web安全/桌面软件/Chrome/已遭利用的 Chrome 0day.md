@@ -1,8 +1,66 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2025-5419;CVE-2025-5068"
+identifier_role: "primary"
+primary_identifiers: "CVE-2025-5419;CVE-2025-5068"
+referenced_identifiers: "CVE-2025-2783"
+identifier_status: "unknown"
+title: "已遭利用的 Chrome 0day"
+product: "Chrome V8/Blink"
+record_type: "advisory"
+document_type: "安全更新与在野利用新闻"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "恶意HTML；137.0.7151.68/.69修复，5419报告在野利用"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Chrome/%E5%B7%B2%E9%81%AD%E5%88%A9%E7%94%A8%E7%9A%84%20Chrome%200day.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+source_url: "https://www.securityweek.com/google-researchers-find-new-chrome-zero-day/"
+id: "vw-e86ea3d86c95847b360ade4b"
+entity_id: "ve-e86ea3d86c95847b360ade4b"
+schema_version: "1"
 ---
 
-#  谷歌悄悄紧急修复已遭利用的 Chrome 0day   
+# 已遭利用的 Chrome 0day
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Chrome V8/Blink
+- 文献类型：安全更新与在野利用新闻
+- 版本、权限及部署边界：恶意HTML；137.0.7151.68/.69修复，5419报告在野利用
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 元数据空；主5419及附带5068应关联，不能将前次2783或未具名5月漏洞抽为本文主项
+2. TAG以往监控软件调查不能证明5419本次由监控商利用，正文猜测需显式保留推断
+3. 说更新修三漏洞却只给两个编号，剩余项不可猜补；披露/观测/修复时间应分开
+4. 有SecurityWeek来源但缺Google/NVD直接公告；大量推广和推荐链接应清理
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://www.securityweek.com/google-researchers-find-new-chrome-zero-day/>
+- 原文参考链接（未重新核验）：<https://codesafe.qianxin.com>
+- 原文参考链接（未重新核验）：<https://oss.qianxin.com>
+- 原文参考链接（未重新核验）：<https://mp.weixin.qq.com/s?__biz=MzI2NTg4OTc5Nw==&mid=2247523031&idx=1&sn=40bc8fad7dc229f984420d3f6109a0b9&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<https://mp.weixin.qq.com/s?__biz=MzI2NTg4OTc5Nw==&mid=2247522612&idx=2&sn=50c7ad88e87b485a09c7ae916f9d9677&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<https://mp.weixin.qq.com/s?__biz=MzI2NTg4OTc5Nw==&mid=2247519462&idx=1&sn=1f7824cfd17d3489bc4ba1b37c5d974c&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<https://mp.weixin.qq.com/s?__biz=MzI2NTg4OTc5Nw==&mid=2247519170&idx=1&sn=31612ff9461ff59184a818b76f04c198&scene=21#wechat_redirect>
+
+### 归档技术正文
+
 Ionut Arghire  代码卫士   2025-06-04 10:41  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

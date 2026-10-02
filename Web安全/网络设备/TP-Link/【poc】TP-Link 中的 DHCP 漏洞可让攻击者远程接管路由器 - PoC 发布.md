@@ -1,8 +1,54 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-d57d37691431c5670b6be7c9"
+entity_id: "ve-d57d37691431c5670b6be7c9"
+schema_version: "1"
+title: "TP-Link DHCP 拒绝服务 PoC（代码执行影响待核）"
+product: "TP-Link VN020-F3v(T)"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2024-11237"
+referenced_identifiers: ""
+prerequisites: "TT_V6.2.1021；无认证但须DHCP服务可达，本地/中继边界未明确"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/TP-Link/%E3%80%90poc%E3%80%91TP-Link%20%E4%B8%AD%E7%9A%84%20DHCP%20%E6%BC%8F%E6%B4%9E%E5%8F%AF%E8%AE%A9%E6%94%BB%E5%87%BB%E8%80%85%E8%BF%9C%E7%A8%8B%E6%8E%A5%E7%AE%A1%E8%B7%AF%E7%94%B1%E5%99%A8%20-%20PoC%20%E5%8F%91%E5%B8%83.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
-#  【poc】TP-Link 中的 DHCP 漏洞可让攻击者远程接管路由器 - PoC 发布   
+# TP-Link DHCP 拒绝服务 PoC（代码执行影响待核）
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：TP-Link VN020-F3v(T)
+- 本文讨论：CVE-2024-11237 DHCP处理
+- 版本、权限与配置前提：TT_V6.2.1021；无认证但须DHCP服务可达，本地/中继边界未明确
+- 资料类型：黑盒DoS研究新闻；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 标题远程接管与正文仅确认DoS、RCE可能不一致
+- 声明无固件代码却画确定64字节/EBP布局，图应标示意假设不能当实测栈证据
+- 其他国家固件受影响未给型号版本或来源
+- 已落实的文本修订：标题与正文证据对齐。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- PoC真实结果、CWE定性和官方补丁状态需来源确认
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
  独眼情报   2024-11-18 08:20  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/KgxDGkACWnRgwGibBzMGHIzX1hyt9P2m6Eotqw3tQdxTbyQtheRfl2lEPLftJjtSravocdQUxmXXReaGGugiaNGg/640?wx_fmt=jpeg&from=appmsg "")  

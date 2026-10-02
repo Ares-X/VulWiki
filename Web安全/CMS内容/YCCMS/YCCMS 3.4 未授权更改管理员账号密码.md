@@ -1,6 +1,38 @@
 ---
 source: "hatch 补库批 20260928"
+product: "YCCMS3.4 AdminAction.update"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "YCCMS 3.4 未授权更改管理员账号密码"
+prerequisites: "来源所述条件，未列明部分仍待核：routeaccessiblewithoutloginclaimed; POSTsend/name/password/notpassword; fixedadminID1"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-0317515fe8030eca1db9001f"
+entity_id: "ve-0317515fe8030eca1db9001f"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：routeaccessiblewithoutloginclaimed; POSTsend/name/password/notpassword; fixedadminID1
+
+- **结论使用边界（1）**：标题任意管理员账号实际SQLWHEREid=1，只改固定首管理员，不是任意选定ID。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **证据待核（2）**：根因为授权缺失，不是拼SQL本身即可证明任意改密；空prepare不能防SQLi但那是额外未演示原语。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **证据待核（3）**：完整更新函数有价值但外层路由鉴权未展示，URL/POST包只图。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **凭据与会话边界（4）**：账号SHA1并非主要漏洞，需区分凭据更新影响与实现；原文xz精准无补丁。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # YCCMS 3.4 未授权更改管理员账号密码
 

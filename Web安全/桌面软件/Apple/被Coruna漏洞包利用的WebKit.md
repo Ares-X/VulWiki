@@ -1,8 +1,60 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2023-43010;CVE-2023-43000;CVE-2023-41974;CVE-2024-23222"
+identifier_role: "primary"
+primary_identifiers: "CVE-2023-43010;CVE-2023-43000;CVE-2023-41974;CVE-2024-23222"
+referenced_identifiers: "CVE-2023-32434;CVE-2023-38606"
+identifier_status: "unknown"
+title: "被Coruna漏洞包利用的WebKit"
+product: "Apple旧版iOS/iPadOS WebKit与内核"
+record_type: "roundup"
+document_type: "多漏洞回补与利用包新闻"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "文称15.8.7/16.7.15回补；Coruna覆盖13.0–17.2.1，攻击链与单漏洞范围须拆开"
+side_effects: "安全建议支持17.2及以上立即更新却未给目标安全版本，且前文明示攻击包覆盖17.2.1，不能把17.2当通用安全下限"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Apple/%E8%A2%ABCoruna%E6%BC%8F%E6%B4%9E%E5%8C%85%E5%88%A9%E7%94%A8%E7%9A%84WebKit.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-381b7e010d27232690468a9d"
+entity_id: "ve-381b7e010d27232690468a9d"
+schema_version: "1"
 ---
 
-#  Apple为旧版iPhone/iPad发布紧急安全更新，修复被Coruna漏洞包利用的WebKit漏洞  
+# 被Coruna漏洞包利用的WebKit
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Apple旧版iOS/iPadOS WebKit与内核
+- 文献类型：多漏洞回补与利用包新闻
+- 版本、权限及部署边界：文称15.8.7/16.7.15回补；Coruna覆盖13.0–17.2.1，攻击链与单漏洞范围须拆开
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 安全建议支持17.2及以上立即更新却未给目标安全版本，且前文明示攻击包覆盖17.2.1，不能把17.2当通用安全下限
+2. CVE43010、历史首修和旧分支版本均需Apple原文核对，只有THN名称无链接
+3. 将CryptoWats与Coruna直接等同、国家级工具流出等归因需Google/iVerify原研究；正文也承认同CVE不能证明同源，应保留不确定性
+4. 至少四主修复CVE元数据空；Triangulation两CVE是关联背景不能当本次全部补丁
+5. 大量重复铺陈和HTML样式、表后标题粘连；迁移动系统
+
+### 操作风险
+
+安全建议支持17.2及以上立即更新却未给目标安全版本，且前文明示攻击包覆盖17.2.1，不能把17.2当通用安全下限
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
  黑白之道   2026-03-13 01:46  
   
 > **导语**  
@@ -128,4 +180,4 @@ Coruna漏洞包的出现再次证明，复杂的国家级漏洞利用工具正�
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

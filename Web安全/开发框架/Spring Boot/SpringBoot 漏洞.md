@@ -1,6 +1,41 @@
 ---
 source: "MrWQ/vulnerability-paper"
+product: "Spring生态/配置暴露与多组件链"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "SpringBoot 漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：历史Boot/Cloud依赖表、Whitelabel、CloudStarter<1.3和Eureka<1.8.7；多数Jolokia/H2/Connector版本未知"
+side_effects: "未执行；本文需注意的操作影响：组件版本与副作用边界不完整；refresh误归actuator；Jdk7u21/8u20当依赖名；LDAP边界需核；heapdump/外带/Realm/日志重启仅部分有恢复"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/AhUSkjJoOFyjeo285tpm2g"
+id: "vw-89e5ceb5c9ab0ca9cde39795"
+entity_id: "ve-89e5ceb5c9ab0ca9cde39795"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：历史Boot/Cloud依赖表、Whitelabel、CloudStarter&lt;1.3和Eureka&lt;1.8.7；多数Jolokia/H2/Connector版本未知
+
+代码与实验材料：全文2112行规范化文本已读；业务断连/错误配置退出警告有价值，但JMX JSON和XML损坏、多外部脚本仅文件名
+
+来源证据范围：LandGrey原仓库和部分原研究URL；部分引用只有标题或上游相对路径
+
+- **代码与转录边界（1）**：关键代码抽取破坏；依据：四个JMX getProperty请求mbean字段截断；两处insertFromJNDI只剩env-entry-，Java/Python载体被提到却没附。相应原代码作为存在此问题的历史样本保留，不能直接当作可运行、成功复现的 PoC；缺失内容需回原稿核对，不据此补造可执行攻击链。
+
+- **操作与副作用边界（2）**：组件版本与副作用边界不完整；依据：refresh误归actuator；Jdk7u21/8u20当依赖名；LDAP边界需核；heapdump/外带/Realm/日志重启仅部分有恢复。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+- **结论使用边界（3）**：导航和引用脱链；依据：前350余行TOC重复步骤，环境repository路径与原文分析很多为纯标题，依赖表只重复包名。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # SpringBoot 漏洞
 

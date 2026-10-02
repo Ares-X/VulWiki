@@ -1,8 +1,50 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "SAP BusinessObjects BI及多产品 SSO认证绕过及月度多漏洞新闻"
+product: "SAP BusinessObjects BI及多产品"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2024-41730;CVE-2024-29415;CVE-2024-42374;CVE-2023-30533;CVE-2024-34688;CVE-2024-33003"
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "BOBI430/440；BuildApps<4.11.130等按实体"
+prerequisites: "主需Enterprise SSO启用"
+side_effects: "在线解密或外部服务可能收到凭据及敏感内容"
+review_date: "2026-10-02"
+identifier_role: "primary"
+source_status: "unknown"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E4%B8%A5%E9%87%8D%E7%9A%84SAP/%E4%B8%A5%E9%87%8D%E7%9A%84SAP%E6%BC%8F%E6%B4%9E%E5%8F%AF%E8%AE%A9%E6%94%BB%E5%87%BB%E8%80%85%E7%BB%95%E8%BF%87%E8%BA%AB%E4%BB%BD%E9%AA%8C%E8%AF%81%E7%A0%B4%E5%9D%8F%E4%BC%81%E4%B8%9A%E7%B3%BB%E7%BB%9F.md"
+id: "vw-035f01fa914649e40bcc2ed9"
+entity_id: "ve-035f01fa914649e40bcc2ed9"
+schema_version: "1"
 ---
 
-#  严重的SAP漏洞可让攻击者绕过身份验证破坏企业系统   
+# SAP BusinessObjects BI及多产品 SSO认证绕过及月度多漏洞新闻
+
+## 条目说明
+
+- 对象与具体问题：SAP BusinessObjects BI及多产品；SSO认证绕过及月度多漏洞新闻
+- 版本、配置及部署条件：BOBI430/440；BuildApps<4.11.130等按实体
+- 认证与权限前提：主需Enterprise SSO启用
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 目录严重的SAP不是产品，应规范SAP多产品公告
+- 41730为主，29415及30533等第三方组件各有不同前提
+- 127.0.0.1八进制表述不精确，应列实际编码而非原十进制
+- 90%全球2000及300入侵为背景统计不可作本漏洞在野证据
+
+## 操作风险
+
+在线解密或外部服务可能收到凭据及敏感内容。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
  网络安全应急技术国家工程中心   2024-08-15 16:13  
   
 据BleepingComputer消息，全球最大的ERP供应商SAP在本月修复了一批重要漏洞，其中包含一个关键的身份验证绕过漏洞，该漏洞可能允许攻击者完全破坏系统。  

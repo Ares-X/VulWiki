@@ -1,7 +1,47 @@
 ---
-version: "//Vulnerable plugin (3.13.1)"
+version: ""
 source: "MrWQ/vulnerability-paper"
+product: "Less.js/不可信模板编译"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+version_notes: "//Vulnerable plugin (3.13.1)"
+title: "利用 Less-js 实现远程代码执行 (RCE)"
+prerequisites: "来源所述条件，未列明部分仍待核：元数据是代码注释//Vulnerable plugin (3.13.1)，不是影响范围；需区分浏览器、Node及插件配置"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/PVgOU22JX4xTigL1HdbApg"
+id: "vw-a6c56f69912c8e96f54067db"
+entity_id: "ve-a6c56f69912c8e96f54067db"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 代码问题保留：最后的本地文件示例把 `@import (inline)` 的 @ 丢失，单斜杠也不是正常注释；原片段不能当原样可运行 Less 输入。插件加载/JavaScript 功能开关与实际编译环境决定影响，不能仅依版本号推出全部 Less.js 应用可执行。
+
+- 明确更正：原 version 字段抽入命令、源码、路径、配置或普通叙述，不是版本号，已清空机器版本字段并原样保留于 version_notes；实际版本/分支条件见本节逐篇记录，未从代码猜造版本。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：元数据是代码注释//Vulnerable plugin (3.13.1)，不是影响范围；需区分浏览器、Node及插件配置
+
+代码与实验材料：完整给出导入与插件示例，最终本地文件示例丢失@；未独立证明所有版本适用
+
+来源证据范围：MrWQ微信公众号译文，CodePen历史案例缺原研究及厂商通告
+
+- **适用与权限边界（1）**：功能滥用前提被泛化为全版本RCE；依据：所有支持插件的Less均可利用的断言未限定服务端编译不可信输入、插件启用、Node运行时及执行权限。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **实验改动边界（2）**：版本字段及代码转录损坏；依据：version保存插件代码注释；最后一段import (inline)缺少@且单斜杠注释不合法。以下步骤按原实验条件保留；人工改动后的行为只支持该修改环境，不用于证明未修改发行版默认可利用。
+
+- **结论使用边界（3）**：浏览器和服务器影响混合；依据：浏览器插件JavaScript执行与服务器child_process、SSRF、文件读取需分开说明。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # 利用 Less-js 实现远程代码执行 (RCE)
 

@@ -1,6 +1,45 @@
 ---
 cve: "CVE-2010-1622"
+product: "Spring 生态"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2010-1622; CVE-2013-4152; CVE-2013-7315; CVE-2014-3527; CVE-2014-0097; CVE-2014-3578; CVE-2016-2173; CVE-2016-4977; CNVD-2016-04742; CVE-2016-6652; CVE-2017-4971; CVE-2017-8045; CVE-2017-8046; CVE-2018-1258; CVE-2018-1259; CVE-2018-1270; CVE-2018-1271; CVE-2018-1273; CVE-2018-1260; CVE-2018-15758; CVE-2019-3799; CVE-2019-3778; CNVD-2019-11630; CVE-2019-11269; CVE-2020-5398; CVE-2020-5405"
+referenced_identifiers: "CVE-2013-6429; CVE-2018-1199"
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "Spring 框架漏洞集合 ~ Misaki's Blog"
+prerequisites: "来源所述条件，未列明部分仍待核：分支列表详略不一；6652 仅两个版本、5405 单上限；CAS/LDAP/XMLBeam/Windows 前提保留；Actuator 默认暴露表述需细化"
+side_effects: "未执行；本文需注意的操作影响：危险配置示例缺恢复；validationQuery 使用 drop table users，涉及数据删除；其他链修改 env、日志和类加载器"
+source_status: "recorded"
+source_url: "https://misakikata.github.io/2020/04/Spring-%E6%A1%86%E6%9E%B6%E6%BC%8F%E6%B4%9E%E9%9B%86%E5%90%88/"
+id: "vw-517eda033c9e949bdc7cad61"
+entity_id: "ve-517eda033c9e949bdc7cad61"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：分支列表详略不一；6652 仅两个版本、5405 单上限；CAS/LDAP/XMLBeam/Windows 前提保留；Actuator 默认暴露表述需细化
+
+代码与实验材料：980 行全文；独立旧类加载器、响应头验证、macOS Eureka XML 等值得保留；AMQP 明确搭建失败；代码混入行号反引号
+
+来源证据范围：原始 Misaki 博客与多个研究引用，强于转载；部分自动链接吞入中文长段
+
+- **证据待核（1）**：大量代码无法直接使用；依据：代码块每行有数字和反引号；JSP 多出 j、XML 缺 &lt;xml&gt; 开标签；Logback insertFromJNDI 变为 env-entry- 空残片。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **事实待核（2）**：编号元数据严重不全；依据：26 个主主题，frontmatter 仅 CVE-2010-1622；另引用 2013-6429、2018-1199 不是本篇主复现。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **适用与权限边界（3）**：若干机制解释和结果缺证据；依据：3778 只有 %localhost 归一化，未证异域跳转；15758 将改 scope=all 等同全部权限，未列授权策略；RFD 响应头截为 attachment; file。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **操作与副作用边界（4）**：危险配置示例缺恢复；依据：validationQuery 使用 drop table users，涉及数据删除；其他链修改 env、日志和类加载器。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+- **事实待核（5）**：版本冲突待原始公告核验；依据：1270 写 4.3–4.3.14，与其他篇 4.3.15 不同；8046 Boot 映射不能代替依赖判断。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Spring 框架漏洞集合 ~ Misaki's Blog
 

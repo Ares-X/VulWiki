@@ -1,8 +1,60 @@
 ---
 source: "MrWQ/vulnerability-paper"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "TG8 Firewall RCE 和 信息泄露"
+product: "TG8 Firewall"
+record_type: "vulnerability"
+document_type: "代码审计与两类PoC"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "版本未给；runphpcmd.php是否额外鉴权/上层限制未列；读取/data配置"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/TG8%20Firewall%20RCE%20%E5%92%8C%20%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+source_url: "https://mp.weixin.qq.com/s/dFFQ2bxRfDWdc8W0nWthgQ"
+id: "vw-62ea4b50cbe1e3047836e894"
+entity_id: "ve-62ea4b50cbe1e3047836e894"
+schema_version: "1"
 ---
 
 # TG8 Firewall RCE 和 信息泄露
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：TG8 Firewall
+- 文献类型：代码审计与两类PoC
+- 版本、权限及部署边界：版本未给；runphpcmd.php是否额外鉴权/上层限制未列；读取/data配置
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 把前端checkLogin JS当runphpcmd源码，实际PHP另列；前端请求可改与后端exec拼接分别解释
+2. payload声称空格用%2f替换错误，%2f是斜杠；反弹片段bash/-i/含错误且未编码&会拆表单，HTTP缺空行/长度错
+3. sudo前置命令不自动使分号后的shell拥有root，需sudoers规则和服务权限，不能直接等同rootRCE
+4. 命令执行和配置泄露应两实体，配置URL仅列路径无内容/鉴权证据；无版本修复或厂商原始来源
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://mp.weixin.qq.com/s/dFFQ2bxRfDWdc8W0nWthgQ>
+- 原文参考链接（未重新核验）：<http://ksria.com/simpread/>
+- 原文参考链接（未重新核验）：<https://github.com/MrWQ/vulnerability-paper>
+
+### 归档技术正文
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/dFFQ2bxRfDWdc8W0nWthgQ)

@@ -1,8 +1,48 @@
 ---
-cve: "CVE-2024-3116"
+cve: "CVE-2022-4223; CVE-2023-5002; CVE-2024-3116"
+title: "pgAdmin 命令执行漏洞的三年"
+product: "pgAdmin 4"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2022-4223; CVE-2023-5002; CVE-2024-3116"
+referenced_identifiers: ""
+identifier_role: "primary"
+prerequisites: "4223未认证；5002和3116后台登录，后者还需可执行文件或Windows环境等条件"
+source_url: "https://mp.weixin.qq.com/s/76erd_c0zFfpcTDWzqDxwg"
+source_status: "recorded"
+side_effects: "含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。"
+id: "vw-002ee25721d5ab48bc6dc932"
+entity_id: "ve-002ee25721d5ab48bc6dc932"
+schema_version: "1"
 ---
 
 # pgAdmin 命令执行漏洞的三年
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：4223未认证；5002和3116后台登录，后者还需可执行文件或Windows环境等条件
+- 证据范围：独立比较同API的鉴权、存在性检查、shell=False三次修复，强调Linux上传文件无执行位的局限，值得保留为多实体综述
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 只能影响Windows是针对上传链与默认权限的推论，不应替代所有配置的影响范围
+- 后门猜测无证据，应删除或明确主观猜测
+- 对Flask-Login不存在绕过的绝对判断应限于所审版本路径
+
+### 操作风险与资料使用
+
+- 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/76erd_c0zFfpcTDWzqDxwg)

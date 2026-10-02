@@ -1,6 +1,38 @@
 ---
 source: "hatch 补库批 20260928"
+product: "SemCMS3.5"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "Semcms v3.5 sql注入漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：GET languageIDD公开可达，MySQLstrcmp/rlike与稳定响应"
+side_effects: "未执行；本文需注意的操作影响：与399同family不同版本GET/POST/过滤实现差异不可同文删除"
+source_status: "unknown"
+id: "vw-0684ca6e18f07aee1a6ce32b"
+entity_id: "ve-0684ca6e18f07aee1a6ce32b"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：GET languageIDD公开可达，MySQLstrcmp/rlike与稳定响应
+
+- **结论使用边界（1）**：inject_check_sql是黑名单却称白名单；源码行号混入代码可清洗。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **结论使用边界（2）**：用页面长度相同判真易动态页面误报，未长度终止/重试/超时；枚举字符数组漏末尾~。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **适用与权限边界（3）**：作者明确select过滤导致表数据未提取，selselectect不可绕过，必须保留失败边界。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **操作与副作用边界（4）**：与399同family不同版本GET/POST/过滤实现差异不可同文删除。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Semcms v3.5 sql注入漏洞
 

@@ -1,7 +1,48 @@
 ---
-version: "xxl.job.accessToken=default_token"
+version: ""
 source: "Threekiii/Vulnerability-Wiki"
+product: "XXL-JOB / executor accessToken"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+version_notes: "xxl.job.accessToken=default_token"
+title: "XXL-JOB-默认-accessToken-身份绕过漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：2.3.1–2.4.0且保留[默认令牌值已隐藏]；实际2.3.1实验"
+side_effects: "未执行；本文需注意的操作影响：默认 accessToken 是文中安全配置研究的技术材料，不能把配置行误当版本号，也不能外推所有部署都使用该值。无 token/有 token 两请求的对照仍需实际执行器响应；GLUE_PYTHON 会启动任务并外连，固定 DNS 目标没有独立回调证据。"
+source_status: "unknown"
+id: "vw-7b316c017453dff8e12961e5"
+entity_id: "ve-7b316c017453dff8e12961e5"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 默认 accessToken 是文中安全配置研究的技术材料，不能把配置行误当版本号，也不能外推所有部署都使用该值。无 token/有 token 两请求的对照仍需实际执行器响应；GLUE_PYTHON 会启动任务并外连，固定 DNS 目标没有独立回调证据。
+
+- 明确更正：原 version 字段抽入命令、源码、路径、配置或普通叙述，不是版本号，已清空机器版本字段并原样保留于 version_notes；实际版本/分支条件见本节逐篇记录，未从代码猜造版本。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：2.3.1–2.4.0且保留\[默认令牌值已隐藏\]；实际2.3.1实验
+
+代码与实验材料：两请求无token/有token对照，GLUE_PYTHON固定DNS目标，未独立查看回调
+
+来源证据范围：有官方AccessToken文档、源码tag
+
+- **凭据与会话边界（1）**：version字段误取配置；依据：xxl.job.accessToken=\[凭据或样例值已隐藏\]不是版本。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+
+- **证据待核（2）**：请求成功不等于脚本执行；依据：HTTP200表述应结合独立DNS/日志证据，固定第三方域名不能用于新验证。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **凭据与会话边界（3）**：修复边界应区分凭据配置与程序漏洞；依据：默认未改key不等于算法绕过，须生成强随机唯一值并同步，非简单任意共同值。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+
+- **事实待核（4）**：跨CVE图片需核对用途；依据：登录图复用36157目录，可能通用截图，不能仅目录就判错误。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # XXL-JOB 默认 accessToken 身份绕过漏洞
 

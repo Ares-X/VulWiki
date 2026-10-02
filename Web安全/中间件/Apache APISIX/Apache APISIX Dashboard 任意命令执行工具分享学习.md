@@ -1,8 +1,43 @@
 ---
-cve: "CVE-2021-22205"
+cve: "CVE-2021-45232"
+title: "Apache APISIX Dashboard 任意命令执行工具分享学习"
+product: "Apache APISIX Dashboard Manager API"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2021-45232"
+referenced_identifiers: "CVE-2021-22205"
+identifier_role: "primary"
+prerequisites: "Dashboard<2.10.1所称范围、相关gin路由暴露；进一步RCE需恶意配置导入并由APISIX加载"
+source_url: "https://mp.weixin.qq.com/s/gca1oz2QNVsWZtVZhwx6Lg"
+source_status: "recorded"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-c1bb2f8fd467232fda78b59e"
+entity_id: "ve-c1bb2f8fd467232fda78b59e"
+schema_version: "1"
 ---
 
 # Apache APISIX Dashboard 任意命令执行工具分享学习
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：Dashboard<2.10.1所称范围、相关gin路由暴露；进一步RCE需恶意配置导入并由APISIX加载
+- 证据范围：只有migrate/export路径证明候选配置导出，无法证明文件上传或完整RCE；工具需公众号获取
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 导出接口不是任意文件上传证据；需分Dashboard认证绕过与网关执行链
+- 缺脚本/导入步骤/响应/官方修复，归工具推广低证据条目
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/gca1oz2QNVsWZtVZhwx6Lg) ![](https://mmbiz.qpic.cn/mmbiz_gif/T1Jp6CliawuOSBfLxuoaXrtq1l86wb8oEfuibYgRhkXcRH9uzic28Y4pa7icA1xibMia5hvjZ7CgB9fpgqZJLyImGJyQ/640?wx_fmt=gif)<table width="657"><tbody><tr><td valign="top" width="557" height="62"><section><strong>声明：</strong>该公众号大部分文章来自作者日常学习笔记，也有少部分文章是经过原作者授权和其他公众号白名单转载，未经授权，严禁转载，如需转载，联系开白。</section><section>请勿利用文章内的相关技术从事非法测试，如因此产生的一切不良后果与文章作者和本公众号无关。仅供学习研究</section></td></tr></tbody></table>

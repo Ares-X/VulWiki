@@ -1,6 +1,38 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+product: "Grafana/SQL文件写入链与OpenFeature DoS"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2026-27876; CVE-2026-27880"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "SQL 到 SSH：Grafana 中存在严重 CVSS 9.1 级远程代码执行漏洞，可将监控变成远程劫持"
+prerequisites: "来源所述条件，未列明部分仍待核：列12.4.2及12.3/12.2/12.1/11.6分支补丁但未给分支固定小版本；DoS起点12.1.0"
+side_effects: "未执行；本文需注意的操作影响：功能开关与攻击者能力混淆；写攻击者通过启用sqlExpressions，未证明Viewer能启用管理员功能；完整SSH连接并非任意文件写入或RCE必然结果；修复矩阵与缓解边界不足；只给12.4.2完整版本；高可用自动重启是恢复能力不是防止内存耗尽；禁插件与关闭功能是替代/组合关系应核实"
+source_status: "unknown"
+id: "vw-77d4bdb49b99de5ff197cad5"
+entity_id: "ve-77d4bdb49b99de5ff197cad5"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：列12.4.2及12.3/12.2/12.1/11.6分支补丁但未给分支固定小版本；DoS起点12.1.0
+
+代码与实验材料：无PoC；RCE需Viewer查询、sqlExpressions开启及Sqlyze/AWS相关链，DoS无认证无限输入
+
+来源证据范围：链接Grafana官方双漏洞安全发布，2026-03-30转述
+
+- **操作与副作用边界（1）**：功能开关与攻击者能力混淆；依据：写攻击者通过启用sqlExpressions，未证明Viewer能启用管理员功能；完整SSH连接并非任意文件写入或RCE必然结果。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+- **操作与副作用边界（2）**：修复矩阵与缓解边界不足；依据：只给12.4.2完整版本；高可用自动重启是恢复能力不是防止内存耗尽；禁插件与关闭功能是替代/组合关系应核实。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 #  SQL 到 SSH：Grafana 中存在严重 CVSS 9.1 级远程代码执行漏洞，可将监控变成远程劫持  
 sec随谈

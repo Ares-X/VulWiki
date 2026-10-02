@@ -1,8 +1,51 @@
 ---
 source: "wy876 漏洞文库"
+id: "vw-2d080fc55f377e4eb51d2b33"
+entity_id: "ve-2d080fc55f377e4eb51d2b33"
+schema_version: "1"
+title: "CrestronHD aj.html存在账号密码泄漏漏洞"
+product: "Crestron HD-RX-201-C-E / HD系列"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+prerequisites: "鉴权/版本未知"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%99%BA%E8%83%BD%E8%AE%BE%E5%A4%87/Crestron/CrestronHDaj.html%E5%AD%98%E5%9C%A8%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81%E6%B3%84%E6%BC%8F%E6%BC%8F%E6%B4%9E.md"
+review_date: "2026-10-02"
+side_effects: "读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要且已脱敏的响应，不能由接口可达推定敏感内容已泄露"
+source_url: "https://www.yuque.com/xiaokp7/ocvun2/cdvmx13vg4wd8fyr"
+source_status: "recorded"
 ---
 
 # CrestronHD aj.html存在账号密码泄漏漏洞
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Crestron HD-RX-201-C-E / HD系列
+- 本文讨论：aj.html?a=devi凭据泄露候选
+- 版本、权限与配置前提：鉴权/版本未知
+- 资料类型：凭据泄露URL摘要；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 仅URL无响应字段，无法确认明文或hash泄露；缺厂商来源/修复
+
+### 操作风险与恢复
+
+- 读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要且已脱敏的响应，不能由接口可达推定敏感内容已泄露
+
+### 待核与来源
+
+- 实际数据与授权边界待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 
 ### 一、漏洞描述
 Crestron HD等系列设备 aj.html页面调用特定的参数可以获取账号密码等敏感信息

@@ -1,8 +1,54 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-9d8fe914fc9e96b335ecdb3d"
+entity_id: "ve-9d8fe914fc9e96b335ecdb3d"
+schema_version: "1"
+title: "思科提醒注意通信软件中的严重 RCE 漏洞"
+product: "Cisco Unified Communications / Contact Center系列"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2024-20253"
+referenced_identifiers: ""
+prerequisites: "未认证监听服务、默认配置；多产品12.5/14等修复包"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/Cisco/%E6%80%9D%E7%A7%91%E6%8F%90%E9%86%92%E9%80%9A%E4%BF%A1%E8%BD%AF%E4%BB%B6%E4%B8%AD%E7%9A%84%E4%B8%A5%E9%87%8D%20RCE%20%E6%BC%8F%E6%B4%9E.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 #  思科提醒注意通信软件中的严重 RCE 漏洞   
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Cisco Unified Communications / Contact Center系列
+- 本文讨论：CVE-2024-20253
+- 版本、权限与配置前提：未认证监听服务、默认配置；多产品12.5/14等修复包
+- 资料类型：多产品单漏洞通告；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 影响段Unified CM SME，修复段误写Unified CME，两者不同产品
+- 影响清单含Unity Connection，但修复清单缺对应项
+- 根因仅模糊内存处理，补丁名却为Java反序列化，需要准确定义
+- 无厂商直链；无workaround与ACL减缓风险术语需区分
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 根因、Unity补丁和版本矩阵待核验
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 Bill Toulas  代码卫士   2024-01-26 18:45  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

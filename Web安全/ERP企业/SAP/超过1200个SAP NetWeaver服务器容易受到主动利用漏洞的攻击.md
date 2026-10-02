@@ -1,8 +1,49 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "SAP NetWeaver Visual Composer metadatauploader在野暴露面新闻"
+product: "SAP NetWeaver Visual Composer"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2025-31324"
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "2025-05统计时点；组件版本缺"
+prerequisites: "未认证且组件暴露"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+identifier_role: "primary"
+source_status: "unknown"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/SAP/%E8%B6%85%E8%BF%871200%E4%B8%AASAP%20NetWeaver%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%B9%E6%98%93%E5%8F%97%E5%88%B0%E4%B8%BB%E5%8A%A8%E5%88%A9%E7%94%A8%E6%BC%8F%E6%B4%9E%E7%9A%84%E6%94%BB%E5%87%BB.md"
+id: "vw-b46304721a3ccfe3f94ff57d"
+entity_id: "ve-b46304721a3ccfe3f94ff57d"
+schema_version: "1"
 ---
 
-#  超过1200个SAP NetWeaver服务器容易受到主动利用漏洞的攻击   
+# SAP NetWeaver Visual Composer metadatauploader在野暴露面新闻
+
+## 条目说明
+
+- 对象与具体问题：SAP NetWeaver Visual Composer；metadatauploader在野暴露面新闻
+- 版本、配置及部署条件：2025-05统计时点；组件版本缺
+- 认证与权限前提：未认证且组件暴露
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 正文2024-04-08与2025漏洞事件时序可疑，需核原文
+- 427/1284/474为不同监测来源非统一全网真实总量
+- watchtower研究方拼写可能混watchTowr；不要把暴露直接等可利用
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 胡金鱼  嘶吼专业版   2025-05-09 06:01  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/wpkib3J60o297rwgIksvLibPOwR24tqI8dGRUah80YoBLjTBJgws2n0ibdvfvv3CCm0MIOHTAgKicmOB4UHUJ1hH5g/640?wx_fmt=gif "")  
@@ -16,7 +57,7 @@ SAP NetWeaver是一个应用服务器和开发平台，可以跨不同技术运�
 包括ReliaQuest、watchtower和Onapsis在内的多家网络安全公司证实，该漏洞在攻击中被积极利用，威胁者利用它在易受攻击的服务器上投放web shell。  
   
 SAP发言人表示，他们已经意识到了这些攻击，并在2024年4月8日发布了一个解决方案，随后在4月25日发布了一个安全更新，解决了CVE-2025-31324问题。他们没有发现任何此类攻击影响客户数据或系统的案例。  
-# 广泛用于攻击  
+## 广泛用于攻击  
   
 研究人员现已证实，许多易受攻击的SAP Netweaver服务器暴露在互联网上，使其成为攻击的主要目标。  
   

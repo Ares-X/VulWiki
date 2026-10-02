@@ -1,6 +1,36 @@
 ---
 source: "hatch 补库批 20260928"
+product: "FineCMS5.0.8 API avatar"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "Finecms 5.0.8 任意代码执行漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：可预测或Cookie前缀可泄漏SYS_KEY；目录可写执行PHP"
+side_effects: "未执行；本文需注意的操作影响：标题任意代码执行实际文件写入→PHP执行，认证码条件不可丢"
+source_status: "unknown"
+id: "vw-17af0cba678018412ed24ec0"
+entity_id: "ve-17af0cba678018412ed24ec0"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：可预测或Cookie前缀可泄漏SYS_KEY；目录可写执行PHP
+
+- **凭据与会话边界（1）**：与171/172第一节同源拆分，简介加入自定义Cookie前缀信息，需保留该差异而核验硬编码断言。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+
+- **证据待核（2）**：解码对象被误说为result\[1\]，实际移除该前缀后解码；截图仅1.png占位。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **适用与权限边界（3）**：标题任意代码执行实际文件写入→PHP执行，认证码条件不可丢。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Finecms 5.0.8 任意代码执行漏洞
 

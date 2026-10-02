@@ -1,8 +1,56 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "JumpServer 未授权接口 远程命令执行漏洞"
+product: "JumpServer core/Koko"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "Branch-specific vulnerable builds (<2.6.2,<2.5.4,<2.4.5,1.5.9 stated); logs expose user/asset/system_user IDs; configured asset"
+source_url: "https://mp.weixin.qq.com/s/5q4cSlHUQ3NejkRg3vOWUA"
+source_status: "recorded"
+side_effects: "含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。"
+id: "vw-a962bc76d2301a2c718e6fc2"
+entity_id: "ve-a962bc76d2301a2c718e6fc2"
+schema_version: "1"
+canonical: "Web安全/运维面板/Jumpserver/JumpServer 未授权接口 远程命令执行漏洞.md"
 ---
 
 # JumpServer 未授权接口 远程命令执行漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：Branch-specific vulnerable builds (<2.6.2,<2.5.4,<2.4.5,1.5.9 stated); logs expose user/asset/system_user IDs; configured asset
+- 证据范围：Log-read/token/WebSocket terminal chain with code and difficulty caveat; command execution on managed assets not necessarily core service
+
+### 本次正文校订
+
+- 按实际内容修正 3 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- Version comparisons need branch bounds; as flat OR ranges falsely include fixed2.4/2.5 builds
+- POC incorrectly treats401/403/404 response as proof unpatched and other responses as patched
+- str.strip('http://') is character stripping, not URL prefix removal; https/wss unsupported as written
+- Hardcoded UUIDs and magic message counts are lab-specific
+- Execution scope should distinguish asset session privileges from JumpServer host RCE
+- Preserve admission that required IDs often absent from logs
+
+### 操作风险与资料使用
+
+- 含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/5q4cSlHUQ3NejkRg3vOWUA)
@@ -86,7 +134,7 @@ JumpServer = v1.5.9
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzB8tpNT4ZFVDrH31YqGlSicXewpnMI5KtwfZc1R0UDQOlc2k89GZeEBtiagBTyZIlQB3neHwrRbmEmA/640?wx_fmt=png)
 
-```
+```python
 import time
 import os
 import threading
@@ -183,7 +231,7 @@ class CeleryLogWebsocket(JsonWebsocketConsumer):
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/4LicHRMXdTzB8tpNT4ZFVDrH31YqGlSicXdVmgNhdR7EoX5Utiayldw5yLgcWFQBBvvnVv2V6WqR20XSicA7AV7qHA/640?wx_fmt=png)
 
-```
+```shell
 docker exec -it (jumpserve/core的docker) /bin/bash
 cat gunicorn.log | grep /api/v1/perms/asset-permissions/user/validate/?
 ```
@@ -237,7 +285,7 @@ POC 里包含两个方法，一个是获取日志文件，另一个是命令执�
 接收数据如果卡住请调整 for i in range(7) 这个位置的 7
 ```
 
-```
+```python
 import requests
 import json
 import sys

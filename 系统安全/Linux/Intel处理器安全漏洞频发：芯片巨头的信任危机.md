@@ -1,8 +1,60 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2025-22839;CVE-2025-20054"
+identifier_role: "primary"
+primary_identifiers: "CVE-2025-22839;CVE-2025-20054"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "Intel处理器安全漏洞频发：芯片巨头的信任危机"
+product: "Intel Xeon 6 OOB-MSM / CPU微码"
+record_type: "vulnerability"
+document_type: "硬件安全评论"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "特定Xeon6型号未列；本地/远程前提、权限和微码版本皆不明确"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/Intel%E5%A4%84%E7%90%86%E5%99%A8%E5%AE%89%E5%85%A8%E6%BC%8F%E6%B4%9E%E9%A2%91%E5%8F%91%EF%BC%9A%E8%8A%AF%E7%89%87%E5%B7%A8%E5%A4%B4%E7%9A%84%E4%BF%A1%E4%BB%BB%E5%8D%B1%E6%9C%BA.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-12411a0d1ee1a65327b2aab0"
+entity_id: "ve-12411a0d1ee1a65327b2aab0"
+schema_version: "1"
 ---
 
-#  Intel处理器安全漏洞频发：芯片巨头的信任危机  
+# Intel处理器安全漏洞频发：芯片巨头的信任危机
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Intel Xeon 6 OOB-MSM / CPU微码
+- 文献类型：硬件安全评论
+- 版本、权限及部署边界：特定Xeon6型号未列；本地/远程前提、权限和微码版本皆不明确
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 实际硬件/固件多漏洞评论不属于Linux专属，建议归硬件并拆不同组件
+2. 访问控制绕过直接扩展为远程完全控制、20054本地或远程等均无具体公告/向量证据
+3. 服务器管理后门是无证据的性质指控，漏洞不等于后门；应改中性术语
+4. 来源列媒体/Intel/Fujitsu名称但无URL，修复版本/型号无法核查；通用微码包建议不等于所有漏洞的修复方法
+5. 重复编号、unaware机翻残留、泛化危机/替代架构评论应与漏洞事实分离
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
  黑白之道   2026-03-09 01:47  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/3xxicXNlTXLicwgPqvK8QgwnCr09iaSllrsXJLMkThiaHibEntZKkJiaicEd4ibWQxyn3gtAWbyGqtHVb0qqsHFC9jW3oQ/640?wx_fmt=gif "")  
@@ -199,4 +251,4 @@ Intel处理器漏洞频发不是偶然现象，而是现代计算复杂度不断
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

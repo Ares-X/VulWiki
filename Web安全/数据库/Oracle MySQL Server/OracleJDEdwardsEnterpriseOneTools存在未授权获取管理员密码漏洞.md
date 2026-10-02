@@ -1,8 +1,50 @@
 ---
 source: "wy876 漏洞文库"
+title: "Oracle JDEdwards EnterpriseOne Tools存在未授权获取管理员密码漏洞"
+product: "Oracle JD Edwards EnterpriseOne Tools"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "未给泄漏端点/认证条件；已有密文样例才能解码"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-0d3f8a26375a53833c7dec0e"
+entity_id: "ve-0d3f8a26375a53833c7dec0e"
+schema_version: "1"
 ---
 
 # Oracle JDEdwards EnterpriseOne Tools存在未授权获取管理员密码漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：未给泄漏端点/认证条件；已有密文样例才能解码
+- 证据范围：完整本地解码函数，但没有实际获取管理员密文的漏洞请求
+
+### 本次正文校订
+
+- 按该篇代码内容修正错误的 Java 语言标记。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- P0影响版本错误复制向日葵个人版/简约版，与Oracle无关
+- P0错归Oracle MySQL Server，实际JD Edwards
+- 无获取密文端点、响应结构和验证证据；--target直接取整页正文不能证明能自动提取
+- ASCII banner可能暗示编号但无明确CVE字段，不能据此猜主CVE
+- Python/命令块误标Java；示例密文及解密结果敏感性需脱敏
+- 需重建版本/根因/补丁来源后保留
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 ## 一、漏洞描述
 Oracle JDEdwards EnterpriseOne Tools存在未授权获取管理员密码漏洞
@@ -12,7 +54,7 @@ Oracle JDEdwards EnterpriseOne Tools存在未授权获取管理员密码漏洞
 + 向日葵简约版 <= V1.0.1.43315（2021.12）
 
 ## 三、漏洞测绘
-```java
+```python
 port:8999 product:"Oracle WebLogic Server"
 ```
 
@@ -22,12 +64,12 @@ port:8999 product:"Oracle WebLogic Server"
 
 使用下面解密脚本解密
 
-```java
+```python
 python3 poc.py --string ACHCJKFKHCJKKKJJIBBOCDPIHOEJIICHDGHGJEBABEAG
 ```
 
 
-```java
+```python
 import base64
 import argparse
 import subprocess

@@ -1,8 +1,60 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2026-91726;CVE-2026-91721;CVE-2026-91749;CVE-2026-91724;CVE-2026-91728;CVE-2026-91734;CVE-2026-91727;CVE-2026-91743;CVE-2026-91744;CVE-2026-91712;CVE-2026-91748;CVE-2026-91720;CVE-2026-91731;CVE-2026-91747;CVE-2026-91733;CVE-2026-91741;CVE-2026-91709;CVE-2026-91717;CVE-2026-91735;CVE-2026-91708;CVE-2026-91736;CVE-2026-91740;CVE-2026-91710;CVE-2026-91718;CVE-2026-91716;CVE-2026-91746;CVE-2026-91729;CVE-2026-91737;CVE-2026-91711;CVE-2026-91715;CVE-2026-91745;CVE-2026-91723;CVE-2026-91732;CVE-2026-91742;CVE-2026-91714;CVE-2026-91725;CVE-2026-91739;CVE-2026-91713;CVE-2026-91738;CVE-2026-91730;CVE-2026-91722;CVE-2026-91719"
+identifier_role: "primary"
+primary_identifiers: "CVE-2026-91726;CVE-2026-91721;CVE-2026-91749;CVE-2026-91724;CVE-2026-91728;CVE-2026-91734;CVE-2026-91727;CVE-2026-91743;CVE-2026-91744;CVE-2026-91712;CVE-2026-91748;CVE-2026-91720;CVE-2026-91731;CVE-2026-91747;CVE-2026-91733;CVE-2026-91741;CVE-2026-91709;CVE-2026-91717;CVE-2026-91735;CVE-2026-91708;CVE-2026-91736;CVE-2026-91740;CVE-2026-91710;CVE-2026-91718;CVE-2026-91716;CVE-2026-91746;CVE-2026-91729;CVE-2026-91737;CVE-2026-91711;CVE-2026-91715;CVE-2026-91745;CVE-2026-91723;CVE-2026-91732;CVE-2026-91742;CVE-2026-91714;CVE-2026-91725;CVE-2026-91739;CVE-2026-91713;CVE-2026-91738;CVE-2026-91730;CVE-2026-91722;CVE-2026-91719"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "谷歌Chrome浏览器发布153版本，修复了42个安全漏洞"
+product: "Google Chrome153"
+record_type: "roundup"
+document_type: "多漏洞版本发布清单"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "文称Windows/macOS153.0.8010.47/.48、Linux .47；表含Android组件需平台拆分"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Chrome/%E8%B0%B7%E6%AD%8CChrome%E6%B5%8F%E8%A7%88%E5%99%A8%E5%8F%91%E5%B8%83153%E7%89%88%E6%9C%AC%EF%BC%8C%E4%BF%AE%E5%A4%8D%E4%BA%8642%E4%B8%AA%E5%AE%89%E5%85%A8%E6%BC%8F%E6%B4%9E.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-f95a221eaec5d790e3a0b486"
+entity_id: "ve-f95a221eaec5d790e3a0b486"
+schema_version: "1"
 ---
 
-#  谷歌Chrome浏览器发布153版本，修复了42个安全漏洞  
+# 谷歌Chrome浏览器发布153版本，修复了42个安全漏洞
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Google Chrome153
+- 文献类型：多漏洞版本发布清单
+- 版本、权限及部署边界：文称Windows/macOS153.0.8010.47/.48、Linux .47；表含Android组件需平台拆分
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 42项CVE与3严重/28高危/10中危/1低危结构自洽，但元数据完全空，应逐项关联
+2. 没有Google发布公告、CVE记录或二手原文链接，版本、42编号及奖励/报告者信息全部缺可追溯依据
+3. 批判的、免费后使用、记者、困惑的副手等机器翻译破坏术语；Input/Auth/Compositing/Commerce等组件名翻译后难匹配，需保留原名
+4. 桌面更新表混Android问题，逐平台适用性不能默认相同；未提在野利用不能改成已利用
+5. 表格817样式属性噪声极大；报告日期非披露日期，奖励不适用/待定应区别
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 原创 ZM
                     ZM  暗镜   2026-09-21 22:00  
   
@@ -28,4 +80,4 @@ source: "gelusus/wxvl 公众号漏洞文库"
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

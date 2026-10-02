@@ -1,14 +1,52 @@
 ---
-cve: "CVE-2020-14882"
-cnvd: "CNVD-2021-30167"
-version: "**0x03 漏洞复现**"
-fofa: "语句："
 source: "MrWQ/vulnerability-paper"
+title: "用友NC BeanShell BshServlet未授权代码执行"
+product: "用友NC BeanShell"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CNVD-2021-30167"
+referenced_identifiers: "CVE-2020-14882;CVE-2021-2109;CVE-2020-17144"
+identifier_status: "unknown"
+affected_scope: "NC6.5声明"
+prerequisites: "未授权暴露接口"
+side_effects: "命令/代码执行示例可能改变主机状态"
+review_date: "2026-10-02"
+identifier_role: "primary"
+source_url: "https://mp.weixin.qq.com/s/zBJl19bmXZg2kVsVNTIG6Q"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E7%94%A8%E5%8F%8BNC/CNVD-2021-30167%20-%20%E9%99%84%20PoC%20%E7%94%A8%E5%8F%8B%20NC%20BeanShell%20%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0.md"
+fofa_unverified: "语句："
+id: "vw-d60b484dd3f7ce23f8177c88"
+entity_id: "ve-d60b484dd3f7ce23f8177c88"
+schema_version: "1"
 ---
 
-# 【CNVD-2021-30167 - 附 PoC】用友 NC BeanShell 远程代码执行漏洞复现
+# 用友NC BeanShell BshServlet未授权代码执行
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：用友NC BeanShell；BshServlet未授权代码执行
+- 版本、配置及部署条件：NC6.5声明
+- 认证与权限前提：未授权暴露接口
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- version/fofa也错抽标题
+- 主ID30167，复现只路由和截图，标题附PoC却脚本明确未给
+- 有官方patch PK链接可保存，但缺精确适用build
+- 宣传CVE2109/17144均非主编号
+
+## 操作风险
+
+命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/zBJl19bmXZg2kVsVNTIG6Q)
 
 **![](https://mmbiz.qpic.cn/mmbiz_jpg/7D2JPvxqDTH23Qn1c9IEUuOiarb4EY5tcByibvUp1Im1t9ZQg6jQpTr0Fjv90Eq9eoAPGm8QNNictsWVwYgD82qZg/640?wx_fmt=jpeg)**

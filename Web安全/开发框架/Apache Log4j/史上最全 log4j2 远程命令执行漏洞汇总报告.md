@@ -1,6 +1,41 @@
 ---
 source: "MrWQ/vulnerability-paper"
+product: "Log4j2 JNDI"
+record_type: "incident"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "史上最全 log4j2 远程命令执行漏洞汇总报告"
+prerequisites: "来源所述条件，未列明部分仍待核：Broad2.x<=2.14.1 statement; pinned2.14.1 lab; JDK limitations only acknowledged near end"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/HW2-VRg44ZEFcWxBmDk-CA"
+id: "vw-e4af287c3cb59768bbb875b0"
+entity_id: "ve-e4af287c3cb59768bbb875b0"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：Broad2.x&lt;=2.14.1 statement; pinned2.14.1 lab; JDK limitations only acknowledged near end
+
+代码与实验材料：Full standalone Maven/logger lab, tool and handwritten RMI variants, DNS method and defensive suggestions; handwritten getObjectInstance uses javax.lang.model.element.Name/HashMap and no ObjectFactory contract, should not imply verified remote-loading chain
+
+来源证据范围：Named author/blog, original WeChat and numerous research/tool/news links; missing primary version-specific advisory
+
+- **适用与权限边界（1）**：Overbroad applicability and insufficient application/logging/runtime prerequisites；依据：无需特殊配置; affected components include Redis; 版本范围内的都是存在问题。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **代码与转录边界（2）**：Historical mitigation commands malformed/merged and not a complete fixed-version remediation；依据：Dlog4j2.formatMsgNoLookups=true and combined WAF/properties instruction。相应原代码作为存在此问题的历史样本保留，不能直接当作可运行、成功复现的 PoC；缺失内容需回原稿核对，不据此补造可执行攻击链。
+
+- **证据待核（3）**：Source excerpts are non-compilable pseudocode and should be labeled；依据：int endMatchLen=false; duplicated variables in decompiled excerpt。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # 史上最全 log4j2 远程命令执行漏洞汇总报告
 

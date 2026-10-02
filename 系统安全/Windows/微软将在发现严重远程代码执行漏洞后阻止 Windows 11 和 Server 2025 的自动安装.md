@@ -1,9 +1,61 @@
 ---
-cve: "CVE-2026-0386"
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2026-0386"
+identifier_role: "primary"
+primary_identifiers: "CVE-2026-0386"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "微软将在发现严重远程代码执行漏洞后阻止 Windows 11 和 Server 2025 的自动安装"
+product: "Windows Deployment Services WDS"
+record_type: "advisory"
+document_type: "WDS漏洞及产品加固计划新闻"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "相邻网络、WDS角色启用并使用Unattend.xml免人工部署；声称2026-01起两阶段到04默认禁用"
+side_effects: "未认证读取应答文件到注入代码/污染映像缺权限和流程证据，需区别凭证泄露与写入能力"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Windows/%E5%BE%AE%E8%BD%AF%E5%B0%86%E5%9C%A8%E5%8F%91%E7%8E%B0%E4%B8%A5%E9%87%8D%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E%E5%90%8E%E9%98%BB%E6%AD%A2%20Windows%2011%20%E5%92%8C%20Server%202025%20%E7%9A%84%E8%87%AA%E5%8A%A8%E5%AE%89%E8%A3%85.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-77e0c8b7c3467077962b74a6"
+entity_id: "ve-77e0c8b7c3467077962b74a6"
+schema_version: "1"
 ---
 
-#  微软将在发现严重远程代码执行漏洞后阻止 Windows 11 和 Server 2025 的自动安装  
+# 微软将在发现严重远程代码执行漏洞后阻止 Windows 11 和 Server 2025 的自动安装
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Windows Deployment Services WDS
+- 文献类型：WDS漏洞及产品加固计划新闻
+- 版本、权限及部署边界：相邻网络、WDS角色启用并使用Unattend.xml免人工部署；声称2026-01起两阶段到04默认禁用
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 标题阻止Windows11/Server2025自动安装过宽，实际是WDS特定hands-free部署路径，不是所有安装或更新
+2. 未认证读取应答文件到注入代码/污染映像缺权限和流程证据，需区别凭证泄露与写入能力
+3. KB5074952只有编号无链接，MSRC、官方阶段计划、注册表类型/作用域未链接，日期和影响范围需核
+4. 向量只列AV/AC/PR/UI未列Scope和总分，不能完整复核CVSS；Server范围与标题两个OS不一致应规范
+5. 路径和值被译文粘连，可重新启用=1为不安全例外应保留风险说明；Intune/Autopilot并非所有场景直接替代需限定
+6. 当时未来4月计划现已过，需保留报道日期而非当前承诺；无PoC不补造
+
+### 操作风险
+
+未认证读取应答文件到注入代码/污染映像缺权限和流程证据，需区别凭证泄露与写入能力
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 原创 网络安全9527
                     网络安全9527  安全圈的那点事儿   2026-03-16 04:37  
   
@@ -42,4 +94,4 @@ Windows 部署服务是一个服务器角色，它使 IT 管理员能够通过�
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

@@ -1,9 +1,48 @@
 ---
-cve: "CVE-2023-36408"
+cve: "CVE-2023-36408; CVE-2025-24048; CVE-2025-24050"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Hyper-v虚拟磁盘驱动vhdmp.sys漏洞汇总分析"
+product: "Windows Hyper-V vhdmp.sys"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2023-36408; CVE-2025-24048; CVE-2025-24050"
+referenced_identifiers: ""
+identifier_role: "primary"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-4e8c20dcd63a49fcb9099bd4"
+entity_id: "ve-4e8c20dcd63a49fcb9099bd4"
+schema_version: "1"
 ---
 
-#  Hyper-v虚拟磁盘驱动vhdmp.sys漏洞汇总分析   
+# Hyper-v虚拟磁盘驱动vhdmp.sys漏洞汇总分析
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 元数据仅36408漏24048/24050
+- 复现系统列表未对应每个CVE及补丁构建
+- 末尾SMB QUIC项目和三个致谢只有文字链接全部丢失
+- 原作者不提供完整PoC，C#/C片段不可编译如return =、构造函数只定义局部变量、未定义DefaultDiskSize
+- OffsetTableize>>a与/400混十六进制和十进制，页0x400与后文0x1000也需核
+- 需本地虚拟磁盘操作权限/可控SMB后端，非普遍跨VM远程逃逸
+- 明示BSOD/磁盘修改和关闭证书验证副作用
+- 源码偏移及PreviousMode利用为版本相关潜在方案非已验证稳定提权
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 王cb  看雪学苑   2025-03-21 17:59  
   
 这篇文章的目的是介绍hyper-v虚拟磁盘驱动vhdmp.sys相关的漏洞CVE-2023-36408，CVE-2025-24048和CVE-2025-24050汇总分析。  

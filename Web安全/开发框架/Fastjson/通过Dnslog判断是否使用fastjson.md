@@ -1,6 +1,40 @@
 ---
 source: "hatch 补库批 20260928"
+product: "Fastjson DNS-trigger behavior"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "通过Dnslog判断是否使用fastjson"
+prerequisites: "来源所述条件，未列明部分仍待核：Analyzes1.2.67; cached Inet4/6/Socket/URL classes, AutoType paths; not universal later-version assertion"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-ade2b71150dc5bb96f7400a0"
+entity_id: "ve-ade2b71150dc5bb96f7400a0"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：Analyzes1.2.67; cached Inet4/6/Socket/URL classes, AutoType paths; not universal later-version assertion
+
+代码与实验材料：Detailed MiscCodec/token/URL.hashCode flows with intentionally malformed JSON; raw source mistranslated into Chinese keywords/fullwidth punctuation; one bare diagram placeholder
+
+来源证据范围：Original adminxe1037 and official issue3077/research credits
+
+- **代码与转录边界（1）**：Several snippets are translation-corrupted, not compilable; fullwidth URL payload unusable as pasted。相应原代码作为存在此问题的历史样本保留，不能直接当作可运行、成功复现的 PoC；缺失内容需回原稿核对，不据此补造可执行攻击链。
+
+- **结论使用边界（2）**：InetAddress val example adds http:// although hostname expected; distinguish DNS fingerprint from RCE and account for network/cache failure。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **证据待核（3）**：Latest1.2.67 undated wording and lost image marker。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # 通过Dnslog判断是否使用fastjson
 

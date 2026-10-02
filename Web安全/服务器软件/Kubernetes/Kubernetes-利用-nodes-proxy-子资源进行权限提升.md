@@ -1,9 +1,47 @@
 ---
 version: "Docker version: 18.09.3"
 source: "Threekiii/Vulnerability-Wiki"
+title: "Kubernetes 利用 nodes proxy 子资源进行权限提升"
+product: "Kubernetes RBAC/Kubelet"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "持有get/create nodes/proxy权限Token；实验1.32与历史1.16.5；可访问正确API/Kubelet端点"
+affected_versions: "Docker version: 18.09.3"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-0b92379a634c6b33167fc44e"
+entity_id: "ve-0b92379a634c6b33167fc44e"
+schema_version: "1"
 ---
 
 # Kubernetes 利用 nodes proxy 子资源进行权限提升
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：持有get/create nodes/proxy权限Token；实验1.32与历史1.16.5；可访问正确API/Kubelet端点
+- 证据范围：记录失败很重要，但1.32失败请求误发API Server8443的/pods或/run，而历史成功发Kubelet，不能据此归因版本修复
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 简介绕过API认证不准，仍使用有效Token，只是直接Kubelet路径/不同授权资源
+- 两组端口与路径不同，是实验混杂变量
+- 手工长期Token Secret并非必须绑定到SA.secrets列表才可使用；说明应区分显示计数/凭据有效性
+- version误用Docker实验版本
+- 正文get/create权限与81仅get WebSocket研究不同，应关联保留
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 ## 漏洞描述
 

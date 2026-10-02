@@ -1,8 +1,57 @@
 ---
 source: "白阁文库 BaizeSec/bylibrary"
+title: "cve 2020-14841 weblogic jndi注入"
+product: "Oracle WebLogic / EclipseLink Coherence integration"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2020-14841"
+referenced_identifiers: "CVE-2020-2555; CVE-2020-14645"
+identifier_role: "primary"
+cve: "CVE-2020-14841"
+prerequisites: "LockVersionExtractor/MethodAttributeAccessor classes, suitable deserialization entry and JNDI remote-loading/runtime conditions"
+verification_source: "https://github.com/gobysec/Weblogic/blob/main/WebLogic_Coherence_Component_en_US.md"
+source_status: "unknown"
+side_effects: "涉及 LDAP/RMI/DNS/HTTP 外带：回连只证明相应网络交互，不能单独证明命令执行；使用自控接收端，避免把日志、凭据或真实业务数据发送给第三方。"
+id: "vw-8a760588ede3c0eff2ae5455"
+entity_id: "ve-8a760588ede3c0eff2ae5455"
+schema_version: "1"
 ---
 
 # cve 2020-14841 weblogic jndi注入
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：LockVersionExtractor/MethodAttributeAccessor classes, suitable deserialization entry and JNDI remote-loading/runtime conditions
+- 证据范围：Independent partial source tracing of no-argument getter invocation through JdbcRowSetImpl; not standalone runnable reproduction.
+
+### 已有来源支持的更正
+
+- Researcher source explicitly associates BOTH14825 and14841 with LockVersionExtractor; do not relabel14841 as14825 solely from shared gadget
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- Code snippets omit class/method closings, imports, Reflections helper, serialization and transport
+- Affected versions, authentication, exact patch comparison and remediation absent
+- Class blacklisting alone does not establish every version vulnerable or chain successful
+
+### 核验来源
+
+- https://github.com/gobysec/Weblogic/blob/main/WebLogic_Coherence_Component_en_US.md
+
+### 操作风险与资料使用
+
+- 涉及 LDAP/RMI/DNS/HTTP 外带：回连只证明相应网络交互，不能单独证明命令执行；使用自控接收端，避免把日志、凭据或真实业务数据发送给第三方。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 ## cve 2020-14841 weblogic jndi注入
 

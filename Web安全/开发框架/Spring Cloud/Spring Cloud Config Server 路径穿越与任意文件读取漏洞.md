@@ -1,6 +1,38 @@
 ---
 source: "白阁文库 BaizeSec/bylibrary"
+product: "Spring Cloud Config Server/资源路径"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2019-3799"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "Spring Cloud Config Server 路径穿越与任意文件读取漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：无影响/修复分支，quick-start main不锁环境"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-0c823def0b3d9975cf5b0db8"
+entity_id: "ve-0c823def0b3d9975cf5b0db8"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：无影响/修复分支，quick-start main不锁环境
+
+代码与实验材料：ResourceController→resourceRepository→URL读取及补丁代码，双编码路径明确；所有图片是空文字普通链接不渲染
+
+来源证据范围：Pivotal公告、Spring文档、固定修复3632fc6f较强
+
+- **适用与权限边界（1）**：版本及资源可达权限缺失；依据：没有分支范围，未交代ConfigServer认证和后端仓库类型。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **代码与转录边界（2）**：图片语法损坏；依据：全部\[\](imageURL)缺!且标签空，读者看不到分析图。相应原代码作为存在此问题的历史样本保留，不能直接当作可运行、成功复现的 PoC；缺失内容需回原稿核对，不据此补造可执行攻击链。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # 漏洞公告
 

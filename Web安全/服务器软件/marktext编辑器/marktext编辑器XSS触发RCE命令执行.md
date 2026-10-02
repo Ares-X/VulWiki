@@ -1,8 +1,45 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "marktext编辑器XSS触发RCE命令执行"
+product: "MarkText桌面Electron Markdown编辑器"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "用户打开/渲染恶意Markdown、受影响Mermaid/渲染器允许HTML事件且require可用"
+source_url: "https://mp.weixin.qq.com/s/rOOO8RSUr_dqXU1wHL4-cg"
+source_status: "recorded"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-72776cd825fd79b56cfe4bb9"
+entity_id: "ve-72776cd825fd79b56cfe4bb9"
+schema_version: "1"
 ---
 
 # marktext编辑器XSS触发RCE命令执行
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：用户打开/渲染恶意Markdown、受影响Mermaid/渲染器允许HTML事件且require可用
+- 证据范围：Windows/Mac示例意图清楚，但不是服务器远程无交互漏洞；无指定测试版本
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 归类服务器软件错误，应客户端编辑器
+- 所有版本受影响无日期/证据且过宽
+- 嵌套三反引号导致代码块截断，文档payload不完整
+- 仅清理代码块语言输入与实际Mermaid图内容注入不匹配，需要根因/补丁链接
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/rOOO8RSUr_dqXU1wHL4-cg)

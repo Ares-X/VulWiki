@@ -1,6 +1,39 @@
 ---
 source: "MrWQ/vulnerability-paper"
+product: "OpenSNS package Uploads_Download_2020-05-14_5ebca066a3fef"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "代码审计 -  opensns 代码审计复现"
+prerequisites: "来源所述条件，未列明部分仍待核：Weibo shareBox and Common Schedule model exposed; oldPHP assert strings/native calls; auth未说明"
+side_effects: "未执行；本文需注意的操作影响：影响版本只是下载包名，无发行版本/哈希；系统工具年份不是产品版本；推广相关文章可清理"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/mMRkMHP7DKDqJvW4Vtj_4Q"
+id: "vw-dea18ac3e79509ba3cbf9fe2"
+entity_id: "ve-dea18ac3e79509ba3cbf9fe2"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：Weibo shareBox and Common Schedule model exposed; oldPHP assert strings/native calls; auth未说明
+
+- **结论使用边界（1）**：作者明确_validationFieldItem如何可达未理解，应保留分析不确定性而非完整证明。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **结论使用边界（2）**：与306同载荷含\[6\]\[\]未带id、Model/model大小写混用；一处payload在runSchedule/function词中换行损坏。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **结论使用边界（3）**：D实例化模型不等于调用方法，R远程调用是框架内部调度非网络RPC，术语需校正。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **来源与引用处置（4）**：影响版本只是下载包名，无发行版本/哈希；系统工具年份不是产品版本；推广相关文章可清理。保留这部分来源材料并与技术结论分开；其引用或宣传内容不能补足本文漏洞的证据。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # 代码审计 -  opensns 代码审计复现
 

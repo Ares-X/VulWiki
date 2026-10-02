@@ -1,9 +1,55 @@
 ---
 cve: "CVE-2024-52316"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Apache Tomcat最新高版本身份验证绕过漏洞，POC价格接近3000"
+product: "Apache Tomcat Jakarta Authentication"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2024-52316"
+referenced_identifiers: ""
+identifier_role: "primary"
+prerequisites: "自定义ServerAuthContext抛异常且不明确设置失败HTTP状态；不是默认认证组件普遍问题"
+verification_source: "https://tomcat.apache.org/security-9"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-4c93edd515295320e838c428"
+entity_id: "ve-4c93edd515295320e838c428"
+schema_version: "1"
 ---
 
-#  Apache Tomcat最新高版本身份验证绕过漏洞，POC价格接近3000   
+# Apache Tomcat最新高版本身份验证绕过漏洞，POC价格接近3000
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：自定义ServerAuthContext抛异常且不明确设置失败HTTP状态；不是默认认证组件普遍问题
+- 证据范围：正文漏最关键异常组件条件，价格截图不能证明PoC有效性或风险等级。
+
+### 已有来源支持的更正
+
+- 官方52316为Low，需特殊自定义ServerAuthContext异常行为，9.0.96修复；不是普遍认证绕过
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 官方Low而文中因性质通常高风险，缺依据；未说明无已知组件这样行为
+- 只列9.x，遗漏10.1/11分支；缺明确9.0.96等修复
+- POC售卖近3000无平台/验证信息，应移出技术标题或标未经核实新闻
+- 没有请求/复现/配置，不能推断任意高版本可绕过
+
+### 核验来源
+
+- https://tomcat.apache.org/security-9
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 SecHaven  赛哈文   2024-11-20 03:10  
   
 近日Apach  

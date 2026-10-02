@@ -1,8 +1,53 @@
 ---
 source: "MrWQ/vulnerability-paper"
+id: "vw-54c5d9927f310f8797ebd7b1"
+entity_id: "ve-54c5d9927f310f8797ebd7b1"
+schema_version: "1"
+title: "新华三magicR100存在未授权访问"
+product: "H3C Magic R100"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+prerequisites: "V100R005/V200R00；无认证读取函数调用"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/H3C/%E6%96%B0%E5%8D%8E%E4%B8%89magicR100%E5%AD%98%E5%9C%A8%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE.md"
+review_date: "2026-10-02"
+side_effects: "读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要且已脱敏的响应，不能由接口可达推定敏感内容已泄露"
+source_url: "https://mp.weixin.qq.com/s/hE_GWFDE7mgK0zQqjWIWgw"
+source_status: "recorded"
 ---
 
 # 新华三magicR100存在未授权访问
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：H3C Magic R100
+- 本文讨论：AJAX/ajaxget未授权宽带凭据泄露
+- 版本、权限与配置前提：V100R005/V200R00；无认证读取函数调用
+- 资料类型：固件分析/受限披露；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 与144固件提取/分析大量相同，本文不同后果为宽带账号密码
+- 关键ajaxmsg刻意不公开、Content-Length78430占位，不是可直接用PoC
+- 固件名混写、SquashFS称架构不准确；无修复来源
+
+### 操作风险与恢复
+
+- 读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要且已脱敏的响应，不能由接口可达推定敏感内容已泄露
+
+### 待核与来源
+
+- 具体函数、编号及固件范围待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/hE_GWFDE7mgK0zQqjWIWgw)

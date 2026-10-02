@@ -1,6 +1,38 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+product: "WordPress Avada Fusion Builder"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2026-8713"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "WordPress关键插件漏洞或致100万个网站遭文件删除攻击"
+prerequisites: "来源所述条件，未列明部分仍待核：<=3.15.3 fixed3.15.4 claimed; public form configured to store DB entries; manipulated expiry/action and shutdown cleanup"
+side_effects: "未执行；本文需注意的操作影响：明确存储型清理触发和无需管理员交互条件有价值，应结构化保留；删除wp-config后RCE仍依安装可访问/DB可用/编辑权限，不是自动任意环境完成"
+source_status: "unknown"
+id: "vw-a8fb1a625f32b1584e61c332"
+entity_id: "ve-a8fb1a625f32b1584e61c332"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：&lt;=3.15.3 fixed3.15.4 claimed; public form configured to store DB entries; manipulated expiry/action and shutdown cleanup
+
+- **适用与权限边界（1）**：正文CVE遗漏元数据；100万安装不等于100万均满足DB表单前提。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **适用与权限边界（2）**：明确存储型清理触发和无需管理员交互条件有价值，应结构化保留。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **操作与副作用边界（3）**：删除wp-config后RCE仍依安装可访问/DB可用/编辑权限，不是自动任意环境完成。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+- **证据待核（4）**：缺原始Wordfence公告链接，文末承认转载来源找不到；无请求/代码证据。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 #  WordPress关键插件漏洞或致100万个网站遭文件删除攻击  
  网安百色   2026-06-20 10:22  

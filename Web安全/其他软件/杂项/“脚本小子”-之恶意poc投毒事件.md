@@ -1,8 +1,67 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+identifier_role: "reference"
+primary_identifiers: ""
+referenced_identifiers: "CVE-2020-35489"
+identifier_status: "unknown"
+title: "“脚本小子”-之恶意poc投毒事件"
+product: "恶意伪PoC脚本；Codeberg/file.io用于外传"
+record_type: "incident"
+document_type: "恶意PoC投毒事件分析译写"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "受害者主动执行伪PoC；当前文章仅历史事件叙述/图片，不验证攻击基础设施"
+side_effects: "硬重置+forcepush不能确保历史不可恢复/攻击者无法再得数据，与后文承认本地副本冲突；清除远端引用≠彻底删除所有副本"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/%E2%80%9C%E8%84%9A%E6%9C%AC%E5%B0%8F%E5%AD%90%E2%80%9D-%E4%B9%8B%E6%81%B6%E6%84%8Fpoc%E6%8A%95%E6%AF%92%E4%BA%8B%E4%BB%B6.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-e68c21c5ea175d325505c4c3"
+entity_id: "ve-e68c21c5ea175d325505c4c3"
+schema_version: "1"
 ---
 
-#  “脚本小子”-之恶意poc投毒事件   
+# “脚本小子”-之恶意poc投毒事件
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：恶意伪PoC脚本；Codeberg/file.io用于外传
+- 文献类型：恶意PoC投毒事件分析译写
+- 版本、权限及部署边界：受害者主动执行伪PoC；当前文章仅历史事件叙述/图片，不验证攻击基础设施
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 35489只是恶意仓库诱饵，不是本文利用该漏洞的证据；GitHub/Codeberg不是被证明有软件漏洞
+2. 文内公开完整API令牌及带凭据cloneURL是高优先级敏感内容问题，应脱敏/移除访问性信息，保留无秘密IoC；未尝试使用任何凭据或访问私库
+3. 硬重置+forcepush不能确保历史不可恢复/攻击者无法再得数据，与后文承认本地副本冲突；清除远端引用≠彻底删除所有副本
+4. 回侵私库、删除所有受害数据和灌垃圾不是可推广的事件响应流程，须改为历史行为描述并强调授权/证据保全，不能按文操作
+5. 叙述先说其他受害者不在权限范围又清空所有数据矛盾；token一个不证明攻击者只依赖一个凭据，回应不能证明特定实时监控机制
+6. 第一人称为翻译改写需明确归原作者Chocapikk，样本哈希/关键脚本纯图缺文字，原博客和样本镜像可追溯但未下载执行
+7. 清理建议只图片且未强调受害端凭据轮换/重建边界；动态IoC时间化、矿池名hashvault vs pool.hashvault差异核对
+
+### 操作风险
+
+硬重置+forcepush不能确保历史不可恢复/攻击者无法再得数据，与后文承认本地副本冲突；清除远端引用≠彻底删除所有副本
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://file.io/>
+- 原文参考链接（未重新核验）：<https://codeberg.org/api/v1/repos/s1nk/sink/contents/>
+- 原文参考链接（未重新核验）：<https://ifconfig.me>
+- 原文参考链接（未重新核验）：<https://check.torproject.org/api/ip>
+- 原文参考链接（未重新核验）：<https://codeberg.org/aib0lit/xsession>
+- 原文参考链接（未重新核验）：<https://codeberg.org/bluef1sher>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
  实战安全研究   2025-04-25 02:01  
   
 - 前言  
@@ -97,7 +156,7 @@ Codeberg
 API token  
 如下（此处给大家解答一下为什么能拿到token，因为程序上传就需要token，所以拿到应该是很容易的）  
 ```
-1a38a34c6d5dbefb112aa73f54824433f80bb704
+1a3**********************************704
 ```  
   
     通过使用这个token，我可以轻松的  
@@ -113,7 +172,7 @@ Codeberg
 api  
 接口，我更喜欢直接克隆  
 ```
-git clone https://oauth2:1a38a34c6d5dbefb112aa73f54824433f80bb704@codeberg.org/s1nk/sink.git
+git clone https://oauth2:1a3**********************************704@codeberg.org/s1nk/sink.git
 cd sink
 ```  
   
@@ -265,7 +324,7 @@ file.io
 - 总结  
   
       
-这次经历给我敲响了警钟：永远不要盲目信任任何漏洞利用概念验证（PoC），特别是那些包含PDF等随机文件的样本。攻击者已成功窃取多名受害者的凭证，但通过利用他们自己的访问令牌，我得以：  
+原作者 Chocapikk 对历史事件的叙述（第一人称归属原作者）：这次经历给我敲响了警钟：永远不要盲目信任任何漏洞利用概念验证（PoC），特别是那些包含PDF等随机文件的样本。攻击者已成功窃取多名受害者的凭证，但通过利用他们自己的访问令牌，我得以：  
   
 1. 克隆其代码仓库并获取被盗文件详情  
   
@@ -300,7 +359,7 @@ https://file.io/
   
 https://codeberg.org/api/v1/repos/s1nk/sink/contents/    
   
-https://ipinfo.io/?token=7092dca9adef64    
+https://ipinfo.io/?token=709********f64    
   
 https://ifconfig.me    
   
@@ -311,7 +370,7 @@ API TOKEN
   
 IRHTNTF.YQJYZQP-KVEMN8R-J2BYQPK-FSQZ3PP    
   
-1a38a34c6d5dbefb112aa73f54824433f80bb704    
+1a3**********************************704    
   
   
 Codeberg 仓库  
@@ -343,4 +402,4 @@ https://chocapikk.com/posts/2025/s1nk/
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

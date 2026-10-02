@@ -1,6 +1,40 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+product: "ManageEngine Password Manager Pro / PAM360 / Access Manager Plus"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2022-47523"
+referenced_identifiers: "CVE-2022-35405; CVE-2020-10189"
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "Zoho：立即修复这个严重的ManageEngine漏洞！"
+prerequisites: "来源所述条件，未列明部分仍待核：没有各产品受影响/修复build，只称最新"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-67816536dd495bc6e4d1130b"
+entity_id: "ve-67816536dd495bc6e4d1130b"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：没有各产品受影响/修复build，只称最新
+
+代码与实验材料：无PoC，属于2023-01-05历史通告
+
+来源证据范围：BleepingComputer原文，缺官方多产品公告
+
+- **事实待核（1）**：修复无法落地到产品build；依据：三种产品无版本矩阵，仅最新build；不能用厂商名替代产品实体。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **事实待核（2）**：时间线错误；依据：2023年1月文章写“今年9月份”发生的35405事件，应核实指2022年。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **事实待核（3）**：主CVE未元数据，旧漏洞仅背景；依据：frontmatter无47523；35405和推荐10189应为引用，不应自动认同一漏洞在野状态。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 #  Zoho：立即修复这个严重的ManageEngine漏洞！   
 Sergiu Gatlan  代码卫士   2023-01-05 18:13  

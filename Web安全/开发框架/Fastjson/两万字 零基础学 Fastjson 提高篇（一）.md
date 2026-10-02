@@ -1,7 +1,51 @@
 ---
-version: "ParserConfig.getGlobalInstance().addAccept('java.lang.Class');"
+version: ""
 source: "MrWQ/vulnerability-paper"
+product: "Fastjson fingerprinting, file read/write; related JSON libraries"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+version_notes: "ParserConfig.getGlobalInstance().addAccept('java.lang.Class');"
+title: "两万字 零基础学 Fastjson 提高篇（一）"
+prerequisites: "来源所述条件，未列明部分仍待核：Various1.1.x/1.2.x/2.0.x through2.0.40; distinct parse overloads and dependency versions, IO2.0–2.6 versus2.7–2.8; demonstration controller modified to echo results/errors"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/mKyFECs1M96G86jIcWpXzQ"
+id: "vw-48e0946317bdb2158398107b"
+entity_id: "ve-48e0946317bdb2158398107b"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 明确更正：原 version 字段抽入命令、源码、路径、配置或普通叙述，不是版本号，已清空机器版本字段并原样保留于 version_notes；实际版本/分支条件见本节逐篇记录，未从代码猜造版本。
+
+- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；遮罩后的历史值不能作为可用登录凭据。原操作、请求方法和攻击表达式保留。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：Various1.1.x/1.2.x/2.0.x through2.0.40; distinct parse overloads and dependency versions, IO2.0–2.6 versus2.7–2.8; demonstration controller modified to echo results/errors
+
+代码与实验材料：51 numbered vectors, explicit failed lab cases and sources, blind BOM variants, file-write buffering limits; extensive screenshot evidence not inspected; fixed matrix absent
+
+来源证据范围：Author W01fh4cker repository and credited primary researchers, official issue4451, BlackHat PDF and original WeChat; derivative snippets need exact revision
+
+- **代码与转录边界（1）**：Version metadata is code; syntax/unknown-field/absence-of-DNS fingerprints overstated as uniquely identifying library/version。相应原代码作为存在此问题的历史样本保留，不能直接当作可运行、成功复现的 PoC；缺失内容需回原稿核对，不据此补造可执行攻击链。
+
+- **证据待核（2）**：Form/query binding behavior is not evidence about JSON decoder；依据：JSON extra-member test replaced by /doLogin?username... query parameters。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **证据待核（3）**：DoS does not imply RCE and negative OOB evidence needs baseline/retry controls；依据：DoS delay means likely system control; no callback means BOM match。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **结论使用边界（4）**：MarshalOutputStream onlyCentOS claim should be JDK build/parameter metadata; shown Inflater input looks plain base64 rather than compressed bytes; Windows path in CentOS-only example。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **结论使用边界（5）**：Incomplete sentence 该payload只适用于; incompatible2.0.1 interval overlap; widespread escaped braces; no current remediation。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # 【两万字】零基础学 Fastjson 提高篇（一）
 
@@ -194,7 +238,7 @@ Host: 10.0.47.4:8888
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9
-Cookie: JSESSIONID=8D9951E527FEE008DB7B874D70636D86
+Cookie: JSESSIONID=8D9**************************D86
 Upgrade-Insecure-Requests: 1
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36
 

@@ -1,8 +1,46 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "适用于Kubernetes 的AWS IAM 验证器中存在漏洞，导致提权等攻击"
+product: "AWS IAM Authenticator for Kubernetes"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2022-2385"
+referenced_identifiers: ""
+identifier_role: "primary"
+cve: "CVE-2022-2385"
+prerequisites: "适用认证器及AccessKeyID映射/其他受影响路径，攻击者可提交相应签名STS请求；文称0.5.9修复"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-aa661bd2f249986b5edda882"
+entity_id: "ve-aa661bd2f249986b5edda882"
+schema_version: "1"
 ---
 
-#  适用于Kubernetes 的AWS IAM 验证器中存在漏洞，导致提权等攻击   
+# 适用于Kubernetes 的AWS IAM 验证器中存在漏洞，导致提权等攻击
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：适用认证器及AccessKeyID映射/其他受影响路径，攻击者可提交相应签名STS请求；文称0.5.9修复
+- 证据范围：大小写参数折叠与STS不同解释机制可辨认，具体攻击数据仅概述
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 主CVE缺元数据
+- 末尾漏洞已在0.5.9发布应为修复已在0.5.9发布
+- 用户名映射与可变Action/集群ID是不同前提的子路径，不宜全部压成EKS一条件
+- 同样的参数乘不同值等翻译错误影响阅读
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 Jessica Haworth  代码卫士   2022-07-14 18:41  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

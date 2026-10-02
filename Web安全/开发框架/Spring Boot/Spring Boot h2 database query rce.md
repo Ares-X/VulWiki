@@ -1,6 +1,40 @@
 ---
 source: "hatch 补库批 20260928"
+product: "HikariCP/H2 SQL验证链"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "Spring Boot h2 database query rce"
+prerequisites: "来源所述条件，未列明部分仍待核：H2版本未知，Boot1/2例需实际Hikari配置及Cloud env/restart支持"
+side_effects: "未执行；本文需注意的操作影响：危险持久状态与修复欠缺；改DB验证SQL并重启，创建ALIAS可能重复报错导致连接不可用；只建议换名字未说明恢复/清理；组件与触发解释过度简化；restart不是BootActuator默认提供，自定义函数需CALL而不是未执行过自动运行"
+source_status: "unknown"
+id: "vw-299cc54755ebd8efef1f0053"
+entity_id: "ve-299cc54755ebd8efef1f0053"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：H2版本未知，Boot1/2例需实际Hikari配置及Cloud env/restart支持
+
+代码与实验材料：完整CREATE ALIAS T5+CALL与重启请求；提醒别名重复失败有价值，无响应证据
+
+来源证据范围：历史导入无原出处
+
+- **适用与权限边界（1）**：简介复制另一种漏洞；依据：开头h2-console/JNDI与实际connection-test-query CREATE ALIAS完全不同，console开放不是此链必要条件。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **操作与副作用边界（2）**：危险持久状态与修复欠缺；依据：改DB验证SQL并重启，创建ALIAS可能重复报错导致连接不可用；只建议换名字未说明恢复/清理。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+- **操作与副作用边界（3）**：组件与触发解释过度简化；依据：restart不是BootActuator默认提供，自定义函数需CALL而不是未执行过自动运行。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Spring Boot h2 database query rce
 

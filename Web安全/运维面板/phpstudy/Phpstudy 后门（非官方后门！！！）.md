@@ -1,8 +1,46 @@
 ---
 source: "hatch 补库批 20260928"
+title: "Phpstudy 后门（非官方后门！！！）"
+product: "Compromised phpStudy2016/2018 php_xmlrpc.dll packages"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "Specific malicious DLL loaded inPHP5.2.17/5.4.45;request headers trigger embedded code"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-343e013e61835e0ef2b478e7"
+entity_id: "ve-343e013e61835e0ef2b478e7"
+schema_version: "1"
 ---
 
 # Phpstudy 后门（非官方后门！！！）
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：Specific malicious DLL loaded inPHP5.2.17/5.4.45;request headers trigger embedded code
+- 证据范围：Detailed static/dynamic analysis and decoded scripts;sample binaries not available/viewed/executed;distinct rich analysis
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- Need exact malicioussample hashes/package provenance;version alone cannot establish infection or vendor responsibility
+- Repeated decoded scripts duplicate withinarticle;merge annotated versions
+- Image links have duplicate media tails
+- Base64/zlib called decryption rather than decoding/decompression
+- Preserve malicious domains as defanged historicalIOCs,not live testing targets
+- Empty introduction/no remediation or integrity verification source
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 一、漏洞简介
 ------------

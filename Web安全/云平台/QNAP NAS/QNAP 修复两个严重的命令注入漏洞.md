@@ -1,8 +1,44 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "QNAP 修复两个严重的命令注入漏洞"
+product: "QNAP QTS/QuTS/应用"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-f80dbe733f9289309b1c1b24"
+entity_id: "ve-f80dbe733f9289309b1c1b24"
+schema_version: "1"
 ---
 
-#  QNAP 修复两个严重的命令注入漏洞   
+# QNAP 修复两个严重的命令注入漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 两CVE缺元数据
+- 各版本分支和应用不同，需分别结构化避免拼成统一范围
+- 远程执行不表明认证条件相同，补各官方向量
+- 仅二手新闻缺QNAP原始公告
+- 明确2023历史更新，移除广告
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 Bill Toulas  代码卫士   2023-11-07 16:58  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

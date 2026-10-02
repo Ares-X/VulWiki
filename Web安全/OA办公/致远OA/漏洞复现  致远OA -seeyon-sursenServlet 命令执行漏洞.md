@@ -1,8 +1,48 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "致远OA / sursenServlet Fastjson反序列化疑似远程代码执行"
+product: "致远OA / sursenServlet"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "未给产品/Fastjson/JDK版本，出网配置未列"
+prerequisites: "未知"
+side_effects: "命令/代码执行示例可能改变主机状态"
+review_date: "2026-10-02"
+source_status: "unknown"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E8%87%B4%E8%BF%9COA/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0%20%20%E8%87%B4%E8%BF%9COA%20-seeyon-sursenServlet%20%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md"
+id: "vw-edf005d79c69b3263dd31cfa"
+entity_id: "ve-edf005d79c69b3263dd31cfa"
+schema_version: "1"
 ---
 
-#  漏洞复现 | 致远OA /seeyon/sursenServlet 命令执行漏洞  
+# 致远OA / sursenServlet Fastjson反序列化疑似远程代码执行
+
+## 条目说明
+
+- 对象与具体问题：致远OA / sursenServlet；Fastjson反序列化疑似RCE
+- 版本、配置及部署条件：未给产品/Fastjson/JDK版本，出网配置未列
+- 认证与权限前提：未知
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 全文复现只有DNSlog和截图，未给HTTP参数/载荷/返回文本，DNS回连不能证明RCE
+- 可定位/seeyon/sursenServlet，但与既有Fastjson利用链需完整对照
+- 大部分广告，缺原文实际链接/补丁版本，应标证据不完整
+
+## 操作风险
+
+命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
  实战安全研究   2026-01-13 02:00  
   
 **免责声明**  

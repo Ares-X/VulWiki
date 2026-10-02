@@ -1,9 +1,59 @@
 ---
-cve: "CVE-2025-33067"
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2025-33067"
+identifier_role: "primary"
+primary_identifiers: "CVE-2025-33067"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "Windows 任务计划程序允许攻击者提升权限漏洞"
+product: "Windows Task Scheduler"
+record_type: "advisory"
+document_type: "Windows安全通告"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "本地AV:L/PR:N向量宣称，具体调用/访问条件未披露；2025-06更新"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/Windows%20%E4%BB%BB%E5%8A%A1%E8%AE%A1%E5%88%92%E7%A8%8B%E5%BA%8F%E5%85%81%E8%AE%B8%E6%94%BB%E5%87%BB%E8%80%85%E6%8F%90%E5%8D%87%E6%9D%83%E9%99%90%E6%BC%8F%E6%B4%9E.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-0b3b0ad608485645feeb03d6"
+entity_id: "ve-0b3b0ad608485645feeb03d6"
+schema_version: "1"
 ---
 
-#  Windows 任务计划程序允许攻击者提升权限漏洞  
+# Windows 任务计划程序允许攻击者提升权限漏洞
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Windows Task Scheduler
+- 文献类型：Windows安全通告
+- 版本、权限及部署边界：本地AV:L/PR:N向量宣称，具体调用/访问条件未披露；2025-06更新
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 将TaskScheduler直接称Windows内核组件缺技术定位，不能据提权结果推内核内存漏洞
+2. Windows10原始版本写1607但后面10240实际另列；22H2/23H2共给22631 build忽略22621；27配置无完整可追溯清单
+3. 全部KB/build、发现者/可利用性评级均无MSRC链接，需逐分支核验；8.4CVSS高与微软Important是不同尺度
+4. PR:N不等于能从网络匿名触发，文后本地访问应前置；低利用可能性不自动等于没有在野，需独立状态字段
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
  网安百色   2025-06-13 11:30  
   
 Windows Task Scheduler 中存在一个重大安全漏洞，使得攻击者能够将其权限升级到 SYSTEM 级别访问权限，而无需初始管理权限。  
@@ -54,4 +104,4 @@ Windows 11 版本 23H2 和 22H2 系统需要 KB5060999（内部版本 10.0.22631
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

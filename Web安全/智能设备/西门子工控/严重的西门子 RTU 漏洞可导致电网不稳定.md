@@ -1,8 +1,53 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-ad58f2724a9dfef888386388"
+entity_id: "ve-ad58f2724a9dfef888386388"
+schema_version: "1"
+title: "严重的西门子 RTU 漏洞可导致电网不稳定"
+product: "Siemens SICAM A8000 CP-8031/CP-8050 CPCI85固件"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2023-28489"
+referenced_identifiers: ""
+prerequisites: "Web80/443可达、未认证，CPCI85 V05起修复"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%99%BA%E8%83%BD%E8%AE%BE%E5%A4%87/%E8%A5%BF%E9%97%A8%E5%AD%90%E5%B7%A5%E6%8E%A7/%E4%B8%A5%E9%87%8D%E7%9A%84%E8%A5%BF%E9%97%A8%E5%AD%90%20RTU%20%E6%BC%8F%E6%B4%9E%E5%8F%AF%E5%AF%BC%E8%87%B4%E7%94%B5%E7%BD%91%E4%B8%8D%E7%A8%B3%E5%AE%9A.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 #  严重的西门子 RTU 漏洞可导致电网不稳定   
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Siemens SICAM A8000 CP-8031/CP-8050 CPCI85固件
+- 本文讨论：CVE-2023-28489
+- 版本、权限与配置前提：Web80/443可达、未认证，CPCI85 V05起修复
+- 资料类型：RTU历史漏洞新闻；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 原来源仅SecurityWeek，未给Siemens/SEC Consult直链与受影响下界
+- IEC62443-4-1是开发流程标准，不能据此推出产品无漏洞或所有产品测试性质
+- 电网不稳定为条件性影响，应保留研究者归属和通常网络隔离说明
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 精确固件范围、root权限及认证声明待查
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 Eduard Kovacs  代码卫士   2023-05-08 17:48  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

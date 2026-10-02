@@ -1,9 +1,53 @@
 ---
-cve: "CVE-2021-34527"
+cve: "CVE-2021-34527; CVE-2021-1675; CVE-2021-42278; CVE-2021-42287; CVE-2021-36942"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "AD域内网渗透-三种漏洞利用方式"
+product: "Windows Print Spooler、AD DS、AD CS"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2021-34527; CVE-2021-1675; CVE-2021-42278; CVE-2021-42287; CVE-2021-36942"
+referenced_identifiers: ""
+identifier_role: "primary"
+prerequisites: "各链不同：Print Spooler可达及适用补丁/驱动策略；noPac需可控机器账号；PetitPotam到ADCS还需可中继Web注册和可用模板"
+source_status: "unknown"
+side_effects: "含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。"
+id: "vw-6c160cead34a0a3e9039fcc0"
+entity_id: "ve-6c160cead34a0a3e9039fcc0"
+schema_version: "1"
 ---
 
-#  AD域内网渗透-三种漏洞利用方式   
+# AD域内网渗透-三种漏洞利用方式
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：各链不同：Print Spooler可达及适用补丁/驱动策略；noPac需可控机器账号；PetitPotam到ADCS还需可中继Web注册和可用模板
+- 证据范围：三条攻击链以及证书取得后的多种后利用有独立教学价值，但产品/权限/补丁条件过度简化
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 元数据仅34527，应多实体归档
+- 拿到普通TGT不等于noPac已验证，应记录扫描器实际票据差异判据
+- MachineAccountQuota=0并不代表所有拥有既有机器账户权限的路径均失败
+- 将PetitPotam强制认证与ADCS中继后果混称单一CVE，缺EPA/签名及模板前提
+- PAC误称Privileged Attribute Certificate且多个NTLM散列长度疑似截断，样例凭据应脱敏占位
+- 受影响/修复版本缺失
+
+### 操作风险与资料使用
+
+- 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。
+- 文中的明文凭据、会话或密钥已用中段星号脱敏，保留首尾供比对；示例不能直接照抄登录。仅替换为自有隔离环境凭据，已暴露的真实凭据应撤销或轮换。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 jzhoucdc  泷羽Sec   2025-04-19 00:11  
   
 本文基于AD域内网渗透中三种漏洞利用的学习记录。  
@@ -119,7 +163,7 @@ sudo python3 noPac.py INLANEFREIGHT.LOCAL/forend:Klmcargo2 -dc-ip 172.16.5.5  -d
   
   
 ![1744809426_67ffadd2c04abe5ff83d0.png!small](https://mmbiz.qpic.cn/mmbiz_jpg/5975bXHXfWElmicQfyttQ4ULfUdkaNe9BX8F1kAoiaLE4OQxtbwOicI5o9jNxgY2adEWP9V4Lo51edjpbjib8caObA/640?wx_fmt=jpeg&from=appmsg "")  
-> AS-REP 加密密钥：16950e24794e18ce18211c5ebf8ea22910b3854ffb9ce4c4ab0dcc8a5c390abe  
+> AS-REP 加密密钥：16************************be  
   
   
 TGT票据保存到了本地dc01.ccache 文件中。  

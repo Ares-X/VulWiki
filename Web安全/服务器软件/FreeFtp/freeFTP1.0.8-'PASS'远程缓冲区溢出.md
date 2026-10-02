@@ -1,6 +1,43 @@
 ---
 source: "白阁文库 BaizeSec/bylibrary"
+title: "freeFTP1.0.8-'PASS'远程缓冲区溢出"
+product: "freeFTP 1.0.8"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "quarantined"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "特定Windows模块布局/SEH地址，FTP USER anonymous后发送长PASS；测试OS未给"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-f499d41bb6ed0b2a617bfbb3"
+entity_id: "ve-f499d41bb6ed0b2a617bfbb3"
+schema_version: "1"
 ---
+
+# freeFTP1.0.8-'PASS'远程缓冲区溢出
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：特定Windows模块布局/SEH地址，FTP USER anonymous后发送长PASS；测试OS未给
+- 证据范围：完整读取shellcode字节与脚本，未反汇编；变量错误导致脚本现文必然不能运行
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- shellcode最初写入buf，随后buf='A'*276覆盖它，而shellcode变量从未定义，发生NameError
+- 固定目标IP无参数/使用说明，Python版本与编码行为不明
+- 缺原始PoC链接、测试平台与修复版本
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 ## freeFTP1.0.8-'PASS'远程缓冲区溢出  
 

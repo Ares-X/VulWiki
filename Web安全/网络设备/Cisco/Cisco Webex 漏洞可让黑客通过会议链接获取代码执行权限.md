@@ -1,8 +1,53 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-64289aa69dbf6205b5aed30a"
+entity_id: "ve-64289aa69dbf6205b5aed30a"
+schema_version: "1"
+title: "Cisco Webex 漏洞可让黑客通过会议链接获取代码执行权限"
+product: "Cisco Webex App（主）；Secure Network Analytics / Nexus Dashboard / CSLU（关联）"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2025-20236"
+referenced_identifiers: "CVE-2025-20178; CVE-2025-20150; CVE-2024-20439"
+prerequisites: "需用户点击会议链接并下载文件，以用户权限执行；无版本表"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/Cisco/Cisco%20Webex%20%E6%BC%8F%E6%B4%9E%E5%8F%AF%E8%AE%A9%E9%BB%91%E5%AE%A2%E9%80%9A%E8%BF%87%E4%BC%9A%E8%AE%AE%E9%93%BE%E6%8E%A5%E8%8E%B7%E5%8F%96%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%9D%83%E9%99%90.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 #  Cisco Webex 漏洞可让黑客通过会议链接获取代码执行权限   
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Cisco Webex App（主）；Secure Network Analytics / Nexus Dashboard / CSLU（关联）
+- 本文讨论：CVE-2025-20236
+- 版本、权限与配置前提：需用户点击会议链接并下载文件，以用户权限执行；无版本表
+- 资料类型：多漏洞新闻；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- Webex客户端误归网络设备；不能省略用户交互前提
+- 只列BleepingComputer名称而无具体来源URL
+- 无受影响/修复版本；跨所有OS影响断言待官方确认
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 平台范围、修复版本未验证
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 Rhinoer  犀牛安全   2025-05-05 16:00  
   
 ![](https://mmbiz.qpic.cn/mmbiz_png/qvpgicaewUBkQ5YJHoFGVzHoiaXZ3e8hBq65voCFBvQIDKRROicYEZzaIqbrp1ta5Rw0xTr5GPjKriarhsQ1ojRO8g/640?wx_fmt=png&from=appmsg "")  

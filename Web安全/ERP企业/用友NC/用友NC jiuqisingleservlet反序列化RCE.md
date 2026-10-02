@@ -1,25 +1,65 @@
 ---
-
 source: "SourByte05/Vulnerability-Wiki-PoC"
+title: "用友NC jiuqisingleservlet反序列化声明"
+product: "用友NC"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "CC/Rhino/Tomcat依赖未列"
+prerequisites: "声称未授权"
+side_effects: "命令/代码执行示例可能改变主机状态"
+review_date: "2026-10-02"
+source_url: "https://github.com/SourByte05/Vulnerability-Wiki-PoC"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E7%94%A8%E5%8F%8BNC/%E7%94%A8%E5%8F%8BNC%20jiuqisingleservlet%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96RCE.md"
+fofa: "app=\"用友-UFIDA-NC\""
+id: "vw-5f36bd50a551856b4f8ea365"
+entity_id: "ve-5f36bd50a551856b4f8ea365"
+schema_version: "1"
 ---
 
-# 用友NC jiuqisingleservlet反序列化RCE
+# 用友NC jiuqisingleservlet反序列化声明
 
-# 漏洞描述
+## 条目说明
+
+- 对象与具体问题：用友NC；jiuqisingleservlet反序列化声明
+- 版本、配置及部署条件：CC/Rhino/Tomcat依赖未列
+- 认证与权限前提：声称未授权
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 入口/servlet/~ufoe/jiuqisingleservlet，共用A4二进制宏载荷不代表同一根因
+- 字节码全文按不透明文本读取，未反编译/执行，包含反连写文件常量
+- 缺服务端触发代码、版本和明确安全补丁，在野声明无来源
+
+## 操作风险
+
+命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
+## 漏洞描述
 
 用友NC /servlet/~ufoe/jiuqisingleservlet处存在反序列化RCE，未授权攻击者可进行任意命令执行。
 
-# 影响版本
+## 影响版本
 
 用友-UFIDA-NC
 
-# **漏洞状态**
+## **漏洞状态**
 
 | 漏洞细节 | 漏洞POC | 漏洞EXP | 在野利用 |
 |------|-------|-------|------|
-| 是 | 已公开 | 已公开 | 已知 |
+| 原文提供部分细节 | 见技术资料 | 未独立核验 | 待来源核实 |
 
-## 风险等级
+### 风险等级
 
 | 维度 | 评价 |
 |----|----|
@@ -28,13 +68,13 @@ source: "SourByte05/Vulnerability-Wiki-PoC"
 | 攻击者价值 | 高 |
 | 利用难度 | 低 |
 
-# 漏洞复现
+## 漏洞复现
 
 FOFA：app="用友-UFIDA-NC"
 
 POC/EXP：
 
-```
+```http
 POST /servlet/~ufoe/jiuqisingleservlet HTTP/1.1
 Host: 127.0.0.1
 Cmd: whoami
@@ -47,7 +87,7 @@ User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15
 ![image-20250311153922997](./.resource/用友NCjiuqisingleservlet反序列化RCE/media/image-20250311153922997.png)
 
 
-# 漏洞修复
+## 漏洞修复
 
 关闭互联网暴露面或接口设置访问权限
 

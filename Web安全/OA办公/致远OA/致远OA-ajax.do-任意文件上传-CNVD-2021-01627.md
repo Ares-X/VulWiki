@@ -1,16 +1,57 @@
 ---
-cnvd: "CNVD-2021-01627"
-version: "致远OA V8.0"
 source: "Threekiii/Vulnerability-Wiki"
+title: "致远OA ajax.do认证绕过+formulaManager表达式执行写入"
+product: "致远OA"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CNVD-2021-01627"
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "V5–V8/G6列举；frontmatter只V8遗漏"
+prerequisites: "声称未认证，路径绕过"
+side_effects: "文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行；命令/代码执行示例可能改变主机状态"
+review_date: "2026-10-02"
+identifier_role: "primary"
+source_url: "https://github.com/Threekiii/Vulnerability-Wiki"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E8%87%B4%E8%BF%9COA/%E8%87%B4%E8%BF%9COA-ajax.do-%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0-CNVD-2021-01627.md"
+id: "vw-3d699f7155d4a33fc0d38b9a"
+entity_id: "ve-3d699f7155d4a33fc0d38b9a"
+schema_version: "1"
 ---
 
-# 致远OA ajax.do 任意文件上传 CNVD-2021-01627
+# 致远OA ajax.do认证绕过+formulaManager表达式执行写入
 
-## 漏洞描述
+## 条目说明
+
+- 对象与具体问题：致远OA；ajax.do认证绕过+formulaManager表达式执行写入
+- 版本、配置及部署条件：V5–V8/G6列举；frontmatter只V8遗漏
+- 认证与权限前提：声称未认证，路径绕过
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- CNVD2021-01627可作系列主ID但需登记正文核映射
+- 与多篇同压缩payload；离线解码核对实际写入文件路径，文中config.jspx和替换脚本需与实际载荷一致
+- HTTP含无Cookie头名行，且请求代码块混入webshell地址/口令说明，直接复制不可用
+- 成功JSON code与异常不是充分成功证据；副作用为代码执行写文件，不应称无害上传验证
+- 已离线解压确认载荷实际写../webapps/seeyon/SeeyonUpdate1.jspx，文中宣称apps_res/addressbook/images/config.jspx错误；所列str_replace也匹配不到该路径
+
+## 操作风险
+
+文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行；命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
+### 漏洞描述
 
 致远OA是一套办公协同管理软件。近日，奇安信CERT监测到致远OA的相关漏洞信息。由于致远OA旧版本某些接口存在未授权访问，以及部分函数存在过滤不足，攻击者通过构造恶意请求，可在无需登录的情况下上传恶意脚本文件，从而控制服务器。致远OA官方已针对该漏洞提供补丁。鉴于漏洞危害较大，建议用户尽快应用补丁更新。
 
-## 漏洞影响
+### 漏洞影响
 
 ```
 致远OA V8.0
@@ -21,7 +62,7 @@ source: "Threekiii/Vulnerability-Wiki"
 致远OA G6
 ```
 
-## 漏洞复现
+### 漏洞复现
 
 通过请求判断是否可能存在漏洞
 
@@ -40,7 +81,7 @@ source: "Threekiii/Vulnerability-Wiki"
 
 调用未授权的文件上传接口上传webshell文件，请求包如下
 
-```
+```http
 POST /seeyon/autoinstall.do.css/..;/ajax.do?method=ajaxAction&managerName=formulaManager&requestCompress=gzip HTTP/1.1
 Host: 127.0.0.1
 Connection: close

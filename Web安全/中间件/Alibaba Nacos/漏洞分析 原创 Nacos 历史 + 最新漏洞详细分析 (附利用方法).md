@@ -1,8 +1,55 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "漏洞分析 【原创】Nacos 历史 + 最新漏洞详细分析 (附利用方法)"
+product: "Nacos Server认证及nacos-client Yaml解析"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2021-29441"
+referenced_identifiers: "CVE-2021-3156; CVE-2021-4206"
+identifier_role: "primary"
+cve: "CVE-2021-29441"
+prerequisites: "逐节明确auth.enabled/默认密钥[凭据或样例值已隐藏]选项；客户端链须控制订阅配置且触发Yaml变更监听"
+source_url: "https://mp.weixin.qq.com/s/thlRGXwJPevB0wvMN5koFQ"
+source_status: "recorded"
+side_effects: "含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。"
+id: "vw-a43ed5148dcf596507dac307"
+entity_id: "ve-a43ed5148dcf596507dac307"
+schema_version: "1"
 ---
 
-# 漏洞分析  【原创】Nacos 历史 + 最新漏洞详细分析 (附利用方法)
+# 漏洞分析 【原创】Nacos 历史 + 最新漏洞详细分析 (附利用方法)
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：逐节明确auth.enabled/默认密钥[凭据或样例值已隐藏]选项；客户端链须控制订阅配置且触发Yaml变更监听
+- 证据范围：提供正反认证对照和JWT secret先base64解码的重要细节，比登录响应替换文章可靠；核心证据截图未视检
+
+### 本次正文校订
+
+- 按实际内容修正 1 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 小标题Nacos<2.2.0却实验2.2.0，版本边界不一致
+- serverIdentity正确共享值是一种服务认证，风险在默认/可知值，不是任意设置两参数即漏洞
+- 无完整修复版本/CVE映射及官方链接
+- 多数载荷/调用栈仅图片，不能称文字完整复现；JDWP仅隔离实验使用
+- 尾部跨题推荐CVE应排除
+
+### 操作风险与资料使用
+
+- 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/thlRGXwJPevB0wvMN5koFQ)
@@ -258,7 +305,7 @@ this.authConfigs.isAuthEnabled() 不论是在配置文件中还是在注释中�
 
 使用 curl 命令进行复现：
 
-```
+```shell
 curl 'http://10.10.84.207:8848/nacos/v1/auth/users?pageNo=1&pageSize=9&accessToken=' -H 'User-Agent: Nacos-Server'
 
 ```

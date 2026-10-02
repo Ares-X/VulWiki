@@ -1,9 +1,46 @@
 ---
 version: "Go-fastdfs"
 source: "Threekiii/Vulnerability-Wiki"
+title: "Go-fastdfs GetClientIp 未授权访问漏洞"
+product: "Go-fastdfs"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "管理路由可达且代理未可信重写XFF；目标AdminIps与伪造值匹配"
+affected_versions: "Go-fastdfs"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-b9c01d041aefc1d5323d9d99"
+entity_id: "ve-b9c01d041aefc1d5323d9d99"
+schema_version: "1"
 ---
 
 # Go-fastdfs GetClientIp 未授权访问漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：管理路由可达且代理未可信重写XFF；目标AdminIps与伪造值匹配
+- 证据范围：有正常拒绝和伪造头后读取配置的对照结构；修改配置属于推断扩展，本文实际展示action=get读取。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- version字段仅产品名，缺测试版本/源码tag/修复
+- GetClientIp/IsPeer源码全部截图未视检
+- 示例group1是部署组名不是固定路由；默认127.0.0.1需版本证据
+- 无原始漏洞出处或修复建议
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 ## 漏洞描述
 

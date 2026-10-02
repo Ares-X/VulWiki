@@ -1,6 +1,47 @@
 ---
 source: "MrWQ/vulnerability-paper"
+product: "74CMS6.0.20 /<6.0.48claimed"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "骑士 CMS 模版注入 + 文件包含 getshell 复现"
+prerequisites: "来源所述条件，未列明部分仍待核：publichomeinheritedmethod;Thinkengine;errorlogstoresrawPHP;POSTsample;PHP5lab"
+side_effects: "未执行；本文需注意的操作影响：GET 是否可用依实际传输、解码和日志写入，不能由 URL 通常编码推出 GET 一律失败；PHP7 不支持只可限定所测版本/环境。保留后续上传图片/doc 包含补丁边界和原来源。"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/4-36O4OaWxu2jX2pzb5_Wg"
+id: "vw-775d519a1a058c78bfd6a52d"
+entity_id: "ve-775d519a1a058c78bfd6a52d"
+schema_version: "1"
+canonical: "Web安全/CMS内容/骑士 CMS/骑士 CMS 模版注入 + 文件包含 getshell 复现.md"
 ---
+
+## 核对与使用边界
+
+- 明确更正：类/函数归属需区分 Controller、ParseTemplateBehavior、View、Template；同文前后错归和“日志记录”下错贴 fetch 代码不能当实际调用链。缓存读取仍受 checkContentCache/checkCache 等返回值影响，content 非空不等于总能加载缓存。
+- GET 是否可用依实际传输、解码和日志写入，不能由 URL 通常编码推出 GET 一律失败；PHP7 不支持只可限定所测版本/环境。保留后续上传图片/doc 包含补丁边界和原来源。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：publichomeinheritedmethod;Thinkengine;errorlogstoresrawPHP;POSTsample;PHP5lab
+
+- **结论使用边界（1）**：多个函数/类块在同文重复，首轮把ParseTemplateBehavior.run误归Controller、Template.fetch误归View，后半才正确，需整理调用链。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **结论使用边界（2）**：日志记录标题下贴assign_resume_tpl/fetch而非write，章节/代码错置。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **适用与权限边界（3）**：说content非空即加载缓存忽略checkContentCache/checkCache结果，不能等同首次/二次请求条件。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **结论使用边界（4）**：声称GET一律因URL编码不能利用与753给GET链冲突，应核实际传输/解码/日志行为而非武断二选一。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **事实待核（5）**：不支持PHP7应限该版本兼容性；payload/r/n需核，未提753补丁后图片/doc仍可能包含。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **证据待核（6）**：官方公告与两xz来源可回源，保留独立分析而非只按相似代码去重。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # 骑士 CMS 模版注入 + 文件包含 getshell 复现
 

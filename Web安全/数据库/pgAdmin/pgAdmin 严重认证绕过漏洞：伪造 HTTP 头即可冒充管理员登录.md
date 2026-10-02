@@ -1,8 +1,45 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "pgAdmin 严重认证绕过漏洞：伪造 HTTP 头即可冒充管理员登录"
+product: "pgAdmin 4 Webserver 认证"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2026-86863"
+referenced_identifiers: ""
+identifier_role: "primary"
+cve: "CVE-2026-86863"
+prerequisites: "AUTHENTICATION_SOURCES启用webserver；文称6.2至9.17，9.18修复；上游代理清理/信任配置影响可利用性"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-d9209f1d6e59b323cfb2bcd0"
+entity_id: "ve-d9209f1d6e59b323cfb2bcd0"
+schema_version: "1"
 ---
 
-#  pgAdmin 严重认证绕过漏洞：伪造 HTTP 头即可冒充管理员登录  
+# pgAdmin 严重认证绕过漏洞：伪造 HTTP 头即可冒充管理员登录
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：AUTHENTICATION_SOURCES启用webserver；文称6.2至9.17，9.18修复；上游代理清理/信任配置影响可利用性
+- 证据范围：清楚区分environ回退headers、HTTP派生变量及可信代理修复，配置前提较完整；所有细节无原始公告/commit链接
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 主CVE缺frontmatter
+- 文自行将原文4.18校为9.18但无可审计原文链接，应核对官方版本
+- 共享密钥、真实套接字对端等修复字段需原始代码确认
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
  网安百色   2026-09-20 10:34  
   
 ![](https://mmbiz.qpic.cn/mmbiz_png/WibvcdjxgJnvibWSSrKiasR1mRicMhBLgfzTViaMOa5nicnstL4oSTOib73sicf4nB6aoyHOh8PSiajtGMN0zyUzicQgroLcxAAYNOfENKnyFbQ78RTOw/640?wx_fmt=png&from=appmsg "")  

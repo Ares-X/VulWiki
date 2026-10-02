@@ -1,8 +1,61 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "Administrator Protection 安全边界绕过漏洞分析"
+product: "Windows11 Administrator Protection / UAC"
+record_type: "analysis"
+document_type: "安全边界研究译文"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "Windows11 25H2预览阶段功能启用；受限管理员关联shadow账户；竞争抢先device map创建；KB5067036修复"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Windows/Administrator%20Protection%20%E5%AE%89%E5%85%A8%E8%BE%B9%E7%95%8C%E7%BB%95%E8%BF%87%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-01bf7d4a68ffee8ce23f75b4"
+entity_id: "ve-01bf7d4a68ffee8ce23f75b4"
+schema_version: "1"
 ---
 
-#  Administrator Protection 安全边界绕过漏洞分析  
+# Administrator Protection 安全边界绕过漏洞分析
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Windows11 Administrator Protection / UAC
+- 文献类型：安全边界研究译文
+- 版本、权限及部署边界：Windows11 25H2预览阶段功能启用；受限管理员关联shadow账户；竞争抢先device map创建；KB5067036修复
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 九种发现为背景，本文只详解其中一种无CVE绕过，应单独实体关联系列，不编造九条复现
+2. UAC传统绕过与Administrator Protection安全边界区别明确，保留登录会话/令牌条件而非泛称所有低权用户提权
+3. 原PZ链接路径/日期形式疑需核对，问题跟踪器/视频/安全策略等多数链接仅纯文本已丢失
+4. 伪C声明PUNICODE_STRING后取地址与函数用法不一致，应明确近似伪代码；完整PoC链接未实际保留
+5. 功能暂禁用为截至2025-12-01状态，译文2026-02发布不可当现状；缺确切OSbuild/KB前后测试矩阵
+6. 作者所有问题已修复应归作者报告，不等本次验证；保留修复无安全公告的说明
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://projectzero.google/2026/26/windows-administrator-protection.html>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 James Forshaw
                     James Forshaw  securitainment   2026-02-09 13:31  
   
@@ -318,4 +371,4 @@ Microsoft 实施的修复方案是阻止在识别级别模拟影子管理员令�
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

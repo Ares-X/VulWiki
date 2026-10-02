@@ -1,9 +1,43 @@
 ---
-cve: "CVE-2022-22048"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "这个VMware高危漏洞已发现超一年，官方至今仍未修复"
+product: "VMware vCenter IWA"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: "CVE-2022-22048"
+identifier_role: "reference"
+source_url: "https://www.bleepingcomputer.com/news/security/vmware-vcenter-server-bug-disclosed-last-year-still-not-patched/"
+source_status: "recorded"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-1bd649116059323cd015c795"
+entity_id: "ve-1bd649116059323cd015c795"
+schema_version: "1"
 ---
 
-#  这个VMware高危漏洞已发现超一年，官方至今仍未修复   
+# 这个VMware高危漏洞已发现超一年，官方至今仍未修复
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 目录整个新闻标题片段须归VMware
+- 仍未修复只截至2022-10-12，当前状态另查
+- 保留厂商/NVD评分分歧与补丁撤回历史，缺原公告链接
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
  安全内参   2022-10-12 21:14  
   
 **关注我们**  

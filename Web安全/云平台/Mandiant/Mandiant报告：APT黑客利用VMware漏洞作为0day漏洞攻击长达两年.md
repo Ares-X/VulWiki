@@ -1,9 +1,49 @@
 ---
-cve: "CVE-2023-34048"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Mandiant报告：APT黑客利用VMware漏洞作为0day漏洞攻击长达两年"
+product: "VMware vCenter/UNC3886"
+record_type: "incident"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: "CVE-2023-34048"
+identifier_role: "reference"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。"
+id: "vw-cceb0ddb995ebc5253e72060"
+entity_id: "ve-cceb0ddb995ebc5253e72060"
+schema_version: "1"
 ---
 
-#  Mandiant报告：APT黑客利用VMware漏洞作为0day漏洞攻击长达两年   
+# Mandiant报告：APT黑客利用VMware漏洞作为0day漏洞攻击长达两年
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- Mandiant是报告者非漏洞产品
+- 34048/20867/41328为不同链阶段不可同实体
+- 称Mandiant修补实际产品修补主体VMware
+- 不具EDR所以更容易检测阻止语义反转
+- 原文链接折行损坏但另处完整
+- 无修复版本且大量资讯导航污染，保留原始Mandiant链接与日期
+
+### 操作风险与资料使用
+
+- 含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
  军哥网络安全读报   2024-01-20 09:01  
   
 **导****读**  

@@ -1,8 +1,44 @@
 ---
 source: "hatch 补库批 20260928"
+title: "Druid 未授权访问漏洞"
+product: "Alibaba Druid数据库连接池StatViewServlet，非Apache Druid"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "应用启用Druid监控且未限制访问，WebSessionStat确实暴露有效会话标识，应用会话仍可重用"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-836108812de9b9078a4feb84"
+entity_id: "ve-836108812de9b9078a4feb84"
+schema_version: "1"
 ---
 
 # Druid 未授权访问漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：应用启用Druid监控且未限制访问，WebSessionStat确实暴露有效会话标识，应用会话仍可重用
+- 证据范围：websession.html/Jeecg路径明确是Alibaba Druid，产品严重误分类；后续越权是宿主应用独立漏洞
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 移出Apache Druid到Alibaba Druid连接池/应用监控
+- 200不等于有效登录session，可能匿名页/错误模板/重定向
+- 所有步骤称红框/制表符却图片引用全缺，无法重现证据
+- 简介/影响空白，未列Druid版本/StatView认证配置；密码重置等不能算Druid本体漏洞
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 一、漏洞简介
 ------------

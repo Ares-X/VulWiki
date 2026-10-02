@@ -1,9 +1,61 @@
 ---
-fofa: "查询语句"
 source: "MrWQ/vulnerability-paper"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "万户协同办公平台 ezoffice 存在未授权访问漏洞 附 POC"
+product: "万户ezOFFICE evoInterfaceServlet"
+record_type: "unknown"
+document_type: "技术文章（细分类待核）"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "CVE等空字段和影响版本空应明确未知"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/%E4%B8%87%E6%88%B7%E5%8D%8F%E5%90%8C%E5%8A%9E%E5%85%AC%E5%B9%B3%E5%8F%B0%20ezoffice%20%E5%AD%98%E5%9C%A8%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE%E6%BC%8F%E6%B4%9E%20%E9%99%84%20POC.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+fofa_unverified: "查询语句"
+source_url: "https://mp.weixin.qq.com/s/PjnbAiuNtQQx3XxhlpX8AA"
+id: "vw-4347ebd516a2480c0e4e4c81"
+entity_id: "ve-4347ebd516a2480c0e4e4c81"
+schema_version: "1"
 ---
 
 # 万户协同办公平台 ezoffice 存在未授权访问漏洞 附 POC
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：万户ezOFFICE evoInterfaceServlet
+- 文献类型：技术文章（细分类待核）
+- 版本、权限及部署边界：CVE等空字段和影响版本空应明确未知
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. FOFA误抓查询语句
+2. CVE等空字段和影响版本空应明确未知
+3. MD5是摘要非加密
+4. 工具要关注公众号回复不可算公开附件，已有HTTP可保留
+5. 厂商未提供补丁需附时点，缺当前公告
+6. 响应需脱敏文字化
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://mp.weixin.qq.com/s/PjnbAiuNtQQx3XxhlpX8AA>
+
+### 归档技术正文
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/PjnbAiuNtQQx3XxhlpX8AA)

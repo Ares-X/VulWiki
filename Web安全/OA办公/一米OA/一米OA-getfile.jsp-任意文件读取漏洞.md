@@ -1,27 +1,65 @@
 ---
-version: "一米OA"
 source: "Threekiii/Vulnerability-Wiki"
+title: "一米OA getfile.jsp鉴权绕过+路径遍历文件读取"
+product: "一米OA"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "无版本；user非空绕过页内权限检查"
+prerequisites: "前台user参数绕过"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+source_url: "https://github.com/Threekiii/Vulnerability-Wiki"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E4%B8%80%E7%B1%B3OA/%E4%B8%80%E7%B1%B3OA-getfile.jsp-%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E.md"
+id: "vw-4dba003a0ba32e354d47cc54"
+entity_id: "ve-add6dbc108678b8156ba834a"
+schema_version: "1"
+canonical: "Web安全/OA办公/一米OA/一米OA getfile.jsp 任意文件读取漏洞.md"
+relation_type: "duplicate_of"
 ---
 
-# 一米OA getfile.jsp 任意文件读取漏洞
+# 一米OA getfile.jsp鉴权绕过+路径遍历文件读取
 
-## 漏洞描述
+## 条目说明
+
+- 对象与具体问题：一米OA；getfile.jsp鉴权绕过+路径遍历文件读取
+- 版本、配置及部署条件：无版本；user非空绕过页内权限检查
+- 认证与权限前提：前台user参数绕过
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
+### 漏洞描述
 
 一米OA getfile.jsp文件过滤不足，导致任意文件读取漏洞
 
-## 漏洞影响
+### 漏洞影响
 
 ```
 一米OA
 ```
 
-## 网络测绘
+### 网络测绘
 
 ```
 app="一米OA"
 ```
 
-## 漏洞复现
+### 漏洞复现
 
 产品页面
 

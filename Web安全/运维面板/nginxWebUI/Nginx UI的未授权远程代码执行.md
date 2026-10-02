@@ -1,9 +1,47 @@
 ---
 cve: "CVE-2026-42238"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Nginx UI的未授权远程代码执行"
+product: "Nginx UI (0xJacky/nginx-ui)"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2026-42238"
+referenced_identifiers: ""
+identifier_role: "primary"
+prerequisites: "First10minutes after everyprocessstart;reachable restore endpoint;malicious backup configuration;host compromise needs privilegedcontainer/mounts"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-417355816992ba429f7e3263"
+entity_id: "ve-417355816992ba429f7e3263"
+schema_version: "1"
 ---
 
-#  Nginx UI的未授权远程代码执行  
+# Nginx UI的未授权远程代码执行
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：First10minutes after everyprocessstart;reachable restore endpoint;malicious backup configuration;host compromise needs privilegedcontainer/mounts
+- 证据范围：Time-gated restore authorization flaw to configcommand execution;distinct product from nginxWebUI Java
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- P0 wrong product directory: Nginx UI and nginxWebUI are different projects
+- No affected/fixed release or direct advisory/commit
+- Claims hostaccess should remain conditional on container deployment
+- Broken translation, app。ini and9。0 punctuation;normalize identifiers
+- Restart caution alone inadequate mitigation;state accessrestriction whileunpatched
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 sec随谈
                     sec随谈  sec随谈   2026-04-29 01:05  
   

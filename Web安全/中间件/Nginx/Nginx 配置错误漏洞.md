@@ -1,12 +1,52 @@
 ---
 source: "Threekiii/Awesome-POC"
+title: "Nginx 配置错误漏洞"
+product: "NGINX配置"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: "CVE-2016-9964"
+identifier_role: "reference"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-0e2024aa9684552ed97d5d4f"
+entity_id: "ve-0e2024aa9684552ed97d5d4f"
+schema_version: "1"
 ---
 
 # Nginx 配置错误漏洞
 
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 证据范围：426–428拆分主题的综合版，建议合并关联保留最完整来源；Bottle9964只是利用技巧外链，不是NGINX主漏洞。
+
+### 本次正文校订
+
+- 按实际内容修正 1 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 错误3标题缺具体名称
+- 缺每类缓解和完整docker-compose来源/测试版本
+- alias忘/应明确location，CSP不继承不会自己产生XSS
+- %0a%0d为LFCR需标实现行为，不能泛称所有当前版本支持
+- 图片/配置与原始教程来源需统一
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 ## 环境搭建
 
-```
+```shell
 docker-compose up -d
 ```
 

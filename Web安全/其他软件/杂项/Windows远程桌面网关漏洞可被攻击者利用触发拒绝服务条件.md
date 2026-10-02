@@ -1,8 +1,63 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2025-26677;CVE-2025-29831"
+identifier_role: "primary"
+primary_identifiers: "CVE-2025-26677;CVE-2025-29831"
+referenced_identifiers: "CVE-2020-0796"
+identifier_status: "unknown"
+title: "Windows远程桌面网关漏洞可被攻击者利用触发拒绝服务条件"
+product: "Windows RD Gateway"
+record_type: "roundup"
+document_type: "双漏洞安全通告"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "26677未认证资源耗尽；29831UAF高复杂度且管理员停止/重启服务交互；不同版本范围"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/Windows%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E7%BD%91%E5%85%B3%E6%BC%8F%E6%B4%9E%E5%8F%AF%E8%A2%AB%E6%94%BB%E5%87%BB%E8%80%85%E5%88%A9%E7%94%A8%E8%A7%A6%E5%8F%91%E6%8B%92%E7%BB%9D%E6%9C%8D%E5%8A%A1%E6%9D%A1%E4%BB%B6.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+source_url: "https://cybersecuritynews.com/windows-remote-desktop-gateway-vulnerability/"
+id: "vw-ef1ee8fc02c5ba8836b02d2c"
+entity_id: "ve-ef1ee8fc02c5ba8836b02d2c"
+schema_version: "1"
 ---
 
-#  Windows远程桌面网关漏洞可被攻击者利用触发拒绝服务条件   
+# Windows远程桌面网关漏洞可被攻击者利用触发拒绝服务条件
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Windows RD Gateway
+- 文献类型：双漏洞安全通告
+- 版本、权限及部署边界：26677未认证资源耗尽；29831UAF高复杂度且管理员停止/重启服务交互；不同版本范围
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 两CVE需主实体分别建模，不能将DoS无交互条件继承给RCE；元数据均缺
+2. DoS影响2016–2025而RCE含2008R2/2012，表格范围和KB需独立映射；依启用Gateway非通用RDP
+3. CVSS7.5高与微软Important表并列需分尺度；列含时间指标向量但称基础需拆字段
+4. 只有Cybersecuritynews链接无MSRC；匿名熟悉专家引语没有出处，技术分析实际仅弱点摘要，无PoC
+5. 与21225是不同网关DoS，保留独立；0796仅相关阅读
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://cybersecuritynews.com/windows-remote-desktop-gateway-vulnerability/>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzUyMzczNzUyNQ==&mid=2247488913&idx=1&sn=acbf595a4a80dcaba647c7a32fe5e06b&chksm=fa39554bcd4edc5dc90019f33746404ab7593dd9d90109b1076a4a73f2be0cb6fa90e8743b50&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzUyMzczNzUyNQ==&mid=2247483652&idx=1&sn=b2f2ec90db499e23cfa252e9ee743265&chksm=fa3941decd4ec8c83a268c3480c354a621d515262bcbb5f35e1a2dde8c828bdc7b9011cb5072&scene=21#wechat_redirect>
+
+### 归档技术正文
+
 邑安科技  邑安全   2025-05-16 02:23  
   
 更多全球网络安全资讯尽在邑安全  

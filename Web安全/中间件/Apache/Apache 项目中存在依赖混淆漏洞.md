@@ -1,8 +1,44 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Apache 项目中存在依赖混淆漏洞"
+product: "已归档Apache Cordova App Harness构建依赖"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: "CVE-2023-51467; CVE-2023-50164"
+identifier_role: "reference"
+prerequisites: "继续安装/构建归档项目、包解析会从公有源获取冲突包并运行代码"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-e74b12520e837a007da39097"
+entity_id: "ve-e74b12520e837a007da39097"
+schema_version: "1"
 ---
 
-#  Apache 项目中存在依赖混淆漏洞   
+# Apache 项目中存在依赖混淆漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：继续安装/构建归档项目、包解析会从公有源获取冲突包并运行代码
+- 证据范围：下载超100次不等于100台被攻陷或生产执行，研究者占位包应区别真实恶意软件
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 标题Apache项目过宽，应定位Cordova App Harness/供应链
+- 缺包名、package配置及Legit原文/修复证据
+- 不可避免地从公有源取包过度绝对化；推荐编号非主漏洞
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
  代码卫士   2024-04-23 15:16  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

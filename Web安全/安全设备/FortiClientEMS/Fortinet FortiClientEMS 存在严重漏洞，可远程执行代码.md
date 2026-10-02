@@ -1,9 +1,54 @@
 ---
 cve: "CVE-2026-21643"
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-7623fac6c507bfcf1ca59762"
+entity_id: "ve-7623fac6c507bfcf1ca59762"
+schema_version: "1"
+title: "Fortinet FortiClientEMS 存在严重漏洞，可远程执行代码"
+product: "Fortinet FortiClientEMS"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2026-21643"
+referenced_identifiers: ""
+prerequisites: "仅7.4.4，7.4.5修复；7.2/8.0未受影响；匿名HTTP"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%AE%89%E5%85%A8%E8%AE%BE%E5%A4%87/FortiClientEMS/Fortinet%20FortiClientEMS%20%E5%AD%98%E5%9C%A8%E4%B8%A5%E9%87%8D%E6%BC%8F%E6%B4%9E%EF%BC%8C%E5%8F%AF%E8%BF%9C%E7%A8%8B%E6%89%A7%E8%A1%8C%E4%BB%A3%E7%A0%81.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 #  Fortinet FortiClientEMS 存在严重漏洞，可远程执行代码  
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Fortinet FortiClientEMS
+- 本文讨论：CVE-2026-21643
+- 版本、权限与配置前提：仅7.4.4，7.4.5修复；7.2/8.0未受影响；匿名HTTP
+- 资料类型：EMS SQL注入公告新闻；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 表头Affected错译做作的，版本条件应保留为特定7.4.4而非全旧版
+- 无PSIRT直链，SQL到代码的具体机制未展开，适合作公告
+- 未知在野状态应保留，不自动标无利用
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- PSIRT版本/HTTP入口及CVSS来源待核
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 原创 ZM
                     ZM  暗镜   2026-02-10 01:01  
   

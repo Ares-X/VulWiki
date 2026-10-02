@@ -1,6 +1,36 @@
 ---
 source: "hatch 补库批 20260928"
+product: "ECShop 4.0.7"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "Ecshop 4.0.7 从反序列化到类型混淆漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：后台订单页有效会话；PHP5.6.x与GMP类型混淆条件、已加载cls_template；不是search.php直接前台利用"
+side_effects: "未执行；本文需注意的操作影响：GMP如何覆盖smarty对象与触发__wakeup的关键序列化构造未给出；概述未列GMP扩展，最终效果仅1.png文字占位"
+source_status: "unknown"
+id: "vw-7f9843b83176214313838188"
+entity_id: "ve-7f9843b83176214313838188"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：后台订单页有效会话；PHP5.6.x与GMP类型混淆条件、已加载cls_template；不是search.php直接前台利用
+
+- **结论使用边界（1）**：正文明确search.php反序列化早于初始化而无法使用目标类，不能写成无鉴权前台RCE。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **操作与副作用边界（2）**：GMP如何覆盖smarty对象与触发__wakeup的关键序列化构造未给出；概述未列GMP扩展，最终效果仅1.png文字占位。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+- **事实待核（3）**：仅微信来源，缺PHP精确补丁范围/对应类型混淆编号。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Ecshop 从反序列化到类型混淆漏洞
 

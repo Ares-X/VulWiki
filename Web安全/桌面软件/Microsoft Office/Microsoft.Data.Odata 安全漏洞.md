@@ -1,7 +1,64 @@
 ---
-cve: "CVE-2018-8269"
 source: "白阁文库 BaizeSec/bylibrary"
+cve: "CVE-2018-8269"
+identifier_role: "primary"
+primary_identifiers: "CVE-2018-8269"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "Microsoft.Data.Odata 安全漏洞"
+product: "Microsoft.Data.OData库／SharePoint2016"
+record_type: "vulnerability"
+document_type: "SharePoint DoS Metasploit模块转存"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "Web OData过滤解析；本示例明确需要SharePoint用户名密码及FormDigest；IIS恢复策略决定持续DoS"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Microsoft%20Office/Microsoft.Data.Odata%20%E5%AE%89%E5%85%A8%E6%BC%8F%E6%B4%9E.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-f92c8d2da3bc78eb5002ca05"
+entity_id: "ve-f92c8d2da3bc78eb5002ca05"
+schema_version: "1"
 ---
+
+# Microsoft.Data.Odata 安全漏洞
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Microsoft.Data.OData库／SharePoint2016
+- 文献类型：SharePoint DoS Metasploit模块转存
+- 版本、权限及部署边界：Web OData过滤解析；本示例明确需要SharePoint用户名密码及FormDigest；IIS恢复策略决定持续DoS
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 目录Microsoft Office误导，实际为.NET库与SharePoint服务器；摘要远程攻击未写示例鉴权要求
+2. 模块说明5分钟内>10次才停止恢复，实际(0..10)每次sleep60约10分钟，持续拒绝服务断言与代码时序不符
+3. check本身发送恶意DoS不是无害探测；无响应直接Vulnerable/任何响应Safe不可靠，网络/鉴权故障会误判
+4. 无正常响应时else仍res.code可能空指针；Sharepoint Site占位URL、额外gem、SSL以字符串注册等环境依赖未说明
+5. 缺库具体版本、SharePoint补丁KB/修复步骤和原模块固定链接，只有旧漏洞库链接；无实测输出
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://www.securityfocus.com/bid/105322>
+- 原文参考链接（未重新核验）：<https://cxsecurity.com/issue/WLB-2019010093>
+- 原文参考链接（未重新核验）：<http://www.cnnvd.org.cn/web/xxk/ldxqById.tag?CNNVD=CNNVD-201809-479>
+- 原文参考链接（未重新核验）：<https://metasploit.com/download>
+- 原文参考链接（未重新核验）：<https://github.com/rapid7/metasploit-framework>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
 
 ##### **|**漏洞来源                            
 

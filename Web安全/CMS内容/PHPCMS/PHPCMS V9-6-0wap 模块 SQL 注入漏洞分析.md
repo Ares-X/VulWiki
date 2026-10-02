@@ -1,6 +1,41 @@
 ---
 source: "MrWQ/vulnerability-paper"
+product: "PHPCMS9.6.0 WAP/attachments/content-down"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "PHPCMS V9-6-0wap 模块 SQL 注入漏洞分析"
+prerequisites: "来源所述条件，未列明部分仍待核：WAP可签发siteid cookie、共享auth_key、attachments支持userid_flash、down parse_str污染变量；DB显错"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/tNQxq3A_Pzg2xITYbcJ2zw"
+id: "vw-467a9845a3f15d10e877bcb0"
+entity_id: "ve-467a9845a3f15d10e877bcb0"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：WAP可签发siteid cookie、共享auth_key、attachments支持userid_flash、down parse_str污染变量；DB显错
+
+- **结论使用边界（1）**：三阶段免注册链清楚，不能误标仅WAP单参数SQLi；PHP单参parse_str历史语义应标环境。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **凭据与会话边界（2）**：脚本Set-Cookie.split('=')\[1\]未按_siteid名字取且可能带属性，att_json未赋值异常未处理。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+
+- **结论使用边界（3）**：末文把requests.utils.quote与urllib.parse.unquote说都是一样，编码和解码明显相反。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **事实待核（4）**：HTTP客户端对无效百分号二次编码分析有价值，应限定requests/urllib3版本而非通用URL必须全编码。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **代码与转录边界（5）**：一处/index.php/index.php、m=attachments与实际attachment拼写差异；修复无明确版本/官方链接。相应原代码作为存在此问题的历史样本保留，不能直接当作可运行、成功复现的 PoC；缺失内容需回原稿核对，不据此补造可执行攻击链。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # PHPCMS V9-6-0wap 模块 SQL 注入漏洞分析
 

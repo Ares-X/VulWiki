@@ -1,8 +1,49 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "Apache Flink getShell"
+product: "Apache Flink"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "可达写入及遍历读取接口、进程目录权限；JAR 执行还需作业提交步骤"
+source_url: "https://mp.weixin.qq.com/s/58QhVM_Kp-ds-HD4YRESwg"
+source_status: "recorded"
+side_effects: "含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。"
+id: "vw-1ba50b4fb9c1835dcc4cfe5d"
+entity_id: "ve-1ba50b4fb9c1835dcc4cfe5d"
+schema_version: "1"
 ---
 
 # Apache Flink getShell
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：可达写入及遍历读取接口、进程目录权限；JAR 执行还需作业提交步骤
+- 证据范围：先写文件再读取验证的链条有意义，但关键请求均图片，不能根据文字确认具体 CVE 或完成执行过程。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 将上传成功直接跳到 shell，缺执行触发步骤
+- 1.5.1–1.11.2 可能对应写入问题，不代表读取问题相同范围，应分别建实体
+- 仅升级最新版缺明确修复分支
+- 图片未视检，不能确认写入目标及读取接口
+
+### 操作风险与资料使用
+
+- 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/58QhVM_Kp-ds-HD4YRESwg)

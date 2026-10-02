@@ -1,9 +1,49 @@
 ---
-cve: "CVE-2025-40776"
+cve: "CVE-2025-40776; CVE-2025-40777"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "BIND 9 DNS解析软件漏洞，可能引发缓存投毒与拒绝服务攻击"
+product: "ISC BIND 9"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2025-40776; CVE-2025-40777"
+referenced_identifiers: ""
+identifier_role: "primary"
+prerequisites: "40776仅订阅版特定分支启用ECS；40777需特定serve-stale配置与CNAME处理"
+source_status: "unknown"
+side_effects: "含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。"
+id: "vw-0f62b904ac5b07e646f5ad73"
+entity_id: "ve-0f62b904ac5b07e646f5ad73"
+schema_version: "1"
 ---
 
-#  BIND 9 DNS解析软件漏洞，可能引发缓存投毒与拒绝服务攻击  
+# BIND 9 DNS解析软件漏洞，可能引发缓存投毒与拒绝服务攻击
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：40776仅订阅版特定分支启用ECS；40777需特定serve-stale配置与CNAME处理
+- 证据范围：区分两个问题和修复版本，非PoC；配置名称被加空格且serve-stale-enable与后文stale-answer-enable不一致
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 配置键如ecs - zones、stale - answer - client - timeout不可直接复制
+- 需核对serve-stale-enable是否误写并补ISC原始公告
+- 版本-S1被加空格，应统一语义版本
+
+### 操作风险与资料使用
+
+- 含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 看雪学苑  看雪学苑   2025-07-18 09:59  
   
 近期，BIND 9 DNS 解析器软件曝出两枚关键漏洞——CVE-2025-40776 和 CVE-2025-40777，正对全球组织构成威胁，可能引发缓存投毒与拒绝服务攻击，危及 DNS 基础设施安全。  

@@ -1,9 +1,58 @@
 ---
-fofa: "大法：**"
+fofa: "title=\"云视讯管理平台\""
 source: "MrWQ/vulnerability-paper"
+title: "小鱼易连视频系统 - Nginx LUA 脚本远程命令执行"
+product: "小鱼易连视频系统自带OpenResty package.lua（非NGINX通用漏洞）"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "暴露自定义/package入口、缺鉴权与输入约束，权限取决于OpenResty容器用户"
+source_url: "https://mp.weixin.qq.com/s/iCHikHfJZBjNYr-950gKJA"
+source_status: "recorded"
+side_effects: "含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。"
+id: "vw-4e9f8cc6e2fee5d613b2dc07"
+entity_id: "ve-4e9f8cc6e2fee5d613b2dc07"
+schema_version: "1"
 ---
 
 # 小鱼易连视频系统 - Nginx LUA 脚本远程命令执行
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：暴露自定义/package入口、缺鉴权与输入约束，权限取决于OpenResty容器用户
+- 证据范围：给出真实Lua sink有独立分析价值，但两种演示命令存在执行位置/语法问题，应重分类到小鱼易连产品。
+
+### 本次正文校订
+
+- 按实际内容修正 1 处代码围栏语言标记，保留其中方法与请求内容。
+- 从本文明确展示的查询恢复完整 FOFA 元数据；资产指纹只用于识别，不是漏洞命中证据。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- curl双引号内反引号会先由本地shell执行，可能在攻击机执行反弹命令，不能证明请求携带了远端载荷
+- 浏览器例子去掉反引号并保留空格管道，与curl不等价；rawURL编码/命令闭合未说明
+- 将Base64称加密，FIFO命令解释把管道与证书文件/连接地址混淆
+- 代码中可控path拼进tar，不是拼进rm -rf（后者固定日志文件路径），根因表述错
+- root为容器进程身份，不等于宿主/k8s集群root；docker ps不能证明属于k8s
+- 版本/补丁全无，公网大多已修复无证据；fofa元数据抽成大法而正文完整
+- Base64原文字面量已读未解码执行，广告噪声大量
+
+### 操作风险与资料使用
+
+- 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/iCHikHfJZBjNYr-950gKJA)
@@ -106,7 +155,7 @@ find / -name nginx
 
 于是尝试进入 k8s 中的容器寻找响应服务
 
-```
+```shell
 docker ps | grep openresty
 ```
 

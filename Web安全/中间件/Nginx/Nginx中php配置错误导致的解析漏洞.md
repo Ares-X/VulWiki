@@ -1,8 +1,44 @@
 ---
 source: "白阁文库 BaizeSec/bylibrary"
+title: "Nginx中php配置错误导致的解析漏洞"
+product: "NGINX FastCGI及PHP-FPM"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "PHP路径修正启用、FastCGI匹配不存在的.php后缀、security.limit_extensions允许非PHP、攻击者能上传PHP内容文件"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-b2bafe28bcec1fe0669a1449"
+entity_id: "ve-b2bafe28bcec1fe0669a1449"
+schema_version: "1"
 ---
 
 # Nginx中php配置错误导致的解析漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：PHP路径修正启用、FastCGI匹配不存在的.php后缀、security.limit_extensions允许非PHP、攻击者能上传PHP内容文件
+- 证据范围：明确配置原因而非NGINX版本缺陷，较425完整；应合并相关教程并保留两个配置控制点。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- URI不等同物理文件路径，脚本映射取决于fastcgi_param，需给完整server配置
+- 步骤URL与4/6序号及修复标题黏连，所有称下图的图片引用都丢失
+- PHP5路径与测试PHP版本不对应，默认只.php叙述需按FPM版本核对
+- 缺compose来源、上传内容和清理
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 ### 影响范围 ###
 这一漏洞是由于Nginx中php配置不当而造成的，与Nginx版本无关

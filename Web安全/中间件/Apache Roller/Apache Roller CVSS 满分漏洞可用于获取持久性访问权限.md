@@ -1,8 +1,46 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Apache Roller CVSS 满分漏洞可用于获取持久性访问权限"
+product: "Apache Roller"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2025-24859"
+referenced_identifiers: "CVE-2025-30065; CVE-2025-24813"
+identifier_role: "primary"
+cve: "CVE-2025-24859"
+prerequisites: "攻击者已持有有效旧会话，受害者改密码/账号禁用后旧会话未撤销；<=6.1.4"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-9f62519a20138b05c6b05170"
+entity_id: "ve-9f62519a20138b05c6b05170"
+schema_version: "1"
 ---
 
-#  Apache Roller CVSS 满分漏洞可用于获取持久性访问权限   
+# Apache Roller CVSS 满分漏洞可用于获取持久性访问权限
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：攻击者已持有有效旧会话，受害者改密码/账号禁用后旧会话未撤销；<=6.1.4
+- 证据范围：持久访问条件区别于新登录绕过；6.1.5会话管理修复叙述连贯但缺官方直链。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 主24859漏frontmatter，Parquet/Tomcat编号仅新闻背景不可误取
+- CVSS10未给来源/向量，与需旧会话条件需解释
+- 不受限访问不代表自动管理员或OS权限
+- 博客软件可按CMS主分类，保留中间件标签；清除推荐阅读/产品广告
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 Ravie Lakshmanan  代码卫士   2025-04-16 09:37  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

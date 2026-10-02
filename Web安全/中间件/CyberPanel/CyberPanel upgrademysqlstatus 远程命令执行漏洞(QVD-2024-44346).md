@@ -1,10 +1,45 @@
 ---
-cnvd: "QVD-2024-44346"
-
 source: "SourByte05/Vulnerability-Wiki-PoC"
+title: "CyberPanel upgrademysqlstatus 远程命令执行漏洞(QVD-2024-44346)"
+product: "CyberPanel运维面板"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "QVD-2024-44346"
+referenced_identifiers: ""
+identifier_role: "primary"
+prerequisites: "OPTIONS方法进入缺鉴权处理路径、statusfile未经安全处理进入shell，具体源代码条件未提供"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-570ab0db78bedf1c682736bd"
+entity_id: "ve-570ab0db78bedf1c682736bd"
+schema_version: "1"
 ---
 
-# CyberPanel upgrademysqlstatus 远程命令执行漏洞(QVD-2024-44346) 
+# CyberPanel upgrademysqlstatus 远程命令执行漏洞(QVD-2024-44346)
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：OPTIONS方法进入缺鉴权处理路径、statusfile未经安全处理进入shell，具体源代码条件未提供
+- 证据范围：使用OPTIONS的鉴权绕过机制重要但摘要只写接口没鉴权，需补清楚；与354不同端点不可仅同产品强合。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- QVD填入cnvd字段，命名体系错误
+- 影响2.3.5/.6及修复2.3.7缺精确补丁证据
+- 15万独立IP只是暴露资产统计，不能证明皆可利用
+- PoC纯段落非代码块，缺Content-Length及完整响应文本
+- 分类应为运维面板，已知在野利用无来源
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 # 漏洞描述
 

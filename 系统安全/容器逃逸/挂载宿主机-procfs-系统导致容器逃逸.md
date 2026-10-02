@@ -1,8 +1,62 @@
 ---
 source: "Threekiii/Vulnerability-Wiki"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "挂载宿主机-procfs-系统导致容器逃逸"
+product: "Linux procfs core_pattern / Docker配置"
+record_type: "vulnerability"
+document_type: "Docker危险procfs挂载案例"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "容器root、宿主/proc可写挂载、无userns隔离及LSM/sysctl访问允许；具体内核/Docker/CDK版本未列"
+side_effects: "core_pattern管道触发宿主执行是配置/权限暴露案例，不对应新内核CVE；正文只有工具命令，无崩溃触发/宿主路径解析解释；修改core_pattern是全局持久状态，缺原值备份/恢复、临时脚本清理与业务core dump影响，--rm仅删容器不保证恢复"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/%E5%AE%B9%E5%99%A8%E9%80%83%E9%80%B8/%E6%8C%82%E8%BD%BD%E5%AE%BF%E4%B8%BB%E6%9C%BA-procfs-%E7%B3%BB%E7%BB%9F%E5%AF%BC%E8%87%B4%E5%AE%B9%E5%99%A8%E9%80%83%E9%80%B8.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-25d868ccb2d79bea993b7f47"
+entity_id: "ve-25d868ccb2d79bea993b7f47"
+schema_version: "1"
 ---
 
-# 挂载宿主机 procfs 系统导致容器逃逸
+# 挂载宿主机-procfs-系统导致容器逃逸
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Linux procfs core_pattern / Docker配置
+- 文献类型：Docker危险procfs挂载案例
+- 版本、权限及部署边界：容器root、宿主/proc可写挂载、无userns隔离及LSM/sysctl访问允许；具体内核/Docker/CDK版本未列
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 命令挂载/host_proc但说明写/host-proc，路径不一致可直接导致复现失败
+2. 容器root与可写挂载不自动保证可改宿主sysctl，需实际权限/namespace/LSM条件和CDK实现；Docker默认不userns说法要限定运行模式
+3. core_pattern管道触发宿主执行是配置/权限暴露案例，不对应新内核CVE；正文只有工具命令，无崩溃触发/宿主路径解析解释
+4. 修改core_pattern是全局持久状态，缺原值备份/恢复、临时脚本清理与业务core dump影响，--rm仅删容器不保证恢复
+5. 官方core手册/userns与CDK源码入口完整，未固定版本；监听截图未视检，不当已复现验证
+
+### 操作风险
+
+core_pattern管道触发宿主执行是配置/权限暴露案例，不对应新内核CVE；正文只有工具命令，无崩溃触发/宿主路径解析解释；修改core_pattern是全局持久状态，缺原值备份/恢复、临时脚本清理与业务core dump影响，--rm仅删容器不保证恢复
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<http://man7.org/linux/man-pages/man5/core.5.html>
+- 原文参考链接（未重新核验）：<https://docs.docker.com/engine/security/userns-remap/>
+- 原文参考链接（未重新核验）：<https://github.com/cdk-team/CDK>
+- 原文参考链接（未重新核验）：<https://github.com/Threekiii/Vulnerability-Wiki>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
 
 ## 漏洞描述
 

@@ -1,9 +1,60 @@
 ---
-cve: "CVE-2026-45585"
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2026-45585"
+identifier_role: "primary"
+primary_identifiers: "CVE-2026-45585"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "微软发布针对 Windows BitLocker 安全绕过零日漏洞的缓解措施"
+product: "Windows BitLocker / WinRE"
+record_type: "advisory"
+document_type: "BitLocker漏洞与手动缓解新闻"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "物理访问；声称Win11/Server2022/2025、YellowKey链、2026-05-19公开，缺具体版本/安全启动和保护器状态"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Windows/%E5%BE%AE%E8%BD%AF%E5%8F%91%E5%B8%83%E9%92%88%E5%AF%B9%20Windows%20BitLocker%20%E5%AE%89%E5%85%A8%E7%BB%95%E8%BF%87%E9%9B%B6%E6%97%A5%E6%BC%8F%E6%B4%9E%E7%9A%84%E7%BC%93%E8%A7%A3%E6%8E%AA%E6%96%BD.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-1ed60f7a1b35dd57aedb01df"
+entity_id: "ve-1ed60f7a1b35dd57aedb01df"
+schema_version: "1"
 ---
 
-#  微软发布针对 Windows BitLocker 安全绕过零日漏洞的缓解措施  
+# 微软发布针对 Windows BitLocker 安全绕过零日漏洞的缓解措施
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Windows BitLocker / WinRE
+- 文献类型：BitLocker漏洞与手动缓解新闻
+- 版本、权限及部署边界：物理访问；声称Win11/Server2022/2025、YellowKey链、2026-05-19公开，缺具体版本/安全启动和保护器状态
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 所谓六步官方缓解命令明显不完整：reg load HKLM\WinREHive缺hive文件路径，删除BootExecute内容译文不可执行，disable/enable粘连
+2. 注册表路径省略SYSTEM/离线加载根，可能误操作；TPM+PIN添加命令缺PIN取得、旧TPM-only保护器处理与恢复密钥备份，不能作为可安全照抄指南
+3. 将WinRE执行自动等同完全绕过所有BitLocker认证需核具体链/保护器与启动条件，传统EDR绝不能拦截也过绝对
+4. 声称无补丁/利用可能高需标2026-05-20时点；没有微软公告、六步官方指南、研究者GitHub任何URL，溯源不足
+5. 非托管设备通过Intune强制政策概念不清；高风险系统配置建议应先核官方原文，禁止直接照做
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 原创 网络安全9527
                     网络安全9527  安全圈的那点事儿   2026-05-20 11:44  
   
@@ -54,4 +105,4 @@ YellowKey漏洞利用代码的公开获取大大降低了攻击者的门槛，�
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

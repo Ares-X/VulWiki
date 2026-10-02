@@ -1,8 +1,65 @@
 ---
 cve: "CVE-2022-25089"
+identifier_role: "primary"
+primary_identifiers: "CVE-2022-25089"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "历史 PoC：Printix Client 1.3.1106.0命令执行漏洞"
+product: "Kofax Printix Windows Client"
+record_type: "vulnerability"
+document_type: "Printix服务API PoC转载"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "源码测试Win7/8/10/11与<=1.3.1106.0；服务TCP21338可达及其鉴权/证书模式未明确；描述另写1.3.1035.0"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/0day%20EXP/0day%20EXP%20Printix%20Client%201.3.1106.0%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+source_url: "https://mp.weixin.qq.com/s/ax-NTAhO1tb5f1WCr30S-w"
+id: "vw-7b880a034da194a60102abb3"
+entity_id: "ve-7b880a034da194a60102abb3"
+schema_version: "1"
 ---
 
-# 【0day EXP】Printix Client 1.3.1106.0命令执行漏洞
+# 历史 PoC：Printix Client 1.3.1106.0命令执行漏洞
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Kofax Printix Windows Client
+- 文献类型：Printix服务API PoC转载
+- 版本、权限及部署边界：源码测试Win7/8/10/11与<=1.3.1106.0；服务TCP21338可达及其鉴权/证书模式未明确；描述另写1.3.1035.0
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 描述1.3.1035.0与标题/影响1.3.1106.0需解释版本范围，不能任选其一；历史0day标签去时效化
+2. 正文任意登录用户提权与源码RemoteRCE、无client认证注释不同，需明确本地/远程监听范围和实际认证前提
+3. 展示代码提供ping/任意HKLM注册表写/自定义API，不直接给任意可执行提升的完整链，不能凭代码标题当命令执行已证实
+4. CompCommClient、DefaultValues等关键类缺失，Newtonsoft依赖/工程在外部，单代码块不可独立构建；头部#元信息非C#代码需分隔
+5. MultiString组装初始50零字节、未支持选项null遍历等可靠性问题需和原源码核对；没有执行/结果截图或日志
+6. 原作者/厂商/版本下载/项目URL明确可追溯，缺厂商修复公告/修复版本，清理十次情人节和粉丝群装饰
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://mp.weixin.qq.com/s/ax-NTAhO1tb5f1WCr30S-w>
+- 原文参考链接（未重新核验）：<http://ksria.com/simpread/>
+- 原文参考链接（未重新核验）：<https://printix.net>
+- 原文参考链接（未重新核验）：<https://software.printix.net/client/win/1.3.1106.0/PrintixClientWindows.zip>
+- 原文参考链接（未重新核验）：<https://github.com/ComparedArray/printix-CVE-2022-25089>
+- 原文参考链接（未重新核验）：<https://github.com/MrWQ/vulnerability-paper>
+
+### 归档技术正文
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/ax-NTAhO1tb5f1WCr30S-w)

@@ -1,8 +1,65 @@
 ---
 source: "MrWQ/vulnerability-paper"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "金山 V8 终端安全系统 pdf maker-php 命令执行漏洞"
+product: "金山V8终端安全系统管理控制台"
+record_type: "vulnerability"
+document_type: "命令注入源码与PoC转载"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "Windows控制台pdf_maker.php解码url/fileName后拼接shell；Apache分支行为不同，认证需查require文件"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/%E9%87%91%E5%B1%B1%20V8%20%E7%BB%88%E7%AB%AF%E5%AE%89%E5%85%A8%E7%B3%BB%E7%BB%9F%20pdf%20maker-php/%E9%87%91%E5%B1%B1%20V8%20%E7%BB%88%E7%AB%AF%E5%AE%89%E5%85%A8%E7%B3%BB%E7%BB%9F%20pdf%20maker-php%20%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+source_url: "https://mp.weixin.qq.com/s/R5RvWHNVycEez7qxquxUhQ"
+id: "vw-36a629cfa8c6dfb290b61122"
+entity_id: "ve-36a629cfa8c6dfb290b61122"
+schema_version: "1"
 ---
 
 # 金山 V8 终端安全系统 pdf maker-php 命令执行漏洞
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：金山V8终端安全系统管理控制台
+- 文献类型：命令注入源码与PoC转载
+- 版本、权限及部署边界：Windows控制台pdf_maker.php解码url/fileName后拼接shell；Apache分支行为不同，认证需查require文件
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 实际集中管理Web控制台，V8是产品版本非JavaScript引擎；目录/标题pdf maker-php需标准pdf_maker.php
+2. Base64是编码不是加密；核心url/fileName进入shell的具体sink已给应保留
+3. Python data字符串被截断且未闭合，整段语法无效；200且Windows回显检测不足以证漏洞，不能断言不存在
+4. HTTP示例带PHPSESSID但Python无Cookie，是否未授权需要查看公共鉴权文件和对照响应
+5. V8总称无构建号、安全版本/公告，HTTP安装包链接需来源与哈希；源码内会话标识/IP脱敏
+6. 清理大段广告，保留PeiQi原始文库来源与Apache执行分支
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://mp.weixin.qq.com/s/R5RvWHNVycEez7qxquxUhQ>
+- 原文参考链接（未重新核验）：<http://ksria.com/simpread/>
+- 原文参考链接（未重新核验）：<http://duba-011.duba.net/netversion/Package/KAVNETV8Plus.iso>
+- 原文参考链接（未重新核验）：<http://wiki.peiqi.tech>
+- 原文参考链接（未重新核验）：<https://github.com/PeiQi0>
+- 原文参考链接（未重新核验）：<http://xxx.xxx.xxx.xxx>
+
+### 归档技术正文
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/R5RvWHNVycEez7qxquxUhQ)
@@ -128,7 +185,7 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/w
 Referer:
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-TW;q=0.6
-Cookie: PHPSESSID=noei1ghcv9rqgp58jf79991n04
+Cookie: PHPSESSID=noe********************n04
 
 url=IiB8fCBpcGNvbmZpZyB8fA%3D%3D&fileName=xxx
 ```

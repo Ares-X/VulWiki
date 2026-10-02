@@ -1,6 +1,43 @@
 ---
 cve: "CVE-2010-1622"
+product: "Spring 生态"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2010-1622; CVE-2013-4152; CVE-2013-7315; CVE-2014-3527; CVE-2014-0097; CVE-2014-3578; CVE-2016-2173; CVE-2016-4977; CNVD-2016-04742; CVE-2016-6652; CVE-2017-4971; CVE-2017-8045; CVE-2017-8046; CVE-2018-1258; CVE-2018-1259; CVE-2018-1270; CVE-2018-1271; CVE-2018-1273; CVE-2018-1260; CVE-2018-15758; CVE-2019-3799; CVE-2019-3778; CNVD-2019-11630; CVE-2019-11269; CVE-2020-5398; CVE-2020-5405"
+referenced_identifiers: "CVE-2013-6429; CVE-2018-1199"
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "Spring 框架相关漏洞合集   红队技术"
+prerequisites: "来源所述条件，未列明部分仍待核：沿用 481 的所有范围和条件，非新增独立验证"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/-Mk7_lvRHTbuBcUWRvRTcw"
+id: "vw-a75d0e51578d10900e0032e5"
+entity_id: "ve-a75d0e51578d10900e0032e5"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：沿用 481 的所有范围和条件，非新增独立验证
+
+代码与实验材料：769 行全文，代码行号比 481 少但仍有 JSP/XML/Logback 缺失和若干粘连，未执行
+
+来源证据范围：明确 Misaki 作者与博客首页、微信转载链接；部分原文精确外链丢失
+
+- **代码与转录边界（1）**：保留原稿错误并产生新的粘连；依据：JSP j java、XML 无起始根、insertFromJNDI env-entry-；两条 Commons 表达式合成 xxxusername，Config 构建两命令同一行。相应原代码作为存在此问题的历史样本保留，不能直接当作可运行、成功复现的 PoC；缺失内容需回原稿核对，不据此补造可执行攻击链。
+
+- **证据待核（2）**：外链和来源证据退化；依据：Messaging “poc”与 Java Payload Workarounds 不再有原文的具体链接。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **事实待核（3）**：多实体元数据不完整；依据：仍仅标 CVE-2010-1622，CNVD 与其余 CVE 无结构字段。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **适用与权限边界（4）**：沿用危险例子及范围不清；依据：DROP users、Boot 默认暴露和开放重定向证据不足均未补正。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Spring 框架相关漏洞合集   红队技术
 

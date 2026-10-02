@@ -1,6 +1,40 @@
 ---
 source: "Mr-xn/Penetration_Testing_POC"
+product: "Joomla3.0.0–3.4.6 Rusty Joomla"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "Joomla-3.4.6-RCE"
+prerequisites: "来源所述条件，未列明部分仍待核：登录表单可取CSRF/session，序列化存储缩短行为与旧PHP gadget可用；持久利用需configuration.php可写"
+side_effects: "未执行；本文需注意的操作影响：默认持久追加配置后门和反连，与检测标识需区分；缺PHP范围/官方修复引用"
+source_status: "unknown"
+id: "vw-119fc4e7826d3d26c46d3985"
+entity_id: "ve-119fc4e7826d3d26c46d3985"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：登录表单可取CSRF/session，序列化存储缩短行为与旧PHP gadget可用；持久利用需configuration.php可写
+
+- **实验改动边界（1）**：POC1和2几乎同代码仅来源/注释缩进差异，需内部消重保留原作者；与222/225相同工具族可补缺失源码。以下步骤按原实验条件保留；人工改动后的行为只支持该修改环境，不用于证明未修改发行版默认可利用。
+
+- **代码与转录边界（2）**：不要与8562仅因相同gadget强并，本篇登录username/password长度变化入口与UA四字节截断不同。相应原代码作为存在此问题的历史样本保留，不能直接当作可运行、成功复现的 PoC；缺失内容需回原稿核对，不据此补造可执行攻击链。
+
+- **适用与权限边界（3）**：Python check生成target_url却对url发请求，取最后input当token脆弱；URL依赖末尾斜杠；-e短参不会触发lhost/lport required条件。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **事实待核（4）**：Ruby序列化尾部s:6:return后用冒号替分号、版本按字符串比较不可靠；无重定向时check不返回成功判定。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **操作与副作用边界（5）**：默认持久追加配置后门和反连，与检测标识需区分；缺PHP范围/官方修复引用。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 ### **Joomla-3.4.6-RCE**  
 

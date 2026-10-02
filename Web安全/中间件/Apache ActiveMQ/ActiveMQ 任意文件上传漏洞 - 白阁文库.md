@@ -1,8 +1,54 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "ActiveMQ 任意文件上传漏洞 - 白阁文库"
+product: "Apache ActiveMQ Fileserver"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2016-3088"
+referenced_identifiers: ""
+identifier_role: "primary"
+cve: "CVE-2016-3088"
+prerequisites: "旧Fileserver启用，可写目的路径；访问admin/api下JSP另需管理凭据"
+source_url: "https://www.bylibrary.cn/%E6%BC%8F%E6%B4%9E%E5%BA%93/01-CMS%E6%BC%8F%E6%B4%9E/ActiveMQ/ActiveMQ%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E/"
+source_status: "recorded"
+side_effects: "含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。"
+id: "vw-39927c0d676eb000b05c69a6"
+entity_id: "ve-39927c0d676eb000b05c69a6"
+schema_version: "1"
 ---
 
 # ActiveMQ 任意文件上传漏洞 - 白阁文库
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：旧Fileserver启用，可写目的路径；访问admin/api下JSP另需管理凭据
+- 证据范围：作者明确成功请求未截获、再次500，不能以500证明写入；有实验失败记录应保存
+
+### 本次正文校订
+
+- 按实际内容修正 1 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 范围5.x至5.14.0与5.14移除Fileserver自相矛盾
+- 192.168.1771.37非法IP
+- MOVE段重复两遍、关键请求均在图片，正文缺载荷/路径
+- 可关联完整85而不把失败描述伪装成独立成功证明
+
+### 操作风险与资料使用
+
+- 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [www.bylibrary.cn](https://www.bylibrary.cn/%E6%BC%8F%E6%B4%9E%E5%BA%93/01-CMS%E6%BC%8F%E6%B4%9E/ActiveMQ/ActiveMQ%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E/)
@@ -29,7 +75,7 @@ source: "MrWQ/vulnerability-paper"
 
 ![](https://www.bylibrary.cn/%E6%BC%8F%E6%B4%9E%E5%BA%93/01-CMS%E6%BC%8F%E6%B4%9E/ActiveMQ/ActiveMQ%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E/3.png)
 
-```
+```shell
 docker-compose up -d
 ```
 

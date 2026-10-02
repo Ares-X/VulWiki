@@ -1,6 +1,43 @@
 ---
 source: "MrWQ/vulnerability-paper"
+product: "Spring生态/配置暴露与依赖链"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: "CVE-2021-21234"
+identifier_role: "reference"
+identifier_status: "unknown"
+title: "Java 之 SpringBoot 漏洞利用姿势合集总结详细版"
+prerequisites: "来源所述条件，未列明部分仍待核：多处仅Boot1.x/2.x，遗漏Cloud、Logback、H2、Connector/J精确范围与特性变更；JDKLDAP/RMI边界混用"
+side_effects: "未执行；本文需注意的操作影响：把组件配置链写成Boot默认漏洞；21234升级0.2.13并非Boot版本；读env不等于可POST或可restart，Cloud端点和默认暴露权限未区分；操作副作用与错误定位；改datasource/日志、重启、Realm stop/start会影响业务；MySQL恢复提示有价值但其他链缺恢复；H2标题误写Groovy"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/ArQRB02DvMIVe-dn6ZiTYw?poc_token=HMfKoGajeTBPcbxnfn_CVIEL0oOMH9RKKd_fwHda"
+id: "vw-1a663dbd7e9b96cbc3d69788"
+entity_id: "ve-1a663dbd7e9b96cbc3d69788"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：多处仅Boot1.x/2.x，遗漏Cloud、Logback、H2、Connector/J精确范围与特性变更；JDKLDAP/RMI边界混用
+
+代码与实验材料：全部教程和Java/Python代码已读；JMX JSON截断、insertFromJNDI属性丢失、Java空格/缩进坏，最后H2标题误复制Groovy
+
+来源证据范围：先知14866、LandGrey代码署名、原工具链接；未锁依赖commit
+
+- **操作与副作用边界（1）**：把组件配置链写成Boot默认漏洞；依据：21234升级0.2.13并非Boot版本；读env不等于可POST或可restart，Cloud端点和默认暴露权限未区分。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+- **代码与转录边界（2）**：核心载荷多处损坏；依据：getProperty JSON只剩mbean片段；insertFromJNDI env-entry-；newString/publicclass/newProcessBuilder、Pythonfor缺缩进；Boot2 env表单与JSON混用。相应原代码作为存在此问题的历史样本保留，不能直接当作可运行、成功复现的 PoC；缺失内容需回原稿核对，不据此补造可执行攻击链。
+
+- **适用与权限边界（3）**：版本边界及链条件矛盾；依据：SnakeYAML称&lt;1.3却又给Boot2；JDKLDAP先6u201/7u191/8u182又另处6u211/7u201/8u191，Realm用RMI应独立。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **操作与副作用边界（4）**：操作副作用与错误定位；依据：改datasource/日志、重启、Realm stop/start会影响业务；MySQL恢复提示有价值但其他链缺恢复；H2标题误写Groovy。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Java 之 SpringBoot 漏洞利用姿势合集总结详细版
 

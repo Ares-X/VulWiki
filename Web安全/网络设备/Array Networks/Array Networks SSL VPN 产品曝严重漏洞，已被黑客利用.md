@@ -1,8 +1,52 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-c54b983b3180fd5b48bb871c"
+entity_id: "ve-c54b983b3180fd5b48bb871c"
+schema_version: "1"
+title: "Array Networks SSL VPN 产品曝严重漏洞，已被黑客利用"
+product: "Array Networks AG/vxAG ArrayOS SSL VPN"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2023-28461"
+referenced_identifiers: ""
+prerequisites: "正文称9.4.0.481及以前、无认证；9.4.0.484修复"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/Array%20Networks/Array%20Networks%20SSL%20VPN%20%E4%BA%A7%E5%93%81%E6%9B%9D%E4%B8%A5%E9%87%8D%E6%BC%8F%E6%B4%9E%EF%BC%8C%E5%B7%B2%E8%A2%AB%E9%BB%91%E5%AE%A2%E5%88%A9%E7%94%A8.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 #  Array Networks SSL VPN 产品曝严重漏洞，已被黑客利用   
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Array Networks AG/vxAG ArrayOS SSL VPN
+- 本文讨论：CVE-2023-28461
+- 版本、权限与配置前提：正文称9.4.0.481及以前、无认证；9.4.0.484修复
+- 资料类型：新闻通告；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- CISA在野利用、修复版本及12月16日期限未附官方链接，日期依赖2024年新闻上下文
+- 来源页尾称原文见文首但文首没有原文URL
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 官方版本边界、KEV时间及远程代码执行前提待核验
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 原创 技术修道场  技术修道场   2024-12-09 00:39  
   
 美国网络安全和基础设施安全局 (CISA) 警告称，黑客正在积极利用 Array Networks AG 和 vxAG ArrayOS SSL VPN 产品中的一个远程代码执行漏洞。  

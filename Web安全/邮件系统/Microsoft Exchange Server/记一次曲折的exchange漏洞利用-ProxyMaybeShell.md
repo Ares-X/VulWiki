@@ -1,9 +1,54 @@
 ---
-cve: "CVE-2021-34473"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "记一次曲折的exchange漏洞利用-ProxyMaybeShell"
+product: "Microsoft Exchange Server hybrid scenario"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: "CVE-2021-34473; CVE-2022-41040; CVE-2018-8581; CVE-2020-0688; CVE-2021-42321; CVE-2022-23277"
+identifier_role: "reference"
+prerequisites: "xBitsPlatform ProxyMaybeShell challenge, Exchange15.02.0721.002, restricted endpoint exposure/outbound access and Defender behavior"
+source_status: "unknown"
+side_effects: "含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。"
+id: "vw-8988a4c23bf3104ba54d8ae9"
+entity_id: "ve-8988a4c23bf3104ba54d8ae9"
+schema_version: "1"
 ---
 
-#  记一次曲折的exchange漏洞利用-ProxyMaybeShell   
+# 记一次曲折的exchange漏洞利用-ProxyMaybeShell
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：xBitsPlatform ProxyMaybeShell challenge, Exchange15.02.0721.002, restricted endpoint exposure/outbound access and Defender behavior
+- 证据范围：Distinct multi-stage failure analysis and alternate chaining; should retain as scenario analysis not single-CVE canonical entry
+
+### 本次正文校订
+
+- 按实际内容修正 1 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- Needs explicit mapping of actual chain CVEs vs background/excluded ones, with per-stage authentication
+- Builtin email Python list missing comma between DiscoverySearchMailbox and FederatedEmail causing concatenation
+- Unsupported 'older build not affected' exclusions require build-specific evidence
+- Defender-disabling commands contain inconsistent spellings and are intrusive; describe as historical lab artifacts, not remediation
+- Repeated title and noisy line wrapping; preserve distinctive troubleshooting rather than merging into simple ProxyShell PoC
+
+### 操作风险与资料使用
+
+- 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
  Z2O安全攻防   2023-11-30 21:03  
   
 # 记一次曲折的exchange漏洞利用-ProxyMaybeShell  
@@ -163,7 +208,7 @@ powershell接口的判断用户身份是依赖于X-Rps-CAT参数，主要通过�
 # ReSSRF  
   
 填入https://github.com/7BitsTeam/ProxyMaybeShell/blob/main/proxynotshellcmd.py这个脚本后进行rce，这里遇到一个命令执行没回显的经典问题。目标是肯定不出网的，包括dns。只能写入文件，但该环境无法访问常规的exchange放webshell的目录，如owa/ecp/aspnet_client等。而autodiscover等目录虽然可以访问，但需要凭据。联系前面的内容我们很容易想到通过ssrf绕过autodiscover的认证，简单写一个探测脚本：  
-```
+```python
 import requests
  
 base_url="https://10.0.102.210"

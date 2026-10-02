@@ -1,9 +1,61 @@
 ---
-cve: "CVE-2024-0582"
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2024-0582"
+identifier_role: "primary"
+primary_identifiers: "CVE-2024-0582"
+referenced_identifiers: "CVE-2022-29582;CVE-2023-2598"
+identifier_status: "unknown"
+title: "补丁间隙：利用 Ubuntu 中的 io_uring 漏洞"
+product: "Linux io_uring PBUF ring"
+record_type: "vulnerability"
+document_type: "深度利用译文"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "本地可用io_uring，不需USER_NS；Ubuntu22.04/23.10内核6.5.0-15/-17；6.6.5上游和6.5.0-21 Ubuntu修复"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/%E8%A1%A5%E4%B8%81%E9%97%B4%E9%9A%99%EF%BC%9A%E5%88%A9%E7%94%A8%20Ubuntu%20%E4%B8%AD%E7%9A%84%20io_uring%20%E6%BC%8F%E6%B4%9E.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-6a310db9fc6bfcd4311f1068"
+entity_id: "ve-6a310db9fc6bfcd4311f1068"
+schema_version: "1"
 ---
 
-#  注意补丁间隙：利用 Ubuntu 中的 io_uring 漏洞   
+# 补丁间隙：利用 Ubuntu 中的 io_uring 漏洞
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Linux io_uring PBUF ring
+- 文献类型：深度利用译文
+- 版本、权限及部署边界：本地可用io_uring，不需USER_NS；Ubuntu22.04/23.10内核6.5.0-15/-17；6.6.5上游和6.5.0-21 Ubuntu修复
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 全部函数原型/源码/偏移代码块为空，正文多次[N]引用失去对应；利用布局主要截图，需回源恢复
+2. 补丁间隙时间线与纯数据利用区别有价值，Exodus原文URL应作主来源，其他引用题名已丢URL
+3. 受影响6.4–<6.7笼统范围包含已修6.6.5，应分支+backport明确；0day向量实为已公开N-day对发行版补丁差距，应保留时间限定
+4. provided buffers与PBUF_RING引入版本/术语混写，页分配FIFO及之后所有file都进受控页属过度保证，需对照原研究
+5. 平板/板缓存等机翻、符号断行严重；高可靠/失败不影响稳定仅作者样本结论
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://blog.exodusintel.com/2024/03/27/mind-the-patch-gap-exploiting-an-io_uring-vulnerability-in-ubuntu/>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
  Ots安全   2024-04-26 10:47  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/bL2iaicTYdZn7gtxSFZlfuCW6AdQib8Q1onbR0U2h9icP1eRO6wH0AcyJmqZ7USD0uOYncCYIH7ZEE8IicAOPxyb9IA/640?wx_fmt=gif "")  
@@ -62,9 +114,7 @@ io_uring_setup() 系统调用
   
 该io_uring_setup()系统调用为实例设置一个上下文io_uring，即一个提交队列和一个完成队列，每个队列都有指定数量的条目。其原型如下：  
   
-```
-
-```  
+> 原文此处代码块为空，内容未归档；无法从空块证明或复现所述结果。
   
   
 其论点是：  
@@ -78,9 +128,7 @@ io_uring_register() 系统调用
   
 系统io_uring_register()调用允许注册资源，例如用户缓冲区、文件等，以供实例使用io_uring。注册此类资源使内核映射它们，避免将来与用户空间进行复制，从而提高性能。其原型如下：  
   
-```
-
-```  
+> 原文此处代码块为空，内容未归档；无法从空块证明或复现所述结果。
   
   
 其论点是：  
@@ -108,23 +156,17 @@ io_uring_register() 系统调用
   
 除了应用程序分配的缓冲区之外，从内核版本 6.4 开始，io_uring还允许用户将所提供的缓冲区环的分配委托给内核。这是使用IOU_PBUF_RING_MMAP作为参数传递给 的标志来完成的io_uring_register()。在这种情况下，应用程序不需要预先分配这些缓冲区，因此不必将缓冲区的起始地址传递给系统调用。然后，在io_uring_register()返回后，应用程序可以将mmap()缓冲区放入用户空间，并将偏移量设置为：  
   
-```
-
-```  
+> 原文此处代码块为空，内容未归档；无法从空块证明或复现所述结果。
   
   
 其中bgid是对应的组 ID。这些偏移量以及用于数据的其他偏移量mmap()在io_uring中定义include/uapi/linux/io_uring.h：  
   
-```
-
-```  
+> 原文此处代码块为空，内容未归档；无法从空块证明或复现所述结果。
   
   
 处理此类调用的函数mmap()是io_uring_mmap()：  
   
-```
-
-```  
+> 原文此处代码块为空，内容未归档；无法从空块证明或复现所述结果。
   
   
 请注意，remap_pfn_range()最终会创建带有标志集的映射VM_PFNMAP，这意味着 MM 子系统会将基页视为原始页帧号映射，而无需关联的page结构。特别是，核心内核不会保留这些页面的引用计数，并且跟踪它是调用代码（在本例中为子系统io_uring）的责任。  
@@ -133,9 +175,7 @@ io_uring_register() 系统调用
   
 系统io_uring_enter()调用用于使用先前通过io_uring_setup()系统调用设置的SQ和CQ来发起和完成I/O。其原型如下：  
   
-```
-
-```  
+> 原文此处代码块为空，内容未归档；无法从空块证明或复现所述结果。
   
   
 其论点是：  
@@ -157,18 +197,14 @@ sig：指向信号掩码的指针。如果不是NULL，系统调用将用 指向
   
 IORING_REGISTER_PBUF_RING系统调用的操作码的处理程序io_uring_register()是io_register_pbuf_ring()函数，如下面的清单所示。  
   
-```
-
-```  
+> 原文此处代码块为空，内容未归档；无法从空块证明或复现所述结果。
   
   
 该函数首先将提供的参数复制到io_uring_buf_reg结构中reg[1]。然后，它检查所需的条目数是否为 2 的幂且严格小于 65536 [2]。请注意，这意味着允许的最大条目数为 32768。  
   
 接下来，它检查所提供的具有指定组 ID 的缓冲区列表是否reg.bgid存在，如果不存在，则io_buffer_list分配一个结构并将其地址存储在变量bl[3] 中。最后，如果提供的参数设置了标志IOU_PBUF_RING_MMAP，则io_alloc_pbuf_ring()调用该函数[4]，传入结构的地址reg，其中包含传递给系统调用的参数，以及指向分配的缓冲区列表结构的指针bl。  
   
-```
-
-```  
+> 原文此处代码块为空，内容未归档；无法从空块证明或复现所述结果。
   
   
 该io_alloc_pbuf_ring()函数采用 中指定的环条目数，并通过将其乘以结构 [5] 的大小（16 字节）来reg->ring_entries计算结果大小。然后，它通过调用[6] 从页面分配器请求适合此大小的页面数。请注意，对于允许的环条目的最大数量 32768，为 524288，因此可以检索的 4096 字节页面的最大数量为 128。然后第一页的地址存储在结构中，更准确地说存储在[7 ]。另外，和均设置为 1。ring_sizeio_uring_buf_ring__get_free_pages()ring_sizeio_buffer_listbl->buf_ringbl->is_mappedbl->is_mmap  
@@ -177,16 +213,12 @@ IORING_REGISTER_PBUF_RING系统调用的操作码的处理程序io_uring_registe
   
 IORING_UNREGISTER_PBUF_RING系统调用的操作码的处理程序io_uring_register()是io_unregister_pbuf_ring()函数，如下面的清单所示。  
   
-```
-
-```  
+> 原文此处代码块为空，内容未归档；无法从空块证明或复现所述结果。
   
   
 同样，该函数首先将提供的参数复制到结构中io_uring_buf_reg[ reg8]。然后，它检索与指定的组 ID 相对应的提供的缓冲区列表，reg.bgid并将其地址存储在变量bl[9] 中。最后，它传递bl给函数__io_remove_buffers()[10]。  
   
-```
-
-```  
+> 原文此处代码块为空，内容未归档；无法从空块证明或复现所述结果。
   
   
 如果缓冲区列表结构设置了is_mapped和is_mmap标志，即缓冲区环使用标志IOU_PBUF_RING_MMAP[7] 注册时的情况，则函数到达 [11]。然后，得到page缓冲环虚拟地址对应的头页的结构。bl->buf_ring最后，在[12]处释放形成带头的复合页的所有页page，从而将它们返回到页分配器。  
@@ -205,9 +237,7 @@ IORING_UNREGISTER_PBUF_RING系统调用的操作码的处理程序io_uring_regis
   
 此类缓存板之一是filp，它包含file结构。file下一个清单中显示的结构代表一个打开的文件。  
   
-```
-
-```  
+> 原文此处代码块为空，内容未归档；无法从空块证明或复现所述结果。
   
   
 与此漏洞利用最相关的字段如下：  
@@ -329,4 +359,4 @@ https://blog.exodusintel.com/2024/03/27/mind-the-patch-gap-exploiting-an-io_urin
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

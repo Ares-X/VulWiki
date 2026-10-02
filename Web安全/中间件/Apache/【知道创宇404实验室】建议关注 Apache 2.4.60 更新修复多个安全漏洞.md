@@ -1,8 +1,45 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "【知道创宇404实验室】建议关注 Apache 2.4.60 更新修复多个安全漏洞"
+product: "Apache HTTP Server mod_rewrite/mod_proxy/Windows"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2024-38472; CVE-2024-38474; CVE-2024-38475; CVE-2024-38477"
+referenced_identifiers: ""
+identifier_role: "primary"
+cve: "CVE-2024-38472; CVE-2024-38474; CVE-2024-38475; CVE-2024-38477"
+prerequisites: "各实体分别Windows NTLM、重写规则及脚本映射、代理路径，配置差异不可省"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-dd1c2753ad9b0585186fd4b7"
+entity_id: "ve-dd1c2753ad9b0585186fd4b7"
+schema_version: "1"
 ---
 
-#  【知道创宇404实验室】建议关注 Apache 2.4.60 更新修复多个安全漏洞   
+# 【知道创宇404实验室】建议关注 Apache 2.4.60 更新修复多个安全漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：各实体分别Windows NTLM、重写规则及脚本映射、代理路径，配置差异不可省
+- 证据范围：明确总7项中仅列4个important，新闻不等于完整7项清单；链接BlackHat原研究有价值
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- NTML应NTLM，空指针取消引用应解引用
+- 所有主CVE缺元数据，需拆实体关联
+- 2.4.60是当时修复版本，后来40725等回归不在此文范围，不能建议为现时终点
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
  知道创宇404实验室   2024-07-02 17:41  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/3k9IT3oQhT0w1E5Vv5bUiciao6o2cu11sMdG8VhZckT7VYyIuheUxda7pAfjc9RTXFibtXgv0oVbb5A299nIB93UA/640?wx_fmt=png&from=appmsg "")  

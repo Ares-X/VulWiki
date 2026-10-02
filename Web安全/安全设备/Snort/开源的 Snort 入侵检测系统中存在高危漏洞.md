@@ -1,8 +1,53 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-9a5045858c1d8e7eb334e9b4"
+entity_id: "ve-9a5045858c1d8e7eb334e9b4"
+schema_version: "1"
+title: "开源的 Snort 入侵检测系统中存在高危漏洞"
+product: "Snort Modbus预处理器"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2022-20685"
+referenced_identifiers: ""
+prerequisites: "Modbus解析启用且可处理攻击流量；2.x<2.9.19，3.x边界句不清"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%AE%89%E5%85%A8%E8%AE%BE%E5%A4%87/Snort/%E5%BC%80%E6%BA%90%E7%9A%84%20Snort%20%E5%85%A5%E4%BE%B5%E6%A3%80%E6%B5%8B%E7%B3%BB%E7%BB%9F%E4%B8%AD%E5%AD%98%E5%9C%A8%E9%AB%98%E5%8D%B1%E6%BC%8F%E6%B4%9E.md"
+review_date: "2026-10-02"
+side_effects: "畸形输入可能使进程/内核崩溃、设备重启或服务不可用；本文崩溃线索不自动证明稳定代码执行，需隔离环境和可恢复配置"
+source_status: "unknown"
 ---
 
 #  开源的 Snort 入侵检测系统中存在高危漏洞   
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Snort Modbus预处理器
+- 本文讨论：CVE-2022-20685整数溢出/无限循环DoS
+- 版本、权限与配置前提：Modbus解析启用且可处理攻击流量；2.x&lt;2.9.19，3.x边界句不清
+- 资料类型：Snort漏洞新闻；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 早于2.9.19以及3.1.11.0表述未说明3.x受影响还是修复界限
+- 挂起后恶意包畅通取决IDS/IPS及fail-open配置，不能必然推出
+- 无Cisco/Claroty直链，广告多
+
+### 操作风险与恢复
+
+- 畸形输入可能使进程/内核崩溃、设备重启或服务不可用；本文崩溃线索不自动证明稳定代码执行，需隔离环境和可恢复配置
+
+### 待核与来源
+
+- 官方版本矩阵、启用前提与流量阻断行为待核
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 Ravie Lakshmanan  代码卫士   2022-04-21 18:46  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

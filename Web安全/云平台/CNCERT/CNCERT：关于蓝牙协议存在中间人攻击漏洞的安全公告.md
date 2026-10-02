@@ -1,9 +1,50 @@
 ---
 cve: "CVE-2023-24023"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "CNCERT：关于蓝牙协议存在中间人攻击漏洞的安全公告"
+product: "Bluetooth BR/EDR"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2023-24023"
+referenced_identifiers: ""
+identifier_role: "primary"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-33cba06c67dfe17d618dbdcf"
+entity_id: "ve-33cba06c67dfe17d618dbdcf"
+schema_version: "1"
 ---
 
-#  CNCERT：关于蓝牙协议存在中间人攻击漏洞的安全公告   
+# CNCERT：关于蓝牙协议存在中间人攻击漏洞的安全公告
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 本次正文校订
+
+- 按该篇完整正文及逐篇审阅区分主问题与背景编号，补全结构化主标识；不把标识归属校订等同运行复现。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- CNCERT是公告者非产品
+- CNVD98846和CNTA0020未提取
+- 4.2至5.4是规范范围非所有硬件必受影响
+- 无线邻近/配对条件需字段化
+- 普通用户通常不能直接设置密钥字节长度需区分厂商与终端缓解
+- 仅SIG链接应补原CNVD/研究
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
  安全内参   2023-12-20 16:52  
   
 安全公告编号:CNTA-2023-0020  

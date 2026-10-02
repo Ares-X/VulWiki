@@ -1,7 +1,43 @@
 ---
-fofa: "查询语句"
+fofa: ""
 source: "MrWQ/vulnerability-paper"
+product: "RuoYi/common.download.resource"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+fofa_unverified: "查询语句"
+title: "若依(RuoYi)管理系统 后台任意文件读取"
+prerequisites: "来源所述条件，未列明部分仍待核：<4.5.1、需后台Cookie明确；修复过滤只有截图"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/zrVTiHCCymlnrERrSJOUog"
+id: "vw-155040a31f6dbef738d5062a"
+entity_id: "ve-155040a31f6dbef738d5062a"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 测绘字段处置：原 fofa 字段为残缺表达式、错误平台语法或当前解析器不支持的形式，原值完整保留到 fofa_unverified，不把它当作已校验查询或受影响资产证据。正文检索方法保留；具体问题见下列原审阅项。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：&lt;4.5.1、需后台Cookie明确；修复过滤只有截图
+
+代码与实验材料：完整URL与Python逻辑但所有行被反引号粘连不能运行；root+200判据过宽
+
+来源证据范围：PeiQi/WgpSec原研究署名，缺具体修复commit
+
+- **结论使用边界（1）**：脚本格式不可执行；依据：import/def/if所有语句在单行且逐段夹反引号。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **适用与权限边界（2）**：验证与元数据不足；依据：fofa只查询语句，root子串可误报；禁TLS验证且把任意文件读取限制在进程权限未说明。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # 若依(RuoYi)管理系统 后台任意文件读取
 

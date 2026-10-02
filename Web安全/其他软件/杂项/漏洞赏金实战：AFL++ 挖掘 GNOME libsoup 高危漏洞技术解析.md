@@ -1,8 +1,61 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "漏洞赏金实战：AFL++ 挖掘 GNOME libsoup 高危漏洞技术解析"
+product: "GNOME libsoup CVE-2024-52531 AFL++研究"
+record_type: "unknown"
+document_type: "技术文章（细分类待核）"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "缺受影响发布范围/首修版本和官方公告，原文翻译标题没有精确博客链接"
+side_effects: "崩溃input/ASan结果只图需补文本"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/%E6%BC%8F%E6%B4%9E%E8%B5%8F%E9%87%91%E5%AE%9E%E6%88%98%EF%BC%9AAFL%2B%2B%20%E6%8C%96%E6%8E%98%20GNOME%20libsoup%20%E9%AB%98%E5%8D%B1%E6%BC%8F%E6%B4%9E%E6%8A%80%E6%9C%AF%E8%A7%A3%E6%9E%90.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-207422eefbc4f284c0803778"
+entity_id: "ve-207422eefbc4f284c0803778"
+schema_version: "1"
 ---
 
-#  漏洞赏金实战：AFL++ 挖掘 GNOME libsoup 高危漏洞技术解析   
+# 漏洞赏金实战：AFL++ 挖掘 GNOME libsoup 高危漏洞技术解析
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：GNOME libsoup CVE-2024-52531 AFL++研究
+- 文献类型：技术文章（细分类待核）
+- 版本、权限及部署边界：缺受影响发布范围/首修版本和官方公告，原文翻译标题没有精确博客链接
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 给固定commit和原研究PoC仓库，主CVE未入元数据
+2. Docker指令所有空格丢失且未checkout该commit，harness有intLLVM/constchar/return0/多余l size_t等不可编译
+3. GCC版缺argc校验及message_headers_unref，持续测试有自身泄漏，params生命周期须核API
+4. 增加get_content_type并传&params后触发特定分支，证明库能由特制应用网络数据触发，不等于原默认simple-httpd已可远程利用
+5. 诚实说明未做完整利用链/根因，不能升级成已证RCE
+6. 缺受影响发布范围/首修版本和官方公告，原文翻译标题没有精确博客链接
+7. 崩溃input/ASan结果只图需补文本
+
+### 操作风险
+
+崩溃input/ASan结果只图需补文本
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 sigabrt9  securitainment   2025-02-08 05:37  
   
 > 【翻译】Using AFL++ on bug bounty programs an example with Gnome libsoup - Almond Offensive Security Blog  
@@ -271,4 +324,4 @@ simple-httpd.c
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

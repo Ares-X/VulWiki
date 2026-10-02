@@ -1,9 +1,54 @@
 ---
 cve: "CVE-2025-67038"
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-8c5ad4e0df5d21a9669cbc65"
+entity_id: "ve-8c5ad4e0df5d21a9669cbc65"
+schema_version: "1"
+title: "Lantronix工业设备高危漏洞遭在野利用，暴露OT设备补丁窗口期风险"
+product: "Lantronix EDS5000串口设备服务器"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2025-67038"
+referenced_identifiers: ""
+prerequisites: "声称未认证root命令注入；无固件/接口"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/Lantronix/Lantronix%E5%B7%A5%E4%B8%9A%E8%AE%BE%E5%A4%87%E9%AB%98%E5%8D%B1%E6%BC%8F%E6%B4%9E%E9%81%AD%E5%9C%A8%E9%87%8E%E5%88%A9%E7%94%A8%EF%BC%8C%E6%9A%B4%E9%9C%B2OT%E8%AE%BE%E5%A4%87%E8%A1%A5%E4%B8%81%E7%AA%97%E5%8F%A3%E6%9C%9F%E9%A3%8E%E9%99%A9.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 #  Lantronix工业设备高危漏洞遭在野利用，暴露OT设备补丁窗口期风险  
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Lantronix EDS5000串口设备服务器
+- 本文讨论：CVE-2025-67038
+- 版本、权限与配置前提：声称未认证root命令注入；无固件/接口
+- 资料类型：工业事件新闻；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- KEV/BRIDGE/Chaya006/蜜罐等大量精确信息无原始链接
+- 近两万涉及两厂商多设备不是单CVE确认数量
+- 补丁逆向归因为研究者推测，不能当已证明攻击来源；修复无版本
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 在野时间线、固件/入口及归因待核验
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 原创 铸盾安全
                         铸盾安全  河南等级保护测评   2026-06-27 22:24  
   

@@ -1,8 +1,60 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "【提权漏洞】MiniPlasma-SYSTEM"
+product: "Windows cldflt MiniPlasma"
+record_type: "unknown"
+document_type: "技术文章（细分类待核）"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "具体前提/命令/结果只有截图"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/%E3%80%90%E6%8F%90%E6%9D%83%E6%BC%8F%E6%B4%9E%E3%80%91MiniPlasma-SYSTEM.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-740690eb99d96006853de74c"
+entity_id: "ve-740690eb99d96006853de74c"
+schema_version: "1"
 ---
 
-#  【提权漏洞】MiniPlasma-SYSTEM  
+# 【提权漏洞】MiniPlasma-SYSTEM
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Windows cldflt MiniPlasma
+- 文献类型：技术文章（细分类待核）
+- 版本、权限及部署边界：具体前提/命令/结果只有截图
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 17103缺元数据
+2. 所有受支持Windows最新补丁仍有效/稳定SYSTEM无build清单或官方证据，不能据单工具推广确认补丁回滚
+3. 具体前提/命令/结果只有截图
+4. 缺JamesForshaw/MSRC原始来源及修复/缓解
+5. 工具仓库真实性安全未核，不执行
+6. 大段免杀课程广告清除
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 原创 Hello888
                     Hello888  安全天书   2026-05-19 15:06  
   
@@ -48,4 +100,4 @@ https://github.com/Nightmare-Eclipse/MiniPlasma
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

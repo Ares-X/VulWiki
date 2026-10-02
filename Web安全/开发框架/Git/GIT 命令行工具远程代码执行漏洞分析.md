@@ -1,6 +1,39 @@
 ---
 cve: "CVE-2020-26233"
+product: "Git Credential Manager Core/GitHub CLI integration"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2020-26233"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "GIT 命令行工具远程代码执行漏洞分析"
+prerequisites: "来源所述条件，未列明部分仍待核：GCM Core<=2.0.280; discussesgh1.2.1 safeexec bypass; Windows private repo fork/clone; fix absent"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/972fmkQM1YpKhFCeAj-lwg"
+id: "vw-8eeb0fbc87fc15a56f1e5c3d"
+entity_id: "ve-8eeb0fbc87fc15a56f1e5c3d"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：GCM Core&lt;=2.0.280; discussesgh1.2.1 safeexec bypass; Windows private repo fork/clone; fix absent
+
+代码与实验材料：Source path/sink narrative and gh repo fork --clone; actual code screenshots; executable name instruction says exe but restgit.exe
+
+来源证据范围：Official GCM GHSA, Blaze researcher blog, NVD
+
+- **适用与权限边界（1）**：Git command line equated togh and component scopes merged; defaultgitclone not recursively cloning without option。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **结论使用边界（2）**：Victim fork web action alone not trigger; must runCLIclone; typo executable name and emdash option; no fixes。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # GIT 命令行工具远程代码执行漏洞分析
 

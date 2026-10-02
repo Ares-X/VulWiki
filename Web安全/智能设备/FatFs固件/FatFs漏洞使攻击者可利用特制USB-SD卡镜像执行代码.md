@@ -1,8 +1,53 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-2e72a81d3485ff9c76515cf5"
+entity_id: "ve-2e72a81d3485ff9c76515cf5"
+schema_version: "1"
+title: "FatFs漏洞使攻击者可利用特制USB/SD卡镜像执行代码"
+product: "FatFs及下游ESP-IDF/STM32Cube/Zephyr/MicroPython/TizenRT"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2026-6682; CVE-2026-6683; CVE-2026-6684; CVE-2026-6685; CVE-2026-6686; CVE-2026-6687; CVE-2026-6688"
+referenced_identifiers: ""
+prerequisites: "处理恶意FAT/exFAT/GPT镜像；介质/OTA等输入路径因集成而异"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%99%BA%E8%83%BD%E8%AE%BE%E5%A4%87/FatFs%E5%9B%BA%E4%BB%B6/FatFs%E6%BC%8F%E6%B4%9E%E4%BD%BF%E6%94%BB%E5%87%BB%E8%80%85%E5%8F%AF%E5%88%A9%E7%94%A8%E7%89%B9%E5%88%B6USB-SD%E5%8D%A1%E9%95%9C%E5%83%8F%E6%89%A7%E8%A1%8C%E4%BB%A3%E7%A0%81.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 #  FatFs漏洞使攻击者可利用特制USB/SD卡镜像执行代码  
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：FatFs及下游ESP-IDF/STM32Cube/Zephyr/MicroPython/TizenRT
+- 本文讨论：CVE-2026-6682–6688
+- 版本、权限与配置前提：处理恶意FAT/exFAT/GPT镜像；介质/OTA等输入路径因集成而异
+- 资料类型：文件系统库多漏洞新闻；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 没有具体FatFs版本/配置矩阵或原研究URL
+- 内存损坏推导短暂物理接触即可完全控制过强；设备缺ASLR不自动等于可利用
+- 6688是下游缓冲区问题，不能均作为库固有漏洞；元数据全漏
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 版本/编译配置、RCE证据及上游响应状态待原始runZero核验
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
  网安百色   2026-07-06 10:27  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/WibvcdjxgJnuP0NDnowGFR3V3gVibv8vf532vZsibN5yVDibIu2xgjlgxtjKMUesYIBYqa2bIS6CAIqEw8YapxHJTXrEnhOFuHOQCGWfNoVDFJE/640?wx_fmt=png&from=appmsg "")  

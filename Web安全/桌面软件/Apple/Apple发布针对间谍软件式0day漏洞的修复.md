@@ -1,9 +1,59 @@
 ---
-cve: "CVE-2023-28205"
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2023-28205;CVE-2023-28206"
+identifier_role: "primary"
+primary_identifiers: "CVE-2023-28205;CVE-2023-28206"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "Apple发布针对间谍软件式0day漏洞的修复"
+product: "Apple WebKit；IOSurfaceAccelerator"
+record_type: "advisory"
+document_type: "漏洞修复新闻"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "恶意Web内容浏览器执行与本地恶意应用内核执行两个阶段；受影响iPhone/iPad/Mac型号仅概述"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Apple/Apple%E5%8F%91%E5%B8%83%E9%92%88%E5%AF%B9%E9%97%B4%E8%B0%8D%E8%BD%AF%E4%BB%B6%E5%BC%8F0day%E6%BC%8F%E6%B4%9E%E7%9A%84%E4%BF%AE%E5%A4%8D.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-fe42404a72acc3da1e654628"
+entity_id: "ve-fe42404a72acc3da1e654628"
+schema_version: "1"
 ---
 
-#  Apple发布针对间谍软件式0day漏洞的紧急修复   
+# Apple发布针对间谍软件式0day漏洞的修复
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Apple WebKit；IOSurfaceAccelerator
+- 文献类型：漏洞修复新闻
+- 版本、权限及部署边界：恶意Web内容浏览器执行与本地恶意应用内核执行两个阶段；受影响iPhone/iPad/Mac型号仅概述
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 元数据漏28206，需保留两个漏洞和可能攻击链关系
+2. 先说可能链接两漏洞，后转为确定可接管整个设备，缺链条及沙箱逃逸验证，应保留推断层级
+3. 没有修复系统版本、官方安全公告、Sophos原文链接，难以据此升级
+4. AppStore与浏览器引擎规则属当时平台背景，不能无时间限制外推；移动设备不宜仅列桌面
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
  安全客   2023-04-11 11:38  
   
 Apple 发布了安全更新，以解决两个在野外被积极利用并针对 iPad、Mac 和 iPhone 的零日漏洞。  
@@ -46,4 +96,4 @@ Ducklin 说，这个错误就是这种情况。跟踪为 CVE-2023-28205 的第�
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

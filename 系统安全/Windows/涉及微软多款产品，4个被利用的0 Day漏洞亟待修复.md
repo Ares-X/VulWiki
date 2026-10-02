@@ -1,9 +1,62 @@
 ---
-cve: "CVE-2024-38217"
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2024-38217;CVE-2024-38226;CVE-2024-38014;CVE-2024-43461;CVE-2024-43491;CVE-2024-38018;CVE-2024-38227;CVE-2024-38228;CVE-2024-43464"
+identifier_role: "primary"
+primary_identifiers: "CVE-2024-38217;CVE-2024-38226;CVE-2024-38014;CVE-2024-43461;CVE-2024-43491;CVE-2024-38018;CVE-2024-38227;CVE-2024-38228;CVE-2024-43464"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "涉及微软多款产品，4个被利用的0 Day漏洞亟待修复"
+product: "Windows/Publisher/Installer/MSHTML/SharePoint"
+record_type: "advisory"
+document_type: "2024年9月补丁日新闻汇编"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "LNK/Publisher需文件交互，Installer本地认证，SharePoint需认证且角色门槛各异，43491仅特定Win10 1507可选组件/更新状态"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Windows/%E6%B6%89%E5%8F%8A%E5%BE%AE%E8%BD%AF%E5%A4%9A%E6%AC%BE%E4%BA%A7%E5%93%81%EF%BC%8C4%E4%B8%AA%E8%A2%AB%E5%88%A9%E7%94%A8%E7%9A%840%20Day%E6%BC%8F%E6%B4%9E%E4%BA%9F%E5%BE%85%E4%BF%AE%E5%A4%8D.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-32810affc6103392f6c75d1a"
+entity_id: "ve-32810affc6103392f6c75d1a"
+schema_version: "1"
 ---
 
-#  涉及微软多款产品，4个被利用的0 Day漏洞亟待修复   
+# 涉及微软多款产品，4个被利用的0 Day漏洞亟待修复
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Windows/Publisher/Installer/MSHTML/SharePoint
+- 文献类型：2024年9月补丁日新闻汇编
+- 版本、权限及部署边界：LNK/Publisher需文件交互，Installer本地认证，SharePoint需认证且角色门槛各异，43491仅特定Win10 1507可选组件/更新状态
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. frontmatter只38217，正文9CVE多产品应拆关联记录保留新闻索引
+2. 标题4个已利用与正文43461微软尚未标在野有区别，应保留ZDI与微软报道时点分歧，不能改成单一已核结论
+3. 43491自身未证实利用与回滚后的旧漏洞被利用需严格区分，文中该区分有价值应保留
+4. 43491段开头重复并截断Windo，确认采集/编辑噪声；79修复补丁与79CVE计数概念应核原文
+5. SSU KB5043936再KB5043083的顺序要求应保留并对官方确认；缺每实体MSRC直接链接/版本
+6. HelpNetSecurity原文完整可追溯，SharePoint仅认证不够精细需角色，推测Publisher恶意代码事件不可当官方事实；去宣传图
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://www.helpnetsecurity.com/2024/09/10/cve-2024-38217-cve-2024-43491/>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
  安全客   2024-09-11 13:32  
   
 近日，微软发布了79个修复补丁，其中包括针对几个被攻击者在实际环境中利用的0 Day漏洞（CVE-2024-38217、CVE-2024-38226、CVE-2024-38014、CVE-2024-43461）以及一个导致Windows 10早期CVE修复失效的代码缺陷（CVE-2024-43491）。  
@@ -93,4 +146,4 @@ https://www.helpnetsecurity.com/2024/09/10/cve-2024-38217-cve-2024-43491/
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

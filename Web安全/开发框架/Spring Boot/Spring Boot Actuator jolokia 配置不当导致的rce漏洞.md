@@ -1,6 +1,40 @@
 ---
 source: "hatch 补库批 20260928"
+product: "Jolokia/Logback JNDI"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "Spring Boot Actuator jolokia 配置不当导致的rce漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：Jolokia版本未知已承认；JDKLDAP边界6u201/7u191/8u182与其他条目不一致需官方核"
+side_effects: "未执行；本文需注意的操作影响：实验依赖和持续连接风险；javac target1.5需旧编译器，反连代码静态块等待会阻塞调用；reload日志无恢复说明"
+source_status: "unknown"
+id: "vw-e25c4934f2cdbba4b060077e"
+entity_id: "ve-e25c4934f2cdbba4b060077e"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：Jolokia版本未知已承认；JDKLDAP边界6u201/7u191/8u182与其他条目不一致需官方核
+
+代码与实验材料：完整六步及Java反连代码，需MBean已注册/exec允许、出网与加载条件；无修复和恢复
+
+来源证据范围：LandGrey署名、marshalsec镜像，缺原研究直链
+
+- **代码与转录边界（1）**：JNDI链与XXE被混为同一触发；依据：SAX解析XML不自动产生XXE，实际insertFromJNDI处理才请求LDAP；insertFormJNDI拼写错。相应原代码作为存在此问题的历史样本保留，不能直接当作可运行、成功复现的 PoC；缺失内容需回原稿核对，不据此补造可执行攻击链。
+
+- **适用与权限边界（2）**：失败原因过度归JDK高版本；依据：LDAP请求后无class也可能网络、类工厂或策略不匹配；需按远程codebase/本地gadget分条件。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **结论使用边界（3）**：实验依赖和持续连接风险；依据：javac target1.5需旧编译器，反连代码静态块等待会阻塞调用；reload日志无恢复说明。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Spring Boot Actuator jolokia 配置不当导致的rce漏洞
 

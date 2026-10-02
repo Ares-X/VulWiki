@@ -1,10 +1,50 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "泛微e-cology8/9 deleteUserRequestInfoByXml XXE"
+product: "泛微e-cology8/9"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "补丁<10.58.2；声称10.58.2修复"
+prerequisites: "声称未授权"
+side_effects: "命令/代码执行示例可能改变主机状态"
+review_date: "2026-10-02"
+source_url: "https://mp.weixin.qq.com/s/YT64vy3tbAoxj6CQ7XWgUA"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E6%B3%9B%E5%BE%AEoa/%E6%B3%9B%E5%BE%AE%20E-Cology%20Xml%20%E5%A4%96%E9%83%A8%E5%AE%9E%E4%BD%93%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md"
+id: "vw-634683c112ee2944a0eceacc"
+entity_id: "ve-634683c112ee2944a0eceacc"
+schema_version: "1"
 ---
 
-# 泛微 E-Cology Xml 外部实体注入漏洞
+# 泛微e-cology8/9 deleteUserRequestInfoByXml XXE
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：泛微e-cology8/9；deleteUserRequestInfoByXml XXE
+- 版本、配置及部署条件：补丁<10.58.2；声称10.58.2修复
+- 认证与权限前提：声称未授权
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 修复链接文件名却是10.58.1，安全边界与实际补丁不一致需核验
+- 外部DTD请求和未定义xxe实体样本可用于外联但不直接证明读取文件或RCE
+- Content-Length35不符且无头体空行；原始响应和DNS结果仅图片
+- 可与2023合集QVD-2023-16177关联候选，本文未明示编号，不自动补主ID
+
+## 操作风险
+
+命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/YT64vy3tbAoxj6CQ7XWgUA)
 
   
@@ -65,7 +105,7 @@ source: "MrWQ/vulnerability-paper"
 
  **Poc （POST）**
 
-```
+```http
 POST /rest/ofs/deleteUserRequestInfoByXml HTTP/1.1
 Host: 
 User-Agent: Go-http-client/1.1

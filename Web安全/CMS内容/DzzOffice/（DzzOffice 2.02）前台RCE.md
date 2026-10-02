@@ -1,6 +1,44 @@
 ---
 source: "hatch 补库批 20260928"
+product: "DzzOffice collaboration suite"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "（DzzOffice 2.02）前台RCE"
+prerequisites: "来源所述条件，未列明部分仍待核：2.02; login CAPTCHA already enabled; observable cookie prefix and verification ciphertext; predictable MT sequence matching PHP runtime; recover full authkey; WOPI writable PHP destination"
+side_effects: "未执行；本文需注意的操作影响：Deleting installer after install doesn't rotate already predictable authkey or fix WOPI; remediation needs key rotation and fixed generation"
+source_status: "unknown"
+id: "vw-76e3136a95a18a2e420cd833"
+entity_id: "ve-76e3136a95a18a2e420cd833"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；默认公开示例、攻击表达式和其他 Cookie 语义保持原样。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：2.02; login CAPTCHA already enabled; observable cookie prefix and verification ciphertext; predictable MT sequence matching PHP runtime; recover full authkey; WOPI writable PHP destination
+
+- **结论使用边界（1）**：Better categorized office/collaboration software than CMS。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **适用与权限边界（2）**：Prerequisite 'must enable in backend' means unauthenticated exploit is conditional on existing config, not attacker-authorized setup。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **结论使用边界（3）**：Same-seed deterministic sequence described as each generated value fixed; clarify sequence vs repeated value。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **结论使用边界（4）**：Claims full crack script includes authcode_decode/random but code explicitly omits both。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **操作与副作用边界（5）**：Deleting installer after install doesn't rotate already predictable authkey or fix WOPI; remediation needs key rotation and fixed generation。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+- **证据待核（6）**：Good explicit unverified Issue137 separation and PDF provenance。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # （DzzOffice 2.02）前台 RCE
 
@@ -253,7 +291,7 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8
 Accept-Encoding: gzip, deflate
 Accept-Language: en-US,en;q=0.9
-Cookie: gGyk_2132_saltkey=xkBk27da; gGyk_2132_lastvisit=1658359791; gGyk_2132_sid=T09ZLe; gGyk_2132_lastact=1658363412%09misc.php%09seccode; gGyk_2132_seccodeST09ZLe0=2121YXrez2Rb_00AasW9CQZdtAIM2HTcnuaPmShhMGHLfrWTtXnAkbq42XcqrY94rVDphUTYWnaK9OX9m0
+Cookie: gGyk_2132_saltkey=xkBk27da; gGyk_2132_lastvisit=1658359791; gGyk_2132_sid=T09ZLe; gGyk_2132_lastact=1658363412%09misc.php%09seccode; gGyk_2132_seccodeST09ZLe0=212****************************************************************************9m0
 Connection: close
 Content-Length: 18
 Content-Type: application/x-www-form-urlencoded

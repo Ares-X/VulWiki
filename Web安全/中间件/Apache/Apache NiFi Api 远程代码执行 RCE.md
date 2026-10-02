@@ -1,8 +1,48 @@
 ---
 source: "Threekiii/Awesome-POC"
+title: "Apache NiFi Api 远程代码执行 RCE"
+product: "Apache NiFi流程管理API"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "API匿名可写或已有流程修改/受限组件执行权限，ExecuteProcess可用"
+source_status: "unknown"
+side_effects: "含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。"
+id: "vw-d43b005b58c1ad7a34d14c3c"
+entity_id: "ve-d43b005b58c1ad7a34d14c3c"
+schema_version: "1"
 ---
 
 # Apache NiFi Api 远程代码执行 RCE
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：API匿名可写或已有流程修改/受限组件执行权限，ExecuteProcess可用
+- 证据范围：代码调用正常管理功能创建并运行处理器，不是已标识CVE；check_is_vul定义后根本未被调用
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- supportsLogin=false不能独立证明可写权限，且主程序没检查
+- clean_up只STOP/threads，不删除处理器；DELETE地址拼成run-status/threads疑错，缺JSON头/修订处理
+- 硬编码revision1、cmd按空格split、无timeout/结果检查
+- 缺版本/部署条件；fofa title==语法混乱
+
+### 操作风险与资料使用
+
+- 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 ## 漏洞描述
 

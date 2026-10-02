@@ -1,8 +1,49 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "用友NC IMetaWebService4BqCloud loadFields SQL 注入研究"
+product: "用友NC"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "NC65；JDBC驱动/数据源类型条件未定"
+prerequisites: "示例session，未说明"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+source_status: "unknown"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E7%94%A8%E5%8F%8BNC/%E6%BC%8F%E6%B4%9E%E5%88%A9%E7%94%A8%20%20%E7%94%A8%E5%8F%8BNC%20IMetaWebService4BqCloud%E6%95%B0%E6%8D%AE%E6%BA%90SQL%E6%B3%A8%E5%85%A5.md"
+id: "vw-6374b078b1e89b0cf7f88a42"
+entity_id: "ve-6374b078b1e89b0cf7f88a42"
+schema_version: "1"
 ---
 
-#  漏洞利用 | 用友NC IMetaWebService4BqCloud数据源SQL注入  
+# 用友NC IMetaWebService4BqCloud loadFields SQL 注入研究
+
+## 条目说明
+
+- 对象与具体问题：用友NC；IMetaWebService4BqCloud loadFields SQLi研究
+- 版本、配置及部署条件：NC65；JDBC驱动/数据源类型条件未定
+- 认证与权限前提：示例session，未说明
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 作者明确缺关键证据应保留；getColumns可能构造SQL是推测，需驱动实现才能确证拼接
+- SmartModel/SmartMeta/NCDB前缀与^拆分已解释，真正SQL执行sink未完整给
+- 请求头体缺空行，SmartModel^1'；*是sqlmap占位非独立payload；returnnull转码坏
+- 无具体修复/驱动版本，不能把分析推测当已验证根因
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 原创 chobits02  C4安全   2025-07-12 13:36  
   
 前言  
@@ -30,7 +71,7 @@ app="用友-UFIDA-NC"
   
   
 抓包可以看到，漏洞的利用数据包如下  
-```
+```http
 POST /uapws/service/uap.pubitf.ae.meta.IMetaWebService4BqCloud HTTP/1.1
 Cache-Control: max-age=0
 Upgrade-Insecure-Requests: 1
@@ -38,7 +79,7 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
 Accept-Encoding: gzip, deflate, br
 Accept-Language: zh-CN,zh;q=0.9
-Cookie: JSESSIONID=09133CFE3A7B0CE8341AB1A7DEDFCCDE.server
+Cookie: JSESSIONID=0*************************************r
 Connection: keep-alive
 SOAPAction: urn:loadFields
 Content-Type: text/xml;charset=UTF-8

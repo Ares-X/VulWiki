@@ -1,8 +1,51 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Apache Parquet 允许远程执行代码漏洞"
+product: "Apache Parquet Java parquet-avro"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2025-30065"
+referenced_identifiers: ""
+identifier_role: "primary"
+cve: "CVE-2025-30065"
+prerequisites: "1.8.0–1.15.0，读取不可信带Avro元数据的Parquet，具体模型/gadget条件未给"
+source_status: "unknown"
+side_effects: "含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。"
+id: "vw-4ca66b607cbcfaf2c8621137"
+entity_id: "ve-4ca66b607cbcfaf2c8621137"
+schema_version: "1"
 ---
 
-#  Apache Parquet 允许远程执行代码漏洞   
+# Apache Parquet 允许远程执行代码漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：1.8.0–1.15.0，读取不可信带Avro元数据的Parquet，具体模型/gadget条件未给
+- 证据范围：版本与历史修复建议是新闻摘要，没有复现；与46762应作连续修复关联。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 段落称1.15.0之前与表1.15.0包含边界不一致
+- CVSS10缺评分来源/向量；完全控制系统需限定服务进程权限
+- 缺specific/reflect等实际利用前提，不是所有处理Parquet框架默认受影响
+- 1.15.1是初始历史修复，需关联46762后续1.15.2而非作当前完整安全保证
+- 在野利用状态仅2025年4月快照
+
+### 操作风险与资料使用
+
+- 含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
  网安百色   2025-04-06 19:25  
   
    

@@ -1,6 +1,38 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+product: "Apache Shiro/InvalidRequestFilter"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2023-34478"
+referenced_identifiers: "XVE-2023-17765"
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "别急着修！Apache Shiro 最新身份验证漏洞实际很难利用"
+prerequisites: "来源所述条件，未列明部分仍待核：<1.12.0及2.0alpha<3需分支限定；安全版本应分别表达"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-adc0b49a68247d39e32ca50f"
+entity_id: "ve-adc0b49a68247d39e32ca50f"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：&lt;1.12.0及2.0alpha&lt;3需分支限定；安全版本应分别表达
+
+代码与实验材料：低利用难度判断无具体苛刻前提，复现仅图且表说PoC未公开
+
+来源证据范围：微步原研判，链接仅Apache项目主页无公告/补丁
+
+- **适用与权限边界（1）**：延迟修复建议缺适用依据；依据：别急着修、优先级低却未写需哪种代理/路径配置才可利用，无法用于用户具体部署。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **结论使用边界（2）**：风险评级与影响量不透明；依据：低危、万级及未捕获攻击均属厂商当时观测，不等于漏洞普遍低危/无利用。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 #  别急着修！Apache Shiro 最新身份验证漏洞实际很难利用   
 原创 微步情报局  微步在线研究响应中心   2023-07-26 14:08  

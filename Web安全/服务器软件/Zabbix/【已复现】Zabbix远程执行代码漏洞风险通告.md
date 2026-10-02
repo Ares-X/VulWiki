@@ -1,9 +1,45 @@
 ---
 cve: "CVE-2024-22116"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "【已复现】Zabbix远程执行代码漏洞风险通告"
+product: "Zabbix Host Macros/ping脚本"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2024-22116"
+referenced_identifiers: ""
+identifier_role: "primary"
+prerequisites: "受限管理员能新增/修改主机Macros且可执行相关脚本；6.4.0–.15、7alpha1–rc2"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-f4956d6481755b8d13ad5a91"
+entity_id: "ve-f4956d6481755b8d13ad5a91"
+schema_version: "1"
 ---
 
-#  【已复现】Zabbix远程执行代码漏洞风险通告   
+# 【已复现】Zabbix远程执行代码漏洞风险通告
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：受限管理员能新增/修改主机Macros且可执行相关脚本；6.4.0–.15、7alpha1–rc2
+- 证据范围：原理与鉴权条件明确；作者复现截图没有文本载荷，不应作为完整复现教程
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 将6.4.16rc1/7.0.0rc3称最新版本需改稳定修复版/历史首次修复
+- 下载地址后台私信指亚信规则包，不应同厂家Zabbix补丁混淆
+- 状态表已复现是来源实验，不是本审计结果；HTML表格与营销可简化
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 你信任的  亚信安全   2024-08-15 17:33  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/iczzp36h0nbF9uZS3F55VicBTibJiaV8O9MfYTrBelTibgQIbeHibOvXKOgib7ibTYxAvRTAf4ZSiaLDicnShTzHVxASyWrw/640?wx_fmt=jpeg "")  

@@ -1,8 +1,44 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Citrix 督促 Mac 用户修复 Workspace App 中的提权漏洞"
+product: "Citrix Workspace for Mac"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-9e1174c22ab1b75d15010873"
+entity_id: "ve-9e1174c22ab1b75d15010873"
+schema_version: "1"
 ---
 
-#  Citrix 督促 Mac 用户修复 Workspace App 中的提权漏洞   
+# Citrix 督促 Mac 用户修复 Workspace App 中的提权漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 正文5027未提取
+- 本地已认证用户前提明确
+- <2402.10与修复版本应元数据化并核原厂
+- 只有新闻引用无原公告/复现
+- 推荐其他Citrix产品漏洞不可扩主范围，广告删除
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 DO SON  代码卫士   2024-05-29 17:26  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

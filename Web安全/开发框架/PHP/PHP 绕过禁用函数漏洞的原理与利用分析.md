@@ -1,6 +1,39 @@
 ---
 source: "MrWQ/vulnerability-paper"
+product: "PHP/array_merge_recursive UAF"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: "CVE-2020-13957; CVE-2020-1472; CVE-2020-14364"
+identifier_role: "reference"
+identifier_status: "unknown"
+title: "PHP 绕过禁用函数漏洞的原理与利用分析"
+prerequisites: "来源所述条件，未列明部分仍待核：声称7.2–7.4.9、7.4.10修复；旧分支patch范围未给；本地PHP执行权限前提"
+side_effects: "未执行；本文需注意的操作影响：应明确已有PHP代码执行才能绕过disable_functions；验证要求上传并执行利用脚本，不是远程请求自动获得初始代码执行；版本与内存布局泛化；CLI调试称与服务器差别不大，实际堆布局、编译和平台影响；只有7.4.10修复未覆盖7.2/7.3分支"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/_KCqGJnHaCBjCZ0VPo898Q"
+id: "vw-19facc91bf9f1af49c2c7533"
+entity_id: "ve-19facc91bf9f1af49c2c7533"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：声称7.2–7.4.9、7.4.10修复；旧分支patch范围未给；本地PHP执行权限前提
+
+代码与实验材料：引用计数到伪造闭包链有独立分析，源码和调试大多截图；无完整脚本、架构和编译参数
+
+来源证据范围：奇安信研究及PHP bug79930可追溯
+
+- **结论使用边界（1）**：应明确已有PHP代码执行才能绕过disable_functions；依据：验证要求上传并执行利用脚本，不是远程请求自动获得初始代码执行。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **操作与副作用边界（2）**：版本与内存布局泛化；依据：CLI调试称与服务器差别不大，实际堆布局、编译和平台影响；只有7.4.10修复未覆盖7.2/7.3分支。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # PHP 绕过禁用函数漏洞的原理与利用分析
 

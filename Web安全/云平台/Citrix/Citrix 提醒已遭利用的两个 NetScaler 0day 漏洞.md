@@ -1,8 +1,44 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Citrix 提醒注意已遭利用的两个 NetScaler 0day 漏洞"
+product: "Citrix NetScaler ADC/Gateway"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-a19d16c3ace446d0d7fce46e"
+entity_id: "ve-a19d16c3ace446d0d7fce46e"
+schema_version: "1"
 ---
 
-#  Citrix 提醒注意已遭利用的两个 NetScaler 0day 漏洞   
+# Citrix 提醒注意已遭利用的两个 NetScaler 0day 漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 6548认证低权限管理面RCE与6549特定网关/AAA配置DoS分别建条件
+- 缺结构化CVE与厂商原始公告
+- 客户自管设备与托管服务不受影响应保留
+- 4966为历史背景不提为主编号
+- 清广告和推荐阅读
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 Sergiu Gatlan  代码卫士   2024-01-17 17:33  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

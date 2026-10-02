@@ -1,9 +1,59 @@
 ---
-cve: "CVE-2025-21204"
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2025-21204"
+identifier_role: "primary"
+primary_identifiers: "CVE-2025-21204"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "Windows 更新堆栈中存在允许代码执行和权限提升漏洞"
+product: "Windows Update Stack"
+record_type: "advisory"
+document_type: "推测性漏洞通告"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "正文混本地/远程更新、恶意包或中间人；无版本/权限/协议证明"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/Windows%20%E6%9B%B4%E6%96%B0%E5%A0%86%E6%A0%88%E4%B8%AD%E5%AD%98%E5%9C%A8%E5%85%81%E8%AE%B8%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E5%92%8C%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87%E6%BC%8F%E6%B4%9E.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-67bcb8d277ee339e4586dc98"
+entity_id: "ve-67bcb8d277ee339e4586dc98"
+schema_version: "1"
 ---
 
-#  Windows 更新堆栈中存在允许代码执行和权限提升漏洞   
+# Windows 更新堆栈中存在允许代码执行和权限提升漏洞
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Windows Update Stack
+- 文献类型：推测性漏洞通告
+- 版本、权限及部署边界：正文混本地/远程更新、恶意包或中间人；无版本/权限/协议证明
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 把CVE21204扩写为恶意更新包/网络中间人攻击，无任何原始研究/MSRC链接、调用链或签名验证绕过证据，优先官方核验
+2. 7.8本地提权口径与表格本地/远程、最少用户交互均不明确，不能形成远程RCE条目
+3. 文称补丁发布后再装却未给实际发布日期/KB，可能滞后；限制Windows更新端点会妨碍补丁部署且不对应已证实根因
+4. 数百万受影响、严重/关键等泛化营销判断无资产范围支持
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
  网安百色   2025-04-23 11:38  
   
 在研究人员透露，Windows 更新堆栈中新发现的一个漏洞被跟踪为 CVE-2025-21204，该漏洞可能使攻击者能够在目标计算机上执行任意代码并将权限升级到 SYSTEM 级别，这在网络安全社区引起了震动。  
@@ -60,4 +110,4 @@ CVE-2025-21204 强调了保护关键系统组件（如 Windows 更新堆栈）�
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

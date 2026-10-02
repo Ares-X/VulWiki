@@ -1,8 +1,44 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "VMware发布更新,修复墨云科技报告的高危漏洞"
+product: "VMware Aria Operations"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-0abf32dc03c52925626b4e7d"
+entity_id: "ve-0abf32dc03c52925626b4e7d"
+schema_version: "1"
 ---
 
-#  VMware发布更新,修复墨云科技报告的高危漏洞   
+# VMware发布更新,修复墨云科技报告的高危漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 38830和38831未元数据化
+- 本地管理到root与无认证远程完全不同应保留
+- 8.18.2修复需按公告核实范围
+- 有厂商链接但具体接口/PoC无文本，公告用途
+- 大量商业联系与广告可剥离
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
  关键信息基础设施安全保护联盟   2024-12-03 23:30  
   
 ![](https://mmbiz.qpic.cn/mmbiz_png/DoGPicehpSD7yIqt5JDquCLys40yW2MZt5JjERM23U0ibHC3galCTkkuTaZSmFwMSU6ctcUQYuM9Vm3k75oNfctQ/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp "")  

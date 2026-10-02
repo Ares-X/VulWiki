@@ -1,8 +1,46 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "OpenSSH 严重漏洞可导致 Moxa 以太网交换机易受RCE攻击"
+product: "Moxa工业交换机内OpenSSH ssh-agent"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2023-38408"
+referenced_identifiers: "CVE-2016-10009"
+identifier_role: "primary"
+cve: "CVE-2023-38408"
+prerequisites: "ssh-agent转发至攻击者可控系统且存在可利用PKCS#11库加载链，<9.3p2依赖；设备型号/固件具体条件仅图"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-e4fa29b0c4664ad1881fff0a"
+entity_id: "ve-e4fa29b0c4664ad1881fff0a"
+schema_version: "1"
 ---
 
-#  OpenSSH 严重漏洞可导致 Moxa 以太网交换机易受RCE攻击  
+# OpenSSH 严重漏洞可导致 Moxa 以太网交换机易受RCE攻击
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：ssh-agent转发至攻击者可控系统且存在可利用PKCS#11库加载链，<9.3p2依赖；设备型号/固件具体条件仅图
+- 证据范围：正文提代理转发前提但首段说任意未认证远程直接设备RCE，易误导为sshd服务端暴露漏洞
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 主CVE缺元数据
+- 受影响设备表仅未视检图片，需文本型号与固件范围及Moxa官方链接
+- CWE-428未加引号路径与PKCS#11不可信搜索路径机制可能不符，需CNA/官方核对
+- EDS4.1.58/RKS5.0.4不能无型号匹配泛用
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 Abinaya  代码卫士   2026-01-14 10:48  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

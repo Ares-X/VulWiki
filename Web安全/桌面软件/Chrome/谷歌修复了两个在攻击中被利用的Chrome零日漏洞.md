@@ -1,8 +1,59 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2026-3909;CVE-2026-3910"
+identifier_role: "primary"
+primary_identifiers: "CVE-2026-3909;CVE-2026-3910"
+referenced_identifiers: "CVE-2026-2441"
+identifier_status: "unknown"
+title: "谷歌修复了两个在攻击中被利用的Chrome零日漏洞"
+product: "Chrome Skia/V8"
+record_type: "advisory"
+document_type: "两零日在野利用更新新闻"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "文称Windows/Linux146.0.7680.75、macOS .76；攻击具体细节未披露"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Chrome/%E8%B0%B7%E6%AD%8C%E4%BF%AE%E5%A4%8D%E4%BA%86%E4%B8%A4%E4%B8%AA%E5%9C%A8%E6%94%BB%E5%87%BB%E4%B8%AD%E8%A2%AB%E5%88%A9%E7%94%A8%E7%9A%84Chrome%E9%9B%B6%E6%97%A5%E6%BC%8F%E6%B4%9E.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-674565a003253386880c0286"
+entity_id: "ve-674565a003253386880c0286"
+schema_version: "1"
 ---
 
-#  谷歌修复了两个在攻击中被利用的Chrome零日漏洞  
+# 谷歌修复了两个在攻击中被利用的Chrome零日漏洞
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Chrome Skia/V8
+- 文献类型：两零日在野利用更新新闻
+- 版本、权限及部署边界：文称Windows/Linux146.0.7680.75、macOS .76；攻击具体细节未披露
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 两主CVE元数据空，2441仅年度背景；2025八个和2026第二三计数须时间限定
+2. Google发现与用户报告后两天翻译主语不清；在网络存在利用程序不应脱离原公告解释为普通公开PoC
+3. 仅凭Skia OOB写/V8不恰当实现无法确定完整RCE或沙箱逃逸链，未知前置条件应列待核验
+4. 声明点击阅读原文但Markdown未保留链接，BleepingComputer/Google仅名字不可追溯
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
  Ots安全   2026-03-15 04:03  
   
 **威胁简报**  
@@ -59,4 +110,4 @@ AnQuan7 (Ots安全)
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

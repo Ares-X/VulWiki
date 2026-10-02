@@ -1,7 +1,41 @@
 ---
 cve: "CVE-2025-48827"
 source: "gelusus/wxvl 公众号漏洞文库"
+product: "vBulletin5/6"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2025-48827; CVE-2025-48828"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "CVSS10分！vBulletin远程代码执行漏洞安全风险通告"
+prerequisites: "来源所述条件，未列明部分仍待核：5.1.0–6.0.3claimed; APIprotectedmethodaccess+templateinjection; PHPversion/confignotgiven"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-0bef3a98c8232cd86bb0cc36"
+entity_id: "ve-0bef3a98c8232cd86bb0cc36"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：5.1.0–6.0.3claimed; APIprotectedmethodaccess+templateinjection; PHPversion/confignotgiven
+
+- **结论使用边界（1）**：元数据漏48828；两漏洞并列称独立RCE，需核是否前者访问绕过需串后者才完整RCE。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **结论使用边界（2）**：表格未发现在野与所引2025-05-28Qualys URL标题exploited-in-wild矛盾，文章6月3日需核状态。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **事实待核（3）**：版本范围扁平跨5/6且原厂公告提5.7.5安全补丁，须具体补丁级别/PHP依赖。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **事实待核（4）**：CVSS3.0的10/9没有分别对应编号或向量来源。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **来源与引用处置（5）**：有官方修复/研究/双方NVD链接但无请求，厂商规则广告非验证证据。保留这部分来源材料并与技术结论分开；其引用或宣传内容不能补足本文漏洞的证据。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 #  CVSS10分！vBulletin远程代码执行漏洞安全风险通告   
 应急响应中心  亚信安全   2025-06-03 10:03  

@@ -1,6 +1,40 @@
 ---
 source: "hatch 补库批 20260928"
+product: "YXcmsApp1.4.3"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "YXcmsApp 1.4.3任意用户密码重置漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：selfregistration/relogin;sharedENCODE_KEYcookieandreset;nickname<=30; latestattackerIDemailcontrollable;maildelivery"
+side_effects: "未执行；本文需注意的操作影响：分析保留注册时不可用而重登录还原单引号的重要二阶条件，不能略成随意code伪造"
+source_status: "unknown"
+id: "vw-e6e24b0f9a0482cb0c9e6bb9"
+entity_id: "ve-e6e24b0f9a0482cb0c9e6bb9"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：selfregistration/relogin;sharedENCODE_KEYcookieandreset;nickname&lt;=30; latestattackerIDemailcontrollable;maildelivery
+
+- **适用与权限边界（1）**：分析保留注册时不可用而重登录还原单引号的重要二阶条件，不能略成随意code伪造。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **证据待核（2）**：关键getpassword/SQL截图和实际codeURL丢失，大量如下后空白，完整链不可核。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **证据待核（3）**：6位密钥不可现实伪造是未经熵/算法分析断言；昵称长度限制不等于完全不能报错注入。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **结论使用边界（4）**：全员密码更新并发新密邮件影响严重，需要完整SELECT/UPDATE确认排序/同newpass语义。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **凭据与会话边界（5）**：+/%252B编码层数依cookie原编码应说明；无原始来源/修复。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # YXcms 1.4.3 任意用户密码重置漏洞
 

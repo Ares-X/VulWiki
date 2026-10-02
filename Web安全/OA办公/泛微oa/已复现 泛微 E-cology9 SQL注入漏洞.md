@@ -1,8 +1,49 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "泛微e-cology9 getdata.jsp未授权SQL注入通告"
+product: "泛微e-cology9"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "LDYVUL-2025-00079715"
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "<10.75，声称>=10.75修复；SQL Server后利用有额外条件"
+prerequisites: "声称未授权"
+side_effects: "延迟探测可能占用数据库连接或影响服务"
+review_date: "2026-10-02"
+identifier_role: "primary"
+source_status: "unknown"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E6%B3%9B%E5%BE%AEoa/%E5%B7%B2%E5%A4%8D%E7%8E%B0%20%E6%B3%9B%E5%BE%AE%20E-cology9%20SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md"
+id: "vw-664ac17224c3f5d87ad4a19b"
+entity_id: "ve-664ac17224c3f5d87ad4a19b"
+schema_version: "1"
 ---
 
-#  【已复现】泛微 E-cology9 SQL注入漏洞  
+# 泛微e-cology9 getdata.jsp未授权SQL注入通告
+
+## 条目说明
+
+- 对象与具体问题：泛微e-cology9；getdata.jsp未授权SQL注入通告
+- 版本、配置及部署条件：<10.75，声称>=10.75修复；SQL Server后利用有额外条件
+- 认证与权限前提：声称未授权
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 属于通告：明示POC/EXP/细节未公开，复现只有延迟截图，不能称仓库自带可复现POC
+- 应提取LDYVUL-2025-00079715和2025-06-16补丁时间；正文有接口，需同老getdata报告比对而非按标题合并
+- 7月10日转载不能与7月新10.76漏洞直接去重；HTML样式噪声占多数，原文链接缺失
+
+## 操作风险
+
+延迟探测可能占用数据库连接或影响服务。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
  天黑说嘿话   2025-07-10 00:51  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/5nNKGRl7pFgbJxnOxcKdRicA5Vlgv8VdjNEa8tGFyzVgC6Q6dlYR7JSnqNf6hodTZqXAibl0ZqFHlNgZKH8hT2jQ/640?wx_fmt=gif&from=appmsg "")  

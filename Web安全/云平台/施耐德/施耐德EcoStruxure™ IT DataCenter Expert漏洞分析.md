@@ -1,8 +1,47 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "施耐德EcoStruxure™ IT DataCenter Expert漏洞分析"
+product: "Schneider EcoStruxure IT DCE"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。"
+id: "vw-59def0534b9efeff54af00d9"
+entity_id: "ve-59def0534b9efeff54af00d9"
+schema_version: "1"
 ---
 
-#  施耐德EcoStruxure™ IT DataCenter Expert漏洞分析  
+# 施耐德EcoStruxure™ IT DataCenter Expert漏洞分析
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 50122认证绕过与50123认证后命令注入是链，frontmatter两编号均缺
+- <=8.3及9.0修复未结构化
+- 仅截图无接口请求，已复现是来源声明
+- 厂商PDF可保留，正文无真实复现细节，广告应剥离
+
+### 操作风险与资料使用
+
+- 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 启明星辰  ADLab   2025-07-15 09:51  
   
 更多安全资讯和分析文章请关注启明星辰ADLab微信公众号及官方网站（adlab.venustech.com.cn）  

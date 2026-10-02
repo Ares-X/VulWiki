@@ -1,9 +1,66 @@
 ---
-version: "Docker version: 18.09.3"
 source: "Threekiii/Vulnerability-Wiki"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "挂载-log-目录导致容器逃逸"
+product: "Kubernetes kubelet /logs 与 writable hostPath"
+record_type: "vulnerability"
+document_type: "Kubernetes危险挂载/RBAC配置案例"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "Pod可写挂载节点/var/log且SA具nodes/log读取权限；示例Docker18.09.3、Minikube1.35/K8s1.32，节点运行时/宿主边界需明确"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/%E5%AE%B9%E5%99%A8%E9%80%83%E9%80%B8/%E6%8C%82%E8%BD%BD-log-%E7%9B%AE%E5%BD%95%E5%AF%BC%E8%87%B4%E5%AE%B9%E5%99%A8%E9%80%83%E9%80%B8.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+version_unverified: "Docker version: 18.09.3"
+id: "vw-0e7f689304593b3a0b522502"
+entity_id: "ve-0e7f689304593b3a0b522502"
+schema_version: "1"
 ---
 
-# 挂载 log 目录导致容器逃逸
+# 挂载-log-目录导致容器逃逸
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Kubernetes kubelet /logs 与 writable hostPath
+- 文献类型：Kubernetes危险挂载/RBAC配置案例
+- 版本、权限及部署边界：Pod可写挂载节点/var/log且SA具nodes/log读取权限；示例Docker18.09.3、Minikube1.35/K8s1.32，节点运行时/宿主边界需明确
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 开头仅说有权限读自己pod日志过宽，YAML实际授权nodes/log，全节点日志接口权限比pods/log大，必须精确区分
+2. 把kubectl logs等同kubelet /logs/pods静态服务器混淆普通容器日志API与nodes/log文件接口，应核调用链
+3. 实际效果读取节点文件，不等于获得宿主代码执行/root shell；说明Minikube虚拟机边界有价值，但YAML/环境可能Docker驱动需核
+4. Docker旧日志符号链接布局与K8s1.32运行时要说明cri-dockerd/Minikube driver，不能按旧实现泛化所有CRI
+5. 完整YAML与Aqua原研究/源码可追溯，集群级对象填写namespace字段不提供命名空间隔离；镜像latest需固定摘要
+6. 删除Pod/namespace未必恢复在hostPath创建的符号链接及数据变化，应补现场恢复；无CVE属危险配置，图未视检
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://blog.aquasec.com/kubernetes-security-pod-escape-log-mounts>
+- 原文参考链接（未重新核验）：<https://github.com/danielsagi/kube-pod-escape>
+- 原文参考链接（未重新核验）：<https://github.com/Threekiii/Awesome-POC/blob/master/%E4%BA%91%E5%AE%89%E5%85%A8%E6%BC%8F%E6%B4%9E/Kubernetes%20%2B%20Ubuntu%2018.04%20%E6%BC%8F%E6%B4%9E%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA.md>
+- 原文参考链接（未重新核验）：<https://github.com/Metarget/metarget/blob/master/yamls/k8s_metarget_namespace.yaml>
+- 原文参考链接（未重新核验）：<https://github.com/danielsagi/kube-pod-escape/blob/master/escaper.yml>
+- 原文参考链接（未重新核验）：<https://github.com/Threekiii/Vulnerability-Wiki>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
 
 ## 漏洞描述
 

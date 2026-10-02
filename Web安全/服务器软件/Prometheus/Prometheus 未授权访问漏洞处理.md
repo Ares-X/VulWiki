@@ -1,8 +1,47 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Prometheus 未授权访问漏洞处理"
+product: "Prometheus/Grafana部署"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "原2.17.1升级3.0.0、Grafana同机调用；需明确网络范围、TLS与认证配置"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-6bfbaf2200d08a279a9b8cc4"
+entity_id: "ve-6bfbaf2200d08a279a9b8cc4"
+schema_version: "1"
 ---
 
-#  Prometheus 未授权访问漏洞处理  
+# Prometheus 未授权访问漏洞处理
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：原2.17.1升级3.0.0、Grafana同机调用；需明确网络范围、TLS与认证配置
+- 证据范围：真实迁移经验含成功和残留指标问题，应保留为运维加固而非单漏洞复现；明确不保留旧数据属于作者场景选择
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- Basic Auth不是加密，示例仍HTTP；跨网络需TLS
+- touchweb-auth.yml/vimweb-auth.yml缺空格，YAML admin未缩进
+- htpasswd/tr命令使用智能引号，不能原样运行
+- 2.x直接升3.0及Grafana升级应有兼容/备份/回滚计划，作者主动丢历史数据不可泛化建议
+- 部分指标未恢复，不能说整个升级完整验证成功
+- 将密码写草稿不应作为安全建议，截图需避免暴露凭据
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 Hai  知微守望   2025-07-07 08:21  
   
 # 背景  

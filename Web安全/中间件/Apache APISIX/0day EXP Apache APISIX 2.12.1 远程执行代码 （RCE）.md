@@ -1,8 +1,49 @@
 ---
 cve: "CVE-2022-24112"
+title: "【0day EXP】Apache APISIX 2.12.1 远程执行代码 （RCE）"
+product: "Apache APISIX batch-requests/Admin API"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2022-24112"
+referenced_identifiers: ""
+identifier_role: "primary"
+prerequisites: "batch-requests启用、Admin同数据面端口且默认key/访问限制可被内循环突破；一般影响还含数据面IP限制绕过"
+source_url: "https://mp.weixin.qq.com/s/DC2aFjVBEyHrUE63SWJm2g"
+source_status: "recorded"
+side_effects: "含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。"
+id: "vw-55636c3fd40c336a25defc0d"
+entity_id: "ve-55636c3fd40c336a25defc0d"
+schema_version: "1"
 ---
 
 # 【0day EXP】Apache APISIX 2.12.1 远程执行代码 （RCE）
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：batch-requests启用、Admin同数据面端口且默认key/访问限制可被内循环突破；一般影响还含数据面IP限制绕过
+- 证据范围：正文正确列2.12.1/2.10.4固定版本，但标题/脚本头却称2.12.1 RCE导致安全版误标
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 标题与代码版本应改为<2.12.1并分LTS分支
+- Python嵌套JSON含\}污染，路由body可能非法；target_url直接连接依赖末尾/
+- 固定Host/外部上游schmidt-schaefer.com非必要且无说明
+- 无响应判断/清理，创建固定route覆盖潜在已有资源；大量Valentines模板噪声
+
+### 操作风险与资料使用
+
+- 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/DC2aFjVBEyHrUE63SWJm2g)

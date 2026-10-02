@@ -1,6 +1,42 @@
 ---
 source: "Threekiii/Awesome-POC"
+product: "YApi / 项目Token与after_script"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "YApi NoSQL注入导致远程命令执行漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：<1.12.0、实验1.10.2，至少存在项目与相关测试数据；Node版本和mock沙箱条件需锁"
+side_effects: "未执行；本文需注意的操作影响：清理不可靠且有业务执行副作用；update_project替换after_script后无try/finally，网络/解析异常会留下脚本；clear_project结果未检查；find_col直接运行自动测试会向项目目标发请求"
+source_status: "unknown"
+id: "vw-4807513ee268354d614068d7"
+entity_id: "ve-4807513ee268354d614068d7"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：&lt;1.12.0、实验1.10.2，至少存在项目与相关测试数据；Node版本和mock沙箱条件需锁
+
+代码与实验材料：392行完整Python/AES/NoSQL逐字符枚举/项目改写/自动测试代码，全读未运行
+
+来源证据范围：不可变官方commit和Vulhub原始PoC链接
+
+- **操作与副作用边界（1）**：清理不可靠且有业务执行副作用；依据：update_project替换after_script后无try/finally，网络/解析异常会留下脚本；clear_project结果未检查；find_col直接运行自动测试会向项目目标发请求。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+- **结论使用边界（2）**：摘要误称任意Mock脚本；依据：实际修改project.after_script并run_auto_test，需区分mock与自动化测试执行面。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **结论使用边界（3）**：脚本成功/枚举判据不足；依据：brute_token仅errcode400且固定20位，无本轮候选时仍继续；find_col为generator，if not col_ids永不检测空结果。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **结论使用边界（4）**：目标路径和数据范围写死；依据：urljoin以绝对/api丢应用前缀，owner/collection仅1–199，多请求无timeout；logger可能输出token/项目数据。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # YApi NoSQL注入导致远程命令执行漏洞
 

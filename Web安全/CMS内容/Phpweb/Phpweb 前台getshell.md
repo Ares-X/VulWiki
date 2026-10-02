@@ -1,6 +1,38 @@
 ---
 source: "hatch 补库批 20260928"
+product: "Phpweb<=2.0.35"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "Phpweb 前台getshell"
+prerequisites: "来源所述条件，未列明部分仍待核：post.php公开返回appcode、appfile校验可伪造；上传目录PHP执行"
+side_effects: "未执行；本文需注意的操作影响：脚本依赖headers.txt/datas.txt外部包且固定mstir.php，无独立执行验证；称OK成功只上传不等同RCE"
+source_status: "unknown"
+id: "vw-fa0dab434f68014171fb5a59"
+entity_id: "ve-fa0dab434f68014171fb5a59"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：post.php公开返回appcode、appfile校验可伪造；上传目录PHP执行
+
+- **结论使用边界（1）**：curl -H act=appcode是header不是文中要求POST字段，方法与描述错。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **结论使用边界（2）**：展示初值/终值疑非32位且HTML m值与上方终值不同，链中校验值无法对应。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **结论使用边界（3）**：Python if{gs.text==OK}创建非空集合总为真，所有响应都会报getshell成功，明确检测逻辑错误。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **结论使用边界（4）**：脚本依赖headers.txt/datas.txt外部包且固定mstir.php，无独立执行验证；称OK成功只上传不等同RCE。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Phpweb 前台getshell
 

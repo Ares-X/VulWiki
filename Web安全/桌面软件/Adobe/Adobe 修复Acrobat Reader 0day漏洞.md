@@ -1,8 +1,67 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2024-41869"
+identifier_role: "primary"
+primary_identifiers: "CVE-2024-41869"
+referenced_identifiers: "CVE-2022-24086"
+identifier_status: "unknown"
+title: "Adobe 修复Acrobat Reader 0day漏洞"
+product: "Adobe Acrobat / Acrobat Reader"
+record_type: "advisory"
+document_type: "Acrobat补丁绕过/PoC新闻"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "用户打开特制PDF并交互对话框；8月补丁不完整、9月再修的报道，具体受影响/修复版本未列"
+side_effects: "正文明确公开样本仅崩溃、没有恶意payload，RCE为漏洞潜在能力，不能标题PoC让人误以为已武器化或在野恶意执行"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Adobe/Adobe%20%E4%BF%AE%E5%A4%8DAcrobat%20Reader%200day%E6%BC%8F%E6%B4%9E.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+source_url: "https://www.bleepingcomputer.com/news/security/adobe-fixes-acrobat-reader-zero-day-with-public-poc-exploit/"
+id: "vw-49b4dc7e8923be5cffd91962"
+entity_id: "ve-49b4dc7e8923be5cffd91962"
+schema_version: "1"
 ---
 
-#  Adobe 修复Acrobat Reader 0day漏洞   
+# Adobe 修复Acrobat Reader 0day漏洞
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Adobe Acrobat / Acrobat Reader
+- 文献类型：Acrobat补丁绕过/PoC新闻
+- 版本、权限及部署边界：用户打开特制PDF并交互对话框；8月补丁不完整、9月再修的报道，具体受影响/修复版本未列
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. frontmatter缺主41869，应补；推荐24086不应误抽
+2. 正文明确公开样本仅崩溃、没有恶意payload，RCE为漏洞潜在能力，不能标题PoC让人误以为已武器化或在野恶意执行
+3. 6月PoC、8月未完整修复、昨天9月补丁需转换明确日期/版本，原研究待发布属历史状态
+4. BleepingComputer原文可追溯，但缺Adobe正式公告/版本及EXPMON直接分析/样本来源，图片未视检
+5. 大段沙箱产品宣言/本地产品广告/推荐可精简，保留原作者与译者归属
+
+### 操作风险
+
+正文明确公开样本仅崩溃、没有恶意payload，RCE为漏洞潜在能力，不能标题PoC让人误以为已武器化或在野恶意执行
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://www.bleepingcomputer.com/news/security/adobe-fixes-acrobat-reader-zero-day-with-public-poc-exploit/>
+- 原文参考链接（未重新核验）：<https://codesafe.qianxin.com>
+- 原文参考链接（未重新核验）：<https://oss.qianxin.com>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzI2NTg4OTc5Nw==&mid=2247517855&idx=2&sn=5ea5455de3ad27bd027a363a4b11a95a&chksm=ea94b7f5dde33ee34cdfbb1253dab1a695f4138beb5de5e782328ecbbfdee7df7e80594a5429&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzI2NTg4OTc5Nw==&mid=2247517643&idx=1&sn=83e85b6b9bf3a9f0cf0c1843c9589950&chksm=ea94b4a1dde33db74b2b9c5ff5da439c9a2169fcab51d215bdc495affe02787d31ab6bcf7b98&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzI2NTg4OTc5Nw==&mid=2247517437&idx=1&sn=561e8ad37f584120784a95e9ad1c33f4&chksm=ea94b597dde33c810a56421fadb562f0a4fbab00589ec4d11a1fb82d61b17dffcab841d4546a&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzI2NTg4OTc5Nw==&mid=2247515947&idx=3&sn=76c36938bf1b7401950fc62730020638&chksm=ea948e41dde30757c6826cbbaeba673c04d191b437bd8a20532e2a13614e94562772ade4c057&scene=21#wechat_redirect>
+
+### 归档技术正文
+
 Lawrence Abrams  代码卫士   2024-09-12 17:35  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

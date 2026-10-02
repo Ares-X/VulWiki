@@ -1,8 +1,46 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "SmarterMail 认证绕过新漏洞被用于劫持管理员账号"
+product: "SmarterMail"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2026-23760"
+referenced_identifiers: "CVE-2025-52691"
+identifier_role: "primary"
+cve: "CVE-2026-23760"
+prerequisites: "Known/guessed admin username; fixed9511 stated; no normal-user reset"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-e9b024c47b39c1499d13632d"
+entity_id: "ve-e9b024c47b39c1499d13632d"
+schema_version: "1"
 ---
 
-#  SmarterMail 认证绕过新漏洞被用于劫持管理员账号  
+# SmarterMail 认证绕过新漏洞被用于劫持管理员账号
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：Known/guessed admin username; fixed9511 stated; no normal-user reset
+- 证据范围：Same force-reset-password issue as mail40, with distinct discovery/exploitation timeline
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- Preserve 'no CVE' as datedJan23 historical state; current identity should link later23760 after primary verification
+- Do not misclassify as52691 merely because it is only CVE in body
+- Spelling SmaterMail and '自由' likely mistranslation
+- Large ad/recommendation/footer and blank-line noise
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 Bill Toulas
                     Bill Toulas  代码卫士   2026-01-23 10:36  
   

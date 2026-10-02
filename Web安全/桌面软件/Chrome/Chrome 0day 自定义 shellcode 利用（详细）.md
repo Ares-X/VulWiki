@@ -1,8 +1,61 @@
 ---
 source: "MrWQ/vulnerability-paper"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "Chrome 0day 自定义 shellcode 利用（详细）"
+product: "Google Chrome V8"
+record_type: "vulnerability"
+document_type: "历史禁用沙箱利用演示"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "Windows10x64 Chrome89.0.4389.128；显式-no-sandbox、x86-64及固定堆布局/偏移"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Chrome/Chrome%200day%20%E8%87%AA%E5%AE%9A%E4%B9%89%20shellcode%20%E5%88%A9%E7%94%A8%EF%BC%88%E8%AF%A6%E7%BB%86%EF%BC%89.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+source_url: "https://mp.weixin.qq.com/s/870vThUuYS0CKSU06uzADg"
+id: "vw-3dcb69cd472f0ec8e256e0f9"
+entity_id: "ve-3dcb69cd472f0ec8e256e0f9"
+schema_version: "1"
 ---
 
 # Chrome 0day 自定义 shellcode 利用（详细）
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Google Chrome V8
+- 文献类型：历史禁用沙箱利用演示
+- 版本、权限及部署边界：Windows10x64 Chrome89.0.4389.128；显式-no-sandbox、x86-64及固定堆布局/偏移
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 标题0day缺CVE和原始披露日期，测试旧版不能称当前Chrome漏洞；未给首修版本
+2. 明确禁用沙箱，只演示渲染器代码执行不能称绕过默认Chrome防护；快捷方式另需用户执行
+3. Wasm线性内存与JIT代码页混为均RWX，解释需按历史V8实现限定
+4. shellcode为占位、偏移硬编码、缺原PoC来源/提交，不能直接称完整通用复现；不需补造载荷
+5. 保留原公众号与测试版本，图片结果未视检；关联其他旧Chrome无沙箱演示待逐文比对
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://mp.weixin.qq.com/s/870vThUuYS0CKSU06uzADg>
+- 原文参考链接（未重新核验）：<http://ksria.com/simpread/>
+- 原文参考链接（未重新核验）：<https://github.com/MrWQ/vulnerability-paper>
+
+### 归档技术正文
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/870vThUuYS0CKSU06uzADg)

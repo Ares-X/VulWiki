@@ -1,8 +1,52 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-62e681ca1695a97a10ad3134"
+entity_id: "ve-62e681ca1695a97a10ad3134"
+schema_version: "1"
+title: "思科 BroadWorks 受严重的认证绕过漏洞影响"
+product: "Cisco BroadWorks Application Delivery / Xtended Services Platform"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2023-20238"
+referenced_identifiers: ""
+prerequisites: "须激活列举的应用之一；知合法用户ID即可伪造SSO，不等于已有凭据；有23.0/RI修复信息"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/Cisco/%E6%80%9D%E7%A7%91%20BroadWorks%20%E5%8F%97%E4%B8%A5%E9%87%8D%E7%9A%84%E8%AE%A4%E8%AF%81%E7%BB%95%E8%BF%87%E6%BC%8F%E6%B4%9E%E5%BD%B1%E5%93%8D.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 #  思科 BroadWorks 受严重的认证绕过漏洞影响   
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Cisco BroadWorks Application Delivery / Xtended Services Platform
+- 本文讨论：CVE-2023-20238
+- 版本、权限与配置前提：须激活列举的应用之一；知合法用户ID即可伪造SSO，不等于已有凭据；有23.0/RI修复信息
+- 资料类型：新闻通告；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 无官方公告直链，仅BleepingComputer链接；广告/推荐阅读污染
+- 自由执行命令应明确是伪造身份的应用权限，本文没有OS RCE证据
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 伪造账户能力和官方版本范围待核验
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 Bill Toulas  代码卫士   2023-09-08 15:15  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

@@ -1,9 +1,64 @@
 ---
-cve: "CVE-2024-44133"
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2024-44133"
+identifier_role: "primary"
+primary_identifiers: "CVE-2024-44133"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "macOS 用户： Safari严重安全漏洞可致摄像头、麦克风数据被捕获"
+product: "macOS TCC与Safari偏好设置"
+record_type: "advisory"
+document_type: "隐私保护绕过新闻"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "本地攻击者已能执行dscl并修改用户配置；文中2024-09-16 Sequoia更新修复"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/macOS/macOS%20%E7%94%A8%E6%88%B7%EF%BC%9A%20Safari%E4%B8%A5%E9%87%8D%E5%AE%89%E5%85%A8%E6%BC%8F%E6%B4%9E%E5%8F%AF%E8%87%B4%E6%91%84%E5%83%8F%E5%A4%B4%E3%80%81%E9%BA%A6%E5%85%8B%E9%A3%8E%E6%95%B0%E6%8D%AE%E8%A2%AB%E6%8D%95%E8%8E%B7.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-9759745fc37ed76a931b2716"
+entity_id: "ve-9759745fc37ed76a931b2716"
+schema_version: "1"
 ---
 
-#  macOS 用户注意： Safari严重安全漏洞可致摄像头、麦克风数据被捕获   
+# macOS 用户： Safari严重安全漏洞可致摄像头、麦克风数据被捕获
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：macOS TCC与Safari偏好设置
+- 文献类型：隐私保护绕过新闻
+- 版本、权限及部署边界：本地攻击者已能执行dscl并修改用户配置；文中2024-09-16 Sequoia更新修复
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 标题容易理解为远程网页零点击摄像头攻击，实际需本地执行与改主目录权限，需显著前置
+2. 无TCC权限不等于无其他权限，dscl身份验证与用户类型条件未交代
+3. 保留明确AdLoad只是相似活动、未证实直接利用的限定，不应抽为在野确认
+4. 缺精确修复版本/旧分支与Microsoft原报告；只有DarkReading转载
+5. 大量推荐表格和广告应移除，Safari组件与系统TCC实体关联
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://www.darkreading.com/vulnerabilities-threats/macos-safari-exploit-camera-mic-browser-data>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzA5ODA0NDE2MA==&mid=2649787055&idx=1&sn=5fbaf89659bf338d051cb13fa1bf9923&chksm=8893bac0bfe433d624ae16f6ea2aac5b4e7f989baf93d651e5c5725c4a3df924fd0e735b0fb4&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzA5ODA0NDE2MA==&mid=2649787042&idx=1&sn=9ff9664f254d1077000edf4df5aeb18b&chksm=8893bacdbfe433dbddfdff5e5b5ff909029b141c9c1b7ddb9543066891e251c28569991008e3&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzA5ODA0NDE2MA==&mid=2649787034&idx=1&sn=601d3128dda5bfa5e68dd68383a041e6&chksm=8893baf5bfe433e3ec3f75a4834085c3e9714c020268cd733fcb4f2de2390a547ffe654f9133&scene=21#wechat_redirect>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
  安全客   2024-10-21 15:21  
   
 微软近期曝光了一项严重的安全漏洞，涉及苹果的透明度、同意和控制（TCC）框架。  
@@ -73,4 +128,4 @@ https://www.darkreading.com/vulnerabilities-threats/macos-safari-exploit-camera-
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

@@ -1,8 +1,53 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-8f87ec31369080d3cef2da2b"
+entity_id: "ve-8f87ec31369080d3cef2da2b"
+schema_version: "1"
+title: "优倍快：注意这个CVSS满分的 UniFi OS 漏洞"
+product: "UniFi Connect Application及其他UniFi应用/OS"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2026-50746"
+referenced_identifiers: ""
+prerequisites: "Connect≤3.4.16，修复≥3.4.20；网络可达；其他版本未列"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/%E4%BC%98%E5%80%8D%E5%BF%AB/%E4%BC%98%E5%80%8D%E5%BF%AB%EF%BC%9A%E8%BF%99%E4%B8%AACVSS%E6%BB%A1%E5%88%86%E7%9A%84%20UniFi%20OS%20%E6%BC%8F%E6%B4%9E.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 #  优倍快：注意这个CVSS满分的 UniFi OS 漏洞  
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：UniFi Connect Application及其他UniFi应用/OS
+- 本文讨论：CVE-2026-50746主；50747/50748/54400/54402/55115/55116同批引用
+- 版本、权限与配置前提：Connect≤3.4.16，修复≥3.4.20；网络可达；其他版本未列
+- 资料类型：UniFi多产品补丁新闻；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 标题笼统UniFi OS而核心是Connect应用，需产品层级区分并统一Ubiquiti/优倍快分类
+- 元数据未录CVE；六其他漏洞未做产品一一映射；缺官方直链
+- 曝光数量局限已说明，应保持，不当作已确认影响数量
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 七CVE准确映射与历史KEV/利用状态待核验
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 Sergiu Gatlan
                     Sergiu Gatlan  代码卫士   2026-07-09 06:57  
   

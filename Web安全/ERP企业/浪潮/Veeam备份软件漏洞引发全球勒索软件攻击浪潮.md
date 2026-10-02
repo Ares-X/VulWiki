@@ -1,13 +1,56 @@
 ---
-cve: "CVE-2023-275327"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Veeam Backup & Replication 凭据泄露利用与勒索事件新闻"
+product: "Veeam Backup & Replication"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2023-27532"
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "修复2023-03，build缺"
+prerequisites: "源述不明；事件初始SSH不等已证漏洞入口"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+identifier_role: "primary"
+identifier_note: "来源编号存在未核实/冲突，未作为确认主编号：CVE-2023-275327"
+source_status: "unknown"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E6%B5%AA%E6%BD%AE/Veeam%E5%A4%87%E4%BB%BD%E8%BD%AF%E4%BB%B6%E6%BC%8F%E6%B4%9E%E5%BC%95%E5%8F%91%E5%85%A8%E7%90%83%E5%8B%92%E7%B4%A2%E8%BD%AF%E4%BB%B6%E6%94%BB%E5%87%BB%E6%B5%AA%E6%BD%AE.md"
+category_recommendation: "备份软件 / Veeam"
+id: "vw-e77ca69db9853099a27b86ed"
+entity_id: "ve-e77ca69db9853099a27b86ed"
+schema_version: "1"
 ---
 
-#  Veeam备份软件漏洞引发全球勒索软件攻击浪潮   
+# Veeam Backup & Replication 凭据泄露利用与勒索事件新闻
+
+## 条目说明
+
+- 对象与具体问题：Veeam Backup & Replication；凭据泄露利用与勒索事件新闻
+- 版本、配置及部署条件：修复2023-03，build缺
+- 认证与权限前提：源述不明；事件初始SSH不等已证漏洞入口
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+- 编号待核：CVE-2023-275327。未核实的编号不作为本条确认主编号。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 已按原文中的具体接口、源码或上下文直接更正产品、根因或修复说明；未知版本和未经证明的影响仍明确保留为待核实。
+- Akira案例漏洞利用为专家认为，不能升级成确认因果；FIN7/Estate不同事件分开
+- 缺BlackBerry/GroupIB官方来源链接，推广表格噪声多
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
  信息安全大事件   2024-07-16 22:51  
   
 漏洞   
-CVE-2023-275327（CVSS 评分为 7.5）会影响 Veeam Backup & Replication 组件。攻击者可利用此问题获取存储在配置数据库中的加密凭据，从而可能导致访问备份基础结构主机。  
+CVE-2023-27532（原首段编号多一位，按同文两处编号纠正；映射待原厂确认。CVSS 评分为 7.5）会影响 Veeam Backup & Replication 组件。攻击者可利用此问题获取存储在配置数据库中的加密凭据，从而可能导致访问备份基础结构主机。  
   
 该漏洞已于   
 2023 年 3 月得到解决，不久后，该问题的PoC 漏洞利用代码被公开发布。  

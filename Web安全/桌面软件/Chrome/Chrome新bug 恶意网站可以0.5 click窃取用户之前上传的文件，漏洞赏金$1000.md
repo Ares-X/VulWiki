@@ -1,9 +1,61 @@
 ---
-cve: "CVE-2026-2322"
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2026-2322"
+identifier_role: "primary"
+primary_identifiers: "CVE-2026-2322"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "Chrome新bug 恶意网站可以0.5 click窃取用户之前上传的文件，漏洞赏金$1000"
+product: "Chrome Linux文件选择器"
+record_type: "advisory"
+document_type: "漏洞新闻与交互攻击说明"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "诱导长按Enter；Linux/Ubuntu文件选择器近期文件与焦点状态；文称145.0.7632.45修复"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Chrome/Chrome%E6%96%B0bug%20%E6%81%B6%E6%84%8F%E7%BD%91%E7%AB%99%E5%8F%AF%E4%BB%A50.5%20click%E7%AA%83%E5%8F%96%E7%94%A8%E6%88%B7%E4%B9%8B%E5%89%8D%E4%B8%8A%E4%BC%A0%E7%9A%84%E6%96%87%E4%BB%B6%EF%BC%8C%E6%BC%8F%E6%B4%9E%E8%B5%8F%E9%87%91%241000.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-8b0c2c8cbb97e034b50964e0"
+entity_id: "ve-8b0c2c8cbb97e034b50964e0"
+schema_version: "1"
 ---
 
-#  Chrome新"bug": 恶意网站可以0.5 click窃取用户之前上传的文件，漏洞赏金$1000  
+# Chrome新bug 恶意网站可以0.5 click窃取用户之前上传的文件，漏洞赏金$1000
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Chrome Linux文件选择器
+- 文献类型：漏洞新闻与交互攻击说明
+- 版本、权限及部署边界：诱导长按Enter；Linux/Ubuntu文件选择器近期文件与焦点状态；文称145.0.7632.45修复
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 0.5click是非正式名称，不能改写成精确0.5秒或零交互；键盘重复确认不等于鼠标双击，真实交互时序须原报告确认
+2. 从文件选择器近期文件推广为能调取所有曾在其他网站上传文件过宽，缓存、默认选择及文件仍存在等条件未交代
+3. 明确Linux受影响却理论推断其他OS风险，需标未知而不放入确认范围
+4. 前称低风险后Google Medium，评级归属混乱；有Chromiumissue直接来源，缺正式版本公告/RedHat链接
+5. input HTML标签未转义可能被渲染吞掉；删除社区推广，新闻不需伪造PoC
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://issues.chromium.org/issues/470928605>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 原创 助力行业的
                     助力行业的  李白你好   2026-04-19 09:09  
   
@@ -100,4 +152,4 @@ https://issues.chromium.org/issues/470928605
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

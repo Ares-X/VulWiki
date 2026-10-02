@@ -1,7 +1,41 @@
 ---
 cve: "CVE-2025-4517"
 source: "gelusus/wxvl 公众号漏洞文库"
+product: "Python tarfile/解压过滤器绕过"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2025-4517"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "Python标准库tarfile模块存在任意文件写入高危漏洞，PoC已公开"
+prerequisites: "来源所述条件，未列明部分仍待核：称Python>=3.12，未考虑旧分支回补filter支持；没有任何修复patch号"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-fd8ffcc7ffd3e1e4bb4f7e7c"
+entity_id: "ve-fd8ffcc7ffd3e1e4bb4f7e7c"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：称Python&gt;=3.12，未考虑旧分支回补filter支持；没有任何修复patch号
+
+代码与实验材料：只构造普通../../outside.txt，未证明绕过data/tar过滤；代码中孤立br导致NameError，命令和路径叙述不一致
+
+来源证据范围：SecurityOnline经FreeBuf再转载，无Python公告或补丁
+
+- **证据待核（1）**：PoC没有展示声称的安全过滤器绕过；依据：普通../就是data/tar应阻止的路径，没有额外绕过构造、错误响应或成功证据，不能当4517已复现。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **证据待核（2）**：推荐缓解不完整；依据：abspath前缀只检查member.name，不解析符号链接/硬链接或提取过程变化，不能证明阻断该缺陷。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **事实待核（3）**：代码和版本严重不完整；依据：三段Python都含孤立br；未列修复版本；tar命令仍evil.txt却称outside.txt，两个..却说三级父目录。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 #  Python标准库tarfile模块存在任意文件写入高危漏洞，PoC已公开  
  网络安全与人工智能研究中心   2025-06-28 02:39  

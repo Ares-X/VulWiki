@@ -1,9 +1,54 @@
 ---
 cve: "CVE-2025-52436"
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-9585449afe84ffc9bf272892"
+entity_id: "ve-9585449afe84ffc9bf272892"
+schema_version: "1"
+title: "飞塔 FortiSandbox XSS漏洞允许攻击者执行任意命令"
+product: "FortiSandbox GUI/PaaS"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2025-52436"
+referenced_identifiers: ""
+prerequisites: "需要受害者交互；列5.0.0–1、4.4.0–7等"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/%E9%A3%9E%E5%A1%94%20FortiSandbox/%E9%A3%9E%E5%A1%94%20FortiSandbox%20XSS%E6%BC%8F%E6%B4%9E%E5%85%81%E8%AE%B8%E6%94%BB%E5%87%BB%E8%80%85%E6%89%A7%E8%A1%8C%E4%BB%BB%E6%84%8F%E5%91%BD%E4%BB%A4.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 #  飞塔 FortiSandbox XSS漏洞允许攻击者执行任意命令  
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：FortiSandbox GUI/PaaS
+- 本文讨论：CVE-2025-52436 / FG-IR-25-093
+- 版本、权限与配置前提：需要受害者交互；列5.0.0–1、4.4.0–7等
+- 资料类型：XSS新闻预警；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 从反射XSS直接推出系统RCE/完整命令行控制，没有任何利用链证据
+- 表修复5.0.2，后文PaaS5.0.5，部署类型/版本关系未交代
+- 无官方PSIRT链接，攻者未认证不等于无需受害者认证/交互
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 官方影响是脚本或OS命令、PaaS固定版本和CVSS待核验
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
  暗镜   2026-02-11 00:44  
   
 Fortinet 披露了其 FortiSandbox 平台中一个高危跨站脚本 (XSS) 漏洞，编号为 CVE-2025-52436 (FG-IR-25-093)，该漏洞允许未经身份验证的攻击者在受影响的系统上执行任意命令。  

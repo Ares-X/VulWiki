@@ -1,8 +1,62 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2026-31635"
+identifier_role: "primary"
+primary_identifiers: "CVE-2026-31635"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "DirtyDecrypt Linux内核漏洞PoC利用代码公开"
+product: "Linux RxGK / RxRPC"
+record_type: "advisory"
+document_type: "漏洞发布新闻"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "CONFIG_RXGK=y/m；本地非特权，声称滚动发行版易受影响、稳定发行版默认禁用"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/DirtyDecrypt%20Linux%E5%86%85%E6%A0%B8%E6%BC%8F%E6%B4%9EPoC%E5%88%A9%E7%94%A8%E4%BB%A3%E7%A0%81%E5%85%AC%E5%BC%80.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-c1f882de446c7db4e844d578"
+entity_id: "ve-c1f882de446c7db4e844d578"
+schema_version: "1"
 ---
 
-#  DirtyDecrypt Linux内核漏洞PoC利用代码公开  
+# DirtyDecrypt Linux内核漏洞PoC利用代码公开
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Linux RxGK / RxRPC
+- 文献类型：漏洞发布新闻
+- 版本、权限及部署边界：CONFIG_RXGK=y/m；本地非特权，声称滚动发行版易受影响、稳定发行版默认禁用
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. frontmatter漏正文主CVE；DirtyDecrypt/DirtyCBC别名需与DirtyFrag RxRPC编号区分，不同函数不同漏洞不能只按Dirty合并
+2. 标题PoC公开但正文只链媒体，没有PoC或上游修复commit；4月25日仅日期不能确定已修复各分支
+3. 发行版默认配置表述需按版本核验；/proc/config.gz并非所有系统都有，缺失不代表禁用
+4. 黑名单对内建=y无效且esp4/esp6与主RxGK漏洞不同，需解释跨家族缓解范围；allowPrivilegeEscalation:false不能独立阻止内核漏洞逃逸
+5. 完整宿主root/所有密钥是环境依赖的链式后果；新闻可保留但不能声称本地已验证
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://cybersecuritynews.com/dirtydecrypt-linux-kernel-vulnerability/>
+- 原文参考链接（未重新核验）：<https://mp.weixin.qq.com/s?__biz=MjM5NjA0NjgyMA==&mid=2651337950&idx=1&sn=12d64571335d50c1b93389447dfb8ef1&scene=21#wechat_redirect>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
  FreeBuf   2026-05-20 10:00  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/qq5rfBadR38jUokdlWSNlAjmEsO1rzv3srXShFRuTKBGDwkj4gvYy34iajd6zQiaKl77Wsy9mjC0xBCRg0YgDIWg/640?wx_fmt=gif "")  
@@ -98,4 +152,4 @@ https://cybersecuritynews.com/dirtydecrypt-linux-kernel-vulnerability/
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

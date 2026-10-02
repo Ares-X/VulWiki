@@ -1,6 +1,38 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+product: "Bamboo Data Center/Server"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2024-21689"
+referenced_identifiers: "CVE-2023-22527"
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "Atlassian Bamboo Data Center and Server中存在RCE漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：Says9.1.0–9.6.0, fixes9.2.17/9.6.5; authenticated attacker"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-f4aa525456bb1fe3925e6788"
+entity_id: "ve-f4aa525456bb1fe3925e6788"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：Says9.1.0–9.6.0, fixes9.2.17/9.6.5; authenticated attacker
+
+代码与实验材料：No technical mechanism or PoC; news not reproduction
+
+来源证据范围：SecurityOnline source link, primary Atlassian advisory absent
+
+- **事实待核（1）**：Single broad version interval inconsistent with multi-branch patching; obtain exact branch ranges。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **来源与引用处置（2）**：Missing CVE metadata and excessive unrelated promotional footer。保留这部分来源材料并与技术结论分开；其引用或宣传内容不能补足本文漏洞的证据。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 #  Atlassian Bamboo Data Center and Server中存在RCE漏洞   
 DO SON  代码卫士   2024-08-21 18:08  

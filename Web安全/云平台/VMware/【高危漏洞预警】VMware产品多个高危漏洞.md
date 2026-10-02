@@ -1,9 +1,49 @@
 ---
-cve: "CVE-2025-41236"
+cve: "CVE-2025-41236; CVE-2025-41237; CVE-2025-41238"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "【高危漏洞预警】VMware产品多个高危漏洞"
+product: "VMware ESXi/Workstation/Fusion"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2025-41236; CVE-2025-41237; CVE-2025-41238"
+referenced_identifiers: ""
+identifier_role: "primary"
+source_status: "unknown"
+prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-c68f750de20a4d560f8135ed"
+entity_id: "ve-c68f750de20a4d560f8135ed"
+schema_version: "1"
 ---
 
-#  【高危漏洞预警】VMware产品多个高危漏洞  
+# 【高危漏洞预警】VMware产品多个高危漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+
+### 本次正文校订
+
+- 按该篇完整正文及逐篇审阅区分主问题与背景编号，补全结构化主标识；不把标识归属校订等同运行复现。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 元数据只有41236漏41237/41238
+- ESXi7.0U3n/U3b及Workstation17/16与2025修复公告映射高度可疑，须对VMSA2025-0013矩阵核实
+- VMware拼写混西里尔同形字符影响搜索
+- 监视资源异常不能作为漏洞存在性检测
+- 缺各CVE具体固定版本与来宾管理员前提
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 cexlife  飓风网络安全   2025-07-17 12:44  
   
 ![](https://mmbiz.qpic.cn/mmbiz_png/ibhQpAia4xu01SK4zK61JZc8IMZsTsmbj6o5aM6Ag42ymzE7FckgbsLDDTZaZ9FSoiaKh2Dra9XspHMjP1RzdSHfw/640?wx_fmt=png&from=appmsg "")  

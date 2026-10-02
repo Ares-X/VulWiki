@@ -1,8 +1,64 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2026-90894"
+identifier_role: "primary"
+primary_identifiers: "CVE-2026-90894"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "Parallels Desktop 本地提权漏洞 ParaShells：Intel Mac 永久躺枪"
+product: "Parallels Desktop prl_disp_service"
+record_type: "advisory"
+document_type: "本地提权及维护政策新闻"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "本地低权限账户、服务运行、InstallAppliance可调用；文称26.4.0 AppleSilicon实测，27.0.0修复"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Parallels%20Desktop/Parallels%20Desktop%20%E6%9C%AC%E5%9C%B0%E6%8F%90%E6%9D%83%E6%BC%8F%E6%B4%9E%20ParaShells%EF%BC%9AIntel%20Mac%20%E6%B0%B8%E4%B9%85%E8%BA%BA%E6%9E%AA.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-a9fd937d50391d974ad70936"
+entity_id: "ve-a9fd937d50391d974ad70936"
+schema_version: "1"
 ---
 
-#  Parallels Desktop 本地提权漏洞 ParaShells：Intel Mac 永久躺枪  
+# Parallels Desktop 本地提权漏洞 ParaShells：Intel Mac 永久躺枪
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Parallels Desktop prl_disp_service
+- 文献类型：本地提权及维护政策新闻
+- 版本、权限及部署边界：本地低权限账户、服务运行、InstallAppliance可调用；文称26.4.0 AppleSilicon实测，27.0.0修复
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 标题Intel永久无补丁与正文官方承诺未来安全维护更新、只是尚未见修复相冲突；不能由当前缺补丁推出永久弃用
+2. AppleSilicon实测直接外推所有Intel26.x能root需版本/代码路径验证；世界可写socket与内核peer凭据认证本身不自动构成漏洞
+3. 核心QProcess split后的tar参数注入应与shell命令解释区分；需目标tar实现/选项及应用包格式证据
+4. 无JFrog报告、厂商公告/版本历史/SystemRequirements链接，只有无关公众号链接；全部新版本/硬件支持断言需原始核验
+5. 只读版本+socket能筛暴露而非确认漏洞，不能把0777当充分条件；已入侵不会被更新自动清理这一界限有价值
+6. 用个例推所有macOS第三方扩展低标准属无证据概括；2014到2026并非十年，情绪化措辞和配图重复清理
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://mp.weixin.qq.com/s?__biz=MzAxMjE3ODU3MQ==&mid=2650621549&idx=1&sn=21c4b072726d2387d562109ada6b9bbb&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<https://mp.weixin.qq.com/s?__biz=MzAxMjE3ODU3MQ==&mid=2650621944&idx=1&sn=3cc6dc9876a20466d4ec3634deb80220&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<https://mp.weixin.qq.com/s?__biz=MzAxMjE3ODU3MQ==&mid=2650622065&idx=1&sn=09f8ae84c06d4331e71c277b177ae701&scene=21#wechat_redirect>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 原创 杜明
                     杜明  黑白之道   2026-09-17 00:35  
   
@@ -101,4 +157,4 @@ ParaShells 不是那种让人惊掉下巴的 0day——它甚至有点"老套"�
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

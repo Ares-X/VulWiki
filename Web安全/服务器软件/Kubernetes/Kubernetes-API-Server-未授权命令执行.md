@@ -1,9 +1,54 @@
 ---
 version: "- --insecure-port=8080"
 source: "Threekiii/Vulnerability-Wiki"
+title: "Kubernetes API Server 未授权命令执行"
+product: "Kubernetes API Server"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "旧版本开启insecure端口，或匿名认证启用且绑定cluster-admin；不是默认6443暴露即漏洞"
+affected_versions: "- --insecure-port=8080"
+source_status: "unknown"
+side_effects: "含计划任务、启动项或 SSH 授权文件写入：会改变后续执行或登录行为。测试前备份原文件，结束后恢复原内容、权限与属主，不覆盖生产文件。; 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。"
+id: "vw-7616b8c1f5a7219c23ea4a24"
+entity_id: "ve-7616b8c1f5a7219c23ea4a24"
+schema_version: "1"
 ---
 
 # Kubernetes API Server 未授权命令执行
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：旧版本开启insecure端口，或匿名认证启用且绑定cluster-admin；不是默认6443暴露即漏洞
+- 证据范围：区分两种配置和后续hostPath控制，但实验设置需要管理员主动弱化，不能称产品通用RCE
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- version错误抽成配置参数
+- 先称高版本删除配置所以重新添加，后又说明>=1.20无法开启，自相矛盾
+- systemctl restart kubectl错误，kubectl不是此服务
+- cluster-admin是ClusterRole非用户组，-it也不是Pod名字参数
+- 只列kube-system secrets不等于所有Token；新版本长期token机制不同
+- cron例只写当前root文件，未写入所称宿主cron路径
+- 写authorized_keys用>覆盖已有授权且无回滚说明
+
+### 操作风险与资料使用
+
+- 含计划任务、启动项或 SSH 授权文件写入：会改变后续执行或登录行为。测试前备份原文件，结束后恢复原内容、权限与属主，不覆盖生产文件。
+- 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 ## 漏洞描述
 

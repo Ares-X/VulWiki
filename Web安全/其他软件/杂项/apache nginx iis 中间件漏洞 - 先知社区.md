@@ -1,9 +1,68 @@
 ---
-version: "location ~ \\.php$ {"
 source: "MrWQ/vulnerability-paper"
+cve: "CVE-2017-7269"
+identifier_role: "primary"
+primary_identifiers: "CVE-2017-7269"
+referenced_identifiers: "CVE-2016-9964"
+identifier_status: "unknown"
+title: "apache nginx iis 中间件漏洞 - 先知社区"
+product: "Apache HTTPD、Nginx、IIS与PHP运行模式"
+record_type: "roundup"
+document_type: "中间件漏洞与配置风险合集"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "多独立漏洞/误配置，具体需要模块、AllowOverride、PHP handler/FastCGI、WebDAV写权等；不是统一版本范围"
+side_effects: "version字段抽取Nginx配置代码，需删除；按产品/机制拆多记录，7269只是IIS一节不能覆盖全部"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/apache%20nginx%20iis%20%E4%B8%AD%E9%97%B4%E4%BB%B6%E6%BC%8F%E6%B4%9E%20-%20%E5%85%88%E7%9F%A5%E7%A4%BE%E5%8C%BA.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+version_unverified: "location ~ \\.php$ {"
+source_url: "https://xz.aliyun.com/t/8631"
+id: "vw-baf6a840f96bb4aa9531bb27"
+entity_id: "ve-baf6a840f96bb4aa9531bb27"
+schema_version: "1"
 ---
 
 # apache nginx iis 中间件漏洞 - 先知社区
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Apache HTTPD、Nginx、IIS与PHP运行模式
+- 文献类型：中间件漏洞与配置风险合集
+- 版本、权限及部署边界：多独立漏洞/误配置，具体需要模块、AllowOverride、PHP handler/FastCGI、WebDAV写权等；不是统一版本范围
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. version字段抽取Nginx配置代码，需删除；按产品/机制拆多记录，7269只是IIS一节不能覆盖全部
+2. mod_php每请求新进程错误，依MPM/已存worker；fastCGI管理器也非总由WebServer启动；TS/NTS与OS性能泛化
+3. .use.ini/.usr.ini均拼错.user.ini；防御<FileMatch>应核Apache实际FilesMatch语法；Windows示例加载Unix.so路径错位
+4. 删除security.limit_extensions行不等于禁用默认限制；AddType/AddHandler/SetHandler与模块和目录Override条件应分别列
+5. Options+Indexes无空格、FcgidWrapper缺引号/alias块缺闭合、base64解码示例却给明文PHP；配置不可照抄
+6. IIS短名阈值>9/>4不符8.3规则；禁新建短名不清除既有，升级.NET4必安全过度；后缀解析章节误粘404/400短名原因
+7. 保留作者仅.cer成功的负面结果，配置实验不是所有中间件通杀；原先知/资料可追溯，补厂商历史公告与准确修复
+
+### 操作风险
+
+version字段抽取Nginx配置代码，需删除；按产品/机制拆多记录，7269只是IIS一节不能覆盖全部
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://xz.aliyun.com/t/8631>
+- 原文参考链接（未重新核验）：<http://ksria.com/simpread/>
+- 原文参考链接（未重新核验）：<https://$host$uri>
+- 原文参考链接（未重新核验）：<https://www.leavesongs.com/PENETRATION/bottle-crlf-cve-2016-9964.html>
+- 原文参考链接（未重新核验）：<https://www.leavesongs.com/PENETRATION/Sina-CRLF-Injection.html>
+- 原文参考链接（未重新核验）：<https://github.com/zcgonvh/cve-2017-7269>
+
+### 归档技术正文
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [xz.aliyun.com](https://xz.aliyun.com/t/8631)

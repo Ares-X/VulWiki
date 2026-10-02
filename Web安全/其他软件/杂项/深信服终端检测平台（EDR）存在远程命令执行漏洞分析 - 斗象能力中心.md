@@ -1,8 +1,61 @@
 ---
 source: "MrWQ/vulnerability-paper"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "深信服终端检测平台（EDR）存在远程命令执行漏洞分析 - 斗象能力中心"
+product: "深信服EDR tool/log/c.php 变量覆盖及其他接口辨析"
+record_type: "analysis"
+document_type: "技术文章（细分类待核）"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "给受影响3.2.16/17/19及3.2.21修复与官方补丁入口；RCE1是否无认证路由前置未展示，原文与补丁来源精确"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/%E6%B7%B1%E4%BF%A1%E6%9C%8D%E7%BB%88%E7%AB%AF%E6%A3%80%E6%B5%8B%E5%B9%B3%E5%8F%B0%EF%BC%88EDR%EF%BC%89%E5%AD%98%E5%9C%A8%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90%20-%20%E6%96%97%E8%B1%A1%E8%83%BD%E5%8A%9B%E4%B8%AD%E5%BF%83.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+source_url: "https://blog.riskivy.com/%e6%b7%b1%e4%bf%a1%e6%9c%8d%e7%bb%88%e7%ab%af%e6%a3%80%e6%b5%8b%e5%b9%b3%e5%8f%b0%ef%bc%88edr%ef%bc%89%e5%ad%98%e5%9c%a8%e8%bf%9c%e7%a8%8b%e5%91%bd%e4%bb%a4%e6%89%a7%e8%a1%8c%e6%bc%8f%e6%b4%9e/"
+id: "vw-dbc69331b6e25fc50eafb15c"
+entity_id: "ve-dbc69331b6e25fc50eafb15c"
+schema_version: "1"
 ---
 
 # 深信服终端检测平台（EDR）存在远程命令执行漏洞分析 - 斗象能力中心
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：深信服EDR tool/log/c.php 变量覆盖及其他接口辨析
+- 文献类型：技术文章（细分类待核）
+- 版本、权限及部署边界：给受影响3.2.16/17/19及3.2.21修复与官方补丁入口；RCE1是否无认证路由前置未展示，原文与补丁来源精确
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 给受影响3.2.16/17/19及3.2.21修复与官方补丁入口
+2. 区分其余三个RCE需enable_dc_tool和文件读需登录/限定目录是有价值独立内容，不应合并成四个默认未授权RCE
+3. 源码/PoC下划线和数组括号Markdown反斜杠污染，不能直接复制
+4. show_input可执行仅猜测且实参为array与system期望类型不同，须验证
+5. 默认无标记结论来自少量观测需限定测试固件，enadble拼错
+6. store目录读取不能仅因授权就认漏洞或无漏洞，需角色/目录边界
+7. RCE1是否无认证路由前置未展示，原文与补丁来源精确
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://blog.riskivy.com/%e6%b7%b1%e4%bf%a1%e6%9c%8d%e7%bb%88%e7%ab%af%e6%a3%80%e6%b5%8b%e5%b9%b3%e5%8f%b0%ef%bc%88edr%ef%bc%89%e5%ad%98%e5%9c%a8%e8%bf%9c%e7%a8%8b%e5%91%bd%e4%bb%a4%e6%89%a7%e8%a1%8c%e6%bc%8f%e6%b4%9e/>
+
+### 归档技术正文
 
 <meta name="referrer" content="no-referrer"/>
 \> 本文由 \[简悦 SimpRead\](http://ksria.com/simpread/) 转码， 原文地址 \[blog.riskivy.com\](https://blog.riskivy.com/%e6%b7%b1%e4%bf%a1%e6%9c%8d%e7%bb%88%e7%ab%af%e6%a3%80%e6%b5%8b%e5%b9%b3%e5%8f%b0%ef%bc%88edr%ef%bc%89%e5%ad%98%e5%9c%a8%e8%bf%9c%e7%a8%8b%e5%91%bd%e4%bb%a4%e6%89%a7%e8%a1%8c%e6%bc%8f%e6%b4%9e/)

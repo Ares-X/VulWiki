@@ -1,7 +1,41 @@
 ---
 cve: "CVE-2025-11953"
 source: "gelusus/wxvl 公众号漏洞文库"
+product: "React Native Community CLI/Metro开发服务"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2025-11953"
+referenced_identifiers: "CVE-2026-21509; CVE-2025-22225"
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "黑客利用 React Native CLI 的漏洞在公开披露前部署了 Rust 恶意软件"
+prerequisites: "来源所述条件，未列明部分仍待核：无CLI包影响和修复版本，开发服务需外网可达；Windows与其他平台影响分开较清楚"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-e1b1d0212f93462081a8cb8d"
+entity_id: "ve-e1b1d0212f93462081a8cb8d"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：无CLI包影响和修复版本，开发服务需外网可达；Windows与其他平台影响分开较清楚
+
+代码与实验材料：没有PoC，只有多阶段恶意软件行为总结
+
+来源证据范围：VulnCheck原在野研究直链与SecurityAffairs新闻，支持性较好未抓取
+
+- **事实待核（1）**：披露与利用时间线前后矛盾；依据：标题披露前、导读披露已过去数周、正文广泛披露前，须区分原漏洞披露与公开在野报告。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **事实待核（2）**：资产与缓解资料缺失；依据：大量资讯占文但无具体CLI包版本/修复；EPSS0.00405需保留观测日期。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **证据待核（3）**：翻译误导主体；依据：称缺乏公开承认使攻击者措手不及，应核原文防御者，漏洞利用的缺失与持续利用相冲。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 #  黑客利用 React Native CLI 的漏洞在公开披露前部署了 Rust 恶意软件  
 会杀毒的单反狗

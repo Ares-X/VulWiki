@@ -1,8 +1,48 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Apache SeaTunnel 漏洞允许未经授权的用户进行反序列化攻击"
+product: "Apache SeaTunnel"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2025-32896"
+referenced_identifiers: "CVE-2020-0796"
+identifier_role: "primary"
+cve: "CVE-2025-32896"
+prerequisites: "2.3.1–2.3.10、API-v1作业提交可达、无有效客户端认证；MySQL连接/gadget/出网决定文件读或执行"
+source_url: "https://cybersecuritynews.com/apache-seatunnel-vulnerability/"
+source_status: "recorded"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-9fea4e147aeb526bf6327f6c"
+entity_id: "ve-9fea4e147aeb526bf6327f6c"
+schema_version: "1"
 ---
 
-#  Apache SeaTunnel 漏洞允许未经授权的用户进行反序列化攻击  
+# Apache SeaTunnel 漏洞允许未经授权的用户进行反序列化攻击
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：2.3.1–2.3.10、API-v1作业提交可达、无有效客户端认证；MySQL连接/gadget/出网决定文件读或执行
+- 证据范围：mysql连接串入口及/hazelcast/rest/maps/submit-job已指明，但正文将反序列化过程泛化成直接提交序列化对象，缺实证。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 主32896缺frontmatter，0796仅页脚推荐不得误归
+- 中等定级与8.2高分需分开注明评分来源
+- 2.3.11修复及APIv2/双向TLS建议需官方说明具体默认和迁移条件，升级不一定自动配置鉴权
+- 缺MySQL连接器版本、恶意数据库和gadget等前提，不能等同所有未授权请求均RCE
+- 多处汉字丢失如纵/作及大量重复泛化风险表述，应规范
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 邑安科技  邑安全   2025-06-20 09:37  
   
 更多全球网络安全资讯尽在邑安全  

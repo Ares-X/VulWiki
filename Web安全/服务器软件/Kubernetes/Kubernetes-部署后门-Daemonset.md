@@ -1,9 +1,50 @@
 ---
 version: "Docker version: 18.09.3"
 source: "Threekiii/Vulnerability-Wiki"
+title: "Kubernetes 部署后门 Daemonset"
+product: "Kubernetes DaemonSet正常功能滥用"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "目标namespace能创建DaemonSet，准入允许privileged、hostNetwork/hostPID及hostPath根挂载，节点可调度"
+affected_versions: "Docker version: 18.09.3"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-da6d97277d8d59c1e1133c93"
+entity_id: "ve-da6d97277d8d59c1e1133c93"
+schema_version: "1"
 ---
 
 # Kubernetes 部署后门 Daemonset
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：目标namespace能创建DaemonSet，准入允许privileged、hostNetwork/hostPID及hostPath根挂载，节点可调度
+- 证据范围：响应JSON明确特权与宿主挂载，描述minikube VM边界，非DaemonSet固有漏洞；保留与CronJob不同权限路径
+
+### 本次正文校订
+
+- 修正正文中的 kubs-system → kube-system 转录错误，资源路径保持原样。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 只能创建DaemonSet不保证准入接受这些危险字段，应补Pod Security/策略前提
+- 实验version仅Docker号
+- kubs-system拼写错误；使用kube-proxy标签可能与既有对象selector混淆
+- 节点选择/taint/toleration影响全部节点覆盖
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 ## 漏洞描述
 
@@ -58,7 +99,7 @@ k8s-backdoor-daemonset   1/1     Running   0          9m54s
 kubectl cp cdk k8s-backdoor-daemonset:/ -n metarget
 ```
 
-执行以下命令运行工具（该命令会在 `kubs-system` 空间下创建一个 daemonset 资源）：
+执行以下命令运行工具（该命令会在 `kube-system` 空间下创建一个 daemonset 资源）：
 
 ```
 kubectl exec -n metarget -it k8s-backdoor-daemonset -- chmod +x /cdk

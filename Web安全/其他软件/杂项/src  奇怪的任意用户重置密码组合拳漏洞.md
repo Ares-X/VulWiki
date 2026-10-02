@@ -1,8 +1,62 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "src  奇怪的任意用户重置密码组合拳漏洞"
+product: "两校共享教育业务系统（厂商未明）"
+record_type: "vulnerability"
+document_type: "匿名跨站权限案例"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "攻击者需B校合法账户、目标学号姓名、可收验证码手机号；A站先验信息泄露+B站绑定越权+正常重置"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/src%20%20%E5%A5%87%E6%80%AA%E7%9A%84%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E9%87%8D%E7%BD%AE%E5%AF%86%E7%A0%81%E7%BB%84%E5%90%88%E6%8B%B3%E6%BC%8F%E6%B4%9E.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-e4d3ee196ce56dfa0f5d1707"
+entity_id: "ve-e4d3ee196ce56dfa0f5d1707"
+schema_version: "1"
 ---
 
-#  src | 奇怪的任意用户重置密码组合拳漏洞  
+# src  奇怪的任意用户重置密码组合拳漏洞
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：两校共享教育业务系统（厂商未明）
+- 文献类型：匿名跨站权限案例
+- 版本、权限及部署边界：攻击者需B校合法账户、目标学号姓名、可收验证码手机号；A站先验信息泄露+B站绑定越权+正常重置
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 两个学校同数据库只是推测，应标未证实，userid可跨站识别不必同物理DB；A返回B身份提示租户隔离缺陷
+2. 第一步学号姓名却写学号密码正确，明确文字错误；绑定缺对象授权是核心，重置可能按被篡改手机号正常执行
+3. 标题任意用户范围需可获userid和B租户权限，不能理解匿名重置任何账户
+4. 所有HTTP关键数据仅图未视检，无具名系统版本/修复，匿名适合案例而不是新CVE条目
+5. 学生信息/新密码示例和截图应隐私审查脱敏；手机号绑定和密码重置为实质账户变更，不能当只读验证；大量营销图删减
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文参考链接（未重新核验）：<https://aaaaaaaa.cn/user>
+- 原文参考链接（未重新核验）：<https://bbbbbbb.cn/user>
+- 原文参考链接（未重新核验）：<https://bbbbbbb.cn/user，系统与a学校网站相同。不同的是，b学校的登录步骤只有一步，即输入学生的学号，姓名与密码>
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
  Z2O安全攻防   2026-01-15 13:55  
   
 分享一下之前挖src遇到比较奇怪的任意用户重置密码。该漏洞在是两个不同学校的网站相互配合导致的组合拳漏洞。  
@@ -149,4 +203,4 @@ src专项圈子
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

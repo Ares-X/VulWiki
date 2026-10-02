@@ -1,6 +1,36 @@
 ---
 source: "hatch 补库批 20260928"
+product: "PHPCMS9.6.0 PHPSso server"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "Phpcms v9.6.0后台getshell"
+prerequisites: "来源所述条件，未列明部分仍待核：PHPSso后台UCenter配置权限，uc_config.php可写及被执行"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-5d415cee81b2cf15065bdc3e"
+entity_id: "ve-5d415cee81b2cf15065bdc3e"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：PHPSso后台UCenter配置权限，uc_config.php可写及被执行
+
+- **适用与权限边界（1）**：后台是PHPSso而非一般PHPCMS管理界面，应单独标认证域。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **证据待核（2）**：POST数组key未转义/value被转义的差异分析明确；缺完整endpoint及缓存更新触发请求。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **实验改动边界（3）**：代码strtoupper作用key，payload用注释跨key/value需要保留，不能简单当value单引号注入；旧PHP裸test常量依赖。以下步骤按原实验条件保留；人工改动后的行为只支持该修改环境，不用于证明未修改发行版默认可利用。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Phpcms v9.6.0后台getshell
 

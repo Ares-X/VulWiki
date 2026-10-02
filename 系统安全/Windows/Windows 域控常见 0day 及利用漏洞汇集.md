@@ -1,8 +1,65 @@
 ---
-cve: "CVE-2014-6324"
+cve: "CVE-2014-6324;CVE-2020-1472;CVE-2021-42287;CVE-2021-42278;CVE-2019-1040;CVE-2018-8581;CVE-2020-0688;CVE-2021-1675;CVE-2021-26855;CVE-2021-27065;CVE-2020-17144;CVE-2020-16875;CVE-2021-34473;CVE-2021-33766"
+identifier_role: "primary"
+primary_identifiers: "CVE-2014-6324;CVE-2020-1472;CVE-2021-42287;CVE-2021-42278;CVE-2019-1040;CVE-2018-8581;CVE-2020-0688;CVE-2021-1675;CVE-2021-26855;CVE-2021-27065;CVE-2020-17144;CVE-2020-16875;CVE-2021-34473;CVE-2021-33766"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "Windows 域控常见 0day 及利用漏洞汇集"
+product: "Windows AD/KDC/Netlogon/NTLM/Spooler 与 Microsoft Exchange"
+record_type: "roundup"
+document_type: "多漏洞/多工具汇编"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "各漏洞前提不同：域认证/可创建机器账号、RPC可达、NTLM relay条件、邮箱认证/角色等未系统区分；多数仅工具链接"
+side_effects: "Zerologon步骤可能更改DC机器密码导致域故障，未说明副作用/恢复；不应作为安全检测步骤，当前未执行"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Windows/Windows%20%E5%9F%9F%E6%8E%A7%E5%B8%B8%E8%A7%81%200day%20%E5%8F%8A%E5%88%A9%E7%94%A8%E6%BC%8F%E6%B4%9E%E6%B1%87%E9%9B%86.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+source_url: "https://mp.weixin.qq.com/s/Iex9QiyAWT9bdoAtsKgN-Q"
+id: "vw-f5e9e410b7a795630685c391"
+entity_id: "ve-f5e9e410b7a795630685c391"
+schema_version: "1"
 ---
 
 # Windows 域控常见 0day 及利用漏洞汇集
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Windows AD/KDC/Netlogon/NTLM/Spooler 与 Microsoft Exchange
+- 文献类型：多漏洞/多工具汇编
+- 版本、权限及部署边界：各漏洞前提不同：域认证/可创建机器账号、RPC可达、NTLM relay条件、邮箱认证/角色等未系统区分；多数仅工具链接
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. frontmatter只6324掩盖12个主题14个明示CVE，应拆成关联记录并保留汇编索引；这些历史已修漏洞不是当前0day
+2. PrintNightmare1675/34527映射需核，ProxyShell仅34473不足表达多漏洞链；2018-8581段混入PrivExchange/Exchange2domain域提权与邮箱伪造需核编号边界
+3. NTLM1040仅普通账号即可控域内任何机器过宽，缺认证强制/签名/绑定和权限条件；noPac缺机器账号创建额度及修复状态
+4. Zerologon步骤可能更改DC机器密码导致域故障，未说明副作用/恢复；不应作为安全检测步骤，当前未执行
+5. Exchange段secretsdump突然使用前段evil.local/Administrador示例，域与凭证错置；两条1040命令粘连、编号缺1.10
+6. 各NVD及源码链接可作为索引但缺厂商补丁矩阵/固定提交，多处只有下载无技术结论；工具收费获取广告删除，图未视检
+
+### 操作风险
+
+Zerologon步骤可能更改DC机器密码导致域故障，未说明副作用/恢复；不应作为安全检测步骤，当前未执行
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://mp.weixin.qq.com/s/Iex9QiyAWT9bdoAtsKgN-Q>
+- 原文参考链接（未重新核验）：<http://ksria.com/simpread/>
+- 原文参考链接（未重新核验）：<https://nvd.nist.gov/vuln/detail/CVE-2014-6324>
+- 原文参考链接（未重新核验）：<https://github.com/abatchy17/WindowsExploits/tree/master/MS14-068>
+- 原文参考链接（未重新核验）：<https://github.com/Al1ex/WindowsElevation>
+- 原文参考链接（未重新核验）：<https://www.secpulse.com/archives/2874.html>
+
+### 归档技术正文
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/Iex9QiyAWT9bdoAtsKgN-Q)

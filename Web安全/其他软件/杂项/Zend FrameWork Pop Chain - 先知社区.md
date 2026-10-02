@@ -1,8 +1,65 @@
 ---
 source: "MrWQ/vulnerability-paper"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "Zend FrameWork Pop Chain - 先知社区"
+product: "Zend Framework1/Zend组件；Laminas Log/View/ComponentInstaller"
+record_type: "analysis"
+document_type: "POP链研究与CTF构造"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "必须应用另有攻击者可控unserialize且相关类自动加载；文人工添加入口；PHP版本依create_function/回调规则"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/Zend%20FrameWork%20Pop%20Chain%20-%20%E5%85%88%E7%9F%A5%E7%A4%BE%E5%8C%BA.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+source_url: "https://xz.aliyun.com/t/8975"
+id: "vw-117b99a0b1a3585940be9132"
+entity_id: "ve-117b99a0b1a3585940be9132"
+schema_version: "1"
 ---
 
 # Zend FrameWork Pop Chain - 先知社区
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Zend Framework1/Zend组件；Laminas Log/View/ComponentInstaller
+- 文献类型：POP链研究与CTF构造
+- 版本、权限及部署边界：必须应用另有攻击者可控unserialize且相关类自动加载；文人工添加入口；PHP版本依create_function/回调规则
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. gadget存在不是框架默认远程反序列化漏洞，开头所有版本存在漏洞需收敛；ZF1与Laminas各链拆记录并保留共同前提
+2. laminas-log prior2.11与环境明确安装^2.11矛盾；skeleton1.2.x-dev12ff936不代表依赖包版本，需composer.lock
+3. 称Laminas是zf4不严谨，ZF命名空间payload与Laminas调用栈混用需说明兼容别名；base64样例Zend名不能盲用于Laminas
+4. call_user_func数组只能访问可调用方法并受可见性/静态性约束，不是任意类任意方法；_extends用字符串会foreach警告，错误处理影响链
+5. 完整Laminas写文件EXP作者主动仅图片，未视检；ZF源码版本缺、libary错字、路由[/:action]是占位语法不是字面URL
+6. 原gist/Twitter/先知来源可追溯，保留多条读写及调用链差异，不把RCE1 phpinfo等于系统命令执行
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://xz.aliyun.com/t/8975>
+- 原文参考链接（未重新核验）：<http://ksria.com/simpread/>
+- 原文参考链接（未重新核验）：<https://twitter.com/ptswarm/status/1330878577936625671>
+- 原文参考链接（未重新核验）：<https://gist.github.com/YDyachenko/6f60709ce0fc346d0cc0252e07c6aa38>
+- 原文参考链接（未重新核验）：<https://github.com/zendframework/zf1`中下载到源码，然后使用>
+- 原文参考链接（未重新核验）：<http://your-ip/public/application[/:action]`会发现>
+
+### 归档技术正文
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [xz.aliyun.com](https://xz.aliyun.com/t/8975)

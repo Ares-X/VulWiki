@@ -1,9 +1,52 @@
 ---
 cve: "CVE-2024-44000"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "LiteSpeed 曝出严重漏洞，致使超 600 万 WordPress 网站遭攻击"
+product: "WordPress LiteSpeed Cache插件"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2024-44000"
+referenced_identifiers: "CVE-2023-40000; CVE-2024-28000"
+identifier_role: "primary"
+prerequisites: "调试日志当前或曾启用、公开可读日志残留有效会话Cookie；只有仍有效会话可冒用"
+source_status: "unknown"
+side_effects: "含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。"
+id: "vw-428bf87b41c2ac5562ded232"
+entity_id: "ve-428bf87b41c2ac5562ded232"
+schema_version: "1"
 ---
 
-#  LiteSpeed 曝出严重漏洞，致使超 600 万 WordPress 网站遭攻击   
+# LiteSpeed 曝出严重漏洞，致使超 600 万 WordPress 网站遭攻击
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：调试日志当前或曾启用、公开可读日志残留有效会话Cookie；只有仍有效会话可冒用
+- 证据范围：标题600万网站遭攻击把安装数误当受攻击事实；后半攻击计数来自其他历史漏洞，不能归给44000。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 9月8发表却称昨天9月4，转载相对时间未改
+- 600万安装量减37.5万下载量推560万受影响方法错误，下载非独立升级站点且漏洞还需debug条件
+- 日志长期留存不等于过去Cookie永久有效，需失效/注销条件
+- .htaccess只适用支持其规则的服务器，Nginx等需对应访问控制；删除全部debug.log应限敏感相关日志并保留必要取证
+- 缺Patchstack/LiteSpeed原始公告链接，6.5.0.1修复值需来源
+- 应归WordPress插件分类，征文与公众号广告可清理
+
+### 操作风险与资料使用
+
+- 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 FreeBuf  商密君   2024-09-08 15:40  
   
 近日，Patchstack 的 Rafie Muhammad 在 LiteSpeed Cache 插件中发现了一个严重漏洞，该插件主要用于加快超 600 万个 WordPress 网站的用户浏览速度。该漏洞被追踪为 CVE-2024-44000，并被归类为未经身份验证的帐户接管问题 。随着 LiteSpeed Cache 6.5.0.1 版本的发布，修复程序也于昨天（9月4日）发布。  

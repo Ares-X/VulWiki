@@ -1,9 +1,52 @@
 ---
 version: "rest_cherrypy:"
 source: "MrWQ/vulnerability-paper"
+title: "深入分析 SaltStack Salt 命令注入漏洞"
+product: "SaltStack Salt API salt-ssh"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2020-16846; CVE-2020-25592"
+referenced_identifiers: ""
+identifier_role: "primary"
+cve: "CVE-2020-16846; CVE-2020-25592"
+prerequisites: "非默认rest_cherrypy API启用；SSH可用；ssh_priv路径不存在触发gen_key；其他参数需要目标流程可达"
+affected_versions: "rest_cherrypy:"
+source_url: "https://mp.weixin.qq.com/s/dR-Nq-pi2R5Aqz73XibD3Q"
+source_status: "recorded"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-ff77d87addd7f5a5358acf31"
+entity_id: "ve-ff77d87addd7f5a5358acf31"
+schema_version: "1"
 ---
 
 # 深入分析 SaltStack Salt 命令注入漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：非默认rest_cherrypy API启用；SSH可用；ssh_priv路径不存在触发gen_key；其他参数需要目标流程可达
+- 证据范围：详细解释ssh_priv及ssh_user/ssh_port/转发/选项多个注入点，独立于云鼎截图型分析，保留其增量价值
+
+### 本次正文校订
+
+- 按实际内容修正 3 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- version抽取成rest_cherrypy:，两主CVE未结构化
+- 配置示例Port/Disable_ssl大小写需按实际Salt配置修正
+- 源码是截取片段不是可直接运行程序，应标明省略和缩进
+- 未列分支影响/修复版本；结尾广告及长横线可移除
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/dR-Nq-pi2R5Aqz73XibD3Q)
@@ -138,7 +181,7 @@ _prep_ssh() 函数设置参数，并初始化 SSH 对象。
 
 触发漏洞的请求如下：
 
-```
+```shell
 curl -i $salt_ip_addr:8000/run -H "Content-type: application/json" -d '{"client":"ssh","tgt":"A","fun":"B","eauth":"C","ssh_priv":"|id>/tmp/test#"}' 
 
 ```
@@ -216,7 +259,7 @@ SSH(object):
 
 ssh_priv 参数的值用于 SSH 私有文件。如果 ssh_priv 值对应的文件不存在，则调用 / salt/client/ssh/shell.py 的 gen_key() 方法来创建文件，并将 ssh_priv 作为 path 参数传递给该方法。基本上，gen_key() 方法生成公钥和私钥密钥对，并将其存储在 path 参数定义的文件中。
 
-```
+```python
 def gen_key(path): 
     """ 
     Generate a key for use with salt-ssh 
@@ -310,7 +353,7 @@ _update_targets() 方法设置 user 变量，该变量取决于 tgt 或 ssh_user
 
 在初始化 SSH 对象后，_prep_ssh() 方法通过 handle_ssh() 产生一个子进程，最终会执行 salt.client.ssh.shell.Shell 类的 exec_cmd() 方法。
 
-```
+```python
 def exec_cmd(self, cmd): 
         """ 
         Execute a remote command 

@@ -1,6 +1,43 @@
 ---
 source: "hatch 补库批 20260928"
+product: "WordPress wpDiscuz"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "WordPress Plugin - WPdiscuz 7.0.4 任意文件上传漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：7.0.0–7.0.4 claimed; public upload feature/nonce available; PHP execution in upload path"
+side_effects: "未执行；本文需注意的操作影响：代码原样保留：`self.s.headrs` 拼写错，nonce 正则未处理 None，exp() 只有 pass，不包含文件上传实现。原文 text/plain 失败与加入图像头后的 MIME 结果须分开，页面指纹未发现不能判无漏洞。"
+source_status: "unknown"
+id: "vw-a57959aa851d895d35f8082d"
+entity_id: "ve-a57959aa851d895d35f8082d"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 明确更正：检测只判断 major==7、patch≤4，未验证 minor==0，会把 7.1.4 等误纳；该版本逻辑不等于漏洞确认。
+- 代码原样保留：`self.s.headrs` 拼写错，nonce 正则未处理 None，exp() 只有 pass，不包含文件上传实现。原文 text/plain 失败与加入图像头后的 MIME 结果须分开，页面指纹未发现不能判无漏洞。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：7.0.0–7.0.4 claimed; public upload feature/nonce available; PHP execution in upload path
+
+- **事实待核（1）**：检测只判major7与patch&lt;=4，未检查minor0，会误判7.1.4等。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **证据待核（2）**：self.s.headrs拼错；nonce正则未判None，页面指纹缺失不能证明无漏洞。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **事实待核（3）**：exp方法只有pass，代码不是文件上传PoC，版本判断也不是利用确认。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **证据待核（4）**：前文说text/plain通过与允许图片类型矛盾，应区分初次失败和加入图片头后的类型。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **事实待核（5）**：缺CVE/修复版本，有精确xz分析来源。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # WordPress Plugin - WPdiscuz 7.0.4 任意文件上传漏洞
 

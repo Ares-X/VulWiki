@@ -1,9 +1,54 @@
 ---
 version: "SonicWall SSL-VPN"
 source: "Threekiii/Vulnerability-Wiki"
+id: "vw-8667199d8ea1eec615f48b29"
+entity_id: "ve-8667199d8ea1eec615f48b29"
+schema_version: "1"
+title: "SonicWall SSL-VPN 远程命令执行漏洞"
+product: "SonicWall SSL-VPN旧设备"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+prerequisites: "未给固件；HTTP可达且易受影响Bash"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/SonicWall/SonicWall-SSL-VPN-%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md"
+review_date: "2026-10-02"
+side_effects: "执行文中载荷可能以目标进程权限启动命令或加载代码；权限受认证角色、操作系统账户及依赖版本约束，不能把 root/200 等通用字符串当成功证据"
+source_status: "unknown"
 ---
 
 # SonicWall SSL-VPN 远程命令执行漏洞
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：SonicWall SSL-VPN旧设备
+- 本文讨论：jarrewrite.sh / Bash Shellshock
+- 版本、权限与配置前提：未给固件；HTTP可达且易受影响Bash
+- 资料类型：Shell源码与Python PoC；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 称漏洞在该脚本命令拼接，实际请求触发Bash启动的环境函数解析；Usage-Agent拼错
+- 给大量jar处理源码却未解释与Shellshock必要性；日期无年份、版本泛化
+- PoC以root子串+200判定容易误报，不能证明执行用户root
+
+### 操作风险与恢复
+
+- 执行文中载荷可能以目标进程权限启动命令或加载代码；权限受认证角色、操作系统账户及依赖版本约束，不能把 root/200 等通用字符串当成功证据
+
+### 待核与来源
+
+- 型号/版本和官方修复待核验
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 
 ## 漏洞描述
 

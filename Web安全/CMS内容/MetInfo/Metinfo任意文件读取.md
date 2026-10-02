@@ -1,6 +1,36 @@
 ---
 source: "hatch 补库批 20260928"
+product: "MetInfo6.0.0–6.1.0 old_thumb"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "Metinfo任意文件读取"
+prerequisites: "来源所述条件，未列明部分仍待核：include/thumb.php可达，含http字符串且路径处理绕过；反斜杠载荷Windows条件"
+side_effects: "未执行；本文需注意的操作影响：整段PHP被机器翻译为公共功能/扩展了/网络、全角标点和变量空格，源码不可用"
+source_status: "unknown"
+id: "vw-2ed099f8484b18f750e57291"
+entity_id: "ve-2ed099f8484b18f750e57291"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：include/thumb.php可达，含http字符串且路径处理绕过；反斜杠载荷Windows条件
+
+- **结论使用边界（1）**：整段PHP被机器翻译为公共功能/扩展了/网络、全角标点和变量空格，源码不可用。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **代码与转录边界（2）**：文末在读取config/config_截断；缺完整HTTP请求/原始来源。相应原代码作为存在此问题的历史样本保留，不能直接当作可运行、成功复现的 PoC；缺失内容需回原稿核对，不据此补造可执行攻击链。
+
+- **事实待核（3）**：payload含不存在http路径段是否可解析取决平台/实际目录，不能仅字符串替换推断任意读；影响列表两版本与简介区间需明确。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # MetInfo 任意文件读取
 

@@ -1,9 +1,51 @@
 ---
-title: 'Struts2 S2-045远程代码执行'
-date: Mon, 24 Aug 2020 14:20:54 +0000
-draft: false
-tags: ['白阁-漏洞库']
+title: "Struts2 S2-045远程代码执行"
+date: "Mon, 24 Aug 2020 14:20:54 +0000"
+draft: ""
+tags: "['白阁-漏洞库']"
+product: "Apache Struts2 Jakarta multipart"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "S2-045; CVE-2017-5638"
+referenced_identifiers: ""
+identifier_role: "primary"
+cve: "CVE-2017-5638"
+prerequisites: "受影响Jakarta错误消息路径，代码依Python2/CommonsIO；写JSP还需Web根可写和可执行"
+source_status: "missing"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-01a663a0dd0d8c49a9e51a6b"
+entity_id: "ve-01a663a0dd0d8c49a9e51a6b"
+schema_version: "1"
 ---
+
+# Struts2 S2-045远程代码执行
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：受影响Jakarta错误消息路径，代码依Python2/CommonsIO；写JSP还需Web根可写和可执行
+- 证据范围：算术输出检测及body写文件为同漏洞的不同操作，需标状态副作用而非只读检测。
+
+### 本次正文校订
+
+- 按实际内容修正 1 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 两个脚本均Python2专用但无说明，httplib/urllib2/except语法Python3不兼容
+- 静态算术字符串可能偶然出现，缺HTTP状态/异常分类；无timeout
+- 测试payload也清空excluded集合，会改变进程安全限制
+- 文件上传PoC实际用OGNL复制HTTP body到Web根，有覆盖和持久化风险，未校验路径/恢复
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 ### 影响范围
 
@@ -19,7 +61,7 @@ Content-Type:%{(#test='multipart/form-data').(#dm=@ognl.OgnlContext@DEFAULT_MEMB
 
 #### 漏洞验证EXP
 
-```
+```python
 import requests
 import sys
 import httplib

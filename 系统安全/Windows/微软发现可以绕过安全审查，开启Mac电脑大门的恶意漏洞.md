@@ -1,9 +1,60 @@
 ---
-cve: "CVE-2022-42821"
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2022-42821"
+identifier_role: "primary"
+primary_identifiers: "CVE-2022-42821"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "微软发现可以绕过安全审查，开启Mac电脑大门的恶意漏洞"
+product: "Apple macOS Gatekeeper / Achilles"
+record_type: "advisory"
+document_type: "Gatekeeper绕过漏洞新闻"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "用户下载/执行带特制ACL与AppleDouble的应用；列Monterey12.6.2/BigSur11.7.2/Ventura13修复"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Windows/%E5%BE%AE%E8%BD%AF%E5%8F%91%E7%8E%B0%E5%8F%AF%E4%BB%A5%E7%BB%95%E8%BF%87%E5%AE%89%E5%85%A8%E5%AE%A1%E6%9F%A5%EF%BC%8C%E5%BC%80%E5%90%AFMac%E7%94%B5%E8%84%91%E5%A4%A7%E9%97%A8%E7%9A%84%E6%81%B6%E6%84%8F%E6%BC%8F%E6%B4%9E.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-64a39ff4941138ffc7e535ce"
+entity_id: "ve-64a39ff4941138ffc7e535ce"
+schema_version: "1"
 ---
 
-#  微软发现可以绕过安全审查，开启Mac电脑大门的恶意漏洞   
+# 微软发现可以绕过安全审查，开启Mac电脑大门的恶意漏洞
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Apple macOS Gatekeeper / Achilles
+- 文献类型：Gatekeeper绕过漏洞新闻
+- 版本、权限及部署边界：用户下载/执行带特制ACL与AppleDouble的应用；列Monterey12.6.2/BigSur11.7.2/Ventura13修复
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 因发现者微软误分Windows，实际Apple macOS漏洞应迁macOS分类
+2. Gatekeeper绕过不是任意权限提升或零点击远程攻击，LockdownMode背景不能改变本漏洞交互条件
+3. 修复版本和Safari quarantine/ACL机制有清楚摘要，缺Apple安全公告、Microsoft原始研究URL和精确版本构建
+4. 仅标来源E安全未给原文，研究发现日期/范围需核；无PoC属新闻不补造
+5. Gatekeeper所有互联网应用都必经检查为简化说明，需限定下载标记和启动路径；去投稿宣传，图片未视检
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
  网络安全应急技术国家工程中心   2022-12-23 14:37  
   
 **摘要：**  
@@ -42,4 +93,4 @@ Gatekeeper的作业原理是检查苹果浏览器Safari在应用程序下载时�
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

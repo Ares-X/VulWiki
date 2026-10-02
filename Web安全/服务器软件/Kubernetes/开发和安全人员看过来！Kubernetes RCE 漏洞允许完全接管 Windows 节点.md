@@ -1,9 +1,50 @@
 ---
 cve: "CVE-2023-5528"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "开发和安全人员看过来！Kubernetes RCE 漏洞允许完全接管 Windows 节点"
+product: "Kubernetes kubelet Windows in-tree存储"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2023-5528"
+referenced_identifiers: "CVE-2023-3676"
+identifier_role: "primary"
+prerequisites: "Windows节点、可创建Pod及相关PV/PVC、适用in-tree卷插件；并非任意网络用户"
+source_status: "unknown"
+side_effects: "含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。"
+id: "vw-62eaa7692d6bbbf4a3ab5acd"
+entity_id: "ve-62eaa7692d6bbbf4a3ab5acd"
+schema_version: "1"
 ---
 
-#  开发和安全人员看过来！Kubernetes RCE 漏洞允许完全接管 Windows 节点   
+# 开发和安全人员看过来！Kubernetes RCE 漏洞允许完全接管 Windows 节点
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：Windows节点、可创建Pod及相关PV/PVC、适用in-tree卷插件；并非任意网络用户
+- 证据范围：解释cmd符号链接参数到os.Symlink补丁，非PoC；默认全部<1.28.4忽略分支回移
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 缺1.27/1.26等分支修复边界和原始公告
+- OPA误写为接收进出节点流量的代理，应说明策略评估/准入
+- permanentVolumeClaim应为PersistentVolumeClaim，Go exec.Command大小写
+- 建议无Windows也急修与末尾不必急修矛盾，需区分通用更新建议/此CVE实际暴露
+
+### 操作风险与资料使用
+
+- 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
  安全客   2024-03-15 15:01  
   
 广泛使用的 Kubernetes 容器管理系统中的一个安全漏洞允许攻击者在 Windows 端点上以系统权限远程执行代码，从而可能导致完全接管Kubernetes 集群内的所有 Windows 节点。  

@@ -1,8 +1,50 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "通达OA action_upload后续MySQL UDF案例"
+product: "通达OA"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "OA/PHP/MySQL精确版本缺失；Windows/plugin可写"
+prerequisites: "已有上传能力及高权限DB凭据"
+side_effects: "文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行；命令/代码执行示例可能改变主机状态"
+review_date: "2026-10-02"
+source_status: "unknown"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E9%80%9A%E8%BE%BEOA/%E6%A1%88%E4%BE%8B%20%E9%80%9A%E8%BE%BEOA%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E7%BB%95%E8%BF%87%2BUdf%E7%BB%95%E8%BF%87RCE%E7%9A%84%E6%95%85%E4%BA%8B.md"
+category_recommendation: "OA / 通达"
+id: "vw-13376c979d4f191d9afa25e5"
+entity_id: "ve-13376c979d4f191d9afa25e5"
+schema_version: "1"
 ---
 
-#  【案例】通达OA任意文件上传绕过+Udf绕过RCE的故事  
+# 通达OA action_upload后续MySQL UDF案例
+
+## 条目说明
+
+- 对象与具体问题：通达OA；action_upload后续MySQL UDF案例
+- 版本、配置及部署条件：OA/PHP/MySQL精确版本缺失；Windows/plugin可写
+- 认证与权限前提：已有上传能力及高权限DB凭据
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 不是2026新漏洞；上传原始请求和过滤证据仅截图
+- UDF路径应依据plugin_dir与架构，版本5.1至5.1.4描述空档
+- PHP代码执行与OS命令执行混称；无UDF/动态库清理说明
+- 缺原文URL及最低DB权限说明
+
+## 操作风险
+
+文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行；命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 原创 d0n9x1e  蝉SEC   2026-01-12 09:38  
   
 RCE过的朋友都知道，通达OA在传马之后，常常出现disable_function限制我们无法顺利命令执行的问题，今日分享主题：  

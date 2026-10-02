@@ -1,7 +1,44 @@
 ---
-fofa: "body="
+fofa: ""
 source: "wy876 漏洞文库"
+product: "SpringBlade/export-user"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+fofa_unverified: "body="
+title: "SpringBladeexport-user存在SQL注入漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：简介<=3.2.0而影响列表只3.2.0；需导出权限或另证JWT伪造"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-1c149465513b0697c395faa3"
+entity_id: "ve-1c149465513b0697c395faa3"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 测绘字段处置：原 fofa 字段为残缺表达式、错误平台语法或当前解析器不支持的形式，原值完整保留到 fofa_unverified，不把它当作已校验查询或受影响资产证据。正文检索方法保留；具体问题见下列原审阅项。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：简介&lt;=3.2.0而影响列表只3.2.0；需导出权限或另证JWT伪造
+
+代码与实验材料：长查询JWT、updatexml(@@version)，无响应/Excel；与423同源描述
+
+来源证据范围：转载/语雀来源可追溯，未给对应官方修复提交或完整权限模型
+
+- **事实待核（1）**：影响范围不自洽；依据：简介&lt;=3.2.0，列表仅3.2.0，不能据此断言其他版本。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **代码与转录边界（2）**：FOFA语法严重污染；依据：正文body字符串内混Markdown链接和多余引号，元数据只body=。相应原代码作为存在此问题的历史样本保留，不能直接当作可运行、成功复现的 PoC；缺失内容需回原稿核对，不据此补造可执行攻击链。
+
+- **适用与权限边界（3）**：导出数据和认证前提不足；依据：普通错误注入不能证明Excel中导出密码，JWT写URL未解释生成。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # SpringBlade export-user 存在 SQL注入漏洞
 

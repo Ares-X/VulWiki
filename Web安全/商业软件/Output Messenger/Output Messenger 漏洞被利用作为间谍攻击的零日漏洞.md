@@ -1,8 +1,49 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Output Messenger 27920目录遍历攻击活动新闻"
+product: "Output Messenger"
+record_type: "incident"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2025-27920"
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "文称2.0.63修复，12月未注明年份"
+prerequisites: "需Server Manager认证；初始凭据取得仅推测"
+side_effects: "命令/代码执行示例可能改变主机状态"
+review_date: "2026-10-02"
+identifier_role: "primary"
+source_status: "unknown"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/Output%20Messenger/Output%20Messenger%20%E6%BC%8F%E6%B4%9E%E8%A2%AB%E5%88%A9%E7%94%A8%E4%BD%9C%E4%B8%BA%E9%97%B4%E8%B0%8D%E6%94%BB%E5%87%BB%E7%9A%84%E9%9B%B6%E6%97%A5%E6%BC%8F%E6%B4%9E.md"
+id: "vw-f9f6a4f7416b00bfe35243f7"
+entity_id: "ve-f9f6a4f7416b00bfe35243f7"
+schema_version: "1"
 ---
 
-#  Output Messenger 漏洞被利用作为间谍攻击的零日漏洞  
+# Output Messenger 27920目录遍历攻击活动新闻
+
+## 条目说明
+
+- 对象与具体问题：Output Messenger；27920目录遍历攻击活动新闻
+- 版本、配置及部署条件：文称2.0.63修复，12月未注明年份
+- 认证与权限前提：需Server Manager认证；初始凭据取得仅推测
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 微软评估DNS劫持/域名抢注应保留不确定措辞，勿当已证初始入口
+- 六月日期中周一/去年/12月均需绝对日期；BleepingComputer仅名称无链接
+- 读写路径、启动目录持久化与RCE分别说明；没有复现材料
+
+## 操作风险
+
+命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 Rhinoer  犀牛安全   2025-06-16 16:00  
   
 ![](https://mmbiz.qpic.cn/mmbiz_png/qvpgicaewUBlkqb2UwXDnXb0MYfKajE4rKHxojRvFUI2rou2Km6MVUQGXVLoBJavibFQTLMS9EZcoBWh03EGZkWw/640?wx_fmt=png&from=appmsg "")  

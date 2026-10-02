@@ -1,6 +1,46 @@
 ---
 source: "MrWQ/vulnerability-paper"
+product: "XYHCMS"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "文库XYHCMS 漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：backendrolesforread/delete/config/upload;CSRFvictimadmin;Windowsbackslashes;shorttag/PHPsuffixhandlers;installcredentials"
+side_effects: "未执行；本文需注意的操作影响：明确更正：本文是 XYHCMS 多漏洞合集。3.2 章节混用 3.5 路径，下载章节错放 Templets/edit、读文件 PoC 错放过滤代码、代码执行修复错放上传黑名单和 CSRF 表单，均属串段材料，不能作为相应补丁或成功证据。；坏样本保留：删除 GET 截为 delSq、POST 路径多空格、表单 name/value 缺失、第二表单缺 test_form id。`<?=` 自 PHP 5.4 的行为应与需 short_open_tag 的 `<?` 分开；phtml/php3 是否解析取决于 Web/PHP 配置。"
+source_status: "recorded"
+source_url: "https://mp.weixin.qq.com/s/PxdHaSrMdjs3bAUKhacilA"
+id: "vw-a9ca84831fb1cc155c2e26a9"
+entity_id: "ve-a9ca84831fb1cc155c2e26a9"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 明确更正：本文是 XYHCMS 多漏洞合集。3.2 章节混用 3.5 路径，下载章节错放 Templets/edit、读文件 PoC 错放过滤代码、代码执行修复错放上传黑名单和 CSRF 表单，均属串段材料，不能作为相应补丁或成功证据。
+- 坏样本保留：删除 GET 截为 delSq、POST 路径多空格、表单 name/value 缺失、第二表单缺 test_form id。`<?=` 自 PHP 5.4 的行为应与需 short_open_tag 的 `<?` 分开；phtml/php3 是否解析取决于 Web/PHP 配置。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：backendrolesforread/delete/config/upload;CSRFvictimadmin;Windowsbackslashes;shorttag/PHPsuffixhandlers;installcredentials
+
+- **代码与转录边界（1）**：3.2章节实际样例路径3.5，必须核测试版本；删除GET在delSq截断，POST路径中多空格。相应原代码作为存在此问题的历史样本保留，不能直接当作可运行、成功复现的 PoC；缺失内容需回原稿核对，不据此补造可执行攻击链。
+
+- **适用与权限边界（2）**：下载章节用Templets/edit取代Database/downFile；3.5读文件POC反而贴PHP过滤条件，明显跨段错置。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **事实待核（3）**：代码执行修复段贴上传扩展黑名单且又混进CSRF表单，不是该漏洞有效补丁。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **结论使用边界（4）**：CSRF所有关键name/value多处丢失，第二份form无test_form id使脚本null.submit；无法原样复现。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **适用与权限边界（5）**：short_open_tag默认开启过强，&lt;?=PHP5.4后无条件可用与&lt;?需分清；phtml/php3执行前提省略。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **操作与副作用边界（6）**：与612–619家族大量重复但包含CSRF新实体，需拆解关联而非整文删除；目录文库应移XYHCMS。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # 文库XYHCMS 漏洞
 

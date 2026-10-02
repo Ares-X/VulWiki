@@ -1,9 +1,46 @@
 ---
 cve: "CVE-2026-34976"
 source: "gelusus/wxvl 公众号漏洞文库"
+title: "Dgraph 数据库存在严重漏洞，攻击者可绕过身份验证"
+product: "Dgraph restoreTenant admin operation"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2026-34976"
+referenced_identifiers: ""
+identifier_role: "primary"
+prerequisites: "管理端点可达；restoreTenant未纳入认证/IP限制中间件；最高v25.3.0为发布日期断言"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-5fbfde2842a212a369e73567"
+entity_id: "ve-5fbfde2842a212a369e73567"
+schema_version: "1"
 ---
 
-#  Dgraph 数据库存在严重漏洞，攻击者可绕过身份验证  
+# Dgraph 数据库存在严重漏洞，攻击者可绕过身份验证
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：管理端点可达；restoreTenant未纳入认证/IP限制中间件；最高v25.3.0为发布日期断言
+- 证据范围：备份恢复操作越权，列举覆盖、文件探测、SSRF；无实际请求/响应
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- 开头完全系统接管超出正文已说明的数据库覆盖/信息泄漏，应单列未证实后果
+- 错误消息探测与完整文件读取、令牌窃取不能直接等同
+- 无补丁状态需标注2026-04-06而非永久有效
+- 具体受影响/修复分支及源码修复建议需官方核验
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
+
 原创 网络安全9527
                     网络安全9527  安全圈的那点事儿   2026-04-06 11:22  
   

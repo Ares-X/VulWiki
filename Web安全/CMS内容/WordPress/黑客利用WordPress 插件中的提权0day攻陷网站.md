@@ -1,6 +1,40 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+product: "WordPress Ultimate Member"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2023-3460"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "黑客利用WordPress 插件中的提权0day攻陷网站"
+prerequisites: "来源所述条件，未列明部分仍待核：publicregistration; <=2.6.6 claimed vulnerable as-of2023-07-03; writableuser metadata protectionbypass"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-0b205c6bcb2aad148601676d"
+entity_id: "ve-0b205c6bcb2aad148601676d"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：publicregistration; &lt;=2.6.6 claimed vulnerable as-of2023-07-03; writableuser metadata protectionbypass
+
+- **事实待核（1）**：主CVE缺元数据；未修复/0day应固定历史时点，不能当当前推荐。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **事实待核（2）**：原文并列开发者升2.6.6部分修复与Wordfence停用，需清楚标来源和时点而非认2.6.6安全。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **事实待核（3）**：活跃下载量混用活跃安装/下载指标；IOC需保留观测时间，不能只凭公共IP定罪。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **结论使用边界（4）**：正确说卸载插件不清除既有后门应保留；翻译防火墙规则未涵盖所有规则不通。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **结论使用边界（5）**：有精确新闻原文但欠最终补丁/Wordfence原报。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 #  黑客利用WordPress 插件中的提权0day攻陷网站   
 Bill Toulas  代码卫士   2023-07-03 17:37  

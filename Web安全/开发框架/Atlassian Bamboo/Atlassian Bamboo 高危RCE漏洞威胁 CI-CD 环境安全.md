@@ -1,6 +1,38 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+product: "Bamboo Data Center"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2026-21570"
+referenced_identifiers: ""
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "Atlassian Bamboo 高危RCE漏洞威胁 CI-CD 环境安全"
+prerequisites: "来源所述条件，未列明部分仍待核：Introduced9.6,10.0/10.1/10.2,11.0/11.1,12.0/12.1; fixes9.6.24,10.2.16,12.1.3; authenticated"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-c60a9fd8a914f0eb191489a2"
+entity_id: "ve-c60a9fd8a914f0eb191489a2"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：Introduced9.6,10.0/10.1/10.2,11.0/11.1,12.0/12.1; fixes9.6.24,10.2.16,12.1.3; authenticated
+
+代码与实验材料：No PoC or exploit mechanism; minimum-fix table retained
+
+来源证据范围：SecurityOnline link; vendor advisory not linked
+
+- **结论使用边界（1）**：Introduced release labels are not full affected ranges; migration destinations for other branches unclear。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **来源与引用处置（2）**：HTML presentation noise and unrelated links; add primary CVE metadata。保留这部分来源材料并与技术结论分开；其引用或宣传内容不能补足本文漏洞的证据。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 #  Atlassian Bamboo 高危RCE漏洞威胁 CI/CD 环境安全  
 Ddos

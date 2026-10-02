@@ -1,7 +1,42 @@
 ---
 
 source: "SourByte05/Vulnerability-Wiki-PoC"
+product: "Panalog 日志审计系统"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+category_recommendation: "Web安全/其他软件/Panalog"
+title: "Panalog 日志审计系统 libres_syn_delete.php RCE漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：<=MARS r10p1Free缺版本排序依据与安全版本，token=1是否有效鉴权未说明"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-6fefb386c0e63c5b0c355a3a"
+entity_id: "ve-6fefb386c0e63c5b0c355a3a"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 分类更正：正文研究对象为 Panalog 日志审计系统；目录中的语言/协议或其他产品名不能代替实际受影响产品。本次只更正元数据和分类建议，原材料保持原路径。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：&lt;=MARS r10p1Free缺版本排序依据与安全版本，token=1是否有效鉴权未说明
+
+代码与实验材料：未围栏HTTP、host命令写haha.txt、结果截图；没有无副作用测试或清理
+
+来源证据范围：SourByte05及厂商首页，缺具体公告
+
+- **事实待核（1）**：应按产品归档且在野利用断言无证据；依据：具体Panalog接口不属PHP运行时，状态表称已知在野却无事件来源。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **适用与权限边界（2）**：修复和利用条件不可核；依据：仅厂商首页、token=1和版本上界，未解释登录条件或输出文件位置。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # 关于Panalog 日志审计系统 libres_syn_delete.php RCE漏洞预警
 

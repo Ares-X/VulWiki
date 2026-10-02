@@ -1,7 +1,45 @@
 ---
 cve: "CVE-2026-23524"
 source: "gelusus/wxvl 公众号漏洞文库"
+product: "Laravel Reverb/Redis扩展消息反序列化"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2026-23524"
+referenced_identifiers: "GHSA-m27r-m6rx-mhm4"
+identifier_role: "primary"
+identifier_status: "unknown"
+title: "Laravel Reverb严重漏洞预警：CVSS 9.8高危反序列化RCE深度解析"
+prerequisites: "来源所述条件，未列明部分仍待核：<1.7.0，固定1.7.0；需启用Redis scaling、能向正确频道发布消息及兼容gadget依赖"
+side_effects: "未执行；本文需注意的操作影响：防御示例可靠性与可用性风险；str_contains允许类字符串不是安全反序列化校验；bind127.0.0.1/iptables只放本机会中断多节点；MONITOR有性能/敏感信息暴露风险；配置缓存/进程重启需区分"
+source_status: "unknown"
+id: "vw-a29e773c03bdbeb1da814c41"
+entity_id: "ve-a29e773c03bdbeb1da814c41"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：&lt;1.7.0，固定1.7.0；需启用Redis scaling、能向正确频道发布消息及兼容gadget依赖
+
+代码与实验材料：handle修复前后片段、占位payload发布示例；所谓完整compose只运行php:8.2-cli，没有应用代码/Composer/Reverb命令，不能复现声称结果
+
+来源证据范围：官方Reverb GHSA、NVD及文档可追溯；其他人口统计/时间线/社区反响没有出处
+
+- **事实待核（1）**：已验证完整环境与展示材料明显不匹配；依据：compose没有安装启动Reverb、也无gadget版本/真实输出；第3步只是声称成功，payload还是生成的序列化字符串占位。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **证据待核（2）**：影响规模和优先级断言无证据；依据：50万下载→15-20%扩展→数千上万系统没有统计方法；声称2026年第一个重大漏洞、多公司检测规则无引用。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **凭据与会话边界（3）**：权限和检测结论过度简化；依据：CVSS表写无需任何凭据，正文实际要求Redis无认证或已知密码及PUBLISH权限；PING不能证明发布权限；默认Redis日志不等同MONITOR命令流。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+
+- **操作与副作用边界（4）**：防御示例可靠性与可用性风险；依据：str_contains允许类字符串不是安全反序列化校验；bind127.0.0.1/iptables只放本机会中断多节点；MONITOR有性能/敏感信息暴露风险；配置缓存/进程重启需区分。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+- **事实待核（5）**：结构冗余和代码状态；依据：标题重复，多层编号全1，发现日期2025-12-XX占位；allowed_classes补丁应链接真实commit而非凭片段称根本阻止所有链。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 #  Laravel Reverb严重漏洞预警：CVSS 9.8高危反序列化RCE深度解析  
 原创 CVE-SEC

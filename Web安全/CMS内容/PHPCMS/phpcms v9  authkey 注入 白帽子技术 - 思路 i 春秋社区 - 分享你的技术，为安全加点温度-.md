@@ -1,6 +1,39 @@
 ---
 source: "MrWQ/vulnerability-paper"
+product: "PHPCMSv9 unspecified build"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "phpcms v9  authkey 注入 白帽子技术 - 思路 i 春秋社区 - 分享你的技术，为安全加点温度-"
+prerequisites: "来源所述条件，未列明部分仍待核：SSO authkey可泄露，目标使用对应三种sys_auth格式，PHP允许远程file_get_contents"
+side_effects: "未执行；本文需注意的操作影响：精确版本缺；和315同密钥泄漏端点但本篇补SSO member_delete SQLi，不应等同962会员cookie SQLi；脚本每种算法先添加uid88888用户再member_delete，具有账户写删副作用未在摘要说明；sys_auth2无key时引用$this不在对象"
+source_status: "recorded"
+source_url: "https://bbs.ichunqiu.com/thread-19033-1-1.html"
+id: "vw-c7843d75e84971485c4b0633"
+entity_id: "ve-c7843d75e84971485c4b0633"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：SSO authkey可泄露，目标使用对应三种sys_auth格式，PHP允许远程file_get_contents
+
+- **凭据与会话边界（1）**：精确版本缺；和315同密钥泄漏端点但本篇补SSO member_delete SQLi，不应等同962会员cookie SQLi。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+
+- **结论使用边界（2）**：$strings里&amp;regip变®ip编码污染；第二泄漏exp的固定加密data站点依赖未解释。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **操作与副作用边界（3）**：脚本每种算法先添加uid88888用户再member_delete，具有账户写删副作用未在摘要说明；sys_auth2无key时引用$this不在对象。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+- **证据待核（4）**：论坛下载附件链接是相对forum.php及临时token，评论/下载计数/QQ群邀约混入正文应移除。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # phpcms v9  authkey 注入 白帽子技术 - 思路 i 春秋社区 - 分享你的技术，为安全加点温度-
 
@@ -10,7 +43,11 @@ source: "MrWQ/vulnerability-paper"
 
 **1.png** _(76.34 KB, 下载次数: 46)_
 
+
+```text
 [下载附件](forum.php?mod=attachment&aid=Mzg1OTZ8ZjRiYzcxMjR8MTYxMjA2NzY1OXwwfDE5MDMz&nothumb=yes)  [保存到相册](javascript:;)
+```
+
 
 2017-2-14 20:56 上传
 
@@ -24,7 +61,11 @@ phpcms  v9 的，然后百度。找到爆 authkey 注入的。按照网上的步
 
 **2.png** _(86.24 KB, 下载次数: 45)_
 
+
+```text
 [下载附件](forum.php?mod=attachment&aid=Mzg1OTd8MWVhZjhkMTV8MTYxMjA2NzY1OXwwfDE5MDMz&nothumb=yes)  [保存到相册](javascript:;)
+```
+
 
 2017-2-14 21:08 上传
 
@@ -34,7 +75,11 @@ phpcms  v9 的，然后百度。找到爆 authkey 注入的。按照网上的步
 
 **8.png** _(103.68 KB, 下载次数: 35)_
 
+
+```text
 [下载附件](forum.php?mod=attachment&aid=Mzg2MDB8OTEyNjE0NzR8MTYxMjA2NzY1OXwwfDE5MDMz&nothumb=yes)  [保存到相册](javascript:;)
+```
+
 
 2017-2-14 21:45 上传
 
@@ -240,7 +285,11 @@ base64_decode(substr($string, $key_length));
 
 **4.png** _(130.19 KB, 下载次数: 49)_
 
+
+```text
 [下载附件](forum.php?mod=attachment&aid=Mzg1OTl8NTUwMDU5YjF8MTYxMjA2NzY1OXwwfDE5MDMz&nothumb=yes)  [保存到相册](javascript:;)
+```
+
 
 2017-2-14 21:27 上传
 

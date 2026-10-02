@@ -1,6 +1,36 @@
 ---
 source: "hatch 补库批 20260928"
+product: "SeaCMS6.61"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "Seacms V6.61 后台csrf"
+prerequisites: "来源所述条件，未列明部分仍待核：已登录后台视频新增权限、受害者Submit且跨站Cookie；后续模板显示v_pic"
+side_effects: "未执行；本文需注意的操作影响：标题CSRF实际植入持久模板表达式，再需390访问触发；表单本身不执行PHP"
+source_status: "unknown"
+id: "vw-f9ada5ae8ef7bb13afd3efb0"
+entity_id: "ve-f9ada5ae8ef7bb13afd3efb0"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：已登录后台视频新增权限、受害者Submit且跨站Cookie；后续模板显示v_pic
+
+- **操作与副作用边界（1）**：标题CSRF实际植入持久模板表达式，再需390访问触发；表单本身不执行PHP。保留原步骤及请求方法。执行条件包括隔离且获授权的可恢复环境、预先记录相关文件/账号/配置/业务记录状态；响应完成不能等同无副作用，恢复时须核对该操作涉及的实际对象。
+
+- **适用与权限边界（2）**：表单没有自动提交，admin/admin只实验账户；后台端口/目录与form action不一致。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **代码与转录边界（3）**：Submit值乱码，重复v_commend，缺响应/CSRF校验依据/来源。相应原代码作为存在此问题的历史样本保留，不能直接当作可运行、成功复现的 PoC；缺失内容需回原稿核对，不据此补造可执行攻击链。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Seacms V6.61 后台csrf
 

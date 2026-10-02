@@ -1,8 +1,51 @@
 ---
 source: "hatch 补库批 20260928"
+title: "（CVE 2020-8816）Pi-hole 远程代码执行漏洞"
+product: "Pi-hole DHCP settings"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2020-8816"
+referenced_identifiers: ""
+identifier_role: "primary"
+cve: "CVE-2020-8816"
+prerequisites: "Authenticated admin;<=4.3.2;PATH/PWD/shell layout assumptions;PHP availability"
+source_status: "unknown"
+side_effects: "含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。"
+id: "vw-621f4229a14545fa96138449"
+entity_id: "ve-621f4229a14545fa96138449"
+schema_version: "1"
 ---
 
 # （CVE 2020-8816）Pi-hole 远程代码执行漏洞
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：Authenticated admin;<=4.3.2;PATH/PWD/shell layout assumptions;PHP availability
+- 证据范围：Unanchored MAC regex to shell injection and uppercase constraints;Go variant differs in environment-variable extraction
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- Missing CVE frontmatter because title uses 'CVE 2020'; normalize identifier
+- Claim any12letters/digits pass contradicted regex limitedhex[a-fA-F0-9]
+- preg_match described as returning matched characters instead of match outcome
+- Manual payload encoded IP differs prose target; clearly label substitutions
+- Image links duplicated tails and Pandoc html-comment residue
+- No fixed-version/advisory link; privilege and environment differences of two variants need documentation
+
+### 操作风险与资料使用
+
+- 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 一、漏洞简介
 ------------

@@ -1,9 +1,55 @@
 ---
 cve: "CVE-2024-43405"
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-5856f695b6a9c172d39caae2"
+entity_id: "ve-5856f695b6a9c172d39caae2"
+schema_version: "1"
+title: "Nuclei 被曝高危漏洞！允许攻击者进行签名绕过和代码执行，谨慎使用陌生的YAML模板"
+product: "ProjectDiscovery Nuclei"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2024-43405"
+referenced_identifiers: ""
+prerequisites: "运行不可信code模板并具执行权限；3.3.2修复"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%AE%89%E5%85%A8%E8%AE%BE%E5%A4%87/Nuclei/Nuclei%20%E8%A2%AB%E6%9B%9D%E9%AB%98%E5%8D%B1%E6%BC%8F%E6%B4%9E%EF%BC%81%E5%85%81%E8%AE%B8%E6%94%BB%E5%87%BB%E8%80%85%E8%BF%9B%E8%A1%8C%E7%AD%BE%E5%90%8D%E7%BB%95%E8%BF%87%E5%92%8C%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%EF%BC%8C%E8%B0%A8%E6%85%8E%E4%BD%BF%E7%94%A8%E9%99%8C%E7%94%9F%E7%9A%84YAML%E6%A8%A1%E6%9D%BF.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 #  Nuclei 被曝高危漏洞！允许攻击者进行签名绕过和代码执行，谨慎使用陌生的YAML模板   
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：ProjectDiscovery Nuclei
+- 本文讨论：CVE-2024-43405
+- 版本、权限与配置前提：运行不可信code模板并具执行权限；3.3.2修复
+- 资料类型：模板签名绕过新闻；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 两次称3.0.0之后所有版本受影响，和文内3.3.2已修复矛盾
+- YAML解析器不自己执行任意代码，应说明Nuclei code协议执行和启用条件
+- 签名校验保证来源完整性不等于模板安全；仅多个digest或CR不是充分攻击条件
+- 缺Wiz和官方GHSA/提交链接
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 官方版本上下界、code开关前提与签名验证细节待核
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
  WH0sec   2025-01-07 03:30  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/myic1rJ84UQib1h8I5Re97yPxU4o2fzIk9oZ62CvkvzianGcPoDtrqFdXWicFKmKdvPyCWibpfmHYy3JFpkiatI1ImiaQ/640?wx_fmt=gif "")  

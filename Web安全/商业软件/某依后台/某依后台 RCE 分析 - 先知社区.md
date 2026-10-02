@@ -1,10 +1,51 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "RuoYi若依（具体分支待核） 后台Quartz任意反射调用与SnakeYAML链"
+product: "RuoYi若依（具体分支待核）"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "声称≤4.6.2，SnakeYAML不安全构造/JDK/出站条件"
+prerequisites: "后台定时任务管理权限"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+source_url: "https://xz.aliyun.com/t/10687"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/%E6%9F%90%E4%BE%9D%E5%90%8E%E5%8F%B0/%E6%9F%90%E4%BE%9D%E5%90%8E%E5%8F%B0%20RCE%20%E5%88%86%E6%9E%90%20-%20%E5%85%88%E7%9F%A5%E7%A4%BE%E5%8C%BA.md"
+id: "vw-d7d32ae40ad68f2867f1773c"
+entity_id: "ve-d7d32ae40ad68f2867f1773c"
+schema_version: "1"
 ---
 
-# 某依后台 RCE 分析 - 先知社区
+# RuoYi若依（具体分支待核） 后台Quartz任意反射调用与SnakeYAML链
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：RuoYi若依（具体分支待核）；后台Quartz任意反射调用与SnakeYAML链
+- 版本、配置及部署条件：声称≤4.6.2，SnakeYAML不安全构造/JDK/出站条件
+- 认证与权限前提：后台定时任务管理权限
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 某依目录应规范若依，不能把单分支范围扩所有RuoYi分支
+- 调用目标并非任意类都可用，需要公共无参构造/匹配签名及可用依赖，正文有条件应提升到前提
+- Runtime.exec字符串内bash花括号/管道是否经shell解析需核，不能原样视为已验证反连
+- RMI报错只能远程jar为实例结论不是普遍限制；创建定时任务与外部类加载有持久状态需清理
+- Markdown链接吞大段正文、HTML碎片、beanName值缺失，需恢复原文；版本/补丁缺，默认账号仅示例
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [xz.aliyun.com](https://xz.aliyun.com/t/10687)
 
 > 先知社区，先知安全技术社区
@@ -16,7 +57,7 @@ source: "MrWQ/vulnerability-paper"
 简要描述：由于若依后台计划任务处，对于传入的 "调用目标字符串" 没有任何校验，导致攻击者可以调用任意类、方法及参数触发反射执行命令。  
 闲聊：最近正好在学 java，并且项目中又遇到若依，于是就顺手分析了一下这个漏洞，在下才疏学浅各位大佬勿喷！！！
 
-#### 利用步骤：
+##### 利用步骤：
 
 1、利用 Github 项目生成恶意 jar 包：[https://github.com/artsploit/yaml-payload](https://github.com/artsploit/yaml-payload)  
 先修改项目源码文件 src/artsploit/AwesomeScriptEngineFactory.java 执行 Linux 反弹 shell 命令

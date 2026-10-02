@@ -1,7 +1,46 @@
 ---
-fofa: "搜索可以看到存在 400 + 的记录："
+fofa: ""
 source: "MrWQ/vulnerability-paper"
+product: "SeaCMS 2020-06 latest (exact build unspecified)"
+record_type: "unknown"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+fofa_unverified: "搜索可以看到存在 400 + 的记录："
+title: "seacms 最新版前台注入漏洞 - Panda - 专注于网络空间安全研究"
+prerequisites: "来源所述条件，未列明部分仍待核：comment/api rlist全局输入、gid>0且page>=2绕缓存、实际过滤器版本/MySQL"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-0f8bb1e9ab027bb77c8899a0"
+entity_id: "ve-0f8bb1e9ab027bb77c8899a0"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 测绘字段处置：原 fofa 字段为残缺表达式、错误平台语法或当前解析器不支持的形式，原值完整保留到 fofa_unverified，不把它当作已校验查询或受影响资产证据。正文检索方法保留；具体问题见下列原审阅项。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：comment/api rlist全局输入、gid&gt;0且page&gt;=2绕缓存、实际过滤器版本/MySQL
+
+- **结论使用边界（1）**：frontmatter fofa是搜索可以看到存在400+的记录而非查询，明确抽取噪声；最新版无固定build。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **结论使用边界（2）**：大量代码围栏下划线/方括号/正则均额外反斜杠转义污染，无法原样复制。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **结论使用边界（3）**：m_eregi代码计算带i的$nreg却return未用它，后文等价/i正则不符合展示代码。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **证据待核（4）**：作者明确保留两坑未公开完整payload，应标刻意省略非采集缺失。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。
+
+- **适用与权限边界（5）**：CheckSql过滤拷贝只判断而真正执行原串是核心证据，值得保留；Readrlist替换叙述与实际CheckSql边界应校正。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **结论使用边界（6）**：捐赠二维码/支付提示与技术分离。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # seacms 最新版前台注入漏洞 - Panda - 专注于网络空间安全研究
 

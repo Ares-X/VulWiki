@@ -1,8 +1,52 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-a280ef774ed798b777155660"
+entity_id: "ve-a280ef774ed798b777155660"
+schema_version: "1"
+title: "惠普将在90天内修复这个严重的 LaserJet 打印机漏洞"
+product: "HP Enterprise/Managed LaserJet FutureSmart"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2023-1707"
+referenced_identifiers: ""
+prerequisites: "FutureSmart5.6+IPsec+扫描发送远端；凭据泄露另需无TLS；临时回退5.5.0.3"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%99%BA%E8%83%BD%E8%AE%BE%E5%A4%87/HP%20LaserJet/%E6%83%A0%E6%99%AE%E5%B0%86%E5%9C%A890%E5%A4%A9%E5%86%85%E4%BF%AE%E5%A4%8D%E8%BF%99%E4%B8%AA%E4%B8%A5%E9%87%8D%E7%9A%84%20LaserJet%20%E6%89%93%E5%8D%B0%E6%9C%BA%E6%BC%8F%E6%B4%9E.md"
+review_date: "2026-10-02"
+side_effects: "读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要且已脱敏的响应，不能由接口可达推定敏感内容已泄露"
+source_status: "unknown"
 ---
 
 #  惠普将在90天内修复这个严重的 LaserJet 打印机漏洞   
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：HP Enterprise/Managed LaserJet FutureSmart
+- 本文讨论：CVE-2023-1707信息泄露
+- 版本、权限与配置前提：FutureSmart5.6+IPsec+扫描发送远端；凭据泄露另需无TLS；临时回退5.5.0.3
+- 资料类型：HP打印机固件历史预警；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 正文引用FutureSmart5泛称与前文5.6需统一；个别型号清单重复
+- 90天内修复/目前无补丁是2023-04历史状态；无HP公告/固件直链，元数据漏CVE
+
+### 操作风险与恢复
+
+- 读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要且已脱敏的响应，不能由接口可达推定敏感内容已泄露
+
+### 待核与来源
+
+- 型号清单、实际修复build及回退指引待HP公告核验
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 Bill Toulas  代码卫士   2023-04-07 17:20  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

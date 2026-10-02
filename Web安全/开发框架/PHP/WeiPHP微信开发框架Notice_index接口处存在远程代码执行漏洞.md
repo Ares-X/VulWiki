@@ -1,7 +1,44 @@
 ---
-fofa: "<font style="
+fofa: ""
 source: "wy876 漏洞文库"
+product: "WeiPHP/ThinkPHP链"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+fofa_unverified: "<font style="
+title: "WeiPHP微信开发框架Notice_index接口处存在远程代码执行漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：仅产品名，无WeiPHP/ThinkPHP具体依赖、数据库结构或鉴权条件"
+side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
+source_status: "unknown"
+id: "vw-886c7417110219c6860eb65a"
+entity_id: "ve-886c7417110219c6860eb65a"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 测绘字段处置：原 fofa 字段为残缺表达式、错误平台语法或当前解析器不支持的形式，原值完整保留到 fofa_unverified，不把它当作已校验查询或受影响资产证据。正文检索方法保留；具体问题见下列原审阅项。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：仅产品名，无WeiPHP/ThinkPHP具体依赖、数据库结构或鉴权条件
+
+代码与实验材料：XML重复appid、UNION十六进制序列化链与md5结果文本；Content-Length:0却有长body，类型form却载XML
+
+来源证据范围：wy876/语雀及外部yaml，无原研究/补丁
+
+- **结论使用边界（1）**：原始HTTP请求自相矛盾；依据：Content-Length:0后有XML正文，直接发送会不被当当前请求体。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **适用与权限边界（2）**：链前提缺失；依据：ThinkPHP Windows/Pivot/Request序列化链及UNION列数被硬编码，未说明组件版本、反序列化点与鉴权。按此限制解释本文结论，版本相同不足以证明所需角色、入口、配置、依赖或可控参数均已满足；原操作和失败记录一并保留。
+
+- **结论使用边界（3）**：FOFA元数据和代码标注污染；依据：fofa:&lt;font style=，正文检索被HTML包裹；HTTP标java。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # WeiPHP微信开发框架Notice/index接口处存在远程代码执行漏洞
 

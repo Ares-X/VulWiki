@@ -1,9 +1,58 @@
 ---
-fofa: "app.name=="
 source: "wy876 漏洞文库"
+id: "vw-f840bd6b5c10a80648e742c9"
+entity_id: "ve-f9e819af7e5b371bed2b94b8"
+schema_version: "1"
+fofa_unverified: "app.name=="
+title: "安恒 DASUSM web.user_add 账户创建资料（原题博达防火墙错配）"
+product: "安恒 DASUSM 明御运维审计与风险控制系统"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+prerequisites: "service UNIX socket代理可达，roleid101含义未说明；无版本"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%AE%89%E5%85%A8%E8%AE%BE%E5%A4%87/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/%E5%8D%9A%E8%BE%BE%E4%B8%8B%E4%B8%80%E4%BB%A3%E9%98%B2%E7%81%AB%E5%A2%99aaa_portal_auth_local_submit%E5%AD%98%E5%9C%A8%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md"
+review_date: "2026-10-02"
+side_effects: "执行文中载荷可能以目标进程权限启动命令或加载代码；权限受认证角色、操作系统账户及依赖版本约束，不能把 root/200 等通用字符串当成功证据"
+source_url: "https://www.yuque.com/xiaokp7/ocvun2/ha1dzr2395nad5m3"
+source_status: "recorded"
+canonical: "Web安全/安全设备/安恒堡垒机/安恒堡垒机任意用户添加漏洞.md"
+relation_type: "duplicate_of"
 ---
 
-# 博达下一代防火墙aaa_portal_auth_local_submit存在命令执行漏洞
+# 安恒 DASUSM web.user_add 账户创建资料（原题博达防火墙错配）
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：正文安恒DASUSM堡垒机，标题博达防火墙不受正文支持
+- 本文讨论：正文XML-RPC web.user_add账户创建；标题aaa_portal_auth_local_submit RCE无正文
+- 版本、权限与配置前提：service UNIX socket代理可达，roleid101含义未说明；无版本
+- 资料类型：标题与正文完全错配；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 产品、影响版本、指纹、漏洞类型和请求均为安恒堡垒机用户新增，与博达命令注入标题完全不匹配
+- 与610完整正文同稿，只换标题/原文链接
+- 没有实际账号创建响应/登录证据；FOFA元数据误装Hunter残缺
+- 已落实的文本修订：HTTP 报文围栏改为 http；残缺指纹退出可执行索引并保留原值；标题与正文证据对齐。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
+- 标题按实际 XML-RPC web.user_add 请求更正为安恒 DASUSM 账户创建；原文件名只为兼容旧链接保留，不构成博达或下一代防火墙命令执行证据。
+
+### 操作风险与恢复
+
+- 执行文中载荷可能以目标进程权限启动命令或加载代码；权限受认证角色、操作系统账户及依赖版本约束，不能把 root/200 等通用字符串当成功证据
+
+### 待核与来源
+
+- 原源错贴发生层、真正博达内容与账户创建版本待核
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 
 # 一、漏洞简介
 安恒明御运维审计与风险控制系统（简称“DASUSM”）是一款基于运维安全管理的理论和实践经验，结合各类法律法规（如等级保护、赛班斯法案SOX、PCI、企业内控管理、分级保护、ISO/IEC 27001等）对运维审计的要求，采用B/S架构，集“身份认证（Authentication）、账户管理（Account）、控制权限（Authorization）、日志审计（Audit）”于一体，支持多种字符终端协议、文件传输协议、图形终端协议、远程应用协议的安全监控与历史查询，具备全方位运维风险控制能力的统一安全管理与审计产品。安恒明御运维审计风险控制系统（堡垒机）存在任意用户添加漏洞，攻击者可利用该漏洞添加用户登录堡垒机。
@@ -21,7 +70,7 @@ source: "wy876 漏洞文库"
 # 四、漏洞复现
 使用exp添加用户`qaxnb666/Admin123..`
 
-```java
+```http
 POST /service/?unix:/../../../../var/run/rpc/xmlrpc.sock|http://test/wsrpc HTTP/1.1
 Host: xx.xx.xx.xx
 Content-Length: 1112

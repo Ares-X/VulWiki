@@ -1,8 +1,53 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+id: "vw-b99c911db2366c5c7a65d6c9"
+entity_id: "ve-b99c911db2366c5c7a65d6c9"
+schema_version: "1"
+title: "思科严重漏洞可导致黑客在SEG设备上添加 root 用户"
+product: "Cisco Secure Email Gateway AsyncOS/Content Scanner Tools"
+record_type: "advisory"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+identifier_role: "primary"
+primary_identifiers: "CVE-2024-20401"
+referenced_identifiers: ""
+prerequisites: "文件分析或内容过滤应用于入站策略，CST<23.3.0.4823；15.5.1-055默认含修复"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/Cisco/%E6%80%9D%E7%A7%91%E4%B8%A5%E9%87%8D%E6%BC%8F%E6%B4%9E%E5%8F%AF%E5%AF%BC%E8%87%B4%E9%BB%91%E5%AE%A2%E5%9C%A8SEG%E8%AE%BE%E5%A4%87%E4%B8%8A%E6%B7%BB%E5%8A%A0%20root%20%E7%94%A8%E6%88%B7.md"
+review_date: "2026-10-02"
+side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
+source_status: "unknown"
 ---
 
 #  思科严重漏洞可导致黑客在SEG设备上添加 root 用户   
+
+<!-- article-review:devices:begin -->
+## 技术校订与证据边界（2026-10-02）
+
+- 产品/组件：Cisco Secure Email Gateway AsyncOS/Content Scanner Tools
+- 本文讨论：CVE-2024-20401
+- 版本、权限与配置前提：文件分析或内容过滤应用于入站策略，CST&lt;23.3.0.4823；15.5.1-055默认含修复
+- 资料类型：新闻通告；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
+
+### 逐项校订
+
+- 前段引文用文件分析和内容过滤，条件列表用或，逻辑需统一
+- 虽然已永久下线的表述把可能DoS写为已发生，与未见利用同文冲突
+- 二手新闻来源、无厂商直链；广告噪声
+
+### 操作风险与恢复
+
+- 本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本
+
+### 待核与来源
+
+- 实际AND/OR条件及修复包边界待核验
+- 引用图片未查看，截图内容及有效性待核验
+- 文内原始链接和图片引用继续保留；未检查图片像素、未下载或执行外部附件。版本边界、修复/在野状态及厂商归属若缺一手依据，均不能视为本次已确认
+- 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
+<!-- article-review:devices:end -->
+
 Sergiu Gatlan  代码卫士   2024-07-19 18:20  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

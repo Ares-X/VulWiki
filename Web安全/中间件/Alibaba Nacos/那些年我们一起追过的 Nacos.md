@@ -1,8 +1,50 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "那些年我们一起追过的 Nacos"
+product: "Nacos Server、Spring Boot Actuator"
+record_type: "roundup"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+prerequisites: "各auth开关/默认key/Actuator端点暴露条件独立，重置密码需查实际请求权限"
+source_url: "https://mp.weixin.qq.com/s/OWUNgUpz1YHSum78mmHtRA"
+source_status: "recorded"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-8fda98a031b73b4296d72df0"
+entity_id: "ve-8fda98a031b73b4296d72df0"
+schema_version: "1"
 ---
 
 # 那些年我们一起追过的 Nacos
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：各auth开关/默认key/Actuator端点暴露条件独立，重置密码需查实际请求权限
+- 证据范围：六节多为截图，B段仅替换403响应不证明JWT后端成功；D/E是否独立漏洞缺根因
+
+### 本次正文校订
+
+- 按实际内容修正 1 处代码围栏语言标记，保留其中方法与请求内容。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- Nacos原生外部Redis存储说法需证实，Raft不是数据库类型
+- SpringBoot并不自动泄露全部Actuator端点，Nacos*范围错误泛化
+- 查heapdump password条目不保证是可用Nacos明文密码；仅用户名不能登录
+- 修复建议只改token key无法修serverIdentity共享值，需要分别配置
+- TrafficReviseFilter不是完整AuthFilter证明；密码重置是有状态影响
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/OWUNgUpz1YHSum78mmHtRA)
@@ -332,7 +374,7 @@ Nacos 能让您从微服务平台建设的视角管理数据中心的所有服�
 
 使用 POC 和 serverIdentity: security 查看当前用户名和密码
 
-```
+```http
 GET /nacos/v1/auth/users?pageNo=1&pageSize=9&search=accurate&accessToken= HTTP/1.1
 Host: \{\{Hostname\}\}
 User-Agent: Mozilla/5.0 

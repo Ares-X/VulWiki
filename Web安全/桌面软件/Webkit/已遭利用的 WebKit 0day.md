@@ -1,8 +1,67 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2023-23529;CVE-2023-23514"
+identifier_role: "primary"
+primary_identifiers: "CVE-2023-23529;CVE-2023-23514"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "已遭利用的 WebKit 0day"
+product: "Apple WebKit及系统内核"
+record_type: "advisory"
+document_type: "安全更新新闻"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "恶意网页触发23529；文中iOS/iPadOS16.3.1、Ventura13.2.1更新，23514另需恶意应用等条件核验"
+side_effects: "浏览器代码执行不自动意味着OS崩溃或内核执行；23514不应借23529在野状态关联推断已遭利用"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Webkit/%E5%B7%B2%E9%81%AD%E5%88%A9%E7%94%A8%E7%9A%84%20WebKit%200day.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+source_url: "https://www.bleepingcomputer.com/news/security/apple-fixes-new-webkit-zero-day-exploited-to-hack-iphones-macs/"
+id: "vw-fa1575f3062860af074a0189"
+entity_id: "ve-fa1575f3062860af074a0189"
+schema_version: "1"
 ---
 
-#  苹果紧急修复已遭利用的 WebKit 0day   
+# 已遭利用的 WebKit 0day
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Apple WebKit及系统内核
+- 文献类型：安全更新新闻
+- 版本、权限及部署边界：恶意网页触发23529；文中iOS/iPadOS16.3.1、Ventura13.2.1更新，23514另需恶意应用等条件核验
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 无CVE元数据但正文含WebKit与内核两个漏洞，不能统一归为WebKit
+2. 正文称Safari16.3.1受影响同时叙述安全更新，需核对是否误将修复版本写为受影响
+3. 浏览器代码执行不自动意味着OS崩溃或内核执行；23514不应借23529在野状态关联推断已遭利用
+4. 设备清单是可更新设备与受影响范围混合，需逐分支核对；仅转载媒体链接，补Apple原始公告
+5. 清理大量相关阅读、空链接和广告，保留2023日期
+
+### 操作风险
+
+浏览器代码执行不自动意味着OS崩溃或内核执行；23514不应借23529在野状态关联推断已遭利用
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://www.bleepingcomputer.com/news/security/apple-fixes-new-webkit-zero-day-exploited-to-hack-iphones-macs/>
+- 原文参考链接（未重新核验）：<https://codesafe.qianxin.com>
+- 原文参考链接（未重新核验）：<https://oss.qianxin.com>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzI2NTg4OTc5Nw==&mid=2247511052&idx=3&sn=fb116392e405ae62e6c339117fffdb59&chksm=ea949d66dde31470758b6ee8f9dbecdb67ef6c0c8af277f26b83b60dbac95748d28db787a4b4&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzI2NTg4OTc5Nw==&mid=2247515374&idx=1&sn=8b491039bc40f1e5d4e1b29d8c95f9e7&chksm=ea948d84dde30492f8a6c9953f69dbed1f483b6bc9b4480cab641fbc69459d46bab41cdc4859&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzI2NTg4OTc5Nw==&mid=2247515027&idx=1&sn=93ebe9404e1ead6aa5f784abf7fab31a&chksm=ea948af9dde303ef597a5e12dd8faab95e3127a6e8214fe9cdfba93dbcd4e59095001090e30f&scene=21#wechat_redirect>
+- 原文参考链接（未重新核验）：<http://mp.weixin.qq.com/s?__biz=MzI2NTg4OTc5Nw==&mid=2247514319&idx=1&sn=10f6c5afa8be65b7ccac62c9ab73645c&chksm=ea9489a5dde300b312a93ec52a321f835baed001465326883dd6cdbbe70fecd5b94b1b8000c7&scene=21#wechat_redirect>
+
+### 归档技术正文
+
 Sergiu Gatlan  代码卫士   2023-02-14 16:52  
   
 ![](https://mmbiz.qpic.cn/mmbiz_gif/Az5ZsrEic9ot90z9etZLlU7OTaPOdibteeibJMMmbwc29aJlDOmUicibIRoLdcuEQjtHQ2qjVtZBt0M5eVbYoQzlHiaw/640?wx_fmt=gif "")  

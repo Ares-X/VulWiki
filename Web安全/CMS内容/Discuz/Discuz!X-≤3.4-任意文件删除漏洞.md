@@ -1,7 +1,41 @@
 ---
 version: "Discuz!X ≤3.4"
 source: "Threekiii/Vulnerability-Wiki"
+product: "Discuz X"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_role: "unknown"
+identifier_status: "unknown"
+title: "Discuz!X-≤3.4-任意文件删除漏洞"
+prerequisites: "来源所述条件，未列明部分仍待核：<=3.4 pre-fix; ordinary user and formhash; profile traversal then file upload"
+side_effects: "未执行；本文需注意的操作影响：Same two-stage text/mechanism as97; adds useful Cookie/Referer repair for cross-origin upload form"
+source_status: "unknown"
+id: "vw-610e39f51cdb8bd528d0390e"
+entity_id: "ve-610e39f51cdb8bd528d0390e"
+schema_version: "1"
 ---
+
+## 核对与使用边界
+
+- 凭据处理：本文抓包中的可识别会话/防伪或认证值已仅将中段替换为星号，保留首尾及原长度便于对照；默认公开示例、攻击表达式和其他 Cookie 语义保持原样。
+
+本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。
+
+适用条件与版本记录（来源主张，未列为明确更正的部分仍待权威资料核对）：&lt;=3.4 pre-fix; ordinary user and formhash; profile traversal then file upload
+
+- **凭据与会话边界（1）**：Same two-stage text/mechanism as97; adds useful Cookie/Referer repair for cross-origin upload form。抓包中的会话不能视为未认证访问证明；可识别的真实会话值按中段星号遮罩处理，默认演示值和攻击语法保留。需重新取得授权测试会话，不能复用文中值。
+
+- **结论使用边界（2）**：Host changes128→222 vs Origin159 across examples; normalize target。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+- **来源与引用处置（3）**：Version needs commit cutoff; first request contains unrelated AuthSession cookie。保留这部分来源材料并与技术结论分开；其引用或宣传内容不能补足本文漏洞的证据。
+
+- **结论使用边界（4）**：Precise original research link and lab details complement97。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+
+历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Discuz!X ≤3.4 任意文件删除漏洞
 
@@ -55,7 +89,7 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/w
 Referer: http://192.168.174.128/home.php?mod=spacecp&ac=profile&op=base
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9
-Cookie: AuthSession=dGhyZWVraTo2MjE0NEM0Mzrhe4V-bNxBqV-1RKA7mJS_YQrC9A; ot6_visitedfid=2; ot6_sid=9yWYy0; et56_2132_saltkey=qN7vqIdT; et56_2132_lastvisit=1645503280; et56_2132_sid=Ze005m; et56_2132_seccode=1.526c82122231460dd9; et56_2132_ulastactivity=6467KkrgcKDQNmUlDxKLd592a6DUvLlRSPU4g07eDld2bKtFo3JU; et56_2132_auth=45cdTg%2F0tTayn1c5i6fOd%2F96K8vGKx7SVg9MgaAoLalS102hICOtVzWjuDHbYtyyH8Rqe54O1WS9d%2Fa0s%2FIV; et56_2132_nofavfid=1; et56_2132_onlineusernum=1; et56_2132_noticeTitle=1; et56_2132_lastact=1645507206%09home.php%09misc
+Cookie: AuthSession=dGh********************************************C9A; ot6_visitedfid=2; ot6_sid=9yWYy0; et56_2132_saltkey=qN7vqIdT; et56_2132_lastvisit=1645503280; et56_2132_sid=Ze005m; et56_2132_seccode=1.5**************dd9; et56_2132_ulastactivity=6467KkrgcKDQNmUlDxKLd592a6DUvLlRSPU4g07eDld2bKtFo3JU; et56_2132_auth=45c**************************************************************************************FIV; et56_2132_nofavfid=1; et56_2132_onlineusernum=1; et56_2132_noticeTitle=1; et56_2132_lastact=1645507206%09home.php%09misc
 Connection: close
 
 ------WebKitFormBoundaryW8uA1wbCsmuiargU

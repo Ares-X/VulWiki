@@ -1,9 +1,46 @@
 ---
 cve: "CVE-2020-7961"
 source: "白阁文库 BaizeSec/bylibrary"
+title: "Liferay Portal代码执行"
+product: "Liferay Portal CE7.2GA1"
+record_type: "vulnerability"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+identifier_status: "active"
+primary_identifiers: "CVE-2020-7961"
+referenced_identifiers: ""
+identifier_role: "primary"
+prerequisites: "可访问JSONWS、适用C3P0链，HTTP类下载可达；文中请求带登录态Cookie，未做无认证对照"
+source_status: "unknown"
+side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+id: "vw-625487a69e57b75fc402593e"
+entity_id: "ve-625487a69e57b75fc402593e"
+schema_version: "1"
 ---
 
 # Liferay Portal代码执行
+
+<!-- vulwiki-editorial:start -->
+## 校订与适用边界
+
+- 适用前提：可访问JSONWS、适用C3P0链，HTTP类下载可达；文中请求带登录态Cookie，未做无认证对照
+- 证据范围：有具体Windows与JRE补丁版本和老分支修补指引，应作为平台差异保留；请求/代码转码损坏严重。
+
+### 尚未解决的证据缺口
+
+以下限制仍适用于后文历史材料；相关版本、结果或修复结论不能据此视为已验证：
+
+- HTTP整包无换行，JSON双引号变智能引号，不能原样复现
+- 多处尾随1234567891011等行号污染代码，catalina路径与cd命令黏连
+- 声称未授权但请求带JSESSIONID等，需删除会话对照或说明反序列化发生在权限检查前
+- 修补指引无各分支直接sourcepatch链接，7.2没有补丁必须标当时时点
+- 十六进制载荷全文阅读未解析，成功calc只有文字无截图证据
+
+本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
+<!-- vulwiki-editorial:end -->
+
+## 技术正文与历史材料
 
 ## CVE-2020-7961 Liferay Portal 代码执行漏洞复现
 

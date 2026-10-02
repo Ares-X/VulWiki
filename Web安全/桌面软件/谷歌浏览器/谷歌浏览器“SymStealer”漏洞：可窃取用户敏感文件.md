@@ -1,9 +1,60 @@
 ---
-cve: "CVE-2022-3656"
 source: "gelusus/wxvl 公众号漏洞文库"
+cve: "CVE-2022-3656"
+identifier_role: "primary"
+primary_identifiers: "CVE-2022-3656"
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "谷歌浏览器“SymStealer”漏洞：可窃取用户敏感文件"
+product: "Chromium文件/目录上传符号链接处理"
+record_type: "advisory"
+document_type: "浏览器文件读取新闻"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "用户下载并解压含符号链接的归档，再向恶意站点上传相关内容；具体OS与Chromium版本未列"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8/%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8%E2%80%9CSymStealer%E2%80%9D%E6%BC%8F%E6%B4%9E%EF%BC%9A%E5%8F%AF%E7%AA%83%E5%8F%96%E7%94%A8%E6%88%B7%E6%95%8F%E6%84%9F%E6%96%87%E4%BB%B6.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "missing"
+source_note: "原始出处待补；仓库归档不等同原始披露"
+id: "vw-ce2518da716a878217750246"
+entity_id: "ve-ce2518da716a878217750246"
+schema_version: "1"
 ---
 
-#  谷歌浏览器“SymStealer”漏洞：可窃取用户敏感文件   
+# 谷歌浏览器“SymStealer”漏洞：可窃取用户敏感文件
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：Chromium文件/目录上传符号链接处理
+- 文献类型：浏览器文件读取新闻
+- 版本、权限及部署边界：用户下载并解压含符号链接的归档，再向恶意站点上传相关内容；具体OS与Chromium版本未列
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 25亿用户/市场份额非实际受影响人数，需日期与版本限定
+2. 下载再上传钱包恢复密钥不是普遍正常安全流程，容易误导用户，应只作恶意站点诱导情境
+3. 本地文件读取依赖上传选择、符号链接保留及路径可访问性，不是访问网页即可任意读
+4. 建议防篡改扩展缺具体机制/可信依据，不应当修复替代
+5. 只给Imperva站名无原文，缺Chrome首次修复版；与其他Chrome目录同产品应统一
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原始披露 URL 未确认；既有归档来源标签保留，不能替代原始公告
+
+### 归档技术正文
+
 看雪学苑  看雪学苑   2023-01-16 17:59  
   
 近期，网络安全公司Imperva的红队披露了一个名为“SymStealer”的漏洞（CVE-2022-3656），据称影响超过25亿Google Chrome以及基于Chromium的浏览器用户。此漏洞允许攻击者窃取敏感文件，如加密钱包和云提供商凭据。  
@@ -87,4 +138,4 @@ trojan horse
 
 ---
 
-> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+> 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原始披露 URL 尚未确认，现有链接按来源追溯区分别标注）

@@ -1,10 +1,51 @@
 ---
 source: "MrWQ/vulnerability-paper"
+title: "Confluence Widget Connector _template SSTI/读取/SSRF"
+product: "Confluence Widget Connector"
+record_type: "analysis"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+primary_identifiers: "CVE-2019-3396"
+referenced_identifiers: ""
+identifier_status: "unknown"
+affected_scope: "列产品分支修复及widgetconnector<=3.1.3；实测6.9.3 Windows"
+prerequisites: "无Cookie样例"
+side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
+review_date: "2026-10-02"
+identifier_role: "primary"
+source_url: "https://github.com/MrWQ/vulnerability-paper"
+source_status: "recorded"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/Atlassian%20Confluence/Atlassian%20Confluence%20%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90%20-%20%E6%96%97%E8%B1%A1%E8%83%BD%E5%8A%9B%E4%B8%AD%E5%BF%83.md"
+id: "vw-fab7dc1fd2e23021cc2e7f88"
+entity_id: "ve-fab7dc1fd2e23021cc2e7f88"
+schema_version: "1"
 ---
 
-# Atlassian Confluence 远程代码执行漏洞分析 - 斗象能力中心
+# Confluence Widget Connector _template SSTI/读取/SSRF
 
-<meta name="referrer" content="no-referrer"/>
+## 条目说明
+
+- 对象与具体问题：Confluence Widget Connector；_template SSTI/读取/SSRF
+- 版本、配置及部署条件：列产品分支修复及widgetconnector<=3.1.3；实测6.9.3 Windows
+- 认证与权限前提：无Cookie样例
+- 核验边界：已完成原始 Markdown 的文本审阅；未执行 PoC、未访问目标、未视检截图。来源所述影响与复现结果不等于本库独立验证。
+
+## 证据边界与更正
+
+以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
+
+- 主CVE2019-3396只在来源URL，宜规范编号与标题
+- HTTP/JSON中转码反斜杠破坏_template及闭括号，Java数组亦被转义
+- file/HTTPS/FTP资源加载与http不支持说法是该环境观察，不可普遍化；补JDK/插件依赖
+- 保留修复移除_template与3.1.4线索，残余盲SSRF为独立未证问题；远程调试仅隔离实验
+
+## 操作风险
+
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+
+## 技术资料与来源记录
+
 \> 本文由 \[简悦 SimpRead\](http://ksria.com/simpread/) 转码， 原文地址 \[blog.riskivy.com\](https://blog.riskivy.com/atlassian-confluence-rce-cve-2019-3396/)
 
 Atlassian Confluence 远程代码执行漏洞分析
@@ -20,12 +61,12 @@ Confluence 是 Atlassian 公司出品的一款专业的企业知识管理与协�
 **影响范围**
 --------
 
-### 产品
+#### 产品
 
 Confluence Server  
 Confluence Data Center
 
-### 版本
+#### 版本
 
 所有 1.xx，2.xx，3.xx，4.xx 和 5.xx 版本  
 所有 6.0.x，6.1.x，6.2.x，6.3.x，6.4.x 和 6.5.x 版本  
@@ -35,11 +76,11 @@ Confluence Data Center
 6.13.3 之前的所有 6.13.x 版本  
 6.14.2 之前的所有 6.14.x 版本
 
-### 组件
+#### 组件
 
 widgetconnector<=3.1.3
 
-### 修复版本
+#### 修复版本
 
 版本 6.6.12 及更高版本的 6.6.x.  
 版本 6.12.3 及更高版本的 6.12.x  
@@ -49,7 +90,7 @@ widgetconnector<=3.1.3
 **漏洞分析与复现**
 -----------
 
-### １. 安装与注册使用版
+#### １. 安装与注册使用版
 
 通过官方的下载页面可以按照需要下载不同的版本，下载链接如下，https://www.atlassian.com/software/confluence/download-archives，  
 随便选择了个比较低的版本，选择的版本为 atlassian-confluence-6.9.3-x64.exe。  
@@ -59,7 +100,7 @@ widgetconnector<=3.1.3
 
 ![](https://blog.riskivy.com/wp-content/uploads/2019/04/71132673848a1ace282595c16fdc689c.png)
 
-### ２. 修改启动参数，调试
+#### ２. 修改启动参数，调试
 
 Confluence 在 Windows 平台是通过 tomcat 注册服务启动的，可以在服务中看到名称以 Confluence 开头的服务
 
@@ -77,7 +118,7 @@ Confluence 在 Windows 平台是通过 tomcat 注册服务启动的，可以在�
 
 ![](https://blog.riskivy.com/wp-content/uploads/2019/04/cddb636bd3ca67ca5a23e5045b12eb83.png)
 
-### ３. 代码简单分析
+#### ３. 代码简单分析
 
 Widgetconnector.jar 位于 confluence\\WEB-INF\\atlassian-bundled-plugins\\，目录下，根据目录可以知道这是一个插件，且是官方自带的一个插件，  
 该插件实现的功能在编辑器中表现为 “Macro”，官方名字为 Widget Connector Macro，  
@@ -95,14 +136,14 @@ Widgetconnector.jar 位于 confluence\\WEB-INF\\atlassian-bundled-plugins\\，�
 
 ![](https://blog.riskivy.com/wp-content/uploads/2019/04/cd196cd2efca0e47f288c3bf2727bf90.png)
 
-### ４. 漏洞复现，模板本地加载
+#### ４. 漏洞复现，模板本地加载
 
 将相关文件导入到 idea 中，选择查看 Widgetconnector.jar 中的  
 com.atlassian.confluence.extra.widgetconnector.video.DailyMotionRenderer 类，  
 在 getEmbeddedHtml 函数中打断点。  
 发送如下请求
 
-```
+```http
 POST /rest/tinymce/1/macro/preview HTTP/1.1
 Host: www.riskivy.xyz:8091
 Accept-Encoding: gzip, deflate
@@ -112,12 +153,13 @@ User-Agent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Tride
 Connection: close
 Content-Type: application/json
 Referer: http://www.riskivy.xyz:8091/
-Content-Length: 169
 
 {"contentId":"0","macro":{"name":"widget","body":"","params":{"url":"http://localhost/www.dailymotion.com/","width":"300","height":"200","\_template":"WEB-INF/web.xml"\}\\}\}
 
 
 ```
+
+> 请求长度说明：原资料 Content-Length 为 169；静态长度已移除，应由客户端根据最终请求体的字节数生成。
 
 ![](https://blog.riskivy.com/wp-content/uploads/2019/04/4cbc845ee78798423248697ae7b80ce6.png)  
 注意到 params 的 template 参数由用户输入，跟进 velocityRenderService 的 render，  
@@ -126,7 +168,7 @@ Content-Length: 169
 
 ![](https://blog.riskivy.com/wp-content/uploads/2019/04/3a6edcffad0ca3b33c4fb191cb988f30.png)
 
-### 4.1 漏洞复现，模板远程加载
+#### 4.1 漏洞复现，模板远程加载
 
 经过测试，可以直接加载 https，ftp 远程文件，其加载类为 tomcat 提供的 WebappClassLoader.。远程模板内容可为
 
@@ -150,7 +192,7 @@ findResource 是不支持 http 协议的。
 
 ![](https://blog.riskivy.com/wp-content/uploads/2019/04/12308f971b2e1298f5604c434b1e0138.png)
 
-### 5\. 官方修复方法
+#### 5\. 官方修复方法
 
 在 WidgetMacro 的构造函数中对属性 sanitizeFields 添加了如下值
 

@@ -1,8 +1,62 @@
 ---
 source: "MrWQ/vulnerability-paper"
+identifier_role: "unknown"
+primary_identifiers: ""
+referenced_identifiers: ""
+identifier_status: "unknown"
+title: "技术分享 QWB2019 VMw 虚拟机逃逸 wp"
+product: "QWB2019 VMw人为修改VMware-vmx CTF题"
+record_type: "unknown"
+document_type: "技术文章（细分类待核）"
+review_status: "text-reviewed"
+verification_status: "not-reproduced"
+content_status: "needs-review"
+prerequisites: "明确三个竞赛patch引入条件/16位截断，不能推断官方VMware受影响或补造CVE；realloc(ptr,0)行为须绑定实际glibc，不是跨实现无条件等价free"
+side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
+archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB%20QWB2019%20VMw%20%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%80%83%E9%80%B8%20wp.md"
+archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
+source_status: "recorded"
+source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
+source_url: "https://mp.weixin.qq.com/s/5B7f4v_CVmp8SehduvFq0g"
+id: "vw-8f5e2e59b01824f9b404eeac"
+entity_id: "ve-8f5e2e59b01824f9b404eeac"
+schema_version: "1"
 ---
 
-# 【技术分享】QWB2019 VMw 虚拟机逃逸 wp
+# 技术分享 QWB2019 VMw 虚拟机逃逸 wp
+
+<!-- vulwiki-editorial-rebuild:system-misc -->
+## 条目范围与校订
+
+- 本文对象：QWB2019 VMw人为修改VMware-vmx CTF题
+- 文献类型：技术文章（细分类待核）
+- 版本、权限及部署边界：明确三个竞赛patch引入条件/16位截断，不能推断官方VMware受影响或补造CVE；realloc(ptr,0)行为须绑定实际glibc，不是跨实现无条件等价free
+- 核验状态：仅重建文本校订；未执行文中代码、PoC 或扫描，未把截图或转载声明记为本站复现
+
+### 具体结论与待核项
+
+以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+
+1. 明确三个竞赛patch引入条件/16位截断，不能推断官方VMware受影响或补造CVE
+2. 未提供题目二进制/原版build、宿主glibc及hash，tcache行为和固定偏移难以独立复现
+3. 描述六case但列0至6七种
+4. realloc(ptr,0)行为须绑定实际glibc，不是跨实现无条件等价free
+5. 完整C缺stdlib/string声明、内联汇编依赖入参寄存器且无输入/内存约束，优化/编译ABI不稳
+6. channel_send_data按4字节访问却用长strlen(s21)读取短s2且回包循环曾逐字节写4字节，样例自身越界应指出
+7. 部分原因/关键触发文本句子缺失，主逆向指令图片未做像素验证
+8. r3kapig资料号称前置链接但实际未给URL，结尾广告可清理，保留与RWCTF漏洞位置不同的比较
+
+### 操作风险
+
+原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响
+
+技术请求、代码与实验方法按原文保留；其中的破坏性动作仅限授权、可恢复的隔离环境。缺失代码、参数或版本事实不猜补。
+
+### 来源追溯
+
+- 原文标注出处：<https://mp.weixin.qq.com/s/5B7f4v_CVmp8SehduvFq0g>
+
+### 归档技术正文
 
 <meta name="referrer" content="no-referrer"/>
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/5B7f4v_CVmp8SehduvFq0g)
