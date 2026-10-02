@@ -13,12 +13,13 @@ affected_scope: "未知；~ic与~baseapp分支"
 prerequisites: "接口鉴权未核"
 side_effects: "命令/代码执行示例可能改变主机状态"
 review_date: "2026-10-02"
-source_status: "unknown"
+source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E7%94%A8%E5%8F%8BNC/%E7%94%A8%E5%8F%8B%20NC%20UploadServlet%20%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96RCE%E6%BC%8F%E6%B4%9E.md"
 fofa: "app=\"用友-NC\""
 id: "vw-95990e0e6ff7291b7759c76b"
 entity_id: "ve-95990e0e6ff7291b7759c76b"
 schema_version: "1"
+source_url: "https://github.com/zan8in/afrog-pocs/blob/253291be2d307a6c836d5997bbb838f1e846f9ba/vulnerability/yonyou-nc-uploadservlet-rce.yaml"
 ---
 
 # 用友NC UploadServlet反序列化

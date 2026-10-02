@@ -1,11 +1,11 @@
 ---
 cve: "CVE-2016-3088; CVE-2015-5254"
-title: "ActiveMQ 漏洞总结"
+title: "ActiveMQ Fileserver 与 JMS 历史实验汇编（章节错配待核）"
 product: "Apache ActiveMQ Fileserver/管理端/JMS"
 record_type: "roundup"
 review_status: "text-reviewed"
 verification_status: "not-reproduced"
-content_status: "quarantined"
+content_status: "needs-review"
 identifier_status: "active"
 primary_identifiers: "CVE-2016-3088; CVE-2015-5254"
 referenced_identifiers: ""
@@ -19,13 +19,15 @@ entity_id: "ve-a66874f858d5aaba4bd7c250"
 schema_version: "1"
 ---
 
-# ActiveMQ 漏洞总结
+# ActiveMQ Fileserver 与 JMS 历史实验汇编（章节错配待核）
 
 <!-- vulwiki-editorial:start -->
 ## 校订与适用边界
 
+本文作为历史实验汇编保留查询：后半有 Fileserver PUT/MOVE 请求、失败现象与权限限制，以及 JMS 消息触发思路。前半章节与载荷错配，不能逐节视为独立且已验证的漏洞；版本范围和成功条件仍按下列限制阅读。
+
 - 适用前提：Fileserver启用；JSP访问需管理员；JMS能发消息且消费/管理员查看触发反序列化；OS写账号须已有root
-- 证据范围：大量节标题与下方内容错配，不能按现有章节生成标准实体；后半保留反弹/移动失败与权限限制有价值
+- 证据范围：部分节标题与内容错配；保留 Fileserver/JMS 技术材料，不能把每一节单独登记为已确认漏洞
 
 ### 本次正文校订
 
@@ -39,7 +41,7 @@ schema_version: "1"
 - 默认端口8363与前文8161矛盾
 - status_code整数与字符串204比较永远失败；JSP out.print缺分号
 - PUT的Python脚本介绍下面却插入创建root账号shell，明显混贴
-- 5.x~5.14范围不准确；元数据漏5254
+- 5.x~5.14范围不准确；主编号现已同时记录 3088 与 5254，仍需逐项核对版本
 - 修改passwd为UID0需要已有root，不能叫由普通权限提权；未授权示例带session需对照
 
 ### 操作风险与资料使用

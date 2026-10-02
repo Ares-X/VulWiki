@@ -13,12 +13,13 @@ affected_scope: "未知"
 prerequisites: "oauthservlet路径变体"
 side_effects: "命令/代码执行示例可能改变主机状态"
 review_date: "2026-10-02"
-source_status: "unknown"
+source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E5%AE%8F%E6%99%AF/%E5%AE%8F%E6%99%AFHCM%20loadtree%20SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md"
 fofa: "app=\"HJSOFT-HCM\""
 id: "vw-055de6afab749bf63fa45611"
 entity_id: "ve-055de6afab749bf63fa45611"
 schema_version: "1"
+source_url: "https://github.com/Co5mos/nuclei-tps/blob/5bc8b820acf9c992602cc7566e205e6cf1c463dd/http/vulnerabilities/hjsoft/hjsoft-hcm-loadtree-sqli.yaml"
 ---
 
 # 宏景HCM/eHR common/org/loadtree parentid SQL 注入

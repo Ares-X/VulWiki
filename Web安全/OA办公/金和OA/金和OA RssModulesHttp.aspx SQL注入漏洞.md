@@ -13,12 +13,13 @@ affected_scope: "未知"
 prerequisites: "未知"
 side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
 review_date: "2026-10-02"
-source_status: "unknown"
+source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E9%87%91%E5%92%8COA/%E9%87%91%E5%92%8COA%20RssModulesHttp.aspx%20SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md"
 fofa: "app=\"金和网络-金和OA\""
 id: "vw-82c96f6c726b85683aaa7c4a"
 entity_id: "ve-82c96f6c726b85683aaa7c4a"
 schema_version: "1"
+source_url: "https://github.com/zan8in/afrog/blob/93e56607188ccfa4b26bc529c7fa10c92696fdc1/pocs/afrog-pocs/vulnerability/jinher-c6-rssmoduleshttp-sqli.yaml"
 ---
 
 # 金和C6 RssModulesHttp interfaceID SQL 注入

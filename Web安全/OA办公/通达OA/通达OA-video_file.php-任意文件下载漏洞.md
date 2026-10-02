@@ -13,12 +13,13 @@ affected_scope: "来源V2017"
 prerequisites: "无Cookie不等于全部署无需鉴权"
 side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
 review_date: "2026-10-02"
-source_status: "unknown"
+source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E9%80%9A%E8%BE%BEOA/%E9%80%9A%E8%BE%BEOA-video_file.php-%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD%E6%BC%8F%E6%B4%9E.md"
 category_recommendation: "OA / 通达"
 id: "vw-18547be9cc17560fa690cca3"
 entity_id: "ve-18547be9cc17560fa690cca3"
 schema_version: "1"
+source_url: "https://github.com/LittleBear4/OA-EXPTOOL/blob/e2beff80059570bf58292d052d97a497749d87ea/book/tongda/tongda-oa-Download%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD.yaml"
 ---
 
 # 通达OA video_file路径遍历下载

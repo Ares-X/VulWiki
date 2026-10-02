@@ -13,12 +13,13 @@ affected_scope: "版本补丁未知；Base64→GBK解码"
 prerequisites: "部署认证/数据可见权限需核"
 side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
 review_date: "2026-10-02"
-source_status: "unknown"
+source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E6%B3%9B%E5%BE%AEoa/%E6%B3%9B%E5%BE%AEOA%20users.data%20%E6%95%8F%E6%84%9F%E4%BF%A1%E6%81%AF%E6%B3%84%E6%BC%8F%E6%BC%8F%E6%B4%9E.md"
 fofa: "app=\"泛微-协同办公OA\""
 id: "vw-95b4e04bec7e166714557de9"
 entity_id: "ve-95b4e04bec7e166714557de9"
 schema_version: "1"
+source_url: "https://github.com/PeiQi0/PeiQi-WIKI-Book/blob/90103c248a2c52bb0a060d0ee95d5a67e4579c3d/docs/wiki/oa/%E6%B3%9B%E5%BE%AEOA/%E6%B3%9B%E5%BE%AEOA%20E-Cology%20users.data%20%E6%95%8F%E6%84%9F%E4%BF%A1%E6%81%AF%E6%B3%84%E6%BC%8F.md"
 ---
 
 # 泛微e-cology messager/users.data用户信息泄漏

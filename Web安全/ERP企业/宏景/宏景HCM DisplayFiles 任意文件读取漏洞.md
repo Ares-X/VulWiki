@@ -13,12 +13,13 @@ affected_scope: "未知"
 prerequisites: "无业务凭据，部署鉴权未知"
 side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
 review_date: "2026-10-02"
-source_status: "unknown"
+source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E5%AE%8F%E6%99%AF/%E5%AE%8F%E6%99%AFHCM%20DisplayFiles%20%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E.md"
 fofa: "app=\"HJSOFT-HCM\""
 id: "vw-e992d5b70dae76799fa0043a"
 entity_id: "ve-e992d5b70dae76799fa0043a"
 schema_version: "1"
+source_url: "https://github.com/Co5mos/nuclei-tps/blob/5bc8b820acf9c992602cc7566e205e6cf1c463dd/http/vulnerabilities/hjsoft/hjsoft-servlet-DisplayFiles-fileread.yaml"
 ---
 
 # 宏景HCM/eHR DisplayFiles编码filepath读取

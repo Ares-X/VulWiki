@@ -13,12 +13,13 @@ affected_scope: "版本未知；appsvr/tomcat/webapps/ROOT布局及写权限"
 prerequisites: "实际认证未列，样本无cookie"
 side_effects: "文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行"
 review_date: "2026-10-02"
-source_status: "unknown"
+source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E6%B3%9B%E5%BE%AEoa/%E6%B3%9B%E5%BE%AEE-Mobile%20lang2sql%20%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E.md"
 fofa: "app=\"泛微-EMobile\""
 id: "vw-dba403540129fa22bc20bd39"
 entity_id: "ve-dba403540129fa22bc20bd39"
 schema_version: "1"
+source_url: "https://github.com/LittleBear4/OA-EXPTOOL/blob/e2beff80059570bf58292d052d97a497749d87ea/book/weaver/%E6%B3%9B%E5%BE%AE%20e-Mobile-lang2sql%E7%A7%BB%E5%8A%A8%E7%AE%A1%E7%90%86%E5%B9%B3%E5%8F%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0.yaml"
 ---
 
 # 泛微e-mobile lang2sql路径穿越上传/任意文件写入

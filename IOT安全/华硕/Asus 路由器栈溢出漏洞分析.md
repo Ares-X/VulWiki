@@ -336,21 +336,21 @@ if __name__ == '__main__':
 0x6 漏洞演示
 ========
 
- 已关注  关注  重播  分享   赞    _切换到竖屏全屏__退出全屏_ChaMd5安全团队已关注分享点赞在看已同步到看一看[写下你的评论](javascript:;)[](javascript:;)分享视频，时长00:52
+ 已关注  关注  重播  分享   赞    _切换到竖屏全屏__退出全屏_ChaMd5安全团队已关注分享点赞在看已同步到看一看写下你的评论分享视频，时长00:52
 
 0/0
 
-00:00/00:52 切换到横屏模式 继续播放进度条，百分之0[播放](javascript:;)00:00/00:5200:52_全屏_
+00:00/00:52 切换到横屏模式 继续播放进度条，百分之0播放00:00/00:5200:52_全屏_
 
-倍速播放中 [0.5倍](javascript:;) [0.75倍](javascript:;) [1.0倍](javascript:;) [1.5倍](javascript:;) [2.0倍](javascript:;) [超清](javascript:;) [高清](javascript:;) [流畅](javascript:;) <video src="http://mpvideo.qpic.cn/0bc35madcaaaf4anfdzxbbrfb26dghvqamia.f10002.mp4?dis_k=5f701896c7003a94435fa46d8f2a3587&dis_t=1648092483&vid=wxv_2319243509460942851&format_id=10002&support_redirect=0&mmversion=false" control></video>
+倍速播放中 0.5倍 0.75倍 1.0倍 1.5倍 2.0倍 超清 高清 流畅 <video src="http://mpvideo.qpic.cn/0bc35madcaaaf4anfdzxbbrfb26dghvqamia.f10002.mp4?dis_k=5f701896c7003a94435fa46d8f2a3587&dis_t=1648092483&vid=wxv_2319243509460942851&format_id=10002&support_redirect=0&mmversion=false" control></video>
 
 继续观看
 
 Asus 路由器栈溢出漏洞分析
 
-转载,Asus 路由器栈溢出漏洞分析ChaMd5安全团队已关注分享点赞在看已同步到看一看[写下你的评论](javascript:;)
+转载,Asus 路由器栈溢出漏洞分析ChaMd5安全团队已关注分享点赞在看已同步到看一看写下你的评论
 
-[视频详情](javascript:;)
+视频详情
 
 
 

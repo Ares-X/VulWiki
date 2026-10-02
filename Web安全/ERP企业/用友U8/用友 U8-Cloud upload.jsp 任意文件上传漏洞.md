@@ -13,12 +13,13 @@ affected_scope: "版本明确未知；写入和访问不等于执行"
 prerequisites: "无Cookie样例"
 side_effects: "文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行"
 review_date: "2026-10-02"
-source_status: "unknown"
+source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E7%94%A8%E5%8F%8BU8/%E7%94%A8%E5%8F%8B%20U8-Cloud%20upload.jsp%20%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E.md"
 fofa: "app=\"用友-U8-Cloud\""
 id: "vw-e00eb1e3050cd6ba752d1868"
 entity_id: "ve-e00eb1e3050cd6ba752d1868"
 schema_version: "1"
+source_url: "https://github.com/zan8in/afrog-pocs/blob/253291be2d307a6c836d5997bbb838f1e846f9ba/vulnerability/yonyou-u8-cloud-fileupload.yaml"
 ---
 
 # 用友U8 Cloud linux/pages/upload.jsp上传

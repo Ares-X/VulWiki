@@ -13,12 +13,13 @@ affected_scope: "未知"
 prerequisites: "原请求无Cookie但认证未知"
 side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
 review_date: "2026-10-02"
-source_status: "unknown"
+source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E9%87%91%E5%92%8COA/%E9%87%91%E5%92%8COA%20DownLoadBgImage%20%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E.md"
 fofa: "app=\"金和网络-金和OA\""
 id: "vw-eb4659ed60aa914007d50f4c"
 entity_id: "ve-eb4659ed60aa914007d50f4c"
 schema_version: "1"
+source_url: "https://mrxn.net/jswz/jhsoft-LoginTemplate-DownLoadBgImage-fileread.html"
 ---
 
 # 金和C6 DownLoadBgImage path读取

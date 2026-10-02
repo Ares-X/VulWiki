@@ -13,13 +13,14 @@ affected_scope: "未知"
 prerequisites: "无Cookie片段，真实认证未知"
 side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
 review_date: "2026-10-02"
-source_status: "unknown"
+source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E6%97%B6%E7%A9%BA%E6%99%BA%E5%8F%8B/%E7%94%A8%E5%8F%8B%20%E6%97%B6%E7%A9%BAKSOA%20servletimagefield%20sKeyvalue%20SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md"
 fofa: "app=\"用友-时空KSOA\""
 category_recommendation: "ERP / 用友 KSOA"
 id: "vw-871357ea3694def383ff6093"
 entity_id: "ve-871357ea3694def383ff6093"
 schema_version: "1"
+source_url: "https://github.com/zan8in/afrog-pocs/blob/253291be2d307a6c836d5997bbb838f1e846f9ba/vulnerability/yonyou-ksoa-servletimagefield-skeyvalue-sqli.yaml"
 ---
 
 # 用友时空KSOA imagefield sKeyvalue SQL 注入

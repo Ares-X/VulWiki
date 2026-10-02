@@ -13,12 +13,13 @@ affected_scope: "未知"
 prerequisites: "源发送无Cookie但展示有session，文已区分"
 side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
 review_date: "2026-10-02"
-source_status: "unknown"
+source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E7%94%A8%E5%8F%8BGRP-u8/%E7%94%A8%E5%8F%8B%20GRP-U8%20forgetPassword_old.jsp%20SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md"
 fofa: "app=\"用友-GRP-U8\""
 id: "vw-99ef444e4ab390ec7d8de016"
 entity_id: "ve-99ef444e4ab390ec7d8de016"
 schema_version: "1"
+source_url: "https://github.com/R4gd0ll/I-Wanna-Get-All/blob/d8b866af4baed03a338ce8485c25b53875461776/src/main/java/exp/oa/yongyou/grp/yongyou_grpu8_forgetPasswordOld_sqli.java"
 ---
 
 # 用友GRP-U8 forgetPassword_old idCard SQL 注入

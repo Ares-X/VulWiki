@@ -1,31 +1,32 @@
 ---
 cnvd: "CNVD-2023-27598"
-version: "8.10.0 <= Apache Solr < 9.2.0"
 source: "Threekiii/Vulnerability-Wiki"
-title: "Apache Solr 代码执行漏洞 CNVD-2023-27598"
-product: "Apache Solr"
-record_type: "vulnerability"
+title: "Apache Solr RunExecutableListener 历史请求（原 CNVD 归属不适用）"
+product: "Apache Solr RunExecutableListener（历史组件）"
+record_type: "analysis"
 review_status: "text-reviewed"
 verification_status: "not-reproduced"
-content_status: "quarantined"
-identifier_status: "active"
-primary_identifiers: "CNVD-2023-27598"
-referenced_identifiers: ""
-identifier_role: "primary"
-prerequisites: "声称SolrCloud8.10.0–<9.2.0且可出网；所贴代码却依赖已移除的RunExecutableListener"
-affected_versions: "8.10.0 <= Apache Solr < 9.2.0"
+content_status: "needs-review"
+identifier_status: "unknown"
+primary_identifiers: ""
+referenced_identifiers: "CNVD-2023-27598"
+identifier_role: "reference"
+prerequisites: "目标须实际包含旧 RunExecutableListener 且允许相应配置操作；认证、触发和受影响版本未确认"
 verification_source: "https://solr.apache.org/guide/solr/latest/configuration-guide/commits-transaction-logs.html"
 source_status: "unknown"
 side_effects: "含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。; 涉及 LDAP/RMI/DNS/HTTP 外带：回连只证明相应网络交互，不能单独证明命令执行；使用自控接收端，避免把日志、凭据或真实业务数据发送给第三方。"
 id: "vw-d3241469e334f70b48267d3e"
 entity_id: "ve-d3241469e334f70b48267d3e"
 schema_version: "1"
+version_unverified: "原文 8.10.0 <= Apache Solr < 9.2.0 与已移除的 RunExecutableListener 不适用"
 ---
 
-# Apache Solr 代码执行漏洞 CNVD-2023-27598
+# Apache Solr RunExecutableListener 历史请求（原 CNVD 归属不适用）
 
 <!-- vulwiki-editorial:start -->
 ## 校订与适用边界
+
+本文按现有两份 RunExecutableListener 配置请求保留历史技术资料。官方文档说明该组件自 Solr 7.1 移除，因此后文 8.10–9.2 的版本说明及 CNVD-2023-27598 归属不能用于这些请求；原编号仅作错配线索，不进入主编号索引。ConfigSets 修复建议也不能代替该旧组件的适用条件。
 
 - 适用前提：声称SolrCloud8.10.0–<9.2.0且可出网；所贴代码却依赖已移除的RunExecutableListener
 - 证据范围：描述/影响版本/PoC三者不对应。两请求是旧12629监听器方法，不能验证所述2023漏洞。

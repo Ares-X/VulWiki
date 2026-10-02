@@ -13,12 +13,13 @@ affected_scope: "未知"
 prerequisites: "getpassword新session两步"
 side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
 review_date: "2026-10-02"
-source_status: "unknown"
+source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E5%AE%8F%E6%99%AF/%E5%AE%8F%E6%99%AFHCM%20ajaxService%20SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md"
 fofa: "app=\"HJSOFT-HCM\""
 id: "vw-8ad49f6b2c8e3fd092f49a26"
 entity_id: "ve-8ad49f6b2c8e3fd092f49a26"
 schema_version: "1"
+source_url: "https://github.com/Co5mos/nuclei-tps/blob/5bc8b820acf9c992602cc7566e205e6cf1c463dd/http/vulnerabilities/hjsoft/hjsoft-eHR-system-sqli.yaml"
 ---
 
 # 宏景HCM/eHR ajaxService extTrans SQL 注入

@@ -14,12 +14,13 @@ prerequisites: "模板无Cookie，实际未验"
 side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
 review_date: "2026-10-02"
 identifier_role: "primary"
-source_status: "unknown"
+source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E5%AE%8F%E6%99%AF/%E5%AE%8F%E6%99%AFHCM%20loadhistroyorgtree%20SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md"
 fofa: "app=\"HJSOFT-HCM\""
 id: "vw-446ae85be84ee09455c24e5b"
 entity_id: "ve-446ae85be84ee09455c24e5b"
 schema_version: "1"
+source_url: "https://github.com/projectdiscovery/nuclei-templates/blob/8b9d065ccb0492d39f7680c908b3030a97ddfe1b/http/cves/2023/CVE-2023-6655.yaml"
 ---
 
 # 宏景eHR2020 loadhistroyorgtree parentid SQL 注入

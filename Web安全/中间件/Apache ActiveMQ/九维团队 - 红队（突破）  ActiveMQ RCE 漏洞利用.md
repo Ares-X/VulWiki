@@ -1,11 +1,11 @@
 ---
 source: "MrWQ/vulnerability-paper"
-title: "九维团队 - 红队（突破） ActiveMQ RCE 漏洞利用"
+title: "ActiveMQ OpenWire 历史利用链分析（CVE-2023-46604；XML 样例缺字段）"
 product: "ActiveMQ OpenWire与Jetty集成"
-record_type: "vulnerability"
+record_type: "analysis"
 review_status: "text-reviewed"
 verification_status: "not-reproduced"
-content_status: "quarantined"
+content_status: "needs-review"
 identifier_status: "active"
 primary_identifiers: "CVE-2023-46604"
 referenced_identifiers: ""
@@ -20,10 +20,12 @@ entity_id: "ve-eab9a7d039e8ad1504c29218"
 schema_version: "1"
 ---
 
-# 九维团队 - 红队（突破） ActiveMQ RCE 漏洞利用
+# ActiveMQ OpenWire 历史利用链分析（CVE-2023-46604；XML 样例缺字段）
 
 <!-- vulwiki-editorial:start -->
 ## 校订与适用边界
+
+本文保留 OpenWire 到 Spring XML 的历史链条说明和工具交互资料，作为待核分析收录。归档 XML 缺失 bean 的 id/class 等字段，内嵌字节码未独立审定，不能作为直接可运行的脚本；基础漏洞与后续 Jetty/JDK 内存组件链的条件须分开判断。
 
 - 适用前提：OpenWire可达且Spring可加载远程XML；特定内存Filter链依Jetty/JDK及作者要求Web认证/可达，不能推广为基础RCE前提
 - 证据范围：全文含两大base64类原文已读，未解码/反编译/运行；XML明显丢失bean id/class使变量未定义，不能称当前文本直接可复现
@@ -34,7 +36,7 @@ schema_version: "1"
 
 - 回显base64Str/cookie和内存ClassBase64Str未定义，前置bean缺id/class
 - 反弹bean缺ProcessBuilder class，同84转码问题
-- 主CVE缺元数据，四个<范围不按分支会错误包含安全版本
+- 主编号现已记录 CVE-2023-46604；正文四个小于号范围须按分支解释，否则会包含已修复版本
 - 大量重复GIF、滑动提示/广告冗余；payload源码缺失、字节码行为未独立审定
 - JDK11是此工具构建/反射链条件；配置Web外网不应作为通用必需操作
 

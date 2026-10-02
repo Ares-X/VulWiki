@@ -425,8 +425,7 @@
     "paths": [
       "Web安全/中间件/JBoss/JBoss JMXInvokerServlet 反序列化漏洞 CVE-2015-7501.md",
       "Web安全/中间件/JBoss/Jboss 漏洞利用总结.md",
-      "Web安全/中间件/JBoss/中间件常见漏洞之 JBOSS.md",
-      "Web安全/中间件/JBoss/（CVE-2015-7501）JBoss JMXInvokerServlet 反序列化漏洞.md"
+      "Web安全/中间件/JBoss/中间件常见漏洞之 JBOSS.md"
     ]
   },
   {
@@ -1214,8 +1213,7 @@
       "Web安全/中间件/WebLogic/weblogic 中间件漏洞总结.md",
       "Web安全/中间件/WebLogic/中间件常见漏洞之 weblogic.md",
       "Web安全/中间件/WebLogic/基于Weblogic的一系列漏洞复现总结（一）.md",
-      "Web安全/中间件/WebLogic/干货 - 最全的 Weblogic 漏洞复现.md",
-      "Web安全/中间件/WebLogic/（CVE-2018-2628）Weblogic反序列化漏洞.md"
+      "Web安全/中间件/WebLogic/干货 - 最全的 Weblogic 漏洞复现.md"
     ]
   },
   {
@@ -2282,15 +2280,6 @@
   {
     "basis": "shared-primary-identifier",
     "decision": "manual-review-required",
-    "key": "CVE-2020-8813",
-    "paths": [
-      "Web安全/服务器软件/Cacti/（CVE-2020-8813）Cacti v1.2.8 远程命令执行漏洞.md",
-      "Web安全/运维面板/Open-AudIT/（CVE-2020-12078）Open-AudIT v3.3.1 远程命令执行漏洞.md"
-    ]
-  },
-  {
-    "basis": "shared-primary-identifier",
-    "decision": "manual-review-required",
     "key": "CVE-2020-9402",
     "paths": [
       "Web安全/开发框架/Django/Django GIS SQL注入漏洞 CVE-2020-9402.md",
@@ -3032,7 +3021,6 @@
     "decision": "manual-review-required",
     "key": "CVE-2023-40796",
     "paths": [
-      "IOT安全/PHICOMM/CVE-2023-40796：斐讯 Phicomm K2 路由器 远程命令执行 附 POC.md",
       "IOT安全/PHICOMM/斐讯 Phicomm 路由器 RCE 漏洞 (附 poc).md",
       "Web安全/网络设备/斐讯/PHICOMM K2 命令注入漏洞 (CVE-2023-40796).md"
     ]

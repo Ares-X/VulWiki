@@ -3,12 +3,12 @@ source: "MrWQ/vulnerability-paper"
 id: "vw-54190e5390e07381881d53b1"
 entity_id: "ve-54190e5390e07381881d53b1"
 schema_version: "1"
-title: "海康威视 iVMS 综合安防系统任意文件上传漏洞复现（0day）"
+title: "海康威视 iVMS eps 上传接口与令牌绑定历史分析（样例待核）"
 product: "Hikvision iVMS-5000/8700"
 record_type: "analysis"
 review_status: "text-reviewed"
 verification_status: "not-reproduced"
-content_status: "quarantined"
+content_status: "needs-review"
 identifier_status: "unknown"
 identifier_role: "unknown"
 primary_identifiers: ""
@@ -21,7 +21,7 @@ source_url: "https://mp.weixin.qq.com/s/AyUlf2p80_CTCnCB4w058w"
 source_status: "recorded"
 ---
 
-# 海康威视 iVMS 综合安防系统任意文件上传漏洞复现（0day）
+# 海康威视 iVMS eps 上传接口与令牌绑定历史分析（样例待核）
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）
@@ -31,7 +31,7 @@ source_status: "recorded"
 - 版本、权限与配置前提：token绑定完整URL，版本仅产品系列；带会话但角色未明
 - 资料类型：token绕过上传分析；本次仅核对归档正文，未执行 PoC、未请求目标，未把原作者的“复现成功”继承为本库验证结果
 
-本篇存在关键内容缺失或技术错配，暂不作为可直接复现的漏洞记录。原技术材料保留供回源比对。
+保留正文对 eps 上传入口及 URL 绑定摘要机制的分析，按待核技术资料收录。Cookie 字符串和 multipart 字段缺失限制了样例的可运行性，但不抹去前文机制说明；HTTP 200 不能证明上传或执行成功，原标题的 0day 状态、具体构建与会话要求仍未确认。
 
 ### 逐项校订
 

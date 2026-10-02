@@ -13,12 +13,13 @@ affected_scope: "版本补丁认证未知；Web应用目录文件"
 prerequisites: "未知"
 side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
 review_date: "2026-10-02"
-source_status: "unknown"
+source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E6%B3%9B%E5%BE%AEoa/%E6%B3%9B%E5%BE%AEOA%20SptmForPortalThumbnail.jsp%20%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD%E6%BC%8F%E6%B4%9E.md"
 fofa: "app=\"泛微-协同办公OA\""
 id: "vw-59f35dede3fb958a0070a1c8"
 entity_id: "ve-59f35dede3fb958a0070a1c8"
 schema_version: "1"
+source_url: "https://github.com/projectdiscovery/nuclei-templates/blob/8b9d065ccb0492d39f7680c908b3030a97ddfe1b/http/vulnerabilities/weaver/weaver-sptmforportalthumbnail-lfi.yaml"
 ---
 
 # 泛微e-cology SptmForPortalThumbnail.jsp应用源码下载

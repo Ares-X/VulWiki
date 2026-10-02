@@ -13,12 +13,13 @@ affected_scope: "A6具体范围未披露"
 prerequisites: "明确确认未登录会话"
 side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
 review_date: "2026-10-02"
-source_status: "unknown"
+source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E8%87%B4%E8%BF%9COA/%E8%87%B4%E8%BF%9COA-A6-initDataAssess.jsp-%E6%95%8F%E6%84%9F%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2%E6%BC%8F%E6%B4%9E.md"
 fofa: "app=\"致远互联-OA\""
 id: "vw-c438a3738fdaf1ebbd799b2e"
 entity_id: "ve-c438a3738fdaf1ebbd799b2e"
 schema_version: "1"
+source_url: "https://github.com/Summer177/seeyon_exp/blob/4629a298eb60ca2cf07afe2c65dc67dc170cf3c3/poc/information.py"
 ---
 
 # 致远A6 initDataAssess.jsp用户信息泄漏

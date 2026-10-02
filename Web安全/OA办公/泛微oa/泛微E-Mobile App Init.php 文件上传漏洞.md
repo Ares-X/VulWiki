@@ -13,12 +13,13 @@ affected_scope: "精确产品/版本/补丁未知；模块路径与权限依赖"
 prerequisites: "公开模板无凭证，需部署核对"
 side_effects: "请求可能删除/覆盖数据、修改账号或持久改变业务状态；命令/代码执行示例可能改变主机状态"
 review_date: "2026-10-02"
-source_status: "unknown"
+source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E6%B3%9B%E5%BE%AEoa/%E6%B3%9B%E5%BE%AEE-Mobile%20App%20Init.php%20%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E.md"
 fofa: "app=\"泛微-EMobile\""
 id: "vw-9acf733aaacaf7bf6c89961d"
 entity_id: "ve-9acf733aaacaf7bf6c89961d"
 schema_version: "1"
+source_url: "https://github.com/LittleBear4/OA-EXPTOOL/blob/e2beff80059570bf58292d052d97a497749d87ea/book/weaver/ecology_mobileAppinit.php%E5%AD%98%E5%9C%A8%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E.yaml"
 ---
 
 # 泛微OA E-Mobile邮件模块（具体宿主待核） App/Init.php邮件附件路径写入

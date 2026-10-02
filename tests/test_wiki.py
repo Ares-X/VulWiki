@@ -85,6 +85,14 @@ class WikiTests(unittest.TestCase):
         self.assertEqual(r.primary, ['CVE-2025-12345'])
         self.assertEqual(sum(i.code == 'identifier_format' for i in r.issues), 2)
 
+    def test_legacy_primary_validated_in_its_declared_namespace(self):
+        self.article(identifier_role='primary', cve='CNVD-2025-12345',
+                     cnvd='CNVD-2025-67890')
+        record = self.scan()[0]
+        self.assertEqual(record.primary, ['CNVD-2025-67890'])
+        self.assertTrue(any(i.code == 'identifier_format' for i in record.issues))
+        self.assertNotIn('CNVD-2025-12345', wiki.catalog_record(record)['primary_identifiers'])
+
     def test_rejected_identifier_not_indexed(self):
         self.article(primary_identifiers='CVE-2025-12345', identifier_status='rejected')
         r = self.scan()[0]
@@ -126,6 +134,17 @@ class WikiTests(unittest.TestCase):
         self.assertEqual(actual, body)
         self.assertEqual(errors, [])
 
+    def test_yaml_scalar_syntax_cannot_pass_as_a_different_string(self):
+        for value in ("'foo'bar'", 'bad: scalar', '*undefined_anchor',
+                      '&anchor value', 'title # silently omitted by YAML'):
+            meta, body, errors = wiki.parse_frontmatter('---\ntitle: ' + value + '\n---\nBody')
+            self.assertNotIn('title', meta, value)
+            self.assertEqual(errors[0][0], 'field_type', value)
+            self.assertEqual(body, 'Body')
+        meta, _, errors = wiki.parse_frontmatter('---\nsource_url: https://example.invalid/a#heading\n---\nBody')
+        self.assertEqual(errors, [])
+        self.assertEqual(meta['source_url'], 'https://example.invalid/a#heading')
+
     def test_collections_numbers_and_duplicate_keys_rejected(self):
         meta, _, errors = wiki.parse_frontmatter('---\nx: false\ny: [a,b]\nz: 10\na: "ok"\na: "second"\n---\nbody')
         self.assertEqual(len(errors), 4)
@@ -151,6 +170,17 @@ class WikiTests(unittest.TestCase):
         (parent / 'other file.md').write_text('text')
         r = next(r for r in self.scan() if r.path == path)
         self.assertFalse(any(i.code in {'image_missing', 'link_missing'} for i in r.issues))
+
+    def test_encoded_fragment_and_query_characters_are_filename_parts(self):
+        path = self.article(body='![hash](.resource/a%23b.png)\n![query](.resource/a%3Fb.png)\n')
+        resources = (self.root / path).parent / '.resource'
+        resources.mkdir()
+        for name in ('a#b.png', 'a?b.png'):
+            (resources / name).write_bytes(b'fixture')
+        self.assertFalse(any(i.code == 'image_missing' for i in self.scan()[0].issues))
+        self.assertEqual(wiki.local_target(path, '.resource/a%23b.png#anchor'),
+                         str(Path(path).parent / '.resource/a#b.png'))
+        self.assertEqual(wiki.local_target('Web安全/a.md', '%2e%2e/%2e%2e/outside.md'), '!outside')
 
     def test_fenced_payload_links_ignored(self):
         self.article(body='```html\n<img src="missing.png">\n![fake](missing.png)\n```\n')
@@ -264,6 +294,23 @@ class WikiTests(unittest.TestCase):
         for body in ('```html\n' + payload + '\n```\n', '`' + payload + '`\n'):
             self.article(body=body)
             self.assertFalse(any(i.code == 'active_html_example' for i in self.scan()[0].issues))
+
+    def test_raw_pre_and_code_do_not_make_nested_html_inert(self):
+        for tag in ('pre', 'code'):
+            self.article(body=f'<{tag}><img src=x onerror="alert(1)"></{tag}>\n')
+            self.assertFalse(self.scan()[0].eligible)
+        self.article(body='<pre>&lt;img src=x onerror="alert(1)"&gt;</pre>\n')
+        self.assertTrue(self.scan()[0].eligible)
+
+    def test_active_markdown_links_are_not_publishable_examples(self):
+        for body in ('[example](javascript:alert(1))\n',
+                     '[example][demo]\n\n[demo]: javascript:alert(1)\n'):
+            self.article(body=body)
+            record = self.scan()[0]
+            self.assertFalse(record.eligible)
+            self.assertTrue(any(i.code == 'active_html_example' for i in record.issues))
+        self.article(body='`[example](javascript:alert(1))`\n')
+        self.assertTrue(self.scan()[0].eligible)
 
     def test_indented_html_and_jnlp_online_not_events(self):
         self.article(body='Response:\n\n    HTTP/1.1 200 OK\n    <img src=x onerror="alert(1)">\n\n<shortcut online="true"></shortcut>\n')

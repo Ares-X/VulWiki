@@ -13,12 +13,13 @@ affected_scope: "具体版本未知；SL-CE-SUID89条件及目录访问"
 prerequisites: "特殊身份头存在，不能称无身份条件"
 side_effects: "文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行"
 review_date: "2026-10-02"
-source_status: "unknown"
+source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E8%87%B4%E8%BF%9COA/%E8%87%B4%E8%BF%9COA-yyoa-doUpload.jsp-%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E.md"
 fofa: "app=\"致远互联-OA\""
 id: "vw-20ae3795d13725b86756cf61"
 entity_id: "ve-20ae3795d13725b86756cf61"
 schema_version: "1"
+source_url: "https://github.com/R4gd0ll/I-Wanna-Get-All/blob/d8b866af4baed03a338ce8485c25b53875461776/src/main/java/exp/oa/seeyonoa/yyoa/seeyon_yyoa_doUpload_upload.java"
 ---
 
 # 致远yyoa doUpload.jsp文件上传

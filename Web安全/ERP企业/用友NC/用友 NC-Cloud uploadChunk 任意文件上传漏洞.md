@@ -13,12 +13,13 @@ affected_scope: "未知"
 prerequisites: "accessTokenNcc条件"
 side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
 review_date: "2026-10-02"
-source_status: "unknown"
+source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E7%94%A8%E5%8F%8BNC/%E7%94%A8%E5%8F%8B%20NC-Cloud%20uploadChunk%20%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E.md"
 fofa: "app=\"用友-NC-Cloud\""
 id: "vw-076e849956dfa11a755e5849"
 entity_id: "ve-076e849956dfa11a755e5849"
 schema_version: "1"
+source_url: "https://github.com/zan8in/afrog-pocs/blob/253291be2d307a6c836d5997bbb838f1e846f9ba/vulnerability/yonyou-nccloud-uploadchunk-fileupload.yaml"
 ---
 
 # 用友NCCloud uploadChunk fileGuid路径写入

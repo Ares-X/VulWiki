@@ -137,12 +137,16 @@ def parse_frontmatter(text):
                 errors.append((code, key + ": use a JSON-quoted single-line string", n))
                 continue
         elif value.startswith("'"):
-            if len(value) < 2 or not value.endswith("'"):
-                errors.append((code, key + ": unclosed single-quoted string", n))
+            if not re.fullmatch(r"'(?:[^']|'')*'", value):
+                errors.append((code, key + ": invalid single-quoted string; escape quotes as two single quotes", n))
                 continue
             value = value[1:-1].replace("''", "'")
         elif (value and value[:1] in "[{|>") or re.fullmatch(r"(?i:true|false|null|~|[-+]?\d+(?:\.\d+)?)", value):
             errors.append((code, key + ": quote scalar values; collections are unsupported", n))
+            continue
+        elif value and (value[0] in "&*!%@`" or re.match(r"[-?:](?:\s|$)", value)
+                        or re.search(r":(?:\s|$)|(?:^|\s)#", value)):
+            errors.append((code, key + ": quote YAML syntax in scalar values", n))
             continue
         if not isinstance(value, str) or "\n" in value or "\r" in value:
             errors.append((code, key + ": expected a single-line string", n))
@@ -264,26 +268,25 @@ def prose_and_fences(body):
 class HtmlLinks(HTMLParser):
     def __init__(self):
         super().__init__()
-        self.links, self.active, self.code_depth = [], [], 0
+        self.links, self.active = [], []
 
     def handle_starttag(self, tag, attrs):
-        if tag in {"pre", "code"}:
-            self.code_depth += 1
-        if self.code_depth:
-            return
+        # Raw <pre>/<code> preserve whitespace, not HTML: nested tags still
+        # execute. Actual Markdown code has already been removed by the caller.
         if tag in {"script", "iframe", "object", "embed", "base"}:
             self.active.append(("active tag <" + tag + ">", self.getpos()[0]))
         for key, value in attrs:
             if key.startswith("on") and key[2:] in DOM_EVENTS:
                 self.active.append(("event attribute " + tag + "." + key, self.getpos()[0]))
-            if value and key in {"href", "src", "action", "formaction", "xlink:href"} and re.match(r"(?i)^(?:(?:javascript|vbscript):|data:text/html(?:[;,]|$))", re.sub(r"[\x00-\x20]", "", value)):
+            if value and key in {"href", "src", "action", "formaction", "xlink:href"} and active_url(value):
                 self.active.append(("active URL in " + tag + "." + key, self.getpos()[0]))
             if value and ((tag == "img" and key == "src") or (tag == "a" and key == "href")):
                 self.links.append((value, tag == "img", self.getpos()[0]))
 
-    def handle_endtag(self, tag):
-        if tag in {"pre", "code"} and self.code_depth:
-            self.code_depth -= 1
+
+def active_url(value):
+    return bool(re.match(r"(?i)^(?:(?:javascript|vbscript):|data:text/html(?:[;,]|$))",
+                         re.sub(r"[\x00-\x20]", "", value)))
 
 
 def markdown_links(prose, with_lines=False):
@@ -407,13 +410,14 @@ def repository_paths(root):
 
 
 def local_target(path, target):
-    target = unquote(target.strip())
+    target = target.strip()
     if not target or target.startswith(("#", "//")):
         return None
     parsed = urlsplit(target)
     if parsed.scheme or parsed.netloc:
         return None
-    target = parsed.path.replace("\\", "/")
+    # Split before decoding: %23 and %3F can be literal filename characters.
+    target = unquote(parsed.path).replace("\\", "/")
     if not target:
         return None
     if target.startswith("/"):
@@ -487,8 +491,6 @@ def scan(root):
             elif not r.source_links:
                 r.issue("source_label_only" if meta.get("source") else "source_missing", "no traceable URL in source fields or labelled reference sections")
             ids = meta.get("primary_identifiers", "")
-            if not ids and meta.get("identifier_role") == "primary":
-                ids = ";".join(meta.get(k, "") for k in ("cve", "cnvd", "cnnvd", "ghsa", "qvd", "xve"))
             for raw_value in split_ids(ids):
                 value = normalize_identifier(raw_value)
                 kind = identifier_kind(value)
@@ -504,7 +506,10 @@ def scan(root):
                     if not IDENTIFIERS[key.upper()].fullmatch(value):
                         r.issue("identifier_format", key + " contains invalid or wrong-namespace identifier: " + value, "error")
                     elif value not in r.primary:
-                        (r.references if meta.get("identifier_role") == "reference" else r.candidates).append(value)
+                        if not ids and meta.get("identifier_role") == "primary":
+                            r.primary.append(value)
+                        else:
+                            (r.references if meta.get("identifier_role") == "reference" else r.candidates).append(value)
             for raw_value in split_ids(meta.get("referenced_identifiers", "")):
                 value = normalize_identifier(raw_value)
                 kind = identifier_kind(value)
@@ -544,6 +549,11 @@ def scan(root):
                 pass
             for target, image, line in markdown_links(prose, with_lines=True):
                 line += body_offset
+                if active_url(target):
+                    # HTML links are also returned here; avoid reporting the
+                    # same source tag twice while still covering Markdown links.
+                    if not any(i.code == "active_html_example" and i.line == line for i in r.issues):
+                        r.issue("active_html_example", "active URL in Markdown link; preserve payload as visible code after manual review", "error", line)
                 try:
                     local = local_target(path, target)
                 except ValueError:

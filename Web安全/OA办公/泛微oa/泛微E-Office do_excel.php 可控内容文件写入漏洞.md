@@ -13,12 +13,13 @@ affected_scope: "版本未知；固定excel.php路径，可能覆盖既有文件
 prerequisites: "未明确认证"
 side_effects: "请求可能删除/覆盖数据、修改账号或持久改变业务状态；命令/代码执行示例可能改变主机状态"
 review_date: "2026-10-02"
-source_status: "unknown"
+source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E6%B3%9B%E5%BE%AEoa/%E6%B3%9B%E5%BE%AEE-Office%20do_excel.php%20%E5%8F%AF%E6%8E%A7%E5%86%85%E5%AE%B9%E6%96%87%E4%BB%B6%E5%86%99%E5%85%A5%E6%BC%8F%E6%B4%9E.md"
 fofa: "app=\"泛微-EOffice\""
 id: "vw-ee6cae072c4c9163be1e327f"
 entity_id: "ve-ee6cae072c4c9163be1e327f"
 schema_version: "1"
+source_url: "https://github.com/TD0U/WeaverScan/blob/5360245b20d5a6425c7684d104bf5fa7001d74fc/vulners/Wo2.go"
 ---
 
 # 泛微e-office do_excel.php固定路径内容写入

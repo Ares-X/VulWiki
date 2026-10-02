@@ -13,12 +13,13 @@ affected_scope: "未知"
 prerequisites: "未知"
 side_effects: "文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行"
 review_date: "2026-10-02"
-source_status: "unknown"
+source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E9%87%91%E5%92%8COA/%E9%87%91%E5%92%8COA%20UploadFileBlock%20%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E.md"
 fofa: "app=\"金和网络-金和OA\""
 id: "vw-7c4b52ec54a22a2fbef64a86"
 entity_id: "ve-7c4b52ec54a22a2fbef64a86"
 schema_version: "1"
+source_url: "https://github.com/zan8in/afrog/blob/93e56607188ccfa4b26bc529c7fa10c92696fdc1/pocs/afrog-pocs/vulnerability/jinher-uploadfileblock-fileupload.yaml"
 ---
 
 # 金和JC6 UploadFileBlock上传

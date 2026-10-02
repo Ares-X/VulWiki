@@ -1,11 +1,11 @@
 ---
 source: "白阁文库 BaizeSec/bylibrary"
-title: "freeFTP1.0.8-'PASS'远程缓冲区溢出"
+title: "freeFTP 1.0.8 PASS 溢出历史脚本（变量错误待修）"
 product: "freeFTP 1.0.8"
-record_type: "vulnerability"
+record_type: "analysis"
 review_status: "text-reviewed"
 verification_status: "not-reproduced"
-content_status: "quarantined"
+content_status: "needs-review"
 identifier_status: "unknown"
 primary_identifiers: ""
 referenced_identifiers: ""
@@ -18,10 +18,12 @@ entity_id: "ve-f499d41bb6ed0b2a617bfbb3"
 schema_version: "1"
 ---
 
-# freeFTP1.0.8-'PASS'远程缓冲区溢出
+# freeFTP 1.0.8 PASS 溢出历史脚本（变量错误待修）
 
 <!-- vulwiki-editorial:start -->
 ## 校订与适用边界
+
+正文包含 FTP USER/PASS 交互及缓冲区/SEH 布局代码，可作为历史脚本资料阅读。buf 覆盖与未定义 shellcode 使现文不能直接运行；保留原字节与代码，不代为补造载荷。固定地址、目标平台及结果缺口不视为已完成验证，版本仅为原作者标注。
 
 - 适用前提：特定Windows模块布局/SEH地址，FTP USER anonymous后发送长PASS；测试OS未给
 - 证据范围：完整读取shellcode字节与脚本，未反汇编；变量错误导致脚本现文必然不能运行

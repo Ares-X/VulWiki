@@ -13,12 +13,13 @@ affected_scope: "精确版本未知；附件写入、OfficeServer INSERTIMAGE、
 prerequisites: "公开实现无cookie，实际认证需核"
 side_effects: "文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行；命令/代码执行示例可能改变主机状态"
 review_date: "2026-10-02"
-source_status: "unknown"
+source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E6%B3%9B%E5%BE%AEoa/%E6%B3%9B%E5%BE%AEE-Cology%20uploaderOperate.jsp%20%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E.md"
 fofa: "app=\"泛微-协同办公OA\""
 id: "vw-4956d423fefcf80863fbd989"
 entity_id: "ve-4956d423fefcf80863fbd989"
 schema_version: "1"
+source_url: "https://github.com/R4gd0ll/I-Wanna-Get-All/blob/d8b866af4baed03a338ce8485c25b53875461776/src/main/java/exp/oa/weaveroa/ecology/weaver_ec_UploaderOperate_upload.java"
 ---
 
 # 泛微e-cology uploaderOperate.jsp附件+OfficeServer文件写入链

@@ -13,12 +13,13 @@ affected_scope: "未知；特定依赖/字节流"
 prerequisites: "接口可达，鉴权未核"
 side_effects: "命令/代码执行示例可能改变主机状态"
 review_date: "2026-10-02"
-source_status: "unknown"
+source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E7%94%A8%E5%8F%8BNC/%E7%94%A8%E5%8F%8B%20NC%20MonitorServlet%20%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96RCE%E6%BC%8F%E6%B4%9E.md"
 fofa: "app=\"用友-NC\""
 id: "vw-8293ce1aada42dd0c0ac438e"
 entity_id: "ve-8293ce1aada42dd0c0ac438e"
 schema_version: "1"
+source_url: "https://github.com/zan8in/afrog-pocs/blob/253291be2d307a6c836d5997bbb838f1e846f9ba/vulnerability/yonyou-nc-monitorservlet-rce.yaml"
 ---
 
 # 用友NC MonitorServlet反序列化

@@ -12,6 +12,10 @@
 
 - [（CVE-2019-19117）PHICOMM 远程代码执行](../IOT%E5%AE%89%E5%85%A8/PHICOMM/%EF%BC%88CVE-2019-19117%EF%BC%89PHICOMM%20%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C.md) [analysis; not-reproduced; needs-review]
 
+## Phicomm K2及LuCI固件
+
+- [Phicomm K2 LuCI 后台请求资料（原 CVE 范围与字段待核）](../IOT%E5%AE%89%E5%85%A8/PHICOMM/CVE-2023-40796%EF%BC%9A%E6%96%90%E8%AE%AF%20Phicomm%20K2%20%E8%B7%AF%E7%94%B1%E5%99%A8%20%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%20%E9%99%84%20POC.md) [analysis; not-reproduced; needs-review]
+
 ## Phicomm LuCI路由器
 
 - [斐讯 Phicomm 路由器 RCE 漏洞 (附 poc)](../IOT%E5%AE%89%E5%85%A8/PHICOMM/%E6%96%90%E8%AE%AF%20Phicomm%20%E8%B7%AF%E7%94%B1%E5%99%A8%20RCE%20%E6%BC%8F%E6%B4%9E%20%28%E9%99%84%20poc%29.md) [vulnerability; not-reproduced; needs-review]

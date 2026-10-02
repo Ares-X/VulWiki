@@ -1,27 +1,30 @@
 ---
 source: "hatch 补库批 20260928"
-title: "Phpmyadmin setup页面配置不当的利用姿势整合"
-product: "phpMyAdmin setup / PHP-CGI deployment (mixed)"
-record_type: "vulnerability"
+title: "PHP-CGI 参数注入历史请求（原 phpMyAdmin setup 归属不适用）"
+product: "PHP-CGI 参数处理"
+record_type: "analysis"
 review_status: "text-reviewed"
 verification_status: "not-reproduced"
-content_status: "quarantined"
+content_status: "needs-review"
 identifier_status: "unknown"
 primary_identifiers: ""
 referenced_identifiers: ""
 identifier_role: "unknown"
-prerequisites: "正文未给PHP CGI模式/版本，而仅列phpMyAdmin setup版本"
-source_status: "unknown"
+prerequisites: "需确认 PHP 版本、CGI 部署与参数处理配置；现文 phpMyAdmin 版本不能提供该条件"
+source_status: "recorded"
 side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
 id: "vw-4ddfe60c44ac5793803a5803"
 entity_id: "ve-4ddfe60c44ac5793803a5803"
 schema_version: "1"
+source_url: "https://louisnie.github.io/2018/10/23/%E6%89%8B%E5%8A%A8%E6%8C%96%E6%8E%98%E4%B9%8B%E9%BB%98%E8%AE%A4%E5%AE%89%E8%A3%85%E6%BC%8F%E6%B4%9E-1/"
 ---
 
-# Phpmyadmin setup页面配置不当的利用姿势整合
+# PHP-CGI 参数注入历史请求（原 phpMyAdmin setup 归属不适用）
 
 <!-- vulwiki-editorial:start -->
 ## 校订与适用边界
+
+正文的技术主体是 PHP-CGI 请求参数与 auto_prepend_file 等选项，保留为该机制的历史请求资料。它不证明 phpMyAdmin setup SSRF，开头 phpMyAdmin 版本不可用于判断 PHP-CGI 的影响；-d 为请求期选项，不等于永久修改 php.ini。图片错引和请求片段问题继续保留提醒。
 
 - 适用前提：正文未给PHP CGI模式/版本，而仅列phpMyAdmin setup版本
 - 证据范围：标题和版本讲setup SSRF，实际全为?-d auto_prepend_file请求；不是同一机制
@@ -34,7 +37,7 @@ schema_version: "1"
 - 解释-d是在请求期设置选项，却称修改php.ini文件；技术含义错
 - 多张图误引用前一篇phpMyAdmin XSS目录
 - HTTP请求掺注释和固定长度；写入webshell需要文件权限且有持续副作用
-- 应隔离后按原始来源拆分，不能直接保留为已复现phpMyAdmin漏洞
+- 现已按 PHP-CGI 参数注入资料归类，不能作为已复现的 phpMyAdmin setup 漏洞
 
 本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。
 <!-- vulwiki-editorial:end -->

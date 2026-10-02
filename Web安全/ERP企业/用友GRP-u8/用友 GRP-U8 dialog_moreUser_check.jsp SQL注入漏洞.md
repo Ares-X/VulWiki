@@ -13,12 +13,13 @@ affected_scope: "未知"
 prerequisites: "未知"
 side_effects: "命令/代码执行示例可能改变主机状态"
 review_date: "2026-10-02"
-source_status: "unknown"
+source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E7%94%A8%E5%8F%8BGRP-u8/%E7%94%A8%E5%8F%8B%20GRP-U8%20dialog_moreUser_check.jsp%20SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md"
 fofa: "app=\"用友-GRP-U8\""
 id: "vw-c4c69c48533866e600989558"
 entity_id: "ve-c4c69c48533866e600989558"
 schema_version: "1"
+source_url: "https://github.com/R4gd0ll/I-Wanna-Get-All/blob/d8b866af4baed03a338ce8485c25b53875461776/src/main/java/exp/oa/yongyou/grp/yongyou_grpu8_dialogmoreUsercheck_sqli.java"
 ---
 
 # 用友GRP-U8 dialog_moreUser_check mlid SQL 注入

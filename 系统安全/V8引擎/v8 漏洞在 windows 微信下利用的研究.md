@@ -98,7 +98,7 @@ Copyright @ 404 Team from Knownsec.
 v8 漏洞在 windows 微信下利用的研究
 =======================
 
-[](javascript:window.print())
+
 
 2022年03月15日 2022年03月15日  
 [经验心得](/category/experience/)

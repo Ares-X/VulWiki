@@ -13,12 +13,13 @@ affected_scope: "来源正文8，完整范围未知；SQL Server"
 prerequisites: "noLogin=1不等于所有部署未授权，已在正文限定"
 side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
 review_date: "2026-10-02"
-source_status: "unknown"
+source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E6%B3%9B%E5%BE%AEoa/%E6%B3%9B%E5%BE%AEE-Cology%20mobilemode%20Action.jsp%20SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md"
 fofa: "app=\"泛微-协同办公OA\""
 id: "vw-3e81eac50bc1e808bd00869b"
 entity_id: "ve-3e81eac50bc1e808bd00869b"
 schema_version: "1"
+source_url: "https://github.com/LittleBear4/OA-EXPTOOL/blob/e2beff80059570bf58292d052d97a497749d87ea/book/weaver/ecologye-mobilemodeAction-sql%E6%B3%A8%E5%85%A5.yaml"
 ---
 
 # 泛微e-cology mobilemode Action.jsp MECAdminAction任意SQL执行

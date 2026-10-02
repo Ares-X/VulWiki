@@ -13,12 +13,13 @@ affected_scope: "范围未披露，固定enc作用/时间绑定未知"
 prerequisites: "未正常登录获取session声称，正文强调隔离现有会话"
 side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
 review_date: "2026-10-02"
-source_status: "unknown"
+source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E8%87%B4%E8%BF%9COA/%E8%87%B4%E8%BF%9COA-thirdpartyController.do-%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE%E6%BC%8F%E6%B4%9E.md"
 fofa: "app=\"致远互联-OA\""
 id: "vw-4323de9ec24261bf5b20e111"
 entity_id: "ve-4323de9ec24261bf5b20e111"
 schema_version: "1"
+source_url: "https://github.com/LittleBear4/OA-EXPTOOL/blob/e2beff80059570bf58292d052d97a497749d87ea/book/seeyou/Seeyon-Unauthori-Access.yaml"
 ---
 
 # 致远OA thirdpartyController.do第三方参数会话获取

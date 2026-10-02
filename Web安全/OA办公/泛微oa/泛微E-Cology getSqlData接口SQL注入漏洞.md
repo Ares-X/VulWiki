@@ -13,12 +13,13 @@ affected_scope: "公开8.0，范围未知；SQL Server语法"
 prerequisites: "无认证请求但实际需核"
 side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
 review_date: "2026-10-02"
-source_status: "unknown"
+source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E6%B3%9B%E5%BE%AEoa/%E6%B3%9B%E5%BE%AEE-Cology%20getSqlData%E6%8E%A5%E5%8F%A3SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md"
 fofa: "app=\"泛微-协同办公OA\""
 id: "vw-e89510af4a054df94c8df437"
 entity_id: "ve-e89510af4a054df94c8df437"
 schema_version: "1"
+source_url: "https://github.com/projectdiscovery/nuclei-templates/blob/8b9d065ccb0492d39f7680c908b3030a97ddfe1b/http/vulnerabilities/weaver/weaver-ecology-getsqldata-sqli.yaml"
 ---
 
 # 泛微e-cology getSqlData任意SQL表达式执行

@@ -13,12 +13,13 @@ affected_scope: "来源v11.9"
 prerequisites: "OfficeTask空密码配置前提"
 side_effects: "命令/代码执行示例可能改变主机状态"
 review_date: "2026-10-02"
-source_status: "unknown"
+source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E9%80%9A%E8%BE%BEOA/%E9%80%9A%E8%BE%BEOA-v11.9-get_datas.php-SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md"
 category_recommendation: "OA / 通达"
 id: "vw-dc5b169cf31582bcaa8cb136"
 entity_id: "ve-dc5b169cf31582bcaa8cb136"
 schema_version: "1"
+source_url: "https://github.com/LittleBear4/OA-EXPTOOL/blob/e2beff80059570bf58292d052d97a497749d87ea/book/tongda/tongda-oav11.9-sql%E6%B3%A8%E5%85%A5.yaml"
 ---
 
 # 通达OA get_datas tab SQL 注入

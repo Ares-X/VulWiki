@@ -13,12 +13,13 @@ affected_scope: "未知"
 prerequisites: "来源称未授权但部署未知"
 side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
 review_date: "2026-10-02"
-source_status: "unknown"
+source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E9%87%91%E5%92%8COA/%E9%87%91%E5%92%8COA%20SAP_B1Config.aspx%20%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE%E6%BC%8F%E6%B4%9E.md"
 fofa: "app=\"金和网络-金和OA\""
 id: "vw-340413d507ab4b56ca172b52"
 entity_id: "ve-340413d507ab4b56ca172b52"
 schema_version: "1"
+source_url: "https://github.com/zan8in/afrog/blob/93e56607188ccfa4b26bc529c7fa10c92696fdc1/pocs/afrog-pocs/vulnerability/jinher-oa-sap-b1config-disclosure.yaml"
 ---
 
 # 金和C6 SAP B1集成 SAP_B1Config配置页访问

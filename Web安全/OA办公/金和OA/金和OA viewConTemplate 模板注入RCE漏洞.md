@@ -13,12 +13,13 @@ affected_scope: "未知，模板可用类/权限条件"
 prerequisites: "未知"
 side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
 review_date: "2026-10-02"
-source_status: "unknown"
+source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E9%87%91%E5%92%8COA/%E9%87%91%E5%92%8COA%20viewConTemplate%20%E6%A8%A1%E6%9D%BF%E6%B3%A8%E5%85%A5RCE%E6%BC%8F%E6%B4%9E.md"
 fofa: "app=\"金和网络-金和OA\""
 id: "vw-44a4bd947249b23009e8cee5"
 entity_id: "ve-44a4bd947249b23009e8cee5"
 schema_version: "1"
+source_url: "https://cn-sec.com/archives/2835659.html"
 ---
 
 # 金和JC6 viewConTemplate FreeMarker模板注入

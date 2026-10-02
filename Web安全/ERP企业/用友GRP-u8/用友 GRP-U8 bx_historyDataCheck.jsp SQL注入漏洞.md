@@ -13,12 +13,13 @@ affected_scope: "未知"
 prerequisites: "未核"
 side_effects: "命令/代码执行示例可能改变主机状态"
 review_date: "2026-10-02"
-source_status: "unknown"
+source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E7%94%A8%E5%8F%8BGRP-u8/%E7%94%A8%E5%8F%8B%20GRP-U8%20bx_historyDataCheck.jsp%20SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md"
 fofa: "app=\"用友-GRP-U8\""
 id: "vw-cee134aa5e01362256d3b669"
 entity_id: "ve-cee134aa5e01362256d3b669"
 schema_version: "1"
+source_url: "https://github.com/zan8in/afrog-pocs/blob/253291be2d307a6c836d5997bbb838f1e846f9ba/vulnerability/yonyou-grp-u8-bx-historyDataChecks-sqli.yaml"
 ---
 
 # 用友GRP-U8 bx_historyDataCheck userName SQL 注入

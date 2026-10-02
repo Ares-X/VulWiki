@@ -761,18 +761,6 @@
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "033e50806d93dc5a19db2458",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/OA办公/泛微oa/泛微E-Cology mobilemode Action.jsp SQL注入漏洞.md",
-      "severity": "warning"
-    },
-    {
-      "code": "source_missing",
-      "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
       "key": "034f80d86081d41c43be9b10",
       "line": 0,
       "lines": [
@@ -1103,18 +1091,6 @@
         0
       ],
       "path": "Web安全/其他软件/杂项/CVE-2022-23613复现与漏洞利用可能性尝试.md",
-      "severity": "warning"
-    },
-    {
-      "code": "source_missing",
-      "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "04ac74d4acb4226220101f15",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/OA办公/金和OA/金和OA UploadFileDownLoadnew 任意文件读取漏洞.md",
       "severity": "warning"
     },
     {
@@ -1859,18 +1835,6 @@
         0
       ],
       "path": "Web安全/桌面软件/智联/智联云采 SRM2.0 quickReceiptDetail处 SQL注入漏洞.md",
-      "severity": "warning"
-    },
-    {
-      "code": "source_missing",
-      "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "0810220806c17e068ff62b04",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/OA办公/泛微oa/泛微E-Cology datas接口敏感信息泄漏漏洞.md",
       "severity": "warning"
     },
     {
@@ -3122,18 +3086,6 @@
       "severity": "warning"
     },
     {
-      "code": "source_missing",
-      "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "0d29a7e00f45d8171701915d",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/OA办公/泛微oa/泛微E-Cology VerifyQuickLogin.jsp 管理员会话获取漏洞.md",
-      "severity": "warning"
-    },
-    {
       "code": "identifier_role_unknown",
       "count": 1,
       "detail": "legacy identifier candidates excluded from primary CVE index",
@@ -3275,18 +3227,6 @@
         0
       ],
       "path": "Web安全/服务器软件/CrushFTP/CrushFtp 权限绕过漏洞 (CVE-2025-31161).md",
-      "severity": "warning"
-    },
-    {
-      "code": "source_missing",
-      "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "0db248ba71face0e63ce4044",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/OA办公/泛微oa/泛微OA ln.FileDownload 目录遍历漏洞.md",
       "severity": "warning"
     },
     {
@@ -4291,18 +4231,6 @@
         0
       ],
       "path": "Web安全/开发框架/Django/深入剖析 CVE-2026-1207：Django RasterField(PostGIS) 栅格查询 SQL 注入漏洞.md",
-      "severity": "warning"
-    },
-    {
-      "code": "source_missing",
-      "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "12c7f714e28d9cd9a75fa3fd",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/OA办公/通达OA/通达OA-v11.9-get_datas.php-SQL注入漏洞.md",
       "severity": "warning"
     },
     {
@@ -5990,18 +5918,6 @@
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "192653e22e01bc78d6d1eaec",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/OA办公/泛微oa/泛微OA HrmCareerApplyPerView.jsp SQL注入漏洞.md",
-      "severity": "warning"
-    },
-    {
-      "code": "source_missing",
-      "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
       "key": "19350fe6667611c4c2d71ec8",
       "line": 0,
       "lines": [
@@ -6995,18 +6911,6 @@
       "severity": "warning"
     },
     {
-      "code": "identifier_inactive",
-      "count": 1,
-      "detail": "primary identifiers excluded: disputed",
-      "key": "1dd6ea1493c83f8bfc879a6f",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/网络设备/H3C/H3C Magic B1STV100R012 远程代码执行漏洞 (CVE-2023-34928).md",
-      "severity": "warning"
-    },
-    {
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly missing; reference links are not confirmed provenance",
@@ -7905,18 +7809,6 @@
         0
       ],
       "path": "Web安全/网络设备/Fortinet/（CVE-2018-13379）Fortinet FortiOS 路径遍历漏洞.md",
-      "severity": "warning"
-    },
-    {
-      "code": "source_missing",
-      "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "2114343b71f66123c87c3f9b",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/OA办公/致远OA/致远OA-yyoa-doUpload.jsp-任意文件上传漏洞.md",
       "severity": "warning"
     },
     {
@@ -9158,18 +9050,6 @@
     {
       "code": "source_missing",
       "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "26de5bcf28a2f8a4c7ca8acd",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/ERP企业/用友NC/用友 NC-Cloud uploadChunk 任意文件上传漏洞.md",
-      "severity": "warning"
-    },
-    {
-      "code": "source_missing",
-      "count": 1,
       "detail": "original source URL explicitly missing; reference links are not confirmed provenance",
       "key": "26f824df8037c2a2b79c8d22",
       "line": 0,
@@ -9321,18 +9201,6 @@
         0
       ],
       "path": "Web安全/其他软件/杂项/一个价值7万美刀的谷歌漏洞.md",
-      "severity": "warning"
-    },
-    {
-      "code": "source_missing",
-      "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "275d99da8d5078835a951131",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/ERP企业/用友GRP-u8/用友 GRP-U8 operOriztion SQL注入漏洞.md",
       "severity": "warning"
     },
     {
@@ -12963,18 +12831,6 @@
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "3698665c3745ce479bb3f0d7",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/ERP企业/用友U8/用友 U8 CRM getemaildata.php 任意文件读取漏洞.md",
-      "severity": "warning"
-    },
-    {
-      "code": "source_missing",
-      "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
       "key": "369a78fb81c81a210c267a8a",
       "line": 0,
       "lines": [
@@ -13029,18 +12885,6 @@
         0
       ],
       "path": "Web安全/中间件/Apache Solr/Apache Solr Velocity模版注入远程命令执行.md",
-      "severity": "warning"
-    },
-    {
-      "code": "source_missing",
-      "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "36e0c31731bc28b69a7896fc",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/OA办公/泛微oa/泛微OA portalTsLogin 配置文件读取漏洞.md",
       "severity": "warning"
     },
     {
@@ -13191,18 +13035,6 @@
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "375e3642e171dc3332682661",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/OA办公/金和OA/金和OA DownLoadBgImage 任意文件读取漏洞.md",
-      "severity": "warning"
-    },
-    {
-      "code": "source_missing",
-      "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
       "key": "378874e39f6c34c5c9ff935b",
       "line": 0,
       "lines": [
@@ -13233,18 +13065,6 @@
         0
       ],
       "path": "Web安全/CMS内容/WordPress/热门Wordpress 插件 LayerSlider 中存在严重漏洞.md",
-      "severity": "warning"
-    },
-    {
-      "code": "source_missing",
-      "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "37937ed04920e52f6343a5f6",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/OA办公/泛微oa/泛微OA SptmForPortalThumbnail.jsp 任意文件下载漏洞.md",
       "severity": "warning"
     },
     {
@@ -13778,18 +13598,6 @@
     {
       "code": "source_missing",
       "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "3970ac7bee222ab31663183e",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/网络设备/DrayTek/Vigor3900 CVE-2021-43118 命令注入漏洞分析.md",
-      "severity": "warning"
-    },
-    {
-      "code": "source_missing",
-      "count": 1,
       "detail": "original source URL explicitly missing; reference links are not confirmed provenance",
       "key": "3973eea49a06e4509d99cffc",
       "line": 0,
@@ -13953,18 +13761,6 @@
         0
       ],
       "path": "Web安全/中间件/WebLogic/第155篇：Weblogic反序列化漏洞的多种回显方法总结（上篇）.md",
-      "severity": "warning"
-    },
-    {
-      "code": "source_missing",
-      "count": 1,
-      "detail": "original source URL explicitly missing; reference links are not confirmed provenance",
-      "key": "3a1e7f4a0c9093fb3e257623",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/中间件/WebLogic/（CVE-2019-2890）Weblogic反序列化漏洞.md",
       "severity": "warning"
     },
     {
@@ -14832,18 +14628,6 @@
       "severity": "warning"
     },
     {
-      "code": "source_missing",
-      "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "3dbd6fbf53b983007f0fe1c1",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/ERP企业/宏景/宏景HCM loadtree SQL注入漏洞.md",
-      "severity": "warning"
-    },
-    {
       "code": "fingerprint_unverified",
       "count": 1,
       "detail": "fofa: retained unverified query excluded from fingerprint index",
@@ -15628,18 +15412,6 @@
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "4093a438770ddfa108d1cfa9",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/OA办公/金和OA/金和OA FileUploadMessage 任意文件读取漏洞.md",
-      "severity": "warning"
-    },
-    {
-      "code": "source_missing",
-      "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
       "key": "4094034a54401c1521b92b58",
       "line": 0,
       "lines": [
@@ -16372,18 +16144,6 @@
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "43974866f5cfee40e2dc2795",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/ERP企业/宏景/宏景HCM LoadOtherTreeServlet SQL注入漏洞.md",
-      "severity": "warning"
-    },
-    {
-      "code": "source_missing",
-      "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
       "key": "439b20e5fa92472e47713f5f",
       "line": 0,
       "lines": [
@@ -16654,18 +16414,6 @@
         0
       ],
       "path": "Web安全/安全设备/金山终端安全/金山 V8 终端安全系统 get_file_content.php 任意文件读取漏洞.md",
-      "severity": "warning"
-    },
-    {
-      "code": "source_missing",
-      "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "44a7c70bae3dee83a5d74757",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/ERP企业/用友U8/用友 U8-Cloud upload.jsp 任意文件上传漏洞.md",
       "severity": "warning"
     },
     {
@@ -17115,18 +16863,6 @@
     {
       "code": "source_missing",
       "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "46d23fff206be8afaee45701",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/OA办公/金和OA/金和OA TaskTreeJSON.aspx SQL注入漏洞.md",
-      "severity": "warning"
-    },
-    {
-      "code": "source_missing",
-      "count": 1,
       "detail": "original source URL explicitly missing; reference links are not confirmed provenance",
       "key": "46da7fc5b27fa6d92aa51633",
       "line": 0,
@@ -17350,18 +17086,6 @@
         0
       ],
       "path": "IOT安全/TP-Link/（CVE-2020-9374）TP-Link TL-WR849N 远程命令执行漏洞.md",
-      "severity": "warning"
-    },
-    {
-      "code": "identifier_inactive",
-      "count": 1,
-      "detail": "primary identifiers excluded: disputed",
-      "key": "47c2da43b3a9ffda7516ace0",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "IOT安全/Amazon/（CVE-2018-11019）Amazon Kindle Fire HD (3rd) Fire OS kernel组件安全漏洞.md",
       "severity": "warning"
     },
     {
@@ -18790,18 +18514,6 @@
         0
       ],
       "path": "Web安全/中间件/Apache Druid/Apache-Druid-远程代码执行漏洞-QVD-2023-9629.md",
-      "severity": "warning"
-    },
-    {
-      "code": "source_missing",
-      "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "4d5bbfd244fd56e34487a87d",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/OA办公/泛微oa/泛微E-Cology UploadFileClient 任意文件上传漏洞.md",
       "severity": "warning"
     },
     {
@@ -22364,18 +22076,6 @@
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "5bf7475efcbb7296a7d185d2",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/OA办公/致远OA/致远OA-thirdpartyController.do-未授权访问漏洞.md",
-      "severity": "warning"
-    },
-    {
-      "code": "source_missing",
-      "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
       "key": "5bfc3a6af0f0b11cf780e0d7",
       "line": 0,
       "lines": [
@@ -23186,18 +22886,6 @@
         0
       ],
       "path": "Web安全/开发框架/Next.js/【首发1day详情】CVE-2024-51479 全网首发漏洞复现分析+POC Next.js权限绕过.md",
-      "severity": "warning"
-    },
-    {
-      "code": "source_missing",
-      "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "5f344ecfe618d6e79c325595",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/OA办公/通达OA/通达OA-video_file.php-任意文件下载漏洞.md",
       "severity": "warning"
     },
     {
@@ -26851,18 +26539,6 @@
       "severity": "warning"
     },
     {
-      "code": "source_missing",
-      "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "6ec6f15ff7b194d25f26e9ae",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/数据库/Phpmyadmin/Phpmyadmin setup页面配置不当的利用姿势整合.md",
-      "severity": "warning"
-    },
-    {
       "code": "site_relative_link",
       "count": 1,
       "detail": "origin-relative website links require original-site review; example: /",
@@ -28615,18 +28291,6 @@
       "severity": "warning"
     },
     {
-      "code": "source_missing",
-      "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "7607843ca45fe77859c50a18",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/OA办公/泛微oa/泛微E-Mobile lang2sql 任意文件上传漏洞.md",
-      "severity": "warning"
-    },
-    {
       "code": "noncontent_link_candidate",
       "count": 4,
       "detail": "possible source code or original-site route: 7",
@@ -28951,18 +28615,6 @@
         0
       ],
       "path": "Web安全/服务器软件/GoAhead/GoAhead Server 远程命令执行漏洞 CVE-2017-17562.md",
-      "severity": "warning"
-    },
-    {
-      "code": "source_missing",
-      "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "7810bc2b658c6d724f52fc0a",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/ERP企业/用友GRP-u8/用友 GRP-U8 forgetPassword_old.jsp SQL注入漏洞.md",
       "severity": "warning"
     },
     {
@@ -30311,18 +29963,6 @@
       "severity": "warning"
     },
     {
-      "code": "source_missing",
-      "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "7dc39a35ea19b18f0242f2f2",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/OA办公/泛微oa/泛微E-Office Officeserver 任意文件读取漏洞.md",
-      "severity": "warning"
-    },
-    {
       "code": "fingerprint_unverified",
       "count": 1,
       "detail": "fofa: retained unverified query excluded from fingerprint index",
@@ -31477,18 +31117,6 @@
     {
       "code": "source_missing",
       "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "8247ef7dcd4656f4e78a8553",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/ERP企业/用友GRP-u8/用友 GRP-U8 dialog_moreUser_check.jsp SQL注入漏洞.md",
-      "severity": "warning"
-    },
-    {
-      "code": "source_missing",
-      "count": 1,
       "detail": "original source URL explicitly missing; reference links are not confirmed provenance",
       "key": "824a8e6bd330aff1d3f35aa8",
       "line": 0,
@@ -31568,18 +31196,6 @@
         0
       ],
       "path": "Web安全/中间件/AppWeb/（CVE-2018-8715）AppWeb认证绕过漏洞.md",
-      "severity": "warning"
-    },
-    {
-      "code": "source_missing",
-      "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "829744196604db936af39e5d",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/OA办公/泛微oa/泛微E-Mobile App Init.php 文件上传漏洞.md",
       "severity": "warning"
     },
     {
@@ -32684,18 +32300,6 @@
         0
       ],
       "path": "Web安全/开发框架/Shiro/工具推荐  一款Shiro反序列化漏洞一站式综合利用工具.md",
-      "severity": "warning"
-    },
-    {
-      "code": "source_missing",
-      "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "86aecb6f80226167fd691d44",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/OA办公/泛微oa/泛微OA SignatureDownLoad 任意文件读取漏洞.md",
       "severity": "warning"
     },
     {
@@ -35126,18 +34730,6 @@
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "913979e2a2552dea9cd4782a",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/OA办公/泛微oa/泛微OA LoginSSO.jsp SQL注入漏洞.md",
-      "severity": "warning"
-    },
-    {
-      "code": "source_missing",
-      "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
       "key": "913d074e54ceb98ef6846f97",
       "line": 0,
       "lines": [
@@ -36349,18 +35941,6 @@
     {
       "code": "source_missing",
       "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "9638abd24faf3554256ed655",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/OA办公/泛微oa/泛微E-Cology uploaderOperate.jsp 文件上传漏洞.md",
-      "severity": "warning"
-    },
-    {
-      "code": "source_missing",
-      "count": 1,
       "detail": "original source URL explicitly missing; reference links are not confirmed provenance",
       "key": "9647708903977950d3c5df0b",
       "line": 0,
@@ -36488,18 +36068,6 @@
         0
       ],
       "path": "Web安全/中间件/Apache/CVE-2023-48796：Apache dolphinscheduler 敏感信息泄露.md",
-      "severity": "warning"
-    },
-    {
-      "code": "source_missing",
-      "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "96dd83467d8728e4df4d748c",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/ERP企业/时空智友/用友 时空KSOA servletimagefield sKeyvalue SQL注入漏洞.md",
       "severity": "warning"
     },
     {
@@ -36704,18 +36272,6 @@
         0
       ],
       "path": "Web安全/开发框架/Fastjson/Fastjson 1.2.22 - 1.2.24 反序列化漏洞.md",
-      "severity": "warning"
-    },
-    {
-      "code": "source_missing",
-      "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "98330077ebd38f225bbb37ff",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/ERP企业/用友NC/用友 NC UploadServlet 反序列化RCE漏洞.md",
       "severity": "warning"
     },
     {
@@ -37332,18 +36888,6 @@
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "9aeefaa7bebfd96cd2a12420",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "IOT安全/D-Link/（CVE-2019–17621）D-Link DIR-859 rce.md",
-      "severity": "warning"
-    },
-    {
-      "code": "source_missing",
-      "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
       "key": "9af5bfc56a5aa671903dd4b1",
       "line": 0,
       "lines": [
@@ -37788,18 +37332,6 @@
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "9d3ab68b8798e0538be8f380",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/ERP企业/时空智友/用友 时空KSOA PayBill SQL注入漏洞.md",
-      "severity": "warning"
-    },
-    {
-      "code": "source_missing",
-      "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
       "key": "9d3f29a8c68df4f5054b8f5f",
       "line": 0,
       "lines": [
@@ -37878,18 +37410,6 @@
         73
       ],
       "path": "系统安全/V8引擎/v8 漏洞在 windows 微信下利用的研究.md",
-      "severity": "warning"
-    },
-    {
-      "code": "source_missing",
-      "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "9d7eadea0f931200cbe95f8d",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/OA办公/金和OA/金和OA GetSqlData.aspx SQL注入漏洞.md",
       "severity": "warning"
     },
     {
@@ -40224,18 +39744,6 @@
       "severity": "warning"
     },
     {
-      "code": "unrecognized_identifier_namespace",
-      "count": 1,
-      "detail": "primary role retained; namespace format not validated: S2-019",
-      "key": "a66dedfe839a1265918a10fc",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/中间件/Apache Struts/（CVE-2013-4316）s2-019.md",
-      "severity": "warning"
-    },
-    {
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
@@ -40548,18 +40056,6 @@
       "severity": "warning"
     },
     {
-      "code": "source_missing",
-      "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "a7b248d1d3ea68230b500947",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/ERP企业/宏景/宏景HCM ajaxService SQL注入漏洞.md",
-      "severity": "warning"
-    },
-    {
       "code": "fingerprint_unverified",
       "count": 1,
       "detail": "fofa: retained unverified query excluded from fingerprint index",
@@ -40689,30 +40185,6 @@
         0
       ],
       "path": "Web安全/商业软件/多客圈子论坛系统/多客圈子论坛系统任意文件读取漏洞 附POC.md",
-      "severity": "warning"
-    },
-    {
-      "code": "source_missing",
-      "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "a8766fd14d3d608bed172d62",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/ERP企业/用友GRP-u8/用友 GRP-U8 slbmbygr.jsp SQL注入漏洞.md",
-      "severity": "warning"
-    },
-    {
-      "code": "source_missing",
-      "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "a87e3f776b9808ca2bf47052",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/OA办公/金和OA/金和OA GetAttOut SQL注入漏洞.md",
       "severity": "warning"
     },
     {
@@ -41016,18 +40488,6 @@
       "severity": "warning"
     },
     {
-      "code": "source_missing",
-      "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "a979e9970574771fa4196906",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/ERP企业/宏景/宏景HCM DownLoadCourseware 任意文件读取漏洞.md",
-      "severity": "warning"
-    },
-    {
       "code": "site_relative_link",
       "count": 1,
       "detail": "origin-relative website links require original-site review; example: /column/index.html",
@@ -41229,18 +40689,6 @@
         0
       ],
       "path": "Web安全/中间件/Apache Shiro/【已复现】Apache Shiro 身份认证绕过漏洞CVE-2022-32532安全风险通告.md",
-      "severity": "warning"
-    },
-    {
-      "code": "source_missing",
-      "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "aa1df38a7326921bb6baa6bd",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/ERP企业/宏景/宏景HCM loadhistroyorgtree SQL注入漏洞.md",
       "severity": "warning"
     },
     {
@@ -42810,18 +42258,6 @@
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "b0c448d14e7006f6dab87f59",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/ERP企业/宏景/宏景HCM DisplayFiles 任意文件读取漏洞.md",
-      "severity": "warning"
-    },
-    {
-      "code": "source_missing",
-      "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
       "key": "b0d17d930bba7584f1997551",
       "line": 0,
       "lines": [
@@ -43068,18 +42504,6 @@
         0
       ],
       "path": "Web安全/商业软件/电子资料管理系统/电子资料管理系统 ImageUpload.ashx 文件上传致RCE漏洞.md",
-      "severity": "warning"
-    },
-    {
-      "code": "source_missing",
-      "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "b217f53f417ab30cd470e45f",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/OA办公/金和OA/金和OA RssModulesHttp.aspx SQL注入漏洞.md",
       "severity": "warning"
     },
     {
@@ -43392,18 +42816,6 @@
         0
       ],
       "path": "Web安全/商业软件/全新优客/全新优客API接口管理系统 indexdoc SQL注入漏洞.md",
-      "severity": "warning"
-    },
-    {
-      "code": "source_missing",
-      "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "b312744df59022a1b7f67768",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/ERP企业/用友FE/用友 FE templateOfTaohong_manager.jsp 目录遍历漏洞.md",
       "severity": "warning"
     },
     {
@@ -45113,18 +44525,6 @@
     {
       "code": "source_missing",
       "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "ba68f2c96176765df5ce823d",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/OA办公/泛微oa/泛微E-Cology getSqlData接口SQL注入漏洞.md",
-      "severity": "warning"
-    },
-    {
-      "code": "source_missing",
-      "count": 1,
       "detail": "original source URL explicitly missing; reference links are not confirmed provenance",
       "key": "ba691e4baa765f76c1db178e",
       "line": 0,
@@ -45360,18 +44760,6 @@
         0
       ],
       "path": "Web安全/中间件/Redis/尽快更新Redis，最新漏洞可导致服务器遭受拒绝服务攻击（CVE-2025-21605）.md",
-      "severity": "warning"
-    },
-    {
-      "code": "identifier_inactive",
-      "count": 1,
-      "detail": "primary identifiers excluded: disputed",
-      "key": "bb571554d0c159f06f5206ec",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/网络设备/Tenda/Tenda堆栈缓冲区溢出漏洞 (CVE-2024-2986).md",
       "severity": "warning"
     },
     {
@@ -46013,18 +45401,6 @@
     {
       "code": "source_missing",
       "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "bdeff9156b722a2944c5bde9",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/OA办公/泛微oa/泛微OA SyncUserInfo.jsp SQL注入漏洞.md",
-      "severity": "warning"
-    },
-    {
-      "code": "source_missing",
-      "count": 1,
       "detail": "original source URL explicitly missing; reference links are not confirmed provenance",
       "key": "bdf29048acbb0262d9c70618",
       "line": 0,
@@ -46416,18 +45792,6 @@
         0
       ],
       "path": "Web安全/云平台/Microsoft SharePoint/SharePoint又一个绕过：CVE-2026-33112从XmlValidator限制到低权限RCE.md",
-      "severity": "warning"
-    },
-    {
-      "code": "source_missing",
-      "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "bf2353b28eae0f5cc87f7162",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/ERP企业/宏景/宏景HCM getSdutyTree SQL注入漏洞.md",
       "severity": "warning"
     },
     {
@@ -47105,18 +46469,6 @@
     {
       "code": "source_missing",
       "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "c206cfe566292258490685ed",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/OA办公/金和OA/金和OA SAP_B1Config.aspx 未授权访问漏洞.md",
-      "severity": "warning"
-    },
-    {
-      "code": "source_missing",
-      "count": 1,
       "detail": "original source URL explicitly missing; reference links are not confirmed provenance",
       "key": "c24f351c7fe2f486a27652af",
       "line": 0,
@@ -47322,18 +46674,6 @@
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "c3ab7e3016daba1aaff13535",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/OA办公/泛微oa/泛微OA ResourceServlet 目录遍历漏洞.md",
-      "severity": "warning"
-    },
-    {
-      "code": "source_missing",
-      "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
       "key": "c3ac66a515fc0044c0bb2e24",
       "line": 0,
       "lines": [
@@ -47460,18 +46800,6 @@
         0
       ],
       "path": "Web安全/CMS内容/ShowDoc/ShowDoc 前台文件上传漏洞.md",
-      "severity": "warning"
-    },
-    {
-      "code": "source_missing",
-      "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "c40dd6e1b8916f493977f91c",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/ERP企业/用友NC/用友 NC MonitorServlet 反序列化RCE漏洞.md",
       "severity": "warning"
     },
     {
@@ -50408,18 +49736,6 @@
       "severity": "warning"
     },
     {
-      "code": "source_missing",
-      "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "d016a4ee9d1fe07553349922",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/OA办公/泛微oa/泛微E-Office do_excel.php 可控内容文件写入漏洞.md",
-      "severity": "warning"
-    },
-    {
       "code": "unrecognized_identifier_namespace",
       "count": 1,
       "detail": "primary role retained; namespace format not validated: WooYun-2014-82678",
@@ -52152,32 +51468,32 @@
       "count": 24,
       "detail": "empty code fence",
       "key": "d76149e90ab2e8957f912c99",
-      "line": 60,
+      "line": 63,
       "lines": [
-        60,
-        80,
-        126,
-        134,
-        146,
-        191,
-        202,
-        233,
-        240,
-        265,
-        275,
-        285,
-        293,
-        301,
-        309,
-        317,
-        321,
-        329,
-        399,
-        416,
-        431,
-        439,
-        455,
-        466
+        63,
+        83,
+        129,
+        137,
+        149,
+        194,
+        205,
+        236,
+        243,
+        268,
+        278,
+        288,
+        296,
+        304,
+        312,
+        320,
+        324,
+        332,
+        402,
+        419,
+        434,
+        442,
+        458,
+        469
       ],
       "path": "Web安全/网络设备/DrayTek/Vigor3900 CVE-2021-43118 命令注入漏洞分析.md",
       "severity": "warning"
@@ -52408,18 +51724,6 @@
         0
       ],
       "path": "Web安全/其他软件/杂项/CVE-2026-74997.md",
-      "severity": "warning"
-    },
-    {
-      "code": "source_missing",
-      "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "d852f85cb2eb8a0952285f08",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/OA办公/致远OA/致远OA-A6-initDataAssess.jsp-敏感信息泄露漏洞.md",
       "severity": "warning"
     },
     {
@@ -54254,18 +53558,6 @@
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "e0487d0f747d0a183fb22fa9",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/ERP企业/用友GRP-u8/用友 GRP-U8 bx_historyDataCheck.jsp SQL注入漏洞.md",
-      "severity": "warning"
-    },
-    {
-      "code": "source_missing",
-      "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
       "key": "e07b62321953e656fe2afa75",
       "line": 0,
       "lines": [
@@ -55957,18 +55249,6 @@
     {
       "code": "source_missing",
       "count": 1,
-      "detail": "original source URL explicitly missing; reference links are not confirmed provenance",
-      "key": "e6a3b677696d6126d2808956",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/中间件/Liferay/（CVE-2020-7961）Liferay Portal Json Web Service 反序列化漏洞.md",
-      "severity": "warning"
-    },
-    {
-      "code": "source_missing",
-      "count": 1,
       "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
       "key": "e6a8436075186d357117c303",
       "line": 0,
@@ -57143,18 +56423,6 @@
     {
       "code": "source_missing",
       "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "eb8412c4455cc7f840933ca9",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/ERP企业/用友GRP-u8/用友 GRP-U8 license_check.jsp SQL注入漏洞.md",
-      "severity": "warning"
-    },
-    {
-      "code": "source_missing",
-      "count": 1,
       "detail": "original source URL explicitly missing; reference links are not confirmed provenance",
       "key": "eb8bbd7164fc6b929b4d14a7",
       "line": 0,
@@ -57633,18 +56901,6 @@
       "severity": "warning"
     },
     {
-      "code": "source_missing",
-      "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "ed650a65cd84c83f6e70c15c",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/OA办公/泛微oa/泛微E-Cology jqueryFileTree.jsp 目录遍历漏洞.md",
-      "severity": "warning"
-    },
-    {
       "code": "fingerprint_unverified",
       "count": 1,
       "detail": "fofa: retained unverified query excluded from fingerprint index",
@@ -57882,18 +57138,6 @@
         0
       ],
       "path": "Web安全/网络设备/深信服/深信服应用交付管理系统rep_login远程命令执行漏洞.md",
-      "severity": "warning"
-    },
-    {
-      "code": "source_missing",
-      "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "ee49868382a68b4962bf0641",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/ERP企业/用友GRP-u8/用友 GRP-U8 listSelectDialogServlet SQL注入漏洞.md",
       "severity": "warning"
     },
     {
@@ -59040,18 +58284,6 @@
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "f3037fc6d9b4fd6cecdd7844",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/OA办公/金和OA/金和OA viewConTemplate 模板注入RCE漏洞.md",
-      "severity": "warning"
-    },
-    {
-      "code": "source_missing",
-      "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
       "key": "f30c1a95f8f44fcabe023832",
       "line": 0,
       "lines": [
@@ -59178,30 +58410,6 @@
         0
       ],
       "path": "Web安全/数据库/Phpmyadmin/（CVE-2020-5504）Phpmyadmin 后台sql注入漏洞.md",
-      "severity": "warning"
-    },
-    {
-      "code": "source_missing",
-      "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "f380a3262e30581df133dfc3",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/OA办公/泛微oa/泛微OA users.data 敏感信息泄漏漏洞.md",
-      "severity": "warning"
-    },
-    {
-      "code": "source_missing",
-      "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "f3934bedea8b98ab40507ba7",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/OA办公/金和OA/金和OA UploadFileBlock 任意文件上传漏洞.md",
       "severity": "warning"
     },
     {
@@ -60342,18 +59550,6 @@
         0
       ],
       "path": "Web安全/CMS内容/PHPCMS/Phpcms V9.6.3 后台远程命令执行漏洞.md",
-      "severity": "warning"
-    },
-    {
-      "code": "source_missing",
-      "count": 1,
-      "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
-      "key": "f805bcdabc4b51a4f14ed7c5",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/ERP企业/用友GRP-u8/用友 GRP-U8 SelectDMJE.jsp SQL注入漏洞.md",
       "severity": "warning"
     },
     {
@@ -62374,6 +61570,6 @@
     }
   ],
   "policy": "accepted historical debt, not a passing quality verdict; no new issues; fatal checks always block",
-  "reason": "Reviewed reconstruction baseline: five pre-existing absent local resources; unresolved provenance, identifier roles and fingerprints remain explicit. No fatal issue can be waived.",
+  "reason": "Reviewed reconstruction baseline: five pre-existing absent local resources; unresolved provenance, identifier roles and fingerprints remain explicit. No fatal issue can be waived.; PR #4 review: remove 67 resolved occurrences only; no new exemptions.",
   "schema_version": 1
 }

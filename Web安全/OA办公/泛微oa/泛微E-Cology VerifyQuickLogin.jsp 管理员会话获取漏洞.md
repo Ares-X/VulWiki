@@ -13,12 +13,13 @@ affected_scope: "版本补丁未知；identifier=1公开样本"
 prerequisites: "请求无凭证，实际会话身份仍需验证"
 side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
 review_date: "2026-10-02"
-source_status: "unknown"
+source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E6%B3%9B%E5%BE%AEoa/%E6%B3%9B%E5%BE%AEE-Cology%20VerifyQuickLogin.jsp%20%E7%AE%A1%E7%90%86%E5%91%98%E4%BC%9A%E8%AF%9D%E8%8E%B7%E5%8F%96%E6%BC%8F%E6%B4%9E.md"
 fofa: "app=\"泛微-协同办公OA\""
 id: "vw-82f2a611d0f255586f18f999"
 entity_id: "ve-82f2a611d0f255586f18f999"
 schema_version: "1"
+source_url: "https://github.com/PeiQi0/PeiQi-WIKI-Book/blob/90103c248a2c52bb0a060d0ee95d5a67e4579c3d/docs/wiki/oa/%E6%B3%9B%E5%BE%AEOA/%E6%B3%9B%E5%BE%AEOA%20E-Cology%20VerifyQuickLogin.jsp%20%E4%BB%BB%E6%84%8F%E7%AE%A1%E7%90%86%E5%91%98%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E.md"
 ---
 
 # 泛微e-cology VerifyQuickLogin.jsp管理员会话签发

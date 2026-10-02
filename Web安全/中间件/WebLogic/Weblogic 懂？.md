@@ -1,11 +1,11 @@
 ---
 source: "MrWQ/vulnerability-paper"
-title: "Weblogic 懂？"
+title: "WebLogic T3 序列化对象发送脚本（编号与对象行为待核）"
 product: "Oracle WebLogic T3"
-record_type: "vulnerability"
+record_type: "analysis"
 review_status: "text-reviewed"
 verification_status: "not-reproduced"
-content_status: "quarantined"
+content_status: "needs-review"
 identifier_status: "unknown"
 primary_identifiers: ""
 referenced_identifiers: ""
@@ -19,10 +19,12 @@ entity_id: "ve-ee62f45396649d3a906d6502"
 schema_version: "1"
 ---
 
-# Weblogic 懂？
+# WebLogic T3 序列化对象发送脚本（编号与对象行为待核）
 
 <!-- vulwiki-editorial:start -->
 ## 校订与适用边界
+
+本页保留可读的 T3 握手、接收与序列化对象发送框架，作为历史脚本分析收录。内嵌对象/类字节未解码或执行，正文也没有足够信息确定漏洞编号、完整行为和适用版本；发送成功不代表漏洞存在或代码执行成功。不得将该资料直接发布为某个 CVE 的可用检测器。
 
 - 适用前提：Python2, reachable T3 and undocumented target/JDK gadget compatibility
 - 证据范围：Entire Markdown including long raw escaped object/class bytes was read. No bytecode decoding/execution performed; cannot infer exact vulnerable identity from vague title and opaque payload.

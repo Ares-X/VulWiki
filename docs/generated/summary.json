@@ -1,26 +1,26 @@
 {
   "documents": 5654,
-  "excluded_sources": 86,
-  "explicit_entities": 5474,
+  "excluded_sources": 59,
+  "explicit_entities": 5501,
   "fingerprints": 566,
-  "indexed_sources": 5568,
+  "indexed_sources": 5595,
   "issues": {
     "embedded_code_candidate": 1,
     "empty_fence": 176,
     "fingerprint_unverified": 800,
-    "identifier_inactive": 25,
+    "identifier_inactive": 22,
     "identifier_role_unknown": 216,
     "image_missing": 1,
     "link_missing": 4,
     "noncontent_link_candidate": 34,
     "path_legacy": 2,
     "site_relative_link": 81,
-    "source_missing": 3919,
-    "unrecognized_identifier_namespace": 89
+    "source_missing": 3856,
+    "unrecognized_identifier_namespace": 88
   },
-  "primary_cve_identifiers": 3144,
-  "primary_entries": 5474,
+  "primary_cve_identifiers": 3152,
+  "primary_entries": 5501,
   "schema_version": 1,
-  "source_digest": "63fdbe1fe53155f143b3a6c30422f358234c66762b965c36527f6b7f4b45624b",
+  "source_digest": "eb54c8ed7db845d7d07caa82038295dc594c28b79b09675788aa0abdf21ad932",
   "verification": "offline-static-only"
 }

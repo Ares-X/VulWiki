@@ -13,12 +13,13 @@ affected_scope: "版本明确未知；Windows与进程读权限"
 prerequisites: "DontCheckLogin=1"
 side_effects: "文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行"
 review_date: "2026-10-02"
-source_status: "unknown"
+source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E7%94%A8%E5%8F%8BU8/%E7%94%A8%E5%8F%8B%20U8%20CRM%20getemaildata.php%20%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E.md"
 fofa: "body=\"用友U8CRM\""
 id: "vw-6897b74964dcf8850af6e299"
 entity_id: "ve-6897b74964dcf8850af6e299"
 schema_version: "1"
+source_url: "https://github.com/zan8in/afrog-pocs/blob/253291be2d307a6c836d5997bbb838f1e846f9ba/vulnerability/yonyou-u8-crm-getemaildata-fileread.yaml"
 ---
 
 # 用友U8 CRM getemaildata filePath文件读取

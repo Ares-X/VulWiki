@@ -13,12 +13,13 @@ affected_scope: "版本数据库兼容补丁未知"
 prerequisites: "公开模板无凭证，实际需核"
 side_effects: "现有材料未完整列明副作用；示例不保证只读或无状态变化"
 review_date: "2026-10-02"
-source_status: "unknown"
+source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E6%B3%9B%E5%BE%AEoa/%E6%B3%9B%E5%BE%AEOA%20SyncUserInfo.jsp%20SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md"
 fofa: "app=\"泛微-协同办公OA\""
 id: "vw-451bdb411e59bb767b40aec6"
 entity_id: "ve-451bdb411e59bb767b40aec6"
 schema_version: "1"
+source_url: "https://github.com/projectdiscovery/nuclei-templates/blob/8b9d065ccb0492d39f7680c908b3030a97ddfe1b/http/vulnerabilities/weaver/ecology/ecology-syncuserinfo-sqli.yaml"
 ---
 
 # 泛微e-cology SyncUserInfo.jsp SQL注入

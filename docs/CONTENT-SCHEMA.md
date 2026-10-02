@@ -50,8 +50,8 @@ Markdown 是唯一维护源。`scripts/wiki.py` 使用 Python 3.10+ 标准库，
 - 未声明主角色的旧 cve/cnvd 等仍是可检索候选；明确 reference 的旧字段进入引用集合
 - 不抓取标题、正文首次提及或推荐文章的 CVE 作为主编号
 - rejected / disputed 的主编号不进入有效 CVE 导航；原始记录与说明仍保留
-- needs-review 条目正常进入目录并显示状态；不默认已验证
-- quarantined / rejected、严重结构错误、未处理活动 HTML 的文档进入[待核清单](REVIEW-QUEUE.md)，不进入有效目录
+- needs-review 条目正常进入目录并显示状态；缺来源、版本待核或未本地复现不单独构成隔离理由；篇首写明具体缺口
+- quarantined 仅用于当前缺少可用技术主体或暂时无法纠正的严重错配；部分内容有误时优先局部修正并保留分析。quarantined / rejected、严重结构错误、未处理活动 HTML 的文档进入[待核清单](REVIEW-QUEUE.md)，原文和旧地址保留，不进入默认目录。详见[收录边界](../CONTRIBUTING.md)
 - 单个坏指纹或格式错误编号单独排除，不把其余文档事实自动判成无效
 
 ## 文章、实体和来源

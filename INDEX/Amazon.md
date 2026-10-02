@@ -18,6 +18,14 @@
 - [（CVE-2018-11022）Amazon Kindle Fire HD (3rd) Fire OS kernel组件安全漏洞](../IOT%E5%AE%89%E5%85%A8/Amazon/%EF%BC%88CVE-2018-11022%EF%BC%89Amazon%20Kindle%20Fire%20HD%20%283rd%29%20Fire%20OS%20kernel%E7%BB%84%E4%BB%B6%E5%AE%89%E5%85%A8%E6%BC%8F%E6%B4%9E.md) [vulnerability; not-reproduced; needs-review]
 - [（CVE-2018-11023）Amazon Kindle Fire HD (3rd) Fire OS kernel组件安全漏洞](../IOT%E5%AE%89%E5%85%A8/Amazon/%EF%BC%88CVE-2018-11023%EF%BC%89Amazon%20Kindle%20Fire%20HD%20%283rd%29%20Fire%20OS%20kernel%E7%BB%84%E4%BB%B6%E5%AE%89%E5%85%A8%E6%BC%8F%E6%B4%9E.md) [vulnerability; not-reproduced; needs-review]
 
+## Kindle Fire HD3rd gcioctl gcif.c
+
+- [Kindle Fire gcioctl 崩溃日志与重放框架（CVE-2018-11024；输入样本缺失）](../IOT%E5%AE%89%E5%85%A8/Amazon/%EF%BC%88CVE-2018-11024%EF%BC%89Amazon%20Kindle%20Fire%20HD%20%283rd%29%20Fire%20OS%20kernel%E7%BB%84%E4%BB%B6%E5%AE%89%E5%85%A8%E6%BC%8F%E6%B4%9E.md) [analysis; not-reproduced; needs-review]
+
 ## Kindle Fire HD3rd twl6030-gpadc
 
 - [（CVE-2018-11025）Amazon Kindle Fire HD (3rd) Fire OS kernel组件安全漏洞](../IOT%E5%AE%89%E5%85%A8/Amazon/%EF%BC%88CVE-2018-11025%EF%BC%89Amazon%20Kindle%20Fire%20HD%20%283rd%29%20Fire%20OS%20kernel%E7%BB%84%E4%BB%B6%E5%AE%89%E5%85%A8%E6%BC%8F%E6%B4%9E.md) [vulnerability; not-reproduced; needs-review]
+
+## Kindle Fire 内核 gcioctl / dsscomp（不同材料）
+
+- [Kindle Fire 内核崩溃历史材料（gcioctl 日志与 dsscomp 代码分别待核）](../IOT%E5%AE%89%E5%85%A8/Amazon/%EF%BC%88CVE-2018-11019%EF%BC%89Amazon%20Kindle%20Fire%20HD%20%283rd%29%20Fire%20OS%20kernel%E7%BB%84%E4%BB%B6%E5%AE%89%E5%85%A8%E6%BC%8F%E6%B4%9E.md) [analysis; not-reproduced; needs-review]
