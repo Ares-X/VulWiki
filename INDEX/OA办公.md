@@ -73,7 +73,7 @@
 
 ## OpenPrinting CUPS/cups-browsed/cups-filters
 
-- [OpenPrinting CUPS/cups-browsed/cups-filters 打印机发现→PPD注入→foomatic-rip命令执行链](../Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E8%87%B4%E8%BF%9COA/OpenPrinting-Cups-Browsed-PDD-FoomaticRIPCommandLine-%E5%8F%82%E6%95%B0%E5%AF%BC%E8%87%B4%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E-CVE-2024-47177.md) [vulnerability; not-reproduced; needs-review]
+- [OpenPrinting CUPS/cups-browsed/cups-filters 打印机发现→PPD注入→foomatic-rip命令执行链](../Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E8%87%B4%E8%BF%9COA/OpenPrinting-Cups-Browsed-PDD-FoomaticRIPCommandLine-%E5%8F%82%E6%95%B0%E5%AF%BC%E8%87%B4%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E-CVE-2024-47177.md) [analysis; not-reproduced; needs-review]
 
 ## Primeton EOS Platform
 

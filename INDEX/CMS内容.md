@@ -2009,7 +2009,7 @@
 
 ## WordPress core rendered through BuddyPress Nouveau
 
-- [（CVE-2019-16773）WordPress 5.3.0 储存型xss](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/WordPress/%EF%BC%88CVE-2019-16773%EF%BC%89WordPress%205.3.0%20%E5%82%A8%E5%AD%98%E5%9E%8Bxss.md) [unknown; not-reproduced; needs-review]
+- [WordPress 5.3.0 储存型 XSS（CVE-2019-20042；原编号 CVE-2019-16773）](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/WordPress/%EF%BC%88CVE-2019-16773%EF%BC%89WordPress%205.3.0%20%E5%82%A8%E5%AD%98%E5%9E%8Bxss.md) [vulnerability; not-reproduced; needs-review]
 
 ## WordPress core static query
 

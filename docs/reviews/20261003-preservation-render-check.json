@@ -1,0 +1,1450 @@
+{
+  "baseline_commit": "d8178134424d0d2f6e051454d8ea761bc2049901",
+  "scope": "Final-state read-only validation after restoration notes and final article corrections. No repo edits, browser execution, or article PoCs.",
+  "marked_render_copy_verification": {
+    "renderer": "/Users/aresx/Ares-X.github.io/node_modules/marked/lib/marked.cjs",
+    "version": "4.3.0",
+    "renderer_sha256": "81eb792b3a3a255b6a06a8da7363305c1dc827db2cd4d22200b9dd454227b930",
+    "method": "Rendered each of 85 accepted code fences separately through marked CJS. Python HTMLParser extracted pre/code copyable text. Exact comparison against restoration manifest ignores terminal newlines only.",
+    "rendered": 85,
+    "matched": 85,
+    "mismatches": [],
+    "input_mapping_errors": [],
+    "per_fence": [
+      {
+        "path": "Web安全/网络设备/MikroTik RouterOS/利用RouterOS（CVE-2022-3496）漏洞，将符号链接作为挂载入口获取代码执行.md",
+        "line_d817": 60,
+        "ordinal": 1,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "3d74306668531c5b8f3863ae830c1aef724d118b35190bf2a0e26f63301fd7ef"
+      },
+      {
+        "path": "Web安全/网络设备/MikroTik RouterOS/利用RouterOS（CVE-2022-3496）漏洞，将符号链接作为挂载入口获取代码执行.md",
+        "line_d817": 79,
+        "ordinal": 3,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "79d15fd9dc9111c74d1f376a3ddf96cedb88ebcd0906ffecee03ecab3c06f30a"
+      },
+      {
+        "path": "Web安全/网络设备/MikroTik RouterOS/利用RouterOS（CVE-2022-3496）漏洞，将符号链接作为挂载入口获取代码执行.md",
+        "line_d817": 85,
+        "ordinal": 4,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "f7d36acc59178d3f2e4ed0d7f591c9119282fef88eaefe9e64140c8991e57167"
+      },
+      {
+        "path": "Web安全/网络设备/MikroTik RouterOS/利用RouterOS（CVE-2022-3496）漏洞，将符号链接作为挂载入口获取代码执行.md",
+        "line_d817": 89,
+        "ordinal": 5,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "e7f9ee8a218a50df33a7236472c0e55fd740ad84ce25949e5eaa08824c6ee37e"
+      },
+      {
+        "path": "Web安全/网络设备/MikroTik RouterOS/利用RouterOS（CVE-2022-3496）漏洞，将符号链接作为挂载入口获取代码执行.md",
+        "line_d817": 98,
+        "ordinal": 6,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "49864d8b1c7990e154a6bb52cc4db5e0ebd09470ccf4dac5049224ee489d09d2"
+      },
+      {
+        "path": "Web安全/网络设备/MikroTik RouterOS/利用RouterOS（CVE-2022-3496）漏洞，将符号链接作为挂载入口获取代码执行.md",
+        "line_d817": 102,
+        "ordinal": 7,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "d86b6d0ff4b8bebdff5854e4de43af3e386b9662392bab5980f6eea8be7b68cb"
+      },
+      {
+        "path": "Web安全/网络设备/MikroTik RouterOS/利用RouterOS（CVE-2022-3496）漏洞，将符号链接作为挂载入口获取代码执行.md",
+        "line_d817": 109,
+        "ordinal": 8,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "fb5bf211bddafae042c410cbe33023175a65388edf55565577c9f7a6313392a0"
+      },
+      {
+        "path": "Web安全/网络设备/MikroTik RouterOS/利用RouterOS（CVE-2022-3496）漏洞，将符号链接作为挂载入口获取代码执行.md",
+        "line_d817": 117,
+        "ordinal": 9,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "71d7fc4eb7954b2930235c945e23c5ef20fda915c8d9f0e1e5add624612d67f7"
+      },
+      {
+        "path": "Web安全/网络设备/MikroTik RouterOS/利用RouterOS（CVE-2022-3496）漏洞，将符号链接作为挂载入口获取代码执行.md",
+        "line_d817": 121,
+        "ordinal": 10,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "182aa960be6e8dbd10c64f558825e558cea4dfecee40ad79c9cc90a61a858d95"
+      },
+      {
+        "path": "Web安全/网络设备/MikroTik RouterOS/利用RouterOS（CVE-2022-3496）漏洞，将符号链接作为挂载入口获取代码执行.md",
+        "line_d817": 125,
+        "ordinal": 11,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "4e7e2a9f1d7dc03ea43e34322141a6cd8d74ce5701517aa67871a22f82f00ec9"
+      },
+      {
+        "path": "Web安全/网络设备/MikroTik RouterOS/利用RouterOS（CVE-2022-3496）漏洞，将符号链接作为挂载入口获取代码执行.md",
+        "line_d817": 129,
+        "ordinal": 12,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "f1d21e81841dc0036b3e2b6075fcf22bed06a7bc81c89b18afe3d88ec68abf38"
+      },
+      {
+        "path": "Web安全/网络设备/MikroTik RouterOS/利用RouterOS（CVE-2022-3496）漏洞，将符号链接作为挂载入口获取代码执行.md",
+        "line_d817": 133,
+        "ordinal": 13,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "eea34cc3cc3d9f437c834127369ef1e7b1b51ef956043359f03c810212ae4bb8"
+      },
+      {
+        "path": "Web安全/网络设备/MikroTik RouterOS/利用RouterOS（CVE-2022-3496）漏洞，将符号链接作为挂载入口获取代码执行.md",
+        "line_d817": 137,
+        "ordinal": 14,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "0a270ade9d28e9a1217d289155cb9aacf0312f62d773331559ccdb340b99d025"
+      },
+      {
+        "path": "Web安全/网络设备/MikroTik RouterOS/利用RouterOS（CVE-2022-3496）漏洞，将符号链接作为挂载入口获取代码执行.md",
+        "line_d817": 141,
+        "ordinal": 15,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "ef8792d9810bd2d20c2dce7b1e12c8cfbc023677360c68dc453a3c83bda93e0f"
+      },
+      {
+        "path": "Web安全/网络设备/D-Link/【技术分享】CVE-2019-10999 Dlink IP 摄像头缓冲区溢出.md",
+        "line_d817": 83,
+        "ordinal": 4,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "f7b6bb018f2259eea101c46bdd48c012a41824588c6dfe21acf43c485badd8c7"
+      },
+      {
+        "path": "Web安全/网络设备/D-Link/【技术分享】CVE-2019-10999 Dlink IP 摄像头缓冲区溢出.md",
+        "line_d817": 93,
+        "ordinal": 5,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "5b87f4d8bd2c45684e56ad49d64f838827f6189a49ba9e03c5f455c39cd48fbb"
+      },
+      {
+        "path": "Web安全/网络设备/D-Link/【技术分享】CVE-2019-10999 Dlink IP 摄像头缓冲区溢出.md",
+        "line_d817": 101,
+        "ordinal": 6,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "094a554fb9a23fc54beed59e943a3325a0cc86a151f414bc81294419cf76e701"
+      },
+      {
+        "path": "Web安全/网络设备/D-Link/【技术分享】CVE-2019-10999 Dlink IP 摄像头缓冲区溢出.md",
+        "line_d817": 110,
+        "ordinal": 7,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "9eb8c425da0d9f3f7ff21e84f531568b6c44f1b50cf7535b6ca92265e74e7612"
+      },
+      {
+        "path": "Web安全/网络设备/D-Link/【技术分享】CVE-2019-10999 Dlink IP 摄像头缓冲区溢出.md",
+        "line_d817": 123,
+        "ordinal": 8,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "40aeedb97034d1183a8d5e8de389e6af846f5a7472ee1c55ed4abeaa84740451"
+      },
+      {
+        "path": "Web安全/网络设备/D-Link/【技术分享】CVE-2019-10999 Dlink IP 摄像头缓冲区溢出.md",
+        "line_d817": 135,
+        "ordinal": 9,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "d7ffd5484ed9308a1816f33657c03d98745ea401c01bf41387c9c106513c0661"
+      },
+      {
+        "path": "Web安全/网络设备/D-Link/【技术分享】CVE-2019-10999 Dlink IP 摄像头缓冲区溢出.md",
+        "line_d817": 172,
+        "ordinal": 11,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "df57121f74dc06bf2e5e8d2d4139f8844c2026332d0e76a4fffe7988d93b1862"
+      },
+      {
+        "path": "Web安全/开发框架/Git/CVE-2026-31900：一个过于宽松的正则表达式如何在 psf-black 的 GitHub Action 中导致 RCE.md",
+        "line_d817": 114,
+        "ordinal": 1,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "b598100aaa44f7a98c0fe096cd667a97be1e7a173c82f11966bfff55f3e0af36"
+      },
+      {
+        "path": "Web安全/开发框架/Git/CVE-2026-31900：一个过于宽松的正则表达式如何在 psf-black 的 GitHub Action 中导致 RCE.md",
+        "line_d817": 121,
+        "ordinal": 2,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "992cf8992a03fc719aa404e028ec673b8c8cf0ceecb64078be498aaea6661323"
+      },
+      {
+        "path": "Web安全/开发框架/Git/CVE-2026-31900：一个过于宽松的正则表达式如何在 psf-black 的 GitHub Action 中导致 RCE.md",
+        "line_d817": 138,
+        "ordinal": 3,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "d481192e116a86bb5920822e0d49ab0be298a88710b066de056ec04a0b19dfd6"
+      },
+      {
+        "path": "Web安全/开发框架/Git/CVE-2026-31900：一个过于宽松的正则表达式如何在 psf-black 的 GitHub Action 中导致 RCE.md",
+        "line_d817": 142,
+        "ordinal": 4,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+      },
+      {
+        "path": "Web安全/开发框架/Git/CVE-2026-31900：一个过于宽松的正则表达式如何在 psf-black 的 GitHub Action 中导致 RCE.md",
+        "line_d817": 173,
+        "ordinal": 7,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "c2eff39554277c5997b69fa9a37253a887e06edb2936a649f65896949d3cfa83"
+      },
+      {
+        "path": "Web安全/开发框架/Git/CVE-2026-31900：一个过于宽松的正则表达式如何在 psf-black 的 GitHub Action 中导致 RCE.md",
+        "line_d817": 211,
+        "ordinal": 11,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "992cf8992a03fc719aa404e028ec673b8c8cf0ceecb64078be498aaea6661323"
+      },
+      {
+        "path": "Web安全/开发框架/Git/CVE-2026-31900：一个过于宽松的正则表达式如何在 psf-black 的 GitHub Action 中导致 RCE.md",
+        "line_d817": 225,
+        "ordinal": 14,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "d7833ee95813e2fe701428e9a55270a4abdcff6fc35ea4e5fde9098e727a7925"
+      },
+      {
+        "path": "Web安全/开发框架/Git/CVE-2026-31900：一个过于宽松的正则表达式如何在 psf-black 的 GitHub Action 中导致 RCE.md",
+        "line_d817": 255,
+        "ordinal": 15,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "98fa311ec4fef7edf0000322b6e4d33ffec5cc1df2149cee8c3206725f7ca997"
+      },
+      {
+        "path": "Web安全/开发框架/Git/CVE-2026-31900：一个过于宽松的正则表达式如何在 psf-black 的 GitHub Action 中导致 RCE.md",
+        "line_d817": 259,
+        "ordinal": 16,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "7264b3c89eccf655faccc8ec26081340c669c4f3b42498938909c43a353b48d9"
+      },
+      {
+        "path": "Web安全/开发框架/Git/CVE-2026-31900：一个过于宽松的正则表达式如何在 psf-black 的 GitHub Action 中导致 RCE.md",
+        "line_d817": 293,
+        "ordinal": 21,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "409a92d92eb75ae84ddd66b0fb68c88cba9dc8cb2c3b78efdd560e46e4c30160"
+      },
+      {
+        "path": "Web安全/开发框架/Git/CVE-2026-31900：一个过于宽松的正则表达式如何在 psf-black 的 GitHub Action 中导致 RCE.md",
+        "line_d817": 360,
+        "ordinal": 23,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "eeb09ca83b62e754e09b938a88b4fb11f58d877d375fd47d4c31d15508b75f33"
+      },
+      {
+        "path": "Web安全/开发框架/Git/CVE-2026-31900：一个过于宽松的正则表达式如何在 psf-black 的 GitHub Action 中导致 RCE.md",
+        "line_d817": 396,
+        "ordinal": 25,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "5a781502d89b2d8e21df3722701f26ef026403964ec2bca2cf2e2859da6b8f37"
+      },
+      {
+        "path": "Web安全/开发框架/Git/CVE-2026-31900：一个过于宽松的正则表达式如何在 psf-black 的 GitHub Action 中导致 RCE.md",
+        "line_d817": 409,
+        "ordinal": 26,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "7aa057f8ff9cb3e331a24e87b68200a2ef6fc36550285c05dbc412ec4606ec77"
+      },
+      {
+        "path": "Web安全/开发框架/Git/CVE-2026-31900：一个过于宽松的正则表达式如何在 psf-black 的 GitHub Action 中导致 RCE.md",
+        "line_d817": 414,
+        "ordinal": 27,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "79bacfd2f4e34db3ce328655a72ebd46f77b09563d38cd026e7268a4bd71bf74"
+      },
+      {
+        "path": "Web安全/开发框架/Git/CVE-2026-31900：一个过于宽松的正则表达式如何在 psf-black 的 GitHub Action 中导致 RCE.md",
+        "line_d817": 447,
+        "ordinal": 28,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "37c799c677cad8b4b6b2498d5ecb1f4e19dc64d2162e1ec940027599105b68ec"
+      },
+      {
+        "path": "Web安全/网络设备/DrayTek/Vigor3900 CVE-2021-43118 命令注入漏洞分析.md",
+        "line_d817": 296,
+        "ordinal": 13,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "8f8181b5c7b87dfcd6e9fdec118527116d4b9b89fb43ea521cb22eddddec1af4"
+      },
+      {
+        "path": "Web安全/网络设备/DrayTek/Vigor3900 CVE-2021-43118 命令注入漏洞分析.md",
+        "line_d817": 442,
+        "ordinal": 22,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "7786a6136e2c6d9d51dbbe5acdf6991ef04c4b71faa4efdb27730777021f04b2"
+      },
+      {
+        "path": "Web安全/网络设备/DrayTek/Vigor3900 CVE-2021-43118 命令注入漏洞分析.md",
+        "line_d817": 63,
+        "ordinal": 1,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "eadcb97d9bf1e4292c34784da5f4731753da9656b65becc67676f0c7921c8ff4"
+      },
+      {
+        "path": "Web安全/网络设备/DrayTek/Vigor3900 CVE-2021-43118 命令注入漏洞分析.md",
+        "line_d817": 83,
+        "ordinal": 2,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "c4c00816de8603e6a636f64f12596c82865bea6744f7429ef2bd10f874647abb"
+      },
+      {
+        "path": "Web安全/网络设备/DrayTek/Vigor3900 CVE-2021-43118 命令注入漏洞分析.md",
+        "line_d817": 129,
+        "ordinal": 3,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "28735d377b6ff17674a236de6d9f2fc11dee2670d7f0dc1402cc21cd52debe1c"
+      },
+      {
+        "path": "Web安全/网络设备/DrayTek/Vigor3900 CVE-2021-43118 命令注入漏洞分析.md",
+        "line_d817": 137,
+        "ordinal": 4,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "ae6846761508e95464b1a42fec7a331b78995d20ff4158ad1f1186681fe3cf1e"
+      },
+      {
+        "path": "Web安全/网络设备/DrayTek/Vigor3900 CVE-2021-43118 命令注入漏洞分析.md",
+        "line_d817": 149,
+        "ordinal": 5,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "34126d3fb3a19484caff88c7bc438573c2ec937b49c8dc10da46c374e259c749"
+      },
+      {
+        "path": "Web安全/网络设备/DrayTek/Vigor3900 CVE-2021-43118 命令注入漏洞分析.md",
+        "line_d817": 194,
+        "ordinal": 6,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "9326921faa9cdef8fc99193df9231e05c4722bc1c258ce95a107546aaf99874e"
+      },
+      {
+        "path": "Web安全/网络设备/DrayTek/Vigor3900 CVE-2021-43118 命令注入漏洞分析.md",
+        "line_d817": 205,
+        "ordinal": 7,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "1d4f938852230786a23062941bcc45934a0151747596f54b9e0c7a0d7c4914ba"
+      },
+      {
+        "path": "Web安全/网络设备/DrayTek/Vigor3900 CVE-2021-43118 命令注入漏洞分析.md",
+        "line_d817": 236,
+        "ordinal": 8,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "227e0c608e7d56818ba1aa93ef9ad00a476673fe91a89986725e76c17b948368"
+      },
+      {
+        "path": "Web安全/网络设备/DrayTek/Vigor3900 CVE-2021-43118 命令注入漏洞分析.md",
+        "line_d817": 243,
+        "ordinal": 9,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "881ab14be220b884c02fca2f6f01a4eea6424d01d57c8bf38c0f7fe960078e9c"
+      },
+      {
+        "path": "Web安全/网络设备/DrayTek/Vigor3900 CVE-2021-43118 命令注入漏洞分析.md",
+        "line_d817": 268,
+        "ordinal": 10,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "32094e55d02c52e422b283b05da4190f7be0e0922eb1f02a998ded8e3b9ec5b6"
+      },
+      {
+        "path": "Web安全/网络设备/DrayTek/Vigor3900 CVE-2021-43118 命令注入漏洞分析.md",
+        "line_d817": 278,
+        "ordinal": 11,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "1f83125369145fd44e235f55699ad16b28657268240cc01f8a57df39a8213181"
+      },
+      {
+        "path": "Web安全/网络设备/DrayTek/Vigor3900 CVE-2021-43118 命令注入漏洞分析.md",
+        "line_d817": 288,
+        "ordinal": 12,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "ae49ed63a98f7d5ac13434d93da8b443b4b12720deadc8fe68409a4368a19f13"
+      },
+      {
+        "path": "Web安全/网络设备/DrayTek/Vigor3900 CVE-2021-43118 命令注入漏洞分析.md",
+        "line_d817": 304,
+        "ordinal": 14,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "e82b1a64166f4f5fd3d7a011d69187db0967201b48683fa313d7f4295525bddf"
+      },
+      {
+        "path": "Web安全/网络设备/DrayTek/Vigor3900 CVE-2021-43118 命令注入漏洞分析.md",
+        "line_d817": 312,
+        "ordinal": 15,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "10589447a9b0b02c61b4d60f711b37dc2bc586bb4d4cb20e206a18f627468696"
+      },
+      {
+        "path": "Web安全/网络设备/DrayTek/Vigor3900 CVE-2021-43118 命令注入漏洞分析.md",
+        "line_d817": 320,
+        "ordinal": 16,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "863765e5b08c316db331d44da5309ced3fe0eec6bbe873fdb9418d7dcbbbfe59"
+      },
+      {
+        "path": "Web安全/网络设备/DrayTek/Vigor3900 CVE-2021-43118 命令注入漏洞分析.md",
+        "line_d817": 324,
+        "ordinal": 17,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "5a606e635112dbb407d922885473380d624194e41dd6e847d8a291a673a2e7e0"
+      },
+      {
+        "path": "Web安全/网络设备/DrayTek/Vigor3900 CVE-2021-43118 命令注入漏洞分析.md",
+        "line_d817": 332,
+        "ordinal": 18,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "e077b79a3da8960592a135223386bdd4d6579d375a30e2ac88bbffd2b3109a4d"
+      },
+      {
+        "path": "Web安全/网络设备/DrayTek/Vigor3900 CVE-2021-43118 命令注入漏洞分析.md",
+        "line_d817": 402,
+        "ordinal": 19,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "ee76bccad3e2101d555f91cd93ff0c2652ca26967047394d50d00a655d6fdf59"
+      },
+      {
+        "path": "Web安全/网络设备/DrayTek/Vigor3900 CVE-2021-43118 命令注入漏洞分析.md",
+        "line_d817": 419,
+        "ordinal": 20,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "614e01c37141e513c462f3e3da5961b45785318dfe5978f3feaf30741a9d1002"
+      },
+      {
+        "path": "Web安全/网络设备/DrayTek/Vigor3900 CVE-2021-43118 命令注入漏洞分析.md",
+        "line_d817": 434,
+        "ordinal": 21,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "339944c7541dde6132537ae80d73436cae6b4c5f29271d330333e69d4b21d7a1"
+      },
+      {
+        "path": "Web安全/网络设备/DrayTek/Vigor3900 CVE-2021-43118 命令注入漏洞分析.md",
+        "line_d817": 458,
+        "ordinal": 23,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "07dd1d7a770ad50072b923c09477951f2ee4eeb00bd240c195185037bdb0cbed"
+      },
+      {
+        "path": "Web安全/网络设备/DrayTek/Vigor3900 CVE-2021-43118 命令注入漏洞分析.md",
+        "line_d817": 469,
+        "ordinal": 24,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "42084a73702a197c550aff3fbab93906285b40cc601d69f68f0f8c2fa6f1b720"
+      },
+      {
+        "path": "Web安全/开发框架/GitLab/GitLab-任意文件读取导致RCE-CVE-2020-10977.md",
+        "line_d817": 141,
+        "ordinal": 7,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "e19f089785af210535eb63b91ffdfd0d87622ab24a56fbd35632b8823f50675d"
+      },
+      {
+        "path": "Web安全/开发框架/Git/CVE-2026-31900：一个过于宽松的正则表达式如何在 psf-black 的 GitHub Action 中导致 RCE.md",
+        "line_d817": 149,
+        "ordinal": 5,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "46f41b00c8a976a62f4bfea52df55d08bf0c6ac9c44b0f690adb0dad311a99a3"
+      },
+      {
+        "path": "Web安全/开发框架/Git/CVE-2026-31900：一个过于宽松的正则表达式如何在 psf-black 的 GitHub Action 中导致 RCE.md",
+        "line_d817": 191,
+        "ordinal": 9,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "ba8c08d37cec34bcec0576805d3909e23951f0aa9f36f1fed273f58ac9ae88f0"
+      },
+      {
+        "path": "Web安全/开发框架/Git/CVE-2026-31900：一个过于宽松的正则表达式如何在 psf-black 的 GitHub Action 中导致 RCE.md",
+        "line_d817": 204,
+        "ordinal": 10,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "835595f9d9daa91b5d71320a36d8d6a790bc2a7fe49179d4e9952888b47a5ad3"
+      },
+      {
+        "path": "Web安全/开发框架/Git/CVE-2026-31900：一个过于宽松的正则表达式如何在 psf-black 的 GitHub Action 中导致 RCE.md",
+        "line_d817": 263,
+        "ordinal": 17,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "c11f1e0ebeb285b308b5fc47fc395058d61eb00cdf01dcd6b0e71daf93583324"
+      },
+      {
+        "path": "Web安全/开发框架/Git/CVE-2026-31900：一个过于宽松的正则表达式如何在 psf-black 的 GitHub Action 中导致 RCE.md",
+        "line_d817": 267,
+        "ordinal": 18,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "3341759237ef2c413b97184c6994da7264ef3e7613947a629e5fe21346d188ee"
+      },
+      {
+        "path": "Web安全/开发框架/Git/CVE-2026-31900：一个过于宽松的正则表达式如何在 psf-black 的 GitHub Action 中导致 RCE.md",
+        "line_d817": 272,
+        "ordinal": 19,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "470a64f5a86988132e9b1dcf1d88c2cfe2332698470088c8f7480a1d5dba7826"
+      },
+      {
+        "path": "Web安全/开发框架/Git/CVE-2026-31900：一个过于宽松的正则表达式如何在 psf-black 的 GitHub Action 中导致 RCE.md",
+        "line_d817": 287,
+        "ordinal": 20,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "64eea16688767669bc28d325575c691b3b6968756de29d8918699a9a21a0f7ca"
+      },
+      {
+        "path": "Web安全/开发框架/Git/CVE-2026-31900：一个过于宽松的正则表达式如何在 psf-black 的 GitHub Action 中导致 RCE.md",
+        "line_d817": 381,
+        "ordinal": 24,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "84d82e474f5c77395330fe0ce2726123c8bd8639155f1c708231ece25f38d747"
+      },
+      {
+        "path": "Web安全/网络设备/D-Link/CVE-2018-17066复现（D-Link命令注入漏洞）.md",
+        "line_d817": 93,
+        "ordinal": 2,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "0dd9591258e988f2aefb65595f4e403b04d67f326acb52cd057655f4fed9e198"
+      },
+      {
+        "path": "Web安全/网络设备/D-Link/CVE-2018-17066复现（D-Link命令注入漏洞）.md",
+        "line_d817": 132,
+        "ordinal": 4,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "e7308851f5a2e533d7b6e76f13be5789edca72d0f60a69d87a7f7eda20c70117"
+      },
+      {
+        "path": "Web安全/网络设备/D-Link/CVE-2018-17066复现（D-Link命令注入漏洞）.md",
+        "line_d817": 140,
+        "ordinal": 5,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "dadd6d9b2ee34f3b9545c11e96de3adcdc510ae2c57ac87922e62c59d1529cbf"
+      },
+      {
+        "path": "Web安全/网络设备/D-Link/CVE-2018-17066复现（D-Link命令注入漏洞）.md",
+        "line_d817": 165,
+        "ordinal": 6,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "fa8045af35e741c074aecae6401ca6e04f76110ffc5c36a5f33144a677afdf20"
+      },
+      {
+        "path": "Web安全/网络设备/D-Link/CVE-2018-17066复现（D-Link命令注入漏洞）.md",
+        "line_d817": 187,
+        "ordinal": 7,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "7bec0fd6a16f19352e1adf22ef38ddd523a9104fa561a70a8731f6dd90925b37"
+      },
+      {
+        "path": "Web安全/网络设备/D-Link/CVE-2018-17066复现（D-Link命令注入漏洞）.md",
+        "line_d817": 199,
+        "ordinal": 8,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "01e6d68d507d04e5e62ded80732895298a6ecdbaa40958a5e18e87f5c91adff6"
+      },
+      {
+        "path": "Web安全/网络设备/D-Link/CVE-2018-17066复现（D-Link命令注入漏洞）.md",
+        "line_d817": 221,
+        "ordinal": 9,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "cf117fd4a8c761f9df66a0d03987e51e16cd3efa6dc9b9d4b9d6b007f2a4c9b9"
+      },
+      {
+        "path": "Web安全/网络设备/D-Link/CVE-2018-17066复现（D-Link命令注入漏洞）.md",
+        "line_d817": 263,
+        "ordinal": 10,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "b234209e2e45673b3d0ef27229780dbd1ffb1619cd6427bf01412ab165f8ec8a"
+      },
+      {
+        "path": "Web安全/网络设备/D-Link/CVE-2018-17066复现（D-Link命令注入漏洞）.md",
+        "line_d817": 279,
+        "ordinal": 12,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "e829e27a5759e55b84bf8d91714a988bf7279f35ae36f3c3b9a84e7302512ebc"
+      },
+      {
+        "path": "Web安全/网络设备/D-Link/CVE-2018-17066复现（D-Link命令注入漏洞）.md",
+        "line_d817": 289,
+        "ordinal": 13,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "a5041889b8bcaeee6fd1a508cf9e3829c82fe2daff774f81dd873512fc5835cc"
+      },
+      {
+        "path": "Web安全/网络设备/D-Link/CVE-2018-17066复现（D-Link命令注入漏洞）.md",
+        "line_d817": 301,
+        "ordinal": 14,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "f0f5204d3e89c5b84a810be01dd6bf487a3b8934786d2c975971662efb1df26b"
+      },
+      {
+        "path": "Web安全/网络设备/D-Link/CVE-2018-17066复现（D-Link命令注入漏洞）.md",
+        "line_d817": 316,
+        "ordinal": 15,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "d60b49645aa0158b75c2c64fd1c500ebf6aaa3c33e4f8a021ef9005409694837"
+      },
+      {
+        "path": "Web安全/网络设备/D-Link/CVE-2018-17066复现（D-Link命令注入漏洞）.md",
+        "line_d817": 341,
+        "ordinal": 17,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "6af98f3de6c92950ff773969c503527053d6776e00d16d3a886e5814fc1675da"
+      },
+      {
+        "path": "Web安全/网络设备/D-Link/CVE-2018-17066复现（D-Link命令注入漏洞）.md",
+        "line_d817": 350,
+        "ordinal": 18,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "62864a1d13a70c21bffcc89bd596b2566f81e8fc13c87b5ff48bfda00c0c7a04"
+      },
+      {
+        "path": "Web安全/网络设备/D-Link/CVE-2018-17066复现（D-Link命令注入漏洞）.md",
+        "line_d817": 392,
+        "ordinal": 20,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "bcec1b5940ce8d40f83ca882dc535a466b2103e96f0272f67fb77e8b087998e8"
+      },
+      {
+        "path": "Web安全/网络设备/D-Link/CVE-2018-17066复现（D-Link命令注入漏洞）.md",
+        "line_d817": 418,
+        "ordinal": 22,
+        "matches": true,
+        "has_pre_code": true,
+        "rendered_text_sha256": "81b9afa2a7cc65b6c504e1b42232dd30ee8cceb50bccc2d28485b9c318689d67"
+      }
+    ]
+  },
+  "original_manifest_source_fields": {
+    "manifest": "/tmp/vulwiki-round3-original-manifest.json",
+    "manifest_head": "d8178134424d0d2f6e051454d8ea761bc2049901",
+    "articles_checked": 5654,
+    "fields": [
+      "source",
+      "source_url",
+      "source_status",
+      "archive_url",
+      "ref",
+      "verification_source"
+    ],
+    "comparison": "Compared field presence/set and parsed scalar values character-for-character against source_fields for each current article. No trimming or value normalization.",
+    "differences": [],
+    "missing_articles": []
+  },
+  "accepted_key_set_comparison": {
+    "dispositions": "docs/reviews/20261003-empty-block-dispositions.json",
+    "restoration": "docs/reviews/20261003-empty-block-restoration.json",
+    "key_definition": [
+      "path",
+      "empty_open_line_d817"
+    ],
+    "restoration_count": 85,
+    "dispositions_accepted_count": 85,
+    "exact_sets_equal": true,
+    "duplicate_counts": {
+      "restoration": 0,
+      "dispositions": 0
+    },
+    "only_in_restoration": [],
+    "only_in_dispositions": []
+  },
+  "article_body_preservation": {
+    "baseline": "d8178134424d0d2f6e051454d8ea761bc2049901",
+    "tracked_changed_markdown_total_including_indexes": 79,
+    "changed_article_markdown_count_excluding_INDEX": 65,
+    "body_changed_article_count": 47,
+    "baseline_article_body_lines": 12197,
+    "current_article_body_lines": 12979,
+    "inserted_lines_by_count": 782,
+    "removed_lines_by_count": 0,
+    "all_original_d817_body_lines_retained_in_order": true,
+    "files_with_missing_or_reordered_baseline_body_lines": [],
+    "per_article_counts_and_subsequence_checks": [
+      {
+        "path": "IOT安全/Cisco/（CVE-2019-1663）堆栈缓冲区溢出漏洞.md",
+        "baseline_body_lines": 228,
+        "current_body_lines": 232,
+        "body_changed": true,
+        "inserted_line_count": 4,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "IOT安全/D-Link/（CVE-2019–20213）D-Link DIR-859 rce.md",
+        "baseline_body_lines": 50,
+        "current_body_lines": 54,
+        "body_changed": true,
+        "inserted_line_count": 4,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/CMS内容/Craft CMS/Craft-CMS-generate-transform-反序列化代码执行漏洞-CVE-2025-32432.md",
+        "baseline_body_lines": 321,
+        "current_body_lines": 321,
+        "body_changed": false,
+        "inserted_line_count": 0,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/CMS内容/Craft CMS/CraftCMS-register_argc_argv-远程代码执行漏洞-CVE-2024-56145.md",
+        "baseline_body_lines": 88,
+        "current_body_lines": 92,
+        "body_changed": true,
+        "inserted_line_count": 4,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/CMS内容/WordPress/（CVE-2019-16773）WordPress 5.3.0 储存型xss.md",
+        "baseline_body_lines": 50,
+        "current_body_lines": 55,
+        "body_changed": true,
+        "inserted_line_count": 5,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/OA办公/致远OA/OpenPrinting-Cups-Browsed-PDD-FoomaticRIPCommandLine-参数导致远程命令执行漏洞-CVE-2024-47177.md",
+        "baseline_body_lines": 332,
+        "current_body_lines": 337,
+        "body_changed": true,
+        "inserted_line_count": 5,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/中间件/Apache ActiveMQ/Apache ActiveMQ 远程代码执行漏洞 CVE-2023-46604.md",
+        "baseline_body_lines": 154,
+        "current_body_lines": 154,
+        "body_changed": false,
+        "inserted_line_count": 0,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/中间件/Apache ActiveMQ/Apache-ActiveMQ-Jolokia-后台远程代码执行漏洞-CVE-2022-41678.md",
+        "baseline_body_lines": 1214,
+        "current_body_lines": 1218,
+        "body_changed": true,
+        "inserted_line_count": 4,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/中间件/Apache ActiveMQ/Apache-ActiveMQ-Jolokia-远程代码执行漏洞-CVE-2026-34197.md",
+        "baseline_body_lines": 145,
+        "current_body_lines": 145,
+        "body_changed": false,
+        "inserted_line_count": 0,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/中间件/Apache RocketMQ/Apache-RocketMQ-Broker-远程命令执行漏洞-CVE-2023-33246.md",
+        "baseline_body_lines": 214,
+        "current_body_lines": 214,
+        "body_changed": false,
+        "inserted_line_count": 0,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/中间件/Apache RocketMQ/Apache-RocketMQ-NameServer-任意文件写入漏洞-CVE-2023-37582.md",
+        "baseline_body_lines": 118,
+        "current_body_lines": 118,
+        "body_changed": false,
+        "inserted_line_count": 0,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/中间件/Apache Solr/Apache Solr Replication handler SSRF CVE-2021-27905.md",
+        "baseline_body_lines": 62,
+        "current_body_lines": 66,
+        "body_changed": true,
+        "inserted_line_count": 4,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/中间件/Apache Solr/Apache-Solr-认证绕过漏洞-CVE-2024-45216.md",
+        "baseline_body_lines": 133,
+        "current_body_lines": 133,
+        "body_changed": false,
+        "inserted_line_count": 0,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/中间件/Apache Struts/Apache-Struts-S2-066-远程代码执行漏洞-CVE-2023-50164.md",
+        "baseline_body_lines": 157,
+        "current_body_lines": 161,
+        "body_changed": true,
+        "inserted_line_count": 4,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/中间件/Apache Struts/Apache-Struts-S2-067-远程代码执行漏洞-CVE-2024-53677.md",
+        "baseline_body_lines": 156,
+        "current_body_lines": 160,
+        "body_changed": true,
+        "inserted_line_count": 4,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/中间件/Apache Struts/Apache-Struts-S2-069-XML-外部实体注入漏洞-CVE-2025-68493.md",
+        "baseline_body_lines": 115,
+        "current_body_lines": 119,
+        "body_changed": true,
+        "inserted_line_count": 4,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/中间件/Apache Tomcat/Apache Tomcat 信息泄露漏洞 CVE-2021-24122.md",
+        "baseline_body_lines": 61,
+        "current_body_lines": 65,
+        "body_changed": true,
+        "inserted_line_count": 4,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/中间件/Apache Tomcat/Apache Tomcat 远程代码执行漏洞 CVE-2025-24813.md",
+        "baseline_body_lines": 243,
+        "current_body_lines": 247,
+        "body_changed": true,
+        "inserted_line_count": 4,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/中间件/Apache Tomcat/Apache-Tomcat-WebSocket-拒绝服务漏洞-CVE-2020-13935.md",
+        "baseline_body_lines": 99,
+        "current_body_lines": 99,
+        "body_changed": false,
+        "inserted_line_count": 0,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/中间件/Apache Tomcat/Tomcat-远程代码执行漏洞-CVE-2025-24813.md",
+        "baseline_body_lines": 242,
+        "current_body_lines": 246,
+        "body_changed": true,
+        "inserted_line_count": 4,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/中间件/Apache/Apache Kylin CubeService.java 命令注入漏洞 CVE-2020-1956.md",
+        "baseline_body_lines": 312,
+        "current_body_lines": 316,
+        "body_changed": true,
+        "inserted_line_count": 4,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/中间件/Apache/Apache-CXF-Aegis-DataBinding-服务端请求伪造漏洞-CVE-2024-28752.md",
+        "baseline_body_lines": 104,
+        "current_body_lines": 104,
+        "body_changed": false,
+        "inserted_line_count": 0,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/中间件/GeoServer/GeoServer-TestWfsPost-接口未授权-SSRF-漏洞-CVE-2021-40822.md",
+        "baseline_body_lines": 100,
+        "current_body_lines": 100,
+        "body_changed": false,
+        "inserted_line_count": 0,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/中间件/Jetty/Jetty WEB-INF 敏感信息泄露漏洞 CVE-2021-34429.md",
+        "baseline_body_lines": 87,
+        "current_body_lines": 87,
+        "body_changed": false,
+        "inserted_line_count": 0,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/中间件/WSO2/WSO2-fileupload-任意文件上传漏洞-CVE-2022-29464.md",
+        "baseline_body_lines": 267,
+        "current_body_lines": 271,
+        "body_changed": true,
+        "inserted_line_count": 4,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/云平台/Citrix/Citrix XenMobile 任意文件读取 CVE-2020-8209.md",
+        "baseline_body_lines": 92,
+        "current_body_lines": 96,
+        "body_changed": true,
+        "inserted_line_count": 4,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/云平台/Citrix/Citrix 远程命令执行漏洞 CVE-2019-19781.md",
+        "baseline_body_lines": 135,
+        "current_body_lines": 139,
+        "body_changed": true,
+        "inserted_line_count": 4,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/云平台/Citrix/Citrix-NetScaler-ADC-&-Gateway-信息泄露漏洞-CVE-2023-4966.md",
+        "baseline_body_lines": 143,
+        "current_body_lines": 143,
+        "body_changed": false,
+        "inserted_line_count": 0,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/云平台/VMware/VMware vCenter Server 远程代码执行漏洞 CVE-2021-21972.md",
+        "baseline_body_lines": 192,
+        "current_body_lines": 192,
+        "body_changed": false,
+        "inserted_line_count": 0,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/云平台/VMware/VMware-vCenter-Server-服务器端请求伪造漏洞-CVE-2021-21973.md",
+        "baseline_body_lines": 61,
+        "current_body_lines": 65,
+        "body_changed": true,
+        "inserted_line_count": 4,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/云平台/VMware/VMware-vRealize-Operations-Manager-SSRF漏洞-CVE-2021-21975.md",
+        "baseline_body_lines": 138,
+        "current_body_lines": 142,
+        "body_changed": true,
+        "inserted_line_count": 4,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/云平台/勒索软件正在利用VMware/勒索软件正在利用VMware漏洞，通过VPN访问发动攻击.md",
+        "baseline_body_lines": 63,
+        "current_body_lines": 67,
+        "body_changed": true,
+        "inserted_line_count": 4,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/其他软件/杂项/!微软Outlook和Web标记功能的两个高危漏洞已被大肆利用.md",
+        "baseline_body_lines": 118,
+        "current_body_lines": 123,
+        "body_changed": true,
+        "inserted_line_count": 5,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/其他软件/杂项/CVE-2023-24860 拒绝服务攻击.md",
+        "baseline_body_lines": 277,
+        "current_body_lines": 281,
+        "body_changed": true,
+        "inserted_line_count": 4,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/安全设备/360/【技术干货】CVE-2022-41852 Apache Commons Jxpath命令执行漏洞分析.md",
+        "baseline_body_lines": 187,
+        "current_body_lines": 192,
+        "body_changed": true,
+        "inserted_line_count": 5,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/安全设备/Suricata/Suricata之CVE-2024-21773 Tomcat请求走私检测.md",
+        "baseline_body_lines": 207,
+        "current_body_lines": 211,
+        "body_changed": true,
+        "inserted_line_count": 4,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/开发框架/Django/Django JSONField  HStoreField SQL注入漏洞 CVE-2019-14234.md",
+        "baseline_body_lines": 81,
+        "current_body_lines": 81,
+        "body_changed": false,
+        "inserted_line_count": 0,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/开发框架/Git/CVE-2026-31900：一个过于宽松的正则表达式如何在 psf-black 的 GitHub Action 中导致 RCE.md",
+        "baseline_body_lines": 465,
+        "current_body_lines": 547,
+        "body_changed": true,
+        "inserted_line_count": 82,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/开发框架/GitLab/GitLab-任意文件读取导致RCE-CVE-2020-10977.md",
+        "baseline_body_lines": 170,
+        "current_body_lines": 175,
+        "body_changed": true,
+        "inserted_line_count": 5,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/开发框架/GitLab/GitLab漏洞让攻击者绕过安全控制并执行任意代码.md",
+        "baseline_body_lines": 100,
+        "current_body_lines": 105,
+        "body_changed": true,
+        "inserted_line_count": 5,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/开发框架/Laravel/（CVE-2019-9081）Laravel 5.7 反序列化rce.md",
+        "baseline_body_lines": 239,
+        "current_body_lines": 244,
+        "body_changed": true,
+        "inserted_line_count": 5,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/开发框架/PHP/PHP-FPM 远程代码执行漏洞 CVE-2019-11043.md",
+        "baseline_body_lines": 88,
+        "current_body_lines": 92,
+        "body_changed": true,
+        "inserted_line_count": 4,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/开发框架/Spring Boot/Spring-框架因-Jetty-URI-解析不一致导致的路径穿越漏洞-CVE-2025-41242.md",
+        "baseline_body_lines": 255,
+        "current_body_lines": 259,
+        "body_changed": true,
+        "inserted_line_count": 4,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/开发框架/Spring Cloud/Spring Cloud Config 目录遍历漏洞 CVE-2019-3799.md",
+        "baseline_body_lines": 53,
+        "current_body_lines": 53,
+        "body_changed": false,
+        "inserted_line_count": 0,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/数据库/MongoDB/MongoDB-Zlib-压缩协议堆内存信息泄露漏洞-CVE-2025-14847.md",
+        "baseline_body_lines": 271,
+        "current_body_lines": 271,
+        "body_changed": false,
+        "inserted_line_count": 0,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/数据库/Mysql/MySQL-身份认证绕过漏洞-CVE-2012-2122.md",
+        "baseline_body_lines": 68,
+        "current_body_lines": 72,
+        "body_changed": true,
+        "inserted_line_count": 4,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/数据库/Phpmyadmin/（CVE-2019-18622）Phpmyadmin xss.md",
+        "baseline_body_lines": 230,
+        "current_body_lines": 234,
+        "body_changed": true,
+        "inserted_line_count": 4,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/服务器软件/Docker/Containerd-漏洞导致容器逃逸-CVE-2020-15257.md",
+        "baseline_body_lines": 162,
+        "current_body_lines": 162,
+        "body_changed": false,
+        "inserted_line_count": 0,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/服务器软件/Docker/Docker-runC-漏洞导致容器逃逸-CVE-2019-5736.md",
+        "baseline_body_lines": 266,
+        "current_body_lines": 270,
+        "body_changed": true,
+        "inserted_line_count": 4,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/服务器软件/Erlang/Erlang-OTP-SSH未授权远程代码执行漏洞-CVE-2025-32433.md",
+        "baseline_body_lines": 248,
+        "current_body_lines": 252,
+        "body_changed": true,
+        "inserted_line_count": 4,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/服务器软件/Linux/Linux 内核越界写入漏洞(CVE-2025-0927).md",
+        "baseline_body_lines": 95,
+        "current_body_lines": 100,
+        "body_changed": true,
+        "inserted_line_count": 5,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/服务器软件/SRS流媒体/SRS-api-server-服务器命令执行漏洞-CVE-2023-34105.md",
+        "baseline_body_lines": 130,
+        "current_body_lines": 134,
+        "body_changed": true,
+        "inserted_line_count": 4,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/服务器软件/SkyWalking/Apache-SkyWalking-7.0.0-graphql-SQL注入漏洞-CVE-2020-9483.md",
+        "baseline_body_lines": 138,
+        "current_body_lines": 138,
+        "body_changed": false,
+        "inserted_line_count": 0,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/服务器软件/Zabbix/Zabbix-SAML身份绕过漏洞-CVE-2022-23131.md",
+        "baseline_body_lines": 104,
+        "current_body_lines": 108,
+        "body_changed": true,
+        "inserted_line_count": 4,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/服务器软件/kkFileView/4月漏洞快报  kkFileView任意文件上传导致远程执行漏洞、Apache Zeppelin 命令执行漏洞....md",
+        "baseline_body_lines": 236,
+        "current_body_lines": 240,
+        "body_changed": true,
+        "inserted_line_count": 4,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/桌面软件/Chrome/Chrome 安全更新 – 修复 29 个允许远程代码执行的漏洞.md",
+        "baseline_body_lines": 76,
+        "current_body_lines": 80,
+        "body_changed": true,
+        "inserted_line_count": 4,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/网络设备/Cisco/CVE-2026-0866 Cisco ClamAV ZIP扫描引擎绕过漏洞.md",
+        "baseline_body_lines": 229,
+        "current_body_lines": 234,
+        "body_changed": true,
+        "inserted_line_count": 5,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/网络设备/Cisco/【已复现】CVE-2026-76424 Cisco ISE 未授权文件上传致远程命令执行及 root 提权漏洞.md",
+        "baseline_body_lines": 49,
+        "current_body_lines": 53,
+        "body_changed": true,
+        "inserted_line_count": 4,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/网络设备/D-Link/CVE-2018-17066复现（D-Link命令注入漏洞）.md",
+        "baseline_body_lines": 504,
+        "current_body_lines": 602,
+        "body_changed": true,
+        "inserted_line_count": 98,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/网络设备/D-Link/【技术分享】CVE-2019-10999 Dlink IP 摄像头缓冲区溢出.md",
+        "baseline_body_lines": 189,
+        "current_body_lines": 256,
+        "body_changed": true,
+        "inserted_line_count": 67,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/网络设备/DrayTek/DrayTek企业网络设备-远程命令执行-CVE-2020-8515.md",
+        "baseline_body_lines": 168,
+        "current_body_lines": 172,
+        "body_changed": true,
+        "inserted_line_count": 4,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/网络设备/DrayTek/Vigor3900 CVE-2021-43118 命令注入漏洞分析.md",
+        "baseline_body_lines": 525,
+        "current_body_lines": 806,
+        "body_changed": true,
+        "inserted_line_count": 281,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/网络设备/MikroTik RouterOS/利用RouterOS（CVE-2022-3496）漏洞，将符号链接作为挂载入口获取代码执行.md",
+        "baseline_body_lines": 130,
+        "current_body_lines": 207,
+        "body_changed": true,
+        "inserted_line_count": 77,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "Web安全/运维面板/Jumpserver/JumpServer-连接令牌泄漏漏洞-CVE-2025-62712.md",
+        "baseline_body_lines": 170,
+        "current_body_lines": 170,
+        "body_changed": false,
+        "inserted_line_count": 0,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      },
+      {
+        "path": "系统安全/Android/安卓音频解码组件曝高危漏洞，可致恶意代码执行，谷歌发布补丁.md",
+        "baseline_body_lines": 93,
+        "current_body_lines": 97,
+        "body_changed": true,
+        "inserted_line_count": 4,
+        "deleted_line_count": 0,
+        "baseline_subsequence_pass": true,
+        "missing_samples": []
+      }
+    ]
+  },
+  "restored_fence_and_original_code_preservation": {
+    "accepted_blocks": 85,
+    "mapped_to_original_d817_empty_fence_same_ordinal": 85,
+    "preexisting_nonempty_fences_checked": 15,
+    "preexisting_nonempty_fences_preserved": 15,
+    "fence_count_changes_or_errors": [],
+    "per_file": [
+      {
+        "path": "Web安全/网络设备/MikroTik RouterOS/利用RouterOS（CVE-2022-3496）漏洞，将符号链接作为挂载入口获取代码执行.md",
+        "before": 15,
+        "after": 15,
+        "accepted": 14,
+        "original_nonempty": 1,
+        "all_pass": true
+      },
+      {
+        "path": "Web安全/网络设备/D-Link/【技术分享】CVE-2019-10999 Dlink IP 摄像头缓冲区溢出.md",
+        "before": 13,
+        "after": 13,
+        "accepted": 7,
+        "original_nonempty": 5,
+        "all_pass": true
+      },
+      {
+        "path": "Web安全/开发框架/Git/CVE-2026-31900：一个过于宽松的正则表达式如何在 psf-black 的 GitHub Action 中导致 RCE.md",
+        "before": 29,
+        "after": 29,
+        "accepted": 23,
+        "original_nonempty": 0,
+        "all_pass": true
+      },
+      {
+        "path": "Web安全/网络设备/DrayTek/Vigor3900 CVE-2021-43118 命令注入漏洞分析.md",
+        "before": 24,
+        "after": 24,
+        "accepted": 24,
+        "original_nonempty": 0,
+        "all_pass": true
+      },
+      {
+        "path": "Web安全/开发框架/GitLab/GitLab-任意文件读取导致RCE-CVE-2020-10977.md",
+        "before": 10,
+        "after": 10,
+        "accepted": 1,
+        "original_nonempty": 9,
+        "all_pass": true
+      },
+      {
+        "path": "Web安全/网络设备/D-Link/CVE-2018-17066复现（D-Link命令注入漏洞）.md",
+        "before": 23,
+        "after": 23,
+        "accepted": 16,
+        "original_nonempty": 0,
+        "all_pass": true
+      }
+    ]
+  }
+}

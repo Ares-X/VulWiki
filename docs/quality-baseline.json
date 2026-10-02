@@ -661,31 +661,6 @@
       "severity": "warning"
     },
     {
-      "code": "empty_fence",
-      "count": 14,
-      "detail": "empty code fence",
-      "key": "02e7612881b6823a80441ef5",
-      "line": 60,
-      "lines": [
-        60,
-        79,
-        85,
-        89,
-        98,
-        102,
-        109,
-        117,
-        121,
-        125,
-        129,
-        133,
-        137,
-        141
-      ],
-      "path": "Web安全/网络设备/MikroTik RouterOS/利用RouterOS（CVE-2022-3496）漏洞，将符号链接作为挂载入口获取代码执行.md",
-      "severity": "warning"
-    },
-    {
       "code": "identifier_role_unknown",
       "count": 1,
       "detail": "legacy identifier candidates excluded from primary CVE index",
@@ -3436,19 +3411,12 @@
     },
     {
       "code": "empty_fence",
-      "count": 8,
+      "count": 1,
       "detail": "empty code fence",
       "key": "0eb516df0e673ed28d345a26",
-      "line": 83,
+      "line": 261,
       "lines": [
-        83,
-        93,
-        101,
-        110,
-        123,
-        135,
-        172,
-        198
+        261
       ],
       "path": "Web安全/网络设备/D-Link/【技术分享】CVE-2019-10999 Dlink IP 摄像头缓冲区溢出.md",
       "severity": "warning"
@@ -5445,18 +5413,6 @@
       ],
       "path": "Web安全/CMS内容/Eyoucms/Eyoucms 1.4.3 任意文件写入.md",
       "severity": "warning"
-    },
-    {
-      "code": "image_missing",
-      "count": 1,
-      "detail": "Web安全/CMS内容/Finecms/FineCMS最新版5.0.8两处getshell/2.png",
-      "key": "175d627aaf3b1430eeba4276",
-      "line": 172,
-      "lines": [
-        172
-      ],
-      "path": "Web安全/CMS内容/Finecms/FineCMS_v5.0.8两处getshell.md",
-      "severity": "error"
     },
     {
       "code": "source_missing",
@@ -10452,6 +10408,18 @@
       "severity": "warning"
     },
     {
+      "code": "identifier_inactive",
+      "count": 1,
+      "detail": "primary identifiers excluded: rejected",
+      "key": "2c6e433518ba95c870e4cc75",
+      "line": 0,
+      "lines": [
+        0
+      ],
+      "path": "Web安全/OA办公/致远OA/OpenPrinting-Cups-Browsed-PDD-FoomaticRIPCommandLine-参数导致远程命令执行漏洞-CVE-2024-47177.md",
+      "severity": "warning"
+    },
+    {
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
@@ -10618,18 +10586,6 @@
       ],
       "path": "Web安全/数据库/Adminer/Adminer-SSRF漏洞 CVE-2021-21311.md",
       "severity": "warning"
-    },
-    {
-      "code": "link_missing",
-      "count": 1,
-      "detail": "IOT安全/天翼创维/POC_Details/1.天翼创维awifi路由器存在多处未授权访问漏洞.pdf",
-      "key": "2d216dadbbf4f786d90b1318",
-      "line": 59,
-      "lines": [
-        59
-      ],
-      "path": "IOT安全/天翼创维/天翼创维awifi路由器存在多处未授权访问漏洞.md",
-      "severity": "error"
     },
     {
       "code": "source_missing",
@@ -12652,9 +12608,9 @@
       "count": 1,
       "detail": "empty code fence",
       "key": "35ef6d8dfe3bc3e3eac3d6c8",
-      "line": 72,
+      "line": 71,
       "lines": [
-        72
+        71
       ],
       "path": "Web安全/CMS内容/WordPress/Wordpress IMPress for IDX Broker 低权限xss漏洞.md",
       "severity": "warning"
@@ -18326,40 +18282,17 @@
     },
     {
       "code": "empty_fence",
-      "count": 29,
+      "count": 6,
       "detail": "empty code fence",
       "key": "4cff8c71d612d47bfeb3f8de",
-      "line": 114,
+      "line": 183,
       "lines": [
-        114,
-        121,
-        138,
-        142,
-        149,
-        169,
-        173,
-        180,
-        191,
-        204,
-        211,
-        215,
-        221,
-        225,
-        255,
-        259,
-        263,
-        267,
-        272,
-        287,
-        293,
-        332,
-        360,
-        381,
-        396,
-        409,
-        414,
-        447,
-        451
+        183,
+        195,
+        239,
+        245,
+        382,
+        529
       ],
       "path": "Web安全/开发框架/Git/CVE-2026-31900：一个过于宽松的正则表达式如何在 psf-black 的 GitHub Action 中导致 RCE.md",
       "severity": "warning"
@@ -19714,6 +19647,18 @@
         0
       ],
       "path": "Web安全/运维面板/Yearning SQL审核/Yearningfront接口存在任意文件读取漏洞.md",
+      "severity": "warning"
+    },
+    {
+      "code": "identifier_inactive",
+      "count": 1,
+      "detail": "primary identifiers excluded: rejected",
+      "key": "52944ea06ade42c11a80616b",
+      "line": 0,
+      "lines": [
+        0
+      ],
+      "path": "Web安全/服务器软件/Linux/Linux 内核越界写入漏洞(CVE-2025-0927).md",
       "severity": "warning"
     },
     {
@@ -28282,6 +28227,18 @@
       "severity": "warning"
     },
     {
+      "code": "identifier_inactive",
+      "count": 1,
+      "detail": "primary identifiers excluded: rejected",
+      "key": "763571605708b341b76b50b7",
+      "line": 0,
+      "lines": [
+        0
+      ],
+      "path": "Web安全/开发框架/Laravel/（CVE-2019-9081）Laravel 5.7 反序列化rce.md",
+      "severity": "warning"
+    },
+    {
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
@@ -28502,9 +28459,9 @@
       "count": 1,
       "detail": "empty code fence",
       "key": "7778220fc80b7044ba14d118",
-      "line": 68,
+      "line": 67,
       "lines": [
-        68
+        67
       ],
       "path": "Web安全/开发框架/Spring Boot/SpringBladedict-biz存在SQL注入漏洞.md",
       "severity": "warning"
@@ -32987,18 +32944,6 @@
       "severity": "warning"
     },
     {
-      "code": "link_missing",
-      "count": 1,
-      "detail": "Web安全/开发框架/PHP/exp.py",
-      "key": "89cc6f1a6668bdf6c077ab64",
-      "line": 86,
-      "lines": [
-        86
-      ],
-      "path": "Web安全/开发框架/PHP/PHP-利用-phpinfo-包含临时文件-getshell.md",
-      "severity": "error"
-    },
-    {
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
@@ -33968,6 +33913,18 @@
         0
       ],
       "path": "Web安全/商业软件/融合指挥调度平台/指挥调度平台invite_one_ptter存在远程命令执行漏洞.md",
+      "severity": "warning"
+    },
+    {
+      "code": "identifier_inactive",
+      "count": 1,
+      "detail": "primary identifiers excluded: rejected",
+      "key": "8df01b434ee0047f445df67e",
+      "line": 0,
+      "lines": [
+        0
+      ],
+      "path": "Web安全/安全设备/360/【技术干货】CVE-2022-41852 Apache Commons Jxpath命令执行漏洞分析.md",
       "severity": "warning"
     },
     {
@@ -36636,34 +36593,18 @@
     },
     {
       "code": "empty_fence",
-      "count": 23,
+      "count": 7,
       "detail": "empty code fence",
       "key": "9a020bf958e869450cc25ce3",
       "line": 68,
       "lines": [
         68,
-        93,
-        119,
-        132,
-        140,
-        165,
-        187,
-        199,
-        221,
-        263,
-        271,
-        279,
-        289,
-        301,
-        316,
-        327,
-        341,
-        350,
+        137,
+        321,
         384,
-        392,
-        409,
-        418,
-        427
+        461,
+        487,
+        521
       ],
       "path": "Web安全/网络设备/D-Link/CVE-2018-17066复现（D-Link命令注入漏洞）.md",
       "severity": "warning"
@@ -37578,18 +37519,6 @@
         0
       ],
       "path": "Web安全/网络设备/Palo Alto/Palo Alto Networks修复了多个权限提升漏洞.md",
-      "severity": "warning"
-    },
-    {
-      "code": "empty_fence",
-      "count": 1,
-      "detail": "empty code fence",
-      "key": "9e32d89006de15e0189be3db",
-      "line": 141,
-      "lines": [
-        141
-      ],
-      "path": "Web安全/开发框架/GitLab/GitLab-任意文件读取导致RCE-CVE-2020-10977.md",
       "severity": "warning"
     },
     {
@@ -44979,18 +44908,6 @@
       "severity": "warning"
     },
     {
-      "code": "link_missing",
-      "count": 1,
-      "detail": "Web安全/CMS内容/S-CMS/POC_Details/S-CMS PHP v30存在SQL注入漏洞.pdf",
-      "key": "bc5ce3cd55400a4f373fa5e8",
-      "line": 110,
-      "lines": [
-        110
-      ],
-      "path": "Web安全/CMS内容/S-CMS/S-CMS PHP v3.0存在SQL注入漏洞.md",
-      "severity": "error"
-    },
-    {
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly missing; reference links are not confirmed provenance",
@@ -48542,31 +48459,31 @@
       "count": 23,
       "detail": "empty code fence",
       "key": "cbc8be3fe48b9e3e43fbc809",
-      "line": 75,
+      "line": 80,
       "lines": [
-        75,
-        79,
-        83,
-        87,
-        134,
+        80,
+        84,
+        88,
+        92,
         139,
         144,
-        146,
+        149,
         151,
         156,
-        168,
-        172,
+        161,
+        173,
         177,
-        181,
+        182,
         186,
-        192,
+        191,
         197,
         202,
-        210,
+        207,
         215,
         220,
         225,
-        230
+        230,
+        235
       ],
       "path": "Web安全/网络设备/Cisco/CVE-2026-0866 Cisco ClamAV ZIP扫描引擎绕过漏洞.md",
       "severity": "warning"
@@ -51461,41 +51378,6 @@
         0
       ],
       "path": "Web安全/中间件/Apache ActiveMQ/（CVE-2016-3088）ActiveMQ应用漏洞.md",
-      "severity": "warning"
-    },
-    {
-      "code": "empty_fence",
-      "count": 24,
-      "detail": "empty code fence",
-      "key": "d76149e90ab2e8957f912c99",
-      "line": 63,
-      "lines": [
-        63,
-        83,
-        129,
-        137,
-        149,
-        194,
-        205,
-        236,
-        243,
-        268,
-        278,
-        288,
-        296,
-        304,
-        312,
-        320,
-        324,
-        332,
-        402,
-        419,
-        434,
-        442,
-        458,
-        469
-      ],
-      "path": "Web安全/网络设备/DrayTek/Vigor3900 CVE-2021-43118 命令注入漏洞分析.md",
       "severity": "warning"
     },
     {
@@ -58749,18 +58631,6 @@
       "severity": "warning"
     },
     {
-      "code": "link_missing",
-      "count": 1,
-      "detail": "Web安全/网络设备/rConfig/books/rConfig v3.9.2 RCE漏洞分析.pdf",
-      "key": "f4d9f0ea88784e2db1fff867",
-      "line": 219,
-      "lines": [
-        219
-      ],
-      "path": "Web安全/网络设备/rConfig/rConfig v3.9.2 RCE漏洞2.md",
-      "severity": "error"
-    },
-    {
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
@@ -61449,6 +61319,18 @@
       "severity": "warning"
     },
     {
+      "code": "identifier_inactive",
+      "count": 1,
+      "detail": "primary identifiers excluded: rejected",
+      "key": "ff4e3b10e7898c2fad5cf928",
+      "line": 0,
+      "lines": [
+        0
+      ],
+      "path": "Web安全/网络设备/Cisco/CVE-2026-0866 Cisco ClamAV ZIP扫描引擎绕过漏洞.md",
+      "severity": "warning"
+    },
+    {
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
@@ -61570,6 +61452,6 @@
     }
   ],
   "policy": "accepted historical debt, not a passing quality verdict; no new issues; fatal checks always block",
-  "reason": "Reviewed reconstruction baseline: five pre-existing absent local resources; unresolved provenance, identifier roles and fingerprints remain explicit. No fatal issue can be waived.; PR #4 review: remove 67 resolved occurrences only; no new exemptions.; 2026-10-03: migrate 23 existing diagnostic keys to preserve complete URLs; paths, check codes and occurrence counts unchanged; no new exemptions.",
+  "reason": "Reviewed reconstruction baseline: five pre-existing absent local resources; unresolved provenance, identifier roles and fingerprints remain explicit. No fatal issue can be waived.; PR #4 review: remove 67 resolved occurrences only; no new exemptions.; 2026-10-03: migrate 23 existing diagnostic keys to preserve complete URLs; paths, check codes and occurrence counts unchanged; no new exemptions.；2026-10-03 原件恢复清除5项资源缺失和21处空块；逐项核对官方撤销记录后登记5条既有编号的停用提示，依据见 docs/reviews/20261003-identifier-baseline-accounting.json；所有提示继续输出，未改变检查规则。；本轮继续逐块核对并清除64处已恢复空块，累计85/176处，剩余91处仍如实输出；未新增豁免。",
   "schema_version": 1
 }

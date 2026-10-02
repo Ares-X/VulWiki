@@ -5,9 +5,9 @@ record_type: "advisory"
 review_status: "text-reviewed"
 verification_status: "not-reproduced"
 content_status: "needs-review"
-primary_identifiers: "CVE-2025-0475; CVE-2025-0555; CVE-2024-8186; CVE-2024-10925; CVE-2025-0307"
-referenced_identifiers: "CVE-2020-0796"
-identifier_role: "primary"
+primary_identifiers: "CVE-2025-0475; CVE-2025-0555; CVE-2024-8186; CVE-2024-10925"
+referenced_identifiers: "CVE-2020-0796; CVE-2025-0307"
+identifier_role: "reference"
 identifier_status: "unknown"
 title: "GitLab漏洞让攻击者绕过安全控制并执行任意代码"
 prerequisites: "来源所述条件，未列明部分仍待核：15.10–17.9.0 andEE16.6–17.9.0 broad; fixes17.9.1/17.8.4/17.7.6; per-CVEbackports absent"
@@ -17,6 +17,11 @@ id: "vw-ca5856d4d2d983a1511e8a80"
 entity_id: "ve-ca5856d4d2d983a1511e8a80"
 schema_version: "1"
 ---
+
+## 2026-10-03 编号核验
+
+CNA 已撤销 CVE-2025-0307，当前记录未给出更具体的原因。本次仅将这一编号移入历史引用，保留本篇另外四个主编号；Planner 角色访问代码审查分析的描述仍是下文来源主张。浏览器 XSS 与服务器代码执行的结论继续分别判断。
+
 
 ## 核对与使用边界
 

@@ -1,0 +1,1751 @@
+{
+  "baseline_commit": "d8178134424d0d2f6e051454d8ea761bc2049901",
+  "inventory_file": "/tmp/vulwiki-round3-empty-inventory.json",
+  "source_review_file": "/tmp/vulwiki-round3-empty-review.json",
+  "restoration_manifest": "docs/reviews/20261003-empty-block-restoration.json",
+  "scope": "Read-only public-source investigation; no repo writes, article code execution, example target access, login bypass, image transcription, or source metadata edits. Occurrence coordinates refer to d817 baseline.",
+  "totals": {
+    "articles": 26,
+    "original_empty_blocks": 176,
+    "accepted_restorations": 85,
+    "unresolved_or_unknown": 91,
+    "unaccepted_candidates": 0
+  },
+  "articles": [
+    {
+      "path": "Web安全/网络设备/MikroTik RouterOS/利用RouterOS（CVE-2022-3496）漏洞，将符号链接作为挂载入口获取代码执行.md",
+      "original_empty_count_d817": 14,
+      "accepted_count": 14,
+      "candidate_count": 0,
+      "unknown_count": 0,
+      "summary": "14 confirmed restored from author article; no unresolved original fences.",
+      "attempted_public_urls": [
+        "https://blog.nns.ee/2022/08/05/routeros-container-rce/"
+      ],
+      "research_result": "Original NNS/Rasmus Moorats article opened; 14 of 15 source blocks map in order to local blanks, the remaining source directory tree already existed locally. All 14 accepted.",
+      "occurrences": [
+        {
+          "occurrence": 1,
+          "empty_open_line_d817": 60,
+          "status": "accepted_restoration",
+          "source_url": "https://blog.nns.ee/2022/08/05/routeros-container-rce/",
+          "source_block_index": 1,
+          "source_text_sha256": "3d74306668531c5b8f3863ae830c1aef724d118b35190bf2a0e26f63301fd7ef",
+          "source_cache_sha256": "5760fee8eba869362aaf0639027b03ff8331338301a5a95e4bb69c2d2f569e5f"
+        },
+        {
+          "occurrence": 2,
+          "empty_open_line_d817": 79,
+          "status": "accepted_restoration",
+          "source_url": "https://blog.nns.ee/2022/08/05/routeros-container-rce/",
+          "source_block_index": 3,
+          "source_text_sha256": "79d15fd9dc9111c74d1f376a3ddf96cedb88ebcd0906ffecee03ecab3c06f30a",
+          "source_cache_sha256": "5760fee8eba869362aaf0639027b03ff8331338301a5a95e4bb69c2d2f569e5f"
+        },
+        {
+          "occurrence": 3,
+          "empty_open_line_d817": 85,
+          "status": "accepted_restoration",
+          "source_url": "https://blog.nns.ee/2022/08/05/routeros-container-rce/",
+          "source_block_index": 4,
+          "source_text_sha256": "f7d36acc59178d3f2e4ed0d7f591c9119282fef88eaefe9e64140c8991e57167",
+          "source_cache_sha256": "5760fee8eba869362aaf0639027b03ff8331338301a5a95e4bb69c2d2f569e5f"
+        },
+        {
+          "occurrence": 4,
+          "empty_open_line_d817": 89,
+          "status": "accepted_restoration",
+          "source_url": "https://blog.nns.ee/2022/08/05/routeros-container-rce/",
+          "source_block_index": 5,
+          "source_text_sha256": "e7f9ee8a218a50df33a7236472c0e55fd740ad84ce25949e5eaa08824c6ee37e",
+          "source_cache_sha256": "5760fee8eba869362aaf0639027b03ff8331338301a5a95e4bb69c2d2f569e5f"
+        },
+        {
+          "occurrence": 5,
+          "empty_open_line_d817": 98,
+          "status": "accepted_restoration",
+          "source_url": "https://blog.nns.ee/2022/08/05/routeros-container-rce/",
+          "source_block_index": 6,
+          "source_text_sha256": "49864d8b1c7990e154a6bb52cc4db5e0ebd09470ccf4dac5049224ee489d09d2",
+          "source_cache_sha256": "5760fee8eba869362aaf0639027b03ff8331338301a5a95e4bb69c2d2f569e5f"
+        },
+        {
+          "occurrence": 6,
+          "empty_open_line_d817": 102,
+          "status": "accepted_restoration",
+          "source_url": "https://blog.nns.ee/2022/08/05/routeros-container-rce/",
+          "source_block_index": 7,
+          "source_text_sha256": "d86b6d0ff4b8bebdff5854e4de43af3e386b9662392bab5980f6eea8be7b68cb",
+          "source_cache_sha256": "5760fee8eba869362aaf0639027b03ff8331338301a5a95e4bb69c2d2f569e5f"
+        },
+        {
+          "occurrence": 7,
+          "empty_open_line_d817": 109,
+          "status": "accepted_restoration",
+          "source_url": "https://blog.nns.ee/2022/08/05/routeros-container-rce/",
+          "source_block_index": 8,
+          "source_text_sha256": "fb5bf211bddafae042c410cbe33023175a65388edf55565577c9f7a6313392a0",
+          "source_cache_sha256": "5760fee8eba869362aaf0639027b03ff8331338301a5a95e4bb69c2d2f569e5f"
+        },
+        {
+          "occurrence": 8,
+          "empty_open_line_d817": 117,
+          "status": "accepted_restoration",
+          "source_url": "https://blog.nns.ee/2022/08/05/routeros-container-rce/",
+          "source_block_index": 9,
+          "source_text_sha256": "71d7fc4eb7954b2930235c945e23c5ef20fda915c8d9f0e1e5add624612d67f7",
+          "source_cache_sha256": "5760fee8eba869362aaf0639027b03ff8331338301a5a95e4bb69c2d2f569e5f"
+        },
+        {
+          "occurrence": 9,
+          "empty_open_line_d817": 121,
+          "status": "accepted_restoration",
+          "source_url": "https://blog.nns.ee/2022/08/05/routeros-container-rce/",
+          "source_block_index": 10,
+          "source_text_sha256": "182aa960be6e8dbd10c64f558825e558cea4dfecee40ad79c9cc90a61a858d95",
+          "source_cache_sha256": "5760fee8eba869362aaf0639027b03ff8331338301a5a95e4bb69c2d2f569e5f"
+        },
+        {
+          "occurrence": 10,
+          "empty_open_line_d817": 125,
+          "status": "accepted_restoration",
+          "source_url": "https://blog.nns.ee/2022/08/05/routeros-container-rce/",
+          "source_block_index": 11,
+          "source_text_sha256": "4e7e2a9f1d7dc03ea43e34322141a6cd8d74ce5701517aa67871a22f82f00ec9",
+          "source_cache_sha256": "5760fee8eba869362aaf0639027b03ff8331338301a5a95e4bb69c2d2f569e5f"
+        },
+        {
+          "occurrence": 11,
+          "empty_open_line_d817": 129,
+          "status": "accepted_restoration",
+          "source_url": "https://blog.nns.ee/2022/08/05/routeros-container-rce/",
+          "source_block_index": 12,
+          "source_text_sha256": "f1d21e81841dc0036b3e2b6075fcf22bed06a7bc81c89b18afe3d88ec68abf38",
+          "source_cache_sha256": "5760fee8eba869362aaf0639027b03ff8331338301a5a95e4bb69c2d2f569e5f"
+        },
+        {
+          "occurrence": 12,
+          "empty_open_line_d817": 133,
+          "status": "accepted_restoration",
+          "source_url": "https://blog.nns.ee/2022/08/05/routeros-container-rce/",
+          "source_block_index": 13,
+          "source_text_sha256": "eea34cc3cc3d9f437c834127369ef1e7b1b51ef956043359f03c810212ae4bb8",
+          "source_cache_sha256": "5760fee8eba869362aaf0639027b03ff8331338301a5a95e4bb69c2d2f569e5f"
+        },
+        {
+          "occurrence": 13,
+          "empty_open_line_d817": 137,
+          "status": "accepted_restoration",
+          "source_url": "https://blog.nns.ee/2022/08/05/routeros-container-rce/",
+          "source_block_index": 14,
+          "source_text_sha256": "0a270ade9d28e9a1217d289155cb9aacf0312f62d773331559ccdb340b99d025",
+          "source_cache_sha256": "5760fee8eba869362aaf0639027b03ff8331338301a5a95e4bb69c2d2f569e5f"
+        },
+        {
+          "occurrence": 14,
+          "empty_open_line_d817": 141,
+          "status": "accepted_restoration",
+          "source_url": "https://blog.nns.ee/2022/08/05/routeros-container-rce/",
+          "source_block_index": 15,
+          "source_text_sha256": "ef8792d9810bd2d20c2dce7b1e12c8cfbc023677360c68dc453a3c83bda93e0f",
+          "source_cache_sha256": "5760fee8eba869362aaf0639027b03ff8331338301a5a95e4bb69c2d2f569e5f"
+        }
+      ]
+    },
+    {
+      "path": "Web安全/CMS内容/Airin Blog/DMC Airin Blog Plugin 反序列化 CVE-2024-52413分析.md",
+      "original_empty_count_d817": 1,
+      "accepted_count": 0,
+      "candidate_count": 0,
+      "unknown_count": 1,
+      "summary": "0 restored; 1 unknown.",
+      "attempted_public_urls": [
+        "https://xz.aliyun.com/t/16347",
+        "https://github.com/tanjiti/sec_profile/blob/main/README_202412.md",
+        "https://mp.weixin.qq.com/s?__biz=MzkyMDY1NzA2Mw==&mid=2247483820&idx=1&sn=a23aeb71510508774f10b307c7147e14",
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-52413",
+        "https://www.patchstack.com/database/Wordpress/Theme/airin-blog/vulnerability/wordpress-airin-blog-theme-1-6-1-php-object-injection-vulnerability"
+      ],
+      "research_result": "Exact title indexed by Aliyun and a public link index, but Aliyun article open was inaccessible and the WeChat original failed to open. GitHub index provides only title/link. NVD/Patchstack confirm CVE/theme, not article code. Adjacent local block is image; no pixel-based transcription.",
+      "occurrences": [
+        {
+          "occurrence": 1,
+          "empty_open_line_d817": 99,
+          "status": "unknown",
+          "reason": "Exact title indexed by Aliyun and a public link index, but Aliyun article open was inaccessible and the WeChat original failed to open. GitHub index provides only title/link. NVD/Patchstack confirm CVE/theme, not article code. Adjacent local block is image; no pixel-based transcription."
+        }
+      ]
+    },
+    {
+      "path": "Web安全/网络设备/D-Link/【技术分享】CVE-2019-10999 Dlink IP 摄像头缓冲区溢出.md",
+      "original_empty_count_d817": 8,
+      "accepted_count": 7,
+      "candidate_count": 0,
+      "unknown_count": 1,
+      "summary": "7 confirmed restored; 1 source-tail empty has no counterpart.",
+      "attempted_public_urls": [
+        "https://www.anquanke.com/post/id/259210"
+      ],
+      "research_result": "Readable complete public translation; 11 pre blocks, source items 4–9 and 11 align with 7 local empty blocks. Source item 10 has no corresponding local body code at the final empty fence.",
+      "occurrences": [
+        {
+          "occurrence": 1,
+          "empty_open_line_d817": 83,
+          "status": "accepted_restoration",
+          "source_url": "https://www.anquanke.com/post/id/259210",
+          "source_block_index": 4,
+          "source_text_sha256": "5773cceed979b196aa2483996681c28f3f23b8d3c2d68dfe9150c5788aafdcff",
+          "source_cache_sha256": "9828c1832114f8fc8bb70d3c0df884f3ea08b19de163573d43a3edfdae2f4181"
+        },
+        {
+          "occurrence": 2,
+          "empty_open_line_d817": 93,
+          "status": "accepted_restoration",
+          "source_url": "https://www.anquanke.com/post/id/259210",
+          "source_block_index": 5,
+          "source_text_sha256": "e748f37b63aa4b8763f1951ac6a96fe192dde5a55ed5b9aa3903ab73065a15cc",
+          "source_cache_sha256": "9828c1832114f8fc8bb70d3c0df884f3ea08b19de163573d43a3edfdae2f4181"
+        },
+        {
+          "occurrence": 3,
+          "empty_open_line_d817": 101,
+          "status": "accepted_restoration",
+          "source_url": "https://www.anquanke.com/post/id/259210",
+          "source_block_index": 6,
+          "source_text_sha256": "7e885aa2299ef52a82297967a10dac8914d36870f07e272ff058d3e85de8a709",
+          "source_cache_sha256": "9828c1832114f8fc8bb70d3c0df884f3ea08b19de163573d43a3edfdae2f4181"
+        },
+        {
+          "occurrence": 4,
+          "empty_open_line_d817": 110,
+          "status": "accepted_restoration",
+          "source_url": "https://www.anquanke.com/post/id/259210",
+          "source_block_index": 7,
+          "source_text_sha256": "0341a9559276cbc253edf6c312a0a6449b5e7892ae39ad99cd0ee7ae6729fe5d",
+          "source_cache_sha256": "9828c1832114f8fc8bb70d3c0df884f3ea08b19de163573d43a3edfdae2f4181"
+        },
+        {
+          "occurrence": 5,
+          "empty_open_line_d817": 123,
+          "status": "accepted_restoration",
+          "source_url": "https://www.anquanke.com/post/id/259210",
+          "source_block_index": 8,
+          "source_text_sha256": "948cafaf8cbb5455a096a58390d167538496bf17f0ac0e939d021e6d8861b799",
+          "source_cache_sha256": "9828c1832114f8fc8bb70d3c0df884f3ea08b19de163573d43a3edfdae2f4181"
+        },
+        {
+          "occurrence": 6,
+          "empty_open_line_d817": 135,
+          "status": "accepted_restoration",
+          "source_url": "https://www.anquanke.com/post/id/259210",
+          "source_block_index": 9,
+          "source_text_sha256": "2f3844bcbdcd71b626ad9d8615250c9444020912fa81d3a6598a46de92d389e7",
+          "source_cache_sha256": "9828c1832114f8fc8bb70d3c0df884f3ea08b19de163573d43a3edfdae2f4181"
+        },
+        {
+          "occurrence": 7,
+          "empty_open_line_d817": 172,
+          "status": "accepted_restoration",
+          "source_url": "https://www.anquanke.com/post/id/259210",
+          "source_block_index": 11,
+          "source_text_sha256": "ebe8aadd2e916a03842c2a8f9d49e62382727efc7f9a7d8718e2213587e34a59",
+          "source_cache_sha256": "9828c1832114f8fc8bb70d3c0df884f3ea08b19de163573d43a3edfdae2f4181"
+        },
+        {
+          "occurrence": 8,
+          "empty_open_line_d817": 198,
+          "status": "unknown",
+          "reason": "Readable complete public translation; 11 pre blocks, source items 4–9 and 11 align with 7 local empty blocks. Source item 10 has no corresponding local body code at the final empty fence."
+        }
+      ]
+    },
+    {
+      "path": "Web安全/CMS内容/PbootCMS/PbootCMS最新代码注入漏洞（CNVD-2025-01710、CVE-2024-12789）.md",
+      "original_empty_count_d817": 1,
+      "accepted_count": 0,
+      "candidate_count": 0,
+      "unknown_count": 1,
+      "summary": "0 restored; 1 unknown.",
+      "attempted_public_urls": [
+        "https://www.hws.com/help/tech/1859.html"
+      ],
+      "research_result": "Vendor advisory page readable and title/IDs match, but it contains product mitigation guidance rather than source for the blank code area. The local fence is adjacent to an image; no code can be restored exactly from this advisory.",
+      "occurrences": [
+        {
+          "occurrence": 1,
+          "empty_open_line_d817": 94,
+          "status": "unknown",
+          "reason": "Vendor advisory page readable and title/IDs match, but it contains product mitigation guidance rather than source for the blank code area. The local fence is adjacent to an image; no code can be restored exactly from this advisory."
+        }
+      ]
+    },
+    {
+      "path": "Web安全/开发框架/BCEL/CVE-2022-42920 BCEL 任意文件写漏洞.md",
+      "original_empty_count_d817": 2,
+      "accepted_count": 0,
+      "candidate_count": 0,
+      "unknown_count": 2,
+      "summary": "0 restored; 2 unknown.",
+      "attempted_public_urls": [
+        "https://www.ctfiot.com/77438.html",
+        "https://github.com/apache/commons-bcel/pull/147",
+        "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42920"
+      ],
+      "research_result": "Same-title repost is readable and has matching Java demo/65500-loop context, but intervening material is image placeholders and does not supply full continuous text for either block. Apache PR confirms fix behavior, not the article examples.",
+      "occurrences": [
+        {
+          "occurrence": 1,
+          "empty_open_line_d817": 122,
+          "status": "unknown",
+          "reason": "Same-title repost is readable and has matching Java demo/65500-loop context, but intervening material is image placeholders and does not supply full continuous text for either block. Apache PR confirms fix behavior, not the article examples."
+        },
+        {
+          "occurrence": 2,
+          "empty_open_line_d817": 138,
+          "status": "unknown",
+          "reason": "Same-title repost is readable and has matching Java demo/65500-loop context, but intervening material is image placeholders and does not supply full continuous text for either block. Apache PR confirms fix behavior, not the article examples."
+        }
+      ]
+    },
+    {
+      "path": "Web安全/CMS内容/WordPress/Wordpress IMPress for IDX Broker 低权限xss漏洞.md",
+      "original_empty_count_d817": 1,
+      "accepted_count": 0,
+      "candidate_count": 0,
+      "unknown_count": 1,
+      "summary": "0 restored; 1 unknown.",
+      "attempted_public_urls": [
+        "https://www.rapid7.com/db/vulnerabilities/idx-broker-platinum-plugin-cve-2020-11512/",
+        "https://wpscan.com/vulnerability/c4fcbb6b-d6ab-4f66-9b75-f8c11c6e5e53/"
+      ],
+      "research_result": "Both public records open and confirm CVE/mechanism; neither is the local linked original reproduction nor contains matching code.",
+      "occurrences": [
+        {
+          "occurrence": 1,
+          "empty_open_line_d817": 71,
+          "status": "unknown",
+          "reason": "Both public records open and confirm CVE/mechanism; neither is the local linked original reproduction nor contains matching code."
+        }
+      ]
+    },
+    {
+      "path": "Web安全/安全设备/Nessus/Nessus严重漏洞允许覆盖任意本地系统文件.md",
+      "original_empty_count_d817": 2,
+      "accepted_count": 0,
+      "candidate_count": 0,
+      "unknown_count": 2,
+      "summary": "0 restored; 2 unknown.",
+      "attempted_public_urls": [
+        "https://cybersecuritynews.com/nessus-windows-vulnerabilities/",
+        "https://mp.weixin.qq.com/s?__biz=MjM5NjA0NjgyMA==&mid=2651324079&idx=1&sn=c11acae8f7897f7fa528977c559d8c05&scene=21#wechat_redirect"
+      ],
+      "research_result": "CybersecurityNews page is readable but concerns CVE-2025-36630/36631 rather than the local article’s likely CVE-2025-24855; WeChat original failed to open. No exact full source text found.",
+      "occurrences": [
+        {
+          "occurrence": 1,
+          "empty_open_line_d817": 85,
+          "status": "unknown",
+          "reason": "CybersecurityNews page is readable but concerns CVE-2025-36630/36631 rather than the local article’s likely CVE-2025-24855; WeChat original failed to open. No exact full source text found."
+        },
+        {
+          "occurrence": 2,
+          "empty_open_line_d817": 103,
+          "status": "unknown",
+          "reason": "CybersecurityNews page is readable but concerns CVE-2025-36630/36631 rather than the local article’s likely CVE-2025-24855; WeChat original failed to open. No exact full source text found."
+        }
+      ]
+    },
+    {
+      "path": "Web安全/开发框架/Git/CVE-2026-31900：一个过于宽松的正则表达式如何在 psf-black 的 GitHub Action 中导致 RCE.md",
+      "original_empty_count_d817": 29,
+      "accepted_count": 23,
+      "candidate_count": 0,
+      "unknown_count": 6,
+      "summary": "23 confirmed restored; 6 remain unknown.",
+      "attempted_public_urls": [
+        "https://medium.com/securitycertcommunity/cve-2026-31900-50800bafafba",
+        "https://github.com/psf/black/security/advisories/GHSA-v53h-f6m7-xcgm"
+      ],
+      "research_result": "Direct Medium author page opened and aligned to article; 23 blocks accepted from exact direct-page text. Six remaining fences map to narrative-only/summary locations without source code. Original coordinates are d817 lines 183, 195, 239, 245, 506 plus other unresolved position(s); use block-level d817 list in this report. The candidate at d817 line 381 is now accepted (Medium 23rd).",
+      "occurrences": [
+        {
+          "occurrence": 1,
+          "empty_open_line_d817": 114,
+          "status": "accepted_restoration",
+          "source_url": "https://medium.com/securitycertcommunity/cve-2026-31900-how-a-permissive-regex-led-to-rce-in-psf-blacks-github-action-50800bafafba",
+          "source_block_index": null,
+          "source_text_sha256": "b598100aaa44f7a98c0fe096cd667a97be1e7a173c82f11966bfff55f3e0af36",
+          "source_cache_sha256": "d10c6c4015bec38a88fc5b41c666fd12f29c095b1d5f9e0c5b3d4aecfbb26f62"
+        },
+        {
+          "occurrence": 2,
+          "empty_open_line_d817": 121,
+          "status": "accepted_restoration",
+          "source_url": "https://medium.com/securitycertcommunity/cve-2026-31900-how-a-permissive-regex-led-to-rce-in-psf-blacks-github-action-50800bafafba",
+          "source_block_index": null,
+          "source_text_sha256": "992cf8992a03fc719aa404e028ec673b8c8cf0ceecb64078be498aaea6661323",
+          "source_cache_sha256": "d10c6c4015bec38a88fc5b41c666fd12f29c095b1d5f9e0c5b3d4aecfbb26f62"
+        },
+        {
+          "occurrence": 3,
+          "empty_open_line_d817": 138,
+          "status": "accepted_restoration",
+          "source_url": "https://medium.com/securitycertcommunity/cve-2026-31900-how-a-permissive-regex-led-to-rce-in-psf-blacks-github-action-50800bafafba",
+          "source_block_index": null,
+          "source_text_sha256": "d481192e116a86bb5920822e0d49ab0be298a88710b066de056ec04a0b19dfd6",
+          "source_cache_sha256": "d10c6c4015bec38a88fc5b41c666fd12f29c095b1d5f9e0c5b3d4aecfbb26f62"
+        },
+        {
+          "occurrence": 4,
+          "empty_open_line_d817": 142,
+          "status": "accepted_restoration",
+          "source_url": "https://medium.com/securitycertcommunity/cve-2026-31900-how-a-permissive-regex-led-to-rce-in-psf-blacks-github-action-50800bafafba",
+          "source_block_index": null,
+          "source_text_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+          "source_cache_sha256": "d10c6c4015bec38a88fc5b41c666fd12f29c095b1d5f9e0c5b3d4aecfbb26f62"
+        },
+        {
+          "occurrence": 5,
+          "empty_open_line_d817": 149,
+          "status": "accepted_restoration",
+          "source_url": "https://medium.com/securitycertcommunity/cve-2026-31900-50800bafafba",
+          "source_block_index": 0,
+          "source_text_sha256": "46f41b00c8a976a62f4bfea52df55d08bf0c6ac9c44b0f690adb0dad311a99a3",
+          "source_cache_sha256": "35a8a090d6a1079b1adb29824f082680a3a74e988ab827c57c7761b062830e8f"
+        },
+        {
+          "occurrence": 6,
+          "empty_open_line_d817": 169,
+          "status": "unknown",
+          "reason": "Direct Medium author page opened and aligned to article; 23 blocks accepted from exact direct-page text. Six remaining fences map to narrative-only/summary locations without source code. Original coordinates are d817 lines 183, 195, 239, 245, 506 plus other unresolved position(s); use block-level d817 list in this report. The candidate at d817 line 381 is now accepted (Medium 23rd)."
+        },
+        {
+          "occurrence": 7,
+          "empty_open_line_d817": 173,
+          "status": "accepted_restoration",
+          "source_url": "https://medium.com/securitycertcommunity/cve-2026-31900-how-a-permissive-regex-led-to-rce-in-psf-blacks-github-action-50800bafafba",
+          "source_block_index": null,
+          "source_text_sha256": "c2eff39554277c5997b69fa9a37253a887e06edb2936a649f65896949d3cfa83",
+          "source_cache_sha256": "d10c6c4015bec38a88fc5b41c666fd12f29c095b1d5f9e0c5b3d4aecfbb26f62"
+        },
+        {
+          "occurrence": 8,
+          "empty_open_line_d817": 180,
+          "status": "unknown",
+          "reason": "Direct Medium author page opened and aligned to article; 23 blocks accepted from exact direct-page text. Six remaining fences map to narrative-only/summary locations without source code. Original coordinates are d817 lines 183, 195, 239, 245, 506 plus other unresolved position(s); use block-level d817 list in this report. The candidate at d817 line 381 is now accepted (Medium 23rd)."
+        },
+        {
+          "occurrence": 9,
+          "empty_open_line_d817": 191,
+          "status": "accepted_restoration",
+          "source_url": "https://medium.com/securitycertcommunity/cve-2026-31900-50800bafafba",
+          "source_block_index": 1,
+          "source_text_sha256": "ba8c08d37cec34bcec0576805d3909e23951f0aa9f36f1fed273f58ac9ae88f0",
+          "source_cache_sha256": "35a8a090d6a1079b1adb29824f082680a3a74e988ab827c57c7761b062830e8f"
+        },
+        {
+          "occurrence": 10,
+          "empty_open_line_d817": 204,
+          "status": "accepted_restoration",
+          "source_url": "https://medium.com/securitycertcommunity/cve-2026-31900-50800bafafba",
+          "source_block_index": 2,
+          "source_text_sha256": "835595f9d9daa91b5d71320a36d8d6a790bc2a7fe49179d4e9952888b47a5ad3",
+          "source_cache_sha256": "35a8a090d6a1079b1adb29824f082680a3a74e988ab827c57c7761b062830e8f"
+        },
+        {
+          "occurrence": 11,
+          "empty_open_line_d817": 211,
+          "status": "accepted_restoration",
+          "source_url": "https://medium.com/securitycertcommunity/cve-2026-31900-how-a-permissive-regex-led-to-rce-in-psf-blacks-github-action-50800bafafba",
+          "source_block_index": null,
+          "source_text_sha256": "992cf8992a03fc719aa404e028ec673b8c8cf0ceecb64078be498aaea6661323",
+          "source_cache_sha256": "d10c6c4015bec38a88fc5b41c666fd12f29c095b1d5f9e0c5b3d4aecfbb26f62"
+        },
+        {
+          "occurrence": 12,
+          "empty_open_line_d817": 215,
+          "status": "unknown",
+          "reason": "Direct Medium author page opened and aligned to article; 23 blocks accepted from exact direct-page text. Six remaining fences map to narrative-only/summary locations without source code. Original coordinates are d817 lines 183, 195, 239, 245, 506 plus other unresolved position(s); use block-level d817 list in this report. The candidate at d817 line 381 is now accepted (Medium 23rd)."
+        },
+        {
+          "occurrence": 13,
+          "empty_open_line_d817": 221,
+          "status": "unknown",
+          "reason": "Direct Medium author page opened and aligned to article; 23 blocks accepted from exact direct-page text. Six remaining fences map to narrative-only/summary locations without source code. Original coordinates are d817 lines 183, 195, 239, 245, 506 plus other unresolved position(s); use block-level d817 list in this report. The candidate at d817 line 381 is now accepted (Medium 23rd)."
+        },
+        {
+          "occurrence": 14,
+          "empty_open_line_d817": 225,
+          "status": "accepted_restoration",
+          "source_url": "https://medium.com/securitycertcommunity/cve-2026-31900-how-a-permissive-regex-led-to-rce-in-psf-blacks-github-action-50800bafafba",
+          "source_block_index": null,
+          "source_text_sha256": "d7833ee95813e2fe701428e9a55270a4abdcff6fc35ea4e5fde9098e727a7925",
+          "source_cache_sha256": "d10c6c4015bec38a88fc5b41c666fd12f29c095b1d5f9e0c5b3d4aecfbb26f62"
+        },
+        {
+          "occurrence": 15,
+          "empty_open_line_d817": 255,
+          "status": "accepted_restoration",
+          "source_url": "https://medium.com/securitycertcommunity/cve-2026-31900-how-a-permissive-regex-led-to-rce-in-psf-blacks-github-action-50800bafafba",
+          "source_block_index": null,
+          "source_text_sha256": "98fa311ec4fef7edf0000322b6e4d33ffec5cc1df2149cee8c3206725f7ca997",
+          "source_cache_sha256": "d10c6c4015bec38a88fc5b41c666fd12f29c095b1d5f9e0c5b3d4aecfbb26f62"
+        },
+        {
+          "occurrence": 16,
+          "empty_open_line_d817": 259,
+          "status": "accepted_restoration",
+          "source_url": "https://medium.com/securitycertcommunity/cve-2026-31900-how-a-permissive-regex-led-to-rce-in-psf-blacks-github-action-50800bafafba",
+          "source_block_index": null,
+          "source_text_sha256": "7264b3c89eccf655faccc8ec26081340c669c4f3b42498938909c43a353b48d9",
+          "source_cache_sha256": "d10c6c4015bec38a88fc5b41c666fd12f29c095b1d5f9e0c5b3d4aecfbb26f62"
+        },
+        {
+          "occurrence": 17,
+          "empty_open_line_d817": 263,
+          "status": "accepted_restoration",
+          "source_url": "https://medium.com/securitycertcommunity/cve-2026-31900-50800bafafba",
+          "source_block_index": 3,
+          "source_text_sha256": "c11f1e0ebeb285b308b5fc47fc395058d61eb00cdf01dcd6b0e71daf93583324",
+          "source_cache_sha256": "35a8a090d6a1079b1adb29824f082680a3a74e988ab827c57c7761b062830e8f"
+        },
+        {
+          "occurrence": 18,
+          "empty_open_line_d817": 267,
+          "status": "accepted_restoration",
+          "source_url": "https://medium.com/securitycertcommunity/cve-2026-31900-50800bafafba",
+          "source_block_index": 4,
+          "source_text_sha256": "3341759237ef2c413b97184c6994da7264ef3e7613947a629e5fe21346d188ee",
+          "source_cache_sha256": "35a8a090d6a1079b1adb29824f082680a3a74e988ab827c57c7761b062830e8f"
+        },
+        {
+          "occurrence": 19,
+          "empty_open_line_d817": 272,
+          "status": "accepted_restoration",
+          "source_url": "https://medium.com/securitycertcommunity/cve-2026-31900-50800bafafba",
+          "source_block_index": 5,
+          "source_text_sha256": "470a64f5a86988132e9b1dcf1d88c2cfe2332698470088c8f7480a1d5dba7826",
+          "source_cache_sha256": "35a8a090d6a1079b1adb29824f082680a3a74e988ab827c57c7761b062830e8f"
+        },
+        {
+          "occurrence": 20,
+          "empty_open_line_d817": 287,
+          "status": "accepted_restoration",
+          "source_url": "https://medium.com/securitycertcommunity/cve-2026-31900-50800bafafba",
+          "source_block_index": 6,
+          "source_text_sha256": "64eea16688767669bc28d325575c691b3b6968756de29d8918699a9a21a0f7ca",
+          "source_cache_sha256": "35a8a090d6a1079b1adb29824f082680a3a74e988ab827c57c7761b062830e8f"
+        },
+        {
+          "occurrence": 21,
+          "empty_open_line_d817": 293,
+          "status": "accepted_restoration",
+          "source_url": "https://medium.com/securitycertcommunity/cve-2026-31900-how-a-permissive-regex-led-to-rce-in-psf-blacks-github-action-50800bafafba",
+          "source_block_index": null,
+          "source_text_sha256": "409a92d92eb75ae84ddd66b0fb68c88cba9dc8cb2c3b78efdd560e46e4c30160",
+          "source_cache_sha256": "d10c6c4015bec38a88fc5b41c666fd12f29c095b1d5f9e0c5b3d4aecfbb26f62"
+        },
+        {
+          "occurrence": 22,
+          "empty_open_line_d817": 332,
+          "status": "unknown",
+          "reason": "Direct Medium author page opened and aligned to article; 23 blocks accepted from exact direct-page text. Six remaining fences map to narrative-only/summary locations without source code. Original coordinates are d817 lines 183, 195, 239, 245, 506 plus other unresolved position(s); use block-level d817 list in this report. The candidate at d817 line 381 is now accepted (Medium 23rd)."
+        },
+        {
+          "occurrence": 23,
+          "empty_open_line_d817": 360,
+          "status": "accepted_restoration",
+          "source_url": "https://medium.com/securitycertcommunity/cve-2026-31900-how-a-permissive-regex-led-to-rce-in-psf-blacks-github-action-50800bafafba",
+          "source_block_index": null,
+          "source_text_sha256": "eeb09ca83b62e754e09b938a88b4fb11f58d877d375fd47d4c31d15508b75f33",
+          "source_cache_sha256": "d10c6c4015bec38a88fc5b41c666fd12f29c095b1d5f9e0c5b3d4aecfbb26f62"
+        },
+        {
+          "occurrence": 24,
+          "empty_open_line_d817": 381,
+          "status": "accepted_restoration",
+          "source_url": "https://medium.com/securitycertcommunity/cve-2026-31900-50800bafafba",
+          "source_block_index": null,
+          "source_text_sha256": null,
+          "source_cache_sha256": "a2a8b41f17e14185ae89814ad3937e26246f82477a07f53cda5330db221e14cd"
+        },
+        {
+          "occurrence": 25,
+          "empty_open_line_d817": 396,
+          "status": "accepted_restoration",
+          "source_url": "https://medium.com/securitycertcommunity/cve-2026-31900-how-a-permissive-regex-led-to-rce-in-psf-blacks-github-action-50800bafafba",
+          "source_block_index": null,
+          "source_text_sha256": "5a781502d89b2d8e21df3722701f26ef026403964ec2bca2cf2e2859da6b8f37",
+          "source_cache_sha256": "d10c6c4015bec38a88fc5b41c666fd12f29c095b1d5f9e0c5b3d4aecfbb26f62"
+        },
+        {
+          "occurrence": 26,
+          "empty_open_line_d817": 409,
+          "status": "accepted_restoration",
+          "source_url": "https://medium.com/securitycertcommunity/cve-2026-31900-how-a-permissive-regex-led-to-rce-in-psf-blacks-github-action-50800bafafba",
+          "source_block_index": null,
+          "source_text_sha256": "7aa057f8ff9cb3e331a24e87b68200a2ef6fc36550285c05dbc412ec4606ec77",
+          "source_cache_sha256": "d10c6c4015bec38a88fc5b41c666fd12f29c095b1d5f9e0c5b3d4aecfbb26f62"
+        },
+        {
+          "occurrence": 27,
+          "empty_open_line_d817": 414,
+          "status": "accepted_restoration",
+          "source_url": "https://medium.com/securitycertcommunity/cve-2026-31900-how-a-permissive-regex-led-to-rce-in-psf-blacks-github-action-50800bafafba",
+          "source_block_index": null,
+          "source_text_sha256": "79bacfd2f4e34db3ce328655a72ebd46f77b09563d38cd026e7268a4bd71bf74",
+          "source_cache_sha256": "d10c6c4015bec38a88fc5b41c666fd12f29c095b1d5f9e0c5b3d4aecfbb26f62"
+        },
+        {
+          "occurrence": 28,
+          "empty_open_line_d817": 447,
+          "status": "accepted_restoration",
+          "source_url": "https://medium.com/securitycertcommunity/cve-2026-31900-how-a-permissive-regex-led-to-rce-in-psf-blacks-github-action-50800bafafba",
+          "source_block_index": null,
+          "source_text_sha256": "37c799c677cad8b4b6b2498d5ecb1f4e19dc64d2162e1ec940027599105b68ec",
+          "source_cache_sha256": "d10c6c4015bec38a88fc5b41c666fd12f29c095b1d5f9e0c5b3d4aecfbb26f62"
+        },
+        {
+          "occurrence": 29,
+          "empty_open_line_d817": 451,
+          "status": "unknown",
+          "reason": "Direct Medium author page opened and aligned to article; 23 blocks accepted from exact direct-page text. Six remaining fences map to narrative-only/summary locations without source code. Original coordinates are d817 lines 183, 195, 239, 245, 506 plus other unresolved position(s); use block-level d817 list in this report. The candidate at d817 line 381 is now accepted (Medium 23rd)."
+        }
+      ]
+    },
+    {
+      "path": "Web安全/CMS内容/WordPress/Wordpress wpdm-premium-packages SQL注入漏洞(CVE-2025-24659).md",
+      "original_empty_count_d817": 9,
+      "accepted_count": 0,
+      "candidate_count": 0,
+      "unknown_count": 9,
+      "summary": "0 restored; 9 unknown.",
+      "attempted_public_urls": [
+        "https://www.freebuf.com/articles/vuls/427747.html",
+        "https://github.com/DoTTak/CVE-2025-24659",
+        "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/wpdm-premium-packages/premium-packages-596-authenticated-administrator-sql-injection",
+        "https://cve.imfht.com/detail/CVE-2025-24659"
+      ],
+      "research_result": "FreeBuf article request returned captcha page; Jina retrieval failed/405. The public DoTTak repo README/PoC were read, but its content does not textually map the article’s 9 local blocks (setup, request/query and surrounding sections); do not substitute the repo PoC wholesale. Wordfence advisory lacks matching article transcript.",
+      "occurrences": [
+        {
+          "occurrence": 1,
+          "empty_open_line_d817": 52,
+          "status": "unknown",
+          "reason": "FreeBuf article request returned captcha page; Jina retrieval failed/405. The public DoTTak repo README/PoC were read, but its content does not textually map the article’s 9 local blocks (setup, request/query and surrounding sections); do not substitute the repo PoC wholesale. Wordfence advisory lacks matching article transcript."
+        },
+        {
+          "occurrence": 2,
+          "empty_open_line_d817": 55,
+          "status": "unknown",
+          "reason": "FreeBuf article request returned captcha page; Jina retrieval failed/405. The public DoTTak repo README/PoC were read, but its content does not textually map the article’s 9 local blocks (setup, request/query and surrounding sections); do not substitute the repo PoC wholesale. Wordfence advisory lacks matching article transcript."
+        },
+        {
+          "occurrence": 3,
+          "empty_open_line_d817": 60,
+          "status": "unknown",
+          "reason": "FreeBuf article request returned captcha page; Jina retrieval failed/405. The public DoTTak repo README/PoC were read, but its content does not textually map the article’s 9 local blocks (setup, request/query and surrounding sections); do not substitute the repo PoC wholesale. Wordfence advisory lacks matching article transcript."
+        },
+        {
+          "occurrence": 4,
+          "empty_open_line_d817": 64,
+          "status": "unknown",
+          "reason": "FreeBuf article request returned captcha page; Jina retrieval failed/405. The public DoTTak repo README/PoC were read, but its content does not textually map the article’s 9 local blocks (setup, request/query and surrounding sections); do not substitute the repo PoC wholesale. Wordfence advisory lacks matching article transcript."
+        },
+        {
+          "occurrence": 5,
+          "empty_open_line_d817": 84,
+          "status": "unknown",
+          "reason": "FreeBuf article request returned captcha page; Jina retrieval failed/405. The public DoTTak repo README/PoC were read, but its content does not textually map the article’s 9 local blocks (setup, request/query and surrounding sections); do not substitute the repo PoC wholesale. Wordfence advisory lacks matching article transcript."
+        },
+        {
+          "occurrence": 6,
+          "empty_open_line_d817": 96,
+          "status": "unknown",
+          "reason": "FreeBuf article request returned captcha page; Jina retrieval failed/405. The public DoTTak repo README/PoC were read, but its content does not textually map the article’s 9 local blocks (setup, request/query and surrounding sections); do not substitute the repo PoC wholesale. Wordfence advisory lacks matching article transcript."
+        },
+        {
+          "occurrence": 7,
+          "empty_open_line_d817": 115,
+          "status": "unknown",
+          "reason": "FreeBuf article request returned captcha page; Jina retrieval failed/405. The public DoTTak repo README/PoC were read, but its content does not textually map the article’s 9 local blocks (setup, request/query and surrounding sections); do not substitute the repo PoC wholesale. Wordfence advisory lacks matching article transcript."
+        },
+        {
+          "occurrence": 8,
+          "empty_open_line_d817": 121,
+          "status": "unknown",
+          "reason": "FreeBuf article request returned captcha page; Jina retrieval failed/405. The public DoTTak repo README/PoC were read, but its content does not textually map the article’s 9 local blocks (setup, request/query and surrounding sections); do not substitute the repo PoC wholesale. Wordfence advisory lacks matching article transcript."
+        },
+        {
+          "occurrence": 9,
+          "empty_open_line_d817": 125,
+          "status": "unknown",
+          "reason": "FreeBuf article request returned captcha page; Jina retrieval failed/405. The public DoTTak repo README/PoC were read, but its content does not textually map the article’s 9 local blocks (setup, request/query and surrounding sections); do not substitute the repo PoC wholesale. Wordfence advisory lacks matching article transcript."
+        }
+      ]
+    },
+    {
+      "path": "Web安全/网络设备/Tenda/CVE-2018-18708 TENDA缓冲区溢出漏洞.md",
+      "original_empty_count_d817": 5,
+      "accepted_count": 0,
+      "candidate_count": 0,
+      "unknown_count": 5,
+      "summary": "0 restored; 5 unknown.",
+      "attempted_public_urls": [
+        "https://nvd.nist.gov/vuln/detail/cve-2018-18708",
+        "https://github.com/zsjevilhex/iot/blob/master/route/tenda/tenda-05/Tenda.md",
+        "https://bbs.kanxue.com/thread-282039.htm"
+      ],
+      "research_result": "NVD is readable and describes affected Tenda models. The surfaced GitHub material is by another author/model; the Kanxue result is a D-Link CVE page, not this Tenda article. The original The_Itach1 text was not located; no substitution from similar devices/authors.",
+      "occurrences": [
+        {
+          "occurrence": 1,
+          "empty_open_line_d817": 75,
+          "status": "unknown",
+          "reason": "NVD is readable and describes affected Tenda models. The surfaced GitHub material is by another author/model; the Kanxue result is a D-Link CVE page, not this Tenda article. The original The_Itach1 text was not located; no substitution from similar devices/authors."
+        },
+        {
+          "occurrence": 2,
+          "empty_open_line_d817": 87,
+          "status": "unknown",
+          "reason": "NVD is readable and describes affected Tenda models. The surfaced GitHub material is by another author/model; the Kanxue result is a D-Link CVE page, not this Tenda article. The original The_Itach1 text was not located; no substitution from similar devices/authors."
+        },
+        {
+          "occurrence": 3,
+          "empty_open_line_d817": 142,
+          "status": "unknown",
+          "reason": "NVD is readable and describes affected Tenda models. The surfaced GitHub material is by another author/model; the Kanxue result is a D-Link CVE page, not this Tenda article. The original The_Itach1 text was not located; no substitution from similar devices/authors."
+        },
+        {
+          "occurrence": 4,
+          "empty_open_line_d817": 236,
+          "status": "unknown",
+          "reason": "NVD is readable and describes affected Tenda models. The surfaced GitHub material is by another author/model; the Kanxue result is a D-Link CVE page, not this Tenda article. The original The_Itach1 text was not located; no substitution from similar devices/authors."
+        },
+        {
+          "occurrence": 5,
+          "empty_open_line_d817": 472,
+          "status": "unknown",
+          "reason": "NVD is readable and describes affected Tenda models. The surfaced GitHub material is by another author/model; the Kanxue result is a D-Link CVE page, not this Tenda article. The original The_Itach1 text was not located; no substitution from similar devices/authors."
+        }
+      ]
+    },
+    {
+      "path": "Web安全/开发框架/Spring Boot/SpringDataMongoDBSpEL表达式注入漏洞.md",
+      "original_empty_count_d817": 1,
+      "accepted_count": 0,
+      "candidate_count": 0,
+      "unknown_count": 1,
+      "summary": "0 restored; 1 unknown.",
+      "attempted_public_urls": [
+        "https://www.secrss.com/articles/43813",
+        "https://spring.io/blog/2022/06/20/spring-data-mongodb-spel-expression-injection-vulnerability-cve-2022-22980",
+        "https://www.yuque.com/xiaokp7/ocvun2/dcbhf1pnmuar814k"
+      ],
+      "research_result": "Spring official advisory and secondary summary were read; neither supplies the article’s adjacent “asset mapping” query. Yuque original readability was not confirmed; no exact query text.",
+      "occurrences": [
+        {
+          "occurrence": 1,
+          "empty_open_line_d817": 50,
+          "status": "unknown",
+          "reason": "Spring official advisory and secondary summary were read; neither supplies the article’s adjacent “asset mapping” query. Yuque original readability was not confirmed; no exact query text."
+        }
+      ]
+    },
+    {
+      "path": "Web安全/开发框架/RuoYi/安全通告！RuoYi-AI框架曝任意文件上传漏洞()，可导致服务器沦陷（含POC） CVE-2025-6466.md",
+      "original_empty_count_d817": 3,
+      "accepted_count": 0,
+      "candidate_count": 0,
+      "unknown_count": 3,
+      "summary": "0 restored; 3 unknown.",
+      "attempted_public_urls": [
+        "https://github.com/ageerle/ruoyi-ai/issues/9",
+        "https://github.com/ageerle/ruoyi-ai/commit/4e93ac86d4891c59ecfcd27c051de9b3c5379315",
+        "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-6466",
+        "https://cve.imfht.com/intel/418322",
+        "https://lmboke.com/page/28",
+        "https://lmboke.com/page/29",
+        "https://www.ctfiot.com/269434.html"
+      ],
+      "research_result": "The upstream GitHub issue and patch are public and were read; issue includes vulnerability discussion and multipart PoC, while the patch is code changes. Neither was shown to be the exact missing text in this Chinese article; the WeChat-source index pages list title but not body. A similar CTF repost is not verified as same article. No exact positional mapping, so all three remain unknown.",
+      "occurrences": [
+        {
+          "occurrence": 1,
+          "empty_open_line_d817": 75,
+          "status": "unknown",
+          "reason": "The upstream GitHub issue and patch are public and were read; issue includes vulnerability discussion and multipart PoC, while the patch is code changes. Neither was shown to be the exact missing text in this Chinese article; the WeChat-source index pages list title but not body. A similar CTF repost is not verified as same article. No exact positional mapping, so all three remain unknown."
+        },
+        {
+          "occurrence": 2,
+          "empty_open_line_d817": 87,
+          "status": "unknown",
+          "reason": "The upstream GitHub issue and patch are public and were read; issue includes vulnerability discussion and multipart PoC, while the patch is code changes. Neither was shown to be the exact missing text in this Chinese article; the WeChat-source index pages list title but not body. A similar CTF repost is not verified as same article. No exact positional mapping, so all three remain unknown."
+        },
+        {
+          "occurrence": 3,
+          "empty_open_line_d817": 111,
+          "status": "unknown",
+          "reason": "The upstream GitHub issue and patch are public and were read; issue includes vulnerability discussion and multipart PoC, while the patch is code changes. Neither was shown to be the exact missing text in this Chinese article; the WeChat-source index pages list title but not body. A similar CTF repost is not verified as same article. No exact positional mapping, so all three remain unknown."
+        }
+      ]
+    },
+    {
+      "path": "Web安全/开发框架/Java/CVE-2022-41853 分析：通过 Java 反序列化和远程代码库攻击使用静态函数获取 RCE.md",
+      "original_empty_count_d817": 1,
+      "accepted_count": 0,
+      "candidate_count": 0,
+      "unknown_count": 1,
+      "summary": "0 restored; 1 unknown.",
+      "attempted_public_urls": [
+        "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-41853",
+        "https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=50212#c7",
+        "https://github.com/advisories/GHSA-77xx-rxvh-q682"
+      ],
+      "research_result": "Official CVE, Chromium issue, and GHSA material were read; they provide bug/fix description but not the exact HSQL string referenced by the local “full payload” lead-in.",
+      "occurrences": [
+        {
+          "occurrence": 1,
+          "empty_open_line_d817": 85,
+          "status": "unknown",
+          "reason": "Official CVE, Chromium issue, and GHSA material were read; they provide bug/fix description but not the exact HSQL string referenced by the local “full payload” lead-in."
+        }
+      ]
+    },
+    {
+      "path": "Web安全/开发框架/Spring Boot/SpringBladedict-biz存在SQL注入漏洞.md",
+      "original_empty_count_d817": 1,
+      "accepted_count": 0,
+      "candidate_count": 0,
+      "unknown_count": 1,
+      "summary": "0 restored; 1 unknown (that mirror’s sqlmap fence is itself blank).",
+      "attempted_public_urls": [
+        "https://www.yuque.com/xiaokp7/ocvun2/wpz38hmzaeugpctm",
+        "https://raw.githubusercontent.com/DMW11525708/wiki/main/SpringBlade/SpringBladedict-biz存在SQL注入漏洞.md",
+        "https://github.com/wy876/POC",
+        "https://cn-sec.com/archives/4645196.html"
+      ],
+      "research_result": "Yuque page is password-gated. Public GitHub mirror was opened and its matching sqlmap block is also blank. GitHub repository was not found at the old URL (404); CN-SEC result is similar-topic, not the same source/request. The original empty is confirmed, not recoverable.",
+      "occurrences": [
+        {
+          "occurrence": 1,
+          "empty_open_line_d817": 67,
+          "status": "unknown",
+          "reason": "Yuque page is password-gated. Public GitHub mirror was opened and its matching sqlmap block is also blank. GitHub repository was not found at the old URL (404); CN-SEC result is similar-topic, not the same source/request. The original empty is confirmed, not recoverable."
+        }
+      ]
+    },
+    {
+      "path": "Web安全/网络设备/D-Link/CVE-2018-17066复现（D-Link命令注入漏洞）.md",
+      "original_empty_count_d817": 23,
+      "accepted_count": 16,
+      "candidate_count": 0,
+      "unknown_count": 7,
+      "summary": "16 confirmed restored by parent; 7 unknown/unaccepted.",
+      "attempted_public_urls": [
+        "https://cn-sec.com/archives/2831990.html",
+        "https://bbs.kanxue.com/thread-282039.htm"
+      ],
+      "research_result": "CN-SEC direct rendered mirror was opened; 16 matching text blocks accepted by root after direct review. Cache `/tmp/vulwiki-source-dlink2018-cnsec-excerpts.txt` SHA256 551029486047a63af6aab77c592ba7651e74245974857d408e57253d039e734c; it is excerpt transcription, not raw HTML (shell fetch timed out). One source block (candidate #11 / local occurrence 12, d817 opening line 279) has a trailing backslash in local/source disagreement and is excluded pending exact byte evidence. Six other blanks align only to image or prose/no code; no image was transcribed. Kanxue thread is another author’s post and gates full body behind login; no bypass.",
+      "occurrences": [
+        {
+          "occurrence": 1,
+          "empty_open_line_d817": 68,
+          "status": "unknown",
+          "reason": "Source article position corresponds to screenshot or prose/no code; no image pixels transcribed and no text block to map."
+        },
+        {
+          "occurrence": 2,
+          "empty_open_line_d817": 93,
+          "status": "accepted_restoration",
+          "source_url": "https://cn-sec.com/archives/2831990.html",
+          "source_block_index": null,
+          "source_text_sha256": null,
+          "source_cache_sha256": "551029486047a63af6aab77c592ba7651e74245974857d408e57253d039e734c"
+        },
+        {
+          "occurrence": 3,
+          "empty_open_line_d817": 119,
+          "status": "unknown",
+          "reason": "Source article position corresponds to screenshot or prose/no code; no image pixels transcribed and no text block to map."
+        },
+        {
+          "occurrence": 4,
+          "empty_open_line_d817": 132,
+          "status": "accepted_restoration",
+          "source_url": "https://cn-sec.com/archives/2831990.html",
+          "source_block_index": null,
+          "source_text_sha256": null,
+          "source_cache_sha256": "551029486047a63af6aab77c592ba7651e74245974857d408e57253d039e734c"
+        },
+        {
+          "occurrence": 5,
+          "empty_open_line_d817": 140,
+          "status": "accepted_restoration",
+          "source_url": "https://cn-sec.com/archives/2831990.html",
+          "source_block_index": null,
+          "source_text_sha256": null,
+          "source_cache_sha256": "551029486047a63af6aab77c592ba7651e74245974857d408e57253d039e734c"
+        },
+        {
+          "occurrence": 6,
+          "empty_open_line_d817": 165,
+          "status": "accepted_restoration",
+          "source_url": "https://cn-sec.com/archives/2831990.html",
+          "source_block_index": null,
+          "source_text_sha256": null,
+          "source_cache_sha256": "551029486047a63af6aab77c592ba7651e74245974857d408e57253d039e734c"
+        },
+        {
+          "occurrence": 7,
+          "empty_open_line_d817": 187,
+          "status": "accepted_restoration",
+          "source_url": "https://cn-sec.com/archives/2831990.html",
+          "source_block_index": null,
+          "source_text_sha256": null,
+          "source_cache_sha256": "551029486047a63af6aab77c592ba7651e74245974857d408e57253d039e734c"
+        },
+        {
+          "occurrence": 8,
+          "empty_open_line_d817": 199,
+          "status": "accepted_restoration",
+          "source_url": "https://cn-sec.com/archives/2831990.html",
+          "source_block_index": null,
+          "source_text_sha256": null,
+          "source_cache_sha256": "551029486047a63af6aab77c592ba7651e74245974857d408e57253d039e734c"
+        },
+        {
+          "occurrence": 9,
+          "empty_open_line_d817": 221,
+          "status": "accepted_restoration",
+          "source_url": "https://cn-sec.com/archives/2831990.html",
+          "source_block_index": null,
+          "source_text_sha256": null,
+          "source_cache_sha256": "551029486047a63af6aab77c592ba7651e74245974857d408e57253d039e734c"
+        },
+        {
+          "occurrence": 10,
+          "empty_open_line_d817": 263,
+          "status": "accepted_restoration",
+          "source_url": "https://cn-sec.com/archives/2831990.html",
+          "source_block_index": null,
+          "source_text_sha256": null,
+          "source_cache_sha256": "551029486047a63af6aab77c592ba7651e74245974857d408e57253d039e734c"
+        },
+        {
+          "occurrence": 11,
+          "empty_open_line_d817": 271,
+          "status": "unknown",
+          "reason": "Source article position corresponds to screenshot or prose/no code; no image pixels transcribed and no text block to map."
+        },
+        {
+          "occurrence": 12,
+          "empty_open_line_d817": 279,
+          "status": "accepted_restoration",
+          "source_url": "https://cn-sec.com/archives/2831990.html",
+          "source_block_index": null,
+          "source_text_sha256": null,
+          "source_cache_sha256": "551029486047a63af6aab77c592ba7651e74245974857d408e57253d039e734c",
+          "reason": "Excluded: the proposed source text does not contain the trailing backslash present in local context; exact bytes unsupported."
+        },
+        {
+          "occurrence": 13,
+          "empty_open_line_d817": 289,
+          "status": "accepted_restoration",
+          "source_url": "https://cn-sec.com/archives/2831990.html",
+          "source_block_index": null,
+          "source_text_sha256": null,
+          "source_cache_sha256": "551029486047a63af6aab77c592ba7651e74245974857d408e57253d039e734c"
+        },
+        {
+          "occurrence": 14,
+          "empty_open_line_d817": 301,
+          "status": "accepted_restoration",
+          "source_url": "https://cn-sec.com/archives/2831990.html",
+          "source_block_index": null,
+          "source_text_sha256": null,
+          "source_cache_sha256": "551029486047a63af6aab77c592ba7651e74245974857d408e57253d039e734c"
+        },
+        {
+          "occurrence": 15,
+          "empty_open_line_d817": 316,
+          "status": "accepted_restoration",
+          "source_url": "https://cn-sec.com/archives/2831990.html",
+          "source_block_index": null,
+          "source_text_sha256": null,
+          "source_cache_sha256": "551029486047a63af6aab77c592ba7651e74245974857d408e57253d039e734c"
+        },
+        {
+          "occurrence": 16,
+          "empty_open_line_d817": 327,
+          "status": "unknown",
+          "reason": "Source article position corresponds to screenshot or prose/no code; no image pixels transcribed and no text block to map."
+        },
+        {
+          "occurrence": 17,
+          "empty_open_line_d817": 341,
+          "status": "accepted_restoration",
+          "source_url": "https://cn-sec.com/archives/2831990.html",
+          "source_block_index": null,
+          "source_text_sha256": null,
+          "source_cache_sha256": "551029486047a63af6aab77c592ba7651e74245974857d408e57253d039e734c"
+        },
+        {
+          "occurrence": 18,
+          "empty_open_line_d817": 350,
+          "status": "accepted_restoration",
+          "source_url": "https://cn-sec.com/archives/2831990.html",
+          "source_block_index": null,
+          "source_text_sha256": null,
+          "source_cache_sha256": "551029486047a63af6aab77c592ba7651e74245974857d408e57253d039e734c"
+        },
+        {
+          "occurrence": 19,
+          "empty_open_line_d817": 384,
+          "status": "unknown",
+          "reason": "Source article position corresponds to screenshot or prose/no code; no image pixels transcribed and no text block to map."
+        },
+        {
+          "occurrence": 20,
+          "empty_open_line_d817": 392,
+          "status": "accepted_restoration",
+          "source_url": "https://cn-sec.com/archives/2831990.html",
+          "source_block_index": null,
+          "source_text_sha256": null,
+          "source_cache_sha256": "551029486047a63af6aab77c592ba7651e74245974857d408e57253d039e734c"
+        },
+        {
+          "occurrence": 21,
+          "empty_open_line_d817": 409,
+          "status": "unknown",
+          "reason": "Source article position corresponds to screenshot or prose/no code; no image pixels transcribed and no text block to map."
+        },
+        {
+          "occurrence": 22,
+          "empty_open_line_d817": 418,
+          "status": "accepted_restoration",
+          "source_url": "https://cn-sec.com/archives/2831990.html",
+          "source_block_index": null,
+          "source_text_sha256": null,
+          "source_cache_sha256": "551029486047a63af6aab77c592ba7651e74245974857d408e57253d039e734c"
+        },
+        {
+          "occurrence": 23,
+          "empty_open_line_d817": 427,
+          "status": "unknown",
+          "reason": "Source article position corresponds to screenshot or prose/no code; no image pixels transcribed and no text block to map."
+        }
+      ]
+    },
+    {
+      "path": "Web安全/开发框架/GitLab/GitLab-任意文件读取导致RCE-CVE-2020-10977.md",
+      "original_empty_count_d817": 1,
+      "accepted_count": 1,
+      "candidate_count": 0,
+      "unknown_count": 0,
+      "summary": "1 confirmed restored from original Threekiii Markdown.",
+      "attempted_public_urls": [
+        "https://raw.githubusercontent.com/Threekiii/Vulnerability-Wiki/master/docs-base/docs/webapp/GitLab-任意文件读取导致RCE-CVE-2020-10977.md",
+        "https://github.com/Threekiii/Vulnerability-Wiki"
+      ],
+      "research_result": "Raw original Markdown opened (HTTP 200, 4387 bytes; SHA256 4992f2e90769567f268592e6b6f3cca2f5a0b316a64699b47814cc1da49dc71d). Exact image-path code string matched the local empty fence; accepted.",
+      "occurrences": [
+        {
+          "occurrence": 1,
+          "empty_open_line_d817": 141,
+          "status": "accepted_restoration",
+          "source_url": "https://raw.githubusercontent.com/Threekiii/Vulnerability-Wiki/master/docs-base/docs/webapp/GitLab-任意文件读取导致RCE-CVE-2020-10977.md",
+          "source_block_index": null,
+          "source_text_sha256": "e19f089785af210535eb63b91ffdfd0d87622ab24a56fbd35632b8823f50675d",
+          "source_cache_sha256": "4992f2e90769567f268592e6b6f3cca2f5a0b316a64699b47814cc1da49dc71d"
+        }
+      ]
+    },
+    {
+      "path": "Web安全/CMS内容/WordPress/超高危 Wordpress RCE漏洞 CVE-2024-5932 全网资产 5W+ 附POC.md",
+      "original_empty_count_d817": 1,
+      "accepted_count": 0,
+      "candidate_count": 0,
+      "unknown_count": 1,
+      "summary": "0 restored; 1 unknown (public original repository has no matching source code at this exact position).",
+      "attempted_public_urls": [
+        "https://github.com/EQSTLab/CVE-2024-5932",
+        "https://lms.eqst.co.kr/home/brd/bbs/viewAtclMain?atclSn=1057&bbsCd=INSIGHT&langCd=en&mcd=MC00000081"
+      ],
+      "research_result": "EQST GitHub repository opened directly; README setup contains docker-compose, download and `docker cp`, then proceeds to plugin activation and screenshots, with no next code block matching the local blank fence after `docker cp`. The empty is positioned before screenshot, so remains unknown rather than guessed. EQST page is public, but article transcript not obtained.",
+      "occurrences": [
+        {
+          "occurrence": 1,
+          "empty_open_line_d817": 94,
+          "status": "unknown",
+          "reason": "EQST GitHub repository opened directly; README setup contains docker-compose, download and `docker cp`, then proceeds to plugin activation and screenshots, with no next code block matching the local blank fence after `docker cp`. The empty is positioned before screenshot, so remains unknown rather than guessed. EQST page is public, but article transcript not obtained."
+        }
+      ]
+    },
+    {
+      "path": "Web安全/网络设备/NETGEAR/美国网件Netgear RAX30路由器RCE漏洞分析.md",
+      "original_empty_count_d817": 4,
+      "accepted_count": 0,
+      "candidate_count": 0,
+      "unknown_count": 4,
+      "summary": "0 restored; 4 unknown.",
+      "attempted_public_urls": [
+        "https://www.ctfiot.com/103003.html"
+      ],
+      "research_result": "Same-title Chinese repost attributed to ShanShi is readable, but several sections are image placeholders. Four local blank fences could not be aligned to continuous exact text; images not pixel-transcribed.",
+      "occurrences": [
+        {
+          "occurrence": 1,
+          "empty_open_line_d817": 107,
+          "status": "unknown",
+          "reason": "Same-title Chinese repost attributed to ShanShi is readable, but several sections are image placeholders. Four local blank fences could not be aligned to continuous exact text; images not pixel-transcribed."
+        },
+        {
+          "occurrence": 2,
+          "empty_open_line_d817": 122,
+          "status": "unknown",
+          "reason": "Same-title Chinese repost attributed to ShanShi is readable, but several sections are image placeholders. Four local blank fences could not be aligned to continuous exact text; images not pixel-transcribed."
+        },
+        {
+          "occurrence": 3,
+          "empty_open_line_d817": 144,
+          "status": "unknown",
+          "reason": "Same-title Chinese repost attributed to ShanShi is readable, but several sections are image placeholders. Four local blank fences could not be aligned to continuous exact text; images not pixel-transcribed."
+        },
+        {
+          "occurrence": 4,
+          "empty_open_line_d817": 152,
+          "status": "unknown",
+          "reason": "Same-title Chinese repost attributed to ShanShi is readable, but several sections are image placeholders. Four local blank fences could not be aligned to continuous exact text; images not pixel-transcribed."
+        }
+      ]
+    },
+    {
+      "path": "Web安全/安全设备/Sophos/Sophos Intercept X for Windows 支持任意代码执行漏洞.md",
+      "original_empty_count_d817": 1,
+      "accepted_count": 0,
+      "candidate_count": 0,
+      "unknown_count": 1,
+      "summary": "0 restored; 1 unknown.",
+      "attempted_public_urls": [
+        "https://www.sophos.com/en-us/security-advisories/sophos-sa-20250717-cix-lpe",
+        "https://www.cyberpress.org/sophos-intercept-x-for-windows/"
+      ],
+      "research_result": "Vendor advisory and public report support the CVE/impact but do not include the local article’s reproduction code.",
+      "occurrences": [
+        {
+          "occurrence": 1,
+          "empty_open_line_d817": 58,
+          "status": "unknown",
+          "reason": "Vendor advisory and public report support the CVE/impact but do not include the local article’s reproduction code."
+        }
+      ]
+    },
+    {
+      "path": "Web安全/网络设备/NetMizer/NetMizer dologin.php sql注入漏洞(XVE-2024-37672).md",
+      "original_empty_count_d817": 1,
+      "accepted_count": 0,
+      "candidate_count": 0,
+      "unknown_count": 1,
+      "summary": "0 restored; 1 confirmed originally empty in same-author PoC repo.",
+      "attempted_public_urls": [
+        "https://raw.githubusercontent.com/SourByte05/Vulnerability-Wiki-PoC/main/2025/NetMizer%20dologin.php%20sql%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%28XVE-2024-37672%29/NetMizer%20dologin.php%20sql%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%28XVE-2024-37672%29.md",
+        "https://github.com/SourByte05/Vulnerability-Wiki-PoC"
+      ],
+      "research_result": "Direct raw matching same-title article read; cache `/tmp/vulwiki-ext-sourbyte_netmizer.txt` SHA256 a659a5d51c4e38e0417839fb6511c0850e668ffb716e87e02bc7a7b179458189. Source itself has the matching empty fence after the screenshots; no replacement.",
+      "occurrences": [
+        {
+          "occurrence": 1,
+          "empty_open_line_d817": 102,
+          "status": "unknown",
+          "reason": "Direct raw matching same-title article read; cache `/tmp/vulwiki-ext-sourbyte_netmizer.txt` SHA256 a659a5d51c4e38e0417839fb6511c0850e668ffb716e87e02bc7a7b179458189. Source itself has the matching empty fence after the screenshots; no replacement."
+        }
+      ]
+    },
+    {
+      "path": "Web安全/开发框架/lodash/lodash库原型污染漏洞（CVE-2019-10744）.md",
+      "original_empty_count_d817": 3,
+      "accepted_count": 0,
+      "candidate_count": 0,
+      "unknown_count": 3,
+      "summary": "2 exact source blocks accepted/candidate in source-review package; 1 unknown.",
+      "attempted_public_urls": [
+        "https://cn-sec.com/archives/5221673.html",
+        "https://zone.ci/secarticles/wx/529499.html",
+        "https://raw.githubusercontent.com/lodash/lodash/4.17.10/lodash.js",
+        "https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.js"
+      ],
+      "research_result": "Readable NoteSec-attributed mirror provides two blocks aligned with local description and matching source; minified/unminified v4.17.10 files read and hash-checked. First local block’s complete original source not obtained. Do not use search snippets for exact text.",
+      "occurrences": [
+        {
+          "occurrence": 1,
+          "empty_open_line_d817": 50,
+          "status": "unknown",
+          "reason": "Readable NoteSec-attributed mirror provides two blocks aligned with local description and matching source; minified/unminified v4.17.10 files read and hash-checked. First local block’s complete original source not obtained. Do not use search snippets for exact text."
+        },
+        {
+          "occurrence": 2,
+          "empty_open_line_d817": 100,
+          "status": "unknown",
+          "reason": "Readable NoteSec-attributed mirror provides two blocks aligned with local description and matching source; minified/unminified v4.17.10 files read and hash-checked. First local block’s complete original source not obtained. Do not use search snippets for exact text."
+        },
+        {
+          "occurrence": 3,
+          "empty_open_line_d817": 108,
+          "status": "unknown",
+          "reason": "Readable NoteSec-attributed mirror provides two blocks aligned with local description and matching source; minified/unminified v4.17.10 files read and hash-checked. First local block’s complete original source not obtained. Do not use search snippets for exact text."
+        }
+      ]
+    },
+    {
+      "path": "Web安全/网络设备/Cisco/CVE-2026-0866 Cisco ClamAV ZIP扫描引擎绕过漏洞.md",
+      "original_empty_count_d817": 23,
+      "accepted_count": 0,
+      "candidate_count": 0,
+      "unknown_count": 23,
+      "summary": "0 restored; 23 unknown.",
+      "attempted_public_urls": [
+        "https://vuldb.com/cve/CVE-2026-0866",
+        "https://cn-sec.com/archives/5090966.html",
+        "https://www.cert.org.cn/publish/main/8/2026/2026_3_17_10_7_402431.html",
+        "https://labs.cloudsecurityalliance.org/wp-content/uploads/2026/03/CSA_research_note_zombie_zip_archive_evasion_av_bypass_20260312-csa-styled.pdf"
+      ],
+      "research_result": "CN-SEC original URL was attempted but inaccessible. Public CVE search, CERT advisory and CSA paper were opened/read for the Zombie ZIP topic; they discuss the technique/advisory rather than the local 23 install/test/protection command blocks, and do not provide an exact matching article transcript. No original author attribution or exact code mapping established.",
+      "occurrences": [
+        {
+          "occurrence": 1,
+          "empty_open_line_d817": 75,
+          "status": "unknown",
+          "reason": "CN-SEC original URL was attempted but inaccessible. Public CVE search, CERT advisory and CSA paper were opened/read for the Zombie ZIP topic; they discuss the technique/advisory rather than the local 23 install/test/protection command blocks, and do not provide an exact matching article transcript. No original author attribution or exact code mapping established."
+        },
+        {
+          "occurrence": 2,
+          "empty_open_line_d817": 79,
+          "status": "unknown",
+          "reason": "CN-SEC original URL was attempted but inaccessible. Public CVE search, CERT advisory and CSA paper were opened/read for the Zombie ZIP topic; they discuss the technique/advisory rather than the local 23 install/test/protection command blocks, and do not provide an exact matching article transcript. No original author attribution or exact code mapping established."
+        },
+        {
+          "occurrence": 3,
+          "empty_open_line_d817": 83,
+          "status": "unknown",
+          "reason": "CN-SEC original URL was attempted but inaccessible. Public CVE search, CERT advisory and CSA paper were opened/read for the Zombie ZIP topic; they discuss the technique/advisory rather than the local 23 install/test/protection command blocks, and do not provide an exact matching article transcript. No original author attribution or exact code mapping established."
+        },
+        {
+          "occurrence": 4,
+          "empty_open_line_d817": 87,
+          "status": "unknown",
+          "reason": "CN-SEC original URL was attempted but inaccessible. Public CVE search, CERT advisory and CSA paper were opened/read for the Zombie ZIP topic; they discuss the technique/advisory rather than the local 23 install/test/protection command blocks, and do not provide an exact matching article transcript. No original author attribution or exact code mapping established."
+        },
+        {
+          "occurrence": 5,
+          "empty_open_line_d817": 134,
+          "status": "unknown",
+          "reason": "CN-SEC original URL was attempted but inaccessible. Public CVE search, CERT advisory and CSA paper were opened/read for the Zombie ZIP topic; they discuss the technique/advisory rather than the local 23 install/test/protection command blocks, and do not provide an exact matching article transcript. No original author attribution or exact code mapping established."
+        },
+        {
+          "occurrence": 6,
+          "empty_open_line_d817": 139,
+          "status": "unknown",
+          "reason": "CN-SEC original URL was attempted but inaccessible. Public CVE search, CERT advisory and CSA paper were opened/read for the Zombie ZIP topic; they discuss the technique/advisory rather than the local 23 install/test/protection command blocks, and do not provide an exact matching article transcript. No original author attribution or exact code mapping established."
+        },
+        {
+          "occurrence": 7,
+          "empty_open_line_d817": 144,
+          "status": "unknown",
+          "reason": "CN-SEC original URL was attempted but inaccessible. Public CVE search, CERT advisory and CSA paper were opened/read for the Zombie ZIP topic; they discuss the technique/advisory rather than the local 23 install/test/protection command blocks, and do not provide an exact matching article transcript. No original author attribution or exact code mapping established."
+        },
+        {
+          "occurrence": 8,
+          "empty_open_line_d817": 146,
+          "status": "unknown",
+          "reason": "CN-SEC original URL was attempted but inaccessible. Public CVE search, CERT advisory and CSA paper were opened/read for the Zombie ZIP topic; they discuss the technique/advisory rather than the local 23 install/test/protection command blocks, and do not provide an exact matching article transcript. No original author attribution or exact code mapping established."
+        },
+        {
+          "occurrence": 9,
+          "empty_open_line_d817": 151,
+          "status": "unknown",
+          "reason": "CN-SEC original URL was attempted but inaccessible. Public CVE search, CERT advisory and CSA paper were opened/read for the Zombie ZIP topic; they discuss the technique/advisory rather than the local 23 install/test/protection command blocks, and do not provide an exact matching article transcript. No original author attribution or exact code mapping established."
+        },
+        {
+          "occurrence": 10,
+          "empty_open_line_d817": 156,
+          "status": "unknown",
+          "reason": "CN-SEC original URL was attempted but inaccessible. Public CVE search, CERT advisory and CSA paper were opened/read for the Zombie ZIP topic; they discuss the technique/advisory rather than the local 23 install/test/protection command blocks, and do not provide an exact matching article transcript. No original author attribution or exact code mapping established."
+        },
+        {
+          "occurrence": 11,
+          "empty_open_line_d817": 168,
+          "status": "unknown",
+          "reason": "CN-SEC original URL was attempted but inaccessible. Public CVE search, CERT advisory and CSA paper were opened/read for the Zombie ZIP topic; they discuss the technique/advisory rather than the local 23 install/test/protection command blocks, and do not provide an exact matching article transcript. No original author attribution or exact code mapping established."
+        },
+        {
+          "occurrence": 12,
+          "empty_open_line_d817": 172,
+          "status": "unknown",
+          "reason": "CN-SEC original URL was attempted but inaccessible. Public CVE search, CERT advisory and CSA paper were opened/read for the Zombie ZIP topic; they discuss the technique/advisory rather than the local 23 install/test/protection command blocks, and do not provide an exact matching article transcript. No original author attribution or exact code mapping established."
+        },
+        {
+          "occurrence": 13,
+          "empty_open_line_d817": 177,
+          "status": "unknown",
+          "reason": "CN-SEC original URL was attempted but inaccessible. Public CVE search, CERT advisory and CSA paper were opened/read for the Zombie ZIP topic; they discuss the technique/advisory rather than the local 23 install/test/protection command blocks, and do not provide an exact matching article transcript. No original author attribution or exact code mapping established."
+        },
+        {
+          "occurrence": 14,
+          "empty_open_line_d817": 181,
+          "status": "unknown",
+          "reason": "CN-SEC original URL was attempted but inaccessible. Public CVE search, CERT advisory and CSA paper were opened/read for the Zombie ZIP topic; they discuss the technique/advisory rather than the local 23 install/test/protection command blocks, and do not provide an exact matching article transcript. No original author attribution or exact code mapping established."
+        },
+        {
+          "occurrence": 15,
+          "empty_open_line_d817": 186,
+          "status": "unknown",
+          "reason": "CN-SEC original URL was attempted but inaccessible. Public CVE search, CERT advisory and CSA paper were opened/read for the Zombie ZIP topic; they discuss the technique/advisory rather than the local 23 install/test/protection command blocks, and do not provide an exact matching article transcript. No original author attribution or exact code mapping established."
+        },
+        {
+          "occurrence": 16,
+          "empty_open_line_d817": 192,
+          "status": "unknown",
+          "reason": "CN-SEC original URL was attempted but inaccessible. Public CVE search, CERT advisory and CSA paper were opened/read for the Zombie ZIP topic; they discuss the technique/advisory rather than the local 23 install/test/protection command blocks, and do not provide an exact matching article transcript. No original author attribution or exact code mapping established."
+        },
+        {
+          "occurrence": 17,
+          "empty_open_line_d817": 197,
+          "status": "unknown",
+          "reason": "CN-SEC original URL was attempted but inaccessible. Public CVE search, CERT advisory and CSA paper were opened/read for the Zombie ZIP topic; they discuss the technique/advisory rather than the local 23 install/test/protection command blocks, and do not provide an exact matching article transcript. No original author attribution or exact code mapping established."
+        },
+        {
+          "occurrence": 18,
+          "empty_open_line_d817": 202,
+          "status": "unknown",
+          "reason": "CN-SEC original URL was attempted but inaccessible. Public CVE search, CERT advisory and CSA paper were opened/read for the Zombie ZIP topic; they discuss the technique/advisory rather than the local 23 install/test/protection command blocks, and do not provide an exact matching article transcript. No original author attribution or exact code mapping established."
+        },
+        {
+          "occurrence": 19,
+          "empty_open_line_d817": 210,
+          "status": "unknown",
+          "reason": "CN-SEC original URL was attempted but inaccessible. Public CVE search, CERT advisory and CSA paper were opened/read for the Zombie ZIP topic; they discuss the technique/advisory rather than the local 23 install/test/protection command blocks, and do not provide an exact matching article transcript. No original author attribution or exact code mapping established."
+        },
+        {
+          "occurrence": 20,
+          "empty_open_line_d817": 215,
+          "status": "unknown",
+          "reason": "CN-SEC original URL was attempted but inaccessible. Public CVE search, CERT advisory and CSA paper were opened/read for the Zombie ZIP topic; they discuss the technique/advisory rather than the local 23 install/test/protection command blocks, and do not provide an exact matching article transcript. No original author attribution or exact code mapping established."
+        },
+        {
+          "occurrence": 21,
+          "empty_open_line_d817": 220,
+          "status": "unknown",
+          "reason": "CN-SEC original URL was attempted but inaccessible. Public CVE search, CERT advisory and CSA paper were opened/read for the Zombie ZIP topic; they discuss the technique/advisory rather than the local 23 install/test/protection command blocks, and do not provide an exact matching article transcript. No original author attribution or exact code mapping established."
+        },
+        {
+          "occurrence": 22,
+          "empty_open_line_d817": 225,
+          "status": "unknown",
+          "reason": "CN-SEC original URL was attempted but inaccessible. Public CVE search, CERT advisory and CSA paper were opened/read for the Zombie ZIP topic; they discuss the technique/advisory rather than the local 23 install/test/protection command blocks, and do not provide an exact matching article transcript. No original author attribution or exact code mapping established."
+        },
+        {
+          "occurrence": 23,
+          "empty_open_line_d817": 230,
+          "status": "unknown",
+          "reason": "CN-SEC original URL was attempted but inaccessible. Public CVE search, CERT advisory and CSA paper were opened/read for the Zombie ZIP topic; they discuss the technique/advisory rather than the local 23 install/test/protection command blocks, and do not provide an exact matching article transcript. No original author attribution or exact code mapping established."
+        }
+      ]
+    },
+    {
+      "path": "Web安全/网络设备/DrayTek/Vigor3900 CVE-2021-43118 命令注入漏洞分析.md",
+      "original_empty_count_d817": 24,
+      "accepted_count": 24,
+      "candidate_count": 0,
+      "unknown_count": 0,
+      "summary": "24 confirmed restored from readable same-title repost after parser validation.",
+      "attempted_public_urls": [
+        "https://www.ctfiot.com/199797.html",
+        "https://bbs.kanxue.com/thread-282750.htm"
+      ],
+      "research_result": "Same-title repost readable; HTML parser preserved `<br>` newlines and all 24 blocks were independently verified with zero text differences. Original Kanxue post requires login/verification. Static restoration only.",
+      "occurrences": [
+        {
+          "occurrence": 1,
+          "empty_open_line_d817": 63,
+          "status": "accepted_restoration",
+          "source_url": "https://www.ctfiot.com/199797.html",
+          "source_block_index": 0,
+          "source_text_sha256": "eadcb97d9bf1e4292c34784da5f4731753da9656b65becc67676f0c7921c8ff4",
+          "source_cache_sha256": "55b05786141300bd0b70a1f02deef46e59612e6f0a0126d0da2a6ee5f62e08af"
+        },
+        {
+          "occurrence": 2,
+          "empty_open_line_d817": 83,
+          "status": "accepted_restoration",
+          "source_url": "https://www.ctfiot.com/199797.html",
+          "source_block_index": 1,
+          "source_text_sha256": "c4c00816de8603e6a636f64f12596c82865bea6744f7429ef2bd10f874647abb",
+          "source_cache_sha256": "55b05786141300bd0b70a1f02deef46e59612e6f0a0126d0da2a6ee5f62e08af"
+        },
+        {
+          "occurrence": 3,
+          "empty_open_line_d817": 129,
+          "status": "accepted_restoration",
+          "source_url": "https://www.ctfiot.com/199797.html",
+          "source_block_index": 2,
+          "source_text_sha256": "28735d377b6ff17674a236de6d9f2fc11dee2670d7f0dc1402cc21cd52debe1c",
+          "source_cache_sha256": "55b05786141300bd0b70a1f02deef46e59612e6f0a0126d0da2a6ee5f62e08af"
+        },
+        {
+          "occurrence": 4,
+          "empty_open_line_d817": 137,
+          "status": "accepted_restoration",
+          "source_url": "https://www.ctfiot.com/199797.html",
+          "source_block_index": 3,
+          "source_text_sha256": "bffee17dd6ac922bdbd13fd32a70c88086651ac34c6119d352d60fa8f5a624fc",
+          "source_cache_sha256": "55b05786141300bd0b70a1f02deef46e59612e6f0a0126d0da2a6ee5f62e08af"
+        },
+        {
+          "occurrence": 5,
+          "empty_open_line_d817": 149,
+          "status": "accepted_restoration",
+          "source_url": "https://www.ctfiot.com/199797.html",
+          "source_block_index": 4,
+          "source_text_sha256": "34126d3fb3a19484caff88c7bc438573c2ec937b49c8dc10da46c374e259c749",
+          "source_cache_sha256": "55b05786141300bd0b70a1f02deef46e59612e6f0a0126d0da2a6ee5f62e08af"
+        },
+        {
+          "occurrence": 6,
+          "empty_open_line_d817": 194,
+          "status": "accepted_restoration",
+          "source_url": "https://www.ctfiot.com/199797.html",
+          "source_block_index": 5,
+          "source_text_sha256": "612aecacfaac6e76d8b26ada789698d92fa6dcec45bb97b1f0054f6cc8657757",
+          "source_cache_sha256": "55b05786141300bd0b70a1f02deef46e59612e6f0a0126d0da2a6ee5f62e08af"
+        },
+        {
+          "occurrence": 7,
+          "empty_open_line_d817": 205,
+          "status": "accepted_restoration",
+          "source_url": "https://www.ctfiot.com/199797.html",
+          "source_block_index": 6,
+          "source_text_sha256": "36f5a6d109871a7f4c728190abc8c047e0e88927134402ef117f1271f7c9aef7",
+          "source_cache_sha256": "55b05786141300bd0b70a1f02deef46e59612e6f0a0126d0da2a6ee5f62e08af"
+        },
+        {
+          "occurrence": 8,
+          "empty_open_line_d817": 236,
+          "status": "accepted_restoration",
+          "source_url": "https://www.ctfiot.com/199797.html",
+          "source_block_index": 7,
+          "source_text_sha256": "fcfe4c51451be7c4318471b932a3d5eb5bf039fce5403eacbb7d07dc34e54c74",
+          "source_cache_sha256": "55b05786141300bd0b70a1f02deef46e59612e6f0a0126d0da2a6ee5f62e08af"
+        },
+        {
+          "occurrence": 9,
+          "empty_open_line_d817": 243,
+          "status": "accepted_restoration",
+          "source_url": "https://www.ctfiot.com/199797.html",
+          "source_block_index": 8,
+          "source_text_sha256": "8af2103146ed083e074d84eb315785d130084d4750a5e4343c53b9a9eba881e5",
+          "source_cache_sha256": "55b05786141300bd0b70a1f02deef46e59612e6f0a0126d0da2a6ee5f62e08af"
+        },
+        {
+          "occurrence": 10,
+          "empty_open_line_d817": 268,
+          "status": "accepted_restoration",
+          "source_url": "https://www.ctfiot.com/199797.html",
+          "source_block_index": 9,
+          "source_text_sha256": "2761f64860b366f480ba9f6ae883a345ebf62394be29e4cc5b42d87ab58899e0",
+          "source_cache_sha256": "55b05786141300bd0b70a1f02deef46e59612e6f0a0126d0da2a6ee5f62e08af"
+        },
+        {
+          "occurrence": 11,
+          "empty_open_line_d817": 278,
+          "status": "accepted_restoration",
+          "source_url": "https://www.ctfiot.com/199797.html",
+          "source_block_index": 10,
+          "source_text_sha256": "0d8dcea13b5fb4c64c50a3543452d0fa768c5e81b6414337f1f0ba5761ec734c",
+          "source_cache_sha256": "55b05786141300bd0b70a1f02deef46e59612e6f0a0126d0da2a6ee5f62e08af"
+        },
+        {
+          "occurrence": 12,
+          "empty_open_line_d817": 288,
+          "status": "accepted_restoration",
+          "source_url": "https://www.ctfiot.com/199797.html",
+          "source_block_index": 11,
+          "source_text_sha256": "e92fb9241c6cdb068957db1872727006e9caaf2e7160e7e152864c09335154bd",
+          "source_cache_sha256": "55b05786141300bd0b70a1f02deef46e59612e6f0a0126d0da2a6ee5f62e08af"
+        },
+        {
+          "occurrence": 13,
+          "empty_open_line_d817": 296,
+          "status": "accepted_restoration",
+          "source_url": "https://www.ctfiot.com/199797.html",
+          "source_block_index": null,
+          "source_text_sha256": "8f8181b5c7b87dfcd6e9fdec118527116d4b9b89fb43ea521cb22eddddec1af4",
+          "source_cache_sha256": "aeb18e1045781e102558627b01554a218d57d32b19b8dc7fbe5b9b69e9787607"
+        },
+        {
+          "occurrence": 14,
+          "empty_open_line_d817": 304,
+          "status": "accepted_restoration",
+          "source_url": "https://www.ctfiot.com/199797.html",
+          "source_block_index": 13,
+          "source_text_sha256": "b04a9364def7ee6ce3157057016fc1a6d312d8bb622ca9c3d8a9647669b3f58c",
+          "source_cache_sha256": "55b05786141300bd0b70a1f02deef46e59612e6f0a0126d0da2a6ee5f62e08af"
+        },
+        {
+          "occurrence": 15,
+          "empty_open_line_d817": 312,
+          "status": "accepted_restoration",
+          "source_url": "https://www.ctfiot.com/199797.html",
+          "source_block_index": 14,
+          "source_text_sha256": "0cb5c425f1053ae86ad95cbb8cc77688505b95b08be0d00ba28fba0005027ece",
+          "source_cache_sha256": "55b05786141300bd0b70a1f02deef46e59612e6f0a0126d0da2a6ee5f62e08af"
+        },
+        {
+          "occurrence": 16,
+          "empty_open_line_d817": 320,
+          "status": "accepted_restoration",
+          "source_url": "https://www.ctfiot.com/199797.html",
+          "source_block_index": 15,
+          "source_text_sha256": "65c8ee392f88f7c95ed96383b798b973d39320fd91ce587fe68707a630eee6ff",
+          "source_cache_sha256": "55b05786141300bd0b70a1f02deef46e59612e6f0a0126d0da2a6ee5f62e08af"
+        },
+        {
+          "occurrence": 17,
+          "empty_open_line_d817": 324,
+          "status": "accepted_restoration",
+          "source_url": "https://www.ctfiot.com/199797.html",
+          "source_block_index": 16,
+          "source_text_sha256": "5711a85c293880f26c3c0b598389dbad03668c6a3dd78ffb1cf4d21162d69499",
+          "source_cache_sha256": "55b05786141300bd0b70a1f02deef46e59612e6f0a0126d0da2a6ee5f62e08af"
+        },
+        {
+          "occurrence": 18,
+          "empty_open_line_d817": 332,
+          "status": "accepted_restoration",
+          "source_url": "https://www.ctfiot.com/199797.html",
+          "source_block_index": 17,
+          "source_text_sha256": "0c6fec606dc1b53235e9cbf52f7a323b56d85ff26da40c56fa76c60e9eeaa76b",
+          "source_cache_sha256": "55b05786141300bd0b70a1f02deef46e59612e6f0a0126d0da2a6ee5f62e08af"
+        },
+        {
+          "occurrence": 19,
+          "empty_open_line_d817": 402,
+          "status": "accepted_restoration",
+          "source_url": "https://www.ctfiot.com/199797.html",
+          "source_block_index": 18,
+          "source_text_sha256": "5b37edf2366911545f17de367bfb2ba703153b9cd56f0c601a8e9637d46809dc",
+          "source_cache_sha256": "55b05786141300bd0b70a1f02deef46e59612e6f0a0126d0da2a6ee5f62e08af"
+        },
+        {
+          "occurrence": 20,
+          "empty_open_line_d817": 419,
+          "status": "accepted_restoration",
+          "source_url": "https://www.ctfiot.com/199797.html",
+          "source_block_index": 19,
+          "source_text_sha256": "2fc3ed9ffb43e0e2ebbd188b79c5c7c8a6592bbeca869d9292a3a55ea0bdc187",
+          "source_cache_sha256": "55b05786141300bd0b70a1f02deef46e59612e6f0a0126d0da2a6ee5f62e08af"
+        },
+        {
+          "occurrence": 21,
+          "empty_open_line_d817": 434,
+          "status": "accepted_restoration",
+          "source_url": "https://www.ctfiot.com/199797.html",
+          "source_block_index": 20,
+          "source_text_sha256": "7d44304ccba3bbdeda616097cde9ded97dcc1199970251b67fe33f90833c4ac5",
+          "source_cache_sha256": "55b05786141300bd0b70a1f02deef46e59612e6f0a0126d0da2a6ee5f62e08af"
+        },
+        {
+          "occurrence": 22,
+          "empty_open_line_d817": 442,
+          "status": "accepted_restoration",
+          "source_url": "https://www.ctfiot.com/199797.html",
+          "source_block_index": null,
+          "source_text_sha256": "7786a6136e2c6d9d51dbbe5acdf6991ef04c4b71faa4efdb27730777021f04b2",
+          "source_cache_sha256": "aeb18e1045781e102558627b01554a218d57d32b19b8dc7fbe5b9b69e9787607"
+        },
+        {
+          "occurrence": 23,
+          "empty_open_line_d817": 458,
+          "status": "accepted_restoration",
+          "source_url": "https://www.ctfiot.com/199797.html",
+          "source_block_index": 22,
+          "source_text_sha256": "6eb9c388828aaed7743ebe413daa08afb4c69201b63e02f5835616bcecf9475f",
+          "source_cache_sha256": "55b05786141300bd0b70a1f02deef46e59612e6f0a0126d0da2a6ee5f62e08af"
+        },
+        {
+          "occurrence": 24,
+          "empty_open_line_d817": 469,
+          "status": "accepted_restoration",
+          "source_url": "https://www.ctfiot.com/199797.html",
+          "source_block_index": 23,
+          "source_text_sha256": "42084a73702a197c550aff3fbab93906285b40cc601d69f68f0f8c2fa6f1b720",
+          "source_cache_sha256": "55b05786141300bd0b70a1f02deef46e59612e6f0a0126d0da2a6ee5f62e08af"
+        }
+      ]
+    },
+    {
+      "path": "Web安全/CMS内容/Grav CMS/Grav CMS 组合拳漏洞 CVE-2026-42613&CVE-2026-42607复现&研究.md",
+      "original_empty_count_d817": 5,
+      "accepted_count": 0,
+      "candidate_count": 0,
+      "unknown_count": 5,
+      "summary": "0 restored; 5 unknown.",
+      "attempted_public_urls": [
+        "https://github.com/getgrav/grav/security/advisories/GHSA-w48r-jppp-rcfw",
+        "https://github.com/Kai-One001/cve-/blob/main/Grav_CMS_login_CVE-2026-42613.py",
+        "https://github.com/Kai-One001/cve-/blob/main/Grav_CMS_RCE_CVE-2026-42607.py"
+      ],
+      "research_result": "GitHub advisory and Kai-One001 repository paths/tree and linked scripts were opened/downloaded; scripts are later standalone code and do not provide the five local article blocks in matching order/context. Advisory confirms vulnerability but not article transcript.",
+      "occurrences": [
+        {
+          "occurrence": 1,
+          "empty_open_line_d817": 65,
+          "status": "unknown",
+          "reason": "GitHub advisory and Kai-One001 repository paths/tree and linked scripts were opened/downloaded; scripts are later standalone code and do not provide the five local article blocks in matching order/context. Advisory confirms vulnerability but not article transcript."
+        },
+        {
+          "occurrence": 2,
+          "empty_open_line_d817": 67,
+          "status": "unknown",
+          "reason": "GitHub advisory and Kai-One001 repository paths/tree and linked scripts were opened/downloaded; scripts are later standalone code and do not provide the five local article blocks in matching order/context. Advisory confirms vulnerability but not article transcript."
+        },
+        {
+          "occurrence": 3,
+          "empty_open_line_d817": 69,
+          "status": "unknown",
+          "reason": "GitHub advisory and Kai-One001 repository paths/tree and linked scripts were opened/downloaded; scripts are later standalone code and do not provide the five local article blocks in matching order/context. Advisory confirms vulnerability but not article transcript."
+        },
+        {
+          "occurrence": 4,
+          "empty_open_line_d817": 71,
+          "status": "unknown",
+          "reason": "GitHub advisory and Kai-One001 repository paths/tree and linked scripts were opened/downloaded; scripts are later standalone code and do not provide the five local article blocks in matching order/context. Advisory confirms vulnerability but not article transcript."
+        },
+        {
+          "occurrence": 5,
+          "empty_open_line_d817": 73,
+          "status": "unknown",
+          "reason": "GitHub advisory and Kai-One001 repository paths/tree and linked scripts were opened/downloaded; scripts are later standalone code and do not provide the five local article blocks in matching order/context. Advisory confirms vulnerability but not article transcript."
+        }
+      ]
+    },
+    {
+      "path": "Web安全/CMS内容/Seacms/SeaCMS admin_files.php CVE-2024-42599分析.md",
+      "original_empty_count_d817": 1,
+      "accepted_count": 0,
+      "candidate_count": 0,
+      "unknown_count": 1,
+      "summary": "0 restored; 1 candidate rejected because source identity/format is not enough to guarantee screenshot-adjacent payload bytes.",
+      "attempted_public_urls": [
+        "https://raw.githubusercontent.com/fushuling/cve/master/SeaCMS%20V13%20admin_files.php%20code%20injection.md",
+        "https://gitee.com/fushuling/cve/blob/master/SeaCMS%20V13%20admin_files.php%20code%20injection.md",
+        "https://jvndb.jvn.jp/ja/contents/2024/JVNDB-2024-021174.html"
+      ],
+      "research_result": "Raw Gitee mirror was retrieved (18,339 bytes; cache `/tmp/vulwiki-ext-seacms_gitee.txt`, SHA256 85ae654e25060a6c755cd2a4dfdd672406afead79af625d0f96888f1259eaef6), same CVE/title. It has one full POST block near the corresponding narrative, but local screenshot/payload context may differ; no pixel transcription. Preserve as unaccepted candidate only.",
+      "occurrences": [
+        {
+          "occurrence": 1,
+          "empty_open_line_d817": 65,
+          "status": "unknown",
+          "reason": "Raw Gitee mirror was retrieved (18,339 bytes; cache `/tmp/vulwiki-ext-seacms_gitee.txt`, SHA256 85ae654e25060a6c755cd2a4dfdd672406afead79af625d0f96888f1259eaef6), same CVE/title. It has one full POST block near the corresponding narrative, but local screenshot/payload context may differ; no pixel transcription. Preserve as unaccepted candidate only."
+        }
+      ]
+    },
+    {
+      "path": "Web安全/CMS内容/骑士 CMS/骑士CMS模版注入+文件包含getshell复现.md",
+      "original_empty_count_d817": 11,
+      "accepted_count": 0,
+      "candidate_count": 0,
+      "unknown_count": 11,
+      "summary": "0 restored; 11 unknown.",
+      "attempted_public_urls": [
+        "https://mp.weixin.qq.com/s/FREqGzaHA6a6Vv7gXI3-Ug",
+        "https://www.74cms.com/news/show-2497.html",
+        "https://xz.aliyun.com/t/8520",
+        "https://xz.aliyun.com/t/8596"
+      ],
+      "research_result": "WeChat original direct URL was tried and yielded an access failure/captcha. 74CMS page is a patch announcement; Aliyun XZ links redirect to separate `/news/8113` and `/news/8189` articles, which are distinct analyses with image placeholders. Similar versions/authors are not sufficient for exact 11-block mapping; no login bypass or image inference.",
+      "occurrences": [
+        {
+          "occurrence": 1,
+          "empty_open_line_d817": 182,
+          "status": "unknown",
+          "reason": "WeChat original direct URL was tried and yielded an access failure/captcha. 74CMS page is a patch announcement; Aliyun XZ links redirect to separate `/news/8113` and `/news/8189` articles, which are distinct analyses with image placeholders. Similar versions/authors are not sufficient for exact 11-block mapping; no login bypass or image inference."
+        },
+        {
+          "occurrence": 2,
+          "empty_open_line_d817": 197,
+          "status": "unknown",
+          "reason": "WeChat original direct URL was tried and yielded an access failure/captcha. 74CMS page is a patch announcement; Aliyun XZ links redirect to separate `/news/8113` and `/news/8189` articles, which are distinct analyses with image placeholders. Similar versions/authors are not sufficient for exact 11-block mapping; no login bypass or image inference."
+        },
+        {
+          "occurrence": 3,
+          "empty_open_line_d817": 229,
+          "status": "unknown",
+          "reason": "WeChat original direct URL was tried and yielded an access failure/captcha. 74CMS page is a patch announcement; Aliyun XZ links redirect to separate `/news/8113` and `/news/8189` articles, which are distinct analyses with image placeholders. Similar versions/authors are not sufficient for exact 11-block mapping; no login bypass or image inference."
+        },
+        {
+          "occurrence": 4,
+          "empty_open_line_d817": 245,
+          "status": "unknown",
+          "reason": "WeChat original direct URL was tried and yielded an access failure/captcha. 74CMS page is a patch announcement; Aliyun XZ links redirect to separate `/news/8113` and `/news/8189` articles, which are distinct analyses with image placeholders. Similar versions/authors are not sufficient for exact 11-block mapping; no login bypass or image inference."
+        },
+        {
+          "occurrence": 5,
+          "empty_open_line_d817": 257,
+          "status": "unknown",
+          "reason": "WeChat original direct URL was tried and yielded an access failure/captcha. 74CMS page is a patch announcement; Aliyun XZ links redirect to separate `/news/8113` and `/news/8189` articles, which are distinct analyses with image placeholders. Similar versions/authors are not sufficient for exact 11-block mapping; no login bypass or image inference."
+        },
+        {
+          "occurrence": 6,
+          "empty_open_line_d817": 279,
+          "status": "unknown",
+          "reason": "WeChat original direct URL was tried and yielded an access failure/captcha. 74CMS page is a patch announcement; Aliyun XZ links redirect to separate `/news/8113` and `/news/8189` articles, which are distinct analyses with image placeholders. Similar versions/authors are not sufficient for exact 11-block mapping; no login bypass or image inference."
+        },
+        {
+          "occurrence": 7,
+          "empty_open_line_d817": 296,
+          "status": "unknown",
+          "reason": "WeChat original direct URL was tried and yielded an access failure/captcha. 74CMS page is a patch announcement; Aliyun XZ links redirect to separate `/news/8113` and `/news/8189` articles, which are distinct analyses with image placeholders. Similar versions/authors are not sufficient for exact 11-block mapping; no login bypass or image inference."
+        },
+        {
+          "occurrence": 8,
+          "empty_open_line_d817": 308,
+          "status": "unknown",
+          "reason": "WeChat original direct URL was tried and yielded an access failure/captcha. 74CMS page is a patch announcement; Aliyun XZ links redirect to separate `/news/8113` and `/news/8189` articles, which are distinct analyses with image placeholders. Similar versions/authors are not sufficient for exact 11-block mapping; no login bypass or image inference."
+        },
+        {
+          "occurrence": 9,
+          "empty_open_line_d817": 320,
+          "status": "unknown",
+          "reason": "WeChat original direct URL was tried and yielded an access failure/captcha. 74CMS page is a patch announcement; Aliyun XZ links redirect to separate `/news/8113` and `/news/8189` articles, which are distinct analyses with image placeholders. Similar versions/authors are not sufficient for exact 11-block mapping; no login bypass or image inference."
+        },
+        {
+          "occurrence": 10,
+          "empty_open_line_d817": 336,
+          "status": "unknown",
+          "reason": "WeChat original direct URL was tried and yielded an access failure/captcha. 74CMS page is a patch announcement; Aliyun XZ links redirect to separate `/news/8113` and `/news/8189` articles, which are distinct analyses with image placeholders. Similar versions/authors are not sufficient for exact 11-block mapping; no login bypass or image inference."
+        },
+        {
+          "occurrence": 11,
+          "empty_open_line_d817": 353,
+          "status": "unknown",
+          "reason": "WeChat original direct URL was tried and yielded an access failure/captcha. 74CMS page is a patch announcement; Aliyun XZ links redirect to separate `/news/8113` and `/news/8189` articles, which are distinct analyses with image placeholders. Similar versions/authors are not sufficient for exact 11-block mapping; no login bypass or image inference."
+        }
+      ]
+    }
+  ],
+  "dlink2018_source_cache": {
+    "url": "https://cn-sec.com/archives/2831990.html",
+    "path": "/tmp/vulwiki-source-dlink2018-cnsec-excerpts.txt",
+    "sha256": "551029486047a63af6aab77c592ba7651e74245974857d408e57253d039e734c",
+    "method": "Rendered direct-page text extraction shown by web tool. Shell HTML fetch timed out (0 bytes); this cache is explicitly an excerpt transcription, not original HTML bytes. No images were transcribed.",
+    "accepted_blocks": 16,
+    "source_mismatch_excluded": 1,
+    "six_image_or_prose_only_blanks": 6,
+    "primary_original_thread": {
+      "url": "https://bbs.kanxue.com/thread-282039.htm",
+      "status": "readable title/metadata; full body gated by login at content section; not bypassed; also a different poster."
+    }
+  }
+}

@@ -12,12 +12,16 @@ primary_identifiers: "CVE-2024-37085"
 referenced_identifiers: ""
 identifier_role: "primary"
 source_status: "unknown"
-prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
+prerequisites: "ESXi 主机此前已配置 AD 用户管理；攻击者具备足以重新创建已删除的配置 AD 组（默认 ESXi Admins）的 AD 权限；VPN 可达或普通 AD 凭据本身不等于满足条件。"
 side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
 id: "vw-9e9b0117ba0a923b209659e0"
 entity_id: "ve-9e9b0117ba0a923b209659e0"
 schema_version: "1"
 ---
+
+## 2026-10-03 技术核验
+
+CVE-2024-37085 的认证绕过有明确域管理前提：ESXi 主机此前已接入 AD 用户管理，攻击者须具备足够 AD 权限，在配置组被删除后重新创建该组（默认 ESXi Admins）。文章中的 VPN 入口与被盗凭据是攻击链背景，单凭网络可达或任意域账号不能推出满足该条件。
 
 # 勒索软件正在利用VMware漏洞，通过VPN访问发动攻击
 

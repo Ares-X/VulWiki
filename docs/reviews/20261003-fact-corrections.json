@@ -1,0 +1,261 @@
+[
+  {
+    "path": "IOT安全/Cisco/（CVE-2019-1663）堆栈缓冲区溢出漏洞.md",
+    "fields": {
+      "product": {
+        "before": "Cisco RV110W/RV130/RV130W/RV215W",
+        "after": "Cisco RV110W/RV130W/RV215W"
+      },
+      "version": {
+        "before": null,
+        "after": "Cisco RV110W < 1.2.2.1；Cisco RV130W < 1.0.3.45；Cisco RV215W < 1.3.1.1"
+      }
+    },
+    "note": "Cisco 官方公告确认 RV110W、RV130W、RV215W，分别在 1.2.2.1、1.0.3.45、1.3.1.1 修复。原文额外列出的 RV130 以及 RV110W < 1.2.1.7、RV215W < 1.3.0.8 不能作为该编号的完整产品或修复边界。管理界面需经 LAN 或已开启的远程管理功能可达；远程管理默认关闭。原文 RV130W 1.0.3.44 的分析、请求与图片继续保留，本次未运行复现。",
+    "evidence": {
+      "cve": "CVE-2019-1663",
+      "vendor_url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190227-rmi-cmd-ex",
+      "sections": [
+        "Vulnerable Products",
+        "Fixed Releases"
+      ]
+    },
+    "before_sha256": "9902a6b35fa8f2ff83ed3a67c6b8502768e30618c91e2570eeb8af43a3412a38",
+    "after_sha256": "c2753f9768ad7f1a08113f208f617734d2b75db3ce611c26f8a2a80da82f9a2d",
+    "original_body_preserved": true
+  },
+  {
+    "path": "IOT安全/D-Link/（CVE-2019–20213）D-Link DIR-859 rce.md",
+    "fields": {
+      "product": {
+        "before": "D-Link DIR859声称",
+        "after": "D-Link DIR-859"
+      },
+      "title": {
+        "before": "（CVE-2019–20213）D-Link DIR-859 rce",
+        "after": "D-Link DIR-859 未认证信息泄露（CVE-2019-20213；原题为 rce）"
+      }
+    },
+    "note": "CNA 与 D-Link 公告的逐编号列表将 CVE-2019-20213 对应为未认证信息泄露；同一公告中的命令执行问题另有编号。本页请求仅读取 vpnconfig.php 响应，未展示命令执行链，因此显示标题按信息泄露校正，原题、请求和路径保留。已查看本页影响范围截图：它是一张固件状态表，不含命令执行证据；其中 DIR-859 Ax 列为 v1.06b01Beta01 及更早、修复 v1.07b03_beta，表内多个型号来自合集公告，不能据此全部映射到本 CVE。",
+    "evidence": {
+      "cve": "CVE-2019-20213",
+      "vendor_url": "https://supportannouncement.us.dlink.com/announcement/publication.aspx?name=SAP10147",
+      "image_path": "IOT安全/D-Link/.resource/CVE-2019–20213D-LinkDIR-859rce/media/6-20201014111625558.png",
+      "image_review": "Root visually inspected original local PNG; table only; no RCE evidence."
+    },
+    "before_sha256": "c0965ea996b58c277370fc1a57876e7fa4828a9ffe9c010c36b6c3ccd7650444",
+    "after_sha256": "b72e75737ec82e5f70e9fa3e72642006ec0224cc13a28a03cac712c59feb563d",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/云平台/勒索软件正在利用VMware/勒索软件正在利用VMware漏洞，通过VPN访问发动攻击.md",
+    "fields": {
+      "prerequisites": {
+        "before": "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。",
+        "after": "ESXi 主机此前已配置 AD 用户管理；攻击者具备足以重新创建已删除的配置 AD 组（默认 ESXi Admins）的 AD 权限；VPN 可达或普通 AD 凭据本身不等于满足条件。"
+      }
+    },
+    "note": "CVE-2024-37085 的认证绕过有明确域管理前提：ESXi 主机此前已接入 AD 用户管理，攻击者须具备足够 AD 权限，在配置组被删除后重新创建该组（默认 ESXi Admins）。文章中的 VPN 入口与被盗凭据是攻击链背景，单凭网络可达或任意域账号不能推出满足该条件。",
+    "evidence": {
+      "cve": "CVE-2024-37085",
+      "record_pointer": "/containers/cna/descriptions",
+      "raw_url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2024/37xxx/CVE-2024-37085.json"
+    },
+    "before_sha256": "61a0cd9f56889bc54289be59a89b96522c29f3e55aba48fd8d29829340469ffe",
+    "after_sha256": "ddfdf6aae770639ac71f828b58353e4b876527246d812c6c78a988cb364e2751",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/安全设备/Suricata/Suricata之CVE-2024-21773 Tomcat请求走私检测.md",
+    "fields": {
+      "primary_identifiers": {
+        "before": "CVE-2024-21773",
+        "after": ""
+      },
+      "referenced_identifiers": {
+        "before": "",
+        "after": "CVE-2024-21773"
+      },
+      "identifier_role": {
+        "before": "primary",
+        "after": "reference"
+      },
+      "product": {
+        "before": "声称受影响Tomcat；Suricata只是检测工具",
+        "after": "Suricata HTTP 长度检测规则教程（原文声称 Tomcat 场景）"
+      },
+      "title": {
+        "before": "Suricata之CVE-2024-21773 Tomcat请求走私检测",
+        "after": "Suricata HTTP 长度检测规则分析（原文 CVE-2024-21773 映射错误）"
+      }
+    },
+    "note": "CVE-2024-21773 的 CNA / JVN 记录涉及 TP-Link 设备在家长控制配置下的命令执行，与本文讨论的 Tomcat / HTTP 长度检测场景不符。因此该号转为历史引用，不作为本教程的主漏洞编号；没有凭相似名称猜补另一个 CVE。检测规则、失败尝试、原题和旧地址保留，规则有效性仍未运行验证。",
+    "evidence": [
+      {
+        "cve": "CVE-2024-21773",
+        "sha256": "015336c68c5619d2b28d17284df880a98b44bc2f6f2fe05284b05095a820ba1e",
+        "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2024/21xxx/CVE-2024-21773.json"
+      }
+    ],
+    "before_sha256": "9be8316da285d007467b647d496db86a90d3bb4950fbfc10ba4c09787bfbc342",
+    "after_sha256": "557dcdf1303371e4979e2ca19a3143e9dfe5d8a4d052f6626fff02c64534ae9c",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/其他软件/杂项/CVE-2023-24860 拒绝服务攻击.md",
+    "fields": {
+      "primary_identifiers": {
+        "before": "CVE-2023-24860;CVE-2024-24860",
+        "after": "CVE-2023-24860"
+      },
+      "referenced_identifiers": {
+        "before": "CVE-2010-3333",
+        "after": "CVE-2010-3333;CVE-2024-24860"
+      },
+      "identifier_role": {
+        "before": "primary",
+        "after": "reference"
+      }
+    },
+    "note": "CNA 将 CVE-2023-24860 对应为 Microsoft Defender 拒绝服务，将 CVE-2024-24860 对应为 Linux Bluetooth 驱动竞争条件；后者与本文 Windows Defender / EDR 场景不符，已从主编号转为历史引用。保留 2023 编号不等于确认本文全部日志删除方法属于该漏洞：具体检测签名、策略、文件类型及应用写入条件仍需核验。原文号码、地址、公开测试值和方法完整保留，不执行旧校订中替换目标地址的建议。",
+    "evidence": [
+      {
+        "cve": "CVE-2023-24860",
+        "sha256": "d2be92e7a1f313eafaec714c714285909b9451ba8ccc4aa97cd683271ec55e73",
+        "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2023/24xxx/CVE-2023-24860.json"
+      },
+      {
+        "cve": "CVE-2024-24860",
+        "sha256": "26528923451929e4c6eb7de762e36744541cc42c9469f9e762a74bc9a11d5c66",
+        "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2024/24xxx/CVE-2024-24860.json"
+      }
+    ],
+    "before_sha256": "71217f422c355975bda84523f67303d43a8ef97bce5f835e8293e013e17dfd1b",
+    "after_sha256": "ba3a0dbd4b3363b82b29aa4cd4aa53b67078c231c3d78f020732eb3b336e0680",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/桌面软件/Chrome/Chrome 安全更新 – 修复 29 个允许远程代码执行的漏洞.md",
+    "fields": {
+      "title": {
+        "before": "Chrome 安全更新 – 修复 29 个允许远程代码执行的漏洞",
+        "after": "Chrome 146 安全更新：29 项修复及已列漏洞分析"
+      }
+    },
+    "note": "显示标题去掉“29 个全部允许远程代码执行”的概括。本文列出的编号包含越界读取、沙箱边界及其他不同影响；应分别阅读各编号的组件、攻击前提和结果，不能将一次更新的修复数量全部计作 RCE。原始标题和正文保留。",
+    "evidence": [
+      {
+        "cve": "CVE-2026-3913",
+        "sha256": "641d0fd3369d6959856b1271c0ea5d870003078acae1ab4966ffdf8d3065a692",
+        "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2026/3xxx/CVE-2026-3913.json"
+      },
+      {
+        "cve": "CVE-2026-3914",
+        "sha256": "4ceaf8d4cacf28ce69cd3bab69deed11ce13f17160139187a03a4652ca3cfea8",
+        "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2026/3xxx/CVE-2026-3914.json"
+      },
+      {
+        "cve": "CVE-2026-3915",
+        "sha256": "833e05cd4c09c7736b3adf25abe503ae38dbf5ebb002717ce6b99586f5c51346",
+        "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2026/3xxx/CVE-2026-3915.json"
+      },
+      {
+        "cve": "CVE-2026-3916",
+        "sha256": "5d7657a7a56622747a7b0cfe4b12cbb353cb4e46c24798ec1a1fdfa6001775d9",
+        "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2026/3xxx/CVE-2026-3916.json"
+      },
+      {
+        "cve": "CVE-2026-3917",
+        "sha256": "4d3e6f563633c886c669f66bcd4a60ff73e70a96f5b9d01e5710508f2ee29d55",
+        "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2026/3xxx/CVE-2026-3917.json"
+      },
+      {
+        "cve": "CVE-2026-3918",
+        "sha256": "a6e4fd3be6dd44bb26fbd9e3debd6d75359a8eb25588636a2a4b1e0da30fa5e0",
+        "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2026/3xxx/CVE-2026-3918.json"
+      },
+      {
+        "cve": "CVE-2026-3919",
+        "sha256": "055182f5a30dbc102c18e99b776540dfe254ed8df47574068a6e17fd1322d735",
+        "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2026/3xxx/CVE-2026-3919.json"
+      },
+      {
+        "cve": "CVE-2026-3921",
+        "sha256": "6073e9f1050d705d8d9e6fefb785278098f7dde0f74c7d4894a31b3708037ca3",
+        "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2026/3xxx/CVE-2026-3921.json"
+      },
+      {
+        "cve": "CVE-2026-3922",
+        "sha256": "7ffa1735b0feb0c311ba8f225a04a1dc06e18d234a2b1aa81c81acc75d4d2fc8",
+        "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2026/3xxx/CVE-2026-3922.json"
+      },
+      {
+        "cve": "CVE-2026-3923",
+        "sha256": "776c2d1adf64c81b3e3c74c8f56b6ba240412867fb994bc0d4ec29c6162111b7",
+        "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2026/3xxx/CVE-2026-3923.json"
+      },
+      {
+        "cve": "CVE-2026-3924",
+        "sha256": "1db802d1d918338bcf2d9988a03946f00fbfc622c3efb61c9bba70ffe60ecda0",
+        "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2026/3xxx/CVE-2026-3924.json"
+      }
+    ],
+    "before_sha256": "9b3fa44267cb11a7a049e76884a4d6656c1bb709d75e9a6b7366080ff70f6081",
+    "after_sha256": "2f16e0cf1a1c090e256f2ec8995fed28065bfbe309b5adba577e41eb872de956",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/网络设备/Cisco/【已复现】CVE-2026-76424 Cisco ISE 未授权文件上传致远程命令执行及 root 提权漏洞.md",
+    "fields": {
+      "title": {
+        "before": "【已复现】CVE-2026-76424 Cisco ISE 未授权文件上传致远程命令执行及 root 提权漏洞",
+        "after": "Cisco ISE 文件上传与命令执行分析（CVE-2026-76424，认证前提待澄清）"
+      },
+      "prerequisites": {
+        "before": "3.5.0.527测试，称3.5 Patch4修复；相邻网络/容器/9443直连满足过滤条件；零凭据",
+        "after": "CNA 要求有效管理员凭据；原文另声称 3.5.0.527、相邻网络/容器/9443 与过滤条件下零凭据；两者认证前提存在资料冲突，本轮未裁定该绕过链。"
+      }
+    },
+    "note": "CNA 记录明确要求有效管理员凭据，并说明文件上传可能进一步执行 root 命令；本文却声称在特定网络位置与 UpgradeInterNodeAPIFilter 条件下无登录利用。差异在认证与过滤绕过前提，不能因 CNA 描述较短就否认后续命令执行，也不能把本文声称的零凭据条件作为官方已确认事实。显示标题明确待澄清，原文细节及“已复现”归档主张保留；本库没有执行复现。",
+    "evidence": [
+      {
+        "cve": "CVE-2026-76424",
+        "sha256": "3550118f7e308fced33eff0a93507482dab2b29e77fe85e7c4d990748ce93b44",
+        "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2026/76xxx/CVE-2026-76424.json"
+      }
+    ],
+    "before_sha256": "8a36cd851de6d9d61bb3a4f70678a99d0c9e46a3af8a23831280476bd5144683",
+    "after_sha256": "4ba95133598d66d28ed4187c22d83de83af430d5614cdf30df10b57cf0bfc95d",
+    "original_body_preserved": true
+  },
+  {
+    "path": "系统安全/Android/安卓音频解码组件曝高危漏洞，可致恶意代码执行，谷歌发布补丁.md",
+    "fields": {},
+    "note": "Dolby 原厂公告明确将 CVE-2025-54957 的影响列为代码执行，不能仅凭 CVE 摘要提到解码器崩溃就否定原文标题。需要更正的是评级归属：Dolby 公告给出的 CVSS 3.1 为 6.7、Medium；这不等于原文所称的“Dolby 高危”评级。厂商确认 UDC 4.5 至 4.13 的越界写，并说明 Pixel 与其他漏洞组合可能增加风险；“通常为播放器崩溃或重启”的段落说的是其他设备类别，不能直接推广为所有非 Pixel 安卓设备。本文原有代码执行主张和历史材料保留，具体组合链及各设备适用性仍未由本库复现。",
+    "evidence": {
+      "vendor_url": "https://professional.dolby.com/siteassets/pdfs/dolby-security-advisory-CVE-2025-54957-Oct-14-25.pdf",
+      "page": 1,
+      "vendor_impact": "Code Execution",
+      "vendor_cvss": "6.7",
+      "vendor_severity": "Medium",
+      "root_read": true
+    },
+    "before_sha256": "ea2d03e61d3eb5604c962a7d03c62021ca99ccdf971688b44219b6aa8b761456",
+    "after_sha256": "b7c41c7ca896c103a2a440a73f3f003e1311dbb44232c813197bae24caefdd42",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/数据库/Phpmyadmin/（CVE-2019-18622）Phpmyadmin xss.md",
+    "fields": {},
+    "note": "phpMyAdmin 官方 PMASA-2019-5 将 CVE-2019-18622 描述为 Designer 功能中的 SQL 注入，并确认受影响版本早于 4.9.2、至少可追溯至 4.7.7；4.9.2 是修复版本，原文“≤4.9.2”不能用于判断该修复版本仍受影响。本文独立分析中的宽字节失败实验、Twig raw 输出与 XSS 推理均保留，但它们不等于官方已经将此编号重分类为 XSS；两种结论需要区分各自证据。本次核对公告和版本边界，未执行验证或确认截图中的实验结果。",
+    "evidence": {
+      "vendor_url": "https://www.phpmyadmin.net/security/PMASA-2019-5/",
+      "root_read": true,
+      "boundary": "prior to4.9.2; at least as old as4.7.7",
+      "classification": "vendor SQL injection; archived independent XSS analysis retained"
+    },
+    "before_sha256": "73018da6df01254df4cf9664e09037a819ee8e61adbaf02f075640ba6f5a5052",
+    "after_sha256": "5f63ec68ecda8617e4b8606d2024c1a5c58fbeb1e08bc1f58f721eb7f622e532",
+    "original_body_preserved": true
+  }
+]
