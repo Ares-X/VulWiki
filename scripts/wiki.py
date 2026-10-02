@@ -29,6 +29,7 @@ ENUMS = {
     "content_status": {"active", "needs-review", "quarantined", "rejected"},
     "identifier_status": {"active", "rejected", "disputed", "unknown"},
     "identifier_role": {"primary", "reference", "unknown"},
+    "source_status": {"recorded", "unknown", "missing"},
     "relation_type": {"duplicate_of", "analysis_of", "chained_with", "patch_bypass_of", "supersedes"},
 }
 IDENTIFIERS = {
@@ -461,9 +462,11 @@ def scan(root):
             if not meta.get("record_type"):
                 r.issue("type_unknown", "record_type is unknown")
             if meta.get("schema_version") == "1":
-                for key in ("id", "title", "product", "record_type", "review_status", "verification_status", "content_status", "prerequisites", "side_effects", "source_url"):
+                for key in ("id", "title", "product", "record_type", "review_status", "verification_status", "content_status", "prerequisites", "side_effects"):
                     if not meta.get(key):
                         r.issue("schema_required", key, "error")
+                if not meta.get("source_url") and meta.get("source_status") not in {"unknown", "missing"}:
+                    r.issue("schema_required", "source_url or explicit source_status=unknown/missing", "error")
             elif meta.get("schema_version"):
                 r.issue("schema_required", "unsupported schema_version", "error")
             if meta.get("verification_status") == "reproduced":
@@ -479,7 +482,9 @@ def scan(root):
                 if bad:
                     r.issue("source_url", "expected an http(s) URL without embedded credentials", "error")
             r.source_links = source_candidates(meta, body)
-            if not r.source_links:
+            if not meta.get("source_url") and meta.get("source_status") in {"unknown", "missing"}:
+                r.issue("source_missing", "original source URL explicitly " + meta["source_status"] + "; reference links are not confirmed provenance")
+            elif not r.source_links:
                 r.issue("source_label_only" if meta.get("source") else "source_missing", "no traceable URL in source fields or labelled reference sections")
             ids = meta.get("primary_identifiers", "")
             if not ids and meta.get("identifier_role") == "primary":
@@ -604,7 +609,7 @@ def catalog_record(r):
         "primary_identifiers": sorted(set(r.primary)) if m.get("identifier_status") not in {"rejected", "disputed"} else [],
         "identifier_status": m.get("identifier_status", "unknown"),
         "identifier_candidates": sorted(set(r.candidates)), "referenced_identifiers": sorted(set(r.references)),
-        "source": {"label": m.get("source", ""), "url": public_url(m["source_url"]) if m.get("source_url") and not any(i.code == "source_url" for i in r.issues) else "", "links": r.source_links},
+        "source": {"status": m.get("source_status", "recorded" if m.get("source_url") else "unknown"), "label": m.get("source", ""), "url": public_url(m["source_url"]) if m.get("source_url") and not any(i.code == "source_url" for i in r.issues) else "", "links": r.source_links},
         "fingerprints": r.fingerprints,
     }
     for key in ("entity_id", "canonical", "relation_type", "category_recommendation", "prerequisites", "side_effects", "fixed_version", "verification_source"):

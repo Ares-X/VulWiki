@@ -328,6 +328,16 @@ class WikiTests(unittest.TestCase):
         self.article(fofa='body=')
         self.assertEqual(self.run_cli('check')[0], 1)
 
+    def test_v1_explicit_missing_source_allowed_but_warned(self):
+        for status in ('unknown', 'missing'):
+            self.article(schema_version='1', title='Example title', prerequisites='unknown', side_effects='unknown', source_url='', source_status=status, ref='https://example.invalid/secondary')
+            record = self.scan()[0]
+            self.assertTrue(record.eligible)
+            self.assertTrue(any(i.code == 'source_missing' for i in record.issues))
+            self.assertEqual(wiki.catalog_record(record)['source']['status'], status)
+        self.article(schema_version='1', title='Example title', prerequisites='unknown', side_effects='unknown', source_url='', source_status='recorded')
+        self.assertFalse(self.scan()[0].eligible)
+
     def test_fatal_baseline_refused_without_overwriting_existing(self):
         file = self.root / 'baseline.json'
         file.write_text('existing reviewed baseline')

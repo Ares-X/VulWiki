@@ -22,7 +22,7 @@ VulWiki 整理 Web 应用、中间件、网络设备与系统漏洞的中文分�
 
 在线 Wiki 支持分类逐级展开，默认搜索标题、产品、CVE、版本和指纹；需要搜索正文时切换到“全文”，首次使用会按需加载正文索引。按 `Ctrl / Cmd + K` 可聚焦搜索。
 
-CVE 索引与文章的主 CVE 字段仍有待校正项，正文引用的历史 CVE 不等于该文章的主漏洞。指纹使用前也需核对测绘平台、语法和适用范围。
+三类索引由同一份 Markdown 元数据生成。主 CVE 只取明确主编号，不取正文引用或未核角色的旧字段；旧候选仍可本地检索并标为 candidate-non-primary，未入主索引不代表 CVE 不存在。待核状态会显示，隔离条目见[待核清单](docs/REVIEW-QUEUE.md)。指纹仅做保守语法检查，不证明漏洞存在。
 
 ## 内容范围
 
@@ -90,9 +90,22 @@ IOT安全/   # 摄像头/路由器/工控
 1. 先按产品、漏洞编号与原文标题搜索，避免重复收录；找到对应分类与产品目录，没有时再新建，勿用文章标题截断片段作为产品名称。
 2. Markdown 文件名即漏洞标题。正文应说明漏洞原理或影响、受影响版本与前提、复现步骤或验证方法，并保留参考来源。网络测绘指纹按实际情况提供，不适用时省略。
 3. 图片存放在当前 Markdown 同级的 `.resource/文章名/media/`，正文使用相对路径引用；代码块注明语言，文件名使用单个 `.md` 后缀。
-4. 文首按需填写简单字符串 frontmatter：`cve`、`version`、`fofa`、`source`。未知字段可省略，主 CVE 不要从正文首次提及的历史编号机械抽取。
-5. 同步更新相关 `INDEX*.md` 与子索引，按时间倒序补充 [Change Log](#change-log)。分类侧栏和 JSON 搜索数据由站点构建自动生成，Markdown 查询索引目前仍需维护。
-6. 提交前检查 Markdown 渲染、图片与相对链接，并注明来源核对和复现情况；引用公开 PoC 与本地复现通过应分别说明。
+4. 使用[内容模板](docs/templates/ARTICLE.md)和[字符串字段规范](docs/CONTENT-SCHEMA.md)。主产品、主编号、来源及验证状态分别记录；历史内容渐进兼容，不默认已验证。
+5. 运行 `python scripts/wiki.py build` 重建三类索引和机器目录，无需手工补索引。Markdown 仍为唯一维护源；博客侧栏与全文搜索继续用现有发布流程。
+6. 按[贡献指南](CONTRIBUTING.md)运行单测、质量校验与生成一致性检查；记录前提、副作用、来源和复现边界。
+
+## 质量与机器检索
+
+```sh
+python -m unittest discover -s tests -v
+python scripts/wiki.py check --baseline docs/quality-baseline.json
+python scripts/wiki.py build --check
+python scripts/wiki.py search CloudStack
+```
+
+只需 Python 3.10+ 标准库。检查离线，不执行文章内代码。`docs/generated/records.jsonl` 是主入口投影，`sources.jsonl` 保留来源元数据，`entities.jsonl` 仅包含人工实体关系。同 CVE 和重复候选不会自动删除文章；详见[字段说明](docs/CONTENT-SCHEMA.md)。
+
+带 baseline 检查成功只代表没有新增非致命问题，不表示历史质量债消失、外部事实已核对或漏洞已复现。fatal 与活动 HTML 问题不能通过重建 baseline 放行。严格全库检查用 `python scripts/wiki.py check`，尚存问题会返回非零。
 
 ## 引用来源（致谢）
 
@@ -137,4 +150,4 @@ IOT安全/   # 摄像头/路由器/工控
 
 - 复核历史文章的主 CVE、影响版本、来源和收录质量，合并重复内容。
 - 修复 Markdown 排版、失效图片与链接，完善产品分类。
-- 自动重建 Markdown 查询索引；增量收录公开资料时保留人工审核与来源核对。
+- 使用自动索引和增量质量门禁；保留人工审核、来源核对和待核项，逐步减少历史质量债。
