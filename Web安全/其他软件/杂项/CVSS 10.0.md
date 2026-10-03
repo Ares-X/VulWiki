@@ -5,7 +5,7 @@ identifier_role: "primary"
 primary_identifiers: "CVE-2026-45829"
 referenced_identifiers: ""
 identifier_status: "unknown"
-title: "CVSS 10.0"
+title: "CVSS 10.0 【严重】CVE-2026-45829 ChromaDB 爆出未授权 RCE：ChromaToast 横扫 AI 基础设施"
 product: "ChromaDB Python FastAPI server"
 record_type: "advisory"
 document_type: "漏洞通告与示意请求"
@@ -23,7 +23,7 @@ entity_id: "ve-02fb39ec316bf3cef5d1ea63"
 schema_version: "1"
 ---
 
-# CVSS 10.0
+#  CVSS 10.0 【严重】CVE-2026-45829 ChromaDB 爆出未授权 RCE：ChromaToast 横扫 AI 基础设施  
 
 <!-- vulwiki-editorial-rebuild:system-misc -->
 ## 条目范围与校订

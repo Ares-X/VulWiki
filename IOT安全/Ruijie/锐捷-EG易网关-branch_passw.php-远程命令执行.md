@@ -37,7 +37,7 @@ source_status: "unknown"
 - evpnShell实现不在片段，无过滤结论仍需查看helper；listAction另有拼接但不是当前PoC
 - 登录成功以status/1子串、正则解析str(headers)脆弱，凭据未编码；写test_test.txt有残留且静态文件可能误报
 - 不能将前置login.php漏洞与后台branch入口合成一个免认证根因
-- 已落实的文本修订：“/etc/psswd”改为“/etc/passwd”；HTTP 报文围栏改为 http。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
+- 历史校订意见（原始示例按归档保留，下述改写不再应用于原始示例）：“/etc/psswd”改为“/etc/passwd”；HTTP 报文围栏改为 http。以上意见置于原始示例之外，不覆盖原文证据；未做运行验证
 
 ### 操作风险与恢复
 
@@ -188,7 +188,7 @@ Cookie: RUIJIEID=52222egp72ilkpf2de7qbrigk3;user=admin;
 X-Requested-With: XMLHttpRequest
 Accept-Encoding: gzip
 
-pass=|cat /etc/passwd>../test_test.txt
+pass=|cat /etc/psswd>../test_test.txt
 ```
 
 再访问

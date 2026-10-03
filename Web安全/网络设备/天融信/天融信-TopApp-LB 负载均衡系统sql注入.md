@@ -1,11 +1,11 @@
 ---
 date: "Sat, 12 Sep 2020 02:06:44 +0000"
-draft: "false"
-tags: "['白阁-漏洞库']"
+draft: false
+tags: ['白阁-漏洞库']
 id: "vw-9e52366298af505519dfbdf0"
 entity_id: "ve-9e52366298af505519dfbdf0"
 schema_version: "1"
-title: "3、影响版本"
+title: "天融信-TopApp-LB 负载均衡系统sql注入"
 product: "Topsec TopAPP-LB"
 record_type: "advisory"
 review_status: "text-reviewed"

@@ -5,7 +5,7 @@ identifier_role: "primary"
 primary_identifiers: "CVE-2024-8811;CVE-2024-11477"
 referenced_identifiers: ""
 identifier_status: "unknown"
-title: "winzip、7z 压缩软件存在漏洞需以及一条不可信的 Linux 0day 漏洞预警"
+title: "winzip、7z 压缩软件存在漏洞需警惕以及一条不可信的 Linux 0day 漏洞预警"
 product: "WinZip与7-Zip"
 record_type: "vulnerability"
 document_type: "多产品漏洞简报及未证实传闻"
@@ -23,7 +23,7 @@ entity_id: "ve-9de89083d17c2736d48fd8ac"
 schema_version: "1"
 ---
 
-# winzip、7z 压缩软件存在漏洞需以及一条不可信的 Linux 0day 漏洞预警
+#  winzip、7z 压缩软件存在漏洞需警惕以及一条不可信的 Linux 0day 漏洞预警   
 
 <!-- vulwiki-editorial-rebuild:system-misc -->
 ## 条目范围与校订

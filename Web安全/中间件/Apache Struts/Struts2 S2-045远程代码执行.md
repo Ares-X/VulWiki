@@ -1,8 +1,8 @@
 ---
 title: "Struts2 S2-045远程代码执行"
 date: "Mon, 24 Aug 2020 14:20:54 +0000"
-draft: ""
-tags: "['白阁-漏洞库']"
+draft: false
+tags: ['白阁-漏洞库']
 product: "Apache Struts2 Jakarta multipart"
 record_type: "vulnerability"
 review_status: "text-reviewed"

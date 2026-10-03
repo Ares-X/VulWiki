@@ -42,7 +42,7 @@ schema_version: "1"
 
 ## 操作风险
 
-现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -82,7 +82,7 @@ from requests.packages.urllib3.exceptions import InsecureRequestWarning
 def title():
     print('+------------------------------------------')
     print('+  \033[34mPOC_Des: http://wiki.peiqi.tech                                   \033[0m')
-    print('+  \033[34mVersion: Seeyon OA webmail.do (affected releases unverified)                              \033[0m')
+    print('+  \033[34mVersion: Laravel framework <= 5.5.21                              \033[0m')
     print('+  \033[36m使用格式:  python3 poc.py                                            \033[0m')
     print('+  \033[36mUrl         >>> http://xxx.xxx.xxx.xxx                             \033[0m')
     print('+------------------------------------------')

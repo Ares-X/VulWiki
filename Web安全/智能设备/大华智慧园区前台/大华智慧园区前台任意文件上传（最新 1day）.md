@@ -37,7 +37,7 @@ source_status: "recorded"
 - payload写kaisec.jsp而访问写kaisa.jsp，路径不一致
 - arg1仅占位webshell未说明编码；Cookie的必要性未说明
 - 最新1day无日期基准，推广页尾冗余
-- 已落实的文本修订：“访问 / url/kaisa.jsp”改为“访问 / url/kaisec.jsp”；“当访问接口时出现如下响应体时，基本可认定该漏洞存在。”改为“出现所示响应仅支持接口可达，不能单独确认越界上传或脚本执行；还需上传响应、保存路径与受控回读证据。”；HTTP 报文围栏改为 http。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
+- 历史校订意见（原始示例按归档保留，下述改写不再应用于原始示例）：“访问 / url/kaisa.jsp”改为“访问 / url/kaisec.jsp”；“当访问接口时出现如下响应体时，基本可认定该漏洞存在。”改为“出现所示响应仅支持接口可达，不能单独确认越界上传或脚本执行；还需上传响应、保存路径与受控回读证据。”；HTTP 报文围栏改为 http。以上意见置于原始示例之外，不覆盖原文证据；未做运行验证
 
 ### 操作风险与恢复
 
@@ -118,7 +118,7 @@ Content-Length: 3117
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/fRWdakrtBssucs5ZCVvvlAVSoaahFfzu5Zc09BNjesQvicuVF7EicLqFwS5WaOia6bXD8C8fiar9Qzwib0xKgXv0EVQ/640?wx_fmt=png)
 
-**访问 / url/kaisec.jsp：**
+**访问 / url/kaisa.jsp：**
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/fRWdakrtBssucs5ZCVvvlAVSoaahFfzuFaYSbrHypdFDUGEspEVvIBUM49huwoxPjXtzYccibO5pvuLDBW7P9iaQ/640?wx_fmt=png)
 

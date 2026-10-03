@@ -42,7 +42,7 @@ schema_version: "1"
 
 ## 操作风险
 
-现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -62,6 +62,7 @@ EnjoyRMIS GetODById存在SQL注入漏洞,攻击者可通过该漏洞获取数据
 POST /EnjoyRMIS_WS/WS/POS/cwsoa.asmx HTTP/1.1
 Host: xx.xx.xx.xx
 Content-Type: text/xml; charset=utf-8
+Content-Length: length
 SOAPAction: "http://tempuri.org/GetODById"
 
 <?xml version="1.0" encoding="utf-8"?>
@@ -74,7 +75,7 @@ SOAPAction: "http://tempuri.org/GetODById"
 </soap:Envelope>
 ```
 
-> 请求长度说明：原资料 Content-Length 为 length；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 length；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 
 sqlmap
@@ -83,6 +84,7 @@ sqlmap
 POST /EnjoyRMIS_WS/WS/POS/cwsoa.asmx HTTP/1.1
 Host: xx.xx.xx.xx
 Content-Type: text/xml; charset=utf-8
+Content-Length: length
 SOAPAction: "http://tempuri.org/GetODById"
 
 <?xml version="1.0" encoding="utf-8"?>
@@ -95,7 +97,7 @@ SOAPAction: "http://tempuri.org/GetODById"
 </soap:Envelope>
 ```
 
-> 请求长度说明：原资料 Content-Length 为 length；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 length；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 
 > 原文: <https://www.yuque.com/xiaokp7/ocvun2/gryk74nk6kv4hgoh>

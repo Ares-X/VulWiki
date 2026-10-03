@@ -35,7 +35,7 @@ schema_version: "1"
 
 ### 具体结论与待核项
 
-以下为原归档的逐项勘误与证据缺口；可由文本确定的问题已在下文订正，仍缺来源的事实保持待核。
+以下为原归档的逐项勘误与证据缺口；校订意见与原始技术示例分开，代码、请求和引文按归档保留，仍缺来源的事实保持待核。
 
 1. 元数据只59536漏21852且Hook无CVE应独立；摘要无需恶意代码/打开即全控过度，配置包含命令本身就是攻击内容
 2. 授权后Hook无需二次确认与绕过信任不是同事，MCP称race需原研究证实是时序竞争还是设计顺序错误
@@ -144,7 +144,6 @@ import os
 import sys
 import re
 from pathlib import Path
-from urllib.parse import urlsplit
 
 # ANSI colors
 RED = "\033[91m"
@@ -192,14 +191,10 @@ def scan_hooks_bypass(repo_path):
 
     try:
         data = json.loads(settings_path.read_text())
-    except (json.JSONDecodeError, UnicodeError, OSError) as exc:
-        raise ValueError("Configuration could not be read or decoded; assessment is unknown") from exc
+    except (json.JSONDecodeError, OSError):
+        return findings
 
-    if not isinstance(data, dict):
-        raise ValueError("settings.json must contain an object")
     hooks = data.get("hooks", {})
-    if not isinstance(hooks, dict):
-        raise ValueError("hooks must contain an object")
     if not hooks:
         return findings
 
@@ -227,7 +222,7 @@ def scan_hooks_bypass(repo_path):
 
                     findings.append(Finding(
                         severity="CRITICAL" if is_extra_dangerous else "HIGH",
-                        cve="Configuration indicator; no CVE attributed by this check",
+                        cve="No CVE (CVSS 8.7)",
                         title=f"Project hook executes shell command on {event_name}",
                         file_path=str(settings_path),
                         detail=f"Command: {cmd[:120]}{'...' if len(cmd)>120 else ''}",
@@ -249,36 +244,30 @@ def scan_mcp_injection(repo_path):
     if settings_path.exists():
         try:
             data = json.loads(settings_path.read_text())
-            if not isinstance(data, dict):
-                raise ValueError("settings.json must contain an object")
             if data.get("enableAllProjectMcpServers") is True:
                 auto_enable = True
                 findings.append(Finding(
                     severity="HIGH",
-                    cve="CVE-2025-59536 context only; exposure not established",
+                    cve="CVE-2025-59536 (CVSS 8.7)",
                     title="enableAllProjectMcpServers is set to true",
                     file_path=str(settings_path),
                     detail=(
                         "This flag causes all project-defined MCP servers to start "
-                        "according to client version and trust settings; this flag alone does not prove a consent bypass."
+                        "automatically without user consent."
                     ),
                     recommendation=(
                         "Remove this flag. Update Claude Code to v1.0.111+ "
                         "where this bypass is patched."
                     ),
                 ))
-        except (json.JSONDecodeError, UnicodeError, OSError) as exc:
-            raise ValueError("Configuration could not be read or decoded; assessment is unknown") from exc
+        except (json.JSONDecodeError, OSError):
+            pass
 
     mcp_path = repo_path / ".mcp.json"
     if mcp_path.exists():
         try:
             mcp_data = json.loads(mcp_path.read_text())
-            if not isinstance(mcp_data, dict):
-                raise ValueError(".mcp.json must contain an object")
             servers = mcp_data.get("mcpServers", {})
-            if not isinstance(servers, dict):
-                raise ValueError("mcpServers must contain an object")
             for name, config in servers.items():
                 if not isinstance(config, dict):
                     continue
@@ -289,7 +278,7 @@ def scan_mcp_injection(repo_path):
                 severity = "CRITICAL" if auto_enable else "MEDIUM"
                 findings.append(Finding(
                     severity=severity,
-                    cve="CVE-2025-59536 context only; exposure not established",
+                    cve="CVE-2025-59536 (CVSS 8.7)",
                     title=f"MCP server '{name}' executes: {cmd}",
                     file_path=str(mcp_path),
                     detail=f"Full command: {full_cmd[:150]}{'...' if len(full_cmd)>150 else ''}",
@@ -300,8 +289,6 @@ def scan_mcp_injection(repo_path):
                 ))
 
                 env = config.get("env", {})
-                if not isinstance(env, dict):
-                    raise ValueError("MCP env must contain an object")
                 for k, v in env.items():
                     if any(
                         s in k.upper()
@@ -309,14 +296,14 @@ def scan_mcp_injection(repo_path):
                     ):
                         findings.append(Finding(
                             severity="MEDIUM",
-                            cve="CVE-2025-59536 context only; exposure not established",
+                            cve="CVE-2025-59536",
                             title=f"MCP server '{name}' sets suspicious env var: {k}",
                             file_path=str(mcp_path),
                             detail=f"Env var {k} may be used to override credentials.",
                             recommendation="Audit environment variables in MCP configs.",
                         ))
-        except (json.JSONDecodeError, UnicodeError, OSError) as exc:
-            raise ValueError("Configuration could not be read or decoded; assessment is unknown") from exc
+        except (json.JSONDecodeError, OSError):
+            pass
 
     return findings
 
@@ -330,21 +317,19 @@ def scan_api_exfil(repo_path):
 
     try:
         data = json.loads(settings_path.read_text())
-    except (json.JSONDecodeError, UnicodeError, OSError) as exc:
-        raise ValueError("Configuration could not be read or decoded; assessment is unknown") from exc
+    except (json.JSONDecodeError, OSError):
+        return findings
 
-    if not isinstance(data, dict):
-        raise ValueError("settings.json must contain an object")
     env = data.get("env", {})
     if not isinstance(env, dict):
-        raise ValueError("env must contain an object")
+        return findings
 
     suspicious_env_vars = {
         "ANTHROPIC_BASE_URL": "Redirects all API traffic (including API key) to attacker",
-        "ANTHROPIC_API_KEY": "Overrides API key configuration; does not itself prove capture of an existing key",
+        "ANTHROPIC_API_KEY": "Overrides/captures the user's API key",
         "CLAUDE_CODE_API_KEY": "May override API key configuration",
         "HTTP_PROXY": "Routes all HTTP traffic through attacker proxy",
-        "HTTPS_PROXY": "Configures an HTTPS proxy; TLS plaintext interception is not established by this value alone",
+        "HTTPS_PROXY": "Routes all HTTPS traffic through attacker proxy",
         "NODE_EXTRA_CA_CERTS": "Could enable MITM by injecting attacker CA certificate",
     }
 
@@ -355,15 +340,14 @@ def scan_api_exfil(repo_path):
 
         severity = "CRITICAL"
         if var == "ANTHROPIC_BASE_URL":
-            parsed = urlsplit(str(value))
-            if parsed.scheme != "https" or parsed.hostname != "api.anthropic.com" or parsed.username is not None or parsed.password is not None or parsed.port not in (None, 443):
+            if "anthropic.com" not in value.lower():
                 severity = "CRITICAL"
             else:
                 severity = "INFO"
 
         findings.append(Finding(
             severity=severity,
-            cve="CVE-2026-21852 context only; exposure not established",
+            cve="CVE-2026-21852 (CVSS 5.3)",
             title=f"Environment override: {var}",
             file_path=str(settings_path),
             detail=f"{description}. Value: {value[:80]}{'...' if len(value)>80 else ''}",
@@ -402,22 +386,19 @@ def scan_repo(repo_path_str):
 
     for name, scanner_fn in scanners:
         print(f"{CYAN}[*] Checking: {name}...{RESET}")
-        try:
-            findings = scanner_fn(repo_path)
-        except (ValueError, TypeError, AttributeError) as exc:
-            findings = [Finding("MEDIUM", "Unknown", "Assessment incomplete", str(repo_path), "Configuration parsing or schema error; no clean verdict is possible.", "Inspect the local configuration and retry; no configuration values are logged.")]
+        findings = scanner_fn(repo_path)
         all_findings.extend(findings)
         if findings:
             print(f"  {RED}Found {len(findings)} issue(s){RESET}")
         else:
-            print(f"  {GREEN}No configured indicator matched; this is not a safety or patch verdict{RESET}")
+            print(f"  {GREEN}Clean{RESET}")
 
     print(f"\n{BOLD}{'='*70}")
     print(f"  SCAN RESULTS")
     print(f"{'='*70}{RESET}\n")
 
     if not all_findings:
-        print(f"{GREEN}{BOLD}[+] No configured indicators matched. Version, trust decisions, and unscanned paths remain unchecked.{RESET}\n")
+        print(f"{GREEN}{BOLD}[+] No Claude Code supply-chain indicators found.{RESET}\n")
         return 0
 
     severity_order = {"CRITICAL": 0, "HIGH": 1, "MEDIUM": 2, "LOW": 3, "INFO": 4}

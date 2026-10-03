@@ -1,0 +1,79 @@
+{
+  "unit_tests": {
+    "count": 52,
+    "passed": true,
+    "command": "python -m unittest discover -s tests -v"
+  },
+  "quality": {
+    "baseline_issues_remaining": 5196,
+    "by_code": {
+      "embedded_code_candidate": 1,
+      "empty_fence": 91,
+      "fingerprint_unverified": 800,
+      "identifier_inactive": 27,
+      "identifier_role_unknown": 216,
+      "noncontent_link_candidate": 34,
+      "path_legacy": 2,
+      "site_relative_link": 81,
+      "source_missing": 3856,
+      "unrecognized_identifier_namespace": 88
+    },
+    "documents": 5654,
+    "errors": 0,
+    "fatal_issues": 0,
+    "new_issues": 0,
+    "resolved_issues": 0,
+    "result": "no new debt; historical issues remain",
+    "warnings": 5196
+  },
+  "build": {
+    "by_code": {
+      "embedded_code_candidate": 1,
+      "empty_fence": 91,
+      "fingerprint_unverified": 800,
+      "identifier_inactive": 27,
+      "identifier_role_unknown": 216,
+      "noncontent_link_candidate": 34,
+      "path_legacy": 2,
+      "site_relative_link": 81,
+      "source_missing": 3856,
+      "unrecognized_identifier_namespace": 88
+    },
+    "different_files": [
+      "docs/generated/sources.jsonl",
+      "docs/generated/summary.json"
+    ],
+    "documents": 5654,
+    "errors": 0,
+    "fatal_issues": 0,
+    "mode": "write",
+    "warnings": 5196
+  },
+  "build_check": {
+    "by_code": {
+      "embedded_code_candidate": 1,
+      "empty_fence": 91,
+      "fingerprint_unverified": 800,
+      "identifier_inactive": 27,
+      "identifier_role_unknown": 216,
+      "noncontent_link_candidate": 34,
+      "path_legacy": 2,
+      "site_relative_link": 81,
+      "source_missing": 3856,
+      "unrecognized_identifier_namespace": 88
+    },
+    "different_files": [],
+    "documents": 5654,
+    "errors": 0,
+    "fatal_issues": 0,
+    "mode": "check",
+    "warnings": 5196
+  },
+  "diff_check": {
+    "base": "f937c529024e6e0224085468015f6cbfd6ddfdd6",
+    "expected": "all intended final changes, baseline and maintenance code unchanged",
+    "passed": true
+  },
+  "execution": "No article code, HTML/JavaScript, payload, scanner, or attachment executed; no sample target accessed",
+  "maintenance_code_and_baseline_unchanged": true
+}

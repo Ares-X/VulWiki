@@ -36,7 +36,7 @@ source_status: "recorded"
 
 - 无返回字段，管理员登录信息泄露未展示
 - Content-Length56与CmpWc空值正文不符；FOFA元数据server=残缺
-- 已落实的文本修订：“Content-Length: 56”改为“Content-Length: 6”；HTTP 报文围栏改为 http；残缺指纹退出可执行索引并保留原值。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
+- 历史校订意见（原始示例按归档保留，下述改写不再应用于原始示例）：“Content-Length: 56”改为“Content-Length: 6”；HTTP 报文围栏改为 http；残缺指纹退出可执行索引并保留原值。以上意见置于原始示例之外，不覆盖原文证据；未做运行验证
 
 ### 操作风险与恢复
 
@@ -72,7 +72,7 @@ Accept-Encoding: gzip, deflate
 Connection: close
 Upgrade-Insecure-Requests: 1
 Content-Type: application/x-www-form-urlencoded
-Content-Length: 6
+Content-Length: 56
 
 CmpWc=
 ```

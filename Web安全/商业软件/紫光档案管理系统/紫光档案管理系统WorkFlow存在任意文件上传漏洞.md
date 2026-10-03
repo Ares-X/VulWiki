@@ -43,7 +43,7 @@ schema_version: "1"
 
 ## 操作风险
 
-请求可能删除/覆盖数据、修改账号或持久改变业务状态；文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+请求可能删除/覆盖数据、修改账号或持久改变业务状态；文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -64,6 +64,7 @@ POST /System/WorkFlow/upload.html?token=5117e82385cef4c12547fdd4c028b97a1-1 HTTP
 Host: 
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36
 Connection: close
+Content-Length: 566
 Accept: */*
 Accept-Encoding: gzip, deflate
 Content-Type: multipart/form-data; boundary=vow8ojiofbpypwih3t3i
@@ -93,7 +94,7 @@ Content-Type: multipart/form-data
 --vow8ojiofbpypwih3t3i--
 ```
 
-> 请求长度说明：原资料 Content-Length 为 566；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 566；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 
 上传文件位置

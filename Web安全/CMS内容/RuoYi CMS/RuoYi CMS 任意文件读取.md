@@ -79,17 +79,17 @@ https://domain/common/download/resource?resource=/profile/../../../../etc/passwd
 
 
 ```
-       public static String FILENAME_PATTERN = "[a-zA-Z0-9_\\-\\|\\.\\u4e00-\\u9fa5]+";
-        /**
-         * 文件名称验证
-         * 
-         * @param filename 文件名称
-         * @return true 正常 false 非法
-         */
-        public static boolean isValidFilename(String filename)
-    {
-            return filename.matches(FILENAME_PATTERN);
-        }
+     public static String FILENAME_PATTERN = "[a-zA-Z0-9_\\-\\|\\.\\u4e00-\\u9fa5]+";
+      /**
+       * 文件名称验证
+       * 
+       * @param filename 文件名称
+       * @return true 正常 false 非法
+       */
+      public static boolean isValidFilename(String filename)
+  {
+          return filename.matches(FILENAME_PATTERN);
+      }
    ```
 
    
@@ -100,7 +100,7 @@ https://domain/common/download/resource?resource=/profile/../../../../etc/passwd
    
    ![image-20201109164743172](./.resource/RuoYiCMS任意文件读取/media/image-20201109164743172.png)
    
-    那这个点就没什么用了，只能删除/home/ruoyi/uploadPath/download/目录下的文件。
+那这个点就没什么用了，只能删除/home/ruoyi/uploadPath/download/目录下的文件。
    
    
    
@@ -132,6 +132,6 @@ https://domain/common/download/resource?resource=/profile/../../../../etc/passwd
    
    ![image-20201109155051451](./.resource/RuoYiCMS任意文件读取/media/image-20201109155051451.png)
    
-    3.总结
+3.总结
    虽然利用很鸡肋，但还是学到了很多东西。在Windows环境下，默认的资源路径在D:/ruoyi/uploadPath,所以只能下载D:/下的文件，一般都可以下载到数据库配置文件吧。在Linux环境下，完全不受限制了，可以下载任意目录下的文件（只要权限够），数据库配置在xxx-admin/src/main/resources下application-druid.yml文件中，有时候目录名会变化，可以先下载根目录下的pom.xml查看目录名，如下：![999990.png](./.resource/RuoYiCMS任意文件读取/media/0a061592017258.png)
     温馨提示：bash_history可以看下，或许有惊喜。

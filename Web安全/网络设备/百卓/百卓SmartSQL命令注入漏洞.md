@@ -35,7 +35,7 @@ source_status: "recorded"
 
 - 后续POST标Content-Length0却含cmd正文，原始请求无效
 - 无输出、固定版本及FILE权限前提；与355同原语不同文件名
-- 已落实的文本修订：“Content-Length: 0”改为“Content-Length: 12”；HTTP 报文围栏改为 http。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
+- 历史校订意见（原始示例按归档保留，下述改写不再应用于原始示例）：“Content-Length: 0”改为“Content-Length: 12”；HTTP 报文围栏改为 http。以上意见置于原始示例之外，不覆盖原文证据；未做运行验证
 
 ### 操作风险与恢复
 
@@ -85,7 +85,7 @@ Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Connection: close
 Upgrade-Insecure-Requests: 1
 Content-Type: application/x-www-form-urlencoded
-Content-Length: 12
+Content-Length: 0
 
 cmd=ifconfig
 ```

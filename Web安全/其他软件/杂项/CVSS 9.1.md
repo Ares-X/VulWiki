@@ -5,7 +5,7 @@ identifier_role: "primary"
 primary_identifiers: "CVE-2026-46376"
 referenced_identifiers: ""
 identifier_status: "unknown"
-title: "CVSS 9.1"
+title: "CVSS 9.1 【严重】CVE-2026-46376 FreePBX userman 模块硬编码凭证漏洞：企业电话系统门户全网裸奔"
 product: "FreePBX userman/UCP"
 record_type: "advisory"
 document_type: "漏洞通告"
@@ -23,7 +23,7 @@ entity_id: "ve-d40e8b815f0b9f1f78cadd7b"
 schema_version: "1"
 ---
 
-# CVSS 9.1
+#  CVSS 9.1 【严重】CVE-2026-46376 FreePBX userman 模块硬编码凭证漏洞：企业电话系统门户全网裸奔  
 
 <!-- vulwiki-editorial-rebuild:system-misc -->
 ## 条目范围与校订

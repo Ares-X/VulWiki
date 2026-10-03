@@ -64,7 +64,7 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/w
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate
 Connection: close
-Cookie: JSESSIONID=82D471F9BEF54
+Cookie: JSESSIONID=82D471F9BEF54995F73170C5647FAF54
 Upgrade-Insecure-Requests: 1
 ```
 
