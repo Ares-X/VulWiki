@@ -3059,7 +3059,7 @@
 {"canonical_paths":[],"entity_id":"ve-8efc22d37f5d89d2a101d57d","grouping":"explicit-metadata","source_record_ids":["vw-8efc22d37f5d89d2a101d57d"]}
 {"canonical_paths":[],"entity_id":"ve-8efc9960b33e360e8d3782c0","grouping":"explicit-metadata","source_record_ids":["vw-8efc9960b33e360e8d3782c0"]}
 {"canonical_paths":[],"entity_id":"ve-8f31e0684a4f5bb9b09d099f","grouping":"explicit-metadata","source_record_ids":["vw-8f31e0684a4f5bb9b09d099f"]}
-{"canonical_paths":[],"entity_id":"ve-8f37400479d24877a495c9b1","grouping":"explicit-metadata","source_record_ids":["vw-8f37400479d24877a495c9b1"]}
+{"canonical_paths":["Web安全/其他软件/杂项/【漏洞预警-已复现】FOGPROJECT 文件名命令注入漏洞（CVE-2024-39914）.md"],"entity_id":"ve-8f37400479d24877a495c9b1","grouping":"explicit-metadata","source_record_ids":["VW-20261003-CH-fog-39914","vw-8f37400479d24877a495c9b1"]}
 {"canonical_paths":[],"entity_id":"ve-8f398e48453b9364487e390d","grouping":"explicit-metadata","source_record_ids":["vw-8f398e48453b9364487e390d"]}
 {"canonical_paths":[],"entity_id":"ve-8f4e999429ee687457204048","grouping":"explicit-metadata","source_record_ids":["vw-8f4e999429ee687457204048"]}
 {"canonical_paths":[],"entity_id":"ve-8f5383613fe42e63aee6bb5d","grouping":"explicit-metadata","source_record_ids":["vw-8f5383613fe42e63aee6bb5d"]}

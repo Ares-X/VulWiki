@@ -1,9 +1,9 @@
 {
   "base_commit": "8f2a9e14575928bb5f086902c786da66f4a65aa9",
-  "new_articles": 35,
+  "new_articles": 43,
   "append_only_existing_articles": 2,
   "unit_tests_passed": 52,
-  "documents": 5689,
+  "documents": 5697,
   "errors": 0,
   "fatal_issues": 0,
   "new_quality_debt": 0,
@@ -152,6 +152,26 @@
       "active_html": false
     },
     {
+      "path": "Web安全/其他软件/杂项/CVE-2024-34351 漏洞复现 poc (超大规模).md",
+      "render_scope": "metadata and independent editorial insertions; original body preserved",
+      "sha256": "7906529cedd0156d68ea4afc9cffef2232805187d9282d5602b4a385560d0f00",
+      "code_elements": 2,
+      "fenced_blocks": 0,
+      "code_text_matches": true,
+      "raw_fence_text_matches": true,
+      "active_html": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2025-32462&CVE-2025-32463.md",
+      "render_scope": "metadata and independent editorial insertions; original body preserved",
+      "sha256": "059f6709c5571a8277066d70b1d55f5ff1c3ddbc9323b26e52b66369a98d3948",
+      "code_elements": 2,
+      "fenced_blocks": 0,
+      "code_text_matches": true,
+      "raw_fence_text_matches": true,
+      "active_html": false
+    },
+    {
       "path": "Web安全/商业软件/Eleveo/Eleveo-Quality-Management-QMBODownload-路径泄露-CVE-2026-101143.md",
       "render_scope": "full-new-article",
       "sha256": "a296d556ef8cb27f9d3677892b94b14d613eef42ee21b0c1286fd58828b6ca3a",
@@ -256,6 +276,16 @@
       "render_scope": "append-only; original bytes unchanged",
       "sha256": "291ee11dcdea7777fa1075c76104fb0820ad3b91a57c88ad59bc1e3d6db1c4c2",
       "code_elements": 1,
+      "fenced_blocks": 0,
+      "code_text_matches": true,
+      "raw_fence_text_matches": true,
+      "active_html": false
+    },
+    {
+      "path": "Web安全/服务器软件/FOG Project/FOG Project export.php 命令注入与两阶段修复 CVE-2024-39914.md",
+      "render_scope": "full-new-article",
+      "sha256": "6f8972145f5592cf48f054252368eb8715fb092381d263c54471ab57024854fd",
+      "code_elements": 49,
       "fenced_blocks": 0,
       "code_text_matches": true,
       "raw_fence_text_matches": true,
@@ -372,6 +402,176 @@
       "active_html": false
     },
     {
+      "path": "系统安全/Linux/AppArmor confused-deputy与sudo邮件链本地提权（CVE-2026-23268）.md",
+      "render_scope": "full-new-article",
+      "sha256": "15674c3ca7bfddc40f3a8361e46cb6cc93f2db6e55220fbe747710de648ba084",
+      "code_elements": 3,
+      "fenced_blocks": 0,
+      "code_text_matches": true,
+      "raw_fence_text_matches": true,
+      "active_html": false
+    },
+    {
+      "path": "系统安全/Linux/Linux nf_tables 事务回滚UAF公开触发材料（CVE-2026-23111）.md",
+      "render_scope": "full-new-article",
+      "sha256": "120c589c7fc5b794e5752bb76873fbd273a8347cdf4377218330d3e1dc932821",
+      "code_elements": 4,
+      "fenced_blocks": 0,
+      "code_text_matches": true,
+      "raw_fence_text_matches": true,
+      "active_html": false
+    },
+    {
+      "path": "系统安全/Linux/Linux nf_tables 双重释放与公开本地提权材料（CVE-2024-1086）.md",
+      "render_scope": "full-new-article",
+      "sha256": "ccb0c9c0bbd51eb84c37f6004a73af0cb1ccde506399371074e9a42fd46bec4d",
+      "code_elements": 15,
+      "fenced_blocks": 0,
+      "code_text_matches": true,
+      "raw_fence_text_matches": true,
+      "active_html": false
+    },
+    {
+      "path": "系统安全/Linux/Linux-Copy-Fail-本地提权漏洞-CVE-2026-31431.md",
+      "render_scope": "metadata and independent editorial insertions; original body preserved",
+      "sha256": "0ed85636003c85f4ede4b65bf6460583408d70668b133414863205c5cb357025",
+      "code_elements": 3,
+      "fenced_blocks": 0,
+      "code_text_matches": true,
+      "raw_fence_text_matches": true,
+      "active_html": false
+    },
+    {
+      "path": "系统安全/Linux/Linux-DirtyPipe-权限提升漏洞-CVE-2022-0847.md",
+      "render_scope": "metadata and independent editorial insertions; original body preserved",
+      "sha256": "346623caee022f58d1f9fd937f91da55e283df4f4e1731cb4819fd1c73eb3c28",
+      "code_elements": 0,
+      "fenced_blocks": 0,
+      "code_text_matches": true,
+      "raw_fence_text_matches": true,
+      "active_html": false
+    },
+    {
+      "path": "系统安全/Linux/Linux-Polkit-权限提升漏洞-CVE-2021-4034.md",
+      "render_scope": "metadata and independent editorial insertions; original body preserved",
+      "sha256": "91d4579609879e1b2515cdbba9f120045751fc1129555af067704cca0f9c290c",
+      "code_elements": 0,
+      "fenced_blocks": 0,
+      "code_text_matches": true,
+      "raw_fence_text_matches": true,
+      "active_html": false
+    },
+    {
+      "path": "系统安全/Linux/Linux-kernel-xfrm-ESP-Dirty-Frag-本地提权漏洞-CVE-2026-43284.md",
+      "render_scope": "metadata and independent editorial insertions; original body preserved",
+      "sha256": "04cf8d5f1d8b6cc576c4521114398540d41d7ec72d9c28fc2d3f3b3c6ccca88c",
+      "code_elements": 2,
+      "fenced_blocks": 0,
+      "code_text_matches": true,
+      "raw_fence_text_matches": true,
+      "active_html": false
+    },
+    {
+      "path": "系统安全/Linux/Linux-sudo-权限提升漏洞-CVE-2021-3156.md",
+      "render_scope": "metadata and independent editorial insertions; original body preserved",
+      "sha256": "8e6b0851d020035a92cdaffa6e06e86c4371e721db03255b2a1b67467d3cb889",
+      "code_elements": 0,
+      "fenced_blocks": 0,
+      "code_text_matches": true,
+      "raw_fence_text_matches": true,
+      "active_html": false
+    },
+    {
+      "path": "系统安全/Linux/Linux提权漏洞CVE-2025-27591.md",
+      "render_scope": "metadata and independent editorial insertions; original body preserved",
+      "sha256": "07fbdfc2a5ce4927ee74bee6bae2a8d30f718b7b67785d5ae3cb0a9a2622a9f3",
+      "code_elements": 2,
+      "fenced_blocks": 0,
+      "code_text_matches": true,
+      "raw_fence_text_matches": true,
+      "active_html": false
+    },
+    {
+      "path": "系统安全/Linux/Linux本地提权漏洞/Linux SCTP Stale Cookie UAF双平台提权材料审阅（CVE-2026-52924）.md",
+      "render_scope": "full-new-article",
+      "sha256": "db23edb39d7b5581d6dcdc338ad23769b46f9fe3b7f3581ce4daaad883588479",
+      "code_elements": 72,
+      "fenced_blocks": 1,
+      "code_text_matches": true,
+      "raw_fence_text_matches": true,
+      "active_html": false
+    },
+    {
+      "path": "系统安全/Linux/Linux本地提权漏洞/Linux XFRM NAT keepalive双重释放与Ubuntu专用EXP审阅（CVE-2026-72137）.md",
+      "render_scope": "full-new-article",
+      "sha256": "dfdac25d73099c1b494045f43ac0b2f8a397f76334cc5f25f7fe445640a36b9f",
+      "code_elements": 42,
+      "fenced_blocks": 1,
+      "code_text_matches": true,
+      "raw_fence_text_matches": true,
+      "active_html": false
+    },
+    {
+      "path": "系统安全/Linux/Linux本地提权漏洞/Linux tc_action RCU释放竞态与CentOS专用提权源码审阅（CVE-2026-53264）.md",
+      "render_scope": "full-new-article",
+      "sha256": "801c93138398fe28a23ed60da1877b347e8a7a26d92f7e8f2d793fae584aedc6",
+      "code_elements": 40,
+      "fenced_blocks": 1,
+      "code_text_matches": true,
+      "raw_fence_text_matches": true,
+      "active_html": false
+    },
+    {
+      "path": "系统安全/Linux/Linux本地提权漏洞/（CVE-2016-5195）脏牛Linux 本地提权.md",
+      "render_scope": "metadata and independent editorial insertions; original body preserved",
+      "sha256": "db5741b734fa0d81659588e7e3459ce56fa06de1f630e9c73173efa71fe25262",
+      "code_elements": 0,
+      "fenced_blocks": 0,
+      "code_text_matches": true,
+      "raw_fence_text_matches": true,
+      "active_html": false
+    },
+    {
+      "path": "系统安全/Linux/sudo-rs sudoedit路径竞态与越权写入（GHSA-f42v-x7gq-phc8）.md",
+      "render_scope": "full-new-article",
+      "sha256": "d654f54d185fb5333d406218a0e8d5312309a136102588ec4efbbfb4bb349952",
+      "code_elements": 7,
+      "fenced_blocks": 1,
+      "code_text_matches": true,
+      "raw_fence_text_matches": true,
+      "active_html": false
+    },
+    {
+      "path": "系统安全/Linux/【已复现】Linux 本地提权漏洞CVE-2025-6018、CVE-2025-6019.md",
+      "render_scope": "metadata and independent editorial insertions; original body preserved",
+      "sha256": "18f4150040c785d58741586bea545d167c0ab7da6aa5025f5da3897fb7cd4dba",
+      "code_elements": 0,
+      "fenced_blocks": 0,
+      "code_text_matches": true,
+      "raw_fence_text_matches": true,
+      "active_html": false
+    },
+    {
+      "path": "系统安全/Linux/【成功复现】Linux Kernel XFS Reflink本地权限提升漏洞CVE-2026-64600.md",
+      "render_scope": "metadata and independent editorial insertions; original body preserved",
+      "sha256": "fb620b7697dc224ac524aea82901d422abd0a8a742f7f8fc77098bc345238030",
+      "code_elements": 0,
+      "fenced_blocks": 0,
+      "code_text_matches": true,
+      "raw_fence_text_matches": true,
+      "active_html": false
+    },
+    {
+      "path": "系统安全/Linux/不容小觑的威胁： Linux提权漏洞，轻松利用却要修复 CVE-2025-32463.md",
+      "render_scope": "metadata and independent editorial insertions; original body preserved",
+      "sha256": "b3ef97f4cb51a5b76a7483184d8539ee1aaef003449156ee148d039133e009b3",
+      "code_elements": 3,
+      "fenced_blocks": 0,
+      "code_text_matches": true,
+      "raw_fence_text_matches": true,
+      "active_html": false
+    },
+    {
       "path": "系统安全/Windows/Windows本地提权漏洞/GetProcessHandleFromHwnd保护进程边界与PPLwindow分析.md",
       "render_scope": "full-new-article",
       "sha256": "7189dd9eb9d88a8cf1037eac97473ebcd82183e8c08d2dc5dcbb5745a3d13331",
@@ -403,17 +603,335 @@
     }
   ],
   "remote_render": {
-    "commit": "803404d25e4e4203b8feb1ec9320045b9ceea315",
-    "articles_viewed": 20,
-    "fenced_blocks_compared": 15,
+    "completed_head": "8aa033b3346570b266ed944889e4d63011bcd51e",
+    "articles_viewed": 35,
+    "existing_append_footers_viewed": 2,
+    "fenced_blocks_compared": 21,
     "copy_control_values_match_except_terminal_LF": true,
-    "screenshots_inspected": 6,
-    "articles_with_screenshots": 5,
     "os_clipboard_verified": false,
-    "new15_remote_render": "pending after publication"
+    "remaining": "8 new articles and12 existing editorial changes await published Preview review"
   },
   "poc_executed": false,
   "example_targets_requested": false,
   "dependencies_installed": false,
-  "redaction_performed": false
+  "redaction_performed": false,
+  "existing_articles_updated": 14,
+  "existing_editorial_corrections": [
+    {
+      "target": "系统安全/Linux/不容小觑的威胁： Linux提权漏洞，轻松利用却要修复 CVE-2025-32463.md",
+      "before_sha256": "6cb96fdee2daf024b1478ea217052b2746a9934dec1bc2d324b907ffa8dc2b4e",
+      "after_sha256": "b3ef97f4cb51a5b76a7483184d8539ee1aaef003449156ee148d039133e009b3",
+      "field_changes": [
+        {
+          "field": "version",
+          "before": null,
+          "after": "version: \"sudo 1.9.14–1.9.17；不包含1.9.17p1\""
+        },
+        {
+          "field": "fixed_version",
+          "before": null,
+          "after": "fixed_version: \"sudo 1.9.17p1；发行版回补另核\""
+        },
+        {
+          "field": "prerequisites",
+          "before": "prerequisites: \"本地用户；称sudo1.9.14–1.9.17所有p修订；Docker实验链接\"",
+          "after": "prerequisites: \"本地普通用户；支持NSS配置的系统及易受影响sudo；不要求用户已有sudoers授权\""
+        },
+        {
+          "field": "verification_source",
+          "before": null,
+          "after": "verification_source: \"https://www.openwall.com/lists/oss-security/2025/06/30/3\""
+        },
+        {
+          "field": "side_effects",
+          "before": "side_effects: \"原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响\"",
+          "after": "side_effects: \"公开EXP创建/tmp暂存树、写C源码/NSS配置并编译共享库，以root执行命令后rm -rf清理；所链接容器run.sh含--privileged，不是安全隔离证明\""
+        }
+      ],
+      "original_body_preserved": true
+    },
+    {
+      "target": "Web安全/其他软件/杂项/CVE-2025-32462&CVE-2025-32463.md",
+      "before_sha256": "a88cfa5c6dc4dfc2c1e33e05e6ae26308a40cc21c2094b6a782a1fedb93ec33c",
+      "after_sha256": "059f6709c5571a8277066d70b1d55f5ff1c3ddbc9323b26e52b66369a98d3948",
+      "field_changes": [
+        {
+          "field": "version",
+          "before": null,
+          "after": "version: \"32462：sudo1.8.8–1.9.17；32463：sudo1.9.14–1.9.17\""
+        },
+        {
+          "field": "fixed_version",
+          "before": null,
+          "after": "fixed_version: \"两者上游均sudo1.9.17p1；发行版按各CVE回补\""
+        },
+        {
+          "field": "prerequisites",
+          "before": "prerequisites: \"32462需sudoers主机范围规则；32463文称1.9.14起chroot在策略评估前，精确修复版本缺失\"",
+          "after": "prerequisites: \"32462需已存在针对其他主机的sudoers授权；32463在支持NSS系统上不需sudoers授权，本地可控chroot目录即可进入漏洞路径\""
+        },
+        {
+          "field": "verification_source",
+          "before": null,
+          "after": "verification_source: \"https://www.openwall.com/lists/oss-security/2025/06/30/2; https://www.openwall.com/lists/oss-security/2025/06/30/3\""
+        }
+      ],
+      "original_body_preserved": true
+    },
+    {
+      "target": "系统安全/Linux/Linux-DirtyPipe-权限提升漏洞-CVE-2022-0847.md",
+      "before_sha256": "3a74c92ee7b03cbcfa0bfcbf42ba569014e23ee657f69da94f32308d2f15cab0",
+      "after_sha256": "346623caee022f58d1f9fd937f91da55e283df4f4e1731cb4819fd1c73eb3c28",
+      "field_changes": [
+        {
+          "field": "version",
+          "before": null,
+          "after": "version: \"Linux5.8起且未包含修复；5.10/5.15/5.16分支需排除已修复版本\""
+        },
+        {
+          "field": "fixed_version",
+          "before": null,
+          "after": "fixed_version: \"5.10.102、5.15.25、5.16.11；发行版回补包另核\""
+        },
+        {
+          "field": "prerequisites",
+          "before": "prerequisites: \"Linux>=5.8但应排除修复版；需可读目标，PoC为x86_64 SUID程序，页内写入受边界限制\"",
+          "after": "prerequisites: \"本地执行且目标可读；覆盖不能跨页边界、不能从页边界开始、不能扩展文件；本文内嵌ELF为x86_64 SUID利用变体\""
+        },
+        {
+          "field": "verification_source",
+          "before": null,
+          "after": "verification_source: \"https://dirtypipe.cm4all.com/\""
+        }
+      ],
+      "original_body_preserved": true
+    },
+    {
+      "target": "系统安全/Linux/Linux-Polkit-权限提升漏洞-CVE-2021-4034.md",
+      "before_sha256": "6cc95862b97e592e4aee58db3dbcd37968f622e0203637d505c37c05ea5f7a53",
+      "after_sha256": "91d4579609879e1b2515cdbba9f120045751fc1129555af067704cca0f9c290c",
+      "field_changes": [
+        {
+          "field": "version",
+          "before": null,
+          "after": "version: \"pkexec自2009年引入至修复前的代码；2009为年份不是polkit版本\""
+        },
+        {
+          "field": "fixed_version",
+          "before": null,
+          "after": "fixed_version: \"pkexec修复提交a2bf5c9c83b6ae46cbd5c779d3055bff81ded683；发行版安全包另核\""
+        },
+        {
+          "field": "prerequisites",
+          "before": "prerequisites: \"本地非特权、SUID pkexec、硬编码amd64库；正文版本Polkit > 2009无语义\"",
+          "after": "prerequisites: \"本地非特权用户；易受影响且具SUID权限的pkexec；本文Python内嵌共享库为amd64，不能代表漏洞原语只限该架构\""
+        },
+        {
+          "field": "verification_source",
+          "before": null,
+          "after": "verification_source: \"https://www.qualys.com/2022/01/25/cve-2021-4034/pwnkit.txt\""
+        }
+      ],
+      "original_body_preserved": true
+    },
+    {
+      "target": "系统安全/Linux/Linux-sudo-权限提升漏洞-CVE-2021-3156.md",
+      "before_sha256": "81b103014743aea5afe26f842789ac57a0756cde1e301db82642750b7fece14a",
+      "after_sha256": "8e6b0851d020035a92cdaffa6e06e86c4371e721db03255b2a1b67467d3cb889",
+      "field_changes": [
+        {
+          "field": "version",
+          "before": null,
+          "after": "version: \"sudo1.8.2–1.8.31p2及1.9.0–1.9.5p1\""
+        },
+        {
+          "field": "fixed_version",
+          "before": null,
+          "after": "fixed_version: \"sudo1.9.5p2；发行版回补另核\""
+        },
+        {
+          "field": "verification_source",
+          "before": null,
+          "after": "verification_source: \"https://www.openwall.com/lists/oss-security/2021/01/26/3\""
+        }
+      ],
+      "original_body_preserved": true
+    },
+    {
+      "target": "系统安全/Linux/Linux本地提权漏洞/（CVE-2016-5195）脏牛Linux 本地提权.md",
+      "before_sha256": "398c9380e6a1ee3d1bd12bfa1a6de64347039b7a246cd7186fc44fa5640ae0ff",
+      "after_sha256": "db5741b734fa0d81659588e7e3459ce56fa06de1f630e9c73173efa71fe25262",
+      "field_changes": [
+        {
+          "field": "version",
+          "before": null,
+          "after": "version: \"Linux存在未修复COW竞态的历史分支；不能把文中Android准备环境概括为全部Linux版本\""
+        },
+        {
+          "field": "fixed_version",
+          "before": null,
+          "after": "fixed_version: \"上游19be0eaffa3ac7d8eb6784ad9bdbc7d67ed8e619；4.8分支4.8.3修复，旧分支和Android按回补核对\""
+        },
+        {
+          "field": "verification_source",
+          "before": null,
+          "after": "verification_source: \"https://dirtycow.ninja/; https://github.com/torvalds/linux/commit/19be0eaffa3ac7d8eb6784ad9bdbc7d67ed8e619\""
+        }
+      ],
+      "original_body_preserved": true
+    },
+    {
+      "target": "系统安全/Linux/Linux提权漏洞CVE-2025-27591.md",
+      "before_sha256": "2fc70b479588b7c8b8657dd96b35ef2cf3760eca216ee42cca69866668f5803c",
+      "after_sha256": "07fbdfc2a5ce4927ee74bee6bae2a8d30f718b7b67785d5ae3cb0a9a2622a9f3",
+      "field_changes": [
+        {
+          "field": "version",
+          "before": null,
+          "after": "version: \"Below<0.9.0；是否可利用还取决于实际日志目录权限及特权服务行为\""
+        },
+        {
+          "field": "fixed_version",
+          "before": null,
+          "after": "fixed_version: \"Below0.9.0\""
+        },
+        {
+          "field": "prerequisites",
+          "before": "prerequisites: \"Below<0.9.0，root服务及/var/log/below全局可写，本地非特权用户\"",
+          "after": "prerequisites: \"本地普通用户可控制/var/log/below/error_root.log；root运行Below及易受影响日志权限处理可触发；不能由普通shell重定向自动获得root写权限\""
+        },
+        {
+          "field": "verification_source",
+          "before": null,
+          "after": "verification_source: \"https://security.opensuse.org/2025/03/12/below-world-writable-log-dir.html\""
+        }
+      ],
+      "original_body_preserved": true
+    },
+    {
+      "target": "系统安全/Linux/【已复现】Linux 本地提权漏洞CVE-2025-6018、CVE-2025-6019.md",
+      "before_sha256": "1566295907db69b4f47d8dfd8de4df773a9e8e22b6bb4eeb596afeaa730a0313",
+      "after_sha256": "18f4150040c785d58741586bea545d167c0ab7da6aa5025f5da3897fb7cd4dba",
+      "field_changes": [
+        {
+          "field": "version",
+          "before": null,
+          "after": "version: \"6018：SUSE15特定PAM调用顺序/环境配置；6019：未修复libblockdev XFS resize路径，含3.3.1之前主线及发行版回补差异\""
+        },
+        {
+          "field": "fixed_version",
+          "before": null,
+          "after": "fixed_version: \"6019上游3.3.1及其他维护分支回补；6018由各SUSE维护分支pam-config/PAM补丁处理\""
+        },
+        {
+          "field": "verification_source",
+          "before": null,
+          "after": "verification_source: \"https://cdn2.qualys.com/2025/06/17/suse15-pam-udisks-lpe.txt\""
+        },
+        {
+          "field": "side_effects",
+          "before": "side_effects: \"临时PAM/SSH及udisks策略修改有登录/磁盘管理副作用，应补谨慎步骤和回滚\"",
+          "after": "side_effects: \"修改用户PAM环境；构造XFS镜像及SUID文件、分配loop设备、临时挂载和resize；可改变权限/磁盘状态，退出进程不保证卸载清理\""
+        }
+      ],
+      "original_body_preserved": true
+    },
+    {
+      "target": "系统安全/Linux/Linux-Copy-Fail-本地提权漏洞-CVE-2026-31431.md",
+      "before_sha256": "1b49070286f8c189333c348aa186f73b8654307f51f6753ba969ccbcff88445b",
+      "after_sha256": "0ed85636003c85f4ede4b65bf6460583408d70668b133414863205c5cb357025",
+      "field_changes": [
+        {
+          "field": "version",
+          "before": null,
+          "after": "version: \"Linux4.14起未含修复的AF_ALG AEAD路径；发行版回补另核\""
+        },
+        {
+          "field": "fixed_version",
+          "before": null,
+          "after": "fixed_version: \"5.10.254、5.15.204、6.1.170、6.6.137、6.12.85、6.18.22、6.19.12、7.0\""
+        },
+        {
+          "field": "verification_source",
+          "before": null,
+          "after": "verification_source: \"https://www.cve.org/CVERecord?id=CVE-2026-31431; https://github.com/theori-io/copy-fail-CVE-2026-31431\""
+        },
+        {
+          "field": "side_effects",
+          "before": "side_effects: \"原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响\"",
+          "after": "side_effects: \"原作者PoC通过AF_ALG与splice改写/usr/bin/su页缓存并执行su；无独立恢复逻辑；容器共享宿主内核，缓存修改可影响其他进程\""
+        }
+      ],
+      "original_body_preserved": true
+    },
+    {
+      "target": "系统安全/Linux/Linux-kernel-xfrm-ESP-Dirty-Frag-本地提权漏洞-CVE-2026-43284.md",
+      "before_sha256": "e11d3b12e7b8976c0390e9285401d3d246f6d428e489452c19a93a3f1162abec",
+      "after_sha256": "04cf8d5f1d8b6cc576c4521114398540d41d7ec72d9c28fc2d3f3b3c6ccca88c",
+      "field_changes": [
+        {
+          "field": "fixed_version",
+          "before": null,
+          "after": "fixed_version: \"43284与43500分支修复不同；43284例6.6.138/6.12.87，43500例6.6.140/6.12.88；完整分支见两条CNA记录\""
+        },
+        {
+          "field": "verification_source",
+          "before": null,
+          "after": "verification_source: \"https://www.cve.org/CVERecord?id=CVE-2026-43284; https://www.cve.org/CVERecord?id=CVE-2026-43500; https://github.com/V4bel/dirtyfrag\""
+        },
+        {
+          "field": "side_effects",
+          "before": "side_effects: \"rmmod错误被吞、内建模块黑名单无效需提示；drop_caches不是可靠修复，业务中断警告已有应保留\"",
+          "after": "side_effects: \"ESP改写SUID程序页缓存；RxRPC路线改写/etc/passwd页缓存并可能运行su、读取shadow；本地UDP/Netlink与模块自动加载；缓存篡改、root shell及内核故障风险\""
+        }
+      ],
+      "original_body_preserved": true
+    },
+    {
+      "target": "系统安全/Linux/【成功复现】Linux Kernel XFS Reflink本地权限提升漏洞CVE-2026-64600.md",
+      "before_sha256": "c5835b04d5d0e94b64271b1963020bba50e2c807bb82d935ca06d1f43cd819d0",
+      "after_sha256": "fb620b7697dc224ac524aea82901d422abd0a8a742f7f8fc77098bc345238030",
+      "field_changes": [
+        {
+          "field": "prerequisites",
+          "before": "prerequisites: \"本地普通用户、未修复>=4.11、XFS reflink=1、可读目标；包分支文本粘连\"",
+          "after": "prerequisites: \"本地用户；未修复内核；XFS reflink=1；同一XFS上同时有可读目标和用户可写目录\""
+        },
+        {
+          "field": "fixed_version",
+          "before": null,
+          "after": "fixed_version: \"5.15.212、6.1.178、6.6.145、6.12.96、6.18.39、7.1.4、7.2；发行版回补另核\""
+        },
+        {
+          "field": "verification_source",
+          "before": null,
+          "after": "verification_source: \"https://cdn2.qualys.com/advisory/2026/07/22/RefluXFS.txt; https://www.cve.org/CVERecord?id=CVE-2026-64600\""
+        },
+        {
+          "field": "side_effects",
+          "before": "side_effects: \"原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响\"",
+          "after": "side_effects: \"RefluXFS修改原文件的磁盘块，跨重启持久，并可能保留SUID；不是仅页缓存临时变化，必须恢复目标/磁盘快照\""
+        }
+      ],
+      "original_body_preserved": true
+    }
+  ],
+  "nextjs_correction": {
+    "path": "Web安全/其他软件/杂项/CVE-2024-34351 漏洞复现 poc (超大规模).md",
+    "before_sha256": "304db6b2f76dd5748ea01c56fcee672150d715b56922ad0e9c8c9233c6490c75",
+    "after_sha256": "7906529cedd0156d68ea4afc9cffef2232805187d9282d5602b4a385560d0f00",
+    "source": "https://github.com/vercel/next.js/security/advisories/GHSA-fr5h-rqp8-mj6g",
+    "metadata_changes": {
+      "identifier_role: \"primary\"": "identifier_role: \"reference\"",
+      "primary_identifiers: \"CVE-2024-34351\"": "primary_identifiers: \"\"",
+      "referenced_identifiers: \"\"": "referenced_identifiers: \"CVE-2024-34351; GHSA-fr5h-rqp8-mj6g\"",
+      "record_type: \"vulnerability\"": "record_type: \"analysis\"",
+      "document_type: \"Next.js SSRF复现与疑似编号错配模板\"": "document_type: \"图片优化器抓取行为分析；原CVE编号不匹配\"",
+      "prerequisites: \"文称<14.1.1；实际GET /_next/image请求任意外部URL，需图片remotePatterns/domains等部署配置\"": "prerequisites: \"本文仅测试GET /_next/image；需核对remotePatterns/domains、重定向及网络边界；未证实CVE-2024-34351\""
+    },
+    "new_metadata_field": "verification_source",
+    "body_operation": "one independent editorial insertion; original body exact restoration verified",
+    "original_body_unchanged": true,
+    "inserted_note": "\n## 2026-10-03 编号归属更正\n\n[Next.js 官方 GHSA-fr5h-rqp8-mj6g](https://github.com/vercel/next.js/security/advisories/GHSA-fr5h-rqp8-mj6g)明确将 CVE-2024-34351 归于 Server Actions：影响范围为 >=13.4 且 <14.1.1，需自托管、使用 Server Actions，并由 Action 重定向到以 `/` 开头的相对路径；请求的 Host 参与该风险。官方修复为14.1.1。\n\n下文实际请求的是 `/_next/image`，其HTTP/DNS回连只证明图片优化器发起取图，不能用来验证该 Server Actions 编号，也不能单独证明越过图片域名许可或内网边界。因此本次将该编号从本篇确认主编号调整为比较/引用编号，文档改列 analysis；没有为图片行为猜配另一个CVE。正文题名和技术样例仍作为原始归档保留，不改变旧路径、请求、模板标识符或公开值。\n\n本次仅核对官方通报与已存正文，未运行模板、请求DNSlog/目标或验证原作者的成功声明。后文旧版本/编号解释须按本节边界阅读。\n"
+  }
 }

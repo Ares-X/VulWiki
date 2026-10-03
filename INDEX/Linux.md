@@ -68,6 +68,10 @@
 
 - [Kernel-hack-drill and a new approach to exploiting CVE-2024-50264 in the Linux kernel](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/Kernel-hack-drill%20and%20a%20new%20approach%20to%20exploiting%20CVE-2024-50264%20in%20t.md) [analysis; not-reproduced; needs-review]
 
+## Linux AppArmor；sudo exec_mailer；Postfix
+
+- [AppArmor confused-deputy与sudo邮件链本地提权（CVE-2026-23268）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/AppArmor%20confused-deputy%E4%B8%8Esudo%E9%82%AE%E4%BB%B6%E9%93%BE%E6%9C%AC%E5%9C%B0%E6%8F%90%E6%9D%83%EF%BC%88CVE-2026-23268%EF%BC%89.md) [analysis; not-reproduced; needs-review]
+
 ## Linux FUSE readdir page cache
 
 - [【原作者复现通告】Linux FUSE page cache 本地权限提升漏洞CVE-2026-31694安全风险通告](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/%E3%80%90%E5%B7%B2%E5%A4%8D%E7%8E%B0%E3%80%91Linux%20FUSE%20page%20cache%20%E6%9C%AC%E5%9C%B0%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87%E6%BC%8F%E6%B4%9ECVE-2026-31694%E5%AE%89%E5%85%A8%E9%A3%8E%E9%99%A9%E9%80%9A%E5%91%8A.md) [advisory; not-reproduced; needs-review]
@@ -117,6 +121,23 @@
 ## Linux ip6_tunnel VLAN处理
 
 - [【高危漏洞预警】Linux内核IP6隧道漏洞CVE-2026-23003](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/%E3%80%90%E9%AB%98%E5%8D%B1%E6%BC%8F%E6%B4%9E%E9%A2%84%E8%AD%A6%E3%80%91Linux%E5%86%85%E6%A0%B8IP6%E9%9A%A7%E9%81%93%E6%BC%8F%E6%B4%9ECVE-2026-23003.md) [vulnerability; not-reproduced; needs-review]
+
+## Linux kernel / SCTP
+
+- [Linux SCTP Stale Cookie UAF双平台提权材料审阅（CVE-2026-52924）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/Linux%E6%9C%AC%E5%9C%B0%E6%8F%90%E6%9D%83%E6%BC%8F%E6%B4%9E/Linux%20SCTP%20Stale%20Cookie%20UAF%E5%8F%8C%E5%B9%B3%E5%8F%B0%E6%8F%90%E6%9D%83%E6%9D%90%E6%96%99%E5%AE%A1%E9%98%85%EF%BC%88CVE-2026-52924%EF%BC%89.md) [analysis; not-reproduced; active]
+
+## Linux kernel / XFRM NAT keepalive
+
+- [Linux XFRM NAT keepalive双重释放与Ubuntu专用EXP审阅（CVE-2026-72137）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/Linux%E6%9C%AC%E5%9C%B0%E6%8F%90%E6%9D%83%E6%BC%8F%E6%B4%9E/Linux%20XFRM%20NAT%20keepalive%E5%8F%8C%E9%87%8D%E9%87%8A%E6%94%BE%E4%B8%8EUbuntu%E4%B8%93%E7%94%A8EXP%E5%AE%A1%E9%98%85%EF%BC%88CVE-2026-72137%EF%BC%89.md) [analysis; not-reproduced; active]
+
+## Linux kernel / net/sched act_api
+
+- [Linux tc_action RCU释放竞态与CentOS专用提权源码审阅（CVE-2026-53264）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/Linux%E6%9C%AC%E5%9C%B0%E6%8F%90%E6%9D%83%E6%BC%8F%E6%B4%9E/Linux%20tc_action%20RCU%E9%87%8A%E6%94%BE%E7%AB%9E%E6%80%81%E4%B8%8ECentOS%E4%B8%93%E7%94%A8%E6%8F%90%E6%9D%83%E6%BA%90%E7%A0%81%E5%AE%A1%E9%98%85%EF%BC%88CVE-2026-53264%EF%BC%89.md) [analysis; not-reproduced; active]
+
+## Linux kernel nf_tables
+
+- [Linux nf_tables 事务回滚UAF公开触发材料（CVE-2026-23111）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/Linux%20nf_tables%20%E4%BA%8B%E5%8A%A1%E5%9B%9E%E6%BB%9AUAF%E5%85%AC%E5%BC%80%E8%A7%A6%E5%8F%91%E6%9D%90%E6%96%99%EF%BC%88CVE-2026-23111%EF%BC%89.md) [analysis; not-reproduced; needs-review]
+- [Linux nf_tables 双重释放与公开本地提权材料（CVE-2024-1086）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/Linux%20nf_tables%20%E5%8F%8C%E9%87%8D%E9%87%8A%E6%94%BE%E4%B8%8E%E5%85%AC%E5%BC%80%E6%9C%AC%E5%9C%B0%E6%8F%90%E6%9D%83%E6%9D%90%E6%96%99%EF%BC%88CVE-2024-1086%EF%BC%89.md) [analysis; not-reproduced; needs-review]
 
 ## Linux ksmbd
 
@@ -285,6 +306,10 @@
 ## sudo sudoedit
 
 - [Linux-sudo-权限提升漏洞-CVE-2023-22809](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/Linux-sudo-%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87%E6%BC%8F%E6%B4%9E-CVE-2023-22809.md) [vulnerability; not-reproduced; needs-review]
+
+## sudo-rs sudoedit
+
+- [sudo-rs sudoedit路径竞态与越权写入（GHSA-f42v-x7gq-phc8）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/sudo-rs%20sudoedit%E8%B7%AF%E5%BE%84%E7%AB%9E%E6%80%81%E4%B8%8E%E8%B6%8A%E6%9D%83%E5%86%99%E5%85%A5%EF%BC%88GHSA-f42v-x7gq-phc8%EF%BC%89.md) [analysis; not-reproduced; needs-review]
 
 ## util-linux wall
 
