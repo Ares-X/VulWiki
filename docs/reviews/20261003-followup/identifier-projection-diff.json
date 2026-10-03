@@ -1,0 +1,14 @@
+[
+  {
+    "path": "Web安全/开发框架/Fastjson/Fastjson 1.2.66-1.2.83 @JSONType资源探测链RCE CVE-2026-16723.md",
+    "intended_article": false,
+    "delta": {
+      "identifier_candidates": {
+        "before": [
+          "QVD-2026-43021"
+        ],
+        "after": []
+      }
+    }
+  }
+]

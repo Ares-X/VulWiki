@@ -1,0 +1,61 @@
+{
+  "original_pr_head": "ab34f4d8c95ba25fc7b2009ba9f1b17cea0e9a85",
+  "integrated_master": "39a4f62fcbdd9ca6be3810d6882efcc748ab82d8",
+  "existing_articles": 5660,
+  "existing_article_blob_mismatches": 0,
+  "new_articles": 6,
+  "new_articles_unchanged_from_pr": [
+    "Web安全/商业软件/Jellyfin/Jellyfin 多入口转码参数校验差异与FFmpeg参数注入（CVE-2026-35033）.md",
+    "Web安全/安全设备/Nuclei/Goja TypedArray偏移复用与Nuclei扫描端代码执行（CVE-2026-76819）.md",
+    "Web安全/开发框架/Gogs/Gogs Rebase参数注入的最终修补与公开模块副作用（CVE-2026-52806）.md",
+    "Web安全/开发框架/Lean/Lean超大字符串切片的语义错配与引用计数缺陷.md",
+    "Web安全/开发框架/graphql-ruby/graphql-ruby 授权异常被误判成功的执行器差异（GHSA-j7xr-4g94-r9h3）.md",
+    "系统安全/Linux/Linux本地提权漏洞/Linux OVS共享页标记丢失与三处生命周期修复（CVE-2026-89487等）.md"
+  ],
+  "unit_tests": 65,
+  "unit_test_result": "pass",
+  "quality": {
+    "baseline_issues_remaining": 5098,
+    "by_code": {
+      "embedded_code_candidate": 1,
+      "fingerprint_unverified": 800,
+      "identifier_inactive": 27,
+      "identifier_role_unknown": 215,
+      "noncontent_link_candidate": 30,
+      "path_legacy": 2,
+      "site_relative_link": 81,
+      "source_missing": 3854,
+      "unrecognized_identifier_namespace": 88
+    },
+    "documents": 5666,
+    "errors": 0,
+    "fatal_issues": 0,
+    "new_issues": 0,
+    "resolved_issues": 98,
+    "result": "no new debt; historical issues remain",
+    "warnings": 5098
+  },
+  "generated_consistency": {
+    "by_code": {
+      "embedded_code_candidate": 1,
+      "fingerprint_unverified": 800,
+      "identifier_inactive": 27,
+      "identifier_role_unknown": 215,
+      "noncontent_link_candidate": 30,
+      "path_legacy": 2,
+      "site_relative_link": 81,
+      "source_missing": 3854,
+      "unrecognized_identifier_namespace": 88
+    },
+    "different_files": [],
+    "documents": 5666,
+    "errors": 0,
+    "fatal_issues": 0,
+    "mode": "check",
+    "warnings": 5098
+  },
+  "baseline_modified": false,
+  "not_exercised": [
+    "Article PoCs, code, HTML, attachments, scanners and example targets"
+  ]
+}

@@ -1,0 +1,253 @@
+{
+  "task": "independent_static_review_of_public_OSSN_candidate_images",
+  "repo_edit": "none",
+  "article_path": "Web安全/云平台/OSSN/OSSN任意文件读取漏洞（CVE-2020-10560）.md",
+  "article_sha256": "de27243a179095b5f0ea6fabe91c21b64d6b35c08e99bf04e24ae36e27aacc7a",
+  "source_evidence": [
+    {
+      "url": "https://pingmaoer.github.io/2020/04/10/CVE-2020-10560-OSSN%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/",
+      "date": "2020-04-10",
+      "locator": "Guko article lines 4-8 identify title/date/OSSN 5.3 and earlier; lines 15-54 setup sequence and images 1-5; lines 57-81 key/database/output and images 6-9. Page retrieved as turn254view0."
+    },
+    {
+      "url": "https://blog.csdn.net/zzgslh/article/details/105436635",
+      "locator": "CSDN article content readable for lines 15-32; lines 21-32 show git clone, docker-compose, docker ps sequence and original image-alt refs. CSDN page lines 33 onward gated/obstructed by membership overlay; not used to infer unseen pixels. Guko cites this page at turn254view0 lines 83-86. Retrieved as turn255view0."
+    }
+  ],
+  "overall_finding": "All nine candidate pixels independently fit an ordered setup/verification narrative in the public Guko page. However the current VulWiki article has 15 missing timestamped attachment files; no candidate is proven byte-identical or uniquely identical to any of those 15. Treat nine as separately sourced step illustrations only, each inserted once with explicit source attribution. Preserve all 15 existing raw references as visible literal code per requester; do not repoint or delete them based on this review.",
+  "figures": [
+    {
+      "filename": "1.png",
+      "candidate_url": "https://pingmaoer.github.io/2020/04/10/CVE-2020-10560-OSSN%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/1.png",
+      "candidate_source_page": "https://pingmaoer.github.io/2020/04/10/CVE-2020-10560-OSSN%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/",
+      "published_date_on_page": "2020-04-10",
+      "source_locator": "Guko article image sequence: 1.png is the 1th embedded image; adjacent page text and step are cited in parent evidence. Guko lines per image: 1/2/3/4/5 map to turn254view0 lines 31-54; 6/7/8/9 map to lines 61-81.",
+      "pixel_sha256": "24265f2969f8e1967a612aad81baa31ff6d51c1ce6eff475c4b03acac3d5b945",
+      "pixel_dimensions": [
+        1134,
+        568
+      ],
+      "static_pixel_observation": "Docker compose启动输出日志",
+      "proposed_single_insertion": {
+        "after_line": 71,
+        "anchor": "2.然后使用docker-compose编译启动OSSN环境。",
+        "why": "图为compose启动输出，应跟在启动步骤之后，不应挪到仅clone说明后。"
+      },
+      "assessment": "step_correspondence_only_not_exact_recovery",
+      "original_attachment_sha_comparison": "impossible_original_file_missing"
+    },
+    {
+      "filename": "2.png",
+      "candidate_url": "https://pingmaoer.github.io/2020/04/10/CVE-2020-10560-OSSN%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/2.png",
+      "candidate_source_page": "https://pingmaoer.github.io/2020/04/10/CVE-2020-10560-OSSN%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/",
+      "published_date_on_page": "2020-04-10",
+      "source_locator": "Guko article image sequence: 2.png is the 2th embedded image; adjacent page text and step are cited in parent evidence. Guko lines per image: 1/2/3/4/5 map to turn254view0 lines 31-54; 6/7/8/9 map to lines 61-81.",
+      "pixel_sha256": "c1ddcad3f470ebd6066d614eac5fcc62373196996b78c0ebe8dca4d31348c7fe",
+      "pixel_dimensions": [
+        2438,
+        184
+      ],
+      "static_pixel_observation": "docker ps显示两容器运行与80端口映射",
+      "proposed_single_insertion": {
+        "after_line": 75,
+        "anchor": "3.编译启动完成，使用docker ps查看，表示环境启动成功。",
+        "why": "图为docker ps容器状态及端口映射，与此核验步骤相符。"
+      },
+      "assessment": "step_correspondence_only_not_exact_recovery",
+      "original_attachment_sha_comparison": "impossible_original_file_missing"
+    },
+    {
+      "filename": "3.png",
+      "candidate_url": "https://pingmaoer.github.io/2020/04/10/CVE-2020-10560-OSSN%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/3.png",
+      "candidate_source_page": "https://pingmaoer.github.io/2020/04/10/CVE-2020-10560-OSSN%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/",
+      "published_date_on_page": "2020-04-10",
+      "source_locator": "Guko article image sequence: 3.png is the 3th embedded image; adjacent page text and step are cited in parent evidence. Guko lines per image: 1/2/3/4/5 map to turn254view0 lines 31-54; 6/7/8/9 map to lines 61-81.",
+      "pixel_sha256": "d2be23d0ea5a7a40bc091a305e04f7713ec55dd7a434d73cbeaf33ed92d765fd",
+      "pixel_dimensions": [
+        3276,
+        2094
+      ],
+      "static_pixel_observation": "OSSN安装前置检查页与Next按钮",
+      "proposed_single_insertion": {
+        "after_line": 79,
+        "anchor": "4.使用通过浏览器访问OSSN环境，需要进行安装，点击下一步。",
+        "why": "图为安装前置条件页面，属于首次访问OSSN安装流程。"
+      },
+      "assessment": "step_correspondence_only_not_exact_recovery",
+      "original_attachment_sha_comparison": "impossible_original_file_missing"
+    },
+    {
+      "filename": "4.png",
+      "candidate_url": "https://pingmaoer.github.io/2020/04/10/CVE-2020-10560-OSSN%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/4.png",
+      "candidate_source_page": "https://pingmaoer.github.io/2020/04/10/CVE-2020-10560-OSSN%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/",
+      "published_date_on_page": "2020-04-10",
+      "source_locator": "Guko article image sequence: 4.png is the 4th embedded image; adjacent page text and step are cited in parent evidence. Guko lines per image: 1/2/3/4/5 map to turn254view0 lines 31-54; 6/7/8/9 map to lines 61-81.",
+      "pixel_sha256": "92de7217786eb1715aed237f6ed02fcd1b1518765866fad2cded4c374c997e36",
+      "pixel_dimensions": [
+        1998,
+        1260
+      ],
+      "static_pixel_observation": "OSSN Site Settings表单；字段排列对应正文DB/site参数",
+      "proposed_single_insertion": {
+        "after_line": 98,
+        "anchor": "6.进行网站设置，需要填写数据库信息和网站信息；数据库字段说明段之后。",
+        "why": "图为Site Settings数据库/站点配置表单，与字段配置步骤直接对应。"
+      },
+      "assessment": "step_correspondence_only_not_exact_recovery",
+      "original_attachment_sha_comparison": "impossible_original_file_missing"
+    },
+    {
+      "filename": "5.png",
+      "candidate_url": "https://pingmaoer.github.io/2020/04/10/CVE-2020-10560-OSSN%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/5.png",
+      "candidate_source_page": "https://pingmaoer.github.io/2020/04/10/CVE-2020-10560-OSSN%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/",
+      "published_date_on_page": "2020-04-10",
+      "source_locator": "Guko article image sequence: 5.png is the 5th embedded image; adjacent page text and step are cited in parent evidence. Guko lines per image: 1/2/3/4/5 map to turn254view0 lines 31-54; 6/7/8/9 map to lines 61-81.",
+      "pixel_sha256": "afd8e52c29ac64f498b485d63d007f243fa356fb6b76ac44afc77343ac125b7e",
+      "pixel_dimensions": [
+        1906,
+        776
+      ],
+      "static_pixel_observation": "OSSN管理员登录表单",
+      "proposed_single_insertion": {
+        "after_line": 106,
+        "anchor": "8.环境搭建完成。",
+        "why": "图为OSSN管理员登录表单，适合作为安装完成后的可见界面；不应放在“点击下一步”而仍在安装配置中的位置。"
+      },
+      "assessment": "step_correspondence_only_not_exact_recovery",
+      "original_attachment_sha_comparison": "impossible_original_file_missing"
+    },
+    {
+      "filename": "6.png",
+      "candidate_url": "https://pingmaoer.github.io/2020/04/10/CVE-2020-10560-OSSN%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/6.png",
+      "candidate_source_page": "https://pingmaoer.github.io/2020/04/10/CVE-2020-10560-OSSN%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/",
+      "published_date_on_page": "2020-04-10",
+      "source_locator": "Guko article image sequence: 6.png is the 6th embedded image; adjacent page text and step are cited in parent evidence. Guko lines per image: 1/2/3/4/5 map to turn254view0 lines 31-54; 6/7/8/9 map to lines 61-81.",
+      "pixel_sha256": "fbf0e4f455d50c932ff7b239be7600dbd38e4b66eda14090b12aaebf3e078b44",
+      "pixel_dimensions": [
+        2206,
+        968
+      ],
+      "static_pixel_observation": "docker exec进入MySQL客户端并选择ossn数据库",
+      "proposed_single_insertion": {
+        "after_line": 119,
+        "anchor": "验证详情：1.连接mysql并检查数据库。",
+        "why": "图显示进入MySQL并列出ossn数据库，匹配本地数据库检查的验证前提。"
+      },
+      "assessment": "step_correspondence_only_not_exact_recovery",
+      "original_attachment_sha_comparison": "impossible_original_file_missing"
+    },
+    {
+      "filename": "7.png",
+      "candidate_url": "https://pingmaoer.github.io/2020/04/10/CVE-2020-10560-OSSN%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/7.png",
+      "candidate_source_page": "https://pingmaoer.github.io/2020/04/10/CVE-2020-10560-OSSN%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/",
+      "published_date_on_page": "2020-04-10",
+      "source_locator": "Guko article image sequence: 7.png is the 7th embedded image; adjacent page text and step are cited in parent evidence. Guko lines per image: 1/2/3/4/5 map to turn254view0 lines 31-54; 6/7/8/9 map to lines 61-81.",
+      "pixel_sha256": "617f239c052b4bef5cbfe7ee182c1a90bc399c8922078b3ba018d00e89b81f90",
+      "pixel_dimensions": [
+        2300,
+        756
+      ],
+      "static_pixel_observation": "ossn_site_settings表及site_key查询值",
+      "proposed_single_insertion": {
+        "after_line": 121,
+        "anchor": "在正文第121行查询ossn_site_settings表的说明后，作为site_key所在表名图。",
+        "why": "图中执行show tables并明确圈出ossn_site_settings表名；仅作为识别表的截图。",
+        "sequence_order_after_line": 1
+      },
+      "assessment": "step_correspondence_only_not_exact_recovery",
+      "original_attachment_sha_comparison": "impossible_original_file_missing"
+    },
+    {
+      "filename": "8.png",
+      "candidate_url": "https://pingmaoer.github.io/2020/04/10/CVE-2020-10560-OSSN%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/8.png",
+      "candidate_source_page": "https://pingmaoer.github.io/2020/04/10/CVE-2020-10560-OSSN%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/",
+      "published_date_on_page": "2020-04-10",
+      "source_locator": "Guko article image sequence: 8.png is the 8th embedded image; adjacent page text and step are cited in parent evidence. Guko lines per image: 1/2/3/4/5 map to turn254view0 lines 31-54; 6/7/8/9 map to lines 61-81.",
+      "pixel_sha256": "4ad9e533f27e59dc2fb078d3a6401b51f8a782f95205c111ff36ca8180589193",
+      "pixel_dimensions": [
+        2154,
+        306
+      ],
+      "static_pixel_observation": "OSSN安装完成后的站点界面",
+      "proposed_single_insertion": {
+        "after_line": 121,
+        "sequence_order_after_line": 2,
+        "anchor": "在图7表名识别图之后、当前两条原始附件引用附近，作为site_key值查询/结果图。",
+        "why": "图是select value ... site_key查询和55e5dd7b结果，不是安装后站点/后台界面。"
+      },
+      "assessment": "step_correspondence_only_not_exact_recovery",
+      "original_attachment_sha_comparison": "impossible_original_file_missing"
+    },
+    {
+      "filename": "9.png",
+      "candidate_url": "https://pingmaoer.github.io/2020/04/10/CVE-2020-10560-OSSN%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/9.png",
+      "candidate_source_page": "https://pingmaoer.github.io/2020/04/10/CVE-2020-10560-OSSN%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/",
+      "published_date_on_page": "2020-04-10",
+      "source_locator": "Guko article image sequence: 9.png is the 9th embedded image; adjacent page text and step are cited in parent evidence. Guko lines per image: 1/2/3/4/5 map to turn254view0 lines 31-54; 6/7/8/9 map to lines 61-81.",
+      "pixel_sha256": "f2d2104ad8a9e0d24367a3afac339a5619fc3378c0cc81e728544a036efbe121",
+      "pixel_dimensions": [
+        1400,
+        372
+      ],
+      "static_pixel_observation": "poc结果截图显示读取passwd的输出",
+      "proposed_single_insertion": {
+        "after_line": 134,
+        "anchor": "验证过程：使用python3执行脚本并读取passwd的文字说明之后。",
+        "why": "图为passwd内容输出，只能放在结果说明之后；不得据此宣称本仓库复现。"
+      },
+      "assessment": "step_correspondence_only_not_exact_recovery",
+      "original_attachment_sha_comparison": "impossible_original_file_missing"
+    }
+  ],
+  "rejected_mappings": [
+    {
+      "candidate": "1.png",
+      "reject_current_original_ref_line": 66,
+      "reason": "Line 66 follows clone command; 1.png shows docker-compose startup output and source page places it after compose command. Candidate is a step match at line 71, not exact replacement for old ./images/0.png."
+    },
+    {
+      "candidate": "2.png",
+      "reject_current_original_ref_line": 71,
+      "reason": "Line 71 follows docker-compose; 2.png shows docker ps state, source page places it after docker ps. Use after line 75 instead."
+    },
+    {
+      "candidate": "3.png",
+      "reject_current_original_ref_line": 75,
+      "reason": "Line 75 follows docker ps; 3.png is browser installer prerequisites, so must follow first-visit installer text around line 79."
+    },
+    {
+      "candidate": "5.png",
+      "reject_current_original_ref_lines": [
+        84,
+        85
+      ],
+      "reason": "Pixels show admin login form, not intermediate “click next” installer page. Better after local environment-complete line 106; still only a step-equivalent screenshot."
+    },
+    {
+      "candidate": "7.png",
+      "reject_current_original_ref_lines": [
+        106,
+        119
+      ],
+      "reason": "Pixels show `use ossn; show tables;` and highlight `ossn_site_settings`; it does not show site_key value and does not match environment-complete/MySQL-host-connection steps. Place at table-identification step after line 121."
+    },
+    {
+      "candidate": "8.png",
+      "reject_current_original_ref_lines": [
+        123,
+        125
+      ],
+      "reason": "The recovery JSON labels it as installed site UI, but pixel inspection shows a SQL SELECT from ossn_site_settings for site_key and the returned value 55e5dd7b. Reject as setup-complete/admin UI; place after table identification at the site_key query step."
+    },
+    {
+      "candidate": "9.png",
+      "reject_current_original_ref_lines": [
+        132,
+        136
+      ],
+      "reason": "It is the passwd output screenshot, matching only after the prose describing the output (line 134); reject duplicated insertion and earlier placement before the result text."
+    }
+  ],
+  "preservation_boundary": "This is an independent placement review only. Keep all 15 raw old image references visibly available as literal code; append each of these nine public candidates no more than once with its exact source URL and a note that it is a public step-corresponding illustration, not recovered original. Do not assert that any existing raw ref is a duplicate based on unavailable old pixels.",
+  "safety": "Only static page/text and static PNG pixel inspection. No article code, PoC, HTML, scan, attachment, or sample target executed/accessed."
+}

@@ -1,0 +1,65 @@
+{
+  "scope": "shard-3.jsonl; read-only fidelity audit",
+  "articles": 699,
+  "article_hash_integrity": {
+    "verified": 699
+  },
+  "exact_archive_line_candidates": 376,
+  "candidate_paths": 218,
+  "candidate_status_counts": {
+    "reviewed_no_fidelity_finding": 242,
+    "reviewed_title_context": 124,
+    "confirmed_issue": 1,
+    "unknown": 9
+  },
+  "candidate_dispositions": {
+    "citation_line_retained_or_restructured": 21,
+    "title_or_heading_reframed": 124,
+    "confirmed_silent_replacement_of_conflicting_source_claim": 1,
+    "identifier_normalized_with_internal_request_evidence": 1,
+    "patch_provenance_wording_changed_external_identity_unverified": 1,
+    "removed_nonprose_html_metadata": 13,
+    "static_command_description_correction_with_execution_unverified": 1,
+    "removed_format_separator": 19,
+    "version_claim_correction_retains_original_claim_and_conflict": 1,
+    "source_footer_provenance_qualification": 84,
+    "quoted_markup_escaped_for_display": 2,
+    "source_homoglyph_normalization_and_inconsistent_claim_qualification": 6,
+    "font_wrapper_removed_text_preserved": 9,
+    "format_wrapper_removed_text_checked": 14,
+    "prior_contextual_review": 6,
+    "product_spelling_corrected_with_article_note": 1,
+    "dead_javascript_video_widget_label_only": 1,
+    "captured_markup_or_short_fragment": 4,
+    "obvious_source_typo_corrected_with_article_note": 2,
+    "changed_claim_qualified_by_current_article_context": 3,
+    "obvious_transcription_error_corrected_with_article_note": 1,
+    "captured_page_chrome_or_metadata_restoration": 29,
+    "removed_or_normalized_captured_site_chrome": 24,
+    "translated_from_mojibake_semantics_unverifiable": 8
+  },
+  "confirmed_findings": 1,
+  "unknown_candidate_entries": 9,
+  "method": [
+    "Read AGENTS.md, CONTRIBUTING.md and docs/CONTENT-SCHEMA.md.",
+    "Per-article programmatic check of archive blob, merged blob, working SHA, changed-line candidates; reused the parent-provided exact (path, archive body line, full original text) prior-review evidence.",
+    "Reviewed 376 exact archive-line candidates against their current article lines/context and prior exact line-level/final-context notes; this did not mean a separate external technical fact-check for every article.",
+    "Manually rechecked high-risk candidates for explanations, request/code text, visible public values, homoglyph/translation changes, and context around the changed source lines.",
+    "Compared exact archived HTTP endpoint source to unchanged request paths in Flowise; checked the CVE conflict against title/frontmatter/patch paths; checked the parent-review rationale for the same exact original line."
+  ],
+  "limitations": [
+    "Fixed review snapshot is shard-3.jsonl working text; the shared live worktree may now contain later parent changes, recorded separately in ledger and not attributed to the reviewed snapshot.",
+    "This is not 699 independent article-by-article technical validation. The other 481 article paths have verified byte provenance and programmatic scans but no exact archive-line candidate in the parent set.",
+    "No internet or external source verification.",
+    "No article code, PoC, scanner, payload or HTML executed; no example target contacted.",
+    "CVE assignment/provenance conflicts, ScreenConnect mojibake prose meaning, and any remaining semantically changed non-boilerplate candidates remain unknown unless specifically listed as a finding.",
+    "No repository files changed; outputs only in /tmp/vulwiki-second-polish-20261003/fidelity-3/."
+  ],
+  "outputs": [
+    "ledger.jsonl",
+    "candidate-dispositions.jsonl",
+    "findings.json",
+    "unknowns.json",
+    "report.json"
+  ]
+}

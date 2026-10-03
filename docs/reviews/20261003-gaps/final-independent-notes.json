@@ -1,0 +1,71 @@
+{
+  "schema": "vulwiki-final-independent-notes/v2",
+  "scope": "只读核对 27 项 article-plan.json 的新增/替换说明及指定 source evidence；不修改仓库，不执行文章内容或目标。 最终复核冻结的28篇计划及Fuzzing101官方参考材料；不修改仓库，不执行文章内容。",
+  "reviewed_articles": 28,
+  "special_checks": [
+    {
+      "topic": "GiveWP",
+      "result": "correct",
+      "evidence": "新增步骤指向 EQSTLab CVE-2024-5932 vulnerable-environment；未错链至 CVE-2024-8353。"
+    },
+    {
+      "topic": "ClamAV identifier attribution",
+      "result": "correct_as_worded",
+      "evidence": "正文编号核验写 CNA 已撤销 CVE-2026-0866，并非写 CERT/CC 撤销 CVE 编号；CERT/CC VU#976247 用于说明其撤回漏洞定性。NVD 当前条目标记 Rejected。"
+    },
+    {
+      "topic": "BCEL",
+      "result": "correct",
+      "evidence": "新增说明明确区分同题转载 TestBcel/长变体与 Apache HelloWorldBuilder 官方原例；没有把官方示例冒充原文，也未补造代码。"
+    },
+    {
+      "topic": "Netgear",
+      "result": "correct",
+      "evidence": "pack4-additional 指向 CTFIOT 镜像原文第78行已有 `$1$redacted`；说明称来源占位符而非本轮脱敏，且未猜补。"
+    },
+    {
+      "topic": "Lodash",
+      "result": "correct",
+      "evidence": "3 处恢复文本与同题镜像定位相符；“4.17.11之前”原样保留，并明示范围另待权威核查。"
+    },
+    {
+      "topic": "OSSN",
+      "result": "correct",
+      "evidence": "15 条旧附件 raw 引用完整保留在附录；9 张有来源的图明确不是原件恢复。像素审查支持 7 图放在表名识别步骤、8 图放在 site_key 查询步骤。"
+    }
+  ],
+  "issues": [],
+  "unresolved": [],
+  "resolved_previous_findings": [
+    {
+      "id": "clamav-unverified-fixed-version-claim-remains",
+      "status": "resolved_in_frozen_28_article_plan",
+      "path": "Web安全/网络设备/Cisco/CVE-2026-0866 Cisco ClamAV ZIP扫描引擎绕过漏洞.md",
+      "evidence": "最终 plan 在“官方修复”下注释明确说旧文 1.4.2/1.0.8 仅是历史来源主张、不能作更新阈值，且 CERT/CC 所引 Cisco 说明未给该问题修复版本；旧原文继续保留但边界明确。实际文件 SHA256 与 article-plan final_sha256 相符。"
+    }
+  ],
+  "final_checks": [
+    {
+      "path": "Web安全/其他软件/杂项/Fuzzing101 Exercise 4 - LibTIFF CVE-2016-9297&CVE-2016-9448分析.md",
+      "result": "consistent_with_primary_source",
+      "article_plan_sha256": "9c620fcd7405c0f19dadc617dbbab6cd6a06d35f7db287ed647717297da4a009",
+      "actual_repo_sha256": "9c620fcd7405c0f19dadc617dbbab6cd6a06d35f7db287ed647717297da4a009",
+      "primary_source": {
+        "url": "https://raw.githubusercontent.com/antonio-morales/Fuzzing101/18e00c1626a2/Exercise%204/Readme.md",
+        "local_copy": "/tmp/vulwiki-gaps-20261003/fuzzing-primary-Readme.md",
+        "commit": "18e00c1626a2",
+        "sha256": "f73bbf07f139d3537641c297a17609f705ba68c612355911effeaf0d52dcae63",
+        "checks": "三个新增命令块对应该固定版本README中的目录创建、libtiff 4.0.4下载/解压及 LLVM_CONFIG=llvm-config-11、afl-clang-lto、ASAN构建与afl-fuzz命令；注释给出在解压后的 tiff-4.0.4 目录执行的上下文。"
+      },
+      "license": {
+        "source": "https://raw.githubusercontent.com/antonio-morales/Fuzzing101/18e00c1626a2/LICENSE",
+        "local_copy": "/tmp/vulwiki-gaps-20261003/fuzzing-primary-LICENSE",
+        "repo_copy": "docs/licenses/Fuzzing101-Apache-2.0.txt",
+        "license": "Apache License 2.0",
+        "repo_copy_sha256_matches_source": true
+      },
+      "scope_check": "参考块标为非 hu1y40 原文复原；上游环境 Ubuntu 20.04.2 LTS，命令要求 llvm-config-11/AFL 工具链；说明明确 Exercise 4针对 CVE-2016-9297，不用于证明 CVE-2016-9448 的补丁回归分析。其余指针调试说明保留为归档缺口。",
+      "decision": "no_issue"
+    }
+  ]
+}

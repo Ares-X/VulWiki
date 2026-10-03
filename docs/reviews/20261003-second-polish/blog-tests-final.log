@@ -1,0 +1,15 @@
+✔ catalog includes only content roots, preserves Unicode routes and generates double-extension aliases (12.261708ms)
+✔ site consumes admission and canonical decisions without promoting legacy CVEs or dropping source observations (7.456ms)
+✔ index categories virtualize navigation while preserving legacy routes, aliases, and identifier provenance (7.231833ms)
+✔ search preserves exact CVE identifiers, requires all terms, and supports full text separately (0.34325ms)
+✔ identifier search reports primary, candidate, reference, and body-only CVE roles without boundary promotion (0.32525ms)
+✔ CNVD, CNNVD and XVE matches do not assign a shorter identifier role to a different numbered issue (0.236375ms)
+✔ Markdown requests use the build version on first load and navigation without changing deep links (1.341292ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 83.947292

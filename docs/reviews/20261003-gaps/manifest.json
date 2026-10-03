@@ -1,0 +1,176 @@
+{
+  "schema": "vulwiki-gap-repair-evidence/v1",
+  "date": "2026-10-03",
+  "content_base": "3ec8b1b7868606995eb6d9b2d101fcbfd882581e",
+  "blog_base": "49b92bcb",
+  "scope": "28 repaired articles; full5654 input/output article hash and static resource checks",
+  "claim_boundaries": {
+    "corresponding_source_text_blocks": 14,
+    "new_official_reference_blocks": 3,
+    "new_OSSN_figures": 9,
+    "missing_original_OSSN_images": 15,
+    "source_claims_are_not_reproduction": true
+  },
+  "publication": "paused; local commits only",
+  "post_build_files": "The final-build summary, file ledgers, added-assets output audit, and this final manifest update were produced after generation; not part of their own input snapshot.",
+  "files": [
+    {
+      "path": "added-assets-build.json",
+      "sha256": "7c075ac78b2bc71bc21b93ed996d4b271e9ce5551174281291a30a82130646ca",
+      "bytes": 2352
+    },
+    {
+      "path": "added-assets.json",
+      "sha256": "dde5b595a97220d855659fcafd294bcb490770da24ebc3747b3796259d39a922",
+      "bytes": 6583
+    },
+    {
+      "path": "article-edit-ledger.jsonl.gz",
+      "sha256": "c1a4eae9aff05a24856655f7cadf39c11dbf2bddc67c88395845ff40fc930b66",
+      "bytes": 124035
+    },
+    {
+      "path": "assets-after.json",
+      "sha256": "a0a77acb6dc7cfcbdcb7acd7be6c9c274e5a2352e37c9f8eb626eca1725e3af9",
+      "bytes": 139
+    },
+    {
+      "path": "assets-before.json",
+      "sha256": "b07ae3eb1cb44d2251910069d0e899446c3dae692ca7a34cdfa4a00cdd8c9358",
+      "bytes": 11795
+    },
+    {
+      "path": "before-articles.jsonl.gz",
+      "sha256": "d1487a03da6416294ad3ac1f26cc0fea69ae6099b7fa0406b691871081eea052",
+      "bytes": 374252
+    },
+    {
+      "path": "blog-config-change.json",
+      "sha256": "ee79601bcbd6d516fff71b332b45c11fe06b174db77f5a4b0700889633fa1e9a",
+      "bytes": 462
+    },
+    {
+      "path": "empty-marked-after.json",
+      "sha256": "7869879aebdb935105ab634dce4a8870cb6a56a80fd3fe1ad8aa2d684f6ffa9b",
+      "bytes": 60
+    },
+    {
+      "path": "final-article-inventory.jsonl.gz",
+      "sha256": "7692a2ed9613a34e37beddca1ffeae49a02e4472284cefa2c0d729d0b1610ac5",
+      "bytes": 410888
+    },
+    {
+      "path": "final-build-file-ledger.jsonl.gz",
+      "sha256": "64b91fff6e2bcea6afbce84f4e6290548e1c400377303c6eb5b7b29a8f8ed0da",
+      "bytes": 960672
+    },
+    {
+      "path": "final-build-inputs.jsonl.gz",
+      "sha256": "0e8eeef3ac64276f4096075c7f763c5b5e09c97160163fdcf8feb0c571c87dfb",
+      "bytes": 727733
+    },
+    {
+      "path": "final-build-summary.json",
+      "sha256": "c0cd3c0c7e4c613301e94bbe6e07d983bd4d0d2525f95cd57e5f76a400c5b74c",
+      "bytes": 28817
+    },
+    {
+      "path": "final-independent-fidelity.json",
+      "sha256": "c0707c9add160a2a97f2a1db10208f857c814fe715808f1811e4a3c9196312bf",
+      "bytes": 188005
+    },
+    {
+      "path": "final-independent-notes.json",
+      "sha256": "0327d092717d82159f5a1c3b1d4175d962ed1b23aa9ad4a9672f60782b38345f",
+      "bytes": 4072
+    },
+    {
+      "path": "final-independent-source-blocks.json",
+      "sha256": "1be5f620f51e00de72f2e90d3e963f8954ebeec2d27c2ae876977211511a0c15",
+      "bytes": 16868
+    },
+    {
+      "path": "fuzzing-primary-evidence.json",
+      "sha256": "19a70d0befb18d519b22b6f77738d26957dd3e1a1dae7b4c806d24a34bc01364",
+      "bytes": 1480
+    },
+    {
+      "path": "java-source-fetch.json",
+      "sha256": "3009f1a53434334f5301783c18cc80177a11fa364ebf2c4829e49dafe43ff0ec",
+      "bytes": 663
+    },
+    {
+      "path": "markdown-preservation.json",
+      "sha256": "68ccd20b63c6124f3c1f13a87468ab9116dc265da1b095a9fa9299b9a6baf6d9",
+      "bytes": 13482
+    },
+    {
+      "path": "ossn-independent.json",
+      "sha256": "118442928f88fd27ab6f2c6031206749891f129483f5bfc55fd2fee197fa81b2",
+      "bytes": 16663
+    },
+    {
+      "path": "ossn-original-followup.json",
+      "sha256": "b4092be9ce9ee4f4ce854a57a90bae3be7f352b3ff099dbaed9c40da9f93a9e7",
+      "bytes": 30200
+    },
+    {
+      "path": "parser-independent-final.json",
+      "sha256": "1e3ef049118352bc223963f851dca1d51a1b4e9f4ad49b2cfdfcd60edcdee5ed",
+      "bytes": 3458
+    },
+    {
+      "path": "piciorgros-recovery.json",
+      "sha256": "651c8b85c765b8adb5f4fdf16398cce2a10d6f144622dded03df4cfa7def9ba7",
+      "bytes": 2542
+    },
+    {
+      "path": "quality-final.json.gz",
+      "sha256": "3c6fa8db3c0d1bbe94bbc1b76898b2d145d8320ab4b0acb4b3f5491aa7d07579",
+      "bytes": 123515
+    },
+    {
+      "path": "rejected-reference-mapping.json",
+      "sha256": "1cb4f3330c96844163ad2d453dee53b6de880c00ce6d423fb6b6c686a55516c8",
+      "bytes": 3643
+    },
+    {
+      "path": "root-preservation.json",
+      "sha256": "d32f2bcc5abca2844c61e0b6bae873ba52e9f637857073b3fa9e28066be4ba5b",
+      "bytes": 11810
+    },
+    {
+      "path": "scan-assets.cjs",
+      "sha256": "422697978c8aec87f3555f9499bb8973c37c6e6edb5dd06e27ff16e2798919b6",
+      "bytes": 1764
+    },
+    {
+      "path": "scan-empty-marked.cjs",
+      "sha256": "41f93a35927bc9562c5901eca2cb5af1ed2c7c80dc873ae48435486a866d5017",
+      "bytes": 907
+    },
+    {
+      "path": "validation.json",
+      "sha256": "0e6544e8810d0160d29d0c6192bacf75a4ccbf025b56689143fdd8c5c3a58789",
+      "bytes": 858
+    },
+    {
+      "path": "verify-markdown.cjs",
+      "sha256": "3aac9814f47a572ecbfe61e3fba3df29d13a94e9ba3ddb1ad1bc1919cd7c18b7",
+      "bytes": 5794
+    }
+  ],
+  "input_evidence_manifest_sha256": "dd3e12961de7d6ba3137ab5f67ad583222944652ab39128719e1532f0e9347ac",
+  "post_build": {
+    "hexo_exit_code": 0,
+    "articles_byte_identical": 5654,
+    "added_assets_byte_identical": 9,
+    "catalog_version": "a6fa078ed923d3f0",
+    "files": [
+      "final-build-summary.json",
+      "final-build-file-ledger.jsonl.gz",
+      "added-assets-build.json",
+      "final-build-inputs.jsonl.gz"
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "articles": 5654,
+  "changed_frontmatter_articles": [
+    "Web安全/中间件/WebLogic/weblogic爆破.md",
+    "Web安全/云平台/Citrix/（CVE-2020-ianianian）Citrix 目录遍历漏洞.md",
+    "Web安全/云平台/Supabase/Supabasequery存在SQL注入漏洞.md",
+    "Web安全/网络设备/Fortinet/Fortinet FortiSwitch 任意密码重置 CVE-2024-48887.md",
+    "IOT安全/Ruijie/锐捷易网关 远程命令执行.md",
+    "Web安全/中间件/JBoss/（CVE-2013-4810）JBoss EJBInvokerServle 反序列化漏洞.md",
+    "Web安全/CMS内容/微擎/微擎微信公众号管理系统系统AccountEdit存在任意文件上传漏洞.md",
+    "Web安全/数据库/Phpmyadmin/Phpmyadmin 爆路径.md"
+  ],
+  "all_changes_match_explicit_admission_plans": true,
+  "other_frontmatter_bytes_unchanged": true,
+  "verification_and_source_fields_unchanged": true
+}

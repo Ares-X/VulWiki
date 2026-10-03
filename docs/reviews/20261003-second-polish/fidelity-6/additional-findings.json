@@ -1,0 +1,41 @@
+{
+  "confirmed_findings": [
+    {
+      "path": "Web安全/中间件/Redis/Redis 远程代码执行漏洞曝光：官方容器现“老式”栈溢出高危风险.md",
+      "archive_line": 23,
+      "working_line": 81,
+      "full_original_line": "目前，Redis官方已在8.3.2版本中修复该漏洞。安全专家建议所有使用受影响版本的用户立即升级，并检查Redis实例的网络暴露情况，限制公网访问以降低被攻击风险。  ",
+      "full_current_line": "目前，Redis官方已在8.2.3版本中修复该漏洞。安全专家建议所有使用受影响版本的用户立即升级，并检查Redis实例的网络暴露情况，限制公网访问以降低被攻击风险。  ",
+      "assessment": "原作者的具体修复版本主张8.3.2被原位替换为8.2.3。当前篇首第18行笼统写“按 Redis 原厂公告修正修复版本”，并给出当前值和verification_source，但未记录原始主张的旧值；这使来源原主张不可从当前文章追溯。该 finding 仅为历史主张保留/出处说明缺口，不判断原值真假，也不建议恢复错误旧值到技术正文。",
+      "evidence": [
+        "archive exact body line 23 in Git 41940cb: full original line above",
+        "working exact body line 81: full current line above",
+        "working editorial line 18: “- 按 Redis 原厂公告修正修复版本。”",
+        "working frontmatter lines 16-17: fixed_versions: \"8.2.3\" and verification_source is recorded (not fetched this turn)",
+        "docs/reviews/20261003-full-fidelity/prose-dispositions.jsonl.gz, agent-3/prose-line-ledger.jsonl:23, disposition prose_retained_with_editorial_correction; confirms exact old/current lines, but it is prior review evidence rather than preservation in the article"
+      ],
+      "prior_review_coverage": "前轮 exact line candidate was screened as prose_retained_with_editorial_correction. Rechecked current lines 16-18 and 81; correction is documented but the old literal version claim is not.",
+      "exact_old_text": "- 按 Redis 原厂公告修正修复版本。",
+      "exact_new_text_suggestion": "- 原文称“Redis官方已在8.3.2版本中修复该漏洞”；本文依据 Redis 原厂公告更正为 8.2.3。",
+      "certainty": "confirmed editorial provenance gap; no external fact verification"
+    }
+  ],
+  "unresolved_candidates": [
+    {
+      "path": "Web安全/其他软件/杂项/从零开始学习各种常见未授权访问漏洞.md",
+      "archive_line": 483,
+      "working_line": 521,
+      "archive_text": "AuthorizedKeyFiles后面的目录，是你上传的公钥所保存的文件。",
+      "working_text": "AuthorizedKeysFile后面的目录，是你上传的公钥所保存的文件。",
+      "assessment": "篇首第45行标为拼写错误，且前轮final context提供逐字上下文；这是技术标识符更正，但本轮禁止外查，无法独立验证是否只是拼写修正。未确认内容错误。",
+      "exact_suggestion": "在正文修订记录保留原作者写法：“原文为 AuthorizedKeyFiles；本文校订为 AuthorizedKeysFile（此更正尚未由本轮外部来源核实）。”并保留当前值。",
+      "prior_evidence": "docs/reviews/20261003-full-fidelity/prose-dispositions.jsonl.gz: final_context_review disposition technical_spelling_corrections_unverified; archive line 483/current line 521 contexts."
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【漏洞分析】CVE-2025-9132 Await Using Cant Wait.md",
+      "assessment": "原归档乱码文本在当前稿被可读文本替换。当前第43行说明按指定编码链逐字符逆转一致；本轮没有独立复算编码转换，技术解释/转写准确性保留未知。",
+      "evidence": "当前行43-49；归档乱码主要位于原文34、46、54、62、64、70行。",
+      "exact_suggestion": "保留当前逐字符往返说明及截断/论证缺失限定；不据乱码补写内容，待字符映射复核。"
+    }
+  ]
+}

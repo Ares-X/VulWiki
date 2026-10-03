@@ -1,0 +1,8 @@
+{
+  "path": "Web安全/其他软件/杂项/一个字符引发的严重漏洞：CVE-2026-28292 simple-git 远程代码执行分析.md",
+  "before_sha256": "7bf768bba2c050ee28103c60dbef3673532bd61dc57d6c70e5c8a9115a047585",
+  "after_sha256": "6a72dfc8127b0665a5cadeb8137cc657dade739f1758e91b89984b0657f0f33c",
+  "original_author_claim": "simple-git 在 3.15.0 至 3.23.0 之间无破坏性 API 变更，升级对大多数项目不会产生副作用。升级后建议运行现有测试套件验证功能正常。  \n",
+  "insertion_outside_code": "> 归档兼容性声明（原作者主张，未经本库独立验证）：\n> simple-git 在 3.15.0 至 3.23.0 之间无破坏性 API 变更，升级对大多数项目不会产生副作用。升级后建议运行现有测试套件验证功能正常。  \n\n",
+  "current_review_boundary_unchanged": true
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "article": "Web安全/开发框架/Git/CVE-2026-31900：一个过于宽松的正则表达式如何在 psf-black 的 GitHub Action 中导致 RCE.md",
+    "locator": "“为什么 use_pyproject 很危险”小节，GitHub Action 触发器说明（镜像正文约第 198–200 行）",
+    "rejected_reference": {
+      "url": "https://security.zone.ci/secarticles/wx/509461.html",
+      "location": "Apache Commons BCEL security advisory; supports CVE scope/patch context, not the article demo code",
+      "kind": "vendor reference"
+    },
+    "reason": "Unrelated BCEL material is not evidence for Black. No article bytes changed."
+  },
+  {
+    "article": "Web安全/开发框架/Git/CVE-2026-31900：一个过于宽松的正则表达式如何在 psf-black 的 GitHub Action 中导致 RCE.md",
+    "locator": "同节“因此读取的文件”说明（约第 208–212 行）",
+    "rejected_reference": {
+      "url": "https://security.zone.ci/secarticles/wx/509461.html",
+      "location": "Apache Commons BCEL security advisory; supports CVE scope/patch context, not the article demo code",
+      "kind": "vendor reference"
+    },
+    "reason": "Unrelated BCEL material is not evidence for Black. No article bytes changed."
+  },
+  {
+    "article": "Web安全/开发框架/Git/CVE-2026-31900：一个过于宽松的正则表达式如何在 psf-black 的 GitHub Action 中导致 RCE.md",
+    "locator": "“正则表达式漏洞分析”中目标匹配样例（约第 250–255 行）",
+    "rejected_reference": {
+      "url": "https://security.zone.ci/secarticles/wx/509461.html",
+      "location": "Apache Commons BCEL security advisory; supports CVE scope/patch context, not the article demo code",
+      "kind": "vendor reference"
+    },
+    "reason": "Unrelated BCEL material is not evidence for Black. No article bytes changed."
+  },
+  {
+    "article": "Web安全/开发框架/Git/CVE-2026-31900：一个过于宽松的正则表达式如何在 psf-black 的 GitHub Action 中导致 RCE.md",
+    "locator": "同节“问题在于”后的标志说明（约第 257–263 行）",
+    "rejected_reference": {
+      "url": "https://security.zone.ci/secarticles/wx/509461.html",
+      "location": "Apache Commons BCEL security advisory; supports CVE scope/patch context, not the article demo code",
+      "kind": "vendor reference"
+    },
+    "reason": "Unrelated BCEL material is not evidence for Black. No article bytes changed."
+  },
+  {
+    "article": "Web安全/开发框架/Git/CVE-2026-31900：一个过于宽松的正则表达式如何在 psf-black 的 GitHub Action 中导致 RCE.md",
+    "locator": "“Token 与 Secret 窃取场景”中的触发器（约第 373–381 行）",
+    "rejected_reference": {
+      "url": "https://security.zone.ci/secarticles/wx/509461.html",
+      "location": "Apache Commons BCEL security advisory; supports CVE scope/patch context, not the article demo code",
+      "kind": "vendor reference"
+    },
+    "reason": "Unrelated BCEL material is not evidence for Black. No article bytes changed."
+  },
+  {
+    "article": "Web安全/开发框架/Git/CVE-2026-31900：一个过于宽松的正则表达式如何在 psf-black 的 GitHub Action 中导致 RCE.md",
+    "locator": "“总结”中的危险模式（约第 510–523 行）",
+    "rejected_reference": {
+      "url": "https://security.zone.ci/secarticles/wx/509461.html",
+      "location": "Apache Commons BCEL security advisory; supports CVE scope/patch context, not the article demo code",
+      "kind": "vendor reference"
+    },
+    "reason": "Unrelated BCEL material is not evidence for Black. No article bytes changed."
+  }
+]

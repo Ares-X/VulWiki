@@ -1,0 +1,236 @@
+{
+  "articles": 5654,
+  "changed": 28,
+  "unchanged": 5626,
+  "operations": 145,
+  "baseline_unchanged": true,
+  "baseline_sha256": "11fe08d4c3489e3ddc4d3c3db34af3a59ec3fc57031db65ce2adac20214a4f1f",
+  "articles_verified": [
+    {
+      "path": "Web安全/CMS内容/Airin Blog/DMC Airin Blog Plugin 反序列化 CVE-2024-52413分析.md",
+      "baseline_sha256": "c1ef4938d19dcb91bd6a76b95415d90b1df0e5fccfec64babcd08fe7e14099af",
+      "final_sha256": "41c6d074ca9762fc16f77a3a925250cb9ed914a0a8ad623c41d6dd5ae84253f5",
+      "operation_count": 1,
+      "inverse_exact": true,
+      "frontmatter_byte_identical": true
+    },
+    {
+      "path": "Web安全/CMS内容/Grav CMS/Grav CMS 组合拳漏洞 CVE-2026-42613&CVE-2026-42607复现&研究.md",
+      "baseline_sha256": "62674cf36b152244521eb02f52e2e49357845651d2e5488a376d253680ef1faa",
+      "final_sha256": "4d1f40ef65305604093f96c2f4b6b7eb87e8a76dad662f55ec07e3724426858c",
+      "operation_count": 5,
+      "inverse_exact": true,
+      "frontmatter_byte_identical": true
+    },
+    {
+      "path": "Web安全/CMS内容/PbootCMS/PbootCMS最新代码注入漏洞（CNVD-2025-01710、CVE-2024-12789）.md",
+      "baseline_sha256": "9ae7af1ff444d6418e28472be091d6e5c6121212289128e6ffa6f07506e6ed4d",
+      "final_sha256": "92e1ddd67e7a0fd93f9041863cf0d3dac175a8447df0c70dd6080b0b07f35e09",
+      "operation_count": 1,
+      "inverse_exact": true,
+      "frontmatter_byte_identical": true
+    },
+    {
+      "path": "Web安全/CMS内容/Seacms/SeaCMS admin_files.php CVE-2024-42599分析.md",
+      "baseline_sha256": "83bfb8c3c80d104b18edcdf45e7f475b76c433c7a37712ec806db0e62f090855",
+      "final_sha256": "ab4c082a7b76daf57873299dd22cd31980bd7eba523fba3e41fe6ef6ccbe7ce8",
+      "operation_count": 1,
+      "inverse_exact": true,
+      "frontmatter_byte_identical": true
+    },
+    {
+      "path": "Web安全/CMS内容/WordPress/Wordpress IMPress for IDX Broker 低权限xss漏洞.md",
+      "baseline_sha256": "cda9c9768fc8b5b104d7faec376a9e0374854910892cfb11d1cfaf6fc5530805",
+      "final_sha256": "5e71a2e3839e2cb75a6f6f64a1b09d4ccb9328b3f412d8a7104f98816464213a",
+      "operation_count": 1,
+      "inverse_exact": true,
+      "frontmatter_byte_identical": true
+    },
+    {
+      "path": "Web安全/CMS内容/WordPress/Wordpress wpdm-premium-packages SQL注入漏洞(CVE-2025-24659).md",
+      "baseline_sha256": "b9852841d83a5426b1c82b807ad7c37bcc0ced430d0fd0e0c58dc2c379d46d27",
+      "final_sha256": "2fd2f2e4c6af5027f854bdf9939aab3ef61c66a4688ae2478379362a7f1e02db",
+      "operation_count": 9,
+      "inverse_exact": true,
+      "frontmatter_byte_identical": true
+    },
+    {
+      "path": "Web安全/CMS内容/WordPress/超高危 Wordpress RCE漏洞 CVE-2024-5932 全网资产 5W+ 附POC.md",
+      "baseline_sha256": "b5f5e1bf2d866251729ba6fecee505dac07b38b61432f71b10271bb8849e47ef",
+      "final_sha256": "72a125194f4ce650b5fb61d275721f10ef70264f0ebb4c7d0cdfba50f3c9cec4",
+      "operation_count": 1,
+      "inverse_exact": true,
+      "frontmatter_byte_identical": true
+    },
+    {
+      "path": "Web安全/CMS内容/骑士 CMS/骑士CMS模版注入+文件包含getshell复现.md",
+      "baseline_sha256": "9cf2da4eb66dbc9e2a3a4cbe5a65ed34589c7f6ff20fab8f4e82630717b358e4",
+      "final_sha256": "b6d977a6d1663a513692b4a3042c9c841e312fc765c6c31d3e99e9d014e1f8db",
+      "operation_count": 11,
+      "inverse_exact": true,
+      "frontmatter_byte_identical": true
+    },
+    {
+      "path": "Web安全/安全设备/Nessus/Nessus严重漏洞允许覆盖任意本地系统文件.md",
+      "baseline_sha256": "0210bc559bc817b83cfe41ad7fa8f907f7685b4c46a7f92962b60503512edebc",
+      "final_sha256": "dcc6de047b7d20c3b5f5567206a6e248d3a572101377b1a7f58578d98264bfe8",
+      "operation_count": 3,
+      "inverse_exact": true,
+      "frontmatter_byte_identical": true
+    },
+    {
+      "path": "Web安全/安全设备/Sophos/Sophos Intercept X for Windows 支持任意代码执行漏洞.md",
+      "baseline_sha256": "2cf1eb5db681c1d1c6c659f8dc900a075a1c7023c269fc43f32cc0cc568c6572",
+      "final_sha256": "1a2a9da4bdd3b7a1bd4f5f387db9bc4a0e571b776c9ad1ab3cc369e747d8cf1c",
+      "operation_count": 1,
+      "inverse_exact": true,
+      "frontmatter_byte_identical": true
+    },
+    {
+      "path": "Web安全/开发框架/BCEL/CVE-2022-42920 BCEL 任意文件写漏洞.md",
+      "baseline_sha256": "fe6badafbc5d1dded9e88a24bc30a115b9d6638ce5888d6c0cc668903d53c394",
+      "final_sha256": "5ccba2cae1c239e0b575250928a6ee67669d22278884c21c7800a0fe4ae02d24",
+      "operation_count": 2,
+      "inverse_exact": true,
+      "frontmatter_byte_identical": true
+    },
+    {
+      "path": "Web安全/开发框架/Git/CVE-2026-31900：一个过于宽松的正则表达式如何在 psf-black 的 GitHub Action 中导致 RCE.md",
+      "baseline_sha256": "d01aef7cc624f4fe8dbc81e273e1dbca7d4bad51658d1f00bfa6fe2cf90dd6bf",
+      "final_sha256": "d579273be97faa7a2a3b51f576a2b25f94650ff29c307e9210661e453a0c23ae",
+      "operation_count": 7,
+      "inverse_exact": true,
+      "frontmatter_byte_identical": true
+    },
+    {
+      "path": "Web安全/开发框架/Java/CVE-2022-41853 分析：通过 Java 反序列化和远程代码库攻击使用静态函数获取 RCE.md",
+      "baseline_sha256": "86d11ce3cfd098ee5299282899585e239392dd587a16bd3475f111734d09569b",
+      "final_sha256": "b1f307fb96ada72445090803f4db33efd181b2835dba0a5de0a9a27cb8c19bb8",
+      "operation_count": 2,
+      "inverse_exact": true,
+      "frontmatter_byte_identical": true
+    },
+    {
+      "path": "Web安全/开发框架/RuoYi/安全通告！RuoYi-AI框架曝任意文件上传漏洞()，可导致服务器沦陷（含POC） CVE-2025-6466.md",
+      "baseline_sha256": "60e07f422bdac0dccf7930f77c1d364178a752c8af0aa1dae7f9345aa1efa6dd",
+      "final_sha256": "9661f09777921491a8c13ad89e062f371c2fe5367c4168a98f1f75844a8f09d0",
+      "operation_count": 3,
+      "inverse_exact": true,
+      "frontmatter_byte_identical": true
+    },
+    {
+      "path": "Web安全/开发框架/Spring Boot/SpringBladedict-biz存在SQL注入漏洞.md",
+      "baseline_sha256": "a3bcf9ec535d6a9001b67c293719084253de02d086e98179ba31e5070f293bb5",
+      "final_sha256": "1a1832777d651baa40455895c47b13ec698cf775e8c2da18f706213bd48db679",
+      "operation_count": 1,
+      "inverse_exact": true,
+      "frontmatter_byte_identical": true
+    },
+    {
+      "path": "Web安全/开发框架/Spring Boot/SpringDataMongoDBSpEL表达式注入漏洞.md",
+      "baseline_sha256": "4cd7d628998b43c56545b5d586353a416014d274a7f1902b60c8326523928ed8",
+      "final_sha256": "b270ad0bc630d3710ac4192a22ccdf5515e931b7ca1965a268ff903f4a6604a3",
+      "operation_count": 1,
+      "inverse_exact": true,
+      "frontmatter_byte_identical": true
+    },
+    {
+      "path": "Web安全/开发框架/lodash/lodash库原型污染漏洞（CVE-2019-10744）.md",
+      "baseline_sha256": "b08fa8e51141d04e3466da3d11c093b90f55035e232fda0fb9caf14b028d6d1a",
+      "final_sha256": "9dba25029ad39b92e741b3d78d0e1cb2bb94eff3c4e9110d25e1b428f1b0736a",
+      "operation_count": 4,
+      "inverse_exact": true,
+      "frontmatter_byte_identical": true
+    },
+    {
+      "path": "Web安全/服务器软件/Piciorgros TMO-100/Piciorgros TMO-100_ Unauthorized configuration change via TFTP CVE-20.md",
+      "baseline_sha256": "e919cc121f56b475349700da3d84239aa639c7c7c54dcd8f06b486f0a5082343",
+      "final_sha256": "e16febd614dd8b1845d5f8be785741acc665125a1e9a8fda66bb29b055fcf0db",
+      "operation_count": 1,
+      "inverse_exact": true,
+      "frontmatter_byte_identical": true
+    },
+    {
+      "path": "Web安全/网络设备/Cisco/CVE-2026-0866 Cisco ClamAV ZIP扫描引擎绕过漏洞.md",
+      "baseline_sha256": "145865667f08268747a911259bb19ac19e2a75c33c6a4141aa3c6d438762e157",
+      "final_sha256": "48f345314a01da581fb1da06272ed9cbada96d564634d82423a626167b5354a9",
+      "operation_count": 29,
+      "inverse_exact": true,
+      "frontmatter_byte_identical": true
+    },
+    {
+      "path": "Web安全/网络设备/D-Link/CVE-2018-17066复现（D-Link命令注入漏洞）.md",
+      "baseline_sha256": "5f2e9e468ef63f54ee11789607b5a504b88b75f42011b4c892ac1549b68aed32",
+      "final_sha256": "1b26133fe5e80e0ec31e2b6e7c97b7d3fe3ba9242b2f37e89983ce3b43d713f4",
+      "operation_count": 6,
+      "inverse_exact": true,
+      "frontmatter_byte_identical": true
+    },
+    {
+      "path": "Web安全/网络设备/D-Link/【技术分享】CVE-2019-10999 Dlink IP 摄像头缓冲区溢出.md",
+      "baseline_sha256": "3b9401ca8991b0366d157ea737b4ce979503f4677dc38a2649449cb0b6b64d0f",
+      "final_sha256": "543198572c7c87b0e136fe08bbe20d77fd1e3a6344d4b48dfce0eeb36f82e4b7",
+      "operation_count": 2,
+      "inverse_exact": true,
+      "frontmatter_byte_identical": true
+    },
+    {
+      "path": "Web安全/网络设备/NETGEAR/美国网件Netgear RAX30路由器RCE漏洞分析.md",
+      "baseline_sha256": "bc6e0a15ebde0d17a51ee54cbc56c182c03be0f02a3b437c554d63a4a6b92bb3",
+      "final_sha256": "9a3dd8a9536a151a3ac744352816ad1956dcfc3bbec4e78759771aede76cb4a5",
+      "operation_count": 5,
+      "inverse_exact": true,
+      "frontmatter_byte_identical": true
+    },
+    {
+      "path": "Web安全/网络设备/NetMizer/NetMizer dologin.php sql注入漏洞(XVE-2024-37672).md",
+      "baseline_sha256": "8e14ad3ff95dcfa7caa622e4a8f50f47e623d92e2ad103eb79b8cbab37c0e8d0",
+      "final_sha256": "a9d223916f51eb838b8d634004ab7ad00f60911802bae2d5292f799276cfd326",
+      "operation_count": 1,
+      "inverse_exact": true,
+      "frontmatter_byte_identical": true
+    },
+    {
+      "path": "Web安全/网络设备/Tenda/CVE-2018-18708 TENDA缓冲区溢出漏洞.md",
+      "baseline_sha256": "906f29256c909f9067b01ac78d38e01e51f94f3b39982c55ab6929e37b84c5ff",
+      "final_sha256": "7bc8e6a166e278aabee12fb95620802d85508e7297a10e19aa0218e5b5aef15d",
+      "operation_count": 5,
+      "inverse_exact": true,
+      "frontmatter_byte_identical": true
+    },
+    {
+      "path": "Web安全/OA办公/通达OA/通达 OA 任意文件上传 + 文件包含 RCE 漏洞复现 (附自写 EXP).md",
+      "baseline_sha256": "d620a5b532f97a9d9bc6e8582992dbbf42c4a8971e7e63d56914b6fcbcc03383",
+      "final_sha256": "12c13627314656d8255a11473ecd82e0135d3b3a48704a0b2f855b1a9ceaba8e",
+      "operation_count": 6,
+      "inverse_exact": true,
+      "frontmatter_byte_identical": true
+    },
+    {
+      "path": "Web安全/数据库/Phpmyadmin/phpmyadmin 反序列化漏洞（WooYun-2016-199433）.md",
+      "baseline_sha256": "7c24b6d733a79781ef1cabce001384e62178dd3f7ad1b06e764731c43c4e443b",
+      "final_sha256": "2967eedb8714832aaaa18d65caab6c81ada08f439c76aea7d928c1390ef8aeb2",
+      "operation_count": 2,
+      "inverse_exact": true,
+      "frontmatter_byte_identical": true
+    },
+    {
+      "path": "Web安全/云平台/OSSN/OSSN任意文件读取漏洞（CVE-2020-10560）.md",
+      "baseline_sha256": "de27243a179095b5f0ea6fabe91c21b64d6b35c08e99bf04e24ae36e27aacc7a",
+      "final_sha256": "da343bceb6d155c9fc386e0e5b5cdbea86e339961e588befccf62ee7cf901766",
+      "operation_count": 27,
+      "inverse_exact": true,
+      "frontmatter_byte_identical": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/Fuzzing101 Exercise 4 - LibTIFF CVE-2016-9297&CVE-2016-9448分析.md",
+      "baseline_sha256": "0fede4f8cb71ecf2b82b11131c5276aceec2c5e53c5e1e5d1cff8f61e2230d4e",
+      "final_sha256": "9c620fcd7405c0f19dadc617dbbab6cd6a06d35f7db287ed647717297da4a009",
+      "operation_count": 7,
+      "inverse_exact": true,
+      "frontmatter_byte_identical": true
+    }
+  ],
+  "no_redaction": "No masked replacements, deletions of public values or concealed URLs; source-origin placeholders retained.",
+  "method": "Full article hash inventory and reverse text operations; static content only."
+}

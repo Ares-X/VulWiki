@@ -20,6 +20,8 @@ side_effects: "执行文中载荷可能以目标进程权限启动命令或加�
 source_status: "unknown"
 ---
 
+> 来源补回（2026-10-03）：本轮 4 处缺损按 [同题公开来源](https://www.ctfiot.com/103003.html) 的对应文字补入；这只确认文本对应，不是本库的复现结果。 其中 `$1$redacted` 是该来源已有字面占位符，未推测替换；它不表示本轮做了脱敏。
+
 #  美国网件Netgear RAX30路由器RCE漏洞分析   
 
 <!-- article-review:devices:begin -->
@@ -105,6 +107,11 @@ Web服务在获取客户端请求包中User-Agent数据字段未能有效筛选�
   
 硬编码  
 ```
+admin:$1$redacted:0:0:Administrator:/:/bin/sh
+support:$1$QkcawmV.$VU4maCah6eHihce5l4YCP0:0:0:Technical Support:/:/bin/sh
+user:$1$9RZrTDt7$UAaEbCkq.Qa4u0QwXpzln/:0:0:Normal User:/:/bin/sh
+nobody:$1$OWpQjger$j7CFLUn8yoD8agVf6x5gA0:0:0:nobody for ftp:/:/bin/sh
+
 ```  
   
 ![](https://mmbiz.qpic.cn/mmbiz_png/Gw8FuwXLJnQ1YfRNHzjcvTzwY8IVLMgErmqCHJXrc47icKWicibLHAQAXdrRQeWgvMaTibbP0TscoemgGotwGN9pow/640?wx_fmt=png "")  
@@ -120,6 +127,9 @@ pucfu在启动过程中会向域名https://devcom.up.netgear.com/的netgear官�
   
 /lib/libpu_util.so(SetFileValue)->pegaPopen->libc.so(execve)  
 ```
+graph LR
+A[pucfu] -->B(fwcheck.so) -->C(fw_check_api) -->D(curl_post) -->E(libpu_tuil.so) -->F(SetFileValue) -->G(pegaPopen) -->H(libc.so) -->J(execve)
+
 ```  
 #### 2.3.1 pucfu  
   
@@ -142,6 +152,10 @@ pucfu在启动过程中会向域名https://devcom.up.netgear.com/的netgear官�
   
 判断是否有'/'  
 ```
+SetFileValue("/tmp/fw/cfu_url_cache", "lastURL", bufferB); #lastURL 可控
+sed -i 's|^lastURL=.*|lastURL=/'可控数据;# /'/tmp/fw/cfu_url_cache
+sed -i 's|^lastURL=.*|lastURL=|'可控数据;# |'/tmp/fw/cfu_url_cache
+
 ```  
   
 pegaPopen  
@@ -150,6 +164,7 @@ pegaPopen
   
 构造数据，实现命令执行  
 ```
+"url":"';reboot#"
 ```  
 #### 漏洞利用条件  
   

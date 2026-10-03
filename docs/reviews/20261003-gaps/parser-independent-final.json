@@ -1,0 +1,68 @@
+{
+  "schema": "vulwiki-markdown-links-final-review/v1",
+  "repo_read_only": true,
+  "reviewed": [
+    "scripts/wiki.py:markdown_links",
+    "tests/test_wiki.py:new markdown_links tests"
+  ],
+  "summary": "复核了 CRLF 空行修正：label loop 现在将 CRLF 空行识别为段落边界，新增断言覆盖原失败输入；该项已解决。其余前轮已核对的 escaped opener、LF 软换行、嵌套图片及引用链接结果保持不变。",
+  "findings": [
+    {
+      "id": "crlf-blank-line-crossed-as-soft-break",
+      "priority": "P2",
+      "introduced_by_change": true,
+      "location": "scripts/wiki.py:329-330",
+      "fixture": "[example\\r\\n\\r\\ntext](javascript:void(0))",
+      "current_result": [],
+      "marked_4_3_0_lexer": "Two paragraphs separated by a blank line; no link token.",
+      "impact": "The new label scan only recognizes LF blank lines with `[ \\t]*\\n`; CRLF blank lines are crossed as if they were soft line breaks, so scan() can report a literal Markdown span as an active javascript link. The old single-line regex did not match this span, so this is a new false positive.",
+      "recommendation": "无需进一步处理。",
+      "status": "resolved",
+      "resolution": "scripts/wiki.py 使用 r\"[ \\t]*\\r?\\n\" 识别 LF/CRLF 空行边界；tests/test_wiki.py 在软换行测试中加入 CRLF 空段落断言。复测 [example\\r\\n\\r\\ntext](javascript:alert(1)) 返回空链接集，与 Marked 的段落切分一致。"
+    }
+  ],
+  "checks": [
+    {
+      "case": "escaped opening bracket",
+      "fixture": "\\\\[example](javascript:alert(1))",
+      "result": "No link returned; matches Marked escape/text tokens."
+    },
+    {
+      "case": "escaped exclamation then link opener",
+      "fixture": "\\\\![a](article.md)",
+      "result": "Returns article.md as a normal link, not an image; correct Markdown interpretation."
+    },
+    {
+      "case": "soft-newline wrapped image and link",
+      "fixture": "[\\n![preview](image.png)\\n](javascript:void(0))",
+      "result": "Returns image.png at line 2 and outer javascript:void(0) at line 1; matches Marked 4.3.0 lexer."
+    },
+    {
+      "case": "nested alt image and same-line link wrapper",
+      "fixture": "[![preview](image.png)](article.md)",
+      "result": "Both inner image and outer link found; matches Marked."
+    },
+    {
+      "case": "nested reference image",
+      "fixture": "![a [b]][pic]\\n[pic]: .resource/a.png",
+      "result": "Reference image destination found; matches Marked."
+    },
+    {
+      "case": "escaped brackets inside image label and parentheses in destination",
+      "fixture": "![a \\[b\\]](image%20(1).png)",
+      "result": "Image target found; matches Marked."
+    },
+    {
+      "case": "LF blank paragraph boundary",
+      "fixture": "[example\\n\\ntext](article.md)",
+      "result": "No link returned, as expected."
+    }
+  ],
+  "validation": {
+    "unit_tests": "复核轮重跑：65 tests passed，使用 /Users/aresx/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 -m unittest discover -s tests -v。",
+    "marked": "Version 4.3.0; static lexer only on isolated fixtures, no HTML rendering or repository article input.",
+    "execution_boundary": "No article, PoC, payload, HTML, scanner, or example target was executed or opened.",
+    "repository_changes": "None.",
+    "scope": "只复核 CRLF 空行修正及原回归用例，没有扩大扫描。"
+  }
+}

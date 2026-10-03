@@ -18,6 +18,7 @@ side_effects: "原文未完整记录副作用、清理步骤或运行验证；�
 id: "vw-43faf0d6ca602dd7aa09b9d0"
 entity_id: "ve-43faf0d6ca602dd7aa09b9d0"
 schema_version: "1"
+index_category: "系统安全/Linux"
 ---
 
 # OpenAI大语言模型漏洞挖掘

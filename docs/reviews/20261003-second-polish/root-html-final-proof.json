@@ -1,0 +1,1573 @@
+{
+  "articles": 51,
+  "operations": 174,
+  "checks": [
+    {
+      "path": "Web安全/中间件/Apache Struts/Struts RCE CVE-2021-31805.md",
+      "mode": "pack2",
+      "change_id": "pack2-01-01",
+      "source_line": 159,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/中间件/Apache Struts/Struts RCE CVE-2021-31805.md",
+      "mode": "pack2",
+      "change_id": "pack2-01-02",
+      "source_line": 282,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/中间件/Apache Tomcat/CVE-2026-34486 ( Apache Tomcat 集群加密绕过 RCE).md",
+      "mode": "pack2",
+      "change_id": "pack2-02-01",
+      "source_line": 97,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/中间件/Apache Tomcat/CVE-2026-34486 ( Apache Tomcat 集群加密绕过 RCE).md",
+      "mode": "pack2",
+      "change_id": "pack2-02-02",
+      "source_line": 99,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/中间件/Apache Tomcat/CVE-2026-34486 ( Apache Tomcat 集群加密绕过 RCE).md",
+      "mode": "pack2",
+      "change_id": "pack2-02-03",
+      "source_line": 129,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/《黄药师》药业管理软件SetMedia_Picture_info存在SQL注入漏洞.md",
+      "mode": "pack2",
+      "change_id": "pack2-03-01",
+      "source_line": 99,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/服务器软件/CrushFTP/CVE-2024-4040 CrushFTP 中的身份验证绕过和任意文件读取.md",
+      "mode": "pack2",
+      "change_id": "pack2-04-01",
+      "source_line": 248,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/服务器软件/CrushFTP/CVE-2024-4040 CrushFTP 中的身份验证绕过和任意文件读取.md",
+      "mode": "pack2",
+      "change_id": "pack2-04-02",
+      "source_line": 250,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/服务器软件/CrushFTP/CVE-2024-4040 CrushFTP 中的身份验证绕过和任意文件读取.md",
+      "mode": "pack2",
+      "change_id": "pack2-04-03",
+      "source_line": 269,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/服务器软件/CrushFTP/CVE-2024-4040 CrushFTP 中的身份验证绕过和任意文件读取.md",
+      "mode": "pack2",
+      "change_id": "pack2-04-04",
+      "source_line": 448,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/开发框架/Samlify/Samlify SSO 签名绕过 (CVE-2025-47949)：从XML签名本质到纵深防御.md",
+      "mode": "pack2",
+      "change_id": "pack2-08-01",
+      "source_line": 59,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/开发框架/Samlify/Samlify SSO 签名绕过 (CVE-2025-47949)：从XML签名本质到纵深防御.md",
+      "mode": "pack2",
+      "change_id": "pack2-08-02",
+      "source_line": 60,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/开发框架/Spring Boot/CVE-2026-22738 — Spring AI SimpleVectorStore 中的 SpEL 注入远程代码执行漏洞.md",
+      "mode": "pack2",
+      "change_id": "pack2-09-01",
+      "source_line": 72,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/云平台/Microsoft SharePoint/SharePoint又一个绕过：CVE-2026-33112从XmlValidator限制到低权限RCE.md",
+      "mode": "pack2",
+      "change_id": "pack2-20-01",
+      "source_line": 78,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/云平台/Microsoft SharePoint/SharePoint又一个绕过：CVE-2026-33112从XmlValidator限制到低权限RCE.md",
+      "mode": "pack2",
+      "change_id": "pack2-20-02",
+      "source_line": 86,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/云平台/Microsoft SharePoint/SharePoint又一个绕过：CVE-2026-33112从XmlValidator限制到低权限RCE.md",
+      "mode": "pack2",
+      "change_id": "pack2-20-03",
+      "source_line": 90,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/智能设备/ZoneMinder/CVE-2026-27470(Zoneminder-二阶注入)研究.md",
+      "mode": "pack2",
+      "change_id": "pack2-22-01",
+      "source_line": 331,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "系统安全/Windows/Windows 域控常见 0day 及利用漏洞汇集.md",
+      "mode": "pack2",
+      "change_id": "pack2-27-01",
+      "source_line": 339,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "系统安全/Windows/Windows 域控常见 0day 及利用漏洞汇集.md",
+      "mode": "pack2",
+      "change_id": "pack2-27-02",
+      "source_line": 412,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/网络设备/Mitel/Mitel IP 电话未授权RCE漏洞分析.md",
+      "mode": "pack2",
+      "change_id": "pack2-05-01",
+      "source_line": 249,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/网络设备/Mitel/Mitel IP 电话未授权RCE漏洞分析.md",
+      "mode": "pack2",
+      "change_id": "pack2-05-02",
+      "source_line": 119,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/网络设备/Mitel/Mitel IP 电话未授权RCE漏洞分析.md",
+      "mode": "pack2",
+      "change_id": "pack2-05-03",
+      "source_line": 513,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/云平台/Cloudflare/Cloudflare修复了ACME验证漏洞，该漏洞允许绕过WAF访问源服务器.md",
+      "mode": "pack2",
+      "change_id": "pack2-06-01",
+      "source_line": 53,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【3】CVE-2025-38352 - Chronomaly 漏洞利用挖掘揭秘.md",
+      "mode": "pack2",
+      "change_id": "pack2-07-01",
+      "source_line": 1147,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【3】CVE-2025-38352 - Chronomaly 漏洞利用挖掘揭秘.md",
+      "mode": "pack2",
+      "change_id": "pack2-07-02",
+      "source_line": 1165,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【三星】固态硬盘管理软件高危漏洞CVE-2025-57836.md",
+      "mode": "pack2",
+      "change_id": "pack2-10-01",
+      "source_line": 75,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/漏洞梳理篇之 XXE.md",
+      "mode": "pack2",
+      "change_id": "pack2-11-01",
+      "source_line": 90,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/漏洞梳理篇之 XXE.md",
+      "mode": "pack2",
+      "change_id": "pack2-11-02",
+      "source_line": 90,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/漏洞梳理篇之 XXE.md",
+      "mode": "pack2",
+      "change_id": "pack2-11-03",
+      "source_line": 90,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "系统安全/Linux/【已复现】Linux 本地提权漏洞CVE-2025-6018、CVE-2025-6019.md",
+      "mode": "pack2",
+      "change_id": "pack2-12-01",
+      "source_line": 192,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "系统安全/Linux/【已复现】Linux 本地提权漏洞CVE-2025-6018、CVE-2025-6019.md",
+      "mode": "pack2",
+      "change_id": "pack2-12-02",
+      "source_line": 196,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "系统安全/Windows/Windows DWM 核心库特权提升漏洞 (CVE-2024-30051)（2024 年 8 月 15 日发布）.md",
+      "mode": "pack2",
+      "change_id": "pack2-13-01",
+      "source_line": 430,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/AI应用/Langflow/（CVE-2026-9198）IBM Langflow未认证RCE漏洞.md",
+      "mode": "pack2",
+      "change_id": "pack2-14-01",
+      "source_line": 74,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/ERP企业/用友GRP-u8/用友 GRP-U8SQL 注入 and 远程代码执行漏洞复现.md",
+      "mode": "pack2",
+      "change_id": "pack2-15-01",
+      "source_line": 81,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/ERP企业/用友GRP-u8/用友 GRP-U8SQL 注入 and 远程代码执行漏洞复现.md",
+      "mode": "pack2",
+      "change_id": "pack2-15-02",
+      "source_line": 134,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/ERP企业/用友U8/用友U8 CRM leadleadconversion.php SQL注入漏洞.md",
+      "mode": "pack2",
+      "change_id": "pack2-16-01",
+      "source_line": 113,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/云平台/Azure/Azure RCE漏洞剖析：单一VM沦陷可致整个租户失守.md",
+      "mode": "pack2",
+      "change_id": "pack2-17-01",
+      "source_line": 121,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/云平台/Azure/Azure RCE漏洞剖析：单一VM沦陷可致整个租户失守.md",
+      "mode": "pack2",
+      "change_id": "pack2-17-02",
+      "source_line": 333,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/商业软件/green/green_Possible exploit variant for CVE-2024-9042 Kubernetes OS Comman.md",
+      "mode": "pack2",
+      "change_id": "pack2-21-01",
+      "source_line": 84,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/网络设备/Wavlink/(9.1分) CVE-2026-89009：WAVLINK 路由器未认证任意文件写入，可远程提权 root.md",
+      "mode": "pack2",
+      "change_id": "pack2-23-01",
+      "source_line": 110,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/网络设备/Wavlink/(9.1分) CVE-2026-89009：WAVLINK 路由器未认证任意文件写入，可远程提权 root.md",
+      "mode": "pack2",
+      "change_id": "pack2-23-02",
+      "source_line": 116,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/网络设备/Wavlink/(9.1分) CVE-2026-89009：WAVLINK 路由器未认证任意文件写入，可远程提权 root.md",
+      "mode": "pack2",
+      "change_id": "pack2-23-03",
+      "source_line": 122,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/网络设备/Wavlink/(9.1分) CVE-2026-89009：WAVLINK 路由器未认证任意文件写入，可远程提权 root.md",
+      "mode": "pack2",
+      "change_id": "pack2-23-04",
+      "source_line": 124,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/开发框架/PHP/热门开源Dompdf PHP 库中存在严重漏洞.md",
+      "mode": "pack2",
+      "change_id": "pack2-25-01",
+      "source_line": 57,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/开发框架/Spring Boot/cve-2018-1273_cmd.md",
+      "mode": "pack2",
+      "change_id": "pack2-26-01",
+      "source_line": 38,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/ERP企业/用友NC/用友 NC XML实体注入漏洞.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 85,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/ERP企业/用友NC/用友 NC XML实体注入漏洞.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 88,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/中间件/Apache Tomcat/（CVE-2017-12615）Tomcat PUT方法任意文件写入漏洞.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 117,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": true
+    },
+    {
+      "path": "Web安全/开发框架/Spring Boot/Spring Framework URL解析不当漏洞以及绕过.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 46,
+      "literal_count": 2,
+      "exact_copy": true,
+      "independent_correction": true
+    },
+    {
+      "path": "Web安全/AI应用/LiteLLM/我在 30 行 Python 里拿到 LiteLLM 的 root：CVE-2026-30623 实战 + 加固.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 152,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/AI应用/LiteLLM/我在 30 行 Python 里拿到 LiteLLM 的 root：CVE-2026-30623 实战 + 加固.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 153,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/AI应用/OpenClaw AI/OpenClaw安全实战系列(四)：幽灵连通性 — 揭秘CVE-2026-32038沙箱网络隔离绕过与靶标实战.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 70,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/一种新的 email 欺骗漏洞 - SMTP 走私.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 89,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/一种新的 email 欺骗漏洞 - SMTP 走私.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 128,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/一种新的 email 欺骗漏洞 - SMTP 走私.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 130,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/一种新的 email 欺骗漏洞 - SMTP 走私.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 132,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/一种新的 email 欺骗漏洞 - SMTP 走私.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 144,
+      "literal_count": 2,
+      "exact_copy": true,
+      "independent_correction": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/一种新的 email 欺骗漏洞 - SMTP 走私.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 146,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/一种新的 email 欺骗漏洞 - SMTP 走私.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 150,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/一种新的 email 欺骗漏洞 - SMTP 走私.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 156,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/一种新的 email 欺骗漏洞 - SMTP 走私.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 164,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/一种新的 email 欺骗漏洞 - SMTP 走私.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 166,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/一种新的 email 欺骗漏洞 - SMTP 走私.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 177,
+      "literal_count": 4,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/一种新的 email 欺骗漏洞 - SMTP 走私.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 181,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/一种新的 email 欺骗漏洞 - SMTP 走私.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 187,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/一种新的 email 欺骗漏洞 - SMTP 走私.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 336,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/一种新的 email 欺骗漏洞 - SMTP 走私.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 337,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/一种新的 email 欺骗漏洞 - SMTP 走私.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 339,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/一种新的 email 欺骗漏洞 - SMTP 走私.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 340,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/一种新的 email 欺骗漏洞 - SMTP 走私.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 341,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/一种新的 email 欺骗漏洞 - SMTP 走私.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 348,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/一种新的 email 欺骗漏洞 - SMTP 走私.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 366,
+      "literal_count": 2,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/CMS内容/MetInfo/MetInfoCMS 5.X版本GETSHELL漏洞合集2.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 176,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/云平台/Citrix/继续Citrix传奇：CVE-2023-5914和CVE-2023-6184.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 118,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2025-29774-CVE-2025-29775 xml-crypto XML Signature Wrapping.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 76,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2025-29774-CVE-2025-29775 xml-crypto XML Signature Wrapping.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 77,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2025-29774-CVE-2025-29775 xml-crypto XML Signature Wrapping.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 79,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2025-29774-CVE-2025-29775 xml-crypto XML Signature Wrapping.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 80,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2025-29774-CVE-2025-29775 xml-crypto XML Signature Wrapping.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 81,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2025-29774-CVE-2025-29775 xml-crypto XML Signature Wrapping.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 82,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2025-29774-CVE-2025-29775 xml-crypto XML Signature Wrapping.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 104,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2025-29774-CVE-2025-29775 xml-crypto XML Signature Wrapping.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 105,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2025-65857：雄迈XM530摄像头硬编码凭据漏洞，数十万监控设备直接裸奔.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 218,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2026-49176 深度解析：Windows WalletService 本地提权链.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 240,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【CVE-2025-40634】缓冲区溢出 EXP 公布.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 110,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【CVE-2025-40634】缓冲区溢出 EXP 公布.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 114,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【CVE-2025-40634】缓冲区溢出 EXP 公布.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 115,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【CVE-2025-40634】缓冲区溢出 EXP 公布.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 117,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【CVE-2025-40634】缓冲区溢出 EXP 公布.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 118,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/互联网公开漏洞整理 202309-202406.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 763,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/互联网公开漏洞整理 202309-202406.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 765,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/互联网公开漏洞整理 202309-202406.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 1037,
+      "literal_count": 2,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/互联网公开漏洞整理 202309-202406.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 1079,
+      "literal_count": 2,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/互联网公开漏洞整理 202309-202406.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 1106,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/互联网公开漏洞整理 202309-202406.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 1148,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/互联网公开漏洞整理 202309-202406.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 1485,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/互联网公开漏洞整理 202309-202406.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 1486,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/互联网公开漏洞整理 202309-202406.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 2000,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/互联网公开漏洞整理 202309-202406.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 2001,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/互联网公开漏洞整理 202309-202406.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 2002,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/互联网公开漏洞整理 202309-202406.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 2003,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/互联网公开漏洞整理 202309-202406.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 2004,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/互联网公开漏洞整理 202309-202406.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 2005,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/互联网公开漏洞整理 202309-202406.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 2006,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/互联网公开漏洞整理 202309-202406.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 2007,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/互联网公开漏洞整理 202309-202406.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 2008,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/互联网公开漏洞整理 202309-202406.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 2009,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/互联网公开漏洞整理 202309-202406.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 2010,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/互联网公开漏洞整理 202309-202406.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 2011,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/互联网公开漏洞整理 202309-202406.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 2012,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/互联网公开漏洞整理 202309-202406.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 2013,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/互联网公开漏洞整理 202309-202406.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 2014,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/互联网公开漏洞整理 202309-202406.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 2015,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/互联网公开漏洞整理 202309-202406.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 2016,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/互联网公开漏洞整理 202309-202406.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 2173,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/互联网公开漏洞整理 202309-202406.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 2659,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/互联网公开漏洞整理 202309-202406.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 3110,
+      "literal_count": 3,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/互联网公开漏洞整理 202309-202406.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 3189,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/互联网公开漏洞整理 202309-202406.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 3190,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/互联网公开漏洞整理 202309-202406.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 3191,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/互联网公开漏洞整理 202309-202406.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 3192,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/互联网公开漏洞整理 202309-202406.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 3193,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/互联网公开漏洞整理 202309-202406.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 3217,
+      "literal_count": 2,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/互联网公开漏洞整理 202309-202406.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 3232,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/互联网公开漏洞整理 202309-202406.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 3233,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/互联网公开漏洞整理 202309-202406.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 3234,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/互联网公开漏洞整理 202309-202406.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 3235,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/互联网公开漏洞整理 202309-202406.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 3236,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/OA办公/泛微oa/Attackers Exploit SimpleHelp CVE-2026-48558 to Deploy TaskWeaver and D.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 160,
+      "literal_count": 2,
+      "exact_copy": true,
+      "independent_correction": true
+    },
+    {
+      "path": "Web安全/商业软件/Cleo/（CVE-2024-55956）Cleo Harmony VLTrader LexiCom未认证文件写入远程代码执行漏洞.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 100,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/开发框架/Java/CVE-2022-41853 分析：通过 Java 反序列化和远程代码库攻击使用静态函数获取 RCE.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 75,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/开发框架/SandboxJS/沙箱不是保险箱——SandboxJS 连环沙箱逃逸漏洞深度解析（CVE-2026-26954）.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 147,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": true
+    },
+    {
+      "path": "Web安全/网络设备/Palo Alto/CVE-2024-2432：Windows设备上Palo Alto 程序权限提升.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 64,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/网络设备/Palo Alto/CVE-2024-2432：Windows设备上Palo Alto 程序权限提升.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 66,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/网络设备/Palo Alto/CVE-2024-2432：Windows设备上Palo Alto 程序权限提升.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 68,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/网络设备/Palo Alto/CVE-2024-2432：Windows设备上Palo Alto 程序权限提升.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 75,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/网络设备/Palo Alto/CVE-2024-2432：Windows设备上Palo Alto 程序权限提升.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 82,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/网络设备/Palo Alto/CVE-2024-2432：Windows设备上Palo Alto 程序权限提升.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 84,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/网络设备/Palo Alto/CVE-2024-2432：Windows设备上Palo Alto 程序权限提升.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 86,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "IOT安全/昂捷/昂捷CRM cwsfiledown.asmx 任意文件读取漏洞.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 94,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "IOT安全/昂捷/昂捷CRM cwsfiledown.asmx 任意文件读取漏洞.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 95,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "IOT安全/昂捷/昂捷CRM cwsfiledown.asmx 任意文件读取漏洞.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 96,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "IOT安全/昂捷/昂捷CRM cwsfiledown.asmx 任意文件读取漏洞.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 97,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "IOT安全/昂捷/昂捷CRM cwsfiledown.asmx 任意文件读取漏洞.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 98,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/ERP企业/CyberPower PowerPanel Enterprise/CyberPower PowerPanel Enterprise 存在SQL注入漏洞（CVE-2024-32737）.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 83,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": true
+    },
+    {
+      "path": "Web安全/云平台/QNAP NAS/同一套坏习惯：QNAP CGI 预认证 RCE 到容器逃逸（CVE-2026-34007-34008）.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 287,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": true
+    },
+    {
+      "path": "Web安全/商业软件/禅道/禅道11.6RCE漏洞.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 75,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/商业软件/禅道/禅道11.6RCE漏洞.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 83,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/商业软件/禅道/禅道11.6RCE漏洞.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 95,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/商业软件/禅道/禅道11.6RCE漏洞.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 103,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/安全设备/Google/2026年还能让Google掏出百万奖金的漏洞.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 106,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/安全设备/Google/2026年还能让Google掏出百万奖金的漏洞.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 108,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/安全设备/Google/2026年还能让Google掏出百万奖金的漏洞.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 248,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/安全设备/Google/2026年还能让Google掏出百万奖金的漏洞.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 250,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/安全设备/Google/2026年还能让Google掏出百万奖金的漏洞.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 599,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/安全设备/Google/2026年还能让Google掏出百万奖金的漏洞.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 601,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/安全设备/Google/2026年还能让Google掏出百万奖金的漏洞.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 1240,
+      "literal_count": 2,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/安全设备/Google/2026年还能让Google掏出百万奖金的漏洞.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 1244,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/安全设备/Google/2026年还能让Google掏出百万奖金的漏洞.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 1380,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/安全设备/Google/2026年还能让Google掏出百万奖金的漏洞.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 1384,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/安全设备/Google/2026年还能让Google掏出百万奖金的漏洞.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 1446,
+      "literal_count": 3,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/安全设备/Google/2026年还能让Google掏出百万奖金的漏洞.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 1461,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/安全设备/Google/2026年还能让Google掏出百万奖金的漏洞.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 1501,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/安全设备/Google/2026年还能让Google掏出百万奖金的漏洞.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 1505,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/安全设备/Google/2026年还能让Google掏出百万奖金的漏洞.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 1514,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/安全设备/Google/2026年还能让Google掏出百万奖金的漏洞.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 1602,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/安全设备/Google/2026年还能让Google掏出百万奖金的漏洞.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 1750,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/安全设备/Google/2026年还能让Google掏出百万奖金的漏洞.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 1754,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/ERP企业/用友U8/用友U8 CRM exportdictionary.php SQL注入漏洞.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 108,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【已复现】FortiSandbox 身份验证绕过漏洞（CVE-2026-39813）.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 112,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/网络设备/D-Link/(9.1分) CVE-2026-93958：D-Link R95 路由器命令注入.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 156,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/网络设备/D-Link/(9.1分) CVE-2026-93958：D-Link R95 路由器命令注入.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 170,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/网络设备/D-Link/(9.1分) CVE-2026-93958：D-Link R95 路由器命令注入.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 172,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    },
+    {
+      "path": "Web安全/ERP企业/用友U8/用友U8 CRM ajaxgetufvouchdata.php SQL注入致RCE漏洞.md",
+      "mode": "pack3",
+      "change_id": null,
+      "source_line": 128,
+      "literal_count": 1,
+      "exact_copy": true,
+      "independent_correction": false
+    }
+  ],
+  "method": "Full Marked lexer; no DOM or article execution; exact inverse and original whitespace retained"
+}

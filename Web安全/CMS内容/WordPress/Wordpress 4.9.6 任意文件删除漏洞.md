@@ -51,9 +51,7 @@ WordPress是网络上最受欢迎的CMS。根据*w3tech*，大约30％的网站�
  
 
 
-```text
-[](javascript:void(0);)
-```
+> 原网页控件或署名（归档文字，不属于示例代码）：`[](javascript:void(0);)`
 
 
 ```
@@ -75,9 +73,7 @@ function wp_delete_attachment( $post_id, $force_delete = false ) {
 ```
 
 
-```text
-[](javascript:void(0);)
-```
+> 原网页控件或署名（归档文字，不属于示例代码）：`[](javascript:void(0);)`
 
 
 `$meta['thumb']`来自与数据库，是图片的属性之一。代码未检查`$meta['thumb']`的内容，直接带入`unlink`函数，如果`$meta['thumb']`可控则可导致文件删除。
@@ -87,9 +83,7 @@ function wp_delete_attachment( $post_id, $force_delete = false ) {
 文件/wp-admin/post.php中：
 
 
-```text
-[](javascript:void(0);)
-```
+> 原网页控件或署名（归档文字，不属于示例代码）：`[](javascript:void(0);)`
 
 
 ```
@@ -108,9 +102,7 @@ switch($action) {
 ```
 
 
-```text
-[](javascript:void(0);)
-```
+> 原网页控件或署名（归档文字，不属于示例代码）：`[](javascript:void(0);)`
 
 
 `$newmeta['thumb']`来自于$_POST['thumb']，未经过滤直接将其存入数据库，即上一步的`$meta['thumb']`可控。
@@ -122,9 +114,7 @@ switch($action) {
  通过将修复程序添加到`functions.php`当前活动的主题/子主题的文件中，可以将修复程序集成到现有的WordPress安装中。
 
 
-```text
-[](javascript:void(0);)
-```
+> 原网页控件或署名（归档文字，不属于示例代码）：`[](javascript:void(0);)`
 
 
 ```
@@ -140,9 +130,7 @@ function rips_unlink_tempfix( $data ) {
 ```
 
 
-```text
-[](javascript:void(0);)
-```
+> 原网页控件或署名（归档文字，不属于示例代码）：`[](javascript:void(0);)`
 
 
 所提供的Hotfix所做的就是挂钩`wp_update_attachement_metadata()`调用并确保为元值提供的数据`thumb`不包含任何可以进行路径遍历的部分。因此，不能删除任何安全相关文件。

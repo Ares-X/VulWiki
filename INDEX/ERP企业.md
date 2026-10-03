@@ -38,6 +38,10 @@
 
 - [Oracle EBS Payments 未认证接管在野情报](../Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/Oracle%20EBS/Oracle%20E-Business%20Suite%20Flaw%20CVE-2026-46817%20Actively%20Exploited%20in%20the.md) [advisory; not-reproduced; needs-review]
 
+## Oracle PeopleSoft Enterprise PeopleTools
+
+- [CVE-2026-35273 | Oracle PeopleSoft PeopleTools Unauthenticated Remote Code Execution Vulnerability | Active Exploitation](../Web%E5%AE%89%E5%85%A8/%E6%95%B0%E6%8D%AE%E5%BA%93/Oracle%20MySQL%20Server/CVE-2026-35273%20_%20Oracle%20PeopleSoft%20PeopleTools%20Unauthenticated%20Remote.md) [vulnerability; source-claimed; needs-review]
+
 ## SAP BusinessObjects BI及多产品
 
 - [SAP BusinessObjects BI及多产品 SSO认证绕过及月度多漏洞新闻](../Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E4%B8%A5%E9%87%8D%E7%9A%84SAP/%E4%B8%A5%E9%87%8D%E7%9A%84SAP%E6%BC%8F%E6%B4%9E%E5%8F%AF%E8%AE%A9%E6%94%BB%E5%87%BB%E8%80%85%E7%BB%95%E8%BF%87%E8%BA%AB%E4%BB%BD%E9%AA%8C%E8%AF%81%E7%A0%B4%E5%9D%8F%E4%BC%81%E4%B8%9A%E7%B3%BB%E7%BB%9F.md) [advisory; not-reproduced; needs-review]

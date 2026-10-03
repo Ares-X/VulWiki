@@ -1,0 +1,84 @@
+{
+  "pr": 9,
+  "reviewer": "pr9_review_3",
+  "read_only": true,
+  "articles": [
+    {
+      "path": "Web安全/开发框架/graphql-ruby/graphql-ruby 授权异常被误判成功的执行器差异（GHSA-j7xr-4g94-r9h3）.md",
+      "verdict": "accepted",
+      "evidence": [
+        {
+          "location": "frontmatter lines 13-19; body lines 28-34",
+          "finding": "Version bounds, patched release, Execution::Next plus Resolver-family and raised UnauthorizedError prerequisites, and GHSA-as-primary/GHSL-as-reference match the maintainer advisory. The advisory says no known CVE.",
+          "source_claim": "Maintainer advisory GHSA-j7xr-4g94-r9h3",
+          "independent_check": "Advisory directly states affected >=2.5.23 <=2.6.5, patched 2.6.6, the Resolver subclasses and exception condition, and No known CVE.",
+          "url": "https://github.com/rmosolgo/graphql-ruby/security/advisories/GHSA-j7xr-4g94-r9h3"
+        },
+        {
+          "location": "body lines 38-50",
+          "finding": "Pre-fix is_authed=true control-flow explanation and patch changing it to false, along with regression assertions for nil/default and custom replacement results, match the fixed source commit.",
+          "source_claim": "GitHub Security Lab report and maintainer commit",
+          "independent_check": "Fixed commit diff confirms the one-line production change and both test outcomes described.",
+          "url": "https://github.com/rmosolgo/graphql-ruby/commit/741e37959193b9afe2c6c578cea3ec431b5fda33"
+        },
+        {
+          "location": "body lines 54-59",
+          "finding": "Disclosure dates and source roles are consistent: GHSL reports Jul 17 fix and Jul 21 v2.6.6/advisory, and is dated Aug 8.",
+          "source_claim": "GitHub Security Lab disclosure report",
+          "independent_check": "Report's timeline and tested version/control-flow details agree with advisory and patch.",
+          "url": "https://securitylab.github.com/advisories/GHSL-2026-152_graphql-ruby/"
+        },
+        {
+          "location": "repository search: Web安全/ and 系统安全/ Markdown",
+          "finding": "No existing graphql-ruby / GHSA-j7xr-4g94-r9h3 record found; no confirmed duplicate.",
+          "source_claim": "N/A",
+          "independent_check": "Repository-wide case-insensitive search for product and identifier.",
+          "url": "https://github.com/rmosolgo/graphql-ruby/security/advisories/GHSA-j7xr-4g94-r9h3"
+        }
+      ],
+      "formatting": "Readable section hierarchy, lists, inline code and source links; no apparent Markdown or copyability defect. Public test strings remain unchanged.",
+      "changes": []
+    },
+    {
+      "path": "系统安全/Linux/Linux本地提权漏洞/Linux OVS共享页标记丢失与三处生命周期修复（CVE-2026-89487等）.md",
+      "verdict": "accepted",
+      "evidence": [
+        {
+          "location": "frontmatter lines 12-20; body lines 25-43",
+          "finding": "The three primary CVEs, distinct patch ownership and lifecycle conditions, and the shared-frag marker mechanism match the fixed Linux commits and CNA records. The article preserves the difference between the Doyensec USERSPACE explanation and the PoC's RECIRC clone trigger.",
+          "source_claim": "Norbert Szetei / Doyensec research and Linux CNA records",
+          "independent_check": "Commit 0dbc239 explains the borrowed skb remains forwarded after USERSPACE error; commit f66bdb1 guards shared clone state with !skb_cloned; CVE records map 90049 to 8ece906 and describe the separate skb_zerocopy source-skb issue.",
+          "url": "https://github.com/torvalds/linux/commit/0dbc2398fca3bb33eda963849f865ddb1b3aa05e; https://github.com/torvalds/linux/commit/f66bdb1cc0fcd227a062378f8be0b5873aa5600a; https://github.com/torvalds/linux/commit/8ece906150128d5ec2462aabcc978c568433eca4; https://github.com/CVEProject/cvelistV5/blob/6ae048f17d849e2e01681d2c6c5ab8798da28c9c/cves/2026/89xxx/CVE-2026-89487.json; https://github.com/CVEProject/cvelistV5/blob/6ae048f17d849e2e01681d2c6c5ab8798da28c9c/cves/2026/80xxx/CVE-2026-80977.json; https://github.com/CVEProject/cvelistV5/blob/3b1fafb2d4e4824cd14518d85e29d1e2493c3328/cves/2026/90xxx/CVE-2026-90049.json"
+        },
+        {
+          "location": "body lines 47-51, 70-74",
+          "finding": "Fixed PoC source explicitly documents RECIRC cloning the skb, clone upcall failure and original OUTPUT; article correctly limits this to the PoC path. Side effects and the unreviewed prebuilt binary boundary are clearly disclosed.",
+          "source_claim": "Doyensec article and fixed PoC tree",
+          "independent_check": "poc.c at fixed commit contains the RECIRC then OUTPUT actions and explanatory clone/shared-shinfo comment. Doyensec article separately documents the USERSPACE action path, namespace/CAP_NET_ADMIN, ESP delivery and page-cache effects.",
+          "url": "https://github.com/doyensec/ovs-pagecache-write/blob/0c4027ee205cde24863b8d1736dc7857f8ac6457/poc.c; https://blog.doyensec.com/2026/09/17/ovs.html"
+        },
+        {
+          "location": "frontmatter lines 14-17; body lines 49-68",
+          "finding": "Prerequisites and branch fixed-version matrix agree with CNA records: 89487/80977 share listed stable fixed versions while 90049 is later for 6.12, 6.18 and 7.2. The 90049 guest/vhost-net distinction is explicitly attributed to CNA, not generalized to the local PoC. CNA records also distinguish 3.14 and 3.8 mainline affected starting points and list older stable affected entries.",
+          "source_claim": "Linux CNA records",
+          "independent_check": "Fixed CNA snapshots show the affected start and per-branch unaffected versions; the 90049 record describes the guest zerocopy context. Doyensec describes the local namespace path requirements.",
+          "url": "https://github.com/CVEProject/cvelistV5/blob/6ae048f17d849e2e01681d2c6c5ab8798da28c9c/cves/2026/89xxx/CVE-2026-89487.json; https://github.com/CVEProject/cvelistV5/blob/6ae048f17d849e2e01681d2c6c5ab8798da28c9c/cves/2026/80xxx/CVE-2026-80977.json; https://github.com/CVEProject/cvelistV5/blob/3b1fafb2d4e4824cd14518d85e29d1e2493c3328/cves/2026/90xxx/CVE-2026-90049.json; https://blog.doyensec.com/2026/09/17/ovs.html"
+        },
+        {
+          "location": "repository search: 系统安全/Linux and Web安全/ Markdown",
+          "finding": "Existing CVE-2022-2639 OVS write-up and Fragnesia/CVE-2026-46300 material are related context, but not duplicates of these three lifecycle defects. Existing CVE-2026-81000 and CVE-2026-64531 references are different issues/products/paths. No same-entity record for the three primary CVEs found.",
+          "source_claim": "N/A",
+          "independent_check": "Repository-wide identifier and topic search; existing CVE-2022-2639 articles discuss an older OVS vulnerability and have separate primary identifiers.",
+          "url": "https://github.com/torvalds/linux/commit/0dbc2398fca3bb33eda963849f865ddb1b3aa05e"
+        }
+      ],
+      "formatting": "Readable tables, headings, inline code and fixed links; no apparent Markdown defect. Technical byte strings in the reviewed article were not normalized or changed.",
+      "changes": []
+    }
+  ],
+  "limitations": [
+    "No PoC, article code, binary, or dependency was executed; no example target was accessed.",
+    "Linux CNA snapshots are fixed versioned source records; conclusions about distribution package backports require each vendor's package advisory.",
+    "The attached precompiled OVS PoC binary was expressly outside the article's static review, as the article itself states."
+  ]
+}

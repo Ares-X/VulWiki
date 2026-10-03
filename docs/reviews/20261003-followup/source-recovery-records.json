@@ -1,0 +1,497 @@
+[
+  {
+    "path": "Web安全/中间件/Apache Solr/CVE-2026-44825 _ Apache Solr AuthTool Hardcoded Credentials Vulnerabil.md",
+    "source_urls": [
+      "https://horizon3.ai/attack-research/vulnerabilities/cve-2026-44825/"
+    ],
+    "paragraph_zh": "Horizon3 将 CVE-2026-44825 描述为 Apache Solr SolrCloud 使用 `bin/solr auth enable` 初始化 Basic Authentication 时可能写入同名用户名和密码的模板账户。来源称，若相关默认凭据仍有效且管理 API 可达，可能获得管理访问；页面列出 9.4.0–9.10.1 与 10.0.0，并建议在 9.11.0 或 10.1.0 可用时升级，或更改/删除模板账户。上述产品、版本、前提与缓解均为 Horizon3 页面主张，本次未核对 Apache 公告或补丁。",
+    "first_party_support": [],
+    "caveats": [
+      "页面中的Apache公告/JIRA链接不是已核验修复证据；模板账户名称/权限均仅来源主张。"
+    ],
+    "source": "Horizon3",
+    "review_date": "2026-10-03"
+  },
+  {
+    "path": "Web安全/其他软件/杂项/CVE-2025-12480.md",
+    "source_urls": [
+      "https://horizon3.ai/attack-research/vulnerabilities/cve-2025-12480/"
+    ],
+    "paragraph_zh": "Horizon3 将 CVE-2025-12480 描述为 Gladinet Triofox 管理/安装页面相关的访问控制问题。页面称利用 Host 校验缺陷进入安装流程、创建本地管理员并修改防病毒程序路径，再经上传触发执行；并列出观察版本 16.4.10317.56372 与修复版本 16.7.10368.56560（2025-07-26）或更高。部署条件矩阵、活动归因及修复覆盖尚未独立核对；NodeZero 描述仅属来源自述。",
+    "first_party_support": [],
+    "caveats": [],
+    "source": "Horizon3",
+    "review_date": "2026-10-03"
+  },
+  {
+    "path": "Web安全/其他软件/杂项/CVE-2025-54309.md",
+    "source_urls": [
+      "https://horizon3.ai/attack-research/vulnerabilities/cve-2025-54309/"
+    ],
+    "paragraph_zh": "Horizon3 将 CVE-2025-54309 描述为 CrushFTP 的 AS2 认证处理问题：页面称 CrushFTP 10 的 10.8.5 之前版本及 11 的 11.3.4_23 之前版本，在未启用 DMZ proxy 时可能允许远程未认证攻击者经 HTTPS 绕过认证。页面未给出更细触发链，只指向厂商公告获取更新及缓解信息。本段仅概述来源主张；暴露条件与版本范围未交叉核验。",
+    "first_party_support": [],
+    "caveats": [],
+    "source": "Horizon3",
+    "review_date": "2026-10-03"
+  },
+  {
+    "path": "Web安全/其他软件/杂项/CVE-2025-59287.md",
+    "source_urls": [
+      "https://horizon3.ai/attack-research/vulnerabilities/cve-2025-59287/"
+    ],
+    "paragraph_zh": "旧归档正文仅为 Horizon3 导航，曾记录“未见技术正文”；这是旧抓取状态，现有来源页面已有技术内容。Horizon3 将 CVE-2025-59287 描述为 WSUS 中 AuthorizationCookie 路径的不安全反序列化问题，并转述 CODE WHITE 对 SoapFormatter 代码差异的分析；文章称可能导致 SYSTEM 权限远程代码执行。页面比较特定 Windows Server 构建并说明 2025-10-23 带外更新移除相关代码。所比较的构建和时间窗口只支持该比较范围，不能据此断言所有 WSUS/Windows Server 版本的完整受影响范围；适用更新应按 Microsoft 产品公告核对。",
+    "first_party_support": [],
+    "caveats": [
+      "比较特定构建不等于完整版本影响区间；不要将10/14至10/23窗口概括为全部影响版本。",
+      "Microsoft公告链接存在不构成已核对支持。"
+    ],
+    "source": "Horizon3",
+    "review_date": "2026-10-03"
+  },
+  {
+    "path": "Web安全/其他软件/杂项/CVE-2025-7776.md",
+    "source_urls": [
+      "https://horizon3.ai/attack-research/vulnerabilities/cve-2025-7776/"
+    ],
+    "paragraph_zh": "Horizon3 将 CVE-2025-7776 描述为 Citrix NetScaler `/broker/xml` 相关的内存破坏问题，称可能导致设备及下游应用崩溃，并可能被未认证攻击者用于拒绝服务。页面正文没有列出受影响或修复版本，只建议按 Citrix 公告 CTX694938 更新。NodeZero 安全验证的说法是页面对其产品的描述，不是本库测试证据；触发前提及版本仍待核。",
+    "first_party_support": [],
+    "caveats": [],
+    "source": "Horizon3",
+    "review_date": "2026-10-03"
+  },
+  {
+    "path": "Web安全/其他软件/杂项/CVE-2025-9316, CVE-2025-11700.md",
+    "source_urls": [
+      "https://horizon3.ai/attack-research/vulnerabilities/n-able-n-central-vulnerabilities-cve-2025-9316-cve-2025-11700/"
+    ],
+    "paragraph_zh": "旧归档只含导航，曾称缺少两项技术正文；该表述仅对应旧抓取状态。Horizon3 现将两项 N-able N-central 问题并列为组合链：其称 CVE-2025-9316 可未认证生成设备级 Session ID，CVE-2025-11700 涉及 `importServiceFromFile` XML 外部实体解析；组合后可能写文件并读取敏感文件。页面称 2025.4 移除相关 legacy SOAP EI API，并建议升级或限制管理服务网络访问。组合影响不可分摊为任一单项独立影响，具体版本与依赖关系待厂商公告核对。",
+    "first_party_support": [],
+    "caveats": [
+      "共同链条应明确各CVE的独立角色；不可将组合后能力写成两条各自都能完成写入/读取。",
+      "frontmatter两编号暂有共同primary记录；在CNA对应关系未核前不改成rejected/disputed。"
+    ],
+    "source": "Horizon3",
+    "review_date": "2026-10-03"
+  },
+  {
+    "path": "Web安全/网络设备/Check Point/CVE-2026-50751 _ Check Point Security Gateway Improper Authentication.md",
+    "source_urls": [
+      "https://horizon3.ai/attack-research/vulnerabilities/cve-2026-50751/"
+    ],
+    "paragraph_zh": "Horizon3 将 CVE-2026-50751 描述为 Check Point Security Gateway 远程访问 VPN / Mobile Access 中与弃用 IKEv1 证书验证有关的认证绕过；页面称攻击者可能无需有效密码建立 VPN 会话，并列出多组 R80/R81/R82 分支及 hotfix/缓解建议。页面同时说明建立 VPN 会话本身不代表可访问内网资源或取得更高权限。受影响部署、分支与 hotfix 映射仍应以 Check Point 公告核实。",
+    "first_party_support": [],
+    "caveats": [],
+    "source": "Horizon3",
+    "review_date": "2026-10-03"
+  },
+  {
+    "path": "Web安全/中间件/Squid/CVE-2026-47729 _ Squid Heap Buffer Overread Vulnerability.md",
+    "source_urls": [
+      "https://horizon3.ai/attack-research/vulnerabilities/cve-2026-47729/"
+    ],
+    "paragraph_zh": "Horizon3 将 CVE-2026-47729 描述为 Squid FTP 网关目录列表解析中的堆缓冲区越界读取：在其所述条件下，攻击者控制的 FTP 服务可经代理返回畸形列表，页面称相关内存中的 HTTP 明文请求可能泄露。页面列出的条件包括启用 FTP 功能、目标 FTP 服务可经代理访问及用户使用该代理；共享代理可能涉及跨用户暴露。来源称 Squid 7.7 修复，并提醒发行版可能回移补丁。本次未核查源码、补丁或供应商公告。",
+    "first_party_support": [],
+    "caveats": [
+      "Heap overread术语需核；不把标题术语推导为完整根因事实。",
+      "Squid版本和发行版回移说明为来源主张。"
+    ],
+    "source": "Horizon3",
+    "review_date": "2026-10-03"
+  },
+  {
+    "path": "Web安全/其他软件/杂项/CVE-2025-14611.md",
+    "source_urls": [
+      "https://horizon3.ai/attack-research/vulnerabilities/cve-2025-14611/"
+    ],
+    "paragraph_zh": "旧归档曾记为只有导航；该判断描述旧抓取结果，不代表当前来源页没有正文。Horizon3 将 CVE-2025-14611 描述为 Gladinet CentreStack 与 Triofox 的未认证本地文件包含，称低于 16.12.10420.56791 的版本使用硬编码 AES 值，并可能允许经公开端点尝试读取本地文件。页面还称已遭利用、列入 CISA KEV，并建议升级及限制门户公网访问；这些状态和版本均未在本次独立核实。",
+    "first_party_support": [],
+    "caveats": [
+      "CentreStack/Triofox与编号的权威映射及KEV状态未核。"
+    ],
+    "source": "Horizon3",
+    "review_date": "2026-10-03"
+  },
+  {
+    "path": "Web安全/其他软件/杂项/CVE-2025-57819.md",
+    "source_urls": [
+      "https://horizon3.ai/attack-research/vulnerabilities/cve-2025-57819/"
+    ],
+    "paragraph_zh": "旧归档记为未采入技术内容，仅反映旧抓取状态。Horizon3 将 CVE-2025-57819 描述为 FreePBX 默认配置相关的认证绕过，并称后续 SQL 注入可影响 cron_jobs、ampusers 或 PBX 数据。更新后的页面另列 CVE-2025-66039（非默认 webserver 认证类型的认证问题）、CVE-2025-61675（Endpoint Manager SQL 注入）及 CVE-2025-61678（固件上传问题）。各编号的前提与修复分支不同，应保留为聚合分析并逐项区分；上述均为来源主张。",
+    "first_party_support": [],
+    "caveats": [
+      "需避免把后续SQL注入、命令写入能力全归给CVE-2025-57819。",
+      "不同条件明确：66039只在非默认认证类型；61675/61678仍需有效PHPSESSID。",
+      "17.0.22等修复点必须按编号/分支分别记。"
+    ],
+    "source": "Horizon3",
+    "review_date": "2026-10-03"
+  },
+  {
+    "path": "Web安全/其他软件/杂项/CVE-2025-61757.md",
+    "source_urls": [
+      "https://horizon3.ai/attack-research/vulnerabilities/cve-2025-61757/"
+    ],
+    "paragraph_zh": "Horizon3 将 CVE-2025-61757 描述为 Oracle Fusion Middleware 的 Oracle Identity Manager REST WebServices 未认证远程代码执行，列出 12.2.1.4.0 与 14.1.2.1.0。页面称其涉及 REST 路径处理、认证过滤器及脚本检查端点，并称 Oracle 于 2025-10-21 CPU 修复、CISA 后续列入 KEV。利用细节、版本覆盖与 KEV 状态均未在本次独立核实。",
+    "first_party_support": [],
+    "caveats": [],
+    "source": "Horizon3",
+    "review_date": "2026-10-03"
+  },
+  {
+    "path": "Web安全/其他软件/杂项/CVE-2025-8356.md",
+    "source_urls": [
+      "https://horizon3.ai/attack-research/vulnerabilities/cve-2025-8356/"
+    ],
+    "paragraph_zh": "旧归档此前记为缺少 CVE-2025-8356 正文；这是旧采集状态。Horizon3 当前页面称 Xerox FreeFlow Core 低于 8.0.5 存在路径遍历问题，可导致文件上传并进一步执行命令，建议升级至 8.0.5 或更高。来源没有说明触发端点、认证条件、根因细节或验证过程，因此这些内容保持未知；版本与影响也未另行核实。",
+    "first_party_support": [],
+    "caveats": [
+      "短页面未给出认证/触发前提，勿补猜。"
+    ],
+    "source": "Horizon3",
+    "review_date": "2026-10-03"
+  },
+  {
+    "path": "Web安全/数据库/Oracle MySQL Server/CVE-2026-35273 _ Oracle PeopleSoft PeopleTools Unauthenticated Remote.md",
+    "source_urls": [
+      "https://horizon3.ai/attack-research/vulnerabilities/cve-2026-35273/"
+    ],
+    "paragraph_zh": "旧归档曾称无 PeopleSoft 漏洞正文；这只描述旧抓取，不应继续作为当前结论。Horizon3 将 CVE-2026-35273 描述为 Oracle PeopleSoft Enterprise PeopleTools Updates Environment Management 组件问题，列出 8.61 与 8.62，并称可经网络 HTTP 触发、无需用户交互。页面首段混入 SimpleHelp 的 CVE-2026-48558 内容，该段与本条产品和编号不符，应排除。修复版本、零日利用说法及编号映射尚未独立核实。",
+    "first_party_support": [],
+    "caveats": [
+      "污染首段明确提及CVE-2026-48558，勿把它作为PeopleSoft编号引用。",
+      "产品目录可以建议为商业软件/ERP，但勿由目录推断CNA映射。"
+    ],
+    "source": "Horizon3",
+    "review_date": "2026-10-03"
+  },
+  {
+    "path": "Web安全/邮件系统/FreePBX/The FreePBX Rabbit Hole_ CVE-2025-66039 and others.md",
+    "source_urls": [
+      "https://horizon3.ai/attack-research/the-freepbx-rabbit-hole-cve-2025-66039-and-others/"
+    ],
+    "paragraph_zh": "旧归档的“导航壳/无正文”仅描述旧抓取状态。Horizon3 作者 Noah King 于 2025-12-11 发布 FreePBX 聚合分析。页面称 CVE-2025-66039 仅涉及非默认 webserver 认证类型，默认类型为 usermanager；CVE-2025-61675 的多处 SQL 注入和 CVE-2025-61678 的固件上传则在其他认证模式仍需有效 PHPSESSID。页面把 CVE-2025-57819 作为不同的默认配置路径讨论。作者的请求/响应是来源自述，本次没有执行或复现；目录应建议转到 PBX/通信分类。",
+    "first_party_support": [],
+    "caveats": [
+      "Horizon3自述实验材料不作为本站复现。",
+      "CVE-2025-57819与66039/61675/61678须保留不同编号及链路角色。",
+      "页面曾引入具体HTTP片段：恢复时保留技术含义并按仓库规则不执行。"
+    ],
+    "source": "Horizon3",
+    "review_date": "2026-10-03"
+  },
+  {
+    "path": "Web安全/桌面软件/Cursor IDE/CVE-2025-54135, CVE-2025-54136_ Frequently Asked Questions About Vulne.md",
+    "paragraph_zh": "Tenable FAQ 分别讨论 Cursor 的 CurXecute（CVE-2025-54135）和 MCPoison（CVE-2025-54136）：前者涉及提示注入影响 MCP 配置，后者涉及已批准的项目级 MCP 配置后续被改写。FAQ 给出各自受影响与修复版本，但这是对研究者及厂商信息的二手汇总；两项漏洞及其前提应分别记录，版本和机制仍待对应原始公告核对。",
+    "product": "Cursor IDE",
+    "record_type": "advisory",
+    "source_urls": [
+      "https://www.tenable.com/blog/faq-cve-2025-54135-cve-2025-54136-vulnerabilities-in-cursor-curxecute-mcpoison"
+    ],
+    "first_party_support": [],
+    "caveats": [
+      "Tenable 是二手 FAQ；本轮未直接核对 Cursor、AIM Security 或 Check Point 原始材料。"
+    ],
+    "review_date": "2026-10-03"
+  },
+  {
+    "path": "Web安全/桌面软件/Microsoft/Microsoft’s August 2025 Patch Tuesday Addresses 107 CVEs CVE-2025-537.md",
+    "paragraph_zh": "Tenable 将此文作为 Microsoft 2025 年 8 月补丁星期二汇编。其顶部严重性列表为 13 项 Critical、91 项 Important、2 项 Moderate、1 项 Low，合计 107；正文分项却写 1 项 Moderate，须保留总数并指出 Moderate 计数不一致。标题中的 CVE-2025-53779 是 Windows Kerberos 权限提升代表项，涉及已认证攻击者和特定 Active Directory 权限条件；其他条目条件各异，版本和 KB 应逐项核对。",
+    "product": "Microsoft 多产品",
+    "record_type": "roundup",
+    "source_urls": [
+      "https://www.tenable.com/blog/microsofts-august-2025-patch-tuesday-addresses-107-cves-cve-2025-53779"
+    ],
+    "first_party_support": [],
+    "caveats": [
+      "Tenable 页面顶部严重性列表与正文分项对 Moderate 数量记载不一致：顶部为 2、正文为 1；保留总数 107，并注明差异。",
+      "此条所有具体产品版本及 KB 仍需逐 CVE 对照 Microsoft 更新指南。"
+    ],
+    "review_date": "2026-10-03"
+  },
+  {
+    "path": "Web安全/桌面软件/Microsoft/Microsoft’s December 2025 Patch Tuesday Addresses 56 CVEs CVE-2025-62.md",
+    "paragraph_zh": "这是 Microsoft 2025 年 12 月补丁星期二汇编。Tenable 报告 56 项修复；标题代表项 CVE-2025-62221 影响 Windows Cloud Files Mini Filter Driver，来源称其为本地权限提升并已遭在野利用。文中其他 Exchange、Office、PowerShell 等条目具有不同条件。该汇编没有给出所有产品的统一版本范围，产品构建及 KB 应逐编号查 Microsoft 公告。",
+    "product": "Microsoft 多产品",
+    "record_type": "roundup",
+    "source_urls": [
+      "https://www.tenable.com/blog/microsofts-december-2025-patch-tuesday-addresses-56-cves-cve-2025-62221"
+    ],
+    "first_party_support": [],
+    "caveats": [
+      "仅核对 Tenable 汇编；各产品版本和 KB 未逐项核验。"
+    ],
+    "review_date": "2026-10-03"
+  },
+  {
+    "path": "Web安全/桌面软件/Microsoft/Microsoft’s June 2026 Patch Tuesday Addresses 198 CVEs CVE-2026-4916.md",
+    "paragraph_zh": "Tenable 的 Microsoft 2026 年 6 月补丁星期二汇编报告 198 项更新；其中 CVE-2026-49160 是 HTTP.sys 拒绝服务，CVE-2026-50507 是 Windows BitLocker 安全功能绕过。Microsoft 当月公告也将两者分别列出，并说明这些问题在更新前已被利用或公开。文章还列有其他产品漏洞，不能把两项标题编号或其条件当作全篇范围；版本、KB 和缓解条件须按各 CVE 公告确认。",
+    "product": "Microsoft 多产品",
+    "record_type": "roundup",
+    "source_urls": [
+      "https://www.tenable.com/blog/microsofts-june-2026-patch-tuesday-addresses-198-cves-cve-2026-49160-cve-2026-50507",
+      "https://www.microsoft.com/en-us/msrc/blog/2026/06/202606-security-update"
+    ],
+    "first_party_support": [
+      {
+        "url": "https://www.microsoft.com/en-us/msrc/blog/2026/06/202606-security-update",
+        "supports": [
+          "Microsoft 2026-06-09 公告列出 CVE-2026-49160 为 HTTP.sys DoS、CVE-2026-50507 为 Windows BitLocker 安全功能绕过，并将其列入更新前已有利用或公开信息的漏洞。"
+        ],
+        "limits": [
+          "未逐项核验 Tenable 对 198 项总量、版本/KB、注册表缓解细节和其他产品条目的描述。"
+        ]
+      }
+    ],
+    "caveats": [
+      "保持 roundup；标题编号不是整篇唯一漏洞。",
+      "未逐项核验 Tenable 对 198 项总量、版本/KB、注册表缓解细节和其他产品条目的描述。"
+    ],
+    "review_date": "2026-10-03"
+  },
+  {
+    "path": "Web安全/桌面软件/Microsoft/Microsoft’s November 2025 Patch Tuesday Addresses 63 CVEs CVE-2025-62.md",
+    "paragraph_zh": "这是 Microsoft 2025 年 11 月补丁星期二汇编。Tenable 报告修复 63 项，标题中的 CVE-2025-62215 是 Windows Kernel 本地权限提升代表项；来源称该问题需要本地已认证攻击者并已在野利用。Office、Hyper-V、Kerberos 等其他条目条件不同。各产品版本及 KB 未形成统一范围，应逐条按 Microsoft 公告核对。",
+    "product": "Microsoft 多产品",
+    "record_type": "roundup",
+    "source_urls": [
+      "https://www.tenable.com/blog/microsofts-november-2025-patch-tuesday-addresses-63-cves-cve-2025-62215"
+    ],
+    "first_party_support": [],
+    "caveats": [
+      "仅核对 Tenable 汇编；CVE-2025-62215 的在野利用和版本/KB 仍应逐项对照 Microsoft 公告。"
+    ],
+    "review_date": "2026-10-03"
+  },
+  {
+    "path": "Web安全/桌面软件/Microsoft/Microsoft’s September 2025 Patch Tuesday Addresses 80 CVEs CVE-2025-5.md",
+    "paragraph_zh": "Tenable 将此文列为 Microsoft 2025 年 9 月补丁星期二汇编，报告 80 项更新，并说明其计数未纳入一项 VulnCheck 报告。标题代表项 CVE-2025-55234 关联 Windows SMB；来源称其无需认证，但效果和 SMB 加固配置语境须按 Microsoft 对应公告核实。文章还列有 Office、SharePoint、Hyper-V 等独立漏洞，触发条件并不相同。",
+    "product": "Microsoft 多产品",
+    "record_type": "roundup",
+    "source_urls": [
+      "https://www.tenable.com/blog/microsofts-september-2025-patch-tuesday-addresses-80-cves-cve-2025-55234"
+    ],
+    "first_party_support": [],
+    "caveats": [
+      "仅核对 Tenable 汇编；SMB 条目条件和各 CVE 版本/KB 仍待 Microsoft 公告核对。"
+    ],
+    "review_date": "2026-10-03"
+  },
+  {
+    "path": "Web安全/邮件系统/Microsoft Exchange Server/CVE-2025-53786_ Frequently Asked Questions About Microsoft Exchange Se.md",
+    "paragraph_zh": "Tenable FAQ 将 CVE-2025-53786 描述为影响 Exchange Server 混合部署的权限提升问题，攻击者需先拥有本地 Exchange 管理员权限。文章称风险与本地 Exchange 和 Exchange Online 共用的服务主体有关，并建议采用专用 hybrid app 及按实际迁移状态处理旧 keyCredentials。FAQ 未给出完整受影响构建矩阵；缓解要求和当前修复状态应以 Microsoft 原始公告及部署文档核对。",
+    "product": "Microsoft Exchange Server",
+    "record_type": "advisory",
+    "source_urls": [
+      "https://www.tenable.com/blog/cve-2025-53786-frequently-asked-questions-about-microsoft-exchange-server-hybrid-deployment"
+    ],
+    "first_party_support": [],
+    "caveats": [
+      "Tenable 为二手 FAQ；本轮未核对 Microsoft 当前 hybrid app 文档、Exchange 分支和最新修复状态。"
+    ],
+    "review_date": "2026-10-03"
+  },
+  {
+    "path": "Web安全/其他软件/杂项/CHYbeta starred BishopFox_CVE-2026-34908-check.md",
+    "paragraph_zh": "Bishop Fox README 将 CVE-2026-34908 与 CVE-2026-34909 并列为 UniFi OS Server 认证网关绕过链条的入口（类别概括为访问控制问题/路径穿越），并将 CVE-2026-34910 列为后续输入校验/命令注入环节；README 称受影响至 5.0.6、5.0.8 修复。检测器安全性、请求副作用及版本范围均是 README 声明，未由本库运行或独立验证。",
+    "product": "UniFi OS Server",
+    "record_type": "analysis",
+    "source_urls": [
+      "https://github.com/BishopFox/CVE-2026-34908-check",
+      "https://github.com/BishopFox/CVE-2026-34908-check/blob/768d57f31d87ed3eadbb0c04ca592aef2c20e3eb/README.md",
+      "https://community.ui.com/releases/Security-Advisory-Bulletin-064-064/84811c09-4cf4-42ab-bd61-cc994445963b"
+    ],
+    "first_party_support": [
+      {
+        "url": "https://github.com/BishopFox/CVE-2026-34908-check/blob/768d57f31d87ed3eadbb0c04ca592aef2c20e3eb/README.md",
+        "supports": [
+          "在提交 768d57f31d87ed3eadbb0c04ca592aef2c20e3eb 的 README.md（blob fe95f4ce86736914c46292f10cb62b661909d9bc）中核实：README 将 CVE-2026-34908/34909 并列列作认证网关绕过入口，将 CVE-2026-34910 列作命令注入/RCE 环节；README 声称 UniFi OS Server <=5.0.6 受影响、5.0.8 修复。"
+        ],
+        "limits": [
+          "支持的是 README 自身的说法，不代表独立验证产品漏洞、版本或检测器行为。"
+        ]
+      },
+      {
+        "url": "https://community.ui.com/releases/Security-Advisory-Bulletin-064-064/84811c09-4cf4-42ab-bd61-cc994445963b",
+        "supports": [],
+        "limits": [
+          "官方公告 URL 已打开，但本次正文响应为空，未取得可用于事实核对的公告内容。"
+        ]
+      }
+    ],
+    "caveats": [
+      "保留原 GitHub main URL；固定链接指向当次查询 main 的完整 commit SHA，文件路径 README.md，README blob SHA fe95f4ce86736914c46292f10cb62b661909d9bc。",
+      "README 未把 34908 与 34909 分别对应到访问控制或路径穿越；不要逐号分配这两种类别。",
+      "未运行脚本或访问目标；GitHub README 声称的检测安全性未核查代码实现。",
+      "支持的是 README 自身的说法，不代表独立验证产品漏洞、版本或检测器行为。",
+      "官方公告 URL 已打开，但本次正文响应为空，未取得可用于事实核对的公告内容。"
+    ],
+    "review_date": "2026-10-03"
+  },
+  {
+    "path": "Web安全/服务器软件/SolarWinds/A Crash, Not a Shell_ SolarWinds Serve-U CVE-2026-28318.md",
+    "paragraph_zh": "Bishop Fox 研究将 CVE-2026-28318 描述为 SolarWinds Serv-U 的拒绝服务：文章称 15.5.4 及以前版本的 Web 界面在特定带 deflate 编码请求下可能因解压处理错误而终止。作者称其分析未找到可行 RCE 路径，并报告 15.5.4 HF1 加入拒绝条件。上述版本、成因和测试结论均是研究方陈述，本库未执行请求或复现。",
+    "product": "SolarWinds Serv-U",
+    "record_type": "analysis",
+    "source_urls": [
+      "https://bishopfox.com/blog/a-crash-not-a-shell-solarwinds-serev-u-cve-2026-28318"
+    ],
+    "first_party_support": [],
+    "caveats": [
+      "仅核对 Bishop Fox 研究文章；未核对 SolarWinds 厂商公告。研究者未在其所分析构建中找到 RCE 不可扩大为所有构建结论。",
+      "原 URL 有 serev-u 拼写，浏览后跳转规范 URL；保留既有原值。"
+    ],
+    "review_date": "2026-10-03"
+  },
+  {
+    "path": "Web安全/桌面软件/Praetorian/Praetorian_How I Found the Worst ASP.NET Vulnerability — A $10K Bug C.md",
+    "paragraph_zh": "Praetorian 将 CVE-2025-55315 描述为 Kestrel 对 chunked 请求扩展中孤立 LF 的解析与部分代理不一致，可能导致请求走私。Microsoft 将其归为 ASP.NET Core 请求解析造成的安全功能绕过，并说明影响取决于应用逻辑。官方分支表列出 ASP.NET Core 10.0 RC1 及以前、9.0.9 及以前、8.0.20 及以前和 Kestrel.Core 2.3.0 及以前的 ASP.NET Core 2.x；精确 build 应按对应表核对，例如 10.0.0-rc.1.25451.107 对应修复 10.0.0-rc.2.25502.107。",
+    "product": "ASP.NET Core / Kestrel",
+    "record_type": "analysis",
+    "source_urls": [
+      "https://www.praetorian.com/blog/how-i-found-the-worst-asp-net-vulnerability-a-10k-bug-cve-2025-55315/",
+      "https://github.com/dotnet/aspnetcore/security/advisories/GHSA-5rrx-jjjq-q2r5",
+      "https://www.microsoft.com/en-us/msrc/blog/2025/10/understanding-cve-2025-55315"
+    ],
+    "first_party_support": [
+      {
+        "url": "https://github.com/dotnet/aspnetcore/security/advisories/GHSA-5rrx-jjjq-q2r5",
+        "supports": [
+          "ASP.NET Core 官方 advisory 的漏洞分类、版本分支及修复版本表。"
+        ],
+        "limits": [
+          "版本摘要需按对应分支表读取；10.0.0-rc.1.25451.107 对应修复 10.0.0-rc.2.25502.107；Microsoft FAQ 中另列下载 FAQ build .25476.107，不能混为同一个唯一受影响 build。"
+        ]
+      },
+      {
+        "url": "https://www.microsoft.com/en-us/msrc/blog/2025/10/understanding-cve-2025-55315",
+        "supports": [
+          "Microsoft 对请求解析差异、安全功能绕过及影响依应用处理方式而异的说明。"
+        ],
+        "limits": [
+          "不替代各分支的精确包版本表。"
+        ]
+      }
+    ],
+    "caveats": [
+      "Praetorian 实验为作者报告；原归档图像未查看像素，不视为本库复现。",
+      "简写 RC1/RC2 不是完整唯一 build 边界；正式资料应保留分支表的精确版本。",
+      "版本摘要需按对应分支表读取；10.0.0-rc.1.25451.107 对应修复 10.0.0-rc.2.25502.107；Microsoft FAQ 中另列下载 FAQ build .25476.107，不能混为同一个唯一受影响 build。",
+      "不替代各分支的精确包版本表。"
+    ],
+    "review_date": "2026-10-03"
+  },
+  {
+    "path": "系统安全/Android/Google Patches Android Zero-Day CVE-2025-48595 Exploited in Targeted A.md",
+    "paragraph_zh": "The Cyber Express 原文正文本次读取超时，故标题中的“零日”表述仍未能按该报道核对。Google 2026 年 6 月公告将 CVE-2025-48595 列为 Framework 高危权限提升（EoP），表格列出更新 AOSP 版本 14、15、16 和 16-qpr2，并称有迹象显示可能遭有限、定向利用。该编号位于 2026-06-01 patch-level 详情表；公告总体说明 2026-06-05 或更高补丁级别覆盖公告全部问题。该 CVE 行未说明远程/本地入口或权限、交互前提。",
+    "product": "Android Framework",
+    "record_type": "incident",
+    "source_urls": [
+      "https://thecyberexpress.com/cve-2025-48595-android-june-2026/",
+      "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    ],
+    "first_party_support": [
+      {
+        "url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01",
+        "supports": [
+          "Google 公告将 CVE-2025-48595 列于 Framework，类别 EoP、严重性 High，AOSP 版本 14/15/16/16-qpr2，并称可能遭有限、定向利用；该编号出现在 2026-06-01 patch-level 详情表。"
+        ],
+        "limits": [
+          "该 CVE 行未给远程/本地入口或认证、用户交互条件；公告开头称 2026-06-05 或更高安全补丁级别覆盖公告全部问题。"
+        ]
+      }
+    ],
+    "caveats": [
+      "The Cyber Express 正文本轮仍超时；不能据 Google 公告替新闻标题中的 zero-day 措辞背书。",
+      "EoP 不等于本地提权；不从同节其他漏洞的概述推断该 CVE 的入口或前提。",
+      "该 CVE 行未给远程/本地入口或认证、用户交互条件；公告开头称 2026-06-05 或更高安全补丁级别覆盖公告全部问题。"
+    ],
+    "review_date": "2026-10-03"
+  },
+  {
+    "path": "系统安全/Linux/Old Linux Kernel flaw CVE-2024-1086 resurfaces in ransomware attacks.md",
+    "paragraph_zh": "SecurityAffairs 于 2025-10-31 报道称 CISA 警告勒索软件团伙利用 CVE-2024-1086，同时指出警告未公开攻击细节或团伙名称；当前活动因此应保留为新闻转述。文章将其描述为 nf_tables use-after-free，可导致本地提权，并转述宽泛内核版本范围及研究演示。发行版可能回移补丁，应按各厂商包公告判断实际影响；技术分析来源不独立证明新闻中的勒索利用事件。",
+    "product": "Linux kernel / nf_tables",
+    "record_type": "incident",
+    "source_urls": [
+      "https://securityaffairs.com/184076/security/old-linux-kernel-flaw-cve-2024-1086-resurfaces-in-ransomware-attacks.html",
+      "https://pwning.tech/nftables/"
+    ],
+    "first_party_support": [],
+    "caveats": [
+      "本轮来源是新闻和技术分析；没有独立打开 CISA 公告，勒索利用应保留为新闻对 CISA 的转述。",
+      "上游版本范围不能替代各发行版回移补丁状态。"
+    ],
+    "review_date": "2026-10-03"
+  },
+  {
+    "path": "Web安全/其他软件/杂项/CVE-2026-48907 and LiteSpeed cPanel Plugin Flaws Come Under Active Att.md",
+    "paragraph_zh": "The Cyber Express 将 CVE-2026-48907 关联 Joomla Content Editor；JCE 官方更新说明支持 2.9.99.5 修补和 2.9.99.6 后续强化，并提及旧分支补丁及升级不会清理既有入侵。原报道另提 LiteSpeed cPanel 插件提权，但没有给出该部分的编号、版本或修复细节，不能并入 JCE 的 CVE。JCE 对 2.6.x 的默认配置判断仍明确未经独立确认。",
+    "product": "Joomla Content Editor (JCE)",
+    "record_type": "roundup",
+    "source_urls": [
+      "https://thecyberexpress.com/cve-2026-48907-joomla-jce-litespeed-cpanel/",
+      "https://www.joomlacontenteditor.net/news/jce-security-update-and-a-free-patch-for-older-sites"
+    ],
+    "first_party_support": [
+      {
+        "url": "https://www.joomlacontenteditor.net/news/jce-security-update-and-a-free-patch-for-older-sites",
+        "supports": [
+          "JCE 官方更新页面说明 2.9.99.5 修补及后续 2.9.99.6 强化，也说明旧分支补丁、升级不清理既有入侵；2.6.x 影响判断仍未经独立确认。"
+        ],
+        "limits": [
+          "该厂商页面只支持 JCE 内容，不支持同篇 LiteSpeed cPanel 插件主张。"
+        ]
+      }
+    ],
+    "caveats": [
+      "CVE-2026-48907 仅归 JCE；LiteSpeed 插件仍无已核实编号、版本、前提和修复字段。",
+      "该厂商页面只支持 JCE 内容，不支持同篇 LiteSpeed cPanel 插件主张。"
+    ],
+    "review_date": "2026-10-03"
+  },
+  {
+    "path": "Web安全/桌面软件/Praetorian/Praetorian_CVE-2025-52493_ When Password FieldsAren’t Enough – Client-.md",
+    "paragraph_zh": "Praetorian 称 PagerDuty Cloud Runbook 的 `/config/index` 页面曾将已保存秘密发送到浏览器，再以 password input 遮挡。需要先具备访问该配置页的管理员权限，才可从客户端 DOM 查看已发送的值；来源称厂商确认于 2025-09-12 修复，但未列受影响或修复版本。轮换相关凭据是研究方建议，不代表已证实其遭第三方读取。",
+    "product": "PagerDuty Cloud Runbook",
+    "record_type": "analysis",
+    "source_urls": [
+      "https://www.praetorian.com/blog/cve-2025-52493-when-password-fieldsarent-enough-client-side-secretexposure-in-pagerduty-cloud-runbook/"
+    ],
+    "first_party_support": [],
+    "caveats": [
+      "本轮只核对 Praetorian 研究文章；没有 PagerDuty 原始公告或版本范围。管理员前提、修复日期为研究方报告。"
+    ],
+    "review_date": "2026-10-03"
+  },
+  {
+    "path": "Web安全/网络设备/Ivanti/Ivanti EPM 严重漏洞（CVE-2025-10573）存在管理员会话劫持与未授权远程代码执行风险.md",
+    "paragraph_zh": "安全客 2025-12-10 译文称，Ivanti EPM 2024 SU4 及以前涉及四项不同缺陷：CVE-2025-10573 为需用户交互的存储型 XSS；CVE-2025-13659 为任意文件写入；CVE-2025-13662 为签名验证问题且需交互；CVE-2025-13661 为需认证的路径遍历。译文称 2024 SU4 SR1 修复该组问题。英文转载源本次抓取超时，以上仅作为译文陈述，尚非本轮独立的厂商公告核验。",
+    "product": "Ivanti Endpoint Manager",
+    "record_type": "advisory",
+    "source_urls": [
+      "https://www.anquanke.com/post/id/313631",
+      "https://securityonline.info/critical-ivanti-epm-flaw-cve-2025-10573-risks-admin-session-hijack-and-unauthenticated-rce/"
+    ],
+    "first_party_support": [],
+    "caveats": [
+      "译文可读、英文转载源本轮抓取超时；未核对 Ivanti 厂商公告。CVE-2025-10573 对应需用户交互的 stored XSS，不是 RCE；另外三项是 13659、13662、13661。"
+    ],
+    "review_date": "2026-10-03"
+  },
+  {
+    "path": "系统安全/Linux/CVE-2026-23111_ Linux nf_tables Flaw Enables Root Exploits.md",
+    "paragraph_zh": "Security Affairs 将 CVE-2026-23111 描述为 Linux 内核 nf_tables 事务回滚中的状态处理错误，可能造成 verdict 引用计数异常和 use-after-free，影响为本地权限提升。报道称需要相关 nf_tables 与 user namespace 功能可用，并转述上游补丁及多个发行版已修复；各发行版的包版本和默认配置仍须分别核对。FuzzingLabs 关于指定 RHEL 10 内核的研究为作者报告，本库未运行其 PoC。",
+    "product": "Linux kernel / nf_tables",
+    "record_type": "analysis",
+    "source_urls": [
+      "https://securityaffairs.com/193352/hacking/cve-2026-23111-linux-nf_tables-flaw-enables-root-exploits.html",
+      "https://fuzzinglabs.com/repro-cve-2026-23111/",
+      "https://blog.exodusintel.com/2026/06/08/off-by-exploiting-a-use-after-free-in-the-linux-kernel/"
+    ],
+    "first_party_support": [],
+    "caveats": [
+      "新闻和研究来源可支持机制/研究者环境陈述；未逐个核对 Linux 发行版公告、包号及默认配置。研究者验证环境不代表本站复现。"
+    ],
+    "review_date": "2026-10-03"
+  }
+]

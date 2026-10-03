@@ -96,6 +96,7 @@ Content-Type: text/xml; charset=utf-8
 Content-Length: length
 SOAPAction: "http://tempuri.org/SetMedia_Picture_info"
 
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
   <soap:Body>
@@ -106,6 +107,7 @@ SOAPAction: "http://tempuri.org/SetMedia_Picture_info"
     </SetMedia_Picture_info>
   </soap:Body>
 </soap:Envelope>
+```
 
 ![image-20241126161055366](./.resource/《黄药师》药业管理软件SetMedia_Picture_info存在SQL注入漏洞/media/image-20241126161055366.png)
 

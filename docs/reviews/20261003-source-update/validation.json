@@ -1,0 +1,89 @@
+{
+  "base_commit": "8f2a9e14575928bb5f086902c786da66f4a65aa9",
+  "review_date": "2026-10-03",
+  "scope": "6 new original analyses; no edits to pre-existing content",
+  "new_articles": 6,
+  "window_new_disclosures": 3,
+  "historical_gaps": 3,
+  "article_status_counts": {
+    "active": 3,
+    "needs-review": 3,
+    "not-reproduced": 6
+  },
+  "unit_tests": {
+    "command": "python -m unittest discover -s tests -v",
+    "passed": 52,
+    "failed": 0
+  },
+  "baseline_quality": {
+    "baseline_issues_remaining": 5196,
+    "by_code": {
+      "embedded_code_candidate": 1,
+      "empty_fence": 91,
+      "fingerprint_unverified": 800,
+      "identifier_inactive": 27,
+      "identifier_role_unknown": 216,
+      "noncontent_link_candidate": 34,
+      "path_legacy": 2,
+      "site_relative_link": 81,
+      "source_missing": 3856,
+      "unrecognized_identifier_namespace": 88
+    },
+    "documents": 5660,
+    "errors": 0,
+    "fatal_issues": 0,
+    "new_issues": 0,
+    "resolved_issues": 0,
+    "result": "no new debt; historical issues remain",
+    "warnings": 5196
+  },
+  "generated_index_check": {
+    "different_files": [],
+    "passed": true
+  },
+  "fidelity": {
+    "existing_article_and_resource_diff_empty": true,
+    "baseline_bytes_unchanged": true,
+    "new_article_manifest_hashes_verified": true
+  },
+  "rendering": {
+    "method": "Pandoc GFM to static HTML, no filters or article code execution; HTMLParser verifies inert output and exact fenced-code text",
+    "articles": 6,
+    "fenced_code_blocks": 2,
+    "all_fenced_code_copy_exact": true,
+    "active_html_elements": 0,
+    "browser_pixel_check": "not completed: optional Chromium launch failed before page load with socket() Operation not permitted",
+    "poc_execution": false,
+    "candidate_dependency_installation": false,
+    "target_requests": false
+  },
+  "independent_static_review": {
+    "articles_reviewed": 6,
+    "coverage_report_reviewed": true,
+    "blocking_findings": 0,
+    "corrections": "Source attribution, exploit-entry scope, import argument conditions and SVN source links corrected"
+  },
+  "ci": "Remote checks must be verified for the submitted draft PR head; local results are not a CI claim",
+  "strict_quality_check": {
+    "exit_code": 1,
+    "result": "historical warnings remain; not an all-repository clean verdict",
+    "summary": {
+      "by_code": {
+        "embedded_code_candidate": 1,
+        "empty_fence": 91,
+        "fingerprint_unverified": 800,
+        "identifier_inactive": 27,
+        "identifier_role_unknown": 216,
+        "noncontent_link_candidate": 34,
+        "path_legacy": 2,
+        "site_relative_link": 81,
+        "source_missing": 3856,
+        "unrecognized_identifier_namespace": 88
+      },
+      "documents": 5660,
+      "errors": 0,
+      "fatal_issues": 0,
+      "warnings": 5196
+    }
+  }
+}

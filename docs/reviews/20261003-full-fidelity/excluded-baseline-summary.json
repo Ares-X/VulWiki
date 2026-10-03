@@ -1,0 +1,52 @@
+{
+  "count": 59,
+  "basis": "Static full-text read of each merged Markdown article, frontmatter, existing editorial/review lead, and corresponding excluded entry; no network or execution. A root-review candidate is not a finding that it must be re-indexed.",
+  "decision_counts": {
+    "quarantine_supported": 45,
+    "quarantine_supported_high_risk": 1,
+    "rejected_status_consistent": 1,
+    "root_review_candidate": 8,
+    "root_review_candidate_high_risk": 2,
+    "root_review_candidate_low": 1,
+    "status_semantics_candidate": 1
+  },
+  "root_review_paths": [
+    "Web安全/CMS内容/微擎/微擎微信公众号管理系统系统AccountEdit存在任意文件上传漏洞.md",
+    "Web安全/中间件/JBoss/（CVE-2013-4810）JBoss EJBInvokerServle 反序列化漏洞.md",
+    "Web安全/中间件/WebLogic/weblogic爆破.md",
+    "Web安全/云平台/Citrix/（CVE-2020-ianianian）Citrix 目录遍历漏洞.md",
+    "Web安全/云平台/Supabase/Supabasequery存在SQL注入漏洞.md",
+    "Web安全/开发框架/Gitea/刚升到 Gitea 1.27.0 以为安全了？两个 0day 直接 RCE.md",
+    "Web安全/数据库/Phpmyadmin/Phpmyadmin 爆路径.md",
+    "Web安全/服务器软件/突发/！国家级黑客利用零日漏洞入侵Commvault Azure环境，数据安全再响警报.md",
+    "Web安全/网络设备/Fortinet/Fortinet FortiSwitch 任意密码重置 CVE-2024-48887.md",
+    "Web安全/运维面板/cPanel/【漏洞预警】 cPanelWP2 高危任意文件读取CVE-2026-29205.md",
+    "IOT安全/Ruijie/锐捷易网关 远程命令执行.md"
+  ],
+  "status_semantics_paths": [
+    "Web安全/网络设备/Cisco/CVE-2026-0866 Cisco ClamAV ZIP扫描引擎绕过漏洞.md"
+  ],
+  "line_evidence": "One-based line numbers and exact unmodified complete source lines from merged snapshot; hashes are merged article SHA-256.",
+  "baseline_commit": "8f2a9e14575928bb5f086902c786da66f4a65aa9",
+  "root_decision_overlay": {
+    "source_file": "/tmp/vulwiki-full-review-20261003/root-admission-fix.json",
+    "restored_count": 8,
+    "remaining_excluded_count": 51,
+    "technical_body_unchanged_count": 8,
+    "overlay_file": "/tmp/vulwiki-full-review-20261003/metadata-audit/excluded-root-admissions-overlay.jsonl"
+  },
+  "boundary_cases_kept_quarantined": [
+    {
+      "path": "Web安全/开发框架/Gitea/刚升到 Gitea 1.27.0 以为安全了？两个 0day 直接 RCE.md",
+      "reason": "核心依据为无法复核的截图转述，具体漏洞入口仅猜测，正文没有可区分并核对的技术链或方法；保留待核，缺少来源不是唯一隔离理由。"
+    },
+    {
+      "path": "Web安全/运维面板/cPanel/【漏洞预警】 cPanelWP2 高危任意文件读取CVE-2026-29205.md",
+      "reason": "多产品与版本、CVSS、路径和权限后果互相错配且无可支撑的响应或根因材料；单段预警尚无法拆分为有依据的技术参考，保留待核。"
+    },
+    {
+      "path": "Web安全/服务器软件/突发/！国家级黑客利用零日漏洞入侵Commvault Azure环境，数据安全再响警报.md",
+      "reason": "核心归因、事件和客户影响主张均无可核证据，未提供技术方法或分析链条；保留原事件资料和待核入口，不将叙述当已确认事件。"
+    }
+  ]
+}

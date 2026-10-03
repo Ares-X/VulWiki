@@ -1,0 +1,81 @@
+{
+  "pr": 8,
+  "reviewer": "pr8_review_1",
+  "articles": [
+    {
+      "path": "Web安全/CMS内容/WordPress/Visual Composer 模板文件包含与版本边界核对（CVE-2026-12227）.md",
+      "verdict": "accepted",
+      "basis": {
+        "external_source_claims": [
+          {
+            "claim": "Wordfence CNA reports unauthenticated LFI via vcv-template, affected versions <=45.16.0, remediation 45.16.1, and disclosure on 2026-09-23.",
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/visualcomposer/visual-composer-website-builder-45160-unauthenticated-local-file-inclusion-via-vcv-template-parameter"
+          },
+          {
+            "claim": "CVE record attributes the report to Wordfence and includes the same affected range and timeline.",
+            "url": "https://github.com/CVEProject/cvelistV5/blob/ff88cdf4ac3a745d02a96b242947fd3f4ab992ae/cves/2026/12xxx/CVE-2026-12227.json"
+          }
+        ],
+        "independent_source_checks": [
+          {
+            "claim": "Vendor commit a3909a4 adds validate_file rejection and fallback when the filter leaves the untrusted value unchanged; this confirms the described path-control change, not the release boundary.",
+            "url": "https://github.com/VisualComposer/builder/commit/a3909a4cb347004d699c068279aaa061782c8f20"
+          },
+          {
+            "claim": "The fixed 45.16.0 and 45.16.1 PageTemplatesController sources both contain validate_file and unchanged-result fallback, independently confirming the article's stated version conflict for this file.",
+            "urls": [
+              "https://raw.githubusercontent.com/VisualComposer/builder/083852953a9b67b1557d51c8adf19b1df19d75a5/visualcomposer/Modules/Editors/Settings/PageTemplatesController.php",
+              "https://raw.githubusercontent.com/VisualComposer/builder/ac480faf602a6b264e8aea3225839c40be9fc795/visualcomposer/Modules/Editors/Settings/PageTemplatesController.php"
+            ]
+          }
+        ],
+        "repository_overlap": "No matching CVE or same WordPress plugin article found. Existing SAP NetWeaver Visual Composer material is about a different product; the draft explicitly distinguishes it.",
+        "format_and_safety": "Front matter and Markdown headings/tables render as a conventional analysis entry. No code-byte alteration or PoC execution is required; impact and non-reproduction limits are stated."
+      },
+      "unresolved": [
+        "The actual 45.16.0/45.16.1 distribution-package provenance and the referenced WordPress changeset 3619572 remain unverified; the draft accurately leaves the CNA/source discrepancy unresolved."
+      ],
+      "exact_edits": []
+    },
+    {
+      "path": "Web安全/开发框架/PowerJob/PowerJob friend-process 未认证反射调用链分析（CVE-2026-75429）.md",
+      "verdict": "accepted",
+      "basis": {
+        "external_source_claims": [
+          {
+            "claim": "MITRE CNA record states PowerJob 4.x through 5.1.2 and unauthenticated RCE at /friend/process; its structured affected product/version fields are n/a, a distinction the draft preserves.",
+            "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/5e5e49e3978893a8b23475ec92f2bbd75ede196f/cves/2026/75xxx/CVE-2026-75429.json"
+          },
+          {
+            "claim": "The original researcher Gist is cited by the CNA record as a reference; claims attributed to it are not represented here as independent reproduction.",
+            "url": "https://gist.github.com/unpredictable21/dbd1791294c9a77ad0ee3d4827073966/55cec8094da66bd0ff89b466c70d3eca5e4ea18c"
+          }
+        ],
+        "independent_source_checks": [
+          {
+            "claim": "At the fixed PowerJob commit, HTTP setup registers POST actor routes without visible authentication checks in this registration/dispatch path.",
+            "url": "https://raw.githubusercontent.com/PowerJob/PowerJob/332179de26b44f0a949f7594ce9f57ee26fb6b27/powerjob-remote/powerjob-remote-impl-http/src/main/java/tech/powerjob/remote/http/HttpVertxCSInitializer.java"
+          },
+          {
+            "claim": "FriendActor is annotated S4S_PATH, documents server-to-server communication, and delegates the process request to RemoteRequestProcessor.",
+            "url": "https://raw.githubusercontent.com/PowerJob/PowerJob/332179de26b44f0a949f7594ce9f57ee26fb6b27/powerjob-server/powerjob-server-remote/src/main/java/tech/powerjob/server/remote/server/FriendActor.java"
+          },
+          {
+            "claim": "RemoteRequestProcessor loads caller-supplied class and parameter types and reflectively invokes a Spring bean method.",
+            "url": "https://raw.githubusercontent.com/PowerJob/PowerJob/332179de26b44f0a949f7594ce9f57ee26fb6b27/powerjob-server/powerjob-server-remote/src/main/java/tech/powerjob/server/remote/server/redirector/RemoteRequestProcessor.java"
+          },
+          {
+            "claim": "GroovyEvaluator is a Spring component and passes the expression to ScriptEngine.eval.",
+            "url": "https://raw.githubusercontent.com/PowerJob/PowerJob/332179de26b44f0a949f7594ce9f57ee26fb6b27/powerjob-server/powerjob-server-core/src/main/java/tech/powerjob/server/core/evaluator/GroovyEvaluator.java"
+          }
+        ],
+        "repository_overlap": "No existing matching CVE, PowerJob entry, or /friend/process call-chain article found.",
+        "format_and_safety": "Front matter, headings, and comparison table are coherent. Exposure prerequisites, command/reverse-shell side effects, unverified patch status, and non-execution boundary are explicit."
+      },
+      "unresolved": [
+        "No first fixed release or full 4.x-to-5.1.2 version-by-version range is established; the draft leaves both unknown. Whether deployments add an outer authentication layer is deployment-specific and correctly left for per-deployment review."
+      ],
+      "exact_edits": []
+    }
+  ]
+}

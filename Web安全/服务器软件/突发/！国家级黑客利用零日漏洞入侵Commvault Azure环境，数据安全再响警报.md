@@ -3,10 +3,10 @@ cve: "CVE-2025-3928"
 source: "gelusus/wxvl 公众号漏洞文库"
 title: "突发！国家级黑客利用零日漏洞入侵Commvault Azure环境，数据安全再响警报"
 product: "Commvault Web Server与SaaS Azure环境"
-record_type: "advisory"
+record_type: "incident"
 review_status: "text-reviewed"
 verification_status: "not-reproduced"
-content_status: "quarantined"
+content_status: "needs-review"
 identifier_status: "active"
 primary_identifiers: "CVE-2025-3928"
 referenced_identifiers: ""
@@ -18,6 +18,12 @@ id: "vw-a62398ecc6b764ef557abc50"
 entity_id: "ve-a62398ecc6b764ef557abc50"
 schema_version: "1"
 ---
+
+## 收录状态复核（2026-10-03）
+
+本文保留来源叙述的事件时间、产品场景、CVE、IP 指标及响应建议。归因、凭据获取和横向移动含推测，补丁与期限缺可核对的一手记录；这些均按来源主张阅读，不代表本库确认事件经过或固有暴露条件。
+
+以下为保留的归档正文与既有校订。资料以 `needs-review` 收录，具体缺口按本页说明阅读。
 
 # 突发！国家级黑客利用零日漏洞入侵Commvault Azure环境，数据安全再响警报
 

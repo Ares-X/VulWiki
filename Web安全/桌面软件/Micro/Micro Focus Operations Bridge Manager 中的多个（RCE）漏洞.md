@@ -304,7 +304,7 @@ Content-Length: 6855
 <JAVA_SERIALIZED_OBJECT>
 ```
 
-这个 POST 请求，如果用经过验证的 LWSSO_COOKIE_KEY 来完成，如果 <JAVA_SERIALIZED_OBJECT> 是 ysoserial 的有效载荷，那么将导致以 root / SYSTEM 的身份立即执行代码。
+这个 POST 请求，如果用经过验证的 LWSSO_COOKIE_KEY 来完成，如果 `<JAVA_SERIALIZED_OBJECT>` 是 ysoserial 的有效载荷，那么将导致以 root / SYSTEM 的身份立即执行代码。
 
 为了理解这一点是如何工作的，我们需要更深入地了解一下。上面使用的所有端点都是 Spring Framework 远程服务的实现。这些服务调用由 com.hp.ucmdb.uiserver.services.context.CmdbHttpInvokerServiceExporter 处理，它是一个实现 org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter 的类。Javadoc 中对它有很好的描述:
 

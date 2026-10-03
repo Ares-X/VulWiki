@@ -2,10 +2,10 @@
 source: "历史归档批(无原始出处标注)"
 title: "Phpmyadmin 爆路径"
 product: "phpMyAdmin"
-record_type: "advisory"
+record_type: "analysis"
 review_status: "text-reviewed"
 verification_status: "not-reproduced"
-content_status: "quarantined"
+content_status: "needs-review"
 identifier_status: "unknown"
 primary_identifiers: ""
 referenced_identifiers: ""
@@ -17,6 +17,10 @@ id: "vw-92ed95b57910d06bc6f46779"
 entity_id: "ve-92ed95b57910d06bc6f46779"
 schema_version: "1"
 ---
+
+## 收录状态复核（2026-10-03）
+
+本文按简短的历史路径与函数线索收录，不能视为通用信息泄露漏洞。文件存在性、错误显示配置、phpinfo 部署情况和 load_file() 的数据库权限均未确认；可疑拼写和重复项保留供核对，不补猜正确路径或测试结果。本次仅静态核对；验证状态仍为未复现。
 
 # Phpmyadmin 爆路径
 

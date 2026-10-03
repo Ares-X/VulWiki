@@ -1,0 +1,9 @@
+{
+  "confirmed_findings": [],
+  "unknowns": [
+    {
+      "path": "Web安全/安全设备/360/【技术干货】CVE-2022-41852 Apache Commons Jxpath命令执行漏洞分析.md",
+      "reason": "A technically meaningful Chinese sentence was rewritten, but no source evidence was available to determine whether the new ownership claim is faithful to the original author intent."
+    }
+  ]
+}
