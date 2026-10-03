@@ -28,7 +28,7 @@
 
 ## 当前累计文稿
 
-累计86篇（50新增、36既有补证），涉及95个经独立材料审核的候选CVE。本次增加2024年的16篇/17编号，落实9条具体来源、版本或结果判据说明并通过最终字节复核。保留原文代码、公开值与历史正文，未执行PoC。通过材料门槛的编号数不等于新增漏洞数、主CVE导航条目数或运行复现次数。
+累计102篇（64新增、38既有补证），涉及111个经过独立具体材料审核的候选编号。最新2011–2012批次17提案中保留16篇（14新增2补证），1535因关键字体/SWF静态语义缺口暂缓；六项作者文字/范围错误已纠正，原代码和公开例值保留。0391直接补入S2-007主文，PHP1823直接补入旧主文，原字节可逆还原。
 
 | 本次具体验证范围 | 处置 | 文稿 |
 |---|---|---|
@@ -118,6 +118,22 @@
 | CVE-2024-12987 | 新增资料 | [DrayTek apmcfgupload session 命令注入 CVE-2024-12987](../Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/DrayTek/DrayTek%20apmcfgupload%20session%20%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5%20CVE-2024-12987.md) |
 | CVE-2024-20439 | 新增资料 | [Cisco Smart Licensing Utility 静态管理凭据 CVE-2024-20439](../Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/Cisco/Cisco%20Smart%20Licensing%20Utility%20%E9%9D%99%E6%80%81%E7%AE%A1%E7%90%86%E5%87%AD%E6%8D%AE%20CVE-2024-20439.md) |
 | CVE-2024-45519 | 新增资料 | [Zimbra postjournal SMTP 命令注入 CVE-2024-45519](../Web%E5%AE%89%E5%85%A8/%E9%82%AE%E4%BB%B6%E7%B3%BB%E7%BB%9F/Zimbra/Zimbra%20postjournal%20SMTP%20%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5%20CVE-2024-45519.md) |
+| CVE-2012-4792 | 新增资料 | [Internet Explorer CButton 释放后使用的公开触发与调试证据（CVE-2012-4792）](../Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Microsoft/Internet%20Explorer%20CButton%20%E9%87%8A%E6%94%BE%E5%90%8E%E4%BD%BF%E7%94%A8%E7%9A%84%E5%85%AC%E5%BC%80%E8%A7%A6%E5%8F%91%E4%B8%8E%E8%B0%83%E8%AF%95%E8%AF%81%E6%8D%AE%EF%BC%88CVE-2012-4792%EF%BC%89.md) |
+| CVE-2012-3152 | 新增资料 | [Oracle Reports URLPARAMETER 文件操作与组合利用材料（CVE-2012-3152）](../Web%E5%AE%89%E5%85%A8/%E4%B8%AD%E9%97%B4%E4%BB%B6/Oracle%20Reports/Oracle%20Reports%20URLPARAMETER%20%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E4%B8%8E%E7%BB%84%E5%90%88%E5%88%A9%E7%94%A8%E6%9D%90%E6%96%99%EF%BC%88CVE-2012-3152%EF%BC%89.md) |
+| CVE-2012-5076 | 新增资料 | [Java 7 JAX-WS 沙箱绕过的公开实现与辅助类（CVE-2012-5076）](../Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Oracle%20Java/Java%207%20JAX-WS%20%E6%B2%99%E7%AE%B1%E7%BB%95%E8%BF%87%E7%9A%84%E5%85%AC%E5%BC%80%E5%AE%9E%E7%8E%B0%E4%B8%8E%E8%BE%85%E5%8A%A9%E7%B1%BB%EF%BC%88CVE-2012-5076%EF%BC%89.md) |
+| CVE-2012-4969 | 新增资料 | [Internet Explorer execCommand 释放后使用的双页触发材料（CVE-2012-4969）](../Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Microsoft/Internet%20Explorer%20execCommand%20%E9%87%8A%E6%94%BE%E5%90%8E%E4%BD%BF%E7%94%A8%E7%9A%84%E5%8F%8C%E9%A1%B5%E8%A7%A6%E5%8F%91%E6%9D%90%E6%96%99%EF%BC%88CVE-2012-4969%EF%BC%89.md) |
+| CVE-2012-4681 | 新增资料 | [Java 7 Beans 反射链沙箱绕过的公开 Applet 源码（CVE-2012-4681）](../Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Oracle%20Java/Java%207%20Beans%20%E5%8F%8D%E5%B0%84%E9%93%BE%E6%B2%99%E7%AE%B1%E7%BB%95%E8%BF%87%E7%9A%84%E5%85%AC%E5%BC%80%20Applet%20%E6%BA%90%E7%A0%81%EF%BC%88CVE-2012-4681%EF%BC%89.md) |
+| CVE-2012-1723 | 新增资料 | [Java HotSpot 字段验证缓存缺陷的完整公开生成器（CVE-2012-1723）](../Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Oracle%20Java/Java%20HotSpot%20%E5%AD%97%E6%AE%B5%E9%AA%8C%E8%AF%81%E7%BC%93%E5%AD%98%E7%BC%BA%E9%99%B7%E7%9A%84%E5%AE%8C%E6%95%B4%E5%85%AC%E5%BC%80%E7%94%9F%E6%88%90%E5%99%A8%EF%BC%88CVE-2012-1723%EF%BC%89.md) |
+| CVE-2012-1889 | 新增资料 | [MSXML getDefinition 未初始化内存访问的公开验证材料（CVE-2012-1889）](../Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Microsoft/MSXML%20getDefinition%20%E6%9C%AA%E5%88%9D%E5%A7%8B%E5%8C%96%E5%86%85%E5%AD%98%E8%AE%BF%E9%97%AE%E7%9A%84%E5%85%AC%E5%BC%80%E9%AA%8C%E8%AF%81%E6%9D%90%E6%96%99%EF%BC%88CVE-2012-1889%EF%BC%89.md) |
+| CVE-2012-0507 | 新增资料 | [AtomicReferenceArray 类型安全缺陷与 Applet 辅助类（CVE-2012-0507）](../Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Oracle%20Java/AtomicReferenceArray%20%E7%B1%BB%E5%9E%8B%E5%AE%89%E5%85%A8%E7%BC%BA%E9%99%B7%E4%B8%8E%20Applet%20%E8%BE%85%E5%8A%A9%E7%B1%BB%EF%BC%88CVE-2012-0507%EF%BC%89.md) |
+| CVE-2012-1823 | 既有主文补证 | [（CVE-2012-1823）PHP-CGI远程代码执行漏洞](../Web%E5%AE%89%E5%85%A8/%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6/PHP/%EF%BC%88CVE-2012-1823%EF%BC%89PHP-CGI%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md) |
+| CVE-2012-0158 | 新增资料 | [MSCOMCTL ListView 栈溢出的 RTF 构造及打开方式边界（CVE-2012-0158）](../Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Microsoft/MSCOMCTL%20ListView%20%E6%A0%88%E6%BA%A2%E5%87%BA%E7%9A%84%20RTF%20%E6%9E%84%E9%80%A0%E5%8F%8A%E6%89%93%E5%BC%80%E6%96%B9%E5%BC%8F%E8%BE%B9%E7%95%8C%EF%BC%88CVE-2012-0158%EF%BC%89.md) |
+| CVE-2012-0754 | 新增资料 | [Flash MP4 cprt 溢出的完整构造器与异常证据（CVE-2012-0754）](../Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Adobe/Flash%20MP4%20cprt%20%E6%BA%A2%E5%87%BA%E7%9A%84%E5%AE%8C%E6%95%B4%E6%9E%84%E9%80%A0%E5%99%A8%E4%B8%8E%E5%BC%82%E5%B8%B8%E8%AF%81%E6%8D%AE%EF%BC%88CVE-2012-0754%EF%BC%89.md) |
+| CVE-2012-0391 | 既有主文补证 | [Apache-Struts2-S2-007-远程代码执行漏洞](../Web%E5%AE%89%E5%85%A8/%E4%B8%AD%E9%97%B4%E4%BB%B6/Apache%20Struts/Apache-Struts2-S2-007-%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md) |
+| CVE-2011-2462 | 新增资料 | [Adobe Reader U3D 未初始化内存利用及来源会话记录（CVE-2011-2462）](../Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Adobe/Adobe%20Reader%20U3D%20%E6%9C%AA%E5%88%9D%E5%A7%8B%E5%8C%96%E5%86%85%E5%AD%98%E5%88%A9%E7%94%A8%E5%8F%8A%E6%9D%A5%E6%BA%90%E4%BC%9A%E8%AF%9D%E8%AE%B0%E5%BD%95%EF%BC%88CVE-2011-2462%EF%BC%89.md) |
+| CVE-2011-3544 | 新增资料 | [Java Rhino 错误对象特权边界绕过的公开 Applet（CVE-2011-3544）](../Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Oracle%20Java/Java%20Rhino%20%E9%94%99%E8%AF%AF%E5%AF%B9%E8%B1%A1%E7%89%B9%E6%9D%83%E8%BE%B9%E7%95%8C%E7%BB%95%E8%BF%87%E7%9A%84%E5%85%AC%E5%BC%80%20Applet%EF%BC%88CVE-2011-3544%EF%BC%89.md) |
+| CVE-2011-2005 | 新增资料 | [Windows AfdJoinLeaf 本地提权的公开模块及权限判据（CVE-2011-2005）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Windows/Windows%20AfdJoinLeaf%20%E6%9C%AC%E5%9C%B0%E6%8F%90%E6%9D%83%E7%9A%84%E5%85%AC%E5%BC%80%E6%A8%A1%E5%9D%97%E5%8F%8A%E6%9D%83%E9%99%90%E5%88%A4%E6%8D%AE%EF%BC%88CVE-2011-2005%EF%BC%89.md) |
+| CVE-2011-1823 | 新增资料 | [Android vold 本地提权与 GingerBreak 原始验证资料（CVE-2011-1823）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Android/Android%20vold%20%E6%9C%AC%E5%9C%B0%E6%8F%90%E6%9D%83%E4%B8%8E%20GingerBreak%20%E5%8E%9F%E5%A7%8B%E9%AA%8C%E8%AF%81%E8%B5%84%E6%96%99%EF%BC%88CVE-2011-1823%EF%BC%89.md) |
 
 ## 维护和验证
 
@@ -155,6 +171,8 @@ Edimax1316尚缺已审下游载荷和独立验证结果；UniFi原研究未清�
 
 平台阻断工作范围独立计256项：2023年165、2024桌面/浏览器50、新增2014–2015来源缺口41。新增41项保留阻断前3项选段、4项库文、34项有界检索事实；没有将这些事实删除或改成未读，也没有重试、转交或绕行。故256不能加进上述阅读分区再求和。
 
-叠加本轮出版后的处置：95已纳入Draft分支、59待同行复核或必要修订、16已有充分覆盖、318限定来源集内暂缓、256平台阻断、983待研究，共1727。暂缓不表示全网没有PoC；清点完成也不表示技术审阅全部完成。此检查点之后的旧年阅读和作者提案等待下一份逐ID合并，不提前记为准入。
+叠加最新出版后的处置：111已纳入Draft分支、43待同行复核或必要修订、16已有充分覆盖、319限定来源集内暂缓、256平台阻断、982待研究，共1727。暂缓不表示全网没有PoC；清点完成也不表示技术审阅全部完成。此检查点之后的旧年阅读和作者提案等待下一份逐ID合并，不提前记为准入。
 
 ProjectSend11680及Ivanti8963/8190的旧frontmatter仍保留原有空主编号/unknown角色；本次补充未无记录地改写这些元数据，材料关联编号不等于它们已经进入主CVE导航。原始93篇纠正记录、撤回33新稿和7处本轮追加的历史保持不变。
+
+0391/0838按WW-3668同一转换异常实体关联，保留原编号与devMode其他实体，不宣称官方将两个CVE合并。旧主文metadata未因追加而改写，相关主CVE导航限制仍需单独处理。1889的IE9/RandomHeap静态变量缺口在篇首明确标记needs-review，未修补原载荷；其余已审完整触发材料是准入依据。来源执行记录与本库未执行状态分别保留。

@@ -3948,13 +3948,576 @@
           "runtime_executed": false
         }
       ]
+    },
+    {
+      "reviewed_utc": "2026-10-03T12:10:17.510082+00:00",
+      "review_base": "11814dc4cb1556496fa97fd120411073de96d2f8",
+      "files_reviewed": 17,
+      "retained_files": 16,
+      "held_files": 1,
+      "qualified_candidate_ids": 16,
+      "final_byte_review_passed": true,
+      "rows": [
+        {
+          "path": "Web安全/桌面软件/Microsoft/Internet Explorer CButton 释放后使用的公开触发与调试证据（CVE-2012-4792）.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2012-4792"
+          ],
+          "specific_trigger": [
+            {
+              "sha256": "8823cac9871fc52808f8315929166184aa33fc86feb1e43e037d3b2cee7c1774",
+              "location": "160–253; HTML event body 179–230",
+              "public_url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/windows/browser/ie_cbutton_uaf.rb",
+              "technical_role": "load_exploit_html / helloWorld: button+form applyElement, DOM replacement, CollectGarbage; onload triggers the sequence"
+            }
+          ],
+          "outcome": "Source debugger block lines 256–288 records c0000005 in mshtml!CMarkup::OnLoadStatusDone+0x504, including eax=0c0c0c0c and call [eax+0DCh]. This is memory-control/crash evidence, not a captured shell session.",
+          "mapping": "Independently read CNA description/references and complete public implementation; distinct component/version conditions kept.",
+          "versions": "CNA：Internet Explorer 6–8；公开模块具体目标为 IE 8 的 XP SP3、Server 2003、Vista、Windows 7，不能由此推广到全部平台",
+          "preconditions": "用户访问并运行脚本；Vista/Windows 7 的模块利用链依赖 JRE ROP，XP/2003 分支依赖 msvcrt；不等于需要网站账号",
+          "limits": [
+            "Metasploit HttpServer::HTML and RopDb",
+            "js_mstime_malloc helper not independently audited",
+            "XP/2003 msvcrt or Vista/Windows 7 JRE ROP; user scripts must run"
+          ],
+          "side_effects": "Heap allocation, browser crash or user-context code execution; configured post/windows/manage/priv_migrate. No runtime safety claim.",
+          "current_sha256": "b27a3bdf673de56e44c4b94941b1d5bae080f7d3e7812f5e3298e1f10bb7f83c",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/中间件/Oracle Reports/Oracle Reports URLPARAMETER 文件操作与组合利用材料（CVE-2012-3152）.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2012-3152"
+          ],
+          "specific_trigger": [
+            {
+              "sha256": "b12d3453a8ef15a29cd29333d4f82ecaad2056da259360b357870bd0bbcffd59",
+              "location": "120–273; upload_payload 180–202; exec_payload 258–273",
+              "public_url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/multi/http/oracle_reports_rce.rb",
+              "technical_role": "showenv path disclosure, URLPARAMETER remote fetch with destype=file/desname, and subsequent JSP request"
+            },
+            {
+              "sha256": "2ef5fae2439e621e4ac84b0be5becdf8a4fa5cedad930173042aabea3f04cbd9",
+              "location": "1–128; upload 21–37, showmap/parsequery 78–120",
+              "public_url": "https://www.exploit-db.com/raw/31253",
+              "technical_role": "Original Mekanismen Ruby requests and explicit author/tested-platform statement"
+            }
+          ],
+          "outcome": "EDB source checks Successfully run at 31–35 and prints the JSP path at 122–127; MSF supplies an entire JSP file-dropper and requests it. HTTP 200 / absence of <html> alone is weak and is explicitly rejected as proof. Complete public chained EXP plus researcher success claim qualifies; not independent execution.",
+          "mapping": "Independently read CNA description/references and complete public implementation; distinct component/version conditions kept.",
+          "versions": "Oracle/CNA 列 Reports Developer 11.1.1.4、11.1.1.6、11.1.2.0；MSF 声称 Windows Forms and Reports 10.1 成功，EDB 31253 声称 Linux 11.1，较早版本属于研究者证据而非厂商完整确认",
+          "preconditions": "可达 /reports/rwservlet；文件落点须服务进程可写且能由 Web 访问；组合路径需要 showenv 或 parsequery 等辅助信息，不能把整个链视为 3152 单独完成",
+          "limits": [
+            "Metasploit HttpClient/HttpServer::HTML/EXE or Ruby uri/open-uri/openssl",
+            "Reachable rwservlet; diagnostic/server/credential information for this automation",
+            "Writable web-accessible destination; target can retrieve configured payload URL; runtime JSP support",
+            "CVE-2012-3153 is a distinct information-disclosure step"
+          ],
+          "side_effects": "Reads and prints DB credentials; target-side file retrieval/write, JSP and temporary executable creation, chmod, processes and callback. No reliable cleanup in source.",
+          "current_sha256": "3324dffc26e65977a3b1a2f189875eb064837e54eaff2d664f29e58936185147",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/桌面软件/Oracle Java/Java 7 JAX-WS 沙箱绕过的公开实现与辅助类（CVE-2012-5076）.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2012-5076"
+          ],
+          "specific_trigger": [
+            {
+              "sha256": "d3152a90411c59bd20a20c3f04a721c18539e2b2044d3eaa573843065748220b",
+              "location": "71–120",
+              "public_url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/multi/browser/java_jre17_jaxws.rb",
+              "technical_role": "Applet archive generation and class delivery"
+            },
+            {
+              "sha256": "34b17d116831bcf0c7229a487d5b3665270fca5d9764898b086cafca27a3f436",
+              "location": "34–67",
+              "public_url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/external/source/exploits/cve-2012-5076/Exploit.java",
+              "technical_role": "init reads MyPayload.class; GenericConstructor creates internal loader and ManagedObjectManagerFactory invokes loadClass"
+            },
+            {
+              "sha256": "236213a8a32c90a29070433e828195b499ad806422ebbada0d87b6be1013105f",
+              "location": "7–24",
+              "public_url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/external/source/exploits/cve-2012-5076/MyPayload.java",
+              "technical_role": "Privileged helper constructor/run"
+            },
+            {
+              "sha256": "95ee0cd379057f0ac268eb5e76764c826bc3247c2219565e464810ad0a3ca4de",
+              "location": "24–76",
+              "public_url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/external/source/exploits/cve-2012-5076_2/Exploit.java",
+              "technical_role": "AverageRangeStatisticImpl.invoke obtains Lookup, internal Rhino generated loader loads B"
+            },
+            {
+              "sha256": "e8c56313f53e369d7ab7a456cd452856270b6036473b67b782eecf17085d5a58",
+              "location": "7–18",
+              "public_url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/external/source/exploits/cve-2012-5076_2/B.java",
+              "technical_role": "B privileged constructor/run"
+            }
+          ],
+          "outcome": "MyPayload.run line22 and B.run line16 explicitly set SecurityManager to null; outer applets then invoke Payload.main. Expected sandbox escape/code execution is concrete code, with exceptions swallowed; neither Loading page nor jar delivery is a positive result.",
+          "mapping": "Independently read CNA description/references and complete public implementation; distinct component/version conditions kept.",
+          "versions": "Java SE 7 Update 7 及之前；CNA 指向 JAX-WS。MSF 同号有 JAX-WS 与 AverageRangeStatisticImpl 两个入口",
+          "preconditions": "用户加载不可信 Applet，浏览器插件/JRE 与所用内部类存在；Java 服务端仅安装同版本不是足够前提",
+          "limits": [
+            "Affected Java 7u7-or-earlier browser Applet deployment",
+            "JAX-WS/GMBAL internal classes and AnonymousClassLoader; alternate GlassFish vector also uses MethodHandles and Rhino internal loader",
+            "Metasploit encoded_jar supplies Payload; two Makefiles require rt.jar and framework Java classes",
+            "Four saved exploit/helper .class files, not six; source-to-bytecode equivalence unproved"
+          ],
+          "side_effects": "Sandbox removal followed by arbitrary Java/native payload, possible files/processes/callback. Full source is admission basis, not opaque compiled classes. CNA says JAX-WS; alternate vector attribution remains explicitly Rapid7-authored.",
+          "current_sha256": "9f48831238689a608b3d6ba75226aa02f106368735f9fb9ffe40ef2ef9c25e88",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/桌面软件/Microsoft/Internet Explorer execCommand 释放后使用的双页触发材料（CVE-2012-4969）.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2012-4969"
+          ],
+          "specific_trigger": [
+            {
+              "sha256": "22f2f7602a6bb83b3bc7e55af18a73041c4fb940c675a1e432e317f37c7f76e9",
+              "location": "243–351; second-page callback 282–305",
+              "public_url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/windows/browser/ie_execcommand_uaf.rb",
+              "technical_role": "Parent creates image and iframe; child selectAll/onselect performs document.write and changes parent image src"
+            }
+          ],
+          "outcome": "Source debugger lines354–390 show CMshtmlEd::Exec+0x134, edi=0c0c0c08 and subsequent indirect call [eax+8]. Concrete UAF trigger plus memory-control observation, not merely version match.",
+          "mapping": "Independently read CNA description/references and complete public implementation; distinct component/version conditions kept.",
+          "versions": "CNA：IE 6–9；公开模块目标覆盖 IE 7/8 XP SP3、IE 7/8 Vista、IE 8/9 Windows 7",
+          "preconditions": "用户加载两页 HTML；IE 8 XP 用 msvcrt，Vista/Win7 分支的 ROP 依赖 JRE 1.6.x 或更早，模块目标表不是所有易受影响部署",
+          "limits": [
+            "Metasploit HttpServer::HTML, heapLib, RopDb and optional JSObfu",
+            "IE7/8/9 listed OS targets; msvcrt for IE8 XP; JRE1.6.x or earlier for indicated Vista/Win7 ROP paths"
+          ],
+          "side_effects": "Heap pressure, browser crash, user-context payload execution and configured privilege migration.",
+          "current_sha256": "16536252c2664be61a1a12a3d83b204ac2e2a429022ecce1efa0a75279d288e4",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/桌面软件/Oracle Java/Java 7 Beans 反射链沙箱绕过的公开 Applet 源码（CVE-2012-4681）.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2012-4681"
+          ],
+          "specific_trigger": [
+            {
+              "sha256": "2dfc06ca4f23d361dd2990e3e28b23a23c878c289d20ca42458e898d39640042",
+              "location": "88–134",
+              "public_url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/multi/browser/java_jre17_exec.rb",
+              "technical_role": "Applet archive/Exploit.class delivery"
+            },
+            {
+              "sha256": "3aecf7122ee8971bddbdfdc2014e48dc65b0669f178aee0ba85b096b00738ad8",
+              "location": "25–71",
+              "public_url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/external/source/exploits/CVE-2012-4681/Exploit.java",
+              "technical_role": "disableSecurity, GetClass, SetField, init implement Beans/Statement access-control chain"
+            }
+          ],
+          "outcome": "disableSecurity executes a Statement after changing acc to an AllPermission AccessControlContext; init then calls Payload.main. Module lines31–32 claim successful multi-platform tests; paint Loading is not evidence.",
+          "mapping": "Independently read CNA description/references and complete public implementation; distinct component/version conditions kept.",
+          "versions": "CVE 对应 Java SE 7 Update 6 及之前；Oracle 多问题警报中出现 Java 6 不代表本编号也影响 Java 6",
+          "preconditions": "不可信 Applet/Java Web Start 客户端执行路径，浏览器必须允许对应 Java；普通服务端或独立桌面 Java 程序不能仅凭版本套用",
+          "limits": [
+            "Java7u6 or earlier client Applet/Web Start path; source uses Java Beans and sun.awt.SunToolkit",
+            "Framework generated Payload class; saved Exploit.class not reconstructed"
+          ],
+          "side_effects": "Disables sandbox, arbitrary payload files/processes/callback; all source values remain unchanged.",
+          "current_sha256": "19b2d8683f7661c7cd3ff2be53f8c3e397fb6d2fb8be1e01ef3d61f5eb21f49d",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/桌面软件/Oracle Java/Java HotSpot 字段验证缓存缺陷的完整公开生成器（CVE-2012-1723）.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2012-1723"
+          ],
+          "specific_trigger": [
+            {
+              "sha256": "c6e3bb3604c79f4b3b5d9c90cc081636f5f71e9ab477f55bfdf3bcc62d64d90c",
+              "location": "93–176",
+              "public_url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/multi/browser/java_verifier_field_access.rb",
+              "technical_role": "Applet/JAR path and HTML parameters"
+            },
+            {
+              "sha256": "78370ed4b6c466cf4ed49e4990cf668314496182b7b964158cfe6e76c9b589e7",
+              "location": "18–131; key instructions98–112",
+              "public_url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/external/source/exploits/CVE-2012-1723/src/cve1723/Generator.java",
+              "technical_role": "Complete ASM generator emits static/instance field confusion class"
+            },
+            {
+              "sha256": "6d2c3d617add63b9273aa670f0fe43196f75096b4d65695a4c9643c298dd4f25",
+              "location": "15–38",
+              "public_url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/external/source/exploits/CVE-2012-1723/src/cve1723/Attacker.java",
+              "technical_role": "Warmup confuse calls then obtains ConfusingClassLoader"
+            },
+            {
+              "sha256": "a0252a66a5368612300198e0a09c62f6371443b441da20757779f9bba35b5d17",
+              "location": "15–38",
+              "public_url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/external/source/exploits/CVE-2012-1723/src/cve1723/ConfusingClassLoader.java",
+              "technical_role": "AllPermission defineClass and PayloadX instantiation"
+            }
+          ],
+          "outcome": "Complete generator+caller leads to a mis-typed ClassLoader reference and defines PayloadX with AllPermission; privileged PayloadX operations are the source-defined outcome. No runtime transcript. Painting SecurityManager alone is not success.",
+          "mapping": "Independently read CNA description/references and complete public implementation; distinct component/version conditions kept.",
+          "versions": "Java SE 7u4、6u32、5u35、1.4.2_37 及各分支更早版本，来自 CNA 描述",
+          "preconditions": "不可信 Java Applet 客户端；需受影响 HotSpot 字节码检查及类加载行为，不是任意 Java 服务端远程入口",
+          "limits": [
+            "Affected HotSpot client JRE; CNA branches7u4/6u32/5u35/1.4.2_37 and earlier",
+            "ASM4.0/JDK build dependencies from Makefile are named, not installed or executed",
+            "PayloadX source fully read; saved jars have different class hashes; no binary-equivalence claim",
+            "Ruby _port omission and Applet4444 fallback already correctly disclosed"
+          ],
+          "side_effects": "Shell sockets, temporary jar/exe files, chmod/exec, subprocesses and attempted deletion; jar drop branch lacks cleanup. Source complete independently of archived jar equivalence.",
+          "current_sha256": "8f087aacdc886f64b4001434f59c3e92c2a7e0f4d411543ab8ce7f69df4a8874",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/桌面软件/Microsoft/MSXML getDefinition 未初始化内存访问的公开验证材料（CVE-2012-1889）.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2012-1889"
+          ],
+          "specific_trigger": [
+            {
+              "sha256": "0a53f32083839ae648190841921e57e3acbd0961e04b0daa17cc145a38ca8b2d",
+              "location": "318–383; object/definition355–377",
+              "public_url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/windows/browser/msxml_get_definition_code_exec.rb",
+              "technical_role": "Instantiates MSXML CLSID, fills image path/nameProp state, calls obj.definition"
+            }
+          ],
+          "outcome": "Debugger386–426 records c0000005 at msxml3!_dispatchImpl::InvokeHelper+0xb4 with call [ecx+18h]. This plus explicit JS trigger is concrete memory corruption material. The IE9 random-heap branch has an additional static unresolved identifier defect.",
+          "mapping": "Independently read CNA description/references and complete public implementation; distinct component/version conditions kept.",
+          "versions": "MSXML 3.0、4.0、5.0、6.0；具体模块注释对象为 msxml3.dll 8.90.1101.0",
+          "preconditions": "用户以 IE 加载可实例化对应 MSXML ActiveX 的页面；具体 ROP 目标依赖 msvcrt 或 Java 6，不是单靠 IE 版本",
+          "limits": [
+            "MSXML ActiveX accessible from IE; actual module target annotation msxml3.dll8.90.1101.0",
+            "Framework heapLib/RopDb; msvcrt or Java6 only for indicated ROP branches",
+            "get_random_spray lines268–316 interpolates randnop2 without defining it in that method"
+          ],
+          "side_effects": "Heap pressure, browser crash/code execution, priv_migrate; image src is a UNC-like \\\\xxx path whose resolution/network side effects are not tested. Do not claim all module target branches operational.",
+          "current_sha256": "8729784507a8297c2edee13d0292be1b0915924ab8f7a359a0266287e5a85e4f",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/桌面软件/Oracle Java/AtomicReferenceArray 类型安全缺陷与 Applet 辅助类（CVE-2012-0507）.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2012-0507"
+          ],
+          "specific_trigger": [
+            {
+              "sha256": "24913caebf779e6c2fb193b00588b3ebe91e88fcb5dfa3a360c107355ace1d50",
+              "location": "93–177",
+              "public_url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/multi/browser/java_atomicreferencearray.rb",
+              "technical_role": "Applet and static JAR delivery; data/jar/lhost/lport parameters"
+            },
+            {
+              "sha256": "00617077ecff927cb3e86cd1cebb2c5002bbad7481007718a07de20017a0f5a3",
+              "location": "12–46",
+              "public_url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/external/source/exploits/CVE-2012-0507/msf/x/Exploit.java",
+              "technical_role": "Full serialized buf deserialized; AtomicReferenceArray.set writes ClassLoader into Help[] alias"
+            },
+            {
+              "sha256": "84bac38f4ea5d9af84e64b06723144f29f0445d8cb505e4e02790952e327213e",
+              "location": "18–76",
+              "public_url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/external/source/exploits/CVE-2012-0507/msf/x/Help.java",
+              "technical_role": "Mis-typed reference defines helper classes with AllPermission and invokes PayloadX"
+            }
+          ],
+          "outcome": "Source concretely breaks array type safety, obtains privileged class definition and runs PayloadX; expected privileged operations/session, not an empty page or swallowed exception. CNA itself explains the AtomicReferenceArray mapping and rejects old2011-3571 association.",
+          "mapping": "Independently read CNA description/references and complete public implementation; distinct component/version conditions kept.",
+          "versions": "Java SE 7u2、6u30、5.0u33 及各分支更早版本；不是 CVE-2011-3571，后者早已分配给不同问题",
+          "preconditions": "受影响 JRE 执行不可信 Applet；反序列化得到的数组关系必须满足公开样例，浏览器插件路径不能泛化为服务端 RCE",
+          "limits": [
+            "Affected client Java7u2/6u30/5u33 or earlier with Applet path",
+            "Included serialized bytes and Help/PayloadX full source; framework-generated payload",
+            "Archived JAR only structure/hash checked; compilation not performed"
+          ],
+          "side_effects": "Bind/reverse sockets, temp jar/exe write, chmod, process execution and partial cleanup; no safe-check claim.",
+          "current_sha256": "63042c59dea2730c5f3e1d63ac7d216ee46e4e89f74aaf66865bfe1de11c416b",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/开发框架/PHP/（CVE-2012-1823）PHP-CGI远程代码执行漏洞.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2012-1823"
+          ],
+          "specific_trigger": [
+            {
+              "sha256": "2fe06b595f1ef0a3ad6a6834ed29a83e69b03b660b5e3f09c92a2704ac2b5b4d",
+              "location": "73–97",
+              "public_url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/multi/http/php_cgi_arg_injection.rb",
+              "technical_role": "Baseline normal request then -s argument request with code/span discriminator"
+            },
+            {
+              "sha256": "2fe06b595f1ef0a3ad6a6834ed29a83e69b03b660b5e3f09c92a2704ac2b5b4d",
+              "location": "115–143 plus145–232",
+              "public_url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/multi/http/php_cgi_arg_injection.rb",
+              "technical_role": "Full POST argument-injection exploit/body and argument encoder present in upstream unchanged"
+            }
+          ],
+          "outcome": "A newly code/span syntax-highlighted source response compared with baseline is the public positive check; Plesk HTTP500 merely Appears and cannot qualify alone. Separate full EXP path is present; no request executed.",
+          "mapping": "Independently read CNA description/references and complete public implementation; distinct component/version conditions kept.",
+          "versions": "CVE 原始影响为 PHP 5.3 <5.3.12、5.4 <5.4.2；早期补丁另有 CVE-2012-2311 绕过，不能把 5.3.12/5.4.2 写成最终安全线",
+          "preconditions": "PHP 以 CGI 处理目标脚本，查询串无未转义的 =，Web 服务器把查询内容传成 CGI argv；mod_php/php-fpm 不属于此路径",
+          "limits": [
+            "CGI PHP script and query-to-argv mapping with no unescaped =",
+            "Module HttpClient; later Plesk path not assigned wholesale to2012-1823",
+            "CNA original branch boundaries and PHP5.4.3/2012-2311 follow-on fix distinguished"
+          ],
+          "side_effects": "Source disclosure and arbitrary PHP body side effects (files/processes/callback/logs). Existing damaged curl and failed environ claims preserved.",
+          "current_sha256": "ee067125a4afd4b6429f3d42c686cd403bbadcaf70d0c3c4c8eba6f247c24a66",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/桌面软件/Microsoft/MSCOMCTL ListView 栈溢出的 RTF 构造及打开方式边界（CVE-2012-0158）.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2012-0158"
+          ],
+          "specific_trigger": [
+            {
+              "sha256": "4a5ce6ddb9f4e9e3f5961b73d44ed06275791906e9d160010ec70a09c5fa07bf",
+              "location": "89–304; RTF/OLE constructor170–302",
+              "public_url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/windows/fileformat/ms12_027_mscomctl_bof.rb",
+              "technical_role": "Complete RTF constructor embeds MSComctlLib.ListViewCtrl.2 data, target return/ROP and payload bytes"
+            }
+          ],
+          "outcome": "The source-defined result is user-context payload execution after opening the generated document. Target build/OCX details and Office2010 File/Open requirement are explicit; file_create alone is not a successful exploit observation. Complete public generator qualifies without an attached transcript.",
+          "mapping": "Independently read CNA description/references and complete public implementation; distinct component/version conditions kept.",
+          "versions": "CNA 涉及 Office 2003/2007/2010 与共用 MSCOMCTL 的其他产品；MSF 具体支持英语 Office 2007 无SP至SP3及 Office 2010 SP1，在英语 XP SP3/Win7 SP1",
+          "preconditions": "用户打开含 ActiveX 对象的 RTF；Office 2010 路径须先启动 Word，再经 File/Open 打开，使 msgr3en.dll 已加载",
+          "limits": [
+            "Affected MSCOMCTL; module English Office2007(noSP–SP3) or Office2010SP1 and XPsp3/Win7sp1",
+            "Office2010 requires already-loaded msgr3en.dll through Word File/Open",
+            "FILEFORMAT, Rex text and Metasm helper; no separate malicious document template"
+          ],
+          "side_effects": "Writes generated attack document; victim opening can crash Word or run payload; EXITFUNC process. ListView/TreeView entity distinct from TabStrip2012-1856.",
+          "current_sha256": "e8eb659dfd15108f0d4e9394b42b673b0d64b9527aff0b7f26efaca1959432a5",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/桌面软件/Adobe/Flash MP4 cprt 溢出的完整构造器与异常证据（CVE-2012-0754）.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2012-0754"
+          ],
+          "specific_trigger": [
+            {
+              "sha256": "817ff9df1993faa52af179666b55b02ff6d8753030ebee88ab6b0f62343dd5a0",
+              "location": "182–297; create_mp4283–296",
+              "public_url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/windows/browser/adobe_flash_mp4_cprt.rb",
+              "technical_role": "Full corrupt MP4 bytes constructed in Ruby, independent of an opaque binary data core"
+            },
+            {
+              "sha256": "1ffd8489f2e245ef364c7f656c4c19ad20962c503367128f8c01fe41feeabb2b",
+              "location": "15–29",
+              "public_url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/external/source/exploits/CVE-2012-0754/Exploit.as",
+              "technical_role": "Complete wrapper loads /test.mp4 through NetStream"
+            }
+          ],
+          "outcome": "Source debugger299–323 records c0000005 for Flash11e.ocx and Flash10x.ocx, eax0c0c0c0c and call[eax+8]. Complete byte constructor plus explicit loader/outcome passes.",
+          "mapping": "Independently read CNA description/references and complete public implementation; distinct component/version conditions kept.",
+          "versions": "CNA：桌面 10.3 <10.3.183.15、11.x <11.1.102.62；Android 2/3 <11.1.111.6、4.x <11.1.115.6。MSF 声称 10.3.183.15 受影响的描述与 CNA 有边界差异，不能照抄",
+          "preconditions": "用户加载 Flash 内容；公开目标集中于 Windows IE6–8，部分 ROP 路径需要 JRE",
+          "limits": [
+            "Flash and targeted IE6–8/Windows versions",
+            "ROP requires msvcrt/JRE for designated branches; heapLib",
+            "Archived SWF only format checked, but full loader AS and all corrupt MP4 construction are available"
+          ],
+          "side_effects": "Memory corruption/crash, heap spray, payload/migration; registers hardcoded /test.mp4; no generic binary safety guarantee.",
+          "current_sha256": "2b42491b8dd72169e35a6bf9d10061f8066439cd7fe38786a360aff62e992198",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/中间件/Apache Struts/Apache-Struts2-S2-007-远程代码执行漏洞.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2012-0391"
+          ],
+          "specific_trigger": [
+            {
+              "sha256": "767b7d26ead30704b46a4d3f8d512558d55e9be3108470fa2fa15d04b669c1eb",
+              "location": "Description numbered steps1–6",
+              "public_url": "https://issues.apache.org/jira/browse/WW-3668",
+              "technical_role": "Struts Showcase Validation→Field Validators→Integer Validator Field; submit original <' + #application + '>"
+            },
+            {
+              "sha256": "d23169a1d4052e37d0633d7f5a36937b65e953532a7dd040267c614755c8a581",
+              "location": "Proof of concept1; Test.java/struts.xml/Test.action and test.jsp",
+              "public_url": "https://sec-consult.com/vulnerability-lab/advisory/multiple-critical-vulnerabilities-in-apache-struts2/",
+              "technical_role": "Full setup and concrete OGNL-input requests; original tested Jetty6.1.25/Struts2.2.1.1"
+            },
+            {
+              "sha256": "0474953e5b6eb96ba24fa412148ede8167c0c6db5efb4a3994884c14ca8b0285",
+              "location": "93–107; complete module1–221",
+              "public_url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/multi/http/struts_code_exec_exception_delegator.rb",
+              "technical_role": "Public parameter-injection module and stager/cleanup boundaries"
+            }
+          ],
+          "outcome": "WW-3668 says result field exposes application-scope variables; SEC Consult PoC1 specifies JSP file-write, calc execution and rendered property results. These are actual manual trigger/results, not exception-only. Same WW-3668 and 2.2.3.1 fix bind0391 and0838 to S2-007 mechanism, not official CVE duplicate/rejection.",
+          "mapping": "Independently read CNA description/references and complete public implementation; distinct component/version conditions kept.",
+          "versions": "CNA 与 Apache S2-008 对此子问题明确为 <2.2.3.1；SEC Consult PoC1 实测 2.2.1.1。S2-008 总公告的 2.3.1.1/2.3.18 不能替代此 CVE 的修复边界",
+          "preconditions": "Action 存在 Integer/Long 等参数属性及 getter/setter，类型转换失败进入 ExceptionDelegator，并配置 input 结果；不要求 devMode/debug=command",
+          "limits": [
+            "Action numeric property with accessors, conversion failure and input view; devMode not needed",
+            "MSF CmdStager/EXE optional payload paths; original manual application-variable trigger has no opaque core"
+          ],
+          "side_effects": "Application-data disclosure; commands/JSP write or overwrite; stager files/callback; cleanup depends on session/platform. Preserve both identifiers and separate devMode documents.",
+          "current_sha256": "db38390d29fc4d8337ceb147a1ba285bd591906d988a94a32b16ead22f2e75ed",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/桌面软件/Adobe/Adobe Reader U3D 未初始化内存利用及来源会话记录（CVE-2011-2462）.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2011-2462"
+          ],
+          "specific_trigger": [
+            {
+              "sha256": "914372937304c23c10b027122a332dfa931a36acdfc4fb3f05e72687eaef5db2",
+              "location": "93–285 and338–653",
+              "public_url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/windows/fileformat/adobe_reader_u3d.rb",
+              "technical_role": "Full JS/U3D/XML/PDF object, stream and OpenAction constructors"
+            },
+            {
+              "sha256": "eb4b7be5ee7a6950955903866d887b4a7fd426e2faa4adf04d640698c24608bc",
+              "location": "Verification Steps and Scenarios, entire document",
+              "public_url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/documentation/modules/exploit/windows/fileformat/adobe_reader_u3d.md",
+              "technical_role": "Source gives module/file creation, handler and user PDF-open sequence"
+            }
+          ],
+          "outcome": "Source scenario2019-12-05 records Reader9.4.0/XPsp3x86, Meterpreter session opened, getuid COMPUTER_1\\USER and installed application list. Source claim only, not this reviewer execution; old2009_2990 URL is not relied upon for mapping.",
+          "mapping": "Independently read CNA description/references and complete public implementation; distinct component/version conditions kept.",
+          "versions": "Reader/Acrobat 10.1.1及之前与9.4.6及之前历史分支；MSF具体目标为 Reader9.4.0/9.4.5/9.4.6 XP SP3，不能把其目标覆盖推广到 Reader X",
+          "preconditions": "用户打开含 U3D/JavaScript 的 PDF；Reader X Protected Mode/Acrobat X Protected View 对该攻击有缓解，公告按平台/分支区分",
+          "limits": [
+            "Reader U3D+JavaScript path; module target Reader9.4.0/9.4.5/9.4.6 on XPsp3",
+            "icucnv36.dll ROP, zlib, FILEFORMAT; no opaque external exploit template",
+            "ReaderX Protected Mode/AcrobatX Protected View mitigation acknowledged"
+          ],
+          "side_effects": "Writes PDF; opening causes crash/code execution/callback; process EXITFUNC. Generator contains direct ROP and potentially file/mapping APIs; no execution or binary generation performed.",
+          "current_sha256": "163e94d6804c032631e44ced847782140d01d98cf9b8c4346122ba8b2c6e2373",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/桌面软件/Oracle Java/Java Rhino 错误对象特权边界绕过的公开 Applet（CVE-2011-3544）.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2011-3544"
+          ],
+          "specific_trigger": [
+            {
+              "sha256": "086f49225e9ef02087f46b05c0a62e707aa32aa1dd19d37d22a43c65a6c68903",
+              "location": "80–126",
+              "public_url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/multi/browser/java_rhino.rb",
+              "technical_role": "Applet class delivery"
+            },
+            {
+              "sha256": "684a4471c06b6d1026d54990f6cb86d7b4c3a8e456066abca8a35435abaafa94",
+              "location": "21–54",
+              "public_url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/external/source/exploits/CVE-2011-3544/Exploit.java",
+              "technical_role": "Rhino Error.message=this with custom toString, JList rendering and callback"
+            }
+          ],
+          "outcome": "Source custom toString calls System.setSecurityManager(null), then applet.callBack calls Payload.main. A concrete sandbox-escape EXP path; no runtime output. Browser page alone not positive.",
+          "mapping": "Independently read CNA description/references and complete public implementation; distinct component/version conditions kept.",
+          "versions": "Java SE JDK/JRE7 与6u27及之前，CNA与模块一致",
+          "preconditions": "Java客户端执行不可信Applet，存在Rhino脚本引擎与Swing路径；不是凭服务端Java版本即可触发",
+          "limits": [
+            "Client Java7 or6u27 and earlier with Rhino js engine, Swing/JList and Applet execution",
+            "Framework Payload, saved Exploit.class; no reproducible build claim"
+          ],
+          "side_effects": "Sandbox disable, arbitrary payload/process/network actions; callback exceptions swallowed. No original researcher-page contents inferred from redirect.",
+          "current_sha256": "16c6e061317b6a786ad3459a9a363c4a03bcb8af5eb52b4427dba6001adfa376",
+          "runtime_executed": false
+        },
+        {
+          "path": "系统安全/Windows/Windows AfdJoinLeaf 本地提权的公开模块及权限判据（CVE-2011-2005）.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2011-2005"
+          ],
+          "specific_trigger": [
+            {
+              "sha256": "587f9612d5db0aa810a5a56c9376a7f60d19277c8be27e625b3636304057b3ef",
+              "location": "123–235; trigger211–218",
+              "public_url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/windows/local/ms11_080_afdjoinleaf.rb",
+              "technical_role": "Local Meterpreter allocates/writes memory then NtDeviceIoControlFile and NtQueryIntervalProfile"
+            },
+            {
+              "sha256": "99e97d93edc8499a42618e700b90777d9e8cd2bf492bdeb44cd8b87af9211b7f",
+              "location": "31–101 and141–183",
+              "public_url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/lib/msf/core/exploit/local/windows_kernel.rb",
+              "technical_role": "Kernel/HalDispatchTable location and token-stealing with optional backup"
+            }
+          ],
+          "outcome": "Existing is_system? check141–144 rules out already-SYSTEM; post-trigger215–218 checks SYSTEM and reports failure otherwise, then payload injection and original-token restoration occur separately. Source-defined concrete privilege criterion; not a runtime result.",
+          "mapping": "Independently read CNA description/references and complete public implementation; distinct component/version conditions kept.",
+          "versions": "CNA：Windows XP SP2/SP3、Server2003 SP2；公开模块仅 x86，显式拒绝x64",
+          "preconditions": "已有低权限本地登录/进程执行，模块要求 Meterpreter；不属于无认证远程漏洞",
+          "limits": [
+            "x86 XPsp2/sp3 or Server2003sp2; valid local execution/Meterpreter session and Railgun/process APIs",
+            "WindowsKernel helper full source; further generic framework APIs not fully audited"
+          ],
+          "side_effects": "Kernel pointer/token writes, SYSTEM process injection, loopback socket state, possible BSOD/reboot. Cleanup/restoration not assured after early errors. Token restore bytes are in module189–196, not helper.",
+          "current_sha256": "f5dc8570ff21a7af7c70753a10b58f91f770701b775f4beedc4782232f8f8072",
+          "runtime_executed": false
+        },
+        {
+          "path": "系统安全/Android/Android vold 本地提权与 GingerBreak 原始验证资料（CVE-2011-1823）.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2011-1823"
+          ],
+          "specific_trigger": [
+            {
+              "sha256": "4b66102d43b627ff6ce0d517e142ba563a5de74acbd4fa3d445f77ee49bba1bc",
+              "location": "1–65; prerequisites37–63",
+              "public_url": "http://stealth.openwall.net/xSports/GingerBreak.tgz",
+              "technical_role": "Original archive gives adb push directory, execution and # outcome plus device/media warning"
+            },
+            {
+              "sha256": "303351f45c96a3eda069741a1edc006fc303bc2b02054f9c96b262105116c005",
+              "location": "1–543; local netlink331–396, privilege branch457–474, main482–540",
+              "public_url": "http://stealth.openwall.net/xSports/GingerBreak.tgz",
+              "technical_role": "Complete original C source supplies negative-index netlink input and root shell branch"
+            }
+          ],
+          "outcome": "Original author blog states Android2.3.3 successful test. C requires getuid/geteuid0 before do_root, writes root-owned04711 shell and main checks setuid bit then execve; README # is claimed result. No fabricated uid0 transcript; setuid-bit test is not independent identity evidence.",
+          "mapping": "Independently read CNA description/references and complete public implementation; distinct component/version conditions kept.",
+          "versions": "CVE 记录：Android 3.0，以及 Android 2.x 中早于 2.3.4 的版本；原作者明确测试成功的是 Android 2.3.3",
+          "preconditions": "本地运行；原始 GingerBreak 要求 adb shell 和 log 组权限、可写可执行的 /data/local/tmp；其他 APK 变体不可直接套用这些前提",
+          "limits": [
+            "Local adb shell/log group and writable/executable /data/local/tmp for original CLI",
+            "Android libc/netlink/ELF32/proc/vold.fstab environment; platform-specific offsets",
+            "Original /system/libc/libc.so path preserved; precompiled binary not relied on or executed"
+          ],
+          "side_effects": "Repeated vold crashes; possible removable-media/data loss or unusable device; boomsh/sh copy/truncation, logcat clear, crashlog write/unlink, child SIGKILL, /data remount, persistent root-owned setuid shell. No complete cleanup. Distinct from PHP2012-1823 and zergRush.",
+          "current_sha256": "a615eb5ade990104e8587efaab716f073cf63c5091fb118b796597fb3361254d",
+          "runtime_executed": false
+        },
+        {
+          "path": null,
+          "decision": "hold",
+          "candidate_cves": [
+            "CVE-2012-1535"
+          ],
+          "reason": "Required font/SWF core was only structurally inspected; complete source-to-resource semantics missing. No article added and no claim public materials are globally absent."
+        }
+      ]
     }
   ],
   "current_totals": {
-    "article_files": 86,
-    "new_files": 50,
-    "supplemented_files": 36,
-    "qualified_candidate_ids": 95,
+    "article_files": 102,
+    "new_files": 64,
+    "supplemented_files": 38,
+    "qualified_candidate_ids": 111,
     "full_scope_complete": false
   },
   "subsequent_master_sync": {

@@ -28,6 +28,10 @@
 
 - [安卓零点击 RCE 漏洞（CVE-2026-0073）深度解析：同一 WiFi 下，手机放着不动也会被入侵](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Android/%E5%AE%89%E5%8D%93%E9%9B%B6%E7%82%B9%E5%87%BB%20RCE%20%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2026-0073%EF%BC%89%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90%EF%BC%9A%E5%90%8C%E4%B8%80%20WiFi%20%E4%B8%8B%EF%BC%8C%E6%89%8B%E6%9C%BA%E6%94%BE%E7%9D%80%E4%B8%8D%E5%8A%A8%E4%B9%9F%E4%BC%9A%E8%A2%AB%E5%85%A5%E4%BE%B5.md) [analysis; not-reproduced; needs-review]
 
+## Android vold
+
+- [Android vold 本地提权与 GingerBreak 原始验证资料（CVE-2011-1823）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Android/Android%20vold%20%E6%9C%AC%E5%9C%B0%E6%8F%90%E6%9D%83%E4%B8%8E%20GingerBreak%20%E5%8E%9F%E5%A7%8B%E9%AA%8C%E8%AF%81%E8%B5%84%E6%96%99%EF%BC%88CVE-2011-1823%EF%BC%89.md) [vulnerability; source-claimed; active]
+
 ## Android多组件
 
 - [CVE-2024-43096 及更多：Android 安全更新中修复的关键 RCE 漏洞](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Android/CVE-2024-43096%20%E5%8F%8A%E6%9B%B4%E5%A4%9A%EF%BC%9AAndroid%20%E5%AE%89%E5%85%A8%E6%9B%B4%E6%96%B0%E4%B8%AD%E4%BF%AE%E5%A4%8D%E7%9A%84%E5%85%B3%E9%94%AE%20RCE%20%E6%BC%8F%E6%B4%9E.md) [roundup; not-reproduced; needs-review]

@@ -44,6 +44,10 @@
 
 - [PowerShell 远程代码执行漏洞(CVE-2022-41076)安全风险通告二次更新](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Windows/PowerShell%20%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E%28CVE-2022-41076%29%E5%AE%89%E5%85%A8%E9%A3%8E%E9%99%A9%E9%80%9A%E5%91%8A%E4%BA%8C%E6%AC%A1%E6%9B%B4%E6%96%B0.md) [advisory; not-reproduced; needs-review]
 
+## Microsoft Windows / afd.sys AfdJoinLeaf
+
+- [Windows AfdJoinLeaf 本地提权的公开模块及权限判据（CVE-2011-2005）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Windows/Windows%20AfdJoinLeaf%20%E6%9C%AC%E5%9C%B0%E6%8F%90%E6%9D%83%E7%9A%84%E5%85%AC%E5%BC%80%E6%A8%A1%E5%9D%97%E5%8F%8A%E6%9D%83%E9%99%90%E5%88%A4%E6%8D%AE%EF%BC%88CVE-2011-2005%EF%BC%89.md) [analysis; not-reproduced; active]
+
 ## Microsoft Windows Server Update Services (WSUS)
 
 - [CVE-2025-59287](../Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/CVE-2025-59287.md) [vulnerability; source-claimed; needs-review]

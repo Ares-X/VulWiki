@@ -8,7 +8,7 @@
   "removed_entry": "CVE-2026-69836",
   "master_commit": "cfb19294812b1435a57e866a87dd18e2ff3ebec3",
   "open_pr10_commit": "e102e1d2fb26e381e7c4d270629738d0f3f8654d",
-  "completed_article_deliverables": 86,
+  "completed_article_deliverables": 102,
   "coverage_note": "All filter identities inventoried; substantive source review remains in progress. Identifier matches do not by themselves prove duplicates.",
   "rows": [
     {
@@ -117,7 +117,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/网络设备/F5 BIG-IP/（CVE-2026-94127）F5 BIG-IP APM OAuth授权服务器远程代码执行漏洞.md",
@@ -126,7 +125,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -706,7 +705,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/网络设备/MikroTik RouterOS/CVE-2026-67276  RouterOS SSH公钥认证绕过漏洞（POC）.md",
@@ -715,7 +713,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -733,7 +731,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/网络设备/MikroTik RouterOS/RouterOS预认证rekey与SSH策略链分析-CVE-2026-67279.md",
@@ -742,7 +739,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -839,7 +836,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/网络设备/SonicWall/SMA1000-OPTIONS-CouchDB-SNMP链-CVE-2026-83548-83549.md",
@@ -848,7 +844,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -868,7 +864,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/网络设备/SonicWall/SMA1000-OPTIONS-CouchDB-SNMP链-CVE-2026-83548-83549.md",
@@ -877,7 +872,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -915,7 +910,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "selected-technical-sections-only",
         "articles": [
           {
             "article": "Web安全/中间件/JFrog/（CVE-2026-82329）JFrog Artifactory空join key认证绕过漏洞.md",
@@ -924,7 +918,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "selected-technical-sections-only",
       "audited_read_provenance": null,
@@ -942,7 +936,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/商业软件/PaperCut/PaperCut-Tapestry配置绕过与外部用户查询代码执行链-CVE-2026-81578-82078.md",
@@ -951,7 +944,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -969,7 +962,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/商业软件/PaperCut/PaperCut-Tapestry配置绕过与外部用户查询代码执行链-CVE-2026-81578-82078.md",
@@ -978,7 +970,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -996,7 +988,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/开发框架/Gitea/Gitea-diffpatch双次补丁Git-hook执行-CVE-2026-60004.md",
@@ -1005,7 +996,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -1108,7 +1099,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/云平台/Citrix/NetScaler-SAML-RelayState错误码混淆-CVE-2026-19490.md",
@@ -1117,7 +1107,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -1137,7 +1127,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/AI应用/MLflow/MLflow-Webhook重定向DNS重绑定SSRF-CVE-2026-64849.md",
@@ -1146,7 +1135,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -1164,7 +1153,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/邮件系统/Zimbra/Zimbra-SMTP日志Swatchdog命令注入-CVE-2026-73570.md",
@@ -1173,7 +1161,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -1233,7 +1221,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/CMS内容/Magento/Magento客户会话身份切换-CVE-2026-71362.md",
@@ -1242,7 +1229,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -1528,7 +1515,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/开发框架/JetBrains/TeamCity agent polling反序列化链与公开模块残留边界（CVE-2026-63077）.md",
@@ -1537,7 +1523,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -1777,7 +1763,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/商业软件/Sangoma/Switchvox pa端点PhoneIP SQL注入与公开模板判定（CVE-2026-9586）.md",
@@ -1786,7 +1771,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -1909,7 +1894,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/云平台/Microsoft SharePoint/SharePoint JWT actor token验证缺失与模板假阳性边界（CVE-2026-55040）.md",
@@ -1918,7 +1902,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -2150,7 +2134,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/其他软件/Kestra/Kestra configs后缀白名单与未认证工作流执行（CVE-2026-49869）.md",
@@ -2159,7 +2142,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -2235,7 +2218,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/AI应用/Langflow/Langflow responses跨用户Flow执行与UUID分支授权缺口（CVE-2026-55255）.md",
@@ -2244,7 +2226,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -2303,7 +2285,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/CMS内容/Joomla/iCagenda附件上传PoC的版本差异与批量写入风险（CVE-2026-48939）.md",
@@ -2312,7 +2293,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -2554,7 +2535,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/服务器软件/Splunk/Splunk Sidecar任意文件截断到数据库恢复写入链（CVE-2026-20253）.md",
@@ -2563,7 +2543,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -2622,7 +2602,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/网络设备/Ivanti/CVE-2026-10520 _ Ivanti Sentry Pre-Authenticated OS Command Injection.md",
@@ -2631,7 +2610,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -2947,7 +2926,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/其他软件/杂项/【已支持检测】预认证即可利用！Kemp LoadMaster 堆内存缺陷导致命令注入远程代码执行漏洞CVE-2026-.md",
@@ -2956,7 +2934,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -3135,7 +3113,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/开发框架/Starlette/Starlette BadHost路径重建与路由授权视图分裂（CVE-2026-48710）.md",
@@ -3144,7 +3121,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -3635,7 +3612,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/网络设备/Palo Alto/CVE-2026-0257 _ Palo Alto Networks PAN-OS GlobalProtect Authentication.md",
@@ -3644,7 +3620,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -3703,7 +3679,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/AI应用/AI综合/AI大模型网关存在SQL注入漏洞、附 POC 复现、影响版本LiteLLM 1.81.16~1.83.7（CVE-2026-42208）.md",
@@ -3712,7 +3687,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -3926,7 +3901,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/运维面板/LiteSpeed cPanel/CVE-2026-41940 cPanel-WHM 认证绕过漏洞复现.md",
@@ -3935,7 +3909,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -4308,7 +4282,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/中间件/Apache Tomcat/Apache-Tomcat-Tribes-EncryptInterceptor-绕过远程代码执行漏洞-CVE-2026-34486.md",
@@ -4317,7 +4290,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -4337,7 +4310,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/AI应用/Marimo/marimo terminal WebSocket缺少认证与编辑模式前提（CVE-2026-39987）.md",
@@ -4346,7 +4318,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -4616,7 +4588,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/网络设备/Citrix NetScaler/NetScaler SAML IdP内存越读与会话泄露检测边界（CVE-2026-3055）.md",
@@ -4625,7 +4596,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -4664,7 +4635,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/AI应用/AI综合/AI用户务必关注，Langflow未授权RCE分析（CVE-2026-33017）.md",
@@ -4673,7 +4643,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -5585,7 +5555,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/网络设备/Fortinet/FortiOS 符号链接持久化补丁的路径规范化绕过（CVE-2025-68686）.md",
@@ -5594,7 +5563,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -6015,7 +5984,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/服务器软件/SolarWinds/【CVE-2025-40551】：Solarwinds Web Help Desk又一处反序列化漏洞.md",
@@ -6024,7 +5992,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -6096,7 +6064,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/服务器软件/SolarWinds/【CVE-2025-40551】：Solarwinds Web Help Desk又一处反序列化漏洞.md",
@@ -6105,7 +6072,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -6376,7 +6343,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/邮件系统/SmarterMail/CVE-2026-23760.md",
@@ -6385,7 +6351,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "full-technical-wiki-archive-only",
@@ -6685,7 +6651,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/服务器软件/GNU/CVE-2026-24061：GNU InetUtils Telnetd 身份验证绕过漏洞.md",
@@ -6694,7 +6659,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -7121,7 +7086,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/AI应用/n8n/n8n-表达式沙箱逃逸导致远程代码执行漏洞-CVE-2025-68613.md",
@@ -7130,7 +7094,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -7253,7 +7217,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/邮件系统/Roundcube/Roundcube SVG animate 命名空间属性过滤修复分析（CVE-2025-68461）.md",
@@ -7262,7 +7225,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -7769,7 +7732,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/AI应用/Langflow/Langflow-≤-1.6.9-CORS-配置错误导致令牌劫持和远程命令执行漏洞-CVE-2025-34291.md",
@@ -7778,7 +7740,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -7875,7 +7837,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/其他软件/Ray/Ray 浏览器请求判定与 DNS 重绑定边界（CVE-2025-62593）.md",
@@ -7884,7 +7845,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -8166,7 +8127,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/邮件系统/FreePBX/FreePBX filestore SSH 测试连接命令注入与权限差异（CVE-2025-64328）.md",
@@ -8175,7 +8135,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -8578,7 +8538,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/云平台/CentreStack/CentreStack 与 TrioFox 临时下载路径穿越及版本检查误差（CVE-2025-11371）.md",
@@ -8587,7 +8546,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -8646,7 +8605,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/云平台/VMware/VMware 服务发现执行非受信二进制导致本地提权（CVE-2025-41244）.md",
@@ -8655,7 +8613,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -9001,7 +8959,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/运维面板/Control Web Panel/CWP changePerm 权限参数命令注入与用户前提（CVE-2025-48703）.md",
@@ -9010,7 +8967,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -9049,7 +9006,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/网络设备/WatchGuard/WatchGuard Fireware IKEv2 越界写公开验证与探针边界（CVE-2025-9242）.md",
@@ -9058,7 +9014,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -9256,7 +9212,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "系统安全/Android/Android ART JNI 可实例化检查与序列化回归测试（CVE-2025-48543）.md",
@@ -9265,7 +9220,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -9648,7 +9603,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/商业软件/DELMIA Apriso/DELMIA Apriso 账号创建与上传路径穿越链（CVE-2025-6205、6204）.md",
@@ -9657,7 +9611,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -9675,7 +9629,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/商业软件/DELMIA Apriso/DELMIA Apriso 账号创建与上传路径穿越链（CVE-2025-6205、6204）.md",
@@ -9684,7 +9637,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -10317,7 +10270,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/云平台/Microsoft SharePoint/SharePoint ToolPane 公开利用代码与两代补丁边界（CVE-2025-49704、49706）.md",
@@ -10326,7 +10278,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -10348,7 +10300,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/云平台/Microsoft SharePoint/SharePoint ToolPane 公开利用代码与两代补丁边界（CVE-2025-49704、49706）.md",
@@ -10357,7 +10308,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -10911,7 +10862,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "系统安全/IGEL OS/IGEL OS 10 未验证 SquashFS 启动链与公开镜像构造 PoC（CVE-2025-47827）.md",
@@ -10920,7 +10870,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -11235,7 +11185,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/其他软件/TeleMessage/TeleMessage heapdump 暴露与内存凭据的公开手工验证材料（CVE-2025-48927、48928）.md",
@@ -11244,7 +11193,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -11262,7 +11211,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/其他软件/TeleMessage/TeleMessage heapdump 暴露与内存凭据的公开手工验证材料（CVE-2025-48927、48928）.md",
@@ -11271,7 +11219,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -11289,7 +11237,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/网络设备/Versa/Versa Concerto 逐跳请求头与 Actuator 认证边界（CVE-2025-34026）.md",
@@ -11298,7 +11245,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -11584,7 +11531,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/邮件系统/Fortinet FortiMail/FortiMail APSCOOKIE AuthHash 溢出的公开触发与错误 PoC 归属（CVE-2025-32756）.md",
@@ -11593,7 +11539,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -12229,7 +12175,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "系统安全/macOS/Apple APAC 声道映射长度失配与公开音频崩溃验证（CVE-2025-31200）.md",
@@ -12238,7 +12183,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -12380,7 +12325,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/AI应用/Langflow/Langflow-code-API-未授权远程代码执行漏洞-CVE-2025-3248.md",
@@ -12389,7 +12333,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -12549,7 +12493,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/开发框架/Vite/Vite inline/raw 文件访问校验的上游补丁对照（CVE-2025-31125）.md",
@@ -12558,7 +12501,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -12671,7 +12614,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "IOT安全/D-Link/（CVE-2025-29635）D-Link DIR-823X命令注入漏洞.md",
@@ -12680,7 +12622,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -12910,7 +12852,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "系统安全/Windows/Windows FastFAT 簇计数溢出与 BSOD 证据边界（CVE-2025-24985）.md",
@@ -12919,7 +12860,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -13385,7 +13326,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/其他软件/杂项/NAKIVO Backup & Replication任意文件读取漏洞(CVE-2024-48248).md",
@@ -13394,7 +13334,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -13866,7 +13806,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "selected-technical-sections-only",
         "articles": [
           {
             "article": "Web安全/商业软件/Advantive VeraCore/VeraCore timeoutWarning SQL 注入的公开请求与错误回显（CVE-2025-25181）.md",
@@ -13875,7 +13814,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "selected-technical-sections-only",
       "audited_read_provenance": null,
@@ -13895,7 +13834,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "系统安全/iOS/Apple CoreMedia Remaker 轨道对象释放与公开崩溃 PoC（CVE-2025-24085）.md",
@@ -13904,7 +13842,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -14106,7 +14044,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "系统安全/SimpleHelp/关键的 SimpleHelp 缺陷允许文件盗窃、权限提升和 RCE 攻击.md",
@@ -14115,7 +14052,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -14257,7 +14194,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/服务器软件/Ivanti/Ivanti EPM GetHashForWildcardRecursive 凭据强制认证资料（CVE-2024-13159）.md",
@@ -14266,7 +14202,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -14284,7 +14220,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/服务器软件/Ivanti/Ivanti EPM GetHashForWildcard 凭据强制认证资料（CVE-2024-13160）.md",
@@ -14293,7 +14228,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -14311,7 +14246,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/服务器软件/Ivanti/Ivanti EPM GetHashForSingleFile 凭据强制认证资料（CVE-2024-13161）.md",
@@ -14320,7 +14254,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -14571,7 +14505,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/网络设备/DrayTek/DrayTek apmcfgupload session 命令注入 CVE-2024-12987.md",
@@ -14580,7 +14513,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -14799,7 +14732,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/安全设备/BeyondTrust PAM/（CVE-2024-12356）BeyondTrust PRA-RS未授权命令注入漏洞.md",
@@ -14808,7 +14740,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -14863,7 +14795,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/商业软件/Cleo/（CVE-2024-55956）Cleo Harmony VLTrader LexiCom未认证文件写入远程代码执行漏洞.md",
@@ -14872,7 +14803,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -14911,7 +14842,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/商业软件/Mitel MiCollab 企业协作平台/Mitel MiCollab 企业协作平台 任意文件读取漏洞(CVE-2024-41713).md",
@@ -14920,7 +14850,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -15061,7 +14991,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/其他软件/杂项/【漏洞复现】CVE-2024-11680.md",
@@ -15070,7 +14999,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -15762,7 +15691,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/商业软件/Mitel MiCollab 企业协作平台/Mitel MiCollab 企业协作平台 任意文件读取漏洞(CVE-2024-41713).md",
@@ -15771,7 +15699,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -15889,7 +15817,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/网络设备/Palo Alto/Palo Alto Networks Expedition 远程命令执行漏洞(CVE-2024-9463).md",
@@ -15898,7 +15825,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -16177,7 +16104,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/邮件系统/Zimbra/Zimbra postjournal SMTP 命令注入 CVE-2024-45519.md",
@@ -16186,7 +16112,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -16224,7 +16150,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/其他软件/杂项/【漏洞复现】CVE-2024-8963、CVE-2024-8190.md",
@@ -16233,7 +16158,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -16360,7 +16285,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "existing-wiki-body-only",
         "articles": [
           {
             "article": "Web安全/其他软件/杂项/【漏洞复现】CVE-2024-8963、CVE-2024-8190.md",
@@ -16369,7 +16293,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "existing-wiki-body-only",
       "audited_read_provenance": null,
@@ -16698,7 +16622,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/网络设备/Cisco/Cisco Smart Licensing Utility 静态管理凭据 CVE-2024-20439.md",
@@ -16707,7 +16630,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -16945,7 +16868,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/其他软件/杂项/【PoC】SolarWinds Web Help Desk (CVE-2024-28987)严重漏洞的 PoC 已发布.md",
@@ -16954,7 +16876,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -17185,7 +17107,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/网络设备/Ivanti/Ivanti vTM 本地管理员创建鉴权绕过（CVE-2024-7593）.md",
@@ -17194,7 +17115,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -17380,7 +17301,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "IOT安全/Mitel/Mitel SIP 电话配置换行注入 CVE-2024-41710.md",
@@ -17389,7 +17309,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -18809,7 +18729,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "existing-wiki-body-only",
         "articles": [
           {
             "article": "Web安全/其他软件/杂项/CVE-2024-37383.md",
@@ -18818,7 +18737,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "existing-wiki-body-only",
       "audited_read_provenance": null,
@@ -19431,7 +19350,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/中间件/Apache OFBiz/Apache OfBiz CVE-2024-32113和CVE-2024-36104 漏洞 POC.md",
@@ -19440,7 +19358,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -19638,7 +19556,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "existing-wiki-body-only",
         "articles": [
           {
             "article": "Web安全/中间件/Apache HugeGraph/Apache-HugeGraph-远程代码执行漏洞-CVE-2024-27348.md",
@@ -19647,7 +19564,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "existing-wiki-body-only",
       "audited_read_provenance": null,
@@ -19877,7 +19794,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/网络设备/D-Link/D-Link NAS 未授权RCE漏洞(CVE-2024-3273).md",
@@ -19886,7 +19802,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -19904,7 +19820,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/网络设备/D-Link/D-Link NAS 未授权RCE漏洞(CVE-2024-3273).md",
@@ -19913,7 +19828,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -19990,7 +19905,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "existing-wiki-body-only",
         "articles": [
           {
             "article": "Web安全/其他软件/杂项/CVE-2024-20767.md",
@@ -19999,7 +19913,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "existing-wiki-body-only",
       "audited_read_provenance": null,
@@ -20369,7 +20283,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "existing-wiki-body-only",
         "articles": [
           {
             "article": "Web安全/其他软件/杂项/CVE-2024-1212.md",
@@ -20378,7 +20291,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "existing-wiki-body-only",
       "audited_read_provenance": null,
@@ -20417,7 +20330,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/其他软件/杂项/CVE-2024-1709.md",
@@ -20426,7 +20338,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -20808,7 +20720,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/网络设备/Ivanti/CVE-2024-21893影响Ivanti产品.md",
@@ -20817,7 +20728,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -20941,7 +20852,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "existing-wiki-body-only",
         "articles": [
           {
             "article": "Web安全/开发框架/Jenkins/Jenkins-CLI-接口任意文件读取漏洞-CVE-2024-23897.md",
@@ -20950,7 +20860,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "existing-wiki-body-only",
       "audited_read_provenance": null,
@@ -21026,7 +20936,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "IOT安全/D-Link/D-Link DIR-859 hedwig.cgi 路径穿越与凭据泄露 CVE-2024-0769.md",
@@ -21035,7 +20944,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -59732,15 +59641,20 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "full-technical-text",
-        "articles": [],
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/桌面软件/Microsoft/Internet Explorer CButton 释放后使用的公开触发与调试证据（CVE-2012-4792）.md",
+            "mode": "new",
+            "sha256": "b27a3bdf673de56e44c4b94941b1d5bae080f7d3e7812f5e3298e1f10bb7f83c"
+          }
+        ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -59774,15 +59688,20 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "full-technical-text",
-        "articles": [],
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/中间件/Oracle Reports/Oracle Reports URLPARAMETER 文件操作与组合利用材料（CVE-2012-3152）.md",
+            "mode": "new",
+            "sha256": "3324dffc26e65977a3b1a2f189875eb064837e54eaff2d664f29e58936185147"
+          }
+        ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -59816,15 +59735,20 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "full-technical-text",
-        "articles": [],
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/桌面软件/Oracle Java/Java 7 JAX-WS 沙箱绕过的公开实现与辅助类（CVE-2012-5076）.md",
+            "mode": "new",
+            "sha256": "9f48831238689a608b3d6ba75226aa02f106368735f9fb9ffe40ef2ef9c25e88"
+          }
+        ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -59858,15 +59782,20 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "full-technical-text",
-        "articles": [],
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/桌面软件/Microsoft/Internet Explorer execCommand 释放后使用的双页触发材料（CVE-2012-4969）.md",
+            "mode": "new",
+            "sha256": "16536252c2664be61a1a12a3d83b204ac2e2a429022ecce1efa0a75279d288e4"
+          }
+        ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -59879,15 +59808,20 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "full-technical-text",
-        "articles": [],
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/桌面软件/Oracle Java/Java 7 Beans 反射链沙箱绕过的公开 Applet 源码（CVE-2012-4681）.md",
+            "mode": "new",
+            "sha256": "19b2d8683f7661c7cd3ff2be53f8c3e397fb6d2fb8be1e01ef3d61f5eb21f49d"
+          }
+        ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -59900,15 +59834,13 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "full-technical-text",
-        "articles": [],
-        "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "disposition": "bounded-hold",
+        "reason": "Independent review: required font/SWF trigger resources lack complete static semantic correspondence; metadata/header scans alone do not qualify.",
+        "material_absence_claim": false
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "bounded-hold",
       "current_blocked_scope": false
     },
     {
@@ -59963,15 +59895,20 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "full-technical-text",
-        "articles": [],
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/桌面软件/Oracle Java/Java HotSpot 字段验证缓存缺陷的完整公开生成器（CVE-2012-1723）.md",
+            "mode": "new",
+            "sha256": "8f087aacdc886f64b4001434f59c3e92c2a7e0f4d411543ab8ce7f69df4a8874"
+          }
+        ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -59984,15 +59921,20 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "full-technical-text",
-        "articles": [],
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/桌面软件/Microsoft/MSXML getDefinition 未初始化内存访问的公开验证材料（CVE-2012-1889）.md",
+            "mode": "new",
+            "sha256": "8729784507a8297c2edee13d0292be1b0915924ab8f7a359a0266287e5a85e4f"
+          }
+        ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -60026,15 +59968,20 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "full-technical-text",
-        "articles": [],
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/桌面软件/Oracle Java/AtomicReferenceArray 类型安全缺陷与 Applet 辅助类（CVE-2012-0507）.md",
+            "mode": "new",
+            "sha256": "63042c59dea2730c5f3e1d63ac7d216ee46e4e89f74aaf66865bfe1de11c416b"
+          }
+        ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -60110,15 +60057,20 @@
         "系统安全/Windows/PHP-CGI-Windows-平台远程代码执行漏洞-CVE-2024-4577.md"
       ],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "full-technical-text",
-        "articles": [],
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/开发框架/PHP/（CVE-2012-1823）PHP-CGI远程代码执行漏洞.md",
+            "mode": "supplement",
+            "sha256": "ee067125a4afd4b6429f3d42c686cd403bbadcaf70d0c3c4c8eba6f247c24a66"
+          }
+        ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -60152,15 +60104,20 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "full-technical-text",
-        "articles": [],
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/桌面软件/Microsoft/MSCOMCTL ListView 栈溢出的 RTF 构造及打开方式边界（CVE-2012-0158）.md",
+            "mode": "new",
+            "sha256": "e8eb659dfd15108f0d4e9394b42b673b0d64b9527aff0b7f26efaca1959432a5"
+          }
+        ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -60194,15 +60151,20 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "full-technical-text",
-        "articles": [],
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/桌面软件/Adobe/Flash MP4 cprt 溢出的完整构造器与异常证据（CVE-2012-0754）.md",
+            "mode": "new",
+            "sha256": "2b42491b8dd72169e35a6bf9d10061f8066439cd7fe38786a360aff62e992198"
+          }
+        ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -60256,15 +60218,20 @@
         "Web安全/中间件/Apache Struts/（CVE-2012-0391）s2-008.md"
       ],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "full-technical-text",
-        "articles": [],
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/中间件/Apache Struts/Apache-Struts2-S2-007-远程代码执行漏洞.md",
+            "mode": "supplement",
+            "sha256": "db38390d29fc4d8337ceb147a1ba285bd591906d988a94a32b16ead22f2e75ed"
+          }
+        ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -60298,15 +60265,20 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "full-technical-text",
-        "articles": [],
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/桌面软件/Adobe/Adobe Reader U3D 未初始化内存利用及来源会话记录（CVE-2011-2462）.md",
+            "mode": "new",
+            "sha256": "163e94d6804c032631e44ced847782140d01d98cf9b8c4346122ba8b2c6e2373"
+          }
+        ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -60340,15 +60312,20 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "full-technical-text",
-        "articles": [],
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/桌面软件/Oracle Java/Java Rhino 错误对象特权边界绕过的公开 Applet（CVE-2011-3544）.md",
+            "mode": "new",
+            "sha256": "16c6e061317b6a786ad3459a9a363c4a03bcb8af5eb52b4427dba6001adfa376"
+          }
+        ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -60361,15 +60338,20 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "full-technical-text",
-        "articles": [],
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "系统安全/Windows/Windows AfdJoinLeaf 本地提权的公开模块及权限判据（CVE-2011-2005）.md",
+            "mode": "new",
+            "sha256": "f5dc8570ff21a7af7c70753a10b58f91f770701b775f4beedc4782232f8f8072"
+          }
+        ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -60403,15 +60385,20 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
-        "reading_depth": "full-technical-text",
-        "articles": [],
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "系统安全/Android/Android vold 本地提权与 GingerBreak 原始验证资料（CVE-2011-1823）.md",
+            "mode": "new",
+            "sha256": "a615eb5ade990104e8587efaab716f073cf63c5091fb118b796597fb3361254d"
+          }
+        ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -60735,7 +60722,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/中间件/Adobe ColdFusion/（CVE-2010-2861）Adobe ColdFusion 文件读取漏洞.md",
@@ -60744,7 +60730,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -61302,7 +61288,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/数据库/Phpmyadmin/phpMyAdmin setup配置保存注入与后续漏洞分界（CVE-2009-1151）.md",
@@ -61311,7 +61296,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -61570,7 +61555,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/网络设备/Alcatel-Lucent/OmniPCX masterCGI ping命令拼接与单次执行限制（CVE-2007-3010）.md",
@@ -61579,7 +61563,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -61660,7 +61644,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
         "articles": [
           {
             "article": "Web安全/运维面板/HP OpenView/HP OpenView connectedNodes命令注入与回显差异（CVE-2005-2773）.md",
@@ -61669,7 +61652,7 @@
           }
         ],
         "material_absence_claim": false,
-        "scope": "Frozen per-ID review facts with current independently qualified publication overlay; not runtime reproduction."
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -61781,19 +61764,19 @@
       "current_blocked_scope": true
     }
   ],
-  "new_article_files": 50,
-  "existing_article_files_supplemented": 36,
-  "candidates_with_integrated_material": 95,
+  "new_article_files": 64,
+  "existing_article_files_supplemented": 38,
+  "candidates_with_integrated_material": 111,
   "disposition_counts": {
-    "still-pending": 983,
-    "published": 95,
-    "awaiting-peer-or-required-notes": 59,
-    "bounded-hold": 318,
+    "still-pending": 982,
+    "published": 111,
+    "awaiting-peer-or-required-notes": 43,
+    "bounded-hold": 319,
     "platform-blocked": 256,
     "sufficient-duplicate": 16
   },
-  "updated_utc": "2026-10-03T11:44:43.056425+00:00",
-  "qualified_material_candidate_count": 95,
+  "updated_utc": "2026-10-03T12:10:17.510082+00:00",
+  "qualified_material_candidate_count": 111,
   "withdrawn_new_files": 33,
   "withdrawn_appends": 7,
   "current_master_base": "b176eecef836688c637e60c94284ccec1f1427c5",
@@ -61808,10 +61791,10 @@
     "baseline-restricted-not-reclassified": 215
   },
   "audited_disposition_counts": {
-    "still-pending": 983,
-    "published": 95,
-    "awaiting-peer-or-required-notes": 59,
-    "bounded-hold": 318,
+    "still-pending": 982,
+    "published": 111,
+    "awaiting-peer-or-required-notes": 43,
+    "bounded-hold": 319,
     "platform-blocked": 256,
     "sufficient-duplicate": 16
   }

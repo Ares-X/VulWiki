@@ -1,6 +1,6 @@
 {
   "scope_count": 1727,
-  "publication_projection_utc": "2026-10-03T11:44:43.056425+00:00",
+  "publication_projection_utc": "2026-10-03T12:10:17.510082+00:00",
   "reading_checkpoint_utc": "2026-10-03T11:36:26.885056+00:00",
   "source_review_snapshot_commit": "769334d99cef2b9fbfd5308e165acbc64696c5e1",
   "master_base": "b176eecef836688c637e60c94284ccec1f1427c5",
@@ -30,16 +30,16 @@
     "primary-web-text-cache-origin-bytes-unverified": 1
   },
   "disposition_counts": {
-    "still-pending": 983,
-    "published": 95,
-    "awaiting-peer-or-required-notes": 59,
-    "bounded-hold": 318,
+    "still-pending": 982,
+    "published": 111,
+    "awaiting-peer-or-required-notes": 43,
+    "bounded-hold": 319,
     "platform-blocked": 256,
     "sufficient-duplicate": 16
   },
-  "article_file_count": 86,
-  "new_files": 50,
-  "supplemented_files": 36,
+  "article_file_count": 102,
+  "new_files": 64,
+  "supplemented_files": 38,
   "publication_overlay_from_review_snapshot": [
     "CVE-2024-0769",
     "CVE-2024-41710",
@@ -66,7 +66,8 @@
     "38 CVEs await precise reading receipts; they are not asserted to have never been read.887 remain in the prior unread queue.",
     "Independent blocked scope256 includes41 with preserved prior reading facts; do not add256 to the reading partition.",
     "Later research and author proposals after this frozen checkpoint are not silently credited.",
-    "Qualified candidate IDs are not necessarily new primary-CVE navigation entries. Three IDs in this batch retain original unknown/empty primary metadata pending separate review."
+    "Qualified candidate IDs are not necessarily new primary-CVE navigation entries. Three IDs in this batch retain original unknown/empty primary metadata pending separate review.",
+    "CVE-2012-0391 material is directly inserted into existing S2-007 canonical entity alongside the preserved0838relationship; no official CVE merge/rejection or new primary-CVE navigation entry is claimed."
   ],
   "rows": [
     {
@@ -929,9 +930,15 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "disposition": "still-pending",
-      "pending_subtype": "author-research-in-progress",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "pending_subtype": null,
+      "articles_in_current_batch": [
+        {
+          "article": "系统安全/Android/Android vold 本地提权与 GingerBreak 原始验证资料（CVE-2011-1823）.md",
+          "mode": "new",
+          "sha256": "a615eb5ade990104e8587efaab716f073cf63c5091fb118b796597fb3361254d"
+        }
+      ]
     },
     {
       "cve": "CVE-2011-1889",
@@ -959,9 +966,15 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "disposition": "awaiting-peer-or-required-notes",
-      "pending_subtype": "author-pending-peer",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "pending_subtype": null,
+      "articles_in_current_batch": [
+        {
+          "article": "系统安全/Windows/Windows AfdJoinLeaf 本地提权的公开模块及权限判据（CVE-2011-2005）.md",
+          "mode": "new",
+          "sha256": "f5dc8570ff21a7af7c70753a10b58f91f770701b775f4beedc4782232f8f8072"
+        }
+      ]
     },
     {
       "cve": "CVE-2011-2462",
@@ -974,9 +987,15 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "disposition": "awaiting-peer-or-required-notes",
-      "pending_subtype": "author-pending-peer",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "pending_subtype": null,
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/桌面软件/Adobe/Adobe Reader U3D 未初始化内存利用及来源会话记录（CVE-2011-2462）.md",
+          "mode": "new",
+          "sha256": "163e94d6804c032631e44ced847782140d01d98cf9b8c4346122ba8b2c6e2373"
+        }
+      ]
     },
     {
       "cve": "CVE-2011-3402",
@@ -1004,9 +1023,15 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "disposition": "awaiting-peer-or-required-notes",
-      "pending_subtype": "author-pending-peer",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "pending_subtype": null,
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/桌面软件/Oracle Java/Java Rhino 错误对象特权边界绕过的公开 Applet（CVE-2011-3544）.md",
+          "mode": "new",
+          "sha256": "16c6e061317b6a786ad3459a9a363c4a03bcb8af5eb52b4427dba6001adfa376"
+        }
+      ]
     },
     {
       "cve": "CVE-2011-4723",
@@ -1049,9 +1074,15 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "disposition": "awaiting-peer-or-required-notes",
-      "pending_subtype": "author-pending-peer",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "pending_subtype": null,
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/桌面软件/Microsoft/MSCOMCTL ListView 栈溢出的 RTF 构造及打开方式边界（CVE-2012-0158）.md",
+          "mode": "new",
+          "sha256": "e8eb659dfd15108f0d4e9394b42b673b0d64b9527aff0b7f26efaca1959432a5"
+        }
+      ]
     },
     {
       "cve": "CVE-2012-0391",
@@ -1064,9 +1095,15 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "disposition": "awaiting-peer-or-required-notes",
-      "pending_subtype": "author-pending-peer",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "pending_subtype": null,
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/中间件/Apache Struts/Apache-Struts2-S2-007-远程代码执行漏洞.md",
+          "mode": "supplement",
+          "sha256": "db38390d29fc4d8337ceb147a1ba285bd591906d988a94a32b16ead22f2e75ed"
+        }
+      ]
     },
     {
       "cve": "CVE-2012-0507",
@@ -1079,9 +1116,15 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "disposition": "awaiting-peer-or-required-notes",
-      "pending_subtype": "author-pending-peer",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "pending_subtype": null,
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/桌面软件/Oracle Java/AtomicReferenceArray 类型安全缺陷与 Applet 辅助类（CVE-2012-0507）.md",
+          "mode": "new",
+          "sha256": "63042c59dea2730c5f3e1d63ac7d216ee46e4e89f74aaf66865bfe1de11c416b"
+        }
+      ]
     },
     {
       "cve": "CVE-2012-0518",
@@ -1109,9 +1152,15 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "disposition": "awaiting-peer-or-required-notes",
-      "pending_subtype": "author-pending-peer",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "pending_subtype": null,
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/桌面软件/Adobe/Flash MP4 cprt 溢出的完整构造器与异常证据（CVE-2012-0754）.md",
+          "mode": "new",
+          "sha256": "2b42491b8dd72169e35a6bf9d10061f8066439cd7fe38786a360aff62e992198"
+        }
+      ]
     },
     {
       "cve": "CVE-2012-0767",
@@ -1139,9 +1188,10 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "disposition": "awaiting-peer-or-required-notes",
-      "pending_subtype": "author-pending-peer",
-      "articles_in_current_batch": []
+      "disposition": "bounded-hold",
+      "pending_subtype": null,
+      "articles_in_current_batch": [],
+      "hold_note": "Independent review: required font/SWF trigger resources lack complete static semantic correspondence; metadata/header scans alone do not qualify."
     },
     {
       "cve": "CVE-2012-1710",
@@ -1169,9 +1219,15 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "disposition": "awaiting-peer-or-required-notes",
-      "pending_subtype": "author-pending-peer",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "pending_subtype": null,
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/桌面软件/Oracle Java/Java HotSpot 字段验证缓存缺陷的完整公开生成器（CVE-2012-1723）.md",
+          "mode": "new",
+          "sha256": "8f087aacdc886f64b4001434f59c3e92c2a7e0f4d411543ab8ce7f69df4a8874"
+        }
+      ]
     },
     {
       "cve": "CVE-2012-1823",
@@ -1184,9 +1240,15 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "disposition": "awaiting-peer-or-required-notes",
-      "pending_subtype": "author-pending-peer",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "pending_subtype": null,
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/开发框架/PHP/（CVE-2012-1823）PHP-CGI远程代码执行漏洞.md",
+          "mode": "supplement",
+          "sha256": "ee067125a4afd4b6429f3d42c686cd403bbadcaf70d0c3c4c8eba6f247c24a66"
+        }
+      ]
     },
     {
       "cve": "CVE-2012-1854",
@@ -1229,9 +1291,15 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "disposition": "awaiting-peer-or-required-notes",
-      "pending_subtype": "author-pending-peer",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "pending_subtype": null,
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/桌面软件/Microsoft/MSXML getDefinition 未初始化内存访问的公开验证材料（CVE-2012-1889）.md",
+          "mode": "new",
+          "sha256": "8729784507a8297c2edee13d0292be1b0915924ab8f7a359a0266287e5a85e4f"
+        }
+      ]
     },
     {
       "cve": "CVE-2012-2034",
@@ -1274,9 +1342,15 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "disposition": "awaiting-peer-or-required-notes",
-      "pending_subtype": "author-pending-peer",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "pending_subtype": null,
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/中间件/Oracle Reports/Oracle Reports URLPARAMETER 文件操作与组合利用材料（CVE-2012-3152）.md",
+          "mode": "new",
+          "sha256": "3324dffc26e65977a3b1a2f189875eb064837e54eaff2d664f29e58936185147"
+        }
+      ]
     },
     {
       "cve": "CVE-2012-4681",
@@ -1289,9 +1363,15 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "disposition": "awaiting-peer-or-required-notes",
-      "pending_subtype": "author-pending-peer",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "pending_subtype": null,
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/桌面软件/Oracle Java/Java 7 Beans 反射链沙箱绕过的公开 Applet 源码（CVE-2012-4681）.md",
+          "mode": "new",
+          "sha256": "19b2d8683f7661c7cd3ff2be53f8c3e397fb6d2fb8be1e01ef3d61f5eb21f49d"
+        }
+      ]
     },
     {
       "cve": "CVE-2012-4792",
@@ -1304,9 +1384,15 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "disposition": "awaiting-peer-or-required-notes",
-      "pending_subtype": "author-pending-peer",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "pending_subtype": null,
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/桌面软件/Microsoft/Internet Explorer CButton 释放后使用的公开触发与调试证据（CVE-2012-4792）.md",
+          "mode": "new",
+          "sha256": "b27a3bdf673de56e44c4b94941b1d5bae080f7d3e7812f5e3298e1f10bb7f83c"
+        }
+      ]
     },
     {
       "cve": "CVE-2012-4969",
@@ -1319,9 +1405,15 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "disposition": "awaiting-peer-or-required-notes",
-      "pending_subtype": "author-pending-peer",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "pending_subtype": null,
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/桌面软件/Microsoft/Internet Explorer execCommand 释放后使用的双页触发材料（CVE-2012-4969）.md",
+          "mode": "new",
+          "sha256": "16536252c2664be61a1a12a3d83b204ac2e2a429022ecce1efa0a75279d288e4"
+        }
+      ]
     },
     {
       "cve": "CVE-2012-5054",
@@ -1349,9 +1441,15 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "disposition": "awaiting-peer-or-required-notes",
-      "pending_subtype": "author-pending-peer",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "pending_subtype": null,
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/桌面软件/Oracle Java/Java 7 JAX-WS 沙箱绕过的公开实现与辅助类（CVE-2012-5076）.md",
+          "mode": "new",
+          "sha256": "9f48831238689a608b3d6ba75226aa02f106368735f9fb9ffe40ef2ef9c25e88"
+        }
+      ]
     },
     {
       "cve": "CVE-2013-0074",
@@ -26543,6 +26641,33 @@
           "sha256": "ac81b5111e421500f16148cd780af3850fb09d259d9fad4b0e0eb316028559ec"
         }
       ]
+    }
+  ],
+  "publication_continuation_overlays": [
+    {
+      "base": "11814dc4cb1556496fa97fd120411073de96d2f8",
+      "qualified_ids": [
+        "CVE-2012-4792",
+        "CVE-2012-3152",
+        "CVE-2012-5076",
+        "CVE-2012-4969",
+        "CVE-2012-4681",
+        "CVE-2012-1723",
+        "CVE-2012-1889",
+        "CVE-2012-0507",
+        "CVE-2012-1823",
+        "CVE-2012-0158",
+        "CVE-2012-0754",
+        "CVE-2012-0391",
+        "CVE-2011-2462",
+        "CVE-2011-3544",
+        "CVE-2011-2005",
+        "CVE-2011-1823"
+      ],
+      "held_ids": [
+        "CVE-2012-1535"
+      ],
+      "reading_counts_unchanged": true
     }
   ]
 }

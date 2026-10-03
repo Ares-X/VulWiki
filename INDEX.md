@@ -2,12 +2,12 @@
 
 # 产品索引
 
-收录 5663 个主入口（另保留 5757 份来源文档）；不代表独立漏洞数或已验证数量。隔离/无效记录和结构错误不进入本索引。
+收录 5677 个主入口（另保留 5771 份来源文档）；不代表独立漏洞数或已验证数量。隔离/无效记录和结构错误不进入本索引。
 
 - [360（5 篇）](INDEX/360.md)
 - [AI应用（86 篇）](INDEX/AI%E5%BA%94%E7%94%A8.md)
 - [Amazon（7 篇）](INDEX/Amazon.md)
-- [Android（12 篇）](INDEX/Android.md)
+- [Android（13 篇）](INDEX/Android.md)
 - [Apache（1 篇）](INDEX/Apache.md)
 - [Apple XNU内核（2 篇）](INDEX/Apple%20XNU%E5%86%85%E6%A0%B8.md)
 - [Apple iOS（7 篇）](INDEX/Apple%20iOS.md)
@@ -46,11 +46,11 @@
 - [TG8（1 篇）](INDEX/TG8.md)
 - [TP-Link（3 篇）](INDEX/TP-Link.md)
 - [V8引擎（1 篇）](INDEX/V8%E5%BC%95%E6%93%8E.md)
-- [Windows（103 篇）](INDEX/Windows.md)
+- [Windows（104 篇）](INDEX/Windows.md)
 - [XZ Utils（1 篇）](INDEX/XZ%20Utils.md)
 - [iOS（1 篇）](INDEX/iOS.md)
 - [macOS（1 篇）](INDEX/macOS.md)
-- [中间件（530 篇）](INDEX/%E4%B8%AD%E9%97%B4%E4%BB%B6.md)
+- [中间件（531 篇）](INDEX/%E4%B8%AD%E9%97%B4%E4%BB%B6.md)
 - [云平台（139 篇）](INDEX/%E4%BA%91%E5%B9%B3%E5%8F%B0.md)
 - [从 allow_active 到 root 的本地提权（1 篇）](INDEX/%E4%BB%8E%20allow_active%20%E5%88%B0%20root%20%E7%9A%84%E6%9C%AC%E5%9C%B0%E6%8F%90%E6%9D%83.md)
 - [信诺瑞得（1 篇）](INDEX/%E4%BF%A1%E8%AF%BA%E7%91%9E%E5%BE%97.md)
@@ -70,7 +70,7 @@
 - [昂捷（1 篇）](INDEX/%E6%98%82%E6%8D%B7.md)
 - [智能设备（119 篇）](INDEX/%E6%99%BA%E8%83%BD%E8%AE%BE%E5%A4%87.md)
 - [服务器软件（195 篇）](INDEX/%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BD%AF%E4%BB%B6.md)
-- [桌面软件（223 篇）](INDEX/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6.md)
+- [桌面软件（234 篇）](INDEX/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6.md)
 - [海康威视（37 篇）](INDEX/%E6%B5%B7%E5%BA%B7%E5%A8%81%E8%A7%86.md)
 - [网络设备（413 篇）](INDEX/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87.md)
 - [运维面板（81 篇）](INDEX/%E8%BF%90%E7%BB%B4%E9%9D%A2%E6%9D%BF.md)
