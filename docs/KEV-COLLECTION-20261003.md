@@ -28,7 +28,7 @@
 
 ## 当前累计文稿
 
-累计128篇（72新增、56既有补证），涉及140个经过独立具体材料审核的候选编号。最新2024批次28提案保留27项，合成26目标（8新增18补证）/29编号；23113的特异性结果和对照证据不足，原文章保持不动。59项必要说明完成，26篇最终正文和18篇旧正文保留经过独立复核；5910/9465在同页保留独立章节、修复边界和来源，不合并漏洞实体。
+累计189篇（118新增、71既有补证），关联202个独立具体材料审核通过的编号。最新2018–2019批次48文件/49编号，20篇必要更正已完成，包括11处未实际读取CNA的错误来源断言；TVT补充进入既有自指canonical，另一旧文不变。另增最早年份13文件/13编号，JBoss0738只追加到旧主文，RDS3904前提纠正为符号可见性，Firefox3765仅以原始最小崩溃用例为准入依据，不冒称完整RCE。全部最终字节经独立复核。
 
 | 本次具体验证范围 | 处置 | 文稿 |
 |---|---|---|
@@ -160,6 +160,67 @@
 | CVE-2024-8956; CVE-2024-8957 | 新增资料 | [PTZOptics认证遗漏与NTP命令注入链（CVE-2024-8956、CVE-2024-8957）](../IOT%E5%AE%89%E5%85%A8/PTZOptics/PTZOptics%E8%AE%A4%E8%AF%81%E9%81%97%E6%BC%8F%E4%B8%8ENTP%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5%E9%93%BE%EF%BC%88CVE-2024-8956%E3%80%81CVE-2024-8957%EF%BC%89.md) |
 | CVE-2024-38475 | 新增资料 | [Apache重写歧义在SonicWall SMA中的文件读取（CVE-2024-38475）](../Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/SonicWall/Apache%E9%87%8D%E5%86%99%E6%AD%A7%E4%B9%89%E5%9C%A8SonicWall%20SMA%E4%B8%AD%E7%9A%84%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%EF%BC%88CVE-2024-38475%EF%BC%89.md) |
 | CVE-2024-37085 | 新增资料 | [ESXi按AD组名授予管理权限的公开手工路径（CVE-2024-37085）](../Web%E5%AE%89%E5%85%A8/%E4%BA%91%E5%B9%B3%E5%8F%B0/VMware/ESXi%E6%8C%89AD%E7%BB%84%E5%90%8D%E6%8E%88%E4%BA%88%E7%AE%A1%E7%90%86%E6%9D%83%E9%99%90%E7%9A%84%E5%85%AC%E5%BC%80%E6%89%8B%E5%B7%A5%E8%B7%AF%E5%BE%84%EF%BC%88CVE-2024-37085%EF%BC%89.md) |
+| CVE-2019-18988 | 新增资料 | [TeamViewer 共享 AES 密钥与注册表密码解密 CVE-2019-18988](../Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/TeamViewer/TeamViewer%20%E5%85%B1%E4%BA%AB%20AES%20%E5%AF%86%E9%92%A5%E4%B8%8E%E6%B3%A8%E5%86%8C%E8%A1%A8%E5%AF%86%E7%A0%81%E8%A7%A3%E5%AF%86%20CVE-2019-18988.md) |
+| CVE-2019-17621 | 既有主文补证 | [（CVE-2019–17621）D-Link DIR-859 rce](../IOT%E5%AE%89%E5%85%A8/D-Link/%EF%BC%88CVE-2019%E2%80%9317621%EF%BC%89D-Link%20DIR-859%20rce.md) |
+| CVE-2019-20085 | 既有主文补证 | [TVT数码科技-NVMS-1000-路径遍历漏洞](../Web%E5%AE%89%E5%85%A8/%E6%99%BA%E8%83%BD%E8%AE%BE%E5%A4%87/TVT/TVT%E6%95%B0%E7%A0%81%E7%A7%91%E6%8A%80-NVMS-1000-%E8%B7%AF%E5%BE%84%E9%81%8D%E5%8E%86%E6%BC%8F%E6%B4%9E.md) |
+| CVE-2019-10758 | 既有主文补证 | [mongo-express 远程代码执行漏洞 CVE-2019-10758](../Web%E5%AE%89%E5%85%A8/%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6/mongo/mongo-express%20%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E%20CVE-2019-10758.md) |
+| CVE-2019-4716 | 新增资料 | [IBM TM1 配置覆盖与 CAM 认证链 CVE-2019-4716](../Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/IBM%20Planning%20Analytics/IBM%20TM1%20%E9%85%8D%E7%BD%AE%E8%A6%86%E7%9B%96%E4%B8%8E%20CAM%20%E8%AE%A4%E8%AF%81%E9%93%BE%20CVE-2019-4716.md) |
+| CVE-2019-7481 | 新增资料 | [SonicWall SMA100 supportInstaller SQL 注入 CVE-2019-7481](../Web%E5%AE%89%E5%85%A8/%E5%AE%89%E5%85%A8%E8%AE%BE%E5%A4%87/SonicWall/SonicWall%20SMA100%20supportInstaller%20SQL%20%E6%B3%A8%E5%85%A5%20CVE-2019-7481.md) |
+| CVE-2019-3010 | 新增资料 | [Solaris xscreensaver 日志文件创建提权 CVE-2019-3010](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Solaris/Solaris%20xscreensaver%20%E6%97%A5%E5%BF%97%E6%96%87%E4%BB%B6%E5%88%9B%E5%BB%BA%E6%8F%90%E6%9D%83%20CVE-2019-3010.md) |
+| CVE-2019-16278 | 既有主文补证 | [（CVE-2019-16278）Nostromo httpd 命令执行](../Web%E5%AE%89%E5%85%A8/%E4%B8%AD%E9%97%B4%E4%BB%B6/Nostromo%20httpd/%EF%BC%88CVE-2019-16278%EF%BC%89Nostromo%20httpd%20%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C.md) |
+| CVE-2019-2215 | 新增资料 | [Android Binder 与 epoll 释放后使用本地提权 CVE-2019-2215](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Android/Android%20Binder%20%E4%B8%8E%20epoll%20%E9%87%8A%E6%94%BE%E5%90%8E%E4%BD%BF%E7%94%A8%E6%9C%AC%E5%9C%B0%E6%8F%90%E6%9D%83%20CVE-2019-2215.md) |
+| CVE-2019-16920 | 既有主文补证 | [（CVE-2019-16920）D-Link rce](../IOT%E5%AE%89%E5%85%A8/D-Link/%EF%BC%88CVE-2019-16920%EF%BC%89D-Link%20rce.md) |
+| CVE-2019-16057 | 新增资料 | [D-Link DNS-320 login_mgr.cgi 命令注入 CVE-2019-16057](../IOT%E5%AE%89%E5%85%A8/D-Link/D-Link%20DNS-320%20login_mgr.cgi%20%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5%20CVE-2019-16057.md) |
+| CVE-2019-15949 | 新增资料 | [Nagios XI getprofile.sh 插件执行提权链 CVE-2019-15949](../Web%E5%AE%89%E5%85%A8/%E8%BF%90%E7%BB%B4%E9%9D%A2%E6%9D%BF/Nagios%20XI/Nagios%20XI%20getprofile.sh%20%E6%8F%92%E4%BB%B6%E6%89%A7%E8%A1%8C%E6%8F%90%E6%9D%83%E9%93%BE%20CVE-2019-15949.md) |
+| CVE-2019-13608 | 新增资料 | [Citrix StoreFront 请求令牌 XML 外部实体读取 CVE-2019-13608](../Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/Citrix/Citrix%20StoreFront%20%E8%AF%B7%E6%B1%82%E4%BB%A4%E7%89%8C%20XML%20%E5%A4%96%E9%83%A8%E5%AE%9E%E4%BD%93%E8%AF%BB%E5%8F%96%20CVE-2019-13608.md) |
+| CVE-2019-15752 | 新增资料 | [Docker Desktop credential helper 路径提权 CVE-2019-15752](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Windows/Docker%20Desktop/Docker%20Desktop%20credential%20helper%20%E8%B7%AF%E5%BE%84%E6%8F%90%E6%9D%83%20CVE-2019-15752.md) |
+| CVE-2019-13272 | 新增资料 | [Linux ptrace 凭据记录错误本地提权 CVE-2019-13272](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/Linux%E6%9C%AC%E5%9C%B0%E6%8F%90%E6%9D%83%E6%BC%8F%E6%B4%9E/Linux%20ptrace%20%E5%87%AD%E6%8D%AE%E8%AE%B0%E5%BD%95%E9%94%99%E8%AF%AF%E6%9C%AC%E5%9C%B0%E6%8F%90%E6%9D%83%20CVE-2019-13272.md) |
+| CVE-2019-12989 | 新增资料 | [Citrix SD-WAN 配置包 SQL 注入 CVE-2019-12989](../Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/Citrix/Citrix%20SD-WAN%20%E9%85%8D%E7%BD%AE%E5%8C%85%20SQL%20%E6%B3%A8%E5%85%A5%20CVE-2019-12989.md) |
+| CVE-2019-12991 | 新增资料 | [Citrix SD-WAN installfile 命令注入 CVE-2019-12991](../Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/Citrix/Citrix%20SD-WAN%20installfile%20%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5%20CVE-2019-12991.md) |
+| CVE-2018-18325 | 新增资料 | [DotNetNuke 不完整修复后的DES验证分支 CVE-2018-18325](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/DotNetNuke/DotNetNuke%20%E4%B8%8D%E5%AE%8C%E6%95%B4%E4%BF%AE%E5%A4%8D%E5%90%8E%E7%9A%84DES%E9%AA%8C%E8%AF%81%E5%88%86%E6%94%AF%20CVE-2018-18325.md) |
+| CVE-2018-15811 | 新增资料 | [DotNetNuke 9.2 验证码弱DES密钥恢复 CVE-2018-15811](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/DotNetNuke/DotNetNuke%209.2%20%E9%AA%8C%E8%AF%81%E7%A0%81%E5%BC%B1DES%E5%AF%86%E9%92%A5%E6%81%A2%E5%A4%8D%20CVE-2018-15811.md) |
+| CVE-2019-7256 | 新增资料 | [Linear eMerge E3 card_scan.php 命令注入 CVE-2019-7256](../IOT%E5%AE%89%E5%85%A8/Linear%20eMerge/Linear%20eMerge%20E3%20card_scan.php%20%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5%20CVE-2019-7256.md) |
+| CVE-2019-5786 | 既有主文补证 | [（CVE-2019-5786）Chrome 远程代码执行漏洞](../Web%E5%AE%89%E5%85%A8/%E5%AE%89%E5%85%A8%E8%AE%BE%E5%A4%87/Google/%EF%BC%88CVE-2019-5786%EF%BC%89Chrome%20%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md) |
+| CVE-2019-10149 | 新增资料 | [Exim deliver_message 本地SMTP提权验证 CVE-2019-10149](../Web%E5%AE%89%E5%85%A8/%E9%82%AE%E4%BB%B6%E7%B3%BB%E7%BB%9F/Exim/Exim%20deliver_message%20%E6%9C%AC%E5%9C%B0SMTP%E6%8F%90%E6%9D%83%E9%AA%8C%E8%AF%81%20CVE-2019-10149.md) |
+| CVE-2018-13382 | 既有主文补证 | [（CVE-2018-13382）Fortinet FortiOS magic后门](../Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/Fortinet/%EF%BC%88CVE-2018-13382%EF%BC%89Fortinet%20FortiOS%20magic%E5%90%8E%E9%97%A8.md) |
+| CVE-2019-11580 | 既有主文补证 | [CVE-2019-11580 Atlassian Crowd RCE](../Web%E5%AE%89%E5%85%A8/%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6/Atlassian%20Crowd/CVE-2019-11580%20Atlassian%20Crowd%20RCE.md) |
+| CVE-2019-9875 | 新增资料 | [Sitecore 已认证 AntiCSRF 反序列化 CVE-2019-9875](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/Sitecore/Sitecore%20%E5%B7%B2%E8%AE%A4%E8%AF%81%20AntiCSRF%20%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%20CVE-2019-9875.md) |
+| CVE-2019-9874 | 既有主文补证 | [Sitecore几年前的洞CVE-2019-9874：反序列化实现的未经认证的 RCE（CVSS 9.8）](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/Sitecore/Sitecore%E5%87%A0%E5%B9%B4%E5%89%8D%E7%9A%84%E6%B4%9ECVE-2019-9874%EF%BC%9A%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E5%AE%9E%E7%8E%B0%E7%9A%84%E6%9C%AA%E7%BB%8F%E8%AE%A4%E8%AF%81%E7%9A%84%20RCE%EF%BC%88CVSS%209.8%EF%BC%89.md) |
+| CVE-2019-9621; CVE-2019-9670 | 既有主文补证 | [（CVE-2019-9621）（CVE-2019-9670）Zimbra 远程代码执行漏洞](../Web%E5%AE%89%E5%85%A8/%E9%82%AE%E4%BB%B6%E7%B3%BB%E7%BB%9F/Zimbra/%EF%BC%88CVE-2019-9621%EF%BC%89%EF%BC%88CVE-2019-9670%EF%BC%89Zimbra%20%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md) |
+| CVE-2018-7841 | 新增资料 | [U.motion Builder SQLite调用链中的命令注入 CVE-2018-7841](../Web%E5%AE%89%E5%85%A8/%E6%99%BA%E8%83%BD%E8%AE%BE%E5%A4%87/Schneider%20Electric/U.motion%20Builder%20SQLite%E8%B0%83%E7%94%A8%E9%93%BE%E4%B8%AD%E7%9A%84%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5%20CVE-2018-7841.md) |
+| CVE-2019-0708 | 既有主文补证 | [（CVE-2019-0708） Windows 远程溢出漏洞](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Windows/Windows%E8%BF%9C%E7%A8%8B%E6%BA%A2%E5%87%BA%E6%BC%8F%E6%B4%9E/%EF%BC%88CVE-2019-0708%EF%BC%89%20Windows%20%E8%BF%9C%E7%A8%8B%E6%BA%A2%E5%87%BA%E6%BC%8F%E6%B4%9E.md) |
+| CVE-2019-3929 | 新增资料 | [Barco与AWIND file_transfer.cgi 命令注入 CVE-2019-3929](../IOT%E5%AE%89%E5%85%A8/Barco%20AWIND/Barco%E4%B8%8EAWIND%20file_transfer.cgi%20%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5%20CVE-2019-3929.md) |
+| CVE-2019-11539 | 新增资料 | [Pulse Secure 管理诊断命令注入 CVE-2019-11539](../Web%E5%AE%89%E5%85%A8/%E5%AE%89%E5%85%A8%E8%AE%BE%E5%A4%87/Pulse%20Secure/Pulse%20Secure%20%E7%AE%A1%E7%90%86%E8%AF%8A%E6%96%AD%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5%20CVE-2019-11539.md) |
+| CVE-2019-2616 | 新增资料 | [Oracle BI Publisher 外部DTD解析验证 CVE-2019-2616](../Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/Oracle%20BI%20Publisher/Oracle%20BI%20Publisher%20%E5%A4%96%E9%83%A8DTD%E8%A7%A3%E6%9E%90%E9%AA%8C%E8%AF%81%20CVE-2019-2616.md) |
+| CVE-2019-10068 | 新增资料 | [Kentico Staging 同步参数不安全反序列化 CVE-2019-10068](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/Kentico/Kentico%20Staging%20%E5%90%8C%E6%AD%A5%E5%8F%82%E6%95%B0%E4%B8%8D%E5%AE%89%E5%85%A8%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%20CVE-2019-10068.md) |
+| CVE-2018-18809 | 新增资料 | [JasperReports reportresource 路径遍历 CVE-2018-18809](../Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/TIBCO%20JasperReports/JasperReports%20reportresource%20%E8%B7%AF%E5%BE%84%E9%81%8D%E5%8E%86%20CVE-2018-18809.md) |
+| CVE-2019-0604 | 既有主文补证 | [（CVE-2019-0604）Microsoft SharePoint 远程代码执行漏洞](../Web%E5%AE%89%E5%85%A8/%E4%BA%91%E5%B9%B3%E5%8F%B0/Microsoft%20SharePoint/%EF%BC%88CVE-2019-0604%EF%BC%89Microsoft%20SharePoint%20%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md) |
+| CVE-2019-1653 | 新增资料 | [Cisco RV320 RV325 配置导出泄露 CVE-2019-1653](../Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/Cisco/Cisco%20RV320%20RV325%20%E9%85%8D%E7%BD%AE%E5%AF%BC%E5%87%BA%E6%B3%84%E9%9C%B2%20CVE-2019-1653.md) |
+| CVE-2019-1652 | 新增资料 | [Cisco RV320 RV325 证书common_name命令注入 CVE-2019-1652](../Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/Cisco/Cisco%20RV320%20RV325%20%E8%AF%81%E4%B9%A6common_name%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5%20CVE-2019-1652.md) |
+| CVE-2018-19410 | 新增资料 | [PRTG public login 包含接口创建账户 CVE-2018-19410](../Web%E5%AE%89%E5%85%A8/%E8%BF%90%E7%BB%B4%E9%9D%A2%E6%9D%BF/PRTG/PRTG%20public%20login%20%E5%8C%85%E5%90%AB%E6%8E%A5%E5%8F%A3%E5%88%9B%E5%BB%BA%E8%B4%A6%E6%88%B7%20CVE-2018-19410.md) |
+| CVE-2018-17463 | 既有主文补证 | [Chrome 浏览器漏洞利用 (三)：CVE-2018-17463 分析与利用](../Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Chrome/Chrome%20%E6%B5%8F%E8%A7%88%E5%99%A8%E6%BC%8F%E6%B4%9E%E5%88%A9%E7%94%A8%20%28%E4%B8%89%29%EF%BC%9ACVE-2018-17463%20%E5%88%86%E6%9E%90%E4%B8%8E%E5%88%A9%E7%94%A8.md) |
+| CVE-2018-15961 | 既有主文补证 | [Adobe-ColdFusion-upload.cfm-任意文件上传漏洞-CVE-2018-15961](../Web%E5%AE%89%E5%85%A8/%E4%B8%AD%E9%97%B4%E4%BB%B6/Adobe%20ColdFusion/Adobe-ColdFusion-upload.cfm-%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E-CVE-2018-15961.md) |
+| CVE-2018-14933 | 新增资料 | [NUUO NVRmini upgrade_handle 命令注入 CVE-2018-14933](../IOT%E5%AE%89%E5%85%A8/NUUO/NUUO%20NVRmini%20upgrade_handle%20%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5%20CVE-2018-14933.md) |
+| CVE-2018-14847 | 新增资料 | [MikroTik WinBox user.dat 路径遍历 CVE-2018-14847](../IOT%E5%AE%89%E5%85%A8/MikroTik/MikroTik%20WinBox%20user.dat%20%E8%B7%AF%E5%BE%84%E9%81%8D%E5%8E%86%20CVE-2018-14847.md) |
+| CVE-2018-9276 | 新增资料 | [PRTG 通知参数PowerShell命令注入 CVE-2018-9276](../Web%E5%AE%89%E5%85%A8/%E8%BF%90%E7%BB%B4%E9%9D%A2%E6%9D%BF/PRTG/PRTG%20%E9%80%9A%E7%9F%A5%E5%8F%82%E6%95%B0PowerShell%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5%20CVE-2018-9276.md) |
+| CVE-2018-6961 | 新增资料 | [VMware SD-WAN Edge 本地诊断命令注入 CVE-2018-6961](../Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/VMware%20SD-WAN/VMware%20SD-WAN%20Edge%20%E6%9C%AC%E5%9C%B0%E8%AF%8A%E6%96%AD%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5%20CVE-2018-6961.md) |
+| CVE-2018-0296 | 新增资料 | [Cisco ASA CSCOE 会话目录遍历 CVE-2018-0296](../Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/Cisco%20ASA/Cisco%20ASA%20CSCOE%20%E4%BC%9A%E8%AF%9D%E7%9B%AE%E5%BD%95%E9%81%8D%E5%8E%86%20CVE-2018-0296.md) |
+| CVE-2018-11138 | 新增资料 | [Quest KACE agent installer 参数命令注入 CVE-2018-11138](../Web%E5%AE%89%E5%85%A8/%E8%BF%90%E7%BB%B4%E9%9D%A2%E6%9D%BF/Quest%20KACE/Quest%20KACE%20agent%20installer%20%E5%8F%82%E6%95%B0%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5%20CVE-2018-11138.md) |
+| CVE-2018-10562 | 新增资料 | [Dasan GPON 诊断dest_host命令注入 CVE-2018-10562](../IOT%E5%AE%89%E5%85%A8/Dasan%20GPON/Dasan%20GPON%20%E8%AF%8A%E6%96%ADdest_host%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5%20CVE-2018-10562.md) |
+| CVE-2018-6882 | 新增资料 | [Zimbra 附件 Content-Location 存储型脚本注入 CVE-2018-6882](../Web%E5%AE%89%E5%85%A8/%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BD%AF%E4%BB%B6/Zimbra/Zimbra%20%E9%99%84%E4%BB%B6%20Content-Location%20%E5%AD%98%E5%82%A8%E5%9E%8B%E8%84%9A%E6%9C%AC%E6%B3%A8%E5%85%A5%20CVE-2018-6882.md) |
+| CVE-2008-2992 | 新增资料 | [Adobe Reader util.printf格式字符串缓冲区溢出（CVE-2008-2992）](../Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Adobe/Adobe%20Reader%20util.printf%E6%A0%BC%E5%BC%8F%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%BC%93%E5%86%B2%E5%8C%BA%E6%BA%A2%E5%87%BA%EF%BC%88CVE-2008-2992%EF%BC%89.md) |
+| CVE-2008-4128 | 新增资料 | [Cisco IOS HTTP管理表单跨站请求伪造（CVE-2008-4128）](../Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/Cisco/Cisco%20IOS%20HTTP%E7%AE%A1%E7%90%86%E8%A1%A8%E5%8D%95%E8%B7%A8%E7%AB%99%E8%AF%B7%E6%B1%82%E4%BC%AA%E9%80%A0%EF%BC%88CVE-2008-4128%EF%BC%89.md) |
+| CVE-2009-0927 | 新增资料 | [Adobe Reader Collab.getIcon栈缓冲区溢出（CVE-2009-0927）](../Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Adobe/Adobe%20Reader%20Collab.getIcon%E6%A0%88%E7%BC%93%E5%86%B2%E5%8C%BA%E6%BA%A2%E5%87%BA%EF%BC%88CVE-2009-0927%EF%BC%89.md) |
+| CVE-2009-3459 | 新增资料 | [Adobe Reader FlateDecode预测器整数溢出（CVE-2009-3459）](../Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Adobe/Adobe%20Reader%20FlateDecode%E9%A2%84%E6%B5%8B%E5%99%A8%E6%95%B4%E6%95%B0%E6%BA%A2%E5%87%BA%EF%BC%88CVE-2009-3459%EF%BC%89.md) |
+| CVE-2009-3953 | 新增资料 | [Adobe Reader U3D网格声明数组越界（CVE-2009-3953）](../Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Adobe/Adobe%20Reader%20U3D%E7%BD%91%E6%A0%BC%E5%A3%B0%E6%98%8E%E6%95%B0%E7%BB%84%E8%B6%8A%E7%95%8C%EF%BC%88CVE-2009-3953%EF%BC%89.md) |
+| CVE-2009-3960 | 新增资料 | [Adobe BlazeDS AMFX外部实体文件读取与判据边界（CVE-2009-3960）](../Web%E5%AE%89%E5%85%A8/%E4%B8%AD%E9%97%B4%E4%BB%B6/Adobe%20ColdFusion/Adobe%20BlazeDS%20AMFX%E5%A4%96%E9%83%A8%E5%AE%9E%E4%BD%93%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E4%B8%8E%E5%88%A4%E6%8D%AE%E8%BE%B9%E7%95%8C%EF%BC%88CVE-2009-3960%EF%BC%89.md) |
+| CVE-2009-4324 | 新增资料 | [Adobe Reader Doc.media.newPlayer释放后重用（CVE-2009-4324）](../Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Adobe/Adobe%20Reader%20Doc.media.newPlayer%E9%87%8A%E6%94%BE%E5%90%8E%E9%87%8D%E7%94%A8%EF%BC%88CVE-2009-4324%EF%BC%89.md) |
+| CVE-2010-0232 | 新增资料 | [Windows KiTrap0D本地提权的原始源码与验证边界（CVE-2010-0232）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Windows/Windows%20KiTrap0D%E6%9C%AC%E5%9C%B0%E6%8F%90%E6%9D%83%E7%9A%84%E5%8E%9F%E5%A7%8B%E6%BA%90%E7%A0%81%E4%B8%8E%E9%AA%8C%E8%AF%81%E8%BE%B9%E7%95%8C%EF%BC%88CVE-2010-0232%EF%BC%89.md) |
+| CVE-2010-1871 | 新增资料 | [JBoss Seam 2 EL注入的公开请求与安全管理器前提（CVE-2010-1871）](../Web%E5%AE%89%E5%85%A8/%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6/JBoss%20Seam/JBoss%20Seam%202%20EL%E6%B3%A8%E5%85%A5%E7%9A%84%E5%85%AC%E5%BC%80%E8%AF%B7%E6%B1%82%E4%B8%8E%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86%E5%99%A8%E5%89%8D%E6%8F%90%EF%BC%88CVE-2010-1871%EF%BC%89.md) |
+| CVE-2010-3904 | 新增资料 | [Linux RDS本地提权的原始C源码与内核状态副作用（CVE-2010-3904）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/Linux%20RDS%E6%9C%AC%E5%9C%B0%E6%8F%90%E6%9D%83%E7%9A%84%E5%8E%9F%E5%A7%8BC%E6%BA%90%E7%A0%81%E4%B8%8E%E5%86%85%E6%A0%B8%E7%8A%B6%E6%80%81%E5%89%AF%E4%BD%9C%E7%94%A8%EF%BC%88CVE-2010-3904%EF%BC%89.md) |
+| CVE-2010-5330 | 新增资料 | [Ubiquiti AirOS stainfo.cgi命令注入与低权限账户前提（CVE-2010-5330）](../IOT%E5%AE%89%E5%85%A8/Ubiquiti/Ubiquiti%20AirOS%20stainfo.cgi%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5%E4%B8%8E%E4%BD%8E%E6%9D%83%E9%99%90%E8%B4%A6%E6%88%B7%E5%89%8D%E6%8F%90%EF%BC%88CVE-2010-5330%EF%BC%89.md) |
+| CVE-2010-0738 | 既有主文补证 | [（CVE-2010-0738）JBoss JMX控制台安全验证绕过漏洞](../Web%E5%AE%89%E5%85%A8/%E4%B8%AD%E9%97%B4%E4%BB%B6/JBoss/%EF%BC%88CVE-2010-0738%EF%BC%89JBoss%20JMX%E6%8E%A7%E5%88%B6%E5%8F%B0%E5%AE%89%E5%85%A8%E9%AA%8C%E8%AF%81%E7%BB%95%E8%BF%87%E6%BC%8F%E6%B4%9E.md) |
+| CVE-2010-3765 | 新增资料 | [Firefox DOM插入交错最小崩溃用例（CVE-2010-3765）](../Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Mozilla/Firefox%20DOM%E6%8F%92%E5%85%A5%E4%BA%A4%E9%94%99%E6%9C%80%E5%B0%8F%E5%B4%A9%E6%BA%83%E7%94%A8%E4%BE%8B%EF%BC%88CVE-2010-3765%EF%BC%89.md) |
 
 ## 维护和验证
 
@@ -203,10 +264,16 @@ Edimax1316尚缺已审下游载荷和独立验证结果；UniFi原研究未清�
 
 处置为111纳入Draft分支、148待独立复核/必要说明或作者补齐、38已有充分覆盖、326有界暂缓、616暂停、488实质待办，共1727。已识别主要技术材料或相关正文未读完的记录继续保持待办；暂缓不代表候选全部审结，也不代表全网没有PoC。
 
-当前发布为128篇（72新增、56旧文补充），关联140个材料编号。所有年份均已有审阅范围，但分配不计作阅读，完整任务尚未完成。后续新增阅读与作者稿待下一次逐ID归并。材料关联编号不一定等于新增主CVE导航；S2-007、ProjectSend11680及Ivanti8963/8190原有元数据边界继续保留。
+当前发布为189篇（118新增、71旧文补充），关联202个材料编号。所有年份均已有审阅范围，但分配不计作阅读，完整任务尚未完成。后续新增阅读与作者稿待下一次逐ID归并。材料关联编号不一定等于新增主CVE导航；S2-007、ProjectSend11680及Ivanti8963/8190原有元数据边界继续保留。
 
 2020年146项任务在此后亦因平台风险中止且具体触发项未知，保守暂停全部范围，17份作者候审稿未发布。当前暂停范围由748变为894；此前已读事实不删除，也不等于每个编号单独被拒绝。
 
 本轮出版叠加后的当前处置：140已纳入Draft分支、111待审/必要补齐、38已有充分覆盖、327有界暂缓、894暂停、217实质待办，共1727。720全文阅读等数字保持冻结检查点，不从文章数量自动推增；每篇新增材料的独立审阅记录另列。
 
 最新128篇批次验收：71项Python测试、22项Marked测试通过；构建/重建一致，0errors、0fatal、0newissues，5064项历史警告，baseline未改。128篇Pandoc静态渲染中183块围栏代码可复制文本保持原值。Marked4.3.0扫描5781篇，178提示全部与master同路径、规则、原值和次数一致，0新增、0结构阻断。该机器扫描不等于全库全文审阅。新增批次另核对17份固定MSF/Nuclei源码与上游Git blob，全部一致。
+
+后续2013–2015独立审阅任务也因平台风险中止且具体触发项未知，保守暂停整个118项范围，包含早已暂停的41项，独立暂停总数由894变为971。该年份候审提案均未发表，未继续读取或转交受阻材料；原阅读事实保留，不声称118个编号各自被判定禁止。
+
+最新出版叠加后处置为：202 Draft分支纳入、12候审/必要补齐、38已有充分覆盖、316有界暂缓、971暂停、188实质待办，共1727。720全文等数字仍是此前冻结阅读检查点，新增阅读待独立逐ID归并；不从出版数量推增阅读。
+
+最新189篇批次验收：71项Python测试、22项Marked测试通过；构建/重建一致，0errors、0fatal、0newissues，5064项历史警告，baseline未改。189篇静态渲染301个真实围栏代码块的可复制文字保持原值；使用Marked4.3.0词法结果和Pandoc --preserve-tabs交叉核对，不用正则误判围栏，也不展开原有制表符。15篇追加的原始字节和完整Markdown AST前缀相同，新补充均从代码块外的顶层标题开始。5827篇机器扫描的178提示全部继承master，0新增、0结构阻断。未把机器检查冒充全库全文审阅。

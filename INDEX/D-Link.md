@@ -69,6 +69,10 @@
 
 - [（CVE-2026-100740）D-Link DIR-895L L2TP Host Name AVP越界写漏洞](../IOT%E5%AE%89%E5%85%A8/D-Link/%EF%BC%88CVE-2026-100740%EF%BC%89D-Link%20DIR-895L%20L2TP%20Host%20Name%20AVP%E8%B6%8A%E7%95%8C%E5%86%99%E6%BC%8F%E6%B4%9E.md) [analysis; not-reproduced; needs-review]
 
+## D-Link DNS-320
+
+- [D-Link DNS-320 login_mgr.cgi 命令注入（CVE-2019-16057）](../IOT%E5%AE%89%E5%85%A8/D-Link/D-Link%20DNS-320%20login_mgr.cgi%20%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5%20CVE-2019-16057.md) [vulnerability; not-reproduced; needs-review]
+
 ## D-Link下一代防火墙声称，具体型号未知
 
 - [D-Link下一代防火墙sslvpn_client存在远程命令执行漏洞](../IOT%E5%AE%89%E5%85%A8/D-Link/D-Link%E4%B8%8B%E4%B8%80%E4%BB%A3%E9%98%B2%E7%81%AB%E5%A2%99sslvpn_client%E5%AD%98%E5%9C%A8%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md) [vulnerability; not-reproduced; needs-review]

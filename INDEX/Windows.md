@@ -12,6 +12,10 @@
 
 - [微软发现可以绕过安全审查，开启Mac电脑大门的恶意漏洞](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Windows/%E5%BE%AE%E8%BD%AF%E5%8F%91%E7%8E%B0%E5%8F%AF%E4%BB%A5%E7%BB%95%E8%BF%87%E5%AE%89%E5%85%A8%E5%AE%A1%E6%9F%A5%EF%BC%8C%E5%BC%80%E5%90%AFMac%E7%94%B5%E8%84%91%E5%A4%A7%E9%97%A8%E7%9A%84%E6%81%B6%E6%84%8F%E6%BC%8F%E6%B4%9E.md) [advisory; not-reproduced; needs-review]
 
+## Docker Desktop Community Edition for Windows
+
+- [Docker Desktop credential helper 路径提权（CVE-2019-15752）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Windows/Docker%20Desktop/Docker%20Desktop%20credential%20helper%20%E8%B7%AF%E5%BE%84%E6%8F%90%E6%9D%83%20CVE-2019-15752.md) [vulnerability; not-reproduced; needs-review]
+
 ## Docker Engine docker cp
 
 - [符号连接替换漏洞复现](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Windows/%E7%AC%A6%E5%8F%B7%E8%BF%9E%E6%8E%A5%E6%9B%BF%E6%8D%A2%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0.md) [unknown; not-reproduced; needs-review]
@@ -59,6 +63,10 @@
 ## Microsoft Windows win32kfull.sys / GetProcessHandleFromHwnd
 
 - [Windows GetProcessHandleFromHwnd 保护进程边界与 PPLwindow 本地演示](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Windows/Windows%E6%9C%AC%E5%9C%B0%E6%8F%90%E6%9D%83%E6%BC%8F%E6%B4%9E/GetProcessHandleFromHwnd%E4%BF%9D%E6%8A%A4%E8%BF%9B%E7%A8%8B%E8%BE%B9%E7%95%8C%E4%B8%8EPPLwindow%E5%88%86%E6%9E%90.md) [analysis; not-reproduced; needs-review]
+
+## Microsoft Windows x86 / NTVDM / KiTrap0D
+
+- [Windows KiTrap0D 本地提权的原始源码与验证边界（CVE-2010-0232）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Windows/Windows%20KiTrap0D%E6%9C%AC%E5%9C%B0%E6%8F%90%E6%9D%83%E7%9A%84%E5%8E%9F%E5%A7%8B%E6%BA%90%E7%A0%81%E4%B8%8E%E9%AA%8C%E8%AF%81%E8%BE%B9%E7%95%8C%EF%BC%88CVE-2010-0232%EF%BC%89.md) [analysis; source-claimed; active]
 
 ## Microsoft Windows/Office/SharePoint/.NET/Defender for IoT及Intel或Arm
 

@@ -5677,13 +5677,2396 @@
           "reason": "Disconnect alone does not close valid-value control and specific outcome gap; existing article unchanged."
         }
       ]
+    },
+    {
+      "reviewed_utc": "2026-10-03T14:53:16.000183+00:00",
+      "review_base": "97afb504aad67bb5af39b62028299b6bbf015f5f",
+      "retained_files": 48,
+      "new_files": 34,
+      "supplemented_files": 14,
+      "qualified_candidate_ids": 49,
+      "final_byte_review_passed": true,
+      "correction_files": 20,
+      "unchanged_files": 28,
+      "fixed_source_blob_checks": 58,
+      "fixed_source_blob_matches": 58,
+      "rows": [
+        {
+          "path": "Web安全/桌面软件/TeamViewer/TeamViewer 共享 AES 密钥与注册表密码解密 CVE-2019-18988.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2019-18988"
+          ],
+          "specific_trigger": "MSF lines 51-83 and 113-127; article 32-36",
+          "outcome": "Decrypted UTF-16LE fields, module lines 85-109; exact AES constants independently match",
+          "independent_scope_and_limits": "Entire module read; primary blog technical text and Python independently opened. Registry access prerequisite and optional window method distinguished. No later login/system outcome claimed.",
+          "dependency_boundary": "Only actually listed/read core sources are certified; generic framework/runtime and optional stages are not claimed fully read.",
+          "fixed_sources": [
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/post/windows/gather/credentials/teamviewer_passwords.rb",
+              "sha256": "59692197a3a5d6f018fd89e92359bf6e581e24322fd17e6ab295192d5a93b2c3",
+              "git_blob_sha1": "eea9e9d709d9c149ce94900bab72507c8b59401c",
+              "fixed_git_blob_verified": true
+            }
+          ],
+          "author_source_receipts_with_explicit_depth": [
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/post/windows/gather/credentials/teamviewer_passwords.rb",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "non-wiki-technical-source",
+              "sha256": "59692197a3a5d6f018fd89e92359bf6e581e24322fd17e6ab295192d5a93b2c3"
+            },
+            {
+              "url": "https://github.com/CVEProject/cvelistV5/blob/76db341685347c82b67f7ce70b1a286e94270b43/cves/2019/18xxx/CVE-2019-18988.json",
+              "reading_depth": "bounded-advisory-search",
+              "provenance": "CNA-record-description-and-references-only",
+              "sha256": "5e886af741bb4dafc5c8a184fc6e4429e36b5bc98f60f9bae9529a89d42cf84d"
+            },
+            {
+              "url": "https://whynotsecurity.com/blog/teamviewer/",
+              "reading_depth": "selected-technical-sections-only",
+              "provenance": "primary-research-web-text",
+              "sha256": "ac91b900005767226fa84c836c8d350bf88b74a29a3f529036c602479ca07ec4"
+            }
+          ],
+          "required_corrections_applied": [],
+          "current_sha256": "6d6989b21521d64d3a3d76b93576d251b92224181c7c18acacc6d118c83d5d68",
+          "runtime_executed": false
+        },
+        {
+          "path": "IOT安全/D-Link/（CVE-2019–17621）D-Link DIR-859 rce.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2019-17621"
+          ],
+          "specific_trigger": "MSF lines 54-67; article 316-320",
+          "outcome": "MSF default Meterpreter session and executable staging lines 32-48,72-74; historical telnetd input/output intent lines 275-307",
+          "independent_scope_and_limits": "Main-specific injection is transparent; general framework command-stager source not expanded. Historical Python defects disclosed, no repair claimed.",
+          "dependency_boundary": "Only actually listed/read core sources are certified; generic framework/runtime and optional stages are not claimed fully read.",
+          "fixed_sources": [
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/linux/upnp/dlink_dir859_subscribe_exec.rb",
+              "sha256": "a94118ec36e3b5d838d14c6c90b508b351d947392e906ef9b0722490f5256662",
+              "git_blob_sha1": "82c7b49c25dcbf94040ca64394d95d29e9456108",
+              "fixed_git_blob_verified": true
+            }
+          ],
+          "author_source_receipts_with_explicit_depth": [
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/linux/upnp/dlink_dir859_subscribe_exec.rb",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "non-wiki-technical-source",
+              "sha256": "a94118ec36e3b5d838d14c6c90b508b351d947392e906ef9b0722490f5256662"
+            },
+            {
+              "url": "https://github.com/CVEProject/cvelistV5/blob/76db341685347c82b67f7ce70b1a286e94270b43/cves/2019/17xxx/CVE-2019-17621.json",
+              "reading_depth": "bounded-advisory-search",
+              "provenance": "CNA-record-description-and-references-only",
+              "sha256": "cb8c8c5a73cb20fc052d8c57853ce9520d6e2f7cd780788f457eb5a4e20e176c"
+            }
+          ],
+          "required_corrections_applied": [],
+          "current_sha256": "22f6851110ad9b83ae3e1c0871fe21c00ed139a51cc9d0f1d417bc8fe6f6ae4d",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/智能设备/TVT/TVT数码科技-NVMS-1000-路径遍历漏洞.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2019-20085"
+          ],
+          "specific_trigger": "nuclei lines 33-36; article lines 88-92",
+          "outcome": "nuclei lines 38-47: HTTP 200 and INI section regex",
+          "independent_scope_and_limits": "Two existing candidate paths require canonical relationship verification before selecting append target; article base preserved separately.",
+          "dependency_boundary": "Only actually listed/read core sources are certified; generic framework/runtime and optional stages are not claimed fully read.",
+          "fixed_sources": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2019/CVE-2019-20085.yaml",
+              "sha256": "7f0bd219cdf1f79f862beeb5692a0b8e3d3d7c9edb461f958160d369935a3b1f",
+              "git_blob_sha1": "ffca378738b5825d4064a9b478213ac5d7cd0367",
+              "fixed_git_blob_verified": true
+            }
+          ],
+          "author_source_receipts_with_explicit_depth": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2019/CVE-2019-20085.yaml",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "non-wiki-technical-source",
+              "sha256": "7f0bd219cdf1f79f862beeb5692a0b8e3d3d7c9edb461f958160d369935a3b1f"
+            },
+            {
+              "url": "https://github.com/CVEProject/cvelistV5/blob/76db341685347c82b67f7ce70b1a286e94270b43/cves/2019/20xxx/CVE-2019-20085.json",
+              "reading_depth": "bounded-advisory-search",
+              "provenance": "CNA-record-description-and-references-only",
+              "sha256": "8f53b9cb7bc74c1e66719fa9d14458875290e937912a2cf9f929c41d8620a6d6"
+            }
+          ],
+          "required_corrections_applied": [
+            "Resolve canonical destination before integration: the other existing TVT article explicitly self-declares canonical. Prefer appending this evidence there, or explicitly justify/manage the same-entity relation; do not publish this frozen append as if no canonical already existed."
+          ],
+          "current_sha256": "60c60f1b5d30f756c9ffe3d9fb1a28d096db0990650686e0a8e3c19006eee11f",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/开发框架/mongo/mongo-express 远程代码执行漏洞 CVE-2019-10758.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2019-10758"
+          ],
+          "specific_trigger": "nuclei lines 39-44; article lines 95-99",
+          "outcome": "nuclei lines 46-50: correlated HTTP OAST interaction",
+          "independent_scope_and_limits": "Default Basic credentials preserved; authentication is not bypassed; curl and outbound access required.",
+          "dependency_boundary": "Only actually listed/read core sources are certified; generic framework/runtime and optional stages are not claimed fully read.",
+          "fixed_sources": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2019/CVE-2019-10758.yaml",
+              "sha256": "64e82cc922c2716bf072ce74f3c17d97ae6015856a61fd7f5817baf07fcd56fa",
+              "git_blob_sha1": "e21c61ce51ef6d60a62404280dd0ff6b367ebf41",
+              "fixed_git_blob_verified": true
+            }
+          ],
+          "author_source_receipts_with_explicit_depth": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2019/CVE-2019-10758.yaml",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "non-wiki-technical-source",
+              "sha256": "64e82cc922c2716bf072ce74f3c17d97ae6015856a61fd7f5817baf07fcd56fa"
+            },
+            {
+              "url": "https://github.com/CVEProject/cvelistV5/blob/76db341685347c82b67f7ce70b1a286e94270b43/cves/2019/10xxx/CVE-2019-10758.json",
+              "reading_depth": "bounded-advisory-search",
+              "provenance": "CNA-record-description-and-references-only",
+              "sha256": "77244a0ec2ef685ebfef3a2ea1c50641f8abd73b555f892c082fc71cf5e58ce5"
+            }
+          ],
+          "required_corrections_applied": [],
+          "current_sha256": "c7b660cb71180fa0a0f61002ccf4c29c305f8cf80be5bda0513dfe880f1ba46c",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/商业软件/IBM Planning Analytics/IBM TM1 配置覆盖与 CAM 认证链 CVE-2019-4716.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2019-4716"
+          ],
+          "specific_trigger": "MSF lines 308-339,342-389,539-643; article 32-41",
+          "outcome": "CAM authentication object and Process execution chain; successful source test environments at MSF 31-33",
+          "independent_scope_and_limits": "All 652 module lines read. Version-only Nuclei excluded. Process objects, CAM configuration and failed cleanup disclosed. No assertion that final log independently proves execution.",
+          "dependency_boundary": "Only actually listed/read core sources are certified; generic framework/runtime and optional stages are not claimed fully read.",
+          "fixed_sources": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2019/CVE-2019-4716.yaml",
+              "sha256": "46c0b2aa7601d4915d6c9bfa58e9029e3dc1fae8eb8d26629f46905db612030b",
+              "git_blob_sha1": "c0833f26768d0b615503c297de70eb60ae1661a3",
+              "fixed_git_blob_verified": true
+            },
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/multi/misc/ibm_tm1_unauth_rce.rb",
+              "sha256": "8bc931e47738294fdd60b18e9f213a9d04f0333bd9f3740af8da7696cca58efb",
+              "git_blob_sha1": "2dbd33e187ede17f59b5e21b0456dde178d435ba",
+              "fixed_git_blob_verified": true
+            }
+          ],
+          "author_source_receipts_with_explicit_depth": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2019/CVE-2019-4716.yaml",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "non-wiki-technical-source",
+              "sha256": "46c0b2aa7601d4915d6c9bfa58e9029e3dc1fae8eb8d26629f46905db612030b"
+            },
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/multi/misc/ibm_tm1_unauth_rce.rb",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "non-wiki-technical-source",
+              "sha256": "8bc931e47738294fdd60b18e9f213a9d04f0333bd9f3740af8da7696cca58efb"
+            },
+            {
+              "url": "https://github.com/CVEProject/cvelistV5/blob/76db341685347c82b67f7ce70b1a286e94270b43/cves/2019/4xxx/CVE-2019-4716.json",
+              "reading_depth": "bounded-advisory-search",
+              "provenance": "CNA-record-description-and-references-only",
+              "sha256": "45f31633d9e4b4e4a43d4d7eb3be583fec45dc76f8f35d2490beeba947fdc19a"
+            }
+          ],
+          "required_corrections_applied": [],
+          "current_sha256": "b081d43ad446cbdad4b7cc769077a31e1db36ee23708717bed12dfdfc0049d60",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/安全设备/SonicWall/SonicWall SMA100 supportInstaller SQL 注入 CVE-2019-7481.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2019-7481"
+          ],
+          "specific_trigger": "nuclei lines 35-41; article lines 32-40",
+          "outcome": "nuclei lines 43-47: arithmetic result 4220397236",
+          "independent_scope_and_limits": "Quoted HTTP block exactly preserves source values; multiplication independently checked.",
+          "dependency_boundary": "Only actually listed/read core sources are certified; generic framework/runtime and optional stages are not claimed fully read.",
+          "fixed_sources": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2019/CVE-2019-7481.yaml",
+              "sha256": "927fef33d1f6336296d690c214798792f5e4903af03e1ab5782494b7ff466e4e",
+              "git_blob_sha1": "cede3205a59dfcc55e26b605494595a0d70d428b",
+              "fixed_git_blob_verified": true
+            }
+          ],
+          "author_source_receipts_with_explicit_depth": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2019/CVE-2019-7481.yaml",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "non-wiki-technical-source",
+              "sha256": "927fef33d1f6336296d690c214798792f5e4903af03e1ab5782494b7ff466e4e"
+            },
+            {
+              "url": "https://github.com/CVEProject/cvelistV5/blob/76db341685347c82b67f7ce70b1a286e94270b43/cves/2019/7xxx/CVE-2019-7481.json",
+              "reading_depth": "bounded-advisory-search",
+              "provenance": "CNA-record-description-and-references-only",
+              "sha256": "f8829b85f71a3e643ac3ac53eb523dcb3f4bd20ba103cb5bbe6eb08c67378a67"
+            }
+          ],
+          "required_corrections_applied": [],
+          "current_sha256": "b417aafc3e37491a08873bda5c46c9bb91d4daf6dcdc5f239428ec78d3b2e223",
+          "runtime_executed": false
+        },
+        {
+          "path": "系统安全/Solaris/Solaris xscreensaver 日志文件创建提权 CVE-2019-3010.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2019-3010"
+          ],
+          "specific_trigger": "MSF lines 167-177,199-227; article 26-40",
+          "outcome": "Writable secure-directory file check 186-188 and root constructor; source successful tests 35-38",
+          "independent_scope_and_limits": "Complete embedded C and build command read. No libraries compiled or executed.",
+          "dependency_boundary": "Only actually listed/read core sources are certified; generic framework/runtime and optional stages are not claimed fully read.",
+          "fixed_sources": [
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/solaris/local/xscreensaver_log_priv_esc.rb",
+              "sha256": "2566d55db94a048e75f28fd5445c77dc6dd27250365e6b276b756bd45ac2b4fb",
+              "git_blob_sha1": "17933cb067c8a296c34e00b076aa384a2993bb7d",
+              "fixed_git_blob_verified": true
+            }
+          ],
+          "author_source_receipts_with_explicit_depth": [
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/solaris/local/xscreensaver_log_priv_esc.rb",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "non-wiki-technical-source",
+              "sha256": "2566d55db94a048e75f28fd5445c77dc6dd27250365e6b276b756bd45ac2b4fb"
+            },
+            {
+              "url": "https://github.com/CVEProject/cvelistV5/blob/76db341685347c82b67f7ce70b1a286e94270b43/cves/2019/3xxx/CVE-2019-3010.json",
+              "reading_depth": "bounded-advisory-search",
+              "provenance": "CNA-record-description-and-references-only",
+              "sha256": "44311d764355e92b2430db00412b4bccb85b9acdf0d7d5d3310ca6a0c8a1b0b4"
+            }
+          ],
+          "required_corrections_applied": [],
+          "current_sha256": "242813b6e589eb32e75fc679d1e9f9d8edf96226a2cf995b668aa5b006c43380",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/中间件/Nostromo httpd/（CVE-2019-16278）Nostromo httpd 命令执行.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2019-16278"
+          ],
+          "specific_trigger": "nuclei lines 35-40; article line 67",
+          "outcome": "nuclei lines 42-45: passwd root record; existing article lines 55-62 source-recorded command output",
+          "independent_scope_and_limits": "Historical inappropriate example address and recommendation to replace it remain unmodified; append does not authorize or perform redaction.",
+          "dependency_boundary": "Only actually listed/read core sources are certified; generic framework/runtime and optional stages are not claimed fully read.",
+          "fixed_sources": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2019/CVE-2019-16278.yaml",
+              "sha256": "5593cdf536ad29128cac8ce2ed3a55d5114cbf3d18e88eed00b7cf2e44701dcb",
+              "git_blob_sha1": "8a1cddb36c4e1493110395178b55656451af7135",
+              "fixed_git_blob_verified": true
+            }
+          ],
+          "author_source_receipts_with_explicit_depth": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2019/CVE-2019-16278.yaml",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "non-wiki-technical-source",
+              "sha256": "5593cdf536ad29128cac8ce2ed3a55d5114cbf3d18e88eed00b7cf2e44701dcb"
+            },
+            {
+              "url": "https://github.com/CVEProject/cvelistV5/blob/76db341685347c82b67f7ce70b1a286e94270b43/cves/2019/16xxx/CVE-2019-16278.json",
+              "reading_depth": "bounded-advisory-search",
+              "provenance": "CNA-record-description-and-references-only",
+              "sha256": "2f62f26455359def56e911d5afcc8bf0993090f7f869a03b0711242b3ab2c98b"
+            }
+          ],
+          "required_corrections_applied": [],
+          "current_sha256": "34eb24df5e50bd5244661525208598430d76ae62771fe3cd6881771ac44588cb",
+          "runtime_executed": false
+        },
+        {
+          "path": "系统安全/Android/Android Binder 与 epoll 释放后使用本地提权 CVE-2019-2215.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2019-2215"
+          ],
+          "specific_trigger": "C core lines 70-174 and 229-232; article 27-31",
+          "outcome": "Kernel read/write and credential updates 243-272; getuid check 274-277",
+          "independent_scope_and_limits": "All 379 C lines and 91 wrapper lines read. Source changes SELinux, capabilities, seccomp, namespaces. 2023 Binder candidate body not reopened; only existing candidate metadata inspected.",
+          "dependency_boundary": "Only actually listed/read core sources are certified; generic framework/runtime and optional stages are not claimed fully read.",
+          "fixed_sources": [
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/android/local/binder_uaf.rb",
+              "sha256": "26665d64f2f8151ff31d6ce14e5569401fc990e0fda007809682088ca8a10a79",
+              "git_blob_sha1": "78c080d48d41add5bffd988a42c427eca1e84aa6",
+              "fixed_git_blob_verified": true
+            },
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/external/source/exploits/CVE-2019-2215/poc.c",
+              "sha256": "f5ed764e1681e78cb19a333dda430392a731f8e6a616788e1d1b7059381f3f83",
+              "git_blob_sha1": "2ff61f052c1389749678b730ee6ac3503610621d",
+              "fixed_git_blob_verified": true
+            }
+          ],
+          "author_source_receipts_with_explicit_depth": [
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/android/local/binder_uaf.rb",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "non-wiki-technical-source",
+              "sha256": "26665d64f2f8151ff31d6ce14e5569401fc990e0fda007809682088ca8a10a79"
+            },
+            {
+              "url": "https://github.com/CVEProject/cvelistV5/blob/76db341685347c82b67f7ce70b1a286e94270b43/cves/2019/2xxx/CVE-2019-2215.json",
+              "reading_depth": "bounded-advisory-search",
+              "provenance": "CNA-record-description-and-references-only",
+              "sha256": "48b5271bc16a0019acca10ede8347fb5432291a13a74399f6591bbbf8d3d6226"
+            },
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/external/source/exploits/CVE-2019-2215/poc.c",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "fixed-upstream-helper-source",
+              "sha256": "f5ed764e1681e78cb19a333dda430392a731f8e6a616788e1d1b7059381f3f83"
+            }
+          ],
+          "required_corrections_applied": [],
+          "current_sha256": "f8ffa9cfdd9960db387556fcb2013f4234fe802f94ec15cd6f07950836afc04c",
+          "runtime_executed": false
+        },
+        {
+          "path": "IOT安全/D-Link/（CVE-2019-16920）D-Link rce.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2019-16920"
+          ],
+          "specific_trigger": "nuclei lines 35-56; article lines 92-96",
+          "outcome": "nuclei lines 58-69: HTTP 200 and file-content regex",
+          "independent_scope_and_limits": "Windows branch is not expanded into product applicability; original public address unchanged. Historical line 36 redaction suggestion is not adopted.",
+          "dependency_boundary": "Only actually listed/read core sources are certified; generic framework/runtime and optional stages are not claimed fully read.",
+          "fixed_sources": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2019/CVE-2019-16920.yaml",
+              "sha256": "43a5ed1d2fdcabf6aa184c192b131e24f04cf6aa6825c1f0cbbdeb9e07e6dc4f",
+              "git_blob_sha1": "96230102195b583e5ba5983fc68b9d9f6adf0e48",
+              "fixed_git_blob_verified": true
+            }
+          ],
+          "author_source_receipts_with_explicit_depth": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2019/CVE-2019-16920.yaml",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "non-wiki-technical-source",
+              "sha256": "43a5ed1d2fdcabf6aa184c192b131e24f04cf6aa6825c1f0cbbdeb9e07e6dc4f"
+            },
+            {
+              "url": "https://github.com/CVEProject/cvelistV5/blob/76db341685347c82b67f7ce70b1a286e94270b43/cves/2019/16xxx/CVE-2019-16920.json",
+              "reading_depth": "bounded-advisory-search",
+              "provenance": "CNA-record-description-and-references-only",
+              "sha256": "a60c43d20afb0422c3a339d8088ad6718d34d17a6bc57455b0c663f6ad934092"
+            }
+          ],
+          "required_corrections_applied": [
+            "Appendix should explicitly mention the template's preceding do_graph_auth request (source lines 35-40), rather than describe only the injection request; preserve historical bytes."
+          ],
+          "current_sha256": "0b03c9160cbc651db91f5f62f9db62084de369c71cdd0c876dca1572933dd679",
+          "runtime_executed": false
+        },
+        {
+          "path": "IOT安全/D-Link/D-Link DNS-320 login_mgr.cgi 命令注入 CVE-2019-16057.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2019-16057"
+          ],
+          "specific_trigger": "nuclei lines 39-41; article line 30",
+          "outcome": "nuclei lines 43-48: status 200 and uid=, gid=, pwd&id",
+          "independent_scope_and_limits": "Only actually listed/read core sources are certified; generic framework/runtime and optional stages are not claimed fully read.",
+          "dependency_boundary": "Only actually listed/read core sources are certified; generic framework/runtime and optional stages are not claimed fully read.",
+          "fixed_sources": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2019/CVE-2019-16057.yaml",
+              "sha256": "8742318a75b45b98212872b37414426c75d7552352d81233c8996e577dcc400a",
+              "git_blob_sha1": "b5b74504a3996c4ed53bc4de19ecccc0a7d91d38",
+              "fixed_git_blob_verified": true
+            }
+          ],
+          "author_source_receipts_with_explicit_depth": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2019/CVE-2019-16057.yaml",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "non-wiki-technical-source",
+              "sha256": "8742318a75b45b98212872b37414426c75d7552352d81233c8996e577dcc400a"
+            },
+            {
+              "url": "https://github.com/CVEProject/cvelistV5/blob/76db341685347c82b67f7ce70b1a286e94270b43/cves/2019/16xxx/CVE-2019-16057.json",
+              "reading_depth": "bounded-advisory-search",
+              "provenance": "CNA-record-description-and-references-only",
+              "sha256": "53b27525e9b089845a0b3dc6179bae7f237f1a449cea66e71e50240afe871ce2"
+            }
+          ],
+          "required_corrections_applied": [],
+          "current_sha256": "78245a4b73a44f4c0cb3fde8218b03f0f3f252c1d6806ed5c60863c034e15ab3",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/运维面板/Nagios XI/Nagios XI getprofile.sh 插件执行提权链 CVE-2019-15949.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2019-15949"
+          ],
+          "specific_trigger": "MSF 139-199,241-259; article 30-40",
+          "outcome": "Upload marker at 183, explicit profile trigger and source test statement 41-47",
+          "independent_scope_and_limits": "Complete main read. Nagios authentication/nsp helper and generic command stager are not claimed read; accepted core is authenticated upload/trigger, with valid administrative session as prerequisite.",
+          "dependency_boundary": "Only actually listed/read core sources are certified; generic framework/runtime and optional stages are not claimed fully read.",
+          "fixed_sources": [
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/linux/http/nagios_xi_plugins_check_plugin_authenticated_rce.rb",
+              "sha256": "6f45295b23147c919eec7aed73609d1a4be1f3e14401726d490198fecf176c60",
+              "git_blob_sha1": "496237d4c241bca90b52dfba1676b8455736cf1c",
+              "fixed_git_blob_verified": true
+            }
+          ],
+          "author_source_receipts_with_explicit_depth": [
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/linux/http/nagios_xi_plugins_check_plugin_authenticated_rce.rb",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "non-wiki-technical-source",
+              "sha256": "6f45295b23147c919eec7aed73609d1a4be1f3e14401726d490198fecf176c60"
+            },
+            {
+              "url": "https://github.com/CVEProject/cvelistV5/blob/76db341685347c82b67f7ce70b1a286e94270b43/cves/2019/15xxx/CVE-2019-15949.json",
+              "reading_depth": "bounded-advisory-search",
+              "provenance": "CNA-record-description-and-references-only",
+              "sha256": "c30bebe218e2d62f80ebb51f5841f41df71a590f83a54c4f2851b982d5e4c9f7"
+            }
+          ],
+          "required_corrections_applied": [],
+          "current_sha256": "c9d42281b1c58a7a03735e164a661fcd271b137ed8ffe2ac6d820afc31e36000",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/商业软件/Citrix/Citrix StoreFront 请求令牌 XML 外部实体读取 CVE-2019-13608.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2019-13608"
+          ],
+          "specific_trigger": "nuclei lines 37-49; article line 30",
+          "outcome": "nuclei lines 51-72: correlated HTTP entity fetch plus Citrix response markers/status",
+          "independent_scope_and_limits": "External entity load only, not unproven arbitrary file extraction.",
+          "dependency_boundary": "Only actually listed/read core sources are certified; generic framework/runtime and optional stages are not claimed fully read.",
+          "fixed_sources": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2019/CVE-2019-13608.yaml",
+              "sha256": "202882c9cc597dc1e810ddc4e8a7736646c620b99c8fc736924c01f546141df2",
+              "git_blob_sha1": "3d5367294d2355e9ddc576d54ab3a951109ebd06",
+              "fixed_git_blob_verified": true
+            }
+          ],
+          "author_source_receipts_with_explicit_depth": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2019/CVE-2019-13608.yaml",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "non-wiki-technical-source",
+              "sha256": "202882c9cc597dc1e810ddc4e8a7736646c620b99c8fc736924c01f546141df2"
+            },
+            {
+              "url": "https://github.com/CVEProject/cvelistV5/blob/76db341685347c82b67f7ce70b1a286e94270b43/cves/2019/13xxx/CVE-2019-13608.json",
+              "reading_depth": "bounded-advisory-search",
+              "provenance": "CNA-record-description-and-references-only",
+              "sha256": "2bdf3317df9922f519268d4dd562ca109dc53346c6a66e3ca96a636321b8959b"
+            }
+          ],
+          "required_corrections_applied": [],
+          "current_sha256": "b2fece192906ec9d6c53bbfbcc6861de279096dd96ed19a1afe788f3c8d8d89e",
+          "runtime_executed": false
+        },
+        {
+          "path": "系统安全/Windows/Docker Desktop/Docker Desktop credential helper 路径提权 CVE-2019-15752.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2019-15752"
+          ],
+          "specific_trigger": "MSF 86-98; article 30-36",
+          "outcome": "Higher-privileged Docker invocation of exact credential helper; source description 19-23 and CNA stated triggers",
+          "independent_scope_and_limits": "Writing alone and waiting message are excluded as success evidence; engine/Desktop version distinctions preserved.",
+          "dependency_boundary": "Only actually listed/read core sources are certified; generic framework/runtime and optional stages are not claimed fully read.",
+          "fixed_sources": [
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/windows/local/docker_credential_wincred.rb",
+              "sha256": "b3acafb2a668fbe827bbb307661eee7baa66d7356c72cbb5cd0a2f184bdc60c3",
+              "git_blob_sha1": "c379577407ab86c385d12a2c0951e3c00a7b08ca",
+              "fixed_git_blob_verified": true
+            }
+          ],
+          "author_source_receipts_with_explicit_depth": [
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/windows/local/docker_credential_wincred.rb",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "non-wiki-technical-source",
+              "sha256": "b3acafb2a668fbe827bbb307661eee7baa66d7356c72cbb5cd0a2f184bdc60c3"
+            },
+            {
+              "url": "https://github.com/CVEProject/cvelistV5/blob/76db341685347c82b67f7ce70b1a286e94270b43/cves/2019/15xxx/CVE-2019-15752.json",
+              "reading_depth": "bounded-advisory-search",
+              "provenance": "CNA-record-description-and-references-only",
+              "sha256": "cd2456ccee56046c5662304f6c30527dd6d9660e1cbb654d5efbde8cfb76e0f4"
+            }
+          ],
+          "required_corrections_applied": [],
+          "current_sha256": "f73ef6a868a97467abf14254e49556394d151083b50247fe4b331b8dbb88a905",
+          "runtime_executed": false
+        },
+        {
+          "path": "系统安全/Linux/Linux本地提权漏洞/Linux ptrace 凭据记录错误本地提权 CVE-2019-13272.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2019-13272"
+          ],
+          "specific_trigger": "C core 183-299,439-490; article 27-33",
+          "outcome": "Source compile/run/id/uname transcript C 49-63; setresgid/setresuid and shell at 293-298",
+          "independent_scope_and_limits": "All 534 C lines and 134 wrapper lines read; full helper list inspected as text. 2023 Linux candidate body not reopened.",
+          "dependency_boundary": "Only actually listed/read core sources are certified; generic framework/runtime and optional stages are not claimed fully read.",
+          "fixed_sources": [
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/linux/local/ptrace_traceme_pkexec_helper.rb",
+              "sha256": "0c0df81afeba03f9073df171254362f8fbd7e631d5da94a24d6842973967d2aa",
+              "git_blob_sha1": "c959bf2e42a9121c80f4724a703dc9f1f81ccc38",
+              "fixed_git_blob_verified": true
+            },
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/data/exploits/CVE-2019-13272/poc.c",
+              "sha256": "9378409c0f800fe17f330a7124ff400ee1c1aa9e5550df7b66399e65658d2d51",
+              "git_blob_sha1": "14afaf4ffe38ff8fb6bee4a7e8a64537976e9477",
+              "fixed_git_blob_verified": true
+            }
+          ],
+          "author_source_receipts_with_explicit_depth": [
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/linux/local/ptrace_traceme_pkexec_helper.rb",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "non-wiki-technical-source",
+              "sha256": "0c0df81afeba03f9073df171254362f8fbd7e631d5da94a24d6842973967d2aa"
+            },
+            {
+              "url": "https://github.com/CVEProject/cvelistV5/blob/76db341685347c82b67f7ce70b1a286e94270b43/cves/2019/13xxx/CVE-2019-13272.json",
+              "reading_depth": "bounded-advisory-search",
+              "provenance": "CNA-record-description-and-references-only",
+              "sha256": "ab3095eae5f3004656326a94958fca73d000a482990e684009b784f63d4e3954"
+            },
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/data/exploits/CVE-2019-13272/poc.c",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "fixed-upstream-helper-source",
+              "sha256": "9378409c0f800fe17f330a7124ff400ee1c1aa9e5550df7b66399e65658d2d51"
+            }
+          ],
+          "required_corrections_applied": [],
+          "current_sha256": "8b9dc495f493bb3bc147eb9e462f7bac494ff2404c10a0820e57323a330356ce",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/网络设备/Citrix/Citrix SD-WAN 配置包 SQL 注入 CVE-2019-12989.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2019-12989"
+          ],
+          "specific_trigger": "Tenable TRA-2019-32 web lines 129-148; article line 27",
+          "outcome": "Tenable lines 149-151: authenticated dashboard after token file write",
+          "independent_scope_and_limits": "Weak Nuclei generic 400 detector is explicitly rejected as sufficient evidence.",
+          "dependency_boundary": "Only actually listed/read core sources are certified; generic framework/runtime and optional stages are not claimed fully read.",
+          "fixed_sources": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2019/CVE-2019-12989.yaml",
+              "sha256": "60d1a24ff1a0c2bcc1242eeed9adf2a0218744cb03ba46a6adbd4be115bfcffe",
+              "git_blob_sha1": "9f0a6681ae6f6d88719bd33268ab18b426fc26ea",
+              "fixed_git_blob_verified": true
+            }
+          ],
+          "author_source_receipts_with_explicit_depth": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2019/CVE-2019-12989.yaml",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "non-wiki-technical-source",
+              "sha256": "60d1a24ff1a0c2bcc1242eeed9adf2a0218744cb03ba46a6adbd4be115bfcffe"
+            },
+            {
+              "url": "https://github.com/CVEProject/cvelistV5/blob/76db341685347c82b67f7ce70b1a286e94270b43/cves/2019/12xxx/CVE-2019-12989.json",
+              "reading_depth": "bounded-advisory-search",
+              "provenance": "CNA-record-description-and-references-only",
+              "sha256": "9b20e1507fff158c12e006e6c48eec7d4984c6f43c6081ed28e39c984ae41cf8"
+            },
+            {
+              "url": "https://www.tenable.com/security/research/tra-2019-32",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "primary-research-web-text",
+              "sha256": null
+            }
+          ],
+          "required_corrections_applied": [
+            "Add the source's affected-version branches and repair nodes to this draft; these are omitted despite being available. Tenable lines 216-220 and 161-163 specify 9.x, 10.0.x before 10.0.8, 10.1.x, 10.2.x before 10.2.3."
+          ],
+          "current_sha256": "d398171923929eb2872981a190d24e23060b7b6d4de2c521a7a15a27faebda14",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/网络设备/Citrix/Citrix SD-WAN installfile 命令注入 CVE-2019-12991.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2019-12991"
+          ],
+          "specific_trigger": "Tenable TRA-2019-32 web lines 152-159; article line 27",
+          "outcome": "Tenable lines 128 and 154 describe root command execution; exact connection command at 159",
+          "independent_scope_and_limits": "Authenticated command injection kept separate from 12989 SQL/token-file bypass.",
+          "dependency_boundary": "Only actually listed/read core sources are certified; generic framework/runtime and optional stages are not claimed fully read.",
+          "fixed_sources": [],
+          "author_source_receipts_with_explicit_depth": [
+            {
+              "url": "https://github.com/CVEProject/cvelistV5/blob/76db341685347c82b67f7ce70b1a286e94270b43/cves/2019/12xxx/CVE-2019-12991.json",
+              "reading_depth": "bounded-advisory-search",
+              "provenance": "CNA-record-description-and-references-only",
+              "sha256": "b9c65168d74c7e5fc1b5a594e0e5648bedab319ab03304e1bac0774ddc9540ce"
+            },
+            {
+              "url": "https://www.tenable.com/security/research/tra-2019-32",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "primary-research-web-text",
+              "sha256": null
+            }
+          ],
+          "required_corrections_applied": [
+            "Add affected version branches from Tenable lines 216-220; distinguish them from the already listed fixed branches."
+          ],
+          "current_sha256": "a6fdce6bf793e688c83546b8bd7fc7e9e0f383127fff9b8357df394c0eead00c",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/CMS内容/DotNetNuke/DotNetNuke 不完整修复后的DES验证分支 CVE-2018-18325.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2018-18325"
+          ],
+          "specific_trigger": "Shared MSF crypto branches 543-638; article 30-38",
+          "outcome": "Ciphertext equality at 612 and candidate pruning 587-595",
+          "independent_scope_and_limits": "2018 cryptographic core only: module 16-105,113-204,412-644 read. Unrelated paused 2017 exploit branch not reviewed. Online callback and downstream RCE not certified; offline recovery gate can stand independently.",
+          "dependency_boundary": "Only actually listed/read core sources are certified; generic framework/runtime and optional stages are not claimed fully read.",
+          "fixed_sources": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2018/CVE-2018-18325.yaml",
+              "sha256": "c441bc1f2be7b623ee75dede93654bab4e3fd6236781159cf70481bf75d7dfa0",
+              "git_blob_sha1": "2f51c4e192a6e20988b45b1331685ea6db75fe62",
+              "fixed_git_blob_verified": true
+            },
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/windows/http/dnn_cookie_deserialization_rce.rb",
+              "sha256": "347dfe254398c132e54fbef038be2f1459e2cb64f5aba667f4b3292cc224d493",
+              "git_blob_sha1": "e2402f277b70717e8a9a421ea5b56142687cf8a2",
+              "fixed_git_blob_verified": true
+            }
+          ],
+          "author_source_receipts_with_explicit_depth": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2018/CVE-2018-18325.yaml",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "non-wiki-technical-source",
+              "sha256": "c441bc1f2be7b623ee75dede93654bab4e3fd6236781159cf70481bf75d7dfa0"
+            },
+            {
+              "url": "https://github.com/CVEProject/cvelistV5/blob/76db341685347c82b67f7ce70b1a286e94270b43/cves/2018/18xxx/CVE-2018-18325.json",
+              "reading_depth": "bounded-advisory-search",
+              "provenance": "CNA-record-description-and-references-only",
+              "sha256": "fbac6640a964b4ce19448cb9bf6792bd2def93ccaff802f426e453ff70ba311e"
+            },
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/windows/http/dnn_cookie_deserialization_rce.rb",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "non-wiki-technical-source",
+              "sha256": "347dfe254398c132e54fbef038be2f1459e2cb64f5aba667f4b3292cc224d493"
+            }
+          ],
+          "required_corrections_applied": [],
+          "current_sha256": "2c42cedb9249d270e7ded0d8af374cf0c2ca399ea2d2f25f3cc69834a0093911",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/CMS内容/DotNetNuke/DotNetNuke 9.2 验证码弱DES密钥恢复 CVE-2018-15811.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2018-15811"
+          ],
+          "specific_trigger": "Shared MSF key charset 139, find_key 412-480 and decrypt 486-519; article 30-38",
+          "outcome": "Original ciphertext equality at 511-513",
+          "independent_scope_and_limits": "2018 cryptographic core only; no claim full shared module or 2017 exploitation branch independently read. Exact candidate character set preserved.",
+          "dependency_boundary": "Only actually listed/read core sources are certified; generic framework/runtime and optional stages are not claimed fully read.",
+          "fixed_sources": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2018/CVE-2018-15811.yaml",
+              "sha256": "d8e82ff212899985a1cd4e8540e482e62072a5c3b661ea4f77c4829c06d877f4",
+              "git_blob_sha1": "cfc24f2e588397cdcbc7535e949107f8f47f00f5",
+              "fixed_git_blob_verified": true
+            },
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/windows/http/dnn_cookie_deserialization_rce.rb",
+              "sha256": "347dfe254398c132e54fbef038be2f1459e2cb64f5aba667f4b3292cc224d493",
+              "git_blob_sha1": "e2402f277b70717e8a9a421ea5b56142687cf8a2",
+              "fixed_git_blob_verified": true
+            }
+          ],
+          "author_source_receipts_with_explicit_depth": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2018/CVE-2018-15811.yaml",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "non-wiki-technical-source",
+              "sha256": "d8e82ff212899985a1cd4e8540e482e62072a5c3b661ea4f77c4829c06d877f4"
+            },
+            {
+              "url": "https://github.com/CVEProject/cvelistV5/blob/76db341685347c82b67f7ce70b1a286e94270b43/cves/2018/15xxx/CVE-2018-15811.json",
+              "reading_depth": "bounded-advisory-search",
+              "provenance": "CNA-record-description-and-references-only",
+              "sha256": "bebbc993110ca0a1d1c38d5a8bea09c308aa1e3c2150e0ed3c38a148dd380d12"
+            },
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/windows/http/dnn_cookie_deserialization_rce.rb",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "non-wiki-technical-source",
+              "sha256": "347dfe254398c132e54fbef038be2f1459e2cb64f5aba667f4b3292cc224d493"
+            }
+          ],
+          "required_corrections_applied": [],
+          "current_sha256": "96b8fcb4e54c017f75329cc40ce53e10635e5c27886f2fbb48d606a885e30bb6",
+          "runtime_executed": false
+        },
+        {
+          "path": "IOT安全/Linear eMerge/Linear eMerge E3 card_scan.php 命令注入 CVE-2019-7256.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2019-7256"
+          ],
+          "specific_trigger": "nuclei lines 38-48; article line 30",
+          "outcome": "nuclei lines 50-58: subsequent file response status/content",
+          "independent_scope_and_limits": "Persistent public passwd output file and missing cleanup explicitly disclosed.",
+          "dependency_boundary": "Only actually listed/read core sources are certified; generic framework/runtime and optional stages are not claimed fully read.",
+          "fixed_sources": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2019/CVE-2019-7256.yaml",
+              "sha256": "ac811992f3bc9f819c5583cf1c74ed5226bf2138f56bf54395b1900e9d678107",
+              "git_blob_sha1": "29fa904c1e4ca1bd5be25270fd1c9ba05627e02c",
+              "fixed_git_blob_verified": true
+            }
+          ],
+          "author_source_receipts_with_explicit_depth": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2019/CVE-2019-7256.yaml",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "non-wiki-technical-source",
+              "sha256": "ac811992f3bc9f819c5583cf1c74ed5226bf2138f56bf54395b1900e9d678107"
+            },
+            {
+              "url": "https://github.com/CVEProject/cvelistV5/blob/76db341685347c82b67f7ce70b1a286e94270b43/cves/2019/7xxx/CVE-2019-7256.json",
+              "reading_depth": "bounded-advisory-search",
+              "provenance": "CNA-record-description-and-references-only",
+              "sha256": "9e84c8f1751726cec2c3eb344739b387b318e221877171857fc4ecd86ec1c655"
+            }
+          ],
+          "required_corrections_applied": [],
+          "current_sha256": "1dc5c99377eea18234dc7466eaba8a9f2f014279a48de8b9e44da1e3c34269a6",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/安全设备/Google/（CVE-2019-5786）Chrome 远程代码执行漏洞.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2019-5786"
+          ],
+          "specific_trigger": "MSF 312-387 FileReader and worker; memory core 93-261; article 97-101",
+          "outcome": "Object overlap/modified fields and explicit Wasm call at 297; successful log occurs before call",
+          "independent_scope_and_limits": "All 441 module lines read including worker and parent frame. No sandbox-escape dependency is part of accepted renderer-only scope.",
+          "dependency_boundary": "Only actually listed/read core sources are certified; generic framework/runtime and optional stages are not claimed fully read.",
+          "fixed_sources": [
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/windows/browser/chrome_filereader_uaf.rb",
+              "sha256": "90fc5a554f116e784b4695a52efe2e45573be7ae23c0702fa076c4dfb57c8da2",
+              "git_blob_sha1": "531114f58fe120d0ce2908f63dc8a8667af0f451",
+              "fixed_git_blob_verified": true
+            }
+          ],
+          "author_source_receipts_with_explicit_depth": [
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/windows/browser/chrome_filereader_uaf.rb",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "non-wiki-technical-source",
+              "sha256": "90fc5a554f116e784b4695a52efe2e45573be7ae23c0702fa076c4dfb57c8da2"
+            },
+            {
+              "url": "https://github.com/CVEProject/cvelistV5/blob/76db341685347c82b67f7ce70b1a286e94270b43/cves/2019/5xxx/CVE-2019-5786.json",
+              "reading_depth": "bounded-advisory-search",
+              "provenance": "CNA-record-description-and-references-only",
+              "sha256": "4e406521d359eae6025232121e4625bf1653592bc33f53c01bf16412f12f695b"
+            }
+          ],
+          "required_corrections_applied": [
+            "Append the explicit corrected affected/fixed boundary from the already cited CNA: prior to 72.0.3626.121, rather than leaving historical line 66 inversion only indirectly warned."
+          ],
+          "current_sha256": "f21a5251c300d2d7da7c33227c660a1819185937faf57018abd0a1e99c529b87",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/邮件系统/Exim/Exim deliver_message 本地SMTP提权验证 CVE-2019-10149.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2019-10149"
+          ],
+          "specific_trigger": "MSF 106-178 and 256-260; article 30-36",
+          "outcome": "setuid filesystem check at 262-264 then execution at 266",
+          "independent_scope_and_limits": "All 268 lines read. Local session and nosuid assumptions explicit, not advertised as one-packet remote exploit.",
+          "dependency_boundary": "Only actually listed/read core sources are certified; generic framework/runtime and optional stages are not claimed fully read.",
+          "fixed_sources": [
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/linux/local/exim4_deliver_message_priv_esc.rb",
+              "sha256": "cc8ea9db2eb0981bb33ce4d0f3f6495ad2634199a9b39f3a54a9efa93aad6cbc",
+              "git_blob_sha1": "ae3d62211a53316bb26b7202f3517db3759eadae",
+              "fixed_git_blob_verified": true
+            }
+          ],
+          "author_source_receipts_with_explicit_depth": [
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/linux/local/exim4_deliver_message_priv_esc.rb",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "non-wiki-technical-source",
+              "sha256": "cc8ea9db2eb0981bb33ce4d0f3f6495ad2634199a9b39f3a54a9efa93aad6cbc"
+            },
+            {
+              "url": "https://github.com/CVEProject/cvelistV5/blob/76db341685347c82b67f7ce70b1a286e94270b43/cves/2019/10xxx/CVE-2019-10149.json",
+              "reading_depth": "bounded-advisory-search",
+              "provenance": "CNA-record-description-and-references-only",
+              "sha256": "af09f1a6bf6bcc181fbed6967a42cdbc6102fc2d2f5292cee01af2f5496bc3be"
+            }
+          ],
+          "required_corrections_applied": [],
+          "current_sha256": "7428b5cb27faf74d8a5cf918ca0a4784cd24525d7615acef77edf015ef49d997",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/网络设备/Fortinet/（CVE-2018-13382）Fortinet FortiOS magic后门.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2018-13382"
+          ],
+          "specific_trigger": "Existing full article 144-158; append 196-200",
+          "outcome": "Second login request without magic, expected redirect check at 159-162",
+          "independent_scope_and_limits": "Existing-body evidence only plus CNA description consistency. No independent external PoC source fetched; both same-entity existing bodies read, roundup preserves additional CVEs. Existing magic and credentials unchanged.",
+          "dependency_boundary": "Only actually listed/read core sources are certified; generic framework/runtime and optional stages are not claimed fully read.",
+          "fixed_sources": [],
+          "author_source_receipts_with_explicit_depth": [
+            {
+              "url": "https://github.com/CVEProject/cvelistV5/blob/76db341685347c82b67f7ce70b1a286e94270b43/cves/2018/13xxx/CVE-2018-13382.json",
+              "reading_depth": "bounded-advisory-search",
+              "provenance": "CNA-record-description-and-references-only",
+              "sha256": "5f00338900fbcd6c22eee361349a816ead4beb8eee72e5644bd0d9b77b65bfe4"
+            }
+          ],
+          "required_corrections_applied": [],
+          "current_sha256": "8e6444dd7a8a79e851f79da11417f1b7029a44af8bab38b112e15974dfd7be55",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/开发框架/Atlassian Crowd/CVE-2019-11580 Atlassian Crowd RCE.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2019-11580"
+          ],
+          "specific_trigger": "Nuclei 39-53 and embedded ZIP; article 259-263",
+          "outcome": "body_2 marker at 55-59; static class doGet writes same CVE marker",
+          "independent_scope_and_limits": "ZIP members inspected in memory; class 582 bytes, SHA256 8412611230f3aea94010d8c8a2ef45d3f8c02151fc50a14b3df3dd808c0a00a9. Custom static constant-pool/method-byte parser used; javap absent, no installation. Generic MSF PayloadServlet binary not audited and not admission basis.",
+          "dependency_boundary": "Only actually listed/read core sources are certified; generic framework/runtime and optional stages are not claimed fully read.",
+          "fixed_sources": [
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/multi/http/atlassian_crowd_pdkinstall_plugin_upload_rce.rb",
+              "sha256": "8a11ab802938aed7a45a59f5063e7d22e07c86328068c52b3cc98e2b85b3648b",
+              "git_blob_sha1": "1545a1a99d761c61be5ae58ad09592114aba7b06",
+              "fixed_git_blob_verified": true
+            },
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2019/CVE-2019-11580.yaml",
+              "sha256": "bf84712235d9fc84079053cc7cc7e3a28bcc932f30fc005eec41e8e2084b07f6",
+              "git_blob_sha1": "c15e95e68749d362b105c6a2d7b050fe3e12e2bc",
+              "fixed_git_blob_verified": true
+            }
+          ],
+          "author_source_receipts_with_explicit_depth": [
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/multi/http/atlassian_crowd_pdkinstall_plugin_upload_rce.rb",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "non-wiki-technical-source",
+              "sha256": "8a11ab802938aed7a45a59f5063e7d22e07c86328068c52b3cc98e2b85b3648b"
+            },
+            {
+              "url": "https://github.com/CVEProject/cvelistV5/blob/76db341685347c82b67f7ce70b1a286e94270b43/cves/2019/11xxx/CVE-2019-11580.json",
+              "reading_depth": "bounded-advisory-search",
+              "provenance": "CNA-record-description-and-references-only",
+              "sha256": "2293b3c0e6c2c854153dd5e191fc41a6851a7c223a6710e6fc7853b7e44f4b53"
+            },
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2019/CVE-2019-11580.yaml",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "non-wiki-technical-source",
+              "sha256": "bf84712235d9fc84079053cc7cc7e3a28bcc932f30fc005eec41e8e2084b07f6"
+            }
+          ],
+          "required_corrections_applied": [
+            "State embedded class major version 55 requires Java 11-compatible JVM. Its binary is not automatically usable in older Java deployments."
+          ],
+          "current_sha256": "f0fe656c419fdbea8c828c509f0be7c624a732919eed1db846efbc1d89a291b4",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/CMS内容/Sitecore/Sitecore 已认证 AntiCSRF 反序列化 CVE-2019-9875.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2019-9875"
+          ],
+          "specific_trigger": "Synacktiv PDF p5 generation command and POST; authentication condition p2; article 25-29",
+          "outcome": "PDF p6 source-recorded GET /reverse.ps1 and lower-privilege service context",
+          "independent_scope_and_limits": "PDF text all 6 pages read, code figures p3-p6 viewed. Authentication branch kept separate. No second-stage script or ysoserial source audit claimed; source-recorded input/outcome supports method.",
+          "dependency_boundary": "Only actually listed/read core sources are certified; generic framework/runtime and optional stages are not claimed fully read.",
+          "fixed_sources": [],
+          "author_source_receipts_with_explicit_depth": [
+            {
+              "url": "https://github.com/CVEProject/cvelistV5/blob/76db341685347c82b67f7ce70b1a286e94270b43/cves/2019/9xxx/CVE-2019-9875.json",
+              "reading_depth": "bounded-advisory-search",
+              "provenance": "CNA-record-description-and-references-only",
+              "sha256": "5104c7ca4d08ed57550c3ff767d47d74d1f86dcf628cb8ea86b352a21bdcdf7a"
+            },
+            {
+              "url": "https://www.synacktiv.com/ressources/advisories/Sitecore_CSRF_deserialize_RCE.pdf",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "primary-research-pdf-text-and-code-figures",
+              "sha256": "e6f9e67ca1785529c1caf33fa836fc908f3afb4f61d54649a0ac5b6f4525b64e"
+            }
+          ],
+          "required_corrections_applied": [],
+          "current_sha256": "db0ff29751d02c30403fd23d522a8529ec56dca1c7daab9140e9d5c0596b2636",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/CMS内容/Sitecore/Sitecore几年前的洞CVE-2019-9874：反序列化实现的未经认证的 RCE（CVSS 9.8）.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2019-9874"
+          ],
+          "specific_trigger": "Synacktiv PDF p3-p5; article append 132-136",
+          "outcome": "PDF p6 concrete GET /reverse.ps1 receipt; 500 is not success",
+          "independent_scope_and_limits": "Existing article fully read; original placeholder <redacted> retained. Nuclei Java gadget/500 approach rejected for .NET RCE proof.",
+          "dependency_boundary": "Only actually listed/read core sources are certified; generic framework/runtime and optional stages are not claimed fully read.",
+          "fixed_sources": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2019/CVE-2019-9874.yaml",
+              "sha256": "ce9edd0e594e08e594c9ced4282e59b638284146555182555e19ec62712255b5",
+              "git_blob_sha1": "ee1c51a1b74833e1265b044dfb12cca5ed1d0d19",
+              "fixed_git_blob_verified": true
+            }
+          ],
+          "author_source_receipts_with_explicit_depth": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2019/CVE-2019-9874.yaml",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "non-wiki-technical-source",
+              "sha256": "ce9edd0e594e08e594c9ced4282e59b638284146555182555e19ec62712255b5"
+            },
+            {
+              "url": "https://github.com/CVEProject/cvelistV5/blob/76db341685347c82b67f7ce70b1a286e94270b43/cves/2019/9xxx/CVE-2019-9874.json",
+              "reading_depth": "bounded-advisory-search",
+              "provenance": "CNA-record-description-and-references-only",
+              "sha256": "769d68215819e370623b33f44149fb882ee5952e8dfd7d5e4e1d9cf226bcd043"
+            },
+            {
+              "url": "https://www.synacktiv.com/ressources/advisories/Sitecore_CSRF_deserialize_RCE.pdf",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "primary-research-pdf-text-and-code-figures",
+              "sha256": "e6f9e67ca1785529c1caf33fa836fc908f3afb4f61d54649a0ac5b6f4525b64e"
+            }
+          ],
+          "required_corrections_applied": [],
+          "current_sha256": "886fec746b087794709cadf8e1fc332a2656192f64ab5781063adf873da4f925",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/邮件系统/Zimbra/（CVE-2019-9621）（CVE-2019-9670）Zimbra 远程代码执行漏洞.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2019-9621"
+          ],
+          "specific_trigger": "MSF 118-168,222-234; shared article 356-365",
+          "outcome": "Admin cookie response extraction at MSF 233-236 after proxy request",
+          "independent_scope_and_limits": "Authenticated proxy phase distinguished from XXE and later upload. Full shared article retained as one file, two CVE rows.",
+          "dependency_boundary": "Only actually listed/read core sources are certified; generic framework/runtime and optional stages are not claimed fully read.",
+          "fixed_sources": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2019/CVE-2019-9621.yaml",
+              "sha256": "8e481fbc5a1dafef1a6abad35607add922f85f0875cb5f82e3704a93218133a2",
+              "git_blob_sha1": "a68a713228850dfc9d3462f27474eb43370ff23c",
+              "fixed_git_blob_verified": true
+            },
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/linux/http/zimbra_xxe_rce.rb",
+              "sha256": "5882670f719585a2d9295aa9b00bd24bd2c693bc54830a360cee484f61f67a8c",
+              "git_blob_sha1": "e0937feaa53d15b28214ec7a7414eb288422c72d",
+              "fixed_git_blob_verified": true
+            }
+          ],
+          "author_source_receipts_with_explicit_depth": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2019/CVE-2019-9621.yaml",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "non-wiki-technical-source",
+              "sha256": "8e481fbc5a1dafef1a6abad35607add922f85f0875cb5f82e3704a93218133a2"
+            },
+            {
+              "url": "https://github.com/CVEProject/cvelistV5/blob/76db341685347c82b67f7ce70b1a286e94270b43/cves/2019/9xxx/CVE-2019-9621.json",
+              "reading_depth": "bounded-advisory-search",
+              "provenance": "CNA-record-description-and-references-only",
+              "sha256": "29d6cc15793a5703fcdcf7d6f09c543eb8cc60afa3cca79316fec67ab181d913"
+            },
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/linux/http/zimbra_xxe_rce.rb",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "non-wiki-technical-source",
+              "sha256": "5882670f719585a2d9295aa9b00bd24bd2c693bc54830a360cee484f61f67a8c"
+            }
+          ],
+          "required_corrections_applied": [
+            "Append separate patch-level ranges from cached CNA for 9670 and 9621; old blanket <8.7.11/<8.8.11 claims remain insufficiently corrected.",
+            "Replace the new prose characterization Ubuntu 16.64 with an exact quotation of the module test label: Zimbra Release 8.7.1.GA.1670.UBUNTU16.64 / UBUNTU16_64 FOSS edition. The source label is not an Ubuntu release version. Preserve historical body bytes."
+          ],
+          "current_sha256": "b5ade17aae2e8778236431055f9d04a77514f691a3592f3abbae1bb6cafef13f",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/邮件系统/Zimbra/（CVE-2019-9621）（CVE-2019-9670）Zimbra 远程代码执行漏洞.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2019-9670"
+          ],
+          "specific_trigger": "Nuclei 46-58; shared article 354-365",
+          "outcome": "Nuclei 60-71: passwd root line plus Problem accessing and 503",
+          "independent_scope_and_limits": "Shared 365-line article read once for both CVEs. All module and both templates read; XXE-only 9621 template label explicitly rejected as SSRF evidence.",
+          "dependency_boundary": "Only actually listed/read core sources are certified; generic framework/runtime and optional stages are not claimed fully read.",
+          "fixed_sources": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2019/CVE-2019-9670.yaml",
+              "sha256": "0fc575595516afcc79bbe4492fa0b14113e5474c58033564152351012424f2fc",
+              "git_blob_sha1": "0a8b384e5bee714d38a5c7cc14e71202329e4da7",
+              "fixed_git_blob_verified": true
+            }
+          ],
+          "author_source_receipts_with_explicit_depth": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2019/CVE-2019-9670.yaml",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "non-wiki-technical-source",
+              "sha256": "0fc575595516afcc79bbe4492fa0b14113e5474c58033564152351012424f2fc"
+            },
+            {
+              "url": "https://github.com/CVEProject/cvelistV5/blob/76db341685347c82b67f7ce70b1a286e94270b43/cves/2019/9xxx/CVE-2019-9670.json",
+              "reading_depth": "bounded-advisory-search",
+              "provenance": "CNA-record-description-and-references-only",
+              "sha256": "f2167e91ef53edb828a2597b620f96962f0c3ee835e5ef58fc6b8df38d12c6b1"
+            }
+          ],
+          "required_corrections_applied": [
+            "Append separate patch-level ranges from cached CNA for 9670 and 9621; old blanket <8.7.11/<8.8.11 claims remain insufficiently corrected.",
+            "Replace the new prose characterization Ubuntu 16.64 with an exact quotation of the module test label: Zimbra Release 8.7.1.GA.1670.UBUNTU16.64 / UBUNTU16_64 FOSS edition. The source label is not an Ubuntu release version. Preserve historical body bytes."
+          ],
+          "current_sha256": "b5ade17aae2e8778236431055f9d04a77514f691a3592f3abbae1bb6cafef13f",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/智能设备/Schneider Electric/U.motion Builder SQLite调用链中的命令注入 CVE-2018-7841.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2018-7841"
+          ],
+          "specific_trigger": "Nuclei 40-44 plus RCE Security primary 23-118; article 26-32",
+          "outcome": "DNS interaction plus response context at template 46-52; primary reports reverse shell without independently viewed screenshot",
+          "independent_scope_and_limits": "Primary article technical text fully read. Different smartdomuspad and umotion prefixes retained; no target/image URL requested.",
+          "dependency_boundary": "Only actually listed/read core sources are certified; generic framework/runtime and optional stages are not claimed fully read.",
+          "fixed_sources": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2018/CVE-2018-7841.yaml",
+              "sha256": "c9de647163bb6a873f55afeb618dca081021b2e2ec15848e5389bac5e7865da7",
+              "git_blob_sha1": "49d72988b23bc2eeecc682dab29b6e1e18dd111e",
+              "fixed_git_blob_verified": true
+            }
+          ],
+          "author_source_receipts_with_explicit_depth": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2018/CVE-2018-7841.yaml",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "non-wiki-technical-source",
+              "sha256": "c9de647163bb6a873f55afeb618dca081021b2e2ec15848e5389bac5e7865da7"
+            },
+            {
+              "url": "https://github.com/CVEProject/cvelistV5/blob/76db341685347c82b67f7ce70b1a286e94270b43/cves/2018/7xxx/CVE-2018-7841.json",
+              "reading_depth": "bounded-advisory-search",
+              "provenance": "CNA-record-description-and-references-only",
+              "sha256": "b8cac45af79dc543de9eecd35c675144fba151092dadd5c4b99d7956685c9de9"
+            },
+            {
+              "url": "https://www.rcesecurity.com/2019/05/cve-2018-7841-schneider-electric-umotion-builder-remote-code-execution-0-day/",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "primary-research-web-text",
+              "sha256": "19631ded280bda4f0e711fd5e250bed448e4e8914c218c3ae8b763f4ba8184c9"
+            }
+          ],
+          "required_corrections_applied": [
+            "Correct article line 36: the fixed template does not generically recommend upgrading; source lines 11-12 explicitly state product retired and advise removal."
+          ],
+          "current_sha256": "15d21c292c8441651e231b2d2c786195f0f9f68c7c83dd08386a0a67a18a9844",
+          "runtime_executed": false
+        },
+        {
+          "path": "系统安全/Windows/Windows远程溢出漏洞/（CVE-2019-0708） Windows 远程溢出漏洞.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2019-0708"
+          ],
+          "specific_trigger": "MSF 135-160 and channel binding 228-241; article 114-118",
+          "outcome": "Specific MCS Disconnect Provider Ultimatum bytes at source 183,191-192",
+          "independent_scope_and_limits": "All 251 main lines read; RDP transport/packet-builder library not expanded and no full dependency audit claimed. Gate limited to vulnerability-specific behavioral validation, not RCE; two existing 0708 article bodies read.",
+          "dependency_boundary": "Only actually listed/read core sources are certified; generic framework/runtime and optional stages are not claimed fully read.",
+          "fixed_sources": [
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/auxiliary/scanner/rdp/cve_2019_0708_bluekeep.rb",
+              "sha256": "01ae25f5fbc2fc0dc8518aaff517e126cb47a3c55a05c4afaf02387d930fdb5e",
+              "git_blob_sha1": "801acc22cb40da57216105c594a615123799299c",
+              "fixed_git_blob_verified": true
+            }
+          ],
+          "author_source_receipts_with_explicit_depth": [
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/auxiliary/scanner/rdp/cve_2019_0708_bluekeep.rb",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "non-wiki-technical-source",
+              "sha256": "01ae25f5fbc2fc0dc8518aaff517e126cb47a3c55a05c4afaf02387d930fdb5e"
+            },
+            {
+              "url": "https://github.com/CVEProject/cvelistV5/blob/76db341685347c82b67f7ce70b1a286e94270b43/cves/2019/0xxx/CVE-2019-0708.json",
+              "reading_depth": "bounded-advisory-search",
+              "provenance": "CNA-record-description-and-references-only",
+              "sha256": "56629ade7699e94387ec01129bc187b05d26df14883fa63f0ab902c48d76b2be"
+            }
+          ],
+          "required_corrections_applied": [],
+          "current_sha256": "ef9216a08542fbef3ae48fb381b857f17ac8789c2c836c379ea9a15cf41c2e40",
+          "runtime_executed": false
+        },
+        {
+          "path": "IOT安全/Barco AWIND/Barco与AWIND file_transfer.cgi 命令注入 CVE-2019-3929.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2019-3929"
+          ],
+          "specific_trigger": "MSF 71-92; article 30-36",
+          "outcome": "Exact entire response root after CR/LF removal, HTTP200 at 97-101",
+          "independent_scope_and_limits": "Readable primary module accepted; Nuclei loose callback branch not needed. Pa_Note/Pa_Add/Pa_Amp exact mappings retained.",
+          "dependency_boundary": "Only actually listed/read core sources are certified; generic framework/runtime and optional stages are not claimed fully read.",
+          "fixed_sources": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2019/CVE-2019-3929.yaml",
+              "sha256": "00d9e5c2e62984d44d19d9da3a502764926ce0c84e68cc120c9da1054166e5b1",
+              "git_blob_sha1": "ac807eac887667890a0dc10b6c6a5918229e2edb",
+              "fixed_git_blob_verified": true
+            },
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/linux/http/wepresent_cmd_injection.rb",
+              "sha256": "b63ae22e44275728b7988e993cf32d1249469db6bbb125184f794b316633e843",
+              "git_blob_sha1": "67435ff0b18a6d8ee0109de6628566ddf5ba926e",
+              "fixed_git_blob_verified": true
+            }
+          ],
+          "author_source_receipts_with_explicit_depth": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2019/CVE-2019-3929.yaml",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "non-wiki-technical-source",
+              "sha256": "00d9e5c2e62984d44d19d9da3a502764926ce0c84e68cc120c9da1054166e5b1"
+            },
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/linux/http/wepresent_cmd_injection.rb",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "non-wiki-technical-source",
+              "sha256": "b63ae22e44275728b7988e993cf32d1249469db6bbb125184f794b316633e843"
+            },
+            {
+              "url": "https://github.com/CVEProject/cvelistV5/blob/76db341685347c82b67f7ce70b1a286e94270b43/cves/2019/3xxx/CVE-2019-3929.json",
+              "reading_depth": "bounded-advisory-search",
+              "provenance": "CNA-record-description-and-references-only",
+              "sha256": "1892d6b01ca10e0753cbfd0ef28c702e489d1ef6d9bdbfbcd984ac49e87147da"
+            }
+          ],
+          "required_corrections_applied": [],
+          "current_sha256": "a05697f1cde6e905809c2cb5b26dccc38cbb3f65c4c89dc5e34cdc8c3576293d",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/安全设备/Pulse Secure/Pulse Secure 管理诊断命令注入 CVE-2019-11539.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2019-11539"
+          ],
+          "specific_trigger": "MSF 109-176; article 30-36",
+          "outcome": "Generic command branch prints response body at 170-171 after template trigger",
+          "independent_scope_and_limits": "Full main read; valid admin SID is explicit prerequisite, separate file disclosure module not followed. Other PPS branches available in CNA but summarized as source link, not invented.",
+          "dependency_boundary": "Only actually listed/read core sources are certified; generic framework/runtime and optional stages are not claimed fully read.",
+          "fixed_sources": [
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/linux/http/pulse_secure_cmd_exec.rb",
+              "sha256": "6ca6fbf4b27854d8ac61f983ea53182edb4d75b55eb18ed48f4d040687ffef8f",
+              "git_blob_sha1": "5d68838c019c5cff5f4f8833baf21cf535340f3d",
+              "fixed_git_blob_verified": true
+            }
+          ],
+          "author_source_receipts_with_explicit_depth": [
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/linux/http/pulse_secure_cmd_exec.rb",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "non-wiki-technical-source",
+              "sha256": "6ca6fbf4b27854d8ac61f983ea53182edb4d75b55eb18ed48f4d040687ffef8f"
+            },
+            {
+              "url": "https://github.com/CVEProject/cvelistV5/blob/76db341685347c82b67f7ce70b1a286e94270b43/cves/2019/11xxx/CVE-2019-11539.json",
+              "reading_depth": "bounded-advisory-search",
+              "provenance": "CNA-record-description-and-references-only",
+              "sha256": "fe475b05c5c220d92801c4849307eade7111d05e7b306d04cb66c5daa74f23cd"
+            }
+          ],
+          "required_corrections_applied": [],
+          "current_sha256": "8280330070f35375797a18cd0d9f9c7fba1ee1a76451d1d9d34d1dcf1f762b40",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/商业软件/Oracle BI Publisher/Oracle BI Publisher 外部DTD解析验证 CVE-2019-2616.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2019-2616"
+          ],
+          "specific_trigger": "nuclei lines 34-39; article line 30",
+          "outcome": "nuclei lines 41-45: correlated HTTP OAST",
+          "independent_scope_and_limits": "DTD load rather than unproven RCE or arbitrary local file read.",
+          "dependency_boundary": "Only actually listed/read core sources are certified; generic framework/runtime and optional stages are not claimed fully read.",
+          "fixed_sources": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2019/CVE-2019-2616.yaml",
+              "sha256": "0269e8fbb7c03721bbdc48dfecb37d7eceabaf0646425a06b296da14b14f39f5",
+              "git_blob_sha1": "9751b32c0c46b6f838bc83fc5a991c85a5c8a65c",
+              "fixed_git_blob_verified": true
+            }
+          ],
+          "author_source_receipts_with_explicit_depth": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2019/CVE-2019-2616.yaml",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "non-wiki-technical-source",
+              "sha256": "0269e8fbb7c03721bbdc48dfecb37d7eceabaf0646425a06b296da14b14f39f5"
+            },
+            {
+              "url": "https://github.com/CVEProject/cvelistV5/blob/76db341685347c82b67f7ce70b1a286e94270b43/cves/2019/2xxx/CVE-2019-2616.json",
+              "reading_depth": "bounded-advisory-search",
+              "provenance": "CNA-record-description-and-references-only",
+              "sha256": "5064f2d85962ea04469559c2b6ac205ce05a6ae2c35d4d00db2327ffb1ee9b95"
+            }
+          ],
+          "required_corrections_applied": [],
+          "current_sha256": "7b2ce2389f45ecb42047efaf932094d0e5fd88ac4635cee44d621f510df68313",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/CMS内容/Kentico/Kentico Staging 同步参数不安全反序列化 CVE-2019-10068.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2019-10068"
+          ],
+          "specific_trigger": "MSF 100-111; WindowsIdentity 13-35; TypeConfuseDelegate 22-202; SoapFormatter 7-89",
+          "outcome": "Explicit Process.Start object graph and command arguments in readable helper; expected command effect, not cast exception",
+          "independent_scope_and_limits": "Main plus all three named helpers fully read. Primary disclosure technical text/version/auth conditions read. Generic serialized-stream types and binary encoder internals not fully expanded; no claim all transitive framework code audited. Nuclei opaque PE-writing blob not executed or accepted as proof.",
+          "dependency_boundary": "Only actually listed/read core sources are certified; generic framework/runtime and optional stages are not claimed fully read.",
+          "fixed_sources": [
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/windows/http/kentico_staging_syncserver.rb",
+              "sha256": "baf555b40dbb1ab954152957c5a12eb4cba5ecc94895ad57641d67e76c03a785",
+              "git_blob_sha1": "28ed5df47f3e3e45381fc686f71203b2b2c06af5",
+              "fixed_git_blob_verified": true
+            },
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2019/CVE-2019-10068.yaml",
+              "sha256": "7b0f045014f266433b9b96b72f42640d75f94df4078c42c2f93250e0897a891c",
+              "git_blob_sha1": "addf5a8e15579ebc29bbc9b4abfa3d5fb0423b0f",
+              "fixed_git_blob_verified": true
+            },
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/lib/msf/util/dot_net_deserialization/gadget_chains/windows_identity.rb",
+              "sha256": "b1f1306c31e94a032c6968cdcba230c0b39aa2bb225202f3287fe9d7969260ad",
+              "git_blob_sha1": "d23dc8a3ddcdca4e5209b5547d437f4cea66a69b",
+              "fixed_git_blob_verified": true
+            },
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/lib/msf/util/dot_net_deserialization/gadget_chains/type_confuse_delegate.rb",
+              "sha256": "f2241837dd5c5309a03f186a2e59d6bd4fd2e09f915398cecf096288b24b9d36",
+              "git_blob_sha1": "91b63d081162cb5ea71f1754ec7b12cc24d4a22c",
+              "fixed_git_blob_verified": true
+            },
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/lib/msf/util/dot_net_deserialization/formatters/soap_formatter.rb",
+              "sha256": "bfc32fcfd2be66d46faa1f1d5fbe7604c2c3b88ee929d1929212154786efeb1e",
+              "git_blob_sha1": "8129c4f916af4df8f68c561d8f5de5156b8f6270",
+              "fixed_git_blob_verified": true
+            }
+          ],
+          "author_source_receipts_with_explicit_depth": [
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/windows/http/kentico_staging_syncserver.rb",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "non-wiki-technical-source",
+              "sha256": "baf555b40dbb1ab954152957c5a12eb4cba5ecc94895ad57641d67e76c03a785"
+            },
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2019/CVE-2019-10068.yaml",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "non-wiki-technical-source",
+              "sha256": "7b0f045014f266433b9b96b72f42640d75f94df4078c42c2f93250e0897a891c"
+            },
+            {
+              "url": "https://www.levelblue.com/blogs/spiderlabs-blog/unauthenticated-remote-code-execution-in-kentico-cms/",
+              "reading_depth": "bounded-advisory-search",
+              "provenance": "primary-advisory-without-public-core",
+              "sha256": null
+            },
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/lib/msf/util/dot_net_deserialization/gadget_chains/windows_identity.rb",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "fixed-upstream-helper-source",
+              "sha256": "b1f1306c31e94a032c6968cdcba230c0b39aa2bb225202f3287fe9d7969260ad"
+            },
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/lib/msf/util/dot_net_deserialization/gadget_chains/type_confuse_delegate.rb",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "fixed-upstream-helper-source",
+              "sha256": "f2241837dd5c5309a03f186a2e59d6bd4fd2e09f915398cecf096288b24b9d36"
+            },
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/lib/msf/util/dot_net_deserialization/formatters/soap_formatter.rb",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "fixed-upstream-helper-source",
+              "sha256": "bfc32fcfd2be66d46faa1f1d5fbe7604c2c3b88ee929d1929212154786efeb1e"
+            }
+          ],
+          "required_corrections_applied": [],
+          "current_sha256": "04a5a283f98976405ed1a0b2fd979d8a69be8a170420354fd7a9ca81e27689d5",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/商业软件/TIBCO JasperReports/JasperReports reportresource 路径遍历 CVE-2018-18809.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2018-18809"
+          ],
+          "specific_trigger": "nuclei lines 39-41; article line 30",
+          "outcome": "nuclei lines 43-54: both JDBC configuration keys and status 200",
+          "independent_scope_and_limits": "Low-privilege CVSS and missing product/version matrix accurately qualified.",
+          "dependency_boundary": "Only actually listed/read core sources are certified; generic framework/runtime and optional stages are not claimed fully read.",
+          "fixed_sources": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2018/CVE-2018-18809.yaml",
+              "sha256": "38ac12e2cd86ad3c19fb2f4d078b8a4b685237726d52f7aa618ba1d70d247e03",
+              "git_blob_sha1": "e35ede175e061d56811e66bc5d2c99e5b4a1f364",
+              "fixed_git_blob_verified": true
+            }
+          ],
+          "author_source_receipts_with_explicit_depth": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2018/CVE-2018-18809.yaml",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "non-wiki-technical-source",
+              "sha256": "38ac12e2cd86ad3c19fb2f4d078b8a4b685237726d52f7aa618ba1d70d247e03"
+            }
+          ],
+          "required_corrections_applied": [
+            "Correct new frontmatter source field (line 16): it claims already-read CNA material, but no CNA reading event exists and the body states no CNA was obtained. Identify only actually read template/module sources; no original code or public values should change."
+          ],
+          "current_sha256": "33f230e028c3bd042ea5162b1954b1ff1f11a6da211b52dc29d30dbf4cdf7d31",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/云平台/Microsoft SharePoint/（CVE-2019-0604）Microsoft SharePoint 远程代码执行漏洞.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2019-0604"
+          ],
+          "specific_trigger": "nuclei lines 53-73,89-111,124-145; article lines 200-204",
+          "outcome": "nuclei lines 153-158: DNS with encoded command-generated marker",
+          "independent_scope_and_limits": "All 159 source lines read. Public construction and expected result are concrete, but no execution is claimed. Generic success print is correctly excluded.",
+          "dependency_boundary": "Only actually listed/read core sources are certified; generic framework/runtime and optional stages are not claimed fully read.",
+          "fixed_sources": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/code/cves/2019/CVE-2019-0604.yaml",
+              "sha256": "d9c7bb15d19033d6e29641755556391e8f852e3984cb60015019567393acc6a1",
+              "git_blob_sha1": "4a182e350f4bf6bb98f25037e6a98a7d6b306f26",
+              "fixed_git_blob_verified": true
+            }
+          ],
+          "author_source_receipts_with_explicit_depth": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/code/cves/2019/CVE-2019-0604.yaml",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "non-wiki-technical-source",
+              "sha256": "d9c7bb15d19033d6e29641755556391e8f852e3984cb60015019567393acc6a1"
+            }
+          ],
+          "required_corrections_applied": [
+            "State the concrete runtime caveat: source paths[0] is os.getenv('Path'); an unset Path yields None and RootURL + item fails before trying built-in fallback paths. Do not imply the linked template runs unchanged without this input."
+          ],
+          "current_sha256": "1aff84e77034f5289f5103233d07e9555a09a187ccc80d1286808c4099de3794",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/网络设备/Cisco/Cisco RV320 RV325 配置导出泄露 CVE-2019-1653.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2019-1653"
+          ],
+          "specific_trigger": "Nuclei 34-36; MSF 95-111; article 30-38",
+          "outcome": "Actual configuration with USERNAME/PASSWD fields; status/sysconfig alone contextual",
+          "independent_scope_and_limits": "Main and template read. Distinct configuration read stage; generic chain RCE not attributed entirely to 1653.",
+          "dependency_boundary": "Only actually listed/read core sources are certified; generic framework/runtime and optional stages are not claimed fully read.",
+          "fixed_sources": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2019/CVE-2019-1653.yaml",
+              "sha256": "3429622f9b02794091f817ac4678c5b90fce10d1b994330490a52595f8dd9fa0",
+              "git_blob_sha1": "8fdf91084d4bce578bc698fe8c25c1684c574466",
+              "fixed_git_blob_verified": true
+            },
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/linux/http/cisco_rv32x_rce.rb",
+              "sha256": "1eb74fa500062b55aa96f9b26e6499f0cdd154afe9c0309ed5c0df23956dfede",
+              "git_blob_sha1": "ad242cefe8695720896ae5b2f9d0879ed944c2d9",
+              "fixed_git_blob_verified": true
+            }
+          ],
+          "author_source_receipts_with_explicit_depth": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2019/CVE-2019-1653.yaml",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "non-wiki-technical-source",
+              "sha256": "3429622f9b02794091f817ac4678c5b90fce10d1b994330490a52595f8dd9fa0"
+            },
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/linux/http/cisco_rv32x_rce.rb",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "non-wiki-technical-source",
+              "sha256": "1eb74fa500062b55aa96f9b26e6499f0cdd154afe9c0309ed5c0df23956dfede"
+            }
+          ],
+          "required_corrections_applied": [
+            "Correct new frontmatter source field (line 16): it claims already-read CNA material, but no CNA reading event exists and the body states no CNA was obtained. Identify only actually read template/module sources; no original code or public values should change."
+          ],
+          "current_sha256": "1f9cbf4f53ecf4e50601afd219dafc8c4a55b86308afb1b122f493dd10725465",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/网络设备/Cisco/Cisco RV320 RV325 证书common_name命令注入 CVE-2019-1652.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2019-1652"
+          ],
+          "specific_trigger": "MSF 139-174; independently opened RedTeam RT-SA-2018-004 lines 50-63",
+          "outcome": "RedTeam line 65: incoming ICMP echo requests; module callback 83-87",
+          "independent_scope_and_limits": "MSF HTTP serializer helper attempts returned Cache miss, not access denial. No code fixed or executed. Primary advisory provides complete transparent request plus concrete expected network result independently of wrapper ambiguity.",
+          "dependency_boundary": "Only actually listed/read core sources are certified; generic framework/runtime and optional stages are not claimed fully read.",
+          "fixed_sources": [
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/linux/http/cisco_rv32x_rce.rb",
+              "sha256": "1eb74fa500062b55aa96f9b26e6499f0cdd154afe9c0309ed5c0df23956dfede",
+              "git_blob_sha1": "ad242cefe8695720896ae5b2f9d0879ed944c2d9",
+              "fixed_git_blob_verified": true
+            }
+          ],
+          "author_source_receipts_with_explicit_depth": [
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/linux/http/cisco_rv32x_rce.rb",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "non-wiki-technical-source",
+              "sha256": "1eb74fa500062b55aa96f9b26e6499f0cdd154afe9c0309ed5c0df23956dfede"
+            }
+          ],
+          "required_corrections_applied": [
+            "Cite the independently verified original RedTeam advisory as the concrete request/outcome basis and add its RV320 tested/affected and fixed-version claims with explicit source attribution. Keep existing MSF request-construction caveat.",
+            "Correct new frontmatter source field (line 16): it claims already-read CNA material, but no CNA reading event exists and the body states no CNA was obtained. Identify only actually read template/module sources; no original code or public values should change."
+          ],
+          "current_sha256": "62cd608827c901a82a452ceb4747bec23e560150d934f764166b655022f524d4",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/运维面板/PRTG/PRTG public login 包含接口创建账户 CVE-2018-19410.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2018-19410"
+          ],
+          "specific_trigger": "nuclei lines 36-49; article line 30",
+          "outcome": "nuclei lines 51-62: Added 1 users, prtg and 200",
+          "independent_scope_and_limits": "Application account-creation confirmation qualifies; no claim that a created account's privileges were tested.",
+          "dependency_boundary": "Only actually listed/read core sources are certified; generic framework/runtime and optional stages are not claimed fully read.",
+          "fixed_sources": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2018/CVE-2018-19410.yaml",
+              "sha256": "ca4fd0ab39aea3d7e4d949b40977e8c62f8e57bcd7af21578237c52c254b30f1",
+              "git_blob_sha1": "b8b943d44eba06b07f81c7dbcefeb30cf255b1bb",
+              "fixed_git_blob_verified": true
+            }
+          ],
+          "author_source_receipts_with_explicit_depth": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2018/CVE-2018-19410.yaml",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "non-wiki-technical-source",
+              "sha256": "ca4fd0ab39aea3d7e4d949b40977e8c62f8e57bcd7af21578237c52c254b30f1"
+            }
+          ],
+          "required_corrections_applied": [
+            "Correct new frontmatter source field (line 16): it claims already-read CNA material, but no CNA reading event exists and the body states no CNA was obtained. Identify only actually read template/module sources; no original code or public values should change."
+          ],
+          "current_sha256": "bf3415efe9fb497c2d088ca6f17706c97af211b845343e6c80a710f04ab4f094",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/桌面软件/Chrome/Chrome 浏览器漏洞利用 (三)：CVE-2018-17463 分析与利用.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2018-17463"
+          ],
+          "specific_trigger": "Full 1643-line article and MSF 177-257; article append 1637-1641",
+          "outcome": "MSF overlap predicate 198-201, object/ArrayBuffer results 225-253; original regression observations 438,643; explicit virtual call at 339",
+          "independent_scope_and_limits": "Article read consecutively 1-340,341-650,651-930,931-1190,1191-1400,1401-1643. MSF 369 lines fully read. No external 1458 DLL, no historical screenshot inspection. Broken historical scripts retained, renderer-only proof separated.",
+          "dependency_boundary": "Only actually listed/read core sources are certified; generic framework/runtime and optional stages are not claimed fully read.",
+          "fixed_sources": [
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/multi/browser/chrome_object_create.rb",
+              "sha256": "d4fc7da369ec2ba7b492800a1b7e3b3905458f7047aaaa3e189b1b1ffcccd31f",
+              "git_blob_sha1": "89180a5d4a027cdead56e69447fb297bb8a87e17",
+              "fixed_git_blob_verified": true
+            }
+          ],
+          "author_source_receipts_with_explicit_depth": [
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/multi/browser/chrome_object_create.rb",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "non-wiki-technical-source",
+              "sha256": "d4fc7da369ec2ba7b492800a1b7e3b3905458f7047aaaa3e189b1b1ffcccd31f"
+            }
+          ],
+          "required_corrections_applied": [],
+          "current_sha256": "55234b1772f427e1b3777c6a99e279f81e424c381966c9149b8c90f8facee1bd",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/中间件/Adobe ColdFusion/Adobe-ColdFusion-upload.cfm-任意文件上传漏洞-CVE-2018-15961.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2018-15961"
+          ],
+          "specific_trigger": "nuclei lines 44-76; article line 108",
+          "outcome": "nuclei lines 78-86: server-computed MD5 ddbb3e76f92e78c445c8ecb392beb225 and 200",
+          "independent_scope_and_limits": "Template executable Java fragment and request chain fully read. Existing AES loader remains unmodified and not executed.",
+          "dependency_boundary": "Only actually listed/read core sources are certified; generic framework/runtime and optional stages are not claimed fully read.",
+          "fixed_sources": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2018/CVE-2018-15961.yaml",
+              "sha256": "7c23bd25e9b7e53e56de87cdfdf1e1522b1807f745367dedfc835cff1b5efb6d",
+              "git_blob_sha1": "70d63d20878299fc533cc7264976ee56e955af0a",
+              "fixed_git_blob_verified": true
+            }
+          ],
+          "author_source_receipts_with_explicit_depth": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2018/CVE-2018-15961.yaml",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "non-wiki-technical-source",
+              "sha256": "7c23bd25e9b7e53e56de87cdfdf1e1522b1807f745367dedfc835cff1b5efb6d"
+            }
+          ],
+          "required_corrections_applied": [],
+          "current_sha256": "8a0621fee323ebdbf28dd507301a447b55a38041168dc588f4634d724883ae05",
+          "runtime_executed": false
+        },
+        {
+          "path": "IOT安全/NUUO/NUUO NVRmini upgrade_handle 命令注入 CVE-2018-14933.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2018-14933"
+          ],
+          "specific_trigger": "nuclei lines 34-36; article line 30",
+          "outcome": "nuclei lines 38-47: numeric uid/gid and 200",
+          "independent_scope_and_limits": "Only actually listed/read core sources are certified; generic framework/runtime and optional stages are not claimed fully read.",
+          "dependency_boundary": "Only actually listed/read core sources are certified; generic framework/runtime and optional stages are not claimed fully read.",
+          "fixed_sources": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2018/CVE-2018-14933.yaml",
+              "sha256": "60b74a4923d34b7f3e310e5b5f393e6f750caaa434333523d00aae57f12327f3",
+              "git_blob_sha1": "39440606e159ddc1735489a104d0bf0a9af3f378",
+              "fixed_git_blob_verified": true
+            }
+          ],
+          "author_source_receipts_with_explicit_depth": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2018/CVE-2018-14933.yaml",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "non-wiki-technical-source",
+              "sha256": "60b74a4923d34b7f3e310e5b5f393e6f750caaa434333523d00aae57f12327f3"
+            }
+          ],
+          "required_corrections_applied": [
+            "Correct new frontmatter source field (line 16): it claims already-read CNA material, but no CNA reading event exists and the body states no CNA was obtained. Identify only actually read template/module sources; no original code or public values should change."
+          ],
+          "current_sha256": "d31b86b86d15c366b102f8d1ce2f4a6571e3f2a596b890ce91f16150f0d2edaa",
+          "runtime_executed": false
+        },
+        {
+          "path": "IOT安全/MikroTik/MikroTik WinBox user.dat 路径遍历 CVE-2018-14847.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2018-14847"
+          ],
+          "specific_trigger": "MSF 97-151; article 30-36",
+          "outcome": "M2 record extraction/decode 44-87 and output from actual user.dat response 154-157",
+          "independent_scope_and_limits": "All 163 source lines read; no credential acquisition or device connection performed. Fixed MD5 salt exact.",
+          "dependency_boundary": "Only actually listed/read core sources are certified; generic framework/runtime and optional stages are not claimed fully read.",
+          "fixed_sources": [
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/auxiliary/gather/mikrotik_winbox_fileread.py",
+              "sha256": "8a203ad31e5bfac12d6fb2d589dc8b0388b43de40727c458a95623df3186b4cb",
+              "git_blob_sha1": "6438688b65ec4dcd91679fd0119c56346ca39b85",
+              "fixed_git_blob_verified": true
+            }
+          ],
+          "author_source_receipts_with_explicit_depth": [
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/auxiliary/gather/mikrotik_winbox_fileread.py",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "non-wiki-technical-source",
+              "sha256": "8a203ad31e5bfac12d6fb2d589dc8b0388b43de40727c458a95623df3186b4cb"
+            }
+          ],
+          "required_corrections_applied": [
+            "Correct new frontmatter source field (line 16): it claims already-read CNA material, but no CNA reading event exists and the body states no CNA was obtained. Identify only actually read template/module sources; no original code or public values should change."
+          ],
+          "current_sha256": "9fbf4824f464fb0702209c0b5b0c5d0d13d971a6d0c87c6cbf007d89c52067a6",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/运维面板/PRTG/PRTG 通知参数PowerShell命令注入 CVE-2018-9276.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2018-9276"
+          ],
+          "specific_trigger": "MSF 87-198,270-281; article 30-36",
+          "outcome": "Concrete notification execution path plus source shell expectation 20-24; object/queue messages explicitly not final proof",
+          "independent_scope_and_limits": "All 285 module lines read. General PowerShell payload library not audited; core authenticated injection and trigger transparent. Persistent notification and incomplete delete check disclosed.",
+          "dependency_boundary": "Only actually listed/read core sources are certified; generic framework/runtime and optional stages are not claimed fully read.",
+          "fixed_sources": [
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/windows/http/prtg_authenticated_rce.rb",
+              "sha256": "5c441e67a39bd677349d29a2a4cc416ce0972bf0bfc56f5e1594e448a1bdfc28",
+              "git_blob_sha1": "c0dff08570d88571bdf018cfa06a6e3787144b7b",
+              "fixed_git_blob_verified": true
+            }
+          ],
+          "author_source_receipts_with_explicit_depth": [
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/windows/http/prtg_authenticated_rce.rb",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "non-wiki-technical-source",
+              "sha256": "5c441e67a39bd677349d29a2a4cc416ce0972bf0bfc56f5e1594e448a1bdfc28"
+            }
+          ],
+          "required_corrections_applied": [
+            "Correct new frontmatter source field (line 16): it claims already-read CNA material, but no CNA reading event exists and the body states no CNA was obtained. Identify only actually read template/module sources; no original code or public values should change."
+          ],
+          "current_sha256": "6feef59e2116fb247d1231baf46e336cffcec983b62fca2c594283282c14b2f8",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/网络设备/VMware SD-WAN/VMware SD-WAN Edge 本地诊断命令注入 CVE-2018-6961.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2018-6961"
+          ],
+          "specific_trigger": "nuclei lines 39-50; article line 30",
+          "outcome": "nuclei lines 54-74: JSON status, uid/gid regex, error exclusion",
+          "independent_scope_and_limits": "No exploit code changes requested.",
+          "dependency_boundary": "Only actually listed/read core sources are certified; generic framework/runtime and optional stages are not claimed fully read.",
+          "fixed_sources": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2018/CVE-2018-6961.yaml",
+              "sha256": "18d0e6d04266bb19f993b0f416797aeeb85950ecbc09f4b013360523f19bcffb",
+              "git_blob_sha1": "1c51964cedbc82f1d710a3f3e6b92cdabb350921",
+              "fixed_git_blob_verified": true
+            }
+          ],
+          "author_source_receipts_with_explicit_depth": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2018/CVE-2018-6961.yaml",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "non-wiki-technical-source",
+              "sha256": "18d0e6d04266bb19f993b0f416797aeeb85950ecbc09f4b013360523f19bcffb"
+            }
+          ],
+          "required_corrections_applied": [
+            "Clarify line 36: the second request carries a random marker, but the actual OR matcher at source lines 65-67 does not require that marker for acceptance.",
+            "Correct new frontmatter source field (line 16): it claims already-read CNA material, but no CNA reading event exists and the body states no CNA was obtained. Identify only actually read template/module sources; no original code or public values should change."
+          ],
+          "current_sha256": "578c6769c7b0d8a52c5efd1c44c32e0be06c558271a3fe2ca54be42cda3e5eed",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/网络设备/Cisco ASA/Cisco ASA CSCOE 会话目录遍历 CVE-2018-0296.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2018-0296"
+          ],
+          "specific_trigger": "nuclei lines 34-39; article line 30",
+          "outcome": "nuclei lines 41-50: sessions listing marker and 200",
+          "independent_scope_and_limits": "Directory information disclosure only; reload/DoS warning preserved.",
+          "dependency_boundary": "Only actually listed/read core sources are certified; generic framework/runtime and optional stages are not claimed fully read.",
+          "fixed_sources": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2018/CVE-2018-0296.yaml",
+              "sha256": "938d2411b9d2a220c1b6f879ac6b3b40e8c2e0b1aae45b066c13790276c9ac9b",
+              "git_blob_sha1": "f5da5e8c2bec5fb30a9f2c6b8375b35f42a56914",
+              "fixed_git_blob_verified": true
+            }
+          ],
+          "author_source_receipts_with_explicit_depth": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2018/CVE-2018-0296.yaml",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "non-wiki-technical-source",
+              "sha256": "938d2411b9d2a220c1b6f879ac6b3b40e8c2e0b1aae45b066c13790276c9ac9b"
+            }
+          ],
+          "required_corrections_applied": [
+            "Correct new frontmatter source field (line 16): it claims already-read CNA material, but no CNA reading event exists and the body states no CNA was obtained. Identify only actually read template/module sources; no original code or public values should change."
+          ],
+          "current_sha256": "9b0ab8e77d7c39dcc9a23de2a385eb6bdfc7e4951681d9e6dfe8c98c0ffb303c",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/运维面板/Quest KACE/Quest KACE agent installer 参数命令注入 CVE-2018-11138.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2018-11138"
+          ],
+          "specific_trigger": "MSF 108-142; article 30-36",
+          "outcome": "Source successful test declaration 31-32, explicit command invocation with www identity at 21-22",
+          "independent_scope_and_limits": "All 168 module lines read. Version-only Nuclei excluded. Generic 200 success message not accepted independently; tested source method includes serial/orgid/agent prerequisites.",
+          "dependency_boundary": "Only actually listed/read core sources are certified; generic framework/runtime and optional stages are not claimed fully read.",
+          "fixed_sources": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2018/CVE-2018-11138.yaml",
+              "sha256": "319e2c325f4f6c8889a5198bbe10831b59eb0021a9244a6aaf5cbd34d8b126a9",
+              "git_blob_sha1": "484bb43096933b5515476b1d7cce5f631acbe69d",
+              "fixed_git_blob_verified": true
+            },
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/unix/http/quest_kace_systems_management_rce.rb",
+              "sha256": "ec8b25ca777c09c2c4fd34943d923f44a2ac77e9551c763a7faaecb600b0d5e2",
+              "git_blob_sha1": "4072c627747bebffc514abc8ff41615f836200ff",
+              "fixed_git_blob_verified": true
+            }
+          ],
+          "author_source_receipts_with_explicit_depth": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2018/CVE-2018-11138.yaml",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "non-wiki-technical-source",
+              "sha256": "319e2c325f4f6c8889a5198bbe10831b59eb0021a9244a6aaf5cbd34d8b126a9"
+            },
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/unix/http/quest_kace_systems_management_rce.rb",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "non-wiki-technical-source",
+              "sha256": "ec8b25ca777c09c2c4fd34943d923f44a2ac77e9551c763a7faaecb600b0d5e2"
+            }
+          ],
+          "required_corrections_applied": [
+            "Correct new frontmatter source field (line 16): it claims already-read CNA material, but no CNA reading event exists and the body states no CNA was obtained. Identify only actually read template/module sources; no original code or public values should change."
+          ],
+          "current_sha256": "a18ac3e85b335eceec3c5aa7c4f87a854af62805d49aaf28636a11e815366eb1",
+          "runtime_executed": false
+        },
+        {
+          "path": "IOT安全/Dasan GPON/Dasan GPON 诊断dest_host命令注入 CVE-2018-10562.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2018-10562"
+          ],
+          "specific_trigger": "nuclei lines 31-45; article line 30",
+          "outcome": "nuclei lines 49-59: HTTP callback with random User-Agent",
+          "independent_scope_and_limits": "Distinct authentication bypass prerequisite acknowledged; no claim that command injection independently bypasses authentication.",
+          "dependency_boundary": "Only actually listed/read core sources are certified; generic framework/runtime and optional stages are not claimed fully read.",
+          "fixed_sources": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2018/CVE-2018-10562.yaml",
+              "sha256": "f0b44c28fe2fbce0bdb7d1c0d1bfe6ea75f20929dca9dec236eee376180ee734",
+              "git_blob_sha1": "f9b332213329275ddf14d3046df6dae6b4f44037",
+              "fixed_git_blob_verified": true
+            }
+          ],
+          "author_source_receipts_with_explicit_depth": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2018/CVE-2018-10562.yaml",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "non-wiki-technical-source",
+              "sha256": "f0b44c28fe2fbce0bdb7d1c0d1bfe6ea75f20929dca9dec236eee376180ee734"
+            }
+          ],
+          "required_corrections_applied": [
+            "Correct new frontmatter source field (line 16): it claims already-read CNA material, but no CNA reading event exists and the body states no CNA was obtained. Identify only actually read template/module sources; no original code or public values should change."
+          ],
+          "current_sha256": "8caa760e54bff6185915bd8d04846e0ab72dd74ea45a762441bdf1cc60e8177f",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/服务器软件/Zimbra/Zimbra 附件 Content-Location 存储型脚本注入 CVE-2018-6882.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2018-6882"
+          ],
+          "specific_trigger": "Securify web lines 71-98; article line 27",
+          "outcome": "Securify lines 70-72: script execution/external JavaScript load when opening message",
+          "independent_scope_and_limits": "Browser-side source-recorded expectation qualifies; external JavaScript is not needed to prove injection/load and was not fetched; its further behavior is not approved.",
+          "dependency_boundary": "Only actually listed/read core sources are certified; generic framework/runtime and optional stages are not claimed fully read.",
+          "fixed_sources": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2018/CVE-2018-6882.yaml",
+              "sha256": "08fb81bd86770b0c64604e3148f718edb79c5da047ead4d2934f43284f9d48f1",
+              "git_blob_sha1": "a41286a41c591045bf4292868cb538a9093d2d71",
+              "fixed_git_blob_verified": true
+            }
+          ],
+          "author_source_receipts_with_explicit_depth": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2018/CVE-2018-6882.yaml",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "non-wiki-technical-source",
+              "sha256": "08fb81bd86770b0c64604e3148f718edb79c5da047ead4d2934f43284f9d48f1"
+            },
+            {
+              "url": "https://www.securify.nl/advisory/cross-site-scripting-vulnerability-in-zimbra-collaboration-suite-due-to-the-way-it-handles-attachment-links/",
+              "reading_depth": "full-main-technical-text",
+              "provenance": "primary-research-web-text",
+              "sha256": "c4868b655a2437c972577bb26f5ed5916ecd99fa957540237e207297d6ab3659"
+            }
+          ],
+          "required_corrections_applied": [],
+          "current_sha256": "623052db76c4d4df13331d9060186153eb6a57fea2707d40e8032c65c9ba0a9e",
+          "runtime_executed": false
+        }
+      ]
+    },
+    {
+      "reviewed_utc": "2026-10-03T14:53:16.000183+00:00",
+      "review_base": "97afb504aad67bb5af39b62028299b6bbf015f5f",
+      "retained_files": 13,
+      "new_files": 12,
+      "supplemented_files": 1,
+      "qualified_candidate_ids": 13,
+      "final_byte_review_passed": true,
+      "rows": [
+        {
+          "path": "Web安全/桌面软件/Adobe/Adobe Reader util.printf格式字符串缓冲区溢出（CVE-2008-2992）.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2008-2992"
+          ],
+          "specific_trigger": "完整185行主文件包含异常util.printf参数、堆准备、OpenAction与PDF封装；没有外部样本核心。",
+          "outcome": "模块声称用户态代码执行；目标仅Reader 8.1.2 / XP SP3 English，未附运行日志或阴性对照。",
+          "mapping": "CNA descriptions/references independently refetched and equal reviewed cache; source technique and version claims cross-checked",
+          "dependency_boundary": "可通过具体公开PoC存在性门槛。通用载荷、HTTP框架及未读fileformat变体不在审计结论内；发送或生成PDF不是触发证据。",
+          "source_receipts": [
+            {
+              "sha256": "6eca806bf6824ab4d0d9d19f208271a227694d0391b2d246341ff07ca209888b",
+              "read_depth": "complete-technical-file",
+              "upstream_fidelity": "Git blob recomputed against supplied fixed-commit tree receipt; not inferred from cache SHA256",
+              "git_blob_sha1": "913c71bc7dc1219aa16936106956cbffefbaa4fb",
+              "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/windows/browser/adobe_utilprintf.rb"
+            },
+            {
+              "sha256": "86286599dde5e63ce8d472c87c74550c2522a6f821af096e7f2e2d8a2784690e",
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2008-2992",
+              "read_depth": "CNA description, references, provider metadata only"
+            }
+          ],
+          "required_notes_retained": [
+            "保留XP SP3 English与8.1.2单目标限制、未复现状态、内存/进程副作用及8.1.3仅模块边界的出处说明。"
+          ],
+          "current_sha256": "959e92023ecdcac70ebd288fb5d165033c25bc34f98f9d4deabc6597f79bd130",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/网络设备/Cisco/Cisco IOS HTTP管理表单跨站请求伪造（CVE-2008-4128）.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2008-4128"
+          ],
+          "specific_trigger": "两份完整历史自动提交表单分别提供读取权限与修改命令别名的具体POST字段。",
+          "outcome": "应观察IOS命令结果或配置变化；原件未给响应、认证抓包或前后对照。",
+          "mapping": "CNA descriptions/references independently refetched and equal reviewed cache; source technique and version claims cross-checked",
+          "dependency_boundary": "CSRF依赖管理员浏览器认证上下文，非匿名shell。EDB6477自身无CVE；双表单映射由CNA两个端点及双引用确认。",
+          "source_receipts": [
+            {
+              "sha256": "517786ce6da4667c529397d0817a427c79807b8568e54120bb0e021fd54f1141",
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2008-4128",
+              "read_depth": "CNA description, references, provider metadata only"
+            },
+            {
+              "url": "https://www.exploit-db.com/exploits/6476",
+              "sha256": "466a8c3949be4e8b0f225de1336a90b4d775e93a4c3c78a04c882616edd841c5",
+              "read_depth": "full technical code body and page metadata; HTML page not executed",
+              "fidelity": "Fresh EDB code element equals cache, preserving CRLF. Independent web text was also read; no Git-original claim."
+            },
+            {
+              "url": "https://www.exploit-db.com/exploits/6477",
+              "sha256": "1ba93b8310af83c4e014bb986067ae4bd2b45552ead53b1c3ce8e4202342842d",
+              "read_depth": "full technical code body and page metadata; HTML page not executed",
+              "fidelity": "Fresh EDB code element equals cache, preserving CRLF. Independent web text was also read; no Git-original claim."
+            }
+          ],
+          "required_notes_retained": [
+            "保留第二表单改变设备配置、无回滚、维护版本未知及不能凭HTTP200判定的说明。"
+          ],
+          "current_sha256": "7677f6942049eaf56363dc5ef22e6074b59debdb5a6eeeb3cfe112b393445c71",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/桌面软件/Adobe/Adobe Reader Collab.getIcon栈缓冲区溢出（CVE-2009-0927）.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2009-0927"
+          ],
+          "specific_trigger": "完整207行主文件给出长字符串构造、Collab.getIcon调用与OpenAction PDF封装。",
+          "outcome": "源码记录XP SP3上8.0.0/8.1.2/9.0.0有效；特定7.x未触发，不等于CNA7.x分支无漏洞。",
+          "mapping": "CNA descriptions/references independently refetched and equal reviewed cache; source technique and version claims cross-checked",
+          "dependency_boundary": "具体PoC主体完整；通用载荷/HTTP框架未全面审计。CNA明确区别2009-0658。",
+          "source_receipts": [
+            {
+              "sha256": "8f71f2468e87e6a51d5c1b6def5e0c9cffbbe0b3b07ef88a9da8ec1b0c6d38f6",
+              "read_depth": "complete-technical-file",
+              "upstream_fidelity": "Git blob recomputed against supplied fixed-commit tree receipt; not inferred from cache SHA256",
+              "git_blob_sha1": "2bf21b7d738c3b80d6fdcd73245ec71fdeaec462",
+              "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/windows/browser/adobe_geticon.rb"
+            },
+            {
+              "sha256": "1d22745efcc91078fe46ad37ad90740b69bf0f57f894b470f8fea9341d92c4b7",
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2009-0927",
+              "read_depth": "CNA description, references, provider metadata only"
+            }
+          ],
+          "required_notes_retained": [
+            "保留no trigger、reported not vulnerable与works之间的原始差别；不把Universal标题当全平台保证。"
+          ],
+          "current_sha256": "dd474e0bcaacffecb3a709482f1df0b30e0b674c008a4eed147a310168847ddc",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/桌面软件/Adobe/Adobe Reader FlateDecode预测器整数溢出（CVE-2009-3459）.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2009-3459"
+          ],
+          "specific_trigger": "完整238行主文件可见FlateDecode解码参数、实际流数据及PDF结构；无外部PDF核心。",
+          "outcome": "源码仅列9.1.0/XP SP3 works、9.2 not vulnerable；原在野字节崩溃说明与模块实际改用数据分开。",
+          "mapping": "CNA descriptions/references independently refetched and equal reviewed cache; source technique and version claims cross-checked",
+          "dependency_boundary": "整数溢出到内存破坏的源码对应关系足以支持此CVE的窄技术整理；不扩展到未测7.x/8.x。",
+          "source_receipts": [
+            {
+              "sha256": "d967e8fd98373f759f9750b4228e279938d2d9c4e2383d74a071970b00d6aff4",
+              "read_depth": "complete-technical-file",
+              "upstream_fidelity": "Git blob recomputed against supplied fixed-commit tree receipt; not inferred from cache SHA256",
+              "git_blob_sha1": "a63491d369aae7b6b6778c1f92c6baaf451c09dc",
+              "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/windows/browser/adobe_flatedecode_predictor02.rb"
+            },
+            {
+              "sha256": "ceeae940fec7c89e99275bfb392f86f0379e77ae60175c180abde5559274072d",
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2009-3459",
+              "read_depth": "CNA description, references, provider metadata only"
+            }
+          ],
+          "required_notes_retained": [
+            "保留CNA分支边界、原在野流与当前模块流的区别、未获得厂商历史正文及非运行证明说明。"
+          ],
+          "current_sha256": "a1af3b62d8e9e5a1c1e5bd284d1542ee8c2e75cb76cbcc3329860dbfd809be9c",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/桌面软件/Adobe/Adobe Reader U3D网格声明数组越界（CVE-2009-3953）.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2009-3953"
+          ],
+          "specific_trigger": "完整485行主文件含U3D头、网格声明、modifier/continuation、PDF3D注释和内联JS。",
+          "outcome": "XP SP3源码测试记8.1.2/9.1.0可用，8.1.3不工作；页面切换与print路径可造成UI及进程影响。",
+          "mapping": "CNA descriptions/references independently refetched and equal reviewed cache; source technique and version claims cross-checked",
+          "dependency_boundary": "ObfuscateJS只包装已可读JS；窄范围触发结构完整。任意载荷、通用混淆器及FILEFORMAT未全面审计，不能保证运行。",
+          "source_receipts": [
+            {
+              "sha256": "30730b77d523caeaf0a87cd784eb217ccbc5d6b4101273035c952e1503573b6b",
+              "read_depth": "complete-technical-file",
+              "upstream_fidelity": "Git blob recomputed against supplied fixed-commit tree receipt; not inferred from cache SHA256",
+              "git_blob_sha1": "09dd2d695819b00318ca9962f5d91de9cca89666",
+              "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/windows/fileformat/adobe_u3d_meshdecl.rb"
+            },
+            {
+              "sha256": "94498f34622a57cd70f0038643a41a2f7aae6564b842bb2b7c30b3e6f042a464",
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2009-3953",
+              "read_depth": "CNA description, references, provider metadata only"
+            }
+          ],
+          "required_notes_retained": [
+            "保留8.1.3失败不等于修复、打印UI副作用，以及CNA与2009-2994不同实体的说明。"
+          ],
+          "current_sha256": "82f03ec82e9518bef1eacda7c5bd8032c5e0aea2c6f880fa1497b3fa03dcb505",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/中间件/Adobe ColdFusion/Adobe BlazeDS AMFX外部实体文件读取与判据边界（CVE-2009-3960）.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2009-3960"
+          ],
+          "specific_trigger": "完整Ruby主体与Bash实现均含AMFX实体文档和发送流程，不依赖未知二进制。",
+          "outcome": "文件内容实际出现在响应才有意义；脚本HTTP200加XML仅输出筛选，不是成功证明。",
+          "mapping": "CNA descriptions/references independently refetched and equal reviewed cache; source technique and version claims cross-checked",
+          "dependency_boundary": "CNA与EDB编号和产品列表对应；认证、XML解析与文件权限按部署判断。Ruby与Bash实现不同，未宣称已修复来源脚本。",
+          "source_receipts": [
+            {
+              "sha256": "bc5b012176cf9ba5651fba8d215c1b630094c7eb72a92b2ee838d311a1da8ed4",
+              "read_depth": "complete-technical-file",
+              "upstream_fidelity": "Git blob recomputed against supplied fixed-commit tree receipt; not inferred from cache SHA256",
+              "git_blob_sha1": "b88def558e5f720f3b8d83af108420a9b1a1dab0",
+              "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/modules/auxiliary/scanner/http/adobe_xml_inject.rb"
+            },
+            {
+              "sha256": "cc8181f794c377c133fe62532c0c8cae95f23ba26644ab3662634efa0e311c5e",
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2009-3960",
+              "read_depth": "CNA description, references, provider metadata only"
+            },
+            {
+              "url": "https://www.exploit-db.com/exploits/41855",
+              "sha256": "53176898622b39de0d2c608099e1259b6a8be7b1d83269afcf3995bbd9f9c39b",
+              "read_depth": "full technical code body and page metadata; HTML page not executed",
+              "fidelity": "Fresh EDB code element equals cache, preserving CRLF. Independent web text was also read; no Git-original claim."
+            }
+          ],
+          "required_notes_retained": [
+            "保留端点遍历、禁用端点、临时文件、输出过滤和TLS校验风险；未知修复表与无任意后续利用链。"
+          ],
+          "current_sha256": "cc81e5f3c6b17b6e58b7fb959f0260793698528b961bdc638c5a978fa75c84b6",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/桌面软件/Adobe/Adobe Reader Doc.media.newPlayer释放后重用（CVE-2009-4324）.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2009-4324"
+          ],
+          "specific_trigger": "完整220行主文件包括printd/newPlayer调用顺序、内存准备及OpenAction PDF封装。",
+          "outcome": "XP SP3源码记8.1.1/9.1.0 works；9.2条件为无调试器且无DEP。其他分支测试与CNA范围分开。",
+          "mapping": "CNA descriptions/references independently refetched and equal reviewed cache; source technique and version claims cross-checked",
+          "dependency_boundary": "窄触发核心完整，英语/德语布局与内存防护条件不能省略；通用载荷/HTTP未完整审计。",
+          "source_receipts": [
+            {
+              "sha256": "806370f7a90e3e2edf7c1118b91c0545e42e8ea74321ce211aba5c8b244a4800",
+              "read_depth": "complete-technical-file",
+              "upstream_fidelity": "Git blob recomputed against supplied fixed-commit tree receipt; not inferred from cache SHA256",
+              "git_blob_sha1": "164f084cd87ea4480617900a0de239fd30d44f9f",
+              "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/windows/browser/adobe_media_newplayer.rb"
+            },
+            {
+              "sha256": "e4caedcb3027cea64f39b9be218f1f79b492a0c79a7afb7a585c2d58a7fb3541",
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2009-4324",
+              "read_depth": "CNA description, references, provider metadata only"
+            }
+          ],
+          "required_notes_retained": [
+            "保留6.x/7.x注释不直接扩大已核CNA范围、语言布局、DEP条件及catch不代表修复。"
+          ],
+          "current_sha256": "22495fdc80767736c9694e760c37f365310824c8d64c39e1a615b0036796b26e",
+          "runtime_executed": false
+        },
+        {
+          "path": "系统安全/Windows/Windows KiTrap0D本地提权的原始源码与验证边界（CVE-2010-0232）.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2010-0232"
+          ],
+          "specific_trigger": "README、Makefile及完整426/357行C文件提供初始化、注入、VDM触发与令牌替换源码；核心不再是不透明DLL。",
+          "outcome": "原包截图可见XP5.1.2600、whoami的SYSTEM与进程SYSTEM身份；属于来源记录。成功文字未检验替换返回值，不能单独当身份结果。",
+          "mapping": "CNA descriptions/references independently refetched and equal reviewed cache; source technique and version claims cross-checked",
+          "dependency_boundary": "镜像SHA1与原披露附录一致，6个已读成员逐字节匹配；未验证PGP、未核二进制可复现构建。Microsoft0232专列为x86本地权限范围。",
+          "source_receipts": [
+            {
+              "sha256": "efcf39d8cb4bca9b22886860b1b91b91f6a68e4d94d96ed4993f576cb4ead869",
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2010-0232",
+              "read_depth": "CNA description, references, provider metadata only"
+            },
+            {
+              "sha256": "eb0ed88ceab6bd6f3124d725746a0e172f2a3a2743e79963cc33356e22efd985",
+              "read_depth": "complete file"
+            },
+            {
+              "sha256": "9d926ddf09d75db16294250d01f788144b64ac3fca3466cbd8fbf3492131abf7",
+              "read_depth": "complete file"
+            },
+            {
+              "sha256": "d7d5668fc1ef3c781f91e7d05fb4180bb9900fdcf6325ff8eca1d66645f4437a",
+              "read_depth": "complete file"
+            },
+            {
+              "sha256": "315af69361627ce681e8b9a325c93d8c6959a3a5f93c6a0fa3c82da16c71ed3c",
+              "read_depth": "complete file"
+            },
+            {
+              "sha256": "de96951bf79d8584e6ec484223f9b2e8876522e56b4f33592845d64cb8f45f85",
+              "read_depth": "complete file"
+            },
+            {
+              "sha256": "02e8029aa1b028afaa8914c2f422f3fab5b7885c99b51f8190119907b8a209b3",
+              "read_depth": "image pixels viewed"
+            },
+            {
+              "url": "https://seclists.org/fulldisclosure/2010/Jan/341",
+              "read_depth": "technical disclosure, versions, mitigation, credit and SHA1 appendix; corresponding local ADVISORY fully read"
+            },
+            {
+              "url": "https://learn.microsoft.com/en-us/security-updates/securitybulletins/2010/ms10-015",
+              "read_depth": "publication/KB identity; independent CVE-0232 severity column; CVE-0232 section including mitigation and FAQ. Not full700-line bulletin."
+            }
+          ],
+          "required_notes_retained": [
+            "保留0232/0233范围分离、NTVDM前提、内核改写/注入/终止风险、原截图与本库未复现的区别。"
+          ],
+          "current_sha256": "739267c0f8e16f785430b2cc253e807b25a77e2f14af59c7bb886da12103c72c",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/开发框架/JBoss Seam/JBoss Seam 2 EL注入的公开请求与安全管理器前提（CVE-2010-1871）.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2010-1871"
+          ],
+          "specific_trigger": "完整106行主文件公开EL反射枚举、命令请求与Location判定；没有缺失恶意核心。",
+          "outcome": "UNIXProcess重定向字符串是进程对象判据而非stdout；枚举25项及平台顺序限制被保留。",
+          "mapping": "CNA descriptions/references independently refetched and equal reviewed cache; source technique and version claims cross-checked",
+          "dependency_boundary": "RedHat原始缺陷说明、EAP4.3与4.2差别、社区2.2.1.CR2讨论均独立核对；现有195字节缓存是错误页，不能作为正文证据，使用本次web读取回执。",
+          "source_receipts": [
+            {
+              "sha256": "0574c6af2a12425f299d6c26e5b33d11a02a0396a9b90ca3b060ace0ddd15d69",
+              "read_depth": "complete-technical-file",
+              "upstream_fidelity": "Git blob recomputed against supplied fixed-commit tree receipt; not inferred from cache SHA256",
+              "git_blob_sha1": "698c23097b5416a664622bc8431d9bb3e131768c",
+              "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/modules/auxiliary/admin/http/jboss_seam_exec.rb"
+            },
+            {
+              "sha256": "b21f1d515062058b869a44a0a8bf79da5405d91384d833331d0b3fa55a3beb58",
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2010-1871",
+              "read_depth": "CNA description, references, provider metadata only"
+            },
+            {
+              "url": "https://bugzilla.redhat.com/show_bug.cgi?id=615956",
+              "read_depth": "description, errata linkage and product/fix comments7–15"
+            }
+          ],
+          "required_notes_retained": [
+            "保留Security Manager条件、Seam应用路径前提、非所有WebSphere/JBoss漏洞及创建进程副作用。"
+          ],
+          "current_sha256": "b8fef2d29e9d6f3788c8d37a9f9ebd3dbc478261ace4985f757de2fc6e3a5f11",
+          "runtime_executed": false
+        },
+        {
+          "path": "系统安全/Linux/Linux RDS本地提权的原始C源码与内核状态副作用（CVE-2010-3904）.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2010-3904"
+          ],
+          "specific_trigger": "EDB完整原始C提供本地RDS写入与凭据改变；独立于未审计MSF配套二进制。",
+          "outcome": "原C仅在getuid为零后进入成功分支；恢复函数指针不等于恢复原security_ops。",
+          "mapping": "CNA descriptions/references independently refetched and equal reviewed cache; source technique and version claims cross-checked",
+          "dependency_boundary": "CNA、EDB编号及原C与MSF版本判据差别对应。窄PoC门槛通过，但frontmatter的代码签名前提无源码依据，需局部校正。",
+          "source_receipts": [
+            {
+              "sha256": "493080366479b60347b8b62ba82c09ea4100c4ea7305ef17cc47d34308dd39eb",
+              "read_depth": "complete-technical-file",
+              "upstream_fidelity": "Git blob recomputed against supplied fixed-commit tree receipt; not inferred from cache SHA256",
+              "git_blob_sha1": "63be9c53ccde91c023e8c5328439690b4992de1b",
+              "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/linux/local/rds_rds_page_copy_user_priv_esc.rb"
+            },
+            {
+              "sha256": "8b194e1b7df43dfa6576cef06215ed4b4db3e8a281b9c569427da7b617aa74d2",
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2010-3904",
+              "read_depth": "CNA description, references, provider metadata only"
+            },
+            {
+              "url": "https://www.exploit-db.com/exploits/15285",
+              "sha256": "ad203e4f4a913c3c4e0e147499fc25f65705ff1815672b18c6294f81f01293e4",
+              "read_depth": "full technical code body and page metadata; HTML page not executed",
+              "fidelity": "Fresh EDB code element equals cache, preserving CRLF. Independent web text was also read; no Git-original claim."
+            }
+          ],
+          "required_notes_retained": [
+            "必改：prerequisites中的“代码签名和内核布局满足来源假设”改为“内核符号可见性及结构布局满足来源假设”。其余原始值不改。",
+            "保留原C/MSF二进制边界、粗版本筛选、内核状态未完全恢复及崩溃/挂起风险。"
+          ],
+          "current_sha256": "02905d023759de6d78420cc212542813a6960e06a6e71e4e89c3bc99736c3062",
+          "runtime_executed": false
+        },
+        {
+          "path": "IOT安全/Ubiquiti/Ubiquiti AirOS stainfo.cgi命令注入与低权限账户前提（CVE-2010-5330）.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2010-5330"
+          ],
+          "specific_trigger": "原始完整披露提供stainfo.cgi的具体GET命令注入样例；CNA直接引用同一EDB。",
+          "outcome": "预期为所选配置行输出，未附完整响应或阴性对照。",
+          "mapping": "CNA descriptions/references independently refetched and equal reviewed cache; source technique and version claims cross-checked",
+          "dependency_boundary": "已有低权限/只读账户是明确前提；源称all firmwares不可扩至今天。CNA三个固件分支修复值可保留为其记录口径。",
+          "source_receipts": [
+            {
+              "sha256": "c6f681338fc05c51ed62310c09a9a0d5de48418a81502d4bc82e5b59fa5af5a1",
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2010-5330",
+              "read_depth": "CNA description, references, provider metadata only"
+            },
+            {
+              "url": "https://www.exploit-db.com/exploits/14146",
+              "sha256": "3e7f436f4ceac6a5ecbd3b43d503c5eca32b6219957ce8a9a1228d2b32010fc4",
+              "read_depth": "full technical code body and page metadata; HTML page not executed",
+              "fidelity": "Fresh EDB code element equals cache, preserving CRLF. Independent web text was also read; no Git-original claim."
+            }
+          ],
+          "required_notes_retained": [
+            "保留两种披露日期、构建号未知、账户前提、配置内容形成副本的副作用；UniFi新闻不是此旧实体主文。"
+          ],
+          "current_sha256": "2e7d65a7df99965adbadcad41b57841608b2685ff9ad989b2c1df8b82c83e39f",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/中间件/JBoss/（CVE-2010-0738）JBoss JMX控制台安全验证绕过漏洞.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2010-0738"
+          ],
+          "specific_trigger": "完整辅助模块加4个JBoss入口/基类/BeanShell脚本文件可见HEAD参数构造、写文件、分阶段部署与删除实现。",
+          "outcome": "预期文件落地和加载才可观察；2xx/200、空catch以及false被nil?误判的清理日志均不能作成功证据。",
+          "mapping": "CNA descriptions/references independently refetched and equal reviewed cache; source technique and version claims cross-checked",
+          "dependency_boundary": "只有非GET/POST且安全约束存在对应缺口才归属0738。任意外部WAR行为不在窄部署审阅内。补充既有主文，不新建第二主入口。",
+          "source_receipts": [
+            {
+              "sha256": "dd4bc0981dfffaab2cc1f3b42b703f16a27fab84010e0e4afc6fe3578dabb511",
+              "read_depth": "complete-technical-file",
+              "upstream_fidelity": "Git blob recomputed against supplied fixed-commit tree receipt; not inferred from cache SHA256",
+              "git_blob_sha1": "bfad0c280ed5054da54b409e96333199227cbbe1",
+              "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/modules/auxiliary/admin/http/jboss_bshdeployer.rb"
+            },
+            {
+              "sha256": "8ddc01baa84ba6976e3a707117591f40d33acaf3199885e8d71fd293612a870e",
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2010-0738",
+              "read_depth": "CNA description, references, provider metadata only"
+            },
+            {
+              "sha256": "84f2380a5f4438ca706a8366275f74425bc5ac74c258e5178320f0749e56fc3c",
+              "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/lib/msf/core/exploit/remote/http/jboss.rb",
+              "read_depth": "complete helper file; fresh bytes match reviewed cache"
+            },
+            {
+              "sha256": "497ce66c8c7df1aced346f2b420245e3a605b9c3ae0ebe9e4fe90ea17b683ecb",
+              "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/lib/msf/core/exploit/remote/http/jboss/base.rb",
+              "read_depth": "complete helper file; fresh bytes match reviewed cache"
+            },
+            {
+              "sha256": "0a7e68b4d6fa2aa158bc3f086c37402a0a319c53abdb7d0b37ee3fcd4d7f74bd",
+              "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/lib/msf/core/exploit/remote/http/jboss/bean_shell.rb",
+              "read_depth": "complete helper file; fresh bytes match reviewed cache"
+            },
+            {
+              "sha256": "4e00f48192255f123bc07741520385bf0e90785c1a50b327cbd48ee7c3a48dee",
+              "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/lib/msf/core/exploit/remote/http/jboss/bean_shell_scripts.rb",
+              "read_depth": "complete helper file; fresh bytes match reviewed cache"
+            },
+            {
+              "url": "https://bugzilla.redhat.com/show_bug.cgi?id=574105",
+              "read_depth": "original security constraint, errata names, community-version comment11"
+            },
+            {
+              "sha256": "25db045cac780439d8c1eb87db6bae0bc343c597acb243903aff4c0fbb88238c",
+              "read_depth": "full existing target article"
+            },
+            {
+              "sha256": "ebf42fe5ee738a8c541729ff71b90f29f3a42343147f75729d039c7cbf557132",
+              "read_depth": "0738 section and metadata used for dedup; overbroad cat also returned later unrelated sections, not counted as research or admission credit"
+            }
+          ],
+          "required_notes_retained": [
+            "保留POST默认值与HEAD绕过区别、BSHDeployer/部署目录前提、写入/覆盖/删除及假成功清理风险。",
+            "仅将此稿补入已有0738文章；历史畸形请求与缺口继续保留。新来源并不证明旧请求原始出处，也不升级为本库复现。"
+          ],
+          "current_sha256": "b07cba55fecec47e94666b9645cbf7bb04726c7db9b6d4e1b15f2ae935f3911a",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/桌面软件/Mozilla/Firefox DOM插入交错最小崩溃用例（CVE-2010-3765）.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2010-3765"
+          ],
+          "specific_trigger": "Complete self-contained369-byte Mozilla attachment486011; no external script or binary core",
+          "outcome": "Bug607222 comment17 documents duplicate text frames, stale cachedlength1 instead of7 and buffer overrun/crash; not claimed fullRCE",
+          "sources": [
+            {
+              "url": "https://bugzilla.mozilla.org/attachment.cgi?action=edit&id=486011",
+              "reading_depth": "complete displayed attachment source text",
+              "original_bytes_verified": false
+            },
+            {
+              "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=607222",
+              "reading_depth": "metadata and relevant comments0–17, not all discussion"
+            },
+            {
+              "url": "https://www.mozilla.org/en-US/security/advisories/mfsa2010-73/",
+              "reading_depth": "complete advisory technical body and versionlist"
+            }
+          ],
+          "limits": "Original attachment bytes/hash not independently obtained; successful web-extracted text retained; other attachment429 not retried or bypassed. Narrow crash test only.",
+          "current_sha256": "b3fe72e1b382de17343663616d21ba288f864fdb827cf434249bfc8ba7687445",
+          "runtime_executed": false
+        }
+      ]
     }
   ],
   "current_totals": {
-    "article_files": 128,
-    "new_files": 72,
-    "supplemented_files": 56,
-    "qualified_candidate_ids": 140,
+    "article_files": 189,
+    "new_files": 118,
+    "supplemented_files": 71,
+    "qualified_candidate_ids": 202,
     "full_scope_complete": false
   },
   "subsequent_master_sync": {

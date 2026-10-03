@@ -7,3 +7,7 @@
 ## NUUO NVR/NVRMini 2
 
 - [NUUO 摄像头存在远程命令执行漏洞 附 POC](../IOT%E5%AE%89%E5%85%A8/NUUO/NUUO%20%E6%91%84%E5%83%8F%E5%A4%B4%E5%AD%98%E5%9C%A8%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E%20%E9%99%84%20POC.md) [vulnerability; not-reproduced; needs-review]
+
+## NUUO NVRmini
+
+- [NUUO NVRmini upgrade_handle 命令注入（CVE-2018-14933）](../IOT%E5%AE%89%E5%85%A8/NUUO/NUUO%20NVRmini%20upgrade_handle%20%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5%20CVE-2018-14933.md) [vulnerability; not-reproduced; needs-review]

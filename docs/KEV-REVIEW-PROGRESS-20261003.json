@@ -18,7 +18,7 @@
     "platform-blocked": 215
   },
   "positive_reading_record_count": 1262,
-  "current_blocked_scope_count": 894,
+  "current_blocked_scope_count": 971,
   "full_read_provenance_counts": {
     "non-wiki-technical-source-text": 690,
     "original-author-technical-text-in-third-party-web-archive": 1,
@@ -29,12 +29,12 @@
     "explicit-prior-source-audit-reuse": 1
   },
   "disposition_counts": {
-    "still-pending": 217,
-    "published": 140,
-    "awaiting-peer-or-required-notes": 111,
-    "bounded-hold": 327,
-    "platform-blocked": 894,
-    "sufficient-duplicate": 38
+    "still-pending": 188,
+    "published": 202,
+    "bounded-hold": 316,
+    "platform-blocked": 971,
+    "sufficient-duplicate": 38,
+    "awaiting-peer-or-required-notes": 12
   },
   "post_checkpoint_pause": [
     {
@@ -48,9 +48,17 @@
       "count": 146,
       "trigger_unknown": true,
       "reading_facts_unchanged": true
+    },
+    {
+      "years": "2013–2015",
+      "entire_scope": 118,
+      "already_paused": 41,
+      "newly_paused": 77,
+      "trigger_unknown": true,
+      "reading_facts_unchanged": true
     }
   ],
-  "publication_projection_utc": "2026-10-03T14:17:00.399636+00:00",
+  "publication_projection_utc": "2026-10-03T14:53:16.000183+00:00",
   "reading_checkpoint_utc": "2026-10-03T13:35:49.404798+00:00",
   "reading_input_cutoffs": {
     "2021_block": "2026-10-03T12:46:56Z",
@@ -63,9 +71,9 @@
   "source_review_snapshot_commit": "71097470d9db981bb0f545ce143e353e6b85262e",
   "master_base": "b176eecef836688c637e60c94284ccec1f1427c5",
   "units": "Unique CVEs for reading and dispositions; article files separately. Published means draft branch, not merged master.",
-  "article_file_count": 128,
-  "new_files": 72,
-  "supplemented_files": 56,
+  "article_file_count": 189,
+  "new_files": 118,
+  "supplemented_files": 71,
   "full_scope_complete": false,
   "rows": [
     {
@@ -276,13 +284,19 @@
       "full_read_provenance": null,
       "current_blocked_scope": false,
       "reading_receipt_status": "no-confirmed-reading-record",
-      "pending_subtype": "unreviewed",
-      "current_material_eligibility": "review-not-complete",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "unread",
       "compatible_reading_bucket": "unread",
-      "disposition": "still-pending",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/桌面软件/Adobe/Adobe Reader util.printf格式字符串缓冲区溢出（CVE-2008-2992）.md",
+          "mode": "new",
+          "sha256": "959e92023ecdcac70ebd288fb5d165033c25bc34f98f9d4deabc6597f79bd130"
+        }
+      ]
     },
     {
       "cve": "CVE-2008-3431",
@@ -310,13 +324,19 @@
       "full_read_provenance": null,
       "current_blocked_scope": false,
       "reading_receipt_status": "no-confirmed-reading-record",
-      "pending_subtype": "unreviewed",
-      "current_material_eligibility": "review-not-complete",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "unread",
       "compatible_reading_bucket": "unread",
-      "disposition": "still-pending",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/网络设备/Cisco/Cisco IOS HTTP管理表单跨站请求伪造（CVE-2008-4128）.md",
+          "mode": "new",
+          "sha256": "7677f6942049eaf56363dc5ef22e6074b59debdb5a6eeeb3cfe112b393445c71"
+        }
+      ]
     },
     {
       "cve": "CVE-2008-4250",
@@ -412,13 +432,19 @@
       "full_read_provenance": null,
       "current_blocked_scope": false,
       "reading_receipt_status": "no-confirmed-reading-record",
-      "pending_subtype": "unreviewed",
-      "current_material_eligibility": "review-not-complete",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "unread",
       "compatible_reading_bucket": "unread",
-      "disposition": "still-pending",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/桌面软件/Adobe/Adobe Reader Collab.getIcon栈缓冲区溢出（CVE-2009-0927）.md",
+          "mode": "new",
+          "sha256": "dd474e0bcaacffecb3a709482f1df0b30e0b674c008a4eed147a310168847ddc"
+        }
+      ]
     },
     {
       "cve": "CVE-2009-1123",
@@ -537,13 +563,19 @@
       "full_read_provenance": null,
       "current_blocked_scope": false,
       "reading_receipt_status": "no-confirmed-reading-record",
-      "pending_subtype": "unreviewed",
-      "current_material_eligibility": "review-not-complete",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "unread",
       "compatible_reading_bucket": "unread",
-      "disposition": "still-pending",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/桌面软件/Adobe/Adobe Reader FlateDecode预测器整数溢出（CVE-2009-3459）.md",
+          "mode": "new",
+          "sha256": "a1af3b62d8e9e5a1c1e5bd284d1542ee8c2e75cb76cbcc3329860dbfd809be9c"
+        }
+      ]
     },
     {
       "cve": "CVE-2009-3953",
@@ -554,13 +586,19 @@
       "full_read_provenance": null,
       "current_blocked_scope": false,
       "reading_receipt_status": "no-confirmed-reading-record",
-      "pending_subtype": "unreviewed",
-      "current_material_eligibility": "review-not-complete",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "unread",
       "compatible_reading_bucket": "unread",
-      "disposition": "still-pending",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/桌面软件/Adobe/Adobe Reader U3D网格声明数组越界（CVE-2009-3953）.md",
+          "mode": "new",
+          "sha256": "82f03ec82e9518bef1eacda7c5bd8032c5e0aea2c6f880fa1497b3fa03dcb505"
+        }
+      ]
     },
     {
       "cve": "CVE-2009-3960",
@@ -571,13 +609,19 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/中间件/Adobe ColdFusion/Adobe BlazeDS AMFX外部实体文件读取与判据边界（CVE-2009-3960）.md",
+          "mode": "new",
+          "sha256": "cc81e5f3c6b17b6e58b7fb959f0260793698528b961bdc638c5a978fa75c84b6"
+        }
+      ]
     },
     {
       "cve": "CVE-2009-4324",
@@ -588,13 +632,19 @@
       "full_read_provenance": null,
       "current_blocked_scope": false,
       "reading_receipt_status": "no-confirmed-reading-record",
-      "pending_subtype": "unreviewed",
-      "current_material_eligibility": "review-not-complete",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "unread",
       "compatible_reading_bucket": "unread",
-      "disposition": "still-pending",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/桌面软件/Adobe/Adobe Reader Doc.media.newPlayer释放后重用（CVE-2009-4324）.md",
+          "mode": "new",
+          "sha256": "22495fdc80767736c9694e760c37f365310824c8d64c39e1a615b0036796b26e"
+        }
+      ]
     },
     {
       "cve": "CVE-2010-0188",
@@ -622,13 +672,19 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "系统安全/Windows/Windows KiTrap0D本地提权的原始源码与验证边界（CVE-2010-0232）.md",
+          "mode": "new",
+          "sha256": "739267c0f8e16f785430b2cc253e807b25a77e2f14af59c7bb886da12103c72c"
+        }
+      ]
     },
     {
       "cve": "CVE-2010-0249",
@@ -656,13 +712,19 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/中间件/JBoss/（CVE-2010-0738）JBoss JMX控制台安全验证绕过漏洞.md",
+          "mode": "supplement",
+          "sha256": "b07cba55fecec47e94666b9645cbf7bb04726c7db9b6d4e1b15f2ae935f3911a"
+        }
+      ]
     },
     {
       "cve": "CVE-2010-0806",
@@ -741,13 +803,19 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/开发框架/JBoss Seam/JBoss Seam 2 EL注入的公开请求与安全管理器前提（CVE-2010-1871）.md",
+          "mode": "new",
+          "sha256": "b8fef2d29e9d6f3788c8d37a9f9ebd3dbc478261ace4985f757de2fc6e3a5f11"
+        }
+      ]
     },
     {
       "cve": "CVE-2010-2568",
@@ -866,13 +934,19 @@
       "full_read_provenance": null,
       "current_blocked_scope": false,
       "reading_receipt_status": "no-confirmed-reading-record",
-      "pending_subtype": "unreviewed",
-      "current_material_eligibility": "review-not-complete",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "unread",
       "compatible_reading_bucket": "unread",
-      "disposition": "still-pending",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/桌面软件/Mozilla/Firefox DOM插入交错最小崩溃用例（CVE-2010-3765）.md",
+          "mode": "new",
+          "sha256": "b3fe72e1b382de17343663616d21ba288f864fdb827cf434249bfc8ba7687445"
+        }
+      ]
     },
     {
       "cve": "CVE-2010-3904",
@@ -883,13 +957,19 @@
       "full_read_provenance": null,
       "current_blocked_scope": false,
       "reading_receipt_status": "no-confirmed-reading-record",
-      "pending_subtype": "unreviewed",
-      "current_material_eligibility": "review-not-complete",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "unread",
       "compatible_reading_bucket": "unread",
-      "disposition": "still-pending",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "系统安全/Linux/Linux RDS本地提权的原始C源码与内核状态副作用（CVE-2010-3904）.md",
+          "mode": "new",
+          "sha256": "02905d023759de6d78420cc212542813a6960e06a6e71e4e89c3bc99736c3062"
+        }
+      ]
     },
     {
       "cve": "CVE-2010-3962",
@@ -985,13 +1065,19 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "IOT安全/Ubiquiti/Ubiquiti AirOS stainfo.cgi命令注入与低权限账户前提（CVE-2010-5330）.md",
+          "mode": "new",
+          "sha256": "2e7d65a7df99965adbadcad41b57841608b2685ff9ad989b2c1df8b82c83e39f"
+        }
+      ]
     },
     {
       "cve": "CVE-2011-0609",
@@ -1623,15 +1709,16 @@
       "product": "Silverlight",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2013-0422",
@@ -1640,15 +1727,16 @@
       "product": "Java Runtime Environment (JRE)",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2013-0431",
@@ -1657,15 +1745,16 @@
       "product": "Java Runtime Environment (JRE)",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2013-0625",
@@ -1674,15 +1763,16 @@
       "product": "ColdFusion",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "third-party-technical-code-archive-only",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": null,
-      "current_material_eligibility": "insufficient-within-reviewed-primary-material",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "bounded-hold",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "bounded-hold"
     },
     {
       "cve": "CVE-2013-0629",
@@ -1691,15 +1781,16 @@
       "product": "ColdFusion",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "third-party-technical-code-archive-only",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2013-0631",
@@ -1708,15 +1799,16 @@
       "product": "ColdFusion",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "third-party-technical-code-archive-only",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": null,
-      "current_material_eligibility": "insufficient-within-reviewed-primary-material",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "bounded-hold",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "bounded-hold"
     },
     {
       "cve": "CVE-2013-0632",
@@ -1725,15 +1817,16 @@
       "product": "ColdFusion",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2013-0640",
@@ -1742,15 +1835,16 @@
       "product": "Reader and Acrobat",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2013-0641",
@@ -1759,15 +1853,16 @@
       "product": "Reader",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "third-party-technical-code-archive-only",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": null,
-      "current_material_eligibility": "insufficient-within-reviewed-primary-material",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "bounded-hold",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "bounded-hold"
     },
     {
       "cve": "CVE-2013-0643",
@@ -1776,15 +1871,16 @@
       "product": "Flash Player",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": null,
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": null,
-      "current_material_eligibility": "insufficient-within-reviewed-primary-material",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "bounded-search-advisory-only",
       "compatible_reading_bucket": "bounded-search-advisory-only",
-      "disposition": "bounded-hold",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "bounded-hold"
     },
     {
       "cve": "CVE-2013-0648",
@@ -1793,15 +1889,16 @@
       "product": "Flash Player",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": null,
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": null,
-      "current_material_eligibility": "insufficient-within-reviewed-primary-material",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "bounded-search-advisory-only",
       "compatible_reading_bucket": "bounded-search-advisory-only",
-      "disposition": "bounded-hold",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "bounded-hold"
     },
     {
       "cve": "CVE-2013-1331",
@@ -1810,15 +1907,16 @@
       "product": "Office",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": null,
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": null,
-      "current_material_eligibility": "insufficient-within-reviewed-primary-material",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "bounded-search-advisory-only",
       "compatible_reading_bucket": "bounded-search-advisory-only",
-      "disposition": "bounded-hold",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "bounded-hold"
     },
     {
       "cve": "CVE-2013-1347",
@@ -1827,15 +1925,16 @@
       "product": "Internet Explorer",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2013-1675",
@@ -1844,15 +1943,16 @@
       "product": "Firefox",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2013-1690",
@@ -1861,15 +1961,16 @@
       "product": "Firefox and Thunderbird",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2013-2094",
@@ -1878,15 +1979,16 @@
       "product": "Kernel",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "third-party-technical-code-archive-only",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2013-2251",
@@ -1895,15 +1997,16 @@
       "product": "Struts",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2013-2423",
@@ -1912,15 +2015,16 @@
       "product": "Java Runtime Environment (JRE)",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2013-2465",
@@ -1929,15 +2033,16 @@
       "product": "Java SE",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2013-2551",
@@ -1946,15 +2051,16 @@
       "product": "Internet Explorer",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2013-2596",
@@ -1963,15 +2069,16 @@
       "product": "Kernel",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": null,
-      "current_material_eligibility": "insufficient-within-reviewed-primary-material",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "bounded-hold",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "bounded-hold"
     },
     {
       "cve": "CVE-2013-2597",
@@ -1980,15 +2087,16 @@
       "product": "ACDB Audio Driver",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2013-2729",
@@ -1997,15 +2105,16 @@
       "product": "Reader and Acrobat",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2013-3163",
@@ -2014,15 +2123,16 @@
       "product": "Internet Explorer",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2013-3346",
@@ -2031,15 +2141,16 @@
       "product": "Reader and Acrobat",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2013-3660",
@@ -2048,15 +2159,16 @@
       "product": "Win32k",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2013-3893",
@@ -2065,15 +2177,16 @@
       "product": "Internet Explorer",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2013-3896",
@@ -2082,15 +2195,16 @@
       "product": "Silverlight",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2013-3897",
@@ -2099,15 +2213,16 @@
       "product": "Internet Explorer",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2013-3900",
@@ -2116,15 +2231,16 @@
       "product": "WinVerifyTrust function",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2013-3906",
@@ -2133,15 +2249,16 @@
       "product": "Graphics Component",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2013-3918",
@@ -2150,15 +2267,16 @@
       "product": "Windows",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2013-3993",
@@ -2167,15 +2285,16 @@
       "product": "InfoSphere BigInsights",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": null,
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": null,
-      "current_material_eligibility": "insufficient-within-reviewed-primary-material",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "bounded-search-advisory-only",
       "compatible_reading_bucket": "bounded-search-advisory-only",
-      "disposition": "bounded-hold",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "bounded-hold"
     },
     {
       "cve": "CVE-2013-4810",
@@ -2184,15 +2303,16 @@
       "product": "ProCurve Manager (PCM), PCM+, Identity Driven Manager (IDM), and Application Lifecycle Management",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "third-party-technical-code-archive-only",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": null,
-      "current_material_eligibility": "insufficient-within-reviewed-primary-material",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "bounded-hold",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "bounded-hold"
     },
     {
       "cve": "CVE-2013-5065",
@@ -2201,15 +2321,16 @@
       "product": "Windows",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2013-5223",
@@ -2218,15 +2339,16 @@
       "product": "DSL-2760U",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2013-6282",
@@ -2235,15 +2357,16 @@
       "product": "Kernel",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2013-7331",
@@ -2252,15 +2375,16 @@
       "product": "Internet Explorer",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2014-0130",
@@ -2286,15 +2410,16 @@
       "product": "OpenSSL",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2014-0196",
@@ -2320,15 +2445,16 @@
       "product": "Internet Explorer",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2014-0496",
@@ -2354,15 +2480,16 @@
       "product": "Flash Player",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2014-0502",
@@ -2422,15 +2549,16 @@
       "product": "Word",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "pending-known-readable-core-source",
-      "current_material_eligibility": "review-not-complete",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "still-pending",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "still-pending"
     },
     {
       "cve": "CVE-2014-1776",
@@ -2456,15 +2584,16 @@
       "product": "Windows",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2014-2120",
@@ -2507,15 +2636,16 @@
       "product": "Elasticsearch",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2014-3153",
@@ -2524,15 +2654,16 @@
       "product": "Kernel",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2014-3931",
@@ -2575,15 +2706,16 @@
       "product": "Win32k",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2014-4114",
@@ -2592,15 +2724,16 @@
       "product": "Windows",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2014-4123",
@@ -2643,15 +2776,16 @@
       "product": "OS X",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2014-6271",
@@ -2660,15 +2794,16 @@
       "product": "Bourne-Again Shell (Bash)",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2014-6278",
@@ -2677,15 +2812,16 @@
       "product": "GNU Bash",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2014-6287",
@@ -2694,15 +2830,16 @@
       "product": "HTTP File Server (HFS)",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2014-6324",
@@ -2711,15 +2848,16 @@
       "product": "Kerberos Key Distribution Center (KDC)",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": null,
-      "current_material_eligibility": "insufficient-within-reviewed-primary-material",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "bounded-hold",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "bounded-hold"
     },
     {
       "cve": "CVE-2014-6332",
@@ -2728,15 +2866,16 @@
       "product": "Windows",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2014-6352",
@@ -2745,15 +2884,16 @@
       "product": "Windows",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2014-7169",
@@ -2779,15 +2919,16 @@
       "product": "SDK",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2014-8439",
@@ -2830,15 +2971,16 @@
       "product": "DIR-600 Router",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": null,
-      "current_material_eligibility": "insufficient-within-reviewed-primary-material",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "bounded-hold",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "bounded-hold"
     },
     {
       "cve": "CVE-2015-0016",
@@ -2847,15 +2989,16 @@
       "product": "Windows",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2015-0071",
@@ -2898,15 +3041,16 @@
       "product": "Flash Player",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2015-0313",
@@ -2915,15 +3059,16 @@
       "product": "Flash Player",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2015-0666",
@@ -2949,15 +3094,16 @@
       "product": "OS X",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2015-1187",
@@ -2966,15 +3112,16 @@
       "product": "Multiple Devices",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "entity-identity-review",
-      "current_material_eligibility": "review-not-complete",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "still-pending",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "still-pending"
     },
     {
       "cve": "CVE-2015-1427",
@@ -2983,15 +3130,16 @@
       "product": "Elasticsearch",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2015-1635",
@@ -3000,15 +3148,16 @@
       "product": "HTTP.sys",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2015-1641",
@@ -3068,15 +3217,16 @@
       "product": "Win32k",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2015-1769",
@@ -3119,15 +3269,16 @@
       "product": "DIR-645 Router",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2015-2291",
@@ -3238,15 +3389,16 @@
       "product": "Windows",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "pending-known-readable-core-source",
-      "current_material_eligibility": "review-not-complete",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "still-pending",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "still-pending"
     },
     {
       "cve": "CVE-2015-2502",
@@ -3323,15 +3475,16 @@
       "product": "Multiple Archer Devices",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2015-3043",
@@ -3340,15 +3493,16 @@
       "product": "Flash Player",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2015-3113",
@@ -3357,15 +3511,16 @@
       "product": "Flash Player",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2015-3246",
@@ -3374,15 +3529,16 @@
       "product": "Libuser",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2015-4068",
@@ -3408,15 +3564,16 @@
       "product": "Firefox",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2015-4852",
@@ -3425,15 +3582,16 @@
       "product": "WebLogic Server",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2015-4902",
@@ -3459,15 +3617,16 @@
       "product": "Flash Player",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2015-5122",
@@ -3476,15 +3635,16 @@
       "product": "Flash Player",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2015-5123",
@@ -3510,15 +3670,16 @@
       "product": "Automatic Bug Reporting Tool",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2015-5317",
@@ -3561,15 +3722,16 @@
       "product": "WebSphere Application Server and Server Hypervisor Edition",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2015-7645",
@@ -3595,15 +3757,16 @@
       "product": "ScreenOS",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
       "pending_subtype": "author-pending-peer",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "current_material_eligibility": "paused-not-reassessed; historical evidence retained",
+      "publication_status": "unpublished-paused",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "platform-blocked",
+      "articles_in_current_batch": [],
+      "pre_pause_disposition": "awaiting-peer-or-required-notes"
     },
     {
       "cve": "CVE-2015-8651",
@@ -6385,13 +6548,19 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "pending_subtype": "author-pending-peer-or-draft-completion",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/网络设备/Cisco ASA/Cisco ASA CSCOE 会话目录遍历 CVE-2018-0296.md",
+          "mode": "new",
+          "sha256": "9b0ab8e77d7c39dcc9a23de2a385eb6bdfc7e4951681d9e6dfe8c98c0ffb303c"
+        }
+      ]
     },
     {
       "cve": "CVE-2018-0798",
@@ -6674,13 +6843,19 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "pending_subtype": "pending-known-source-followup",
-      "current_material_eligibility": "review-not-complete",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "still-pending",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/服务器软件/Zimbra/Zimbra 附件 Content-Location 存储型脚本注入 CVE-2018-6882.md",
+          "mode": "new",
+          "sha256": "623052db76c4d4df13331d9060186153eb6a57fea2707d40e8032c65c9ba0a9e"
+        }
+      ]
     },
     {
       "cve": "CVE-2018-6961",
@@ -6691,13 +6866,19 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "pending_subtype": "author-pending-peer-or-draft-completion",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/网络设备/VMware SD-WAN/VMware SD-WAN Edge 本地诊断命令注入 CVE-2018-6961.md",
+          "mode": "new",
+          "sha256": "578c6769c7b0d8a52c5efd1c44c32e0be06c558271a3fe2ca54be42cda3e5eed"
+        }
+      ]
     },
     {
       "cve": "CVE-2018-7445",
@@ -6759,13 +6940,19 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "pending_subtype": "author-pending-peer-or-draft-completion",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/智能设备/Schneider Electric/U.motion Builder SQLite调用链中的命令注入 CVE-2018-7841.md",
+          "mode": "new",
+          "sha256": "15d21c292c8441651e231b2d2c786195f0f9f68c7c83dd08386a0a67a18a9844"
+        }
+      ]
     },
     {
       "cve": "CVE-2018-8120",
@@ -7014,13 +7201,19 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "pending_subtype": "author-pending-peer-or-draft-completion",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/运维面板/PRTG/PRTG 通知参数PowerShell命令注入 CVE-2018-9276.md",
+          "mode": "new",
+          "sha256": "6feef59e2116fb247d1231baf46e336cffcec983b62fca2c594283282c14b2f8"
+        }
+      ]
     },
     {
       "cve": "CVE-2018-10561",
@@ -7048,13 +7241,19 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "pending_subtype": "author-pending-peer-or-draft-completion",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "IOT安全/Dasan GPON/Dasan GPON 诊断dest_host命令注入 CVE-2018-10562.md",
+          "mode": "new",
+          "sha256": "8caa760e54bff6185915bd8d04846e0ab72dd74ea45a762441bdf1cc60e8177f"
+        }
+      ]
     },
     {
       "cve": "CVE-2018-11138",
@@ -7065,13 +7264,19 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "pending_subtype": "author-pending-peer-or-draft-completion",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/运维面板/Quest KACE/Quest KACE agent installer 参数命令注入 CVE-2018-11138.md",
+          "mode": "new",
+          "sha256": "a18ac3e85b335eceec3c5aa7c4f87a854af62805d49aaf28636a11e815366eb1"
+        }
+      ]
     },
     {
       "cve": "CVE-2018-11776",
@@ -7133,13 +7338,19 @@
       "full_read_provenance": "full-technical-wiki-archive-only",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "pending_subtype": "dedup-incomplete",
-      "current_material_eligibility": "review-not-complete",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "still-pending",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/网络设备/Fortinet/（CVE-2018-13382）Fortinet FortiOS magic后门.md",
+          "mode": "supplement",
+          "sha256": "8e6444dd7a8a79e851f79da11417f1b7029a44af8bab38b112e15974dfd7be55"
+        }
+      ]
     },
     {
       "cve": "CVE-2018-13383",
@@ -7235,13 +7446,19 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "pending_subtype": "author-pending-peer-or-draft-completion",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "IOT安全/MikroTik/MikroTik WinBox user.dat 路径遍历 CVE-2018-14847.md",
+          "mode": "new",
+          "sha256": "9fbf4824f464fb0702209c0b5b0c5d0d13d971a6d0c87c6cbf007d89c52067a6"
+        }
+      ]
     },
     {
       "cve": "CVE-2018-14933",
@@ -7252,13 +7469,19 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "pending_subtype": "author-pending-peer-or-draft-completion",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "IOT安全/NUUO/NUUO NVRmini upgrade_handle 命令注入 CVE-2018-14933.md",
+          "mode": "new",
+          "sha256": "d31b86b86d15c366b102f8d1ce2f4a6571e3f2a596b890ce91f16150f0d2edaa"
+        }
+      ]
     },
     {
       "cve": "CVE-2018-15133",
@@ -7286,13 +7509,19 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "pending_subtype": "author-pending-peer-or-draft-completion",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/CMS内容/DotNetNuke/DotNetNuke 9.2 验证码弱DES密钥恢复 CVE-2018-15811.md",
+          "mode": "new",
+          "sha256": "96b8fcb4e54c017f75329cc40ce53e10635e5c27886f2fbb48d606a885e30bb6"
+        }
+      ]
     },
     {
       "cve": "CVE-2018-15961",
@@ -7303,13 +7532,19 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "pending_subtype": "dedup-incomplete",
-      "current_material_eligibility": "review-not-complete",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "still-pending",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/中间件/Adobe ColdFusion/Adobe-ColdFusion-upload.cfm-任意文件上传漏洞-CVE-2018-15961.md",
+          "mode": "supplement",
+          "sha256": "8a0621fee323ebdbf28dd507301a447b55a38041168dc588f4634d724883ae05"
+        }
+      ]
     },
     {
       "cve": "CVE-2018-15982",
@@ -7337,13 +7572,19 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "pending_subtype": "dedup-incomplete",
-      "current_material_eligibility": "review-not-complete",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "still-pending",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/桌面软件/Chrome/Chrome 浏览器漏洞利用 (三)：CVE-2018-17463 分析与利用.md",
+          "mode": "supplement",
+          "sha256": "55234b1772f427e1b3777c6a99e279f81e424c381966c9149b8c90f8facee1bd"
+        }
+      ]
     },
     {
       "cve": "CVE-2018-17480",
@@ -7371,13 +7612,19 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "pending_subtype": "author-pending-peer-or-draft-completion",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/CMS内容/DotNetNuke/DotNetNuke 不完整修复后的DES验证分支 CVE-2018-18325.md",
+          "mode": "new",
+          "sha256": "2c42cedb9249d270e7ded0d8af374cf0c2ca399ea2d2f25f3cc69834a0093911"
+        }
+      ]
     },
     {
       "cve": "CVE-2018-18809",
@@ -7388,13 +7635,19 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "pending_subtype": "author-pending-peer-or-draft-completion",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/商业软件/TIBCO JasperReports/JasperReports reportresource 路径遍历 CVE-2018-18809.md",
+          "mode": "new",
+          "sha256": "33f230e028c3bd042ea5162b1954b1ff1f11a6da211b52dc29d30dbf4cdf7d31"
+        }
+      ]
     },
     {
       "cve": "CVE-2018-19320",
@@ -7473,13 +7726,19 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "pending_subtype": "author-pending-peer-or-draft-completion",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/运维面板/PRTG/PRTG public login 包含接口创建账户 CVE-2018-19410.md",
+          "mode": "new",
+          "sha256": "bf3415efe9fb497c2d088ca6f17706c97af211b845343e6c80a710f04ab4f094"
+        }
+      ]
     },
     {
       "cve": "CVE-2018-19943",
@@ -7694,13 +7953,19 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "pending_subtype": "dedup-incomplete",
-      "current_material_eligibility": "review-not-complete",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "still-pending",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/云平台/Microsoft SharePoint/（CVE-2019-0604）Microsoft SharePoint 远程代码执行漏洞.md",
+          "mode": "supplement",
+          "sha256": "1aff84e77034f5289f5103233d07e9555a09a187ccc80d1286808c4099de3794"
+        }
+      ]
     },
     {
       "cve": "CVE-2019-0676",
@@ -7745,13 +8010,19 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "pending_subtype": "dedup-incomplete",
-      "current_material_eligibility": "review-not-complete",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "still-pending",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "系统安全/Windows/Windows远程溢出漏洞/（CVE-2019-0708） Windows 远程溢出漏洞.md",
+          "mode": "supplement",
+          "sha256": "ef9216a08542fbef3ae48fb381b857f17ac8789c2c836c379ea9a15cf41c2e40"
+        }
+      ]
     },
     {
       "cve": "CVE-2019-0752",
@@ -8238,13 +8509,19 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "pending_subtype": "author-pending-peer-or-draft-completion",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/网络设备/Cisco/Cisco RV320 RV325 证书common_name命令注入 CVE-2019-1652.md",
+          "mode": "new",
+          "sha256": "62cd608827c901a82a452ceb4747bec23e560150d934f764166b655022f524d4"
+        }
+      ]
     },
     {
       "cve": "CVE-2019-1653",
@@ -8255,13 +8532,19 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "pending_subtype": "author-pending-peer-or-draft-completion",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/网络设备/Cisco/Cisco RV320 RV325 配置导出泄露 CVE-2019-1653.md",
+          "mode": "new",
+          "sha256": "1f9cbf4f53ecf4e50601afd219dafc8c4a55b86308afb1b122f493dd10725465"
+        }
+      ]
     },
     {
       "cve": "CVE-2019-2215",
@@ -8272,13 +8555,19 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "pending_subtype": "pending-known-source-followup",
-      "current_material_eligibility": "review-not-complete",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "still-pending",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "系统安全/Android/Android Binder 与 epoll 释放后使用本地提权 CVE-2019-2215.md",
+          "mode": "new",
+          "sha256": "f8ffa9cfdd9960db387556fcb2013f4234fe802f94ec15cd6f07950836afc04c"
+        }
+      ]
     },
     {
       "cve": "CVE-2019-2616",
@@ -8289,13 +8578,19 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "pending_subtype": "author-pending-peer-or-draft-completion",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/商业软件/Oracle BI Publisher/Oracle BI Publisher 外部DTD解析验证 CVE-2019-2616.md",
+          "mode": "new",
+          "sha256": "7b2ce2389f45ecb42047efaf932094d0e5fd88ac4635cee44d621f510df68313"
+        }
+      ]
     },
     {
       "cve": "CVE-2019-2725",
@@ -8323,13 +8618,19 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "pending_subtype": "author-pending-peer-or-draft-completion",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "系统安全/Solaris/Solaris xscreensaver 日志文件创建提权 CVE-2019-3010.md",
+          "mode": "new",
+          "sha256": "242813b6e589eb32e75fc679d1e9f9d8edf96226a2cf995b668aa5b006c43380"
+        }
+      ]
     },
     {
       "cve": "CVE-2019-3396",
@@ -8391,13 +8692,19 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "pending_subtype": "author-pending-peer-or-draft-completion",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "IOT安全/Barco AWIND/Barco与AWIND file_transfer.cgi 命令注入 CVE-2019-3929.md",
+          "mode": "new",
+          "sha256": "a05697f1cde6e905809c2cb5b26dccc38cbb3f65c4c89dc5e34cdc8c3576293d"
+        }
+      ]
     },
     {
       "cve": "CVE-2019-4716",
@@ -8408,13 +8715,19 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "pending_subtype": "author-pending-peer-or-draft-completion",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/商业软件/IBM Planning Analytics/IBM TM1 配置覆盖与 CAM 认证链 CVE-2019-4716.md",
+          "mode": "new",
+          "sha256": "b081d43ad446cbdad4b7cc769077a31e1db36ee23708717bed12dfdfc0049d60"
+        }
+      ]
     },
     {
       "cve": "CVE-2019-5418",
@@ -8476,13 +8789,19 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "pending_subtype": "dedup-incomplete",
-      "current_material_eligibility": "review-not-complete",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "still-pending",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/安全设备/Google/（CVE-2019-5786）Chrome 远程代码执行漏洞.md",
+          "mode": "supplement",
+          "sha256": "f21a5251c300d2d7da7c33227c660a1819185937faf57018abd0a1e99c529b87"
+        }
+      ]
     },
     {
       "cve": "CVE-2019-5825",
@@ -8647,13 +8966,19 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "pending_subtype": "author-pending-peer-or-draft-completion",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "IOT安全/Linear eMerge/Linear eMerge E3 card_scan.php 命令注入 CVE-2019-7256.md",
+          "mode": "new",
+          "sha256": "1dc5c99377eea18234dc7466eaba8a9f2f014279a48de8b9e44da1e3c34269a6"
+        }
+      ]
     },
     {
       "cve": "CVE-2019-7286",
@@ -8698,13 +9023,19 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "pending_subtype": "author-pending-peer-or-draft-completion",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/安全设备/SonicWall/SonicWall SMA100 supportInstaller SQL 注入 CVE-2019-7481.md",
+          "mode": "new",
+          "sha256": "b417aafc3e37491a08873bda5c46c9bb91d4daf6dcdc5f239428ec78d3b2e223"
+        }
+      ]
     },
     {
       "cve": "CVE-2019-7483",
@@ -8851,13 +9182,19 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "pending_subtype": "dedup-incomplete",
-      "current_material_eligibility": "review-not-complete",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "still-pending",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/邮件系统/Zimbra/（CVE-2019-9621）（CVE-2019-9670）Zimbra 远程代码执行漏洞.md",
+          "mode": "supplement",
+          "sha256": "b5ade17aae2e8778236431055f9d04a77514f691a3592f3abbae1bb6cafef13f"
+        }
+      ]
     },
     {
       "cve": "CVE-2019-9670",
@@ -8868,13 +9205,19 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "pending_subtype": "dedup-incomplete",
-      "current_material_eligibility": "review-not-complete",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "still-pending",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/邮件系统/Zimbra/（CVE-2019-9621）（CVE-2019-9670）Zimbra 远程代码执行漏洞.md",
+          "mode": "supplement",
+          "sha256": "b5ade17aae2e8778236431055f9d04a77514f691a3592f3abbae1bb6cafef13f"
+        }
+      ]
     },
     {
       "cve": "CVE-2019-9874",
@@ -8885,13 +9228,19 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "pending_subtype": "pending-known-source-followup",
-      "current_material_eligibility": "review-not-complete",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "still-pending",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/CMS内容/Sitecore/Sitecore几年前的洞CVE-2019-9874：反序列化实现的未经认证的 RCE（CVSS 9.8）.md",
+          "mode": "supplement",
+          "sha256": "886fec746b087794709cadf8e1fc332a2656192f64ab5781063adf873da4f925"
+        }
+      ]
     },
     {
       "cve": "CVE-2019-9875",
@@ -8902,13 +9251,19 @@
       "full_read_provenance": null,
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "pending_subtype": "pending-technical-source-review",
-      "current_material_eligibility": "review-not-complete",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "existing-wiki-body-only",
       "compatible_reading_bucket": "existing-wiki-body-only",
-      "disposition": "still-pending",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/CMS内容/Sitecore/Sitecore 已认证 AntiCSRF 反序列化 CVE-2019-9875.md",
+          "mode": "new",
+          "sha256": "db0ff29751d02c30403fd23d522a8529ec56dca1c7daab9140e9d5c0596b2636"
+        }
+      ]
     },
     {
       "cve": "CVE-2019-9978",
@@ -8936,13 +9291,19 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "pending_subtype": "pending-known-source-followup",
-      "current_material_eligibility": "review-not-complete",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "still-pending",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/CMS内容/Kentico/Kentico Staging 同步参数不安全反序列化 CVE-2019-10068.md",
+          "mode": "new",
+          "sha256": "04a5a283f98976405ed1a0b2fd979d8a69be8a170420354fd7a9ca81e27689d5"
+        }
+      ]
     },
     {
       "cve": "CVE-2019-10149",
@@ -8953,13 +9314,19 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "pending_subtype": "author-pending-peer-or-draft-completion",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/邮件系统/Exim/Exim deliver_message 本地SMTP提权验证 CVE-2019-10149.md",
+          "mode": "new",
+          "sha256": "7428b5cb27faf74d8a5cf918ca0a4784cd24525d7615acef77edf015ef49d997"
+        }
+      ]
     },
     {
       "cve": "CVE-2019-10758",
@@ -8970,13 +9337,19 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "pending_subtype": "author-pending-peer-or-draft-completion",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/开发框架/mongo/mongo-express 远程代码执行漏洞 CVE-2019-10758.md",
+          "mode": "supplement",
+          "sha256": "c7b660cb71180fa0a0f61002ccf4c29c305f8cf80be5bda0513dfe880f1ba46c"
+        }
+      ]
     },
     {
       "cve": "CVE-2019-11001",
@@ -9038,13 +9411,19 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "pending_subtype": "author-pending-peer-or-draft-completion",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/安全设备/Pulse Secure/Pulse Secure 管理诊断命令注入 CVE-2019-11539.md",
+          "mode": "new",
+          "sha256": "8280330070f35375797a18cd0d9f9c7fba1ee1a76451d1d9d34d1dcf1f762b40"
+        }
+      ]
     },
     {
       "cve": "CVE-2019-11580",
@@ -9055,13 +9434,19 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "pending_subtype": "dedup-incomplete",
-      "current_material_eligibility": "review-not-complete",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "still-pending",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/开发框架/Atlassian Crowd/CVE-2019-11580 Atlassian Crowd RCE.md",
+          "mode": "supplement",
+          "sha256": "f0fe656c419fdbea8c828c509f0be7c624a732919eed1db846efbc1d89a291b4"
+        }
+      ]
     },
     {
       "cve": "CVE-2019-11581",
@@ -9140,13 +9525,19 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "pending_subtype": "pending-known-source-followup",
-      "current_material_eligibility": "review-not-complete",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "still-pending",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/网络设备/Citrix/Citrix SD-WAN 配置包 SQL 注入 CVE-2019-12989.md",
+          "mode": "new",
+          "sha256": "d398171923929eb2872981a190d24e23060b7b6d4de2c521a7a15a27faebda14"
+        }
+      ]
     },
     {
       "cve": "CVE-2019-12991",
@@ -9157,13 +9548,19 @@
       "full_read_provenance": null,
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "pending_subtype": "pending-technical-source-review",
-      "current_material_eligibility": "review-not-complete",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "bounded-search-advisory-only",
       "compatible_reading_bucket": "bounded-search-advisory-only",
-      "disposition": "still-pending",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/网络设备/Citrix/Citrix SD-WAN installfile 命令注入 CVE-2019-12991.md",
+          "mode": "new",
+          "sha256": "a6fdce6bf793e688c83546b8bd7fc7e9e0f383127fff9b8357df394c0eead00c"
+        }
+      ]
     },
     {
       "cve": "CVE-2019-13272",
@@ -9174,13 +9571,19 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "pending_subtype": "pending-known-source-followup",
-      "current_material_eligibility": "review-not-complete",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "still-pending",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "系统安全/Linux/Linux本地提权漏洞/Linux ptrace 凭据记录错误本地提权 CVE-2019-13272.md",
+          "mode": "new",
+          "sha256": "8b9dc495f493bb3bc147eb9e462f7bac494ff2404c10a0820e57323a330356ce"
+        }
+      ]
     },
     {
       "cve": "CVE-2019-13608",
@@ -9191,13 +9594,19 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "pending_subtype": "dedup-incomplete",
-      "current_material_eligibility": "review-not-complete",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "still-pending",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/商业软件/Citrix/Citrix StoreFront 请求令牌 XML 外部实体读取 CVE-2019-13608.md",
+          "mode": "new",
+          "sha256": "b2fece192906ec9d6c53bbfbcc6861de279096dd96ed19a1afe788f3c8d8d89e"
+        }
+      ]
     },
     {
       "cve": "CVE-2019-13720",
@@ -9259,13 +9668,19 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "pending_subtype": "author-pending-peer-or-draft-completion",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "系统安全/Windows/Docker Desktop/Docker Desktop credential helper 路径提权 CVE-2019-15752.md",
+          "mode": "new",
+          "sha256": "f73ef6a868a97467abf14254e49556394d151083b50247fe4b331b8dbb88a905"
+        }
+      ]
     },
     {
       "cve": "CVE-2019-15949",
@@ -9276,13 +9691,19 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "pending_subtype": "author-pending-peer-or-draft-completion",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/运维面板/Nagios XI/Nagios XI getprofile.sh 插件执行提权链 CVE-2019-15949.md",
+          "mode": "new",
+          "sha256": "c9d42281b1c58a7a03735e164a661fcd271b137ed8ffe2ac6d820afc31e36000"
+        }
+      ]
     },
     {
       "cve": "CVE-2019-16057",
@@ -9293,13 +9714,19 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "pending_subtype": "author-pending-peer-or-draft-completion",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "IOT安全/D-Link/D-Link DNS-320 login_mgr.cgi 命令注入 CVE-2019-16057.md",
+          "mode": "new",
+          "sha256": "78245a4b73a44f4c0cb3fde8218b03f0f3f252c1d6806ed5c60863c034e15ab3"
+        }
+      ]
     },
     {
       "cve": "CVE-2019-16256",
@@ -9327,13 +9754,19 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "pending_subtype": "author-pending-peer-or-draft-completion",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/中间件/Nostromo httpd/（CVE-2019-16278）Nostromo httpd 命令执行.md",
+          "mode": "supplement",
+          "sha256": "34eb24df5e50bd5244661525208598430d76ae62771fe3cd6881771ac44588cb"
+        }
+      ]
     },
     {
       "cve": "CVE-2019-16759",
@@ -9361,13 +9794,19 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "pending_subtype": "author-pending-peer-or-draft-completion",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "IOT安全/D-Link/（CVE-2019-16920）D-Link rce.md",
+          "mode": "supplement",
+          "sha256": "0b03c9160cbc651db91f5f62f9db62084de369c71cdd0c876dca1572933dd679"
+        }
+      ]
     },
     {
       "cve": "CVE-2019-16928",
@@ -9429,13 +9868,19 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "pending_subtype": "author-pending-peer-or-draft-completion",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "IOT安全/D-Link/（CVE-2019–17621）D-Link DIR-859 rce.md",
+          "mode": "supplement",
+          "sha256": "22f6851110ad9b83ae3e1c0871fe21c00ed139a51cc9d0f1d417bc8fe6f6ae4d"
+        }
+      ]
     },
     {
       "cve": "CVE-2019-18187",
@@ -9497,13 +9942,19 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "pending_subtype": "author-pending-peer-or-draft-completion",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/桌面软件/TeamViewer/TeamViewer 共享 AES 密钥与注册表密码解密 CVE-2019-18988.md",
+          "mode": "new",
+          "sha256": "6d6989b21521d64d3a3d76b93576d251b92224181c7c18acacc6d118c83d5d68"
+        }
+      ]
     },
     {
       "cve": "CVE-2019-19006",
@@ -9565,13 +10016,19 @@
       "full_read_provenance": "non-wiki-technical-source-text",
       "current_blocked_scope": false,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "pending_subtype": "author-pending-peer-or-draft-completion",
-      "current_material_eligibility": "author-proposed-not-independently-admitted",
-      "publication_status": "unpublished",
+      "pending_subtype": null,
+      "current_material_eligibility": "independently-qualified-for-published-scope",
+      "publication_status": "published",
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "awaiting-peer-or-required-notes",
-      "articles_in_current_batch": []
+      "disposition": "published",
+      "articles_in_current_batch": [
+        {
+          "article": "Web安全/智能设备/TVT/TVT数码科技-NVMS-1000-路径遍历漏洞.md",
+          "mode": "supplement",
+          "sha256": "60c60f1b5d30f756c9ffe3d9fb1a28d096db0990650686e0a8e3c19006eee11f"
+        }
+      ]
     },
     {
       "cve": "CVE-2019-20500",
@@ -30575,7 +31032,7 @@
   },
   "limits": [
     "Full main technical-text reading does not mean all helpers/binaries reviewed, eligibility established, code executed, or exhaustive internet research.",
-    "894 paused candidate scopes overlap reading facts. They must not be added to reading categories; an unknown task-level trigger does not prove every CVE independently prohibited.",
+    "971 paused candidate scopes overlap reading facts. They must not be added to reading categories; an unknown task-level trigger does not prove every CVE independently prohibited.",
     "133 paused 2021 candidates lack explicit new reading receipts; do not infer they were never read.",
     "Known readable technical sources or relevant entity articles still unread remain pending; bounded hold never proves worldwide absence of PoC.",
     "Later work is excluded until a subsequent per-ID checkpoint."
@@ -30620,6 +31077,75 @@
       ],
       "reading_counts_unchanged": true,
       "article_files_added": 26
+    },
+    {
+      "base": "97afb504aad67bb5af39b62028299b6bbf015f5f",
+      "qualified_ids": [
+        "CVE-2008-2992",
+        "CVE-2008-4128",
+        "CVE-2009-0927",
+        "CVE-2009-3459",
+        "CVE-2009-3953",
+        "CVE-2009-3960",
+        "CVE-2009-4324",
+        "CVE-2010-0232",
+        "CVE-2010-0738",
+        "CVE-2010-1871",
+        "CVE-2010-3765",
+        "CVE-2010-3904",
+        "CVE-2010-5330",
+        "CVE-2018-0296",
+        "CVE-2018-10562",
+        "CVE-2018-11138",
+        "CVE-2018-13382",
+        "CVE-2018-14847",
+        "CVE-2018-14933",
+        "CVE-2018-15811",
+        "CVE-2018-15961",
+        "CVE-2018-17463",
+        "CVE-2018-18325",
+        "CVE-2018-18809",
+        "CVE-2018-19410",
+        "CVE-2018-6882",
+        "CVE-2018-6961",
+        "CVE-2018-7841",
+        "CVE-2018-9276",
+        "CVE-2019-0604",
+        "CVE-2019-0708",
+        "CVE-2019-10068",
+        "CVE-2019-10149",
+        "CVE-2019-10758",
+        "CVE-2019-11539",
+        "CVE-2019-11580",
+        "CVE-2019-12989",
+        "CVE-2019-12991",
+        "CVE-2019-13272",
+        "CVE-2019-13608",
+        "CVE-2019-15752",
+        "CVE-2019-15949",
+        "CVE-2019-16057",
+        "CVE-2019-16278",
+        "CVE-2019-1652",
+        "CVE-2019-1653",
+        "CVE-2019-16920",
+        "CVE-2019-17621",
+        "CVE-2019-18988",
+        "CVE-2019-20085",
+        "CVE-2019-2215",
+        "CVE-2019-2616",
+        "CVE-2019-3010",
+        "CVE-2019-3929",
+        "CVE-2019-4716",
+        "CVE-2019-5786",
+        "CVE-2019-7256",
+        "CVE-2019-7481",
+        "CVE-2019-9621",
+        "CVE-2019-9670",
+        "CVE-2019-9874",
+        "CVE-2019-9875"
+      ],
+      "article_files_added": 61,
+      "reading_counts_unchanged": true
     }
   ]
 }

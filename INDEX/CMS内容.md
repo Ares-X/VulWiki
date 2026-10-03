@@ -290,6 +290,14 @@
 - [DocCMS keyword SQL注入漏洞](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/DocCMS/DocCMS%20keyword%20SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md) [vulnerability; not-reproduced; needs-review]
 - [DocCMS-keyword-SQL注入漏洞](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/DocCMS/DocCMS-keyword-SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md) [vulnerability; not-reproduced; needs-review]
 
+## DotNetNuke 9.2–9.2.1
+
+- [DotNetNuke 9.2 验证码弱DES密钥恢复（CVE-2018-15811）](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/DotNetNuke/DotNetNuke%209.2%20%E9%AA%8C%E8%AF%81%E7%A0%81%E5%BC%B1DES%E5%AF%86%E9%92%A5%E6%81%A2%E5%A4%8D%20CVE-2018-15811.md) [vulnerability; not-reproduced; needs-review]
+
+## DotNetNuke 9.2–9.2.2
+
+- [DotNetNuke 不完整修复后的DES验证分支（CVE-2018-18325）](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/DotNetNuke/DotNetNuke%20%E4%B8%8D%E5%AE%8C%E6%95%B4%E4%BF%AE%E5%A4%8D%E5%90%8E%E7%9A%84DES%E9%AA%8C%E8%AF%81%E5%88%86%E6%94%AF%20CVE-2018-18325.md) [vulnerability; not-reproduced; needs-review]
+
 ## DouPHP
 
 - [DouPHP（CVE-2024-7917、代码分析xss）漏洞复现](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/DouPHP/DouPHP%EF%BC%88CVE-2024-7917%E3%80%81%E4%BB%A3%E7%A0%81%E5%88%86%E6%9E%90xss%EF%BC%89%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0.md) [analysis; not-reproduced; needs-review]
@@ -773,6 +781,10 @@
 
 - [Ke361-MenuController.class.php-后台SQL注入漏洞-CNVD-2021-25002](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/%E9%AA%91%E5%A3%ABCMS/Ke361-MenuController.class.php-%E5%90%8E%E5%8F%B0SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E-CNVD-2021-25002.md) [vulnerability; not-reproduced; needs-review]
 - [Ke361-TopicController.class.php-SQL注入漏洞-CNVD-2017-04380](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/%E9%AA%91%E5%A3%ABCMS/Ke361-TopicController.class.php-SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E-CNVD-2017-04380.md) [unknown; not-reproduced; needs-review]
+
+## Kentico CMS Staging Service
+
+- [Kentico Staging 同步参数不安全反序列化（CVE-2019-10068）](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/Kentico/Kentico%20Staging%20%E5%90%8C%E6%AD%A5%E5%8F%82%E6%95%B0%E4%B8%8D%E5%AE%89%E5%85%A8%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%20CVE-2019-10068.md) [vulnerability; not-reproduced; needs-review]
 
 ## LFCMS
 
@@ -1392,6 +1404,10 @@
 ## Sitecore XM/XP8.2–10.4 unpatched
 
 - [Sitecore 曝零日漏洞，可执行任意代码攻击](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/Sitecore/Sitecore%20%E6%9B%9D%E9%9B%B6%E6%97%A5%E6%BC%8F%E6%B4%9E%EF%BC%8C%E5%8F%AF%E6%89%A7%E8%A1%8C%E4%BB%BB%E6%84%8F%E4%BB%A3%E7%A0%81%E6%94%BB%E5%87%BB.md) [advisory; not-reproduced; needs-review]
+
+## Sitecore XP AntiCSRF
+
+- [Sitecore 已认证 AntiCSRF 反序列化（CVE-2019-9875）](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/Sitecore/Sitecore%20%E5%B7%B2%E8%AE%A4%E8%AF%81%20AntiCSRF%20%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%20CVE-2019-9875.md) [vulnerability; not-reproduced; needs-review]
 
 ## Sitecore XP/XM/XC8.0初版–10.4初版
 
