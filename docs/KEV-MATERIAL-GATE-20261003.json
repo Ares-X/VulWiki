@@ -3109,13 +3109,57 @@
           "runtime_executed": false
         }
       ]
+    },
+    {
+      "reviewed_utc": "2026-10-03T11:01:54.444794+00:00",
+      "review_base": "642310d304baffaed1c4bb4a3200cbc3c417abbf",
+      "files_reviewed": 2,
+      "retained_files": 2,
+      "qualified_candidate_ids": 2,
+      "rows": [
+        {
+          "path": "Web安全/商业软件/Sangoma/Switchvox pa端点PhoneIP SQL注入与公开模板判定（CVE-2026-9586）.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2026-9586"
+          ],
+          "reason": "New independently viewed original Figure4 provides complete curl/XML trigger and device-side file-content criterion; earlier image-evidence gap closed for this item only. Figure5 and mismatched Nuclei XML root are not admission evidence.",
+          "public_evidence": [
+            {
+              "url": "https://horizon3.ai/wp-content/uploads/2026/08/image-8.png",
+              "sha256": "a4fede7d6462e61d678e686cbc23fe3b0743305f295d9beeb5968eb392cd397f",
+              "scope": "Complete original Figure4 pixels independently inspected"
+            }
+          ],
+          "current_sha256": "5ff0afc82f13cb97a1aa108f8f606dcfde4c175addc9176d99f9da05a1271daf",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/中间件/Adobe ColdFusion/（CVE-2010-2861）Adobe ColdFusion 文件读取漏洞.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2010-2861"
+          ],
+          "reason": "Complete fixed file-read module and primary technicalFAQ reviewed; actual requested-file content is required, not200/title. ConditionalCF9 fingerprint skip and FILE/FINGERPRINT typo caveats preserved. No claim fullRCE or universal version applicability.",
+          "public_evidence": [
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/auxiliary/scanner/http/coldfusion_locale_traversal.rb#L147-L183"
+            },
+            {
+              "url": "https://www.gnucitizen.org/blog/coldfusion-directory-traversal-faq-cve-2010-2861/"
+            }
+          ],
+          "current_sha256": "69476a8c39f46131776d82c530a7968fbf70438a8feea328566975d590b0bf48",
+          "runtime_executed": false
+        }
+      ]
     }
   ],
   "current_totals": {
-    "article_files": 68,
-    "new_files": 44,
-    "supplemented_files": 24,
-    "qualified_candidate_ids": 76,
+    "article_files": 70,
+    "new_files": 45,
+    "supplemented_files": 25,
+    "qualified_candidate_ids": 78,
     "full_scope_complete": false
   },
   "subsequent_master_sync": {
