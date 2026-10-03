@@ -1,0 +1,41 @@
+{
+  "review_type": "independent static review",
+  "path": "Web安全/中间件/Apache/CVE-2024-40725.md",
+  "working_sha256": "cf49707c15183c5bbe06523198159f9c03e66569a625e83617fdd88823d8b3c8",
+  "fixed_archive_blob": "709c61d4f2f6c5c90d1181b5b738bfa8b098dd30",
+  "review_scope": "Full fixed archive and working text; current frontmatter and admission/findings.json. No network, execution, or external sources.",
+  "disposition": "support_restore_as_needs_review_analysis_with_narrowed_explanation",
+  "reasoning": [
+    "The vulnerability text is internally conflicted: lines 64-66 and 79-84 describe ap_set_content_type_ex, AddType, subrequest trust flags, and source-code disclosure as CVE-2024-40725; lines 72-77 separately label CVE-2024-40898 as Windows Apache SSRF involving mod_rewrite and NTLM hash disclosure.",
+    "The included first script explicitly calls itself HTTP Request Smuggling (lines 110-117), constructs a CL/TE-looking text (118-128), then passes that complete text as the data argument to requests.post (132); its status/admin heuristic (135-138) does not measure either source disclosure or an intermediary parsing differential. This is a statically inspectable invalid detection example, not an actionable validated technical method.",
+    "The second script explicitly calls itself SSL verification bypass (156-164), although the prose identifies CVE-2024-40898 as Windows SSRF (73-77). Its bytes literal invokes .format (170), which is statically inconsistent with bytes formatting, and a generic '200 OK' check (174-177) does not establish certificate bypass or SSRF. The script also accepts a host:port form by splitting on colon (183-188), not a general URL despite the option help at 183.",
+    "The article contains more than the two broken scripts: it preserves separate descriptions of both CVEs, names the implicated function and configuration classes, supplies distinct claimed version lines at 91-93, links Apache release/security pages at 196-199, and preserves the originating tool-repository URL at 102. These facts support a bounded historical analysis of conflated identifiers and invalid scanner claims. They do not verify the CVE mappings, the version ranges, or any exploitability.",
+    "The fixed archive itself has cve: CVE-2024-40725 and body mentions both identifiers; the working frontmatter has primary_identifiers containing both CVE-2024-40725 and CVE-2024-40898 (lines 2, 11), so the editorial note '元数据漏40898' at line 42 is stale/false for current metadata. The current metadata is instead over-assertive in treating both as primary, given that the text distinguishes two separate CVE descriptions and the scripts are mismatched. Demoting both to references pending mapping, clearing primary identifiers, changing record_type to analysis, and retaining the old cve field is internally consistent and preserves the original values.",
+    "The reason to retain as analysis is the inspectable mismatch and scanner-invalidity evidence, not successful reproduction. A quarantined status is unnecessary because the article can be used as a clearly bounded example of misattribution; the invalid scripts must not be presented as valid PoCs. No evidence supports rewriting the scripts, confirming either identifier mapping, or reconstructing a vendor advisory."
+  ],
+  "evidence": [
+    {"lines": "4-16", "text": "Title is CVE-2024-40725 source-code disclosure; product is Apache HTTP Server with AddType/mod_rewrite/Windows; record_type is advisory; content_status is quarantined; primary_identifiers currently contains CVE-2024-40725 and CVE-2024-40898; referenced_identifiers contains three unrelated recommended-reading CVEs."},
+    {"lines": "64-66", "text": "ap_set_content_type_ex and subrequest trust flags/AddType are described as source-code disclosure."},
+    {"lines": "72-84", "text": "CVE-2024-40898 is described separately as Windows SSRF via mod_rewrite; CVE-2024-40725 is described as source-code disclosure."},
+    {"lines": "91-93", "text": "Two conflicting version claims are present: http_server@[2.4.60, 2.4.62) and apache2@all versions."},
+    {"lines": "100-102", "text": "The article labels an external repository URL as a vulnerability-checking tool."},
+    {"lines": "105-147", "text": "The first embedded script labels CVE-2024-40725 request smuggling, creates a textual CL/TE request (118-128), submits the complete text via requests.post data (132), and classifies 200 plus 'admin' as positive (135-138)."},
+    {"lines": "150-189", "text": "The second script labels CVE-2024-40898 SSL verification bypass (156-164), uses bytes .format at line 170, treats 200 OK as positive (174-177), and parses the argument as colon-separated host and port (183-188)."},
+    {"lines": "193-199", "text": "The source lists Apache download and security-vulnerability pages as references."},
+    {"lines": "42", "text": "Current editorial note says '元数据漏40898；应隔离误导脚本并重建公告/实证'. This is factually stale about metadata because lines 2 and 11 already include CVE-2024-40898; the isolation recommendation is contradicted by the separable descriptive material and invalid-example analysis value."}
+  ],
+  "minimal_disposition": {
+    "record_type": {"old_text": "record_type: \"advisory\"", "new_text": "record_type: \"analysis\""},
+    "primary_identifiers": {"old_text": "primary_identifiers: \"CVE-2024-40725; CVE-2024-40898\"", "new_text": "primary_identifiers: \"\""},
+    "referenced_identifiers": {"old_text": "referenced_identifiers: \"CVE-2024-28995; CVE-2024-23692; CVE-2024-4577\"", "new_text": "referenced_identifiers: \"CVE-2024-40725; CVE-2024-40898; CVE-2024-28995; CVE-2024-23692; CVE-2024-4577\""},
+    "identifier_role": {"old_text": "identifier_role: \"primary\"", "new_text": "identifier_role: \"reference\""},
+    "content_status": {"old_text": "content_status: \"quarantined\"", "new_text": "content_status: \"needs-review\""},
+    "stale_note_lines": {"old_text": "- 元数据漏40898；应隔离误导脚本并重建公告/实证", "new_text": "- 两个嵌入脚本的漏洞类型与对应正文主张不符，不能作为有效 PoC；正文编号映射和版本范围需独立核对。本篇仅保留为误归因与无效检测示例分析。"}
+  },
+  "limits": [
+    "No vendor or other external first-party material was consulted, so this review does not establish official CVE validity, correct vendor mapping, or affected-version truth.",
+    "The scripts were not executed and no targets were contacted. Static observations are limited to literal code and claims in the article.",
+    "The current metadata's two primary identifiers are not justified merely because both appear in the body; the proposal demotes both to references pending separate mapping evidence.",
+    "No identifier string, source URL, or other original value should be masked, removed, or replaced based on this review."
+  ]
+}

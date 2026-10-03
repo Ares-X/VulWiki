@@ -70,11 +70,11 @@ web.config 是 ASP.NET（.NET Framework）应用在 IIS 下的 XML 配置文件�
   
 - <system.webServer>：IIS 层面的设置（模块/处理器、requestFiltering、httpErrors、rewrite 等）。  
   
-- <connectionStrings>：数据库连接串（敏感，应加密或安全存储）。  
+- `<connectionStrings>`：数据库连接串（敏感，应加密或安全存储）。  
   
-- <appSettings>：轻量配置键值。  
+- `<appSettings>`：轻量配置键值。  
   
-- <location>：对指定路径单独配置访问权限或覆盖设置。  
+- `<location>`：对指定路径单独配置访问权限或覆盖设置。  
   
 修改 web.config 不需要重启服务器或 IIS 服务。  
 ## 1.2. ViewState 介绍  
@@ -139,7 +139,7 @@ ViewState 值默认认存储在页面的隐藏字段（<input type="hidden" name
   
 ## 1.4. machineKey 配置介绍  
   
-<machineKey> 用于为ASP.NET应用程序提供加密和验证所需的密钥。  
+`<machineKey>` 用于为ASP.NET应用程序提供加密和验证所需的密钥。  
 ```
 <machineKey     validationKey="CB2721ABDAF8E9DC516D621D8B8BF13A2C9E8689A25303BF"      decryptionKey="E9D2490BD0075B51D1BA5288514514AF"      validation="HMACSHA256"      decryption="AES"  />
 ```  

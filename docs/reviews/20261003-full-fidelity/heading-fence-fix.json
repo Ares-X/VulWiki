@@ -1,0 +1,1914 @@
+{
+  "file_count": 17,
+  "files": [
+    {
+      "path": "Web安全/中间件/WebLogic/Weblogic CVE-2023-21931 漏洞挖掘技巧：后反序列化利用.md",
+      "before_sha256": "90381954ffe7ee9792e8e4acb54ce18d9a803fa60bc30f3f2652670acac0df0f",
+      "after_sha256": "5eec959526890119441e60ac5069f37cd1e28e2fdf451d1306da842e478be156",
+      "insertions": [
+        {
+          "before_offset": 13571,
+          "after_offset": 13571,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 14507,
+          "after_offset": 14508,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 16276,
+          "after_offset": 16278,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 18675,
+          "after_offset": 18678,
+          "byte": "\\n"
+        }
+      ],
+      "old_opening_fence_lines": [
+        2265,
+        2296,
+        2705,
+        3113
+      ],
+      "insertion_count": 4,
+      "exact_inverse_removing_only_inserted_LF": true,
+      "frontmatter_unchanged": true,
+      "all_intended_fence_body_bytes_unchanged": true,
+      "raw_fence_body_sha256": [
+        "031d79b2c311a1905f3222c6ace703ab98cf95ed19409a9352e63d3e7c7c5798",
+        "b11b05f66f7c852e28b81acadb6cee1919f8605f923c652c8c5c78265c63598c",
+        "10825c8f10de036c3d3145207cb4d978d81b8697c9a96f89d03280539ce2d1a6",
+        "4f1583f364957d3d09b7a709eb9368540a7b76295b730c3945d327190f19d704",
+        "d2f448f3859de37877809cf1c48cf9a784731a78eeaae00f6b8ec30e54ff5892",
+        "08cd86ac23e105f3a47d296807bb48849f23845ff2a671f29e94762ab1ee0722"
+      ],
+      "expected_fenced_copy_nodes": 6,
+      "rendered_code_nodes": 6,
+      "no_new_active_marker": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2023-4427 复现.md",
+      "before_sha256": "d6ae9248332f96e4468d2a62fb9340178344f8eddd9435b060a72ed685d17bbc",
+      "after_sha256": "75f15db41ae6729e2c1c14d8556d5a179ead233ccd5072ed717c3648301a3462",
+      "insertions": [
+        {
+          "before_offset": 2001,
+          "after_offset": 2001,
+          "byte": "\\n"
+        }
+      ],
+      "old_opening_fence_lines": [
+        101
+      ],
+      "insertion_count": 1,
+      "exact_inverse_removing_only_inserted_LF": true,
+      "frontmatter_unchanged": true,
+      "all_intended_fence_body_bytes_unchanged": true,
+      "raw_fence_body_sha256": [
+        "69b764f15c7ce54f7deb813c8c3b7f875447499dd75bff16a3b29c9ac4e4ee5e",
+        "a79c06cc69cbed93fd5a9ad4a696b32ca965f4e9af1434f4fc72fb2fe8a86a7a",
+        "58a0f76e7a646a53a2a1e7f5014a225f41ad502988fed946e79123b2aadfaa15",
+        "98b51a94684179434cf7ab1149e56f1d24ec298f93b6ea58b2fa2af4b0af705a",
+        "37a7b3923dccdcd22a21aedb81b244ad3f8162a30261a8a5867142f345289d61",
+        "8e40a751540631ef19e2d3ff32ffd21213b728f3211170d44794378daece27f6",
+        "c4423ba083155194bb00ce54ab8013f502f46ac95bd988ae39fa90835d1250af",
+        "804c0faa1b20e85e031655de02569b18ed63de75c74e41938a7783f6a84cd4f3",
+        "ccaa0b098d0ed4a9bfd3ab0d459ff47756a93b5948ec76a05ff0cf6e43ad34e9",
+        "887e3bd62229baf986053c10cb7565ccc83aefb3c32e95b35a28f187357cc89c",
+        "b3bdbfcac5654082fec360cc6d4f017044a37d470770611c9d2b98264744a4af",
+        "e07dad427e4f067c6ed6a792e4f982b61bd8ad178a3475e2e62a8beb13b01449",
+        "2afd12201e59896ea47abffe29f8c1daf9c38a56c87e0073d67ed5d549603d5b",
+        "935370aea87d981d09358218c4611c5082a62f117693b4dac5af7bb62ee7e4c3",
+        "7860e2e83bc76a120e722da102e43b51d5a0db1e79ab3c88b4f8f7457c6df6ec",
+        "b23f386dfeb75b412c224dc036f45fe191d90cbf82a95d3445c6a48119e19728",
+        "2c7fa4b1083dd3e1be0bb4d96ed9dcb06d2ddffed88b272c2ce6a77de579633d"
+      ],
+      "expected_fenced_copy_nodes": 17,
+      "rendered_code_nodes": 17,
+      "no_new_active_marker": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2026-33824：Windows IKEv2 中的远程代码执行漏洞.md",
+      "before_sha256": "3da3a5109b809c70eb460af139ca967eeca809e333d2895fe2772f316e461d24",
+      "after_sha256": "48fd32e24c4dcfafd877feb6f9eb01243f372143669db4c42d85f38e3fa53e50",
+      "insertions": [
+        {
+          "before_offset": 1853,
+          "after_offset": 1853,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 2593,
+          "after_offset": 2594,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 3097,
+          "after_offset": 3099,
+          "byte": "\\n"
+        }
+      ],
+      "old_opening_fence_lines": [
+        83,
+        101,
+        113
+      ],
+      "insertion_count": 3,
+      "exact_inverse_removing_only_inserted_LF": true,
+      "frontmatter_unchanged": true,
+      "all_intended_fence_body_bytes_unchanged": true,
+      "raw_fence_body_sha256": [
+        "e8c84fca50a078fd727fd59b3aa7b8a7259d271eb609afb85e8e44f704637f3a",
+        "83fd22d214b8f07991501441c5dd7540b974b4a5e8954b531da047892531e360",
+        "b172afd581df9a6ca83b30f9451b00fbf8c86a3f428b07e35c11d7209d848c86",
+        "f715ce9c3bc7a6bdbdacd65204aa48f43911fddd5e95f7e049b27693e202a24d"
+      ],
+      "expected_fenced_copy_nodes": 4,
+      "rendered_code_nodes": 4,
+      "no_new_active_marker": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2026-42231 漏洞分析报告.md",
+      "before_sha256": "960de751227d9b24bb5734e79eea6d5544006129901174543e5ac462476cc443",
+      "after_sha256": "20b9652d9ee461d7862b71190c2e8160ca77170d5bb8f973daab788f0fab0e7b",
+      "insertions": [
+        {
+          "before_offset": 3777,
+          "after_offset": 3777,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 5084,
+          "after_offset": 5085,
+          "byte": "\\n"
+        }
+      ],
+      "old_opening_fence_lines": [
+        115,
+        152
+      ],
+      "insertion_count": 2,
+      "exact_inverse_removing_only_inserted_LF": true,
+      "frontmatter_unchanged": true,
+      "all_intended_fence_body_bytes_unchanged": true,
+      "raw_fence_body_sha256": [
+        "235282066ad4819d8f7054f304ad471b8017de00197e80e6bd00227a1faff370",
+        "497aaa2ae38ad3c197d7880f037faac38fd9a9ce15922f1de7e418558dd13f27"
+      ],
+      "expected_fenced_copy_nodes": 2,
+      "rendered_code_nodes": 2,
+      "no_new_active_marker": true
+    },
+    {
+      "path": "Web安全/服务器软件/Kubernetes/Kubernetes 通过 nodes-proxy GET 权限在集群任意 Pod 中执行命令（RCE）.md",
+      "before_sha256": "54b5b86bf232570a00131215de1c753476db2a9818dea0c4a584a687e0d97ad5",
+      "after_sha256": "976aef2e078426c155e60ed2ec6a383a380459ab5cb627689ceafcd4f6f6e80b",
+      "insertions": [
+        {
+          "before_offset": 7295,
+          "after_offset": 7295,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 7577,
+          "after_offset": 7578,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 9038,
+          "after_offset": 9040,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 9250,
+          "after_offset": 9253,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 10190,
+          "after_offset": 10194,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 11575,
+          "after_offset": 11580,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 11737,
+          "after_offset": 11743,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 12679,
+          "after_offset": 12686,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 15920,
+          "after_offset": 15928,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 16490,
+          "after_offset": 16499,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 16899,
+          "after_offset": 16909,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 16935,
+          "after_offset": 16946,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 19778,
+          "after_offset": 19790,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 19969,
+          "after_offset": 19982,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 20258,
+          "after_offset": 20272,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 20418,
+          "after_offset": 20433,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 21908,
+          "after_offset": 21924,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 25098,
+          "after_offset": 25115,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 26860,
+          "after_offset": 26878,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 32694,
+          "after_offset": 32713,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 33504,
+          "after_offset": 33524,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 33712,
+          "after_offset": 33733,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 33881,
+          "after_offset": 33903,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 34440,
+          "after_offset": 34463,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 34636,
+          "after_offset": 34660,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 44708,
+          "after_offset": 44733,
+          "byte": "\\n"
+        }
+      ],
+      "old_opening_fence_lines": [
+        111,
+        118,
+        169,
+        172,
+        181,
+        190,
+        196,
+        204,
+        299,
+        320,
+        336,
+        339,
+        346,
+        349,
+        362,
+        365,
+        429,
+        556,
+        569,
+        613,
+        628,
+        633,
+        636,
+        648,
+        651,
+        703
+      ],
+      "insertion_count": 26,
+      "exact_inverse_removing_only_inserted_LF": true,
+      "frontmatter_unchanged": true,
+      "all_intended_fence_body_bytes_unchanged": true,
+      "raw_fence_body_sha256": [
+        "b5621df6555d9de8db54a9d2c331cb615851f6ebebcec068ad07f7a9a0009a04",
+        "5f8aecb74735915835f687db4cbcda06e50e643ebae03b0a9b1220ad28fa87db",
+        "f479c1cdb25f17fd2dc4598704b8f2f95bb727319fc05ec5042698fd095ac51f",
+        "36b6d25fe8fbd759c3e65ac8b3bfc9db3d9d4e2c1f6289013fc04fdefc7ea1ab",
+        "b49091bdf9432484ba52c1a41e749e14a3485e31cf3dd422e1b08d8c307f6ede",
+        "eff7a7f0bc1b7a33597283ec4320ac3f5b1153fa4bb1781b89f4a6979a89840e",
+        "36b6d25fe8fbd759c3e65ac8b3bfc9db3d9d4e2c1f6289013fc04fdefc7ea1ab",
+        "60008d92f2de075b230fa44d4610e6afc0158a30b59eb75aa6601ea9776cf005",
+        "a158985ad6c9714c6ab1dc53d11508c800c1b9078bcb05260e07165224a44d71",
+        "c96ed93bd9a61e9fd4088ec452c5e0ee6c9d7d81118e03b4973d8edaca25b9de",
+        "8a85aed55360811b4ccc03650715d6de8f344c35aaa4cd2a3ea1982b9f7c7c80",
+        "1e46de5ef906842762260dae07898ef43433e12988e4ac6dabcc5e2a6719574d",
+        "39f99ce80afae75ea5dfa1efb94c5b9ac5a1ca97dbd5fc05598501af3762fc94",
+        "3bfe9621e3e5a474a7007fbb38d25e6fb63c15fc1ce4290101efe2608ca9eec1",
+        "78e5277ef356637f275e97d5afae74459a531f93829dc1f86a19861f2cb37988",
+        "aab91dfd552663f365a2bd12f9ad959e3b54121ae6900987bb05c23294900b95",
+        "61a755de3af512070a0d558e0848d17d8e146018a906215233ecb5ad8dd27150",
+        "ca5ce2d40905d046edaf4152db1f29ba904b1e2c857f693e3f1001ee8522eb9c",
+        "2612b342995f258da25423484d371b30c480d32e18b4f534fce1d495c71f39bd",
+        "c6979f169cbf249da1f67663a1c6d4608dc174bfd90e8c4156c94ee53520f178",
+        "a1eddf5a45217564f56e36319777b4dbd458a02d308bcbad4ff586eb8b1d0de8",
+        "264aae0aa5c9e8d02e293a9c3a16b31cf2ddad5bc027071856331ac20ed9698b",
+        "6f5549f755075274f408a86d5af761e1912487dc939dcd058348f402426255aa",
+        "013dcc0b798dc60e0ca0f245e02882819e90f97313042e36de5c9378b6ae9444",
+        "3bfe9621e3e5a474a7007fbb38d25e6fb63c15fc1ce4290101efe2608ca9eec1",
+        "3d93522671cc79d76b8265eee4d6d29abb094235665b38bb1b7baa0fc46be4fd"
+      ],
+      "expected_fenced_copy_nodes": 26,
+      "rendered_code_nodes": 26,
+      "no_new_active_marker": true
+    },
+    {
+      "path": "Web安全/服务器软件/Prometheus/Prometheus 未授权访问漏洞处理.md",
+      "before_sha256": "3b0b67e01f72d2fb369143fe17c0bb3f1c0826040c9ff64fe97b869bf1914dc9",
+      "after_sha256": "54d8abae961a1d26187d0cf6899fdbc9f538eae7da5d750afe4d352e4ad3ed7b",
+      "insertions": [
+        {
+          "before_offset": 1219,
+          "after_offset": 1219,
+          "byte": "\\n"
+        }
+      ],
+      "old_opening_fence_lines": [
+        59
+      ],
+      "insertion_count": 1,
+      "exact_inverse_removing_only_inserted_LF": true,
+      "frontmatter_unchanged": true,
+      "all_intended_fence_body_bytes_unchanged": true,
+      "raw_fence_body_sha256": [
+        "c8a4457df5fdc4f93ad7b6c980357a00f2d89cabe93e371aff3ec412207ae705",
+        "f0ac836f786449d7a30291861572131de71aa2fb616a482e29a5981452744211",
+        "134fe440cc1afdc1036298c4784d7525927195511c647ef45c2e8e3ae5fa8ded",
+        "e2825cf1e7ce7131119174a538086f9578830031f30c3afc832cff50f10d0769",
+        "0d29e56822f8df8b073954642faf439566642d89ec053c6b1d02cfe74617a918",
+        "be5817e962eed22e64afcdf4ac3278fef8e41ad7b98346307c5bb72225a6f183",
+        "86b5c330c4ca39d4b63ea5809722eade425dcafdd6613b10c4036e8029c2a431"
+      ],
+      "expected_fenced_copy_nodes": 7,
+      "rendered_code_nodes": 7,
+      "no_new_active_marker": true
+    },
+    {
+      "path": "系统安全/Windows/Administrator Protection 安全边界绕过漏洞分析.md",
+      "before_sha256": "ddcebb77c410e4d590c71884704ad4297a5a50559cf5069c961d9b617e2cd3ac",
+      "after_sha256": "479920884895b408ab749664a4d3b12a609f1c01a3aaaea96fb20b5701fa36c7",
+      "insertions": [
+        {
+          "before_offset": 5759,
+          "after_offset": 5759,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 7296,
+          "after_offset": 7297,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 8426,
+          "after_offset": 8428,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 10256,
+          "after_offset": 10259,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 11484,
+          "after_offset": 11488,
+          "byte": "\\n"
+        }
+      ],
+      "old_opening_fence_lines": [
+        126,
+        179,
+        225,
+        262,
+        288
+      ],
+      "insertion_count": 5,
+      "exact_inverse_removing_only_inserted_LF": true,
+      "frontmatter_unchanged": true,
+      "all_intended_fence_body_bytes_unchanged": true,
+      "raw_fence_body_sha256": [
+        "39e7300dfa517e5e523fd015bdaafe03658a7dc7dba302114a8b94f6894b73b7",
+        "5b9fbf7b669061d5bba55af48398f74a8a98b7fe75f5d59d041396cb35176c0f",
+        "7706afa689294681326dc12b2d094f52f5d7dd69f1c21b317587c6dd50356f98",
+        "9b43278bad4f7e657793620cd56d03fecedc38b3adcb6af3c88bb709bc8e1290",
+        "4efa05c2067894269b35ea2f89ae70ae1460c7126bc9b3186b72c8df0a93edbb",
+        "d815624c1a5f09a82f331fdabcd4559269f201af3020a658661a62efefa0b5e8",
+        "53e705d5a77607052dd815ff1cb7c12b5d1faeabbdaa008c44eb0ae3f687365e"
+      ],
+      "expected_fenced_copy_nodes": 7,
+      "rendered_code_nodes": 7,
+      "no_new_active_marker": true
+    },
+    {
+      "path": "Web安全/CMS内容/Certighost/Certighost（CVE-2026-54121）.md",
+      "before_sha256": "a3c733c7d83877fdff159fe87fb9f7d02601c984c170dc76faa1810a0eae072d",
+      "after_sha256": "f9b536331672a025ecc128db6eb2992b9201be858ddf76928fa5c1f1425c982b",
+      "insertions": [
+        {
+          "before_offset": 5965,
+          "after_offset": 5965,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 6136,
+          "after_offset": 6137,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 11554,
+          "after_offset": 11556,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 22145,
+          "after_offset": 22148,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 22482,
+          "after_offset": 22486,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 22695,
+          "after_offset": 22700,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 23079,
+          "after_offset": 23085,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 23394,
+          "after_offset": 23401,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 24075,
+          "after_offset": 24083,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 24322,
+          "after_offset": 24331,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 24916,
+          "after_offset": 24926,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 25038,
+          "after_offset": 25049,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 25543,
+          "after_offset": 25555,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 26401,
+          "after_offset": 26414,
+          "byte": "\\n"
+        }
+      ],
+      "old_opening_fence_lines": [
+        154,
+        158,
+        220,
+        243,
+        248,
+        256,
+        261,
+        276,
+        285,
+        297,
+        305,
+        310,
+        324,
+        353
+      ],
+      "insertion_count": 14,
+      "exact_inverse_removing_only_inserted_LF": true,
+      "frontmatter_unchanged": true,
+      "all_intended_fence_body_bytes_unchanged": true,
+      "raw_fence_body_sha256": [
+        "8bda5e7c356d0c5631526b3aca8abbce6600539a218bde9eee95ade12bb288c5",
+        "cba0407afaa5e109f2bed9397bdee49610dbdb3a2aeef062eeebf1078fda9299",
+        "116f3cb12f19d9cfa09088fc6e16bd556101af2d6ef24faddac925653929da73",
+        "e03b86e3e1bbf41333d56b2d6729122abf523d1bc0a9774a0e27abd5f6f8e2e1",
+        "bc9175d6f605f831f4b192274c7023722145bf46140c9e828df8180a8cfc215a",
+        "209c89b2744867378a0769488386c156c2839c22ea26f0c65bd201aca01fa7be",
+        "628ed971b2a6c4b73ca7d49c8d4230e91c314c24deb86083084ee2f4a6620645",
+        "3008e64ebd1bdf61151a4fd0bbc382de52abe6c82b702bd95d499d7c09edcdaa",
+        "dad344c4bf3319af5a254ec6e95f43cb0a3fca59774350dfb005586d147be341",
+        "a754a4f4f58f8e4811aa146cec50443ca15343c4acd8288079ee4c3d7a385421",
+        "e7075daf617be79387d298a3ccf1afc4905d2592bdf713c51843e12d154492e2",
+        "8e79f6c3af56dedaba80d7647807de25c68d9a947bec0dd2bbd403a45200066b",
+        "f366c00dd679569964816d3bba53944b4906b237f98a01de8bf2023cf97d64e2",
+        "58483e21ebb381d77234574fea44dfa40a0175c2b8f3cb17b98d564ff7504a49"
+      ],
+      "expected_fenced_copy_nodes": 14,
+      "rendered_code_nodes": 14,
+      "no_new_active_marker": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/漏洞赏金实战：AFL++ 挖掘 GNOME libsoup 高危漏洞技术解析.md",
+      "before_sha256": "1a7086f85507618048f331cd6dbff7db0e26038d6d10892bec099d4e35445e02",
+      "after_sha256": "4c79e0597d99cfdd3be5f8f6c45852d33729c62446625abafa33e66cd3478cf8",
+      "insertions": [
+        {
+          "before_offset": 7864,
+          "after_offset": 7864,
+          "byte": "\\n"
+        }
+      ],
+      "old_opening_fence_lines": [
+        299
+      ],
+      "insertion_count": 1,
+      "exact_inverse_removing_only_inserted_LF": true,
+      "frontmatter_unchanged": true,
+      "all_intended_fence_body_bytes_unchanged": true,
+      "raw_fence_body_sha256": [
+        "342b912f3d892701918f5c028be0ff8595237caa0ac8ee637f1b80189704b185",
+        "fe9b468f44bbed3393d889a542dbdcf7fb07e0018c39596210e1a665412ca552",
+        "c189ed08e0e9ac0e901167af4b86f4f5858962f422afc1bfa5e2bca38380d83f",
+        "d7438369bc68f79073235f2de084ac40a53bfe1afea2c936e6f49b97fdda3bd4",
+        "c0511d62c515efebf97e364f34eccc32843a1de912e3e804292f89f39c82ed70",
+        "8675afab14d4f0ad95b0cc553f5f75da96b86ff08e4057eb81dba8954f49a200",
+        "c188571c07bc6500b1b9cdb39f7335fd7aa8ebef311709974e4f81d7bff83f5c"
+      ],
+      "expected_fenced_copy_nodes": 7,
+      "rendered_code_nodes": 7,
+      "no_new_active_marker": true
+    },
+    {
+      "path": "Web安全/开发框架/Git/Git交互式凭证提示和凭据重定向漏洞CVE-2024-50349 CVE-2024-52006.md",
+      "before_sha256": "abe20073728391f433d723804d7e98f711b6737b08c2a4b444ae918472f36d6f",
+      "after_sha256": "faf4e70a7ed1296f3c76a58743c5d9441cef9cc0685abf518ae5b5caf1df0262",
+      "insertions": [
+        {
+          "before_offset": 2398,
+          "after_offset": 2398,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 2552,
+          "after_offset": 2553,
+          "byte": "\\n"
+        }
+      ],
+      "old_opening_fence_lines": [
+        88,
+        99
+      ],
+      "insertion_count": 2,
+      "exact_inverse_removing_only_inserted_LF": true,
+      "frontmatter_unchanged": true,
+      "all_intended_fence_body_bytes_unchanged": true,
+      "raw_fence_body_sha256": [
+        "6894e78ac95158728619f82f444ba5f80934e829320a1fe3ee277d3e757e8196",
+        "6c017d311643c64f11ae46b51eb717dad4f66a85fc1a7513793d44f640ec380a",
+        "128c86d5e706b93d02ec7afa88708fde3ed860dc223e657ca48650b8b93e31ef",
+        "e37add4884988cf9a358b813a88817eaaa4cc00d86713bcf9705d4a8adc78453"
+      ],
+      "expected_fenced_copy_nodes": 4,
+      "rendered_code_nodes": 5,
+      "no_new_active_marker": true
+    },
+    {
+      "path": "Web安全/智能设备/三星MagicINFO/Samsung MagicINFO 9 预认证 RCE 漏洞链分析 - TOCTOU 竞争与目录遍历导致认证绕过.md",
+      "before_sha256": "f3a2c23a67537fd3f705f841d8ee95791b7117fdb19c9ce3a54f8d50a6bb4894",
+      "after_sha256": "b73d35e884b180e583ea52ea4e5725eb9733e39b4140f1cef6c1aae3318e0d9c",
+      "insertions": [
+        {
+          "before_offset": 2834,
+          "after_offset": 2834,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 3677,
+          "after_offset": 3678,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 4057,
+          "after_offset": 4059,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 5063,
+          "after_offset": 5066,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 5930,
+          "after_offset": 5934,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 6688,
+          "after_offset": 6693,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 6884,
+          "after_offset": 6890,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 7841,
+          "after_offset": 7848,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 8396,
+          "after_offset": 8404,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 9785,
+          "after_offset": 9794,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 10547,
+          "after_offset": 10557,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 10765,
+          "after_offset": 10776,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 11739,
+          "after_offset": 11751,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 12348,
+          "after_offset": 12361,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 14219,
+          "after_offset": 14233,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 14831,
+          "after_offset": 14846,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 15842,
+          "after_offset": 15858,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 16241,
+          "after_offset": 16258,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 17163,
+          "after_offset": 17181,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 17461,
+          "after_offset": 17480,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 17699,
+          "after_offset": 17719,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 19350,
+          "after_offset": 19371,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 20117,
+          "after_offset": 20139,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 21122,
+          "after_offset": 21145,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 22025,
+          "after_offset": 22049,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 25465,
+          "after_offset": 25490,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 28815,
+          "after_offset": 28841,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 29675,
+          "after_offset": 29702,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 30504,
+          "after_offset": 30532,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 30691,
+          "after_offset": 30720,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 31277,
+          "after_offset": 31307,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 31703,
+          "after_offset": 31734,
+          "byte": "\\n"
+        }
+      ],
+      "old_opening_fence_lines": [
+        74,
+        86,
+        96,
+        107,
+        129,
+        135,
+        141,
+        161,
+        171,
+        185,
+        194,
+        200,
+        224,
+        240,
+        252,
+        255,
+        278,
+        285,
+        298,
+        304,
+        312,
+        320,
+        330,
+        336,
+        354,
+        370,
+        395,
+        410,
+        421,
+        427,
+        433,
+        438
+      ],
+      "insertion_count": 32,
+      "exact_inverse_removing_only_inserted_LF": true,
+      "frontmatter_unchanged": true,
+      "all_intended_fence_body_bytes_unchanged": true,
+      "raw_fence_body_sha256": [
+        "cd75e7f1f2dd47949998fa63ac0d3cde66b924ba7f49315aa3449994d6fcc7b3",
+        "1ed7cd277fcf1a08002fce3299754a9885bcdeeb620edb029f03e40388a9978c",
+        "7e29a198b14ee1ef677d7196977fd4b5b5f014bd83965959a231fb148960517e",
+        "a78789b2d69b6ffe0477501933ec832fc9dcf5251fbc75461c30352d90ec3d7f",
+        "44bc7eb887f44b101a79093efc7c3fcd4aec5e064416195c242d833659295ab3",
+        "cd88b61663b8269e3705146fb8bb1c0e353f83a9b19f93e03208e71563e5a035",
+        "2996ae0b0fc011933135ec01f977b8a915f09cad7a7d63cfc61c9c5bb3d521ec",
+        "c1186d076484858112add0c26b117397b2690d706a343e42fdf7044a4ea990cb",
+        "178d89dacf836ad0361391a25b37fb4c5d712922cdd781da68390221ed9b2e77",
+        "49f298a3420fb0ae98e20b98d6721f070330854f7a25782b283ab55799367069",
+        "2f02c1e5a1ae853954244295e93118c15ae6561e6d461fed14e84dce9491a12a",
+        "508df35586163853a4a6340e6c6e9443420ea69ab7b65b26e061244f838374a0",
+        "33c80b6a09cffc5d97f8678f4b9c019b33583caba12496844b82b05ee874dd91",
+        "7ce4222d4ddaae088c787d39f3e8ad63e8e986053428b44d0dac49a54b1a9237",
+        "ae42da5bf9a00e0f3407f3ad3bc85fefd849e343ce734facba803e5df0b05b5c",
+        "cc746969528bad43c3ace73a3eade6cf22916c2abb81f0ceec02bb79f5dbbb03",
+        "96ded96c4c320cd3412e185d1630eb4528951ffb280b4a755ad1ca0852f04d2d",
+        "85f22a51fe5bfb5f7adb368263739fc956d39cf04deba3cffae775ba1b221a08",
+        "2d9ebbb89e77b510b334d044a37710bcbc8ce855fdd4bec6498a40a90bf43fee",
+        "ec8a33904783105ab2b523899fc601a69d09301b4cb779bd9320342f91a55719",
+        "fdbc9328945cba0148cc5dd508ac053a0d8ac85a06dd6cec4af8685366c00bf0",
+        "3221e5ab55c7faf4eeba053a1b3a9031b30b7764103297da3febefe16ee6130f",
+        "4494a3dfe825f2dd009df4a5652bacf7fd591051da632dc4133f649f7895362e",
+        "7711ecb846e169daf4a38c58ccd118508aea8db44829a26424c1b46a7e5ab02e",
+        "39b8f389a702276aa0673ac0528fdef97c3dadc0be4c0cb22efb4d12a3e49e0e",
+        "43dc81d56d6b154390139bed80408d603332d5b746861a4ae95bb152711051d4",
+        "a905fe23171cf1e8d623f1760242c269e6bf3b6708dfa8472343475b657022f1",
+        "c8a809c68d94f731399b21b3e352b745ca6a20736bb920866fa0d6ab283b9ebf",
+        "cc8602e91be425a7205e425ea2b28a6bd7c3a20b1e20bb683c62ca4d8c79392e",
+        "7fb69240097fe71e3e748bdace37a50aeccc1e78f2ba72a27515612f588d48fb",
+        "fbead3f4ae779ffce073e7cdbe04b417875f13eacb565b9da535312d3c45d827",
+        "4db6b4c4ba5c0d23d60c5f2e0c7cdc32f6b80911bb8d7539e9b168673bb9c374"
+      ],
+      "expected_fenced_copy_nodes": 32,
+      "rendered_code_nodes": 32,
+      "no_new_active_marker": true
+    },
+    {
+      "path": "Web安全/服务器软件/CrushFTP/CVE-2024-4040 CrushFTP 中的身份验证绕过和任意文件读取.md",
+      "before_sha256": "6ffb673bfc05391560870ffe1952a3e428a627816b91f7d26e5fbd24774bb750",
+      "after_sha256": "33d2736ca4a6dcd10ff9c7c6a0bd2d94ce04e2834d179368c5e542a90da72786",
+      "insertions": [
+        {
+          "before_offset": 1611,
+          "after_offset": 1611,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 1856,
+          "after_offset": 1857,
+          "byte": "\\n"
+        }
+      ],
+      "old_opening_fence_lines": [
+        70,
+        77
+      ],
+      "insertion_count": 2,
+      "exact_inverse_removing_only_inserted_LF": true,
+      "frontmatter_unchanged": true,
+      "all_intended_fence_body_bytes_unchanged": true,
+      "raw_fence_body_sha256": [
+        "5d03aa9790d5b5931ed146e4280c212c0f4d4f42be5f65fa5f788473207a08eb",
+        "8dc0427a0b2863fb37d7d7932937ca6b027b7b616d65496980d99c5b0f1b58f8",
+        "299e006c11f8e36973b488832edd6cbc6bd49a7147623dab7256fd2197c7fa4c",
+        "061d024f405d9b3bdd6bc4b448e5080806a9c6124528a6b7775e642d6c091be5",
+        "1a0e932dc0c9c9c06ca01f8e20e986d4524ca4b009ea0bac27d3479004c8f27b",
+        "290a1b2875b3f5c3a7ac49ab315f5e55ce4a0b62121f385cca67e17bed2596df",
+        "aefd40f8dd939b3d759c724c10d34023c1ba5fa840f3d627221e9d6f9a37b7fc",
+        "8aad0b8adc5631f699df3bc5dd7c39d4f27c16c21a3084bb7c09c84a03ac7238",
+        "0dfca15112a7ff8f4a32b4e6b7767233d56e68f2d942f47acb69f5a9a203e97b",
+        "9080c402583c702afeec51199220311358f31c309405e50fce4bc77cfceaba40",
+        "baa34de435f2a06823f78ade437e9e030a292c32ad66b399fba5c384049b494c",
+        "7b66079219a5c9841c0027a4deee3d22dbc1854c0937b865f3826add1d9c45ff",
+        "40095e8b7b61d0ebfa0604701a90a32fa4dc063eab93b080b505e31e8e2285bf",
+        "39ae18dbe53a3c33305181f1d87e864715298a312c92fc4e2fad9a6cad8b81fb",
+        "ff3d5b623f26310b90b77be18c770530ab5374b18fcc78382e32c25d843ba2e1",
+        "539c17c19c52a59fd8c99b45c6c049fb0e962768db7d6ce80e650ceacff97739",
+        "542f023550aec75a69a3f4dacb89d27c94839b756e41283919cfc2682bddb672",
+        "1c435e0f60354be5850af5be6032e0bc9b39def9a8396225fed4b46d24389189",
+        "9b36604ac6b8a00ef66ab37cdd82818c1f1c079605553d7fb1c597b6d169fa9f",
+        "d5606c586d8722a04d7fd1d577177cb2f3b0a1f3262e20f25ca79b36356679c3"
+      ],
+      "expected_fenced_copy_nodes": 20,
+      "rendered_code_nodes": 20,
+      "no_new_active_marker": true
+    },
+    {
+      "path": "系统安全/Windows/BYOVD 进阶实战 (第一部分) — 利用存在漏洞的驱动 CVE-2025-8061.md",
+      "before_sha256": "88f6e720571ce0c7f49148420375c64afbdaffcf4270f9fa3ce79c6f44ebff9e",
+      "after_sha256": "e0658e670b137cfe82daa754e4e5f0d23354ec1bc5c962dd82c93d41dd20cc89",
+      "insertions": [
+        {
+          "before_offset": 10575,
+          "after_offset": 10575,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 11463,
+          "after_offset": 11464,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 13123,
+          "after_offset": 13125,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 13245,
+          "after_offset": 13248,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 14460,
+          "after_offset": 14464,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 15351,
+          "after_offset": 15356,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 15554,
+          "after_offset": 15560,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 17548,
+          "after_offset": 17555,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 17997,
+          "after_offset": 18005,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 18081,
+          "after_offset": 18090,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 18807,
+          "after_offset": 18817,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 20968,
+          "after_offset": 20979,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 21938,
+          "after_offset": 21950,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 22515,
+          "after_offset": 22528,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 22921,
+          "after_offset": 22935,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 24603,
+          "after_offset": 24618,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 25095,
+          "after_offset": 25111,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 25543,
+          "after_offset": 25560,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 26670,
+          "after_offset": 26688,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 27422,
+          "after_offset": 27441,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 27978,
+          "after_offset": 27998,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 28441,
+          "after_offset": 28462,
+          "byte": "\\n"
+        }
+      ],
+      "old_opening_fence_lines": [
+        203,
+        229,
+        272,
+        277,
+        284,
+        307,
+        312,
+        341,
+        351,
+        354,
+        368,
+        430,
+        446,
+        449,
+        455,
+        476,
+        483,
+        491,
+        496,
+        501,
+        506,
+        512
+      ],
+      "insertion_count": 22,
+      "exact_inverse_removing_only_inserted_LF": true,
+      "frontmatter_unchanged": true,
+      "all_intended_fence_body_bytes_unchanged": true,
+      "raw_fence_body_sha256": [
+        "a309556824031f023c401cab3be4c4be636c1b6339bef3d91b3aa4842ebacbe8",
+        "9e02efae37c8539ee7deb0d673bfa2b1e286537c359b55b0976694f4999ea681",
+        "46d0b4fa12502283f9ee5e4b76bfe2804f8f1385a16fb80e1593f5fe075c349e",
+        "d60ad389c34cbea9ac5c972dcc085f64e2e20e11d2762724f7ff09d8d873563f",
+        "e881036ec821308f49c3fc1a48f19e608e9d853af2b342b704e19db18784f48f",
+        "69c7fb8e6d3d07bf43c84ea8d799876311eb88349634cd0d3285f44c16bae011",
+        "e0d2bcb587b5df0977eede16667bc71f35fbc22bd2479878cb1f852e0f79ad48",
+        "e55e8ced7812e07002dc80f01d5222db96945dec170dab9e47b5c215938ea9bf",
+        "713558cdd18a1b34db9800e6a1cdd1af28a46904e15c168cbb66768657925ac3",
+        "e4979aa1e15727702c58e11c8ffc65dc131dc1d346fd8b666a4d06549f7b6fd5",
+        "11e2996ca97c9638c8c7686740f8087b46d54e365cfa1839fdc7dd7455650421",
+        "516af69465475bec333e590baf006125729f63c7f25a73843bfd4ec25d5f7982",
+        "7d207558430dd9c8e1006c4aa76f4e5e16bedf31401eab0a0dc3b9a8e3d0fa32",
+        "c0851271b4637a15a70e62c705968eb7ad812e7fbc68e6d0b0dcc5959edecd89",
+        "3cd40fe94cd0e0a3dee6d0f82942d9f4115b06f515df02c0536caf2a44866750",
+        "bfca1481ab9ff3dcc3eddf7eba570e9aff9d6b32d5c0cc1014de042132dbbda3",
+        "7229d26dbdd0045bf9088d93b1ff6a1afcd0f4e1d5d4b233bfdecf3d79fb0357",
+        "dd25789a4367904c1b0e47b46ab2d7a7d6de8cedb6467de1aee2f69ebfd92f87",
+        "bcc5ee31029d1d0418e6544b86f7a88e12cca783d6d1e4fa39eb26c8810bf5aa",
+        "697a4b8f8dcb733612bf844dcbbfe9de9541563dc13a7baac0d2b41d0e3629d9",
+        "9a64d771217f3276c3e72530477c5644fcde4f18439d5648915873a9495e639f",
+        "f25968bf9e306d19a625e1435550e100945696b42404ac4e6c32b7601810172d"
+      ],
+      "expected_fenced_copy_nodes": 22,
+      "rendered_code_nodes": 22,
+      "no_new_active_marker": true
+    },
+    {
+      "path": "Web安全/开发框架/SnakeYaml/SnakeYaml 中不安全的反序列化漏洞 (CVE-2022-1471) 有感.md",
+      "before_sha256": "8585e544c9e440061a450141a4471cfd28df86de9b0fb65e28b1c1022b714ce3",
+      "after_sha256": "686b22cdf39ad25095f3a1cb9d7631534cc9bfcd304fb0ac1c1e9847aac1b78c",
+      "insertions": [
+        {
+          "before_offset": 1174,
+          "after_offset": 1174,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 1731,
+          "after_offset": 1732,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 1965,
+          "after_offset": 1967,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 2506,
+          "after_offset": 2509,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 2781,
+          "after_offset": 2785,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 3647,
+          "after_offset": 3652,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 4570,
+          "after_offset": 4576,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 4752,
+          "after_offset": 4759,
+          "byte": "\\n"
+        }
+      ],
+      "old_opening_fence_lines": [
+        51,
+        67,
+        75,
+        84,
+        89,
+        115,
+        133,
+        138
+      ],
+      "insertion_count": 8,
+      "exact_inverse_removing_only_inserted_LF": true,
+      "frontmatter_unchanged": true,
+      "all_intended_fence_body_bytes_unchanged": true,
+      "raw_fence_body_sha256": [
+        "0f6c351376d1c38189563c64157d24f979efaea3c6742aa903f020645e4bb0ac",
+        "37c3cce517160b97b56c48fde038f37f40f97aca6ef9fd6f1fce6e999d70fe91",
+        "584de556bb5039d08209fd731f73abdde1d677726b817dcec7def7c081e11a00",
+        "0d88a7983805505cbe52b0753fb0dd3ef58358fe90c3143a8f4f8decf9049cb0",
+        "a0f622c55d51570903b4fb98731da21c3b2f6c45910dfe2b80b2a299e39db4c0",
+        "2d3cb3ec5be60b1d4a3ea9ce1d06413bf9ce8231edff8cb8272d1512ce7f0271",
+        "d53678fba6face481607eda7feb116c7f8e88164d710aca73a51c4fec326b559",
+        "ab118cf51068aa540ba4b3dce366130d41f79974c29563943cff71dd3eb3d29c"
+      ],
+      "expected_fenced_copy_nodes": 8,
+      "rendered_code_nodes": 8,
+      "no_new_active_marker": true
+    },
+    {
+      "path": "Web安全/桌面软件/Chrome/Chrome 浏览器漏洞利用 (三)：CVE-2018-17463 分析与利用.md",
+      "before_sha256": "efb1cf10196ccd272ddaf663056a69ad9033549878490c9485c7798d3a3f525e",
+      "after_sha256": "8e27c8f5e21a898c74b598c3a36e0809ab607d70b86423d6c10eba45557b3507",
+      "insertions": [
+        {
+          "before_offset": 5029,
+          "after_offset": 5029,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 8085,
+          "after_offset": 8086,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 8503,
+          "after_offset": 8505,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 10879,
+          "after_offset": 10882,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 11768,
+          "after_offset": 11772,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 13197,
+          "after_offset": 13202,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 13275,
+          "after_offset": 13281,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 14463,
+          "after_offset": 14470,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 16219,
+          "after_offset": 16227,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 18668,
+          "after_offset": 18677,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 19070,
+          "after_offset": 19080,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 20005,
+          "after_offset": 20016,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 20882,
+          "after_offset": 20894,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 21429,
+          "after_offset": 21442,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 21715,
+          "after_offset": 21729,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 23100,
+          "after_offset": 23115,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 25460,
+          "after_offset": 25476,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 26376,
+          "after_offset": 26393,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 26621,
+          "after_offset": 26639,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 27126,
+          "after_offset": 27145,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 27541,
+          "after_offset": 27561,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 27994,
+          "after_offset": 28015,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 28430,
+          "after_offset": 28452,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 28756,
+          "after_offset": 28779,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 29267,
+          "after_offset": 29291,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 29518,
+          "after_offset": 29543,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 30505,
+          "after_offset": 30531,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 31113,
+          "after_offset": 31140,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 32039,
+          "after_offset": 32067,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 32978,
+          "after_offset": 33007,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 33482,
+          "after_offset": 33512,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 34241,
+          "after_offset": 34272,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 34779,
+          "after_offset": 34811,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 36165,
+          "after_offset": 36198,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 36633,
+          "after_offset": 36667,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 38434,
+          "after_offset": 38469,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 39006,
+          "after_offset": 39042,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 39455,
+          "after_offset": 39492,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 40567,
+          "after_offset": 40605,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 41087,
+          "after_offset": 41126,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 41848,
+          "after_offset": 41888,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 42139,
+          "after_offset": 42180,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 42315,
+          "after_offset": 42357,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 42733,
+          "after_offset": 42776,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 43560,
+          "after_offset": 43604,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 46320,
+          "after_offset": 46365,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 47680,
+          "after_offset": 47726,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 47846,
+          "after_offset": 47893,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 48000,
+          "after_offset": 48048,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 48310,
+          "after_offset": 48359,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 49653,
+          "after_offset": 49703,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 50251,
+          "after_offset": 50302,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 50636,
+          "after_offset": 50688,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 51770,
+          "after_offset": 51823,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 51897,
+          "after_offset": 51951,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 52609,
+          "after_offset": 52664,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 53380,
+          "after_offset": 53436,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 53820,
+          "after_offset": 53877,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 53958,
+          "after_offset": 54016,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 54453,
+          "after_offset": 54512,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 56424,
+          "after_offset": 56484,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 56817,
+          "after_offset": 56878,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 57572,
+          "after_offset": 57634,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 58483,
+          "after_offset": 58546,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 59369,
+          "after_offset": 59433,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 60428,
+          "after_offset": 60493,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 61053,
+          "after_offset": 61119,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 62576,
+          "after_offset": 62643,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 63359,
+          "after_offset": 63427,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 64290,
+          "after_offset": 64359,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 65229,
+          "after_offset": 65299,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 65536,
+          "after_offset": 65607,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 66842,
+          "after_offset": 66914,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 67608,
+          "after_offset": 67681,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 68072,
+          "after_offset": 68146,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 71479,
+          "after_offset": 71554,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 72121,
+          "after_offset": 72197,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 73473,
+          "after_offset": 73550,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 74029,
+          "after_offset": 74107,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 75147,
+          "after_offset": 75226,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 75745,
+          "after_offset": 75825,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 75872,
+          "after_offset": 75953,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 75983,
+          "after_offset": 76065,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 76642,
+          "after_offset": 76725,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 76899,
+          "after_offset": 76983,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 77442,
+          "after_offset": 77527,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 79434,
+          "after_offset": 79520,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 79909,
+          "after_offset": 79996,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 81251,
+          "after_offset": 81339,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 82660,
+          "after_offset": 82749,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 82927,
+          "after_offset": 83017,
+          "byte": "\\n"
+        }
+      ],
+      "old_opening_fence_lines": [
+        166,
+        192,
+        200,
+        224,
+        235,
+        249,
+        255,
+        262,
+        284,
+        332,
+        344,
+        381,
+        413,
+        421,
+        432,
+        470,
+        517,
+        530,
+        537,
+        543,
+        557,
+        563,
+        571,
+        582,
+        589,
+        595,
+        613,
+        634,
+        645,
+        662,
+        675,
+        690,
+        695,
+        700,
+        709,
+        714,
+        730,
+        747,
+        776,
+        792,
+        817,
+        826,
+        834,
+        843,
+        867,
+        872,
+        880,
+        886,
+        891,
+        909,
+        934,
+        940,
+        948,
+        981,
+        987,
+        1001,
+        1014,
+        1025,
+        1031,
+        1047,
+        1096,
+        1103,
+        1115,
+        1131,
+        1138,
+        1151,
+        1156,
+        1167,
+        1177,
+        1186,
+        1193,
+        1200,
+        1209,
+        1215,
+        1226,
+        1314,
+        1325,
+        1342,
+        1350,
+        1360,
+        1384,
+        1391,
+        1398,
+        1406,
+        1412,
+        1421,
+        1426,
+        1436,
+        1448,
+        1465,
+        1473
+      ],
+      "insertion_count": 91,
+      "exact_inverse_removing_only_inserted_LF": true,
+      "frontmatter_unchanged": true,
+      "all_intended_fence_body_bytes_unchanged": true,
+      "raw_fence_body_sha256": [
+        "fcbbf8fec678d8ce5e36234303068294596308b1083c02ba6c8a5a43c22df767",
+        "ccc59304e332598ae37681df1d51bc844a515c8565c45d30d0705d082a83ad83",
+        "b17e139492264f02730a9a11f63cd50b04082b1f4a423a05a293019f4095ffbb",
+        "4feef55200128e83f22f86b5ea18ee4d48b2a9e5cc3f362e6f961457a1c690b6",
+        "ee0218db2587399c7f9801c86db35986c706a2fd540c928c9ff660bfe86d9aef",
+        "39a4ef99327f713a0bd43862c8f4e55c1b7a30bee552d4c3ea4fb8664eee930b",
+        "f062e1285b985d56049332cd5b47796303487b704db236aa65a2771c4a35f5d7",
+        "c64146270648bedd71562e5d8c5ce9622a2e7111bac2637da1df954408ae7bdf",
+        "5eddb4781e7f92d59e90ce0637ddc79d3b1aded0a7f45e27a88f5a6aebb8183c",
+        "82de5d1edb511534447f8f9e8c1f0c74635a702350d5d0c5953f30992f499252",
+        "c00733a6e82cee53ac092002885535db1e1ad24d08e6a3ed9b79cb924e70435b",
+        "ff89159cf1c0fa57f0c33a9b0e4695df9ae6fd382e01f3150d83e7e19dd7c236",
+        "5874e19a35898a93080f9cffb8e8b805b84bca425014187ea33b3eb4c5a37df2",
+        "39db1c7767b233d41b2d7af5c008b65053c18d5ca4a780c54c8c414f988e789f",
+        "502da44466c21819fa6b1c9042dddca77f0b0b4b49ba07539453ea9fcea4f37c",
+        "72a88f26eb54d0807e1903664f8a6d2dbecf030cbf1dbaa384380cbafece4351",
+        "951aadb07a06c9a5933210890575b5369819a51701e3891be5e87a978fd33fc7",
+        "419e09e04b329cb0a0f651c626406ccc03aab4431e749413e61abb6569caaaff",
+        "369fdb00737c7f1c77f1ddc3e8323d6a4621676114cb7fd8ffa4aa04f91ddc44",
+        "62917e89af6c0d62b21028053318ffbfbade0dedf59e11d9c33248899dd62d13",
+        "d9e71a45730402219ceb2b3bbe6e9bc7dec21c26ab1e84f0fe877ea86cd601fd",
+        "858afef0b9313cf59f1913a7237d2731d4e4bcdd9d152c28c236f68034266893",
+        "054cf462fae43ffea2053bd9399bf8649290eab29cb5479204bddcc458ecdd02",
+        "9d0c4a600e27301a2be226e89818887e13fdf2ac0c622af964044d433f33fb7f",
+        "de24ee64f5520c358b229385609d0b833ee05afd40cf6e46672cc3133024b3c2",
+        "5e2f1041eda8243727aa95eaf88d8f844c7ecae47d90156283e9c79cbe72db39",
+        "9e5241ad181623e0b6b13a4c7b32ff3bcf798fcff2a2d744528ad312385b2843",
+        "20fa5ee80d8d5154012cd6c85cd0b5ccdeaf47cd856829a861bd7caab9c7fc7c",
+        "a1db1bfa284de0f610b9f2fc8aa254c1cf1169fe3718091f5cc9b328ec6f6273",
+        "0a74e675d1a208851be9868e7f5435055dfa2a58af279ad01f442e0b473a9035",
+        "8be6fe36135792cc719f3cb4c909459f59ce9044994138a67af11d060983db2e",
+        "d3741c8fd2d93d80919e2ba44a3827a1611be94c8fc1dc30de8d6016d6bc0941",
+        "c06f1fe098c5d5dbe1810e1f17128c80f9fc67bb6fd7bd5987b75cff73b9053e",
+        "8b55993b04f8fc2dc990e6c97a9ff1d6975171b5bc05a2e0e4bbc1be26b959d1",
+        "f904bcae804f415534a7e4efc452a3c0dbd21059e8517721350480d499532c23",
+        "67721ddfa75cf8d1e4f7369df93605ee27b3005f8af9ec6446ce03e044092be3",
+        "ca61921aa0e92d198c32de1a10f386994c6a22fb504596d4f0bba5695800d034",
+        "6cf8c239bce26f333beacf67847f0555d679c513611970537be8d018f2bb0bb7",
+        "1b25d05983bdefdc70dd0b7bac22db60745330a03659277839f15f2971f47d89",
+        "da2bd0e276dbca758b3486022f3a617754ecc511ecb4e08478e6bbbd5b1aec6c",
+        "b62b10b72e370b1871352d1e84079d02e54203d0796acdfdf369c426c12c8504",
+        "203b2d66ef41e863266e166da362f4e22a9dd1c849b67ee4d07bf670d321f691",
+        "69a1a0f3deb7f88772233d2201fff9666142cddf752312c9ffbd57f31e750328",
+        "3b0d3b67abe52bf782cfae5352bb213b14d0c3fe4f3feea11a886d10a841c845",
+        "cf058bb7a61c439565a1718de8e957d9d5292168551ae0c435930ca1d792d712",
+        "e49ecc517ccb487f40e16645561eb52a6b1d4facadb6cbb1dea4c55a612d683a",
+        "b087ca0b1b91b2b7be22bc7b393c656f3a6d035a6af81d80b280308ecc47a8fa",
+        "be7efdb6fd61268dac0aff68d13a5c1a22ad4883378b80743b4ce09a190ec2f5",
+        "c19cfb6e4b57a03f5bf024d506b241fa62b2bc4eba1f52fdfce56a6e63c5715e",
+        "11672e795cdd01dd22402d63502e3303e945239e60716d907d248197256df509",
+        "70626234c0360c3faa915c22638441995b107200947c51eb262e1ac722f38418",
+        "bcf0f90ef86d36ec9a7796d510c1041a303bacb9b1d10a30d04736d63b82d0fa",
+        "0887a05bdd365967a233bbd1eee62babb55c0be4c60c322028f0ddd4dd9469fd",
+        "5f0c9ade1da0df901ee8a59dbe262d1ae9dd8b1bd5cb32b6271199d8055cee8b",
+        "c1af79cc2d12d2104e47de2cba809e669a57287abf8adc0575541eaddc77ec6b",
+        "496f1ba28bee0051ada10602e99890ee44da8302314e2f8f38f612a23b4b7454",
+        "d069c080d1bc60d21f43b7a2efc343bdbed9fbe1780ad4d146c622e4533d4b7d",
+        "f10ae3b76e45f0401bebdb7fa62a39335736680811ef54c6bcdba8d74fd6b2b5",
+        "e3fad4767b6cc64257538a379ff5b5804abefc7c840e39e5dbed4aedbb3c98c4",
+        "9c263c60098436d5455f7ba48a491d551da571972f4badc04ffb34bf03449d1d",
+        "2622427e931b680740644d3afc50d223ebdee0653d93feda9617bf84ae742d7d",
+        "71d8d5a379511f45381a5d9e144c5ea8547eb03c54a832bcade40bb9c62fac77",
+        "5e74f4e229640c2152f284532845b45402a065af575c083a9518a25c454e9812",
+        "44380ad24bdc76b89c10da5b038b49212474157202acb4a8d9c4f8b9e465c586",
+        "d3bd2626269ded3025a0ccf1413a433e150c75e29d2053e3164d1de18fd12431",
+        "0d636bfcc4ae078b423f421a93dd5d4f9983dd6e40cf438f9354b4b7354de7e2",
+        "d38118e85e1bae9850c750e396e6f0840874cbbe89d50118601cf17e5ebe5d20",
+        "c897d7411b752af89d6832d2793389710fa6c575f43290a9f122b8ea10ba7a11",
+        "a35a2f5ddc66d21c26f6d8a3a3b17f70c1bc759cd59c574591f24d1dea978da1",
+        "383d05dd223fdbdbc9a062a2b4b69e7feb293efa7bd444cb0d510129a743eadf",
+        "d670ab662b7bcd1b4480f8320a7433e919ee7748fe2990f8505d94f950425fe2",
+        "51869465534ae6fbee569e7473fdc1cf06000488d51d2b48f99108f8911d3fea",
+        "1b9d13b414e044229067e509ff1d5b2018f7b4ee7cfa9a299fca6ece2c9dfb49",
+        "ea56f821d44254e39975dc77f1f9cd56dbfb8d0d2053b12ba8afb3d363d885c3",
+        "8b6f0c8f39dc8295db409dbd5232c8a98bfd616c0e927eaeb72edda6f68c06d0",
+        "bcab75a2fb875cf9083bc6a2c158f397bcad09ec9cda0369b1ce0ea9331ce03c",
+        "b11391e440faa67541424184b00b7a0ab3b203aad1e19b954a5913507b9d1531",
+        "662978509c8c3ca2414009f44bd49ac430a03dbf50bf1f0b65ee772abc691d01",
+        "81c6731d6a824607ab3b7fc345ad3e47900e90dbe1829966cd6ef32e57b4170f",
+        "6e50385f774b3201f5900bd97cf753ab1c8a7f5f31f1adb90214582f7ea3456c",
+        "bb66b773a86c9f61e82ff445482a5c7ff5f60a2d571ade0b7d72b63f229f27aa",
+        "15c1b71b69b16142425a72ebe10519a68a46bd72a1de1820274e9fb8318a1e59",
+        "6e35e1c7786364f787d4ee788756f7e418f18c734b963cb0044a45629b1789f2",
+        "2946ecf5902c4293496413caaef93a0ed55c64d5c35fb7848aeb559718f35516",
+        "d7835b8cae2db4631bc211294c88dbfea3f38481607610441f975ab0ab75b0b8",
+        "ed20813732d86fa4ba9cfee501087ca4a8a7c50e52892fa4400c2a350ad3eb92",
+        "3ccb551c57ba36a176c670394f9e7438fd32202122f8609e634f08ec5bdc7a7b",
+        "81d36460f41dde5afd7b614d463af4ac916a21162ce6d29bc7e2806e85e3d78f",
+        "ee2a56e8789c6eb0f3718fbeec12a040f83e2be0225fd447c26992ff10b21bf9",
+        "0d5389cd60d8c99d1a87ad9423a9f5abe9b7fc06434d5e43437a96eb6587e322",
+        "6ddcc955b847be0d96e726fa9fe9ece18deee08ede79ae4f6987eb5e64c9a412"
+      ],
+      "expected_fenced_copy_nodes": 91,
+      "rendered_code_nodes": 91,
+      "no_new_active_marker": true
+    },
+    {
+      "path": "Web安全/桌面软件/Microsoft Office/分析 - Microsoft Excel 远程代码执行漏洞 CVE-2023-36041.md",
+      "before_sha256": "5506120dd662094c12562f0f8ac2d1ae22002f254c51ebe671d0900d0e5fc3ee",
+      "after_sha256": "dd9e009ea9b98736c8c7289b3cedeffba0058d6e469c6db1665bf81ac843ed15",
+      "insertions": [
+        {
+          "before_offset": 2437,
+          "after_offset": 2437,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 4532,
+          "after_offset": 4533,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 4977,
+          "after_offset": 4979,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 7094,
+          "after_offset": 7097,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 7718,
+          "after_offset": 7722,
+          "byte": "\\n"
+        }
+      ],
+      "old_opening_fence_lines": [
+        99,
+        148,
+        159,
+        202,
+        217
+      ],
+      "insertion_count": 5,
+      "exact_inverse_removing_only_inserted_LF": true,
+      "frontmatter_unchanged": true,
+      "all_intended_fence_body_bytes_unchanged": true,
+      "raw_fence_body_sha256": [
+        "922d8c77a3959799454ef8a52b20474749fcf5dbe1a53b8b8bbadf23b4db1f21",
+        "ab28c4de39ed8d130caf61e4d897bf71c7e6dc5528eba3c557afedececcdce95",
+        "d8c36cc0d5ffc2273c2536472b65f77622f1778c0b12b44c6054a581b17d39f2",
+        "5f4898911767a1b5faf76a22178d4a5614737a3b641572ee24bfd1ecc153ebde",
+        "d585a1e70eff9d311d02c04f67b9575d38ab178ed18f1f872afce14de78c7a89"
+      ],
+      "expected_fenced_copy_nodes": 5,
+      "rendered_code_nodes": 5,
+      "no_new_active_marker": true
+    },
+    {
+      "path": "系统安全/Windows/CVE-2016-2183 windows漏洞修复指南.md",
+      "before_sha256": "52043b920708aeef522ba2fbbbc624a01d23adbe2301533a48860b2f0017f6e3",
+      "after_sha256": "dcd1f3c8b46d620da9a7075dd77443994fb40494dea02f6f35db4eddb9c0284c",
+      "insertions": [
+        {
+          "before_offset": 1507,
+          "after_offset": 1507,
+          "byte": "\\n"
+        },
+        {
+          "before_offset": 2007,
+          "after_offset": 2008,
+          "byte": "\\n"
+        }
+      ],
+      "old_opening_fence_lines": [
+        71,
+        90
+      ],
+      "insertion_count": 2,
+      "exact_inverse_removing_only_inserted_LF": true,
+      "frontmatter_unchanged": true,
+      "all_intended_fence_body_bytes_unchanged": true,
+      "raw_fence_body_sha256": [
+        "c43ec76050239ecc20c42d143ba7111c75fad05a59eb1296925ecbb67c2d9273",
+        "fa71a8d704f229b59c11fb690f6ef2c84799bb0a8e26c41854a336eaf0ea44fd"
+      ],
+      "expected_fenced_copy_nodes": 2,
+      "rendered_code_nodes": 2,
+      "no_new_active_marker": true
+    }
+  ],
+  "baseline": "8f2a9e14575928bb5f086902c786da66f4a65aa9",
+  "total_inserted_LF": 221,
+  "method": "Insert only missing true block separators before existing opening fences consumed by setext headings; independently preserve all intended code copy strings and source bytes."
+}

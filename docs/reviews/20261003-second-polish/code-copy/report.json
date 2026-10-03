@@ -1,0 +1,28 @@
+{
+  "scope": "All 5,654 fixed-input articles; archive=41940cb0038d09ca5aaddbe5bffb923e423d210f; merged_pr6=8f2a9e14575928bb5f086902c786da66f4a65aa9; read-only.",
+  "method": "Marked lexer string-token comparison for archive and working versions. Captured `code` and `codespan` token raw/text, current/archive line, per-file hash; screened request markers, Content-Length/Cookie/boundary literal lines and editorial-review phrases inside code tokens. No DOM/browser, article execution, compilation, scanning, target access, source network lookup, masking, or repository edits.",
+  "counts": {
+    "articles": 5654,
+    "archive_code_and_codespan_tokens": 35818,
+    "working_code_and_codespan_tokens": 35367,
+    "articles_with_any_token_sequence_difference": 1582,
+    "token_change_groups": 2044,
+    "content_changed_candidate_groups": 700,
+    "code_tokens_containing_review_annotation_markers": 0,
+    "confirmed_fidelity_findings": 1,
+    "initial_change_groups_with_one_identical_copy_token_excluded": 1344,
+    "groups_with_aggregate_copy_text_identical_after_grouping": 252,
+    "groups_with_aggregate_copy_text_difference": 448
+  },
+  "qualification": "Token-group counts include parser boundary/fence changes and are candidates, not article-level defects. Full per-article ledger and raw candidate ledger are adjacent JSONL files. This pass used the supplied archive inputs; it did not execute examples or check browser clipboard behavior.",
+  "findings_file": "confirmed-findings.jsonl",
+  "ledger_file": "ledger.jsonl",
+  "candidate_files": [
+    "candidates.jsonl",
+    "content-changed.jsonl"
+  ],
+  "unknowns": [
+    "Actual browser DOM clipboard behavior was not exercised; Marked lexer output is the requested static parser boundary.",
+    "No external provenance or target response was obtained; source truth for historical requests remains the fixed archive text."
+  ]
+}

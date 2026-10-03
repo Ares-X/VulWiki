@@ -1,0 +1,9 @@
+{
+  "path": "_config.yml",
+  "before_sha256": "b00ff9b89f240fddd8f146a0067ce363f670a5d886bb7e8a50db3e6e3afe352a",
+  "after_sha256": "98be38d136e7ff6a6a7857c88b0441d81cc9a6b8ea2673a98b93ec4e8a5802d3",
+  "old_text": "  - wiki/**/.resource/*/**\r\n",
+  "new_text": "  - wiki/**/.resource/*/**\r\n  - wiki/**/.resource/*\r\n",
+  "reason": "Include files directly beneath .resource as well as existing nested attachments",
+  "original_line_endings_preserved": true
+}

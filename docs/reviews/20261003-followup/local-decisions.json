@@ -1,0 +1,32 @@
+[
+  {
+    "path": "Web安全/AI应用/chatgpt-on-wechat/chatgpt-on-wechat存在身份验证漏洞漏洞(CVE-2026-6129).md",
+    "decision": "restore needs-review, candidate identifier",
+    "evidence": "existing archive only; original source unavailable"
+  },
+  {
+    "path": "Web安全/网络设备/D-Link/「1day」D-Link DIR 823G路由器存在未授权访问漏洞（CVE-2025-2360）.md",
+    "decision": "restore needs-review, candidate identifier",
+    "evidence": "existing archive only; original source unavailable"
+  },
+  {
+    "path": "Web安全/CMS内容/Seacms/SeaCMS admin_files.php CVE-2024-42599分析.md",
+    "decision": "只能加明确缺损注释",
+    "evidence": "只能加明确缺损注释，不能恢复代码。当前前导语“构造payload”和随后的图片说明此处原本承载 payload 相关展示；既有本地 Gitee 摘录虽有同标题、同 CVE 的 POST 块，但既有复核指出它不能证明与本地截图相邻块的字节一致，也未查看图片像素。"
+  },
+  {
+    "path": "Web安全/开发框架/Java/CVE-2022-41853 分析：通过 Java 反序列化和远程代码库攻击使用静态函数获取 RCE.md",
+    "decision": "只能加明确缺损注释",
+    "evidence": "只能加明确缺损注释，不能恢复。正文在空块前明确写“完整的 HSQL 负载具有以下形式”，后文再引用其 ysoserial 类型和命令；这是代码段缺失的直接证据。既有审查记录核对的 CVE、Chromium 与 GHSA 材料没有精确 HSQL 字符串，不能据概述拼造。"
+  },
+  {
+    "path": "Web安全/开发框架/Spring Boot/SpringDataMongoDBSpEL表达式注入漏洞.md",
+    "decision": "只能加明确缺损注释",
+    "evidence": "只能加明确缺损注释，不能恢复。围栏带 plain 语言标记，位于“资产测绘”标题下、复现章节之前，支持这里原本预留了测绘内容；既有官方公告与摘要都不含对应查询，Yuque 原文可读性未确认。不能猜填指纹/查询。"
+  },
+  {
+    "path": "Web安全/网络设备/D-Link/CVE-2018-17066复现（D-Link命令注入漏洞）.md",
+    "decision": "可靠恢复",
+    "evidence": "本地缓存文件：/tmp/vulwiki-source-dlink2018-cnsec-excerpts.txt；文件 SHA256 551029486047a63af6aab77c592ba7651e74245974857d408e57253d039e734c。source_text（逐字，cache excerpt lines 174-175）：\nENTRY(\"lan_ipaddr\", nvram_set, \"192.168.126.130\") \\\nENTRY(\"lan_bipaddr\", nvram_set, \"192.168.126.255\") \\\n对应前句：“2.修改config.h中启动web页面的ip地址”；对应后句：“接下来成功编译：”。本地同一位置为“2.修改config.h中启动web页面的ip地址”后紧接空围栏，再到“接下来成功编译：”，顺序、语义和唯一配置键匹配。这说明基线 line 271 / occurrence 11 的 unknown 是该处遗漏映射（不是截图转录）；其他 unknown 项不因此改变。建议将其从 unknown 改为可恢复。"
+  }
+]

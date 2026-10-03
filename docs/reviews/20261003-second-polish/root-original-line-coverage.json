@@ -1,0 +1,65 @@
+{
+  "articles": 5654,
+  "original_candidate_lines": 2980,
+  "prior_exact_line_evidence": 2980,
+  "new_unmapped_lines": 0,
+  "shards": [
+    {
+      "number": 1,
+      "articles": 703,
+      "candidate_lines": 464,
+      "prior_exact_line_evidence": 464,
+      "new_unmapped_lines": 0
+    },
+    {
+      "number": 2,
+      "articles": 711,
+      "candidate_lines": 390,
+      "prior_exact_line_evidence": 390,
+      "new_unmapped_lines": 0
+    },
+    {
+      "number": 3,
+      "articles": 699,
+      "candidate_lines": 376,
+      "prior_exact_line_evidence": 376,
+      "new_unmapped_lines": 0
+    },
+    {
+      "number": 4,
+      "articles": 732,
+      "candidate_lines": 381,
+      "prior_exact_line_evidence": 381,
+      "new_unmapped_lines": 0
+    },
+    {
+      "number": 5,
+      "articles": 683,
+      "candidate_lines": 326,
+      "prior_exact_line_evidence": 326,
+      "new_unmapped_lines": 0
+    },
+    {
+      "number": 6,
+      "articles": 726,
+      "candidate_lines": 411,
+      "prior_exact_line_evidence": 411,
+      "new_unmapped_lines": 0
+    },
+    {
+      "number": 7,
+      "articles": 683,
+      "candidate_lines": 347,
+      "prior_exact_line_evidence": 347,
+      "new_unmapped_lines": 0
+    },
+    {
+      "number": 8,
+      "articles": 717,
+      "candidate_lines": 285,
+      "prior_exact_line_evidence": 285,
+      "new_unmapped_lines": 0
+    }
+  ],
+  "method": "Full archive and current bodies. Formatting normalization only for candidate screening, never source edits. Prior exact original-line evidence is carried forward, not treated as new independent review or external truth."
+}

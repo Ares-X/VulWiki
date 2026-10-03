@@ -50,7 +50,7 @@ Cloudflare 已修复影响其自动证书管理环境 ( ACME ) 验证逻辑的�
   
 ACME 是一种通信协议（RFC 8555），它能够自动颁发、续订和吊销 SSL/TLS 证书。证书颁发机构 (CA) 为网站提供的每个证书都会通过挑战进行验证，以证明域名所有权。  
   
-此过程通常使用 ACME 客户端（例如Certbot）来实现，该客户端通过HTTP-01（或 DNS-01）质询来验证域名所有权并管理证书生命周期。HTTP-01 质询会检查位于 Web 服务器“https://<YOUR_DOMAIN>/.well-known/acme-challenge/<TOKEN>”的验证令牌和密钥指纹，并通过 HTTP 端口 80 进行通信。  
+此过程通常使用 ACME 客户端（例如Certbot）来实现，该客户端通过HTTP-01（或 DNS-01）质询来验证域名所有权并管理证书生命周期。HTTP-01 质询会检查位于 Web 服务器“`https://<YOUR_DOMAIN>/.well-known/acme-challenge/<TOKEN>`”的验证令牌和密钥指纹，并通过 HTTP 端口 80 进行通信。  
   
 CA 的服务器会向该 URL 发送 HTTP GET 请求以检索文件。验证成功后，证书将被颁发，CA 会将 ACME 帐户（即其服务器上的注册实体）标记为有权管理该特定域名。  
   

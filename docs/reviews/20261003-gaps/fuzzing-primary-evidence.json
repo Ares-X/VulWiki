@@ -1,0 +1,20 @@
+[
+  {
+    "url": "https://raw.githubusercontent.com/antonio-morales/Fuzzing101/18e00c1626a2/Exercise%204/Readme.md",
+    "status": 200,
+    "sha256": "f73bbf07f139d3537641c297a17609f705ba68c612355911effeaf0d52dcae63",
+    "length": 8428,
+    "text": "saved"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/antonio-morales/Fuzzing101/18e00c1626a2/LICENSE",
+    "status": 200,
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "length": 11357,
+    "text": "                                 Apache License\n                           Version 2.0, January 2004\n                        http://www.apache.org/licenses/\n\n   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION\n\n   1. Definitions.\n\n      \"License\" shall mean the terms and conditions for use, reproduction,\n      and distribution as defined by Sections 1 through 9 of this document.\n\n      \"Licensor\" shall mean the copyright owner or entity authorized by\n      the copyright owner that is granting the License.\n\n      \"Legal Entity\" shall mean the union of the acting entity and all\n      other entities that control, are controlled by, or are under common\n      control with that entity. For the purposes of this definition,\n      \"control\" means (i) the power, direct or indirect, to ca"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/antonio-morales/Fuzzing101/18e00c1626a2/LICENSE.md",
+    "error": "HTTP Error 404: Not Found"
+  }
+]

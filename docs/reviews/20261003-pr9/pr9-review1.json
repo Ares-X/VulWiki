@@ -1,0 +1,99 @@
+{
+  "pr": 9,
+  "head": "ab34f4d8c95ba25fc7b2009ba9f1b17cea0e9a85",
+  "reviewer": "read-only content review",
+  "checked_at": "2026-10-03",
+  "scope": "完整Markdown、frontmatter、外部一手来源与固定提交、库内相同编号/产品检索、排版；未运行文章内容或访问示例目标。来源记录与独立核验分别标明。",
+  "articles": [
+    {
+      "path": "Web安全/商业软件/Jellyfin/Jellyfin 多入口转码参数校验差异与FFmpeg参数注入（CVE-2026-35033）.md",
+      "sha256": "7eefb3057022bc4d8ee9ce3ff20e34ef0bfdcf88913b375c67577d8bd2c24899",
+      "verdict": "accepted",
+      "duplicate_status": "no same-entity or same-primary-identifier entry found; two Jellyfin entries in library are CVE-2021-29490 and CVE-2021-21402 and are unrelated",
+      "evidence": [
+        {
+          "location": "frontmatter version/fixed_version/primary_identifiers/prerequisites/side_effects; sections '范围与证据分层', '两条解析路径汇入同一危险值', '从文件能力到代码执行的条件', '最终补丁的两个层次'",
+          "supports": "范围限定于 <10.11.7；媒体 ID 是前提；利用影响受服务账户权限/环境限制；标明转码负载、读写/出网和 SIGBUS 中断等副作用；区分两条解析路径及多层修补。",
+          "independent_sources": [
+            "https://github.com/jellyfin/jellyfin/security/advisories/GHSA-jh22-fw8w-2v9x",
+            "https://github.com/jellyfin/jellyfin/commit/50dc37065b8d530e7dcebc9672dd07583b203582",
+            "https://github.com/jellyfin/jellyfin/commit/b2aa80ce5c1af2a4478d13b50c0961e11a6f5e6b"
+          ],
+          "source_claims": [
+            "https://www.sonarsource.com/blog/jellyfin-remote-code-execution/"
+          ]
+        },
+        {
+          "location": "篇首'具体待核项'及'来源与修复记录'",
+          "supports": "正确保留媒体 ID 获取上的来源冲突：Sonar 称可从文件路径推导、厂商称 Item GUID 需认证用户获取；不将 unauthenticated RCE 写作无条件结论。官方公告确称 GUID pseudorandom 且需要认证用户；Sonar 主张路径推导可能让未认证者猜出。",
+          "independent_sources": [
+            "https://github.com/jellyfin/jellyfin/security/advisories/GHSA-jh22-fw8w-2v9x"
+          ],
+          "source_claims": [
+            "https://www.sonarsource.com/blog/jellyfin-remote-code-execution/"
+          ]
+        },
+        {
+          "location": "'最终补丁的两个层次'与'来源与修复记录'",
+          "supports": "提交 50dc370 的 ParseParams case 15 过滤、NormalizeTranscodingLevel 转换失败返回 null 及调用顺序修订；发行边界为 10.11.7。固定提交后续 b2aa80c 调整 Regex API 使用，文中明确区分中间提交与后续修订。",
+          "independent_sources": [
+            "https://github.com/jellyfin/jellyfin/commit/50dc37065b8d530e7dcebc9672dd07583b203582",
+            "https://github.com/jellyfin/jellyfin/commit/b2aa80ce5c1af2a4478d13b50c0961e11a6f5e6b",
+            "https://github.com/jellyfin/jellyfin/security/advisories/GHSA-jh22-fw8w-2v9x"
+          ],
+          "source_claims": [
+            "https://www.sonarsource.com/blog/jellyfin-remote-code-execution/"
+          ]
+        }
+      ],
+      "format_review": "frontmatter 使用带引号字符串；标题、代码标识符与提交号清晰；编号步骤和链接可读。未发现影响技术含义的排版问题。",
+      "changes": []
+    },
+    {
+      "path": "Web安全/安全设备/Nuclei/Goja TypedArray偏移复用与Nuclei扫描端代码执行（CVE-2026-76819）.md",
+      "sha256": "354c410f62adac215dd7c67f437e52521c1fe5caa4df0f3d7a30319aec7ab66d",
+      "verdict": "accepted",
+      "duplicate_status": "no entry found for CVE-2026-76819, GHSA-vxg7-f2jj-jmqm, Goja, or this Nuclei issue; no confirmed duplicate",
+      "evidence": [
+        {
+          "location": "frontmatter plus '根因：两个数组使用了同一偏移'",
+          "supports": "源 TypedArray 读取保留 ta.offset，写入新建零偏移目标使用 k；Goja commit 对 with 和 toReversed 都作相同修改并添加非零偏移回归用例。",
+          "independent_sources": [
+            "https://github.com/dop251/goja/commit/7ac5d3034fc4331316e8c78777db856207a2e3d4"
+          ],
+          "source_claims": [
+            "https://www.slcyber.io/research/out-of-bounds-out-of-sandbox-rce-goja"
+          ]
+        },
+        {
+          "location": "'从越界写到宿主边界'、'修复的三个层次'",
+          "supports": "Nuclei 3.0.0–3.9.x 的不可信 JavaScript 模板执行边界、init 入口、3.10.0 更新 Goja 修复，3.11.0 签名为额外加固；Nuclei 固定提交确实更新 projectdiscovery/goja 到记载的伪版本。",
+          "independent_sources": [
+            "https://github.com/projectdiscovery/nuclei/security/advisories/GHSA-vxg7-f2jj-jmqm",
+            "https://github.com/projectdiscovery/nuclei/commit/1fe6025b966cbb95ed4d9f40abfb629b6cbd27b2"
+          ],
+          "source_claims": [
+            "https://www.slcyber.io/research/out-of-bounds-out-of-sandbox-rce-goja"
+          ]
+        },
+        {
+          "location": "'固定 PoC 静态核查'与'来源、日期与许可'",
+          "supports": "明确记载宿主命令执行、/tmp/x 文件写入和 Docker 当前目录可写挂载等副作用；PoC 审查范围和未核项目受限说明具体。",
+          "independent_sources": [
+            "https://github.com/assetnote/goja-heap-oob/tree/4f67cda47394bb0e6bb7f79aebb14b468aab563a",
+            "https://github.com/assetnote/goja-heap-oob/commit/4f67cda47394bb0e6bb7f79aebb14b468aab563a"
+          ],
+          "source_claims": [
+            "https://www.slcyber.io/research/out-of-bounds-out-of-sandbox-rce-goja"
+          ]
+        }
+      ],
+      "format_review": "frontmatter 字符串与多编号格式清楚；代码差异使用 fenced diff，保留原标识符；来源、修复和边界分段明确。未发现排版问题。",
+      "changes": []
+    }
+  ],
+  "limitations": [
+    "该结论是来源、公告及固定源码的静态交叉审阅；没有执行 PoC、依赖、模板或容器，也没有验证真实部署/目标。",
+    "未取得 Zendesk 公开版本矩阵，文章已明确将其影响边界留待核，未把 Nuclei 版本套用于其他 Goja 宿主。"
+  ]
+}

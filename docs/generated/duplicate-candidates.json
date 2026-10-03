@@ -3914,15 +3914,6 @@
   {
     "basis": "shared-primary-identifier",
     "decision": "manual-review-required",
-    "key": "CVE-2025-55182",
-    "paths": [
-      "Web安全/中间件/Apache OFBiz/CVE-2025-55182 Apache OFBiz SSRF与远程命令执行漏洞.md",
-      "Web安全/开发框架/React/React-Server-Components-Flight-协议反序列化代码执行-CVE-2025-55182.md"
-    ]
-  },
-  {
-    "basis": "shared-primary-identifier",
-    "decision": "manual-review-required",
     "key": "CVE-2025-6018",
     "paths": [
       "系统安全/Linux/【已复现】Linux 本地提权漏洞CVE-2025-6018、CVE-2025-6019.md",

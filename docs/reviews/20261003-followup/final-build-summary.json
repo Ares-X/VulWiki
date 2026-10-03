@@ -1,0 +1,616 @@
+{
+  "build": "/var/folders/4w/72x3w5lj24l__5yr852p1lj80000gn/T/vulwiki-followup-unpublished-20261003-euf_ijq2/build",
+  "release": "/var/folders/4w/72x3w5lj24l__5yr852p1lj80000gn/T/vulwiki-followup-unpublished-20261003-euf_ijq2",
+  "blog_base": "a4b0ce622cd191141c79e5684fb9e5203e8a8600",
+  "blog_overlay_files": [
+    "scripts/wiki-data.js",
+    "source/wiki/wiki-catalog.js",
+    "source/wiki/wiki-search-worker.js",
+    "test/wiki-data.test.js"
+  ],
+  "content_base": "b6fed4db3f3c092a7edf63e747b028decacde360",
+  "content_modified_articles": 41,
+  "article_inputs": 5654,
+  "copied_files": 13567,
+  "theme": "2eb1e8ab1c3f7d4b148a1dd31307f38461fa724f",
+  "dependencies": "Existing pinned build node_modules; no dependency installation",
+  "publication": "paused; generate only",
+  "audit_output_note": "Post-build summary and file ledger are outside this input snapshot.",
+  "exit_code": 0,
+  "articles": {
+    "checked": 5654,
+    "working_byte_identical": 5654,
+    "mismatches": 0
+  },
+  "assets": {
+    "checked": 7587,
+    "byte_identical": 7574,
+    "omitted_unreferenced_duplicates": [
+      "Web安全/ERP企业/宏景/.resource/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091316282.png",
+      "Web安全/ERP企业/宏景/.resource/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091425762.png",
+      "Web安全/ERP企业/宏景/.resource/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091523225.png",
+      "Web安全/ERP企业/宏景/.resource/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091610016.png",
+      "Web安全/ERP企业/宏景/.resource/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091316282.png",
+      "Web安全/ERP企业/宏景/.resource/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091425762.png",
+      "Web安全/ERP企业/宏景/.resource/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091523225.png",
+      "Web安全/ERP企业/宏景/.resource/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091610016.png",
+      "Web安全/开发框架/WeiPHP/.resource/.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162320334.png",
+      "Web安全/开发框架/WeiPHP/.resource/.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162320455.png",
+      "Web安全/开发框架/WeiPHP/.resource/.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162320938.png",
+      "Web安全/开发框架/WeiPHP/.resource/.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162320956.png",
+      "Web安全/开发框架/WeiPHP/.resource/.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162321696.png"
+    ],
+    "mismatches": 0,
+    "referenced_normal_copy_checks": 16,
+    "referenced_articles": 3
+  },
+  "generated_files": [
+    {
+      "path": "INDEX/360.md",
+      "sha256": "b54505982384908abd148ed6cf0646f3718de66fd01a19597cdd35600244764a"
+    },
+    {
+      "path": "INDEX/AI应用.md",
+      "sha256": "7a51a3171c93c7ba6959b1d61f0cf327086c3aafda3da34abc44152b9395693a"
+    },
+    {
+      "path": "INDEX/Amazon.md",
+      "sha256": "cae3bae2f552bef0a3b02cb5623d2f9193f0610b6ff7a42770a2de7dfb18c3d3"
+    },
+    {
+      "path": "INDEX/Android.md",
+      "sha256": "ef65122f4439debcd759a257e2a5d91b807a5f2404fbd3a569045e37e0641634"
+    },
+    {
+      "path": "INDEX/Apache.md",
+      "sha256": "7247ea982e5e251cde0d6105b70e9f8c652bac4d2c6315c68ebaf45af30e8a9b"
+    },
+    {
+      "path": "INDEX/Apple XNU内核.md",
+      "sha256": "63c7ab0cbaeebfadd20ce7786b0fb99d274b90341eb86fbc3bdb5540b5232a95"
+    },
+    {
+      "path": "INDEX/Apple iOS.md",
+      "sha256": "bc0a6036c2b28dddb83ff167368efc8cfd343da66dbe228fe0931828f5f0d1cf"
+    },
+    {
+      "path": "INDEX/Arcadyan固件.md",
+      "sha256": "5847298f362f9810e82bf1f4585f6c2515d6e77f56fa3df5f466d785842b3fa4"
+    },
+    {
+      "path": "INDEX/Autodesk Installer.md",
+      "sha256": "5a5982bb74824077472bd8c63209fe526d9a0176cfdd2446e97012465c9b4ca9"
+    },
+    {
+      "path": "INDEX/CMS内容.md",
+      "sha256": "44802d56affcb9a9de715e29c1a79b4eac222143ffd34a9b16114f3bca92f71b"
+    },
+    {
+      "path": "INDEX/Cisco.md",
+      "sha256": "200af6c18fe19d6ddf2ff7edf4d38841ac912134e738cdf7b7e727961d19bee1"
+    },
+    {
+      "path": "INDEX/D-Link.md",
+      "sha256": "0cb13d22cb1ac5f1d2767394d57547ac963bd4dac3f2eaaaaaf3453253b0b1d0"
+    },
+    {
+      "path": "INDEX/DataCube3.md",
+      "sha256": "5c9b3799e46799254d9cd77a3e88d2c7b2b7b4856f10f4ec8c808633bdaf92e1"
+    },
+    {
+      "path": "INDEX/DrayTek.md",
+      "sha256": "d8e83ee3f19b8a7887baae52a1e3e1e978d5bf7e7309642512e137f4bbe78717"
+    },
+    {
+      "path": "INDEX/ERP企业.md",
+      "sha256": "fda437571af1bd2c12f944daae0ab33c01ead419535f43b052546ea69f5daf33"
+    },
+    {
+      "path": "INDEX/FLIR.md",
+      "sha256": "cc3016f915454a3f079ef4309b8a75a0305c531bc1b78961d0079982229b7272"
+    },
+    {
+      "path": "INDEX/Finetree.md",
+      "sha256": "e8e95b4e9e6a69154756d089d38c78e91e681eeec21734c18fe22bc4b265f3af"
+    },
+    {
+      "path": "INDEX/Firebird.md",
+      "sha256": "49f27337294bb26ecefb1b833e16c050fbf4f2ba23f1b03b000aaa99a20bbd02"
+    },
+    {
+      "path": "INDEX/H3C.md",
+      "sha256": "d5f9bb01704791e5f90b8ad9c952e11094ab13c0e332968c84a597c914291b0f"
+    },
+    {
+      "path": "INDEX/Huawei.md",
+      "sha256": "401e87ea35e51d7811339f39097b877ec6c60db183dfe420b1ec49835cfe44f8"
+    },
+    {
+      "path": "INDEX/IOT安全.md",
+      "sha256": "cc3016f915454a3f079ef4309b8a75a0305c531bc1b78961d0079982229b7272"
+    },
+    {
+      "path": "INDEX/Intelight.md",
+      "sha256": "75efdd85aaee2ad4de331779e72e7fbfc5ab405c0729d9e160de6d1eacfe8224"
+    },
+    {
+      "path": "INDEX/JCG.md",
+      "sha256": "201ab0ac95b1bcc45903afd0a940288c39b6468025ad01fbd1f6d07ba4129295"
+    },
+    {
+      "path": "INDEX/Kyan.md",
+      "sha256": "cc3016f915454a3f079ef4309b8a75a0305c531bc1b78961d0079982229b7272"
+    },
+    {
+      "path": "INDEX/Linux.md",
+      "sha256": "4b1b3a7b504a09fc333f804cc3a672e0db8987304b42f59a6b069a6c18baf939"
+    },
+    {
+      "path": "INDEX/Microsoft Azure.md",
+      "sha256": "160ed19f37a610b7b3e72a7c52b306c486724689beba8f48f434bb78578ca66f"
+    },
+    {
+      "path": "INDEX/NETGEAR.md",
+      "sha256": "24eeb2e424356919ce6bfba2a1f3af65e746dd7796c92a1223c0fda8287a3cb4"
+    },
+    {
+      "path": "INDEX/NUUO.md",
+      "sha256": "8d1bfba1aff22d45511b1452e92866de7c26c8287c4dd81e87b43efe55a6be64"
+    },
+    {
+      "path": "INDEX/OA办公.md",
+      "sha256": "21d1cb5d786fd5191f7d810381596e07ec0afc417826cce472df34e4aea8b49e"
+    },
+    {
+      "path": "INDEX/OctoPrint.md",
+      "sha256": "9beeda33ed834194fad6f20fa5e891b738772ce9e14b8211d23e982b92edc782"
+    },
+    {
+      "path": "INDEX/OpenSSH.md",
+      "sha256": "2b2e4a1ea8a5ace795a3507bdad5bf2a197855293fa8f671b102f1cc941d0a54"
+    },
+    {
+      "path": "INDEX/PAM劫持SSH密码.md",
+      "sha256": "cf7c639ce9f62eba76ec7d6c8bd4978f3cebcdf9fcce83d869bc69f5ea380b5b"
+    },
+    {
+      "path": "INDEX/PHICOMM.md",
+      "sha256": "90891df89fd58e36e8d5de435318cafc33aaf2de67dc49c65da097a4c121c50c"
+    },
+    {
+      "path": "INDEX/Panabit.md",
+      "sha256": "c57f92bf641158e729e017ef248d2e1019b1aa4884f4d9b4dc662937a26f9894"
+    },
+    {
+      "path": "INDEX/QEMU.md",
+      "sha256": "8c6795500998b3daed8d34fed6fa82bd803df441e4201dbb3616e3c3cafad8c8"
+    },
+    {
+      "path": "INDEX/RPi-Jukebox.md",
+      "sha256": "892ca6fbed4f5dc6a763e0fae1a8b0fb70f9dbcd1f6b9ebfa3607f26acc8df80"
+    },
+    {
+      "path": "INDEX/Ruijie.md",
+      "sha256": "f9aa2865a44b225540992cf12e25f674e213f1251fedb45c8edc8b00d8ad3f14"
+    },
+    {
+      "path": "INDEX/Sapido.md",
+      "sha256": "a20f2b0ad0da171ba16ed58f3c79a051d93694cb3995f75adb4ea5faedb5d1f0"
+    },
+    {
+      "path": "INDEX/Selea.md",
+      "sha256": "3ce0c756b86323801d7dc716fb6f64c26f3a663790dc321343325f8e1a3f351b"
+    },
+    {
+      "path": "INDEX/SimpleHelp.md",
+      "sha256": "35a3a257683e230b68324e5d70dd1a4ae4e817082641cabfa5e1310f21ddafe2"
+    },
+    {
+      "path": "INDEX/TG8.md",
+      "sha256": "45be70e137c4b5aa3ef97f885281c1e717a10249da7e69816fc487928baf535f"
+    },
+    {
+      "path": "INDEX/TP-Link.md",
+      "sha256": "e88b3b17fdb017ffddcab47c6640ada223409b47457c6628ab6adf3ebbd3a77b"
+    },
+    {
+      "path": "INDEX/TVT数码科技.md",
+      "sha256": "cc3016f915454a3f079ef4309b8a75a0305c531bc1b78961d0079982229b7272"
+    },
+    {
+      "path": "INDEX/V8引擎.md",
+      "sha256": "d4739a0e2d4abf20f164b0fc40c4b4ccf9afc7cba76025f1413a98a9b90dc8b9"
+    },
+    {
+      "path": "INDEX/Windows.md",
+      "sha256": "c9376d95507f04096b4a1288a333899d22773dbedada3ef1c392329348bad3a3"
+    },
+    {
+      "path": "INDEX/XZ Utils.md",
+      "sha256": "31fbf5969ee6b23e900da3ba739fd3eae5b8f4e8ff98981c5e399dfb68cfb8ae"
+    },
+    {
+      "path": "INDEX/rConfig.md",
+      "sha256": "cc3016f915454a3f079ef4309b8a75a0305c531bc1b78961d0079982229b7272"
+    },
+    {
+      "path": "INDEX/中科网威.md",
+      "sha256": "cc3016f915454a3f079ef4309b8a75a0305c531bc1b78961d0079982229b7272"
+    },
+    {
+      "path": "INDEX/中间件.md",
+      "sha256": "167488ef5987a59863e6c1b7dcc1583ed1666ee7d21e84468d76a756e7509d5e"
+    },
+    {
+      "path": "INDEX/云平台.md",
+      "sha256": "da6050d69099055c726b048d0bbfc0f8579393b4d226405350ed2217601ccb61"
+    },
+    {
+      "path": "INDEX/从 allow_active 到 root 的本地提权.md",
+      "sha256": "345d7925549e69a9021f11bd85bca39eae9033119dafbfd896a7dd0416916bbd"
+    },
+    {
+      "path": "INDEX/信诺瑞得.md",
+      "sha256": "c154a80ef977c0a4e5a8b81817998c84455611839e252f48d2d2e0147a3516c6"
+    },
+    {
+      "path": "INDEX/其他设备.md",
+      "sha256": "f61355b80224f7d0aca91318d6d06ad3bcfa139d8599d3da3956c7d1227c9083"
+    },
+    {
+      "path": "INDEX/其他软件.md",
+      "sha256": "bf1019ba323409c906383e6696fa610f2b1b21551e8a25ef6b93dc9607265d32"
+    },
+    {
+      "path": "INDEX/华硕.md",
+      "sha256": "3bb2c59f576225c80ceb184980812034d9c1131d738e8d10dd11d97f92c76238"
+    },
+    {
+      "path": "INDEX/博华网龙防火墙.md",
+      "sha256": "cc3016f915454a3f079ef4309b8a75a0305c531bc1b78961d0079982229b7272"
+    },
+    {
+      "path": "INDEX/商业软件.md",
+      "sha256": "6218d5b96c704d90bc6ce630d00c3774853b7615b4a6d877a9a8f77fb3d2edb2"
+    },
+    {
+      "path": "INDEX/大华.md",
+      "sha256": "f688544917a723dec153de7dbc8f9bf0879c4f59ae189963d647c70b3e1d4a82"
+    },
+    {
+      "path": "INDEX/天翼创维.md",
+      "sha256": "d5b9c7eb791987a0b4e251a80358156d3e7773d55b2019c8c2a24e5d5b23b3e3"
+    },
+    {
+      "path": "INDEX/安全设备.md",
+      "sha256": "6cfac3bbbbe3fbb88cc04f4cd8ee863a5952dcc10594dec62a17646715218a78"
+    },
+    {
+      "path": "INDEX/安恒明御.md",
+      "sha256": "87cb8cbb09e1be1ea2aaef2e0ad9bd8198d093e60eb07816d3b14add99e1f630"
+    },
+    {
+      "path": "INDEX/容器逃逸.md",
+      "sha256": "80962a337d16536d719c3230887c192fc7e6bc095881049c7d98fffd764e2dd1"
+    },
+    {
+      "path": "INDEX/小米.md",
+      "sha256": "b7cad71c44ffd4730ee882e5b715308481a8d3cf7a22df98eb846906c9659873"
+    },
+    {
+      "path": "INDEX/开发框架.md",
+      "sha256": "9dfe8844a5ec27f593da87c44f3949b1d198a23192e4ac6260e6e2f1f2a7fda1"
+    },
+    {
+      "path": "INDEX/数据库.md",
+      "sha256": "b790aec52719652c609e6103fa49037d0c3b6afaa269d0c291d7158b2c1d30bc"
+    },
+    {
+      "path": "INDEX/昂捷.md",
+      "sha256": "4eabddca8b64038cde53643dcea829c66f3a013bfeebee05fefa3abd07863870"
+    },
+    {
+      "path": "INDEX/智能设备.md",
+      "sha256": "53967e0cfc031aedc7125e2bf3c882f5f77895ab709a70391a94a3ed4886df27"
+    },
+    {
+      "path": "INDEX/服务器软件.md",
+      "sha256": "75d92f4d10d59b89092711ad7883f152f33d551773c428ea3e6fbad6a472199d"
+    },
+    {
+      "path": "INDEX/桌面软件.md",
+      "sha256": "32052b44a4d1fdbe499ccbd08708a956f6d849bc7ecf7716fd81789b3d6bc5ab"
+    },
+    {
+      "path": "INDEX/海康威视.md",
+      "sha256": "d1e77f4a42d818dd41714310ff8c60488aa79a59782dd570eb65b1336bd830eb"
+    },
+    {
+      "path": "INDEX/系统安全.md",
+      "sha256": "cc3016f915454a3f079ef4309b8a75a0305c531bc1b78961d0079982229b7272"
+    },
+    {
+      "path": "INDEX/网络设备.md",
+      "sha256": "3721ccf1b5f517744aba1230007ccd2d7d749f7f5b95f1d556acc80cd8f635e0"
+    },
+    {
+      "path": "INDEX/运维面板.md",
+      "sha256": "f0bd259f1d92f0401f8e28bf0f27fac5ee0ca49e31b2f3c699fc3ad0a3c0a1e6"
+    },
+    {
+      "path": "INDEX/邮件系统.md",
+      "sha256": "82cd51961913bd52a0efb32aab80f9266d5815b1ef1b4eaf72269685cb2f7cb5"
+    },
+    {
+      "path": "INDEX-CVE/year/2006.md",
+      "sha256": "e78f53fad549bd5129bfa742cc0b26799d95ecf13e39e24fbc11d7be8e0b02ba"
+    },
+    {
+      "path": "INDEX-CVE/year/2007.md",
+      "sha256": "69e2d22058e386a740afdc41fb18bc85251efb66990d30ab6c1b079f7ee0f601"
+    },
+    {
+      "path": "INDEX-CVE/year/2008.md",
+      "sha256": "19ec87fd027660aceda6472ba0f48430f45864b47ac48c8738733da31caa2432"
+    },
+    {
+      "path": "INDEX-CVE/year/2010.md",
+      "sha256": "1e8ec3acfbf04d338cdbf4cd9db13cf116019ad678936250435339b64afba7df"
+    },
+    {
+      "path": "INDEX-CVE/year/2011.md",
+      "sha256": "4b2881e7a266a64006dc782ebf4f8fc70b82329c075c82d65fe9ff2e3ef7e790"
+    },
+    {
+      "path": "INDEX-CVE/year/2012.md",
+      "sha256": "835bc4960bc8d8ab3d6897d3bd3d2ebd976eec70602c90f008e448c0f30731e7"
+    },
+    {
+      "path": "INDEX-CVE/year/2013.md",
+      "sha256": "04394fa2734b68e6062fbfef6d2baba21213c49e5f984e17b0cd54eb4315d238"
+    },
+    {
+      "path": "INDEX-CVE/year/2014.md",
+      "sha256": "3c2ffd07990deab2e957f13575f76129b6d4e0305efffdf84b3ce3e2764d1646"
+    },
+    {
+      "path": "INDEX-CVE/year/2015.md",
+      "sha256": "1b82afd9b8e20bcad86e3453209cc4267b19ef567c3d9784bcacb1904164df58"
+    },
+    {
+      "path": "INDEX-CVE/year/2016.md",
+      "sha256": "77e23954b96e20ad0e3ed2ee95ddce6e331022571df0f2068fefbd474a3896f8"
+    },
+    {
+      "path": "INDEX-CVE/year/2017.md",
+      "sha256": "0b1f1765ebf9263579e7fc1a2699a9fce4144f06cc3f7376567d09fc4f97253d"
+    },
+    {
+      "path": "INDEX-CVE/year/2018.md",
+      "sha256": "166f577dac1761fccf5a53ec57592fac61bfa5f6527fabd6b7684947ddf84822"
+    },
+    {
+      "path": "INDEX-CVE/year/2019.md",
+      "sha256": "730d036a9ccb620c88ed3e5286100cdf4c9931ed6c6c78132790b3653aa3eb5a"
+    },
+    {
+      "path": "INDEX-CVE/year/2020.md",
+      "sha256": "06a15d6144fcf0507a3eb41cc8411675e1c1b9c69139d26975f566982182332a"
+    },
+    {
+      "path": "INDEX-CVE/year/2021.md",
+      "sha256": "0a7db7f2645367e5a15dd8a93f5cb422a843ec1e6252b04aa6154ca0786efd90"
+    },
+    {
+      "path": "INDEX-CVE/year/2022.md",
+      "sha256": "45fc656b11633160ab1029ffb181f73118f0c91d66cf964de937a95904aacab6"
+    },
+    {
+      "path": "INDEX-CVE/year/2023.md",
+      "sha256": "c704515e585aa9e443997e8e794a0e1b289d739f84cac48dc6471869cbf0e603"
+    },
+    {
+      "path": "INDEX-CVE/year/2024.md",
+      "sha256": "6aa1f7f648b7858955d0378ac74bc6394714b5ff97804beb3996a6892daa2629"
+    },
+    {
+      "path": "INDEX-CVE/year/2025.md",
+      "sha256": "c876d69bec2f9fcbb45cfde3cbf61e4a1d9721d27efe9caf11989ab83d15321e"
+    },
+    {
+      "path": "INDEX-CVE/year/2026.md",
+      "sha256": "dc3e54dcb9004985046e30de295c93301f6dd97ee608a6d5e472c212bc1e1c32"
+    },
+    {
+      "path": "INDEX-CVE.md",
+      "sha256": "69ed89198da15712133f8cdd3fbb68db4d2e43e98eba4fa9074b9520650dda0b"
+    },
+    {
+      "path": "INDEX-FOFA.md",
+      "sha256": "b7c0c53bfbd0fc93afcd8b90ab9752d9bfda36cb1c2f33a044f05ca5de856975"
+    },
+    {
+      "path": "INDEX.md",
+      "sha256": "d1d0363c2cd78309d94d92e6e23c93f38e3ab9904159ac2353bae9b611e5af5b"
+    },
+    {
+      "path": "docs/REVIEW-QUEUE.md",
+      "sha256": "4fd22c258edc36abdb3603d247f0d73db7c813c0e5204df34cedd229baa4a69b"
+    },
+    {
+      "path": "docs/generated/duplicate-candidates.json",
+      "sha256": "7d0931999c1e443c8ab33a688d503e974ff30c2b6d51124675e9f5a47e28713f"
+    },
+    {
+      "path": "docs/generated/entities.jsonl",
+      "sha256": "5befca23a62d6b31291d6781f18d8e4be2b658e85f4e7ad5a0f6e8e136096ba5"
+    },
+    {
+      "path": "docs/generated/excluded.jsonl",
+      "sha256": "a8b6dc6e49e7c4bc113e59b87c7c76fa29dc7b99c576a1acb782e9e4508c54e4"
+    },
+    {
+      "path": "docs/generated/records.jsonl",
+      "sha256": "cd648945b0b36c3ff95a16035bedc9ac77aab89b697cce167c3b9e65440e927f"
+    },
+    {
+      "path": "docs/generated/sources.jsonl",
+      "sha256": "5e9681c0a854c4b94a5643cb56c7fb5d0b36c66b39e2ccd8743aa6d440ba17d8"
+    },
+    {
+      "path": "docs/generated/summary.json",
+      "sha256": "208b1423e754a2c1f67ae769a15797139bdc3a8485dee001c25a2d6f2010f603"
+    }
+  ],
+  "public_ui_files": [
+    {
+      "path": "wiki/wiki.js",
+      "sha256": "e63aa8b644d6d8bfd3a401c0b6d982e3c31a0921910fe2d50a8a1fc1b3e746af"
+    },
+    {
+      "path": "wiki/wiki-catalog.js",
+      "sha256": "b9c4ba5562b5978052a77533d342b745dca008a43cbd1a0dcaa41dda4c48a3d0"
+    },
+    {
+      "path": "wiki/wiki-search-worker.js",
+      "sha256": "01c7713eff793e1ffaedb4fcab897bd72326809ccbc3ef4b1938a85eee9528ac"
+    },
+    {
+      "path": "wiki/wiki.css",
+      "sha256": "1d154bbc2c412a7e9f03d8d57069fe85ffaf01cfeafc1db3d53c39dfc14395b8"
+    }
+  ],
+  "catalog": {
+    "documents": 5558,
+    "sourceCount": 5652,
+    "excludedCount": 2,
+    "version": "e38e1ac1f315d08f",
+    "bodies": 5558,
+    "matching_versions": true,
+    "navigation_overrides": {
+      "Web安全/AI应用/OpenAI/OpenAI大语言模型漏洞挖掘": [
+        "系统安全",
+        "Linux",
+        "Linux ksmbd",
+        "OpenAI大语言模型漏洞挖掘"
+      ],
+      "Web安全/CMS内容/DedeCMS/DedeCMSV6-0-3 代码审计 - 先知社区": [
+        "IOT安全",
+        "其他设备",
+        "通天星 CMSV6 车载视频监控平台",
+        "DedeCMSV6-0-3 代码审计 - 先知社区"
+      ],
+      "Web安全/中间件/Apache OFBiz/CVE-2025-55182 Apache OFBiz SSRF与远程命令执行漏洞": [
+        "Web安全",
+        "开发框架",
+        "React Server Components / ReactGuard",
+        "CVE-2025-55182 Apache OFBiz SSRF与远程命令执行漏洞"
+      ],
+      "Web安全/其他软件/杂项/CHYbeta starred BishopFox_CVE-2026-34908-check": [
+        "Web安全",
+        "网络设备",
+        "UniFi OS Server",
+        "CHYbeta starred BishopFox_CVE-2026-34908-check"
+      ],
+      "Web安全/其他软件/杂项/CVE-2025-57819": [
+        "Web安全",
+        "服务器软件",
+        "FreePBX",
+        "CVE-2025-57819"
+      ],
+      "Web安全/其他软件/杂项/CVE-2025-59287": [
+        "系统安全",
+        "Windows",
+        "Microsoft Windows Server Update Services (WSUS)",
+        "CVE-2025-59287"
+      ],
+      "Web安全/其他软件/杂项/CVE-2025-61757": [
+        "Web安全",
+        "中间件",
+        "Oracle Identity Manager",
+        "CVE-2025-61757"
+      ],
+      "Web安全/其他软件/杂项/CVE-2025-7776": [
+        "Web安全",
+        "网络设备",
+        "Citrix NetScaler",
+        "CVE-2025-7776"
+      ],
+      "Web安全/其他软件/杂项/CVE-2025-9316, CVE-2025-11700": [
+        "Web安全",
+        "运维面板",
+        "N-able N-central appliance / RMM 平台",
+        "CVE-2025-9316, CVE-2025-11700"
+      ],
+      "Web安全/其他软件/杂项/CVE-2026-48907 and LiteSpeed cPanel Plugin Flaws Come Under Active Att": [
+        "Web安全",
+        "CMS内容",
+        "Joomla Content Editor (JCE)",
+        "CVE-2026-48907 and LiteSpeed cPanel Plugin Flaws Come Under Active Att"
+      ],
+      "Web安全/数据库/Oracle MySQL Server/CVE-2026-35273 _ Oracle PeopleSoft PeopleTools Unauthenticated Remote": [
+        "Web安全",
+        "ERP企业",
+        "Oracle PeopleSoft Enterprise PeopleTools",
+        "CVE-2026-35273 _ Oracle PeopleSoft PeopleTools Unauthenticated Remote"
+      ],
+      "Web安全/桌面软件/Praetorian/Praetorian_CVE-2025-52493_ When Password FieldsAren’t Enough – Client-": [
+        "Web安全",
+        "运维面板",
+        "PagerDuty Cloud Runbook",
+        "Praetorian_CVE-2025-52493_ When Password FieldsAren’t Enough – Client-"
+      ],
+      "Web安全/桌面软件/Praetorian/Praetorian_How I Found the Worst ASP.NET Vulnerability — A $10K Bug C": [
+        "Web安全",
+        "开发框架",
+        "ASP.NET Core / Kestrel",
+        "Praetorian_How I Found the Worst ASP.NET Vulnerability — A $10K Bug C"
+      ],
+      "Web安全/网络设备/Ivanti/Ivanti EPM 严重漏洞（CVE-2025-10573）存在管理员会话劫持与未授权远程代码执行风险": [
+        "Web安全",
+        "运维面板",
+        "Ivanti Endpoint Manager",
+        "Ivanti EPM 严重漏洞（CVE-2025-10573）存在管理员会话劫持与未授权远程代码执行风险"
+      ],
+      "Web安全/邮件系统/FreePBX/The FreePBX Rabbit Hole_ CVE-2025-66039 and others": [
+        "Web安全",
+        "服务器软件",
+        "FreePBX",
+        "The FreePBX Rabbit Hole_ CVE-2025-66039 and others"
+      ]
+    },
+    "aliases": [
+      "Web安全/CMS内容/S-CMS/S-CMS企业建站系统PHP版v3.0后台存在CSRF可添加管理员权限账号.md",
+      "Web安全/商业软件/ShopXO/ShopXO download 任意文件读取漏洞 CNVD-2021-15822.md"
+    ],
+    "identifier_roles_all_source_values_checked": {
+      "reference": 1131,
+      "primary": 4039,
+      "related-primary": 37,
+      "candidate": 218
+    },
+    "lazy_fulltext_identifier_records": 6817
+  },
+  "index_sizes": {
+    "catalog.json": {
+      "old_bytes": 2124016,
+      "current_bytes": 2729981,
+      "old_gzip_bytes": 308538,
+      "current_gzip_bytes": 414488
+    },
+    "search-body.json": {
+      "old_bytes": 43735156,
+      "current_bytes": 44794599,
+      "old_gzip_bytes": 12481720,
+      "current_gzip_bytes": 12704323
+    }
+  },
+  "not_exercised": [
+    "Article PoCs, scripts, payloads, scanners, HTML examples or attachments",
+    "Example targets; existing provenance pages were read separately, not by the build",
+    "Remote image pixels",
+    "Browser DOM rendering or clipboard plugin workflow",
+    "Deployment"
+  ],
+  "method": "Isolated hexo generate; all final article bytes and all archived source assets compared with static output. Independently reconstructed all metadata identifier/source roles and raw body CVE projections. No article content execution. Post-build audit reports are outside the original input snapshot."
+}

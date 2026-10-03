@@ -1,0 +1,128 @@
+[
+  {
+    "path": "Web安全/云平台/OSSN/.resource/ossn-guko-20200410-1.png",
+    "sha256": "24265f2969f8e1967a612aad81baa31ff6d51c1ce6eff475c4b03acac3d5b945",
+    "source_url": "https://pingmaoer.github.io/2020/04/10/CVE-2020-10560-OSSN%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/1.png",
+    "source_article": "https://pingmaoer.github.io/2020/04/10/CVE-2020-10560-OSSN%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/",
+    "source_date": "2020-04-10",
+    "exact_original_recovery": false,
+    "pixel_dimensions": [
+      1134,
+      568
+    ],
+    "description": "Docker Compose 启动输出",
+    "review": "ossn-independent.json"
+  },
+  {
+    "path": "Web安全/云平台/OSSN/.resource/ossn-guko-20200410-2.png",
+    "sha256": "c1ddcad3f470ebd6066d614eac5fcc62373196996b78c0ebe8dca4d31348c7fe",
+    "source_url": "https://pingmaoer.github.io/2020/04/10/CVE-2020-10560-OSSN%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/2.png",
+    "source_article": "https://pingmaoer.github.io/2020/04/10/CVE-2020-10560-OSSN%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/",
+    "source_date": "2020-04-10",
+    "exact_original_recovery": false,
+    "pixel_dimensions": [
+      2438,
+      184
+    ],
+    "description": "容器状态",
+    "review": "ossn-independent.json"
+  },
+  {
+    "path": "Web安全/云平台/OSSN/.resource/ossn-guko-20200410-3.png",
+    "sha256": "d2be23d0ea5a7a40bc091a305e04f7713ec55dd7a434d73cbeaf33ed92d765fd",
+    "source_url": "https://pingmaoer.github.io/2020/04/10/CVE-2020-10560-OSSN%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/3.png",
+    "source_article": "https://pingmaoer.github.io/2020/04/10/CVE-2020-10560-OSSN%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/",
+    "source_date": "2020-04-10",
+    "exact_original_recovery": false,
+    "pixel_dimensions": [
+      3276,
+      2094
+    ],
+    "description": "安装前置检查",
+    "review": "ossn-independent.json"
+  },
+  {
+    "path": "Web安全/云平台/OSSN/.resource/ossn-guko-20200410-4.png",
+    "sha256": "92de7217786eb1715aed237f6ed02fcd1b1518765866fad2cded4c374c997e36",
+    "source_url": "https://pingmaoer.github.io/2020/04/10/CVE-2020-10560-OSSN%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/4.png",
+    "source_article": "https://pingmaoer.github.io/2020/04/10/CVE-2020-10560-OSSN%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/",
+    "source_date": "2020-04-10",
+    "exact_original_recovery": false,
+    "pixel_dimensions": [
+      1998,
+      1260
+    ],
+    "description": "数据库与站点配置",
+    "review": "ossn-independent.json"
+  },
+  {
+    "path": "Web安全/云平台/OSSN/.resource/ossn-guko-20200410-5.png",
+    "sha256": "afd8e52c29ac64f498b485d63d007f243fa356fb6b76ac44afc77343ac125b7e",
+    "source_url": "https://pingmaoer.github.io/2020/04/10/CVE-2020-10560-OSSN%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/5.png",
+    "source_article": "https://pingmaoer.github.io/2020/04/10/CVE-2020-10560-OSSN%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/",
+    "source_date": "2020-04-10",
+    "exact_original_recovery": false,
+    "pixel_dimensions": [
+      1906,
+      776
+    ],
+    "description": "安装后的管理员登录界面",
+    "review": "ossn-independent.json"
+  },
+  {
+    "path": "Web安全/云平台/OSSN/.resource/ossn-guko-20200410-6.png",
+    "sha256": "fbf0e4f455d50c932ff7b239be7600dbd38e4b66eda14090b12aaebf3e078b44",
+    "source_url": "https://pingmaoer.github.io/2020/04/10/CVE-2020-10560-OSSN%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/6.png",
+    "source_article": "https://pingmaoer.github.io/2020/04/10/CVE-2020-10560-OSSN%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/",
+    "source_date": "2020-04-10",
+    "exact_original_recovery": false,
+    "pixel_dimensions": [
+      2206,
+      968
+    ],
+    "description": "本地 MySQL 数据库检查",
+    "review": "ossn-independent.json"
+  },
+  {
+    "path": "Web安全/云平台/OSSN/.resource/ossn-guko-20200410-7.png",
+    "sha256": "617f239c052b4bef5cbfe7ee182c1a90bc399c8922078b3ba018d00e89b81f90",
+    "source_url": "https://pingmaoer.github.io/2020/04/10/CVE-2020-10560-OSSN%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/7.png",
+    "source_article": "https://pingmaoer.github.io/2020/04/10/CVE-2020-10560-OSSN%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/",
+    "source_date": "2020-04-10",
+    "exact_original_recovery": false,
+    "pixel_dimensions": [
+      2300,
+      756
+    ],
+    "description": "ossn_site_settings 表列表",
+    "review": "ossn-independent.json"
+  },
+  {
+    "path": "Web安全/云平台/OSSN/.resource/ossn-guko-20200410-8.png",
+    "sha256": "4ad9e533f27e59dc2fb078d3a6401b51f8a782f95205c111ff36ca8180589193",
+    "source_url": "https://pingmaoer.github.io/2020/04/10/CVE-2020-10560-OSSN%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/8.png",
+    "source_article": "https://pingmaoer.github.io/2020/04/10/CVE-2020-10560-OSSN%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/",
+    "source_date": "2020-04-10",
+    "exact_original_recovery": false,
+    "pixel_dimensions": [
+      2154,
+      306
+    ],
+    "description": "site_key 查询及原公开测试值 55e5dd7b",
+    "review": "ossn-independent.json"
+  },
+  {
+    "path": "Web安全/云平台/OSSN/.resource/ossn-guko-20200410-9.png",
+    "sha256": "f2d2104ad8a9e0d24367a3afac339a5619fc3378c0cc81e728544a036efbe121",
+    "source_url": "https://pingmaoer.github.io/2020/04/10/CVE-2020-10560-OSSN%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/9.png",
+    "source_article": "https://pingmaoer.github.io/2020/04/10/CVE-2020-10560-OSSN%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/",
+    "source_date": "2020-04-10",
+    "exact_original_recovery": false,
+    "pixel_dimensions": [
+      1400,
+      372
+    ],
+    "description": "原作者文件读取输出",
+    "review": "ossn-independent.json"
+  }
+]

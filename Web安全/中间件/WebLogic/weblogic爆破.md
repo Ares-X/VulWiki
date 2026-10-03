@@ -2,10 +2,10 @@
 source: "hatch 补库批 20260928"
 title: "weblogic爆破"
 product: "Oracle WebLogic domain credentials"
-record_type: "advisory"
+record_type: "analysis"
 review_status: "text-reviewed"
 verification_status: "not-reproduced"
-content_status: "quarantined"
+content_status: "needs-review"
 identifier_status: "unknown"
 primary_identifiers: ""
 referenced_identifiers: ""
@@ -17,6 +17,10 @@ id: "vw-3ec4bb3766d8895ff7876433"
 entity_id: "ve-3ec4bb3766d8895ff7876433"
 schema_version: "1"
 ---
+
+## 收录状态复核（2026-10-03）
+
+本文保留本地 WebLogic 域启动配置、已知凭据加密和解密尝试的实验过程，按分析材料收录；不作为在线爆破或产品漏洞记录。解密源码和后续结果缺失、环境路径冲突以及本地文件权限前提仍待核，原始失败和排错过程保留。本次仅静态核对；验证状态仍为未复现。
 
 # weblogic爆破
 

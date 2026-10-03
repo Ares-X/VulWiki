@@ -86,7 +86,7 @@ https://sec-consult.com/vulnerability-lab/responsible-disclosure-polic
 
 同 HTTP 请求走私一样，SMTP 走私的基本思想就是：
 
-当 SMTP 对数据结束部分数据（<CR><LF><CR><LF>）有不同解释时，就会发生 SMTP 走私，如果 SMTP 服务器对消息数据结束的位置有不同的理解，攻击者可能会破坏消息数据。还可能执行指定任意 SMTP 命令，甚至发送单独的电子邮件。  
+当 SMTP 对数据结束部分数据（`<CR><LF><CR><LF>`）有不同解释时，就会发生 SMTP 走私，如果 SMTP 服务器对消息数据结束的位置有不同的理解，攻击者可能会破坏消息数据。还可能执行指定任意 SMTP 命令，甚至发送单独的电子邮件。  
 
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/ESFRPeynAv6ZYkJ9rDERXHOYJEl9ia3tyTwRlusJDiaUHckdKXMtkehNUCIkyDshyicIgtkrbAgzaLWnXDDjQBPibg/640?wx_fmt=png&from=appmsg)
 
@@ -125,11 +125,11 @@ https://sec-consult.com/vulnerability-lab/responsible-disclosure-polic
 
 查看 SMTP 分析客户端后，可以立即看到一些 SMTP 产品与其他产品 “不同”。例如，以下是发送 DATA SMTP 命令后从电子邮件提供商收到的响应：
 
-*   -250 以 <CR><LF>.<CR><LF> 结束数据
+*   -250 以 `<CR><LF>.<CR><LF>` 结束数据
     
-*   -250 开始邮件输入；以 <CRLF>.<CRLF> 结束数据
+*   -250 开始邮件输入；以 `<CRLF>.<CRLF>` 结束数据
     
-*   -250 以 <CRLF>.<CRLF> 结尾并发送数据
+*   -250 以 `<CRLF>.<CRLF>` 结尾并发送数据
     
 
 这结果的 SMTP 走私漏洞测试来说并不理想
@@ -141,19 +141,19 @@ https://sec-consult.com/vulnerability-lab/responsible-disclosure-polic
 *   - 输入邮件，以 "." 结尾，一行一个
     
 
-这个就很有价值了，因不同的操作系统对 “行” 有不同的理解。Windows 上的 "." 行将通过两个回车换行符 (<CR><LF>.<CR><LF> 或 \r\n.\r\n) 进行分隔，而 Linux 上的 "." 行将通过两个换行符 (<LF>.<LF> 或 \n.\n) 进行分隔。
+这个就很有价值了，因不同的操作系统对 “行” 有不同的理解。Windows 上的 "." 行将通过两个回车换行符 (`<CR><LF>.<CR><LF>` 或 \r\n.\r\n) 进行分隔，而 Linux 上的 "." 行将通过两个换行符 (`<LF>.<LF>` 或 \n.\n) 进行分隔。
 
-因此，我们试着使用 <LF>.<LF> 来结束电子邮件的消息数据，如下
+因此，我们试着使用 `<LF>.<LF>` 来结束电子邮件的消息数据，如下
 
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/ESFRPeynAv6ZYkJ9rDERXHOYJEl9ia3tyCa2gOBcgq9wEsZaibZxEs9A1bumKuEqFgdgaf0iaydtgQiaPkMUic24ctg/640?wx_fmt=png&from=appmsg)
 
-所以每当入站 SMTP 服务器支持 <LF><LF> 作为数据序列结束时，只有 “lorem ipsum” 将成为消息数据的一部分，否则消息还包括“此服务器将换行符视为数据序列结束”。
+所以每当入站 SMTP 服务器支持 `<LF><LF>` 作为数据序列结束时，只有 “lorem ipsum” 将成为消息数据的一部分，否则消息还包括“此服务器将换行符视为数据序列结束”。
 
 但是，我们实际上可以用它实现什么？来看看如果没有结束数据部分，消息传输会是什么样子，如图：
 
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/ESFRPeynAv6ZYkJ9rDERXHOYJEl9ia3tyzRtnqaQM3ibIAkyJibJfiadWPUWGUgibBO6qmHJl4MP4ZKAia7fAqKTCfLg/640?wx_fmt=png&from=appmsg)
 
-因此，对于这种情况，我们将需要确保在数据发送完毕后发送正确的结束序列，根据接收入站 SMTP 服务器的不同，这可能是完全无害的。但是，如果入站 SMTP 服务器将 <LF><LF > 解释为数据序列结束呢？
+因此，对于这种情况，我们将需要确保在数据发送完毕后发送正确的结束序列，根据接收入站 SMTP 服务器的不同，这可能是完全无害的。但是，如果入站 SMTP 服务器将 `<LF><LF >` 解释为数据序列结束呢？
 
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/ESFRPeynAv6ZYkJ9rDERXHOYJEl9ia3tyu00ibDtFh33fUdxBJTldU6YcV7kyDJR70zNPxzIB5pfuNmYsfja7zyQ/640?wx_fmt=png&from=appmsg)
 
@@ -161,9 +161,9 @@ https://sec-consult.com/vulnerability-lab/responsible-disclosure-polic
 
 而出站 SMTP 服务器通常通过不同的方式处理这种 “麻烦的” 序列：
 
-*   "点" 填充（用另一个点来转义单个点）：<LF>..<LF>
+*   "点" 填充（用另一个点来转义单个点）：`<LF>..<LF>`
     
-*   用 <CR><LF> 替换它
+*   用 `<CR><LF>` 替换它
     
 *   对其进行编码（例如，通过可打印的引号）：=0A.=0A
     
@@ -174,17 +174,17 @@ https://sec-consult.com/vulnerability-lab/responsible-disclosure-polic
 *   也有直接被丢弃的情况
     
 
-所以，从本质上讲，我们正在寻找出站和入站 SMTP 服务器在数据序列处理方面的特定特征。更准确地说，我们正在寻找出站 SMTP 服务器忽略的内容（例如，<LF>,<LF>）以及入站 SMTP 服务器解释的内容（例如，<LF>,<LF> 作为数据结束）。如果我们能找到正确的组合，我们就可以正式的进行 SMTP 走私漏洞的利用了。
+所以，从本质上讲，我们正在寻找出站和入站 SMTP 服务器在数据序列处理方面的特定特征。更准确地说，我们正在寻找出站 SMTP 服务器忽略的内容（例如，`<LF>`,`<LF>`）以及入站 SMTP 服务器解释的内容（例如，`<LF>`,`<LF>` 作为数据结束）。如果我们能找到正确的组合，我们就可以正式的进行 SMTP 走私漏洞的利用了。
 
 第一次成功：
 
-如前所述，我们在各种 email 提供商处创建了 email 帐户。批量从出站提供商 SMTP 服务器向 SMTP 分析服务器发送潜在的数据结束序列（例如 LF>,<LF>）后不久，第一个漏洞受害者出现了。
+如前所述，我们在各种 email 提供商处创建了 email 帐户。批量从出站提供商 SMTP 服务器向 SMTP 分析服务器发送潜在的数据结束序列（例如 LF>,`<LF>`）后不久，第一个漏洞受害者出现了。
 
 GMX 成立于 1997 年，是 DACH 地区的老牌电子邮件提供商之一，拥有大约 2000 万用户。当向 GMX SMTP 服务器发送序列时，它会被未经筛选地传递到入站 SMTP 服务器，如下图
 
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/ESFRPeynAv6ZYkJ9rDERXHOYJEl9ia3tyEicujVg4HI3vhP2ibax4JsuvVoHbcXaqvaEl1JUUKUDon03qhLdVqRsA/640?wx_fmt=png&from=appmsg)
 
-因此，如果 <LF><CR><LF > 被解释为数据结束序列，我们现在可以在入站 SMTP 服务器上解析消息数据。
+因此，如果 `<LF><CR><LF >` 被解释为数据结束序列，我们现在可以在入站 SMTP 服务器上解析消息数据。
 
 我们继续向所有已注册的电子邮件地址发送一封包含以下消息数据的电子邮件
 
@@ -333,19 +333,19 @@ Received-SPF: Pass (mx4.atos.net: domain of ceo(at)sec-consult.com
 payloda 的可以用：
 
 数据序列结尾中断：  
-<CR><LF>\x00.<CR><LF>  
-<CR><LF>.\x00<CR><LF>  
+`<CR><LF>\x00.<CR><LF>  `
+`<CR><LF>.\x00<CR><LF>  `
 使用不完整 CRLF 的数据结尾序列:  
-<LF> <LF>  
-<CR><LF>.<CR>  
-<CR> <LF>  
+`<LF> <LF>  `
+`<CR><LF>.<CR>  `
+`<CR> <LF>  `
 消息头中的数据结尾序列等
 
 比如利用空字节结尾数据如下：  
 
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/ESFRPeynAv6ZYkJ9rDERXHOYJEl9ia3ty0H0gKBu4nrScGOIdYlP6KzLkrdk64pUgICKncTIlQk8e7ca5OdmLAg/640?wx_fmt=png&from=appmsg)
 
-现在，通过扫描前 Alexa Top 1000，识别出了接受此类序列的各种入站 SMTP 服务器！但是，这些序列中似乎只有一个对许多 SMTP 服务器有效：<CR><CR>
+现在，通过扫描前 Alexa Top 1000，识别出了接受此类序列的各种入站 SMTP 服务器！但是，这些序列中似乎只有一个对许多 SMTP 服务器有效：`<CR><CR>`
 
 这个序列被一些真正高价值目标的入站电子邮件服务器接受：
 
@@ -363,7 +363,7 @@ payloda 的可以用：
   
 他们都有一个共同点，那就是他们使用**思科安全电子邮件**，使用思科安全电子邮件网关或基于云的安全电子邮件网关。而且，出于某种奇怪的原因，sec-consult.com 也在使用思科安全电子邮件网关。
 
-，们现在可以从 admin(at)icloud.com 向我们的目标 sec-consult.com 发送电子邮件，因为与许多其他出站 SMTP 服务器一样（在 SMTP 走私影响中进一步讨论），<CR><CR > 不会被过滤，POC 如下（结尾使用 < CR>.<CR>）：
+，们现在可以从 admin(at)icloud.com 向我们的目标 sec-consult.com 发送电子邮件，因为与许多其他出站 SMTP 服务器一样（在 SMTP 走私影响中进一步讨论），`<CR><CR >` 不会被过滤，POC 如下（结尾使用 < CR>.`<CR>`）：
 
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/ESFRPeynAv6ZYkJ9rDERXHOYJEl9ia3tytZsAlvxL8AtgzlRObRDqicaWCulicUe0icW8wEzibu72rqZPIX3WWdlvPg/640?wx_fmt=png&from=appmsg)
 

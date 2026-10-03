@@ -1,0 +1,37 @@
+{
+  "scope": "Independent read-only review of scan identifier projection ordering, downstream consumers, targeted tests, and provided quality report. No repository edits.",
+  "conclusion": "No loss of unrelated primary identifiers or references found in the changed flow. Explicit primary_identifiers are loaded first; explicit referenced_identifiers and identifier_candidates are then retained; legacy cve/cnvd/cnnvd/ghsa/qvd/xve fallback adds a value only if it is absent from all three buckets. Thus a matching explicit candidate/reference prevents legacy identifier_role=primary from promoting that same ID, while unmatched legacy values retain prior primary/reference/candidate behavior. Full projection comparison against HEAD found one role-only difference: Fastjson QVD-2026-43021 was previously present in both candidate and reference arrays and is now reference-only; the value remains complete and searchable under reference-non-primary.",
+  "consumer_review": {
+    "catalog_record": "Projects primary_identifiers, identifier_candidates, and referenced_identifiers from the corresponding Record buckets.",
+    "CVE_navigation_and_duplicate_candidates": "Use only Record.primary, so explicit candidate/reference entries stay out of the primary CVE index and primary-ID duplicate grouping.",
+    "search": "Searches all three projected buckets and labels nonprimary matches candidate-non-primary or reference-non-primary.",
+    "identifier_role_unknown": "Still emitted for unmatched legacy candidates; suppressed when that legacy value was explicitly classified by candidate/reference or is already primary. Full repository scan produced 215 such warnings; the supplied quality.json reports 0 errors, 0 fatals, and 0 new debt."
+  },
+  "edge_cases_checked": [
+    "Legacy cve value repeats identifier_candidates with legacy identifier_role=primary: candidate retained; no primary promotion.",
+    "Legacy cve value repeats referenced_identifiers with legacy identifier_role=primary: reference retained; no primary promotion.",
+    "Legacy unknown-role cve value repeats identifier_candidates: candidate retained and redundant legacy-role warning suppressed.",
+    "Distinct legacy values continue through the previous primary/reference/candidate fallback according to identifier_role and primary_identifiers presence.",
+    "No downstream consumer was found that reconstructs primary IDs from legacy fields after scan.",
+    "Full repository HEAD/worktree generated-source comparison: only Fastjson QVD-2026-43021 changed projection, from candidate+reference to reference-only; it remains searchable and is correctly excluded from candidate classification by its explicit reference role."
+  ],
+  "limitation": "Two simultaneously populated explicit nonprimary buckets can still contain the same identifier, and an explicit primary can coexist with an explicitly declared candidate/reference for the same value. This behavior predates the targeted legacy fallback adjustment and is not caused by the new ordering; it is a separate metadata-conflict policy question, not a newly observed data-loss path.",
+  "validation": {
+    "targeted_python3_unittest": "Python 3.12.14: 60 tests passed, including both added identifier-role tests.",
+    "static_scan": "wiki.scan completed over 5,654 documents; 215 identifier_role_unknown warnings. No duplicate overlap was found between primary and nonprimary buckets in current repository data.",
+    "provided_quality_report": {
+      "errors": 0,
+      "fatal_issues": 0,
+      "new_debt": 0
+    },
+    "python3_9_environment_observation": "An earlier run under local Python 3.9 produced 3 build-output errors because pathlib.Path.write_text(newline=...) is unsupported there. This is an environment compatibility observation only; the supported Python 3.12.14 run passed all tests and the earlier errors are not a current code defect.",
+    "full_projection_comparison": "Compared docs/generated/sources.jsonl in worktree and git HEAD. Fastjson record path Web安全/开发框架/Fastjson/Fastjson 1.2.66-1.2.83 @JSONType资源探测链RCE CVE-2026-16723.md retained QVD-2026-43021 in referenced_identifiers; only redundant identifier_candidates membership was removed."
+  },
+  "reviewed_files": [
+    "scripts/wiki.py",
+    "tests/test_wiki.py",
+    "docs/CONTENT-SCHEMA.md",
+    "docs/quality-baseline.json",
+    "/tmp/vulwiki-followup-review-20261003/quality.json"
+  ]
+}

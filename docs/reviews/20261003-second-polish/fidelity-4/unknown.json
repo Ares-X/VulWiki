@@ -1,0 +1,41 @@
+[
+  {
+    "path": "Web安全/CMS内容/Certighost/Certighost（CVE-2026-54121）.md",
+    "line": 221,
+    "original_line": "详细的补丁后流程：  ",
+    "current_line": "详细的补丁后流程：  ",
+    "original_line_number": 182,
+    "current_line_number": 221,
+    "conclusion": "unknown",
+    "evidence": "Archive, merged_pr6, and working all contain the same flattened one-line pseudo-code and mitigation command; no permitted source proves intended line breaks. The prior fence pass only added blank lines before opening fences and proved raw code bodies unchanged.",
+    "prior_pass_coverage": "heading-fence reconciliation confirms 14 inserted LFs before opening fences, unchanged bodies, all 14 copy nodes; it does not restore internally flattened text",
+    "old_text": null,
+    "new_text": null
+  },
+  {
+    "path": "Web安全/CMS内容/Certighost/Certighost（CVE-2026-54121）.md",
+    "line": 248,
+    "original_line": "// decompiled shape from CRequestInstance::_LoadPrincipalObjectpolGetRequestAttribute(policy, L\"cdc\", &bstrString);CRequestInstance::_GetDSObject(this, policy, 1, bstrString);//                                           ^ chase enabled//                                              ^ requester-controlled host",
+    "current_line": "// decompiled shape from CRequestInstance::_LoadPrincipalObjectpolGetRequestAttribute(policy, L\"cdc\", &bstrString);CRequestInstance::_GetDSObject(this, policy, 1, bstrString);//                                           ^ chase enabled//                                              ^ requester-controlled host",
+    "original_line_number": 207,
+    "current_line_number": 248,
+    "conclusion": "unknown",
+    "evidence": "Archive, merged_pr6, and working all contain the same flattened one-line pseudo-code and mitigation command; no permitted source proves intended line breaks. The prior fence pass only added blank lines before opening fences and proved raw code bodies unchanged.",
+    "prior_pass_coverage": "heading-fence reconciliation confirms 14 inserted LFs before opening fences, unchanged bodies, all 14 copy nodes; it does not restore internally flattened text",
+    "old_text": null,
+    "new_text": null
+  },
+  {
+    "path": "Web安全/CMS内容/Certighost/Certighost（CVE-2026-54121）.md",
+    "line": 368,
+    "original_line": "certutil -setreg policy\\EditFlags -EDITF_ENABLECHASECLIENTDCRestart-Service CertSvc -Force",
+    "current_line": "certutil -setreg policy\\EditFlags -EDITF_ENABLECHASECLIENTDCRestart-Service CertSvc -Force",
+    "original_line_number": 317,
+    "current_line_number": 368,
+    "conclusion": "unknown",
+    "evidence": "Archive, merged_pr6, and working all contain the same flattened one-line pseudo-code and mitigation command; no permitted source proves intended line breaks. The prior fence pass only added blank lines before opening fences and proved raw code bodies unchanged.",
+    "prior_pass_coverage": "heading-fence reconciliation confirms 14 inserted LFs before opening fences, unchanged bodies, all 14 copy nodes; it does not restore internally flattened text",
+    "old_text": null,
+    "new_text": null
+  }
+]

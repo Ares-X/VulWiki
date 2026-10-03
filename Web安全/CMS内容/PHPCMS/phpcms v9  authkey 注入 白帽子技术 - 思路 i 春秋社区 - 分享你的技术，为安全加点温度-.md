@@ -44,9 +44,7 @@ schema_version: "1"
 **1.png** _(76.34 KB, 下载次数: 46)_
 
 
-```text
-[下载附件](forum.php?mod=attachment&aid=Mzg1OTZ8ZjRiYzcxMjR8MTYxMjA2NzY1OXwwfDE5MDMz&nothumb=yes)  [保存到相册](javascript:;)
-```
+> 原网页控件或署名（归档文字，不属于示例代码）：`[下载附件](forum.php?mod=attachment&aid=Mzg1OTZ8ZjRiYzcxMjR8MTYxMjA2NzY1OXwwfDE5MDMz&nothumb=yes)  [保存到相册](javascript:;)`
 
 
 2017-2-14 20:56 上传
@@ -62,9 +60,7 @@ phpcms  v9 的，然后百度。找到爆 authkey 注入的。按照网上的步
 **2.png** _(86.24 KB, 下载次数: 45)_
 
 
-```text
-[下载附件](forum.php?mod=attachment&aid=Mzg1OTd8MWVhZjhkMTV8MTYxMjA2NzY1OXwwfDE5MDMz&nothumb=yes)  [保存到相册](javascript:;)
-```
+> 原网页控件或署名（归档文字，不属于示例代码）：`[下载附件](forum.php?mod=attachment&aid=Mzg1OTd8MWVhZjhkMTV8MTYxMjA2NzY1OXwwfDE5MDMz&nothumb=yes)  [保存到相册](javascript:;)`
 
 
 2017-2-14 21:08 上传
@@ -76,9 +72,7 @@ phpcms  v9 的，然后百度。找到爆 authkey 注入的。按照网上的步
 **8.png** _(103.68 KB, 下载次数: 35)_
 
 
-```text
-[下载附件](forum.php?mod=attachment&aid=Mzg2MDB8OTEyNjE0NzR8MTYxMjA2NzY1OXwwfDE5MDMz&nothumb=yes)  [保存到相册](javascript:;)
-```
+> 原网页控件或署名（归档文字，不属于示例代码）：`[下载附件](forum.php?mod=attachment&aid=Mzg2MDB8OTEyNjE0NzR8MTYxMjA2NzY1OXwwfDE5MDMz&nothumb=yes)  [保存到相册](javascript:;)`
 
 
 2017-2-14 21:45 上传
@@ -286,9 +280,7 @@ base64_decode(substr($string, $key_length));
 **4.png** _(130.19 KB, 下载次数: 49)_
 
 
-```text
-[下载附件](forum.php?mod=attachment&aid=Mzg1OTl8NTUwMDU5YjF8MTYxMjA2NzY1OXwwfDE5MDMz&nothumb=yes)  [保存到相册](javascript:;)
-```
+> 原网页控件或署名（归档文字，不属于示例代码）：`[下载附件](forum.php?mod=attachment&aid=Mzg1OTl8NTUwMDU5YjF8MTYxMjA2NzY1OXwwfDE5MDMz&nothumb=yes)  [保存到相册](javascript:;)`
 
 
 2017-2-14 21:27 上传

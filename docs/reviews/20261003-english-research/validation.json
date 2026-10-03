@@ -1,0 +1,86 @@
+{
+  "date_utc": "2026-10-03",
+  "baseline_commit": "8f2a9e14575928bb5f086902c786da66f4a65aa9",
+  "unit_tests": {
+    "count": 52,
+    "result": "passed"
+  },
+  "quality_baseline": {
+    "baseline_issues_remaining": 5196,
+    "by_code": {
+      "embedded_code_candidate": 1,
+      "empty_fence": 91,
+      "fingerprint_unverified": 800,
+      "identifier_inactive": 27,
+      "identifier_role_unknown": 216,
+      "noncontent_link_candidate": 34,
+      "path_legacy": 2,
+      "site_relative_link": 81,
+      "source_missing": 3856,
+      "unrecognized_identifier_namespace": 88
+    },
+    "documents": 5660,
+    "errors": 0,
+    "fatal_issues": 0,
+    "new_issues": 0,
+    "resolved_issues": 0,
+    "result": "no new debt; historical issues remain",
+    "warnings": 5196
+  },
+  "strict_check": {
+    "exit_code": 1,
+    "summary": {
+      "by_code": {
+        "embedded_code_candidate": 1,
+        "empty_fence": 91,
+        "fingerprint_unverified": 800,
+        "identifier_inactive": 27,
+        "identifier_role_unknown": 216,
+        "noncontent_link_candidate": 34,
+        "path_legacy": 2,
+        "site_relative_link": 81,
+        "source_missing": 3856,
+        "unrecognized_identifier_namespace": 88
+      },
+      "documents": 5660,
+      "errors": 0,
+      "fatal_issues": 0,
+      "warnings": 5196
+    },
+    "reason": "unchanged historical warnings"
+  },
+  "deterministic_indexes": {
+    "build": "passed",
+    "build_check": "passed",
+    "baseline_modified": false,
+    "different_files": []
+  },
+  "render": {
+    "renderer": "Pandoc 3.1.11.1, gfm -> html5, preserve-tabs, no syntax highlighter",
+    "articles": 6,
+    "code_elements": 185,
+    "fenced_blocks": 2,
+    "ast_vs_html_code_text": "all exact matches",
+    "original_fence_vs_ast": "all exact matches with Markdown terminal newline accounted for",
+    "active_html_elements": 0,
+    "embedded_images": 0,
+    "pixel_check": "not completed; Chromium startup aborted before page load: socket() failed: Operation not permitted"
+  },
+  "independent_review": {
+    "result": "no substantiated technical error or blocker",
+    "scope": "six articles; main advisories; nine fixed patches; OVS CNA matrices; module/script side effects"
+  },
+  "scope_integrity": {
+    "existing_articles_modified": false,
+    "resources_modified": false,
+    "quality_scripts_modified": false,
+    "workflow_modified": false,
+    "redaction_performed": false
+  },
+  "candidate_code_execution": "none",
+  "known_limits": [
+    "Jellyfin media ID acquisition claims differ between research and advisory",
+    "OVS bundled binary not analyzed; no binary-source equivalence claim",
+    "Transitive dependencies and entire upstream build systems not fully audited"
+  ]
+}

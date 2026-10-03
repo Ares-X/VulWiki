@@ -296,6 +296,7 @@ simple-httpd.c
  函数（或其他可调用 decode_rfc5987  
  的函数）的调用来验证。选择 soup_message_headers_get_content_type  
  较为理想，因为获取请求/响应的内容类型是常见应用场景。如前所述，本文未深入探究具体哪些 API 调用可能触发该漏洞。  
+
 ```
 200a201,202
 >     GHashTable *params = NULL;

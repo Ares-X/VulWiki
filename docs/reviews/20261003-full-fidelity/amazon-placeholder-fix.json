@@ -1,0 +1,10 @@
+{
+  "path": "IOT安全/Amazon/（CVE-2018-11021）Amazon Kindle Fire HD (3rd) Fire OS kernel组件安全漏洞.md",
+  "archive": "41940cb0038d09ca5aaddbe5bffb923e423d210f",
+  "before_sha256": "6fdeae11d3cf45263269e5d2c501d5a5b0eb77631afff48e33618ccb79eac259",
+  "after_sha256": "d280fa65c5baa5471f18a61bb8a8cc49211e2a0e78fb8a6313b45ec073c52d99",
+  "all_original_body_from_first_section_exactly_restored": true,
+  "original_placeholder": "To be added here.",
+  "removed_from_placeholder_code": "原文未提供崩溃日志，不能据此声称已有匹配日志.",
+  "evidence_boundary_note_preserved_outside_code": true
+}

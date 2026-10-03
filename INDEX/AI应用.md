@@ -55,13 +55,13 @@
 - [漏洞预警 | Langflow身份验证缺失漏洞](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/Langflow/%E6%BC%8F%E6%B4%9E%E9%A2%84%E8%AD%A6%20%20Langflow%E8%BA%AB%E4%BB%BD%E9%AA%8C%E8%AF%81%E7%BC%BA%E5%A4%B1%E6%BC%8F%E6%B4%9E.md) [advisory; not-reproduced; needs-review]
 - [（CVE-2026-9198）IBM Langflow未认证RCE漏洞](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/Langflow/%EF%BC%88CVE-2026-9198%EF%BC%89IBM%20Langflow%E6%9C%AA%E8%AE%A4%E8%AF%81RCE%E6%BC%8F%E6%B4%9E.md) [vulnerability; not-reproduced; needs-review]
 
+## Langflow及Windows Shell
+
+- [Langflow、Windows Shell 与 Chrome 漏洞说法汇编（未核）](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/Langflow/%5BRCE%5D%2014%E8%A1%8CJSON%EF%BC%8C%E6%8E%A5%E7%AE%A1%E4%BD%A0%E7%9A%84Langflow%E5%B7%A5%E4%BD%9C%E6%B5%81%E5%BC%95%E6%93%8E.md) [roundup; not-reproduced; needs-review]
+
 ## Letta
 
 - [漏洞复现 | Letta-ai letta代码注入漏洞(CVE-2025-51482)](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/Letta%20AI/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0%20%20Letta-ai%20letta%E4%BB%A3%E7%A0%81%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%28CVE-2025-51482%29.md) [vulnerability; not-reproduced; needs-review]
-
-## Linux ksmbd
-
-- [OpenAI大语言模型漏洞挖掘](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/OpenAI/OpenAI%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98.md) [advisory; not-reproduced; needs-review]
 
 ## LiteLLM
 
@@ -84,6 +84,10 @@
 ## Marimo
 
 - [Marimo 高危预认证 RCE 漏洞已遭活跃利用](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/Marimo/Marimo%20%E9%AB%98%E5%8D%B1%E9%A2%84%E8%AE%A4%E8%AF%81%20RCE%20%E6%BC%8F%E6%B4%9E%E5%B7%B2%E9%81%AD%E6%B4%BB%E8%B7%83%E5%88%A9%E7%94%A8.md) [advisory; not-reproduced; needs-review]
+
+## Microsoft Copilot
+
+- [CVE-2026-42824 Copilot SearchLeak 说法与检测草稿（未核实）](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/AI%E7%BB%BC%E5%90%88/CVE-2026-42824%EF%BC%9ACopilot%20SearchLeak%20%E6%BC%8F%E6%B4%9E%EF%BC%8CAI%20%E5%8C%96%E8%BA%AB%E6%95%B0%E6%8D%AE%E7%AA%83%E5%AF%86%E5%86%85%E9%AC%BC.md) [analysis; not-reproduced; needs-review]
 
 ## Microsoft SQL Server Management Studio 22 / GitHub Copilot
 
@@ -131,7 +135,9 @@
 
 - [CVE-2026-28466：OpenClaw节点调用批准绕过的RCE精解](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/OpenClaw%20AI/CVE-2026-28466%EF%BC%9AOpenClaw%E8%8A%82%E7%82%B9%E8%B0%83%E7%94%A8%E6%89%B9%E5%87%86%E7%BB%95%E8%BF%87%E7%9A%84RCE%E7%B2%BE%E8%A7%A3.md) [analysis; not-reproduced; needs-review]
 - [OpenClaw AI框架曝出六大高危漏洞，含SSRF与认证绕过风险](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/OpenClaw%20AI/OpenClaw%20AI%E6%A1%86%E6%9E%B6%E6%9B%9D%E5%87%BA%E5%85%AD%E5%A4%A7%E9%AB%98%E5%8D%B1%E6%BC%8F%E6%B4%9E%EF%BC%8C%E5%90%ABSSRF%E4%B8%8E%E8%AE%A4%E8%AF%81%E7%BB%95%E8%BF%87%E9%A3%8E%E9%99%A9.md) [advisory; not-reproduced; needs-review]
+- [OpenClaw scoped-token 授权绕过说法与复现草稿（未核）](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/OpenClaw%20AI/CVE-2026-32051%EF%BC%9AOpenClaw%E6%8E%88%E6%9D%83%E7%BB%95%E8%BF%87%E6%BC%8F%E6%B4%9E%E4%B8%8E%E5%A4%8D%E7%8E%B0.md) [analysis; not-reproduced; needs-review]
 - [OpenClaw 曝出四大漏洞，可导致数据窃取、权限提升与持久化攻击](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/OpenClaw%20AI/OpenClaw%20%E6%9B%9D%E5%87%BA%E5%9B%9B%E5%A4%A7%E6%BC%8F%E6%B4%9E%EF%BC%8C%E5%8F%AF%E5%AF%BC%E8%87%B4%E6%95%B0%E6%8D%AE%E7%AA%83%E5%8F%96%E3%80%81%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87%E4%B8%8E%E6%8C%81%E4%B9%85%E5%8C%96%E6%94%BB%E5%87%BB.md) [advisory; not-reproduced; needs-review]
+- [OpenClaw 请求侧提示注入与代码执行说法（未核）](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/OpenClaw%20AI/OpenClaw%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2026-30741%EF%BC%89%EF%BC%81.md) [analysis; not-reproduced; needs-review]
 - [OpenClaw安全实战系列(四)：幽灵连通性 — 揭秘CVE-2026-32038沙箱网络隔离绕过与靶标实战](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/OpenClaw%20AI/OpenClaw%E5%AE%89%E5%85%A8%E5%AE%9E%E6%88%98%E7%B3%BB%E5%88%97%28%E5%9B%9B%29%EF%BC%9A%E5%B9%BD%E7%81%B5%E8%BF%9E%E9%80%9A%E6%80%A7%20%E2%80%94%20%E6%8F%AD%E7%A7%98CVE-2026-32038%E6%B2%99%E7%AE%B1%E7%BD%91%E7%BB%9C%E9%9A%94%E7%A6%BB%E7%BB%95%E8%BF%87%E4%B8%8E%E9%9D%B6%E6%A0%87%E5%AE%9E%E6%88%98.md) [vulnerability; not-reproduced; needs-review]
 - [【AI高危漏洞预警】OpenClaw PATH命令注入漏洞CVE-2026-24763](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/OpenClaw%20AI/%E3%80%90AI%E9%AB%98%E5%8D%B1%E6%BC%8F%E6%B4%9E%E9%A2%84%E8%AD%A6%E3%80%91OpenClaw%20PATH%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9ECVE-2026-24763.md) [advisory; not-reproduced; needs-review]
 - [【高危AI漏洞预警】OpenClaw环境变量注入漏洞 (CVE-2026-22177)](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/OpenClaw%20AI/%E3%80%90%E9%AB%98%E5%8D%B1AI%E6%BC%8F%E6%B4%9E%E9%A2%84%E8%AD%A6%E3%80%91OpenClaw%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%20CVE-2026-22177.md) [advisory; not-reproduced; needs-review]
@@ -160,6 +166,10 @@
 ## Vim
 
 - [Claude Code 30分钟挖出Vim用了三十年的0Day，收到陌生文件先别急着打开](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/Claude%20Code/Claude%20Code%2030%E5%88%86%E9%92%9F%E6%8C%96%E5%87%BAVim%E7%94%A8%E4%BA%86%E4%B8%89%E5%8D%81%E5%B9%B4%E7%9A%840Day%EF%BC%8C%E6%94%B6%E5%88%B0%E9%99%8C%E7%94%9F%E6%96%87%E4%BB%B6%E5%85%88%E5%88%AB%E6%80%A5%E7%9D%80%E6%89%93%E5%BC%80.md) [advisory; not-reproduced; needs-review]
+
+## chatgpt-on-wechat
+
+- [chatgpt-on-wechat存在身份验证漏洞漏洞(CVE-2026-6129)](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/chatgpt-on-wechat/chatgpt-on-wechat%E5%AD%98%E5%9C%A8%E8%BA%AB%E4%BB%BD%E9%AA%8C%E8%AF%81%E6%BC%8F%E6%B4%9E%E6%BC%8F%E6%B4%9E%28CVE-2026-6129%29.md) [advisory; not-reproduced; needs-review]
 
 ## enclave-vm
 

@@ -1,0 +1,29 @@
+{
+  "python": {
+    "tests": 65,
+    "result": "passed",
+    "command": "/Users/aresx/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 -m unittest discover -s tests -v",
+    "evidence": "Root tool run before CRLF fix and independent parser reviewer rerun after final CRLF fix."
+  },
+  "node": {
+    "tests": 7,
+    "result": "passed",
+    "command": "node --test test/wiki-data.test.js",
+    "evidence": "Root tool run in parent blog; no Node changes this round."
+  },
+  "quality": {
+    "documents": 5654,
+    "errors": 0,
+    "fatal": 0,
+    "new": 0,
+    "warnings": 5098,
+    "baseline_changed": false
+  },
+  "build_check": {
+    "result": "passed",
+    "command": "Python 3.12 runtime scripts/wiki.py build --check",
+    "different_files": []
+  },
+  "publication": "paused; no push or deploy",
+  "article_execution": "none"
+}

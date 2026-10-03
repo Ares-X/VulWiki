@@ -1,0 +1,16 @@
+{
+  "python_executable": "/Users/aresx/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+  "python_version": "Python 3.12.14",
+  "node_version": "v26.5.0",
+  "content_tests": 58,
+  "catalog_tests": 7,
+  "commands": [
+    "python3.12 -m unittest discover -s tests -v",
+    "node --test test/wiki-data.test.js",
+    "python3.12 scripts/wiki.py check --baseline docs/quality-baseline.json",
+    "python3.12 scripts/wiki.py build --check",
+    "npm run build (isolated hexo generate)"
+  ],
+  "system_python": "/usr/bin/python3 is older than documented Python 3.10+ requirement; bundled installed Python 3.12 used. No dependency installation or strategy change.",
+  "publication": "paused"
+}

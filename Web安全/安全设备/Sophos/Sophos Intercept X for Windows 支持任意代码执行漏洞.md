@@ -55,8 +55,7 @@ source_status: "unknown"
 Sophos Intercept X for Windows 产品系列中的三个严重漏洞可能允许本地攻击者以系统级权限执行任意代码。  
   
 这些缺陷被识别为 CVE-2024-13972、CVE-2025-7433 和 CVE-2025-7472，包括注册表权限配置错误、设备加密组件的弱点以及在 SYSTEM 帐户下运行的 Windows 安装程序的问题。  
-```
-```  
+
   
 这三个缺陷都具有高严重性评级，并影响 2025 年 7 月 17 日发布最新补丁之前的 Intercept X for Windows 版本。  
   

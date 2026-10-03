@@ -1,0 +1,20 @@
+{
+  "build": "/var/folders/4w/72x3w5lj24l__5yr852p1lj80000gn/T/vulwiki-second-polish-unpublished-20261003-5qkkhd7t/build",
+  "release": "/var/folders/4w/72x3w5lj24l__5yr852p1lj80000gn/T/vulwiki-second-polish-unpublished-20261003-5qkkhd7t",
+  "blog_base": "112d62a05ee5417b57f543bc84979595b42e8943",
+  "blog_overlay_files": [
+    "scripts/wiki-data.js",
+    "source/wiki/wiki-catalog.js",
+    "source/wiki/wiki-search-worker.js",
+    "test/wiki-data.test.js"
+  ],
+  "content_base": "a90bda8a269d6d8763ddc25f127125767d6dbab7",
+  "content_modified_articles": 98,
+  "article_inputs": 5654,
+  "copied_files": 13534,
+  "theme": "2eb1e8ab1c3f7d4b148a1dd31307f38461fa724f",
+  "dependencies": "Existing pinned build node_modules; no dependency installation",
+  "publication": "paused; generate only",
+  "audit_output_note": "Post-build summary and file ledger are outside this input snapshot.",
+  "exit_code": 0
+}

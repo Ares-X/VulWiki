@@ -18,6 +18,7 @@ source_url: "https://xz.aliyun.com/t/10486"
 id: "vw-b265eacd7da8f1c4f6089926"
 entity_id: "ve-b265eacd7da8f1c4f6089926"
 schema_version: "1"
+index_category: "IOT安全/其他设备"
 ---
 
 ## 核对与使用边界

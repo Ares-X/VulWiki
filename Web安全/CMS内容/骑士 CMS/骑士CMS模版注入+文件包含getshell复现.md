@@ -179,10 +179,6 @@ relation_type: "duplicate_of"
 `/**` `* URL组装 支持不同URL模式` `* @param string $url URL表达式，格式：'[模块/控制器/操作#锚点@域名]?参数1=值1&参数2=值2...'` `* @param string|array $vars 传入的参数，支持数组和字符串` `* @param string|boolean $suffix 伪静态后缀，默认为true表示获取配置值` `* @param boolean $domain 是否显示域名` `* @return string` `*/``function U($url='',$vars='',$suffix=true,$domain=false,$type=false,$module_type=false) {` `// 解析URL` `...` `return $url;``}`
 ```
 
-```
-  
-
-```
 
 **日志记录：**
 
@@ -194,10 +190,6 @@ thinkphp定义了日志记录方式：
  `/**` `* 日志直接写入` `* @static` `* @access public` `* @param string $message 日志信息` `* @param string $level  日志级别` `* @param integer $type 日志记录方式` `* @param string $destination  写入目标` `* @return void` `*/` `static function write($message,$level=self::ERR,$type='',$destination='') {` `if(!self::$storage){` `$type   =   $type ? : C('LOG_TYPE');` `$class  =   'Think\\Log\\Driver\\'. ucwords($type);` `$config['log_path'] = C('LOG_PATH');` `self::$storage = new $class($config);``        }` `if(empty($destination)){` `$destination = C('LOG_PATH').date('y_m_d').'.log';``        }` `self::$storage->write("{$level}: {$message}", $destination);` `}`
 ```
 
-```
-  
-
-```
 
 ERR代表一般性错误，会直接写入在y_m_d.log当中
 
@@ -226,10 +218,6 @@ http://www.74cms.com/news/show-2497.html
  `/**` `* 渲染简历模板` `*/` `public function assign_resume_tpl($variable,$tpl){` `foreach ($variable as $key => $value) {` `$this->assign($key,$value);` `}` `return $this->fetch($tpl);` `}`
 ```
 
-```
-  
-
-```
 
 variable值任意，最终是要对tpl的内容进行渲染
 
@@ -242,10 +230,6 @@ ThinkPHP/Library/Think/Controller.class.php：
  `/**` `*  获取输出页面内容` `* 调用内置的模板引擎fetch方法，` `* @access protected` `* @param string $templateFile 指定要调用的模板文件` `* 默认为空 由系统自动定位模板文件` `* @param string $content 模板输出内容` `* @param string $prefix 模板缓存前缀*``     * @return string` `*/` `protected function fetch($templateFile='',$content='',$prefix='') {` `return $this->view->fetch($templateFile,$content,$prefix);` `}`
 ```
 
-```
-  
-
-```
 
 这里又调用了内置的模板解析方法fetch，位于  
 ThinkPHP/Library/Think/View.class.php：
@@ -254,10 +238,6 @@ ThinkPHP/Library/Think/View.class.php：
  `/**` `* 解析和获取模板内容 用于输出` `* @access public` `* @param string $templateFile 模板文件名` `* @param string $content 模板输出内容` `* @param string $prefix 模板缓存前缀` `* @return string` `*/` `public function fetch($templateFile='',$content='',$prefix='') {` `if(empty($content)) {` `$templateFile   =   $this->parseTemplate($templateFile);` `// 模板文件不存在直接返回` `if(!is_file($templateFile)) E(L('_TEMPLATE_NOT_EXIST_').':'.$templateFile);` `}else{` `defined('THEME_PATH') or    define('THEME_PATH', $this->getThemePath());` `}` `// 页面缓存` `ob_start();` `ob_implicit_flush(0);` `if('php' == strtolower(C('TMPL_ENGINE_TYPE'))) { // 使用PHP原生模板` `$_content   =   $content;` `// 模板阵列变量分解成为独立变量` `extract($this->tVar, EXTR_OVERWRITE);` `// 直接载入PHP模板` `empty($_content)?include $templateFile:eval('?>'.$_content);` `}else{` `// 视图解析标签` `$params = array('var'=>$this->tVar,'file'=>$templateFile,'content'=>$content,'prefix'=>$prefix);` `Hook::listen('view_parse',$params);` `}` `// 获取并清空缓存` `$content = ob_get_clean();` `// 内容过滤标签` `Hook::listen('view_filter',$content);` `// 输出模板文件` `return $content;` `}`
 ```
 
-```
-  
-
-```
 
 content为空进入第一个判断，判断模板文件是否为空  
 然后经过parseTemplate处理后，走如下个判断  
@@ -276,10 +256,6 @@ content为空进入第一个判断，判断模板文件是否为空
  `/**` `* 监听标签的插件` `* @param string $tag 标签名称` `* @param mixed $params 传入参数` `* @return void` `*/` `static public function listen($tag, &$params=NULL) {` `if(isset(self::$tags[$tag])) {` `if(APP_DEBUG) {` `G($tag.'Start');` `trace('[ '.$tag.' ] --START--','','INFO');` `}` `foreach (self::$tags[$tag] as $name) {` `APP_DEBUG && G($name.'_start');` `$result =   self::exec($name, $tag,$params);` `if(APP_DEBUG){` `G($name.'_end');` `trace('Run '.$name.' [ RunTime:'.G($name.'_start',$name.'_end',6).'s ]','','INFO');` `}` `if(false === $result) {` `// 如果返回false 则中断插件执行` `return ;` `}` `}` `if(APP_DEBUG) { // 记录行为的执行日志` `trace('[ '.$tag.' ] --END-- [ RunTime:'.G($tag.'Start',$tag.'End',6).'s ]','','INFO');` `}` `}` `return;` `}` `/**` `* 执行某个插件` `* @param string $name 插件名称` `* @param string $tag 方法名（标签名）``     * @param Mixed $params 传入的参数` `* @return void` `*/` `static public function exec($name, $tag,&$params=NULL) {` `if('Behavior' == substr($name,-8) ){` `// 行为扩展必须用run入口方法` `$tag    =   'run';` `}` `$addon   = new $name();` `return $addon->$tag($params);` `}``}`
 ```
 
-```
-  
-
-```
 
 view_parse的行为定义如下：  
   
@@ -293,10 +269,6 @@ ThinkPHP/Library/Behavior/ParseTemplateBehavior.class.php
  `// 行为扩展的执行入口必须是run` `public function run(&$_data){` `$engine             =   strtolower(C('TMPL_ENGINE_TYPE'));` `$_content           =   empty($_data['content'])?$_data['file']:$_data['content'];` `$_data['prefix']    =   !empty($_data['prefix'])?$_data['prefix']:C('TMPL_CACHE_PREFIX');` `if('think'==$engine){ // 采用Think模板引擎` `if((!empty($_data['content']) && $this->checkContentCache($_data['content'],$_data['prefix']))``                ||  $this->checkCache($_data['file'],$_data['prefix'])) { // 缓存有效` `//载入模版缓存文件` `Storage::load(C('CACHE_PATH').$_data['prefix'].md5($_content).C('TMPL_CACHFILE_SUFFIX'),$_data['var']);` `}else{` `$tpl = Think::instance('Think\\Template');` `// 编译并加载模板文件` `$tpl->fetch($_content,$_data['var'],$_data['prefix']);` `}` `}else{` `// 调用第三方模板引擎解析和输出` `if(strpos($engine,'\\')){` `$class  =   $engine;` `}else{` `$class   =  'Think\\Template\\Driver\\'.ucwords($engine);``            }            ``            if(class_exists($class)) {` `$tpl   =  new $class;` `$tpl->fetch($_content,$_data['var']);` `}else {  // 类没有定义` `E(L('_NOT_SUPPORT_').': ' . $class);` `}` `}` `}`
 ```
 
-```
-  
-
-```
 
 因为engine的默认值为think，所以走入第一个判断，content不为空则载入缓存，若为空，即第一次加载，走入else，先实例化template类，调用了fetch方法，其位于  
 ThinkPHP/Library/Think/Template.class.php
@@ -305,10 +277,6 @@ ThinkPHP/Library/Think/Template.class.php
  `/**` `* 加载模板` `* @access public` `* @param string $templateFile 模板文件` `* @param array  $templateVar 模板变量` `* @param string $prefix 模板标识前缀` `* @return void` `*/` `public function fetch($templateFile,$templateVar,$prefix='') {` `$this->tVar         =   $templateVar;` `$templateCacheFile  =   $this->loadTemplate($templateFile,$prefix);` `Storage::load($templateCacheFile,$this->tVar,null,'tpl');` `}`
 ```
 
-```
-  
-
-```
 
 调用loadTemplate()，将其存入templateCacheFile中  
 我们跟入loadTemplate()方法：
@@ -317,10 +285,6 @@ ThinkPHP/Library/Think/Template.class.php
  `/**` `* 加载主模板并缓存` `* @access public` `* @param string $templateFile 模板文件` `* @param string $prefix 模板标识前缀` `* @return string` `* @throws ThinkExecption` `*/` `public function loadTemplate ($templateFile,$prefix='') {` `if(is_file($templateFile)) {` `$this->templateFile    =  $templateFile;` `// 读取模板文件内容` `$tmplContent =  file_get_contents($templateFile);` `}else{` `$tmplContent =  $templateFile;` `}` `// 根据模版文件名定位缓存文件``...` `// 判断是否启用布局``...` `// 编译模板内容` `$tmplContent =  $this->compiler($tmplContent);` `Storage::put($tmplCacheFile,trim($tmplContent),'tpl');` `return $tmplCacheFile;` `}`
 ```
 
-```
-  
-
-```
 
 精简了下代码，先获取文件内容，然后存入$tmplContent中，关注最后三行，调用compiler()方法对模板进行编译，做一些简单处理：  
   
@@ -333,10 +297,6 @@ ThinkPHP/Library/Think/Template.class.php
  `/**` `* 加载文件` `* @access public` `* @param string $filename  文件名` `* @param array $vars  传入变量` `* @return void``     */` `public function load($_filename,$vars=null){` `if(!is_null($vars)){` `extract($vars, EXTR_OVERWRITE);` `}` `include $_filename;` `}`
 ```
 
-```
-  
-
-```
 
 这里直接就包含文件，最终造成了模板注入
 
@@ -350,10 +310,6 @@ ThinkPHP/Library/Think/Template.class.php
 <?php phpinfo(); ob_flush();?>/r/n<qscms/company_show 列表名="info" 企业id="$_GET['id']"/>
 ```
 
-```
-  
-
-```
 
 为什么不能使用get来请求，因为url在提交给后台处理会被进行url编码，从而造成包含不成功，因此要采取post方式发送payload  
   

@@ -1,0 +1,845 @@
+{
+  "method": "marked lexer/parser static inspection; no code/html execution or external requests",
+  "articles": [
+    {
+      "pr": 8,
+      "path": "Web安全/CMS内容/WordPress/Visual Composer 模板文件包含与版本边界核对（CVE-2026-12227）.md",
+      "source": "/tmp/vulwiki-publish-20261003/integrate8/Web安全/CMS内容/WordPress/Visual Composer 模板文件包含与版本边界核对（CVE-2026-12227）.md",
+      "code_token_count": 35,
+      "pr8_snapshot_code_tokens_unchanged": true,
+      "empty_code_blocks": 0,
+      "active_html_candidate": false,
+      "links": [
+        {
+          "href": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/visualcomposer/visual-composer-website-builder-45160-unauthenticated-local-file-inclusion-via-vcv-template-parameter",
+          "text": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/visualcomposer/visual-composer-website-builder-45160-unauthenticated-local-file-inclusion-via-vcv-template-parameter",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/VisualComposer/builder/commit/a3909a4cb347004d699c068279aaa061782c8f20",
+          "text": "https://github.com/VisualComposer/builder/commit/a3909a4cb347004d699c068279aaa061782c8f20",
+          "title": ""
+        },
+        {
+          "href": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/visualcomposer/visual-composer-website-builder-45160-unauthenticated-local-file-inclusion-via-vcv-template-parameter",
+          "text": "Wordfence CNA 公告",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/CVEProject/cvelistV5/blob/ff88cdf4ac3a745d02a96b242947fd3f4ab992ae/cves/2026/12xxx/CVE-2026-12227.json",
+          "text": "固定 CNA JSON",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/VisualComposer/builder/commit/a3909a4cb347004d699c068279aaa061782c8f20",
+          "text": "7 月路径控制补丁",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/VisualComposer/builder/blob/083852953a9b67b1557d51c8adf19b1df19d75a5/visualcomposer/Modules/Editors/Settings/PageTemplatesController.php",
+          "text": "45.16.0 固定控制器",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/VisualComposer/builder/blob/ac480faf602a6b264e8aea3225839c40be9fc795/visualcomposer/Modules/Editors/Settings/PageTemplatesController.php",
+          "text": "45.16.1 固定控制器",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/VisualComposer/builder/blob/083852953a9b67b1557d51c8adf19b1df19d75a5/visualcomposer/Modules/Editors/Settings/PageEditableTemplatesController.php",
+          "text": "45.16.0 编辑模板控制器",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/VisualComposer/builder/blob/ac480faf602a6b264e8aea3225839c40be9fc795/visualcomposer/Modules/Editors/Settings/PageEditableTemplatesController.php",
+          "text": "45.16.1 编辑模板控制器",
+          "title": ""
+        },
+        {
+          "href": "https://plugins.svn.wordpress.org/visualcomposer/tags/45.16.0/visualcomposer/Modules/Editors/Settings/PageTemplatesController.php",
+          "text": "45.16.0 PageTemplatesController",
+          "title": ""
+        },
+        {
+          "href": "https://plugins.svn.wordpress.org/visualcomposer/tags/45.16.1/visualcomposer/Modules/Editors/Settings/PageTemplatesController.php",
+          "text": "45.16.1 PageTemplatesController",
+          "title": ""
+        },
+        {
+          "href": "https://plugins.svn.wordpress.org/visualcomposer/tags/45.16.0/visualcomposer/Modules/Editors/Settings/PageEditableTemplatesController.php",
+          "text": "45.16.0 PageEditableTemplatesController",
+          "title": ""
+        },
+        {
+          "href": "https://plugins.svn.wordpress.org/visualcomposer/tags/45.16.1/visualcomposer/Modules/Editors/Settings/PageEditableTemplatesController.php",
+          "text": "45.16.1 PageEditableTemplatesController",
+          "title": ""
+        },
+        {
+          "href": "https://developer.wordpress.org/reference/hooks/template_include/",
+          "text": "WordPress template_include 文档",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/SourByte05/Vulnerability-Wiki-PoC/commit/a198d2f3d3ed07d2aec4b61356d9f6d526047c35",
+          "text": "SourByte05 汇编增量",
+          "title": ""
+        }
+      ],
+      "sha256": "04322c46f5722b36c9dbb66e2769e25500b02d827f4a12759f88e45846b05c87",
+      "pr8_code_tokens": null
+    },
+    {
+      "pr": 8,
+      "path": "Web安全/开发框架/PowerJob/PowerJob friend-process 未认证反射调用链分析（CVE-2026-75429）.md",
+      "source": "/tmp/vulwiki-publish-20261003/integrate8/Web安全/开发框架/PowerJob/PowerJob friend-process 未认证反射调用链分析（CVE-2026-75429）.md",
+      "code_token_count": 45,
+      "pr8_snapshot_code_tokens_unchanged": true,
+      "empty_code_blocks": 0,
+      "active_html_candidate": false,
+      "links": [
+        {
+          "href": "https://github.com/unpredictable21/CVE-2026-75429_PowerJob_friend_process_RCE/blob/019aea282e5d1ac63d5f2c134f0716e19fa71497/README.md",
+          "text": "https://github.com/unpredictable21/CVE-2026-75429_PowerJob_friend_process_RCE/blob/019aea282e5d1ac63d5f2c134f0716e19fa71497/README.md",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/PowerJob/PowerJob/tree/332179de26b44f0a949f7594ce9f57ee26fb6b27",
+          "text": "https://github.com/PowerJob/PowerJob/tree/332179de26b44f0a949f7594ce9f57ee26fb6b27",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/CVEProject/cvelistV5/blob/5e5e49e3978893a8b23475ec92f2bbd75ede196f/cves/2026/75xxx/CVE-2026-75429.json",
+          "text": "固定 CNA 记录",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/unpredictable21/CVE-2026-75429_PowerJob_friend_process_RCE/blob/019aea282e5d1ac63d5f2c134f0716e19fa71497/README.md",
+          "text": "原作者固定说明",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/unpredictable21/CVE-2026-75429_PowerJob_friend_process_RCE/blob/019aea282e5d1ac63d5f2c134f0716e19fa71497/powerjob_friend_process_rce.py",
+          "text": "固定脚本",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/PowerJob/PowerJob/blob/332179de26b44f0a949f7594ce9f57ee26fb6b27/powerjob-remote/powerjob-remote-impl-http/src/main/java/tech/powerjob/remote/http/HttpVertxCSInitializer.java",
+          "text": "HTTP 分发源码",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/PowerJob/PowerJob/blob/332179de26b44f0a949f7594ce9f57ee26fb6b27/powerjob-server/powerjob-server-remote/src/main/java/tech/powerjob/server/remote/server/FriendActor.java",
+          "text": "FriendActor",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/PowerJob/PowerJob/blob/332179de26b44f0a949f7594ce9f57ee26fb6b27/powerjob-server/powerjob-server-remote/src/main/java/tech/powerjob/server/remote/server/redirector/RemoteRequestProcessor.java",
+          "text": "反射处理器",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/PowerJob/PowerJob/blob/332179de26b44f0a949f7594ce9f57ee26fb6b27/powerjob-server/powerjob-server-core/src/main/java/tech/powerjob/server/core/evaluator/GroovyEvaluator.java",
+          "text": "GroovyEvaluator",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/PowerJob/PowerJob/tree/d92ad66277ca54e14e2835b2e5a6aaf01f620684",
+          "text": "v5.1.7 固定源码树",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/Mr-xn/Penetration_Testing_POC/commit/13a0c3f551240d4fe160f914e770ce3827e85879",
+          "text": "Mr-xn 索引增量",
+          "title": ""
+        },
+        {
+          "href": "https://gist.github.com/unpredictable21/dbd1791294c9a77ad0ee3d4827073966/55cec8094da66bd0ff89b466c70d3eca5e4ea18c",
+          "text": "发现者固定 Gist",
+          "title": ""
+        }
+      ],
+      "sha256": "7ac547ebe48f09693b4e79b0d3cba70a20a8815005a526750261d0a59e917cd7",
+      "pr8_code_tokens": null
+    },
+    {
+      "pr": 8,
+      "path": "Web安全/开发框架/Tiptap/Tiptap Markdown 属性解析二次复杂度拒绝服务（GHSA-j95f-988m-3j2f）.md",
+      "source": "/tmp/vulwiki-publish-20261003/integrate8/Web安全/开发框架/Tiptap/Tiptap Markdown 属性解析二次复杂度拒绝服务（GHSA-j95f-988m-3j2f）.md",
+      "code_token_count": 20,
+      "pr8_snapshot_code_tokens_unchanged": true,
+      "empty_code_blocks": 0,
+      "active_html_candidate": false,
+      "links": [
+        {
+          "href": "https://github.com/ueberdosis/tiptap/security/advisories/GHSA-j95f-988m-3j2f",
+          "text": "https://github.com/ueberdosis/tiptap/security/advisories/GHSA-j95f-988m-3j2f",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/ueberdosis/tiptap/commit/d0d499be3cce633cf54ca9aa9f3d8a5a1f98bd74",
+          "text": "https://github.com/ueberdosis/tiptap/commit/d0d499be3cce633cf54ca9aa9f3d8a5a1f98bd74",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/ueberdosis/tiptap/security/advisories/GHSA-j95f-988m-3j2f",
+          "text": "Tiptap 官方 GHSA",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/advisories/GHSA-j95f-988m-3j2f",
+          "text": "Advisory Database 记录",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/ueberdosis/tiptap/blob/55f59e4907b37e0aa4404c52e965014f66158393/packages/core/src/utilities/markdown/attributeUtils.ts",
+          "text": "修复前固定文件",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/ueberdosis/tiptap/commit/d0d499be3cce633cf54ca9aa9f3d8a5a1f98bd74",
+          "text": "官方固定修复差异",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/ueberdosis/tiptap/releases/tag/v3.30.5",
+          "text": "v3.30.5 发布页",
+          "title": ""
+        },
+        {
+          "href": "https://xz.aliyun.com/news/92870",
+          "text": "先知社区线索",
+          "title": ""
+        }
+      ],
+      "sha256": "28126ec7cd3cb496fb84f32d00a6c705655aa03e7bd380dc6b06acf42cdeb68a",
+      "pr8_code_tokens": null
+    },
+    {
+      "pr": 8,
+      "path": "Web安全/网络设备/Citrix NetScaler/NetScaler DTLS 越界复制与公开PoC危险副作用（CVE-2026-88772）.md",
+      "source": "/tmp/vulwiki-publish-20261003/integrate8/Web安全/网络设备/Citrix NetScaler/NetScaler DTLS 越界复制与公开PoC危险副作用（CVE-2026-88772）.md",
+      "code_token_count": 41,
+      "pr8_snapshot_code_tokens_unchanged": true,
+      "empty_code_blocks": 0,
+      "active_html_candidate": false,
+      "links": [
+        {
+          "href": "https://labs.watchtowr.com/here-we-go-again-citrix-netscaler-dtls-preauth-memory-overflow-cve-2026-88772/",
+          "text": "https://labs.watchtowr.com/here-we-go-again-citrix-netscaler-dtls-preauth-memory-overflow-cve-2026-88772/",
+          "title": ""
+        },
+        {
+          "href": "https://support.citrix.com/external/article/CTX697096",
+          "text": "https://support.citrix.com/external/article/CTX697096",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/watchtowrlabs/watchTowr-vs-Citrix-Netscaler-CVE-2026-88772/blob/014f53f385f7bced62dd1308446d0950a117a542/watchTowr-vs-Citrix-Netscaler-CVE-2026-88772.py#L113-L145",
+          "text": "固定原始代码",
+          "title": ""
+        },
+        {
+          "href": "https://support.citrix.com/external/article/CTX697096",
+          "text": "NetScaler CTX697096",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/CVEProject/cvelistV5/blob/281e4a53d95c7e8cbc68e428a7469e67dc02d960/cves/2026/88xxx/CVE-2026-88772.json",
+          "text": "固定 CNA JSON",
+          "title": ""
+        },
+        {
+          "href": "https://labs.watchtowr.com/here-we-go-again-citrix-netscaler-dtls-preauth-memory-overflow-cve-2026-88772/",
+          "text": "watchTowr 原研究",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/watchtowrlabs/watchTowr-vs-Citrix-Netscaler-CVE-2026-88772/blob/014f53f385f7bced62dd1308446d0950a117a542/README.md",
+          "text": "固定 README",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/freebsd/freebsd-src/blob/d9e2caccfac14c43bf9ad62bdd35d4a03356ff91/sys/kern/syscalls.master#L207-L211",
+          "text": "FreeBSD 系统调用定义",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/freebsd/freebsd-src/blob/d9e2caccfac14c43bf9ad62bdd35d4a03356ff91/sys/sys/stat.h#L240-L241",
+          "text": "权限位定义",
+          "title": ""
+        }
+      ],
+      "sha256": "29d228102d000e62e7f3cd96c3d43ad159cc07d221c688f052b2a2522fffe162",
+      "pr8_code_tokens": null
+    },
+    {
+      "pr": 8,
+      "path": "Web安全/网络设备/Citrix NetScaler/NetScaler 日志污染到延迟命令执行分析（CVE-2026-88771）.md",
+      "source": "/tmp/vulwiki-publish-20261003/integrate8/Web安全/网络设备/Citrix NetScaler/NetScaler 日志污染到延迟命令执行分析（CVE-2026-88771）.md",
+      "code_token_count": 15,
+      "pr8_snapshot_code_tokens_unchanged": true,
+      "empty_code_blocks": 0,
+      "active_html_candidate": false,
+      "links": [
+        {
+          "href": "https://labs.watchtowr.com/oh-look-the-foot-gun-went-off-again-citrix-netscaler-preauth-command-injection-cve-2026-88771/",
+          "text": "https://labs.watchtowr.com/oh-look-the-foot-gun-went-off-again-citrix-netscaler-preauth-command-injection-cve-2026-88771/",
+          "title": ""
+        },
+        {
+          "href": "https://support.citrix.com/external/article/CTX697096",
+          "text": "https://support.citrix.com/external/article/CTX697096",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/watchtowrlabs/watchTowr-vs-Citrix-Netscaler-CVE-2026-88771/blob/2e9bae2551e32dddb5b868f8c8dff4acc6e1e7eb/watchTowr-vs-Citrix-Netscaler-CVE-2026-88771.py",
+          "text": "固定脚本",
+          "title": ""
+        },
+        {
+          "href": "https://support.citrix.com/external/article/CTX697096",
+          "text": "Citrix CTX697096",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/CVEProject/cvelistV5/blob/281e4a53d95c7e8cbc68e428a7469e67dc02d960/cves/2026/88xxx/CVE-2026-88771.json",
+          "text": "固定 NetScaler CNA 记录",
+          "title": ""
+        },
+        {
+          "href": "https://labs.watchtowr.com/oh-look-the-foot-gun-went-off-again-citrix-netscaler-preauth-command-injection-cve-2026-88771/",
+          "text": "watchTowr 原始分析",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/watchtowrlabs/watchTowr-vs-Citrix-Netscaler-CVE-2026-88771/blob/2e9bae2551e32dddb5b868f8c8dff4acc6e1e7eb/README.md",
+          "text": "固定 README",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/cisagov/kev-data/tree/7009facc2019306d41f6d6df6c8a057b99b4b468",
+          "text": "CISA 官方目录源码",
+          "title": ""
+        }
+      ],
+      "sha256": "37bb4d8916a00e11a1f5834b4c4421e1e182d391ace2c14a9444b6705f929bf8",
+      "pr8_code_tokens": null
+    },
+    {
+      "pr": 8,
+      "path": "Web安全/邮件系统/Nodemailer/Nodemailer 地址解析与收件人去重二次复杂度拒绝服务（GHSA-2x7j-588g-ccc2）.md",
+      "source": "/tmp/vulwiki-publish-20261003/integrate8/Web安全/邮件系统/Nodemailer/Nodemailer 地址解析与收件人去重二次复杂度拒绝服务（GHSA-2x7j-588g-ccc2）.md",
+      "code_token_count": 36,
+      "pr8_snapshot_code_tokens_unchanged": true,
+      "empty_code_blocks": 0,
+      "active_html_candidate": false,
+      "links": [
+        {
+          "href": "https://github.com/nodemailer/nodemailer/security/advisories/GHSA-2x7j-588g-ccc2",
+          "text": "https://github.com/nodemailer/nodemailer/security/advisories/GHSA-2x7j-588g-ccc2",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/nodemailer/nodemailer/commit/34da64282dcdc9b0581c721a27ab2fa226673150",
+          "text": "https://github.com/nodemailer/nodemailer/commit/34da64282dcdc9b0581c721a27ab2fa226673150",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/nodemailer/nodemailer/security/advisories/GHSA-2x7j-588g-ccc2",
+          "text": "官方 GHSA",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/advisories/GHSA-2x7j-588g-ccc2",
+          "text": "数据库记录",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/nodemailer/nodemailer/commit/9116da9528c6524cefaed75185602a7e85d20434",
+          "text": "地址解析补丁",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/nodemailer/nodemailer/commit/7cc38af418ffa6fc7e86085195ca5ca681694b3e",
+          "text": "唯一地址去重补丁",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/nodemailer/nodemailer/commit/34da64282dcdc9b0581c721a27ab2fa226673150",
+          "text": "跨头复用集合补丁",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/nodemailer/nodemailer/commit/83b8c48cbdb8b3116f2e1ba84af755b2c5661c0f",
+          "text": "避免参数展开补丁",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/nodemailer/nodemailer/commit/7279ac8dee4f66c032981e6e51e3e7210ad0dcbf",
+          "text": "收件人上限补丁",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/nodemailer/nodemailer/releases/tag/v9.1.0",
+          "text": "v9.1.0 发布",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/nodemailer/nodemailer/tree/efd6e29c10c6e0c25c57bd2f2a71302838235a4f",
+          "text": "固定发布源码",
+          "title": ""
+        },
+        {
+          "href": "https://xz.aliyun.com/news/92860",
+          "text": "先知社区线索",
+          "title": ""
+        }
+      ],
+      "sha256": "e0287fc991c64578704d142503b61c73015559aeb659934de86e88e719f03b06",
+      "pr8_code_tokens": null
+    },
+    {
+      "pr": 9,
+      "path": "Web安全/商业软件/Jellyfin/Jellyfin 多入口转码参数校验差异与FFmpeg参数注入（CVE-2026-35033）.md",
+      "source": "/tmp/vulwiki-publish-20261003/pr9/Web安全/商业软件/Jellyfin/Jellyfin 多入口转码参数校验差异与FFmpeg参数注入（CVE-2026-35033）.md",
+      "code_token_count": 38,
+      "pr8_snapshot_code_tokens_unchanged": null,
+      "empty_code_blocks": 0,
+      "active_html_candidate": false,
+      "links": [
+        {
+          "href": "https://www.sonarsource.com/blog/jellyfin-remote-code-execution/",
+          "text": "https://www.sonarsource.com/blog/jellyfin-remote-code-execution/",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/jellyfin/jellyfin/security/advisories/GHSA-jh22-fw8w-2v9x",
+          "text": "https://github.com/jellyfin/jellyfin/security/advisories/GHSA-jh22-fw8w-2v9x",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/jellyfin/jellyfin/commit/50dc37065b8d530e7dcebc9672dd07583b203582",
+          "text": "https://github.com/jellyfin/jellyfin/commit/50dc37065b8d530e7dcebc9672dd07583b203582",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/jellyfin/jellyfin/commit/50dc37065b8d530e7dcebc9672dd07583b203582",
+          "text": "固定提交 50dc370",
+          "title": ""
+        },
+        {
+          "href": "https://www.sonarsource.com/blog/jellyfin-remote-code-execution/",
+          "text": "Paul Gerste / Sonar，2026-06-02",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/jellyfin/jellyfin/security/advisories/GHSA-jh22-fw8w-2v9x",
+          "text": "Jellyfin 公告，2026-04-14",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/jellyfin/jellyfin/commit/50dc37065b8d530e7dcebc9672dd07583b203582",
+          "text": "2026-03-31 固定补丁",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/jellyfin/jellyfin/releases/tag/v10.11.7",
+          "text": "v10.11.7 发行页",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/jellyfin/jellyfin/commit/b2aa80ce5c1af2a4478d13b50c0961e11a6f5e6b",
+          "text": "对应固定提交",
+          "title": ""
+        }
+      ],
+      "sha256": "7eefb3057022bc4d8ee9ce3ff20e34ef0bfdcf88913b375c67577d8bd2c24899"
+    },
+    {
+      "pr": 9,
+      "path": "Web安全/安全设备/Nuclei/Goja TypedArray偏移复用与Nuclei扫描端代码执行（CVE-2026-76819）.md",
+      "source": "/tmp/vulwiki-publish-20261003/pr9/Web安全/安全设备/Nuclei/Goja TypedArray偏移复用与Nuclei扫描端代码执行（CVE-2026-76819）.md",
+      "code_token_count": 32,
+      "pr8_snapshot_code_tokens_unchanged": null,
+      "empty_code_blocks": 0,
+      "active_html_candidate": true,
+      "links": [
+        {
+          "href": "https://www.slcyber.io/research/out-of-bounds-out-of-sandbox-rce-goja",
+          "text": "https://www.slcyber.io/research/out-of-bounds-out-of-sandbox-rce-goja",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/dop251/goja/commit/7ac5d3034fc4331316e8c78777db856207a2e3d4",
+          "text": "https://github.com/dop251/goja/commit/7ac5d3034fc4331316e8c78777db856207a2e3d4",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/projectdiscovery/nuclei/security/advisories/GHSA-vxg7-f2jj-jmqm",
+          "text": "https://github.com/projectdiscovery/nuclei/security/advisories/GHSA-vxg7-f2jj-jmqm",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/dop251/goja/commit/7ac5d3034fc4331316e8c78777db856207a2e3d4",
+          "text": "Goja 固定修补",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/assetnote/goja-heap-oob/tree/4f67cda47394bb0e6bb7f79aebb14b468aab563a",
+          "text": "原创 PoC 固定树",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/projectdiscovery/nuclei/commit/1fe6025b966cbb95ed4d9f40abfb629b6cbd27b2",
+          "text": "合并提交 1fe6025",
+          "title": ""
+        },
+        {
+          "href": "https://www.slcyber.io/research/out-of-bounds-out-of-sandbox-rce-goja",
+          "text": "Dylan Pindur、Adam Kues，2026-09-07",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/projectdiscovery/nuclei/security/advisories/GHSA-vxg7-f2jj-jmqm",
+          "text": "ProjectDiscovery 公告，2026-07-16",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/dop251/goja/commit/7ac5d3034fc4331316e8c78777db856207a2e3d4",
+          "text": "Goja 修复",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/dop251/goja/blob/7ac5d3034fc4331316e8c78777db856207a2e3d4/LICENSE",
+          "text": "MIT LICENSE",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/assetnote/goja-heap-oob/commit/4f67cda47394bb0e6bb7f79aebb14b468aab563a",
+          "text": "原创代码固定提交，2026-06-29",
+          "title": ""
+        }
+      ],
+      "sha256": "354c410f62adac215dd7c67f437e52521c1fe5caa4df0f3d7a30319aec7ab66d"
+    },
+    {
+      "pr": 9,
+      "path": "Web安全/开发框架/Gogs/Gogs Rebase参数注入的最终修补与公开模块副作用（CVE-2026-52806）.md",
+      "source": "/tmp/vulwiki-publish-20261003/pr9/Web安全/开发框架/Gogs/Gogs Rebase参数注入的最终修补与公开模块副作用（CVE-2026-52806）.md",
+      "code_token_count": 19,
+      "pr8_snapshot_code_tokens_unchanged": null,
+      "empty_code_blocks": 0,
+      "active_html_candidate": false,
+      "links": [
+        {
+          "href": "https://www.rapid7.com/blog/post/ve-authenticated-rce-via-argument-injection-gogs-unfixed/",
+          "text": "https://www.rapid7.com/blog/post/ve-authenticated-rce-via-argument-injection-gogs-unfixed/",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/gogs/gogs/security/advisories/GHSA-qf6p-p7ww-cwr9",
+          "text": "https://github.com/gogs/gogs/security/advisories/GHSA-qf6p-p7ww-cwr9",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/gogs/gogs/commit/a9dbafbfd8e1020bacc626420238c01d75d03364",
+          "text": "https://github.com/gogs/gogs/commit/a9dbafbfd8e1020bacc626420238c01d75d03364",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/gogs/gogs/security/advisories/GHSA-qf6p-p7ww-cwr9",
+          "text": "维护者公告",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/gogs/gogs/blob/5dcb6c64bdf61e38dbdbb941c1d69789c560d0fb/internal/database/pull.go#L278-L300",
+          "text": "0.14.2 固定源码",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/gogs/gogs/pull/8301",
+          "text": "PR #8301",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/gogs/gogs/commit/a9dbafbfd8e1020bacc626420238c01d75d03364",
+          "text": "最终提交 a9dbafb",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/gogs/gogs/commit/9726ff23537636e1b3e858ab9888ddf1e37b8dc0",
+          "text": "9726ff23537636e1b3e858ab9888ddf1e37b8dc0",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/gogs/gogs/releases/tag/v0.14.3",
+          "text": "0.14.3 发行页",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/rapid7/metasploit-framework/blob/c74a80ff0a1fae4a0acbd7140c64fde608935c17/modules/exploits/multi/http/gogs_rebase_rce.rb",
+          "text": "Metasploit 原始模块",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/rapid7/metasploit-framework/blob/97388a00cd6db40089a38a2ea3b1a67dfa02c12d/modules/exploits/multi/http/gogs_rebase_rce.rb",
+          "text": "后续固定版本",
+          "title": ""
+        },
+        {
+          "href": "https://www.rapid7.com/blog/post/ve-authenticated-rce-via-argument-injection-gogs-unfixed/",
+          "text": "Jonah Burgess / Rapid7",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/gogs/gogs/security/advisories/GHSA-qf6p-p7ww-cwr9",
+          "text": "Gogs 公告，2026-06-19",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/gogs/gogs/commit/a9dbafbfd8e1020bacc626420238c01d75d03364",
+          "text": "最终主线修补",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/gogs/gogs/blob/a9dbafbfd8e1020bacc626420238c01d75d03364/LICENSE",
+          "text": "固定 MIT LICENSE",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/rapid7/metasploit-framework/pull/21515",
+          "text": "原创模块 PR #21515",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/rapid7/metasploit-framework/blob/c74a80ff0a1fae4a0acbd7140c64fde608935c17/LICENSE",
+          "text": "固定 BSD-3-Clause/第三方例外许可文件",
+          "title": ""
+        }
+      ],
+      "sha256": "f213a7b5e6926f801bcbcd38aebfdba4fb4bfddd8c6ef07970c9052ddcfdf7c3"
+    },
+    {
+      "pr": 9,
+      "path": "Web安全/开发框架/Lean/Lean超大字符串切片的语义错配与引用计数缺陷.md",
+      "source": "/tmp/vulwiki-publish-20261003/pr9/Web安全/开发框架/Lean/Lean超大字符串切片的语义错配与引用计数缺陷.md",
+      "code_token_count": 34,
+      "pr8_snapshot_code_tokens_unchanged": null,
+      "empty_code_blocks": 0,
+      "active_html_candidate": false,
+      "links": [
+        {
+          "href": "https://blog.trailofbits.com/2026/09/09/a-proof-of-fermats-last-theorem-that-fits-the-margin/",
+          "text": "https://blog.trailofbits.com/2026/09/09/a-proof-of-fermats-last-theorem-that-fits-the-margin/",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/leanprover/lean4/issues/14684",
+          "text": "https://github.com/leanprover/lean4/issues/14684",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/leanprover/lean4/commit/4c29de6f2cb93ffdabd2838c1eed6f55061bb605",
+          "text": "https://github.com/leanprover/lean4/commit/4c29de6f2cb93ffdabd2838c1eed6f55061bb605",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/leanprover/lean4/commit/f7f5b4cda9b33387b512b84ea179461881b12500",
+          "text": "https://github.com/leanprover/lean4/commit/f7f5b4cda9b33387b512b84ea179461881b12500",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/leanprover/lean4/issues/14684",
+          "text": "issue #14684",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/leanprover/lean4/blob/f3b06c705e6c85f5314019d5d3baab0fec5b580c/src/Init/Data/String/Basic.lean#L3012-L3022",
+          "text": "固定 Lean 定义",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/leanprover/lean4/blob/f3b06c705e6c85f5314019d5d3baab0fec5b580c/src/runtime/object.cpp#L2373-L2394",
+          "text": "原生实现",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/leanprover/lean4/commit/4c29de6f2cb93ffdabd2838c1eed6f55061bb605",
+          "text": "第一份补丁",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/leanprover/lean4/commit/f7f5b4cda9b33387b512b84ea179461881b12500",
+          "text": "第二份补丁",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/leanprover/lean4/releases/tag/v4.34.0-rc1",
+          "text": "4.34.0-rc1",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/leanprover/lean4/blob/3447a668783dbce1a8fdb97101dd067687b2b418/src/runtime/object.cpp#L2383-L2415",
+          "text": "该版本 runtime",
+          "title": ""
+        },
+        {
+          "href": "https://lean-lang.org/doc/reference/latest/ValidatingProofs/",
+          "text": "Lean 官方验证说明",
+          "title": ""
+        },
+        {
+          "href": "https://blog.trailofbits.com/2026/09/09/a-proof-of-fermats-last-theorem-that-fits-the-margin/",
+          "text": "Marc Ilunga / Trail of Bits，2026-09-09",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/leanprover/lean4/issues/14684",
+          "text": "原始 issue #14684",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/leanprover/lean4/commit/4c29de6f2cb93ffdabd2838c1eed6f55061bb605",
+          "text": "UAF 修补",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/leanprover/lean4/commit/f7f5b4cda9b33387b512b84ea179461881b12500",
+          "text": "语义修补",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/leanprover/lean4/blob/f7f5b4cda9b33387b512b84ea179461881b12500/LICENSE",
+          "text": "固定 Apache-2.0 LICENSE",
+          "title": ""
+        }
+      ],
+      "sha256": "8bcaf16cccbcec428cbec560eaabcac1f9623760f7831504dad63c612bcf67d1"
+    },
+    {
+      "pr": 9,
+      "path": "Web安全/开发框架/graphql-ruby/graphql-ruby 授权异常被误判成功的执行器差异（GHSA-j7xr-4g94-r9h3）.md",
+      "source": "/tmp/vulwiki-publish-20261003/pr9/Web安全/开发框架/graphql-ruby/graphql-ruby 授权异常被误判成功的执行器差异（GHSA-j7xr-4g94-r9h3）.md",
+      "code_token_count": 33,
+      "pr8_snapshot_code_tokens_unchanged": null,
+      "empty_code_blocks": 0,
+      "active_html_candidate": false,
+      "links": [
+        {
+          "href": "https://securitylab.github.com/advisories/GHSL-2026-152_graphql-ruby/",
+          "text": "https://securitylab.github.com/advisories/GHSL-2026-152_graphql-ruby/",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/rmosolgo/graphql-ruby/security/advisories/GHSA-j7xr-4g94-r9h3",
+          "text": "https://github.com/rmosolgo/graphql-ruby/security/advisories/GHSA-j7xr-4g94-r9h3",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/rmosolgo/graphql-ruby/commit/741e37959193b9afe2c6c578cea3ec431b5fda33",
+          "text": "https://github.com/rmosolgo/graphql-ruby/commit/741e37959193b9afe2c6c578cea3ec431b5fda33",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/rmosolgo/graphql-ruby/blob/8b9f621c196d9ed08aee5fa7451887b929e84673/lib/graphql/schema/resolver.rb",
+          "text": "修补前源码",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/rmosolgo/graphql-ruby/commit/741e37959193b9afe2c6c578cea3ec431b5fda33",
+          "text": "最终提交",
+          "title": ""
+        },
+        {
+          "href": "https://securitylab.github.com/advisories/GHSL-2026-152_graphql-ruby/",
+          "text": "Bas Alberts：GHSL-2026-152",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/rmosolgo/graphql-ruby/security/advisories/GHSA-j7xr-4g94-r9h3",
+          "text": "维护者公告 GHSA-j7xr-4g94-r9h3",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/rmosolgo/graphql-ruby/commit/741e37959193b9afe2c6c578cea3ec431b5fda33",
+          "text": "固定修补提交",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/rmosolgo/graphql-ruby/blob/9548947bee01d88450280a30cd80fe8776b17947/CHANGELOG.md",
+          "text": "2.6.6 固定版本 CHANGELOG",
+          "title": ""
+        }
+      ],
+      "sha256": "4fdedbfb0f741d478d49824aef6b5b9cd8ce9d5d8257a8172a45345c7dfc0e1c"
+    },
+    {
+      "pr": 9,
+      "path": "系统安全/Linux/Linux本地提权漏洞/Linux OVS共享页标记丢失与三处生命周期修复（CVE-2026-89487等）.md",
+      "source": "/tmp/vulwiki-publish-20261003/pr9/系统安全/Linux/Linux本地提权漏洞/Linux OVS共享页标记丢失与三处生命周期修复（CVE-2026-89487等）.md",
+      "code_token_count": 21,
+      "pr8_snapshot_code_tokens_unchanged": null,
+      "empty_code_blocks": 0,
+      "active_html_candidate": false,
+      "links": [
+        {
+          "href": "https://blog.doyensec.com/2026/09/17/ovs.html",
+          "text": "https://blog.doyensec.com/2026/09/17/ovs.html",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/torvalds/linux/commit/0dbc2398fca3bb33eda963849f865ddb1b3aa05e",
+          "text": "https://github.com/torvalds/linux/commit/0dbc2398fca3bb33eda963849f865ddb1b3aa05e",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/torvalds/linux/commit/f66bdb1cc0fcd227a062378f8be0b5873aa5600a",
+          "text": "https://github.com/torvalds/linux/commit/f66bdb1cc0fcd227a062378f8be0b5873aa5600a",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/torvalds/linux/commit/8ece906150128d5ec2462aabcc978c568433eca4",
+          "text": "https://github.com/torvalds/linux/commit/8ece906150128d5ec2462aabcc978c568433eca4",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/doyensec/ovs-pagecache-write/blob/0c4027ee205cde24863b8d1736dc7857f8ac6457/poc.c",
+          "text": "原创 PoC 的固定 `poc.c`",
+          "title": ""
+        },
+        {
+          "href": "https://blog.doyensec.com/2026/09/17/ovs.html",
+          "text": "Norbert Szetei / Doyensec，2026-09-17",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/doyensec/ovs-pagecache-write/tree/0c4027ee205cde24863b8d1736dc7857f8ac6457",
+          "text": "固定原创 PoC",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/CVEProject/cvelistV5/blob/6ae048f17d849e2e01681d2c6c5ab8798da28c9c/cves/2026/89xxx/CVE-2026-89487.json",
+          "text": "89487 固定 CNA",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/CVEProject/cvelistV5/blob/6ae048f17d849e2e01681d2c6c5ab8798da28c9c/cves/2026/80xxx/CVE-2026-80977.json",
+          "text": "80977 固定 CNA",
+          "title": ""
+        },
+        {
+          "href": "https://github.com/CVEProject/cvelistV5/blob/3b1fafb2d4e4824cd14518d85e29d1e2493c3328/cves/2026/90xxx/CVE-2026-90049.json",
+          "text": "90049 固定 CNA",
+          "title": ""
+        },
+        {
+          "href": "https://kernel.googlesource.com/pub/scm/linux/security/vulns/%2B/06447456a1589f63912de8a468e1313738ac8243/cve/published/2026/CVE-2026-89487.mbox",
+          "text": "Linux CVE 公告固定镜像",
+          "title": ""
+        }
+      ],
+      "sha256": "0d75a9b468a57b888910a563a69409afa2161429582560c1b1e59b645e7f8833"
+    }
+  ]
+}

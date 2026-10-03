@@ -1,0 +1,10 @@
+{
+  "path": "Web安全/网络设备/D-Link/CVE-2018-17066复现（D-Link命令注入漏洞）.md",
+  "line": 336,
+  "cache_file": "/tmp/vulwiki-source-dlink2018-cnsec-excerpts.txt",
+  "cache_sha256": "551029486047a63af6aab77c592ba7651e74245974857d408e57253d039e734c",
+  "source_text": "ENTRY(\"lan_ipaddr\", nvram_set, \"192.168.126.130\") \\\nENTRY(\"lan_bipaddr\", nvram_set, \"192.168.126.255\") \\",
+  "source_context_before": "2.修改config.h中启动web页面的ip地址",
+  "source_context_after": "接下来成功编译：",
+  "evidence": "本地缓存文件：/tmp/vulwiki-source-dlink2018-cnsec-excerpts.txt；文件 SHA256 551029486047a63af6aab77c592ba7651e74245974857d408e57253d039e734c。source_text（逐字，cache excerpt lines 174-175）：\nENTRY(\"lan_ipaddr\", nvram_set, \"192.168.126.130\") \\\nENTRY(\"lan_bipaddr\", nvram_set, \"192.168.126.255\") \\\n对应前句：“2.修改config.h中启动web页面的ip地址”；对应后句：“接下来成功编译：”。本地同一位置为“2.修改config.h中启动web页面的ip地址”后紧接空围栏，再到“接下来成功编译：”，顺序、语义和唯一配置键匹配。这说明基线 line 271 / occurrence 11 的 unknown 是该处遗漏映射（不是截图转录）；其他 unknown 项不因此改变。建议将其从 unknown 改为可恢复。"
+}

@@ -2,12 +2,12 @@
   "base_commit": "8f2a9e14575928bb5f086902c786da66f4a65aa9",
   "new_articles": 43,
   "append_only_existing_articles": 2,
-  "unit_tests_passed": 52,
-  "documents": 5697,
+  "unit_tests_passed": 65,
+  "documents": 5709,
   "errors": 0,
   "fatal_issues": 0,
   "new_quality_debt": 0,
-  "historical_warnings": 5196,
+  "historical_warnings": 5098,
   "baseline_modified": false,
   "generated_index_differences": [],
   "article_render_checks": [
@@ -544,7 +544,7 @@
     {
       "path": "系统安全/Linux/【已复现】Linux 本地提权漏洞CVE-2025-6018、CVE-2025-6019.md",
       "render_scope": "metadata and independent editorial insertions; original body preserved",
-      "sha256": "18f4150040c785d58741586bea545d167c0ab7da6aa5025f5da3897fb7cd4dba",
+      "sha256": "cf9172209283d5f751da89577b40d583dcff712dac0cd42afd58532112bca601",
       "code_elements": 0,
       "fenced_blocks": 0,
       "code_text_matches": true,
@@ -933,5 +933,74 @@
     "body_operation": "one independent editorial insertion; original body exact restoration verified",
     "original_body_unchanged": true,
     "inserted_note": "\n## 2026-10-03 编号归属更正\n\n[Next.js 官方 GHSA-fr5h-rqp8-mj6g](https://github.com/vercel/next.js/security/advisories/GHSA-fr5h-rqp8-mj6g)明确将 CVE-2024-34351 归于 Server Actions：影响范围为 >=13.4 且 <14.1.1，需自托管、使用 Server Actions，并由 Action 重定向到以 `/` 开头的相对路径；请求的 Host 参与该风险。官方修复为14.1.1。\n\n下文实际请求的是 `/_next/image`，其HTTP/DNS回连只证明图片优化器发起取图，不能用来验证该 Server Actions 编号，也不能单独证明越过图片域名许可或内网边界。因此本次将该编号从本篇确认主编号调整为比较/引用编号，文档改列 analysis；没有为图片行为猜配另一个CVE。正文题名和技术样例仍作为原始归档保留，不改变旧路径、请求、模板标识符或公开值。\n\n本次仅核对官方通报与已存正文，未运行模板、请求DNSlog/目标或验证原作者的成功声明。后文旧版本/编号解释须按本节边界阅读。\n"
-  }
+  },
+  "integration_base_commit": "cfb19294812b1435a57e866a87dd18e2ff3ebec3",
+  "master_sync_fidelity": [
+    {
+      "target": "系统安全/Linux/不容小觑的威胁： Linux提权漏洞，轻松利用却要修复 CVE-2025-32463.md",
+      "current_master_sha256": "6cb96fdee2daf024b1478ea217052b2746a9934dec1bc2d324b907ffa8dc2b4e",
+      "integrated_sha256": "b3ef97f4cb51a5b76a7483184d8539ee1aaef003449156ee148d039133e009b3",
+      "master_body_preserved": true
+    },
+    {
+      "target": "Web安全/其他软件/杂项/CVE-2025-32462&CVE-2025-32463.md",
+      "current_master_sha256": "a88cfa5c6dc4dfc2c1e33e05e6ae26308a40cc21c2094b6a782a1fedb93ec33c",
+      "integrated_sha256": "059f6709c5571a8277066d70b1d55f5ff1c3ddbc9323b26e52b66369a98d3948",
+      "master_body_preserved": true
+    },
+    {
+      "target": "系统安全/Linux/Linux-DirtyPipe-权限提升漏洞-CVE-2022-0847.md",
+      "current_master_sha256": "3a74c92ee7b03cbcfa0bfcbf42ba569014e23ee657f69da94f32308d2f15cab0",
+      "integrated_sha256": "346623caee022f58d1f9fd937f91da55e283df4f4e1731cb4819fd1c73eb3c28",
+      "master_body_preserved": true
+    },
+    {
+      "target": "系统安全/Linux/Linux-Polkit-权限提升漏洞-CVE-2021-4034.md",
+      "current_master_sha256": "6cc95862b97e592e4aee58db3dbcd37968f622e0203637d505c37c05ea5f7a53",
+      "integrated_sha256": "91d4579609879e1b2515cdbba9f120045751fc1129555af067704cca0f9c290c",
+      "master_body_preserved": true
+    },
+    {
+      "target": "系统安全/Linux/Linux-sudo-权限提升漏洞-CVE-2021-3156.md",
+      "current_master_sha256": "81b103014743aea5afe26f842789ac57a0756cde1e301db82642750b7fece14a",
+      "integrated_sha256": "8e6b0851d020035a92cdaffa6e06e86c4371e721db03255b2a1b67467d3cb889",
+      "master_body_preserved": true
+    },
+    {
+      "target": "系统安全/Linux/Linux本地提权漏洞/（CVE-2016-5195）脏牛Linux 本地提权.md",
+      "current_master_sha256": "398c9380e6a1ee3d1bd12bfa1a6de64347039b7a246cd7186fc44fa5640ae0ff",
+      "integrated_sha256": "db5741b734fa0d81659588e7e3459ce56fa06de1f630e9c73173efa71fe25262",
+      "master_body_preserved": true
+    },
+    {
+      "target": "系统安全/Linux/Linux提权漏洞CVE-2025-27591.md",
+      "current_master_sha256": "2fc70b479588b7c8b8657dd96b35ef2cf3760eca216ee42cca69866668f5803c",
+      "integrated_sha256": "07fbdfc2a5ce4927ee74bee6bae2a8d30f718b7b67785d5ae3cb0a9a2622a9f3",
+      "master_body_preserved": true
+    },
+    {
+      "target": "系统安全/Linux/【已复现】Linux 本地提权漏洞CVE-2025-6018、CVE-2025-6019.md",
+      "current_master_sha256": "7ccc469e516658caca2211dae40de7a1300e9807722add745d36aefc74564758",
+      "integrated_sha256": "cf9172209283d5f751da89577b40d583dcff712dac0cd42afd58532112bca601",
+      "master_body_preserved": true
+    },
+    {
+      "target": "系统安全/Linux/Linux-Copy-Fail-本地提权漏洞-CVE-2026-31431.md",
+      "current_master_sha256": "1b49070286f8c189333c348aa186f73b8654307f51f6753ba969ccbcff88445b",
+      "integrated_sha256": "0ed85636003c85f4ede4b65bf6460583408d70668b133414863205c5cb357025",
+      "master_body_preserved": true
+    },
+    {
+      "target": "系统安全/Linux/Linux-kernel-xfrm-ESP-Dirty-Frag-本地提权漏洞-CVE-2026-43284.md",
+      "current_master_sha256": "e11d3b12e7b8976c0390e9285401d3d246f6d428e489452c19a93a3f1162abec",
+      "integrated_sha256": "04cf8d5f1d8b6cc576c4521114398540d41d7ec72d9c28fc2d3f3b3c6ccca88c",
+      "master_body_preserved": true
+    },
+    {
+      "target": "系统安全/Linux/【成功复现】Linux Kernel XFS Reflink本地权限提升漏洞CVE-2026-64600.md",
+      "current_master_sha256": "c5835b04d5d0e94b64271b1963020bba50e2c807bb82d935ca06d1f43cd819d0",
+      "integrated_sha256": "fb620b7697dc224ac524aea82901d422abd0a8a742f7f8fc77098bc345238030",
+      "master_body_preserved": true
+    }
+  ]
 }
