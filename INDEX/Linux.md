@@ -118,6 +118,10 @@
 
 - [【高危漏洞预警】Linux内核IP6隧道漏洞CVE-2026-23003](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/%E3%80%90%E9%AB%98%E5%8D%B1%E6%BC%8F%E6%B4%9E%E9%A2%84%E8%AD%A6%E3%80%91Linux%E5%86%85%E6%A0%B8IP6%E9%9A%A7%E9%81%93%E6%BC%8F%E6%B4%9ECVE-2026-23003.md) [vulnerability; not-reproduced; needs-review]
 
+## Linux kernel / Open vSwitch
+
+- [Linux OVS共享页标记丢失与三处生命周期修复（CVE-2026-89487等）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/Linux%E6%9C%AC%E5%9C%B0%E6%8F%90%E6%9D%83%E6%BC%8F%E6%B4%9E/Linux%20OVS%E5%85%B1%E4%BA%AB%E9%A1%B5%E6%A0%87%E8%AE%B0%E4%B8%A2%E5%A4%B1%E4%B8%8E%E4%B8%89%E5%A4%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E4%BF%AE%E5%A4%8D%EF%BC%88CVE-2026-89487%E7%AD%89%EF%BC%89.md) [analysis; not-reproduced; active]
+
 ## Linux ksmbd
 
 - [CVE-2022-47939：Linux Kernel ksmbd UAF远程代码执行漏洞通告](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/CVE-2022-47939%EF%BC%9ALinux%20Kernel%20ksmbd%20UAF%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E%E9%80%9A%E5%91%8A.md) [advisory; not-reproduced; needs-review]

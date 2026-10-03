@@ -1,0 +1,168 @@
+{
+  "review_date": "2026-10-03",
+  "baseline": "8f2a9e14575928bb5f086902c786da66f4a65aa9",
+  "mode": "source-authenticity-and-static-review",
+  "scope": "仅列明源及固定文件，不执行候选代码或安装候选依赖，不改写原值",
+  "entries": [
+    {
+      "topic": "Jellyfin",
+      "commits": [
+        "50dc37065b8d530e7dcebc9672dd07583b203582",
+        "b2aa80ce5c1af2a4478d13b50c0961e11a6f5e6b"
+      ],
+      "reviewed": [
+        "五个修补源码文件与后续调用修正",
+        "nuget.config",
+        "Directory.Build.props",
+        "Directory.Packages.props",
+        "ci-tests.yml",
+        "commands.yml"
+      ],
+      "findings": [
+        "入口正则不能取代下游double.TryParse失败返回null",
+        "研究与公告对媒体ID未认证获取条件存在差异",
+        "原文读写文件、网络目的地、doublemapper覆盖为有状态攻击能力"
+      ],
+      "limits": [
+        "没有审jellyfin-triage-script及传递依赖",
+        "公告中的自包含Docker PoC仅称可索取，未取得"
+      ],
+      "article_license": "Sonar All rights reserved；原创中文归纳",
+      "code_license": "Jellyfin GPL v2，未搬完整源码"
+    },
+    {
+      "topic": "graphql-ruby",
+      "commits": [
+        "8b9f621c196d9ed08aee5fa7451887b929e84673",
+        "741e37959193b9afe2c6c578cea3ec431b5fda33",
+        "9548947bee01d88450280a30cd80fe8776b17947"
+      ],
+      "reviewed": [
+        "引入及修补diff",
+        "resolver.rb",
+        "resolver_spec.rb",
+        "graphql.gemspec",
+        "Gemfile",
+        "ci.yaml",
+        "pronto.yaml",
+        "website.yaml"
+      ],
+      "findings": [
+        "只涉及Execution::Next及抛UnauthorizedError路径",
+        "替代值回归测试需保留",
+        "文档工作流显式上传Algolia/GitHub Pages，pronto写审查结果，不当作隐蔽外传"
+      ],
+      "limits": [
+        "Rake任务与传递依赖未全审"
+      ],
+      "article_license": "网页许可未确认；不以github/securitylab根MIT自动推断网页可转载",
+      "code_license": "MIT-LICENSE，Copyright 2015 Robert Mosolgo"
+    },
+    {
+      "topic": "Goja/Nuclei",
+      "commits": [
+        "7ac5d3034fc4331316e8c78777db856207a2e3d4",
+        "1fe6025b966cbb95ed4d9f40abfb629b6cbd27b2",
+        "4f67cda47394bb0e6bb7f79aebb14b468aab563a"
+      ],
+      "reviewed": [
+        "Goja两文件完整修补",
+        "原创PoC完整文本树：README.md、demo-harness/exploit.js、main.go、go.mod、go.sum、两个run-docker.sh、nuclei/exploit.yaml"
+      ],
+      "findings": [
+        "固定演示id > /tmp/x",
+        "浮动Docker标签及可写/app挂载",
+        "BigUint64Array长度1是一元素8字节",
+        "3.10.0修复与3.11.0模板签名分开"
+      ],
+      "limits": [
+        "没有工作流",
+        "镜像/传递依赖未审"
+      ],
+      "article_license": "文章及独立PoC无明确再许可；原创中文归纳",
+      "code_license": "Goja MIT；仅两行必要diff引用"
+    },
+    {
+      "topic": "Linux OVS",
+      "commits": [
+        "0dbc2398fca3bb33eda963849f865ddb1b3aa05e",
+        "f66bdb1cc0fcd227a062378f8be0b5873aa5600a",
+        "8ece906150128d5ec2462aabcc978c568433eca4",
+        "0c4027ee205cde24863b8d1736dc7857f8ac6457"
+      ],
+      "reviewed": [
+        "三份上游完整diff",
+        "PoC固定树全部文本README.md、poc.c、shell.sh",
+        "三份固定Linux CNA记录"
+      ],
+      "findings": [
+        "当前PoC为RECIRC→OUTPUT共享shinfo变体",
+        "脚本更改setuid页缓存并执行、创建命名空间设备XFRM与后台进程",
+        "90049部分分支修复晚一个小版本",
+        "CNA 90049另述特定来宾场景，不归并为纯本地账户前提"
+      ],
+      "limits": [
+        "预编译poc为1075768字节，未分析二进制或核源码对应关系",
+        "三个lore链接403，改读官方固定镜像及CNA/补丁",
+        "无工作流或依赖安装清单"
+      ],
+      "article_license": "Doyensec文章与PoC无明确再许可；原创中文归纳",
+      "code_license": "不转载完整代码"
+    },
+    {
+      "topic": "Lean",
+      "commits": [
+        "f3b06c705e6c85f5314019d5d3baab0fec5b580c",
+        "4c29de6f2cb93ffdabd2838c1eed6f55061bb605",
+        "f7f5b4cda9b33387b512b84ea179461881b12500",
+        "3447a668783dbce1a8fdb97101dd067687b2b418"
+      ],
+      "reviewed": [
+        "原始函数定义和runtime",
+        "两份补丁全部diff",
+        "extract_uaf.lean、init.sh、expected",
+        "新增strings测试",
+        "rc1 runtime"
+      ],
+      "findings": [
+        "引用计数和语义分两次修补",
+        "native_decide扩大可信边界，不是纯内核健全性反例",
+        "init.sh只有TEST_ARGS=( A )，选定测试未见无关出网/驻留"
+      ],
+      "limits": [
+        "整个Lean构建系统和传递依赖未审",
+        "无对应CVE证据，不制造编号"
+      ],
+      "article_license": "Trail of Bits未见开放再许可；原创中文归纳",
+      "code_license": "Lean Apache-2.0"
+    },
+    {
+      "topic": "Gogs",
+      "commits": [
+        "5dcb6c64bdf61e38dbdbb941c1d69789c560d0fb",
+        "a9dbafbfd8e1020bacc626420238c01d75d03364",
+        "9726ff23537636e1b3e858ab9888ddf1e37b8dc0",
+        "c74a80ff0a1fae4a0acbd7140c64fde608935c17",
+        "97388a00cd6db40089a38a2ea3b1a67dfa02c12d"
+      ],
+      "reviewed": [
+        "Merge相关完整源码及最终diff",
+        "原作者761行模块",
+        "模块后续两次差异及原始PR文件清单"
+      ],
+      "findings": [
+        "最终diff未实现PR文字的拒绝-开头分支建议，实际加--end-of-options并迁移API",
+        "模块创建持久token且verbose可输出",
+        "existing_repo不恢复rebase设置/缓存状态",
+        "clone凭据落入临时remote配置",
+        "Base64是公开ref限制规避设计，非仅凭编码判恶意"
+      ],
+      "limits": [
+        "Metasploit全框架、payload、插件、传递依赖未审",
+        "两个后续提交未改上述副作用"
+      ],
+      "article_license": "Rapid7博客未核到开放再许可；原创中文归纳",
+      "code_license": "Gogs MIT；MSF BSD-3-Clause根许可及第三方例外，未搬模块"
+    }
+  ]
+}

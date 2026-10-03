@@ -128,6 +128,8 @@ python scripts/wiki.py search CloudStack
 
 ## Change Log
 
+* 2026-10-03 第二轮补充6篇英文原始研究的中文技术综述：Jellyfin、graphql-ruby、Goja/Nuclei、Linux OVS、Lean、Gogs；核对来源、固定补丁、适用条件与代码副作用，详见[覆盖与取舍记录](docs/ENGLISH-RESEARCH-UPDATE-20261003.md)。
+
 * 2026-10-03 完成全库元数据与索引标准化复核：修复正文误改，27 篇由隔离改为带提醒保留，统一目录与检索的收录状态；详见[PR #4 复核记录](docs/REVIEW-PR4-20261002.md)。
 
 * 2026-10-02 复核 OA 候选分支 102 篇：修订收录 58 篇，丢弃 8 篇确认重复稿，另 36 篇因公开依据不足暂不收录；修正接口、参数、影响前提及 Markdown，补齐来源和产品/CVE/指纹索引。本批完成公开资料静态核对，未作本地漏洞复现。
