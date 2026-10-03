@@ -158,6 +158,10 @@
 
 - [Claude Code 30分钟挖出Vim用了三十年的0Day，收到陌生文件先别急着打开](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/Claude%20Code/Claude%20Code%2030%E5%88%86%E9%92%9F%E6%8C%96%E5%87%BAVim%E7%94%A8%E4%BA%86%E4%B8%89%E5%8D%81%E5%B9%B4%E7%9A%840Day%EF%BC%8C%E6%94%B6%E5%88%B0%E9%99%8C%E7%94%9F%E6%96%87%E4%BB%B6%E5%85%88%E5%88%AB%E6%80%A5%E7%9D%80%E6%89%93%E5%BC%80.md) [advisory; not-reproduced; needs-review]
 
+## chatgpt-on-wechat
+
+- [chatgpt-on-wechat存在身份验证漏洞漏洞(CVE-2026-6129)](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/chatgpt-on-wechat/chatgpt-on-wechat%E5%AD%98%E5%9C%A8%E8%BA%AB%E4%BB%BD%E9%AA%8C%E8%AF%81%E6%BC%8F%E6%B4%9E%E6%BC%8F%E6%B4%9E%28CVE-2026-6129%29.md) [advisory; not-reproduced; needs-review]
+
 ## enclave-vm
 
 - [CVE-2026-22686：AI代理沙箱的完美逃逸](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/AI%E7%BB%BC%E5%90%88/CVE-2026-22686%EF%BC%9AAI%E4%BB%A3%E7%90%86%E6%B2%99%E7%AE%B1%E7%9A%84%E5%AE%8C%E7%BE%8E%E9%80%83%E9%80%B8.md) [analysis; not-reproduced; needs-review]

@@ -1,0 +1,196 @@
+{
+  "scope": "Nine final ledger entries: eight insertions/replacements around empty-fence findings and one Plesk stale-status sentence correction.",
+  "overall": "PASS",
+  "failures": [],
+  "dlink": {
+    "cache_path": "/tmp/vulwiki-source-dlink2018-cnsec-excerpts.txt",
+    "cache_sha256_computed": "551029486047a63af6aab77c592ba7651e74245974857d408e57253d039e734c",
+    "cache_sha256_expected": "551029486047a63af6aab77c592ba7651e74245974857d408e57253d039e734c",
+    "cache_sha_matches_expected": true,
+    "source_text": "ENTRY(\"lan_ipaddr\", nvram_set, \"192.168.126.130\") \\\nENTRY(\"lan_bipaddr\", nvram_set, \"192.168.126.255\") \\",
+    "fenced_payload_without_terminal_lf": "ENTRY(\"lan_ipaddr\", nvram_set, \"192.168.126.130\") \\\nENTRY(\"lan_bipaddr\", nvram_set, \"192.168.126.255\") \\",
+    "fenced_payload_has_terminal_lf_before_close": true,
+    "marked_extraction_note": "The Markdown fenced content is source_text followed by one terminal LF before the closing fence; parsers may retain or strip that final LF.",
+    "old_closing_fence_two_spaces_preserved": true
+  },
+  "plesk_evidence": {
+    "path": "/tmp/vulwiki-followup-review-20261003/root-plesk-encoding-lines.json",
+    "archive_sha256_recorded": "6584012de32580f0f2468a4626f667d3098ec24bbf9110e04da67047575f9c27",
+    "rows": 55,
+    "exact_current_match_count": 55,
+    "restored_rows_present_in_final_article": true
+  },
+  "articles": [
+    {
+      "path": "Web安全/CMS内容/Seacms/SeaCMS admin_files.php CVE-2024-42599分析.md",
+      "before_sha256_recorded": "1dffc82e55508f7294b0ecd31930b9333d3e6884a4b33ae005639f52db350558",
+      "before_sha256_recomputed": "1dffc82e55508f7294b0ecd31930b9333d3e6884a4b33ae005639f52db350558",
+      "final_sha256_recorded": "83bfb8c3c80d104b18edcdf45e7f475b76c433c7a37712ec806db0e62f090855",
+      "final_sha256_recomputed": "83bfb8c3c80d104b18edcdf45e7f475b76c433c7a37712ec806db0e62f090855",
+      "actual_worktree_sha256": "83bfb8c3c80d104b18edcdf45e7f475b76c433c7a37712ec806db0e62f090855",
+      "reconstructed_equals_actual": true,
+      "inverse_round_trip": true,
+      "operations": [
+        {
+          "reason": "point-of-use gap note; retain empty fence bytes",
+          "offset": 5008,
+          "old_text_exact": true,
+          "new_text_inserted_or_replacement_exact": true
+        }
+      ],
+      "protected_content_check": "note is outside the retained empty-fence/source span; reversing the operation reproduces every original Markdown byte, including code/HTML/explanations/images/URLs/public values"
+    },
+    {
+      "path": "Web安全/开发框架/Java/CVE-2022-41853 分析：通过 Java 反序列化和远程代码库攻击使用静态函数获取 RCE.md",
+      "before_sha256_recorded": "990088cb0e18d6fa8106a17f8753769f86db01229fc4675a07ef78d1a5d532c5",
+      "before_sha256_recomputed": "990088cb0e18d6fa8106a17f8753769f86db01229fc4675a07ef78d1a5d532c5",
+      "final_sha256_recorded": "86d11ce3cfd098ee5299282899585e239392dd587a16bd3475f111734d09569b",
+      "final_sha256_recomputed": "86d11ce3cfd098ee5299282899585e239392dd587a16bd3475f111734d09569b",
+      "actual_worktree_sha256": "86d11ce3cfd098ee5299282899585e239392dd587a16bd3475f111734d09569b",
+      "reconstructed_equals_actual": true,
+      "inverse_round_trip": true,
+      "operations": [
+        {
+          "reason": "point-of-use gap note; retain empty fence bytes",
+          "offset": 3651,
+          "old_text_exact": true,
+          "new_text_inserted_or_replacement_exact": true
+        }
+      ],
+      "protected_content_check": "note is outside the retained empty-fence/source span; reversing the operation reproduces every original Markdown byte, including code/HTML/explanations/images/URLs/public values"
+    },
+    {
+      "path": "Web安全/开发框架/Spring Boot/SpringDataMongoDBSpEL表达式注入漏洞.md",
+      "before_sha256_recorded": "0a9a1e49c65f3257db2cc86e042a2c1bb3a3633758030c4730baa4ae8d950b15",
+      "before_sha256_recomputed": "0a9a1e49c65f3257db2cc86e042a2c1bb3a3633758030c4730baa4ae8d950b15",
+      "final_sha256_recorded": "4cd7d628998b43c56545b5d586353a416014d274a7f1902b60c8326523928ed8",
+      "final_sha256_recomputed": "4cd7d628998b43c56545b5d586353a416014d274a7f1902b60c8326523928ed8",
+      "actual_worktree_sha256": "4cd7d628998b43c56545b5d586353a416014d274a7f1902b60c8326523928ed8",
+      "reconstructed_equals_actual": true,
+      "inverse_round_trip": true,
+      "operations": [
+        {
+          "reason": "point-of-use gap note; retain empty fence bytes",
+          "offset": 1505,
+          "old_text_exact": true,
+          "new_text_inserted_or_replacement_exact": true
+        }
+      ],
+      "protected_content_check": "note is outside the retained empty-fence/source span; reversing the operation reproduces every original Markdown byte, including code/HTML/explanations/images/URLs/public values"
+    },
+    {
+      "path": "Web安全/网络设备/D-Link/CVE-2018-17066复现（D-Link命令注入漏洞）.md",
+      "before_sha256_recorded": "fabfced58892b5b7f029685ffd7c0a194c99aaccc91f14b2ce6a5e1ba4fde9c7",
+      "before_sha256_recomputed": "fabfced58892b5b7f029685ffd7c0a194c99aaccc91f14b2ce6a5e1ba4fde9c7",
+      "final_sha256_recorded": "5f2e9e468ef63f54ee11789607b5a504b88b75f42011b4c892ac1549b68aed32",
+      "final_sha256_recomputed": "5f2e9e468ef63f54ee11789607b5a504b88b75f42011b4c892ac1549b68aed32",
+      "actual_worktree_sha256": "5f2e9e468ef63f54ee11789607b5a504b88b75f42011b4c892ac1549b68aed32",
+      "reconstructed_equals_actual": true,
+      "inverse_round_trip": true,
+      "operations": [
+        {
+          "reason": "exact D-Link ENTRY block from saved source excerpt; closing fence whitespace retained",
+          "offset": 9311,
+          "old_text_exact": true,
+          "new_text_inserted_or_replacement_exact": true
+        }
+      ],
+      "protected_content_check": "only the previously empty fence was replaced; all other Markdown bytes recover exactly; fence closing two spaces retained"
+    },
+    {
+      "path": "Web安全/CMS内容/Grav CMS/Grav CMS 组合拳漏洞 CVE-2026-42613&CVE-2026-42607复现&研究.md",
+      "before_sha256_recorded": "6a997d090cb47916473c700e6d7d918f66949bfd9d51d7a3e4cd309d495142fe",
+      "before_sha256_recomputed": "6a997d090cb47916473c700e6d7d918f66949bfd9d51d7a3e4cd309d495142fe",
+      "final_sha256_recorded": "62674cf36b152244521eb02f52e2e49357845651d2e5488a376d253680ef1faa",
+      "final_sha256_recomputed": "62674cf36b152244521eb02f52e2e49357845651d2e5488a376d253680ef1faa",
+      "actual_worktree_sha256": "62674cf36b152244521eb02f52e2e49357845651d2e5488a376d253680ef1faa",
+      "reconstructed_equals_actual": true,
+      "inverse_round_trip": true,
+      "operations": [
+        {
+          "reason": "point-of-use gap note; retain entire old block",
+          "offset": 2385,
+          "old_text_exact": true,
+          "new_text_inserted_or_replacement_exact": true
+        }
+      ],
+      "protected_content_check": "note is outside the retained empty-fence/source span; reversing the operation reproduces every original Markdown byte, including code/HTML/explanations/images/URLs/public values"
+    },
+    {
+      "path": "Web安全/CMS内容/WordPress/Wordpress IMPress for IDX Broker 低权限xss漏洞.md",
+      "before_sha256_recorded": "29a5ba9585d54bc1f6503c26f88601dc92e42d74e76f99c3acae84093820b2ed",
+      "before_sha256_recomputed": "29a5ba9585d54bc1f6503c26f88601dc92e42d74e76f99c3acae84093820b2ed",
+      "final_sha256_recorded": "cda9c9768fc8b5b104d7faec376a9e0374854910892cfb11d1cfaf6fc5530805",
+      "final_sha256_recomputed": "cda9c9768fc8b5b104d7faec376a9e0374854910892cfb11d1cfaf6fc5530805",
+      "actual_worktree_sha256": "cda9c9768fc8b5b104d7faec376a9e0374854910892cfb11d1cfaf6fc5530805",
+      "reconstructed_equals_actual": true,
+      "inverse_round_trip": true,
+      "operations": [
+        {
+          "reason": "point-of-use gap note; retain entire old block",
+          "offset": 2514,
+          "old_text_exact": true,
+          "new_text_inserted_or_replacement_exact": true
+        }
+      ],
+      "protected_content_check": "note is outside the retained empty-fence/source span; reversing the operation reproduces every original Markdown byte, including code/HTML/explanations/images/URLs/public values"
+    },
+    {
+      "path": "Web安全/开发框架/lodash/lodash库原型污染漏洞（CVE-2019-10744）.md",
+      "before_sha256_recorded": "13246b325e88a97b79b43b895d514ac4aa5891709fdedbf247b86d50d7814621",
+      "before_sha256_recomputed": "13246b325e88a97b79b43b895d514ac4aa5891709fdedbf247b86d50d7814621",
+      "final_sha256_recorded": "b08fa8e51141d04e3466da3d11c093b90f55035e232fda0fb9caf14b028d6d1a",
+      "final_sha256_recomputed": "b08fa8e51141d04e3466da3d11c093b90f55035e232fda0fb9caf14b028d6d1a",
+      "actual_worktree_sha256": "b08fa8e51141d04e3466da3d11c093b90f55035e232fda0fb9caf14b028d6d1a",
+      "reconstructed_equals_actual": true,
+      "inverse_round_trip": true,
+      "operations": [
+        {
+          "reason": "point-of-use gap note; retain entire old block",
+          "offset": 3032,
+          "old_text_exact": true,
+          "new_text_inserted_or_replacement_exact": true
+        }
+      ],
+      "protected_content_check": "note is outside the retained empty-fence/source span; reversing the operation reproduces every original Markdown byte, including code/HTML/explanations/images/URLs/public values"
+    },
+    {
+      "path": "Web安全/网络设备/D-Link/【技术分享】CVE-2019-10999 Dlink IP 摄像头缓冲区溢出.md",
+      "before_sha256_recorded": "87bc074e2a27d19fc8f8dbc094aacc5e2bf8df68858c52b2e4b482131b767033",
+      "before_sha256_recomputed": "87bc074e2a27d19fc8f8dbc094aacc5e2bf8df68858c52b2e4b482131b767033",
+      "final_sha256_recorded": "3b9401ca8991b0366d157ea737b4ce979503f4677dc38a2649449cb0b6b64d0f",
+      "final_sha256_recomputed": "3b9401ca8991b0366d157ea737b4ce979503f4677dc38a2649449cb0b6b64d0f",
+      "actual_worktree_sha256": "3b9401ca8991b0366d157ea737b4ce979503f4677dc38a2649449cb0b6b64d0f",
+      "reconstructed_equals_actual": true,
+      "inverse_round_trip": true,
+      "operations": [
+        {
+          "reason": "point-of-use gap note; retain entire old block",
+          "offset": 11261,
+          "old_text_exact": true,
+          "new_text_inserted_or_replacement_exact": true
+        }
+      ],
+      "protected_content_check": "note is outside the retained empty-fence/source span; reversing the operation reproduces every original Markdown byte, including code/HTML/explanations/images/URLs/public values"
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2025-54336（CVSS评分9.8）：Plesk Obsidian关键漏洞使服务器面临完全被控风险.md",
+      "before_sha256_recorded": "7aa126cb10d89e942861553a63d603b084a62b425d51bdbd25cd281993844634",
+      "before_sha256_recomputed": "7aa126cb10d89e942861553a63d603b084a62b425d51bdbd25cd281993844634",
+      "final_sha256_recorded": "826f41454d03f7fa6f5eb19ccf7ea1614ad46cc621c18a57e29be56497886c36",
+      "final_sha256_recomputed": "826f41454d03f7fa6f5eb19ccf7ea1614ad46cc621c18a57e29be56497886c36",
+      "actual_worktree_sha256": "826f41454d03f7fa6f5eb19ccf7ea1614ad46cc621c18a57e29be56497886c36",
+      "reconstructed_equals_actual": true,
+      "inverse_round_trip": true,
+      "operations": [
+        {
+          "reason": "correct stale recovery status using independently verified 55/55 reversible lines",
+          "offset": 1872,
+          "old_text_exact": true,
+          "new_text_inserted_or_replacement_exact": true
+        }
+      ],
+      "protected_content_check": "only stale editorial evidence sentence changed; all other original bytes recover exactly; 55/55 evidence rows say exact_current_match and restored strings occur in final text"
+    }
+  ]
+}

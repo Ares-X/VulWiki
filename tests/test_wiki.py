@@ -86,6 +86,23 @@ class WikiTests(unittest.TestCase):
         self.assertEqual(record.candidates, ['CVE-2024-26319'])
         self.assertTrue(any(i.code == 'identifier_format' and i.severity == 'error' for i in record.issues))
 
+    def test_explicit_nonprimary_roles_override_legacy_primary_fallback(self):
+        for field, role in [('identifier_candidates', 'candidate'), ('referenced_identifiers', 'reference')]:
+            path = self.article(role, cve='CVE-2025-12345', identifier_role='primary',
+                                primary_identifiers='', **{field: 'CVE-2025-12345'})
+            record = next(r for r in self.scan() if r.path == path)
+            self.assertEqual(record.primary, [])
+            self.assertEqual(wiki.catalog_record(record)[field], ['CVE-2025-12345'])
+            self.assertNotIn('2025.md', wiki.render_outputs([record])['INDEX-CVE.md'])
+
+    def test_explicit_candidate_resolves_legacy_unknown_role(self):
+        self.article(cve='CVE-2025-12345', identifier_role='unknown',
+                     identifier_candidates='CVE-2025-12345')
+        record = self.scan()[0]
+        self.assertEqual(record.primary, [])
+        self.assertEqual(record.candidates, ['CVE-2025-12345'])
+        self.assertFalse(any(i.code == 'identifier_role_unknown' for i in record.issues))
+
     def test_namespaces_and_case_not_conflated(self):
         self.article(primary_identifiers='cve-2025-12345; CNVD-C-2023-76801; TALOS-2024-1967; WSO2-2019-0598; AVD-2026-1850319')
         r = self.scan()[0]

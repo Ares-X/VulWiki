@@ -478,18 +478,6 @@ def scan(root):
                         r.issue("unrecognized_identifier_namespace", "primary role retained; namespace format not validated: " + value)
                 else:
                     r.issue("identifier_format", "primary identifier invalid: " + value, "error")
-            for key in ("cve", "cnvd", "cnnvd", "ghsa", "qvd", "xve"):
-                for raw_value in split_ids(meta.get(key, "")):
-                    value = normalize_identifier(raw_value)
-                    if not IDENTIFIERS[key.upper()].fullmatch(value):
-                        r.issue("identifier_format", key + " contains invalid or wrong-namespace identifier: " + value, "error")
-                    elif value not in r.primary:
-                        if not ids and meta.get("identifier_role") == "primary":
-                            r.primary.append(value)
-                        else:
-                            (r.references if meta.get("identifier_role") == "reference" else r.candidates).append(value)
-            if r.candidates:
-                r.issue("identifier_role_unknown", "legacy identifier candidates excluded from primary CVE index")
             for key, bucket, role in (("referenced_identifiers", r.references, "reference"),
                                       ("identifier_candidates", r.candidates, "candidate")):
                 for raw_value in split_ids(meta.get(key, "")):
@@ -501,6 +489,22 @@ def scan(root):
                             r.issue("unrecognized_identifier_namespace", role + " role retained; namespace format not validated: " + value)
                     else:
                         r.issue("identifier_format", role + " identifier invalid: " + value, "error")
+            legacy_role_unknown = False
+            for key in ("cve", "cnvd", "cnnvd", "ghsa", "qvd", "xve"):
+                for raw_value in split_ids(meta.get(key, "")):
+                    value = normalize_identifier(raw_value)
+                    if not IDENTIFIERS[key.upper()].fullmatch(value):
+                        r.issue("identifier_format", key + " contains invalid or wrong-namespace identifier: " + value, "error")
+                    elif value not in r.primary and value not in r.references and value not in r.candidates:
+                        if not ids and meta.get("identifier_role") == "primary":
+                            r.primary.append(value)
+                        elif meta.get("identifier_role") == "reference":
+                            r.references.append(value)
+                        else:
+                            r.candidates.append(value)
+                            legacy_role_unknown = True
+            if legacy_role_unknown:
+                r.issue("identifier_role_unknown", "legacy identifier candidates excluded from primary CVE index")
             if meta.get("identifier_status") in {"rejected", "disputed"}:
                 r.issue("identifier_inactive", "primary identifiers excluded: " + meta["identifier_status"])
             for platform in ("fofa", "hunter", "quake"):

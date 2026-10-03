@@ -670,6 +670,10 @@
 
 - [Joomla! 发布安全补丁：关键文件删除和 Web 服务漏洞暴露](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/Joomla/Joomla%21%20%E5%8F%91%E5%B8%83%E5%AE%89%E5%85%A8%E8%A1%A5%E4%B8%81%EF%BC%9A%E5%85%B3%E9%94%AE%E6%96%87%E4%BB%B6%E5%88%A0%E9%99%A4%E5%92%8C%20Web%20%E6%9C%8D%E5%8A%A1%E6%BC%8F%E6%B4%9E%E6%9A%B4%E9%9C%B2.md) [advisory; not-reproduced; needs-review]
 
+## Joomla Content Editor (JCE)
+
+- [CVE-2026-48907 and LiteSpeed cPanel Plugin Flaws Come Under Active Attack](../Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/CVE-2026-48907%20and%20LiteSpeed%20cPanel%20Plugin%20Flaws%20Come%20Under%20Active%20Att.md) [roundup; source-claimed; needs-review]
+
 ## Joomla Fabrik image element plugin
 
 - [Joomla! com_fabrik 3.9.11 目录遍历漏洞](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/Joomla/Joomla%21%20com_fabrik%203.9.11%20%E7%9B%AE%E5%BD%95%E9%81%8D%E5%8E%86%E6%BC%8F%E6%B4%9E.md) [vulnerability; not-reproduced; needs-review]

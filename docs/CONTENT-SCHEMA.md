@@ -53,6 +53,7 @@ Markdown 是唯一维护源。`scripts/wiki.py` 使用 Python 3.10+ 标准库，
 - `primary_identifiers` 优先；没有它时只有 `identifier_role: "primary"` 的旧字段成为主编号
 - 未声明主角色的旧 cve/cnvd 等仍是可检索候选；明确 reference 的旧字段进入引用集合
 - `identifier_candidates` 可显式登记冲突或待核编号；校验格式并保留候选角色，不因登记而认定官方分配或产品映射有效
+- 已在 `primary_identifiers`、`identifier_candidates` 或 `referenced_identifiers` 登记的编号，以显式字段的角色投影；旧 `cve` 等同值不会因 `identifier_role` 回退重新提升为主编号。仅未显式登记的旧候选继续产生角色待核提示
 - 不抓取标题、正文首次提及或推荐文章的 CVE 作为主编号
 - rejected / disputed 的主编号不进入有效 CVE 导航；原始记录与说明仍保留
 - needs-review 条目正常进入目录并显示状态；缺来源、版本待核或未本地复现不单独构成隔离理由；篇首写明具体缺口

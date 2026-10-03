@@ -118,6 +118,11 @@
 
 - [【高危漏洞预警】Linux内核IP6隧道漏洞CVE-2026-23003](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/%E3%80%90%E9%AB%98%E5%8D%B1%E6%BC%8F%E6%B4%9E%E9%A2%84%E8%AD%A6%E3%80%91Linux%E5%86%85%E6%A0%B8IP6%E9%9A%A7%E9%81%93%E6%BC%8F%E6%B4%9ECVE-2026-23003.md) [vulnerability; not-reproduced; needs-review]
 
+## Linux kernel / nf_tables
+
+- [CVE-2026-23111_ Linux nf_tables Flaw Enables Root Exploits](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/CVE-2026-23111_%20Linux%20nf_tables%20Flaw%20Enables%20Root%20Exploits.md) [analysis; source-claimed; needs-review]
+- [Old Linux Kernel flaw CVE-2024-1086 resurfaces in ransomware attacks](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/Old%20Linux%20Kernel%20flaw%20CVE-2024-1086%20resurfaces%20in%20ransomware%20attacks.md) [incident; source-claimed; needs-review]
+
 ## Linux ksmbd
 
 - [CVE-2022-47939：Linux Kernel ksmbd UAF远程代码执行漏洞通告](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/CVE-2022-47939%EF%BC%9ALinux%20Kernel%20ksmbd%20UAF%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E%E9%80%9A%E5%91%8A.md) [advisory; not-reproduced; needs-review]
