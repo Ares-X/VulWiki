@@ -8060,13 +8060,905 @@
           "runtime_executed": false
         }
       ]
+    },
+    {
+      "reviewed_utc": "2026-10-03T16:01:43.808387+00:00",
+      "review_base": "0f120d84072267d4071fd9bea36a4a4bf9c0fad9",
+      "retained_files": 20,
+      "new_files": 0,
+      "supplemented_files": 20,
+      "qualified_candidate_ids": 20,
+      "final_byte_review_passed": true,
+      "rows": [
+        {
+          "path": "Web安全/网络设备/Palo Alto/Palo Alto Networks PAN-OS 身份验证绕过漏洞(CVE-2025-0108).md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2025-0108"
+          ],
+          "specific_public_method": "Complete Nuclei GET double-encoded traversal to ztp_gate.php; 200 + HTML content type + ZTP page content",
+          "scope": "PAN-OS management PHP authentication bypass",
+          "limits": "Not RCE, shell, arbitrary file read, or full-device takeover; template has no ordinary-path negative control",
+          "current_sha256": "920afc6212164f33b1c6eef00e1eb9da1fda14055464d9d28bbb6d2ee378610b",
+          "original_body_and_frontmatter_preserved": true,
+          "runtime_executed": false,
+          "source_receipts": [
+            {
+              "sha256": "77f801d256eb5b5358678ea2e342c670526576e7bcc52f00a5e23c6c9928de58",
+              "read_depth": "full-file-static-code",
+              "read_scope": "Entire artifact including request construction, variables/serialized bytes, matchers/extractors, branch/role/precondition comments, side effects and all visible vulnerability-specific functions; no execution",
+              "url": "https://raw.githubusercontent.com/projectdiscovery/nuclei-templates/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2025/CVE-2025-0108.yaml"
+            },
+            {
+              "sha256": "618f52f99c3a758dd32515490c5091c61ab2c10fd00725cf17cf2bc3dbe89270",
+              "read_depth": "CNA-container-technical-read",
+              "read_scope": "CNA mapping, descriptions, affected versions, prerequisites, references, fixes/timeline where present; ADP containers not read. PAN0108 supporting HTML duplicate not separately fully inspected.",
+              "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2025/0xxx/CVE-2025-0108.json"
+            }
+          ]
+        },
+        {
+          "path": "Web安全/其他软件/杂项/CVE-2025-14611.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2025-14611"
+          ],
+          "specific_public_method": "Complete Nuclei fixed-ticket request; configuration+system.web markers, content type and200; decryptionKey extractor",
+          "scope": "Gladinet CentreStack hardcoded-ticket file read",
+          "limits": "Triofox product mapping comes from CNA, not proof of these CentreStack paths; Rapid7 <= bound differs from CNA <; no RCE admitted",
+          "current_sha256": "521d7c3c37cc12686672c695b1d19d295d39395fb6c89259368408a549a3fa3f",
+          "original_body_and_frontmatter_preserved": true,
+          "runtime_executed": false,
+          "source_receipts": [
+            {
+              "sha256": "9fc81988cebdd1f5266587ea28ae29d08bb46360934e3380a9b4a47e2caf27c8",
+              "read_depth": "full-file-static-code",
+              "read_scope": "Entire artifact including request construction, variables/serialized bytes, matchers/extractors, branch/role/precondition comments, side effects and all visible vulnerability-specific functions; no execution",
+              "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/modules/auxiliary/gather/gladinet_storage_access_ticket_forge.rb"
+            },
+            {
+              "sha256": "91b55c55eda76bf66d2d72713035f6a3084e3cc9f33f42720d06927e896e7b24",
+              "read_depth": "full-file-static-code",
+              "read_scope": "Entire artifact including request construction, variables/serialized bytes, matchers/extractors, branch/role/precondition comments, side effects and all visible vulnerability-specific functions; no execution",
+              "url": "https://raw.githubusercontent.com/projectdiscovery/nuclei-templates/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2025/CVE-2025-14611.yaml"
+            },
+            {
+              "sha256": "08b1d46358d1354adec0e2f7d45ffc541c724140644e4352ea8a3fbd39048f6e",
+              "read_depth": "CNA-container-technical-read",
+              "read_scope": "CNA mapping, descriptions, affected versions, prerequisites, references, fixes/timeline where present; ADP containers not read. PAN0108 supporting HTML duplicate not separately fully inspected.",
+              "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2025/14xxx/CVE-2025-14611.json"
+            },
+            {
+              "sha256": "e4f13d6b0276718a0037d1a346ee9504262d41d35ea5a76089281237643625d7",
+              "read_depth": "full-file-static-code",
+              "read_scope": "All mixin methods; detection/version extraction; machineKey extraction/save and printed recommendation of separate30406 module; no execution",
+              "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/lib/msf/core/auxiliary/gladinet.rb"
+            }
+          ]
+        },
+        {
+          "path": "Web安全/网络设备/Cisco/思科提醒 ISE 中的满分 RCE 漏洞.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2025-20281"
+          ],
+          "specific_public_method": "Complete fixed Nuclei Java serialization construction; HTTP OAST interaction plus200 and two-byte target response; eight ZDI Gists corroborate command path/failure/success",
+          "scope": "Cisco ISE String[] command injection",
+          "limits": "Gate does not establish host escape; ZDI source as a whole remains incompletely retrieved; no current patch matrix fully independently reviewed",
+          "current_sha256": "368a137243ae02c0d8aa04d94d32402e9d34225078e3e06b7191d958c6e5526f",
+          "original_body_and_frontmatter_preserved": true,
+          "runtime_executed": false,
+          "source_receipts": [
+            {
+              "sha256": "ec9fc431eda2640876ce9536909dee42c8657837ad7a5f07961444cfa755d22d",
+              "read_depth": "full-file-static-code",
+              "read_scope": "Entire artifact including request construction, variables/serialized bytes, matchers/extractors, branch/role/precondition comments, side effects and all visible vulnerability-specific functions; no execution",
+              "url": "https://raw.githubusercontent.com/projectdiscovery/nuclei-templates/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2025/CVE-2025-20281.yaml"
+            },
+            {
+              "sha256": "039b4248546762b24538b056e5475f2e5c8f6f22603336dc4bacd521dce09d29",
+              "read_depth": "CNA-container-technical-read",
+              "read_scope": "CNA mapping, descriptions, affected versions, prerequisites, references, fixes/timeline where present; ADP containers not read. PAN0108 supporting HTML duplicate not separately fully inspected.",
+              "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2025/20xxx/CVE-2025-20281.json"
+            },
+            {
+              "sha256": "edd9e2e3d50080c41023c9ada8bf753324354ec55e0e75f84d8ddd8a58769101",
+              "read_depth": "full-main-text-embedded-dependencies-partial",
+              "read_scope": "Entire narrative technical body read; eight embedded Gist files read separately; three later Gists unavailable; request screenshot403; whole-original completeness false",
+              "url": "https://www.zerodayinitiative.com/blog/2025/7/24/cve-2025-20281-cisco-ise-api-unauthenticated-remote-code-execution-vulnerability"
+            },
+            {
+              "sha256": "ab37ec1104439f89c87122c296dcacd9ff4c36fd0b09be6515000aa66b715ca4",
+              "read_depth": "full-Gist-files-content",
+              "read_scope": "All image pixels or complete nontruncated Gist files.content read; API metadata inventoried, not treated as technical reading",
+              "url": "https://api.github.com/gists/a651bad078c6cf8aaf8c1470424719fc"
+            },
+            {
+              "sha256": "8e3bd2af320d0fada4294ea33e4b7840ccad0d9b01d5a219bec11841c300ffcc",
+              "read_depth": "full-Gist-files-content",
+              "read_scope": "All image pixels or complete nontruncated Gist files.content read; API metadata inventoried, not treated as technical reading",
+              "url": "https://api.github.com/gists/4b914d1b28f8a8f3482b1f34e06d5fde"
+            },
+            {
+              "sha256": "2763990ee2202f4b953666a7dac4bac047dc20c75f94f2528a2750f5279da295",
+              "read_depth": "full-Gist-files-content",
+              "read_scope": "All image pixels or complete nontruncated Gist files.content read; API metadata inventoried, not treated as technical reading",
+              "url": "https://api.github.com/gists/8c01678efd8bb3616b41048241ead247"
+            },
+            {
+              "sha256": "6f56bbdfe935d27f0834b55cc7bdc4818d2988e50acd15732c87b8404d5ba892",
+              "read_depth": "full-Gist-files-content",
+              "read_scope": "All image pixels or complete nontruncated Gist files.content read; API metadata inventoried, not treated as technical reading",
+              "url": "https://api.github.com/gists/2ec1a24fb5baca6003d5beaacded9c69"
+            },
+            {
+              "sha256": "e3038229d0ededd8c2d8e5d4dc9a85351c035dcc3fab75934df8541f0749698a",
+              "read_depth": "full-Gist-files-content",
+              "read_scope": "All image pixels or complete nontruncated Gist files.content read; API metadata inventoried, not treated as technical reading",
+              "url": "https://api.github.com/gists/c99a254b131e0d2e3335aadc3a488329"
+            },
+            {
+              "sha256": "0c525ece0a695c316cbaa4e458cf3089f99e2ca2dc10d04c042a81de128250a4",
+              "read_depth": "full-Gist-files-content",
+              "read_scope": "All image pixels or complete nontruncated Gist files.content read; API metadata inventoried, not treated as technical reading",
+              "url": "https://api.github.com/gists/c3eeb9504bbf47a2869cf1fd312b00a6"
+            },
+            {
+              "sha256": "f7138b794e00ed13d98f7f2b31555ebc0824ffda8cac54da52d0e392083f7dbf",
+              "read_depth": "full-Gist-files-content",
+              "read_scope": "All image pixels or complete nontruncated Gist files.content read; API metadata inventoried, not treated as technical reading",
+              "url": "https://api.github.com/gists/03c15b435c78000e100febaea33c997f"
+            },
+            {
+              "sha256": "9e6c0c33790af34aeea344a22e986571fd9ef2da1d9bc5fc743b8cbf9f333a90",
+              "read_depth": "full-Gist-files-content",
+              "read_scope": "All image pixels or complete nontruncated Gist files.content read; API metadata inventoried, not treated as technical reading",
+              "url": "https://api.github.com/gists/64ae1af4e80741c2892f5af05ebc3a49"
+            }
+          ]
+        },
+        {
+          "path": "Web安全/服务器软件/Active Directory/利用 NTLM 反射掌控 Active Directory（CVE-2025-33073）.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2025-33073"
+          ],
+          "specific_public_method": "Synacktiv complete manual commands and ordinary-listener failed control versus special-DNS success with RemoteRegistry start and SAM output",
+          "scope": "Windows NTLM-to-SMB reflection manual verification",
+          "limits": "No extension to every Windows build, other protocols or2026Kerberos entity; generic tools unpinned/not individually audited; packet images not used",
+          "current_sha256": "bd9c4cb15653a6905e4136aa7a1809fef0328ba27d8f07eca7ae23b6ce553e70",
+          "original_body_and_frontmatter_preserved": true,
+          "runtime_executed": false,
+          "source_receipts": []
+        },
+        {
+          "path": "Web安全/其他软件/杂项/【在野利用】HPE OneView 远程代码执行漏洞(CVE-2025-37164).md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2025-37164"
+          ],
+          "specific_public_method": "Complete Rapid7 EXP execute_cmd JSON PUT and recorded tested payloads; check uses echo UUID and type/cmd/result (not stdout)",
+          "scope": "HPE OneView ID Pools command execution",
+          "limits": "Nuclei raw PUT lacks blank header/body line, not independently valid wire evidence; not root proof",
+          "current_sha256": "f05f0af3b5f51c1dc97084096c473e7f12b7f7aa83f180a956972db04cb30726",
+          "original_body_and_frontmatter_preserved": true,
+          "runtime_executed": false,
+          "source_receipts": [
+            {
+              "sha256": "8108aae75b8bc7717b4727b89b722de85802030a908fce4c3f5e8d5d2f92882a",
+              "read_depth": "full-file-static-code",
+              "read_scope": "Entire artifact including request construction, variables/serialized bytes, matchers/extractors, branch/role/precondition comments, side effects and all visible vulnerability-specific functions; no execution",
+              "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/linux/http/hpe_oneview_rce.rb"
+            },
+            {
+              "sha256": "094e9fd6edf4612ab65641b6788dc21fde51377858594b345327830881cec539",
+              "read_depth": "full-file-static-code",
+              "read_scope": "Entire artifact including request construction, variables/serialized bytes, matchers/extractors, branch/role/precondition comments, side effects and all visible vulnerability-specific functions; no execution",
+              "url": "https://raw.githubusercontent.com/projectdiscovery/nuclei-templates/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2025/CVE-2025-37164.yaml"
+            },
+            {
+              "sha256": "fb1f63452a30f368c15f012b53e56df2d42167bc34e0d754f1cc6ea1c33e6311",
+              "read_depth": "CNA-container-technical-read",
+              "read_scope": "CNA mapping, descriptions, affected versions, prerequisites, references, fixes/timeline where present; ADP containers not read. PAN0108 supporting HTML duplicate not separately fully inspected.",
+              "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2025/37xxx/CVE-2025-37164.json"
+            }
+          ]
+        },
+        {
+          "path": "系统安全/Linux/(7.1分) CVE-2025-39682：Linux内核TLS UAF本地提权.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2025-39682"
+          ],
+          "specific_public_method": "Complete STAR Labs C trigger with three embedded TLS records, read/recvmsg/close and full KASAN slab-UAF trace; Python generator fully read",
+          "scope": "Linux net/tls local UAF trigger",
+          "limits": "Crash/UAF only, no root or container escape; generator dependency is not needed to run embedded-record C trigger",
+          "current_sha256": "bdec6da4a93694127534e6d1c6e80a6a0a669fff4b8b294239496ecc8fedfde4",
+          "original_body_and_frontmatter_preserved": true,
+          "runtime_executed": false,
+          "source_receipts": []
+        },
+        {
+          "path": "Web安全/其他软件/杂项/【成功复现】Meteobridge命令执行漏洞(CVE-2025-4008).md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2025-4008"
+          ],
+          "specific_public_method": "Complete Nuclei GET plus original ONEKEY screenshot: id output uid=0(root) gid=0(root) embedded in template error; HTTP200 outer response and body503 are distinct",
+          "scope": "Smartbedded MeteoBridge command injection",
+          "limits": "No live target request; source success is not maintainer reproduction",
+          "current_sha256": "0ad7c477230bb2290c23bd337a75bd299cfdcd08970f5bdc23f7c7f92f23d40a",
+          "original_body_and_frontmatter_preserved": true,
+          "runtime_executed": false,
+          "source_receipts": [
+            {
+              "sha256": "ecf3739ab955b7ed6e2719907c5ff57442a97fbce13f09beba19814c90e9f929",
+              "read_depth": "full-file-static-code",
+              "read_scope": "Entire artifact including request construction, variables/serialized bytes, matchers/extractors, branch/role/precondition comments, side effects and all visible vulnerability-specific functions; no execution",
+              "url": "https://raw.githubusercontent.com/projectdiscovery/nuclei-templates/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2025/CVE-2025-4008.yaml"
+            },
+            {
+              "sha256": "49a1558ff9eddbd31b48ecba27307e0acd37bf1ee1fb906e332eedefca823b22",
+              "read_depth": "CNA-container-technical-read",
+              "read_scope": "CNA mapping, descriptions, affected versions, prerequisites, references, fixes/timeline where present; ADP containers not read. PAN0108 supporting HTML duplicate not separately fully inspected.",
+              "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2025/4xxx/CVE-2025-4008.json"
+            },
+            {
+              "sha256": "3f30e76725657de392518a8c930204acd5bfb017525d9545fc9aa834c9f604e9",
+              "read_depth": "full-main-technical-text",
+              "read_scope": "Entire primary research technical narrative and embedded textual code; ONEKEY four technical images independently pixel-read; Searchlight no image-derived result used",
+              "url": "https://www.onekey.com/resource/security-advisory-remote-command-execution-on-smartbedded-meteobridge-cve-2025-4008"
+            },
+            {
+              "sha256": "7eacf752c7684edf2bf8b41ac070bfab0692186aeb08c3c0276f56afb4feff86",
+              "read_depth": "full-image-pixel-view",
+              "read_scope": "Whole ONEKEY result image viewed: original request address, response headers, uid/gid and body503 distinction",
+              "url": "https://cdn.prod.website-files.com/66e0617dd66a9d24cea2d0d8/682df366d48d83e89655d7d1_Screenshot%20from%202025-05-21%2017-38-02.png"
+            },
+            {
+              "sha256": "b61fb665099a27d42de527ce6aa845b082079b459e45313c443e748bba875f3a",
+              "read_depth": "full-image-pixel-view",
+              "read_scope": "All image pixels or complete nontruncated Gist files.content read; API metadata inventoried, not treated as technical reading",
+              "url": "https://cdn.prod.website-files.com/66e0617dd66a9d24cea2d0d8/682df2c273ee1467ddb2a30f_Screenshot%20from%202025-05-21%2017-35-11.png"
+            },
+            {
+              "sha256": "e707e3417db4218494e0db26ae7553b10add16557361359e81961d2d76308f69",
+              "read_depth": "full-image-pixel-view",
+              "read_scope": "All image pixels or complete nontruncated Gist files.content read; API metadata inventoried, not treated as technical reading",
+              "url": "https://cdn.prod.website-files.com/66e0617dd66a9d24cea2d0d8/682df2eeb1197bcc28e537ec_Screenshot%20from%202025-05-21%2017-36-06.png"
+            },
+            {
+              "sha256": "c7b6967b8148adcc4ef6f5a6aafec5595a1e05ec35c7c98248c2fae23369aba0",
+              "read_depth": "full-image-pixel-view",
+              "read_scope": "All image pixels or complete nontruncated Gist files.content read; API metadata inventoried, not treated as technical reading",
+              "url": "https://cdn.prod.website-files.com/66e0617dd66a9d24cea2d0d8/682df31e579885a0d91671a4_Screenshot%20from%202025-05-21%2017-36-51.png"
+            },
+            {
+              "sha256": "7eacf752c7684edf2bf8b41ac070bfab0692186aeb08c3c0276f56afb4feff86",
+              "read_depth": "full-image-pixel-view",
+              "read_scope": "All image pixels or complete nontruncated Gist files.content read; API metadata inventoried, not treated as technical reading",
+              "url": "https://cdn.prod.website-files.com/66e0617dd66a9d24cea2d0d8/682df366d48d83e89655d7d1_Screenshot%20from%202025-05-21%2017-38-02.png"
+            }
+          ]
+        },
+        {
+          "path": "Web安全/智能设备/三星MagicINFO/漏洞复现  Samsung MagicINFO 9 Server 路径遍历导致任意文件写入漏洞（CVE-2025-4632）.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2025-4632"
+          ],
+          "specific_public_method": "Complete two-stage Nuclei POST traversal writes random marker, then GET requires same marker+200",
+          "scope": "Samsung MagicINFO9 file write/readback",
+          "limits": "Not JSP execution/RCE/SYSTEM command output; file remains and template contains no cleanup",
+          "current_sha256": "b3fdde69663fae3430f6a169c30ffdca63baeecf0c76fc93dcfb4e41e0ebe0b5",
+          "original_body_and_frontmatter_preserved": true,
+          "runtime_executed": false,
+          "source_receipts": [
+            {
+              "sha256": "ad0e0bcbfeaad2ce857ced84b4c9e9538d2b681d03118e5f02048e4fba71f7c1",
+              "read_depth": "full-file-static-code",
+              "read_scope": "Entire artifact including request construction, variables/serialized bytes, matchers/extractors, branch/role/precondition comments, side effects and all visible vulnerability-specific functions; no execution",
+              "url": "https://raw.githubusercontent.com/projectdiscovery/nuclei-templates/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2025/CVE-2025-4632.yaml"
+            },
+            {
+              "sha256": "5d6a2d21de41a834b94bee46b1280a58582e29e9012d3e15e2c4388e42843875",
+              "read_depth": "CNA-container-technical-read",
+              "read_scope": "CNA mapping, descriptions, affected versions, prerequisites, references, fixes/timeline where present; ADP containers not read. PAN0108 supporting HTML duplicate not separately fully inspected.",
+              "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2025/4xxx/CVE-2025-4632.json"
+            }
+          ]
+        },
+        {
+          "path": "Web安全/开发框架/Git/Git 远程代码执行漏洞预警(CVE-2025-48384).md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2025-48384"
+          ],
+          "specific_public_method": "Complete upstream added t7450 regression creates real submodule/hook/CR path/symlink, recursive clone, absence-of-foo and correct-file assertions; t1300 roundtrip; essential helper definitions read",
+          "scope": "Git trailing-CR submodule checkout/hook regression",
+          "limits": "Fixed regression assertion is not an observed exploitation run; framework not standalone script; no clone performed",
+          "current_sha256": "9b51f200c58c7019fede2360adf7b5a1a3a72821dfda802bded34627985a936b",
+          "original_body_and_frontmatter_preserved": true,
+          "runtime_executed": false,
+          "source_receipts": []
+        },
+        {
+          "path": "Web安全/中间件/GeoServer/GeoServer WMS GetMap XML 外部实体注入漏洞（CVE-2025-58360）.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2025-58360"
+          ],
+          "specific_public_method": "Complete Rapid7 XML generation/request/extraction from Unknown layer to ServiceException; response200+nonempty captured content",
+          "scope": "GeoServer WMS GetMap XXE file read",
+          "limits": "Nuclei missing-file exception not file-exfil proof; pre-existing fixed denial regression not successful vulnerable response",
+          "current_sha256": "5b5522460f3ad17396e0088e9ca7af7f4a7185251cca72208aef34b8330039d2",
+          "original_body_and_frontmatter_preserved": true,
+          "runtime_executed": false,
+          "source_receipts": [
+            {
+              "sha256": "ec11321c71d3373acf8d45d61bde695f1b0ddb77ee599e6d6d9b3dcf19d1be49",
+              "read_depth": "full-file-static-code",
+              "read_scope": "Entire artifact including request construction, variables/serialized bytes, matchers/extractors, branch/role/precondition comments, side effects and all visible vulnerability-specific functions; no execution",
+              "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/modules/auxiliary/gather/geoserver_wms_getmap_xxe_file_read.rb"
+            },
+            {
+              "sha256": "fd0dca41ea5a1faf8b280e423bcf8f8cb5adf52c7894b76ba050c840f2e5236d",
+              "read_depth": "full-file-static-code",
+              "read_scope": "Entire artifact including request construction, variables/serialized bytes, matchers/extractors, branch/role/precondition comments, side effects and all visible vulnerability-specific functions; no execution",
+              "url": "https://raw.githubusercontent.com/projectdiscovery/nuclei-templates/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2025/CVE-2025-58360.yaml"
+            },
+            {
+              "sha256": "7596b0ff2309e47a0afb2b8d3ab85aa6d720a976c4880c5fba4569cee4f47a6c",
+              "read_depth": "CNA-container-technical-read",
+              "read_scope": "CNA mapping, descriptions, affected versions, prerequisites, references, fixes/timeline where present; ADP containers not read. PAN0108 supporting HTML duplicate not separately fully inspected.",
+              "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2025/58xxx/CVE-2025-58360.json"
+            }
+          ]
+        },
+        {
+          "path": "Web安全/其他软件/杂项/CVE-2025-61757.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2025-61757"
+          ],
+          "specific_public_method": "Complete Nuclei normal401 vs ;.wadl200 compilation response; primary Searchlight full ASTTest source with explicit callback statement",
+          "scope": "Oracle Identity Manager auth bypass/compile-time callback",
+          "limits": "Empty compile200 is only auth bypass; compile-time HTTP callback establishes separate code-execution claim; no maintainer run",
+          "current_sha256": "2dc8c8dbd9bf1e0c5e99dfbd74313b71f182b2b64872497d0d7d90971e52a1ad",
+          "original_body_and_frontmatter_preserved": true,
+          "runtime_executed": false,
+          "source_receipts": [
+            {
+              "sha256": "64f344c8669398f5595cc8b3d1469d0738c764998dfff5dbb4d2a8cf8a9c8833",
+              "read_depth": "full-file-static-code",
+              "read_scope": "Entire artifact including request construction, variables/serialized bytes, matchers/extractors, branch/role/precondition comments, side effects and all visible vulnerability-specific functions; no execution",
+              "url": "https://raw.githubusercontent.com/projectdiscovery/nuclei-templates/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2025/CVE-2025-61757.yaml"
+            },
+            {
+              "sha256": "000aa761696d97919f8ee3c516bdfba76bfbd5d4d9876bed749e7ee35c94f782",
+              "read_depth": "CNA-container-technical-read",
+              "read_scope": "CNA mapping, descriptions, affected versions, prerequisites, references, fixes/timeline where present; ADP containers not read. PAN0108 supporting HTML duplicate not separately fully inspected.",
+              "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2025/61xxx/CVE-2025-61757.json"
+            },
+            {
+              "sha256": "c9a11a9c251538049fe291f749ac12396f275812451d82f800b46cd2d3fd9d06",
+              "read_depth": "full-main-technical-text",
+              "read_scope": "Entire primary research technical narrative and embedded textual code; ONEKEY four technical images independently pixel-read; Searchlight no image-derived result used",
+              "url": "https://slcyber.io/research-center/breaking-oracles-identity-manager-pre-auth-rce/"
+            }
+          ]
+        },
+        {
+          "path": "Web安全/邮件系统/Zimbra/浅析 CVE-2025-68645 Zimbra 属性覆盖导致本地文件包含漏洞.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2025-68645"
+          ],
+          "specific_public_method": "Complete Nuclei GET include.servlet_path=/WEB-INF/web.xml and XML+web-app+Zimbra+200 matchers",
+          "scope": "Zimbra RestFilter WebRoot inclusion",
+          "limits": "WebRoot inclusion only; not arbitrary OS read/RCE; EWS/SmarterMail references not same entity",
+          "current_sha256": "02cfae646d938af25758d86a034221ecde709c3d4345493feec6173521b467e2",
+          "original_body_and_frontmatter_preserved": true,
+          "runtime_executed": false,
+          "source_receipts": [
+            {
+              "sha256": "c0037b1db4979f283b4fa8367ef10887eef246ff14d47a9bdf9572be8c4333d1",
+              "read_depth": "full-file-static-code",
+              "read_scope": "Entire artifact including request construction, variables/serialized bytes, matchers/extractors, branch/role/precondition comments, side effects and all visible vulnerability-specific functions; no execution",
+              "url": "https://raw.githubusercontent.com/projectdiscovery/nuclei-templates/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2025/CVE-2025-68645.yaml"
+            },
+            {
+              "sha256": "0cb6730089707981a7795e533a97d228e32991a76ac480d81a7789e3c96968d8",
+              "read_depth": "CNA-container-technical-read",
+              "read_scope": "CNA mapping, descriptions, affected versions, prerequisites, references, fixes/timeline where present; ADP containers not read. PAN0108 supporting HTML duplicate not separately fully inspected.",
+              "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2025/68xxx/CVE-2025-68645.json"
+            },
+            {
+              "sha256": "967c8d8bb4dd610b642415e52c132714853f9436f044dbc9e5e6477c49d948e8",
+              "read_depth": "targeted-complete-release-sections",
+              "read_scope": "Release sections10.1.13 and10.0.18 lines77–97 in derived readable text, including both68645 fix entries; not entire bulletin archive",
+              "url": "https://wiki.zimbra.com/wiki/Security_Center"
+            }
+          ]
+        },
+        {
+          "path": "Web安全/安全设备/Wazuh/CVE-2025-24016漏洞对Wazuh平台的潜在威胁.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2025-24016"
+          ],
+          "specific_public_method": "Official GHSA gives complete authenticated worker run_as input and expected master process exit; independent MSF command submission is readable in full. Gate does not rest on version check or NameError probe.",
+          "scope": "Wazuh DistributedAPI, >=4.4.0 and <4.9.1; GHSA technical body, CNA and module agree. Agent route specifically requires different API-receiving and agent-managing servers.",
+          "limits": [
+            "Original external images not viewed or used as evidence.",
+            "GHSA sidebar 9.0/PR:H differs from CNA 9.9/PR:L; supplement preserves this difference.",
+            "Complete official technical text independently read via saved projection; sidebar separately extracted and read. No dependency source beyond generic framework helpers was required for the stated bounded method."
+          ],
+          "current_sha256": "0ba837335a5a48440b353ab5beadbafcafe389639156bd7077b4839fe946446b",
+          "original_body_and_frontmatter_preserved": true,
+          "runtime_executed": false,
+          "source_receipts": []
+        },
+        {
+          "path": "Web安全/其他软件/杂项/CVE-2025-22457.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2025-22457"
+          ],
+          "specific_public_method": "Full standalone Ruby EXP, full README with matching original command transcripts and uid=104(nr) result, full MSF module and full heuristic Nuclei template read. Concrete public implementation plus source-claimed observable outcome pass.",
+          "scope": "Only 22.7.2.3597 (ICS 22.7R2.4) is an actual target in both implementations; CNA unaffected boundaries ICS22.7R2.6, Policy22.7R1.4 and ZTA22.8R2.2. Remote unauthenticated RCE does not imply root.",
+          "limits": [
+            "Attackerkb 403 is an author-recorded access limitation; reviewer did not retry or reroute it.",
+            "Original article external images not viewed; copied textual output is independently sufficient.",
+            "Standalone 256-byte pattern/128-byte command differs from MSF512/256; full control flow, ROP construction, limits and process-restart risks checked."
+          ],
+          "current_sha256": "d87f7d76e48770ba4fe9596e7c535f203bf3e8c6e6bc4e9531e194df41ace00b",
+          "original_body_and_frontmatter_preserved": true,
+          "runtime_executed": false,
+          "source_receipts": []
+        },
+        {
+          "path": "Web安全/服务器软件/Commvault/CVE-2025-33053 Poc复现研究细节.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2025-33053"
+          ],
+          "specific_public_method": "Full manual calc-as-route.exe chain and failure/control narrative, complete URL generator and Apache setup scripts, README full URL fields, and separate complete MSF SMB/CustomShellHost variant read. Explicit expected/claimed calc outcome passes bounded public-method gate.",
+          "scope": "Windows Internet Shortcut Files; Commvault directory is not product identity. Microsoft CNA full semantic record, all products/platforms/build ranges and UI:R read. Draft examples match bounds, including source typo Windows11 version22H3/22631 qualification.",
+          "limits": [
+            "Original external screenshots not viewed; gate uses independently readable textual method and generator.",
+            "Secondary downloaded cve_2025_33053.rb is zero bytes and not claimed as an implementation.",
+            "Generic SMB service/payload framework dependencies not a claim of execution; Apache preparation scripts fully read but never run."
+          ],
+          "current_sha256": "d404a5de3bafd00d5f4da94f6c4aa01c5a48af4dae3c8664c1c54e3d00d00643",
+          "original_body_and_frontmatter_preserved": true,
+          "runtime_executed": false,
+          "source_receipts": []
+        },
+        {
+          "path": "Web安全/开发框架/Gogs/Gogs-符号链接导致远程命令注入漏洞-CVE-2025-8110.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2025-8110"
+          ],
+          "specific_public_method": "Complete local article/manual authenticated symlink-to-hook PUT-then-push chain and all12 local screenshot pixel views independently reviewed; final image reports uid=1000(git). Wiz full technical prose and CNA corroborate root cause/affected range.",
+          "scope": "Gogs <=0.13.3; Wiz update reports v0.13.4 fix on2026-01-23. Saved Dockerfile pins0.13.3; two shell screenshots show a0.13.0 directory, which does not prove running image version. Qualification retained.",
+          "limits": [
+            "All12 local images viewed; Wiz malware/attack images not viewed.",
+            "Roundup article fully read for comparison only; unrelated links not followed.",
+            "Two oss-security email bodies discuss likely unaffected forks, not an independent Gogs exploit result.",
+            "Wiz visible-text projection differs from independent HTML projection only by IOC table row line breaks; all original IOC strings remain identical."
+          ],
+          "current_sha256": "db8cb3b19f77ac583b8bdc2fcbb040e675023d6a13a66e3314acd48582e19922",
+          "original_body_and_frontmatter_preserved": true,
+          "runtime_executed": false,
+          "source_receipts": []
+        },
+        {
+          "path": "Web安全/其他软件/杂项/CVE-2025-54309.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2025-54309"
+          ],
+          "specific_public_method": "Complete watchTowr textual captured requests, isolated404 control, concurrent200 XML OK and author-claimed admin creation read. Complete standalone Python and inline template use user-list extraction; gate does not rest on HTTP status alone.",
+          "scope": "CrushFTP AS2 race, absent DMZ proxy path, HTTP(S); version10<10.8.5 and11<11.3.4_23 confirmed by full CNA and vendor incident page.11.3.5 later safe release distinguished.",
+          "limits": [
+            "Research images not viewed; full textual HTTP examples and source result narrative independently sufficient.",
+            "Standalone5000 pairs/50-pair suffix update versus template100 pairs/every-pair suffix update verified; HOST/PORT versus Host/Port unresolved engine assumption retained.",
+            "Race/session mutation, username printing, load and persistent-admin variant risks remain explicit."
+          ],
+          "current_sha256": "b9f63139a01399af4a81406cfcbe01f76078778ed189058e185207bb53939f4f",
+          "original_body_and_frontmatter_preserved": true,
+          "runtime_executed": false,
+          "source_receipts": []
+        },
+        {
+          "path": "Web安全/云平台/Citrix/CVE-2025-5777.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2025-5777"
+          ],
+          "specific_public_method": "Complete watchTowr textual malformed5-byte login request, described normal/empty controls, full response containing TowrwatchTowrw marker, full archived Python and full template independently read. Observable leak-method gate passes with marker-provenance qualification.",
+          "scope": "Citrix CNA Gateway/AAA configuration and ADC/Gateway14.1<43.56,13.1<58.32 checked. Binary analysis builds14.1.43.50.64 versus14.1.47.46.64 are experiment versions, not complete fix matrix.",
+          "limits": [
+            "Vendor saved page is Loading shell; FIPS/EOL/session-cleanup details not verified. No retry or reroute.",
+            "Images/video not viewed; only independently readable technical prose and complete HTTP examples support the review.",
+            "Author reports no cookies/sessionIDs/passwords during testing; potential production outcomes remain conjectural.",
+            "Required wording correction implemented: marker is from the request User-Agent, without asserting which request or another user."
+          ],
+          "current_sha256": "56894235a92b4613d2221a902f0d888fb47c7007870767cd73fb970765a8ab85",
+          "original_body_and_frontmatter_preserved": true,
+          "runtime_executed": false,
+          "source_receipts": []
+        },
+        {
+          "path": "Web安全/AI应用/Langflow/（CVE-2026-9198）IBM Langflow未认证RCE漏洞.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2026-9198"
+          ],
+          "specific_public_method": "Complete MSF two-request code plus source session record; original 0xdak syntax failure does not invalidate separate complete material",
+          "scope": "IBM Langflow OSS",
+          "limits": [
+            "IBM advisory unavailable; CNA/source support the bounded facts",
+            "July6 telemetry not independently established",
+            "Generic payload/handler dependencies not fully audited"
+          ],
+          "current_sha256": "9a851d72767ff2fe339023290b6f8faefa67f63b935d66db7aae6e51591d572c",
+          "original_body_and_frontmatter_preserved": true,
+          "runtime_executed": false,
+          "concrete_input": [
+            "langflow-msf-source.txt:70-85 token request",
+            "langflow-msf-source.txt:115-149 authenticated code request, definition-time exec and token loot"
+          ],
+          "outcome": "langflow-msf-doc.txt:47-63 source session-opened transcript; not personally validated",
+          "version": "CNA: 1.0.0 through 1.10.0; fix1.10.1. Static source inspected only1.8.4/1.10.0/1.10.1",
+          "prerequisites": "Reachable login and validate endpoints, actual AUTO_LOGIN enabled, available token-user passing active-user dependency. Source default True is not universal deployed state",
+          "source_receipts": [
+            {
+              "sha256": "07489e7f434c8d961c1e9cb8226f061afebc067ca48be363fab806c8bbf6aad0",
+              "actual_read_ranges": [
+                [
+                  1,
+                  149
+                ]
+              ],
+              "depth": "full-source-file",
+              "note": "Complete request/token/exploit/check/loot path",
+              "url": "https://github.com/rapid7/metasploit-framework/blob/1db4e20d0bbf660e862bd760ba23bf9a9b1cf071/modules/exploits/multi/http/langflow_unauth_rce_cve_2026_9198.rb"
+            },
+            {
+              "sha256": "e1a4de57f53df0e1c878acae946d7a05e3bf4733efce6de81d52ab6d0071eaa9",
+              "actual_read_ranges": [
+                [
+                  1,
+                  63
+                ]
+              ],
+              "depth": "full-technical-text",
+              "note": "Installation, session output; authentication wording qualified",
+              "url": "https://github.com/rapid7/metasploit-framework/blob/1db4e20d0bbf660e862bd760ba23bf9a9b1cf071/documentation/modules/exploit/multi/http/langflow_unauth_rce_cve_2026_9198.md"
+            },
+            {
+              "sha256": "6f2232c2168a4f71a07f87f1a04f8a8f929dab2c78491ae91a2d032e0abcaf9d",
+              "actual_read_ranges": [
+                [
+                  1,
+                  182
+                ]
+              ],
+              "depth": "full-source-file",
+              "note": "Static only. TIMEOUT used125 before global129; no reviewer compilation or execution",
+              "url": "https://github.com/0xdak/CVE-2026-9198_exploit/blob/9160e17bdc5d93844390af1532c703258f5ff0df/exploit.py"
+            },
+            {
+              "sha256": "816b43d998cd986a4ecc3413532867bb28487bc2fd337e8689bf852dc23a35ac",
+              "actual_read_ranges": [
+                [
+                  1,
+                  185
+                ]
+              ],
+              "depth": "selected-sections",
+              "note": "Settings class, defaults, env prefix and credential validator",
+              "url": "https://github.com/langflow-ai/langflow/blob/6cb87cca4c868cad096fc14139e73157740b7419/src/lfx/src/lfx/services/settings/auth.py"
+            },
+            {
+              "sha256": "aad5495140f9abbd3df7b1da1d939edae60297efc85a07c87afb8823a95d20b8",
+              "actual_read_ranges": [
+                [
+                  1,
+                  185
+                ]
+              ],
+              "depth": "selected-sections",
+              "note": "Settings class, defaults and env prefix; file remainder unread",
+              "url": "https://github.com/langflow-ai/langflow/blob/9690e69e86954ba9856c6ef06db7721d5ffa4bab/src/lfx/src/lfx/services/settings/auth.py"
+            },
+            {
+              "sha256": "ff2581f8a26512efc871d9d1ae92961e12f42dc6d84098bc4f8047552f971acf",
+              "actual_read_ranges": [
+                [
+                  1,
+                  82
+                ],
+                [
+                  180,
+                  182
+                ]
+              ],
+              "depth": "selected-sections",
+              "note": "Reread after prior combined tool output truncation; no claim to complete source",
+              "url": "https://github.com/langflow-ai/langflow/blob/a66b75ac2603b26988fb6be95303fdc61f807190/src/lfx/src/lfx/services/settings/auth.py"
+            },
+            {
+              "sha256": "5bc25bdd992b18624f122b336f2a0e5d25dd292ef16067b1bce4776aec76ed4a",
+              "actual_read_ranges": [
+                [
+                  1,
+                  242
+                ]
+              ],
+              "depth": "full-source-file",
+              "note": "AUTO_LOGIN gate96–142 including cookies/optional agentic variable initialization",
+              "url": "https://github.com/langflow-ai/langflow/blob/6cb87cca4c868cad096fc14139e73157740b7419/src/backend/base/langflow/api/v1/login.py"
+            },
+            {
+              "sha256": "1e4f84d7c601e2b04db5fc128e1f9d08b73f84e4909c1f93b841222e51510ab2",
+              "actual_read_ranges": [
+                [
+                  505,
+                  568
+                ]
+              ],
+              "depth": "selected-sections",
+              "note": "Token selection and failure branch; last_login update; not entire auth service",
+              "url": "https://github.com/langflow-ai/langflow/blob/6cb87cca4c868cad096fc14139e73157740b7419/src/backend/base/langflow/services/auth/service.py"
+            },
+            {
+              "sha256": "f6a2100eaf52b4d1e5292cce266f4155fea2191298fe32c8ce42f04553189efe",
+              "actual_read_ranges": [
+                [
+                  1,
+                  51
+                ]
+              ],
+              "depth": "full-source-file",
+              "note": "Active-user dependency and validate_code dispatch",
+              "url": "https://github.com/langflow-ai/langflow/blob/6cb87cca4c868cad096fc14139e73157740b7419/src/backend/base/langflow/api/v1/validate.py"
+            },
+            {
+              "sha256": "f6a2100eaf52b4d1e5292cce266f4155fea2191298fe32c8ce42f04553189efe",
+              "actual_read_ranges": [
+                [
+                  1,
+                  51
+                ]
+              ],
+              "depth": "full-source-file",
+              "note": "Unchanged active-user dependency",
+              "url": "https://github.com/langflow-ai/langflow/blob/a66b75ac2603b26988fb6be95303fdc61f807190/src/backend/base/langflow/api/v1/validate.py"
+            },
+            {
+              "sha256": "5e9e5a0b61c9c88e173fce00034e09d855b0471f9d829d1c351200cbae92f9e3",
+              "actual_read_ranges": [
+                [
+                  1,
+                  155
+                ]
+              ],
+              "depth": "selected-sections",
+              "note": "Whole validate_code/context; remaining methods not audited",
+              "url": "https://github.com/langflow-ai/langflow/blob/6cb87cca4c868cad096fc14139e73157740b7419/src/lfx/src/lfx/custom/validate.py"
+            },
+            {
+              "sha256": "efbe444ca3b0aa6b299dcb78bc3d370c710f30e449d2445c6ed1b58b9b3bb382",
+              "actual_read_ranges": [
+                [
+                  1,
+                  155
+                ]
+              ],
+              "depth": "selected-sections",
+              "note": "Whole validate_code/context; remaining methods not audited",
+              "url": "https://github.com/langflow-ai/langflow/blob/9690e69e86954ba9856c6ef06db7721d5ffa4bab/src/lfx/src/lfx/custom/validate.py"
+            },
+            {
+              "sha256": "876d0f7709ce8a717c464033f4cb477844af9c2231cd88648d0bb4ba7e8d6b44",
+              "actual_read_ranges": [
+                [
+                  1,
+                  155
+                ]
+              ],
+              "depth": "selected-sections",
+              "note": "Function compile-only change; retained imports and adjacent exec methods prevent whole-product inference",
+              "url": "https://github.com/langflow-ai/langflow/blob/a66b75ac2603b26988fb6be95303fdc61f807190/src/lfx/src/lfx/custom/validate.py"
+            },
+            {
+              "sha256": "8e2987fc31484133cfdb421360e48360c6f66c6346009b0635bb162cc35384ee",
+              "actual_read_ranges": [
+                [
+                  1,
+                  185
+                ]
+              ],
+              "depth": "full-JSON-text",
+              "note": "CNA identity/range/solution and CISA ADP KEV Aug4; no score recalculation",
+              "url": "https://github.com/CVEProject/cvelistV5/blob/54d12b277c27b642b6dd41df67fb1244110610f4/cves/2026/9xxx/CVE-2026-9198.json"
+            },
+            {
+              "sha256": "a33cfeaf814082eb5879551c4b01b159f3001e69cbb885a9e11e6fc0a5873fb4",
+              "actual_read_ranges": [
+                [
+                  1,
+                  157
+                ]
+              ],
+              "depth": "full-JSON-text",
+              "note": "Authenticated validation component; no score recalculation",
+              "url": "https://github.com/CVEProject/cvelistV5/blob/54d12b277c27b642b6dd41df67fb1244110610f4/cves/2026/8xxx/CVE-2026-8481.json"
+            },
+            {
+              "sha256": "dc2edaaa579c557af3dacde77e96e9adadd91103e383781510d2ee91435a8424",
+              "actual_read_ranges": [
+                [
+                  1,
+                  157
+                ]
+              ],
+              "depth": "full-JSON-text",
+              "note": "AUTO_LOGIN requirement/default and differing /login path; no score recalculation",
+              "url": "https://github.com/CVEProject/cvelistV5/blob/54d12b277c27b642b6dd41df67fb1244110610f4/cves/2026/9xxx/CVE-2026-9103.json"
+            },
+            {
+              "sha256": "27d4b163e2e6cd6d75cf63521c4bf4e5b1915d1b552a5977580058eb4381c0f6",
+              "actual_read_ranges": [
+                [
+                  1,
+                  207
+                ]
+              ],
+              "depth": "full-JSON-text",
+              "note": "WPScan untrusted plugin/theme input prerequisite and branch ranges; no score recalculation",
+              "url": "https://github.com/CVEProject/cvelistV5/blob/54d12b277c27b642b6dd41df67fb1244110610f4/cves/2026/60xxx/CVE-2026-60137.json"
+            }
+          ]
+        },
+        {
+          "path": "Web安全/CMS内容/WordPress/非插件漏洞，WordPress 未授权 SQL 注入漏洞链可导致RCE.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2026-60137"
+          ],
+          "specific_public_method": "Complete nested Batch transport, inherited IF/SLEEP construction, concrete true/false time contrast; source scenario is illustrative and hash is placeholder",
+          "scope": "WordPress core WP_Query; chained REST Batch access via CVE-2026-63030",
+          "limits": [
+            "RCE chain not reviewed or proven",
+            "Plugin-independent exposure not inferred for standalone60137/6.8",
+            "No WordPress core implementation or full generic HTTP/Ruby dependency audit",
+            "Timing jitter and malformed/unexpected responses remain runtime limitations"
+          ],
+          "current_sha256": "775bede9ed706e6d46be94d4c8570cbe64c9b20f2b21bab8f89d2ea87e439fac",
+          "original_body_and_frontmatter_preserved": true,
+          "runtime_executed": false,
+          "concrete_input": [
+            "wp-sqli-fixed.txt:11-21 primer/item constants",
+            "wp-sqli-fixed.txt:79-132 full HTTP/nested transport",
+            "wp-sqli-fixed.txt:146-170 run path",
+            "wp-timeblind-mixin.txt:11-15 true and false conditions",
+            "wp-mysql-common.txt:230-232,354-355 SQL delay expression"
+          ],
+          "outcome": "blind_request measures closure duration against SqliDelay; test_vulnerable requires delayed true and not-delayed false. Source doc103-120 shows illustrative credentials output; screenshot is supporting claimed output only",
+          "version": "SQLi:6.8.0-6.8.5,6.9.0-6.9.4,7.0.0-7.0.1. This anonymous chain:6.9.0-6.9.4 and7.0.0-7.0.1. Fixes6.8.6,6.9.5,7.0.2 and7.1beta2 per release",
+          "prerequisites": "Standalone SQLi requires untrusted author__not_in through plugin/theme; anonymous core chain separately requires63030 path and reachable REST Batch. Source lab retains Hello World post",
+          "source_receipts": [
+            {
+              "sha256": "f2ae5364233a8520a2c8ddec1e63568a86d04ae5b18c56de40b257cb99382dca",
+              "actual_read_ranges": [
+                [
+                  1,
+                  171
+                ]
+              ],
+              "depth": "full-source-file",
+              "note": "Complete nested payload transport, marker probe and runtime test path",
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/auxiliary/scanner/http/wordpress_wp2shell_sqli.rb"
+            },
+            {
+              "sha256": "68c88207d535338932ac28659b4e4b5cba17dd0dd95d627bb5c19c7911861c44",
+              "actual_read_ranges": [
+                [
+                  1,
+                  132
+                ]
+              ],
+              "depth": "full-technical-text",
+              "note": "Lab, source-only scenario/placeholder hash, prerequisites, 6.8 exclusion",
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/documentation/modules/auxiliary/scanner/http/wordpress_wp2shell_sqli.md"
+            },
+            {
+              "sha256": "3eb132238e91bdea41ca89f7279a967ae87f79eb4b8a272d57e44e89a6b6be98",
+              "actual_read_ranges": [
+                [
+                  1,
+                  7
+                ]
+              ],
+              "depth": "full-source-file",
+              "note": "Inheritance/mixin selection",
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/lib/msf/core/exploit/sqli/mysqli/time_based_blind.rb"
+            },
+            {
+              "sha256": "37eeb84ebbc05484f944a44922f256e1cd64ad024ae2d7aabdbba8a649222950",
+              "actual_read_ranges": [
+                [
+                  1,
+                  55
+                ]
+              ],
+              "depth": "full-source-file",
+              "note": "True/false validation, timing, extraction flow",
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/lib/msf/core/exploit/sqli/time_based_blind_mixin.rb"
+            },
+            {
+              "sha256": "4254db459fc385e34fcd71657023ddd71afe11034161c4044cf73265103e0777",
+              "actual_read_ranges": [
+                [
+                  1,
+                  200
+                ]
+              ],
+              "depth": "full-source-file",
+              "note": "Called table-prefix/users methods vs uncalled write methods",
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/lib/msf/core/exploit/remote/http/wordpress/sqli.rb"
+            },
+            {
+              "sha256": "39e6384ba4d84dc0786d4fe302cec1dbd7bef21f6b376df47b6c9ecc14129683",
+              "actual_read_ranges": [
+                [
+                  1,
+                  370
+                ]
+              ],
+              "depth": "full-source-file",
+              "note": "Full MySQL delay and extraction implementation read in1–190/191–370 chunks",
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/lib/msf/core/exploit/sqli/mysqli/common.rb"
+            },
+            {
+              "sha256": "4b5bed8887de44bdb05d1f7a9fd1eae282ee7375661b74950779909c678395d1",
+              "actual_read_ranges": [
+                [
+                  1,
+                  31
+                ]
+              ],
+              "depth": "full-source-file",
+              "note": "Fetched fixed commit via GitHub read-only connector; constructor/block binding; no execution",
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/lib/msf/core/exploit/sqli.rb"
+            },
+            {
+              "sha256": "912e4cc20882efbddca3ab1ea073daef70fece799f3fd48de8eb938cda1b811e",
+              "actual_read_ranges": [
+                [
+                  1,
+                  87
+                ]
+              ],
+              "depth": "full-source-file",
+              "note": "Fetched fixed commit via GitHub read-only connector; constructor/block binding; no execution",
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/lib/msf/core/exploit/sqli/common.rb"
+            }
+          ]
+        }
+      ]
     }
   ],
   "current_totals": {
-    "article_files": 189,
+    "article_files": 209,
     "new_files": 118,
-    "supplemented_files": 71,
-    "qualified_candidate_ids": 202,
+    "supplemented_files": 91,
+    "qualified_candidate_ids": 222,
     "full_scope_complete": false
   },
   "subsequent_master_sync": {

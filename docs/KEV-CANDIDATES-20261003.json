@@ -8,7 +8,7 @@
   "removed_entry": "CVE-2026-69836",
   "master_commit": "cfb19294812b1435a57e866a87dd18e2ff3ebec3",
   "open_pr10_commit": "e102e1d2fb26e381e7c4d270629738d0f3f8654d",
-  "completed_article_deliverables": 189,
+  "completed_article_deliverables": 209,
   "coverage_note": "All filter identities inventoried; substantive source review remains in progress. Identifier matches do not by themselves prove duplicates.",
   "rows": [
     {
@@ -1714,15 +1714,20 @@
         "Web安全/CMS内容/WordPress/非插件漏洞，WordPress 未授权 SQL 注入漏洞链可导致RCE.md"
       ],
       "review": {
-        "disposition": "still-pending",
-        "reading_depth": "bounded-search-advisory-only",
-        "pending_subtype": "pending-known-readable-material",
-        "articles": [],
-        "material_absence_claim": false
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/CMS内容/WordPress/非插件漏洞，WordPress 未授权 SQL 注入漏洞链可导致RCE.md",
+            "mode": "supplement",
+            "sha256": "775bede9ed706e6d46be94d4c8570cbe64c9b20f2b21bab8f89d2ea87e439fac"
+          }
+        ],
+        "material_absence_claim": false,
+        "scope": "Independently reviewed concrete public method and exact final append; not runtime reproduction."
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -1755,15 +1760,20 @@
         "Web安全/AI应用/Langflow/（CVE-2026-9198）IBM Langflow未认证RCE漏洞.md"
       ],
       "review": {
-        "disposition": "still-pending",
-        "reading_depth": "existing-wiki-body-only",
-        "pending_subtype": "pending-known-readable-material",
-        "articles": [],
-        "material_absence_claim": false
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/AI应用/Langflow/（CVE-2026-9198）IBM Langflow未认证RCE漏洞.md",
+            "mode": "supplement",
+            "sha256": "9a851d72767ff2fe339023290b6f8faefa67f63b935d66db7aae6e51591d572c"
+          }
+        ],
+        "material_absence_claim": false,
+        "scope": "Independently reviewed concrete public method and exact final append; not runtime reproduction."
       },
       "audited_reading_depth": "existing-wiki-body-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -7059,15 +7069,20 @@
         "Web安全/邮件系统/SmarterMail/CVE-2026-23760.md"
       ],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": "author-pending-peer",
-        "articles": [],
-        "material_absence_claim": false
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/邮件系统/Zimbra/浅析 CVE-2025-68645 Zimbra 属性覆盖导致本地文件包含漏洞.md",
+            "mode": "supplement",
+            "sha256": "02cfae646d938af25758d86a034221ecde709c3d4345493feec6173521b467e2"
+          }
+        ],
+        "material_absence_claim": false,
+        "scope": "Independently reviewed concrete public method and exact final append; not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -7402,15 +7417,20 @@
         "Web安全/其他软件/杂项/【在野利用】HPE OneView 远程代码执行漏洞(CVE-2025-37164).md"
       ],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": "author-pending-peer",
-        "articles": [],
-        "material_absence_claim": false
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/其他软件/杂项/【在野利用】HPE OneView 远程代码执行漏洞(CVE-2025-37164).md",
+            "mode": "supplement",
+            "sha256": "f05f0af3b5f51c1dc97084096c473e7f12b7f7aa83f180a956972db04cb30726"
+          }
+        ],
+        "material_absence_claim": false,
+        "scope": "Independently reviewed concrete public method and exact final append; not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -7443,15 +7463,20 @@
         "Web安全/其他软件/杂项/CVE-2025-14611.md"
       ],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": "author-pending-peer",
-        "articles": [],
-        "material_absence_claim": false
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/其他软件/杂项/CVE-2025-14611.md",
+            "mode": "supplement",
+            "sha256": "521d7c3c37cc12686672c695b1d19d295d39395fb6c89259368408a549a3fa3f"
+          }
+        ],
+        "material_absence_claim": false,
+        "scope": "Independently reviewed concrete public method and exact final append; not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -7584,15 +7609,20 @@
         "Web安全/开发框架/Gogs/Gogs-符号链接导致远程命令注入漏洞-CVE-2025-8110.md"
       ],
       "review": {
-        "disposition": "still-pending",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": "pending-known-readable-material",
-        "articles": [],
-        "material_absence_claim": false
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/开发框架/Gogs/Gogs-符号链接导致远程命令注入漏洞-CVE-2025-8110.md",
+            "mode": "supplement",
+            "sha256": "db8cb3b19f77ac583b8bdc2fcbb040e675023d6a13a66e3314acd48582e19922"
+          }
+        ],
+        "material_absence_claim": false,
+        "scope": "Independently reviewed concrete public method and exact final append; not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -7921,15 +7951,20 @@
         "Web安全/中间件/GeoServer/GeoServer WMS GetMap XML 外部实体注入漏洞（CVE-2025-58360）.md"
       ],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": "author-pending-peer",
-        "articles": [],
-        "material_absence_claim": false
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/中间件/GeoServer/GeoServer WMS GetMap XML 外部实体注入漏洞（CVE-2025-58360）.md",
+            "mode": "supplement",
+            "sha256": "5b5522460f3ad17396e0088e9ca7af7f4a7185251cca72208aef34b8330039d2"
+          }
+        ],
+        "material_absence_claim": false,
+        "scope": "Independently reviewed concrete public method and exact final append; not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -8311,15 +8346,20 @@
         "Web安全/其他软件/杂项/CVE-2025-61757.md"
       ],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": "author-pending-peer",
-        "articles": [],
-        "material_absence_claim": false
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/其他软件/杂项/CVE-2025-61757.md",
+            "mode": "supplement",
+            "sha256": "2dc8c8dbd9bf1e0c5e99dfbd74313b71f182b2b64872497d0d7d90971e52a1ad"
+          }
+        ],
+        "material_absence_claim": false,
+        "scope": "Independently reviewed concrete public method and exact final append; not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -9232,15 +9272,20 @@
         "系统安全/Linux/CISA：三个Linux 内核漏洞已遭活跃利用.md"
       ],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": "author-pending-peer",
-        "articles": [],
-        "material_absence_claim": false
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "系统安全/Linux/(7.1分) CVE-2025-39682：Linux内核TLS UAF本地提权.md",
+            "mode": "supplement",
+            "sha256": "bdec6da4a93694127534e6d1c6e80a6a0a669fff4b8b294239496ecc8fedfde4"
+          }
+        ],
+        "material_absence_claim": false,
+        "scope": "Independently reviewed concrete public method and exact final append; not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -9865,15 +9910,20 @@
         "Web安全/其他软件/杂项/CVE-2025-54309.md"
       ],
       "review": {
-        "disposition": "still-pending",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": "pending-known-readable-material",
-        "articles": [],
-        "material_absence_claim": false
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/其他软件/杂项/CVE-2025-54309.md",
+            "mode": "supplement",
+            "sha256": "b9f63139a01399af4a81406cfcbe01f76078778ed189058e185207bb53939f4f"
+          }
+        ],
+        "material_absence_claim": false,
+        "scope": "Independently reviewed concrete public method and exact final append; not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -10291,15 +10341,20 @@
         "Web安全/开发框架/Git/Git项目修复三大漏洞：远程代码执行、任意文件写入与缓冲区溢出.md"
       ],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": "author-pending-peer",
-        "articles": [],
-        "material_absence_claim": false
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/开发框架/Git/Git 远程代码执行漏洞预警(CVE-2025-48384).md",
+            "mode": "supplement",
+            "sha256": "9b51f200c58c7019fede2360adf7b5a1a3a72821dfda802bded34627985a936b"
+          }
+        ],
+        "material_absence_claim": false,
+        "scope": "Independently reviewed concrete public method and exact final append; not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -10544,15 +10599,20 @@
         "Web安全/网络设备/Cisco/思科：满分ISE漏洞可导致未认证攻击者执行root 代码.md"
       ],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": "author-pending-peer",
-        "articles": [],
-        "material_absence_claim": false
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/网络设备/Cisco/思科提醒 ISE 中的满分 RCE 漏洞.md",
+            "mode": "supplement",
+            "sha256": "368a137243ae02c0d8aa04d94d32402e9d34225078e3e06b7191d958c6e5526f"
+          }
+        ],
+        "material_absence_claim": false,
+        "scope": "Independently reviewed concrete public method and exact final append; not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -10748,15 +10808,20 @@
         "Web安全/云平台/Dutch NCSC Confirms Active/Dutch NCSC Confirms Active Exploitation of Citrix NetScaler CVE-2025-6.md"
       ],
       "review": {
-        "disposition": "still-pending",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": "pending-known-readable-material",
-        "articles": [],
-        "material_absence_claim": false
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/云平台/Citrix/CVE-2025-5777.md",
+            "mode": "supplement",
+            "sha256": "56894235a92b4613d2221a902f0d888fb47c7007870767cd73fb970765a8ab85"
+          }
+        ],
+        "material_absence_claim": false,
+        "scope": "Independently reviewed concrete public method and exact final append; not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -10848,15 +10913,20 @@
         "Web安全/服务器软件/Active Directory/利用 NTLM 反射掌控 Active Directory（CVE-2025-33073）.md"
       ],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": "author-pending-peer",
-        "articles": [],
-        "material_absence_claim": false
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/服务器软件/Active Directory/利用 NTLM 反射掌控 Active Directory（CVE-2025-33073）.md",
+            "mode": "supplement",
+            "sha256": "bd9c4cb15653a6905e4136aa7a1809fef0328ba27d8f07eca7ae23b6ce553e70"
+          }
+        ],
+        "material_absence_claim": false,
+        "scope": "Independently reviewed concrete public method and exact final append; not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -10889,15 +10959,20 @@
         "Web安全/服务器软件/Commvault/CVE-2025-33053 Poc复现研究细节.md"
       ],
       "review": {
-        "disposition": "still-pending",
-        "reading_depth": "existing-wiki-body-only",
-        "pending_subtype": "pending-known-readable-material",
-        "articles": [],
-        "material_absence_claim": false
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/服务器软件/Commvault/CVE-2025-33053 Poc复现研究细节.md",
+            "mode": "supplement",
+            "sha256": "d404a5de3bafd00d5f4da94f6c4aa01c5a48af4dae3c8664c1c54e3d00d00643"
+          }
+        ],
+        "material_absence_claim": false,
+        "scope": "Independently reviewed concrete public method and exact final append; not runtime reproduction."
       },
       "audited_reading_depth": "existing-wiki-body-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -11335,15 +11410,20 @@
         "Web安全/其他软件/杂项/【成功复现】Meteobridge命令执行漏洞(CVE-2025-4008).md"
       ],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": "author-pending-peer",
-        "articles": [],
-        "material_absence_claim": false
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/其他软件/杂项/【成功复现】Meteobridge命令执行漏洞(CVE-2025-4008).md",
+            "mode": "supplement",
+            "sha256": "0ad7c477230bb2290c23bd337a75bd299cfdcd08970f5bdc23f7c7f92f23d40a"
+          }
+        ],
+        "material_absence_claim": false,
+        "scope": "Independently reviewed concrete public method and exact final append; not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -11499,7 +11579,7 @@
         "Web安全/其他软件/杂项/2025年5月企业必修安全漏洞清单.md"
       ],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "existing-wiki-body-only",
         "pending_subtype": "pending-known-readable-material",
         "articles": [],
@@ -11507,8 +11587,8 @@
       },
       "audited_reading_depth": "existing-wiki-body-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2025-4427",
@@ -11558,7 +11638,7 @@
         "Web安全/其他软件/杂项/2025年5月企业必修安全漏洞清单.md"
       ],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": "pending-known-readable-material",
         "articles": [],
@@ -11566,8 +11646,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2025-32756",
@@ -11630,15 +11710,20 @@
         "Web安全/智能设备/三星MagicINFO/漏洞复现  Samsung MagicINFO 9 Server 路径遍历导致任意文件写入漏洞（CVE-2025-4632）.md"
       ],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": "author-pending-peer",
-        "articles": [],
-        "material_absence_claim": false
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/智能设备/三星MagicINFO/漏洞复现  Samsung MagicINFO 9 Server 路径遍历导致任意文件写入漏洞（CVE-2025-4632）.md",
+            "mode": "supplement",
+            "sha256": "b3fdde69663fae3430f6a169c30ffdca63baeecf0c76fc93dcfb4e41e0ebe0b5"
+          }
+        ],
+        "material_absence_claim": false,
+        "scope": "Independently reviewed concrete public method and exact final append; not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -12426,15 +12511,20 @@
         "Web安全/其他软件/杂项/CVE-2025-22457.md"
       ],
       "review": {
-        "disposition": "still-pending",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": "pending-known-readable-material",
-        "articles": [],
-        "material_absence_claim": false
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/其他软件/杂项/CVE-2025-22457.md",
+            "mode": "supplement",
+            "sha256": "d87f7d76e48770ba4fe9596e7c535f203bf3e8c6e6bc4e9531e194df41ace00b"
+          }
+        ],
+        "material_absence_claim": false,
+        "scope": "Independently reviewed concrete public method and exact final append; not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -13559,15 +13649,20 @@
         "Web安全/CMS内容/Craft CMS/CISA：Craft CMS代码注入漏洞已遭利用.md"
       ],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": "author-pending-peer",
-        "articles": [],
-        "material_absence_claim": false
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/网络设备/Palo Alto/Palo Alto Networks PAN-OS 身份验证绕过漏洞(CVE-2025-0108).md",
+            "mode": "supplement",
+            "sha256": "920afc6212164f33b1c6eef00e1eb9da1fda14055464d9d28bbb6d2ee378610b"
+          }
+        ],
+        "material_absence_claim": false,
+        "scope": "Independently reviewed concrete public method and exact final append; not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -13663,15 +13758,20 @@
         "Web安全/安全设备/Wazuh/CVE-2025-24016漏洞对Wazuh平台的潜在威胁.md"
       ],
       "review": {
-        "disposition": "still-pending",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": "pending-known-readable-material",
-        "articles": [],
-        "material_absence_claim": false
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/安全设备/Wazuh/CVE-2025-24016漏洞对Wazuh平台的潜在威胁.md",
+            "mode": "supplement",
+            "sha256": "0ba837335a5a48440b353ab5beadbafcafe389639156bd7077b4839fe946446b"
+          }
+        ],
+        "material_absence_claim": false,
+        "scope": "Independently reviewed concrete public method and exact final append; not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -62473,18 +62573,17 @@
     }
   ],
   "new_article_files": 118,
-  "existing_article_files_supplemented": 71,
-  "candidates_with_integrated_material": 202,
+  "existing_article_files_supplemented": 91,
+  "candidates_with_integrated_material": 222,
   "disposition_counts": {
-    "still-pending": 56,
-    "published": 202,
+    "still-pending": 46,
+    "published": 222,
     "bounded-hold": 311,
-    "platform-blocked": 1130,
-    "sufficient-duplicate": 16,
-    "awaiting-peer-or-required-notes": 12
+    "platform-blocked": 1132,
+    "sufficient-duplicate": 16
   },
-  "updated_utc": "2026-10-03T15:38:12.762187+00:00",
-  "qualified_material_candidate_count": 202,
+  "updated_utc": "2026-10-03T16:01:43.808387+00:00",
+  "qualified_material_candidate_count": 222,
   "withdrawn_new_files": 33,
   "withdrawn_appends": 7,
   "current_master_base": "b176eecef836688c637e60c94284ccec1f1427c5",
@@ -62499,13 +62598,12 @@
     "baseline-restricted-not-reclassified": 215
   },
   "audited_disposition_counts": {
-    "still-pending": 56,
-    "published": 202,
+    "still-pending": 46,
+    "published": 222,
     "bounded-hold": 311,
-    "platform-blocked": 1130,
-    "sufficient-duplicate": 16,
-    "awaiting-peer-or-required-notes": 12
+    "platform-blocked": 1132,
+    "sufficient-duplicate": 16
   },
-  "current_blocked_scope_count": 1179,
+  "current_blocked_scope_count": 1181,
   "current_scope_pause_publication_overlap": 49
 }
