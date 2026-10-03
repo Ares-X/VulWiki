@@ -2,10 +2,10 @@
 source: "wy876 漏洞文库"
 title: "Supabase query存在SQL注入漏洞"
 product: "Supabase Studio"
-record_type: "vulnerability"
+record_type: "analysis"
 review_status: "text-reviewed"
 verification_status: "not-reproduced"
-content_status: "quarantined"
+content_status: "needs-review"
 identifier_status: "unknown"
 primary_identifiers: ""
 referenced_identifiers: ""
@@ -18,6 +18,10 @@ id: "vw-0eff0e8f87f4bdcdb9fb7d1a"
 entity_id: "ve-0eff0e8f87f4bdcdb9fb7d1a"
 schema_version: "1"
 ---
+
+## 收录状态复核（2026-10-03）
+
+本文作为 SQL 管理接口误判的分析材料收录，保留 query 请求及原作者主张。接口执行 SQL 是预期管理功能；现有材料没有证明匿名访问、越权、SQL 注入或服务器执行能力。缺少权限边界与响应证据应明确提醒，不因此隐藏可供比对的原始请求。本次仅静态核对；验证状态仍为未复现。
 
 # Supabase query存在SQL注入漏洞
 

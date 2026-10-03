@@ -335,6 +335,8 @@ P1 · 当天完成（安全加固）
 ☐**排查访问日志**  
 ：检查是否存在异常的 astream_events() 调用或文件读取行为  
   
+> 本库校订：原文路径白名单示例在拼接后尚未 resolve，startswith 也没有目录边界，不能用于防护。
+
 代码加固示例  
   
 # ✅ 防御 CVE-2025-68664 - 升级后默认安全，无需额外配置  
@@ -380,7 +382,6 @@ safe_load_prompt(template_path: str, base_dir: str =
 "/app/prompts"  
 ):  
   
-    # 原文不安全示例：拼接后尚未 resolve，下面 startswith 也没有目录边界，不能用于防护
     resolved = Path(base_dir).resolve() / template_path  
   
       

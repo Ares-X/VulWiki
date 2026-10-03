@@ -41,6 +41,10 @@
 
 - [74cms v4.2.126-前台四处sql注入](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/74cms/74cms%20v4.2.126-%E5%89%8D%E5%8F%B0%E5%9B%9B%E5%A4%84sql%E6%B3%A8%E5%85%A5.md) [analysis; not-reproduced; needs-review]
 
+## AccountEdit.aspx 所属产品待核（原微擎归属冲突）
+
+- [AccountEdit.aspx 上传记录（与原微擎产品归属冲突，待核）](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/%E5%BE%AE%E6%93%8E/%E5%BE%AE%E6%93%8E%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E7%B3%BB%E7%BB%9FAccountEdit%E5%AD%98%E5%9C%A8%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E.md) [analysis; not-reproduced; needs-review]
+
 ## Adobe Commerce + Magento Open Source
 
 - [漏洞预警  Magento Open Source XXE漏洞](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/Magento/%E6%BC%8F%E6%B4%9E%E9%A2%84%E8%AD%A6%20%20Magento%20Open%20Source%20XXE%E6%BC%8F%E6%B4%9E.md) [advisory; not-reproduced; needs-review]

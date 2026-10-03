@@ -56,6 +56,7 @@ prometheus收集所有exporter的指标数据，汇总后通常由grafana去调�
 通过Basic Auth功能进行加密，在浏览器登录UI的时候需要输入用户密码，访问Prometheus api的时候也需要加上用户密码。  
 生产的prometheus版本2.17.1，版本太古老，Prometheus于2.24版本（包括2.24）之后提供Basic Auth功能进行加密访问，因此还需要做个升级。（跨大版本的升级，不考虑历史数据的兼容问题，不保留历史数据）  
 # 升级  
+
 ```
 ##下载升级包地址
 wget https://github.com/prometheus/prometheus/releases/download/v3.0.0/prometheus-3.0.0.linux-amd64.tar.gz

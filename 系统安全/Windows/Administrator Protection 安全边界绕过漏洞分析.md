@@ -123,6 +123,7 @@ Microsoft 的文档提供了概述，但并非所有设计细节。例如，我�
   
 登录会话作为引用被添加到登录过程中创建的访问令牌中，以便在使用该令牌的任何内核操作期间可以轻松引用。您可以通过使用 NtQueryInformationToken  
 系统调用查询令牌来找到会话的唯一 64 位认证 ID。在 UAC 中，受限和已链接的管理员访问令牌被分配了单独的登录会话，如以下脚本所示，您可以看到受限令牌和已链接令牌具有不同的认证 ID LUID 值：  
+
 ```
 # 获取当前令牌的认证 ID
 PS> Get-NtTokenId -Authentication
@@ -176,6 +177,7 @@ CREATOR OWNER: (Allowed)(ObjectInherit, ContainerInherit, InheritOnly)(GenericAl
   
 您可能会问，谁创建了这个 DOS 设备对象目录？答案是内核在首次访问该目录时会按需创建它。创建代码在 SeGetTokenDeviceMap  
 中，大致如下所示：  
+
 ```
 NTSTATUS SeGetTokenDeviceMap(PTOKEN Token, PDEVICE_MAP *ppDeviceMap) {
  *ppDeviceMap = Token->LogonSession->pDeviceMap;
@@ -222,6 +224,7 @@ NTSTATUS SeGetTokenDeviceMap(PTOKEN Token, PDEVICE_MAP *ppDeviceMap) {
   
 绕过访问检查是此代码正常运行所必需的；让我们看看 \Sessions\0\DosDevices  
 目录的访问控制。  
+
 ```
 PS> Format-NtSecurityDescriptor -Path \Sessions\0\DosDevices -Summary
 <Owner> : BUILTIN\Administrators
@@ -259,6 +262,7 @@ CREATOR OWNER: (Allowed)(ObjectInherit, ContainerInherit, InheritOnly)(GenericAl
 使用 TokenLinkedToken  
 信息类调用仍返回管理员令牌的识别句柄。但在此情况下，它是影子管理员的令牌，而不是用户的令牌的管理员版本。但一个关键的区别是，虽然对于 UAC 此令牌每次都是相同的，但在 Administrator Protection 中，内核会调用 LSA 并认证影子管理员的新实例。这导致从 TokenLinkedToken  
 返回的每个令牌都具有唯一的登录会话，因此当前尚未创建 DOS 设备对象目录，如下所示：  
+
 ```
 PS> $t = Get-NtToken -Linked
 PS> $auth_id = Get-NtTokenId -Authentication -Token $t
@@ -285,6 +289,7 @@ API，它会静默运行提升的二进制文件。唯一的问题是进程不�
 标志的成员组。唯一具有所有者标志的组是本地管理员组，当然影子管理员的 SID 与受限用户的不同。因此，将这两个 SID 中的任何一个设置为所有者都对我们访问创建后的目录没有帮助。  
   
 事实证明这不是问题，因为我并没有说出所有者分配过程的全部真相。为新对象构建访问控制时，如果线程在识别级别模拟令牌，内核不会信任模拟令牌。这是出于良好的安全原因，识别令牌本不应用于做出访问控制决策，因此在创建对象时分配其所有者没有意义。相反，内核使用进程的主令牌来做出该决策，因此分配的所有者是受限用户的 SID。事实上，为 UAC 绕过设置所有者 SID 从来都不是必需的，它从未被使用。您可以通过创建无名称的对象来验证此行为，这样可以在模拟识别令牌时创建它，并检查分配的所有者 SID：  
+
 ```
 PS> $t = Get-NtToken -Anonymous
 # 模拟匿名令牌并创建目录

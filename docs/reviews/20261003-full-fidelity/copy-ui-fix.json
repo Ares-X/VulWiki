@@ -1,0 +1,263 @@
+{
+  "files": [
+    {
+      "path": "Web安全/CMS内容/WordPress/Wordpress 4.9.6 任意文件删除漏洞.md",
+      "archive_commit": "41940cb0038d09ca5aaddbe5bffb923e423d210f",
+      "archive_blob": "43f61e00732f8af293820d5226694d14cdbc948f",
+      "before_sha256": "a2fd0d4b3709a7b4db2f33c9c9da31887724df53c40ed624027d927e47289ebb",
+      "after_sha256": "f4b3b8388303fcf3c8cc621ad8721cb711b1fba747dfa8f1bbc313432f80bd03",
+      "ui_only_code_fences_moved_to_inline_archival_quote": 6,
+      "literal_ui_values": [
+        "[](javascript:void(0);)",
+        "[](javascript:void(0);)",
+        "[](javascript:void(0);)",
+        "[](javascript:void(0);)",
+        "[](javascript:void(0);)",
+        "[](javascript:void(0);)"
+      ],
+      "archive_line_numbers": [
+        [
+          19,
+          39,
+          47,
+          64,
+          74,
+          88
+        ],
+        [
+          19,
+          39,
+          47,
+          64,
+          74,
+          88
+        ],
+        [
+          19,
+          39,
+          47,
+          64,
+          74,
+          88
+        ],
+        [
+          19,
+          39,
+          47,
+          64,
+          74,
+          88
+        ],
+        [
+          19,
+          39,
+          47,
+          64,
+          74,
+          88
+        ],
+        [
+          19,
+          39,
+          47,
+          64,
+          74,
+          88
+        ]
+      ],
+      "mechanism": "Only replace UI-only text fences with archival inline code quotes. Keep UI values and all neighboring technical examples unchanged; no active javascript links introduced."
+    },
+    {
+      "path": "Web安全/开发框架/KindEditor/kindeditor 4.1.5上传漏洞.md",
+      "archive_commit": "41940cb0038d09ca5aaddbe5bffb923e423d210f",
+      "archive_blob": "ef970c60e06a9e0dcd69e57ba2d4aa7b5d5cf815",
+      "before_sha256": "fda6a702bf486db2d314713a385348e89ff858f07ba2a40f077017f2cfe0724c",
+      "after_sha256": "f1f21fab4e2e32529e6a1224f24560cdad88df30030a922d600e07baff177e32",
+      "ui_only_code_fences_moved_to_inline_archival_quote": 10,
+      "literal_ui_values": [
+        "[![复制代码](./.resource/kindeditor4.1.5上传漏洞/media/img-48304ba5.gif)](javascript:void(0);)",
+        "[![复制代码](./.resource/kindeditor4.1.5上传漏洞/media/img-48304ba5.gif)](javascript:void(0);)",
+        "[![复制代码](./.resource/kindeditor4.1.5上传漏洞/media/img-48304ba5.gif)](javascript:void(0);)",
+        "[![复制代码](./.resource/kindeditor4.1.5上传漏洞/media/img-48304ba5.gif)](javascript:void(0);)",
+        "[![复制代码](./.resource/kindeditor4.1.5上传漏洞/media/img-48304ba5.gif)](javascript:void(0);)",
+        "[![复制代码](./.resource/kindeditor4.1.5上传漏洞/media/img-48304ba5.gif)](javascript:void(0);)",
+        "[![复制代码](./.resource/kindeditor4.1.5上传漏洞/media/img-48304ba5.gif)](javascript:void(0);)",
+        "[![复制代码](./.resource/kindeditor4.1.5上传漏洞/media/img-48304ba5.gif)](javascript:void(0);)",
+        "[![复制代码](./.resource/kindeditor4.1.5上传漏洞/media/img-48304ba5.gif)](javascript:void(0);)",
+        "[![复制代码](./.resource/kindeditor4.1.5上传漏洞/media/img-48304ba5.gif)](javascript:void(0);)"
+      ],
+      "archive_line_numbers": [
+        [
+          19,
+          35,
+          45,
+          57,
+          61,
+          73,
+          89,
+          101,
+          115,
+          221
+        ],
+        [
+          19,
+          35,
+          45,
+          57,
+          61,
+          73,
+          89,
+          101,
+          115,
+          221
+        ],
+        [
+          19,
+          35,
+          45,
+          57,
+          61,
+          73,
+          89,
+          101,
+          115,
+          221
+        ],
+        [
+          19,
+          35,
+          45,
+          57,
+          61,
+          73,
+          89,
+          101,
+          115,
+          221
+        ],
+        [
+          19,
+          35,
+          45,
+          57,
+          61,
+          73,
+          89,
+          101,
+          115,
+          221
+        ],
+        [
+          19,
+          35,
+          45,
+          57,
+          61,
+          73,
+          89,
+          101,
+          115,
+          221
+        ],
+        [
+          19,
+          35,
+          45,
+          57,
+          61,
+          73,
+          89,
+          101,
+          115,
+          221
+        ],
+        [
+          19,
+          35,
+          45,
+          57,
+          61,
+          73,
+          89,
+          101,
+          115,
+          221
+        ],
+        [
+          19,
+          35,
+          45,
+          57,
+          61,
+          73,
+          89,
+          101,
+          115,
+          221
+        ],
+        [
+          19,
+          35,
+          45,
+          57,
+          61,
+          73,
+          89,
+          101,
+          115,
+          221
+        ]
+      ],
+      "mechanism": "Only replace UI-only text fences with archival inline code quotes. Keep UI values and all neighboring technical examples unchanged; no active javascript links introduced."
+    },
+    {
+      "path": "Web安全/开发框架/PHP/PHP 开发服务器 小于等于 7.4.21 - 远程源泄露.md",
+      "archive_commit": "41940cb0038d09ca5aaddbe5bffb923e423d210f",
+      "archive_blob": "b4ae350a77f708980f74440d9db5d8179abf776b",
+      "before_sha256": "388e0434d576d02305d5096c76ecde8477f6746223f05d223ba572bb3932b6d3",
+      "after_sha256": "3a5d2605397fb472bb4ad80d260fef023db7eb3094b6b7754237819d7e40ed29",
+      "ui_only_code_fences_moved_to_inline_archival_quote": 1,
+      "literal_ui_values": [
+        "[Khan 安全攻防实验室](javascript:void(0);) **Khan 安全攻防实验室** "
+      ],
+      "archive_line_numbers": [
+        [
+          13
+        ]
+      ],
+      "mechanism": "Only replace UI-only text fences with archival inline code quotes. Keep UI values and all neighboring technical examples unchanged; no active javascript links introduced."
+    },
+    {
+      "path": "Web安全/CMS内容/PHPCMS/phpcms v9  authkey 注入 白帽子技术 - 思路 i 春秋社区 - 分享你的技术，为安全加点温度-.md",
+      "archive_commit": "41940cb0038d09ca5aaddbe5bffb923e423d210f",
+      "archive_blob": "76de1b30fbcde7bdb463a0ca4cf0b7039bd7fe68",
+      "before_sha256": "fc973da67f48b86979945d42cf0be42543d7a173e41b239ec190abea39a04a67",
+      "after_sha256": "962f030c6799151f602c3a9e42d81cab96a25508c004899b87f59c6b8d0bf161",
+      "ui_only_code_fences_moved_to_inline_archival_quote": 4,
+      "literal_ui_values": [
+        "[下载附件](forum.php?mod=attachment&aid=Mzg1OTZ8ZjRiYzcxMjR8MTYxMjA2NzY1OXwwfDE5MDMz&nothumb=yes)  [保存到相册](javascript:;)",
+        "[下载附件](forum.php?mod=attachment&aid=Mzg1OTd8MWVhZjhkMTV8MTYxMjA2NzY1OXwwfDE5MDMz&nothumb=yes)  [保存到相册](javascript:;)",
+        "[下载附件](forum.php?mod=attachment&aid=Mzg2MDB8OTEyNjE0NzR8MTYxMjA2NzY1OXwwfDE5MDMz&nothumb=yes)  [保存到相册](javascript:;)",
+        "[下载附件](forum.php?mod=attachment&aid=Mzg1OTl8NTUwMDU5YjF8MTYxMjA2NzY1OXwwfDE5MDMz&nothumb=yes)  [保存到相册](javascript:;)"
+      ],
+      "archive_line_numbers": [
+        [
+          13
+        ],
+        [
+          27
+        ],
+        [
+          37
+        ],
+        [
+          243
+        ]
+      ],
+      "mechanism": "Only replace UI-only text fences with archival inline code quotes. Keep UI values and all neighboring technical examples unchanged; no active javascript links introduced."
+    }
+  ],
+  "file_count": 4,
+  "fence_count": 21,
+  "no_execution": true
+}

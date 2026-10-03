@@ -1,10 +1,10 @@
 ---
 source: "wy876 漏洞文库"
 product: "AccountEdit.aspx 所属产品待核（原微擎归属冲突）"
-record_type: "unknown"
+record_type: "analysis"
 review_status: "text-reviewed"
 verification_status: "not-reproduced"
-content_status: "quarantined"
+content_status: "needs-review"
 primary_identifiers: ""
 referenced_identifiers: ""
 identifier_role: "unknown"
@@ -17,6 +17,10 @@ id: "vw-07388328b70e02b71a8392ed"
 entity_id: "ve-07388328b70e02b71a8392ed"
 schema_version: "1"
 ---
+
+## 收录状态复核（2026-10-03）
+
+本文保留的是未知 ASP.NET 组件的 AccountEdit.aspx 上传尝试及其状态参数，不作为微擎漏洞结论。产品归属冲突、文本文件上传与访问文件名不一致、鉴权及脚本执行证据缺口继续保留；这些限制不妨碍把原始请求作为待核分析材料检索。本次仅静态核对；验证状态仍为未复现。
 
 ## 核对与使用边界
 
