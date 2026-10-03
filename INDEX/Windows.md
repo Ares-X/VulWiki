@@ -48,6 +48,10 @@
 
 - [CVE-2025-59287](../Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/CVE-2025-59287.md) [vulnerability; source-claimed; needs-review]
 
+## Microsoft Windows fastfat.sys
+
+- [Windows FastFAT 簇计数溢出与 BSOD 证据边界（CVE-2025-24985）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Windows/Windows%20FastFAT%20%E7%B0%87%E8%AE%A1%E6%95%B0%E6%BA%A2%E5%87%BA%E4%B8%8E%20BSOD%20%E8%AF%81%E6%8D%AE%E8%BE%B9%E7%95%8C%EF%BC%88CVE-2025-24985%EF%BC%89.md) [analysis; not-reproduced; active]
+
 ## Microsoft Windows win32kfull.sys / GetProcessHandleFromHwnd
 
 - [Windows GetProcessHandleFromHwnd 保护进程边界与 PPLwindow 本地演示](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Windows/Windows%E6%9C%AC%E5%9C%B0%E6%8F%90%E6%9D%83%E6%BC%8F%E6%B4%9E/GetProcessHandleFromHwnd%E4%BF%9D%E6%8A%A4%E8%BF%9B%E7%A8%8B%E8%BE%B9%E7%95%8C%E4%B8%8EPPLwindow%E5%88%86%E6%9E%90.md) [analysis; not-reproduced; needs-review]

@@ -2438,5 +2438,684 @@
       }
     ],
     "historical_review_hashes_preserved": true
+  },
+  "continuation_batches": [
+    {
+      "reviewed_utc": "2026-10-03T09:54:24.750609+00:00",
+      "review_base": "96f1c40030f8ce0a41582aa7a476aed0620c6285",
+      "files_reviewed": 17,
+      "retained_files": 15,
+      "held_files": 2,
+      "qualified_candidate_ids": 18,
+      "rows": [
+        {
+          "path": "IOT安全/Edimax/Edimax IC-7100 NTP 参数命令注入与旧公开代码核对（CVE-2025-1316）.md",
+          "decision": "hold",
+          "qualified_cves": [],
+          "candidate_cves": [
+            "CVE-2025-1316"
+          ],
+          "reason": "端点、参数、认证条件和旧PoC到CVE的映射可信，但活动代码下载并执行不透明外部脚本；没有独立命令结果判据，只打印HTTP响应。原研究给攻击尝试/下游恶意程序记录，未提供独立固件命令验证结果。本批不把它计作完整已审核利用链。",
+          "specific_trigger": "Whole Go file: payload/payload1, poc(), main(); Akamai The vulnerability and Active exploitation HTML6612–6654",
+          "applicability": {
+            "product": "Edimax IC-7100 IP Camera",
+            "version": "CNA列IC-7100所有版本；Akamai指出可能涉及更多设备，但未给可确证的完整型号/固件矩阵",
+            "fixed_version": "退役设备不再提供更新；研究建议更换受支持设备；未确认厂商修复固件",
+            "prerequisites": "管理HTTP接口可达且已认证；公开样本使用默认admin:1234，不是无认证漏洞；旧Go文件主函数硬编码外部目标",
+            "side_effects": "修改NTP设置并执行命令；原公开样本下载脚本、改权限并运行，可能植入Mirai；不属于只读验证"
+          },
+          "public_evidence": [
+            {
+              "url": "https://github.com/R00tS3c/DDOS-RootSec/blob/41e5009c8da9bd9fff94ffef34db218e51a55560/Botnets/Exploits/Edimax/poc.go",
+              "sha256": "6c4a7f5f16433e6e45322b3844a976f9b07245704304bdcbcabb8b7878e34003",
+              "location": "Whole Go file: payload/payload1, poc(), main(); Akamai The vulnerability and Active exploitation HTML6612–6654"
+            }
+          ],
+          "current_sha256": null,
+          "runtime_executed": false
+        },
+        {
+          "path": "系统安全/iOS/Apple CoreMedia Remaker 轨道对象释放与公开崩溃 PoC（CVE-2025-24085）.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2025-24085"
+          ],
+          "candidate_cves": [
+            "CVE-2025-24085"
+          ],
+          "reason": "完整本地XPC/Remaker调用序列、异常轨道值、启动输出及退出清理具备；原作者明确此PoC只double-free崩溃。iOS18.2测试与iOS18私有布局条件必须保留，不扩为所有Apple版本或完整提权。",
+          "specific_trigger": "CVE-2025-24085.m: getMutableCompositionFigFormatReader, CreateTimeArray, remaker(), sourceTrackIDForFrameTiming=888, addVCTrack/startOutput/exit; companion markdown Impact",
+          "applicability": {
+            "product": "Apple CoreMedia / MediaToolbox Remaker",
+            "version": "公开PoC作者测试iOS18.2，使用iOS18高层接口；CNA涉及iOS/iPadOS、macOS、tvOS、visionOS、watchOS多个分支，不能把PoC适用范围推广至全部",
+            "fixed_version": "iOS/iPadOS18.3，iPadOS17.7.6，macOS15.3/14.7.5/13.7.5，tvOS18.3，visionOS2.3，watchOS11.3",
+            "prerequisites": "已能运行本地代码并访问相关CoreMedia XPC服务；PoC依赖iOS18私有接口/对象布局；不是独立网页初始利用",
+            "side_effects": "构造/启动Remaker任务，删除临时目录既有dest.mp4，创建输出文件并触发mediaplaybackd清理崩溃；不保证无数据或服务影响"
+          },
+          "public_evidence": [
+            {
+              "url": "https://github.com/b1n4r1b01/n-days/blob/a076dfcbfc0dce8b0bf63a2dc567fa15ff32b275/CVE-2025-24085/CVE-2025-24085.m",
+              "sha256": "4888d42928fc1cf96eb4a71047edc5c10ab5035a97fcb7be8ddc9c6a00ab6587",
+              "location": "CVE-2025-24085.m: getMutableCompositionFigFormatReader, CreateTimeArray, remaker(), sourceTrackIDForFrameTiming=888, addVCTrack/startOutput/exit; companion markdown Impact"
+            }
+          ],
+          "current_sha256": "15537d21d53f0065aa990dc4f31d994e3b7f9481cc7cde26b442026f2b50150b",
+          "runtime_executed": false
+        },
+        {
+          "path": "系统安全/Windows/Windows FastFAT 簇计数溢出与 BSOD 证据边界（CVE-2025-24985）.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2025-24985"
+          ],
+          "candidate_cves": [
+            "CVE-2025-24985"
+          ],
+          "reason": "公开手工验证给出文件系统构造条件和明确五字段值，后续挂载/解析及作者BSOD结果；不是仅补丁分析。驱动10.0.19041.5438/5607与OS19045.5608修复阈值区分，图片结果仍按作者记录。",
+          "specific_trigger": "Original Vulnerability analysis and BSOD Triggers; HTML649–693; five boot-sector values and fixed1GB FAT32 MBR VHD setup",
+          "applicability": {
+            "product": "Microsoft Windows fastfat.sys",
+            "version": "作者分析Windows10 22H2 x64；fastfat.sys10.0.19041.5438修复前、10.0.19041.5607修复后；其他产品以CNA分支矩阵为准",
+            "fixed_version": "Windows10 22H2构建10.0.19045.5608；11 24H2/Server2025为10.0.26100.3476等分支阈值见CNA，非统一KB",
+            "prerequisites": "攻击者提供恶意FAT32 VHD，需被系统挂载/处理；示例为固定大小1GB、MBR分区；不等于无需交互网络RCE",
+            "side_effects": "挂载畸形文件系统可能导致内核池越界写和BSOD；不可在生产机作为只读检测"
+          },
+          "public_evidence": [
+            {
+              "url": "https://hackyboiz.github.io/2025/07/17/ogu123/%5BResearch%5D_CVE-2025-24985/EN/",
+              "sha256": "385ab714e978e7e232b15d6624ef2e584d63c8b5bae3958c6e5134114b4cdf61",
+              "location": "Original Vulnerability analysis and BSOD Triggers; HTML649–693; five boot-sector values and fixed1GB FAT32 MBR VHD setup"
+            }
+          ],
+          "current_sha256": "519ee5964da0c3cbe6a32a48bc6c15279e944ec26cc1e858b97e916e28578ed6",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/商业软件/Advantive VeraCore/VeraCore timeoutWarning SQL 注入的公开请求与错误回显（CVE-2025-25181）.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2025-25181"
+          ],
+          "candidate_cves": [
+            "CVE-2025-25181"
+          ],
+          "reason": "原始SQL输入与具体字段转换结果形成可核读验证记录，不以HTTP500本身为证据；原文编码、既有占位保留。不把后续需认证上传57968或其2024修复归给25181。",
+          "specific_trigger": "Intezer Infection Vector:2020-01-09 08:47:59 GET /v5fmsnet/common/timeoutWarning.asp; PmSess1 expression and Conversion_failed log; Technical Details SQLi",
+          "applicability": {
+            "product": "Advantive VeraCore timeoutWarning.asp",
+            "version": "CNA：VeraCore截至2025.1.0；原始日志记录2020年攻击，不能等同当时完整产品构建已确认",
+            "fixed_version": "所读公告与联合研究未给可核对的SQLi修复构建；2024-11-13移除上传功能针对57968，不作为25181修复证据",
+            "prerequisites": "可达timeoutWarning.asp；CNA给PR:N；应用使用相关SQLServer查询且错误处理可呈现转换结果；后续上传另需登录",
+            "side_effects": "SQL错误回显可泄露账号字段并写入日志；使用泄露凭据登录/上传Webshell属于其他步骤，不能当作只读检测"
+          },
+          "public_evidence": [
+            {
+              "url": "https://intezer.com/blog/research/xe-group-exploiting-zero-days/",
+              "sha256": "e7f78a8828e1e8658155db31466521417561fd5084ee9f7e833e15304c773381",
+              "location": "Intezer Infection Vector:2020-01-09 08:47:59 GET /v5fmsnet/common/timeoutWarning.asp; PmSess1 expression and Conversion_failed log; Technical Details SQLi"
+            }
+          ],
+          "current_sha256": "71741fffce7e0c1593877c2ffd13dbea9dc8e74f4f8fa9b90b0c0ea18f887290",
+          "runtime_executed": false
+        },
+        {
+          "path": "系统安全/macOS/Apple APAC 声道映射长度失配与公开音频崩溃验证（CVE-2025-31200）.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2025-31200"
+          ],
+          "candidate_cves": [
+            "CVE-2025-31200"
+          ],
+          "reason": "有完整声道失配生成器、序列化挂钩及播放/调试步骤，具体13/12值也与报告对应。CAF/MP4历史差异和未完成任意写/RCE保持；prepareToPlay单独不算最终触发。",
+          "specific_trigger": "encodeme.mm whole file; run_encodeme_hook.lldb and check-mismatch.lldb; README May21/May27; Noah The Bug HTML844–1016",
+          "applicability": {
+            "product": "Apple CoreAudio / AudioCodecs APAC",
+            "version": "原研究在macOS15.4.1之前观察漏洞；CNA范围另涵盖iOS/iPadOS、tvOS、visionOS和watchOS；旧README的visionOS模拟器错误对照不是完整利用结论",
+            "fixed_version": "iOS/iPadOS18.4.1、macOSSequoia15.4.1、tvOS18.4.1、visionOS2.4.1、watchOS11.5",
+            "prerequisites": "受影响APAC解码路径处理构造音频；研究生成器需要本地Apple工具链与LLDB挂钩；仅prepareToPlay不足，播放阶段才触及映射原语",
+            "side_effects": "生成/覆盖output.caf；运行脚本删除output.mp4；调试器修改编码器内存；播放可崩溃和破坏堆；另附resign脚本写新afconvert副本并重新签名"
+          },
+          "public_evidence": [
+            {
+              "url": "https://github.com/zhuowei/apple-positional-audio-codec-invalid-header/blob/4c11d97bde3f5d8aa7a9b1354dda9e67673f6984/encodeme.mm",
+              "sha256": "902e7c410c4893b02482f214b9808c560a6cfd79eba6710107346281b0f618b9",
+              "location": "encodeme.mm whole file; run_encodeme_hook.lldb and check-mismatch.lldb; README May21/May27; Noah The Bug HTML844–1016"
+            }
+          ],
+          "current_sha256": "4abc710aac488907d54484b0ab4a1b519e21e987d7b066efc676e549ec5dd5fb",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/邮件系统/Fortinet FortiMail/FortiMail APSCOOKIE AuthHash 溢出的公开触发与错误 PoC 归属（CVE-2025-32756）.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2025-32756"
+          ],
+          "candidate_cves": [
+            "CVE-2025-32756"
+          ],
+          "reason": "具体管理端点、Cookie结构和精确超长字段公开，构成手工溢出验证材料；仅FortiMail7.6.2/7.6.3边界。没有把403图片下载或未读图像当作已见控制流证据，也不声称完整RCE。",
+          "specific_trigger": "Horizon3 cached original lines314–343,360–374,390–449,453–461; APSCOOKIE Era/Payload/AuthHash and exact oversizedAuthHash input",
+          "applicability": {
+            "product": "Fortinet FortiMail / libhttputil cookieval_unwrap",
+            "version": "原研究比对FortiMail7.6.2与7.6.3；CNA另列FortiCamera、FortiNDR、FortiRecorder、FortiVoice多分支，不能视为该实验已覆盖所有产品",
+            "fixed_version": "FortiMail7.6.3、7.4.5、7.2.8、7.0.9；其他产品按FG-IR-25-254及CNA分支处理",
+            "prerequisites": "可达受影响管理接口/module/admin.fe；通过APSCOOKIE字段进入libhttputil解码；所读原始研究无需有效登录",
+            "side_effects": "超长AuthHash可能破坏栈或使FastCGI进程崩溃，产生日志/可用性影响；公开简易验证不等于稳定完整RCE"
+          },
+          "public_evidence": [
+            {
+              "url": "https://horizon3.ai/attack-research/attack-blogs/cve-2025-32756-low-rise-jeans-are-back-and-so-are-buffer-overflows/",
+              "sha256": "ea275a59e2029af9dd8e98b2e10c7402675b4cd1e07bb77097c2da2af1dca8c8",
+              "location": "Horizon3 cached original lines314–343,360–374,390–449,453–461; APSCOOKIE Era/Payload/AuthHash and exact oversizedAuthHash input"
+            }
+          ],
+          "current_sha256": "a5119ae698c3c56e244338aa6d0a3cdd63a718cd66ea1dbf51f9f627f069da06",
+          "runtime_executed": false
+        },
+        {
+          "path": "系统安全/IGEL OS/IGEL OS 10 未验证 SquashFS 启动链与公开镜像构造 PoC（CVE-2025-47827）.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2025-47827"
+          ],
+          "candidate_cves": [
+            "CVE-2025-47827"
+          ],
+          "reason": "旧签名组件加载未验证SquashFS的公开构造路径完整，专用igelfs构造依赖已补读。需能启动自制介质、信任旧组件且未被DBX拒绝；不保证脚本当前自动重现、全部外部二进制已审或有完整失败清理。",
+          "specific_trigger": "mkdiskimage full:patch_system/extract_ddimage/rebuild_ddimage/main; root/sbin/init; GRUB overlay; pinned igelfs CLI extract/info/new/add → Filesystem and model builders",
+          "applicability": {
+            "product": "IGEL OS 10 igel-flash-driver",
+            "version": "IGEL OS 11之前；作者使用UDC3 10.06.220；厂商确认OS11和OS12不受此问题影响",
+            "fixed_version": "迁移至受支持IGEL版本；旧shim撤销另按平台DBX更新流程核对，不能以新内核存在推断旧签名组件已不再可启动",
+            "prerequisites": "能够安排系统启动攻击者构造的介质/镜像；信任相关Microsoft第三方UEFI CA与IGEL旧组件且未被适用DBX拒绝；构造镜像时需要挂载和分区权限",
+            "side_effects": "构造脚本下载ISO、挂载loop设备、分区/格式化并写镜像；演示init联网下载内核后kexec重启；错误设备路径或中断可能损坏数据/遗留挂载"
+          },
+          "public_evidence": [
+            {
+              "url": "https://github.com/Zedeldi/CVE-2025-47827/blob/f1afc293fc5269b76934bdd7fca691f9110202a1/mkdiskimage",
+              "sha256": "c1f930796fe46fbfe21f196ea62dba15a56ad1ef011a5373629fd7ba49f3a174",
+              "location": "mkdiskimage full:patch_system/extract_ddimage/rebuild_ddimage/main; root/sbin/init; GRUB overlay; pinned igelfs CLI extract/info/new/add → Filesystem and model builders"
+            },
+            {
+              "url": "https://api.github.com/repos/Zedeldi/igelfs/git/blobs/76e7774ac08dad801de258037dd50a568550a791",
+              "sha256": "d71c27fe0c8f29cd72c6e8923a93070d49ad06ce948d8f54fdb1283a8f81cbde",
+              "location": "full source; eligibility covers builder-called extraction/creation path only"
+            },
+            {
+              "url": "https://api.github.com/repos/Zedeldi/igelfs/git/blobs/61685d1dfcc05ee93b0bd86de73f99d2d2a4dbc5",
+              "sha256": "0bf9d857b169f50fc5ca6e7fa615fd5759d785509e824b0bde99ec2e5a9584be",
+              "location": "full source; eligibility covers builder-called extraction/creation path only"
+            },
+            {
+              "url": "https://api.github.com/repos/Zedeldi/igelfs/git/blobs/db4450691a9e0eeff720a268150c3e859132177a",
+              "sha256": "8b9c398dae6eba8ecaafd0644ded7b9db46900ffe241b5c318ff06e3458bdfd3",
+              "location": "full source; eligibility covers builder-called extraction/creation path only"
+            },
+            {
+              "url": "https://api.github.com/repos/Zedeldi/igelfs/git/blobs/94fa76b6bc49e91e1173f2c7e3ffe0f1d04c978d",
+              "sha256": "fd225a485402934012ebfddd77ee248c5374136570f2e5078f5f8461399f931a",
+              "location": "full source; eligibility covers builder-called extraction/creation path only"
+            },
+            {
+              "url": "https://api.github.com/repos/Zedeldi/igelfs/git/blobs/a56d63b513dc15f0816016afbd3fa664f46cde6b",
+              "sha256": "0c037154f13ceed45104da369bae2842d0fa1f29dd75b96a10595632f6999923",
+              "location": "full source; eligibility covers builder-called extraction/creation path only"
+            },
+            {
+              "url": "https://api.github.com/repos/Zedeldi/igelfs/git/blobs/c478f88f67844af7b22f6d97eba33109e80e286d",
+              "sha256": "25eab9dc3560d97740765f0e00d7bd3128e9a8532a9e24aa203d879ceae75e71",
+              "location": "full source; eligibility covers builder-called extraction/creation path only"
+            },
+            {
+              "url": "https://api.github.com/repos/Zedeldi/igelfs/git/blobs/c0d4b7d9de5b3f55afce7885153d3c57a0c3a1f0",
+              "sha256": "e3cf59b868e6ff2f439fee1a55285abedc9264866c672786f5f30488870671e3",
+              "location": "full source; eligibility covers builder-called extraction/creation path only"
+            },
+            {
+              "url": "https://api.github.com/repos/Zedeldi/igelfs/git/blobs/5998371e0cb4b368f67f6fefea9c0096c9545c50",
+              "sha256": "bf90a71f82e971869f85eb49acc92ee6c9d6738dd3c77db8ce17f38ece76c0bc",
+              "location": "full source; eligibility covers builder-called extraction/creation path only"
+            },
+            {
+              "url": "https://api.github.com/repos/Zedeldi/igelfs/git/blobs/636fdb4b008a56fc6028c919d84f5418e5f95ded",
+              "sha256": "08361ac151a4b50db9add027981324e50dfc0116c0e144a5b8888e078f075df1",
+              "location": "full source; eligibility covers builder-called extraction/creation path only"
+            },
+            {
+              "url": "https://api.github.com/repos/Zedeldi/igelfs/git/blobs/26c55e47dab700c1ee1f7e428aa69c5a268f31b3",
+              "sha256": "69266430b7d38ffdfc9232d63a34be3794013eae13c9f20105224d7d63224f7d",
+              "location": "full source; eligibility covers builder-called extraction/creation path only"
+            },
+            {
+              "url": "https://api.github.com/repos/Zedeldi/igelfs/git/blobs/d569de8913e9be85412e6c9a0851a20aa74eec7e",
+              "sha256": "1e7e5c09922115a6e9ac779f101410846adb7fb52dee470c61cf53eca513f688",
+              "location": "full source; eligibility covers builder-called extraction/creation path only"
+            },
+            {
+              "url": "https://api.github.com/repos/Zedeldi/igelfs/git/blobs/0b9addd644e9b936f8371d141df47cea3d76c6bf",
+              "sha256": "68499f6f62c2e24ee106faa86ecbfa89511cf8b8d8e948ebdff9b1ddc3e206d3",
+              "location": "full source; eligibility covers builder-called extraction/creation path only"
+            },
+            {
+              "url": "https://api.github.com/repos/Zedeldi/igelfs/git/blobs/74e1e9caaa645012a6eb5154712ba42fbabf666b",
+              "sha256": "f0a8ebff5ed35eb54f4eec10c6332278f9582a1f8f90e764233f64af7c760511",
+              "location": "full source; HashHeader parsing needed by Section; signature verification not executed"
+            }
+          ],
+          "current_sha256": "72231683cd6f384195e905b099a35e5cf98ad05521702946d85e8ce8312e0cce",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/其他软件/TeleMessage/TeleMessage heapdump 暴露与内存凭据的公开手工验证材料（CVE-2025-48927、48928）.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2025-48927",
+            "CVE-2025-48928"
+          ],
+          "candidate_cves": [
+            "CVE-2025-48927",
+            "CVE-2025-48928"
+          ],
+          "reason": "公开端点访问、取得堆、搜索password和登录结果是具体手工验证记录，超过单纯事故叙述。48927为公开入口，48928为堆中凭据；不能添入47729，也不将历史服务状态扩为任意客户构建。",
+          "specific_trigger": "WIRED paragraphs Hoping to find vulnerable JSP files / When they loaded this URL / By downloading a heap dump; HTML2247; two CNA records",
+          "applicability": {
+            "product": "TeleMessage archive service / Spring Boot Actuator",
+            "version": "CNA描述截至2025-05-05的TeleMessage服务状态；没有可对应所有客户部署的公开构建号",
+            "fixed_version": "相关服务曾暂停；所读材料未提供可核对的固定修复构建，不将暂停等同永久修复",
+            "prerequisites": "归档服务错误公开/heapdump且无需认证；内存中须存在待泄露请求/凭据，内容取决于当时进程状态",
+            "side_effects": "获取约150MB内存转储可泄露凭据、消息与密钥；生成转储可能影响资源；使用所得凭据登录属于另一步账号访问，本文未执行"
+          },
+          "public_evidence": [
+            {
+              "url": "https://www.wired.com/story/how-the-signal-knock-off-app-telemessage-got-hacked-in-20-minutes/",
+              "sha256": "f354ec21ef3e2bf3cc9825ae8e35162bbd8ba96d824756aa15ada5eb2c583258",
+              "location": "WIRED paragraphs Hoping to find vulnerable JSP files / When they loaded this URL / By downloading a heap dump; HTML2247; two CNA records"
+            }
+          ],
+          "current_sha256": "046df6e1c95ecc19edee6d822c122f56db6b9d4e51c319d8ac7b8816a6ce7f9c",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/云平台/Microsoft SharePoint/SharePoint ToolPane 公开利用代码与两代补丁边界（CVE-2025-49704、49706）.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2025-49704",
+            "CVE-2025-49706"
+          ],
+          "candidate_cves": [
+            "CVE-2025-49704",
+            "CVE-2025-49706"
+          ],
+          "reason": "具体ToolPane/Referer请求与DataSet→LosFormatter→TypeConfuseDelegate构造已闭合，不是版本check或响应差异扫描。主编号49704/49706与53770/53771后续变体边界保留。作为既有Pwn2Own稿analysis_of补充，不新建重复实体。",
+          "specific_trigger": "MSF module lines167–337, especially DataSetWrapper.generate178–262/create_gadget_chain265–292/send_exploit294–335; pinned TypeConfuseDelegate.generate and LosFormatter.generate",
+          "applicability": {
+            "product": "Microsoft SharePoint Server ToolPane / DataSetSurrogateSelector",
+            "version": "49704 CNA：SharePoint2016<16.0.5508.1000、2019<16.0.10417.20027；49706另列SubscriptionEdition<16.0.18526.20424；代码对后续绕过及配置状态另有条件",
+            "fixed_version": "原编号CNA阈值见version；Microsoft综合更新：SE KB5002768，2019 KB5002754+KB5002753，2016 KB5002760+KB5002759；勿将初次7月更新当作所有后续变体修复",
+            "prerequisites": "网络可达受影响本地部署SharePoint；49704单项为认证后执行，组合49706/53771可改变认证前提；不适用于SharePointOnline",
+            "side_effects": "POST触发反序列化和服务身份命令执行；具体payload可能下载/删除文件、建立会话并留IIS日志；后续密钥泄露需独立事件处置",
+            "canonical": "Web安全/云平台/Microsoft SharePoint/漏洞爆料！微软SharePoint又被高手秒杀，Pwn2Own单招就破防！.md",
+            "relation_type": "analysis_of"
+          },
+          "public_evidence": [
+            {
+              "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/windows/http/sharepoint_toolpane_rce.rb",
+              "sha256": "e6be1f1e7b75ce0b10d49dcb9aab04a258c2a691a83c3ebbed842c7bf6d8795c",
+              "location": "MSF module lines167–337, especially DataSetWrapper.generate178–262/create_gadget_chain265–292/send_exploit294–335; pinned TypeConfuseDelegate.generate and LosFormatter.generate"
+            },
+            {
+              "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/lib/msf/util/dot_net_deserialization.rb",
+              "sha256": "a5afd78f672fe5d166c12bbbd5c0b04c8350a0d1dee6a79e1930d7994be9bb5d",
+              "location": "full source"
+            },
+            {
+              "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/lib/msf/util/dot_net_deserialization/gadget_chains/type_confuse_delegate.rb",
+              "sha256": "f2241837dd5c5309a03f186a2e59d6bd4fd2e09f915398cecf096288b24b9d36",
+              "location": "full source"
+            },
+            {
+              "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/lib/msf/util/dot_net_deserialization/formatters/los_formatter.rb",
+              "sha256": "a8d4aba07f347770fe524f61b715c7a9b034fb6628bc84ab93741504628b294e",
+              "location": "full source"
+            },
+            {
+              "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/lib/msf/util/dot_net_deserialization/types.rb",
+              "sha256": "002ce31ce67f5fe4713d1c5a1a07df8c56a3b6988c4ade3a014d078e2302ffa6",
+              "location": "full source"
+            }
+          ],
+          "current_sha256": "b1721586b57fbac3556f35399b313c916fefb39c485e1bdbb733653274ebfbb1",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/网络设备/Fortinet/FortiOS 符号链接持久化补丁的路径规范化绕过（CVE-2025-68686）.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2025-68686"
+          ],
+          "candidate_cves": [
+            "CVE-2025-68686"
+          ],
+          "reason": "资格来自既有符号链接条件下具体路径绕过的作者手工验证与请求，不来自脚本把任意非403叫未修复、200叫失陷。需前置文件系统失陷；没有初始入侵能力承诺。",
+          "specific_trigger": "check_fix.py check_path/main normal anddouble-slash paths including sys_global.conf.gz; original Proof of Concept HTML566–582",
+          "applicability": {
+            "product": "Fortinet FortiOS",
+            "version": "FortiOS7.6.0–7.6.1、7.4.0–7.4.6；CNA描述7.2、7.0、6.4全分支，其枚举截至7.2.13、7.0.19、6.4.16",
+            "fixed_version": "本次厂商PSIRT页面返回拦截页，未独立读到完整修复分支表；不能仅由受影响上界推断所有旧分支均有修复",
+            "prerequisites": "攻击者必须已通过其他漏洞获得文件系统级访问，并留下相应符号链接；后续HTTP读取可不再认证",
+            "side_effects": "请求可能泄露设备配置或其他敏感文件；前置植入属于文件系统修改；升级不能替代入侵调查与凭据风险处理"
+          },
+          "public_evidence": [
+            {
+              "url": "https://raw.githubusercontent.com/I3IT/Fortigate.Symlink.Persistence.Checker/49822b9e2e53bd76ef23c9e93dcd051b2590478e/check_fix.py",
+              "sha256": "3d37f4f75cfa3778c58b3f1f582006c3adf526bf037658e75be96be4eb1d7366",
+              "location": "check_fix.py check_path/main normal anddouble-slash paths including sys_global.conf.gz; original Proof of Concept HTML566–582"
+            }
+          ],
+          "current_sha256": "eb3e195b3b108dfd8291cbd3c7f5f2568459440ca3849fb764ffb9fb7923dd1c",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/网络设备/WatchGuard/WatchGuard Fireware IKEv2 越界写公开验证与探针边界（CVE-2025-9242）.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2025-9242"
+          ],
+          "candidate_cves": [
+            "CVE-2025-9242"
+          ],
+          "reason": "完整实际IKE_AUTH触发存在，区别于仅IKE_SA_INIT指纹模板。timeout不是确定补丁结论；可选利用硬编码12.11.3。合入前须补CNA明确VPN配置条件及Python版本语法限制。",
+          "specific_trigger": "Complete1483-line original Python: IkePacker, IkeCrypto, Ike.sa_init/auth, Runner.trigger, Exploit.build and main Step3/4",
+          "applicability": {
+            "product": "WatchGuard Fireware OS",
+            "version": "9242：2025.0至2025.1.1之前、12.0至12.11.4之前、11.0至11.12.4+541730；14733：2025.1至2025.1.4之前、12.0至12.11.6之前、11.10.2至11.12.4+541730；特殊硬件及FIPS分支单独判定",
+            "fixed_version": "9242：2025.1.1、12.11.4，T15/T35为12.5.13，FIPS为12.3.1+722811；14733：2025.1.4、12.11.6，T15/T35为12.5.15，FIPS为12.3.1+728352",
+            "prerequisites": "受影响 Firebox 配置并暴露相关 IKEv2 VPN 服务；版本指纹只构成筛查，不能确认触发条件或证明已入侵",
+            "side_effects": "版本探针主动发送 UDP/IKE 握手并产生日志；实际越界写可能崩溃或挂起 iked、中断VPN协商/重协商；原研究利用链执行root代码并建立外连"
+          },
+          "public_evidence": [
+            {
+              "url": "https://github.com/watchtowrlabs/watchTowr-vs-WatchGuard-CVE-2025-9242/blob/main/watchTowr-vs-WatchGuard-CVE-2025-9242.py",
+              "sha256": "e79363dd2aa3fcb04d1585c44d62e1f30c70da01ab82bc1ea71b4e97dfc5d9be",
+              "location": "Complete1483-line original Python: IkePacker, IkeCrypto, Ike.sa_init/auth, Runner.trigger, Exploit.build and main Step3/4"
+            }
+          ],
+          "current_sha256": "007b26c3e7f27c521fed6530189c9519d37daf11420b3152bb1eaaa5961f4036",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/网络设备/Palo Alto/CVE-2026-0257 _ Palo Alto Networks PAN-OS GlobalProtect Authentication.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2026-0257"
+          ],
+          "candidate_cves": [
+            "CVE-2026-0257"
+          ],
+          "reason": "Complete fixed public script contains concrete cookie construction and actual GlobalProtect login POST, with exact CVE attribution in README, original researcher article and vendor advisory. Not a version-only probe.",
+          "specific_trigger": "forge_cookie lines 164–169 builds user/domain/client/host/time/IP data and RSA-encrypts it; test_cookie lines 172–207 submits all fields to /ssl-vpn/login.esp; main tries the retrieved certificate keys and gateway/portal contexts.",
+          "applicability": {
+            "preconditions": [
+              "Reachable GlobalProtect portal/gateway configured to generate or accept authentication override cookies",
+              "Cookie certificate public key obtainable because certificate reused with HTTPS or another exposed feature; not every returned TLS certificate is the correct one",
+              "RSA-compatible certificate and compatible Python/cryptography runtime; source test appliance PAN-OS 10.2.8 with specified vulnerable configuration"
+            ],
+            "versions": "Maintain separate PAN-OS and Prisma Access maintenance branches. Draft examples 10.2.10-h36, 11.1.10-h25, 11.2.10-h7 and 12.1.4-h6 appear in vendor table; no cross-branch ordering. Panorama/Cloud NGFW excluded by vendor. FAQ confirms strict HMAC compatibility switch can restore legacy cookie behavior after upgrade."
+          },
+          "public_evidence": [
+            {
+              "url": "https://raw.githubusercontent.com/sfewer-r7/CVE-2026-0257/35ca8900bbca460cc3a1de08fe2bf95e3a9d6004/forge_cookie.py",
+              "sha256": "e037429d799c1d9456f768579848c50693f65fdd07be9e1d7fb18b7f272073b4",
+              "location": "Entire original Python file read statically; no import/execution"
+            },
+            {
+              "url": "https://raw.githubusercontent.com/sfewer-r7/CVE-2026-0257/35ca8900bbca460cc3a1de08fe2bf95e3a9d6004/Readme.md",
+              "sha256": "00fcdea7277ee9f92305c4d87fa33a4ba2245663c2d58585fa21bda3400a6ed6",
+              "location": "Entire README including command and sample output read"
+            },
+            {
+              "url": "https://www.rapid7.com/blog/post/etr-rapid7-observed-exploitation-of-pan-os-globalprotect-authentication-bypass-vulnerability-cve-2026-0257/",
+              "sha256": "b576dea0a1c213b98507509c090790bc240c6ac91bb2ee85c40491f08e50d139",
+              "location": "Relevant technical code, input/output example, prerequisites and mitigation sections read; not all site navigation/marketing or image pixels"
+            },
+            {
+              "url": "https://security.paloaltonetworks.com/CVE-2026-0257",
+              "sha256": "d365e98f4deda459ddfa5b34ca49c2cd7652facc3853f82bacade78c2a280a4d",
+              "location": "All relevant advisory sections and branch table read; CPE enumeration not line-by-line reviewed"
+            },
+            {
+              "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2026/0xxx/CVE-2026-0257.json",
+              "sha256": "330d8a43c4235f9924183be187c428bffa2bc8f288b26b9df33e3f10063ad447",
+              "location": "Selected CNA fields read; full byte hash is a snapshot, not full CPE-list reading"
+            }
+          ],
+          "current_sha256": "e2f2a682f8c35150c2e8fb436cba1cc9a000aa442c2c160c1c0dd9b7b7444d8e",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/服务器软件/GNU/CVE-2026-24061：GNU InetUtils Telnetd 身份验证绕过漏洞.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2026-24061"
+          ],
+          "candidate_cves": [
+            "CVE-2026-24061"
+          ],
+          "reason": "GNU maintainer advisory supplies exact manual USER environment plus telnet -a input and source-claimed root prompt outcome. CNA explicitly maps the same input to this CVE. Both fixed patches corroborate the exact vulnerable expansion.",
+          "specific_trigger": "Maintainer Example: USER environment value beginning with -f and root account, sent by telnet client autologin option to the active local test telnetd; original exact bytes are retained in source.",
+          "applicability": {
+            "preconditions": [
+              "Network-reachable vulnerable GNU Inetutils telnetd using affected USER variable expansion",
+              "Client capable of sending the USER environment under telnet -a/--login",
+              "Server login executable supports the relevant -f argument and privileged telnetd launch behavior"
+            ],
+            "versions": "Advisory and CNA: GNU Inetutils 1.9.3 through 2.7. Distribution backports/reintroductions are package-specific; no rule based solely on upstream version string. Both fd702c0 and ccba9f7 are identified; first protects USER and second other short-variable expansions."
+          },
+          "public_evidence": [
+            {
+              "url": "https://www.openwall.com/lists/oss-security/2026/01/20/2",
+              "sha256": "a9ea694d89f83dbfc689fcbd90f0b8db24cbcd6c04f732f82eda795fb78a7bb8",
+              "location": "Entire original message body read via HTML-to-text, not merely author summary"
+            },
+            {
+              "url": "https://www.openwall.com/lists/oss-security/2026/01/20/8",
+              "sha256": "580d8d6fa9aceaa189580068e0a8bf11c8b8f6cf994f9a1718397d0315f06aff",
+              "location": "Entire reply body read; its runtime statements remain correspondent claims"
+            },
+            {
+              "url": "https://codeberg.org/inetutils/inetutils/commit/fd702c02497b2f398e739e3119bed0b23dd7aa7b.patch",
+              "sha256": "32df81bedaf17bc0b9e657f4555be423e7b7694bfab6a8fae139bc3309376d80",
+              "location": "Entire patch read"
+            },
+            {
+              "url": "https://codeberg.org/inetutils/inetutils/commit/ccba9f748aa8d50a38d7748e2e60362edd6a32cc.patch",
+              "sha256": "9c0b2de951fe9d2c1a367e132bc761e335bd92dd90d92af246a5df5ff76504ef",
+              "location": "Entire patch read"
+            },
+            {
+              "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2026/24xxx/CVE-2026-24061.json",
+              "sha256": "5effde2e9052c61c953cfd1ed2b78aa21f358e977bdeba24ec4de0598cff1960",
+              "location": "CNA fields read, confirming CVE attribution of advisory originally published before CVE assignment"
+            }
+          ],
+          "current_sha256": "3c835d6003713b0f779315d168483f7016345d992dfb67de07fd52d394e47659",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/服务器软件/SolarWinds/【CVE-2025-40551】：Solarwinds Web Help Desk又一处反序列化漏洞.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2025-40536",
+            "CVE-2025-40551"
+          ],
+          "candidate_cves": [
+            "CVE-2025-40536",
+            "CVE-2025-40551"
+          ],
+          "reason": "40536 has explicit login-session, cookie/CSRF/session-ID acquisition and wopage bypass sequence. 40551 has explicit javaClass/constructor properties and set/get RPC requests in the original fixed module, with correct dynamic endpoints and same CVE attribution in both researcher and vendor sources. These are actual product-directed inputs, not a generic error/version probe.",
+          "specific_trigger": "Original module step1_initial_session 292–356 obtains JSESSIONID, XSRF-TOKEN and WebObjects session ID; step2 358–385 invokes LoginPref via bypass parameter; steps3–4 387–430 mutate component state and derive RPC endpoint; step5 432–483 sets javaClass-based object then reads it with full cookie/CSRF headers. Explicit object fields are in get_target_gadgets 207–283.",
+          "applicability": {
+            "preconditions": [
+              "Reachable vulnerable classic WHD WebObjects interface, unauthenticated session creation and extractable dynamic session values",
+              "Component-state sequence and CSRF/cookie handling must remain associated with same session; anonymous is not stateless",
+              "40551 target classpath/gadgets differ between 12.7 and 12.8; outbound LDAP/JNDI or SMB path and payload requirements depend on branch"
+            ],
+            "versions": "Vendor release notes identify fixes in WHD 2026.1 and distinguish 40536 High 8.1 from 40551 Critical 9.8. Module targets 12.7 and 12.8; source specifically records 12.7.11.1182 Linux and 12.8.8.2528 Windows Server 2022. No universal all-previous-version or macOS exploit assertion."
+          },
+          "public_evidence": [
+            {
+              "url": "https://horizon3.ai/attack-research/cve-2025-40551-another-solarwinds-web-help-desk-deserialization-issue/",
+              "sha256": "5bd72df179f44641a2271b79a75863112dbd462a27bc610c0a95c860eb49a415",
+              "location": "Full relevant technical body and template read. Images/gists/video pixels not inspected; page navigation and postscript do not supply proof"
+            },
+            {
+              "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/multi/http/solarwinds_webhelpdesk_rce.rb",
+              "sha256": "18dd0c66a8dac488430f184d0dac0ca1cef9b43ec76966df067a85c295e6ea4f",
+              "location": "All 486 lines read in two contiguous sections; dependencies explicitly outside scope"
+            },
+            {
+              "url": "https://documentation.solarwinds.com/en/success_center/whd/content/release_notes/whd_2026-1_release_notes.htm",
+              "sha256": "d606969a85f2d8234f27aa59ce55ac51708ea3641172a39f36679bc6f9faeb11",
+              "location": "Release/version/CVE rows read; no claim to full product release-note audit"
+            }
+          ],
+          "current_sha256": "5761c7edd5d810ec14f55bd95ef6e4b18a2869f67a7e1f39d6abe39524818b06",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/网络设备/Ivanti/CVE-2026-10520 _ Ivanti Sentry Pre-Authenticated OS Command Injection.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2026-10520"
+          ],
+          "candidate_cves": [
+            "CVE-2026-10520"
+          ],
+          "reason": "Original research has complete actual-product HTTP POST input, full command-bearing message value and source-recorded uname output in JSON response. Exact CVE and endpoint map through controller/handler/native execution excerpts and Ivanti CNA. This exceeds patch-only theory.",
+          "specific_trigger": "Original article extracted lines 234–253, POST /mics/api/v2/sentry/mics-config/handleMessage and commandexec XML message; response data contains Linux uname output. Request Content-Length and example Host remain original source values, not silently recalculated or treated as authorized targets.",
+          "applicability": {
+            "preconditions": [
+              "Network-reachable vulnerable Sentry management endpoint and applicable controller route",
+              "Research compares actual Sentry10.5.1 versus10.5.2; no authentication cookie/header required by published request"
+            ],
+            "versions": "CNA fixes R10.5.2, R10.6.2 and R10.7.1, with separate maintenance lines; source tested/inspected10.5 branch only. 10523 is distinct account-creation bypass and not qualified here."
+          },
+          "public_evidence": [
+            {
+              "url": "https://labs.watchtowr.com/more-evidence-that-words-dont-mean-what-we-thought-they-meant-ivanti-sentry-pre-auth-os-command-injection-cve-2026-10520/",
+              "sha256": "fbb0932929aa54c7a97921fd4feba86bc46bfec5f4c33f5252f479604dcbf20c",
+              "location": "Entire technical prose and code/request/response excerpts read; no scanner source, binaries or image pixels"
+            },
+            {
+              "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2026/10xxx/CVE-2026-10520.json",
+              "sha256": "37a3eb1256942e5fcba01353c9afc846e1345792894e6938b6b57403b9e08127",
+              "location": "CNA descriptions, selected product/version rows and references read; not every CPE/hardware row audited"
+            }
+          ],
+          "current_sha256": "2f66648b295da4b44ec47d4b56c8c72b3b6d24fc9074de06cf33bf2babb59f1d",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/其他软件/杂项/CHYbeta starred BishopFox_CVE-2026-34908-check.md",
+          "decision": "hold",
+          "qualified_cves": [],
+          "candidate_cves": [
+            "CVE-2026-34908"
+          ],
+          "reason": "Concrete paired-request behavior exists, but no inspected independent CNA/vendor source maps that exact behavior specifically to34908. Research groups34908/34909 and explicitly leaves their split unresolved. Filename and source labels do not close the mapping gap under the strict gate.",
+          "specific_trigger": "Fixed Python BYPASS_PROBE/BASELINE lines77–90, fetch137–159, check_bypass176–238; README How it Works gives exact encoded path and expected missing pkg_name response. The qualifying sequence is protected baseline401 plus encoded-path access to specific backend; any broad marker/error without that context is inconclusive.",
+          "applicability": {
+            "preconditions": [
+              "Known UniFi OS Server with reachable management TLS front end; source tested5.0.6 and compares5.0.8",
+              "Raw URI auth-exempt prefix and normalized backend route divergence",
+              "Same target/control, no credentials; specific backend response must be attributable to actual package handler"
+            ],
+            "versions": "CNA Server <5.0.8, source tested5.0.6; other hardware products have distinct fixed versions and were not independently tested."
+          },
+          "public_evidence": [
+            {
+              "url": "https://raw.githubusercontent.com/BishopFox/CVE-2026-34908-check/768d57f31d87ed3eadbb0c04ca592aef2c20e3eb/cve_2026_34908_check.py",
+              "sha256": "cf94a2fb6427d3d8cd725202623bcc1acc65daf70866c10d843485f4aa15cba4",
+              "location": "Complete original file read, no execution"
+            },
+            {
+              "url": "https://github.com/BishopFox/CVE-2026-34908-check/blob/768d57f31d87ed3eadbb0c04ca592aef2c20e3eb/README.md",
+              "sha256": "cf2f66a8f56a797861634a4ddca897acc6a5cf597aedc6eac03656f680cb0df8",
+              "location": "Complete README read; false-positive-guard claims checked against code and contradicted by code branch"
+            },
+            {
+              "url": "https://bishopfox.com/blog/popping-root-on-unifi-os-server-unauthenticated-rce-chain-detection-analysis",
+              "sha256": "47b0e2e11707add2beeeddb63d9e9c6fb94d38069e690ec698706839ba60b3fd",
+              "location": "Read available source excerpts; L345–371 absent from this receipt and not claimed read. No image pixels or linked binaries"
+            },
+            {
+              "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2026/34xxx/CVE-2026-34908.json",
+              "sha256": "a9b271438d874a03fc01be8428eabbe41fccc7a97ea49b7066cf7763650737ff",
+              "location": "CNA descriptions, selected product/version rows and references read; not every CPE/hardware row audited"
+            },
+            {
+              "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2026/34xxx/CVE-2026-34909.json",
+              "sha256": "395f93297abd3a74482ccd0710a986f5526c29462eab79fe747b4d083e1e854a",
+              "location": "CNA descriptions, selected product/version rows and references read; not every CPE/hardware row audited"
+            },
+            {
+              "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2026/34xxx/CVE-2026-34910.json",
+              "sha256": "59609189510777056e7507f2a99e0900f6227c52681c8de6db7af8d8af61c765",
+              "location": "CNA descriptions, selected product/version rows and references read; not every CPE/hardware row audited"
+            }
+          ],
+          "current_sha256": null,
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/运维面板/LiteSpeed cPanel/CVE-2026-41940 cPanel-WHM 认证绕过漏洞复现.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2026-41940"
+          ],
+          "candidate_cves": [
+            "CVE-2026-41940"
+          ],
+          "reason": "Original watchTowr actual-product analysis and complete222-line script define preauth session creation, exact Base64 field injection, missing-token raw-to-cache transition and protected API request. Qualification is the real cPanel/WHM authentication-bypass input, never the existing simulator.",
+          "specific_trigger": "Python fixed PAYLOAD_B64 lines34–39; stage1–4 lines87–164; actual article requests and raw/cache observations at extracted106–131,227–356,450–587. Base64 statically decoded as data and matches the visible field-injection comment; no script import/execution.",
+          "applicability": {
+            "preconditions": [
+              "Reachable affected cPanel/WHM cpsrvd interface; ability to receive and reuse preauth whostmgrsession cookie",
+              "No-ob session format, raw key-value parsing versus JSON cache and do_token_denied path must exist in target branch",
+              "Applicable session binding and endpoint behavior; source compares11.110.0.96 and11.110.0.97"
+            ],
+            "versions": "CNA includes multiple independent fixed branches; draft examples11.110.0.97,11.118.0.63,11.126.0.54,11.132.0.29,11.134.0.20,11.136.0.5 all match. WP Squared has independent11.136.1.7 boundary. Do not infer every old build from the tested110 pair."
+          },
+          "public_evidence": [
+            {
+              "url": "https://labs.watchtowr.com/the-internet-is-falling-down-falling-down-falling-down-cpanel-whm-authentication-bypass-cve-2026-41940/",
+              "sha256": "d501fbae8f1a953028773415a63b212f33cc5a1695b5ce5d3cc403f6326294ac",
+              "location": "Full technical article body read in contiguous sections; images/video excluded"
+            },
+            {
+              "url": "https://raw.githubusercontent.com/watchtowrlabs/watchTowr-vs-cPanel-WHM-AuthBypass-to-RCE.py/2cc6668b028f903f4d6ef9e915bf7f20656dbb80/watchTowr-vs-cPanel-WHM-AuthBypass-to-RCE.py",
+              "sha256": "a5323082ce3f92e02400ddb64aef2023cccb9d440bd35015647af8063cf79c34",
+              "location": "Complete file statically read; AST literal extraction and Base64 decode only, no import/execution"
+            },
+            {
+              "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2026/41xxx/CVE-2026-41940.json",
+              "sha256": "c0ef844c43d8c7e67033f00ef6a7ebbb86ffb1d29f473b5214cc27176279e530",
+              "location": "CNA descriptions, selected product/version rows and references read; not every CPE/hardware row audited"
+            }
+          ],
+          "current_sha256": "b298330fcf7b84e4a91db19356f9b34f0c5a108e113472c6698c04cf33d4bec7",
+          "runtime_executed": false
+        }
+      ]
+    }
+  ],
+  "current_totals": {
+    "article_files": 68,
+    "new_files": 44,
+    "supplemented_files": 24,
+    "qualified_candidate_ids": 76,
+    "full_scope_complete": false
   }
 }

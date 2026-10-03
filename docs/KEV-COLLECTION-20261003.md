@@ -16,7 +16,7 @@
 
 比较 master `cfb19294812b1435a57e866a87dd18e2ff3ebec3` 与未合并草稿 PR #10 `e102e1d2fb26e381e7c4d270629738d0f3f8654d`。该时点没有其他开放 PR。元数据初筛得到 553 项已有主编号、125 项仅候选/引用、1,049 项没有元数据编号命中；这三类都只是候选，正文产品/端点还需逐项判断。正文中编号命中也不自动等同实体覆盖。
 
-**全量清点已完成，全文和技术来源审阅仍在进行。** 本文件不将下载成功、CNA 字段读取、搜索命中、AI 摘要或 KEV 标签计作完成 PoC 审阅。已完成的文章批次如下；其余在[完整机器台账](KEV-CANDIDATES-20261003.json)中明确记为 pending-substantive-review。后续批次持续补充，不以当前篇数作为全范围完成标志。
+**全量清点已完成，全文和技术来源审阅仍在进行。** 本文件不将下载成功、CNA 字段读取、搜索命中、AI 摘要或 KEV 标签计作完成 PoC 审阅。已完成的文章批次如下；其余在[完整机器台账](KEV-CANDIDATES-20261003.json)中分别记录待审、范围内暂缓、阻断等状态。后续批次持续补充，不以当前篇数作为全范围完成标志。
 
 本轮收录要求公开且具体的 PoC、EXP 或实际验证材料；仅补丁原理、事件描述、推测、版本指纹或 KEV 标签不能通过。可读的具体原始请求、完整公开代码或带明确输入与预期结果的真实回归测试分别注明证据范围。不要求维护者执行这些材料；未执行与缺少公开具体材料是不同问题。
 
@@ -25,6 +25,10 @@
 初版将部分补丁/事件分析及编号映射不明的材料过早列入稿件，现按公开具体 PoC/EXP/实际验证方式门槛重新检查全部93篇。独立复核后保留53篇（34篇新稿、19篇旧文补充）；撤回33篇本轮新稿及7处本轮追加。原 master 正文、代码、示例、资源与既有标识保留。
 
 保留材料对应58个通过本轮具体资料门槛的候选编号，不等于新增独立漏洞数，也不表示运行复现成功。SimpleHelp只计57727，ScreenConnect只计1709；其余原有编号仅作背景。完整逐篇公开来源、触发位置、范围与退回原因见[门槛复核台账](KEV-MATERIAL-GATE-20261003.json)。无完整具体触发的纯补丁、事件、理论和仅版本探针，不因analysis标签而收录。
+
+## 当前累计文稿
+
+后续再独立复核17项拟收录文稿，保留15篇（10篇新增、5篇补证），另外Edimax1316与UniFi34908暂缓。加上纠正后的53篇，累计68篇（44新增、24补证），涉及76个经独立审核具备具体公开验证材料的候选CVE。文件数、候选编号数与独立漏洞数不同；未执行PoC。
 
 | 本次具体验证范围 | 处置 | 文稿 |
 |---|---|---|
@@ -81,6 +85,21 @@
 | CVE-2009-1151 | 新增资料 | [phpMyAdmin setup配置保存注入与后续漏洞分界（CVE-2009-1151）](../Web%E5%AE%89%E5%85%A8/%E6%95%B0%E6%8D%AE%E5%BA%93/Phpmyadmin/phpMyAdmin%20setup%E9%85%8D%E7%BD%AE%E4%BF%9D%E5%AD%98%E6%B3%A8%E5%85%A5%E4%B8%8E%E5%90%8E%E7%BB%AD%E6%BC%8F%E6%B4%9E%E5%88%86%E7%95%8C%EF%BC%88CVE-2009-1151%EF%BC%89.md) |
 | CVE-2007-3010 | 新增资料 | [OmniPCX masterCGI ping命令拼接与单次执行限制（CVE-2007-3010）](../Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/Alcatel-Lucent/OmniPCX%20masterCGI%20ping%E5%91%BD%E4%BB%A4%E6%8B%BC%E6%8E%A5%E4%B8%8E%E5%8D%95%E6%AC%A1%E6%89%A7%E8%A1%8C%E9%99%90%E5%88%B6%EF%BC%88CVE-2007-3010%EF%BC%89.md) |
 | CVE-2005-2773 | 新增资料 | [HP OpenView connectedNodes命令注入与回显差异（CVE-2005-2773）](../Web%E5%AE%89%E5%85%A8/%E8%BF%90%E7%BB%B4%E9%9D%A2%E6%9D%BF/HP%20OpenView/HP%20OpenView%20connectedNodes%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5%E4%B8%8E%E5%9B%9E%E6%98%BE%E5%B7%AE%E5%BC%82%EF%BC%88CVE-2005-2773%EF%BC%89.md) |
+| CVE-2025-24085 | 新增资料 | [Apple CoreMedia Remaker 轨道对象释放与公开崩溃 PoC（CVE-2025-24085）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/iOS/Apple%20CoreMedia%20Remaker%20%E8%BD%A8%E9%81%93%E5%AF%B9%E8%B1%A1%E9%87%8A%E6%94%BE%E4%B8%8E%E5%85%AC%E5%BC%80%E5%B4%A9%E6%BA%83%20PoC%EF%BC%88CVE-2025-24085%EF%BC%89.md) |
+| CVE-2025-24985 | 新增资料 | [Windows FastFAT 簇计数溢出与 BSOD 证据边界（CVE-2025-24985）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Windows/Windows%20FastFAT%20%E7%B0%87%E8%AE%A1%E6%95%B0%E6%BA%A2%E5%87%BA%E4%B8%8E%20BSOD%20%E8%AF%81%E6%8D%AE%E8%BE%B9%E7%95%8C%EF%BC%88CVE-2025-24985%EF%BC%89.md) |
+| CVE-2025-25181 | 新增资料 | [VeraCore timeoutWarning SQL 注入的公开请求与错误回显（CVE-2025-25181）](../Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/Advantive%20VeraCore/VeraCore%20timeoutWarning%20SQL%20%E6%B3%A8%E5%85%A5%E7%9A%84%E5%85%AC%E5%BC%80%E8%AF%B7%E6%B1%82%E4%B8%8E%E9%94%99%E8%AF%AF%E5%9B%9E%E6%98%BE%EF%BC%88CVE-2025-25181%EF%BC%89.md) |
+| CVE-2025-31200 | 新增资料 | [Apple APAC 声道映射长度失配与公开音频崩溃验证（CVE-2025-31200）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/macOS/Apple%20APAC%20%E5%A3%B0%E9%81%93%E6%98%A0%E5%B0%84%E9%95%BF%E5%BA%A6%E5%A4%B1%E9%85%8D%E4%B8%8E%E5%85%AC%E5%BC%80%E9%9F%B3%E9%A2%91%E5%B4%A9%E6%BA%83%E9%AA%8C%E8%AF%81%EF%BC%88CVE-2025-31200%EF%BC%89.md) |
+| CVE-2025-32756 | 新增资料 | [FortiMail APSCOOKIE AuthHash 溢出的公开触发与错误 PoC 归属（CVE-2025-32756）](../Web%E5%AE%89%E5%85%A8/%E9%82%AE%E4%BB%B6%E7%B3%BB%E7%BB%9F/Fortinet%20FortiMail/FortiMail%20APSCOOKIE%20AuthHash%20%E6%BA%A2%E5%87%BA%E7%9A%84%E5%85%AC%E5%BC%80%E8%A7%A6%E5%8F%91%E4%B8%8E%E9%94%99%E8%AF%AF%20PoC%20%E5%BD%92%E5%B1%9E%EF%BC%88CVE-2025-32756%EF%BC%89.md) |
+| CVE-2025-47827 | 新增资料 | [IGEL OS 10 未验证 SquashFS 启动链与公开镜像构造 PoC（CVE-2025-47827）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/IGEL%20OS/IGEL%20OS%2010%20%E6%9C%AA%E9%AA%8C%E8%AF%81%20SquashFS%20%E5%90%AF%E5%8A%A8%E9%93%BE%E4%B8%8E%E5%85%AC%E5%BC%80%E9%95%9C%E5%83%8F%E6%9E%84%E9%80%A0%20PoC%EF%BC%88CVE-2025-47827%EF%BC%89.md) |
+| CVE-2025-48927; CVE-2025-48928 | 新增资料 | [TeleMessage heapdump 暴露与内存凭据的公开手工验证材料（CVE-2025-48927、48928）](../Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/TeleMessage/TeleMessage%20heapdump%20%E6%9A%B4%E9%9C%B2%E4%B8%8E%E5%86%85%E5%AD%98%E5%87%AD%E6%8D%AE%E7%9A%84%E5%85%AC%E5%BC%80%E6%89%8B%E5%B7%A5%E9%AA%8C%E8%AF%81%E6%9D%90%E6%96%99%EF%BC%88CVE-2025-48927%E3%80%8148928%EF%BC%89.md) |
+| CVE-2025-49704; CVE-2025-49706 | 新增资料 | [SharePoint ToolPane 公开利用代码与两代补丁边界（CVE-2025-49704、49706）](../Web%E5%AE%89%E5%85%A8/%E4%BA%91%E5%B9%B3%E5%8F%B0/Microsoft%20SharePoint/SharePoint%20ToolPane%20%E5%85%AC%E5%BC%80%E5%88%A9%E7%94%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%B8%A4%E4%BB%A3%E8%A1%A5%E4%B8%81%E8%BE%B9%E7%95%8C%EF%BC%88CVE-2025-49704%E3%80%8149706%EF%BC%89.md) |
+| CVE-2025-68686 | 新增资料 | [FortiOS 符号链接持久化补丁的路径规范化绕过（CVE-2025-68686）](../Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/Fortinet/FortiOS%20%E7%AC%A6%E5%8F%B7%E9%93%BE%E6%8E%A5%E6%8C%81%E4%B9%85%E5%8C%96%E8%A1%A5%E4%B8%81%E7%9A%84%E8%B7%AF%E5%BE%84%E8%A7%84%E8%8C%83%E5%8C%96%E7%BB%95%E8%BF%87%EF%BC%88CVE-2025-68686%EF%BC%89.md) |
+| CVE-2025-9242 | 新增资料 | [WatchGuard Fireware IKEv2 越界写公开验证与探针边界（CVE-2025-9242）](../Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/WatchGuard/WatchGuard%20Fireware%20IKEv2%20%E8%B6%8A%E7%95%8C%E5%86%99%E5%85%AC%E5%BC%80%E9%AA%8C%E8%AF%81%E4%B8%8E%E6%8E%A2%E9%92%88%E8%BE%B9%E7%95%8C%EF%BC%88CVE-2025-9242%EF%BC%89.md) |
+| CVE-2026-0257 | 既有主文补证 | [CVE-2026-0257 _ Palo Alto Networks PAN-OS GlobalProtect Authentication](../Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/Palo%20Alto/CVE-2026-0257%20_%20Palo%20Alto%20Networks%20PAN-OS%20GlobalProtect%20Authentication.md) |
+| CVE-2026-24061 | 既有主文补证 | [CVE-2026-24061：GNU InetUtils Telnetd 身份验证绕过漏洞](../Web%E5%AE%89%E5%85%A8/%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BD%AF%E4%BB%B6/GNU/CVE-2026-24061%EF%BC%9AGNU%20InetUtils%20Telnetd%20%E8%BA%AB%E4%BB%BD%E9%AA%8C%E8%AF%81%E7%BB%95%E8%BF%87%E6%BC%8F%E6%B4%9E.md) |
+| CVE-2025-40536; CVE-2025-40551 | 既有主文补证 | [【CVE-2025-40551】：Solarwinds Web Help Desk又一处反序列化漏洞](../Web%E5%AE%89%E5%85%A8/%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BD%AF%E4%BB%B6/SolarWinds/%E3%80%90CVE-2025-40551%E3%80%91%EF%BC%9ASolarwinds%20Web%20Help%20Desk%E5%8F%88%E4%B8%80%E5%A4%84%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%BC%8F%E6%B4%9E.md) |
+| CVE-2026-10520 | 既有主文补证 | [CVE-2026-10520 _ Ivanti Sentry Pre-Authenticated OS Command Injection](../Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/Ivanti/CVE-2026-10520%20_%20Ivanti%20Sentry%20Pre-Authenticated%20OS%20Command%20Injection.md) |
+| CVE-2026-41940 | 既有主文补证 | [CVE-2026-41940 cPanel-WHM 认证绕过漏洞复现](../Web%E5%AE%89%E5%85%A8/%E8%BF%90%E7%BB%B4%E9%9D%A2%E6%9D%BF/LiteSpeed%20cPanel/CVE-2026-41940%20cPanel-WHM%20%E8%AE%A4%E8%AF%81%E7%BB%95%E8%BF%87%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0.md) |
 
 ## 维护和验证
 
@@ -95,3 +114,13 @@
 最新静态检查：71 项测试通过；构建和重建检查一致；0 errors、0 fatal、0 new issues，5080 项历史警告，未修改 baseline。公开材料门槛的原有决定不因合并或 CI 通过而改变；全量 1727 项的技术审查仍未完成。
 
 使用官方 npm 包 Marked 4.3.0 运行 21 项渲染工具测试，全部通过。全库 5743 篇机器解析有 8 处待判读提示、0 结构性阻断；这 8 处均与新 master 字节相同，不属于本批新增或补证文件，不冒称为全库全文审阅。另对本批 53 篇作 Pandoc 静态渲染，57 块围栏代码文本保持原值。
+
+## 严格门槛续批与范围
+
+本次新增12个2025候选编号及6个补证编号，都有可定位的具体公开输入。SolarWinds仅确认具体对象参数/请求材料可审阅，不把完整RCE、全部载荷辅助实现或40537计入本次通过范围。Sentry有原始HTTP输入和命令输出依据。WatchGuard补全配置条件，SharePoint与IGEL补读专用生成辅助源。全部15篇均经独立最终字节复核；先前33篇撤稿和7处撤补不变。
+
+Edimax1316尚缺已审下游载荷和独立验证结果；UniFi原研究未清楚划分34908/34909，而独立CNA不能把具体请求映射至34908，故二者不因宽松分析标签通过。
+
+完整1727项技术审阅仍在继续。2023年165项及2024年桌面/浏览器50项因平台审阅阻断停止，未重试或转交；阻断不代表没有公开材料。其他已审来源集的暂缓也不代表全网不存在PoC。机器清点、库文阅读、技术来源全文阅读和图片检查分别记录。
+
+续批最终静态验收：71项知识库测试通过，0errors、0fatal、0newissues，5080项历史警告；68篇Pandoc渲染及103块围栏代码文本保真。Marked4.3.0扫描5753篇、0结构阻断，8处提示仍逐字等同新master；机器扫描不冒称全库全文审阅。baseline不变。
