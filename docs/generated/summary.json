@@ -1,9 +1,9 @@
 {
-  "documents": 5674,
+  "documents": 5689,
   "excluded_sources": 59,
   "explicit_entities": 5501,
   "fingerprints": 569,
-  "indexed_sources": 5615,
+  "indexed_sources": 5630,
   "issues": {
     "embedded_code_candidate": 1,
     "empty_fence": 91,
@@ -16,9 +16,9 @@
     "source_missing": 3856,
     "unrecognized_identifier_namespace": 88
   },
-  "primary_cve_identifiers": 3154,
-  "primary_entries": 5521,
+  "primary_cve_identifiers": 3167,
+  "primary_entries": 5536,
   "schema_version": 1,
-  "source_digest": "cbcd5651e214d78361d40f88fe96683117f8dfdabc7af829a48e9b504c3c2672",
+  "source_digest": "de5f9bc8339072416a92c7b1ecea0c1eb4a1912f5ca935b7e398225ada8cc49e",
   "verification": "offline-static-only"
 }

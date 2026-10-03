@@ -1,0 +1,419 @@
+{
+  "base_commit": "8f2a9e14575928bb5f086902c786da66f4a65aa9",
+  "new_articles": 35,
+  "append_only_existing_articles": 2,
+  "unit_tests_passed": 52,
+  "documents": 5689,
+  "errors": 0,
+  "fatal_issues": 0,
+  "new_quality_debt": 0,
+  "historical_warnings": 5196,
+  "baseline_modified": false,
+  "generated_index_differences": [],
+  "article_render_checks": [
+    {
+      "path": "IOT安全/摄像头/Eyeplus/Eyeplus-GetUsers-凭据信息泄露-CVE-2026-100906.md",
+      "render_scope": "full-new-article",
+      "sha256": "c6bc34c995abfbed434c3de99742a6eb556888d3eadeb43c9231afc71da8ec91",
+      "code_elements": 8,
+      "fenced_blocks": 0,
+      "code_text_matches": true,
+      "raw_fence_text_matches": true,
+      "active_html": false
+    },
+    {
+      "path": "Web安全/AI应用/EDDI/EDDI ZIP导入路径穿越与延迟类加载利用链 CVE-2025-32779.md",
+      "render_scope": "full-new-article",
+      "sha256": "3a83f99a899012e23b0c1ecd45079352cb49bc667b8b6c50d7a932632b1e5e81",
+      "code_elements": 19,
+      "fenced_blocks": 0,
+      "code_text_matches": true,
+      "raw_fence_text_matches": true,
+      "active_html": false
+    },
+    {
+      "path": "Web安全/AI应用/OpenCode/OpenCode 升级接口跨站请求与任意包安装（GHSA-632h-h47v-g4x4）.md",
+      "render_scope": "full-new-article",
+      "sha256": "542cbfdbcc7012b3cc118f8bf5be0421dd554c1595adc49820e83d30488e77d5",
+      "code_elements": 14,
+      "fenced_blocks": 1,
+      "code_text_matches": true,
+      "raw_fence_text_matches": true,
+      "active_html": false
+    },
+    {
+      "path": "Web安全/AI应用/SQL Copilot/SSMS SQL Copilot 只读绕过与数据库元数据提权（CVE-2026-65669）.md",
+      "render_scope": "full-new-article",
+      "sha256": "36f52bcd57c615b2fdbd9c7aeb5ab6555b7f47e600c51a0e88f95f8e99eca025",
+      "code_elements": 7,
+      "fenced_blocks": 1,
+      "code_text_matches": true,
+      "raw_fence_text_matches": true,
+      "active_html": false
+    },
+    {
+      "path": "Web安全/AI应用/n8n/n8n GSuiteAdmin 原型污染与 Git 命令执行链（CVE-2026-33696）.md",
+      "render_scope": "full-new-article",
+      "sha256": "2da5c4c0e12892872e245fb329a1768c0cbca55201183be5bb5082d31149f537",
+      "code_elements": 19,
+      "fenced_blocks": 1,
+      "code_text_matches": true,
+      "raw_fence_text_matches": true,
+      "active_html": false
+    },
+    {
+      "path": "Web安全/CMS内容/Cockpit/Cockpit-CMS-Space-Storage-路径遍历-CVE-2026-58467.md",
+      "render_scope": "full-new-article",
+      "sha256": "10cfe1684efc7a0a4489efb82cac35e466075170bc49aa3e6251807359198187",
+      "code_elements": 14,
+      "fenced_blocks": 0,
+      "code_text_matches": true,
+      "raw_fence_text_matches": true,
+      "active_html": false
+    },
+    {
+      "path": "Web安全/CMS内容/WordPress/AIWU-getCurrentTaskResults-任务数据泄露-CVE-2026-6639.md",
+      "render_scope": "full-new-article",
+      "sha256": "afc416005deb0d07eca3584d6ec3201551b5cac55a5a4c778f7682d9b0d720d8",
+      "code_elements": 13,
+      "fenced_blocks": 1,
+      "code_text_matches": true,
+      "raw_fence_text_matches": true,
+      "active_html": false
+    },
+    {
+      "path": "Web安全/CMS内容/WordPress/Hippoo-REST权限绕过-管理员密码覆盖-CVE-2026-49060.md",
+      "render_scope": "full-new-article",
+      "sha256": "09ca8ce6c25fa1767af74db511235d49322d26426feee2da5fd7e515473830d0",
+      "code_elements": 23,
+      "fenced_blocks": 0,
+      "code_text_matches": true,
+      "raw_fence_text_matches": true,
+      "active_html": false
+    },
+    {
+      "path": "Web安全/CMS内容/WordPress/Newfold-空Hiive密钥认证绕过-CVE-2026-80099.md",
+      "render_scope": "full-new-article",
+      "sha256": "550cce89d9eec8ba9b39cd60eed1ae90d4d8b608beac3566ea20388b95d9b268",
+      "code_elements": 13,
+      "fenced_blocks": 0,
+      "code_text_matches": true,
+      "raw_fence_text_matches": true,
+      "active_html": false
+    },
+    {
+      "path": "Web安全/CMS内容/WordPress/（CVE-2026-87902）WordPress Core page-template路径遍历LFI漏洞.md",
+      "render_scope": "append-only; original bytes unchanged",
+      "sha256": "7ad0bdc9e3568e10fd4cc92a51af13a4e6f1986cb87bb13f5efe66e66c5d7b54",
+      "code_elements": 1,
+      "fenced_blocks": 0,
+      "code_text_matches": true,
+      "raw_fence_text_matches": true,
+      "active_html": false
+    },
+    {
+      "path": "Web安全/ERP企业/用友政务财务云/用友财务云A++V8 selectMaUser orgCode SQL注入.md",
+      "render_scope": "full-new-article",
+      "sha256": "bc2fd47026bf44e92cd45174a2f89aebf1602ccb026b61d373b69d1d1c7ed18f",
+      "code_elements": 17,
+      "fenced_blocks": 1,
+      "code_text_matches": true,
+      "raw_fence_text_matches": true,
+      "active_html": false
+    },
+    {
+      "path": "Web安全/OA办公/金和OA/金和OA C6 AjaxForCenterBudgetDecompose SQL注入.md",
+      "render_scope": "full-new-article",
+      "sha256": "97dcb5b0384042d8aef31aa3a877d97fe1d1e8b0fadd9ae4a03844492fe26062",
+      "code_elements": 26,
+      "fenced_blocks": 1,
+      "code_text_matches": true,
+      "raw_fence_text_matches": true,
+      "active_html": false
+    },
+    {
+      "path": "Web安全/中间件/Apache Tomcat/MemoryUserDatabaseFactory路径混用JNDI链分析.md",
+      "render_scope": "full-new-article",
+      "sha256": "802143f05dd7e5ca91fe922fd33d0e59939d2762fbd790256658b9adf72267a9",
+      "code_elements": 13,
+      "fenced_blocks": 1,
+      "code_text_matches": true,
+      "raw_fence_text_matches": true,
+      "active_html": false
+    },
+    {
+      "path": "Web安全/云平台/Argo CD/Argo CD repo-server构建选项与Helm网络边界公开验证（GHSA-47m3-95c7-g2g8）.md",
+      "render_scope": "full-new-article",
+      "sha256": "cdfda7a4ded68b8746d7a7f1b4299562aa2a003d8e6e88b8df2fbeb534004432",
+      "code_elements": 23,
+      "fenced_blocks": 0,
+      "code_text_matches": true,
+      "raw_fence_text_matches": true,
+      "active_html": false
+    },
+    {
+      "path": "Web安全/商业软件/Eleveo/Eleveo-Quality-Management-QMBODownload-路径泄露-CVE-2026-101143.md",
+      "render_scope": "full-new-article",
+      "sha256": "a296d556ef8cb27f9d3677892b94b14d613eef42ee21b0c1286fd58828b6ca3a",
+      "code_elements": 4,
+      "fenced_blocks": 1,
+      "code_text_matches": true,
+      "raw_fence_text_matches": true,
+      "active_html": false
+    },
+    {
+      "path": "Web安全/商业软件/Krayin/Krayin-Installer-未认证账户覆盖-CVE-2026-100885.md",
+      "render_scope": "full-new-article",
+      "sha256": "3a6b05ca51aa738e6baf58114488e12918e9f3436439721f3b08e5c6c75a8557",
+      "code_elements": 15,
+      "fenced_blocks": 0,
+      "code_text_matches": true,
+      "raw_fence_text_matches": true,
+      "active_html": false
+    },
+    {
+      "path": "Web安全/商业软件/ONLYOFFICE/ONLYOFFICE savefile 路径穿越与 docbuilder 利用条件分析.md",
+      "render_scope": "full-new-article",
+      "sha256": "5b99cdd25b6cacbd303636bd03b3434738b00c2772151cf75a94744966661467",
+      "code_elements": 43,
+      "fenced_blocks": 1,
+      "code_text_matches": true,
+      "raw_fence_text_matches": true,
+      "active_html": false
+    },
+    {
+      "path": "Web安全/商业软件/student-management-system/student-management-system-管理处理器未授权-CVE-2026-97646.md",
+      "render_scope": "full-new-article",
+      "sha256": "a0109ee3dbd125d370c6a8354210939f33d91accf6e9a88ed5a1a95b46259287",
+      "code_elements": 10,
+      "fenced_blocks": 0,
+      "code_text_matches": true,
+      "raw_fence_text_matches": true,
+      "active_html": false
+    },
+    {
+      "path": "Web安全/安全设备/天锐数据泄露防护系统/天锐 findSingConfigPage 排序参数SQL注入 CVE-2025-11314.md",
+      "render_scope": "full-new-article",
+      "sha256": "e734719061b1c6292bc98a6c475c9881789d4ee7cc8bf023181010198e496080",
+      "code_elements": 17,
+      "fenced_blocks": 1,
+      "code_text_matches": true,
+      "raw_fence_text_matches": true,
+      "active_html": false
+    },
+    {
+      "path": "Web安全/开发框架/CFITSIO/CFITSIO 扩展文件名原语及4.7.0加固分析.md",
+      "render_scope": "full-new-article",
+      "sha256": "852c583dbf0a62c7553727477038884f420efc3f83eae47fa47b4e3131f66948",
+      "code_elements": 17,
+      "fenced_blocks": 1,
+      "code_text_matches": true,
+      "raw_fence_text_matches": true,
+      "active_html": false
+    },
+    {
+      "path": "Web安全/开发框架/PHP/PHP CGI 参数注入的 XAMPP 失败条件与官方回归测试 CVE-2024-4577.md",
+      "render_scope": "full-new-article",
+      "sha256": "9f0bb2272a36e0c498113eefbce26e54075c886beaf72661f10a75a53afe5e12",
+      "code_elements": 18,
+      "fenced_blocks": 1,
+      "code_text_matches": true,
+      "raw_fence_text_matches": true,
+      "active_html": false
+    },
+    {
+      "path": "Web安全/开发框架/Provenance/Provenance marker陈旧供应量授权绕过与两阶段回归验证.md",
+      "render_scope": "full-new-article",
+      "sha256": "3a54adc2ee7f66627508976b5bdda361fa06e05648b1bb760e6f939c5545316d",
+      "code_elements": 16,
+      "fenced_blocks": 0,
+      "code_text_matches": true,
+      "raw_fence_text_matches": true,
+      "active_html": false
+    },
+    {
+      "path": "Web安全/开发框架/Ruby/ruby-saml 规范化空串与解析器差异及XSW公开验证工具（CVE-2025-66567、CVE-2025-66568）.md",
+      "render_scope": "full-new-article",
+      "sha256": "13b7aab1e911c936994177748ace2123f1d092e7be9460db0854b47eaa97e713",
+      "code_elements": 9,
+      "fenced_blocks": 0,
+      "code_text_matches": true,
+      "raw_fence_text_matches": true,
+      "active_html": false
+    },
+    {
+      "path": "Web安全/开发框架/libheif/libheif Grid 色度平面越界写与 Next.js 实验链（CVE-2026-32740）.md",
+      "render_scope": "full-new-article",
+      "sha256": "81968cbf63031aba6cc00cc5569a2d065c16cb086e7871e16ba3a12446ce0631",
+      "code_elements": 23,
+      "fenced_blocks": 1,
+      "code_text_matches": true,
+      "raw_fence_text_matches": true,
+      "active_html": false
+    },
+    {
+      "path": "Web安全/数据库/MongoDB/MongoDB-Zlib-压缩协议堆内存信息泄露漏洞-CVE-2025-14847.md",
+      "render_scope": "append-only; original bytes unchanged",
+      "sha256": "291ee11dcdea7777fa1075c76104fb0820ad3b91a57c88ad59bc1e3d6db1c4c2",
+      "code_elements": 1,
+      "fenced_blocks": 0,
+      "code_text_matches": true,
+      "raw_fence_text_matches": true,
+      "active_html": false
+    },
+    {
+      "path": "Web安全/服务器软件/N-able N-central/N-central 路径与Forwarded解析差异及公开SOAP验证边界（CVE-2026-86206）.md",
+      "render_scope": "full-new-article",
+      "sha256": "10fc49a43a95ea293bb69aed3855ac91211108deb1febd388ef85b32a96adced",
+      "code_elements": 11,
+      "fenced_blocks": 1,
+      "code_text_matches": true,
+      "raw_fence_text_matches": true,
+      "active_html": false
+    },
+    {
+      "path": "Web安全/服务器软件/ProFTPD/ProFTPD 数据通道 UAF 与公开 EXP 静态核验 CVE-2020-9273.md",
+      "render_scope": "full-new-article",
+      "sha256": "3d188e9085c446d21b90a3b4b6102ca18f090232fffa6e387c03beed9361ff20",
+      "code_elements": 25,
+      "fenced_blocks": 0,
+      "code_text_matches": true,
+      "raw_fence_text_matches": true,
+      "active_html": false
+    },
+    {
+      "path": "Web安全/服务器软件/ZendTo/ZendTo dropoff 路径穿越与文件移走（CVE-2025-34508）.md",
+      "render_scope": "full-new-article",
+      "sha256": "3c3f7587c695d5397bcb83b419d574591e134c0ede8d3f1d590ab03f8164d5cc",
+      "code_elements": 19,
+      "fenced_blocks": 1,
+      "code_text_matches": true,
+      "raw_fence_text_matches": true,
+      "active_html": false
+    },
+    {
+      "path": "Web安全/桌面软件/Chrome/Chrome 146 Sanitizer API SVG 与表单 URL 重解析绕过.md",
+      "render_scope": "full-new-article",
+      "sha256": "e45c4ef81d821373b1fc3616b7225484e6b7732fce76c9c2c2cc01f492b939e2",
+      "code_elements": 20,
+      "fenced_blocks": 1,
+      "code_text_matches": true,
+      "raw_fence_text_matches": true,
+      "active_html": false
+    },
+    {
+      "path": "Web安全/桌面软件/Chrome/Chrome iOS Shortcuts 回调确认绕过（CVE-2026-13795）.md",
+      "render_scope": "full-new-article",
+      "sha256": "b250f7c23203837b7993067fd05840dd9fb901bab73a75291c7b3e132fef9241",
+      "code_elements": 21,
+      "fenced_blocks": 1,
+      "code_text_matches": true,
+      "raw_fence_text_matches": true,
+      "active_html": false
+    },
+    {
+      "path": "Web安全/桌面软件/ImageMagick/ImageMagick PNG profile 标准输入等待型拒绝服务 CVE-2022-44267.md",
+      "render_scope": "full-new-article",
+      "sha256": "da4dd7af09d703e57bfbdfce668a869296c2273b280a132ec4b2204f6125d0d8",
+      "code_elements": 19,
+      "fenced_blocks": 1,
+      "code_text_matches": true,
+      "raw_fence_text_matches": true,
+      "active_html": false
+    },
+    {
+      "path": "Web安全/桌面软件/Wikipedia/Wikipedia Android 深链接主机校验与会话泄露（CVE-2026-65993）.md",
+      "render_scope": "full-new-article",
+      "sha256": "68e3f08e9e67586c8ded94ca7bf1e941f0a04b711aa4a295cbda39e6ff8af5fa",
+      "code_elements": 14,
+      "fenced_blocks": 1,
+      "code_text_matches": true,
+      "raw_fence_text_matches": true,
+      "active_html": false
+    },
+    {
+      "path": "Web安全/桌面软件/YTDLnis/YTDLnis Intent COMMAND 参数注入与 Python 运行时文件写入.md",
+      "render_scope": "full-new-article",
+      "sha256": "93519abfdd7253198a5f133315b18440a789716a48dd739bd41289608a1922b4",
+      "code_elements": 18,
+      "fenced_blocks": 1,
+      "code_text_matches": true,
+      "raw_fence_text_matches": true,
+      "active_html": false
+    },
+    {
+      "path": "Web安全/网络设备/Netcore/Netcore-NR289-GE-boa-栈溢出-CVE-2026-101074.md",
+      "render_scope": "full-new-article",
+      "sha256": "dfdb7a796491dc4820ec3be265e4732d8fe87a089f78244b442b5731d246c609",
+      "code_elements": 12,
+      "fenced_blocks": 0,
+      "code_text_matches": true,
+      "raw_fence_text_matches": true,
+      "active_html": false
+    },
+    {
+      "path": "Web安全/网络设备/TOTOLink/TOTOLINK-A3002MU-formWsc-命令注入-CVE-2026-93742.md",
+      "render_scope": "full-new-article",
+      "sha256": "57f89d2f21d1b123a74d5a2dc9aad14069fdbe1f20c770dab184e82a3be789be",
+      "code_elements": 8,
+      "fenced_blocks": 0,
+      "code_text_matches": true,
+      "raw_fence_text_matches": true,
+      "active_html": false
+    },
+    {
+      "path": "Web安全/网络设备/Ziroom/Ziroom-ZHOME-A0101-firstLogin-命令注入-CVE-2026-101260.md",
+      "render_scope": "full-new-article",
+      "sha256": "8eb183b1925d6f50ad51ac94093d102d90af9edbdf661c7d82347dc80660e55f",
+      "code_elements": 14,
+      "fenced_blocks": 1,
+      "code_text_matches": true,
+      "raw_fence_text_matches": true,
+      "active_html": false
+    },
+    {
+      "path": "系统安全/Windows/Windows本地提权漏洞/GetProcessHandleFromHwnd保护进程边界与PPLwindow分析.md",
+      "render_scope": "full-new-article",
+      "sha256": "7189dd9eb9d88a8cf1037eac97473ebcd82183e8c08d2dc5dcbb5745a3d13331",
+      "code_elements": 15,
+      "fenced_blocks": 0,
+      "code_text_matches": true,
+      "raw_fence_text_matches": true,
+      "active_html": false
+    }
+  ],
+  "append_fidelity": [
+    {
+      "path": "Web安全/数据库/MongoDB/MongoDB-Zlib-压缩协议堆内存信息泄露漏洞-CVE-2025-14847.md",
+      "operation": "append-only",
+      "original_sha256": "01951653d9ce76e9f7c53fa9dc1dcdaca11610183bd247f5c39363080f8336bb",
+      "original_bytes": 11037,
+      "append_sha256": "d3e6c78ba24fc5dc4e99e0b0267775b51cac3e82ea36da1e48a4f099aa94a4fc",
+      "new_sha256": "291ee11dcdea7777fa1075c76104fb0820ad3b91a57c88ad59bc1e3d6db1c4c2",
+      "original_bytes_unchanged": true
+    },
+    {
+      "path": "Web安全/CMS内容/WordPress/（CVE-2026-87902）WordPress Core page-template路径遍历LFI漏洞.md",
+      "operation": "append-only",
+      "original_sha256": "fb962a2b1e2d54492b1d00541c363b95de6c9ae7628acc1f9e8929ffacbc1595",
+      "original_bytes": 9758,
+      "append_sha256": "3c9eca30caa7c71c9cab1410fd0d54e4d0f473b55bd6477db4858387ecca0329",
+      "new_sha256": "7ad0bdc9e3568e10fd4cc92a51af13a4e6f1986cb87bb13f5efe66e66c5d7b54",
+      "original_bytes_unchanged": true
+    }
+  ],
+  "remote_render": {
+    "commit": "803404d25e4e4203b8feb1ec9320045b9ceea315",
+    "articles_viewed": 20,
+    "fenced_blocks_compared": 15,
+    "copy_control_values_match_except_terminal_LF": true,
+    "screenshots_inspected": 6,
+    "articles_with_screenshots": 5,
+    "os_clipboard_verified": false,
+    "new15_remote_render": "pending after publication"
+  },
+  "poc_executed": false,
+  "example_targets_requested": false,
+  "dependencies_installed": false,
+  "redaction_performed": false
+}

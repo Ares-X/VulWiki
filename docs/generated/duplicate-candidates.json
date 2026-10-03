@@ -3541,6 +3541,15 @@
   {
     "basis": "shared-primary-identifier",
     "decision": "manual-review-required",
+    "key": "CVE-2024-4577",
+    "paths": [
+      "Web安全/开发框架/PHP/PHP CGI 参数注入的 XAMPP 失败条件与官方回归测试 CVE-2024-4577.md",
+      "系统安全/Windows/PHP-CGI-Windows-平台远程代码执行漏洞-CVE-2024-4577.md"
+    ]
+  },
+  {
+    "basis": "shared-primary-identifier",
+    "decision": "manual-review-required",
     "key": "CVE-2024-48307",
     "paths": [
       "Web安全/开发框架/JEECG/Jeecg 漏洞总结及 tscan poc 分享.md",

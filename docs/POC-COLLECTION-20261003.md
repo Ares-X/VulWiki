@@ -2,35 +2,50 @@
 
 ## 当前草稿范围
 
-本 PR 从 master `8f2a9e14575928bb5f086902c786da66f4a65aa9` 独立建立，保留既有修复，不修改 PR #8/#9，不合并主分支。当前先发布 **20 篇新增中文正文**；用户随后指定的 cve.imfht.com 与 chaitin.cn 正在逐条补证，会继续追加至同一草稿 PR。本段描述的是中间交付，不是全网检索完成。
+本 PR 从 master `8f2a9e14575928bb5f086902c786da66f4a65aa9` 独立建立，保留既有修复，不修改 PR #8/#9，不合并主分支。当前已整理 **35 篇新增中文正文、2 篇既有文章仅追加补证**。imfht限定候选批次已完成，长亭Google/Bing增量和用户新指定Linux/sudo专题继续审查，会追加至同一草稿 PR。本段描述的是中间交付，不是全网检索完成。
 
 收录门槛是公开可取得的具体 PoC、EXP、请求、回归测试或可用验证材料，不能只靠“作者成功”“AI 生成”“已复现”标题或探测器编号。部分链和完整利用分开，资料整理不承担漏洞复现。新增文章均含来源、权限/配置前提、副作用、版本/补丁及具体缺口。
 
 ## 新增正文与依据
 
-以下每行都是新增文档，差异为新建全文而非修改旧归档。代码、请求、原始公开测试值、URL、引文未作脱敏或规范化；所引用的短片段保持原值。完整原文/工程未整体转载，正文为中文分析与精确来源链接。
+每行对应新增文档；差异为新建全文，不修改既有归档。新增为原创中文分析与必要短引用，技术值、URL及占位符保持原样。
 
 |新增文档|主编号|收录状态|直接来源|
 |---|---|---|---|
+|[Eyeplus ONVIF GetUsers 未认证明文口令返回：后续登录尚未证实](../IOT安全/摄像头/Eyeplus/Eyeplus-GetUsers-凭据信息泄露-CVE-2026-100906.md)|CVE-2026-100906|needs-review / not-reproduced|[原文](https://github.com/devjanger/iot-advisories/blob/3e8ea257b091a9ef322457862560aa09c27e544c/EYEPLUS-GetUsers-Unauth-Plaintext-Password.md)|
 |[EDDI ZIP导入路径穿越与延迟类加载利用链（CVE-2025-32779）](../Web安全/AI应用/EDDI/EDDI%20ZIP导入路径穿越与延迟类加载利用链%20CVE-2025-32779.md)|CVE-2025-32779; GHSA-9v34-frgq-63mv|needs-review / source-claimed|[原文](https://www.sonarsource.com/blog/code-security-for-conversational-ai-uncovering-a-zip-slip-in-eddi/)|
 |[OpenCode 升级接口跨站请求与任意包安装（GHSA-632h-h47v-g4x4）](../Web安全/AI应用/OpenCode/OpenCode%20升级接口跨站请求与任意包安装（GHSA-632h-h47v-g4x4）.md)|GHSA-632h-h47v-g4x4|needs-review / source-claimed|[原文](https://securitylabs.datadoghq.com/articles/opencode-upgrade-remote-code-execution/)|
 |[SSMS SQL Copilot 只读绕过与数据库元数据提权（CVE-2026-65669）](../Web安全/AI应用/SQL%20Copilot/SSMS%20SQL%20Copilot%20只读绕过与数据库元数据提权（CVE-2026-65669）.md)|CVE-2026-65669|needs-review / source-claimed|[原文](https://embracethered.com/blog/posts/2026/from-select-to-sysadmin-sql-copilot-bluehat-asia/)|
 |[n8n GSuiteAdmin 原型污染与 Git 命令执行链（CVE-2026-33696）](../Web安全/AI应用/n8n/n8n%20GSuiteAdmin%20原型污染与%20Git%20命令执行链（CVE-2026-33696）.md)|CVE-2026-33696; GHSA-mxrg-77hm-89hv|needs-review / source-claimed|[原文](https://simonkoeck.com/writeups/n8n-gsuiteadmin-prototype-pollution-rce)|
+|[Cockpit CMS Space Storage 路径遍历：PHP 内置服务器与路径存在条件](../Web安全/CMS内容/Cockpit/Cockpit-CMS-Space-Storage-路径遍历-CVE-2026-58467.md)|CVE-2026-58467|needs-review / not-reproduced|[原文](https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2026/CVE-2026-58467.yaml)|
+|[AIWU AI Copilot getCurrentTaskResults 未授权任务数据读取](../Web安全/CMS内容/WordPress/AIWU-getCurrentTaskResults-任务数据泄露-CVE-2026-6639.md)|CVE-2026-6639|needs-review / not-reproduced|[原文](https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2026/CVE-2026-6639.yaml)|
+|[Hippoo REST 路由权限哨兵混用：本地对照 PoC 与管理员密码覆盖](../Web安全/CMS内容/WordPress/Hippoo-REST权限绕过-管理员密码覆盖-CVE-2026-49060.md)|CVE-2026-49060|needs-review / not-reproduced|[原文](https://github.com/rootdirective-sec/CVE-2026-49060-Lab/blob/db51f07bdfa8961c291f53fabdde53a65041012b/README.md)|
+|[Newfold WordPress 插件空 Hiive 密钥认证绕过：模板与修复边界](../Web安全/CMS内容/WordPress/Newfold-空Hiive密钥认证绕过-CVE-2026-80099.md)|CVE-2026-80099|needs-review / not-reproduced|[原文](https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2026/CVE-2026-80099.yaml)|
 |[用友财务云 A++V8 selectMaUser orgCode SQL 注入](../Web安全/ERP企业/用友政务财务云/用友财务云A++V8%20selectMaUser%20orgCode%20SQL注入.md)|无新增主编号|needs-review / source-claimed|[原文](https://security.yonyou.com/#/patchInfo?identifier=309233a5451d4d349c3bc47937fd4f4e)|
 |[金和 OA C6 AjaxForCenterBudgetDecompose SQL 注入](../Web安全/OA办公/金和OA/金和OA%20C6%20AjaxForCenterBudgetDecompose%20SQL注入.md)|无新增主编号|needs-review / source-claimed|[原文](https://mrxn.net/jswz/jhsoft-AjaxForCenterBudgetDecompose-sqli.html)|
 |[MemoryUserDatabaseFactory 路径混用的 JNDI 文件写入与 JSP 链](../Web安全/中间件/Apache%20Tomcat/MemoryUserDatabaseFactory路径混用JNDI链分析.md)|无新增主编号|needs-review / not-reproduced|[原文](https://srcincite.io/blog/2024/07/21/jndi-injection-rce-via-path-manipulation-in-memoryuserdatabasefactory.html)|
 |[Argo CD repo-server构建选项与Helm网络边界公开验证（GHSA-47m3-95c7-g2g8）](../Web安全/云平台/Argo%20CD/Argo%20CD%20repo-server构建选项与Helm网络边界公开验证（GHSA-47m3-95c7-g2g8）.md)|GHSA-47m3-95c7-g2g8|active / not-reproduced|[原文](https://www.synacktiv.com/en/publications/caught-in-the-octopus-trap-unauthenticated-rce-in-argo-cd-with-codeql)|
+|[Eleveo Quality Management 问卷导出响应泄露服务器路径](../Web安全/商业软件/Eleveo/Eleveo-Quality-Management-QMBODownload-路径泄露-CVE-2026-101143.md)|CVE-2026-101143|needs-review / not-reproduced|[原文](https://drive.google.com/file/d/1qKulZLn6xxT3ePlV__Q-0MKLhlWmRI_U/view?usp=sharing)|
+|[Krayin CRM 安装器 AJAX 绕过导致管理员账户覆盖](../Web安全/商业软件/Krayin/Krayin-Installer-未认证账户覆盖-CVE-2026-100885.md)|CVE-2026-100885|needs-review / not-reproduced|[原文](https://github.com/carlosalbertotuma/advisory/blob/e5d131d8dac4840ac4308b29de3dc1aa5f721b64/advisory-07-Unauthenticated-InstallerBypass.md)|
+|[ONLYOFFICE savefile 路径穿越与 docbuilder 利用条件分析](../Web安全/商业软件/ONLYOFFICE/ONLYOFFICE%20savefile%20路径穿越与%20docbuilder%20利用条件分析.md)|无新增主编号|needs-review / not-reproduced|[原文](https://rivers.chaitin.cn/blog/cq958510lnechd2450h0)|
+|[student-management-system 管理处理器缺少会话检查：信息读取与改写须区分](../Web安全/商业软件/student-management-system/student-management-system-管理处理器未授权-CVE-2026-97646.md)|CVE-2026-97646|needs-review / not-reproduced|[原文](https://github.com/ningzichun/student-management-system/issues/9)|
 |[天锐数据泄露防护系统 findSingConfigPage 排序参数 SQL 注入（CVE-2025-11314）](../Web安全/安全设备/天锐数据泄露防护系统/天锐%20findSingConfigPage%20排序参数SQL注入%20CVE-2025-11314.md)|CVE-2025-11314|needs-review / source-claimed|[原文](https://github.com/FightingLzn9/vul/blob/1a9d896a999e22b319fe7d464a96fd4f04a101d0/天锐数据泄露防护系统-6.md)|
 |[CFITSIO 扩展文件名的复制、SSRF 与外传原语及 4.7.0 加固](../Web安全/开发框架/CFITSIO/CFITSIO%20扩展文件名原语及4.7.0加固分析.md)|无新增主编号|needs-review / not-reproduced|[原文](https://blog.doyensec.com/2026/05/19/cfitsio-weaponized-filenames.html)|
+|[PHP CGI 参数注入的 XAMPP 失败条件与官方回归测试（CVE-2024-4577）](../Web安全/开发框架/PHP/PHP%20CGI%20参数注入的%20XAMPP%20失败条件与官方回归测试%20CVE-2024-4577.md)|CVE-2024-4577|needs-review / not-reproduced|[原文](https://rivers.chaitin.cn/blog/cq957f90lnechd244v10)|
 |[Provenance marker陈旧供应量授权绕过与两阶段回归验证](../Web安全/开发框架/Provenance/Provenance%20marker陈旧供应量授权绕过与两阶段回归验证.md)|无新增主编号|active / not-reproduced|[原文](https://blog.trailofbits.com/2026/08/25/state-divergence-enables-unauthorized-access/)|
 |[ruby-saml 规范化空串与解析器差异及XSW公开验证工具（CVE-2025-66567、CVE-2025-66568）](../Web安全/开发框架/Ruby/ruby-saml%20规范化空串与解析器差异及XSW公开验证工具（CVE-2025-66567、CVE-2025-66568）.md)|CVE-2025-66567; CVE-2025-66568|active / not-reproduced|[原文](https://portswigger.net/research/the-fragile-lock)|
 |[libheif Grid 色度平面越界写与 Next.js 实验链（CVE-2026-32740）](../Web安全/开发框架/libheif/libheif%20Grid%20色度平面越界写与%20Next.js%20实验链（CVE-2026-32740）.md)|CVE-2026-32740; GHSA-frfr-f3vg-2g6j|needs-review / source-claimed|[原文](https://fortbridge.co.uk/research/cve-2026-32740-nextjs-sharp-libheif-rce/)|
 |[N-central 路径与Forwarded解析差异及公开SOAP验证边界（CVE-2026-86206）](../Web安全/服务器软件/N-able%20N-central/N-central%20路径与Forwarded解析差异及公开SOAP验证边界（CVE-2026-86206）.md)|CVE-2026-86206|active / not-reproduced|[原文](https://www.rapid7.com/blog/post/ve-cve-2026-86206-cve-2026-86207-n-able-n-central-authentication-bypass-fixed/)|
+|[ProFTPD 数据通道 UAF 与公开 EXP 静态核验（CVE-2020-9273）](../Web安全/服务器软件/ProFTPD/ProFTPD%20数据通道%20UAF%20与公开%20EXP%20静态核验%20CVE-2020-9273.md)|CVE-2020-9273|needs-review / not-reproduced|[原文](https://rivers.chaitin.cn/blog/cq951690lnechd244h50)|
 |[ZendTo dropoff 路径穿越与文件移走（CVE-2025-34508）](../Web安全/服务器软件/ZendTo/ZendTo%20dropoff%20路径穿越与文件移走（CVE-2025-34508）.md)|CVE-2025-34508|needs-review / not-reproduced|[原文](https://horizon3.ai/attack-research/attack-blogs/cve-2025-34508-another-file-sharing-application-another-path-traversal/)|
 |[Chrome 146 Sanitizer API：SVG 名称解析与表单 URL 重解析绕过](../Web安全/桌面软件/Chrome/Chrome%20146%20Sanitizer%20API%20SVG%20与表单%20URL%20重解析绕过.md)|无新增主编号|active / source-claimed|[原文](https://www.slcyber.io/research/two-bypasses-for-chromes-sanitizer-api)|
 |[Chrome for iOS 经 Shortcuts 回调绕过应用启动确认（CVE-2026-13795）](../Web安全/桌面软件/Chrome/Chrome%20iOS%20Shortcuts%20回调确认绕过（CVE-2026-13795）.md)|CVE-2026-13795|active / source-claimed|[原文](https://blog.doyensec.com/2026/09/24/chrome-ios-policy-bypass.html)|
+|[ImageMagick PNG profile 标准输入等待型拒绝服务（CVE-2022-44267）](../Web安全/桌面软件/ImageMagick/ImageMagick%20PNG%20profile%20标准输入等待型拒绝服务%20CVE-2022-44267.md)|CVE-2022-44267|needs-review / not-reproduced|[原文](https://bbs.chaitin.cn/topic/335)|
 |[Wikipedia Android 深链接主机校验与会话泄露（CVE-2026-65993）](../Web安全/桌面软件/Wikipedia/Wikipedia%20Android%20深链接主机校验与会话泄露（CVE-2026-65993）.md)|CVE-2026-65993|needs-review / source-claimed|[原文](https://securitylab.github.com/advisories/GHSL-2026-101_apps-android-wikipedia/)|
 |[YTDLnis Intent COMMAND 参数注入与 Python 运行时文件写入](../Web安全/桌面软件/YTDLnis/YTDLnis%20Intent%20COMMAND%20参数注入与%20Python%20运行时文件写入.md)|无新增主编号|needs-review / source-claimed|[原文](https://www.sonarsource.com/blog/ytdlnis-argument-injection-rce/)|
+|[Netcore NR289-GE boa Basic Auth 栈溢出：崩溃和 PC 控制的证据边界](../Web安全/网络设备/Netcore/Netcore-NR289-GE-boa-栈溢出-CVE-2026-101074.md)|CVE-2026-101074|needs-review / not-reproduced|[原文](https://github.com/senxitoyshuyi-ui/HACKALL/blob/53039d907a48e41955938cad73598b7e5de1eff9/netcore_NR289-GE_V1.4.5102%2C2018.06.1418_44%20Router/Netcore_NR289-GE_boa_stack_overflow.md)|
+|[TOTOLINK A3002MU formWsc localPin 命令注入：telnet 服务写入副作用](../Web安全/网络设备/TOTOLink/TOTOLINK-A3002MU-formWsc-命令注入-CVE-2026-93742.md)|CVE-2026-93742|needs-review / not-reproduced|[原文](https://github.com/SunnyYANGyaya/cuicuishark-sheep-fishIOT/blob/8cb416b9d6041fec5600a20bd845d083da7934dd/ToTolink/A3002MU/rce-formWsc.md)|
+|[Ziroom ZHOME A0101 firstLogin 认证后命令注入：配置覆盖与回连副作用](../Web安全/网络设备/Ziroom/Ziroom-ZHOME-A0101-firstLogin-命令注入-CVE-2026-101260.md)|CVE-2026-101260|needs-review / not-reproduced|[原文](https://github.com/waltz-sketch/Ziroom/blob/6513d083108f7a859eaeffc7500c33e131b0228a/firstlogin_command_injection.md)|
 |[Windows GetProcessHandleFromHwnd 保护进程边界与 PPLwindow 本地演示](../系统安全/Windows/Windows本地提权漏洞/GetProcessHandleFromHwnd保护进程边界与PPLwindow分析.md)|无新增主编号|needs-review / not-reproduced|[原文](https://projectzero.google/2026/02/gphfh-deep-dive.html)|
 
 ## 决定收录的关键证据与纠正
@@ -70,8 +85,8 @@
 3. SourByte窗口25份不同正文已读，另读1份helper；2份已有覆盖、2份随后上游删除不恢复、21份继续待补原始证据。逐项表在下节
 4. wxvl续接窄窗03:18:11Z–05:43:00Z的4份正文已读：DevKit Pro与GitLab AI Gateway缺实际公开材料；Next.js94545已有主入口；一周新闻不作为独立漏洞新增。广窗385路径中其余381篇未逐文深读，不列为排除
 5. Mr-xn窄窗新增APIProxyHandler索引链接已核，原文访问失败；八个其他可读仓库窗口无提交不等于历史正文已全部审完
-6. 新指定imfht：完整列出state:has-public-poc的103项/4页，9项位于9月19日至今，正在逐条读取原始资料。一般PoC2024页、Public Exploits1469页是不同集合，标签或AI生成内容不等于通过收录门槛
-7. 新指定Chaitin：社区和百川云原始/转载文章正逐项检索、判重和追溯；本次草稿尚未将它们计入20篇
+6. 新指定imfht：103项/4页完成清单，深读近期9项与首页7个CVE模板；16候选为11新收、2既有补证、3暂缓，另13检测不当漏洞。详见[逐项报告](IMFHT-COLLECTION-20261003.md)
+7. 新指定Chaitin：第一阶段16正文、4收录、12其他处置；Google实际第一页另得10条，翻页与Bing验证受阻，已得材料继续核对。详见[覆盖与取舍](CHAITIN-COLLECTION-20261003.md)。后续Linux/sudo专题不计入已完成数量
 8. 上游扩展核对有67个实际阅读内容对象，包含全文、补丁差异或限定段落，不能改称67篇研究/67个网站。代码文件、目录清单、正文数量分别记录
 
 受阻入口：wy876仓库、0-sec、跳跳糖、Seebug、Mr-xn新文章、Argo另一个关联公告；没有绕过登录/付费/访问限制，也未对示例目标发请求。
@@ -111,6 +126,6 @@
 - 集成前基线：52项仓库单测通过；5654份正文，5196项历史警告、0 errors/fatal
 - 20篇另行独立文字审稿：未发现材料门槛/版本映射的阻断问题；不是全来源逐字事实认证或漏洞复现
 - Markdown经Pandoc生成HTML，逐字符核对代码节点与原始围栏；检查活动HTML、围栏及字符串frontmatter。不执行文章代码、不访问示例目标
-- 浏览器像素验收未完成：本地Chromium启动遭socket权限限制，云浏览器不允许file URL；没有规避限制。PDF备用也因缺xelatex格式文件失败。离线HTML结构与复制文本检查不冒充浏览器像素检查
-- 所有旧正文与baseline保持不变。派生索引由既有scripts/wiki.py生成，未手工改索引或加入新质量债
-- 当前20篇集成后：52项单测通过；5674份正文、5196项历史警告、0新增质量债、0 errors/fatal；索引build及build --check通过，different_files为空。追加来源后仍须重跑最终检查与远端CI；当前为草稿，无自动合并
+- 首批20篇在提交803404d的实际GitHub Preview均已打开；15个围栏的渲染文本与复制控件值对照通过，仅GitHub末尾换行处理不同；5篇代表文的6张截图无实质问题。操作系统剪贴板工具为空，未声称端到端剪贴板验证。新追加部分尚待同等远端核对；不执行显示为代码的HTML样例
+- 旧WordPress/MongoDB两文仅末尾追加固定模板补证，原字节为新文完整前缀；其他旧正文与baseline不变。派生索引由既有scripts/wiki.py生成，未手工改索引或加入新质量债
+- 当前35篇新增和2篇追加集成后：52项单测通过；5689份正文、5196项历史警告、0新增质量债、0 errors/fatal；索引build及build --check通过，different_files为空。后续Linux/长亭追加仍须重跑检查与远端CI；当前为草稿，无自动合并。机器记录见[验证清单](POC-COLLECTION-VALIDATION-20261003.json)

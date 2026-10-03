@@ -41,6 +41,10 @@
 
 - [74cms v4.2.126-前台四处sql注入](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/74cms/74cms%20v4.2.126-%E5%89%8D%E5%8F%B0%E5%9B%9B%E5%A4%84sql%E6%B3%A8%E5%85%A5.md) [analysis; not-reproduced; needs-review]
 
+## AIWU AI Chatbot & Workflow Automation / AI Copilot Content Generator
+
+- [AIWU AI Copilot getCurrentTaskResults 未授权任务数据读取](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/WordPress/AIWU-getCurrentTaskResults-%E4%BB%BB%E5%8A%A1%E6%95%B0%E6%8D%AE%E6%B3%84%E9%9C%B2-CVE-2026-6639.md) [analysis; not-reproduced; needs-review]
+
 ## Adobe Commerce + Magento Open Source
 
 - [漏洞预警  Magento Open Source XXE漏洞](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/Magento/%E6%BC%8F%E6%B4%9E%E9%A2%84%E8%AD%A6%20%20Magento%20Open%20Source%20XXE%E6%BC%8F%E6%B4%9E.md) [advisory; not-reproduced; needs-review]
@@ -126,6 +130,10 @@
 - [CmsEasy-crossall_act.php-SQL注入漏洞](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/CmsEasy/CmsEasy-crossall_act.php-SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md) [analysis; not-reproduced; needs-review]
 - [CmsEasy-language_admin.php-后台命令执行漏洞](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/CmsEasy/CmsEasy-language_admin.php-%E5%90%8E%E5%8F%B0%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md) [analysis; not-reproduced; needs-review]
 - [CmsEasy-update_admin.php-后台任意文件上传漏洞](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/CmsEasy/CmsEasy-update_admin.php-%E5%90%8E%E5%8F%B0%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E.md) [unknown; not-reproduced; needs-review]
+
+## Cockpit CMS（cockpit-hq/cockpit）
+
+- [Cockpit CMS Space Storage 路径遍历：PHP 内置服务器与路径存在条件](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/Cockpit/Cockpit-CMS-Space-Storage-%E8%B7%AF%E5%BE%84%E9%81%8D%E5%8E%86-CVE-2026-58467.md) [analysis; not-reproduced; needs-review]
 
 ## Composr CMS
 
@@ -568,6 +576,10 @@
 
 - [Heybbs 1.2 sql注入漏洞](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/Heybbs/Heybbs%201.2%20sql%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md) [vulnerability; not-reproduced; needs-review]
 
+## Hippoo Mobile App for WooCommerce
+
+- [Hippoo REST 路由权限哨兵混用：本地对照 PoC 与管理员密码覆盖](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/WordPress/Hippoo-REST%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87-%E7%AE%A1%E7%90%86%E5%91%98%E5%AF%86%E7%A0%81%E8%A6%86%E7%9B%96-CVE-2026-49060.md) [analysis; not-reproduced; needs-review]
+
 ## HucartCMS5.7.4
 
 - [Hucart cms v5.7.4 CSRF漏洞可任意增加管理员账号](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/HucartCMS/Hucart%20cms%20v5.7.4%20CSRF%E6%BC%8F%E6%B4%9E%E5%8F%AF%E4%BB%BB%E6%84%8F%E5%A2%9E%E5%8A%A0%E7%AE%A1%E7%90%86%E5%91%98%E8%B4%A6%E5%8F%B7.md) [vulnerability; not-reproduced; needs-review]
@@ -929,6 +941,10 @@
 ## NewZhan商业2.4.1/个人2.6.3
 
 - [NewZhan CMS sql注入漏洞](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/NewZhan%20CMS/NewZhan%20CMS%20sql%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md) [analysis; not-reproduced; needs-review]
+
+## Newfold WP Module Data / Bluehost / HostGator / Web / Crazy Domains
+
+- [Newfold WordPress 插件空 Hiive 密钥认证绕过：模板与修复边界](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/WordPress/Newfold-%E7%A9%BAHiive%E5%AF%86%E9%92%A5%E8%AE%A4%E8%AF%81%E7%BB%95%E8%BF%87-CVE-2026-80099.md) [analysis; not-reproduced; needs-review]
 
 ## NiuShop version unspecified
 
