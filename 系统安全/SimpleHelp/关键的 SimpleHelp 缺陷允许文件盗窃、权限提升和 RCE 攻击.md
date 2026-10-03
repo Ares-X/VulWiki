@@ -33,6 +33,9 @@ source_url: "https://rustlang.rs/posts/simple-help/"
 
 ## 57727的实际技术证据
 
+本次新增的具体公开验证资料仅覆盖 CVE-2024-57727：工具箱资源路径穿越及配置文件读取。CVE-2024-57726、CVE-2024-57728 在本节仅作三漏洞区别与修复分支背景，不计为本次通过 PoC/实际验证资料门槛的编号；其既有正文和标识保留。
+
+
 [imjdl原始分析](https://rustlang.rs/posts/simple-help/)（2025-01-17，页面声明CC BY4.0）追到WebDownloadServer.processOneHttpQuery/respondToolboxResource及ToolBoxConstants.getResourceFile。工具箱资源路径由itemID、resourceID及附加路径拼接，作者保留了初次请求不工作的原因：目录拼接需要相应的上级段，不能只看到../就断言成立。补丁加secure/isInsecure边界检查。
 
 固定Metasploit模块全文审阅显示：先GET allversions做版本检查，再从toolbox-resource构造遍历请求。默认读configuration/serverconfig.xml，并将响应写本地loot；仅200且非空即记漏洞，未验证配置结构，可能产生误报。它包含框架Scanner能力，但维护期间从未运行。未见外部下载器/第三方回连；框架本身不在审计范围。

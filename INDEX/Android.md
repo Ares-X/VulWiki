@@ -12,10 +12,6 @@
 
 - [攻击 Android Binder：对 CVE-2023-20938 的分析和利用](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Android/%E6%94%BB%E5%87%BB%20Android%20Binder%EF%BC%9A%E5%AF%B9%20CVE-2023-20938%20%E7%9A%84%E5%88%86%E6%9E%90%E5%92%8C%E5%88%A9%E7%94%A8.md) [analysis; not-reproduced; needs-review]
 
-## Android DevicePolicyManagerService
-
-- [Android Device Owner 账号可见性检查修复分析（CVE-2025-48633）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Android/Android%20Device%20Owner%20%E8%B4%A6%E5%8F%B7%E5%8F%AF%E8%A7%81%E6%80%A7%E6%A3%80%E6%9F%A5%E4%BF%AE%E5%A4%8D%E5%88%86%E6%9E%90%EF%BC%88CVE-2025-48633%EF%BC%89.md) [analysis; not-reproduced; active]
-
 ## Android Framework
 
 - [Google Patches Android Zero-Day CVE-2025-48595 Exploited in Targeted Attacks](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Android/Google%20Patches%20Android%20Zero-Day%20CVE-2025-48595%20Exploited%20in%20Targeted%20A.md) [incident; source-claimed; needs-review]
@@ -27,10 +23,6 @@
 ## Android Linux内核
 
 - [谷歌警告：Android内核漏洞正在被活跃攻击](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Android/%E8%B0%B7%E6%AD%8C%E8%AD%A6%E5%91%8A%EF%BC%9AAndroid%E5%86%85%E6%A0%B8%E6%BC%8F%E6%B4%9E%E6%AD%A3%E5%9C%A8%E8%A2%AB%E6%B4%BB%E8%B7%83%E6%94%BB%E5%87%BB.md) [advisory; not-reproduced; needs-review]
-
-## Android MediaButtonReceiverHolder / MediaSessionService
-
-- [Android 媒体按键能力传播与后台启动限制（CVE-2025-48572）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Android/Android%20%E5%AA%92%E4%BD%93%E6%8C%89%E9%94%AE%E8%83%BD%E5%8A%9B%E4%BC%A0%E6%92%AD%E4%B8%8E%E5%90%8E%E5%8F%B0%E5%90%AF%E5%8A%A8%E9%99%90%E5%88%B6%EF%BC%88CVE-2025-48572%EF%BC%89.md) [analysis; not-reproduced; active]
 
 ## Android adbd无线调试
 

@@ -8,7 +8,7 @@
   "removed_entry": "CVE-2026-69836",
   "master_commit": "cfb19294812b1435a57e866a87dd18e2ff3ebec3",
   "open_pr10_commit": "e102e1d2fb26e381e7c4d270629738d0f3f8654d",
-  "completed_article_deliverables": 93,
+  "completed_article_deliverables": 53,
   "coverage_note": "All filter identities inventoried; substantive source review remains in progress. Identifier matches do not by themselves prove duplicates.",
   "rows": [
     {
@@ -109,18 +109,28 @@
         "Web安全/网络设备/F5 BIG-IP/F5 BIG-IP APM OAuth授权服务器存在零日漏洞，可无登录远程代码执行.md"
       ],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "Web安全/网络设备/F5 BIG-IP/（CVE-2026-94127）F5 BIG-IP APM OAuth授权服务器远程代码执行漏洞.md",
             "mode": "supplement",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "ac81b5111e421500f16148cd780af3850fb09d259d9fad4b0e0eb316028559ec"
+            "evidence": [
+              {
+                "url": "https://raw.githubusercontent.com/watchtowrlabs/watchTowr-vs-f5-bigip-PreAuth-RCE-CVE-2026-94127/678c1e38f4bf75754fd345172145880ac9971903/watchTowr-vs-f5-bigip-PreAuth-RCE-CVE-2026-94127.py",
+                "location": "build_token(), make_request(), groom(), main(): fixed callbacks and exact Authorization bytes",
+                "sha256": "d917697e4c89ae8c4dec459f3bc23809361722d74ca5588ae551617a67aee20f",
+                "read_depth": "Complete code file statically read; not executed"
+              },
+              {
+                "url": "https://raw.githubusercontent.com/watchtowrlabs/watchTowr-vs-f5-bigip-PreAuth-RCE-CVE-2026-94127/678c1e38f4bf75754fd345172145880ac9971903/README.md",
+                "location": "Detection in Action and affected configuration",
+                "sha256": "3cf2e01e92c9eda41c09b77fac73126c0af0275e2c44349f1aca0214fecb699d",
+                "read_depth": "Entire README read"
+              }
+            ]
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -153,18 +163,15 @@
         "Web安全/网络设备/Check Point/已遭利用的 Management Server 0day.md"
       ],
       "review": {
-        "disposition": "technical-material-published-or-staged",
-        "articles": [
+        "disposition": "deferred-strict-material-gate",
+        "evidence_gaps": [
           {
-            "article": "Web安全/网络设备/Check Point/已遭利用的 Management Server 0day.md",
-            "mode": "supplement",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "0cad8cd952925c2969dcde012a5edf0259c341be43b66e4e94b4185a73c42dfe"
+            "former_article": "Web安全/网络设备/Check Point/已遭利用的 Management Server 0day.md",
+            "reason": "Inspected original article names methods and targetVersion discriminator but omits full SOAP shapes. Linked detector source was not inspected; no complete concrete trigger established here.",
+            "decision": "hold"
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "note": "Our unqualified new file or append withdrawn; original master content preserved; not proof no other public material exists."
       }
     },
     {
@@ -548,18 +555,15 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
-        "articles": [
+        "disposition": "deferred-strict-material-gate",
+        "evidence_gaps": [
           {
-            "article": "Web安全/CMS内容/Magento/StyleSmuggler实例化顺序与模板文件包含分析-CVE-2026-75650.md",
-            "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "3c6bb51648d1262fd9d8dbb53b7ad5c91fedbaa1f7d83b140bc9808d68f19592"
+            "former_article": "Web安全/CMS内容/Magento/StyleSmuggler实例化顺序与模板文件包含分析-CVE-2026-75650.md",
+            "reason": "Inspected research explicitly could not deliver attacker text/styles anonymously despite ~900 trials. Authenticated admin preview proof does not establish the mapped preauth chain.",
+            "decision": "hold"
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "note": "Our unqualified new file or append withdrawn; original master content preserved; not proof no other public material exists."
       }
     },
     {
@@ -617,18 +621,28 @@
         "Web安全/网络设备/MikroTik RouterOS/CVE-2026-67276  RouterOS SSH公钥认证绕过漏洞（POC）.md"
       ],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "Web安全/网络设备/MikroTik RouterOS/CVE-2026-67276  RouterOS SSH公钥认证绕过漏洞（POC）.md",
             "mode": "supplement",
-            "primary_cve_in_article": false,
-            "candidate_identifier_in_article": false,
-            "sha256": "722f34df5a52c7f8b978645ec231bce697dc7acc59f08b3bfc7ec501c5f7511d"
+            "evidence": [
+              {
+                "url": "https://raw.githubusercontent.com/gagaltotal/CVE-2026-mikrotik-poc/583f80fea6b595438f3d50a6c86f9c6657cfcd1c/CVE-2026-86060.py",
+                "location": "exploit() lines 261–295: failed -2 auth, renegotiate_keys, session/PTY, complete NUL identity/policy frame; prompt and command handling",
+                "sha256": "9ed9c730a9663d7db6c7ca6aa9d5892ca1766bf1611c6a28b4af4fd2ffb6da21",
+                "read_depth": "Complete code file statically read; not executed"
+              },
+              {
+                "url": "https://bishopfox.com/blog/mikrotrick-inside-the-routeros-takeover-chain",
+                "location": "Stage Two, helper parser, patch distinctions and 7.x/6.x limits; lines 306–410",
+                "sha256": "f40a4c06312aec71169cf331b26f59401846474a3db841ed5771d04b5b7c86a2",
+                "read_depth": "Available technical section 306–410 read"
+              }
+            ]
           }
         ],
-        "mapping_state": "candidate-or-context-only-see-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -641,18 +655,34 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "Web安全/网络设备/MikroTik RouterOS/RouterOS预认证rekey与SSH策略链分析-CVE-2026-67279.md",
             "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "1882a77e73597bb700c05b1c367970bc23df67f406f846fe5a139a0abed62702"
+            "evidence": [
+              {
+                "url": "https://raw.githubusercontent.com/gagaltotal/CVE-2026-mikrotik-poc/583f80fea6b595438f3d50a6c86f9c6657cfcd1c/CVE-2026-86060.py",
+                "location": "exploit261–295 plus wait_for_prompt/run/plant_account; rekey then server open_session",
+                "sha256": "9ed9c730a9663d7db6c7ca6aa9d5892ca1766bf1611c6a28b4af4fd2ffb6da21",
+                "read_depth": "Entire Python file read"
+              },
+              {
+                "url": "https://cert.pl/en/posts/2026/09/mikrotik-routeros-cve",
+                "location": "CVE67279 and86060 separate descriptions and version table",
+                "sha256": "23781932f8c77eb3c2004ea93324407186a6460132c9a3f7ace91b5bb51ff4ad",
+                "read_depth": "Relevant CVE/version and Description sections read"
+              },
+              {
+                "url": "https://bishopfox.com/blog/mikrotrick-inside-the-routeros-takeover-chain",
+                "location": "State Bypass Safety Check lines398–406: no-rekey refused versus rekey channel opened; 6.x/7.x lab boundaries",
+                "sha256": "f40a4c06312aec71169cf331b26f59401846474a3db841ed5771d04b5b7c86a2",
+                "read_depth": "Complete available technical section306–410 read"
+              }
+            ]
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -730,18 +760,22 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "Web安全/网络设备/SonicWall/SMA1000-OPTIONS-CouchDB-SNMP链-CVE-2026-83548-83549.md",
             "mode": "new",
-            "primary_cve_in_article": false,
-            "candidate_identifier_in_article": false,
-            "sha256": "48ed1b226ae3209ab4a6ff74a340953d3fd54db732516b5727f5c759ef9916ef"
+            "evidence": [
+              {
+                "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/linux/http/sonicwall_sma1000_couchdb_rce.rb",
+                "location": "check113; exploit133–305; couch_request316–356; update_document375; stage_document468–547; execution map579–594; ctrl_shell666–719",
+                "sha256": "b1e7a831239d169459e216fe4df07b0251e9f4d9751b2ecce1c50ce0a39bcd10",
+                "read_depth": "Complete trigger path read section-wise: lines1–356,375–594,650–720; entire cleanup implementation/dependency closure not audited"
+              }
+            ]
           }
         ],
-        "mapping_state": "candidate-or-context-only-see-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -756,18 +790,22 @@
         "Web安全/网络设备/SonicWall/（CVE-2026-15409）SonicWall SMA1000 WebSocket SSRF致Erlang RCE漏洞.md"
       ],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "Web安全/网络设备/SonicWall/SMA1000-OPTIONS-CouchDB-SNMP链-CVE-2026-83548-83549.md",
             "mode": "new",
-            "primary_cve_in_article": false,
-            "candidate_identifier_in_article": false,
-            "sha256": "48ed1b226ae3209ab4a6ff74a340953d3fd54db732516b5727f5c759ef9916ef"
+            "evidence": [
+              {
+                "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/linux/http/sonicwall_sma1000_couchdb_rce.rb",
+                "location": "check113; exploit133–305; couch_request316–356; update_document375; stage_document468–547; execution map579–594; ctrl_shell666–719",
+                "sha256": "b1e7a831239d169459e216fe4df07b0251e9f4d9751b2ecce1c50ce0a39bcd10",
+                "read_depth": "Complete trigger path read section-wise: lines1–356,375–594,650–720; entire cleanup implementation/dependency closure not audited"
+              }
+            ]
           }
         ],
-        "mapping_state": "candidate-or-context-only-see-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -800,18 +838,22 @@
         "Web安全/中间件/JFrog/（CVE-2026-82329）JFrog Artifactory空join key认证绕过漏洞.md"
       ],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "Web安全/中间件/JFrog/（CVE-2026-82329）JFrog Artifactory空join key认证绕过漏洞.md",
             "mode": "supplement",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "5ad3470082e1c9a89002b22b31c55b4287190675d002fdad34f0ecd0f95db50f"
+            "evidence": [
+              {
+                "url": "https://bishopfox.com/blog/cve-2026-82329-unauthenticated-administrative-access-in-jfrog-artifactory-via-an-empty-cluster-join-key",
+                "location": "Lines 328–334 exact POST endpoint; 359–384 complete TOK_EMPTY/TOK_DECOY and outcome table",
+                "sha256": "f40a4c06312aec71169cf331b26f59401846474a3db841ed5771d04b5b7c86a2",
+                "read_depth": "Complete technical section 304–389 read"
+              }
+            ]
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -824,18 +866,22 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "Web安全/商业软件/PaperCut/PaperCut-Tapestry配置绕过与外部用户查询代码执行链-CVE-2026-81578-82078.md",
             "mode": "new",
-            "primary_cve_in_article": false,
-            "candidate_identifier_in_article": false,
-            "sha256": "cf20f71dbeeff39acc9bae9d6325856aa9a19148723734cb0781f51124544ef1"
+            "evidence": [
+              {
+                "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/multi/http/papercut_ng_external_user_lookup_rce.rb",
+                "location": "exploit156–333; complex_direct_request367–393; update_config_option400–434; trigger_external_lookup436–449; groovy_command_source500–522 and H2 helpers524–536",
+                "sha256": "fc6a22a97e505849cc9e18abf0356db816862b38e1a39a64e729326555819477",
+                "read_depth": "Section-scoped complete 26/H2 command trigger read; 24/25 binary bootstrap and Java payload dependency closure not fully inspected"
+              }
+            ]
           }
         ],
-        "mapping_state": "candidate-or-context-only-see-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -848,18 +894,22 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "Web安全/商业软件/PaperCut/PaperCut-Tapestry配置绕过与外部用户查询代码执行链-CVE-2026-81578-82078.md",
             "mode": "new",
-            "primary_cve_in_article": false,
-            "candidate_identifier_in_article": false,
-            "sha256": "cf20f71dbeeff39acc9bae9d6325856aa9a19148723734cb0781f51124544ef1"
+            "evidence": [
+              {
+                "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/multi/http/papercut_ng_external_user_lookup_rce.rb",
+                "location": "exploit156–333; complex_direct_request367–393; update_config_option400–434; trigger_external_lookup436–449; groovy_command_source500–522 and H2 helpers524–536",
+                "sha256": "fc6a22a97e505849cc9e18abf0356db816862b38e1a39a64e729326555819477",
+                "read_depth": "Section-scoped complete 26/H2 command trigger read; 24/25 binary bootstrap and Java payload dependency closure not fully inspected"
+              }
+            ]
           }
         ],
-        "mapping_state": "candidate-or-context-only-see-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -872,18 +922,22 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "Web安全/开发框架/Gitea/Gitea-diffpatch双次补丁Git-hook执行-CVE-2026-60004.md",
             "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "60fbc6393a1388d94f3add97240637d667f3e1778f67022099faea2c3474d2fe"
+            "evidence": [
+              {
+                "url": "https://api.github.com/repos/go-gitea/gitea/security-advisories/GHSA-rcr6-4jqh-j84m",
+                "location": "Description PoC: build_hook, build_patch, GiteaClient.api, two-cycle main loop and fetch_output",
+                "sha256": "04c5d13cd377492dea182f9de5dbc6f9ec5c77e1e66cca36dda68474273c3d86",
+                "read_depth": "Full technical description including complete Python PoC read; screenshots not inspected"
+              }
+            ]
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -912,18 +966,15 @@
         "Web安全/其他软件/杂项/【已复现】CVE-2026-72529 CVE-2026-72530TrueConf Server 未授权远程代码执行漏.md"
       ],
       "review": {
-        "disposition": "technical-material-published-or-staged",
-        "articles": [
+        "disposition": "deferred-strict-material-gate",
+        "evidence_gaps": [
           {
-            "article": "Web安全/其他软件/杂项/【已复现】CVE-2026-72529 CVE-2026-72530TrueConf Server 未授权远程代码执行漏.md",
-            "mode": "supplement",
-            "primary_cve_in_article": false,
-            "candidate_identifier_in_article": false,
-            "sha256": "b2a0beb21b28f5571de146f7cc2bd60056cf144991c1e177615b9e3ed15bf4d4"
+            "former_article": "Web安全/其他软件/杂项/【已复现】CVE-2026-72529 CVE-2026-72530TrueConf Server 未授权远程代码执行漏.md",
+            "reason": "Independently read KLCERT-26-058 substantive advisory and integrated original article: specially crafted script is described but no script/request/protocol shape exists; original reproduction videos are blank.",
+            "decision": "remove"
           }
         ],
-        "mapping_state": "candidate-or-context-only-see-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "note": "Our unqualified new file or append withdrawn; original master content preserved; not proof no other public material exists."
       }
     },
     {
@@ -970,18 +1021,22 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "Web安全/云平台/Citrix/NetScaler-SAML-RelayState错误码混淆-CVE-2026-19490.md",
             "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "897221f98f25de583be1323f105b72caf8d6ef39564fbcb963d2c2ac2d30b3f8"
+            "evidence": [
+              {
+                "url": "https://raw.githubusercontent.com/BishopFox/CVE-2026-19490-check/544c09785e6a32956919223b1d8dd20c92afe941/cve_2026_19490_check.py",
+                "location": "relay_state, form_body, classify, assess: fixed length20, SAMLResponseAAAA and probe/control markers",
+                "sha256": "bb06b74a7583ca18815a727e68ec9ae28d0186877d42ec07949b1f96352e56d4",
+                "read_depth": "Entire Python file read"
+              }
+            ]
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -996,18 +1051,22 @@
         "Web安全/AI应用/MLflow/攻击者利用 MLflow 漏洞窃取云凭据和机密信息.md"
       ],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "Web安全/AI应用/MLflow/MLflow-Webhook重定向DNS重绑定SSRF-CVE-2026-64849.md",
             "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "81cadd6c7e908c7de0cec20054cc2a67b2b890b58e5dd9f24f79deb3c17b83b4"
+            "evidence": [
+              {
+                "url": "https://api.github.com/repos/mlflow/mlflow/security-advisories/GHSA-7gwp-5pfp-969j",
+                "location": "Description PoC steps0–2, exact HTTP bodies and INTERNAL_SECRET response marker",
+                "sha256": "e20d0af090ecad1bbb55687f079b56eefe9f6286a214565e2afd2aad45f46aed",
+                "read_depth": "Full advisory description read; screenshots not inspected"
+              }
+            ]
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -1020,18 +1079,22 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "Web安全/邮件系统/Zimbra/Zimbra-SMTP日志Swatchdog命令注入-CVE-2026-73570.md",
             "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "95a5d09a942b4ba31a4e6fb5c22b5920a0a5f7c565fbdbca45bc7209b8ca7376"
+            "evidence": [
+              {
+                "url": "https://www.pruva.dev/api/v1/reproductions/REPRO-2026-00327/artifacts/bundle/repro/reproduction_steps.sh",
+                "location": "Pinned package inputs; installed setup180–290; run_attempt payload339, actual socket377–396, marker and patched controls",
+                "sha256": "d37ebfc66067f7df4085f0dd8843e82ff77d6f6cf33f191fe979fa971d9510ae",
+                "read_depth": "Entire script read in sections; no dependencies, product packages, runtime evidence files or executions independently validated"
+              }
+            ]
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -1044,18 +1107,15 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
-        "articles": [
+        "disposition": "deferred-strict-material-gate",
+        "evidence_gaps": [
           {
-            "article": "Web安全/中间件/JFrog/JFrog匿名令牌与scope校验链-CVE-2026-42018-42016.md",
-            "mode": "new",
-            "primary_cve_in_article": false,
-            "candidate_identifier_in_article": false,
-            "sha256": "2de46dc4cf88fc9d92a40d4f7335167f6cae2caa357afca75399b207a5f5a8cf"
+            "former_article": "Web安全/中间件/JFrog/JFrog匿名令牌与scope校验链-CVE-2026-42018-42016.md",
+            "reason": "42018 has concrete trailing-slash anonymous-token retrieval, but this is a new combined-primary file also claiming42016; no complete scope-exchange trigger for42016 inspected.",
+            "decision": "hold"
           }
         ],
-        "mapping_state": "candidate-or-context-only-see-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "note": "Our unqualified new file or append withdrawn; original master content preserved; not proof no other public material exists."
       }
     },
     {
@@ -1068,18 +1128,15 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
-        "articles": [
+        "disposition": "deferred-strict-material-gate",
+        "evidence_gaps": [
           {
-            "article": "Web安全/中间件/JFrog/JFrog-Docker远程缓存键镜像替换分析-CVE-2026-66384.md",
-            "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "144612a73e9d4b0c0eef165404f5cc0aa3bbd728870c6ab88fe7e1b8d8fec870"
+            "former_article": "Web安全/中间件/JFrog/JFrog-Docker远程缓存键镜像替换分析-CVE-2026-66384.md",
+            "reason": "Incident report explains cache substitution but omits the crafted request, parser disagreement bytes and reproducible input.",
+            "decision": "remove"
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "note": "Our unqualified new file or append withdrawn; original master content preserved; not proof no other public material exists."
       }
     },
     {
@@ -1092,18 +1149,28 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "Web安全/CMS内容/Magento/Magento客户会话身份切换-CVE-2026-71362.md",
             "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "affecbce5afab85efaf436ae5559106d7d429686e3a1bcf76d7f6d6cfc56620a"
+            "evidence": [
+              {
+                "url": "https://raw.githubusercontent.com/projectdiscovery/nuclei-templates/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2026/CVE-2026-71362.yaml",
+                "location": "All six HTTP requests: baseline account, editPost id=1/change_email/current_password, final customer section matcher",
+                "sha256": "eed2a401dc26cf36cfedddb1bcd8f7d7fd4b5263bee075d52f5104f65d73469c",
+                "read_depth": "Entire YAML read"
+              },
+              {
+                "url": "https://sansec.io/research/adobe-commerce-account-takeover-apsb26-92",
+                "location": "Customer account takeover section confirms session identity switch and CVE71362",
+                "sha256": "a98d537939e975bede4002e145ec0346e16c5f02e32ba1bbcdebd8334611fc82",
+                "read_depth": "Complete article technical text read"
+              }
+            ]
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -1195,18 +1262,15 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
-        "articles": [
+        "disposition": "deferred-strict-material-gate",
+        "evidence_gaps": [
           {
-            "article": "Web安全/数据库/Metabase/Metabase密码重置结构化参数SQL注入-CVE-2026-72898.md",
-            "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "c2b7dd59e60df1af5958391ce8b211b87a52fc45129d6ff8a9f30197d779bbfd"
+            "former_article": "Web安全/数据库/Metabase/Metabase密码重置结构化参数SQL注入-CVE-2026-72898.md",
+            "reason": "Three JSON inputs only test type-validation/generic400 differences; no specific SQL execution, data access, marker or fixed/vulnerable regression outcome established.",
+            "decision": "remove"
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "note": "Our unqualified new file or append withdrawn; original master content preserved; not proof no other public material exists."
       }
     },
     {
@@ -1219,18 +1283,15 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
-        "articles": [
+        "disposition": "deferred-strict-material-gate",
+        "evidence_gaps": [
           {
-            "article": "系统安全/macOS/macOS Screen Sharing两项预认证逻辑漏洞的边界辨析（CVE-2026-65400）.md",
-            "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "3163badd3afc3dc59ac74bcb4ba5519164f30e606309bf6c5a24dad974f27e1a"
+            "former_article": "系统安全/macOS/macOS Screen Sharing两项预认证逻辑漏洞的边界辨析（CVE-2026-65400）.md",
+            "reason": "公开解释的首个漏洞无编号且先前已修；65400对应第二个状态机问题，作者明确保留细节。不能挪用第一项PoC。",
+            "decision": "remove"
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "note": "Our unqualified new file or append withdrawn; original master content preserved; not proof no other public material exists."
       }
     },
     {
@@ -1243,18 +1304,15 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
-        "articles": [
+        "disposition": "deferred-strict-material-gate",
+        "evidence_gaps": [
           {
-            "article": "Web安全/中间件/WSO2/WSO2 JWT算法异常的fail-open分支与修复调用链（CVE-2026-5430）.md",
-            "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "5b9464f1024eee2f4cf93bb715cfec491827be70f97bd1b8fc6f3388f2fab46f"
+            "former_article": "Web安全/中间件/WSO2/WSO2 JWT算法异常的fail-open分支与修复调用链（CVE-2026-5430）.md",
+            "reason": "实际读取的是异常传播修复，没有具体JWT样本、HTTP请求、验证程序或输入输出回归。",
+            "decision": "remove"
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "note": "Our unqualified new file or append withdrawn; original master content preserved; not proof no other public material exists."
       }
     },
     {
@@ -1323,18 +1381,15 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
-        "articles": [
+        "disposition": "deferred-strict-material-gate",
+        "evidence_gaps": [
           {
-            "article": "Web安全/中间件/JFrog/JFrog匿名令牌与scope校验链-CVE-2026-42018-42016.md",
-            "mode": "new",
-            "primary_cve_in_article": false,
-            "candidate_identifier_in_article": false,
-            "sha256": "2de46dc4cf88fc9d92a40d4f7335167f6cae2caa357afca75399b207a5f5a8cf"
+            "former_article": "Web安全/中间件/JFrog/JFrog匿名令牌与scope校验链-CVE-2026-42018-42016.md",
+            "reason": "42018 has concrete trailing-slash anonymous-token retrieval, but this is a new combined-primary file also claiming42016; no complete scope-exchange trigger for42016 inspected.",
+            "decision": "hold"
           }
         ],
-        "mapping_state": "candidate-or-context-only-see-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "note": "Our unqualified new file or append withdrawn; original master content preserved; not proof no other public material exists."
       }
     },
     {
@@ -1347,18 +1402,22 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "Web安全/开发框架/JetBrains/TeamCity agent polling反序列化链与公开模块残留边界（CVE-2026-63077）.md",
             "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "60221396046e963023b72f1b703038657e9e3fc4f74b3c2571ea04b8b13b7241"
+            "evidence": [
+              {
+                "url": "https://github.com/rapid7/metasploit-framework/blob/ff0c41a287328ee70792925417c16310725e940a/modules/exploits/multi/http/jetbrains_teamcity_rce_cve_2026_63077.rb",
+                "location": "Metasploit exploit138–206, build_registration_xml219–237, build_deserialization_payload244–401, JSP construction403–475",
+                "sha256": "c5260eefe0f27b362f1259455e57f9089ed1b41e0db21c3ecedc8089edcea21f",
+                "read_depth": "Read complete 483-line module, all object-graph stages, HTTP trigger, JSP payload and cleanup"
+              }
+            ]
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -1558,18 +1617,15 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
-        "articles": [
+        "disposition": "deferred-strict-material-gate",
+        "evidence_gaps": [
           {
-            "article": "Web安全/商业软件/Sangoma/Switchvox pa端点PhoneIP SQL注入与公开模板判定（CVE-2026-9586）.md",
-            "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "5b1bf536bf1f447891a76dbb2e2d8eaec9ee624b9ffcab26b955ae7319f03388"
+            "former_article": "Web安全/商业软件/Sangoma/Switchvox pa端点PhoneIP SQL注入与公开模板判定（CVE-2026-9586）.md",
+            "reason": "文字只给入口、sink与攻击日志，完整curl在未视检图片。已知模板根元素request与原报告要求PolycomIPPhone冲突，不能由标题或日志补齐请求。",
+            "decision": "hold"
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "note": "Our unqualified new file or append withdrawn; original master content preserved; not proof no other public material exists."
       }
     },
     {
@@ -1666,18 +1722,22 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "Web安全/云平台/Microsoft SharePoint/SharePoint JWT actor token验证缺失与模板假阳性边界（CVE-2026-55040）.md",
             "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "048e644ac32aca2f0786f79e28492a3be0831a97a08f13b083919e56bbb42205"
+            "evidence": [
+              {
+                "url": "https://github.com/projectdiscovery/nuclei-templates/blob/70566db742a78d1c0ae974cb5b88ff5992857464/javascript/cves/2026/CVE-2026-55040.yaml",
+                "location": "Nuclei JavaScript lines 32–232: metadata fetch162, actor token180–182, forgeToken184–198, tryDigest200–203, Path1 207–217",
+                "sha256": "95158c8d38c06cb34a1803e24d2707f4a7e911aafe16f99589db5bf79cbe53dc",
+                "read_depth": "Read full 248-line template including SHA1/base64, HTTP transport, token fields, Path1 and Path2"
+              }
+            ]
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -1690,18 +1750,15 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
-        "articles": [
+        "disposition": "deferred-strict-material-gate",
+        "evidence_gaps": [
           {
-            "article": "Web安全/云平台/Microsoft SharePoint/SharePoint trust反序列化实验与June-July编号错配核对（CVE-2026-58644）.md",
-            "mode": "new",
-            "primary_cve_in_article": false,
-            "candidate_identifier_in_article": true,
-            "sha256": "21a0cbed6da16cfbf75db58c5862c184a6062a7e186e5b9b8cd0258275c62819"
+            "former_article": "Web安全/云平台/Microsoft SharePoint/SharePoint trust反序列化实验与June-July编号错配核对（CVE-2026-58644）.md",
+            "reason": "源码研究把16.0.19725.20384作为脆弱June版本，而58644 CNA把该build列为修复边界。报告为CVE族关联，不能独立证明58644；不借其他CVE链补足。",
+            "decision": "remove"
           }
         ],
-        "mapping_state": "candidate-or-context-only-see-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "note": "Our unqualified new file or append withdrawn; original master content preserved; not proof no other public material exists."
       }
     },
     {
@@ -1756,18 +1813,15 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
-        "articles": [
+        "disposition": "deferred-strict-material-gate",
+        "evidence_gaps": [
           {
-            "article": "Web安全/CMS内容/Joomla/Balbooa Forms未认证上传与固定模板适用限制（CVE-2026-56291）.md",
-            "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "3ac4fcf1ea4f668a932eb66af380915964d4a59efc0002c4a8188767c865f206"
+            "former_article": "Web安全/CMS内容/Joomla/Balbooa Forms未认证上传与固定模板适用限制（CVE-2026-56291）.md",
+            "reason": "请求与回读form目录相矛盾，原报告明确不公开请求体；不能自行更改为看似合理的目录后计通过。",
+            "decision": "hold"
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "note": "Our unqualified new file or append withdrawn; original master content preserved; not proof no other public material exists."
       }
     },
     {
@@ -1782,18 +1836,15 @@
         "Web安全/其他软件/杂项/黑客可将存在漏洞的 LiteLLM AI 网关转化为获取 root 权限和窃取云凭证的途径.md"
       ],
       "review": {
-        "disposition": "technical-material-published-or-staged",
-        "articles": [
+        "disposition": "deferred-strict-material-gate",
+        "evidence_gaps": [
           {
-            "article": "Web安全/AI应用/LiteLLM/LiteLLM MCP认证失败回退为空用户的源码与修复边界（CVE-2026-59822）.md",
-            "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "7149267e2151125b9a9dd69ad220d50f1c7036ba72ea4422a29a29bb652ca829"
+            "former_article": "Web安全/AI应用/LiteLLM/LiteLLM MCP认证失败回退为空用户的源码与修复边界（CVE-2026-59822）.md",
+            "reason": "测试确有具体ASGI scope与401断言，但替换真实认证/服务器管理器；更重要的是测试自称GHSA-h8fm-g6wc-j228，与本CVE公告GHSA-7488-6r32-c95q未闭合对应。不以看似相同根因推定编号，暂缓。",
+            "decision": "hold"
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "note": "Our unqualified new file or append withdrawn; original master content preserved; not proof no other public material exists."
       }
     },
     {
@@ -1806,18 +1857,15 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
-        "articles": [
+        "disposition": "deferred-strict-material-gate",
+        "evidence_gaps": [
           {
-            "article": "系统安全/Linux/Linux IPv6分页分配遗漏fraggap的内存边界分析（CVE-2026-53362）.md",
-            "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "017a3af5d14cffbdaa42960201494aaf90bff6d04cc517904c4269f2696bf6d4"
+            "former_article": "系统安全/Linux/Linux IPv6分页分配遗漏fraggap的内存边界分析（CVE-2026-53362）.md",
+            "reason": "只有MSG_MORE/MSG_SPLICE_PAGES机制提示与补丁，没有完整socket输入序列、长度参数或可执行回归；不能自行补出PoC。",
+            "decision": "remove"
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "note": "Our unqualified new file or append withdrawn; original master content preserved; not proof no other public material exists."
       }
     },
     {
@@ -1832,18 +1880,15 @@
         "Web安全/中间件/Adobe ColdFusion/Adobe ColdFusion 多个漏洞细节已公开，可导致远程代码执行.md"
       ],
       "review": {
-        "disposition": "technical-material-published-or-staged",
-        "articles": [
+        "disposition": "deferred-strict-material-gate",
+        "evidence_gaps": [
           {
-            "article": "Web安全/中间件/Adobe ColdFusion/ColdFusion RDS FILEIO路径处理补丁与编号归属边界（CVE-2026-48282）.md",
-            "mode": "new",
-            "primary_cve_in_article": false,
-            "candidate_identifier_in_article": true,
-            "sha256": "288a8b34dd02658ab121d76ab27b3dc9e069a92c1cac6d8715d45a6bbb429505"
+            "former_article": "Web安全/中间件/Adobe ColdFusion/ColdFusion RDS FILEIO路径处理补丁与编号归属边界（CVE-2026-48282）.md",
+            "reason": "具体请求存在，但作者明确只是48282/48313猜测；编号归属不成立，不能按48282合入。",
+            "decision": "remove"
           }
         ],
-        "mapping_state": "candidate-or-context-only-see-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "note": "Our unqualified new file or append withdrawn; original master content preserved; not proof no other public material exists."
       }
     },
     {
@@ -1856,18 +1901,15 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
-        "articles": [
+        "disposition": "deferred-strict-material-gate",
+        "evidence_gaps": [
           {
-            "article": "Web安全/网络设备/Citrix NetScaler/NetScaler SignedInfo越界与CVE归属待核的公开分析（CVE-2026-8452）.md",
-            "mode": "new",
-            "primary_cve_in_article": false,
-            "candidate_identifier_in_article": true,
-            "sha256": "bd6e4a04677a6ed43504a2cc89236432e6bf639c15d779b8df7ec15d25af85da"
+            "former_article": "Web安全/网络设备/Citrix NetScaler/NetScaler SignedInfo越界与CVE归属待核的公开分析（CVE-2026-8452）.md",
+            "reason": "作者明确无法确定是8452；即便技术实验具体，candidate-only编号不能通过。",
+            "decision": "remove"
           }
         ],
-        "mapping_state": "candidate-or-context-only-see-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "note": "Our unqualified new file or append withdrawn; original master content preserved; not proof no other public material exists."
       }
     },
     {
@@ -1880,18 +1922,15 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
-        "articles": [
+        "disposition": "deferred-strict-material-gate",
+        "evidence_gaps": [
           {
-            "article": "Web安全/CMS内容/Joomla/Page Builder CK附件上传材料与txt验证边界（CVE-2026-56290）.md",
-            "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "14450748153ded059ba996fd55cd3f29b53a3821c1d1d7f2e48b534f501ea805"
+            "former_article": "Web安全/CMS内容/Joomla/Page Builder CK附件上传材料与txt验证边界（CVE-2026-56290）.md",
+            "reason": "改判：模板仅证明txt上传/回读，原公开脚本走不同fonts.save入口并依赖未审阅外部font.css与PHP链。缺少两入口到本CVE危险文件上传机制的独立对应；不能将txt可写直接等同危险后缀限制失效。保留证据，待原始披露/补丁入口映射或完整回调材料。",
+            "decision": "hold"
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "note": "Our unqualified new file or append withdrawn; original master content preserved; not proof no other public material exists."
       }
     },
     {
@@ -1904,18 +1943,22 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "Web安全/其他软件/Kestra/Kestra configs后缀白名单与未认证工作流执行（CVE-2026-49869）.md",
             "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "f08a94a7a86b6fe84df1fedf6ff8dff627fec7acaf4dab867a82210c65202bb8"
+            "evidence": [
+              {
+                "url": "https://github.com/kestra-io/kestra/security/advisories/GHSA-5vc5-wxxq-3fjx",
+                "location": "GHSA description: PoC Step 1 PUT workflow YAML, Step 2 execution POST, Step 3 logs; Root Cause AuthenticationFilter line 49; Confirmed output",
+                "sha256": "c5467f72905848aa9d943161ef3763155d027c6f7c1e064cae79b122fc11cc94",
+                "read_depth": "Read full GHSA JSON description, identifiers and affected package data; inspected each literal request and output"
+              }
+            ]
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -1965,18 +2008,15 @@
         "系统安全/Linux/CISA：三个Linux 内核漏洞已遭活跃利用.md"
       ],
       "review": {
-        "disposition": "technical-material-published-or-staged",
-        "articles": [
+        "disposition": "deferred-strict-material-gate",
+        "evidence_gaps": [
           {
-            "article": "系统安全/Linux/CISA：三个Linux 内核漏洞已遭活跃利用.md",
-            "mode": "supplement",
-            "primary_cve_in_article": false,
-            "candidate_identifier_in_article": false,
-            "sha256": "a10710fbf45e6a9fddf78bd3ddf05525ef323c769223584eac635d46b5fd39b9"
+            "former_article": "系统安全/Linux/CISA：三个Linux 内核漏洞已遭活跃利用.md",
+            "reason": "Commit message and three-line ebt_snat writable-range fix provide no concrete packet/splice/rule reproducer.",
+            "decision": "remove"
           }
         ],
-        "mapping_state": "candidate-or-context-only-see-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "note": "Our unqualified new file or append withdrawn; original master content preserved; not proof no other public material exists."
       }
     },
     {
@@ -1989,18 +2029,22 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "Web安全/AI应用/Langflow/Langflow responses跨用户Flow执行与UUID分支授权缺口（CVE-2026-55255）.md",
             "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "2390c63bd6d5cf641da5174c69d20fc2dd4d5f5a7bef80609060b73a3a54a9a0"
+            "evidence": [
+              {
+                "url": "https://github.com/langflow-ai/langflow/security/advisories/GHSA-qrpv-q767-xqq2",
+                "location": "GHSA description: PoC curl POST /api/v1/responses; model, input_value, stream fields; Fixes PR12832",
+                "sha256": "907f930cca40b1efffe9a5b6f98e6785c2372a50f7e29ea3279c4529667941ee",
+                "read_depth": "Read full GHSA description, literal request, stated response, ownership branches and identifiers"
+              }
+            ]
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -2047,18 +2091,28 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "Web安全/CMS内容/Joomla/iCagenda附件上传PoC的版本差异与批量写入风险（CVE-2026-48939）.md",
             "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "990848b5f84ca1a639f5d02b2219c6d89d633938d439429f3f3b4fa44336dbdd"
+            "evidence": [
+              {
+                "url": "https://github.com/projectdiscovery/nuclei-templates/blob/0185cacd4c8cbfec563b28a2ebea858a7d1d9871/http/cves/2026/CVE-2026-48939.yaml",
+                "location": "Nuclei lines 38–95; ChiefYoru iCagenda_rce.py lines 32–43, 56–65, 90–129, 130–207",
+                "sha256": "86b6b4a157ddd99d38ae23d7d306b182ed62199eab9dda334ff760e49ab4925d",
+                "read_depth": "Read full template and complete Python file; inspected request construction, candidate paths, PHP marker and version filter"
+              },
+              {
+                "url": "https://github.com/ChiefYoru/CVE-2026-48939_PoC/blob/40e4707ebd6e6af5eb96b5564b96c7bb7333ed76/iCagenda_rce.py",
+                "location": "Nuclei lines 38–95; ChiefYoru iCagenda_rce.py lines 32–43, 56–65, 90–129, 130–207",
+                "sha256": "0bca56466c1250f907295a28696ed4c7a575637320dfdce40990d22529085641",
+                "read_depth": "Read full template and complete Python file; inspected request construction, candidate paths, PHP marker and version filter"
+              }
+            ]
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -2071,18 +2125,15 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
-        "articles": [
+        "disposition": "deferred-strict-material-gate",
+        "evidence_gaps": [
           {
-            "article": "Web安全/商业软件/PTC/Windchill反序列化事件与专用WebShell证据边界（CVE-2026-12569）.md",
-            "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "a7ea466fd0b3dec02baa35b1c419e6ca5b835c493201e693adb1826c10601c91"
+            "former_article": "Web安全/商业软件/PTC/Windchill反序列化事件与专用WebShell证据边界（CVE-2026-12569）.md",
+            "reason": "正文分析的是已利用后植入的WebShell，未给Windchill反序列化触发输入；不能由植入物能力证明CVE PoC公开。",
+            "decision": "remove"
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "note": "Our unqualified new file or append withdrawn; original master content preserved; not proof no other public material exists."
       }
     },
     {
@@ -2212,18 +2263,15 @@
         "Web安全/中间件/Squid/CVE-2026-47729 _ Squid Heap Buffer Overread Vulnerability.md"
       ],
       "review": {
-        "disposition": "technical-material-published-or-staged",
-        "articles": [
+        "disposition": "deferred-strict-material-gate",
+        "evidence_gaps": [
           {
-            "article": "Web安全/OA办公/泛微oa/Attackers Exploit SimpleHelp CVE-2026-48558 to Deploy TaskWeaver and D.md",
-            "mode": "supplement",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "582cd1592855ebcfd26974a1c3363c680621c2ce6525a26b4f077834be8e5e56"
+            "former_article": "Web安全/OA办公/泛微oa/Attackers Exploit SimpleHelp CVE-2026-48558 to Deploy TaskWeaver and D.md",
+            "reason": "Original author explicitly withholds more technical details; only OIDC prerequisites and IOC inspection remain.",
+            "decision": "remove"
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "note": "Our unqualified new file or append withdrawn; original master content preserved; not proof no other public material exists."
       }
     },
     {
@@ -2273,18 +2321,22 @@
         "Web安全/ERP企业/Splunk/Splunk Enterprise Unauthenticated Arbitrary File Operations_RCE CVE-2.md"
       ],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "Web安全/服务器软件/Splunk/Splunk Sidecar任意文件截断到数据库恢复写入链（CVE-2026-20253）.md",
             "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "c108812b434b41563fd95199c8bf5724b577a3683cfbde4039ace7603f889291"
+            "evidence": [
+              {
+                "url": "https://labs.watchtowr.com/why-use-app-level-auth-when-every-database-has-auth-splunk-enterprise-cve-2026-20253-pre-auth-rce/",
+                "location": "watchTowr CVE-2026-20253 The One With The File Write; Backup Endpoint; Restore(ing) The Faith; final HTTP requests",
+                "sha256": "c871e3e652b663995185ef05706a79491bd2a9274b8600bf00c37911241ccffa",
+                "read_depth": "Read entire technical article including literal backup/restore requests, JSON, file observations, SQL template and failure"
+              }
+            ]
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -2601,18 +2653,22 @@
         "Web安全/其他软件/杂项/【已支持检测】预认证即可利用！Kemp LoadMaster 堆内存缺陷导致命令注入远程代码执行漏洞CVE-2026-.md"
       ],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "Web安全/其他软件/杂项/【已支持检测】预认证即可利用！Kemp LoadMaster 堆内存缺陷导致命令注入远程代码执行漏洞CVE-2026-.md",
             "mode": "supplement",
-            "primary_cve_in_article": false,
-            "candidate_identifier_in_article": false,
-            "sha256": "1500296abac7712a43c4fb57c9e3b951ae1da289ad632e274c96fb0da28783eb"
+            "evidence": [
+              {
+                "url": "https://labs.watchtowr.com/enterprise-tech-in-shell-out-progress-kemp-loadmaster-uninitialized-heap-to-pre-auth-rce-cve-2026-8037/",
+                "location": "Extracted lines 290–349: normal request, quote expansion, heap spray and complete final HTTP request",
+                "sha256": "cc7bba7fee5983b147162c09555368d14b1f8871d98c45646532f2601cc1a20f",
+                "read_depth": "Complete relevant trigger/mechanism section read; screenshots not inspected"
+              }
+            ]
           }
         ],
-        "mapping_state": "candidate-or-context-only-see-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -2744,18 +2800,15 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
-        "articles": [
+        "disposition": "deferred-strict-material-gate",
+        "evidence_gaps": [
           {
-            "article": "系统安全/供应链安全/Nx Console供应链事件的激活与凭据暴露边界（CVE-2026-48027）.md",
-            "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "520d2cd67a59bd3245e049a68db4d592898b0a41691f7f0d2799f6a366030a47"
+            "former_article": "系统安全/供应链安全/Nx Console供应链事件的激活与凭据暴露边界（CVE-2026-48027）.md",
+            "reason": "供应链事件、恶意版本及IOC，无可核读具体触发代码/验证流程。安装激活条件不是本轮所需PoC。",
+            "decision": "remove"
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "note": "Our unqualified new file or append withdrawn; original master content preserved; not proof no other public material exists."
       }
     },
     {
@@ -2768,18 +2821,22 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "Web安全/开发框架/Starlette/Starlette BadHost路径重建与路由授权视图分裂（CVE-2026-48710）.md",
             "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "14fa50d24f0900ee7d4505f9ef580a53be4baa581db593ae2b9ff283cc68f910"
+            "evidence": [
+              {
+                "url": "https://github.com/Kludex/starlette/security/advisories/GHSA-86qp-5c8j-p5mr",
+                "location": "GHSA Details: two GET /foo raw requests and malformed Host example; reconstructed URL and /abc result",
+                "sha256": "43c2b8a0ba1f8a521d64438adb42f54b8122002fbeab1775f3cc299186b50449",
+                "read_depth": "Read full GHSA description and both raw request examples plus mitigation"
+              }
+            ]
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -2792,18 +2849,15 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
-        "articles": [
+        "disposition": "deferred-strict-material-gate",
+        "evidence_gaps": [
           {
-            "article": "Web安全/CMS内容/Magento/Mirasvit CacheWarmer Cookie对象注入的入口与依赖链边界（CVE-2026-45247）.md",
-            "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "b5e12627f7a310c44e857c2eb31ff5bd2e92679a56d9502448e45a0e360b25ae"
+            "former_article": "Web安全/CMS内容/Magento/Mirasvit CacheWarmer Cookie对象注入的入口与依赖链边界（CVE-2026-45247）.md",
+            "reason": "只有Cookie/unserialize机制和base64前缀IOC，没有完整对象链或具体触发请求；不满足收录门槛。",
+            "decision": "remove"
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "note": "Our unqualified new file or append withdrawn; original master content preserved; not proof no other public material exists."
       }
     },
     {
@@ -3082,18 +3136,15 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
-        "articles": [
+        "disposition": "deferred-strict-material-gate",
+        "evidence_gaps": [
           {
-            "article": "系统安全/供应链安全/DAEMON Tools签名安装包后门的分阶段证据（CVE-2026-8398）.md",
-            "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "cca5bd9eb3c79cf3c067bde13ea3792787d95dfe9320ad9f0253b0ce5d47d1b2"
+            "former_article": "系统安全/供应链安全/DAEMON Tools签名安装包后门的分阶段证据（CVE-2026-8398）.md",
+            "reason": "下游后门行为与恶意安装包事件不能替代本轮要求的公开触发验证程序；未审二进制不能说已核读EXP。",
+            "decision": "remove"
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "note": "Our unqualified new file or append withdrawn; original master content preserved; not proof no other public material exists."
       }
     },
     {
@@ -3208,18 +3259,15 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
-        "articles": [
+        "disposition": "deferred-strict-material-gate",
+        "evidence_gaps": [
           {
-            "article": "系统安全/供应链安全/TanStack可选依赖安装钩子与OIDC供应链信任边界（CVE-2026-45321）.md",
-            "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "dfb0c2dd3baa918c53ec8295ffaf34f8625bb203729fb2ac30c0d26bbd758aa1"
+            "former_article": "系统安全/供应链安全/TanStack可选依赖安装钩子与OIDC供应链信任边界（CVE-2026-45321）.md",
+            "reason": "有安全检查tarball/manifest步骤和机制，但未读取完整恶意依赖链与实际验证材料；IOC检查不替代漏洞PoC。",
+            "decision": "remove"
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "note": "Our unqualified new file or append withdrawn; original master content preserved; not proof no other public material exists."
       }
     },
     {
@@ -3252,18 +3300,28 @@
         "Web安全/AI应用/AI综合/AI大模型网关存在SQL注入漏洞、附 POC 复现、影响版本LiteLLM 1.81.16~1.83.7（CVE-2026-42208）.md"
       ],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "Web安全/AI应用/AI综合/AI大模型网关存在SQL注入漏洞、附 POC 复现、影响版本LiteLLM 1.81.16~1.83.7（CVE-2026-42208）.md",
             "mode": "supplement",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "9bf86b2649e65e82bec1f488c4a3233acbce8dfcaaa5cbcfe238fd2aaf5b304e"
+            "evidence": [
+              {
+                "url": "https://raw.githubusercontent.com/projectdiscovery/nuclei-templates/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2026/CVE-2026-42208.yaml",
+                "location": "POST /v1/chat/completions Authorization pg_sleep(8), UI/auth baseline and delay matcher",
+                "sha256": "401f5a93c064e66521a244a702cbc41e1d2ded0aaa038700ba76ae5489d68e48",
+                "read_depth": "Complete code file statically read; not executed"
+              },
+              {
+                "url": "https://api.github.com/advisories/GHSA-r75f-5x8p-qvmc",
+                "location": "Impact and disable_error_logs mitigation",
+                "sha256": "cd2adc4e40be1ac9d1610a1ce7693fcdfda5d43ffa09406d8745399ee7db61ef",
+                "read_depth": "Entire advisory description read"
+              }
+            ]
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -3296,18 +3354,15 @@
         "Web安全/AI应用/LiteLLM/LiteLLM存在远程命令执行漏洞CVE-2026-42271 附POC.md"
       ],
       "review": {
-        "disposition": "technical-material-published-or-staged",
-        "articles": [
+        "disposition": "deferred-strict-material-gate",
+        "evidence_gaps": [
           {
-            "article": "Web安全/AI应用/LiteLLM/LiteLLM存在远程命令执行漏洞CVE-2026-42271 附POC.md",
-            "mode": "supplement",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "d136e62601e8bc8ccdbf03f7f406a37276ee11092fe6468bc4326b6015e4d201"
+            "former_article": "Web安全/AI应用/LiteLLM/LiteLLM存在远程命令执行漏洞CVE-2026-42271 附POC.md",
+            "reason": "Exact stdio command request exists only in the inspected BadHost unauthenticated chain; current supplement discusses standalone authenticated misuse. Unverified chain prerequisite remains a material applicability mismatch.",
+            "decision": "hold"
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "note": "Our unqualified new file or append withdrawn; original master content preserved; not proof no other public material exists."
       }
     },
     {
@@ -3730,18 +3785,15 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
-        "articles": [
+        "disposition": "deferred-strict-material-gate",
+        "evidence_gaps": [
           {
-            "article": "Web安全/桌面软件/Adobe/Acrobat swConn原型解析与可信JavaScript链的补丁辨析（CVE-2026-34621）.md",
-            "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "5ccc68d18aa6944a958a2b8fbb69354978539522ebf99841e4f5685a8c0dc7a0"
+            "former_article": "Web安全/桌面软件/Adobe/Acrobat swConn原型解析与可信JavaScript链的补丁辨析（CVE-2026-34621）.md",
+            "reason": "缓存代码变成单行注释/弯引号等缺损，原URL404且组合链CVE映射部分未定。不能自行修代码或借缓存标题认定公开完整材料。",
+            "decision": "hold"
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "note": "Our unqualified new file or append withdrawn; original master content preserved; not proof no other public material exists."
       }
     },
     {
@@ -3791,18 +3843,28 @@
         "Web安全/中间件/Apache Tomcat/Apache-Tomcat-Tribes-EncryptInterceptor-绕过远程代码执行漏洞-CVE-2026-34486.md"
       ],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "Web安全/中间件/Apache Tomcat/Apache-Tomcat-Tribes-EncryptInterceptor-绕过远程代码执行漏洞-CVE-2026-34486.md",
             "mode": "supplement",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "1d8d15284b88d1ed68a80137915bd29d065f7a16908996d718410aed40ed501a"
+            "evidence": [
+              {
+                "url": "https://raw.githubusercontent.com/vulhub/vulhub/master/tomcat/CVE-2026-34486/README.md",
+                "location": "Vulnerability Reproduction",
+                "sha256": "8c43b3805327533497053db9d811b3e910f9fcf6b1e4181aad4c76ff712a9400",
+                "read_depth": "Entire README / Python file read; images not inspected"
+              },
+              {
+                "url": "https://raw.githubusercontent.com/vulhub/vulhub/master/tomcat/CVE-2026-34486/poc.py",
+                "location": "build_member(), build_packet(), send(): raw serialized payload inside Tribes frame",
+                "sha256": "fbfd0e3d26526d8e9b909c20dbf26694eeac84946d4c3c4837399f5926c9e13b",
+                "read_depth": "Entire README / Python file read; images not inspected"
+              }
+            ]
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -3817,18 +3879,22 @@
         "Web安全/AI应用/Marimo/Marimo 高危预认证 RCE 漏洞已遭活跃利用.md"
       ],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "Web安全/AI应用/Marimo/marimo terminal WebSocket缺少认证与编辑模式前提（CVE-2026-39987）.md",
             "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "6d59f854e8eae82fb6968875379827589eabbbc6f10b0e522590a507cfeb08c6"
+            "evidence": [
+              {
+                "url": "https://github.com/marimo-team/marimo/security/advisories/GHSA-2679-6mx9-h9xc",
+                "location": "GHSA Proof of Concept: complete Python WebSocket client; Reproduction Environment Dockerfile; Reproduction Result",
+                "sha256": "09845e7d8d9c068567c19c887d48205a5ec03a354e06d530428eaf71f35d5798",
+                "read_depth": "Read entire client, Dockerfile, result and auth-flow explanation"
+              }
+            ]
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -4028,18 +4094,15 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
-        "articles": [
+        "disposition": "deferred-strict-material-gate",
+        "evidence_gaps": [
           {
-            "article": "系统安全/供应链安全/TrueConf更新可信链缺失与TrueChaos投放分析（CVE-2026-3502）.md",
-            "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "52b67c07fe6cba0d8b37d99bd7b79a1b3954e79fced7da1d3bf1963bad487d95"
+            "former_article": "系统安全/供应链安全/TrueConf更新可信链缺失与TrueChaos投放分析（CVE-2026-3502）.md",
+            "reason": "有替换更新包的概述与投放路径，没有完整客户端更新交互、可核读样本或具体验证程序；后渗透命令不属于漏洞触发。",
+            "decision": "remove"
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "note": "Our unqualified new file or append withdrawn; original master content preserved; not proof no other public material exists."
       }
     },
     {
@@ -4052,18 +4115,15 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
-        "articles": [
+        "disposition": "deferred-strict-material-gate",
+        "evidence_gaps": [
           {
-            "article": "系统安全/供应链安全/Trivy供应链事件的标签改写与分渠道验证（CVE-2026-33634）.md",
-            "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "db8be16cac899d189c806ebb52bff31a5c8b31eabc4241223788c55721dbf584"
+            "former_article": "系统安全/供应链安全/Trivy供应链事件的标签改写与分渠道验证（CVE-2026-33634）.md",
+            "reason": "签名/版本/标签完整性检查与供应链事件描述，不是公开具体漏洞触发材料。",
+            "decision": "remove"
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "note": "Our unqualified new file or append withdrawn; original master content preserved; not proof no other public material exists."
       }
     },
     {
@@ -4078,18 +4138,22 @@
         "Web安全/云平台/CitrixBleed Infinity/CitrixBleed Infinity：NetScaler预认证内存越读漏洞（CVE-2026-8451）.md"
       ],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "Web安全/网络设备/Citrix NetScaler/NetScaler SAML IdP内存越读与会话泄露检测边界（CVE-2026-3055）.md",
             "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "b9c9dab16dbf3048c36c5fbb68895aa994c364e750a40ce22c7c353cad310972"
+            "evidence": [
+              {
+                "url": "https://github.com/rapid7/metasploit-framework/blob/5882042f72529fda8774d5f45b9ad53d468b345c/modules/auxiliary/scanner/http/citrix_netscaler_cve_2026_3055.rb",
+                "location": "Metasploit check_host lines 51–86; run_host lines 89–209, especially request 99–109 and decode/scan 138–186",
+                "sha256": "e2bef9b9bb58cf5a9524132448d988707a5df4cd4aeaac7a66b19f01c914bdbc",
+                "read_depth": "Read entire 219-line module including trigger, decoding, loop and result conditions"
+              }
+            ]
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -4123,18 +4187,22 @@
         "Web安全/AI应用/Langflow/Unpatched Langflow Flaw CVE-2026-5027 Exploited for Unauthenticated RC.md"
       ],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "Web安全/AI应用/AI综合/AI用户务必关注，Langflow未授权RCE分析（CVE-2026-33017）.md",
             "mode": "supplement",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "733cfd9872c4e0996aebe2f1876a66f761a3fb025d4abb06bb57e352ca0be2a6"
+            "evidence": [
+              {
+                "url": "https://api.github.com/advisories/GHSA-vwmf-pq79-vjvx",
+                "location": "Description PoC Steps1–3, request lines114–156, proof-file check",
+                "sha256": "b5873e078be3e88efc989ec1eb6be4a817cea63023be544becb61a49606e14a2",
+                "read_depth": "Entire advisory description read"
+              }
+            ]
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -4788,18 +4856,15 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
-        "articles": [
+        "disposition": "deferred-strict-material-gate",
+        "evidence_gaps": [
           {
-            "article": "系统安全/Windows/RasMan循环链表空指针DoS与RPC冒充链的区别（CVE-2026-21525）.md",
-            "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "c789f8f24f01547374596d2e59590752e5608d982ba4c3ad4f8b374bf78adf9a"
+            "former_article": "系统安全/Windows/RasMan循环链表空指针DoS与RPC冒充链的区别（CVE-2026-21525）.md",
+            "reason": "链表根因及补丁文字不等于具体调用程序。视频文字有开关与服务名称勘误，未视检不能按演示已验证计入。",
+            "decision": "hold"
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "note": "Our unqualified new file or append withdrawn; original master content preserved; not proof no other public material exists."
       }
     },
     {
@@ -4860,18 +4925,15 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
-        "articles": [
+        "disposition": "deferred-strict-material-gate",
+        "evidence_gaps": [
           {
-            "article": "系统安全/Windows/MSHTML超链接执行边界与LNK内嵌HTML证据（CVE-2026-21513）.md",
-            "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "d8dd39b1ec31fa067f070757cd420ca418997a4369e196be5dd527016814dd3b"
+            "former_article": "系统安全/Windows/MSHTML超链接执行边界与LNK内嵌HTML证据（CVE-2026-21513）.md",
+            "reason": "片段缺完整HTML/DOM构造上下文，完整触发材料在未审图片/样本，现状不能据标题确认可核读PoC。",
+            "decision": "hold"
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "note": "Our unqualified new file or append withdrawn; original master content preserved; not proof no other public material exists."
       }
     },
     {
@@ -5596,18 +5658,22 @@
         "Web安全/邮件系统/SmarterMail/SmarterMail 认证绕过新漏洞被用于劫持管理员账号.md"
       ],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "Web安全/邮件系统/SmarterMail/CVE-2026-23760.md",
             "mode": "supplement",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "8b3c01b7f03f5123d40bbcab8abb71e3fd9e6cfb75f1f5aa1eda8e1a831801fc"
+            "evidence": [
+              {
+                "url": "https://labs.watchtowr.com/attackers-with-decompilers-strike-again-smartertools-smartermail-wt-2026-0001-auth-bypass/",
+                "location": "Proof of Concept extracted lines193–235: force-reset-password JSON, success response and patched control",
+                "sha256": "ca021f56779f5f49f83460fa726d6ebc189727fa64f48ce1facbb08b23b5e8ec",
+                "read_depth": "Complete relevant controller/mechanism/PoC/fixed-control sections read; images not inspected"
+              }
+            ]
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -6269,18 +6335,34 @@
         "Web安全/AI应用/n8n/n8n-表达式沙箱逃逸导致远程代码执行漏洞-CVE-2025-68613.md"
       ],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "Web安全/AI应用/n8n/n8n-表达式沙箱逃逸导致远程代码执行漏洞-CVE-2025-68613.md",
             "mode": "supplement",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "98b6d9dcf430a2f56b46db5aee30b2a34b56d81c9a039501bab7dfb14ef6295d"
+            "evidence": [
+              {
+                "url": "https://api.github.com/advisories/GHSA-v98v-ff95-f3cp",
+                "location": "Full Impact, version fields and patch reference08f3320",
+                "sha256": "a20477195e9f3f320027789336fb215b856fe08dc02df2e781e109e7d6930699",
+                "read_depth": "Entire advisory text and structured vulnerability fields read"
+              },
+              {
+                "url": "https://github.com/n8n-io/n8n/commit/08f332015153decdda3c37ad4fcb9f7ba13a7c79.patch",
+                "location": "FunctionThisSanitizer; unsafe mainModule; test expression-sandboxing234–237 in patch; IIFE input yields empty process object after fix",
+                "sha256": "1d1541d4bfaac9b672ed4e8dac8eaf6a7febe7a2e1e0f7c9fbd53d5cc906ea9e",
+                "read_depth": "Relevant source and regression-test hunks read; lockfile/unrelated hunks not fully audited"
+              },
+              {
+                "url": "https://github.com/Ares-X/VulWiki/blob/cfb19294812b1435a57e866a87dd18e2ff3ebec3/Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/n8n/n8n-%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%B2%99%E7%AE%B1%E9%80%83%E9%80%B8%E5%AF%BC%E8%87%B4%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E-CVE-2025-68613.md",
+                "location": "Historical Workflow -> Manual Trigger -> Edit Fields -> Expression -> Test step and full this.process/mainModule expression",
+                "sha256": "6be408bfa37f4178382f6c781f146f49e2ff526d9f77bb203a6db8bcbde7b0f3",
+                "read_depth": "Entire Markdown read; missing screenshots not treated as success evidence"
+              }
+            ]
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -6377,18 +6459,22 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "Web安全/邮件系统/Roundcube/Roundcube SVG animate 命名空间属性过滤修复分析（CVE-2025-68461）.md",
             "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "cb0bfce02adc83b8b1eb846c3de4c98cfc487ecc3d73b75c5e6418932b22605d"
+            "evidence": [
+              {
+                "url": "https://github.com/roundcube/roundcubemail/commit/bfa032631c36b900e7444dfa278340b33cbf7cdb",
+                "location": "commitbfa0326 tests/Framework/Washtml.php data_wash_svg_tests hunk+431; two exact inputs and expected output",
+                "sha256": "8a12e5a727891012de56bde8743e0ffed028fa3ec87d9e565b3c728ecf5931d9",
+                "read_depth": "Read complete commit patch including sanitizer change and all added regression pairs; CNA explicitly references commit"
+              }
+            ]
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -6750,18 +6836,15 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
-        "articles": [
+        "disposition": "deferred-strict-material-gate",
+        "evidence_gaps": [
           {
-            "article": "系统安全/Android/Android Device Owner 账号可见性检查修复分析（CVE-2025-48633）.md",
-            "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "6fd627bd12b45838df532e6e03a2f1bc97774457790c86ba7a786c614c2439e7"
+            "former_article": "系统安全/Android/Android Device Owner 账号可见性检查修复分析（CVE-2025-48633）.md",
+            "reason": "实现替换，没有公开设备设置/具体测试输入/结果；manual-test标签不能充当验证材料。",
+            "decision": "remove"
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "note": "Our unqualified new file or append withdrawn; original master content preserved; not proof no other public material exists."
       }
     },
     {
@@ -6774,18 +6857,15 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
-        "articles": [
+        "disposition": "deferred-strict-material-gate",
+        "evidence_gaps": [
           {
-            "article": "系统安全/Android/Android 媒体按键能力传播与后台启动限制（CVE-2025-48572）.md",
-            "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "18c0e2de1b1763e98b69dc331e136cad0998ebda64874b202a8cd27f176b3dc7"
+            "former_article": "系统安全/Android/Android 媒体按键能力传播与后台启动限制（CVE-2025-48572）.md",
+            "reason": "只有媒体按键和后台启动能力修复，没有触发应用或具体回归样本。",
+            "decision": "remove"
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "note": "Our unqualified new file or append withdrawn; original master content preserved; not proof no other public material exists."
       }
     },
     {
@@ -6819,18 +6899,28 @@
         "Web安全/AI应用/Langflow/Langflow-≤-1.6.9-CORS-配置错误导致令牌劫持和远程命令执行漏洞-CVE-2025-34291.md"
       ],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "Web安全/AI应用/Langflow/Langflow-≤-1.6.9-CORS-配置错误导致令牌劫持和远程命令执行漏洞-CVE-2025-34291.md",
             "mode": "supplement",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "f982cc0bd8942936740c5cf167971ccab33f9cce10899c667849e0b88e39ae9e"
+            "evidence": [
+              {
+                "url": "https://www.obsidiansecurity.com/blog/cve-2025-34291-critical-account-takeover-and-rce-vulnerability-in-the-langflow-ai-agent-workflow-platform",
+                "location": "CORS, refresh_token_lf and Steps to Reproduce sections; extracted lines275–305 and326–343",
+                "sha256": "34b6a748c2e59b7ccccc857b4c844b975cba40e17f9f15eee7bd60c7923d7687",
+                "read_depth": "Relevant complete mechanism/manual steps and CVE attribution read"
+              },
+              {
+                "url": "https://github.com/Ares-X/VulWiki/blob/cfb19294812b1435a57e866a87dd18e2ff3ebec3/Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/Langflow/Langflow-%E2%89%A4-1.6.9-CORS-%E9%85%8D%E7%BD%AE%E9%94%99%E8%AF%AF%E5%AF%BC%E8%87%B4%E4%BB%A4%E7%89%8C%E5%8A%AB%E6%8C%81%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E-CVE-2025-34291.md",
+                "location": "Historical reproduction full HTML: credentials include fetch /api/v1/refresh, access_token handling; following validate/code example",
+                "sha256": "7293b2f1abe02ad3fa04ef5900dcaf661c942b10cb08b57deb493a72bb0741e4",
+                "read_depth": "Entire reproduced HTML and associated manual steps read; result images not inspected"
+              }
+            ]
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -6908,18 +6998,22 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "Web安全/其他软件/Ray/Ray 浏览器请求判定与 DNS 重绑定边界（CVE-2025-62593）.md",
             "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "f0ffb43eae8f313e3f0fc08db706f5931bd0bb6f10c95c7c480b9539182b849f"
+            "evidence": [
+              {
+                "url": "https://github.com/ray-project/ray/security/advisories/GHSA-q279-jhrf-cc6v",
+                "location": "GHSA PoC steps1–7; RayRce.attack and sooFetch POST /api/jobs/; isService",
+                "sha256": "83be23d103fb6aad829d8c4dac51e79e1fe098cfb7f07f59feb6d7add8f840b9",
+                "read_depth": "Read full GHSA JSON description and complete embedded JavaScript"
+              }
+            ]
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -7147,18 +7241,22 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "Web安全/邮件系统/FreePBX/FreePBX filestore SSH 测试连接命令注入与权限差异（CVE-2025-64328）.md",
             "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "55241992cb66c2f67d36e947912b63bf0264a242ef15d9146d96d5e19d96f2d3"
+            "evidence": [
+              {
+                "url": "https://theyhack.me/CVE-2025-64328-FreePBX-Authenticated-Command-Injection/",
+                "location": "author Proof of Concept / Curl proof of concept; HTML lines403–420; Technical details pspy",
+                "sha256": "71f3973831bd3e160eeddab2a8aaf85e6fb17065c1d43f1d645ffa9f3dc29d12",
+                "read_depth": "Read all source code blocks, literal login/injection/readback and role-condition text"
+              }
+            ]
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -7486,18 +7584,22 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "Web安全/云平台/CentreStack/CentreStack 与 TrioFox 临时下载路径穿越及版本检查误差（CVE-2025-11371）.md",
             "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "be96ee8c837dc8f437cb6e967896a921fc5cf0daf6a22eede077a7dd6b12c834"
+            "evidence": [
+              {
+                "url": "https://www.huntress.com/blog/gladinet-centrestack-triofox-local-file-inclusion-flaw",
+                "location": "Huntress Proof of concept HTML74–75, PowerShell Invoke-WebRequest one-liner; observations37 and44",
+                "sha256": "024500d573596ef47223a5dabaced4df5acabdf4bf05ad31da2751a74842adad",
+                "read_depth": "Read complete relevant article technical paragraphs including direct one-liner and observed config output"
+              }
+            ]
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -7544,18 +7646,22 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "Web安全/云平台/VMware/VMware 服务发现执行非受信二进制导致本地提权（CVE-2025-41244）.md",
             "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "3ce21b9141c2bc102a7b4af950d2d198c372a7b0f017c359a13c03a20983f84b"
+            "evidence": [
+              {
+                "url": "https://blog.nviso.eu/2025/09/29/you-name-it-vmware-elevates-it-cve-2025-41244/",
+                "location": "NVISO Proof of Concept full Go main/serve/handle/connect; HTML474–594,724–741; mode trees",
+                "sha256": "1bf46c677a3c51027b0c60ac7f8bb7961eebfc9871116143c2f5097ce9ee8e3e",
+                "read_depth": "Read full Go program, setup prose, nobody→root output and both discovery modes"
+              }
+            ]
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -7854,18 +7960,22 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "Web安全/运维面板/Control Web Panel/CWP changePerm 权限参数命令注入与用户前提（CVE-2025-48703）.md",
             "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "3314ea4f111cfe4ce275280b63a5a2e7c1195dd9519d7a7b135485f64453bfe2"
+            "evidence": [
+              {
+                "url": "https://fenrisk.com/research/rce-centos-web-panel/",
+                "location": "Fenrisk Authentication bypass; Command execution(CVE-2025-48703); HTML curl line133 and uid output134–154",
+                "sha256": "2ae99d8790c66e1f93660d008ed14a8f59acbbfc72f7ed1ecb2f2a5717797179",
+                "read_depth": "Read all original raw requests, curl and command-output blocks; tested-version context"
+              }
+            ]
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -7878,18 +7988,15 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
-        "articles": [
+        "disposition": "deferred-strict-material-gate",
+        "evidence_gaps": [
           {
-            "article": "Web安全/商业软件/Fortra GoAnywhere/GoAnywhere 许可证反序列化链与公开检测的能力边界（CVE-2025-10035）.md",
-            "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "53981e5366cfdd980e71118b33e9514c377da0f3f68aa5a46b6eb24bb71dc483"
+            "former_article": "Web安全/商业软件/Fortra GoAnywhere/GoAnywhere 许可证反序列化链与公开检测的能力边界（CVE-2025-10035）.md",
+            "reason": "原作者明确不知道如何越过有效签名门槛；许可证重定向/错误检测不能证明反序列化触发。",
+            "decision": "remove"
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "note": "Our unqualified new file or append withdrawn; original master content preserved; not proof no other public material exists."
       }
     },
     {
@@ -8068,18 +8175,22 @@
         "Web安全/智能设备/三星/Samsung Fixes Critical Zero-Day CVE-2025-21043 Exploited in Android At.md"
       ],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "系统安全/Android/Android ART JNI 可实例化检查与序列化回归测试（CVE-2025-48543）.md",
             "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "35b2e9c30b9aa85c74fa7f7733abd324cdcce4ca3159942a02d778e81709fc74"
+            "evidence": [
+              {
+                "url": "https://android.googlesource.com/platform/art/+/444fc40dfb04d2ec5f74c443ed3a4dd45d3131f2/test/863-serialization/src/Main.java",
+                "location": "ART commit444fc40 test/863-serialization/src/Main.java lines22–62; deserializeHexToConcurrentHashMap; expected output files/info",
+                "sha256": "f4bddf3c850a2cefdb29902563d045a44b4f99a2297aef96537e4ff9dcf46666",
+                "read_depth": "Read complete patch,62-line Java test, exact serialized hex and exception assertions; CNA references commit"
+              }
+            ]
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -8352,18 +8463,15 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
-        "articles": [
+        "disposition": "deferred-strict-material-gate",
+        "evidence_gaps": [
           {
-            "article": "Web安全/CMS内容/Adobe Experience Manager/AEM Forms JEE 认证过滤与 Struts DevMode 的组合风险（CVE-2025-54253）.md",
-            "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "2e46f1caad85d98a38f2f6a67cd5065785dccd0ec7549021a6e6a459004cbb79"
+            "former_article": "Web安全/CMS内容/Adobe Experience Manager/AEM Forms JEE 认证过滤与 Struts DevMode 的组合风险（CVE-2025-54253）.md",
+            "reason": "有原理和公开PoC存在声明，但本材料未给54253完整debug/OGNL请求；其他XXE/反序列化代码不是本编号。",
+            "decision": "remove"
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "note": "Our unqualified new file or append withdrawn; original master content preserved; not proof no other public material exists."
       }
     },
     {
@@ -8390,18 +8498,22 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "Web安全/商业软件/DELMIA Apriso/DELMIA Apriso 账号创建与上传路径穿越链（CVE-2025-6205、6204）.md",
             "mode": "new",
-            "primary_cve_in_article": false,
-            "candidate_identifier_in_article": false,
-            "sha256": "ff23629181c7c8aa3a396cb34874682dcc375f461cd07d7410d9ae8cc024d420"
+            "evidence": [
+              {
+                "url": "https://projectdiscovery.io/blog/remote-code-execution-in-delmia-apriso",
+                "location": "ProjectDiscovery CVE-2025-6205 section full SOAP and employee XML; CVE-2025-6204 section UploadFile request/ASP body",
+                "sha256": "8781dd7131be8c6c2c1d17289ba6024ca9373042dd22d21ba645bfe11a095989",
+                "read_depth": "Read all three source request/input blocks and section identities; both CNA descriptions"
+              }
+            ]
           }
         ],
-        "mapping_state": "candidate-or-context-only-see-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -8414,18 +8526,22 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "Web安全/商业软件/DELMIA Apriso/DELMIA Apriso 账号创建与上传路径穿越链（CVE-2025-6205、6204）.md",
             "mode": "new",
-            "primary_cve_in_article": false,
-            "candidate_identifier_in_article": false,
-            "sha256": "ff23629181c7c8aa3a396cb34874682dcc375f461cd07d7410d9ae8cc024d420"
+            "evidence": [
+              {
+                "url": "https://projectdiscovery.io/blog/remote-code-execution-in-delmia-apriso",
+                "location": "ProjectDiscovery CVE-2025-6205 section full SOAP and employee XML; CVE-2025-6204 section UploadFile request/ASP body",
+                "sha256": "8781dd7131be8c6c2c1d17289ba6024ca9373042dd22d21ba645bfe11a095989",
+                "read_depth": "Read all three source request/input blocks and section identities; both CNA descriptions"
+              }
+            ]
           }
         ],
-        "mapping_state": "candidate-or-context-only-see-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -9757,18 +9873,22 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "Web安全/网络设备/Versa/Versa Concerto 逐跳请求头与 Actuator 认证边界（CVE-2025-34026）.md",
             "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "b4f64b115072e3d566a8fef3fab0b8c75a20fa8a605e0e988d70056655ef529f"
+            "evidence": [
+              {
+                "url": "https://projectdiscovery.io/blog/versa-concerto-authentication-bypass-rce",
+                "location": "ProjectDiscovery Actuator endpoint authentication bypass to Admin; GET /actuator Connection:X-Real-IP; embedded34026 template lines28–42",
+                "sha256": "cd544579382c2445472f4c508974d71c1014711b24356ab96b01333e3037d09d",
+                "read_depth": "Read original specific bypass request, matching middleware and full embedded template"
+              }
+            ]
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -10596,18 +10716,15 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
-        "articles": [
+        "disposition": "deferred-strict-material-gate",
+        "evidence_gaps": [
           {
-            "article": "Web安全/开发框架/Yii/Yii 2 behavior 的 __class 回归修复与利用前提（CVE-2024-58136）.md",
-            "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "b3a3092ee51e0a2f6c3d0dd5012ba6a2265fb2b1f37876e2c41066e21eff5788"
+            "former_article": "Web安全/开发框架/Yii/Yii 2 behavior 的 __class 回归修复与利用前提（CVE-2024-58136）.md",
+            "reason": "Generic POST /index.php JSON does not establish a real application path to Yii behavior creation; the __class regression test checks valid attachment, not an exploit path.",
+            "decision": "remove"
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "note": "Our unqualified new file or append withdrawn; original master content preserved; not proof no other public material exists."
       }
     },
     {
@@ -10693,18 +10810,22 @@
         "Web安全/ERP企业/用友NC/用友NC存在反序列漏洞.md"
       ],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "Web安全/AI应用/Langflow/Langflow-code-API-未授权远程代码执行漏洞-CVE-2025-3248.md",
             "mode": "supplement",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "de82f90b3d4949f522eae2abef4b20e6324f76dc5ebdbb44720051ff4e2a827e"
+            "evidence": [
+              {
+                "url": "https://horizon3.ai/attack-research/disclosures/unsafe-at-any-speed-abusing-python-exec-for-unauth-rce-in-langflow-ai/",
+                "location": "Abusing Decorators, Interactive RCE, default arguments and full detector; extracted lines264–301",
+                "sha256": "5920e9dd05a2bc7abee8d4aac59c278521a32f05ee26119f10867906a7026dde",
+                "read_depth": "Complete relevant triggers and remediation sections read; image pixels not inspected"
+              }
+            ]
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -10838,18 +10959,22 @@
         "Web安全/其他软件/杂项/从CVE-2025-30208到CVE-2025-31125再到CVE-2025-31486.md"
       ],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "Web安全/开发框架/Vite/Vite inline/raw 文件访问校验的上游补丁对照（CVE-2025-31125）.md",
             "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "d4402c222cef268558be5437c7707b1315bcb3813b9bcf05526c01edf523ac26"
+            "evidence": [
+              {
+                "url": "https://github.com/advisories/GHSA-4r4m-qw57-chr8",
+                "location": "GHSA Details two query variants and PoC full /@fs/ Windows URL; setup commands",
+                "sha256": "a6358d09ea53b506aa415a56d8e1ca6c7a572a4f377a9c7b195853c172217f8e",
+                "read_depth": "Read full GHSA JSON including affected branches"
+              }
+            ]
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -10950,18 +11075,28 @@
         "IOT安全/D-Link/（CVE-2025-29635）D-Link DIR-823X命令注入漏洞.md"
       ],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "IOT安全/D-Link/（CVE-2025-29635）D-Link DIR-823X命令注入漏洞.md",
             "mode": "supplement",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "d76ce2cd08a198d4ba640976793df87a65849bf804676d8019206474395f63fd"
+            "evidence": [
+              {
+                "url": "https://www.akamai.com/blog/security-research/cve-2025-29635-mirai-campaign-targets-d-link-devices",
+                "location": "Firmware flaw / Figure2 literal request, extracted lines290–311",
+                "sha256": "b1b4a035601dd328754b404c26b4914ffbd0d677cfca5ca9840bd49e669f6613",
+                "read_depth": "Complete relevant flaw/PoC/request and attribution sections read; unrelated malware analysis not a qualifying source"
+              },
+              {
+                "url": "https://cveawg.mitre.org/api/cve/CVE-2025-29635",
+                "location": "CNA description and original report reference",
+                "sha256": "0a9cdd37603e22491f2c6ac795e75b2ed0fae1fd07d56302ff19df895fdaf1cc",
+                "read_depth": "CNA description/reference fields read"
+              }
+            ]
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -10974,18 +11109,15 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
-        "articles": [
+        "disposition": "deferred-strict-material-gate",
+        "evidence_gaps": [
           {
-            "article": "Web安全/CMS内容/Kentico/Kentico Staging 认证与媒体写入链的编号交叉核对（CVE-2025-2746、2747、2749）.md",
-            "mode": "new",
-            "primary_cve_in_article": false,
-            "candidate_identifier_in_article": false,
-            "sha256": "d5c66161e535cd934d84224b769ce5cb68e54ea740a3e6464a82c52539f30b63"
+            "former_article": "Web安全/CMS内容/Kentico/Kentico Staging 认证与媒体写入链的编号交叉核对（CVE-2025-2746、2747、2749）.md",
+            "reason": "改判整篇hold：原文SOAP xmlns/SOAPAction含字面<http://...>，2749请求还省略部分结构且最终FileBinaryData为描述性占位。两模板虽有完整认证探针却编号交叉、仅异常回显判定，不能补足2749。不能自行规范化协议值或推填省略部分；可之后独立划分已证实子集。",
+            "decision": "hold"
           }
         ],
-        "mapping_state": "candidate-or-context-only-see-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "note": "Our unqualified new file or append withdrawn; original master content preserved; not proof no other public material exists."
       }
     },
     {
@@ -10998,18 +11130,15 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
-        "articles": [
+        "disposition": "deferred-strict-material-gate",
+        "evidence_gaps": [
           {
-            "article": "Web安全/CMS内容/Kentico/Kentico Staging 认证与媒体写入链的编号交叉核对（CVE-2025-2746、2747、2749）.md",
-            "mode": "new",
-            "primary_cve_in_article": false,
-            "candidate_identifier_in_article": false,
-            "sha256": "d5c66161e535cd934d84224b769ce5cb68e54ea740a3e6464a82c52539f30b63"
+            "former_article": "Web安全/CMS内容/Kentico/Kentico Staging 认证与媒体写入链的编号交叉核对（CVE-2025-2746、2747、2749）.md",
+            "reason": "改判整篇hold：原文SOAP xmlns/SOAPAction含字面<http://...>，2749请求还省略部分结构且最终FileBinaryData为描述性占位。两模板虽有完整认证探针却编号交叉、仅异常回显判定，不能补足2749。不能自行规范化协议值或推填省略部分；可之后独立划分已证实子集。",
+            "decision": "hold"
           }
         ],
-        "mapping_state": "candidate-or-context-only-see-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "note": "Our unqualified new file or append withdrawn; original master content preserved; not proof no other public material exists."
       }
     },
     {
@@ -11022,18 +11151,15 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
-        "articles": [
+        "disposition": "deferred-strict-material-gate",
+        "evidence_gaps": [
           {
-            "article": "Web安全/CMS内容/Kentico/Kentico Staging 认证与媒体写入链的编号交叉核对（CVE-2025-2746、2747、2749）.md",
-            "mode": "new",
-            "primary_cve_in_article": false,
-            "candidate_identifier_in_article": false,
-            "sha256": "d5c66161e535cd934d84224b769ce5cb68e54ea740a3e6464a82c52539f30b63"
+            "former_article": "Web安全/CMS内容/Kentico/Kentico Staging 认证与媒体写入链的编号交叉核对（CVE-2025-2746、2747、2749）.md",
+            "reason": "改判整篇hold：原文SOAP xmlns/SOAPAction含字面<http://...>，2749请求还省略部分结构且最终FileBinaryData为描述性占位。两模板虽有完整认证探针却编号交叉、仅异常回显判定，不能补足2749。不能自行规范化协议值或推填省略部分；可之后独立划分已证实子集。",
+            "decision": "hold"
           }
         ],
-        "mapping_state": "candidate-or-context-only-see-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "note": "Our unqualified new file or append withdrawn; original master content preserved; not proof no other public material exists."
       }
     },
     {
@@ -11571,18 +11697,28 @@
         "Web安全/其他软件/杂项/NAKIVO Backup & Replication任意文件读取漏洞(CVE-2024-48248).md"
       ],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "Web安全/其他软件/杂项/NAKIVO Backup & Replication任意文件读取漏洞(CVE-2024-48248).md",
             "mode": "supplement",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "1f78142fcbf5786f9ebe5259c341e50eae440eb6871195572e4fe466d0ac5e82"
+            "evidence": [
+              {
+                "url": "https://raw.githubusercontent.com/projectdiscovery/nuclei-templates/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2024/CVE-2024-48248.yaml",
+                "location": "POST /c/router; action, method, data path and integer-array content matchers",
+                "sha256": "6e63177027abace1ca137dcba1f31ea1fc0ae5e4cc83055d1483e9310ac32d6e",
+                "read_depth": "Complete code file statically read; not executed"
+              },
+              {
+                "url": "https://labs.watchtowr.com/the-best-security-is-when-we-all-agree-to-keep-everything-secret-except-the-secrets-nakivo-backup-replication-cve-2024-48248/",
+                "location": "Opening tested-version/Director conditions and disclosure timeline",
+                "sha256": "c729687d16bf7288afc0b5c2efa3b1f77df61507c30ff5dd914bb907445ed604",
+                "read_depth": "Relevant version, component and CVE assignment sections read"
+              }
+            ]
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -12143,18 +12279,8 @@
         "系统安全/SimpleHelp/关键的 SimpleHelp 缺陷允许文件盗窃、权限提升和 RCE 攻击.md"
       ],
       "review": {
-        "disposition": "technical-material-published-or-staged",
-        "articles": [
-          {
-            "article": "系统安全/SimpleHelp/关键的 SimpleHelp 缺陷允许文件盗窃、权限提升和 RCE 攻击.md",
-            "mode": "supplement",
-            "primary_cve_in_article": false,
-            "candidate_identifier_in_article": false,
-            "sha256": "10d2a916a08f5fce46484e6886e84384fa8d7080b1a968e13e3117f6c9e0a954"
-          }
-        ],
-        "mapping_state": "candidate-or-context-only-see-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "disposition": "pending-concrete-material-review",
+        "reason": "Only contextual or version-caution mention in an existing article; not counted as a qualified CVE."
       }
     },
     {
@@ -12187,18 +12313,34 @@
         "系统安全/SimpleHelp/关键的 SimpleHelp 缺陷允许文件盗窃、权限提升和 RCE 攻击.md"
       ],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "系统安全/SimpleHelp/关键的 SimpleHelp 缺陷允许文件盗窃、权限提升和 RCE 攻击.md",
             "mode": "supplement",
-            "primary_cve_in_article": false,
-            "candidate_identifier_in_article": false,
-            "sha256": "10d2a916a08f5fce46484e6886e84384fa8d7080b1a968e13e3117f6c9e0a954"
+            "evidence": [
+              {
+                "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/modules/auxiliary/scanner/http/simplehelp_toolbox_path_traversal.rb",
+                "location": "run_host(): /toolbox-resource/../<directory>/<traversal>/configuration/serverconfig.xml and local loot storage",
+                "sha256": "2ad6e4f90507957307ea9225d670e596cc86e897f3970eb2d0d8a52f7c2308ec",
+                "read_depth": "Complete code file statically read; not executed"
+              },
+              {
+                "url": "https://rustlang.rs/posts/simple-help/",
+                "location": "Technical Analysis: failed request, path composition, corrected traversal request",
+                "sha256": "d51e9efd9e9ff6b3dc80fcc55039cf1f4e0ce12b9c8f9b66ea46955df40cba52",
+                "read_depth": "Complete technical prose and code read; screenshot pixels not inspected"
+              },
+              {
+                "url": "https://guides.simple-help.com/kb---security-vulnerabilities-01-2025",
+                "location": "5.5.8 upgrade and5.4.10/5.3.9 Patch070125 instructions",
+                "sha256": "c13510784ff726c0a93166c7e39ff97ca2649ae5c70f9edce4c55323364ea740",
+                "read_depth": "Entire relevant version/remediation sections read; no package downloaded"
+              }
+            ]
           }
         ],
-        "mapping_state": "candidate-or-context-only-see-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -12231,18 +12373,8 @@
         "系统安全/SimpleHelp/关键的 SimpleHelp 缺陷允许文件盗窃、权限提升和 RCE 攻击.md"
       ],
       "review": {
-        "disposition": "technical-material-published-or-staged",
-        "articles": [
-          {
-            "article": "系统安全/SimpleHelp/关键的 SimpleHelp 缺陷允许文件盗窃、权限提升和 RCE 攻击.md",
-            "mode": "supplement",
-            "primary_cve_in_article": false,
-            "candidate_identifier_in_article": false,
-            "sha256": "10d2a916a08f5fce46484e6886e84384fa8d7080b1a968e13e3117f6c9e0a954"
-          }
-        ],
-        "mapping_state": "candidate-or-context-only-see-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "disposition": "pending-concrete-material-review",
+        "reason": "Only contextual or version-caution mention in an existing article; not counted as a qualified CVE."
       }
     },
     {
@@ -12337,18 +12469,28 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "Web安全/服务器软件/Ivanti/Ivanti EPM GetHashForWildcardRecursive 凭据强制认证资料（CVE-2024-13159）.md",
             "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "84fdc99f3e607d05e934512615ad32991a112e0c5d7b8b155073c7a15fddfcce"
+            "evidence": [
+              {
+                "url": "https://raw.githubusercontent.com/projectdiscovery/nuclei-templates/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2024/CVE-2024-13159.yaml",
+                "location": "http.raw POST /WSVulnerabilityCore/VulCore.asmx; SOAPAction GetHashForWildcardRecursive; wildcard UNC; response and DNS matcher",
+                "sha256": "f1da68c323bac061a6cc57a97dcd0c180c2d859cfd8410d74ff4e2d4bd545abd",
+                "read_depth": "Complete code file statically read; not executed"
+              },
+              {
+                "url": "https://horizon3.ai/attack-research/attack-blogs/ivanti-endpoint-manager-multiple-credential-coercion-vulnerabilities/",
+                "location": "CVE-specific headings and mechanism, extracted technical lines 217–281",
+                "sha256": "31b8d1d8ebd16d017c9ee6f12c4ad978a083b824c1087d32522ac80e55bbb0b7",
+                "read_depth": "Technical article section 217–281 read; screenshots except Figure 10 not inspected"
+              }
+            ]
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -12361,18 +12503,28 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "Web安全/服务器软件/Ivanti/Ivanti EPM GetHashForWildcard 凭据强制认证资料（CVE-2024-13160）.md",
             "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "15fef2eae0c69dab952e9901236d770a9de3a783245e942fa756eaff580a4190"
+            "evidence": [
+              {
+                "url": "https://raw.githubusercontent.com/projectdiscovery/nuclei-templates/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2024/CVE-2024-13160.yaml",
+                "location": "http.raw POST /WSVulnerabilityCore/VulCore.asmx; SOAPAction GetHashForWildcard; wildcard UNC; response and DNS matcher",
+                "sha256": "aad9ea7eeeaac453a76427695e4d964ae87b4c4ef196c433f5483b0b3e45eb37",
+                "read_depth": "Complete code file statically read; not executed"
+              },
+              {
+                "url": "https://horizon3.ai/attack-research/attack-blogs/ivanti-endpoint-manager-multiple-credential-coercion-vulnerabilities/",
+                "location": "CVE-specific headings and mechanism, extracted technical lines 217–281",
+                "sha256": "31b8d1d8ebd16d017c9ee6f12c4ad978a083b824c1087d32522ac80e55bbb0b7",
+                "read_depth": "Technical article section 217–281 read; screenshots except Figure 10 not inspected"
+              }
+            ]
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -12385,18 +12537,34 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "Web安全/服务器软件/Ivanti/Ivanti EPM GetHashForSingleFile 凭据强制认证资料（CVE-2024-13161）.md",
             "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "a3f109c24237b26ca7acd7284d8b2d09020a8e1516ee5d7b9e42e37e67dc4094"
+            "evidence": [
+              {
+                "url": "https://horizon3.ai/wp-content/uploads/2025/02/Screenshot-2025-02-18-at-1.09.42%E2%80%AFPM-1024x581.png",
+                "location": "Figure 10: POST, SOAPAction GetHashForSingleFile, strFileName UNC, HTTP 200 SOAP response and terminal relay output",
+                "sha256": "b9d53bdeb651572d7bff08ba68340dcec249e9e3331e60d2cab5a4dfeae9cf24",
+                "read_depth": "Entire image visually inspected"
+              },
+              {
+                "url": "https://horizon3.ai/attack-research/attack-blogs/ivanti-endpoint-manager-multiple-credential-coercion-vulnerabilities/",
+                "location": "GetHashForSingleFile CVE mapping; extracted lines 246–253",
+                "sha256": "31b8d1d8ebd16d017c9ee6f12c4ad978a083b824c1087d32522ac80e55bbb0b7",
+                "read_depth": "CVE-specific technical prose read"
+              },
+              {
+                "url": "https://raw.githubusercontent.com/projectdiscovery/nuclei-templates/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2024/CVE-2024-13161.yaml",
+                "location": "http.raw uses incorrect wildcard parameter",
+                "sha256": "81767ad5589c60072ad1ff5d5c5108eeab34583c234d8d72c2996f7430c8e427",
+                "read_depth": "Complete YAML read"
+              }
+            ]
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -12628,18 +12796,15 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
-        "articles": [
+        "disposition": "deferred-strict-material-gate",
+        "evidence_gaps": [
           {
-            "article": "系统安全/Linux/Linux USB音频Extigy Mbox配置计数越界补丁分析（CVE-2024-53197）.md",
-            "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "7fe573931a02fab38074bb8ae09417806786fdbf74456fe500e68e9793540d4a"
+            "former_article": "系统安全/Linux/Linux USB音频Extigy Mbox配置计数越界补丁分析（CVE-2024-53197）.md",
+            "reason": "Inspected patch explains the vulnerable primitive but contains no complete crafted input, reproducer or exploit-verification procedure.",
+            "decision": "remove"
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "note": "Our unqualified new file or append withdrawn; original master content preserved; not proof no other public material exists."
       }
     },
     {
@@ -12687,18 +12852,15 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
-        "articles": [
+        "disposition": "deferred-strict-material-gate",
+        "evidence_gaps": [
           {
-            "article": "系统安全/Linux/Linux USB音频时钟描述符越界读补丁分析（CVE-2024-53150）.md",
-            "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "b66c9459e69ebe17097be0fd17d1ad530b016205d08dd9ee47e487b75d964163"
+            "former_article": "系统安全/Linux/Linux USB音频时钟描述符越界读补丁分析（CVE-2024-53150）.md",
+            "reason": "Inspected patch explains the vulnerable primitive but contains no complete crafted input, reproducer or exploit-verification procedure.",
+            "decision": "remove"
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "note": "Our unqualified new file or append withdrawn; original master content preserved; not proof no other public material exists."
       }
     },
     {
@@ -12893,18 +13055,34 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "Web安全/商业软件/Mitel MiCollab 企业协作平台/Mitel MiCollab 企业协作平台 任意文件读取漏洞(CVE-2024-41713).md",
             "mode": "supplement",
-            "primary_cve_in_article": false,
-            "candidate_identifier_in_article": false,
-            "sha256": "7f5eefdddcfe53db98a3784edc9c25cb72462a9b0f060bc4d509f8b5b942a85e"
+            "evidence": [
+              {
+                "url": "https://raw.githubusercontent.com/projectdiscovery/nuclei-templates/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2024/CVE-2024-55550.yaml",
+                "location": "GET /npm-pwg/..;/usp/searchUsers.do then full URL-encoded IDACall XML with reportName traversal",
+                "sha256": "f66d7ba7fbc9f76227b843d2f7b84a120267f404efece0080275694541517f9e",
+                "read_depth": "Complete code file statically read; not executed"
+              },
+              {
+                "url": "https://labs.watchtowr.com/where-theres-smoke-theres-fire-mitel-micollab-cve-2024-35286-cve-2024-41713-and-an-0day/",
+                "location": "ReconcileWizard concrete request and passwd response; chain explanation, extracted lines 185–243",
+                "sha256": "4de6da6b98c1f246fdaf9b606bfdbc041214e01fed9d3daaf42942e1093a76fa",
+                "read_depth": "Relevant complete request, response and chain sections read; screenshot pixels not inspected"
+              },
+              {
+                "url": "https://www.mitel.com/support/security-advisories/mitel-product-security-advisory-misa-2024-0029",
+                "location": "Summary, product table, solution and revision 4.0",
+                "sha256": "9181e75afb184f6fb5cf24a884f1ac063a80e032c59031d0719cedd5ff4cb13f",
+                "read_depth": "Full substantive advisory text read"
+              }
+            ]
           }
         ],
-        "mapping_state": "candidate-or-context-only-see-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -12937,18 +13115,15 @@
         "Web安全/桌面软件/Android/谷歌修复安卓内核零日漏洞，攻击者已利用该漏洞发起攻击.md"
       ],
       "review": {
-        "disposition": "technical-material-published-or-staged",
-        "articles": [
+        "disposition": "deferred-strict-material-gate",
+        "evidence_gaps": [
           {
-            "article": "Web安全/桌面软件/Android/谷歌修复安卓内核零日漏洞，攻击者已利用该漏洞发起攻击.md",
-            "mode": "supplement",
-            "primary_cve_in_article": false,
-            "candidate_identifier_in_article": false,
-            "sha256": "91abb2a770e184638cdba0ba2a9f7eaf10b5f1a114fea9ffe775653477581575"
+            "former_article": "Web安全/桌面软件/Android/谷歌修复安卓内核零日漏洞，攻击者已利用该漏洞发起攻击.md",
+            "reason": "Inspected patch explains the vulnerable primitive but contains no complete crafted input, reproducer or exploit-verification procedure.",
+            "decision": "remove"
           }
         ],
-        "mapping_state": "candidate-or-context-only-see-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "note": "Our unqualified new file or append withdrawn; original master content preserved; not proof no other public material exists."
       }
     },
     {
@@ -13128,18 +13303,15 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
-        "articles": [
+        "disposition": "deferred-strict-material-gate",
+        "evidence_gaps": [
           {
-            "article": "系统安全/Linux/Linux HID报告缓冲区未初始化信息泄露补丁分析（CVE-2024-50302）.md",
-            "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "122eb3cd45ca62a52cc0f608e2ec085738bd1c16677709ce4fa45b4c08754c30"
+            "former_article": "系统安全/Linux/Linux HID报告缓冲区未初始化信息泄露补丁分析（CVE-2024-50302）.md",
+            "reason": "Inspected patch explains the vulnerable primitive but contains no complete crafted input, reproducer or exploit-verification procedure.",
+            "decision": "remove"
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "note": "Our unqualified new file or append withdrawn; original master content preserved; not proof no other public material exists."
       }
     },
     {
@@ -13601,18 +13773,34 @@
         "Web安全/商业软件/Mitel MiCollab 企业协作平台/Mitel MiCollab 企业协作平台 任意文件读取漏洞(CVE-2024-41713).md"
       ],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "Web安全/商业软件/Mitel MiCollab 企业协作平台/Mitel MiCollab 企业协作平台 任意文件读取漏洞(CVE-2024-41713).md",
             "mode": "supplement",
-            "primary_cve_in_article": false,
-            "candidate_identifier_in_article": false,
-            "sha256": "7f5eefdddcfe53db98a3784edc9c25cb72462a9b0f060bc4d509f8b5b942a85e"
+            "evidence": [
+              {
+                "url": "https://raw.githubusercontent.com/projectdiscovery/nuclei-templates/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2024/CVE-2024-55550.yaml",
+                "location": "GET /npm-pwg/..;/usp/searchUsers.do then full URL-encoded IDACall XML with reportName traversal",
+                "sha256": "f66d7ba7fbc9f76227b843d2f7b84a120267f404efece0080275694541517f9e",
+                "read_depth": "Complete code file statically read; not executed"
+              },
+              {
+                "url": "https://labs.watchtowr.com/where-theres-smoke-theres-fire-mitel-micollab-cve-2024-35286-cve-2024-41713-and-an-0day/",
+                "location": "ReconcileWizard concrete request and passwd response; chain explanation, extracted lines 185–243",
+                "sha256": "4de6da6b98c1f246fdaf9b606bfdbc041214e01fed9d3daaf42942e1093a76fa",
+                "read_depth": "Relevant complete request, response and chain sections read; screenshot pixels not inspected"
+              },
+              {
+                "url": "https://www.mitel.com/support/security-advisories/mitel-product-security-advisory-misa-2024-0029",
+                "location": "Summary, product table, solution and revision 4.0",
+                "sha256": "9181e75afb184f6fb5cf24a884f1ac063a80e032c59031d0719cedd5ff4cb13f",
+                "read_depth": "Full substantive advisory text read"
+              }
+            ]
           }
         ],
-        "mapping_state": "candidate-or-context-only-see-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -13711,18 +13899,28 @@
         "Web安全/网络设备/Palo Alto/漏洞预警  Palo Alto Networks Expedition命令注入、SQL注入和明文存储漏洞.md"
       ],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "Web安全/网络设备/Palo Alto/Palo Alto Networks Expedition 远程命令执行漏洞(CVE-2024-9463).md",
             "mode": "supplement",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "9391b8e24e1b089b975eb451e12e20c721266d31bddf66b93daf185a7d6d2a48"
+            "evidence": [
+              {
+                "url": "https://raw.githubusercontent.com/projectdiscovery/nuclei-templates/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2024/CVE-2024-9463.yaml",
+                "location": "POST /API/convertCSVtoParquet.php; ram command substitution and OAST HTTP plus API error matcher",
+                "sha256": "fdc6987a2d9d6baffc530aa7569beb2b55326f83a1cc1f5f39192f0bf624ce17",
+                "read_depth": "Complete code file statically read; not executed"
+              },
+              {
+                "url": "https://security.paloaltonetworks.com/CVE-2024-9463",
+                "location": "CVE description; Product Status; Solution",
+                "sha256": "3441055f6e77c61fde2c1ba5c7d05488d280c61856ff6ed048284961b524e345",
+                "read_depth": "Relevant description/range/solution sections read"
+              }
+            ]
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -14572,18 +14770,28 @@
         "Web安全/服务器软件/SolarWinds/SolarWinds 修复四个严重漏洞，可导致未认证RCE和认证绕过.md"
       ],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "Web安全/其他软件/杂项/【PoC】SolarWinds Web Help Desk (CVE-2024-28987)严重漏洞的 PoC 已发布.md",
             "mode": "supplement",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "f47e1fedb1756135510efc7616c7c115df86b5b8629ac6952f2dcc235edf6736"
+            "evidence": [
+              {
+                "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/modules/auxiliary/gather/solarwinds_webhelpdesk_backdoor.rb",
+                "location": "auth() GET OrionTickets with hardcoded Basic credential; run() JSON shortSubject validation",
+                "sha256": "8dbe92910d258dc39b1a366d41cd8e62e56e12e2be33bcd4fd56480c3ea890d9",
+                "read_depth": "Complete code file statically read; not executed"
+              },
+              {
+                "url": "https://www.horizon3.ai/attack-research/cve-2024-28987-solarwinds-web-help-desk-hardcoded-credential-vulnerability-deep-dive/",
+                "location": "Target Familiarization: OrionTickets, BasicAuthRouteController and public hardcoded credential",
+                "sha256": "2832afff0b9ae00054e0bb868153ab9926aa4781735e603d2331dcf1f2854536",
+                "read_depth": "Relevant complete source-association/mechanism section221–293 read; screenshot pixels not inspected"
+              }
+            ]
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -14781,18 +14989,22 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "Web安全/网络设备/Ivanti/Ivanti vTM 本地管理员创建鉴权绕过（CVE-2024-7593）.md",
             "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "26e35835b52ef5bbd035dd9062aa0b2fda20cf5807db17791d489ae8dcd1f0ad"
+            "evidence": [
+              {
+                "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/modules/auxiliary/admin/http/ivanti_vtm_admin.rb",
+                "location": "run(): wizard.fcgi?error=1&section=Access+Management%3ALocalUsers form, group=admin; login.cgi 302 plus ZeusTMZAUTH_ verification",
+                "sha256": "f1e3ee65626755d2c934abecbd4a0a068a7120816adf1b3d7511055d7778a361",
+                "read_depth": "Complete code file statically read; not executed"
+              }
+            ]
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -15989,18 +16201,15 @@
         "系统安全/Android/谷歌警告：Android内核漏洞正在被活跃攻击.md"
       ],
       "review": {
-        "disposition": "technical-material-published-or-staged",
-        "articles": [
+        "disposition": "deferred-strict-material-gate",
+        "evidence_gaps": [
           {
-            "article": "系统安全/Android/谷歌警告：Android内核漏洞正在被活跃攻击.md",
-            "mode": "supplement",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "c320b57af041e2cd054f3451ad6816e397637e7c41b258a35440352c055f47c8"
+            "former_article": "系统安全/Android/谷歌警告：Android内核漏洞正在被活跃攻击.md",
+            "reason": "Inspected patch explains the vulnerable primitive but contains no complete crafted input, reproducer or exploit-verification procedure.",
+            "decision": "remove"
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "note": "Our unqualified new file or append withdrawn; original master content preserved; not proof no other public material exists."
       }
     },
     {
@@ -17052,18 +17261,40 @@
         "Web安全/云平台/QNAP NAS/CVE-2024-27130.md"
       ],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "Web安全/网络设备/D-Link/D-Link NAS 未授权RCE漏洞(CVE-2024-3273).md",
             "mode": "supplement",
-            "primary_cve_in_article": false,
-            "candidate_identifier_in_article": false,
-            "sha256": "4848e8f54ebc2710419b8eb4457b815a8d80ffd62bbaf9d80293707bef65d168"
+            "evidence": [
+              {
+                "url": "https://raw.githubusercontent.com/netsecfish/dlink/main/README.md",
+                "location": "Vulnerability Details and Exploitation: GET /cgi-bin/nas_sharing.cgi?user=messagebus&passwd=&cmd=15&system=...",
+                "sha256": "079d2ad8307e4c49708b9ca3b5a7586b9807a11e7002fb348af517585b51f613",
+                "read_depth": "Entire README text read; screenshot pixels not inspected"
+              },
+              {
+                "url": "https://cveawg.mitre.org/api/cve/CVE-2024-3272",
+                "location": "CNA description: user=messagebus hardcoded credentials",
+                "sha256": "1606d953a44f11114e0cbf9bc6d88daae33d774e31a22cc4b376a84da807bdba",
+                "read_depth": "CNA description and exact endpoint/argument/CVE mapping read"
+              },
+              {
+                "url": "https://cveawg.mitre.org/api/cve/CVE-2024-3273",
+                "location": "CNA description: system argument command injection",
+                "sha256": "497f76503cc6511ccec77d90761ec6fe66454774f53b053df7c20277e24a0347",
+                "read_depth": "CNA description and exact endpoint/argument/CVE mapping read"
+              },
+              {
+                "url": "https://supportannouncement.us.dlink.com/security/publication.aspx?name=SAP10383",
+                "location": "Overview, Report1 CVE3272/3273/Netsecfish links and EOL recommendation",
+                "sha256": "c28a913838a39a4c7f36f4d0d5cd8cece5504e239b6e89c5399fe0526b01efca",
+                "read_depth": "Relevant overview/reference sections read; every model-table row not independently audited"
+              }
+            ]
           }
         ],
-        "mapping_state": "candidate-or-context-only-see-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -17076,18 +17307,40 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "Web安全/网络设备/D-Link/D-Link NAS 未授权RCE漏洞(CVE-2024-3273).md",
             "mode": "supplement",
-            "primary_cve_in_article": false,
-            "candidate_identifier_in_article": false,
-            "sha256": "4848e8f54ebc2710419b8eb4457b815a8d80ffd62bbaf9d80293707bef65d168"
+            "evidence": [
+              {
+                "url": "https://raw.githubusercontent.com/netsecfish/dlink/main/README.md",
+                "location": "Vulnerability Details and Exploitation: GET /cgi-bin/nas_sharing.cgi?user=messagebus&passwd=&cmd=15&system=...",
+                "sha256": "079d2ad8307e4c49708b9ca3b5a7586b9807a11e7002fb348af517585b51f613",
+                "read_depth": "Entire README text read; screenshot pixels not inspected"
+              },
+              {
+                "url": "https://cveawg.mitre.org/api/cve/CVE-2024-3272",
+                "location": "CNA description: user=messagebus hardcoded credentials",
+                "sha256": "1606d953a44f11114e0cbf9bc6d88daae33d774e31a22cc4b376a84da807bdba",
+                "read_depth": "CNA description and exact endpoint/argument/CVE mapping read"
+              },
+              {
+                "url": "https://cveawg.mitre.org/api/cve/CVE-2024-3273",
+                "location": "CNA description: system argument command injection",
+                "sha256": "497f76503cc6511ccec77d90761ec6fe66454774f53b053df7c20277e24a0347",
+                "read_depth": "CNA description and exact endpoint/argument/CVE mapping read"
+              },
+              {
+                "url": "https://supportannouncement.us.dlink.com/security/publication.aspx?name=SAP10383",
+                "location": "Overview, Report1 CVE3272/3273/Netsecfish links and EOL recommendation",
+                "sha256": "c28a913838a39a4c7f36f4d0d5cd8cece5504e239b6e89c5399fe0526b01efca",
+                "read_depth": "Relevant overview/reference sections read; every model-table row not independently audited"
+              }
+            ]
           }
         ],
-        "mapping_state": "candidate-or-context-only-see-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -17511,18 +17764,22 @@
         "Web安全/其他软件/杂项/CVE-2024-1709.md"
       ],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "Web安全/其他软件/杂项/CVE-2024-1709.md",
             "mode": "supplement",
-            "primary_cve_in_article": false,
-            "candidate_identifier_in_article": false,
-            "sha256": "79c940c705f1ad9079fc5909dfeb200aada2e2bec81737c4e14fca934f08c35d"
+            "evidence": [
+              {
+                "url": "https://www.huntress.com/blog/a-catastrophe-for-control-understanding-the-screenconnect-authentication-bypass",
+                "location": "CVE-2024-1709 section: /SetupWizard.aspx/literallyanything, Next, user creation; 1708 section lacks concrete ZIP artifact",
+                "sha256": "da5c086c8545ea46ab43ebe8fc428f75580224c4c9f3813627edd3e035efd960",
+                "read_depth": "Substantive technical sections and complete manual trigger read; embedded Gists/images not inspected"
+              }
+            ]
           }
         ],
-        "mapping_state": "candidate-or-context-only-see-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -17535,18 +17792,8 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
-        "articles": [
-          {
-            "article": "Web安全/其他软件/杂项/CVE-2024-1709.md",
-            "mode": "supplement",
-            "primary_cve_in_article": false,
-            "candidate_identifier_in_article": false,
-            "sha256": "79c940c705f1ad9079fc5909dfeb200aada2e2bec81737c4e14fca934f08c35d"
-          }
-        ],
-        "mapping_state": "candidate-or-context-only-see-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "disposition": "pending-concrete-material-review",
+        "reason": "Only contextual or version-caution mention in an existing article; not counted as a qualified CVE."
       }
     },
     {
@@ -49955,18 +50202,34 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "Web安全/数据库/Phpmyadmin/phpMyAdmin setup配置保存注入与后续漏洞分界（CVE-2009-1151）.md",
             "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "4855bb9315559d42831b179f854b74584c262265f1d6a22203839f4c1476eb27"
+            "evidence": [
+              {
+                "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/unix/webapp/phpmyadmin_config.rb",
+                "location": "exploit(): /scripts/setup.php case; serialized host key; POST action=save and subsequent config/config.inc.php",
+                "sha256": "f3d16a2169ba8850488f6991de0407ac8ec3986b45c6ae2a6ad786131f24cd42",
+                "read_depth": "Complete code file statically read; not executed"
+              },
+              {
+                "url": "https://www.phpmyadmin.net/security/PMASA-2009-3/",
+                "location": "Description, writable-config prerequisite and CVE/range",
+                "sha256": "e2a23cd67582702397858f534c4ecd2a73fcac90990702da57a3ce342517af20",
+                "read_depth": "Relevant complete technical/prerequisite/PoC sections read"
+              },
+              {
+                "url": "https://www.phpmyadmin.net/security/PMASA-2009-4/",
+                "location": "Different parameters and separate1285 scope",
+                "sha256": "166c6c1742b69351f0b9f0fe17eaaf22f8a45b41c60996fc1839a85c2040ce28",
+                "read_depth": "Relevant complete technical/prerequisite/PoC sections read"
+              }
+            ]
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -50164,18 +50427,28 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "Web安全/网络设备/Alcatel-Lucent/OmniPCX masterCGI ping命令拼接与单次执行限制（CVE-2007-3010）.md",
             "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "2c9a37d75881429dad33af8232dc7f600da944a62ad18a42a5ef70342ef3f707"
+            "evidence": [
+              {
+                "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/linux/http/alcatel_omnipcx_mastercgi_exec.rb",
+                "location": "exploit(): /cgi-bin/masterCGI?ping=nomip&user=;...;, IFS substitution and h5 output",
+                "sha256": "ac318a56d8acdfe48aa7c5341248b0c3bd6159a1a6e59aa68bf9e6f09501c656",
+                "read_depth": "Complete code file statically read; not executed"
+              },
+              {
+                "url": "https://marc.info/?l=full-disclosure&m=119002152126755&w=2",
+                "location": "More Details and Proof of Concept curl",
+                "sha256": "bdd2cf86902b3c1a66448499cf3a69513852f0d50d46fbe351161ca0efb6d417",
+                "read_depth": "Relevant complete technical/prerequisite/PoC sections read"
+              }
+            ]
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -50230,18 +50503,28 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "technical-material-published-or-staged",
+        "disposition": "concrete-public-material-qualified",
         "articles": [
           {
             "article": "Web安全/运维面板/HP OpenView/HP OpenView connectedNodes命令注入与回显差异（CVE-2005-2773）.md",
             "mode": "new",
-            "primary_cve_in_article": true,
-            "candidate_identifier_in_article": false,
-            "sha256": "902e918dfcedde6752f6cb0d48771ce43670b6666b72d2a258a52a8ba99c7e59"
+            "evidence": [
+              {
+                "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/unix/webapp/openview_connectednodes_exec.rb",
+                "location": "exploit(): /OvCgi/connectedNodes.ovpl node value, YYY markers and response parsing",
+                "sha256": "38542d49a04ed5f1293f47dd52aa5d123cb8fcd4632274bdabdf0bd97848e2ef",
+                "read_depth": "Complete code file statically read; not executed"
+              },
+              {
+                "url": "https://marc.info/?l=bugtraq&m=112499121725662&w=2",
+                "location": "Affected systems, Impact and Exploit literal URL",
+                "sha256": "33696cd61b43a215866888b7c98154db9f4c6135b69a50e671ea067c535c910b",
+                "read_depth": "Relevant complete technical/prerequisite/PoC sections read"
+              }
+            ]
           }
         ],
-        "mapping_state": "primary-established-in-at-least-one-article",
-        "review_depth": "Selected relevant original technical text/code and primary facts reviewed; exact source/document/section/image limits are recorded in each article. No claim of complete upstream repository audit."
+        "runtime_verification": "not-reproduced; static source and attribution review only"
       }
     },
     {
@@ -50321,14 +50604,19 @@
       }
     }
   ],
-  "new_article_files": 67,
-  "existing_article_files_supplemented": 26,
-  "candidates_with_integrated_material": 104,
+  "new_article_files": 34,
+  "existing_article_files_supplemented": 19,
+  "candidates_with_integrated_material": 58,
   "disposition_counts": {
     "pending-substantive-review": 1606,
-    "technical-material-published-or-staged": 104,
+    "concrete-public-material-qualified": 58,
+    "deferred-strict-material-gate": 43,
     "deferred-in-reviewed-source-set": 16,
+    "pending-concrete-material-review": 3,
     "duplicate-sufficient-existing-technical-entry": 1
   },
-  "updated_utc": "2026-10-03T08:18:37.932451+00:00"
+  "updated_utc": "2026-10-03T09:02:36.588755+00:00",
+  "qualified_material_candidate_count": 58,
+  "withdrawn_new_files": 33,
+  "withdrawn_appends": 7
 }
