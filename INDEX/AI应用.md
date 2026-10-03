@@ -43,6 +43,7 @@
 - [AI用户务必关注，Langflow未授权RCE分析（CVE-2026-33017）](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/AI%E7%BB%BC%E5%90%88/AI%E7%94%A8%E6%88%B7%E5%8A%A1%E5%BF%85%E5%85%B3%E6%B3%A8%EF%BC%8CLangflow%E6%9C%AA%E6%8E%88%E6%9D%83RCE%E5%88%86%E6%9E%90%EF%BC%88CVE-2026-33017%EF%BC%89.md) [vulnerability; not-reproduced; needs-review]
 - [Langflow CSV Agent 远程代码执行漏洞 CVE-2026-27966](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/Langflow/Langflow-CSV-Agent-%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E-CVE-2026-27966.md) [vulnerability; not-reproduced; needs-review]
 - [Langflow code API 未授权远程代码执行漏洞 CVE-2025-3248](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/Langflow/Langflow-code-API-%E6%9C%AA%E6%8E%88%E6%9D%83%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E-CVE-2025-3248.md) [vulnerability; not-reproduced; needs-review]
+- [Langflow responses跨用户Flow执行与UUID分支授权缺口（CVE-2026-55255）](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/Langflow/Langflow%20responses%E8%B7%A8%E7%94%A8%E6%88%B7Flow%E6%89%A7%E8%A1%8C%E4%B8%8EUUID%E5%88%86%E6%94%AF%E6%8E%88%E6%9D%83%E7%BC%BA%E5%8F%A3%EF%BC%88CVE-2026-55255%EF%BC%89.md) [analysis; not-reproduced; active]
 - [Langflow ≤ 1.6.9 CORS 配置错误导致令牌劫持和远程命令执行漏洞 CVE-2025-34291](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/Langflow/Langflow-%E2%89%A4-1.6.9-CORS-%E9%85%8D%E7%BD%AE%E9%94%99%E8%AF%AF%E5%AF%BC%E8%87%B4%E4%BB%A4%E7%89%8C%E5%8A%AB%E6%8C%81%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E-CVE-2025-34291.md) [vulnerability; not-reproduced; needs-review]
 - [Langflow 服务器端请求伪造漏洞 CVE-2025-68477](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/Langflow/Langflow-%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E8%AF%B7%E6%B1%82%E4%BC%AA%E9%80%A0%E6%BC%8F%E6%B4%9E-CVE-2025-68477.md) [vulnerability; not-reproduced; needs-review]
 - [Unpatched Langflow Flaw CVE-2026-5027 Exploited for Unauthenticated RCE](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/Langflow/Unpatched%20Langflow%20Flaw%20CVE-2026-5027%20Exploited%20for%20Unauthenticated%20RC.md) [advisory; not-reproduced; needs-review]
@@ -65,6 +66,10 @@
 - [LiteLLM 遭受攻击：三重威胁漏洞使 AI 网关面临全面接管风险](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/LiteLLM/LiteLLM%20%E9%81%AD%E5%8F%97%E6%94%BB%E5%87%BB%EF%BC%9A%E4%B8%89%E9%87%8D%E5%A8%81%E8%83%81%E6%BC%8F%E6%B4%9E%E4%BD%BF%20AI%20%E7%BD%91%E5%85%B3%E9%9D%A2%E4%B8%B4%E5%85%A8%E9%9D%A2%E6%8E%A5%E7%AE%A1%E9%A3%8E%E9%99%A9.md) [analysis; not-reproduced; needs-review]
 - [LiteLLM存在远程命令执行漏洞CVE-2026-42271 附POC](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/LiteLLM/LiteLLM%E5%AD%98%E5%9C%A8%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9ECVE-2026-42271%20%E9%99%84POC.md) [advisory; not-reproduced; needs-review]
 - [我在 30 行 Python 里拿到 LiteLLM 的 root：CVE-2026-30623 实战 + 加固](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/LiteLLM/%E6%88%91%E5%9C%A8%2030%20%E8%A1%8C%20Python%20%E9%87%8C%E6%8B%BF%E5%88%B0%20LiteLLM%20%E7%9A%84%20root%EF%BC%9ACVE-2026-30623%20%E5%AE%9E%E6%88%98%20%2B%20%E5%8A%A0%E5%9B%BA.md) [vulnerability; not-reproduced; needs-review]
+
+## LiteLLM MCP
+
+- [LiteLLM MCP认证失败回退为空用户的源码与修复边界（CVE-2026-59822）](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/LiteLLM/LiteLLM%20MCP%E8%AE%A4%E8%AF%81%E5%A4%B1%E8%B4%A5%E5%9B%9E%E9%80%80%E4%B8%BA%E7%A9%BA%E7%94%A8%E6%88%B7%E7%9A%84%E6%BA%90%E7%A0%81%E4%B8%8E%E4%BF%AE%E5%A4%8D%E8%BE%B9%E7%95%8C%EF%BC%88CVE-2026-59822%EF%BC%89.md) [analysis; not-reproduced; active]
 
 ## MLflow
 
@@ -177,6 +182,10 @@
 ## llama.cpp
 
 - [LLM 推理引擎 llama.cpp 零点击 RCE 漏洞：从 Null Buffer 到绕过 PIE/Full RELRO/NX 利用链(CVE-2026-34159)](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/AI%E7%BB%BC%E5%90%88/LLM%20%E6%8E%A8%E7%90%86%E5%BC%95%E6%93%8E%20llama.cpp%20%E9%9B%B6%E7%82%B9%E5%87%BB%20RCE%20%E6%BC%8F%E6%B4%9E%EF%BC%9A%E4%BB%8E%20Null%20Buffer%20%E5%88%B0%E7%BB%95%E8%BF%87%20PIE-Full%20RELRO-NX%20%E5%88%A9%E7%94%A8%E9%93%BE.md) [analysis; not-reproduced; needs-review]
+
+## marimo
+
+- [marimo terminal WebSocket缺少认证与编辑模式前提（CVE-2026-39987）](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/Marimo/marimo%20terminal%20WebSocket%E7%BC%BA%E5%B0%91%E8%AE%A4%E8%AF%81%E4%B8%8E%E7%BC%96%E8%BE%91%E6%A8%A1%E5%BC%8F%E5%89%8D%E6%8F%90%EF%BC%88CVE-2026-39987%EF%BC%89.md) [analysis; not-reproduced; needs-review]
 
 ## mcp-server-git
 
