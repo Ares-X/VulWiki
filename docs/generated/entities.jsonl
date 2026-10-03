@@ -130,6 +130,7 @@
 {"canonical_paths":[],"entity_id":"ve-0684ca6e18f07aee1a6ce32b","grouping":"explicit-metadata","source_record_ids":["vw-0684ca6e18f07aee1a6ce32b"]}
 {"canonical_paths":[],"entity_id":"ve-06a209dc934a588e576cc42c","grouping":"explicit-metadata","source_record_ids":["vw-06a209dc934a588e576cc42c"]}
 {"canonical_paths":[],"entity_id":"ve-06b1c5c7ad33f0880d00f635","grouping":"explicit-metadata","source_record_ids":["vw-06b1c5c7ad33f0880d00f635"]}
+{"canonical_paths":[],"entity_id":"ve-06c992f86aa0add30699f757","grouping":"explicit-metadata","source_record_ids":["vw-06c992f86aa0add30699f757"]}
 {"canonical_paths":[],"entity_id":"ve-06da4374b0c69a9be2c7c2af","grouping":"explicit-metadata","source_record_ids":["vw-06da4374b0c69a9be2c7c2af"]}
 {"canonical_paths":[],"entity_id":"ve-06dedbc0149d6c30657c4d2a","grouping":"explicit-metadata","source_record_ids":["vw-06dedbc0149d6c30657c4d2a"]}
 {"canonical_paths":[],"entity_id":"ve-06df243c9a99cad66758d45e","grouping":"explicit-metadata","source_record_ids":["vw-06df243c9a99cad66758d45e"]}
@@ -409,6 +410,7 @@
 {"canonical_paths":[],"entity_id":"ve-12806586d23d66a9e79d7048","grouping":"explicit-metadata","source_record_ids":["vw-12806586d23d66a9e79d7048"]}
 {"canonical_paths":[],"entity_id":"ve-128938d9073829a52a7ac92f","grouping":"explicit-metadata","source_record_ids":["vw-128938d9073829a52a7ac92f"]}
 {"canonical_paths":[],"entity_id":"ve-128a7e071aaeb3491b80d8c3","grouping":"explicit-metadata","source_record_ids":["vw-128a7e071aaeb3491b80d8c3"]}
+{"canonical_paths":[],"entity_id":"ve-128df3adba40f5b5a0f78023","grouping":"explicit-metadata","source_record_ids":["vw-128df3adba40f5b5a0f78023"]}
 {"canonical_paths":[],"entity_id":"ve-1291a09996452df93a163af2","grouping":"explicit-metadata","source_record_ids":["vw-1291a09996452df93a163af2"]}
 {"canonical_paths":[],"entity_id":"ve-12a26edd34f019d2c1fefb22","grouping":"explicit-metadata","source_record_ids":["vw-12a26edd34f019d2c1fefb22"]}
 {"canonical_paths":[],"entity_id":"ve-12a2f67df6beb58dd628c80a","grouping":"explicit-metadata","source_record_ids":["vw-12a2f67df6beb58dd628c80a"]}
@@ -876,6 +878,7 @@
 {"canonical_paths":[],"entity_id":"ve-2699d09cabc01fbbba65d903","grouping":"explicit-metadata","source_record_ids":["vw-2699d09cabc01fbbba65d903"]}
 {"canonical_paths":[],"entity_id":"ve-26b0dda9ab15c3f1192bb517","grouping":"explicit-metadata","source_record_ids":["vw-26b0dda9ab15c3f1192bb517"]}
 {"canonical_paths":[],"entity_id":"ve-26df756b681dd5d8bd5366c1","grouping":"explicit-metadata","source_record_ids":["vw-26df756b681dd5d8bd5366c1"]}
+{"canonical_paths":[],"entity_id":"ve-2700812f8b01e9997a82697e","grouping":"explicit-metadata","source_record_ids":["vw-2700812f8b01e9997a82697e"]}
 {"canonical_paths":[],"entity_id":"ve-2703b06981bc2a14c2b688c7","grouping":"explicit-metadata","source_record_ids":["vw-2703b06981bc2a14c2b688c7"]}
 {"canonical_paths":[],"entity_id":"ve-2712bc7cbd3ff00b5e6562e5","grouping":"explicit-metadata","source_record_ids":["vw-2712bc7cbd3ff00b5e6562e5"]}
 {"canonical_paths":[],"entity_id":"ve-272a05ea63adf2d838f67d50","grouping":"explicit-metadata","source_record_ids":["vw-272a05ea63adf2d838f67d50"]}
@@ -1026,6 +1029,7 @@
 {"canonical_paths":[],"entity_id":"ve-2f26822ce89a76c8274b1d6e","grouping":"explicit-metadata","source_record_ids":["vw-2f26822ce89a76c8274b1d6e"]}
 {"canonical_paths":[],"entity_id":"ve-2f311e506bf66964c735607a","grouping":"explicit-metadata","source_record_ids":["vw-2f311e506bf66964c735607a"]}
 {"canonical_paths":[],"entity_id":"ve-2f40ba4510b84e28580a11cb","grouping":"explicit-metadata","source_record_ids":["vw-2f40ba4510b84e28580a11cb"]}
+{"canonical_paths":[],"entity_id":"ve-2f418d13bca51e60e0f2d800","grouping":"explicit-metadata","source_record_ids":["vw-2f418d13bca51e60e0f2d800"]}
 {"canonical_paths":[],"entity_id":"ve-2f534e0eec62e888bb35bffa","grouping":"explicit-metadata","source_record_ids":["vw-2f534e0eec62e888bb35bffa"]}
 {"canonical_paths":[],"entity_id":"ve-2f5771484052932f26f43757","grouping":"explicit-metadata","source_record_ids":["vw-2f5771484052932f26f43757"]}
 {"canonical_paths":[],"entity_id":"ve-2f63faef758b7dc76b21cfdf","grouping":"explicit-metadata","source_record_ids":["vw-2f63faef758b7dc76b21cfdf"]}
@@ -1738,6 +1742,7 @@
 {"canonical_paths":[],"entity_id":"ve-4f5daa0ceb21e9a15c46a7d2","grouping":"explicit-metadata","source_record_ids":["vw-4f5daa0ceb21e9a15c46a7d2"]}
 {"canonical_paths":[],"entity_id":"ve-4f757efcc4e254a16153590f","grouping":"explicit-metadata","source_record_ids":["vw-4f757efcc4e254a16153590f"]}
 {"canonical_paths":[],"entity_id":"ve-4f7853e0e748addb67bd8a34","grouping":"explicit-metadata","source_record_ids":["vw-4f7853e0e748addb67bd8a34"]}
+{"canonical_paths":[],"entity_id":"ve-4f932af49c8e17aaccd648ea","grouping":"explicit-metadata","source_record_ids":["vw-4f932af49c8e17aaccd648ea"]}
 {"canonical_paths":[],"entity_id":"ve-4fbb84b19582233bf74109ac","grouping":"explicit-metadata","source_record_ids":["vw-4fbb84b19582233bf74109ac"]}
 {"canonical_paths":[],"entity_id":"ve-4fcc937bc81befc1352bc2e6","grouping":"explicit-metadata","source_record_ids":["vw-4fcc937bc81befc1352bc2e6"]}
 {"canonical_paths":[],"entity_id":"ve-4fd63e4fd1158cce3905bf73","grouping":"explicit-metadata","source_record_ids":["vw-4fd63e4fd1158cce3905bf73"]}
@@ -1773,6 +1778,7 @@
 {"canonical_paths":[],"entity_id":"ve-513320046d5b0067285e2455","grouping":"explicit-metadata","source_record_ids":["vw-513320046d5b0067285e2455"]}
 {"canonical_paths":[],"entity_id":"ve-513c1754b886e7f3b44b9ec4","grouping":"explicit-metadata","source_record_ids":["vw-513c1754b886e7f3b44b9ec4"]}
 {"canonical_paths":[],"entity_id":"ve-51408e7ceb3aa9003d1811c9","grouping":"explicit-metadata","source_record_ids":["vw-51408e7ceb3aa9003d1811c9"]}
+{"canonical_paths":[],"entity_id":"ve-514676eaa650731e9344e251","grouping":"explicit-metadata","source_record_ids":["vw-514676eaa650731e9344e251"]}
 {"canonical_paths":[],"entity_id":"ve-514973e92975e6fb2a7aa51c","grouping":"explicit-metadata","source_record_ids":["vw-514973e92975e6fb2a7aa51c"]}
 {"canonical_paths":[],"entity_id":"ve-515922ecd31f82b6cf6282a1","grouping":"explicit-metadata","source_record_ids":["vw-515922ecd31f82b6cf6282a1"]}
 {"canonical_paths":[],"entity_id":"ve-516474aa618e6143768fddb5","grouping":"explicit-metadata","source_record_ids":["vw-516474aa618e6143768fddb5"]}
@@ -1875,6 +1881,7 @@
 {"canonical_paths":[],"entity_id":"ve-55f8f332a6f2a8056755d0f8","grouping":"explicit-metadata","source_record_ids":["vw-55f8f332a6f2a8056755d0f8"]}
 {"canonical_paths":[],"entity_id":"ve-55fb6e9ab41968b4374e02c1","grouping":"explicit-metadata","source_record_ids":["vw-55fb6e9ab41968b4374e02c1"]}
 {"canonical_paths":[],"entity_id":"ve-5601c46b160f090da22388ff","grouping":"explicit-metadata","source_record_ids":["vw-5601c46b160f090da22388ff"]}
+{"canonical_paths":[],"entity_id":"ve-560d7392e111158fb2b2784b","grouping":"explicit-metadata","source_record_ids":["vw-560d7392e111158fb2b2784b"]}
 {"canonical_paths":[],"entity_id":"ve-56146e8b79576f90c85a69e5","grouping":"explicit-metadata","source_record_ids":["vw-56146e8b79576f90c85a69e5"]}
 {"canonical_paths":[],"entity_id":"ve-5616cfdf8c19e82170ac7108","grouping":"explicit-metadata","source_record_ids":["vw-5616cfdf8c19e82170ac7108"]}
 {"canonical_paths":[],"entity_id":"ve-5631747766d2c097ed422ef3","grouping":"explicit-metadata","source_record_ids":["vw-5631747766d2c097ed422ef3"]}
@@ -2193,6 +2200,7 @@
 {"canonical_paths":[],"entity_id":"ve-6637f56ba9bf333ce5d5ef6c","grouping":"explicit-metadata","source_record_ids":["vw-6637f56ba9bf333ce5d5ef6c"]}
 {"canonical_paths":[],"entity_id":"ve-664ac17224c3f5d87ad4a19b","grouping":"explicit-metadata","source_record_ids":["vw-664ac17224c3f5d87ad4a19b"]}
 {"canonical_paths":[],"entity_id":"ve-664b3247599159b15d7d69be","grouping":"explicit-metadata","source_record_ids":["vw-664b3247599159b15d7d69be"]}
+{"canonical_paths":[],"entity_id":"ve-664e142a73f5473eb4901a31","grouping":"explicit-metadata","source_record_ids":["vw-664e142a73f5473eb4901a31"]}
 {"canonical_paths":[],"entity_id":"ve-667b59467a110332ac74bd3b","grouping":"explicit-metadata","source_record_ids":["vw-667b59467a110332ac74bd3b"]}
 {"canonical_paths":[],"entity_id":"ve-6682176989427b78db96a76b","grouping":"explicit-metadata","source_record_ids":["vw-6682176989427b78db96a76b"]}
 {"canonical_paths":[],"entity_id":"ve-669141b7aefe3b2b4da08f6d","grouping":"explicit-metadata","source_record_ids":["vw-669141b7aefe3b2b4da08f6d"]}
@@ -2835,6 +2843,7 @@
 {"canonical_paths":[],"entity_id":"ve-8476e88ad5a598b33a7a83b0","grouping":"explicit-metadata","source_record_ids":["vw-8476e88ad5a598b33a7a83b0"]}
 {"canonical_paths":[],"entity_id":"ve-847c9ada986dc7d5aa8e4197","grouping":"explicit-metadata","source_record_ids":["vw-847c9ada986dc7d5aa8e4197"]}
 {"canonical_paths":[],"entity_id":"ve-84813310d1d0c92bf9546d6a","grouping":"explicit-metadata","source_record_ids":["vw-84813310d1d0c92bf9546d6a"]}
+{"canonical_paths":[],"entity_id":"ve-84818d5bf5ad0fb7bb689020","grouping":"explicit-metadata","source_record_ids":["vw-84818d5bf5ad0fb7bb689020"]}
 {"canonical_paths":[],"entity_id":"ve-8489fb3efc852940cd234d6f","grouping":"explicit-metadata","source_record_ids":["vw-8489fb3efc852940cd234d6f"]}
 {"canonical_paths":[],"entity_id":"ve-848a78331f2022d8c64a22e1","grouping":"explicit-metadata","source_record_ids":["vw-848a78331f2022d8c64a22e1"]}
 {"canonical_paths":[],"entity_id":"ve-84b715f563e26d9b15963a01","grouping":"explicit-metadata","source_record_ids":["vw-84b715f563e26d9b15963a01"]}
@@ -2903,6 +2912,7 @@
 {"canonical_paths":[],"entity_id":"ve-87af743ccfe5547f3697cb6b","grouping":"explicit-metadata","source_record_ids":["vw-87af743ccfe5547f3697cb6b"]}
 {"canonical_paths":[],"entity_id":"ve-87b6e1eeec3c20c1af1b9645","grouping":"explicit-metadata","source_record_ids":["vw-87b6e1eeec3c20c1af1b9645"]}
 {"canonical_paths":[],"entity_id":"ve-87bcb3e5c512d26b40ae3d8e","grouping":"explicit-metadata","source_record_ids":["vw-87bcb3e5c512d26b40ae3d8e"]}
+{"canonical_paths":[],"entity_id":"ve-87d3ed71a4c5b0a70480308e","grouping":"explicit-metadata","source_record_ids":["vw-87d3ed71a4c5b0a70480308e"]}
 {"canonical_paths":[],"entity_id":"ve-87dac1e0a3133eeb78f9c48c","grouping":"explicit-metadata","source_record_ids":["vw-87dac1e0a3133eeb78f9c48c"]}
 {"canonical_paths":[],"entity_id":"ve-87dff6a7e0e184c067bd6a3b","grouping":"explicit-metadata","source_record_ids":["vw-87dff6a7e0e184c067bd6a3b"]}
 {"canonical_paths":[],"entity_id":"ve-87e046508b82939c6a12570b","grouping":"explicit-metadata","source_record_ids":["vw-87e046508b82939c6a12570b"]}
@@ -3546,6 +3556,7 @@
 {"canonical_paths":[],"entity_id":"ve-a60cb544e299ffc26e5d7bfb","grouping":"explicit-metadata","source_record_ids":["vw-a60cb544e299ffc26e5d7bfb"]}
 {"canonical_paths":[],"entity_id":"ve-a60f6d975feca68877bd9ea9","grouping":"explicit-metadata","source_record_ids":["vw-a60f6d975feca68877bd9ea9"]}
 {"canonical_paths":[],"entity_id":"ve-a6145ec6432d7700b5a76ed6","grouping":"explicit-metadata","source_record_ids":["vw-a6145ec6432d7700b5a76ed6"]}
+{"canonical_paths":[],"entity_id":"ve-a62398ecc6b764ef557abc50","grouping":"explicit-metadata","source_record_ids":["vw-a62398ecc6b764ef557abc50"]}
 {"canonical_paths":[],"entity_id":"ve-a62a570d5533c8eefb912f52","grouping":"explicit-metadata","source_record_ids":["vw-a62a570d5533c8eefb912f52"]}
 {"canonical_paths":[],"entity_id":"ve-a62ec41aaad1e8d6a783231b","grouping":"explicit-metadata","source_record_ids":["vw-a62ec41aaad1e8d6a783231b"]}
 {"canonical_paths":[],"entity_id":"ve-a6338c03bc41cad60ab939fb","grouping":"explicit-metadata","source_record_ids":["vw-a6338c03bc41cad60ab939fb"]}
@@ -3564,10 +3575,12 @@
 {"canonical_paths":[],"entity_id":"ve-a6e068cb1d6ba3c31dea927a","grouping":"explicit-metadata","source_record_ids":["vw-a6e068cb1d6ba3c31dea927a"]}
 {"canonical_paths":[],"entity_id":"ve-a71c91b176e43ac2498aceeb","grouping":"explicit-metadata","source_record_ids":["vw-a71c91b176e43ac2498aceeb"]}
 {"canonical_paths":[],"entity_id":"ve-a729f3a0e2e06ca1457ee615","grouping":"explicit-metadata","source_record_ids":["vw-a729f3a0e2e06ca1457ee615"]}
+{"canonical_paths":[],"entity_id":"ve-a73ffbc414ff8f293b6710bb","grouping":"explicit-metadata","source_record_ids":["vw-a73ffbc414ff8f293b6710bb"]}
 {"canonical_paths":[],"entity_id":"ve-a751c8d90e337d48f5c4d7b7","grouping":"explicit-metadata","source_record_ids":["vw-a751c8d90e337d48f5c4d7b7"]}
 {"canonical_paths":[],"entity_id":"ve-a75d0c4f105b13da5910979e","grouping":"explicit-metadata","source_record_ids":["vw-a75d0c4f105b13da5910979e"]}
 {"canonical_paths":[],"entity_id":"ve-a75d0e51578d10900e0032e5","grouping":"explicit-metadata","source_record_ids":["vw-a75d0e51578d10900e0032e5"]}
 {"canonical_paths":[],"entity_id":"ve-a76354358daf363cddc9de4d","grouping":"explicit-metadata","source_record_ids":["vw-a76354358daf363cddc9de4d"]}
+{"canonical_paths":[],"entity_id":"ve-a76c4c0d76494955647bb564","grouping":"explicit-metadata","source_record_ids":["vw-a76c4c0d76494955647bb564"]}
 {"canonical_paths":[],"entity_id":"ve-a77027be12e9087949e67568","grouping":"explicit-metadata","source_record_ids":["vw-a77027be12e9087949e67568"]}
 {"canonical_paths":[],"entity_id":"ve-a77398a320b7cb230dc2a4e5","grouping":"explicit-metadata","source_record_ids":["vw-a77398a320b7cb230dc2a4e5"]}
 {"canonical_paths":[],"entity_id":"ve-a773d12633c0de94422a40db","grouping":"explicit-metadata","source_record_ids":["vw-a773d12633c0de94422a40db"]}
@@ -3751,6 +3764,7 @@
 {"canonical_paths":[],"entity_id":"ve-af9f1519bf00681d4545580f","grouping":"explicit-metadata","source_record_ids":["vw-af9f1519bf00681d4545580f"]}
 {"canonical_paths":["Web安全/CMS内容/奇安信攻防社区-骑士CMS模版/奇安信攻防社区-骑士CMS模版注入+文件包含getshell漏洞复现.md"],"entity_id":"ve-afc9452b653816f659eb58e3","grouping":"explicit-metadata","source_record_ids":["vw-1a9d0c28c37fd0f78fcdabf7","vw-afc9452b653816f659eb58e3"]}
 {"canonical_paths":[],"entity_id":"ve-afebd5b0736e00603f61336e","grouping":"explicit-metadata","source_record_ids":["vw-afebd5b0736e00603f61336e"]}
+{"canonical_paths":[],"entity_id":"ve-aff895b70798ca8660093eb8","grouping":"explicit-metadata","source_record_ids":["vw-aff895b70798ca8660093eb8"]}
 {"canonical_paths":[],"entity_id":"ve-b021c8dd175932e3587ab338","grouping":"explicit-metadata","source_record_ids":["vw-b021c8dd175932e3587ab338"]}
 {"canonical_paths":[],"entity_id":"ve-b03350a2bd634f519f55b914","grouping":"explicit-metadata","source_record_ids":["vw-b03350a2bd634f519f55b914"]}
 {"canonical_paths":["Web安全/开发框架/WeiPHP/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693.md"],"entity_id":"ve-b03d9433daff0c8fc52fb892","grouping":"explicit-metadata","source_record_ids":["vw-355ed45e5abdb4f95c9c057d","vw-b03d9433daff0c8fc52fb892","vw-bb02eeeb714a37905d08d2aa"]}
@@ -3877,6 +3891,7 @@
 {"canonical_paths":[],"entity_id":"ve-b518f4a5d19c13c762606eba","grouping":"explicit-metadata","source_record_ids":["vw-b518f4a5d19c13c762606eba"]}
 {"canonical_paths":[],"entity_id":"ve-b52eb77dd56b1e9248e72c7e","grouping":"explicit-metadata","source_record_ids":["vw-b52eb77dd56b1e9248e72c7e"]}
 {"canonical_paths":[],"entity_id":"ve-b53399adbcf7828e30e0a1b9","grouping":"explicit-metadata","source_record_ids":["vw-b53399adbcf7828e30e0a1b9"]}
+{"canonical_paths":[],"entity_id":"ve-b550775d3c39416399880c2d","grouping":"explicit-metadata","source_record_ids":["vw-b550775d3c39416399880c2d"]}
 {"canonical_paths":[],"entity_id":"ve-b559bb118a9ef4fc15a01485","grouping":"explicit-metadata","source_record_ids":["vw-b559bb118a9ef4fc15a01485"]}
 {"canonical_paths":[],"entity_id":"ve-b560d669eb01e5cfd75579fc","grouping":"explicit-metadata","source_record_ids":["vw-b560d669eb01e5cfd75579fc"]}
 {"canonical_paths":[],"entity_id":"ve-b57aec51d6df8a7a489baca5","grouping":"explicit-metadata","source_record_ids":["vw-b57aec51d6df8a7a489baca5"]}
@@ -4602,6 +4617,7 @@
 {"canonical_paths":[],"entity_id":"ve-d60b484dd3f7ce23f8177c88","grouping":"explicit-metadata","source_record_ids":["vw-d60b484dd3f7ce23f8177c88"]}
 {"canonical_paths":[],"entity_id":"ve-d62302f46ba3b99e3c9f5548","grouping":"explicit-metadata","source_record_ids":["vw-d62302f46ba3b99e3c9f5548"]}
 {"canonical_paths":[],"entity_id":"ve-d633e322fe5068b8b8b7d9b1","grouping":"explicit-metadata","source_record_ids":["vw-d633e322fe5068b8b8b7d9b1"]}
+{"canonical_paths":[],"entity_id":"ve-d63bcde8467e4f5392a9101e","grouping":"explicit-metadata","source_record_ids":["vw-d63bcde8467e4f5392a9101e"]}
 {"canonical_paths":[],"entity_id":"ve-d63bf801b7e3e2a035746aed","grouping":"explicit-metadata","source_record_ids":["vw-d63bf801b7e3e2a035746aed"]}
 {"canonical_paths":[],"entity_id":"ve-d645ed635f1f2cc8cf884f41","grouping":"explicit-metadata","source_record_ids":["vw-d645ed635f1f2cc8cf884f41"]}
 {"canonical_paths":[],"entity_id":"ve-d64b4fec687b36ab8568eeb2","grouping":"explicit-metadata","source_record_ids":["vw-d64b4fec687b36ab8568eeb2"]}
@@ -5495,6 +5511,7 @@
 {"canonical_paths":[],"entity_id":"ve-ff44b9e430ce74070b605c21","grouping":"explicit-metadata","source_record_ids":["vw-ff44b9e430ce74070b605c21"]}
 {"canonical_paths":[],"entity_id":"ve-ff4beae7f01e2328cec595f9","grouping":"explicit-metadata","source_record_ids":["vw-ff4beae7f01e2328cec595f9"]}
 {"canonical_paths":[],"entity_id":"ve-ff5129e0662aa3b7ad628fde","grouping":"explicit-metadata","source_record_ids":["vw-ff5129e0662aa3b7ad628fde"]}
+{"canonical_paths":[],"entity_id":"ve-ff5df9cd4c122668c7af41c5","grouping":"explicit-metadata","source_record_ids":["vw-ff5df9cd4c122668c7af41c5"]}
 {"canonical_paths":[],"entity_id":"ve-ff6fb92b1b1a4bd7a1204219","grouping":"explicit-metadata","source_record_ids":["vw-ff6fb92b1b1a4bd7a1204219"]}
 {"canonical_paths":[],"entity_id":"ve-ff77d87addd7f5a5358acf31","grouping":"explicit-metadata","source_record_ids":["vw-ff77d87addd7f5a5358acf31"]}
 {"canonical_paths":[],"entity_id":"ve-ff953f4273e48cf06a6657dc","grouping":"explicit-metadata","source_record_ids":["vw-ff953f4273e48cf06a6657dc"]}

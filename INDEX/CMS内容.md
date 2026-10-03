@@ -2423,7 +2423,6 @@
 
 ## 通天星 CMSV6 车载视频监控平台
 
-- [DedeCMSV6-0-3 代码审计 - 先知社区](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/DedeCMS/DedeCMSV6-0-3%20%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1%20-%20%E5%85%88%E7%9F%A5%E7%A4%BE%E5%8C%BA.md) [unknown; not-reproduced; needs-review]
 - [通天星CMSV6车载定位监控平台 disable SQL注入漏洞](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/%E9%80%9A%E5%A4%A9%E6%98%9F/%E9%80%9A%E5%A4%A9%E6%98%9FCMSV6%E8%BD%A6%E8%BD%BD%E5%AE%9A%E4%BD%8D%E7%9B%91%E6%8E%A7%E5%B9%B3%E5%8F%B0%20disable%20SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md) [unknown; not-reproduced; needs-review]
 - [通天星CMSV6车载定位监控平台 getAlarmAppealByGuid SQL注入漏洞](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/%E9%80%9A%E5%A4%A9%E6%98%9F/%E9%80%9A%E5%A4%A9%E6%98%9FCMSV6%E8%BD%A6%E8%BD%BD%E5%AE%9A%E4%BD%8D%E7%9B%91%E6%8E%A7%E5%B9%B3%E5%8F%B0%20getAlarmAppealByGuid%20SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md) [unknown; not-reproduced; needs-review]
 - [通天星CMSV6车载视频监控平台MobileAction_downLoad存在任意文件下载漏洞](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/%E9%80%9A%E5%A4%A9%E6%98%9FCMSV6/%E9%80%9A%E5%A4%A9%E6%98%9FCMSV6%E8%BD%A6%E8%BD%BD%E8%A7%86%E9%A2%91%E7%9B%91%E6%8E%A7%E5%B9%B3%E5%8F%B0MobileAction_downLoad%E5%AD%98%E5%9C%A8%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD%E6%BC%8F%E6%B4%9E.md) [unknown; not-reproduced; needs-review]

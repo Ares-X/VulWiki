@@ -2,10 +2,10 @@
 cve: ""
 source: "gelusus/wxvl 公众号漏洞文库"
 product: "Gitea/声称RCE及文件读取"
-record_type: "unknown"
+record_type: "advisory"
 review_status: "text-reviewed"
 verification_status: "not-reproduced"
-content_status: "quarantined"
+content_status: "needs-review"
 primary_identifiers: ""
 referenced_identifiers: "CVE-2026-58443"
 identifier_role: "reference"
@@ -18,6 +18,12 @@ id: "vw-4f932af49c8e17aaccd648ea"
 entity_id: "ve-4f932af49c8e17aaccd648ea"
 schema_version: "1"
 ---
+
+## 收录状态复核（2026-10-03）
+
+本文保留来源关于两项新 RCE/文件读取的叙述、普通用户与仓库写入前提及缓解建议。实际输入、源码和输出证据未保存，机制与成功主张均待核；CVE-2026-58443 只是文中的旧问题背景，不是这两项新主张的主编号。
+
+以下为保留的归档正文与既有校订。资料以 `needs-review` 收录，具体缺口按本页说明阅读。
 
 ## 核对与使用边界
 

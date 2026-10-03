@@ -5,10 +5,10 @@ entity_id: "ve-128df3adba40f5b5a0f78023"
 schema_version: "1"
 title: "Check Point MyCRL 文件读取线索（标题与请求路径尚未对应）"
 product: "Check Point安全网关"
-record_type: "vulnerability"
+record_type: "analysis"
 review_status: "text-reviewed"
 verification_status: "not-reproduced"
-content_status: "quarantined"
+content_status: "needs-review"
 identifier_status: "unknown"
 identifier_role: "unknown"
 primary_identifiers: ""
@@ -20,6 +20,12 @@ side_effects: "读取内容可能包含配置、账户或个人数据；应只�
 source_url: "https://www.yuque.com/xiaokp7/ocvun2/sa59vno6cykie36p"
 source_status: "recorded"
 ---
+
+## 收录状态复核（2026-10-03）
+
+本文保留标题与报文错配的历史分析材料。归档 GET 路径仅为 /../../../../etc/passwd，没有定位 MyCRL 入口，也没有响应；资产查询不证明接口机制或漏洞存在。原请求与查询值保留，不能作为有效 MyCRL 检测。
+
+以下为保留的归档正文与既有校订。资料以 `needs-review` 收录，具体缺口按本页说明阅读。
 
 # Check Point MyCRL 文件读取线索（标题与请求路径尚未对应）
 

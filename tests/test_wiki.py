@@ -70,6 +70,22 @@ class WikiTests(unittest.TestCase):
         self.assertEqual(r.references, ['CVE-2020-5555'])
         self.assertNotIn('2020.md', wiki.render_outputs([r])['INDEX-CVE.md'])
 
+    def test_explicit_candidates_project_without_becoming_primary(self):
+        self.article(primary_identifiers='CVE-2025-26319', cve='CVE-2025-26319',
+                     identifier_role='primary', identifier_candidates='CVE-2024-26319; CVE-2024-26319')
+        record = self.scan()[0]
+        projected = wiki.catalog_record(record)
+        self.assertEqual(projected['primary_identifiers'], ['CVE-2025-26319'])
+        self.assertEqual(projected['identifier_candidates'], ['CVE-2024-26319'])
+        self.assertNotIn('2024.md', wiki.render_outputs([record])['INDEX-CVE.md'])
+        self.assertFalse(any(i.code == 'identifier_role_unknown' for i in record.issues))
+
+    def test_explicit_invalid_candidate_excluded_with_error(self):
+        self.article(identifier_candidates='CVE-2024-12; CVE-2024-26319')
+        record = self.scan()[0]
+        self.assertEqual(record.candidates, ['CVE-2024-26319'])
+        self.assertTrue(any(i.code == 'identifier_format' and i.severity == 'error' for i in record.issues))
+
     def test_namespaces_and_case_not_conflated(self):
         self.article(primary_identifiers='cve-2025-12345; CNVD-C-2023-76801; TALOS-2024-1967; WSO2-2019-0598; AVD-2026-1850319')
         r = self.scan()[0]
@@ -105,6 +121,51 @@ class WikiTests(unittest.TestCase):
         self.assertEqual(outputs['docs/generated/records.jsonl'], '')
         self.assertIn(path, outputs['docs/generated/excluded.jsonl'])
         self.assertIn('entry', outputs['docs/REVIEW-QUEUE.md'])
+
+    def test_confirmed_index_category_changes_navigation_without_moving_article(self):
+        body = '# Analysis\n\n![source](.resource/source.png)\n'
+        path = self.article(body=body, index_category='系统安全/Linux',
+                            category_recommendation='IOT安全/其他设备')
+        resources = (self.root / path).parent / '.resource'
+        resources.mkdir()
+        (resources / 'source.png').write_bytes(b'fixture')
+        records = self.scan()
+        self.assertTrue(records[0].eligible)
+        outputs = wiki.render_outputs(records)
+        self.assertIn('Example Product', outputs['INDEX/Linux.md'])
+        self.assertNotIn('INDEX/测试.md', outputs)
+        self.assertNotIn('INDEX/其他设备.md', outputs)
+        source = json.loads(outputs['docs/generated/sources.jsonl'])
+        entry = json.loads(outputs['docs/generated/records.jsonl'])
+        self.assertEqual(source['path'], path)
+        self.assertEqual(entry['path'], path)
+        self.assertEqual(source['index_category'], '系统安全/Linux')
+        self.assertEqual(entry['index_category'], '系统安全/Linux')
+        self.assertEqual(wiki.parse_frontmatter((self.root / path).read_text())[1], '\n' + body)
+
+    def test_category_recommendation_does_not_implicitly_change_navigation(self):
+        self.article(category_recommendation='系统安全/Linux')
+        outputs = wiki.render_outputs(self.scan())
+        self.assertIn('INDEX/测试.md', outputs)
+        self.assertNotIn('INDEX/Linux.md', outputs)
+
+    def test_root_article_keeps_existing_navigation_category(self):
+        path = self.article()
+        destination = self.root / '系统安全' / 'entry.md'
+        destination.parent.mkdir()
+        (self.root / path).rename(destination)
+        outputs = wiki.render_outputs(self.scan())
+        self.assertIn('INDEX/系统安全.md', outputs)
+        self.assertNotIn('INDEX/entry.md.md', outputs)
+
+    def test_invalid_confirmed_index_category_blocks_projection(self):
+        for number, category in enumerate(['', 'Linux', '外部/Linux', '系统安全/../Linux',
+                                           '系统安全/..', '系统安全/Linux/extra', '系统安全\\Linux',
+                                           '系统安全/ Linux', '系统安全/Linux ']):
+            self.article(str(number), index_category=category)
+        for record in self.scan():
+            self.assertFalse(record.eligible)
+            self.assertTrue(any(issue.code == 'index_category' for issue in record.issues))
 
     def test_missing_verification_never_defaults_to_reproduced(self):
         path = self.article()

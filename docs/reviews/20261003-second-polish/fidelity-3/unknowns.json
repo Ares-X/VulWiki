@@ -1,0 +1,209 @@
+[
+  {
+    "path": "Web安全/AI应用/AI综合/CVE-2025-26319：FlowiseAI未授权任意文件写入漏洞.md",
+    "archive_body_line": 241,
+    "archive_file_line_numbers": [
+      245
+    ],
+    "original_text": "：如果无法立即升级，可以手动应用官方提供的补丁。补丁地址为：https://github.com/dorattias/CVE-2025-26319/blob/main/CVE-2025-26319-FIX.patch。  ",
+    "current_file_line_numbers": [
+      298
+    ],
+    "current_line_or_context": "：如果无法立即升级，原文列出一个第三方个人仓库补丁，尚不能称为官方补丁；采用前应逐项审查并对照上游修复。第三方补丁地址为：https://github.com/dorattias/CVE-2025-26319/blob/main/CVE-2025-26319-FIX.patch。  ",
+    "question": "semantic_equivalence_not_established_from_local_archive_evidence",
+    "candidate_disposition": "patch_provenance_wording_changed_external_identity_unverified",
+    "reason": "The original says the patch is official; current text calls it a third-party personal repository and retains the exact GitHub URL. No network/source author verification was permitted, and a repository URL alone does not prove either provenance characterization.",
+    "prior_exact_evidence": {
+      "review_file": "agent-1/prose-candidate-ledger.jsonl",
+      "screen_category": null,
+      "final_disposition": null,
+      "final_rationale": null
+    },
+    "external_source_checked": false,
+    "execution_performed": false
+  },
+  {
+    "path": "Web安全/运维面板/ScreenConnect/ScreenConnect 高危漏洞（CVE-2025-14265）存在配置泄露与恶意扩展安装风险.md",
+    "archive_body_line": 45,
+    "archive_file_line_numbers": [
+      51
+    ],
+    "original_text": "еә·иҖҗи§ҶпјҲConnectWiseпјүй’ҲеҜ№е…¶е№ҝеҸ—ж¬ўиҝҺзҡ„иҝңзЁӢж”ҜжҢҒиҪҜд»¶ ScreenConnect еҸ‘еёғдәҶйҮҚиҰҒе®үе…Ёжӣҙж–°пјҢдҝ®еӨҚдәҶдёҖдёӘеҸҜиғҪеҜјиҮҙж•Ҹж„ҹй…ҚзҪ®ж•°жҚ®жі„йңІзҡ„й«ҳеҚұжјҸжҙһгҖӮиҜҘжјҸжҙһзј–еҸ·дёәВ **CVE-2025-14265**пјҢйҖҡз”ЁжјҸжҙһиҜ„еҲҶзі»з»ҹпјҲCVSSпјүеҲҶеҖјй«ҳиҫҫ 9.1пјҢиҝҷж„Ҹе‘ізқҖжңӘжү“иЎҘдёҒзҡ„жң¬ең°йғЁзҪІжңҚеҠЎеҷЁе°ҶйқўдёҙйҮҚеӨ§е®үе…ЁйЈҺйҷ©гҖӮ",
+    "current_file_line_numbers": [
+      96
+    ],
+    "current_line_or_context": "ConnectWise（ConnectWise）针对其广受欢迎的远程支持软件 ScreenConnect 发布了重要安全更新，修复了一个可能导致敏感配置数据泄露的高危漏洞。该漏洞编号为 **CVE-2025-14265**，通用漏洞评分系统（CVSS）分值高达 9.1，这意味着未打补丁的本地部署服务器将面临重大安全风险。",
+    "question": "semantic_equivalence_not_established_from_local_archive_evidence",
+    "candidate_disposition": "translated_from_mojibake_semantics_unverifiable",
+    "reason": "Exact prior final review says source prose is mojibake and explicitly limits equivalence; identifiers/numbers can be compared, but no external source was checked, so Chinese technical meaning remains unknown.",
+    "prior_exact_evidence": {
+      "review_file": "agent-2/prose-disposition.jsonl",
+      "screen_category": "changed_or_removed_explanation",
+      "final_disposition": "source_encoding_restoration_or_noise",
+      "final_rationale": "Archive text is mojibake. Current text is readable; article-level decode/restoration repairs the encoding, but that does not validate technical claims. See article-level source/excerpt and preserve uncertainty."
+    },
+    "external_source_checked": false,
+    "execution_performed": false
+  },
+  {
+    "path": "Web安全/运维面板/ScreenConnect/ScreenConnect 高危漏洞（CVE-2025-14265）存在配置泄露与恶意扩展安装风险.md",
+    "archive_body_line": 47,
+    "archive_file_line_numbers": [
+      53
+    ],
+    "original_text": "е°Ҫз®ЎжӯӨжјҸжҙһеҚұе®іжҖ§жһҒејәпјҢдҪҶе®ғе№¶йқһжҳҜеҸҜдҫӣж”»еҮ»иҖ…зӣҙжҺҘеҲ©з”Ёзҡ„ вҖңж•һеҸЈеӨ§й—ЁвҖқгҖӮжјҸжҙһзҡ„еҲ©з”ЁйңҖж»Ўи¶ізү№е®ҡжқЎд»¶пјҡвҖңиҝҷдәӣй—®йўҳзҡ„еҲ©з”ЁйңҖиҰҒеҖҹеҠ©е·ІжҺҲжқғжҲ–з®ЎзҗҶе‘ҳзә§еҲ«зҡ„и®ҝй—®жқғйҷҗвҖқгҖӮдёҚиҝҮпјҢдёҖж—Ұж”»еҮ»иҖ…иҺ·еҫ—жқғйҷҗиҝӣе…Ҙзі»з»ҹпјҢе°ұжңүеҸҜиғҪи®ҝй—®й…ҚзҪ®ж•°жҚ®пјҢжҲ–жҳҜејәеҲ¶ вҖңе®үиЈ…дёҚеҸҜдҝЎзҡ„жү©еұ•зЁӢеәҸвҖқгҖӮ",
+    "current_file_line_numbers": [
+      98
+    ],
+    "current_line_or_context": "尽管此漏洞危害性极强，但它并非是可供攻击者直接利用的 “敞口大门”。漏洞的利用需满足特定条件：“这些问题的利用需要借助已授权或管理员级别的访问权限”。不过，一旦攻击者获得权限进入系统，就有可能访问配置数据，或是强制 “安装不可信的扩展程序”。",
+    "question": "semantic_equivalence_not_established_from_local_archive_evidence",
+    "candidate_disposition": "translated_from_mojibake_semantics_unverifiable",
+    "reason": "Exact prior final review says source prose is mojibake and explicitly limits equivalence; identifiers/numbers can be compared, but no external source was checked, so Chinese technical meaning remains unknown.",
+    "prior_exact_evidence": {
+      "review_file": "agent-2/prose-disposition.jsonl",
+      "screen_category": "changed_or_removed_explanation",
+      "final_disposition": "source_encoding_restoration_or_noise",
+      "final_rationale": "Archive text is mojibake. Current text is readable; article-level decode/restoration repairs the encoding, but that does not validate technical claims. See article-level source/excerpt and preserve uncertainty."
+    },
+    "external_source_checked": false,
+    "execution_performed": false
+  },
+  {
+    "path": "Web安全/运维面板/ScreenConnect/ScreenConnect 高危漏洞（CVE-2025-14265）存在配置泄露与恶意扩展安装风险.md",
+    "archive_body_line": 49,
+    "archive_file_line_numbers": [
+      55
+    ],
+    "original_text": "жӯӨж¬ЎеҸ‘еёғзҡ„ ScreenConnect 25.8 зүҲжң¬иЎҘдёҒпјҢйҮҚзӮ№еңЁдәҺејәеҢ–жңҚеҠЎеҷЁйҳІеҫЎиғҪеҠӣпјҢд»ҘжҠөеҫЎеҶ…йғЁж»Ҙз”ЁиЎҢдёәжҲ–з®ЎзҗҶе‘ҳиҙҰжҲ·йҒӯе…ҘдҫөеҗҺзҡ„ж”»еҮ»гҖӮ",
+    "current_file_line_numbers": [
+      100
+    ],
+    "current_line_or_context": "此次发布的 ScreenConnect 25.8 版本补丁，重点在于强化服务器防御能力，以抵御内部滥用行为或管理员账户遭入侵后的攻击。",
+    "question": "semantic_equivalence_not_established_from_local_archive_evidence",
+    "candidate_disposition": "translated_from_mojibake_semantics_unverifiable",
+    "reason": "Exact prior final review says source prose is mojibake and explicitly limits equivalence; identifiers/numbers can be compared, but no external source was checked, so Chinese technical meaning remains unknown.",
+    "prior_exact_evidence": {
+      "review_file": "agent-2/prose-disposition.jsonl",
+      "screen_category": "changed_or_removed_explanation",
+      "final_disposition": "source_encoding_restoration_or_noise",
+      "final_rationale": "Archive text is mojibake. Current text is readable; article-level decode/restoration repairs the encoding, but that does not validate technical claims. See article-level source/excerpt and preserve uncertainty."
+    },
+    "external_source_checked": false,
+    "execution_performed": false
+  },
+  {
+    "path": "Web安全/运维面板/ScreenConnect/ScreenConnect 高危漏洞（CVE-2025-14265）存在配置泄露与恶意扩展安装风险.md",
+    "archive_body_line": 51,
+    "archive_file_line_numbers": [
+      57
+    ],
+    "original_text": "ж №жҚ®е®үе…Ёе…¬е‘ҠпјҢиҜҘжӣҙж–° вҖңеҠ ејәдәҶжңҚеҠЎеҷЁз«ҜйӘҢиҜҒжңәеҲ¶пјҢејәеҲ¶еҜ№жү©еұ•зЁӢеәҸе®үиЈ…жү§иЎҢе®Ңж•ҙжҖ§ж ЎйӘҢпјҢе№¶жҸҗеҚҮдәҶе№іеҸ°ж•ҙдҪ“зҡ„е®үе…ЁжҖ§дёҺзЁіе®ҡжҖ§вҖқгҖӮиҝҷдёҖдёҫжҺӘиғҪжңүж•Ҳйҳ»ж–ӯж”»еҮ»иҖ…йҖҡиҝҮдҫ§иҪҪжҒ¶ж„Ҹжү©еұ•зЁӢеәҸй©»з•ҷе·Іе…ҘдҫөжңҚеҠЎеҷЁзҡ„иЎҢдёә вҖ”вҖ” дҫ§иҪҪжҳҜж”»еҮ»иҖ…еёёз”Ёзҡ„дёҖз§Қз»ҙжҢҒжҢҒд№…жҺ§еҲ¶зҡ„жүӢж®өгҖӮ",
+    "current_file_line_numbers": [
+      102
+    ],
+    "current_line_or_context": "根据安全公告，该更新 “加强了服务器端验证机制，强制对扩展程序安装执行完整性校验，并提升了平台整体的安全性与稳定性”。这一举措能有效阻断攻击者通过侧载恶意扩展程序驻留已入侵服务器的行为 —— 侧载是攻击者常用的一种维持持久控制的手段。",
+    "question": "semantic_equivalence_not_established_from_local_archive_evidence",
+    "candidate_disposition": "translated_from_mojibake_semantics_unverifiable",
+    "reason": "Exact prior final review says source prose is mojibake and explicitly limits equivalence; identifiers/numbers can be compared, but no external source was checked, so Chinese technical meaning remains unknown.",
+    "prior_exact_evidence": {
+      "review_file": "agent-2/prose-disposition.jsonl",
+      "screen_category": "changed_or_removed_explanation",
+      "final_disposition": "source_encoding_restoration_or_noise",
+      "final_rationale": "Archive text is mojibake. Current text is readable; article-level decode/restoration repairs the encoding, but that does not validate technical claims. See article-level source/excerpt and preserve uncertainty."
+    },
+    "external_source_checked": false,
+    "execution_performed": false
+  },
+  {
+    "path": "Web安全/运维面板/ScreenConnect/ScreenConnect 高危漏洞（CVE-2025-14265）存在配置泄露与恶意扩展安装风险.md",
+    "archive_body_line": 53,
+    "archive_file_line_numbers": [
+      59
+    ],
+    "original_text": "йңҖиҰҒйҮҚзӮ№иҜҙжҳҺзҡ„жҳҜпјҢиҜҘжјҸжҙһ**д»…еӯҳеңЁдәҺжңҚеҠЎеҷЁз«Ҝ**гҖӮвҖңиҝҷдәӣй—®йўҳд»…еҪұе“Қ ScreenConnect зҡ„жңҚеҠЎеҷЁз»„д»¶пјҢдё»жҺ§з«ҜдёҺиў«жҺ§з«Ҝе®ўжҲ·з«ҜеқҮдёҚдјҡеҸ—еҲ°жіўеҸҠвҖқгҖӮ",
+    "current_file_line_numbers": [
+      104
+    ],
+    "current_line_or_context": "需要重点说明的是，该漏洞**仅存在于服务器端**。“这些问题仅影响 ScreenConnect 的服务器组件，主控端与被控端客户端均不会受到波及”。",
+    "question": "semantic_equivalence_not_established_from_local_archive_evidence",
+    "candidate_disposition": "translated_from_mojibake_semantics_unverifiable",
+    "reason": "Exact prior final review says source prose is mojibake and explicitly limits equivalence; identifiers/numbers can be compared, but no external source was checked, so Chinese technical meaning remains unknown.",
+    "prior_exact_evidence": {
+      "review_file": "agent-2/prose-disposition.jsonl",
+      "screen_category": "changed_or_removed_explanation",
+      "final_disposition": "source_encoding_restoration_or_noise",
+      "final_rationale": "Archive text is mojibake. Current text is readable; article-level decode/restoration repairs the encoding, but that does not validate technical claims. See article-level source/excerpt and preserve uncertainty."
+    },
+    "external_source_checked": false,
+    "execution_performed": false
+  },
+  {
+    "path": "Web安全/运维面板/ScreenConnect/ScreenConnect 高危漏洞（CVE-2025-14265）存在配置泄露与恶意扩展安装风险.md",
+    "archive_body_line": 55,
+    "archive_file_line_numbers": [
+      61
+    ],
+    "original_text": "еҜ№дәҺж•°еҚғе®¶дҪҝз”Ё ScreenConnect зҡ„жүҳз®ЎжңҚеҠЎжҸҗдҫӣе•ҶпјҲMSPпјүдёҺ IT еӣўйҳҹиҖҢиЁҖпјҢе…¶иЎҘж•‘жҺӘж–ҪйңҖж №жҚ®иҮӘиә«йғЁзҪІжЁЎејҸиҖҢе®ҡпјҡ",
+    "current_file_line_numbers": [
+      106
+    ],
+    "current_line_or_context": "对于数千家使用 ScreenConnect 的托管服务提供商（MSP）与 IT 团队而言，其补救措施需根据自身部署模式而定：",
+    "question": "semantic_equivalence_not_established_from_local_archive_evidence",
+    "candidate_disposition": "translated_from_mojibake_semantics_unverifiable",
+    "reason": "Exact prior final review says source prose is mojibake and explicitly limits equivalence; identifiers/numbers can be compared, but no external source was checked, so Chinese technical meaning remains unknown.",
+    "prior_exact_evidence": {
+      "review_file": "agent-2/prose-disposition.jsonl",
+      "screen_category": "changed_or_removed_explanation",
+      "final_disposition": "source_encoding_restoration_or_noise",
+      "final_rationale": "Archive text is mojibake. Current text is readable; article-level decode/restoration repairs the encoding, but that does not validate technical claims. See article-level source/excerpt and preserve uncertainty."
+    },
+    "external_source_checked": false,
+    "execution_performed": false
+  },
+  {
+    "path": "Web安全/运维面板/ScreenConnect/ScreenConnect 高危漏洞（CVE-2025-14265）存在配置泄露与恶意扩展安装风险.md",
+    "archive_body_line": 58,
+    "archive_file_line_numbers": [
+      64
+    ],
+    "original_text": "* **жң¬ең°йғЁзҪІеҗҲдҪңдјҷдјҙ**пјҡйңҖз«ӢеҚійҮҮеҸ–иЎҢеҠЁгҖӮз®ЎзҗҶе‘ҳеҝ…йЎ»жүӢеҠЁе°ҶжңҚеҠЎеҷЁеҚҮзә§иҮі 25.8 зүҲжң¬гҖӮе®үе…Ёе…¬е‘ҠејәзғҲе»әи®®пјҡвҖңиҜ·е°Ҷ ScreenConnect еҚҮзә§иҮі 25.8 зүҲжң¬пјҢе№¶е°Ҷиў«жҺ§з«Ҝе®ўжҲ·з«Ҝжӣҙж–°иҮіеҗҢдёҖзүҲжң¬вҖқгҖӮ",
+    "current_file_line_numbers": [
+      108
+    ],
+    "current_line_or_context": "* **云端用户**：可放宽心。“无需采取任何操作”，因为部署在 [screenconnect.com](https://screenconnect.com/) 或 [hostedrmm.com](https://hostedrmm.com/) 平台上的服务器，ConnectWise公司已完成补丁推送。\n* **本地部署合作伙伴**：需立即采取行动。管理员必须手动将服务器升级至 25.8 版本。安全公告强烈建议：“请将 ScreenConnect 升级至 25.8 版本，并将被控端客户端更新至同一版本”。",
+    "question": "semantic_equivalence_not_established_from_local_archive_evidence",
+    "candidate_disposition": "translated_from_mojibake_semantics_unverifiable",
+    "reason": "Exact prior final review says source prose is mojibake and explicitly limits equivalence; identifiers/numbers can be compared, but no external source was checked, so Chinese technical meaning remains unknown.",
+    "prior_exact_evidence": {
+      "review_file": "agent-2/prose-disposition.jsonl",
+      "screen_category": "changed_or_removed_explanation",
+      "final_disposition": "source_encoding_restoration_or_noise",
+      "final_rationale": "Archive text is mojibake. Current text is readable; article-level decode/restoration repairs the encoding, but that does not validate technical claims. See article-level source/excerpt and preserve uncertainty."
+    },
+    "external_source_checked": false,
+    "execution_performed": false
+  },
+  {
+    "path": "Web安全/运维面板/ScreenConnect/ScreenConnect 高危漏洞（CVE-2025-14265）存在配置泄露与恶意扩展安装风险.md",
+    "archive_body_line": 60,
+    "archive_file_line_numbers": [
+      66
+    ],
+    "original_text": "еә·иҖҗи§Ҷж–№йқўе·ІиҜҒе®һпјҢзӣ®еүҚ вҖңе°ҡж— иҜҒжҚ®иЎЁжҳҺиҜҘжјҸжҙһе·Іиў«й»‘е®ўеңЁйҮҺеҲ©з”ЁвҖқгҖӮ",
+    "current_file_line_numbers": [
+      111
+    ],
+    "current_line_or_context": "ConnectWise方面已证实，目前 “尚无证据表明该漏洞已被黑客在野利用”。",
+    "question": "semantic_equivalence_not_established_from_local_archive_evidence",
+    "candidate_disposition": "translated_from_mojibake_semantics_unverifiable",
+    "reason": "Exact prior final review says source prose is mojibake and explicitly limits equivalence; identifiers/numbers can be compared, but no external source was checked, so Chinese technical meaning remains unknown.",
+    "prior_exact_evidence": {
+      "review_file": "agent-2/prose-disposition.jsonl",
+      "screen_category": "changed_or_removed_explanation",
+      "final_disposition": "source_encoding_restoration_or_noise",
+      "final_rationale": "Archive text is mojibake. Current text is readable; article-level decode/restoration repairs the encoding, but that does not validate technical claims. See article-level source/excerpt and preserve uncertainty."
+    },
+    "external_source_checked": false,
+    "execution_performed": false
+  }
+]

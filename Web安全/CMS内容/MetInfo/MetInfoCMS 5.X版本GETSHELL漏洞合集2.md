@@ -173,7 +173,7 @@ switch($val[2]){
 
 漏洞利用(网站安装在服务器根路径的情况)：
 
-第一步，新建1.ico文件，内容为：<?php phpinfo();?>
+第一步，新建1.ico文件，内容为：`<?php phpinfo();?>`
 在后台"地址栏图标"处上传该文件。
 得到地址为：http://localhost/upload/file/1506587082.ico
 

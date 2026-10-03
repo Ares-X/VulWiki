@@ -535,7 +535,7 @@ PUT 漏洞
 > 
 > IIS 7.0，Windows Server 2008 和 Windows Vista
 > 
-> IIS 7.5，Windows 7（远程启用 <customerrors> 或没有 web.config）</customerrors>
+> IIS 7.5，Windows 7（远程启用 `<customerrors>` 或没有 web.config）`</customerrors>`
 > 
 > IIS 7.5，Windows 2008（经典管道模式）
 > 

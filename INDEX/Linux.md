@@ -121,6 +121,7 @@
 ## Linux ksmbd
 
 - [CVE-2022-47939：Linux Kernel ksmbd UAF远程代码执行漏洞通告](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/CVE-2022-47939%EF%BC%9ALinux%20Kernel%20ksmbd%20UAF%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E%E9%80%9A%E5%91%8A.md) [advisory; not-reproduced; needs-review]
+- [OpenAI大语言模型漏洞挖掘](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/OpenAI/OpenAI%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98.md) [advisory; not-reproduced; needs-review]
 
 ## Linux nf_tables NFTA_RULE_CHAIN_ID
 

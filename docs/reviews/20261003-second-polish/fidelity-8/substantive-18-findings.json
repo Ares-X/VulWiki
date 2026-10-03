@@ -1,0 +1,25 @@
+{
+  "confirmed_findings": [],
+  "unresolved_unknowns": [
+    {
+      "scope": "external truth",
+      "item": "未访问来源URL，未核实外部撤销、修复版本或漏洞真实性；这些未核事实不作为内容保真缺陷。"
+    },
+    {
+      "scope": "images",
+      "item": "未检查图片像素，不由图片路径推断图中内容。"
+    }
+  ],
+  "disposition_counts": {
+    "format_only": 9,
+    "title_and_classification_reframed_with_original_retained": 1,
+    "technical_typo_corrected": 1,
+    "confusable_text_normalized_claim_retained": 1,
+    "remote_claim_qualified": 1,
+    "affected_component_scope_corrected": 1,
+    "mitigation_qualified": 1,
+    "identifier_typo_corrected": 1,
+    "protocol_constant_corrected_from_in_article_evidence": 1,
+    "distinguished_name_typo_corrected_from_in_article_context": 1
+  }
+}

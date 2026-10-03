@@ -110,11 +110,13 @@ userid=1%27;WAITFOR+DELAY+%270:0:5%27--
 
 在末尾添加一个配置：
 
+```apache
 <Directory "D:/U8SOFT/turbocrm70/code/www/background">
 
 Require local
 
 </Directory>
+```
 
 其中，需要将<Directory "D:/U8SOFT/turbocrm70/code/www/background">中的u8安装路径修改为正确的安装路径
 

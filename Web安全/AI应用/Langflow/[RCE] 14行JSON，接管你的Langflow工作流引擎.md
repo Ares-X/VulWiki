@@ -1,14 +1,14 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
-title: "[RCE] 14行JSON，接管你的Langflow工作流引擎"
+title: "Langflow、Windows Shell 与 Chrome 漏洞说法汇编（未核）"
 product: "Langflow及Windows Shell"
 record_type: "roundup"
 review_status: "text-reviewed"
 verification_status: "not-reproduced"
-content_status: "quarantined"
+content_status: "needs-review"
 identifier_status: "unknown"
 primary_identifiers: ""
-referenced_identifiers: "CVE-2026-0770"
+referenced_identifiers: "CVE-2026-0770; CVE-2026-21510; CVE-2026-2441"
 identifier_role: "reference"
 verification_source: "https://www.zerodayinitiative.com/advisories/ZDI-26-036/"
 source_status: "unknown"
@@ -18,6 +18,12 @@ id: "vw-d63bcde8467e4f5392a9101e"
 entity_id: "ve-d63bcde8467e4f5392a9101e"
 schema_version: "1"
 ---
+
+## 收录状态复核（2026-10-03）
+
+这是多主题来源汇编。各 CVE、产品、代码路径、影响及修复说法尚未逐项核实；CVE-2026-0770 的 ZDI 入口与文中 component/execute 例子不符。以下片段仅作为原文主张保存，不构成有效 PoC 或复现证据。
+
+以下为保留的归档正文与既有校订。资料以 `needs-review` 收录，具体缺口按本页说明阅读。
 
 # [RCE] 14行JSON，接管你的Langflow工作流引擎
 

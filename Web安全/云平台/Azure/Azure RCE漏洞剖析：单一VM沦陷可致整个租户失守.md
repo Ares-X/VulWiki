@@ -118,7 +118,7 @@ Cymulate 于 2025 年 8 月首次向微软报告了此问题。CVE-2026-20965
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/d7OsfYudM4bIRwkkEmouqvgEol7BkXrQCgIVwnG2vZjTRygvg6vET95ib5ibohgxYhnxbFqxXzsMFFdibzuOpYfFA/640?from=appmsg "null")  
   
 连接选项卡有一个先决条件检查。Azure 会验证用户是否拥有 **WAC管理员登录（Windows Admin Center Administrator Login）**  
- Azure 角色，通过 Just In Time (JIT) 机制打开 WAC API 端口（6516），并允许通过网关 URL <Unique DNS>.<location>.waconazure.com:6516  
+ Azure 角色，通过 Just In Time (JIT) 机制打开 WAC API 端口（6516），并允许通过网关 URL `<Unique DNS>.<location>.waconazure.com:6516`  
  进行访问。但令我们惊讶的是，在 JIT 访问期间，该端口会同时通过 VNet IP 和外部 IP（如果已配置）地址直接暴露。  
   
 此外，Azure 门户直接与该网关 URL 通信，并且该 URL 暴露在互联网上。  
@@ -330,7 +330,7 @@ VM 上的 Windows Admin Center 服务器应用程序在授予对所有 API 端�
 一个关键的入侵迹象是，除了 WAC_  
  前缀外，还会使用认证身份的 **UPN 格式**  
  创建 **虚拟账户和对应的用户配置文件目录**  
-，例如：WAC_benzamir@<tenant>.onmicrosoft.com  
+，例如：`WAC_benzamir@<tenant>.onmicrosoft.com`  
 。如果存在与**未知或外部租户域**  
 关联的虚拟账户，则可能表明存在通过 WAC 进行的未授权访问和命令执行。   
   

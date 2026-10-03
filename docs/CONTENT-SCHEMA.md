@@ -19,6 +19,7 @@ Markdown 是唯一维护源。`scripts/wiki.py` 使用 Python 3.10+ 标准库，
 | verification_status | `not-reproduced` / `source-claimed` / `reproduced` / `failed` / `unknown` |
 | content_status | `active` / `needs-review` / `quarantined` / `rejected` |
 | primary_identifiers | 人工确定的主编号，多值用分号分隔 |
+| identifier_candidates | 人工登记的待核候选编号，多值用分号分隔；可检索，不进入主 CVE 索引 |
 | referenced_identifiers | 背景、链条或推荐引用编号，分号分隔，不进入主 CVE 索引 |
 | identifier_role | 旧 cve/cnvd 等字段的角色：`primary` / `reference` / `unknown` |
 | identifier_status | `active` / `rejected` / `disputed` / `unknown`；不假设官方已确认 |
@@ -34,6 +35,7 @@ Markdown 是唯一维护源。`scripts/wiki.py` 使用 Python 3.10+ 标准库，
 | fofa / hunter / quake | 各平台独立的完整表达式；资产指纹不证明漏洞存在 |
 | fofa_unverified 等 | 留存残缺或待核查询，不进入指纹索引 |
 | category_recommendation | 人工纠正分类建议；构建器不迁移目录 |
+| index_category | 人工确认的导航分类，格式为 `Web安全/类别`、`系统安全/类别` 或 `IOT安全/类别`；只调整目录展示，不改文件位置、文章 URL 或资源相对路径 |
 | entity_id | 人工确定的漏洞实体标识；不能由共同 CVE 自动创建 |
 | canonical | 目标 Markdown 相对仓库根的完整路径，保留 Unicode/空格，不做 URL 编码 |
 | relation_type | `duplicate_of` / `analysis_of` / `chained_with` / `patch_bypass_of` / `supersedes` |
@@ -50,6 +52,7 @@ Markdown 是唯一维护源。`scripts/wiki.py` 使用 Python 3.10+ 标准库，
 
 - `primary_identifiers` 优先；没有它时只有 `identifier_role: "primary"` 的旧字段成为主编号
 - 未声明主角色的旧 cve/cnvd 等仍是可检索候选；明确 reference 的旧字段进入引用集合
+- `identifier_candidates` 可显式登记冲突或待核编号；校验格式并保留候选角色，不因登记而认定官方分配或产品映射有效
 - 不抓取标题、正文首次提及或推荐文章的 CVE 作为主编号
 - rejected / disputed 的主编号不进入有效 CVE 导航；原始记录与说明仍保留
 - needs-review 条目正常进入目录并显示状态；缺来源、版本待核或未本地复现不单独构成隔离理由；篇首写明具体缺口
@@ -63,6 +66,8 @@ Markdown 是唯一维护源。`scripts/wiki.py` 使用 Python 3.10+ 标准库，
 canonical 自指表示本身是主入口，不要求 relation_type。非自指必须指定关系。只有 duplicate_of 折叠至主入口并展示关联来源。analysis_of、chained_with、patch_bypass_of、supersedes 保留各自独立入口和主编号，避免吞掉独立分析或不同漏洞。重复关系循环、缺失目标、重复源指向隔离/结构错误目标会阻断有效入口。
 
 原路径、`.resource`、独立分析、失败实验、平台/版本差异继续保留。来源文档的结论不自动合并成主文事实；迁移资源需另外核对旧链接。有效 source 记录与人工 entity 分组是两层，不能用来源篇数宣称独立漏洞数量。
+
+正文已明确更正分类且经人工确认时，可设置 `index_category`，使产品索引和在线目录按确认后的类别展示，同时保留原 Markdown 路径与旧链接。未设置时沿用原目录；`category_recommendation` 仍只是建议，不会自动应用。非标准格式会阻断投影，不能以质量基线豁免。
 
 ## 派生产物与检索
 

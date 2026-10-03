@@ -1,0 +1,41 @@
+{
+  "articles_hash_checked": 711,
+  "archive_blob_and_working_sha_verified": true,
+  "nonblank_archive_diff_articles": 417,
+  "narrowed_existing_body_candidate_articles": 47,
+  "narrowed_source_line_candidates": 277,
+  "confirmed_findings": 0,
+  "root_counterevidence": "Elementor finding retracted: current preface explicitly labels preserved impact/version wording as archived source claim, explains code references theplus_* and limits any deployment inference. Preserve the original literal. The former old_text incorrectly included a > absent from current.",
+  "disposition_counts": {
+    "unknown; current context and exact prior evidence included for human semantic ruling": 103,
+    "prior final node disposition confirms code relocation; exact code_evidence included": 11,
+    "font markup removed; inner visible text still occurs in article": 12,
+    "archive line retained elsewhere in current article": 131,
+    "format-only heading underline replaced; title text appears in current heading": 20
+  },
+  "limitations": "Narrowed archive-origin body-line screen. Mechanical changes are listed individually; unresolved substantive lines remain unknown without directly relevant source evidence or a specific prior final disposition. No web access, article code/PoC execution, or target access.",
+  "source": "/tmp/vulwiki-second-polish-20261003/root-original-line-candidates-2.jsonl",
+  "narrowed_candidates": 390,
+  "per_line_context_entries": "fidelity-2/additional-context-ledger.jsonl",
+  "elementor_finding": "Retracted. Current preface explicitly attributes the preserved Elementor Page Builder version/impact wording to the archive, notes theplus_* code identifiers, and limits inference about actual affected deployment. The original literal remains source material. Prior proposed old_text also included a > absent from the current line.",
+  "earlier_417_candidate_ledger": "coarse scan only; superseded for semantic triage by the 390 exact-line candidate ledger",
+  "additional_context_rows": 390,
+  "additional_context_articles": 236,
+  "final_classification_counts": {
+    "HTML referrer metadata removed; not explanatory article prose": 7,
+    "context-resolved": 1,
+    "context-resolved correction": 1,
+    "context-resolved editorial correction": 1,
+    "source footer wording updated; source identity/link evidence accompanies prior row; URL/source validity not assessed": 25,
+    "source/page presentation or attribution reformat per exact prior disposition; current_pair included; no external-source claim made": 260,
+    "title rewrite": 49,
+    "unknown": 37,
+    "visible inner text preserved; presentation markup removed": 9
+  },
+  "unknown_count": 37,
+  "unknown_reasons": {
+    "archive_mojibake_translation_fidelity_unknown": 19,
+    "substantive_prose_requires_semantic_source_level_judgment": 18
+  },
+  "classification_source": "Recomputed from reviewer_disposition in additional-context-ledger.jsonl; one row per exact candidate."
+}

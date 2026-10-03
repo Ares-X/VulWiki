@@ -1,0 +1,174 @@
+{
+  "static_html_attributes": 49,
+  "local": 16,
+  "present_local": 1,
+  "missing_local": [
+    {
+      "path": "Web安全/CMS内容/CatfishCMS/CatfishCMS后台储存型xss.md",
+      "sha256": "6632f05fbef08bdc1f4a2c9e218605dc8cd6bf3331530477a5a75fbdae6b5ac1",
+      "line": 53,
+      "tag": "img",
+      "attribute": "src",
+      "target": "x",
+      "resolved": "Web安全/CMS内容/CatfishCMS/x",
+      "present": false,
+      "raw": "<img src=x onerror=alert(123)>"
+    },
+    {
+      "path": "Web安全/开发框架/Ueditor/ueditor 允许xml上传的xss漏洞.md",
+      "sha256": "99fc34ffe8a44fb2129a1b04e338caf26595fe6f3b5fa1875d2fa9447b75224e",
+      "line": 51,
+      "tag": "something:script",
+      "attribute": "src",
+      "target": "</tExtArEa>'",
+      "resolved": "Web安全/开发框架/Ueditor/</tExtArEa>'",
+      "present": false,
+      "raw": "<something:script src=\"</tExtArEa>'\">"
+    },
+    {
+      "path": "Web安全/服务器软件/marktext编辑器/marktext编辑器XSS触发RCE命令执行.md",
+      "sha256": "a3327cef862eb6293e0381d8fc2ec54b24916513ec55867aa28c471d6df6038c",
+      "line": 111,
+      "tag": "img",
+      "attribute": "src",
+      "target": "1",
+      "resolved": "Web安全/服务器软件/marktext编辑器/1",
+      "present": false,
+      "raw": "<img src=1 onerror=\"require('child_process').execSync('c:\\\\windows\\\\system32\\\\calc.exe')\">"
+    },
+    {
+      "path": "Web安全/CMS内容/PHPCMS/Phpcms V9.5.8 后台getshell.md",
+      "sha256": "00bd2a9c9c96200b8a50b4529dfdfdc52593abc4b6afd2feeb838846fb13d4af",
+      "line": 90,
+      "tag": "img",
+      "attribute": "src",
+      "target": "\".IMG_PATH.\"add_content.gif",
+      "resolved": "Web安全/CMS内容/PHPCMS/\".IMG_PATH.\"add_content.gif",
+      "present": false,
+      "raw": "<img src='\".IMG_PATH.\"add_content.gif' alt='\".L('add').\"'>"
+    },
+    {
+      "path": "Web安全/CMS内容/PHPCMS/Phpcms V9.5.8 后台getshell.md",
+      "sha256": "00bd2a9c9c96200b8a50b4529dfdfdc52593abc4b6afd2feeb838846fb13d4af",
+      "line": 100,
+      "tag": "img",
+      "attribute": "src",
+      "target": "\".IMG_PATH.\"folder.gif",
+      "resolved": "Web安全/CMS内容/PHPCMS/\".IMG_PATH.\"folder.gif",
+      "present": false,
+      "raw": "<img src='\".IMG_PATH.\"folder.gif'>"
+    },
+    {
+      "path": "Web安全/CMS内容/PHPCMS/Phpcms V9.6.0 任意密码重置漏洞.md",
+      "sha256": "4431677d431f0a7e673b3169cb5155935d2441e3508f4d3757697d255ae89b19",
+      "line": 87,
+      "tag": "a",
+      "attribute": "href",
+      "target": "'.$url.'",
+      "resolved": "Web安全/CMS内容/PHPCMS/'.$url.'",
+      "present": false,
+      "raw": "<a href=\"'.$url.'\">"
+    },
+    {
+      "path": "Web安全/CMS内容/ESPCMS/ESPCMS 反射型xss.md",
+      "sha256": "b0490148ebba0b7566da00959c2ed781e1b3c0bb1ac60d27745d06b095e2cca9",
+      "line": 59,
+      "tag": "img",
+      "attribute": "src",
+      "target": "1",
+      "resolved": "Web安全/CMS内容/ESPCMS/1",
+      "present": false,
+      "raw": "<img src=1 onerror=alert(1)>"
+    },
+    {
+      "path": "Web安全/其他软件/杂项/（CVE-2020-4054）Sanitize 跨站脚本漏洞.md",
+      "sha256": "88735c3a3d7a3e66a89a2e75c019488f5af9521aa01b5b74d7cb24b91033aec4",
+      "line": 122,
+      "tag": "img",
+      "attribute": "src",
+      "target": "1",
+      "resolved": "Web安全/其他软件/杂项/1",
+      "present": false,
+      "raw": "<img src=\"1\">"
+    },
+    {
+      "path": "Web安全/邮件系统/Microsoft Exchange Server/高危预警！Exchange零日漏洞 CVE-2026-42897，深入解析其漏洞原理、入侵路径、应急处置指南，企业务必自查.md",
+      "sha256": "b672746f164d7560deff0420f90f5be9119c5e11ccc9d76220974f6434a565a8",
+      "line": 160,
+      "tag": "img",
+      "attribute": "src",
+      "target": "”x”onerror=”恶意代码”",
+      "resolved": "Web安全/邮件系统/Microsoft Exchange Server/”x”onerror=”恶意代码”",
+      "present": false,
+      "raw": "<img src=”x”onerror=”恶意代码”>"
+    },
+    {
+      "path": "Web安全/OA办公/通达OA/通达oa xss.md",
+      "sha256": "002cd47074e971a8e321c4e6813274aed8c437ee1b7e8846af9a203ed01cb937",
+      "line": 63,
+      "tag": "img",
+      "attribute": "src",
+      "target": "x",
+      "resolved": "Web安全/OA办公/通达OA/x",
+      "present": false,
+      "raw": "<img src=x onerror=eval(atob('cz1jcmVXXXXXytNYXRoXXXXXXXXhbmRvbSgp'))>"
+    },
+    {
+      "path": "Web安全/云平台/Citrix/（CVE-2020-8194）Citrix 未授权访问导致的任意代码执行漏洞.md",
+      "sha256": "52a7a41e1a7d28d3b2ccc765274b302f03467336475aa6411cc5be5300269367",
+      "line": 101,
+      "tag": "homepage",
+      "attribute": "href",
+      "target": "help/im/help.htm",
+      "resolved": "Web安全/云平台/Citrix/help/im/help.htm",
+      "present": false,
+      "raw": "<homepage href=\"help/im/help.htm\"/>"
+    },
+    {
+      "path": "Web安全/云平台/Citrix/（CVE-2020-8194）Citrix 未授权访问导致的任意代码执行漏洞.md",
+      "sha256": "52a7a41e1a7d28d3b2ccc765274b302f03467336475aa6411cc5be5300269367",
+      "line": 103,
+      "tag": "icon",
+      "attribute": "href",
+      "target": "admin_ui/common/images/guiicon.gif",
+      "resolved": "Web安全/云平台/Citrix/admin_ui/common/images/guiicon.gif",
+      "present": false,
+      "raw": "<icon href=\"admin_ui/common/images/guiicon.gif\"/>"
+    },
+    {
+      "path": "Web安全/开发框架/Electron/（CVE-2018-15685）Electron WebPreferences 远程命令执行漏洞.md",
+      "sha256": "9a9e510f76578c22a8a6ecb0508b86d20e65233dcb58970c28582f2416ed2b1d",
+      "line": 79,
+      "tag": "img",
+      "attribute": "src",
+      "target": "1",
+      "resolved": "Web安全/开发框架/Electron/1",
+      "present": false,
+      "raw": "<img src=1 onerror=\"window.open().open('data:text/html,<script>require(\\'child_process\\').exec(\\'calc.exe\\')</script>');\">"
+    },
+    {
+      "path": "Web安全/CMS内容/WordPress/（CVE-2018-19287）WordPress Plugin - Ninja Forms 3.3.17 XSS.md",
+      "sha256": "3ed8bf7f376a2c2af35789ee984602106cedbce922dbd4d39ba3e3b146eacc89",
+      "line": 115,
+      "tag": "a",
+      "attribute": "href",
+      "target": "' . admin_url( 'edit.php?post_status=all&post_type=nf_sub'  ) . $form_id . '",
+      "resolved": "Web安全/CMS内容/WordPress/' . admin_url( 'edit.php",
+      "present": false,
+      "raw": "<a href=\"' . admin_url( 'edit.php?post_status=all&post_type=nf_sub'  ) . $form_id . '\">"
+    },
+    {
+      "path": "Web安全/CMS内容/WordPress/（CVE-2018-19287）WordPress Plugin - Ninja Forms 3.3.17 XSS.md",
+      "sha256": "3ed8bf7f376a2c2af35789ee984602106cedbce922dbd4d39ba3e3b146eacc89",
+      "line": 119,
+      "tag": "a",
+      "attribute": "href",
+      "target": "' . admin_url( 'edit.php?post_status=trash&post_type=nf_sub' ) . $form_id . '",
+      "resolved": "Web安全/CMS内容/WordPress/' . admin_url( 'edit.php",
+      "present": false,
+      "raw": "<a href=\"' . admin_url( 'edit.php?post_status=trash&post_type=nf_sub' ) . $form_id . '\">"
+    }
+  ],
+  "site_root": 33,
+  "method": "Python HTMLParser on non-fenced source lines; static only"
+}

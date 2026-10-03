@@ -1,0 +1,83 @@
+{
+  "candidate_count": 2,
+  "candidates": [
+    {
+      "path": "Web安全/中间件/Apache DolphinScheduler/（CVE-2020-11974）Apache DolphinScheduler 远程代码执行漏洞.md",
+      "archive_line_no": 5,
+      "archive_line": "（CVE-2020-11974）Apache DolphinScheduler 远程代码执行漏洞",
+      "working_line_no": 22,
+      "working_line": "# （CVE-2020-11974）Apache DolphinScheduler 远程代码执行漏洞",
+      "classification": "format_only_same_heading_text",
+      "disposition": "not_a_finding",
+      "review": "Archive used a Setext title; working tree carries the same title as an ATX H1. Title text is byte-identical after removing Markdown heading syntax.",
+      "specific_prior_evidence": {
+        "file": "article-inventory.jsonl",
+        "path": "Web安全/中间件/Apache DolphinScheduler/（CVE-2020-11974）Apache DolphinScheduler 远程代码执行漏洞.md",
+        "git_blob_ids": {
+          "archive": "fa9732195f94ca9ff6df7145022345da34bf6c6b",
+          "previous_master": "b31231d7628d786db1460771c8680baeaa63b941",
+          "current": "b31231d7628d786db1460771c8680baeaa63b941"
+        },
+        "sha256": {
+          "archive": "c2405b949ad5593e034e2b5c37277f8bd77e513f9f3890ccc97c1181c563d094",
+          "previous_master": "2b46ec72db2483db156ad18aa94885e1ef027b24422c053d79d64efc8d6147d1",
+          "current": "2b46ec72db2483db156ad18aa94885e1ef027b24422c053d79d64efc8d6147d1"
+        }
+      }
+    },
+    {
+      "path": "Web安全/安全设备/360/【技术干货】CVE-2022-41852 Apache Commons Jxpath命令执行漏洞分析.md",
+      "archive_line_no": 97,
+      "archive_line": "Spring框架中还可以用org.apache.commons.jxpath.functions.MethodFunction这个类。",
+      "working_line_no": 46,
+      "working_line": "org.apache.commons.jxpath.functions.MethodFunction 属于 Apache Commons JXPath，不属于 Spring；它参与扩展函数调用。",
+      "archive_context": [
+        "![](https://mmbiz.qpic.cn/mmbiz_png/wfFYMXc5G1MdSSDbEvQkNoibGiaO36k8u9qW5N2TibUcYK4ib4MHCXUwEyv6rrlDnFkKd8YmjkGZXxhw4NgflmKT2Q/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1 \"\")  ",
+        "  ",
+        "最后在调用invoke实现Spring-bean加载，执行恶意代码。  ",
+        "  ",
+        "![](https://mmbiz.qpic.cn/mmbiz_png/wfFYMXc5G1MdSSDbEvQkNoibGiaO36k8u9EdxUOt4icKNsmp16iarm4Cia3kkjGpia6ugLzAEhGZGF2TWM7hcFRzht2g/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1 \"\")  ",
+        "  ",
+        "Spring框架中还可以用org.apache.commons.jxpath.functions.MethodFunction这个类。  ",
+        "  ",
+        "除了实例化构造函数，Spring框架加载恶意配置的利用之外。还能利用静态方法进行RCE，例如jndi、jdbc等，后续笔者也会进行补充和分析。  ",
+        "  ",
+        "当然在官方介绍中说明，除了构造函数和使用静态方法，还介绍了一种调用。  "
+      ],
+      "working_context": [
+        "![](https://mmbiz.qpic.cn/mmbiz_png/wfFYMXc5G1MdSSDbEvQkNoibGiaO36k8u9qW5N2TibUcYK4ib4MHCXUwEyv6rrlDnFkKd8YmjkGZXxhw4NgflmKT2Q/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1 \"\")  ",
+        "  ",
+        "最后在调用invoke实现Spring-bean加载，执行恶意代码。  ",
+        "  ",
+        "![](https://mmbiz.qpic.cn/mmbiz_png/wfFYMXc5G1MdSSDbEvQkNoibGiaO36k8u9EdxUOt4icKNsmp16iarm4Cia3kkjGpia6ugLzAEhGZGF2TWM7hcFRzht2g/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1 \"\")  ",
+        "  ",
+        "org.apache.commons.jxpath.functions.MethodFunction 属于 Apache Commons JXPath，不属于 Spring；它参与扩展函数调用。  ",
+        "  ",
+        "除了实例化构造函数，Spring框架加载恶意配置的利用之外。还能利用静态方法进行RCE，例如jndi、jdbc等，后续笔者也会进行补充和分析。  ",
+        "  ",
+        "当然在官方介绍中说明，除了构造函数和使用静态方法，还介绍了一种调用。  "
+      ],
+      "classification": "unknown_semantic_rewrite_without_primary_source",
+      "disposition": "unknown",
+      "review": "The archive context describes a Spring-based proof of concept and a Spring ClassPathXmlApplicationContext chain, then says this MethodFunction class can also be used “in Spring.” The working text changes this to an ownership claim (“belongs to Apache Commons JXPath, not Spring”) plus an extension-function role. The FQCN and surrounding article support distinguishing the library from Spring, but no original source URL or source statement was available here to establish that this is the intended correction or that the added role description precisely preserves the original claim. The article itself documents the edit in its “已落实的文本修订” bullet (working line 46), but that is an editorial rationale, not independent source evidence.",
+      "previous_review_coverage": {
+        "full_fidelity_prose_disposition": false,
+        "recursive_node_review": false,
+        "current_article_documents_edit": true,
+        "specific_current_item": "working line 46, “已落实的文本修订” quotes the full original/new sentence; line 47 repeats the MethodFunction package correction."
+      },
+      "available_evidence": {
+        "archive_revision": "41940cb0038d09ca5aaddbe5bffb923e423d210f",
+        "archive_blob": "95c4e09d04bb09c00de20f070a2476e73d76e36d",
+        "archive_sha256": "f3e51e42e995941b28b33a4ef93ac029698c43fb241000ad81c26bde4a104ac3",
+        "working_sha256": "d4156f4654025c33b28ad1daedf2ae0d9dedf2f8e01f005a9a2145c6996993f7",
+        "original_source_url_status": "unknown"
+      },
+      "recommendation": "Keep this factual interpretation unknown until the source article or implementation reference is available. Do not infer from the wording change alone that the historical sentence specifically asserted class ownership.",
+      "working_body_line_no": 151,
+      "working_body_line": "org.apache.commons.jxpath.functions.MethodFunction 属于 Apache Commons JXPath，不属于 Spring；它参与扩展函数调用。",
+      "editorial_note_line_no": 46,
+      "editorial_note_line": "- 已落实的文本修订：“Spring框架中还可以用org.apache.commons.jxpath.functions.MethodFunction这个类。”改为“org.apache.commons.jxpath.functions.MethodFunction 属于 Apache Commons JXPath，不属于 Spring；它参与扩展函数调用。”；“目前官方已经停止更新，无修复版本。”改为“原文于 2022-10-24 声称当时无修复版本。这是历史状态，不能作为当前维护或修复状态；后续版本和扩展函数限制需另核对官方公告。”。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证"
+    }
+  ]
+}

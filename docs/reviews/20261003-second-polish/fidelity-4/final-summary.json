@@ -1,0 +1,35 @@
+{
+  "shard": 4,
+  "deep_context_articles": 18,
+  "verdict_counts": {
+    "resolved_claim_qualified_and_source_table_retained": 1,
+    "resolved_conflicting_claims_preserved_as_labeled_source_text": 1,
+    "resolved_fence_repair_values_preserved": 1,
+    "resolved_misattributed_description_replaced_with_qualified_product_scope": 1,
+    "resolved_original_explanation_retained": 1,
+    "resolved_original_explanation_retained_with_exact_correction": 1,
+    "resolved_original_limitations_retained": 1,
+    "resolved_original_status_table_preserved_as_attributed_quote": 1,
+    "resolved_payloads_preserved_in_fenced_html": 1,
+    "resolved_specific_api_role_correction_with_provenance_boundary": 1,
+    "resolved_title_and_shell_description_corrected_with_context_retained": 1,
+    "resolved_typo_corrected_claim_and_prerequisites_retained": 1,
+    "resolved_ui_markup_converted_to_inert_archival_quote": 1,
+    "resolved_visible_claim_and_request_preserved_with_limitations": 1,
+    "resolved_visible_claim_and_request_preserved_with_limits": 1,
+    "resolved_visible_text_preserved_markup_removed": 1,
+    "resolved_with_qualified_correction": 1,
+    "unknown_encoding_restoration_and_source_fidelity": 1
+  },
+  "confirmed_fidelity_findings": 0,
+  "unknown_items": 1,
+  "confirmed_minimum_restorations": 0,
+  "method": "For each of the 18 cases, re-read complete archived, merged, and working Markdown strings; compare exact article claims, full changed-line context, affected code/request examples and visible text. Checked the concrete path-specific prior proof for status-table, UI-caption, markup, and prose correction cases; a prior disposition alone was not accepted without current text comparison.",
+  "limits": [
+    "Plesk source article is garbled in the archive; recovered Chinese prose and source authenticity are not independently verifiable here. No replacement is proposed.",
+    "No external sources, screenshots or target systems were accessed.",
+    "No article code, PoC, HTML or scanner was executed.",
+    "Repository files were not modified."
+  ],
+  "result": "17 cases resolved as retained/corrected/formatted with values or claim context preserved; Plesk restoration remains unknown; no evidence-grounded missing material requiring a proposed exact restoration was found."
+}

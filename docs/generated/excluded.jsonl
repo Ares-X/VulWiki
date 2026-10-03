@@ -1,17 +1,7 @@
-{"blocking_checks":[],"content_status":"quarantined","path":"Web安全/AI应用/AI综合/CVE-2026-42824：Copilot SearchLeak 漏洞，AI 化身数据窃密内鬼.md"}
-{"blocking_checks":[],"content_status":"quarantined","path":"Web安全/AI应用/Langflow/[RCE] 14行JSON，接管你的Langflow工作流引擎.md"}
-{"blocking_checks":[],"content_status":"quarantined","path":"Web安全/AI应用/OpenClaw AI/CVE-2026-32051：OpenClaw授权绕过漏洞与复现.md"}
-{"blocking_checks":[],"content_status":"quarantined","path":"Web安全/AI应用/OpenClaw AI/OpenClaw远程代码执行漏洞（CVE-2026-30741）！.md"}
 {"blocking_checks":[],"content_status":"quarantined","path":"Web安全/AI应用/chatgpt-on-wechat/chatgpt-on-wechat存在身份验证漏洞漏洞(CVE-2026-6129).md"}
-{"blocking_checks":[],"content_status":"quarantined","path":"Web安全/中间件/Apache/CVE-2024-40725.md"}
-{"blocking_checks":[],"content_status":"quarantined","path":"Web安全/中间件/Apache OFBiz/CVE-2025-55182 Apache OFBiz SSRF与远程命令执行漏洞.md"}
 {"blocking_checks":[],"content_status":"quarantined","path":"Web安全/中间件/Apache Solr/CVE-2026-44825 _ Apache Solr AuthTool Hardcoded Credentials Vulnerabil.md"}
-{"blocking_checks":[],"content_status":"rejected","path":"Web安全/中间件/Nginx/（CVE-2020-12440）Nginx <= 1.8.0 请求走私.md"}
-{"blocking_checks":[],"content_status":"quarantined","path":"Web安全/中间件/Redis/Redis存在未授权访问导致的RCE.md"}
 {"blocking_checks":[],"content_status":"quarantined","path":"Web安全/中间件/Squid/CVE-2026-47729 _ Squid Heap Buffer Overread Vulnerability.md"}
-{"blocking_checks":[],"content_status":"quarantined","path":"Web安全/中间件/WebLogic/（CVE-2018-2893）Weblogic WLS核心组件反序列化漏洞.md"}
 {"blocking_checks":[],"content_status":"quarantined","path":"Web安全/中间件/WebLogic/（CVE-2018-3191）Weblogic远程代码执行漏洞.md"}
-{"blocking_checks":[],"content_status":"quarantined","path":"Web安全/中间件/WebLogic/（CVE-2018-3245）Weblogic反序列化远程代码执行漏洞.md"}
 {"blocking_checks":[],"content_status":"quarantined","path":"Web安全/其他软件/杂项/CHYbeta starred BishopFox_CVE-2026-34908-check.md"}
 {"blocking_checks":[],"content_status":"quarantined","path":"Web安全/其他软件/杂项/CVE-2025-12480.md"}
 {"blocking_checks":[],"content_status":"quarantined","path":"Web安全/其他软件/杂项/CVE-2025-14611.md"}
@@ -23,12 +13,9 @@
 {"blocking_checks":[],"content_status":"quarantined","path":"Web安全/其他软件/杂项/CVE-2025-8356.md"}
 {"blocking_checks":[],"content_status":"quarantined","path":"Web安全/其他软件/杂项/CVE-2025-9316, CVE-2025-11700.md"}
 {"blocking_checks":[],"content_status":"quarantined","path":"Web安全/其他软件/杂项/CVE-2026-48907 and LiteSpeed cPanel Plugin Flaws Come Under Active Att.md"}
-{"blocking_checks":[],"content_status":"quarantined","path":"Web安全/开发框架/Gitea/刚升到 Gitea 1.27.0 以为安全了？两个 0day 直接 RCE.md"}
 {"blocking_checks":[],"content_status":"quarantined","path":"Web安全/数据库/Oracle MySQL Server/CVE-2026-35273 _ Oracle PeopleSoft PeopleTools Unauthenticated Remote.md"}
 {"blocking_checks":[],"content_status":"quarantined","path":"Web安全/数据库/宝塔 Phpmyadmin/宝塔 Phpmyadmin 未授权访问漏洞.md"}
-{"blocking_checks":[],"content_status":"quarantined","path":"Web安全/服务器软件/GNU/GNU Inetutils Telnetd 认证绕过漏洞检测工具（CVE-2026-24061）1月28日更新.md"}
 {"blocking_checks":[],"content_status":"quarantined","path":"Web安全/服务器软件/SolarWinds/A Crash, Not a Shell_ SolarWinds Serve-U CVE-2026-28318.md"}
-{"blocking_checks":[],"content_status":"quarantined","path":"Web安全/服务器软件/突发/！国家级黑客利用零日漏洞入侵Commvault Azure环境，数据安全再响警报.md"}
 {"blocking_checks":[],"content_status":"quarantined","path":"Web安全/桌面软件/Cursor IDE/CVE-2025-54135, CVE-2025-54136_ Frequently Asked Questions About Vulne.md"}
 {"blocking_checks":[],"content_status":"quarantined","path":"Web安全/桌面软件/Microsoft/Microsoft’s August 2025 Patch Tuesday Addresses 107 CVEs CVE-2025-537.md"}
 {"blocking_checks":[],"content_status":"quarantined","path":"Web安全/桌面软件/Microsoft/Microsoft’s December 2025 Patch Tuesday Addresses 56 CVEs CVE-2025-62.md"}
@@ -38,14 +25,10 @@
 {"blocking_checks":[],"content_status":"quarantined","path":"Web安全/桌面软件/Praetorian/Praetorian_CVE-2025-52493_ When Password FieldsAren’t Enough – Client-.md"}
 {"blocking_checks":[],"content_status":"quarantined","path":"Web安全/桌面软件/Praetorian/Praetorian_How I Found the Worst ASP.NET Vulnerability — A $10K Bug C.md"}
 {"blocking_checks":[],"content_status":"quarantined","path":"Web安全/网络设备/Check Point/CVE-2026-50751 _ Check Point Security Gateway Improper Authentication.md"}
-{"blocking_checks":[],"content_status":"quarantined","path":"Web安全/网络设备/Check Point/CheckPoint安全网关MyCRL存在任意文件读取漏洞.md"}
-{"blocking_checks":[],"content_status":"quarantined","path":"Web安全/网络设备/Cisco/CVE-2026-0866 Cisco ClamAV ZIP扫描引擎绕过漏洞.md"}
 {"blocking_checks":[],"content_status":"quarantined","path":"Web安全/网络设备/D-Link/「1day」D-Link DIR 823G路由器存在未授权访问漏洞（CVE-2025-2360）.md"}
 {"blocking_checks":[],"content_status":"quarantined","path":"Web安全/网络设备/Ivanti/Ivanti EPM 严重漏洞（CVE-2025-10573）存在管理员会话劫持与未授权远程代码执行风险.md"}
-{"blocking_checks":[],"content_status":"quarantined","path":"Web安全/运维面板/cPanel/【漏洞预警】 cPanelWP2 高危任意文件读取CVE-2026-29205.md"}
 {"blocking_checks":[],"content_status":"quarantined","path":"Web安全/邮件系统/FreePBX/The FreePBX Rabbit Hole_ CVE-2025-66039 and others.md"}
 {"blocking_checks":[],"content_status":"quarantined","path":"Web安全/邮件系统/Microsoft Exchange Server/CVE-2025-53786_ Frequently Asked Questions About Microsoft Exchange Se.md"}
-{"blocking_checks":[],"content_status":"quarantined","path":"Web安全/邮件系统/Microsoft Exchange Server/高危预警！Exchange零日漏洞 CVE-2026-42897，深入解析其漏洞原理、入侵路径、应急处置指南，企业务必自查.md"}
 {"blocking_checks":[],"content_status":"quarantined","path":"系统安全/Android/Google Patches Android Zero-Day CVE-2025-48595 Exploited in Targeted A.md"}
 {"blocking_checks":[],"content_status":"quarantined","path":"系统安全/Linux/CVE-2026-23111_ Linux nf_tables Flaw Enables Root Exploits.md"}
 {"blocking_checks":[],"content_status":"quarantined","path":"系统安全/Linux/Old Linux Kernel flaw CVE-2024-1086 resurfaces in ransomware attacks.md"}
