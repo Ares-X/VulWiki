@@ -3,7 +3,8 @@ source: "白阁文库 BaizeSec/bylibrary"
 id: "vw-4ce440c5962124f58c1b2f5f"
 entity_id: "ve-4ce440c5962124f58c1b2f5f"
 schema_version: "1"
-title: "coding: utf-8"
+title: "SonicWall SSL-VPN 未授权RCE漏洞"
+previous_title: "coding: utf-8"
 product: "历史SonicWall SSL-VPN"
 record_type: "vulnerability"
 review_status: "text-reviewed"
@@ -20,8 +21,7 @@ side_effects: "执行文中载荷可能以目标进程权限启动命令或加�
 source_status: "unknown"
 ---
 
-#!/usr/bin/python
-# coding: utf-8
+# SonicWall SSL-VPN 未授权RCE漏洞
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）
@@ -33,7 +33,7 @@ source_status: "unknown"
 
 ### 逐项校订
 
-- 整篇代码无代码围栏/标题/版本与修复说明，Python2依赖未标
+- 原归档为裸 Python2 代码；现已补文件名标题并将包括脚本头在内的完整代码围栏。适用版本、修复说明与 Python2 依赖版本仍待核
 - 代码自称Shellshock，与后续其他描述需统一根因；初始检查实际执行cat，不是无副作用指纹
 
 ### 操作风险与恢复
@@ -48,6 +48,8 @@ source_status: "unknown"
 <!-- article-review:devices:end -->
 
 ```python
+#!/usr/bin/python
+# coding: utf-8
 # Author: Darren Martyn
 # Credit: Phineas Fisher
 # Notes:

@@ -35,7 +35,7 @@ source_status: "unknown"
 
 - 影响版本未提取Cookie中具体版本，默认SSH/root条件与Web漏洞应分开
 - 带4伪造IP头是否必要不清
-- 存在空&#33;[]()但另两图路径存在，不能归为仓库缺图片
+- 存在空`&#33;[]()`但另两图路径存在，不能归为仓库缺图片
 - 已落实的文本修订：HTTP 报文围栏改为 http。上列仍描述旧文问题时，以此落实项及下列限定为准；修订不代表运行验证
 
 ### 操作风险与恢复
@@ -105,7 +105,10 @@ Connection: close
 
 ![](./.resource/信诺瑞得WiseGrid慧敏应用交付网关sysadmin_action.php后台命令执行漏洞/media/202205251433134.png)
 
-![]()![](./.resource/信诺瑞得WiseGrid慧敏应用交付网关sysadmin_action.php后台命令执行漏洞/media/202205251434769.png)
+`![]()`![](./.resource/信诺瑞得WiseGrid慧敏应用交付网关sysadmin_action.php后台命令执行漏洞/media/202205251434769.png)
+
+
+> 资源说明：此处原归档的图片地址为空，以上保留原始占位语法；无法据此判断图片内容，未猜补地址。
 
 
 ---

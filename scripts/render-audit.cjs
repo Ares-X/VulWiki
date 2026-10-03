@@ -259,6 +259,14 @@ function auditArticle({ path: articlePath, source, sourceBytes, marked }) {
   const codeCount = codeTokens.length;
   const imageCount = links.filter((t) => t.type === 'image').length;
   const tableCount = tables.length;
+  let emptyTargetCursor = 0;
+  for (const token of links) {
+    if (token.href !== '') continue;
+    const offset = locate(body, token.raw, emptyTargetCursor);
+    if (offset >= 0) emptyTargetCursor = offset + token.raw.length;
+    pushCandidate(candidates, token.type === 'image' ? 'empty_image_target' : 'empty_link_target',
+      token.raw, offset < 0 ? null : frontmatterLines + lineAt(body, offset));
+  }
   const occurrence = new Map();
   const enriched = candidates.map((candidate) => {
     const key = `${candidate.rule}\0${articlePath}\0${candidate.raw}`;
