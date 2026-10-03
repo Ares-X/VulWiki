@@ -1,0 +1,55 @@
+{
+  "base_commit": "8f2a9e14575928bb5f086902c786da66f4a65aa9",
+  "review_date": "2026-10-03",
+  "render_method": "Pandoc GFM to static HTML; no filters; CSP default-src none; no article code execution",
+  "articles": [
+    {
+      "path": "Web安全/CMS内容/WordPress/Visual Composer 模板文件包含与版本边界核对（CVE-2026-12227）.md",
+      "sha256": "04322c46f5722b36c9dbb66e2769e25500b02d827f4a12759f88e45846b05c87",
+      "fenced_code_blocks": 0,
+      "rendered_code_copy_exact": true,
+      "active_html_elements": 0,
+      "article_bytes_unchanged": true
+    },
+    {
+      "path": "Web安全/开发框架/PowerJob/PowerJob friend-process 未认证反射调用链分析（CVE-2026-75429）.md",
+      "sha256": "9e3d7c4c6b9a63ce44bf3574b328350567b2b1ef4538178582f6da1ee06db71d",
+      "fenced_code_blocks": 0,
+      "rendered_code_copy_exact": true,
+      "active_html_elements": 0,
+      "article_bytes_unchanged": true
+    },
+    {
+      "path": "Web安全/开发框架/Tiptap/Tiptap Markdown 属性解析二次复杂度拒绝服务（GHSA-j95f-988m-3j2f）.md",
+      "sha256": "28126ec7cd3cb496fb84f32d00a6c705655aa03e7bd380dc6b06acf42cdeb68a",
+      "fenced_code_blocks": 2,
+      "rendered_code_copy_exact": true,
+      "active_html_elements": 0,
+      "article_bytes_unchanged": true
+    },
+    {
+      "path": "Web安全/网络设备/Citrix NetScaler/NetScaler DTLS 越界复制与公开PoC危险副作用（CVE-2026-88772）.md",
+      "sha256": "d94835a05fbb63d8f6efdc3937cb42e3e985d03f0b14c7ec1c542fa9cb4cecc4",
+      "fenced_code_blocks": 0,
+      "rendered_code_copy_exact": true,
+      "active_html_elements": 0,
+      "article_bytes_unchanged": true
+    },
+    {
+      "path": "Web安全/网络设备/Citrix NetScaler/NetScaler 日志污染到延迟命令执行分析（CVE-2026-88771）.md",
+      "sha256": "37bb4d8916a00e11a1f5834b4c4421e1e182d391ace2c14a9444b6705f929bf8",
+      "fenced_code_blocks": 0,
+      "rendered_code_copy_exact": true,
+      "active_html_elements": 0,
+      "article_bytes_unchanged": true
+    },
+    {
+      "path": "Web安全/邮件系统/Nodemailer/Nodemailer 地址解析与收件人去重二次复杂度拒绝服务（GHSA-2x7j-588g-ccc2）.md",
+      "sha256": "e0287fc991c64578704d142503b61c73015559aeb659934de86e88e719f03b06",
+      "fenced_code_blocks": 0,
+      "rendered_code_copy_exact": true,
+      "active_html_elements": 0,
+      "article_bytes_unchanged": true
+    }
+  ]
+}

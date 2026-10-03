@@ -1883,6 +1883,10 @@
 
 - [漏洞预警  User Meta敏感信息泄露漏洞](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/WordPress/%E6%BC%8F%E6%B4%9E%E9%A2%84%E8%AD%A6%20%20User%20Meta%E6%95%8F%E6%84%9F%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2%E6%BC%8F%E6%B4%9E.md) [advisory; not-reproduced; needs-review]
 
+## WordPress Visual Composer Website Builder
+
+- [Visual Composer 模板文件包含与版本边界核对（CVE-2026-12227）](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/WordPress/Visual%20Composer%20%E6%A8%A1%E6%9D%BF%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E4%B8%8E%E7%89%88%E6%9C%AC%E8%BE%B9%E7%95%8C%E6%A0%B8%E5%AF%B9%EF%BC%88CVE-2026-12227%EF%BC%89.md) [analysis; not-reproduced; needs-review]
+
 ## WordPress W3 Total Cache
 
 - [因WordPress新漏洞，全球数百万网站面临被攻击风险](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/WordPress/%E5%9B%A0WordPress%E6%96%B0%E6%BC%8F%E6%B4%9E%EF%BC%8C%E5%85%A8%E7%90%83%E6%95%B0%E7%99%BE%E4%B8%87%E7%BD%91%E7%AB%99%E9%9D%A2%E4%B8%B4%E8%A2%AB%E6%94%BB%E5%87%BB%E9%A3%8E%E9%99%A9.md) [advisory; not-reproduced; needs-review]
