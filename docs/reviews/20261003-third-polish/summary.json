@@ -1,0 +1,198 @@
+{
+  "date": "2026-10-03",
+  "base_commit": "cfb19294812b1435a57e866a87dd18e2ff3ebec3",
+  "branch": "codex/wiki-third-polish-20261003",
+  "publication": "local only; no push or deploy",
+  "articles": 5666,
+  "changed_articles": 115,
+  "unchanged_articles": 5551,
+  "exact_edits": 362,
+  "all_article_paths_preserved": true,
+  "all_frontmatter_preserved": true,
+  "all_changed_articles_inverse_verified": true,
+  "worker_model": "gpt-6-luna",
+  "worker_reasoning": "low",
+  "corpus_workers": 14,
+  "specialist_workers": 2,
+  "shards": [
+    {
+      "worker": "corpus-01",
+      "articles": 403,
+      "context_review_records": 77
+    },
+    {
+      "worker": "corpus-02",
+      "articles": 404,
+      "context_review_records": 71
+    },
+    {
+      "worker": "corpus-03",
+      "articles": 405,
+      "context_review_records": 64
+    },
+    {
+      "worker": "corpus-04",
+      "articles": 405,
+      "context_review_records": 74
+    },
+    {
+      "worker": "corpus-05",
+      "articles": 405,
+      "context_review_records": 68
+    },
+    {
+      "worker": "corpus-06",
+      "articles": 405,
+      "context_review_records": 11
+    },
+    {
+      "worker": "corpus-07",
+      "articles": 405,
+      "context_review_records": 73
+    },
+    {
+      "worker": "corpus-08",
+      "articles": 405,
+      "context_review_records": 73
+    },
+    {
+      "worker": "corpus-09",
+      "articles": 405,
+      "context_review_records": 75
+    },
+    {
+      "worker": "corpus-10",
+      "articles": 405,
+      "context_review_records": 7
+    },
+    {
+      "worker": "corpus-11",
+      "articles": 405,
+      "context_review_records": 72
+    },
+    {
+      "worker": "corpus-12",
+      "articles": 405,
+      "context_review_records": 22
+    },
+    {
+      "worker": "corpus-13",
+      "articles": 405,
+      "context_review_records": 11
+    },
+    {
+      "worker": "corpus-14",
+      "articles": 404,
+      "context_review_records": 32
+    }
+  ],
+  "initial_worker_context_articles": 730,
+  "corpus_plus_residual_context_articles": 736,
+  "context_scope": "Model context review records, sometimes bounded excerpts; not human reading or complete factual verification of every article.",
+  "remaining_unfenced_http_candidates": 27,
+  "remaining_http_articles": 13,
+  "pure_fence_payload_proofs": 280,
+  "quality": {
+    "by_code": {
+      "embedded_code_candidate": 1,
+      "fingerprint_unverified": 800,
+      "identifier_inactive": 27,
+      "identifier_role_unknown": 215,
+      "noncontent_link_candidate": 30,
+      "path_legacy": 2,
+      "site_relative_link": 81,
+      "source_missing": 3854,
+      "unrecognized_identifier_namespace": 88
+    },
+    "documents": 5666,
+    "errors": 0,
+    "fatal_issues": 0,
+    "warnings": 5098
+  },
+  "assets": {
+    "articles": 5666,
+    "local_refs": 6414,
+    "missing": [],
+    "method": "Installed Marked lexer, no DOM, article code or remote access"
+  },
+  "render_before": {
+    "articles": 5666,
+    "candidate_articles": 1019,
+    "flags": {
+      "html_literal_candidate": 2339,
+      "unfenced_http": 315,
+      "table_column_mismatch": 9,
+      "markdown_link_literal": 24,
+      "code_web_controls": 5,
+      "unfenced_source": 14
+    }
+  },
+  "render_after": {
+    "articles": 5666,
+    "candidate_articles": 945,
+    "flags": {
+      "html_literal_candidate": 2320,
+      "table_column_mismatch": 9,
+      "markdown_link_literal": 24,
+      "unfenced_http": 27,
+      "code_web_controls": 5,
+      "unfenced_source": 1
+    }
+  },
+  "tests": {
+    "wiki_tool_tests": 68,
+    "wiki_tool_failures": 0,
+    "blog_wiki_data_tests": 7,
+    "blog_wiki_data_failures": 0
+  },
+  "generated_build_check": {
+    "different_files": [],
+    "exit_code": 0
+  },
+  "hexo_build": {
+    "build_exit_code": 0,
+    "articles_byte_identical_to_public": 5666,
+    "active_relative_references": 6414,
+    "unique_active_resource_paths": 6117,
+    "public_missing_active_refs": [],
+    "public_resource_byte_mismatches": [],
+    "publication": "local only",
+    "article_content_executed": false,
+    "build_directory": "/var/folders/4w/72x3w5lj24l__5yr852p1lj80000gn/T/vulwiki-third-check-20261003-27fxoi5w/build"
+  },
+  "protected_owner_files": [
+    {
+      "path": "/Users/aresx/Ares-X.github.io/source/.obsidian/app.json",
+      "sha256": "0c88822ed2df84cc3c2f552ec773e927aac350c3640682d505f7e8946d9d4080",
+      "current_sha256": "0c88822ed2df84cc3c2f552ec773e927aac350c3640682d505f7e8946d9d4080",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/aresx/Ares-X.github.io/source/.obsidian/workspace.json",
+      "sha256": "d264e97012ba25cf194a6a146b78815380e5e3c65895cbf691886174319beac7",
+      "current_sha256": "d264e97012ba25cf194a6a146b78815380e5e3c65895cbf691886174319beac7",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/aresx/Ares-X.github.io/themes/freemind.bithack/source/favicon.png",
+      "sha256": "62f39b8fa25692eb620e8a1e349c32b67971f06a7f2545a1352c3bdb2c9d132f",
+      "current_sha256": "62f39b8fa25692eb620e8a1e349c32b67971f06a7f2545a1352c3bdb2c9d132f",
+      "unchanged": true
+    }
+  ],
+  "not_executed": [
+    "article PoCs",
+    "article code",
+    "article HTML",
+    "scanners",
+    "payloads",
+    "attachments",
+    "example targets"
+  ],
+  "limits": [
+    "No article-by-article online verification of product/version/identifier/author claims.",
+    "No browser interaction or external image pixel review in this round.",
+    "No source fields bulk-filled; 5098 historical warnings remain.",
+    "15 original OSSN images previously not found remain documented as missing originals; active reference presence does not restore those originals."
+  ]
+}

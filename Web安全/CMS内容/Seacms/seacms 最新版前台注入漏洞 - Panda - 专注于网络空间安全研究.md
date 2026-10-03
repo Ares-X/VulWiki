@@ -45,7 +45,8 @@ schema_version: "1"
 # seacms 最新版前台注入漏洞 - Panda - 专注于网络空间安全研究
 
 <meta name="referrer" content="no-referrer"/>
-\> 本文由 \[简悦 SimpRead\](http://ksria.com/simpread/) 转码， 原文地址 \[www.cnpanda.net\](https://www.cnpanda.net/codeaudit/730.html)
+
+> 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [www.cnpanda.net](https://www.cnpanda.net/codeaudit/730.html)
 
 0x01 写在前面
 ---------

@@ -168,7 +168,11 @@ CanonicalValueType::WithRelativeIndex() 把 KindField 设为 kind，HeapTypeFiel
   
 CanonicalizeTypeDef() 返回的 CanonicalType 对象被传给 AddRecursiveGroup()。  
   
+```cpp
 /* src/wasm/canonical-types.cc:151-181 */CanonicalTypeIndex TypeCanonicalizer::AddRecursiveGroup(CanonicalType type) {  DCHECK(!mutex_.TryLock());  // The caller must hold the mutex.  CanonicalSingletonGroup group{type};  if (CanonicalTypeIndex index = FindCanonicalGroup(group); index.valid()) {    // Make sure this signature can be looked up later.    DCHECK_IMPLIES(type.kind == CanonicalType::kFunction,                          canonical_function_sigs_.count(index));    return index;  }  static_assert(kMaxCanonicalTypes < (1 << CanonicalTypeIndex::kBits));  CanonicalTypeIndex index(canonical_singleton_groups_.size());  // Check that this canonical ID is not used yet.  DCHECK(std::none_of(canonical_singleton_groups_.begin(),                              canonical_singleton_groups_.end(),                              [=](auto& entry) { return entry.second == index; }));  DCHECK(std::none_of(canonical_groups_.begin(), canonical_groups_.end(),                              [=](auto& entry) { return entry.second == index; }));  canonical_singleton_groups_.emplace(group, index);  // Compute the canonical index of the supertype: If it is relative, we  // need to add {canonical_index}.  canonical_supertypes_.push_back(      type.is_relative_supertype          ? CanonicalTypeIndex{type.supertype.index + index.index}          : type.supertype);  if (type.kind == CanonicalType::kFunction) {    const CanonicalSig* sig = type.function_sig;    CHECK(canonical_function_sigs_.emplace(index, sig).second);  }  CheckMaxCanonicalIndex();  return index;}  
+```
+
+> 归档说明：上方源码在原归档中已压成单行，含 `//` 注释，不能作为完整可直接编译的代码；这里仅修正字面量显示，未猜补换行。
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/tbTbtBE6TibcSzFInsJagicbiaYiccHOPndlDo5ruOx5g911r0UmaRuts1FtJYtUJIhYvV5BJCcGH5POGtuYuozFJvdfCyVVxLOW2f8eL08yORM/640?wx_fmt=png&from=appmsg "")  
   

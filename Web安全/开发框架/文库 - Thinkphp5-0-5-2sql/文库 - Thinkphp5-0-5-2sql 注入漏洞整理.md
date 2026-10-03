@@ -44,6 +44,7 @@ schema_version: "1"
 # 文库 - Thinkphp5-0-5-2sql 注入漏洞整理
 
 <meta name="referrer" content="no-referrer"/>
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/PSDnBQNwDcOixsKmIFBJTQ)
 
 **高质量的安全文章，安全 offer 面试经验分享**

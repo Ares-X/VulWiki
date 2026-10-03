@@ -38,6 +38,7 @@ schema_version: "1"
 # 代码审计 -  opensns 代码审计复现
 
 <meta name="referrer" content="no-referrer"/>
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/mMRkMHP7DKDqJvW4Vtj_4Q)
 
 前言

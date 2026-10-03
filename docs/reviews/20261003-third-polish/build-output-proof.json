@@ -1,0 +1,11 @@
+{
+  "build_exit_code": 0,
+  "articles_byte_identical_to_public": 5666,
+  "active_relative_references": 6414,
+  "unique_active_resource_paths": 6117,
+  "public_missing_active_refs": [],
+  "public_resource_byte_mismatches": [],
+  "publication": "local only",
+  "article_content_executed": false,
+  "build_directory": "/var/folders/4w/72x3w5lj24l__5yr852p1lj80000gn/T/vulwiki-third-check-20261003-27fxoi5w/build"
+}

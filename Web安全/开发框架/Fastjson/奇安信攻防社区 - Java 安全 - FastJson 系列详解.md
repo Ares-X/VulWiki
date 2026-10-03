@@ -43,6 +43,7 @@ schema_version: "1"
 # 奇安信攻防社区 - Java 安全 - FastJson 系列详解
 
 <meta name="referrer" content="no-referrer"/>
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [forum.butian.net](https://forum.butian.net/share/2858)
 
 > 奇安信攻防社区 - Java 安全 - FastJson 系列详解

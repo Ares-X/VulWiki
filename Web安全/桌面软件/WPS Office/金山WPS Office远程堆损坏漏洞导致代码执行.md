@@ -69,6 +69,7 @@ WPS Office是由Microsoft珠海的中国软件开发商金山软件开发的办�
 #### 漏洞分析
 
 在WPS Office中用于图像格式解析的Qt模块中发现堆损坏。嵌入WPS office的特制图像文件可能会触发此漏洞。打开特制的文档文件时，触发访问冲突。EDX指向数组的指针，而EAX是指向数组的索引。```
+```text
 0:000> g
 (c50.b4): Access violation - code c0000005 (first chance)
 First chance exceptions are reported before any exception handling.
@@ -78,7 +79,11 @@ eip=6ba13321 esp=006f1b44 ebp=006f1b44 iopl=0         nv up ei pl nz na po nc
 cs=0023  ss=002b  ds=002b  es=002b  fs=0053  gs=002b             efl=00210202
 QtCore4!QMatrix::dy+0x48a8:
 6ba13321 8b448210        mov     eax,dword ptr [edx+eax*4+10h] ds:002b:cd2c7290=???????? 
-```崩溃是如何触发的？让我们看一下PNG标头格式。```
+```
+
+崩溃是如何触发的？让我们看一下PNG标头格式。
+
+```text
 00029E30  FF 89 50 4E 47 0D 0A 1A 0A 00 00 00 0D 49 48 44  ÿ‰PNG........IHD
 00029E40  52 00 00 02 80 00 00 01 C6 04 03 00 00 00 16 0A  R...€...Æ.......
 00029E50  27 FC 00 00 00 04 67 41 4D 41 00 00 B1 88 95 98  'ü....gAMA..±ˆ•˜
@@ -86,9 +91,17 @@ QtCore4!QMatrix::dy+0x48a8:
 00029E70  00 80 00 80 80 00 00 00 80 80 00 80 00 80 80 80  .€.€€...€€.€.€€€
 00029E80  80 80 C0 C0 C0 FF 00 00 00 FF 00 FF FF 00 00 00  €€ÀÀÀÿ...ÿ.ÿÿ...
 00029E90  FF FF 00 FF 00 FF FF FF FF FF 7B 1F B1 C4 00 00  ÿÿ.ÿ.ÿÿÿÿÿ{.±Ä.. 
-```从偏移量0x29E31开始-0x29E34是PNG文件格式的签名标头。PNG头文件的结构：```
+```
+
+从偏移量0x29E31开始-0x29E34是PNG文件格式的签名标头。PNG头文件的结构：
+
+```text
 PNG signature --> IHDR --> gAMA --> PLTE --> pHYs --> IDAT --> IEND 
-```在这种情况下，当WPS Office Suite中使用的QtCore库解析PLTE结构并触发堆破坏时，该漏洞位于Word文档中的嵌入式PNG文件中。在偏移量0x29E82到0x29E85处，调色板的解析失败，从而触发了堆中的内存损坏。崩溃触发之前的堆栈跟踪：```
+```
+
+在这种情况下，当WPS Office Suite中使用的QtCore库解析PLTE结构并触发堆破坏时，该漏洞位于Word文档中的嵌入式PNG文件中。在偏移量0x29E82到0x29E85处，调色板的解析失败，从而触发了堆中的内存损坏。崩溃触发之前的堆栈跟踪：
+
+```text
 00 00ee1790 6b8143ef QtCore4!path_gradient_span_gen::path_gradient_span_gen+0x6a71
 01 00ee17f0 6b814259 QtCore4!QBrush::setMatrix+0x234
 02 00ee58d4 6b8249a4 QtCore4!QBrush::setMatrix+0x9e
@@ -98,10 +111,18 @@ PNG signature --> IHDR --> gAMA --> PLTE --> pHYs --> IDAT --> IEND
 06 00ee6480 6b896844 QtCore4!QPainter::drawPixmap+0x1c98
 07 00ee6574 6d1e0fbd QtCore4!QPainter::drawImage+0x325
 08 00ee6594 6d0dd155 kso!GdiDrawHoriLineIAlt+0x11a1a 
-```在QtCore4解析嵌入式图像之前，我们可以看到来自KSO模块的最后一次调用，试图处理图像kso！GdiDrawHoriLineIAlt。使用IDA Pro分解应用程序来分析发生异常的功能。最后的崩溃路径如下（WinDBG结果）：```
+```
+
+在QtCore4解析嵌入式图像之前，我们可以看到来自KSO模块的最后一次调用，试图处理图像kso！GdiDrawHoriLineIAlt。使用IDA Pro分解应用程序来分析发生异常的功能。最后的崩溃路径如下（WinDBG结果）：
+
+```text
 QtCore4!QMatrix::dy+0x48a8:
 6ba13321 8b448210        mov     eax,dword ptr [edx+eax*4+10h] ds:002b:cd2c7290=???????? 
-```在IDA Pro中打开时，我们可以按以下方式反汇编该函数：```
+```
+
+在IDA Pro中打开时，我们可以按以下方式反汇编该函数：
+
+```text
 .text:67353315                 push    ebp
 .text:67353316                 mov     ebp, esp
 .text:67353318                 movzx   eax, byte ptr [ecx+edx]  ; crash here
@@ -109,9 +130,17 @@ QtCore4!QMatrix::dy+0x48a8:
 .text:6735331F                 mov     edx, [ecx]
 .text:67353321                 mov     eax, [edx+eax*4+10h]
 .text:67353325                 mov     ecx, eax 
-```使用故障转储中的信息，我们知道应用程序在`0x67353321（移动eax，[edx + eax * 4 + 10h]）`处触发了访问冲突。我们可以看到EAX寄存器由0xc0值控制。因此，从这里我们可以根据导致异常的指令对寄存器的状态进行一些假设。需要注意的重要一点是，在发生异常之前，我们可以看到ECX（0xc0）中包含的值正在写入到以下指令所定义的任意位置：```
+```
+
+使用故障转储中的信息，我们知道应用程序在`0x67353321（移动eax，[edx + eax * 4 + 10h]）`处触发了访问冲突。我们可以看到EAX寄存器由0xc0值控制。因此，从这里我们可以根据导致异常的指令对寄存器的状态进行一些假设。需要注意的重要一点是，在发生异常之前，我们可以看到ECX（0xc0）中包含的值正在写入到以下指令所定义的任意位置：
+
+```text
 mov     ecx, [ebp+arg_0] 
-```此外，我们注意到，在我们的故障指令之外，EBP的偏移量存储在ECX寄存器中。我们在前面提到的指令（偏移量为0x6ba1331c）上设置了一个断点，以观察内存。断点触发后，我们可以看到第一个值c45adfbc引用了另一个指针，该指针应该是指向数组的指针。```
+```
+
+此外，我们注意到，在我们的故障指令之外，EBP的偏移量存储在ECX寄存器中。我们在前面提到的指令（偏移量为0x6ba1331c）上设置了一个断点，以观察内存。断点触发后，我们可以看到第一个值c45adfbc引用了另一个指针，该指针应该是指向数组的指针。
+
+```text
 Breakpoint 0 hit
 eax=0000000f ebx=004f1b40 ecx=d3544100 edx=0000001c esi=d1200e18 edi=0000001c
 eip=6ba1331c esp=004f1a34 ebp=004f1a34 iopl=0         nv up ei pl nz na po nc
@@ -128,7 +157,11 @@ QtCore4!QMatrix::dy+0x48a3:
 004f1a8c  3f800000 3f31e4f8 3f800000 3de38800  ...?..1?...?...=
 004f1a9c  3de38800 3d9e1c8a 3c834080 004f3c00  ...=...=.@.<.<O.
 004f1aac  4101c71c 6ba13315 3f800000 4081c71c  ...A.3.k...?...@ 
-```从c45adfbc观察内存引用，发现另一个指针。第一个值ab69cf80始终表示为指向它所引用的任何地方的指针。指针ab69cf80基本上是我们指针的索引数组。 0:000> dc c45adfbc```
+```
+
+从c45adfbc观察内存引用，发现另一个指针。第一个值ab69cf80始终表示为指向它所引用的任何地方的指针。指针ab69cf80基本上是我们指针的索引数组。 0:000> dc c45adfbc
+
+```text
 c45adfbc  ab69cf80 d3544100 00000003 00000280  ..i..AT.........
 c45adfcc  0000055a 00000012 c0c0c0c0 1c3870e2  Z............p8.
 c45adfdc  40ad870e 1c3870e2 40ad870e 00000000  ...@.p8....@....
@@ -147,7 +180,11 @@ ab69cfc0  ff0000ff ffff00ff ff00ffff ffffffff  ................
 ab69cfd0  c0c0c0c0 c0c0c0c0 c0c0c0c0 c0c0c0c0  ................
 ab69cfe0  c0c0c0c0 c0c0c0c0 c0c0c0c0 c0c0c0c0  ................
 ab69cff0  c0c0c0c0 c0c0c0c0 c0c0c0c0 c0c0c0c0  ................ 
-```因为我们知道崩溃的路径，所以我们可以使用下面的命令简单地设置一个断点。该命令将获得指针值“ edx + eax \* 4 + 10”，并检查其是否满足0xc0。```
+```
+
+因为我们知道崩溃的路径，所以我们可以使用下面的命令简单地设置一个断点。该命令将获得指针值“ edx + eax \* 4 + 10”，并检查其是否满足0xc0。
+
+```text
 bp 6ba13321 ".if (poi(edx+eax*4+10) == 0xc0) {} .else {gc}"
 
 0:000> g
@@ -156,7 +193,11 @@ eip=6ba13321 esp=004f1a34 ebp=004f1a34 iopl=0         nv up ei pl nz na po nc
 cs=0023  ss=002b  ds=002b  es=002b  fs=0053  gs=002b             efl=00200202
 QtCore4!QMatrix::dy+0x48a8:
 6ba13321 8b448210        mov     eax,dword ptr [edx+eax*4+10h] ds:002b:ab69d290=???????? 
-```如果观察堆栈，可以看到以下执行：```
+```
+
+如果观察堆栈，可以看到以下执行：
+
+```text
 004f1a38 6ba3cb98 QtCore4!path_gradient_span_gen::path_gradient_span_gen+0x6a74
 004f1a3c c45adfbc 
 004f1a40 00000048 
@@ -171,7 +212,11 @@ QtCore4!QMatrix::dy+0x48a8:
 004f1a64 004f662c 
 004f1a68 00000000 
 004f1a6c 779eae8e ntdll!RtlAllocateHeap+0x3e 
-```如果我们反汇编6ba3cb98，则可以看到以下反汇编代码。真正的根本原因在于此代码。```
+```
+
+如果我们反汇编6ba3cb98，则可以看到以下反汇编代码。真正的根本原因在于此代码。
+
+```text
 6ba3cb89 8b96b4000000    mov     edx,dword ptr [esi+0B4h]
 6ba3cb8f 8b4df4          mov     ecx,dword ptr [ebp-0Ch]
 6ba3cb92 52              push    edx
@@ -188,7 +233,11 @@ if ( grad > 0.0099999998 )
    input_value = grad_size(check, size, input);
    ptr_grad = *(input);
    ... cut here ... 
-```我们在6ba3cb89地址上设置断点，并观察ESI + 0xB4，我们可以看到一个指针指向另一个位置：```
+```
+
+我们在6ba3cb89地址上设置断点，并观察ESI + 0xB4，我们可以看到一个指针指向另一个位置：
+
+```text
 0:000> r
 eax=00000000 ebx=00791878 ecx=00000005 edx=00793938 esi=cb07de18 edi=0000001c
 eip=6ba3cb89 esp=00791780 ebp=00791870 iopl=0         nv up ei pl nz na po nc
@@ -225,7 +274,11 @@ c88bafc0  ff0000ff ffff00ff ff00ffff ffffffff  ................
 c88bafd0  c0c0c0c0 c0c0c0c0 c0c0c0c0 c0c0c0c0  ................
 c88bafe0  c0c0c0c0 c0c0c0c0 c0c0c0c0 c0c0c0c0  ................
 c88baff0  c0c0c0c0 c0c0c0c0 c0c0c0c0 c0c0c0c0  ................ 
-```从这里我们可以知道代码实际上没有从指针释放任何东西。一旦移至EDX，EDX将保留指向索引数组的指针：```
+```
+
+从这里我们可以知道代码实际上没有从指针释放任何东西。一旦移至EDX，EDX将保留指向索引数组的指针：
+
+```text
 eax=00000000 ebx=00791878 ecx=00000005 edx=cf69afbc esi=cb07de18 edi=0000001c
 eip=6ba3cb8f esp=00791780 ebp=00791870 iopl=0         nv up ei pl nz na po nc
 cs=0023  ss=002b  ds=002b  es=002b  fs=0053  gs=002b             efl=00200202
@@ -251,7 +304,11 @@ c88bafc0  ff0000ff ffff00ff ff00ffff ffffffff  ................
 c88bafd0  c0c0c0c0 c0c0c0c0 c0c0c0c0 c0c0c0c0  ................
 c88bafe0  c0c0c0c0 c0c0c0c0 c0c0c0c0 c0c0c0c0  ................
 c88baff0  c0c0c0c0 c0c0c0c0 c0c0c0c0 c0c0c0c0  ................ 
-```崩溃后的堆栈跟踪：```
+```
+
+崩溃后的堆栈跟踪：
+
+```text
 0:000> kvL
  # ChildEBP RetAddr  Args to Child              
 00 012f18d4 6ba3cb98 cc53afbc 00000048 00000000 QtCore4!QMatrix::dy+0x48a8
@@ -265,7 +322,11 @@ c88baff0  c0c0c0c0 c0c0c0c0 c0c0c0c0 c0c0c0c0  ................
 08 012f67b4 6d1e0fbd 012f69ec 012f66d4 012f6864 QtCore4!QPainter::drawImage+0x325
 09 012f67d4 6d0dd155 012f6a54 012f69ec 012f6864 kso!GdiDrawHoriLineIAlt+0x11a1a
 0a 012f67ec 6d0c8d88 012f69ec 012f68e0 012f6864 kso!kpt::PainterExt::drawBitmap+0x23 
-```堆分析：```
+```
+
+堆分析：
+
+```text
 0:000> !heap -p -a cc53afbc
     address cc53afbc found in
     _DPH_HEAP_ROOT @ 6731000
@@ -313,7 +374,11 @@ verifier!_DPH_BLOCK_INFORMATION
    +0x010 Internal         : _DPH_BLOCK_INTERNAL_INFORMATION
    +0x018 StackTrace       : 0xc0c0c0c0 Void
    +0x01c EndStamp         : 0xc0c0c0c0 
-```段中的最后一个堆条目通常是一个空闲块。堆块的状态指示为空闲块。堆块声明前一个块的大小为00108，而当前块的大小为00a30。前一块报告其自身大小为0x20字节，不匹配。位置为05f61000的堆块的使用似乎是该堆块的使用导致以下块的元数据损坏的可能性。堆块：```
+```
+
+段中的最后一个堆条目通常是一个空闲块。堆块的状态指示为空闲块。堆块声明前一个块的大小为00108，而当前块的大小为00a30。前一块报告其自身大小为0x20字节，不匹配。位置为05f61000的堆块的使用似乎是该堆块的使用导致以下块的元数据损坏的可能性。堆块：
+
+```text
 0:000> !heap -a 05f60000 
 Index   Address  Name      Debugging options enabled
   1:   05f60000 

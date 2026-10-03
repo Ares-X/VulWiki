@@ -1,0 +1,525 @@
+{
+  "encoding": "UTF-8 JSON/JSONL and text logs; gzip preserves all original bytes",
+  "artifacts": [
+    {
+      "source_artifact": "scope.json",
+      "file": "scope.json.gz",
+      "original_bytes": 612,
+      "original_sha256": "266700d98c14b6e716ea4f09f3a4e27965404d4d0d636aed2133b24e9efc33e2",
+      "gzip_sha256": "749bbf162f99969bad02b18384ddb1ad2b937b121f7689caf9c84e45915deff9",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "articles-before.jsonl",
+      "file": "articles-before.jsonl.gz",
+      "original_bytes": 1114531,
+      "original_sha256": "dce867965ce0a3ac7780c597c0ffc6d40899f7e0a0400d202fa1842fcb9e4e24",
+      "gzip_sha256": "54f4e5a91a9086cc45fa144e5d56144f78a842d286f6e71e227d9bdd05fc392c",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "articles-final.jsonl",
+      "file": "articles-final.jsonl.gz",
+      "original_bytes": 1731870,
+      "original_sha256": "3f50277317370272f134438e94fbbf42c96cdc6f2109570371fa6dcb4a59de08",
+      "gzip_sha256": "1192a7a0320c61bcb4a775341cf92e0278689e2f3f2752435966697132cf6bb8",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "application.json",
+      "file": "application.json.gz",
+      "original_bytes": 1196,
+      "original_sha256": "f04848539ba57e60a9a98776d8defe4cd00c082853dd7cfb928e5db0bcd64fcb",
+      "gzip_sha256": "3fccf1e1141c134be39c5e359ff8e329ed0d1be4b14b2c6453aff90dad05cdb7",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "exact-edits.jsonl",
+      "file": "exact-edits.jsonl.gz",
+      "original_bytes": 353507,
+      "original_sha256": "2333a8598e280a463a6a860570ddb96ddd79832f59ff0fe0056b2f8e57b04744",
+      "gzip_sha256": "aeb2954099a2bf4738c9c7ca551544c3daf037e688fdc35b3c9912c990c22f22",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "preview-proof.json",
+      "file": "preview-proof.json.gz",
+      "original_bytes": 141318,
+      "original_sha256": "0972ca6ac388c3b5f49a6fc4b31358250c0d453e1cdc8987ae8fa56958443a43",
+      "gzip_sha256": "56b466f5be4137ebaa39d216a9b244bd1f9fbb3d4032468a951472f29b1dcf59",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "git-original-proof.json",
+      "file": "git-original-proof.json.gz",
+      "original_bytes": 168,
+      "original_sha256": "a849e8d524fbf68441dfad931a569fd90157a559b3cbb64b1781da72312d9caa",
+      "gzip_sha256": "2b7819a2577bb49da09052c8748cd5f88e0aa2cc61cde8c913a448451bde693f",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "coverage-all.jsonl",
+      "file": "coverage-all.jsonl.gz",
+      "original_bytes": 3483646,
+      "original_sha256": "fdee6f0931e6b559a0026cdead0d56434bf8c2dba0db9300ddb363cc660aec74",
+      "gzip_sha256": "de86670647308358daa1e482ed70cc2bb3adc11629e01c442c8024d602055685",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "request-regression.json",
+      "file": "request-regression.json.gz",
+      "original_bytes": 642465,
+      "original_sha256": "0a9b3b8fbafbecee3656cbc4ba377ae4e1c16f283cf8528ce111fae75ec5b44c",
+      "gzip_sha256": "3ef45002f3d122f8f2311dabeb80e69d71fd92ccc8a5d25d0782b2dc54f87d4f",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "request-proof-input.json",
+      "file": "request-proof-input.json.gz",
+      "original_bytes": 10212,
+      "original_sha256": "0908f28c7420c721e116af7271d16219eb809ed76bbc8ebe59b4391198214d94",
+      "gzip_sha256": "ea6189a2dad657f2ab83620a8c83b6ae05ed5957155d5d5ab3c053ac5c2dc8d5",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "request-language-review.json",
+      "file": "request-language-review.json.gz",
+      "original_bytes": 134054,
+      "original_sha256": "4de3ccb9931a420ee216331a485b231325a5db8efab287a79240d2caab8b7432",
+      "gzip_sha256": "eb84365cf1cc34ab70b5a78bd163ffb0dcfb6fc0d5d28703b71d72bed571397e",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "literal-regression.json",
+      "file": "literal-regression.json.gz",
+      "original_bytes": 73372,
+      "original_sha256": "fe4790bd253852aee28ecf1d484a1d0005e853135e26208e8acb480876dd24ec",
+      "gzip_sha256": "5ea033e1ee5872099f751c8ee6d0273e9fffaf7e35a5f2568f31948cf964705a",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "table-plan-review.json",
+      "file": "table-plan-review.json.gz",
+      "original_bytes": 656216,
+      "original_sha256": "a2e281c04bc30f528dbe979b01f25c8fae55ffbbce0d9e0ecd31ef554f70486b",
+      "gzip_sha256": "9b65e92ffa256999fba12fde1a2f87f2121f8a13ce7cbea46b3579ec73261091",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "process-review.json",
+      "file": "process-review.json.gz",
+      "original_bytes": 12121,
+      "original_sha256": "56ab89921079b43a40f314632b9dfd324cf4034cc1a4693806520f3d24a0fa23",
+      "gzip_sha256": "15343a3e9c8ef5328309e4e51a9e88f7acf0e58fc0ad9ddef55b87b66ecc3f43",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "placeholders-review.json",
+      "file": "placeholders-review.json.gz",
+      "original_bytes": 115785,
+      "original_sha256": "7642058ae8b042890ffd0903c53aefe22eff88c95f084b0d9bb04c82bbbfdf95",
+      "gzip_sha256": "9e24d701615cdcdce2d1ca7b2543f380962f9651c3fb3f47e11386e10daffaff",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "placeholders-matches.jsonl",
+      "file": "placeholders-matches.jsonl.gz",
+      "original_bytes": 4201497,
+      "original_sha256": "655a20ab8c02058e057f6d9ba1cf503c2458a4a611e343d5bcb0818264a45d49",
+      "gzip_sha256": "a4b4cef378a64c6c06ce3dea92d1fe39a8f962a8d39e755b8a98870db19aa83f",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "projection-review.json",
+      "file": "projection-review.json.gz",
+      "original_bytes": 6995,
+      "original_sha256": "d987869ce1a0a7277e9ad514552231e8a49fcb96884a288e8b373658f8c11aa2",
+      "gzip_sha256": "e68416162af6a369ac79a70aecbab19783597401d6f28cbabff28524575b4e3f",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "overrides-navigation.json",
+      "file": "overrides-navigation.json.gz",
+      "original_bytes": 12227,
+      "original_sha256": "d646dec99f1689baf3b24eea854f0253c368238712d580dc26bdf3bfb06926a4",
+      "gzip_sha256": "a08f1f438f03a33de7b3044f3b5d236e93d4eba05021cab6a3cb6e9b2ba66c1d",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "residual-review.json",
+      "file": "residual-review.json.gz",
+      "original_bytes": 138566,
+      "original_sha256": "d8521059a40d6e87e4d06a9b6c0ad1c02d2474e380ab844f971df80591ae6811",
+      "gzip_sha256": "9cde7a87630c051276bb88d28ebf5bf8ce3fd86b626b9f4786b616895547c37c",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "residual-root-decisions.json",
+      "file": "residual-root-decisions.json.gz",
+      "original_bytes": 50636,
+      "original_sha256": "bc090b4cad9ccb3952f0fddb44a9763c31ba50fa55bb15fc344a3228378bb2b4",
+      "gzip_sha256": "3dd9f509916d419a4a5b4a55720d35c428f76e7877bd7539637b1d14f3aaeb40",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "residual-source-review-1.json",
+      "file": "residual-source-review-1.json.gz",
+      "original_bytes": 146083,
+      "original_sha256": "368637e096b0a949dc83fdeecd79be32c71946331872dd5bbe947a46b9f5b4b8",
+      "gzip_sha256": "8f14b21a397421ad61d89662ce41f63ac133615d0d236deb1bc88eb5eca5318c",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "residual-source-review-2.json",
+      "file": "residual-source-review-2.json.gz",
+      "original_bytes": 76311,
+      "original_sha256": "2a441aae9c59a620f92bf13dcbadd3f5d03500969ffe6f2a1cd4231547ac3ea1",
+      "gzip_sha256": "36cc1535cec6744d6235ffadec9f7b62629b51e6b61379211a165d25e443761e",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "resource-dispositions.json",
+      "file": "resource-dispositions.json.gz",
+      "original_bytes": 80947,
+      "original_sha256": "0e440caa08b9865810e2d4479ff690ede7327afabb5011f39aa52d81bc7c1930",
+      "gzip_sha256": "e5911e621d52d0151d4895f04a088baa02b94e1412717fe9d45e0e8dbe26dfc4",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "invalid-url-dispositions.json",
+      "file": "invalid-url-dispositions.json.gz",
+      "original_bytes": 21035,
+      "original_sha256": "b39bf63592319a8c3496f322eb80e9a9a75e16a49e0cad92454719544056d929",
+      "gzip_sha256": "47988600a64323dbb523be51c3c6e73d8d3bb1e12b6623bacbccca3486c3a493",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "restored-resource.json",
+      "file": "restored-resource.json.gz",
+      "original_bytes": 821,
+      "original_sha256": "cef748baddcad97b9529d5b26b3984a74ac9a2376cdfb9b44c2fbb8d58f7c407",
+      "gzip_sha256": "b70449b1c70d7802ca38d53055d4fa2cced2e3335de15d32da77f39d3199b1e8",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "quality-before.json",
+      "file": "quality-before.json.gz",
+      "original_bytes": 1531567,
+      "original_sha256": "bd6b9f6a5551069718043a9eefc606089fa972d94ff369680b1499eaa703455c",
+      "gzip_sha256": "976726370fe7c933b66a9400d7676c1ebf00d7aa4ab9d95bcfe72b7ebb6c30df",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "quality-final.json",
+      "file": "quality-final.json.gz",
+      "original_bytes": 1530534,
+      "original_sha256": "2b4d3598e05da06598690f466f4fc31d32d2fdeeae14db9912725c76bcf63bb2",
+      "gzip_sha256": "69d529c80b07337910b73bd363964ce63a7fb50c30395760c0bd1b516951fd24",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "quality-final-summary.json",
+      "file": "quality-final-summary.json.gz",
+      "original_bytes": 532,
+      "original_sha256": "aa97894c2bfb05806a5d4827ea7a20e2b33f4a14488bc083ee5b3eaad52dbcd8",
+      "gzip_sha256": "e975f14559520bc46d40803579a5f6eab006fe869a6d4a74c8c064e4521dfaaf",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "candidate-delta.json",
+      "file": "candidate-delta.json.gz",
+      "original_bytes": 327,
+      "original_sha256": "8a2fd1d42076ace8ba9035bde738dbe42f55118abeb3b130bc120b78ee100a6a",
+      "gzip_sha256": "de7f76d57c940bbb654cbc53cb3dc6954b4699b3b15c52c43e52b8f3fd9a690b",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "persistent-before/summary.json",
+      "file": "persistent-before-summary.json.gz",
+      "original_bytes": 592,
+      "original_sha256": "f836acb052d2103f7d922c26de1ce5c69c85c200a8b36ead93528f0508ae99ed",
+      "gzip_sha256": "0a263b4a9f72624893afc37535f2f46ad7a5ceb5f58890064ba8d89dd97ad921",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "persistent-before/inventory.jsonl",
+      "file": "persistent-before-inventory.jsonl.gz",
+      "original_bytes": 1789843,
+      "original_sha256": "dab78e7d9540e5b858df2635ccc11c429f19cb6843409f3b35437abe179f88c4",
+      "gzip_sha256": "c48fcad63485b1b109034c4d421d0c79286aebf7f02d22e2a154fda1a63e2aca",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "persistent-before/candidates.jsonl",
+      "file": "persistent-before-candidates.jsonl.gz",
+      "original_bytes": 1657908,
+      "original_sha256": "d3944cfe36e18a8978a963df94b7496e900f20917edd6efa30d6e1df4e2a16a7",
+      "gzip_sha256": "3d750ba9c018baf185d89fef171079c39432dc7823d203e0d1499bd81021cc8f",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "persistent-final/summary.json",
+      "file": "persistent-final-summary.json.gz",
+      "original_bytes": 426,
+      "original_sha256": "e9375cf5954abeb50fb1b26945133b985cb8836b87cf7d1526c38dd33a5fb33d",
+      "gzip_sha256": "3cb880df58663883be1e3b34df3f2af40d9021e38dcd1965427bc41a732c8e7c",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "persistent-final/inventory.jsonl",
+      "file": "persistent-final-inventory.jsonl.gz",
+      "original_bytes": 1789843,
+      "original_sha256": "96f7b34ad2b0ae391bd0f98b2738d97994a5b543e1163a93f9c9c9682762740e",
+      "gzip_sha256": "d5c21015f7b9246225e92b6fc57a5bcb18790ebdcf2338d5d001f47b74c4d67a",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "persistent-final/candidates.jsonl",
+      "file": "persistent-final-candidates.jsonl.gz",
+      "original_bytes": 315012,
+      "original_sha256": "de5c3c62c11b42a48f2a773dc072c76374c433e245fcea7eb5d16a6183dab061",
+      "gzip_sha256": "0e511d1d8c4f49450cea106b282e08fee015da72e6a83b00eaf85644d3f2bfc8",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "render-preview-independent-summary.json",
+      "file": "render-preview-independent-summary.json.gz",
+      "original_bytes": 316,
+      "original_sha256": "578206a49aee13948a32d821472eb5a42da4bd9d8482bde1d6d0072b5bbaa0eb",
+      "gzip_sha256": "fe97dfac8d55a7576418a42f162f2e517a9c50de91c521cf563324ff1b8340e8",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "render-preview-independent.jsonl",
+      "file": "render-preview-independent.jsonl.gz",
+      "original_bytes": 2827356,
+      "original_sha256": "838c03bedf06db72a4978af4c93082c48e6cf250690176a1aa5d62ce3d1470a1",
+      "gzip_sha256": "f572373ef790bb7a0713f491b9f69aee0086fd05708c63cc994197186e35c01c",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "final-projection-proof.json",
+      "file": "final-projection-proof.json.gz",
+      "original_bytes": 42319,
+      "original_sha256": "84da39583b4b45090da0a5b91b9d4feec611c34858a158b7dda6909166302f7e",
+      "gzip_sha256": "02f2f1defd3fd3783b0798a176ae1dc89abb4b16f086877240f5e47de3bb615a",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "final-extra-proof.json",
+      "file": "final-extra-proof.json.gz",
+      "original_bytes": 45078,
+      "original_sha256": "3eaaf8fddcc2df40f08b774770df0d72d1008da3ea82f3a7c3e34985b4aacd55",
+      "gzip_sha256": "a65f71b1c97b8564062359810d9cacacc6b2e929bcac40d9690dcfd641858406",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "article-byte-ledger.jsonl",
+      "file": "article-byte-ledger.jsonl.gz",
+      "original_bytes": 2321023,
+      "original_sha256": "42bb30d89a44fc66d9edf53b1b47c8126889600b45e78455a5bfdd469ef583cd",
+      "gzip_sha256": "5ab05dda59cf1ee286a01046c75f72ab6ce4b203c12fba11db9718ab029aa506",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "source-projection-ledger.jsonl",
+      "file": "source-projection-ledger.jsonl.gz",
+      "original_bytes": 9316085,
+      "original_sha256": "11567f6a61eeb11d0df7e13d6978d436a0458a13dd73a5b57c99adc38e81175a",
+      "gzip_sha256": "38c8dd1f6591c0391104b95b55abcb50324b9985dd63b1e38a8a070474ee11b0",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "resource-byte-ledger.jsonl",
+      "file": "resource-byte-ledger.jsonl.gz",
+      "original_bytes": 19845123,
+      "original_sha256": "bd47c1bbd5463c411ba5e12ef02003ab2baba9d03fd3018f9ab76084acdcd75e",
+      "gzip_sha256": "4b5aa60418aa133dfba1f999b8834cb584203ad66aecf9a32dbfab15ac44e339",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "marked-resource-byte-ledger.jsonl",
+      "file": "marked-resource-byte-ledger.jsonl.gz",
+      "original_bytes": 5465763,
+      "original_sha256": "788c60669cdfab2bfa7af4fcba91423744236cdd72d330f4ac06469f177d59de",
+      "gzip_sha256": "3d8c6f510fa7de11c0e93fc21b49d215962be40ed065e6d3c1f7c16dbee2670d",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "index-build-final.json",
+      "file": "index-build-final.json.gz",
+      "original_bytes": 514,
+      "original_sha256": "8023ddaf9b3497e9ab04c65543c760f23f261a359b7cb388b025a52ca8fffc80",
+      "gzip_sha256": "6f916c6a9d92a6b02e83abc6d3c2f357b556f8a5d5a3b12f934d31b34f62fbf2",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "index-check-final.json",
+      "file": "index-check-final.json.gz",
+      "original_bytes": 441,
+      "original_sha256": "63cb890199348d4d67d075fb06cbda4359fceded78b6b682090caf6b59c32fd5",
+      "gzip_sha256": "c19388b8806c4ec775eba3c0a94c87b1773269dbb965d93efb6d8a0348017bbd",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "baseline-proof.json",
+      "file": "baseline-proof.json.gz",
+      "original_bytes": 144,
+      "original_sha256": "88b21346cf285a6176bea1714c466f74442d06d9f46511fd1fcee13bb109fa74",
+      "gzip_sha256": "0d120ce399934ecd9aafb1e0894aae06707fed94090d369a451f6d0b1d8972f6",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "protected-files-proof.json",
+      "file": "protected-files-proof.json.gz",
+      "original_bytes": 578,
+      "original_sha256": "42f893c17ba71661d963020e50975eab4d18417aae9d48cb90110553bd413c66",
+      "gzip_sha256": "47b286cb8540c4ad28e08d17caad965dd84ac11c48392f87c12669d1ab65ebce",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "build-check-location.json",
+      "file": "build-check-location.json.gz",
+      "original_bytes": 809,
+      "original_sha256": "d8d5fba382c92eece192ac47657477d6cbd22fae397c943c5d239edda0c457a1",
+      "gzip_sha256": "1aceb6e88aeeffa5dd7ef10ff1c45c389cbd4d81567a3d803745f0c3f76891f4",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "build-overlay.json",
+      "file": "build-overlay.json.gz",
+      "original_bytes": 53321,
+      "original_sha256": "785caa2699b714970b3b719e2a4aa5725db2e9d3dd0ded4eae2c111d4701e31a",
+      "gzip_sha256": "4de70f31bc184fc20f205a455d1eac6e768100c2478698b362a977d5e5108409",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "python-tests.log",
+      "file": "python-tests.log.gz",
+      "original_bytes": 8920,
+      "original_sha256": "7574f6f8fa8b69828ac061afb261fe88a0e5fe11cacbe89944147338dddd3208",
+      "gzip_sha256": "cab653951a3becb08fac422ff5f82a6c5ea2df061f68cbb8f59101b3a49c9e46",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "node-tests.log",
+      "file": "node-tests.log.gz",
+      "original_bytes": 2054,
+      "original_sha256": "59d47b73c34aebb13c140432f10a68468e3910300faa222d173dfbdd7a0388ad",
+      "gzip_sha256": "aa1b544283a6888c6950ed9a7684f52cf8832a5abe8dec26807b6211e17b6988",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "build-check.log",
+      "file": "build-check.log.gz",
+      "original_bytes": 8067,
+      "original_sha256": "5f3d9d3e7046d367b67b62ff4745696f03956b37e2a0571be8c8b36a85a4a8d0",
+      "gzip_sha256": "c4bf0b7ec7707b181631fbcfd025db66a33cec6f470b898769262eef95acb930",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "isolated-index-build.log",
+      "file": "isolated-index-build.log.gz",
+      "original_bytes": 514,
+      "original_sha256": "8023ddaf9b3497e9ab04c65543c760f23f261a359b7cb388b025a52ca8fffc80",
+      "gzip_sha256": "6f916c6a9d92a6b02e83abc6d3c2f357b556f8a5d5a3b12f934d31b34f62fbf2",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "diff-check.txt",
+      "file": "diff-check.txt.gz",
+      "original_bytes": 0,
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "gzip_sha256": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "corpus-01/findings.json",
+      "file": "corpus-01-findings.json.gz",
+      "original_bytes": 159354,
+      "original_sha256": "865b87aec283c7bcf3c2b9c4c3e1533c8bfa9f6465ecb59a8054b0b0533132a5",
+      "gzip_sha256": "a1abcca0603f6dd80627e809ceda9ff34c815fc2fef838ec4e36cef7b43d996e",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "corpus-01/rejected-original.json",
+      "file": "corpus-01-rejected-original.json.gz",
+      "original_bytes": 158691,
+      "original_sha256": "d557772c764157670bea92854368d464db72d07bc3452086e13f831f57d51b94",
+      "gzip_sha256": "17ef71c6e1787b340c01e5de0046dfd20c9a2b24c875cf54e5fcbacf59c48021",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "corpus-02/findings.json",
+      "file": "corpus-02-findings.json.gz",
+      "original_bytes": 140032,
+      "original_sha256": "724f9fd5930791d77eb8fd9c0b3b162b4a759db3f43d3b2026da8a0d198a4440",
+      "gzip_sha256": "fd1f635f9b4df11b6edf63abe02f0ec07640dc67589dd4d41de80a30bb86c9c9",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "corpus-03/findings.json",
+      "file": "corpus-03-findings.json.gz",
+      "original_bytes": 277099,
+      "original_sha256": "2c497d0ccb5cca5f2a7fb4ec5dde6e5192dfe88997d3751ef81fb5cd4fabf501",
+      "gzip_sha256": "91ad88f75041b04281c481865b57f257562ef498f8e50c8d279927d1b7c30092",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "corpus-04/findings.json",
+      "file": "corpus-04-findings.json.gz",
+      "original_bytes": 141061,
+      "original_sha256": "bf75cdfa685acd5e03babe091c7d804e2ea2f8c6a336e15343f620e38c1a2232",
+      "gzip_sha256": "69b41d3cb6a995a6f07ea6fc0d69bae8b18f5d0b4c0ff13929ac85ae203559f7",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "corpus-05/findings.json",
+      "file": "corpus-05-findings.json.gz",
+      "original_bytes": 80283,
+      "original_sha256": "91566734514321d6e0c925f65c6c17c83c568b1dff68dc4ea155006901271803",
+      "gzip_sha256": "428ecc5278cfe7301e0fb765b6b8d046bed3a910491abe297d476f7ae5273e86",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "corpus-06/findings.json",
+      "file": "corpus-06-findings.json.gz",
+      "original_bytes": 487315,
+      "original_sha256": "ab68954aa564695812229f8d69db871b3b59f2422cfa9c62a947664f1021c0df",
+      "gzip_sha256": "a74da79d81d667813c449173193e609b1e9554969b7d24a1dcab663ac7dbe5d4",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "corpus-06/rejected-original.json",
+      "file": "corpus-06-rejected-original.json.gz",
+      "original_bytes": 268023,
+      "original_sha256": "8ec4792a8d840e3efdeb9e1cd253e4f735b10d8e967ab0c9c57956007d0bc05b",
+      "gzip_sha256": "ffec20868b6fcb0cb6a583da2a99cd82f444ecc385e5d47b21384c3a3851c2b4",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "corpus-07/findings.json",
+      "file": "corpus-07-findings.json.gz",
+      "original_bytes": 276490,
+      "original_sha256": "7a34193218c1007c1af4755aac9a508814a80c0373ec9e22183aa5c107b7a467",
+      "gzip_sha256": "c9995529c24d76fd1fcfe48f96a36eba8b820684e70f8aef9ec329f54b6966ec",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "corpus-08/findings.json",
+      "file": "corpus-08-findings.json.gz",
+      "original_bytes": 226006,
+      "original_sha256": "14979df1852ddca458951d85426103ef2f2303aacee9840c4f12290ec7f2bf1e",
+      "gzip_sha256": "472a483bc996578ecb7564f0f3335517af1ddedec09f80348352c68608c4349e",
+      "values": "complete original values; gzip compression only; no redaction"
+    },
+    {
+      "source_artifact": "scope-diff-proof.json",
+      "file": "scope-diff-proof.json.gz",
+      "original_bytes": 176,
+      "original_sha256": "41a38ed761971338ecdafcac41a08f5b3013a2cab453964aa569a81bcb1435a9",
+      "gzip_sha256": "e855bbf61bd49559a516b1b6ffe2f5c7fc1f0dee4c22260462a1e665a523a680",
+      "values": "complete original values; gzip compression only; no redaction"
+    }
+  ]
+}

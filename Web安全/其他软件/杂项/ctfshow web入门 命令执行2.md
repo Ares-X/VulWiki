@@ -211,6 +211,7 @@ fclose($myfile);
   
    
   
+```python
 import requests  
   
 import urllib  
@@ -262,6 +263,7 @@ while True:
     param = action(input("\n[+] your function：")) + action(input("[+] your command：")) + ";"  
   
 print(param)  
+```
   
    
   

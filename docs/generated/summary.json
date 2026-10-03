@@ -5,11 +5,10 @@
   "fingerprints": 569,
   "indexed_sources": 5707,
   "issues": {
-    "embedded_code_candidate": 1,
     "fingerprint_unverified": 800,
     "identifier_inactive": 27,
     "identifier_role_unknown": 215,
-    "noncontent_link_candidate": 30,
+    "noncontent_link_candidate": 25,
     "path_legacy": 2,
     "site_relative_link": 81,
     "source_missing": 3854,
@@ -18,6 +17,6 @@
   "primary_cve_identifiers": 3207,
   "primary_entries": 5613,
   "schema_version": 1,
-  "source_digest": "458ce104c6d2e5a1247540f430bf48c7304ef5908f315f2484f7fe98017d32d5",
+  "source_digest": "246c28a458e1c537ca4bab2d3b749d3958892e9c42e697e5d7b3df74e24a765e",
   "verification": "offline-static-only"
 }

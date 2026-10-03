@@ -41,6 +41,7 @@ schema_version: "1"
 # fastjson 之各个版本 payload 测试
 
 <meta name="referrer" content="no-referrer"/>
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/dnxCEt03jJUFS3-ROHdihg)
 
 每次测试遇到 fastjson 无法定位版本，部分文章里的 payload 也没有准确的版本范围，抽空对 payload 做了个测试，这里记录下

@@ -54,6 +54,8 @@ SOURCE INCITE
                     SOURCE INCITE  securitainment   2026-02-06 08:50  
   
 <table><thead><tr style="border-top-width: 1px;border-top-style: solid;border-top-color: rgb(204, 204, 204);background-color: white;margin: 0px;padding: 0px;"><th style="font-weight: bold;border: 1px solid rgb(204, 204, 204);text-align: left;margin: 0px;padding: 6px 13px;"><section><span leaf="">原文链接</span></section></th><th style="font-weight: bold;border: 1px solid rgb(204, 204, 204);text-align: left;margin: 0px;padding: 6px 13px;"><section><span leaf="">作者</span></section></th></tr></thead><tbody><tr style="border-top-width: 1px;border-top-style: solid;border-top-color: rgb(204, 204, 204);background-color: white;margin: 0px;padding: 0px;"><td style="border: 1px solid rgb(204, 204, 204);text-align: left;margin: 0px;padding: 6px 13px;"><section><span leaf="">https://srcincite.io/blog/2026/01/28/samstung-part-2-remote-code-execution-in-magicinfo-server.html</span></section></td><td style="border: 1px solid rgb(204, 204, 204);text-align: left;margin: 0px;padding: 6px 13px;"><section><span leaf="">SOURCE INCITE</span></section></td></tr></tbody></table>  
+
+
 在 part 1 中，我详细介绍了自己如何一路追进一个"兔子洞"，在默认配置下差点实现了预认证远程代码执行（pre-auth RCE）。虽然第一部分没有达成最终目标，但在进一步复盘补丁之后，我终于获得了完整成功——只不过平均需要 ~ 12 小时才能落地一个 shell。我们来调查这条漏洞链，并搞清楚原因。  
   
 请注意：本文会展示一些直接用 fernflower decompiler 反编译得到的代码片段，而不是我平时常用的 jd-eclipse。原因是 jd-eclipse 在很多类上都没法正确反编译。  

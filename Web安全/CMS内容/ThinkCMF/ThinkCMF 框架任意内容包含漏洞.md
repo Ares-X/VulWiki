@@ -39,6 +39,7 @@ schema_version: "1"
 # ThinkCMF 框架任意内容包含漏洞
 
 <meta name="referrer" content="no-referrer"/>
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/jmyGLRsH7NAH_KqiVH48uQ)
 
 **ThinkCMF 简介**

