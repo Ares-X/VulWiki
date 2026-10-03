@@ -74,7 +74,7 @@ canonical: "Web安全/安全设备/中科网威/中科网威-NPFW防火墙-Comma
 
 发送请求包
 
-```php
+```http
 POST /direct/polling/CommandsPolling.php HTTP/1.1
 Host: 
 Cookie: PHPSESSID=014d2705856e1df139772db42ccbaf9f

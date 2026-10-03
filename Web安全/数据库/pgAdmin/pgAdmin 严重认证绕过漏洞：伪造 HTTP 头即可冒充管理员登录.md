@@ -70,6 +70,8 @@ WebserverAuthentication.get_user()
   
 该漏洞在两个 CVSS 版本中均被评为“严重”：  
 <table><thead><tr><th><section><span leaf="">评分体系</span></section></th><th><section><span leaf="">严重等级</span></section></th><th><section><span leaf="">分数</span></section></th></tr></thead><tbody><tr><td><section><span leaf="">CVSS 3.1</span></section></td><td><section><span leaf="">Critical（严重）</span></section></td><td><section><span leaf="">9.8</span></section></td></tr><tr><td><section><span leaf="">CVSS 4.0</span></section></td><td><section><span leaf="">Critical（严重）</span></section></td><td><section><span leaf="">9.3</span></section></td></tr></tbody></table>  
+
+
 CVSS 3.1 向量显示：该漏洞可远程利用、攻击复杂度低、无需任何权限和用户交互，且可能对机密性、完整性和可用性造成重大影响。  
   
 需要注意的是，此问题仅在 pgAdmin 的 AUTHENTICATION_SOURCES  

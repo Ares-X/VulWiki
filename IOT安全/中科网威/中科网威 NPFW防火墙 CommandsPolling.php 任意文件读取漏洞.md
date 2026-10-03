@@ -75,7 +75,7 @@ relation_type: "duplicate_of"
 
 发送请求包
 
-```php
+```http
 POST /direct/polling/CommandsPolling.php HTTP/1.1
 Host: 
 Cookie: PHPSESSID=014d2705856e1df139772db42ccbaf9f

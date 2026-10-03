@@ -69,8 +69,8 @@ WPS Office是由Microsoft珠海的中国软件开发商金山软件开发的办�
 #### 漏洞分析
 
 在WPS Office中用于图像格式解析的Qt模块中发现堆损坏。嵌入WPS office的特制图像文件可能会触发此漏洞。打开特制的文档文件时，触发访问冲突。EDX指向数组的指针，而EAX是指向数组的索引。```
-0:000> g
 ```text
+0:000> g
 (c50.b4): Access violation - code c0000005 (first chance)
 First chance exceptions are reported before any exception handling.
 This exception may be expected and handled.

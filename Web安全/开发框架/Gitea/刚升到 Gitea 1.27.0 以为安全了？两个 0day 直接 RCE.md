@@ -94,6 +94,8 @@ CVE 状态
 CVSS 预估  
  10.0 Critical（网络可达 + 无需认证/低权限 + 无交互 + 作用域变更 + 全影响面）。最终分值以官方分配为准。  
 <table><tbody><tr style="background-color: rgb(243, 245, 248);"><td style="border: 1px solid rgb(231, 233, 238);padding: 8px 10px;font-weight: bold;color: rgb(31, 35, 41);"><section><span leaf="">版本区间</span></section></td><td style="border: 1px solid rgb(231, 233, 238);padding: 8px 10px;font-weight: bold;color: rgb(31, 35, 41);"><section><span leaf="">状态</span></section></td></tr><tr><td style="border: 1px solid rgb(231, 233, 238);padding: 8px 10px;"><section><span leaf="">≤ v1.26.4</span></section></td><td style="border: 1px solid rgb(231, 233, 238);padding: 8px 10px;color: rgb(214, 58, 47);font-weight: bold;"><section><span leaf="">受影响（含旧 CVE-2026-58443）</span></section></td></tr><tr><td style="border: 1px solid rgb(231, 233, 238);padding: 8px 10px;"><section><span leaf="">v1.27.0（当前最新版）</span></section></td><td style="border: 1px solid rgb(231, 233, 238);padding: 8px 10px;color: rgb(214, 58, 47);font-weight: bold;"><section><span leaf="">受影响（新 0day 已验证）</span></section></td></tr><tr><td style="border: 1px solid rgb(231, 233, 238);padding: 8px 10px;"><section><span leaf="">暂无安全版本</span></section></td><td style="border: 1px solid rgb(231, 233, 238);padding: 8px 10px;color: rgb(214, 58, 47);font-weight: bold;"><section><span leaf="">⚠️ 补丁待发布</span></section></td></tr></tbody></table>  
+
+
 ⚠️ 风险定性，  
 这是目前 Gitea 最严重的安全事件之一。上一轮 CVE-2026-58443 还只是授权绕过写私有仓，这次直接是 RCE + 读任意文件，而且打的正是大家刚升上去的「安全版」v1.27.0。不需要管理员权限意味着任何有正常代码提交权限的账号都可能成为攻击入口。如果你在运维 Gitea，不管什么版本，现在就应该按下方临时缓解措施行动起来。  
   

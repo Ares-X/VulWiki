@@ -60,6 +60,8 @@ Hadoop分布式文件系统（HDFS）本地客户端中存在一个中等严重�
   
 当本地HDFS客户端处理特制的统一资源标识符（URI）时，会触发此越界写入漏洞。攻击者通过利用URI解析逻辑中不当的边界检查，可使应用程序向意外的内存位置写入数据，进而导致系统行为不可预测，包括服务中断和潜在的数据完整性问题。  
 <table><thead><tr style="-webkit-font-smoothing: antialiased;"><th style="-webkit-font-smoothing: antialiased;"><span data-spm-anchor-id="5176.28103460.0.i28.96a07551DjVQWF" style="-webkit-font-smoothing: antialiased;"><span leaf="">CVE ID</span></span></th><th style="-webkit-font-smoothing: antialiased;"><span style="-webkit-font-smoothing: antialiased;"><span leaf="">严重程度</span></span></th><th style="-webkit-font-smoothing: antialiased;"><span style="-webkit-font-smoothing: antialiased;"><span leaf="">受影响版本</span></span></th><th style="-webkit-font-smoothing: antialiased;"><span style="-webkit-font-smoothing: antialiased;"><span leaf="">组件</span></span></th></tr></thead><tbody><tr style="-webkit-font-smoothing: antialiased;"><td style="-webkit-font-smoothing: antialiased;"><span style="-webkit-font-smoothing: antialiased;"><span leaf="">CVE-2025-27821</span></span></td><td style="-webkit-font-smoothing: antialiased;"><span style="-webkit-font-smoothing: antialiased;"><span leaf="">中等</span></span></td><td style="-webkit-font-smoothing: antialiased;"><span style="-webkit-font-smoothing: antialiased;"><span leaf="">3.2.0 – 3.4.1</span></span></td><td style="-webkit-font-smoothing: antialiased;"><span style="-webkit-font-smoothing: antialiased;"><span leaf="">HDFS本地客户端</span></span></td></tr></tbody></table>  
+
+
 使用HDFS本地客户端进行分布式存储操作的组织面临特殊风险，因为被破坏的文件系统操作可能会影响整个集群环境中的数据可靠性。  
   
 该漏洞由安全研究员BUI Ngoc Tan发现并报告，他因负责任的披露而获得认可。Apache已将此问题归类为中等严重性问题，内部追踪为HDFS-17754。  

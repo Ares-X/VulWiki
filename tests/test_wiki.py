@@ -264,6 +264,53 @@ class WikiTests(unittest.TestCase):
         self.article(body='```html\n<img src="missing.png">\n![fake](missing.png)\n```\n')
         self.assertFalse(any(i.code.endswith('missing') for i in self.scan()[0].issues))
 
+    def test_http_request_body_outside_fence(self):
+        cases = [
+            ('POST /time-clock HTTP/1.1\nContent-Type: application/x-www-form-urlencoded\nContent-Length: 16', 'function=phpinfo'),
+            ('OPTIONS /cyberpanel HTTP/1.1\nContent-Type: application/json', '{"statusfile":"/dev/null"}'),
+            ('POST /array HTTP/1.1\nContent-Type: application/json', '["first", {"second": 2}]'),
+            ('POST /zigbee HTTP/1.1\nContent-Type: application/x-www-form-urlencoded', 'date=2024-11-06%27 UNION SELECT 1'),
+            ('POST /h3c/byod HTTP/1.1\nContent-Type: application/x-www-form-urlencoded', 'javax.faces.ViewState=opaque-value'),
+            ('POST /h3c/login HTTP/1.1\nContent-Type: application/x-www-form-urlencoded', 'javax.faces.ViewState=second-value'),
+            ('POST /expedition HTTP/1.1\nContent-Type: application/x-www-form-urlencoded', 'ram=watchTowr`curl+http://example.invalid`'),
+            ('POST /soap HTTP/1.1\nContent-Type: application/soap+xml; charset=utf-8', '<soap:Envelope xmlns:soap="urn:example">'),
+            ('POST /upload HTTP/1.1\nContent-Type: multipart/form-data; boundary=----ExampleBoundary', '------ExampleBoundary'),
+        ]
+        for index, (headers, body_line) in enumerate(cases):
+            with self.subTest(path=headers.split()[1]):
+                path = self.article('request-' + str(index), body='```http\n' + headers + '\n```\n' + body_line + '  \n')
+                record = next(r for r in self.scan() if r.path == path)
+                issues = [i for i in record.issues if i.code == 'http_body_outside_fence']
+                self.assertEqual(len(issues), 1)
+                self.assertEqual(issues[0].detail, 'HTTP request body outside code fence: ' + body_line + '  ')
+                article_text = (self.root / path).read_text(encoding='utf-8')
+                self.assertEqual(issues[0].line, next(n for n, line in enumerate(article_text.splitlines(), 1) if line == body_line + '  '))
+
+    def test_complete_fenced_http_request_is_not_a_missing_body(self):
+        original = (
+            '```http\nPOST /api HTTP/1.1\nContent-Type: application/json\n'
+            'Cookie: session=public-test-token\n\n{"token":"public-test-token"}\n```\n'
+        )
+        path = self.article(body=original)
+        source = (self.root / path).read_text(encoding='utf-8')
+        record = next(r for r in self.scan() if r.path == path)
+        self.assertEqual((self.root / path).read_text(encoding='utf-8'), source)
+        self.assertFalse(any(i.code == 'http_body_outside_fence' for i in record.issues))
+
+    def test_http_body_detector_ignores_attachments_explanations_and_get_notes(self):
+        cases = [
+            '```http\nPOST /upload HTTP/1.1\nContent-Type: multipart/form-data\n```\n[附件](payload.yaml)\n',
+            '```http\nGET /result HTTP/1.1\nContent-Type: text/plain\n```\nUEsDBAoAAAA=\n',
+            '```http\nPOST /api HTTP/1.1\nContent-Type: application/json\n\n{"x":1}\n```\n正文说明\n',
+            '```http\nPOST /api HTTP/1.1\nContent-Type: application/json\n```\n请求正文说明：body 字段按文档所述传入。\n',
+            '```python\nPOST /api HTTP/1.1\nContent-Type: application/json\n```\n{"x":1}\n',
+            '```http\nPOST /api HTTP/1.1\nContent-Type: application/json\n```\n{{请求正文}}\n',
+        ]
+        for index, body in enumerate(cases):
+            with self.subTest(index=index):
+                self.article('negative-' + str(index), body=body)
+        self.assertFalse(any(i.code == 'http_body_outside_fence' for r in self.scan() for i in r.issues))
+
     def test_reference_and_html_images(self):
         links = wiki.markdown_links('![a][pic]\n[pic]: .resource/a.png\n<img src=".resource/b.png">\n')
         self.assertIn(('.resource/a.png', True), links)

