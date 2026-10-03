@@ -603,13 +603,13 @@
     }
   ],
   "remote_render": {
-    "completed_head": "8aa033b3346570b266ed944889e4d63011bcd51e",
-    "articles_viewed": 35,
-    "existing_append_footers_viewed": 2,
-    "fenced_blocks_compared": 21,
+    "completed_head": "e2718a00b2b907033c784bea458d9e036af52c8e",
+    "articles_viewed": 43,
+    "existing_editorial_updates_viewed": 14,
+    "fenced_blocks_compared": 25,
     "copy_control_values_match_except_terminal_LF": true,
     "os_clipboard_verified": false,
-    "remaining": "8 new articles and12 existing editorial changes await published Preview review"
+    "all_changed_article_previews_checked": true
   },
   "poc_executed": false,
   "example_targets_requested": false,
@@ -1002,5 +1002,16 @@
       "integrated_sha256": "fb620b7697dc224ac524aea82901d422abd0a8a742f7f8fc77098bc345238030",
       "master_body_preserved": true
     }
-  ]
+  ],
+  "ci_at_article_completion": {
+    "head": "e2718a00b2b907033c784bea458d9e036af52c8e",
+    "checks": [
+      "https://github.com/Ares-X/VulWiki/actions/runs/37105604728/job/111153381945",
+      "https://github.com/Ares-X/VulWiki/actions/runs/37105602742/job/111153376261"
+    ],
+    "conclusions": [
+      "SUCCESS",
+      "SUCCESS"
+    ]
+  }
 }
