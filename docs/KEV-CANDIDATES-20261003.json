@@ -8,7 +8,7 @@
   "removed_entry": "CVE-2026-69836",
   "master_commit": "cfb19294812b1435a57e866a87dd18e2ff3ebec3",
   "open_pr10_commit": "e102e1d2fb26e381e7c4d270629738d0f3f8654d",
-  "completed_article_deliverables": 102,
+  "completed_article_deliverables": 128,
   "coverage_note": "All filter identities inventoried; substantive source review remains in progress. Identifier matches do not by themselves prove duplicates.",
   "rows": [
     {
@@ -117,8 +117,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/网络设备/F5 BIG-IP/（CVE-2026-94127）F5 BIG-IP APM OAuth授权服务器远程代码执行漏洞.md",
@@ -126,7 +124,8 @@
             "sha256": "ac81b5111e421500f16148cd780af3850fb09d259d9fad4b0e0eb316028559ec"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -706,8 +705,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/网络设备/MikroTik RouterOS/CVE-2026-67276  RouterOS SSH公钥认证绕过漏洞（POC）.md",
@@ -715,7 +712,8 @@
             "sha256": "75499aabfc49e1e127659cb4fb13cf87a37f46a612d7ce4beb0edcdbf7755ae0"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -733,8 +731,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/网络设备/MikroTik RouterOS/RouterOS预认证rekey与SSH策略链分析-CVE-2026-67279.md",
@@ -742,7 +738,8 @@
             "sha256": "1882a77e73597bb700c05b1c367970bc23df67f406f846fe5a139a0abed62702"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -839,8 +836,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/网络设备/SonicWall/SMA1000-OPTIONS-CouchDB-SNMP链-CVE-2026-83548-83549.md",
@@ -848,7 +843,8 @@
             "sha256": "48ed1b226ae3209ab4a6ff74a340953d3fd54db732516b5727f5c759ef9916ef"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -868,8 +864,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/网络设备/SonicWall/SMA1000-OPTIONS-CouchDB-SNMP链-CVE-2026-83548-83549.md",
@@ -877,7 +871,8 @@
             "sha256": "48ed1b226ae3209ab4a6ff74a340953d3fd54db732516b5727f5c759ef9916ef"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -915,8 +910,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "selected-technical-sections-only",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/中间件/JFrog/（CVE-2026-82329）JFrog Artifactory空join key认证绕过漏洞.md",
@@ -924,7 +917,8 @@
             "sha256": "5ad3470082e1c9a89002b22b31c55b4287190675d002fdad34f0ecd0f95db50f"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "selected-technical-sections-only",
       "audited_read_provenance": null,
@@ -942,8 +936,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/商业软件/PaperCut/PaperCut-Tapestry配置绕过与外部用户查询代码执行链-CVE-2026-81578-82078.md",
@@ -951,7 +943,8 @@
             "sha256": "cf20f71dbeeff39acc9bae9d6325856aa9a19148723734cb0781f51124544ef1"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -969,8 +962,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/商业软件/PaperCut/PaperCut-Tapestry配置绕过与外部用户查询代码执行链-CVE-2026-81578-82078.md",
@@ -978,7 +969,8 @@
             "sha256": "cf20f71dbeeff39acc9bae9d6325856aa9a19148723734cb0781f51124544ef1"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -996,8 +988,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/开发框架/Gitea/Gitea-diffpatch双次补丁Git-hook执行-CVE-2026-60004.md",
@@ -1005,7 +995,8 @@
             "sha256": "60fbc6393a1388d94f3add97240637d667f3e1778f67022099faea2c3474d2fe"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -1108,8 +1099,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/云平台/Citrix/NetScaler-SAML-RelayState错误码混淆-CVE-2026-19490.md",
@@ -1117,7 +1106,8 @@
             "sha256": "897221f98f25de583be1323f105b72caf8d6ef39564fbcb963d2c2ac2d30b3f8"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -1137,8 +1127,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/AI应用/MLflow/MLflow-Webhook重定向DNS重绑定SSRF-CVE-2026-64849.md",
@@ -1146,7 +1134,8 @@
             "sha256": "81cadd6c7e908c7de0cec20054cc2a67b2b890b58e5dd9f24f79deb3c17b83b4"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -1164,8 +1153,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/邮件系统/Zimbra/Zimbra-SMTP日志Swatchdog命令注入-CVE-2026-73570.md",
@@ -1173,7 +1160,8 @@
             "sha256": "95a5d09a942b4ba31a4e6fb5c22b5920a0a5f7c565fbdbca45bc7209b8ca7376"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -1233,8 +1221,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/CMS内容/Magento/Magento客户会话身份切换-CVE-2026-71362.md",
@@ -1242,7 +1228,8 @@
             "sha256": "affecbce5afab85efaf436ae5559106d7d429686e3a1bcf76d7f6d6cfc56620a"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -1528,8 +1515,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/开发框架/JetBrains/TeamCity agent polling反序列化链与公开模块残留边界（CVE-2026-63077）.md",
@@ -1537,7 +1522,8 @@
             "sha256": "60221396046e963023b72f1b703038657e9e3fc4f74b3c2571ea04b8b13b7241"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -1777,8 +1763,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/商业软件/Sangoma/Switchvox pa端点PhoneIP SQL注入与公开模板判定（CVE-2026-9586）.md",
@@ -1786,7 +1770,8 @@
             "sha256": "5ff0afc82f13cb97a1aa108f8f606dcfde4c175addc9176d99f9da05a1271daf"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -1909,8 +1894,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/云平台/Microsoft SharePoint/SharePoint JWT actor token验证缺失与模板假阳性边界（CVE-2026-55040）.md",
@@ -1918,7 +1901,8 @@
             "sha256": "048e644ac32aca2f0786f79e28492a3be0831a97a08f13b083919e56bbb42205"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -2150,8 +2134,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/其他软件/Kestra/Kestra configs后缀白名单与未认证工作流执行（CVE-2026-49869）.md",
@@ -2159,7 +2141,8 @@
             "sha256": "f08a94a7a86b6fe84df1fedf6ff8dff627fec7acaf4dab867a82210c65202bb8"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -2235,8 +2218,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/AI应用/Langflow/Langflow responses跨用户Flow执行与UUID分支授权缺口（CVE-2026-55255）.md",
@@ -2244,7 +2225,8 @@
             "sha256": "2390c63bd6d5cf641da5174c69d20fc2dd4d5f5a7bef80609060b73a3a54a9a0"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -2303,8 +2285,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/CMS内容/Joomla/iCagenda附件上传PoC的版本差异与批量写入风险（CVE-2026-48939）.md",
@@ -2312,7 +2292,8 @@
             "sha256": "990848b5f84ca1a639f5d02b2219c6d89d633938d439429f3f3b4fa44336dbdd"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -2554,8 +2535,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/服务器软件/Splunk/Splunk Sidecar任意文件截断到数据库恢复写入链（CVE-2026-20253）.md",
@@ -2563,7 +2542,8 @@
             "sha256": "c108812b434b41563fd95199c8bf5724b577a3683cfbde4039ace7603f889291"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -2622,8 +2602,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/网络设备/Ivanti/CVE-2026-10520 _ Ivanti Sentry Pre-Authenticated OS Command Injection.md",
@@ -2631,7 +2609,8 @@
             "sha256": "2f66648b295da4b44ec47d4b56c8c72b3b6d24fc9074de06cf33bf2babb59f1d"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -2947,8 +2926,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/其他软件/杂项/【已支持检测】预认证即可利用！Kemp LoadMaster 堆内存缺陷导致命令注入远程代码执行漏洞CVE-2026-.md",
@@ -2956,7 +2933,8 @@
             "sha256": "18128f70662602218383f190df96d242591e2653ff860ab4f2dc40412245e738"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -3135,8 +3113,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/开发框架/Starlette/Starlette BadHost路径重建与路由授权视图分裂（CVE-2026-48710）.md",
@@ -3144,7 +3120,8 @@
             "sha256": "14fa50d24f0900ee7d4505f9ef580a53be4baa581db593ae2b9ff283cc68f910"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -3635,8 +3612,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/网络设备/Palo Alto/CVE-2026-0257 _ Palo Alto Networks PAN-OS GlobalProtect Authentication.md",
@@ -3644,7 +3619,8 @@
             "sha256": "e2f2a682f8c35150c2e8fb436cba1cc9a000aa442c2c160c1c0dd9b7b7444d8e"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -3703,8 +3679,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/AI应用/AI综合/AI大模型网关存在SQL注入漏洞、附 POC 复现、影响版本LiteLLM 1.81.16~1.83.7（CVE-2026-42208）.md",
@@ -3712,7 +3686,8 @@
             "sha256": "b03e5a1f24b85d366a52e1d514a8c76a9dd295a4e7607341ea673c565f066803"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -3926,8 +3901,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/运维面板/LiteSpeed cPanel/CVE-2026-41940 cPanel-WHM 认证绕过漏洞复现.md",
@@ -3935,7 +3908,8 @@
             "sha256": "b298330fcf7b84e4a91db19356f9b34f0c5a108e113472c6698c04cf33d4bec7"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -4308,8 +4282,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/中间件/Apache Tomcat/Apache-Tomcat-Tribes-EncryptInterceptor-绕过远程代码执行漏洞-CVE-2026-34486.md",
@@ -4317,7 +4289,8 @@
             "sha256": "1d8d15284b88d1ed68a80137915bd29d065f7a16908996d718410aed40ed501a"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -4337,8 +4310,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/AI应用/Marimo/marimo terminal WebSocket缺少认证与编辑模式前提（CVE-2026-39987）.md",
@@ -4346,7 +4317,8 @@
             "sha256": "6d59f854e8eae82fb6968875379827589eabbbc6f10b0e522590a507cfeb08c6"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -4616,8 +4588,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/网络设备/Citrix NetScaler/NetScaler SAML IdP内存越读与会话泄露检测边界（CVE-2026-3055）.md",
@@ -4625,7 +4595,8 @@
             "sha256": "b9c9dab16dbf3048c36c5fbb68895aa994c364e750a40ce22c7c353cad310972"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -4664,8 +4635,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/AI应用/AI综合/AI用户务必关注，Langflow未授权RCE分析（CVE-2026-33017）.md",
@@ -4673,7 +4642,8 @@
             "sha256": "cbf341bd6f00c3f6c828030264b7aa42ea392e0e74ae905a99b767476252296f"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -5585,8 +5555,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/网络设备/Fortinet/FortiOS 符号链接持久化补丁的路径规范化绕过（CVE-2025-68686）.md",
@@ -5594,7 +5562,8 @@
             "sha256": "eb3e195b3b108dfd8291cbd3c7f5f2568459440ca3849fb764ffb9fb7923dd1c"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -6015,8 +5984,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/服务器软件/SolarWinds/【CVE-2025-40551】：Solarwinds Web Help Desk又一处反序列化漏洞.md",
@@ -6024,7 +5991,8 @@
             "sha256": "5761c7edd5d810ec14f55bd95ef6e4b18a2869f67a7e1f39d6abe39524818b06"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -6096,8 +6064,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/服务器软件/SolarWinds/【CVE-2025-40551】：Solarwinds Web Help Desk又一处反序列化漏洞.md",
@@ -6105,7 +6071,8 @@
             "sha256": "5761c7edd5d810ec14f55bd95ef6e4b18a2869f67a7e1f39d6abe39524818b06"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -6376,8 +6343,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/邮件系统/SmarterMail/CVE-2026-23760.md",
@@ -6385,7 +6350,8 @@
             "sha256": "8b3c01b7f03f5123d40bbcab8abb71e3fd9e6cfb75f1f5aa1eda8e1a831801fc"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "full-technical-wiki-archive-only",
@@ -6685,8 +6651,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/服务器软件/GNU/CVE-2026-24061：GNU InetUtils Telnetd 身份验证绕过漏洞.md",
@@ -6694,7 +6658,8 @@
             "sha256": "3c835d6003713b0f779315d168483f7016345d992dfb67de07fd52d394e47659"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -7121,8 +7086,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/AI应用/n8n/n8n-表达式沙箱逃逸导致远程代码执行漏洞-CVE-2025-68613.md",
@@ -7130,7 +7093,8 @@
             "sha256": "9d3bdbbb863698e97af6ca9e3ff10a2d18c36e36c03cb132acfa74e34cc0ad31"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -7253,8 +7217,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/邮件系统/Roundcube/Roundcube SVG animate 命名空间属性过滤修复分析（CVE-2025-68461）.md",
@@ -7262,7 +7224,8 @@
             "sha256": "cb0bfce02adc83b8b1eb846c3de4c98cfc487ecc3d73b75c5e6418932b22605d"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -7769,8 +7732,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/AI应用/Langflow/Langflow-≤-1.6.9-CORS-配置错误导致令牌劫持和远程命令执行漏洞-CVE-2025-34291.md",
@@ -7778,7 +7739,8 @@
             "sha256": "f982cc0bd8942936740c5cf167971ccab33f9cce10899c667849e0b88e39ae9e"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -7875,8 +7837,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/其他软件/Ray/Ray 浏览器请求判定与 DNS 重绑定边界（CVE-2025-62593）.md",
@@ -7884,7 +7844,8 @@
             "sha256": "f0ffb43eae8f313e3f0fc08db706f5931bd0bb6f10c95c7c480b9539182b849f"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -8166,8 +8127,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/邮件系统/FreePBX/FreePBX filestore SSH 测试连接命令注入与权限差异（CVE-2025-64328）.md",
@@ -8175,7 +8134,8 @@
             "sha256": "55241992cb66c2f67d36e947912b63bf0264a242ef15d9146d96d5e19d96f2d3"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -8578,8 +8538,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/云平台/CentreStack/CentreStack 与 TrioFox 临时下载路径穿越及版本检查误差（CVE-2025-11371）.md",
@@ -8587,7 +8545,8 @@
             "sha256": "be96ee8c837dc8f437cb6e967896a921fc5cf0daf6a22eede077a7dd6b12c834"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -8646,8 +8605,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/云平台/VMware/VMware 服务发现执行非受信二进制导致本地提权（CVE-2025-41244）.md",
@@ -8655,7 +8612,8 @@
             "sha256": "3ce21b9141c2bc102a7b4af950d2d198c372a7b0f017c359a13c03a20983f84b"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -9001,8 +8959,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/运维面板/Control Web Panel/CWP changePerm 权限参数命令注入与用户前提（CVE-2025-48703）.md",
@@ -9010,7 +8966,8 @@
             "sha256": "3314ea4f111cfe4ce275280b63a5a2e7c1195dd9519d7a7b135485f64453bfe2"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -9049,8 +9006,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/网络设备/WatchGuard/WatchGuard Fireware IKEv2 越界写公开验证与探针边界（CVE-2025-9242）.md",
@@ -9058,7 +9013,8 @@
             "sha256": "007b26c3e7f27c521fed6530189c9519d37daf11420b3152bb1eaaa5961f4036"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -9256,8 +9212,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "系统安全/Android/Android ART JNI 可实例化检查与序列化回归测试（CVE-2025-48543）.md",
@@ -9265,7 +9219,8 @@
             "sha256": "35b2e9c30b9aa85c74fa7f7733abd324cdcce4ca3159942a02d778e81709fc74"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -9648,8 +9603,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/商业软件/DELMIA Apriso/DELMIA Apriso 账号创建与上传路径穿越链（CVE-2025-6205、6204）.md",
@@ -9657,7 +9610,8 @@
             "sha256": "ff23629181c7c8aa3a396cb34874682dcc375f461cd07d7410d9ae8cc024d420"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -9675,8 +9629,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/商业软件/DELMIA Apriso/DELMIA Apriso 账号创建与上传路径穿越链（CVE-2025-6205、6204）.md",
@@ -9684,7 +9636,8 @@
             "sha256": "ff23629181c7c8aa3a396cb34874682dcc375f461cd07d7410d9ae8cc024d420"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -10317,8 +10270,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/云平台/Microsoft SharePoint/SharePoint ToolPane 公开利用代码与两代补丁边界（CVE-2025-49704、49706）.md",
@@ -10326,7 +10277,8 @@
             "sha256": "b1721586b57fbac3556f35399b313c916fefb39c485e1bdbb733653274ebfbb1"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -10348,8 +10300,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/云平台/Microsoft SharePoint/SharePoint ToolPane 公开利用代码与两代补丁边界（CVE-2025-49704、49706）.md",
@@ -10357,7 +10307,8 @@
             "sha256": "b1721586b57fbac3556f35399b313c916fefb39c485e1bdbb733653274ebfbb1"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -10911,8 +10862,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "系统安全/IGEL OS/IGEL OS 10 未验证 SquashFS 启动链与公开镜像构造 PoC（CVE-2025-47827）.md",
@@ -10920,7 +10869,8 @@
             "sha256": "72231683cd6f384195e905b099a35e5cf98ad05521702946d85e8ce8312e0cce"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -11235,8 +11185,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/其他软件/TeleMessage/TeleMessage heapdump 暴露与内存凭据的公开手工验证材料（CVE-2025-48927、48928）.md",
@@ -11244,7 +11192,8 @@
             "sha256": "046df6e1c95ecc19edee6d822c122f56db6b9d4e51c319d8ac7b8816a6ce7f9c"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -11262,8 +11211,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/其他软件/TeleMessage/TeleMessage heapdump 暴露与内存凭据的公开手工验证材料（CVE-2025-48927、48928）.md",
@@ -11271,7 +11218,8 @@
             "sha256": "046df6e1c95ecc19edee6d822c122f56db6b9d4e51c319d8ac7b8816a6ce7f9c"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -11289,8 +11237,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/网络设备/Versa/Versa Concerto 逐跳请求头与 Actuator 认证边界（CVE-2025-34026）.md",
@@ -11298,7 +11244,8 @@
             "sha256": "b4f64b115072e3d566a8fef3fab0b8c75a20fa8a605e0e988d70056655ef529f"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -11584,8 +11531,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/邮件系统/Fortinet FortiMail/FortiMail APSCOOKIE AuthHash 溢出的公开触发与错误 PoC 归属（CVE-2025-32756）.md",
@@ -11593,7 +11538,8 @@
             "sha256": "a5119ae698c3c56e244338aa6d0a3cdd63a718cd66ea1dbf51f9f627f069da06"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -12229,8 +12175,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "系统安全/macOS/Apple APAC 声道映射长度失配与公开音频崩溃验证（CVE-2025-31200）.md",
@@ -12238,7 +12182,8 @@
             "sha256": "4abc710aac488907d54484b0ab4a1b519e21e987d7b066efc676e549ec5dd5fb"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -12380,8 +12325,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/AI应用/Langflow/Langflow-code-API-未授权远程代码执行漏洞-CVE-2025-3248.md",
@@ -12389,7 +12332,8 @@
             "sha256": "de82f90b3d4949f522eae2abef4b20e6324f76dc5ebdbb44720051ff4e2a827e"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -12549,8 +12493,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/开发框架/Vite/Vite inline/raw 文件访问校验的上游补丁对照（CVE-2025-31125）.md",
@@ -12558,7 +12500,8 @@
             "sha256": "d4402c222cef268558be5437c7707b1315bcb3813b9bcf05526c01edf523ac26"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -12671,8 +12614,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "IOT安全/D-Link/（CVE-2025-29635）D-Link DIR-823X命令注入漏洞.md",
@@ -12680,7 +12621,8 @@
             "sha256": "d76ce2cd08a198d4ba640976793df87a65849bf804676d8019206474395f63fd"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -12910,8 +12852,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "系统安全/Windows/Windows FastFAT 簇计数溢出与 BSOD 证据边界（CVE-2025-24985）.md",
@@ -12919,7 +12859,8 @@
             "sha256": "519ee5964da0c3cbe6a32a48bc6c15279e944ec26cc1e858b97e916e28578ed6"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -13060,15 +13001,20 @@
         "Web安全/网络设备/华硕/华硕修复严重的AMI 漏洞.md"
       ],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": "author-pending-peer",
-        "articles": [],
-        "material_absence_claim": false
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/网络设备/AMI/AMI MegaRAC Redfish认证绕过的公开对照验证（CVE-2024-54085）.md",
+            "mode": "new",
+            "sha256": "13358b7d8fe81c8798f4a3b7b36a355888eb48182f43ec9fc48f30046e57f90d"
+          }
+        ],
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -13385,8 +13331,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/其他软件/杂项/NAKIVO Backup & Replication任意文件读取漏洞(CVE-2024-48248).md",
@@ -13394,7 +13338,8 @@
             "sha256": "b088d02cfa3cd2c71b8e57a1dba8bc3c351e71df7c0ffc013ef1892c842a0c2a"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -13779,15 +13724,20 @@
         "Web安全/网络设备/Zyxel/Zyxel CPE 设备遭遇大规模攻击：关键漏洞（CVE-2024-40891）仍未修复！.md"
       ],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": "author-pending-peer",
-        "articles": [],
-        "material_absence_claim": false
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/网络设备/Zyxel/Zyxel Telnet命令注入的原始实验对照（CVE-2024-40891）.md",
+            "mode": "new",
+            "sha256": "29aa1f1f35321e665c23b08a357cb6eed21b94032723955d7a17a720e49d3844"
+          }
+        ],
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -13802,15 +13752,20 @@
         "Web安全/网络设备/Zyxel/Zyxel CPE 设备遭遇大规模攻击：关键漏洞（CVE-2024-40891）仍未修复！.md"
       ],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": "author-pending-peer",
-        "articles": [],
-        "material_absence_claim": false
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/网络设备/Zyxel/Zyxel诊断CGI换行命令注入（CVE-2024-40890）.md",
+            "mode": "new",
+            "sha256": "6b8b353a99b8a6bb9cb561c7f4366bd1a389087b7cd1d74a0770df70655e09ea"
+          }
+        ],
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -13866,8 +13821,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "selected-technical-sections-only",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/商业软件/Advantive VeraCore/VeraCore timeoutWarning SQL 注入的公开请求与错误回显（CVE-2025-25181）.md",
@@ -13875,7 +13828,8 @@
             "sha256": "71741fffce7e0c1593877c2ffd13dbea9dc8e74f4f8fa9b90b0c0ea18f887290"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "selected-technical-sections-only",
       "audited_read_provenance": null,
@@ -13895,8 +13849,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "系统安全/iOS/Apple CoreMedia Remaker 轨道对象释放与公开崩溃 PoC（CVE-2025-24085）.md",
@@ -13904,7 +13856,8 @@
             "sha256": "15537d21d53f0065aa990dc4f31d994e3b7f9481cc7cde26b442026f2b50150b"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -14106,8 +14059,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "系统安全/SimpleHelp/关键的 SimpleHelp 缺陷允许文件盗窃、权限提升和 RCE 攻击.md",
@@ -14115,7 +14066,8 @@
             "sha256": "960a59d91cf9e60ad2718b54f0c63754a917027fdbe8499f1c9402e95fd271e0"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -14257,8 +14209,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/服务器软件/Ivanti/Ivanti EPM GetHashForWildcardRecursive 凭据强制认证资料（CVE-2024-13159）.md",
@@ -14266,7 +14216,8 @@
             "sha256": "84fdc99f3e607d05e934512615ad32991a112e0c5d7b8b155073c7a15fddfcce"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -14284,8 +14235,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/服务器软件/Ivanti/Ivanti EPM GetHashForWildcard 凭据强制认证资料（CVE-2024-13160）.md",
@@ -14293,7 +14242,8 @@
             "sha256": "15fef2eae0c69dab952e9901236d770a9de3a783245e942fa756eaff580a4190"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -14311,8 +14261,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/服务器软件/Ivanti/Ivanti EPM GetHashForSingleFile 凭据强制认证资料（CVE-2024-13161）.md",
@@ -14320,7 +14268,8 @@
             "sha256": "f383d5233da535ca347a84d0af419e61d927c54fd6dd37c793112bae19e3e825"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -14409,15 +14358,20 @@
         "Web安全/中间件/WebLogic/CVE-2025-21535.md"
       ],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": "author-pending-peer",
-        "articles": [],
-        "material_absence_claim": false
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/网络设备/Fortinet/（CVE-2024-55591）Fortinet FortiOS FortiProxy Node.js WebSocket认证绕过漏洞.md",
+            "mode": "supplement",
+            "sha256": "35ad5854291a11cbf10a96c7cd6383f2282255b678de2891b9bb10f55fba62c1"
+          }
+        ],
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -14450,15 +14404,20 @@
         "Web安全/网络设备/SonicWall/SonicOS SSLVPN 认证绕过漏洞(CVE-2024-53704)安全风险通告.md"
       ],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": "author-pending-peer",
-        "articles": [],
-        "material_absence_claim": false
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/网络设备/SonicWall/SonicOS SSLVPN 认证绕过漏洞(CVE-2024-53704)安全风险通告.md",
+            "mode": "supplement",
+            "sha256": "13e91f9521996f08f02abcb094962c68831ae58db6b5b4e57e4eb43a2e29b702"
+          }
+        ],
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -14549,15 +14508,20 @@
         "Web安全/其他软件/杂项/【漏洞复现】CVE-2024-50603.md"
       ],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": "author-pending-peer",
-        "articles": [],
-        "material_absence_claim": false
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/其他软件/杂项/【漏洞复现】CVE-2024-50603.md",
+            "mode": "supplement",
+            "sha256": "11b0a5db68993796bc413074371e2a96a2bf4a435edf3f9ee89fc6993647c0f4"
+          }
+        ],
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -14571,8 +14535,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/网络设备/DrayTek/DrayTek apmcfgupload session 命令注入 CVE-2024-12987.md",
@@ -14580,7 +14542,8 @@
             "sha256": "2b8a9db3124b5528c4218f37144a3e8b876fc411539445062c9a7481a2770b62"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -14799,8 +14762,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/安全设备/BeyondTrust PAM/（CVE-2024-12356）BeyondTrust PRA-RS未授权命令注入漏洞.md",
@@ -14808,7 +14769,8 @@
             "sha256": "2a4a182850c58916a57fb3f394b4d67a0ef1e5e252b6885a08b7b7dc8a635089"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -14863,8 +14825,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/商业软件/Cleo/（CVE-2024-55956）Cleo Harmony VLTrader LexiCom未认证文件写入远程代码执行漏洞.md",
@@ -14872,7 +14832,8 @@
             "sha256": "d9bea222d840c5f2439ba390e12975c3d5e037e0ce80a9ac1ac52d67e19ecb89"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -14911,8 +14872,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/商业软件/Mitel MiCollab 企业协作平台/Mitel MiCollab 企业协作平台 任意文件读取漏洞(CVE-2024-41713).md",
@@ -14920,7 +14879,8 @@
             "sha256": "7f5eefdddcfe53db98a3784edc9c25cb72462a9b0f060bc4d509f8b5b942a85e"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -15061,8 +15021,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/其他软件/杂项/【漏洞复现】CVE-2024-11680.md",
@@ -15070,7 +15028,8 @@
             "sha256": "9d70cc8a74f87a38c86d605594c58bed882d6da6f7d81cac9135fd4e759dc5b0"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -15270,15 +15229,20 @@
         "Web安全/网络设备/Palo Alto/Palo Alto Networks PAN-OS存在远程命令执行漏洞CVE-2024-9474 附POC.md"
       ],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "existing-wiki-body-only",
-        "pending_subtype": "author-pending-peer",
-        "articles": [],
-        "material_absence_claim": false
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/网络设备/Palo Alto/Palo Alto Networks PAN-OS存在远程命令执行漏洞CVE-2024-9474 附POC.md",
+            "mode": "supplement",
+            "sha256": "96df3192a4a15540e82dd225fbe417a979130d12ec1a04bb76351d045a42ea63"
+          }
+        ],
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "existing-wiki-body-only",
       "audited_read_provenance": null,
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -15313,15 +15277,20 @@
         "Web安全/网络设备/Palo Alto/Palo Alto Networks PAN-OS存在远程命令执行漏洞CVE-2024-9474 附POC.md"
       ],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "existing-wiki-body-only",
-        "pending_subtype": "author-pending-peer",
-        "articles": [],
-        "material_absence_claim": false
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/网络设备/Palo Alto/Palo Alto Networks PAN-OS存在远程命令执行漏洞CVE-2024-9474 附POC.md",
+            "mode": "supplement",
+            "sha256": "96df3192a4a15540e82dd225fbe417a979130d12ec1a04bb76351d045a42ea63"
+          }
+        ],
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "existing-wiki-body-only",
       "audited_read_provenance": null,
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -15658,15 +15627,20 @@
         "Web安全/商业软件/Cleo/（CVE-2024-50623）Cleo Harmony VLTrader LexiCom未认证任意文件上传下载漏洞.md"
       ],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": "author-pending-peer",
-        "articles": [],
-        "material_absence_claim": false
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/商业软件/Cleo/（CVE-2024-50623）Cleo Harmony VLTrader LexiCom未认证任意文件上传下载漏洞.md",
+            "mode": "supplement",
+            "sha256": "a8ebe295fee4af3c01b43e60082f9046c5834f1a2be26e8b403d8dc999e06053"
+          }
+        ],
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -15720,15 +15694,20 @@
         "Web安全/其他软件/杂项/CVE-2024-47575 漏洞分析及三种利用方式.md"
       ],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": "author-pending-peer",
-        "articles": [],
-        "material_absence_claim": false
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/其他软件/杂项/CVE-2024-47575 漏洞分析及三种利用方式.md",
+            "mode": "supplement",
+            "sha256": "54e0c71ffa38f6ac09abd3a1138833b3e5a15c49f2773e29ec9a8a7752c3f6f2"
+          }
+        ],
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -15762,8 +15741,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/商业软件/Mitel MiCollab 企业协作平台/Mitel MiCollab 企业协作平台 任意文件读取漏洞(CVE-2024-41713).md",
@@ -15771,7 +15748,8 @@
             "sha256": "7f5eefdddcfe53db98a3784edc9c25cb72462a9b0f060bc4d509f8b5b942a85e"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -15830,15 +15808,20 @@
         "Web安全/网络设备/Palo Alto/CVE-2024-9465：Palo Alto Expedition 未经身份验证的 SQL 注入 POC.md"
       ],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": "author-pending-peer",
-        "articles": [],
-        "material_absence_claim": false
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/网络设备/Palo Alto/CVE-2024-9465：Palo Alto Expedition 未经身份验证的 SQL 注入 POC.md",
+            "mode": "supplement",
+            "sha256": "36d583d730791bb6891888e6cbf4a34732126e3656d679d561b290ea6f381170"
+          }
+        ],
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -15889,8 +15872,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/网络设备/Palo Alto/Palo Alto Networks Expedition 远程命令执行漏洞(CVE-2024-9463).md",
@@ -15898,7 +15879,8 @@
             "sha256": "f40fadfd6278004c3f9fd7ef3daf04d75665593ece6df193d7f8df6378ea050a"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -16039,15 +16021,20 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "selected-technical-sections-only",
-        "pending_subtype": "author-pending-peer",
-        "articles": [],
-        "material_absence_claim": false
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/安全设备/Ivanti/Ivanti CSA报告参数的二次命令解释（CVE-2024-9380）.md",
+            "mode": "new",
+            "sha256": "c77e2e9f7493f66e8079a144fea22db88a80a3b1cbb59530dc12f30b661250b3"
+          }
+        ],
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "selected-technical-sections-only",
       "audited_read_provenance": null,
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -16177,8 +16164,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/邮件系统/Zimbra/Zimbra postjournal SMTP 命令注入 CVE-2024-45519.md",
@@ -16186,7 +16171,8 @@
             "sha256": "acbc0a8db730854047a6e3879b77e829229bd29180c99f5ac06f3c61f6087183"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -16224,8 +16210,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/其他软件/杂项/【漏洞复现】CVE-2024-8963、CVE-2024-8190.md",
@@ -16233,7 +16217,8 @@
             "sha256": "0eae17e60431132228729cf28aa6100a507d468560811f03da2c1be96ff5bd6e"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -16250,15 +16235,20 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": "author-pending-peer",
-        "articles": [],
-        "material_absence_claim": false
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "IOT安全/PTZOptics/PTZOptics认证遗漏与NTP命令注入链（CVE-2024-8956、CVE-2024-8957）.md",
+            "mode": "new",
+            "sha256": "5e2f3f0a6a869f0329a97d28f57812079cad81a0ad1dfcaeb574aa7010a2ae12"
+          }
+        ],
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -16271,15 +16261,20 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": "author-pending-peer",
-        "articles": [],
-        "material_absence_claim": false
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "IOT安全/PTZOptics/PTZOptics认证遗漏与NTP命令注入链（CVE-2024-8956、CVE-2024-8957）.md",
+            "mode": "new",
+            "sha256": "5e2f3f0a6a869f0329a97d28f57812079cad81a0ad1dfcaeb574aa7010a2ae12"
+          }
+        ],
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -16360,8 +16355,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "existing-wiki-body-only",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/其他软件/杂项/【漏洞复现】CVE-2024-8963、CVE-2024-8190.md",
@@ -16369,7 +16362,8 @@
             "sha256": "0eae17e60431132228729cf28aa6100a507d468560811f03da2c1be96ff5bd6e"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "existing-wiki-body-only",
       "audited_read_provenance": null,
@@ -16698,8 +16692,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/网络设备/Cisco/Cisco Smart Licensing Utility 静态管理凭据 CVE-2024-20439.md",
@@ -16707,7 +16699,8 @@
             "sha256": "bc2382192d09638881b99ccdde6ae50cd6fe17d23d49e7ce5999dfbfca1247b7"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -16787,15 +16780,20 @@
         "Web安全/服务器软件/WhatsUp Gold/黑客自 8 月以来频繁利用公开漏洞攻击 WhatsUp Gold.md"
       ],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": "author-pending-peer",
-        "articles": [],
-        "material_absence_claim": false
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/服务器软件/WhatsUp Gold/黑客自 8 月以来频繁利用公开漏洞攻击 WhatsUp Gold.md",
+            "mode": "supplement",
+            "sha256": "bcf015f402cfa9e3beacf6efb4b62712ca751dc6ebde830806677b92045116ba"
+          }
+        ],
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -16945,8 +16943,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/其他软件/杂项/【PoC】SolarWinds Web Help Desk (CVE-2024-28987)严重漏洞的 PoC 已发布.md",
@@ -16954,7 +16950,8 @@
             "sha256": "f47e1fedb1756135510efc7616c7c115df86b5b8629ac6952f2dcc235edf6736"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -17185,8 +17182,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/网络设备/Ivanti/Ivanti vTM 本地管理员创建鉴权绕过（CVE-2024-7593）.md",
@@ -17194,7 +17189,8 @@
             "sha256": "26e35835b52ef5bbd035dd9062aa0b2fda20cf5807db17791d489ae8dcd1f0ad"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -17380,8 +17376,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "IOT安全/Mitel/Mitel SIP 电话配置换行注入 CVE-2024-41710.md",
@@ -17389,7 +17383,8 @@
             "sha256": "d074edb83c0ab2d37c493be4779f065d8817699abadd252542c9115ac7c8dddb"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -17611,15 +17606,20 @@
         "Web安全/服务器软件/SolarWinds/CVE-2024-28988.md"
       ],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": "author-pending-peer",
-        "articles": [],
-        "material_absence_claim": false
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/其他软件/杂项/CVE-2024-42009.md",
+            "mode": "supplement",
+            "sha256": "a8ac8af952633a92b5e86b4eb5bcbacd2d7800eefcdfcf8ebb85d41273225749"
+          }
+        ],
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -17736,15 +17736,20 @@
         "Web安全/网络设备/Palo Alto/（CVE-2024-9464）Palo Alto Expedition CronJobs命令注入RCE漏洞.md"
       ],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": "author-pending-peer",
-        "articles": [],
-        "material_absence_claim": false
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/网络设备/Palo Alto/CVE-2024-9465：Palo Alto Expedition 未经身份验证的 SQL 注入 POC.md",
+            "mode": "supplement",
+            "sha256": "36d583d730791bb6891888e6cbf4a34732126e3656d679d561b290ea6f381170"
+          }
+        ],
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -17812,15 +17817,20 @@
         "Web安全/中间件/WebLogic/CVE-2024-21181.md"
       ],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": "author-pending-peer",
-        "articles": [],
-        "material_absence_claim": false
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/其他软件/杂项/【已复现】ServiceNow 存在代码注入漏洞（CVE-2024-4879、CVE-2024-5217）.md",
+            "mode": "supplement",
+            "sha256": "da900fa4b666850f76d8a7caf34d8bb8b7e769bd39c731db852331ca2ec827cf"
+          }
+        ],
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -17870,15 +17880,20 @@
         "Web安全/商业软件/ServiceNow/ServiceNowUIJelly模板注入漏洞(CVE-2024-4879).md"
       ],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": "author-pending-peer",
-        "articles": [],
-        "material_absence_claim": false
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/商业软件/ServiceNow/ServiceNowUIJelly模板注入漏洞(CVE-2024-4879).md",
+            "mode": "supplement",
+            "sha256": "006f1a3387fe54e856cf01a7c5b34bd6d9edd8340f3840e0a4e7fa5558728c0c"
+          }
+        ],
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -18089,15 +18104,20 @@
         "Web安全/中间件/Apache/【知道创宇404实验室】建议关注 Apache 2.4.60 更新修复多个安全漏洞.md"
       ],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": "author-pending-peer",
-        "articles": [],
-        "material_absence_claim": false
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/网络设备/SonicWall/Apache重写歧义在SonicWall SMA中的文件读取（CVE-2024-38475）.md",
+            "mode": "new",
+            "sha256": "d69800a7456abd61e2936e82cbf236d630ee0dee375b5a850e2b52485cc9db66"
+          }
+        ],
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -18228,15 +18248,20 @@
         "Web安全/服务器软件/WhatsUp Gold/黑客自 8 月以来频繁利用公开漏洞攻击 WhatsUp Gold.md"
       ],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": "author-pending-peer",
-        "articles": [],
-        "material_absence_claim": false
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/服务器软件/WhatsUp Gold/WhatsUp Gold 报表导出文件写入 CVE-2024-4885.md",
+            "mode": "new",
+            "sha256": "07d5c422dbafc95d86ee7b75d8323488aa470a2b6fb453b67b92b93cd080fa5e"
+          }
+        ],
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -18269,15 +18294,20 @@
         "Web安全/云平台/勒索软件正在利用VMware/勒索软件正在利用VMware漏洞，通过VPN访问发动攻击.md"
       ],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": "author-pending-peer",
-        "articles": [],
-        "material_absence_claim": false
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/云平台/VMware/ESXi按AD组名授予管理权限的公开手工路径（CVE-2024-37085）.md",
+            "mode": "new",
+            "sha256": "36f2ec72cda13d3bf19cdccf74f57085abb7a80334017ae1bb52f9201dce8971"
+          }
+        ],
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -18465,15 +18495,20 @@
         "Web安全/CMS内容/Magento/漏洞预警  Magento Open Source XXE漏洞.md"
       ],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": "author-pending-peer",
-        "articles": [],
-        "material_absence_claim": false
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/CMS内容/Magento/漏洞预警  Magento Open Source XXE漏洞.md",
+            "mode": "supplement",
+            "sha256": "f208af40840b436378eb536ef9968bb833dc78005de1f6990b79b54b56678856"
+          }
+        ],
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -18809,8 +18844,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "existing-wiki-body-only",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/其他软件/杂项/CVE-2024-37383.md",
@@ -18818,7 +18851,8 @@
             "sha256": "252fe77e6a02035d1117837705688bbe8cba960019e8f72de797716cc7685d37"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "existing-wiki-body-only",
       "audited_read_provenance": null,
@@ -18924,15 +18958,20 @@
         "Web安全/中间件/WebLogic/CVE-2024-21181.md"
       ],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": "author-pending-peer",
-        "articles": [],
-        "material_absence_claim": false
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/服务器软件/SolarWinds/SolarWindsServ-U存在目录遍历漏洞(CVE-2024-28995).md",
+            "mode": "supplement",
+            "sha256": "f5fee534b3bc7531c354f537cf50fac5256fedefcb33b6ab0d147946736289d9"
+          }
+        ],
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -18965,15 +19004,20 @@
         "Web安全/网络设备/Ivanti/Ivanti 修复Endpoint Manager 中的严重RCE漏洞.md"
       ],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": "author-pending-peer",
-        "articles": [],
-        "material_absence_claim": false
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/网络设备/Ivanti/Ivanti 修复Endpoint Manager 中的严重RCE漏洞.md",
+            "mode": "supplement",
+            "sha256": "f0264c129d0d4639a08961d72b84842bd644c29270a00ae6bb64ab3a6d529732"
+          }
+        ],
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -19023,15 +19067,20 @@
         "Web安全/中间件/Apache/CVE-2024-40725.md"
       ],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": "author-pending-peer",
-        "articles": [],
-        "material_absence_claim": false
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/服务器软件/Rejetto HFS/RejettoHTTP文件服务器search存在命令执行漏洞(CVE-2024-23692).md",
+            "mode": "supplement",
+            "sha256": "161bdfc396afa65d863234f48bf333e3e8a3556582ea8ee2d5a675eb7c9b9ba6"
+          }
+        ],
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -19081,15 +19130,20 @@
         "Web安全/中间件/Progress Software/Progress 提醒Telerik Report Server中的严重RCE漏洞.md"
       ],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": "author-pending-peer",
-        "articles": [],
-        "material_absence_claim": false
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/中间件/Progress Software/速修复！Progress Telerik 中存在严重的认证绕过漏洞.md",
+            "mode": "supplement",
+            "sha256": "b7ba3e7d46ccd5fc5cf0aff952864f4be64763854aa3e1ab4d882f88bb8e0d87"
+          }
+        ],
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -19123,15 +19177,20 @@
         "Web安全/网络设备/Check Point/已遭利用的 Management Server 0day.md"
       ],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": "author-pending-peer",
-        "articles": [],
-        "material_absence_claim": false
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/网络设备/Check Point/CheckPoint安全网关MyCRL存在任意文件读取漏洞.md",
+            "mode": "supplement",
+            "sha256": "3f42f6434804736bb787625879c7a84880036e064cf85506230ae4b5f3f7004f"
+          }
+        ],
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -19431,8 +19490,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/中间件/Apache OFBiz/Apache OfBiz CVE-2024-32113和CVE-2024-36104 漏洞 POC.md",
@@ -19440,7 +19497,8 @@
             "sha256": "ce8d2d4281de50dbf727412f5a6e9a821306a2186dd61077848b39a7e834afa9"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -19638,8 +19696,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "existing-wiki-body-only",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/中间件/Apache HugeGraph/Apache-HugeGraph-远程代码执行漏洞-CVE-2024-27348.md",
@@ -19647,7 +19703,8 @@
             "sha256": "fb77b4bf4c3d145fd50be5d4dbcc2505484b5122bf646fa18f624b9eb651e03a"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "existing-wiki-body-only",
       "audited_read_provenance": null,
@@ -19703,15 +19760,20 @@
         "Web安全/服务器软件/kkFileView/4月漏洞快报  kkFileView任意文件上传导致远程执行漏洞、Apache Zeppelin 命令执行漏洞....md"
       ],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "existing-wiki-body-only",
-        "pending_subtype": "author-pending-peer",
-        "articles": [],
-        "material_absence_claim": false
+        "disposition": "published",
+        "articles": [
+          {
+            "article": "Web安全/网络设备/Palo Alto/Palo Alto Networks PAN-OS 命令注入漏洞分析（CVE-2024-3400）.md",
+            "mode": "supplement",
+            "sha256": "8d94f518ab42aa69c9f10f2300c89ae4164e73ab81ef6430236242ced4c773c3"
+          }
+        ],
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "existing-wiki-body-only",
       "audited_read_provenance": null,
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "published",
       "current_blocked_scope": false
     },
     {
@@ -19877,8 +19939,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/网络设备/D-Link/D-Link NAS 未授权RCE漏洞(CVE-2024-3273).md",
@@ -19886,7 +19946,8 @@
             "sha256": "291f212c7ba2f2048d2d7e180d53aa9aaf3b3a2552e70f7ca2fb1157e6b583eb"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -19904,8 +19965,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/网络设备/D-Link/D-Link NAS 未授权RCE漏洞(CVE-2024-3273).md",
@@ -19913,7 +19972,8 @@
             "sha256": "291f212c7ba2f2048d2d7e180d53aa9aaf3b3a2552e70f7ca2fb1157e6b583eb"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -19990,8 +20050,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "existing-wiki-body-only",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/其他软件/杂项/CVE-2024-20767.md",
@@ -19999,7 +20057,8 @@
             "sha256": "00f315a5ce71accf934c8668cac7f59388ab6cce85cbd8a31248dba68078b045"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "existing-wiki-body-only",
       "audited_read_provenance": null,
@@ -20369,8 +20428,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "existing-wiki-body-only",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/其他软件/杂项/CVE-2024-1212.md",
@@ -20378,7 +20435,8 @@
             "sha256": "48f3e5ef4b60ca8beec95ad18e204f81ed9e0452b45864f7fb97f7d316e0020d"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "existing-wiki-body-only",
       "audited_read_provenance": null,
@@ -20417,8 +20475,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/其他软件/杂项/CVE-2024-1709.md",
@@ -20426,7 +20482,8 @@
             "sha256": "d003bb7ed26168632194d6660742c797f862b34994d74e53eb74a57a7f124957"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -20522,15 +20579,13 @@
         "Web安全/桌面软件/Android/Android、佳能漏洞已修复，Fortinet警告零日漏洞.md"
       ],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": "author-pending-peer",
-        "articles": [],
+        "disposition": "bounded-hold",
+        "reason": "Specific format-string input exists, but observed disconnect alone lacks documented valid-value control or specific crash/debug outcome; do not infer SIGABRT or RCE.",
         "material_absence_claim": false
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "bounded-hold",
       "current_blocked_scope": false
     },
     {
@@ -20808,8 +20863,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/网络设备/Ivanti/CVE-2024-21893影响Ivanti产品.md",
@@ -20817,7 +20870,8 @@
             "sha256": "d04d070838ebbccca3a808494dd49ad1ca3a0476121c78165bcb258abaa197f1"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -20941,8 +20995,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "existing-wiki-body-only",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/开发框架/Jenkins/Jenkins-CLI-接口任意文件读取漏洞-CVE-2024-23897.md",
@@ -20950,7 +21002,8 @@
             "sha256": "f85ef5b41d6ffe2c7465dacaaea9b41492a0751a385c4a516e3b52c414eacfbf"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "existing-wiki-body-only",
       "audited_read_provenance": null,
@@ -21026,8 +21079,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "IOT安全/D-Link/D-Link DIR-859 hedwig.cgi 路径穿越与凭据泄露 CVE-2024-0769.md",
@@ -21035,7 +21086,8 @@
             "sha256": "b27153db9a330490d5f85ceeb2a5d5e616e46830ec4721175ac6ab6e6a77ade2"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -35675,7 +35727,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -36944,7 +36996,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -38692,7 +38744,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -38713,7 +38765,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -38734,7 +38786,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -38834,7 +38886,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -38855,7 +38907,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -38956,7 +39008,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -38977,7 +39029,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -39038,7 +39090,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -39079,7 +39131,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -39100,7 +39152,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -39141,7 +39193,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -39162,7 +39214,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -39323,7 +39375,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -39487,7 +39539,7 @@
       },
       "audited_reading_depth": "existing-wiki-body-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -39508,7 +39560,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -39529,7 +39581,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -39550,7 +39602,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -39573,7 +39625,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -39594,7 +39646,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -39615,7 +39667,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -39636,7 +39688,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -39657,7 +39709,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -39750,7 +39802,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -39771,7 +39823,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -39792,7 +39844,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -39833,7 +39885,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -39874,7 +39926,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -39958,7 +40010,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -39979,7 +40031,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -40316,7 +40368,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -40494,7 +40546,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -40515,7 +40567,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -40536,7 +40588,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -40557,7 +40609,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -40578,7 +40630,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -40599,7 +40651,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -40620,7 +40672,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -40641,7 +40693,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -40662,7 +40714,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -40683,7 +40735,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -40704,7 +40756,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -40725,7 +40777,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -40767,7 +40819,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -40825,7 +40877,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -40846,7 +40898,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -40867,7 +40919,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -40890,7 +40942,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -40911,7 +40963,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -40932,7 +40984,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -41059,7 +41111,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -41080,7 +41132,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -41121,7 +41173,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -41142,7 +41194,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -41184,7 +41236,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -41225,7 +41277,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -41246,7 +41298,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -41267,7 +41319,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -41326,7 +41378,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -41385,7 +41437,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -41426,7 +41478,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -41502,7 +41554,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -41523,7 +41575,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -41544,7 +41596,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -41565,7 +41617,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -41606,7 +41658,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -41647,7 +41699,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -41688,7 +41740,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "full-technical-wiki-archive-only",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -41746,7 +41798,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -41767,7 +41819,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -41825,7 +41877,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -41936,7 +41988,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -41957,7 +42009,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -41978,7 +42030,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -41999,7 +42051,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -42020,7 +42072,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -42061,7 +42113,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -42082,7 +42134,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -42103,7 +42155,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -42124,7 +42176,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -42145,7 +42197,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -42203,7 +42255,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -42278,7 +42330,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -42372,7 +42424,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -42393,7 +42445,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -42414,7 +42466,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -42435,7 +42487,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -42456,7 +42508,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -42477,7 +42529,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -42498,7 +42550,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -42519,7 +42571,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -42540,7 +42592,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -42650,7 +42702,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -42761,7 +42813,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -42784,7 +42836,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -42805,7 +42857,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -42826,7 +42878,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -42847,7 +42899,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -42868,7 +42920,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -42889,7 +42941,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -42910,7 +42962,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -42931,7 +42983,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -42952,7 +43004,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -43028,7 +43080,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -43070,7 +43122,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -43091,7 +43143,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -43112,7 +43164,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -43206,7 +43258,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -43227,7 +43279,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -43303,7 +43355,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -43324,7 +43376,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -43345,7 +43397,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -43366,7 +43418,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -43387,7 +43439,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -43408,7 +43460,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -43429,7 +43481,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -43870,7 +43922,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -43911,7 +43963,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -43932,7 +43984,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -43973,7 +44025,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -43994,7 +44046,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -44035,7 +44087,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -44077,7 +44129,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -44135,7 +44187,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -44177,7 +44229,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -44239,7 +44291,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -44260,7 +44312,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -44355,7 +44407,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -44376,7 +44428,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -44397,7 +44449,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -44575,7 +44627,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -44596,7 +44648,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -44617,7 +44669,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -44675,7 +44727,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -44738,7 +44790,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -44759,7 +44811,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -44780,7 +44832,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -44801,7 +44853,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -44842,7 +44894,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -44884,7 +44936,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -45032,7 +45084,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -45124,7 +45176,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -45145,7 +45197,7 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -45166,7 +45218,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -45225,7 +45277,7 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
+      "audited_disposition": "platform-blocked",
       "current_blocked_scope": false
     },
     {
@@ -59733,8 +59785,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/桌面软件/Microsoft/Internet Explorer CButton 释放后使用的公开触发与调试证据（CVE-2012-4792）.md",
@@ -59742,7 +59792,8 @@
             "sha256": "b27a3bdf673de56e44c4b94941b1d5bae080f7d3e7812f5e3298e1f10bb7f83c"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -59781,8 +59832,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/中间件/Oracle Reports/Oracle Reports URLPARAMETER 文件操作与组合利用材料（CVE-2012-3152）.md",
@@ -59790,7 +59839,8 @@
             "sha256": "3324dffc26e65977a3b1a2f189875eb064837e54eaff2d664f29e58936185147"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -59829,8 +59879,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/桌面软件/Oracle Java/Java 7 JAX-WS 沙箱绕过的公开实现与辅助类（CVE-2012-5076）.md",
@@ -59838,7 +59886,8 @@
             "sha256": "9f48831238689a608b3d6ba75226aa02f106368735f9fb9ffe40ef2ef9c25e88"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -59877,8 +59926,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/桌面软件/Microsoft/Internet Explorer execCommand 释放后使用的双页触发材料（CVE-2012-4969）.md",
@@ -59886,7 +59933,8 @@
             "sha256": "16536252c2664be61a1a12a3d83b204ac2e2a429022ecce1efa0a75279d288e4"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -59904,8 +59952,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/桌面软件/Oracle Java/Java 7 Beans 反射链沙箱绕过的公开 Applet 源码（CVE-2012-4681）.md",
@@ -59913,7 +59959,8 @@
             "sha256": "19b2d8683f7661c7cd3ff2be53f8c3e397fb6d2fb8be1e01ef3d61f5eb21f49d"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -59994,8 +60041,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/桌面软件/Oracle Java/Java HotSpot 字段验证缓存缺陷的完整公开生成器（CVE-2012-1723）.md",
@@ -60003,7 +60048,8 @@
             "sha256": "8f087aacdc886f64b4001434f59c3e92c2a7e0f4d411543ab8ce7f69df4a8874"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -60021,8 +60067,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/桌面软件/Microsoft/MSXML getDefinition 未初始化内存访问的公开验证材料（CVE-2012-1889）.md",
@@ -60030,7 +60074,8 @@
             "sha256": "8729784507a8297c2edee13d0292be1b0915924ab8f7a359a0266287e5a85e4f"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -60069,8 +60114,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/桌面软件/Oracle Java/AtomicReferenceArray 类型安全缺陷与 Applet 辅助类（CVE-2012-0507）.md",
@@ -60078,7 +60121,8 @@
             "sha256": "63042c59dea2730c5f3e1d63ac7d216ee46e4e89f74aaf66865bfe1de11c416b"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -60159,8 +60203,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/开发框架/PHP/（CVE-2012-1823）PHP-CGI远程代码执行漏洞.md",
@@ -60168,7 +60210,8 @@
             "sha256": "ee067125a4afd4b6429f3d42c686cd403bbadcaf70d0c3c4c8eba6f247c24a66"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -60207,8 +60250,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/桌面软件/Microsoft/MSCOMCTL ListView 栈溢出的 RTF 构造及打开方式边界（CVE-2012-0158）.md",
@@ -60216,7 +60257,8 @@
             "sha256": "e8eb659dfd15108f0d4e9394b42b673b0d64b9527aff0b7f26efaca1959432a5"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -60255,8 +60297,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/桌面软件/Adobe/Flash MP4 cprt 溢出的完整构造器与异常证据（CVE-2012-0754）.md",
@@ -60264,7 +60304,8 @@
             "sha256": "2b42491b8dd72169e35a6bf9d10061f8066439cd7fe38786a360aff62e992198"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -60323,8 +60364,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/中间件/Apache Struts/Apache-Struts2-S2-007-远程代码执行漏洞.md",
@@ -60332,7 +60371,8 @@
             "sha256": "db38390d29fc4d8337ceb147a1ba285bd591906d988a94a32b16ead22f2e75ed"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -60371,8 +60411,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/桌面软件/Adobe/Adobe Reader U3D 未初始化内存利用及来源会话记录（CVE-2011-2462）.md",
@@ -60380,7 +60418,8 @@
             "sha256": "163e94d6804c032631e44ced847782140d01d98cf9b8c4346122ba8b2c6e2373"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -60419,8 +60458,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/桌面软件/Oracle Java/Java Rhino 错误对象特权边界绕过的公开 Applet（CVE-2011-3544）.md",
@@ -60428,7 +60465,8 @@
             "sha256": "16c6e061317b6a786ad3459a9a363c4a03bcb8af5eb52b4427dba6001adfa376"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -60446,8 +60484,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "系统安全/Windows/Windows AfdJoinLeaf 本地提权的公开模块及权限判据（CVE-2011-2005）.md",
@@ -60455,7 +60491,8 @@
             "sha256": "f5dc8570ff21a7af7c70753a10b58f91f770701b775f4beedc4782232f8f8072"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -60494,8 +60531,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "系统安全/Android/Android vold 本地提权与 GingerBreak 原始验证资料（CVE-2011-1823）.md",
@@ -60503,7 +60538,8 @@
             "sha256": "a615eb5ade990104e8587efaab716f073cf63c5091fb118b796597fb3361254d"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -60831,8 +60867,6 @@
       ],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/中间件/Adobe ColdFusion/（CVE-2010-2861）Adobe ColdFusion 文件读取漏洞.md",
@@ -60840,7 +60874,8 @@
             "sha256": "69476a8c39f46131776d82c530a7968fbf70438a8feea328566975d590b0bf48"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -61398,8 +61433,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/数据库/Phpmyadmin/phpMyAdmin setup配置保存注入与后续漏洞分界（CVE-2009-1151）.md",
@@ -61407,7 +61440,8 @@
             "sha256": "4855bb9315559d42831b179f854b74584c262265f1d6a22203839f4c1476eb27"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -61666,8 +61700,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/网络设备/Alcatel-Lucent/OmniPCX masterCGI ping命令拼接与单次执行限制（CVE-2007-3010）.md",
@@ -61675,7 +61707,8 @@
             "sha256": "2c9a37d75881429dad33af8232dc7f600da944a62ad18a42a5ef70342ef3f707"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -61756,8 +61789,6 @@
       "body_identifier_candidate_paths": [],
       "review": {
         "disposition": "published",
-        "reading_depth": "full-technical-text",
-        "pending_subtype": null,
         "articles": [
           {
             "article": "Web安全/运维面板/HP OpenView/HP OpenView connectedNodes命令注入与回显差异（CVE-2005-2773）.md",
@@ -61765,7 +61796,8 @@
             "sha256": "902e918dfcedde6752f6cb0d48771ce43670b6666b72d2a258a52a8ba99c7e59"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "scope": "Independent concrete-source and final-byte review; draft branch publication, not runtime reproduction."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
@@ -61877,19 +61909,19 @@
       "current_blocked_scope": true
     }
   ],
-  "new_article_files": 64,
-  "existing_article_files_supplemented": 38,
-  "candidates_with_integrated_material": 111,
+  "new_article_files": 72,
+  "existing_article_files_supplemented": 56,
+  "candidates_with_integrated_material": 140,
   "disposition_counts": {
-    "still-pending": 359,
-    "published": 111,
-    "awaiting-peer-or-required-notes": 145,
-    "bounded-hold": 326,
-    "platform-blocked": 748,
+    "still-pending": 217,
+    "published": 140,
+    "awaiting-peer-or-required-notes": 111,
+    "bounded-hold": 327,
+    "platform-blocked": 894,
     "sufficient-duplicate": 38
   },
-  "updated_utc": "2026-10-03T13:52:01.356105+00:00",
-  "qualified_material_candidate_count": 111,
+  "updated_utc": "2026-10-03T14:17:00.399636+00:00",
+  "qualified_material_candidate_count": 140,
   "withdrawn_new_files": 33,
   "withdrawn_appends": 7,
   "current_master_base": "b176eecef836688c637e60c94284ccec1f1427c5",
@@ -61904,12 +61936,12 @@
     "baseline-restricted-not-reclassified": 215
   },
   "audited_disposition_counts": {
-    "still-pending": 359,
-    "published": 111,
-    "awaiting-peer-or-required-notes": 145,
-    "bounded-hold": 326,
-    "platform-blocked": 748,
+    "still-pending": 217,
+    "published": 140,
+    "awaiting-peer-or-required-notes": 111,
+    "bounded-hold": 327,
+    "platform-blocked": 894,
     "sufficient-duplicate": 38
   },
-  "current_blocked_scope_count": 748
+  "current_blocked_scope_count": 894
 }

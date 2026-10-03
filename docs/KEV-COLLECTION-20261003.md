@@ -28,7 +28,7 @@
 
 ## 当前累计文稿
 
-累计102篇（64新增、38既有补证），涉及111个经过独立具体材料审核的候选编号。最新2011–2012批次17提案中保留16篇（14新增2补证），1535因关键字体/SWF静态语义缺口暂缓；六项作者文字/范围错误已纠正，原代码和公开例值保留。0391直接补入S2-007主文，PHP1823直接补入旧主文，原字节可逆还原。
+累计128篇（72新增、56既有补证），涉及140个经过独立具体材料审核的候选编号。最新2024批次28提案保留27项，合成26目标（8新增18补证）/29编号；23113的特异性结果和对照证据不足，原文章保持不动。59项必要说明完成，26篇最终正文和18篇旧正文保留经过独立复核；5910/9465在同页保留独立章节、修复边界和来源，不合并漏洞实体。
 
 | 本次具体验证范围 | 处置 | 文稿 |
 |---|---|---|
@@ -134,6 +134,32 @@
 | CVE-2011-3544 | 新增资料 | [Java Rhino 错误对象特权边界绕过的公开 Applet（CVE-2011-3544）](../Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Oracle%20Java/Java%20Rhino%20%E9%94%99%E8%AF%AF%E5%AF%B9%E8%B1%A1%E7%89%B9%E6%9D%83%E8%BE%B9%E7%95%8C%E7%BB%95%E8%BF%87%E7%9A%84%E5%85%AC%E5%BC%80%20Applet%EF%BC%88CVE-2011-3544%EF%BC%89.md) |
 | CVE-2011-2005 | 新增资料 | [Windows AfdJoinLeaf 本地提权的公开模块及权限判据（CVE-2011-2005）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Windows/Windows%20AfdJoinLeaf%20%E6%9C%AC%E5%9C%B0%E6%8F%90%E6%9D%83%E7%9A%84%E5%85%AC%E5%BC%80%E6%A8%A1%E5%9D%97%E5%8F%8A%E6%9D%83%E9%99%90%E5%88%A4%E6%8D%AE%EF%BC%88CVE-2011-2005%EF%BC%89.md) |
 | CVE-2011-1823 | 新增资料 | [Android vold 本地提权与 GingerBreak 原始验证资料（CVE-2011-1823）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Android/Android%20vold%20%E6%9C%AC%E5%9C%B0%E6%8F%90%E6%9D%83%E4%B8%8E%20GingerBreak%20%E5%8E%9F%E5%A7%8B%E9%AA%8C%E8%AF%81%E8%B5%84%E6%96%99%EF%BC%88CVE-2011-1823%EF%BC%89.md) |
+| CVE-2024-53704 | 既有主文补证 | [SonicOS SSLVPN 认证绕过漏洞(CVE-2024-53704)安全风险通告](../Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/SonicWall/SonicOS%20SSLVPN%20%E8%AE%A4%E8%AF%81%E7%BB%95%E8%BF%87%E6%BC%8F%E6%B4%9E%28CVE-2024-53704%29%E5%AE%89%E5%85%A8%E9%A3%8E%E9%99%A9%E9%80%9A%E5%91%8A.md) |
+| CVE-2024-50603 | 既有主文补证 | [【漏洞复现】CVE-2024-50603](../Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/%E3%80%90%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0%E3%80%91CVE-2024-50603.md) |
+| CVE-2024-55591 | 既有主文补证 | [（CVE-2024-55591）Fortinet FortiOS FortiProxy Node.js WebSocket认证绕过漏洞](../Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/Fortinet/%EF%BC%88CVE-2024-55591%EF%BC%89Fortinet%20FortiOS%20FortiProxy%20Node.js%20WebSocket%E8%AE%A4%E8%AF%81%E7%BB%95%E8%BF%87%E6%BC%8F%E6%B4%9E.md) |
+| CVE-2024-5910; CVE-2024-9465 | 既有主文补证 | [CVE-2024-9465：Palo Alto Expedition 未经身份验证的 SQL 注入 POC](../Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/Palo%20Alto/CVE-2024-9465%EF%BC%9APalo%20Alto%20Expedition%20%E6%9C%AA%E7%BB%8F%E8%BA%AB%E4%BB%BD%E9%AA%8C%E8%AF%81%E7%9A%84%20SQL%20%E6%B3%A8%E5%85%A5%20POC.md) |
+| CVE-2024-28995 | 既有主文补证 | [SolarWindsServ-U存在目录遍历漏洞(CVE-2024-28995)](../Web%E5%AE%89%E5%85%A8/%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BD%AF%E4%BB%B6/SolarWinds/SolarWindsServ-U%E5%AD%98%E5%9C%A8%E7%9B%AE%E5%BD%95%E9%81%8D%E5%8E%86%E6%BC%8F%E6%B4%9E%28CVE-2024-28995%29.md) |
+| CVE-2024-23692 | 既有主文补证 | [RejettoHTTP文件服务器search存在命令执行漏洞(CVE-2024-23692)](../Web%E5%AE%89%E5%85%A8/%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BD%AF%E4%BB%B6/Rejetto%20HFS/RejettoHTTP%E6%96%87%E4%BB%B6%E6%9C%8D%E5%8A%A1%E5%99%A8search%E5%AD%98%E5%9C%A8%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E%28CVE-2024-23692%29.md) |
+| CVE-2024-4879 | 既有主文补证 | [ServiceNowUIJelly模板注入漏洞(CVE-2024-4879)](../Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/ServiceNow/ServiceNowUIJelly%E6%A8%A1%E6%9D%BF%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%28CVE-2024-4879%29.md) |
+| CVE-2024-5217 | 既有主文补证 | [【已复现】ServiceNow 存在代码注入漏洞（CVE-2024-4879、CVE-2024-5217）](../Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/%E3%80%90%E5%B7%B2%E5%A4%8D%E7%8E%B0%E3%80%91ServiceNow%20%E5%AD%98%E5%9C%A8%E4%BB%A3%E7%A0%81%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2024-4879%E3%80%81CVE-2024-5217%EF%BC%89.md) |
+| CVE-2024-6670 | 既有主文补证 | [黑客自 8 月以来频繁利用公开漏洞攻击 WhatsUp Gold](../Web%E5%AE%89%E5%85%A8/%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BD%AF%E4%BB%B6/WhatsUp%20Gold/%E9%BB%91%E5%AE%A2%E8%87%AA%208%20%E6%9C%88%E4%BB%A5%E6%9D%A5%E9%A2%91%E7%B9%81%E5%88%A9%E7%94%A8%E5%85%AC%E5%BC%80%E6%BC%8F%E6%B4%9E%E6%94%BB%E5%87%BB%20WhatsUp%20Gold.md) |
+| CVE-2024-29824 | 既有主文补证 | [Ivanti 修复Endpoint Manager 中的严重RCE漏洞](../Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/Ivanti/Ivanti%20%E4%BF%AE%E5%A4%8DEndpoint%20Manager%20%E4%B8%AD%E7%9A%84%E4%B8%A5%E9%87%8DRCE%E6%BC%8F%E6%B4%9E.md) |
+| CVE-2024-4358 | 既有主文补证 | [速修复！Progress Telerik 中存在严重的认证绕过漏洞](../Web%E5%AE%89%E5%85%A8/%E4%B8%AD%E9%97%B4%E4%BB%B6/Progress%20Software/%E9%80%9F%E4%BF%AE%E5%A4%8D%EF%BC%81Progress%20Telerik%20%E4%B8%AD%E5%AD%98%E5%9C%A8%E4%B8%A5%E9%87%8D%E7%9A%84%E8%AE%A4%E8%AF%81%E7%BB%95%E8%BF%87%E6%BC%8F%E6%B4%9E.md) |
+| CVE-2024-34102 | 既有主文补证 | [漏洞预警  Magento Open Source XXE漏洞](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/Magento/%E6%BC%8F%E6%B4%9E%E9%A2%84%E8%AD%A6%20%20Magento%20Open%20Source%20XXE%E6%BC%8F%E6%B4%9E.md) |
+| CVE-2024-24919 | 既有主文补证 | [CheckPoint安全网关MyCRL存在任意文件读取漏洞](../Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/Check%20Point/CheckPoint%E5%AE%89%E5%85%A8%E7%BD%91%E5%85%B3MyCRL%E5%AD%98%E5%9C%A8%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E.md) |
+| CVE-2024-0012; CVE-2024-9474 | 既有主文补证 | [Palo Alto Networks PAN-OS存在远程命令执行漏洞CVE-2024-9474 附POC](../Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/Palo%20Alto/Palo%20Alto%20Networks%20PAN-OS%E5%AD%98%E5%9C%A8%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9ECVE-2024-9474%20%E9%99%84POC.md) |
+| CVE-2024-3400 | 既有主文补证 | [Palo Alto Networks PAN-OS 命令注入漏洞分析（CVE-2024-3400）](../Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/Palo%20Alto/Palo%20Alto%20Networks%20PAN-OS%20%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90%EF%BC%88CVE-2024-3400%EF%BC%89.md) |
+| CVE-2024-42009 | 既有主文补证 | [CVE-2024-42009](../Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/CVE-2024-42009.md) |
+| CVE-2024-50623 | 既有主文补证 | [（CVE-2024-50623）Cleo Harmony VLTrader LexiCom未认证任意文件上传下载漏洞](../Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/Cleo/%EF%BC%88CVE-2024-50623%EF%BC%89Cleo%20Harmony%20VLTrader%20LexiCom%E6%9C%AA%E8%AE%A4%E8%AF%81%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E4%B8%8B%E8%BD%BD%E6%BC%8F%E6%B4%9E.md) |
+| CVE-2024-47575 | 既有主文补证 | [CVE-2024-47575 漏洞分析及三种利用方式](../Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/CVE-2024-47575%20%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90%E5%8F%8A%E4%B8%89%E7%A7%8D%E5%88%A9%E7%94%A8%E6%96%B9%E5%BC%8F.md) |
+| CVE-2024-4885 | 新增资料 | [WhatsUp Gold 报表导出文件写入 CVE-2024-4885](../Web%E5%AE%89%E5%85%A8/%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BD%AF%E4%BB%B6/WhatsUp%20Gold/WhatsUp%20Gold%20%E6%8A%A5%E8%A1%A8%E5%AF%BC%E5%87%BA%E6%96%87%E4%BB%B6%E5%86%99%E5%85%A5%20CVE-2024-4885.md) |
+| CVE-2024-54085 | 新增资料 | [AMI MegaRAC Redfish认证绕过的公开对照验证（CVE-2024-54085）](../Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/AMI/AMI%20MegaRAC%20Redfish%E8%AE%A4%E8%AF%81%E7%BB%95%E8%BF%87%E7%9A%84%E5%85%AC%E5%BC%80%E5%AF%B9%E7%85%A7%E9%AA%8C%E8%AF%81%EF%BC%88CVE-2024-54085%EF%BC%89.md) |
+| CVE-2024-40891 | 新增资料 | [Zyxel Telnet命令注入的原始实验对照（CVE-2024-40891）](../Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/Zyxel/Zyxel%20Telnet%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5%E7%9A%84%E5%8E%9F%E5%A7%8B%E5%AE%9E%E9%AA%8C%E5%AF%B9%E7%85%A7%EF%BC%88CVE-2024-40891%EF%BC%89.md) |
+| CVE-2024-40890 | 新增资料 | [Zyxel诊断CGI换行命令注入（CVE-2024-40890）](../Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/Zyxel/Zyxel%E8%AF%8A%E6%96%ADCGI%E6%8D%A2%E8%A1%8C%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5%EF%BC%88CVE-2024-40890%EF%BC%89.md) |
+| CVE-2024-9380 | 新增资料 | [Ivanti CSA报告参数的二次命令解释（CVE-2024-9380）](../Web%E5%AE%89%E5%85%A8/%E5%AE%89%E5%85%A8%E8%AE%BE%E5%A4%87/Ivanti/Ivanti%20CSA%E6%8A%A5%E5%91%8A%E5%8F%82%E6%95%B0%E7%9A%84%E4%BA%8C%E6%AC%A1%E5%91%BD%E4%BB%A4%E8%A7%A3%E9%87%8A%EF%BC%88CVE-2024-9380%EF%BC%89.md) |
+| CVE-2024-8956; CVE-2024-8957 | 新增资料 | [PTZOptics认证遗漏与NTP命令注入链（CVE-2024-8956、CVE-2024-8957）](../IOT%E5%AE%89%E5%85%A8/PTZOptics/PTZOptics%E8%AE%A4%E8%AF%81%E9%81%97%E6%BC%8F%E4%B8%8ENTP%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5%E9%93%BE%EF%BC%88CVE-2024-8956%E3%80%81CVE-2024-8957%EF%BC%89.md) |
+| CVE-2024-38475 | 新增资料 | [Apache重写歧义在SonicWall SMA中的文件读取（CVE-2024-38475）](../Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/SonicWall/Apache%E9%87%8D%E5%86%99%E6%AD%A7%E4%B9%89%E5%9C%A8SonicWall%20SMA%E4%B8%AD%E7%9A%84%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%EF%BC%88CVE-2024-38475%EF%BC%89.md) |
+| CVE-2024-37085 | 新增资料 | [ESXi按AD组名授予管理权限的公开手工路径（CVE-2024-37085）](../Web%E5%AE%89%E5%85%A8/%E4%BA%91%E5%B9%B3%E5%8F%B0/VMware/ESXi%E6%8C%89AD%E7%BB%84%E5%90%8D%E6%8E%88%E4%BA%88%E7%AE%A1%E7%90%86%E6%9D%83%E9%99%90%E7%9A%84%E5%85%AC%E5%BC%80%E6%89%8B%E5%B7%A5%E8%B7%AF%E5%BE%84%EF%BC%88CVE-2024-37085%EF%BC%89.md) |
 
 ## 维护和验证
 
@@ -173,8 +199,14 @@ Edimax1316尚缺已审下游载荷和独立验证结果；UniFi原研究未清�
 
 冻结检查点暂停范围616：2023年165、2024桌面/浏览器50、2014–2015来源缺口41、2021年215、2016–2017年145。后两组因任务级风险中止且具体触发项未知，保守暂停整个范围，保留此前阅读事实；2016–2017先前14份候审提案也未发布。未重试或绕行这些阻断；不能声称范围内每个编号都独立触发限制。
 
-检查点后，2022年132项任务也因平台风险中止且触发项未知而保守暂停，候审稿未发布，当前暂停总范围748。阅读事实保留，当前逐项处置在JSON中覆盖；上文616及下文处置数字仅描述冻结检查点。
+检查点后，2022年132项任务也因平台风险中止且触发项未知而保守暂停，候审稿未发布，该时点暂停范围748。阅读事实保留，当前逐项处置在JSON中覆盖；上文616及下文处置数字仅描述冻结检查点。
 
 处置为111纳入Draft分支、148待独立复核/必要说明或作者补齐、38已有充分覆盖、326有界暂缓、616暂停、488实质待办，共1727。已识别主要技术材料或相关正文未读完的记录继续保持待办；暂缓不代表候选全部审结，也不代表全网没有PoC。
 
-当前发布仍为102篇（64新增、38旧文补充），关联111个材料编号。所有年份均已有审阅范围，但分配不计作阅读，完整任务尚未完成。后续新增阅读与作者稿待下一次逐ID归并。材料关联编号不一定等于新增主CVE导航；S2-007、ProjectSend11680及Ivanti8963/8190原有元数据边界继续保留。
+当前发布为128篇（72新增、56旧文补充），关联140个材料编号。所有年份均已有审阅范围，但分配不计作阅读，完整任务尚未完成。后续新增阅读与作者稿待下一次逐ID归并。材料关联编号不一定等于新增主CVE导航；S2-007、ProjectSend11680及Ivanti8963/8190原有元数据边界继续保留。
+
+2020年146项任务在此后亦因平台风险中止且具体触发项未知，保守暂停全部范围，17份作者候审稿未发布。当前暂停范围由748变为894；此前已读事实不删除，也不等于每个编号单独被拒绝。
+
+本轮出版叠加后的当前处置：140已纳入Draft分支、111待审/必要补齐、38已有充分覆盖、327有界暂缓、894暂停、217实质待办，共1727。720全文阅读等数字保持冻结检查点，不从文章数量自动推增；每篇新增材料的独立审阅记录另列。
+
+最新128篇批次验收：71项Python测试、22项Marked测试通过；构建/重建一致，0errors、0fatal、0newissues，5064项历史警告，baseline未改。128篇Pandoc静态渲染中183块围栏代码可复制文本保持原值。Marked4.3.0扫描5781篇，178提示全部与master同路径、规则、原值和次数一致，0新增、0结构阻断。该机器扫描不等于全库全文审阅。新增批次另核对17份固定MSF/Nuclei源码与上游Git blob，全部一致。

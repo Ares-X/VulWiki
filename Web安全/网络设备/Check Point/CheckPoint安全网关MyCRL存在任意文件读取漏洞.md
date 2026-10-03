@@ -1,25 +1,31 @@
 ---
+verification_source: "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/auxiliary/gather/checkpoint_gateway_fileread_cve_2024_24919.rb"
+version: "CNA：Quantum/CloudGuard R80.40、R81、R81.10、R81.20；Spark R80.20/R81.10；热修复逐产品核对sk182336"
 source: "wy876 漏洞文库"
 id: "vw-128df3adba40f5b5a0f78023"
 entity_id: "ve-128df3adba40f5b5a0f78023"
 schema_version: "1"
-title: "Check Point MyCRL 文件读取线索（标题与请求路径尚未对应）"
+title: "Check Point MyCRL 任意文件读取资料（CVE-2024-24919）"
 product: "Check Point安全网关"
-record_type: "analysis"
+record_type: "vulnerability"
 review_status: "text-reviewed"
 verification_status: "not-reproduced"
 content_status: "needs-review"
-identifier_status: "unknown"
-identifier_role: "unknown"
-primary_identifiers: ""
+identifier_status: "active"
+identifier_role: "primary"
+primary_identifiers: "CVE-2024-24919"
 referenced_identifiers: ""
-prerequisites: "无版本、未解释访问/认证条件"
+prerequisites: "Quantum/CloudGuard启用Remote Access VPN或Mobile Access Blade且/clients/MyCRL可达；Spark按CNA分支核对；无需管理认证"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/Check%20Point/CheckPoint%E5%AE%89%E5%85%A8%E7%BD%91%E5%85%B3MyCRL%E5%AD%98%E5%9C%A8%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E.md"
 review_date: "2026-10-02"
-side_effects: "读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要的响应，不能由接口可达推定敏感内容已泄露"
+side_effects: "模块check读取/etc/group，run默认/etc/shadow；控制台输出和可选STORE_LOOT产生敏感副本；可能留日志"
 source_url: "https://www.yuque.com/xiaokp7/ocvun2/sa59vno6cykie36p"
 source_status: "recorded"
 ---
+
+## 新增资料适用说明（2026-10-03）
+
+本页原有篇首与2026-10-02校订中“没有MyCRL技术主体”“暂不作为可直接复现记录”等结论，限定为历史GET /../../../../etc/passwd样例。新补充的POST /clients/MyCRL及请求体aCSHELL路径具有独立源码依据，本次主CVE归属只依据该新材料；旧GET既未改写，也未被验证为等效请求。
 
 ## 收录状态复核（2026-10-03）
 
@@ -88,3 +94,16 @@ Upgrade-Insecure-Requests: 1
 ---
 
 > 来源：wy876 漏洞文库（https://github.com/wy876/POC (备份镜像 DMW11525708/wiki)）
+
+
+## 2026-10-03 公开验证资料补充
+
+[固定公开源码](https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/auxiliary/gather/checkpoint_gateway_fileread_cve_2024_24919.rb) 本次已完整静态阅读；未检查框架及载荷的全部传递依赖。
+
+原文 GET /../../../../etc/passwd 没有证明 MyCRL 机制。本补充提供另一份已全文读过的实际源码，原请求保持原样。模块的 `read_file` 向 `/clients/MyCRL` 发送 POST，穿越输入位于请求体，并带有 aCSHELL 前缀；这与旧文把穿越直接放在URL中不同。
+
+[CNA](https://cveawg.mitre.org/api/cve/CVE-2024-24919) 对应 Quantum/CloudGuard 的R80.40、R81、R81.10、R81.20，以及Spark的R80.20/R81.10，要求Remote Access VPN或Mobile Access Blade开放。它不属于本库另一篇Management Server 2026新闻的主漏洞。补丁按[厂商sk182336](https://support.checkpoint.com/results/sk/sk182336)的产品热修复核对，不能给所有型号填一个共同升级号。
+
+模块check已实际读取/etc/group，run默认读取/etc/shadow；输出会产生敏感副本，STORE_LOOT可落盘。仅搜索root字符串的check存在误报空间，源码所称当时无已知IOC不能推出不会留日志。固定源码全文已读，未执行或请求网关。
+
+本页原有篇首与2026-10-02校订中“没有MyCRL技术主体”“暂不作为可直接复现记录”等结论，限定为历史GET /../../../../etc/passwd样例。新补充的POST /clients/MyCRL及请求体aCSHELL路径具有独立源码依据，本次主CVE归属只依据该新材料；旧GET既未改写，也未被验证为等效请求。

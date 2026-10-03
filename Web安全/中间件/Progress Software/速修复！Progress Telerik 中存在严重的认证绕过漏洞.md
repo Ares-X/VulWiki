@@ -1,4 +1,7 @@
 ---
+verification_source: "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/auxiliary/scanner/http/telerik_report_server_auth_bypass.rb"
+source_url: "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/auxiliary/scanner/http/telerik_report_server_auth_bypass.rb"
+fixed_version: "仅CVE-2024-4358：10.1.24.514；CVE-2024-1800首修版本另核"
 source: "gelusus/wxvl 公众号漏洞文库"
 title: "速修复！Progress Telerik 中存在严重的认证绕过漏洞"
 product: "Progress Telerik Report Server"
@@ -11,9 +14,9 @@ primary_identifiers: "CVE-2024-4358; CVE-2024-1800"
 referenced_identifiers: ""
 identifier_role: "primary"
 cve: "CVE-2024-4358; CVE-2024-1800"
-prerequisites: "4358 StartupController.Register在完成初始化后仍开放；1800原需低权限用户，组合由新建管理员满足"
-source_status: "unknown"
-side_effects: "含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。"
+prerequisites: "4358：IIS上的Telerik Report Server<=10.0.24.305，初始化完成后Startup/Register仍可达；1800需要认证且是独立漏洞"
+source_status: "recorded"
+side_effects: "4358模块默认EXPLOIT创建持久管理员账号并保存本地凭据，无删除账号步骤；302判据不是实际登录证据"
 id: "vw-a8359493855eba8b56ee5530"
 entity_id: "ve-a8359493855eba8b56ee5530"
 schema_version: "1"
@@ -152,3 +155,14 @@ Pexels
 ---
 
 > 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+
+
+## 2026-10-03 公开验证资料补充
+
+[固定公开源码](https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/auxiliary/scanner/http/telerik_report_server_auth_bypass.rb) 本次已完整静态阅读；未检查框架及载荷的全部传递依赖。
+
+该辅助模块的默认动作是 EXPLOIT。`create_account` 向 Startup/Register 发送完整注册字段，创建管理员，并检查302到Report/Index；它还把新凭据保存到本地工作区，没有删除账号的步骤。CHECK 动作只识别登录页版本，不能当实际绕过证明。
+
+[厂商CNA](https://cveawg.mitre.org/api/cve/CVE-2024-4358) 将受影响环境限定为 IIS 上的 Telerik Report Server 2024Q1（10.0.24.305）及以前，修复为10.1.24.514。该账号创建满足另一条已认证漏洞的前置条件，但4358本身不是反序列化执行链。引用模块完整可追溯，未执行注册、登录或安装框架。
+
+302重定向到Report/Index是模块预期的账号创建判据；源码将新凭据的登录状态记录为UNTRIED，没有证明实际登录成功。10.1.24.514在此只作为CVE-2024-4358修复号，不能默认也是CVE-2024-1800的首次修复版本。

@@ -4511,13 +4511,1179 @@
           "reason": "Required font/SWF core was only structurally inspected; complete source-to-resource semantics missing. No article added and no claim public materials are globally absent."
         }
       ]
+    },
+    {
+      "reviewed_utc": "2026-10-03T14:17:00.399636+00:00",
+      "review_base": "27f4ca0d25fb60d953ee09a34938ab1e90872e92",
+      "proposals_reviewed": 28,
+      "retained_proposals": 27,
+      "held_proposals": 1,
+      "retained_files": 26,
+      "qualified_candidate_ids": 29,
+      "final_byte_review_passed": true,
+      "fixed_source_blob_checks": 17,
+      "fixed_source_blob_matches": 17,
+      "rows": [
+        {
+          "path": "Web安全/网络设备/SonicWall/SonicOS SSLVPN 认证绕过漏洞(CVE-2024-53704)安全风险通告.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2024-53704"
+          ],
+          "specific_trigger": {
+            "location": "Bishop Fox Building the Exploit / Additional tests；固定模板 http.raw/matchers/extractors",
+            "concrete_input": "44字符swap解码为空字节，经 /cgi-bin/sslvpnclient?launchplatform= 进入会话比较",
+            "expected_or_source_recorded_result": "来源记录返回已有swap会话ID及NELaunchX1配置；最早活动会话被劫持；无活动会话与修复系统都可能无响应",
+            "maintainer_execution": false
+          },
+          "versions_and_prerequisites": "Gen7/NSv/TZ80；受影响7.1.1-7058及更早、7.1.2-7019、8.0.0-8035；SSLVPN可达且有活动会话",
+          "side_effects_and_dependency_limits": "会话劫持及内部路由信息读取；退出会断开真实用户；Requests关闭TLS验证；resp.body是原示例问题",
+          "sources": [
+            {
+              "url": "https://bishopfox.com/blog/sonicwall-cve-2024-53704-ssl-vpn-session-hijacking",
+              "sha256": "baa5eb786c9c713b84d4903ffd680589722fd7f17c8eef83a9807e4acb285d7b",
+              "read_depth": "Full substantive article/advisory visible text and displayed code read via text extraction; raw HTML scripts/styles not executed; unlisted image pixels not inspected",
+              "location": "Bishop Fox Building the Exploit / Additional tests；固定模板 http.raw/matchers/extractors"
+            },
+            {
+              "url": "https://raw.githubusercontent.com/projectdiscovery/nuclei-templates/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2024/CVE-2024-53704.yaml",
+              "sha256": "4f6883aa594a03f44e868e3f6dec961d488c5da79db44ffe17ddaa93c38bca22",
+              "read_depth": "Entire source file text read statically, including imports, helper functions, request builders, matcher/output, comments and literal data; not run",
+              "location": "Bishop Fox Building the Exploit / Additional tests；固定模板 http.raw/matchers/extractors"
+            },
+            {
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2024-53704",
+              "sha256": "181c213becbc545e0666ebfef927dbdbb7bf1af3453ecd82c2596b12883cc0df",
+              "read_depth": "CNA English description and full affected version records read; CPE arrays, metrics and ADP containers not full-read; not trigger evidence",
+              "location": "containers.cna.descriptions and affected"
+            }
+          ],
+          "required_editorial_corrections_applied": [
+            "补入固定Nuclei链接/commit，明确已读的是请求而不是版本探针；活动会话必要性必须在结构化前提保留",
+            "旧通告“PoC未公开”仅为2025-01-08历史状态；不把CVE确认自动扩展至未核QVD编号"
+          ],
+          "current_sha256": "13e91f9521996f08f02abcb094962c68831ae58db6b5b4e57e4eb43a2e29b702",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/其他软件/杂项/【漏洞复现】CVE-2024-50603.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2024-50603"
+          ],
+          "specific_trigger": {
+            "location": "Securing.pl In-depth analysis / Proof of Concept；固定模板完整raw与OAST匹配",
+            "concrete_input": "/v1/api 的list_flightpath_destination_instances/cloud_type；CLI执行前拼接，CID任意值并不构成认证",
+            "expected_or_source_recorded_result": "原研究记录服务器收到/etc/passwd回传；模板匹配HTTP回连和root记录，另加200条件有漏报风险",
+            "maintainer_execution": false
+          },
+          "versions_and_prerequisites": "Aviatrix Controller <7.1.4191；7.2.x<7.2.4996；HTTP入口、curl、Unix路径及目标出网条件",
+          "side_effects_and_dependency_limits": "启动curl外传文件至回连端；访问日志、敏感副本；不执行目标请求",
+          "sources": [
+            {
+              "url": "https://www.securing.pl/en/cve-2024-50603-aviatrix-network-controller-command-injection-vulnerability/",
+              "sha256": "cd1e0e4b7a6567cdcddcfa6cd8a0bd1682e0fe5cf57be93eb24e33460c0f4976",
+              "read_depth": "Full substantive article/advisory visible text and displayed code read via text extraction; raw HTML scripts/styles not executed; unlisted image pixels not inspected",
+              "location": "Securing.pl In-depth analysis / Proof of Concept；固定模板完整raw与OAST匹配"
+            },
+            {
+              "url": "https://raw.githubusercontent.com/projectdiscovery/nuclei-templates/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2024/CVE-2024-50603.yaml",
+              "sha256": "a54800fa42c37d5005763d73b5ab23d356efdf013d63f54fe60e4ec15ee566c5",
+              "read_depth": "Entire source file text read statically, including imports, helper functions, request builders, matcher/output, comments and literal data; not run",
+              "location": "Securing.pl In-depth analysis / Proof of Concept；固定模板完整raw与OAST匹配"
+            },
+            {
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2024-50603",
+              "sha256": "a6f96cf6131dedf84368aab0d4816e6bb83d348d38fe6c965f46df07d287d159",
+              "read_depth": "CNA English description and full affected version records read; CPE arrays, metrics and ADP containers not full-read; not trigger evidence",
+              "location": "containers.cna.descriptions and affected"
+            }
+          ],
+          "required_editorial_corrections_applied": [
+            "将side_effects中“两个action明确”这种非副作用表述替换为本次已证实的命令执行、文件外传和日志风险；保留原文样例",
+            "保留原研究7.2.4820与CNA分支边界的不同口径，不给404厂商旧URL补造热修复矩阵"
+          ],
+          "current_sha256": "11b0a5db68993796bc413074371e2a96a2bf4a435edf3f9ee89fc6993647c0f4",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/网络设备/Fortinet/（CVE-2024-55591）Fortinet FortiOS FortiProxy Node.js WebSocket认证绕过漏洞.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2024-55591"
+          ],
+          "specific_trigger": {
+            "location": "fortinet-poc.py 全部；send_login_context、initialize_telnet_session、ws_connect_and_initialize；Nuclei全部",
+            "concrete_input": "WebSocket /ws/cli/open 携local_access_token并发送登录上下文与用户所选CLI命令",
+            "expected_or_source_recorded_result": "源码预期输出设备CLI响应；静态service-worker.js不是最终绕过判据，反复发送实际上下文才是核心",
+            "maintainer_execution": false
+          },
+          "versions_and_prerequisites": "FortiOS7.0.0–7.0.16；CNA另列FortiProxy7.0.0–7.0.19/7.2.0–7.2.12；管理面可达；脚本适配只覆盖FortiOS预检",
+          "side_effects_and_dependency_limits": "串行无上限重连/重复命令；TLS校验关闭；requests/urllib3依赖未逐包审计；固定13.37.13.37是上下文字段而非另行连接",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/watchtowrlabs/fortios-auth-bypass-poc-CVE-2024-55591/e1a468ece5636c6c10d1717b874773ef72fe3069/CVE-2024-55591-PoC.py",
+              "sha256": "37a0680892ab7ac74f312cea93d9127333f1a185cc05f9cd0243a3f8fc73e245",
+              "read_depth": "Entire source file text read statically, including imports, helper functions, request builders, matcher/output, comments and literal data; not run",
+              "location": "fortinet-poc.py 全部；send_login_context、initialize_telnet_session、ws_connect_and_initialize；Nuclei全部"
+            },
+            {
+              "url": "https://raw.githubusercontent.com/projectdiscovery/nuclei-templates/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2024/CVE-2024-55591.yaml",
+              "sha256": "4b99fb661702bfd18a3b53da9c0e5d67b3b5e4afc9aa124b182eb2e553fd5bc0",
+              "read_depth": "Entire source file text read statically, including imports, helper functions, request builders, matcher/output, comments and literal data; not run",
+              "location": "fortinet-poc.py 全部；send_login_context、initialize_telnet_session、ws_connect_and_initialize；Nuclei全部"
+            },
+            {
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2024-55591",
+              "sha256": "837b288c741fb707e6287f5184ee00386bcfc205cb2d1450ca3df144888cf9b0",
+              "read_depth": "CNA English description and full affected version records read; CPE arrays, metrics and ADP containers not full-read; not trigger evidence",
+              "location": "containers.cna.descriptions and affected"
+            }
+          ],
+          "required_editorial_corrections_applied": [
+            "明确完整脚本固定URL；不把只读README或service-worker.js预检描述为漏洞验证",
+            "保留串行重复发送和无限循环风险；本轮不确认FortiProxy适配与原时间线"
+          ],
+          "current_sha256": "35ad5854291a11cbf10a96c7cd6383f2282255b678de2891b9bb10f55fba62c1",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/网络设备/Palo Alto/CVE-2024-9465：Palo Alto Expedition 未经身份验证的 SQL 注入 POC.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2024-5910"
+          ],
+          "specific_trigger": {
+            "location": "固定5910模板 path/matchers；Horizon3 CVE-2024-5910: No Reversing Needed",
+            "concrete_input": "GET /OS/startup/restore/restoreAdmin.php",
+            "expected_or_source_recorded_result": "明确期待Admin user found及Admin password restored；研究文字记录管理员密码被重置，图3未视检",
+            "maintainer_execution": false
+          },
+          "versions_and_prerequisites": "Expedition1.2分支<1.2.92，1.2.92修复；网络可达，无有效会话要求",
+          "side_effects_and_dependency_limits": "GET会重置密码；后续登录/取凭据是额外操作；框架依赖未审计",
+          "sources": [
+            {
+              "url": "https://www.horizon3.ai/attack-research/palo-alto-expedition-from-n-day-to-full-compromise/",
+              "sha256": "4ae5663c4535d1e6a3d9a817a039bffe145bb306d1f157ec5745940170a8ddae",
+              "read_depth": "Full substantive article/advisory visible text and displayed code read via text extraction; raw HTML scripts/styles not executed; unlisted image pixels not inspected",
+              "location": "固定5910模板 path/matchers；Horizon3 CVE-2024-5910: No Reversing Needed"
+            },
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2024/CVE-2024-5910.yaml",
+              "sha256": "1a854f8c144f2c9d7df059f20efe64e1bdf8c7c5e585319bd1a99713381df655",
+              "read_depth": "Entire source file text read statically, including imports, helper functions, request builders, matcher/output, comments and literal data; not run",
+              "location": "固定5910模板 path/matchers；Horizon3 CVE-2024-5910: No Reversing Needed"
+            },
+            {
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2024-5910",
+              "sha256": "281f2be02248045c3452c33dfae61c62f65b0aab14efbd9e58b142ad9158145f",
+              "read_depth": "CNA English description and full affected version records read; CPE arrays, metrics and ADP containers not full-read; not trigger evidence",
+              "location": "containers.cna.descriptions and affected"
+            }
+          ],
+          "required_editorial_corrections_applied": [
+            "与9465补充在同一existing文件用独立CVE标题/章节追加，保留record_type=roundup；合并verification_source两个公告而非最后写入覆盖",
+            "可将两个编号作为本篇独立讨论主编号，但绝不新增共享entity_id/canonical把密码重置与SQL注入混成一个实体；引用9464/9466保持各自角色"
+          ],
+          "current_sha256": "36d583d730791bb6891888e6cbf4a34732126e3656d679d561b290ea6f381170",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/网络设备/Palo Alto/CVE-2024-9465：Palo Alto Expedition 未经身份验证的 SQL 注入 POC.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2024-9465"
+          ],
+          "specific_trigger": {
+            "location": "Horizon3全文 Unauthenticated SQL Injection；固定Nuclei全体；补读原作者Python51行",
+            "concrete_input": "CHECKPOINT.php action=get建表，再import signatureid SQL SLEEP；固定代码均pandbRBAC",
+            "expected_or_source_recorded_result": "原研究称SQLMap转储users表；固定模板延迟6秒，作者代码10秒且9<time<15；均无无注入对照，不能单凭延迟证明运行成功",
+            "maintainer_execution": false
+          },
+          "versions_and_prerequisites": "Expedition1.2.0–<1.2.96；修1.2.96；表需存在/先初始化；无认证；5910修复界限独立",
+          "side_effects_and_dependency_limits": "创建数据库表、查询延迟、敏感数据读取路径；无自动清理；Requests/Nuclei依赖未全审",
+          "sources": [
+            {
+              "url": "https://www.horizon3.ai/attack-research/palo-alto-expedition-from-n-day-to-full-compromise/",
+              "sha256": "4ae5663c4535d1e6a3d9a817a039bffe145bb306d1f157ec5745940170a8ddae",
+              "read_depth": "Full substantive article/advisory visible text and displayed code read via text extraction; raw HTML scripts/styles not executed; unlisted image pixels not inspected",
+              "location": "Horizon3全文 Unauthenticated SQL Injection；固定Nuclei全体；补读原作者Python51行"
+            },
+            {
+              "url": "https://raw.githubusercontent.com/projectdiscovery/nuclei-templates/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2024/CVE-2024-9465.yaml",
+              "sha256": "9da8b517420a057fae9a01309e8c50a0e86b5c7a75cde70bd868a0ee7a2bc494",
+              "read_depth": "Entire source file text read statically, including imports, helper functions, request builders, matcher/output, comments and literal data; not run",
+              "location": "Horizon3全文 Unauthenticated SQL Injection；固定Nuclei全体；补读原作者Python51行"
+            },
+            {
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2024-9465",
+              "sha256": "e7af0d58650d6499988fec488b8022981ffc92d7bdefac134bf43edb915ffad8",
+              "read_depth": "CNA English description and full affected version records read; CPE arrays, metrics and ADP containers not full-read; not trigger evidence",
+              "location": "containers.cna.descriptions and affected"
+            },
+            {
+              "sha256": "9d0da090dd2c52033ce5bdd53854463d0d4a6e5c6ae4700ddce73b7aead9cfcf",
+              "url": "https://github.com/horizon3ai/CVE-2024-9465/blob/main/CVE-2024-9465.py",
+              "read_depth": "Entire displayed Python source read independently; mutable main, web snapshot hash not raw-code hash",
+              "location": "51-line source, create_checkpoint_table and inject_checkpoint_query, web lines290–367"
+            }
+          ],
+          "required_editorial_corrections_applied": [
+            "与5910稿独立章节共同保留，不覆盖verification_source：加入PAN-SA-2024-0010和5910公告两个URL",
+            "补入原作者Python静态证据；其一致pandbRBAC不追溯改写原文pandb；10秒窗口与模板6秒检测分别说明",
+            "说明两份检测均缺无注入基线；本次通过具体公开输入/预期与来源关联，不等于单次时延可确诊"
+          ],
+          "current_sha256": "36d583d730791bb6891888e6cbf4a34732126e3656d679d561b290ea6f381170",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/服务器软件/SolarWinds/SolarWindsServ-U存在目录遍历漏洞(CVE-2024-28995).md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2024-28995"
+          ],
+          "specific_trigger": {
+            "location": "servu-module.rb check/run 完整；SolarWinds advisory Affected/Fixed",
+            "concrete_input": "InternalDir平台相反分隔符遍历与InternalFile；check读取启动日志，run读取指定文件",
+            "expected_or_source_recorded_result": "预期实际文件内容；check从取得的Serv-U-StartupLog提取版本/OS；默认路径失败不是安全证明",
+            "maintainer_execution": false
+          },
+          "versions_and_prerequisites": "Serv-U15.4.2 HF1及以前，HF2修复；HTTP可达；安装目录深度及服务账号读权限限制",
+          "side_effects_and_dependency_limits": "默认STORE_LOOT=true写入本地副本；无隐藏下载器；框架依赖未审计；不保证无日志",
+          "sources": [
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/auxiliary/gather/solarwinds_servu_fileread_cve_2024_28995.rb",
+              "sha256": "ac9572ba0c74c3c324b97c23cc08e1766be9961071c3b14ad15e1b010b082ef6",
+              "read_depth": "Entire source file text read statically, including imports, helper functions, request builders, matcher/output, comments and literal data; not run",
+              "location": "servu-module.rb check/run 完整；SolarWinds advisory Affected/Fixed"
+            },
+            {
+              "url": "https://www.solarwinds.com/trust-center/security-advisories/cve-2024-28995",
+              "sha256": "f3400d32e6ad57cb255967c7c830550983a25c3ef07f010106e4502dbb833f66",
+              "read_depth": "Full substantive article/advisory visible text and displayed code read via text extraction; raw HTML scripts/styles not executed; unlisted image pixels not inspected",
+              "location": "servu-module.rb check/run 完整；SolarWinds advisory Affected/Fixed"
+            },
+            {
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2024-28995",
+              "sha256": "fb6beaf2a31f6a0f9ea90ebe2662e8d6422a494a41f8e9372bb5b9938660d894",
+              "read_depth": "CNA English description and full affected version records read; CPE arrays, metrics and ADP containers not full-read; not trigger evidence",
+              "location": "containers.cna.descriptions and affected"
+            }
+          ],
+          "required_editorial_corrections_applied": [
+            "正文补入固定模块链接；默认loot落盘和默认路径失败限制须同时进入操作风险",
+            "不把厂商合并Serv-U说明提升为每个SKU的独立测试结论"
+          ],
+          "current_sha256": "f5fee534b3bc7531c354f537cf50fac5256fedefcb33b6ab0d147946736289d9",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/服务器软件/Rejetto HFS/RejettoHTTP文件服务器search存在命令执行漏洞(CVE-2024-23692).md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2024-23692"
+          ],
+          "specific_trigger": {
+            "location": "hfs-module.rb send_ssti_request_cgi/check/exploit 全部；原作者全文/Timeline",
+            "concrete_input": "search符号展开，经空Host的%host%形成模板边界；check读随机Cookie并输出version；exploit走exec宏",
+            "expected_or_source_recorded_result": "check预期随机Cookie值及版本输出，区别纯版本探测；exec预期以HFS进程权限执行命令",
+            "maintainer_execution": false
+          },
+          "versions_and_prerequisites": "HFS2.x Windows/Delphi；CNA至2.3m，模块另称测试2.4.0 RC7；2.x EOL迁移3.x",
+          "side_effects_and_dependency_limits": "模板执行、进程/潜在文件和出网，桌面可能cmd窗口；外部载荷由框架选择；不把root/SYSTEM当固定身份",
+          "sources": [
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/windows/http/rejetto_hfs_rce_cve_2024_23692.rb",
+              "sha256": "124417c661e49f649eae48173cda6a969c79c6a760b8db467f1ef4c345d99618",
+              "read_depth": "Entire source file text read statically, including imports, helper functions, request builders, matcher/output, comments and literal data; not run",
+              "location": "hfs-module.rb send_ssti_request_cgi/check/exploit 全部；原作者全文/Timeline"
+            },
+            {
+              "url": "https://mohemiv.com/all/rejetto-http-file-server-2-3m-unauthenticated-rce/",
+              "sha256": "21745a72c48020cb221699f18949057039879e7334e9046a22c0c4a03869d2ab",
+              "read_depth": "Full substantive article/advisory visible text and displayed code read via text extraction; raw HTML scripts/styles not executed; unlisted image pixels not inspected",
+              "location": "hfs-module.rb send_ssti_request_cgi/check/exploit 全部；原作者全文/Timeline"
+            },
+            {
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2024-23692",
+              "sha256": "c274849bd9d52f307f8ed764772416a7635af42f72a032f2fcde665317bb7edb",
+              "read_depth": "CNA English description and full affected version records read; CPE arrays, metrics and ADP containers not full-read; not trigger evidence",
+              "location": "containers.cna.descriptions and affected"
+            }
+          ],
+          "required_editorial_corrections_applied": [
+            "保留%password%旧样例与模块空Host/%host%差异，不修原请求或换payload",
+            "明确CNA至2.3m、模块声称2.4.0 RC7测试、2.x无补丁/EOL三个不同口径"
+          ],
+          "current_sha256": "161bdfc396afa65d863234f48bf333e3e8a3556582ea8ee2d5a675eb7c9b9ba6",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/商业软件/ServiceNow/ServiceNowUIJelly模板注入漏洞(CVE-2024-4879).md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2024-4879"
+          ],
+          "specific_trigger": {
+            "location": "Assetnote Bug1/2/3及完整结论；两个Nuclei模板全部；CNA4879/5217/5178",
+            "concrete_input": "login.do jvar_page_title注入style内Jelly；Glide命名空间单引号绕过；4879模板执行乘法",
+            "expected_or_source_recorded_result": "固定模板期待1787569；原研究7*7显示代码执行，配置读取另有co..nf文件过滤绕过",
+            "maintainer_execution": false
+          },
+          "versions_and_prerequisites": "Now Platform指定Utah/Vancouver/Washington DC补丁线见已读CNA；匿名UI可达；MID服务器命令需额外配置",
+          "side_effects_and_dependency_limits": "平台脚本执行；长文件读样例暴露DB凭据；MID命令是额外出网/执行；Nuclei框架未审计",
+          "sources": [
+            {
+              "url": "https://www.assetnote.io/resources/research/chaining-three-bugs-to-access-all-your-servicenow-data",
+              "sha256": "0a6c0a76d1abb4913c4f3fff981d25be9c26299b4335244fc24fb8cd25ba576c",
+              "read_depth": "Full substantive article/advisory visible text and displayed code read via text extraction; raw HTML scripts/styles not executed; unlisted image pixels not inspected",
+              "location": "Assetnote Bug1/2/3及完整结论；两个Nuclei模板全部；CNA4879/5217/5178"
+            },
+            {
+              "url": "https://raw.githubusercontent.com/projectdiscovery/nuclei-templates/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2024/CVE-2024-4879.yaml",
+              "sha256": "f679298f4198970f72fbdbc8fde66eb4f8c7049dd6773dc85ad4e639b8c25ac8",
+              "read_depth": "Entire source file text read statically, including imports, helper functions, request builders, matcher/output, comments and literal data; not run",
+              "location": "Assetnote Bug1/2/3及完整结论；两个Nuclei模板全部；CNA4879/5217/5178"
+            },
+            {
+              "url": "https://raw.githubusercontent.com/projectdiscovery/nuclei-templates/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2024/CVE-2024-5217.yaml",
+              "sha256": "e3507e43455e63961bca03791901503e26dfb22fd6a2b26fd6db7fe15b858a96",
+              "read_depth": "Entire source file text read statically, including imports, helper functions, request builders, matcher/output, comments and literal data; not run",
+              "location": "Assetnote Bug1/2/3及完整结论；两个Nuclei模板全部；CNA4879/5217/5178"
+            },
+            {
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2024-5178",
+              "sha256": "ef871278602f3c513a7c912bea13a9dc2414bd5020558d35588d85b556ef592c",
+              "read_depth": "CNA English description and full affected version records read; CPE arrays, metrics and ADP containers not full-read; not trigger evidence",
+              "location": "containers.cna.descriptions and affected"
+            },
+            {
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2024-4879",
+              "sha256": "eb1bc74d76076a1aaf84dcf7fd113414324394da3aa38b491c3a685dd9597124",
+              "read_depth": "CNA English description and full affected version records read; CPE arrays, metrics and ADP containers not full-read; not trigger evidence",
+              "location": "containers.cna.descriptions and affected"
+            }
+          ],
+          "required_editorial_corrections_applied": [
+            "两个ServiceNow补充共享链条研究；说明算术/文件模板不是隔离验证4879、5217、5178各缺陷的独立实验",
+            "将固定4879/5217模板URL放入正文；版本矩阵各编号单列，不能因相同载荷自动去重"
+          ],
+          "current_sha256": "006f1a3387fe54e856cf01a7c5b34bd6d9edd8340f3840e0a4e7fa5558728c0c",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/其他软件/杂项/【已复现】ServiceNow 存在代码注入漏洞（CVE-2024-4879、CVE-2024-5217）.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2024-5217"
+          ],
+          "specific_trigger": {
+            "location": "同Assetnote Bug2 GlideExpressionScript及Bug3；5217固定模板第二个完整编码请求；官方KB1648313标题",
+            "concrete_input": "GlideExpressionScript双引号命名空间正则被单引号绕过；文件读取模板还链入5178",
+            "expected_or_source_recorded_result": "模板期待glide.db.user；原研究记录配置内容；不是5217单独的文件权限绕过或OS-RCE证明",
+            "maintainer_execution": false
+          },
+          "versions_and_prerequisites": "CNA5217独立版本矩阵；KB标题明确Incomplete Input Validation in GlideExpression Script，正文动态未取到",
+          "side_effects_and_dependency_limits": "DB配置/账号资料读取；第一编码变体%2B不改写；额外解码依赖未知，但第二变体及原始研究清晰",
+          "sources": [
+            {
+              "url": "https://www.assetnote.io/resources/research/chaining-three-bugs-to-access-all-your-servicenow-data",
+              "sha256": "0a6c0a76d1abb4913c4f3fff981d25be9c26299b4335244fc24fb8cd25ba576c",
+              "read_depth": "Full substantive article/advisory visible text and displayed code read via text extraction; raw HTML scripts/styles not executed; unlisted image pixels not inspected",
+              "location": "同Assetnote Bug2 GlideExpressionScript及Bug3；5217固定模板第二个完整编码请求；官方KB1648313标题"
+            },
+            {
+              "url": "https://raw.githubusercontent.com/projectdiscovery/nuclei-templates/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2024/CVE-2024-4879.yaml",
+              "sha256": "f679298f4198970f72fbdbc8fde66eb4f8c7049dd6773dc85ad4e639b8c25ac8",
+              "read_depth": "Entire source file text read statically, including imports, helper functions, request builders, matcher/output, comments and literal data; not run",
+              "location": "同Assetnote Bug2 GlideExpressionScript及Bug3；5217固定模板第二个完整编码请求；官方KB1648313标题"
+            },
+            {
+              "url": "https://raw.githubusercontent.com/projectdiscovery/nuclei-templates/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2024/CVE-2024-5217.yaml",
+              "sha256": "e3507e43455e63961bca03791901503e26dfb22fd6a2b26fd6db7fe15b858a96",
+              "read_depth": "Entire source file text read statically, including imports, helper functions, request builders, matcher/output, comments and literal data; not run",
+              "location": "同Assetnote Bug2 GlideExpressionScript及Bug3；5217固定模板第二个完整编码请求；官方KB1648313标题"
+            },
+            {
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2024-5178",
+              "sha256": "ef871278602f3c513a7c912bea13a9dc2414bd5020558d35588d85b556ef592c",
+              "read_depth": "CNA English description and full affected version records read; CPE arrays, metrics and ADP containers not full-read; not trigger evidence",
+              "location": "containers.cna.descriptions and affected"
+            },
+            {
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2024-5217",
+              "sha256": "fd5cfeb6b2c5451c1bb0c6cbf0bf0e7046b96841cd7998c03b3a7c1a9db8212e",
+              "read_depth": "CNA English description and full affected version records read; CPE arrays, metrics and ADP containers not full-read; not trigger evidence",
+              "location": "containers.cna.descriptions and affected"
+            },
+            {
+              "sha256": "85152372d394eee90aa5aa3bee76c62244c459b2c0bb69e89cb3b5f0420ce507",
+              "url": "https://support.servicenow.com/kb?id=kb_article_view&sysparm_article=KB1648313",
+              "read_depth": "Independent web retrieval: KB title only, body unavailable",
+              "location": "Saved web-reader receipt with line references"
+            }
+          ],
+          "required_editorial_corrections_applied": [
+            "补引用官方KB1648313标题对GlideExpression Script的绑定，注明仅标题可读、KB正文未取得",
+            "不要把co..nf文件读直接归为5217独立能力；5178只能作链条相关编号而非无认证原语；避免重复两个稿的所有通用段落"
+          ],
+          "current_sha256": "da900fa4b666850f76d8a7caf34d8bb8b7e769bd39c731db852331ca2ec827cf",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/服务器软件/WhatsUp Gold/黑客自 8 月以来频繁利用公开漏洞攻击 WhatsUp Gold.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2024-6670"
+          ],
+          "specific_trigger": {
+            "location": "whatsup_gold_sqli.rb run 全流程，check另读",
+            "concrete_input": "JMXSecurity设置密码；HasErrors.classId两轮SQL更新；AlertCenter读取；LoginAjax验证",
+            "expected_or_source_recorded_result": "源码检查告警随机marker携带的加密值，最终ASPXAUTH及authenticated=true",
+            "maintainer_execution": false
+          },
+          "versions_and_prerequisites": "WhatsUp Gold <2024.0.0；CNA结构化下界2023.1.0；现存用户名和NmConsole API可达；23.1.3版本check不是完整范围",
+          "side_effects_and_dependency_limits": "覆盖全局设置；无WHERE的UPDATE ProActiveAlert改全部告警名称；更新用户密码并保存本地凭据；无自动回滚",
+          "sources": [
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/auxiliary/admin/http/whatsup_gold_sqli.rb",
+              "sha256": "6e8d211618e3dc5171bce0cc67b7a3f982dda09b88da37834daf47ba5c55e8c7",
+              "read_depth": "Entire source file text read statically, including imports, helper functions, request builders, matcher/output, comments and literal data; not run",
+              "location": "whatsup_gold_sqli.rb run 全流程，check另读"
+            },
+            {
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2024-6670",
+              "sha256": "98f9778f64604db51982798c997b8079560e19df5b928340001057f5bf4704f0",
+              "read_depth": "CNA English description and full affected version records read; CPE arrays, metrics and ADP containers not full-read; not trigger evidence",
+              "location": "containers.cna.descriptions and affected"
+            }
+          ],
+          "required_editorial_corrections_applied": [
+            "必须指出ProActiveAlert的UPDATE没有WHERE，可能覆盖全部告警名称，且失败也不回滚既有全局设置或用户密码",
+            "不要把6670补证升级为6671/4885也通过；若调整主元数据须分别定位"
+          ],
+          "current_sha256": "bcf015f402cfa9e3beacf6efb4b62712ca751dc6ebde830806677b92045116ba",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/网络设备/Ivanti/Ivanti 修复Endpoint Manager 中的严重RCE漏洞.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2024-29824"
+          ],
+          "specific_trigger": {
+            "location": "ivanti_epm_recordgoodapp_sqli_rce.rb xml_payload/soap_request/check/exploit全部",
+            "concrete_input": "SOAP UpdateStatusEvents Action type96 status/md5注入 RecordGoodApp；基线与延迟查询",
+            "expected_or_source_recorded_result": "check比较基线/延迟时长；exploit的xp_cmdshell命令执行是明确后续而非从200推断",
+            "maintainer_execution": false
+          },
+          "versions_and_prerequisites": "EPM Core2022 SU5及以前未打对应安全更新；同网络可达，无认证；SQL权限约束执行能力",
+          "side_effects_and_dependency_limits": "启用show advanced options及xp_cmdshell不恢复；SQL等待占资源；fetch可落文件；框架payload未审计",
+          "sources": [
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/windows/http/ivanti_epm_recordgoodapp_sqli_rce.rb",
+              "sha256": "afbe87d39c043c81d0f93f3553319f8d3bdf71f4fb0e22d349d23f26beab2503",
+              "read_depth": "Entire source file text read statically, including imports, helper functions, request builders, matcher/output, comments and literal data; not run",
+              "location": "ivanti_epm_recordgoodapp_sqli_rce.rb xml_payload/soap_request/check/exploit全部"
+            },
+            {
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2024-29824",
+              "sha256": "1e9a8b4547a5c87251e80c2edaad706d5c92c8967d518207f7cfdfdf9d66725e",
+              "read_depth": "CNA English description and full affected version records read; CPE arrays, metrics and ADP containers not full-read; not trigger evidence",
+              "location": "containers.cna.descriptions and affected"
+            }
+          ],
+          "required_editorial_corrections_applied": [
+            "说明xp_cmdshell/show advanced options为持久配置变更、无还原；差分时延也受网络/负载影响",
+            "同页多个独立CVE/产品继续分开，不把当前源码作用推广到所有29822–29830"
+          ],
+          "current_sha256": "f0264c129d0d4639a08961d72b84842bd644c29270a00ae6bb64ab3a6d529732",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/中间件/Progress Software/速修复！Progress Telerik 中存在严重的认证绕过漏洞.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2024-4358"
+          ],
+          "specific_trigger": {
+            "location": "telerik_report_server_auth_bypass.rb create_account/action_exploit/action_check全部",
+            "concrete_input": "Startup/Register提交完整注册字段",
+            "expected_or_source_recorded_result": "预期302到Report/Index，新凭据保存为UNTRIED；不是已成功验证登录；CHECK仅版本",
+            "maintainer_execution": false
+          },
+          "versions_and_prerequisites": "IIS Telerik Report Server <=10.0.24.305；4358修复10.1.24.514；完成初始化后仍能访问注册入口",
+          "side_effects_and_dependency_limits": "默认EXPLOIT创建持久管理员，保存本地凭据；没有清理；Faker/框架依赖未审计",
+          "sources": [
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/auxiliary/scanner/http/telerik_report_server_auth_bypass.rb",
+              "sha256": "a4bb76739cbd10c59b97a5ccfe3f27775cfbdd2e31000279616c23133ed91dad",
+              "read_depth": "Entire source file text read statically, including imports, helper functions, request builders, matcher/output, comments and literal data; not run",
+              "location": "telerik_report_server_auth_bypass.rb create_account/action_exploit/action_check全部"
+            },
+            {
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2024-4358",
+              "sha256": "fa16c256b999f82302bc59bc18a2418514b11a4fb4c121c3e2e61e5e8111a66b",
+              "read_depth": "CNA English description and full affected version records read; CPE arrays, metrics and ADP containers not full-read; not trigger evidence",
+              "location": "containers.cna.descriptions and affected"
+            }
+          ],
+          "required_editorial_corrections_applied": [
+            "结构化fixed_version应标明仅CVE-2024-4358=10.1.24.514，不能给同页1800默认同一首修版本",
+            "声明302到Report/Index是模块预期创建账号判据，新凭据记录状态UNTRIED，未证明实际登录"
+          ],
+          "current_sha256": "b7ba3e7d46ccd5fc5cf0aff952864f4be64763854aa3e1ab4d882f88bb8e0d87",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/CMS内容/Magento/漏洞预警  Magento Open Source XXE漏洞.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2024-34102"
+          ],
+          "specific_trigger": {
+            "location": "magento_xxe_cve_2024_34102.rb xxe_request/xxe_xml_data/make_xxe_dtd/on_request_uri全部；Adobe公告",
+            "concrete_input": "匿名guest-carts/1/estimate-shipping-methods JSON sourceData、外部DTD与文件base64回传",
+            "expected_or_source_recorded_result": "文件回传内容是文件读取输出；400随机fieldName仅路径检查；version check不是触发",
+            "maintainer_execution": false
+          },
+          "versions_and_prerequisites": "受影响Adobe Commerce/Magento分支；对应修复p1/p6/p8/p9/ext8见Adobe；需XML实体及外连",
+          "side_effects_and_dependency_limits": "本地HTTP监听、目标访问外部DTD并外传文件，可STORE_LOOT；不是直接RCE；框架依赖未审计",
+          "sources": [
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/auxiliary/gather/magento_xxe_cve_2024_34102.rb",
+              "sha256": "b61454e53848172b61e7f8299f775a50ddc0622225ad688cfb27cdeba4cf69d3",
+              "read_depth": "Entire source file text read statically, including imports, helper functions, request builders, matcher/output, comments and literal data; not run",
+              "location": "magento_xxe_cve_2024_34102.rb xxe_request/xxe_xml_data/make_xxe_dtd/on_request_uri全部；Adobe公告"
+            },
+            {
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2024-34102",
+              "sha256": "6dcb66ab1a3e09d0358980c4b4821b869b9c4a17a3cb97eed5b448463f64ab4e",
+              "read_depth": "CNA English description and full affected version records read; CPE arrays, metrics and ADP containers not full-read; not trigger evidence",
+              "location": "containers.cna.descriptions and affected"
+            },
+            {
+              "sha256": "85152372d394eee90aa5aa3bee76c62244c459b2c0bb69e89cb3b5f0420ce507",
+              "url": "https://helpx.adobe.com/security/products/magento/apsb24-40.html",
+              "read_depth": "Independent web retrieval: complete relevant affected/fixed/configuration/CVE sections, not merely a link",
+              "location": "Saved web-reader receipt with line references"
+            }
+          ],
+          "required_editorial_corrections_applied": [
+            "保持Adobe各release-line修复矩阵；原旧ext版本不作为当前适用事实；补丁ACSD-60241另说明",
+            "模块check版本比较与2.4.7-p1描述错误在示例外说明；400随机fieldName不是文件读取成功"
+          ],
+          "current_sha256": "f208af40840b436378eb536ef9968bb833dc78005de1f6990b79b54b56678856",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/网络设备/Check Point/CheckPoint安全网关MyCRL存在任意文件读取漏洞.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2024-24919"
+          ],
+          "specific_trigger": {
+            "location": "checkpoint_gateway_fileread_cve_2024_24919.rb read_file/check/run全部",
+            "concrete_input": "POST /clients/MyCRL，请求体aCSHELL前缀路径遍历",
+            "expected_or_source_recorded_result": "预期目标文件内容；check的root字符串只是弱匹配，run默认/etc/shadow",
+            "maintainer_execution": false
+          },
+          "versions_and_prerequisites": "Quantum/CloudGuard R80.40/R81/R81.10/R81.20，Spark R80.20/R81.10；VPN/Mobile Access启用可达",
+          "side_effects_and_dependency_limits": "敏感文件读取、输出/可选loot副本；不能保证无日志；框架未审计",
+          "sources": [
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/auxiliary/gather/checkpoint_gateway_fileread_cve_2024_24919.rb",
+              "sha256": "10ba367e1cf2b899f2a1464a1bc80d219fca3d761b110efcc0d4dc67bacf54ab",
+              "read_depth": "Entire source file text read statically, including imports, helper functions, request builders, matcher/output, comments and literal data; not run",
+              "location": "checkpoint_gateway_fileread_cve_2024_24919.rb read_file/check/run全部"
+            },
+            {
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2024-24919",
+              "sha256": "8aa4ab18ee052c1e998d95d9fa2d9e24307692f1026a5f92ac8b05427b972e94",
+              "read_depth": "CNA English description and full affected version records read; CPE arrays, metrics and ADP containers not full-read; not trigger evidence",
+              "location": "containers.cna.descriptions and affected"
+            }
+          ],
+          "required_editorial_corrections_applied": [
+            "篇首旧“没有MyCRL技术主体”的绝对表述应限定为历史GET样例；独立补充明确真正POST身体路径",
+            "只依据新模块赋CVE主编号，不把历史GET当已修正或已验证；原source/archive出处保留"
+          ],
+          "current_sha256": "3f42f6434804736bb787625879c7a84880036e064cf85506230ae4b5f3f7004f",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/网络设备/Palo Alto/Palo Alto Networks PAN-OS存在远程命令执行漏洞CVE-2024-9474 附POC.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2024-0012",
+            "CVE-2024-9474"
+          ],
+          "specific_trigger": {
+            "location": "现有目标全文5.漏洞复现全部三请求；两个CNA描述及版本",
+            "concrete_input": "先createRemoteAppwebSession.php特殊路径和X-PAN-AUTHCHECK，再消费带命令用户名，最后读生成文件",
+            "expected_or_source_recorded_result": "原文明确输出文件为执行结果；源码/报文中有id写入路径；响应截图未视检，不称观察到root",
+            "maintainer_execution": false
+          },
+          "versions_and_prerequisites": "管理Web可达；0012移除认证，9474原须管理员；10.2/11.0/11.1/11.2共同阈值分别记录；9474另10.1",
+          "side_effects_and_dependency_limits": "创建会话、执行命令、写web目录文件；Cookie值需同会话；维护者不重算或修原请求",
+          "sources": [
+            {
+              "url": "https://github.com/Ares-X/VulWiki/blob/ba9d8690136825160a05448da9ea09dd3bfe5102/Web安全/网络设备/Palo Alto/Palo Alto Networks PAN-OS存在远程命令执行漏洞CVE-2024-9474 附POC.md",
+              "sha256": "08b3e9bc021448b566d74790a4fba4ba501f6e1690628ed875460095936add69",
+              "read_depth": "Complete target Markdown text read, including full HTTP/code/input/output and editorial boundaries; image pixels not viewed",
+              "location": "现有目标全文5.漏洞复现全部三请求；两个CNA描述及版本"
+            },
+            {
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2024-0012",
+              "sha256": "ead20f123294f876b3f5cc8760def29375fd89d19143ee3f4ad0aad717dd80b5",
+              "read_depth": "CNA English description and full affected version records read; CPE arrays, metrics and ADP containers not full-read; not trigger evidence",
+              "location": "containers.cna.descriptions and affected"
+            },
+            {
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2024-9474",
+              "sha256": "252ac1e46fbafdb2fb4b7ee013fdbf0adc302a2bc3b53c1ca1085fa33394e7ae",
+              "read_depth": "CNA English description and full affected version records read; CPE arrays, metrics and ADP containers not full-read; not trigger evidence",
+              "location": "containers.cna.descriptions and affected"
+            }
+          ],
+          "required_editorial_corrections_applied": [
+            "建议显示标题含0012+9474利用链，保留原文件路径；两编号是链条中的独立漏洞",
+            "源码报文完整但截图未视检；固定Content-Length/原Cookie占位值不改，不称已观察root结果"
+          ],
+          "current_sha256": "96df3192a4a15540e82dd225fbe417a979130d12ec1a04bb76351d045a42ea63",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/网络设备/Palo Alto/Palo Alto Networks PAN-OS 命令注入漏洞分析（CVE-2024-3400）.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2024-3400"
+          ],
+          "specific_trigger": {
+            "location": "现有目标 任意文件创建/命令注入完整curl及ls、ps、HTTP回连输出；厂商公告",
+            "concrete_input": "SESSID遍历创建文件；文件名被遥测命令字符串消费",
+            "expected_or_source_recorded_result": "来源ls显示root文件；HTTP回连?user=root与进程输出，非单纯200",
+            "maintainer_execution": false
+          },
+          "versions_and_prerequisites": "PAN-OS10.2/11.0/11.1启用GlobalProtect portal或gateway；telemetry不是普遍暴露条件；maintenance hotfix逐支",
+          "side_effects_and_dependency_limits": "文件写入、异步命令执行、出网/日志；延迟未回连不能判安全；第一curl及路径拼错不改",
+          "sources": [
+            {
+              "url": "https://github.com/Ares-X/VulWiki/blob/ba9d8690136825160a05448da9ea09dd3bfe5102/Web安全/网络设备/Palo Alto/Palo Alto Networks PAN-OS 命令注入漏洞分析（CVE-2024-3400）.md",
+              "sha256": "0f848b4cac5e26f8ded60b9569abea9495a66aade0d67a43837875cf735cdf09",
+              "read_depth": "Complete target Markdown text read, including full HTTP/code/input/output and editorial boundaries; image pixels not viewed",
+              "location": "现有目标 任意文件创建/命令注入完整curl及ls、ps、HTTP回连输出；厂商公告"
+            },
+            {
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2024-3400",
+              "sha256": "69732ecef8c740e04f4fd60163258d350315f75c212ee811a94c798f565cee4a",
+              "read_depth": "CNA English description and full affected version records read; CPE arrays, metrics and ADP containers not full-read; not trigger evidence",
+              "location": "containers.cna.descriptions and affected"
+            },
+            {
+              "sha256": "85152372d394eee90aa5aa3bee76c62244c459b2c0bb69e89cb3b5f0420ce507",
+              "url": "https://security.paloaltonetworks.com/CVE-2024-3400",
+              "read_depth": "Independent web retrieval: complete relevant affected/fixed/configuration/CVE sections, not merely a link",
+              "location": "Saved web-reader receipt with line references"
+            }
+          ],
+          "required_editorial_corrections_applied": [
+            "改掉version字段中误抽的Python函数定义，保留原正文函数不动；配置前提按官方portal或gateway",
+            "旧稿telemetry必要性被明确更正；原路径拼字、弯引号及第一个curl错误只在外部校订说明"
+          ],
+          "current_sha256": "8d94f518ab42aa69c9f10f2300c89ae4164e73ab81ef6430236242ced4c773c3",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/其他软件/杂项/CVE-2024-42009.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2024-42009"
+          ],
+          "specific_trigger": {
+            "location": "Sonar原研究L102–162完整技术小节，全文技术/影响/修复上下文至L295",
+            "concrete_input": "HTML邮件body属性quote失配，经html4inline成为style/onanimationstart",
+            "expected_or_source_recorded_result": "原文完整邮件体alert(origin)并明确打开邮件触发脚本；未观看视频，不称本库观测",
+            "maintainer_execution": false
+          },
+          "versions_and_prerequisites": "Roundcube1.5<=1.5.7、1.6<=1.6.7；修复1.5.8/1.6.8；受害者查看HTML邮件，Bootstrap动画条件",
+          "side_effects_and_dependency_limits": "浏览器脚本及邮箱会话权限；持续service worker及盗密码需附加步骤；无本地二进制依赖",
+          "sources": [
+            {
+              "url": "https://www.sonarsource.com/blog/government-emails-at-risk-critical-cross-site-scripting-vulnerability-in-roundcube-webmail/",
+              "sha256": "cc748f2419a50ff429599073a2c9a83dd55ace61a021c93257d26fba5e3de590",
+              "read_depth": "Full available technical article text and displayed code in archived web-reader snapshot read; webpage navigation may be outside snapshot; images/video not inspected",
+              "location": "Sonar原研究L102–162完整技术小节，全文技术/影响/修复上下文至L295"
+            },
+            {
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2024-42009",
+              "sha256": "08a6f3b2043fb6715e3345be17b3997df4475e13d430528df95914a644d9d8f5",
+              "read_depth": "CNA English description and full affected version records read; CPE arrays, metrics and ADP containers not full-read; not trigger evidence",
+              "location": "containers.cna.descriptions and affected"
+            }
+          ],
+          "required_editorial_corrections_applied": [
+            "新增小节限定42009；不能把42008/42010和service worker的后续能力一并计为42009直接结果",
+            "如追加原HTML只能放代码围栏，不执行/渲染活动内容；不以未观看视频作成功来源"
+          ],
+          "current_sha256": "a8ac8af952633a92b5e86b4eb5bcbacd2d7800eefcdfcf8ebb85d41273225749",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/商业软件/Cleo/（CVE-2024-50623）Cleo Harmony VLTrader LexiCom未认证任意文件上传下载漏洞.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2024-50623"
+          ],
+          "specific_trigger": {
+            "location": "固定50623 Nuclei两请求全部；新增静态阅读watchTowr Python82行",
+            "concrete_input": "/Synchronization的VLSync Retrieve path读Windows win.ini；Python另ADD写文件",
+            "expected_or_source_recorded_result": "读取以文件节名/实际内容判定；Python写入仅200消息，无回读证明",
+            "maintainer_execution": false
+          },
+          "versions_and_prerequisites": "Harmony/VLTrader/LexiCom<5.8.0.21；Windows路径模板；HTTP同步入口；55956独立写入路径",
+          "side_effects_and_dependency_limits": "读敏感数据输出；Python写操作传本地文件，requests关闭TLS；无webshell自动执行；框架未审计",
+          "sources": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2024/CVE-2024-50623.yaml",
+              "sha256": "da6e5edc460798d0fd339068ba359d029319e2570de75e4544c33767e964b992",
+              "read_depth": "Entire source file text read statically, including imports, helper functions, request builders, matcher/output, comments and literal data; not run",
+              "location": "固定50623 Nuclei两请求全部；新增静态阅读watchTowr Python82行"
+            },
+            {
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2024-50623",
+              "sha256": "ace18c00de0aca7b483f7f6bde38458a2cc792099c431473fc0db15969b66290",
+              "read_depth": "CNA English description and full affected version records read; CPE arrays, metrics and ADP containers not full-read; not trigger evidence",
+              "location": "containers.cna.descriptions and affected"
+            },
+            {
+              "sha256": "c6255806f3d25df267b56634bae84db48d61e505d64a3f3de9b84af0766faa5b",
+              "url": "https://github.com/watchtowrlabs/CVE-2024-50623/blob/main/CVE-2024-50623.py",
+              "read_depth": "Entire displayed Python file read in GitHub web snapshot; main not immutable; raw fetch failed (cache/robots), not a safety denial; snapshot hash is not raw-code hash",
+              "location": "82-line source / web lines348–455"
+            }
+          ],
+          "required_editorial_corrections_applied": [
+            "必须更新新补充“--what/--where未确认”的句子：本次读到的原Python中--where两模式均为远端路径，--what只在write读本地文件、read分支不使用",
+            "另记README带/Synchronization而源码又拼接一次的目标URL差异，保持原示例不修；写入只有200判据，不能据此宣称已回读/执行"
+          ],
+          "current_sha256": "a8ebe295fee4af3c01b43e60082f9046c5834f1a2be26e8b403d8dc999e06053",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/其他软件/杂项/CVE-2024-47575 漏洞分析及三种利用方式.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2024-47575"
+          ],
+          "specific_trigger": {
+            "location": "fortimanager_rce_cve_2024_47575.rb 全文 incl exploit、make_socket、send_packet、cert/key literals",
+            "concrete_input": "get auth登记→get connect_tcp tcp_port=rsh cmd=/bin/sh→channel使用返回localid发送命令",
+            "expected_or_source_recorded_result": "源码期望reply200/action=ack/localid，最终payload通过明确shell通道执行；check仅产品证书",
+            "maintainer_execution": false
+          },
+          "versions_and_prerequisites": "FortiManager受影响分支见CNA；TLS接受设备证书/私钥，serial/platform匹配；7.6通道路径，不覆盖旧文另两种注入",
+          "side_effects_and_dependency_limits": "设备登记、shell通道、命令执行，fetch可写/tmp；公开试用证书留在原源；未发送；框架/选定payload未审计",
+          "sources": [
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/linux/misc/fortimanager_rce_cve_2024_47575.rb",
+              "sha256": "fdfe7d7677601b725638aa77cee22e63c8948dd15bffb1fbde4b0d9f95819a1a",
+              "read_depth": "Entire source file text read statically, including imports, helper functions, request builders, matcher/output, comments and literal data; not run",
+              "location": "fortimanager_rce_cve_2024_47575.rb 全文 incl exploit、make_socket、send_packet、cert/key literals"
+            },
+            {
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2024-47575",
+              "sha256": "59b5e91bb05f58ccf6843e41c71053d0c609022f1d9e5ab6ac0e2b1131b02fd1",
+              "read_depth": "CNA English description and full affected version records read; CPE arrays, metrics and ADP containers not full-read; not trigger evidence",
+              "location": "containers.cna.descriptions and affected"
+            }
+          ],
+          "required_editorial_corrections_applied": [
+            "保留TLS设备证书/私钥、serial/platform条件；未执行/发送公开试用材料，勿从无需管理授权推成无需任何设备信任条件",
+            "仅第三种rsh通道得到代码补证；前两种原图片路径未视检，不继承其完成状态；Cloud范围逐分支"
+          ],
+          "current_sha256": "54e0c71ffa38f6ac09abd3a1138833b3e5a15c49f2773e29ec9a8a7752c3f6f2",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/服务器软件/WhatsUp Gold/WhatsUp Gold 报表导出文件写入 CVE-2024-4885.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2024-4885"
+          ],
+          "specific_trigger": {
+            "location": "固定CVE-2024-4885.py全文、hax.aspx全文、固定Nuclei全文",
+            "concrete_input": "TestRecurringReport SOAP到/NmAPI/RecurringReport；PUT回传文件；ASPX QueryString hax运行cmd",
+            "expected_or_source_recorded_result": "源码预期ASPX命令输出；Nuclei只sPassword回连；HTTP200和exploit done不等于RCE成功",
+            "maintainer_execution": false
+          },
+          "versions_and_prerequisites": "WUG<2023.1.3；CNA范围2023.1.0起；API/回连可达、有效userId、硬编码安装路径、ASPX执行条件",
+          "side_effects_and_dependency_limits": "任务/目录/ASPX写入，加密密码出网，未清理；本地HTTP服务接受请求；requests等依赖未全审计",
+          "sources": [
+            {
+              "url": "https://github.com/sinsinology/CVE-2024-4885/blob/feea30ac42b55861e77a3b5cacd62f5f8975e58c/CVE-2024-4885.py",
+              "sha256": "dabea452fa3a87d89fdeee7d5592f00d97531ad721adff93e1b002dcad190cef",
+              "read_depth": "Entire source file text read statically, including imports, helper functions, request builders, matcher/output, comments and literal data; not run",
+              "location": "固定CVE-2024-4885.py全文、hax.aspx全文、固定Nuclei全文"
+            },
+            {
+              "url": "https://github.com/sinsinology/CVE-2024-4885/blob/feea30ac42b55861e77a3b5cacd62f5f8975e58c/hax.aspx",
+              "sha256": "9681500b1672502de3db8165d913d05670bf600121fdb3ef66825870db6eaf55",
+              "read_depth": "Entire source file text read statically, including imports, helper functions, request builders, matcher/output, comments and literal data; not run",
+              "location": "固定CVE-2024-4885.py全文、hax.aspx全文、固定Nuclei全文"
+            },
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2024/CVE-2024-4885.yaml",
+              "sha256": "5e59f7274007f8e603b220e3460180b0910838f7e462c449f5d0d87fd8e8bbc3",
+              "read_depth": "Entire source file text read statically, including imports, helper functions, request builders, matcher/output, comments and literal data; not run",
+              "location": "固定CVE-2024-4885.py全文、hax.aspx全文、固定Nuclei全文"
+            },
+            {
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2024-4885",
+              "sha256": "330b3ab27ac1b000b748872fae5deb3f35037b8eaf32e44e9d3c03687fb5150d",
+              "read_depth": "CNA English description and full affected version records read; CPE arrays, metrics and ADP containers not full-read; not trigger evidence",
+              "location": "containers.cna.descriptions and affected"
+            }
+          ],
+          "required_editorial_corrections_applied": [
+            "增加真实源码限制：180秒等待仅打印文字；start_find未用于同步，时间戳探测立即启动；未找到200仍进入最后possible_path",
+            "把CNA结构化2023.1.0下界标为快照数据，描述本身为所有2023.1.3之前；不可据结构化下界保证更早不受影响",
+            "保持API真实POST与print显示端点差异；Nuclei仅凭sPassword回连不证明文件写入/ASPX执行"
+          ],
+          "current_sha256": "07d5c422dbafc95d86ee7b75d8323488aa470a2b6fb453b67b92b93cd080fa5e",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/网络设备/AMI/AMI MegaRAC Redfish认证绕过的公开对照验证（CVE-2024-54085）.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2024-54085"
+          ],
+          "specific_trigger": {
+            "location": "Eclypsium原网页完整2024模板，提取文本L155–190；不审2023模板",
+            "concrete_input": "三次GET：Redfish根、Systems、同Systems加X-Server-Addr",
+            "expected_or_source_recorded_result": "matcher要求root200/AMI特征、无头Systems非200、有头Systems200；控制变量为特定header",
+            "maintainer_execution": false
+          },
+          "versions_and_prerequisites": "AMI SPx12.0–<12.7、13.0–<13.5；BMC Redfish可达；OEM版本单独核",
+          "side_effects_and_dependency_limits": "读取受保护Redfish信息和日志；无电源/固件写操作；Nuclei未执行/传递依赖未审计",
+          "sources": [
+            {
+              "url": "https://eclypsium.com/blog/eclypsium-releases-tools-for-detecting-ami-megarac-bmc-vulnerabilities/",
+              "sha256": "f69b07e7db74413c634d034c23af6eeb84d9c00b4eb0620145c8281d0b1a4244",
+              "read_depth": "Full 2024-54085 template and surrounding 2024 explanation read, extracted text lines155–190; 2023 template not reviewed",
+              "location": "CVE-2024-54085 – AMI MegaRAC Authentication Bypass"
+            },
+            {
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2024-54085",
+              "sha256": "73a0077748b9b8be159a099db0ecc061745012b4d201e54f2278e491be6eff42",
+              "read_depth": "CNA English description and full affected version records read; CPE arrays, metrics and ADP containers not full-read; not trigger evidence",
+              "location": "containers.cna.descriptions and affected"
+            }
+          ],
+          "required_editorial_corrections_applied": [
+            "纠正“原始模板含扫描结果”口径：本次独立直接读到完整2024模板及判据，未把下方其他年份扫描示例作为本CVE结果",
+            "新analysis_of只是来源文档关系，不证明ASUS每个固件/主板均由本模板独立测试"
+          ],
+          "current_sha256": "13358b7d8fe81c8798f4a3b7b36a355888eb48182f43ec9fc48f30046e57f90d",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/网络设备/Zyxel/Zyxel Telnet命令注入的原始实验对照（CVE-2024-40891）.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2024-40891"
+          ],
+          "specific_trigger": {
+            "location": "VulnCheck全文；CVE-2024-40891 Telnet transcript及zyuser对照；Zyxel公告",
+            "concrete_input": "登录Telnet后tftp -h || sh；另一记录普通sh被拒绝而ping ;sh进入shell",
+            "expected_or_source_recorded_result": "完整BusyBox shell及ls/passwd输出，非QEMU模拟成功主张",
+            "maintainer_execution": false
+          },
+          "versions_and_prerequisites": "VMG4325-B10A1.00(AAFR.4)C0_20170615；任意有效用户、Telnet可达启用；WAN另需配置；EOL",
+          "side_effects_and_dependency_limits": "明文认证、设备shell/后续状态操作；默认凭据0890为独立前置，其他2017引用不扩展审阅",
+          "sources": [
+            {
+              "url": "https://www.vulncheck.com/blog/zyxel-telnet-vulns",
+              "sha256": "6f608206f0bd3962b33dca2abd93977bbf2256b76e3280c349df38a2b09505fc",
+              "read_depth": "Full substantive article/advisory visible text and displayed code read via text extraction; raw HTML scripts/styles not executed; unlisted image pixels not inspected",
+              "location": "VulnCheck全文；CVE-2024-40891 Telnet transcript及zyuser对照；Zyxel公告"
+            },
+            {
+              "url": "https://www.zyxel.com/global/en/support/security-advisories/zyxel-security-advisory-for-command-injection-and-insecure-default-credentials-vulnerabilities-in-certain-legacy-dsl-cpe-02-04-2025",
+              "sha256": "1ac2d8a5686343150b29b12a59dba0a6b6460499fc289ec5ac5856209dd71b9b",
+              "read_depth": "Full substantive article/advisory visible text and displayed code read via text extraction; raw HTML scripts/styles not executed; unlisted image pixels not inspected",
+              "location": "VulnCheck全文；CVE-2024-40891 Telnet transcript及zyuser对照；Zyxel公告"
+            },
+            {
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2024-40891",
+              "sha256": "af618d531c0ee20b39591a14e7da6141a4a76c56996d2238844f20b85e30b78c",
+              "read_depth": "CNA English description and full affected version records read; CPE arrays, metrics and ADP containers not full-read; not trigger evidence",
+              "location": "containers.cna.descriptions and affected"
+            }
+          ],
+          "required_editorial_corrections_applied": [
+            "保留旧QEMU认证失败；新稿实机结果明确归VulnCheck；CVE2025-0890仅必要背景不合并实体",
+            "原来源2017引用不引申新候选；厂商WAN/Telnet默认关闭与LAN前提分别表达"
+          ],
+          "current_sha256": "29aa1f1f35321e665c23b08a357cb6eed21b94032723955d7a17a720e49d3844",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/网络设备/Zyxel/Zyxel诊断CGI换行命令注入（CVE-2024-40890）.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2024-40890"
+          ],
+          "specific_trigger": {
+            "location": "VulnCheck HTTP全文及bindshell.png已视检完整图",
+            "concrete_input": "认证Cookie/sessionKey后POST disagnostic-general.cgi；diagAddr带换行",
+            "expected_or_source_recorded_result": "原研究Bind Shell明确监听shell预期，截图完整请求含1273；正文1270保留差异；不是连接测试结果截图",
+            "maintainer_execution": false
+          },
+          "versions_and_prerequisites": "同研究VMG4325固件；有效HTTP认证、CSRF、管理面可达；EOL；默认账号另论",
+          "side_effects_and_dependency_limits": "启动可访问shell；另一reverse shell需外部编译载荷，不作为本篇核心证明，未审其二进制",
+          "sources": [
+            {
+              "url": "https://www.vulncheck.com/blog/zyxel-http-vuln",
+              "sha256": "56a965f2cbfc71f4e48da2dc5bd3773ca4ed58caa5a9aa0d75ee1750ec9498b9",
+              "read_depth": "Full substantive article/advisory visible text and displayed code read via text extraction; raw HTML scripts/styles not executed; unlisted image pixels not inspected",
+              "location": "VulnCheck HTTP全文及bindshell.png已视检完整图"
+            },
+            {
+              "url": "https://www.vulncheck.com/blog/zyxel-http-vuln/bindshell.png",
+              "sha256": "c096247571d04505450a01e284bc2249faf3a2e9311ef4a65f6d3d7a274774db",
+              "read_depth": "Full image visually inspected independently with view_image; original pixels unchanged",
+              "location": "full image, including request/code/log/output and captions"
+            },
+            {
+              "url": "https://www.zyxel.com/global/en/support/security-advisories/zyxel-security-advisory-for-command-injection-and-insecure-default-credentials-vulnerabilities-in-certain-legacy-dsl-cpe-02-04-2025",
+              "sha256": "1ac2d8a5686343150b29b12a59dba0a6b6460499fc289ec5ac5856209dd71b9b",
+              "read_depth": "Full substantive article/advisory visible text and displayed code read via text extraction; raw HTML scripts/styles not executed; unlisted image pixels not inspected",
+              "location": "VulnCheck HTTP全文及bindshell.png已视检完整图"
+            },
+            {
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2024-40890",
+              "sha256": "e4bd3fd5f5c4da949372a998e8d66e89f5b0f7d5373b31f6a7e4a302aff5a17e",
+              "read_depth": "CNA English description and full affected version records read; CPE arrays, metrics and ADP containers not full-read; not trigger evidence",
+              "location": "containers.cna.descriptions and affected"
+            }
+          ],
+          "required_editorial_corrections_applied": [
+            "在对应步骤保留完整源截图链接与端口1270/1273差异；不从图片再生成修正版请求",
+            "明确本次只验证图中请求的可审性及原作者预期bind-shell；reverse shell的外部编译文件未审，不计入核心"
+          ],
+          "current_sha256": "6b8b353a99b8a6bb9cb561c7f4366bd1a389087b7cd1d74a0770df70655e09ea",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/安全设备/Ivanti/Ivanti CSA报告参数的二次命令解释（CVE-2024-9380）.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2024-9380"
+          ],
+          "specific_trigger": {
+            "location": "FortiGuard /gsb/reports.php及Threat Actor Patching两小节；图18/19/25全部视检",
+            "concrete_input": "SCAN_COMMAND=BASELINE、TW_ID经escapeshellarg进wrapper；reportid再次拼入shell_exec",
+            "expected_or_source_recorded_result": "图25同路径分号mkdir输入：testwithoutfix存在，替换分号对照testwithfix不存在；来源实验日志有sudo/root",
+            "maintainer_execution": false
+          },
+          "versions_and_prerequisites": "CSA管理员认证；原研究4.6；CNA<5.0.2；4.6 EOL；不继承其他链条匿名权限",
+          "side_effects_and_dependency_limits": "Tripwire基线和目录/命令状态改变；官方补丁与攻击者临时修改不能等同",
+          "sources": [
+            {
+              "url": "https://www.fortinet.com/blog/threat-research/burning-zero-days-suspected-nation-state-adversary-targets-ivanti-csa",
+              "sha256": "18fb2992c736cce4dc80f2a1fdc33af1e47d559ca4ec15e0700c2d5237439e4f",
+              "read_depth": "Complete relevant reports.php and Threat Actor Patching Vulnerabilities sections read; surrounding disclosure/incident context read; other incident payloads and unrelated images not audited",
+              "location": "Command Injection Vulnerability – /gsb/reports.php through Figure25"
+            },
+            {
+              "url": "https://www.fortinet.com/blog/threat-research/burning-zero-days-suspected-nation-state-adversary-targets-ivanti-csa/_jcr_content/root/responsivegrid/table_content/par/image_115137765.img.jpeg/1728621184124/fig18-ivanti-code-vulnerable.jpeg",
+              "sha256": "c584b5d0f98a654a3857877fa1e3dbb85b0b0e779191ad952af4e14116205e2c",
+              "read_depth": "Full image visually inspected independently with view_image; original pixels unchanged",
+              "location": "full image, including request/code/log/output and captions"
+            },
+            {
+              "url": "https://www.fortinet.com/blog/threat-research/burning-zero-days-suspected-nation-state-adversary-targets-ivanti-csa/_jcr_content/root/responsivegrid/table_content/par/image_2034876463.img.jpeg/1728621223395/fig19-ivanti-update-function.jpeg",
+              "sha256": "5cde97a99252b4ad4fa0d3becd808a64e2b1946feef502515a47aab3f9110f7c",
+              "read_depth": "Full image visually inspected independently with view_image; original pixels unchanged",
+              "location": "full image, including request/code/log/output and captions"
+            },
+            {
+              "url": "https://www.fortinet.com/blog/threat-research/burning-zero-days-suspected-nation-state-adversary-targets-ivanti-csa/_jcr_content/root/responsivegrid/table_content/par/image_1136962043.img.jpeg/1728621561290/fig25-ivanti-exploitation-testing.jpeg",
+              "sha256": "bb13a80fdd4875e6626de9e2b4ebf7948f3cfe191f73b4dbf31e1247d0239667",
+              "read_depth": "Full image visually inspected independently with view_image; original pixels unchanged",
+              "location": "full image, including request/code/log/output and captions"
+            },
+            {
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2024-9380",
+              "sha256": "12a11732118d65903906181c2db908d063fc705e9d0a454a0a90bb819434836c",
+              "read_depth": "CNA English description and full affected version records read; CPE arrays, metrics and ADP containers not full-read; not trigger evidence",
+              "location": "containers.cna.descriptions and affected"
+            }
+          ],
+          "required_editorial_corrections_applied": [
+            "保留escapeshellarg事实，漏洞在第二次shell解释；副作用可能改变Tripwire基线",
+            "图25是作者实验，未含完整HTTP会话；图18参数分支+图19wrapper+图25具体输入/输出共同支撑，不声称HTTP抓包齐全",
+            "同产品搜索意外触及2021旧文已暂停，无来源追踪、不纳入本次证明或完整审阅结论"
+          ],
+          "current_sha256": "c77e2e9f7493f66e8079a144fea22db88a80a3b1cbb59530dc12f30b661250b3",
+          "runtime_executed": false
+        },
+        {
+          "path": "IOT安全/PTZOptics/PTZOptics认证遗漏与NTP命令注入链（CVE-2024-8956、CVE-2024-8957）.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2024-8956",
+            "CVE-2024-8957"
+          ],
+          "specific_trigger": {
+            "location": "GreyNoise全文：Insufficient Authentication、File Write、Command Injection、Example；VulnCheck两公告",
+            "concrete_input": "无Authorization取三类配置；POST post_network_other_conf写ntp_addr，再进入ntp_client shell",
+            "expected_or_source_recorded_result": "配置/账号hash原始响应；Example记录指定13次ICMP的首尾seq0/12；QEMU宿主替换样例不作证明",
+            "maintainer_execution": false
+          },
+          "versions_and_prerequisites": "PT30X-SDI/NDI（VulnCheck更具体NDI-xx-G2）firmware<6.3.40；CGI可达；8956使链匿名，8957独立为配置注入",
+          "side_effects_and_dependency_limits": "读取hash/网络配置、写NTP配置、命令出网；恢复原配置；incident恶意下载器不作为验证依赖且未追踪",
+          "sources": [
+            {
+              "url": "https://www.labs.greynoise.io/grimoire/2024-10-31-sift-0-day-rce/",
+              "sha256": "c5dd8399cff8831981d6ed06aad2a17809aa79275cb8bd3acfef6d2c2f14670a",
+              "read_depth": "Full substantive article/advisory visible text and displayed code read via text extraction; raw HTML scripts/styles not executed; unlisted image pixels not inspected",
+              "location": "GreyNoise全文：Insufficient Authentication、File Write、Command Injection、Example；VulnCheck两公告"
+            },
+            {
+              "url": "https://vulncheck.com/advisories/ptzoptics-insufficient-auth",
+              "sha256": "758afef0083aa0a591c9bc3000930d8b13ebbfd84729dfcf15306f4c88b08c5c",
+              "read_depth": "Full substantive article/advisory visible text and displayed code read via text extraction; raw HTML scripts/styles not executed; unlisted image pixels not inspected",
+              "location": "GreyNoise全文：Insufficient Authentication、File Write、Command Injection、Example；VulnCheck两公告"
+            },
+            {
+              "url": "https://vulncheck.com/advisories/ptzoptics-command-injection",
+              "sha256": "f46b918ddbeaf7f5bb260808c27ad150db1e9784a5351cd7f7816ea784066a23",
+              "read_depth": "Full substantive article/advisory visible text and displayed code read via text extraction; raw HTML scripts/styles not executed; unlisted image pixels not inspected",
+              "location": "GreyNoise全文：Insufficient Authentication、File Write、Command Injection、Example；VulnCheck两公告"
+            },
+            {
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2024-8956",
+              "sha256": "c977d2ebd81e825b39e7a1f8dacb0ba1e9db126aeb8abfc03f6b7e2dfc677ca4",
+              "read_depth": "CNA English description and full affected version records read; CPE arrays, metrics and ADP containers not full-read; not trigger evidence",
+              "location": "containers.cna.descriptions and affected"
+            },
+            {
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2024-8957",
+              "sha256": "3ca8f2df83c87dfc5c460efe55e3f996cbb5b6a9d02e7498db0671e0497e46c3",
+              "read_depth": "CNA English description and full affected version records read; CPE arrays, metrics and ADP containers not full-read; not trigger evidence",
+              "location": "containers.cna.descriptions and affected"
+            }
+          ],
+          "required_editorial_corrections_applied": [
+            "8956省略Authorization的配置响应、8957写配置的13次ICMP两类证据分别描述；保留ntp_en现有配置条件",
+            "QEMU $(touch test)可在宿主展开，仅作原文限制；恶意样本下载地址不作为运行依赖，不扩大OEM型号"
+          ],
+          "current_sha256": "5e2f3f0a6a869f0329a97d28f57812079cad81a0ad1dfcaeb574aa7010a2ae12",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/网络设备/SonicWall/Apache重写歧义在SonicWall SMA中的文件读取（CVE-2024-38475）.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2024-38475"
+          ],
+          "specific_trigger": {
+            "location": "watchTowr原文仅L39–183的2024文件读部分；固定blob Nuclei全部；不读2023命令阶段",
+            "concrete_input": "受控首段CSS重写规则，编码问号截断；HTTP日志/SQLite读取请求",
+            "expected_or_source_recorded_result": "原研究给200和实日志内容；SQLite完整读取偶空，Range只来源实验；模板匹配文件内容而非banner",
+            "maintainer_execution": false
+          },
+          "versions_and_prerequisites": "Apache2.4.0–2.4.59，2.4.60修复此CVE；SMA10.2.1.7-49sv样机；server-context rewrite及nobody权限",
+          "side_effects_and_dependency_limits": "文件/会话数据读取、客户端副本、访问日志；不继承2023链后续RCE或会话复用结论",
+          "sources": [
+            {
+              "url": "https://labs.watchtowr.com/sonicboom-from-stolen-tokens-to-remote-shells-sonicwall-sma100-cve-2023-44221-cve-2024-38475/",
+              "sha256": "f82b707dfc9418c45e5a53393384c1b64480ecb4865a67f183edfdd0d8ec4342",
+              "read_depth": "2024-only full file-read technical section, extracted text lines39–183; 2023 command-injection section not read/reviewed",
+              "location": "Let’s Dive In / CVE-2024-38475, With A SonicWall Twist / Escalating Arbitrary File Read"
+            },
+            {
+              "url": "https://api.github.com/repos/projectdiscovery/nuclei-templates/git/blobs/2b76635f9208f6c9ee4dc85e378a52c954296299",
+              "sha256": "704f6c64c40f204f1a8848cfca4373d9a2e4681064bf1114280226e6b591a047",
+              "read_depth": "Full decoded YAML Git blob read statically; API response stored separately; no execution",
+              "location": "Git blob2b76635f9208f6c9ee4dc85e378a52c954296299, all template requests/matchers"
+            },
+            {
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2024-38475",
+              "sha256": "482af1017963ba038b6b8c0cb11cdf62964c534c3d7ef24ef1d1f48a6ff064aa",
+              "read_depth": "CNA English description and full affected version records read; CPE arrays, metrics and ADP containers not full-read; not trigger evidence",
+              "location": "containers.cna.descriptions and affected"
+            }
+          ],
+          "required_editorial_corrections_applied": [
+            "将main模板链接替换/补充为给定blob或固定commit直达链接，保持原source_url中2023编号不抹去",
+            "新稿只到2024文件读，不引入会话复用或2023 RCE；nobody文件权限和空SQLite失败记录必须保留",
+            "analysis_of关联Apache多漏洞新闻只表示互补文献，不把其余38472/38474/38477实体合并"
+          ],
+          "current_sha256": "d69800a7456abd61e2936e82cbf236d630ee0dee375b5a850e2b52485cc9db66",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/云平台/VMware/ESXi按AD组名授予管理权限的公开手工路径（CVE-2024-37085）.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2024-37085"
+          ],
+          "specific_trigger": {
+            "location": "Microsoft原文完整可见技术正文L48–188，尤其L57–74；Broadcom3a描述/矩阵",
+            "concrete_input": "创建ESX Admins域组并添加用户；重命名/权限刷新为另两种描述",
+            "expected_or_source_recorded_result": "研究明确该组成员获ESXi管理权限，给出两条net group命令；后两方法未被Microsoft在野观察",
+            "maintainer_execution": false
+          },
+          "versions_and_prerequisites": "已配置AD的ESXi；具有建组/成员或改组权限；厂商更窄要求删除后重建；8.0修ESXi80U3-24022510，7.0无计划补丁，VCF5.2",
+          "side_effects_and_dependency_limits": "修改域组及管理权限，后续VM操作风险；普通域账号或VPN可达不够；域命令未执行",
+          "sources": [
+            {
+              "url": "https://www.microsoft.com/en-us/security/blog/2024/07/29/ransomware-operators-exploit-esxi-hypervisor-vulnerability-for-mass-encryption/",
+              "sha256": "0ed2cd9cf2e80966b91e531001333c8ace79cedf23244bc3b0a11cd10e2eb392",
+              "read_depth": "Full available technical article text and displayed code in archived web-reader snapshot read; webpage navigation may be outside snapshot; images/video not inspected",
+              "location": "Microsoft原文完整可见技术正文L48–188，尤其L57–74；Broadcom3a描述/矩阵"
+            },
+            {
+              "url": "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/24505",
+              "sha256": "56c4c925f0129d5170aedb68660351d626a761da671aad9fd59063217784a5eb",
+              "read_depth": "Full 37085 section3a and response matrix read, extracted lines48–118; other CVEs not reviewed",
+              "location": "3a. ESXi Active Directory Integration Authentication Bypass"
+            },
+            {
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2024-37085",
+              "sha256": "ffe66c6cf39c0d3fb1701e38946f3ed9ed674d65c0e181fc441c658e94a01748",
+              "read_depth": "CNA English description and full affected version records read; CPE arrays, metrics and ADP containers not full-read; not trigger evidence",
+              "location": "containers.cna.descriptions and affected"
+            }
+          ],
+          "required_editorial_corrections_applied": [
+            "version字段用分号明确“VCF5.x修5.2；VCF4.x无计划补丁”，避免现串读作VCF5.2无补丁",
+            "两条net group命令保留来源弯引号如引用，不生成改写命令；组名ESX/ESXi差异在外部说明",
+            "厂商删除后重建范围与Microsoft更宽说明分开，不把普通AD或VPN登录当足够条件"
+          ],
+          "current_sha256": "36f2ec72cda13d3bf19cdccf74f57085abb7a80334017ae1bb52f9201dce8971",
+          "runtime_executed": false
+        },
+        {
+          "path": null,
+          "decision": "hold",
+          "candidate_cves": [
+            "CVE-2024-23113"
+          ],
+          "reason": "Disconnect alone does not close valid-value control and specific outcome gap; existing article unchanged."
+        }
+      ]
     }
   ],
   "current_totals": {
-    "article_files": 102,
-    "new_files": 64,
-    "supplemented_files": 38,
-    "qualified_candidate_ids": 111,
+    "article_files": 128,
+    "new_files": 72,
+    "supplemented_files": 56,
+    "qualified_candidate_ids": 140,
     "full_scope_complete": false
   },
   "subsequent_master_sync": {
