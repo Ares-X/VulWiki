@@ -29,20 +29,20 @@
   },
   "reading_checkpoint_utc": "2026-10-03T16:31:21.217990+00:00",
   "source_review_snapshot_commit": "3ab0894df3cbd0750fd2d8a6094119fec559e9fa",
-  "publication_projection_utc": "2026-10-03T16:35:50.980983+00:00",
+  "publication_projection_utc": "2026-10-03T16:57:59.269431+00:00",
   "article_file_count": 230,
   "new_files": 135,
   "supplemented_files": 95,
   "disposition_counts": {
-    "still-pending": 10,
+    "still-pending": 9,
     "published": 243,
     "bounded-hold": 325,
     "sufficient-duplicate": 17,
-    "platform-blocked": 1132
+    "platform-blocked": 1133
   },
-  "current_blocked_scope_count": 1181,
+  "current_blocked_scope_count": 1182,
   "current_scope_pause_publication_overlap": 49,
-  "unpublished_direct_blocked_count": 1132,
+  "unpublished_direct_blocked_count": 1133,
   "master_base": "b176eecef836688c637e60c94284ccec1f1427c5",
   "full_scope_complete": false,
   "all_sources_dependencies_complete": false,
@@ -910,17 +910,17 @@
       "product": "Flash Player",
       "official_kev_status": "present-2026.10.02",
       "full_read_provenance": "non-wiki-technical-source-text",
-      "current_blocked_scope": false,
+      "current_blocked_scope": true,
       "reading_receipt_status": "confirmed-owner-receipt",
-      "pending_subtype": "known-essential-binary-core-unreviewed",
-      "current_material_eligibility": "review-not-complete",
-      "publication_status": "unpublished",
-      "work_limitation": "Static semantic review of attributable SWF/ActionScript core or a complete independently mapped public input; do not publish wrapper as complete exploit proof.",
+      "pending_subtype": "platform-stopped-single-id-finalization",
+      "current_material_eligibility": "paused-before-final-independent-byte-approval",
+      "publication_status": "unpublished-paused",
+      "work_limitation": "Isolated1297 static-core task was terminated during offline finalization after the frozen reading checkpoint. Final independent byte approval was incomplete. Stop further work; no article published; prior reading facts preserved.",
       "all_sources_and_dependencies_read": false,
       "published_before_direct_scope_pause": false,
       "reading_depth": "full-technical-text",
       "compatible_reading_bucket": "full-technical-text",
-      "disposition": "still-pending",
+      "disposition": "platform-blocked",
       "articles_in_current_batch": []
     },
     {
@@ -36096,13 +36096,22 @@
       ],
       "reading_counts_unchanged": true,
       "reason": "Final independent material/byte-reviewed batch after fixed3ab checkpoint."
+    },
+    {
+      "type": "single-id-work-scope-pause",
+      "cve": "CVE-2010-1297",
+      "recorded_utc": "2026-10-03T16:57:59.269431+00:00",
+      "prior_disposition": "still-pending",
+      "final_independent_byte_approval_complete": false,
+      "article_count_unchanged": true,
+      "reading_checkpoint_unchanged": true
     }
   ],
   "limits": [
     "Full main technical text read does not mean every helper, binary or dependency was semantically audited, nor eligibility or reproduction.",
-    "Direct paused scope1181 intersects49 previously published IDs; do not add pause and publication totals. Unknown task trigger is not a per-CVE prohibition.",
+    "Direct paused scope1182 intersects49 previously published IDs; do not add pause and publication totals. Unknown task trigger is not a per-CVE prohibition.",
     "26 unread and133 paused-no-confirmed-receipt entries are separate from215 historical restricted compatibility entries. Missing a new receipt is not proof that no earlier reading ever occurred.",
-    "10 pending remain distinct:1297 known readable-core review is still active; other entries retain concrete source-recovery, access, or paused-related-entity limitations.",
+    "9 pending retain concrete source-recovery, access, core-input or paused-related-entity limitations.1297 is now directly paused after partial static reading and before final independent approval.",
     "Published20281 uses a qualified independent method;3 related original Gists and1 image remain inaccessible/unread.",
     "No scope-complete claim. Bounded hold is not proof of absence of public PoC anywhere. Paused technical sources were not reopened or rehashed for this accounting."
   ]

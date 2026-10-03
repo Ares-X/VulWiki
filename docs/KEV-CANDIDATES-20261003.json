@@ -64963,18 +64963,18 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
-        "pending_subtype": "known-essential-binary-core-unreviewed",
+        "pending_subtype": "platform-stopped-single-id-finalization",
         "articles": [],
         "material_absence_claim": false,
-        "work_limitation": "Static semantic review of attributable SWF/ActionScript core or a complete independently mapped public input; do not publish wrapper as complete exploit proof.",
+        "work_limitation": "Separate single-ID task terminated during offline finalization; final independent byte approval incomplete. No publication or retry.",
         "all_sources_and_dependencies_read": false
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2010-0738",
@@ -66137,13 +66137,13 @@
   "existing_article_files_supplemented": 95,
   "candidates_with_integrated_material": 243,
   "disposition_counts": {
-    "still-pending": 10,
+    "still-pending": 9,
     "published": 243,
     "bounded-hold": 325,
     "sufficient-duplicate": 17,
-    "platform-blocked": 1132
+    "platform-blocked": 1133
   },
-  "updated_utc": "2026-10-03T16:35:50.980983+00:00",
+  "updated_utc": "2026-10-03T16:57:59.269431+00:00",
   "qualified_material_candidate_count": 243,
   "withdrawn_new_files": 33,
   "withdrawn_appends": 7,
@@ -66159,12 +66159,12 @@
     "baseline-restricted-not-reclassified": 215
   },
   "audited_disposition_counts": {
-    "still-pending": 10,
+    "still-pending": 9,
     "published": 243,
     "bounded-hold": 325,
     "sufficient-duplicate": 17,
-    "platform-blocked": 1132
+    "platform-blocked": 1133
   },
-  "current_blocked_scope_count": 1181,
+  "current_blocked_scope_count": 1182,
   "current_scope_pause_publication_overlap": 49
 }
