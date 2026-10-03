@@ -90,6 +90,19 @@ test('does not report a real image or codespan link syntax as a lost Markdown li
   assert.equal(has(audit('[残缺的链接](target\n'), 'lost_markdown_link_literal'), true);
 });
 
+test('reports rendered empty targets but leaves literal examples and real resource links alone', () => {
+  const source = '![]()\n\n[原引用]()\n\n![]()\n\n`![]()`\n\n```text\n[字面示例]()\n```\n\n![资源](image.png)\n';
+  const result = audit(source);
+  const images = result.candidates.filter(item => item.rule === 'empty_image_target');
+  const links = result.candidates.filter(item => item.rule === 'empty_link_target');
+  assert.deepEqual(images.map(item => [item.raw, item.line]), [['![]()', 1], ['![]()', 5]]);
+  assert.notEqual(images[0].id, images[1].id);
+  assert.deepEqual(links.map(item => item.raw), ['[原引用]()']);
+  assert.equal(result.inventory.images, 3);
+  assert.equal(result.inventory.code_blocks, 1);
+  assert.equal(result.candidates.some(item => ['parse_error', 'empty_code', 'fence_in_heading'].includes(item.rule)), false);
+});
+
 test('reports legacy code advisories and only flags wrong-language HTTP requests on the first line', () => {
   const source = '```text\n![原文中需要展示的架构图片](diagram.png)\n复制代码\n```\n\n```rust\nGET /path HTTP/1.1\n```\n\n```rust\nlet sample = "GET /path HTTP/1.1";\n```\n';
   const result = audit(source);

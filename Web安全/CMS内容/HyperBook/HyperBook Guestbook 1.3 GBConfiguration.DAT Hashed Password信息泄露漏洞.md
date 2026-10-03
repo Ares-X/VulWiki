@@ -26,7 +26,7 @@ schema_version: "1"
 
 - **事实待核（1）**：标题1.3、说明1.3.0、脚本1.30需统一历史版本；gb/qbconfiguration文件名混写。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。
 
-- **结论使用边界（2）**：Python2代码未围栏且保留&amp;#34;/&amp;#39;实体不能直接运行。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
+- **结论使用边界（2）**：Python2代码现已完整围栏；原归档的&amp;#34;/&amp;#39;实体仍逐字保留，不能直接运行。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
 
 - **结论使用边界（3）**：while用字符与整数1比较无终止作用，依赖两个换行否则越界；查找path失败未处理；SecurityFocus BID22754是有用原始线索。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。
 
@@ -42,6 +42,7 @@ An attacker can exploit this issue to access sensitive information that may lead
 
 This issue affects version 1.3.0; other versions may also be affected.
 
+```python
 #!/usr/bin/python
 #Script                  :HyperBook Guestbook v1.30 (qbconfiguration.dat) Remote Admin md5 Hash Exploit
 #Exploit Coded by        : PeTrO
@@ -94,6 +95,7 @@ else:
               test=test+1;
 
     print &#34;\n\n\t\t\t[ c0ded by PeTrO ]&#34;
+```
 
 
 ---

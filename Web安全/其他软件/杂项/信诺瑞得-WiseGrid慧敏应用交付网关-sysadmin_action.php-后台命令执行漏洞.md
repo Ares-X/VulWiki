@@ -110,7 +110,10 @@ Connection: close
 
 ![](./.resource/信诺瑞得-WiseGrid慧敏应用交付网关-sysadmin_action.php-后台命令执行漏洞/media/202205251433134.png)
 
-![]()![](./.resource/信诺瑞得-WiseGrid慧敏应用交付网关-sysadmin_action.php-后台命令执行漏洞/media/202205251434769.png)
+`![]()`![](./.resource/信诺瑞得-WiseGrid慧敏应用交付网关-sysadmin_action.php-后台命令执行漏洞/media/202205251434769.png)
+
+
+> 资源说明：此处原归档的图片地址为空，以上保留原始占位语法；无法据此判断图片内容，未猜补地址。
 
 ---
 

