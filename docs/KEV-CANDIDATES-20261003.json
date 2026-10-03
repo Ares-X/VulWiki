@@ -26973,7 +26973,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "bounded-hold",
+        "disposition": "platform-blocked",
         "reading_depth": "bounded-search-advisory-only",
         "pending_subtype": "pending-technical-source-review",
         "articles": [],
@@ -26981,8 +26981,8 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "bounded-hold",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2023-23529",
@@ -40061,7 +40061,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "bounded-hold",
+        "disposition": "platform-blocked",
         "reading_depth": "bounded-search-advisory-only",
         "pending_subtype": "pending-technical-source-review",
         "articles": [],
@@ -40069,8 +40069,8 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "bounded-hold",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-19949",
@@ -40082,7 +40082,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "bounded-hold",
+        "disposition": "platform-blocked",
         "reading_depth": "bounded-search-advisory-only",
         "pending_subtype": "pending-technical-source-review",
         "articles": [],
@@ -40090,8 +40090,8 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "bounded-hold",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-19953",
@@ -40103,7 +40103,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "bounded-hold",
+        "disposition": "platform-blocked",
         "reading_depth": "bounded-search-advisory-only",
         "pending_subtype": "pending-technical-source-review",
         "articles": [],
@@ -40111,8 +40111,8 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "bounded-hold",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2020-8260",
@@ -41329,7 +41329,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": "pending-known-source-followup",
         "articles": [],
@@ -41337,8 +41337,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2020-17463",
@@ -44322,7 +44322,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": "pending-technical-source-review",
         "articles": [],
@@ -44330,8 +44330,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2020-9054",
@@ -44364,7 +44364,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": "pending-technical-source-review",
         "articles": [],
@@ -44372,8 +44372,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2020-6418",
@@ -44862,7 +44862,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": "pending-technical-source-review",
         "articles": [],
@@ -44870,8 +44870,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-18988",
@@ -44893,12 +44893,13 @@
             "sha256": "6d6989b21521d64d3a3d76b93576d251b92224181c7c18acacc6d118c83d5d68"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "work_scope_note": "Published before later task-scope pause; no new source review or automatic withdrawal."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
       "audited_disposition": "published",
-      "current_blocked_scope": false
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2020-8655",
@@ -45077,7 +45078,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": "pending-technical-source-review",
         "articles": [],
@@ -45085,8 +45086,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2020-2555",
@@ -45473,7 +45474,7 @@
         "Web安全/中间件/Apache Solr/（CVE-2019-17558）Apache Solr 代码注入漏洞.md"
       ],
       "review": {
-        "disposition": "sufficient-duplicate",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": null,
         "articles": [],
@@ -45481,8 +45482,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "sufficient-duplicate",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-17621",
@@ -45524,12 +45525,13 @@
             "sha256": "22f6851110ad9b83ae3e1c0871fe21c00ed139a51cc9d0f1d417bc8fe6f6ae4d"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "work_scope_note": "Published before later task-scope pause; no new source review or automatic withdrawal."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
       "audited_disposition": "published",
-      "current_blocked_scope": false
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-20085",
@@ -45588,12 +45590,13 @@
             "sha256": "60c60f1b5d30f756c9ffe3d9fb1a28d096db0990650686e0a8e3c19006eee11f"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "work_scope_note": "Published before later task-scope pause; no new source review or automatic withdrawal."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
       "audited_disposition": "published",
-      "current_blocked_scope": false
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-19781",
@@ -45643,7 +45646,7 @@
         "Web安全/CMS内容/DedeCMS/DedeCMS v5-7 shops delivery 存储型 XSS - 白阁文库.md"
       ],
       "review": {
-        "disposition": "sufficient-duplicate",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": null,
         "articles": [],
@@ -45651,8 +45654,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "sufficient-duplicate",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-10758",
@@ -45712,12 +45715,13 @@
             "sha256": "c7b660cb71180fa0a0f61002ccf4c29c305f8cf80be5bda0513dfe880f1ba46c"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "work_scope_note": "Published before later task-scope pause; no new source review or automatic withdrawal."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
       "audited_disposition": "published",
-      "current_blocked_scope": false
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-7483",
@@ -45729,7 +45733,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "bounded-search-advisory-only",
         "pending_subtype": "pending-technical-source-review",
         "articles": [],
@@ -45737,8 +45741,8 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-8605",
@@ -45750,7 +45754,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "bounded-search-advisory-only",
         "pending_subtype": "pending-technical-source-review",
         "articles": [],
@@ -45758,8 +45762,8 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-8506",
@@ -45771,7 +45775,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "bounded-search-advisory-only",
         "pending_subtype": "pending-technical-source-review",
         "articles": [],
@@ -45779,8 +45783,8 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-7286",
@@ -45792,7 +45796,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "bounded-search-advisory-only",
         "pending_subtype": "pending-technical-source-review",
         "articles": [],
@@ -45800,8 +45804,8 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-8526",
@@ -45813,7 +45817,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "bounded-search-advisory-only",
         "pending_subtype": "pending-technical-source-review",
         "articles": [],
@@ -45821,8 +45825,8 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-7287",
@@ -45834,7 +45838,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "bounded-search-advisory-only",
         "pending_subtype": "pending-technical-source-review",
         "articles": [],
@@ -45842,8 +45846,8 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-4716",
@@ -45865,12 +45869,13 @@
             "sha256": "b081d43ad446cbdad4b7cc769077a31e1db36ee23708717bed12dfdfc0049d60"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "work_scope_note": "Published before later task-scope pause; no new source review or automatic withdrawal."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
       "audited_disposition": "published",
-      "current_blocked_scope": false
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-7481",
@@ -45892,12 +45897,13 @@
             "sha256": "b417aafc3e37491a08873bda5c46c9bb91d4daf6dcdc5f239428ec78d3b2e223"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "work_scope_note": "Published before later task-scope pause; no new source review or automatic withdrawal."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
       "audited_disposition": "published",
-      "current_blocked_scope": false
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-18935",
@@ -45946,7 +45952,7 @@
         "Web安全/中间件/Progress Software/Progress 提醒Telerik Report Server中的严重RCE漏洞.md"
       ],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": "pending-known-source-followup",
         "articles": [],
@@ -45954,8 +45960,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-1458",
@@ -45987,7 +45993,7 @@
         "系统安全/Windows/Windows本地提权漏洞/（CVE-2019-1458）Win32k本地提权.md"
       ],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": "pending-known-source-followup",
         "articles": [],
@@ -45995,8 +46001,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-5544",
@@ -46008,7 +46014,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "bounded-hold",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": "pending-known-source-followup",
         "articles": [],
@@ -46016,8 +46022,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "bounded-hold",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-7195",
@@ -46029,7 +46035,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "bounded-hold",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": null,
         "articles": [],
@@ -46037,8 +46043,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "bounded-hold",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-7194",
@@ -46050,7 +46056,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "bounded-hold",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": null,
         "articles": [],
@@ -46058,8 +46064,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "bounded-hold",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-7193",
@@ -46071,7 +46077,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "bounded-hold",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": null,
         "articles": [],
@@ -46079,8 +46085,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "primary-web-text-receipt-no-source-body-hash",
-      "audited_disposition": "bounded-hold",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-7192",
@@ -46092,7 +46098,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "bounded-hold",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": null,
         "articles": [],
@@ -46100,8 +46106,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "bounded-hold",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-15271",
@@ -46113,7 +46119,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "bounded-search-advisory-only",
         "pending_subtype": "pending-technical-source-review",
         "articles": [],
@@ -46121,8 +46127,8 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-5825",
@@ -46134,7 +46140,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "bounded-hold",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": null,
         "articles": [],
@@ -46142,8 +46148,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "bounded-hold",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-13720",
@@ -46155,7 +46161,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "bounded-search-advisory-only",
         "pending_subtype": "pending-technical-source-review",
         "articles": [],
@@ -46163,8 +46169,8 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-19006",
@@ -46176,7 +46182,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "bounded-search-advisory-only",
         "pending_subtype": "pending-technical-source-review",
         "articles": [],
@@ -46184,8 +46190,8 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-6693",
@@ -46197,7 +46203,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "bounded-search-advisory-only",
         "pending_subtype": "pending-technical-source-review",
         "articles": [],
@@ -46205,8 +46211,8 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-1429",
@@ -46218,7 +46224,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "bounded-search-advisory-only",
         "pending_subtype": "pending-technical-source-review",
         "articles": [],
@@ -46226,8 +46232,8 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-1405",
@@ -46239,7 +46245,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": "pending-known-source-followup",
         "articles": [],
@@ -46247,8 +46253,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-1385",
@@ -46260,7 +46266,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "bounded-hold",
+        "disposition": "platform-blocked",
         "reading_depth": "bounded-search-advisory-only",
         "pending_subtype": "pending-technical-source-review",
         "articles": [],
@@ -46268,8 +46274,8 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "bounded-hold",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-1388",
@@ -46301,7 +46307,7 @@
         "系统安全/Windows/Windows本地提权漏洞/（CVE-2019-1388）Windows UAC提权漏洞.md"
       ],
       "review": {
-        "disposition": "bounded-hold",
+        "disposition": "platform-blocked",
         "reading_depth": "existing-wiki-body-only",
         "pending_subtype": "pending-known-source-followup",
         "articles": [],
@@ -46309,8 +46315,8 @@
       },
       "audited_reading_depth": "existing-wiki-body-only",
       "audited_read_provenance": null,
-      "audited_disposition": "bounded-hold",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-18187",
@@ -46322,7 +46328,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "bounded-search-advisory-only",
         "pending_subtype": "pending-technical-source-review",
         "articles": [],
@@ -46330,8 +46336,8 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-11043",
@@ -46381,7 +46387,7 @@
         "Web安全/开发框架/PHP/（CVE-2019-11043）PHP 远程命令执行.md"
       ],
       "review": {
-        "disposition": "sufficient-duplicate",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": null,
         "articles": [],
@@ -46389,8 +46395,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "sufficient-duplicate",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-3010",
@@ -46412,12 +46418,13 @@
             "sha256": "242813b6e589eb32e75fc679d1e9f9d8edf96226a2cf995b668aa5b006c43380"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "work_scope_note": "Published before later task-scope pause; no new source review or automatic withdrawal."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
       "audited_disposition": "published",
-      "current_blocked_scope": false
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-16278",
@@ -46459,12 +46466,13 @@
             "sha256": "34eb24df5e50bd5244661525208598430d76ae62771fe3cd6881771ac44588cb"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "work_scope_note": "Published before later task-scope pause; no new source review or automatic withdrawal."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
       "audited_disposition": "published",
-      "current_blocked_scope": false
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-2215",
@@ -46506,12 +46514,13 @@
             "sha256": "f8ffa9cfdd9960db387556fcb2013f4234fe802f94ec15cd6f07950836afc04c"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "work_scope_note": "Published before later task-scope pause; no new source review or automatic withdrawal."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
       "audited_disposition": "published",
-      "current_blocked_scope": false
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-1322",
@@ -46523,7 +46532,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": "pending-known-source-followup",
         "articles": [],
@@ -46531,8 +46540,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-1315",
@@ -46544,7 +46553,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": "pending-technical-source-review",
         "articles": [],
@@ -46552,8 +46561,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-16928",
@@ -46565,7 +46574,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "bounded-hold",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": "pending-technical-source-review",
         "articles": [],
@@ -46573,8 +46582,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "original-author-technical-text-in-third-party-web-archive",
-      "audited_disposition": "bounded-hold",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-16920",
@@ -46617,12 +46626,13 @@
             "sha256": "0b03c9160cbc651db91f5f62f9db62084de369c71cdd0c876dca1572933dd679"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "work_scope_note": "Published before later task-scope pause; no new source review or automatic withdrawal."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
       "audited_disposition": "published",
-      "current_blocked_scope": false
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-16759",
@@ -46672,7 +46682,7 @@
         "Web安全/CMS内容/vBulletin/（CVE-2019-16759）vBulletin 5.x 远程命令执行漏洞.md"
       ],
       "review": {
-        "disposition": "sufficient-duplicate",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": null,
         "articles": [],
@@ -46680,8 +46690,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "sufficient-duplicate",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-1367",
@@ -46693,7 +46703,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "bounded-search-advisory-only",
         "pending_subtype": "pending-technical-source-review",
         "articles": [],
@@ -46701,8 +46711,8 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-16057",
@@ -46724,12 +46734,13 @@
             "sha256": "78245a4b73a44f4c0cb3fde8218b03f0f3f252c1d6806ed5c60863c034e15ab3"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "work_scope_note": "Published before later task-scope pause; no new source review or automatic withdrawal."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
       "audited_disposition": "published",
-      "current_blocked_scope": false
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-16256",
@@ -46741,7 +46752,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "bounded-hold",
+        "disposition": "platform-blocked",
         "reading_depth": "selected-technical-sections-only",
         "pending_subtype": "pending-technical-source-review",
         "articles": [],
@@ -46749,8 +46760,8 @@
       },
       "audited_reading_depth": "selected-technical-sections-only",
       "audited_read_provenance": null,
-      "audited_disposition": "bounded-hold",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-1297",
@@ -46762,7 +46773,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "bounded-search-advisory-only",
         "pending_subtype": "pending-technical-source-review",
         "articles": [],
@@ -46770,8 +46781,8 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-1253",
@@ -46783,7 +46794,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": "pending-technical-source-review",
         "articles": [],
@@ -46791,8 +46802,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-1214",
@@ -46804,7 +46815,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "bounded-search-advisory-only",
         "pending_subtype": "pending-technical-source-review",
         "articles": [],
@@ -46812,8 +46823,8 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-1215",
@@ -46825,7 +46836,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "bounded-search-advisory-only",
         "pending_subtype": "pending-technical-source-review",
         "articles": [],
@@ -46833,8 +46844,8 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-15949",
@@ -46856,12 +46867,13 @@
             "sha256": "c9d42281b1c58a7a03735e164a661fcd271b137ed8ffe2ac6d820afc31e36000"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "work_scope_note": "Published before later task-scope pause; no new source review or automatic withdrawal."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
       "audited_disposition": "published",
-      "current_blocked_scope": false
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-13608",
@@ -46883,12 +46895,13 @@
             "sha256": "b2fece192906ec9d6c53bbfbcc6861de279096dd96ed19a1afe788f3c8d8d89e"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "work_scope_note": "Published before later task-scope pause; no new source review or automatic withdrawal."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
       "audited_disposition": "published",
-      "current_blocked_scope": false
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-15752",
@@ -46910,12 +46923,13 @@
             "sha256": "f73ef6a868a97467abf14254e49556394d151083b50247fe4b331b8dbb88a905"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "work_scope_note": "Published before later task-scope pause; no new source review or automatic withdrawal."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
       "audited_disposition": "published",
-      "current_blocked_scope": false
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-15107",
@@ -46983,7 +46997,7 @@
         "Web安全/CMS内容/DedeCMS/DedeCMS v5-7 shops delivery 存储型 XSS - 白阁文库.md"
       ],
       "review": {
-        "disposition": "sufficient-duplicate",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": null,
         "articles": [],
@@ -46991,8 +47005,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "sufficient-duplicate",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-0344",
@@ -47004,7 +47018,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "bounded-search-advisory-only",
         "pending_subtype": "pending-technical-source-review",
         "articles": [],
@@ -47012,8 +47026,8 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-11581",
@@ -47080,7 +47094,7 @@
         "Web安全/商业软件/JIRA/Atlassian Jira 模板注入漏洞 CVE-2019-11581.md"
       ],
       "review": {
-        "disposition": "sufficient-duplicate",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": null,
         "articles": [],
@@ -47088,8 +47102,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "sufficient-duplicate",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-0193",
@@ -47191,7 +47205,7 @@
         "Web安全/CMS内容/DedeCMS/DedeCMS v5-7 shops delivery 存储型 XSS - 白阁文库.md"
       ],
       "review": {
-        "disposition": "sufficient-duplicate",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": null,
         "articles": [],
@@ -47199,8 +47213,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "sufficient-duplicate",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-1132",
@@ -47212,7 +47226,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "bounded-search-advisory-only",
         "pending_subtype": "pending-technical-source-review",
         "articles": [],
@@ -47220,8 +47234,8 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-1130",
@@ -47233,7 +47247,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "bounded-search-advisory-only",
         "pending_subtype": "pending-technical-source-review",
         "articles": [],
@@ -47241,8 +47255,8 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-1129",
@@ -47254,7 +47268,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "bounded-search-advisory-only",
         "pending_subtype": "pending-technical-source-review",
         "articles": [],
@@ -47262,8 +47276,8 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-11707",
@@ -47275,7 +47289,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": "pending-technical-source-review",
         "articles": [],
@@ -47283,8 +47297,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-11708",
@@ -47296,7 +47310,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": "pending-technical-source-review",
         "articles": [],
@@ -47304,8 +47318,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-1579",
@@ -47317,7 +47331,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": "pending-technical-source-review",
         "articles": [],
@@ -47325,8 +47339,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "primary-web-text-receipt-no-source-body-hash",
-      "audited_disposition": "awaiting-peer-or-required-notes",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-13272",
@@ -47368,12 +47382,13 @@
             "sha256": "8b9dc495f493bb3bc147eb9e462f7bac494ff2404c10a0820e57323a330356ce"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "work_scope_note": "Published before later task-scope pause; no new source review or automatic withdrawal."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
       "audited_disposition": "published",
-      "current_blocked_scope": false
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-12989",
@@ -47395,12 +47410,13 @@
             "sha256": "d398171923929eb2872981a190d24e23060b7b6d4de2c521a7a15a27faebda14"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "work_scope_note": "Published before later task-scope pause; no new source review or automatic withdrawal."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
       "audited_disposition": "published",
-      "current_blocked_scope": false
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-12991",
@@ -47422,12 +47438,13 @@
             "sha256": "a6fdce6bf793e688c83546b8bd7fc7e9e0f383127fff9b8357df394c0eead00c"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "work_scope_note": "Published before later task-scope pause; no new source review or automatic withdrawal."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "primary-web-text-receipt-no-source-body-hash",
       "audited_disposition": "published",
-      "current_blocked_scope": false
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-1068",
@@ -47439,7 +47456,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "bounded-search-advisory-only",
         "pending_subtype": "pending-technical-source-review",
         "articles": [],
@@ -47447,8 +47464,8 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-0880",
@@ -47460,7 +47477,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "bounded-search-advisory-only",
         "pending_subtype": "pending-technical-source-review",
         "articles": [],
@@ -47468,8 +47485,8 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-18325",
@@ -47491,12 +47508,13 @@
             "sha256": "2c42cedb9249d270e7ded0d8af374cf0c2ca399ea2d2f25f3cc69834a0093911"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "work_scope_note": "Published before later task-scope pause; no new source review or automatic withdrawal."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
       "audited_disposition": "published",
-      "current_blocked_scope": false
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-15811",
@@ -47518,12 +47536,13 @@
             "sha256": "96b8fcb4e54c017f75329cc40ce53e10635e5c27886f2fbb48d606a885e30bb6"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "work_scope_note": "Published before later task-scope pause; no new source review or automatic withdrawal."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
       "audited_disposition": "published",
-      "current_blocked_scope": false
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-7256",
@@ -47545,12 +47564,13 @@
             "sha256": "1dc5c99377eea18234dc7466eaba8a9f2f014279a48de8b9e44da1e3c34269a6"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "work_scope_note": "Published before later task-scope pause; no new source review or automatic withdrawal."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
       "audited_disposition": "published",
-      "current_blocked_scope": false
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-5786",
@@ -47592,12 +47612,13 @@
             "sha256": "f21a5251c300d2d7da7c33227c660a1819185937faf57018abd0a1e99c529b87"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "work_scope_note": "Published before later task-scope pause; no new source review or automatic withdrawal."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
       "audited_disposition": "published",
-      "current_blocked_scope": false
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-1064",
@@ -47609,7 +47630,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": "pending-technical-source-review",
         "articles": [],
@@ -47617,8 +47638,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-1069",
@@ -47630,7 +47651,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "bounded-search-advisory-only",
         "pending_subtype": "pending-technical-source-review",
         "articles": [],
@@ -47638,8 +47659,8 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2010-5330",
@@ -47690,12 +47711,13 @@
             "sha256": "7428b5cb27faf74d8a5cf918ca0a4784cd24525d7615acef77edf015ef49d997"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "work_scope_note": "Published before later task-scope pause; no new source review or automatic withdrawal."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
       "audited_disposition": "published",
-      "current_blocked_scope": false
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-13382",
@@ -47754,12 +47776,13 @@
             "sha256": "8e6444dd7a8a79e851f79da11417f1b7029a44af8bab38b112e15974dfd7be55"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "work_scope_note": "Published before later task-scope pause; no new source review or automatic withdrawal."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "full-technical-wiki-archive-only",
       "audited_disposition": "published",
-      "current_blocked_scope": false
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-13379",
@@ -47825,7 +47848,7 @@
         "Web安全/网络设备/Fortinet/（CVE-2018-13379）Fortinet FortiOS 路径遍历漏洞.md"
       ],
       "review": {
-        "disposition": "sufficient-duplicate",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": null,
         "articles": [],
@@ -47833,8 +47856,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "sufficient-duplicate",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-11580",
@@ -47876,12 +47899,13 @@
             "sha256": "f0fe656c419fdbea8c828c509f0be7c624a732919eed1db846efbc1d89a291b4"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "work_scope_note": "Published before later task-scope pause; no new source review or automatic withdrawal."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
       "audited_disposition": "published",
-      "current_blocked_scope": false
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-9875",
@@ -47923,12 +47947,13 @@
             "sha256": "db0ff29751d02c30403fd23d522a8529ec56dca1c7daab9140e9d5c0596b2636"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "work_scope_note": "Published before later task-scope pause; no new source review or automatic withdrawal."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
       "audited_disposition": "published",
-      "current_blocked_scope": false
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-9874",
@@ -47970,12 +47995,13 @@
             "sha256": "886fec746b087794709cadf8e1fc332a2656192f64ab5781063adf873da4f925"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "work_scope_note": "Published before later task-scope pause; no new source review or automatic withdrawal."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
       "audited_disposition": "published",
-      "current_blocked_scope": false
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-9670",
@@ -48017,12 +48043,13 @@
             "sha256": "b5ade17aae2e8778236431055f9d04a77514f691a3592f3abbae1bb6cafef13f"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "work_scope_note": "Published before later task-scope pause; no new source review or automatic withdrawal."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
       "audited_disposition": "published",
-      "current_blocked_scope": false
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-13383",
@@ -48054,7 +48081,7 @@
         "Web安全/网络设备/Fortinet/（CVE-2018-13383）Fortinet FortiOS 缓冲区错误漏洞.md"
       ],
       "review": {
-        "disposition": "bounded-hold",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": "pending-known-source-followup",
         "articles": [],
@@ -48062,8 +48089,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "primary-web-text-receipt-no-source-body-hash",
-      "audited_disposition": "bounded-hold",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-7841",
@@ -48085,12 +48112,13 @@
             "sha256": "15d21c292c8441651e231b2d2c786195f0f9f68c7c83dd08386a0a67a18a9844"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "work_scope_note": "Published before later task-scope pause; no new source review or automatic withdrawal."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
       "audited_disposition": "published",
-      "current_blocked_scope": false
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-11634",
@@ -48102,7 +48130,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "bounded-search-advisory-only",
         "pending_subtype": "pending-technical-source-review",
         "articles": [],
@@ -48110,8 +48138,8 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-0903",
@@ -48123,7 +48151,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "bounded-search-advisory-only",
         "pending_subtype": "pending-technical-source-review",
         "articles": [],
@@ -48131,8 +48159,8 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-0708",
@@ -48246,12 +48274,13 @@
             "sha256": "ef9216a08542fbef3ae48fb381b857f17ac8789c2c836c379ea9a15cf41c2e40"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "work_scope_note": "Published before later task-scope pause; no new source review or automatic withdrawal."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
       "audited_disposition": "published",
-      "current_blocked_scope": false
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-0863",
@@ -48263,7 +48292,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "bounded-search-advisory-only",
         "pending_subtype": "pending-technical-source-review",
         "articles": [],
@@ -48271,8 +48300,8 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-14839",
@@ -48284,7 +48313,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "bounded-search-advisory-only",
         "pending_subtype": "pending-technical-source-review",
         "articles": [],
@@ -48292,8 +48321,8 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-3568",
@@ -48305,7 +48334,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "bounded-search-advisory-only",
         "pending_subtype": "pending-technical-source-review",
         "articles": [],
@@ -48313,8 +48342,8 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-11510",
@@ -48347,7 +48376,7 @@
         "Web安全/CMS内容/DedeCMS/DedeCMS v5-7 shops delivery 存储型 XSS - 白阁文库.md"
       ],
       "review": {
-        "disposition": "sufficient-duplicate",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": null,
         "articles": [],
@@ -48355,8 +48384,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "sufficient-duplicate",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-4063",
@@ -48368,7 +48397,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": "pending-technical-source-review",
         "articles": [],
@@ -48376,8 +48405,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2017-18368",
@@ -48420,12 +48449,13 @@
             "sha256": "a05697f1cde6e905809c2cb5b26dccc38cbb3f65c4c89dc5e34cdc8c3576293d"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "work_scope_note": "Published before later task-scope pause; no new source review or automatic withdrawal."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
       "audited_disposition": "published",
-      "current_blocked_scope": false
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-9621",
@@ -48467,12 +48497,13 @@
             "sha256": "b5ade17aae2e8778236431055f9d04a77514f691a3592f3abbae1bb6cafef13f"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "work_scope_note": "Published before later task-scope pause; no new source review or automatic withdrawal."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
       "audited_disposition": "published",
-      "current_blocked_scope": false
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-2725",
@@ -48658,7 +48689,7 @@
         "Web安全/中间件/WebLogic/CVE-2020-14882and14883weblogic 未授权命令执行漏洞复现.md"
       ],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": "pending-known-source-followup",
         "articles": [],
@@ -48666,8 +48697,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-11539",
@@ -48689,12 +48720,13 @@
             "sha256": "8280330070f35375797a18cd0d9f9c7fba1ee1a76451d1d9d34d1dcf1f762b40"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "work_scope_note": "Published before later task-scope pause; no new source review or automatic withdrawal."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
       "audited_disposition": "published",
-      "current_blocked_scope": false
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-2616",
@@ -48716,12 +48748,13 @@
             "sha256": "7b2ce2389f45ecb42047efaf932094d0e5fd88ac4635cee44d621f510df68313"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "work_scope_note": "Published before later task-scope pause; no new source review or automatic withdrawal."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
       "audited_disposition": "published",
-      "current_blocked_scope": false
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-3398",
@@ -48753,7 +48786,7 @@
         "Web安全/商业软件/Confluence/（CVE-2019-3398）Confluence 路径穿越漏洞.md"
       ],
       "review": {
-        "disposition": "sufficient-duplicate",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": null,
         "articles": [],
@@ -48761,8 +48794,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "sufficient-duplicate",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-0859",
@@ -48774,7 +48807,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "bounded-search-advisory-only",
         "pending_subtype": "pending-technical-source-review",
         "articles": [],
@@ -48782,8 +48815,8 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-0841",
@@ -48795,7 +48828,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": "pending-known-source-followup",
         "articles": [],
@@ -48803,8 +48836,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-0803",
@@ -48837,7 +48870,7 @@
         "系统安全/Windows/Windows本地提权漏洞/（CVE-2019-0803）Win32K组件提权.md"
       ],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": "pending-known-source-followup",
         "articles": [],
@@ -48845,8 +48878,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "full-technical-wiki-archive-only",
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-0752",
@@ -48858,7 +48891,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "bounded-search-advisory-only",
         "pending_subtype": "pending-technical-source-review",
         "articles": [],
@@ -48866,8 +48899,8 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-0797",
@@ -48879,7 +48912,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "bounded-search-advisory-only",
         "pending_subtype": "pending-technical-source-review",
         "articles": [],
@@ -48887,8 +48920,8 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-0808",
@@ -48921,7 +48954,7 @@
         "Web安全/安全设备/Google/（CVE-2019-5786）Chrome 远程代码执行漏洞.md"
       ],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": "pending-known-source-followup",
         "articles": [],
@@ -48929,8 +48962,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-0703",
@@ -48942,7 +48975,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "bounded-search-advisory-only",
         "pending_subtype": "pending-technical-source-review",
         "articles": [],
@@ -48950,8 +48983,8 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-0211",
@@ -48983,7 +49016,7 @@
         "Web安全/中间件/Apache/（CVE-2019-0211）Apache HTTP 服务组件提权漏洞.md"
       ],
       "review": {
-        "disposition": "sufficient-duplicate",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": "pending-technical-source-review",
         "articles": [],
@@ -48991,8 +49024,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "full-technical-wiki-archive-only",
-      "audited_disposition": "sufficient-duplicate",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-11001",
@@ -49004,7 +49037,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": "pending-technical-source-review",
         "articles": [],
@@ -49012,8 +49045,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-4344",
@@ -49025,7 +49058,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "unread",
         "pending_subtype": "pending-bounded-review",
         "articles": [],
@@ -49033,8 +49066,8 @@
       },
       "audited_reading_depth": "unread",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-5418",
@@ -49101,7 +49134,7 @@
         "Web安全/开发框架/Ruby/（CVE-2019-5418）Ruby on Rails 路径穿越与任意文件读取漏洞.md"
       ],
       "review": {
-        "disposition": "sufficient-duplicate",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": null,
         "articles": [],
@@ -49109,8 +49142,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "sufficient-duplicate",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-10068",
@@ -49132,12 +49165,13 @@
             "sha256": "04a5a283f98976405ed1a0b2fd979d8a69be8a170420354fd7a9ca81e27689d5"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "work_scope_note": "Published before later task-scope pause; no new source review or automatic withdrawal."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
       "audited_disposition": "published",
-      "current_blocked_scope": false
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-3396",
@@ -49340,7 +49374,7 @@
         "Web安全/商业软件/JIRA/Atlassian Jira 模板注入漏洞 CVE-2019-11581.md"
       ],
       "review": {
-        "disposition": "sufficient-duplicate",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": null,
         "articles": [],
@@ -49348,8 +49382,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "sufficient-duplicate",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-7609",
@@ -49400,7 +49434,7 @@
         "Web安全/CMS内容/DedeCMS/DedeCMS v5-7 shops delivery 存储型 XSS - 白阁文库.md"
       ],
       "review": {
-        "disposition": "sufficient-duplicate",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": null,
         "articles": [],
@@ -49408,8 +49442,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "sufficient-duplicate",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-9978",
@@ -49441,7 +49475,7 @@
         "Web安全/CMS内容/WordPress/（CVE-2019-9978）WordPress Plugin - social warfare 远程命令执行漏洞.md"
       ],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": "pending-known-source-followup",
         "articles": [],
@@ -49449,8 +49483,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-7238",
@@ -49535,7 +49569,7 @@
         "Web安全/CMS内容/DedeCMS/DedeCMS v5-7 shops delivery 存储型 XSS - 白阁文库.md"
       ],
       "review": {
-        "disposition": "sufficient-duplicate",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": null,
         "articles": [],
@@ -49543,8 +49577,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "sufficient-duplicate",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-1003030",
@@ -49556,7 +49590,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "bounded-hold",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": "pending-known-source-followup",
         "articles": [],
@@ -49564,8 +49598,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "bounded-hold",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-1003029",
@@ -49577,7 +49611,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": "pending-known-source-followup",
         "articles": [],
@@ -49585,8 +49619,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-18809",
@@ -49608,12 +49642,13 @@
             "sha256": "33f230e028c3bd042ea5162b1954b1ff1f11a6da211b52dc29d30dbf4cdf7d31"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "work_scope_note": "Published before later task-scope pause; no new source review or automatic withdrawal."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
       "audited_disposition": "published",
-      "current_blocked_scope": false
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-0604",
@@ -49655,12 +49690,13 @@
             "sha256": "1aff84e77034f5289f5103233d07e9555a09a187ccc80d1286808c4099de3794"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "work_scope_note": "Published before later task-scope pause; no new source review or automatic withdrawal."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
       "audited_disposition": "published",
-      "current_blocked_scope": false
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-0676",
@@ -49672,7 +49708,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "unread",
         "pending_subtype": "pending-bounded-review",
         "articles": [],
@@ -49680,8 +49716,8 @@
       },
       "audited_reading_depth": "unread",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-6223",
@@ -49693,7 +49729,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "unread",
         "pending_subtype": "pending-bounded-review",
         "articles": [],
@@ -49701,8 +49737,8 @@
       },
       "audited_reading_depth": "unread",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-9082",
@@ -49734,7 +49770,7 @@
         "Web安全/开发框架/ThinkPHP/ThinkPHP 的老漏洞依旧是黑客手中的大杀器.md"
       ],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": "pending-known-source-followup",
         "articles": [],
@@ -49742,8 +49778,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-6340",
@@ -49775,7 +49811,7 @@
         "Web安全/CMS内容/Drupal/（CVE-2019-6340）Drupal 远程代码执行漏洞.md"
       ],
       "review": {
-        "disposition": "sufficient-duplicate",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": null,
         "articles": [],
@@ -49783,8 +49819,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "sufficient-duplicate",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-8394",
@@ -49796,7 +49832,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "bounded-hold",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": "pending-known-source-followup",
         "articles": [],
@@ -49804,8 +49840,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "bounded-hold",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-20250",
@@ -49838,7 +49874,7 @@
         "Web安全/CMS内容/DedeCMS/DedeCMS v5-7 shops delivery 存储型 XSS - 白阁文库.md"
       ],
       "review": {
-        "disposition": "sufficient-duplicate",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": null,
         "articles": [],
@@ -49846,8 +49882,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "sufficient-duplicate",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-20753",
@@ -49859,7 +49895,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "bounded-search-advisory-only",
         "pending_subtype": "pending-bounded-review",
         "articles": [],
@@ -49867,8 +49903,8 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2017-18362",
@@ -49911,12 +49947,13 @@
             "sha256": "1f9cbf4f53ecf4e50601afd219dafc8c4a55b86308afb1b122f493dd10725465"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "work_scope_note": "Published before later task-scope pause; no new source review or automatic withdrawal."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
       "audited_disposition": "published",
-      "current_blocked_scope": false
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-1652",
@@ -49938,12 +49975,13 @@
             "sha256": "62cd608827c901a82a452ceb4747bec23e560150d934f764166b655022f524d4"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "work_scope_note": "Published before later task-scope pause; no new source review or automatic withdrawal."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
       "audited_disposition": "published",
-      "current_blocked_scope": false
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-13374",
@@ -49955,7 +49993,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "bounded-search-advisory-only",
         "pending_subtype": "pending-bounded-review",
         "articles": [],
@@ -49963,8 +50001,8 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-15982",
@@ -49996,7 +50034,7 @@
         "系统安全/Windows/cve-2020-1472 微软 NetLogon 权限提升漏洞 附 exp.md"
       ],
       "review": {
-        "disposition": "bounded-hold",
+        "disposition": "platform-blocked",
         "reading_depth": "existing-wiki-body-only",
         "pending_subtype": "pending-bounded-review",
         "articles": [],
@@ -50004,8 +50042,8 @@
       },
       "audited_reading_depth": "existing-wiki-body-only",
       "audited_read_provenance": null,
-      "audited_disposition": "bounded-hold",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-0541",
@@ -50017,7 +50055,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "unread",
         "pending_subtype": "pending-bounded-review",
         "articles": [],
@@ -50025,8 +50063,8 @@
       },
       "audited_reading_depth": "unread",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2019-0543",
@@ -50038,7 +50076,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "unread",
         "pending_subtype": "pending-bounded-review",
         "articles": [],
@@ -50046,8 +50084,8 @@
       },
       "audited_reading_depth": "unread",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-19320",
@@ -50059,7 +50097,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": "pending-bounded-review",
         "articles": [],
@@ -50067,8 +50105,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "original-author-technical-text-in-third-party-web-archive",
-      "audited_disposition": "awaiting-peer-or-required-notes",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-19321",
@@ -50080,7 +50118,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "bounded-hold",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": "pending-bounded-review",
         "articles": [],
@@ -50088,8 +50126,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "original-author-technical-text-in-third-party-web-archive",
-      "audited_disposition": "bounded-hold",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-19322",
@@ -50101,7 +50139,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "bounded-hold",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": "pending-bounded-review",
         "articles": [],
@@ -50109,8 +50147,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "original-author-technical-text-in-third-party-web-archive",
-      "audited_disposition": "bounded-hold",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-19323",
@@ -50122,7 +50160,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "bounded-hold",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": "pending-bounded-review",
         "articles": [],
@@ -50130,8 +50168,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "original-author-technical-text-in-third-party-web-archive",
-      "audited_disposition": "bounded-hold",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-8653",
@@ -50143,7 +50181,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "unread",
         "pending_subtype": "pending-bounded-review",
         "articles": [],
@@ -50151,8 +50189,8 @@
       },
       "audited_reading_depth": "unread",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-8611",
@@ -50164,7 +50202,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "unread",
         "pending_subtype": "pending-bounded-review",
         "articles": [],
@@ -50172,8 +50210,8 @@
       },
       "audited_reading_depth": "unread",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-8639",
@@ -50205,7 +50243,7 @@
         "系统安全/Windows/Windows本地提权漏洞/（CVE-2018-8639）Windows 本地提权漏洞.md"
       ],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "existing-wiki-body-only",
         "pending_subtype": "pending-known-source-followup",
         "articles": [],
@@ -50213,8 +50251,8 @@
       },
       "audited_reading_depth": "existing-wiki-body-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-20062",
@@ -50246,7 +50284,7 @@
         "Web安全/开发框架/ThinkPHP/ThinkPHP 的老漏洞依旧是黑客手中的大杀器.md"
       ],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": "pending-known-source-followup",
         "articles": [],
@@ -50254,8 +50292,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-17480",
@@ -50267,7 +50305,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "unread",
         "pending_subtype": "pending-bounded-review",
         "articles": [],
@@ -50275,8 +50313,8 @@
       },
       "audited_reading_depth": "unread",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-1000861",
@@ -50360,7 +50398,7 @@
         "Web安全/开发框架/Jenkins/Jenkins checkScript 远程命令执行漏洞 CVE-2018-1000861.md"
       ],
       "review": {
-        "disposition": "sufficient-duplicate",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": null,
         "articles": [],
@@ -50368,8 +50406,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "sufficient-duplicate",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-19410",
@@ -50391,12 +50429,13 @@
             "sha256": "bf3415efe9fb497c2d088ca6f17706c97af211b845343e6c80a710f04ab4f094"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "work_scope_note": "Published before later task-scope pause; no new source review or automatic withdrawal."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
       "audited_disposition": "published",
-      "current_blocked_scope": false
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-17463",
@@ -50438,12 +50477,13 @@
             "sha256": "55234b1772f427e1b3777c6a99e279f81e424c381966c9149b8c90f8facee1bd"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "work_scope_note": "Published before later task-scope pause; no new source review or automatic withdrawal."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
       "audited_disposition": "published",
-      "current_blocked_scope": false
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-6065",
@@ -50455,7 +50495,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "unread",
         "pending_subtype": "pending-bounded-review",
         "articles": [],
@@ -50463,8 +50503,8 @@
       },
       "audited_reading_depth": "unread",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-8581",
@@ -50513,7 +50553,7 @@
         "系统安全/Windows/Windows 域控常见 0day 及利用漏洞汇集.md"
       ],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": "pending-known-source-followup",
         "articles": [],
@@ -50521,8 +50561,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "full-technical-wiki-archive-only",
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-8589",
@@ -50534,7 +50574,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "unread",
         "pending_subtype": "pending-bounded-review",
         "articles": [],
@@ -50542,8 +50582,8 @@
       },
       "audited_reading_depth": "unread",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-14667",
@@ -50555,7 +50595,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": "pending-bounded-review",
         "articles": [],
@@ -50563,8 +50603,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-14558",
@@ -50576,7 +50616,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "bounded-search-advisory-only",
         "pending_subtype": "pending-bounded-review",
         "articles": [],
@@ -50584,8 +50624,8 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-8453",
@@ -50617,7 +50657,7 @@
         "系统安全/Windows/Windows本地提权漏洞/（CVE-2018-8453）Windows 本地提权漏洞.md"
       ],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": "pending-known-source-followup",
         "articles": [],
@@ -50625,8 +50665,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-14634",
@@ -50638,7 +50678,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": "pending-bounded-review",
         "articles": [],
@@ -50646,8 +50686,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "original-author-technical-text-in-third-party-web-archive",
-      "audited_disposition": "awaiting-peer-or-required-notes",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-15961",
@@ -50690,12 +50730,13 @@
             "sha256": "8a0621fee323ebdbf28dd507301a447b55a38041168dc588f4634d724883ae05"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "work_scope_note": "Published before later task-scope pause; no new source review or automatic withdrawal."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
       "audited_disposition": "published",
-      "current_blocked_scope": false
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-8440",
@@ -50707,7 +50748,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": "pending-known-source-followup",
         "articles": [],
@@ -50715,8 +50756,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-11776",
@@ -50818,7 +50859,7 @@
         "Web安全/CMS内容/DedeCMS/DedeCMS v5-7 shops delivery 存储型 XSS - 白阁文库.md"
       ],
       "review": {
-        "disposition": "sufficient-duplicate",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": null,
         "articles": [],
@@ -50826,8 +50867,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "sufficient-duplicate",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-8373",
@@ -50839,7 +50880,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "unread",
         "pending_subtype": "pending-bounded-review",
         "articles": [],
@@ -50847,8 +50888,8 @@
       },
       "audited_reading_depth": "unread",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-8414",
@@ -50860,7 +50901,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "unread",
         "pending_subtype": "pending-bounded-review",
         "articles": [],
@@ -50868,8 +50909,8 @@
       },
       "audited_reading_depth": "unread",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-8405",
@@ -50881,7 +50922,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "unread",
         "pending_subtype": "pending-bounded-review",
         "articles": [],
@@ -50889,8 +50930,8 @@
       },
       "audited_reading_depth": "unread",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-8406",
@@ -50902,7 +50943,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "unread",
         "pending_subtype": "pending-bounded-review",
         "articles": [],
@@ -50910,8 +50951,8 @@
       },
       "audited_reading_depth": "unread",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-15133",
@@ -50943,7 +50984,7 @@
         "Web安全/开发框架/Laravel/（CVE-2018-15133）Laravel 反序列化远程命令执行漏洞.md"
       ],
       "review": {
-        "disposition": "sufficient-duplicate",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": null,
         "articles": [],
@@ -50951,8 +50992,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "sufficient-duplicate",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-14933",
@@ -50974,12 +51015,13 @@
             "sha256": "d31b86b86d15c366b102f8d1ce2f4a6571e3f2a596b890ce91f16150f0d2edaa"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "work_scope_note": "Published before later task-scope pause; no new source review or automatic withdrawal."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
       "audited_disposition": "published",
-      "current_blocked_scope": false
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-14847",
@@ -51001,12 +51043,13 @@
             "sha256": "9fbf4824f464fb0702209c0b5b0c5d0d13d971a6d0c87c6cbf007d89c52067a6"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "work_scope_note": "Published before later task-scope pause; no new source review or automatic withdrawal."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
       "audited_disposition": "published",
-      "current_blocked_scope": false
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-7602",
@@ -51056,7 +51099,7 @@
         "Web安全/CMS内容/Drupal/（CVE-2018-7602）Drupal 远程代码执行漏洞.md"
       ],
       "review": {
-        "disposition": "sufficient-duplicate",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": null,
         "articles": [],
@@ -51064,8 +51107,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "sufficient-duplicate",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-8298",
@@ -51077,7 +51120,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "unread",
         "pending_subtype": "pending-bounded-review",
         "articles": [],
@@ -51085,8 +51128,8 @@
       },
       "audited_reading_depth": "unread",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-5002",
@@ -51098,7 +51141,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "unread",
         "pending_subtype": "pending-bounded-review",
         "articles": [],
@@ -51106,8 +51149,8 @@
       },
       "audited_reading_depth": "unread",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-4990",
@@ -51119,7 +51162,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "unread",
         "pending_subtype": "pending-bounded-review",
         "articles": [],
@@ -51127,8 +51170,8 @@
       },
       "audited_reading_depth": "unread",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-9276",
@@ -51150,12 +51193,13 @@
             "sha256": "6feef59e2116fb247d1231baf46e336cffcec983b62fca2c594283282c14b2f8"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "work_scope_note": "Published before later task-scope pause; no new source review or automatic withdrawal."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
       "audited_disposition": "published",
-      "current_blocked_scope": false
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-6961",
@@ -51177,12 +51221,13 @@
             "sha256": "578c6769c7b0d8a52c5efd1c44c32e0be06c558271a3fe2ca54be42cda3e5eed"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "work_scope_note": "Published before later task-scope pause; no new source review or automatic withdrawal."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
       "audited_disposition": "published",
-      "current_blocked_scope": false
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2016-9079",
@@ -51225,12 +51270,13 @@
             "sha256": "9b0ab8e77d7c39dcc9a23de2a385eb6bdfc7e4951681d9e6dfe8c98c0ffb303c"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "work_scope_note": "Published before later task-scope pause; no new source review or automatic withdrawal."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
       "audited_disposition": "published",
-      "current_blocked_scope": false
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-11138",
@@ -51252,12 +51298,13 @@
             "sha256": "a18ac3e85b335eceec3c5aa7c4f87a854af62805d49aaf28636a11e815366eb1"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "work_scope_note": "Published before later task-scope pause; no new source review or automatic withdrawal."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
       "audited_disposition": "published",
-      "current_blocked_scope": false
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-4939",
@@ -51269,7 +51316,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "unread",
         "pending_subtype": "pending-bounded-review",
         "articles": [],
@@ -51277,8 +51324,8 @@
       },
       "audited_reading_depth": "unread",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-8174",
@@ -51290,7 +51337,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "unread",
         "pending_subtype": "pending-bounded-review",
         "articles": [],
@@ -51298,8 +51345,8 @@
       },
       "audited_reading_depth": "unread",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-8120",
@@ -51331,7 +51378,7 @@
         "系统安全/Windows/Windows本地提权漏洞/（CVE-2018-8120）Windows本地提权漏洞.md"
       ],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": "pending-known-source-followup",
         "articles": [],
@@ -51339,8 +51386,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-0824",
@@ -51352,7 +51399,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": "pending-known-source-followup",
         "articles": [],
@@ -51360,8 +51407,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-10561",
@@ -51373,7 +51420,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": "pending-bounded-review",
         "articles": [],
@@ -51381,8 +51428,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "primary-web-text-receipt-no-source-body-hash",
-      "audited_disposition": "awaiting-peer-or-required-notes",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-10562",
@@ -51404,12 +51451,13 @@
             "sha256": "8caa760e54bff6185915bd8d04846e0ab72dd74ea45a762441bdf1cc60e8177f"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "work_scope_note": "Published before later task-scope pause; no new source review or automatic withdrawal."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
       "audited_disposition": "published",
-      "current_blocked_scope": false
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-2628",
@@ -51545,7 +51593,7 @@
         "Web安全/CMS内容/DedeCMS/DedeCMS v5-7 shops delivery 存储型 XSS - 白阁文库.md"
       ],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": "pending-known-source-followup",
         "articles": [],
@@ -51553,8 +51601,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-5430",
@@ -51566,7 +51614,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "bounded-hold",
+        "disposition": "platform-blocked",
         "reading_depth": "bounded-search-advisory-only",
         "pending_subtype": "pending-bounded-review",
         "articles": [],
@@ -51574,8 +51622,8 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "bounded-hold",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-1273",
@@ -51713,7 +51761,7 @@
         "Web安全/CMS内容/DedeCMS/DedeCMS v5-7 shops delivery 存储型 XSS - 白阁文库.md"
       ],
       "review": {
-        "disposition": "sufficient-duplicate",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": null,
         "articles": [],
@@ -51721,8 +51769,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "sufficient-duplicate",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-7600",
@@ -51790,7 +51838,7 @@
         "Web安全/CMS内容/Drupal/（CVE-2018-7602）Drupal 远程代码执行漏洞.md"
       ],
       "review": {
-        "disposition": "sufficient-duplicate",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": null,
         "articles": [],
@@ -51798,8 +51846,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "sufficient-duplicate",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-0171",
@@ -51811,7 +51859,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": "pending-known-source-followup",
         "articles": [],
@@ -51819,8 +51867,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-0151",
@@ -51832,7 +51880,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "bounded-hold",
+        "disposition": "platform-blocked",
         "reading_depth": "bounded-search-advisory-only",
         "pending_subtype": "pending-bounded-review",
         "articles": [],
@@ -51840,8 +51888,8 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "bounded-hold",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-0154",
@@ -51853,7 +51901,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "bounded-hold",
+        "disposition": "platform-blocked",
         "reading_depth": "bounded-search-advisory-only",
         "pending_subtype": "pending-bounded-review",
         "articles": [],
@@ -51861,8 +51909,8 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "bounded-hold",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-0155",
@@ -51874,7 +51922,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "bounded-hold",
+        "disposition": "platform-blocked",
         "reading_depth": "bounded-search-advisory-only",
         "pending_subtype": "pending-bounded-review",
         "articles": [],
@@ -51882,8 +51930,8 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "bounded-hold",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-0156",
@@ -51895,7 +51943,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "bounded-hold",
+        "disposition": "platform-blocked",
         "reading_depth": "bounded-search-advisory-only",
         "pending_subtype": "pending-bounded-review",
         "articles": [],
@@ -51903,8 +51951,8 @@
       },
       "audited_reading_depth": "bounded-search-advisory-only",
       "audited_read_provenance": null,
-      "audited_disposition": "bounded-hold",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-0158",
@@ -51916,7 +51964,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "unread",
         "pending_subtype": "pending-bounded-review",
         "articles": [],
@@ -51924,8 +51972,8 @@
       },
       "audited_reading_depth": "unread",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-0159",
@@ -51937,7 +51985,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "unread",
         "pending_subtype": "pending-bounded-review",
         "articles": [],
@@ -51945,8 +51993,8 @@
       },
       "audited_reading_depth": "unread",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-0161",
@@ -51958,7 +52006,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "unread",
         "pending_subtype": "pending-bounded-review",
         "articles": [],
@@ -51966,8 +52014,8 @@
       },
       "audited_reading_depth": "unread",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-0167",
@@ -51979,7 +52027,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "unread",
         "pending_subtype": "pending-bounded-review",
         "articles": [],
@@ -51987,8 +52035,8 @@
       },
       "audited_reading_depth": "unread",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-0172",
@@ -52000,7 +52048,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "bounded-hold",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": "pending-bounded-review",
         "articles": [],
@@ -52008,8 +52056,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "primary-web-text-receipt-no-source-body-hash",
-      "audited_disposition": "bounded-hold",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-0173",
@@ -52021,7 +52069,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "bounded-hold",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": "pending-bounded-review",
         "articles": [],
@@ -52029,8 +52077,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "primary-web-text-receipt-no-source-body-hash",
-      "audited_disposition": "bounded-hold",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-0174",
@@ -52042,7 +52090,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "bounded-hold",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": "pending-bounded-review",
         "articles": [],
@@ -52050,8 +52098,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "primary-web-text-receipt-no-source-body-hash",
-      "audited_disposition": "bounded-hold",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-0175",
@@ -52063,7 +52111,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "unread",
         "pending_subtype": "pending-bounded-review",
         "articles": [],
@@ -52071,8 +52119,8 @@
       },
       "audited_reading_depth": "unread",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-0179",
@@ -52084,7 +52132,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "unread",
         "pending_subtype": "pending-bounded-review",
         "articles": [],
@@ -52092,8 +52140,8 @@
       },
       "audited_reading_depth": "unread",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-0180",
@@ -52105,7 +52153,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "unread",
         "pending_subtype": "pending-bounded-review",
         "articles": [],
@@ -52113,8 +52161,8 @@
       },
       "audited_reading_depth": "unread",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-6882",
@@ -52136,12 +52184,13 @@
             "sha256": "623052db76c4d4df13331d9060186153eb6a57fea2707d40e8032c65c9ba0a9e"
           }
         ],
-        "material_absence_claim": false
+        "material_absence_claim": false,
+        "work_scope_note": "Published before later task-scope pause; no new source review or automatic withdrawal."
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
       "audited_disposition": "published",
-      "current_blocked_scope": false
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2017-12319",
@@ -52174,7 +52223,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "awaiting-peer-or-required-notes",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": "pending-bounded-review",
         "articles": [],
@@ -52182,8 +52231,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "awaiting-peer-or-required-notes",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-0147",
@@ -52195,7 +52244,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "unread",
         "pending_subtype": "pending-bounded-review",
         "articles": [],
@@ -52203,8 +52252,8 @@
       },
       "audited_reading_depth": "unread",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-6530",
@@ -52216,7 +52265,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "bounded-hold",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": "pending-known-source-followup",
         "articles": [],
@@ -52224,8 +52273,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "non-wiki-technical-source-text",
-      "audited_disposition": "bounded-hold",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-2380",
@@ -52237,7 +52286,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "unread",
         "pending_subtype": "pending-bounded-review",
         "articles": [],
@@ -52245,8 +52294,8 @@
       },
       "audited_reading_depth": "unread",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-6789",
@@ -52258,7 +52307,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "bounded-hold",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": "pending-bounded-review",
         "articles": [],
@@ -52266,8 +52315,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "primary-web-text-receipt-no-source-body-hash",
-      "audited_disposition": "bounded-hold",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-0125",
@@ -52279,7 +52328,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "unread",
         "pending_subtype": "pending-bounded-review",
         "articles": [],
@@ -52287,8 +52336,8 @@
       },
       "audited_reading_depth": "unread",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-4878",
@@ -52320,7 +52369,7 @@
         "Web安全/桌面软件/Adobe/（CVE-2018-4878）Adobe Flash Player 远程代码执行漏洞.md"
       ],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "full-technical-text",
         "pending_subtype": "pending-known-source-followup",
         "articles": [],
@@ -52328,8 +52377,8 @@
       },
       "audited_reading_depth": "full-technical-text",
       "audited_read_provenance": "full-technical-wiki-archive-only",
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2017-1000353",
@@ -52401,7 +52450,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "unread",
         "pending_subtype": "pending-bounded-review",
         "articles": [],
@@ -52409,8 +52458,8 @@
       },
       "audited_reading_depth": "unread",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2018-0802",
@@ -52422,7 +52471,7 @@
       "pr10_matches": [],
       "body_identifier_candidate_paths": [],
       "review": {
-        "disposition": "still-pending",
+        "disposition": "platform-blocked",
         "reading_depth": "unread",
         "pending_subtype": "pending-bounded-review",
         "articles": [],
@@ -52430,8 +52479,8 @@
       },
       "audited_reading_depth": "unread",
       "audited_read_provenance": null,
-      "audited_disposition": "still-pending",
-      "current_blocked_scope": false
+      "audited_disposition": "platform-blocked",
+      "current_blocked_scope": true
     },
     {
       "cve": "CVE-2017-1000486",
@@ -62427,14 +62476,14 @@
   "existing_article_files_supplemented": 71,
   "candidates_with_integrated_material": 202,
   "disposition_counts": {
-    "still-pending": 136,
+    "still-pending": 56,
     "published": 202,
-    "bounded-hold": 342,
-    "platform-blocked": 971,
-    "awaiting-peer-or-required-notes": 37,
-    "sufficient-duplicate": 39
+    "bounded-hold": 311,
+    "platform-blocked": 1130,
+    "sufficient-duplicate": 16,
+    "awaiting-peer-or-required-notes": 12
   },
-  "updated_utc": "2026-10-03T15:15:25.287222+00:00",
+  "updated_utc": "2026-10-03T15:38:12.762187+00:00",
   "qualified_material_candidate_count": 202,
   "withdrawn_new_files": 33,
   "withdrawn_appends": 7,
@@ -62450,12 +62499,13 @@
     "baseline-restricted-not-reclassified": 215
   },
   "audited_disposition_counts": {
-    "still-pending": 136,
+    "still-pending": 56,
     "published": 202,
-    "bounded-hold": 342,
-    "platform-blocked": 971,
-    "awaiting-peer-or-required-notes": 37,
-    "sufficient-duplicate": 39
+    "bounded-hold": 311,
+    "platform-blocked": 1130,
+    "sufficient-duplicate": 16,
+    "awaiting-peer-or-required-notes": 12
   },
-  "current_blocked_scope_count": 971
+  "current_blocked_scope_count": 1179,
+  "current_scope_pause_publication_overlap": 49
 }
