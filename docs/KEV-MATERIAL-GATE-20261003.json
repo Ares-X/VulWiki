@@ -3153,13 +3153,808 @@
           "runtime_executed": false
         }
       ]
+    },
+    {
+      "reviewed_utc": "2026-10-03T11:44:43.056425+00:00",
+      "review_base": "769334d99cef2b9fbfd5308e165acbc64696c5e1",
+      "files_reviewed": 16,
+      "retained_files": 16,
+      "qualified_candidate_ids": 17,
+      "final_byte_review_passed": true,
+      "rows": [
+        {
+          "path": "IOT安全/D-Link/D-Link DIR-859 hedwig.cgi 路径穿越与凭据泄露 CVE-2024-0769.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2024-0769"
+          ],
+          "specific_trigger": "Original report L70-71 contains the complete curl POST to hedwig.cgi with XML service traversal and test Cookie; L74-196 contains response transcript.",
+          "outcome": "Returned XML device/account contains administrative account, password and group values. Status 200 alone is insufficient.",
+          "applicability": "VulDB CNA names DIR-859 1.06B01, hedwig.cgi, service, and the exact traversal path. D-Link SAP10371 links this disclosure under 0769.",
+          "versions": "Research tested RevA_FW_Patch_v1.06B01 only. Vendor marks all DIR-859 hardware EOL/EOS; do not borrow another CVE firmware fix.",
+          "preconditions": [
+            "Reachable HTTP management interface",
+            "Source claims uid=123 does not require a valid authenticated session",
+            "No claim that every firmware/hardware variant reproduces the shown response"
+          ],
+          "limits": [
+            "Inline curl/XML only; no executable attachment or hidden stage in reviewed report",
+            "Discloses configuration and credentials; outputs/logs create copies",
+            "Firmware and post-disclosure admin-login chain not audited"
+          ],
+          "public_evidence": [
+            {
+              "url": "https://github.com/c2dc/cve-reported/blob/d972341081f80a6bc50bfb7698a161eb25f1826d/CVE-2024-0769/CVE-2024-0769.md",
+              "sha256": "571f30bbb4ea2375d1672db2e30081b362f9fb4b67fcb039e217d2edd5700508",
+              "scope": "Full 196-line original Markdown, including request and complete shown response",
+              "location": "L70-71 request; L159-167 account fields; L26,54-64 version/date"
+            },
+            {
+              "url": "https://supportannouncement.us.dlink.com/announcement/publication.aspx?name=SAP10371",
+              "sha256": "4ae89f2c9ae5fcfb045f2af9050036136779a7bd39979328aaa7fe7fb6c4ed2f",
+              "scope": "Only the explicitly listed relevant source sections were reviewed. Saved artifact is the web-tool text receipt, not original HTTP/HTML bytes; multiple source excerpts may share one receipt.",
+              "location": "L13-22 EOL; L30-45 exact-CVE disclosure; L51-62 separate 2019 issue; L66-91 model/recommendation"
+            },
+            {
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2024-0769",
+              "sha256": "2736f99b731d8ab1647738eeb17027afc96354ceaca3432c8fe08d1bc3531b9a",
+              "scope": "CNA descriptions, affected versions and references independently read; no claim of reviewing unrelated ADP data.",
+              "location": "containers.cna.descriptions,affected,references"
+            }
+          ],
+          "current_sha256": "b27153db9a330490d5f85ceeb2a5d5e616e46830ec4721175ac6ab6e6a77ade2",
+          "runtime_executed": false
+        },
+        {
+          "path": "IOT安全/Mitel/Mitel SIP 电话配置换行注入 CVE-2024-41710.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2024-41710"
+          ],
+          "specific_trigger": "Full original README names POST 8021xsupport.html, parameter 802.1x+identity and literal %dt-bearing hostname payload.",
+          "outcome": "Source says boot processing overwrites hostname and passes its injected shell sequence to udhcpc. No captured execution response, authenticated request envelope or fixed-version negative test.",
+          "applicability": "README CVE-ID plus CNA and Mitel bulletin identify administrator-only boot-process argument/command injection in listed phone families.",
+          "versions": "Tested 6869i 6.3.0.1020; affected through R6.4.0.HF1 (136), fixed HF2 (137). PDF table repeats 6900; 6900w scope comes from bulletin prose.",
+          "preconditions": [
+            "Existing Web administrator access",
+            "Configuration write permitted",
+            "Device reaches relevant boot/startup sequence"
+          ],
+          "limits": [
+            "Persistent local.cfg/hostname changes; reboot affects calls and DHCP",
+            "Explicit curl-to-shell download from author placeholder; downstream script not obtained or approved",
+            "No firmware binary or authentication implementation audited"
+          ],
+          "public_evidence": [
+            {
+              "url": "https://github.com/kwburns/CVE/blob/5057d16b7f6c80b4c74882bb32ab6034055ee373/Mitel/6.3.0.1020/README.md",
+              "sha256": "c66e4f018e36ef942e8f95c5228ba9e238689f58f19250beb93460d803e0314b",
+              "scope": "Entire 35-line original README",
+              "location": "L3-15 endpoint/value/boot outcome; L17-32 version and CVE"
+            },
+            {
+              "url": "https://www.mitel.com/sites/default/files/2026-02/24-0019_24-0019-001.pdf",
+              "sha256": "deb67acbe8d904455d40786f11280312518a235c76fba73b905276ba3377c054",
+              "scope": "All three pages of extracted text read; original rendered page 2 visually inspected",
+              "location": "Page 2 product table, CVE and admin prerequisite; page 3 solution"
+            },
+            {
+              "url": "https://www.mitel.com/sites/default/files/2026-02/24-0019_24-0019-001.pdf",
+              "sha256": "b95fea795ceeca745e770594d355c7f7645042432b8473e9384c3318cd9f6397",
+              "scope": "Entire saved page 2 image viewed",
+              "location": "Version/product table and risk/exposure paragraph"
+            },
+            {
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2024-41710",
+              "sha256": "b99c775020726862871015772f987ac0178700c0f19ce5053cc9bc3c9aaddf27",
+              "scope": "CNA descriptions, affected versions and references independently read; no claim of reviewing unrelated ADP data.",
+              "location": "containers.cna.descriptions,affected,references"
+            }
+          ],
+          "current_sha256": "d074edb83c0ab2d37c493be4779f065d8817699abadd252542c9115ac7c8dddb",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/中间件/Apache HugeGraph/Apache-HugeGraph-远程代码执行漏洞-CVE-2024-27348.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2024-27348"
+          ],
+          "specific_trigger": "Existing article complete POST /gremlin JSON, Thread.name reflection and ProcessBuilder id invocation, returning process stdout.",
+          "outcome": "Expected command output from process stream; existing screenshots not inspected. Primary researcher shows failed pre-bypass SecurityException then renamed-thread directory creation claim.",
+          "applicability": "Apache CNA specifically identifies command execution in Gremlin. SecureLayer7 original technical sections independently show the same thread-name check and bypass under this CVE, despite a typo in its page title.",
+          "versions": "HugeGraph-Server >=1.0.0,<1.3.0 on Java 8/11; recommended 1.3.0 with Java11 and auth enabled.",
+          "preconditions": [
+            "Gremlin/Groovy endpoint reachable",
+            "Authorization requirements depend on server configuration",
+            "JVM reflective-access behavior must permit shown operations"
+          ],
+          "limits": [
+            "Starts OS process as service account",
+            "Groovy/JVM/Commons IO dependencies not fully audited",
+            "No hidden local downloader in the complete inline request; no full scanner review"
+          ],
+          "public_evidence": [
+            {
+              "url": "https://blog.securelayer7.net/remote-code-execution-in-apache-hugegraph/",
+              "sha256": "693936d513c1fa610bec3fa10421107a748e80d08d8c1b00438e00ba2c76755e",
+              "scope": "Only the explicitly listed relevant source sections were reviewed. Saved artifact is the web-tool text receipt, not original HTTP/HTML bytes; multiple source excerpts may share one receipt.",
+              "location": "L205-287 actual checks and complete exploitation snippets; result image at L289 not viewed"
+            },
+            {
+              "url": "https://blog.securelayer7.net/remote-code-execution-in-apache-hugegraph/",
+              "sha256": "efe751403558820b054726155e3843ffe0694cddb335144113ec95d73133f4ee",
+              "scope": "Only the explicitly listed relevant source sections were reviewed. Saved artifact is the web-tool text receipt, not original HTTP/HTML bytes; multiple source excerpts may share one receipt.",
+              "location": "L63-110 tested 1.0.0 and Gremlin entry; L177-203 failed baseline"
+            },
+            {
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2024-27348",
+              "sha256": "8ef614f96456151bc28428e48dabe77a9f904fbb5a85e7347ea18c25bdddb564",
+              "scope": "CNA descriptions, affected versions and references independently read; no claim of reviewing unrelated ADP data.",
+              "location": "containers.cna.descriptions,affected,references"
+            },
+            {
+              "url": "https://github.com/Ares-X/VulWiki/blob/b176eecef836688c637e60c94284ccec1f1427c5/Web安全/中间件/Apache HugeGraph/Apache-HugeGraph-远程代码执行漏洞-CVE-2024-27348.md",
+              "sha256": "f81177f48a00a76522fe83e52f8c4fe0d0a94767132d3c18214667507cf9126f",
+              "scope": "Entire existing target Markdown read as text; existing code, complete requests and response/prose included; screenshot pixels not reviewed.",
+              "location": "Existing exact-CVE target; qualified concrete input sections described above"
+            }
+          ],
+          "current_sha256": "fb77b4bf4c3d145fd50be5d4dbcc2505484b5122bf646fa18f624b9eb651e03a",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/开发框架/Jenkins/Jenkins-CLI-接口任意文件读取漏洞-CVE-2024-23897.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2024-23897"
+          ],
+          "specific_trigger": "Existing article supplies complete help 1 @file and connect-node @file invocations using the official CLI JAR.",
+          "outcome": "Expected contents leak through CLI error/output; env example names JENKINS_HOME; entire-file read depends on Overall/Read. Screenshots not viewed.",
+          "applicability": "Jenkins official SECURITY-3314 explicitly maps @file expansion to 23897 and distinguishes the same permission/encoding cases.",
+          "versions": "Historical affected <=2.441, LTS<=2.426.2; fixes 2.442, LTS2.426.3 and LTS2.440.1. CNA separately marks older-than-1.606 unaffected; do not extrapolate all historical versions.",
+          "preconditions": [
+            "CLI transport reachable",
+            "Known readable file path",
+            "Overall/Read for full file in the shown connect-node case",
+            "Default charset affects binary data",
+            "allowAtSyntax override can re-enable expansion"
+          ],
+          "limits": [
+            "Reading credentials/keys produces sensitive output; no guarantee binary bytes survive decoding",
+            "Official CLI JAR implementation not downloaded/audited",
+            "No complete RCE chain qualified"
+          ],
+          "public_evidence": [
+            {
+              "url": "https://www.jenkins.io/security/advisory/2024-01-24/#SECURITY-3314",
+              "sha256": "af8bffa35b8d90b472ac81f0c1dba25012d3d733ffbb9e7cc0441ccf23a4bc9d",
+              "scope": "Only the explicitly listed relevant source sections were reviewed. Saved artifact is the web-tool text receipt, not original HTTP/HTML bytes; multiple source excerpts may share one receipt.",
+              "location": "L37-49 mechanism/permissions"
+            },
+            {
+              "url": "https://www.jenkins.io/security/advisory/2024-01-24/#SECURITY-3314",
+              "sha256": "693936d513c1fa610bec3fa10421107a748e80d08d8c1b00438e00ba2c76755e",
+              "scope": "Only the explicitly listed relevant source sections were reviewed. Saved artifact is the web-tool text receipt, not original HTTP/HTML bytes; multiple source excerpts may share one receipt.",
+              "location": "L115-116 binary decoding"
+            },
+            {
+              "url": "https://www.jenkins.io/security/advisory/2024-01-24/#SECURITY-3314",
+              "sha256": "efe751403558820b054726155e3843ffe0694cddb335144113ec95d73133f4ee",
+              "scope": "Only the explicitly listed relevant source sections were reviewed. Saved artifact is the web-tool text receipt, not original HTTP/HTML bytes; multiple source excerpts may share one receipt.",
+              "location": "L115-125 encoding/fixes/allowAtSyntax"
+            },
+            {
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2024-23897",
+              "sha256": "abac2e7624d0d655c99a4bcd244c9c074f2e025124ef17feb9e03641897b98b2",
+              "scope": "CNA descriptions, affected versions and references independently read; no claim of reviewing unrelated ADP data.",
+              "location": "containers.cna.descriptions,affected,references"
+            },
+            {
+              "url": "https://github.com/Ares-X/VulWiki/blob/b176eecef836688c637e60c94284ccec1f1427c5/Web安全/开发框架/Jenkins/Jenkins-CLI-接口任意文件读取漏洞-CVE-2024-23897.md",
+              "sha256": "7b808d16eb65b69c38a7ec77e50e48387dfb8f80caf195d1dc317ee25eae3ccb",
+              "scope": "Entire existing target Markdown read as text; existing code, complete requests and response/prose included; screenshot pixels not reviewed.",
+              "location": "Existing exact-CVE target; qualified concrete input sections described above"
+            }
+          ],
+          "current_sha256": "f85ef5b41d6ffe2c7465dacaaea9b41492a0751a385c4a516e3b52c414eacfbf",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/其他软件/杂项/CVE-2024-1212.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2024-1212"
+          ],
+          "specific_trigger": "Existing full /access/set request includes an explicit Basic value; its decoded username contains the listed shell command. Full response includes directory entries followed by an authentication failure.",
+          "outcome": "Source-recorded directory output supports command execution before denial; 200 and generic directory-word matchers are not proof by themselves.",
+          "applicability": "Progress CNA names pre-auth management-interface command execution. Rhino original analysis specifically tracks REMOTE_USER and REMOTE_PASS to unsanitized system invocation.",
+          "versions": "CNA ranges 7.2.48.1..<7.2.48.10,7.2.54.0..<7.2.54.8,7.2.55.0..<7.2.59.2. Repair inclusive old bounds only in new note/metadata.",
+          "preconditions": [
+            "Reachable management UI/API",
+            "Vulnerable auth processing",
+            "Service-user process permissions apply"
+          ],
+          "limits": [
+            "Request includes enableapi=1 configuration intent, so not purely read-only",
+            "Base64 is transport encoding; no hidden additional stage in shown value",
+            "Generic matcher false positives remain; root escalation not qualified"
+          ],
+          "public_evidence": [
+            {
+              "url": "https://rhinosecuritylabs.com/research/cve-2024-1212unauthenticated-command-injection-in-progress-kemp-loadmaster/",
+              "sha256": "693936d513c1fa610bec3fa10421107a748e80d08d8c1b00438e00ba2c76755e",
+              "scope": "Only the explicitly listed relevant source sections were reviewed. Saved artifact is the web-tool text receipt, not original HTTP/HTML bytes; multiple source excerpts may share one receipt.",
+              "location": "L129-151 credential decoding, v1getuser/validu/system and source command claim; images not inspected"
+            },
+            {
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2024-1212",
+              "sha256": "7a29813fa47dff2f64bbeaffd7fd1be486a6b9a8bc3ce8c6f56299f7e33878ac",
+              "scope": "CNA descriptions, affected versions and references independently read; no claim of reviewing unrelated ADP data.",
+              "location": "containers.cna.descriptions,affected,references"
+            },
+            {
+              "url": "https://github.com/Ares-X/VulWiki/blob/b176eecef836688c637e60c94284ccec1f1427c5/Web安全/其他软件/杂项/CVE-2024-1212.md",
+              "sha256": "5599406d460a4f8a122ab92d6f53de98a4788cdf7dcf72fa5fb793293ae8b57f",
+              "scope": "Entire existing target Markdown read as text; existing code, complete requests and response/prose included; screenshot pixels not reviewed.",
+              "location": "Existing exact-CVE target; qualified concrete input sections described above"
+            }
+          ],
+          "current_sha256": "48f3e5ef4b60ca8beec95ad18e204f81ed9e0452b45864f7fb97f7d316e0020d",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/其他软件/杂项/CVE-2024-20767.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2024-20767"
+          ],
+          "specific_trigger": "Full archived GET getHeartBeat and subsequent GET /pms logging/file_name request with the returned uuid header; full recorded responses read.",
+          "outcome": "WDDX uuid then displayed account-file contents. The source response is malformed as strict JSON and remains unmodified; 200 alone is not the criterion.",
+          "applicability": "Adobe CNA describes improper access control/file read for exposed management. Official APSB24-14 expressly associates public file-read PoC with 20767. Exact paired archive requests align with the public Rapid7 module description; unreviewed module code is not used as qualification.",
+          "versions": "Historical affected 2023 Update6 and earlier;2021 Update12 and earlier. Current vendor bulletin says further addressed in 2023 Update12/2021 Update18; early7/13 is not complete remediation.",
+          "preconditions": [
+            "Both admin API and /pms reachable",
+            "Leaked uuid accepted by target",
+            "Path readable by service account",
+            "monitoring_enabled=false in source cannot establish a monitoring-enabled prerequisite"
+          ],
+          "limits": [
+            "File disclosure and logs/output may contain sensitive data",
+            "Original generic UUID extractor can select wrong field",
+            "No write/upload/RCE claim; no access-control bypass CVE outside 2024-20767 investigated"
+          ],
+          "public_evidence": [
+            {
+              "url": "https://helpx.adobe.com/security/products/coldfusion/apsb24-14.html",
+              "sha256": "af8bffa35b8d90b472ac81f0c1dba25012d3d733ffbb9e7cc0441ccf23a4bc9d",
+              "scope": "Only the explicitly listed relevant source sections were reviewed. Saved artifact is the web-tool text receipt, not original HTTP/HTML bytes; multiple source excerpts may share one receipt.",
+              "location": "L12-45 historical range and further remediation; L97-101 revision history"
+            },
+            {
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2024-20767",
+              "sha256": "afe08bcf477b31e6e8fd61791890277f6f6c9512ca9621163b59b15f1fc73839",
+              "scope": "CNA descriptions, affected versions and references independently read; no claim of reviewing unrelated ADP data.",
+              "location": "containers.cna.descriptions,affected,references"
+            },
+            {
+              "url": "https://github.com/Ares-X/VulWiki/blob/b176eecef836688c637e60c94284ccec1f1427c5/Web安全/其他软件/杂项/CVE-2024-20767.md",
+              "sha256": "bda58596d93196edd518a2a88202e7a9bf4c1be3b7b5dacd9acc06649b742f97",
+              "scope": "Entire existing target Markdown read as text; existing code, complete requests and response/prose included; screenshot pixels not reviewed.",
+              "location": "Existing exact-CVE target; qualified concrete input sections described above"
+            }
+          ],
+          "current_sha256": "00f315a5ce71accf934c8668cac7f59388ab6cce85cbd8a31248dba68078b045",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/其他软件/杂项/CVE-2024-37383.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2024-37383"
+          ],
+          "specific_trigger": "Complete archived Python/MIME script contains the trailing-space href attributeName and javascript target; official regression test contains the same central SVG input.",
+          "outcome": "Official fixed sanitizer expected output removes animate. Source script only confirms sending; browser execution requires HTML display and interaction and is not locally established.",
+          "applicability": "CNA names SVG animate attribute XSS and links the exact Roundcube commit. The added input/expected output pair closes mapping independently of repository labels.",
+          "versions": "Affected 1.5 branch before1.5.7 and1.6 before1.6.7. Old greater-than signs are wrong; source values retained with new correction.",
+          "preconditions": [
+            "Vulnerable Roundcube mail sanitizer",
+            "HTML mail rendered",
+            "Browser SVG/link behavior and shown click interaction",
+            "SMTP sender account is delivery prerequisite, not target Webmail privilege"
+          ],
+          "limits": [
+            "Sends real mail using STARTTLS/auth; debuglevel can log SMTP/auth data",
+            "Imports standard smtplib/email/argparse; libraries not audited",
+            "No hidden downloader; original placeholders and HTML retained; no browser execution"
+          ],
+          "public_evidence": [
+            {
+              "url": "https://github.com/roundcube/roundcubemail/commit/43aaaa528646877789ec028d87924ba1accf5242",
+              "sha256": "4ae89f2c9ae5fcfb045f2af9050036136779a7bd39979328aaa7fe7fb6c4ed2f",
+              "scope": "Only the explicitly listed relevant source sections were reviewed. Saved artifact is the web-tool text receipt, not original HTTP/HTML bytes; multiple source excerpts may share one receipt.",
+              "location": "Complete relevant hunks: rcube_washtml attribute_value trim at original L541-547; tests/Framework/Washtml.php L476-479 input and expected output"
+            },
+            {
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2024-37383",
+              "sha256": "4a594e778edb0511932c2eb9eb82540af1d29eb5256aa799c6c40ec725e48c43",
+              "scope": "CNA descriptions, affected versions and references independently read; no claim of reviewing unrelated ADP data.",
+              "location": "containers.cna.descriptions,affected,references"
+            },
+            {
+              "url": "https://github.com/Ares-X/VulWiki/blob/b176eecef836688c637e60c94284ccec1f1427c5/Web安全/其他软件/杂项/CVE-2024-37383.md",
+              "sha256": "e333b90bdd8242c32312e548fe665ad989bd3384fab1ce39fcc161df98d6d0be",
+              "scope": "Entire existing target Markdown read as text; existing code, complete requests and response/prose included; screenshot pixels not reviewed.",
+              "location": "Existing exact-CVE target; qualified concrete input sections described above"
+            }
+          ],
+          "current_sha256": "252fe77e6a02035d1117837705688bbe8cba960019e8f72de797716cc7685d37",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/其他软件/杂项/【漏洞复现】CVE-2024-11680.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2024-11680"
+          ],
+          "specific_trigger": "Full fixed five-stage template: anonymous GET extracts token/title, POST options.php changes title, GET checks chosen marker, POST attempts restoration, GET checks old title.",
+          "outcome": "Readback of changed marker is substantive state-change evidence; intermediate500 alone is insufficient. Restore regex/control-flow limitations prevent a blanket recovery claim.",
+          "applicability": "CNA directly identifies unauthenticated options.php configuration modification and links this template family and original Synacktiv report.",
+          "versions": "CNA <r1720; template name<=r1605 and remediationr1700 are inconsistent and not relied upon.",
+          "preconditions": [
+            "Reachable ProjectSend and options.php",
+            "Anonymous CSRF/session context accepted",
+            "Session reuse and extractors must work",
+            "Title extraction only ASCII alphanumeric"
+          ],
+          "limits": [
+            "Persists configuration; flow short-circuits may prevent restoration",
+            "No explicit Cookie reuse in raw steps; engine implementation not audited",
+            "No webshell/RCE chain qualified; all original request/header-body defects preserved"
+          ],
+          "public_evidence": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2024/CVE-2024-11680.yaml",
+              "sha256": "62c2c6f6e569cf7cfcd82a9c6fe49c12d3d70ada8a8d348310ae754087b08d5e",
+              "scope": "Entire fixed template read, including requests, control flow, extractors, matchers and metadata. No Nuclei/runtime dependency execution or installation.",
+              "location": "L43 flow; L48-72 token/title extraction; L76-100 mutation/readback; L105-129 attempted restoration"
+            },
+            {
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2024-11680",
+              "sha256": "faae407880fbb6558b85b48d771001e54c28cb5f22a38919449657de080c23b9",
+              "scope": "CNA descriptions, affected versions and references independently read; no claim of reviewing unrelated ADP data.",
+              "location": "containers.cna.descriptions,affected,references"
+            },
+            {
+              "url": "https://github.com/Ares-X/VulWiki/blob/b176eecef836688c637e60c94284ccec1f1427c5/Web安全/其他软件/杂项/【漏洞复现】CVE-2024-11680.md",
+              "sha256": "306ec562f8b172d1a2c590f73225a3df0a7ccad1263e075d5ffa45bc26ee9004",
+              "scope": "Entire existing target Markdown read as text; existing code, complete requests and response/prose included; screenshot pixels not reviewed.",
+              "location": "Existing exact-CVE target; qualified concrete input sections described above"
+            }
+          ],
+          "current_sha256": "9d70cc8a74f87a38c86d605594c58bed882d6da6f7d81cac9135fd4e759dc5b0",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/中间件/Apache OFBiz/Apache OfBiz CVE-2024-32113和CVE-2024-36104 漏洞 POC.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2024-32113"
+          ],
+          "specific_trigger": "Fixed template includes complete encoded-dot POST and literal Groovy id/ipconfig bodies. Rapid7 CVE-32113 subsection additionally supplies a full traversal curl input.",
+          "outcome": "Command-output patterns within java.lang.Exception, not generic status, are the template criterion. Related CVEs share usable payloads, so this is not a CVE-discriminating runtime test.",
+          "applicability": "Apache CNA and official security page map32113 to first fix18.12.13. Rapid7 comparative original explicitly binds traversal/controller-view fragmentation to32113 and explains overlap with later variants.",
+          "versions": "32113 before18.12.13;36104 firstfix18.12.14;38856 firstfix18.12.15;45195 firstfix18.12.16 only contextual.",
+          "preconditions": [
+            "Applicable pre-18.12.13 deployment",
+            "Exact unusual path reaches server without destructive client normalization",
+            "Groovy ProgramExport execution available",
+            "Service permissions limit outcome"
+          ],
+          "limits": [
+            "OS command execution; old archive also creates users/files, which are stateful",
+            "Percent encoding decoded only as data for review; no execution",
+            "Template engine/JVM internals not fully audited"
+          ],
+          "public_evidence": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2024/CVE-2024-32113.yaml",
+              "sha256": "44ac4cf3c8e3abf71da5e47372b75332fe8e11d6972afd92218a7ceb99bb9ba0",
+              "scope": "Entire fixed template read, including requests, control flow, extractors, matchers and metadata. No Nuclei/runtime dependency execution or installation.",
+              "location": "L40-51 full POST bodies; L53-69 output/exception/status matchers"
+            },
+            {
+              "url": "https://www.rapid7.com/blog/post/2024/09/05/cve-2024-45195-apache-ofbiz-unauthenticated-remote-code-execution-fixed/",
+              "sha256": "0b3321fcb224b45b5d1f6284a00e62c57385db56d1dccfd537b1f94aa41680bc",
+              "scope": "Only the explicitly listed relevant source sections were reviewed. Saved artifact is the web-tool text receipt, not original HTTP/HTML bytes; multiple source excerpts may share one receipt.",
+              "location": "Only L303-344 comparative CVE32113/36104/38856 scope, explicit traversal request L311; later45195 exploit not part of this review"
+            },
+            {
+              "url": "https://ofbiz.apache.org/security.html",
+              "sha256": "0b3321fcb224b45b5d1f6284a00e62c57385db56d1dccfd537b1f94aa41680bc",
+              "scope": "Only the explicitly listed relevant source sections were reviewed. Saved artifact is the web-tool text receipt, not original HTTP/HTML bytes; multiple source excerpts may share one receipt.",
+              "location": "Only relevant2024 rows L78-81; no review of unrelated2023 entries"
+            },
+            {
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2024-32113",
+              "sha256": "63989e592fed0d124ac0153aef3e343ca08e9a5ced95a80c73b8395f144aec8e",
+              "scope": "CNA descriptions, affected versions and references independently read; no claim of reviewing unrelated ADP data.",
+              "location": "containers.cna.descriptions,affected,references"
+            },
+            {
+              "url": "https://github.com/Ares-X/VulWiki/blob/b176eecef836688c637e60c94284ccec1f1427c5/Web安全/中间件/Apache OFBiz/Apache OfBiz CVE-2024-32113和CVE-2024-36104 漏洞 POC.md",
+              "sha256": "c0d4ba7261702999dc9b33d0d5aaf5f0b621748695c644c34cb2b3c723251a2e",
+              "scope": "Entire existing target Markdown read as text; existing code, complete requests and response/prose included; screenshot pixels not reviewed.",
+              "location": "Existing exact-CVE target; qualified concrete input sections described above"
+            }
+          ],
+          "current_sha256": "ce8d2d4281de50dbf727412f5a6e9a821306a2186dd61077848b39a7e834afa9",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/网络设备/Ivanti/CVE-2024-21893影响Ivanti产品.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2024-21893"
+          ],
+          "specific_trigger": "Full fixed SOAP POST /dana-ws/saml20.ws contains ds:Signature/KeyInfo/RetrievalMethod URI to an operator callback.",
+          "outcome": "Template requires DNS interaction and Ivanti body markers. This establishes only source-side external resolution/retrieval behavior, not arbitrary internal response contents or RCE.",
+          "applicability": "Ivanti CNA identifies unauthenticated SAML SSRF for these products; fixed public template supplies product-specific route and XML-signature primitive. Old generic AuthnRequest /saml script is excluded as a qualifier.",
+          "versions": "CNA lists ICS9.1R18/22.6R2 and IPS9.1R18/22.6R1 affected limits. Its structured ranges start/end at the same listed releases; do not expand them into a complete historical release matrix. ZTA appears in description without detailed matrix.",
+          "preconditions": [
+            "SAML endpoint reachable",
+            "Relevant vulnerable XML retrieval processing",
+            "Target DNS/HTTP egress and callback collection available"
+          ],
+          "limits": [
+            "Outbound third-party callback; public domains/placeholders retained",
+            "No command stage in reviewed template",
+            "Nuclei/Interactsh internals unreviewed; unrelated21887 chain excluded"
+          ],
+          "public_evidence": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2024/CVE-2024-21893.yaml",
+              "sha256": "e53f9ea27cbc8ab494b93fb712c2db030f1c9f201182b89f654e58a4dbb50a3a",
+              "scope": "Entire fixed template read, including requests, control flow, extractors, matchers and metadata. No Nuclei/runtime dependency execution or installation.",
+              "location": "L44-47 complete SOAP request; L49-61 DNS and body conditions"
+            },
+            {
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2024-21893",
+              "sha256": "1f796364a3cd5e30fa1ec7d4dba1cd9a85421bd781fa6ff640184672379a34f1",
+              "scope": "CNA descriptions, affected versions and references independently read; no claim of reviewing unrelated ADP data.",
+              "location": "containers.cna.descriptions,affected,references"
+            },
+            {
+              "url": "https://github.com/Ares-X/VulWiki/blob/b176eecef836688c637e60c94284ccec1f1427c5/Web安全/网络设备/Ivanti/CVE-2024-21893影响Ivanti产品.md",
+              "sha256": "80a9c5365b0ff3adfc3642c0be3482d67f9686c81b045f62156ea0f1bfa03bf9",
+              "scope": "Entire existing target Markdown read as text; existing code, complete requests and response/prose included; screenshot pixels not reviewed.",
+              "location": "Existing exact-CVE target; qualified concrete input sections described above"
+            }
+          ],
+          "current_sha256": "d04d070838ebbccca3a808494dd49ad1ca3a0476121c78165bcb258abaa197f1",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/安全设备/BeyondTrust PAM/（CVE-2024-12356）BeyondTrust PRA-RS未授权命令注入漏洞.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2024-12356"
+          ],
+          "specific_trigger": "Fixed MSF contains complete WebSocket handshake/frame ordering and distinct text/binary branches. Original Rapid7 manual sequence supplies concrete command input independently of payload.encoded.",
+          "outcome": "Manual source describes file creation; identical1 failure output on success/failure is not a detector. Default binary branch bypasses12356 entirely and cannot qualify12356.",
+          "applicability": "CNA identifies site-user command injection in PRA/RS<=24.3.1. Rapid7 primary analysis independently explains12356 argument processing and text-mode chain, while separating1094-only binary mode.",
+          "versions": "PRA/RS<=24.3.1, subject to hotfix state; BT24-10-ONPREM1 can leave version unchanged.",
+          "preconditions": [
+            "Reachable /nw WebSocket with applicable application protocol",
+            "Correct company or FQDN",
+            "12356 text branch explicitly selected",
+            "Underlying PostgreSQL encoding/1094 condition for the documented command chain"
+          ],
+          "limits": [
+            "Executes site-user commands; sample creates a file; fetch payloads may write /var/tmp",
+            "BeyondTrust mixin, WebSocket library and payload generators not fully audited",
+            "Neither version check nor WebSocket close independently proves patch/exploit state"
+          ],
+          "public_evidence": [
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/linux/http/beyondtrust_pra_rs_unauth_rce.rb",
+              "sha256": "3cb778ff65ee1ba6a782f7e92a0c39df94059755636af8e94e31d24fe2033377",
+              "scope": "Entire194-line fixed module",
+              "location": "L96-142 handshake/frames; L148-164 branch-specific input; L167-180 weak patch hint"
+            },
+            {
+              "url": "https://www.rapid7.com/blog/post/ra-cve-2024-12356-analysis/",
+              "sha256": "e5cacbd46305d2f0c0f9ecfc5ad2ea079a831d76b77f49c5b70d1a683bd4ed79",
+              "scope": "Only the explicitly listed relevant source sections were reviewed. Saved artifact is the web-tool text receipt, not original HTTP/HTML bytes; multiple source excerpts may share one receipt.",
+              "location": "L1189-1238 concrete input/application and network mapping"
+            },
+            {
+              "url": "https://www.rapid7.com/blog/post/ra-cve-2024-12356-analysis/",
+              "sha256": "af8bffa35b8d90b472ac81f0c1dba25012d3d733ffbb9e7cc0441ccf23a4bc9d",
+              "scope": "Only the explicitly listed relevant source sections were reviewed. Saved artifact is the web-tool text receipt, not original HTTP/HTML bytes; multiple source excerpts may share one receipt.",
+              "location": "L1238-1289 site mapping and complete manual text sequence"
+            },
+            {
+              "url": "https://www.rapid7.com/blog/post/ra-cve-2024-12356-analysis/",
+              "sha256": "693936d513c1fa610bec3fa10421107a748e80d08d8c1b00438e00ba2c76755e",
+              "scope": "Only the explicitly listed relevant source sections were reviewed. Saved artifact is the web-tool text receipt, not original HTTP/HTML bytes; multiple source excerpts may share one receipt.",
+              "location": "L1283-1303 success/failure and binary-mode distinction; rest of2401-line page not fully reviewed"
+            },
+            {
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2024-12356",
+              "sha256": "4fdfa1a19176c77b018528c09654b8de3a209e13e54d719bb6eb80638ded9328",
+              "scope": "CNA descriptions, affected versions and references independently read; no claim of reviewing unrelated ADP data.",
+              "location": "containers.cna.descriptions,affected,references"
+            },
+            {
+              "url": "https://github.com/Ares-X/VulWiki/blob/b176eecef836688c637e60c94284ccec1f1427c5/Web安全/安全设备/BeyondTrust PAM/（CVE-2024-12356）BeyondTrust PRA-RS未授权命令注入漏洞.md",
+              "sha256": "a04080f525ccac919bb1c627e9a53eaf243c2d6f6b53e342e32196ee7cbf548b",
+              "scope": "Entire existing target Markdown read as text; existing code, complete requests and response/prose included; screenshot pixels not reviewed.",
+              "location": "Existing exact-CVE target; qualified concrete input sections described above"
+            }
+          ],
+          "current_sha256": "2a4a182850c58916a57fb3f394b4d67a0ef1e5e252b6885a08b7b7dc8a635089",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/商业软件/Cleo/（CVE-2024-55956）Cleo Harmony VLTrader LexiCom未认证文件写入远程代码执行漏洞.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2024-55956"
+          ],
+          "specific_trigger": "Full fixed module includes outer/inner VLSync request, file bytes, host XML, ZIP entry and Autorun commands. Original Rapid7 provides a complete manual write request and fixed notepad host XML/action sequence.",
+          "outcome": "Source logs show host import and command startup, but notepad example finishes success=false/return1. Module file-write check uses200 only and does not read back; no universal success assertion.",
+          "applicability": "CNA expressly identifies unauthenticated Autorun host-command import for55956; Rapid7 links exact write primitive and import sequence. Shared Synchronization path does not merge50623.",
+          "versions": "Cleo Harmony/VLTrader/LexiCom<5.8.0.24; module sourceclaims<=5.8.0.23, tested LexiCom5.8.0.21 Windows. Source SYSTEM claim is deployment-specific.",
+          "preconditions": [
+            "Reachable Synchronization endpoint",
+            "Writable intended paths",
+            "Autorun processing configured/active for chain",
+            "Service privilege/platform/command prerequisites"
+          ],
+          "limits": [
+            "Writes ZIP/JAR/Autorun files and imports persistent host/action configuration",
+            "FileDropper and server Autorun deletion do not guarantee complete rollback",
+            "Payload.encoded, encoded_jar, Rex::Zip and framework transport/cleanup implementations not fully audited"
+          ],
+          "public_evidence": [
+            {
+              "url": "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/multi/http/cleo_rce_cve_2024_55956.rb",
+              "sha256": "9ffab3fb70d662841dcec3a2927937641ade872dde67f69ba5740b6f0ab5780c",
+              "scope": "Entire237-line fixed module",
+              "location": "L109-202 host/ZIP/Autorun sequence; L204-235 explicit write helper and200-only check"
+            },
+            {
+              "url": "https://www.rapid7.com/blog/post/ra-cve-2024-55956-analysis/",
+              "sha256": "af8bffa35b8d90b472ac81f0c1dba25012d3d733ffbb9e7cc0441ccf23a4bc9d",
+              "scope": "Only the explicitly listed relevant source sections were reviewed. Saved artifact is the web-tool text receipt, not original HTTP/HTML bytes; multiple source excerpts may share one receipt.",
+              "location": "L463-550 write implementation, complete request and host XML"
+            },
+            {
+              "url": "https://www.rapid7.com/blog/post/ra-cve-2024-55956-analysis/",
+              "sha256": "693936d513c1fa610bec3fa10421107a748e80d08d8c1b00438e00ba2c76755e",
+              "scope": "Only the explicitly listed relevant source sections were reviewed. Saved artifact is the web-tool text receipt, not original HTTP/HTML bytes; multiple source excerpts may share one receipt.",
+              "location": "L533-578 XML continuation/Autorun/expected effect/remediation"
+            },
+            {
+              "url": "https://www.rapid7.com/blog/post/ra-cve-2024-55956-analysis/",
+              "sha256": "efe751403558820b054726155e3843ffe0694cddb335144113ec95d73133f4ee",
+              "scope": "Only the explicitly listed relevant source sections were reviewed. Saved artifact is the web-tool text receipt, not original HTTP/HTML bytes; multiple source excerpts may share one receipt.",
+              "location": "L552-625 complete action/log outcome/cleanup; other article sections and screenshot pixels not reviewed"
+            },
+            {
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2024-55956",
+              "sha256": "bc570dbde74c4445157477f9ba97fd1fbc56bcc7d9d2b6a5a74ab98bad5db2a8",
+              "scope": "CNA descriptions, affected versions and references independently read; no claim of reviewing unrelated ADP data.",
+              "location": "containers.cna.descriptions,affected,references"
+            },
+            {
+              "url": "https://github.com/Ares-X/VulWiki/blob/b176eecef836688c637e60c94284ccec1f1427c5/Web安全/商业软件/Cleo/（CVE-2024-55956）Cleo Harmony VLTrader LexiCom未认证文件写入远程代码执行漏洞.md",
+              "sha256": "348a5234d5e2c2fa9f16202a7c6e2ccd8f58bc7bd746d8b334c4be6d59ecfcef",
+              "scope": "Entire existing target Markdown read as text; existing code, complete requests and response/prose included; screenshot pixels not reviewed.",
+              "location": "Existing exact-CVE target; qualified concrete input sections described above"
+            }
+          ],
+          "current_sha256": "d9bea222d840c5f2439ba390e12975c3d5e037e0ce80a9ac1ac52d67e19ecb89",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/其他软件/杂项/【漏洞复现】CVE-2024-8963、CVE-2024-8190.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2024-8963",
+            "CVE-2024-8190"
+          ],
+          "specific_trigger": "Full fixed8963 GET users.php and protected-content matcher; complete archived datetime.php POST with TIMEZONE command plus instructions to obtain CSRF/session.",
+          "outcome": "8963 expected management-page fields;8190 original prose reports DNS callback. Related screenshot pixels not viewed. Old combined200-only template is not a qualifying command-result detector.",
+          "applicability": "Separate Ivanti CNAs distinguish unauth path access8963 from admin command injection8190. FortiGuard original L55-104 links8190 to DateTimeTab/setPhpTimeZone/TIMEZONE and8963 to client/index.php encoded traversal.",
+          "versions": "CSA4.6 Patch518 and earlier for8190;8963 before4.6 Patch519. Both CNA records mark4.6 Patch519 and5.0 unaffected.",
+          "preconditions": [
+            "Reachable applicable CSA4.6 routes",
+            "8963 bypass or pre-existing administrator access for8190",
+            "Valid same-session CSRF/token values",
+            "DNS/ping and outbound path for shown8190 effect"
+          ],
+          "limits": [
+            "Date/time/timezone changes and OS command execution; callback leaves target",
+            "Saved cookie/token values are examples, not proof of unauthenticated access",
+            "No cleanup assurance; CSRF/Cookie regexes fragile; no Nuclei/runtime dependencies audited"
+          ],
+          "public_evidence": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2024/CVE-2024-8963.yaml",
+              "sha256": "631a203bd7eac405aef081ef6843895d1c4f21afc61a1f0e303b966a2036e849",
+              "scope": "Entire fixed template read, including requests, control flow, extractors, matchers and metadata. No Nuclei/runtime dependency execution or installation.",
+              "location": "L38-54 exact encoded route and protected management content"
+            },
+            {
+              "url": "https://www.fortinet.com/blog/threat-research/burning-zero-days-suspected-nation-state-adversary-targets-ivanti-csa",
+              "sha256": "9218f51708cdaec019ae24ce00dd9e5ccdf1a670df987256735f87bc76ee4850",
+              "scope": "Only the explicitly listed relevant source sections were reviewed. Saved artifact is the web-tool text receipt, not original HTTP/HTML bytes; multiple source excerpts may share one receipt.",
+              "location": "Only L43-104 relevant mapping, route and TIMEZONE call path; attack-chain payload images and later unrelated activity not reviewed"
+            },
+            {
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2024-8963",
+              "sha256": "1e2b26a2f891d01b7fdd676eca1346b3ad6bb4d98244e08a899c26ad24059d62",
+              "scope": "CNA descriptions, affected versions and references independently read; no claim of reviewing unrelated ADP data.",
+              "location": "containers.cna.descriptions,affected,references"
+            },
+            {
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2024-8190",
+              "sha256": "6e5c1664f1fc0ac5af03690d4d5319c6a4aeb785f685c91fa1e43faa62ba0b22",
+              "scope": "CNA descriptions, affected versions and references independently read; no claim of reviewing unrelated ADP data.",
+              "location": "containers.cna.descriptions,affected,references"
+            },
+            {
+              "url": "https://github.com/Ares-X/VulWiki/blob/b176eecef836688c637e60c94284ccec1f1427c5/Web安全/其他软件/杂项/【漏洞复现】CVE-2024-8963、CVE-2024-8190.md",
+              "sha256": "420d53bce4e128808438aa0afb5479940493337d978f20bee0d5a86381839803",
+              "scope": "Entire existing target Markdown read as text; existing code, complete requests and response/prose included; screenshot pixels not reviewed.",
+              "location": "Existing exact-CVE target; qualified concrete input sections described above"
+            }
+          ],
+          "current_sha256": "0eae17e60431132228729cf28aa6100a507d468560811f03da2c1be96ff5bd6e",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/网络设备/DrayTek/DrayTek apmcfgupload session 命令注入 CVE-2024-12987.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2024-12987"
+          ],
+          "specific_trigger": "Entire fixed template contains two raw GET inputs with explicit prefix/format fragments and cat/curl commands; unsafe mode preserves unusual wire input.",
+          "outcome": "File branch requires account-file pattern,DWS header,200; callback branch requires DNS,DWS,200. DNS alone is not command stdout; no runtime confirmation.",
+          "applicability": "VulDB CNA names exact endpoint, session parameter, Vigor2960/Vigor300B1.5.1.4 and1.5.1.5 fix, matching this input rather than other mainfunction actions.",
+          "versions": "Only stated1.5.1.4 affected and1.5.1.5 fix; not all Vigor models/branches.",
+          "preconditions": [
+            "Reachable Web management interface",
+            "Applicable session processing and command execution permissions",
+            "Template sends no login credentials",
+            "Callback egress for second branch"
+          ],
+          "limits": [
+            "Real command/file read or curl egress; no hidden local downloader",
+            "Nuclei unsafe transport/engine not fully audited",
+            "No firmware reverse engineering or original researcher images reviewed"
+          ],
+          "public_evidence": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2024/CVE-2024-12987.yaml",
+              "sha256": "c72cc551359d5e5cb6b10e5e85aa56be439f73afbc0b9b2ae8ab70d833d5bc69",
+              "scope": "Entire fixed template read, including requests, control flow, extractors, matchers and metadata. No Nuclei/runtime dependency execution or installation.",
+              "location": "L34-39 complete raw inputs; L41-58 flow/unsafe and file/DNS conditions"
+            },
+            {
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2024-12987",
+              "sha256": "110004383bb86a82a910c54530cd1b5b0ce6f4948810338f9a9369534c9fed0e",
+              "scope": "CNA descriptions, affected versions and references independently read; no claim of reviewing unrelated ADP data.",
+              "location": "containers.cna.descriptions,affected,references"
+            }
+          ],
+          "current_sha256": "2b8a9db3124b5528c4218f37144a3e8b876fc411539445062c9a7481a2770b62",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/网络设备/Cisco/Cisco Smart Licensing Utility 静态管理凭据 CVE-2024-20439.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2024-20439"
+          ],
+          "specific_trigger": "Entire fixed template gives GET /cslu/v1/scheduler/jobs and full Basic value with no missing generated payload.",
+          "outcome": "Requires job_name,current_status,JSON type and200 together; API privilege is not OS root and does not establish every management write capability.",
+          "applicability": "Cisco CNA and vendor original separate20439 static credential flaw from20440 debug-log disclosure; API access mechanism matches template.",
+          "versions": "2.0.0,2.1.0,2.2.0 affected;2.3.0 not vulnerable. SSM On-Prem/Satellite excluded by vendor.",
+          "preconditions": [
+            "User has started CSLU and it is actively running",
+            "API reachable",
+            "Static credential still accepted"
+          ],
+          "limits": [
+            "Authentication/API access may log credentials/requests; reads job metadata",
+            "Basic value is public source material, left unchanged; not independently generated credential",
+            "No downloader/hidden egress in template; framework unreviewed"
+          ],
+          "public_evidence": [
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2024/CVE-2024-20439.yaml",
+              "sha256": "5d93c19a9a52ef8953dd13c1ff012416240b565fd238b8397e96e54a74525466",
+              "scope": "Entire fixed template read, including requests, control flow, extractors, matchers and metadata. No Nuclei/runtime dependency execution or installation.",
+              "location": "L31-33 complete request; L35-51 content/status conditions"
+            },
+            {
+              "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-cslu-7gHMzWmw",
+              "sha256": "4ae89f2c9ae5fcfb045f2af9050036136779a7bd39979328aaa7fe7fb6c4ed2f",
+              "scope": "Only the explicitly listed relevant source sections were reviewed. Saved artifact is the web-tool text receipt, not original HTTP/HTML bytes; multiple source excerpts may share one receipt.",
+              "location": "L14-34 running-state/product exclusions/CVE distinction; L46-53 version table"
+            },
+            {
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2024-20439",
+              "sha256": "c0b381e8ea1e8b3e800bacfcb4bf464902c0eb3d1250c7d7b3d6c6b9547ed932",
+              "scope": "CNA descriptions, affected versions and references independently read; no claim of reviewing unrelated ADP data.",
+              "location": "containers.cna.descriptions,affected,references"
+            }
+          ],
+          "current_sha256": "bc2382192d09638881b99ccdde6ae50cd6fe17d23d49e7ce5999dfbfca1247b7",
+          "runtime_executed": false
+        },
+        {
+          "path": "Web安全/邮件系统/Zimbra/Zimbra postjournal SMTP 命令注入 CVE-2024-45519.md",
+          "decision": "retain",
+          "qualified_cves": [
+            "CVE-2024-45519"
+          ],
+          "specific_trigger": "Primary article PoC has complete EHLO/MAIL FROM/RCPT TO/DATA/body/dot sequence; full code blocks re-extracted from original HTML and read. Entire fixed JS template also inspected.",
+          "outcome": "Original reports local10027 success, initial25 failure, enabling-service local success and remote relay failure. Manual curl callback is stated criterion; source touch-file claim is not independently verified pixels.",
+          "applicability": "CNA names postjournal command execution and four version branches; original researcher explicitly links this method to45519.",
+          "versions": "Before8.8.15P46,9.0.0P41,10.0.9,10.1.1 respectively; template<9.0.0 title and9.0.0 remediation are not reliable branch limits.",
+          "preconditions": [
+            "postjournal enabled",
+            "SMTP route reaches it",
+            "Port25 authentication or mynetworks/relay policy permits delivery",
+            "Outbound access for callback",
+            "Source instance public/20 allowlist is not a universal default"
+          ],
+          "limits": [
+            "Sends mail, runs OS commands, external callback; source examples also write files and restart services",
+            "JS calls RecvString after body line before DATA terminator; possible waiting/stall; nuclei/net blocking/timeouts unreviewed",
+            "Manual source is qualification basis; template completion not guaranteed"
+          ],
+          "public_evidence": [
+            {
+              "url": "https://blog.projectdiscovery.io/zimbra-remote-code-execution/",
+              "sha256": "0acfe92f20bf5902885be264e23136f0fde447eb232fa2457465a385e21cfbd0",
+              "scope": "Entire visible technical body read through source text extraction; all original HTML pre/code blocks additionally inspected. No GDB or result-image pixels.",
+              "location": "Proof of Concept; Enabling postjournal and Exploiting via SMTP; Limitations; complete inline template"
+            },
+            {
+              "url": "https://blog.projectdiscovery.io/zimbra-remote-code-execution/",
+              "sha256": "d08df838ea0df6bbde3adcc2f325edeb013a265097d2f7a8f06ce7b16c1b8b03",
+              "scope": "Technical L55-748 read; raw HTML pre blocks used to avoid token-per-line extraction ambiguity",
+              "location": "L325-414 failed and revised manual sequence;L415-500 enable/relay limits;L501-718 template"
+            },
+            {
+              "url": "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/javascript/cves/2024/CVE-2024-45519.yaml",
+              "sha256": "02f5963499bf3773440ed1610b948d45aa03a2c7735d0e936a916d1f3f399894",
+              "scope": "Entire fixed template read, including requests, control flow, extractors, matchers and metadata. No Nuclei/runtime dependency execution or installation.",
+              "location": "L35-54 full JS network sequence;L48-50 body/RecvString/dot ordering;L60-69 HTTP callback and delivery matcher"
+            },
+            {
+              "url": "https://cveawg.mitre.org/api/cve/CVE-2024-45519",
+              "sha256": "27ed058f3168d49ebc2f9911eac1a42dd17ba6999ef0336627745f0419dd6108",
+              "scope": "CNA descriptions, affected versions and references independently read; no claim of reviewing unrelated ADP data.",
+              "location": "containers.cna.descriptions,affected,references"
+            }
+          ],
+          "current_sha256": "acbc0a8db730854047a6e3879b77e829229bd29180c99f5ac06f3c61f6087183",
+          "runtime_executed": false
+        }
+      ]
     }
   ],
   "current_totals": {
-    "article_files": 70,
-    "new_files": 45,
-    "supplemented_files": 25,
-    "qualified_candidate_ids": 78,
+    "article_files": 86,
+    "new_files": 50,
+    "supplemented_files": 36,
+    "qualified_candidate_ids": 95,
     "full_scope_complete": false
   },
   "subsequent_master_sync": {

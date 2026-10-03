@@ -6,7 +6,7 @@
 
 - [2026 年（749 个主编号）](INDEX-CVE/year/2026.md)
 - [2025 年（589 个主编号）](INDEX-CVE/year/2025.md)
-- [2024 年（610 个主编号）](INDEX-CVE/year/2024.md)
+- [2024 年（615 个主编号）](INDEX-CVE/year/2024.md)
 - [2023 年（326 个主编号）](INDEX-CVE/year/2023.md)
 - [2022 年（166 个主编号）](INDEX-CVE/year/2022.md)
 - [2021 年（165 个主编号）](INDEX-CVE/year/2021.md)
