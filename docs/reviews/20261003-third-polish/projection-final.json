@@ -1,0 +1,97 @@
+{
+  "review": {
+    "repository": "/Users/aresx/Ares-X.github.io/source/wiki/VulWiki",
+    "head": "cfb19294812b1435a57e866a87dd18e2ff3ebec3",
+    "result": "offline value and extraction comparison; no generator or network"
+  },
+  "counts": {
+    "markdown_documents": 5666,
+    "sources": 5664,
+    "records": 5570,
+    "excluded": 2,
+    "duplicate_of_sources": 94,
+    "virtual_index_category_sources": 15,
+    "virtual_index_category_records": 15,
+    "assigned_source_record_ids": 5664,
+    "summary_documents": 5666,
+    "summary_indexed_sources": 5664,
+    "summary_primary_entries": 5570,
+    "summary_excluded_sources": 2,
+    "sources_link_entries": 10153
+  },
+  "archive_field_checks": {
+    "archive_url": {
+      "nonempty_source_metadata": 3072,
+      "explicit_empty_metadata": 0,
+      "absent_metadata": 2592,
+      "exact_matches": 3072,
+      "mismatches": []
+    },
+    "archive_commit": {
+      "nonempty_source_metadata": 1039,
+      "explicit_empty_metadata": 0,
+      "absent_metadata": 4625,
+      "exact_matches": 1039,
+      "mismatches": []
+    },
+    "archive_title": {
+      "nonempty_source_metadata": 1,
+      "explicit_empty_metadata": 0,
+      "absent_metadata": 5663,
+      "exact_matches": 1,
+      "mismatches": []
+    }
+  },
+  "source_links": {
+    "articles_with_more_than_50_extracted_links": [
+      {
+        "path": "Web安全/其他软件/杂项/【紧急补丁】Veeam 12.3.2 发布，修复 CVE‑2025‑23121（9.9分 RCE）及两项高危权限滥用漏洞.md",
+        "expected_count": 78,
+        "projected_count": 78,
+        "all_retained": true
+      },
+      {
+        "path": "Web安全/商业软件/Chrome/Chrome 120 修补了 10 个漏洞.md",
+        "expected_count": 112,
+        "projected_count": 112,
+        "all_retained": true
+      },
+      {
+        "path": "Web安全/商业软件/IBM/IBM 修补数据虚拟化管理器、安全 SOAR 中的 RCE 漏洞.md",
+        "expected_count": 88,
+        "projected_count": 88,
+        "all_retained": true
+      },
+      {
+        "path": "Web安全/网络设备/Check Point/CVE-2026-50751 _ Check Point Security Gateway Improper Authentication.md",
+        "expected_count": 58,
+        "projected_count": 58,
+        "all_retained": true
+      },
+      {
+        "path": "Web安全/网络设备/Ivanti/CVE-2026-10520 _ Ivanti Sentry Pre-Authenticated OS Command Injection.md",
+        "expected_count": 57,
+        "projected_count": 57,
+        "all_retained": true
+      },
+      {
+        "path": "Web安全/网络设备/Palo Alto/CVE-2026-0257 _ Palo Alto Networks PAN-OS GlobalProtect Authentication.md",
+        "expected_count": 56,
+        "projected_count": 56,
+        "all_retained": true
+      }
+    ],
+    "link_list_mismatches": [],
+    "all_source_rows_match_current_extraction": true
+  },
+  "excluded_records_with_archive_metadata": [],
+  "verdict": {
+    "counts_match_requested": true,
+    "archive_nonempty_values_exact": true,
+    "source_links_untruncated_and_exact_to_current_extractor": true,
+    "notes": [
+      "Empty or absent archive fields remain omitted from generated source rows, matching current compatibility behavior.",
+      "source.links was compared with scripts/wiki.py source_candidates() over current Markdown; this validates the generated projection against the local extractor, not external URL reachability or semantic provenance."
+    ]
+  }
+}

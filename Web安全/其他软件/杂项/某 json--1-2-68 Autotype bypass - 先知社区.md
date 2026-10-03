@@ -845,7 +845,7 @@ if (!autoTypeSupport) {
     上面的逻辑是当 class 是一个 java.lang.Class 类时，会去加载指定类 (从而也就无意之间加入了 mappings 缓存)，而 java.lang.Class 同时也是个默认特殊类——deserializers.findClass 指定类，可以直接反序列化，所以可以首先通过反序列化 java.lang.Class 指定恶意类，然后恶意类被加入 mappings 缓存后，第二次就可以直接从缓存中获取到恶意类，并进行反序列化：  
     [![](https://xzfile.aliyuncs.com/media/upload/picture/20210422112214-ef3dd5c6-a319-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20210422112214-ef3dd5c6-a319-1.png)  
     1.2.47 的有效载荷如下：  
-    ```java  
+```java  
     package com.FastJson1242;
     
 

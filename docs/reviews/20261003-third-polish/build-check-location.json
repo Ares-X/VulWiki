@@ -1,0 +1,12 @@
+{
+  "build": "/var/folders/4w/72x3w5lj24l__5yr852p1lj80000gn/T/vulwiki-third-check-20261003-27fxoi5w/build",
+  "release": "/var/folders/4w/72x3w5lj24l__5yr852p1lj80000gn/T/vulwiki-third-check-20261003-27fxoi5w",
+  "blog_head": "6b5988948eb86272b02e97c4c2073f96c502e317",
+  "content_head": "cfb19294812b1435a57e866a87dd18e2ff3ebec3",
+  "theme_head": "2eb1e8ab1c3f7d4b148a1dd31307f38461fa724f",
+  "articles": 5666,
+  "inputs": "Committed Git archives plus explicit hash-verified content overlay; pinned existing theme and node_modules",
+  "publication": "local build only; no push or deploy",
+  "not_executed": "All article PoCs, code, HTML, scanners, attachments and example targets",
+  "exit_code": 0
+}

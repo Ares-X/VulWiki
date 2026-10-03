@@ -203,6 +203,7 @@ Webshell执行id命令
 
 2. 在应用系统的项目包下新建以下全局类，并保证这个类被Spring 加载到(推荐在Controller 所在的包中添加).完成类添加后，需对项目进行重新编译打包和功能验证测试。并重新发布项目。
 
+```
 import org.springframework.core.annotation.Order;
 
 import org.springframework.web.bind.WebDataBinder;
@@ -228,6 +229,7 @@ dataBinder.setDisallowedFields(abd);
 }
 
 }
+```
 
 ---
 

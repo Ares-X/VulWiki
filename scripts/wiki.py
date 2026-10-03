@@ -412,7 +412,7 @@ def source_candidates(metadata, body):
             section = label
         if label or section:
             collect(re.sub(r"!\[[^]]*\]\([^)]*\)", "", line), "body:labelled-reference")
-    return list(found.values())[:50]
+    return list(found.values())
 
 
 def repository_paths(root):
@@ -651,7 +651,7 @@ def catalog_record(r):
         "source": {"status": m.get("source_status", "recorded" if m.get("source_url") else "unknown"), "label": m.get("source", ""), "url": m["source_url"] if m.get("source_url") and not any(i.code == "source_url" for i in r.issues) else "", "links": r.source_links},
         "fingerprints": r.fingerprints,
     }
-    for key in ("entity_id", "canonical", "relation_type", "index_category", "category_recommendation", "prerequisites", "side_effects", "fixed_version", "verification_source"):
+    for key in ("entity_id", "canonical", "relation_type", "index_category", "category_recommendation", "prerequisites", "side_effects", "fixed_version", "verification_source", "archive_url", "archive_commit", "archive_title"):
         if m.get(key):
             result[key] = m[key]
     if m.get("version") and not any(i.code == "version_command" for i in r.issues):

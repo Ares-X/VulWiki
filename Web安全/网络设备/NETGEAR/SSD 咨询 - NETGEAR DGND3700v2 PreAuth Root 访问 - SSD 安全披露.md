@@ -202,7 +202,7 @@ Joining..
 
 设置攻击最简单的方法是`python -m http.server`从`web/`目录开始；然后编辑`hosts`操作系统的文件（`C:\Windows\System32\drivers\etc\hosts`在 Windows 上，`/etc/hosts`在 Linux 上）并添加一个条目：
 
-[ ... ]<你的本地IP > longue-vue。网[...] <your local ip> longue-vue.net
+[ ... ]<你的本地IP > longue-vue。网[...] `<your local ip>` longue-vue.net
 
 ```
 [...]

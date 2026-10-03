@@ -657,6 +657,7 @@ Content-Length: 197
 ●  
 请求 · createDraftWorkflow（带上 clientId）  
   
+```http
 POST /v1/integrationPlatform:createDraftWorkflow HTTP/2  
   
 Host: cloudcrmipfrontend-pa.clients6.google.com  
@@ -683,6 +684,8 @@ Content-Type: application/json
 　"isNewWorkflow": true  
   
 }  
+```
+
   
 ●  
 ●  
@@ -724,6 +727,7 @@ Content-Type: application/json
 ●  
 请求 · publishWorkflow  
   
+```http
 POST /v1/integrationPlatform:publishWorkflow HTTP/2  
   
 Host: cloudcrmipfrontend-pa.clients6.google.com  
@@ -736,6 +740,8 @@ Content-Type: application/json
 　"workflowId": "53b2a49c-dd5e-4e45-829b-61a3b2e8ff6e"  
   
 }  
+```
+
   
 ●  
 ●  
@@ -1106,6 +1112,7 @@ Content-Type: application/json; charset=UTF-8
 ●  
 请求 · toggleRequestToPublishWorkflow  
   
+```http
 POST /v1/integrationPlatform/workflowdeployment:toggleRequestToPublishWorkflow HTTP/2  
   
 Host: cloudcrmipfrontend-pa.clients6.google.com  
@@ -1114,6 +1121,8 @@ Content-Type: application/json
   
   
 {"workflowId": "f91833bf-eacb-43ac-8490-099fef977e19"}  
+```
+
   
 再用第二个账号真正发布工作流——两人审批就此失效：  
   
@@ -1122,6 +1131,7 @@ Content-Type: application/json
 ●  
 请求 · publishWorkflow（第二个账号）  
   
+```http
 POST /v1/integrationPlatform/workflowdeployment:publishWorkflow HTTP/2  
   
 Host: cloudcrmipfrontend-pa.clients6.google.com  
@@ -1130,6 +1140,8 @@ Content-Type: application/json
   
   
 {"workflowId": "f91833bf-eacb-43ac-8490-099fef977e19"}  
+```
+
   
 运行一个配置了 GenericStubbyTypedTaskV2 的工作流，serverSpec 设为 gslb:alkali-base、服务和方法设为 /ServerStatus.GetServices，我们就执行了 Stubby 查询：  
   
@@ -1766,7 +1778,7 @@ com.google.enterprise.crm.exceptions.IpCanonicalCodeException:
   
 　com.google.net.rpc3.client.RpcClientException:  
   
-　<eye3 title='/EventbusStubbyCallerService.ExecuteStubbyCall, UNAUTHENTICATED'/> APPLICATION_ERROR;  
+　`<eye3 title='/EventbusStubbyCallerService.ExecuteStubbyCall, UNAUTHENTICATED'/>` APPLICATION_ERROR;  
   
 　enterprise.crm.eventbus.stubby/EventbusStubbyCallerService.ExecuteStubbyCall;  
   

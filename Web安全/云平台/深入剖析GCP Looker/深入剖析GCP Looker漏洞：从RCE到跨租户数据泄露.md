@@ -125,7 +125,7 @@ LookML 项目示例
   
 当你保存时，Looker 会将该仓库克隆到：  
   
-/home/looker/looker/remote_dependencies/<project name>/  
+/home/looker/looker/remote_dependencies/`<project name>`/  
   
 关键点在于，每个 Looker 项目都是一个 Git 仓库。Looker 使用   
 Git Hooks[4]  

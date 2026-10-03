@@ -477,6 +477,54 @@ class WikiTests(unittest.TestCase):
             self.assertIn(url, [link['url'] for link in result['source']['links']])
             self.assertEqual((self.root / path).read_bytes(), original)
 
+    def test_archive_metadata_projects_exact_values_and_is_searchable(self):
+        archive_url = 'https://github.example.invalid/archive/path?token=abc123&part=a%2Fb&part=a+b#原文'
+        archive_commit = '41940cb0038d09ca5aaddbe5bffb923e423d210f'
+        archive_title = '历史归档：原始标题'
+        path = self.article(archive_url=archive_url, archive_commit=archive_commit,
+                            archive_title=archive_title)
+        original = (self.root / path).read_bytes()
+
+        projected = wiki.catalog_record(self.scan()[0])
+        self.assertEqual(projected['archive_url'], archive_url)
+        self.assertEqual(projected['archive_commit'], archive_commit)
+        self.assertEqual(projected['archive_title'], archive_title)
+        self.assertEqual(projected['source']['url'], 'https://example.invalid/advisory')
+        self.assertEqual((self.root / path).read_bytes(), original)
+
+        wiki.build(self.root, self.scan())
+        for query, field, expected in (
+            ('github.example.invalid/archive', 'archive_url', archive_url),
+            (archive_commit, 'archive_commit', archive_commit),
+            ('历史归档：原始标题', 'archive_title', archive_title),
+        ):
+            code, out, _ = self.run_cli('search', query, '--include-sources')
+            self.assertEqual(code, 0)
+            result = json.loads(out)
+            self.assertEqual(result[field], expected)
+
+    def test_archive_metadata_fields_remain_absent_when_not_declared(self):
+        self.article()
+        result = wiki.catalog_record(self.scan()[0])
+        for field in ('archive_url', 'archive_commit', 'archive_title'):
+            self.assertNotIn(field, result)
+
+    def test_all_labelled_source_links_survive_projection_and_search(self):
+        urls = [f'https://references.example.invalid/item/{index:02d}?value=raw%2F{index}'
+                for index in range(1, 71)]
+        body = '## 来源\n' + ''.join(f'- [来源 {index}]({url})\n'
+                                      for index, url in enumerate(urls, 1))
+        self.article(body=body)
+        record = self.scan()[0]
+        self.assertEqual(len(record.source_links), 71)  # Includes the source_url metadata value.
+        self.assertEqual(record.source_links[-1]['url'], urls[-1])
+
+        wiki.build(self.root, [record])
+        code, out, _ = self.run_cli('search', '/item/70?value=raw%2F70', '--include-sources')
+        self.assertEqual(code, 0)
+        result = json.loads(out)
+        self.assertIn(urls[-1], [link['url'] for link in result['source']['links']])
+
     def test_link_diagnostic_preserves_full_destination(self):
         target = '/archive/' + 'test-value-' * 24 + '?token=example#fragment'
         self.article(body=f'[original route]({target})\n')

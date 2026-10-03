@@ -1,0 +1,482 @@
+[
+  {
+    "path": "IOT安全/D-Link/HANDLINK ISS-7000v2 网关 login_handler.cgi 未授权RCE漏洞.md",
+    "sha256": "25a37a6c8c1825e08929429589bc54d6346fab3bd62c4d4a6607bfb43f2ed361"
+  },
+  {
+    "path": "IOT安全/昂捷/昂捷CRM cwsfiledown.asmx 任意文件读取漏洞.md",
+    "sha256": "dd3a9b64c5bb06ea85c81249b6de9bf67dac97c15f5b4c019ed6ca698135706f"
+  },
+  {
+    "path": "IOT安全/海康威视/海康威视综合安防管理平台 detection 前台RCE漏洞.md",
+    "sha256": "8228bf9c377c25d23b10c8e5261f80bf6269ae6ed5c0b016dbc11397e0cbe434"
+  },
+  {
+    "path": "Web安全/AI应用/NVIDIA AI/NVIDIA Megatron LM 让攻击者注入恶意代码漏洞.md",
+    "sha256": "abf84b81f8a7dc2e27e3df321fee3e04988ccea96f5b5c3d14856d47a0ddb111"
+  },
+  {
+    "path": "Web安全/AI应用/Ollama/大语言模型（如DeepSeek）OLLAMA 未授权访问（CNVD-2025-04094）.md",
+    "sha256": "b492fabbba9d92c36b8337e13e7ff3a29a638127a372e71f536a653ca0e18676"
+  },
+  {
+    "path": "Web安全/CMS内容/Vvveb CMS/Vvveb CMS 任意文件上传导致RCE  CVE-2026-6257原理分析&研究.md",
+    "sha256": "f2578e69d42ef86d5827cc28aa4aab908a308d7e5930933322b8596f2eba3230"
+  },
+  {
+    "path": "Web安全/CMS内容/WordPress/WordPress Course Booking System SQL注入漏洞 (CVE-2025-22785).md",
+    "sha256": "ebbcc31cd33b4777a5393a7dcd276f47824e6b12009bba37396615138354d518"
+  },
+  {
+    "path": "Web安全/CMS内容/WordPress/WordPress Dokan Pro插件 SQL注入漏洞(CVE-2024-3922).md",
+    "sha256": "e9e85c86863e2de23601bda7585d10887eb7323968c50359d1db6bb9d51d67a1"
+  },
+  {
+    "path": "Web安全/CMS内容/WordPress/WordPress MasterStudy LMS插件 SQL注入漏洞(CVE-2024-1512).md",
+    "sha256": "42f9c50ff7e851d6615ff7298e958050eaebdd51066ef46dc9e28c18603f7926"
+  },
+  {
+    "path": "Web安全/CMS内容/WordPress/WordPress Time Clock插件存在命令执行漏洞.md",
+    "sha256": "10392fa849da6cb0a9a115bd0d32e05d0d1ffd7d2be8234bd62b386d3c24a310"
+  },
+  {
+    "path": "Web安全/CMS内容/WordPress/WordPress Yawave插件 SQL注入漏洞(CVE-2025-1648).md",
+    "sha256": "f8c3394567368de5cd647898089a85d4234dd604b80eb076ad83b7749d8fc479"
+  },
+  {
+    "path": "Web安全/CMS内容/WordPress/WordPress插件MStore API存在认证绕过漏洞(POC已公开)CVE-2026-13447.md",
+    "sha256": "c7d304e4768158d23f908171dcbe2ed7fb5a640722ed9ac79a3be07c962d86c4"
+  },
+  {
+    "path": "Web安全/CMS内容/WordPress/Wordpress GutenKit 插件 远程文件写入致RCE漏洞(CVE-2024-9234).md",
+    "sha256": "26364b5d9f6723f5ee41cb6213feae0554aaa2136d984849d9043fbef565eb42"
+  },
+  {
+    "path": "Web安全/CMS内容/友点/友点CMS GetSpecial SQL注入.md",
+    "sha256": "733cd78e9794c341c29d85f5bec42ef396f1e46d1cac0e4bb93d96d1e04e3dea"
+  },
+  {
+    "path": "Web安全/CMS内容/通天星/通天星CMSV6车载定位监控平台 disable SQL注入漏洞.md",
+    "sha256": "eff4567e7b1d9838db11acb04fd9a932e876a38d77fe68ff7755852c63113d1e"
+  },
+  {
+    "path": "Web安全/CMS内容/通天星/通天星CMSV6车载定位监控平台 getAlarmAppealByGuid SQL注入漏洞.md",
+    "sha256": "248806c21266923c8f83fcecb1e90b531ebd96631c65831de53619db3d27daea"
+  },
+  {
+    "path": "Web安全/CMS内容/铭飞MCMS/漏洞验证-铭飞CMS cms-category-list接口存在SQL注入(CVE-2022-4375).md",
+    "sha256": "0ae05f68d07a0cf32d2d0405f4eddb12c84712595ed54dbcae8e93f1e9b8d4be"
+  },
+  {
+    "path": "Web安全/OA办公/匿名OA研究/从 AST 到 100 个某知名 OA 前台注入 - 斗象能力中心.md",
+    "sha256": "771c56031582348e4a7d35e046439cfc95e6ca51c35f402dfcbd8fc01bbfce48"
+  },
+  {
+    "path": "Web安全/OA办公/致远OA/Primeton EOS Platform jmx反序列化致远程代码执行漏洞.md",
+    "sha256": "987ca2ea2089fdd0a37e71fce8a981b60b968a5c142c499af625c3d5f844e6c3"
+  },
+  {
+    "path": "Web安全/OA办公/致远OA/瑞友天翼应用虚拟化系统SQL注入致远程代码执行漏洞.md",
+    "sha256": "a502baa67963ced5b4bcd1a70b333f783963997d2c9e156ad6f11fb3c6a29ed7"
+  },
+  {
+    "path": "Web安全/中间件/Apache Camel/Apache Camel 远程代码执行漏洞  CVE-2026-40453复现&研究.md",
+    "sha256": "ef8eab5ba581cd239c82a23da9862d6eb54a04fcc7f6667e5ce8e1beceffd182"
+  },
+  {
+    "path": "Web安全/中间件/Apache Struts/圣乔ERP系统 login.action Struts2远程代码执行漏洞.md",
+    "sha256": "e13933bc7613a60d595a45d1203f406dda5c9603449733864e4c503c63149d90"
+  },
+  {
+    "path": "Web安全/中间件/Apache Struts/速达软件 多款产品 doSavePrintTpl.action Struts2远程代码执行漏洞.md",
+    "sha256": "8bf079bc7c206d25ff94bfc13a873d55663b1fecd5429a9b83208aa001aacf33"
+  },
+  {
+    "path": "Web安全/中间件/CyberPanel/CyberPanel filemanagerupload 远程命令执行漏洞.md",
+    "sha256": "ce7e326b46c8cf13b50c3886cf2ee57a359efac0a115cfa275176c9fc759b43c"
+  },
+  {
+    "path": "Web安全/中间件/CyberPanel/CyberPanel upgrademysqlstatus 远程命令执行漏洞(QVD-2024-44346).md",
+    "sha256": "fe0aaef6af09a2853e0756e1a82d20ca4c1b3b8a8b7a843e62678da602388886"
+  },
+  {
+    "path": "Web安全/中间件/OpenMetadata/OpenMetadata 命令执行漏洞(CVE-2024-28255).md",
+    "sha256": "4155642664e8e55ba7c6efcce8526d56620b87386a555258ab263ab3a10c36ff"
+  },
+  {
+    "path": "Web安全/中间件/Redis/漏洞预警  Redis hyperloglog 远程代码执行漏洞(CVE-2025-32023).md",
+    "sha256": "b13d4a7f410f01d63698872897322727c29e76be67abd68c1913b46f718ee4f0"
+  },
+  {
+    "path": "Web安全/云平台/Citrix/继续Citrix传奇：CVE-2023-5914和CVE-2023-6184.md",
+    "sha256": "429f2513a212a09885ae1557f1b33ea31c1d75a75151c0e2c437ae63dcb56968"
+  },
+  {
+    "path": "Web安全/云平台/VMware/VMware Tools 存在允许攻击者篡改文件以触发恶意作漏洞.md",
+    "sha256": "53c43275d5b76a4c8e718d66954908722d51c43dd797c31b1f5091e144ba9d5b"
+  },
+  {
+    "path": "Web安全/云平台/深入剖析GCP Looker/深入剖析GCP Looker漏洞：从RCE到跨租户数据泄露.md",
+    "sha256": "ee8c8712b16c7d6cc8228cf8a5fb4fe93db480a0d8ac8fb69fd8e765c938e11d"
+  },
+  {
+    "path": "Web安全/其他软件/杂项/Altenergy电力系统控制软件 status_zigbee SQL注入漏洞(CVE-2024-11305).md",
+    "sha256": "fe69a7b4f3f1ed7dac87beda5eb1a3533ba98903fa50c9bd94f9a3f2fa3aa097"
+  },
+  {
+    "path": "Web安全/其他软件/杂项/CVE-2024-21762漏洞分析.md",
+    "sha256": "fc37be4fd2bbff782c16735275e41f5ec2990a5ebd7193faa7cd181ebaf3e3a2"
+  },
+  {
+    "path": "Web安全/其他软件/杂项/CVE-2025-29774-CVE-2025-29775 xml-crypto XML Signature Wrapping.md",
+    "sha256": "d0a0349e7889857c36dc849efa3b8dca306f3bcabd2eff9f91ba1e0d3d2dfeed"
+  },
+  {
+    "path": "Web安全/其他软件/杂项/CVE-2025-8949漏洞复现技术分享.md",
+    "sha256": "d4c6b8eae51c1501fe3dda95c8d40572a8a1d1be1752e8251187cf973dcc8963"
+  },
+  {
+    "path": "Web安全/其他软件/杂项/CVE-2026-23837：MyTube 认证绕过漏洞深度解析.md",
+    "sha256": "158c36862c31479d1e59fdde03ebe7913ac2ec379a858a31580ed8a633c23e5b"
+  },
+  {
+    "path": "Web安全/其他软件/杂项/CVE-2026-44442：ERPNext 授权检查缺失漏洞.md",
+    "sha256": "ffe578bfe75df8254566e4df990c67aee4b424d4756c6c7858711b573f419111"
+  },
+  {
+    "path": "Web安全/其他软件/杂项/CVE-2026-49176 深度解析：Windows WalletService 本地提权链.md",
+    "sha256": "6451a2ade1fb698d0afab17e60cd78eafb147ea13f4b0a4c5881486a4335fa8b"
+  },
+  {
+    "path": "Web安全/其他软件/杂项/CVE-2026-74997.md",
+    "sha256": "ff73cf53ab975f71061a85f10d79062a86e78f8bce78b6edaa2fd1b2ea9796ac"
+  },
+  {
+    "path": "Web安全/其他软件/杂项/Jeeplus快速开发平台 validateMobileExist SQL注入漏洞.md",
+    "sha256": "d695ca81fd213b9743247d92f8a84bd63a94f37baf8895500664b14c96c07d40"
+  },
+  {
+    "path": "Web安全/其他软件/杂项/NAKIVO Backup & Replication任意文件读取漏洞(CVE-2024-48248).md",
+    "sha256": "6b4e2ac862ee4be93384dcee170f822ca25b7e2c7a0d98a82c9503380f0d520b"
+  },
+  {
+    "path": "Web安全/其他软件/杂项/Teaching 在线教学平台getDictItemsByTable SQL注入漏洞.md",
+    "sha256": "524725665791398f232a2f0302cd06b1fe7ed18d148e6807d6a4f67a451aebbf"
+  },
+  {
+    "path": "Web安全/其他软件/杂项/URL 编码的双重身份：SiYuan Tooltip XSS 与 Electron RCE 深度解析.md",
+    "sha256": "8e4458a9ae259ceee0e40b50cc4eddb336d4a8f16082bfbf99a9543a7f5cd5ad"
+  },
+  {
+    "path": "Web安全/其他软件/杂项/green_XWiki SolrSearch Exploit Attempts (CVE-2025-24893) with link to.md",
+    "sha256": "6d214e82a374da6084d4ebc126e902a2349a70e7ef650d8a8e4c0021e1f3ca35"
+  },
+  {
+    "path": "Web安全/其他软件/杂项/《黄药师》药业管理软件SetMedia_Picture_info存在SQL注入漏洞.md",
+    "sha256": "fd6d3113bf7237ac6c1c279abe627dc53c4f63a14b7c9db92843013ac8e8178d"
+  },
+  {
+    "path": "Web安全/其他软件/杂项/互联网公开漏洞整理 202309-202406.md",
+    "sha256": "68aba23cf87129df775e0af55397a7c074ce6190858925d9c910bbe408f7e992"
+  },
+  {
+    "path": "Web安全/其他软件/杂项/工业网关高危漏洞预警：CVE-2026-25823 无需认证即可实现远程代码执行.md",
+    "sha256": "53df1c04d2e4d36c093a7254bf5eb19df32352423f9b73e33abf340d43f84d58"
+  },
+  {
+    "path": "Web安全/其他软件/杂项/我是如何找到攻击链并获得 CVE-2026-42558 的？.md",
+    "sha256": "0bc82ed65fc52defbebd8599350269643d8999898704f38778c8bdc9e3025152"
+  },
+  {
+    "path": "Web安全/其他软件/杂项/某 json--1-2-68 Autotype bypass - 先知社区.md",
+    "sha256": "3a939f8e5f0c337c79ba99aa1ea4ce5c0cf129e1d2df8afbf196323e2ee9a0de"
+  },
+  {
+    "path": "Web安全/其他软件/杂项/速达软件 多款产品 doSavePrintTpl.action SQL注入漏洞.md",
+    "sha256": "3a68538ac8c66a5ca58386b5a8f41b7559bc1d97f83dbe94ae7e85bc6245e941"
+  },
+  {
+    "path": "Web安全/商业软件/ITSourceCode/CVE-2026-3042分析：ITSourceCode事件管理系统高危SQL注入漏洞（附poc）.md",
+    "sha256": "1ce053d71f4d34fd98daac97145e4bd0f90787e8ee8d6501f3965d396688bd21"
+  },
+  {
+    "path": "Web安全/安全设备/Google/2026年还能让Google掏出百万奖金的漏洞.md",
+    "sha256": "742def399a4e9515834fd15ce683399579284eae15c672627b3aae2c5ce67f0c"
+  },
+  {
+    "path": "Web安全/安全设备/MasterSAM/MasterSAM任意文件下载漏洞.md",
+    "sha256": "080cd3563ce4a5c6d76eb3db40982c5fac09d39532fa77349fbed260694ed3ff"
+  },
+  {
+    "path": "Web安全/安全设备/OPNsense防火墙/OPNsense Root RCE 漏洞(CVE-2026-57155，CVSS 9.9) PoC已公开，建议立即升级！.md",
+    "sha256": "db33c843a793e12344944c3ea7d4771d24766dc43d330eb3a96f92b18c3cc92b"
+  },
+  {
+    "path": "Web安全/安全设备/吉大正元/吉大正元身份认证网关 downTools 任意文件读取漏洞.md",
+    "sha256": "89585fe25f4b073d6a500505d96d233afed65a111b364811456d68efa22896f1"
+  },
+  {
+    "path": "Web安全/安全设备/命令执行/中科网威下一代防火墙控制系统Backup_Server_commit存在远程命令执行漏洞.md",
+    "sha256": "b34d9e50c65d4c68c16ecfa97bbda41e6e1d9e241b5bcc2ba0a3fe28847e8592"
+  },
+  {
+    "path": "Web安全/开发框架/Budibase/Budibase 低代码平台高危漏洞预警：一次请求即可窃取平台全部密钥.md",
+    "sha256": "24cb9d491624d19150efe162672059b2f85b8445d8e347673cdd5780f8e2eb99"
+  },
+  {
+    "path": "Web安全/开发框架/GitLab/Gitlab 常见漏洞复现及后利用.md",
+    "sha256": "784e24456023e1e74f879314f7c668eac8fd028e9c8656431e24a9c1d5bb7966"
+  },
+  {
+    "path": "Web安全/开发框架/Jenkins/Jenkins 反序列化：CVE-2026-84645 伪造 Hudson 单例绕过 ACL 直达 Groovy RCE.md",
+    "sha256": "270774e1b51d9636e056b8468d7c787965b0feb253cd89f4475c841bbc6f7445"
+  },
+  {
+    "path": "Web安全/开发框架/KindEditor/（CVE-2017-1002024）Kindeditor <=4.1.11 上传漏洞.md",
+    "sha256": "3dca7b5d5124d14ddfa01554e9a315dd2f4c597a5258d0f774696f138f71b8df"
+  },
+  {
+    "path": "Web安全/开发框架/Laravel/Laravel Reverb严重漏洞预警：CVSS 9.8高危反序列化RCE深度解析.md",
+    "sha256": "cc0ff587a2c6d624066ed20891efcb2cc65eb5f6b0323cd7d5f434df24d710ee"
+  },
+  {
+    "path": "Web安全/开发框架/PHP/Panalog 日志审计系统 libres_syn_delete.php RCE漏洞.md",
+    "sha256": "329ba5d914ef50738b4fb53927a8955d79ed0f4d24caaa4c74d5a9fc1eef9b33"
+  },
+  {
+    "path": "Web安全/开发框架/PHP/Panalog 日志审计系统 sprog_upstatus.php SQL 注入漏洞(XVE-2024-5232).md",
+    "sha256": "1023cb25bad6d56aeda2e6eae1bfb4d5e6ec903f9117d3340722c1d83ebc1b27"
+  },
+  {
+    "path": "Web安全/开发框架/PHP/一次一口吃掉大象：PHP中与JPEG相关的内存安全漏洞.md",
+    "sha256": "17f694a4b86b087eb0ddf8fdea8bc78d023a644afdb289fecad8ade5fead71ce"
+  },
+  {
+    "path": "Web安全/开发框架/Sonatype Nexus/nexus oss 命令执行漏洞 (cve-2020-10199 && 10204).md",
+    "sha256": "a7cedc8dd839aac9ed1644b6a74576b942b7f72a4433485148795eeb79818f46"
+  },
+  {
+    "path": "Web安全/开发框架/Spring Boot/SpringBlade export-user SQL 注入漏洞.md",
+    "sha256": "16dcd2f9065ac5449d190d0efb130e48834e0caf61eb2f8a0fb71668afbfd87a"
+  },
+  {
+    "path": "Web安全/开发框架/Spring Boot/漏洞验证-SpringBlade框架JWT认证缺陷(CVE-2021-44910).md",
+    "sha256": "45b167154b8adfe6ff4a0139c4dad260bf271a1efe0d113e05fa89b9f52fe054"
+  },
+  {
+    "path": "Web安全/开发框架/Spring/Spring框架远程命令执行漏洞复现及分析.md",
+    "sha256": "1d9128649ef2b89bede2c7ba16b5ffb43ee0c8ac06f3e9b481a928334ae1256d"
+  },
+  {
+    "path": "Web安全/数据库/PostgreSQL/CVE-2025-2011 SQL注入.md",
+    "sha256": "752744b65d9a1e539b95fffa7d068051ba1fdc7ebf05fa6cef865071902e9df8"
+  },
+  {
+    "path": "Web安全/数据库/PostgreSQL/CVE-2025-48118 SQL注入.md",
+    "sha256": "378eed823f6c141148dfaf33855d56742fbdb1338d5ddf223af7b8e5711099bc"
+  },
+  {
+    "path": "Web安全/智能设备/EasyCVR/EasyCVR-视频管理平台 taillog 任意文件读取漏洞.md",
+    "sha256": "0cb7dc9f8b6fa040ef2710e7e7a979fc71c3c19984be0ba995592cad1fe6a397"
+  },
+  {
+    "path": "Web安全/智能设备/三汇SMG网关/三汇SMG网关管理软件 SMGSuperAdmin 信息泄露漏洞.md",
+    "sha256": "3e8cbf5d86a558a46b66565138ba09298a05b7c50087a3f23f92ad316d99644f"
+  },
+  {
+    "path": "Web安全/智能设备/世邦通信IP网络对讲广播系统addmediadatapath.php文件上传/世邦通信IP网络对讲广播系统addmediadatapath.php文件上传.md",
+    "sha256": "039a555ab4ba5170223f046618627b67c1dac2a196af51a772f420804670682d"
+  },
+  {
+    "path": "Web安全/智能设备/严重告警/严重告警：OneUptime 监控平台曝出 RCE 漏洞，低权限用户可接管整个集群.md",
+    "sha256": "6ec162ba187baadc2eeedc280b6257b53914642161ee4662cf90674edec2f6e7"
+  },
+  {
+    "path": "Web安全/智能设备/亿华考勤软件 default.aspx 文件/亿华考勤软件 default.aspx 文件上传致RCE漏洞.md",
+    "sha256": "9392f8bcee74e6a75636cea2f5f01bb14c8afed7260bf8d44c0c3fad77490855"
+  },
+  {
+    "path": "Web安全/智能设备/锐明技术/深圳市锐明技术股份有限公司Mangrove系统存在任意用户添加漏洞.md",
+    "sha256": "aa1c39dd583c7f11b305ed096fbf3f1cd65bbc75a4f488dc957ae999950dd896"
+  },
+  {
+    "path": "Web安全/服务器软件/Active Directory/Active Directory 域服务特权提升漏洞 CVE-2022–26923.md",
+    "sha256": "db45c8aa37367944b2b86ce3d542f9c544fe5ea85ed3e8c7db0062509d350114"
+  },
+  {
+    "path": "Web安全/服务器软件/Linux/Linux 系统中的 AD ResetNightmare (CVE-2026-27912) 和 KerberLoss CVE-2026-2.md",
+    "sha256": "d7ce3f59d6375e1d2e7ffe08e6220508440894948b6f2e647a794793d23013cf"
+  },
+  {
+    "path": "Web安全/桌面软件/7-Zip/7-Zip RAR5备用流名碰撞绕过MotW---CVE-2026-58052分析.md",
+    "sha256": "f9816f1dd3e7ce30154892314c89c79a44dc518bbc9c6362cf0a245e81150aba"
+  },
+  {
+    "path": "Web安全/桌面软件/Apple/被Coruna漏洞包利用的WebKit.md",
+    "sha256": "750fa7ad1ee7335638958d28fc57424c9e582265ec95561c3c3c33c1c1ab94c1"
+  },
+  {
+    "path": "Web安全/桌面软件/Chrome/2026开年第一漏洞！赶快检查Chrome浏览器（CVE-2026-0628）.md",
+    "sha256": "04ef8935917d11a4a5a4a82663ad173fdae24a846ee850c4da01f6f3e7fba21e"
+  },
+  {
+    "path": "Web安全/桌面软件/KingPortal开发系统kingclient/KingPortal开发系统kingclient任意文件读取漏洞.md",
+    "sha256": "9ef039817f5433139b9a0f28d7b64d10506d387e81252352afb207519a69511f"
+  },
+  {
+    "path": "Web安全/桌面软件/PEPM/PEPM Cookie 远程代码执行漏洞(XVE-2024-16919).md",
+    "sha256": "6906aaa706ba37ce837cd937aee6d760e85194aa8d2b342ddcd73f74f94bc638"
+  },
+  {
+    "path": "Web安全/桌面软件/TikTok/TikTok 账户恢复机制中的身份验证绕过漏洞分析 $12,000.md",
+    "sha256": "74081830eeb5c41bb645788cb27a014303f8869eb4130734530942f2daff652d"
+  },
+  {
+    "path": "Web安全/桌面软件/WPS Office/金山WPS Office远程堆损坏漏洞导致代码执行.md",
+    "sha256": "0cfb5931282d47b0f2b7275f27ae5ae49700f94d4bdecc757bcadb5db7a4c912"
+  },
+  {
+    "path": "Web安全/桌面软件/iDocview/iDocview任意文件读取.md",
+    "sha256": "34404cf9248be4b5d20eaa6730c0d36f990018e58030da20e0dbaa601b396333"
+  },
+  {
+    "path": "Web安全/桌面软件/iDocview/iDocview系统接口存在RCE.md",
+    "sha256": "b190c38c080a944c40847bc4f9449112a31ea2ba6fbb849fd90288b3751db1cb"
+  },
+  {
+    "path": "Web安全/桌面软件/捷顺/捷顺jielink智能终端操作平台前台存在通用SQL注入漏洞.md",
+    "sha256": "cf92b5e07901e24006c40ba34184a8c9daeb129922e7194f15e3cf2157e371e9"
+  },
+  {
+    "path": "Web安全/桌面软件/智联/智联云采 SRM2.0 inquirygetSuppliers处 SQL注入漏洞.md",
+    "sha256": "4fc44d10470ecbf3cdabb6a0f2009af549b68aa071783b433179942d558093e8"
+  },
+  {
+    "path": "Web安全/桌面软件/智联/智联云采 SRM2.0 quickReceiptDetail处 SQL注入漏洞.md",
+    "sha256": "4d8ab3a2c42cf9b233a1a2943917aff30cfbffe15dff91b6f3ff39b85a3de742"
+  },
+  {
+    "path": "Web安全/桌面软件/智联/智联云采 SRM2.0 receiptDetail处 SQL注入漏洞.md",
+    "sha256": "595b40e84b33d191849c607b3747e0ee9fb4e3bf7f02c821a9ce74807937cb9c"
+  },
+  {
+    "path": "Web安全/桌面软件/智联/智联云采 SRM2.0 statusList处 SQL注入漏洞.md",
+    "sha256": "62359d60d820abf5f5364a4ddb34be23341eac503a539b36f9d993ff8ef5fe3b"
+  },
+  {
+    "path": "Web安全/桌面软件/智联/智联云采 SRM2.0 testService SQL注入漏洞.md",
+    "sha256": "881c9caafceac20b2ba12fda5331b0fe27bfae2a5d2ad432bbca6f99e7835ff4"
+  },
+  {
+    "path": "Web安全/网络设备/Arris/Arris VAP2500 diag_s 命令注入漏洞.md",
+    "sha256": "53b76efa4bcadba1a0f13128ddb30de792ff057da7195dcbd715de72923a60f5"
+  },
+  {
+    "path": "Web安全/网络设备/D-Link/(9.1分) CVE-2026-93958：D-Link R95 路由器命令注入.md",
+    "sha256": "6c32c8bb662621169337681415028965899b54d3cdfb8d032e609cf3c251eee3"
+  },
+  {
+    "path": "Web安全/网络设备/D-Link/D-Link NAS 未授权RCE漏洞(CVE-2024-3273).md",
+    "sha256": "f3e76a33d39a0f0194ef24dd5faa0e35b20bec8c2ae53ae79422b587cc637b01"
+  },
+  {
+    "path": "Web安全/网络设备/D-Link/D-Link NAS设备 account_mgr.cgi 未授权RCE漏洞(CVE-2024-10914).md",
+    "sha256": "86831ed097cbf1d174bf8b910a2afbc786b9e73d2177fbfb4925d8a6cb8d9c7b"
+  },
+  {
+    "path": "Web安全/网络设备/D-Link/D-Link NAS设备 sc_mgr.cgi 未授权RCE漏洞.md",
+    "sha256": "1fe6282c6cbcef4e1305ae1ad1d6fecf5f382597ecb82b5f23883506cac0e1d5"
+  },
+  {
+    "path": "Web安全/网络设备/EnGenius/EnGenius  usbinteract.cgi 存在未授权远程命令执行.md",
+    "sha256": "f324527a7f55109bd4fd2f5800b0af827d046e42d7755602954ddbe9e873376d"
+  },
+  {
+    "path": "Web安全/网络设备/Fortinet/整合分析  Fortinet 双子星高危漏洞：未认证即可远程代码执行.md",
+    "sha256": "d0fee4d9e20496e8bc4fd88cc432d794a33008fb32ec560eac64d5b9bf5f801c"
+  },
+  {
+    "path": "Web安全/网络设备/H3C/H3C CVM casfileUploadfd 文件上传致RCE漏洞(CNVD-2024-14168).md",
+    "sha256": "272e4dca497999e738a269a7ee3ca8060283a3d5ac56ab8f3298c060b6847350"
+  },
+  {
+    "path": "Web安全/网络设备/H3C/H3C iMC智能管理中心 autoDeploy.xhtml 远程代码执行漏洞.md",
+    "sha256": "d0d9d4f98a3e0860e5df37e32799dab9e81bbb40cab0999147f4ee5c729fe5a7"
+  },
+  {
+    "path": "Web安全/网络设备/H3C/H3C iMC智能管理中心 远程代码执行漏洞(XVE-2024-4567).md",
+    "sha256": "3a921ab0214d082a47796c14fa0f4b13db1f5a3f24bd62a6940eb3e99d6d5e8e"
+  },
+  {
+    "path": "Web安全/网络设备/MikroTik RouterOS/CVE-2026-67276  RouterOS SSH公钥认证绕过漏洞（POC）.md",
+    "sha256": "2aa57afa9012bf72c3e1a41b8d2b3e0c6e9dae127759d5c9506c04caeee483b8"
+  },
+  {
+    "path": "Web安全/网络设备/NETGEAR/SSD 咨询 - NETGEAR DGND3700v2 PreAuth Root 访问 - SSD 安全披露.md",
+    "sha256": "8ff426bdc7577418129d95bf8982eb2439f9f70bb6e30ebcef44afa0171c8bb1"
+  },
+  {
+    "path": "Web安全/网络设备/NetMizer/NetMizer dologin.php sql注入漏洞(XVE-2024-37672).md",
+    "sha256": "4a022eea8c1479de207a1e32b862d2106d1b116db221988162f90ec56de1866e"
+  },
+  {
+    "path": "Web安全/网络设备/Palo Alto/Palo Alto Networks Expedition 远程命令执行漏洞(CVE-2024-9463).md",
+    "sha256": "68642e613cb8afb65930e4e0aefa54f71e897db886d5ddd9b1aa923af4a2b845"
+  },
+  {
+    "path": "Web安全/网络设备/Palo Alto/Palo Alto Networks PAN-OS 身份验证绕过漏洞(CVE-2025-0108).md",
+    "sha256": "163fc39c8551a523a701acb09295bca6064406c67901a17532573f0991181fe6"
+  },
+  {
+    "path": "Web安全/网络设备/TP-Link/TP-Link Archer MR600 v5 命令注入漏洞预警（CVE-2025-14756）.md",
+    "sha256": "cc78fe3921f9846823dc5060cbdab8e459f836b81c290cdd6cba1a84e681e2f8"
+  },
+  {
+    "path": "Web安全/网络设备/Telesquare/Telesquare TLR-2005KSH路由器 RCE漏洞(CVE-2024-29269).md",
+    "sha256": "a12f9c5c7d30d89cd3520816d12ea47520a7b70911094f76eae8ecc804cf9a55"
+  },
+  {
+    "path": "Web安全/网络设备/天融信/天融信运维安全审计系统download任意文件读取漏洞.md",
+    "sha256": "d15f94d05f13aa3156f333b7624bae117a5a07c72269fe4ee0ce723de7ad1e87"
+  },
+  {
+    "path": "Web安全/网络设备/瑞斯康达/瑞斯康达-多业务智能网关 list_base_config.php 远程命令执行漏洞.md",
+    "sha256": "24ecdbabe491d53db841b71efd4e7f9aeeeeee6c5efc62ea7a70276441750670"
+  },
+  {
+    "path": "Web安全/网络设备/瑞斯康达/瑞斯康达智能网关 RCE漏洞.md",
+    "sha256": "86cabdb47a9e05b95a3b9a1c0e9e20251f8f23edc61ce5d90b5c4fe81679bf07"
+  },
+  {
+    "path": "Web安全/网络设备/碧海威/碧海威L7云路由无线运营版 confirm.phpjumper.php 命令注入漏洞(XVE-2024-15716).md",
+    "sha256": "774b8f9c01c5a5c5b7290b3c95fea48205aa27a42c6d082a15951cd185f8829d"
+  },
+  {
+    "path": "Web安全/网络设备/迪普/迪普SSL VPN 任意文件读取漏洞(补丁绕过).md",
+    "sha256": "5e59a91e31b211707b68951919d954976dc3a9eecb4705c9e0555b452afa7478"
+  },
+  {
+    "path": "docs/CONTENT-SCHEMA.md",
+    "sha256": "514029dadfe2afcf7b93d449dd0aa7ea1148905ecd0d849934835e2b697af140"
+  },
+  {
+    "path": "docs/generated/sources.jsonl",
+    "sha256": "6fc7cc1be9b26a364e224b7872d416726c30c21abcb1db1901855d0f237a5bd0"
+  },
+  {
+    "path": "docs/generated/summary.json",
+    "sha256": "23d68d571cf5e5a02d0275b88af617a268098ee147e8d47714b69b9e8563e4ee"
+  },
+  {
+    "path": "scripts/wiki.py",
+    "sha256": "97d9dcd94111b0943dbcfd62456736a0ad6b70fafd259beffecbfcaa7875fc05"
+  },
+  {
+    "path": "tests/test_wiki.py",
+    "sha256": "dfdc663db20f9adf3d3cb7afe4ebec81c5d35f0314ac4775857d1008d015ba33"
+  },
+  {
+    "path": "系统安全/Apple XNU内核/Apple XNU 内核提权漏洞.md",
+    "sha256": "e89f85cfd9f06e69c02fe504c4b7fc0d3f910aa81e57bef0f58a28b518c459c5"
+  }
+]
