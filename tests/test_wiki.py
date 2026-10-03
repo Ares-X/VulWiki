@@ -269,6 +269,47 @@ class WikiTests(unittest.TestCase):
         self.assertIn(('.resource/a.png', True), links)
         self.assertIn(('.resource/b.png', True), links)
 
+    def test_nested_image_description_checks_outer_destination(self):
+        raw = '![[转存失败(img-public-1586504452408)(./images/0.png)]](附件/CVE-2020-10560.png)'
+        self.article(body=raw + '\n')
+        self.assertEqual(wiki.markdown_links(raw), [('附件/CVE-2020-10560.png', True)])
+        missing = [i for i in self.scan()[0].issues if i.code == 'image_missing']
+        self.assertEqual(len(missing), 1)
+        self.assertTrue(missing[0].detail.endswith('附件/CVE-2020-10560.png'))
+        self.assertGreater(missing[0].line, 1)
+
+    def test_balanced_labels_preserve_nested_image_and_reference(self):
+        prose = '[![preview](image.png)](article.md)\n![a [b]][pic]\n[pic]: .resource/a.png\n'
+        self.assertEqual(wiki.markdown_links(prose), [
+            ('image.png', True), ('article.md', False), ('.resource/a.png', True)])
+        self.assertEqual(wiki.markdown_links(r'![a \[b\]](image%20(1).png)'),
+                         [('image%20(1).png', True)])
+
+    def test_nested_copy_control_active_link_remains_detectable(self):
+        raw = '[![](https://example.invalid/copycode.gif)](javascript:void(0); "复制代码")'
+        self.article(body=raw + '\n')
+        issues = [i for i in self.scan()[0].issues if i.code == 'active_html_example']
+        self.assertEqual(len(issues), 1)
+        self.assertEqual(wiki.markdown_links(raw), [
+            ('https://example.invalid/copycode.gif', True), ('javascript:void(0);', False)])
+
+    def test_escaped_opening_brackets_are_literal_not_active_links(self):
+        raw = r'\[example](javascript:alert(1)) !\[image](missing.png)'
+        self.assertEqual(wiki.markdown_links(raw), [])
+        self.article(body=raw + '\n')
+        self.assertFalse(any(i.code in {'active_html_example', 'image_missing'}
+                             for i in self.scan()[0].issues))
+        self.assertEqual(wiki.markdown_links(r'\![a](article.md)'), [('article.md', False)])
+
+    def test_soft_line_break_wrapped_image_checks_outer_link(self):
+        raw = '[\n![preview](image.png)\n](javascript:void(0))'
+        self.assertEqual(wiki.markdown_links(raw, with_lines=True), [
+            ('image.png', True, 2), ('javascript:void(0)', False, 1)])
+        self.assertEqual(wiki.markdown_links('[example\n\ntext](article.md)'), [])
+        self.assertEqual(wiki.markdown_links('[example\r\n\r\ntext](javascript:alert(1))'), [])
+        self.article(body=raw + '\n')
+        self.assertEqual(sum(i.code == 'active_html_example' for i in self.scan()[0].issues), 1)
+
     def test_sparse_git_image_but_not_deleted_regular_file(self):
         path = self.article(body='![a](.resource/a.png)\n![b](.resource/b.png)\n')
         parent = (self.root / path).parent / '.resource'

@@ -68,9 +68,8 @@ schema_version: "1"
 
 	通过user1用户（订阅者权限）发送数据包：
 
-```
+> 资料补充（非原文复原）：Wordfence记载该漏洞通过 idx_update_recaptcha_key AJAX action 写入 idx_recaptcha_site_key，subscriber级登录用户可造成存储XSS；此参考说明机制和版本，不代表下方归档HTTP报文就是原缺失块。原缺失块内容无法恢复。 参考：[公开资料 1](https://www.wordfence.com/blog/2020/03/vulnerabilities-patched-in-impress-for-idx-broker/)。
 
-```
 > 原文缺损：订阅者权限 PoC 前的代码块为空；现有 CVE 记录只支持漏洞机制，无法确定此处原始请求或代码。
 
 ```http

@@ -301,19 +301,63 @@ def markdown_links(prose, with_lines=False):
     prose = re.sub(r"(`+).*?\1", "", prose)
     refs = {m[1].casefold(): m[2].strip("<>") for m in re.finditer(r"(?m)^ {0,3}\[([^]\n]+)\]:\s*(<[^>]+>|\S+)", prose)}
     links = []
-    for match in re.finditer(r"(!?)\[([^]\n]*)\](\(|\[([^]\n]*)\])", prose):
+    cursor = 0
+    opening = re.compile(r"(!?)\[")
+    while match := opening.search(prose, cursor):
+        cursor = match.end()
+        backslashes, previous = 0, cursor - 2
+        while previous >= 0 and prose[previous] == "\\":
+            backslashes += 1
+            previous -= 1
+        if backslashes % 2:
+            continue
+        # Importers sometimes leave nested brackets in image descriptions.
+        # Follow the outer label so the real destination is checked once.
+        depth, end, escaped = 1, cursor, False
+        while end < len(prose):
+            c = prose[end]
+            if escaped:
+                escaped = False
+            elif c == "\\":
+                escaped = True
+            elif c == "[":
+                depth += 1
+            elif c == "]":
+                depth -= 1
+                if not depth:
+                    break
+            elif c == "\n" and re.match(r"[ \t]*\r?\n", prose[end + 1:]):
+                break
+            end += 1
+        if depth or end + 1 >= len(prose) or prose[end + 1] not in "([":
+            continue
+        label = prose[match.end():end]
         image = bool(match[1])
+        if image:
+            backslashes, previous = 0, match.start() - 1
+            while previous >= 0 and prose[previous] == "\\":
+                backslashes += 1
+                previous -= 1
+            image = not backslashes % 2
         line = prose.count("\n", 0, match.start()) + 1
-        if match[3] != "(":
-            key = (match[4] or match[2]).casefold()
+        # A link may wrap an image; that inner image still needs an asset check.
+        if not image and "![" in label:
+            links.extend((t, i, line + n - 1) for t, i, n in markdown_links(label, True) if i)
+        start = end + 2
+        if prose[end + 1] == "[":
+            close = prose.find("]", start)
+            if close == -1 or "\n" in prose[start:close]:
+                continue
+            key = (prose[start:close] or label).casefold()
             if key in refs:
                 links.append((refs[key], image, line))
+            cursor = close + 1
             continue
-        start = match.end()
         if start < len(prose) and prose[start] == "<":
             end = prose.find(">", start + 1)
             if end != -1:
                 links.append((prose[start + 1:end], image, line))
+                cursor = end + 1
             continue
         depth, end, escaped = 1, start, False
         while end < len(prose):
@@ -334,6 +378,7 @@ def markdown_links(prose, with_lines=False):
         if depth == 0:
             destination = re.sub(r'\s+["\'][^"\']*["\']\s*$', "", prose[start:end]).strip()
             links.append((re.sub(r"\\([() ])", r"\1", destination), image, line))
+            cursor = end + 1
     html = HtmlLinks()
     try:
         html.feed(prose)

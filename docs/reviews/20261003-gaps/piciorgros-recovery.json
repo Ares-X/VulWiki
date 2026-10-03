@@ -1,0 +1,44 @@
+{
+  "review_date": "2026-10-03",
+  "repository_modified": false,
+  "target_file": "Web安全/服务器软件/Piciorgros TMO-100/Piciorgros TMO-100_ Unauthorized configuration change via TFTP CVE-20.md",
+  "target_file_sha256": "e919cc121f56b475349700da3d84239aa639c7c7c54dcd8f06b486f0a5082343",
+  "source_archive_url": "https://seclists.org/fulldisclosure/2025/Aug/8",
+  "source_archive_title": "Piciorgros TMO-100: Unauthorized configuration change via TFTP (CVE-2025-29617)",
+  "source_archive_author": "Georg Lukas",
+  "source_archive_date": "Thu, 14 Aug 2025 15:27:20 +0000",
+  "source_attachment_href_observed": "https://seclists.org/fulldisclosure/2025/Aug/att-8/smime_p7s.bin",
+  "source_attachment_evidence": "The archive's Attachment link (anchor text smime.p7s) resolves to the exact absolute URL above. Archive lines 145-146 identify it as Attachment: smime.p7s; this is an S/MIME signature attachment, not a PoC/payload.",
+  "source_attachment_http": {
+    "head": {
+      "url": "https://seclists.org/fulldisclosure/2025/Aug/att-8/smime_p7s.bin",
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "content_length": 6514,
+      "last_modified": "Tue, 19 Aug 2025 04:00:01 GMT",
+      "etag": "\"1972-63cafe3f3cf5f\"",
+      "request": "HTTP HEAD, read-only"
+    },
+    "get_range": {
+      "url": "https://seclists.org/fulldisclosure/2025/Aug/att-8/smime_p7s.bin",
+      "status": 206,
+      "content_type": "application/octet-stream",
+      "content_length": 1,
+      "content_range": "bytes 0-0/6514",
+      "last_modified": "Tue, 19 Aug 2025 04:00:01 GMT",
+      "etag": "\"1972-63cafe3f3cf5f\"",
+      "request": "HTTP GET with Range: bytes=0-0; read only 1 response byte to verify partial response and reachability"
+    }
+  },
+  "replacement": {
+    "old_text": "[smime.p7s](att-8/smime_p7s.bin)",
+    "new_text": "[smime.p7s](https://seclists.org/fulldisclosure/2025/Aug/att-8/smime_p7s.bin)",
+    "occurrences": 1,
+    "offset_chars_zero_based": 6808,
+    "offset_bytes_zero_based_utf8": 7658,
+    "scope": "Replace only this Markdown link token. Preserve the old relative href verbatim in adjacent explanatory prose, and do not change any code block bytes or metadata."
+  },
+  "source_correspondence": "The archive page link target and HTTP-verified URL are identical; the link label is smime.p7s and the archived article identifies this attachment as its S/MIME signature. No attachment body was downloaded, opened, or executed.",
+  "publication": "paused",
+  "other_mirrors_searched": false
+}

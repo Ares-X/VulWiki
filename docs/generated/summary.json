@@ -6,11 +6,10 @@
   "indexed_sources": 5652,
   "issues": {
     "embedded_code_candidate": 1,
-    "empty_fence": 90,
     "fingerprint_unverified": 800,
     "identifier_inactive": 27,
     "identifier_role_unknown": 215,
-    "noncontent_link_candidate": 34,
+    "noncontent_link_candidate": 30,
     "path_legacy": 2,
     "site_relative_link": 81,
     "source_missing": 3854,
@@ -19,6 +18,6 @@
   "primary_cve_identifiers": 3169,
   "primary_entries": 5558,
   "schema_version": 1,
-  "source_digest": "15093eac5bdff94971a1ee880149f9bb3f0903f7b1a733a1163e16c2331bfa2c",
+  "source_digest": "ce06a4d0bd90fbd966f767d0c60cf4c96f10e76d3f80cb862883926cd21df106",
   "verification": "offline-static-only"
 }
