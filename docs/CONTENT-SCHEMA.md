@@ -19,6 +19,7 @@ Markdown 是唯一维护源。`scripts/wiki.py` 使用 Python 3.10+ 标准库，
 | verification_status | `not-reproduced` / `source-claimed` / `reproduced` / `failed` / `unknown` |
 | content_status | `active` / `needs-review` / `quarantined` / `rejected` |
 | primary_identifiers | 人工确定的主编号，多值用分号分隔 |
+| identifier_candidates | 人工登记的待核候选编号，多值用分号分隔；可检索，不进入主 CVE 索引 |
 | referenced_identifiers | 背景、链条或推荐引用编号，分号分隔，不进入主 CVE 索引 |
 | identifier_role | 旧 cve/cnvd 等字段的角色：`primary` / `reference` / `unknown` |
 | identifier_status | `active` / `rejected` / `disputed` / `unknown`；不假设官方已确认 |
@@ -34,13 +35,16 @@ Markdown 是唯一维护源。`scripts/wiki.py` 使用 Python 3.10+ 标准库，
 | fofa / hunter / quake | 各平台独立的完整表达式；资产指纹不证明漏洞存在 |
 | fofa_unverified 等 | 留存残缺或待核查询，不进入指纹索引 |
 | category_recommendation | 人工纠正分类建议；构建器不迁移目录 |
+| index_category | 人工确认的导航分类，格式为 `Web安全/类别`、`系统安全/类别` 或 `IOT安全/类别`；只调整目录展示，不改文件位置、文章 URL 或资源相对路径 |
 | entity_id | 人工确定的漏洞实体标识；不能由共同 CVE 自动创建 |
 | canonical | 目标 Markdown 相对仓库根的完整路径，保留 Unicode/空格，不做 URL 编码 |
 | relation_type | `duplicate_of` / `analysis_of` / `chained_with` / `patch_bypass_of` / `supersedes` |
 
 新 v1 文稿必填 id、title、product、record_type、review_status、verification_status、content_status、prerequisites、side_effects。来源使用 source_url；确实未找到原始出处时，必须显式写 `source_status: "unknown"` 或 `"missing"`，此时可省略 source_url，并保留 source_missing 质量警告。不能填伪URL满足检查，也不应因缺来源回避schema_version。recorded状态下缺URL会阻断严格契约。编号、源码、PoC、指纹并非每种文章都有；不为了填模板虚构内容。
 
-`reproduced` 额外要求 verification_environment、verification_evidence、verification_date 三个字符串。检查仅验证字段存在，不能证明真的复现。原作者称成功最多记为 source-claimed；本库文字审阅不能升级成 reproduced。failed 只表示某次实验失败，不能推出版本不受影响。
+`verification_status` 用于如实记录来源声称和已有证据，不是收录、合并或维护验收的门槛。本库不要求维护者实际复现；`not-reproduced` 是正常的资料状态，不代表维护工作未完成，也不单独要求降为 `needs-review` 或隔离。已有复现资料、步骤和结果按原文保留。
+
+已有记录使用 `reproduced` 时，额外要求 verification_environment、verification_evidence、verification_date 三个字符串。这是证据记录规则，不要求为补齐字段新增复现。检查仅验证字段存在，不能证明真的复现。原作者称成功最多记为 source-claimed；本库文字审阅不能升级成 reproduced。failed 只表示某次实验失败，不能推出版本不受影响。
 
 ## 主编号、候选与状态
 
@@ -48,6 +52,8 @@ Markdown 是唯一维护源。`scripts/wiki.py` 使用 Python 3.10+ 标准库，
 
 - `primary_identifiers` 优先；没有它时只有 `identifier_role: "primary"` 的旧字段成为主编号
 - 未声明主角色的旧 cve/cnvd 等仍是可检索候选；明确 reference 的旧字段进入引用集合
+- `identifier_candidates` 可显式登记冲突或待核编号；校验格式并保留候选角色，不因登记而认定官方分配或产品映射有效
+- 已在 `primary_identifiers`、`identifier_candidates` 或 `referenced_identifiers` 登记的编号，以显式字段的角色投影；旧 `cve` 等同值不会因 `identifier_role` 回退重新提升为主编号。仅未显式登记的旧候选继续产生角色待核提示
 - 不抓取标题、正文首次提及或推荐文章的 CVE 作为主编号
 - rejected / disputed 的主编号不进入有效 CVE 导航；原始记录与说明仍保留
 - needs-review 条目正常进入目录并显示状态；缺来源、版本待核或未本地复现不单独构成隔离理由；篇首写明具体缺口
@@ -61,6 +67,8 @@ Markdown 是唯一维护源。`scripts/wiki.py` 使用 Python 3.10+ 标准库，
 canonical 自指表示本身是主入口，不要求 relation_type。非自指必须指定关系。只有 duplicate_of 折叠至主入口并展示关联来源。analysis_of、chained_with、patch_bypass_of、supersedes 保留各自独立入口和主编号，避免吞掉独立分析或不同漏洞。重复关系循环、缺失目标、重复源指向隔离/结构错误目标会阻断有效入口。
 
 原路径、`.resource`、独立分析、失败实验、平台/版本差异继续保留。来源文档的结论不自动合并成主文事实；迁移资源需另外核对旧链接。有效 source 记录与人工 entity 分组是两层，不能用来源篇数宣称独立漏洞数量。
+
+正文已明确更正分类且经人工确认时，可设置 `index_category`，使产品索引和在线目录按确认后的类别展示，同时保留原 Markdown 路径与旧链接。未设置时沿用原目录；`category_recommendation` 仍只是建议，不会自动应用。非标准格式会阻断投影，不能以质量基线豁免。
 
 ## 派生产物与检索
 
@@ -88,6 +96,7 @@ JSONL 是 UTF-8 每行一个对象，不复制全文和图片。阅读全文依 
 
 - 检查元数据类型/枚举、主编号格式、唯一 id、canonical 目标/循环、相对资源
 - sparse checkout 的资源只有同时存在 Git HEAD 且标记 skip-worktree 才可用树确认；普通工作树删除仍报错
+- Markdown 链接说明支持嵌套、转义方括号和段落内软换行；图片外包链接时分别检查图片资源和外层 URL，转义的起始方括号按字面文本处理。转存失败说明不会遮住实际图片路径。
 - 网站根路径属于原站语境，按篇列待核和示例位置；不把所有抓取导航误报为仓库逃逸
 - ref、verification_source 与正文明确来源区域的 URL 只算可追溯 `unverified-link`；不联网、不证明仍在线或支持结论
 - 检查围栏空块/闭合，忽略围栏、行内代码及缩进代码中的 HTML 示例；活动脚本、真实 DOM 事件属性和活动 URL 列为候选，人工确认后应保留原字符串并展示为代码

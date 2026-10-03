@@ -1,0 +1,54 @@
+{
+  "pr": 8,
+  "review_scope": "只读审阅两篇快照；来源主张与独立核验分列；未运行PoC、依赖或文章代码，未访问示例目标。",
+  "articles": [
+    {
+      "path": "Web安全/开发框架/Tiptap/Tiptap Markdown 属性解析二次复杂度拒绝服务（GHSA-j95f-988m-3j2f）.md",
+      "verdict": "accepted",
+      "duplicate_check": "本地库在现有范围内没有 GHSA-j95f-988m-3j2f 或同一 Tiptap 默认 Markdown 属性解析根因的既有文章；可作为单独 analysis 收录。",
+      "source_claims": [
+        {"claim": "官方公告声称 @tiptap/core >=3.7.0,<3.30.5 受影响，3.30.5 修复；涉及 Pandoc block 与 shortcode inline 默认属性解析路径。", "url": "https://github.com/ueberdosis/tiptap/security/advisories/GHSA-j95f-988m-3j2f"},
+        {"claim": "20,508 字节 atom-block 和 32,776 字节 inline 输入计时、对照及 PoC 是公告/报告者披露数据，不是本库复现。", "url": "https://github.com/advisories/GHSA-j95f-988m-3j2f"}
+      ],
+      "independent_checks": [
+        {"finding": "固定修复提交 d0d499... 的父提交是 55f59...；差异删除旧 attributeUtils、增加 tokenizeAttributes/parseAttributes/parseShortcodeAttributes，并更新 atom/block/inline 默认 parser 接线。文章所述修复结构与差异相符。", "url": "https://github.com/ueberdosis/tiptap/commit/d0d499be3cce633cf54ca9aa9f3d8a5a1f98bd74"},
+        {"finding": "固定修复差异含内部占位输入回归测试、属性边界测试、Mention 扩展测试；这支持静态补丁覆盖的描述，但不独立证明性能结果。", "url": "https://github.com/ueberdosis/tiptap/commit/d0d499be3cce633cf54ca9aa9f3d8a5a1f98bd74"},
+        {"finding": "官方 v3.30.5 发布页面与 GHSA 的首个修复版相符。", "url": "https://github.com/ueberdosis/tiptap/releases/tag/v3.30.5"}
+      ],
+      "review_notes": "前提、版本、主编号和修复边界写得具体；来源报告计时明确归属作者。本地检索未见重复。Markdown frontmatter 与围栏成对；示例正则在 fenced code 中，未见复制格式改变技术字节。"
+    },
+    {
+      "path": "Web安全/网络设备/Citrix NetScaler/NetScaler DTLS 越界复制与公开PoC危险副作用（CVE-2026-88772）.md",
+      "verdict": "needs-fix",
+      "duplicate_check": "库中未发现 CVE-2026-88772 或同一 DTLS NSB 重组越界复制根因的既有主文。已有 NetScaler 其他 CVE 文章不构成重复。",
+      "source_claims": [
+        {"claim": "Citrix CTX697096 将 CVE-2026-88772 描述为 DTLS 配置启用时的内存溢出，可导致 RCE 或 DoS；VPN vServer 默认启用 DTLS。", "url": "https://support.citrix.com/external/article/CTX697096/citrix-netscaler-adc-and-citrix-netscale.htm"},
+        {"claim": "厂商公告列出 ADC/Gateway 14.1-73.37、13.1-64.23，ADC FIPS 14.1-73.37 FIPS，以及 13.1-FIPS/NDcPP 13.1-37.279 修复边界。", "url": "https://support.citrix.com/external/article/CTX697096"},
+        {"claim": "NSB 链、scratch buffer、补丁比较、公开 PoC 记录和研究者实验属于 watchTowr 原研究记录；没有当作本库复现。", "url": "https://labs.watchtowr.com/here-we-go-again-citrix-netscaler-dtls-preauth-memory-overflow-cve-2026-88772/"}
+      ],
+      "independent_checks": [
+        {"finding": "Citrix 官方公告支持 DTLS 前提、VPN vServer 默认配置及上述修复版本。", "url": "https://support.citrix.com/external/article/CTX697096"},
+        {"finding": "固定 CVE CNA 记录确认主编号、产品与供应商提交信息。", "url": "https://github.com/CVEProject/cvelistV5/blob/281e4a53d95c7e8cbc68e428a7469e67dc02d960/cves/2026/88xxx/CVE-2026-88772.json"},
+        {"finding": "公开原研究对应 DTLS 内存溢出，版本差异 14.1-73.30/73.37，且文中指出 VPN vServer 默认 DTLS、关闭方式 -dtls OFF。", "url": "https://labs.watchtowr.com/here-we-go-again-citrix-netscaler-dtls-preauth-memory-overflow-cve-2026-88772/"},
+        {"finding": "从固定 Python 源码只读行 113–145 可见 shellcode 写文件使用 O_CREAT|O_TRUNC，之后 pushstr('/bin/sh')、syscall 号 15、mode 0xd6d 与 ud2；FreeBSD 固定 syscalls.master 对 syscall 15 为 chmod；0xd6d=八进制 06555。静态副作用解释有依据。", "url": "https://github.com/watchtowrlabs/watchTowr-vs-Citrix-Netscaler-CVE-2026-88772/blob/014f53f385f7bced62dd1308446d0950a117a542/watchTowr-vs-Citrix-Netscaler-CVE-2026-88772.py#L113-L145"}
+      ],
+      "required_edits": [
+        {
+          "reason": "标题及正文强调的是 DTLS 预认证路径，但 metadata 的 prerequisites 只写 DTLS 启用/UDP 可达，未表达厂商/研究文章所述攻击者仍须完成 DTLS Cookie 往返（证明地址可收包，非用户认证）。这会把网络前提写得过宽。",
+          "exact_old_text": "prerequisites: \"NetScaler启用DTLS且对应UDP监听可达；VPN vServer默认启用DTLS；公开PoC的硬编码地址限制其适配范围，不代表所有受影响分支都能直接使用\"",
+          "exact_new_text": "prerequisites: \"NetScaler启用DTLS且对应UDP监听可达；攻击者需完成DTLS Cookie往返以证明可接收目标返回数据包，但不需用户登录认证；VPN vServer默认启用DTLS；公开PoC的硬编码地址限制其适配范围，不代表所有受影响分支都能直接使用\""
+        },
+        {
+          "reason": "正文将条件概括为“需启用 DTLS 且监听可达”，遗漏研究记录中 Cookie 往返阶段；请明确这是原作者说明的触发准备条件，不要误写为身份认证。",
+          "exact_old_text": "需启用 DTLS 且监听可达；厂商说明 VPN vServer 默认启用 DTLS，显式关闭或未走 DTLS 的配置不能套用同一触发条件。DTLS Cookie 交换只涉及对端收包能力，不等同已通过用户登录认证。",
+          "exact_new_text": "需启用 DTLS 且对应 UDP 监听可达；原研究记录的流程还先完成 DTLS Cookie 往返，以证明客户端地址可接收服务器返回的数据包。该 Cookie 交换不是用户登录认证。厂商说明 VPN vServer 默认启用 DTLS，显式关闭或未走 DTLS 的配置不能套用同一触发条件。"
+        }
+      ],
+      "open_questions": [
+        "原研究写到设备在成功 Cookie 验证后继续利用，但本次仅按文章静态阅读，未独立验证设备各构建实际 DTLS 状态机；保持来源归属，不扩写成厂商确认事实。",
+        "脚本 mode 06555 的静态意图和 syscall 对应已核；目标上的权限修改是否成功受权限、文件系统和安全机制影响，仍未知。"
+      ],
+      "review_notes": "13.1-FIPS/NDcPP 公告有 13.1-37.279 与 13.1.37.279 写法差异；文章已经保留差异并引用 CNA/厂商，建议不擅自规范化。PoC 代码以固定 URL 引用而非复制，页面没有 Markdown code fences；无布局阻断。修正 Cookie 往返前提后可接收；未发现已确认重复。"
+    }
+  ]
+}

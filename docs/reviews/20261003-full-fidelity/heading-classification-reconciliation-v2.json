@@ -1,0 +1,1827 @@
+{
+  "scope": "17 parent-confirmed article fixes plus D-Link prior fix; uses captured /tmp snapshots and parent static proof only; no repository reads.",
+  "original_report_preserved": "heading-review.json (unchanged; contains complete original and proposed-after Markdown for each row).",
+  "classification_bug_corrected": "The earlier classifier compared every raw fence pair against the number of offending pairs, and also interpreted Marked HTML-token changes as active HTML. Here checks are restricted to each proposed offending opening_line; root independent HTMLParser marker proof is authoritative for the “new active marker” claim.",
+  "articles": [
+    {
+      "path": "Web安全/中间件/WebLogic/Weblogic CVE-2023-21931 漏洞挖掘技巧：后反序列化利用.md",
+      "classification": "confirmed_setext_consumption_minimal_blank_before_opening_fence",
+      "basis": "Captured original/after snapshots; offending raw fence openings alone selected; independent root proof confirms LF-only inverse, unchanged original fence bodies, full code-copy conservation, and no new active HTML markers.",
+      "captured_before_sha256": "90381954ffe7ee9792e8e4acb54ce18d9a803fa60bc30f3f2652670acac0df0f",
+      "captured_after_sha256": "5eec959526890119441e60ac5069f37cd1e28e2fdf451d1306da842e478be156",
+      "captured_after_sha_recomputed": "5eec959526890119441e60ac5069f37cd1e28e2fdf451d1306da842e478be156",
+      "sha_matches": true,
+      "strict_raw_fence_pairs": 6,
+      "offending_opening_lines": [
+        2265,
+        2296,
+        2705,
+        3113
+      ],
+      "offending_code_token_checks": [
+        {
+          "opening_line": 2265,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 2296,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 2705,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 3113,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        }
+      ],
+      "offending_pairs_code_tokens_present": true,
+      "inserted_LF_count": 4,
+      "exact_inverse_removing_only_inserted_LF": true,
+      "frontmatter_unchanged": true,
+      "all_original_fence_bodies_byte_unchanged": true,
+      "expected_fenced_copy_count": 6,
+      "actual_fenced_copy_count": 6,
+      "missing_intended_copy_count": 0,
+      "new_active_html_markers": [],
+      "root_rendered_image_sequence_equal": true,
+      "root_proof_ref": "../root-heading-proposal-proof.json#/rows/0",
+      "root_fix_ref": "../root-heading-fence-fix.json#/files/0"
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2023-4427 复现.md",
+      "classification": "confirmed_setext_consumption_minimal_blank_before_opening_fence",
+      "basis": "Captured original/after snapshots; offending raw fence openings alone selected; independent root proof confirms LF-only inverse, unchanged original fence bodies, full code-copy conservation, and no new active HTML markers.",
+      "captured_before_sha256": "d6ae9248332f96e4468d2a62fb9340178344f8eddd9435b060a72ed685d17bbc",
+      "captured_after_sha256": "75f15db41ae6729e2c1c14d8556d5a179ead233ccd5072ed717c3648301a3462",
+      "captured_after_sha_recomputed": "75f15db41ae6729e2c1c14d8556d5a179ead233ccd5072ed717c3648301a3462",
+      "sha_matches": true,
+      "strict_raw_fence_pairs": 17,
+      "offending_opening_lines": [
+        101
+      ],
+      "offending_code_token_checks": [
+        {
+          "opening_line": 101,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        }
+      ],
+      "offending_pairs_code_tokens_present": true,
+      "inserted_LF_count": 1,
+      "exact_inverse_removing_only_inserted_LF": true,
+      "frontmatter_unchanged": true,
+      "all_original_fence_bodies_byte_unchanged": true,
+      "expected_fenced_copy_count": 17,
+      "actual_fenced_copy_count": 17,
+      "missing_intended_copy_count": 0,
+      "new_active_html_markers": [],
+      "root_rendered_image_sequence_equal": false,
+      "root_proof_ref": "../root-heading-proposal-proof.json#/rows/1",
+      "root_fix_ref": "../root-heading-fence-fix.json#/files/1"
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2026-33824：Windows IKEv2 中的远程代码执行漏洞.md",
+      "classification": "confirmed_setext_consumption_minimal_blank_before_opening_fence",
+      "basis": "Captured original/after snapshots; offending raw fence openings alone selected; independent root proof confirms LF-only inverse, unchanged original fence bodies, full code-copy conservation, and no new active HTML markers.",
+      "captured_before_sha256": "3da3a5109b809c70eb460af139ca967eeca809e333d2895fe2772f316e461d24",
+      "captured_after_sha256": "48fd32e24c4dcfafd877feb6f9eb01243f372143669db4c42d85f38e3fa53e50",
+      "captured_after_sha_recomputed": "48fd32e24c4dcfafd877feb6f9eb01243f372143669db4c42d85f38e3fa53e50",
+      "sha_matches": true,
+      "strict_raw_fence_pairs": 4,
+      "offending_opening_lines": [
+        83,
+        101,
+        113
+      ],
+      "offending_code_token_checks": [
+        {
+          "opening_line": 83,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 101,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 113,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        }
+      ],
+      "offending_pairs_code_tokens_present": true,
+      "inserted_LF_count": 3,
+      "exact_inverse_removing_only_inserted_LF": true,
+      "frontmatter_unchanged": true,
+      "all_original_fence_bodies_byte_unchanged": true,
+      "expected_fenced_copy_count": 4,
+      "actual_fenced_copy_count": 4,
+      "missing_intended_copy_count": 0,
+      "new_active_html_markers": [],
+      "root_rendered_image_sequence_equal": false,
+      "root_proof_ref": "../root-heading-proposal-proof.json#/rows/2",
+      "root_fix_ref": "../root-heading-fence-fix.json#/files/2"
+    },
+    {
+      "path": "Web安全/其他软件/杂项/CVE-2026-42231 漏洞分析报告.md",
+      "classification": "confirmed_setext_consumption_minimal_blank_before_opening_fence",
+      "basis": "Captured original/after snapshots; offending raw fence openings alone selected; independent root proof confirms LF-only inverse, unchanged original fence bodies, full code-copy conservation, and no new active HTML markers.",
+      "captured_before_sha256": "960de751227d9b24bb5734e79eea6d5544006129901174543e5ac462476cc443",
+      "captured_after_sha256": "20b9652d9ee461d7862b71190c2e8160ca77170d5bb8f973daab788f0fab0e7b",
+      "captured_after_sha_recomputed": "20b9652d9ee461d7862b71190c2e8160ca77170d5bb8f973daab788f0fab0e7b",
+      "sha_matches": true,
+      "strict_raw_fence_pairs": 2,
+      "offending_opening_lines": [
+        115,
+        152
+      ],
+      "offending_code_token_checks": [
+        {
+          "opening_line": 115,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 152,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        }
+      ],
+      "offending_pairs_code_tokens_present": true,
+      "inserted_LF_count": 2,
+      "exact_inverse_removing_only_inserted_LF": true,
+      "frontmatter_unchanged": true,
+      "all_original_fence_bodies_byte_unchanged": true,
+      "expected_fenced_copy_count": 2,
+      "actual_fenced_copy_count": 2,
+      "missing_intended_copy_count": 0,
+      "new_active_html_markers": [],
+      "root_rendered_image_sequence_equal": true,
+      "root_proof_ref": "../root-heading-proposal-proof.json#/rows/3",
+      "root_fix_ref": "../root-heading-fence-fix.json#/files/3"
+    },
+    {
+      "path": "Web安全/服务器软件/Kubernetes/Kubernetes 通过 nodes-proxy GET 权限在集群任意 Pod 中执行命令（RCE）.md",
+      "classification": "confirmed_setext_consumption_minimal_blank_before_opening_fence",
+      "basis": "Captured original/after snapshots; offending raw fence openings alone selected; independent root proof confirms LF-only inverse, unchanged original fence bodies, full code-copy conservation, and no new active HTML markers.",
+      "captured_before_sha256": "54b5b86bf232570a00131215de1c753476db2a9818dea0c4a584a687e0d97ad5",
+      "captured_after_sha256": "976aef2e078426c155e60ed2ec6a383a380459ab5cb627689ceafcd4f6f6e80b",
+      "captured_after_sha_recomputed": "976aef2e078426c155e60ed2ec6a383a380459ab5cb627689ceafcd4f6f6e80b",
+      "sha_matches": true,
+      "strict_raw_fence_pairs": 26,
+      "offending_opening_lines": [
+        111,
+        118,
+        169,
+        172,
+        181,
+        190,
+        196,
+        204,
+        299,
+        320,
+        336,
+        339,
+        346,
+        349,
+        362,
+        365,
+        429,
+        556,
+        569,
+        613,
+        628,
+        633,
+        636,
+        648,
+        651,
+        703
+      ],
+      "offending_code_token_checks": [
+        {
+          "opening_line": 111,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 118,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 169,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 172,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 181,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 190,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 196,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 204,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 299,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 320,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 336,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 339,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 346,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 349,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 362,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 365,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 429,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 556,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 569,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 613,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 628,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 633,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 636,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 648,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 651,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 703,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        }
+      ],
+      "offending_pairs_code_tokens_present": true,
+      "inserted_LF_count": 26,
+      "exact_inverse_removing_only_inserted_LF": true,
+      "frontmatter_unchanged": true,
+      "all_original_fence_bodies_byte_unchanged": true,
+      "expected_fenced_copy_count": 26,
+      "actual_fenced_copy_count": 26,
+      "missing_intended_copy_count": 0,
+      "new_active_html_markers": [],
+      "root_rendered_image_sequence_equal": true,
+      "root_proof_ref": "../root-heading-proposal-proof.json#/rows/4",
+      "root_fix_ref": "../root-heading-fence-fix.json#/files/4"
+    },
+    {
+      "path": "Web安全/服务器软件/Prometheus/Prometheus 未授权访问漏洞处理.md",
+      "classification": "confirmed_setext_consumption_minimal_blank_before_opening_fence",
+      "basis": "Captured original/after snapshots; offending raw fence openings alone selected; independent root proof confirms LF-only inverse, unchanged original fence bodies, full code-copy conservation, and no new active HTML markers.",
+      "captured_before_sha256": "3b0b67e01f72d2fb369143fe17c0bb3f1c0826040c9ff64fe97b869bf1914dc9",
+      "captured_after_sha256": "54d8abae961a1d26187d0cf6899fdbc9f538eae7da5d750afe4d352e4ad3ed7b",
+      "captured_after_sha_recomputed": "54d8abae961a1d26187d0cf6899fdbc9f538eae7da5d750afe4d352e4ad3ed7b",
+      "sha_matches": true,
+      "strict_raw_fence_pairs": 7,
+      "offending_opening_lines": [
+        59
+      ],
+      "offending_code_token_checks": [
+        {
+          "opening_line": 59,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        }
+      ],
+      "offending_pairs_code_tokens_present": true,
+      "inserted_LF_count": 1,
+      "exact_inverse_removing_only_inserted_LF": true,
+      "frontmatter_unchanged": true,
+      "all_original_fence_bodies_byte_unchanged": true,
+      "expected_fenced_copy_count": 7,
+      "actual_fenced_copy_count": 7,
+      "missing_intended_copy_count": 0,
+      "new_active_html_markers": [],
+      "root_rendered_image_sequence_equal": false,
+      "root_proof_ref": "../root-heading-proposal-proof.json#/rows/5",
+      "root_fix_ref": "../root-heading-fence-fix.json#/files/5"
+    },
+    {
+      "path": "系统安全/Windows/Administrator Protection 安全边界绕过漏洞分析.md",
+      "classification": "confirmed_setext_consumption_minimal_blank_before_opening_fence",
+      "basis": "Captured original/after snapshots; offending raw fence openings alone selected; independent root proof confirms LF-only inverse, unchanged original fence bodies, full code-copy conservation, and no new active HTML markers.",
+      "captured_before_sha256": "ddcebb77c410e4d590c71884704ad4297a5a50559cf5069c961d9b617e2cd3ac",
+      "captured_after_sha256": "479920884895b408ab749664a4d3b12a609f1c01a3aaaea96fb20b5701fa36c7",
+      "captured_after_sha_recomputed": "479920884895b408ab749664a4d3b12a609f1c01a3aaaea96fb20b5701fa36c7",
+      "sha_matches": true,
+      "strict_raw_fence_pairs": 7,
+      "offending_opening_lines": [
+        126,
+        179,
+        225,
+        262,
+        288
+      ],
+      "offending_code_token_checks": [
+        {
+          "opening_line": 126,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 179,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 225,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 262,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 288,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        }
+      ],
+      "offending_pairs_code_tokens_present": true,
+      "inserted_LF_count": 5,
+      "exact_inverse_removing_only_inserted_LF": true,
+      "frontmatter_unchanged": true,
+      "all_original_fence_bodies_byte_unchanged": true,
+      "expected_fenced_copy_count": 7,
+      "actual_fenced_copy_count": 7,
+      "missing_intended_copy_count": 0,
+      "new_active_html_markers": [],
+      "root_rendered_image_sequence_equal": true,
+      "root_proof_ref": "../root-heading-proposal-proof.json#/rows/6",
+      "root_fix_ref": "../root-heading-fence-fix.json#/files/6"
+    },
+    {
+      "path": "Web安全/CMS内容/Certighost/Certighost（CVE-2026-54121）.md",
+      "classification": "confirmed_setext_consumption_minimal_blank_before_opening_fence",
+      "basis": "Captured original/after snapshots; offending raw fence openings alone selected; independent root proof confirms LF-only inverse, unchanged original fence bodies, full code-copy conservation, and no new active HTML markers.",
+      "captured_before_sha256": "a3c733c7d83877fdff159fe87fb9f7d02601c984c170dc76faa1810a0eae072d",
+      "captured_after_sha256": "f9b536331672a025ecc128db6eb2992b9201be858ddf76928fa5c1f1425c982b",
+      "captured_after_sha_recomputed": "f9b536331672a025ecc128db6eb2992b9201be858ddf76928fa5c1f1425c982b",
+      "sha_matches": true,
+      "strict_raw_fence_pairs": 14,
+      "offending_opening_lines": [
+        154,
+        158,
+        220,
+        243,
+        248,
+        256,
+        261,
+        276,
+        285,
+        297,
+        305,
+        310,
+        324,
+        353
+      ],
+      "offending_code_token_checks": [
+        {
+          "opening_line": 154,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 158,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 220,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 243,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 248,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 256,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 261,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 276,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 285,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 297,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 305,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 310,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 324,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 353,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        }
+      ],
+      "offending_pairs_code_tokens_present": true,
+      "inserted_LF_count": 14,
+      "exact_inverse_removing_only_inserted_LF": true,
+      "frontmatter_unchanged": true,
+      "all_original_fence_bodies_byte_unchanged": true,
+      "expected_fenced_copy_count": 14,
+      "actual_fenced_copy_count": 14,
+      "missing_intended_copy_count": 0,
+      "new_active_html_markers": [],
+      "root_rendered_image_sequence_equal": true,
+      "root_proof_ref": "../root-heading-proposal-proof.json#/rows/7",
+      "root_fix_ref": "../root-heading-fence-fix.json#/files/7"
+    },
+    {
+      "path": "Web安全/其他软件/杂项/漏洞赏金实战：AFL++ 挖掘 GNOME libsoup 高危漏洞技术解析.md",
+      "classification": "confirmed_setext_consumption_minimal_blank_before_opening_fence",
+      "basis": "Captured original/after snapshots; offending raw fence openings alone selected; independent root proof confirms LF-only inverse, unchanged original fence bodies, full code-copy conservation, and no new active HTML markers.",
+      "captured_before_sha256": "1a7086f85507618048f331cd6dbff7db0e26038d6d10892bec099d4e35445e02",
+      "captured_after_sha256": "4c79e0597d99cfdd3be5f8f6c45852d33729c62446625abafa33e66cd3478cf8",
+      "captured_after_sha_recomputed": "4c79e0597d99cfdd3be5f8f6c45852d33729c62446625abafa33e66cd3478cf8",
+      "sha_matches": true,
+      "strict_raw_fence_pairs": 7,
+      "offending_opening_lines": [
+        299
+      ],
+      "offending_code_token_checks": [
+        {
+          "opening_line": 299,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        }
+      ],
+      "offending_pairs_code_tokens_present": true,
+      "inserted_LF_count": 1,
+      "exact_inverse_removing_only_inserted_LF": true,
+      "frontmatter_unchanged": true,
+      "all_original_fence_bodies_byte_unchanged": true,
+      "expected_fenced_copy_count": 7,
+      "actual_fenced_copy_count": 7,
+      "missing_intended_copy_count": 0,
+      "new_active_html_markers": [],
+      "root_rendered_image_sequence_equal": false,
+      "root_proof_ref": "../root-heading-proposal-proof.json#/rows/8",
+      "root_fix_ref": "../root-heading-fence-fix.json#/files/8"
+    },
+    {
+      "path": "Web安全/开发框架/Git/Git交互式凭证提示和凭据重定向漏洞CVE-2024-50349 CVE-2024-52006.md",
+      "classification": "confirmed_setext_consumption_minimal_blank_before_opening_fence",
+      "basis": "Captured original/after snapshots; offending raw fence openings alone selected; independent root proof confirms LF-only inverse, unchanged original fence bodies, full code-copy conservation, and no new active HTML markers.",
+      "captured_before_sha256": "abe20073728391f433d723804d7e98f711b6737b08c2a4b444ae918472f36d6f",
+      "captured_after_sha256": "faf4e70a7ed1296f3c76a58743c5d9441cef9cc0685abf518ae5b5caf1df0262",
+      "captured_after_sha_recomputed": "faf4e70a7ed1296f3c76a58743c5d9441cef9cc0685abf518ae5b5caf1df0262",
+      "sha_matches": true,
+      "strict_raw_fence_pairs": 4,
+      "offending_opening_lines": [
+        88,
+        99
+      ],
+      "offending_code_token_checks": [
+        {
+          "opening_line": 88,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 99,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        }
+      ],
+      "offending_pairs_code_tokens_present": true,
+      "inserted_LF_count": 2,
+      "exact_inverse_removing_only_inserted_LF": true,
+      "frontmatter_unchanged": true,
+      "all_original_fence_bodies_byte_unchanged": true,
+      "expected_fenced_copy_count": 4,
+      "actual_fenced_copy_count": 5,
+      "missing_intended_copy_count": 0,
+      "new_active_html_markers": [],
+      "root_rendered_image_sequence_equal": true,
+      "root_proof_ref": "../root-heading-proposal-proof.json#/rows/9",
+      "root_fix_ref": "../root-heading-fence-fix.json#/files/9"
+    },
+    {
+      "path": "Web安全/智能设备/三星MagicINFO/Samsung MagicINFO 9 预认证 RCE 漏洞链分析 - TOCTOU 竞争与目录遍历导致认证绕过.md",
+      "classification": "confirmed_setext_consumption_minimal_blank_before_opening_fence",
+      "basis": "Captured original/after snapshots; offending raw fence openings alone selected; independent root proof confirms LF-only inverse, unchanged original fence bodies, full code-copy conservation, and no new active HTML markers.",
+      "captured_before_sha256": "f3a2c23a67537fd3f705f841d8ee95791b7117fdb19c9ce3a54f8d50a6bb4894",
+      "captured_after_sha256": "b73d35e884b180e583ea52ea4e5725eb9733e39b4140f1cef6c1aae3318e0d9c",
+      "captured_after_sha_recomputed": "b73d35e884b180e583ea52ea4e5725eb9733e39b4140f1cef6c1aae3318e0d9c",
+      "sha_matches": true,
+      "strict_raw_fence_pairs": 32,
+      "offending_opening_lines": [
+        74,
+        86,
+        96,
+        107,
+        129,
+        135,
+        141,
+        161,
+        171,
+        185,
+        194,
+        200,
+        224,
+        240,
+        252,
+        255,
+        278,
+        285,
+        298,
+        304,
+        312,
+        320,
+        330,
+        336,
+        354,
+        370,
+        395,
+        410,
+        421,
+        427,
+        433,
+        438
+      ],
+      "offending_code_token_checks": [
+        {
+          "opening_line": 74,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 86,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 96,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 107,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 129,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 135,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 141,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 161,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 171,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 185,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 194,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 200,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 224,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 240,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 252,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 255,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 278,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 285,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 298,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 304,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 312,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 320,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 330,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 336,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 354,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 370,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 395,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 410,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 421,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 427,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 433,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 438,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        }
+      ],
+      "offending_pairs_code_tokens_present": true,
+      "inserted_LF_count": 32,
+      "exact_inverse_removing_only_inserted_LF": true,
+      "frontmatter_unchanged": true,
+      "all_original_fence_bodies_byte_unchanged": true,
+      "expected_fenced_copy_count": 32,
+      "actual_fenced_copy_count": 32,
+      "missing_intended_copy_count": 0,
+      "new_active_html_markers": [],
+      "root_rendered_image_sequence_equal": true,
+      "root_proof_ref": "../root-heading-proposal-proof.json#/rows/10",
+      "root_fix_ref": "../root-heading-fence-fix.json#/files/10"
+    },
+    {
+      "path": "Web安全/服务器软件/CrushFTP/CVE-2024-4040 CrushFTP 中的身份验证绕过和任意文件读取.md",
+      "classification": "confirmed_setext_consumption_minimal_blank_before_opening_fence",
+      "basis": "Captured original/after snapshots; offending raw fence openings alone selected; independent root proof confirms LF-only inverse, unchanged original fence bodies, full code-copy conservation, and no new active HTML markers.",
+      "captured_before_sha256": "6ffb673bfc05391560870ffe1952a3e428a627816b91f7d26e5fbd24774bb750",
+      "captured_after_sha256": "33d2736ca4a6dcd10ff9c7c6a0bd2d94ce04e2834d179368c5e542a90da72786",
+      "captured_after_sha_recomputed": "33d2736ca4a6dcd10ff9c7c6a0bd2d94ce04e2834d179368c5e542a90da72786",
+      "sha_matches": true,
+      "strict_raw_fence_pairs": 20,
+      "offending_opening_lines": [
+        70,
+        77
+      ],
+      "offending_code_token_checks": [
+        {
+          "opening_line": 70,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 77,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        }
+      ],
+      "offending_pairs_code_tokens_present": true,
+      "inserted_LF_count": 2,
+      "exact_inverse_removing_only_inserted_LF": true,
+      "frontmatter_unchanged": true,
+      "all_original_fence_bodies_byte_unchanged": true,
+      "expected_fenced_copy_count": 20,
+      "actual_fenced_copy_count": 20,
+      "missing_intended_copy_count": 0,
+      "new_active_html_markers": [],
+      "root_rendered_image_sequence_equal": true,
+      "root_proof_ref": "../root-heading-proposal-proof.json#/rows/11",
+      "root_fix_ref": "../root-heading-fence-fix.json#/files/11"
+    },
+    {
+      "path": "系统安全/Windows/BYOVD 进阶实战 (第一部分) — 利用存在漏洞的驱动 CVE-2025-8061.md",
+      "classification": "confirmed_setext_consumption_minimal_blank_before_opening_fence",
+      "basis": "Captured original/after snapshots; offending raw fence openings alone selected; independent root proof confirms LF-only inverse, unchanged original fence bodies, full code-copy conservation, and no new active HTML markers.",
+      "captured_before_sha256": "88f6e720571ce0c7f49148420375c64afbdaffcf4270f9fa3ce79c6f44ebff9e",
+      "captured_after_sha256": "e0658e670b137cfe82daa754e4e5f0d23354ec1bc5c962dd82c93d41dd20cc89",
+      "captured_after_sha_recomputed": "e0658e670b137cfe82daa754e4e5f0d23354ec1bc5c962dd82c93d41dd20cc89",
+      "sha_matches": true,
+      "strict_raw_fence_pairs": 22,
+      "offending_opening_lines": [
+        203,
+        229,
+        272,
+        277,
+        284,
+        307,
+        312,
+        341,
+        351,
+        354,
+        368,
+        430,
+        446,
+        449,
+        455,
+        476,
+        483,
+        491,
+        496,
+        501,
+        506,
+        512
+      ],
+      "offending_code_token_checks": [
+        {
+          "opening_line": 203,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 229,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 272,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 277,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 284,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 307,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 312,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 341,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 351,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 354,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 368,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 430,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 446,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 449,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 455,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 476,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 483,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 491,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 496,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 501,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 506,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 512,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        }
+      ],
+      "offending_pairs_code_tokens_present": true,
+      "inserted_LF_count": 22,
+      "exact_inverse_removing_only_inserted_LF": true,
+      "frontmatter_unchanged": true,
+      "all_original_fence_bodies_byte_unchanged": true,
+      "expected_fenced_copy_count": 22,
+      "actual_fenced_copy_count": 22,
+      "missing_intended_copy_count": 0,
+      "new_active_html_markers": [],
+      "root_rendered_image_sequence_equal": true,
+      "root_proof_ref": "../root-heading-proposal-proof.json#/rows/12",
+      "root_fix_ref": "../root-heading-fence-fix.json#/files/12"
+    },
+    {
+      "path": "Web安全/开发框架/SnakeYaml/SnakeYaml 中不安全的反序列化漏洞 (CVE-2022-1471) 有感.md",
+      "classification": "confirmed_setext_consumption_minimal_blank_before_opening_fence",
+      "basis": "Captured original/after snapshots; offending raw fence openings alone selected; independent root proof confirms LF-only inverse, unchanged original fence bodies, full code-copy conservation, and no new active HTML markers.",
+      "captured_before_sha256": "8585e544c9e440061a450141a4471cfd28df86de9b0fb65e28b1c1022b714ce3",
+      "captured_after_sha256": "686b22cdf39ad25095f3a1cb9d7631534cc9bfcd304fb0ac1c1e9847aac1b78c",
+      "captured_after_sha_recomputed": "686b22cdf39ad25095f3a1cb9d7631534cc9bfcd304fb0ac1c1e9847aac1b78c",
+      "sha_matches": true,
+      "strict_raw_fence_pairs": 8,
+      "offending_opening_lines": [
+        51,
+        67,
+        75,
+        84,
+        89,
+        115,
+        133,
+        138
+      ],
+      "offending_code_token_checks": [
+        {
+          "opening_line": 51,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 67,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 75,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 84,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 89,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 115,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 133,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 138,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        }
+      ],
+      "offending_pairs_code_tokens_present": true,
+      "inserted_LF_count": 8,
+      "exact_inverse_removing_only_inserted_LF": true,
+      "frontmatter_unchanged": true,
+      "all_original_fence_bodies_byte_unchanged": true,
+      "expected_fenced_copy_count": 8,
+      "actual_fenced_copy_count": 8,
+      "missing_intended_copy_count": 0,
+      "new_active_html_markers": [],
+      "root_rendered_image_sequence_equal": false,
+      "root_proof_ref": "../root-heading-proposal-proof.json#/rows/13",
+      "root_fix_ref": "../root-heading-fence-fix.json#/files/13"
+    },
+    {
+      "path": "Web安全/桌面软件/Chrome/Chrome 浏览器漏洞利用 (三)：CVE-2018-17463 分析与利用.md",
+      "classification": "confirmed_setext_consumption_minimal_blank_before_opening_fence",
+      "basis": "Captured original/after snapshots; offending raw fence openings alone selected; independent root proof confirms LF-only inverse, unchanged original fence bodies, full code-copy conservation, and no new active HTML markers.",
+      "captured_before_sha256": "efb1cf10196ccd272ddaf663056a69ad9033549878490c9485c7798d3a3f525e",
+      "captured_after_sha256": "8e27c8f5e21a898c74b598c3a36e0809ab607d70b86423d6c10eba45557b3507",
+      "captured_after_sha_recomputed": "8e27c8f5e21a898c74b598c3a36e0809ab607d70b86423d6c10eba45557b3507",
+      "sha_matches": true,
+      "strict_raw_fence_pairs": 91,
+      "offending_opening_lines": [
+        166,
+        192,
+        200,
+        224,
+        235,
+        249,
+        255,
+        262,
+        284,
+        332,
+        344,
+        381,
+        413,
+        421,
+        432,
+        470,
+        517,
+        530,
+        537,
+        543,
+        557,
+        563,
+        571,
+        582,
+        589,
+        595,
+        613,
+        634,
+        645,
+        662,
+        675,
+        690,
+        695,
+        700,
+        709,
+        714,
+        730,
+        747,
+        776,
+        792,
+        817,
+        826,
+        834,
+        843,
+        867,
+        872,
+        880,
+        886,
+        891,
+        909,
+        934,
+        940,
+        948,
+        981,
+        987,
+        1001,
+        1014,
+        1025,
+        1031,
+        1047,
+        1096,
+        1103,
+        1115,
+        1131,
+        1138,
+        1151,
+        1156,
+        1167,
+        1177,
+        1186,
+        1193,
+        1200,
+        1209,
+        1215,
+        1226,
+        1314,
+        1325,
+        1342,
+        1350,
+        1360,
+        1384,
+        1391,
+        1398,
+        1406,
+        1412,
+        1421,
+        1426,
+        1436,
+        1448,
+        1465,
+        1473
+      ],
+      "offending_code_token_checks": [
+        {
+          "opening_line": 166,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 192,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 200,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 224,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 235,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 249,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 255,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 262,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 284,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 332,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 344,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 381,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 413,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 421,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 432,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 470,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 517,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 530,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 537,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 543,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 557,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 563,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 571,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 582,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 589,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 595,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 613,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 634,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 645,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 662,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 675,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 690,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 695,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 700,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 709,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 714,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 730,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 747,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 776,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 792,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 817,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 826,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 834,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 843,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 867,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 872,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 880,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 886,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 891,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 909,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 934,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 940,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 948,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 981,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 987,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 1001,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 1014,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 1025,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 1031,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 1047,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 1096,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 1103,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 1115,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 1131,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 1138,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 1151,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 1156,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 1167,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 1177,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 1186,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 1193,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 1200,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 1209,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 1215,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 1226,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 1314,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 1325,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 1342,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 1350,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 1360,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 1384,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 1391,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 1398,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 1406,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 1412,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 1421,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 1426,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 1436,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 1448,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 1465,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 1473,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        }
+      ],
+      "offending_pairs_code_tokens_present": true,
+      "inserted_LF_count": 91,
+      "exact_inverse_removing_only_inserted_LF": true,
+      "frontmatter_unchanged": true,
+      "all_original_fence_bodies_byte_unchanged": true,
+      "expected_fenced_copy_count": 91,
+      "actual_fenced_copy_count": 91,
+      "missing_intended_copy_count": 0,
+      "new_active_html_markers": [],
+      "root_rendered_image_sequence_equal": false,
+      "root_proof_ref": "../root-heading-proposal-proof.json#/rows/14",
+      "root_fix_ref": "../root-heading-fence-fix.json#/files/14"
+    },
+    {
+      "path": "Web安全/桌面软件/Microsoft Office/分析 - Microsoft Excel 远程代码执行漏洞 CVE-2023-36041.md",
+      "classification": "confirmed_setext_consumption_minimal_blank_before_opening_fence",
+      "basis": "Captured original/after snapshots; offending raw fence openings alone selected; independent root proof confirms LF-only inverse, unchanged original fence bodies, full code-copy conservation, and no new active HTML markers.",
+      "captured_before_sha256": "5506120dd662094c12562f0f8ac2d1ae22002f254c51ebe671d0900d0e5fc3ee",
+      "captured_after_sha256": "dd9e009ea9b98736c8c7289b3cedeffba0058d6e469c6db1665bf81ac843ed15",
+      "captured_after_sha_recomputed": "dd9e009ea9b98736c8c7289b3cedeffba0058d6e469c6db1665bf81ac843ed15",
+      "sha_matches": true,
+      "strict_raw_fence_pairs": 5,
+      "offending_opening_lines": [
+        99,
+        148,
+        159,
+        202,
+        217
+      ],
+      "offending_code_token_checks": [
+        {
+          "opening_line": 99,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 148,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 159,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 202,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 217,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        }
+      ],
+      "offending_pairs_code_tokens_present": true,
+      "inserted_LF_count": 5,
+      "exact_inverse_removing_only_inserted_LF": true,
+      "frontmatter_unchanged": true,
+      "all_original_fence_bodies_byte_unchanged": true,
+      "expected_fenced_copy_count": 5,
+      "actual_fenced_copy_count": 5,
+      "missing_intended_copy_count": 0,
+      "new_active_html_markers": [],
+      "root_rendered_image_sequence_equal": false,
+      "root_proof_ref": "../root-heading-proposal-proof.json#/rows/15",
+      "root_fix_ref": "../root-heading-fence-fix.json#/files/15"
+    },
+    {
+      "path": "系统安全/Windows/CVE-2016-2183 windows漏洞修复指南.md",
+      "classification": "confirmed_setext_consumption_minimal_blank_before_opening_fence",
+      "basis": "Captured original/after snapshots; offending raw fence openings alone selected; independent root proof confirms LF-only inverse, unchanged original fence bodies, full code-copy conservation, and no new active HTML markers.",
+      "captured_before_sha256": "52043b920708aeef522ba2fbbbc624a01d23adbe2301533a48860b2f0017f6e3",
+      "captured_after_sha256": "dcd1f3c8b46d620da9a7075dd77443994fb40494dea02f6f35db4eddb9c0284c",
+      "captured_after_sha_recomputed": "dcd1f3c8b46d620da9a7075dd77443994fb40494dea02f6f35db4eddb9c0284c",
+      "sha_matches": true,
+      "strict_raw_fence_pairs": 2,
+      "offending_opening_lines": [
+        71,
+        90
+      ],
+      "offending_code_token_checks": [
+        {
+          "opening_line": 71,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        },
+        {
+          "opening_line": 90,
+          "after_code_token_present": true,
+          "code_token_raw_exact_pair": true
+        }
+      ],
+      "offending_pairs_code_tokens_present": true,
+      "inserted_LF_count": 2,
+      "exact_inverse_removing_only_inserted_LF": true,
+      "frontmatter_unchanged": true,
+      "all_original_fence_bodies_byte_unchanged": true,
+      "expected_fenced_copy_count": 2,
+      "actual_fenced_copy_count": 2,
+      "missing_intended_copy_count": 0,
+      "new_active_html_markers": [],
+      "root_rendered_image_sequence_equal": true,
+      "root_proof_ref": "../root-heading-proposal-proof.json#/rows/16",
+      "root_fix_ref": "../root-heading-fence-fix.json#/files/16"
+    }
+  ],
+  "dlink": {
+    "path": "Web安全/网络设备/D-Link/CVE-2018-17066复现（D-Link命令注入漏洞）.md",
+    "classification": "confirmed_setext_consumption_minimal_blank_before_opening_fence",
+    "pinned_sha256_reconstructed": "9909ad6787e85a443ddff42d23ce5108f39397057c2dc066105ae50a82e6da8f",
+    "pinned_sha_matches": true,
+    "working_snapshot_sha_matches": true,
+    "inserted_LF_count": 23,
+    "raw_fence_pairs_before_after": [
+      23,
+      23
+    ],
+    "all_original_fence_blocks_byte_identical": true,
+    "after_code_tokens_match_all_raw_pairs": true,
+    "heading_with_fence_markers_before_after": [
+      1,
+      0
+    ],
+    "image_tokens_before_after": [
+      2,
+      30
+    ],
+    "image_sequence_equal": false,
+    "image_interpretation": "28 pre-existing Markdown image literals become recognized image tokens after the separator-only correction; no source image value was inserted or removed. Exact bytes and URLs are preserved in dlink-stored-snapshot-proof.json.",
+    "new_html_tokens": [],
+    "active_html_marker_verification": "See root-heading-proposal-proof.json and root-heading-fence-fix.json; root independently reports no new active markers. Token changes in Marked are not equivalent to active HTML markers.",
+    "full_evidence_ref": "dlink-stored-snapshot-proof.json",
+    "local_complete_after_snapshot_sha256": "fabfced58892b5b7f029685ffd7c0a194c99aaccc91f14b2ce6a5e1ba4fde9c7"
+  },
+  "counts": {
+    "confirmed_parent_fixes": 17,
+    "confirmed_dlink": 1,
+    "total_confirmed": 18,
+    "remaining_unresolved": 0,
+    "inserted_LF_parent_fixes": 221,
+    "inserted_LF_dlink": 23,
+    "total_inserted_LF": 244
+  },
+  "not_exercised": [
+    "No repository/current-worktree reads",
+    "No Markdown build or browser render",
+    "No active HTML execution",
+    "No article PoC, scanner, payload, or example target execution/access"
+  ],
+  "parent_proof_summary": {
+    "files": 17,
+    "inserted_LF": 221,
+    "all_inverse_exact": true,
+    "all_frontmatter_unchanged": true,
+    "all_bodies_unchanged": true,
+    "new_active_count": 0,
+    "all_images_sequence_equal": false
+  }
+}

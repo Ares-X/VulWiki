@@ -39,7 +39,7 @@ source_status: "recorded"
 - phpinfo证明文件追加写入未清理；修复只最新版本没有公告
 - 这是正确config_reset请求，与安全设备错误贴wchat正文应关联修复不能把二者混并
 - 历史校订意见（原始示例按归档保留，下述改写不再应用于原始示例）：“http://x.x.x.x/astdfkhl.php”改为“http://x.x.x.x/txzfsrur.php”；“\{”改为“{”；“\}”改为“}”；“max-request: 1”改为“max-request: 2”；HTTP 报文围栏改为 http；残缺指纹退出可执行索引并保留原值。以上意见置于原始示例之外，不覆盖原文证据；未做运行验证
-- 手工回读路径已与写入文件 txzfsrur.php 一致；Nuclei 花括号去掉错误反斜杠、max-request 改为两次请求。模板只是语法/文本修订，verified 为原作者标记；文件追加及 phpinfo 信息暴露副作用仍存在。
+- 原始示例仍保留写入 txzfsrur.php、回读 astdfkhl.php 的文件名不匹配、带反斜杠的 Nuclei 花括号及 max-request: 1；上条为历史改写建议，未应用。verified 是原作者标记，不能视为本库验证；文件追加及 phpinfo 信息暴露副作用仍存在。
 
 ### 操作风险与恢复
 

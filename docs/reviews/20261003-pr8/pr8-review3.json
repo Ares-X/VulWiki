@@ -1,0 +1,93 @@
+{
+  "pr": 8,
+  "reviewer": "review3",
+  "articles": [
+    {
+      "path": "Web安全/网络设备/Citrix NetScaler/NetScaler 日志污染到延迟命令执行分析（CVE-2026-88771）.md",
+      "verdict": "accepted",
+      "evidence": [
+        {
+          "location": "正文‘范围、前提与版本’及版本表；‘来源与核对记录’",
+          "claim_class": "independently-checked-vendor-and-CNA-record",
+          "finding": "Citrix公告称CVE-2026-88771影响默认配置、无需额外功能，适用于客户自管ADC/Gateway；支持分支修复边界为14.1-73.37、13.1-64.23、14.1-73.37 FIPS及13.1-37.279 FIPS/NDcPP，并将云服务与自管设备区分。固定CNA记录确认产品分别为ADC/Gateway和对应范围；文中准确保留公告与CNA对13.1 FIPS版本的连字符/点号写法差异。公告的“默认配置受影响”是厂商主张；版本字符串与编号可从公告/CNA记录独立核对。",
+          "urls": [
+            "https://support.citrix.com/external/article?articleNumber=CTX697096",
+            "https://github.com/CVEProject/cvelistV5/blob/281e4a53d95c7e8cbc68e428a7469e67dc02d960/cves/2026/88xxx/CVE-2026-88771.json"
+          ]
+        },
+        {
+          "location": "正文‘根因与证据层级’及‘公开 PoC 实际做了什么’",
+          "claim_class": "original-researcher-claim-cross-checked-against-fixed-source-description",
+          "finding": "watchTowr文章展示14.1-73.30与14.1-73.37的ns_monuploadd_err.pl差异，说明污染日志被后续Perl命令消费、旧插值存在shell执行语境，补丁采用窄正则提取PPE/PID并以列表参数调用find；文稿保留了日志提取与后续命令插值的阶段区别，并注明这是研究者补丁比较、非本库固件验证。公开PoC触发请求与实际命令执行分开描述，且明确脚本没有即时强制日志消费/结果确认。原作者所称在野利用和漏洞利用链仍明确归因于Citrix/watchTowr，没有作为本库复现事实。",
+          "urls": [
+            "https://labs.watchtowr.com/oh-look-the-foot-gun-went-off-again-citrix-netscaler-preauth-command-injection-cve-2026-88771/",
+            "https://github.com/watchtowrlabs/watchTowr-vs-Citrix-Netscaler-CVE-2026-88771/blob/2e9bae2551e32dddb5b868f8c8dff4acc6e1e7eb/watchTowr-vs-Citrix-Netscaler-CVE-2026-88771.py",
+            "https://github.com/watchtowrlabs/watchTowr-vs-Citrix-Netscaler-CVE-2026-88771/blob/2e9bae2551e32dddb5b868f8c8dff4acc6e1e7eb/README.md"
+          ]
+        },
+        {
+          "location": "标题、frontmatter primary_identifiers、全库 Markdown 搜索",
+          "claim_class": "repository-duplicate-check",
+          "finding": "标题和主编号一致；搜索全库正文中的CVE-2026-88771未发现命中，搜索Citrix/NetScaler只找到相邻但编号/根因不同的独立文章，未发现确认重复或相同实体入口。",
+          "urls": []
+        },
+        {
+          "location": "全文Markdown结构及代码/版本表呈现",
+          "claim_class": "format-review",
+          "finding": "Frontmatter字符串格式完整，标题/层级、表格、段落及来源链接结构清晰；未发现围栏错配或把代码片段误呈现为可执行HTML的问题。公开测试值passwd=x按原样保留，未脱敏。"
+        }
+      ],
+      "required_changes": [],
+      "unknowns": [
+        "Citrix公告和CNA记录能确认公告范围与版本字符串，但未独立验证每一历史固件包中实际补丁内容；文稿已将研究者补丁比较与固件验证边界讲清。",
+        "文章内在野利用、日志写入入口的完整可达性及后续日志消费时机取自厂商/原作者资料，属于来源主张；本审查没有访问目标或做实验。"
+      ]
+    },
+    {
+      "path": "Web安全/邮件系统/Nodemailer/Nodemailer 地址解析与收件人去重二次复杂度拒绝服务（GHSA-2x7j-588g-ccc2）.md",
+      "verdict": "accepted",
+      "evidence": [
+        {
+          "location": "正文‘影响与前提’、‘根因’、‘公开复现资料的证据范围’",
+          "claim_class": "maintainer-advisory-claims-separated-from-fixed-source-confirmation",
+          "finding": "官方GHSA确认受影响版本<9.1.0、修复版本9.1.0、同步解析可阻塞Node事件循环、影响addressparser与结构化地址处理路径，并区分三类二次复杂度路径及concat参数展开RangeError修复。GHSA的计时数据被清楚归因给原作者，没有说成本库测试结果。固定34da642提交信息/差异确认集合需跨多个地址头复用以避免反复构建导致headers×recipients成本；文稿准确说明重复同一地址的PoC并不足以覆盖不同收件人去重路径。发布版本与边界链接齐备。",
+          "urls": [
+            "https://github.com/nodemailer/nodemailer/security/advisories/GHSA-2x7j-588g-ccc2",
+            "https://github.com/nodemailer/nodemailer/commit/9116da9528c6524cefaed75185602a7e85d20434",
+            "https://github.com/nodemailer/nodemailer/commit/7cc38af418ffa6fc7e86085195ca5ca681694b3e",
+            "https://github.com/nodemailer/nodemailer/commit/34da64282dcdc9b0581c721a27ab2fa226673150",
+            "https://github.com/nodemailer/nodemailer/commit/83b8c48cbdb8b3116f2e1ba84af755b2c5661c0f",
+            "https://github.com/nodemailer/nodemailer/commit/7279ac8dee4f66c032981e6e51e3e7210ad0dcbf",
+            "https://github.com/nodemailer/nodemailer/releases/tag/v9.1.0"
+          ]
+        },
+        {
+          "location": "frontmatter primary_identifiers/referenced_identifiers; body CVE-2025-14874 distinction",
+          "claim_class": "identifier-role-and-scope-review",
+          "finding": "GHSA-2x7j-588g-ccc2是主编号，CVE-2025-14874只作相关但不同递归问题引用；主编号和正文标题吻合。GHSA页面当前未列CVE编号，文稿也未把引用CVE误升为本问题主编号。"
+        },
+        {
+          "location": "标题及全库Markdown搜索",
+          "claim_class": "repository-duplicate-check",
+          "finding": "全库搜索Nodemailer、addressparser、GHSA-2x7j-588g-ccc2及CVE-2025-14874未发现文章命中；没有确认重复或需合并的同产品主文。"
+        },
+        {
+          "location": "全文Markdown结构与副作用说明",
+          "claim_class": "format-review",
+          "finding": "各级标题、编号列表、代码行内标记与来源链接使用恰当；把CPU/内存阻塞、SMTP实际发送副作用及未运行实验边界明确写出，未见HTML活内容或代码围栏格式问题。原作者公开性能值保留并归因。"
+        }
+      ],
+      "required_changes": [],
+      "unknowns": [
+        "时间测量、Node版本和输入规模结果是GHSA报告人结果，本轮只核查公告文字和固定源码提交，不独立复跑性能实验。",
+        "本轮未安装npm依赖或运行回归测试；依赖运行环境、应用侧输入可达性和SMTP整合副作用仍需由实际使用方按其集成评估。"
+      ]
+    }
+  ],
+  "review_scope": {
+    "sources": "已浏览重要厂商公告、官方CNA记录、原作者公开分析、Nodemailer官方GHSA、固定源码提交和发布记录；外部主张与直接核对的源码/记录事实分开标识。",
+    "repository": "只读搜索当前VulWiki Markdown，以编号、产品、包名与函数名检查重复；未发现确认重复。",
+    "safety": "未执行PoC、依赖、文章代码、HTML或附件，未访问示例目标。",
+    "content_and_layout": "读完任务包中两篇完整Markdown及项目CONTRIBUTING.md与docs/CONTENT-SCHEMA.md；未写入仓库。"
+  }
+}

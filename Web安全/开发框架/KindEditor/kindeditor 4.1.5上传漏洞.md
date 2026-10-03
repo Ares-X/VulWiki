@@ -51,9 +51,7 @@ schema_version: "1"
 在google中批量搜索：
 
 
-```text
-[![复制代码](./.resource/kindeditor4.1.5上传漏洞/media/img-48304ba5.gif)](javascript:void(0);)
-```
+> 原网页控件或署名（归档文字，不属于示例代码）：`[![复制代码](./.resource/kindeditor4.1.5上传漏洞/media/img-48304ba5.gif)](javascript:void(0);)`
 
 
 ```
@@ -71,9 +69,7 @@ inurl:gov.cn/kindeditor/
 ```
 
 
-```text
-[![复制代码](./.resource/kindeditor4.1.5上传漏洞/media/img-48304ba5.gif)](javascript:void(0);)
-```
+> 原网页控件或署名（归档文字，不属于示例代码）：`[![复制代码](./.resource/kindeditor4.1.5上传漏洞/media/img-48304ba5.gif)](javascript:void(0);)`
 
 
  
@@ -85,9 +81,7 @@ inurl:gov.cn/kindeditor/
 根本脚本语言自定义不同的上传地址，上传之前有必要验证文件 upload_json.* 的存在
 
 
-```text
-[![复制代码](./.resource/kindeditor4.1.5上传漏洞/media/img-48304ba5.gif)](javascript:void(0);)
-```
+> 原网页控件或署名（归档文字，不属于示例代码）：`[![复制代码](./.resource/kindeditor4.1.5上传漏洞/media/img-48304ba5.gif)](javascript:void(0);)`
 
 
 ```
@@ -101,17 +95,13 @@ inurl:gov.cn/kindeditor/
 ```
 
 
-```text
-[![复制代码](./.resource/kindeditor4.1.5上传漏洞/media/img-48304ba5.gif)](javascript:void(0);)
-```
+> 原网页控件或署名（归档文字，不属于示例代码）：`[![复制代码](./.resource/kindeditor4.1.5上传漏洞/media/img-48304ba5.gif)](javascript:void(0);)`
 
 
 可目录变量查看是否存在那种脚本上传漏洞:
 
 
-```text
-[![复制代码](./.resource/kindeditor4.1.5上传漏洞/media/img-48304ba5.gif)](javascript:void(0);)
-```
+> 原网页控件或署名（归档文字，不属于示例代码）：`[![复制代码](./.resource/kindeditor4.1.5上传漏洞/media/img-48304ba5.gif)](javascript:void(0);)`
 
 
 ```
@@ -125,9 +115,7 @@ kindeditor/php/upload_json.php?dir=file
 ```
 
 
-```text
-[![复制代码](./.resource/kindeditor4.1.5上传漏洞/media/img-48304ba5.gif)](javascript:void(0);)
-```
+> 原网页控件或署名（归档文字，不属于示例代码）：`[![复制代码](./.resource/kindeditor4.1.5上传漏洞/media/img-48304ba5.gif)](javascript:void(0);)`
 
 
 ## 0x03 漏洞利用
@@ -145,9 +133,7 @@ http://www.xxx.org/kindeditor//kindeditor.js
 2.版本是4.1.10可以进行尝试如下路径是否存在有必要验证文件 upload_json.* 
 
 
-```text
-[![复制代码](./.resource/kindeditor4.1.5上传漏洞/media/img-48304ba5.gif)](javascript:void(0);)
-```
+> 原网页控件或署名（归档文字，不属于示例代码）：`[![复制代码](./.resource/kindeditor4.1.5上传漏洞/media/img-48304ba5.gif)](javascript:void(0);)`
 
 
 ```
@@ -161,9 +147,7 @@ kindeditor/php/upload_json.php?dir=file
 ```
 
 
-```text
-[![复制代码](./.resource/kindeditor4.1.5上传漏洞/media/img-48304ba5.gif)](javascript:void(0);)
-```
+> 原网页控件或署名（归档文字，不属于示例代码）：`[![复制代码](./.resource/kindeditor4.1.5上传漏洞/media/img-48304ba5.gif)](javascript:void(0);)`
 
 
 3.如下图可以看出是存在jsp上传点:
@@ -179,9 +163,7 @@ http://www.xxx.org/kindeditor/jsp/upload_json.jsp?dir=file
 4.写出下面的构造上传poc,这里需要修改`<script>...<script>`以及url : 的内容,根据实际情况修改.
 
 
-```text
-[![复制代码](./.resource/kindeditor4.1.5上传漏洞/media/img-48304ba5.gif)](javascript:void(0);)
-```
+> 原网页控件或署名（归档文字，不属于示例代码）：`[![复制代码](./.resource/kindeditor4.1.5上传漏洞/media/img-48304ba5.gif)](javascript:void(0);)`
 
 
 ```
@@ -289,9 +271,7 @@ uploadbutton.submit();
 ```
 
 
-```text
-[![复制代码](./.resource/kindeditor4.1.5上传漏洞/media/img-48304ba5.gif)](javascript:void(0);)
-```
+> 原网页控件或署名（归档文字，不属于示例代码）：`[![复制代码](./.resource/kindeditor4.1.5上传漏洞/media/img-48304ba5.gif)](javascript:void(0);)`
 
 
  

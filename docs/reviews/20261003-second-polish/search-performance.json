@@ -1,0 +1,152 @@
+{
+  "catalogReadParseMs": 10.436125,
+  "prepareMs": 12.582624999999997,
+  "fulltextReadParseMs": 90.32783299999998,
+  "normalizeBodiesMs": 109.07441700000001,
+  "flowiseCandidateMetadataBehavior": "asserted; candidate discoverable and not primary",
+  "documents": 5526,
+  "measurements": [
+    {
+      "query": "CVE-2024-41107",
+      "scope": "metadata",
+      "sampleMs": [
+        2.673082999999991,
+        2.8017499999999984,
+        2.2484169999999892
+      ],
+      "medianMs": 2.673082999999991,
+      "total": 1,
+      "maximumReturned": 1,
+      "identifierMatches": [
+        {
+          "path": "Web安全/中间件/Apache CloudStack/Apache CloudStack 中标识为 CVE-2024-41107 的严重漏洞的 PoC",
+          "identifierMatches": [
+            {
+              "identifier": "CVE-2024-41107",
+              "role": "primary",
+              "sourceId": "vw-6b76c5b59e5847ee89a97e59"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "query": "CVE-2024-41107",
+      "scope": "fulltext",
+      "sampleMs": [
+        10.395457999999962,
+        9.663250000000005,
+        9.748290999999995
+      ],
+      "medianMs": 9.748290999999995,
+      "total": 1,
+      "maximumReturned": 1,
+      "identifierMatches": [
+        {
+          "path": "Web安全/中间件/Apache CloudStack/Apache CloudStack 中标识为 CVE-2024-41107 的严重漏洞的 PoC",
+          "identifierMatches": [
+            {
+              "identifier": "CVE-2024-41107",
+              "role": "primary",
+              "sourceId": "vw-6b76c5b59e5847ee89a97e59"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "query": "CVE-2024-26319",
+      "scope": "metadata",
+      "sampleMs": [
+        2.251166000000012,
+        3.936290999999983,
+        2.1001249999999914
+      ],
+      "medianMs": 2.251166000000012,
+      "total": 1,
+      "maximumReturned": 1,
+      "identifierMatches": [
+        {
+          "path": "Web安全/AI应用/AI综合/CVE-2025-26319：FlowiseAI未授权任意文件写入漏洞",
+          "identifierMatches": [
+            {
+              "identifier": "CVE-2024-26319",
+              "role": "candidate",
+              "sourceId": "vw-89afe6b30640b644498fee91"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "query": "CVE-2024-26319",
+      "scope": "fulltext",
+      "sampleMs": [
+        10.297290999999973,
+        9.900208999999961,
+        10.015000000000043
+      ],
+      "medianMs": 10.015000000000043,
+      "total": 1,
+      "maximumReturned": 1,
+      "identifierMatches": [
+        {
+          "path": "Web安全/AI应用/AI综合/CVE-2025-26319：FlowiseAI未授权任意文件写入漏洞",
+          "identifierMatches": [
+            {
+              "identifier": "CVE-2024-26319",
+              "role": "candidate",
+              "sourceId": "vw-89afe6b30640b644498fee91"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "query": "Apache",
+      "scope": "metadata",
+      "sampleMs": [
+        3.599290999999994,
+        3.1586249999999723,
+        1.1396250000000236
+      ],
+      "medianMs": 3.1586249999999723,
+      "total": 365,
+      "maximumReturned": 60,
+      "identifierMatches": [
+        {
+          "path": "IOT安全/Apache/Apache APISIX Dashboard API权限绕过导致RCE CVE-2021-45232",
+          "identifierMatches": []
+        },
+        {
+          "path": "Web安全/中间件/Apache APISIX/0day EXP Apache APISIX 2.12.1 远程执行代码 （RCE）",
+          "identifierMatches": []
+        }
+      ]
+    },
+    {
+      "query": "Apache",
+      "scope": "fulltext",
+      "sampleMs": [
+        19.93183399999998,
+        19.508125000000007,
+        17.86333300000001
+      ],
+      "medianMs": 19.508125000000007,
+      "total": 631,
+      "maximumReturned": 60,
+      "identifierMatches": [
+        {
+          "path": "IOT安全/Apache/Apache APISIX Dashboard API权限绕过导致RCE CVE-2021-45232",
+          "identifierMatches": []
+        },
+        {
+          "path": "Web安全/中间件/Apache APISIX/0day EXP Apache APISIX 2.12.1 远程执行代码 （RCE）",
+          "identifierMatches": []
+        }
+      ]
+    }
+  ],
+  "node": "v26.5.0",
+  "qualification": "Local Node.js CPU/read benchmark over generated index strings, not browser/network performance. Never evaluates article text, HTML or payloads."
+}

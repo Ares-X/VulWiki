@@ -8,6 +8,10 @@
 
 - [锐捷AC无线控制器存在命令执行漏洞](../IOT%E5%AE%89%E5%85%A8/Ruijie/%E9%94%90%E6%8D%B7AC%E6%97%A0%E7%BA%BF%E6%8E%A7%E5%88%B6%E5%99%A8%E5%AD%98%E5%9C%A8%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md) [vulnerability; not-reproduced; needs-review]
 
+## Ruijie EG3200
+
+- [锐捷易网关 远程命令执行](../IOT%E5%AE%89%E5%85%A8/Ruijie/%E9%94%90%E6%8D%B7%E6%98%93%E7%BD%91%E5%85%B3%20%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C.md) [analysis; not-reproduced; needs-review]
+
 ## Ruijie EG易网关
 
 - [锐捷 EG timeout.php 已认证文件读取](../IOT%E5%AE%89%E5%85%A8/Ruijie/%E9%94%90%E6%8D%B7EG%E6%98%93%E7%BD%91%E5%85%B3timeout.php%E5%90%8E%E5%8F%B0%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E.md) [vulnerability; not-reproduced; needs-review]

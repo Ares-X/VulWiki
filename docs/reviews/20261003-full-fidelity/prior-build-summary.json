@@ -1,0 +1,144 @@
+{
+  "scope": {
+    "content_commit": "8f2a9e14575928bb5f086902c786da66f4a65aa9",
+    "blog_commit": "112d62a05ee5417b57f543bc84979595b42e8943",
+    "theme_commit": "2eb1e8ab1c3f7d4b148a1dd31307f38461fa724f",
+    "build_public": "/var/folders/4w/72x3w5lj24l__5yr852p1lj80000gn/T/vulwiki-pr6-fidelity-release-20261003-rll_llsz/build/public",
+    "public_wiki": "/var/folders/4w/72x3w5lj24l__5yr852p1lj80000gn/T/vulwiki-pr6-fidelity-release-20261003-rll_llsz/build/public/wiki/VulWiki",
+    "manifest_articles": 5654,
+    "working_tree_markdown_overlays_unbuilt": 154,
+    "overlay_count_note": "Raw `git status --porcelain -z` reports 154 modified Markdown paths at final count; the pinned 8f2a build intentionally excludes the dirty working tree, so this is not treated as a build defect."
+  },
+  "markdown": {
+    "checked": 5654,
+    "exact_sha_and_blob_matches": 5654,
+    "errors": []
+  },
+  "assets": {
+    "classifier": "tracked .png/.jpg/.pdf/.gif/.shtml/.webp/.jpeg files, extensionless /media files, and Web安全/开发框架/PHP/exp.py",
+    "archive_count": 7582,
+    "current_count": 7587,
+    "expected_additions": [
+      "IOT安全/天翼创维/POC_Details/1.天翼创维awifi路由器存在多处未授权访问漏洞.pdf",
+      "Web安全/CMS内容/Finecms/FineCMS最新版5.0.8两处getshell/2.png",
+      "Web安全/CMS内容/S-CMS/POC_Details/S-CMS PHP v30存在SQL注入漏洞.pdf",
+      "Web安全/开发框架/PHP/exp.py",
+      "Web安全/网络设备/rConfig/books/rConfig v3.9.2 RCE漏洞分析.pdf"
+    ],
+    "removed": [],
+    "checked": 7587,
+    "present_byte_identical": 7574,
+    "missing_count": 13,
+    "missing": [
+      "Web安全/ERP企业/宏景/.resource/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091316282.png",
+      "Web安全/ERP企业/宏景/.resource/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091425762.png",
+      "Web安全/ERP企业/宏景/.resource/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091523225.png",
+      "Web安全/ERP企业/宏景/.resource/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091610016.png",
+      "Web安全/ERP企业/宏景/.resource/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091316282.png",
+      "Web安全/ERP企业/宏景/.resource/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091425762.png",
+      "Web安全/ERP企业/宏景/.resource/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091523225.png",
+      "Web安全/ERP企业/宏景/.resource/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091610016.png",
+      "Web安全/开发框架/WeiPHP/.resource/.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162320334.png",
+      "Web安全/开发框架/WeiPHP/.resource/.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162320455.png",
+      "Web安全/开发框架/WeiPHP/.resource/.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162320938.png",
+      "Web安全/开发框架/WeiPHP/.resource/.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162320956.png",
+      "Web安全/开发框架/WeiPHP/.resource/.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162321696.png"
+    ],
+    "mismatch_count": 0,
+    "mismatches": []
+  },
+  "tree_comparison": {
+    "pinned_tracked_files": 13399,
+    "public_files": 13385,
+    "missing_tracked_paths_count": 16,
+    "missing_tracked_paths": [
+      ".gitattributes",
+      ".github/workflows/content-quality.yml",
+      ".gitignore",
+      "Web安全/ERP企业/宏景/.resource/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091316282.png",
+      "Web安全/ERP企业/宏景/.resource/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091425762.png",
+      "Web安全/ERP企业/宏景/.resource/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091523225.png",
+      "Web安全/ERP企业/宏景/.resource/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091610016.png",
+      "Web安全/ERP企业/宏景/.resource/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091316282.png",
+      "Web安全/ERP企业/宏景/.resource/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091425762.png",
+      "Web安全/ERP企业/宏景/.resource/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091523225.png",
+      "Web安全/ERP企业/宏景/.resource/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091610016.png",
+      "Web安全/开发框架/WeiPHP/.resource/.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162320334.png",
+      "Web安全/开发框架/WeiPHP/.resource/.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162320455.png",
+      "Web安全/开发框架/WeiPHP/.resource/.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162320938.png",
+      "Web安全/开发框架/WeiPHP/.resource/.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162320956.png",
+      "Web安全/开发框架/WeiPHP/.resource/.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162321696.png"
+    ],
+    "extra_public_paths": [
+      "Web安全/CMS内容/S-CMS/S-CMS企业建站系统PHP版v3.0后台存在CSRF可添加管理员权限账号.md",
+      "Web安全/商业软件/ShopXO/ShopXO download 任意文件读取漏洞 CNVD-2021-15822.md"
+    ],
+    "nonarticle_missing_count": 16,
+    "blob_mismatches_count": 0,
+    "blob_mismatches": []
+  },
+  "search_data": {
+    "catalog_version": "736e29689f3a2077",
+    "catalog_documents": 5501,
+    "source_count": 5595,
+    "excluded_count": 59,
+    "catalog_metadata_keys": [
+      [
+        "product",
+        "related",
+        "status",
+        "title",
+        "verification"
+      ]
+    ],
+    "search_body_count": 5501,
+    "query_url_frontmatter_field_lines_scanned": 7053,
+    "query_url_candidates": 14,
+    "candidate_values_in_catalog": 0,
+    "candidate_values_in_search_body": 10,
+    "interpretation": "source URL metadata fields are not emitted into the catalog schema; exact candidate frontmatter lines remain in byte-identical public Markdown; search bodies are derived from article bodies after frontmatter removal; matches in body are original body content, not catalog metadata."
+  },
+  "runtime_static_review": {
+    "scripts": [
+      {
+        "source_path": "source/wiki/wiki.js",
+        "pinned_sha256": "e63aa8b644d6d8bfd3a401c0b6d982e3c31a0921910fe2d50a8a1fc1b3e746af",
+        "built_path": "/var/folders/4w/72x3w5lj24l__5yr852p1lj80000gn/T/vulwiki-pr6-fidelity-release-20261003-rll_llsz/build/public/wiki/wiki.js",
+        "built_sha256": "e63aa8b644d6d8bfd3a401c0b6d982e3c31a0921910fe2d50a8a1fc1b3e746af",
+        "byte_identical": true
+      },
+      {
+        "source_path": "source/wiki/wiki-catalog.js",
+        "pinned_sha256": "8cc7e7934688250601163bccef008185cae22fb6b9d8450f03f634225b9970ce",
+        "built_path": "/var/folders/4w/72x3w5lj24l__5yr852p1lj80000gn/T/vulwiki-pr6-fidelity-release-20261003-rll_llsz/build/public/wiki/wiki-catalog.js",
+        "built_sha256": "8cc7e7934688250601163bccef008185cae22fb6b9d8450f03f634225b9970ce",
+        "byte_identical": true
+      },
+      {
+        "source_path": "source/wiki/wiki-search-worker.js",
+        "pinned_sha256": "fdad699a74181f5bda8c314c1d995fc3cd382d7be419a5e12529b24fd9cec906",
+        "built_path": "/var/folders/4w/72x3w5lj24l__5yr852p1lj80000gn/T/vulwiki-pr6-fidelity-release-20261003-rll_llsz/build/public/wiki/wiki-search-worker.js",
+        "built_sha256": "fdad699a74181f5bda8c314c1d995fc3cd382d7be419a5e12529b24fd9cec906",
+        "byte_identical": true
+      }
+    ],
+    "beforeEach_observation": "Pinned wiki.js is byte-identical in build. Its beforeEach resets in-memory metadata; rewrites relative Markdown links only on homepage routes / and /README, skips scheme/absolute/hash/already-prefixed targets, then parses simple scalar frontmatter and returns markdown after frontmatter. No source file is written. This transformation changes rendered in-memory text for homepage relative links and removes simple scalar frontmatter from rendered Markdown; parsing trims/unquotes values for display, but raw generated Markdown remains byte-identical. wiki-search-worker builds excerpts by slicing body text; excerpt presentation may cut a URL, while stored article/search-body data is not changed."
+  },
+  "checks": {
+    "manifest_article_count": 5654,
+    "manifest_shard_count": 3,
+    "manifest_shards_declared_counts_sum": 5654,
+    "release_selected_from_current_pointer": true,
+    "source_commit_and_blob_checks_read_only": true,
+    "no_network": true,
+    "no_repo_writes": true,
+    "no_build_or_deploy": true
+  },
+  "not_exercised": [
+    "No browser/Docsify runtime execution or screenshot.",
+    "No public deployment/live-site/cache check.",
+    "No PoC, article payload, HTML, or script execution.",
+    "No network fetch or source URL reachability test.",
+    "Current working-tree tracked Markdown paths are dirty (154 by read-only porcelain count); these overlays are intentionally not represented in the selected pinned 8f2a build."
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "path": "/usr/share/man/man5/sshd_config.5",
+  "identifier": "AuthorizedKeysFile",
+  "incorrect_archive_identifier": "AuthorizedKeyFiles",
+  "evidence": [
+    {
+      "line": 258,
+      "text": ".Cm AuthorizedKeysFile"
+    },
+    {
+      "line": 277,
+      "text": ".It Cm AuthorizedKeysFile"
+    },
+    {
+      "line": 282,
+      "text": ".Cm AuthorizedKeysFile"
+    },
+    {
+      "line": 287,
+      "text": ".Cm AuthorizedKeysFile"
+    },
+    {
+      "line": 1313,
+      "text": ".Cm AuthorizedKeysFile ,"
+    },
+    {
+      "line": 2247,
+      "text": ".Cm AuthorizedKeysFile"
+    }
+  ],
+  "scope": "local OpenSSH manual static identifier evidence; no new article source or external access"
+}

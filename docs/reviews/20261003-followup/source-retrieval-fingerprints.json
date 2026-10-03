@@ -1,0 +1,93 @@
+[
+  {
+    "path": "Web安全/中间件/Apache Solr/CVE-2026-44825 _ Apache Solr AuthTool Hardcoded Credentials Vulnerabil.md",
+    "source_url": "https://horizon3.ai/attack-research/vulnerabilities/cve-2026-44825/",
+    "review_date": "2026-10-03",
+    "retrieval": {
+      "http_status": 200,
+      "final_url": "https://horizon3.ai/attack-research/vulnerabilities/cve-2026-44825/",
+      "content_type": "text/html; charset=UTF-8",
+      "response_bytes": 330839,
+      "sha256_raw_response": "f994c11f1dfd74eeea6f5d4c70b8bfb45f915005eff0fd39516121c95fdcb87d"
+    },
+    "evidence_basis": "Horizon3 页面正文第 285–300、312–330 行：标题、组件、机制、账户、权限及来源所述影响版本；第 317–325 行：受影响/不受影响条件与缓解/修复说法。页面另列 Apache Advisory、CVE Record、Apache JIRA SOLR-18233。"
+  },
+  {
+    "path": "Web安全/其他软件/杂项/CVE-2025-12480.md",
+    "source_url": "https://horizon3.ai/attack-research/vulnerabilities/cve-2025-12480/",
+    "review_date": "2026-10-03",
+    "retrieval": {
+      "http_status": 200,
+      "final_url": "https://horizon3.ai/attack-research/vulnerabilities/cve-2025-12480/",
+      "content_type": "text/html; charset=UTF-8",
+      "response_bytes": 310916,
+      "sha256_raw_response": "9324866af23793ece03ec58c4db4c13e18d030c40383d0746baf0c58c0c7343c"
+    },
+    "evidence_basis": "Horizon3 正文第 285–301 行描述产品、Host 头、管理员账户、执行链和影响；第 304–319 行列补丁版本、发布日期、被观察攻击版本与缓解。文章提及 Google Threat Intelligence Group、CISA KEV 和 Gladinet 更新资料。"
+  },
+  {
+    "path": "Web安全/其他软件/杂项/CVE-2025-54309.md",
+    "source_url": "https://horizon3.ai/attack-research/vulnerabilities/cve-2025-54309/",
+    "review_date": "2026-10-03",
+    "retrieval": {
+      "http_status": 200,
+      "final_url": "https://horizon3.ai/attack-research/vulnerabilities/cve-2025-54309/",
+      "content_type": "text/html; charset=UTF-8",
+      "response_bytes": 305710,
+      "sha256_raw_response": "dd4631922cb1cdcc65e5408594dcf5ca33244bf805a45fb14fb5c6d32850357d"
+    },
+    "evidence_basis": "Horizon3 正文第 285–306 行：产品、两条版本边界、DMZ proxy 条件、远程未认证 HTTPS 影响及参考链接（NVD、CrushFTP 厂商公告）。"
+  },
+  {
+    "path": "Web安全/其他软件/杂项/CVE-2025-59287.md",
+    "source_url": "https://horizon3.ai/attack-research/vulnerabilities/cve-2025-59287/",
+    "review_date": "2026-10-03",
+    "retrieval": {
+      "http_status": 200,
+      "final_url": "https://horizon3.ai/attack-research/vulnerabilities/cve-2025-59287/",
+      "content_type": "text/html; charset=UTF-8",
+      "response_bytes": 298309,
+      "sha256_raw_response": "d3c5947d5876a5a79633160fb92e4f49fd6d7ea79a85f180c3b2007a69478558"
+    },
+    "evidence_basis": "Horizon3 正文第 285–299 行：WSUS、反序列化机制、SYSTEM、交互条件与版本时间线主张；第 310–316 行：带外修复和有服务影响的临时措施，页面链接 Microsoft 带外更新。"
+  },
+  {
+    "path": "Web安全/其他软件/杂项/CVE-2025-7776.md",
+    "source_url": "https://horizon3.ai/attack-research/vulnerabilities/cve-2025-7776/",
+    "review_date": "2026-10-03",
+    "retrieval": {
+      "http_status": 200,
+      "final_url": "https://horizon3.ai/attack-research/vulnerabilities/cve-2025-7776/",
+      "content_type": "text/html; charset=UTF-8",
+      "response_bytes": 297407,
+      "sha256_raw_response": "506a903651f3b1ffad709034a6e69473d8912ed180a7ff9b666b45c9aafc9f4a"
+    },
+    "evidence_basis": "Horizon3 正文第 285–298 行：标题、产品、端点、内存破坏及未认证拒绝服务主张；列出 Citrix Security Bulletin CTX694938 和 NVD 参考。正文未提供版本列表。"
+  },
+  {
+    "path": "Web安全/其他软件/杂项/CVE-2025-9316, CVE-2025-11700.md",
+    "source_url": "https://horizon3.ai/attack-research/vulnerabilities/n-able-n-central-vulnerabilities-cve-2025-9316-cve-2025-11700/",
+    "review_date": "2026-10-03",
+    "retrieval": {
+      "http_status": 200,
+      "final_url": "https://horizon3.ai/attack-research/vulnerabilities/n-able-n-central-vulnerabilities-cve-2025-9316-cve-2025-11700/",
+      "content_type": "text/html; charset=UTF-8",
+      "response_bytes": 310837,
+      "sha256_raw_response": "fd9b0643d41bb302220a4d67594644521640df8dc9b034eabf897135f29cdaaf"
+    },
+    "evidence_basis": "Horizon3 正文第 285–304 行：两编号、设备、机制与链条；第 310–334 行：2025.4、受影响范围、临时网络限制、迁移影响及 N-able 两份公告链接。"
+  },
+  {
+    "path": "Web安全/网络设备/Check Point/CVE-2026-50751 _ Check Point Security Gateway Improper Authentication.md",
+    "source_url": "https://horizon3.ai/attack-research/vulnerabilities/cve-2026-50751/",
+    "review_date": "2026-10-03",
+    "retrieval": {
+      "http_status": 200,
+      "final_url": "https://horizon3.ai/attack-research/vulnerabilities/cve-2026-50751/",
+      "content_type": "text/html; charset=UTF-8",
+      "response_bytes": 337214,
+      "sha256_raw_response": "a8cb2ba1dcaed73b93c047e6fcf81015394a1e37c9c4714b815916081782802a"
+    },
+    "evidence_basis": "Horizon3 正文第 285–301 行：产品、IKEv1、无密码 VPN 会话及限制；第 325–357 行：部署/版本列表、补丁建议、时间线及 Check Point 公告和 NVD 链接。"
+  }
+]

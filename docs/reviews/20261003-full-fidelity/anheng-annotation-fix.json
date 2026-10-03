@@ -1,0 +1,12 @@
+{
+  "path": "IOT安全/安恒明御/漏洞复现 安恒明御安全网关 aaa portal auth config reset 远程命令执行漏洞.md",
+  "before_sha256": "74d38ad2748f116a869f17bec95ba8eb62bdf2b035dc2cc4b902b71db938936e",
+  "after_sha256": "19b80305e98eb96a7a8c0b54e656e0a02d1f98d19aea3cbe529dd70c98ead91d",
+  "original_body_after_review_boundary_unchanged": true,
+  "old_lines": [
+    "- 手工回读路径已与写入文件 txzfsrur.php 一致；Nuclei 花括号去掉错误反斜杠、max-request 改为两次请求。模板只是语法/文本修订，verified 为原作者标记；文件追加及 phpinfo 信息暴露副作用仍存在。"
+  ],
+  "new_lines": [
+    "- 原始示例仍保留写入 txzfsrur.php、回读 astdfkhl.php 的文件名不匹配、带反斜杠的 Nuclei 花括号及 max-request: 1；上条为历史改写建议，未应用。verified 是原作者标记，不能视为本库验证；文件追加及 phpinfo 信息暴露副作用仍存在。"
+  ]
+}

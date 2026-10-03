@@ -133,7 +133,7 @@ Git Hooks[4]
  文件中的 Git hooksPath  
  硬编码到一个安全位置：  
   
-../../git_hooks/<remote_dependency_name>  
+`../../git_hooks/<remote_dependency_name>`  
 #### 2.1.2 突破口  
   
 我们知道每个 LookML 项目本质上都是一个 Git 仓库。这意味着在文件系统的某个地方，会有一个控制其行为的 .git  

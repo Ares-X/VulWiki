@@ -1,0 +1,12 @@
+{
+  "scope_articles": 726,
+  "archive_to_working_candidate_lines_rechecked": 411,
+  "line_context_matches": 411,
+  "unmatched_candidates": 0,
+  "confirmed_findings": 1,
+  "unresolved_candidates": 2,
+  "specific_finding": "Redis CVE-2025-62507 archived fix-version claim 8.3.2 changed to 8.2.3; current correction note records correction and source but not the exact original value. Suggested editorial note retains provenance without restoring old value as current fact.",
+  "retained_companion_ledger": "additional-marked-node-and-archive-diff-ledger.jsonl contains the complete 1456-entry archive line and Marked-token candidate scan.",
+  "method": "Compared each exact root candidate (path, archive body line, full original line) with its current-context record and prior exact-line review evidence when present. Re-read Redis article correction and changed line directly. Existing prior dispositions were treated as evidence only where their exact line and current local context could be checked. No network, execution, target access, masking, or repository edits. Technical fact correctness requiring independent outside evidence remains unresolved.",
+  "repo_modified": false
+}

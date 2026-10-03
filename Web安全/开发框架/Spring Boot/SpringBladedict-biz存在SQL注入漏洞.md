@@ -64,10 +64,7 @@ c4ca4238a0b923820dcc509a6f75849
 
 sqlmap
 
-```java
-
-```
-
+> 原归档与公开镜像此处的 sqlmap 命令代码块均为空；Yuque 原文受限，原始命令与参数未能恢复。<https://raw.githubusercontent.com/DMW11525708/wiki/main/SpringBlade/SpringBladedict-biz存在SQL注入漏洞.md>
 
 > 原文: <https://www.yuque.com/xiaokp7/ocvun2/wpz38hmzaeugpctm>
 

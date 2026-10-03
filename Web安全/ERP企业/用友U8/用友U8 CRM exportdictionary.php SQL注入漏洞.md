@@ -105,7 +105,7 @@ Connection: close
 
 Require local
 
-</Directory>
+`</Directory>`
 
 其中，需要将<Directory "D:/U8SOFT/turbocrm70/code/www/background">中的u8安装路径修改为正确的安装路径
 

@@ -8,6 +8,10 @@
 
 - [攻击 Android Binder：对 CVE-2023-20938 的分析和利用](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Android/%E6%94%BB%E5%87%BB%20Android%20Binder%EF%BC%9A%E5%AF%B9%20CVE-2023-20938%20%E7%9A%84%E5%88%86%E6%9E%90%E5%92%8C%E5%88%A9%E7%94%A8.md) [analysis; not-reproduced; needs-review]
 
+## Android Framework
+
+- [Google Patches Android Zero-Day CVE-2025-48595 Exploited in Targeted Attacks](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Android/Google%20Patches%20Android%20Zero-Day%20CVE-2025-48595%20Exploited%20in%20Targeted%20A.md) [incident; source-claimed; needs-review]
+
 ## Android Framework Zygote
 
 - [魔形女再袭？最新Android通杀漏洞CVE-2024-31317分析与利用研究](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Android/%E9%AD%94%E5%BD%A2%E5%A5%B3%E5%86%8D%E8%A2%AD%EF%BC%9F%E6%9C%80%E6%96%B0Android%E9%80%9A%E6%9D%80%E6%BC%8F%E6%B4%9ECVE-2024-31317%E5%88%86%E6%9E%90%E4%B8%8E%E5%88%A9%E7%94%A8%E7%A0%94%E7%A9%B6.md) [analysis; not-reproduced; needs-review]

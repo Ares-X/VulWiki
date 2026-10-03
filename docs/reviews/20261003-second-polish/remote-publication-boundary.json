@@ -1,0 +1,13 @@
+{
+  "production_master": "6e8b37ef9623911fe461862fc62306b088e16f57",
+  "checked": "2026-10-03",
+  "source": "gh api repos/Ares-X/Ares-X.github.io/branches/master",
+  "publication": "paused; no remote mutation",
+  "blog_pr6": {
+    "headRefOid": "112d62a05ee5417b57f543bc84979595b42e8943",
+    "isDraft": true,
+    "mergedAt": null,
+    "state": "OPEN",
+    "url": "https://github.com/Ares-X/Ares-X.github.io/pull/6"
+  }
+}

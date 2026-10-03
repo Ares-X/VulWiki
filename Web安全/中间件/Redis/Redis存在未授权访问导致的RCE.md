@@ -1,11 +1,11 @@
 ---
 source: "wy876 漏洞文库"
-title: "Redis存在未授权访问导致的RCE"
+title: "Redis 未授权访问后门反弹 Shell 工具片段（链路待补）"
 product: "Redis开放管理能力（具体利用链未说明）"
-record_type: "vulnerability"
+record_type: "analysis"
 review_status: "text-reviewed"
 verification_status: "not-reproduced"
-content_status: "quarantined"
+content_status: "needs-review"
 identifier_status: "unknown"
 primary_identifiers: ""
 referenced_identifiers: ""
@@ -17,6 +17,12 @@ id: "vw-b550775d3c39416399880c2d"
 entity_id: "ve-b550775d3c39416399880c2d"
 schema_version: "1"
 ---
+
+## 收录状态复核（2026-10-03）
+
+现存正文仅记录外部脚本链接、Redis 主机/端口参数及“选 3”后的反弹连接主张。脚本内容、Redis 前提、利用链和结果均缺失；保留作待补的历史分析线索，不视为已验证 RCE。
+
+以下为保留的归档正文与既有校订。资料以 `needs-review` 收录，具体缺口按本页说明阅读。
 
 # Redis存在未授权访问导致的RCE
 

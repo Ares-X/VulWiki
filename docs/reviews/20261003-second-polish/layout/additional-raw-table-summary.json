@@ -1,0 +1,71 @@
+{
+  "documents": 5654,
+  "per_shard": [
+    {
+      "shard": 1,
+      "documents": 703
+    },
+    {
+      "shard": 2,
+      "documents": 711
+    },
+    {
+      "shard": 3,
+      "documents": 699
+    },
+    {
+      "shard": 4,
+      "documents": 732
+    },
+    {
+      "shard": 5,
+      "documents": 683
+    },
+    {
+      "shard": 6,
+      "documents": 726
+    },
+    {
+      "shard": 7,
+      "documents": 683
+    },
+    {
+      "shard": 8,
+      "documents": 717
+    }
+  ],
+  "frontmatter_stripped": true,
+  "marked_tables": 752,
+  "raw_table_rows": 2418,
+  "raw_cells_checked_without_marked_truncation": true,
+  "table_overflow_rows": 3,
+  "unescaped_pipes_inside_inline_code_rows": 1,
+  "findings": 3,
+  "notes": "Marked splitCells implementation was read from installed marked.cjs. Its implementation inserts a leading space before each unescaped |, splits on / |/, removes empty outside boundary cells, then truncates to header count (splice(count)) or pads. The raw ledger reproduces these delimiters without truncation and preserves full source lines and Marked token/render output.",
+  "review": {
+    "frontmatter_stripped": true,
+    "marked_tables_and_rows_checked": {
+      "tables": 752,
+      "rows": 2418
+    },
+    "table_implementation_review": "Installed marked.cjs splitCells adds a space before every unescaped pipe, splits on / \\|/, removes empty outer cells, then splices at the header count or pads. Thus token row lengths alone cannot reveal overflow. The raw ledger records all untruncated splits; token/render comparison identified three affected source rows.",
+    "confirmed_rows": 3,
+    "confirmed_documents": 2,
+    "confirmed_findings": 3,
+    "pipe_heading_candidates_reviewed": 31,
+    "candidate_signal_counts": {
+      "pipe_table_not_recognized": 27,
+      "heading_swallowed_by_code": 4
+    },
+    "candidate_disposition": "Every one of the 27 pipe-shaped and four code-heading signals was individually inspected with current/archive source context and Marked token/render evidence. Thirty are non-defects; the FineReport Java-like paragraph is a formatting caution, but no bytes/columns are lost and a safe code-fence change cannot be inferred without altering displayed/copyable escapes. It is not included as confirmed.",
+    "archive_boundary": "All three confirmed rows are present byte-for-byte in the supplied archive snapshot as well as working; the evidence does not show these are library-added reminders.",
+    "validation": "Only local Marked string lexing/rendering on supplied working/archive text. No DOM, HTML execution, article execution, network or repository edits."
+  },
+  "raw_automated_signals": {
+    "table_overflow_or_code_pipe_rows": 4,
+    "curated_findings": 3,
+    "reason": "The first Await row triggered two overlapping signals (overflow and code-pipe); these are one affected row."
+  },
+  "machine_candidate_signals": 4,
+  "machine_candidate_signal_rows": 4
+}

@@ -1,0 +1,13 @@
+{
+  "url": "https://www.ctfiot.com/147475.html",
+  "status": 200,
+  "bytes": 76639,
+  "sha256": "ce6b50def034688494395a2e8897aa87aef7dcc3e8db6a92ff5b6ec94ff8c994",
+  "method": "Public article text GET only; no article code or targets executed",
+  "exact_pre_index_zero_based": 0,
+  "pre_count": 2,
+  "source_pre_sha256": "bfbd14046c02930150735c8912c89ca3c0476d199464972ff69b95a4dfed022a",
+  "recovered_block_sha256": "bfbd14046c02930150735c8912c89ca3c0476d199464972ff69b95a4dfed022a",
+  "cache_and_article_match_current_public_pre": true,
+  "comparison": "pre text with trailing newlines omitted; internal bytes unchanged; HTML parsed statically, not executed"
+}

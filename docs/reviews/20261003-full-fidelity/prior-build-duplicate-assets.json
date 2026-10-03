@@ -1,0 +1,511 @@
+{
+  "content_commit": "8f2a9e14575928bb5f086902c786da66f4a65aa9",
+  "blog_commit": "112d62a05ee5417b57f543bc84979595b42e8943",
+  "public_root": "/var/folders/4w/72x3w5lj24l__5yr852p1lj80000gn/T/vulwiki-pr6-fidelity-release-20261003-rll_llsz/build/public/wiki/VulWiki",
+  "parser": {
+    "name": "marked",
+    "version": "4.3.0",
+    "operation": "marked.lexer only; no HTML render, no inline execution, no PoC/scripts/network"
+  },
+  "scope": {
+    "manifest_article_count": 5654,
+    "articles_lexed": 5654,
+    "missing_nested_image_count": 13,
+    "reference_candidate_counts": {
+      "markdownLink": 21254,
+      "markdownImage": 24808,
+      "htmlHref": 0,
+      "htmlSrc": 0,
+      "htmlSrcset": 0,
+      "html_src": null,
+      "html_href": null
+    }
+  },
+  "normalization_method": "Markdown is lexed recursively through token.tokens. HTML token contents are inspected only with inert attribute regex for href/src/srcset. Ignore schemes, protocol-relative, fragment-only; drop query/fragment; URL-decode path; resolve relative targets against source article directory; normalize POSIX path. Exact normalized target is compared with each missing repository path.",
+  "copy_method": "Compute Git blob SHA-1 for every public file; compare exact blob ID against missing source assets, then classify same-blob public paths with at most one `.resource` path component and no other dot-prefixed component as normal-level copies.",
+  "results": [
+    {
+      "missing_path": "Web安全/ERP企业/宏景/.resource/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091316282.png",
+      "git_blob": "c92c2995768d3f2a07aec0fe6ca60bba5dd41c70",
+      "exact_missing_path_references": [],
+      "exact_reference_count": 0,
+      "same_git_blob_source_paths": [
+        "Web安全/ERP企业/宏景/.resource/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091316282.png",
+        "Web安全/ERP企业/宏景/.resource/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091316282.png",
+        "Web安全/ERP企业/宏景/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091316282.png"
+      ],
+      "same_git_blob_public_paths": [
+        "Web安全/ERP企业/宏景/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091316282.png"
+      ],
+      "same_git_blob_normal_level_public_paths": [
+        "Web安全/ERP企业/宏景/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091316282.png"
+      ],
+      "same_blob_path_references": [
+        {
+          "article_path": "Web安全/ERP企业/宏景/宏景eHR uploadLogo.do 任意文件上传致RCE漏洞.md",
+          "line": 83,
+          "kind": "markdown_image",
+          "original_reference": "./.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091316282.png",
+          "original_markdown_fragment": "![image-20241112091316282](./.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091316282.png)",
+          "resolved_content_path": "Web安全/ERP企业/宏景/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091316282.png",
+          "target_public_present": true
+        }
+      ],
+      "same_blob_reference_count": 1,
+      "disposition": "duplicate_path_unreferenced_but_same_blob_normal_copy_referenced"
+    },
+    {
+      "missing_path": "Web安全/ERP企业/宏景/.resource/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091425762.png",
+      "git_blob": "a9faeb0dfa8ca497851dc17a9298cec52d39362c",
+      "exact_missing_path_references": [],
+      "exact_reference_count": 0,
+      "same_git_blob_source_paths": [
+        "Web安全/ERP企业/宏景/.resource/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091425762.png",
+        "Web安全/ERP企业/宏景/.resource/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091425762.png",
+        "Web安全/ERP企业/宏景/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091425762.png"
+      ],
+      "same_git_blob_public_paths": [
+        "Web安全/ERP企业/宏景/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091425762.png"
+      ],
+      "same_git_blob_normal_level_public_paths": [
+        "Web安全/ERP企业/宏景/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091425762.png"
+      ],
+      "same_blob_path_references": [
+        {
+          "article_path": "Web安全/ERP企业/宏景/宏景eHR uploadLogo.do 任意文件上传致RCE漏洞.md",
+          "line": 117,
+          "kind": "markdown_image",
+          "original_reference": "./.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091425762.png",
+          "original_markdown_fragment": "![image-20241112091425762](./.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091425762.png)",
+          "resolved_content_path": "Web安全/ERP企业/宏景/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091425762.png",
+          "target_public_present": true
+        }
+      ],
+      "same_blob_reference_count": 1,
+      "disposition": "duplicate_path_unreferenced_but_same_blob_normal_copy_referenced"
+    },
+    {
+      "missing_path": "Web安全/ERP企业/宏景/.resource/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091523225.png",
+      "git_blob": "f8d0dc798d21f95cd1e9e4110635adc0e99acfbe",
+      "exact_missing_path_references": [],
+      "exact_reference_count": 0,
+      "same_git_blob_source_paths": [
+        "Web安全/ERP企业/宏景/.resource/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091523225.png",
+        "Web安全/ERP企业/宏景/.resource/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091523225.png",
+        "Web安全/ERP企业/宏景/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091523225.png"
+      ],
+      "same_git_blob_public_paths": [
+        "Web安全/ERP企业/宏景/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091523225.png"
+      ],
+      "same_git_blob_normal_level_public_paths": [
+        "Web安全/ERP企业/宏景/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091523225.png"
+      ],
+      "same_blob_path_references": [
+        {
+          "article_path": "Web安全/ERP企业/宏景/宏景eHR uploadLogo.do 任意文件上传致RCE漏洞.md",
+          "line": 151,
+          "kind": "markdown_image",
+          "original_reference": "./.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091523225.png",
+          "original_markdown_fragment": "![image-20241112091523225](./.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091523225.png)",
+          "resolved_content_path": "Web安全/ERP企业/宏景/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091523225.png",
+          "target_public_present": true
+        }
+      ],
+      "same_blob_reference_count": 1,
+      "disposition": "duplicate_path_unreferenced_but_same_blob_normal_copy_referenced"
+    },
+    {
+      "missing_path": "Web安全/ERP企业/宏景/.resource/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091610016.png",
+      "git_blob": "aa060537d0c4a24de92a341b378d3daa28e9a648",
+      "exact_missing_path_references": [],
+      "exact_reference_count": 0,
+      "same_git_blob_source_paths": [
+        "Web安全/ERP企业/宏景/.resource/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091610016.png",
+        "Web安全/ERP企业/宏景/.resource/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091610016.png",
+        "Web安全/ERP企业/宏景/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091610016.png"
+      ],
+      "same_git_blob_public_paths": [
+        "Web安全/ERP企业/宏景/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091610016.png"
+      ],
+      "same_git_blob_normal_level_public_paths": [
+        "Web安全/ERP企业/宏景/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091610016.png"
+      ],
+      "same_blob_path_references": [
+        {
+          "article_path": "Web安全/ERP企业/宏景/宏景eHR uploadLogo.do 任意文件上传致RCE漏洞.md",
+          "line": 156,
+          "kind": "markdown_image",
+          "original_reference": "./.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091610016.png",
+          "original_markdown_fragment": "![image-20241112091610016](./.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091610016.png)",
+          "resolved_content_path": "Web安全/ERP企业/宏景/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091610016.png",
+          "target_public_present": true
+        }
+      ],
+      "same_blob_reference_count": 1,
+      "disposition": "duplicate_path_unreferenced_but_same_blob_normal_copy_referenced"
+    },
+    {
+      "missing_path": "Web安全/ERP企业/宏景/.resource/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091316282.png",
+      "git_blob": "c92c2995768d3f2a07aec0fe6ca60bba5dd41c70",
+      "exact_missing_path_references": [],
+      "exact_reference_count": 0,
+      "same_git_blob_source_paths": [
+        "Web安全/ERP企业/宏景/.resource/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091316282.png",
+        "Web安全/ERP企业/宏景/.resource/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091316282.png",
+        "Web安全/ERP企业/宏景/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091316282.png"
+      ],
+      "same_git_blob_public_paths": [
+        "Web安全/ERP企业/宏景/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091316282.png"
+      ],
+      "same_git_blob_normal_level_public_paths": [
+        "Web安全/ERP企业/宏景/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091316282.png"
+      ],
+      "same_blob_path_references": [
+        {
+          "article_path": "Web安全/ERP企业/宏景/宏景eHR uploadLogo.do 任意文件上传致RCE漏洞.md",
+          "line": 83,
+          "kind": "markdown_image",
+          "original_reference": "./.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091316282.png",
+          "original_markdown_fragment": "![image-20241112091316282](./.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091316282.png)",
+          "resolved_content_path": "Web安全/ERP企业/宏景/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091316282.png",
+          "target_public_present": true
+        }
+      ],
+      "same_blob_reference_count": 1,
+      "disposition": "duplicate_path_unreferenced_but_same_blob_normal_copy_referenced"
+    },
+    {
+      "missing_path": "Web安全/ERP企业/宏景/.resource/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091425762.png",
+      "git_blob": "a9faeb0dfa8ca497851dc17a9298cec52d39362c",
+      "exact_missing_path_references": [],
+      "exact_reference_count": 0,
+      "same_git_blob_source_paths": [
+        "Web安全/ERP企业/宏景/.resource/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091425762.png",
+        "Web安全/ERP企业/宏景/.resource/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091425762.png",
+        "Web安全/ERP企业/宏景/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091425762.png"
+      ],
+      "same_git_blob_public_paths": [
+        "Web安全/ERP企业/宏景/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091425762.png"
+      ],
+      "same_git_blob_normal_level_public_paths": [
+        "Web安全/ERP企业/宏景/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091425762.png"
+      ],
+      "same_blob_path_references": [
+        {
+          "article_path": "Web安全/ERP企业/宏景/宏景eHR uploadLogo.do 任意文件上传致RCE漏洞.md",
+          "line": 117,
+          "kind": "markdown_image",
+          "original_reference": "./.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091425762.png",
+          "original_markdown_fragment": "![image-20241112091425762](./.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091425762.png)",
+          "resolved_content_path": "Web安全/ERP企业/宏景/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091425762.png",
+          "target_public_present": true
+        }
+      ],
+      "same_blob_reference_count": 1,
+      "disposition": "duplicate_path_unreferenced_but_same_blob_normal_copy_referenced"
+    },
+    {
+      "missing_path": "Web安全/ERP企业/宏景/.resource/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091523225.png",
+      "git_blob": "f8d0dc798d21f95cd1e9e4110635adc0e99acfbe",
+      "exact_missing_path_references": [],
+      "exact_reference_count": 0,
+      "same_git_blob_source_paths": [
+        "Web安全/ERP企业/宏景/.resource/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091523225.png",
+        "Web安全/ERP企业/宏景/.resource/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091523225.png",
+        "Web安全/ERP企业/宏景/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091523225.png"
+      ],
+      "same_git_blob_public_paths": [
+        "Web安全/ERP企业/宏景/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091523225.png"
+      ],
+      "same_git_blob_normal_level_public_paths": [
+        "Web安全/ERP企业/宏景/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091523225.png"
+      ],
+      "same_blob_path_references": [
+        {
+          "article_path": "Web安全/ERP企业/宏景/宏景eHR uploadLogo.do 任意文件上传致RCE漏洞.md",
+          "line": 151,
+          "kind": "markdown_image",
+          "original_reference": "./.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091523225.png",
+          "original_markdown_fragment": "![image-20241112091523225](./.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091523225.png)",
+          "resolved_content_path": "Web安全/ERP企业/宏景/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091523225.png",
+          "target_public_present": true
+        }
+      ],
+      "same_blob_reference_count": 1,
+      "disposition": "duplicate_path_unreferenced_but_same_blob_normal_copy_referenced"
+    },
+    {
+      "missing_path": "Web安全/ERP企业/宏景/.resource/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091610016.png",
+      "git_blob": "aa060537d0c4a24de92a341b378d3daa28e9a648",
+      "exact_missing_path_references": [],
+      "exact_reference_count": 0,
+      "same_git_blob_source_paths": [
+        "Web安全/ERP企业/宏景/.resource/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091610016.png",
+        "Web安全/ERP企业/宏景/.resource/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091610016.png",
+        "Web安全/ERP企业/宏景/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091610016.png"
+      ],
+      "same_git_blob_public_paths": [
+        "Web安全/ERP企业/宏景/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091610016.png"
+      ],
+      "same_git_blob_normal_level_public_paths": [
+        "Web安全/ERP企业/宏景/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091610016.png"
+      ],
+      "same_blob_path_references": [
+        {
+          "article_path": "Web安全/ERP企业/宏景/宏景eHR uploadLogo.do 任意文件上传致RCE漏洞.md",
+          "line": 156,
+          "kind": "markdown_image",
+          "original_reference": "./.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091610016.png",
+          "original_markdown_fragment": "![image-20241112091610016](./.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091610016.png)",
+          "resolved_content_path": "Web安全/ERP企业/宏景/.resource/宏景eHRuploadLogo.do任意文件上传致RCE漏洞/media/image-20241112091610016.png",
+          "target_public_present": true
+        }
+      ],
+      "same_blob_reference_count": 1,
+      "disposition": "duplicate_path_unreferenced_but_same_blob_normal_copy_referenced"
+    },
+    {
+      "missing_path": "Web安全/开发框架/WeiPHP/.resource/.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162320334.png",
+      "git_blob": "76773890abb8586e396088375a98120dc7053427",
+      "exact_missing_path_references": [],
+      "exact_reference_count": 0,
+      "same_git_blob_source_paths": [
+        "Web安全/开发框架/WeiPHP/.resource/.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162320334.png",
+        "Web安全/开发框架/WeiPHP/.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162320334.png",
+        "Web安全/开发框架/WeiPHP/.resource/WeiPHP5.0任意用户Cookie伪造CNVD-2021-09693/media/202202162320334.png",
+        "Web安全/桌面软件/WeiPHP5.0/.resource/WeiPHP5.0任意用户Cookie伪造CNVD-2021-09693/media/202202162320334.png"
+      ],
+      "same_git_blob_public_paths": [
+        "Web安全/开发框架/WeiPHP/.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162320334.png",
+        "Web安全/开发框架/WeiPHP/.resource/WeiPHP5.0任意用户Cookie伪造CNVD-2021-09693/media/202202162320334.png",
+        "Web安全/桌面软件/WeiPHP5.0/.resource/WeiPHP5.0任意用户Cookie伪造CNVD-2021-09693/media/202202162320334.png"
+      ],
+      "same_git_blob_normal_level_public_paths": [
+        "Web安全/开发框架/WeiPHP/.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162320334.png",
+        "Web安全/开发框架/WeiPHP/.resource/WeiPHP5.0任意用户Cookie伪造CNVD-2021-09693/media/202202162320334.png",
+        "Web安全/桌面软件/WeiPHP5.0/.resource/WeiPHP5.0任意用户Cookie伪造CNVD-2021-09693/media/202202162320334.png"
+      ],
+      "same_blob_path_references": [
+        {
+          "article_path": "Web安全/开发框架/WeiPHP/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693.md",
+          "line": 247,
+          "kind": "markdown_image",
+          "original_reference": "./.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162320334.png",
+          "original_markdown_fragment": "![](./.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162320334.png)",
+          "resolved_content_path": "Web安全/开发框架/WeiPHP/.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162320334.png",
+          "target_public_present": true
+        },
+        {
+          "article_path": "Web安全/桌面软件/WeiPHP5.0/WeiPHP5.0 任意用户Cookie伪造 CNVD-2021-09693.md",
+          "line": 264,
+          "kind": "markdown_image",
+          "original_reference": "./.resource/WeiPHP5.0任意用户Cookie伪造CNVD-2021-09693/media/202202162320334.png",
+          "original_markdown_fragment": "![](./.resource/WeiPHP5.0任意用户Cookie伪造CNVD-2021-09693/media/202202162320334.png)",
+          "resolved_content_path": "Web安全/桌面软件/WeiPHP5.0/.resource/WeiPHP5.0任意用户Cookie伪造CNVD-2021-09693/media/202202162320334.png",
+          "target_public_present": true
+        }
+      ],
+      "same_blob_reference_count": 2,
+      "disposition": "duplicate_path_unreferenced_but_same_blob_normal_copy_referenced"
+    },
+    {
+      "missing_path": "Web安全/开发框架/WeiPHP/.resource/.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162320455.png",
+      "git_blob": "b2f7855fc8cbcafa0f8f201f4bdcd0ec70506085",
+      "exact_missing_path_references": [],
+      "exact_reference_count": 0,
+      "same_git_blob_source_paths": [
+        "Web安全/开发框架/WeiPHP/.resource/.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162320455.png",
+        "Web安全/开发框架/WeiPHP/.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162320455.png",
+        "Web安全/开发框架/WeiPHP/.resource/WeiPHP5.0任意用户Cookie伪造CNVD-2021-09693/media/202202162320455.png",
+        "Web安全/桌面软件/WeiPHP5.0/.resource/WeiPHP5.0任意用户Cookie伪造CNVD-2021-09693/media/202202162320455.png"
+      ],
+      "same_git_blob_public_paths": [
+        "Web安全/开发框架/WeiPHP/.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162320455.png",
+        "Web安全/开发框架/WeiPHP/.resource/WeiPHP5.0任意用户Cookie伪造CNVD-2021-09693/media/202202162320455.png",
+        "Web安全/桌面软件/WeiPHP5.0/.resource/WeiPHP5.0任意用户Cookie伪造CNVD-2021-09693/media/202202162320455.png"
+      ],
+      "same_git_blob_normal_level_public_paths": [
+        "Web安全/开发框架/WeiPHP/.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162320455.png",
+        "Web安全/开发框架/WeiPHP/.resource/WeiPHP5.0任意用户Cookie伪造CNVD-2021-09693/media/202202162320455.png",
+        "Web安全/桌面软件/WeiPHP5.0/.resource/WeiPHP5.0任意用户Cookie伪造CNVD-2021-09693/media/202202162320455.png"
+      ],
+      "same_blob_path_references": [
+        {
+          "article_path": "Web安全/开发框架/WeiPHP/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693.md",
+          "line": 72,
+          "kind": "markdown_image",
+          "original_reference": "./.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162320455.png",
+          "original_markdown_fragment": "![](./.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162320455.png)",
+          "resolved_content_path": "Web安全/开发框架/WeiPHP/.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162320455.png",
+          "target_public_present": true
+        },
+        {
+          "article_path": "Web安全/桌面软件/WeiPHP5.0/WeiPHP5.0 任意用户Cookie伪造 CNVD-2021-09693.md",
+          "line": 89,
+          "kind": "markdown_image",
+          "original_reference": "./.resource/WeiPHP5.0任意用户Cookie伪造CNVD-2021-09693/media/202202162320455.png",
+          "original_markdown_fragment": "![](./.resource/WeiPHP5.0任意用户Cookie伪造CNVD-2021-09693/media/202202162320455.png)",
+          "resolved_content_path": "Web安全/桌面软件/WeiPHP5.0/.resource/WeiPHP5.0任意用户Cookie伪造CNVD-2021-09693/media/202202162320455.png",
+          "target_public_present": true
+        }
+      ],
+      "same_blob_reference_count": 2,
+      "disposition": "duplicate_path_unreferenced_but_same_blob_normal_copy_referenced"
+    },
+    {
+      "missing_path": "Web安全/开发框架/WeiPHP/.resource/.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162320938.png",
+      "git_blob": "85a9c2e7c1ae1d3eed7d0fabdf110069c834e995",
+      "exact_missing_path_references": [],
+      "exact_reference_count": 0,
+      "same_git_blob_source_paths": [
+        "Web安全/开发框架/WeiPHP/.resource/.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162320938.png",
+        "Web安全/开发框架/WeiPHP/.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162320938.png",
+        "Web安全/开发框架/WeiPHP/.resource/WeiPHP5.0任意用户Cookie伪造CNVD-2021-09693/media/202202162320938.png",
+        "Web安全/桌面软件/WeiPHP5.0/.resource/WeiPHP5.0任意用户Cookie伪造CNVD-2021-09693/media/202202162320938.png"
+      ],
+      "same_git_blob_public_paths": [
+        "Web安全/开发框架/WeiPHP/.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162320938.png",
+        "Web安全/开发框架/WeiPHP/.resource/WeiPHP5.0任意用户Cookie伪造CNVD-2021-09693/media/202202162320938.png",
+        "Web安全/桌面软件/WeiPHP5.0/.resource/WeiPHP5.0任意用户Cookie伪造CNVD-2021-09693/media/202202162320938.png"
+      ],
+      "same_git_blob_normal_level_public_paths": [
+        "Web安全/开发框架/WeiPHP/.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162320938.png",
+        "Web安全/开发框架/WeiPHP/.resource/WeiPHP5.0任意用户Cookie伪造CNVD-2021-09693/media/202202162320938.png",
+        "Web安全/桌面软件/WeiPHP5.0/.resource/WeiPHP5.0任意用户Cookie伪造CNVD-2021-09693/media/202202162320938.png"
+      ],
+      "same_blob_path_references": [
+        {
+          "article_path": "Web安全/开发框架/WeiPHP/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693.md",
+          "line": 60,
+          "kind": "markdown_image",
+          "original_reference": "./.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162320938.png",
+          "original_markdown_fragment": "![](./.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162320938.png)",
+          "resolved_content_path": "Web安全/开发框架/WeiPHP/.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162320938.png",
+          "target_public_present": true
+        },
+        {
+          "article_path": "Web安全/开发框架/WeiPHP/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693.md",
+          "line": 82,
+          "kind": "markdown_image",
+          "original_reference": "./.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162320938.png",
+          "original_markdown_fragment": "![](./.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162320938.png)",
+          "resolved_content_path": "Web安全/开发框架/WeiPHP/.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162320938.png",
+          "target_public_present": true
+        },
+        {
+          "article_path": "Web安全/桌面软件/WeiPHP5.0/WeiPHP5.0 任意用户Cookie伪造 CNVD-2021-09693.md",
+          "line": 78,
+          "kind": "markdown_image",
+          "original_reference": "./.resource/WeiPHP5.0任意用户Cookie伪造CNVD-2021-09693/media/202202162320938.png",
+          "original_markdown_fragment": "![](./.resource/WeiPHP5.0任意用户Cookie伪造CNVD-2021-09693/media/202202162320938.png)",
+          "resolved_content_path": "Web安全/桌面软件/WeiPHP5.0/.resource/WeiPHP5.0任意用户Cookie伪造CNVD-2021-09693/media/202202162320938.png",
+          "target_public_present": true
+        },
+        {
+          "article_path": "Web安全/桌面软件/WeiPHP5.0/WeiPHP5.0 任意用户Cookie伪造 CNVD-2021-09693.md",
+          "line": 99,
+          "kind": "markdown_image",
+          "original_reference": "./.resource/WeiPHP5.0任意用户Cookie伪造CNVD-2021-09693/media/202202162320938.png",
+          "original_markdown_fragment": "![](./.resource/WeiPHP5.0任意用户Cookie伪造CNVD-2021-09693/media/202202162320938.png)",
+          "resolved_content_path": "Web安全/桌面软件/WeiPHP5.0/.resource/WeiPHP5.0任意用户Cookie伪造CNVD-2021-09693/media/202202162320938.png",
+          "target_public_present": true
+        }
+      ],
+      "same_blob_reference_count": 4,
+      "disposition": "duplicate_path_unreferenced_but_same_blob_normal_copy_referenced"
+    },
+    {
+      "missing_path": "Web安全/开发框架/WeiPHP/.resource/.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162320956.png",
+      "git_blob": "5d304ffbc05b5a96c5f9adbda678128c739f83d8",
+      "exact_missing_path_references": [],
+      "exact_reference_count": 0,
+      "same_git_blob_source_paths": [
+        "Web安全/开发框架/WeiPHP/.resource/.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162320956.png",
+        "Web安全/开发框架/WeiPHP/.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162320956.png",
+        "Web安全/开发框架/WeiPHP/.resource/WeiPHP5.0任意用户Cookie伪造CNVD-2021-09693/media/202202162320956.png",
+        "Web安全/桌面软件/WeiPHP5.0/.resource/WeiPHP5.0任意用户Cookie伪造CNVD-2021-09693/media/202202162320956.png"
+      ],
+      "same_git_blob_public_paths": [
+        "Web安全/开发框架/WeiPHP/.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162320956.png",
+        "Web安全/开发框架/WeiPHP/.resource/WeiPHP5.0任意用户Cookie伪造CNVD-2021-09693/media/202202162320956.png",
+        "Web安全/桌面软件/WeiPHP5.0/.resource/WeiPHP5.0任意用户Cookie伪造CNVD-2021-09693/media/202202162320956.png"
+      ],
+      "same_git_blob_normal_level_public_paths": [
+        "Web安全/开发框架/WeiPHP/.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162320956.png",
+        "Web安全/开发框架/WeiPHP/.resource/WeiPHP5.0任意用户Cookie伪造CNVD-2021-09693/media/202202162320956.png",
+        "Web安全/桌面软件/WeiPHP5.0/.resource/WeiPHP5.0任意用户Cookie伪造CNVD-2021-09693/media/202202162320956.png"
+      ],
+      "same_blob_path_references": [
+        {
+          "article_path": "Web安全/开发框架/WeiPHP/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693.md",
+          "line": 251,
+          "kind": "markdown_image",
+          "original_reference": "./.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162320956.png",
+          "original_markdown_fragment": "![](./.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162320956.png)",
+          "resolved_content_path": "Web安全/开发框架/WeiPHP/.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162320956.png",
+          "target_public_present": true
+        },
+        {
+          "article_path": "Web安全/桌面软件/WeiPHP5.0/WeiPHP5.0 任意用户Cookie伪造 CNVD-2021-09693.md",
+          "line": 268,
+          "kind": "markdown_image",
+          "original_reference": "./.resource/WeiPHP5.0任意用户Cookie伪造CNVD-2021-09693/media/202202162320956.png",
+          "original_markdown_fragment": "![](./.resource/WeiPHP5.0任意用户Cookie伪造CNVD-2021-09693/media/202202162320956.png)",
+          "resolved_content_path": "Web安全/桌面软件/WeiPHP5.0/.resource/WeiPHP5.0任意用户Cookie伪造CNVD-2021-09693/media/202202162320956.png",
+          "target_public_present": true
+        }
+      ],
+      "same_blob_reference_count": 2,
+      "disposition": "duplicate_path_unreferenced_but_same_blob_normal_copy_referenced"
+    },
+    {
+      "missing_path": "Web安全/开发框架/WeiPHP/.resource/.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162321696.png",
+      "git_blob": "08e994657b05a8fb1b5c38402bff0fd2dfe3bc7f",
+      "exact_missing_path_references": [],
+      "exact_reference_count": 0,
+      "same_git_blob_source_paths": [
+        "Web安全/开发框架/WeiPHP/.resource/.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162321696.png",
+        "Web安全/开发框架/WeiPHP/.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162321696.png",
+        "Web安全/开发框架/WeiPHP/.resource/WeiPHP5.0任意用户Cookie伪造CNVD-2021-09693/media/202202162321696.png",
+        "Web安全/桌面软件/WeiPHP5.0/.resource/WeiPHP5.0任意用户Cookie伪造CNVD-2021-09693/media/202202162321696.png"
+      ],
+      "same_git_blob_public_paths": [
+        "Web安全/开发框架/WeiPHP/.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162321696.png",
+        "Web安全/开发框架/WeiPHP/.resource/WeiPHP5.0任意用户Cookie伪造CNVD-2021-09693/media/202202162321696.png",
+        "Web安全/桌面软件/WeiPHP5.0/.resource/WeiPHP5.0任意用户Cookie伪造CNVD-2021-09693/media/202202162321696.png"
+      ],
+      "same_git_blob_normal_level_public_paths": [
+        "Web安全/开发框架/WeiPHP/.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162321696.png",
+        "Web安全/开发框架/WeiPHP/.resource/WeiPHP5.0任意用户Cookie伪造CNVD-2021-09693/media/202202162321696.png",
+        "Web安全/桌面软件/WeiPHP5.0/.resource/WeiPHP5.0任意用户Cookie伪造CNVD-2021-09693/media/202202162321696.png"
+      ],
+      "same_blob_path_references": [
+        {
+          "article_path": "Web安全/开发框架/WeiPHP/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693.md",
+          "line": 255,
+          "kind": "markdown_image",
+          "original_reference": "./.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162321696.png",
+          "original_markdown_fragment": "![](./.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162321696.png)",
+          "resolved_content_path": "Web安全/开发框架/WeiPHP/.resource/WeiPHP5.0-任意用户Cookie伪造-CNVD-2021-09693/media/202202162321696.png",
+          "target_public_present": true
+        },
+        {
+          "article_path": "Web安全/桌面软件/WeiPHP5.0/WeiPHP5.0 任意用户Cookie伪造 CNVD-2021-09693.md",
+          "line": 271,
+          "kind": "markdown_image",
+          "original_reference": "./.resource/WeiPHP5.0任意用户Cookie伪造CNVD-2021-09693/media/202202162321696.png",
+          "original_markdown_fragment": "![](./.resource/WeiPHP5.0任意用户Cookie伪造CNVD-2021-09693/media/202202162321696.png)",
+          "resolved_content_path": "Web安全/桌面软件/WeiPHP5.0/.resource/WeiPHP5.0任意用户Cookie伪造CNVD-2021-09693/media/202202162321696.png",
+          "target_public_present": true
+        }
+      ],
+      "same_blob_reference_count": 2,
+      "disposition": "duplicate_path_unreferenced_but_same_blob_normal_copy_referenced"
+    }
+  ],
+  "limits": [
+    "Relative URLs resolved using source Markdown location; browser route/plugin behavior not executed.",
+    "References encoded through application-specific JavaScript or dynamically generated HTML are outside static Markdown/link/image extraction.",
+    "A match is a path-level reference candidate, not visual/browser confirmation."
+  ]
+}

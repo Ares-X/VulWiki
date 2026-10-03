@@ -1,0 +1,125 @@
+{
+  "file_count": 8,
+  "files": [
+    {
+      "path": "Web安全/CMS内容/微擎/微擎微信公众号管理系统系统AccountEdit存在任意文件上传漏洞.md",
+      "before_sha256": "d16b5d601814021b2c856b832eb47dbef51b6a3332ada80df522ad149f97e1d9",
+      "after_sha256": "bbecafda99845fc4d0d05c202a74df2fc806c790d484e6cf9212b536ef39342b",
+      "before_frontmatter": "---\nsource: \"wy876 漏洞文库\"\nproduct: \"AccountEdit.aspx 所属产品待核（原微擎归属冲突）\"\nrecord_type: \"unknown\"\nreview_status: \"text-reviewed\"\nverification_status: \"not-reproduced\"\ncontent_status: \"quarantined\"\nprimary_identifiers: \"\"\nreferenced_identifiers: \"\"\nidentifier_role: \"unknown\"\nidentifier_status: \"unknown\"\ntitle: \"AccountEdit.aspx 上传记录（与原微擎产品归属冲突，待核）\"\nprerequisites: \"来源所述条件，未列明部分仍待核：AccountEdit.aspx reachable; correctviewstate/eventvalidation/session; uploadtypepolicy andscriptmappingunknown\"\nside_effects: \"未执行；本文需注意的操作影响：PoC仅上传ceshi.txt并访问xxx.txt，不能证明任意脚本扩展可上传执行或服务器控制\"\nsource_status: \"unknown\"\nid: \"vw-07388328b70e02b71a8392ed\"\nentity_id: \"ve-07388328b70e02b71a8392ed\"\nschema_version: \"1\"\n---\n",
+      "after_frontmatter": "---\nsource: \"wy876 漏洞文库\"\nproduct: \"AccountEdit.aspx 所属产品待核（原微擎归属冲突）\"\nrecord_type: \"analysis\"\nreview_status: \"text-reviewed\"\nverification_status: \"not-reproduced\"\ncontent_status: \"needs-review\"\nprimary_identifiers: \"\"\nreferenced_identifiers: \"\"\nidentifier_role: \"unknown\"\nidentifier_status: \"unknown\"\ntitle: \"AccountEdit.aspx 上传记录（与原微擎产品归属冲突，待核）\"\nprerequisites: \"来源所述条件，未列明部分仍待核：AccountEdit.aspx reachable; correctviewstate/eventvalidation/session; uploadtypepolicy andscriptmappingunknown\"\nside_effects: \"未执行；本文需注意的操作影响：PoC仅上传ceshi.txt并访问xxx.txt，不能证明任意脚本扩展可上传执行或服务器控制\"\nsource_status: \"unknown\"\nid: \"vw-07388328b70e02b71a8392ed\"\nentity_id: \"ve-07388328b70e02b71a8392ed\"\nschema_version: \"1\"\n---\n",
+      "inserted_explanation": "\n## 收录状态复核（2026-10-03）\n\n本文保留的是未知 ASP.NET 组件的 AccountEdit.aspx 上传尝试及其状态参数，不作为微擎漏洞结论。产品归属冲突、文本文件上传与访问文件名不一致、鉴权及脚本执行证据缺口继续保留；这些限制不妨碍把原始请求作为待核分析材料检索。本次仅静态核对；验证状态仍为未复现。\n",
+      "editorial_note_changes": [],
+      "technical_body_unchanged": true,
+      "reason": "本文保留的是未知 ASP.NET 组件的 AccountEdit.aspx 上传尝试及其状态参数，不作为微擎漏洞结论。产品归属冲突、文本文件上传与访问文件名不一致、鉴权及脚本执行证据缺口继续保留；这些限制不妨碍把原始请求作为待核分析材料检索。",
+      "decision": "needs-review analysis, preserve original route and unresolved claims, no reproduction upgrade"
+    },
+    {
+      "path": "Web安全/中间件/JBoss/（CVE-2013-4810）JBoss EJBInvokerServle 反序列化漏洞.md",
+      "before_sha256": "1a66ee726189b3b921a2c93a29f7c9c270fb31f61caed8d5c3d0498375cf3ef3",
+      "after_sha256": "8bb02154ea3894ac396197332fb51c62ab64cbd1084ff8f977cccf0c20741eca",
+      "before_frontmatter": "---\ncve: \"CVE-2013-4810\"\ntitle: \"（CVE-2013-4810）JBoss EJBInvokerServle 反序列化漏洞\"\nproduct: \"文中JBoss；编号实际HP PCM+/ALM的Invoker暴露问题\"\nrecord_type: \"vulnerability\"\nreview_status: \"text-reviewed\"\nverification_status: \"not-reproduced\"\ncontent_status: \"quarantined\"\nidentifier_status: \"active\"\nprimary_identifiers: \"CVE-2013-4810\"\nreferenced_identifiers: \"CVE-2015-7501; CVE-2017-7504\"\nidentifier_role: \"primary\"\nverification_source: \"https://www.zerodayinitiative.com/advisories/ZDI-13-229/\"\nsource_status: \"missing\"\nprerequisites: \"原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。\"\nside_effects: \"含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。\"\nid: \"vw-59e781ead3ecd03af1470d4c\"\nentity_id: \"ve-59e781ead3ecd03af1470d4c\"\nschema_version: \"1\"\n---\n",
+      "after_frontmatter": "---\ncve: \"CVE-2013-4810\"\ntitle: \"（CVE-2013-4810）JBoss EJBInvokerServle 反序列化漏洞\"\nproduct: \"文中JBoss；编号实际HP PCM+/ALM的Invoker暴露问题\"\nrecord_type: \"analysis\"\nreview_status: \"text-reviewed\"\nverification_status: \"not-reproduced\"\ncontent_status: \"needs-review\"\nidentifier_status: \"active\"\nprimary_identifiers: \"\"\nreferenced_identifiers: \"CVE-2015-7501; CVE-2017-7504\"\nidentifier_role: \"reference\"\nverification_source: \"https://www.zerodayinitiative.com/advisories/ZDI-13-229/\"\nsource_status: \"missing\"\nprerequisites: \"原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。\"\nside_effects: \"含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。\"\nid: \"vw-59e781ead3ecd03af1470d4c\"\nentity_id: \"ve-59e781ead3ecd03af1470d4c\"\nschema_version: \"1\"\n---\n",
+      "inserted_explanation": "\n## 收录状态复核（2026-10-03）\n\n本文作为 JBoss 历史请求与编号错配的对照分析收录。标题的 CVE-2013-4810 只保留为引用编号，不进入本篇主漏洞编号索引；借用的截图和 HTTPServerILServlet 请求不能证明该编号对应的漏洞。原命令、请求及原有证据缺口均保留，不补猜实际漏洞编号。本次仅静态核对；验证状态仍为未复现。\n",
+      "editorial_note_changes": [
+        {
+          "before": "- 最终payload端点与标题不同，必须隔离待重写",
+          "after": "- 最终payload端点与标题不同；按历史对照分析保留，不能把该请求作为标题编号的实测证据",
+          "scope": "editorial review note, not archived technical body"
+        }
+      ],
+      "technical_body_unchanged": true,
+      "reason": "本文作为 JBoss 历史请求与编号错配的对照分析收录。标题的 CVE-2013-4810 只保留为引用编号，不进入本篇主漏洞编号索引；借用的截图和 HTTPServerILServlet 请求不能证明该编号对应的漏洞。原命令、请求及原有证据缺口均保留，不补猜实际漏洞编号。",
+      "decision": "needs-review analysis, preserve original route and unresolved claims, no reproduction upgrade"
+    },
+    {
+      "path": "Web安全/中间件/WebLogic/weblogic爆破.md",
+      "before_sha256": "1a0fea576c07fe3402c946563772149785d382378e8ad975c73f1a255fabd996",
+      "after_sha256": "7ff229efdba039eb7579b152b1b88b22ebc2dfd592e87f08bbe9543412ff1565",
+      "before_frontmatter": "---\nsource: \"hatch 补库批 20260928\"\ntitle: \"weblogic爆破\"\nproduct: \"Oracle WebLogic domain credentials\"\nrecord_type: \"advisory\"\nreview_status: \"text-reviewed\"\nverification_status: \"not-reproduced\"\ncontent_status: \"quarantined\"\nidentifier_status: \"unknown\"\nprimary_identifiers: \"\"\nreferenced_identifiers: \"\"\nidentifier_role: \"unknown\"\nprerequisites: \"Local domain access, deliberately supplied boot credentials and domain encryption material\"\nsource_status: \"unknown\"\nside_effects: \"含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。\"\nid: \"vw-3ec4bb3766d8895ff7876433\"\nentity_id: \"ve-3ec4bb3766d8895ff7876433\"\nschema_version: \"1\"\n---\n",
+      "after_frontmatter": "---\nsource: \"hatch 补库批 20260928\"\ntitle: \"weblogic爆破\"\nproduct: \"Oracle WebLogic domain credentials\"\nrecord_type: \"analysis\"\nreview_status: \"text-reviewed\"\nverification_status: \"not-reproduced\"\ncontent_status: \"needs-review\"\nidentifier_status: \"unknown\"\nprimary_identifiers: \"\"\nreferenced_identifiers: \"\"\nidentifier_role: \"unknown\"\nprerequisites: \"Local domain access, deliberately supplied boot credentials and domain encryption material\"\nsource_status: \"unknown\"\nside_effects: \"含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。\"\nid: \"vw-3ec4bb3766d8895ff7876433\"\nentity_id: \"ve-3ec4bb3766d8895ff7876433\"\nschema_version: \"1\"\n---\n",
+      "inserted_explanation": "\n## 收录状态复核（2026-10-03）\n\n本文保留本地 WebLogic 域启动配置、已知凭据加密和解密尝试的实验过程，按分析材料收录；不作为在线爆破或产品漏洞记录。解密源码和后续结果缺失、环境路径冲突以及本地文件权限前提仍待核，原始失败和排错过程保留。本次仅静态核对；验证状态仍为未复现。\n",
+      "editorial_note_changes": [],
+      "technical_body_unchanged": true,
+      "reason": "本文保留本地 WebLogic 域启动配置、已知凭据加密和解密尝试的实验过程，按分析材料收录；不作为在线爆破或产品漏洞记录。解密源码和后续结果缺失、环境路径冲突以及本地文件权限前提仍待核，原始失败和排错过程保留。",
+      "decision": "needs-review analysis, preserve original route and unresolved claims, no reproduction upgrade"
+    },
+    {
+      "path": "Web安全/云平台/Citrix/（CVE-2020-ianianian）Citrix 目录遍历漏洞.md",
+      "before_sha256": "a5d77f061e838f300c89e273f0ec05d31eb71a0afa0aa5f5f2fdd515c8a56fcb",
+      "after_sha256": "a2e0d92a859083c4c61ac448aefa84cadb1511e7011f1bdb39351a6617379b5e",
+      "before_frontmatter": "---\nsource: \"hatch 补库批 20260928\"\noriginal_title: \"（CVE-2020-ianianian）Citrix 目录遍历漏洞\"\ntitle: \"Citrix 目录遍历历史材料（编号未确认）\"\nproduct: \"Citrix ADC及多产品\"\nrecord_type: \"vulnerability\"\nreview_status: \"text-reviewed\"\nverification_status: \"not-reproduced\"\ncontent_status: \"quarantined\"\nidentifier_status: \"unknown\"\nprimary_identifiers: \"\"\nreferenced_identifiers: \"\"\nidentifier_role: \"unknown\"\nsource_status: \"unknown\"\nprerequisites: \"原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。\"\nside_effects: \"原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。\"\nid: \"vw-9b13262f08c07beb1753db27\"\nentity_id: \"ve-9b13262f08c07beb1753db27\"\nschema_version: \"1\"\n---\n",
+      "after_frontmatter": "---\nsource: \"hatch 补库批 20260928\"\noriginal_title: \"（CVE-2020-ianianian）Citrix 目录遍历漏洞\"\ntitle: \"Citrix 目录遍历历史材料（编号未确认）\"\nproduct: \"Citrix ADC及多产品\"\nrecord_type: \"analysis\"\nreview_status: \"text-reviewed\"\nverification_status: \"not-reproduced\"\ncontent_status: \"needs-review\"\nidentifier_status: \"unknown\"\nprimary_identifiers: \"\"\nreferenced_identifiers: \"\"\nidentifier_role: \"unknown\"\nsource_status: \"unknown\"\nprerequisites: \"原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。\"\nside_effects: \"原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。\"\nid: \"vw-9b13262f08c07beb1753db27\"\nentity_id: \"ve-9b13262f08c07beb1753db27\"\nschema_version: \"1\"\n---\n",
+      "inserted_explanation": "\n## 收录状态复核（2026-10-03）\n\n本文保留多种 Citrix 产品的历史版本主张及未验证的遍历请求，按待核分析材料收录。原题占位编号不是有效 CVE，多个产品不能据此合并为单一漏洞；缺少响应及来源定位仍是具体限制，原 Cookie 和请求不改写，也不补造成功结果。本次仅静态核对；验证状态仍为未复现。\n",
+      "editorial_note_changes": [],
+      "technical_body_unchanged": true,
+      "reason": "本文保留多种 Citrix 产品的历史版本主张及未验证的遍历请求，按待核分析材料收录。原题占位编号不是有效 CVE，多个产品不能据此合并为单一漏洞；缺少响应及来源定位仍是具体限制，原 Cookie 和请求不改写，也不补造成功结果。",
+      "decision": "needs-review analysis, preserve original route and unresolved claims, no reproduction upgrade"
+    },
+    {
+      "path": "Web安全/云平台/Supabase/Supabasequery存在SQL注入漏洞.md",
+      "before_sha256": "12a0ac3fbd99e6337f0a1db572c44908f6ee9c4f53288d348439f4a4f3df9b38",
+      "after_sha256": "a94e0080fcf89675dea279a530de747eff17d7d255fa4ae8f0e4dd2fb55895fe",
+      "before_frontmatter": "---\nsource: \"wy876 漏洞文库\"\ntitle: \"Supabase query存在SQL注入漏洞\"\nproduct: \"Supabase Studio\"\nrecord_type: \"vulnerability\"\nreview_status: \"text-reviewed\"\nverification_status: \"not-reproduced\"\ncontent_status: \"quarantined\"\nidentifier_status: \"unknown\"\nprimary_identifiers: \"\"\nreferenced_identifiers: \"\"\nidentifier_role: \"unknown\"\nfofa_unverified: \"app.name=\"\nsource_status: \"unknown\"\nprerequisites: \"原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。\"\nside_effects: \"原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。\"\nid: \"vw-0eff0e8f87f4bdcdb9fb7d1a\"\nentity_id: \"ve-0eff0e8f87f4bdcdb9fb7d1a\"\nschema_version: \"1\"\n---\n",
+      "after_frontmatter": "---\nsource: \"wy876 漏洞文库\"\ntitle: \"Supabase query存在SQL注入漏洞\"\nproduct: \"Supabase Studio\"\nrecord_type: \"analysis\"\nreview_status: \"text-reviewed\"\nverification_status: \"not-reproduced\"\ncontent_status: \"needs-review\"\nidentifier_status: \"unknown\"\nprimary_identifiers: \"\"\nreferenced_identifiers: \"\"\nidentifier_role: \"unknown\"\nfofa_unverified: \"app.name=\"\nsource_status: \"unknown\"\nprerequisites: \"原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。\"\nside_effects: \"原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。\"\nid: \"vw-0eff0e8f87f4bdcdb9fb7d1a\"\nentity_id: \"ve-0eff0e8f87f4bdcdb9fb7d1a\"\nschema_version: \"1\"\n---\n",
+      "inserted_explanation": "\n## 收录状态复核（2026-10-03）\n\n本文作为 SQL 管理接口误判的分析材料收录，保留 query 请求及原作者主张。接口执行 SQL 是预期管理功能；现有材料没有证明匿名访问、越权、SQL 注入或服务器执行能力。缺少权限边界与响应证据应明确提醒，不因此隐藏可供比对的原始请求。本次仅静态核对；验证状态仍为未复现。\n",
+      "editorial_note_changes": [],
+      "technical_body_unchanged": true,
+      "reason": "本文作为 SQL 管理接口误判的分析材料收录，保留 query 请求及原作者主张。接口执行 SQL 是预期管理功能；现有材料没有证明匿名访问、越权、SQL 注入或服务器执行能力。缺少权限边界与响应证据应明确提醒，不因此隐藏可供比对的原始请求。",
+      "decision": "needs-review analysis, preserve original route and unresolved claims, no reproduction upgrade"
+    },
+    {
+      "path": "Web安全/数据库/Phpmyadmin/Phpmyadmin 爆路径.md",
+      "before_sha256": "3ad7df6693b3692421edd6321091be7ded65bb5d22f7eb592d9dbbca4bab3b2b",
+      "after_sha256": "718f07d417c4193e411a7b7417782eabc789e6f87c637caf12155c0224539377",
+      "before_frontmatter": "---\nsource: \"历史归档批(无原始出处标注)\"\ntitle: \"Phpmyadmin 爆路径\"\nproduct: \"phpMyAdmin\"\nrecord_type: \"advisory\"\nreview_status: \"text-reviewed\"\nverification_status: \"not-reproduced\"\ncontent_status: \"quarantined\"\nidentifier_status: \"unknown\"\nprimary_identifiers: \"\"\nreferenced_identifiers: \"\"\nidentifier_role: \"unknown\"\nprerequisites: \"依赖旧版本文件、错误显示配置或部署保留 phpinfo；load_file() 另需数据库权限\"\nsource_status: \"unknown\"\nside_effects: \"原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。\"\nid: \"vw-92ed95b57910d06bc6f46779\"\nentity_id: \"ve-92ed95b57910d06bc6f46779\"\nschema_version: \"1\"\n---\n",
+      "after_frontmatter": "---\nsource: \"历史归档批(无原始出处标注)\"\ntitle: \"Phpmyadmin 爆路径\"\nproduct: \"phpMyAdmin\"\nrecord_type: \"analysis\"\nreview_status: \"text-reviewed\"\nverification_status: \"not-reproduced\"\ncontent_status: \"needs-review\"\nidentifier_status: \"unknown\"\nprimary_identifiers: \"\"\nreferenced_identifiers: \"\"\nidentifier_role: \"unknown\"\nprerequisites: \"依赖旧版本文件、错误显示配置或部署保留 phpinfo；load_file() 另需数据库权限\"\nsource_status: \"unknown\"\nside_effects: \"原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。\"\nid: \"vw-92ed95b57910d06bc6f46779\"\nentity_id: \"ve-92ed95b57910d06bc6f46779\"\nschema_version: \"1\"\n---\n",
+      "inserted_explanation": "\n## 收录状态复核（2026-10-03）\n\n本文按简短的历史路径与函数线索收录，不能视为通用信息泄露漏洞。文件存在性、错误显示配置、phpinfo 部署情况和 load_file() 的数据库权限均未确认；可疑拼写和重复项保留供核对，不补猜正确路径或测试结果。本次仅静态核对；验证状态仍为未复现。\n",
+      "editorial_note_changes": [],
+      "technical_body_unchanged": true,
+      "reason": "本文按简短的历史路径与函数线索收录，不能视为通用信息泄露漏洞。文件存在性、错误显示配置、phpinfo 部署情况和 load_file() 的数据库权限均未确认；可疑拼写和重复项保留供核对，不补猜正确路径或测试结果。",
+      "decision": "needs-review analysis, preserve original route and unresolved claims, no reproduction upgrade"
+    },
+    {
+      "path": "Web安全/网络设备/Fortinet/Fortinet FortiSwitch 任意密码重置 CVE-2024-48887.md",
+      "before_sha256": "b3d7832beda92d01c720e56db3b56fb9e7fb3e0551c2ca1ff03006a68ae75557",
+      "after_sha256": "9bed0506adaa81f79c6858d8251ae59045f35849532345eff880c93cf138b74a",
+      "before_frontmatter": "---\ncve: \"CVE-2024-48887\"\nsource: \"gelusus/wxvl 公众号漏洞文库\"\nid: \"vw-75a958f8d6692674e1c0acca\"\nentity_id: \"ve-75a958f8d6692674e1c0acca\"\nschema_version: \"1\"\ntitle: \"Fortinet FortiSwitch 任意密码重置 CVE-2024-48887\"\nproduct: \"FortiSwitch\"\nrecord_type: \"advisory\"\nreview_status: \"text-reviewed\"\nverification_status: \"not-reproduced\"\ncontent_status: \"quarantined\"\nidentifier_status: \"disputed\"\nidentifier_role: \"primary\"\nprimary_identifiers: \"CVE-2024-48887\"\nreferenced_identifiers: \"\"\nprerequisites: \"未认证改管理员密码；列多个分支修复号\"\narchive_url: \"https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/Fortinet/Fortinet%20FortiSwitch%20%E4%BB%BB%E6%84%8F%E5%AF%86%E7%A0%81%E9%87%8D%E7%BD%AE%20CVE-2024-48887.md\"\nreview_date: \"2026-10-02\"\nside_effects: \"本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本\"\nsource_status: \"unknown\"\n---\n",
+      "after_frontmatter": "---\ncve: \"CVE-2024-48887\"\nsource: \"gelusus/wxvl 公众号漏洞文库\"\nid: \"vw-75a958f8d6692674e1c0acca\"\nentity_id: \"ve-75a958f8d6692674e1c0acca\"\nschema_version: \"1\"\ntitle: \"Fortinet FortiSwitch 任意密码重置 CVE-2024-48887\"\nproduct: \"FortiSwitch\"\nrecord_type: \"analysis\"\nreview_status: \"text-reviewed\"\nverification_status: \"not-reproduced\"\ncontent_status: \"needs-review\"\nidentifier_status: \"disputed\"\nidentifier_role: \"reference\"\nprimary_identifiers: \"\"\nreferenced_identifiers: \"CVE-2024-48887\"\nprerequisites: \"未认证改管理员密码；列多个分支修复号\"\narchive_url: \"https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/Fortinet/Fortinet%20FortiSwitch%20%E4%BB%BB%E6%84%8F%E5%AF%86%E7%A0%81%E9%87%8D%E7%BD%AE%20CVE-2024-48887.md\"\nreview_date: \"2026-10-02\"\nside_effects: \"本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本\"\nsource_status: \"unknown\"\n---\n",
+      "inserted_explanation": "\n## 收录状态复核（2026-10-03）\n\n本文按端点与版本主张待核的请求分析收录。set_password 与 /change_pass 的冲突、缺少响应和修复分支证据继续在正文提醒；原样例可用于分析失败或错配，不能据此宣称已证实任意密码重置。原标题编号保留为引用，不作已确认的主编号映射；既有待核状态不升级，原请求不改造。本次仅静态核对；验证状态仍为未复现。\n",
+      "editorial_note_changes": [],
+      "technical_body_unchanged": true,
+      "reason": "本文按端点与版本主张待核的请求分析收录。set_password 与 /change_pass 的冲突、缺少响应和修复分支证据继续在正文提醒；原样例可用于分析失败或错配，不能据此宣称已证实任意密码重置。原标题编号保留为引用，不作已确认的主编号映射；既有待核状态不升级，原请求不改造。",
+      "decision": "needs-review analysis, preserve original route and unresolved claims, no reproduction upgrade",
+      "independent_review_followup": "Unverified mismatched endpoint is an analysis referring to title CVE; demote title CVE to reference while preserving original cve and disputed status."
+    },
+    {
+      "path": "IOT安全/Ruijie/锐捷易网关 远程命令执行.md",
+      "before_sha256": "568973dcd778c4486fa1263273ce9f978f26958ce67577b8789de15952560a3a",
+      "after_sha256": "88ab9f178665138d5bda28b08ef861370d8971bb1cf24872cf461d29b09c908f",
+      "before_frontmatter": "---\nsource: \"白阁文库 BaizeSec/bylibrary\"\nid: \"vw-5436324e958db86671c33759\"\nentity_id: \"ve-5436324e958db86671c33759\"\nschema_version: \"1\"\ntitle: \"锐捷易网关 远程命令执行\"\nproduct: \"Ruijie EG3200\"\nrecord_type: \"vulnerability\"\nreview_status: \"text-reviewed\"\nverification_status: \"not-reproduced\"\ncontent_status: \"quarantined\"\nidentifier_status: \"unknown\"\nidentifier_role: \"unknown\"\nprimary_identifiers: \"\"\nreferenced_identifiers: \"\"\nprerequisites: \"测试EG_RGOS11.9(4)B11P1_EG3200_install；无Cookie\"\narchive_url: \"https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/IOT%E5%AE%89%E5%85%A8/Ruijie/%E9%94%90%E6%8D%B7%E6%98%93%E7%BD%91%E5%85%B3%20%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C.md\"\nreview_date: \"2026-10-02\"\nside_effects: \"执行文中载荷可能以目标进程权限启动命令或加载代码；权限受认证角色、操作系统账户及依赖版本约束，不能把 root/200 等通用字符串当成功证据\"\nsource_status: \"unknown\"\n---\n",
+      "after_frontmatter": "---\nsource: \"白阁文库 BaizeSec/bylibrary\"\nid: \"vw-5436324e958db86671c33759\"\nentity_id: \"ve-5436324e958db86671c33759\"\nschema_version: \"1\"\ntitle: \"锐捷易网关 远程命令执行\"\nproduct: \"Ruijie EG3200\"\nrecord_type: \"analysis\"\nreview_status: \"text-reviewed\"\nverification_status: \"not-reproduced\"\ncontent_status: \"needs-review\"\nidentifier_status: \"unknown\"\nidentifier_role: \"unknown\"\nprimary_identifiers: \"\"\nreferenced_identifiers: \"\"\nprerequisites: \"测试EG_RGOS11.9(4)B11P1_EG3200_install；无Cookie\"\narchive_url: \"https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/IOT%E5%AE%89%E5%85%A8/Ruijie/%E9%94%90%E6%8D%B7%E6%98%93%E7%BD%91%E5%85%B3%20%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C.md\"\nreview_date: \"2026-10-02\"\nside_effects: \"执行文中载荷可能以目标进程权限启动命令或加载代码；权限受认证角色、操作系统账户及依赖版本约束，不能把 root/200 等通用字符串当成功证据\"\nsource_status: \"unknown\"\n---\n",
+      "inserted_explanation": "\n## 收录状态复核（2026-10-03）\n\n本文按失效样例与固件条件的分析材料收录。普通单引号中的 busybox wget 不会产生文中声称的命令替换，原有具体固件、请求和失败原因具有对照价值。保留原样例及其限制，不替换为新的利用方式，不将其收录状态解释为 RCE 已验证。本次仅静态核对；验证状态仍为未复现。\n",
+      "editorial_note_changes": [],
+      "technical_body_unchanged": true,
+      "reason": "本文按失效样例与固件条件的分析材料收录。普通单引号中的 busybox wget 不会产生文中声称的命令替换，原有具体固件、请求和失败原因具有对照价值。保留原样例及其限制，不替换为新的利用方式，不将其收录状态解释为 RCE 已验证。",
+      "decision": "needs-review analysis, preserve original route and unresolved claims, no reproduction upgrade"
+    }
+  ],
+  "former_excluded_count": 59,
+  "restored_entries": 8,
+  "remaining_excluded_count": 51,
+  "boundary_cases_kept_quarantined": [
+    {
+      "path": "Web安全/开发框架/Gitea/刚升到 Gitea 1.27.0 以为安全了？两个 0day 直接 RCE.md",
+      "reason": "核心依据为无法复核的截图转述，具体漏洞入口仅猜测，正文没有可区分并核对的技术链或方法；保留待核，缺少来源不是唯一隔离理由。"
+    },
+    {
+      "path": "Web安全/运维面板/cPanel/【漏洞预警】 cPanelWP2 高危任意文件读取CVE-2026-29205.md",
+      "reason": "多产品与版本、CVSS、路径和权限后果互相错配且无可支撑的响应或根因材料；单段预警尚无法拆分为有依据的技术参考，保留待核。"
+    },
+    {
+      "path": "Web安全/服务器软件/突发/！国家级黑客利用零日漏洞入侵Commvault Azure环境，数据安全再响警报.md",
+      "reason": "核心归因、事件和客户影响主张均无可核证据，未提供技术方法或分析链条；保留原事件资料和待核入口，不将叙述当已确认事件。"
+    }
+  ]
+}

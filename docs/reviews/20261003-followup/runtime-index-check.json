@@ -1,0 +1,55 @@
+{
+  "documents": 5558,
+  "restored_entries_present": 32,
+  "candidate_and_roundup_checks": [
+    {
+      "path": "Web安全/AI应用/chatgpt-on-wechat/chatgpt-on-wechat存在身份验证漏洞漏洞(CVE-2026-6129).md",
+      "identifier": "CVE-2026-6129",
+      "role": "candidate",
+      "found": true
+    },
+    {
+      "path": "Web安全/网络设备/D-Link/「1day」D-Link DIR 823G路由器存在未授权访问漏洞（CVE-2025-2360）.md",
+      "identifier": "CVE-2025-2360",
+      "role": "candidate",
+      "found": true
+    },
+    {
+      "path": "Web安全/桌面软件/Microsoft/Microsoft’s August 2025 Patch Tuesday Addresses 107 CVEs CVE-2025-537.md",
+      "identifier": "CVE-2025-53779",
+      "role": "reference",
+      "found": true
+    },
+    {
+      "path": "Web安全/桌面软件/Microsoft/Microsoft’s December 2025 Patch Tuesday Addresses 56 CVEs CVE-2025-62.md",
+      "identifier": "CVE-2025-62221",
+      "role": "reference",
+      "found": true
+    },
+    {
+      "path": "Web安全/桌面软件/Microsoft/Microsoft’s June 2026 Patch Tuesday Addresses 198 CVEs CVE-2026-4916.md",
+      "identifier": "CVE-2026-49160",
+      "role": "reference",
+      "found": true
+    },
+    {
+      "path": "Web安全/桌面软件/Microsoft/Microsoft’s June 2026 Patch Tuesday Addresses 198 CVEs CVE-2026-4916.md",
+      "identifier": "CVE-2026-50507",
+      "role": "reference",
+      "found": true
+    },
+    {
+      "path": "Web安全/桌面软件/Microsoft/Microsoft’s November 2025 Patch Tuesday Addresses 63 CVEs CVE-2025-62.md",
+      "identifier": "CVE-2025-62215",
+      "role": "reference",
+      "found": true
+    },
+    {
+      "path": "Web安全/桌面软件/Microsoft/Microsoft’s September 2025 Patch Tuesday Addresses 80 CVEs CVE-2025-5.md",
+      "identifier": "CVE-2025-55234",
+      "role": "reference",
+      "found": true
+    }
+  ],
+  "qualification": "Actual generated catalog and installed search-worker string processing only; no browser, article code, or remote target execution."
+}

@@ -1,0 +1,919 @@
+{
+  "date": "2026-10-03",
+  "records": [
+    {
+      "path": "admission/independent-1.jsonl.gz",
+      "origin": "/tmp/vulwiki-second-polish-20261003/admission/independent-1.jsonl",
+      "sha256": "2c672c48bb427ccc412a79a4fa055dbf665060c690bde496f193526dce14c46c",
+      "raw_sha256": "4f43a9d07c6994a31cfb11316b66b118b7a416337ff94cc10fa23ab411e0a1a3",
+      "bytes": 9515,
+      "raw_bytes": 24958,
+      "format": "lossless-gzip",
+      "records": 10
+    },
+    {
+      "path": "admission/independent-2.jsonl.gz",
+      "origin": "/tmp/vulwiki-second-polish-20261003/admission/independent-2.jsonl",
+      "sha256": "488f7b4868755bd79ebabcc6771455b64048ac9fd8fb1cbab0834cdfb863c75a",
+      "raw_sha256": "bdd20592c9b408e9ee25f76e9d8ae66c6b03d9d519dadfbfbc7c65f6f99f28d7",
+      "bytes": 4793,
+      "raw_bytes": 24364,
+      "format": "lossless-gzip",
+      "records": 10
+    },
+    {
+      "path": "admission/independent-3.jsonl.gz",
+      "origin": "/tmp/vulwiki-second-polish-20261003/admission/independent-3.jsonl",
+      "sha256": "c93bffa1618aa017c1c00333fb6bac9c70142a3f902c7eaf5ce23beafdd3ecb5",
+      "raw_sha256": "bd9542346240d036a26fec9eb3ca2aa0921ae4c81983dffe0384a31b32e90671",
+      "bytes": 5489,
+      "raw_bytes": 17157,
+      "format": "lossless-gzip",
+      "records": 10
+    },
+    {
+      "path": "admission/independent-4.jsonl.gz",
+      "origin": "/tmp/vulwiki-second-polish-20261003/admission/independent-4.jsonl",
+      "sha256": "8cfeba18cb35ca787e55c2bb573e6e8c4f0d40f9599549c777f116b14024833b",
+      "raw_sha256": "44a50d153ad890bba3cab90a891958cfe808f104ffedc759570e069f02e2f522",
+      "bytes": 6883,
+      "raw_bytes": 26369,
+      "format": "lossless-gzip",
+      "records": 10
+    },
+    {
+      "path": "admission/independent-5.jsonl.gz",
+      "origin": "/tmp/vulwiki-second-polish-20261003/admission/independent-5.jsonl",
+      "sha256": "4044c4a78c0bc0c3d2cf37dc74029be7148b704ae08358221fa58a485b1b8fdd",
+      "raw_sha256": "1e751972f84db10725486c9af08a61f19980aa92bdb3e6e325acbe7979e91cc2",
+      "bytes": 10316,
+      "raw_bytes": 27881,
+      "format": "lossless-gzip",
+      "records": 10
+    },
+    {
+      "path": "blog-tests-final.log",
+      "origin": "/tmp/vulwiki-second-polish-20261003/blog-tests-final.log",
+      "sha256": "8a32516757ea715d83d8c67074276d61ba4131a933235b58cd5cc4c9945ba5e1",
+      "raw_sha256": "8a32516757ea715d83d8c67074276d61ba4131a933235b58cd5cc4c9945ba5e1",
+      "bytes": 943,
+      "raw_bytes": 943,
+      "format": "unchanged-copy",
+      "records": null
+    },
+    {
+      "path": "code-copy/confirmed-findings.jsonl.gz",
+      "origin": "/tmp/vulwiki-second-polish-20261003/code-copy/confirmed-findings.jsonl",
+      "sha256": "a44a3d2d34eeed4401b4189d9db848b55d7b5cc8cdbdd5f799bc548186f0edfc",
+      "raw_sha256": "de6a8d39df507a7bca73dff93a1f45448d351a94932be3c5f453c716171fc51c",
+      "bytes": 1382,
+      "raw_bytes": 3064,
+      "format": "lossless-gzip",
+      "records": 1
+    },
+    {
+      "path": "code-copy/html-pack3-independent.json.gz",
+      "origin": "/tmp/vulwiki-second-polish-20261003/code-copy/html-pack3-independent.json",
+      "sha256": "090d969aa55863dacd022bd149ec716b31385946ab3766af6db69a20149460ad",
+      "raw_sha256": "5151ce6123710b13bf23d8f350de91af07fa5379438e3cd8bde2812660d31ee1",
+      "bytes": 131495,
+      "raw_bytes": 4822792,
+      "format": "lossless-gzip",
+      "records": null
+    },
+    {
+      "path": "code-copy/ledger.jsonl.gz",
+      "origin": "/tmp/vulwiki-second-polish-20261003/code-copy/ledger.jsonl",
+      "sha256": "16c6ccaf93d729aeb9c82bb49a3308abbfcfc72d7561b4409d40eaadbd83c311",
+      "raw_sha256": "235061c8f9d34a581379e32158d821b8afc52e49ae317043f6b53a488ac267cc",
+      "bytes": 587799,
+      "raw_bytes": 1845735,
+      "format": "lossless-gzip",
+      "records": 5654
+    },
+    {
+      "path": "code-copy/report.json",
+      "origin": "/tmp/vulwiki-second-polish-20261003/code-copy/report.json",
+      "sha256": "545a82abca99a68b2539bde55a8f44df181e8ef0c92cd44c3e9fdef947e0d0b7",
+      "raw_sha256": "545a82abca99a68b2539bde55a8f44df181e8ef0c92cd44c3e9fdef947e0d0b7",
+      "bytes": 1890,
+      "raw_bytes": 1890,
+      "format": "unchanged-copy",
+      "records": null
+    },
+    {
+      "path": "content-tests-final.log",
+      "origin": "/tmp/vulwiki-second-polish-20261003/content-tests-final.log",
+      "sha256": "275683df22077611abd98d6b5edf3a1451fbf70794ece6db536b64d758388444",
+      "raw_sha256": "275683df22077611abd98d6b5edf3a1451fbf70794ece6db536b64d758388444",
+      "bytes": 7053,
+      "raw_bytes": 7053,
+      "format": "unchanged-copy",
+      "records": null
+    },
+    {
+      "path": "fidelity-1/candidate-review.json",
+      "origin": "/tmp/vulwiki-second-polish-20261003/fidelity-1/candidate-review.json",
+      "sha256": "cc2706d20fcce2a75701296de7f7fe13a28f8440fff104a58249077326666c47",
+      "raw_sha256": "cc2706d20fcce2a75701296de7f7fe13a28f8440fff104a58249077326666c47",
+      "bytes": 6724,
+      "raw_bytes": 6724,
+      "format": "unchanged-copy",
+      "records": null
+    },
+    {
+      "path": "fidelity-1/findings.json",
+      "origin": "/tmp/vulwiki-second-polish-20261003/fidelity-1/findings.json",
+      "sha256": "130ecfcee003f8e2f5e84b30e0e5b5d7b0ced38200f8388490926c7017fac055",
+      "raw_sha256": "130ecfcee003f8e2f5e84b30e0e5b5d7b0ced38200f8388490926c7017fac055",
+      "bytes": 390,
+      "raw_bytes": 390,
+      "format": "unchanged-copy",
+      "records": null
+    },
+    {
+      "path": "fidelity-1/ledger.jsonl.gz",
+      "origin": "/tmp/vulwiki-second-polish-20261003/fidelity-1/ledger.jsonl",
+      "sha256": "172eefe5b3e370e112fcdeecfff9d21d1bb0d03fd805e129ff488539cc1fbbd6",
+      "raw_sha256": "64f0d781f4047e596794e0e887b489520fae646fe27ede0da2d50509b5e5076a",
+      "bytes": 349399,
+      "raw_bytes": 2721237,
+      "format": "lossless-gzip",
+      "records": 703
+    },
+    {
+      "path": "fidelity-2/additional-context-ledger.jsonl.gz",
+      "origin": "/tmp/vulwiki-second-polish-20261003/fidelity-2/additional-context-ledger.jsonl",
+      "sha256": "be65d764fd6e254c1cd1cbdd758bff96786fc2324e9f912cf7d65e5a1a1f6093",
+      "raw_sha256": "44ba13b279e0452754e76be9cd3eb1e15a417883d7affe63653487c8238da5b5",
+      "bytes": 441862,
+      "raw_bytes": 2394393,
+      "format": "lossless-gzip",
+      "records": 390
+    },
+    {
+      "path": "fidelity-2/additional-context-summary.json",
+      "origin": "/tmp/vulwiki-second-polish-20261003/fidelity-2/additional-context-summary.json",
+      "sha256": "7e27d7246f401581e3676da94336d4eafc2ebbd99aabcd37f86b9f7baac65102",
+      "raw_sha256": "7e27d7246f401581e3676da94336d4eafc2ebbd99aabcd37f86b9f7baac65102",
+      "bytes": 2971,
+      "raw_bytes": 2971,
+      "format": "unchanged-copy",
+      "records": null
+    },
+    {
+      "path": "fidelity-2/ledger.jsonl.gz",
+      "origin": "/tmp/vulwiki-second-polish-20261003/fidelity-2/ledger.jsonl",
+      "sha256": "ac1efc21bcae99277e8efcb0165d99be43edee8ccc0f498b7e03992bdf71621e",
+      "raw_sha256": "4b1c0490faed6dd558ccdbf4a176bd63d8574fde024daed9cac4be5cc509c50c",
+      "bytes": 114293,
+      "raw_bytes": 657465,
+      "format": "lossless-gzip",
+      "records": 711
+    },
+    {
+      "path": "fidelity-3/candidate-dispositions.jsonl.gz",
+      "origin": "/tmp/vulwiki-second-polish-20261003/fidelity-3/candidate-dispositions.jsonl",
+      "sha256": "e47e9245bc626a0751147053b19f59fdc7029fce382102b42e40e2b217fb3515",
+      "raw_sha256": "b3a29be2909be664491ab94ad1b6b0ce54f2ea72d108534b8f1b55cc52690440",
+      "bytes": 70895,
+      "raw_bytes": 627099,
+      "format": "lossless-gzip",
+      "records": 376
+    },
+    {
+      "path": "fidelity-3/ledger.jsonl.gz",
+      "origin": "/tmp/vulwiki-second-polish-20261003/fidelity-3/ledger.jsonl",
+      "sha256": "e76d26b9ecc0abee3da9ecc8d62d04cc69ac3f35f5411a71da79a3fa88a422b9",
+      "raw_sha256": "810532a1101ecc859b400bfd02611ae11ce50b4a709b4a5ef2b9ac9a11204001",
+      "bytes": 120980,
+      "raw_bytes": 956985,
+      "format": "lossless-gzip",
+      "records": 699
+    },
+    {
+      "path": "fidelity-3/report.json",
+      "origin": "/tmp/vulwiki-second-polish-20261003/fidelity-3/report.json",
+      "sha256": "06055cc7e26eeec2f176205840ed1405e3050082aedcc68a2b2e0157c1c405b2",
+      "raw_sha256": "06055cc7e26eeec2f176205840ed1405e3050082aedcc68a2b2e0157c1c405b2",
+      "bytes": 3701,
+      "raw_bytes": 3701,
+      "format": "unchanged-copy",
+      "records": null
+    },
+    {
+      "path": "fidelity-3/unknowns.json",
+      "origin": "/tmp/vulwiki-second-polish-20261003/fidelity-3/unknowns.json",
+      "sha256": "0a2092f39a99e01da35b130be05e7b44abc3c095f866007352e69a4b26c33cce",
+      "raw_sha256": "0a2092f39a99e01da35b130be05e7b44abc3c095f866007352e69a4b26c33cce",
+      "bytes": 17457,
+      "raw_bytes": 17457,
+      "format": "unchanged-copy",
+      "records": null
+    },
+    {
+      "path": "fidelity-4/final-context-ledger.jsonl.gz",
+      "origin": "/tmp/vulwiki-second-polish-20261003/fidelity-4/final-context-ledger.jsonl",
+      "sha256": "cd3bbe7906ce3923d27e8447e1e2662506d45ea783c70bb574c64cdbe32f8e93",
+      "raw_sha256": "588e70fb75fec71840a884bbf7415677560d85e73eb692729ccedf367dd47274",
+      "bytes": 40380,
+      "raw_bytes": 205914,
+      "format": "lossless-gzip",
+      "records": 18
+    },
+    {
+      "path": "fidelity-4/final-summary.json",
+      "origin": "/tmp/vulwiki-second-polish-20261003/fidelity-4/final-summary.json",
+      "sha256": "759fef8019c7c264a8067a00f4b5059341da41b83ae49c1851369ac313152f90",
+      "raw_sha256": "759fef8019c7c264a8067a00f4b5059341da41b83ae49c1851369ac313152f90",
+      "bytes": 2302,
+      "raw_bytes": 2302,
+      "format": "unchanged-copy",
+      "records": null
+    },
+    {
+      "path": "fidelity-4/ledger.jsonl.gz",
+      "origin": "/tmp/vulwiki-second-polish-20261003/fidelity-4/ledger.jsonl",
+      "sha256": "5bac76973b267501dd1498bc7f7bbeaec1d3e053efaad45390c453132cf563a1",
+      "raw_sha256": "d3e05c3776730de33528552f72f6e3b2adee96f6f18d9574de8067d5d8a2a229",
+      "bytes": 137727,
+      "raw_bytes": 924262,
+      "format": "lossless-gzip",
+      "records": 732
+    },
+    {
+      "path": "fidelity-4/unknown.json",
+      "origin": "/tmp/vulwiki-second-polish-20261003/fidelity-4/unknown.json",
+      "sha256": "d20576c4af132c8005e67157d849ca429cb34bcad7cecfb9142c0436f8830753",
+      "raw_sha256": "d20576c4af132c8005e67157d849ca429cb34bcad7cecfb9142c0436f8830753",
+      "bytes": 3156,
+      "raw_bytes": 3156,
+      "format": "unchanged-copy",
+      "records": null
+    },
+    {
+      "path": "fidelity-5/html-triage-1.json.gz",
+      "origin": "/tmp/vulwiki-second-polish-20261003/fidelity-5/html-triage-1.json",
+      "sha256": "1237d7b171a9e347c1c513ee435996fe6b0b85e3a6c87e7b1dcfaf7b7658a0b6",
+      "raw_sha256": "16dba656d3e101c59ebcfa8ae8ca0a4f4486c1188c6dbf63a85b2597a27c5e27",
+      "bytes": 31326,
+      "raw_bytes": 293131,
+      "format": "lossless-gzip",
+      "records": null
+    },
+    {
+      "path": "fidelity-5/ledger.jsonl.gz",
+      "origin": "/tmp/vulwiki-second-polish-20261003/fidelity-5/ledger.jsonl",
+      "sha256": "0cb83c625a618147a8c45eef78b5e909a2b5bcffc777815db0d7f00c71329bbe",
+      "raw_sha256": "1e43c5977f207f1a35faaf299c01ab7a5dbc3d23290f44ff9bf262a9e79b6ade",
+      "bytes": 87017,
+      "raw_bytes": 645830,
+      "format": "lossless-gzip",
+      "records": 683
+    },
+    {
+      "path": "fidelity-6/additional-findings.json",
+      "origin": "/tmp/vulwiki-second-polish-20261003/fidelity-6/additional-findings.json",
+      "sha256": "48d1b0b0f3014c4421bd632fffc017d64ba80fda8944fbf495fe6bbecf5ee32e",
+      "raw_sha256": "48d1b0b0f3014c4421bd632fffc017d64ba80fda8944fbf495fe6bbecf5ee32e",
+      "bytes": 4016,
+      "raw_bytes": 4016,
+      "format": "unchanged-copy",
+      "records": null
+    },
+    {
+      "path": "fidelity-6/additional-original-context-ledger.jsonl.gz",
+      "origin": "/tmp/vulwiki-second-polish-20261003/fidelity-6/additional-original-context-ledger.jsonl",
+      "sha256": "c231241d8dcf103273b3113225adccdbe7d79cb29d048e8e813bc27926e7cba6",
+      "raw_sha256": "33910834b05d459c0689fd0c5223b9389f19466088574f13682a8dd050914e1b",
+      "bytes": 458994,
+      "raw_bytes": 3119318,
+      "format": "lossless-gzip",
+      "records": 411
+    },
+    {
+      "path": "fidelity-6/additional-summary.json",
+      "origin": "/tmp/vulwiki-second-polish-20261003/fidelity-6/additional-summary.json",
+      "sha256": "da975770250e925ed5c873725474324965369061b8151135e15309005368f428",
+      "raw_sha256": "da975770250e925ed5c873725474324965369061b8151135e15309005368f428",
+      "bytes": 1184,
+      "raw_bytes": 1184,
+      "format": "unchanged-copy",
+      "records": null
+    },
+    {
+      "path": "fidelity-6/ledger.jsonl.gz",
+      "origin": "/tmp/vulwiki-second-polish-20261003/fidelity-6/ledger.jsonl",
+      "sha256": "ad6efd003e808f0b4dc783c7d387db09b1771eef28aa2cc3b4f7891b24a42212",
+      "raw_sha256": "42684f8e879786b0607d948006298dadab627fef3326697af471bdd753ce5bf4",
+      "bytes": 79380,
+      "raw_bytes": 532581,
+      "format": "lossless-gzip",
+      "records": 726
+    },
+    {
+      "path": "fidelity-7/additional-original-context-ledger.jsonl.gz",
+      "origin": "/tmp/vulwiki-second-polish-20261003/fidelity-7/additional-original-context-ledger.jsonl",
+      "sha256": "5fdba50ab2a92aad3feb8a67dec716e02254fe3363620cb11a98e7eb17fef51f",
+      "raw_sha256": "665c50bea009710511cdd78e33a937ecf636c4ce408580f3a986f2b5db330a8f",
+      "bytes": 133851,
+      "raw_bytes": 1138569,
+      "format": "lossless-gzip",
+      "records": 352
+    },
+    {
+      "path": "fidelity-7/additional-summary.json",
+      "origin": "/tmp/vulwiki-second-polish-20261003/fidelity-7/additional-summary.json",
+      "sha256": "e85c21d73258878efed3b9f5154eca0a23fd2acbca5686af5c11c2318e21b6fd",
+      "raw_sha256": "e85c21d73258878efed3b9f5154eca0a23fd2acbca5686af5c11c2318e21b6fd",
+      "bytes": 5081,
+      "raw_bytes": 5081,
+      "format": "unchanged-copy",
+      "records": null
+    },
+    {
+      "path": "fidelity-7/cached-mikrotik-provenance.json",
+      "origin": "/tmp/vulwiki-second-polish-20261003/fidelity-7/cached-mikrotik-provenance.json",
+      "sha256": "9e5d39e83cbdc3815cb4726e4b7557cd71cf78cfd1059eaaf7227be4070cdae0",
+      "raw_sha256": "9e5d39e83cbdc3815cb4726e4b7557cd71cf78cfd1059eaaf7227be4070cdae0",
+      "bytes": 29767,
+      "raw_bytes": 29767,
+      "format": "unchanged-copy",
+      "records": null
+    },
+    {
+      "path": "fidelity-7/ledger.jsonl.gz",
+      "origin": "/tmp/vulwiki-second-polish-20261003/fidelity-7/ledger.jsonl",
+      "sha256": "c6a52a6c105d3da6014cc6c1f9f196c8686cf192a88a98627bef55b594fb580e",
+      "raw_sha256": "d4daefe97a4fd3bc98cc5b1cb7d04c8afeb9957d3ba0401861e3827613f09c0a",
+      "bytes": 112647,
+      "raw_bytes": 704332,
+      "format": "lossless-gzip",
+      "records": 683
+    },
+    {
+      "path": "fidelity-8/html-pack2-independent.json.gz",
+      "origin": "/tmp/vulwiki-second-polish-20261003/fidelity-8/html-pack2-independent.json",
+      "sha256": "31a7b5bd9eeb0125c85341f944c01059c268fedb630b93acdf492b3e06d5015e",
+      "raw_sha256": "7fbd64118a88fa95da85875a784f0ca36078c59854271afcc09e1d7d41fd1d3f",
+      "bytes": 23728,
+      "raw_bytes": 176329,
+      "format": "lossless-gzip",
+      "records": null
+    },
+    {
+      "path": "fidelity-8/ledger.jsonl.gz",
+      "origin": "/tmp/vulwiki-second-polish-20261003/fidelity-8/ledger.jsonl",
+      "sha256": "dea1cfda1e590e596cf455f40be7a26a83c18e46bf1388a18b6ebcae0f058764",
+      "raw_sha256": "98af87436eef7213ce143b5c4b257cb03a601be1db8e0c04a0a80a4682d8a237",
+      "bytes": 157374,
+      "raw_bytes": 1201042,
+      "format": "lossless-gzip",
+      "records": 717
+    },
+    {
+      "path": "fidelity-8/semantic-contexts.jsonl.gz",
+      "origin": "/tmp/vulwiki-second-polish-20261003/fidelity-8/semantic-contexts.jsonl",
+      "sha256": "1394da365f63af486026878fddf1b9fbba3fd5b91fe1623493cce19afd1e39a1",
+      "raw_sha256": "f808d0c734b306d8667bf4cd1eb1c718f96cd3a1467dd0a712342fa713214954",
+      "bytes": 2810,
+      "raw_bytes": 12632,
+      "format": "lossless-gzip",
+      "records": 12
+    },
+    {
+      "path": "fidelity-8/substantive-18-findings.json",
+      "origin": "/tmp/vulwiki-second-polish-20261003/fidelity-8/substantive-18-findings.json",
+      "sha256": "5db1af557359e9d6699f0d8233c776953e3472581a4e3b8f4a78e3a9658e9d3d",
+      "raw_sha256": "5db1af557359e9d6699f0d8233c776953e3472581a4e3b8f4a78e3a9658e9d3d",
+      "bytes": 850,
+      "raw_bytes": 850,
+      "format": "unchanged-copy",
+      "records": null
+    },
+    {
+      "path": "fidelity-8/substantive-18-ledger.jsonl.gz",
+      "origin": "/tmp/vulwiki-second-polish-20261003/fidelity-8/substantive-18-ledger.jsonl",
+      "sha256": "065a8a2b6f7349787a7a8bfa27c0120d15e08327d2829b72e03081967df164ff",
+      "raw_sha256": "e1c3230113688a635f41188e87803465b1e53d7ba1237cf07953a7ea4ee3ed92",
+      "bytes": 7681,
+      "raw_bytes": 30661,
+      "format": "lossless-gzip",
+      "records": 18
+    },
+    {
+      "path": "html-xml/html-triage-2.json.gz",
+      "origin": "/tmp/vulwiki-second-polish-20261003/html-xml/html-triage-2.json",
+      "sha256": "3292deea7df9394280fad8949a1f03c65fbecaa07662787b3fc95b0c06eb92be",
+      "raw_sha256": "8fe55c6b60ef3fba0572d2f0e00f19237b7b1fad18e3d5f31799170f90bce06c",
+      "bytes": 95485,
+      "raw_bytes": 707907,
+      "format": "lossless-gzip",
+      "records": null
+    },
+    {
+      "path": "index-build-check.log",
+      "origin": "/tmp/vulwiki-second-polish-20261003/index-build-check.log",
+      "sha256": "ff889f0147cdb7e0a9e63ce14aaef00d479a571492743d92679fb0da81d93c7c",
+      "raw_sha256": "ff889f0147cdb7e0a9e63ce14aaef00d479a571492743d92679fb0da81d93c7c",
+      "bytes": 464,
+      "raw_bytes": 464,
+      "format": "unchanged-copy",
+      "records": null
+    },
+    {
+      "path": "index-search/findings.md",
+      "origin": "/tmp/vulwiki-second-polish-20261003/index-search/findings.md",
+      "sha256": "bb6030f532adc282ecfd58956a7eeac2655d9acfbd860913786bb77b1f61a0f2",
+      "raw_sha256": "bb6030f532adc282ecfd58956a7eeac2655d9acfbd860913786bb77b1f61a0f2",
+      "bytes": 7652,
+      "raw_bytes": 7652,
+      "format": "unchanged-copy",
+      "records": null
+    },
+    {
+      "path": "layout/additional-pipe-heading-candidate-ledger.jsonl.gz",
+      "origin": "/tmp/vulwiki-second-polish-20261003/layout/additional-pipe-heading-candidate-ledger.jsonl",
+      "sha256": "55e8e22651fb2b089c3e33376505ca731b4ec2ac02f6200d008290b24a58f7d4",
+      "raw_sha256": "b62e707051f602a108ba41eda3d6369a68e439d0fb7530ad5b9ec3f9538dee8b",
+      "bytes": 14032,
+      "raw_bytes": 93305,
+      "format": "lossless-gzip",
+      "records": 31
+    },
+    {
+      "path": "layout/additional-raw-table-findings.json",
+      "origin": "/tmp/vulwiki-second-polish-20261003/layout/additional-raw-table-findings.json",
+      "sha256": "f14755faa0797f2ef6bd958dac477cbe621a9fe0ecc949c772935d2cd1f43e25",
+      "raw_sha256": "f14755faa0797f2ef6bd958dac477cbe621a9fe0ecc949c772935d2cd1f43e25",
+      "bytes": 17649,
+      "raw_bytes": 17649,
+      "format": "unchanged-copy",
+      "records": null
+    },
+    {
+      "path": "layout/additional-raw-table-ledger.jsonl.gz",
+      "origin": "/tmp/vulwiki-second-polish-20261003/layout/additional-raw-table-ledger.jsonl",
+      "sha256": "866165db8af41f77011bf3755764fe3412a7f40b9dd45f60060f5013c188d29d",
+      "raw_sha256": "566c93c950c153b0201ef57cd430fc477b51b4d6d45a703d79d278706a1272b2",
+      "bytes": 82563,
+      "raw_bytes": 1266628,
+      "format": "lossless-gzip",
+      "records": 752
+    },
+    {
+      "path": "layout/additional-raw-table-summary.json",
+      "origin": "/tmp/vulwiki-second-polish-20261003/layout/additional-raw-table-summary.json",
+      "sha256": "80381adcae56f515462019a27f9cbff41afc78fd16428a7479160e5c7b8ec52b",
+      "raw_sha256": "80381adcae56f515462019a27f9cbff41afc78fd16428a7479160e5c7b8ec52b",
+      "bytes": 2932,
+      "raw_bytes": 2932,
+      "format": "unchanged-copy",
+      "records": null
+    },
+    {
+      "path": "layout/html-triage-3.json.gz",
+      "origin": "/tmp/vulwiki-second-polish-20261003/layout/html-triage-3.json",
+      "sha256": "55e44df991386c624ba2d15bf923a825d36e3fa2389a697befc8a5ac1248595d",
+      "raw_sha256": "01af2d7aa4978879e02b6cebb68a98d66319137c7fbbd380732edf105efb1297",
+      "bytes": 56582,
+      "raw_bytes": 738799,
+      "format": "lossless-gzip",
+      "records": null
+    },
+    {
+      "path": "input-manifest.json",
+      "origin": "/tmp/vulwiki-second-polish-20261003/manifest.json",
+      "sha256": "b3cecc527216ef4adc2c0f0b6dcfa4baa3a85ac5ba38ae9e051211a8b68d1605",
+      "raw_sha256": "b3cecc527216ef4adc2c0f0b6dcfa4baa3a85ac5ba38ae9e051211a8b68d1605",
+      "bytes": 1925,
+      "raw_bytes": 1925,
+      "format": "unchanged-copy",
+      "records": null
+    },
+    {
+      "path": "metadata/independent-apache-review.json",
+      "origin": "/tmp/vulwiki-second-polish-20261003/metadata/independent-apache-review.json",
+      "sha256": "87cf3536ac47b23ed10df2e1bd022ef911896281388e370d58cb8ddace20bd28",
+      "raw_sha256": "87cf3536ac47b23ed10df2e1bd022ef911896281388e370d58cb8ddace20bd28",
+      "bytes": 6934,
+      "raw_bytes": 6934,
+      "format": "unchanged-copy",
+      "records": null
+    },
+    {
+      "path": "metadata/report.md",
+      "origin": "/tmp/vulwiki-second-polish-20261003/metadata/report.md",
+      "sha256": "16b55783e7d2e7690d70320537210c4286be95e2f6c25f55935e3fcca67f8388",
+      "raw_sha256": "16b55783e7d2e7690d70320537210c4286be95e2f6c25f55935e3fcca67f8388",
+      "bytes": 5404,
+      "raw_bytes": 5404,
+      "format": "unchanged-copy",
+      "records": null
+    },
+    {
+      "path": "notes/claims-audit.txt",
+      "origin": "/tmp/vulwiki-second-polish-20261003/notes/claims-audit.txt",
+      "sha256": "c01c4dfb0f1a612237192e281d35e22896b3487e0812cd91d0d8b6b8fe4cbbd2",
+      "raw_sha256": "c01c4dfb0f1a612237192e281d35e22896b3487e0812cd91d0d8b6b8fe4cbbd2",
+      "bytes": 26610,
+      "raw_bytes": 26610,
+      "format": "unchanged-copy",
+      "records": null
+    },
+    {
+      "path": "notes/coverage.txt",
+      "origin": "/tmp/vulwiki-second-polish-20261003/notes/coverage.txt",
+      "sha256": "79cf32acdc2098174afb69fc3d9ba8d9fcc07f1050f5595c532674299aecf86b",
+      "raw_sha256": "79cf32acdc2098174afb69fc3d9ba8d9fcc07f1050f5595c532674299aecf86b",
+      "bytes": 1539,
+      "raw_bytes": 1539,
+      "format": "unchanged-copy",
+      "records": null
+    },
+    {
+      "path": "notes/html-pack1-independent.json.gz",
+      "origin": "/tmp/vulwiki-second-polish-20261003/notes/html-pack1-independent.json",
+      "sha256": "09c73cd11674c2c1a82dccc972a8153fc8bb11a401337d0539f0dc291ed85519",
+      "raw_sha256": "9402289f8b23362b69747535eb31314c2f3dbeee2b743b44f9f2fd93bb49fb5d",
+      "bytes": 20513,
+      "raw_bytes": 175114,
+      "format": "lossless-gzip",
+      "records": null
+    },
+    {
+      "path": "quality-final.json.gz",
+      "origin": "/tmp/vulwiki-second-polish-20261003/quality-final.json",
+      "sha256": "4dbc0daea48e0a8d1043a366753f142432d95ed11a4342e034db35addf2c47ae",
+      "raw_sha256": "e8c38a6c0e0be7f65de0c5e3f2fb465399a477095655410c34e23ec35749ebde",
+      "bytes": 124832,
+      "raw_bytes": 1555072,
+      "format": "lossless-gzip",
+      "records": null
+    },
+    {
+      "path": "remote-publication-boundary.json",
+      "origin": "/tmp/vulwiki-second-polish-20261003/remote-publication-boundary.json",
+      "sha256": "0c46c48d192017c2afb61fdbd7588eab23681e8d0c2d6d940e7bfce86249ec6b",
+      "raw_sha256": "0c46c48d192017c2afb61fdbd7588eab23681e8d0c2d6d940e7bfce86249ec6b",
+      "bytes": 422,
+      "raw_bytes": 422,
+      "format": "unchanged-copy",
+      "records": null
+    },
+    {
+      "path": "resources/coverage.json.gz",
+      "origin": "/tmp/vulwiki-second-polish-20261003/resources/coverage.json",
+      "sha256": "94c5f256759ed18c3f4f926bc602a797d12cadaa1469a34cdc33092e36810914",
+      "raw_sha256": "0a43e22f5ae6417b912ed88feee590c3010684deb2ee7b16817ae5cfbecb3ab0",
+      "bytes": 403932,
+      "raw_bytes": 5715540,
+      "format": "lossless-gzip",
+      "records": null
+    },
+    {
+      "path": "resources/html-report.json",
+      "origin": "/tmp/vulwiki-second-polish-20261003/resources/html-report.json",
+      "sha256": "8e47704d8070ff2e8589f890ef28eddb37d4813553e2e2759636bbe35e17b3d7",
+      "raw_sha256": "8e47704d8070ff2e8589f890ef28eddb37d4813553e2e2759636bbe35e17b3d7",
+      "bytes": 7221,
+      "raw_bytes": 7221,
+      "format": "unchanged-copy",
+      "records": null
+    },
+    {
+      "path": "resources/token-report.json.gz",
+      "origin": "/tmp/vulwiki-second-polish-20261003/resources/token-report.json",
+      "sha256": "6b4e7a51ec3216f14ea895da7030e43892c1b534c59dadeb79d2fec8cf25032b",
+      "raw_sha256": "9bacb4f2c2f56d75974ab3e79c72b25de67717c376ed4d6ce1ee8f9ee2dfda4a",
+      "bytes": 8834,
+      "raw_bytes": 118050,
+      "format": "lossless-gzip",
+      "records": null
+    },
+    {
+      "path": "root-admission-edits.json.gz",
+      "origin": "/tmp/vulwiki-second-polish-20261003/root-admission-edits.json",
+      "sha256": "32f8965cafe71b1c48f7da80815ae9e1af94f645ea599db2e11d28bd0f65940d",
+      "raw_sha256": "e071fb060459c5e5331da2e1c468381768189e3f60cd2e922681f9663e239112",
+      "bytes": 74024,
+      "raw_bytes": 391615,
+      "format": "lossless-gzip",
+      "records": null
+    },
+    {
+      "path": "root-admission-final.jsonl.gz",
+      "origin": "/tmp/vulwiki-second-polish-20261003/root-admission-final.jsonl",
+      "sha256": "1b1ca495d5162f3d1dbe17616b6d1c37965cad11fff56630b985179661329377",
+      "raw_sha256": "e2e3637975124cb5da53a92eb09848d129d2db0c46b704b36001fbade753b2c4",
+      "bytes": 42891,
+      "raw_bytes": 185824,
+      "format": "lossless-gzip",
+      "records": 51
+    },
+    {
+      "path": "root-apache-title-edit.json",
+      "origin": "/tmp/vulwiki-second-polish-20261003/root-apache-title-edit.json",
+      "sha256": "ebbf4b4dfe78d360efa611a41a81396bcecb6c8e63b1cbbb28d2f013b32672c1",
+      "raw_sha256": "ebbf4b4dfe78d360efa611a41a81396bcecb6c8e63b1cbbb28d2f013b32672c1",
+      "bytes": 20520,
+      "raw_bytes": 20520,
+      "format": "unchanged-copy",
+      "records": null
+    },
+    {
+      "path": "root-applied-html-triage-1.json.gz",
+      "origin": "/tmp/vulwiki-second-polish-20261003/root-applied-html-triage-1.json",
+      "sha256": "deee648fbab1bc1066f90127475d60561cc818073a1421754cafe3b74b9f2159",
+      "raw_sha256": "1398d12af33cc839376299225509e730f1d77df1d65d29c6f163edc54cc5ca9c",
+      "bytes": 235095,
+      "raw_bytes": 1048193,
+      "format": "lossless-gzip",
+      "records": null
+    },
+    {
+      "path": "root-confirmed-edits.json.gz",
+      "origin": "/tmp/vulwiki-second-polish-20261003/root-confirmed-edits.json",
+      "sha256": "0a629c2c14aa761879770807764ee9abd747816278bc9cfb685255965c81d318",
+      "raw_sha256": "319ed96810c3fe469ecd7b963d43f5543a9e2091c2e48f9a76e00b72ced182a7",
+      "bytes": 45337,
+      "raw_bytes": 225057,
+      "format": "lossless-gzip",
+      "records": null
+    },
+    {
+      "path": "root-cpanel-literal-edit.json",
+      "origin": "/tmp/vulwiki-second-polish-20261003/root-cpanel-literal-edit.json",
+      "sha256": "a97ae64aac6f35aca56ea495413754b0c9bc812ded073c585c867a36e3d4134e",
+      "raw_sha256": "a97ae64aac6f35aca56ea495413754b0c9bc812ded073c585c867a36e3d4134e",
+      "bytes": 20213,
+      "raw_bytes": 20213,
+      "format": "unchanged-copy",
+      "records": null
+    },
+    {
+      "path": "root-cpanel-render-proof.json",
+      "origin": "/tmp/vulwiki-second-polish-20261003/root-cpanel-render-proof.json",
+      "sha256": "fb7ae8cb0a6d22e7eeeccd9a4e79e10d1573ca36e492b71fc1f4edb162750dbf",
+      "raw_sha256": "fb7ae8cb0a6d22e7eeeccd9a4e79e10d1573ca36e492b71fc1f4edb162750dbf",
+      "bytes": 127,
+      "raw_bytes": 127,
+      "format": "unchanged-copy",
+      "records": null
+    },
+    {
+      "path": "root-final-article-ledger.jsonl.gz",
+      "origin": "/tmp/vulwiki-second-polish-20261003/root-final-article-ledger.jsonl",
+      "sha256": "24210ddb6619ce9a46ac6e1bb2eb20d3bc9ca0cfd54f47d5510d6e059d2752aa",
+      "raw_sha256": "fe15d4dc4281a56140cb910676a15262f69402f349110d613bf6cb481ca1083e",
+      "bytes": 577743,
+      "raw_bytes": 2365201,
+      "format": "lossless-gzip",
+      "records": 5654
+    },
+    {
+      "path": "root-final-summary.json",
+      "origin": "/tmp/vulwiki-second-polish-20261003/root-final-summary.json",
+      "sha256": "e30c08d3d53306f0815f64497fc412129847c70df28918725d91ec94f74891ec",
+      "raw_sha256": "e30c08d3d53306f0815f64497fc412129847c70df28918725d91ec94f74891ec",
+      "bytes": 767,
+      "raw_bytes": 767,
+      "format": "unchanged-copy",
+      "records": null
+    },
+    {
+      "path": "root-flowise-candidate-edit.json",
+      "origin": "/tmp/vulwiki-second-polish-20261003/root-flowise-candidate-edit.json",
+      "sha256": "3ca0561ce89afa9eaacced7a4cc972779a1ed0ab377b1937883a571a49f4555f",
+      "raw_sha256": "3ca0561ce89afa9eaacced7a4cc972779a1ed0ab377b1937883a571a49f4555f",
+      "bytes": 35580,
+      "raw_bytes": 35580,
+      "format": "unchanged-copy",
+      "records": null
+    },
+    {
+      "path": "root-flowise-edits.json",
+      "origin": "/tmp/vulwiki-second-polish-20261003/root-flowise-edits.json",
+      "sha256": "4f54c88a5ce85528602bdf2d4d6f2fca56ba3f13ffd909ab7d08238e9ac18bc5",
+      "raw_sha256": "4f54c88a5ce85528602bdf2d4d6f2fca56ba3f13ffd909ab7d08238e9ac18bc5",
+      "bytes": 36434,
+      "raw_bytes": 36434,
+      "format": "unchanged-copy",
+      "records": null
+    },
+    {
+      "path": "root-html-final-edits.json.gz",
+      "origin": "/tmp/vulwiki-second-polish-20261003/root-html-final-edits.json",
+      "sha256": "7d5952ca6d88b013769b567a893be311ad256a8d33ae553d45cc10d2df05b20e",
+      "raw_sha256": "2f20619faf3d5c4e4148327a9e18c03bb9f6e1a183f50bc3c8b014511a202b86",
+      "bytes": 478260,
+      "raw_bytes": 2085034,
+      "format": "lossless-gzip",
+      "records": null
+    },
+    {
+      "path": "root-html-final-proof.json",
+      "origin": "/tmp/vulwiki-second-polish-20261003/root-html-final-proof.json",
+      "sha256": "4779d62cfa0f5cadeed9480f659e6705f21a396f98cda4267a99b2e7dd13ca8a",
+      "raw_sha256": "4779d62cfa0f5cadeed9480f659e6705f21a396f98cda4267a99b2e7dd13ca8a",
+      "bytes": 49359,
+      "raw_bytes": 49359,
+      "format": "unchanged-copy",
+      "records": null
+    },
+    {
+      "path": "root-local-man-identifier-proof.json",
+      "origin": "/tmp/vulwiki-second-polish-20261003/root-local-man-identifier-proof.json",
+      "sha256": "460e6d534aa8d4cf2c3a3adc84d5584423663d3d2714887db3f991b1c4fd51fe",
+      "raw_sha256": "460e6d534aa8d4cf2c3a3adc84d5584423663d3d2714887db3f991b1c4fd51fe",
+      "bytes": 701,
+      "raw_bytes": 701,
+      "format": "unchanged-copy",
+      "records": null
+    },
+    {
+      "path": "root-original-line-candidates-1.jsonl.gz",
+      "origin": "/tmp/vulwiki-second-polish-20261003/root-original-line-candidates-1.jsonl",
+      "sha256": "5d55567d08060db10806762f30fb7e85b610f50ff7925caf0c1fd3ed0101c640",
+      "raw_sha256": "60662af18c7e76172f062ccb5f473532af1b200974f1776be50f2d44d8cab34a",
+      "bytes": 607066,
+      "raw_bytes": 7621582,
+      "format": "lossless-gzip",
+      "records": 464
+    },
+    {
+      "path": "root-original-line-candidates-2.jsonl.gz",
+      "origin": "/tmp/vulwiki-second-polish-20261003/root-original-line-candidates-2.jsonl",
+      "sha256": "e812f77b9e411ba75c91f53e9537418c3bf5d2b9e2e6e007ccfa305f884a070a",
+      "raw_sha256": "e3652876e91e4636154ea032ec815428bf90677ec56b4dc122916596cb3e42e6",
+      "bytes": 436218,
+      "raw_bytes": 2339847,
+      "format": "lossless-gzip",
+      "records": 390
+    },
+    {
+      "path": "root-original-line-candidates-3.jsonl.gz",
+      "origin": "/tmp/vulwiki-second-polish-20261003/root-original-line-candidates-3.jsonl",
+      "sha256": "8044807fe4d4bed4173dfc57aab2d04058e52b2f6be6e9428901669150c62890",
+      "raw_sha256": "bfe3742968d307f1a2ca091824119dddc1258aa3c711774642d896ad0acbb156",
+      "bytes": 357161,
+      "raw_bytes": 2332062,
+      "format": "lossless-gzip",
+      "records": 376
+    },
+    {
+      "path": "root-original-line-candidates-4.jsonl.gz",
+      "origin": "/tmp/vulwiki-second-polish-20261003/root-original-line-candidates-4.jsonl",
+      "sha256": "7301f5e0de57dc5cd5b1740e87c3de5c86295946bff55f4c0c5609828bd969df",
+      "raw_sha256": "c9301031557d6f85c67b883efb871e8f3b6508cc7dd0c49f0ba4a1c1a8fbd14f",
+      "bytes": 504839,
+      "raw_bytes": 3400367,
+      "format": "lossless-gzip",
+      "records": 381
+    },
+    {
+      "path": "root-original-line-candidates-5.jsonl.gz",
+      "origin": "/tmp/vulwiki-second-polish-20261003/root-original-line-candidates-5.jsonl",
+      "sha256": "82bc206c5bbb40abab6b87dd9bb73cab56b1feed64d841c8023e6d26802fa3c2",
+      "raw_sha256": "2a2322a9f764ddce043ab1f7f911749b8505994a6952eb22499f2bb33f99a54b",
+      "bytes": 378282,
+      "raw_bytes": 2567409,
+      "format": "lossless-gzip",
+      "records": 326
+    },
+    {
+      "path": "root-original-line-candidates-6.jsonl.gz",
+      "origin": "/tmp/vulwiki-second-polish-20261003/root-original-line-candidates-6.jsonl",
+      "sha256": "4fface4400e2fb5df2924f30025e9ef9ebf3e26f06fd338af14cc7cd1041b0fe",
+      "raw_sha256": "d1eb353ac781c1b77022247d1cdb89b785f96627aafa1d66d2e96ff72b199481",
+      "bytes": 404831,
+      "raw_bytes": 2730076,
+      "format": "lossless-gzip",
+      "records": 411
+    },
+    {
+      "path": "root-original-line-candidates-7.jsonl.gz",
+      "origin": "/tmp/vulwiki-second-polish-20261003/root-original-line-candidates-7.jsonl",
+      "sha256": "eb23b4d146d1a939a2033c7a83fdfce34bb82129beff2dbcbbf650bc10139ed1",
+      "raw_sha256": "84c9c42a7f4dbb812e70b41e3146e6efd577be4ee20795871423cea1b96e2cf9",
+      "bytes": 395880,
+      "raw_bytes": 4440816,
+      "format": "lossless-gzip",
+      "records": 347
+    },
+    {
+      "path": "root-original-line-candidates-8.jsonl.gz",
+      "origin": "/tmp/vulwiki-second-polish-20261003/root-original-line-candidates-8.jsonl",
+      "sha256": "7a93196befd3d9c0453af7d937bb05e06ff22b822f503178c4d044bfe9d0a212",
+      "raw_sha256": "bf69c13a1eb3ced3306885fb1efdcb8f09908d15bfa3b318bd48aa2d7a575db5",
+      "bytes": 441774,
+      "raw_bytes": 3461181,
+      "format": "lossless-gzip",
+      "records": 285
+    },
+    {
+      "path": "root-original-line-coverage.json",
+      "origin": "/tmp/vulwiki-second-polish-20261003/root-original-line-coverage.json",
+      "sha256": "fd16f7209be44922adc91f45d66b53aec69ab51c37ed47ab12eca9256dd9468a",
+      "raw_sha256": "fd16f7209be44922adc91f45d66b53aec69ab51c37ed47ab12eca9256dd9468a",
+      "bytes": 1616,
+      "raw_bytes": 1616,
+      "format": "unchanged-copy",
+      "records": null
+    },
+    {
+      "path": "root-render-proof.json",
+      "origin": "/tmp/vulwiki-second-polish-20261003/root-render-proof.json",
+      "sha256": "54fbcb7b7553cf4c6852202e09b5b91451c09fd1d3896f74a819a571d7c3fdde",
+      "raw_sha256": "54fbcb7b7553cf4c6852202e09b5b91451c09fd1d3896f74a819a571d7c3fdde",
+      "bytes": 371,
+      "raw_bytes": 371,
+      "format": "unchanged-copy",
+      "records": null
+    },
+    {
+      "path": "root-substantive-18.jsonl.gz",
+      "origin": "/tmp/vulwiki-second-polish-20261003/root-substantive-18.jsonl",
+      "sha256": "c9452a742d836dc3e54fa7fd5b00c705ebec2553a4aa0c9524a9440d3b56b1af",
+      "raw_sha256": "2a609fd58a4afa0f3498f76aa108d77c4ddf6de8aaee49ddcf562f46ba7bd67f",
+      "bytes": 54010,
+      "raw_bytes": 499505,
+      "format": "lossless-gzip",
+      "records": 18
+    },
+    {
+      "path": "final-build-summary.json",
+      "origin": "/tmp/vulwiki-second-polish-20261003/final-build-summary.json",
+      "sha256": "15c6e517c8a0c4b1b6f0028f88c241e6679f13b049432d58adc06e4117c09d98",
+      "raw_sha256": "15c6e517c8a0c4b1b6f0028f88c241e6679f13b049432d58adc06e4117c09d98",
+      "bytes": 19991,
+      "raw_bytes": 19991,
+      "format": "unchanged-copy",
+      "phase": "post-build evidence; outside original input snapshot"
+    },
+    {
+      "path": "final-build-file-ledger.jsonl.gz",
+      "origin": "/tmp/vulwiki-second-polish-20261003/final-build-file-ledger.jsonl.gz",
+      "sha256": "295c716e582b820a267332436ddbcd59c9cfd81bd5fc555e9f3d4f15dbee9648",
+      "raw_sha256": "295c716e582b820a267332436ddbcd59c9cfd81bd5fc555e9f3d4f15dbee9648",
+      "bytes": 996236,
+      "raw_bytes": 996236,
+      "format": "unchanged-copy",
+      "phase": "post-build evidence; outside original input snapshot"
+    },
+    {
+      "path": "final-build-location.json",
+      "origin": "/tmp/vulwiki-second-polish-20261003/final-build-location.json",
+      "sha256": "45bcdae913b3080471018ec8ecb4c0d4a4cd6b077e6cd3276c25d2b47da9282e",
+      "raw_sha256": "45bcdae913b3080471018ec8ecb4c0d4a4cd6b077e6cd3276c25d2b47da9282e",
+      "bytes": 905,
+      "raw_bytes": 905,
+      "format": "unchanged-copy",
+      "phase": "post-build evidence; outside original input snapshot"
+    },
+    {
+      "path": "final-build-inputs.jsonl.gz",
+      "origin": "/tmp/vulwiki-second-polish-20261003/final-build-inputs.jsonl",
+      "sha256": "cb4b46a4e692eb7c4e43cd4a02f3dd232edc621ca2e1d237b1ce28ae804a307a",
+      "raw_sha256": "7e7420d56af89fc63ccb10e40ec189ea0c33c371d2154179351c34c378bcca71",
+      "bytes": 723929,
+      "raw_bytes": 2624559,
+      "format": "lossless-gzip",
+      "phase": "post-build evidence; outside original input snapshot"
+    },
+    {
+      "path": "search-performance.json",
+      "origin": "/tmp/vulwiki-second-polish-20261003/search-performance.json",
+      "sha256": "2330b8e9d849622a51933c5a96cd001fbb072896aba8104c814ca9c1556751e5",
+      "raw_sha256": "2330b8e9d849622a51933c5a96cd001fbb072896aba8104c814ca9c1556751e5",
+      "bytes": 4336,
+      "raw_bytes": 4336,
+      "format": "unchanged-copy",
+      "phase": "post-build evidence; outside original input snapshot"
+    },
+    {
+      "path": "protected-files-final.json",
+      "origin": "/tmp/vulwiki-second-polish-20261003/protected-files-final.json",
+      "sha256": "4c88c25d86fffcd2a62c27592dfac1b045b914002488ec8b2a8f42ed96b0d460",
+      "raw_sha256": "4c88c25d86fffcd2a62c27592dfac1b045b914002488ec8b2a8f42ed96b0d460",
+      "bytes": 842,
+      "raw_bytes": 842,
+      "format": "unchanged-copy",
+      "phase": "post-build evidence; outside original input snapshot"
+    },
+    {
+      "path": "validation-environment.json",
+      "origin": "/tmp/vulwiki-second-polish-20261003/validation-environment.json",
+      "sha256": "5903c9956a190888e1fed90840e45bea8acaae29f23e8f1b23beac0b266386ec",
+      "raw_sha256": "5903c9956a190888e1fed90840e45bea8acaae29f23e8f1b23beac0b266386ec",
+      "bytes": 715,
+      "raw_bytes": 715,
+      "format": "unchanged-copy",
+      "phase": "post-build evidence; outside original input snapshot"
+    }
+  ],
+  "scope": "Selected final ledgers, exact original lines, edit plans with full before/after values and independent proofs; immutable full-body temporary shards and redundant raw scratch exports are not packaged.",
+  "interpretation": "Screening coverage and exact prior evidence carry-forward are not fresh manual paragraph review or external fact verification. Root final decisions and final hashes supersede input-snapshot recommendations.",
+  "post_build_evidence": "The build summary and build file ledger are added after generation and are outside the original build input snapshot.",
+  "no_redaction": true
+}

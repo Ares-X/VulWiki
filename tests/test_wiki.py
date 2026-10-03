@@ -70,6 +70,39 @@ class WikiTests(unittest.TestCase):
         self.assertEqual(r.references, ['CVE-2020-5555'])
         self.assertNotIn('2020.md', wiki.render_outputs([r])['INDEX-CVE.md'])
 
+    def test_explicit_candidates_project_without_becoming_primary(self):
+        self.article(primary_identifiers='CVE-2025-26319', cve='CVE-2025-26319',
+                     identifier_role='primary', identifier_candidates='CVE-2024-26319; CVE-2024-26319')
+        record = self.scan()[0]
+        projected = wiki.catalog_record(record)
+        self.assertEqual(projected['primary_identifiers'], ['CVE-2025-26319'])
+        self.assertEqual(projected['identifier_candidates'], ['CVE-2024-26319'])
+        self.assertNotIn('2024.md', wiki.render_outputs([record])['INDEX-CVE.md'])
+        self.assertFalse(any(i.code == 'identifier_role_unknown' for i in record.issues))
+
+    def test_explicit_invalid_candidate_excluded_with_error(self):
+        self.article(identifier_candidates='CVE-2024-12; CVE-2024-26319')
+        record = self.scan()[0]
+        self.assertEqual(record.candidates, ['CVE-2024-26319'])
+        self.assertTrue(any(i.code == 'identifier_format' and i.severity == 'error' for i in record.issues))
+
+    def test_explicit_nonprimary_roles_override_legacy_primary_fallback(self):
+        for field, role in [('identifier_candidates', 'candidate'), ('referenced_identifiers', 'reference')]:
+            path = self.article(role, cve='CVE-2025-12345', identifier_role='primary',
+                                primary_identifiers='', **{field: 'CVE-2025-12345'})
+            record = next(r for r in self.scan() if r.path == path)
+            self.assertEqual(record.primary, [])
+            self.assertEqual(wiki.catalog_record(record)[field], ['CVE-2025-12345'])
+            self.assertNotIn('2025.md', wiki.render_outputs([record])['INDEX-CVE.md'])
+
+    def test_explicit_candidate_resolves_legacy_unknown_role(self):
+        self.article(cve='CVE-2025-12345', identifier_role='unknown',
+                     identifier_candidates='CVE-2025-12345')
+        record = self.scan()[0]
+        self.assertEqual(record.primary, [])
+        self.assertEqual(record.candidates, ['CVE-2025-12345'])
+        self.assertFalse(any(i.code == 'identifier_role_unknown' for i in record.issues))
+
     def test_namespaces_and_case_not_conflated(self):
         self.article(primary_identifiers='cve-2025-12345; CNVD-C-2023-76801; TALOS-2024-1967; WSO2-2019-0598; AVD-2026-1850319')
         r = self.scan()[0]
@@ -105,6 +138,51 @@ class WikiTests(unittest.TestCase):
         self.assertEqual(outputs['docs/generated/records.jsonl'], '')
         self.assertIn(path, outputs['docs/generated/excluded.jsonl'])
         self.assertIn('entry', outputs['docs/REVIEW-QUEUE.md'])
+
+    def test_confirmed_index_category_changes_navigation_without_moving_article(self):
+        body = '# Analysis\n\n![source](.resource/source.png)\n'
+        path = self.article(body=body, index_category='系统安全/Linux',
+                            category_recommendation='IOT安全/其他设备')
+        resources = (self.root / path).parent / '.resource'
+        resources.mkdir()
+        (resources / 'source.png').write_bytes(b'fixture')
+        records = self.scan()
+        self.assertTrue(records[0].eligible)
+        outputs = wiki.render_outputs(records)
+        self.assertIn('Example Product', outputs['INDEX/Linux.md'])
+        self.assertNotIn('INDEX/测试.md', outputs)
+        self.assertNotIn('INDEX/其他设备.md', outputs)
+        source = json.loads(outputs['docs/generated/sources.jsonl'])
+        entry = json.loads(outputs['docs/generated/records.jsonl'])
+        self.assertEqual(source['path'], path)
+        self.assertEqual(entry['path'], path)
+        self.assertEqual(source['index_category'], '系统安全/Linux')
+        self.assertEqual(entry['index_category'], '系统安全/Linux')
+        self.assertEqual(wiki.parse_frontmatter((self.root / path).read_text())[1], '\n' + body)
+
+    def test_category_recommendation_does_not_implicitly_change_navigation(self):
+        self.article(category_recommendation='系统安全/Linux')
+        outputs = wiki.render_outputs(self.scan())
+        self.assertIn('INDEX/测试.md', outputs)
+        self.assertNotIn('INDEX/Linux.md', outputs)
+
+    def test_root_article_keeps_existing_navigation_category(self):
+        path = self.article()
+        destination = self.root / '系统安全' / 'entry.md'
+        destination.parent.mkdir()
+        (self.root / path).rename(destination)
+        outputs = wiki.render_outputs(self.scan())
+        self.assertIn('INDEX/系统安全.md', outputs)
+        self.assertNotIn('INDEX/entry.md.md', outputs)
+
+    def test_invalid_confirmed_index_category_blocks_projection(self):
+        for number, category in enumerate(['', 'Linux', '外部/Linux', '系统安全/../Linux',
+                                           '系统安全/..', '系统安全/Linux/extra', '系统安全\\Linux',
+                                           '系统安全/ Linux', '系统安全/Linux ']):
+            self.article(str(number), index_category=category)
+        for record in self.scan():
+            self.assertFalse(record.eligible)
+            self.assertTrue(any(issue.code == 'index_category' for issue in record.issues))
 
     def test_missing_verification_never_defaults_to_reproduced(self):
         path = self.article()
@@ -190,6 +268,47 @@ class WikiTests(unittest.TestCase):
         links = wiki.markdown_links('![a][pic]\n[pic]: .resource/a.png\n<img src=".resource/b.png">\n')
         self.assertIn(('.resource/a.png', True), links)
         self.assertIn(('.resource/b.png', True), links)
+
+    def test_nested_image_description_checks_outer_destination(self):
+        raw = '![[转存失败(img-public-1586504452408)(./images/0.png)]](附件/CVE-2020-10560.png)'
+        self.article(body=raw + '\n')
+        self.assertEqual(wiki.markdown_links(raw), [('附件/CVE-2020-10560.png', True)])
+        missing = [i for i in self.scan()[0].issues if i.code == 'image_missing']
+        self.assertEqual(len(missing), 1)
+        self.assertTrue(missing[0].detail.endswith('附件/CVE-2020-10560.png'))
+        self.assertGreater(missing[0].line, 1)
+
+    def test_balanced_labels_preserve_nested_image_and_reference(self):
+        prose = '[![preview](image.png)](article.md)\n![a [b]][pic]\n[pic]: .resource/a.png\n'
+        self.assertEqual(wiki.markdown_links(prose), [
+            ('image.png', True), ('article.md', False), ('.resource/a.png', True)])
+        self.assertEqual(wiki.markdown_links(r'![a \[b\]](image%20(1).png)'),
+                         [('image%20(1).png', True)])
+
+    def test_nested_copy_control_active_link_remains_detectable(self):
+        raw = '[![](https://example.invalid/copycode.gif)](javascript:void(0); "复制代码")'
+        self.article(body=raw + '\n')
+        issues = [i for i in self.scan()[0].issues if i.code == 'active_html_example']
+        self.assertEqual(len(issues), 1)
+        self.assertEqual(wiki.markdown_links(raw), [
+            ('https://example.invalid/copycode.gif', True), ('javascript:void(0);', False)])
+
+    def test_escaped_opening_brackets_are_literal_not_active_links(self):
+        raw = r'\[example](javascript:alert(1)) !\[image](missing.png)'
+        self.assertEqual(wiki.markdown_links(raw), [])
+        self.article(body=raw + '\n')
+        self.assertFalse(any(i.code in {'active_html_example', 'image_missing'}
+                             for i in self.scan()[0].issues))
+        self.assertEqual(wiki.markdown_links(r'\![a](article.md)'), [('article.md', False)])
+
+    def test_soft_line_break_wrapped_image_checks_outer_link(self):
+        raw = '[\n![preview](image.png)\n](javascript:void(0))'
+        self.assertEqual(wiki.markdown_links(raw, with_lines=True), [
+            ('image.png', True, 2), ('javascript:void(0)', False, 1)])
+        self.assertEqual(wiki.markdown_links('[example\n\ntext](article.md)'), [])
+        self.assertEqual(wiki.markdown_links('[example\r\n\r\ntext](javascript:alert(1))'), [])
+        self.article(body=raw + '\n')
+        self.assertEqual(sum(i.code == 'active_html_example' for i in self.scan()[0].issues), 1)
 
     def test_sparse_git_image_but_not_deleted_regular_file(self):
         path = self.article(body='![a](.resource/a.png)\n![b](.resource/b.png)\n')

@@ -1,0 +1,51 @@
+{
+  "repo": "/Users/aresx/Ares-X.github.io/source/wiki/VulWiki",
+  "baseline_head": "a90bda8a269d6d8763ddc25f127125767d6dbab7",
+  "archive_revision": "41940cb0038d09ca5aaddbe5bffb923e423d210f",
+  "merged_revision": "8f2a9e14575928bb5f086902c786da66f4a65aa9",
+  "articles": 5654,
+  "publication": "paused",
+  "shards": [
+    {
+      "path": "/tmp/vulwiki-second-polish-20261003/shard-1.jsonl",
+      "articles": 703,
+      "sha256": "cff015b662a3eaed2d5cb7954e61e07e331ffb9784e347988c646dac40577bc5"
+    },
+    {
+      "path": "/tmp/vulwiki-second-polish-20261003/shard-2.jsonl",
+      "articles": 711,
+      "sha256": "1a112f21c3fb03b927213db4a5c3d6f4eb15b4cb9339dcb4d99fdef3b2ef26f1"
+    },
+    {
+      "path": "/tmp/vulwiki-second-polish-20261003/shard-3.jsonl",
+      "articles": 699,
+      "sha256": "2c8b0186381eb0101c69bcb10abde2aa6aed7b5aa1edbf4b2109fddd8c8e1cc0"
+    },
+    {
+      "path": "/tmp/vulwiki-second-polish-20261003/shard-4.jsonl",
+      "articles": 732,
+      "sha256": "6ba6e4a74e6de4ff08f1d44348c386663292184431e41232e686374ca8f9cada"
+    },
+    {
+      "path": "/tmp/vulwiki-second-polish-20261003/shard-5.jsonl",
+      "articles": 683,
+      "sha256": "fe3cb75807fe8c76b9b3e8a9682c2b84f0d3eb2ea1429a6fe77cc4fdc2d37131"
+    },
+    {
+      "path": "/tmp/vulwiki-second-polish-20261003/shard-6.jsonl",
+      "articles": 726,
+      "sha256": "75c9c6d001a234a6b3c8c546719990f9ed9e138061581487c8b1cc52a81ef0b3"
+    },
+    {
+      "path": "/tmp/vulwiki-second-polish-20261003/shard-7.jsonl",
+      "articles": 683,
+      "sha256": "508b6ed8ed95624ef0c8da6cf94038391d8b62aecf6d760bc2bb281209c5b2d8"
+    },
+    {
+      "path": "/tmp/vulwiki-second-polish-20261003/shard-8.jsonl",
+      "articles": 717,
+      "sha256": "764cc2f9f6fcbc7472c6044ec21c2dba0e988b96340645064c38f04f0916886e"
+    }
+  ],
+  "previous_evidence": "/Users/aresx/Ares-X.github.io/source/wiki/VulWiki/docs/reviews/20261003-full-fidelity"
+}

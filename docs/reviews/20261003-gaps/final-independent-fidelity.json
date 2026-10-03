@@ -1,0 +1,4331 @@
+{
+  "schema": "vulwiki-final-independent-fidelity/v3",
+  "date": "2026-10-03",
+  "scope": "Frozen final 28 article changes checked against the immutable 5,654-article snapshot and current worktree.",
+  "method": "Read-only byte/hash, offset replay, and static Marked token comparison. No article code, PoC, scanner, payload, HTML, browser rendering, or sample target was executed/accessed.",
+  "input_files": {
+    "repo": "/Users/aresx/Ares-X.github.io/source/wiki/VulWiki",
+    "article_plan": "/tmp/vulwiki-gaps-20261003/article-plan.json",
+    "article_plan_sha256": "9d78d070f747d0d9d7315f1bf752160d9656de05020f4f45b06ba6051371feb6",
+    "final_article_ledger": "/tmp/vulwiki-gaps-20261003/article-edit-ledger.jsonl.gz",
+    "final_article_ledger_sha256": "c1a4eae9aff05a24856655f7cadf39c11dbf2bddc67c88395845ff40fc930b66",
+    "immutable_before_articles": "/tmp/vulwiki-gaps-20261003/before-articles.jsonl",
+    "before_manifest_sha256": "3dbc16b3a19a543acaf5234fe3b475f59132f72b1454d2da1bdad0d0cc75cc5f",
+    "static_markdown_preservation_result": "/tmp/vulwiki-gaps-20261003/markdown-preservation.json",
+    "static_markdown_preservation_result_sha256": "68ccd20b63c6124f3c1f13a87468ab9116dc265da1b095a9fa9299b9a6baf6d9"
+  },
+  "aggregate": {
+    "plan_article_count": 28,
+    "ledger_article_count": 28,
+    "operation_count": 145,
+    "operation_kind_counts": {
+      "reference_supplement": 9,
+      "empty_fence_cleanup": 56,
+      "gap_note": 12,
+      "restoration_source_note": 3,
+      "source_restoration": 14,
+      "update_editorial_status": 4,
+      "resource_link_repair": 1,
+      "section_gap_note": 5,
+      "malformed_empty_list_cleanup": 1,
+      "literal_imported_copy_control": 8,
+      "image_supplement_source_note": 1,
+      "missing_image_literal_record": 15,
+      "public_step_figure_supplement": 8,
+      "preserve_full_missing_image_records": 1,
+      "editorial_gap_status_update": 1,
+      "labeled_reference_attribution": 1,
+      "labeled_reference_code": 3,
+      "malformed_empty_quote_cleanup": 1,
+      "missing_debug_gap_note": 1
+    },
+    "baseline_article_count": 5654,
+    "changed_article_count": 28,
+    "changed_article_paths_match_ledger_exactly": true,
+    "unmodified_article_count": 5626,
+    "expected_unmodified_article_count": 5626,
+    "all_unmodified_article_sha256_equal_baseline": true,
+    "missing_baseline_paths": [],
+    "unexpected_changed_paths": [],
+    "out_of_snapshot_markdown_files_excluded_from_article_denominator": 117,
+    "every_operation_forward_and_inverse_offset_exact": true,
+    "every_current_file_sha_matches_final_ledger_and_plan": true,
+    "frontmatter_original_bytes_identical_all_28": true,
+    "frontmatter_edit_count": 0,
+    "no_preexisting_value_masked_or_replaced": "Pass: no operation changes an already-present source/public value into a redacted form. See separately disclosed source-origin `$1$redacted` literal restoration.",
+    "preexisting_nonempty_code_token_preservation": "Static Marked audit recorded 136 preexisting nonempty code blocks preserved across the 28 pages; 14 evidence-backed source restorations plus 3 Fuzzing101 public-reference code blocks were additions into empty/malformed gaps. No preexisting code body was the old_text of a restoration edit. Three false code tokens in Fuzzing101 are fingerprinted separately and their original non-fence lines are independently found in order in current text.",
+    "all_8_copy_controls_preserved_as_literal_codespans": true,
+    "original_http_urls_markdown_images_and_raw_html_tokens_not_lost": true,
+    "unchanged_article_sha256_manifest_sha256": "b719f019e1d5e1c0d97729da9c12e0417afc32b327fb3fbc99f8c78a8987d0df",
+    "unchanged_manifest_format": "sorted lines: path + NUL + SHA-256 + LF"
+  },
+  "modified_articles": [
+    {
+      "path": "Web安全/CMS内容/Airin Blog/DMC Airin Blog Plugin 反序列化 CVE-2024-52413分析.md",
+      "baseline_sha256": "c1ef4938d19dcb91bd6a76b95415d90b1df0e5fccfec64babcd08fe7e14099af",
+      "baseline_snapshot_sha256": "c1ef4938d19dcb91bd6a76b95415d90b1df0e5fccfec64babcd08fe7e14099af",
+      "current_sha256": "41c6d074ca9762fc16f77a3a925250cb9ed914a0a8ad623c41d6dd5ae84253f5",
+      "ledger_final_sha256": "41c6d074ca9762fc16f77a3a925250cb9ed914a0a8ad623c41d6dd5ae84253f5",
+      "plan_final_sha256": "41c6d074ca9762fc16f77a3a925250cb9ed914a0a8ad623c41d6dd5ae84253f5",
+      "baseline_sha_verified": true,
+      "current_sha_verified": true,
+      "forward_replay_exact": true,
+      "reverse_replay_exact": true,
+      "ledger_inverse_verified": true,
+      "operation_count": 1,
+      "operation_checks_forward": [
+        {
+          "index": 0,
+          "kind": "reference_supplement",
+          "offset_char": 3864,
+          "old_len_chars": 10,
+          "new_len_chars": 311,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "1c791978410798e09018954754373bce6d09b51c9046a2f7d2d89766e495eb4c",
+          "old_text_exact_at_offset": true
+        }
+      ],
+      "operation_checks_reverse": [
+        {
+          "index": 0,
+          "kind": "reference_supplement",
+          "offset_char": 3864,
+          "new_len_chars": 311,
+          "old_len_chars": 10,
+          "new_sha256": "1c791978410798e09018954754373bce6d09b51c9046a2f7d2d89766e495eb4c",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        }
+      ],
+      "frontmatter_byte_identical": true,
+      "frontmatter_sha256": "bdf8cfa91548ba82efcacfc9e364dabc054ae80a651a41214a578d27d3899cb9",
+      "frontmatter_bytes": 854,
+      "baseline_http_url_count": 13,
+      "missing_baseline_http_urls": {},
+      "baseline_markdown_image_count": 13,
+      "missing_baseline_markdown_images": {},
+      "baseline_raw_html_tag_count": 0,
+      "missing_baseline_raw_html_tags": {},
+      "static_marked_original_nonempty_code_blocks_retained": 0,
+      "static_marked_restored_blocks": 0,
+      "static_marked_nonoriginal_reference_blocks": 0,
+      "fenced_code_validation_caveat": null
+    },
+    {
+      "path": "Web安全/CMS内容/Grav CMS/Grav CMS 组合拳漏洞 CVE-2026-42613&CVE-2026-42607复现&研究.md",
+      "baseline_sha256": "62674cf36b152244521eb02f52e2e49357845651d2e5488a376d253680ef1faa",
+      "baseline_snapshot_sha256": "62674cf36b152244521eb02f52e2e49357845651d2e5488a376d253680ef1faa",
+      "current_sha256": "4d1f40ef65305604093f96c2f4b6b7eb87e8a76dad662f55ec07e3724426858c",
+      "ledger_final_sha256": "4d1f40ef65305604093f96c2f4b6b7eb87e8a76dad662f55ec07e3724426858c",
+      "plan_final_sha256": "4d1f40ef65305604093f96c2f4b6b7eb87e8a76dad662f55ec07e3724426858c",
+      "baseline_sha_verified": true,
+      "current_sha_verified": true,
+      "forward_replay_exact": true,
+      "reverse_replay_exact": true,
+      "ledger_inverse_verified": true,
+      "operation_count": 5,
+      "operation_checks_forward": [
+        {
+          "index": 0,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 2385,
+          "old_len_chars": 10,
+          "new_len_chars": 0,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 1,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 2395,
+          "old_len_chars": 10,
+          "new_len_chars": 0,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 2,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 2405,
+          "old_len_chars": 10,
+          "new_len_chars": 0,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 3,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 2415,
+          "old_len_chars": 10,
+          "new_len_chars": 0,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 4,
+          "kind": "reference_supplement",
+          "offset_char": 2425,
+          "old_len_chars": 10,
+          "new_len_chars": 305,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "5428a4e1849a22b7c200f444503be9b1a39c7b7d65b709cb2b33601b01a9908d",
+          "old_text_exact_at_offset": true
+        }
+      ],
+      "operation_checks_reverse": [
+        {
+          "index": 0,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 2385,
+          "new_len_chars": 0,
+          "old_len_chars": 10,
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 1,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 2385,
+          "new_len_chars": 0,
+          "old_len_chars": 10,
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 2,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 2385,
+          "new_len_chars": 0,
+          "old_len_chars": 10,
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 3,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 2385,
+          "new_len_chars": 0,
+          "old_len_chars": 10,
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 4,
+          "kind": "reference_supplement",
+          "offset_char": 2385,
+          "new_len_chars": 305,
+          "old_len_chars": 10,
+          "new_sha256": "5428a4e1849a22b7c200f444503be9b1a39c7b7d65b709cb2b33601b01a9908d",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        }
+      ],
+      "frontmatter_byte_identical": true,
+      "frontmatter_sha256": "79b28b5a36afcab07bcdd1bea1f4cfdf8bcc6a4f10e80bfbd646536aed360e7f",
+      "frontmatter_bytes": 945,
+      "baseline_http_url_count": 10,
+      "missing_baseline_http_urls": {},
+      "baseline_markdown_image_count": 7,
+      "missing_baseline_markdown_images": {},
+      "baseline_raw_html_tag_count": 424,
+      "missing_baseline_raw_html_tags": {},
+      "static_marked_original_nonempty_code_blocks_retained": 10,
+      "static_marked_restored_blocks": 0,
+      "static_marked_nonoriginal_reference_blocks": 0,
+      "fenced_code_validation_caveat": null
+    },
+    {
+      "path": "Web安全/CMS内容/PbootCMS/PbootCMS最新代码注入漏洞（CNVD-2025-01710、CVE-2024-12789）.md",
+      "baseline_sha256": "9ae7af1ff444d6418e28472be091d6e5c6121212289128e6ffa6f07506e6ed4d",
+      "baseline_snapshot_sha256": "9ae7af1ff444d6418e28472be091d6e5c6121212289128e6ffa6f07506e6ed4d",
+      "current_sha256": "92e1ddd67e7a0fd93f9041863cf0d3dac175a8447df0c70dd6080b0b07f35e09",
+      "ledger_final_sha256": "92e1ddd67e7a0fd93f9041863cf0d3dac175a8447df0c70dd6080b0b07f35e09",
+      "plan_final_sha256": "92e1ddd67e7a0fd93f9041863cf0d3dac175a8447df0c70dd6080b0b07f35e09",
+      "baseline_sha_verified": true,
+      "current_sha_verified": true,
+      "forward_replay_exact": true,
+      "reverse_replay_exact": true,
+      "ledger_inverse_verified": true,
+      "operation_count": 1,
+      "operation_checks_forward": [
+        {
+          "index": 0,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 2773,
+          "old_len_chars": 10,
+          "new_len_chars": 0,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_text_exact_at_offset": true
+        }
+      ],
+      "operation_checks_reverse": [
+        {
+          "index": 0,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 2773,
+          "new_len_chars": 0,
+          "old_len_chars": 10,
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        }
+      ],
+      "frontmatter_byte_identical": true,
+      "frontmatter_sha256": "d27cc07e08235884fb0b5218e9331507bacd2ddbad03dfee5cc5dfb31d69be02",
+      "frontmatter_bytes": 833,
+      "baseline_http_url_count": 6,
+      "missing_baseline_http_urls": {},
+      "baseline_markdown_image_count": 6,
+      "missing_baseline_markdown_images": {},
+      "baseline_raw_html_tag_count": 0,
+      "missing_baseline_raw_html_tags": {},
+      "static_marked_original_nonempty_code_blocks_retained": 0,
+      "static_marked_restored_blocks": 0,
+      "static_marked_nonoriginal_reference_blocks": 0,
+      "fenced_code_validation_caveat": null
+    },
+    {
+      "path": "Web安全/CMS内容/Seacms/SeaCMS admin_files.php CVE-2024-42599分析.md",
+      "baseline_sha256": "83bfb8c3c80d104b18edcdf45e7f475b76c433c7a37712ec806db0e62f090855",
+      "baseline_snapshot_sha256": "83bfb8c3c80d104b18edcdf45e7f475b76c433c7a37712ec806db0e62f090855",
+      "current_sha256": "ab4c082a7b76daf57873299dd22cd31980bd7eba523fba3e41fe6ef6ccbe7ce8",
+      "ledger_final_sha256": "ab4c082a7b76daf57873299dd22cd31980bd7eba523fba3e41fe6ef6ccbe7ce8",
+      "plan_final_sha256": "ab4c082a7b76daf57873299dd22cd31980bd7eba523fba3e41fe6ef6ccbe7ce8",
+      "baseline_sha_verified": true,
+      "current_sha_verified": true,
+      "forward_replay_exact": true,
+      "reverse_replay_exact": true,
+      "ledger_inverse_verified": true,
+      "operation_count": 1,
+      "operation_checks_forward": [
+        {
+          "index": 0,
+          "kind": "gap_note",
+          "offset_char": 4999,
+          "old_len_chars": 10,
+          "new_len_chars": 152,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "ba5e75c61d27e229e55655fa76ca5351cbc0414f121c33d6c1a6b24d1032e774",
+          "old_text_exact_at_offset": true
+        }
+      ],
+      "operation_checks_reverse": [
+        {
+          "index": 0,
+          "kind": "gap_note",
+          "offset_char": 4999,
+          "new_len_chars": 152,
+          "old_len_chars": 10,
+          "new_sha256": "ba5e75c61d27e229e55655fa76ca5351cbc0414f121c33d6c1a6b24d1032e774",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        }
+      ],
+      "frontmatter_byte_identical": true,
+      "frontmatter_sha256": "2210f993cc3e1bbec366f5137478ef506cc6c6fffc6996db9e62ddf958aeb1df",
+      "frontmatter_bytes": 820,
+      "baseline_http_url_count": 6,
+      "missing_baseline_http_urls": {},
+      "baseline_markdown_image_count": 6,
+      "missing_baseline_markdown_images": {},
+      "baseline_raw_html_tag_count": 88,
+      "missing_baseline_raw_html_tags": {},
+      "static_marked_original_nonempty_code_blocks_retained": 0,
+      "static_marked_restored_blocks": 0,
+      "static_marked_nonoriginal_reference_blocks": 0,
+      "fenced_code_validation_caveat": null
+    },
+    {
+      "path": "Web安全/CMS内容/WordPress/Wordpress IMPress for IDX Broker 低权限xss漏洞.md",
+      "baseline_sha256": "cda9c9768fc8b5b104d7faec376a9e0374854910892cfb11d1cfaf6fc5530805",
+      "baseline_snapshot_sha256": "cda9c9768fc8b5b104d7faec376a9e0374854910892cfb11d1cfaf6fc5530805",
+      "current_sha256": "5e71a2e3839e2cb75a6f6f64a1b09d4ccb9328b3f412d8a7104f98816464213a",
+      "ledger_final_sha256": "5e71a2e3839e2cb75a6f6f64a1b09d4ccb9328b3f412d8a7104f98816464213a",
+      "plan_final_sha256": "5e71a2e3839e2cb75a6f6f64a1b09d4ccb9328b3f412d8a7104f98816464213a",
+      "baseline_sha_verified": true,
+      "current_sha_verified": true,
+      "forward_replay_exact": true,
+      "reverse_replay_exact": true,
+      "ledger_inverse_verified": true,
+      "operation_count": 1,
+      "operation_checks_forward": [
+        {
+          "index": 0,
+          "kind": "reference_supplement",
+          "offset_char": 2514,
+          "old_len_chars": 9,
+          "new_len_chars": 266,
+          "old_sha256": "6e732d508f7d09851cda80e98996515cc16718ff7492a7a7049f4382ecbecf9c",
+          "new_sha256": "58ea8138df5f7a4c1129184ae7aaeab4c1f1aca34641744e9e0713827ad96a58",
+          "old_text_exact_at_offset": true
+        }
+      ],
+      "operation_checks_reverse": [
+        {
+          "index": 0,
+          "kind": "reference_supplement",
+          "offset_char": 2514,
+          "new_len_chars": 266,
+          "old_len_chars": 9,
+          "new_sha256": "58ea8138df5f7a4c1129184ae7aaeab4c1f1aca34641744e9e0713827ad96a58",
+          "old_sha256": "6e732d508f7d09851cda80e98996515cc16718ff7492a7a7049f4382ecbecf9c",
+          "new_text_exact_at_offset": true
+        }
+      ],
+      "frontmatter_byte_identical": true,
+      "frontmatter_sha256": "13110f2047635cf228cca766dcb02dbef0adf9701d93fecb51f61f91e14aed22",
+      "frontmatter_bytes": 862,
+      "baseline_http_url_count": 0,
+      "missing_baseline_http_urls": {},
+      "baseline_markdown_image_count": 0,
+      "missing_baseline_markdown_images": {},
+      "baseline_raw_html_tag_count": 1,
+      "missing_baseline_raw_html_tags": {},
+      "static_marked_original_nonempty_code_blocks_retained": 8,
+      "static_marked_restored_blocks": 0,
+      "static_marked_nonoriginal_reference_blocks": 0,
+      "fenced_code_validation_caveat": null
+    },
+    {
+      "path": "Web安全/CMS内容/WordPress/Wordpress wpdm-premium-packages SQL注入漏洞(CVE-2025-24659).md",
+      "baseline_sha256": "b9852841d83a5426b1c82b807ad7c37bcc0ced430d0fd0e0c58dc2c379d46d27",
+      "baseline_snapshot_sha256": "b9852841d83a5426b1c82b807ad7c37bcc0ced430d0fd0e0c58dc2c379d46d27",
+      "current_sha256": "2fd2f2e4c6af5027f854bdf9939aab3ef61c66a4688ae2478379362a7f1e02db",
+      "ledger_final_sha256": "2fd2f2e4c6af5027f854bdf9939aab3ef61c66a4688ae2478379362a7f1e02db",
+      "plan_final_sha256": "2fd2f2e4c6af5027f854bdf9939aab3ef61c66a4688ae2478379362a7f1e02db",
+      "baseline_sha_verified": true,
+      "current_sha_verified": true,
+      "forward_replay_exact": true,
+      "reverse_replay_exact": true,
+      "ledger_inverse_verified": true,
+      "operation_count": 9,
+      "operation_checks_forward": [
+        {
+          "index": 0,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 1881,
+          "old_len_chars": 10,
+          "new_len_chars": 1,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 1,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 1902,
+          "old_len_chars": 10,
+          "new_len_chars": 1,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 2,
+          "kind": "gap_note",
+          "offset_char": 1971,
+          "old_len_chars": 10,
+          "new_len_chars": 73,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "02f22458e9831a2f35d602f4f9b84f7b2e6158de534fdfe75f62853d02c8eb5a",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 3,
+          "kind": "gap_note",
+          "offset_char": 1998,
+          "old_len_chars": 10,
+          "new_len_chars": 44,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "609645d5a72d624d193df089bb25f1001c179aef2a7165caed41855d05e29e1e",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 4,
+          "kind": "gap_note",
+          "offset_char": 3393,
+          "old_len_chars": 10,
+          "new_len_chars": 139,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "8772215d7ac3d52a3795c6c94ba78a1ac6b7877294af3050ddb639f346e48403",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 5,
+          "kind": "gap_note",
+          "offset_char": 3915,
+          "old_len_chars": 10,
+          "new_len_chars": 141,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "cd5944e1ac3fe5779f425d4d48de5a664de04efecbaec7753f3562cecb608f98",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 6,
+          "kind": "gap_note",
+          "offset_char": 4895,
+          "old_len_chars": 10,
+          "new_len_chars": 126,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "066276780fd93d1e08cf77a1f0a56ec63862bc2b978559259a70623b007eb772",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 7,
+          "kind": "gap_note",
+          "offset_char": 5161,
+          "old_len_chars": 10,
+          "new_len_chars": 135,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "549303da266d5e57333d208676d00b539394eea73d22154675dbffc1589f129a",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 8,
+          "kind": "gap_note",
+          "offset_char": 5191,
+          "old_len_chars": 10,
+          "new_len_chars": 129,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "ee3f46c566d485597a7a8f2ae94ad8e8d8ae66776204dadfdc45f8b58bbdefc9",
+          "old_text_exact_at_offset": true
+        }
+      ],
+      "operation_checks_reverse": [
+        {
+          "index": 0,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 1881,
+          "new_len_chars": 1,
+          "old_len_chars": 10,
+          "new_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 1,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 1893,
+          "new_len_chars": 1,
+          "old_len_chars": 10,
+          "new_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 2,
+          "kind": "gap_note",
+          "offset_char": 1953,
+          "new_len_chars": 73,
+          "old_len_chars": 10,
+          "new_sha256": "02f22458e9831a2f35d602f4f9b84f7b2e6158de534fdfe75f62853d02c8eb5a",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 3,
+          "kind": "gap_note",
+          "offset_char": 2043,
+          "new_len_chars": 44,
+          "old_len_chars": 10,
+          "new_sha256": "609645d5a72d624d193df089bb25f1001c179aef2a7165caed41855d05e29e1e",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 4,
+          "kind": "gap_note",
+          "offset_char": 3472,
+          "new_len_chars": 139,
+          "old_len_chars": 10,
+          "new_sha256": "8772215d7ac3d52a3795c6c94ba78a1ac6b7877294af3050ddb639f346e48403",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 5,
+          "kind": "gap_note",
+          "offset_char": 4123,
+          "new_len_chars": 141,
+          "old_len_chars": 10,
+          "new_sha256": "cd5944e1ac3fe5779f425d4d48de5a664de04efecbaec7753f3562cecb608f98",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 6,
+          "kind": "gap_note",
+          "offset_char": 5234,
+          "new_len_chars": 126,
+          "old_len_chars": 10,
+          "new_sha256": "066276780fd93d1e08cf77a1f0a56ec63862bc2b978559259a70623b007eb772",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 7,
+          "kind": "gap_note",
+          "offset_char": 5616,
+          "new_len_chars": 135,
+          "old_len_chars": 10,
+          "new_sha256": "549303da266d5e57333d208676d00b539394eea73d22154675dbffc1589f129a",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 8,
+          "kind": "gap_note",
+          "offset_char": 5771,
+          "new_len_chars": 129,
+          "old_len_chars": 10,
+          "new_sha256": "ee3f46c566d485597a7a8f2ae94ad8e8d8ae66776204dadfdc45f8b58bbdefc9",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        }
+      ],
+      "frontmatter_byte_identical": true,
+      "frontmatter_sha256": "256804f22114be17b0339195e1fafede6b57083126e0a7c4f40c56c822b49068",
+      "frontmatter_bytes": 841,
+      "baseline_http_url_count": 15,
+      "missing_baseline_http_urls": {},
+      "baseline_markdown_image_count": 14,
+      "missing_baseline_markdown_images": {},
+      "baseline_raw_html_tag_count": 0,
+      "missing_baseline_raw_html_tags": {},
+      "static_marked_original_nonempty_code_blocks_retained": 0,
+      "static_marked_restored_blocks": 0,
+      "static_marked_nonoriginal_reference_blocks": 0,
+      "fenced_code_validation_caveat": null
+    },
+    {
+      "path": "Web安全/CMS内容/WordPress/超高危 Wordpress RCE漏洞 CVE-2024-5932 全网资产 5W+ 附POC.md",
+      "baseline_sha256": "b5f5e1bf2d866251729ba6fecee505dac07b38b61432f71b10271bb8849e47ef",
+      "baseline_snapshot_sha256": "b5f5e1bf2d866251729ba6fecee505dac07b38b61432f71b10271bb8849e47ef",
+      "current_sha256": "72a125194f4ce650b5fb61d275721f10ef70264f0ebb4c7d0cdfba50f3c9cec4",
+      "ledger_final_sha256": "72a125194f4ce650b5fb61d275721f10ef70264f0ebb4c7d0cdfba50f3c9cec4",
+      "plan_final_sha256": "72a125194f4ce650b5fb61d275721f10ef70264f0ebb4c7d0cdfba50f3c9cec4",
+      "baseline_sha_verified": true,
+      "current_sha_verified": true,
+      "forward_replay_exact": true,
+      "reverse_replay_exact": true,
+      "ledger_inverse_verified": true,
+      "operation_count": 1,
+      "operation_checks_forward": [
+        {
+          "index": 0,
+          "kind": "reference_supplement",
+          "offset_char": 3265,
+          "old_len_chars": 10,
+          "new_len_chars": 190,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "ce641ed76ad0a9f0809dad89834e4a9d62e253531b60d60b1f09d61842389918",
+          "old_text_exact_at_offset": true
+        }
+      ],
+      "operation_checks_reverse": [
+        {
+          "index": 0,
+          "kind": "reference_supplement",
+          "offset_char": 3265,
+          "new_len_chars": 190,
+          "old_len_chars": 10,
+          "new_sha256": "ce641ed76ad0a9f0809dad89834e4a9d62e253531b60d60b1f09d61842389918",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        }
+      ],
+      "frontmatter_byte_identical": true,
+      "frontmatter_sha256": "9eb75b0113899c72aa350409b52751ee08d7cf49dc9daf33a862729d53b7570a",
+      "frontmatter_bytes": 918,
+      "baseline_http_url_count": 11,
+      "missing_baseline_http_urls": {},
+      "baseline_markdown_image_count": 10,
+      "missing_baseline_markdown_images": {},
+      "baseline_raw_html_tag_count": 0,
+      "missing_baseline_raw_html_tags": {},
+      "static_marked_original_nonempty_code_blocks_retained": 9,
+      "static_marked_restored_blocks": 0,
+      "static_marked_nonoriginal_reference_blocks": 0,
+      "fenced_code_validation_caveat": null
+    },
+    {
+      "path": "Web安全/CMS内容/骑士 CMS/骑士CMS模版注入+文件包含getshell复现.md",
+      "baseline_sha256": "9cf2da4eb66dbc9e2a3a4cbe5a65ed34589c7f6ff20fab8f4e82630717b358e4",
+      "baseline_snapshot_sha256": "9cf2da4eb66dbc9e2a3a4cbe5a65ed34589c7f6ff20fab8f4e82630717b358e4",
+      "current_sha256": "b6d977a6d1663a513692b4a3042c9c841e312fc765c6c31d3e99e9d014e1f8db",
+      "ledger_final_sha256": "b6d977a6d1663a513692b4a3042c9c841e312fc765c6c31d3e99e9d014e1f8db",
+      "plan_final_sha256": "b6d977a6d1663a513692b4a3042c9c841e312fc765c6c31d3e99e9d014e1f8db",
+      "baseline_sha_verified": true,
+      "current_sha_verified": true,
+      "forward_replay_exact": true,
+      "reverse_replay_exact": true,
+      "ledger_inverse_verified": true,
+      "operation_count": 11,
+      "operation_checks_forward": [
+        {
+          "index": 0,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 4074,
+          "old_len_chars": 12,
+          "new_len_chars": 0,
+          "old_sha256": "966983bf1e774c1e899d77051537dfd2d83fe039332fec0214ded45700b7cade",
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 1,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 4821,
+          "old_len_chars": 12,
+          "new_len_chars": 0,
+          "old_sha256": "966983bf1e774c1e899d77051537dfd2d83fe039332fec0214ded45700b7cade",
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 2,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 5261,
+          "old_len_chars": 12,
+          "new_len_chars": 0,
+          "old_sha256": "966983bf1e774c1e899d77051537dfd2d83fe039332fec0214ded45700b7cade",
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 3,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 5740,
+          "old_len_chars": 12,
+          "new_len_chars": 0,
+          "old_sha256": "966983bf1e774c1e899d77051537dfd2d83fe039332fec0214ded45700b7cade",
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 4,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 6904,
+          "old_len_chars": 12,
+          "new_len_chars": 0,
+          "old_sha256": "966983bf1e774c1e899d77051537dfd2d83fe039332fec0214ded45700b7cade",
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 5,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 8217,
+          "old_len_chars": 12,
+          "new_len_chars": 0,
+          "old_sha256": "966983bf1e774c1e899d77051537dfd2d83fe039332fec0214ded45700b7cade",
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 6,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 9514,
+          "old_len_chars": 12,
+          "new_len_chars": 0,
+          "old_sha256": "966983bf1e774c1e899d77051537dfd2d83fe039332fec0214ded45700b7cade",
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 7,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 10075,
+          "old_len_chars": 12,
+          "new_len_chars": 0,
+          "old_sha256": "966983bf1e774c1e899d77051537dfd2d83fe039332fec0214ded45700b7cade",
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 8,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 10758,
+          "old_len_chars": 12,
+          "new_len_chars": 0,
+          "old_sha256": "966983bf1e774c1e899d77051537dfd2d83fe039332fec0214ded45700b7cade",
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 9,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 11223,
+          "old_len_chars": 12,
+          "new_len_chars": 0,
+          "old_sha256": "966983bf1e774c1e899d77051537dfd2d83fe039332fec0214ded45700b7cade",
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 10,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 11405,
+          "old_len_chars": 12,
+          "new_len_chars": 0,
+          "old_sha256": "966983bf1e774c1e899d77051537dfd2d83fe039332fec0214ded45700b7cade",
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_text_exact_at_offset": true
+        }
+      ],
+      "operation_checks_reverse": [
+        {
+          "index": 0,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 4074,
+          "new_len_chars": 0,
+          "old_len_chars": 12,
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_sha256": "966983bf1e774c1e899d77051537dfd2d83fe039332fec0214ded45700b7cade",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 1,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 4809,
+          "new_len_chars": 0,
+          "old_len_chars": 12,
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_sha256": "966983bf1e774c1e899d77051537dfd2d83fe039332fec0214ded45700b7cade",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 2,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 5237,
+          "new_len_chars": 0,
+          "old_len_chars": 12,
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_sha256": "966983bf1e774c1e899d77051537dfd2d83fe039332fec0214ded45700b7cade",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 3,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 5704,
+          "new_len_chars": 0,
+          "old_len_chars": 12,
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_sha256": "966983bf1e774c1e899d77051537dfd2d83fe039332fec0214ded45700b7cade",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 4,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 6856,
+          "new_len_chars": 0,
+          "old_len_chars": 12,
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_sha256": "966983bf1e774c1e899d77051537dfd2d83fe039332fec0214ded45700b7cade",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 5,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 8157,
+          "new_len_chars": 0,
+          "old_len_chars": 12,
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_sha256": "966983bf1e774c1e899d77051537dfd2d83fe039332fec0214ded45700b7cade",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 6,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 9442,
+          "new_len_chars": 0,
+          "old_len_chars": 12,
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_sha256": "966983bf1e774c1e899d77051537dfd2d83fe039332fec0214ded45700b7cade",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 7,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 9991,
+          "new_len_chars": 0,
+          "old_len_chars": 12,
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_sha256": "966983bf1e774c1e899d77051537dfd2d83fe039332fec0214ded45700b7cade",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 8,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 10662,
+          "new_len_chars": 0,
+          "old_len_chars": 12,
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_sha256": "966983bf1e774c1e899d77051537dfd2d83fe039332fec0214ded45700b7cade",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 9,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 11115,
+          "new_len_chars": 0,
+          "old_len_chars": 12,
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_sha256": "966983bf1e774c1e899d77051537dfd2d83fe039332fec0214ded45700b7cade",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 10,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 11285,
+          "new_len_chars": 0,
+          "old_len_chars": 12,
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_sha256": "966983bf1e774c1e899d77051537dfd2d83fe039332fec0214ded45700b7cade",
+          "new_text_exact_at_offset": true
+        }
+      ],
+      "frontmatter_byte_identical": true,
+      "frontmatter_sha256": "5c58a1899f0a661b138747ba9981cbd4be5099a619b27affefb7b851f5dca674",
+      "frontmatter_bytes": 967,
+      "baseline_http_url_count": 11,
+      "missing_baseline_http_urls": {},
+      "baseline_markdown_image_count": 0,
+      "missing_baseline_markdown_images": {},
+      "baseline_raw_html_tag_count": 3,
+      "missing_baseline_raw_html_tags": {},
+      "static_marked_original_nonempty_code_blocks_retained": 16,
+      "static_marked_restored_blocks": 0,
+      "static_marked_nonoriginal_reference_blocks": 0,
+      "fenced_code_validation_caveat": null
+    },
+    {
+      "path": "Web安全/安全设备/Nessus/Nessus严重漏洞允许覆盖任意本地系统文件.md",
+      "baseline_sha256": "0210bc559bc817b83cfe41ad7fa8f907f7685b4c46a7f92962b60503512edebc",
+      "baseline_snapshot_sha256": "0210bc559bc817b83cfe41ad7fa8f907f7685b4c46a7f92962b60503512edebc",
+      "current_sha256": "dcc6de047b7d20c3b5f5567206a6e248d3a572101377b1a7f58578d98264bfe8",
+      "ledger_final_sha256": "dcc6de047b7d20c3b5f5567206a6e248d3a572101377b1a7f58578d98264bfe8",
+      "plan_final_sha256": "dcc6de047b7d20c3b5f5567206a6e248d3a572101377b1a7f58578d98264bfe8",
+      "baseline_sha_verified": true,
+      "current_sha_verified": true,
+      "forward_replay_exact": true,
+      "reverse_replay_exact": true,
+      "ledger_inverse_verified": true,
+      "operation_count": 3,
+      "operation_checks_forward": [
+        {
+          "index": 0,
+          "kind": "reference_supplement",
+          "offset_char": 2247,
+          "old_len_chars": 10,
+          "new_len_chars": 157,
+          "old_sha256": "bff82d039200f8f747d533850eb1b3caa81a3966a1a26177f31eff7bf2b3352f",
+          "new_sha256": "c92f0cf501e06550460d12ad747459c668110bb73445007dd91f79fe11f22fb5",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 1,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 2486,
+          "old_len_chars": 20,
+          "new_len_chars": 10,
+          "old_sha256": "a8ac016fa497b1972e2317f0efbf150b93f787393fb1096ba3a8c481f927d488",
+          "new_sha256": "3f4e938dbbe6c728919a049ebac3983767f6e25b330af980b08d7714fa7ee687",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 2,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 2874,
+          "old_len_chars": 19,
+          "new_len_chars": 6,
+          "old_sha256": "3c3c986d200d98897d5fd99b4d5566a774b04325312b5fa6f6d9614fe5c43ddf",
+          "new_sha256": "78a682e696bf508fcdb0650fe0d744953d2a0f90fa55467e78e3121b9dff56ae",
+          "old_text_exact_at_offset": true
+        }
+      ],
+      "operation_checks_reverse": [
+        {
+          "index": 0,
+          "kind": "reference_supplement",
+          "offset_char": 2247,
+          "new_len_chars": 157,
+          "old_len_chars": 10,
+          "new_sha256": "c92f0cf501e06550460d12ad747459c668110bb73445007dd91f79fe11f22fb5",
+          "old_sha256": "bff82d039200f8f747d533850eb1b3caa81a3966a1a26177f31eff7bf2b3352f",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 1,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 2633,
+          "new_len_chars": 10,
+          "old_len_chars": 20,
+          "new_sha256": "3f4e938dbbe6c728919a049ebac3983767f6e25b330af980b08d7714fa7ee687",
+          "old_sha256": "a8ac016fa497b1972e2317f0efbf150b93f787393fb1096ba3a8c481f927d488",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 2,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 3011,
+          "new_len_chars": 6,
+          "old_len_chars": 19,
+          "new_sha256": "78a682e696bf508fcdb0650fe0d744953d2a0f90fa55467e78e3121b9dff56ae",
+          "old_sha256": "3c3c986d200d98897d5fd99b4d5566a774b04325312b5fa6f6d9614fe5c43ddf",
+          "new_text_exact_at_offset": true
+        }
+      ],
+      "frontmatter_byte_identical": true,
+      "frontmatter_sha256": "d9fb5d88045d847f038d2dc8cc62dfc9cd873f30a8e4fb3cdcad500652be6f24",
+      "frontmatter_bytes": 1152,
+      "baseline_http_url_count": 6,
+      "missing_baseline_http_urls": {},
+      "baseline_markdown_image_count": 3,
+      "missing_baseline_markdown_images": {},
+      "baseline_raw_html_tag_count": 0,
+      "missing_baseline_raw_html_tags": {},
+      "static_marked_original_nonempty_code_blocks_retained": 6,
+      "static_marked_restored_blocks": 0,
+      "static_marked_nonoriginal_reference_blocks": 0,
+      "fenced_code_validation_caveat": null
+    },
+    {
+      "path": "Web安全/安全设备/Sophos/Sophos Intercept X for Windows 支持任意代码执行漏洞.md",
+      "baseline_sha256": "2cf1eb5db681c1d1c6c659f8dc900a075a1c7023c269fc43f32cc0cc568c6572",
+      "baseline_snapshot_sha256": "2cf1eb5db681c1d1c6c659f8dc900a075a1c7023c269fc43f32cc0cc568c6572",
+      "current_sha256": "1a2a9da4bdd3b7a1bd4f5f387db9bc4a0e571b776c9ad1ab3cc369e747d8cf1c",
+      "ledger_final_sha256": "1a2a9da4bdd3b7a1bd4f5f387db9bc4a0e571b776c9ad1ab3cc369e747d8cf1c",
+      "plan_final_sha256": "1a2a9da4bdd3b7a1bd4f5f387db9bc4a0e571b776c9ad1ab3cc369e747d8cf1c",
+      "baseline_sha_verified": true,
+      "current_sha_verified": true,
+      "forward_replay_exact": true,
+      "reverse_replay_exact": true,
+      "ledger_inverse_verified": true,
+      "operation_count": 1,
+      "operation_checks_forward": [
+        {
+          "index": 0,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 2100,
+          "old_len_chars": 10,
+          "new_len_chars": 1,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "old_text_exact_at_offset": true
+        }
+      ],
+      "operation_checks_reverse": [
+        {
+          "index": 0,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 2100,
+          "new_len_chars": 1,
+          "old_len_chars": 10,
+          "new_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        }
+      ],
+      "frontmatter_byte_identical": true,
+      "frontmatter_sha256": "f7fa6510a8b742fa1f43c0dfcc920c3c5a42b56f38558a3c5c2266d264d84fe7",
+      "frontmatter_bytes": 1176,
+      "baseline_http_url_count": 3,
+      "missing_baseline_http_urls": {},
+      "baseline_markdown_image_count": 2,
+      "missing_baseline_markdown_images": {},
+      "baseline_raw_html_tag_count": 132,
+      "missing_baseline_raw_html_tags": {},
+      "static_marked_original_nonempty_code_blocks_retained": 0,
+      "static_marked_restored_blocks": 0,
+      "static_marked_nonoriginal_reference_blocks": 0,
+      "fenced_code_validation_caveat": null
+    },
+    {
+      "path": "Web安全/开发框架/BCEL/CVE-2022-42920 BCEL 任意文件写漏洞.md",
+      "baseline_sha256": "fe6badafbc5d1dded9e88a24bc30a115b9d6638ce5888d6c0cc668903d53c394",
+      "baseline_snapshot_sha256": "fe6badafbc5d1dded9e88a24bc30a115b9d6638ce5888d6c0cc668903d53c394",
+      "current_sha256": "5ccba2cae1c239e0b575250928a6ee67669d22278884c21c7800a0fe4ae02d24",
+      "ledger_final_sha256": "5ccba2cae1c239e0b575250928a6ee67669d22278884c21c7800a0fe4ae02d24",
+      "plan_final_sha256": "5ccba2cae1c239e0b575250928a6ee67669d22278884c21c7800a0fe4ae02d24",
+      "baseline_sha_verified": true,
+      "current_sha_verified": true,
+      "forward_replay_exact": true,
+      "reverse_replay_exact": true,
+      "ledger_inverse_verified": true,
+      "operation_count": 2,
+      "operation_checks_forward": [
+        {
+          "index": 0,
+          "kind": "reference_supplement",
+          "offset_char": 4894,
+          "old_len_chars": 10,
+          "new_len_chars": 418,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "0586aa8688fc36ed290291518a8ec62e0088cc3be6a0bd74edc7e7e20555104d",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 1,
+          "kind": "reference_supplement",
+          "offset_char": 5624,
+          "old_len_chars": 10,
+          "new_len_chars": 116,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "0fe248ce8a2a681cc5a614adb6ba8fa6350b5b09cffabefbaceff2a8b9040b07",
+          "old_text_exact_at_offset": true
+        }
+      ],
+      "operation_checks_reverse": [
+        {
+          "index": 0,
+          "kind": "reference_supplement",
+          "offset_char": 4894,
+          "new_len_chars": 418,
+          "old_len_chars": 10,
+          "new_sha256": "0586aa8688fc36ed290291518a8ec62e0088cc3be6a0bd74edc7e7e20555104d",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 1,
+          "kind": "reference_supplement",
+          "offset_char": 6032,
+          "new_len_chars": 116,
+          "old_len_chars": 10,
+          "new_sha256": "0fe248ce8a2a681cc5a614adb6ba8fa6350b5b09cffabefbaceff2a8b9040b07",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        }
+      ],
+      "frontmatter_byte_identical": true,
+      "frontmatter_sha256": "d966568de10e0246c46fb6f014f4b2515388d3e9937b4f5cabc7bdedd0348190",
+      "frontmatter_bytes": 809,
+      "baseline_http_url_count": 28,
+      "missing_baseline_http_urls": {},
+      "baseline_markdown_image_count": 20,
+      "missing_baseline_markdown_images": {},
+      "baseline_raw_html_tag_count": 0,
+      "missing_baseline_raw_html_tags": {},
+      "static_marked_original_nonempty_code_blocks_retained": 0,
+      "static_marked_restored_blocks": 0,
+      "static_marked_nonoriginal_reference_blocks": 0,
+      "fenced_code_validation_caveat": null
+    },
+    {
+      "path": "Web安全/开发框架/Git/CVE-2026-31900：一个过于宽松的正则表达式如何在 psf-black 的 GitHub Action 中导致 RCE.md",
+      "baseline_sha256": "d01aef7cc624f4fe8dbc81e273e1dbca7d4bad51658d1f00bfa6fe2cf90dd6bf",
+      "baseline_snapshot_sha256": "d01aef7cc624f4fe8dbc81e273e1dbca7d4bad51658d1f00bfa6fe2cf90dd6bf",
+      "current_sha256": "d579273be97faa7a2a3b51f576a2b25f94650ff29c307e9210661e453a0c23ae",
+      "ledger_final_sha256": "d579273be97faa7a2a3b51f576a2b25f94650ff29c307e9210661e453a0c23ae",
+      "plan_final_sha256": "d579273be97faa7a2a3b51f576a2b25f94650ff29c307e9210661e453a0c23ae",
+      "baseline_sha_verified": true,
+      "current_sha_verified": true,
+      "forward_replay_exact": true,
+      "reverse_replay_exact": true,
+      "ledger_inverse_verified": true,
+      "operation_count": 7,
+      "operation_checks_forward": [
+        {
+          "index": 0,
+          "kind": "restoration_source_note",
+          "offset_char": 2168,
+          "old_len_chars": 0,
+          "new_len_chars": 103,
+          "old_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "new_sha256": "2b5806cffac0295e61f9763d180b93faba0eae58dfffd90f39c78a3a64839ef8",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 1,
+          "kind": "source_restoration",
+          "offset_char": 4409,
+          "old_len_chars": 10,
+          "new_len_chars": 23,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "329dba4edec89bb9529b25216560ee2d877d70be372027d5a5a4bd8c41f91227",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 2,
+          "kind": "source_restoration",
+          "offset_char": 4512,
+          "old_len_chars": 10,
+          "new_len_chars": 25,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "74fd6a2ad42053a6e568a099310e10e607b4ed1b5dde6bba53ef2eac079b90fe",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 3,
+          "kind": "source_restoration",
+          "offset_char": 5183,
+          "old_len_chars": 10,
+          "new_len_chars": 36,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "e70205fb1c5dd7c136b46acc7815ba4986c9b2e72c9e82b14ca92156af02e561",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 4,
+          "kind": "source_restoration",
+          "offset_char": 5217,
+          "old_len_chars": 10,
+          "new_len_chars": 24,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "bdd671630c104a3a3bdabdf39ca134263bb772e540aade9c292251f6e4681094",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 5,
+          "kind": "source_restoration",
+          "offset_char": 7257,
+          "old_len_chars": 10,
+          "new_len_chars": 23,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "329dba4edec89bb9529b25216560ee2d877d70be372027d5a5a4bd8c41f91227",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 6,
+          "kind": "source_restoration",
+          "offset_char": 9441,
+          "old_len_chars": 10,
+          "new_len_chars": 26,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "1485a5b078afa9c2fef5cce25cb9c19036794f2e8464ab3a8916345ee6387617",
+          "old_text_exact_at_offset": true
+        }
+      ],
+      "operation_checks_reverse": [
+        {
+          "index": 0,
+          "kind": "restoration_source_note",
+          "offset_char": 2168,
+          "new_len_chars": 103,
+          "old_len_chars": 0,
+          "new_sha256": "2b5806cffac0295e61f9763d180b93faba0eae58dfffd90f39c78a3a64839ef8",
+          "old_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 1,
+          "kind": "source_restoration",
+          "offset_char": 4512,
+          "new_len_chars": 23,
+          "old_len_chars": 10,
+          "new_sha256": "329dba4edec89bb9529b25216560ee2d877d70be372027d5a5a4bd8c41f91227",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 2,
+          "kind": "source_restoration",
+          "offset_char": 4628,
+          "new_len_chars": 25,
+          "old_len_chars": 10,
+          "new_sha256": "74fd6a2ad42053a6e568a099310e10e607b4ed1b5dde6bba53ef2eac079b90fe",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 3,
+          "kind": "source_restoration",
+          "offset_char": 5314,
+          "new_len_chars": 36,
+          "old_len_chars": 10,
+          "new_sha256": "e70205fb1c5dd7c136b46acc7815ba4986c9b2e72c9e82b14ca92156af02e561",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 4,
+          "kind": "source_restoration",
+          "offset_char": 5374,
+          "new_len_chars": 24,
+          "old_len_chars": 10,
+          "new_sha256": "bdd671630c104a3a3bdabdf39ca134263bb772e540aade9c292251f6e4681094",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 5,
+          "kind": "source_restoration",
+          "offset_char": 7428,
+          "new_len_chars": 23,
+          "old_len_chars": 10,
+          "new_sha256": "329dba4edec89bb9529b25216560ee2d877d70be372027d5a5a4bd8c41f91227",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 6,
+          "kind": "source_restoration",
+          "offset_char": 9625,
+          "new_len_chars": 26,
+          "old_len_chars": 10,
+          "new_sha256": "1485a5b078afa9c2fef5cce25cb9c19036794f2e8464ab3a8916345ee6387617",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        }
+      ],
+      "frontmatter_byte_identical": true,
+      "frontmatter_sha256": "415fbd9da9823eb07d2c2d14f1904e6967c36fb6a28ede15af1d9284f4cc0b68",
+      "frontmatter_bytes": 988,
+      "baseline_http_url_count": 17,
+      "missing_baseline_http_urls": {},
+      "baseline_markdown_image_count": 6,
+      "missing_baseline_markdown_images": {},
+      "baseline_raw_html_tag_count": 0,
+      "missing_baseline_raw_html_tags": {},
+      "static_marked_original_nonempty_code_blocks_retained": 23,
+      "static_marked_restored_blocks": 6,
+      "static_marked_nonoriginal_reference_blocks": 0,
+      "fenced_code_validation_caveat": null
+    },
+    {
+      "path": "Web安全/开发框架/Java/CVE-2022-41853 分析：通过 Java 反序列化和远程代码库攻击使用静态函数获取 RCE.md",
+      "baseline_sha256": "86d11ce3cfd098ee5299282899585e239392dd587a16bd3475f111734d09569b",
+      "baseline_snapshot_sha256": "86d11ce3cfd098ee5299282899585e239392dd587a16bd3475f111734d09569b",
+      "current_sha256": "b1f307fb96ada72445090803f4db33efd181b2835dba0a5de0a9a27cb8c19bb8",
+      "ledger_final_sha256": "b1f307fb96ada72445090803f4db33efd181b2835dba0a5de0a9a27cb8c19bb8",
+      "plan_final_sha256": "b1f307fb96ada72445090803f4db33efd181b2835dba0a5de0a9a27cb8c19bb8",
+      "baseline_sha_verified": true,
+      "current_sha_verified": true,
+      "forward_replay_exact": true,
+      "reverse_replay_exact": true,
+      "ledger_inverse_verified": true,
+      "operation_count": 2,
+      "operation_checks_forward": [
+        {
+          "index": 0,
+          "kind": "source_restoration",
+          "offset_char": 3641,
+          "old_len_chars": 11,
+          "new_len_chars": 2002,
+          "old_sha256": "2e88b1b5fce69a94ef6f6f42e0b0087c56c896f300e77448b0a7fb2edc15fef1",
+          "new_sha256": "4c6c544338e643e82ba155f8167514e1213a01cb7b5e84025449c4a767ec0623",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 1,
+          "kind": "update_editorial_status",
+          "offset_char": 3652,
+          "old_len_chars": 44,
+          "new_len_chars": 86,
+          "old_sha256": "e719719a3fe65cf37794ac755413fa0443dcc4e120fa9a2e5536629cd543f024",
+          "new_sha256": "42376aa23221fa2e6facece4167d69f7ebb6ba91e72ecda0370276322e353424",
+          "old_text_exact_at_offset": true
+        }
+      ],
+      "operation_checks_reverse": [
+        {
+          "index": 0,
+          "kind": "source_restoration",
+          "offset_char": 3641,
+          "new_len_chars": 2002,
+          "old_len_chars": 11,
+          "new_sha256": "4c6c544338e643e82ba155f8167514e1213a01cb7b5e84025449c4a767ec0623",
+          "old_sha256": "2e88b1b5fce69a94ef6f6f42e0b0087c56c896f300e77448b0a7fb2edc15fef1",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 1,
+          "kind": "update_editorial_status",
+          "offset_char": 5643,
+          "new_len_chars": 86,
+          "old_len_chars": 44,
+          "new_sha256": "42376aa23221fa2e6facece4167d69f7ebb6ba91e72ecda0370276322e353424",
+          "old_sha256": "e719719a3fe65cf37794ac755413fa0443dcc4e120fa9a2e5536629cd543f024",
+          "new_text_exact_at_offset": true
+        }
+      ],
+      "frontmatter_byte_identical": true,
+      "frontmatter_sha256": "39410879568b7eb74d5994dd8ed375464df9cb2a5fa7e1ed76cca608c2b08dda",
+      "frontmatter_bytes": 923,
+      "baseline_http_url_count": 8,
+      "missing_baseline_http_urls": {},
+      "baseline_markdown_image_count": 7,
+      "missing_baseline_markdown_images": {},
+      "baseline_raw_html_tag_count": 1,
+      "missing_baseline_raw_html_tags": {},
+      "static_marked_original_nonempty_code_blocks_retained": 1,
+      "static_marked_restored_blocks": 1,
+      "static_marked_nonoriginal_reference_blocks": 0,
+      "fenced_code_validation_caveat": null
+    },
+    {
+      "path": "Web安全/开发框架/RuoYi/安全通告！RuoYi-AI框架曝任意文件上传漏洞()，可导致服务器沦陷（含POC） CVE-2025-6466.md",
+      "baseline_sha256": "60e07f422bdac0dccf7930f77c1d364178a752c8af0aa1dae7f9345aa1efa6dd",
+      "baseline_snapshot_sha256": "60e07f422bdac0dccf7930f77c1d364178a752c8af0aa1dae7f9345aa1efa6dd",
+      "current_sha256": "9661f09777921491a8c13ad89e062f371c2fe5367c4168a98f1f75844a8f09d0",
+      "ledger_final_sha256": "9661f09777921491a8c13ad89e062f371c2fe5367c4168a98f1f75844a8f09d0",
+      "plan_final_sha256": "9661f09777921491a8c13ad89e062f371c2fe5367c4168a98f1f75844a8f09d0",
+      "baseline_sha_verified": true,
+      "current_sha_verified": true,
+      "forward_replay_exact": true,
+      "reverse_replay_exact": true,
+      "ledger_inverse_verified": true,
+      "operation_count": 3,
+      "operation_checks_forward": [
+        {
+          "index": 0,
+          "kind": "gap_note",
+          "offset_char": 2157,
+          "old_len_chars": 10,
+          "new_len_chars": 292,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "830ef2db269ac1ae13e0cc34d2c0cdf65a5c6e96817d9c7f736acda68d4e5305",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 1,
+          "kind": "gap_note",
+          "offset_char": 2456,
+          "old_len_chars": 10,
+          "new_len_chars": 115,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "14639155840dc3edd7c5fc2e69d8d2d69b0bdb32a3f850a8f62bdf5baba30ea5",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 2,
+          "kind": "gap_note",
+          "offset_char": 2683,
+          "old_len_chars": 10,
+          "new_len_chars": 245,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "69c6c9ca7f664bdf489e8b342b11ce901fc755dbbe645b8584cf8d8149faa592",
+          "old_text_exact_at_offset": true
+        }
+      ],
+      "operation_checks_reverse": [
+        {
+          "index": 0,
+          "kind": "gap_note",
+          "offset_char": 2157,
+          "new_len_chars": 292,
+          "old_len_chars": 10,
+          "new_sha256": "830ef2db269ac1ae13e0cc34d2c0cdf65a5c6e96817d9c7f736acda68d4e5305",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 1,
+          "kind": "gap_note",
+          "offset_char": 2738,
+          "new_len_chars": 115,
+          "old_len_chars": 10,
+          "new_sha256": "14639155840dc3edd7c5fc2e69d8d2d69b0bdb32a3f850a8f62bdf5baba30ea5",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 2,
+          "kind": "gap_note",
+          "offset_char": 3070,
+          "new_len_chars": 245,
+          "old_len_chars": 10,
+          "new_sha256": "69c6c9ca7f664bdf489e8b342b11ce901fc755dbbe645b8584cf8d8149faa592",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        }
+      ],
+      "frontmatter_byte_identical": true,
+      "frontmatter_sha256": "3cd0212ab31797746d9ffa59fd2d424083fd8df031005aeed7343092996d983d",
+      "frontmatter_bytes": 938,
+      "baseline_http_url_count": 3,
+      "missing_baseline_http_urls": {},
+      "baseline_markdown_image_count": 3,
+      "missing_baseline_markdown_images": {},
+      "baseline_raw_html_tag_count": 0,
+      "missing_baseline_raw_html_tags": {},
+      "static_marked_original_nonempty_code_blocks_retained": 1,
+      "static_marked_restored_blocks": 0,
+      "static_marked_nonoriginal_reference_blocks": 0,
+      "fenced_code_validation_caveat": null
+    },
+    {
+      "path": "Web安全/开发框架/Spring Boot/SpringBladedict-biz存在SQL注入漏洞.md",
+      "baseline_sha256": "a3bcf9ec535d6a9001b67c293719084253de02d086e98179ba31e5070f293bb5",
+      "baseline_snapshot_sha256": "a3bcf9ec535d6a9001b67c293719084253de02d086e98179ba31e5070f293bb5",
+      "current_sha256": "1a1832777d651baa40455895c47b13ec698cf775e8c2da18f706213bd48db679",
+      "ledger_final_sha256": "1a1832777d651baa40455895c47b13ec698cf775e8c2da18f706213bd48db679",
+      "plan_final_sha256": "1a1832777d651baa40455895c47b13ec698cf775e8c2da18f706213bd48db679",
+      "baseline_sha_verified": true,
+      "current_sha_verified": true,
+      "forward_replay_exact": true,
+      "reverse_replay_exact": true,
+      "ledger_inverse_verified": true,
+      "operation_count": 1,
+      "operation_checks_forward": [
+        {
+          "index": 0,
+          "kind": "gap_note",
+          "offset_char": 2370,
+          "old_len_chars": 13,
+          "new_len_chars": 154,
+          "old_sha256": "fa2f79d6c927b8305a91cc9bc2d23a2a68b3b5559eae898db3f309dccb56d3b1",
+          "new_sha256": "a25ced4d1091999819dacb3b142f9e419e6a95cf71347f5389e701f949cddeaf",
+          "old_text_exact_at_offset": true
+        }
+      ],
+      "operation_checks_reverse": [
+        {
+          "index": 0,
+          "kind": "gap_note",
+          "offset_char": 2370,
+          "new_len_chars": 154,
+          "old_len_chars": 13,
+          "new_sha256": "a25ced4d1091999819dacb3b142f9e419e6a95cf71347f5389e701f949cddeaf",
+          "old_sha256": "fa2f79d6c927b8305a91cc9bc2d23a2a68b3b5559eae898db3f309dccb56d3b1",
+          "new_text_exact_at_offset": true
+        }
+      ],
+      "frontmatter_byte_identical": true,
+      "frontmatter_sha256": "bddb6e483448b8829cf164358f48ed91c0dc4f83cc12581bf201dc15dee260ed",
+      "frontmatter_bytes": 816,
+      "baseline_http_url_count": 3,
+      "missing_baseline_http_urls": {},
+      "baseline_markdown_image_count": 0,
+      "missing_baseline_markdown_images": {},
+      "baseline_raw_html_tag_count": 3,
+      "missing_baseline_raw_html_tags": {},
+      "static_marked_original_nonempty_code_blocks_retained": 2,
+      "static_marked_restored_blocks": 0,
+      "static_marked_nonoriginal_reference_blocks": 0,
+      "fenced_code_validation_caveat": null
+    },
+    {
+      "path": "Web安全/开发框架/Spring Boot/SpringDataMongoDBSpEL表达式注入漏洞.md",
+      "baseline_sha256": "4cd7d628998b43c56545b5d586353a416014d274a7f1902b60c8326523928ed8",
+      "baseline_snapshot_sha256": "4cd7d628998b43c56545b5d586353a416014d274a7f1902b60c8326523928ed8",
+      "current_sha256": "b270ad0bc630d3710ac4192a22ccdf5515e931b7ca1965a268ff903f4a6604a3",
+      "ledger_final_sha256": "b270ad0bc630d3710ac4192a22ccdf5515e931b7ca1965a268ff903f4a6604a3",
+      "plan_final_sha256": "b270ad0bc630d3710ac4192a22ccdf5515e931b7ca1965a268ff903f4a6604a3",
+      "baseline_sha_verified": true,
+      "current_sha_verified": true,
+      "forward_replay_exact": true,
+      "reverse_replay_exact": true,
+      "ledger_inverse_verified": true,
+      "operation_count": 1,
+      "operation_checks_forward": [
+        {
+          "index": 0,
+          "kind": "reference_supplement",
+          "offset_char": 1492,
+          "old_len_chars": 14,
+          "new_len_chars": 178,
+          "old_sha256": "632bea5dba1288ce3871a657e7f21922c995997a6f3e2428ae5718ef877f3a44",
+          "new_sha256": "2331114216ed37338f6283acf276a5ab0c4763db6ddf37b0149cdb0f8c59d13e",
+          "old_text_exact_at_offset": true
+        }
+      ],
+      "operation_checks_reverse": [
+        {
+          "index": 0,
+          "kind": "reference_supplement",
+          "offset_char": 1492,
+          "new_len_chars": 178,
+          "old_len_chars": 14,
+          "new_sha256": "2331114216ed37338f6283acf276a5ab0c4763db6ddf37b0149cdb0f8c59d13e",
+          "old_sha256": "632bea5dba1288ce3871a657e7f21922c995997a6f3e2428ae5718ef877f3a44",
+          "new_text_exact_at_offset": true
+        }
+      ],
+      "frontmatter_byte_identical": true,
+      "frontmatter_sha256": "004b4c0d18969c4008d4383f48fc36cb3c5372f32e57a97e5a4623ebee1416d7",
+      "frontmatter_bytes": 806,
+      "baseline_http_url_count": 2,
+      "missing_baseline_http_urls": {},
+      "baseline_markdown_image_count": 0,
+      "missing_baseline_markdown_images": {},
+      "baseline_raw_html_tag_count": 1,
+      "missing_baseline_raw_html_tags": {},
+      "static_marked_original_nonempty_code_blocks_retained": 2,
+      "static_marked_restored_blocks": 0,
+      "static_marked_nonoriginal_reference_blocks": 0,
+      "fenced_code_validation_caveat": null
+    },
+    {
+      "path": "Web安全/开发框架/lodash/lodash库原型污染漏洞（CVE-2019-10744）.md",
+      "baseline_sha256": "b08fa8e51141d04e3466da3d11c093b90f55035e232fda0fb9caf14b028d6d1a",
+      "baseline_snapshot_sha256": "b08fa8e51141d04e3466da3d11c093b90f55035e232fda0fb9caf14b028d6d1a",
+      "current_sha256": "9dba25029ad39b92e741b3d78d0e1cb2bb94eff3c4e9110d25e1b428f1b0736a",
+      "ledger_final_sha256": "9dba25029ad39b92e741b3d78d0e1cb2bb94eff3c4e9110d25e1b428f1b0736a",
+      "plan_final_sha256": "9dba25029ad39b92e741b3d78d0e1cb2bb94eff3c4e9110d25e1b428f1b0736a",
+      "baseline_sha_verified": true,
+      "current_sha_verified": true,
+      "forward_replay_exact": true,
+      "reverse_replay_exact": true,
+      "ledger_inverse_verified": true,
+      "operation_count": 4,
+      "operation_checks_forward": [
+        {
+          "index": 0,
+          "kind": "restoration_source_note",
+          "offset_char": 1429,
+          "old_len_chars": 0,
+          "new_len_chars": 152,
+          "old_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "new_sha256": "cefc444d06fa028c72a6b931da567db02e6fe0e9e40837f90eb116a04849f5b8",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 1,
+          "kind": "source_restoration",
+          "offset_char": 1685,
+          "old_len_chars": 10,
+          "new_len_chars": 81,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "7f2588a0b71abb1df58cae9894bff76b1fc794db7ad7f699bba11abe9132e9c3",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 2,
+          "kind": "source_restoration",
+          "offset_char": 3032,
+          "old_len_chars": 10,
+          "new_len_chars": 49,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "cbda172054ba2744b73d536073564bbadd92147ba13d8da32dd437ffd08ab96d",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 3,
+          "kind": "source_restoration",
+          "offset_char": 3123,
+          "old_len_chars": 10,
+          "new_len_chars": 82,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "d5149372817b0c473d578eb8be1472af9b0f1a03276bbf4b7d44659a251cd90b",
+          "old_text_exact_at_offset": true
+        }
+      ],
+      "operation_checks_reverse": [
+        {
+          "index": 0,
+          "kind": "restoration_source_note",
+          "offset_char": 1429,
+          "new_len_chars": 152,
+          "old_len_chars": 0,
+          "new_sha256": "cefc444d06fa028c72a6b931da567db02e6fe0e9e40837f90eb116a04849f5b8",
+          "old_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 1,
+          "kind": "source_restoration",
+          "offset_char": 1837,
+          "new_len_chars": 81,
+          "old_len_chars": 10,
+          "new_sha256": "7f2588a0b71abb1df58cae9894bff76b1fc794db7ad7f699bba11abe9132e9c3",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 2,
+          "kind": "source_restoration",
+          "offset_char": 3255,
+          "new_len_chars": 49,
+          "old_len_chars": 10,
+          "new_sha256": "cbda172054ba2744b73d536073564bbadd92147ba13d8da32dd437ffd08ab96d",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 3,
+          "kind": "source_restoration",
+          "offset_char": 3385,
+          "new_len_chars": 82,
+          "old_len_chars": 10,
+          "new_sha256": "d5149372817b0c473d578eb8be1472af9b0f1a03276bbf4b7d44659a251cd90b",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        }
+      ],
+      "frontmatter_byte_identical": true,
+      "frontmatter_sha256": "8c22ac16a7541382adc3a13bbf05cd42e74070fb4172a2a7abd9382850cb3f17",
+      "frontmatter_bytes": 1028,
+      "baseline_http_url_count": 2,
+      "missing_baseline_http_urls": {},
+      "baseline_markdown_image_count": 2,
+      "missing_baseline_markdown_images": {},
+      "baseline_raw_html_tag_count": 0,
+      "missing_baseline_raw_html_tags": {},
+      "static_marked_original_nonempty_code_blocks_retained": 1,
+      "static_marked_restored_blocks": 3,
+      "static_marked_nonoriginal_reference_blocks": 0,
+      "fenced_code_validation_caveat": null
+    },
+    {
+      "path": "Web安全/服务器软件/Piciorgros TMO-100/Piciorgros TMO-100_ Unauthorized configuration change via TFTP CVE-20.md",
+      "baseline_sha256": "e919cc121f56b475349700da3d84239aa639c7c7c54dcd8f06b486f0a5082343",
+      "baseline_snapshot_sha256": "e919cc121f56b475349700da3d84239aa639c7c7c54dcd8f06b486f0a5082343",
+      "current_sha256": "e16febd614dd8b1845d5f8be785741acc665125a1e9a8fda66bb29b055fcf0db",
+      "ledger_final_sha256": "e16febd614dd8b1845d5f8be785741acc665125a1e9a8fda66bb29b055fcf0db",
+      "plan_final_sha256": "e16febd614dd8b1845d5f8be785741acc665125a1e9a8fda66bb29b055fcf0db",
+      "baseline_sha_verified": true,
+      "current_sha_verified": true,
+      "forward_replay_exact": true,
+      "reverse_replay_exact": true,
+      "ledger_inverse_verified": true,
+      "operation_count": 1,
+      "operation_checks_forward": [
+        {
+          "index": 0,
+          "kind": "resource_link_repair",
+          "offset_char": 6808,
+          "old_len_chars": 32,
+          "new_len_chars": 209,
+          "old_sha256": "63d614c0a28dcc8bf4f0e792799be7fca61dd268c9cdeeeab12c21f1e9d2cb59",
+          "new_sha256": "b42cf910f3cedba4b07eeb8d3516268f61fcd4ab51af50a466c8e2a537e34678",
+          "old_text_exact_at_offset": true
+        }
+      ],
+      "operation_checks_reverse": [
+        {
+          "index": 0,
+          "kind": "resource_link_repair",
+          "offset_char": 6808,
+          "new_len_chars": 209,
+          "old_len_chars": 32,
+          "new_sha256": "b42cf910f3cedba4b07eeb8d3516268f61fcd4ab51af50a466c8e2a537e34678",
+          "old_sha256": "63d614c0a28dcc8bf4f0e792799be7fca61dd268c9cdeeeab12c21f1e9d2cb59",
+          "new_text_exact_at_offset": true
+        }
+      ],
+      "frontmatter_byte_identical": true,
+      "frontmatter_sha256": "cd18faa98e1132210bc4e31c2931487d841e63e37caa1053640ab48b5dcec7cd",
+      "frontmatter_bytes": 965,
+      "baseline_http_url_count": 40,
+      "missing_baseline_http_urls": {},
+      "baseline_markdown_image_count": 0,
+      "missing_baseline_markdown_images": {},
+      "baseline_raw_html_tag_count": 2,
+      "missing_baseline_raw_html_tags": {},
+      "static_marked_original_nonempty_code_blocks_retained": 2,
+      "static_marked_restored_blocks": 0,
+      "static_marked_nonoriginal_reference_blocks": 0,
+      "fenced_code_validation_caveat": null
+    },
+    {
+      "path": "Web安全/网络设备/Cisco/CVE-2026-0866 Cisco ClamAV ZIP扫描引擎绕过漏洞.md",
+      "baseline_sha256": "145865667f08268747a911259bb19ac19e2a75c33c6a4141aa3c6d438762e157",
+      "baseline_snapshot_sha256": "145865667f08268747a911259bb19ac19e2a75c33c6a4141aa3c6d438762e157",
+      "current_sha256": "48f345314a01da581fb1da06272ed9cbada96d564634d82423a626167b5354a9",
+      "ledger_final_sha256": "48f345314a01da581fb1da06272ed9cbada96d564634d82423a626167b5354a9",
+      "plan_final_sha256": "48f345314a01da581fb1da06272ed9cbada96d564634d82423a626167b5354a9",
+      "baseline_sha_verified": true,
+      "current_sha_verified": true,
+      "forward_replay_exact": true,
+      "reverse_replay_exact": true,
+      "ledger_inverse_verified": true,
+      "operation_count": 29,
+      "operation_checks_forward": [
+        {
+          "index": 0,
+          "kind": "update_editorial_status",
+          "offset_char": 1252,
+          "old_len_chars": 26,
+          "new_len_chars": 30,
+          "old_sha256": "5691ffbb1848483709c6fb2e7354a18062f53f9c93c83913e441408692d56c39",
+          "new_sha256": "5d6cd8f51db934e41605fe47e585536e515d52d812c694f93b0834556d8d12d9",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 1,
+          "kind": "section_gap_note",
+          "offset_char": 10233,
+          "old_len_chars": 11,
+          "new_len_chars": 200,
+          "old_sha256": "f76605b3bf299a3222410bea80033d3712a1ae175edc20df398d75fd78295af6",
+          "new_sha256": "d6bff5491d165eb1de77dda843269e7969e083a1947f3442fd0b2dc6034ec4c0",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 2,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 10322,
+          "old_len_chars": 10,
+          "new_len_chars": 0,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 3,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 10347,
+          "old_len_chars": 10,
+          "new_len_chars": 0,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 4,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 10379,
+          "old_len_chars": 10,
+          "new_len_chars": 0,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 5,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 10409,
+          "old_len_chars": 10,
+          "new_len_chars": 0,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 6,
+          "kind": "section_gap_note",
+          "offset_char": 16327,
+          "old_len_chars": 10,
+          "new_len_chars": 291,
+          "old_sha256": "0b8115317b19d27abddbe5f4aaa098a09887cbd99f967b287917d0c0b755c689",
+          "new_sha256": "49272a967b730fbbfd763cbecedbff844fe8733b0f1cdb0434c26f0fc65f3e0e",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 7,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 16472,
+          "old_len_chars": 10,
+          "new_len_chars": 0,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 8,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 16517,
+          "old_len_chars": 10,
+          "new_len_chars": 0,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 9,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 16566,
+          "old_len_chars": 10,
+          "new_len_chars": 0,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 10,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 16576,
+          "old_len_chars": 10,
+          "new_len_chars": 0,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 11,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 16615,
+          "old_len_chars": 10,
+          "new_len_chars": 0,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 12,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 16650,
+          "old_len_chars": 10,
+          "new_len_chars": 0,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 13,
+          "kind": "section_gap_note",
+          "offset_char": 16913,
+          "old_len_chars": 10,
+          "new_len_chars": 75,
+          "old_sha256": "a7b2a9b58bda549001f351701db76f5812984a8a04f70e343bac080d5375a68e",
+          "new_sha256": "d62c406f026b3d163f8fd24a5f5d81e3b035b426f71b93a4d660fdbff7c2a49b",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 14,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 16965,
+          "old_len_chars": 10,
+          "new_len_chars": 0,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 15,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 17007,
+          "old_len_chars": 10,
+          "new_len_chars": 0,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 16,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 17054,
+          "old_len_chars": 10,
+          "new_len_chars": 0,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 17,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 17085,
+          "old_len_chars": 10,
+          "new_len_chars": 0,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 18,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 17128,
+          "old_len_chars": 10,
+          "new_len_chars": 0,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 19,
+          "kind": "section_gap_note",
+          "offset_char": 17138,
+          "old_len_chars": 10,
+          "new_len_chars": 75,
+          "old_sha256": "b1dff373cde243e2e81a782110aed16f5227a3101b226b8b6d2c064f86557eb5",
+          "new_sha256": "50aabd59133495f8dc36bec3cae8dd230c204f1ba49ae9f35b40f0c95d9a4988",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 20,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 17178,
+          "old_len_chars": 10,
+          "new_len_chars": 0,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 21,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 17219,
+          "old_len_chars": 10,
+          "new_len_chars": 0,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 22,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 17257,
+          "old_len_chars": 10,
+          "new_len_chars": 0,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 23,
+          "kind": "section_gap_note",
+          "offset_char": 17267,
+          "old_len_chars": 12,
+          "new_len_chars": 161,
+          "old_sha256": "ce8d5a167938cdd180b8fe42555856b3801e8391e2af8d3aa1241e1f7894ca7e",
+          "new_sha256": "948f551934c6dfe6157ffd11d5032e201cf48810ea49eca31ce26836bb5adf3e",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 24,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 17354,
+          "old_len_chars": 10,
+          "new_len_chars": 0,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 25,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 17402,
+          "old_len_chars": 10,
+          "new_len_chars": 0,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 26,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 17450,
+          "old_len_chars": 10,
+          "new_len_chars": 0,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 27,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 17501,
+          "old_len_chars": 10,
+          "new_len_chars": 0,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 28,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 17546,
+          "old_len_chars": 10,
+          "new_len_chars": 0,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_text_exact_at_offset": true
+        }
+      ],
+      "operation_checks_reverse": [
+        {
+          "index": 0,
+          "kind": "update_editorial_status",
+          "offset_char": 1252,
+          "new_len_chars": 30,
+          "old_len_chars": 26,
+          "new_sha256": "5d6cd8f51db934e41605fe47e585536e515d52d812c694f93b0834556d8d12d9",
+          "old_sha256": "5691ffbb1848483709c6fb2e7354a18062f53f9c93c83913e441408692d56c39",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 1,
+          "kind": "section_gap_note",
+          "offset_char": 10237,
+          "new_len_chars": 200,
+          "old_len_chars": 11,
+          "new_sha256": "d6bff5491d165eb1de77dda843269e7969e083a1947f3442fd0b2dc6034ec4c0",
+          "old_sha256": "f76605b3bf299a3222410bea80033d3712a1ae175edc20df398d75fd78295af6",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 2,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 10515,
+          "new_len_chars": 0,
+          "old_len_chars": 10,
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 3,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 10530,
+          "new_len_chars": 0,
+          "old_len_chars": 10,
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 4,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 10552,
+          "new_len_chars": 0,
+          "old_len_chars": 10,
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 5,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 10572,
+          "new_len_chars": 0,
+          "old_len_chars": 10,
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 6,
+          "kind": "section_gap_note",
+          "offset_char": 16480,
+          "new_len_chars": 291,
+          "old_len_chars": 10,
+          "new_sha256": "49272a967b730fbbfd763cbecedbff844fe8733b0f1cdb0434c26f0fc65f3e0e",
+          "old_sha256": "0b8115317b19d27abddbe5f4aaa098a09887cbd99f967b287917d0c0b755c689",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 7,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 16906,
+          "new_len_chars": 0,
+          "old_len_chars": 10,
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 8,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 16941,
+          "new_len_chars": 0,
+          "old_len_chars": 10,
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 9,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 16980,
+          "new_len_chars": 0,
+          "old_len_chars": 10,
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 10,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 16980,
+          "new_len_chars": 0,
+          "old_len_chars": 10,
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 11,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 17009,
+          "new_len_chars": 0,
+          "old_len_chars": 10,
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 12,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 17034,
+          "new_len_chars": 0,
+          "old_len_chars": 10,
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 13,
+          "kind": "section_gap_note",
+          "offset_char": 17287,
+          "new_len_chars": 75,
+          "old_len_chars": 10,
+          "new_sha256": "d62c406f026b3d163f8fd24a5f5d81e3b035b426f71b93a4d660fdbff7c2a49b",
+          "old_sha256": "a7b2a9b58bda549001f351701db76f5812984a8a04f70e343bac080d5375a68e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 14,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 17404,
+          "new_len_chars": 0,
+          "old_len_chars": 10,
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 15,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 17436,
+          "new_len_chars": 0,
+          "old_len_chars": 10,
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 16,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 17473,
+          "new_len_chars": 0,
+          "old_len_chars": 10,
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 17,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 17494,
+          "new_len_chars": 0,
+          "old_len_chars": 10,
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 18,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 17527,
+          "new_len_chars": 0,
+          "old_len_chars": 10,
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 19,
+          "kind": "section_gap_note",
+          "offset_char": 17527,
+          "new_len_chars": 75,
+          "old_len_chars": 10,
+          "new_sha256": "50aabd59133495f8dc36bec3cae8dd230c204f1ba49ae9f35b40f0c95d9a4988",
+          "old_sha256": "b1dff373cde243e2e81a782110aed16f5227a3101b226b8b6d2c064f86557eb5",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 20,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 17632,
+          "new_len_chars": 0,
+          "old_len_chars": 10,
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 21,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 17663,
+          "new_len_chars": 0,
+          "old_len_chars": 10,
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 22,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 17691,
+          "new_len_chars": 0,
+          "old_len_chars": 10,
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 23,
+          "kind": "section_gap_note",
+          "offset_char": 17691,
+          "new_len_chars": 161,
+          "old_len_chars": 12,
+          "new_sha256": "948f551934c6dfe6157ffd11d5032e201cf48810ea49eca31ce26836bb5adf3e",
+          "old_sha256": "ce8d5a167938cdd180b8fe42555856b3801e8391e2af8d3aa1241e1f7894ca7e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 24,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 17927,
+          "new_len_chars": 0,
+          "old_len_chars": 10,
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 25,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 17965,
+          "new_len_chars": 0,
+          "old_len_chars": 10,
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 26,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 18003,
+          "new_len_chars": 0,
+          "old_len_chars": 10,
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 27,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 18044,
+          "new_len_chars": 0,
+          "old_len_chars": 10,
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 28,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 18079,
+          "new_len_chars": 0,
+          "old_len_chars": 10,
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        }
+      ],
+      "frontmatter_byte_identical": true,
+      "frontmatter_sha256": "841e7302dd28348fb53244d2ac4e736e5500b130e73fa467438f3decdc1a86dd",
+      "frontmatter_bytes": 1106,
+      "baseline_http_url_count": 2,
+      "missing_baseline_http_urls": {},
+      "baseline_markdown_image_count": 1,
+      "missing_baseline_markdown_images": {},
+      "baseline_raw_html_tag_count": 310,
+      "missing_baseline_raw_html_tags": {},
+      "static_marked_original_nonempty_code_blocks_retained": 0,
+      "static_marked_restored_blocks": 0,
+      "static_marked_nonoriginal_reference_blocks": 0,
+      "fenced_code_validation_caveat": null
+    },
+    {
+      "path": "Web安全/网络设备/D-Link/CVE-2018-17066复现（D-Link命令注入漏洞）.md",
+      "baseline_sha256": "5f2e9e468ef63f54ee11789607b5a504b88b75f42011b4c892ac1549b68aed32",
+      "baseline_snapshot_sha256": "5f2e9e468ef63f54ee11789607b5a504b88b75f42011b4c892ac1549b68aed32",
+      "current_sha256": "1b26133fe5e80e0ec31e2b6e7c97b7d3fe3ba9242b2f37e89983ce3b43d713f4",
+      "ledger_final_sha256": "1b26133fe5e80e0ec31e2b6e7c97b7d3fe3ba9242b2f37e89983ce3b43d713f4",
+      "plan_final_sha256": "1b26133fe5e80e0ec31e2b6e7c97b7d3fe3ba9242b2f37e89983ce3b43d713f4",
+      "baseline_sha_verified": true,
+      "current_sha_verified": true,
+      "forward_replay_exact": true,
+      "reverse_replay_exact": true,
+      "ledger_inverse_verified": true,
+      "operation_count": 6,
+      "operation_checks_forward": [
+        {
+          "index": 0,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 2198,
+          "old_len_chars": 10,
+          "new_len_chars": 0,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 1,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 4575,
+          "old_len_chars": 10,
+          "new_len_chars": 0,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 2,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 10937,
+          "old_len_chars": 10,
+          "new_len_chars": 0,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 3,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 12817,
+          "old_len_chars": 10,
+          "new_len_chars": 0,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 4,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 13342,
+          "old_len_chars": 10,
+          "new_len_chars": 0,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 5,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 13950,
+          "old_len_chars": 10,
+          "new_len_chars": 0,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_text_exact_at_offset": true
+        }
+      ],
+      "operation_checks_reverse": [
+        {
+          "index": 0,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 2198,
+          "new_len_chars": 0,
+          "old_len_chars": 10,
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 1,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 4565,
+          "new_len_chars": 0,
+          "old_len_chars": 10,
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 2,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 10917,
+          "new_len_chars": 0,
+          "old_len_chars": 10,
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 3,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 12787,
+          "new_len_chars": 0,
+          "old_len_chars": 10,
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 4,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 13302,
+          "new_len_chars": 0,
+          "old_len_chars": 10,
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 5,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 13900,
+          "new_len_chars": 0,
+          "old_len_chars": 10,
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        }
+      ],
+      "frontmatter_byte_identical": true,
+      "frontmatter_sha256": "77bae6c586930338dd3906d04f55c4a9bc3384f4340ac730b78997e8502c2945",
+      "frontmatter_bytes": 1120,
+      "baseline_http_url_count": 50,
+      "missing_baseline_http_urls": {},
+      "baseline_markdown_image_count": 30,
+      "missing_baseline_markdown_images": {},
+      "baseline_raw_html_tag_count": 0,
+      "missing_baseline_raw_html_tags": {},
+      "static_marked_original_nonempty_code_blocks_retained": 17,
+      "static_marked_restored_blocks": 0,
+      "static_marked_nonoriginal_reference_blocks": 0,
+      "fenced_code_validation_caveat": null
+    },
+    {
+      "path": "Web安全/网络设备/D-Link/【技术分享】CVE-2019-10999 Dlink IP 摄像头缓冲区溢出.md",
+      "baseline_sha256": "3b9401ca8991b0366d157ea737b4ce979503f4677dc38a2649449cb0b6b64d0f",
+      "baseline_snapshot_sha256": "3b9401ca8991b0366d157ea737b4ce979503f4677dc38a2649449cb0b6b64d0f",
+      "current_sha256": "543198572c7c87b0e136fe08bbe20d77fd1e3a6344d4b48dfce0eeb36f82e4b7",
+      "ledger_final_sha256": "543198572c7c87b0e136fe08bbe20d77fd1e3a6344d4b48dfce0eeb36f82e4b7",
+      "plan_final_sha256": "543198572c7c87b0e136fe08bbe20d77fd1e3a6344d4b48dfce0eeb36f82e4b7",
+      "baseline_sha_verified": true,
+      "current_sha_verified": true,
+      "forward_replay_exact": true,
+      "reverse_replay_exact": true,
+      "ledger_inverse_verified": true,
+      "operation_count": 2,
+      "operation_checks_forward": [
+        {
+          "index": 0,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 11261,
+          "old_len_chars": 58,
+          "new_len_chars": 122,
+          "old_sha256": "02b15d878ca2873aaa66e582813989055ef48a58c2e4b16ce3a4fe4c6bd1ae53",
+          "new_sha256": "7d9232666350a92a0ec0873d7ba4889abfec3a0b44dab4b23dabe096fd91a7f3",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 1,
+          "kind": "malformed_empty_list_cleanup",
+          "offset_char": 11322,
+          "old_len_chars": 27,
+          "new_len_chars": 0,
+          "old_sha256": "eda5355e7b790180ca086d0c7d5f5d3f3de599ac9069c65e28a68cd96f60ff3c",
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_text_exact_at_offset": true
+        }
+      ],
+      "operation_checks_reverse": [
+        {
+          "index": 0,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 11261,
+          "new_len_chars": 122,
+          "old_len_chars": 58,
+          "new_sha256": "7d9232666350a92a0ec0873d7ba4889abfec3a0b44dab4b23dabe096fd91a7f3",
+          "old_sha256": "02b15d878ca2873aaa66e582813989055ef48a58c2e4b16ce3a4fe4c6bd1ae53",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 1,
+          "kind": "malformed_empty_list_cleanup",
+          "offset_char": 11386,
+          "new_len_chars": 0,
+          "old_len_chars": 27,
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_sha256": "eda5355e7b790180ca086d0c7d5f5d3f3de599ac9069c65e28a68cd96f60ff3c",
+          "new_text_exact_at_offset": true
+        }
+      ],
+      "frontmatter_byte_identical": true,
+      "frontmatter_sha256": "b6eb8199ebd14327d7fae9defed0fa7719fa80e029fd25da4bb5fc5af742dcfb",
+      "frontmatter_bytes": 1200,
+      "baseline_http_url_count": 19,
+      "missing_baseline_http_urls": {},
+      "baseline_markdown_image_count": 14,
+      "missing_baseline_markdown_images": {},
+      "baseline_raw_html_tag_count": 0,
+      "missing_baseline_raw_html_tags": {},
+      "static_marked_original_nonempty_code_blocks_retained": 11,
+      "static_marked_restored_blocks": 0,
+      "static_marked_nonoriginal_reference_blocks": 0,
+      "fenced_code_validation_caveat": null
+    },
+    {
+      "path": "Web安全/网络设备/NETGEAR/美国网件Netgear RAX30路由器RCE漏洞分析.md",
+      "baseline_sha256": "bc6e0a15ebde0d17a51ee54cbc56c182c03be0f02a3b437c554d63a4a6b92bb3",
+      "baseline_snapshot_sha256": "bc6e0a15ebde0d17a51ee54cbc56c182c03be0f02a3b437c554d63a4a6b92bb3",
+      "current_sha256": "9a3dd8a9536a151a3ac744352816ad1956dcfc3bbec4e78759771aede76cb4a5",
+      "ledger_final_sha256": "9a3dd8a9536a151a3ac744352816ad1956dcfc3bbec4e78759771aede76cb4a5",
+      "plan_final_sha256": "9a3dd8a9536a151a3ac744352816ad1956dcfc3bbec4e78759771aede76cb4a5",
+      "baseline_sha_verified": true,
+      "current_sha_verified": true,
+      "forward_replay_exact": true,
+      "reverse_replay_exact": true,
+      "ledger_inverse_verified": true,
+      "operation_count": 5,
+      "operation_checks_forward": [
+        {
+          "index": 0,
+          "kind": "restoration_source_note",
+          "offset_char": 965,
+          "old_len_chars": 0,
+          "new_len_chars": 150,
+          "old_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "new_sha256": "a6914c74dd4adea53b3cb3779a085231edf9f483cc3f026ace7705b27f4cae0d",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 1,
+          "kind": "source_restoration",
+          "offset_char": 2886,
+          "old_len_chars": 10,
+          "new_len_chars": 269,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "5c7798b5d714eff11252984e9eeffed3694a582fceb6859294917a6e59120f94",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 2,
+          "kind": "source_restoration",
+          "offset_char": 3380,
+          "old_len_chars": 10,
+          "new_len_chars": 163,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "946f10b29cde565a736c466504c240436aaed57b7e4da6e33fc13caecb2063f2",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 3,
+          "kind": "source_restoration",
+          "offset_char": 4265,
+          "old_len_chars": 10,
+          "new_len_chars": 208,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "41f34e682411ca094ac1719aa02735a82dfc859ce800fd7492c7136cfd81c274",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 4,
+          "kind": "source_restoration",
+          "offset_char": 4456,
+          "old_len_chars": 10,
+          "new_len_chars": 28,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "e3784a936fcb84ef6c05e78a85b4467fde1439f7e12ef36a4dba84f025320bd8",
+          "old_text_exact_at_offset": true
+        }
+      ],
+      "operation_checks_reverse": [
+        {
+          "index": 0,
+          "kind": "restoration_source_note",
+          "offset_char": 965,
+          "new_len_chars": 150,
+          "old_len_chars": 0,
+          "new_sha256": "a6914c74dd4adea53b3cb3779a085231edf9f483cc3f026ace7705b27f4cae0d",
+          "old_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 1,
+          "kind": "source_restoration",
+          "offset_char": 3036,
+          "new_len_chars": 269,
+          "old_len_chars": 10,
+          "new_sha256": "5c7798b5d714eff11252984e9eeffed3694a582fceb6859294917a6e59120f94",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 2,
+          "kind": "source_restoration",
+          "offset_char": 3789,
+          "new_len_chars": 163,
+          "old_len_chars": 10,
+          "new_sha256": "946f10b29cde565a736c466504c240436aaed57b7e4da6e33fc13caecb2063f2",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 3,
+          "kind": "source_restoration",
+          "offset_char": 4827,
+          "new_len_chars": 208,
+          "old_len_chars": 10,
+          "new_sha256": "41f34e682411ca094ac1719aa02735a82dfc859ce800fd7492c7136cfd81c274",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 4,
+          "kind": "source_restoration",
+          "offset_char": 5216,
+          "new_len_chars": 28,
+          "old_len_chars": 10,
+          "new_sha256": "e3784a936fcb84ef6c05e78a85b4467fde1439f7e12ef36a4dba84f025320bd8",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        }
+      ],
+      "frontmatter_byte_identical": true,
+      "frontmatter_sha256": "e0bf5df30abe239d33f51a85b0803eb7509e5235db2bde2ede53d3500df4dc2b",
+      "frontmatter_bytes": 1180,
+      "baseline_http_url_count": 13,
+      "missing_baseline_http_urls": {},
+      "baseline_markdown_image_count": 10,
+      "missing_baseline_markdown_images": {},
+      "baseline_raw_html_tag_count": 0,
+      "missing_baseline_raw_html_tags": {},
+      "static_marked_original_nonempty_code_blocks_retained": 0,
+      "static_marked_restored_blocks": 4,
+      "static_marked_nonoriginal_reference_blocks": 0,
+      "fenced_code_validation_caveat": null
+    },
+    {
+      "path": "Web安全/网络设备/NetMizer/NetMizer dologin.php sql注入漏洞(XVE-2024-37672).md",
+      "baseline_sha256": "8e14ad3ff95dcfa7caa622e4a8f50f47e623d92e2ad103eb79b8cbab37c0e8d0",
+      "baseline_snapshot_sha256": "8e14ad3ff95dcfa7caa622e4a8f50f47e623d92e2ad103eb79b8cbab37c0e8d0",
+      "current_sha256": "a9d223916f51eb838b8d634004ab7ad00f60911802bae2d5292f799276cfd326",
+      "ledger_final_sha256": "a9d223916f51eb838b8d634004ab7ad00f60911802bae2d5292f799276cfd326",
+      "plan_final_sha256": "a9d223916f51eb838b8d634004ab7ad00f60911802bae2d5292f799276cfd326",
+      "baseline_sha_verified": true,
+      "current_sha_verified": true,
+      "forward_replay_exact": true,
+      "reverse_replay_exact": true,
+      "ledger_inverse_verified": true,
+      "operation_count": 1,
+      "operation_checks_forward": [
+        {
+          "index": 0,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 2691,
+          "old_len_chars": 9,
+          "new_len_chars": 1,
+          "old_sha256": "6e732d508f7d09851cda80e98996515cc16718ff7492a7a7049f4382ecbecf9c",
+          "new_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "old_text_exact_at_offset": true
+        }
+      ],
+      "operation_checks_reverse": [
+        {
+          "index": 0,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 2691,
+          "new_len_chars": 1,
+          "old_len_chars": 9,
+          "new_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "old_sha256": "6e732d508f7d09851cda80e98996515cc16718ff7492a7a7049f4382ecbecf9c",
+          "new_text_exact_at_offset": true
+        }
+      ],
+      "frontmatter_byte_identical": true,
+      "frontmatter_sha256": "c412db54f95afe60d079085d6f29b76914a0d081e7203e0b5d31ab5dfde12842",
+      "frontmatter_bytes": 1098,
+      "baseline_http_url_count": 2,
+      "missing_baseline_http_urls": {},
+      "baseline_markdown_image_count": 2,
+      "missing_baseline_markdown_images": {},
+      "baseline_raw_html_tag_count": 0,
+      "missing_baseline_raw_html_tags": {},
+      "static_marked_original_nonempty_code_blocks_retained": 0,
+      "static_marked_restored_blocks": 0,
+      "static_marked_nonoriginal_reference_blocks": 0,
+      "fenced_code_validation_caveat": null
+    },
+    {
+      "path": "Web安全/网络设备/Tenda/CVE-2018-18708 TENDA缓冲区溢出漏洞.md",
+      "baseline_sha256": "906f29256c909f9067b01ac78d38e01e51f94f3b39982c55ab6929e37b84c5ff",
+      "baseline_snapshot_sha256": "906f29256c909f9067b01ac78d38e01e51f94f3b39982c55ab6929e37b84c5ff",
+      "current_sha256": "7bc8e6a166e278aabee12fb95620802d85508e7297a10e19aa0218e5b5aef15d",
+      "ledger_final_sha256": "7bc8e6a166e278aabee12fb95620802d85508e7297a10e19aa0218e5b5aef15d",
+      "plan_final_sha256": "7bc8e6a166e278aabee12fb95620802d85508e7297a10e19aa0218e5b5aef15d",
+      "baseline_sha_verified": true,
+      "current_sha_verified": true,
+      "forward_replay_exact": true,
+      "reverse_replay_exact": true,
+      "ledger_inverse_verified": true,
+      "operation_count": 5,
+      "operation_checks_forward": [
+        {
+          "index": 0,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 2226,
+          "old_len_chars": 10,
+          "new_len_chars": 0,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 1,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 2590,
+          "old_len_chars": 10,
+          "new_len_chars": 0,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 2,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 3619,
+          "old_len_chars": 10,
+          "new_len_chars": 0,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 3,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 6838,
+          "old_len_chars": 10,
+          "new_len_chars": 0,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 4,
+          "kind": "reference_supplement",
+          "offset_char": 13482,
+          "old_len_chars": 10,
+          "new_len_chars": 209,
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_sha256": "323910afe8b13b4765c58971fa74401215555d87d7b757080991c54f2b00b4c7",
+          "old_text_exact_at_offset": true
+        }
+      ],
+      "operation_checks_reverse": [
+        {
+          "index": 0,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 2226,
+          "new_len_chars": 0,
+          "old_len_chars": 10,
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 1,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 2580,
+          "new_len_chars": 0,
+          "old_len_chars": 10,
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 2,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 3599,
+          "new_len_chars": 0,
+          "old_len_chars": 10,
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 3,
+          "kind": "empty_fence_cleanup",
+          "offset_char": 6808,
+          "new_len_chars": 0,
+          "old_len_chars": 10,
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 4,
+          "kind": "reference_supplement",
+          "offset_char": 13442,
+          "new_len_chars": 209,
+          "old_len_chars": 10,
+          "new_sha256": "323910afe8b13b4765c58971fa74401215555d87d7b757080991c54f2b00b4c7",
+          "old_sha256": "c044f7df0b20bd07fde7e825dac54a43f18851519dc00322f0d7782a51dfa93e",
+          "new_text_exact_at_offset": true
+        }
+      ],
+      "frontmatter_byte_identical": true,
+      "frontmatter_sha256": "47088337a29dcf13ef2800ec268cba72dd471c23d0ca3850c58020ee7a09b7f0",
+      "frontmatter_bytes": 1120,
+      "baseline_http_url_count": 48,
+      "missing_baseline_http_urls": {},
+      "baseline_markdown_image_count": 30,
+      "missing_baseline_markdown_images": {},
+      "baseline_raw_html_tag_count": 0,
+      "missing_baseline_raw_html_tags": {},
+      "static_marked_original_nonempty_code_blocks_retained": 16,
+      "static_marked_restored_blocks": 0,
+      "static_marked_nonoriginal_reference_blocks": 0,
+      "fenced_code_validation_caveat": null
+    },
+    {
+      "path": "Web安全/OA办公/通达OA/通达 OA 任意文件上传 + 文件包含 RCE 漏洞复现 (附自写 EXP).md",
+      "baseline_sha256": "d620a5b532f97a9d9bc6e8582992dbbf42c4a8971e7e63d56914b6fcbcc03383",
+      "baseline_snapshot_sha256": "d620a5b532f97a9d9bc6e8582992dbbf42c4a8971e7e63d56914b6fcbcc03383",
+      "current_sha256": "12c13627314656d8255a11473ecd82e0135d3b3a48704a0b2f855b1a9ceaba8e",
+      "ledger_final_sha256": "12c13627314656d8255a11473ecd82e0135d3b3a48704a0b2f855b1a9ceaba8e",
+      "plan_final_sha256": "12c13627314656d8255a11473ecd82e0135d3b3a48704a0b2f855b1a9ceaba8e",
+      "baseline_sha_verified": true,
+      "current_sha_verified": true,
+      "forward_replay_exact": true,
+      "reverse_replay_exact": true,
+      "ledger_inverse_verified": true,
+      "operation_count": 6,
+      "operation_checks_forward": [
+        {
+          "index": 0,
+          "kind": "literal_imported_copy_control",
+          "offset_char": 1976,
+          "old_len_chars": 80,
+          "new_len_chars": 82,
+          "old_sha256": "e1989fcd34fa68d3165cbc40ee843f98ac4b2f8e0a6d717f93c531b28d413d8d",
+          "new_sha256": "024f9751c82031b8f184cb17275afb588e06ace96581d00f4c310f930948d29f",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 1,
+          "kind": "literal_imported_copy_control",
+          "offset_char": 2476,
+          "old_len_chars": 80,
+          "new_len_chars": 82,
+          "old_sha256": "e1989fcd34fa68d3165cbc40ee843f98ac4b2f8e0a6d717f93c531b28d413d8d",
+          "new_sha256": "024f9751c82031b8f184cb17275afb588e06ace96581d00f4c310f930948d29f",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 2,
+          "kind": "literal_imported_copy_control",
+          "offset_char": 2587,
+          "old_len_chars": 80,
+          "new_len_chars": 82,
+          "old_sha256": "e1989fcd34fa68d3165cbc40ee843f98ac4b2f8e0a6d717f93c531b28d413d8d",
+          "new_sha256": "024f9751c82031b8f184cb17275afb588e06ace96581d00f4c310f930948d29f",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 3,
+          "kind": "literal_imported_copy_control",
+          "offset_char": 2861,
+          "old_len_chars": 80,
+          "new_len_chars": 82,
+          "old_sha256": "e1989fcd34fa68d3165cbc40ee843f98ac4b2f8e0a6d717f93c531b28d413d8d",
+          "new_sha256": "024f9751c82031b8f184cb17275afb588e06ace96581d00f4c310f930948d29f",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 4,
+          "kind": "literal_imported_copy_control",
+          "offset_char": 3156,
+          "old_len_chars": 80,
+          "new_len_chars": 82,
+          "old_sha256": "e1989fcd34fa68d3165cbc40ee843f98ac4b2f8e0a6d717f93c531b28d413d8d",
+          "new_sha256": "024f9751c82031b8f184cb17275afb588e06ace96581d00f4c310f930948d29f",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 5,
+          "kind": "literal_imported_copy_control",
+          "offset_char": 3889,
+          "old_len_chars": 80,
+          "new_len_chars": 82,
+          "old_sha256": "e1989fcd34fa68d3165cbc40ee843f98ac4b2f8e0a6d717f93c531b28d413d8d",
+          "new_sha256": "024f9751c82031b8f184cb17275afb588e06ace96581d00f4c310f930948d29f",
+          "old_text_exact_at_offset": true
+        }
+      ],
+      "operation_checks_reverse": [
+        {
+          "index": 0,
+          "kind": "literal_imported_copy_control",
+          "offset_char": 1976,
+          "new_len_chars": 82,
+          "old_len_chars": 80,
+          "new_sha256": "024f9751c82031b8f184cb17275afb588e06ace96581d00f4c310f930948d29f",
+          "old_sha256": "e1989fcd34fa68d3165cbc40ee843f98ac4b2f8e0a6d717f93c531b28d413d8d",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 1,
+          "kind": "literal_imported_copy_control",
+          "offset_char": 2478,
+          "new_len_chars": 82,
+          "old_len_chars": 80,
+          "new_sha256": "024f9751c82031b8f184cb17275afb588e06ace96581d00f4c310f930948d29f",
+          "old_sha256": "e1989fcd34fa68d3165cbc40ee843f98ac4b2f8e0a6d717f93c531b28d413d8d",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 2,
+          "kind": "literal_imported_copy_control",
+          "offset_char": 2591,
+          "new_len_chars": 82,
+          "old_len_chars": 80,
+          "new_sha256": "024f9751c82031b8f184cb17275afb588e06ace96581d00f4c310f930948d29f",
+          "old_sha256": "e1989fcd34fa68d3165cbc40ee843f98ac4b2f8e0a6d717f93c531b28d413d8d",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 3,
+          "kind": "literal_imported_copy_control",
+          "offset_char": 2867,
+          "new_len_chars": 82,
+          "old_len_chars": 80,
+          "new_sha256": "024f9751c82031b8f184cb17275afb588e06ace96581d00f4c310f930948d29f",
+          "old_sha256": "e1989fcd34fa68d3165cbc40ee843f98ac4b2f8e0a6d717f93c531b28d413d8d",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 4,
+          "kind": "literal_imported_copy_control",
+          "offset_char": 3164,
+          "new_len_chars": 82,
+          "old_len_chars": 80,
+          "new_sha256": "024f9751c82031b8f184cb17275afb588e06ace96581d00f4c310f930948d29f",
+          "old_sha256": "e1989fcd34fa68d3165cbc40ee843f98ac4b2f8e0a6d717f93c531b28d413d8d",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 5,
+          "kind": "literal_imported_copy_control",
+          "offset_char": 3899,
+          "new_len_chars": 82,
+          "old_len_chars": 80,
+          "new_sha256": "024f9751c82031b8f184cb17275afb588e06ace96581d00f4c310f930948d29f",
+          "old_sha256": "e1989fcd34fa68d3165cbc40ee843f98ac4b2f8e0a6d717f93c531b28d413d8d",
+          "new_text_exact_at_offset": true
+        }
+      ],
+      "frontmatter_byte_identical": true,
+      "frontmatter_sha256": "46d93f1f9db5f7bf99db18d1d10a464e26eef33b1d132c3125c5ce229365c243",
+      "frontmatter_bytes": 1155,
+      "baseline_http_url_count": 14,
+      "missing_baseline_http_urls": {},
+      "baseline_markdown_image_count": 8,
+      "missing_baseline_markdown_images": {},
+      "baseline_raw_html_tag_count": 17,
+      "missing_baseline_raw_html_tags": {},
+      "static_marked_original_nonempty_code_blocks_retained": 7,
+      "static_marked_restored_blocks": 0,
+      "static_marked_nonoriginal_reference_blocks": 0,
+      "fenced_code_validation_caveat": null
+    },
+    {
+      "path": "Web安全/数据库/Phpmyadmin/phpmyadmin 反序列化漏洞（WooYun-2016-199433）.md",
+      "baseline_sha256": "7c24b6d733a79781ef1cabce001384e62178dd3f7ad1b06e764731c43c4e443b",
+      "baseline_snapshot_sha256": "7c24b6d733a79781ef1cabce001384e62178dd3f7ad1b06e764731c43c4e443b",
+      "current_sha256": "2967eedb8714832aaaa18d65caab6c81ada08f439c76aea7d928c1390ef8aeb2",
+      "ledger_final_sha256": "2967eedb8714832aaaa18d65caab6c81ada08f439c76aea7d928c1390ef8aeb2",
+      "plan_final_sha256": "2967eedb8714832aaaa18d65caab6c81ada08f439c76aea7d928c1390ef8aeb2",
+      "baseline_sha_verified": true,
+      "current_sha_verified": true,
+      "forward_replay_exact": true,
+      "reverse_replay_exact": true,
+      "ledger_inverse_verified": true,
+      "operation_count": 2,
+      "operation_checks_forward": [
+        {
+          "index": 0,
+          "kind": "literal_imported_copy_control",
+          "offset_char": 1632,
+          "old_len_chars": 80,
+          "new_len_chars": 82,
+          "old_sha256": "e1989fcd34fa68d3165cbc40ee843f98ac4b2f8e0a6d717f93c531b28d413d8d",
+          "new_sha256": "024f9751c82031b8f184cb17275afb588e06ace96581d00f4c310f930948d29f",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 1,
+          "kind": "literal_imported_copy_control",
+          "offset_char": 2101,
+          "old_len_chars": 80,
+          "new_len_chars": 82,
+          "old_sha256": "e1989fcd34fa68d3165cbc40ee843f98ac4b2f8e0a6d717f93c531b28d413d8d",
+          "new_sha256": "024f9751c82031b8f184cb17275afb588e06ace96581d00f4c310f930948d29f",
+          "old_text_exact_at_offset": true
+        }
+      ],
+      "operation_checks_reverse": [
+        {
+          "index": 0,
+          "kind": "literal_imported_copy_control",
+          "offset_char": 1632,
+          "new_len_chars": 82,
+          "old_len_chars": 80,
+          "new_sha256": "024f9751c82031b8f184cb17275afb588e06ace96581d00f4c310f930948d29f",
+          "old_sha256": "e1989fcd34fa68d3165cbc40ee843f98ac4b2f8e0a6d717f93c531b28d413d8d",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 1,
+          "kind": "literal_imported_copy_control",
+          "offset_char": 2103,
+          "new_len_chars": 82,
+          "old_len_chars": 80,
+          "new_sha256": "024f9751c82031b8f184cb17275afb588e06ace96581d00f4c310f930948d29f",
+          "old_sha256": "e1989fcd34fa68d3165cbc40ee843f98ac4b2f8e0a6d717f93c531b28d413d8d",
+          "new_text_exact_at_offset": true
+        }
+      ],
+      "frontmatter_byte_identical": true,
+      "frontmatter_sha256": "578c3bf488bfaa7135e0c5f16587639cfb1cef8bafce8501cfddfb4695ee684b",
+      "frontmatter_bytes": 702,
+      "baseline_http_url_count": 8,
+      "missing_baseline_http_urls": {},
+      "baseline_markdown_image_count": 3,
+      "missing_baseline_markdown_images": {},
+      "baseline_raw_html_tag_count": 1,
+      "missing_baseline_raw_html_tags": {},
+      "static_marked_original_nonempty_code_blocks_retained": 2,
+      "static_marked_restored_blocks": 0,
+      "static_marked_nonoriginal_reference_blocks": 0,
+      "fenced_code_validation_caveat": null
+    },
+    {
+      "path": "Web安全/云平台/OSSN/OSSN任意文件读取漏洞（CVE-2020-10560）.md",
+      "baseline_sha256": "de27243a179095b5f0ea6fabe91c21b64d6b35c08e99bf04e24ae36e27aacc7a",
+      "baseline_snapshot_sha256": "de27243a179095b5f0ea6fabe91c21b64d6b35c08e99bf04e24ae36e27aacc7a",
+      "current_sha256": "da343bceb6d155c9fc386e0e5b5cdbea86e339961e588befccf62ee7cf901766",
+      "ledger_final_sha256": "da343bceb6d155c9fc386e0e5b5cdbea86e339961e588befccf62ee7cf901766",
+      "plan_final_sha256": "da343bceb6d155c9fc386e0e5b5cdbea86e339961e588befccf62ee7cf901766",
+      "baseline_sha_verified": true,
+      "current_sha_verified": true,
+      "forward_replay_exact": true,
+      "reverse_replay_exact": true,
+      "ledger_inverse_verified": true,
+      "operation_count": 27,
+      "operation_checks_forward": [
+        {
+          "index": 0,
+          "kind": "update_editorial_status",
+          "offset_char": 832,
+          "old_len_chars": 31,
+          "new_len_chars": 70,
+          "old_sha256": "5c2585cb473d098588756526f875c77bb3a01fa352e917857c99a485683bcc2e",
+          "new_sha256": "6e1cb0ea5b3c1dfb39017c4d5c7231248b40999fd607c291210c4b314f0e4eda",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 1,
+          "kind": "update_editorial_status",
+          "offset_char": 1061,
+          "old_len_chars": 42,
+          "new_len_chars": 61,
+          "old_sha256": "7a324f06b5481992ca6a4875b79bbd138fd81b0bce34669af95d841d3140c033",
+          "new_sha256": "74ea1eb09a9b046fd050f5c56ba2a758a601b1fd07a8d3df302e9e6efa91ec12",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 2,
+          "kind": "image_supplement_source_note",
+          "offset_char": 1356,
+          "old_len_chars": 10,
+          "new_len_chars": 283,
+          "old_sha256": "57109fe33f2f77f6e6350c5ae7f27b0c9d86e507be43ba2acf4e666948766ba2",
+          "new_sha256": "56c2b63676b52f89b6f5498ed78fd3ee58f1c921c28b5a21e3088d0edd125dcc",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 3,
+          "kind": "missing_image_literal_record",
+          "offset_char": 1492,
+          "old_len_chars": 134,
+          "new_len_chars": 31,
+          "old_sha256": "17f8d41f6dfda2a14521df46b1e9b96140039e3c74a4d72bd353710cf1ff2a5c",
+          "new_sha256": "d8530b85bf27232e12839de5d5b05c33f7a3477236dfe753381454cb23b8dad5",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 4,
+          "kind": "public_step_figure_supplement",
+          "offset_char": 1704,
+          "old_len_chars": 0,
+          "new_len_chars": 100,
+          "old_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "new_sha256": "b4147f5ede6c54e5f765350a6c50ec194dda2ff30a5a542aa95495dac9a9b92d",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 5,
+          "kind": "missing_image_literal_record",
+          "offset_char": 1705,
+          "old_len_chars": 136,
+          "new_len_chars": 31,
+          "old_sha256": "241821803757573baf9a3d2102c135d17aab676be8e1f4b31a6e1056d5981a11",
+          "new_sha256": "da551a3108b3da3e1c1f40e9993ea6146e36476f14655348db50acd99e9f828c",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 6,
+          "kind": "public_step_figure_supplement",
+          "offset_char": 1878,
+          "old_len_chars": 0,
+          "new_len_chars": 70,
+          "old_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "new_sha256": "eaa79d2181ae50b3720fd40c798fe438dbce0e1916f8a83c7ead62376f652815",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 7,
+          "kind": "missing_image_literal_record",
+          "offset_char": 1879,
+          "old_len_chars": 136,
+          "new_len_chars": 31,
+          "old_sha256": "db5c596dd79fb0f59333c3cf271152cd2d67310e0b9cbfbd6091b4d3134f7e41",
+          "new_sha256": "df4c502fc1f4f0c7cf5604ca9948d069f9003f3f5e44dca250e935980c0cc2b2",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 8,
+          "kind": "public_step_figure_supplement",
+          "offset_char": 2051,
+          "old_len_chars": 0,
+          "new_len_chars": 74,
+          "old_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "new_sha256": "cfa9d06892e488b2bb50dccd9219518b7d3a2e0028ec2ab95fbc3860e7be42fe",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 9,
+          "kind": "missing_image_literal_record",
+          "offset_char": 2052,
+          "old_len_chars": 134,
+          "new_len_chars": 31,
+          "old_sha256": "c79b264a5602eb43627a226ddaafcb5510984d936df4bcbf24e1c4d5fe7fd140",
+          "new_sha256": "b9f1a5bcae67bd5f8c26e5eca0ed2fa52f1167763d2f6fe184c4dc0f9aac1daf",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 10,
+          "kind": "missing_image_literal_record",
+          "offset_char": 2188,
+          "old_len_chars": 135,
+          "new_len_chars": 31,
+          "old_sha256": "4b9467d9d29c3e31f4492ec5d041c89b64c8461cd06455a0ae19c28f95b97d97",
+          "new_sha256": "7dc8348a1ff3ff807d73b6ed4a04ea591456810e64774c2b33b17846542af735",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 11,
+          "kind": "missing_image_literal_record",
+          "offset_char": 2337,
+          "old_len_chars": 133,
+          "new_len_chars": 31,
+          "old_sha256": "b47ab1f5881c6103de098dcea162a34f37b4336b0399536d63e135b8b8b80b6a",
+          "new_sha256": "c3c7fdfb57f7741a7d083599a4d034eaf5ba320966fe65e20f5f2c0a71b3e7f0",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 12,
+          "kind": "missing_image_literal_record",
+          "offset_char": 2472,
+          "old_len_chars": 136,
+          "new_len_chars": 31,
+          "old_sha256": "31f1c216382b79b1f9ff785735f99ccdf54d2c4bceaf910a25eae5df7644d412",
+          "new_sha256": "67ecd795865b027194e1a565d276eb5407c0c257d77bca88b711aba8c95e3568",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 13,
+          "kind": "public_step_figure_supplement",
+          "offset_char": 2774,
+          "old_len_chars": 0,
+          "new_len_chars": 78,
+          "old_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "new_sha256": "1dbdacb42531f1af38c16880dfcd7492005252fbf2c88a9b9a8ea569b3931fc8",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 14,
+          "kind": "missing_image_literal_record",
+          "offset_char": 2775,
+          "old_len_chars": 134,
+          "new_len_chars": 31,
+          "old_sha256": "60c3c84477d9775fa890543717399dc2c2ebba2dd8f984b285b402e30c7bd974",
+          "new_sha256": "cb5acd6dd6be2a3e351130384851c28089288a7ada5b27e8ec44eb502710e5fa",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 15,
+          "kind": "missing_image_literal_record",
+          "offset_char": 2932,
+          "old_len_chars": 134,
+          "new_len_chars": 31,
+          "old_sha256": "38fe052a8b8950cc8cd5d786d023982548b074f65aed444bc807c8c9c0e098de",
+          "new_sha256": "114e339622f87099638b6ea6963b1b56e7a651833a82a47e4f075d448a177792",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 16,
+          "kind": "public_step_figure_supplement",
+          "offset_char": 3080,
+          "old_len_chars": 0,
+          "new_len_chars": 84,
+          "old_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "new_sha256": "52cd9863d34fd263213e9637590192e0a0058eaf386da350dbd19b779adcc52e",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 17,
+          "kind": "missing_image_literal_record",
+          "offset_char": 3081,
+          "old_len_chars": 134,
+          "new_len_chars": 32,
+          "old_sha256": "16bdc2cbba9f5148469dce7473e7a86f473c31d01b04ef6d1c4a74dbb64e198a",
+          "new_sha256": "a19b087cab1e6b0bfc391ddfd3b69b1a42eae17f45e24a135dd333ffe58f9d69",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 18,
+          "kind": "public_step_figure_supplement",
+          "offset_char": 3476,
+          "old_len_chars": 0,
+          "new_len_chars": 90,
+          "old_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "new_sha256": "3ac54d2c454889ab8522b922a7fe445047f9f436517dbdaa51b37deed9d3ebd7",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 19,
+          "kind": "missing_image_literal_record",
+          "offset_char": 3477,
+          "old_len_chars": 134,
+          "new_len_chars": 32,
+          "old_sha256": "69df44d5ab40319ac429dc949b3090525de3ded3fac8dc2c6a25c3d1d6bf9e73",
+          "new_sha256": "90542c484f04c9428e28e5a33aa23fdb73c7c3cc0a9fe9938dd3eeea522fdaf4",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 20,
+          "kind": "public_step_figure_supplement",
+          "offset_char": 3659,
+          "old_len_chars": 0,
+          "new_len_chars": 222,
+          "old_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "new_sha256": "14a2a6699ec8751065c3fa64174459a5dcb598eef08893fefcd6aae57007f31d",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 21,
+          "kind": "missing_image_literal_record",
+          "offset_char": 3660,
+          "old_len_chars": 134,
+          "new_len_chars": 32,
+          "old_sha256": "e84329a8ee0c32427023617afce16488c74e9a6e2e1345d7f6406c837f1524b4",
+          "new_sha256": "1b7e3c0abd47ef734c01595001ed45c3ba10f86aae5aa3fefa826866c5f5447f",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 22,
+          "kind": "missing_image_literal_record",
+          "offset_char": 3797,
+          "old_len_chars": 134,
+          "new_len_chars": 32,
+          "old_sha256": "2fe1b8a5f8e1d98debe594771b1d232d3dc3d44adab1072685cab0deb34ae647",
+          "new_sha256": "7d28d38781d53a638efff37e45c788f08fb20e272c0a6a9ed81e9fe288a8d369",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 23,
+          "kind": "missing_image_literal_record",
+          "offset_char": 3979,
+          "old_len_chars": 136,
+          "new_len_chars": 32,
+          "old_sha256": "336e647bf59067c0f58594277eabeaf098ad371dfc6152ef2b526b2370ca3afc",
+          "new_sha256": "43d79d56bf363e3909a1e4422793699a479d8edd3db25f18201e0052783297af",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 24,
+          "kind": "public_step_figure_supplement",
+          "offset_char": 4190,
+          "old_len_chars": 0,
+          "new_len_chars": 80,
+          "old_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "new_sha256": "ccc2b7abea7deaf9614c5915810dff34b7e807333629ab0da554d4bb7042dfac",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 25,
+          "kind": "missing_image_literal_record",
+          "offset_char": 4191,
+          "old_len_chars": 133,
+          "new_len_chars": 32,
+          "old_sha256": "ba2049ec4bbc3a9aea8d770e5e4b95337c7caf69bd217d5a5f09ef94dba043c0",
+          "new_sha256": "127a6d6ed3caced50eaf7578d8b680ed2b3ae0cac625611091bd8095586dd096",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 26,
+          "kind": "preserve_full_missing_image_records",
+          "offset_char": 4531,
+          "old_len_chars": 0,
+          "new_len_chars": 2213,
+          "old_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "new_sha256": "995dd84c5fa797b65c8f6f6065a8c509849f252a93e0f9001700feb4e77094d6",
+          "old_text_exact_at_offset": true
+        }
+      ],
+      "operation_checks_reverse": [
+        {
+          "index": 0,
+          "kind": "update_editorial_status",
+          "offset_char": 832,
+          "new_len_chars": 70,
+          "old_len_chars": 31,
+          "new_sha256": "6e1cb0ea5b3c1dfb39017c4d5c7231248b40999fd607c291210c4b314f0e4eda",
+          "old_sha256": "5c2585cb473d098588756526f875c77bb3a01fa352e917857c99a485683bcc2e",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 1,
+          "kind": "update_editorial_status",
+          "offset_char": 1100,
+          "new_len_chars": 61,
+          "old_len_chars": 42,
+          "new_sha256": "74ea1eb09a9b046fd050f5c56ba2a758a601b1fd07a8d3df302e9e6efa91ec12",
+          "old_sha256": "7a324f06b5481992ca6a4875b79bbd138fd81b0bce34669af95d841d3140c033",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 2,
+          "kind": "image_supplement_source_note",
+          "offset_char": 1414,
+          "new_len_chars": 283,
+          "old_len_chars": 10,
+          "new_sha256": "56c2b63676b52f89b6f5498ed78fd3ee58f1c921c28b5a21e3088d0edd125dcc",
+          "old_sha256": "57109fe33f2f77f6e6350c5ae7f27b0c9d86e507be43ba2acf4e666948766ba2",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 3,
+          "kind": "missing_image_literal_record",
+          "offset_char": 1823,
+          "new_len_chars": 31,
+          "old_len_chars": 134,
+          "new_sha256": "d8530b85bf27232e12839de5d5b05c33f7a3477236dfe753381454cb23b8dad5",
+          "old_sha256": "17f8d41f6dfda2a14521df46b1e9b96140039e3c74a4d72bd353710cf1ff2a5c",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 4,
+          "kind": "public_step_figure_supplement",
+          "offset_char": 1932,
+          "new_len_chars": 100,
+          "old_len_chars": 0,
+          "new_sha256": "b4147f5ede6c54e5f765350a6c50ec194dda2ff30a5a542aa95495dac9a9b92d",
+          "old_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 5,
+          "kind": "missing_image_literal_record",
+          "offset_char": 2033,
+          "new_len_chars": 31,
+          "old_len_chars": 136,
+          "new_sha256": "da551a3108b3da3e1c1f40e9993ea6146e36476f14655348db50acd99e9f828c",
+          "old_sha256": "241821803757573baf9a3d2102c135d17aab676be8e1f4b31a6e1056d5981a11",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 6,
+          "kind": "public_step_figure_supplement",
+          "offset_char": 2101,
+          "new_len_chars": 70,
+          "old_len_chars": 0,
+          "new_sha256": "eaa79d2181ae50b3720fd40c798fe438dbce0e1916f8a83c7ead62376f652815",
+          "old_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 7,
+          "kind": "missing_image_literal_record",
+          "offset_char": 2172,
+          "new_len_chars": 31,
+          "old_len_chars": 136,
+          "new_sha256": "df4c502fc1f4f0c7cf5604ca9948d069f9003f3f5e44dca250e935980c0cc2b2",
+          "old_sha256": "db5c596dd79fb0f59333c3cf271152cd2d67310e0b9cbfbd6091b4d3134f7e41",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 8,
+          "kind": "public_step_figure_supplement",
+          "offset_char": 2239,
+          "new_len_chars": 74,
+          "old_len_chars": 0,
+          "new_sha256": "cfa9d06892e488b2bb50dccd9219518b7d3a2e0028ec2ab95fbc3860e7be42fe",
+          "old_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 9,
+          "kind": "missing_image_literal_record",
+          "offset_char": 2314,
+          "new_len_chars": 31,
+          "old_len_chars": 134,
+          "new_sha256": "b9f1a5bcae67bd5f8c26e5eca0ed2fa52f1167763d2f6fe184c4dc0f9aac1daf",
+          "old_sha256": "c79b264a5602eb43627a226ddaafcb5510984d936df4bcbf24e1c4d5fe7fd140",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 10,
+          "kind": "missing_image_literal_record",
+          "offset_char": 2347,
+          "new_len_chars": 31,
+          "old_len_chars": 135,
+          "new_sha256": "7dc8348a1ff3ff807d73b6ed4a04ea591456810e64774c2b33b17846542af735",
+          "old_sha256": "4b9467d9d29c3e31f4492ec5d041c89b64c8461cd06455a0ae19c28f95b97d97",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 11,
+          "kind": "missing_image_literal_record",
+          "offset_char": 2392,
+          "new_len_chars": 31,
+          "old_len_chars": 133,
+          "new_sha256": "c3c7fdfb57f7741a7d083599a4d034eaf5ba320966fe65e20f5f2c0a71b3e7f0",
+          "old_sha256": "b47ab1f5881c6103de098dcea162a34f37b4336b0399536d63e135b8b8b80b6a",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 12,
+          "kind": "missing_image_literal_record",
+          "offset_char": 2425,
+          "new_len_chars": 31,
+          "old_len_chars": 136,
+          "new_sha256": "67ecd795865b027194e1a565d276eb5407c0c257d77bca88b711aba8c95e3568",
+          "old_sha256": "31f1c216382b79b1f9ff785735f99ccdf54d2c4bceaf910a25eae5df7644d412",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 13,
+          "kind": "public_step_figure_supplement",
+          "offset_char": 2622,
+          "new_len_chars": 78,
+          "old_len_chars": 0,
+          "new_sha256": "1dbdacb42531f1af38c16880dfcd7492005252fbf2c88a9b9a8ea569b3931fc8",
+          "old_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 14,
+          "kind": "missing_image_literal_record",
+          "offset_char": 2701,
+          "new_len_chars": 31,
+          "old_len_chars": 134,
+          "new_sha256": "cb5acd6dd6be2a3e351130384851c28089288a7ada5b27e8ec44eb502710e5fa",
+          "old_sha256": "60c3c84477d9775fa890543717399dc2c2ebba2dd8f984b285b402e30c7bd974",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 15,
+          "kind": "missing_image_literal_record",
+          "offset_char": 2755,
+          "new_len_chars": 31,
+          "old_len_chars": 134,
+          "new_sha256": "114e339622f87099638b6ea6963b1b56e7a651833a82a47e4f075d448a177792",
+          "old_sha256": "38fe052a8b8950cc8cd5d786d023982548b074f65aed444bc807c8c9c0e098de",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 16,
+          "kind": "public_step_figure_supplement",
+          "offset_char": 2800,
+          "new_len_chars": 84,
+          "old_len_chars": 0,
+          "new_sha256": "52cd9863d34fd263213e9637590192e0a0058eaf386da350dbd19b779adcc52e",
+          "old_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 17,
+          "kind": "missing_image_literal_record",
+          "offset_char": 2885,
+          "new_len_chars": 32,
+          "old_len_chars": 134,
+          "new_sha256": "a19b087cab1e6b0bfc391ddfd3b69b1a42eae17f45e24a135dd333ffe58f9d69",
+          "old_sha256": "16bdc2cbba9f5148469dce7473e7a86f473c31d01b04ef6d1c4a74dbb64e198a",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 18,
+          "kind": "public_step_figure_supplement",
+          "offset_char": 3178,
+          "new_len_chars": 90,
+          "old_len_chars": 0,
+          "new_sha256": "3ac54d2c454889ab8522b922a7fe445047f9f436517dbdaa51b37deed9d3ebd7",
+          "old_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 19,
+          "kind": "missing_image_literal_record",
+          "offset_char": 3269,
+          "new_len_chars": 32,
+          "old_len_chars": 134,
+          "new_sha256": "90542c484f04c9428e28e5a33aa23fdb73c7c3cc0a9fe9938dd3eeea522fdaf4",
+          "old_sha256": "69df44d5ab40319ac429dc949b3090525de3ded3fac8dc2c6a25c3d1d6bf9e73",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 20,
+          "kind": "public_step_figure_supplement",
+          "offset_char": 3349,
+          "new_len_chars": 222,
+          "old_len_chars": 0,
+          "new_sha256": "14a2a6699ec8751065c3fa64174459a5dcb598eef08893fefcd6aae57007f31d",
+          "old_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 21,
+          "kind": "missing_image_literal_record",
+          "offset_char": 3572,
+          "new_len_chars": 32,
+          "old_len_chars": 134,
+          "new_sha256": "1b7e3c0abd47ef734c01595001ed45c3ba10f86aae5aa3fefa826866c5f5447f",
+          "old_sha256": "e84329a8ee0c32427023617afce16488c74e9a6e2e1345d7f6406c837f1524b4",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 22,
+          "kind": "missing_image_literal_record",
+          "offset_char": 3607,
+          "new_len_chars": 32,
+          "old_len_chars": 134,
+          "new_sha256": "7d28d38781d53a638efff37e45c788f08fb20e272c0a6a9ed81e9fe288a8d369",
+          "old_sha256": "2fe1b8a5f8e1d98debe594771b1d232d3dc3d44adab1072685cab0deb34ae647",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 23,
+          "kind": "missing_image_literal_record",
+          "offset_char": 3687,
+          "new_len_chars": 32,
+          "old_len_chars": 136,
+          "new_sha256": "43d79d56bf363e3909a1e4422793699a479d8edd3db25f18201e0052783297af",
+          "old_sha256": "336e647bf59067c0f58594277eabeaf098ad371dfc6152ef2b526b2370ca3afc",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 24,
+          "kind": "public_step_figure_supplement",
+          "offset_char": 3794,
+          "new_len_chars": 80,
+          "old_len_chars": 0,
+          "new_sha256": "ccc2b7abea7deaf9614c5915810dff34b7e807333629ab0da554d4bb7042dfac",
+          "old_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 25,
+          "kind": "missing_image_literal_record",
+          "offset_char": 3875,
+          "new_len_chars": 32,
+          "old_len_chars": 133,
+          "new_sha256": "127a6d6ed3caced50eaf7578d8b680ed2b3ae0cac625611091bd8095586dd096",
+          "old_sha256": "ba2049ec4bbc3a9aea8d770e5e4b95337c7caf69bd217d5a5f09ef94dba043c0",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 26,
+          "kind": "preserve_full_missing_image_records",
+          "offset_char": 4114,
+          "new_len_chars": 2213,
+          "old_len_chars": 0,
+          "new_sha256": "995dd84c5fa797b65c8f6f6065a8c509849f252a93e0f9001700feb4e77094d6",
+          "old_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "new_text_exact_at_offset": true
+        }
+      ],
+      "frontmatter_byte_identical": true,
+      "frontmatter_sha256": "b5df29577a13be35a81a33f7e2c145e48361ac0ebbc366ee7b14e6d2773cd168",
+      "frontmatter_bytes": 872,
+      "baseline_http_url_count": 4,
+      "missing_baseline_http_urls": {},
+      "baseline_markdown_image_count": 0,
+      "missing_baseline_markdown_images": {},
+      "baseline_raw_html_tag_count": 0,
+      "missing_baseline_raw_html_tags": {},
+      "static_marked_original_nonempty_code_blocks_retained": 2,
+      "static_marked_restored_blocks": 0,
+      "static_marked_nonoriginal_reference_blocks": 0,
+      "fenced_code_validation_caveat": null
+    },
+    {
+      "path": "Web安全/其他软件/杂项/Fuzzing101 Exercise 4 - LibTIFF CVE-2016-9297&CVE-2016-9448分析.md",
+      "baseline_sha256": "0fede4f8cb71ecf2b82b11131c5276aceec2c5e53c5e1e5d1cff8f61e2230d4e",
+      "baseline_snapshot_sha256": "0fede4f8cb71ecf2b82b11131c5276aceec2c5e53c5e1e5d1cff8f61e2230d4e",
+      "current_sha256": "9c620fcd7405c0f19dadc617dbbab6cd6a06d35f7db287ed647717297da4a009",
+      "ledger_final_sha256": "9c620fcd7405c0f19dadc617dbbab6cd6a06d35f7db287ed647717297da4a009",
+      "plan_final_sha256": "9c620fcd7405c0f19dadc617dbbab6cd6a06d35f7db287ed647717297da4a009",
+      "baseline_sha_verified": true,
+      "current_sha_verified": true,
+      "forward_replay_exact": true,
+      "reverse_replay_exact": true,
+      "ledger_inverse_verified": true,
+      "operation_count": 7,
+      "operation_checks_forward": [
+        {
+          "index": 0,
+          "kind": "editorial_gap_status_update",
+          "offset_char": 1435,
+          "old_len_chars": 48,
+          "new_len_chars": 97,
+          "old_sha256": "39b41be59d2fd5701a69aaae06f9511e969673920d8fdcf47a7e884adba204bd",
+          "new_sha256": "19739277f39cea07b2226d0a6938c0e85ff19eb57192d96acee9fbbf3549f536",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 1,
+          "kind": "labeled_reference_attribution",
+          "offset_char": 3408,
+          "old_len_chars": 0,
+          "new_len_chars": 385,
+          "old_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "new_sha256": "9d0d4be4942d35618e08560438baecc2390c806e24ecdbb4da95786e1cbdc01c",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 2,
+          "kind": "labeled_reference_code",
+          "offset_char": 3422,
+          "old_len_chars": 11,
+          "new_len_chars": 111,
+          "old_sha256": "acb488a7b4af8269719fc1dc18761cf4afa18ed7b70a7a38b0535f42dcbe19bf",
+          "new_sha256": "380f56026ac9ebc0ae0ad447ce476d19f40bc0a14b51f8a4ba3ad182a68af948",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 3,
+          "kind": "labeled_reference_code",
+          "offset_char": 3458,
+          "old_len_chars": 11,
+          "new_len_chars": 149,
+          "old_sha256": "acb488a7b4af8269719fc1dc18761cf4afa18ed7b70a7a38b0535f42dcbe19bf",
+          "new_sha256": "b86b82ed465f2433638861275e5a7fdc14d240a21adfa1850b30244c22a014da",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 4,
+          "kind": "labeled_reference_code",
+          "offset_char": 3493,
+          "old_len_chars": 11,
+          "new_len_chars": 398,
+          "old_sha256": "acb488a7b4af8269719fc1dc18761cf4afa18ed7b70a7a38b0535f42dcbe19bf",
+          "new_sha256": "a2dd6aa0687180013274d73f99e7a0818cd66a3adbaa6a4f70ace9ad87fad8b8",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 5,
+          "kind": "malformed_empty_quote_cleanup",
+          "offset_char": 3709,
+          "old_len_chars": 9,
+          "new_len_chars": 0,
+          "old_sha256": "50a5c78beb0a3488a2469bcc6ad478f515b947a7946699ee7523eeb891ac20fd",
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_text_exact_at_offset": true
+        },
+        {
+          "index": 6,
+          "kind": "missing_debug_gap_note",
+          "offset_char": 6912,
+          "old_len_chars": 11,
+          "new_len_chars": 66,
+          "old_sha256": "acb488a7b4af8269719fc1dc18761cf4afa18ed7b70a7a38b0535f42dcbe19bf",
+          "new_sha256": "2c8d36fa4a3dd90e28f2ac06e0c6a4c6861b18cbb1b156beefc3b2693f64d3e7",
+          "old_text_exact_at_offset": true
+        }
+      ],
+      "operation_checks_reverse": [
+        {
+          "index": 0,
+          "kind": "editorial_gap_status_update",
+          "offset_char": 1435,
+          "new_len_chars": 97,
+          "old_len_chars": 48,
+          "new_sha256": "19739277f39cea07b2226d0a6938c0e85ff19eb57192d96acee9fbbf3549f536",
+          "old_sha256": "39b41be59d2fd5701a69aaae06f9511e969673920d8fdcf47a7e884adba204bd",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 1,
+          "kind": "labeled_reference_attribution",
+          "offset_char": 3457,
+          "new_len_chars": 385,
+          "old_len_chars": 0,
+          "new_sha256": "9d0d4be4942d35618e08560438baecc2390c806e24ecdbb4da95786e1cbdc01c",
+          "old_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 2,
+          "kind": "labeled_reference_code",
+          "offset_char": 3856,
+          "new_len_chars": 111,
+          "old_len_chars": 11,
+          "new_sha256": "380f56026ac9ebc0ae0ad447ce476d19f40bc0a14b51f8a4ba3ad182a68af948",
+          "old_sha256": "acb488a7b4af8269719fc1dc18761cf4afa18ed7b70a7a38b0535f42dcbe19bf",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 3,
+          "kind": "labeled_reference_code",
+          "offset_char": 3992,
+          "new_len_chars": 149,
+          "old_len_chars": 11,
+          "new_sha256": "b86b82ed465f2433638861275e5a7fdc14d240a21adfa1850b30244c22a014da",
+          "old_sha256": "acb488a7b4af8269719fc1dc18761cf4afa18ed7b70a7a38b0535f42dcbe19bf",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 4,
+          "kind": "labeled_reference_code",
+          "offset_char": 4165,
+          "new_len_chars": 398,
+          "old_len_chars": 11,
+          "new_sha256": "a2dd6aa0687180013274d73f99e7a0818cd66a3adbaa6a4f70ace9ad87fad8b8",
+          "old_sha256": "acb488a7b4af8269719fc1dc18761cf4afa18ed7b70a7a38b0535f42dcbe19bf",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 5,
+          "kind": "malformed_empty_quote_cleanup",
+          "offset_char": 4768,
+          "new_len_chars": 0,
+          "old_len_chars": 9,
+          "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "old_sha256": "50a5c78beb0a3488a2469bcc6ad478f515b947a7946699ee7523eeb891ac20fd",
+          "new_text_exact_at_offset": true
+        },
+        {
+          "index": 6,
+          "kind": "missing_debug_gap_note",
+          "offset_char": 7962,
+          "new_len_chars": 66,
+          "old_len_chars": 11,
+          "new_sha256": "2c8d36fa4a3dd90e28f2ac06e0c6a4c6861b18cbb1b156beefc3b2693f64d3e7",
+          "old_sha256": "acb488a7b4af8269719fc1dc18761cf4afa18ed7b70a7a38b0535f42dcbe19bf",
+          "new_text_exact_at_offset": true
+        }
+      ],
+      "frontmatter_byte_identical": true,
+      "frontmatter_sha256": "96ff9dc6eb42eccf5386dfe2e01f567e4709ed235019afe68176ddf9ec1be271",
+      "frontmatter_bytes": 1255,
+      "baseline_http_url_count": 47,
+      "missing_baseline_http_urls": {},
+      "baseline_markdown_image_count": 28,
+      "missing_baseline_markdown_images": {},
+      "baseline_raw_html_tag_count": 6,
+      "missing_baseline_raw_html_tags": {},
+      "static_marked_original_nonempty_code_blocks_retained": 0,
+      "static_marked_restored_blocks": 0,
+      "static_marked_nonoriginal_reference_blocks": 3,
+      "fenced_code_validation_caveat": "three malformed Marked tokens were prose/image artifacts, detailed in fuzzing101_parser_artifacts"
+    }
+  ],
+  "fuzzing101_parser_artifacts": [
+    {
+      "ordinal": 1,
+      "baseline_line_range": [
+        123,
+        129
+      ],
+      "baseline_raw_span_sha256": "6426781d2dfb784c276b3cd37579c0c60b34f780831f3a38a9f0f260109660a6",
+      "baseline_raw_span_bytes": 46,
+      "classification": "parser artifact: original explanation/headings/image reference and/or following original body were swallowed by malformed/misordered fence token; not original code source",
+      "non_fence_nonblank_line_count": 1,
+      "all_exact_nonfence_lines_preserved_in_order": true,
+      "first_final_line": 133,
+      "last_final_line": 133,
+      "content_label": "下载tiff-4.0.4 heading"
+    },
+    {
+      "ordinal": 2,
+      "baseline_line_range": [
+        135,
+        145
+      ],
+      "baseline_raw_span_sha256": "b763dbf769f38978680a2c9b597f40998543174d4cc24eefdd939131f6490cc9",
+      "baseline_raw_span_bytes": 214,
+      "classification": "parser artifact: original explanation/headings/image reference and/or following original body were swallowed by malformed/misordered fence token; not original code source",
+      "non_fence_nonblank_line_count": 5,
+      "all_exact_nonfence_lines_preserved_in_order": true,
+      "first_final_line": 156,
+      "last_final_line": 162,
+      "content_label": "FUZZING heading plus image"
+    },
+    {
+      "ordinal": 3,
+      "baseline_line_range": [
+        146,
+        252
+      ],
+      "baseline_raw_span_sha256": "0b1da04c7c044d0b9c058628838a804fc9d8de64867fa7ee75970b289e3d0406",
+      "baseline_raw_span_bytes": 4687,
+      "classification": "parser artifact: original explanation/headings/image reference and/or following original body were swallowed by malformed/misordered fence token; not original code source",
+      "non_fence_nonblank_line_count": 52,
+      "all_exact_nonfence_lines_preserved_in_order": true,
+      "first_final_line": 164,
+      "last_final_line": 267,
+      "content_label": "TIFF analysis text and associated figures"
+    }
+  ],
+  "copy_control_checks": [
+    {
+      "path": "Web安全/OA办公/通达OA/通达 OA 任意文件上传 + 文件包含 RCE 漏洞复现 (附自写 EXP).md",
+      "operation_index": 0,
+      "line": 85,
+      "single_codespan_exact": true,
+      "all_old_control_bytes_preserved": true
+    },
+    {
+      "path": "Web安全/OA办公/通达OA/通达 OA 任意文件上传 + 文件包含 RCE 漏洞复现 (附自写 EXP).md",
+      "operation_index": 1,
+      "line": 101,
+      "single_codespan_exact": true,
+      "all_old_control_bytes_preserved": true
+    },
+    {
+      "path": "Web安全/OA办公/通达OA/通达 OA 任意文件上传 + 文件包含 RCE 漏洞复现 (附自写 EXP).md",
+      "operation_index": 2,
+      "line": 107,
+      "single_codespan_exact": true,
+      "all_old_control_bytes_preserved": true
+    },
+    {
+      "path": "Web安全/OA办公/通达OA/通达 OA 任意文件上传 + 文件包含 RCE 漏洞复现 (附自写 EXP).md",
+      "operation_index": 3,
+      "line": 120,
+      "single_codespan_exact": true,
+      "all_old_control_bytes_preserved": true
+    },
+    {
+      "path": "Web安全/OA办公/通达OA/通达 OA 任意文件上传 + 文件包含 RCE 漏洞复现 (附自写 EXP).md",
+      "operation_index": 4,
+      "line": 146,
+      "single_codespan_exact": true,
+      "all_old_control_bytes_preserved": true
+    },
+    {
+      "path": "Web安全/OA办公/通达OA/通达 OA 任意文件上传 + 文件包含 RCE 漏洞复现 (附自写 EXP).md",
+      "operation_index": 5,
+      "line": 166,
+      "single_codespan_exact": true,
+      "all_old_control_bytes_preserved": true
+    },
+    {
+      "path": "Web安全/数据库/Phpmyadmin/phpmyadmin 反序列化漏洞（WooYun-2016-199433）.md",
+      "operation_index": 0,
+      "line": 93,
+      "single_codespan_exact": true,
+      "all_old_control_bytes_preserved": true
+    },
+    {
+      "path": "Web安全/数据库/Phpmyadmin/phpmyadmin 反序列化漏洞（WooYun-2016-199433）.md",
+      "operation_index": 1,
+      "line": 110,
+      "single_codespan_exact": true,
+      "all_old_control_bytes_preserved": true
+    }
+  ],
+  "editorial_annotation_changes_separate_from_frontmatter": [
+    {
+      "path": "Web安全/开发框架/Java/CVE-2022-41853 分析：通过 Java 反序列化和远程代码库攻击使用静态函数获取 RCE.md",
+      "operation_index": 1,
+      "kind": "update_editorial_status",
+      "old_text": "> 注：原文所称完整 HSQL 负载缺失；现有来源未提供可逐字恢复的字符串，待核原文。\n",
+      "new_text": "> 来源补回：此负载按 [同题公开译文](https://www.ctfiot.com/147475.html) 的相同位置补入；只记录来源文本，未执行或确认环境适用性。\n",
+      "evidence": {
+        "reason": "source now available; preserves prior runtime limit"
+      }
+    },
+    {
+      "path": "Web安全/服务器软件/Piciorgros TMO-100/Piciorgros TMO-100_ Unauthorized configuration change via TFTP CVE-20.md",
+      "operation_index": 0,
+      "kind": "resource_link_repair",
+      "old_text": "[smime.p7s](att-8/smime_p7s.bin)",
+      "new_text": "[smime.p7s](https://seclists.org/fulldisclosure/2025/Aug/att-8/smime_p7s.bin)\n\n> 链接修正：附件为原邮件的 S/MIME 签名，原归档相对路径 `att-8/smime_p7s.bin` 按 [原邮件页面](https://seclists.org/fulldisclosure/2025/Aug/8) 还原为完整链接；未下载或执行附件。",
+      "evidence": {
+        "source": "piciorgros-recovery.json"
+      }
+    },
+    {
+      "path": "Web安全/网络设备/Cisco/CVE-2026-0866 Cisco ClamAV ZIP扫描引擎绕过漏洞.md",
+      "operation_index": 0,
+      "kind": "update_editorial_status",
+      "old_text": "本页原文和空代码块继续保留；既有关键内容缺失仍未恢复",
+      "new_text": "本页原文继续保留；无内容围栏已清理，既有关键内容缺失仍未恢复",
+      "evidence": {
+        "reason": "empty fence cleanup, original prose retained"
+      }
+    },
+    {
+      "path": "Web安全/网络设备/D-Link/【技术分享】CVE-2019-10999 Dlink IP 摄像头缓冲区溢出.md",
+      "operation_index": 0,
+      "kind": "review_note_updated_with_same-position_translation_evidence",
+      "old_text": "```\n```  \n\n> 原文缺损：此末尾代码块为空；已核对译文中有一个代码块无法与本文位置对应，故不推定其内容。\n",
+      "new_text": "> 校订说明：此处位于参考链接末尾；[公开译文](https://www.anquanke.com/post/id/259210) 在相同位置结束正文，没有可对应的代码。已清理归档的空围栏，原“此末尾代码块为空、待核译文”的提示由此说明替代。\n",
+      "evidence": {
+        "review": "pack-2-review.json",
+        "line": 265,
+        "root_source": null
+      }
+    },
+    {
+      "path": "Web安全/云平台/OSSN/OSSN任意文件读取漏洞（CVE-2020-10560）.md",
+      "operation_index": 0,
+      "kind": "update_editorial_status",
+      "old_text": "- 所有图片alt混入转存失败文字，命令混入行号1和12345",
+      "new_text": "- 原 15 个图片说明含转存失败文字，完整语法见页末；已另补 9 张注明来源的步骤图，原附件尚未恢复。命令中的行号1和12345保持原值。",
+      "evidence": {
+        "reason": "new public images are supplements, not original recovery"
+      }
+    },
+    {
+      "path": "Web安全/云平台/OSSN/OSSN任意文件读取漏洞（CVE-2020-10560）.md",
+      "operation_index": 1,
+      "kind": "update_editorial_status",
+      "old_text": "本页为文本校订，未执行代码、PoC 或目标请求；原图仅保留引用，未据此确认复现成功。",
+      "new_text": "本页为文本校订，未执行代码、PoC 或目标请求；原缺失附件保留完整字面引用，新增来源配图经静态查看，但未据此确认复现成功。",
+      "evidence": {
+        "reason": "exact image review boundary"
+      }
+    },
+    {
+      "path": "Web安全/其他软件/杂项/Fuzzing101 Exercise 4 - LibTIFF CVE-2016-9297&CVE-2016-9448分析.md",
+      "operation_index": 0,
+      "kind": "editorial_gap_status_update",
+      "old_text": "2. 全部搭建/命令/结构体围栏空白，crash样本和补丁commit无链接，关键证据截图未视检",
+      "new_text": "2. 原归档未保存搭建命令和具体调试代码；本轮以官方 Exercise 4 补充三处命令参考（非作者原文复原），具体指针调试块仍缺原文；crash样本和补丁commit无链接，关键证据截图未视检",
+      "evidence": "Only our editorial status changes; original technical prose retained."
+    }
+  ],
+  "source_origin_placeholder_additions": [
+    {
+      "path": "Web安全/网络设备/NETGEAR/美国网件Netgear RAX30路由器RCE漏洞分析.md",
+      "markers": [
+        "$1$redacted"
+      ],
+      "baseline_counts": {
+        "$1$redacted": 0
+      },
+      "evidence": {
+        "source": "https://www.ctfiot.com/103003.html"
+      },
+      "note": "Source-origin placeholder restored verbatim; this is an added literal marker but no existing credential/value was masked or replaced.",
+      "operation_indices": [
+        0,
+        1
+      ],
+      "operation_kinds": [
+        "restoration_source_note",
+        "source_restoration"
+      ]
+    }
+  ],
+  "new_nonoriginal_or_sourcebacked_code_fences": [
+    {
+      "path": "Web安全/开发框架/Git/CVE-2026-31900：一个过于宽松的正则表达式如何在 psf-black 的 GitHub Action 中导致 RCE.md",
+      "operation_index": 1,
+      "kind": "source_restoration",
+      "evidence": {
+        "review": "pack-4-review.json",
+        "source": [
+          {
+            "url": "https://www.gm7.org/archives/51032",
+            "location": "“为什么 use_pyproject 很危险”小节，GitHub Action 触发器说明（镜像正文约第 198–200 行）",
+            "kind": "textual mirror of the source article; original string located within the named section"
+          },
+          {
+            "url": "https://github.com/psf/black/security/advisories/GHSA-v53h-f6m7-xcgm",
+            "location": "GitHub-reviewed advisory; supports vulnerability scope and 26.3.0 patch, not the article’s verbatim examples",
+            "kind": "upstream advisory"
+          }
+        ],
+        "locator": "“为什么 use_pyproject 很危险”小节，GitHub Action 触发器说明（镜像正文约第 198–200 行）"
+      }
+    },
+    {
+      "path": "Web安全/开发框架/Git/CVE-2026-31900：一个过于宽松的正则表达式如何在 psf-black 的 GitHub Action 中导致 RCE.md",
+      "operation_index": 2,
+      "kind": "source_restoration",
+      "evidence": {
+        "review": "pack-4-review.json",
+        "source": [
+          {
+            "url": "https://www.gm7.org/archives/51032",
+            "location": "同节“因此读取的文件”说明（约第 208–212 行）",
+            "kind": "textual mirror of the source article; original string located within the named section"
+          },
+          {
+            "url": "https://github.com/psf/black/security/advisories/GHSA-v53h-f6m7-xcgm",
+            "location": "GitHub-reviewed advisory; supports vulnerability scope and 26.3.0 patch, not the article’s verbatim examples",
+            "kind": "upstream advisory"
+          }
+        ],
+        "locator": "同节“因此读取的文件”说明（约第 208–212 行）"
+      }
+    },
+    {
+      "path": "Web安全/开发框架/Git/CVE-2026-31900：一个过于宽松的正则表达式如何在 psf-black 的 GitHub Action 中导致 RCE.md",
+      "operation_index": 3,
+      "kind": "source_restoration",
+      "evidence": {
+        "review": "pack-4-review.json",
+        "source": [
+          {
+            "url": "https://www.gm7.org/archives/51032",
+            "location": "“正则表达式漏洞分析”中目标匹配样例（约第 250–255 行）",
+            "kind": "textual mirror of the source article; original string located within the named section"
+          },
+          {
+            "url": "https://github.com/psf/black/security/advisories/GHSA-v53h-f6m7-xcgm",
+            "location": "GitHub-reviewed advisory; supports vulnerability scope and 26.3.0 patch, not the article’s verbatim examples",
+            "kind": "upstream advisory"
+          }
+        ],
+        "locator": "“正则表达式漏洞分析”中目标匹配样例（约第 250–255 行）"
+      }
+    },
+    {
+      "path": "Web安全/开发框架/Git/CVE-2026-31900：一个过于宽松的正则表达式如何在 psf-black 的 GitHub Action 中导致 RCE.md",
+      "operation_index": 4,
+      "kind": "source_restoration",
+      "evidence": {
+        "review": "pack-4-review.json",
+        "source": [
+          {
+            "url": "https://www.gm7.org/archives/51032",
+            "location": "同节“问题在于”后的标志说明（约第 257–263 行）",
+            "kind": "textual mirror of the source article; original string located within the named section"
+          },
+          {
+            "url": "https://github.com/psf/black/security/advisories/GHSA-v53h-f6m7-xcgm",
+            "location": "GitHub-reviewed advisory; supports vulnerability scope and 26.3.0 patch, not the article’s verbatim examples",
+            "kind": "upstream advisory"
+          }
+        ],
+        "locator": "同节“问题在于”后的标志说明（约第 257–263 行）"
+      }
+    },
+    {
+      "path": "Web安全/开发框架/Git/CVE-2026-31900：一个过于宽松的正则表达式如何在 psf-black 的 GitHub Action 中导致 RCE.md",
+      "operation_index": 5,
+      "kind": "source_restoration",
+      "evidence": {
+        "review": "pack-4-review.json",
+        "source": [
+          {
+            "url": "https://www.gm7.org/archives/51032",
+            "location": "“Token 与 Secret 窃取场景”中的触发器（约第 373–381 行）",
+            "kind": "textual mirror of the source article; original string located within the named section"
+          },
+          {
+            "url": "https://github.com/psf/black/security/advisories/GHSA-v53h-f6m7-xcgm",
+            "location": "GitHub-reviewed advisory; supports vulnerability scope and 26.3.0 patch, not the article’s verbatim examples",
+            "kind": "upstream advisory"
+          }
+        ],
+        "locator": "“Token 与 Secret 窃取场景”中的触发器（约第 373–381 行）"
+      }
+    },
+    {
+      "path": "Web安全/开发框架/Git/CVE-2026-31900：一个过于宽松的正则表达式如何在 psf-black 的 GitHub Action 中导致 RCE.md",
+      "operation_index": 6,
+      "kind": "source_restoration",
+      "evidence": {
+        "review": "pack-4-review.json",
+        "source": [
+          {
+            "url": "https://www.gm7.org/archives/51032",
+            "location": "“总结”中的危险模式（约第 510–523 行）",
+            "kind": "textual mirror of the source article; original string located within the named section"
+          },
+          {
+            "url": "https://github.com/psf/black/security/advisories/GHSA-v53h-f6m7-xcgm",
+            "location": "GitHub-reviewed advisory; supports vulnerability scope and 26.3.0 patch, not the article’s verbatim examples",
+            "kind": "upstream advisory"
+          }
+        ],
+        "locator": "“总结”中的危险模式（约第 510–523 行）"
+      }
+    },
+    {
+      "path": "Web安全/开发框架/Java/CVE-2022-41853 分析：通过 Java 反序列化和远程代码库攻击使用静态函数获取 RCE.md",
+      "operation_index": 0,
+      "kind": "source_restoration",
+      "evidence": {
+        "review": "pack-4-review.json",
+        "source": [
+          {
+            "url": "https://www.ctfiot.com/147475.html",
+            "location": "“完整的 HSQL 负载具有以下形式”之后的第一个 pre；镜像正文将其作为完整 HSQL CALL / Base64 序列化对象负载",
+            "kind": "textual mirror of the source article; original string located within the named section"
+          }
+        ],
+        "locator": "“完整的 HSQL 负载具有以下形式”之后的第一个 pre；镜像正文将其作为完整 HSQL CALL / Base64 序列化对象负载"
+      }
+    },
+    {
+      "path": "Web安全/开发框架/lodash/lodash库原型污染漏洞（CVE-2019-10744）.md",
+      "operation_index": 1,
+      "kind": "source_restoration",
+      "evidence": {
+        "review": "pack-3-review.json",
+        "line": 50,
+        "source": {
+          "source_text": "漏洞列表\nCVE ID ： CVE-2019-10744\n漏洞等级： 高危\nCVSS评分： 7.3\n影响范围： 4.17.11之前的所有版本",
+          "source_urls": [
+            "https://zone.ci/secarticles/wx/529499.html",
+            "https://cn-sec.com/archives/5221673.html"
+          ],
+          "locator": "ZONE.CI lines 111-116; same-title CN-SEC repost",
+          "context": "After the background paragraph about encountering Lodash fingerprint/scanner findings; before 漏洞复现.",
+          "classification": "same-title NoteSec author repost; exact section aligns with adjacent wording and same article"
+        }
+      }
+    },
+    {
+      "path": "Web安全/开发框架/lodash/lodash库原型污染漏洞（CVE-2019-10744）.md",
+      "operation_index": 2,
+      "kind": "source_restoration",
+      "evidence": {
+        "review": "pack-3-review.json",
+        "line": 100,
+        "source": {
+          "source_text": "var a = \"4.17.10\"; // 这里的 `a` 变量存储了版本号",
+          "source_urls": [
+            "https://zone.ci/secarticles/wx/529499.html",
+            "https://cn-sec.com/archives/5221673.html"
+          ],
+          "locator": "ZONE.CI line 134; same-title CN-SEC repost",
+          "context": "After 可以通过全局搜索找到lodash版本 and its image; before the sentence identifying the minified header.",
+          "classification": "same-title NoteSec author repost; exact section aligns with adjacent wording and same article"
+        }
+      }
+    },
+    {
+      "path": "Web安全/开发框架/lodash/lodash库原型污染漏洞（CVE-2019-10744）.md",
+      "operation_index": 3,
+      "kind": "source_restoration",
+      "evidence": {
+        "review": "pack-3-review.json",
+        "line": 108,
+        "source": {
+          "source_text": "/**\n * @license\n * Lodash <https://lodash.com/>\n * Version: 4.17.10\n */",
+          "source_urls": [
+            "https://zone.ci/secarticles/wx/529499.html",
+            "https://cn-sec.com/archives/5221673.html"
+          ],
+          "locator": "ZONE.CI lines 141-146; same-title CN-SEC repost",
+          "context": "Immediately after 如果是未压缩版本，可以在文件头部看到：",
+          "classification": "same-title NoteSec author repost; exact section aligns with adjacent wording and same article"
+        }
+      }
+    },
+    {
+      "path": "Web安全/网络设备/NETGEAR/美国网件Netgear RAX30路由器RCE漏洞分析.md",
+      "operation_index": 1,
+      "kind": "source_restoration",
+      "evidence": {
+        "review": "pack-4-review.json",
+        "source": [
+          {
+            "url": "https://www.ctfiot.com/103003.html",
+            "location": "“2.2 CVE-2022-47209 / 硬编码”代码块，第一个 pre（镜像正文第 74–81 行）",
+            "kind": "textual mirror of the source article; original string located within the named section"
+          }
+        ],
+        "locator": "“2.2 CVE-2022-47209 / 硬编码”代码块，第一个 pre（镜像正文第 74–81 行）"
+      }
+    },
+    {
+      "path": "Web安全/网络设备/NETGEAR/美国网件Netgear RAX30路由器RCE漏洞分析.md",
+      "operation_index": 2,
+      "kind": "source_restoration",
+      "evidence": {
+        "review": "pack-4-review.json",
+        "source": [
+          {
+            "url": "https://www.ctfiot.com/103003.html",
+            "location": "“2.3 pucfu 引发的命令注入 / 漏洞触发”流程图代码块（正文第 90–95 行）",
+            "kind": "textual mirror of the source article; original string located within the named section"
+          }
+        ],
+        "locator": "“2.3 pucfu 引发的命令注入 / 漏洞触发”流程图代码块（正文第 90–95 行）"
+      }
+    },
+    {
+      "path": "Web安全/网络设备/NETGEAR/美国网件Netgear RAX30路由器RCE漏洞分析.md",
+      "operation_index": 3,
+      "kind": "source_restoration",
+      "evidence": {
+        "review": "pack-4-review.json",
+        "source": [
+          {
+            "url": "https://www.ctfiot.com/103003.html",
+            "location": "“2.3.4 SetFileValue”中“判断是否有/”后的命令示意（正文第 113–123 行）",
+            "kind": "textual mirror of the source article; original string located within the named section"
+          }
+        ],
+        "locator": "“2.3.4 SetFileValue”中“判断是否有/”后的命令示意（正文第 113–123 行）"
+      }
+    },
+    {
+      "path": "Web安全/网络设备/NETGEAR/美国网件Netgear RAX30路由器RCE漏洞分析.md",
+      "operation_index": 4,
+      "kind": "source_restoration",
+      "evidence": {
+        "review": "pack-4-review.json",
+        "source": [
+          {
+            "url": "https://www.ctfiot.com/103003.html",
+            "location": "“pegaPopen / 构造数据，实现命令执行”代码块（正文第 123–133 行）",
+            "kind": "textual mirror of the source article; original string located within the named section"
+          }
+        ],
+        "locator": "“pegaPopen / 构造数据，实现命令执行”代码块（正文第 123–133 行）"
+      }
+    },
+    {
+      "path": "Web安全/其他软件/杂项/Fuzzing101 Exercise 4 - LibTIFF CVE-2016-9297&CVE-2016-9448分析.md",
+      "operation_index": 2,
+      "kind": "labeled_reference_code",
+      "evidence": {
+        "source": "https://raw.githubusercontent.com/antonio-morales/Fuzzing101/18e00c1626a2/Exercise%204/Readme.md",
+        "source_sha256": "f73bbf07f139d3537641c297a17609f705ba68c612355911effeaf0d52dcae63",
+        "exact_original_recovery": false,
+        "context": "目录创建 → 空引用代码块 → 下载tiff-4.0.4。"
+      }
+    },
+    {
+      "path": "Web安全/其他软件/杂项/Fuzzing101 Exercise 4 - LibTIFF CVE-2016-9297&CVE-2016-9448分析.md",
+      "operation_index": 3,
+      "kind": "labeled_reference_code",
+      "evidence": {
+        "source": "https://raw.githubusercontent.com/antonio-morales/Fuzzing101/18e00c1626a2/Exercise%204/Readme.md",
+        "source_sha256": "f73bbf07f139d3537641c297a17609f705ba68c612355911effeaf0d52dcae63",
+        "exact_original_recovery": false,
+        "context": "下载tiff-4.0.4 → 空引用代码块 → 使用ASAN模糊测试。"
+      }
+    },
+    {
+      "path": "Web安全/其他软件/杂项/Fuzzing101 Exercise 4 - LibTIFF CVE-2016-9297&CVE-2016-9448分析.md",
+      "operation_index": 4,
+      "kind": "labeled_reference_code",
+      "evidence": {
+        "source": "https://raw.githubusercontent.com/antonio-morales/Fuzzing101/18e00c1626a2/Exercise%204/Readme.md",
+        "source_sha256": "f73bbf07f139d3537641c297a17609f705ba68c612355911effeaf0d52dcae63",
+        "exact_original_recovery": false,
+        "context": "使用ASAN模糊测试 → 空引用代码块 → FUZZING 小节。"
+      }
+    }
+  ],
+  "errors": []
+}

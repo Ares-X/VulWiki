@@ -1,0 +1,32 @@
+{
+  "revisions": {
+    "archive": "41940cb0038d09ca5aaddbe5bffb923e423d210f",
+    "current": "8f2a9e14575928bb5f086902c786da66f4a65aa9"
+  },
+  "archive_assets": 7582,
+  "current_assets": 7587,
+  "added": [
+    {
+      "path": "IOT安全/天翼创维/POC_Details/1.天翼创维awifi路由器存在多处未授权访问漏洞.pdf",
+      "blob": "cc6b232ffd12ba05ee522aaa8ad281afce49c9a0"
+    },
+    {
+      "path": "Web安全/CMS内容/Finecms/FineCMS最新版5.0.8两处getshell/2.png",
+      "blob": "06d082b11d357ac3be91605f8236e7d2482e951a"
+    },
+    {
+      "path": "Web安全/CMS内容/S-CMS/POC_Details/S-CMS PHP v30存在SQL注入漏洞.pdf",
+      "blob": "57910a59e352f5fe1d980262090467f180078176"
+    },
+    {
+      "path": "Web安全/开发框架/PHP/exp.py",
+      "blob": "4035a4ab6bac3e92064b0bbccc8b429083363010"
+    },
+    {
+      "path": "Web安全/网络设备/rConfig/books/rConfig v3.9.2 RCE漏洞分析.pdf",
+      "blob": "d77c76476b0b4af76d9add2c7facf1bf2528993d"
+    }
+  ],
+  "removed": [],
+  "modified": []
+}

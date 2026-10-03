@@ -1,0 +1,25 @@
+{
+  "article_count": 5654,
+  "changed_articles": 98,
+  "unchanged_articles": 5556,
+  "all_final_hashes_match_approved_chain": true,
+  "main_entries": 5526,
+  "source_records": 5620,
+  "excluded": 34,
+  "restored_this_round": 17,
+  "confirmed_navigation_categories": [
+    {
+      "path": "Web安全/AI应用/OpenAI/OpenAI大语言模型漏洞挖掘.md",
+      "index_category": "系统安全/Linux"
+    },
+    {
+      "path": "Web安全/CMS内容/DedeCMS/DedeCMSV6-0-3 代码审计 - 先知社区.md",
+      "index_category": "IOT安全/其他设备"
+    },
+    {
+      "path": "Web安全/中间件/Apache OFBiz/CVE-2025-55182 Apache OFBiz SSRF与远程命令执行漏洞.md",
+      "index_category": "Web安全/开发框架"
+    }
+  ],
+  "baseline_changed": false
+}

