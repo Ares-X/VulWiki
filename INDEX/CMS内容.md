@@ -53,6 +53,10 @@
 
 - [漏洞预警  Magento Open Source XXE漏洞](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/Magento/%E6%BC%8F%E6%B4%9E%E9%A2%84%E8%AD%A6%20%20Magento%20Open%20Source%20XXE%E6%BC%8F%E6%B4%9E.md) [advisory; not-reproduced; needs-review]
 
+## Adobe Commerce / Magento customer account session
+
+- [Magento 客户会话身份切换与模板验证边界（CVE-2026-71362）](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/Magento/Magento%E5%AE%A2%E6%88%B7%E4%BC%9A%E8%AF%9D%E8%BA%AB%E4%BB%BD%E5%88%87%E6%8D%A2-CVE-2026-71362.md) [analysis; source-claimed; needs-review]
+
 ## Adobe Commerce / Magento; secondary ColdFusion
 
 - [Adobe Commerce Flaw CVE-2025-54236 Lets Hackers Take Over Customer Acc](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/Adobe%20Commerce/Adobe%20Commerce%20Flaw%20CVE-2025-54236%20Lets%20Hackers%20Take%20Over%20Customer%20Acc.md) [roundup; not-reproduced; needs-review]
@@ -285,6 +289,14 @@
 
 - [DocCMS keyword SQL注入漏洞](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/DocCMS/DocCMS%20keyword%20SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md) [vulnerability; not-reproduced; needs-review]
 - [DocCMS-keyword-SQL注入漏洞](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/DocCMS/DocCMS-keyword-SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md) [vulnerability; not-reproduced; needs-review]
+
+## DotNetNuke 9.2–9.2.1
+
+- [DotNetNuke 9.2 验证码弱DES密钥恢复（CVE-2018-15811）](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/DotNetNuke/DotNetNuke%209.2%20%E9%AA%8C%E8%AF%81%E7%A0%81%E5%BC%B1DES%E5%AF%86%E9%92%A5%E6%81%A2%E5%A4%8D%20CVE-2018-15811.md) [vulnerability; not-reproduced; needs-review]
+
+## DotNetNuke 9.2–9.2.2
+
+- [DotNetNuke 不完整修复后的DES验证分支（CVE-2018-18325）](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/DotNetNuke/DotNetNuke%20%E4%B8%8D%E5%AE%8C%E6%95%B4%E4%BF%AE%E5%A4%8D%E5%90%8E%E7%9A%84DES%E9%AA%8C%E8%AF%81%E5%88%86%E6%94%AF%20CVE-2018-18325.md) [vulnerability; not-reproduced; needs-review]
 
 ## DouPHP
 
@@ -702,6 +714,10 @@
 
 - [（CVE-2017-14596）Joomla! 1.5 &lt;= 3.7.5 LDAP注入绕过登录认证](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/Joomla/%EF%BC%88CVE-2017-14596%EF%BC%89Joomla%21%201.5%20%3C%3D%203.7.5%20LDAP%E6%B3%A8%E5%85%A5%E7%BB%95%E8%BF%87%E7%99%BB%E5%BD%95%E8%AE%A4%E8%AF%81.md) [analysis; not-reproduced; needs-review]
 
+## Joomla iCagenda
+
+- [iCagenda附件上传PoC的版本差异与批量写入风险（CVE-2026-48939）](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/Joomla/iCagenda%E9%99%84%E4%BB%B6%E4%B8%8A%E4%BC%A0PoC%E7%9A%84%E7%89%88%E6%9C%AC%E5%B7%AE%E5%BC%82%E4%B8%8E%E6%89%B9%E9%87%8F%E5%86%99%E5%85%A5%E9%A3%8E%E9%99%A9%EF%BC%88CVE-2026-48939%EF%BC%89.md) [analysis; not-reproduced; needs-review]
+
 ## Joomla paGO Commerce2.5.9.0
 
 - [Joomla! paGO Commerce 2.5.9.0 存在SQL 注⼊](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/Joomla/Joomla%21%20paGO%20Commerce%202.5.9.0%20%E5%AD%98%E5%9C%A8SQL%20%E6%B3%A8%E2%BC%8A.md) [unknown; not-reproduced; needs-review]
@@ -765,6 +781,10 @@
 
 - [Ke361-MenuController.class.php-后台SQL注入漏洞-CNVD-2021-25002](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/%E9%AA%91%E5%A3%ABCMS/Ke361-MenuController.class.php-%E5%90%8E%E5%8F%B0SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E-CNVD-2021-25002.md) [vulnerability; not-reproduced; needs-review]
 - [Ke361-TopicController.class.php-SQL注入漏洞-CNVD-2017-04380](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/%E9%AA%91%E5%A3%ABCMS/Ke361-TopicController.class.php-SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E-CNVD-2017-04380.md) [unknown; not-reproduced; needs-review]
+
+## Kentico CMS Staging Service
+
+- [Kentico Staging 同步参数不安全反序列化（CVE-2019-10068）](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/Kentico/Kentico%20Staging%20%E5%90%8C%E6%AD%A5%E5%8F%82%E6%95%B0%E4%B8%8D%E5%AE%89%E5%85%A8%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%20CVE-2019-10068.md) [vulnerability; not-reproduced; needs-review]
 
 ## LFCMS
 
@@ -1384,6 +1404,10 @@
 ## Sitecore XM/XP8.2–10.4 unpatched
 
 - [Sitecore 曝零日漏洞，可执行任意代码攻击](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/Sitecore/Sitecore%20%E6%9B%9D%E9%9B%B6%E6%97%A5%E6%BC%8F%E6%B4%9E%EF%BC%8C%E5%8F%AF%E6%89%A7%E8%A1%8C%E4%BB%BB%E6%84%8F%E4%BB%A3%E7%A0%81%E6%94%BB%E5%87%BB.md) [advisory; not-reproduced; needs-review]
+
+## Sitecore XP AntiCSRF
+
+- [Sitecore 已认证 AntiCSRF 反序列化（CVE-2019-9875）](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/Sitecore/Sitecore%20%E5%B7%B2%E8%AE%A4%E8%AF%81%20AntiCSRF%20%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%20CVE-2019-9875.md) [vulnerability; not-reproduced; needs-review]
 
 ## Sitecore XP/XM/XC8.0初版–10.4初版
 

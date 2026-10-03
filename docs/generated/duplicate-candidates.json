@@ -3458,6 +3458,15 @@
   {
     "basis": "shared-primary-identifier",
     "decision": "manual-review-required",
+    "key": "CVE-2024-37085",
+    "paths": [
+      "Web安全/云平台/VMware/ESXi按AD组名授予管理权限的公开手工路径（CVE-2024-37085）.md",
+      "Web安全/云平台/勒索软件正在利用VMware/勒索软件正在利用VMware漏洞，通过VPN访问发动攻击.md"
+    ]
+  },
+  {
+    "basis": "shared-primary-identifier",
+    "decision": "manual-review-required",
     "key": "CVE-2024-38094",
     "paths": [
       "Web安全/云平台/Microsoft SharePoint/（CVE-2024-38094）SharePoint Server反序列化RCE漏洞.md",
@@ -3471,6 +3480,15 @@
     "paths": [
       "Web安全/商业软件/Ke/CVE-2024-38100 Fake potato LPE漏洞分析.md",
       "系统安全/Windows/微软2024年7月补丁日重点漏洞安全预警.md"
+    ]
+  },
+  {
+    "basis": "shared-primary-identifier",
+    "decision": "manual-review-required",
+    "key": "CVE-2024-38475",
+    "paths": [
+      "Web安全/中间件/Apache/【知道创宇404实验室】建议关注 Apache 2.4.60 更新修复多个安全漏洞.md",
+      "Web安全/网络设备/SonicWall/Apache重写歧义在SonicWall SMA中的文件读取（CVE-2024-38475）.md"
     ]
   },
   {
@@ -3515,6 +3533,7 @@
     "key": "CVE-2024-40891",
     "paths": [
       "Web安全/网络设备/Zyxel/Zyxel CPE 设备遭遇大规模攻击：关键漏洞（CVE-2024-40891）仍未修复！.md",
+      "Web安全/网络设备/Zyxel/Zyxel Telnet命令注入的原始实验对照（CVE-2024-40891）.md",
       "Web安全/网络设备/Zyxel/原创 Paper  Zyxel Telnet 漏洞分析(CVE-2025-0890、CVE‑2024‑40891).md"
     ]
   },
@@ -3568,6 +3587,15 @@
   {
     "basis": "shared-primary-identifier",
     "decision": "manual-review-required",
+    "key": "CVE-2024-4879",
+    "paths": [
+      "Web安全/其他软件/杂项/【已复现】ServiceNow 存在代码注入漏洞（CVE-2024-4879、CVE-2024-5217）.md",
+      "Web安全/商业软件/ServiceNow/ServiceNowUIJelly模板注入漏洞(CVE-2024-4879).md"
+    ]
+  },
+  {
+    "basis": "shared-primary-identifier",
+    "decision": "manual-review-required",
     "key": "CVE-2024-52316",
     "paths": [
       "Web安全/中间件/Apache Tomcat/Apache Tomcat最新高版本身份验证绕过漏洞，POC价格接近3000.md",
@@ -3581,6 +3609,24 @@
     "paths": [
       "Web安全/开发框架/Django/漏洞预警  Django拒绝服务和SQL注入漏洞.md",
       "Web安全/数据库/Oracle MySQL Server/CVE-2024-53908.md"
+    ]
+  },
+  {
+    "basis": "shared-primary-identifier",
+    "decision": "manual-review-required",
+    "key": "CVE-2024-54085",
+    "paths": [
+      "Web安全/网络设备/AMI/AMI MegaRAC Redfish认证绕过的公开对照验证（CVE-2024-54085）.md",
+      "Web安全/网络设备/华硕/华硕修复严重的AMI 漏洞.md"
+    ]
+  },
+  {
+    "basis": "shared-primary-identifier",
+    "decision": "manual-review-required",
+    "key": "CVE-2024-5910",
+    "paths": [
+      "Web安全/网络设备/Palo Alto/CVE-2024-9465：Palo Alto Expedition 未经身份验证的 SQL 注入 POC.md",
+      "Web安全/网络设备/Palo Alto/（CVE-2024-9464）Palo Alto Expedition CronJobs命令注入RCE漏洞.md"
     ]
   },
   {

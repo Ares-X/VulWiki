@@ -1,5 +1,6 @@
 ---
-version: "' + (#_memberAccess['allowStaticMethodAccess']=true,#foo=new java.lang.Boolean('"
+version: "Apache Struts 2.0.0–2.2.3（S2-007官方公告）"
+previous_version: "' + (#_memberAccess['allowStaticMethodAccess']=true,#foo=new java.lang.Boolean('"
 source: "Threekiii/Vulnerability-Wiki"
 title: "Apache Struts2 S2-007 远程代码执行漏洞"
 product: "Apache Struts2类型转换/验证"
@@ -12,15 +13,72 @@ primary_identifiers: "S2-007"
 referenced_identifiers: ""
 identifier_role: "primary"
 prerequisites: "2.0.0–2.2.3，类型转换失败并回填用户值；Integer age和验证规则是本例入口"
-affected_versions: "' + (#_memberAccess['allowStaticMethodAccess']=true,#foo=new java.lang.Boolean('"
+affected_versions: "Apache Struts 2.0.0–2.2.3；CVE-2012-0391类型转换子问题为早于2.2.3.1"
+previous_affected_versions: "' + (#_memberAccess['allowStaticMethodAccess']=true,#foo=new java.lang.Boolean('"
 source_status: "unknown"
 side_effects: "含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。"
 id: "vw-e8c924acd648797361d0042b"
 entity_id: "ve-e8c924acd648797361d0042b"
+fixed_version: "2.2.3.1（S2-007/CVE-2012-0391类型转换子问题）"
 schema_version: "1"
 ---
 
 # Apache Struts2 S2-007 远程代码执行漏洞
+
+## 2026-10-03 公开材料补充：Struts 转换异常 OGNL 求值的同实体来源补充（CVE-2012-0391）
+
+
+### 与现有条目的关系
+
+本稿补充既有S2-007主文的原始来源、具体输入/结果、版本修复和编号映射。Apache S2-007、S2-008第1项、CVE-2012-0391与CVE-2012-0838的CNA记录均指向WW-3668；这足以支持同一转换异常实体的资料关联，但不是CVE官方宣布两号重复/撤销。现有devMode条目属另一子问题，全部保留。
+
+官方WW-3668给出Struts2.2.3/Tomcat7.0.19环境：在Showcase的Validation→Field Validators中，把下列原始输入放入Integer Validator Field并提交，结果页显示application作用域变量：
+
+```text
+<' + #application + '>
+```
+
+该结果比“存在此参数/版本”更具体；JIRA同时点名ConversionErrorInterceptor与RepopulateConversionErrorFieldValidatorSupport。此处只记载来源步骤，未实际执行。
+
+### 范围与前提
+
+CNA 与 Apache S2-008 对此子问题明确为 <2.2.3.1；SEC Consult PoC1 实测 2.2.1.1。S2-008 总公告的 2.3.1.1/2.3.18 不能替代此 CVE 的修复边界。
+
+Action 存在 Integer/Long 等参数属性及 getter/setter，类型转换失败进入 ExceptionDelegator，并配置 input 结果；不要求 devMode/debug=command。
+
+### 根因与公开验证材料
+
+类型不匹配抛异常后，未经同等过滤的参数值被再次当 OGNL 求值。
+
+SEC Consult 原始完整公告 PoC1 提供 Test Action、struts.xml input 配置、可触发请求、文件写入/计算器结果和结果页 s:property；固定 MSF 模块全文互证。
+
+来源说明写出 C:/wwwroot/sec-consult.jsp、执行 calc 或由结果页显示 OGNL 求值结果；PoC1 明列 Jetty 6.1.25 与 Struts 2.2.1.1 测试。
+
+### 副作用和静态审阅边界
+
+写/覆盖 JSP、执行命令，MSF stager 还会落盘/回连；自动清理依赖会话类型，Windows 运行中程序不能立即删除。
+
+原发现公告小标题写 <=2.2.1.1，模块写 <2.2.1.1，但其正文和 CNA/Apache 明确补丁为 2.2.3.1；三种表述分别保留来源归属。
+
+2026-10-03 本次只阅读、比较与静态解析材料，未执行任何 PoC、载荷或目标请求，未安装漏洞依赖，未查看图片像素或进行可复现构建。源码/二进制哈希与依赖清单用于追溯，不是安全认证。
+
+### 修复与版本边界
+
+此实体在 2.2.3.1 修正；原公告总包 2.3.1.1 和后续 S2-008 页面 2.3.18 涉其他子问题。
+
+### 来源
+
+公开实现作者（按所读模块 Author 字段）：Johannes Dahse；Andreas Nusser；juan vazquez；sinn3r；mihi。固定提交为 5e598d5233bebecef2a44904a286769d83d31d12；模块 DisclosureDate 是漏洞披露标记，不冒充代码当前版本发布日期。本文为多来源原创中文梳理，不整篇翻译或复制原文章。
+
+- [CNA 描述记录](https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2012/0xxx/CVE-2012-0391.json)：50cb886246a93483a891863dbbcffb654840212b1b0c556a53e6b77f5f96d1ec
+- [Rapid7 固定实现](https://raw.githubusercontent.com/rapid7/metasploit-framework/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/multi/http/struts_code_exec_exception_delegator.rb)：0474953e5b6eb96ba24fa412148ede8167c0c6db5efb4a3994884c14ca8b0285
+- [struts-secconsult](https://sec-consult.com/vulnerability-lab/advisory/multiple-critical-vulnerabilities-in-apache-struts2/)：原始技术公告全文
+- [S2-008](https://cwiki.apache.org/confluence/spaces/WW/pages/27834715/S2-008)：原始技术公告全文
+
+- [Apache S2-007](https://cwiki.apache.org/confluence/spaces/WW/pages/27826393/S2-007)
+- [Apache原始工单WW-3668](https://issues.apache.org/jira/browse/WW-3668)
+- [CVE-2012-0838 CNA记录](https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2012/0xxx/CVE-2012-0838.json)
+
 
 <!-- vulwiki-editorial:start -->
 ## 校订与适用边界

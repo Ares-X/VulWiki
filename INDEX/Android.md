@@ -4,6 +4,10 @@
 
 产品按显式元数据分组；未确认产品不从目录自动推断。
 
+## Android ART JNI / system_server boundary
+
+- [Android ART JNI 可实例化检查与序列化回归测试（CVE-2025-48543）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Android/Android%20ART%20JNI%20%E5%8F%AF%E5%AE%9E%E4%BE%8B%E5%8C%96%E6%A3%80%E6%9F%A5%E4%B8%8E%E5%BA%8F%E5%88%97%E5%8C%96%E5%9B%9E%E5%BD%92%E6%B5%8B%E8%AF%95%EF%BC%88CVE-2025-48543%EF%BC%89.md) [analysis; not-reproduced; active]
+
 ## Android Binder内核驱动
 
 - [攻击 Android Binder：对 CVE-2023-20938 的分析和利用](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Android/%E6%94%BB%E5%87%BB%20Android%20Binder%EF%BC%9A%E5%AF%B9%20CVE-2023-20938%20%E7%9A%84%E5%88%86%E6%9E%90%E5%92%8C%E5%88%A9%E7%94%A8.md) [analysis; not-reproduced; needs-review]
@@ -16,6 +20,10 @@
 
 - [魔形女再袭？最新Android通杀漏洞CVE-2024-31317分析与利用研究](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Android/%E9%AD%94%E5%BD%A2%E5%A5%B3%E5%86%8D%E8%A2%AD%EF%BC%9F%E6%9C%80%E6%96%B0Android%E9%80%9A%E6%9D%80%E6%BC%8F%E6%B4%9ECVE-2024-31317%E5%88%86%E6%9E%90%E4%B8%8E%E5%88%A9%E7%94%A8%E7%A0%94%E7%A9%B6.md) [analysis; not-reproduced; needs-review]
 
+## Android Linux kernel Binder
+
+- [Android Binder 与 epoll 释放后使用本地提权（CVE-2019-2215）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Android/Android%20Binder%20%E4%B8%8E%20epoll%20%E9%87%8A%E6%94%BE%E5%90%8E%E4%BD%BF%E7%94%A8%E6%9C%AC%E5%9C%B0%E6%8F%90%E6%9D%83%20CVE-2019-2215.md) [vulnerability; not-reproduced; needs-review]
+
 ## Android Linux内核
 
 - [谷歌警告：Android内核漏洞正在被活跃攻击](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Android/%E8%B0%B7%E6%AD%8C%E8%AD%A6%E5%91%8A%EF%BC%9AAndroid%E5%86%85%E6%A0%B8%E6%BC%8F%E6%B4%9E%E6%AD%A3%E5%9C%A8%E8%A2%AB%E6%B4%BB%E8%B7%83%E6%94%BB%E5%87%BB.md) [advisory; not-reproduced; needs-review]
@@ -23,6 +31,10 @@
 ## Android adbd无线调试
 
 - [安卓零点击 RCE 漏洞（CVE-2026-0073）深度解析：同一 WiFi 下，手机放着不动也会被入侵](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Android/%E5%AE%89%E5%8D%93%E9%9B%B6%E7%82%B9%E5%87%BB%20RCE%20%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2026-0073%EF%BC%89%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90%EF%BC%9A%E5%90%8C%E4%B8%80%20WiFi%20%E4%B8%8B%EF%BC%8C%E6%89%8B%E6%9C%BA%E6%94%BE%E7%9D%80%E4%B8%8D%E5%8A%A8%E4%B9%9F%E4%BC%9A%E8%A2%AB%E5%85%A5%E4%BE%B5.md) [analysis; not-reproduced; needs-review]
+
+## Android vold
+
+- [Android vold 本地提权与 GingerBreak 原始验证资料（CVE-2011-1823）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Android/Android%20vold%20%E6%9C%AC%E5%9C%B0%E6%8F%90%E6%9D%83%E4%B8%8E%20GingerBreak%20%E5%8E%9F%E5%A7%8B%E9%AA%8C%E8%AF%81%E8%B5%84%E6%96%99%EF%BC%88CVE-2011-1823%EF%BC%89.md) [vulnerability; source-claimed; active]
 
 ## Android多组件
 

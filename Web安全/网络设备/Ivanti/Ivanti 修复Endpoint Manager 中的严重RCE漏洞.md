@@ -1,4 +1,7 @@
 ---
+verification_source: "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/windows/http/ivanti_epm_recordgoodapp_sqli_rce.rb"
+version: "CVE-2024-29824：EPM Core2022 SU5及以前未打对应安全更新；不扩展到同页其他产品/编号"
+source_url: "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/windows/http/ivanti_epm_recordgoodapp_sqli_rce.rb"
 source: "gelusus/wxvl 公众号漏洞文库"
 id: "vw-b40d506cc9abc580ce887b41"
 entity_id: "ve-b40d506cc9abc580ce887b41"
@@ -13,11 +16,11 @@ identifier_status: "unknown"
 identifier_role: "primary"
 primary_identifiers: "CVE-2024-29822; CVE-2024-29823; CVE-2024-29824; CVE-2024-29825; CVE-2024-29826; CVE-2024-29827; CVE-2024-29828; CVE-2024-29829; CVE-2024-29830"
 referenced_identifiers: "CVE-2024-4701; CVE-2023-5389; CVE-2023-5390"
-prerequisites: "EPM2022SU5及以前；六个SQL洞同网段未认证，其余四需认证"
+prerequisites: "本次模块仅补证CVE-2024-29824：EPM Core2022 SU5及以前、同网络可达、无需认证；其他29822–29830前提仍各自核对"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/Ivanti/Ivanti%20%E4%BF%AE%E5%A4%8DEndpoint%20Manager%20%E4%B8%AD%E7%9A%84%E4%B8%A5%E9%87%8DRCE%E6%BC%8F%E6%B4%9E.md"
 review_date: "2026-10-02"
-side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
-source_status: "unknown"
+side_effects: "29824模块的差分SQL延迟占用资源；exploit持久启用show advanced options/xp_cmdshell且无还原；所选fetch载荷可写文件"
+source_status: "recorded"
 ---
 
 #  Ivanti 修复Endpoint Manager 中的严重RCE漏洞   
@@ -161,3 +164,14 @@ Pixabay
 ---
 
 > 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+
+
+## 2026-10-03 公开验证资料补充
+
+[固定公开源码](https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/windows/http/ivanti_epm_recordgoodapp_sqli_rce.rb) 本次已完整静态阅读；未检查框架及载荷的全部传递依赖。
+
+源码给出 SOAP `UpdateStatusEvents` 的完整构造，向 `/WSStatusEvents/EventHandler.asmx` 提交 Action type96，并在 status 的 md5 值处进入 RecordGoodApp SQL 注入。check 发送基线和延迟 SQL；两次测时会占用数据库资源，单次延迟仍受网络和负载影响。
+
+exploit 进一步启用 SQL Server 的 show advanced options 与 xp_cmdshell，再执行所选命令。它不会恢复这些设置，fetch 载荷还可能留文件，不能当只读探针。[CNA](https://cveawg.mitre.org/api/cve/CVE-2024-29824) 将对象限定为 EPM Core 2022 SU5及以前、同一网络可达的未认证攻击者。修复入口是[Ivanti May2024公告](https://forums.ivanti.com/s/article/Security-Advisory-May-2024)；本轮未取得动态公告正文，不能据此填一个未经核实的新构建号。
+
+show advanced options和xp_cmdshell是SQL Server持久配置变更，源码没有还原；即便采用有/无延迟两次请求，差分时延仍受网络和服务器负载影响。本段只补证CVE-2024-29824，不把同页29822–29830或Avalanche/ITSM/客户端等其他产品一并视为已补齐。

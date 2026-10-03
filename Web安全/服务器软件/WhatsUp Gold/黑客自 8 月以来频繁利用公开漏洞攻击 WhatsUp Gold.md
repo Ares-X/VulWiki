@@ -1,4 +1,7 @@
 ---
+verification_source: "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/auxiliary/admin/http/whatsup_gold_sqli.rb"
+version: "CVE-2024-6670：CNA描述<2024.0.0，结构化快照下界2023.1.0；模块23.1.3版本check不是完整范围"
+source_url: "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/auxiliary/admin/http/whatsup_gold_sqli.rb"
 source: "gelusus/wxvl 公众号漏洞文库"
 title: "黑客自 8 月以来频繁利用公开漏洞攻击 WhatsUp Gold"
 product: "Progress WhatsUp Gold"
@@ -11,9 +14,9 @@ primary_identifiers: "CVE-2024-6670; CVE-2024-6671"
 referenced_identifiers: "CVE-2024-4885"
 identifier_role: "primary"
 cve: "CVE-2024-6670; CVE-2024-6671"
-prerequisites: "未认证SQL注入，后续账号接管并借合法PowerShell功能执行"
-source_status: "unknown"
-side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
+prerequisites: "本次补证限6670：NmConsole API可达且有现存用户名；未认证SQL注入后重置该用户密码并检查登录；6671/4885未由此补证"
+source_status: "recorded"
+side_effects: "6670模块修改全局JMXSecurity设置，无WHERE的UPDATE覆盖ProActiveAlert全部告警名称，重置现有WebUser密码并保存本地凭据；中途失败也不回滚"
 id: "vw-ab4c37b08e990fbc06aea8f3"
 entity_id: "ve-ab4c37b08e990fbc06aea8f3"
 schema_version: "1"
@@ -94,3 +97,14 @@ Kheirkhah 的漏洞概述
 ---
 
 > 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+
+
+## 2026-10-03 公开验证资料补充
+
+[固定公开源码](https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/auxiliary/admin/http/whatsup_gold_sqli.rb) 本次已完整静态阅读；未检查框架及载荷的全部传递依赖。
+
+固定模块不是只读取密码：它先提交 JMXSecurity 密码设置，再以 `HasErrors` 的 `classId` 注入改写 ProActiveAlert，把加密值带到可读取的告警字段；随后更新现有 WebUser 的密码，最后通过 LoginAjax、ASPXAUTH Cookie 和 authenticated 标志检查登录。因此会改动全局设置、告警内容及用户密码，没有完整自动回滚。
+
+[CNA](https://cveawg.mitre.org/api/cve/CVE-2024-6670) 标注 2024.0.0 之前受影响，结构化记录下界为 2023.1.0；源码 check 使用 app.json 中的23.1.3版本判定，不能代替厂商按发布线给出的范围。该 SQL 注入与本页提及的4885报表文件写入是不同实体，不能因同属 WhatsUp Gold 混合编号。
+
+尤其应注意：源码的UPDATE ProActiveAlert没有WHERE条件，可能覆盖全部告警名称。即使后续登录检查失败，已经改动的全局设置、告警和用户密码也不会自动回滚。本补证仅对应CVE-2024-6670，既有6671及引用4885并未因此通过本轮材料门槛。

@@ -30,6 +30,7 @@
 
 ## D-Link DIR-859
 
+- [D-Link DIR-859 hedwig.cgi 路径穿越与管理凭据泄露](../IOT%E5%AE%89%E5%85%A8/D-Link/D-Link%20DIR-859%20hedwig.cgi%20%E8%B7%AF%E5%BE%84%E7%A9%BF%E8%B6%8A%E4%B8%8E%E5%87%AD%E6%8D%AE%E6%B3%84%E9%9C%B2%20CVE-2024-0769.md) [vulnerability; source-claimed; active]
 - [D-Link DIR-859 未认证信息泄露（CVE-2019-20213；原题为 rce）](../IOT%E5%AE%89%E5%85%A8/D-Link/%EF%BC%88CVE-2019%E2%80%9320213%EF%BC%89D-Link%20DIR-859%20rce.md) [vulnerability; not-reproduced; needs-review]
 
 ## D-Link DIR619L RevB/DIR605L RevB
@@ -67,6 +68,10 @@
 ## D-Link DIR895L A1_102b07
 
 - [（CVE-2026-100740）D-Link DIR-895L L2TP Host Name AVP越界写漏洞](../IOT%E5%AE%89%E5%85%A8/D-Link/%EF%BC%88CVE-2026-100740%EF%BC%89D-Link%20DIR-895L%20L2TP%20Host%20Name%20AVP%E8%B6%8A%E7%95%8C%E5%86%99%E6%BC%8F%E6%B4%9E.md) [analysis; not-reproduced; needs-review]
+
+## D-Link DNS-320
+
+- [D-Link DNS-320 login_mgr.cgi 命令注入（CVE-2019-16057）](../IOT%E5%AE%89%E5%85%A8/D-Link/D-Link%20DNS-320%20login_mgr.cgi%20%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5%20CVE-2019-16057.md) [vulnerability; not-reproduced; needs-review]
 
 ## D-Link下一代防火墙声称，具体型号未知
 

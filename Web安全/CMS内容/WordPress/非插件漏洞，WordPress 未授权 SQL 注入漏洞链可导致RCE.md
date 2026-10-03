@@ -187,3 +187,42 @@ https://wordpress.org/news/2026/07/wordpress-7-0-2-release/
 ---
 
 > 来源：gelusus/wxvl（微信公众号漏洞文章自动归档，原文见文首链接）
+
+## KEV 公开验证材料补核（CVE-2026-60137，2026-10-03）
+
+本节补入实际公开请求构造和 SQL 注入结果判据，保留上文原稿及图片。材料支持未经认证的 SQLi 链；本库只作静态阅读，没有运行模块、请求目标或恢复任何真实账户数据。
+
+### 单独漏洞与串链前提
+
+[WPScan CNA](https://github.com/CVEProject/cvelistV5/blob/54d12b277c27b642b6dd41df67fb1244110610f4/cves/2026/60xxx/CVE-2026-60137.json)描述的是 WP_Query 的 author__not_in 未妥善处理不可信输入：单独利用需要插件或主题把不可信值送入该参数，不能仅凭“WordPress 版本受影响”推定所有站点存在匿名入口。
+
+WordPress 的 [60137 公告](https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-fpp7-x2x2-2mjf)与 [63030 公告](https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-ff9f-jf42-662q)确认另一条核心 REST Batch 串链；两个公告都没有给出具体请求体。下述公开模块补齐该缺口：在 6.9.0–6.9.4、7.0.0–7.0.1 中，63030 的路由/校验错位可绕过预期参数清洗，将 author_exclude 送到 author__not_in，无须额外插件或登录。6.8.0–6.8.5 仅属于 SQLi 本体范围，不适用这条双重 Batch 匿名入口。
+
+### 可核读的完整输入来源
+
+[Metasploit 辅助模块固定版本](https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/auxiliary/scanner/http/wordpress_wp2shell_sqli.rb#L11-L170)由 dividesbyzer0 编写，并署名 Searchlight Cyber 的发现与公告。模块公开双层 JSON requests 结构、子请求顺序、URL 编码、SQL 拼接和结果读取。下面按来源解释，不把简化摘要冒充可单独运行的完整脚本。
+
+- HTTP 入口为 POST 站点根路径，查询参数 rest_route=/batch/v1，Content-Type 为 application/json
+- 两层都使用方法 POST、路径 /// 的解析失败子请求制造索引错位
+- 内层将 GET /wp/v2/posts/999999 上的 author_exclude 输入移交给集合 /wp/v2/posts 的 get_items 处理器；该 ID 不要求实际存在
+- author_exclude 的完整来源表达式见模块第 110–131 行；外层将这组请求嵌在 POST /wp/v2/posts 的 body，再由 /batch/v1 的处理器接收
+
+完整 inject 方法及其使用的常量、batch_post、编码调用均在同一源文件，未仅凭文件名或“PoC 已公开”标签判断。
+
+### 结果判据与不能推出的结论
+
+路由探针只比较 parse_path_failed、block_cannot_read、rest_batch_not_allowed 三个标记，支持的是 63030 路由错位；不能把它当作 60137 SQLi 成功。
+
+模块随后使用 [TimeBasedBlindMixin](https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/lib/msf/core/exploit/sqli/time_based_blind_mixin.rb#L11-L55)分别注入 1=1 与 1=2，并要求前者达到 SqliDelay、后者不达到。其 [MySQL 实现](https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/lib/msf/core/exploit/sqli/mysqli/common.rb#L226-L355)把条件放入 IF 条件分支和 SLEEP 中。因此有具体输入与真/假时间对照，区别于仅查看版本或单个 HTTP 状态。[SQLi 基础模块](https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/lib/msf/core/exploit/sqli.rb#L9-L28)注册的 SqliDelay 默认值为 1.0 秒，create_sqli 将 inject 请求闭包传给所选 MySQL 类；[基础类](https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/lib/msf/core/exploit/sqli/common.rb#L26-L42)保存该闭包，时间判据测量的正是它的调用耗时。网络抖动和慢查询仍可能干扰时序；模块没有提供统计重试保证。
+
+在时间对照成功后，[WordPress SQLi helper](https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/lib/msf/core/exploit/remote/http/wordpress/sqli.rb#L85-L200)定位表前缀、读取 user_login/user_pass 并在操作者本地保存凭据和 loot。[配套文档](https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/documentation/modules/auxiliary/scanner/http/wordpress_wp2shell_sqli.md)给出 6.9.4/MySQL 8.0 环境、保留默认 Hello World 文章的要求，以及 7.0.1 的预期模块输出。其哈希示例本身含占位点号，不是完整抓包或独立恢复数据证明。
+
+原稿图片本轮已看像素：可读到 poc.py 的命令行 SQL、ID/用户名/哈希输出；图片没有该 poc.py 的请求构造或源代码，不能凭它补写缺失脚本。上述完整公开模块提供了独立的技术输入材料。读取哈希也不等于破解成功、安装插件成功或已经 RCE；完整远程代码执行模块未在本节审阅，不把它的链接升级为验证结论。
+
+### 修复与操作影响
+
+[WordPress 7.0.2 发行公告](https://wordpress.org/news/2026/07/wordpress-7-0-2-release/)确认 7.0.2、6.9.5 修复两项，6.8.6 修复 SQLi 本体，7.1 beta2 也包含修复；早于 6.8 的版本不在此次两漏洞范围。
+
+辅助模块的这一调用路径不创建站点文章或用户，但会发送大量请求、使数据库延时、读取密码哈希，并在操作者机器保存敏感结果及扫描记录。不能据“不写目标业务内容”将整个过程称作无副作用。公开通用 helper 中另有创建用户、改权限和写文件函数；本模块没有调用这些函数。
+
+现有 WordPress 合并条目已同时登记 60137 与 63030，继续保留为该链的主入口。本次只追加材料与范围说明，不把两个组成漏洞折叠成同一个漏洞实体，也不另建重复文章。已全文读取两个官方短公告、发行公告、辅助模块及文档、WordPress SQLi helper、MySQL Common、TimeBasedBlind、时间判据 mixin，以及 SQLi 创建器和基础类；没有声称审计全部框架依赖。

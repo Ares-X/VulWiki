@@ -92,3 +92,15 @@ Connection: close
 ---
 
 > 来源：Threekiii/Vulnerability-Wiki（https://github.com/Threekiii/Vulnerability-Wiki）
+
+
+## 公开验证资料补证（2026-10-03）
+
+本次全文读取固定版本的 Nuclei `CVE-2019-20085.yaml`。它以多级 `..%2F` 路径读取 `windows%2Fwin.ini`，并同时要求HTTP200及INI节名正则 `\[(font|extension|file)s\]`。完整输入和预期输出均在所列主文件中。上文历史请求与图片引用保持原样；本次未查看历史图片像素，补充的是独立可追溯的请求与响应判据。
+
+同目录另一篇来源文档《TVT数码科技NVMS-1000路径遍历漏洞(CVE-2019-20085)》的历史请求含 `Cookie: dataPort=6063`；该文原路径与正文继续保留。固定模板不发送这个 Cookie；这只能说明该公开验证路径没有把该Cookie作为输入，不能推断所有部署、版本或代理路径都相同。CNA描述的是NVMS-1000的目录遍历；Windows目标文件是本模板的验证前提，不能由文件名把任意Linux设备也列为已验证。模板标题的“Local File Inclusion”在此具体请求中表现为文件内容读取，不足以证明脚本包含执行。
+
+主文件只有读取请求和响应判据，未记录本次真实响应，未给出精确修复构建。若只收到200但没有目标文件内容，不满足这里的验证条件。
+
+- 已全文阅读的固定技术主文件：https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2019/CVE-2019-20085.yaml
+- 已读取描述和引用的CNA记录：https://github.com/CVEProject/cvelistV5/blob/76db341685347c82b67f7ce70b1a286e94270b43/cves/2019/20xxx/CVE-2019-20085.json

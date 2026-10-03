@@ -126,6 +126,10 @@
 
 - [Linux OVS共享页标记丢失与三处生命周期修复（CVE-2026-89487等）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/Linux%E6%9C%AC%E5%9C%B0%E6%8F%90%E6%9D%83%E6%BC%8F%E6%B4%9E/Linux%20OVS%E5%85%B1%E4%BA%AB%E9%A1%B5%E6%A0%87%E8%AE%B0%E4%B8%A2%E5%A4%B1%E4%B8%8E%E4%B8%89%E5%A4%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E4%BF%AE%E5%A4%8D%EF%BC%88CVE-2026-89487%E7%AD%89%EF%BC%89.md) [analysis; not-reproduced; active]
 
+## Linux kernel / Reliable Datagram Sockets
+
+- [Linux RDS 本地提权的原始C源码与内核状态副作用（CVE-2010-3904）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/Linux%20RDS%E6%9C%AC%E5%9C%B0%E6%8F%90%E6%9D%83%E7%9A%84%E5%8E%9F%E5%A7%8BC%E6%BA%90%E7%A0%81%E4%B8%8E%E5%86%85%E6%A0%B8%E7%8A%B6%E6%80%81%E5%89%AF%E4%BD%9C%E7%94%A8%EF%BC%88CVE-2010-3904%EF%BC%89.md) [analysis; not-reproduced; active]
+
 ## Linux kernel / SCTP
 
 - [Linux SCTP Stale Cookie UAF双平台提权材料审阅（CVE-2026-52924）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/Linux%E6%9C%AC%E5%9C%B0%E6%8F%90%E6%9D%83%E6%BC%8F%E6%B4%9E/Linux%20SCTP%20Stale%20Cookie%20UAF%E5%8F%8C%E5%B9%B3%E5%8F%B0%E6%8F%90%E6%9D%83%E6%9D%90%E6%96%99%E5%AE%A1%E9%98%85%EF%BC%88CVE-2026-52924%EF%BC%89.md) [analysis; not-reproduced; active]
@@ -147,6 +151,10 @@
 
 - [Linux nf_tables 事务回滚UAF公开触发材料（CVE-2026-23111）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/Linux%20nf_tables%20%E4%BA%8B%E5%8A%A1%E5%9B%9E%E6%BB%9AUAF%E5%85%AC%E5%BC%80%E8%A7%A6%E5%8F%91%E6%9D%90%E6%96%99%EF%BC%88CVE-2026-23111%EF%BC%89.md) [analysis; not-reproduced; needs-review]
 - [Linux nf_tables 双重释放与公开本地提权材料（CVE-2024-1086）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/Linux%20nf_tables%20%E5%8F%8C%E9%87%8D%E9%87%8A%E6%94%BE%E4%B8%8E%E5%85%AC%E5%BC%80%E6%9C%AC%E5%9C%B0%E6%8F%90%E6%9D%83%E6%9D%90%E6%96%99%EF%BC%88CVE-2024-1086%EF%BC%89.md) [analysis; not-reproduced; needs-review]
+
+## Linux kernel ptrace / Polkit pkexec
+
+- [Linux ptrace 凭据记录错误本地提权（CVE-2019-13272）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/Linux%E6%9C%AC%E5%9C%B0%E6%8F%90%E6%9D%83%E6%BC%8F%E6%B4%9E/Linux%20ptrace%20%E5%87%AD%E6%8D%AE%E8%AE%B0%E5%BD%95%E9%94%99%E8%AF%AF%E6%9C%AC%E5%9C%B0%E6%8F%90%E6%9D%83%20CVE-2019-13272.md) [vulnerability; not-reproduced; needs-review]
 
 ## Linux ksmbd
 
