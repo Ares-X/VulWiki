@@ -1,5 +1,5 @@
 ---
-version: "使用条件"
+version: "iVMS-8700 V2.0.0–V2.9.2；iSecure Center V1.0.0–V1.7.0（原文影响版本声称；TemplatesImpl 链另称 Fastjson 1.2.22–1.2.24）"
 source: "MrWQ/vulnerability-paper"
 product: "Hikvision iVMS-8700/iSecure Center"
 record_type: "analysis"
@@ -18,6 +18,7 @@ source_url: "https://mp.weixin.qq.com/s/cl0ZxUZefT4Og4KM5PiWDg"
 id: "vw-ea22d7d5517e6912b5f324bc"
 entity_id: "ve-ea22d7d5517e6912b5f324bc"
 schema_version: "1"
+previous_version: "使用条件"
 ---
 
 ## 核对与使用边界
@@ -37,6 +38,8 @@ schema_version: "1"
 历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # 海康威视综合安防 Fastjson 不出网利用
+
+> 版本字段校订（2026-10-04）：代码、命令、路径、产品名或章节标记误入版本字段的值已逐字保存到对应 `previous_*` 字段；当前版本字段只记正文明确的来源范围，无范围时记为 unknown。后文对此元数据误填的旧说明描述校订前状态，其余实验条件与待核项仍按原文保留。
 
 <meta name="referrer" content="no-referrer"/>
 

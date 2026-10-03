@@ -1,0 +1,62 @@
+{
+  "base_commit": "54ff62213950c7ff86cb8881941844cba5aaeef8",
+  "rounds": 3,
+  "documents": 5844,
+  "modified_articles": 1101,
+  "precise_article_operations": 3818,
+  "restored_original_images": 44,
+  "current_source_covers": 7,
+  "unrecovered_image_refs_explicit_gaps": 13,
+  "encoding_strict_restored_spans": 204,
+  "encoding_lines_not_fully_recoverable": 14,
+  "quality": {
+    "by_code": {
+      "fingerprint_unverified": 78,
+      "identifier_inactive": 25,
+      "identifier_role_unknown": 24,
+      "noncontent_link_candidate": 24,
+      "path_legacy": 2,
+      "site_relative_link": 81,
+      "source_missing": 3829,
+      "unrecognized_identifier_namespace": 88
+    },
+    "documents": 5844,
+    "errors": 0,
+    "fatal_issues": 0,
+    "warnings": 4151
+  },
+  "quality_baseline_unchanged": true,
+  "render": {
+    "files": 5844,
+    "candidates": 6,
+    "by_rule": {
+      "code_web_controls": 1,
+      "unfenced_source": 1,
+      "unknown_html_literal": 4
+    },
+    "structural_failures": 0,
+    "marked": {
+      "module": "/Users/aresx/Ares-X.github.io/node_modules/marked/lib/marked.cjs",
+      "version": "4.3.0"
+    }
+  },
+  "resources": {
+    "missing": 0,
+    "zero_byte": 0,
+    "html_error_page": 0,
+    "recognized_container": 6117,
+    "unknown": 0,
+    "extension_mismatch": 32
+  },
+  "all_current_image_hashes_decode": true,
+  "tests": {
+    "python": 78,
+    "marked": 22,
+    "blog": 10
+  },
+  "kev_publication_hash_changed_articles": 10,
+  "kev_publication_hash_changed_slots": 24,
+  "new_kev_admissions": 0,
+  "article_code_execution": false,
+  "scope_note": "Full-archive machine coverage, candidate evidence review and independent exact-patch acceptance; not full-archive manual technical fact validation."
+}

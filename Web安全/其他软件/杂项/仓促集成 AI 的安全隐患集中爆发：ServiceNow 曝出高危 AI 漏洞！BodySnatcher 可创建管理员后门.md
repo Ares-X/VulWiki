@@ -1,8 +1,8 @@
 ---
 cve: "CVE-2025-12420"
 source: "gelusus/wxvl 公众号漏洞文库"
-identifier_role: "unknown"
-primary_identifiers: ""
+identifier_role: "primary"
+primary_identifiers: "CVE-2025-12420"
 referenced_identifiers: ""
 identifier_status: "unknown"
 title: "仓促集成 AI 的安全隐患集中爆发：ServiceNow 曝出高危 AI 漏洞！BodySnatcher 可创建管理员后门"
@@ -21,9 +21,13 @@ source_note: "原始出处待补；仓库归档不等同原始披露"
 id: "vw-2eae0ccce63cd111a10db251"
 entity_id: "ve-2eae0ccce63cd111a10db251"
 schema_version: "1"
+previous_identifier_role: "unknown"
+previous_primary_identifiers: ""
 ---
 
 # 仓促集成 AI 的安全隐患集中爆发：ServiceNow 曝出高危 AI 漏洞！BodySnatcher 可创建管理员后门
+
+> 编号角色校订（2026-10-04）：按归档技术正文区分主讨论编号与背景引用，更新 `primary_identifiers` / `referenced_identifiers` 及旧字段角色。旧编号原值、状态与正文保持原样，变更前字段逐字保存在 `previous_*`；后文旧的角色待核说明应按当前字段阅读。这里的角色判读不等于官方分配核验或漏洞复现。
 
 <!-- vulwiki-editorial-rebuild:system-misc -->
 ## 条目范围与校订

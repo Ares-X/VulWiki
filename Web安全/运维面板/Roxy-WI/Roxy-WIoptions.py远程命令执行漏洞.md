@@ -12,15 +12,18 @@ referenced_identifiers: ""
 identifier_role: "primary"
 cve: "CVE-2022-31137"
 prerequisites: "<6.1.1.0;no auth shown"
-fofa_unverified: "app.name="
 source_status: "unknown"
 side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
 id: "vw-4a9f33967365b6ac2ee1c70b"
 entity_id: "ve-4a9f33967365b6ac2ee1c70b"
 schema_version: "1"
+previous_fofa_unverified: "app.name="
+hunter: "app.name=\"Roxy-WI\""
 ---
 
 # Roxy-WI options.py远程命令执行漏洞
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 Hunter 的完整表达式已记入 `hunter`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 <!-- vulwiki-editorial:start -->
 ## 校订与适用边界

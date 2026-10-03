@@ -35,7 +35,7 @@ schema_version: "1"
 
 代码与实验材料：无PoC代码、入口或研究者原文；根据两张终端截图推断两commit链条和shell，无法复核
 
-来源证据范围：night安全转载，缺研究者身份/原文/公告；旧补丁\[#38406\]()为空链接
+来源证据范围：night安全转载，缺研究者身份/原文/公告；旧补丁[#38406](https://github.com/go-gitea/gitea/pull/38406)作为公开入口保留，但该链接不证明其与本文两项 RCE 声称的对应关系
 
 > 可用公开入口：[#38406](https://github.com/go-gitea/gitea/pull/38406)。Gitea 1.27.0 发布记录将其列入一般安全修复；现有转载未给出它与本文两项 RCE 声称的对应证据，该链接不证明其为本文漏洞的修复。
 
@@ -48,6 +48,8 @@ schema_version: "1"
 历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 #  刚升到 Gitea 1.27.0 以为安全了？两个 0day 直接 RCE  
+
+> 展示校订（2026-10-04）：同篇已经给出的 Gitea PR URL 恢复为参考入口，更新旧空链接诊断；此链接不证明其与本文 RCE 主张的对应关系。 本文技术正文及其核验范围保持原样。
  night安全   2026-07-27 05:07  
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/LAQpgdWQSctVS8Ps0NsFTqMiasz8uDibcvoib0spt17ORFYGT7Lk8y0JElHpWukiczXboIicO8mrOUut0DwfE4PvMwpuReeibS0yQHqN8Tictdm4Z4/640?wx_fmt=png&from=appmsg "")  
@@ -106,7 +108,7 @@ CVSS 预估
 背景：上一轮 CVE-2026-58443（已修，但修了个寂寞）  
   
 先快速回顾一下上周那个洞。Gitea 的 PR 更新接口 POST /api/v1/repos/{owner}/{repo}/pulls/{index}/update  
- 在做 public-only 令牌校验时只检查了路由里的公开基础仓库，没在服务端合并变基到私有头分支时再把令牌限制套一遍，导致 public-only 令牌越权写私有分支。CVSS 9.6，v1.27.0 修了它（补丁 [#38406]()  
+ 在做 public-only 令牌校验时只检查了路由里的公开基础仓库，没在服务端合并变基到私有头分支时再把令牌限制套一遍，导致 public-only 令牌越权写私有分支。CVSS 9.6，v1.27.0 修了它（补丁 [#38406](https://github.com/go-gitea/gitea/pull/38406)  
 ）。当时我们说「升到 1.27.0 就安全了」。  
   
 新 0day：完全不同的攻击面  

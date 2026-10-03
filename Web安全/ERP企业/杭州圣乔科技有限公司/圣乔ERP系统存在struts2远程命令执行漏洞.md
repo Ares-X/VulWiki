@@ -17,14 +17,16 @@ source_url: "https://www.yuque.com/xiaokp7/ocvun2/ht9nkwf0kxowxnhw"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E6%9D%AD%E5%B7%9E%E5%9C%A3%E4%B9%94%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/%E5%9C%A3%E4%B9%94ERP%E7%B3%BB%E7%BB%9F%E5%AD%98%E5%9C%A8struts2%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md"
 fofa: "app=\"圣乔-ERP系统\""
-fofa_unverified: "web.icon="
 hunter: "web.icon=\"d2c808114296ddd9e76e9c774d79bd43\""
 id: "vw-e756dcf2f8bdfad681eff6f1"
 entity_id: "ve-e756dcf2f8bdfad681eff6f1"
 schema_version: "1"
+previous_fofa_unverified: "web.icon="
 ---
 
 # 圣乔ERP Struts2集成 Struts2 远程代码执行未指明编号线索
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 FOFA 的完整表达式已记入 `fofa`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 ## 条目说明
 

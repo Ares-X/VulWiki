@@ -1,5 +1,5 @@
 ---
-version: "Konga"
+version: "unknown"
 source: "Threekiii/Awesome-POC"
 title: "Konga 普通用户越权获取管理员权限漏洞"
 product: "Konga Kong管理界面"
@@ -20,9 +20,12 @@ entity_id: "ve-93246b061347b9e8647e8c73"
 schema_version: "1"
 canonical: "Web安全/中间件/Konga/Konga-普通用户越权获取管理员权限漏洞.md"
 relation_type: "duplicate_of"
+previous_version: "Konga"
 ---
 
 # Konga 普通用户越权获取管理员权限漏洞
+
+> 版本字段校订（2026-10-04）：误填的版本字段原值逐字保存到对应 `previous_*` 字段。当前值区分正文声称的影响范围、实验环境与尚未知的范围；后文对该元数据误填的旧说明只描述校订前状态，未据此升级来源结论。
 
 <!-- vulwiki-editorial:start -->
 ## 校订与适用边界

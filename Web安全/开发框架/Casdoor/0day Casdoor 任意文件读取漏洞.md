@@ -1,5 +1,5 @@
 ---
-fofa: ""
+fofa: "title=\"Casdoor\""
 source: "MrWQ/vulnerability-paper"
 product: "Casdoor static traversal"
 record_type: "vulnerability"
@@ -10,7 +10,6 @@ primary_identifiers: ""
 referenced_identifiers: ""
 identifier_role: "unknown"
 identifier_status: "unknown"
-fofa_unverified: "搜索语句"
 title: "0day Casdoor 任意文件读取漏洞"
 prerequisites: "来源所述条件，未列明部分仍待核：Explicitly unknown; response October8,2023; platform/static-handler prerequisites unstated"
 side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
@@ -19,6 +18,7 @@ source_url: "https://mp.weixin.qq.com/s/ewd7rttOKxNDFEmFNRNaeA"
 id: "vw-d7ae410844b5dfe7fda6d032"
 entity_id: "ve-d7ae410844b5dfe7fda6d032"
 schema_version: "1"
+previous_fofa_unverified: "搜索语句"
 ---
 
 ## 核对与使用边界
@@ -43,6 +43,8 @@ schema_version: "1"
 历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # 【0day】Casdoor 任意文件读取漏洞
+
+> 指纹字段校订（2026-10-04）：按原归档正文的明确平台标签及完整表达式恢复当前查询，旧误填或截取字段逐字保存在 `previous_*`；后文对此旧字段的诊断按当前字段阅读。仅经过本库保守语法与原字面核对，未在线运行查询，不把指纹命中视为漏洞存在。
 
 <meta name="referrer" content="no-referrer"/>
 

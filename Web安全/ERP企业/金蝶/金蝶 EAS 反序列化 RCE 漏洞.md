@@ -17,13 +17,15 @@ source_url: "https://github.com/SourByte05/Vulnerability-Wiki-PoC"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E9%87%91%E8%9D%B6/%E9%87%91%E8%9D%B6%20EAS%20%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%20RCE%20%E6%BC%8F%E6%B4%9E.md"
 fofa: "body=\"easSessionId\" || header=\"easportal\""
-fofa_unverified: "body="
 id: "vw-2865c860d2e6dde086753bda"
 entity_id: "ve-2865c860d2e6dde086753bda"
 schema_version: "1"
+previous_fofa_unverified: "body="
 ---
 
 # 金蝶EAS appUtil list Fastjson DNS迹象
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 FOFA 的完整表达式已记入 `fofa`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 ## 条目说明
 

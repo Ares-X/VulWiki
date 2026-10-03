@@ -3,7 +3,6 @@ source: "wy876 漏洞文库"
 id: "vw-96ff2815ad10b3d49ba9916c"
 entity_id: "ve-96ff2815ad10b3d49ba9916c"
 schema_version: "1"
-fofa_unverified: "title="
 title: "深信服下一代防火墙NGAF loadfile存在任意文件读取漏洞"
 product: "Sangfor NGAF"
 record_type: "advisory"
@@ -20,9 +19,13 @@ review_date: "2026-10-02"
 side_effects: "读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要的响应，不能由接口可达推定敏感内容已泄露"
 source_url: "https://www.yuque.com/xiaokp7/ocvun2/xem61o3tiw39r3cr"
 source_status: "recorded"
+previous_fofa_unverified: "title="
+fofa: "title=\"SANGFOR | NGAF\""
 ---
 
 # 深信服下一代防火墙NGAF loadfile存在任意文件读取漏洞
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 FOFA 的完整表达式已记入 `fofa`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）

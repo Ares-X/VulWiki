@@ -17,13 +17,15 @@ source_url: "https://www.yuque.com/xiaokp7/ocvun2/zburq1ug9szxzm22"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/%E7%80%9A%E9%9C%96%E7%A7%91%E6%8A%80/%E7%80%9A%E9%9C%96%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8ISS-7000v2%E7%BD%91%E5%85%B3login_handler.cgi%E5%AD%98%E5%9C%A8%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md"
 fofa: "body=\"css/login_form_style-06.css\""
-fofa_unverified: "<font style="
 id: "vw-bbee76bb5f04296c9b67fd5a"
 entity_id: "ve-bbee76bb5f04296c9b67fd5a"
 schema_version: "1"
+previous_fofa_unverified: "<font style="
 ---
 
 # 瀚霖ISS-7000 v2网关 login_handler password命令注入
+
+> 指纹历史字段校订（2026-10-04）：现有完整平台查询保持原值；旧未核字段中的残片逐字迁入 `previous_*`。此迁移不代表已确定原文其他谓词的组合意图，未给出的 AND/OR 不猜补。后文残片字段的旧诊断描述校订前状态，查询仍不证明资产受影响。
 
 ## 条目说明
 

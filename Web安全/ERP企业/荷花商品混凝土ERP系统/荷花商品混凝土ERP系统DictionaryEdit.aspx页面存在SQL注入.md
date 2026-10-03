@@ -16,14 +16,16 @@ review_date: "2026-10-02"
 source_url: "https://www.yuque.com/xiaokp7/ocvun2/zf12hiwuxxr5b0hp"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E8%8D%B7%E8%8A%B1%E5%95%86%E5%93%81%E6%B7%B7%E5%87%9D%E5%9C%9FERP%E7%B3%BB%E7%BB%9F/%E8%8D%B7%E8%8A%B1%E5%95%86%E5%93%81%E6%B7%B7%E5%87%9D%E5%9C%9FERP%E7%B3%BB%E7%BB%9FDictionaryEdit.aspx%E9%A1%B5%E9%9D%A2%E5%AD%98%E5%9C%A8SQL%E6%B3%A8%E5%85%A5.md"
-fofa_unverified: "app.name=="
 hunter: "app.name==\"荷花商品混凝土ERP系统\""
 id: "vw-6f0418d9105230dbef12f4d5"
 entity_id: "ve-6f0418d9105230dbef12f4d5"
 schema_version: "1"
+previous_fofa_unverified: "app.name=="
 ---
 
 # 荷花商品混凝土ERP DictionaryEdit dict_key SQL 注入线索
+
+> 指纹历史字段校订（2026-10-04）：现有完整平台查询保持原值；旧未核字段中的残片逐字迁入 `previous_*`。此迁移不代表已确定原文其他谓词的组合意图，未给出的 AND/OR 不猜补。后文残片字段的旧诊断描述校订前状态，查询仍不证明资产受影响。
 
 ## 条目说明
 

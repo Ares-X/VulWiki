@@ -1,5 +1,5 @@
 ---
-version: "Docker version: 18.09.3"
+version: "unknown"
 source: "Threekiii/Vulnerability-Wiki"
 title: "Kubernetes 部署后门 CronJob"
 product: "Kubernetes CronJob正常功能滥用"
@@ -12,15 +12,19 @@ primary_identifiers: ""
 referenced_identifiers: ""
 identifier_role: "unknown"
 prerequisites: "在目标namespace有batch/cronjobs create权限且准入允许所请求Pod；实验授权ClusterRoleBinding"
-affected_versions: "Docker version: 18.09.3"
+affected_versions: "unknown"
 source_status: "unknown"
 side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
 id: "vw-10d4a99fd4ddda27d9065dbf"
 entity_id: "ve-10d4a99fd4ddda27d9065dbf"
 schema_version: "1"
+previous_version: "Docker version: 18.09.3"
+previous_affected_versions: "Docker version: 18.09.3"
 ---
 
 # Kubernetes 部署后门 CronJob
+
+> 版本字段校订（2026-10-04）：误填的版本字段原值逐字保存到对应 `previous_*` 字段。当前值区分正文声称的影响范围、实验环境与尚未知的范围；后文对该元数据误填的旧说明只描述校订前状态，未据此升级来源结论。
 
 <!-- vulwiki-editorial:start -->
 ## 校订与适用边界

@@ -17,13 +17,15 @@ source_url: "https://mp.weixin.qq.com/s/FvqC1I_G14AEQNztU0zn8A"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E7%94%A8%E5%8F%8BNC/%E7%94%A8%E5%8F%8B%20NC%20bsh-servlet-BshServlet%20%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md"
 fofa: "icon_hash=\"1085941792\""
-fofa_unverified: "icon_hash="
 id: "vw-e36aac3451ca81b1978572a9"
 entity_id: "ve-e36aac3451ca81b1978572a9"
 schema_version: "1"
+previous_fofa_unverified: "icon_hash="
 ---
 
 # 用友NC BshServlet暴露远程代码执行
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 FOFA 的完整表达式已记入 `fofa`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 ## 条目说明
 

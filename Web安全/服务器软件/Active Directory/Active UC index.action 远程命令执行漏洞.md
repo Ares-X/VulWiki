@@ -1,5 +1,5 @@
 ---
-version: "Active UC"
+version: "unknown"
 source: "Threekiii/Awesome-POC"
 title: "Active UC index.action 远程命令执行漏洞"
 product: "网动 Active UC"
@@ -12,7 +12,7 @@ primary_identifiers: "S2-045"
 referenced_identifiers: ""
 identifier_role: "primary"
 prerequisites: "Active UC部署受影响Struts组件、相关multipart解析入口可达；是否需登录未说明"
-affected_versions: "Active UC"
+affected_versions: "unknown"
 source_status: "unknown"
 side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
 id: "vw-957f926722660646da375d24"
@@ -20,9 +20,13 @@ entity_id: "ve-d33c63b51866d5f655f98501"
 schema_version: "1"
 canonical: "Web安全/商业软件/Active UC/Active-UC-index.action-远程命令执行漏洞.md"
 relation_type: "duplicate_of"
+previous_version: "Active UC"
+previous_affected_versions: "Active UC"
 ---
 
 # Active UC index.action 远程命令执行漏洞
+
+> 版本字段校订（2026-10-04）：误填的版本字段原值逐字保存到对应 `previous_*` 字段。当前值区分正文声称的影响范围、实验环境与尚未知的范围；后文对该元数据误填的旧说明只描述校订前状态，未据此升级来源结论。
 
 <!-- vulwiki-editorial:start -->
 ## 校订与适用边界

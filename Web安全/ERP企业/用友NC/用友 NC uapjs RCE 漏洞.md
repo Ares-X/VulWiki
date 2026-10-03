@@ -16,13 +16,16 @@ review_date: "2026-10-02"
 source_url: "https://mp.weixin.qq.com/s/OO6GIKWm9ld05Vc2WQhkRg"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E7%94%A8%E5%8F%8BNC/%E7%94%A8%E5%8F%8B%20NC%20uapjs%20RCE%20%E6%BC%8F%E6%B4%9E.md"
-fofa_unverified: "指纹**"
 id: "vw-d2a711147b9a8870fe268fee"
 entity_id: "ve-d2a711147b9a8870fe268fee"
 schema_version: "1"
+previous_fofa_unverified: "指纹**"
+fofa: "app=\"用友 - NC-Cloud\""
 ---
 
 # 用友NC/NCCloud/YonBIP jsinvoke saveXStreamConfig任意写入及JNDI链
+
+> 指纹字段校订（2026-10-04）：按原归档正文的明确平台标签及完整表达式恢复当前查询，旧误填或截取字段逐字保存在 `previous_*`；后文对此旧字段的诊断按当前字段阅读。仅经过本库保守语法与原字面核对，未在线运行查询，不把指纹命中视为漏洞存在。
 
 ## 条目说明
 

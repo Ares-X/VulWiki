@@ -16,14 +16,17 @@ review_date: "2026-10-02"
 source_url: "https://github.com/Threekiii/Vulnerability-Wiki"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E6%97%B6%E7%A9%BA%E6%99%BA%E5%8F%8B/%E7%94%A8%E5%8F%8B%E6%97%B6%E7%A9%BA-KSOA-V9.0-%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E.md"
-fofa_unverified: ".info/"
 category_recommendation: "ERP / 用友 KSOA"
 id: "vw-5301a1a20708e8791f97755d"
 entity_id: "ve-5301a1a20708e8791f97755d"
 schema_version: "1"
+previous_fofa_unverified: ".info/"
+fofa: "app=\"用友-时空KSOA\""
 ---
 
 # 用友时空KSOA ImageUpload上传
+
+> 指纹字段校订（2026-10-04）：按原归档正文的明确平台标签及完整表达式恢复当前查询，旧误填或截取字段逐字保存在 `previous_*`；后文对此旧字段的诊断按当前字段阅读。仅经过本库保守语法与原字面核对，未在线运行查询，不把指纹命中视为漏洞存在。
 
 ## 条目说明
 

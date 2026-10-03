@@ -11,15 +11,18 @@ primary_identifiers: ""
 referenced_identifiers: ""
 identifier_role: "unknown"
 prerequisites: "Claims <=4.0.2; initialization endpoint accessibility and auth state unspecified"
-fofa_unverified: "body="
 source_status: "unknown"
 side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
 id: "vw-b84650f9cc3b78e577fe3388"
 entity_id: "ve-b84650f9cc3b78e577fe3388"
 schema_version: "1"
+previous_fofa_unverified: "body="
+fofa: "body=\"CGI acmailer\""
 ---
 
 # Acmailer邮件系统init_ctl存在远程命令执行漏洞
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 FOFA 的完整表达式已记入 `fofa`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 <!-- vulwiki-editorial:start -->
 ## 校订与适用边界

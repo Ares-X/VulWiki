@@ -3,7 +3,6 @@ source: "MrWQ/vulnerability-paper"
 id: "vw-ea4a4f7e426627a4e76350bb"
 entity_id: "ve-ea4a4f7e426627a4e76350bb"
 schema_version: "1"
-fofa_unverified: "搜索语句"
 title: "【0day】捷诚管理信息系统 CWSFinanceCommon SQL 注入漏洞 (附 nuclei poc)"
 product: "捷诚EnjoyRMIS管理信息系统；Nuclei仅检测工具"
 record_type: "vulnerability"
@@ -20,9 +19,13 @@ review_date: "2026-10-02"
 side_effects: "延时探针会占用线程或数据库连接；需记录基线和对照，单次慢响应或超时不足判定注入"
 source_url: "https://mp.weixin.qq.com/s/tUSLho32uZGLMJVYUScchw"
 source_status: "recorded"
+previous_fofa_unverified: "搜索语句"
+fofa: "body=\"/Scripts/EnjoyMsg.js\""
 ---
 
 # 【0day】捷诚管理信息系统 CWSFinanceCommon SQL 注入漏洞 (附 nuclei poc)
+
+> 指纹字段校订（2026-10-04）：按原归档正文的明确平台标签及完整表达式恢复当前查询，旧误填或截取字段逐字保存在 `previous_*`；后文对此旧字段的诊断按当前字段阅读。仅经过本库保守语法与原字面核对，未在线运行查询，不把指纹命中视为漏洞存在。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）

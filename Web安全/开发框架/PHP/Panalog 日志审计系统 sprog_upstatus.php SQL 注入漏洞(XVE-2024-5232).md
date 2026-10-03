@@ -1,6 +1,6 @@
 ---
 cnvd: ""
-fofa: ""
+fofa: "body=\"Maintain/cloud_index.php\""
 source: "SourByte05/Vulnerability-Wiki-PoC"
 product: "Panalog 日志审计系统"
 record_type: "advisory"
@@ -12,7 +12,6 @@ referenced_identifiers: ""
 identifier_role: "primary"
 identifier_status: "unknown"
 category_recommendation: "Web安全/其他软件/Panalog"
-fofa_unverified: "body="
 title: "Panalog 日志审计系统 sprog_upstatus.php SQL 注入漏洞(XVE-2024-5232)"
 prerequisites: "来源所述条件，未列明部分仍待核：没有版本或鉴权范围"
 side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
@@ -20,6 +19,7 @@ source_status: "unknown"
 id: "vw-904fb8cb0c10ba3088384935"
 entity_id: "ve-904fb8cb0c10ba3088384935"
 schema_version: "1"
+previous_fofa_unverified: "body="
 ---
 
 ## 核对与使用边界
@@ -46,6 +46,8 @@ schema_version: "1"
 历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Panalog 日志审计系统 sprog_upstatus.php SQL 注入漏洞(XVE-2024-5232)
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 FOFA 的完整表达式已记入 `fofa`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 # 漏洞描述
 

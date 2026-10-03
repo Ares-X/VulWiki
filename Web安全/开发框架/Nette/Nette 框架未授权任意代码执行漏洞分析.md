@@ -109,7 +109,7 @@ Nette\\Application\\Routers\\RouteList->Nette\\Routing\\RouteList->Nette\\Applic
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/nTljOhrUdlVdEyZttSy3icOYhBcd2aCePHZZIic1PchegoCu2bicldic5JBJcGC8FGjvtGuPrUCcf33BZNQLJiaWdLg/640?wx_fmt=png)
 
-继续跟进到 173 行，调用了 $params\[$name\] = $meta\[self::FILTER\_IN\]((string) $params\[$name\]) 处理 $params，其中 $meta\[self::FILTER\_IN\] 对应了 path2presenter 处理控制器部分，将 nette.micro 转成 Nette:Micro。
+继续跟进到 173 行，调用了 `$params[$name] = $meta[self::FILTER_IN]((string) $params[$name])` 处理 `$params`，其中 `$meta[self::FILTER_IN]` 对应了 `path2presenter` 处理控制器部分，将 `nette.micro` 转成 `Nette:Micro`。
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/nTljOhrUdlVdEyZttSy3icOYhBcd2aCeP85NspQiaQENia82R7SfPQR1uWY4OoU3s9fTTibecicoNtxnMH3DZpGQOfA/640?wx_fmt=png)
 

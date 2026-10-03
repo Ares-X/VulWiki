@@ -10,16 +10,19 @@ identifier_status: "unknown"
 primary_identifiers: ""
 referenced_identifiers: ""
 identifier_role: "unknown"
-fofa_unverified: "body="
 source_status: "unknown"
 prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
 side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
 id: "vw-5df05a4fa3da5e3e971c7527"
 entity_id: "ve-5df05a4fa3da5e3e971c7527"
 schema_version: "1"
+previous_fofa_unverified: "body="
+fofa: "body=\"/js/lib/slimscroll.js\""
 ---
 
 # 极简云验证系统download存在任意文件读取漏洞
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 FOFA 的完整表达式已记入 `fofa`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 <!-- vulwiki-editorial:start -->
 ## 校订与适用边界

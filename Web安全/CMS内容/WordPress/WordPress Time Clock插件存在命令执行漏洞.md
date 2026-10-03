@@ -1,5 +1,5 @@
 ---
-fofa: ""
+fofa: "body=\"/wp-content/plugins/time-clock/\" || body=\"/wp-content/plugins/time-clock-pro/\""
 source: "SourByte05/Vulnerability-Wiki-PoC"
 product: "WordPress Time Clock / Time Clock Pro"
 record_type: "unknown"
@@ -10,7 +10,6 @@ primary_identifiers: ""
 referenced_identifiers: ""
 identifier_role: "unknown"
 identifier_status: "unknown"
-fofa_unverified: "body="
 title: "WordPress Time Clock插件存在命令执行漏洞"
 prerequisites: "来源所述条件，未列明部分仍待核：vulnerable versions absent; unauth AJAX claimed"
 side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
@@ -18,6 +17,7 @@ source_status: "unknown"
 id: "vw-fcac906c2b2ee85c83ab4fc2"
 entity_id: "ve-fcac906c2b2ee85c83ab4fc2"
 schema_version: "1"
+previous_fofa_unverified: "body="
 ---
 
 ## 核对与使用边界
@@ -41,6 +41,8 @@ schema_version: "1"
 历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # WordPress Time Clock插件存在命令执行漏洞
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 FOFA 的完整表达式已记入 `fofa`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 # 漏洞描述
 

@@ -1,5 +1,5 @@
 ---
-version: "NPS"
+version: "unknown；原文“漏洞影响”处仅写 NPS，未列影响版本或构建"
 source: "Threekiii/Vulnerability-Wiki"
 title: "NPS auth_key 未授权访问漏洞"
 product: "NPS内网穿透管理端"
@@ -12,15 +12,19 @@ primary_identifiers: ""
 referenced_identifiers: ""
 identifier_role: "unknown"
 prerequisites: "auth_key未配置/空值、服务器时间与提供timestamp差不超过20秒、管理端可达"
-affected_versions: "NPS"
+affected_versions: "unknown；原文“漏洞影响”处仅写 NPS，未列影响版本或构建"
 source_status: "unknown"
 side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
 id: "vw-c615012ef7d6248a58265dee"
 entity_id: "ve-c615012ef7d6248a58265dee"
 schema_version: "1"
+previous_version: "NPS"
+previous_affected_versions: "NPS"
 ---
 
 # NPS auth_key 未授权访问漏洞
+
+> 版本字段校订（2026-10-04）：代码、命令、路径、产品名或章节标记误入版本字段的值已逐字保存到对应 `previous_*` 字段；当前版本字段只记正文明确的来源范围，无范围时记为 unknown。后文对此元数据误填的旧说明描述校订前状态，其余实验条件与待核项仍按原文保留。
 
 <!-- vulwiki-editorial:start -->
 ## 校订与适用边界

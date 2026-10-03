@@ -1,5 +1,5 @@
 ---
-version: "Docker version: 18.09.3"
+version: "unknown：原文 Docker 18.09.3 是实验环境，未给出影响版本范围；适用性依本文配置与权限前提"
 source: "Threekiii/Vulnerability-Wiki"
 title: "Kubernetes 部署 Shadow API Server"
 product: "Kubernetes Shadow API Server技术"
@@ -12,15 +12,19 @@ primary_identifiers: ""
 referenced_identifiers: ""
 identifier_role: "unknown"
 prerequisites: "能在控制平面节点创建具必要hostPath/网络访问的Pod、取得API/etcd配置证书并绕过或满足准入策略；非仅任意namespace创建Pod即可"
-affected_versions: "Docker version: 18.09.3"
+affected_versions: "unknown：原文 Docker 18.09.3 是实验环境，未给出影响版本范围；适用性依本文配置与权限前提"
 source_status: "unknown"
 side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
 id: "vw-fdca401f4ee02c4dd61be900"
 entity_id: "ve-fdca401f4ee02c4dd61be900"
 schema_version: "1"
+previous_version: "Docker version: 18.09.3"
+previous_affected_versions: "Docker version: 18.09.3"
 ---
 
 # Kubernetes 部署 Shadow API Server
+
+> 版本字段校订（2026-10-04）：Docker 18.09.3 是原文实验运行时版本，不能作为此配置或权限问题的影响范围。`version` 与 `affected_versions` 改为明确待核，旧值保存在 `previous_*`；实验组件清单及全部 YAML、命令与结果原样保留。后文相关元数据误填说明描述校订前状态。
 
 <!-- vulwiki-editorial:start -->
 ## 校订与适用边界

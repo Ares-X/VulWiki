@@ -1,5 +1,5 @@
 ---
-version: "Panabit iXCache"
+version: "unknown；原文“漏洞影响”处仅写 Panabit iXCache，未列版本范围"
 source: "Threekiii/Vulnerability-Wiki"
 id: "vw-30632cce8d7629049c572243"
 entity_id: "ve-30632cce8d7629049c572243"
@@ -20,9 +20,12 @@ review_date: "2026-10-02"
 side_effects: "时间/NTP 设置会改变设备时钟及同步配置，可能影响日志、证书和业务；需记录原值并在隔离实验后恢复"
 source_status: "unknown"
 canonical: "Web安全/网络设备/Panabit/Panabit-iXCache-date_config-后台命令执行漏洞.md"
+previous_version: "Panabit iXCache"
 ---
 
 # Panabit iXCache date_config 后台命令执行漏洞
+
+> 版本字段校订（2026-10-04）：代码、命令、路径、产品名或章节标记误入版本字段的值已逐字保存到对应 `previous_*` 字段；当前版本字段只记正文明确的来源范围，无范围时记为 unknown。后文对此元数据误填的旧说明描述校订前状态，其余实验条件与待核项仍按原文保留。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）

@@ -3,7 +3,6 @@ source: "wy876 漏洞文库"
 id: "vw-e7b598ae211bfbeebb4f2631"
 entity_id: "ve-e7b598ae211bfbeebb4f2631"
 schema_version: "1"
-fofa_unverified: "app.name="
 title: "启明星辰天玥运维安全网关tagid参数存在SQL注入漏洞"
 product: "启明星辰天玥运维安全网关"
 record_type: "advisory"
@@ -20,9 +19,13 @@ review_date: "2026-10-02"
 side_effects: "延时探针会占用线程或数据库连接；需记录基线和对照，单次慢响应或超时不足判定注入"
 source_url: "https://www.yuque.com/xiaokp7/ocvun2/lli5osp0pzdm1zdo"
 source_status: "recorded"
+previous_fofa_unverified: "app.name="
+hunter: "app.name=\"启明星辰天玥运维安全网关\""
 ---
 
 # 启明星辰天玥运维安全网关tagid参数存在SQL注入漏洞
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 Hunter 的完整表达式已记入 `hunter`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）

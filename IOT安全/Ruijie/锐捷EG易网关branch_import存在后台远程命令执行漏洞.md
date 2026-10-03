@@ -1,5 +1,5 @@
 ---
-version: "锐捷EG易网关"
+version: "unknown"
 source: "wy876 漏洞文库"
 id: "vw-f0757219e667584b00569824"
 entity_id: "ve-f0757219e667584b00569824"
@@ -20,9 +20,12 @@ review_date: "2026-10-02"
 side_effects: "执行文中载荷可能以目标进程权限启动命令或加载代码；权限受认证角色、操作系统账户及依赖版本约束，不能把 root/200 等通用字符串当成功证据"
 source_url: "https://www.yuque.com/xiaokp7/ocvun2/mdlrafum0t2146rf"
 source_status: "recorded"
+previous_version: "锐捷EG易网关"
 ---
 
 # 锐捷 EG易网关branch_import存在后台远程命令执行漏洞
+
+> 版本字段校订（2026-10-04）：误填的版本字段原值逐字保存到对应 `previous_*` 字段。当前值区分正文声称的影响范围、实验环境与尚未知的范围；后文对该元数据误填的旧说明只描述校订前状态，未据此升级来源结论。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）

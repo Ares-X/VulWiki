@@ -16,14 +16,16 @@ review_date: "2026-10-02"
 source_url: "https://www.yuque.com/xiaokp7/ocvun2/vcx1cgrng7y325mg"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/%E9%82%A6%E6%B0%B8PM2/%E9%82%A6%E6%B0%B8PM2%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9FGlobal_UserLogin.aspxSQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md"
-fofa_unverified: "web.body="
 hunter: "web.body=\"PM2项目管理系统BS版增强工具.zip\""
 id: "vw-a8066302929c4d97c7d47657"
 entity_id: "ve-a8066302929c4d97c7d47657"
 schema_version: "1"
+previous_fofa_unverified: "web.body="
 ---
 
 # 邦永PM2项目管理系统 Global_UserLogin accId时间SQL 注入
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 Hunter 的完整表达式已记入 `hunter`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 ## 条目说明
 

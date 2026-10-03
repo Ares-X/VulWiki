@@ -3,7 +3,6 @@ source: "wy876 漏洞文库"
 id: "vw-0b05ae4842413bffe40b5ef4"
 entity_id: "ve-0b05ae4842413bffe40b5ef4"
 schema_version: "1"
-fofa_unverified: "</font>"
 title: "锐捷EG易网关export后台任意文件写入"
 product: "Ruijie EG易网关"
 record_type: "vulnerability"
@@ -20,9 +19,13 @@ review_date: "2026-10-02"
 side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
 source_url: "https://www.yuque.com/xiaokp7/ocvun2/rohc9xgqqcvcb1xr"
 source_status: "recorded"
+previous_fofa_unverified: "</font>"
+fofa: "app=\"Ruijie-EG易网关\" "
 ---
 
 # 锐捷EG易网关export后台任意文件写入
+
+> 指纹字段校订（2026-10-04）：按原归档正文的明确平台标签及完整表达式恢复当前查询，旧误填或截取字段逐字保存在 `previous_*`；后文对此旧字段的诊断按当前字段阅读。仅经过本库保守语法与原字面核对，未在线运行查询，不把指纹命中视为漏洞存在。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）

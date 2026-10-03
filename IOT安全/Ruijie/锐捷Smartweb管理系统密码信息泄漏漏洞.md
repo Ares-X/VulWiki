@@ -3,7 +3,6 @@ source: "wy876 漏洞文库"
 id: "vw-a4c6c1ca5500d7e67fa820e3"
 entity_id: "ve-a4c6c1ca5500d7e67fa820e3"
 schema_version: "1"
-fofa_unverified: "app.name="
 title: "锐捷 Smartweb管理系统密码信息泄漏漏洞"
 product: "Ruijie Smartweb"
 record_type: "vulnerability"
@@ -20,9 +19,13 @@ review_date: "2026-10-02"
 side_effects: "读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要的响应，不能由接口可达推定敏感内容已泄露"
 source_url: "https://www.yuque.com/xiaokp7/ocvun2/elegkbnby3vipdi9"
 source_status: "recorded"
+previous_fofa_unverified: "app.name="
+hunter: "app.name=\"Ruijie 锐捷 Smartweb\""
 ---
 
 # 锐捷 Smartweb管理系统密码信息泄漏漏洞
+
+> 指纹字段校订（2026-10-04）：按原归档正文的明确平台标签及完整表达式恢复当前查询，旧误填或截取字段逐字保存在 `previous_*`；后文对此旧字段的诊断按当前字段阅读。仅经过本库保守语法与原字面核对，未在线运行查询，不把指纹命中视为漏洞存在。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）

@@ -3,7 +3,6 @@ source: "wy876 漏洞文库"
 id: "vw-3ccdf7f878c304aa3dd9e106"
 entity_id: "ve-3ccdf7f878c304aa3dd9e106"
 schema_version: "1"
-fofa_unverified: "web.body="
 title: "天喻软件数据安全平台 Setmng.ashx 存在SQL注入漏洞"
 product: "天喻软件数据安全平台"
 record_type: "vulnerability"
@@ -20,9 +19,13 @@ review_date: "2026-10-02"
 side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
 source_url: "https://www.yuque.com/xiaokp7/ocvun2/eapt0rguixag6qgu"
 source_status: "recorded"
+previous_fofa_unverified: "web.body="
+hunter: "web.body=\"数据安全\"&&web.body=\"天喻\""
 ---
 
 # 天喻软件数据安全平台 Setmng.ashx 存在SQL注入漏洞
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 Hunter 的完整表达式已记入 `hunter`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）

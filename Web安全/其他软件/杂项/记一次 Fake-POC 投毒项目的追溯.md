@@ -1,9 +1,9 @@
 ---
 cve: "CVE-2021-21980"
 source: "gelusus/wxvl 公众号漏洞文库"
-identifier_role: "unknown"
+identifier_role: "reference"
 primary_identifiers: ""
-referenced_identifiers: ""
+referenced_identifiers: "CVE-2021-21980"
 identifier_status: "unknown"
 title: "记一次 Fake-POC 投毒项目的追溯"
 product: "疑似恶意CVE-2021-21980扫描器溯源案例"
@@ -21,9 +21,13 @@ source_note: "原始出处待补；仓库归档不等同原始披露"
 id: "vw-8c05b2574d09e7a2721277b3"
 entity_id: "ve-8c05b2574d09e7a2721277b3"
 schema_version: "1"
+previous_identifier_role: "unknown"
+previous_referenced_identifiers: ""
 ---
 
 # 记一次 Fake-POC 投毒项目的追溯
+
+> 编号角色校订（2026-10-04）：按归档技术正文区分主讨论编号与背景引用，更新 `primary_identifiers` / `referenced_identifiers` 及旧字段角色。旧编号原值、状态与正文保持原样，变更前字段逐字保存在 `previous_*`；后文旧的角色待核说明应按当前字段阅读。这里的角色判读不等于官方分配核验或漏洞复现。
 
 <!-- vulwiki-editorial-rebuild:system-misc -->
 ## 条目范围与校订

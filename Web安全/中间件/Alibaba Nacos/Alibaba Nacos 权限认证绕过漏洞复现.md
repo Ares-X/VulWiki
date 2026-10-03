@@ -1,5 +1,5 @@
 ---
-version: "参考链接："
+version: "原归档声称 Alibaba Nacos ≤2.0.0-ALPHA.1；2.0.0-ALPHA.1 是所列实验版本，修复版本未给。"
 source: "MrWQ/vulnerability-paper"
 title: "Alibaba Nacos 权限认证绕过漏洞复现"
 product: "Alibaba Nacos认证过滤"
@@ -13,16 +13,20 @@ referenced_identifiers: ""
 identifier_role: "primary"
 cve: "CVE-2021-29441"
 prerequisites: "受影响UA白名单机制启用、API可达；实验2.0.0-ALPHA.1"
-affected_versions: "参考链接："
+affected_versions: "原归档声称 Alibaba Nacos ≤2.0.0-ALPHA.1；2.0.0-ALPHA.1 是所列实验版本，修复版本未给。"
 source_url: "https://mp.weixin.qq.com/s/6IxFrlMrUWCd5qvVOVrcvw"
 source_status: "recorded"
 side_effects: "含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。"
 id: "vw-3bff7c5f3ccb616ba046fae3"
 entity_id: "ve-3bff7c5f3ccb616ba046fae3"
 schema_version: "1"
+previous_version: "参考链接："
+previous_affected_versions: "参考链接："
 ---
 
 # Alibaba Nacos 权限认证绕过漏洞复现
+
+> 版本字段校订（2026-10-04）：误填的版本字段原值逐字保存到对应 `previous_*` 字段。当前值区分正文声称的影响范围、实验环境与尚未知的范围；后文对该元数据误填的旧说明只描述校订前状态，未据此升级来源结论。
 
 <!-- vulwiki-editorial:start -->
 ## 校订与适用边界

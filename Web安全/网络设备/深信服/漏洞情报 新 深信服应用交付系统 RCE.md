@@ -3,7 +3,6 @@ source: "MrWQ/vulnerability-paper"
 id: "vw-1291a09996452df93a163af2"
 entity_id: "ve-1291a09996452df93a163af2"
 schema_version: "1"
-fofa_unverified: "网络测绘搜索"
 title: "【漏洞情报   新】深信服应用交付系统 RCE"
 product: "Sangfor应用交付AD"
 record_type: "vulnerability"
@@ -20,9 +19,13 @@ review_date: "2026-10-02"
 side_effects: "执行文中载荷可能以目标进程权限启动命令或加载代码；权限受认证角色、操作系统账户及依赖版本约束，不能把 root/200 等通用字符串当成功证据"
 source_url: "https://mp.weixin.qq.com/s/UD7UZUyrwqZ-s9vET65CVA"
 source_status: "recorded"
+previous_fofa_unverified: "网络测绘搜索"
+fofa: "fid=\"iaytNA57019/kADk8Nev7g==\""
 ---
 
 # 【漏洞情报   新】深信服应用交付系统 RCE
+
+> 指纹字段校订（2026-10-04）：按原归档正文的明确平台标签及完整表达式恢复当前查询，旧误填或截取字段逐字保存在 `previous_*`；后文对此旧字段的诊断按当前字段阅读。仅经过本库保守语法与原字面核对，未在线运行查询，不把指纹命中视为漏洞存在。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）

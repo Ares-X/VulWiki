@@ -1,5 +1,5 @@
 ---
-version: "Kyan"
+version: "unknown；原文“漏洞影响”处仅写 Kyan，未列产品版本"
 source: "Threekiii/Vulnerability-Wiki"
 id: "vw-773a1cebd918086e9f3629b3"
 entity_id: "ve-773a1cebd918086e9f3629b3"
@@ -20,9 +20,12 @@ review_date: "2026-10-02"
 side_effects: "文中删除动作会改变或移除账户/文件，可能中断业务；只在有可恢复快照的隔离环境核对前后状态；执行文中载荷可能以目标进程权限启动命令或加载代码；权限受认证角色、操作系统账户及依赖版本约束，不能把 root/200 等通用字符串当成功证据"
 source_status: "unknown"
 canonical: "Web安全/智能设备/Kyan/Kyan-网络监控设备-module.php-远程命令执行漏洞.md"
+previous_version: "Kyan"
 ---
 
 # Kyan 网络监控设备 module.php 远程命令执行漏洞
+
+> 版本字段校订（2026-10-04）：代码、命令、路径、产品名或章节标记误入版本字段的值已逐字保存到对应 `previous_*` 字段；当前版本字段只记正文明确的来源范围，无范围时记为 unknown。后文对此元数据误填的旧说明描述校订前状态，其余实验条件与待核项仍按原文保留。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）

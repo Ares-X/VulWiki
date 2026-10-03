@@ -16,14 +16,16 @@ review_date: "2026-10-02"
 source_url: "https://www.yuque.com/xiaokp7/ocvun2/cwhyqkk2t3hh660w"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/%E6%80%9D%E7%A6%8F%E8%BF%AA/%E6%80%9D%E7%A6%8F%E8%BF%AA%E8%BF%90%E7%BB%B4%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9Ftest_qrcode_b%E5%AD%98%E5%9C%A8%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md"
-fofa_unverified: "app.name="
 hunter: "app.name=\"Logbase 思福迪 运维安全系统\""
 id: "vw-0cffbd478dea60bd93f3a01e"
 entity_id: "ve-0cffbd478dea60bd93f3a01e"
 schema_version: "1"
+previous_fofa_unverified: "app.name="
 ---
 
 # 思福迪Logbase运维安全管理 test_qrcode_b z2命令注入
+
+> 指纹历史字段校订（2026-10-04）：现有完整平台查询保持原值；旧未核字段中的残片逐字迁入 `previous_*`。此迁移不代表已确定原文其他谓词的组合意图，未给出的 AND/OR 不猜补。后文残片字段的旧诊断描述校订前状态，查询仍不证明资产受影响。
 
 ## 条目说明
 
@@ -37,7 +39,7 @@ schema_version: "1"
 以下记录原始资料的证据边界。可以由原文确定的产品、编号及格式问题已在本条修订；没有原始证据的版本、响应和补丁信息仍待核实。
 
 - 明确Referer不能删但样例值为空，需给检查逻辑/合法值规则而非只标存在
-- 本篇![]()为空链接确实无目标
+- 本篇`![]()`为空链接确实无目标
 - 无文本命令结果/版本/修复，不能把图标指纹当漏洞证明
 
 ## 操作风险
@@ -75,7 +77,7 @@ z1=1&z2="|id;"&z3=bhost
 
 > 请求长度说明：原资料 Content-Length 为 23；保留原始标头；其数值未据实际请求体重新计算或验证。
 
-![]()
+> 归档图片缺失（2026-10-04）：原归档未保存图片目标，公开原图仍未找到。原引用完整保留为 `![]()`；不据此补写命令执行结果。
 
 
 > 原文: <https://www.yuque.com/xiaokp7/ocvun2/cwhyqkk2t3hh660w>

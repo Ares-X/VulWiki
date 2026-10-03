@@ -16,13 +16,16 @@ review_date: "2026-10-02"
 source_url: "https://mp.weixin.qq.com/s/L9SoaJfgsWI67DTFalc5SA"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E8%87%B4%E8%BF%9COA/%E8%87%B4%E8%BF%9C%20M3-server%20%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%20RCE%20%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0%EF%BC%88%E9%99%84%20POC%EF%BC%89.md"
-fofa_unverified: "搜索语句"
 id: "vw-889ca7263fef61c8a9a6d4d3"
 entity_id: "ve-889ca7263fef61c8a9a6d4d3"
 schema_version: "1"
+previous_fofa_unverified: "搜索语句"
+fofa: "title=\"M3-Server\""
 ---
 
 # 致远M3-Server / Fastjson+c3p0 消息日志写入→loadLog二次反序列化远程代码执行
+
+> 指纹字段校订（2026-10-04）：按原归档正文的明确平台标签及完整表达式恢复当前查询，旧误填或截取字段逐字保存在 `previous_*`；后文对此旧字段的诊断按当前字段阅读。仅经过本库保守语法与原字面核对，未在线运行查询，不把指纹命中视为漏洞存在。
 
 ## 条目说明
 

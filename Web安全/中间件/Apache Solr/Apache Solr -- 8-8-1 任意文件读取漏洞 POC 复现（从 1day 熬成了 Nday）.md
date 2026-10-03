@@ -1,5 +1,5 @@
 ---
-version: "docker pull solr"
+version: "unknown；文章仅记载执行 docker pull solr 并拉取当时 latest，未记录镜像版本"
 source: "MrWQ/vulnerability-paper"
 title: "Apache Solr -- 8-8-1 任意文件读取漏洞 POC 复现（从 1day 熬成了 Nday）"
 product: "Apache Solr"
@@ -18,9 +18,12 @@ side_effects: "原文未完整记录副作用、清理步骤或运行验证；�
 id: "vw-fa158f137dfb2d5328abad1f"
 entity_id: "ve-fa158f137dfb2d5328abad1f"
 schema_version: "1"
+previous_version: "docker pull solr"
 ---
 
 # Apache Solr -- 8-8-1 任意文件读取漏洞 POC 复现（从 1day 熬成了 Nday）
+
+> 版本字段校订（2026-10-04）：代码、命令、路径、产品名或章节标记误入版本字段的值已逐字保存到对应 `previous_*` 字段；当前版本字段只记正文明确的来源范围，无范围时记为 unknown。后文对此元数据误填的旧说明描述校订前状态，其余实验条件与待核项仍按原文保留。
 
 <!-- vulwiki-editorial:start -->
 ## 校订与适用边界

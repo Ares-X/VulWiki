@@ -17,13 +17,15 @@ source_url: "https://www.yuque.com/xiaokp7/ocvun2/rldp6r4s4n2hly4z"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/%E9%A3%9E%E8%AE%AF%E4%BA%91/%E9%A3%9E%E8%AE%AF%E4%BA%91%E4%BE%9B%E5%BA%94%E9%93%BE%E5%B9%B3%E5%8F%B0MyImportData%E5%89%8D%E5%8F%B0SQL%E6%B3%A8%E5%85%A5.md"
 fofa: "icon_hash=\"-2088130336\""
-fofa_unverified: "icon_hash="
 id: "vw-97b9fdfb30868842e83d4ac0"
 entity_id: "ve-97b9fdfb30868842e83d4ac0"
 schema_version: "1"
+previous_fofa_unverified: "icon_hash="
 ---
 
 # 飞讯云WMS/供应链平台 MyImportData opeid时间SQL 注入
+
+> 指纹历史字段校订（2026-10-04）：现有完整平台查询保持原值；旧未核字段中的残片逐字迁入 `previous_*`。此迁移不代表已确定原文其他谓词的组合意图，未给出的 AND/OR 不猜补。后文残片字段的旧诊断描述校订前状态，查询仍不证明资产受影响。
 
 ## 条目说明
 

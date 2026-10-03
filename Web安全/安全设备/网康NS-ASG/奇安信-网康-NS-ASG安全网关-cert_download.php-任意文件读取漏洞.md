@@ -1,5 +1,5 @@
 ---
-version: "网康 NS-ASG安全网关"
+version: "unknown；原文“漏洞影响”处仅写网康 NS-ASG 安全网关，未列固件版本"
 source: "Threekiii/Vulnerability-Wiki"
 id: "vw-313811595227c0aa519a3a5f"
 entity_id: "ve-313811595227c0aa519a3a5f"
@@ -19,9 +19,12 @@ archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bff
 review_date: "2026-10-02"
 side_effects: "读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要的响应，不能由接口可达推定敏感内容已泄露"
 source_status: "unknown"
+previous_version: "网康 NS-ASG安全网关"
 ---
 
 # 网康 NS-ASG安全网关 cert_download.php 任意文件读取漏洞
+
+> 版本字段校订（2026-10-04）：代码、命令、路径、产品名或章节标记误入版本字段的值已逐字保存到对应 `previous_*` 字段；当前版本字段只记正文明确的来源范围，无范围时记为 unknown。后文对此元数据误填的旧说明描述校订前状态，其余实验条件与待核项仍按原文保留。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）

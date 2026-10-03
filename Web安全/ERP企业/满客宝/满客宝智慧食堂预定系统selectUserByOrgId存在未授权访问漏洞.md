@@ -17,13 +17,15 @@ source_url: "https://www.yuque.com/xiaokp7/ocvun2/ikk2p8bp66933w1b"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E6%BB%A1%E5%AE%A2%E5%AE%9D/%E6%BB%A1%E5%AE%A2%E5%AE%9D%E6%99%BA%E6%85%A7%E9%A3%9F%E5%A0%82%E9%A2%84%E5%AE%9A%E7%B3%BB%E7%BB%9FselectUserByOrgId%E5%AD%98%E5%9C%A8%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE%E6%BC%8F%E6%B4%9E.md"
 fofa: "icon_hash=\"-409875651\" "
-fofa_unverified: "icon_hash="
 id: "vw-22312ebc4a751c5a3f513765"
 entity_id: "ve-22312ebc4a751c5a3f513765"
 schema_version: "1"
+previous_fofa_unverified: "icon_hash="
 ---
 
 # 满客宝智慧食堂预定 selectUserByOrgId信息暴露
+
+> 指纹历史字段校订（2026-10-04）：现有完整平台查询保持原值；旧未核字段中的残片逐字迁入 `previous_*`。此迁移不代表已确定原文其他谓词的组合意图，未给出的 AND/OR 不猜补。后文残片字段的旧诊断描述校订前状态，查询仍不证明资产受影响。
 
 ## 条目说明
 

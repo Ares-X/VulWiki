@@ -1,5 +1,5 @@
 ---
-version: "一、固件解包"
+version: "unknown；原文只记载 DIR-815 FW 1.01b14_1.01b14 分析样本，未给受影响固件范围"
 source: "MrWQ/vulnerability-paper"
 id: "vw-85afc1380391478060f2a3b4"
 entity_id: "ve-85afc1380391478060f2a3b4"
@@ -20,9 +20,12 @@ review_date: "2026-10-02"
 side_effects: "畸形输入可能使进程/内核崩溃、设备重启或服务不可用；本文崩溃线索不自动证明稳定代码执行，需隔离环境和可恢复配置；回连样例可能向外部地址发送网络请求或建立会话；应使用自己的隔离回连服务，DNS/LDAP 到达只能证明相应交互，不能单独证明 RCE；文中还涉及重启、账户/SSH、防火墙或根目录配置变更；逐步核对具体命令及恢复方式，避免影响管理通道或业务网络"
 source_url: "https://mp.weixin.qq.com/s/ZhNCwVp7HKowmP2SWcr_lw"
 source_status: "recorded"
+previous_version: "一、固件解包"
 ---
 
 # DLink 815 系列路由器栈溢出漏洞分析与复现
+
+> 版本字段校订（2026-10-04）：代码、命令、路径、产品名或章节标记误入版本字段的值已逐字保存到对应 `previous_*` 字段；当前版本字段只记正文明确的来源范围，无范围时记为 unknown。后文对此元数据误填的旧说明描述校订前状态，其余实验条件与待核项仍按原文保留。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）

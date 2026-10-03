@@ -17,13 +17,15 @@ source_url: "https://github.com/SourByte05/Vulnerability-Wiki-PoC"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/%E7%94%B3%E7%93%AF%E9%80%9A%E4%BF%A1%E8%AE%BE%E5%A4%87%E5%9C%A8%E7%BA%BF%E5%BD%95%E9%9F%B3%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/%E7%94%B3%E7%93%AF%E9%80%9A%E4%BF%A1%E8%AE%BE%E5%A4%87%E5%9C%A8%E7%BA%BF%E5%BD%95%E9%9F%B3%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F-index-%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB.md"
 fofa: "title=\"在线录音管理系统\""
-fofa_unverified: "title="
 id: "vw-3c5ea87a99a69a00b79870aa"
 entity_id: "ve-3c5ea87a99a69a00b79870aa"
 schema_version: "1"
+previous_fofa_unverified: "title="
 ---
 
 # 申瓯在线录音管理系统/ThinkPHP Lang load文件包含/读取
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 FOFA 的完整表达式已记入 `fofa`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 ## 条目说明
 

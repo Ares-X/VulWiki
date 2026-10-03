@@ -3,7 +3,6 @@ source: "MrWQ/vulnerability-paper"
 id: "vw-4d679045887b016be9dd112d"
 entity_id: "ve-4d679045887b016be9dd112d"
 schema_version: "1"
-fofa_unverified: "搜索语句"
 title: "中远麒麟堡垒机 SQL 注入漏洞复现 and 漏洞利用（附 poc 和 EXP）"
 product: "中远麒麟堡垒机"
 record_type: "vulnerability"
@@ -20,9 +19,13 @@ review_date: "2026-10-02"
 side_effects: "延时探针会占用线程或数据库连接；需记录基线和对照，单次慢响应或超时不足判定注入"
 source_url: "https://mp.weixin.qq.com/s/wLwCqGByeLqxq98wy4IuXA"
 source_status: "recorded"
+previous_fofa_unverified: "搜索语句"
+fofa: "body=\"url=\\\"admin.php?controller=admin_index&action=get_user_login_fristauth&username=\""
 ---
 
 # 中远麒麟堡垒机 SQL 注入漏洞复现 and 漏洞利用（附 poc 和 EXP）
+
+> 指纹字段校订（2026-10-04）：按原归档正文的明确平台标签及完整表达式恢复当前查询，旧误填或截取字段逐字保存在 `previous_*`；后文对此旧字段的诊断按当前字段阅读。仅经过本库保守语法与原字面核对，未在线运行查询，不把指纹命中视为漏洞存在。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）

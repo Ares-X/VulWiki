@@ -1,5 +1,5 @@
 ---
-version: "`show variables like 'general_log';    查看日志是否开启``set global general_log=on;    开"
+version: "unknown"
 source: "MrWQ/vulnerability-paper"
 title: "终极MySQL数据库利用姿势"
 product: "MySQL 与 Windows/PHP 部署"
@@ -12,16 +12,20 @@ primary_identifiers: ""
 referenced_identifiers: ""
 identifier_role: "unknown"
 prerequisites: "各链需独立列SQL权限、OS写权限、plugin_dir、secure_file_priv、Web解析或旧Windows条件"
-affected_versions: "`show variables like 'general_log';    查看日志是否开启``set global general_log=on;    开"
+affected_versions: "unknown"
 source_url: "https://mp.weixin.qq.com/s/QVC7PaEdVpLZCGdQXkcQIA"
 source_status: "recorded"
 side_effects: "含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。; 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。; 含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。"
 id: "vw-2697f6dba45bbaab769b8a64"
 entity_id: "ve-2697f6dba45bbaab769b8a64"
 schema_version: "1"
+previous_version: "`show variables like 'general_log';    查看日志是否开启``set global general_log=on;    开"
+previous_affected_versions: "`show variables like 'general_log';    查看日志是否开启``set global general_log=on;    开"
 ---
 
 # 终极MySQL数据库利用姿势
+
+> 版本字段校订（2026-10-04）：误填的版本字段原值逐字保存到对应 `previous_*` 字段。当前值区分正文声称的影响范围、实验环境与尚未知的范围；后文对该元数据误填的旧说明只描述校订前状态，未据此升级来源结论。
 
 <!-- vulwiki-editorial:start -->
 ## 校订与适用边界

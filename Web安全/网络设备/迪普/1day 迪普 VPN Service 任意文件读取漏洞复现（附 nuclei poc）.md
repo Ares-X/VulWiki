@@ -3,7 +3,6 @@ source: "MrWQ/vulnerability-paper"
 id: "vw-d17f51f032c70dcb5f96c218"
 entity_id: "ve-d17f51f032c70dcb5f96c218"
 schema_version: "1"
-fofa_unverified: "搜索语句"
 title: "【1day】迪普 VPN Service 任意文件读取漏洞复现（附 nuclei poc）"
 product: "DPtech SSL VPN Service"
 record_type: "vulnerability"
@@ -20,9 +19,13 @@ review_date: "2026-10-02"
 side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
 source_url: "https://mp.weixin.qq.com/s/L2Xe6VO80NOQSQv9txc0_Q"
 source_status: "recorded"
+previous_fofa_unverified: "搜索语句"
+fofa: "app=\"DPtech-SSLVPN\""
 ---
 
 # 【1day】迪普 VPN Service 任意文件读取漏洞复现（附 nuclei poc）
+
+> 指纹字段校订（2026-10-04）：按原归档正文的明确平台标签及完整表达式恢复当前查询，旧误填或截取字段逐字保存在 `previous_*`；后文对此旧字段的诊断按当前字段阅读。仅经过本库保守语法与原字面核对，未在线运行查询，不把指纹命中视为漏洞存在。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）

@@ -16,14 +16,16 @@ review_date: "2026-10-02"
 source_url: "https://www.yuque.com/xiaokp7/ocvun2/myq4mz6ygioo0z8s"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/%E6%B6%A6%E4%B9%BE%E6%8A%A5%E8%A1%A8/%E6%B6%A6%E4%B9%BE%E6%8A%A5%E8%A1%A8InputServlet%E5%AD%98%E5%9C%A8%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E.md"
-fofa_unverified: "app.name="
 hunter: "app.name=\"润乾报表平台\""
 id: "vw-c806177e53fc3ecee875b88b"
 entity_id: "ve-c806177e53fc3ecee875b88b"
 schema_version: "1"
+previous_fofa_unverified: "app.name="
 ---
 
 # 润乾报表 InputServlet action13配置读取
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 Hunter 的完整表达式已记入 `hunter`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 ## 条目说明
 

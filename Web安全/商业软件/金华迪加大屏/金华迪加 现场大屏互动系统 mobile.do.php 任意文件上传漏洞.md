@@ -17,13 +17,15 @@ source_url: "https://github.com/SourByte05/Vulnerability-Wiki-PoC"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/%E9%87%91%E5%8D%8E%E8%BF%AA%E5%8A%A0%E5%A4%A7%E5%B1%8F/%E9%87%91%E5%8D%8E%E8%BF%AA%E5%8A%A0%20%E7%8E%B0%E5%9C%BA%E5%A4%A7%E5%B1%8F%E4%BA%92%E5%8A%A8%E7%B3%BB%E7%BB%9F%20mobile.do.php%20%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E.md"
 fofa: "body=\"/wall/themes/meepo/assets/images/defaultbg.jpg\" || title=\"现场活动大屏幕系统\""
-fofa_unverified: "body="
 id: "vw-eb97872aeaea795ca08fac7b"
 entity_id: "ve-eb97872aeaea795ca08fac7b"
 schema_version: "1"
+previous_fofa_unverified: "body="
 ---
 
 # 金华迪加现场大屏互动系统 mobile.do msg_uploadimg任意上传
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 FOFA 的完整表达式已记入 `fofa`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 ## 条目说明
 

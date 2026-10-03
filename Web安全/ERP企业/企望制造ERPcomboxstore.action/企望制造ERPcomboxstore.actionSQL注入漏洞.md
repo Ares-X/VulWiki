@@ -16,14 +16,16 @@ review_date: "2026-10-02"
 source_url: "https://www.yuque.com/xiaokp7/ocvun2/ry4xq0e8le5qgn5r"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E4%BC%81%E6%9C%9B%E5%88%B6%E9%80%A0ERPcomboxstore.action/%E4%BC%81%E6%9C%9B%E5%88%B6%E9%80%A0ERPcomboxstore.actionSQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md"
-fofa_unverified: "app.name="
 hunter: "app.name=\"企望制造ERP\""
 id: "vw-b8dcc1bb216adfb8a898586a"
 entity_id: "ve-b8dcc1bb216adfb8a898586a"
 schema_version: "1"
+previous_fofa_unverified: "app.name="
 ---
 
 # 企望制造ERP comboxstore任意SQL执行
+
+> 指纹历史字段校订（2026-10-04）：现有完整平台查询保持原值；旧未核字段中的残片逐字迁入 `previous_*`。此迁移不代表已确定原文其他谓词的组合意图，未给出的 AND/OR 不猜补。后文残片字段的旧诊断描述校订前状态，查询仍不证明资产受影响。
 
 ## 条目说明
 

@@ -17,13 +17,15 @@ source_url: "https://www.yuque.com/xiaokp7/ocvun2/ooo15ulb6mttxdqb"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/%E9%87%91%E5%8D%8E%E8%BF%AA%E5%8A%A0%E5%A4%A7%E5%B1%8F/%E9%87%91%E5%8D%8E%E8%BF%AA%E5%8A%A0%E7%BD%91%E7%BB%9C%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E7%8E%B0%E5%9C%BA%E5%A4%A7%E5%B1%8F%E4%BA%92%E5%8A%A8%E7%B3%BB%E7%BB%9Fmobile.do.php%E6%8E%A5%E5%8F%A3%E5%AD%98%E5%9C%A8%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E.md"
 fofa: "body=\"/wall/themes/meepo/assets/images/defaultbg.jpg\"||title=\"现场活动大屏幕系统\""
-fofa_unverified: "body="
 id: "vw-5586f1165f35da218a95d215"
 entity_id: "ve-5586f1165f35da218a95d215"
 schema_version: "1"
+previous_fofa_unverified: "body="
 ---
 
 # 金华迪加现场大屏互动系统 mobile.do msg_uploadimg任意上传
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 FOFA 的完整表达式已记入 `fofa`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 ## 条目说明
 

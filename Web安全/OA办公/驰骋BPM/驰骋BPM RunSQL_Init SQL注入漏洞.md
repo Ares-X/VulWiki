@@ -17,13 +17,15 @@ source_url: "https://github.com/SourByte05/Vulnerability-Wiki-PoC"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E9%A9%B0%E9%AA%8BBPM/%E9%A9%B0%E9%AA%8BBPM%20RunSQL_Init%20SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md"
 fofa: "icon_hash=\"-1564380241\" || body=\"正在登录流程&表单引擎设计器,请稍候\""
-fofa_unverified: "icon_hash="
 id: "vw-43406138542408b133cd19f4"
 entity_id: "ve-43406138542408b133cd19f4"
 schema_version: "1"
+previous_fofa_unverified: "icon_hash="
 ---
 
 # 驰骋BPM RunSQL_Init未授权SQL执行
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 FOFA 的完整表达式已记入 `fofa`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 ## 条目说明
 

@@ -1,5 +1,5 @@
 ---
-version: "Jupyter Notebook"
+version: "unknown"
 source: "Threekiii/Vulnerability-Wiki"
 title: "Jupyter Notebook 未授权访问远程命令执行漏洞"
 product: "Jupyter Notebook"
@@ -12,15 +12,19 @@ primary_identifiers: ""
 referenced_identifiers: ""
 identifier_role: "unknown"
 prerequisites: "Unauthenticated publicly reachable notebook with terminal execution enabled; unspecified version/config"
-affected_versions: "Jupyter Notebook"
+affected_versions: "unknown"
 source_status: "unknown"
 side_effects: "含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。"
 id: "vw-771fc6d7e0be5880aa346ea6"
 entity_id: "ve-771fc6d7e0be5880aa346ea6"
 schema_version: "1"
+previous_version: "Jupyter Notebook"
+previous_affected_versions: "Jupyter Notebook"
 ---
 
 # Jupyter Notebook 未授权访问远程命令执行漏洞
+
+> 版本字段校订（2026-10-04）：误填的版本字段原值逐字保存到对应 `previous_*` 字段。当前值区分正文声称的影响范围、实验环境与尚未知的范围；后文对该元数据误填的旧说明只描述校订前状态，未据此升级来源结论。
 
 <!-- vulwiki-editorial:start -->
 ## 校订与适用边界

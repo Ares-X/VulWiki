@@ -17,13 +17,15 @@ source_url: "https://github.com/SourByte05/Vulnerability-Wiki-PoC"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/%E6%87%82%E5%BE%AE%E7%99%BE%E6%8B%A9/%E6%87%82%E5%BE%AE%E7%99%BE%E6%8B%A9%E5%94%AF%C2%B7%E4%BE%9B%E5%BA%94%E9%93%BE%20RankingGoodsList2%20SQL%E6%B3%A8%E5%85%A5%E8%87%B4RCE%E6%BC%8F%E6%B4%9E.md"
 fofa: "body=\"/Content/Css/_SiteCss/\""
-fofa_unverified: "body="
 id: "vw-2af5e2ceed43ac9cab898494"
 entity_id: "ve-2af5e2ceed43ac9cab898494"
 schema_version: "1"
+previous_fofa_unverified: "body="
 ---
 
 # 懂微百择唯供应链 RankingGoodsList2 SQL注入声称到远程代码执行
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 FOFA 的完整表达式已记入 `fofa`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 ## 条目说明
 

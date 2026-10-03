@@ -1,5 +1,5 @@
 ---
-version: "飞视美 视频会议系统"
+version: "unknown；原文“漏洞影响”处仅写飞视美视频会议系统，未列产品版本或受影响 Struts 范围"
 source: "Threekiii/Awesome-POC"
 title: "飞视美 视频会议系统 Struts2 远程命令执行漏洞"
 product: "飞视美视频会议系统（Struts2）"
@@ -12,7 +12,7 @@ primary_identifiers: ""
 referenced_identifiers: ""
 identifier_role: "unknown"
 prerequisites: "受影响Struts参数处理、业务action可达；ipconfig为Windows示例"
-affected_versions: "飞视美 视频会议系统"
+affected_versions: "unknown；原文“漏洞影响”处仅写飞视美视频会议系统，未列产品版本或受影响 Struts 范围"
 source_status: "unknown"
 side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
 id: "vw-ffeed90fb297904d8674035f"
@@ -20,9 +20,13 @@ entity_id: "ve-43c5312d2df6dc9f56a2ebe4"
 schema_version: "1"
 canonical: "Web安全/商业软件/飞视美/飞视美-视频会议系统-Struts2-远程命令执行漏洞.md"
 relation_type: "duplicate_of"
+previous_version: "飞视美 视频会议系统"
+previous_affected_versions: "飞视美 视频会议系统"
 ---
 
 # 飞视美 视频会议系统 Struts2 远程命令执行漏洞
+
+> 版本字段校订（2026-10-04）：代码、命令、路径、产品名或章节标记误入版本字段的值已逐字保存到对应 `previous_*` 字段；当前版本字段只记正文明确的来源范围，无范围时记为 unknown。后文对此元数据误填的旧说明描述校订前状态，其余实验条件与待核项仍按原文保留。
 
 <!-- vulwiki-editorial:start -->
 ## 校订与适用边界

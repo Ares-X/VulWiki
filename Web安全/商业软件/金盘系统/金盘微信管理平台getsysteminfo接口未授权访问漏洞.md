@@ -16,14 +16,16 @@ review_date: "2026-10-02"
 source_url: "https://www.yuque.com/xiaokp7/ocvun2/fosg83r3n5fm40nv"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/%E9%87%91%E7%9B%98%E7%B3%BB%E7%BB%9F/%E9%87%91%E7%9B%98%E5%BE%AE%E4%BF%A1%E7%AE%A1%E7%90%86%E5%B9%B3%E5%8F%B0getsysteminfo%E6%8E%A5%E5%8F%A3%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE%E6%BC%8F%E6%B4%9E.md"
-fofa_unverified: "web.title="
 hunter: "web.title=\"微信管理后台\"&&web.icon==\"0488faca4c19046b94d07c3ee83cf9d6\""
 id: "vw-c910875a47e626bd0c8ce219"
 entity_id: "ve-c910875a47e626bd0c8ce219"
 schema_version: "1"
+previous_fofa_unverified: "web.title="
 ---
 
 # 金盘微信管理平台 getsysteminfo未授权账号信息泄露
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 Hunter 的完整表达式已记入 `hunter`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 ## 条目说明
 

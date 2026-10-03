@@ -1,5 +1,5 @@
 ---
-version: "狮子鱼CMS"
+version: "unknown"
 source: "Threekiii/Awesome-POC"
 product: "狮子鱼CMS"
 record_type: "analysis"
@@ -19,6 +19,7 @@ entity_id: "ve-fce4f3ecaab462642b5159ab"
 schema_version: "1"
 canonical: "Web安全/CMS内容/狮子鱼/狮子鱼CMS-ApigoodController.class.php-SQL注入漏洞.md"
 relation_type: "duplicate_of"
+previous_version: "狮子鱼CMS"
 ---
 
 ## 核对与使用边界
@@ -36,6 +37,8 @@ relation_type: "duplicate_of"
 历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # 狮子鱼CMS ApigoodController.class.php SQL注入漏洞
+
+> 版本字段校订（2026-10-04）：误填的版本字段原值逐字保存到对应 `previous_*` 字段。当前值区分正文声称的影响范围、实验环境与尚未知的范围；后文对该元数据误填的旧说明只描述校订前状态，未据此升级来源结论。
 
 ## 漏洞描述
 

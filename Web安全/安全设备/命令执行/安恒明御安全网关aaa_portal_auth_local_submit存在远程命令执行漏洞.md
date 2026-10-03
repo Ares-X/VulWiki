@@ -3,7 +3,6 @@ source: "wy876 漏洞文库"
 id: "vw-fdf68f95adee6f3977506551"
 entity_id: "ve-30d8561a4f6ee4a592853faf"
 schema_version: "1"
-fofa_unverified: "app.name="
 title: "安恒明御安全网关 aaa_portal_auth_wchat_submit 资料（原题 local_submit 错配）"
 product: "安恒明御安全网关"
 record_type: "vulnerability"
@@ -22,9 +21,13 @@ source_url: "https://www.yuque.com/xiaokp7/ocvun2/pb2c1ioegdqi8aft"
 source_status: "recorded"
 canonical: "Web安全/安全设备/命令执行/安恒明御安全网关aaa_portal_auth_wchat_submit存在远程命令执行漏洞.md"
 relation_type: "duplicate_of"
+previous_fofa_unverified: "app.name="
+hunter: "app.name=\"安恒明御安全网关\""
 ---
 
 # 安恒明御安全网关 aaa_portal_auth_wchat_submit 资料（原题 local_submit 错配）
+
+> 指纹字段校订（2026-10-04）：按原归档正文的明确平台标签及完整表达式恢复当前查询，旧误填或截取字段逐字保存在 `previous_*`；后文对此旧字段的诊断按当前字段阅读。仅经过本库保守语法与原字面核对，未在线运行查询，不把指纹命中视为漏洞存在。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）

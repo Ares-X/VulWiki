@@ -3,7 +3,6 @@ source: "SourByte05/Vulnerability-Wiki-PoC"
 id: "vw-3584385007e71c90fe99db9e"
 entity_id: "ve-3584385007e71c90fe99db9e"
 schema_version: "1"
-fofa_unverified: "(title="
 title: "H3C iMC智能管理中心 autoDeploy.xhtml 远程代码执行漏洞"
 product: "H3C iMC/EIA"
 record_type: "vulnerability"
@@ -19,9 +18,13 @@ archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bff
 review_date: "2026-10-02"
 side_effects: "执行文中载荷可能以目标进程权限启动命令或加载代码；权限受认证角色、操作系统账户及依赖版本约束，不能把 root/200 等通用字符串当成功证据"
 source_status: "unknown"
+previous_fofa_unverified: "(title="
+fofa: "(title=\"用户自助服务\" && body=\"/selfservice/javax.faces.resource/\") || body=\"/selfservice/index.xhtml\""
 ---
 
 # H3C iMC智能管理中心 autoDeploy.xhtml 远程代码执行漏洞
+
+> 指纹字段校订（2026-10-04）：按原归档正文的明确平台标签及完整表达式恢复当前查询，旧误填或截取字段逐字保存在 `previous_*`；后文对此旧字段的诊断按当前字段阅读。仅经过本库保守语法与原字面核对，未在线运行查询，不把指纹命中视为漏洞存在。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）

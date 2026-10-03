@@ -1,5 +1,5 @@
 ---
-version: "{"
+version: "unknown；这是 FastJson 系列多段分析，受影响版本和依赖分支不同，不能压成单一范围"
 source: "MrWQ/vulnerability-paper"
 product: "Fastjson parser/cache/BCEL/file-write and post-exploitation examples"
 record_type: "analysis"
@@ -18,6 +18,7 @@ source_url: "https://forum.butian.net/share/2858"
 id: "vw-873ca7d1db87aaa96207e53f"
 entity_id: "ve-873ca7d1db87aaa96207e53f"
 schema_version: "1"
+previous_version: "{"
 ---
 
 ## 核对与使用边界
@@ -41,6 +42,8 @@ schema_version: "1"
 历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # 奇安信攻防社区 - Java 安全 - FastJson 系列详解
+
+> 版本字段校订（2026-10-04）：代码、命令、路径、产品名或章节标记误入版本字段的值已逐字保存到对应 `previous_*` 字段；当前版本字段只记正文明确的来源范围，无范围时记为 unknown。后文对此元数据误填的旧说明描述校订前状态，其余实验条件与待核项仍按原文保留。
 
 <meta name="referrer" content="no-referrer"/>
 

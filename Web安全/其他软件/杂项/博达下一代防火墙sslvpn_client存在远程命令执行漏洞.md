@@ -17,15 +17,17 @@ archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bff
 archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
 source_status: "recorded"
 source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
-fofa_unverified: "web.title=="
 hunter: "web.title==\"博达下一代防火墙\"||web.title==\"博达上网行为管理\""
 source_url: "https://www.yuque.com/xiaokp7/ocvun2/hypcbmrskmt1pm4v"
 id: "vw-07e3f3fd77011904ae2cd9a0"
 entity_id: "ve-07e3f3fd77011904ae2cd9a0"
 schema_version: "1"
+previous_fofa_unverified: "web.title=="
 ---
 
 # 博达下一代防火墙sslvpn_client存在远程命令执行漏洞
+
+> 指纹历史字段校订（2026-10-04）：现有完整平台查询保持原值；旧未核字段中的残片逐字迁入 `previous_*`。此迁移不代表已确定原文其他谓词的组合意图，未给出的 AND/OR 不猜补。后文残片字段的旧诊断描述校订前状态，查询仍不证明资产受影响。
 
 <!-- vulwiki-editorial-rebuild:system-misc -->
 ## 条目范围与校订

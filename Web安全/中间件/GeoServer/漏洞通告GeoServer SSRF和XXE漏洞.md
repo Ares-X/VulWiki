@@ -205,7 +205,7 @@ TDP规则id：S3100151638、 D24136 ， 模型/规则高于20240724000000
 ![](https://mmbiz.qpic.cn/mmbiz_png/Yv6ic9zgr5hTIdM9koHZFkrtYe5WU5rHxSDicbiaNFjEBAs1rojKGviaJGjOGd9KwKzN4aSpnNZDA5UWpY2E0JAnNg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1 "")  
   
   
-[点此电话咨询]()  
+点此电话咨询  
   
   
   

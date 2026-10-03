@@ -17,13 +17,15 @@ source_url: "https://github.com/SourByte05/Vulnerability-Wiki-PoC"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E8%87%B4%E8%BF%9COA/%E8%87%B4%E8%BF%9C%E4%BA%92%E8%81%94-OA%20%E5%89%8D%E5%8F%B0fileUpload.do%20%E7%BB%95%E8%BF%87%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E.md"
 fofa: "title=\"协同管理软件 V5.6SP1\""
-fofa_unverified: "title="
 id: "vw-1d3798314165d47bd7385d91"
 entity_id: "ve-1d3798314165d47bd7385d91"
 schema_version: "1"
+previous_fofa_unverified: "title="
 ---
 
 # 致远A6/A8 V5 fileUpload.do认证路径绕过→menu.do重命名写脚本链
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 FOFA 的完整表达式已记入 `fofa`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 ## 条目说明
 

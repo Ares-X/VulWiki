@@ -1,5 +1,5 @@
 ---
-version: "中科网威 NPFW防火墙"
+version: "unknown"
 source: "Threekiii/Vulnerability-Wiki"
 id: "vw-1c1ceaf27aa779a60e5609c7"
 entity_id: "ve-1c1ceaf27aa779a60e5609c7"
@@ -20,9 +20,12 @@ review_date: "2026-10-02"
 side_effects: "读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要的响应，不能由接口可达推定敏感内容已泄露"
 source_status: "unknown"
 canonical: "Web安全/安全设备/中科网威/中科网威-NPFW防火墙-CommandsPolling.php-任意文件读取漏洞.md"
+previous_version: "中科网威 NPFW防火墙"
 ---
 
 # 中科网威 NPFW防火墙 CommandsPolling.php 任意文件读取漏洞
+
+> 版本字段校订（2026-10-04）：误填的版本字段原值逐字保存到对应 `previous_*` 字段。当前值区分正文声称的影响范围、实验环境与尚未知的范围；后文对该元数据误填的旧说明只描述校订前状态，未据此升级来源结论。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）

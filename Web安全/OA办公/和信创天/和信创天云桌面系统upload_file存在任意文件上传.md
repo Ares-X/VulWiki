@@ -16,14 +16,16 @@ review_date: "2026-10-02"
 source_url: "https://www.yuque.com/xiaokp7/ocvun2/im6hi1mdzqn6l81q"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E5%92%8C%E4%BF%A1%E5%88%9B%E5%A4%A9/%E5%92%8C%E4%BF%A1%E5%88%9B%E5%A4%A9%E4%BA%91%E6%A1%8C%E9%9D%A2%E7%B3%BB%E7%BB%9Fupload_file%E5%AD%98%E5%9C%A8%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0.md"
-fofa_unverified: "web.body="
 hunter: "web.body=\"和信下一代云桌面\""
 id: "vw-b06cb1a9fe753878611ad6fc"
 entity_id: "ve-b06cb1a9fe753878611ad6fc"
 schema_version: "1"
+previous_fofa_unverified: "web.body="
 ---
 
 # 和信创天云桌面 upload_file.php任意文件上传
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 Hunter 的完整表达式已记入 `hunter`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 ## 条目说明
 

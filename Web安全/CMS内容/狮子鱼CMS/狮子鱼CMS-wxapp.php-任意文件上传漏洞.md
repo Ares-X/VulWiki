@@ -1,5 +1,5 @@
 ---
-version: "狮子鱼CMS"
+version: "unknown"
 source: "Threekiii/Vulnerability-Wiki"
 product: "狮子鱼CMS wxappGoods.doPageUpload"
 record_type: "unknown"
@@ -17,6 +17,7 @@ source_status: "unknown"
 id: "vw-3abb90bce96517e1c2ab473d"
 entity_id: "ve-3abb90bce96517e1c2ab473d"
 schema_version: "1"
+previous_version: "狮子鱼CMS"
 ---
 
 ## 核对与使用边界
@@ -36,6 +37,8 @@ schema_version: "1"
 历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # 狮子鱼CMS wxapp.php 任意文件上传漏洞
+
+> 版本字段校订（2026-10-04）：误填的版本字段原值逐字保存到对应 `previous_*` 字段。当前值区分正文声称的影响范围、实验环境与尚未知的范围；后文对该元数据误填的旧说明只描述校订前状态，未据此升级来源结论。
 
 ## 漏洞描述
 

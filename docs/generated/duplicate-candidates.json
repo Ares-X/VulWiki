@@ -165,6 +165,7 @@
     "decision": "manual-review-required",
     "key": "CNVD-2022-10270",
     "paths": [
+      "Web安全/其他软件/杂项/某 RCE 漏洞复现、排查与监测.md",
       "Web安全/桌面软件/向日葵/向日葵-check-远程命令执行漏洞-CNVD-2022-10270.md",
       "Web安全/桌面软件/向日葵/向日葵远程代码执行漏洞（CNVD-2022-10270）.md"
     ]
@@ -573,6 +574,15 @@
   {
     "basis": "shared-primary-identifier",
     "decision": "manual-review-required",
+    "key": "CVE-2017-0144",
+    "paths": [
+      "Web安全/其他软件/杂项/漏洞复现：CVE-2015-1635、CVE-2017-0144.md",
+      "系统安全/Windows/Windows远程溢出漏洞/（........） MS17-010 Windows 远程溢出漏洞 CVE-2017-0143.md"
+    ]
+  },
+  {
+    "basis": "shared-primary-identifier",
+    "decision": "manual-review-required",
     "key": "CVE-2017-0145",
     "paths": [
       "系统安全/Windows/Windows远程溢出漏洞/（........） MS17-010 Windows 远程溢出漏洞 CVE-2017-0143.md",
@@ -744,6 +754,7 @@
     "decision": "manual-review-required",
     "key": "CVE-2017-18349",
     "paths": [
+      "Web安全/其他软件/杂项/漏洞复现CVE-2017-18349（FastJson1-2-24 反序列化导致任意命令执行漏洞）.md",
       "Web安全/开发框架/Fastjson/FastJson 渗透测试.md",
       "Web安全/开发框架/Fastjson/两万字原创长文 完全零基础入门 Fastjson 系列漏洞（基础篇）.md",
       "Web安全/开发框架/Fastjson/框架安全之 Fastjson 渗透.md"
@@ -1879,7 +1890,8 @@
     "key": "CVE-2020-13942",
     "paths": [
       "Web安全/中间件/Apache Unomi/CVE -2020-13942 (Apache Unomi 远程代码执行漏洞) 复现.md",
-      "Web安全/中间件/Apache/Apache-Unomi-远程表达式代码执行漏洞-CVE-2020-13942.md"
+      "Web安全/中间件/Apache/Apache-Unomi-远程表达式代码执行漏洞-CVE-2020-13942.md",
+      "Web安全/其他软件/杂项/漏洞技术 - CVE-2020-13942.md"
     ]
   },
   {
@@ -1906,6 +1918,7 @@
     "key": "CVE-2020-1472",
     "paths": [
       "Web安全/其他软件/杂项/2020HW 期间公布漏洞总结（附部分漏洞 Poc、Exp）.md",
+      "Web安全/其他软件/杂项/漏洞技术 - cve-2020-1472.md",
       "系统安全/Windows/Windows 域控常见 0day 及利用漏洞汇集.md",
       "系统安全/Windows/Windows本地提权漏洞/（CVE-2020-1472）Windows Zerologon域提权漏洞.md",
       "系统安全/Windows/cve-2020-1472 微软 NetLogon 权限提升漏洞 附 exp.md"
@@ -2823,11 +2836,38 @@
   {
     "basis": "shared-primary-identifier",
     "decision": "manual-review-required",
+    "key": "CVE-2022-3602",
+    "paths": [
+      "Web安全/其他软件/杂项/漏洞复现无垠智能模糊测试系统实战复现OpenSSL高危漏洞.md",
+      "Web安全/开发框架/OpenSSL/已复现！OpenSSL多个高危漏洞安全风险通告.md"
+    ]
+  },
+  {
+    "basis": "shared-primary-identifier",
+    "decision": "manual-review-required",
     "key": "CVE-2022-4223",
     "paths": [
       "Web安全/数据库/pgAdmin/CVE-2022-4223 pgAdmin = 6.16 未授权命令执行漏洞.md",
       "Web安全/数据库/pgAdmin/pgAdmin 命令执行漏洞的三年.md",
       "Web安全/数据库/pgAdmin/pgAdmin-≤-6.16-无授权远程命令执行漏洞-CVE-2022-4223.md"
+    ]
+  },
+  {
+    "basis": "shared-primary-identifier",
+    "decision": "manual-review-required",
+    "key": "CVE-2022-42475",
+    "paths": [
+      "Web安全/其他软件/杂项/奇安信攻防社区 - CVE-2022-42475 FortiGate SSLVPN 堆溢出漏洞分析与利用.md",
+      "Web安全/其他软件/杂项/漏洞速递   CVE-2022-42475 VPN 远程代码执行漏洞.md"
+    ]
+  },
+  {
+    "basis": "shared-primary-identifier",
+    "decision": "manual-review-required",
+    "key": "CVE-2022-45460",
+    "paths": [
+      "Web安全/其他软件/杂项/一次渗透过程中的CVE-2022-45460撞洞RCE.md",
+      "系统安全/Windows/通过 ROP 实现 RCE.md"
     ]
   },
   {
@@ -2855,6 +2895,15 @@
     "paths": [
       "Web安全/网络设备/Cisco/Cisco IOS XE Web UI 命令执行漏洞(CVE-2023-20273)安全风险通告.md",
       "Web安全/网络设备/Cisco/原创Paper  Cisco IOS XE 系统 WebUI 未授权命令执行漏洞分析.md"
+    ]
+  },
+  {
+    "basis": "shared-primary-identifier",
+    "decision": "manual-review-required",
+    "key": "CVE-2023-20887",
+    "paths": [
+      "Web安全/云平台/VMware/（CVE-2023-20887）VMware Aria Operations for Networks未授权命令注入RCE漏洞.md",
+      "Web安全/其他软件/杂项/【安全通告】VMware Aria Operations for Networks代码执行漏洞CVE-2023-208.md"
     ]
   },
   {
@@ -3043,7 +3092,8 @@
     "paths": [
       "Web安全/OA办公/通达OA/通达 OA SQL 注入漏洞 (CVE-2023-4165CVE-2023-4166).md",
       "Web安全/OA办公/通达OA/通达 OA 俩 SQL 注入复现与分析.md",
-      "Web安全/其他软件/杂项/hvv 期间已公开的漏洞集合.md"
+      "Web安全/其他软件/杂项/hvv 期间已公开的漏洞集合.md",
+      "Web安全/其他软件/杂项/某达 oa 存在 SQL 注入漏洞 (CVE-2023-4166).md"
     ]
   },
   {
@@ -3127,6 +3177,15 @@
     "paths": [
       "Web安全/数据库/pgAdmin/pgAdmin 命令执行漏洞的三年.md",
       "Web安全/数据库/pgAdmin/pgAdmin-≤-7.6-后台远程命令执行漏洞-CVE-2023-5002.md"
+    ]
+  },
+  {
+    "basis": "shared-primary-identifier",
+    "decision": "manual-review-required",
+    "key": "CVE-2024-0012",
+    "paths": [
+      "Web安全/其他软件/杂项/【漏洞复现】Palo Alto PAN-OS身份认证绕过CVE-2024-0012及命令执行漏洞CVE-2024-947.md",
+      "Web安全/网络设备/Palo Alto/Palo Alto Networks PAN-OS存在远程命令执行漏洞CVE-2024-9474 附POC.md"
     ]
   },
   {
@@ -3385,6 +3444,24 @@
   {
     "basis": "shared-primary-identifier",
     "decision": "manual-review-required",
+    "key": "CVE-2024-30085",
+    "paths": [
+      "Web安全/其他软件/杂项/2024年6月微软补丁日多个高危漏洞安全风险通告.md",
+      "Web安全/其他软件/杂项/我只想要一个 CVE-2024-30085 Exploit 作为圣诞礼物.md"
+    ]
+  },
+  {
+    "basis": "shared-primary-identifier",
+    "decision": "manual-review-required",
+    "key": "CVE-2024-30088",
+    "paths": [
+      "Web安全/其他软件/杂项/2024年6月微软补丁日多个高危漏洞安全风险通告.md",
+      "Web安全/其他软件/杂项/【漏洞复现】CVE-2024-30088 Windows内核提权漏洞  附poc.md"
+    ]
+  },
+  {
+    "basis": "shared-primary-identifier",
+    "decision": "manual-review-required",
     "key": "CVE-2024-32002",
     "paths": [
       "Web安全/ERP企业/GitHub Enterprise Server/CVE-2024-32002 Git远程代码执行漏洞分析.md",
@@ -3507,6 +3584,15 @@
     "paths": [
       "Web安全/中间件/Apache OFBiz/Apache OfBiz CVE-2024-32113和CVE-2024-36104 漏洞 POC.md",
       "Web安全/中间件/Apache OFBiz/Apache-OFBiz-身份验证绕过导致远程代码执行-CVE-2024-38856.md"
+    ]
+  },
+  {
+    "basis": "shared-primary-identifier",
+    "decision": "manual-review-required",
+    "key": "CVE-2024-39914",
+    "paths": [
+      "Web安全/其他软件/杂项/【漏洞预警-已复现】FOGPROJECT 文件名命令注入漏洞（CVE-2024-39914）.md",
+      "Web安全/服务器软件/FOG Project/FOG Project export.php 命令注入与两阶段修复 CVE-2024-39914.md"
     ]
   },
   {
@@ -3650,6 +3736,24 @@
   {
     "basis": "shared-primary-identifier",
     "decision": "manual-review-required",
+    "key": "CVE-2024-9474",
+    "paths": [
+      "Web安全/其他软件/杂项/【漏洞复现】Palo Alto PAN-OS身份认证绕过CVE-2024-0012及命令执行漏洞CVE-2024-947.md",
+      "Web安全/网络设备/Palo Alto/Palo Alto Networks PAN-OS存在远程命令执行漏洞CVE-2024-9474 附POC.md"
+    ]
+  },
+  {
+    "basis": "shared-primary-identifier",
+    "decision": "manual-review-required",
+    "key": "CVE-2024-9935",
+    "paths": [
+      "Web安全/CMS内容/WordPress/2024 年 wordpress、d-link 等相关的多个 cve 漏洞 poc.md",
+      "Web安全/其他软件/杂项/【漏洞复现】Wordpress ElementorPageBuilder插件存在文件读取漏洞CVE-2024-9935.md"
+    ]
+  },
+  {
+    "basis": "shared-primary-identifier",
+    "decision": "manual-review-required",
     "key": "CVE-2025-13335",
     "paths": [
       "Web安全/开发框架/GitLab/GitLab 多个漏洞允许绕过 2FA 和发起 DoS 攻击.md",
@@ -3690,6 +3794,15 @@
     "paths": [
       "Web安全/其他软件/杂项/2025年5月企业必修安全漏洞清单.md",
       "Web安全/网络设备/Fortinet/Fortinet FortiOS 身份认证绕过漏洞(CVE-2025-22252)安全风险通告.md"
+    ]
+  },
+  {
+    "basis": "shared-primary-identifier",
+    "decision": "manual-review-required",
+    "key": "CVE-2025-2294",
+    "paths": [
+      "Web安全/CMS内容/WordPress/WordPress 未授权本地文件包含漏洞（CVE-2025-2294）.md",
+      "Web安全/其他软件/杂项/插件前台任意文件读取漏洞复现与分析 (CVE-2025-2294).md"
     ]
   },
   {
@@ -3741,10 +3854,38 @@
   {
     "basis": "shared-primary-identifier",
     "decision": "manual-review-required",
+    "key": "CVE-2025-27817",
+    "paths": [
+      "Web安全/中间件/Apache/Apache-Kafka-Clients-任意文件读取与SSRF-漏洞-CVE-2025-27817.md",
+      "Web安全/其他软件/杂项/【漏洞预警】Apache Kafka Connect高危漏洞（CVE-2025-27817）可致任意文件读取,影响核心数.md"
+    ]
+  },
+  {
+    "basis": "shared-primary-identifier",
+    "decision": "manual-review-required",
+    "key": "CVE-2025-30208",
+    "paths": [
+      "Web安全/其他软件/杂项/从CVE-2025-30208到CVE-2025-31125再到CVE-2025-31486.md",
+      "Web安全/其他软件/杂项/从CVE-2025-30208看网络空间安全专业.md",
+      "Web安全/开发框架/Vite/Vite-开发服务器任意文件读取漏洞绕过-CVE-2025-30208.md"
+    ]
+  },
+  {
+    "basis": "shared-primary-identifier",
+    "decision": "manual-review-required",
     "key": "CVE-2025-30220",
     "paths": [
       "Web安全/中间件/GeoServer/漏洞通告GeoServer SSRF和XXE漏洞.md",
       "Web安全/其他软件/杂项/CVE-2025-30220.md"
+    ]
+  },
+  {
+    "basis": "shared-primary-identifier",
+    "decision": "manual-review-required",
+    "key": "CVE-2025-31125",
+    "paths": [
+      "Web安全/其他软件/杂项/从CVE-2025-30208到CVE-2025-31125再到CVE-2025-31486.md",
+      "Web安全/开发框架/Vite/Vite inline/raw 文件访问校验的上游补丁对照（CVE-2025-31125）.md"
     ]
   },
   {
@@ -3762,7 +3903,17 @@
     "key": "CVE-2025-31324",
     "paths": [
       "Web安全/ERP企业/SAP/超过1200个SAP NetWeaver服务器容易受到主动利用漏洞的攻击.md",
-      "Web安全/ERP企业/SAP/（CVE-2025-31324）SAP NetWeaver Visual Composer未授权文件上传远程代码执行漏洞.md"
+      "Web安全/ERP企业/SAP/（CVE-2025-31324）SAP NetWeaver Visual Composer未授权文件上传远程代码执行漏洞.md",
+      "Web安全/其他软件/杂项/【二次更新已复现】SAP NetWeaver MetadataUploader 文件上传漏洞CVE-2025-3132.md"
+    ]
+  },
+  {
+    "basis": "shared-primary-identifier",
+    "decision": "manual-review-required",
+    "key": "CVE-2025-31486",
+    "paths": [
+      "Web安全/其他软件/杂项/【已复现】Vite 任意文件读取漏洞(CVE-2025-31486)安全风险通告.md",
+      "Web安全/其他软件/杂项/从CVE-2025-30208到CVE-2025-31125再到CVE-2025-31486.md"
     ]
   },
   {
@@ -3807,6 +3958,7 @@
     "decision": "manual-review-required",
     "key": "CVE-2025-40536",
     "paths": [
+      "Web安全/其他软件/杂项/【在野利用】SolarWinds Web Help Desk 未授权远程代码执行漏洞CVE-2025-40536&CV.md",
       "Web安全/服务器软件/SolarWinds/SolarWinds 修复四个严重漏洞，可导致未认证RCE和认证绕过.md",
       "Web安全/服务器软件/SolarWinds/【CVE-2025-40551】：Solarwinds Web Help Desk又一处反序列化漏洞.md"
     ]
@@ -3826,6 +3978,7 @@
     "decision": "manual-review-required",
     "key": "CVE-2025-40551",
     "paths": [
+      "Web安全/其他软件/杂项/【在野利用】SolarWinds Web Help Desk 未授权远程代码执行漏洞CVE-2025-40536&CV.md",
       "Web安全/服务器软件/SolarWinds/SolarWinds 修复四个严重漏洞，可导致未认证RCE和认证绕过.md",
       "Web安全/服务器软件/SolarWinds/【CVE-2025-40551】：Solarwinds Web Help Desk又一处反序列化漏洞.md",
       "Web安全/服务器软件/SolarWinds/太阳风 SolarWinds警告称Web帮助台存在严重的远程代码执行和身份验证绕过漏洞.md"
@@ -3973,6 +4126,15 @@
     "paths": [
       "系统安全/Linux/【已复现】Linux 本地提权漏洞CVE-2025-6018、CVE-2025-6019.md",
       "系统安全/从 allow_active 到 root 的本地提权/CVE-2025-6019 从 allow_active 到 root 的本地提权漏洞 (LPE).md"
+    ]
+  },
+  {
+    "basis": "shared-primary-identifier",
+    "decision": "manual-review-required",
+    "key": "CVE-2025-64111",
+    "paths": [
+      "Web安全/其他软件/杂项/2026-03-16 最新CVE漏洞情报和技术资讯头条.md",
+      "Web安全/其他软件/杂项/【已复现】Gogs 远程命令执行漏洞(CVE-2025-64111).md"
     ]
   },
   {
@@ -4184,6 +4346,15 @@
   {
     "basis": "shared-primary-identifier",
     "decision": "manual-review-required",
+    "key": "CVE-2026-24423",
+    "paths": [
+      "Web安全/其他软件/杂项/2026年1月企业必修安全漏洞清单.md",
+      "Web安全/其他软件/杂项/【已复现】SmarterTools SmarterMail 远程代码执行漏洞(CVE-2026-24423)安全风险通告.md"
+    ]
+  },
+  {
+    "basis": "shared-primary-identifier",
+    "decision": "manual-review-required",
     "key": "CVE-2026-24747",
     "paths": [
       "Web安全/开发框架/PyTorch/CVE-2026-24747：PyTorch模型加载功能曝出8.8分高危漏洞.md",
@@ -4211,10 +4382,28 @@
   {
     "basis": "shared-primary-identifier",
     "decision": "manual-review-required",
+    "key": "CVE-2026-25818",
+    "paths": [
+      "Web安全/其他软件/杂项/工业网关高危漏洞预警：CVE-2026-25823 无需认证即可实现远程代码执行.md",
+      "Web安全/智能设备/工业网关/工业网关惊现高危漏洞，全球逾21万台设备面临凭据失窃风险 CVE-2026-25818.md"
+    ]
+  },
+  {
+    "basis": "shared-primary-identifier",
+    "decision": "manual-review-required",
     "key": "CVE-2026-26956",
     "paths": [
       "Web安全/开发框架/vm2/vm2 Node.js 库漏洞可导致沙箱逃逸和任意代码执行.md",
       "Web安全/开发框架/vm2/vm2 沙箱严重漏洞可导致在宿主机执行代码.md"
+    ]
+  },
+  {
+    "basis": "shared-primary-identifier",
+    "decision": "manual-review-required",
+    "key": "CVE-2026-2844",
+    "paths": [
+      "Web安全/其他软件/杂项/高危预警  CVE-2026-2844：时间同步管理系统现关键认证漏洞，5G、电网、国防基础设施受影响.md",
+      "Web安全/商业软件/XSS/严重漏洞预警  Microchip TimePictra 存储型 XSS 漏洞影响关键基础设施管理系统.md"
     ]
   },
   {

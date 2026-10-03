@@ -18,14 +18,17 @@ archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
 source_status: "recorded"
 source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
 version_unverified: "用友 KSOA V9.0"
-fofa_unverified: "空间搜索引擎语句"
 source_url: "https://mp.weixin.qq.com/s/fmokpW-Saw1Cwn5Vw6uP_w"
 id: "vw-8a022cd6099a61ac89e1ab1d"
 entity_id: "ve-8a022cd6099a61ac89e1ab1d"
 schema_version: "1"
+previous_fofa_unverified: "空间搜索引擎语句"
+fofa: "app=\"用友-时空KSOA\""
 ---
 
 # 叮～你有新的速递！某友文件上传漏洞（附 EXP）
+
+> 指纹字段校订（2026-10-04）：按原归档正文的明确平台标签及完整表达式恢复当前查询，旧误填或截取字段逐字保存在 `previous_*`；后文对此旧字段的诊断按当前字段阅读。仅经过本库保守语法与原字面核对，未在线运行查询，不把指纹命中视为漏洞存在。
 
 <!-- vulwiki-editorial-rebuild:system-misc -->
 ## 条目范围与校订

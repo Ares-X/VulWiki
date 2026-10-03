@@ -3,7 +3,6 @@ source: "SourByte05/Vulnerability-Wiki-PoC"
 id: "vw-df93bdc70f9fb73d0df96300"
 entity_id: "ve-df93bdc70f9fb73d0df96300"
 schema_version: "1"
-fofa_unverified: "body="
 title: "瑞斯康达智能网关 RCE漏洞"
 product: "Raisecom智能网关"
 record_type: "vulnerability"
@@ -19,9 +18,13 @@ archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bff
 review_date: "2026-10-02"
 side_effects: "执行文中载荷可能以目标进程权限启动命令或加载代码；权限受认证角色、操作系统账户及依赖版本约束，不能把 root/200 等通用字符串当成功证据"
 source_status: "unknown"
+previous_fofa_unverified: "body="
+fofa: "body=\"/images/raisecom/back.gif\" && title==\"Web user login\""
 ---
 
 # 瑞斯康达智能网关 RCE漏洞
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 FOFA 的完整表达式已记入 `fofa`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）

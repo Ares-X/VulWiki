@@ -1,5 +1,5 @@
 ---
-version: "锐捷EG易网关"
+version: "unknown"
 source: "Threekiii/Vulnerability-Wiki"
 id: "vw-9cdcb03323c38d02d1a8164b"
 entity_id: "ve-9cdcb03323c38d02d1a8164b"
@@ -19,9 +19,12 @@ archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bff
 review_date: "2026-10-02"
 side_effects: "执行文中载荷可能以目标进程权限启动命令或加载代码；权限受认证角色、操作系统账户及依赖版本约束，不能把 root/200 等通用字符串当成功证据；读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要的响应，不能由接口可达推定敏感内容已泄露"
 source_status: "unknown"
+previous_version: "锐捷EG易网关"
 ---
 
 # 锐捷 EG易网关 cli.php 远程命令执行漏洞
+
+> 版本字段校订（2026-10-04）：误填的版本字段原值逐字保存到对应 `previous_*` 字段。当前值区分正文声称的影响范围、实验环境与尚未知的范围；后文对该元数据误填的旧说明只描述校订前状态，未据此升级来源结论。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）

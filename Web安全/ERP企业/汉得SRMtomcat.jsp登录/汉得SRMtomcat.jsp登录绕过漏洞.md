@@ -16,14 +16,16 @@ review_date: "2026-10-02"
 source_url: "https://www.yuque.com/xiaokp7/ocvun2/kb4n0lalk008g50l"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E6%B1%89%E5%BE%97SRMtomcat.jsp%E7%99%BB%E5%BD%95/%E6%B1%89%E5%BE%97SRMtomcat.jsp%E7%99%BB%E5%BD%95%E7%BB%95%E8%BF%87%E6%BC%8F%E6%B4%9E.md"
-fofa_unverified: "app.name="
 hunter: "app.name=\"汉得 SRM Going-Link\""
 id: "vw-90f3f89a60bdc08df85c9acf"
 entity_id: "ve-90f3f89a60bdc08df85c9acf"
 schema_version: "1"
+previous_fofa_unverified: "app.name="
 ---
 
 # 汉得SRM Going-Link tomcat.jsp会话字段认证绕过
+
+> 指纹历史字段校订（2026-10-04）：现有完整平台查询保持原值；旧未核字段中的残片逐字迁入 `previous_*`。此迁移不代表已确定原文其他谓词的组合意图，未给出的 AND/OR 不猜补。后文残片字段的旧诊断描述校订前状态，查询仍不证明资产受影响。
 
 ## 条目说明
 

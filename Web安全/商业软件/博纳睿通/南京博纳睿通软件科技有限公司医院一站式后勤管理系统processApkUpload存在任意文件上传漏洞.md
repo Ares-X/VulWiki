@@ -17,13 +17,15 @@ source_url: "https://www.yuque.com/xiaokp7/ocvun2/az2vflngvgmzr9ew"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/%E5%8D%9A%E7%BA%B3%E7%9D%BF%E9%80%9A/%E5%8D%97%E4%BA%AC%E5%8D%9A%E7%BA%B3%E7%9D%BF%E9%80%9A%E8%BD%AF%E4%BB%B6%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E5%8C%BB%E9%99%A2%E4%B8%80%E7%AB%99%E5%BC%8F%E5%90%8E%E5%8B%A4%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9FprocessApkUpload%E5%AD%98%E5%9C%A8%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E.md"
 fofa: "body=\"frameworkModuleJob\" "
-fofa_unverified: "body="
 id: "vw-a0ea757e75c9c3ba96f7af09"
 entity_id: "ve-a0ea757e75c9c3ba96f7af09"
 schema_version: "1"
+previous_fofa_unverified: "body="
 ---
 
 # 博纳睿通医院后勤管理平台HLMP processApkUpload任意后缀上传
+
+> 指纹历史字段校订（2026-10-04）：现有完整平台查询保持原值；旧未核字段中的残片逐字迁入 `previous_*`。此迁移不代表已确定原文其他谓词的组合意图，未给出的 AND/OR 不猜补。后文残片字段的旧诊断描述校订前状态，查询仍不证明资产受影响。
 
 ## 条目说明
 

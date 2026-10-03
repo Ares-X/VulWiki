@@ -1,5 +1,5 @@
 ---
-version: "Selea Selea Targa IP OCR-ANPR Camera iZero"
+version: "unknown"
 source: "Threekiii/Vulnerability-Wiki"
 id: "vw-39d91b39e240708a434b7a12"
 entity_id: "ve-3abd9763bd76ed4b8403deaa"
@@ -21,9 +21,12 @@ side_effects: "读取内容可能包含配置、账户或个人数据；应只�
 source_status: "unknown"
 canonical: "IOT安全/Selea/Selea OCR-ANPR摄像机 get_file.php 任意文件读取漏洞.md"
 relation_type: "duplicate_of"
+previous_version: "Selea Selea Targa IP OCR-ANPR Camera iZero"
 ---
 
 # Selea OCR-ANPR摄像机 get_file.php 任意文件读取漏洞
+
+> 版本字段校订（2026-10-04）：误填的版本字段原值逐字保存到对应 `previous_*` 字段。当前值区分正文声称的影响范围、实验环境与尚未知的范围；后文对该元数据误填的旧说明只描述校订前状态，未据此升级来源结论。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）

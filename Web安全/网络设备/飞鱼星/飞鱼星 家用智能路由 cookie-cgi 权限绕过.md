@@ -3,7 +3,6 @@ source: "MrWQ/vulnerability-paper"
 id: "vw-e5286972d3b8d339bc052324"
 entity_id: "ve-e5286972d3b8d339bc052324"
 schema_version: "1"
-fofa_unverified: "title="
 title: "飞鱼星 家用智能路由 cookie-cgi 权限绕过"
 product: "飞鱼星家用智能路由"
 record_type: "advisory"
@@ -20,9 +19,13 @@ review_date: "2026-10-02"
 side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
 source_url: "https://mp.weixin.qq.com/s/ARCZIR2C40KSu8SjLMYHSw"
 source_status: "recorded"
+previous_fofa_unverified: "title="
+fofa: "title=\"飞鱼星家用智能路由\""
 ---
 
 # 飞鱼星 家用智能路由 cookie-cgi 权限绕过
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 FOFA 的完整表达式已记入 `fofa`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）

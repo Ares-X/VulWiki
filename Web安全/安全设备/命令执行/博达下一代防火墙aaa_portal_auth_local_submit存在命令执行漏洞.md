@@ -3,7 +3,6 @@ source: "wy876 漏洞文库"
 id: "vw-f840bd6b5c10a80648e742c9"
 entity_id: "ve-f9e819af7e5b371bed2b94b8"
 schema_version: "1"
-fofa_unverified: "app.name=="
 title: "安恒 DASUSM web.user_add 账户创建资料（原题博达防火墙错配）"
 product: "安恒 DASUSM 明御运维审计与风险控制系统"
 record_type: "vulnerability"
@@ -22,9 +21,13 @@ source_url: "https://www.yuque.com/xiaokp7/ocvun2/ha1dzr2395nad5m3"
 source_status: "recorded"
 canonical: "Web安全/安全设备/安恒堡垒机/安恒堡垒机任意用户添加漏洞.md"
 relation_type: "duplicate_of"
+previous_fofa_unverified: "app.name=="
+hunter: "app.name==\"安恒明御运维审计与风险控制系统\""
 ---
 
 # 安恒 DASUSM web.user_add 账户创建资料（原题博达防火墙错配）
+
+> 指纹字段校订（2026-10-04）：按原归档正文的明确平台标签及完整表达式恢复当前查询，旧误填或截取字段逐字保存在 `previous_*`；后文对此旧字段的诊断按当前字段阅读。仅经过本库保守语法与原字面核对，未在线运行查询，不把指纹命中视为漏洞存在。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）

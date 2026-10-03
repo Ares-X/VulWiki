@@ -3,7 +3,6 @@ source: "wy876 漏洞文库"
 id: "vw-85caa238d695df00b96b9df5"
 entity_id: "ve-85caa238d695df00b96b9df5"
 schema_version: "1"
-fofa_unverified: "web.title=="
 title: "网康 NS-ASG应用安全网关存在远程命令执行漏洞"
 product: "网康Netentsec NS-ASG"
 record_type: "vulnerability"
@@ -20,9 +19,13 @@ review_date: "2026-10-02"
 side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
 source_url: "https://www.yuque.com/xiaokp7/ocvun2/zut666gci4d1s4sv"
 source_status: "recorded"
+previous_fofa_unverified: "web.title=="
+hunter: "web.title==\"网康 NS-ASG 应用安全网关\""
 ---
 
 # 网康 NS-ASG应用安全网关存在远程命令执行漏洞
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 Hunter 的完整表达式已记入 `hunter`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）

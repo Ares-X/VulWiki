@@ -17,13 +17,15 @@ source_url: "https://www.yuque.com/xiaokp7/ocvun2/kf3819ge5d4qk9wk"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/%E7%AB%9E%E4%BC%98%EF%BC%88%E5%B9%BF%E5%B7%9E%EF%BC%89%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/%E7%AB%9E%E4%BC%98%EF%BC%88%E5%B9%BF%E5%B7%9E%EF%BC%89%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E5%95%86%E4%B8%9A%E7%A7%9F%E8%B5%81%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E5%AD%98%E5%9C%A8Trace%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2.md"
 fofa: "web.body=\"商业租赁管理系统\""
-fofa_unverified: "web.body="
 id: "vw-b53399adbcf7828e30e0a1b9"
 entity_id: "ve-b53399adbcf7828e30e0a1b9"
 schema_version: "1"
+previous_fofa_unverified: "web.body="
 ---
 
 # 竞优商业租赁管理系统 ASP.NET Trace.axd信息泄露
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 FOFA 的完整表达式已记入 `fofa`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 ## 条目说明
 

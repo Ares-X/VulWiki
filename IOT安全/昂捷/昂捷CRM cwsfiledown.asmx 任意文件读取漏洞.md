@@ -3,7 +3,6 @@ source: "SourByte05/Vulnerability-Wiki-PoC"
 id: "vw-0f42fdeef0c651916d1bc913"
 entity_id: "ve-0f42fdeef0c651916d1bc913"
 schema_version: "1"
-fofa_unverified: "body="
 title: "昂捷CRM cwsfiledown.asmx 任意文件读取漏洞"
 product: "昂捷CRM/EnjoyRMIS软件"
 record_type: "vulnerability"
@@ -19,9 +18,13 @@ archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bff
 review_date: "2026-10-02"
 side_effects: "读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要的响应，不能由接口可达推定敏感内容已泄露"
 source_status: "unknown"
+previous_fofa_unverified: "body="
+fofa: "body=\"/ClientBin/slEnjoy.App.xap\""
 ---
 
 # 昂捷CRM cwsfiledown.asmx 任意文件读取漏洞
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 FOFA 的完整表达式已记入 `fofa`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）

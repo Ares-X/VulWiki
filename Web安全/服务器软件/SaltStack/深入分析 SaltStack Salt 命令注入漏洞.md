@@ -1,5 +1,5 @@
 ---
-version: "rest_cherrypy:"
+version: "unknown；原文说明 rest_cherrypy 模块默认未启用，但未列 Salt 受影响版本范围"
 source: "MrWQ/vulnerability-paper"
 title: "深入分析 SaltStack Salt 命令注入漏洞"
 product: "SaltStack Salt API salt-ssh"
@@ -13,16 +13,20 @@ referenced_identifiers: ""
 identifier_role: "primary"
 cve: "CVE-2020-16846; CVE-2020-25592"
 prerequisites: "非默认rest_cherrypy API启用；SSH可用；ssh_priv路径不存在触发gen_key；其他参数需要目标流程可达"
-affected_versions: "rest_cherrypy:"
+affected_versions: "unknown；原文说明 rest_cherrypy 模块默认未启用，但未列 Salt 受影响版本范围"
 source_url: "https://mp.weixin.qq.com/s/dR-Nq-pi2R5Aqz73XibD3Q"
 source_status: "recorded"
 side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
 id: "vw-ff77d87addd7f5a5358acf31"
 entity_id: "ve-ff77d87addd7f5a5358acf31"
 schema_version: "1"
+previous_version: "rest_cherrypy:"
+previous_affected_versions: "rest_cherrypy:"
 ---
 
 # 深入分析 SaltStack Salt 命令注入漏洞
+
+> 版本字段校订（2026-10-04）：代码、命令、路径、产品名或章节标记误入版本字段的值已逐字保存到对应 `previous_*` 字段；当前版本字段只记正文明确的来源范围，无范围时记为 unknown。后文对此元数据误填的旧说明描述校订前状态，其余实验条件与待核项仍按原文保留。
 
 <!-- vulwiki-editorial:start -->
 ## 校订与适用边界

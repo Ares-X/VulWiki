@@ -17,13 +17,15 @@ source_url: "https://www.yuque.com/xiaokp7/ocvun2/lgp6fcox304sdet3"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E6%96%B9%E5%A4%A9%E7%A7%91%E6%8A%80%28%E6%B7%B1%E5%9C%B3%29%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/%E6%96%B9%E5%A4%A9%E4%BA%91ERP%E7%B3%BB%E7%BB%9FGetSalQuatation%E5%AD%98%E5%9C%A8SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md"
 fofa: "body=\"AjaxMethods.asmx/GetCompanyItem\""
-fofa_unverified: "body="
 id: "vw-c7437487b0c73676c31aed07"
 entity_id: "ve-c7437487b0c73676c31aed07"
 schema_version: "1"
+previous_fofa_unverified: "body="
 ---
 
 # 方天云ERP GetSalQuatation ID SQL 注入
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 FOFA 的完整表达式已记入 `fofa`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 ## 条目说明
 

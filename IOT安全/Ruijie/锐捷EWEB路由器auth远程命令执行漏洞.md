@@ -3,7 +3,6 @@ source: "wy876 漏洞文库"
 id: "vw-da273f250303ddcfd14d2fdd"
 entity_id: "ve-da273f250303ddcfd14d2fdd"
 schema_version: "1"
-fofa_unverified: "body="
 title: "锐捷 EWEB路由器 auth 远程命令执行漏洞"
 product: "Ruijie睿易 LuCI EWEB"
 record_type: "vulnerability"
@@ -20,9 +19,13 @@ review_date: "2026-10-02"
 side_effects: "执行文中载荷可能以目标进程权限启动命令或加载代码；权限受认证角色、操作系统账户及依赖版本约束，不能把 root/200 等通用字符串当成功证据"
 source_url: "https://www.yuque.com/xiaokp7/ocvun2/vx00xdatfw3yw8px"
 source_status: "recorded"
+previous_fofa_unverified: "body="
+fofa: "body=\"cgi-bin/luci\" && body=\"#f47f3e\""
 ---
 
 # 锐捷 EWEB路由器 auth 远程命令执行漏洞
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 FOFA 的完整表达式已记入 `fofa`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）

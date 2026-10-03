@@ -1,9 +1,9 @@
 ---
 cve: "CVE-2022-3602"
 source: "gelusus/wxvl 公众号漏洞文库"
-identifier_role: "unknown"
-primary_identifiers: ""
-referenced_identifiers: ""
+identifier_role: "primary"
+primary_identifiers: "CVE-2022-3602"
+referenced_identifiers: "CVE-2022-3786"
 identifier_status: "unknown"
 title: "漏洞复现无垠智能模糊测试系统实战复现OpenSSL高危漏洞"
 product: "OpenSSL CVE-2022-3602/3786 商业模糊测试演示"
@@ -21,9 +21,14 @@ source_note: "原始出处待补；仓库归档不等同原始披露"
 id: "vw-09dfb39b35c93d7239c8e7d7"
 entity_id: "ve-09dfb39b35c93d7239c8e7d7"
 schema_version: "1"
+previous_identifier_role: "unknown"
+previous_primary_identifiers: ""
+previous_referenced_identifiers: ""
 ---
 
 # 漏洞复现无垠智能模糊测试系统实战复现OpenSSL高危漏洞
+
+> 编号角色校订（2026-10-04）：按归档技术正文区分主讨论编号与背景引用，更新 `primary_identifiers` / `referenced_identifiers` 及旧字段角色。旧编号原值、状态与正文保持原样，变更前字段逐字保存在 `previous_*`；后文旧的角色待核说明应按当前字段阅读。这里的角色判读不等于官方分配核验或漏洞复现。
 
 <!-- vulwiki-editorial-rebuild:system-misc -->
 ## 条目范围与校订

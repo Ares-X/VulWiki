@@ -3,7 +3,6 @@ source: "wy876 漏洞文库"
 id: "vw-d0266d2bb717cc27fd1d6a59"
 entity_id: "ve-d0266d2bb717cc27fd1d6a59"
 schema_version: "1"
-fofa_unverified: "app.name="
 title: "H3C CVM 前台任意文件上传漏洞"
 product: "H3C CAS CVM"
 record_type: "vulnerability"
@@ -20,9 +19,13 @@ review_date: "2026-10-02"
 side_effects: "文中写入/上传步骤会创建或覆盖目标文件；须先核对服务账户写权限、保存路径和脚本解析条件，验证后按原路径核查残留"
 source_url: "https://www.yuque.com/xiaokp7/ocvun2/nwfsvgilkdhpnsd0"
 source_status: "recorded"
+previous_fofa_unverified: "app.name="
+hunter: "app.name=\"H3C CAS 云服务\""
 ---
 
 # H3C CVM 前台任意文件上传漏洞
+
+> 指纹字段校订（2026-10-04）：按原归档正文的明确平台标签及完整表达式恢复当前查询，旧误填或截取字段逐字保存在 `previous_*`；后文对此旧字段的诊断按当前字段阅读。仅经过本库保守语法与原字面核对，未在线运行查询，不把指纹命中视为漏洞存在。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）

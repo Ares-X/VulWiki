@@ -4,7 +4,6 @@ source: "MrWQ/vulnerability-paper"
 id: "vw-008058497b121e76fcf82600"
 entity_id: "ve-008058497b121e76fcf82600"
 schema_version: "1"
-fofa_unverified: "title="
 title: "锐捷 Smartweb 管理系统 密码信息泄露漏洞 CNVD-2021-17369 (1day~)"
 product: "Ruijie无线SmartWeb，示例WS5302"
 record_type: "vulnerability"
@@ -21,9 +20,13 @@ review_date: "2026-10-02"
 side_effects: "读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要的响应，不能由接口可达推定敏感内容已泄露"
 source_url: "https://mp.weixin.qq.com/s/nvk4Nu8q8AxeuPDPygllWA"
 source_status: "recorded"
+previous_fofa_unverified: "title="
+fofa: "title=\"无线smartWeb--登录页面\""
 ---
 
 # 锐捷 Smartweb 管理系统 密码信息泄露漏洞 CNVD-2021-17369 (1day~)
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 FOFA 的完整表达式已记入 `fofa`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）

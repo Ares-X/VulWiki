@@ -1,5 +1,5 @@
 ---
-version: "import java.rmi.registry.*;"
+version: "1.1.100–2.0.204，含两端（项目 GHSA；原文实验的 H2 构建号未知）"
 source: "Threekiii/Vulnerability-Wiki"
 title: "H2 Database Web Console 未授权访问"
 product: "H2 Database Web Console"
@@ -12,16 +12,24 @@ primary_identifiers: "CVE-2021-42392"
 referenced_identifiers: ""
 identifier_role: "primary"
 cve: "CVE-2021-42392"
-prerequisites: "远程控制台；Java8u252、Tomcat BeanFactory/ELProcessor及JavaScript引擎"
-affected_versions: "import java.rmi.registry.*;"
+prerequisites: "显式开启远程 H2 Console 且未设置访问保护；本文 BeanFactory/EL 变体另依赖 Java 8u252、Tomcat BeanFactory/ELProcessor 与 JavaScript 引擎。"
+affected_versions: "1.1.100–2.0.204，含两端（项目 GHSA；原文实验的 H2 构建号未知）"
 source_status: "unknown"
-side_effects: "涉及 LDAP/RMI/DNS/HTTP 外带：回连只证明相应网络交互，不能单独证明命令执行；使用自控接收端，避免把日志、凭据或真实业务数据发送给第三方。"
+side_effects: "原文 touch /tmp/success 会写文件；包含 RMI/LDAP/DNS/HTTP 网络交互和命令执行示例，回连本身不能单独证明命令执行。"
 id: "vw-88f4afc7e5cd8fdca20b8e80"
 entity_id: "ve-88f4afc7e5cd8fdca20b8e80"
 schema_version: "1"
+previous_version: "import java.rmi.registry.*;"
+previous_affected_versions: "import java.rmi.registry.*;"
+fixed_version: "2.0.206（项目 GHSA）"
+previous_prerequisites: "远程控制台；Java8u252、Tomcat BeanFactory/ELProcessor及JavaScript引擎"
+previous_side_effects: "涉及 LDAP/RMI/DNS/HTTP 外带：回连只证明相应网络交互，不能单独证明命令执行；使用自控接收端，避免把日志、凭据或真实业务数据发送给第三方。"
+verification_source: "https://github.com/h2database/h2database/security/advisories/GHSA-h376-j262-vhq6"
 ---
 
 # H2 Database Web Console 未授权访问
+
+> 版本与配置校订（2026-10-04）：[H2 项目 GHSA](https://github.com/h2database/h2database/security/advisories/GHSA-h376-j262-vhq6)列出 1.1.100–2.0.204（含两端）、修复 2.0.206。远程 Console 默认关闭；公告路径要求显式启用远程访问且未配置保护，不能由开放页面推出全部数据库 SQL 权限无认证。原文的 Java 8u252/Tomcat 条件属于其独立 gadget 实验，不能替代尚未知的 H2 实验构建号。代码被误填进版本字段的问题已更正，原值与旧前提、风险说明均保留于 `previous_*`；后文相关旧缺口按此范围阅读，RMI 示例及工具变体原样保留。
 
 <!-- vulwiki-editorial:start -->
 ## 校订与适用边界

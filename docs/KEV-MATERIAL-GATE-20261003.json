@@ -10126,5 +10126,78 @@
         "operations": 5
       }
     ]
+  },
+  "publication_hash_refresh_overlay": {
+    "date": "2026-10-03T19:10:56.278067+00:00",
+    "source_base_commit": "54ff62213950c7ff86cb8881941844cba5aaeef8",
+    "review_report": "docs/reviews/2026-10-04-final-acceptance/README.md",
+    "scope": "Current publication projection hash refresh after evidence-reviewed editorial corrections; no new article admission, source reading receipt or technical reproduction.",
+    "files": [
+      {
+        "article": "Web安全/其他软件/杂项/【已支持检测】预认证即可利用！Kemp LoadMaster 堆内存缺陷导致命令注入远程代码执行漏洞CVE-2026-.md",
+        "mode": "supplement",
+        "before_sha256": "18128f70662602218383f190df96d242591e2653ff860ab4f2dc40412245e738",
+        "after_sha256": "8ed3ef5ad7b3515bc09968657660e911d21ef21e90e2e9bbe1525ea9c7bda0ea"
+      },
+      {
+        "article": "Web安全/其他软件/杂项/【在野利用】HPE OneView 远程代码执行漏洞(CVE-2025-37164).md",
+        "mode": "supplement",
+        "before_sha256": "f05f0af3b5f51c1dc97084096c473e7f12b7f7aa83f180a956972db04cb30726",
+        "after_sha256": "7849997118db2dcd4229815783bd656de81a148dd8749653c4e0afd98c52a1b8"
+      },
+      {
+        "article": "Web安全/商业软件/green/green_Honeypot_ FortiWeb CVE-2025-64446 Exploits, (Sat, Nov 15th).md",
+        "mode": "supplement",
+        "before_sha256": "06710ec41e4b381c3929af7bf8dd7a2fc100d53ff108ba8492342b7ab730cc84",
+        "after_sha256": "017a62a3ea21231755cfbd9ad82422122fd5be3b08016708784272cf7a041b5b"
+      },
+      {
+        "article": "Web安全/其他软件/杂项/【成功复现】Meteobridge命令执行漏洞(CVE-2025-4008).md",
+        "mode": "supplement",
+        "before_sha256": "0ad7c477230bb2290c23bd337a75bd299cfdcd08970f5bdc23f7c7f92f23d40a",
+        "after_sha256": "6f1e049716afc6dd411cc3be0f13fe45b1de017939b4bdda8a46738ec69e6418"
+      },
+      {
+        "article": "Web安全/网络设备/Palo Alto/Palo Alto Networks PAN-OS 身份验证绕过漏洞(CVE-2025-0108).md",
+        "mode": "supplement",
+        "before_sha256": "920afc6212164f33b1c6eef00e1eb9da1fda14055464d9d28bbb6d2ee378610b",
+        "after_sha256": "6528284fc85132cc0660d247aef4bd4f05604e42641f314be1dacb1c38a34744"
+      },
+      {
+        "article": "Web安全/商业软件/Mitel MiCollab 企业协作平台/Mitel MiCollab 企业协作平台 任意文件读取漏洞(CVE-2024-41713).md",
+        "mode": "supplement",
+        "before_sha256": "22521179ae1b2807e9b07c497cab521534fa0cd88160fd325800a0111f30a24b",
+        "after_sha256": "0843c31f290441095cb1492932d2ce6ac15cd2408787f4cf29ad67f38f804138"
+      },
+      {
+        "article": "Web安全/其他软件/杂项/CVE-2024-47575 漏洞分析及三种利用方式.md",
+        "mode": "supplement",
+        "before_sha256": "97a05702548d3d0d117c80f4f2f6c66eea4ed9efd96f5d60126f9150527616cc",
+        "after_sha256": "495b0af96f93b81af5ae460c741ac79aef80ffcede5e6cc35e1966aac94bee8b"
+      },
+      {
+        "article": "Web安全/网络设备/Palo Alto/Palo Alto Networks Expedition 远程命令执行漏洞(CVE-2024-9463).md",
+        "mode": "supplement",
+        "before_sha256": "26cb19b480c9f7082167290a46af10d621a8bb175151db49dda607049cded0c9",
+        "after_sha256": "6d206a34e5f2a1dd393b3ae9fded836aff0b19cfa3a611528662f3d95e06b211"
+      },
+      {
+        "article": "Web安全/其他软件/杂项/【漏洞复现】CVE-2024-8963、CVE-2024-8190.md",
+        "mode": "supplement",
+        "before_sha256": "0eae17e60431132228729cf28aa6100a507d468560811f03da2c1be96ff5bd6e",
+        "after_sha256": "5a6ba0b4460bec1699efc6019c1b473ebbb3d4df497bb2314352781adfc91310"
+      },
+      {
+        "article": "Web安全/其他软件/杂项/漏洞分析 CVE-2010-0249.md",
+        "mode": "supplement",
+        "before_sha256": "8dbfee508e8c74acf59d11eb4488c1229f46a6194349f4a07646eebfdf8870ba",
+        "after_sha256": "16a791ea21b90adb8fbdeb488c13d2f998b5d91743a4ce4c3fed36e818a334c0"
+      }
+    ],
+    "article_count": 10,
+    "projection_hash_slots_changed": 24,
+    "historical_editorial_correction_overlay_preserved": true,
+    "historical_gate_and_source_receipts_preserved": true,
+    "reading_and_admission_counts_unchanged": true
   }
 }

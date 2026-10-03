@@ -121,4 +121,4 @@ Yunucms v2.0.7
 
 下载完成后打开，泄露所有数据库信息
 
-![](./.resource/Yunucmsv2.0.7数据库泄露/media/rId29.shtml)
+> 归档图片缺失（2026-10-04）：此资源实际保存为 404 HTML，原图尚未找到。原引用保留为 `![](./.resource/Yunucmsv2.0.7数据库泄露/media/rId29.shtml)`。

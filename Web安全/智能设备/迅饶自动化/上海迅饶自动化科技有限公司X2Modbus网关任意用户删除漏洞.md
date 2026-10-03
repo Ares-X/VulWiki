@@ -3,7 +3,6 @@ source: "wy876 漏洞文库"
 id: "vw-f5769c676d977af92790786e"
 entity_id: "ve-f5769c676d977af92790786e"
 schema_version: "1"
-fofa_unverified: "server="
 title: "上海迅饶自动化科技有限公司X2Modbus网关任意用户删除漏洞"
 product: "SunFull迅饶X2Modbus"
 record_type: "vulnerability"
@@ -20,9 +19,13 @@ review_date: "2026-10-02"
 side_effects: "文中删除动作会改变或移除账户/文件，可能中断业务；只在有可恢复快照的隔离环境核对前后状态"
 source_url: "https://www.yuque.com/xiaokp7/ocvun2/gqtttrccg5d19xuw"
 source_status: "recorded"
+previous_fofa_unverified: "server="
+fofa: "server=\"SunFull-Webs\" || icon_hash=\"-1384370370\""
 ---
 
 # 上海迅饶自动化科技有限公司X2Modbus网关任意用户删除漏洞
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 FOFA 的完整表达式已记入 `fofa`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）

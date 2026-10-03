@@ -11,15 +11,18 @@ primary_identifiers: "QVD-2024-26473"
 referenced_identifiers: ""
 identifier_role: "primary"
 prerequisites: "Derby而非MySQL；未鉴权或具备有效admin；JAR下载可达"
-fofa_unverified: "app.name="
 source_status: "unknown"
 side_effects: "涉及 LDAP/RMI/DNS/HTTP 外带：回连只证明相应网络交互，不能单独证明命令执行；使用自控接收端，避免把日志、凭据或真实业务数据发送给第三方。"
 id: "vw-33361c4590925005a36b29a7"
 entity_id: "ve-33361c4590925005a36b29a7"
 schema_version: "1"
+previous_fofa_unverified: "app.name="
+fofa: "icon_hash=\"13942501\""
 ---
 
 # Nacos Derby 远程命令执行漏洞(QVD-2024-26473)
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 FOFA 的完整表达式已记入 `fofa`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 <!-- vulwiki-editorial:start -->
 ## 校订与适用边界

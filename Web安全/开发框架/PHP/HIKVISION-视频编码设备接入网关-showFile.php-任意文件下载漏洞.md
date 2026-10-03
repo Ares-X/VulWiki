@@ -1,5 +1,5 @@
 ---
-version: "Hikvision 视频编码设备接入网关"
+version: "unknown"
 source: "Threekiii/Vulnerability-Wiki"
 product: "海康威视视频编码设备接入网关"
 record_type: "vulnerability"
@@ -20,6 +20,7 @@ entity_id: "ve-198bd0501232573f36c92b5f"
 schema_version: "1"
 canonical: "IOT安全/海康威视/HIKVISION 视频编码设备接入网关 showFile.php 任意文件下载漏洞.md"
 relation_type: "duplicate_of"
+previous_version: "Hikvision 视频编码设备接入网关"
 ---
 
 ## 核对与使用边界
@@ -43,6 +44,8 @@ relation_type: "duplicate_of"
 历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Hikvision 视频编码设备接入网关 showFile.php 任意文件下载漏洞
+
+> 版本字段校订（2026-10-04）：误填的版本字段原值逐字保存到对应 `previous_*` 字段。当前值区分正文声称的影响范围、实验环境与尚未知的范围；后文对该元数据误填的旧说明只描述校订前状态，未据此升级来源结论。
 
 ## 漏洞描述
 

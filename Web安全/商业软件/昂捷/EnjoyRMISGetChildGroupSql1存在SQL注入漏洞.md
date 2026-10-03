@@ -16,14 +16,16 @@ review_date: "2026-10-02"
 source_url: "https://www.yuque.com/xiaokp7/ocvun2/gw589s9zgn0o9yrq"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/%E6%98%82%E6%8D%B7/EnjoyRMISGetChildGroupSql1%E5%AD%98%E5%9C%A8SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md"
-fofa_unverified: "web.body="
 hunter: "web.body=\"CheckSilverlightInstalled\""
 id: "vw-09817aeb67feae8b95616ccc"
 entity_id: "ve-09817aeb67feae8b95616ccc"
 schema_version: "1"
+previous_fofa_unverified: "web.body="
 ---
 
 # 昂捷EnjoyRMIS ReportTool cwsqry GetChildGroupSql1 sGuid SQL注入
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 Hunter 的完整表达式已记入 `hunter`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 ## 条目说明
 
