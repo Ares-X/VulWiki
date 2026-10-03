@@ -1,0 +1,63 @@
+{
+  "original_pr_head": "186dfafc6be224653ce0e1aa191d7c15d62e440f",
+  "integrated_master": "6f92b8e51db6ebde92af845947296ccaa96cbaf0",
+  "existing_articles": 5654,
+  "existing_article_blob_mismatches": 0,
+  "new_articles": 6,
+  "new_articles_unchanged_from_pr": [
+    "Web安全/CMS内容/WordPress/Visual Composer 模板文件包含与版本边界核对（CVE-2026-12227）.md",
+    "Web安全/开发框架/Tiptap/Tiptap Markdown 属性解析二次复杂度拒绝服务（GHSA-j95f-988m-3j2f）.md",
+    "Web安全/网络设备/Citrix NetScaler/NetScaler 日志污染到延迟命令执行分析（CVE-2026-88771）.md",
+    "Web安全/邮件系统/Nodemailer/Nodemailer 地址解析与收件人去重二次复杂度拒绝服务（GHSA-2x7j-588g-ccc2）.md"
+  ],
+  "new_articles_corrected": [
+    "Web安全/开发框架/PowerJob/PowerJob friend-process 未认证反射调用链分析（CVE-2026-75429）.md",
+    "Web安全/网络设备/Citrix NetScaler/NetScaler DTLS 越界复制与公开PoC危险副作用（CVE-2026-88772）.md"
+  ],
+  "unit_tests": 65,
+  "unit_test_result": "pass",
+  "quality": {
+    "baseline_issues_remaining": 5098,
+    "by_code": {
+      "embedded_code_candidate": 1,
+      "fingerprint_unverified": 800,
+      "identifier_inactive": 27,
+      "identifier_role_unknown": 215,
+      "noncontent_link_candidate": 30,
+      "path_legacy": 2,
+      "site_relative_link": 81,
+      "source_missing": 3854,
+      "unrecognized_identifier_namespace": 88
+    },
+    "documents": 5660,
+    "errors": 0,
+    "fatal_issues": 0,
+    "new_issues": 0,
+    "resolved_issues": 98,
+    "result": "no new debt; historical issues remain",
+    "warnings": 5098
+  },
+  "generated_consistency": {
+    "by_code": {
+      "embedded_code_candidate": 1,
+      "fingerprint_unverified": 800,
+      "identifier_inactive": 27,
+      "identifier_role_unknown": 215,
+      "noncontent_link_candidate": 30,
+      "path_legacy": 2,
+      "site_relative_link": 81,
+      "source_missing": 3854,
+      "unrecognized_identifier_namespace": 88
+    },
+    "different_files": [],
+    "documents": 5660,
+    "errors": 0,
+    "fatal_issues": 0,
+    "mode": "check",
+    "warnings": 5098
+  },
+  "baseline_modified": false,
+  "not_exercised": [
+    "Article PoCs, code, HTML, attachments, scanners and example targets"
+  ]
+}
