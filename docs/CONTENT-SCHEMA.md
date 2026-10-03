@@ -40,7 +40,9 @@ Markdown 是唯一维护源。`scripts/wiki.py` 使用 Python 3.10+ 标准库，
 
 新 v1 文稿必填 id、title、product、record_type、review_status、verification_status、content_status、prerequisites、side_effects。来源使用 source_url；确实未找到原始出处时，必须显式写 `source_status: "unknown"` 或 `"missing"`，此时可省略 source_url，并保留 source_missing 质量警告。不能填伪URL满足检查，也不应因缺来源回避schema_version。recorded状态下缺URL会阻断严格契约。编号、源码、PoC、指纹并非每种文章都有；不为了填模板虚构内容。
 
-`reproduced` 额外要求 verification_environment、verification_evidence、verification_date 三个字符串。检查仅验证字段存在，不能证明真的复现。原作者称成功最多记为 source-claimed；本库文字审阅不能升级成 reproduced。failed 只表示某次实验失败，不能推出版本不受影响。
+`verification_status` 用于如实记录来源声称和已有证据，不是收录、合并或维护验收的门槛。本库不要求维护者实际复现；`not-reproduced` 是正常的资料状态，不代表维护工作未完成，也不单独要求降为 `needs-review` 或隔离。已有复现资料、步骤和结果按原文保留。
+
+已有记录使用 `reproduced` 时，额外要求 verification_environment、verification_evidence、verification_date 三个字符串。这是证据记录规则，不要求为补齐字段新增复现。检查仅验证字段存在，不能证明真的复现。原作者称成功最多记为 source-claimed；本库文字审阅不能升级成 reproduced。failed 只表示某次实验失败，不能推出版本不受影响。
 
 ## 主编号、候选与状态
 
