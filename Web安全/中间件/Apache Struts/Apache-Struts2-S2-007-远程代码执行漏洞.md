@@ -1,5 +1,6 @@
 ---
-version: "' + (#_memberAccess['allowStaticMethodAccess']=true,#foo=new java.lang.Boolean('"
+version: "Apache Struts 2.0.0–2.2.3（S2-007官方公告）"
+previous_version: "' + (#_memberAccess['allowStaticMethodAccess']=true,#foo=new java.lang.Boolean('"
 source: "Threekiii/Vulnerability-Wiki"
 title: "Apache Struts2 S2-007 远程代码执行漏洞"
 product: "Apache Struts2类型转换/验证"
@@ -12,11 +13,13 @@ primary_identifiers: "S2-007"
 referenced_identifiers: ""
 identifier_role: "primary"
 prerequisites: "2.0.0–2.2.3，类型转换失败并回填用户值；Integer age和验证规则是本例入口"
-affected_versions: "' + (#_memberAccess['allowStaticMethodAccess']=true,#foo=new java.lang.Boolean('"
+affected_versions: "Apache Struts 2.0.0–2.2.3；CVE-2012-0391类型转换子问题为早于2.2.3.1"
+previous_affected_versions: "' + (#_memberAccess['allowStaticMethodAccess']=true,#foo=new java.lang.Boolean('"
 source_status: "unknown"
 side_effects: "含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。"
 id: "vw-e8c924acd648797361d0042b"
 entity_id: "ve-e8c924acd648797361d0042b"
+fixed_version: "2.2.3.1（S2-007/CVE-2012-0391类型转换子问题）"
 schema_version: "1"
 ---
 

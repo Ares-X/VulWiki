@@ -1821,7 +1821,9 @@
           {
             "article": "Web安全/CMS内容/WordPress/非插件漏洞，WordPress 未授权 SQL 注入漏洞链可导致RCE.md",
             "mode": "supplement",
-            "sha256": "775bede9ed706e6d46be94d4c8570cbe64c9b20f2b21bab8f89d2ea87e439fac"
+            "sha256": "20212d06121ecce65e110bd3d6f6231825b20679249f779b2e108f6ecbed9951",
+            "previous_sha256": "775bede9ed706e6d46be94d4c8570cbe64c9b20f2b21bab8f89d2ea87e439fac",
+            "correction_review": "docs/reviews/20261004-pr11/REVIEW.md"
           }
         ],
         "material_absence_claim": false,
@@ -1875,7 +1877,9 @@
           {
             "article": "Web安全/AI应用/Langflow/（CVE-2026-9198）IBM Langflow未认证RCE漏洞.md",
             "mode": "supplement",
-            "sha256": "9a851d72767ff2fe339023290b6f8faefa67f63b935d66db7aae6e51591d572c"
+            "sha256": "1d42185f7b42e754fd2fd9195d2a9ac82f5a85149e709566d2167b7f632a68a7",
+            "previous_sha256": "9a851d72767ff2fe339023290b6f8faefa67f63b935d66db7aae6e51591d572c",
+            "correction_review": "docs/reviews/20261004-pr11/REVIEW.md"
           }
         ],
         "material_absence_claim": false,
@@ -3875,7 +3879,9 @@
           {
             "article": "Web安全/网络设备/Palo Alto/CVE-2026-0257 _ Palo Alto Networks PAN-OS GlobalProtect Authentication.md",
             "mode": "supplement",
-            "sha256": "e2f2a682f8c35150c2e8fb436cba1cc9a000aa442c2c160c1c0dd9b7b7444d8e"
+            "sha256": "22fe2daba88b227f936023c63a7c018f2dd8e9ca6cb1fd71897ddd46595819aa",
+            "previous_sha256": "e2f2a682f8c35150c2e8fb436cba1cc9a000aa442c2c160c1c0dd9b7b7444d8e",
+            "correction_review": "docs/reviews/20261004-pr11/REVIEW.md"
           }
         ],
         "material_absence_claim": false,
@@ -3947,7 +3953,9 @@
           {
             "article": "Web安全/AI应用/AI综合/AI大模型网关存在SQL注入漏洞、附 POC 复现、影响版本LiteLLM 1.81.16~1.83.7（CVE-2026-42208）.md",
             "mode": "supplement",
-            "sha256": "b03e5a1f24b85d366a52e1d514a8c76a9dd295a4e7607341ea673c565f066803"
+            "sha256": "3d59ca592b864a554d354dc5be1c9037cb4da172d92d5bb49fcd04fc0d975335",
+            "previous_sha256": "b03e5a1f24b85d366a52e1d514a8c76a9dd295a4e7607341ea673c565f066803",
+            "correction_review": "docs/reviews/20261004-pr11/REVIEW.md"
           }
         ],
         "material_absence_claim": false,
@@ -9765,7 +9773,9 @@
           {
             "article": "系统安全/Linux/(7.1分) CVE-2025-39682：Linux内核TLS UAF本地提权.md",
             "mode": "supplement",
-            "sha256": "bdec6da4a93694127534e6d1c6e80a6a0a669fff4b8b294239496ecc8fedfde4"
+            "sha256": "885bcc5880608337ab2be81536fb9f03bf153e2adb21c9d617e4616d59378904",
+            "previous_sha256": "bdec6da4a93694127534e6d1c6e80a6a0a669fff4b8b294239496ecc8fedfde4",
+            "correction_review": "docs/reviews/20261004-pr11/REVIEW.md"
           }
         ],
         "material_absence_claim": false,
@@ -10888,7 +10898,9 @@
           {
             "article": "Web安全/开发框架/Git/Git 远程代码执行漏洞预警(CVE-2025-48384).md",
             "mode": "supplement",
-            "sha256": "9b51f200c58c7019fede2360adf7b5a1a3a72821dfda802bded34627985a936b"
+            "sha256": "096ed5b0bcec35e7add729e2e8ba81ad4c2744bb59e162ca1fc33450400e33a3",
+            "previous_sha256": "9b51f200c58c7019fede2360adf7b5a1a3a72821dfda802bded34627985a936b",
+            "correction_review": "docs/reviews/20261004-pr11/REVIEW.md"
           }
         ],
         "material_absence_claim": false,
@@ -11487,7 +11499,9 @@
           {
             "article": "Web安全/服务器软件/Active Directory/利用 NTLM 反射掌控 Active Directory（CVE-2025-33073）.md",
             "mode": "supplement",
-            "sha256": "bd9c4cb15653a6905e4136aa7a1809fef0328ba27d8f07eca7ae23b6ce553e70"
+            "sha256": "751c6ebcc209a259981edc2d1c6ca53eb0f1973d9f2996b740461ab6026df1d2",
+            "previous_sha256": "bd9c4cb15653a6905e4136aa7a1809fef0328ba27d8f07eca7ae23b6ce553e70",
+            "correction_review": "docs/reviews/20261004-pr11/REVIEW.md"
           }
         ],
         "material_absence_claim": false,
@@ -14209,7 +14223,9 @@
           {
             "article": "Web安全/其他软件/杂项/NAKIVO Backup & Replication任意文件读取漏洞(CVE-2024-48248).md",
             "mode": "supplement",
-            "sha256": "b088d02cfa3cd2c71b8e57a1dba8bc3c351e71df7c0ffc013ef1892c842a0c2a"
+            "sha256": "2721ed2690e1208947799b6aafdf538fc78aed1f08921fe2a5da034e562fb70b",
+            "previous_sha256": "b088d02cfa3cd2c71b8e57a1dba8bc3c351e71df7c0ffc013ef1892c842a0c2a",
+            "correction_review": "docs/reviews/20261004-pr11/REVIEW.md"
           }
         ],
         "material_absence_claim": false,
@@ -14996,7 +15012,9 @@
           {
             "article": "系统安全/SimpleHelp/关键的 SimpleHelp 缺陷允许文件盗窃、权限提升和 RCE 攻击.md",
             "mode": "supplement",
-            "sha256": "960a59d91cf9e60ad2718b54f0c63754a917027fdbe8499f1c9402e95fd271e0"
+            "sha256": "885e539df086ff5ca6e0b7ecf8a39a3e5d6bf32244e964b4ac0240a403eb1949",
+            "previous_sha256": "960a59d91cf9e60ad2718b54f0c63754a917027fdbe8499f1c9402e95fd271e0",
+            "correction_review": "docs/reviews/20261004-pr11/REVIEW.md"
           }
         ],
         "material_absence_claim": false,
@@ -15474,7 +15492,9 @@
           {
             "article": "Web安全/其他软件/杂项/【漏洞复现】CVE-2024-50603.md",
             "mode": "supplement",
-            "sha256": "11b0a5db68993796bc413074371e2a96a2bf4a435edf3f9ee89fc6993647c0f4"
+            "sha256": "1e83e274aa175b2c89bd7030ff393e6ab8d796604608826b1437061d01694803",
+            "previous_sha256": "11b0a5db68993796bc413074371e2a96a2bf4a435edf3f9ee89fc6993647c0f4",
+            "correction_review": "docs/reviews/20261004-pr11/REVIEW.md"
           }
         ],
         "material_absence_claim": false,
@@ -15861,7 +15881,9 @@
           {
             "article": "Web安全/商业软件/Mitel MiCollab 企业协作平台/Mitel MiCollab 企业协作平台 任意文件读取漏洞(CVE-2024-41713).md",
             "mode": "supplement",
-            "sha256": "7f5eefdddcfe53db98a3784edc9c25cb72462a9b0f060bc4d509f8b5b942a85e"
+            "sha256": "22521179ae1b2807e9b07c497cab521534fa0cd88160fd325800a0111f30a24b",
+            "previous_sha256": "7f5eefdddcfe53db98a3784edc9c25cb72462a9b0f060bc4d509f8b5b942a85e",
+            "correction_review": "docs/reviews/20261004-pr11/REVIEW.md"
           }
         ],
         "material_absence_claim": false,
@@ -16733,7 +16755,9 @@
           {
             "article": "Web安全/其他软件/杂项/CVE-2024-47575 漏洞分析及三种利用方式.md",
             "mode": "supplement",
-            "sha256": "54e0c71ffa38f6ac09abd3a1138833b3e5a15c49f2773e29ec9a8a7752c3f6f2"
+            "sha256": "97a05702548d3d0d117c80f4f2f6c66eea4ed9efd96f5d60126f9150527616cc",
+            "previous_sha256": "54e0c71ffa38f6ac09abd3a1138833b3e5a15c49f2773e29ec9a8a7752c3f6f2",
+            "correction_review": "docs/reviews/20261004-pr11/REVIEW.md"
           }
         ],
         "material_absence_claim": false,
@@ -16782,7 +16806,9 @@
           {
             "article": "Web安全/商业软件/Mitel MiCollab 企业协作平台/Mitel MiCollab 企业协作平台 任意文件读取漏洞(CVE-2024-41713).md",
             "mode": "supplement",
-            "sha256": "7f5eefdddcfe53db98a3784edc9c25cb72462a9b0f060bc4d509f8b5b942a85e"
+            "sha256": "22521179ae1b2807e9b07c497cab521534fa0cd88160fd325800a0111f30a24b",
+            "previous_sha256": "7f5eefdddcfe53db98a3784edc9c25cb72462a9b0f060bc4d509f8b5b942a85e",
+            "correction_review": "docs/reviews/20261004-pr11/REVIEW.md"
           }
         ],
         "material_absence_claim": false,
@@ -16921,7 +16947,9 @@
           {
             "article": "Web安全/网络设备/Palo Alto/Palo Alto Networks Expedition 远程命令执行漏洞(CVE-2024-9463).md",
             "mode": "supplement",
-            "sha256": "f40fadfd6278004c3f9fd7ef3daf04d75665593ece6df193d7f8df6378ea050a"
+            "sha256": "26cb19b480c9f7082167290a46af10d621a8bb175151db49dda607049cded0c9",
+            "previous_sha256": "f40fadfd6278004c3f9fd7ef3daf04d75665593ece6df193d7f8df6378ea050a",
+            "correction_review": "docs/reviews/20261004-pr11/REVIEW.md"
           }
         ],
         "material_absence_claim": false,
@@ -18051,7 +18079,9 @@
           {
             "article": "Web安全/其他软件/杂项/【PoC】SolarWinds Web Help Desk (CVE-2024-28987)严重漏洞的 PoC 已发布.md",
             "mode": "supplement",
-            "sha256": "f47e1fedb1756135510efc7616c7c115df86b5b8629ac6952f2dcc235edf6736"
+            "sha256": "c05638a9d917d379da27de743284cb06d5404cb21285c0d5cd91d241a9bf1b92",
+            "previous_sha256": "f47e1fedb1756135510efc7616c7c115df86b5b8629ac6952f2dcc235edf6736",
+            "correction_review": "docs/reviews/20261004-pr11/REVIEW.md"
           }
         ],
         "material_absence_claim": false,
@@ -18752,7 +18782,9 @@
           {
             "article": "Web安全/其他软件/杂项/CVE-2024-42009.md",
             "mode": "supplement",
-            "sha256": "a8ac8af952633a92b5e86b4eb5bcbacd2d7800eefcdfcf8ebb85d41273225749"
+            "sha256": "22cf4f1e802ec9f39f0f0d0d2be39bb628bcbeb7e5b4c38ff5cc4ea15ae7a805",
+            "previous_sha256": "a8ac8af952633a92b5e86b4eb5bcbacd2d7800eefcdfcf8ebb85d41273225749",
+            "correction_review": "docs/reviews/20261004-pr11/REVIEW.md"
           }
         ],
         "material_absence_claim": false,
@@ -18973,7 +19005,9 @@
           {
             "article": "Web安全/其他软件/杂项/【已复现】ServiceNow 存在代码注入漏洞（CVE-2024-4879、CVE-2024-5217）.md",
             "mode": "supplement",
-            "sha256": "da900fa4b666850f76d8a7caf34d8bb8b7e769bd39c731db852331ca2ec827cf"
+            "sha256": "8c6e33fe6d9c0d4bc6aac31b6dded02ae32b81683d01f993b78f15feed397438",
+            "previous_sha256": "da900fa4b666850f76d8a7caf34d8bb8b7e769bd39c731db852331ca2ec827cf",
+            "correction_review": "docs/reviews/20261004-pr11/REVIEW.md"
           }
         ],
         "material_absence_claim": false,
@@ -19684,7 +19718,9 @@
           {
             "article": "Web安全/CMS内容/Magento/漏洞预警  Magento Open Source XXE漏洞.md",
             "mode": "supplement",
-            "sha256": "f208af40840b436378eb536ef9968bb833dc78005de1f6990b79b54b56678856"
+            "sha256": "98811d76df903fbead8b858b422bae35639b5dc845514a265df7f50f3cc5241f",
+            "previous_sha256": "f208af40840b436378eb536ef9968bb833dc78005de1f6990b79b54b56678856",
+            "correction_review": "docs/reviews/20261004-pr11/REVIEW.md"
           }
         ],
         "material_absence_claim": false,
@@ -21195,7 +21231,9 @@
           {
             "article": "Web安全/网络设备/D-Link/D-Link NAS 未授权RCE漏洞(CVE-2024-3273).md",
             "mode": "supplement",
-            "sha256": "291f212c7ba2f2048d2d7e180d53aa9aaf3b3a2552e70f7ca2fb1157e6b583eb"
+            "sha256": "27d519f1e6aeaa1217b48160cea898dd376a6bdf5cdaf453aacafe2bba3e80b0",
+            "previous_sha256": "291f212c7ba2f2048d2d7e180d53aa9aaf3b3a2552e70f7ca2fb1157e6b583eb",
+            "correction_review": "docs/reviews/20261004-pr11/REVIEW.md"
           }
         ],
         "material_absence_claim": false,
@@ -21224,7 +21262,9 @@
           {
             "article": "Web安全/网络设备/D-Link/D-Link NAS 未授权RCE漏洞(CVE-2024-3273).md",
             "mode": "supplement",
-            "sha256": "291f212c7ba2f2048d2d7e180d53aa9aaf3b3a2552e70f7ca2fb1157e6b583eb"
+            "sha256": "27d519f1e6aeaa1217b48160cea898dd376a6bdf5cdaf453aacafe2bba3e80b0",
+            "previous_sha256": "291f212c7ba2f2048d2d7e180d53aa9aaf3b3a2552e70f7ca2fb1157e6b583eb",
+            "correction_review": "docs/reviews/20261004-pr11/REVIEW.md"
           }
         ],
         "material_absence_claim": false,
@@ -21757,7 +21797,9 @@
           {
             "article": "Web安全/其他软件/杂项/CVE-2024-1709.md",
             "mode": "supplement",
-            "sha256": "d003bb7ed26168632194d6660742c797f862b34994d74e53eb74a57a7f124957"
+            "sha256": "278ebfe7004105a94f8e44528d0fcbf158be16d42347d920b3bd8f9529a1f42b",
+            "previous_sha256": "d003bb7ed26168632194d6660742c797f862b34994d74e53eb74a57a7f124957",
+            "correction_review": "docs/reviews/20261004-pr11/REVIEW.md"
           }
         ],
         "material_absence_claim": false,
@@ -64287,7 +64329,9 @@
           {
             "article": "Web安全/中间件/Apache Struts/Apache-Struts2-S2-007-远程代码执行漏洞.md",
             "mode": "supplement",
-            "sha256": "db38390d29fc4d8337ceb147a1ba285bd591906d988a94a32b16ead22f2e75ed"
+            "sha256": "ef2b808eccc97de8a3a34a95e5697df88d6683559c6b7a4a49d0e4f272a63ee9",
+            "previous_sha256": "db38390d29fc4d8337ceb147a1ba285bd591906d988a94a32b16ead22f2e75ed",
+            "correction_review": "docs/reviews/20261004-pr11/REVIEW.md"
           }
         ],
         "material_absence_claim": false,
@@ -65247,7 +65291,9 @@
           {
             "article": "Web安全/其他软件/杂项/漏洞分析 CVE-2010-0249.md",
             "mode": "supplement",
-            "sha256": "cf9f2856db8cd953967383af5b6ccecf6d9c16c64da17420d8e48819f4355a84"
+            "sha256": "8dbfee508e8c74acf59d11eb4488c1229f46a6194349f4a07646eebfdf8870ba",
+            "previous_sha256": "cf9f2856db8cd953967383af5b6ccecf6d9c16c64da17420d8e48819f4355a84",
+            "correction_review": "docs/reviews/20261004-pr11/REVIEW.md"
           }
         ],
         "material_absence_claim": false,
@@ -66166,5 +66212,140 @@
     "platform-blocked": 1133
   },
   "current_blocked_scope_count": 1182,
-  "current_scope_pause_publication_overlap": 49
+  "current_scope_pause_publication_overlap": 49,
+  "publication_editorial_correction_overlay": {
+    "date": "2026-10-04",
+    "reviewed_head": "9ffedf3537119b38928348459a3aa3d22a5c44e9",
+    "review": "docs/reviews/20261004-pr11/REVIEW.md",
+    "reading_checkpoint_unchanged": true,
+    "article_count_unchanged": true,
+    "files": [
+      {
+        "path": "Web安全/AI应用/AI综合/AI大模型网关存在SQL注入漏洞、附 POC 复现、影响版本LiteLLM 1.81.16~1.83.7（CVE-2026-42208）.md",
+        "before_sha256": "b03e5a1f24b85d366a52e1d514a8c76a9dd295a4e7607341ea673c565f066803",
+        "after_sha256": "3d59ca592b864a554d354dc5be1c9037cb4da172d92d5bb49fcd04fc0d975335",
+        "operations": 2
+      },
+      {
+        "path": "Web安全/AI应用/Langflow/（CVE-2026-9198）IBM Langflow未认证RCE漏洞.md",
+        "before_sha256": "9a851d72767ff2fe339023290b6f8faefa67f63b935d66db7aae6e51591d572c",
+        "after_sha256": "1d42185f7b42e754fd2fd9195d2a9ac82f5a85149e709566d2167b7f632a68a7",
+        "operations": 6
+      },
+      {
+        "path": "Web安全/CMS内容/Magento/漏洞预警  Magento Open Source XXE漏洞.md",
+        "before_sha256": "f208af40840b436378eb536ef9968bb833dc78005de1f6990b79b54b56678856",
+        "after_sha256": "98811d76df903fbead8b858b422bae35639b5dc845514a265df7f50f3cc5241f",
+        "operations": 2
+      },
+      {
+        "path": "Web安全/CMS内容/WordPress/非插件漏洞，WordPress 未授权 SQL 注入漏洞链可导致RCE.md",
+        "before_sha256": "775bede9ed706e6d46be94d4c8570cbe64c9b20f2b21bab8f89d2ea87e439fac",
+        "after_sha256": "20212d06121ecce65e110bd3d6f6231825b20679249f779b2e108f6ecbed9951",
+        "operations": 5
+      },
+      {
+        "path": "Web安全/中间件/Apache Struts/Apache-Struts2-S2-007-远程代码执行漏洞.md",
+        "before_sha256": "db38390d29fc4d8337ceb147a1ba285bd591906d988a94a32b16ead22f2e75ed",
+        "after_sha256": "ef2b808eccc97de8a3a34a95e5697df88d6683559c6b7a4a49d0e4f272a63ee9",
+        "operations": 3
+      },
+      {
+        "path": "Web安全/其他软件/杂项/CVE-2024-1709.md",
+        "before_sha256": "d003bb7ed26168632194d6660742c797f862b34994d74e53eb74a57a7f124957",
+        "after_sha256": "278ebfe7004105a94f8e44528d0fcbf158be16d42347d920b3bd8f9529a1f42b",
+        "operations": 3
+      },
+      {
+        "path": "Web安全/其他软件/杂项/CVE-2024-42009.md",
+        "before_sha256": "a8ac8af952633a92b5e86b4eb5bcbacd2d7800eefcdfcf8ebb85d41273225749",
+        "after_sha256": "22cf4f1e802ec9f39f0f0d0d2be39bb628bcbeb7e5b4c38ff5cc4ea15ae7a805",
+        "operations": 1
+      },
+      {
+        "path": "Web安全/其他软件/杂项/CVE-2024-47575 漏洞分析及三种利用方式.md",
+        "before_sha256": "54e0c71ffa38f6ac09abd3a1138833b3e5a15c49f2773e29ec9a8a7752c3f6f2",
+        "after_sha256": "97a05702548d3d0d117c80f4f2f6c66eea4ed9efd96f5d60126f9150527616cc",
+        "operations": 1
+      },
+      {
+        "path": "Web安全/其他软件/杂项/NAKIVO Backup & Replication任意文件读取漏洞(CVE-2024-48248).md",
+        "before_sha256": "b088d02cfa3cd2c71b8e57a1dba8bc3c351e71df7c0ffc013ef1892c842a0c2a",
+        "after_sha256": "2721ed2690e1208947799b6aafdf538fc78aed1f08921fe2a5da034e562fb70b",
+        "operations": 2
+      },
+      {
+        "path": "Web安全/其他软件/杂项/【PoC】SolarWinds Web Help Desk (CVE-2024-28987)严重漏洞的 PoC 已发布.md",
+        "before_sha256": "f47e1fedb1756135510efc7616c7c115df86b5b8629ac6952f2dcc235edf6736",
+        "after_sha256": "c05638a9d917d379da27de743284cb06d5404cb21285c0d5cd91d241a9bf1b92",
+        "operations": 2
+      },
+      {
+        "path": "Web安全/其他软件/杂项/【已复现】ServiceNow 存在代码注入漏洞（CVE-2024-4879、CVE-2024-5217）.md",
+        "before_sha256": "da900fa4b666850f76d8a7caf34d8bb8b7e769bd39c731db852331ca2ec827cf",
+        "after_sha256": "8c6e33fe6d9c0d4bc6aac31b6dded02ae32b81683d01f993b78f15feed397438",
+        "operations": 1
+      },
+      {
+        "path": "Web安全/其他软件/杂项/【漏洞复现】CVE-2024-50603.md",
+        "before_sha256": "11b0a5db68993796bc413074371e2a96a2bf4a435edf3f9ee89fc6993647c0f4",
+        "after_sha256": "1e83e274aa175b2c89bd7030ff393e6ab8d796604608826b1437061d01694803",
+        "operations": 1
+      },
+      {
+        "path": "Web安全/其他软件/杂项/漏洞分析 CVE-2010-0249.md",
+        "before_sha256": "cf9f2856db8cd953967383af5b6ccecf6d9c16c64da17420d8e48819f4355a84",
+        "after_sha256": "8dbfee508e8c74acf59d11eb4488c1229f46a6194349f4a07646eebfdf8870ba",
+        "operations": 8
+      },
+      {
+        "path": "Web安全/商业软件/Mitel MiCollab 企业协作平台/Mitel MiCollab 企业协作平台 任意文件读取漏洞(CVE-2024-41713).md",
+        "before_sha256": "7f5eefdddcfe53db98a3784edc9c25cb72462a9b0f060bc4d509f8b5b942a85e",
+        "after_sha256": "22521179ae1b2807e9b07c497cab521534fa0cd88160fd325800a0111f30a24b",
+        "operations": 3
+      },
+      {
+        "path": "Web安全/开发框架/Git/Git 远程代码执行漏洞预警(CVE-2025-48384).md",
+        "before_sha256": "9b51f200c58c7019fede2360adf7b5a1a3a72821dfda802bded34627985a936b",
+        "after_sha256": "096ed5b0bcec35e7add729e2e8ba81ad4c2744bb59e162ca1fc33450400e33a3",
+        "operations": 3
+      },
+      {
+        "path": "Web安全/服务器软件/Active Directory/利用 NTLM 反射掌控 Active Directory（CVE-2025-33073）.md",
+        "before_sha256": "bd9c4cb15653a6905e4136aa7a1809fef0328ba27d8f07eca7ae23b6ce553e70",
+        "after_sha256": "751c6ebcc209a259981edc2d1c6ca53eb0f1973d9f2996b740461ab6026df1d2",
+        "operations": 3
+      },
+      {
+        "path": "Web安全/网络设备/D-Link/D-Link NAS 未授权RCE漏洞(CVE-2024-3273).md",
+        "before_sha256": "291f212c7ba2f2048d2d7e180d53aa9aaf3b3a2552e70f7ca2fb1157e6b583eb",
+        "after_sha256": "27d519f1e6aeaa1217b48160cea898dd376a6bdf5cdaf453aacafe2bba3e80b0",
+        "operations": 4
+      },
+      {
+        "path": "Web安全/网络设备/Palo Alto/CVE-2026-0257 _ Palo Alto Networks PAN-OS GlobalProtect Authentication.md",
+        "before_sha256": "e2f2a682f8c35150c2e8fb436cba1cc9a000aa442c2c160c1c0dd9b7b7444d8e",
+        "after_sha256": "22fe2daba88b227f936023c63a7c018f2dd8e9ca6cb1fd71897ddd46595819aa",
+        "operations": 4
+      },
+      {
+        "path": "Web安全/网络设备/Palo Alto/Palo Alto Networks Expedition 远程命令执行漏洞(CVE-2024-9463).md",
+        "before_sha256": "f40fadfd6278004c3f9fd7ef3daf04d75665593ece6df193d7f8df6378ea050a",
+        "after_sha256": "26cb19b480c9f7082167290a46af10d621a8bb175151db49dda607049cded0c9",
+        "operations": 1
+      },
+      {
+        "path": "系统安全/Linux/(7.1分) CVE-2025-39682：Linux内核TLS UAF本地提权.md",
+        "before_sha256": "bdec6da4a93694127534e6d1c6e80a6a0a669fff4b8b294239496ecc8fedfde4",
+        "after_sha256": "885bcc5880608337ab2be81536fb9f03bf153e2adb21c9d617e4616d59378904",
+        "operations": 3
+      },
+      {
+        "path": "系统安全/SimpleHelp/关键的 SimpleHelp 缺陷允许文件盗窃、权限提升和 RCE 攻击.md",
+        "before_sha256": "960a59d91cf9e60ad2718b54f0c63754a917027fdbe8499f1c9402e95fd271e0",
+        "after_sha256": "885e539df086ff5ca6e0b7ecf8a39a3e5d6bf32244e964b4ac0240a403eb1949",
+        "operations": 5
+      }
+    ]
+  }
 }

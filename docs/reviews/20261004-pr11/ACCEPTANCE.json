@@ -1,0 +1,72 @@
+{
+  "frozen_base": "b176eecef836688c637e60c94284ccec1f1427c5",
+  "frozen_reviewed_head": "9ffedf3537119b38928348459a3aa3d22a5c44e9",
+  "batch": {
+    "articles": 230,
+    "new": 135,
+    "supplemented": 95,
+    "qualified_material_ids": 243,
+    "new_or_changed_text_read": 182,
+    "paused_bytes_only": 48
+  },
+  "corrections": {
+    "articles": 21,
+    "operations": 63,
+    "independent_preview_pass": true
+  },
+  "checks": {
+    "python_tests": 71,
+    "python_tests_pass": true,
+    "render_tests": 22,
+    "render_tests_pass": true,
+    "quality_exit": 0,
+    "quality": {
+      "by_code": {
+        "fingerprint_unverified": 800,
+        "identifier_inactive": 27,
+        "identifier_role_unknown": 212,
+        "noncontent_link_candidate": 25,
+        "path_legacy": 2,
+        "site_relative_link": 81,
+        "source_missing": 3829,
+        "unrecognized_identifier_namespace": 88
+      },
+      "documents": 5844,
+      "errors": 0,
+      "fatal_issues": 0,
+      "warnings": 5064
+    },
+    "new_quality_issues": 0,
+    "build_check_different_files": [],
+    "render": {
+      "files": 5844,
+      "candidates": 178,
+      "by_rule": {
+        "code_web_controls": 1,
+        "empty_image_target": 18,
+        "empty_link_target": 152,
+        "lost_markdown_link_literal": 2,
+        "unfenced_source": 1,
+        "unknown_html_literal": 4
+      },
+      "structural_failures": 0,
+      "marked": {
+        "module": "/Users/aresx/Ares-X.github.io/node_modules/marked/lib/marked.cjs",
+        "version": "4.3.0"
+      }
+    },
+    "render_candidate_path_rule_raw_multiset_unchanged": true,
+    "old_95_ast_preserved": true,
+    "ledger_assertions": 26,
+    "ledger_assertions_pass": true,
+    "baseline_unchanged": true,
+    "baseline_sha256": "11fe08d4c3489e3ddc4d3c3db34af3a59ec3fc57031db65ce2adac20214a4f1f",
+    "diff_check_exit": 0
+  },
+  "limits": [
+    "No article/PoC/scanner/HTML/attachment execution and no example target access.",
+    "182 new/changed text readings do not represent a full reread of all legacy bodies or a new external-source audit of 230 articles.",
+    "Historical paused scope unchanged; remaining KEV collection is not complete.",
+    "Blog online deployment is outside this PR merge verification."
+  ]
+}

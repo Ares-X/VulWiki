@@ -1,6 +1,7 @@
 ---
 verification_source: "https://helpx.adobe.com/security/products/magento/apsb24-40.html; https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/auxiliary/gather/magento_xxe_cve_2024_34102.rb"
-fixed_version: "Adobe各release-line：2.4.7-p1；2.4.6-p6；2.4.5-p8；2.4.4-p9；Commerce扩展支持2.4.3-ext-8/2.4.2-ext-8；ACSD-60241另列独立补丁"
+fixed_version: "Adobe Commerce与Magento Open Source按对应维护线：2.4.7-p1；2.4.6-p6；2.4.5-p8；2.4.4-p9；仅Adobe Commerce扩展支持计划客户另有2.4.3-ext-8/2.4.2-ext-8；ACSD-60241是2.4.4–2.4.7的独立补丁"
+previous_fixed_version: "Adobe各release-line：2.4.7-p1；2.4.6-p6；2.4.5-p8；2.4.4-p9；Commerce扩展支持2.4.3-ext-8/2.4.2-ext-8；ACSD-60241另列独立补丁"
 source_url: "https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/auxiliary/gather/magento_xxe_cve_2024_34102.rb"
 cve: "CVE-2024-34102"
 source: "gelusus/wxvl 公众号漏洞文库"
@@ -116,5 +117,7 @@ https://www.adobe.com/
 完整模块给出 guest-carts 的 estimate-shipping-methods JSON 请求、sourceData XML、外部 DTD 与回收文件内容的 HTTP 处理逻辑。文件经 php://filter 做Base64编码后传到操作者控制的服务；回连收到文件才是文件读取证据，错误响应中的随机字段仅用于确认请求路径。它会启动本地HTTP服务，目标会访问外部DTD并外传文件，可选保存到loot；这不是无副作用版本检测。
 
 源码描述把2.4.7-p1也列入受影响，check中的跨分支OR比较亦可能误判。[Adobe APSB24-40](https://helpx.adobe.com/security/products/magento/apsb24-40.html) 实际列2.4.7-p1、2.4.6-p6、2.4.5-p8、2.4.4-p9以及Commerce扩展支持的2.4.3-ext-8/2.4.2-ext-8为修复；另有ACSD-60241独立补丁。读取到配置不等于模块已经实现RCE。原文的更老ext版本已从厂商现表移除，不能继续凭旧汇编扩大范围。
+
+上述四个常规维护线修复版本分别适用于Adobe Commerce与Magento Open Source的对应分支；2.4.3-ext-8与2.4.2-ext-8仅适用于Adobe Commerce扩展支持计划客户。ACSD-60241单独适用于公告所列2.4.4–2.4.7范围，不能当作所有旧分支均适用的补丁。
 
 具体而言，HTTP400中的随机fieldName只支持请求触及相应错误路径，不能作文件读取成功依据。模块的版本比较和2.4.7-p1描述错误均只在此校订；保留原源码。ACSD-60241是另行列出的独立补丁，不能将旧文已移出当前厂商矩阵的ext版本继续作为现行适用事实。
