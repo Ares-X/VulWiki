@@ -28,7 +28,7 @@
 
 ## 当前累计文稿
 
-累计209篇（118新增、91既有补证），关联222个独立具体材料审核通过的编号。最新20篇均为完整保留旧文及元数据的追加补证：2025年18篇与2026年2篇；60137仅收录SQLi范围，9198明确实际AUTO_LOGIN和可用用户前提。20281的独立公开模板满足有界门槛，但原始研究的3个Gist及一张图仍不可读，不冒称完整来源均读完。20篇旧字节和Markdown AST前缀均保留，38个真实围栏的静态渲染复制文本一致。
+累计230篇（135新增、95既有补证），关联243个独立具体材料审核通过的编号。最终21篇为早期17篇及2025年4篇，均经独立材料与最终字节核对。0249只追加到旧主文，历史主编号角色未变，不宣称新增主CVE导航；2775只准入XXE范围，旧44111字节正文保留，2778仅由主编号改为引用，不声称本次核实官方撤销。3035因缺完整漏洞特定BGP输入继续暂缓。最新21篇47个真实围栏静态渲染复制文本一致；4处补充原正文及AST前缀保留。
 
 | 本次具体验证范围 | 处置 | 文稿 |
 |---|---|---|
@@ -241,6 +241,27 @@
 | CVE-2025-5777 | 既有主文补证 | [CVE-2025-5777](../Web%E5%AE%89%E5%85%A8/%E4%BA%91%E5%B9%B3%E5%8F%B0/Citrix/CVE-2025-5777.md) |
 | CVE-2026-9198 | 既有主文补证 | [（CVE-2026-9198）IBM Langflow未认证RCE漏洞](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/Langflow/%EF%BC%88CVE-2026-9198%EF%BC%89IBM%20Langflow%E6%9C%AA%E8%AE%A4%E8%AF%81RCE%E6%BC%8F%E6%B4%9E.md) |
 | CVE-2026-60137 | 既有主文补证 | [非插件漏洞，WordPress 未授权 SQL 注入漏洞链可导致RCE](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/WordPress/%E9%9D%9E%E6%8F%92%E4%BB%B6%E6%BC%8F%E6%B4%9E%EF%BC%8CWordPress%20%E6%9C%AA%E6%8E%88%E6%9D%83%20SQL%20%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%E9%93%BE%E5%8F%AF%E5%AF%BC%E8%87%B4RCE.md) |
+| CVE-2025-2775 | 既有主文补证 | [SysAid 本地预授权 RCE 链（CVE-2025-2775 及其相关漏洞）- watchTowr 实验室](../Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/SysAid/SysAid%20%E6%9C%AC%E5%9C%B0%E9%A2%84%E6%8E%88%E6%9D%83%20RCE%20%E9%93%BE%EF%BC%88CVE-2025-2775%20%E5%8F%8A%E5%85%B6%E7%9B%B8%E5%85%B3%E6%BC%8F%E6%B4%9E%EF%BC%89-%20watchTowr%20%E5%AE%9E%E9%AA%8C%E5%AE%A4.md) |
+| CVE-2025-34028 | 既有主文补证 | [PoC  Commvault 远程代码执行 CVE-2025-34028（9.0）](../Web%E5%AE%89%E5%85%A8/%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BD%AF%E4%BB%B6/Commvault/PoC%20%20Commvault%20%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%20CVE-2025-34028%EF%BC%889.0%EF%BC%89.md) |
+| CVE-2025-61882 | 新增资料 | [Oracle E-Business Suite CVE-2025-61882 SSRF与XSLT执行链](../Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/Oracle%20EBS/Oracle%20E-Business%20Suite%20CVE-2025-61882%20SSRF%E4%B8%8EXSLT%E6%89%A7%E8%A1%8C%E9%93%BE.md) |
+| CVE-2025-64446 | 既有主文补证 | [green_Honeypot_ FortiWeb CVE-2025-64446 Exploits, (Sat, Nov 15th)](../Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/green/green_Honeypot_%20FortiWeb%20CVE-2025-64446%20Exploits%2C%20%28Sat%2C%20Nov%2015th%29.md) |
+| CVE-2004-0210 | 新增资料 | [Windows POSIX 本地溢出与来源 SYSTEM 会话记录（CVE-2004-0210）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Windows/Windows%20POSIX%20%E6%9C%AC%E5%9C%B0%E6%BA%A2%E5%87%BA%E4%B8%8E%E6%9D%A5%E6%BA%90%20SYSTEM%20%E4%BC%9A%E8%AF%9D%E8%AE%B0%E5%BD%95%EF%BC%88CVE-2004-0210%EF%BC%89.md) |
+| CVE-2007-5659 | 新增资料 | [Adobe Reader collectEmailInfo 长字符串触发与编号边界（CVE-2007-5659）](../Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Adobe/Adobe%20Reader%20collectEmailInfo%20%E9%95%BF%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%A7%A6%E5%8F%91%E4%B8%8E%E7%BC%96%E5%8F%B7%E8%BE%B9%E7%95%8C%EF%BC%88CVE-2007-5659%EF%BC%89.md) |
+| CVE-2008-0015 | 新增资料 | [DirectShow MSVidCtl 的公开 GIF 输入与 ActiveX 路径边界（CVE-2008-0015）](../Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Microsoft/DirectShow%20MSVidCtl%20%E7%9A%84%E5%85%AC%E5%BC%80%20GIF%20%E8%BE%93%E5%85%A5%E4%B8%8E%20ActiveX%20%E8%B7%AF%E5%BE%84%E8%BE%B9%E7%95%8C%EF%BC%88CVE-2008-0015%EF%BC%89.md) |
+| CVE-2008-3431 | 新增资料 | [VirtualBox VBoxDrv IOCTL 越界写的公开崩溃验证（CVE-2008-3431）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/%E8%99%9A%E6%8B%9F%E5%8C%96/VirtualBox/VirtualBox%20VBoxDrv%20IOCTL%20%E8%B6%8A%E7%95%8C%E5%86%99%E7%9A%84%E5%85%AC%E5%BC%80%E5%B4%A9%E6%BA%83%E9%AA%8C%E8%AF%81%EF%BC%88CVE-2008-3431%EF%BC%89.md) |
+| CVE-2009-3129 | 新增资料 | [Excel FEATHEADER 的公开文件构造与目标版本限制（CVE-2009-3129）](../Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Microsoft%20Office/Excel%20FEATHEADER%20%E7%9A%84%E5%85%AC%E5%BC%80%E6%96%87%E4%BB%B6%E6%9E%84%E9%80%A0%E4%B8%8E%E7%9B%AE%E6%A0%87%E7%89%88%E6%9C%AC%E9%99%90%E5%88%B6%EF%BC%88CVE-2009-3129%EF%BC%89.md) |
+| CVE-2010-0188 | 新增资料 | [XFA 内存破坏的公开 PDF 构造（CVE-2010-0188）](../Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Adobe/Adobe%20Reader%20TIFF/XFA%20%E5%86%85%E5%AD%98%E7%A0%B4%E5%9D%8F%E7%9A%84%E5%85%AC%E5%BC%80%20PDF%20%E6%9E%84%E9%80%A0%EF%BC%88CVE-2010-0188%EF%BC%89.md) |
+| CVE-2010-0249 | 既有主文补证 | [漏洞分析 CVE-2010-0249](../Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90%20CVE-2010-0249.md) |
+| CVE-2010-0806 | 新增资料 | [Internet Explorer DHTML Behaviors 的双分支公开触发（CVE-2010-0806）](../Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Microsoft/Internet%20Explorer%20DHTML%20Behaviors%20%E7%9A%84%E5%8F%8C%E5%88%86%E6%94%AF%E5%85%AC%E5%BC%80%E8%A7%A6%E5%8F%91%EF%BC%88CVE-2010-0806%EF%BC%89.md) |
+| CVE-2010-0840 | 新增资料 | [Java Trusted Method Chaining 的公开源码与 class 接口证据（CVE-2010-0840）](../Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Java/Java%20Trusted%20Method%20Chaining%20%E7%9A%84%E5%85%AC%E5%BC%80%E6%BA%90%E7%A0%81%E4%B8%8E%20class%20%E6%8E%A5%E5%8F%A3%E8%AF%81%E6%8D%AE%EF%BC%88CVE-2010-0840%EF%BC%89.md) |
+| CVE-2010-2568 | 新增资料 | [Windows LNK 图标加载的公开结构与 WebDAV 触发边界（CVE-2010-2568）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Windows/Windows%20LNK%20%E5%9B%BE%E6%A0%87%E5%8A%A0%E8%BD%BD%E7%9A%84%E5%85%AC%E5%BC%80%E7%BB%93%E6%9E%84%E4%B8%8E%20WebDAV%20%E8%A7%A6%E5%8F%91%E8%BE%B9%E7%95%8C%EF%BC%88CVE-2010-2568%EF%BC%89.md) |
+| CVE-2010-2883 | 新增资料 | [Adobe CoolType SING 表的公开 PDF 构造与字体依赖（CVE-2010-2883）](../Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Adobe/Adobe%20CoolType%20SING%20%E8%A1%A8%E7%9A%84%E5%85%AC%E5%BC%80%20PDF%20%E6%9E%84%E9%80%A0%E4%B8%8E%E5%AD%97%E4%BD%93%E4%BE%9D%E8%B5%96%EF%BC%88CVE-2010-2883%EF%BC%89.md) |
+| CVE-2010-3333 | 新增资料 | [Word RTF pFragments 的公开结构与打开方式限制（CVE-2010-3333）](../Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Microsoft%20Office/Word%20RTF%20pFragments%20%E7%9A%84%E5%85%AC%E5%BC%80%E7%BB%93%E6%9E%84%E4%B8%8E%E6%89%93%E5%BC%80%E6%96%B9%E5%BC%8F%E9%99%90%E5%88%B6%EF%BC%88CVE-2010-3333%EF%BC%89.md) |
+| CVE-2010-3962 | 新增资料 | [Internet Explorer CSS clip 的公开输入与构建相关崩溃记录（CVE-2010-3962）](../Web%E5%AE%89%E5%85%A8/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6/Microsoft/Internet%20Explorer%20CSS%20clip%20%E7%9A%84%E5%85%AC%E5%BC%80%E8%BE%93%E5%85%A5%E4%B8%8E%E6%9E%84%E5%BB%BA%E7%9B%B8%E5%85%B3%E5%B4%A9%E6%BA%83%E8%AE%B0%E5%BD%95%EF%BC%88CVE-2010-3962%EF%BC%89.md) |
+| CVE-2010-4344 | 新增资料 | [Exim 拒信日志溢出的 SMTP 输入与结果判据（CVE-2010-4344）](../Web%E5%AE%89%E5%85%A8/%E9%82%AE%E4%BB%B6%E7%B3%BB%E7%BB%9F/Exim/Exim%20%E6%8B%92%E4%BF%A1%E6%97%A5%E5%BF%97%E6%BA%A2%E5%87%BA%E7%9A%84%20SMTP%20%E8%BE%93%E5%85%A5%E4%B8%8E%E7%BB%93%E6%9E%9C%E5%88%A4%E6%8D%AE%EF%BC%88CVE-2010-4344%EF%BC%89.md) |
+| CVE-2010-4345 | 新增资料 | [Exim exim 用户替代配置的公开提权步骤（CVE-2010-4345）](../Web%E5%AE%89%E5%85%A8/%E9%82%AE%E4%BB%B6%E7%B3%BB%E7%BB%9F/Exim/Exim%20exim%20%E7%94%A8%E6%88%B7%E6%9B%BF%E4%BB%A3%E9%85%8D%E7%BD%AE%E7%9A%84%E5%85%AC%E5%BC%80%E6%8F%90%E6%9D%83%E6%AD%A5%E9%AA%A4%EF%BC%88CVE-2010-4345%EF%BC%89.md) |
+| CVE-2010-4398 | 新增资料 | [Windows EUDC 注册表类型错误的公开源码与分支限制（CVE-2010-4398）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Windows/Windows%20EUDC%20%E6%B3%A8%E5%86%8C%E8%A1%A8%E7%B1%BB%E5%9E%8B%E9%94%99%E8%AF%AF%E7%9A%84%E5%85%AC%E5%BC%80%E6%BA%90%E7%A0%81%E4%B8%8E%E5%88%86%E6%94%AF%E9%99%90%E5%88%B6%EF%BC%88CVE-2010-4398%EF%BC%89.md) |
+| CVE-2006-1547 | 新增资料 | [Apache Struts 1 ActionForm multipart属性绑定拒绝服务（CVE-2006-1547）](../Web%E5%AE%89%E5%85%A8/%E4%B8%AD%E9%97%B4%E4%BB%B6/Apache%20Struts/Apache%20Struts%201%20ActionForm%20multipart%E5%B1%9E%E6%80%A7%E7%BB%91%E5%AE%9A%E6%8B%92%E7%BB%9D%E6%9C%8D%E5%8A%A1%EF%BC%88CVE-2006-1547%EF%BC%89.md) |
 
 ## 维护和验证
 
@@ -316,6 +337,20 @@ Edimax1316尚缺已审下游载荷和独立验证结果；UniFi原研究未清�
 
 所以当前互斥处置为202已发表、12候审/必要补齐、16已有充分覆盖、311有界暂缓、1130未发表且暂停、56实质待办，共1727；工作暂停1179与已发表202有49交集，不能相加。未暂停的68项开放工作为56待办＋12候审，集中在最早年份、2024、2025、2026。继续完成这些允许范围的已知材料闭合后，将交付明确的部分完成结果；不会宣称1727全部技术审阅完成。文章总数保持189（118新增、71补充）/202材料编号。
 
-## 收尾批次状态
+## 历史检查点：20篇收尾批次状态
 
 本次新增20篇补证后的互斥处置为：222已纳入Draft分支、16已有充分覆盖、311有界暂缓、1132未发表且直接暂停、46实质待办，共1727。直接任务暂停范围1181，其中49个编号在暂停前已独立发表，未发布直接暂停1132。新暂停的2025-4427/4428未加入本批。815全文等数字仍是不可变阅读检查点，后续阅读由新的逐编号审计单独归并，不能从222个出版编号反推全文阅读。其余已知来源工作仍在收束，全1727完整技术审阅未完成。
+
+## 最终文稿批次与审计边界
+
+最终文稿批次为230篇/243个材料编号，135新增及95既有补证。独立逐ID收尾阅读账本另行冻结后更新；在更新前，815等读取数字仍为旧检查点，不从出版数量推增。直接任务暂停1181与已发表的49个历史编号交叠，未发表直接暂停1132；全范围技术审阅未完成。
+
+## 独立核对后的收尾阅读检查点
+
+新冻结检查点固定在3ab出版状态，逐编号阅读为841完整技术正文、82技术选段、87仅既有正文、343公告/检索、215历史受限兼容项、26未读、133暂停且无确认新回执，共1727；1353个唯一编号具有明确阅读记录。全文来源为771非Wiki技术主体、7技术代码归档、7原作者第三方归档、18无原始正文哈希的网页回执、31完整技术Wiki归档、6原站文本缓存但原始字节未验证、1明确复用旧审计。完整主体不等于每个helper、二进制核心、依赖均已审，也不等于准入或实际运行复现。
+
+叠加本次21篇合格发表后，互斥处置为243已纳入Draft分支、17已有充分覆盖、325有界暂缓、1132未发表直接暂停、10仍待处理，共1727。直接任务暂停1181与49个此前已独立发表的编号交叠，不可简单相加。历史来源和冻结检查点保留，没有重新打开暂停技术正文来补审。
+
+10项待处理为2002-0367、2009-1123、2009-1862、2010-1297、2010-3035、2010-5326、2024-8068、2024-8069、2025-59287、2026-21513。1297已知SWF核心尚未语义审完，后续限定静态审阅仍在进行，不能冒充访问阻断；其余保留原件恢复、核心输入、样本访问或暂停相关实体的具体缺口。20281虽有独立合格方法，3个原始Gist与1张图仍不可读，原来源完整性另列。全1727技术审阅尚未完成。
+
+收尾账本通过42项独立元数据/回执核验。最新21篇的验收为：71项Python单测、指定Marked4.3.0的22项单测通过；21份最终字节与独立审批匹配，47个真实围栏静态复制文本一致，0新增Marked候选；check为0错误、0fatal、0新增质量债，5064历史警告，baseline未改，build/build --check一致。1547新稿的index_category原有三层目录错误仅改为两层导航元数据，并经同一审阅者最终字节复核，正文未变。README当前文稿数按生成摘要同步为5844，5748个主入口、5842份可检索来源；这些是全库文档计数，不是本次243个材料编号或复现次数。

@@ -34,6 +34,10 @@
 
 - [OpenSSH发行版GSSAPI补丁 错误断连后未初始化资源导致崩溃](../Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/OpenSSH%20GSSAPI/OpenSSH%20GSSAPI%E6%BC%8F%E6%B4%9E%E5%85%81%E8%AE%B8%E6%94%BB%E5%87%BB%E8%80%85%E4%BD%BFSSH%E5%AD%90%E8%BF%9B%E7%A8%8B%E5%B4%A9%E6%BA%83.md) [advisory; not-reproduced; needs-review]
 
+## Oracle E-Business Suite / Oracle Concurrent Processing（BI Publisher Integration）
+
+- [Oracle E-Business Suite 61882：SSRF、请求走私与XSLT执行链的公开验证](../Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/Oracle%20EBS/Oracle%20E-Business%20Suite%20CVE-2025-61882%20SSRF%E4%B8%8EXSLT%E6%89%A7%E8%A1%8C%E9%93%BE.md) [vulnerability; source-claimed; needs-review]
+
 ## Oracle EBS Payments
 
 - [Oracle EBS Payments 未认证接管在野情报](../Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/Oracle%20EBS/Oracle%20E-Business%20Suite%20Flaw%20CVE-2026-46817%20Actively%20Exploited%20in%20the.md) [advisory; not-reproduced; needs-review]

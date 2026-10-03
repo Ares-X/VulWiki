@@ -8952,13 +8952,1036 @@
           ]
         }
       ]
+    },
+    {
+      "reviewed_utc": "2026-10-03T16:20:18.840277+00:00",
+      "review_base": "3ab0894df3cbd0750fd2d8a6094119fec559e9fa",
+      "retained_files": 21,
+      "new_files": 17,
+      "supplemented_files": 4,
+      "qualified_candidate_ids": 21,
+      "final_byte_review_passed": true,
+      "rows": [
+        {
+          "path": "Web安全/商业软件/SysAid/SysAid 本地预授权 RCE 链（CVE-2025-2775 及其相关漏洞）- watchTowr 实验室.md",
+          "qualified_cves": [
+            "CVE-2025-2775"
+          ],
+          "decision": "retain",
+          "specific_public_method": "Complete fixed Nuclei request and watchTowr Checkin parser/request narrative provide a concrete external-DTD trigger. HTTP OAST with Java User-Agent is the stated observable result. No file exfiltration, account takeover or standalone RCE result is inferred from that matcher.",
+          "scope": "SysAid On-Prem /mdm/checkin unauthenticated XXE only",
+          "version_mapping_limits": "CNA Checkin module, SysAid On-Prem <=23.3.40; not automatically SaaS. Researcher environment23.3.40. Researcher24.4.60 versus template24.40.60 retained; vendor release request returned404.",
+          "dependency_boundary": "Selected fixed template contains entire request/matchers with generic Nuclei/OAST variables; no opaque vulnerability-specific local helper. ChainPoC not required for XXE-only gate.",
+          "caveats": [
+            "Researcher correction says2778 rescinded/reidentified; no official2778 revocation record independently verified",
+            "Only metadata primary→reference role changes for2778; original historical wording remains",
+            "Complete selectedXXE evidence, not complete current research report; downstream2024dependency remains outside scope",
+            "Existing joined code and unviewed screenshot limitations remain"
+          ],
+          "original_body_preserved": true,
+          "current_sha256": "c18c2fd38dd8a4680c52407bd92a264cf4107c283db112b0802d819d25f40288",
+          "runtime_executed": false,
+          "primary_source_url_metadata": null,
+          "reviewed_source_receipts": [
+            {
+              "sha256": "149ed05787c79b4232bdc8b65cb69a0738fa472a0d05738ba57a685b8cdb3103",
+              "url": null,
+              "read_depth": "full-text",
+              "read_ranges": [
+                [
+                  1,
+                  508
+                ]
+              ]
+            },
+            {
+              "sha256": "966e72aeaa1bd73eac0fb516fd3ed4f1986c7c9df28d6af5daf4ea2f4e0e48a7",
+              "url": null,
+              "read_depth": "full-text",
+              "read_ranges": [
+                [
+                  1,
+                  606
+                ]
+              ]
+            },
+            {
+              "sha256": "b7887985e25c7c79351a08e1770fa5bea96547a4e0021d02475502cef75fd125",
+              "url": "https://raw.githubusercontent.com/projectdiscovery/nuclei-templates/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2025/CVE-2025-2775.yaml",
+              "read_depth": "full-static-source",
+              "read_ranges": [
+                [
+                  1,
+                  58
+                ]
+              ]
+            },
+            {
+              "sha256": "fc27a425725f0b3d6f337e58a062160652cacd941d38474ea388dc4029c544d9",
+              "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2025/2xxx/CVE-2025-2775.json",
+              "read_depth": "full-text",
+              "read_ranges": [
+                [
+                  1,
+                  222
+                ]
+              ]
+            },
+            {
+              "sha256": "9516d9b2f6f4c1f3b5b09c24fe899c158718ca7351b6ae52c0ff9e6be9e2e282",
+              "url": "https://labs.watchtowr.com/sysowned-your-friendly-rce-support-ticket/",
+              "read_depth": "hash-only-container",
+              "read_ranges": []
+            },
+            {
+              "sha256": "2b1be2c2c9dd88fcb9dadc2a3da21bcfbc3ec52735f83c55c5662fbabf9dcdc5",
+              "url": "https://labs.watchtowr.com/sysowned-your-friendly-rce-support-ticket/",
+              "read_depth": "selected-technical-sections-complete",
+              "read_ranges": [
+                [
+                  1,
+                  370
+                ],
+                [
+                  525,
+                  593
+                ]
+              ]
+            },
+            {
+              "sha256": "a23e737364f15a349ea178ea6c9d9d565f5791af7cab4cbfc0b0042164ac02d4",
+              "url": null,
+              "read_depth": "full-text",
+              "read_ranges": [
+                [
+                  1,
+                  6
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "path": "Web安全/服务器软件/Commvault/PoC  Commvault 远程代码执行 CVE-2025-34028（9.0）.md",
+          "qualified_cves": [
+            "CVE-2025-34028"
+          ],
+          "decision": "retain",
+          "specific_public_method": "Complete Python/README plus in-memory inspection of all embedded ZIP members closes upload→deployment path→JSP GET→System.getProperty(user.name)→Current User response. The README records a resulting system-user output. Full research describes SSRF download and multipart direct-upload routes.",
+          "scope": "Commvault Command Center unauthenticated ZIP deployment and JSP server-side code-evaluation readback",
+          "version_mapping_limits": "11.38 Innovation Release. Vendor table11.38.0–11.38.19 and11.38.20+ must be read with AdditionalUpdates:11.38.20 SP38-CU20-433/-436,11.38.25 SP38-CU25-434/-438. CNA structured11.38.25 versus description11.38.20 discrepancy explicitly retained. Exact researcher hotfix inventory unknown.",
+          "dependency_boundary": "Standalone Python imports generic requests/urllib3 and standardlibrary; full embedded payload statically decoded and read. No downloaded vulnerability helper or opaque ZIP content remains.",
+          "caveats": [
+            "Original Python tests initial response.text in its later failure branch rather than current_user_request.text",
+            "Original re.search result is dereferenced without an empty-match guard",
+            "Nuclei900+HTTP/DNS callback proves SSRF, not completeRCE",
+            "Researcher NETWORK SERVICE identity is not SYSTEM",
+            "Original code and source screenshots untouched; screenshots not viewed"
+          ],
+          "original_body_preserved": true,
+          "current_sha256": "b52d3ff038ab8502b33469a5fd9b4580990fc617dea06dce84f10b90968b46b3",
+          "runtime_executed": false,
+          "primary_source_url_metadata": null,
+          "reviewed_source_receipts": [
+            {
+              "sha256": "bbcf32ac8357a908b8f3a88439656bda441458166b136bd7fce2572d1a8421f2",
+              "url": null,
+              "read_depth": "full-text",
+              "read_ranges": [
+                [
+                  1,
+                  455
+                ]
+              ]
+            },
+            {
+              "sha256": "2ac5f62b7aa2bb9ee3ac995ac411945b283cd663b94e5ed2e4af88282dc4342d",
+              "url": "https://raw.githubusercontent.com/projectdiscovery/nuclei-templates/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2025/CVE-2025-34028.yaml",
+              "read_depth": "full-static-source",
+              "read_ranges": [
+                [
+                  1,
+                  49
+                ]
+              ]
+            },
+            {
+              "sha256": "168d0e3857a47142f912a3ecc652dfc2388f776de372c22dcea3520121dda8f6",
+              "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2025/34xxx/CVE-2025-34028.json",
+              "read_depth": "full-text",
+              "read_ranges": [
+                [
+                  1,
+                  235
+                ]
+              ]
+            },
+            {
+              "sha256": "631004482fd3c2406f55155eb42255e46d78e2d274599a70cc515b6fdd4c354d",
+              "url": "https://labs.watchtowr.com/fire-in-the-hole-were-breaching-the-vault-commvault-remote-code-execution-cve-2025-34028/",
+              "read_depth": "hash-only-container",
+              "read_ranges": []
+            },
+            {
+              "sha256": "69555fc22082cb6502521e070c3d08812105d80b704f8bd88ff7356a8c87dd23",
+              "url": "https://labs.watchtowr.com/fire-in-the-hole-were-breaching-the-vault-commvault-remote-code-execution-cve-2025-34028/",
+              "read_depth": "full-text",
+              "read_ranges": [
+                [
+                  1,
+                  528
+                ]
+              ]
+            },
+            {
+              "sha256": "85a32de1fe83bfd0b577290085160e9df5fea8076583f1b6f90fe43db0bd323c",
+              "url": "https://documentation.commvault.com/securityadvisories/CV_2025_04_1.html",
+              "read_depth": "hash-only-container",
+              "read_ranges": []
+            },
+            {
+              "sha256": "50362f30180e245f87ad5d71a1ba36ed7fe10e23886dce6998017d42482030c1",
+              "url": "https://documentation.commvault.com/securityadvisories/CV_2025_04_1.html",
+              "read_depth": "full-text",
+              "read_ranges": [
+                [
+                  1,
+                  100
+                ]
+              ]
+            },
+            {
+              "sha256": "68595e4f5959073f8740964b490576ff1de95a466aa8cb3978ec2175c34850ff",
+              "url": "https://github.com/watchtowrlabs/watchTowr-vs-Commvault-PreAuth-RCE-CVE-2025-34028/blob/2a53ba8926b5643a226f582a4ee9a31babcebcf4/README.md",
+              "read_depth": "full-text",
+              "read_ranges": [
+                [
+                  1,
+                  72
+                ]
+              ]
+            },
+            {
+              "sha256": "0633ceebc55ae2d35e8ad587ec78720e370a1eecaf853945aeb3f5c8cc676f7b",
+              "url": "https://github.com/watchtowrlabs/watchTowr-vs-Commvault-PreAuth-RCE-CVE-2025-34028/blob/2a53ba8926b5643a226f582a4ee9a31babcebcf4/watchtowr-vs-commvault-rce-CVE-2025-34028.py",
+              "read_depth": "full-static-source",
+              "read_ranges": [
+                [
+                  1,
+                  74
+                ]
+              ]
+            },
+            {
+              "sha256": "7ab97cdb76dad2fbacfc5467bea72870d4650c19254041c567e3719e70a6828a",
+              "url": null,
+              "read_depth": "full-in-memory-static-member-read",
+              "read_ranges": []
+            },
+            {
+              "sha256": "9136448e338acf353ab76335d11d7f86e96122a1eaca8b7a1f546ed31569e885",
+              "url": null,
+              "read_depth": "full-text",
+              "read_ranges": [
+                [
+                  1,
+                  26
+                ]
+              ]
+            },
+            {
+              "sha256": "6251e70a400abf0932f57c117e7c360b3056a835ef1a831dac4ebb4b73f20754",
+              "url": null,
+              "read_depth": "hash-only-provenance",
+              "read_ranges": []
+            },
+            {
+              "sha256": "7063f937bfd3352fb196511d27caf4dc9310bc1bb8ae0c4a2c504015285663ad",
+              "url": null,
+              "read_depth": "hash-only-provenance",
+              "read_ranges": []
+            }
+          ]
+        },
+        {
+          "path": "Web安全/ERP企业/Oracle EBS/Oracle E-Business Suite CVE-2025-61882 SSRF与XSLT执行链.md",
+          "qualified_cves": [
+            "CVE-2025-61882"
+          ],
+          "decision": "retain",
+          "specific_public_method": "Complete original Python contains cookie acquisition, request construction, inline XSL/JavaScript command logic and HTTP-serving code. Complete README separately shows XSL retrieval and shell id output uid54321(oracle),gid54321(oinstall). HTTP callback alone is not accepted as final execution proof.",
+          "scope": "OracleEBS61882 SSRF/request-smuggling/path-filter bypass/XSLT command execution public method",
+          "version_mapping_limits": "Oracle CNA Oracle Concurrent Processing/BI Publisher Integration12.2.3–12.2.14. Existing2026-46817 Payments article is a distinct entry and only references61882. Exact source-tested EBS hotfix build unknown.",
+          "dependency_boundary": "OriginalPython command/XSL/smuggling logic inline; onlyrequests and Pythonstandardlibrary. FullMSF methods read; generic framework dependencies not executed/audited and not sole gate.",
+          "caveats": [
+            "Oracle vendor advisory saved195-byte SiteUnavailable; patchIDs/prerequisites unverified and needs-review retained",
+            "Python interpolates command into JavaScript singlequotes without escaping",
+            "MSF xsl_url is unused in request but XSL handler is generic; no claim this alone makes code fail",
+            "MSF check only detects product/session/servlet response; source comment only12.2.12 full-tested",
+            "NucleiSyncServlet and JSP markers are incomplete-chain probes",
+            "Source result oracle user is not root; Windows option does not prove Windows coverage"
+          ],
+          "original_body_preserved": false,
+          "current_sha256": "180cde56fe58e0df24c0a1754f0df2a2b39c0aab9729f00ea741adce0fae6a4c",
+          "runtime_executed": false,
+          "primary_source_url_metadata": "\"https://labs.watchtowr.com/well-well-well-its-another-day-oracle-e-business-suite-pre-auth-rce-chain-cve-2025-61882well-well-well-its-another-day-oracle-e-business-suite-pre-auth-rce-chain-cve-2025-61882/\"",
+          "reviewed_source_receipts": [
+            {
+              "sha256": "667d377903d153f21ce91f0dcecd482331d620906e4fc14b07450f87f50680cf",
+              "url": null,
+              "read_depth": "full-text",
+              "read_ranges": [
+                [
+                  1,
+                  181
+                ]
+              ]
+            },
+            {
+              "sha256": "c43cb099fa9904318b0b0e40c9b2e75d6d02536d9ae577cdca9c14b18a10f209",
+              "url": null,
+              "read_depth": "full-static-source",
+              "read_ranges": [
+                [
+                  1,
+                  376
+                ]
+              ]
+            },
+            {
+              "sha256": "6b34a7666de9e89796ebbdec627b608b49db8836500cc1192f81caca80ac25a4",
+              "url": null,
+              "read_depth": "full-static-source",
+              "read_ranges": [
+                [
+                  1,
+                  98
+                ]
+              ]
+            },
+            {
+              "sha256": "ec92276d915074936e993195c9459388a26a4fe6ca5317094d1f6ac024345f7c",
+              "url": null,
+              "read_depth": "full-text",
+              "read_ranges": [
+                [
+                  1,
+                  179
+                ]
+              ]
+            },
+            {
+              "sha256": "0418a6641f2b23e5a3f569e04be25133c9ed04c74c6c2b2f617d279ad3b11716",
+              "url": null,
+              "read_depth": "full-text",
+              "read_ranges": [
+                [
+                  1,
+                  65
+                ]
+              ]
+            },
+            {
+              "sha256": "5b131ca14aa96311d3432b0062c7443d3b0e6346ec279bd376a75f0a76bcd5d7",
+              "url": null,
+              "read_depth": "full-error-response-only",
+              "read_ranges": [
+                [
+                  1,
+                  9
+                ]
+              ]
+            },
+            {
+              "sha256": "901bb7a499f8f6b1ac69b9952669ff0014cfaf5b751109c5ca7eb48acc6bffee",
+              "url": null,
+              "read_depth": "full-static-source",
+              "read_ranges": [
+                [
+                  1,
+                  126
+                ]
+              ]
+            },
+            {
+              "sha256": "7f6751132ce2714a2654c0d0b3c0b53991180fba3e8e3989b122399bad83f935",
+              "url": null,
+              "read_depth": "hash-only-container",
+              "read_ranges": []
+            },
+            {
+              "sha256": "6b2ff0e6feaaed4c764a9fba6fd17eb4cf972c2e96a369bdd78ef2240ea2f874",
+              "url": null,
+              "read_depth": "full-text",
+              "read_ranges": [
+                [
+                  1,
+                  665
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "path": "Web安全/商业软件/green/green_Honeypot_ FortiWeb CVE-2025-64446 Exploits, (Sat, Nov 15th).md",
+          "qualified_cves": [
+            "CVE-2025-64446"
+          ],
+          "decision": "retain",
+          "specific_public_method": "Full auxiliary and exploit modules show exact path/CGIINFO/adminJSON. Stronger exploit-module branch creates a new account, clears old cookies, logs in using new credentials, requires200+APSCOOKIE_FWEB, then requires system/state status=success and version fields. Those observations are public expected-outcome checks, not a locally obtained session.",
+          "scope": "FortinetFortiWeb64446 administrative authentication bypass and created-account permission validation, not standalone58034OSRCE",
+          "version_mapping_limits": "CNA64446 branch fixes8.0.2,7.6.5,7.4.10,7.2.12,7.0.12. Full separate58034article/module distinguishes its7.6.6/7.4.11 fixes; unsupported6.x module tests not promoted to CNA matrix.",
+          "dependency_boundary": "Full vulnerability-specific request construction, creation, login and state functions inline in two modules; genericHTTP/WebSocket/random/credentialframework not executed or independently audited.",
+          "caveats": [
+            "Auxiliary creation200 and errcode-56 check are weaker than login verification",
+            "Nuclei200/results/can_clone does not validate login and restricts trusthosts to127.0.0.1/8 and::1/128",
+            "MSF uses0.0.0.0/0 and::/0, materially different login reachability",
+            "Original honeypot path/UserAgent/JSON log blocks remain absent and are not reconstructed",
+            "Full58034methods read to separate chain stages; only64446gate approved"
+          ],
+          "original_body_preserved": true,
+          "current_sha256": "06710ec41e4b381c3929af7bf8dd7a2fc100d53ff108ba8492342b7ab730cc84",
+          "runtime_executed": false,
+          "primary_source_url_metadata": "\"https://isc.sans.edu/diary/rss/32486\"",
+          "reviewed_source_receipts": [
+            {
+              "sha256": "7aba13aa346ed8085fa538c7d492ad1d60de9c217801a5aa22111f3dab0d775b",
+              "url": null,
+              "read_depth": "full-text",
+              "read_ranges": [
+                [
+                  1,
+                  156
+                ]
+              ]
+            },
+            {
+              "sha256": "3b3a94b6ae219277f244a06908177ccbac0df3456e0ff54d057ea5248b1da038",
+              "url": null,
+              "read_depth": "full-text",
+              "read_ranges": [
+                [
+                  1,
+                  206
+                ]
+              ]
+            },
+            {
+              "sha256": "12443d6f520cd18209f9a13056538e03ebaf3f4fb32432da0534b1e9918efa39",
+              "url": null,
+              "read_depth": "full-static-source",
+              "read_ranges": [
+                [
+                  1,
+                  201
+                ]
+              ]
+            },
+            {
+              "sha256": "3c0e9fd995ef11a1625a4e85251dc515bf8f35c732d178a50432ec007c30556d",
+              "url": null,
+              "read_depth": "full-static-source",
+              "read_ranges": [
+                [
+                  1,
+                  557
+                ]
+              ]
+            },
+            {
+              "sha256": "2fef9d30ef2fb3050f0e961ee33f17233b96f2d8b3a95763667f81c5a2afd58b",
+              "url": null,
+              "read_depth": "full-static-source",
+              "read_ranges": [
+                [
+                  1,
+                  102
+                ]
+              ]
+            },
+            {
+              "sha256": "efa85bd4fddb39d401addffd5f6bd490c9c49e952555d2d8c60159659ddc28dd",
+              "url": null,
+              "read_depth": "full-text",
+              "read_ranges": [
+                [
+                  1,
+                  228
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "path": "系统安全/Windows/Windows POSIX 本地溢出与来源 SYSTEM 会话记录（CVE-2004-0210）.md",
+          "qualified_cves": [
+            "CVE-2004-0210"
+          ],
+          "decision": "retain",
+          "specific_public_method": "EDB完整C主体含具体POSIX启动、缓冲区写入/固定地址/恢复线程步骤及前后whoami输出；XP/2003未测试注释由微软明确不受影响边界约束。",
+          "scope": "public-C-source-and-recorded-session",
+          "version_mapping_limits": "原代码注释写NT/XP/2003 NOT TESTED，其中XP/2003应结合微软公告理解为不受影响，而不是潜在支持目标。归档代码含历史编码/换行瑕疵，本文不静默修复源码，也不承诺直接编译。代码中的本机连接127.0.0.1不改变漏洞的本地攻击前提。",
+          "dependency_boundary": "内嵌bind_shell为通用后续shell行为，完整原字节可读；本复核没有反汇编该通用shellcode，不把全文阅读称作每条机器指令语义审计。",
+          "caveats": [],
+          "original_body_preserved": false,
+          "current_sha256": "e06b98b989ba95e6940bc8b669c6646a62e7458d7691a44c84ddcbd93ce30aab",
+          "runtime_executed": false,
+          "primary_source_url_metadata": "\"https://www.exploit-db.com/exploits/24277\"",
+          "reviewed_source_receipts": [
+            {
+              "sha256": "dbbb6aba3066423a021f0b4153b087d15a68b181b67ab3c0f7be6b81501b5491",
+              "review_scope": "CNA descriptions and affected fields; no claim to all containers"
+            },
+            {
+              "sha256": "0e549ef2e5b6a97f770feea8fb07e20ed6a5ba98e719d459696514e06cc36d83",
+              "review_scope": "CVE-specific scope/cause/interaction/update paragraphs; entire bulletin and deployment appendices not claimed fully reviewed"
+            },
+            {
+              "sha256": "7ea1b4031927e93ef347d744606fb927263e321d8a0f081eff385c019ec4204e",
+              "review_scope": "Complete EDB preformatted C source and reported session; not whole navigation and not machine-code semantic audit"
+            }
+          ]
+        },
+        {
+          "path": "Web安全/桌面软件/Adobe/Adobe Reader collectEmailInfo 长字符串触发与编号边界（CVE-2007-5659）.md",
+          "qualified_cves": [
+            "CVE-2007-5659"
+          ],
+          "decision": "retain",
+          "specific_public_method": "完整模块内联PDF/OpenAction、长msg、堆分配与collectEmailInfo调用；原模块明确预期任意代码执行，iDefense支持产品、交互与8.1.2边界。",
+          "scope": "public-core-code-and-expected-result",
+          "version_mapping_limits": "CNA备注只说可能被CVE-2008-0655涵盖，未确认二者同一实体。因此本文只以5659为主编号，0655保留为有争议的关联说明，不合并、不把本模块算作0655的独立PoC。模块完整构造内联，通用payload/随机数/压缩框架不是缺失的漏洞触发主体。",
+          "dependency_boundary": "通用payload、NOP、随机化、压缩仅包装已内联的特定触发；无需其他CVE。0655仅可能被涵盖，未当作已确认同一实体。",
+          "caveats": [],
+          "original_body_preserved": false,
+          "current_sha256": "05e9d78aa966ac59e0e48cf173d6ae13f58f0eb3f3043fc97be17c85dc4fb8b9",
+          "runtime_executed": false,
+          "primary_source_url_metadata": "\"https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/windows/fileformat/adobe_collectemailinfo.rb\"",
+          "reviewed_source_receipts": [
+            {
+              "sha256": "4578ce3f1d86b7674c93820055e0b41f8a22db304d52d50deb253773b74de2cd",
+              "review_scope": "CNA descriptions and affected fields; no claim to all containers"
+            },
+            {
+              "sha256": "76ec0148777622ba4e31f6c07a83533ac38b5ed69d2594f80a7edf7fbf8ebee6",
+              "review_scope": "Complete main module read as static text; no invocation or imported helper execution"
+            },
+            {
+              "sha256": "77b39bd7565aa3efc7495ac477c11eef241b1c0e02408bd96de2e54bd57a4eb6",
+              "review_scope": "Selected iDefense mechanism, confirmed environment and vendor-response paragraphs"
+            }
+          ]
+        },
+        {
+          "path": "Web安全/桌面软件/Microsoft/DirectShow MSVidCtl 的公开 GIF 输入与 ActiveX 路径边界（CVE-2008-0015）.md",
+          "qualified_cves": [
+            "CVE-2008-0015"
+          ],
+          "decision": "retain",
+          "specific_public_method": "完整GIF分支原字节与HTML object/data/ClassID、堆分配齐全，文件头2组成功测试声明可定位。",
+          "scope": "public-core-code-and-source-tested-result",
+          "version_mapping_limits": "MS09-032的CVE专属FAQ明确说Vista和Server2008不受这个路径影响，更新对它们属于纵深防御；CNA/ATL更宽版本范围不能直接覆盖本模块工作条件。原始GIF字节在固定源码保留，本文不将它改成普通图像，也未加载活动HTML。通用encrypt_js为传输包装，本模块内未加密触发输入已完整公开。",
+          "dependency_boundary": "encrypt_js只包装已明文可见的触发；保留MS09-032专属IE路径与更宽ATL描述区别。",
+          "caveats": [],
+          "original_body_preserved": false,
+          "current_sha256": "1325b28f843ec24a6a1ce7805d39f5aca4aea325af59b5421eb173b58cee1d49",
+          "runtime_executed": false,
+          "primary_source_url_metadata": "\"https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/windows/browser/msvidctl_mpeg2.rb\"",
+          "reviewed_source_receipts": [
+            {
+              "sha256": "45b1a5c4d3bd6a32eceaaf82328aa7b490d2a0f1650098bbfab8d827397c7695",
+              "review_scope": "CNA descriptions and affected fields; no claim to all containers"
+            },
+            {
+              "sha256": "bbd417d881a594d9eefcf28511a23238b115ca25d9969769ee45bc582e97650a",
+              "review_scope": "Complete main module read as static text; no invocation or imported helper execution"
+            },
+            {
+              "sha256": "066ec38a8a9c33219c5422df89e8a51b2ba1b2937766d00bd40eb0a2b78e8379",
+              "review_scope": "CVE-specific scope/cause/interaction/update paragraphs; entire bulletin and deployment appendices not claimed fully reviewed"
+            }
+          ]
+        },
+        {
+          "path": "系统安全/虚拟化/VirtualBox/VirtualBox VBoxDrv IOCTL 越界写的公开崩溃验证（CVE-2008-3431）.md",
+          "qualified_cves": [
+            "CVE-2008-3431"
+          ],
+          "decision": "retain",
+          "specific_public_method": "Core正文含0x228103 IOCTL、0x80808080输入/输出指针、DeviceIoControl及明确BSOD预期，1.6.0/1.6.2/1.6.4对应清晰。",
+          "scope": "public-C-input-and-expected-crash",
+          "version_mapping_limits": "原站代码排版已损坏，包括头文件标签和压成一行的文本；保留原资料，不静默改成可编译版本。公告标记非远程可利用，不能写成虚拟机逃逸。本文不执行IOCTL，不把蓝屏与SYSTEM会话混为一谈。",
+          "dependency_boundary": "原站排版损坏不被悄悄修复；只能说有崩溃验证方法，不能说这段示例有完整SYSTEM会话。",
+          "caveats": [],
+          "original_body_preserved": false,
+          "current_sha256": "64ac0c8b746807660d23ef7ae3e2c2d21c9220fbf49968efa85720ee6f9222fe",
+          "runtime_executed": false,
+          "primary_source_url_metadata": "\"https://www.coresecurity.com/core-labs/advisories/virtualbox-privilege-escalation-vulnerability\"",
+          "reviewed_source_receipts": [
+            {
+              "sha256": "1731d4d134f63783cb057a881b57c4b2a16a6eebbc2c440e9b51b51498925429",
+              "review_scope": "CNA descriptions and affected fields; no claim to all containers"
+            },
+            {
+              "sha256": "c747dcd1bd32f0757ebd58be18ca51a6771e0ae28bd78d0ceaa010f7cf506ce4",
+              "review_scope": "Advisory product/version/credits, technical descriptions, full code listings and BSOD/vendor timeline"
+            }
+          ]
+        },
+        {
+          "path": "Web安全/桌面软件/Microsoft Office/Excel FEATHEADER 的公开文件构造与目标版本限制（CVE-2009-3129）.md",
+          "qualified_cves": [
+            "CVE-2009-3129"
+          ],
+          "decision": "retain",
+          "specific_public_method": "完整Workbook构造、FEATHEADER/isf/cbHdrData和目标指针在主文件内；正常/调试目标和预期虚调用效果足够。",
+          "scope": "public-core-code-and-expected-result",
+          "version_mapping_limits": "存在公开具体文件生成代码和来源预期结果；未提供独立会话日志，本文不声称逐目标成功。模块的Office XP-and-later概述不是完整受影响矩阵。Rex::OLE是通用容器序列化依赖，核心Workbook记录及触发字节在主文件内，不用其他CVE补齐。",
+          "dependency_boundary": "Rex::OLE承担通用容器序列化而非未读漏洞特定记录；源码目标表不是逐项成功日志。",
+          "caveats": [],
+          "original_body_preserved": false,
+          "current_sha256": "bab8bb01ce8b5e8ab5acf22adecf5991ab113f2618af78d6d7534db1302082bc",
+          "runtime_executed": false,
+          "primary_source_url_metadata": "\"https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/windows/fileformat/ms09_067_excel_featheader.rb\"",
+          "reviewed_source_receipts": [
+            {
+              "sha256": "1c579862b18e9fb564c5f6b418ec9fc6f343efcecd06f473a303f9f2e844a153",
+              "review_scope": "CNA descriptions and affected fields; no claim to all containers"
+            },
+            {
+              "sha256": "4091c8f06eb7b752cb06fb3cbcd1d792e8da466ee604b0a49c194c261886be40",
+              "review_scope": "Complete main module read as static text; no invocation or imported helper execution"
+            },
+            {
+              "sha256": "3e64e466701873423957db1e9603c7a7d04354d6f3279744b4eeed5c79fcc73a",
+              "review_scope": "CVE-specific scope/cause/interaction/update paragraphs; entire bulletin and deployment appendices not claimed fully reviewed"
+            }
+          ]
+        },
+        {
+          "path": "Web安全/桌面软件/Adobe/Adobe Reader TIFF/XFA 内存破坏的公开 PDF 构造（CVE-2010-0188）.md",
+          "qualified_cves": [
+            "CVE-2010-0188"
+          ],
+          "decision": "retain",
+          "specific_public_method": "TIFF全部特定字节、BIB.dll链、XFA与PDF主文件内联；唯一works环境9.3.0/XP SP3不被扩展。",
+          "scope": "public-core-code-and-source-tested-result",
+          "version_mapping_limits": "固定模块中的XML、TIFF和ROP均保留原值。通用payload生成、压缩和文件写出不是未公开触发主体；未生成PDF，也未做图像/活动内容预览。Adobe旧公告链接现已失效或转通用页，修复边界明确引用CERT-FR记录和CNA，不把HTTP200当公告核对成功。",
+          "dependency_boundary": "无外部恶意TIFF依赖；修正1500为源码变量/头后填充，而非文件绝对payload偏移。",
+          "caveats": [],
+          "original_body_preserved": false,
+          "current_sha256": "ea07f65e4888b215aab9f6dfa6b7fca16a3851bc77ec7e5b06c6b963864e7ee1",
+          "runtime_executed": false,
+          "primary_source_url_metadata": "\"https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/windows/fileformat/adobe_libtiff.rb\"",
+          "reviewed_source_receipts": [
+            {
+              "sha256": "55981b01a604ae23ed5ac23887fdd8467ed90c2d1dbbcd24688f1112c330319d",
+              "review_scope": "CNA descriptions and affected fields; no claim to all containers"
+            },
+            {
+              "sha256": "3f6ab7bd2a539a0285c3c0afae82087424f39c7c14a037978ba105bb155bb106",
+              "review_scope": "Complete main module read as static text; no invocation or imported helper execution"
+            },
+            {
+              "sha256": "ee2dd866080f0484f077a62e60b8c9dd551c4e369f3b3407c3e5a4f6e12d9ec9",
+              "review_scope": "Product/version, remedy9.3.1/8.2.1 and CVE reference paragraphs"
+            }
+          ]
+        },
+        {
+          "path": "Web安全/其他软件/杂项/漏洞分析 CVE-2010-0249.md",
+          "qualified_cves": [
+            "CVE-2010-0249"
+          ],
+          "decision": "retain",
+          "specific_public_method": "COMMENT数组、复制事件、iframe释放、定时重填与srcElement访问主体完整；来源把可靠技术限定IE6。",
+          "scope": "public-core-code-and-expected-result",
+          "version_mapping_limits": "既有403行分析归档的多处代码块缺失，不能由解释文字倒推恢复。此次只建议追加独立、明确署名的公开代码来源及边界，不替换或补写缺损代码，也不声称看过其截图。已有分析与新来源是互补材料。",
+          "dependency_boundary": "encrypt_js为包装，GIF内联；只给旧Aurora分析追加来源，不补造遗失代码/截图，不创建第二入口。",
+          "caveats": [],
+          "original_body_preserved": true,
+          "current_sha256": "cf9f2856db8cd953967383af5b6ccecf6d9c16c64da17420d8e48819f4355a84",
+          "runtime_executed": false,
+          "primary_source_url_metadata": null,
+          "reviewed_source_receipts": [
+            {
+              "sha256": "e2d6639548cbdd99bda72414a9f3c89eabdd84c6d3967b0b192b7b8e99ba763d",
+              "review_scope": "CNA descriptions and affected fields; no claim to all containers"
+            },
+            {
+              "sha256": "4d49bb11d7555268153ad434c324c5979ef0943a07d685e1cb5b0ddb4816644a",
+              "review_scope": "Complete main module read as static text; no invocation or imported helper execution"
+            },
+            {
+              "sha256": "2d15a624d4d4d32d3f5441e2caaf95e611cce027b5b92a58b015a0a07bad75b1",
+              "review_scope": "CVE-specific scope/cause/interaction/update paragraphs; entire bulletin and deployment appendices not claimed fully reviewed"
+            }
+          ]
+        },
+        {
+          "path": "Web安全/桌面软件/Microsoft/Internet Explorer DHTML Behaviors 的双分支公开触发（CVE-2010-0806）.md",
+          "qualified_cves": [
+            "CVE-2010-0806"
+          ],
+          "decision": "retain",
+          "specific_public_method": "onclick和marquee两条DOM输入、userData/setAttribute及heap内容完整内联；3组来源成功环境支持。",
+          "scope": "public-core-code-and-source-tested-result",
+          "version_mapping_limits": "自动目标先按Windows NT6.0判断，因此选到Vista分支不等于浏览器版本或漏洞存在已验证。JSObfu只包装已可阅读的JavaScript，本文不把未运行框架等同缺少PoC。不存在本库执行日志。",
+          "dependency_boundary": "JSObfu通用包装未作框架全审；自动UA选目标不是漏洞检测结果。",
+          "caveats": [],
+          "original_body_preserved": false,
+          "current_sha256": "52548b0a163eecd5b38a6bf2d09d15d65c5a90db1ec106566ac32ca7e351a35f",
+          "runtime_executed": false,
+          "primary_source_url_metadata": "\"https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/windows/browser/ms10_018_ie_behaviors.rb\"",
+          "reviewed_source_receipts": [
+            {
+              "sha256": "d3600b614490e6cc04dc574f4b65b9b2f66435fd896420ad0cf84297880e2276",
+              "review_scope": "CNA descriptions and affected fields; no claim to all containers"
+            },
+            {
+              "sha256": "6e0280dc2ab6067119105ea005043a3f6bd53f7b285f5061499bcdbb4f3733ba",
+              "review_scope": "Complete main module read as static text; no invocation or imported helper execution"
+            },
+            {
+              "sha256": "42eac7b90f8b3251f55289c2ec4c84b334b4605891cab64427e5a3b421c06167",
+              "review_scope": "CVE-specific scope/cause/interaction/update paragraphs; entire bulletin and deployment appendices not claimed fully reviewed"
+            }
+          ]
+        },
+        {
+          "path": "Web安全/桌面软件/Java/Java Trusted Method Chaining 的公开源码与 class 接口证据（CVE-2010-0840）.md",
+          "qualified_cves": [
+            "CVE-2010-0840"
+          ],
+          "decision": "retain",
+          "specific_public_method": "主模块、3份Java源码、3个class结构完整；Link.class确为Expression子类/Map$Entry且无getValue实现；主要构造与entrySet字节码对应源码。",
+          "scope": "public-Java-source-and-core-class-evidence",
+          "version_mapping_limits": "模块概述将Java5边界写成before update23，与Oracle把5.0u23列为受影响相冲突；本文不沿用该窄边界。Oracle官方表按产品分支给修复包，不能把Solaris5.0u24条目泛化为所有商业分支。metasploit/Payload是后续通用payload，Java沙箱移除核心已在已读源码和class内。",
+          "dependency_boundary": "漏洞特定class不是未读黑盒；Payload属于移除沙箱后的通用后续行为。Exploit/匿名类major50，不能把现成class泛化为Java5/1.4运行支持。",
+          "caveats": [],
+          "original_body_preserved": false,
+          "current_sha256": "4ab4aabcf15fbad46b47f817e3c8d8b34c77fafb9f56779b312bac4e0f9e0257",
+          "runtime_executed": false,
+          "primary_source_url_metadata": "\"https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/multi/browser/java_trusted_chain.rb\"",
+          "reviewed_source_receipts": [
+            {
+              "sha256": "a48883ecde0b8adceba9751fec9a3f09a0eca7f2fee1d2c6301f023ace5b0ee3",
+              "review_scope": "CNA descriptions and affected fields; no claim to all containers"
+            },
+            {
+              "sha256": "246b65996a4c48c667b7416c182e1ec9dcff7e2dc8c1890d9d9352e820ad3dbc",
+              "review_scope": "Complete main module read as static text; no invocation or imported helper execution"
+            },
+            {
+              "sha256": "4bfcb95b7860ac23d648fee7bd1a895f74786e3903200f4b979518c1a198b2c0",
+              "review_scope": "Complete Java source; no compile/load/execute"
+            },
+            {
+              "sha256": "62fd4d7027bde11e05ecff1f187838dac25255d42fb8bc1163153abf421892bf",
+              "review_scope": "Complete Java source; no compile/load/execute"
+            },
+            {
+              "sha256": "834643ef78d3792226d863a2af3ecb7f46a544f668386eb3038332ac9cde3737",
+              "review_scope": "Complete Java source; no compile/load/execute"
+            },
+            {
+              "sha256": "9ba98a26594bcd3ca49c16778e23b513204c36cb8c0880e24c934534bf6f127d",
+              "review_scope": "Entire parsed class structure, constant-pool/method code listing; independently cross-checked headers"
+            },
+            {
+              "sha256": "2a93af71e6dd166569f218a17fa8caeb97430146391f60c674236b1b4321aa95",
+              "review_scope": "Complete original post technical body and selected author clarifications about parameters/interface compilation"
+            },
+            {
+              "sha256": "f809ac7a1e0ab05c6285ac05c4fafe07487dab42d295aa906910c143830f7778",
+              "review_scope": "Oracle affected/patch branch tables,0840 row and Note1; raw successful web receipt"
+            }
+          ]
+        },
+        {
+          "path": "系统安全/Windows/Windows LNK 图标加载的公开结构与 WebDAV 触发边界（CVE-2010-2568）.md",
+          "qualified_cves": [
+            "CVE-2010-2568"
+          ],
+          "decision": "retain",
+          "specific_public_method": "完整LNK头/IDList/LinkFlags与WebDAV代码内联；微软确认浏览目录解析图标即可触发。",
+          "scope": "public-LNK-structure-and-expected-result",
+          "version_mapping_limits": "本文记录公开技术和来源预期效果，不补造DLL运行输出，不访问任何示例目标。普通DLL生成器和payload不构成缺失的LNK触发输入；后续行为随payload而变化。",
+          "dependency_boundary": "通用DLL生成器不是缺失LNK核心输入；发送日志不代表客户端执行。",
+          "caveats": [],
+          "original_body_preserved": false,
+          "current_sha256": "b349b51ea7657c7dcf342c0ad1cbdb439a560b1cf44d1ad0ecc73b566db6fc0a",
+          "runtime_executed": false,
+          "primary_source_url_metadata": "\"https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/windows/browser/ms10_046_shortcut_icon_dllloader.rb\"",
+          "reviewed_source_receipts": [
+            {
+              "sha256": "1183b8b62b5926afe596025b6688622304ec7ef03c0e0834049965dc337984dd",
+              "review_scope": "CNA descriptions and affected fields; no claim to all containers"
+            },
+            {
+              "sha256": "58ad404fee64b21458f76ad12f56f1ce6c34baeb08f2509a45d38d53d12632f7",
+              "review_scope": "Complete main module read as static text; no invocation or imported helper execution"
+            },
+            {
+              "sha256": "6f75f8b04aa62c0264e9db3826e981b36c7f1a43135d83856df54ce0e4aa1285",
+              "review_scope": "CVE-specific scope/cause/interaction/update paragraphs; entire bulletin and deployment appendices not claimed fully reviewed"
+            }
+          ]
+        },
+        {
+          "path": "Web安全/桌面软件/Adobe/Adobe CoolType SING 表的公开 PDF 构造与字体依赖（CVE-2010-2883）.md",
+          "qualified_cves": [
+            "CVE-2010-2883"
+          ],
+          "decision": "retain",
+          "specific_public_method": "主模块内联SING过长字段/ROP/PDF/AcroForm/JS；模板17表在界内，name目录0xec/数据0x11c与改写点相符；来源列明成功环境。",
+          "scope": "public-core-code-and-template-layout-evidence",
+          "version_mapping_limits": "模板原始字体中的一般glyph/hint字节不承担此漏洞的恶意SING构造；本次只审其作为容器的布局和被改写区，不能说已语义审计全部字体。修复边界引用CNA，不将旧Adobe链接跳转通用页面当一手核验。Reader8.2.4出现在模块影响说明，但头部成功测试不能扩展到该版本。",
+          "dependency_boundary": "字体只审目录与改写区域角色，未渲染或语义审计glyph/hint。该门槛不等于所有字体字节无其他行为。",
+          "caveats": [],
+          "original_body_preserved": false,
+          "current_sha256": "65f72420e0fc2aa6f07b487fb493630bcf6f7968b2a6af75635249cf71e4af77",
+          "runtime_executed": false,
+          "primary_source_url_metadata": "\"https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/windows/browser/adobe_cooltype_sing.rb\"",
+          "reviewed_source_receipts": [
+            {
+              "sha256": "63bdb54355145542d4e0128af2b480ba9cb74326a9f5ad448a428268024b3fa6",
+              "review_scope": "CNA descriptions and affected fields; no claim to all containers"
+            },
+            {
+              "sha256": "8b3360407aba06ad3541aab8ecd635af8730e23c7544a5b8747c35a855412300",
+              "review_scope": "Complete main module read as static text; no invocation or imported helper execution"
+            },
+            {
+              "sha256": "62bca8325cd6b8730a15247386aa4e179100f322e186780af396218f0ca35589",
+              "review_scope": "Full17-table directory, bounds and exact overwritten offsets"
+            },
+            {
+              "sha256": "ce42c4b94b7ab66ee51367cf4214832ebdcc09fb85414445495858e7aaa045af",
+              "review_scope": "Independent sfnt directory parse and bounds; no hint/glyph semantics"
+            }
+          ]
+        },
+        {
+          "path": "Web安全/桌面软件/Microsoft Office/Word RTF pFragments 的公开结构与打开方式限制（CVE-2010-3333）.md",
+          "qualified_cves": [
+            "CVE-2010-3333"
+          ],
+          "decision": "retain",
+          "specific_public_method": "RTF pFragments语法、参数、0x1111/0xc8ac与缓冲区构造完整；预期控制流及具体Windows目标公开。",
+          "scope": "public-RTF-core-code-and-expected-result",
+          "version_mapping_limits": "模块称Office2010受影响，不代表其工作目标表含Office2010；Office2000不受影响仅是模块作者判断，不升级为微软已确认。SEH/短跳编排来自通用框架，pFragments触发数据完整内联。不能把文件生成成功等同利用成功。",
+          "dependency_boundary": "通用SEH/短跳帮助器未全审，但核心属性输入已明确；Office2010广义影响不等于模块有该工作目标。",
+          "caveats": [],
+          "original_body_preserved": false,
+          "current_sha256": "92622b07e46745c9e39211671b1b2073cce98326300e20b18ea005eb858a37c3",
+          "runtime_executed": false,
+          "primary_source_url_metadata": "\"https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/windows/fileformat/ms10_087_rtf_pfragments_bof.rb\"",
+          "reviewed_source_receipts": [
+            {
+              "sha256": "9cafefa472e92c73591705b93cf85544ad1609f02d89c1dbd2e2f174afdcc6ae",
+              "review_scope": "CNA descriptions and affected fields; no claim to all containers"
+            },
+            {
+              "sha256": "a0d52248e4c529db8eae62777735359c888bc0f49057d713b4ad952bb3c4cd84",
+              "review_scope": "Complete main module read as static text; no invocation or imported helper execution"
+            },
+            {
+              "sha256": "1a3571c097ac70bed73209148ad3c471f0fde1276597442588a5b626565531e0",
+              "review_scope": "CVE-specific scope/cause/interaction/update paragraphs; entire bulletin and deployment appendices not claimed fully reviewed"
+            }
+          ]
+        },
+        {
+          "path": "Web安全/桌面软件/Microsoft/Internet Explorer CSS clip 的公开输入与构建相关崩溃记录（CVE-2010-3962）.md",
+          "qualified_cves": [
+            "CVE-2010-3962"
+          ],
+          "decision": "retain",
+          "specific_public_method": "EDB15421完整HTML/JS、各mshtml构建与EIP记录已读，固定分配1000项和1294464原值可核；MSF代码明确版本相关可靠性。",
+          "scope": "public-HTML-input-and-recorded-crash-details",
+          "version_mapping_limits": "原作者明确没有DEP/ASLR绕过。本条只报告来源支持的输入、构建与崩溃/预期执行边界，不宣称所有IE6/7/8版本可稳定getshell。公开页面中“Patched06Nov10”是当时补丁状态，不等于12月MS10-090已安装。HTML只当源码保存和阅读。",
+          "dependency_boundary": "嵌入shellcode只按原作者bind4444声明记录，未独立反汇编通用payload；无DEP/ASLR绕过，不声明全版本getshell。",
+          "caveats": [],
+          "original_body_preserved": false,
+          "current_sha256": "75a66c8549c5ebbcf446c6de243ce8eb016ecb101904d84d2aa3faff63b811f4",
+          "runtime_executed": false,
+          "primary_source_url_metadata": "\"https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/windows/browser/ms10_090_ie_css_clip.rb\"",
+          "reviewed_source_receipts": [
+            {
+              "sha256": "ff563214857d4b2d3846cc329cdeee52bd76b368d37717587fa335ad743b6945",
+              "review_scope": "CNA descriptions and affected fields; no claim to all containers"
+            },
+            {
+              "sha256": "e6ac91b2f9979f30cda0bf07de50ee7b85bacce8983ab90e10f5a6061a4d20ac",
+              "review_scope": "Complete main module read as static text; no invocation or imported helper execution"
+            },
+            {
+              "sha256": "11474e7851a142ce7e44d6a619831e0810c12c6a657e250f8796ebc03287492f",
+              "review_scope": "CVE-specific scope/cause/interaction/update paragraphs; entire bulletin and deployment appendices not claimed fully reviewed"
+            },
+            {
+              "sha256": "b12f3919e1fdf5eea3f62c3aa67ace599773fd6406975a134c13c36b415b4f1b",
+              "review_scope": "Complete EDB extracted source, test comments, EIP values and HTML/JS; shellcode not executed"
+            }
+          ]
+        },
+        {
+          "path": "Web安全/邮件系统/Exim/Exim 拒信日志溢出的 SMTP 输入与结果判据（CVE-2010-4344）.md",
+          "qualified_cves": [
+            "CVE-2010-4344"
+          ],
+          "decision": "retain",
+          "specific_public_method": "主模块完整双MAIL、拒信日志长度算法、超大DATA、ACL扩展与shell迹象；CNA4.70修正模块before4.69概述。",
+          "scope": "public-SMTP-core-code-and-expected-result",
+          "version_mapping_limits": "模块banner匹配Exim4.6\\d只是快速筛选，不证明补丁状态；不能依据错误消息给出安全结论。4345是后续提权，SkipEscalation可控制，但本条不将root结果归因于4344单独完成。未发送任何SMTP数据，也未补造成功日志。",
+          "dependency_boundary": "SMTP框架只是通用传输；成功正则含MAIL/RCPT可能误判，提案已明确；4345是可选独立后续实体。",
+          "caveats": [],
+          "original_body_preserved": false,
+          "current_sha256": "626a445d090e280eded079032d3d841470b9aa66db5075728a825fcd95be7522",
+          "runtime_executed": false,
+          "primary_source_url_metadata": "\"https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/unix/smtp/exim4_string_format.rb\"",
+          "reviewed_source_receipts": [
+            {
+              "sha256": "bf3213a2588a182a44fc2afc81f4dbadf3faaa9ad40f8c196b575d55d680b959",
+              "review_scope": "CNA descriptions and affected fields; no claim to all containers"
+            },
+            {
+              "sha256": "7a8677af79e4dde35bc50a93ee34d5e54c4d296cf3cc252024510e965d77f9f0",
+              "review_scope": "Complete main module read as static text; no invocation or imported helper execution"
+            }
+          ]
+        },
+        {
+          "path": "Web安全/邮件系统/Exim/Exim exim 用户替代配置的公开提权步骤（CVE-2010-4345）.md",
+          "qualified_cves": [
+            "CVE-2010-4345"
+          ],
+          "decision": "retain",
+          "specific_public_method": "同一完整模块明确给本地exim配置文件/spool_directory/Perl和-C -q分支及root预期。",
+          "scope": "public-local-config-code-and-expected-result",
+          "version_mapping_limits": "这不是匿名远程漏洞单独入口。远程SMTP阶段是4344，本文只使用已公开的本地分支作材料，不混淆两个实体。未找到适用于全部发行版的单一fixed_version，因此不填猜测版本；不能据版本banner判断是否回移修复。",
+          "dependency_boundary": "前提已有exim上下文与Perl；不能把根权限或匿名远程入口混归4344；源码无完整自动清理。",
+          "caveats": [],
+          "original_body_preserved": false,
+          "current_sha256": "58d732efb32b9776a05d0499fed6307c89b35b81e8db4d743bf6bc33dfe5d52e",
+          "runtime_executed": false,
+          "primary_source_url_metadata": "\"https://github.com/rapid7/metasploit-framework/blob/5e598d5233bebecef2a44904a286769d83d31d12/modules/exploits/unix/smtp/exim4_string_format.rb\"",
+          "reviewed_source_receipts": [
+            {
+              "sha256": "f5758bc6761d88b84f878bcd2805b7b7100e9ba1a0eb34402e0c756cb8a61fab",
+              "review_scope": "CNA descriptions and affected fields; no claim to all containers"
+            },
+            {
+              "sha256": "7a8677af79e4dde35bc50a93ee34d5e54c4d296cf3cc252024510e965d77f9f0",
+              "review_scope": "Complete main module read as static text; no invocation or imported helper execution"
+            }
+          ]
+        },
+        {
+          "path": "系统安全/Windows/Windows EUDC 注册表类型错误的公开源码与分支限制（CVE-2010-4398）.md",
+          "qualified_cves": [
+            "CVE-2010-4398"
+          ],
+          "decision": "retain",
+          "specific_public_method": "完整poc.cpp非数组主体、ZIP五份源文件、Data/Data64/DrvBuf静态解码与反汇编对应；EUDC REG_BINARY及EnableEUDC输入具体，EDB给whoami预期。",
+          "scope": "public-registry-core-source-and-static-payload-evidence",
+          "version_mapping_limits": "x64的181字节Data64分支与x86完整驱动装载/令牌逻辑并不相同，本文不把x86的完整提权路径泛化为x64成功保证。EDB版本标签中6.1.6000、6.2.7600等原值与通常系统版本写法存在问题，本文不静默改原文，也不据此创建受影响矩阵。预编译poc.exe和video.swf未执行或播放。",
+          "dependency_boundary": "x86加载器、内核线程/令牌修改可静态对应；x64Data64不承担同等完整链。保留动态内核兼容性不确定，未执行EXE/SWF。",
+          "caveats": [],
+          "original_body_preserved": false,
+          "current_sha256": "89131e6282999b6a3c03c5744d59aa2830ec6a0d0778e78d0a1552c6f70b321a",
+          "runtime_executed": false,
+          "primary_source_url_metadata": "\"https://www.exploit-db.com/exploits/15609\"",
+          "reviewed_source_receipts": [
+            {
+              "sha256": "d8118398a066083d7b1fda5fc057540b9e0fd702aeb5cfe3f57792d80a90eb82",
+              "review_scope": "CNA descriptions and affected fields; no claim to all containers"
+            },
+            {
+              "sha256": "322c0a81177af85151980360f471c0fa30a7419d6584be15d81f96ef986c24da",
+              "review_scope": "CVE-specific scope/cause/interaction/update paragraphs; entire bulletin and deployment appendices not claimed fully reviewed"
+            },
+            {
+              "sha256": "453dd46d730dabcd1fed3c72417a24b320e62d5e2f0573f2ec4526f76ac7f497",
+              "review_scope": "Complete non-array source or full saved static disassembly read; arrays independently compared to source bytes; objdump import/relocation table also read"
+            },
+            {
+              "sha256": "5680a7d5863c2f7e02792c853b849fe55b7c14b8eb8b7feb0b31b9c28ae3556e",
+              "review_scope": "Complete non-array source or full saved static disassembly read; arrays independently compared to source bytes; objdump import/relocation table also read"
+            },
+            {
+              "sha256": "37d88873893ac4c4e48f078a5be9c2fda7d700780ad327b323422c5ad4e9cacf",
+              "review_scope": "Complete non-array source or full saved static disassembly read; arrays independently compared to source bytes; objdump import/relocation table also read"
+            },
+            {
+              "sha256": "45ea38913a48aecd12e991a6f00663ea6eb2e744c56ad45aef8290e7029b1bcb",
+              "review_scope": "Complete non-array source or full saved static disassembly read; arrays independently compared to source bytes; objdump import/relocation table also read"
+            },
+            {
+              "sha256": "bad5ca557eb99c1e3a43d3098fe0fef8def7228b724dcff3a72143f3717a8eb8",
+              "review_scope": "Complete non-array source or full saved static disassembly read; arrays independently compared to source bytes; objdump import/relocation table also read"
+            },
+            {
+              "sha256": "cfff1db22bbdec7c718c4064ea622d8ecaf254b92e8b8bbb5915a7bc351a8ac3",
+              "review_scope": "Complete non-array source or full saved static disassembly read; arrays independently compared to source bytes; objdump import/relocation table also read"
+            },
+            {
+              "sha256": "310be72f61eef49d4c53826ec6e9f8821e6abedd8f061b14c8e667f36a662ed3",
+              "review_scope": "Complete non-array source or full saved static disassembly read; arrays independently compared to source bytes; objdump import/relocation table also read"
+            },
+            {
+              "sha256": "86cf3e093b0e1d76e65d453a1f7102cc8b72bebeb76fb873931c4ade7b364a44",
+              "review_scope": "Complete non-array source or full saved static disassembly read; arrays independently compared to source bytes; objdump import/relocation table also read"
+            },
+            {
+              "sha256": "ba1f4c05d68f818029d63ba1dfee8611b3cb153313231a9a67571ff4d16a5d79",
+              "review_scope": "Complete non-array source or full saved static disassembly read; arrays independently compared to source bytes; objdump import/relocation table also read"
+            },
+            {
+              "sha256": "ce42c4b94b7ab66ee51367cf4214832ebdcc09fb85414445495858e7aaa045af",
+              "review_scope": "ZIP source equality and all3 embedded arrays equality/sha256; no binary executed"
+            }
+          ]
+        },
+        {
+          "path": "Web安全/中间件/Apache Struts/Apache Struts 1 ActionForm multipart属性绑定拒绝服务（CVE-2006-1547）.md",
+          "qualified_cves": [
+            "CVE-2006-1547"
+          ],
+          "decision": "retain",
+          "specific_public_method": "Exact nested parameter name, any text value, multipart prerequisite and observed failure/control provided by HeroDevs; Apache names a concrete UI test in struts-examples and comparison version/upload.jsp. No source invention is needed to identify and use the described manual test.",
+          "scope": "specific-multipart-parameter-plus-navigable-manual-test-and-control",
+          "version_mapping_limits": null,
+          "dependency_boundary": "Business-specific endpoint/auth is not supplied and correctly disclaimed; underlying complete framework source was not required or claimed read.",
+          "caveats": [],
+          "original_body_preserved": false,
+          "current_sha256": "dc6828747fccc9fc7b99edb242fed28cd85ce9dd3e027dbf7b8488239e0addab",
+          "runtime_executed": false,
+          "primary_source_url_metadata": "\"https://cwiki.apache.org/confluence/spaces/WW/pages/120724673/StrutsUpgradeNotes128to129\"",
+          "reviewed_source_receipts": [
+            {
+              "sha256": "e3f743de337bae2e88505cfe875432bb056b935b02089cd6b7af780bed45b5dd",
+              "review_scope": "Bug38534 issue/resolution/manual test subsection lines69–86"
+            },
+            {
+              "sha256": "8cc53df7619f5d13c258e55bd99649c4c011da8d97316c980e65f9f506539ed7",
+              "review_scope": "Complete projected technical article including exact parameter and Steps To Reproduce"
+            },
+            {
+              "sha256": "e30f0c615fd49e8f35d6be842fd2185626507ea71a84cbf2461b7d288cb2ae5c",
+              "review_scope": "CNA description/version/multipart fields"
+            }
+          ]
+        }
+      ]
     }
   ],
   "current_totals": {
-    "article_files": 209,
-    "new_files": 118,
-    "supplemented_files": 91,
-    "qualified_candidate_ids": 222,
+    "article_files": 230,
+    "new_files": 135,
+    "supplemented_files": 95,
+    "qualified_candidate_ids": 243,
     "full_scope_complete": false
   },
   "subsequent_master_sync": {

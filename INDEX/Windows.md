@@ -48,13 +48,25 @@
 
 - [PowerShell 远程代码执行漏洞(CVE-2022-41076)安全风险通告二次更新](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Windows/PowerShell%20%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E%28CVE-2022-41076%29%E5%AE%89%E5%85%A8%E9%A3%8E%E9%99%A9%E9%80%9A%E5%91%8A%E4%BA%8C%E6%AC%A1%E6%9B%B4%E6%96%B0.md) [advisory; not-reproduced; needs-review]
 
+## Microsoft Windows / RtlQueryRegistryValues and EUDC
+
+- [Windows EUDC 注册表类型错误的公开源码与分支限制（CVE-2010-4398）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Windows/Windows%20EUDC%20%E6%B3%A8%E5%86%8C%E8%A1%A8%E7%B1%BB%E5%9E%8B%E9%94%99%E8%AF%AF%E7%9A%84%E5%85%AC%E5%BC%80%E6%BA%90%E7%A0%81%E4%B8%8E%E5%88%86%E6%94%AF%E9%99%90%E5%88%B6%EF%BC%88CVE-2010-4398%EF%BC%89.md) [vulnerability; not-reproduced; active]
+
 ## Microsoft Windows / afd.sys AfdJoinLeaf
 
 - [Windows AfdJoinLeaf 本地提权的公开模块及权限判据（CVE-2011-2005）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Windows/Windows%20AfdJoinLeaf%20%E6%9C%AC%E5%9C%B0%E6%8F%90%E6%9D%83%E7%9A%84%E5%85%AC%E5%BC%80%E6%A8%A1%E5%9D%97%E5%8F%8A%E6%9D%83%E9%99%90%E5%88%A4%E6%8D%AE%EF%BC%88CVE-2011-2005%EF%BC%89.md) [analysis; not-reproduced; active]
 
+## Microsoft Windows POSIX 子系统
+
+- [Windows POSIX 本地溢出与来源 SYSTEM 会话记录（CVE-2004-0210）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Windows/Windows%20POSIX%20%E6%9C%AC%E5%9C%B0%E6%BA%A2%E5%87%BA%E4%B8%8E%E6%9D%A5%E6%BA%90%20SYSTEM%20%E4%BC%9A%E8%AF%9D%E8%AE%B0%E5%BD%95%EF%BC%88CVE-2004-0210%EF%BC%89.md) [vulnerability; not-reproduced; active]
+
 ## Microsoft Windows Server Update Services (WSUS)
 
 - [CVE-2025-59287](../Web%E5%AE%89%E5%85%A8/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E6%9D%82%E9%A1%B9/CVE-2025-59287.md) [vulnerability; source-claimed; needs-review]
+
+## Microsoft Windows Shell / shortcut icon loading
+
+- [Windows LNK 图标加载的公开结构与 WebDAV 触发边界（CVE-2010-2568）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Windows/Windows%20LNK%20%E5%9B%BE%E6%A0%87%E5%8A%A0%E8%BD%BD%E7%9A%84%E5%85%AC%E5%BC%80%E7%BB%93%E6%9E%84%E4%B8%8E%20WebDAV%20%E8%A7%A6%E5%8F%91%E8%BE%B9%E7%95%8C%EF%BC%88CVE-2010-2568%EF%BC%89.md) [vulnerability; not-reproduced; active]
 
 ## Microsoft Windows fastfat.sys
 

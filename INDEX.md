@@ -2,7 +2,7 @@
 
 # 产品索引
 
-收录 5731 个主入口（另保留 5825 份来源文档）；不代表独立漏洞数或已验证数量。隔离/无效记录和结构错误不进入本索引。
+收录 5748 个主入口（另保留 5842 份来源文档）；不代表独立漏洞数或已验证数量。隔离/无效记录和结构错误不进入本索引。
 
 - [360（5 篇）](INDEX/360.md)
 - [AI应用（86 篇）](INDEX/AI%E5%BA%94%E7%94%A8.md)
@@ -20,7 +20,7 @@
 - [Dasan GPON（1 篇）](INDEX/Dasan%20GPON.md)
 - [DataCube3（1 篇）](INDEX/DataCube3.md)
 - [DrayTek（1 篇）](INDEX/DrayTek.md)
-- [ERP企业（245 篇）](INDEX/ERP%E4%BC%81%E4%B8%9A.md)
+- [ERP企业（246 篇）](INDEX/ERP%E4%BC%81%E4%B8%9A.md)
 - [Finetree（1 篇）](INDEX/Finetree.md)
 - [Firebird（1 篇）](INDEX/Firebird.md)
 - [H3C（1 篇）](INDEX/H3C.md)
@@ -53,11 +53,11 @@
 - [TP-Link（3 篇）](INDEX/TP-Link.md)
 - [Ubiquiti（1 篇）](INDEX/Ubiquiti.md)
 - [V8引擎（1 篇）](INDEX/V8%E5%BC%95%E6%93%8E.md)
-- [Windows（106 篇）](INDEX/Windows.md)
+- [Windows（109 篇）](INDEX/Windows.md)
 - [XZ Utils（1 篇）](INDEX/XZ%20Utils.md)
 - [iOS（1 篇）](INDEX/iOS.md)
 - [macOS（1 篇）](INDEX/macOS.md)
-- [中间件（532 篇）](INDEX/%E4%B8%AD%E9%97%B4%E4%BB%B6.md)
+- [中间件（533 篇）](INDEX/%E4%B8%AD%E9%97%B4%E4%BB%B6.md)
 - [云平台（140 篇）](INDEX/%E4%BA%91%E5%B9%B3%E5%8F%B0.md)
 - [从 allow_active 到 root 的本地提权（1 篇）](INDEX/%E4%BB%8E%20allow_active%20%E5%88%B0%20root%20%E7%9A%84%E6%9C%AC%E5%9C%B0%E6%8F%90%E6%9D%83.md)
 - [信诺瑞得（1 篇）](INDEX/%E4%BF%A1%E8%AF%BA%E7%91%9E%E5%BE%97.md)
@@ -77,8 +77,9 @@
 - [昂捷（1 篇）](INDEX/%E6%98%82%E6%8D%B7.md)
 - [智能设备（120 篇）](INDEX/%E6%99%BA%E8%83%BD%E8%AE%BE%E5%A4%87.md)
 - [服务器软件（197 篇）](INDEX/%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BD%AF%E4%BB%B6.md)
-- [桌面软件（241 篇）](INDEX/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6.md)
+- [桌面软件（250 篇）](INDEX/%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6.md)
 - [海康威视（37 篇）](INDEX/%E6%B5%B7%E5%BA%B7%E5%A8%81%E8%A7%86.md)
 - [网络设备（424 篇）](INDEX/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87.md)
+- [虚拟化（1 篇）](INDEX/%E8%99%9A%E6%8B%9F%E5%8C%96.md)
 - [运维面板（85 篇）](INDEX/%E8%BF%90%E7%BB%B4%E9%9D%A2%E6%9D%BF.md)
-- [邮件系统（52 篇）](INDEX/%E9%82%AE%E4%BB%B6%E7%B3%BB%E7%BB%9F.md)
+- [邮件系统（54 篇）](INDEX/%E9%82%AE%E4%BB%B6%E7%B3%BB%E7%BB%9F.md)
