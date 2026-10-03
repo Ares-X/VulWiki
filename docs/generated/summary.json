@@ -8,7 +8,7 @@
     "fingerprint_unverified": 800,
     "identifier_inactive": 27,
     "identifier_role_unknown": 215,
-    "noncontent_link_candidate": 27,
+    "noncontent_link_candidate": 25,
     "path_legacy": 2,
     "site_relative_link": 81,
     "source_missing": 3854,
@@ -17,6 +17,6 @@
   "primary_cve_identifiers": 3179,
   "primary_entries": 5570,
   "schema_version": 1,
-  "source_digest": "7006bcc25c87e6e8cb7e8acf43d6ba3cfee5183a95a2e5158ef9678fab9fbeed",
+  "source_digest": "a29f852f73756998d25819a48bf38d8931e98f7303175f0eecbe80eb62675d7c",
   "verification": "offline-static-only"
 }

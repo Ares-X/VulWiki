@@ -99,17 +99,22 @@ req2proto as a Service™：proto 定义泄露
 ●  
 请求 · getProtoDefinition  
   
+
+```http
 GET /v1/integrationPlatform:getProtoDefinition?fullName=youtube.api.pfiinnertube.YoutubeApiInnertube.InnerTubeContext&isEnum=false HTTP/2  
   
 Host: cloudcrmipfrontend-pa.clients6.google.com  
   
-Cookie: `<redacted>`  
+Cookie: <redacted>  
   
-Authorization: SAPISIDHASH `<redacted>`  
+Authorization: SAPISIDHASH <redacted>  
   
 Origin: https://console.cloud.google.com  
   
 X-Goog-Api-Key: AIzaSyBmtG6W8gM5Y6UxzUizxtaERwjmQZ0CCYE  
+```
+
+
   
 关于这里的认证  
   
@@ -241,19 +246,24 @@ Request unsafe for browser client domain: cloudcrmipfrontend-pa.clients6.google.
 ●  
 请求 · listQuotaQueue  
   
+
+```http
 GET /v1/integrationPlatform:listQuotaQueue?filter=client_id%3E%22123%22&alt=proto HTTP/2  
   
 Host: cloudcrmipfrontend-pa.clients6.google.com  
   
-Cookie: `<redacted>`  
+Cookie: <redacted>  
   
-Authorization: SAPISIDHASH `<redacted>`  
+Authorization: SAPISIDHASH <redacted>  
   
 Origin: https://console.cloud.google.com  
   
 X-Goog-Api-Key: AIzaSyBmtG6W8gM5Y6UxzUizxtaERwjmQZ0CCYE  
   
 X-Goog-Encode-Response-If-Executable: base64  
+```
+
+
   
 API 返回了一大段 base64 的 protobuf。  
   
@@ -592,13 +602,15 @@ permission_to_check 则告诉后端，最终解析出来的身份需要对什么
 ●  
 请求 · createDraftWorkflow  
   
+
+```http
 POST /v1/integrationPlatform:createDraftWorkflow HTTP/2  
   
 Host: cloudcrmipfrontend-pa.clients6.google.com  
   
-Cookie: `<redacted>`  
+Cookie: <redacted>  
   
-Authorization: SAPISIDHASH `<redacted>`  
+Authorization: SAPISIDHASH <redacted>  
   
 Origin: https://console.cloud.google.com  
   
@@ -626,6 +638,9 @@ Content-Length: 197
 　"isNewWorkflow": true  
   
 }  
+```
+
+
   
 ●  
 ●  
@@ -1615,11 +1630,13 @@ Authorization: Bearer `<redacted>`
 ●  
 请求 · 创建带 PythonTask 的集成版本  
   
+
+```http
 POST /v1/projects/273897706296/locations/us-central1/integrations/ExampleTest1234/versions HTTP/2  
   
 Host: integrations.googleapis.com  
   
-Authorization: Bearer `<redacted>`  
+Authorization: Bearer <redacted>  
   
 Content-Length: 1033  
   
@@ -1665,6 +1682,9 @@ Content-Length: 1033
 　...  
   
 }  
+```
+
+
   
 ●  
 ●  

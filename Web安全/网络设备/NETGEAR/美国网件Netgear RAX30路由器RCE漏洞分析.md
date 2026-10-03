@@ -61,9 +61,17 @@ source_status: "unknown"
   
 **设备型号:** RAX30  
   
+原归档固件链接残片：
+
+```text
 固件版本:  [RAX30 1.0.7.70](  
 Nighthawk RAX30 | WiFi 6 Router | NETGEAR Support  
-)  
+)
+```
+
+固件版本标签：RAX30 1.0.7.70。补充 [NETGEAR RAX30 官方产品支持页](https://www.netgear.com/support/product/RAX30.aspx)。
+
+> 原归档未保存此产品页的原始 URL。补充链接仅指型号支持页，不单独确认前述 1.0.7.70 固件版本号。  
 ##   
   
 **0****1**  

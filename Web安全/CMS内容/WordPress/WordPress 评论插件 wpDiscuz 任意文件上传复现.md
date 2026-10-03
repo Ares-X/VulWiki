@@ -37,11 +37,8 @@ schema_version: "1"
 # WordPress 评论插件 wpDiscuz 任意文件上传复现
 
 <meta name="referrer" content="no-referrer"/>
-\> 本文由 \[简悦 SimpRead\](http://ksria.com/simpread/) 转码， 原文地址 \[mp.weixin.qq.com\](https://mp.weixin.qq.com/s/-H1LRmVGYz8YuTCZqMIqsw)
 
-  
-
-  
+> 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/-H1LRmVGYz8YuTCZqMIqsw)
 
 **上方蓝色字体关注我们，一起学安全！**
 

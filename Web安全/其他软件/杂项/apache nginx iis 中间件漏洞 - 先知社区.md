@@ -381,12 +381,9 @@ location ~ \.php$ {
 
 [![](https://xzfile.aliyuncs.com/media/upload/picture/20201216100319-de6d3e52-3f42-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201216100319-de6d3e52-3f42-1.png)
 
-```
-修复
+## 修复
 php.ini 中的  cgi.fix_pathinfo=0 访问后就是404
 将/etc/php5/fpm/pool.d/www.conf 添加 security.limit_extensions = .php
-
-```
 
 CRLF
 ----
