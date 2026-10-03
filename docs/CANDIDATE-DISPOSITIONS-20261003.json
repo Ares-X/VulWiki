@@ -1,0 +1,3344 @@
+{
+  "scope": "2026-10-03本批来源报告的候选身份、处置与阅读深度统一台账",
+  "counting_unit": "候选身份/研究工作项，不是独立漏洞数、全文数或可运行EXP数",
+  "summary": {
+    "input_source_units": 151,
+    "deduplicated_candidate_work_items": 142,
+    "main_candidate_work_items_excluding_reference_only": 132,
+    "disposition_counts": {
+      "admitted_new": 42,
+      "admitted_complementary": 1,
+      "deferred": 22,
+      "duplicate_existing": 6,
+      "needs_review_candidate": 24,
+      "unread_candidate": 7,
+      "supplemented_existing": 16,
+      "needs_review_existing": 14,
+      "reference_only": 10
+    },
+    "noncandidate_source_units": 8,
+    "excluded_non_cve_detection_templates": 13,
+    "existing_article_files_with_recorded_changes": 14,
+    "existing_candidate_work_items_changed": 16,
+    "independent_vulnerability_count": null,
+    "global_unique_unread_candidate_count": null,
+    "new_article_files_published": 43,
+    "main_candidates_with_body_code_official_record_or_selected_section_review_records": 125
+  },
+  "source_group_reconciliation": [
+    {
+      "group": "initial21",
+      "source_units": 21,
+      "mapped_candidate_work_items": 21,
+      "noncandidate_source_units": 0,
+      "final_dispositions": {
+        "admitted_new": 16,
+        "deferred": 5
+      }
+    },
+    {
+      "group": "english5",
+      "source_units": 5,
+      "mapped_candidate_work_items": 5,
+      "noncandidate_source_units": 0,
+      "final_dispositions": {
+        "admitted_new": 4,
+        "deferred": 1
+      }
+    },
+    {
+      "group": "sourbyte25",
+      "source_units": 25,
+      "mapped_candidate_work_items": 25,
+      "noncandidate_source_units": 0,
+      "final_dispositions": {
+        "needs_review_candidate": 21,
+        "deferred": 2,
+        "duplicate_existing": 2
+      }
+    },
+    {
+      "group": "wxvl4",
+      "source_units": 4,
+      "mapped_candidate_work_items": 3,
+      "noncandidate_source_units": 1,
+      "final_dispositions": {
+        "deferred": 2,
+        "duplicate_existing": 1
+      }
+    },
+    {
+      "group": "mrxn_incremental_link",
+      "source_units": 1,
+      "mapped_candidate_work_items": 1,
+      "noncandidate_source_units": 0,
+      "final_dispositions": {
+        "unread_candidate": 1
+      }
+    },
+    {
+      "group": "imfht16",
+      "source_units": 16,
+      "mapped_candidate_work_items": 16,
+      "noncandidate_source_units": 0,
+      "final_dispositions": {
+        "deferred": 3,
+        "admitted_new": 11,
+        "supplemented_existing": 2
+      }
+    },
+    {
+      "group": "chaitin16",
+      "source_units": 16,
+      "mapped_candidate_work_items": 20,
+      "noncandidate_source_units": 0,
+      "final_dispositions": {
+        "needs_review_candidate": 3,
+        "duplicate_existing": 3,
+        "supplemented_existing": 2,
+        "deferred": 5,
+        "needs_review_existing": 3,
+        "admitted_complementary": 1,
+        "admitted_new": 3
+      }
+    },
+    {
+      "group": "chaitin_other8",
+      "source_units": 8,
+      "mapped_candidate_work_items": 3,
+      "noncandidate_source_units": 5,
+      "final_dispositions": {
+        "needs_review_candidate": 2,
+        "unread_candidate": 1
+      }
+    },
+    {
+      "group": "google10",
+      "source_units": 10,
+      "mapped_candidate_work_items": 8,
+      "noncandidate_source_units": 2,
+      "final_dispositions": {
+        "unread_candidate": 5,
+        "admitted_new": 1,
+        "deferred": 1,
+        "supplemented_existing": 1
+      }
+    },
+    {
+      "group": "linux45",
+      "source_units": 45,
+      "mapped_candidate_work_items": 45,
+      "noncandidate_source_units": 0,
+      "final_dispositions": {
+        "needs_review_existing": 11,
+        "supplemented_existing": 13,
+        "deferred": 4,
+        "reference_only": 10,
+        "admitted_new": 7
+      }
+    }
+  ],
+  "candidates": [
+    {
+      "candidate_key": "article:VW-20261003-wikipedia-android-deeplink",
+      "title": "Wikipedia Android 深链接主机校验与会话泄露（CVE-2026-65993）",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2026-65993"
+      ],
+      "disposition": "admitted_new",
+      "disposition_label": "录入新稿",
+      "read_depth": "primary_material_and_selected_code_or_poc",
+      "reason": "Primary advisory contains trigger, JS, detailed chain and observed results; source patches independently support boundary analysis. Full poc_server.py absent and release-version boundary unresolved.",
+      "source_groups": [
+        "initial21"
+      ],
+      "source_urls": [
+        "https://securitylab.github.com/advisories/GHSL-2026-101_apps-android-wikipedia/",
+        "https://github.com/wikimedia/apps-android-wikipedia/commit/6c4c79006f2be920664d27a1e6eccedc228f827b"
+      ],
+      "target_paths": [
+        "Web安全/桌面软件/Wikipedia/Wikipedia Android 深链接主机校验与会话泄露（CVE-2026-65993）.md"
+      ],
+      "limits": [
+        "未复现；不代表整个产品或依赖树已审计",
+        "poc_server.py unpublished",
+        "formal affected/fixed release ranges",
+        "dynamic reproduction",
+        "full dependency audit",
+        "advisory images not inspected"
+      ]
+    },
+    {
+      "candidate_key": "article:VW-20261003-ytdlnis-intent-argument",
+      "title": "YTDLnis Intent COMMAND 参数注入与 Python 运行时文件写入",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [],
+      "disposition": "admitted_new",
+      "disposition_label": "录入新稿",
+      "read_depth": "primary_material_and_selected_code_or_poc",
+      "reason": "Public original Intent plus exact source-to-sink chain and fixed patch; original placeholder means full execution payload is not public in cited article.",
+      "source_groups": [
+        "initial21"
+      ],
+      "source_urls": [
+        "https://www.sonarsource.com/blog/ytdlnis-argument-injection-rce/",
+        "https://github.com/deniscerri/ytdlnis/commit/2433b3768ce6da6202d0ca110af61ec4ae0bf971"
+      ],
+      "target_paths": [
+        "Web安全/桌面软件/YTDLnis/YTDLnis Intent COMMAND 参数注入与 Python 运行时文件写入.md"
+      ],
+      "limits": [
+        "未复现；不代表整个产品或依赖树已审计",
+        "missing Python payload",
+        "article header author/date not independently fetched; cited read via primary search-cached body",
+        "full dependency audit",
+        "dynamic reproduction",
+        "demo image pixels not inspected"
+      ]
+    },
+    {
+      "candidate_key": "article:VW-20261003-chrome-sanitizer-bypasses",
+      "title": "Chrome 146 Sanitizer API：SVG 名称解析与表单 URL 重解析绕过",
+      "identity_kind": "multi_issue_research_work_item",
+      "identifiers": [],
+      "disposition": "admitted_new",
+      "disposition_label": "录入新稿",
+      "read_depth": "primary_material_and_selected_code_or_poc",
+      "reason": "Two public minimal HTML PoCs, primary fixed commits and SVG regression test; no need to invent CVE.",
+      "source_groups": [
+        "initial21"
+      ],
+      "source_urls": [
+        "https://www.slcyber.io/research/two-bypasses-for-chromes-sanitizer-api",
+        "https://github.com/chromium/chromium/commit/99dfc1af6343a7e33446157fcaf463a714097f48"
+      ],
+      "target_paths": [
+        "Web安全/桌面软件/Chrome/Chrome 146 Sanitizer API SVG 与表单 URL 重解析绕过.md"
+      ],
+      "limits": [
+        "未复现；不代表整个产品或依赖树已审计",
+        "per-platform release-build backport verification",
+        "dynamic reproduction"
+      ]
+    },
+    {
+      "candidate_key": "article:VW-20261003-chrome-ios-shortcuts-policy",
+      "title": "Chrome for iOS 经 Shortcuts 回调绕过应用启动确认（CVE-2026-13795）",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2026-13795"
+      ],
+      "disposition": "admitted_new",
+      "disposition_label": "录入新稿",
+      "read_depth": "primary_material_and_selected_code_or_poc",
+      "reason": "Primary author-index full text, exact public HTML trigger, CNA version bound and full Chromium fix/test diff.",
+      "source_groups": [
+        "initial21"
+      ],
+      "source_urls": [
+        "https://blog.doyensec.com/2026/09/24/chrome-ios-policy-bypass.html",
+        "https://github.com/chromium/chromium/commit/d19ac426145be6a3e365965013bad11f17d84d90"
+      ],
+      "target_paths": [
+        "Web安全/桌面软件/Chrome/Chrome iOS Shortcuts 回调确认绕过（CVE-2026-13795）.md"
+      ],
+      "limits": [
+        "未复现；不代表整个产品或依赖树已审计",
+        "dynamic reproduction and OS-version path differences",
+        "canonical article direct fetch",
+        "demo video not viewed",
+        "article author from standalone page header not independently verified"
+      ]
+    },
+    {
+      "candidate_key": "article:VW-20261003-CN01",
+      "title": "天锐数据泄露防护系统 findSingConfigPage 排序参数 SQL 注入（CVE-2025-11314）",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2025-11314"
+      ],
+      "disposition": "admitted_new",
+      "disposition_label": "录入新稿",
+      "read_depth": "article_text_request_and_selected_evidence",
+      "reason": "原始分析/厂商依据与HTTP材料对照；认证、图片、版本缺口按原稿分别保留",
+      "source_groups": [
+        "initial21"
+      ],
+      "source_urls": [
+        "https://github.com/FightingLzn9/vul/blob/1a9d896a999e22b319fe7d464a96fd4f04a101d0/天锐数据泄露防护系统-6.md",
+        "https://github.com/CVEProject/cvelistV5/blob/main/cves/2025/11xxx/CVE-2025-11314.json"
+      ],
+      "target_paths": [
+        "Web安全/安全设备/天锐数据泄露防护系统/天锐 findSingConfigPage 排序参数SQL注入 CVE-2025-11314.md"
+      ],
+      "limits": [
+        "未复现；不代表整个产品或依赖树已审计"
+      ]
+    },
+    {
+      "candidate_key": "article:VW-20261003-CN02",
+      "title": "用友财务云 A++V8 selectMaUser orgCode SQL 注入",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [],
+      "disposition": "admitted_new",
+      "disposition_label": "录入新稿",
+      "read_depth": "article_text_request_and_selected_evidence",
+      "reason": "原始分析/厂商依据与HTTP材料对照；认证、图片、版本缺口按原稿分别保留",
+      "source_groups": [
+        "initial21"
+      ],
+      "source_urls": [
+        "https://security.yonyou.com/#/patchInfo?identifier=309233a5451d4d349c3bc47937fd4f4e",
+        "https://security.yonyou.com/web-api/web/notice/patch/get?identifier=309233a5451d4d349c3bc47937fd4f4e"
+      ],
+      "target_paths": [
+        "Web安全/ERP企业/用友政务财务云/用友财务云A++V8 selectMaUser orgCode SQL注入.md"
+      ],
+      "limits": [
+        "未复现；不代表整个产品或依赖树已审计"
+      ]
+    },
+    {
+      "candidate_key": "article:VW-20261003-CN03",
+      "title": "金和 OA C6 AjaxForCenterBudgetDecompose SQL 注入",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [],
+      "disposition": "admitted_new",
+      "disposition_label": "录入新稿",
+      "read_depth": "article_text_request_and_selected_evidence",
+      "reason": "原始分析/厂商依据与HTTP材料对照；认证、图片、版本缺口按原稿分别保留",
+      "source_groups": [
+        "initial21"
+      ],
+      "source_urls": [
+        "https://mrxn.net/jswz/jhsoft-AjaxForCenterBudgetDecompose-sqli.html"
+      ],
+      "target_paths": [
+        "Web安全/OA办公/金和OA/金和OA C6 AjaxForCenterBudgetDecompose SQL注入.md"
+      ],
+      "limits": [
+        "未复现；不代表整个产品或依赖树已审计"
+      ]
+    },
+    {
+      "candidate_key": "article:VW-20261003-COLLECTION-OPENCODE",
+      "title": "OpenCode 升级接口跨站请求与任意包安装（GHSA-632h-h47v-g4x4）",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "GHSA-632h-h47v-g4x4"
+      ],
+      "disposition": "admitted_new",
+      "disposition_label": "录入新稿",
+      "read_depth": "primary_material_and_selected_code_or_poc",
+      "reason": "Original article/advisory inline package, HTML and HTTP PoC; no separate repository required",
+      "source_groups": [
+        "initial21"
+      ],
+      "source_urls": [
+        "https://securitylabs.datadoghq.com/articles/opencode-upgrade-remote-code-execution/",
+        "https://github.com/anomalyco/opencode/security/advisories/GHSA-632h-h47v-g4x4"
+      ],
+      "target_paths": [
+        "Web安全/AI应用/OpenCode/OpenCode 升级接口跨站请求与任意包安装（GHSA-632h-h47v-g4x4）.md"
+      ],
+      "limits": [
+        "未复现；不代表整个产品或依赖树已审计",
+        "Browser behavior and Basic credential caching are version/session specific",
+        "Lifecycle policy for npm/pnpm/Bun is part of actual execution prerequisites",
+        "No CVE assigned per original researcher; do not invent one"
+      ]
+    },
+    {
+      "candidate_key": "article:VW-20261003-COLLECTION-N8N",
+      "title": "n8n GSuiteAdmin 原型污染与 Git 命令执行链（CVE-2026-33696）",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2026-33696",
+        "GHSA-mxrg-77hm-89hv"
+      ],
+      "disposition": "admitted_new",
+      "disposition_label": "录入新稿",
+      "read_depth": "primary_material_and_selected_code_or_poc",
+      "reason": "Original manual workflow configuration and HTTP body; no downloadable workflow JSON in cited article",
+      "source_groups": [
+        "initial21"
+      ],
+      "source_urls": [
+        "https://simonkoeck.com/writeups/n8n-gsuiteadmin-prototype-pollution-rce",
+        "https://github.com/n8n-io/n8n/security/advisories/GHSA-mxrg-77hm-89hv"
+      ],
+      "target_paths": [
+        "Web安全/AI应用/n8n/n8n GSuiteAdmin 原型污染与 Git 命令执行链（CVE-2026-33696）.md"
+      ],
+      "limits": [
+        "未复现；不代表整个产品或依赖树已审计",
+        "Author timeline says 2025, official disclosure and all fixed releases are 2026-03-25",
+        "Continue-on-error/routing and configured required credentials omitted by short author recipe; pollution occurring before API failure does not itself prove default continuation into Git",
+        "Only GSuiteAdmin article analyzed; XML title/reference does not provide an XML PoC here",
+        "Transitive simple-git and Node environment propagation not independently runtime verified; n8n catalog pins simple-git 3.32.3",
+        "Backport commit IDs for 1.123.27 and 2.13.3 not independently identified"
+      ]
+    },
+    {
+      "candidate_key": "article:VW-20261003-COLLECTION-SQLCOPILOT",
+      "title": "SSMS SQL Copilot 只读绕过与数据库元数据提权（CVE-2026-65669）",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2026-65669"
+      ],
+      "disposition": "admitted_new",
+      "disposition_label": "录入新稿",
+      "read_depth": "primary_material_and_selected_code_or_poc",
+      "reason": "Public direct prompts, T-SQL, presentation screenshots and linked demos; no executable project published in cited material",
+      "source_groups": [
+        "initial21"
+      ],
+      "source_urls": [
+        "https://embracethered.com/blog/posts/2026/from-select-to-sysadmin-sql-copilot-bluehat-asia/",
+        "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-65669"
+      ],
+      "target_paths": [
+        "Web安全/AI应用/SQL Copilot/SSMS SQL Copilot 只读绕过与数据库元数据提权（CVE-2026-65669）.md"
+      ],
+      "limits": [
+        "未复现；不代表整个产品或依赖树已审计",
+        "Microsoft closed-source patch commit not public/verified",
+        "MSRC webpage did not yield readable detail through web text; CNA record supplies affected product/version",
+        "Only PDF pages 34 and 52 visually inspected; demo videos not watched",
+        "Direct tool bypass is not sufficient alone to prove cross-user privilege escalation; poisoned input and a higher-privileged consumer are required",
+        "CNA publish 2026-09-08 and release date 2026-07-28 are separate dates"
+      ]
+    },
+    {
+      "candidate_key": "article:VW-20261003-COLLECTION-LIBHEIF",
+      "title": "libheif Grid 色度平面越界写与 Next.js 实验链（CVE-2026-32740）",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2026-32740",
+        "GHSA-frfr-f3vg-2g6j"
+      ],
+      "disposition": "admitted_new",
+      "disposition_label": "录入新稿",
+      "read_depth": "primary_material_and_selected_code_or_poc",
+      "reason": "Public original Fortbridge source, native profiles, manual lab and evidence files",
+      "source_groups": [
+        "initial21"
+      ],
+      "source_urls": [
+        "https://fortbridge.co.uk/research/cve-2026-32740-nextjs-sharp-libheif-rce/",
+        "https://github.com/strukturag/libheif/security/advisories/GHSA-frfr-f3vg-2g6j"
+      ],
+      "target_paths": [
+        "Web安全/开发框架/libheif/libheif Grid 色度平面越界写与 Next.js 实验链（CVE-2026-32740）.md"
+      ],
+      "limits": [
+        "未复现；不代表整个产品或依赖树已审计",
+        "Article/repo text says private, but API reports private=false and source is public",
+        "Custom lab routes are not default Next.js routes",
+        "RCE requires additional leak, preserved ELF upload, exact native layout and callbacks",
+        "Official 64-byte total and lab 58-byte row refer to different geometry",
+        "Artifact verifier executes supplied Node --version; not a pure text-only checker",
+        "No binary fingerprints, samples, end-to-end evidence or 96 tests executed by this reviewer",
+        "Downloaded source is evidence only, not redistribution deliverable"
+      ]
+    },
+    {
+      "candidate_key": "article:VW-20261003-NATIVE-01",
+      "title": "ZendTo dropoff 路径穿越与文件移走（CVE-2025-34508）",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2025-34508"
+      ],
+      "disposition": "admitted_new",
+      "disposition_label": "录入新稿",
+      "read_depth": "primary_material_and_selected_code_or_poc",
+      "reason": "公开具体验证材料及来源/补丁静态核对；具体已读文件与限制见对应分工报告",
+      "source_groups": [
+        "initial21"
+      ],
+      "source_urls": [
+        "https://horizon3.ai/attack-research/attack-blogs/cve-2025-34508-another-file-sharing-application-another-path-traversal/",
+        "https://www.zend.to/changelog"
+      ],
+      "target_paths": [
+        "Web安全/服务器软件/ZendTo/ZendTo dropoff 路径穿越与文件移走（CVE-2025-34508）.md"
+      ],
+      "limits": [
+        "未复现；不代表整个产品或依赖树已审计"
+      ]
+    },
+    {
+      "candidate_key": "article:VW-20261003-NATIVE-02",
+      "title": "CFITSIO 扩展文件名的复制、SSRF 与外传原语及 4.7.0 加固",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [],
+      "disposition": "admitted_new",
+      "disposition_label": "录入新稿",
+      "read_depth": "primary_material_and_selected_code_or_poc",
+      "reason": "公开具体验证材料及来源/补丁静态核对；具体已读文件与限制见对应分工报告",
+      "source_groups": [
+        "initial21"
+      ],
+      "source_urls": [
+        "https://blog.doyensec.com/2026/05/19/cfitsio-weaponized-filenames.html",
+        "https://github.com/doyensec/cfitsio-efs-playground/tree/5f3870bf298f254f4237fba798601ac5bf35d17d"
+      ],
+      "target_paths": [
+        "Web安全/开发框架/CFITSIO/CFITSIO 扩展文件名原语及4.7.0加固分析.md"
+      ],
+      "limits": [
+        "未复现；不代表整个产品或依赖树已审计"
+      ]
+    },
+    {
+      "candidate_key": "article:VW-20261003-NATIVE-03",
+      "title": "Windows GetProcessHandleFromHwnd 保护进程边界与 PPLwindow 本地演示",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [],
+      "disposition": "admitted_new",
+      "disposition_label": "录入新稿",
+      "read_depth": "primary_material_and_selected_code_or_poc",
+      "reason": "公开具体验证材料及来源/补丁静态核对；具体已读文件与限制见对应分工报告",
+      "source_groups": [
+        "initial21"
+      ],
+      "source_urls": [
+        "https://projectzero.google/2026/02/gphfh-deep-dive.html",
+        "https://github.com/R41N3RZUF477/PPLwindow/tree/351d5230d0b219fe28f96a2b3b88a2992701c3bc"
+      ],
+      "target_paths": [
+        "系统安全/Windows/Windows本地提权漏洞/GetProcessHandleFromHwnd保护进程边界与PPLwindow分析.md"
+      ],
+      "limits": [
+        "未复现；不代表整个产品或依赖树已审计"
+      ]
+    },
+    {
+      "candidate_key": "article:VW-20261003-NATIVE-04",
+      "title": "MemoryUserDatabaseFactory 路径混用的 JNDI 文件写入与 JSP 链",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [],
+      "disposition": "admitted_new",
+      "disposition_label": "录入新稿",
+      "read_depth": "primary_material_and_selected_code_or_poc",
+      "reason": "公开具体验证材料及来源/补丁静态核对；具体已读文件与限制见对应分工报告",
+      "source_groups": [
+        "initial21"
+      ],
+      "source_urls": [
+        "https://srcincite.io/blog/2024/07/21/jndi-injection-rce-via-path-manipulation-in-memoryuserdatabasefactory.html",
+        "https://tomcat.apache.org/tomcat-9.0-doc/changelog.html"
+      ],
+      "target_paths": [
+        "Web安全/中间件/Apache Tomcat/MemoryUserDatabaseFactory路径混用JNDI链分析.md"
+      ],
+      "limits": [
+        "未复现；不代表整个产品或依赖树已审计"
+      ]
+    },
+    {
+      "candidate_key": "article:VW-20261003-BREADTH-04",
+      "title": "Argo CD repo-server构建选项与Helm网络边界公开验证（GHSA-47m3-95c7-g2g8）",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "GHSA-47m3-95c7-g2g8"
+      ],
+      "disposition": "admitted_new",
+      "disposition_label": "录入新稿",
+      "read_depth": "primary_material_and_selected_code_or_poc",
+      "reason": "公开具体验证材料及来源/补丁静态核对；具体已读文件与限制见对应分工报告",
+      "source_groups": [
+        "english5"
+      ],
+      "source_urls": [
+        "https://www.synacktiv.com/en/publications/caught-in-the-octopus-trap-unauthenticated-rce-in-argo-cd-with-codeql"
+      ],
+      "target_paths": [
+        "Web安全/云平台/Argo CD/Argo CD repo-server构建选项与Helm网络边界公开验证（GHSA-47m3-95c7-g2g8）.md"
+      ],
+      "limits": [
+        "未复现；不代表整个产品或依赖树已审计"
+      ]
+    },
+    {
+      "candidate_key": "article:VW-20261003-BREADTH-02",
+      "title": "Provenance marker陈旧供应量授权绕过与两阶段回归验证",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [],
+      "disposition": "admitted_new",
+      "disposition_label": "录入新稿",
+      "read_depth": "primary_material_and_selected_code_or_poc",
+      "reason": "公开具体验证材料及来源/补丁静态核对；具体已读文件与限制见对应分工报告",
+      "source_groups": [
+        "english5"
+      ],
+      "source_urls": [
+        "https://blog.trailofbits.com/2026/08/25/state-divergence-enables-unauthorized-access/"
+      ],
+      "target_paths": [
+        "Web安全/开发框架/Provenance/Provenance marker陈旧供应量授权绕过与两阶段回归验证.md"
+      ],
+      "limits": [
+        "未复现；不代表整个产品或依赖树已审计"
+      ]
+    },
+    {
+      "candidate_key": "article:VW-20261003-BREADTH-03",
+      "title": "ruby-saml 规范化空串与解析器差异及XSW公开验证工具（CVE-2025-66567、CVE-2025-66568）",
+      "identity_kind": "multi_issue_research_work_item",
+      "identifiers": [
+        "CVE-2025-66567",
+        "CVE-2025-66568"
+      ],
+      "disposition": "admitted_new",
+      "disposition_label": "录入新稿",
+      "read_depth": "primary_material_and_selected_code_or_poc",
+      "reason": "公开具体验证材料及来源/补丁静态核对；具体已读文件与限制见对应分工报告",
+      "source_groups": [
+        "english5"
+      ],
+      "source_urls": [
+        "https://portswigger.net/research/the-fragile-lock"
+      ],
+      "target_paths": [
+        "Web安全/开发框架/Ruby/ruby-saml 规范化空串与解析器差异及XSW公开验证工具（CVE-2025-66567、CVE-2025-66568）.md"
+      ],
+      "limits": [
+        "未复现；不代表整个产品或依赖树已审计"
+      ]
+    },
+    {
+      "candidate_key": "article:VW-20261003-BREADTH-01",
+      "title": "N-central 路径与Forwarded解析差异及公开SOAP验证边界（CVE-2026-86206）",
+      "identity_kind": "multi_issue_research_work_item",
+      "identifiers": [
+        "CVE-2026-86206"
+      ],
+      "disposition": "admitted_new",
+      "disposition_label": "录入新稿",
+      "read_depth": "primary_material_and_selected_code_or_poc",
+      "reason": "公开具体验证材料及来源/补丁静态核对；具体已读文件与限制见对应分工报告",
+      "source_groups": [
+        "english5"
+      ],
+      "source_urls": [
+        "https://www.rapid7.com/blog/post/ve-cve-2026-86206-cve-2026-86207-n-able-n-central-authentication-bypass-fixed/"
+      ],
+      "target_paths": [
+        "Web安全/服务器软件/N-able N-central/N-central 路径与Forwarded解析差异及公开SOAP验证边界（CVE-2026-86206）.md"
+      ],
+      "limits": [
+        "未复现；不代表整个产品或依赖树已审计"
+      ]
+    },
+    {
+      "candidate_key": "article:VW-20261003-CH-imagemagick-44267",
+      "title": "ImageMagick PNG profile 标准输入等待型拒绝服务（CVE-2022-44267）",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2022-44267"
+      ],
+      "disposition": "admitted_new",
+      "disposition_label": "录入新稿",
+      "read_depth": "detailed text and primary/code verification",
+      "reason": "新增独立主文；现库有 44268 文件读取而无 44267 主文。截图外链 403，改以实际可读的 Uptycs 文本 PoC、CVE 与补丁构成证据。",
+      "source_groups": [
+        "chaitin16"
+      ],
+      "source_urls": [
+        "https://bbs.chaitin.cn/topic/335"
+      ],
+      "target_paths": [
+        "Web安全/桌面软件/ImageMagick/ImageMagick PNG profile 标准输入等待型拒绝服务 CVE-2022-44267.md"
+      ],
+      "limits": [
+        "未复现；不代表整个产品或依赖树已审计"
+      ]
+    },
+    {
+      "candidate_key": "article:VW-20261003-CH-proftpd-9273",
+      "title": "ProFTPD 数据通道 UAF 与公开 EXP 静态核验（CVE-2020-9273）",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2020-9273"
+      ],
+      "disposition": "admitted_new",
+      "disposition_label": "录入新稿",
+      "read_depth": "detailed text and primary/code verification",
+      "reason": "新增主分析；补入 lockedbyte 两份固定 EXP，鉴权、mod_copy、写文件、回连、硬编码与版本回补边界。",
+      "source_groups": [
+        "chaitin16"
+      ],
+      "source_urls": [
+        "https://rivers.chaitin.cn/blog/cq951690lnechd244h50"
+      ],
+      "target_paths": [
+        "Web安全/服务器软件/ProFTPD/ProFTPD 数据通道 UAF 与公开 EXP 静态核验 CVE-2020-9273.md"
+      ],
+      "limits": [
+        "未复现；不代表整个产品或依赖树已审计"
+      ]
+    },
+    {
+      "candidate_key": "article:VW-20261003-CH-onlyoffice-savefile",
+      "title": "ONLYOFFICE savefile 路径穿越与 docbuilder 利用条件分析",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [],
+      "disposition": "admitted_new",
+      "disposition_label": "录入新稿",
+      "read_depth": "detailed text and primary/code verification",
+      "reason": "新增独立 savefile 分析；不误挂 CVE-2021-3199；核实官方 Bug 46037 / 5.6.2；读取及数据解码检查原 Base64。",
+      "source_groups": [
+        "chaitin16"
+      ],
+      "source_urls": [
+        "https://rivers.chaitin.cn/blog/cq958510lnechd2450h0"
+      ],
+      "target_paths": [
+        "Web安全/商业软件/ONLYOFFICE/ONLYOFFICE savefile 路径穿越与 docbuilder 利用条件分析.md"
+      ],
+      "limits": [
+        "未复现；不代表整个产品或依赖树已审计"
+      ]
+    },
+    {
+      "candidate_key": "article:VW-20261003-CH-php4577-xampp",
+      "title": "PHP CGI 参数注入的 XAMPP 失败条件与官方回归测试（CVE-2024-4577）",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2024-4577"
+      ],
+      "disposition": "admitted_complementary",
+      "disposition_label": "录入互补分析",
+      "read_depth": "detailed text and primary/code verification",
+      "reason": "原 Windows 主文不含 force_redirect/redirect_status_env；保留为 analysis_of，补失败条件、官方回归测试及后续 8926/8927 边界。",
+      "source_groups": [
+        "chaitin16"
+      ],
+      "source_urls": [
+        "https://rivers.chaitin.cn/blog/cq957f90lnechd244v10"
+      ],
+      "target_paths": [
+        "Web安全/开发框架/PHP/PHP CGI 参数注入的 XAMPP 失败条件与官方回归测试 CVE-2024-4577.md"
+      ],
+      "limits": [
+        "未复现；不代表整个产品或依赖树已审计"
+      ]
+    },
+    {
+      "candidate_key": "article:VW-20261003-IMFHT-100885",
+      "title": "Krayin CRM 安装器 AJAX 绕过导致管理员账户覆盖",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2026-100885"
+      ],
+      "disposition": "admitted_new",
+      "disposition_label": "录入新稿",
+      "read_depth": "primary_material_and_selected_code_or_poc",
+      "reason": "公开具体验证材料及来源/补丁静态核对；具体已读文件与限制见对应分工报告",
+      "source_groups": [
+        "imfht16"
+      ],
+      "source_urls": [
+        "https://github.com/carlosalbertotuma/advisory/blob/e5d131d8dac4840ac4308b29de3dc1aa5f721b64/advisory-07-Unauthenticated-InstallerBypass.md"
+      ],
+      "target_paths": [
+        "Web安全/商业软件/Krayin/Krayin-Installer-未认证账户覆盖-CVE-2026-100885.md"
+      ],
+      "limits": [
+        "未复现；不代表整个产品或依赖树已审计"
+      ]
+    },
+    {
+      "candidate_key": "article:VW-20261003-IMFHT-100906",
+      "title": "Eyeplus ONVIF GetUsers 未认证明文口令返回：后续登录尚未证实",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2026-100906"
+      ],
+      "disposition": "admitted_new",
+      "disposition_label": "录入新稿",
+      "read_depth": "primary_material_and_selected_code_or_poc",
+      "reason": "公开具体验证材料及来源/补丁静态核对；具体已读文件与限制见对应分工报告",
+      "source_groups": [
+        "imfht16"
+      ],
+      "source_urls": [
+        "https://github.com/devjanger/iot-advisories/blob/3e8ea257b091a9ef322457862560aa09c27e544c/EYEPLUS-GetUsers-Unauth-Plaintext-Password.md"
+      ],
+      "target_paths": [
+        "IOT安全/摄像头/Eyeplus/Eyeplus-GetUsers-凭据信息泄露-CVE-2026-100906.md"
+      ],
+      "limits": [
+        "未复现；不代表整个产品或依赖树已审计"
+      ]
+    },
+    {
+      "candidate_key": "article:VW-20261003-IMFHT-101074",
+      "title": "Netcore NR289-GE boa Basic Auth 栈溢出：崩溃和 PC 控制的证据边界",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2026-101074"
+      ],
+      "disposition": "admitted_new",
+      "disposition_label": "录入新稿",
+      "read_depth": "primary_material_and_selected_code_or_poc",
+      "reason": "公开具体验证材料及来源/补丁静态核对；具体已读文件与限制见对应分工报告",
+      "source_groups": [
+        "imfht16"
+      ],
+      "source_urls": [
+        "https://github.com/senxitoyshuyi-ui/HACKALL/blob/53039d907a48e41955938cad73598b7e5de1eff9/netcore_NR289-GE_V1.4.5102%2C2018.06.1418_44%20Router/Netcore_NR289-GE_boa_stack_overflow.md"
+      ],
+      "target_paths": [
+        "Web安全/网络设备/Netcore/Netcore-NR289-GE-boa-栈溢出-CVE-2026-101074.md"
+      ],
+      "limits": [
+        "未复现；不代表整个产品或依赖树已审计"
+      ]
+    },
+    {
+      "candidate_key": "article:VW-20261003-IMFHT-101143",
+      "title": "Eleveo Quality Management 问卷导出响应泄露服务器路径",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2026-101143"
+      ],
+      "disposition": "admitted_new",
+      "disposition_label": "录入新稿",
+      "read_depth": "primary_material_and_selected_code_or_poc",
+      "reason": "公开具体验证材料及来源/补丁静态核对；具体已读文件与限制见对应分工报告",
+      "source_groups": [
+        "imfht16"
+      ],
+      "source_urls": [
+        "https://drive.google.com/file/d/1qKulZLn6xxT3ePlV__Q-0MKLhlWmRI_U/view?usp=sharing"
+      ],
+      "target_paths": [
+        "Web安全/商业软件/Eleveo/Eleveo-Quality-Management-QMBODownload-路径泄露-CVE-2026-101143.md"
+      ],
+      "limits": [
+        "未复现；不代表整个产品或依赖树已审计"
+      ]
+    },
+    {
+      "candidate_key": "article:VW-20261003-IMFHT-101260",
+      "title": "Ziroom ZHOME A0101 firstLogin 认证后命令注入：配置覆盖与回连副作用",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2026-101260"
+      ],
+      "disposition": "admitted_new",
+      "disposition_label": "录入新稿",
+      "read_depth": "primary_material_and_selected_code_or_poc",
+      "reason": "公开具体验证材料及来源/补丁静态核对；具体已读文件与限制见对应分工报告",
+      "source_groups": [
+        "imfht16"
+      ],
+      "source_urls": [
+        "https://github.com/waltz-sketch/Ziroom/blob/6513d083108f7a859eaeffc7500c33e131b0228a/firstlogin_command_injection.md"
+      ],
+      "target_paths": [
+        "Web安全/网络设备/Ziroom/Ziroom-ZHOME-A0101-firstLogin-命令注入-CVE-2026-101260.md"
+      ],
+      "limits": [
+        "未复现；不代表整个产品或依赖树已审计"
+      ]
+    },
+    {
+      "candidate_key": "article:VW-20261003-IMFHT-49060",
+      "title": "Hippoo REST 路由权限哨兵混用：本地对照 PoC 与管理员密码覆盖",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2026-49060"
+      ],
+      "disposition": "admitted_new",
+      "disposition_label": "录入新稿",
+      "read_depth": "primary_material_and_selected_code_or_poc",
+      "reason": "公开具体验证材料及来源/补丁静态核对；具体已读文件与限制见对应分工报告",
+      "source_groups": [
+        "imfht16"
+      ],
+      "source_urls": [
+        "https://github.com/rootdirective-sec/CVE-2026-49060-Lab/blob/db51f07bdfa8961c291f53fabdde53a65041012b/README.md"
+      ],
+      "target_paths": [
+        "Web安全/CMS内容/WordPress/Hippoo-REST权限绕过-管理员密码覆盖-CVE-2026-49060.md"
+      ],
+      "limits": [
+        "未复现；不代表整个产品或依赖树已审计"
+      ]
+    },
+    {
+      "candidate_key": "article:VW-20261003-IMFHT-58467",
+      "title": "Cockpit CMS Space Storage 路径遍历：PHP 内置服务器与路径存在条件",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2026-58467"
+      ],
+      "disposition": "admitted_new",
+      "disposition_label": "录入新稿",
+      "read_depth": "primary_material_and_selected_code_or_poc",
+      "reason": "公开具体验证材料及来源/补丁静态核对；具体已读文件与限制见对应分工报告",
+      "source_groups": [
+        "imfht16"
+      ],
+      "source_urls": [
+        "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2026/CVE-2026-58467.yaml"
+      ],
+      "target_paths": [
+        "Web安全/CMS内容/Cockpit/Cockpit-CMS-Space-Storage-路径遍历-CVE-2026-58467.md"
+      ],
+      "limits": [
+        "未复现；不代表整个产品或依赖树已审计"
+      ]
+    },
+    {
+      "candidate_key": "article:VW-20261003-IMFHT-6639",
+      "title": "AIWU AI Copilot getCurrentTaskResults 未授权任务数据读取",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2026-6639"
+      ],
+      "disposition": "admitted_new",
+      "disposition_label": "录入新稿",
+      "read_depth": "primary_material_and_selected_code_or_poc",
+      "reason": "公开具体验证材料及来源/补丁静态核对；具体已读文件与限制见对应分工报告",
+      "source_groups": [
+        "imfht16"
+      ],
+      "source_urls": [
+        "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2026/CVE-2026-6639.yaml"
+      ],
+      "target_paths": [
+        "Web安全/CMS内容/WordPress/AIWU-getCurrentTaskResults-任务数据泄露-CVE-2026-6639.md"
+      ],
+      "limits": [
+        "未复现；不代表整个产品或依赖树已审计"
+      ]
+    },
+    {
+      "candidate_key": "article:VW-20261003-IMFHT-80099",
+      "title": "Newfold WordPress 插件空 Hiive 密钥认证绕过：模板与修复边界",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2026-80099"
+      ],
+      "disposition": "admitted_new",
+      "disposition_label": "录入新稿",
+      "read_depth": "primary_material_and_selected_code_or_poc",
+      "reason": "公开具体验证材料及来源/补丁静态核对；具体已读文件与限制见对应分工报告",
+      "source_groups": [
+        "imfht16"
+      ],
+      "source_urls": [
+        "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2026/CVE-2026-80099.yaml"
+      ],
+      "target_paths": [
+        "Web安全/CMS内容/WordPress/Newfold-空Hiive密钥认证绕过-CVE-2026-80099.md"
+      ],
+      "limits": [
+        "未复现；不代表整个产品或依赖树已审计"
+      ]
+    },
+    {
+      "candidate_key": "article:VW-20261003-IMFHT-93742",
+      "title": "TOTOLINK A3002MU formWsc localPin 命令注入：telnet 服务写入副作用",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2026-93742"
+      ],
+      "disposition": "admitted_new",
+      "disposition_label": "录入新稿",
+      "read_depth": "primary_material_and_selected_code_or_poc",
+      "reason": "公开具体验证材料及来源/补丁静态核对；具体已读文件与限制见对应分工报告",
+      "source_groups": [
+        "imfht16"
+      ],
+      "source_urls": [
+        "https://github.com/SunnyYANGyaya/cuicuishark-sheep-fishIOT/blob/8cb416b9d6041fec5600a20bd845d083da7934dd/ToTolink/A3002MU/rce-formWsc.md"
+      ],
+      "target_paths": [
+        "Web安全/网络设备/TOTOLink/TOTOLINK-A3002MU-formWsc-命令注入-CVE-2026-93742.md"
+      ],
+      "limits": [
+        "未复现；不代表整个产品或依赖树已审计"
+      ]
+    },
+    {
+      "candidate_key": "article:VW-20261003-IMFHT-97646",
+      "title": "student-management-system 管理处理器缺少会话检查：信息读取与改写须区分",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2026-97646"
+      ],
+      "disposition": "admitted_new",
+      "disposition_label": "录入新稿",
+      "read_depth": "primary_material_and_selected_code_or_poc",
+      "reason": "公开具体验证材料及来源/补丁静态核对；具体已读文件与限制见对应分工报告",
+      "source_groups": [
+        "imfht16"
+      ],
+      "source_urls": [
+        "https://github.com/ningzichun/student-management-system/issues/9"
+      ],
+      "target_paths": [
+        "Web安全/商业软件/student-management-system/student-management-system-管理处理器未授权-CVE-2026-97646.md"
+      ],
+      "limits": [
+        "未复现；不代表整个产品或依赖树已审计"
+      ]
+    },
+    {
+      "candidate_key": "article:VW-20261003-CH-fog-39914",
+      "title": "FOG Project export.php 命令注入：公开 PoC 与两阶段修复边界（CVE-2024-39914）",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2024-39914"
+      ],
+      "disposition": "admitted_new",
+      "disposition_label": "录入新稿",
+      "read_depth": "primary_followup_chaitin_body_unread",
+      "reason": "Google只提供线索；随后读FOG官方GHSA/CNA/代码/两阶段补丁，未读长亭全文",
+      "source_groups": [
+        "google10"
+      ],
+      "source_urls": [
+        "https://github.com/FOGProject/fogproject/security/advisories/GHSA-7h44-6vq6-cq8j",
+        "https://www.google.com/goto?url=CAESbgHrOzAVaMqlaCvDDiMMhPG3zp6zYg4Y0ViL1vZWCNuGQ1tUs75ylDBQK-Va5E1we4sD4ghUPoRYrKg2QJkFoYc_KzpWuXE-z6nk94oXNJvejk9AZYqsCUGU7d1hTBuP38POlnQrtGei8bdc99qk"
+      ],
+      "target_paths": [
+        "Web安全/服务器软件/FOG Project/FOG Project export.php 命令注入与两阶段修复 CVE-2024-39914.md"
+      ],
+      "limits": [
+        "未复现；不代表整个产品或依赖树已审计"
+      ]
+    },
+    {
+      "candidate_key": "article:VW-20261003-LPE-0001",
+      "title": "Linux nf_tables 双重释放与公开本地提权材料（CVE-2024-1086）",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2024-1086"
+      ],
+      "disposition": "admitted_new",
+      "disposition_label": "录入新稿",
+      "read_depth": "primary_material_and_selected_code_or_poc",
+      "reason": "旧英文新闻隔离；补完整C资料，明确预编译.a未重建审计和panic风险",
+      "source_groups": [
+        "linux45"
+      ],
+      "source_urls": [
+        "https://pwning.tech/nftables/",
+        "https://github.com/Notselwyn/CVE-2024-1086/tree/90615e07b3a6d69c841a5b2686918e7ac22cc1b3"
+      ],
+      "target_paths": [
+        "系统安全/Linux/Linux nf_tables 双重释放与公开本地提权材料（CVE-2024-1086）.md"
+      ],
+      "limits": [
+        "未复现；不代表整个产品或依赖树已审计",
+        "no local reproduction; see disposition for source/code review limits"
+      ]
+    },
+    {
+      "candidate_key": "article:VW-20261003-LPE-0002",
+      "title": "Linux nf_tables 事务回滚UAF公开触发材料（CVE-2026-23111）",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2026-23111"
+      ],
+      "disposition": "admitted_new",
+      "disposition_label": "录入新稿",
+      "read_depth": "primary_material_and_selected_code_or_poc",
+      "reason": "旧条目仅截断新闻且隔离；补完整Bash UAF触发及独立分析，明确不是完整通用root EXP",
+      "source_groups": [
+        "linux45"
+      ],
+      "source_urls": [
+        "https://fuzzinglabs.com/repro-cve-2026-23111/"
+      ],
+      "target_paths": [
+        "系统安全/Linux/Linux nf_tables 事务回滚UAF公开触发材料（CVE-2026-23111）.md"
+      ],
+      "limits": [
+        "未复现；不代表整个产品或依赖树已审计",
+        "no local reproduction; see disposition for source/code review limits"
+      ]
+    },
+    {
+      "candidate_key": "article:VW-20261003-LPE-0003",
+      "title": "AppArmor confused-deputy与sudo邮件链本地提权（CVE-2026-23268）",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2026-23268"
+      ],
+      "disposition": "admitted_new",
+      "disposition_label": "录入新稿",
+      "read_depth": "primary_material_and_selected_code_or_poc",
+      "reason": "23268公开完整shell链；其余十编号保留为相关补丁引用，不宣称各自独立完整root PoC",
+      "source_groups": [
+        "linux45"
+      ],
+      "source_urls": [
+        "https://cdn2.qualys.com/advisory/2026/03/10/crack-armor.txt"
+      ],
+      "target_paths": [
+        "系统安全/Linux/AppArmor confused-deputy与sudo邮件链本地提权（CVE-2026-23268）.md"
+      ],
+      "limits": [
+        "未复现；不代表整个产品或依赖树已审计",
+        "no local reproduction; see disposition for source/code review limits"
+      ]
+    },
+    {
+      "candidate_key": "article:VW-20261003-LPE-0004",
+      "title": "sudo-rs sudoedit路径竞态与越权写入（GHSA-f42v-x7gq-phc8）",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "GHSA-f42v-x7gq-phc8"
+      ],
+      "disposition": "admitted_new",
+      "disposition_label": "录入新稿",
+      "read_depth": "primary_material_and_selected_code_or_poc",
+      "reason": "official concrete manual trigger; not standalone exploit script; no CVE assigned in source",
+      "source_groups": [
+        "linux45"
+      ],
+      "source_urls": [
+        "https://github.com/trifectatechfoundation/sudo-rs/security/advisories/GHSA-f42v-x7gq-phc8"
+      ],
+      "target_paths": [
+        "系统安全/Linux/sudo-rs sudoedit路径竞态与越权写入（GHSA-f42v-x7gq-phc8）.md"
+      ],
+      "limits": [
+        "未复现；不代表整个产品或依赖树已审计",
+        "not reproduced; race success rate not verified"
+      ]
+    },
+    {
+      "candidate_key": "article:VW-20261003-linux-53264",
+      "title": "Linux tc_action RCU释放竞态与CentOS专用提权源码审阅（CVE-2026-53264）",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2026-53264"
+      ],
+      "disposition": "admitted_new",
+      "disposition_label": "录入新稿",
+      "read_depth": "primary_material_and_selected_code_or_poc",
+      "reason": "新增原创中文源码审阅；完整但平台特定的公开EXP；平台特定完整root shell EXP；固定ROP与KASLR路径",
+      "source_groups": [
+        "linux45"
+      ],
+      "source_urls": [
+        "https://github.com/star-sg/CVE/tree/5226265a18027859c7efbf66bd9a662c1459ac6f/CVE-2026-53264",
+        "https://github.com/torvalds/linux/commit/5057e1aca011e51ef51498c940ef96f3d3e8a305"
+      ],
+      "target_paths": [
+        "系统安全/Linux/Linux本地提权漏洞/Linux tc_action RCU释放竞态与CentOS专用提权源码审阅（CVE-2026-53264）.md"
+      ],
+      "limits": [
+        "未复现；不代表整个产品或依赖树已审计",
+        "本地未复现；平台特定，未确认截图视频或二进制对应性"
+      ]
+    },
+    {
+      "candidate_key": "article:VW-20261003-linux-52924",
+      "title": "Linux SCTP Stale Cookie UAF双平台提权材料审阅（CVE-2026-52924）",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2026-52924"
+      ],
+      "disposition": "admitted_new",
+      "disposition_label": "录入新稿",
+      "read_depth": "primary_material_and_selected_code_or_poc",
+      "reason": "新增原创中文源码审阅；Ubuntu/Arch两种专用EXP；两平台内核helper/特权数据读取链；Ubuntu另有崩溃触发模式",
+      "source_groups": [
+        "linux45"
+      ],
+      "source_urls": [
+        "https://github.com/NebuSec/CyberMeowfia/tree/b257d16183d367db7f8f57d65c1a9a8a09ee6b4f/security-research/Linux-CVE-2026-52924-ubuntu-7.0.0-28",
+        "https://github.com/torvalds/linux/commit/e374b22e9b07b72a25909621464ff74096151bfb"
+      ],
+      "target_paths": [
+        "系统安全/Linux/Linux本地提权漏洞/Linux SCTP Stale Cookie UAF双平台提权材料审阅（CVE-2026-52924）.md"
+      ],
+      "limits": [
+        "未复现；不代表整个产品或依赖树已审计",
+        "本地未复现；平台特定，未确认截图视频或二进制对应性"
+      ]
+    },
+    {
+      "candidate_key": "article:VW-20261003-linux-72137",
+      "title": "Linux XFRM NAT keepalive双重释放与Ubuntu专用EXP审阅（CVE-2026-72137）",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2026-72137"
+      ],
+      "disposition": "admitted_new",
+      "disposition_label": "录入新稿",
+      "read_depth": "primary_material_and_selected_code_or_poc",
+      "reason": "新增原创中文源码审阅；Ubuntu专用EXP；平台特定ROP凭据修改/flag读取链；不是通用root shell",
+      "source_groups": [
+        "linux45"
+      ],
+      "source_urls": [
+        "https://github.com/NebuSec/CyberMeowfia/tree/a1304a44d123ef417b909b10fde23e66174d050c/security-research/Linux-CVE-2026-72137-ubuntu-7.0.0-28",
+        "https://github.com/torvalds/linux/commit/226f4a490d1a938fc838d8f8c46a4eca864c0d78"
+      ],
+      "target_paths": [
+        "系统安全/Linux/Linux本地提权漏洞/Linux XFRM NAT keepalive双重释放与Ubuntu专用EXP审阅（CVE-2026-72137）.md"
+      ],
+      "limits": [
+        "未复现；不代表整个产品或依赖树已审计",
+        "本地未复现；平台特定，未确认截图视频或二进制对应性"
+      ]
+    },
+    {
+      "candidate_key": "article:VW-20261003-eddi-zipslip-lazy-class",
+      "title": "EDDI ZIP导入路径穿越与延迟类加载利用链（CVE-2025-32779）",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2025-32779",
+        "GHSA-9v34-frgq-63mv"
+      ],
+      "disposition": "admitted_new",
+      "disposition_label": "录入新稿",
+      "read_depth": "primary_material_and_selected_code_or_poc",
+      "reason": "Sonar原文、厂商公告、KalmarCTF公开题解/归档和补丁静态阅读；两类加载路线分开，CTF前提不泛化",
+      "source_groups": [
+        "initial21"
+      ],
+      "source_urls": [
+        "https://www.sonarsource.com/blog/code-security-for-conversational-ai-uncovering-a-zip-slip-in-eddi/",
+        "https://github.com/labsai/EDDI/security/advisories/GHSA-9v34-frgq-63mv"
+      ],
+      "target_paths": [
+        "Web安全/AI应用/EDDI/EDDI ZIP导入路径穿越与延迟类加载利用链 CVE-2025-32779.md"
+      ],
+      "limits": [
+        "未复现；不代表整个产品或依赖树已审计"
+      ]
+    },
+    {
+      "candidate_key": "initial-deferred:1",
+      "title": "OsmAnd AIDL / CVE-2026-65995",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2026-65995"
+      ],
+      "disposition": "deferred",
+      "disposition_label": "暂缓",
+      "read_depth": "source_body_and_gap_assessment",
+      "reason": "公开完整 PoC App/APK 或独立绑定调用程序",
+      "source_groups": [
+        "initial21"
+      ],
+      "source_urls": [
+        "https://securitylab.github.com/advisories/GHSL-2026-109_osmand/"
+      ],
+      "target_paths": [],
+      "limits": [
+        "按钮操作表、接口参数、观察输出公开；公告明确完整应用源码需申请",
+        "tested 5.3.3 / 3043c92b27b24a0b2c848bc7041cf5f69ede4ed6；无权限应用授权绕过，不称纯理论。"
+      ]
+    },
+    {
+      "candidate_key": "initial-deferred:2",
+      "title": "CFITSIO fuzzing / Q4 2025 memory corruption",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [],
+      "disposition": "deferred",
+      "disposition_label": "暂缓",
+      "read_depth": "source_body_and_gap_assessment",
+      "reason": "复现命令依赖编号崩溃输入及另发归档，仍未定位公开地址",
+      "source_groups": [
+        "initial21"
+      ],
+      "source_urls": [
+        "https://blog.doyensec.com/2026/04/20/cfitsio-fuzzing.html"
+      ],
+      "target_paths": [],
+      "limits": [
+        "https://www.doyensec.com/resources/Doyensec_Advisory_CFITSIO_Q42025.pdf",
+        "harness和命令公开不等于触发输入齐备；未武器化为RCE。"
+      ]
+    },
+    {
+      "candidate_key": "initial-deferred:3",
+      "title": "Titan Quest asset parsing",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [],
+      "disposition": "deferred",
+      "disposition_label": "暂缓",
+      "read_depth": "source_body_and_gap_assessment",
+      "reason": "完整生成器、恶意地图/资源样本或足够重建的公开流程",
+      "source_groups": [
+        "initial21"
+      ],
+      "source_urls": [
+        "https://www.synacktiv.com/en/publications/exploiting-titan-quest"
+      ],
+      "target_paths": [],
+      "limits": [
+        "漏洞/堆布局/对象设计/视频演示公开",
+        "Windows11 10.0.26200、Anniversary Edition2.10.21415；Download为文章导出，不是EXP包。"
+      ]
+    },
+    {
+      "candidate_key": "method:jhsoft-AjaxForCompanyBudgetDecompose",
+      "title": "金和 OA AjaxForCompanyBudgetDecompose",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [],
+      "disposition": "deferred",
+      "disposition_label": "暂缓",
+      "read_depth": "article_text_and_conflicting_request",
+      "reason": "处理器只传strYear，后续却是四参数调用及type载荷；图片403，缺匹配构建或独立验证",
+      "source_groups": [
+        "initial21"
+      ],
+      "source_urls": [
+        "https://mrxn.net/jswz/jhsoft-AjaxForCompanyBudgetDecompose-sqli.html"
+      ],
+      "target_paths": [],
+      "limits": []
+    },
+    {
+      "candidate_key": "method:jhsoft-AjaxForSetDecompose",
+      "title": "金和 OA AjaxForSetDecompose",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [],
+      "disposition": "deferred",
+      "disposition_label": "暂缓",
+      "read_depth": "article_text_and_conflicting_request",
+      "reason": "源码无引号数值位置与汇编单引号载荷不一致；作者模板占位，延时/图片差异未闭环",
+      "source_groups": [
+        "initial21"
+      ],
+      "source_urls": [
+        "https://mrxn.net/jswz/jhsoft-AjaxForSetDecompose-sqli.html"
+      ],
+      "target_paths": [],
+      "limits": []
+    },
+    {
+      "candidate_key": "CVE-2024-0244",
+      "title": "Canon MF753Cdw 传真解析研究",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2024-0244"
+      ],
+      "disposition": "deferred",
+      "disposition_label": "暂缓",
+      "read_depth": "original_article_fulltext",
+      "reason": "未定位完整传真输入、生成器或足以重建的公开流程；原文已读，图片未视检",
+      "source_groups": [
+        "english5"
+      ],
+      "source_urls": [
+        "https://www.zerodayinitiative.com/blog/2026/9/23/cve-2024-0244-a-heap-buffer-overflow-in-the-canon-mf753cdw-printer"
+      ],
+      "target_paths": [],
+      "limits": []
+    },
+    {
+      "candidate_key": "sourbyte:e6c37ae0b37a6b",
+      "title": "Wp_VisualComposer-CVE-2026-12227任意文件读取.md",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2026-12227"
+      ],
+      "disposition": "duplicate_existing",
+      "disposition_label": "重复覆盖，不另增",
+      "read_depth": "compilation_body_and_commit_diff",
+      "reason": "Prior draft has source/patch discrepancy analysis; relocated source not new entity",
+      "source_groups": [
+        "sourbyte25"
+      ],
+      "source_urls": [
+        "https://github.com/SourByte05/Vulnerability-Wiki-PoC/blob/a198d2f3d3ed07d2aec4b61356d9f6d526047c35/2026/09/Wp_VisualComposer-CVE-2026-12227任意文件读取/Wp_VisualComposer-CVE-2026-12227任意文件读取.md"
+      ],
+      "target_paths": [],
+      "limits": [
+        "图片未做像素验证；短请求不等于版本、原始来源、响应及补丁已闭环"
+      ]
+    },
+    {
+      "candidate_key": "sourbyte:3238f7fb4dcf1a",
+      "title": "LiteLLM MCP 接口命令注入漏洞(CVE-2026-42271).md",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2026-42271"
+      ],
+      "disposition": "duplicate_existing",
+      "disposition_label": "重复覆盖，不另增",
+      "read_depth": "compilation_body_and_commit_diff",
+      "reason": "Same MCP endpoint and CVE already present; no complementary original evidence added by this compilation",
+      "source_groups": [
+        "sourbyte25"
+      ],
+      "source_urls": [
+        "https://github.com/SourByte05/Vulnerability-Wiki-PoC/blob/7f2f8ff756d74923e3c93a1da0eb090db18262f4/2026/09/LiteLLM MCP 接口命令注入漏洞(CVE-2026-42271)/LiteLLM MCP 接口命令注入漏洞(CVE-2026-42271).md"
+      ],
+      "target_paths": [],
+      "limits": [
+        "图片未做像素验证；短请求不等于版本、原始来源、响应及补丁已闭环"
+      ]
+    },
+    {
+      "candidate_key": "sourbyte:b48bbeface4123",
+      "title": "山东启恒信息科技有限公司数智化平台 CommonHandler 存在SQL注入漏洞.md",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [],
+      "disposition": "needs_review_candidate",
+      "disposition_label": "已读候选仍待核",
+      "read_depth": "compilation_body_and_commit_diff",
+      "reason": "Concrete request exists, but exact release boundary / primary origin / response-image verification / patch chain remains incomplete",
+      "source_groups": [
+        "sourbyte25"
+      ],
+      "source_urls": [
+        "https://github.com/SourByte05/Vulnerability-Wiki-PoC/blob/7f2f8ff756d74923e3c93a1da0eb090db18262f4/2026/09/山东启恒信息科技有限公司数智化平台 CommonHandler 存在SQL注入漏洞/山东启恒信息科技有限公司数智化平台 CommonHandler 存在SQL注入漏洞.md"
+      ],
+      "target_paths": [],
+      "limits": [
+        "图片未做像素验证；短请求不等于版本、原始来源、响应及补丁已闭环"
+      ]
+    },
+    {
+      "candidate_key": "sourbyte:6415b37c1dfe16",
+      "title": "用友NC mtapptimelinedoApply 存在SQL注入漏洞.md",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [],
+      "disposition": "needs_review_candidate",
+      "disposition_label": "已读候选仍待核",
+      "read_depth": "compilation_body_and_commit_diff",
+      "reason": "Concrete request exists, but exact release boundary / primary origin / response-image verification / patch chain remains incomplete",
+      "source_groups": [
+        "sourbyte25"
+      ],
+      "source_urls": [
+        "https://github.com/SourByte05/Vulnerability-Wiki-PoC/blob/7f2f8ff756d74923e3c93a1da0eb090db18262f4/2026/09/用友NC mtapptimelinedoApply 存在SQL注入漏洞/用友NC mtapptimelinedoApply 存在SQL注入漏洞.md"
+      ],
+      "target_paths": [],
+      "limits": [
+        "图片未做像素验证；短请求不等于版本、原始来源、响应及补丁已闭环"
+      ]
+    },
+    {
+      "candidate_key": "sourbyte:1d0334582e5419",
+      "title": "用友YonBIP execute 接口存在Spel表达式注入漏洞.md",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [],
+      "disposition": "needs_review_candidate",
+      "disposition_label": "已读候选仍待核",
+      "read_depth": "compilation_body_and_commit_diff",
+      "reason": "Concrete request exists, but exact release boundary / primary origin / response-image verification / patch chain remains incomplete",
+      "source_groups": [
+        "sourbyte25"
+      ],
+      "source_urls": [
+        "https://github.com/SourByte05/Vulnerability-Wiki-PoC/blob/7f2f8ff756d74923e3c93a1da0eb090db18262f4/2026/09/用友YonBIP execute 接口存在Spel表达式注入漏洞/用友YonBIP execute 接口存在Spel表达式注入漏洞.md"
+      ],
+      "target_paths": [],
+      "limits": [
+        "图片未做像素验证；短请求不等于版本、原始来源、响应及补丁已闭环"
+      ]
+    },
+    {
+      "candidate_key": "sourbyte:6ae16ddaadb1dd",
+      "title": "鼎游票务系统CheckPicShow存在任意文件读取漏洞.md",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [],
+      "disposition": "needs_review_candidate",
+      "disposition_label": "已读候选仍待核",
+      "read_depth": "compilation_body_and_commit_diff",
+      "reason": "Concrete request exists, but exact release boundary / primary origin / response-image verification / patch chain remains incomplete",
+      "source_groups": [
+        "sourbyte25"
+      ],
+      "source_urls": [
+        "https://github.com/SourByte05/Vulnerability-Wiki-PoC/blob/7f2f8ff756d74923e3c93a1da0eb090db18262f4/2026/09/鼎游票务系统CheckPicShow存在任意文件读取漏洞/鼎游票务系统CheckPicShow存在任意文件读取漏洞.md"
+      ],
+      "target_paths": [],
+      "limits": [
+        "图片未做像素验证；短请求不等于版本、原始来源、响应及补丁已闭环"
+      ]
+    },
+    {
+      "candidate_key": "sourbyte:b8966a5c299a10",
+      "title": "企业信息发送平台-getLicenceDetail-文件读取.md",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [],
+      "disposition": "needs_review_candidate",
+      "disposition_label": "已读候选仍待核",
+      "read_depth": "compilation_body_and_commit_diff",
+      "reason": "Concrete request exists, but exact release boundary / primary origin / response-image verification / patch chain remains incomplete",
+      "source_groups": [
+        "sourbyte25"
+      ],
+      "source_urls": [
+        "https://github.com/SourByte05/Vulnerability-Wiki-PoC/blob/802828a38617903dc32dba844990d0f90ac20bea/2026/09/企业信息发送平台-getLicenceDetail-文件读取/企业信息发送平台-getLicenceDetail-文件读取.md"
+      ],
+      "target_paths": [],
+      "limits": [
+        "图片未做像素验证；短请求不等于版本、原始来源、响应及补丁已闭环"
+      ]
+    },
+    {
+      "candidate_key": "sourbyte:1cf3145ebad708",
+      "title": "友加畅捷-UploadFormImg-文件上传.md",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [],
+      "disposition": "needs_review_candidate",
+      "disposition_label": "已读候选仍待核",
+      "read_depth": "compilation_body_and_commit_diff",
+      "reason": "Concrete request exists, but exact release boundary / primary origin / response-image verification / patch chain remains incomplete",
+      "source_groups": [
+        "sourbyte25"
+      ],
+      "source_urls": [
+        "https://github.com/SourByte05/Vulnerability-Wiki-PoC/blob/802828a38617903dc32dba844990d0f90ac20bea/2026/09/友加畅捷-UploadFormImg-文件上传/友加畅捷-UploadFormImg-文件上传.md"
+      ],
+      "target_paths": [],
+      "limits": [
+        "图片未做像素验证；短请求不等于版本、原始来源、响应及补丁已闭环"
+      ]
+    },
+    {
+      "candidate_key": "sourbyte:49c73e88d38bcc",
+      "title": "飞鱼星VW2100  MB3W202 系列无线路由器命令执行.md",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [],
+      "disposition": "needs_review_candidate",
+      "disposition_label": "已读候选仍待核",
+      "read_depth": "compilation_body_and_commit_diff",
+      "reason": "Concrete request exists, but exact release boundary / primary origin / response-image verification / patch chain remains incomplete",
+      "source_groups": [
+        "sourbyte25"
+      ],
+      "source_urls": [
+        "https://github.com/SourByte05/Vulnerability-Wiki-PoC/blob/802828a38617903dc32dba844990d0f90ac20bea/2026/09/飞鱼星VW2100  MB3W202 系列无线路由器命令执行/飞鱼星VW2100  MB3W202 系列无线路由器命令执行.md"
+      ],
+      "target_paths": [],
+      "limits": [
+        "图片未做像素验证；短请求不等于版本、原始来源、响应及补丁已闭环"
+      ]
+    },
+    {
+      "candidate_key": "sourbyte:79e9eb42e406b1",
+      "title": "飞鱼星VW2100  MB3W202 系列无线路由器未授权数据写入.md",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [],
+      "disposition": "deferred",
+      "disposition_label": "暂缓",
+      "read_depth": "compilation_body_and_commit_diff",
+      "reason": "Read historic added diff, subsequently removed upstream; reason unknown, no restore",
+      "source_groups": [
+        "sourbyte25"
+      ],
+      "source_urls": [
+        "https://github.com/SourByte05/Vulnerability-Wiki-PoC/blob/802828a38617903dc32dba844990d0f90ac20bea/2026/09/飞鱼星VW2100  MB3W202 系列无线路由器未授权数据写入/飞鱼星VW2100  MB3W202 系列无线路由器未授权数据写入.md"
+      ],
+      "target_paths": [],
+      "limits": [
+        "图片未做像素验证；短请求不等于版本、原始来源、响应及补丁已闭环"
+      ]
+    },
+    {
+      "candidate_key": "sourbyte:8139ca4e9c68a4",
+      "title": "飞鱼星VW2100  MB3W202 系列无线路由器未授权访问.md",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [],
+      "disposition": "deferred",
+      "disposition_label": "暂缓",
+      "read_depth": "compilation_body_and_commit_diff",
+      "reason": "Read historic added diff, subsequently removed upstream; reason unknown, no restore",
+      "source_groups": [
+        "sourbyte25"
+      ],
+      "source_urls": [
+        "https://github.com/SourByte05/Vulnerability-Wiki-PoC/blob/802828a38617903dc32dba844990d0f90ac20bea/2026/09/飞鱼星VW2100  MB3W202 系列无线路由器未授权访问/飞鱼星VW2100  MB3W202 系列无线路由器未授权访问.md"
+      ],
+      "target_paths": [],
+      "limits": [
+        "图片未做像素验证；短请求不等于版本、原始来源、响应及补丁已闭环"
+      ]
+    },
+    {
+      "candidate_key": "sourbyte:c11328fa07ac7b",
+      "title": "AJ-ReportBI平台存在Nashorn JS引擎命令执行.md",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [],
+      "disposition": "needs_review_candidate",
+      "disposition_label": "已读候选仍待核",
+      "read_depth": "compilation_body_and_commit_diff",
+      "reason": "Concrete request exists, but exact release boundary / primary origin / response-image verification / patch chain remains incomplete; title says Nashorn but payload executes Groovy javaBean constructor; body <=1.7.1 versus some Snort <=1.4.2; no version normalization performed",
+      "source_groups": [
+        "sourbyte25"
+      ],
+      "source_urls": [
+        "https://github.com/SourByte05/Vulnerability-Wiki-PoC/blob/487e5658136041e29ae10ef3bec6057e4d7eb89b/2026/09/AJ-ReportBI平台存在Nashorn JS引擎命令执行/AJ-ReportBI平台存在Nashorn JS引擎命令执行.md"
+      ],
+      "target_paths": [],
+      "limits": [
+        "图片未做像素验证；短请求不等于版本、原始来源、响应及补丁已闭环"
+      ]
+    },
+    {
+      "candidate_key": "sourbyte:4a342efe964e39",
+      "title": "AJ-ReportBI平台存在SQL注入漏洞.md",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [],
+      "disposition": "needs_review_candidate",
+      "disposition_label": "已读候选仍待核",
+      "read_depth": "compilation_body_and_commit_diff",
+      "reason": "Concrete request exists, but exact release boundary / primary origin / response-image verification / patch chain remains incomplete; body <=1.7.1 versus some Snort <=1.4.2; no version normalization performed",
+      "source_groups": [
+        "sourbyte25"
+      ],
+      "source_urls": [
+        "https://github.com/SourByte05/Vulnerability-Wiki-PoC/blob/487e5658136041e29ae10ef3bec6057e4d7eb89b/2026/09/AJ-ReportBI平台存在SQL注入漏洞/AJ-ReportBI平台存在SQL注入漏洞.md"
+      ],
+      "target_paths": [],
+      "limits": [
+        "图片未做像素验证；短请求不等于版本、原始来源、响应及补丁已闭环"
+      ]
+    },
+    {
+      "candidate_key": "sourbyte:a4cd1dbe0035a7",
+      "title": "AJ-ReportBI平台存在testTransform 单请求执行RCE.md",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [],
+      "disposition": "needs_review_candidate",
+      "disposition_label": "已读候选仍待核",
+      "read_depth": "compilation_body_and_commit_diff",
+      "reason": "Concrete request exists, but exact release boundary / primary origin / response-image verification / patch chain remains incomplete; body <=1.7.1 versus some Snort <=1.4.2; no version normalization performed",
+      "source_groups": [
+        "sourbyte25"
+      ],
+      "source_urls": [
+        "https://github.com/SourByte05/Vulnerability-Wiki-PoC/blob/487e5658136041e29ae10ef3bec6057e4d7eb89b/2026/09/AJ-ReportBI平台存在testTransform 单请求执行RCE/AJ-ReportBI平台存在testTransform 单请求执行RCE.md"
+      ],
+      "target_paths": [],
+      "limits": [
+        "图片未做像素验证；短请求不等于版本、原始来源、响应及补丁已闭环"
+      ]
+    },
+    {
+      "candidate_key": "sourbyte:e3c3206b9bbe49",
+      "title": "AJ-ReportBI平台存在逻辑缺陷漏洞.md",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [],
+      "disposition": "needs_review_candidate",
+      "disposition_label": "已读候选仍待核",
+      "read_depth": "compilation_body_and_commit_diff",
+      "reason": "Concrete request exists, but exact release boundary / primary origin / response-image verification / patch chain remains incomplete; body <=1.7.1 versus some Snort <=1.4.2; no version normalization performed",
+      "source_groups": [
+        "sourbyte25"
+      ],
+      "source_urls": [
+        "https://github.com/SourByte05/Vulnerability-Wiki-PoC/blob/487e5658136041e29ae10ef3bec6057e4d7eb89b/2026/09/AJ-ReportBI平台存在逻辑缺陷漏洞/AJ-ReportBI平台存在逻辑缺陷漏洞.md"
+      ],
+      "target_paths": [],
+      "limits": [
+        "图片未做像素验证；短请求不等于版本、原始来源、响应及补丁已闭环"
+      ]
+    },
+    {
+      "candidate_key": "sourbyte:ac01ce4e37fa36",
+      "title": "ATM企源系统 AMTTokenAction 存在SQL注入漏洞.md",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [],
+      "disposition": "needs_review_candidate",
+      "disposition_label": "已读候选仍待核",
+      "read_depth": "compilation_body_and_commit_diff",
+      "reason": "Concrete request exists, but exact release boundary / primary origin / response-image verification / patch chain remains incomplete",
+      "source_groups": [
+        "sourbyte25"
+      ],
+      "source_urls": [
+        "https://github.com/SourByte05/Vulnerability-Wiki-PoC/blob/487e5658136041e29ae10ef3bec6057e4d7eb89b/2026/09/ATM企源系统 AMTTokenAction 存在SQL注入漏洞/ATM企源系统 AMTTokenAction 存在SQL注入漏洞.md"
+      ],
+      "target_paths": [],
+      "limits": [
+        "图片未做像素验证；短请求不等于版本、原始来源、响应及补丁已闭环"
+      ]
+    },
+    {
+      "candidate_key": "sourbyte:c918aa0c986111",
+      "title": "Apache_Cocoon-信息泄露.md",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [],
+      "disposition": "needs_review_candidate",
+      "disposition_label": "已读候选仍待核",
+      "read_depth": "compilation_body_and_commit_diff",
+      "reason": "Concrete request exists, but exact release boundary / primary origin / response-image verification / patch chain remains incomplete",
+      "source_groups": [
+        "sourbyte25"
+      ],
+      "source_urls": [
+        "https://github.com/SourByte05/Vulnerability-Wiki-PoC/blob/487e5658136041e29ae10ef3bec6057e4d7eb89b/2026/09/Apache_Cocoon-信息泄露/Apache_Cocoon-信息泄露.md"
+      ],
+      "target_paths": [],
+      "limits": [
+        "图片未做像素验证；短请求不等于版本、原始来源、响应及补丁已闭环"
+      ]
+    },
+    {
+      "candidate_key": "sourbyte:906f402582a024",
+      "title": "Docmost-img_avatar-任意文件读取.md",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [],
+      "disposition": "needs_review_candidate",
+      "disposition_label": "已读候选仍待核",
+      "read_depth": "compilation_body_and_commit_diff",
+      "reason": "Concrete request exists, but exact release boundary / primary origin / response-image verification / patch chain remains incomplete; distinguish 2025-57231 versus 2026-48072, GET/POST source mismatch pending",
+      "source_groups": [
+        "sourbyte25"
+      ],
+      "source_urls": [
+        "https://github.com/SourByte05/Vulnerability-Wiki-PoC/blob/487e5658136041e29ae10ef3bec6057e4d7eb89b/2026/09/Docmost-img_avatar-任意文件读取/Docmost-img_avatar-任意文件读取.md"
+      ],
+      "target_paths": [],
+      "limits": [
+        "图片未做像素验证；短请求不等于版本、原始来源、响应及补丁已闭环"
+      ]
+    },
+    {
+      "candidate_key": "sourbyte:1b72dd71c8f440",
+      "title": "Wp_GEOmyWP-CVE-2026-85200-本地文件包含.md",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2026-85200"
+      ],
+      "disposition": "needs_review_candidate",
+      "disposition_label": "已读候选仍待核",
+      "read_depth": "compilation_body_and_commit_diff",
+      "reason": "Concrete request exists, but exact release boundary / primary origin / response-image verification / patch chain remains incomplete; fixed upstream commit 5a768bf1c6e44ded83a65be8789f3587515665ac known, independent full review pending",
+      "source_groups": [
+        "sourbyte25"
+      ],
+      "source_urls": [
+        "https://github.com/SourByte05/Vulnerability-Wiki-PoC/blob/487e5658136041e29ae10ef3bec6057e4d7eb89b/2026/09/Wp_GEOmyWP-CVE-2026-85200-本地文件包含/Wp_GEOmyWP-CVE-2026-85200-本地文件包含.md"
+      ],
+      "target_paths": [],
+      "limits": [
+        "图片未做像素验证；短请求不等于版本、原始来源、响应及补丁已闭环"
+      ]
+    },
+    {
+      "candidate_key": "sourbyte:272f79b9af3b13",
+      "title": "中药煎药查询系统 IndexNew 存在SQL注入漏洞.md",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [],
+      "disposition": "needs_review_candidate",
+      "disposition_label": "已读候选仍待核",
+      "read_depth": "compilation_body_and_commit_diff",
+      "reason": "Concrete request exists, but exact release boundary / primary origin / response-image verification / patch chain remains incomplete; FOFA app=apache-cocoon mismatches named product",
+      "source_groups": [
+        "sourbyte25"
+      ],
+      "source_urls": [
+        "https://github.com/SourByte05/Vulnerability-Wiki-PoC/blob/487e5658136041e29ae10ef3bec6057e4d7eb89b/2026/09/中药煎药查询系统 IndexNew 存在SQL注入漏洞/中药煎药查询系统 IndexNew 存在SQL注入漏洞.md"
+      ],
+      "target_paths": [],
+      "limits": [
+        "图片未做像素验证；短请求不等于版本、原始来源、响应及补丁已闭环"
+      ]
+    },
+    {
+      "candidate_key": "sourbyte:d055ad723830a9",
+      "title": "厦门四信通信科技有限公司水利信息化平台 stluserLogin.do 存在SQL注入漏洞.md",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [],
+      "disposition": "needs_review_candidate",
+      "disposition_label": "已读候选仍待核",
+      "read_depth": "compilation_body_and_commit_diff",
+      "reason": "Concrete request exists, but exact release boundary / primary origin / response-image verification / patch chain remains incomplete",
+      "source_groups": [
+        "sourbyte25"
+      ],
+      "source_urls": [
+        "https://github.com/SourByte05/Vulnerability-Wiki-PoC/blob/487e5658136041e29ae10ef3bec6057e4d7eb89b/2026/09/厦门四信通信科技有限公司水利信息化平台 stluserLogin.do 存在SQL注入漏洞/厦门四信通信科技有限公司水利信息化平台 stluserLogin.do 存在SQL注入漏洞.md"
+      ],
+      "target_paths": [],
+      "limits": [
+        "图片未做像素验证；短请求不等于版本、原始来源、响应及补丁已闭环"
+      ]
+    },
+    {
+      "candidate_key": "sourbyte:15278a773370f4",
+      "title": "山东聚恒网络技术有限公司聚恒中台listdata存在敏感信息泄露.md",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [],
+      "disposition": "needs_review_candidate",
+      "disposition_label": "已读候选仍待核",
+      "read_depth": "compilation_body_and_commit_diff",
+      "reason": "Concrete request exists, but exact release boundary / primary origin / response-image verification / patch chain remains incomplete",
+      "source_groups": [
+        "sourbyte25"
+      ],
+      "source_urls": [
+        "https://github.com/SourByte05/Vulnerability-Wiki-PoC/blob/487e5658136041e29ae10ef3bec6057e4d7eb89b/2026/09/山东聚恒网络技术有限公司聚恒中台listdata存在敏感信息泄露/山东聚恒网络技术有限公司聚恒中台listdata存在敏感信息泄露.md"
+      ],
+      "target_paths": [],
+      "limits": [
+        "图片未做像素验证；短请求不等于版本、原始来源、响应及补丁已闭环"
+      ]
+    },
+    {
+      "candidate_key": "sourbyte:339f3aec3703a0",
+      "title": "用友-时空KSOA add_user.jsp classid 存在SQL注入漏洞.md",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [],
+      "disposition": "needs_review_candidate",
+      "disposition_label": "已读候选仍待核",
+      "read_depth": "compilation_body_and_commit_diff",
+      "reason": "Concrete request exists, but exact release boundary / primary origin / response-image verification / patch chain remains incomplete",
+      "source_groups": [
+        "sourbyte25"
+      ],
+      "source_urls": [
+        "https://github.com/SourByte05/Vulnerability-Wiki-PoC/blob/487e5658136041e29ae10ef3bec6057e4d7eb89b/2026/09/用友-时空KSOA add_user.jsp classid 存在SQL注入漏洞/用友-时空KSOA add_user.jsp classid 存在SQL注入漏洞.md"
+      ],
+      "target_paths": [],
+      "limits": [
+        "图片未做像素验证；短请求不等于版本、原始来源、响应及补丁已闭环"
+      ]
+    },
+    {
+      "candidate_key": "sourbyte:375070c840c840",
+      "title": "金叶物联网大数据管理平台download存在任意文件读取漏洞.md",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [],
+      "disposition": "needs_review_candidate",
+      "disposition_label": "已读候选仍待核",
+      "read_depth": "compilation_body_and_commit_diff",
+      "reason": "Concrete request exists, but exact release boundary / primary origin / response-image verification / patch chain remains incomplete",
+      "source_groups": [
+        "sourbyte25"
+      ],
+      "source_urls": [
+        "https://github.com/SourByte05/Vulnerability-Wiki-PoC/blob/487e5658136041e29ae10ef3bec6057e4d7eb89b/2026/09/金叶物联网大数据管理平台download存在任意文件读取漏洞/金叶物联网大数据管理平台download存在任意文件读取漏洞.md"
+      ],
+      "target_paths": [],
+      "limits": [
+        "图片未做像素验证；短请求不等于版本、原始来源、响应及补丁已闭环"
+      ]
+    },
+    {
+      "candidate_key": "sourbyte:41522afb2e2b29",
+      "title": "鼎游票务系统saleVersionUpdate.jsp存在任意文件读取漏洞.md",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [],
+      "disposition": "needs_review_candidate",
+      "disposition_label": "已读候选仍待核",
+      "read_depth": "compilation_body_and_commit_diff",
+      "reason": "Concrete request exists, but exact release boundary / primary origin / response-image verification / patch chain remains incomplete",
+      "source_groups": [
+        "sourbyte25"
+      ],
+      "source_urls": [
+        "https://github.com/SourByte05/Vulnerability-Wiki-PoC/blob/487e5658136041e29ae10ef3bec6057e4d7eb89b/2026/09/鼎游票务系统saleVersionUpdate.jsp存在任意文件读取漏洞/鼎游票务系统saleVersionUpdate.jsp存在任意文件读取漏洞.md"
+      ],
+      "target_paths": [],
+      "limits": [
+        "图片未做像素验证；短请求不等于版本、原始来源、响应及补丁已闭环"
+      ]
+    },
+    {
+      "candidate_key": "CVE-2026-14378",
+      "title": "(9.8分) CVE-2026-14378：WordPress DevKit Pro 未登录管理员接管.md",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2026-14378"
+      ],
+      "disposition": "deferred",
+      "disposition_label": "暂缓",
+      "read_depth": "compilation_body_and_commit_diff",
+      "reason": "正文未给公开完整PoC或具体一手验证材料，本批暂缓",
+      "source_groups": [
+        "wxvl4"
+      ],
+      "source_urls": [
+        "https://github.com/gelusus/wxvl/blob/0168b10453bbf7bc2040b08c3aa79991f253a2d0/doc/2026-10/(9.8分) CVE-2026-14378：WordPress DevKit Pro 未登录管理员接管.md"
+      ],
+      "target_paths": [],
+      "limits": []
+    },
+    {
+      "candidate_key": "CVE-2026-90970",
+      "title": "GitLab AI Gateway曝CVSS 9.9严重漏洞(CVE-2026-90970)，认证用户可逃逸模板沙箱执行任意命令.md",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2026-90970"
+      ],
+      "disposition": "deferred",
+      "disposition_label": "暂缓",
+      "read_depth": "compilation_body_and_commit_diff",
+      "reason": "正文未给公开完整PoC或具体一手验证材料，本批暂缓",
+      "source_groups": [
+        "wxvl4"
+      ],
+      "source_urls": [
+        "https://github.com/gelusus/wxvl/blob/0168b10453bbf7bc2040b08c3aa79991f253a2d0/doc/2026-10/GitLab AI Gateway曝CVSS 9.9严重漏洞(CVE-2026-90970)，认证用户可逃逸模板沙箱执行任意命令.md"
+      ],
+      "target_paths": [],
+      "limits": []
+    },
+    {
+      "candidate_key": "CVE-2026-94545",
+      "title": "Next.js 远程代码执行漏洞 CVE-2026-94545 的 PoC 利用代码已发布.md",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2026-94545"
+      ],
+      "disposition": "duplicate_existing",
+      "disposition_label": "重复覆盖，不另增",
+      "read_depth": "compilation_body_and_commit_diff",
+      "reason": "已存在同一产品主入口，本轮不重复新增",
+      "source_groups": [
+        "wxvl4"
+      ],
+      "source_urls": [
+        "https://github.com/gelusus/wxvl/blob/0168b10453bbf7bc2040b08c3aa79991f253a2d0/doc/2026-10/Next.js 远程代码执行漏洞 CVE-2026-94545 的 PoC 利用代码已发布.md"
+      ],
+      "target_paths": [],
+      "limits": []
+    },
+    {
+      "candidate_key": "method:yonyou-APIProxyHandler-ssrf",
+      "title": "用友 APIProxyHandler SSRF",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [],
+      "disposition": "unread_candidate",
+      "disposition_label": "线索待核/未读",
+      "read_depth": "index_link_only_blocked",
+      "reason": "仅新索引链接；读取受阻、定向搜索无结果，未读正文",
+      "source_groups": [
+        "mrxn_incremental_link"
+      ],
+      "source_urls": [
+        "https://mrxn.net/jswz/yonyou-APIProxyHandler-ssrf.html"
+      ],
+      "target_paths": [],
+      "limits": []
+    },
+    {
+      "candidate_key": "CVE-2025-14847",
+      "title": "CVE-2025-14847",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2025-14847"
+      ],
+      "disposition": "supplemented_existing",
+      "disposition_label": "补充/校订既有文",
+      "read_depth": "template_fulltext_and_selected_primary_source",
+      "reason": "同一MongoBleed实体；关联模板只是buildInfo版本检测，不另建PoC稿",
+      "source_groups": [
+        "imfht16"
+      ],
+      "source_urls": [
+        "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/network/cves/2025/CVE-2025-14847.yaml"
+      ],
+      "target_paths": [
+        "Web安全/数据库/MongoDB/MongoDB-Zlib-压缩协议堆内存信息泄露漏洞-CVE-2025-14847.md"
+      ],
+      "limits": []
+    },
+    {
+      "candidate_key": "CVE-2026-100315",
+      "title": "CloudClassroom mydetailsfaculty.php 的 myfid SQL 拼接：原始 PoC 失效后的源码核对",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2026-100315"
+      ],
+      "disposition": "deferred",
+      "disposition_label": "暂缓",
+      "read_depth": "product_code_and_CNA_original_report_unavailable",
+      "reason": "原始报告404；固定源码与CNA可支持SQL拼接分析，但不满足本轮可用公开PoC/复现材料门槛",
+      "source_groups": [
+        "imfht16"
+      ],
+      "source_urls": [
+        "https://github.com/mathurvishal/CloudClassroom-PHP-Project/blob/5dadec098bfbbf3300d60c3494db3fb95b66e7be/mydetailsfaculty.php"
+      ],
+      "target_paths": [],
+      "limits": []
+    },
+    {
+      "candidate_key": "CVE-2026-87902",
+      "title": "CVE-2026-87902",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2026-87902"
+      ],
+      "disposition": "supplemented_existing",
+      "disposition_label": "补充/校订既有文",
+      "read_depth": "template_fulltext_and_selected_primary_source",
+      "reason": "相同编号、产品、get_page_template实体；现有两篇互补材料保留；新模板作能力边界补证",
+      "source_groups": [
+        "imfht16"
+      ],
+      "source_urls": [
+        "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2026/CVE-2026-87902.yaml"
+      ],
+      "target_paths": [
+        "Web安全/CMS内容/WordPress/（CVE-2026-87902）WordPress Core page-template路径遍历LFI漏洞.md"
+      ],
+      "limits": []
+    },
+    {
+      "candidate_key": "CVE-2026-89063",
+      "title": "CVE-2026-89063",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2026-89063"
+      ],
+      "disposition": "deferred",
+      "disposition_label": "暂缓",
+      "read_depth": "template_fulltext_and_selected_primary_source",
+      "reason": "公开Nuclei模板使用conversation_id=0创建新会话；成功匹配只证明会话创建，不证明跨用户会话读取/写入。已核对28.1/28.2源码及Wordfence修复28.2；未找到原作者对既有他人测试会话的公开充分复现材料，不能改模板补造PoC。",
+      "source_groups": [
+        "imfht16"
+      ],
+      "source_urls": [
+        "https://github.com/projectdiscovery/nuclei-templates/blob/9e93c63782dbb2b6160e068710d6240f418a3ed6/http/cves/2026/CVE-2026-89063.yaml"
+      ],
+      "target_paths": [],
+      "limits": []
+    },
+    {
+      "candidate_key": "CVE-2026-94129",
+      "title": "BioStar BS_RVSIO64.sys 物理内存读写接口：公开代码片段的风险与缺口",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2026-94129"
+      ],
+      "disposition": "deferred",
+      "disposition_label": "暂缓",
+      "read_depth": "template_fulltext_and_selected_primary_source",
+      "reason": "原始写PoC缺分号、sizoef拼写错误、请求长度与初始化不一致；不改原代码，未满足本批可用验证门槛",
+      "source_groups": [
+        "imfht16"
+      ],
+      "source_urls": [
+        "https://vuldb.com/submit/893721"
+      ],
+      "target_paths": [],
+      "limits": []
+    },
+    {
+      "candidate_key": "chaitin:nps",
+      "title": "NPS auth_key / md5(timestamp)",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [],
+      "disposition": "duplicate_existing",
+      "disposition_label": "重复覆盖，不另增",
+      "read_depth": "article_text_triage",
+      "reason": "已有两条 NPS auth_key 入口，同一 md5(timestamp)/client/list 机制；保留本次发现链接，不另写重复入门稿；原值未更改。",
+      "source_groups": [
+        "chaitin16"
+      ],
+      "source_urls": [
+        "https://bbs.chaitin.cn/topic/409"
+      ],
+      "target_paths": [],
+      "limits": [
+        "长亭正文技术主体已读；完整上游EXP、依赖或图片未全部审计"
+      ]
+    },
+    {
+      "candidate_key": "chaitin:hadoop",
+      "title": "Hadoop YARN 未授权提交应用",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [],
+      "disposition": "duplicate_existing",
+      "disposition_label": "重复覆盖，不另增",
+      "read_depth": "article_text_triage",
+      "reason": "Vulhub YARN new-application/apps 提交链与既有 YARN 主文覆盖相同；所读脚本会创建应用及执行回连，未执行。",
+      "source_groups": [
+        "chaitin16"
+      ],
+      "source_urls": [
+        "https://bbs.chaitin.cn/topic/381"
+      ],
+      "target_paths": [],
+      "limits": [
+        "长亭正文技术主体已读；完整上游EXP、依赖或图片未全部审计"
+      ]
+    },
+    {
+      "candidate_key": "chaitin:wso2",
+      "title": "WSO2 fileupload 任意文件上传漏洞 CVE-2022-29464",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2022-29464"
+      ],
+      "disposition": "duplicate_existing",
+      "disposition_label": "重复覆盖，不另增",
+      "read_depth": "article_text_triage",
+      "reason": "PeiQi 的 toolsAny/ToolsAnyFileUploadExecutor 方法与既有 WSO2 fileupload 主文重叠；转载 HTTP 换行已损坏，不重复机械导入。",
+      "source_groups": [
+        "chaitin16"
+      ],
+      "source_urls": [
+        "https://rivers.chaitin.cn/blog/cq94ks90lnechd243keg"
+      ],
+      "target_paths": [],
+      "limits": [
+        "长亭正文技术主体已读；完整上游EXP、依赖或图片未全部审计"
+      ]
+    },
+    {
+      "candidate_key": "chaitin:nacos",
+      "title": "网传 Nacos 0day漏洞复现",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "QVD-2024-26473"
+      ],
+      "disposition": "needs_review_candidate",
+      "disposition_label": "已读候选仍待核",
+      "read_depth": "article_text_triage",
+      "reason": "有 ayoundzw/nacos-poc 与未鉴权/鉴权对照，但已有 QVD-2024-26473 和历史分析。未继续下载其 Base64 JAR/审完整依赖，不能称通过防投毒或认定仅因已鉴权即安全。",
+      "source_groups": [
+        "chaitin16",
+        "chaitin_other8"
+      ],
+      "source_urls": [
+        "https://rivers.chaitin.cn/blog/cqkc0up0lnec5jjug4ig",
+        "https://bbs.chaitin.cn/topic/2531"
+      ],
+      "target_paths": [],
+      "limits": [
+        "长亭正文技术主体已读；完整上游EXP、依赖或图片未全部审计"
+      ]
+    },
+    {
+      "candidate_key": "chaitin:geoserver",
+      "title": "GeoServer 远程代码执行漏洞分析 (CVE-2024-36401)",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2024-36401"
+      ],
+      "disposition": "needs_review_candidate",
+      "disposition_label": "已读候选仍待核",
+      "read_depth": "article_text_triage",
+      "reason": "正文有请求及 PropertyAccessor 调用链，现有 36401 主文；这次未完整追踪 GeoTools 补丁和依赖，留互补候选，不以同 CVE 直接删除。",
+      "source_groups": [
+        "chaitin16",
+        "chaitin_other8"
+      ],
+      "source_urls": [
+        "https://rivers.chaitin.cn/blog/cq956n10lnechd244td0",
+        "https://bbs.chaitin.cn/topic/2583"
+      ],
+      "target_paths": [],
+      "limits": [
+        "长亭正文技术主体已读；完整上游EXP、依赖或图片未全部审计"
+      ]
+    },
+    {
+      "candidate_key": "chaitin:coldfusion",
+      "title": "漏洞分析｜Adobe ColdFusion WDDX 序列化漏洞利用",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2023-29300"
+      ],
+      "disposition": "deferred",
+      "disposition_label": "暂缓",
+      "read_depth": "article_text_triage",
+      "reason": "确有 Felix/C3P0/JGroups 独立链分析，非新闻。当前提取正文无完整可发送 WDDX 包或公开完整 EXP；商业 Goby 成功率声明不代替可核验代码，本轮 PoC 定向新增暂缓。",
+      "source_groups": [
+        "chaitin16"
+      ],
+      "source_urls": [
+        "https://rivers.chaitin.cn/blog/cq9k4c10lnechd245jag"
+      ],
+      "target_paths": [],
+      "limits": [
+        "长亭正文技术主体已读；完整上游EXP、依赖或图片未全部审计"
+      ]
+    },
+    {
+      "candidate_key": "chaitin:camera",
+      "title": "复现｜摄像头固件重打包",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [],
+      "disposition": "deferred",
+      "disposition_label": "暂缓",
+      "read_depth": "article_text_triage",
+      "reason": "有固件重打包方法与 QEMU 命令，但产品型号/固件版本未明确、后门代码片段仅开头、关键截图本次未视检；不虚构产品和补丁。",
+      "source_groups": [
+        "chaitin16"
+      ],
+      "source_urls": [
+        "https://rivers.chaitin.cn/blog/cq94nn10lnechd243r1g"
+      ],
+      "target_paths": [],
+      "limits": [
+        "长亭正文技术主体已读；完整上游EXP、依赖或图片未全部审计"
+      ]
+    },
+    {
+      "candidate_key": "chaitin:kkfileview",
+      "title": "【已复现】kkFileView任意文件上传致远程代码执行漏洞",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [],
+      "disposition": "deferred",
+      "disposition_label": "暂缓",
+      "read_depth": "article_text_triage",
+      "reason": "提供 Zip Slip 描述和官方 commit，但正文复现章节无可读请求/完整 PoC，截图未核；仅已复现/产品支持不满足本轮代码核验。",
+      "source_groups": [
+        "chaitin16"
+      ],
+      "source_urls": [
+        "https://rivers.chaitin.cn/blog/cq9411p0lnechd242lng"
+      ],
+      "target_paths": [],
+      "limits": [
+        "长亭正文技术主体已读；完整上游EXP、依赖或图片未全部审计"
+      ]
+    },
+    {
+      "candidate_key": "chaitin:workflow",
+      "title": "泛微 WorkflowServiceXml / xpoc规则426",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [],
+      "disposition": "deferred",
+      "disposition_label": "暂缓",
+      "read_depth": "article_text_triage",
+      "reason": "命令 xpoc -r 426 是真实验证入口，但读取固定 xpoc 仓库仅 6 项树和 README，规则通过云端同步；本次没有可静态审查的 426 规则。既有 WorkflowServiceXml 主文存在。",
+      "source_groups": [
+        "chaitin16"
+      ],
+      "source_urls": [
+        "https://bbs.chaitin.cn/topic/2460"
+      ],
+      "target_paths": [],
+      "limits": [
+        "长亭正文技术主体已读；完整上游EXP、依赖或图片未全部审计"
+      ]
+    },
+    {
+      "candidate_key": "chaitin:tomcat50379",
+      "title": "Tomcat条件竞争 CVE-2024-50379",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2024-50379"
+      ],
+      "disposition": "deferred",
+      "disposition_label": "暂缓",
+      "read_depth": "article_text_triage",
+      "reason": "正文只声称 PoC 公开并展示截图；未提供可读 exploit 或具体发包；未把标题已复现当成功材料。",
+      "source_groups": [
+        "chaitin16",
+        "google10"
+      ],
+      "source_urls": [
+        "https://bbs.chaitin.cn/topic/3126",
+        "https://www.google.com/goto?url=CAESXAHrOzAVZrQ_E3rFlcIhTmPhdB9-69W35rjm6YnSpi1CPDCgTmq1tplkqD_NlQZKEovm7oRVwg-_z_gdLei4R4MvWRdk9dM6r47C-WiszQ15wqDtXhF-PRYNVi_v"
+      ],
+      "target_paths": [],
+      "limits": [
+        "长亭正文技术主体已读；完整上游EXP、依赖或图片未全部审计"
+      ]
+    },
+    {
+      "candidate_key": "chaitin:vite",
+      "title": "Vite CVE-2025-30208 请求变体",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2025-30208"
+      ],
+      "disposition": "needs_review_candidate",
+      "disposition_label": "已读候选仍待核",
+      "read_depth": "article_text_triage",
+      "reason": "有验证命令但现库已有30208及绕过分析；本次未核对其 /../../../../etc/passwd?raw?? 与官方 /@fs/ 条件、客户端规范化差异，不当作可靠验证包另导入。",
+      "source_groups": [
+        "chaitin16"
+      ],
+      "source_urls": [
+        "https://rivers.chaitin.cn/vuldb/0fb07f84-3053-4fce-a4d2-0ba508e06e8e"
+      ],
+      "target_paths": [],
+      "limits": [
+        "长亭正文技术主体已读；完整上游EXP、依赖或图片未全部审计"
+      ]
+    },
+    {
+      "candidate_key": "CVE-2016-5195",
+      "title": "Docker/runc/Linux kernel / CVE-2016-5195",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2016-5195"
+      ],
+      "disposition": "supplemented_existing",
+      "disposition_label": "补充/校订既有文",
+      "read_depth": "primary_advisory_or_selected_code_static",
+      "reason": "保留Linux/Android实验，纠正已root准备不是完整零起点root证明",
+      "source_groups": [
+        "linux45"
+      ],
+      "source_urls": [
+        "https://dirtycow.ninja/"
+      ],
+      "target_paths": [
+        "系统安全/Linux/Linux本地提权漏洞/（CVE-2016-5195）脏牛Linux 本地提权.md"
+      ],
+      "limits": [
+        "no local reproduction; see disposition for source/code review limits"
+      ]
+    },
+    {
+      "candidate_key": "CVE-2021-3156",
+      "title": "sudo / sudoedit / CVE-2021-3156",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2021-3156"
+      ],
+      "disposition": "supplemented_existing",
+      "disposition_label": "补充/校订既有文",
+      "read_depth": "primary_advisory_or_selected_code_static",
+      "reason": "已有完整代码与独立复现文；补1.9分支与修复1.9.5p2",
+      "source_groups": [
+        "linux45"
+      ],
+      "source_urls": [
+        "https://github.com/blasty/CVE-2021-3156"
+      ],
+      "target_paths": [
+        "系统安全/Linux/Linux-sudo-权限提升漏洞-CVE-2021-3156.md"
+      ],
+      "limits": [
+        "no local reproduction; see disposition for source/code review limits"
+      ]
+    },
+    {
+      "candidate_key": "CVE-2021-4034",
+      "title": "RootHawkX / Linux内核与Polkit / CVE-2021-4034",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2021-4034"
+      ],
+      "disposition": "supplemented_existing",
+      "disposition_label": "补充/校订既有文",
+      "read_depth": "primary_advisory_or_selected_code_static",
+      "reason": "把2009版本误用纠正为引入年份，补commit；不把CVE年份当披露年",
+      "source_groups": [
+        "linux45",
+        "chaitin16"
+      ],
+      "source_urls": [
+        "https://www.qualys.com/2022/01/25/cve-2021-4034/pwnkit.txt",
+        "https://rivers.chaitin.cn/blog/cqos28p0lnec5jjuga9g"
+      ],
+      "target_paths": [
+        "系统安全/Linux/Linux-Polkit-权限提升漏洞-CVE-2021-4034.md"
+      ],
+      "limits": [
+        "no local reproduction; see disposition for source/code review limits"
+      ]
+    },
+    {
+      "candidate_key": "CVE-2022-0847",
+      "title": "RootHawkX / Linux内核与Polkit / CVE-2022-0847",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2022-0847"
+      ],
+      "disposition": "supplemented_existing",
+      "disposition_label": "补充/校订既有文",
+      "read_depth": "primary_advisory_or_selected_code_static",
+      "reason": "补三个固定分支版本与覆盖限制，避免5.8以后全版本误判",
+      "source_groups": [
+        "linux45",
+        "chaitin16"
+      ],
+      "source_urls": [
+        "https://dirtypipe.cm4all.com/",
+        "https://rivers.chaitin.cn/blog/cqos28p0lnec5jjuga9g"
+      ],
+      "target_paths": [
+        "系统安全/Linux/Linux-DirtyPipe-权限提升漏洞-CVE-2022-0847.md"
+      ],
+      "limits": [
+        "no local reproduction; see disposition for source/code review limits"
+      ]
+    },
+    {
+      "candidate_key": "CVE-2023-0386",
+      "title": "Linux OverlayFS / CVE-2023-0386",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2023-0386"
+      ],
+      "disposition": "needs_review_existing",
+      "disposition_label": "既有入口仍待核",
+      "read_depth": "CNA_and_selected_existing_or_primary_sections",
+      "reason": "已有风险分析，未提供本轮已审计完整PoC；UID映射原理仍待最小修正",
+      "source_groups": [
+        "linux45"
+      ],
+      "source_urls": [
+        "https://www.cve.org/CVERecord?id=CVE-2023-0386"
+      ],
+      "target_paths": [],
+      "limits": [
+        "no local reproduction; see disposition for source/code review limits"
+      ]
+    },
+    {
+      "candidate_key": "CVE-2023-2640",
+      "title": "Ubuntu定制OverlayFS / CVE-2023-2640",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2023-2640"
+      ],
+      "disposition": "needs_review_existing",
+      "disposition_label": "既有入口仍待核",
+      "read_depth": "CNA_and_selected_existing_or_primary_sections",
+      "reason": "已有双漏洞新闻，不等同完整可用材料；不能按所有Linux受影响",
+      "source_groups": [
+        "linux45"
+      ],
+      "source_urls": [
+        "https://www.cve.org/CVERecord?id=CVE-2023-2640"
+      ],
+      "target_paths": [],
+      "limits": [
+        "no local reproduction; see disposition for source/code review limits"
+      ]
+    },
+    {
+      "candidate_key": "CVE-2023-32629",
+      "title": "Ubuntu定制OverlayFS / CVE-2023-32629",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2023-32629"
+      ],
+      "disposition": "needs_review_existing",
+      "disposition_label": "既有入口仍待核",
+      "read_depth": "CNA_and_selected_existing_or_primary_sections",
+      "reason": "已有双漏洞新闻，保留；本轮未审计第三方PoC或给出全分支包表",
+      "source_groups": [
+        "linux45"
+      ],
+      "source_urls": [
+        "https://www.cve.org/CVERecord?id=CVE-2023-32629"
+      ],
+      "target_paths": [],
+      "limits": [
+        "no local reproduction; see disposition for source/code review limits"
+      ]
+    },
+    {
+      "candidate_key": "CVE-2023-4911",
+      "title": "Glibc: buffer overflow in ld.so leading to privilege escalation / CVE-2023-4911",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2023-4911"
+      ],
+      "disposition": "needs_review_existing",
+      "disposition_label": "既有入口仍待核",
+      "read_depth": "CNA_and_selected_existing_or_primary_sections",
+      "reason": "已有深度中文分析；缺源与构建特定限制仍在审阅提示中，本輪未逐行审计全文",
+      "source_groups": [
+        "linux45"
+      ],
+      "source_urls": [
+        "https://www.qualys.com/2023/10/03/cve-2023-4911/looney-tunables-local-privilege-escalation-glibc-ld-so.txt"
+      ],
+      "target_paths": [],
+      "limits": [
+        "no local reproduction; see disposition for source/code review limits"
+      ]
+    },
+    {
+      "candidate_key": "CVE-2025-27591",
+      "title": "Below服务 / CVE-2025-27591",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2025-27591"
+      ],
+      "disposition": "supplemented_existing",
+      "disposition_label": "补充/校订既有文",
+      "read_depth": "primary_advisory_or_selected_code_static",
+      "reason": "原假设PoC遗漏root服务触发；补实际0666权限修改因果，保留原代码",
+      "source_groups": [
+        "linux45"
+      ],
+      "source_urls": [
+        "https://security.opensuse.org/2025/03/12/below-world-writable-log-dir.html"
+      ],
+      "target_paths": [
+        "系统安全/Linux/Linux提权漏洞CVE-2025-27591.md"
+      ],
+      "limits": [
+        "no local reproduction; see disposition for source/code review limits"
+      ]
+    },
+    {
+      "candidate_key": "CVE-2025-32462",
+      "title": "sudo / CVE-2025-32462",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2025-32462"
+      ],
+      "disposition": "supplemented_existing",
+      "disposition_label": "补充/校订既有文",
+      "read_depth": "primary_advisory_or_selected_code_static",
+      "reason": "已有跨目录合篇；校对主机规则前提与修复，不重复新增，不归入2026",
+      "source_groups": [
+        "linux45"
+      ],
+      "source_urls": [
+        "https://www.openwall.com/lists/oss-security/2025/06/30/2"
+      ],
+      "target_paths": [
+        "Web安全/其他软件/杂项/CVE-2025-32462&CVE-2025-32463.md"
+      ],
+      "limits": [
+        "no local reproduction; see disposition for source/code review limits"
+      ]
+    },
+    {
+      "candidate_key": "CVE-2025-32463",
+      "title": "sudo / CVE-2025-32463",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2025-32463"
+      ],
+      "disposition": "supplemented_existing",
+      "disposition_label": "补充/校订既有文",
+      "read_depth": "primary_advisory_or_selected_code_static",
+      "reason": "两篇已有；补1.9.17p1边界、NSS根因、check非只读与privileged容器风险",
+      "source_groups": [
+        "linux45"
+      ],
+      "source_urls": [
+        "https://www.stratascale.com/resource/cve-2025-32463-sudo-chroot-elevation-of-privilege/"
+      ],
+      "target_paths": [
+        "系统安全/Linux/不容小觑的威胁： Linux提权漏洞，轻松利用却要修复 CVE-2025-32463.md",
+        "Web安全/其他软件/杂项/CVE-2025-32462&CVE-2025-32463.md"
+      ],
+      "limits": [
+        "no local reproduction; see disposition for source/code review limits"
+      ]
+    },
+    {
+      "candidate_key": "CVE-2025-6018",
+      "title": "Pam-config: lpe from unprivileged to allow_active in pam / CVE-2025-6018",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2025-6018"
+      ],
+      "disposition": "supplemented_existing",
+      "disposition_label": "补充/校订既有文",
+      "read_depth": "primary_advisory_or_selected_code_static",
+      "reason": "该段仅升allow_active；不能单独称root；补官方可用步骤",
+      "source_groups": [
+        "linux45"
+      ],
+      "source_urls": [
+        "https://cdn2.qualys.com/2025/06/17/suse15-pam-udisks-lpe.txt"
+      ],
+      "target_paths": [
+        "系统安全/Linux/【已复现】Linux 本地提权漏洞CVE-2025-6018、CVE-2025-6019.md"
+      ],
+      "limits": [
+        "no local reproduction; see disposition for source/code review limits"
+      ]
+    },
+    {
+      "candidate_key": "CVE-2025-6019",
+      "title": "Libblockdev: lpe from allow_active to root in libblockdev via udisks / CVE-2025-6019",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2025-6019"
+      ],
+      "disposition": "supplemented_existing",
+      "disposition_label": "补充/校订既有文",
+      "read_depth": "primary_advisory_or_selected_code_static",
+      "reason": "补镜像/loop/挂载/持久文件副作用与主线、回补区分",
+      "source_groups": [
+        "linux45"
+      ],
+      "source_urls": [
+        "https://cdn2.qualys.com/2025/06/17/suse15-pam-udisks-lpe.txt"
+      ],
+      "target_paths": [
+        "系统安全/Linux/【已复现】Linux 本地提权漏洞CVE-2025-6018、CVE-2025-6019.md"
+      ],
+      "limits": [
+        "no local reproduction; see disposition for source/code review limits"
+      ]
+    },
+    {
+      "candidate_key": "CVE-2026-23269",
+      "title": "apparmor: validate DFA start states are in bounds in unpack_pdb / CVE-2026-23269",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2026-23269"
+      ],
+      "disposition": "reference_only",
+      "disposition_label": "关联编号，仅引用",
+      "read_depth": "CNA_and_related_advisory_reference_only",
+      "reason": "23268公开完整shell链；其余十编号保留为相关补丁引用，不宣称各自独立完整root PoC",
+      "source_groups": [
+        "linux45"
+      ],
+      "source_urls": [
+        "https://cdn2.qualys.com/advisory/2026/03/10/crack-armor.txt"
+      ],
+      "target_paths": [],
+      "limits": [
+        "no local reproduction; see disposition for source/code review limits"
+      ]
+    },
+    {
+      "candidate_key": "CVE-2026-23403",
+      "title": "apparmor: fix memory leak in verify_header / CVE-2026-23403",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2026-23403"
+      ],
+      "disposition": "reference_only",
+      "disposition_label": "关联编号，仅引用",
+      "read_depth": "CNA_and_related_advisory_reference_only",
+      "reason": "23268公开完整shell链；其余十编号保留为相关补丁引用，不宣称各自独立完整root PoC",
+      "source_groups": [
+        "linux45"
+      ],
+      "source_urls": [
+        "https://cdn2.qualys.com/advisory/2026/03/10/crack-armor.txt"
+      ],
+      "target_paths": [],
+      "limits": [
+        "no local reproduction; see disposition for source/code review limits"
+      ]
+    },
+    {
+      "candidate_key": "CVE-2026-23404",
+      "title": "apparmor: replace recursive profile removal with iterative approach / CVE-2026-23404",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2026-23404"
+      ],
+      "disposition": "reference_only",
+      "disposition_label": "关联编号，仅引用",
+      "read_depth": "CNA_and_related_advisory_reference_only",
+      "reason": "23268公开完整shell链；其余十编号保留为相关补丁引用，不宣称各自独立完整root PoC",
+      "source_groups": [
+        "linux45"
+      ],
+      "source_urls": [
+        "https://cdn2.qualys.com/advisory/2026/03/10/crack-armor.txt"
+      ],
+      "target_paths": [],
+      "limits": [
+        "no local reproduction; see disposition for source/code review limits"
+      ]
+    },
+    {
+      "candidate_key": "CVE-2026-23405",
+      "title": "apparmor: fix: limit the number of levels of policy namespaces / CVE-2026-23405",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2026-23405"
+      ],
+      "disposition": "reference_only",
+      "disposition_label": "关联编号，仅引用",
+      "read_depth": "CNA_and_related_advisory_reference_only",
+      "reason": "23268公开完整shell链；其余十编号保留为相关补丁引用，不宣称各自独立完整root PoC",
+      "source_groups": [
+        "linux45"
+      ],
+      "source_urls": [
+        "https://cdn2.qualys.com/advisory/2026/03/10/crack-armor.txt"
+      ],
+      "target_paths": [],
+      "limits": [
+        "no local reproduction; see disposition for source/code review limits"
+      ]
+    },
+    {
+      "candidate_key": "CVE-2026-23406",
+      "title": "apparmor: fix side-effect bug in match_char() macro usage / CVE-2026-23406",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2026-23406"
+      ],
+      "disposition": "reference_only",
+      "disposition_label": "关联编号，仅引用",
+      "read_depth": "CNA_and_related_advisory_reference_only",
+      "reason": "23268公开完整shell链；其余十编号保留为相关补丁引用，不宣称各自独立完整root PoC",
+      "source_groups": [
+        "linux45"
+      ],
+      "source_urls": [
+        "https://cdn2.qualys.com/advisory/2026/03/10/crack-armor.txt"
+      ],
+      "target_paths": [],
+      "limits": [
+        "no local reproduction; see disposition for source/code review limits"
+      ]
+    },
+    {
+      "candidate_key": "CVE-2026-23407",
+      "title": "apparmor: fix missing bounds check on DEFAULT table in verify_dfa() / CVE-2026-23407",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2026-23407"
+      ],
+      "disposition": "reference_only",
+      "disposition_label": "关联编号，仅引用",
+      "read_depth": "CNA_and_related_advisory_reference_only",
+      "reason": "23268公开完整shell链；其余十编号保留为相关补丁引用，不宣称各自独立完整root PoC",
+      "source_groups": [
+        "linux45"
+      ],
+      "source_urls": [
+        "https://cdn2.qualys.com/advisory/2026/03/10/crack-armor.txt"
+      ],
+      "target_paths": [],
+      "limits": [
+        "no local reproduction; see disposition for source/code review limits"
+      ]
+    },
+    {
+      "candidate_key": "CVE-2026-23408",
+      "title": "apparmor: Fix double free of ns_name in aa_replace_profiles() / CVE-2026-23408",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2026-23408"
+      ],
+      "disposition": "reference_only",
+      "disposition_label": "关联编号，仅引用",
+      "read_depth": "CNA_and_related_advisory_reference_only",
+      "reason": "23268公开完整shell链；其余十编号保留为相关补丁引用，不宣称各自独立完整root PoC",
+      "source_groups": [
+        "linux45"
+      ],
+      "source_urls": [
+        "https://cdn2.qualys.com/advisory/2026/03/10/crack-armor.txt"
+      ],
+      "target_paths": [],
+      "limits": [
+        "no local reproduction; see disposition for source/code review limits"
+      ]
+    },
+    {
+      "candidate_key": "CVE-2026-23409",
+      "title": "apparmor: fix differential encoding verification / CVE-2026-23409",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2026-23409"
+      ],
+      "disposition": "reference_only",
+      "disposition_label": "关联编号，仅引用",
+      "read_depth": "CNA_and_related_advisory_reference_only",
+      "reason": "23268公开完整shell链；其余十编号保留为相关补丁引用，不宣称各自独立完整root PoC",
+      "source_groups": [
+        "linux45"
+      ],
+      "source_urls": [
+        "https://cdn2.qualys.com/advisory/2026/03/10/crack-armor.txt"
+      ],
+      "target_paths": [],
+      "limits": [
+        "no local reproduction; see disposition for source/code review limits"
+      ]
+    },
+    {
+      "candidate_key": "CVE-2026-23410",
+      "title": "apparmor: fix race on rawdata dereference / CVE-2026-23410",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2026-23410"
+      ],
+      "disposition": "reference_only",
+      "disposition_label": "关联编号，仅引用",
+      "read_depth": "CNA_and_related_advisory_reference_only",
+      "reason": "23268公开完整shell链；其余十编号保留为相关补丁引用，不宣称各自独立完整root PoC",
+      "source_groups": [
+        "linux45"
+      ],
+      "source_urls": [
+        "https://cdn2.qualys.com/advisory/2026/03/10/crack-armor.txt"
+      ],
+      "target_paths": [],
+      "limits": [
+        "no local reproduction; see disposition for source/code review limits"
+      ]
+    },
+    {
+      "candidate_key": "CVE-2026-23411",
+      "title": "apparmor: fix race between freeing data and fs accessing it / CVE-2026-23411",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2026-23411"
+      ],
+      "disposition": "reference_only",
+      "disposition_label": "关联编号，仅引用",
+      "read_depth": "CNA_and_related_advisory_reference_only",
+      "reason": "23268公开完整shell链；其余十编号保留为相关补丁引用，不宣称各自独立完整root PoC",
+      "source_groups": [
+        "linux45"
+      ],
+      "source_urls": [
+        "https://cdn2.qualys.com/advisory/2026/03/10/crack-armor.txt"
+      ],
+      "target_paths": [],
+      "limits": [
+        "no local reproduction; see disposition for source/code review limits"
+      ]
+    },
+    {
+      "candidate_key": "CVE-2026-31431",
+      "title": "crypto: algif_aead - Revert to operating out-of-place / CVE-2026-31431",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2026-31431"
+      ],
+      "disposition": "supplemented_existing",
+      "disposition_label": "补充/校订既有文",
+      "read_depth": "primary_advisory_or_selected_code_static",
+      "reason": "已核原作者脚本；补分支修复、缓存副作用及容器宿主边界",
+      "source_groups": [
+        "linux45"
+      ],
+      "source_urls": [
+        "https://github.com/theori-io/copy-fail-CVE-2026-31431/tree/09e97bd8f1aa3868b720a7a12a60b1c365798e06"
+      ],
+      "target_paths": [
+        "系统安全/Linux/Linux-Copy-Fail-本地提权漏洞-CVE-2026-31431.md"
+      ],
+      "limits": [
+        "no local reproduction; see disposition for source/code review limits"
+      ]
+    },
+    {
+      "candidate_key": "CVE-2026-31635",
+      "title": "rxrpc: fix oversized RESPONSE authenticator length check / CVE-2026-31635",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2026-31635"
+      ],
+      "disposition": "needs_review_existing",
+      "disposition_label": "既有入口仍待核",
+      "read_depth": "CNA_and_selected_existing_or_primary_sections",
+      "reason": "原文章只有发布新闻；CNA映射已核，公开利用材料未完成审计，不新增重复",
+      "source_groups": [
+        "linux45"
+      ],
+      "source_urls": [
+        "https://www.cve.org/CVERecord?id=CVE-2026-31635"
+      ],
+      "target_paths": [],
+      "limits": [
+        "no local reproduction; see disposition for source/code review limits"
+      ]
+    },
+    {
+      "candidate_key": "CVE-2026-31694",
+      "title": "fuse: reject oversized dirents in page cache / CVE-2026-31694",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2026-31694"
+      ],
+      "disposition": "needs_review_existing",
+      "disposition_label": "既有入口仍待核",
+      "read_depth": "CNA_and_selected_existing_or_primary_sections",
+      "reason": "已有FUSE通告，版本与CNA主要边界吻合；没有完整PoC审计，不视为已充分收录",
+      "source_groups": [
+        "linux45"
+      ],
+      "source_urls": [
+        "https://www.cve.org/CVERecord?id=CVE-2026-31694"
+      ],
+      "target_paths": [],
+      "limits": [
+        "no local reproduction; see disposition for source/code review limits"
+      ]
+    },
+    {
+      "candidate_key": "CVE-2026-3888",
+      "title": "Local Privilege Escalation in snapd / CVE-2026-3888",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2026-3888"
+      ],
+      "disposition": "deferred",
+      "disposition_label": "暂缓",
+      "read_depth": "primary_advisory_or_selected_code_static",
+      "reason": "原公告调用firefox_24.04等辅助程序而未给完整源码；不把root输出当可运行公开PoC",
+      "source_groups": [
+        "linux45"
+      ],
+      "source_urls": [
+        "https://cdn2.qualys.com/advisory/2026/03/17/snap-confine-systemd-tmpfiles.txt"
+      ],
+      "target_paths": [],
+      "limits": [
+        "no local reproduction; see disposition for source/code review limits"
+      ]
+    },
+    {
+      "candidate_key": "CVE-2026-43284",
+      "title": "xfrm: esp: avoid in-place decrypt on shared skb frags / CVE-2026-43284",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2026-43284"
+      ],
+      "disposition": "supplemented_existing",
+      "disposition_label": "补充/校订既有文",
+      "read_depth": "primary_advisory_or_selected_code_static",
+      "reason": "双CVE不同分支修复；静态核了exp.c关键分支，不能一刀切默认可用",
+      "source_groups": [
+        "linux45"
+      ],
+      "source_urls": [
+        "https://github.com/V4bel/dirtyfrag/tree/aab16fcada27142dd8ce8704906cf6736cf213b8"
+      ],
+      "target_paths": [
+        "系统安全/Linux/Linux-kernel-xfrm-ESP-Dirty-Frag-本地提权漏洞-CVE-2026-43284.md"
+      ],
+      "limits": [
+        "no local reproduction; see disposition for source/code review limits"
+      ]
+    },
+    {
+      "candidate_key": "CVE-2026-43456",
+      "title": "bonding: fix type confusion in bond_setup_by_slave() / CVE-2026-43456",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2026-43456"
+      ],
+      "disposition": "needs_review_existing",
+      "disposition_label": "既有入口仍待核",
+      "read_depth": "CNA_and_selected_existing_or_primary_sections",
+      "reason": "已有深度译文；本轮CNA核对到2.6.24引入及多分支修复，代码未另审计",
+      "source_groups": [
+        "linux45"
+      ],
+      "source_urls": [
+        "https://gmo-cybersecurity.com/blog/19-years-hidden-80000-rewarded-reporting-a-linux-kernel-zero-day-for-google-kernelctf/"
+      ],
+      "target_paths": [],
+      "limits": [
+        "no local reproduction; see disposition for source/code review limits"
+      ]
+    },
+    {
+      "candidate_key": "CVE-2026-43499",
+      "title": "rtmutex: Use waiter::task instead of current in remove_waiter() / CVE-2026-43499",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2026-43499"
+      ],
+      "disposition": "needs_review_existing",
+      "disposition_label": "既有入口仍待核",
+      "read_depth": "CNA_and_selected_existing_or_primary_sections",
+      "reason": "已有GhostLock通告及补丁，不视作缺失；本轮CNA复核不等于完整EXP审计",
+      "source_groups": [
+        "linux45"
+      ],
+      "source_urls": [
+        "https://www.cve.org/CVERecord?id=CVE-2026-43499"
+      ],
+      "target_paths": [],
+      "limits": [
+        "no local reproduction; see disposition for source/code review limits"
+      ]
+    },
+    {
+      "candidate_key": "CVE-2026-43500",
+      "title": "rxrpc: Also unshare DATA/RESPONSE packets when paged frags are present / CVE-2026-43500",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2026-43500"
+      ],
+      "disposition": "supplemented_existing",
+      "disposition_label": "补充/校订既有文",
+      "read_depth": "primary_advisory_or_selected_code_static",
+      "reason": "并非ESP同一缺陷，原文合篇允许保留；补副作用",
+      "source_groups": [
+        "linux45"
+      ],
+      "source_urls": [
+        "https://github.com/V4bel/dirtyfrag/tree/aab16fcada27142dd8ce8704906cf6736cf213b8"
+      ],
+      "target_paths": [
+        "系统安全/Linux/Linux-kernel-xfrm-ESP-Dirty-Frag-本地提权漏洞-CVE-2026-43284.md"
+      ],
+      "limits": [
+        "no local reproduction; see disposition for source/code review limits"
+      ]
+    },
+    {
+      "candidate_key": "CVE-2026-43503",
+      "title": "net: skbuff: propagate shared-frag marker through frag-transfer helpers / CVE-2026-43503",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2026-43503"
+      ],
+      "disposition": "needs_review_existing",
+      "disposition_label": "既有入口仍待核",
+      "read_depth": "CNA_and_selected_existing_or_primary_sections",
+      "reason": "原条目称完整PoC，但静态正文缺ESP写入原语；只核CNA身份/分支，尚未审计原研究代码，不能宣布正确收录",
+      "source_groups": [
+        "linux45"
+      ],
+      "source_urls": [
+        "https://www.cve.org/CVERecord?id=CVE-2026-43503"
+      ],
+      "target_paths": [],
+      "limits": [
+        "no local reproduction; see disposition for source/code review limits"
+      ]
+    },
+    {
+      "candidate_key": "CVE-2026-46331",
+      "title": "net/sched: fix pedit partial COW leading to page cache corruption / CVE-2026-46331",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2026-46331"
+      ],
+      "disposition": "needs_review_existing",
+      "disposition_label": "既有入口仍待核",
+      "read_depth": "CNA_and_selected_existing_or_primary_sections",
+      "reason": "原文章拼入ptrace说明；其代码主线为pedit，46333应只作引用；旧提醒已标出但尚未完整修复正文",
+      "source_groups": [
+        "linux45"
+      ],
+      "source_urls": [
+        "https://github.com/sgkdev/packet_edit_meme"
+      ],
+      "target_paths": [],
+      "limits": [
+        "no local reproduction; see disposition for source/code review limits"
+      ]
+    },
+    {
+      "candidate_key": "CVE-2026-46333",
+      "title": "ptrace: slightly saner 'get_dumpable()' logic / CVE-2026-46333",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2026-46333"
+      ],
+      "disposition": "needs_review_existing",
+      "disposition_label": "既有入口仍待核",
+      "read_depth": "CNA_and_selected_existing_or_primary_sections",
+      "reason": "已有K8s/ssh-keysign研究；泄露私钥不等于每种路线直接root；未完整审计所有公开EXP",
+      "source_groups": [
+        "linux45"
+      ],
+      "source_urls": [
+        "https://cdn2.qualys.com/advisory/2026/05/20/cve-2026-46333-ptrace.txt"
+      ],
+      "target_paths": [],
+      "limits": [
+        "no local reproduction; see disposition for source/code review limits"
+      ]
+    },
+    {
+      "candidate_key": "CVE-2026-53266",
+      "title": "netfilter: bridge: make ebt_snat ARP rewrite writable / CVE-2026-53266",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2026-53266"
+      ],
+      "disposition": "deferred",
+      "disposition_label": "暂缓",
+      "read_depth": "primary_advisory_or_selected_code_static",
+      "reason": "本轮不新增实用PoC条目；保留现有新闻并记材料缺口；已核两热门仓库为追踪网站与防御工程；不能据聚合标签声称有公开EXP",
+      "source_groups": [
+        "linux45"
+      ],
+      "source_urls": [
+        "https://github.com/torvalds/linux/commit/67ba971ae02514d85818fe0c32549ab4bfa3bf49"
+      ],
+      "target_paths": [],
+      "limits": [
+        "本地未复现；平台特定，未确认截图视频或二进制对应性"
+      ]
+    },
+    {
+      "candidate_key": "CVE-2026-64600",
+      "title": "xfs: resample the data fork mapping after cycling ILOCK / CVE-2026-64600",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2026-64600"
+      ],
+      "disposition": "supplemented_existing",
+      "disposition_label": "补充/校订既有文",
+      "read_depth": "primary_advisory_or_selected_code_static",
+      "reason": "补磁盘持久写入与跨重启风险，原公告已有入口；未运行任何竞态",
+      "source_groups": [
+        "linux45"
+      ],
+      "source_urls": [
+        "https://cdn2.qualys.com/advisory/2026/07/22/RefluXFS.txt"
+      ],
+      "target_paths": [
+        "系统安全/Linux/【成功复现】Linux Kernel XFS Reflink本地权限提升漏洞CVE-2026-64600.md"
+      ],
+      "limits": [
+        "no local reproduction; see disposition for source/code review limits"
+      ]
+    },
+    {
+      "candidate_key": "CVE-2026-82474",
+      "title": "Sudo through 1.9.17p2 Intercept Policy Bypass via execveat / CVE-2026-82474",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2026-82474"
+      ],
+      "disposition": "deferred",
+      "disposition_label": "暂缓",
+      "read_depth": "primary_advisory_or_selected_code_static",
+      "reason": "检索到CNA、源码和补丁，无完整公开触发材料；不能仅凭CVE新增可用PoC条目",
+      "source_groups": [
+        "linux45"
+      ],
+      "source_urls": [
+        "https://github.com/sudo-project/sudo/commit/71fbe42dcd5a1c8f799540583a2dfb2ae6221edf"
+      ],
+      "target_paths": [],
+      "limits": [
+        "no local reproduction; see disposition for source/code review limits"
+      ]
+    },
+    {
+      "candidate_key": "CVE-2026-8933",
+      "title": "snap-confine Local Privilege Escalation via Capabilities Misconfiguration or Flaw in Execution Environment Setup / CVE-2026-8933",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2026-8933"
+      ],
+      "disposition": "deferred",
+      "disposition_label": "暂缓",
+      "read_depth": "primary_advisory_or_selected_code_static",
+      "reason": "公告中的./exploit无完整源文件；身份与影响已确认但暂不作合格EXP收录",
+      "source_groups": [
+        "linux45"
+      ],
+      "source_urls": [
+        "https://cdn2.qualys.com/advisory/2026/07/21/snap-confine-set-capabilities.txt"
+      ],
+      "target_paths": [],
+      "limits": [
+        "no local reproduction; see disposition for source/code review limits"
+      ]
+    },
+    {
+      "candidate_key": "CVE-2022-2639",
+      "title": "Linux合辑中的既有 CVE-2022-2639",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2022-2639"
+      ],
+      "disposition": "needs_review_existing",
+      "disposition_label": "既有入口仍待核",
+      "read_depth": "aggregate_article_text_only",
+      "reason": "合辑已读且现库有入口；本轮未单独审完本编号原始EXP/内嵌机器码，不标为完整复核",
+      "source_groups": [
+        "chaitin16"
+      ],
+      "source_urls": [
+        "https://rivers.chaitin.cn/blog/cqos28p0lnec5jjuga9g"
+      ],
+      "target_paths": [],
+      "limits": []
+    },
+    {
+      "candidate_key": "CVE-2021-3493",
+      "title": "Linux合辑中的既有 CVE-2021-3493",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2021-3493"
+      ],
+      "disposition": "needs_review_existing",
+      "disposition_label": "既有入口仍待核",
+      "read_depth": "aggregate_article_text_only",
+      "reason": "合辑已读且现库有入口；本轮未单独审完本编号原始EXP/内嵌机器码，不标为完整复核",
+      "source_groups": [
+        "chaitin16"
+      ],
+      "source_urls": [
+        "https://rivers.chaitin.cn/blog/cqos28p0lnec5jjuga9g"
+      ],
+      "target_paths": [],
+      "limits": []
+    },
+    {
+      "candidate_key": "CVE-2022-23222",
+      "title": "Linux合辑中的既有 CVE-2022-23222",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2022-23222"
+      ],
+      "disposition": "needs_review_existing",
+      "disposition_label": "既有入口仍待核",
+      "read_depth": "aggregate_article_text_only",
+      "reason": "合辑已读且现库有入口；本轮未单独审完本编号原始EXP/内嵌机器码，不标为完整复核",
+      "source_groups": [
+        "chaitin16"
+      ],
+      "source_urls": [
+        "https://rivers.chaitin.cn/blog/cqos28p0lnec5jjuga9g"
+      ],
+      "target_paths": [],
+      "limits": []
+    },
+    {
+      "candidate_key": "search:kingdee-tianyan",
+      "title": "金蝶天燕通告",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [],
+      "disposition": "unread_candidate",
+      "disposition_label": "线索待核/未读",
+      "read_depth": "search_result_only",
+      "reason": "search-result triage only; 复现截图声明，未读完整源码/PoC，不计16篇正文",
+      "source_groups": [
+        "chaitin_other8"
+      ],
+      "source_urls": [
+        "https://rivers.chaitin.cn/blog/cq958490lnechd2450g0"
+      ],
+      "target_paths": [],
+      "limits": []
+    },
+    {
+      "candidate_key": "google-lead:2",
+      "title": "SpringBoot-GateWay-RCE (CVE-2022-22947) 漏洞复现",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2022-22947"
+      ],
+      "disposition": "unread_candidate",
+      "disposition_label": "线索待核/未读",
+      "read_depth": "search_result_only",
+      "reason": "摘要含完整环境、命令执行及内存马章节；现库有对应主文，需读取该正文再判互补，不能仅同CVE排除。",
+      "source_groups": [
+        "google10"
+      ],
+      "source_urls": [
+        "https://www.google.com/goto?url=CAESbgHrOzAVhY3S0PR_meuP6SVUfgKpL4aDv-qbqMyr0Kz7wu9MS2t1fPvqycPZVJVQ0YdKdWcjw2xJ1-LqVoA73p-5RDGtOLsyaWf34cjcwA8756BmhzJkZw7OJnSV3NOIaTsKzcLMUskY7vgvb6AW"
+      ],
+      "target_paths": [],
+      "limits": [
+        "真实长亭URL未解析，未读正文；现库已有主文不自动判定该新来源重复"
+      ]
+    },
+    {
+      "candidate_key": "google-lead:3",
+      "title": "CVE-2024-6387环境搭建和复现 - 长亭百川云",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [
+        "CVE-2024-6387"
+      ],
+      "disposition": "unread_candidate",
+      "disposition_label": "线索待核/未读",
+      "read_depth": "search_result_only",
+      "reason": "摘要有Dockerfile/构建/验证；现库已有本轮深度regreSSHion主文，但未读到该新增来源，不能声称重复或PoC有效。",
+      "source_groups": [
+        "google10"
+      ],
+      "source_urls": [
+        "https://www.google.com/goto?url=CAESbgHrOzAV78-Sovj1kFoKCLFfonVR_Oi1dOOzJsXJ7A2m439CtKQAf5mUcWWC0NNg0HiCusSS5thiuMvMz9s2wIgzw1YF_rvMxZ7RAV7z_84YLftjYkrtQ7ENw6ZaIGFnNNDJCXqu-t2N__1vgTAK"
+      ],
+      "target_paths": [],
+      "limits": [
+        "真实长亭URL未解析，未读正文；现库已有主文不自动判定该新来源重复"
+      ]
+    },
+    {
+      "candidate_key": "google-lead:4",
+      "title": "【已复现】CyberPanel upgrademysqlstatus 远程命令执行漏洞",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [],
+      "disposition": "unread_candidate",
+      "disposition_label": "线索待核/未读",
+      "read_depth": "search_result_only",
+      "reason": "结果为bbs 2024-10-31通告；现库有upgrademysqlstatus/QVD-2024-44346及其他CyberPanel文；未读取正文，不新增已复现声明。",
+      "source_groups": [
+        "google10"
+      ],
+      "source_urls": [
+        "https://www.google.com/goto?url=CAESXAHrOzAV-ONOD0ufRx-EsptACeepgjRckxnKzp1x-ck_ytu0kGVC3_WMjZf1Ck9TdnugI7t8tvqRDS_dvqkxqp7WMeWy_RbxAP6zQVho5KizKaGYO2yYdk9eST_M"
+      ],
+      "target_paths": [],
+      "limits": [
+        "真实长亭URL未解析，未读正文；现库已有主文不自动判定该新来源重复"
+      ]
+    },
+    {
+      "candidate_key": "correction:nextjs-image-CVE-2024-34351",
+      "title": "Next.js 图片优化器归档的 CVE-2024-34351 错配校订",
+      "identity_kind": "identifier_correction_not_new_vulnerability",
+      "identifiers": [
+        "CVE-2024-34351",
+        "GHSA-fr5h-rqp8-mj6g"
+      ],
+      "disposition": "supplemented_existing",
+      "disposition_label": "补充/校订既有文",
+      "read_depth": "existing_body_and_official_advisory",
+      "reason": "长亭正文未读；读现库存文及官方Server Actions公告，纠正主编号角色，保留原请求",
+      "source_groups": [
+        "google10"
+      ],
+      "source_urls": [
+        "https://github.com/vercel/next.js/security/advisories/GHSA-fr5h-rqp8-mj6g",
+        "https://www.google.com/goto?url=CAESbgHrOzAVwqDf_3fC0V1eTHVbanGr72gRFGTqgjgANny8Z0YIUYDjSp59AxRn5WMH86L-2n0UKnyCTtq4dmeeESZ5QTQjbgAPvG1g-vAFvbfAwgOmyTcIDnpx4Ep55X9BzsOhSI6ytcF2oK4X1qxx"
+      ],
+      "target_paths": [
+        "Web安全/其他软件/杂项/CVE-2024-34351 漏洞复现 poc (超大规模).md"
+      ],
+      "limits": []
+    },
+    {
+      "candidate_key": "google-lead:7",
+      "title": "IOT漏洞复现----RWCTF 6th - Let's party in the house | 长亭百川云",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [],
+      "disposition": "unread_candidate",
+      "disposition_label": "线索待核/未读",
+      "read_depth": "search_result_only",
+      "reason": "Google摘要包含synocam_param.cgi子进程调试；可能是互补设备研究，未核型号/固件/完整PoC，不猜造新条目。",
+      "source_groups": [
+        "google10"
+      ],
+      "source_urls": [
+        "https://www.google.com/goto?url=CAESbgHrOzAVGTRQoWQFXwMHCX3nnyPBlMxLnWDu106rYISTkGMBgM_NzL-LQJMGo_tpQyF3j4241T6eCHBzh-wtZl7rYnYyP4XxYk_0VEIjHPDG4sH1iGSthuW2SevJZPtOZRjhom9BwkLJ0N1B1WW1"
+      ],
+      "target_paths": [],
+      "limits": [
+        "真实长亭URL未解析，未读正文；现库已有主文不自动判定该新来源重复"
+      ]
+    },
+    {
+      "candidate_key": "google-lead:10",
+      "title": "【已复现】ShowDoc item_id SQL注入漏洞| 长亭百川云",
+      "identity_kind": "single_issue_or_method",
+      "identifiers": [],
+      "disposition": "unread_candidate",
+      "disposition_label": "线索待核/未读",
+      "read_depth": "search_result_only",
+      "reason": "摘要为2024-06升级通告、token暴破主张；未读正文/请求，不能把标题已复现当公开PoC。",
+      "source_groups": [
+        "google10"
+      ],
+      "source_urls": [
+        "https://www.google.com/goto?url=CAESbgHrOzAVjHC2U4saJmPYvY8ZhWobmTIpFuamWvBOZjU4zYIfWmKACMs0mGdrm8PDEiolcM1mVSXCfMsvamcke_DC7GcbYETQpQ-hsuAVG2I4POKQQnfhu3qyjNYuZRVSB5V0Z-T7mqJ29ETMquUp"
+      ],
+      "target_paths": [],
+      "limits": [
+        "真实长亭URL未解析，未读正文；现库已有主文不自动判定该新来源重复"
+      ]
+    }
+  ]
+}

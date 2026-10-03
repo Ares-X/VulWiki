@@ -45,6 +45,7 @@ schema_version: "1"
 # 追洞小组 - ThinkPHP5 SQL 注入漏洞 and 敏感信息泄露
 
 <meta name="referrer" content="no-referrer"/>
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/1ZkiKqHogWOy0U4rQNnGtQ)
 
 ****文章来源｜MS08067 WEB 攻防知识星球****

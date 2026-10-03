@@ -40,6 +40,7 @@ schema_version: "1"
 # Weiphp5 未授权访问 - Y4er的博客
 
 <meta name="referrer" content="no-referrer"/>
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [y4er.com](https://y4er.com/post/weiphp5-unauthorized/)
 
 偶然挖到的

@@ -51,6 +51,7 @@ source_status: "recorded"
 
 
 <meta name="referrer" content="no-referrer"/>
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [www.shielder.it](https://www.shielder.it/advisories/pfsense-remote-command-execution/)
 
 pfSense 中的远程代码执行 <= 2.5.2
@@ -69,7 +70,7 @@ pfSense® Plus 软件是世界上最值得信赖的防火墙。该软件赢得�
 CVE(s)
 ------
 
-*   [细节
+*   `[细节`
     
     ### 根本原因分析
     
@@ -78,13 +79,19 @@ CVE(s)
     
     在深入研究利用细节之前需要说明的重要一点是 pfSense 基于 FreeBSD，因此所有 GNU 特定的参数`sed`（例如，可用于运行系统命令的`e`/参数）都不可用。`exec`
     
+    > 归档缺损：CVE 列表与标题标签已截断；下方逐字保留采集残片，不猜测原来的锚点或标题。
+    
+    ```text
     ](https://cve.mitre.org/cgi-bin/cvename.cgi?>CVE-2021-41282</a></li>
     </ul>
     <h2 id=)
     
     [](https://cve.mitre.org/cgi-bin/cvename.cgi?>CVE-2021-41282</a></li>
     </ul>
-    <h2 id=)[易受攻击代码](https://github.com/pfsense/pfsense/blob/a7086b04cae21ca742fdeefd1019ee1401b6dded/src/usr/local/www/diag_routes.php#L35-L65)的摘录如下：
+    <h2 id=)
+    ```
+    
+    [易受攻击代码](https://github.com/pfsense/pfsense/blob/a7086b04cae21ca742fdeefd1019ee1401b6dded/src/usr/local/www/diag_routes.php#L35-L65)的摘录如下：
     
     <table class="lntable"><tbody><tr><td class="lntd"><pre tabindex="0" class="chroma"><code> 1
      2

@@ -105,6 +105,8 @@ Wiz 团队做了一个概念验证。恶意的 mcp.json 里藏了这样一条命
   
 就在同一时期，其他安全团队在 Claude Code、Cursor、Windsurf 等 AI 编程工具里也发现了几乎一样的问题。OX Security 和 Check Point 都发了报告，一长串 CVE 编号能看出来这不是巧合：  
 <table><thead><tr><th>CVE</th><th>产品</th><th>研究团队</th></tr></thead><tbody><tr><td>CVE-2025-59536</td><td>Claude Code</td><td>Check Point Research</td></tr><tr><td>CVE-2026-21852</td><td>Claude Code</td><td>Check Point Research</td></tr><tr><td>CVE-2025-54136</td><td>Cursor</td><td>Check Point Research</td></tr><tr><td>CVE-2026-30615</td><td>Windsurf</td><td>OX Security</td></tr><tr><td>CVE-2021-26700</td><td>NPM Extension</td><td>Slack</td></tr><tr><td>CVE-2020-17023</td><td>VS Code Core</td><td>Justin Steven</td></tr></tbody></table>  
+
+
 这个模式很明确：AI 编程工具在追求“开箱即用”的体验时，习惯性地跳过了用户授权环节。工作区配置文件被当成值得信任的东西，而实际上 Git 仓库里的任何文件都可能被攻击者篡改。  
   
 这不是哪一家厂商的问题。整个生态都在默认“方便优先、安全靠边”。  

@@ -467,6 +467,10 @@
   - 关联来源: [用友移动管理系统 uploadApk文件上传](../Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E7%94%A8%E5%8F%8BGRP-u8/%E7%94%A8%E5%8F%8B-%E7%A7%BB%E5%8A%A8%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F-uploadApk.do-%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E.md)
 - [用友移动管理系统 uploadApk上传](../Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E7%94%A8%E5%8F%8BGRP-u8/%E7%94%A8%E5%8F%8B%E7%A7%BB%E5%8A%A8%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E5%AD%98%E5%9C%A8%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E%20%E9%99%84%20POC.md) [vulnerability; not-reproduced; needs-review]
 
+## 用友财务云 A++V8 / 用友政务财务云 V8
+
+- [用友财务云 A++V8 selectMaUser orgCode SQL 注入](../Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E7%94%A8%E5%8F%8B%E6%94%BF%E5%8A%A1%E8%B4%A2%E5%8A%A1%E4%BA%91/%E7%94%A8%E5%8F%8B%E8%B4%A2%E5%8A%A1%E4%BA%91A%2B%2BV8%20selectMaUser%20orgCode%20SQL%E6%B3%A8%E5%85%A5.md) [vulnerability; source-claimed; needs-review]
+
 ## 畅捷通T+
 
 - [畅捷通T+ DownloadProxy Path文件读取](../Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E7%95%85%E6%8D%B7%E9%80%9A/%E7%95%85%E6%8D%B7%E9%80%9A%20TPlus%20DownloadProxy.aspx%20%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E.md) [vulnerability; not-reproduced; needs-review]

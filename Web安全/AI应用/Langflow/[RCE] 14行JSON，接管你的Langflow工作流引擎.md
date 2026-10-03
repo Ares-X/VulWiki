@@ -89,6 +89,7 @@ Langflow是一款流行的开源AI工作流编排工具，允许开发者通过�
 3.类型混淆：create_class()函数允许动态创建类并实例化，为代码执行提供载体
 
 python● ● ●# Langflow/core/code.py 关键代码片段
+```python
 def execute_function(self, code: str, function_name: str, *args):
     # 直接执行用户代码
     local_scope = {}
@@ -100,6 +101,7 @@ def prepare_global_scope(self, user_code: str):
     global_scope = {}
     exec(user_code, global_scope)  # 危险！
     return global_scope
+```
 
 攻击链还原
 

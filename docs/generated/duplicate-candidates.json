@@ -3132,6 +3132,15 @@
   {
     "basis": "shared-primary-identifier",
     "decision": "manual-review-required",
+    "key": "CVE-2024-1086",
+    "paths": [
+      "系统安全/Linux/Linux nf_tables 双重释放与公开本地提权材料（CVE-2024-1086）.md",
+      "系统安全/Linux/Old Linux Kernel flaw CVE-2024-1086 resurfaces in ransomware attacks.md"
+    ]
+  },
+  {
+    "basis": "shared-primary-identifier",
+    "decision": "manual-review-required",
     "key": "CVE-2024-10914",
     "paths": [
       "Web安全/CMS内容/WordPress/2024 年 wordpress、d-link 等相关的多个 cve 漏洞 poc.md",
@@ -3536,6 +3545,15 @@
     "paths": [
       "Web安全/其他软件/杂项/[漏洞] CVE-2024-44308：Apple Safari JavaScriptCore 远程代码执行漏洞.md",
       "系统安全/Apple iOS/苹果公司解决了两个正在被活跃利用的零日漏洞.md"
+    ]
+  },
+  {
+    "basis": "shared-primary-identifier",
+    "decision": "manual-review-required",
+    "key": "CVE-2024-4577",
+    "paths": [
+      "Web安全/开发框架/PHP/PHP CGI 参数注入的 XAMPP 失败条件与官方回归测试 CVE-2024-4577.md",
+      "系统安全/Windows/PHP-CGI-Windows-平台远程代码执行漏洞-CVE-2024-4577.md"
     ]
   },
   {
@@ -4077,6 +4095,15 @@
     "paths": [
       "Web安全/AI应用/ComfyUI/ComfyUI-Manager-配置处理器-CRLF-注入漏洞-CVE-2026-22777.md",
       "Web安全/其他软件/杂项/2026年1月企业必修安全漏洞清单.md"
+    ]
+  },
+  {
+    "basis": "shared-primary-identifier",
+    "decision": "manual-review-required",
+    "key": "CVE-2026-23111",
+    "paths": [
+      "系统安全/Linux/CVE-2026-23111_ Linux nf_tables Flaw Enables Root Exploits.md",
+      "系统安全/Linux/Linux nf_tables 事务回滚UAF公开触发材料（CVE-2026-23111）.md"
     ]
   },
   {

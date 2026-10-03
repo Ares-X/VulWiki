@@ -39,6 +39,7 @@ schema_version: "1"
 # DedeCMS-5.8.1 SSTI 模板注入导致 RCE - 先知社区
 
 <meta name="referrer" content="no-referrer"/>
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [xz.aliyun.com](https://xz.aliyun.com/t/10519)
 
 > 先知社区，先知安全技术社区

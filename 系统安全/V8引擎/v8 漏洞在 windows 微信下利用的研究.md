@@ -63,6 +63,7 @@ schema_version: "1"
 ### 归档技术正文
 
 <meta name="referrer" content="no-referrer"/>
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [paper.seebug.org](https://paper.seebug.org/1848/)
 
 ![Seebug-logo](https://www.seebug.org/static/dist2/images/seebug-logo2.png?v=2)
@@ -797,6 +798,9 @@ kb命令看下参数：
 
 [← 俄罗斯新雨刷恶意软件: 深入研究 RURansom 恶意软件](/1847/) [关于乌克兰网络攻击的网络研讨会 -- 摘要和问答 →](/1849/)
 
+> 归档缺损：正文后的 Seebug 作者卡片、更多文章和评论区只保留了截断 HTML；“识链实验室”链接的 nick 参数及目标未保存，无法恢复作者页。下方逐字保留采集残片。
+
+```text
 [](/users/author/?nick>'s Picture</a>r
         
 
@@ -861,6 +865,8 @@ kb命令看下参数：
     <br>
 
     <section class=)
+
+```
 
 ---
 

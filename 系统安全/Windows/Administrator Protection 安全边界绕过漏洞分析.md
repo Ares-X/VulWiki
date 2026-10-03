@@ -60,6 +60,8 @@ James Forshaw
                     James Forshaw  securitainment   2026-02-09 13:31  
   
 <table><thead><tr style="border-top-width: 1px;border-top-style: solid;border-top-color: rgb(204, 204, 204);background-color: white;margin: 0px;padding: 0px;"><th style="font-weight: bold;border: 1px solid rgb(204, 204, 204);text-align: left;margin: 0px;padding: 6px 13px;"><section><span leaf="">原文链接</span></section></th><th style="font-weight: bold;border: 1px solid rgb(204, 204, 204);text-align: left;margin: 0px;padding: 6px 13px;"><section><span leaf="">作者</span></section></th></tr></thead><tbody><tr style="border-top-width: 1px;border-top-style: solid;border-top-color: rgb(204, 204, 204);background-color: white;margin: 0px;padding: 0px;"><td style="border: 1px solid rgb(204, 204, 204);text-align: left;margin: 0px;padding: 6px 13px;"><section><span leaf="">https://projectzero.google/2026/26/windows-administrator-protection.html</span></section></td><td style="border: 1px solid rgb(204, 204, 204);text-align: left;margin: 0px;padding: 6px 13px;"><section><span leaf="">James Forshaw</span></section></td></tr></tbody></table>  
+
+
 Windows 11 最新版本 25H2 推出了重要的新功能 Administrator Protection。该功能旨在取代用户账户控制（User Account Control, UAC），为系统建立一个更加稳健、可防御的安全边界，从而让本地用户仅在真正需要时才能获取管理员权限。  
   
 本文首先概述该功能的工作原理及其与 UAC 的区别，然后描述我在 Windows 11 预览版阶段进行的安全研究。最后，我将详细介绍所发现的九个漏洞之一——通过该漏洞可以静默获取完整的管理员权限。我向 Microsoft 报告的所有问题都已得到修复，部分漏洞通过可选更新 KB5067036 在功能正式发布前修复，其余的则通过安全公告发布修复方案。  

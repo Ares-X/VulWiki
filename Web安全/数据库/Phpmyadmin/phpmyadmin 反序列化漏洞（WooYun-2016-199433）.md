@@ -44,7 +44,8 @@ schema_version: "1"
 ## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
-\> 本文由 \[简悦 SimpRead\](http://ksria.com/simpread/) 转码， 原文地址 \[www.cnblogs.com\](https://www.cnblogs.com/xhds/archive/2004/01/13/12579425.html)
+
+> 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [www.cnblogs.com](https://www.cnblogs.com/xhds/archive/2004/01/13/12579425.html)
 
 **目录**
 

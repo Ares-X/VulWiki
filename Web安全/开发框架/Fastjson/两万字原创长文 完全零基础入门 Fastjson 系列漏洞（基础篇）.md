@@ -44,6 +44,7 @@ schema_version: "1"
 # 【两万字原创长文】完全零基础入门 Fastjson 系列漏洞（基础篇）
 
 <meta name="referrer" content="no-referrer"/>
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/20sJNNRMxSA_7ySbppc3SQ)
 
 零、前言与目录

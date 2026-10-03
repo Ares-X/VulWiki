@@ -21,6 +21,10 @@
 - [ComfyUI-Manager 远程代码执行漏洞 CVE-2025-67303](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/ComfyUI/ComfyUI-Manager-%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E-CVE-2025-67303.md) [vulnerability; not-reproduced; needs-review]
 - [ComfyUI-Manager 配置处理器 CRLF 注入漏洞 CVE-2026-22777](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/ComfyUI/ComfyUI-Manager-%E9%85%8D%E7%BD%AE%E5%A4%84%E7%90%86%E5%99%A8-CRLF-%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E-CVE-2026-22777.md) [vulnerability; not-reproduced; needs-review]
 
+## EDDI
+
+- [EDDI ZIP导入路径穿越与延迟类加载利用链（CVE-2025-32779）](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/EDDI/EDDI%20ZIP%E5%AF%BC%E5%85%A5%E8%B7%AF%E5%BE%84%E7%A9%BF%E8%B6%8A%E4%B8%8E%E5%BB%B6%E8%BF%9F%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%88%A9%E7%94%A8%E9%93%BE%20CVE-2025-32779.md) [analysis; source-claimed; needs-review]
+
 ## FastGPT
 
 - [FastGPT NoSQL注入致管理员登录绕过：CVE-2026-40351深度剖析](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/FastGPT/FastGPT%20NoSQL%E6%B3%A8%E5%85%A5%E8%87%B4%E7%AE%A1%E7%90%86%E5%91%98%E7%99%BB%E5%BD%95%E7%BB%95%E8%BF%87%EF%BC%9ACVE-2026-40351%E6%B7%B1%E5%BA%A6%E5%89%96%E6%9E%90.md) [vulnerability; not-reproduced; needs-review]
@@ -85,6 +89,10 @@
 
 - [CVE-2026-42824 Copilot SearchLeak 说法与检测草稿（未核实）](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/AI%E7%BB%BC%E5%90%88/CVE-2026-42824%EF%BC%9ACopilot%20SearchLeak%20%E6%BC%8F%E6%B4%9E%EF%BC%8CAI%20%E5%8C%96%E8%BA%AB%E6%95%B0%E6%8D%AE%E7%AA%83%E5%AF%86%E5%86%85%E9%AC%BC.md) [analysis; not-reproduced; needs-review]
 
+## Microsoft SQL Server Management Studio 22 / GitHub Copilot
+
+- [SSMS SQL Copilot 只读绕过与数据库元数据提权（CVE-2026-65669）](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/SQL%20Copilot/SSMS%20SQL%20Copilot%20%E5%8F%AA%E8%AF%BB%E7%BB%95%E8%BF%87%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%BA%93%E5%85%83%E6%95%B0%E6%8D%AE%E6%8F%90%E6%9D%83%EF%BC%88CVE-2026-65669%EF%BC%89.md) [analysis; source-claimed; needs-review]
+
 ## MindsDB
 
 - [MindsDB 文件路径处理漏洞预警：未授权信息泄露与拒绝服务风险](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/MindsDB/MindsDB%20%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84%E5%A4%84%E7%90%86%E6%BC%8F%E6%B4%9E%E9%A2%84%E8%AD%A6%EF%BC%9A%E6%9C%AA%E6%8E%88%E6%9D%83%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2%E4%B8%8E%E6%8B%92%E7%BB%9D%E6%9C%8D%E5%8A%A1%E9%A3%8E%E9%99%A9.md) [vulnerability; not-reproduced; needs-review]
@@ -140,6 +148,7 @@
 
 ## OpenCode
 
+- [OpenCode 升级接口跨站请求与任意包安装（GHSA-632h-h47v-g4x4）](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/OpenCode/OpenCode%20%E5%8D%87%E7%BA%A7%E6%8E%A5%E5%8F%A3%E8%B7%A8%E7%AB%99%E8%AF%B7%E6%B1%82%E4%B8%8E%E4%BB%BB%E6%84%8F%E5%8C%85%E5%AE%89%E8%A3%85%EF%BC%88GHSA-632h-h47v-g4x4%EF%BC%89.md) [analysis; source-claimed; needs-review]
 - [OpenCode 远程代码执行漏洞 CVE-2026-22812](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/OpenCode/OpenCode-%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E-CVE-2026-22812.md) [vulnerability; not-reproduced; needs-review]
 
 ## OpenVPN
@@ -190,6 +199,10 @@
 - [n8n 表达式沙箱逃逸导致远程代码执行漏洞 CVE-2025-68613](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/n8n/n8n-%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%B2%99%E7%AE%B1%E9%80%83%E9%80%B8%E5%AF%BC%E8%87%B4%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E-CVE-2025-68613.md) [vulnerability; not-reproduced; needs-review]
 - [热门平台 n8n 遭遇三重远程代码执行漏洞威胁](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/n8n/%E7%83%AD%E9%97%A8%E5%B9%B3%E5%8F%B0%20n8n%20%E9%81%AD%E9%81%87%E4%B8%89%E9%87%8D%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E%E5%A8%81%E8%83%81.md) [advisory; not-reproduced; needs-review]
 - [通过沙箱逃逸在 n8n 上实现远程代码执行 - CVE-2026-1470 和 CVE-2026-0863](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/n8n/%E9%80%9A%E8%BF%87%E6%B2%99%E7%AE%B1%E9%80%83%E9%80%B8%E5%9C%A8%20n8n%20%E4%B8%8A%E5%AE%9E%E7%8E%B0%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%20-%20CVE-2026-1470%20%E5%92%8C%20CVE-2026-0863.md) [vulnerability; not-reproduced; needs-review]
+
+## n8n / Google Workspace Admin（GSuiteAdmin）节点
+
+- [n8n GSuiteAdmin 原型污染与 Git 命令执行链（CVE-2026-33696）](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/n8n/n8n%20GSuiteAdmin%20%E5%8E%9F%E5%9E%8B%E6%B1%A1%E6%9F%93%E4%B8%8E%20Git%20%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E9%93%BE%EF%BC%88CVE-2026-33696%EF%BC%89.md) [analysis; source-claimed; needs-review]
 
 ## n8n Pyodide
 

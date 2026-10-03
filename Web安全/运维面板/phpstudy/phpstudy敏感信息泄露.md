@@ -40,6 +40,7 @@ schema_version: "1"
 
 ## 技术正文与历史材料
 
+```python
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 '''
@@ -75,6 +76,7 @@ if __name__ == "__main__":
     testVuln = run(sys.argv[1])
 
 
+```
 ---
 
 > 来源：白阁文库 BaizeSec/bylibrary

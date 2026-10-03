@@ -1,0 +1,32 @@
+{
+  "review": "history fidelity review; read-only",
+  "base": "cfb19294812b1435a57e866a87dd18e2ff3ebec3",
+  "archive": "41940cb0038d09ca5aaddbe5bffb923e423d210f",
+  "confirmed_findings": [],
+  "unknowns_not_recommended_for_edit": [
+    {
+      "path": "Web安全/运维面板/ScreenConnect/ScreenConnect 高危漏洞（CVE-2025-14265）存在配置泄露与恶意扩展安装风险.md",
+      "reason": "Archive Chinese is mojibake; prior evidence marks reconstructed Chinese semantics unknown and no fixed-source evidence supports a safe exact replacement. Do not restore mojibake over readable copy or infer source claims."
+    },
+    {
+      "path": "Web安全/CMS内容/Certighost/Certighost（CVE-2026-54121）.md",
+      "reason": "Flattened source pseudo-code/mitigation strings are identically flattened in archive and current file; no archived line breaks evidence a recoverable restoration."
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【漏洞分析】CVE-2025-9132 Await Using Cant Wait.md",
+      "reason": "Historical raw table contained a Markdown code-pipe truncation; current text has escaped pipe delimiters and retains full source cell. This is already fixed; do not revert."
+    }
+  ],
+  "scope_notes": [
+    "Read applicable project docs and existing full-fidelity / second-polish / gap review records.",
+    "Compared retained Git archive text and current text for unresolved high-signal candidate(s); reviewed the known pending/unknown evidence for exact restorable omissions.",
+    "No body or tool changes; no article examples, HTML, PoC, payload or scanner executed; no example targets contacted.",
+    "Corrected initial stale-evidence false positive after direct current-file and HEAD verification."
+  ],
+  "retracted_findings": [
+    {
+      "path": "Web安全/中间件/Redis/Redis 远程代码执行漏洞曝光：官方容器现“老式”栈溢出高危风险.md",
+      "reason": "False positive. Re-read current working file at HEAD cfb19294812b1435a57e866a87dd18e2ff3ebec3: line 41 explicitly says “原文称…8.3.2…；本文依据 Redis 原厂公告更正为 8.2.3。” The exact provenance is already preserved; no repo change needed. Earlier assessment incorrectly treated a prior ledger excerpt as current state."
+    }
+  ]
+}

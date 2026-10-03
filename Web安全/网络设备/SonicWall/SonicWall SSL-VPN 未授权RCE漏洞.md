@@ -47,6 +47,7 @@ source_status: "unknown"
 - 下方保留原技术正文与载荷；其中历史时间表述和成功主张应按本节限定阅读
 <!-- article-review:devices:end -->
 
+```python
 # Author: Darren Martyn
 # Credit: Phineas Fisher
 # Notes:
@@ -145,6 +146,7 @@ def main(args):
 if __name__ == "__main__":
     main(args=sys.argv)
 
+```
 
 ---
 

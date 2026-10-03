@@ -33,6 +33,8 @@
 
 ## 本地检查
 
+全库精校、分片审阅与围栏修改还应遵循 [内容维护与验收流程](docs/REVIEW-WORKFLOW.md)。其中明确区分机器扫描、全文阅读和抽查，并要求完整请求体与可复制文本的验收；不能将候选片段校验称为整篇审阅。
+
 ```sh
 python -m unittest discover -s tests -v
 python scripts/wiki.py check --baseline docs/quality-baseline.json --report /tmp/wiki-quality.json

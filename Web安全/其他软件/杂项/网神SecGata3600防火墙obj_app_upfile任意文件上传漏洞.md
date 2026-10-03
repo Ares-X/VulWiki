@@ -74,7 +74,7 @@ schema_version: "1"
 # 四、漏洞复现
 <font style="color:rgb(0, 0, 0);">没有对文件调用进行鉴权，且文件上传路径为可访问路径，造成任意文件上传</font>
 
-```java
+```http
 POST /?g=obj_app_upfile HTTP/1.1
 Host: xx.xx.xx.xx
 Accept: */*

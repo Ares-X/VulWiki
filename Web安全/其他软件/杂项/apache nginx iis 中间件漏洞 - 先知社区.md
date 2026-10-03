@@ -65,6 +65,7 @@ version字段抽取Nginx配置代码，需删除；按产品/机制拆多记录�
 ### 归档技术正文
 
 <meta name="referrer" content="no-referrer"/>
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [xz.aliyun.com](https://xz.aliyun.com/t/8631)
 
 php 常见运行方式有 apache 的模块模式 (分为 mod_php 和 mod_cgi) cgi`模式,`fast-cgi 模式
@@ -380,12 +381,9 @@ location ~ \.php$ {
 
 [![](https://xzfile.aliyuncs.com/media/upload/picture/20201216100319-de6d3e52-3f42-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20201216100319-de6d3e52-3f42-1.png)
 
-```
-修复
+## 修复
 php.ini 中的  cgi.fix_pathinfo=0 访问后就是404
 将/etc/php5/fpm/pool.d/www.conf 添加 security.limit_extensions = .php
-
-```
 
 CRLF
 ----
