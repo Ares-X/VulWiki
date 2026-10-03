@@ -4,6 +4,10 @@
 
 产品按显式元数据分组；未确认产品不从目录自动推断。
 
+## Android ART JNI / system_server boundary
+
+- [Android ART JNI 可实例化检查与序列化回归测试（CVE-2025-48543）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Android/Android%20ART%20JNI%20%E5%8F%AF%E5%AE%9E%E4%BE%8B%E5%8C%96%E6%A3%80%E6%9F%A5%E4%B8%8E%E5%BA%8F%E5%88%97%E5%8C%96%E5%9B%9E%E5%BD%92%E6%B5%8B%E8%AF%95%EF%BC%88CVE-2025-48543%EF%BC%89.md) [analysis; not-reproduced; active]
+
 ## Android Binder内核驱动
 
 - [攻击 Android Binder：对 CVE-2023-20938 的分析和利用](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Android/%E6%94%BB%E5%87%BB%20Android%20Binder%EF%BC%9A%E5%AF%B9%20CVE-2023-20938%20%E7%9A%84%E5%88%86%E6%9E%90%E5%92%8C%E5%88%A9%E7%94%A8.md) [analysis; not-reproduced; needs-review]

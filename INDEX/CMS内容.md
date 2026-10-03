@@ -49,9 +49,21 @@
 
 - [漏洞预警  Magento Open Source XXE漏洞](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/Magento/%E6%BC%8F%E6%B4%9E%E9%A2%84%E8%AD%A6%20%20Magento%20Open%20Source%20XXE%E6%BC%8F%E6%B4%9E.md) [advisory; not-reproduced; needs-review]
 
+## Adobe Commerce / Magento customer account session
+
+- [Magento 客户会话身份切换与模板验证边界（CVE-2026-71362）](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/Magento/Magento%E5%AE%A2%E6%88%B7%E4%BC%9A%E8%AF%9D%E8%BA%AB%E4%BB%BD%E5%88%87%E6%8D%A2-CVE-2026-71362.md) [analysis; source-claimed; needs-review]
+
+## Adobe Commerce / Magento template factories
+
+- [Magento StyleSmuggler 的实例化顺序、模板数据与文件包含边界（CVE-2026-75650）](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/Magento/StyleSmuggler%E5%AE%9E%E4%BE%8B%E5%8C%96%E9%A1%BA%E5%BA%8F%E4%B8%8E%E6%A8%A1%E6%9D%BF%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E5%88%86%E6%9E%90-CVE-2026-75650.md) [analysis; source-claimed; needs-review]
+
 ## Adobe Commerce / Magento; secondary ColdFusion
 
 - [Adobe Commerce Flaw CVE-2025-54236 Lets Hackers Take Over Customer Acc](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/Adobe%20Commerce/Adobe%20Commerce%20Flaw%20CVE-2025-54236%20Lets%20Hackers%20Take%20Over%20Customer%20Acc.md) [roundup; not-reproduced; needs-review]
+
+## Adobe Experience Manager Forms on JEE adminui
+
+- [AEM Forms JEE 认证过滤与 Struts DevMode 的组合风险（CVE-2025-54253）](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/Adobe%20Experience%20Manager/AEM%20Forms%20JEE%20%E8%AE%A4%E8%AF%81%E8%BF%87%E6%BB%A4%E4%B8%8E%20Struts%20DevMode%20%E7%9A%84%E7%BB%84%E5%90%88%E9%A3%8E%E9%99%A9%EF%BC%88CVE-2025-54253%EF%BC%89.md) [analysis; not-reproduced; active]
 
 ## Artifex Ghostscript
 
@@ -666,6 +678,10 @@
 
 - [极致CMS-alipay_return_pay-SQL注入漏洞](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/%E6%9E%81%E8%87%B4CMS/%E6%9E%81%E8%87%B4CMS-alipay_return_pay-SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md) [roundup; not-reproduced; needs-review]
 
+## Joomla Balbooa Forms
+
+- [Balbooa Forms未认证上传与固定模板适用限制（CVE-2026-56291）](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/Joomla/Balbooa%20Forms%E6%9C%AA%E8%AE%A4%E8%AF%81%E4%B8%8A%E4%BC%A0%E4%B8%8E%E5%9B%BA%E5%AE%9A%E6%A8%A1%E6%9D%BF%E9%80%82%E7%94%A8%E9%99%90%E5%88%B6%EF%BC%88CVE-2026-56291%EF%BC%89.md) [analysis; not-reproduced; needs-review]
+
 ## Joomla CMS com_joomlaupdate/Web services
 
 - [Joomla! 发布安全补丁：关键文件删除和 Web 服务漏洞暴露](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/Joomla/Joomla%21%20%E5%8F%91%E5%B8%83%E5%AE%89%E5%85%A8%E8%A1%A5%E4%B8%81%EF%BC%9A%E5%85%B3%E9%94%AE%E6%96%87%E4%BB%B6%E5%88%A0%E9%99%A4%E5%92%8C%20Web%20%E6%9C%8D%E5%8A%A1%E6%BC%8F%E6%B4%9E%E6%9A%B4%E9%9C%B2.md) [advisory; not-reproduced; needs-review]
@@ -689,6 +705,14 @@
 ## Joomla LDAP authentication1.5–3.7.5
 
 - [（CVE-2017-14596）Joomla! 1.5 &lt;= 3.7.5 LDAP注入绕过登录认证](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/Joomla/%EF%BC%88CVE-2017-14596%EF%BC%89Joomla%21%201.5%20%3C%3D%203.7.5%20LDAP%E6%B3%A8%E5%85%A5%E7%BB%95%E8%BF%87%E7%99%BB%E5%BD%95%E8%AE%A4%E8%AF%81.md) [analysis; not-reproduced; needs-review]
+
+## Joomla Page Builder CK
+
+- [Page Builder CK附件上传材料与txt验证边界（CVE-2026-56290）](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/Joomla/Page%20Builder%20CK%E9%99%84%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%9D%90%E6%96%99%E4%B8%8Etxt%E9%AA%8C%E8%AF%81%E8%BE%B9%E7%95%8C%EF%BC%88CVE-2026-56290%EF%BC%89.md) [analysis; not-reproduced; active]
+
+## Joomla iCagenda
+
+- [iCagenda附件上传PoC的版本差异与批量写入风险（CVE-2026-48939）](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/Joomla/iCagenda%E9%99%84%E4%BB%B6%E4%B8%8A%E4%BC%A0PoC%E7%9A%84%E7%89%88%E6%9C%AC%E5%B7%AE%E5%BC%82%E4%B8%8E%E6%89%B9%E9%87%8F%E5%86%99%E5%85%A5%E9%A3%8E%E9%99%A9%EF%BC%88CVE-2026-48939%EF%BC%89.md) [analysis; not-reproduced; needs-review]
 
 ## Joomla paGO Commerce2.5.9.0
 
@@ -753,6 +777,10 @@
 
 - [Ke361-MenuController.class.php-后台SQL注入漏洞-CNVD-2021-25002](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/%E9%AA%91%E5%A3%ABCMS/Ke361-MenuController.class.php-%E5%90%8E%E5%8F%B0SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E-CNVD-2021-25002.md) [vulnerability; not-reproduced; needs-review]
 - [Ke361-TopicController.class.php-SQL注入漏洞-CNVD-2017-04380](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/%E9%AA%91%E5%A3%ABCMS/Ke361-TopicController.class.php-SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E-CNVD-2017-04380.md) [unknown; not-reproduced; needs-review]
+
+## Kentico Xperience 13 Staging Sync Service
+
+- [Kentico Staging 认证与媒体写入链的编号交叉核对（CVE-2025-2746、2747、2749）](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/Kentico/Kentico%20Staging%20%E8%AE%A4%E8%AF%81%E4%B8%8E%E5%AA%92%E4%BD%93%E5%86%99%E5%85%A5%E9%93%BE%E7%9A%84%E7%BC%96%E5%8F%B7%E4%BA%A4%E5%8F%89%E6%A0%B8%E5%AF%B9%EF%BC%88CVE-2025-2746%E3%80%812747%E3%80%812749%EF%BC%89.md) [analysis; not-reproduced; needs-review]
 
 ## LFCMS
 
@@ -885,6 +913,10 @@
 ## MiniCMS1.10
 
 - [MiniCMS 1.10存在CSRF漏洞可增加管理员账户2](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/MiniCMS/MiniCMS%201.10%E5%AD%98%E5%9C%A8CSRF%E6%BC%8F%E6%B4%9E%E5%8F%AF%E5%A2%9E%E5%8A%A0%E7%AE%A1%E7%90%86%E5%91%98%E8%B4%A6%E6%88%B72.md) [vulnerability; not-reproduced; needs-review]
+
+## Mirasvit Cache Warmer for Magento 2
+
+- [Mirasvit CacheWarmer Cookie对象注入的入口与依赖链边界（CVE-2026-45247）](../Web%E5%AE%89%E5%85%A8/CMS%E5%86%85%E5%AE%B9/Magento/Mirasvit%20CacheWarmer%20Cookie%E5%AF%B9%E8%B1%A1%E6%B3%A8%E5%85%A5%E7%9A%84%E5%85%A5%E5%8F%A3%E4%B8%8E%E4%BE%9D%E8%B5%96%E9%93%BE%E8%BE%B9%E7%95%8C%EF%BC%88CVE-2026-45247%EF%BC%89.md) [analysis; not-reproduced; active]
 
 ## Monstra&lt;=3.0.4
 

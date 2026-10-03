@@ -16,14 +16,37 @@ prerequisites: "57727未认证文件读；57726低权限技术员升admin；5772
 side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/SimpleHelp/%E5%85%B3%E9%94%AE%E7%9A%84%20SimpleHelp%20%E7%BC%BA%E9%99%B7%E5%85%81%E8%AE%B8%E6%96%87%E4%BB%B6%E7%9B%97%E7%AA%83%E3%80%81%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87%E5%92%8C%20RCE%20%E6%94%BB%E5%87%BB.md"
 archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
-source_status: "missing"
+source_status: "recorded"
 source_note: "原始出处待补；仓库归档不等同原始披露"
 id: "vw-b6b70f56db5a6eff5fd52998"
 entity_id: "ve-b6b70f56db5a6eff5fd52998"
 schema_version: "1"
+verification_source: "https://rustlang.rs/posts/simple-help/"
+source_url: "https://rustlang.rs/posts/simple-help/"
 ---
 
 # 关键的 SimpleHelp 缺陷允许文件盗窃、权限提升和 RCE 攻击
+
+# SimpleHelp三漏洞的材料与修复分支补充
+
+核对日期2026-10-03。原新闻保留；本次未运行PoC、请求目标或下载补丁二进制。
+
+## 57727的实际技术证据
+
+[imjdl原始分析](https://rustlang.rs/posts/simple-help/)（2025-01-17，页面声明CC BY4.0）追到WebDownloadServer.processOneHttpQuery/respondToolboxResource及ToolBoxConstants.getResourceFile。工具箱资源路径由itemID、resourceID及附加路径拼接，作者保留了初次请求不工作的原因：目录拼接需要相应的上级段，不能只看到../就断言成立。补丁加secure/isInsecure边界检查。
+
+固定Metasploit模块全文审阅显示：先GET allversions做版本检查，再从toolbox-resource构造遍历请求。默认读configuration/serverconfig.xml，并将响应写本地loot；仅200且非空即记漏洞，未验证配置结构，可能产生误报。它包含框架Scanner能力，但维护期间从未运行。未见外部下载器/第三方回连；框架本身不在审计范围。
+
+## 三个独立实体
+
+57727为未认证文件读取；57726为低权限技术员创建过高权限API key；57728为管理权限下ZIP上传目录穿越。后两者能串联，但不能把三个条目都称未认证RCE。已完整读57726/57728固定Nuclei模板，它们都仅探测allversions，没有API key创建或ZIP利用代码；因此这两份模板不能满足独立PoC材料收录。57726的version提取器未设捕获组，匹配含Visual Version前缀，比较语义也须另核。
+
+## 版本号与补丁标记
+
+[SimpleHelp官方指南](https://guides.simple-help.com/kb---security-vulnerabilities-01-2025)明确5.5.8及之后已修复；5.4.10与5.3.9仍需分别应用补丁，日志应出现Patch070125。仅靠数字版本排除这两分支并不可靠。5.4.10补丁在2025-01-31重发，修复Let's Encrypt挑战被阻断的问题。补丁需停服务、替换JAR并重启，不能称零中断。
+
+原作者及厂商材料支持配置文件内含口令哈希风险；读取不等于所有账户均已攻破。厂商建议更改本地管理/技术员密码与限制来源IP，本轮未执行这些操作。
+
 
 <!-- vulwiki-editorial-rebuild:system-misc -->
 ## 条目范围与校订

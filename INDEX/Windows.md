@@ -184,6 +184,10 @@
 
 - [Windows支持诊断工具(MSDT)远程代码执行漏洞(CVE-2022-30190)分析复现修复](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Windows/Windows%E6%94%AF%E6%8C%81%E8%AF%8A%E6%96%AD%E5%B7%A5%E5%85%B7%28MSDT%29%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E%28CVE-2022-30190%29%E5%88%86%E6%9E%90%E5%A4%8D%E7%8E%B0%E4%BF%AE%E5%A4%8D.md) [analysis; not-reproduced; needs-review]
 
+## Windows MSHTML/IEFRAME
+
+- [MSHTML超链接执行边界与LNK内嵌HTML证据（CVE-2026-21513）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Windows/MSHTML%E8%B6%85%E9%93%BE%E6%8E%A5%E6%89%A7%E8%A1%8C%E8%BE%B9%E7%95%8C%E4%B8%8ELNK%E5%86%85%E5%B5%8CHTML%E8%AF%81%E6%8D%AE%EF%BC%88CVE-2026-21513%EF%BC%89.md) [analysis; not-reproduced; needs-review]
+
 ## Windows MSHTML/InternetShortcut显示欺骗
 
 - [黑客利用Windows 漏洞-盲文“空格”进行零日攻击](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Windows/%E9%BB%91%E5%AE%A2%E5%88%A9%E7%94%A8Windows%20%E6%BC%8F%E6%B4%9E-%E7%9B%B2%E6%96%87%E2%80%9C%E7%A9%BA%E6%A0%BC%E2%80%9D%E8%BF%9B%E8%A1%8C%E9%9B%B6%E6%97%A5%E6%94%BB%E5%87%BB.md) [advisory; not-reproduced; needs-review]
@@ -225,6 +229,10 @@
 ## Windows RPC runtime
 
 - [Windows远程代码执行（CVE-2022-26809）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Windows/Windows%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%EF%BC%88CVE-2022-26809%EF%BC%89.md) [vulnerability; not-reproduced; needs-review]
+
+## Windows RasMan
+
+- [RasMan循环链表空指针DoS与RPC冒充链的区别（CVE-2026-21525）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Windows/RasMan%E5%BE%AA%E7%8E%AF%E9%93%BE%E8%A1%A8%E7%A9%BA%E6%8C%87%E9%92%88DoS%E4%B8%8ERPC%E5%86%92%E5%85%85%E9%93%BE%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%88CVE-2026-21525%EF%BC%89.md) [analysis; not-reproduced; needs-review]
 
 ## Windows Remote Desktop Services
 

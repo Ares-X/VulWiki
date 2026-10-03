@@ -78,6 +78,10 @@
 - [【漏洞预警】mlflow信息泄露漏洞(CVE-2024-3848)](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/MLflow/%E3%80%90%E6%BC%8F%E6%B4%9E%E9%A2%84%E8%AD%A6%E3%80%91mlflow%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2%E6%BC%8F%E6%B4%9ECVE-2024-3848.md) [vulnerability; not-reproduced; needs-review]
 - [漏洞预警 | MLFlow远程代码执行漏洞](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/MLflow/%E6%BC%8F%E6%B4%9E%E9%A2%84%E8%AD%A6%20%20MLFlow%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md) [advisory; not-reproduced; needs-review]
 
+## MLflow model-registry webhooks
+
+- [MLflow Webhook 重定向与DNS重绑定的完整回读SSRF（CVE-2026-64849）](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/MLflow/MLflow-Webhook%E9%87%8D%E5%AE%9A%E5%90%91DNS%E9%87%8D%E7%BB%91%E5%AE%9ASSRF-CVE-2026-64849.md) [analysis; source-claimed; active]
+
 ## MLflow/FUXA
 
 - [攻击者利用 MLflow 漏洞窃取云凭据和机密信息](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/MLflow/%E6%94%BB%E5%87%BB%E8%80%85%E5%88%A9%E7%94%A8%20MLflow%20%E6%BC%8F%E6%B4%9E%E7%AA%83%E5%8F%96%E4%BA%91%E5%87%AD%E6%8D%AE%E5%92%8C%E6%9C%BA%E5%AF%86%E4%BF%A1%E6%81%AF.md) [advisory; not-reproduced; needs-review]

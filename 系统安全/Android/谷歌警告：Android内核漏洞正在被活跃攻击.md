@@ -16,14 +16,33 @@ prerequisites: "2024-08公告；未列受影响版本或执行权限；后半切
 side_effects: "原文技术操作的实际副作用未复现核验；按其请求/代码评估状态变更、凭据暴露和业务影响"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Android/%E8%B0%B7%E6%AD%8C%E8%AD%A6%E5%91%8A%EF%BC%9AAndroid%E5%86%85%E6%A0%B8%E6%BC%8F%E6%B4%9E%E6%AD%A3%E5%9C%A8%E8%A2%AB%E6%B4%BB%E8%B7%83%E6%94%BB%E5%87%BB.md"
 archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
-source_status: "missing"
+source_status: "recorded"
 source_note: "原始出处待补；仓库归档不等同原始披露"
 id: "vw-9f4ea00c52013921e4738abe"
 entity_id: "ve-9f4ea00c52013921e4738abe"
 schema_version: "1"
+verification_source: "https://github.com/torvalds/linux/commit/92f1655aa2b2294d0b49925f3b875a634bd3b59e"
+source_url: "https://github.com/torvalds/linux/commit/92f1655aa2b2294d0b49925f3b875a634bd3b59e"
 ---
 
 # 谷歌警告：Android内核漏洞正在被活跃攻击
+
+# 原始源码所支持的结论
+
+原回调先释放dst再清除sk_dst_cache，违反RCU下先脱链再释放的顺序，可能使读方访问已释放对象。补丁改回调签名，传入sock，让IPv4、IPv6、XFRM各自调用sk_dst_reset；IPv6 RTF_CACHE分支额外持有引用以平衡释放。
+
+需触发路由缓存negative_advice并满足竞态；提交提到UDP暴露路径，不等于给出无权限互联网RCE完整链。此稿是原始补丁与调用语义的中文分析，不把内核补丁标题、KEV记录或Android新闻自动升级成可直接复现的EXP。没有捏造实验环境、实际输出、内存布局或提权成功率。
+
+## 修复与版本
+
+Linux CNA列出的相应稳定分支修复起点为：4.19.316、5.4.278、5.10.219、5.15.161、6.1.94、6.6.34、6.9.4；主线6.10。这些是上游分支边界；发行版、Android/OEM内核可独立回补，不能只比较uname或移动设备营销版本。完整CNA Git范围和早期回补区间见[记录](https://cveawg.mitre.org/api/cve/CVE-2024-36971)。
+
+## 静态审阅范围与风险
+
+已全文读取固定提交 `92f1655aa2b2294d0b49925f3b875a634bd3b59e` 的提交说明和全部diff，SHA256 `3a50f6ea439f919660e8f890a29a7aea4a467f785650135f7a6167eedc672ff5`；没有应用补丁、编译内核、加载驱动、模拟设备或执行触发。本次材料没有安装器、下载执行段或第三方回连；这只描述所读diff，不证明整棵Linux源代码或固件供应链安全。
+
+维护核对2026-10-03。公开技术分析本身足以作为参考；没有单独可执行PoC不影响保留这份分析，但不能把它称为已验证利用。
+
 
 <!-- vulwiki-editorial-rebuild:system-misc -->
 ## 条目范围与校订

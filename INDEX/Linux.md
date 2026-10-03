@@ -72,6 +72,10 @@
 
 - [【原作者复现通告】Linux FUSE page cache 本地权限提升漏洞CVE-2026-31694安全风险通告](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/%E3%80%90%E5%B7%B2%E5%A4%8D%E7%8E%B0%E3%80%91Linux%20FUSE%20page%20cache%20%E6%9C%AC%E5%9C%B0%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87%E6%BC%8F%E6%B4%9ECVE-2026-31694%E5%AE%89%E5%85%A8%E9%A3%8E%E9%99%A9%E9%80%9A%E5%91%8A.md) [advisory; not-reproduced; needs-review]
 
+## Linux IPv6 __ip6_append_data
+
+- [Linux IPv6分页分配遗漏fraggap的内存边界分析（CVE-2026-53362）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/Linux%20IPv6%E5%88%86%E9%A1%B5%E5%88%86%E9%85%8D%E9%81%97%E6%BC%8Ffraggap%E7%9A%84%E5%86%85%E5%AD%98%E8%BE%B9%E7%95%8C%E5%88%86%E6%9E%90%EF%BC%88CVE-2026-53362%EF%BC%89.md) [analysis; not-reproduced; active]
+
 ## Linux Netfilter compat setsockopt
 
 - [CVE-2021-22555](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/CVE-2021-22555.md) [advisory; not-reproduced; needs-review]
@@ -126,6 +130,18 @@
 
 - [CVE-2026-23111_ Linux nf_tables Flaw Enables Root Exploits](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/CVE-2026-23111_%20Linux%20nf_tables%20Flaw%20Enables%20Root%20Exploits.md) [analysis; source-claimed; needs-review]
 - [Old Linux Kernel flaw CVE-2024-1086 resurfaces in ransomware attacks](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/Old%20Linux%20Kernel%20flaw%20CVE-2024-1086%20resurfaces%20in%20ransomware%20attacks.md) [incident; source-claimed; needs-review]
+
+## Linux kernel ALSA usb-audio
+
+- [Linux USB音频Extigy/Mbox配置计数越界补丁分析（CVE-2024-53197）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/Linux%20USB%E9%9F%B3%E9%A2%91Extigy%20Mbox%E9%85%8D%E7%BD%AE%E8%AE%A1%E6%95%B0%E8%B6%8A%E7%95%8C%E8%A1%A5%E4%B8%81%E5%88%86%E6%9E%90%EF%BC%88CVE-2024-53197%EF%BC%89.md) [analysis; not-reproduced; active]
+
+## Linux kernel ALSA usb-audio clock
+
+- [Linux USB音频时钟描述符越界读补丁分析（CVE-2024-53150）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/Linux%20USB%E9%9F%B3%E9%A2%91%E6%97%B6%E9%92%9F%E6%8F%8F%E8%BF%B0%E7%AC%A6%E8%B6%8A%E7%95%8C%E8%AF%BB%E8%A1%A5%E4%B8%81%E5%88%86%E6%9E%90%EF%BC%88CVE-2024-53150%EF%BC%89.md) [analysis; not-reproduced; active]
+
+## Linux kernel HID core
+
+- [Linux HID报告缓冲区未初始化信息泄露补丁分析（CVE-2024-50302）](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Linux/Linux%20HID%E6%8A%A5%E5%91%8A%E7%BC%93%E5%86%B2%E5%8C%BA%E6%9C%AA%E5%88%9D%E5%A7%8B%E5%8C%96%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2%E8%A1%A5%E4%B8%81%E5%88%86%E6%9E%90%EF%BC%88CVE-2024-50302%EF%BC%89.md) [analysis; not-reproduced; active]
 
 ## Linux ksmbd
 

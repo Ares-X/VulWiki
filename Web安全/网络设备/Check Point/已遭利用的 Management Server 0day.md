@@ -22,6 +22,15 @@ source_status: "unknown"
 
 #  Check Point 紧急修复已遭利用的 Management Server 0day  
 
+## 2026-10-03 一手逆向研究补证
+
+[Bishop Fox 10 月 1 日研究](https://bishopfox.com/blog/weaponizing-check-point-management-cve-2026-93616)补足了新闻未给出的调用链：TCP 19009 的 CPM SOAP 服务先在 LoginSvcRemote.loginNew 中信任调用者自报的 SIC 身份，再由 FileSvcRemote 上传路径遍历实现 root 文件写入；定时任务或特定升级/配置加载路径可把写入转为代码执行。研究者在 R81.10、R82.10 实验，并以 R82.10 Take 45 对照。
+
+修复涉及身份来源、上传文件名和 targetVersion 校验三个位置，不能只找到一个升级服务 JAR 就当作完整补丁。论文的补丁状态探测用非法版本字符触发差异，但旧版本参数签名、代理过滤和未分派响应会使结果不确定；“安全检测”仍可能留下失败执行与日志记录。本次读取研究技术正文，未下载其检测器源码、固件或执行请求，不能宣称整个工具安全。
+
+原新闻的用户名过长告警应与另一漏洞 CVE-2026-91843 区分，不能用来确认本次遍历。写入定时任务和读取结果会改变持久文件，补丁也不会自动恢复已失陷管理主机。CNA 的产品/影响版本见[主记录](https://www.cve.org/CVERecord?id=CVE-2026-93616)；原文、示例和日志保持不变。
+
+
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）
 

@@ -4,9 +4,9 @@
 
 仅收录元数据明确声明的主编号。格式检查不等于官方核验；全文提及、旧字段未确认角色、撤销及争议编号不进入本索引。独立研究分别保留，仅明确 duplicate_of 折叠。
 
-- [2026 年（714 个主编号）](INDEX-CVE/year/2026.md)
-- [2025 年（568 个主编号）](INDEX-CVE/year/2025.md)
-- [2024 年（603 个主编号）](INDEX-CVE/year/2024.md)
+- [2026 年（749 个主编号）](INDEX-CVE/year/2026.md)
+- [2025 年（579 个主编号）](INDEX-CVE/year/2025.md)
+- [2024 年（615 个主编号）](INDEX-CVE/year/2024.md)
 - [2023 年（326 个主编号）](INDEX-CVE/year/2023.md)
 - [2022 年（165 个主编号）](INDEX-CVE/year/2022.md)
 - [2021 年（165 个主编号）](INDEX-CVE/year/2021.md)
@@ -21,6 +21,8 @@
 - [2012 年（5 个主编号）](INDEX-CVE/year/2012.md)
 - [2011 年（1 个主编号）](INDEX-CVE/year/2011.md)
 - [2010 年（5 个主编号）](INDEX-CVE/year/2010.md)
+- [2009 年（1 个主编号）](INDEX-CVE/year/2009.md)
 - [2008 年（2 个主编号）](INDEX-CVE/year/2008.md)
-- [2007 年（3 个主编号）](INDEX-CVE/year/2007.md)
+- [2007 年（4 个主编号）](INDEX-CVE/year/2007.md)
 - [2006 年（1 个主编号）](INDEX-CVE/year/2006.md)
+- [2005 年（1 个主编号）](INDEX-CVE/year/2005.md)

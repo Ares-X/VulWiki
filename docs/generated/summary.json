@@ -1,23 +1,23 @@
 {
-  "documents": 5679,
+  "documents": 5733,
   "excluded_sources": 2,
   "explicit_entities": 5558,
   "fingerprints": 566,
-  "indexed_sources": 5677,
+  "indexed_sources": 5731,
   "issues": {
     "embedded_code_candidate": 1,
     "fingerprint_unverified": 800,
     "identifier_inactive": 27,
-    "identifier_role_unknown": 215,
+    "identifier_role_unknown": 214,
     "noncontent_link_candidate": 30,
     "path_legacy": 2,
     "site_relative_link": 81,
-    "source_missing": 3849,
+    "source_missing": 3842,
     "unrecognized_identifier_namespace": 88
   },
-  "primary_cve_identifiers": 3192,
-  "primary_entries": 5583,
+  "primary_cve_identifiers": 3253,
+  "primary_entries": 5637,
   "schema_version": 1,
-  "source_digest": "711d81f303de8280ebdb49f16f4c652cc3d71ee844dc54c112d6a4af2d8823d9",
+  "source_digest": "dbb65ecac2a317d165b6e1c33974cf1150ec218f2f4958bc4a73f4a48724236b",
   "verification": "offline-static-only"
 }
