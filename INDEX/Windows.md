@@ -44,6 +44,10 @@
 
 - [PowerShell 远程代码执行漏洞(CVE-2022-41076)安全风险通告二次更新](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Windows/PowerShell%20%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E%28CVE-2022-41076%29%E5%AE%89%E5%85%A8%E9%A3%8E%E9%99%A9%E9%80%9A%E5%91%8A%E4%BA%8C%E6%AC%A1%E6%9B%B4%E6%96%B0.md) [advisory; not-reproduced; needs-review]
 
+## Microsoft Windows win32kfull.sys / GetProcessHandleFromHwnd
+
+- [Windows GetProcessHandleFromHwnd 保护进程边界与 PPLwindow 本地演示](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Windows/Windows%E6%9C%AC%E5%9C%B0%E6%8F%90%E6%9D%83%E6%BC%8F%E6%B4%9E/GetProcessHandleFromHwnd%E4%BF%9D%E6%8A%A4%E8%BF%9B%E7%A8%8B%E8%BE%B9%E7%95%8C%E4%B8%8EPPLwindow%E5%88%86%E6%9E%90.md) [analysis; not-reproduced; needs-review]
+
 ## Microsoft Windows/Office/SharePoint/.NET/Defender for IoT及Intel或Arm
 
 - [微软2024年7月补丁日重点漏洞安全预警](../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/Windows/%E5%BE%AE%E8%BD%AF2024%E5%B9%B47%E6%9C%88%E8%A1%A5%E4%B8%81%E6%97%A5%E9%87%8D%E7%82%B9%E6%BC%8F%E6%B4%9E%E5%AE%89%E5%85%A8%E9%A2%84%E8%AD%A6.md) [roundup; not-reproduced; needs-review]
