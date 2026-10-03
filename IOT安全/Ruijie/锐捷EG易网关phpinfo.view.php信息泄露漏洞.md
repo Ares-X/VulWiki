@@ -63,7 +63,9 @@ source_status: "recorded"
 
 
 <font style="color:rgb(38, 38, 38);">  
-</font>**<font style="color:rgb(38, 38, 38);">四、漏洞复现</font>**<font style="color:rgb(38, 38, 38);"></font>
+</font>
+
+**<font style="color:rgb(38, 38, 38);">四、漏洞复现</font>**<font style="color:rgb(38, 38, 38);"></font>
 
 ```plain
 /tool/view/phpinfo.view.php

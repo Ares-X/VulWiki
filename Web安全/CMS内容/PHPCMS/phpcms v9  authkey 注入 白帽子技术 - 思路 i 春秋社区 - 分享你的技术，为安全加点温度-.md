@@ -38,6 +38,7 @@ schema_version: "1"
 # phpcms v9  authkey 注入 白帽子技术 - 思路 i 春秋社区 - 分享你的技术，为安全加点温度-
 
 <meta name="referrer" content="no-referrer"/>
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [bbs.ichunqiu.com](https://bbs.ichunqiu.com/thread-19033-1-1.html) ![](https://bbs.ichunqiu.com/template/win8mi_15th_design/src/noLogin.jpg)icq27160d12  我是小白，这是我写的第一篇文章，希望各位大牛多多指点。  
 之前遇到一个 php 站，翻看一遍没什么可用的，就尝试下 robots.txt。 
 

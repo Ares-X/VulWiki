@@ -42,6 +42,7 @@ schema_version: "1"
 ## 技术正文与历史材料
 
 <meta name="referrer" content="no-referrer"/>
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [www.freebuf.com](https://www.freebuf.com/vuls/218730.html) Apache Solr最新RCE漏洞分析 [平安银行应用安全团队](https://www.freebuf.com/author/平安银行应用安全团队) 2019-11-01 13:30:59 367535 3
 
 引言

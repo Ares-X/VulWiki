@@ -63,6 +63,7 @@ schema_version: "1"
 ### 归档技术正文
 
 <meta name="referrer" content="no-referrer"/>
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [paper.seebug.org](https://paper.seebug.org/1848/)
 
 ![Seebug-logo](https://www.seebug.org/static/dist2/images/seebug-logo2.png?v=2)

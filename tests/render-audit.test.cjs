@@ -106,6 +106,19 @@ test('locates repeated identical code candidates at their actual source lines', 
   assert.notEqual(candidates[0].id, candidates[1].id);
 });
 
+test('keeps tab-normalized fenced requests inside code ranges while finding real prose requests', () => {
+  const code = '```http\nGET /inside HTTP/1.1\nHost: example.invalid\n\n\tbody\n```';
+  const outside = 'GET /outside HTTP/1.1';
+  for (const eol of ['\n', '\r\n']) {
+    const source = `${code}\n\n${outside}\n`.replace(/\n/g, eol);
+    const result = audit(source);
+    const requests = result.candidates.filter(item => item.rule === 'unfenced_http');
+    assert.deepEqual(requests.map(item => item.raw), [outside]);
+    assert.equal(requests[0].line, 8);
+    assert.equal(result.inventory.code_blocks, 1);
+  }
+});
+
 test('does not misclassify normal shell backticks, ordinary HTML, or nested examples as structure failures', () => {
   const source = '```sh\nvalue=`printf ok`\n```\n\n普通说明 <b>强调</b>。\n\n> 示例：\n> ```html\n> <script>text</script>\n> ```\n';
   const result = audit(source);

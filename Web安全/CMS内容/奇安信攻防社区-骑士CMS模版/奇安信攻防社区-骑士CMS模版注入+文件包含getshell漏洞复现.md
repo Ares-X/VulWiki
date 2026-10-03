@@ -42,6 +42,7 @@ canonical: "Web安全/CMS内容/奇安信攻防社区-骑士CMS模版/奇安信�
 # 奇安信攻防社区-骑士CMS模版注入+文件包含getshell漏洞复现
 
 <meta name="referrer" content="no-referrer"/>
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [forum.butian.net](https://forum.butian.net/share/455)
 
 ### 骑士CMS模版注入+文件包含getshell漏洞复现

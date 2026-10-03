@@ -40,6 +40,32 @@ function locate(source, raw, from = 0) {
   return at;
 }
 
+// Marked normalizes CRLF and leading tabs before producing token.raw. Keep an
+// offset map for locating those code tokens without changing archived bytes.
+function normalizedBlockSource(source) {
+  const text = [], starts = [], ends = [];
+  let leading = true;
+  function append(value, start, end) {
+    for (const char of value) { text.push(char); starts.push(start); ends.push(end); }
+  }
+  for (let i = 0; i < source.length; i++) {
+    const char = source[i];
+    if (char === '\r') {
+      const end = source[i + 1] === '\n' ? i + 2 : i + 1;
+      append('\n', i, end); i = end - 1; leading = true;
+    } else if (char === '\n') {
+      append(char, i, i + 1); leading = true;
+    } else if (char === '\t' && leading) {
+      append('    ', i, i + 1);
+    } else {
+      // One UTF-16 code unit at a time preserves JavaScript source offsets.
+      append(char, i, i + 1);
+      if (char !== ' ') leading = false;
+    }
+  }
+  return { text: text.join(''), starts, ends };
+}
+
 function tableCells(row) {
   let cells = 0, escaped = false;
   for (let i = 0; i < row.length; i++) {
@@ -135,9 +161,22 @@ function auditArticle({ path: articlePath, source, sourceBytes, marked }) {
   // HTTP request lines outside fenced-code token ranges are prompts; ordinary URLs are references.
   const codeRanges = [];
   let codeSearchFrom = 0;
+  let normalizedSource;
   for (const token of codeTokens) {
     const offset = locate(body, token.raw, codeSearchFrom);
-    if (offset >= 0) { codeRanges.push([offset, offset + token.raw.length]); codeSearchFrom = offset + token.raw.length; }
+    if (offset >= 0) {
+      codeRanges.push([offset, offset + token.raw.length]);
+      codeSearchFrom = offset + token.raw.length;
+    } else if (token.raw) {
+      normalizedSource ||= normalizedBlockSource(body);
+      const { text, starts, ends } = normalizedSource;
+      let at = text.indexOf(token.raw);
+      while (at >= 0 && starts[at] < codeSearchFrom) at = text.indexOf(token.raw, at + 1);
+      if (at >= 0) {
+        const end = ends[at + token.raw.length - 1];
+        codeRanges.push([starts[at], end]); codeSearchFrom = end;
+      }
+    }
   }
   function rangesFor(tokens) {
     const ranges = [];

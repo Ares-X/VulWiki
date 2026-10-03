@@ -65,6 +65,7 @@ version字段抽取Nginx配置代码，需删除；按产品/机制拆多记录�
 ### 归档技术正文
 
 <meta name="referrer" content="no-referrer"/>
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [xz.aliyun.com](https://xz.aliyun.com/t/8631)
 
 php 常见运行方式有 apache 的模块模式 (分为 mod_php 和 mod_cgi) cgi`模式,`fast-cgi 模式

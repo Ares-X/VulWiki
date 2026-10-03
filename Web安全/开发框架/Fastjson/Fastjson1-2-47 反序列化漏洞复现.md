@@ -39,6 +39,7 @@ schema_version: "1"
 # Fastjson1-2-47 反序列化漏洞复现
 
 <meta name="referrer" content="no-referrer"/>
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/DULDnKo4mD3ZEKWZm7ZIkg)
 
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/uljkOgZGRjfF5ibf0Z5YpAz9OYs2iaSVKV5smZ8qw3Cz08wJlPqAQPEQmribeeNZDc3837OUb4icSFERS0XX7bwMPA/640?wx_fmt=jpeg)

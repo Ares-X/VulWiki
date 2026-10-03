@@ -40,6 +40,7 @@ schema_version: "1"
 # 史上最全 log4j2 远程命令执行漏洞汇总报告
 
 <meta name="referrer" content="no-referrer"/>
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/HW2-VRg44ZEFcWxBmDk-CA)
 
 > 本文作者：**lzstar-A2** 个人博客：https://www.cnblogs.com/lzstar/
