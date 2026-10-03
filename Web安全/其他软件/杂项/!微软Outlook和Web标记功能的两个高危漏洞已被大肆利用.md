@@ -1,9 +1,9 @@
 ---
 source: "gelusus/wxvl 公众号漏洞文库"
 cve: "CVE-2023-23397;CVE-2023-24880;CVE-2023-23415;CVE-2023-23392;CVE-2023-23416;CVE-2022-43552;CVE-2022-23257;CVE-2022-23825;CVE-2022-23816"
-identifier_role: "primary"
-primary_identifiers: "CVE-2023-23397;CVE-2023-24880;CVE-2023-23415;CVE-2023-23392;CVE-2023-23416;CVE-2022-43552;CVE-2022-23257;CVE-2022-23825;CVE-2022-23816"
-referenced_identifiers: ""
+identifier_role: "reference"
+primary_identifiers: "CVE-2023-23397; CVE-2023-24880; CVE-2023-23415; CVE-2023-23392; CVE-2023-23416; CVE-2022-43552; CVE-2022-23257; CVE-2022-23825"
+referenced_identifiers: "CVE-2022-23816"
 identifier_status: "unknown"
 title: "微软Outlook和Web标记功能的两个高危漏洞已被大肆利用"
 product: "Microsoft Outlook、SmartScreen及Windows组件"
@@ -22,6 +22,11 @@ id: "vw-9cc54428aa66de1e03a31f3c"
 entity_id: "ve-9cc54428aa66de1e03a31f3c"
 schema_version: "1"
 ---
+
+## 2026-10-03 编号核验
+
+CVE-2022-23816 已由 CNA 标记为未使用并撤销。本次仅将这一编号移入历史引用，保留本篇其他八个主编号；下文关于该编号获得补丁的说法仍作为原文记录，不再作为有效漏洞映射。
+
 
 # 微软Outlook和Web标记功能的两个高危漏洞已被大肆利用
 

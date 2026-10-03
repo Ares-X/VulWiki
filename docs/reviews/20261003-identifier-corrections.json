@@ -1,0 +1,380 @@
+[
+  {
+    "path": "Web安全/CMS内容/WordPress/（CVE-2019-16773）WordPress 5.3.0 储存型xss.md",
+    "cve": "CVE-2019-16773",
+    "fields": {
+      "primary_identifiers": {
+        "before": "CVE-2019-16773",
+        "after": "CVE-2019-20042"
+      },
+      "referenced_identifiers": {
+        "before": "",
+        "after": "CVE-2019-16773"
+      },
+      "identifier_role": {
+        "before": "primary",
+        "after": "reference"
+      },
+      "identifier_status": {
+        "before": "unknown",
+        "after": "active"
+      },
+      "record_type": {
+        "before": "unknown",
+        "after": "vulnerability"
+      },
+      "title": {
+        "before": "（CVE-2019-16773）WordPress 5.3.0 储存型xss",
+        "after": "WordPress 5.3.0 储存型 XSS（CVE-2019-20042；原编号 CVE-2019-16773）"
+      }
+    },
+    "note": "官方已将 CVE-2019-16773 作为重复编号撤销，指向 CVE-2019-20042。主编号已更新，旧编号与原题仍保留。替代记录支持 WordPress 3.7 至 5.3.0 的 wp_targeted_link_rel() 储存型 XSS；本页 BuddyPress 个人资料路径、用户角色和悬停交互仍是原文实验条件，不能由该记录单独确认。",
+    "official_records": [
+      {
+        "cve": "CVE-2019-16773",
+        "state": "REJECTED",
+        "rejected_reasons": [
+          {
+            "lang": "en",
+            "value": "DO NOT USE THIS CANDIDATE NUMBER. ConsultIDs: CVE-2019-20042. Reason: This candidate is a duplicate of CVE-2019-20042. Notes: All CVE users should reference CVE-2019-20042 instead of this candidate. All references and descriptions in this candidate have been removed to prevent accidental usage"
+          }
+        ],
+        "sha256": "a0753f32e6f099f9078d0b9db40ea32468bfef11ec30e9162ab99e77e21c0eac",
+        "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2019/16xxx/CVE-2019-16773.json"
+      },
+      {
+        "cve": "CVE-2019-20042",
+        "state": "PUBLISHED",
+        "rejected_reasons": [],
+        "sha256": "7ea7d8a6b8d065480c5f60e102d58a4c70614d4c874986ebbcc551e2e4c0dda9",
+        "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2019/20xxx/CVE-2019-20042.json"
+      }
+    ],
+    "before_sha256": "9aaa2b5ec33ef863ca612efaa4abac428fc68a5b5d77fd0abb015fd884f4d5a9",
+    "after_sha256": "9423eafc5a224b6bd77f0c13c7fbce8faaf74bf973a98a8a9c0e2e7a9814393e",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/开发框架/Laravel/（CVE-2019-9081）Laravel 5.7 反序列化rce.md",
+    "cve": "CVE-2019-9081",
+    "fields": {
+      "identifier_status": {
+        "before": "unknown",
+        "after": "rejected"
+      },
+      "record_type": {
+        "before": "analysis",
+        "after": "analysis"
+      }
+    },
+    "note": "CNA 已撤销 CVE-2019-9081，理由为进一步调查未确认安全问题。本页保留为 Laravel / Mockery 反序列化链分析：作者明确没有找到框架触发入口，实验人工增加了不安全 unserialize 入口，因此不能据此认定 Laravel 5.7 默认存在远程代码执行漏洞。",
+    "official_records": [
+      {
+        "cve": "CVE-2019-9081",
+        "state": "REJECTED",
+        "rejected_reasons": [
+          {
+            "lang": "en",
+            "value": "DO NOT USE THIS CANDIDATE NUMBER. ConsultIDs: none. Reason: This candidate was withdrawn by its CNA. Further investigation showed that it was not a security issue. Notes: none"
+          }
+        ],
+        "sha256": "4199575939e27a744712c771e2f4cea0b53eea7489b0cc68ffc287a1a2440607",
+        "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2019/9xxx/CVE-2019-9081.json"
+      }
+    ],
+    "before_sha256": "0816080ee3d5bede5ad4d049b0b5cdddd7c45da38fbb81858a135d56d38dd974",
+    "after_sha256": "3e0b979a1f443b4b9aa3cb56a5f39a7f1068dfdcc3db3a3e9ef4451b0e498c9c",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/其他软件/杂项/!微软Outlook和Web标记功能的两个高危漏洞已被大肆利用.md",
+    "cve": "CVE-2022-23816",
+    "fields": {
+      "primary_identifiers": {
+        "before": "CVE-2023-23397;CVE-2023-24880;CVE-2023-23415;CVE-2023-23392;CVE-2023-23416;CVE-2022-43552;CVE-2022-23257;CVE-2022-23825;CVE-2022-23816",
+        "after": "CVE-2023-23397; CVE-2023-24880; CVE-2023-23415; CVE-2023-23392; CVE-2023-23416; CVE-2022-43552; CVE-2022-23257; CVE-2022-23825"
+      },
+      "referenced_identifiers": {
+        "before": "",
+        "after": "CVE-2022-23816"
+      },
+      "identifier_role": {
+        "before": "primary",
+        "after": "reference"
+      }
+    },
+    "note": "CVE-2022-23816 已由 CNA 标记为未使用并撤销。本次仅将这一编号移入历史引用，保留本篇其他八个主编号；下文关于该编号获得补丁的说法仍作为原文记录，不再作为有效漏洞映射。",
+    "official_records": [
+      {
+        "cve": "CVE-2022-23816",
+        "state": "REJECTED",
+        "rejected_reasons": [
+          {
+            "lang": "en",
+            "value": "DO NOT USE THIS CANDIDATE NUMBER. ConsultIDs: none. Reason: This candidate is unused by its CNA. Notes: none."
+          }
+        ],
+        "sha256": "20f7acd58b3694d372bf5b05ebf6f24a4260a1f3dea1dce945c7c9a07ba55cd3",
+        "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2022/23xxx/CVE-2022-23816.json"
+      }
+    ],
+    "before_sha256": "d77f5bd0da4bdb38b8242ec64e5ca04a1f26619ee8ae90d6feff7c097f9b704c",
+    "after_sha256": "7310fd78c9165b57e9aea31a082a68cfc6d20c8c16fd468b92130f31894ac9f0",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/安全设备/360/【技术干货】CVE-2022-41852 Apache Commons Jxpath命令执行漏洞分析.md",
+    "cve": "CVE-2022-41852",
+    "fields": {
+      "identifier_status": {
+        "before": "unknown",
+        "after": "rejected"
+      },
+      "record_type": {
+        "before": "analysis",
+        "after": "analysis"
+      }
+    },
+    "note": "CNA 已撤销 CVE-2022-41852，理由为进一步调查未确认安全问题。本页继续保留 Apache Commons JXPath 表达式求值与扩展函数的技术分析；应用将不可信表达式交给求值接口的条件仍需单独判断，不能将这些示例等同于已确认的库级 RCE 编号或通用受影响版本范围。",
+    "official_records": [
+      {
+        "cve": "CVE-2022-41852",
+        "state": "REJECTED",
+        "rejected_reasons": [
+          {
+            "lang": "en",
+            "value": "DO NOT USE THIS CANDIDATE NUMBER. ConsultIDs: none. Reason: This candidate was withdrawn by its CNA. Further investigation showed that it was not a security issue. Notes: none."
+          }
+        ],
+        "sha256": "9f57eeb5602eb299ad1194eacdac3f851de3ab024d1ca855fefaa69789deda49",
+        "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2022/41xxx/CVE-2022-41852.json"
+      }
+    ],
+    "before_sha256": "bd213b85a6b248d3e9e8da35e7ff4ba44d6af6da32ede449d6c12e1234174265",
+    "after_sha256": "d4156f4654025c33b28ad1daedf2ae0d9dedf2f8e01f005a9a2145c6996993f7",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/OA办公/致远OA/OpenPrinting-Cups-Browsed-PDD-FoomaticRIPCommandLine-参数导致远程命令执行漏洞-CVE-2024-47177.md",
+    "cve": "CVE-2024-47177",
+    "fields": {
+      "primary_identifiers": {
+        "before": "CVE-2024-47177",
+        "after": ""
+      },
+      "referenced_identifiers": {
+        "before": "",
+        "after": "CVE-2024-47177"
+      },
+      "identifier_role": {
+        "before": "primary",
+        "after": "reference"
+      },
+      "identifier_status": {
+        "before": "unknown",
+        "after": "rejected"
+      },
+      "record_type": {
+        "before": "vulnerability",
+        "after": "analysis"
+      }
+    },
+    "note": "CVE-2024-47177 已因与 CVE-2024-47076、CVE-2024-47175、CVE-2024-47176 完全相互依赖而被官方作为重复编号撤销。本页保留 CUPS 利用链分析及原始编号引用，不再把 47177 作为独立有效主编号；链中各组件、认证与打印触发条件需要分别核对，不能仅按这一撤销说明给每一步重新分配编号。",
+    "official_records": [
+      {
+        "cve": "CVE-2024-47177",
+        "state": "REJECTED",
+        "rejected_reasons": [
+          {
+            "lang": "en",
+            "value": "** REJECT ** DO NOT USE THIS CANDIDATE NUMBER. ConsultIDs: CVE-2024-47076, CVE-2024-47175, CVE-2024-47176. Reason: This candidate is a duplicate of CVE-2024-47076, CVE-2024-47175, and CVE-2024-47176. Notes: All CVE users should reference CVE-2024-47076, CVE-2024-47175, and/or CVE-2024-47176 instead of this candidate. This CVE was issued to a vulnerability that is dependent on CVE-2024-47076, CVE-2024-47175, and CVE-2024-47176. According to rule 4.2.15 of the CVE CNA rules, \\\"CNAs MUST NOT assign a different CVE ID to a Vulnerability that is fully interdependent with another Vulnerability. The Vulnerabilities are effectively the same single Vulnerability and MUST use one CVE ID."
+          }
+        ],
+        "sha256": "8d3dec12fbd98a45fb38739bb424723204c2201094b8150a6aef06a9daf34620",
+        "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2024/47xxx/CVE-2024-47177.json"
+      }
+    ],
+    "before_sha256": "3b78c2f7df8fb2cd488adc29ea2dd69bc639ac8aeb8a0731471feccb9f2eb0ef",
+    "after_sha256": "8cf73f83002c67cc6af4b2e52239628a5abf330c5948db0543f059d35f342d43",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/开发框架/GitLab/GitLab漏洞让攻击者绕过安全控制并执行任意代码.md",
+    "cve": "CVE-2025-0307",
+    "fields": {
+      "primary_identifiers": {
+        "before": "CVE-2025-0475; CVE-2025-0555; CVE-2024-8186; CVE-2024-10925; CVE-2025-0307",
+        "after": "CVE-2025-0475; CVE-2025-0555; CVE-2024-8186; CVE-2024-10925"
+      },
+      "referenced_identifiers": {
+        "before": "CVE-2020-0796",
+        "after": "CVE-2020-0796; CVE-2025-0307"
+      },
+      "identifier_role": {
+        "before": "primary",
+        "after": "reference"
+      }
+    },
+    "note": "CNA 已撤销 CVE-2025-0307，当前记录未给出更具体的原因。本次仅将这一编号移入历史引用，保留本篇另外四个主编号；Planner 角色访问代码审查分析的描述仍是下文来源主张。浏览器 XSS 与服务器代码执行的结论继续分别判断。",
+    "official_records": [
+      {
+        "cve": "CVE-2025-0307",
+        "state": "REJECTED",
+        "rejected_reasons": [
+          {
+            "lang": "en",
+            "value": "This CVE ID has been rejected or withdrawn by its CVE Numbering Authority."
+          }
+        ],
+        "sha256": "b85e322f995e9d4c74f827f4e55ac2fe43ddc80d9bf423eec72af74ec39b2644",
+        "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2025/0xxx/CVE-2025-0307.json"
+      }
+    ],
+    "before_sha256": "f5f7f2210d93f95d4ac1f3109342f843ce1f2465a985dbf582b5b5c008f755ae",
+    "after_sha256": "2a688f627b515a5cd9ba7388ab5f37aa931ebc374cb5623a2e6170b1745a9a4a",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/服务器软件/Linux/Linux 内核越界写入漏洞(CVE-2025-0927).md",
+    "cve": "CVE-2025-0927",
+    "fields": {
+      "identifier_status": {
+        "before": "active",
+        "after": "rejected"
+      },
+      "record_type": {
+        "before": "advisory",
+        "after": "analysis"
+      }
+    },
+    "note": "CVE-2025-0927 已被撤销。官方理由是：对于只能由初始用户命名空间 CAP_SYS_ADMIN 权限挂载的文件系统，由损坏镜像引起的文件系统缺陷不作为该 CVE 收录，包括委托挂载情形。本页 HFS+ 路径分析与 udisks2 / polkit 活动会话主张保留；后者的具体部署边界尚未获得独立核验，不能把该主张或撤销决定扩大成对所有配置的结论。",
+    "official_records": [
+      {
+        "cve": "CVE-2025-0927",
+        "state": "REJECTED",
+        "rejected_reasons": [
+          {
+            "lang": "en",
+            "value": "This CVE ID has been rejected or withdrawn by its CVE Numbering Authority. Filesystem bugs due to corrupt images are not considered a CVE for any filesystem that is only mountable by CAP_SYS_ADMIN in the initial user namespace. That includes delegated mounting."
+          }
+        ],
+        "sha256": "058cdde95c869388fb85e3ca0f5efa59bd6f2cb383ef634a281fc9c620b5ec8a",
+        "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2025/0xxx/CVE-2025-0927.json"
+      }
+    ],
+    "before_sha256": "01aaa11a27bd3f7db72e118d93a39695e7480258a0dbe276d3d6d7629e67e8c6",
+    "after_sha256": "3c620495e649b9786063378a8a95075845f2e2df53747360b72240277259670e",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/网络设备/Cisco/CVE-2026-0866 Cisco ClamAV ZIP扫描引擎绕过漏洞.md",
+    "cve": "CVE-2026-0866",
+    "fields": {
+      "identifier_status": {
+        "before": "unknown",
+        "after": "rejected"
+      }
+    },
+    "note": "CNA 已撤销 CVE-2026-0866，认为所述 ZIP 技术属于混淆方法，不构成其所述安全控制绕过漏洞。本页原文和空代码块继续保留；既有关键内容缺失仍未恢复，不能把原文所称成功复现、影响比例或 ClamAV 修复版本视为已确认。",
+    "official_records": [
+      {
+        "cve": "CVE-2026-0866",
+        "state": "REJECTED",
+        "rejected_reasons": [
+          {
+            "lang": "en",
+            "value": "After the publication of the PoC by the researcher and further analysis, we have determined that this issue does not constitute a valid vulnerability. The technique described is an obfuscation method and does not bypass or impact any implicit or explicit security controls."
+          }
+        ],
+        "sha256": "723e8effc0f879e30b8ca873bbb1502f9992edd357e08c8c8dd54cbcaf991ca0",
+        "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2026/0xxx/CVE-2026-0866.json"
+      }
+    ],
+    "before_sha256": "b9e783a5f834b172f8d9ac92062de07849bd9ffd8ac0d637eeaef249bd63abe2",
+    "after_sha256": "64c2b8018f203aae4ff30b86de5d015a015c946e98ca6797f832fa6f7a6d4bf0",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/网络设备/MikroTik RouterOS/利用RouterOS（CVE-2022-3496）漏洞，将符号链接作为挂载入口获取代码执行.md",
+    "cve": "CVE-2022-34960",
+    "fields": {
+      "primary_identifiers": {
+        "before": "CVE-2022-34960; CVE-2022-3496",
+        "after": "CVE-2022-34960"
+      },
+      "referenced_identifiers": {
+        "before": "",
+        "after": "CVE-2022-3496"
+      },
+      "identifier_role": {
+        "before": "primary",
+        "after": "reference"
+      },
+      "identifier_status": {
+        "before": "unknown",
+        "after": "active"
+      },
+      "title": {
+        "before": "利用RouterOS（CVE-2022-3496）漏洞，将符号链接作为挂载入口获取代码执行",
+        "after": "利用RouterOS（CVE-2022-34960）漏洞，将符号链接作为挂载入口获取代码执行"
+      }
+    },
+    "note": "官方记录将 RouterOS 7.4beta4 容器挂载符号链接问题归于 CVE-2022-34960。CVE-2022-3496 实际属于 SourceCodester Human Resource Management System 的访问控制问题，已从本页主编号移入历史引用。显示标题同步更正；旧路径、旧 cve 字段与历史原文保留。",
+    "official_records": [
+      {
+        "cve": "CVE-2022-34960",
+        "state": "PUBLISHED",
+        "sha256": "e76ea8e8d7d27e66c0a29717163c31123be069e641a7fd9e7d5bf11b7ab9d6fb",
+        "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2022/34xxx/CVE-2022-34960.json",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The container package in MikroTik RouterOS 7.4beta4 allows an attacker to create mount points pointing to symbolic links, which resolve to locations on the host device. This allows the attacker to mount any arbitrary file to any location on the host."
+          }
+        ]
+      },
+      {
+        "cve": "CVE-2022-3496",
+        "state": "PUBLISHED",
+        "sha256": "4fcc795de602ade3a4762a33ed91cc17724cf1ddb30b50b002503d028e153815",
+        "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2022/3xxx/CVE-2022-3496.json",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability was found in SourceCodester Human Resource Management System 1.0 and classified as critical. This issue affects some unknown processing of the file employeeadd.php of the component Admin Panel. The manipulation leads to improper access controls. The attack may be initiated remotely. The identifier VDB-210785 was assigned to this vulnerability."
+          }
+        ]
+      }
+    ],
+    "before_sha256": "7ee5f901e14293b45a77de772c29cf5fab35d3c2f4982e57cdf1ef63d8f4b3fb",
+    "after_sha256": "1402a2839434456fc1b65b33baf55322dec725066b548df0aa9a02b337c92f21",
+    "original_body_preserved": true
+  },
+  {
+    "path": "Web安全/服务器软件/kkFileView/4月漏洞快报  kkFileView任意文件上传导致远程执行漏洞、Apache Zeppelin 命令执行漏洞....md",
+    "fields": {
+      "primary_identifiers": {
+        "before": "CVE-2024-3400; CVE-2024-31861; CVE-2024-27980",
+        "after": "CVE-2024-3400; CVE-2024-27980"
+      },
+      "referenced_identifiers": {
+        "before": "",
+        "after": "CVE-2024-31861"
+      },
+      "identifier_role": {
+        "before": "primary",
+        "after": "reference"
+      }
+    },
+    "note": "Apache 已于 2024-06-21 撤销 CVE-2024-31861，理由是进一步调查确认该项不是安全问题。因此该编号仅作为历史引用保留，不再进入本篇主漏洞编号索引；正文对 Zeppelin sh 解释器正常命令执行能力的描述不应继续被当成该 CVE 有效成立的证明。此处理仅针对 Zeppelin 编号，保留本篇 PAN-OS CVE-2024-3400、Node.js CVE-2024-27980 的主编号和全部原归档材料；不由一个撤销编号否定其余产品章节。",
+    "evidence": {
+      "cve": "CVE-2024-31861",
+      "state": "REJECTED",
+      "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/cf4aedb93e787abd69f32419daea781451f2112d/cves/2024/31xxx/CVE-2024-31861.json",
+      "sha256": "84f6821b70285d32ea7340f88a43137acb7697cefd9e492cc35d79e1c26900a2"
+    },
+    "before_sha256": "b63c2fb2838f90bfe07e6ae699bd098a70e9f4b4fb6e89c0b01b09d736b6d7f2",
+    "after_sha256": "9c7614bdd36f1dc4e2aee8007fc050827281f49cdd40b190ea51a1190ebc0188",
+    "original_body_preserved": true
+  }
+]

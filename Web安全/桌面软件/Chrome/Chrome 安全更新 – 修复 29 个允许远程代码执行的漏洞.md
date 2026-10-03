@@ -5,7 +5,7 @@ identifier_role: "primary"
 primary_identifiers: "CVE-2026-3913;CVE-2026-3914;CVE-2026-3915;CVE-2026-3916;CVE-2026-3917;CVE-2026-3918;CVE-2026-3919;CVE-2026-3921;CVE-2026-3922;CVE-2026-3923;CVE-2026-3924"
 referenced_identifiers: ""
 identifier_status: "unknown"
-title: "Chrome 安全更新 – 修复 29 个允许远程代码执行的漏洞"
+title: "Chrome 146 安全更新：29 项修复及已列漏洞分析"
 product: "Google Chrome WebML/WebSpeech/Proxy/WebMCP等"
 record_type: "roundup"
 document_type: "Chrome多漏洞补丁摘要"
@@ -22,6 +22,10 @@ id: "vw-f63da60ba18486127ea4898f"
 entity_id: "ve-f63da60ba18486127ea4898f"
 schema_version: "1"
 ---
+
+## 2026-10-03 技术核验
+
+显示标题去掉“29 个全部允许远程代码执行”的概括。本文列出的编号包含越界读取、沙箱边界及其他不同影响；应分别阅读各编号的组件、攻击前提和结果，不能将一次更新的修复数量全部计作 RCE。原始标题和正文保留。
 
 # Chrome 安全更新 – 修复 29 个允许远程代码执行的漏洞
 

@@ -24,6 +24,6 @@
 
 - [Cisco IOS XE Web UI 认证绕过与 IOS CLI 权限（CVE-2023-20198）](../IOT%E5%AE%89%E5%85%A8/Cisco/%EF%BC%88CVE-2023-20198%EF%BC%89Cisco%20IOS%20XE%20Web%20UI%E6%9C%AA%E6%8E%88%E6%9D%83RCE%E6%BC%8F%E6%B4%9E.md) [vulnerability; not-reproduced; needs-review]
 
-## Cisco RV110W/RV130/RV130W/RV215W
+## Cisco RV110W/RV130W/RV215W
 
 - [（CVE-2019-1663）堆栈缓冲区溢出漏洞](../IOT%E5%AE%89%E5%85%A8/Cisco/%EF%BC%88CVE-2019-1663%EF%BC%89%E5%A0%86%E6%A0%88%E7%BC%93%E5%86%B2%E5%8C%BA%E6%BA%A2%E5%87%BA%E6%BC%8F%E6%B4%9E.md) [analysis; not-reproduced; needs-review]
