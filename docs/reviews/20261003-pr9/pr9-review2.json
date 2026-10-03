@@ -1,0 +1,75 @@
+{
+  "pr": 9,
+  "reviewer": "pack2",
+  "read_only": true,
+  "articles": [
+    {
+      "path": "Web安全/开发框架/Gogs/Gogs Rebase参数注入的最终修补与公开模块副作用（CVE-2026-52806）.md",
+      "verdict": "accepted",
+      "evidence": [
+        {
+          "location": "frontmatter lines 1-19; sections lines 25-40, 42-56",
+          "finding": "主编号、<0.14.3 版本范围、0.14.3 修复版及分支/权限前提与 Gogs 维护者公告相符。公告确认任意已认证账户、可自行启用 rebase 的仓库所有者或对已启用仓库有写权限的协作者可达；文章保留认证和仓库能力前提。独立核对公告与最终固定提交：实际补丁用 --end-of-options 处理 rebase/merge/checkout，并将 clone/push 迁至 git-module API；文章正确区分 PR 提案与最终代码。",
+          "urls": [
+            "https://github.com/gogs/gogs/security/advisories/GHSA-qf6p-p7ww-cwr9",
+            "https://github.com/gogs/gogs/commit/a9dbafbfd8e1020bacc626420238c01d75d03364",
+            "https://github.com/gogs/gogs/commit/9726ff23537636e1b3e858ab9888ddf1e37b8dc0",
+            "https://github.com/gogs/gogs/releases/tag/v0.14.3",
+            "https://www.rapid7.com/blog/post/ve-authenticated-rce-via-argument-injection-gogs-unfixed/"
+          ]
+        },
+        {
+          "location": "sections lines 58-70",
+          "finding": "Metasploit 静态副作用摘要与两个固定模块版本相符：token/API 状态、仓库与 PR 修改、existing_repo 清理不恢复损坏状态、Windows 脚本可能留在 Git 历史、凭据进入 remote/payload 出网风险均有依据。未运行模块或文章代码。",
+          "urls": [
+            "https://github.com/rapid7/metasploit-framework/blob/c74a80ff0a1fae4a0acbd7140c64fde608935c17/modules/exploits/multi/http/gogs_rebase_rce.rb",
+            "https://github.com/rapid7/metasploit-framework/blob/97388a00cd6db40089a38a2ea3b1a67dfa02c12d/modules/exploits/multi/http/gogs_rebase_rce.rb",
+            "https://github.com/rapid7/metasploit-framework/pull/21515"
+          ]
+        },
+        {
+          "location": "Web安全/开发框架/Gogs/; existing matches include Gogs 任意用户登录漏洞 CVE-2018-18925, Gogs-符号链接导致远程命令注入漏洞-CVE-2025-8110, and CVE-2026-52813 article",
+          "finding": "Repository search found no article for CVE-2026-52806 or this rebase/argument-injection entity. The other Gogs records concern distinct vulnerabilities, so they are neither duplicates nor grounds to reject this supplementary article. Formatting and fenced source snippet are readable; no redaction observed."
+        }
+      ],
+      "source_claims_vs_independent_check": "Rapid7 supplies research/exploitation narrative; Gogs advisory and fixed source independently confirm identifier, affected/fixed versions, prerequisites, root cause and actual patch. Metasploit pinned source independently confirms the module behavior described.",
+      "changes": []
+    },
+    {
+      "path": "Web安全/开发框架/Lean/Lean超大字符串切片的语义错配与引用计数缺陷.md",
+      "verdict": "accepted",
+      "evidence": [
+        {
+          "location": "frontmatter lines 1-19; sections lines 25-37",
+          "finding": "The issue author’s observed Lean 4.32.2 / 4.33.0-rc2 versions and Trail of Bits’ claim through 4.33.1 are attributed to their respective sources rather than presented as independently tested across every release. The issue documents the raw extract semantic mismatch and native_decide proof boundary; Trail of Bits explicitly notes the additional native_decide axiom. Fixed commits establish separate fixes: first commit adds lean_inc and says semantic divergence remains; second commit fixes mismatch and fast path. The 4.34.0-rc1 release contains the second fix. No unsupported CVE is invented.",
+          "urls": [
+            "https://github.com/leanprover/lean4/issues/14684",
+            "https://blog.trailofbits.com/2026/09/09/a-proof-of-fermats-last-theorem-that-fits-the-margin/",
+            "https://github.com/leanprover/lean4/commit/4c29de6f2cb93ffdabd2838c1eed6f55061bb605",
+            "https://github.com/leanprover/lean4/commit/f7f5b4cda9b33387b512b84ea179461881b12500",
+            "https://github.com/leanprover/lean4/releases/tag/v4.34.0-rc1"
+          ]
+        },
+        {
+          "location": "sections lines 39-57",
+          "finding": "Borrowed versus owned return handling, UAF/data aliasing, the changed regression output and distinction between memory-safety and semantic fixes match the pinned maintainer diffs. The article limits the claim to programs using huge raw positions and distinguishes native evaluation from ordinary kernel checking. Static test review is described without claiming local reproduction.",
+          "urls": [
+            "https://github.com/leanprover/lean4/commit/4c29de6f2cb93ffdabd2838c1eed6f55061bb605",
+            "https://github.com/leanprover/lean4/commit/f7f5b4cda9b33387b512b84ea179461881b12500",
+            "https://lean-lang.org/doc/reference/latest/ValidatingProofs/"
+          ]
+        },
+        {
+          "location": "Web安全/开发框架/Lean/; full-text repository search for Lean 4, #14684 and String.Pos.Raw.extract",
+          "finding": "No existing Lean article or matching #14684 record was found. Markdown headings, inline code and source links are legible; no redaction observed."
+        }
+      ],
+      "source_claims_vs_independent_check": "Marc Ilunga’s issue and Trail of Bits article are credited for observations/research claims; pinned Lean maintainer commits independently substantiate the runtime ownership and semantic fixes, and the official release tag corroborates the release candidate boundary.",
+      "changes": []
+    }
+  ],
+  "limitations": [
+    "Read-only static/content review only; no PoC, article code, HTML, attachment, target or dependency was executed/accessed.",
+    "Existing-repository duplication was checked by corpus text search; related Gogs articles concern different vulnerabilities."
+  ]
+}

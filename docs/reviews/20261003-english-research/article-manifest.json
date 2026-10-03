@@ -1,0 +1,74 @@
+[
+  {
+    "path": "Web安全/商业软件/Jellyfin/Jellyfin 多入口转码参数校验差异与FFmpeg参数注入（CVE-2026-35033）.md",
+    "sha256": "7eefb3057022bc4d8ee9ce3ff20e34ef0bfdcf88913b375c67577d8bd2c24899",
+    "utf8_bytes": 6339,
+    "html_sha256": "fe56b5f4cb81adffef73a44f43760269558449c2022b72ea0761d6d63b44f7e0",
+    "code_elements": 38,
+    "fenced_blocks": 0,
+    "code_text_matches": true,
+    "raw_fence_text_matches": true,
+    "active_html": false,
+    "images": 0
+  },
+  {
+    "path": "Web安全/安全设备/Nuclei/Goja TypedArray偏移复用与Nuclei扫描端代码执行（CVE-2026-76819）.md",
+    "sha256": "354c410f62adac215dd7c67f437e52521c1fe5caa4df0f3d7a30319aec7ab66d",
+    "utf8_bytes": 6435,
+    "html_sha256": "cac5cb86f464624e8a5f65dc32f639c14d38abb19b8a769ede3513790a578119",
+    "code_elements": 32,
+    "fenced_blocks": 1,
+    "code_text_matches": true,
+    "raw_fence_text_matches": true,
+    "active_html": false,
+    "images": 0
+  },
+  {
+    "path": "Web安全/开发框架/Gogs/Gogs Rebase参数注入的最终修补与公开模块副作用（CVE-2026-52806）.md",
+    "sha256": "f213a7b5e6926f801bcbcd38aebfdba4fb4bfddd8c6ef07970c9052ddcfdf7c3",
+    "utf8_bytes": 7436,
+    "html_sha256": "b8b7a6d324e22bf28df8415ad6b4904f8cdf9a085dc992a8db7a5964beee9191",
+    "code_elements": 19,
+    "fenced_blocks": 1,
+    "code_text_matches": true,
+    "raw_fence_text_matches": true,
+    "active_html": false,
+    "images": 0
+  },
+  {
+    "path": "Web安全/开发框架/Lean/Lean超大字符串切片的语义错配与引用计数缺陷.md",
+    "sha256": "8bcaf16cccbcec428cbec560eaabcac1f9623760f7831504dad63c612bcf67d1",
+    "utf8_bytes": 6826,
+    "html_sha256": "98065dec7353ac137b6158a8103d45768b5afb04483cd70c2d2b5f03819e1695",
+    "code_elements": 34,
+    "fenced_blocks": 0,
+    "code_text_matches": true,
+    "raw_fence_text_matches": true,
+    "active_html": false,
+    "images": 0
+  },
+  {
+    "path": "Web安全/开发框架/graphql-ruby/graphql-ruby 授权异常被误判成功的执行器差异（GHSA-j7xr-4g94-r9h3）.md",
+    "sha256": "4fdedbfb0f741d478d49824aef6b5b9cd8ce9d5d8257a8172a45345c7dfc0e1c",
+    "utf8_bytes": 5397,
+    "html_sha256": "5f749405fa63b01679bfd1fac7b14eb700121a459fbcf5bd816eda25acd66302",
+    "code_elements": 33,
+    "fenced_blocks": 0,
+    "code_text_matches": true,
+    "raw_fence_text_matches": true,
+    "active_html": false,
+    "images": 0
+  },
+  {
+    "path": "系统安全/Linux/Linux本地提权漏洞/Linux OVS共享页标记丢失与三处生命周期修复（CVE-2026-89487等）.md",
+    "sha256": "0d75a9b468a57b888910a563a69409afa2161429582560c1b1e59b645e7f8833",
+    "utf8_bytes": 8031,
+    "html_sha256": "a6e3d20aa976d7e07300bc6893a9318515a69166cb69379f0fa6c899580973b3",
+    "code_elements": 29,
+    "fenced_blocks": 0,
+    "code_text_matches": true,
+    "raw_fence_text_matches": true,
+    "active_html": false,
+    "images": 0
+  }
+]
