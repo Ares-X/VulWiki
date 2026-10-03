@@ -42,3 +42,20 @@ ONLYOFFICE savefile属于5.6.2/Bug46037，和5.6.3的image upload/CVE-2021-3199�
 FOG CVE-2024-39914：原研究公开完整请求和Python材料；1.5.10.33前后鉴权与命令转义分两次修复，不混称一个补丁。保留原始 `/dev/nul` 和 `json2b` 拼写，Python请求头无前导空格，网页文本提取的空格不当作原代码缺陷。该利用会写webshell，不是只读测试。
 
 Next.js CVE-2024-34351：官方GHSA-fr5h-rqp8-mj6g针对Server Actions，旧文仅示例图片优化器回连。修改编号角色和记录类型，并新增独立说明；原正文不改。
+
+## Google第一页10条结果逐项处置
+
+以下是结果页线索，不等于已取得正文。原点击链接为Google不透明跳转，无法确认长亭落地URL时不猜造链接。
+
+|排名|标题|处置|依据与边界|
+|---|---|---|---|
+|1|韩国科学技术院&#124; 探索基于LLM的Bug复现 - 长亭百川云|out-of-scope-title-triage|LLM软件缺陷复现研究；结果摘要无具体产品漏洞/PoC。未读取正文，不作内容否定。|
+|2|SpringBoot-GateWay-RCE (CVE-2022-22947) 漏洞复现|hold-source-resolution|摘要含完整环境、命令执行及内存马章节；现库有对应主文，需读取该正文再判互补，不能仅同CVE排除。|
+|3|CVE-2024-6387环境搭建和复现 - 长亭百川云|hold-source-resolution|摘要有Dockerfile/构建/验证；现库已有本轮深度regreSSHion主文，但未读到该新增来源，不能声称重复或PoC有效。|
+|4|【已复现】CyberPanel upgrademysqlstatus 远程命令执行漏洞|hold-source-resolution|结果为bbs 2024-10-31通告；现库有upgrademysqlstatus/QVD-2024-44346及其他CyberPanel文；未读取正文，不新增已复现声明。|
+|5|vulhub靶场DC-3 复现学习及细节解析 - 百川云|out-of-scope-title-triage|多阶段靶场演练，当前摘要未对应单一产品版本；保留线索，未读取正文。|
+|6|CVE-2024-34351 漏洞复现poc (超大规模) - 长亭百川云|existing-title-and-identifier-correction|现库同名文已记录/_next/image与Server Actions编号疑似串配。此次读官方GHSA-fr5h-rqp8-mj6g，确认CVE前提为自托管+Server Actions+相对重定向，不以图片取图回连代证该编号。已通知父任务，不直接修改旧文。|
+|7|IOT漏洞复现----RWCTF 6th - Let's party in the house &#124; 长亭百川云|hold-source-resolution|Google摘要包含synocam_param.cgi子进程调试；可能是互补设备研究，未核型号/固件/完整PoC，不猜造新条目。|
+|8|【已复现】Apache Tomcat条件竞争致远程代码执行漏洞（CVE ...|prior-candidate|题目日期与前轮topic/3126一致；前轮已读正文，缺可读完整请求/EXP，维持待补材料。|
+|9|【在野】CVE-2024-39914 漏洞复现poc exp - 长亭百川云|primary-source-followup|Google摘要可见qzjtyryy.php与kpvyggzrnonvuycaipvl测试值。长亭正文URL未能解析；沿编号核对FOG官方GHSA/补丁，新增稿只以实际读到的官方来源为证据，不冒称已读此长亭全文。|
+|10|【已复现】ShowDoc item_id SQL注入漏洞&#124; 长亭百川云|hold-source-resolution|摘要为2024-06升级通告、token暴破主张；未读正文/请求，不能把标题已复现当公开PoC。|
