@@ -16,14 +16,16 @@ review_date: "2026-10-02"
 source_url: "https://www.yuque.com/xiaokp7/ocvun2/ahuzo9kgc2ggsydb"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/%E4%BA%BF%E8%B5%9B%E9%80%9A/%E4%BA%BF%E8%B5%9B%E9%80%9A%E7%94%B5%E5%AD%90%E6%96%87%E6%A1%A3%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9FSecureUsbConnection%E5%AD%98%E5%9C%A8xstream%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%BC%8F%E6%B4%9E.md"
-fofa_unverified: "app.name="
 hunter: "app.name=\"ESAFENET 亿赛通文档安全管理系统\""
 id: "vw-e8675f03d4eee43fe1d772ec"
 entity_id: "ve-e8675f03d4eee43fe1d772ec"
 schema_version: "1"
+previous_fofa_unverified: "app.name="
 ---
 
 # 亿赛通CDGServer3 SecureUsbConnection XStream反序列化声称
+
+> 指纹历史字段校订（2026-10-04）：现有完整平台查询保持原值；旧未核字段中的残片逐字迁入 `previous_*`。此迁移不代表已确定原文其他谓词的组合意图，未给出的 AND/OR 不猜补。后文残片字段的旧诊断描述校订前状态，查询仍不证明资产受影响。
 
 ## 条目说明
 

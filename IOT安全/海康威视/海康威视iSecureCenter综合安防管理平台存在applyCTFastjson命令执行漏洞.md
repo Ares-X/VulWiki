@@ -3,7 +3,6 @@ source: "wy876 漏洞文库"
 id: "vw-369521b3043affd3e96bf90a"
 entity_id: "ve-369521b3043affd3e96bf90a"
 schema_version: "1"
-fofa_unverified: "查询语法：**"
 title: "海康威视iSecure Center 综合安防管理平台存在applyCT Fastjson命令执行漏洞"
 product: "Hikvision iSecure Center BIC"
 record_type: "vulnerability"
@@ -20,9 +19,13 @@ review_date: "2026-10-02"
 side_effects: "执行文中载荷可能以目标进程权限启动命令或加载代码；权限受认证角色、操作系统账户及依赖版本约束，不能把 root/200 等通用字符串当成功证据；回连样例可能向外部地址发送网络请求或建立会话；应使用自己的隔离回连服务，DNS/LDAP 到达只能证明相应交互，不能单独证明 RCE"
 source_url: "https://www.yuque.com/xiaokp7/ocvun2/yvgfr4gvmvbionwq"
 source_status: "recorded"
+previous_fofa_unverified: "查询语法：**"
+hunter: "app.name==\"Hikvision 海康威视 iSecure Center\""
 ---
 
 # 海康威视iSecure Center 综合安防管理平台存在applyCT Fastjson命令执行漏洞
+
+> 指纹字段校订（2026-10-04）：按原归档正文的明确平台标签及完整表达式恢复当前查询，旧误填或截取字段逐字保存在 `previous_*`；后文对此旧字段的诊断按当前字段阅读。仅经过本库保守语法与原字面核对，未在线运行查询，不把指纹命中视为漏洞存在。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）

@@ -1,5 +1,5 @@
 ---
-version: "/plus/flink.php?dopost=save"
+version: "DedeCMS v5.81 beta 内测版（转载原文“漏洞影响”段）"
 source: "Threekiii/Vulnerability-Wiki"
 product: "DedeCMS (overview wrongly DocCMS)"
 record_type: "analysis"
@@ -17,6 +17,7 @@ source_status: "unknown"
 id: "vw-0b1057065a3a19c03220a879"
 entity_id: "ve-0b1057065a3a19c03220a879"
 schema_version: "1"
+previous_version: "/plus/flink.php?dopost=save"
 ---
 
 ## 核对与使用边界
@@ -38,6 +39,8 @@ schema_version: "1"
 历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # DedeCMS 5.8.1 common.func.php 远程命令执行漏洞
+
+> 版本字段校订（2026-10-04）：代码、命令、路径、产品名或章节标记误入版本字段的值已逐字保存到对应 `previous_*` 字段；当前版本字段只记正文明确的来源范围，无范围时记为 unknown。后文对此元数据误填的旧说明描述校订前状态，其余实验条件与待核项仍按原文保留。
 
 ## 漏洞描述
 

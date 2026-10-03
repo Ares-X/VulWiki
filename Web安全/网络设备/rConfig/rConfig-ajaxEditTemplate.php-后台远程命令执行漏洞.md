@@ -1,5 +1,5 @@
 ---
-version: "rConfig"
+version: "unknown；原文“漏洞影响”处仅写 rConfig，未列版本范围"
 source: "Threekiii/Vulnerability-Wiki"
 id: "vw-393debf72448d0e9aaac9ef6"
 entity_id: "ve-393debf72448d0e9aaac9ef6"
@@ -19,9 +19,12 @@ archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bff
 review_date: "2026-10-02"
 side_effects: "文中写入/上传步骤会创建或覆盖目标文件；须先核对服务账户写权限、保存路径和脚本解析条件，验证后按原路径核查残留"
 source_status: "unknown"
+previous_version: "rConfig"
 ---
 
 # rConfig ajaxEditTemplate.php 后台远程命令执行漏洞
+
+> 版本字段校订（2026-10-04）：代码、命令、路径、产品名或章节标记误入版本字段的值已逐字保存到对应 `previous_*` 字段；当前版本字段只记正文明确的来源范围，无范围时记为 unknown。后文对此元数据误填的旧说明描述校订前状态，其余实验条件与待核项仍按原文保留。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）

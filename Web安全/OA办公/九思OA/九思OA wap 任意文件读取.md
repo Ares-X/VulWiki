@@ -17,13 +17,15 @@ source_url: "https://github.com/SourByte05/Vulnerability-Wiki-PoC"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E4%B9%9D%E6%80%9DOA/%E4%B9%9D%E6%80%9DOA%20wap%20%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96.md"
 fofa: "body=\"/jsoa/login.jsp\""
-fofa_unverified: "body="
 id: "vw-b7dfb8e6ace557568195cd4b"
 entity_id: "ve-b7dfb8e6ace557568195cd4b"
 schema_version: "1"
+previous_fofa_unverified: "body="
 ---
 
 # 九思OA wap.do downLoad文件读取
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 FOFA 的完整表达式已记入 `fofa`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 ## 条目说明
 

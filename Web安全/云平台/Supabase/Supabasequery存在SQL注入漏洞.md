@@ -10,13 +10,14 @@ identifier_status: "unknown"
 primary_identifiers: ""
 referenced_identifiers: ""
 identifier_role: "unknown"
-fofa_unverified: "app.name="
 source_status: "unknown"
 prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
 side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
 id: "vw-0eff0e8f87f4bdcdb9fb7d1a"
 entity_id: "ve-0eff0e8f87f4bdcdb9fb7d1a"
 schema_version: "1"
+previous_fofa_unverified: "app.name="
+hunter: "app.name=\"Supabase\""
 ---
 
 ## 收录状态复核（2026-10-03）
@@ -24,6 +25,8 @@ schema_version: "1"
 本文作为 SQL 管理接口误判的分析材料收录，保留 query 请求及原作者主张。接口执行 SQL 是预期管理功能；现有材料没有证明匿名访问、越权、SQL 注入或服务器执行能力。缺少权限边界与响应证据应明确提醒，不因此隐藏可供比对的原始请求。本次仅静态核对；验证状态仍为未复现。
 
 # Supabase query存在SQL注入漏洞
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 Hunter 的完整表达式已记入 `hunter`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 <!-- vulwiki-editorial:start -->
 ## 校订与适用边界

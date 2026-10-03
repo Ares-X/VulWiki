@@ -1,5 +1,5 @@
 ---
-fofa: ""
+fofa: "body=\"/css/weiphp.css\" || title=\"weiphp\" || title=\"weiphp4.0\""
 source: "wy876 漏洞文库"
 product: "WeiPHP/ThinkPHP链"
 record_type: "vulnerability"
@@ -10,7 +10,6 @@ primary_identifiers: ""
 referenced_identifiers: ""
 identifier_role: "unknown"
 identifier_status: "unknown"
-fofa_unverified: "<font style="
 title: "WeiPHP微信开发框架Notice_index接口处存在远程代码执行漏洞"
 prerequisites: "来源所述条件，未列明部分仍待核：仅产品名，无WeiPHP/ThinkPHP具体依赖、数据库结构或鉴权条件"
 side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
@@ -18,6 +17,7 @@ source_status: "unknown"
 id: "vw-886c7417110219c6860eb65a"
 entity_id: "ve-886c7417110219c6860eb65a"
 schema_version: "1"
+previous_fofa_unverified: "<font style="
 ---
 
 ## 核对与使用边界
@@ -41,6 +41,8 @@ schema_version: "1"
 历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # WeiPHP微信开发框架Notice/index接口处存在远程代码执行漏洞
+
+> 指纹字段校订（2026-10-04）：按原归档正文的明确平台标签及完整表达式恢复当前查询，旧误填或截取字段逐字保存在 `previous_*`；后文对此旧字段的诊断按当前字段阅读。仅经过本库保守语法与原字面核对，未在线运行查询，不把指纹命中视为漏洞存在。
 
 # 一、漏洞简介
 WeiPHP是一款基于PHP开发的开源微信公众号开发框架。它提供了丰富的功能和易于使用的接口，使开发者能够快速构建和管理微信公众号应用。WeiPHP支持自定义菜单、消息管理、用户管理、素材管理、支付接口等功能，同时还提供了插件机制和模块化开发，方便扩展和定制。WeiPHP是一个成熟的框架，被广泛应用于微信公众号开发领域。WeiPHP Notice/index接口处存在远程代码执行漏洞，恶意攻击者可能会利用此漏洞执行恶意命令，可能会导致敏感信息泄露或者服务器失陷。

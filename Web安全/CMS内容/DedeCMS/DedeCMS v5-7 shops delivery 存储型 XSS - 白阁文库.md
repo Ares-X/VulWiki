@@ -7,8 +7,8 @@ review_status: "text-reviewed"
 verification_status: "not-reproduced"
 content_status: "needs-review"
 primary_identifiers: ""
-referenced_identifiers: ""
-identifier_role: "unknown"
+referenced_identifiers: "CNVD-2020-62422"
+identifier_role: "reference"
 identifier_status: "unknown"
 title: "DedeCMS v5-7 shops delivery 存储型 XSS - 白阁文库"
 prerequisites: "来源所述条件，未列明部分仍待核：5.7UTF8SP2 release2017-03-15; shop enabled; admin edits delivery description; admin/customer views it"
@@ -18,6 +18,8 @@ source_url: "https://www.bylibrary.cn/%E6%BC%8F%E6%B4%9E%E5%BA%93/01-CMS%E6%BC%8
 id: "vw-24f5423513db477d32a982b0"
 entity_id: "ve-24f5423513db477d32a982b0"
 schema_version: "1"
+previous_identifier_role: "unknown"
+previous_referenced_identifiers: ""
 ---
 
 ## 核对与使用边界
@@ -37,6 +39,8 @@ schema_version: "1"
 历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # DedeCMS v5-7 shops delivery 存储型 XSS - 白阁文库
+
+> 编号角色校订（2026-10-04）：按归档技术正文区分主讨论编号与背景引用，更新 `primary_identifiers` / `referenced_identifiers` 及旧字段角色。旧编号原值、状态与正文保持原样，变更前字段逐字保存在 `previous_*`；后文旧的角色待核说明应按当前字段阅读。这里的角色判读不等于官方分配核验或漏洞复现。
 
 <meta name="referrer" content="no-referrer"/>
 

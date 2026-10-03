@@ -17,15 +17,17 @@ archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bff
 archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
 source_status: "recorded"
 source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
-fofa_unverified: "body="
 fofa: "body=\"/imc/javax.faces.resource/images/login_help.png.jsf?ln=primefaces-imc-new-webui\""
 source_url: "https://mp.weixin.qq.com/s/BP9_H3lpluqIwL5OMIJlIw"
 id: "vw-5c455fef0d74866a6d89d282"
 entity_id: "ve-5c455fef0d74866a6d89d282"
 schema_version: "1"
+previous_fofa_unverified: "body="
 ---
 
 # H3C IMC dynamiccontent-properties-xhtm 远程命令执行
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 FOFA 的完整表达式已记入 `fofa`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 <!-- vulwiki-editorial-rebuild:system-misc -->
 ## 条目范围与校订

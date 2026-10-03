@@ -1,5 +1,5 @@
 ---
-version: "docker-compose up -d"
+version: "unknown；原文“漏洞影响”处仅写 XXL-JOB，未列该文章适用版本"
 source: "Threekiii/Vulnerability-Wiki"
 product: "XXL-JOB / admin GLUE"
 record_type: "unknown"
@@ -17,6 +17,7 @@ source_status: "unknown"
 id: "vw-1d3246c238a35759817ef331"
 entity_id: "ve-1d3246c238a35759817ef331"
 schema_version: "1"
+previous_version: "docker-compose up -d"
 ---
 
 ## 核对与使用边界
@@ -38,6 +39,8 @@ schema_version: "1"
 历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # XXL-JOB 后台任意命令执行漏洞
+
+> 版本字段校订（2026-10-04）：代码、命令、路径、产品名或章节标记误入版本字段的值已逐字保存到对应 `previous_*` 字段；当前版本字段只记正文明确的来源范围，无范围时记为 unknown。后文对此元数据误填的旧说明描述校订前状态，其余实验条件与待核项仍按原文保留。
 
 ## 漏洞描述
 

@@ -16,14 +16,16 @@ review_date: "2026-10-02"
 source_url: "https://www.yuque.com/xiaokp7/ocvun2/gaq5fqcqle5ez69e"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/Secnet%E5%AE%89%E7%BD%91/Secnet%E5%AE%89%E7%BD%91%E6%99%BA%E8%83%BDAC%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9Factpt_5g%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2.md"
-fofa_unverified: "web.title="
 hunter: "web.title=\"安网-智能路由系统\""
 id: "vw-808a6e06b4bb69ccfa2ebedc"
 entity_id: "ve-808a6e06b4bb69ccfa2ebedc"
 schema_version: "1"
+previous_fofa_unverified: "web.title="
 ---
 
 # Secnet安网智能AC管理系统 actpt_5g.data信息泄露声称
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 Hunter 的完整表达式已记入 `hunter`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 ## 条目说明
 

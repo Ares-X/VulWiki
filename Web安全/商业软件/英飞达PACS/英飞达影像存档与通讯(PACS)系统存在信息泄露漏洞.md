@@ -17,13 +17,15 @@ source_url: "https://github.com/SourByte05/Vulnerability-Wiki-PoC"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/%E8%8B%B1%E9%A3%9E%E8%BE%BEPACS/%E8%8B%B1%E9%A3%9E%E8%BE%BE%E5%BD%B1%E5%83%8F%E5%AD%98%E6%A1%A3%E4%B8%8E%E9%80%9A%E8%AE%AF%28PACS%29%E7%B3%BB%E7%BB%9F%E5%AD%98%E5%9C%A8%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2%E6%BC%8F%E6%B4%9E.md"
 fofa: "body=\"./scripts/library/bluebird.min.js\""
-fofa_unverified: "body="
 id: "vw-b9b44222fb0b4ca5773975c3"
 entity_id: "ve-b9b44222fb0b4ca5773975c3"
 schema_version: "1"
+previous_fofa_unverified: "body="
 ---
 
 # INFINITT PACS英飞达 WebUserLogin GetUserInfoByUserID账户信息泄露
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 FOFA 的完整表达式已记入 `fofa`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 ## 条目说明
 

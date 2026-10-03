@@ -17,13 +17,15 @@ source_url: "https://github.com/SourByte05/Vulnerability-Wiki-PoC"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E6%97%B6%E7%A9%BA%E6%99%BA%E5%8F%8B/%E6%97%B6%E7%A9%BA%E6%99%BA%E5%8F%8B%E4%BC%81%E4%B8%9A%E4%BF%A1%E6%81%AF%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%20updater.getStudioFile%20%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E.md"
 fofa: "body=\"继续登录将挤掉原登录设备\""
-fofa_unverified: "body="
 id: "vw-83d29fd2c4c5eab9e2caf70a"
 entity_id: "ve-83d29fd2c4c5eab9e2caf70a"
 schema_version: "1"
+previous_fofa_unverified: "body="
 ---
 
 # 时空智友 updater.getStudioFile文件读取
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 FOFA 的完整表达式已记入 `fofa`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 ## 条目说明
 

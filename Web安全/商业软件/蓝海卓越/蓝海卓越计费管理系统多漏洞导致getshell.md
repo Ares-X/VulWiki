@@ -17,13 +17,15 @@ source_url: "https://www.yuque.com/xiaokp7/ocvun2/dbwc8rx9kq4t14eb"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/%E8%93%9D%E6%B5%B7%E5%8D%93%E8%B6%8A/%E8%93%9D%E6%B5%B7%E5%8D%93%E8%B6%8A%E8%AE%A1%E8%B4%B9%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E5%A4%9A%E6%BC%8F%E6%B4%9E%E5%AF%BC%E8%87%B4getshell.md"
 fofa: "title==\"蓝海卓越计费管理系统\""
-fofa_unverified: "title=="
 id: "vw-bc40799472994c1170246895"
 entity_id: "ve-bc40799472994c1170246895"
 schema_version: "1"
+previous_fofa_unverified: "title=="
 ---
 
 # 蓝海卓越计费管理系统 loaduser SQL 注入→模板ZIP路径遍历→后台命令执行链
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 FOFA 的完整表达式已记入 `fofa`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 ## 条目说明
 

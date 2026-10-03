@@ -11,15 +11,18 @@ primary_identifiers: ""
 referenced_identifiers: ""
 identifier_role: "unknown"
 prerequisites: "对应版本导出API可达、认证缺失或绕过、配置实际含敏感信息"
-fofa_unverified: "app.name="
 source_status: "unknown"
 side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
 id: "vw-259374702b1ce98714c19cf3"
 entity_id: "ve-259374702b1ce98714c19cf3"
 schema_version: "1"
+previous_fofa_unverified: "app.name="
+fofa: "icon_hash=\"13942501\""
 ---
 
 # Nacos存在未授权下载配置信息漏洞
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 FOFA 的完整表达式已记入 `fofa`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 <!-- vulwiki-editorial:start -->
 ## 校订与适用边界

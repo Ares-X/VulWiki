@@ -11,15 +11,18 @@ primary_identifiers: ""
 referenced_identifiers: ""
 identifier_role: "unknown"
 prerequisites: "management endpoints被暴露且未鉴权，实际Nacos/SpringBoot版本与访问路径可达"
-fofa_unverified: "app.name="
 source_status: "unknown"
 side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
 id: "vw-37bd4bfa123476e59a0ad3c4"
 entity_id: "ve-37bd4bfa123476e59a0ad3c4"
 schema_version: "1"
+previous_fofa_unverified: "app.name="
+hunter: "app.name=\"Nacos\""
 ---
 
 # Nacos存在Spring boot Actuator未授权漏洞
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 Hunter 的完整表达式已记入 `hunter`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 <!-- vulwiki-editorial:start -->
 ## 校订与适用边界

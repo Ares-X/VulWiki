@@ -17,13 +17,15 @@ source_url: "https://www.yuque.com/xiaokp7/ocvun2/gqpnlboq0dt6c1f1"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/%E6%87%82%E5%BE%AE%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF%EF%BC%88%E4%B8%8A%E6%B5%B7%EF%BC%89%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/%E7%99%BE%E6%8B%A9%E5%94%AF%C2%B7%E4%BE%9B%E5%BA%94%E9%93%BERankingGoodsList2%E5%AD%98%E5%9C%A8SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md"
 fofa: "body=\"/Content/Css/_SiteCss/\""
-fofa_unverified: "body="
 id: "vw-c4a6b4f958f1332c09efb32b"
 entity_id: "ve-c4a6b4f958f1332c09efb32b"
 schema_version: "1"
+previous_fofa_unverified: "body="
 ---
 
 # 懂微百择唯供应链 RankingGoodsList2 goodsTypeList SQL注入
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 FOFA 的完整表达式已记入 `fofa`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 ## 条目说明
 

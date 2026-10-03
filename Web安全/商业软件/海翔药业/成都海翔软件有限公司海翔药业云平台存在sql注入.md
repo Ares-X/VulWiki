@@ -16,14 +16,16 @@ review_date: "2026-10-02"
 source_url: "https://www.yuque.com/xiaokp7/ocvun2/bn1l8e2pqvvd28hg"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/%E6%B5%B7%E7%BF%94%E8%8D%AF%E4%B8%9A/%E6%88%90%E9%83%BD%E6%B5%B7%E7%BF%94%E8%BD%AF%E4%BB%B6%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E6%B5%B7%E7%BF%94%E8%8D%AF%E4%B8%9A%E4%BA%91%E5%B9%B3%E5%8F%B0%E5%AD%98%E5%9C%A8sql%E6%B3%A8%E5%85%A5.md"
-fofa_unverified: "web.title="
 hunter: "web.title=\"登录海翔\""
 id: "vw-caf3b8f5b7d82378a8e0b5b0"
 entity_id: "ve-caf3b8f5b7d82378a8e0b5b0"
 schema_version: "1"
+previous_fofa_unverified: "web.title="
 ---
 
 # 海翔药业云平台 getylist_login accountname SQL注入声称
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 Hunter 的完整表达式已记入 `hunter`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 ## 条目说明
 

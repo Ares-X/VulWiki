@@ -17,14 +17,17 @@ archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bff
 archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
 source_status: "recorded"
 source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
-fofa_unverified: "title="
 source_url: "https://www.yuque.com/xiaokp7/ocvun2/ccv63zl63aohrxg2"
 id: "vw-b459d13962b5aeff20e4c626"
 entity_id: "ve-b459d13962b5aeff20e4c626"
 schema_version: "1"
+previous_fofa_unverified: "title="
+fofa: "title=\"佑友防火墙\""
 ---
 
 # 防火墙 setdomain 信息泄露线索：皓峰 / 佑友产品归属待核
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 FOFA 的完整表达式已记入 `fofa`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 <!-- vulwiki-editorial-rebuild:system-misc -->
 ## 条目范围与校订

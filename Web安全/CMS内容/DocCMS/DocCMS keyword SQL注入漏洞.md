@@ -1,5 +1,5 @@
 ---
-version: "DocCMS"
+version: "unknown"
 source: "Threekiii/Awesome-POC"
 product: "DocCMS"
 record_type: "vulnerability"
@@ -17,6 +17,7 @@ source_status: "unknown"
 id: "vw-40e5ca7a7f87e7b2f76a357b"
 entity_id: "ve-40e5ca7a7f87e7b2f76a357b"
 schema_version: "1"
+previous_version: "DocCMS"
 ---
 
 ## 核对与使用边界
@@ -34,6 +35,8 @@ schema_version: "1"
 历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # DocCMS keyword SQL注入漏洞
+
+> 版本字段校订（2026-10-04）：误填的版本字段原值逐字保存到对应 `previous_*` 字段。当前值区分正文声称的影响范围、实验环境与尚未知的范围；后文对该元数据误填的旧说明只描述校订前状态，未据此升级来源结论。
 
 ## 漏洞描述
 

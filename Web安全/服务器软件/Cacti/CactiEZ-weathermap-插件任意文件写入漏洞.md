@@ -1,5 +1,5 @@
 ---
-version: "CactiEZ Weathermap 插件"
+version: "unknown；原文“漏洞影响”处仅写 CactiEZ Weathermap 插件，未列插件版本范围"
 source: "Threekiii/Vulnerability-Wiki"
 title: "CactiEZ weathermap 插件任意文件写入漏洞"
 product: "CactiEZ Weathermap插件"
@@ -12,15 +12,19 @@ primary_identifiers: ""
 referenced_identifiers: ""
 identifier_role: "unknown"
 prerequisites: "相关editor.php开放、地图配置目录可写且PHP可执行；提供Cookie但未说明是否必需登录"
-affected_versions: "CactiEZ Weathermap 插件"
+affected_versions: "unknown；原文“漏洞影响”处仅写 CactiEZ Weathermap 插件，未列插件版本范围"
 source_status: "unknown"
 side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
 id: "vw-b081c786fc9c2800c1023795"
 entity_id: "ve-b081c786fc9c2800c1023795"
 schema_version: "1"
+previous_version: "CactiEZ Weathermap 插件"
+previous_affected_versions: "CactiEZ Weathermap 插件"
 ---
 
 # CactiEZ weathermap 插件任意文件写入漏洞
+
+> 版本字段校订（2026-10-04）：代码、命令、路径、产品名或章节标记误入版本字段的值已逐字保存到对应 `previous_*` 字段；当前版本字段只记正文明确的来源范围，无范围时记为 unknown。后文对此元数据误填的旧说明描述校订前状态，其余实验条件与待核项仍按原文保留。
 
 <!-- vulwiki-editorial:start -->
 ## 校订与适用边界

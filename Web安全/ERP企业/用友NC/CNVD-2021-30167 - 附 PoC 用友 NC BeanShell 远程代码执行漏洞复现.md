@@ -17,13 +17,16 @@ identifier_role: "primary"
 source_url: "https://mp.weixin.qq.com/s/zBJl19bmXZg2kVsVNTIG6Q"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E7%94%A8%E5%8F%8BNC/CNVD-2021-30167%20-%20%E9%99%84%20PoC%20%E7%94%A8%E5%8F%8B%20NC%20BeanShell%20%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0.md"
-fofa_unverified: "语句："
 id: "vw-d60b484dd3f7ce23f8177c88"
 entity_id: "ve-d60b484dd3f7ce23f8177c88"
 schema_version: "1"
+previous_fofa_unverified: "语句："
+fofa: "icon_hash=\"1085941792\""
 ---
 
 # 用友NC BeanShell BshServlet未授权代码执行
+
+> 指纹字段校订（2026-10-04）：按原归档正文的明确平台标签及完整表达式恢复当前查询，旧误填或截取字段逐字保存在 `previous_*`；后文对此旧字段的诊断按当前字段阅读。仅经过本库保守语法与原字面核对，未在线运行查询，不把指纹命中视为漏洞存在。
 
 ## 条目说明
 

@@ -1,9 +1,9 @@
 ---
 cve: "CVE-2024-32004"
 source: "gelusus/wxvl 公众号漏洞文库"
-identifier_role: "unknown"
+identifier_role: "reference"
 primary_identifiers: ""
-referenced_identifiers: ""
+referenced_identifiers: "CVE-2024-32004"
 identifier_status: "unknown"
 title: "本周最新7个CVE漏洞POC"
 product: "七CVE PoC链接聚合"
@@ -21,9 +21,13 @@ source_note: "原始出处待补；仓库归档不等同原始披露"
 id: "vw-013e6941365ba59018553c1e"
 entity_id: "ve-013e6941365ba59018553c1e"
 schema_version: "1"
+previous_identifier_role: "unknown"
+previous_referenced_identifiers: ""
 ---
 
 # 本周最新7个CVE漏洞POC
+
+> 编号角色校订（2026-10-04）：按归档技术正文区分主讨论编号与背景引用，更新 `primary_identifiers` / `referenced_identifiers` 及旧字段角色。旧编号原值、状态与正文保持原样，变更前字段逐字保存在 `previous_*`；后文旧的角色待核说明应按当前字段阅读。这里的角色判读不等于官方分配核验或漏洞复现。
 
 <!-- vulwiki-editorial-rebuild:system-misc -->
 ## 条目范围与校订
@@ -62,30 +66,30 @@ schema_version: "1"
   
 **0x00**  
   
-[CVE-2024-32004 POC EXP]()  
+CVE-2024-32004 POC EXP  
   
   
 **0x01**  
   
-[CVE-2024-32002 POC EXP]()  
+CVE-2024-32002 POC EXP  
   
   
 **0x02**  
   
-[CVE-2024-29895 POC EXP]()  
+CVE-2024-29895 POC EXP  
   
   
 **0x03**  
   
-[CVE-2024-27130 POC EXP]()  
+CVE-2024-27130 POC EXP  
   
   
-**0x04**[CVE-2024-4323 POC EXP]()  
-**0x05**[CVE-2024-4367 POC EXP]()  
+**0x04**CVE-2024-4323 POC EXP  
+**0x05**CVE-2024-4367 POC EXP  
 **0x06**  
   
-[CVE-2024-22120 POC EXP]()  
-**0x07**[CVE-2024-4323  POC EXP]()  
+CVE-2024-22120 POC EXP  
+**0x07**CVE-2024-4323  POC EXP  
   
   
 ![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/SEVwkT7gYkmWcuXecnWxn0nNnjEURxV7KLRE6NxNK9w6J4bAMqaUCzzsp3t7IWxr1ibTcch3adgLOm6xWhFjaCQ/640?wx_fmt=jpeg&from=appmsg "")  

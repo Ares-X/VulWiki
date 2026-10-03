@@ -17,13 +17,15 @@ source_url: "https://www.yuque.com/xiaokp7/ocvun2/rpkrxscac0dp5hda"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E6%B1%9F%E9%98%B4%E6%B1%87%E6%99%BA%E8%BD%AF%E4%BB%B6%E6%8A%80%E6%9C%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/%E6%B1%87%E6%99%BAERPfilehandle%E5%AD%98%E5%9C%A8%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E.md"
 fofa: "icon_hash=\"-642591392\""
-fofa_unverified: "icon_hash="
 id: "vw-d425fefa2c5cc88d19424005"
 entity_id: "ve-d425fefa2c5cc88d19424005"
 schema_version: "1"
+previous_fofa_unverified: "icon_hash="
 ---
 
 # 汇智ERP filehandle路径读取
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 FOFA 的完整表达式已记入 `fofa`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 ## 条目说明
 

@@ -16,13 +16,16 @@ review_date: "2026-10-02"
 source_url: "https://mp.weixin.qq.com/s/3OxCCNdncelMJWLjJ-f2qA"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E7%95%85%E6%8D%B7%E9%80%9A/%E7%95%85%E6%8D%B7%E9%80%9A%20TPlus%20DownloadProxy.aspx%20%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E.md"
-fofa_unverified: "语句**"
 id: "vw-24ac0c232aee678901dda706"
 entity_id: "ve-24ac0c232aee678901dda706"
 schema_version: "1"
+previous_fofa_unverified: "语句**"
+fofa: "app=\"畅捷通-TPlus\""
 ---
 
 # 畅捷通T+ DownloadProxy Path文件读取
+
+> 指纹字段校订（2026-10-04）：按原归档正文的明确平台标签及完整表达式恢复当前查询，旧误填或截取字段逐字保存在 `previous_*`；后文对此旧字段的诊断按当前字段阅读。仅经过本库保守语法与原字面核对，未在线运行查询，不把指纹命中视为漏洞存在。
 
 ## 条目说明
 

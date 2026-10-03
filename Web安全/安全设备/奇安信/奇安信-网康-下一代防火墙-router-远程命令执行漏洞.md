@@ -1,5 +1,5 @@
 ---
-version: "奇安信 网康下一代防火墙"
+version: "unknown"
 source: "Threekiii/Vulnerability-Wiki"
 id: "vw-b5c4101b684f3b241dd52020"
 entity_id: "ve-b5c4101b684f3b241dd52020"
@@ -20,9 +20,12 @@ review_date: "2026-10-02"
 side_effects: "执行文中载荷可能以目标进程权限启动命令或加载代码；权限受认证角色、操作系统账户及依赖版本约束，不能把 root/200 等通用字符串当成功证据"
 source_status: "unknown"
 canonical: "Web安全/安全设备/奇安信/奇安信-网康-下一代防火墙-router-远程命令执行漏洞.md"
+previous_version: "奇安信 网康下一代防火墙"
 ---
 
 # 奇安信网康 下一代防火墙 router 远程命令执行漏洞
+
+> 版本字段校订（2026-10-04）：误填的版本字段原值逐字保存到对应 `previous_*` 字段。当前值区分正文声称的影响范围、实验环境与尚未知的范围；后文对该元数据误填的旧说明只描述校订前状态，未据此升级来源结论。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）

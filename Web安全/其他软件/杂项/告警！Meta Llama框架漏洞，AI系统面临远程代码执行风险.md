@@ -1,8 +1,8 @@
 ---
 cve: "CVE-2024-50050"
 source: "gelusus/wxvl 公众号漏洞文库"
-identifier_role: "unknown"
-primary_identifiers: ""
+identifier_role: "primary"
+primary_identifiers: "CVE-2024-50050"
 referenced_identifiers: ""
 identifier_status: "unknown"
 title: "告警！Meta Llama框架漏洞，AI系统面临远程代码执行风险"
@@ -21,9 +21,13 @@ source_note: "原始出处待补；仓库归档不等同原始披露"
 id: "vw-f0c64337ab41c4da04243ad0"
 entity_id: "ve-f0c64337ab41c4da04243ad0"
 schema_version: "1"
+previous_identifier_role: "unknown"
+previous_primary_identifiers: ""
 ---
 
 # 告警！Meta Llama框架漏洞，AI系统面临远程代码执行风险
+
+> 编号角色校订（2026-10-04）：按归档技术正文区分主讨论编号与背景引用，更新 `primary_identifiers` / `referenced_identifiers` 及旧字段角色。旧编号原值、状态与正文保持原样，变更前字段逐字保存在 `previous_*`；后文旧的角色待核说明应按当前字段阅读。这里的角色判读不等于官方分配核验或漏洞复现。
 
 <!-- vulwiki-editorial-rebuild:system-misc -->
 ## 条目范围与校订

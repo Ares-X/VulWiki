@@ -3,7 +3,6 @@ source: "wy876 漏洞文库"
 id: "vw-c8077fb0ac99d4ea07638205"
 entity_id: "ve-c8077fb0ac99d4ea07638205"
 schema_version: "1"
-fofa_unverified: "web.body="
 title: "网神 SecGate3600 authManageSet.cgi 用户查询鉴权线索"
 product: "网神SecGate3600-A1500"
 record_type: "vulnerability"
@@ -20,9 +19,13 @@ review_date: "2026-10-02"
 side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
 source_url: "https://www.yuque.com/xiaokp7/ocvun2/lz3gvfl7e9gp74wi"
 source_status: "recorded"
+previous_fofa_unverified: "web.body="
+hunter: "web.body=\"sec_gate_image/login_02.gif\""
 ---
 
 # 网神 SecGate3600 authManageSet.cgi 用户查询鉴权线索
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 Hunter 的完整表达式已记入 `hunter`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）

@@ -1,5 +1,5 @@
 ---
-version: "**漏洞原理**"
+version: "unknown；该文汇集多个 JBoss 产品/漏洞，各节范围不同，无法形成单一影响版本范围"
 source: "MrWQ/vulnerability-paper"
 title: "中间件常见漏洞之 JBOSS"
 product: "JBoss AS控制台/Invoker/JBossMQ"
@@ -12,7 +12,7 @@ primary_identifiers: "CVE-2017-12149; CVE-2015-7501; CVE-2017-7504"
 referenced_identifiers: ""
 identifier_role: "primary"
 cve: "CVE-2017-12149; CVE-2015-7501; CVE-2017-7504"
-affected_versions: "**漏洞原理**"
+affected_versions: "unknown；该文汇集多个 JBoss 产品/漏洞，各节范围不同，无法形成单一影响版本范围"
 source_url: "https://mp.weixin.qq.com/s/EZDVg8fyQ-gpumqHcv_dow"
 source_status: "recorded"
 prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
@@ -20,9 +20,13 @@ side_effects: "含反向连接或交互式命令执行方法：会产生出站�
 id: "vw-c320cce235782487de90a615"
 entity_id: "ve-c320cce235782487de90a615"
 schema_version: "1"
+previous_version: "**漏洞原理**"
+previous_affected_versions: "**漏洞原理**"
 ---
 
 # 中间件常见漏洞之 JBOSS
+
+> 版本字段校订（2026-10-04）：代码、命令、路径、产品名或章节标记误入版本字段的值已逐字保存到对应 `previous_*` 字段；当前版本字段只记正文明确的来源范围，无范围时记为 unknown。后文对此元数据误填的旧说明描述校订前状态，其余实验条件与待核项仍按原文保留。
 
 <!-- vulwiki-editorial:start -->
 ## 校订与适用边界

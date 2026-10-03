@@ -16,14 +16,16 @@ review_date: "2026-10-02"
 source_url: "https://www.yuque.com/xiaokp7/ocvun2/wu6h6bbwq3zx751r"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/%E8%8B%B1%E9%A3%9E%E8%BE%BE/%E8%8B%B1%E9%A3%9E%E8%BE%BE%E5%BD%B1%E5%83%8F%E5%AD%98%E6%A1%A3%E4%B8%8E%E9%80%9A%E8%AE%AF%28PACS%29%E7%B3%BB%E7%BB%9FINFINITTPACSWebJobUpload%E5%AD%98%E5%9C%A8%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E.md"
-fofa_unverified: "web.icon="
 hunter: "web.icon=\"0cd46e0cba3abd067cd28e70eb7f2a5f\""
 id: "vw-1c9289e24e04808d776e5b97"
 entity_id: "ve-1c9289e24e04808d776e5b97"
 schema_version: "1"
+previous_fofa_unverified: "web.icon="
 ---
 
 # INFINITT PACS英飞达 WebJobUpload jobUpload任意文件上传
+
+> 指纹历史字段校订（2026-10-04）：现有完整平台查询保持原值；旧未核字段中的残片逐字迁入 `previous_*`。此迁移不代表已确定原文其他谓词的组合意图，未给出的 AND/OR 不猜补。后文残片字段的旧诊断描述校订前状态，查询仍不证明资产受影响。
 
 ## 条目说明
 

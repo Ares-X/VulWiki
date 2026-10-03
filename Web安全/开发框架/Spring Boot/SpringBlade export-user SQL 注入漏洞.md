@@ -1,5 +1,5 @@
 ---
-fofa: ""
+fofa: "body=\"https://bladex.vip\""
 source: "SourByte05/Vulnerability-Wiki-PoC"
 product: "SpringBlade/export-user"
 record_type: "advisory"
@@ -10,7 +10,6 @@ primary_identifiers: ""
 referenced_identifiers: ""
 identifier_role: "unknown"
 identifier_status: "unknown"
-fofa_unverified: "body="
 title: "SpringBlade export-user SQL 注入漏洞"
 prerequisites: "来源所述条件，未列明部分仍待核：正文<=3.2.0，影响行反向>=3.2.0；需后台导出权限"
 side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
@@ -18,6 +17,7 @@ source_status: "unknown"
 id: "vw-133f9277100190b67500d5ab"
 entity_id: "ve-133f9277100190b67500d5ab"
 schema_version: "1"
+previous_fofa_unverified: "body="
 ---
 
 ## 核对与使用边界
@@ -41,6 +41,8 @@ schema_version: "1"
 历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # SpringBlade export-user SQL 注入漏洞预警
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 FOFA 的完整表达式已记入 `fofa`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 # 漏洞描述
 

@@ -3,7 +3,6 @@ source: "wy876 漏洞文库"
 id: "vw-656e233c29365cb5df2d0e9f"
 entity_id: "ve-656e233c29365cb5df2d0e9f"
 schema_version: "1"
-fofa_unverified: "<font style="
 title: "飞鱼星智能上网行为管理系统send_order存在远程命令执行漏洞"
 product: "飞鱼星企业级智能上网行为管理"
 record_type: "advisory"
@@ -20,9 +19,13 @@ review_date: "2026-10-02"
 side_effects: "执行文中载荷可能以目标进程权限启动命令或加载代码；权限受认证角色、操作系统账户及依赖版本约束，不能把 root/200 等通用字符串当成功证据"
 source_url: "https://www.yuque.com/xiaokp7/ocvun2/ewvgyd0pqty4snsb"
 source_status: "recorded"
+previous_fofa_unverified: "<font style="
+fofa: "title=\"飞鱼星企业级智能上网行为管理系统\""
 ---
 
 # 飞鱼星智能上网行为管理系统send_order存在远程命令执行漏洞
+
+> 指纹字段校订（2026-10-04）：按原归档正文的明确平台标签及完整表达式恢复当前查询，旧误填或截取字段逐字保存在 `previous_*`；后文对此旧字段的诊断按当前字段阅读。仅经过本库保守语法与原字面核对，未在线运行查询，不把指纹命中视为漏洞存在。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）

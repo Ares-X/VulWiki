@@ -1,5 +1,5 @@
 ---
-version: "package person;"
+version: "Fastjson <= 1.2.47（原文分析范围；原文另描述 1.2.48 的修改）"
 source: "MrWQ/vulnerability-paper"
 product: "Fastjson<=1.2.47"
 record_type: "analysis"
@@ -18,6 +18,7 @@ source_url: "https://mp.weixin.qq.com/s/qRbfZK0UX4v2YwdfWDlSeA"
 id: "vw-2206b825c5b1c1caf32fc15b"
 entity_id: "ve-2206b825c5b1c1caf32fc15b"
 schema_version: "1"
+previous_version: "package person;"
 ---
 
 ## 核对与使用边界
@@ -37,6 +38,8 @@ schema_version: "1"
 历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # FastJson小于等于1.2.47RCE 细枝末节详细分析
+
+> 版本字段校订（2026-10-04）：代码、命令、路径、产品名或章节标记误入版本字段的值已逐字保存到对应 `previous_*` 字段；当前版本字段只记正文明确的来源范围，无范围时记为 unknown。后文对此元数据误填的旧说明描述校订前状态，其余实验条件与待核项仍按原文保留。
 
 <meta name="referrer" content="no-referrer"/>
 

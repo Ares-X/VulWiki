@@ -3,7 +3,6 @@ source: "wy876 漏洞文库"
 id: "vw-adadc49d33e37d096bb77bed"
 entity_id: "ve-adadc49d33e37d096bb77bed"
 schema_version: "1"
-fofa_unverified: "查询语法：**"
 title: "海康威视iSecure Center综合安防管理平台 config.properties信息泄漏漏洞"
 product: "Hikvision iSecure Center"
 record_type: "vulnerability"
@@ -20,9 +19,13 @@ review_date: "2026-10-02"
 side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
 source_url: "https://www.yuque.com/xiaokp7/ocvun2/uwdr74gfask18f9t"
 source_status: "recorded"
+previous_fofa_unverified: "查询语法：**"
+hunter: "app.name==\"Hikvision 海康威视 iSecure Center\""
 ---
 
 # 海康威视iSecure Center综合安防管理平台 config.properties信息泄漏漏洞
+
+> 指纹字段校订（2026-10-04）：按原归档正文的明确平台标签及完整表达式恢复当前查询，旧误填或截取字段逐字保存在 `previous_*`；后文对此旧字段的诊断按当前字段阅读。仅经过本库保守语法与原字面核对，未在线运行查询，不把指纹命中视为漏洞存在。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）

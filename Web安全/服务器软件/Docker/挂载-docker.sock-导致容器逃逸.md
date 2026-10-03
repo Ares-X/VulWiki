@@ -1,5 +1,5 @@
 ---
-version: "Docker version: 18.09.3"
+version: "unknown：原文 Docker 18.09.3 是实验环境，未给出影响版本范围；适用性依本文配置与权限前提"
 source: "Threekiii/Vulnerability-Wiki"
 title: "挂载 docker.sock 导致容器逃逸"
 product: "Docker daemon socket / Kubernetes配置"
@@ -12,15 +12,19 @@ primary_identifiers: ""
 referenced_identifiers: ""
 identifier_role: "unknown"
 prerequisites: "socket挂载可访问且进程有权限，daemon能创建特权/host挂载容器；示例逃逸终点是minikube VM"
-affected_versions: "Docker version: 18.09.3"
+affected_versions: "unknown：原文 Docker 18.09.3 是实验环境，未给出影响版本范围；适用性依本文配置与权限前提"
 source_status: "unknown"
 side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
 id: "vw-d006f86358e410819fa14bac"
 entity_id: "ve-d006f86358e410819fa14bac"
 schema_version: "1"
+previous_version: "Docker version: 18.09.3"
+previous_affected_versions: "Docker version: 18.09.3"
 ---
 
 # 挂载 docker.sock 导致容器逃逸
+
+> 版本字段校订（2026-10-04）：Docker 18.09.3 是原文实验运行时版本，不能作为此配置或权限问题的影响范围。`version` 与 `affected_versions` 改为明确待核，旧值保存在 `previous_*`；实验组件清单及全部 YAML、命令与结果原样保留。后文相关元数据误填说明描述校订前状态。
 
 <!-- vulwiki-editorial:start -->
 ## 校订与适用边界

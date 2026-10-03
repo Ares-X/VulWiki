@@ -40,6 +40,7 @@ python -m unittest discover -s tests -v
 python scripts/wiki.py check --baseline docs/quality-baseline.json --report /tmp/wiki-quality.json
 python scripts/wiki.py build
 python scripts/wiki.py build --check
+python scripts/resource-audit.py --report /tmp/wiki-resource-audit.json
 ```
 
 生成器只改索引和 docs/generated 派生数据，不改正文。不要手工维护生成结果。提交正文及对应索引变化；README 中的历史时间线不是 CVE 核验记录。

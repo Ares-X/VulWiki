@@ -3,7 +3,6 @@ source: "wy876 漏洞文库"
 id: "vw-5387128f537625e67a58eb1a"
 entity_id: "ve-5387128f537625e67a58eb1a"
 schema_version: "1"
-fofa_unverified: "web.body="
 title: "锐捷交换机WEB管理系统EXCU_SHELL密码信息泄漏漏洞"
 product: "Ruijie交换机Web管理"
 record_type: "vulnerability"
@@ -20,9 +19,13 @@ review_date: "2026-10-02"
 side_effects: "执行文中载荷可能以目标进程权限启动命令或加载代码；权限受认证角色、操作系统账户及依赖版本约束，不能把 root/200 等通用字符串当成功证据"
 source_url: "https://www.yuque.com/xiaokp7/ocvun2/hzkmpfxiryxd4dnp"
 source_status: "recorded"
+previous_fofa_unverified: "web.body="
+hunter: "web.body=\"img/free_login_ge.gif\"&&web.body=\"./img/login_bg.gif\""
 ---
 
 # 锐捷交换机WEB管理系统EXCU_SHELL密码信息泄漏漏洞
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 Hunter 的完整表达式已记入 `hunter`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）

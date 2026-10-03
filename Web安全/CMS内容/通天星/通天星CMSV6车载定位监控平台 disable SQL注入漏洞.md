@@ -1,5 +1,5 @@
 ---
-fofa: ""
+fofa: "body=\"/808gps/\""
 source: "SourByte05/Vulnerability-Wiki-PoC"
 product: "通天星 CMSV6 车载视频监控平台"
 record_type: "unknown"
@@ -10,7 +10,6 @@ primary_identifiers: ""
 referenced_identifiers: ""
 identifier_role: "unknown"
 identifier_status: "unknown"
-fofa_unverified: "body="
 category_recommendation: "IOT安全/其他设备"
 title: "通天星CMSV6车载定位监控平台 disable SQL注入漏洞"
 prerequisites: "来源所述条件，未列明部分仍待核：disable;downloadLogger.action suffixauthbypassclaimed; idsSQL;DBFILE/writeconfigforRCE"
@@ -19,6 +18,7 @@ source_status: "unknown"
 id: "vw-43903c2a5f3dc43ed4a2e9ce"
 entity_id: "ve-43903c2a5f3dc43ed4a2e9ce"
 schema_version: "1"
+previous_fofa_unverified: "body="
 ---
 
 ## 核对与使用边界
@@ -44,6 +44,8 @@ schema_version: "1"
 历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # 通天星CMSV6车载定位监控平台 disable SQL注入漏洞
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 FOFA 的完整表达式已记入 `fofa`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 # 漏洞描述
 

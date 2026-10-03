@@ -1,5 +1,5 @@
 ---
-fofa: ""
+fofa: "app=\"若依-管理系统\" && body=\"admin\""
 source: "MrWQ/vulnerability-paper"
 product: "RuoYi/common.download.resource"
 record_type: "vulnerability"
@@ -10,7 +10,6 @@ primary_identifiers: ""
 referenced_identifiers: ""
 identifier_role: "unknown"
 identifier_status: "unknown"
-fofa_unverified: "查询语句"
 title: "若依(RuoYi)管理系统 后台任意文件读取"
 prerequisites: "来源所述条件，未列明部分仍待核：<4.5.1、需后台Cookie明确；修复过滤只有截图"
 side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
@@ -19,6 +18,7 @@ source_url: "https://mp.weixin.qq.com/s/zrVTiHCCymlnrERrSJOUog"
 id: "vw-155040a31f6dbef738d5062a"
 entity_id: "ve-155040a31f6dbef738d5062a"
 schema_version: "1"
+previous_fofa_unverified: "查询语句"
 ---
 
 ## 核对与使用边界
@@ -40,6 +40,8 @@ schema_version: "1"
 历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # 若依(RuoYi)管理系统 后台任意文件读取
+
+> 指纹字段校订（2026-10-04）：按原归档正文的明确平台标签及完整表达式恢复当前查询，旧误填或截取字段逐字保存在 `previous_*`；后文对此旧字段的诊断按当前字段阅读。仅经过本库保守语法与原字面核对，未在线运行查询，不把指纹命中视为漏洞存在。
 
 <meta name="referrer" content="no-referrer"/>
 

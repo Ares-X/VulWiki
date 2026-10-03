@@ -11,15 +11,18 @@ primary_identifiers: ""
 referenced_identifiers: ""
 identifier_role: "unknown"
 prerequisites: "Version/config unknown;four guessed credentialpairs"
-fofa_unverified: "app.name="
 source_status: "unknown"
 side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
 id: "vw-201f696012992e9d748ed58e"
 entity_id: "ve-201f696012992e9d748ed58e"
 schema_version: "1"
+previous_fofa_unverified: "app.name="
+hunter: "app.name=\"WGCLOUD\""
 ---
 
 # wgcloud 存在弱口令漏洞
+
+> 指纹字段校订（2026-10-04）：按原归档正文的明确平台标签及完整表达式恢复当前查询，旧误填或截取字段逐字保存在 `previous_*`；后文对此旧字段的诊断按当前字段阅读。仅经过本库保守语法与原字面核对，未在线运行查询，不把指纹命中视为漏洞存在。
 
 <!-- vulwiki-editorial:start -->
 ## 校订与适用边界

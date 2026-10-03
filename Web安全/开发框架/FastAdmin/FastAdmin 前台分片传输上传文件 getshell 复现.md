@@ -1,5 +1,5 @@
 ---
-version: "参考链接："
+version: "FastAdmin < V1.2.0.20210401_beta（原文声称；还要求开启默认关闭的分片传输）"
 source: "MrWQ/vulnerability-paper"
 product: "FastAdmin chunk-upload path handling"
 record_type: "analysis"
@@ -18,6 +18,7 @@ source_url: "https://mp.weixin.qq.com/s/gAerDNnDSl6864oyvDy4nA"
 id: "vw-3b879b3cf426bb599e069b6b"
 entity_id: "ve-3b879b3cf426bb599e069b6b"
 schema_version: "1"
+previous_version: "参考链接："
 ---
 
 ## 核对与使用边界
@@ -40,6 +41,8 @@ schema_version: "1"
 历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # FastAdmin 前台分片传输上传文件 getshell 复现
+
+> 版本字段校订（2026-10-04）：代码、命令、路径、产品名或章节标记误入版本字段的值已逐字保存到对应 `previous_*` 字段；当前版本字段只记正文明确的来源范围，无范围时记为 unknown。后文对此元数据误填的旧说明描述校订前状态，其余实验条件与待核项仍按原文保留。
 
 <meta name="referrer" content="no-referrer"/>
 

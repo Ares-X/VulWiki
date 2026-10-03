@@ -17,13 +17,15 @@ source_url: "https://github.com/SourByte05/Vulnerability-Wiki-PoC"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E7%94%A8%E5%8F%8BGRP-u8/%E7%94%A8%E5%8F%8BYonBIP%E9%AB%98%E7%BA%A7%E7%89%88yonbiplogin%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E.md"
 fofa: "title=\"数字化工作台\" || title=\"YonBIP\""
-fofa_unverified: "title="
 id: "vw-fcdf378ab6ea886f0a36933c"
 entity_id: "ve-fcdf378ab6ea886f0a36933c"
 schema_version: "1"
+previous_fofa_unverified: "title="
 ---
 
 # 用友YonBIP高级版 yonbiplogin双编码路径读取
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 FOFA 的完整表达式已记入 `fofa`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 ## 条目说明
 

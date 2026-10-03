@@ -1,5 +1,5 @@
 ---
-version: "rConfig"
+version: "unknown"
 source: "Threekiii/Vulnerability-Wiki"
 title: "rConfig useradmin.inc.php 信息泄露漏洞"
 product: "rConfig Web用户管理组件"
@@ -12,16 +12,20 @@ primary_identifiers: ""
 referenced_identifiers: ""
 identifier_role: "unknown"
 prerequisites: "文件可直接Web访问、包含文件/全局路由未代为鉴权、数据库可用"
-affected_versions: "rConfig"
+affected_versions: "unknown"
 source_status: "unknown"
 side_effects: "含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。"
 id: "vw-cd969d07bac7e294d4b2e743"
 entity_id: "ve-cd969d07bac7e294d4b2e743"
 schema_version: "1"
 canonical: "Web安全/服务器软件/rConfig/rConfig-useradmin.inc.php-信息泄露漏洞.md"
+previous_version: "rConfig"
+previous_affected_versions: "rConfig"
 ---
 
 # rConfig useradmin.inc.php 信息泄露漏洞
+
+> 版本字段校订（2026-10-04）：误填的版本字段原值逐字保存到对应 `previous_*` 字段。当前值区分正文声称的影响范围、实验环境与尚未知的范围；后文对该元数据误填的旧说明只描述校订前状态，未据此升级来源结论。
 
 <!-- vulwiki-editorial:start -->
 ## 校订与适用边界

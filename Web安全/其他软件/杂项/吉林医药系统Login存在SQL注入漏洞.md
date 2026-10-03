@@ -17,15 +17,17 @@ archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bff
 archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
 source_status: "recorded"
 source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
-fofa_unverified: "icon_hash="
 fofa: "icon_hash=\"775044030\""
 source_url: "https://www.yuque.com/xiaokp7/ocvun2/gsfq16xdvbag4hu6"
 id: "vw-4d26a1c3c46f1e0400b0362a"
 entity_id: "ve-4d26a1c3c46f1e0400b0362a"
 schema_version: "1"
+previous_fofa_unverified: "icon_hash="
 ---
 
 # 吉林医药系统Login存在SQL注入漏洞
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 FOFA 的完整表达式已记入 `fofa`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 <!-- vulwiki-editorial-rebuild:system-misc -->
 ## 条目范围与校订

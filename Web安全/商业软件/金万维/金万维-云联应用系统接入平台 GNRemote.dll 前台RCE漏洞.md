@@ -17,13 +17,15 @@ source_url: "https://github.com/SourByte05/Vulnerability-Wiki-PoC"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/%E9%87%91%E4%B8%87%E7%BB%B4/%E9%87%91%E4%B8%87%E7%BB%B4-%E4%BA%91%E8%81%94%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E6%8E%A5%E5%85%A5%E5%B9%B3%E5%8F%B0%20GNRemote.dll%20%E5%89%8D%E5%8F%B0RCE%E6%BC%8F%E6%B4%9E.md"
 fofa: "title=\"云联应用系统接入平台\""
-fofa_unverified: "title="
 id: "vw-f6b01983b503667a477da2cc"
 entity_id: "ve-f6b01983b503667a477da2cc"
 schema_version: "1"
+previous_fofa_unverified: "title="
 ---
 
 # 金万维云联应用系统接入平台 GNRemote.dll CallPython执行os.system
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 FOFA 的完整表达式已记入 `fofa`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 ## 条目说明
 

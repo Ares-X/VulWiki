@@ -1,5 +1,5 @@
 ---
-version: "Hikvision 视频编码设备接入网关"
+version: "unknown"
 source: "Threekiii/Awesome-POC"
 id: "vw-198bd0501232573f36c92b5f"
 entity_id: "ve-198bd0501232573f36c92b5f"
@@ -20,9 +20,12 @@ review_date: "2026-10-02"
 side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
 source_status: "unknown"
 canonical: "IOT安全/海康威视/HIKVISION 视频编码设备接入网关 showFile.php 任意文件下载漏洞.md"
+previous_version: "Hikvision 视频编码设备接入网关"
 ---
 
 # Hikvision 视频编码设备接入网关 showFile.php 任意文件下载漏洞
+
+> 版本字段校订（2026-10-04）：误填的版本字段原值逐字保存到对应 `previous_*` 字段。当前值区分正文声称的影响范围、实验环境与尚未知的范围；后文对该元数据误填的旧说明只描述校订前状态，未据此升级来源结论。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）

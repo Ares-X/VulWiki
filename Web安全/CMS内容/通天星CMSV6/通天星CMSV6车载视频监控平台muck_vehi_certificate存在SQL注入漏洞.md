@@ -11,7 +11,6 @@ referenced_identifiers: ""
 identifier_role: "unknown"
 identifier_status: "unknown"
 category_recommendation: "IOT安全/其他设备"
-fofa_unverified: "web.body="
 title: "通天星CMSV6车载视频监控平台muck_vehi_certificate存在SQL注入漏洞"
 prerequisites: "来源所述条件，未列明部分仍待核：muck_vehi_certificatedelete;matrixsuffix/XFF;ids;certificate-recorddeletionrisk"
 side_effects: "未执行；本文需注意的操作影响：具体副作用：本文 delete 路由会涉及 车辆证件记录；把 ids=1 等正常参数当“安全对照”仍可能删除真实业务数据。原探针与方法保留，但测试对象必须是可恢复的隔离记录，须核事前/事后状态。"
@@ -19,6 +18,8 @@ source_status: "unknown"
 id: "vw-4a6cf98ff3c7b2d755f64860"
 entity_id: "ve-4a6cf98ff3c7b2d755f64860"
 schema_version: "1"
+previous_fofa_unverified: "web.body="
+hunter: "web.body=\"./open/webApi.html\""
 ---
 
 ## 核对与使用边界
@@ -43,6 +44,8 @@ schema_version: "1"
 历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # 通天星CMSV6车载视频监控平台 muck_vehi_certificate存在SQL注入漏洞
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 Hunter 的完整表达式已记入 `hunter`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 # 一、漏洞简介
 通天星CMSV6车载视频监控平台是东莞市通天星软件科技有限公司研发的监控平台，通天星CMSV6产品覆盖车载录像机、单兵录像机、网络监控摄像机、行驶记录仪等产品的视频综合平台。通天星科技应用于公交车车载、校车车载、大巴车车载、物流车载、油品运输车载、警车车载等公共交通视频监控，还应用在家居看护、商铺远程监控、私家车的行驶分享仪上等。通天星CMSV6车载视频监控平台muck_vehi_certificate存在SQL注入漏洞，攻击者可以通过构造恶意的SQL语句，成功注入并执行恶意数据库操作，可能导致敏感信息泄露、数据库被篡改或其他严重后果。

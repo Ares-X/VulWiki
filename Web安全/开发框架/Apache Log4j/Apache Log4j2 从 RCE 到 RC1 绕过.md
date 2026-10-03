@@ -1,5 +1,5 @@
 ---
-version: "@Overridepublic StringBuilder toSerializable(final LogEvent event, final StringB"
+version: "unknown；正文未列可确认的受影响版本范围，2.15.0-rc1 是修复/绕过讨论版本"
 source: "MrWQ/vulnerability-paper"
 product: "Log4j2 JNDI; keep historical RC1/RC2 context"
 record_type: "analysis"
@@ -18,6 +18,7 @@ source_url: "https://mp.weixin.qq.com/s/0wTxODQBvHrJuV2qtqNnNA"
 id: "vw-b11881f93d323436983bc41c"
 entity_id: "ve-b11881f93d323436983bc41c"
 schema_version: "1"
+previous_version: "@Overridepublic StringBuilder toSerializable(final LogEvent event, final StringB"
 ---
 
 ## 核对与使用边界
@@ -39,6 +40,8 @@ schema_version: "1"
 历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Apache Log4j2 从 RCE 到 RC1 绕过
+
+> 版本字段校订（2026-10-04）：代码、命令、路径、产品名或章节标记误入版本字段的值已逐字保存到对应 `previous_*` 字段；当前版本字段只记正文明确的来源范围，无范围时记为 unknown。后文对此元数据误填的旧说明描述校订前状态，其余实验条件与待核项仍按原文保留。
 
 <meta name="referrer" content="no-referrer"/>
 

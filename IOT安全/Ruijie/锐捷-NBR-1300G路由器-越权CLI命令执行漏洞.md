@@ -1,5 +1,5 @@
 ---
-version: "锐捷 NBR 路由器"
+version: "unknown"
 source: "Threekiii/Vulnerability-Wiki"
 id: "vw-85a0183bd4da903c0b7eeee8"
 entity_id: "ve-85a0183bd4da903c0b7eeee8"
@@ -19,9 +19,12 @@ archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bff
 review_date: "2026-10-02"
 side_effects: "读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要的响应，不能由接口可达推定敏感内容已泄露"
 source_status: "unknown"
+previous_version: "锐捷 NBR 路由器"
 ---
 
 # 锐捷 NBR 1300G 路由器 越权 CLI 命令执行漏洞
+
+> 版本字段校订（2026-10-04）：误填的版本字段原值逐字保存到对应 `previous_*` 字段。当前值区分正文声称的影响范围、实验环境与尚未知的范围；后文对该元数据误填的旧说明只描述校订前状态，未据此升级来源结论。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）

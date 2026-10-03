@@ -17,13 +17,15 @@ source_url: "https://github.com/SourByte05/Vulnerability-Wiki-PoC"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E9%A1%BA%E6%99%AF/%E9%A1%BA%E6%99%AFERP%20Upload%E5%A4%84%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E8%87%B4RCE%E6%BC%8F%E6%B4%9E.md"
 fofa: "body=\"/api/DBRecord/getDBRecords\""
-fofa_unverified: "body="
 id: "vw-15c9e2ceaea9fd0433496b3d"
 entity_id: "ve-15c9e2ceaea9fd0433496b3d"
 schema_version: "1"
+previous_fofa_unverified: "body="
 ---
 
 # 顺景ERP FileUpload/Upload上传
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 FOFA 的完整表达式已记入 `fofa`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 ## 条目说明
 

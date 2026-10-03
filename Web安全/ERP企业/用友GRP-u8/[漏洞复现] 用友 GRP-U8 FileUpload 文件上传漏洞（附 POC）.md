@@ -16,13 +16,16 @@ review_date: "2026-10-02"
 source_url: "https://mp.weixin.qq.com/s/na0n6QC-8DDo0Z0FRpudYg"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E7%94%A8%E5%8F%8BGRP-u8/%5B%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0%5D%20%E7%94%A8%E5%8F%8B%20GRP-U8%20FileUpload%20%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E%EF%BC%88%E9%99%84%20POC%EF%BC%89.md"
-fofa_unverified: "搜索语句"
 id: "vw-b699fd3e1a1423de88b5d354"
 entity_id: "ve-b699fd3e1a1423de88b5d354"
 schema_version: "1"
+previous_fofa_unverified: "搜索语句"
+fofa: "app=\"用友-GRP-U8\""
 ---
 
 # 用友GRP-U8 servlet/FileUpload文件上传
+
+> 指纹字段校订（2026-10-04）：按原归档正文的明确平台标签及完整表达式恢复当前查询，旧误填或截取字段逐字保存在 `previous_*`；后文对此旧字段的诊断按当前字段阅读。仅经过本库保守语法与原字面核对，未在线运行查询，不把指纹命中视为漏洞存在。
 
 ## 条目说明
 

@@ -17,13 +17,15 @@ source_url: "https://github.com/SourByte05/Vulnerability-Wiki-PoC"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/%E6%99%BA%E6%85%A7%E5%9F%8E%E5%B8%82%E7%B3%BB%E7%BB%9F/%E7%91%9E%E6%A0%BC%E6%99%BA%E6%85%A7%E5%BF%83%E7%90%86%E6%9C%8D%E5%8A%A1%E5%B9%B3%E5%8F%B0%20NPreenSMSList.asmx%20SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0.md"
 fofa: "body=\"瑞格智慧心理服务平台\""
-fofa_unverified: "body="
 id: "vw-20f3002db2f733f0a86b245c"
 entity_id: "ve-20f3002db2f733f0a86b245c"
 schema_version: "1"
+previous_fofa_unverified: "body="
 ---
 
 # 瑞格智慧心理服务平台 NPreenSMSList Seach sqlwhere SQL注入
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 FOFA 的完整表达式已记入 `fofa`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 ## 条目说明
 

@@ -3,7 +3,6 @@ source: "wy876 漏洞文库"
 id: "vw-457e4fa220699b100fad6301"
 entity_id: "ve-457e4fa220699b100fad6301"
 schema_version: "1"
-fofa_unverified: "server="
 title: "上海迅饶自动化科技有限公司X2Modbus网关未授权访问漏洞"
 product: "SunFull迅饶X2Modbus"
 record_type: "vulnerability"
@@ -20,9 +19,13 @@ review_date: "2026-10-02"
 side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
 source_url: "https://www.yuque.com/xiaokp7/ocvun2/gls8bg23feb5hiu7"
 source_status: "recorded"
+previous_fofa_unverified: "server="
+fofa: "server=\"SunFull-Webs\" || icon_hash=\"-1384370370\""
 ---
 
 # 上海迅饶自动化科技有限公司X2Modbus网关未授权访问漏洞
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 FOFA 的完整表达式已记入 `fofa`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）

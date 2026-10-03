@@ -17,13 +17,15 @@ source_url: "https://github.com/SourByte05/Vulnerability-Wiki-PoC"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/%E7%B4%A2%E8%B4%9D%E8%9E%8D%E5%AA%92%E4%BD%93/%E7%B4%A2%E8%B4%9D%E8%9E%8D%E5%AA%92%E4%BD%93%20Sc-TaskMonitoringresttasksearch%20SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md"
 fofa: "icon_hash=\"689611853\""
-fofa_unverified: "icon_hash="
 id: "vw-19feadd561336e046d233922"
 entity_id: "ve-19feadd561336e046d233922"
 schema_version: "1"
+previous_fofa_unverified: "icon_hash="
 ---
 
 # 索贝融媒体 Sc-TaskMonitoring task/search sort.field SQL 注入
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 FOFA 的完整表达式已记入 `fofa`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 ## 条目说明
 

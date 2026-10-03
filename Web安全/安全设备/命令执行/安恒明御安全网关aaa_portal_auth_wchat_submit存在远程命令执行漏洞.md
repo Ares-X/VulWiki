@@ -3,7 +3,6 @@ source: "wy876 漏洞文库"
 id: "vw-30d8561a4f6ee4a592853faf"
 entity_id: "ve-30d8561a4f6ee4a592853faf"
 schema_version: "1"
-fofa_unverified: "app.name="
 title: "安恒明御安全网关aaa_portal_auth_wchat_submit存在远程命令执行漏洞"
 product: "安恒明御NGFW"
 record_type: "vulnerability"
@@ -21,9 +20,13 @@ side_effects: "本篇未提供足以确认无副作用的完整验证流程；�
 source_url: "https://www.yuque.com/xiaokp7/ocvun2/dyx9hn4tquve8vku"
 source_status: "recorded"
 canonical: "Web安全/安全设备/命令执行/安恒明御安全网关aaa_portal_auth_wchat_submit存在远程命令执行漏洞.md"
+previous_fofa_unverified: "app.name="
+hunter: "app.name=\"安恒明御安全网关\""
 ---
 
 # 安恒明御安全网关aaa_portal_auth_wchat_submit存在远程命令执行漏洞
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 Hunter 的完整表达式已记入 `hunter`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）

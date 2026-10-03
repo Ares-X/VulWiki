@@ -17,14 +17,17 @@ archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bff
 archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
 source_status: "recorded"
 source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
-fofa_unverified: "查询语句"
 source_url: "https://mp.weixin.qq.com/s/Z5gPjqd5QlZaMc5DFT802A"
 id: "vw-3b058ef0d92b9955a9dee757"
 entity_id: "ve-3b058ef0d92b9955a9dee757"
 schema_version: "1"
+previous_fofa_unverified: "查询语句"
+fofa: "app=\"网御星云 - 上网行为管理系统\""
 ---
 
 # 网御 ACM 上网行为管理系统 bottomframe.cgi 接口存在 SQL 注入漏洞 附 POC
+
+> 指纹字段校订（2026-10-04）：按原归档正文的明确平台标签及完整表达式恢复当前查询，旧误填或截取字段逐字保存在 `previous_*`；后文对此旧字段的诊断按当前字段阅读。仅经过本库保守语法与原字面核对，未在线运行查询，不把指纹命中视为漏洞存在。
 
 <!-- vulwiki-editorial-rebuild:system-misc -->
 ## 条目范围与校订

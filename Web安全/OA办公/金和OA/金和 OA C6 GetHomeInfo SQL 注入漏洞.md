@@ -16,13 +16,16 @@ review_date: "2026-10-02"
 source_url: "https://mp.weixin.qq.com/s/ZZU-A9dCqxia1eAvKALmSA"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E9%87%91%E5%92%8COA/%E9%87%91%E5%92%8C%20OA%20C6%20GetHomeInfo%20SQL%20%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md"
-fofa_unverified: "语句进行资产收集... 确认测试目标**"
 id: "vw-822d6fd6ab1d12c9e3c5fe2b"
 entity_id: "ve-822d6fd6ab1d12c9e3c5fe2b"
 schema_version: "1"
+previous_fofa_unverified: "语句进行资产收集... 确认测试目标**"
+fofa: "app=\"金和网络-金和OA\""
 ---
 
 # 金和C6 GetHomeInfo userID SQL 注入
+
+> 指纹字段校订（2026-10-04）：按原归档正文的明确平台标签及完整表达式恢复当前查询，旧误填或截取字段逐字保存在 `previous_*`；后文对此旧字段的诊断按当前字段阅读。仅经过本库保守语法与原字面核对，未在线运行查询，不把指纹命中视为漏洞存在。
 
 ## 条目说明
 

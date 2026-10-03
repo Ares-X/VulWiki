@@ -1,5 +1,5 @@
 ---
-version: "狮子鱼CMS"
+version: "unknown；转载原文“漏洞影响”处仅写狮子鱼CMS，未列影响版本或构建"
 source: "Threekiii/Vulnerability-Wiki"
 product: "狮子鱼CMS bundledCKeditor multiimg"
 record_type: "vulnerability"
@@ -17,6 +17,7 @@ source_status: "unknown"
 id: "vw-704ba020fca93b6922ea5c57"
 entity_id: "ve-704ba020fca93b6922ea5c57"
 schema_version: "1"
+previous_version: "狮子鱼CMS"
 ---
 
 ## 核对与使用边界
@@ -41,6 +42,8 @@ schema_version: "1"
 历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # 狮子鱼CMS image_upload.php 任意文件上传
+
+> 版本字段校订（2026-10-04）：代码、命令、路径、产品名或章节标记误入版本字段的值已逐字保存到对应 `previous_*` 字段；当前版本字段只记正文明确的来源范围，无范围时记为 unknown。后文对此元数据误填的旧说明描述校订前状态，其余实验条件与待核项仍按原文保留。
 
 ## 漏洞描述
 

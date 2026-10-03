@@ -11,15 +11,18 @@ primary_identifiers: ""
 referenced_identifiers: ""
 identifier_role: "unknown"
 prerequisites: "Windows cmd.exe、Struts危险前缀处理、端点无有效鉴权；版本/具体型号缺失"
-fofa_unverified: "body="
 source_status: "unknown"
 side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
 id: "vw-20fb7afcc8aba3bf1b11d6eb"
 entity_id: "ve-20fb7afcc8aba3bf1b11d6eb"
 schema_version: "1"
+previous_fofa_unverified: "body="
+fofa: "body=\"速达软件技术（广州）有限公司\" && body=\"jslib/extjs2.3/view/PasswordField.js\""
 ---
 
 # 速达软件 多款产品 doSavePrintTpl.action Struts2远程代码执行漏洞
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 FOFA 的完整表达式已记入 `fofa`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 <!-- vulwiki-editorial:start -->
 ## 校订与适用边界

@@ -1,5 +1,5 @@
 ---
-version: "- --insecure-port=8080"
+version: "unknown"
 source: "Threekiii/Vulnerability-Wiki"
 title: "Kubernetes API Server 未授权命令执行"
 product: "Kubernetes API Server"
@@ -12,15 +12,19 @@ primary_identifiers: ""
 referenced_identifiers: ""
 identifier_role: "unknown"
 prerequisites: "旧版本开启insecure端口，或匿名认证启用且绑定cluster-admin；不是默认6443暴露即漏洞"
-affected_versions: "- --insecure-port=8080"
+affected_versions: "unknown"
 source_status: "unknown"
 side_effects: "含计划任务、启动项或 SSH 授权文件写入：会改变后续执行或登录行为。测试前备份原文件，结束后恢复原内容、权限与属主，不覆盖生产文件。; 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。"
 id: "vw-7616b8c1f5a7219c23ea4a24"
 entity_id: "ve-7616b8c1f5a7219c23ea4a24"
 schema_version: "1"
+previous_version: "- --insecure-port=8080"
+previous_affected_versions: "- --insecure-port=8080"
 ---
 
 # Kubernetes API Server 未授权命令执行
+
+> 版本字段校订（2026-10-04）：误填的版本字段原值逐字保存到对应 `previous_*` 字段。当前值区分正文声称的影响范围、实验环境与尚未知的范围；后文对该元数据误填的旧说明只描述校订前状态，未据此升级来源结论。
 
 <!-- vulwiki-editorial:start -->
 ## 校订与适用边界

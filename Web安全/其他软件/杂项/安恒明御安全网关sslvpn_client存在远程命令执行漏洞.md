@@ -17,15 +17,17 @@ archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bff
 archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
 source_status: "recorded"
 source_note: "正文标注的原文链接；链接内容及权威性未在本次重新核验"
-fofa_unverified: "app.name="
 hunter: "app.name=\"安恒明御安全网关\""
 source_url: "https://www.yuque.com/xiaokp7/ocvun2/dg8qpqumcbgb7vgs"
 id: "vw-1dc9233a55c578d83290c3c8"
 entity_id: "ve-1dc9233a55c578d83290c3c8"
 schema_version: "1"
+previous_fofa_unverified: "app.name="
 ---
 
 # 安恒明御安全网关sslvpn_client存在远程命令执行漏洞
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 Hunter 的完整表达式已记入 `hunter`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 <!-- vulwiki-editorial-rebuild:system-misc -->
 ## 条目范围与校订

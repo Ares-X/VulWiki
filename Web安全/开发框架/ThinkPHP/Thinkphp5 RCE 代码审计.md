@@ -1,5 +1,5 @@
 ---
-version: "`环境：phpstorm+xdebug``Thinkphp_5.0.14_full``phpstorm+xdebug环境可自行百度搭建``poc: ?s=ind"
+version: "原文声称 ThinkPHP 5.0.23 及以下；实验环境为 ThinkPHP 5.0.14_full，载荷还列 5.0.22 和 5.1.29。原文概述范围、分支载荷及修复阈值有冲突，待核，不裁决。"
 source: "MrWQ/vulnerability-paper"
 product: "ThinkPHP / 控制器反射"
 record_type: "unknown"
@@ -18,6 +18,7 @@ source_url: "https://mp.weixin.qq.com/s/4G6mKlJxHP_aunfgzKBQkg"
 id: "vw-8f398e48453b9364487e390d"
 entity_id: "ve-8f398e48453b9364487e390d"
 schema_version: "1"
+previous_version: "`环境：phpstorm+xdebug``Thinkphp_5.0.14_full``phpstorm+xdebug环境可自行百度搭建``poc: ?s=ind"
 ---
 
 ## 核对与使用边界
@@ -39,6 +40,8 @@ schema_version: "1"
 历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Thinkphp5 RCE 代码审计
+
+> 版本字段校订（2026-10-04）：误填的版本字段原值逐字保存到对应 `previous_*` 字段。当前值区分正文声称的影响范围、实验环境与尚未知的范围；后文对该元数据误填的旧说明只描述校订前状态，未据此升级来源结论。
 
 <meta name="referrer" content="no-referrer"/>
 

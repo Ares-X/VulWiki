@@ -16,13 +16,16 @@ review_date: "2026-10-02"
 source_url: "https://mp.weixin.qq.com/s/xVIXGxMACM-n9iBu42KbMg"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/JEEWMS/jeewms%20%E5%AD%98%E5%9C%A8%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md"
-fofa_unverified: "语句：body="
 id: "vw-f96bc14e05e28a0e9333117b"
 entity_id: "ve-f96bc14e05e28a0e9333117b"
 schema_version: "1"
+previous_fofa_unverified: "语句：body="
+fofa: "body=\"plug-in/lhgDialog/lhgdialog.min.js?skin=metro\" && body=\" 仓 \""
 ---
 
 # JeeWMS 动态数据源JDBC反序列化链
+
+> 指纹字段校订（2026-10-04）：按原归档正文的明确平台标签及完整表达式恢复当前查询，旧误填或截取字段逐字保存在 `previous_*`；后文对此旧字段的诊断按当前字段阅读。仅经过本库保守语法与原字面核对，未在线运行查询，不把指纹命中视为漏洞存在。
 
 ## 条目说明
 

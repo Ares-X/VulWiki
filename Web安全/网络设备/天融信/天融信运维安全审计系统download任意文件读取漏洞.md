@@ -3,7 +3,6 @@ source: "SourByte05/Vulnerability-Wiki-PoC"
 id: "vw-9ebadc7c512c1a47d785beea"
 entity_id: "ve-9ebadc7c512c1a47d785beea"
 schema_version: "1"
-fofa_unverified: "header="
 title: "天融信运维安全审计系统download任意文件读取漏洞"
 product: "Topsec TopSAG运维安全审计"
 record_type: "advisory"
@@ -19,9 +18,13 @@ archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bff
 review_date: "2026-10-02"
 side_effects: "读取内容可能包含配置、账户或个人数据；应只保存授权环境中最小必要的响应，不能由接口可达推定敏感内容已泄露"
 source_status: "unknown"
+previous_fofa_unverified: "header="
+fofa: "header=\"iam\" && server=\"Apache-Coyote/\""
 ---
 
 # 天融信运维安全审计系统download任意文件读取漏洞
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 FOFA 的完整表达式已记入 `fofa`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）

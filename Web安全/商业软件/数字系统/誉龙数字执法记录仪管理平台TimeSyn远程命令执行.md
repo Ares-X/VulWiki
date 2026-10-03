@@ -17,13 +17,15 @@ source_url: "https://www.yuque.com/xiaokp7/ocvun2/tory9ats6o7dd65g"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/%E6%95%B0%E5%AD%97%E7%B3%BB%E7%BB%9F/%E8%AA%89%E9%BE%99%E6%95%B0%E5%AD%97%E6%89%A7%E6%B3%95%E8%AE%B0%E5%BD%95%E4%BB%AA%E7%AE%A1%E7%90%86%E5%B9%B3%E5%8F%B0TimeSyn%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C.md"
 fofa: "body=\"PView 视音频管理平台\""
-fofa_unverified: "body="
 id: "vw-cbe95f6d501da8fc45c006e9"
 entity_id: "ve-cbe95f6d501da8fc45c006e9"
 schema_version: "1"
+previous_fofa_unverified: "body="
 ---
 
 # 誉龙PView执法记录仪管理 Third TimeSyn date命令注入
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 FOFA 的完整表达式已记入 `fofa`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 ## 条目说明
 

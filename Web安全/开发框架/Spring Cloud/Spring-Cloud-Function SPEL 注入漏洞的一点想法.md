@@ -1,5 +1,5 @@
 ---
-version: "`@Bean` `public Function<Person, Person> pojoecho() {` `return x -> {` `System.o"
+version: "原文声称 Spring Cloud Function 3.0.0.RELEASE 至 3.2 存在表达式注入；实验具体版本未给，正文技术分析仍提示适配器/配置前提待核。"
 source: "MrWQ/vulnerability-paper"
 product: "Spring Cloud Function路由SpEL"
 record_type: "analysis"
@@ -18,6 +18,7 @@ source_url: "https://mp.weixin.qq.com/s/sPPyso-WyPGnYYHeyL9DPA"
 id: "vw-f21e5f675ba7b6744c2fae44"
 entity_id: "ve-f21e5f675ba7b6744c2fae44"
 schema_version: "1"
+previous_version: "`@Bean` `public Function<Person, Person> pojoecho() {` `return x -> {` `System.o"
 ---
 
 ## 核对与使用边界
@@ -39,6 +40,8 @@ schema_version: "1"
 历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # Spring-Cloud-Function SPEL 注入漏洞的一点想法
+
+> 版本字段校订（2026-10-04）：误填的版本字段原值逐字保存到对应 `previous_*` 字段。当前值区分正文声称的影响范围、实验环境与尚未知的范围；后文对该元数据误填的旧说明只描述校订前状态，未据此升级来源结论。
 
 <meta name="referrer" content="no-referrer"/>
 

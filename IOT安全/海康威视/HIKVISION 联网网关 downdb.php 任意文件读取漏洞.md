@@ -1,5 +1,5 @@
 ---
-version: "Hikvision 联网网关，流媒体管理服务器"
+version: "unknown；原文“漏洞影响”处仅写 Hikvision 联网网关/流媒体管理服务器，未列固件范围"
 source: "Threekiii/Awesome-POC"
 id: "vw-29ca62cabb3779b9864faa91"
 entity_id: "ve-56b6fd014cb832cdbe221db7"
@@ -21,9 +21,12 @@ side_effects: "读取内容可能包含配置、账户或个人数据；应只�
 source_status: "unknown"
 canonical: "Web安全/智能设备/HIKVISION-联网网关-downdb.php/HIKVISION-联网网关-downdb.php-任意文件读取漏洞.md"
 relation_type: "duplicate_of"
+previous_version: "Hikvision 联网网关，流媒体管理服务器"
 ---
 
 # Hikvision 联网网关 downdb.php 任意文件读取漏洞
+
+> 版本字段校订（2026-10-04）：代码、命令、路径、产品名或章节标记误入版本字段的值已逐字保存到对应 `previous_*` 字段；当前版本字段只记正文明确的来源范围，无范围时记为 unknown。后文对此元数据误填的旧说明描述校订前状态，其余实验条件与待核项仍按原文保留。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）

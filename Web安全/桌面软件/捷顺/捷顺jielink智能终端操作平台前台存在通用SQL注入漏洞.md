@@ -17,14 +17,16 @@ archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bff
 archive_commit: "41940cb0038d09ca5aaddbe5bffb923e423d210f"
 source_status: "missing"
 source_note: "原始出处待补；仓库归档不等同原始披露"
-fofa_unverified: "title="
 fofa: "title=\"JieLink+智能终端操作平台\""
 id: "vw-4bfe5969472836d38198d403"
 entity_id: "ve-4bfe5969472836d38198d403"
 schema_version: "1"
+previous_fofa_unverified: "title="
 ---
 
 # 捷顺jielink智能终端操作平台前台存在通用SQL注入漏洞
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 FOFA 的完整表达式已记入 `fofa`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 <!-- vulwiki-editorial-rebuild:system-misc -->
 ## 条目范围与校订

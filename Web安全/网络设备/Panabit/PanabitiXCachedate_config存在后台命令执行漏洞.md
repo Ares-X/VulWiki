@@ -3,7 +3,6 @@ source: "wy876 漏洞文库"
 id: "vw-383317a8817c4e5d1c5257df"
 entity_id: "ve-383317a8817c4e5d1c5257df"
 schema_version: "1"
-fofa_unverified: "<font style="
 title: "Panabit iXCache date_config存在后台命令执行漏洞"
 product: "Panabit iXCache"
 record_type: "vulnerability"
@@ -20,9 +19,13 @@ review_date: "2026-10-02"
 side_effects: "时间/NTP 设置会改变设备时钟及同步配置，可能影响日志、证书和业务；需记录原值并在隔离实验后恢复"
 source_url: "https://www.yuque.com/xiaokp7/ocvun2/pm3gifvcepzx9xkc"
 source_status: "recorded"
+previous_fofa_unverified: "<font style="
+fofa: "title=\"iXCache\""
 ---
 
 # Panabit iXCache date_config存在后台命令执行漏洞
+
+> 指纹字段校订（2026-10-04）：按原归档正文的明确平台标签及完整表达式恢复当前查询，旧误填或截取字段逐字保存在 `previous_*`；后文对此旧字段的诊断按当前字段阅读。仅经过本库保守语法与原字面核对，未在线运行查询，不把指纹命中视为漏洞存在。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）

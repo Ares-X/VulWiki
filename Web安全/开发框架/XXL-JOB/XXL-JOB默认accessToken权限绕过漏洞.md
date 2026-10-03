@@ -10,7 +10,6 @@ primary_identifiers: ""
 referenced_identifiers: ""
 identifier_role: "unknown"
 identifier_status: "unknown"
-fofa_unverified: "app.name="
 title: "XXL-JOB默认accessToken权限绕过漏洞"
 prerequisites: "来源所述条件，未列明部分仍待核：只写XXL-JOB，缺精确版本且必须未改default_token"
 side_effects: "未执行；本文需注意的操作影响：COVER_EARLY与jobId有副作用；固定大jobId运行任务，需标仅隔离验证及清理"
@@ -18,6 +17,8 @@ source_status: "unknown"
 id: "vw-5b613e7f1bfe6870d8ff5257"
 entity_id: "ve-5b613e7f1bfe6870d8ff5257"
 schema_version: "1"
+previous_fofa_unverified: "app.name="
+hunter: "app.name=\"XXL-JOB\""
 ---
 
 ## 核对与使用边界
@@ -41,6 +42,8 @@ schema_version: "1"
 历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # XXL-JOB默认accessToken权限绕过漏洞
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 Hunter 的完整表达式已记入 `hunter`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 # 一、漏洞简介
 <font style="color:rgb(0, 0, 0);"> XXL-JOB 默认配置下，用于调度通讯的 accessToken 不是随机生成的，而是使用 application.properties 配置文件中的默认值。在实际使用中如果没有修改默认值，攻击者可利用此绕过认证调用 executor，执行任意代码，从而获取服务器权限。</font>

@@ -260,7 +260,7 @@ nodes/proxy CREATE
   
 ![Security Audit - kubernetes/kubernetes#119270](https://mmbiz.qpic.cn/mmbiz_png/hoiaQy7WhTCPfW0EB7O0QSynJ8wXGtoYEnibtbCLPbG7FHXFUEHC2TMtRUUGYSSxEPVFic82fpNiar0wOI7EkWEQqQ/640?wx_fmt=png&from=appmsg "")  
   
-Security Audit - kubernetes/kubernetes[#119270]()  
+Security Audit - `kubernetes/kubernetes#119270`  
   
   
 安全审计 - kubernetes/kubernetes#119270  

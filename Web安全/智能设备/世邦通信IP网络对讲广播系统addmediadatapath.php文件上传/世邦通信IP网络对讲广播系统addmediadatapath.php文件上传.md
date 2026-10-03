@@ -3,7 +3,6 @@ source: "SourByte05/Vulnerability-Wiki-PoC"
 id: "vw-5193b8231a82d9f9f1b42777"
 entity_id: "ve-5193b8231a82d9f9f1b42777"
 schema_version: "1"
-fofa_unverified: "icon_hash="
 title: "世邦通信IP网络对讲广播系统addmediadatapath.php文件上传"
 product: "世邦SPON IP网络对讲广播系统"
 record_type: "vulnerability"
@@ -19,9 +18,13 @@ archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bff
 review_date: "2026-10-02"
 side_effects: "文中写入/上传步骤会创建或覆盖目标文件；须先核对服务账户写权限、保存路径和脚本解析条件，验证后按原路径核查残留"
 source_status: "unknown"
+previous_fofa_unverified: "icon_hash="
+fofa: "icon_hash=\"-1830859634\""
 ---
 
 # 世邦通信IP网络对讲广播系统addmediadatapath.php文件上传
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 FOFA 的完整表达式已记入 `fofa`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）

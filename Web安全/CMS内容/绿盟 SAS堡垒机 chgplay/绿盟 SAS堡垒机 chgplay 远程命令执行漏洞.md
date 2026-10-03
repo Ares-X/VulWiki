@@ -1,5 +1,5 @@
 ---
-fofa: ""
+fofa: "body=\"needUsbkey.php?username\""
 source: "SourByte05/Vulnerability-Wiki-PoC"
 product: "绿盟 SAS 堡垒机"
 record_type: "unknown"
@@ -10,7 +10,6 @@ primary_identifiers: ""
 referenced_identifiers: ""
 identifier_role: "unknown"
 identifier_status: "unknown"
-fofa_unverified: "body="
 category_recommendation: "Web安全/运维面板"
 title: "绿盟 SAS堡垒机 chgplay 远程命令执行漏洞"
 prerequisites: "来源所述条件，未列明部分仍待核：chgplayroute; sid/authunknown;sessionid shellinterp; DNS/ICMPegress"
@@ -19,6 +18,7 @@ source_status: "unknown"
 id: "vw-e00572e011c946af3c2e8c8b"
 entity_id: "ve-e00572e011c946af3c2e8c8b"
 schema_version: "1"
+previous_fofa_unverified: "body="
 ---
 
 ## 核对与使用边界
@@ -42,6 +42,8 @@ schema_version: "1"
 历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # 绿盟 SAS堡垒机 chgplay 远程命令执行漏洞
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 FOFA 的完整表达式已记入 `fofa`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 # 漏洞描述
 

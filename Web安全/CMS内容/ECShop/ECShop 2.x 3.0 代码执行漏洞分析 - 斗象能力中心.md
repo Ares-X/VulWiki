@@ -1,5 +1,5 @@
 ---
-version: "$arr\\[‘num’\\] = intval($arr\\[‘num’\\]);"
+version: "原归档声称 ECShop 2.x 与 3.0 存在代码执行问题；正文区分 2.7 与 3.x 的哈希分支，并称 3.6 有修复，精确修复构建待核。"
 source: "MrWQ/vulnerability-paper"
 product: "ECShop2.x/3.0"
 record_type: "analysis"
@@ -17,6 +17,7 @@ source_status: "unknown"
 id: "vw-67042c38c8f7887433b9c0d3"
 entity_id: "ve-67042c38c8f7887433b9c0d3"
 schema_version: "1"
+previous_version: "$arr\\[‘num’\\] = intval($arr\\[‘num’\\]);"
 ---
 
 ## 核对与使用边界
@@ -38,6 +39,8 @@ schema_version: "1"
 历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # ECShop 2.x 3.0 代码执行漏洞分析 - 斗象能力中心
+
+> 版本字段校订（2026-10-04）：误填的版本字段原值逐字保存到对应 `previous_*` 字段。当前值区分正文声称的影响范围、实验环境与尚未知的范围；后文对该元数据误填的旧说明只描述校订前状态，未据此升级来源结论。
 
 <meta name="referrer" content="no-referrer"/>
 

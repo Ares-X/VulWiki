@@ -3,7 +3,6 @@ source: "wy876 漏洞文库"
 id: "vw-d2673bd11834d75b81b13de6"
 entity_id: "ve-d2673bd11834d75b81b13de6"
 schema_version: "1"
-fofa_unverified: "app.name=="
 title: "锐捷NBR路由器fileupload.php任意文件上传漏洞"
 product: "Ruijie NBR EWEB"
 record_type: "vulnerability"
@@ -20,9 +19,13 @@ review_date: "2026-10-02"
 side_effects: "文中写入/上传步骤会创建或覆盖目标文件；须先核对服务账户写权限、保存路径和脚本解析条件，验证后按原路径核查残留"
 source_url: "https://www.yuque.com/xiaokp7/ocvun2/ydw1qor2zc4dv3k8"
 source_status: "recorded"
+previous_fofa_unverified: "app.name=="
+hunter: "app.name==\"Ruijie 锐捷 EWEB\""
 ---
 
 # 锐捷NBR路由器fileupload.php任意文件上传漏洞
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 Hunter 的完整表达式已记入 `hunter`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）

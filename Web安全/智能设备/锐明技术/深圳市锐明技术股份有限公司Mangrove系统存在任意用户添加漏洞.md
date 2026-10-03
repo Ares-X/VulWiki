@@ -3,7 +3,6 @@ source: "SourByte05/Vulnerability-Wiki-PoC"
 id: "vw-bd84a3543e73bde398424199"
 entity_id: "ve-bd84a3543e73bde398424199"
 schema_version: "1"
-fofa_unverified: "icon_hash="
 title: "深圳市锐明技术股份有限公司Mangrove系统存在任意用户添加漏洞"
 product: "Streamax锐明Mangrove"
 record_type: "vulnerability"
@@ -19,9 +18,13 @@ archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bff
 review_date: "2026-10-02"
 side_effects: "账户操作会新增用户或更改认证材料，可能使原用户失去访问；须核对角色、操作前账户状态及恢复路径"
 source_status: "unknown"
+previous_fofa_unverified: "icon_hash="
+fofa: "icon_hash=\"564025728\""
 ---
 
 # 深圳市锐明技术股份有限公司Mangrove系统存在任意用户添加漏洞
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 FOFA 的完整表达式已记入 `fofa`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）

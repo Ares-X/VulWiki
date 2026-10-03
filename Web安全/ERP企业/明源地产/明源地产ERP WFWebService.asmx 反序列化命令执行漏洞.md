@@ -17,13 +17,15 @@ source_url: "https://github.com/SourByte05/Vulnerability-Wiki-PoC"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E6%98%8E%E6%BA%90%E5%9C%B0%E4%BA%A7/%E6%98%8E%E6%BA%90%E5%9C%B0%E4%BA%A7ERP%20WFWebService.asmx%20%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md"
 fofa: "title=\"明源地产ERP\""
-fofa_unverified: "title="
 id: "vw-300c7c08e79aa7474b69ae97"
 entity_id: "ve-300c7c08e79aa7474b69ae97"
 schema_version: "1"
+previous_fofa_unverified: "title="
 ---
 
 # 明源地产ERP WFWebService WriteLog反序列化
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 FOFA 的完整表达式已记入 `fofa`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 ## 条目说明
 

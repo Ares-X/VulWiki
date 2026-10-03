@@ -1,5 +1,5 @@
 ---
-version: "Panabit Panalog"
+version: "unknown；原文“漏洞影响”处仅写 Panabit Panalog，未列版本范围"
 source: "Threekiii/Awesome-POC"
 id: "vw-bb4034db3ab7ffe157c84b2d"
 entity_id: "ve-0a545dc1e5efa22c72ffb112"
@@ -21,9 +21,12 @@ side_effects: "执行文中载荷可能以目标进程权限启动命令或加�
 source_status: "unknown"
 canonical: "Web安全/网络设备/Panabit/Panabit-Panalog-sy_addmount.php-远程命令执行漏洞.md"
 relation_type: "duplicate_of"
+previous_version: "Panabit Panalog"
 ---
 
 # Panabit Panalog sy_addmount.php 远程命令执行漏洞
+
+> 版本字段校订（2026-10-04）：代码、命令、路径、产品名或章节标记误入版本字段的值已逐字保存到对应 `previous_*` 字段；当前版本字段只记正文明确的来源范围，无范围时记为 unknown。后文对此元数据误填的旧说明描述校订前状态，其余实验条件与待核项仍按原文保留。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）

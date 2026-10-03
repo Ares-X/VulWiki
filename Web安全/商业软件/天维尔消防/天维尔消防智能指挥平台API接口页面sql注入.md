@@ -17,13 +17,15 @@ source_url: "https://www.yuque.com/xiaokp7/ocvun2/ch6s7681pfvp2rws"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/%E5%A4%A9%E7%BB%B4%E5%B0%94%E6%B6%88%E9%98%B2/%E5%A4%A9%E7%BB%B4%E5%B0%94%E6%B6%88%E9%98%B2%E6%99%BA%E8%83%BD%E6%8C%87%E6%8C%A5%E5%B9%B3%E5%8F%B0API%E6%8E%A5%E5%8F%A3%E9%A1%B5%E9%9D%A2sql%E6%B3%A8%E5%85%A5.md"
 fofa: "body=\"1997-2020 天维尔信息科技股份有限公司\""
-fofa_unverified: "body="
 id: "vw-13bd03c87fb524b81b299b5a"
 entity_id: "ve-13bd03c87fb524b81b299b5a"
 schema_version: "1"
+previous_fofa_unverified: "body="
 ---
 
 # 天维尔消防智能指挥平台 mfsNotice/page query.gsdwid SQL注入
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 FOFA 的完整表达式已记入 `fofa`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 ## 条目说明
 

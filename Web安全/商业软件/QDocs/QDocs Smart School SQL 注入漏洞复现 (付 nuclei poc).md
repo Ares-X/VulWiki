@@ -16,13 +16,16 @@ review_date: "2026-10-02"
 source_url: "https://mp.weixin.qq.com/s/5axvlF97KieYz97q3xyRuA"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/QDocs/QDocs%20Smart%20School%20SQL%20%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0%20%28%E4%BB%98%20nuclei%20poc%29.md"
-fofa_unverified: "搜索语句"
 id: "vw-a5ab8e0fa5193d86b6ba7388"
 entity_id: "ve-a5ab8e0fa5193d86b6ba7388"
 schema_version: "1"
+previous_fofa_unverified: "搜索语句"
+fofa: "body=\"close closebtnmodal\""
 ---
 
 # QDocs Smart School filterRecords searchfield SQL注入
+
+> 指纹字段校订（2026-10-04）：按原归档正文的明确平台标签及完整表达式恢复当前查询，旧误填或截取字段逐字保存在 `previous_*`；后文对此旧字段的诊断按当前字段阅读。仅经过本库保守语法与原字面核对，未在线运行查询，不把指纹命中视为漏洞存在。
 
 ## 条目说明
 

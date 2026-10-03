@@ -1,5 +1,5 @@
 ---
-version: "Konga"
+version: "unknown；原文“漏洞影响”处仅写 Konga，未列影响版本或构建"
 source: "Threekiii/Vulnerability-Wiki"
 title: "Konga 普通用户越权获取管理员权限漏洞"
 product: "Konga Kong管理界面"
@@ -12,16 +12,20 @@ primary_identifiers: ""
 referenced_identifiers: ""
 identifier_role: "unknown"
 prerequisites: "有效普通用户token及相应用户ID"
-affected_versions: "Konga"
+affected_versions: "unknown；原文“漏洞影响”处仅写 Konga，未列影响版本或构建"
 source_status: "unknown"
 side_effects: "含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。"
 id: "vw-93246b061347b9e8647e8c73"
 entity_id: "ve-93246b061347b9e8647e8c73"
 schema_version: "1"
 canonical: "Web安全/中间件/Konga/Konga-普通用户越权获取管理员权限漏洞.md"
+previous_version: "Konga"
+previous_affected_versions: "Konga"
 ---
 
 # Konga 普通用户越权获取管理员权限漏洞
+
+> 版本字段校订（2026-10-04）：代码、命令、路径、产品名或章节标记误入版本字段的值已逐字保存到对应 `previous_*` 字段；当前版本字段只记正文明确的来源范围，无范围时记为 unknown。后文对此元数据误填的旧说明描述校订前状态，其余实验条件与待核项仍按原文保留。
 
 <!-- vulwiki-editorial:start -->
 ## 校订与适用边界

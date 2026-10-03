@@ -1,8 +1,8 @@
 ---
 cve: "CVE-2016-4977"
-identifier_role: "unknown"
+identifier_role: "reference"
 primary_identifiers: ""
-referenced_identifiers: ""
+referenced_identifiers: "CVE-2016-4977"
 identifier_status: "unknown"
 title: "常见框架漏洞复现——Spring"
 product: "Spring多组件漏洞复现合集"
@@ -21,9 +21,13 @@ source_url: "https://mp.weixin.qq.com/s/9vAdMAaSTS-RhW2-KtK_7g"
 id: "vw-fd0528481b68bc4ea676e2f8"
 entity_id: "ve-fd0528481b68bc4ea676e2f8"
 schema_version: "1"
+previous_identifier_role: "unknown"
+previous_referenced_identifiers: ""
 ---
 
 # 常见框架漏洞复现——Spring
+
+> 编号角色校订（2026-10-04）：按归档技术正文区分主讨论编号与背景引用，更新 `primary_identifiers` / `referenced_identifiers` 及旧字段角色。旧编号原值、状态与正文保持原样，变更前字段逐字保存在 `previous_*`；后文旧的角色待核说明应按当前字段阅读。这里的角色判读不等于官方分配核验或漏洞复现。
 
 <!-- vulwiki-editorial-rebuild:system-misc -->
 ## 条目范围与校订

@@ -17,13 +17,15 @@ source_url: "https://www.yuque.com/xiaokp7/ocvun2/svb01mcl3q5d1dwx"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/%E9%B1%BC%E5%B0%BE%E5%B7%B4%E7%A7%91%E6%8A%80/%E5%8C%BB%E7%96%97%E5%AE%89%E5%85%A8%28%E4%B8%8D%E8%89%AF%29%E4%BA%8B%E4%BB%B6%E6%8A%A5%E5%91%8A%E7%B3%BB%E7%BB%9Fmembers%E5%AD%98%E5%9C%A8%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2%E6%BC%8F%E6%B4%9E.md"
 fofa: "body=\"koma.Application\""
-fofa_unverified: "body="
 id: "vw-c2876c2223575e0606c55764"
 entity_id: "ve-c2876c2223575e0606c55764"
 schema_version: "1"
+previous_fofa_unverified: "body="
 ---
 
 # 鱼尾巴医疗安全不良事件报告系统 members列表信息泄露
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 FOFA 的完整表达式已记入 `fofa`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 ## 条目说明
 

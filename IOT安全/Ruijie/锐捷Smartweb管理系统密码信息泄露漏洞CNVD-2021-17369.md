@@ -4,7 +4,6 @@ source: "wy876 漏洞文库"
 id: "vw-d247c2b8e445fc2e0bcf2931"
 entity_id: "ve-d247c2b8e445fc2e0bcf2931"
 schema_version: "1"
-fofa_unverified: "web.body="
 title: "锐捷Smartweb管理系统 密码信息泄露漏洞 CNVD-2021-17369"
 product: "Ruijie Smartweb"
 record_type: "vulnerability"
@@ -21,9 +20,13 @@ review_date: "2026-10-02"
 side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
 source_url: "https://www.yuque.com/xiaokp7/ocvun2/cg198cbfykmz8637"
 source_status: "recorded"
+previous_fofa_unverified: "web.body="
+hunter: "web.body=\"img/free_login_ge.gif\"&&web.body=\"./img/login_bg.gif\""
 ---
 
 # 锐捷Smartweb管理系统 密码信息泄露漏洞 CNVD-2021-17369
+
+> 指纹字段校订（2026-10-04）：按原归档正文的明确平台标签及完整表达式恢复当前查询，旧误填或截取字段逐字保存在 `previous_*`；后文对此旧字段的诊断按当前字段阅读。仅经过本库保守语法与原字面核对，未在线运行查询，不把指纹命中视为漏洞存在。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）

@@ -3,7 +3,6 @@ source: "wy876 漏洞文库"
 id: "vw-2f840ddcbc67b9baedc9fe40"
 entity_id: "ve-30d8561a4f6ee4a592853faf"
 schema_version: "1"
-fofa_unverified: "app.name="
 title: "安恒明御安全网关 aaa_portal_auth_wchat_submit 资料（原题 config_reset 错配）"
 product: "安恒明御安全网关"
 record_type: "vulnerability"
@@ -22,9 +21,13 @@ source_url: "https://www.yuque.com/xiaokp7/ocvun2/ggogol4vip7aq8zc"
 source_status: "recorded"
 canonical: "Web安全/安全设备/命令执行/安恒明御安全网关aaa_portal_auth_wchat_submit存在远程命令执行漏洞.md"
 relation_type: "duplicate_of"
+previous_fofa_unverified: "app.name="
+hunter: "app.name=\"安恒明御安全网关\""
 ---
 
 # 安恒明御安全网关 aaa_portal_auth_wchat_submit 资料（原题 config_reset 错配）
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 Hunter 的完整表达式已记入 `hunter`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）

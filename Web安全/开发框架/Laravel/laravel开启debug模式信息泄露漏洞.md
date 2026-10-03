@@ -10,7 +10,6 @@ primary_identifiers: ""
 referenced_identifiers: ""
 identifier_role: "unknown"
 identifier_status: "unknown"
-fofa_unverified: "app.name=="
 title: "laravel开启debug模式信息泄露漏洞"
 prerequisites: "来源所述条件，未列明部分仍待核：仅产品名，需debug开启、请求触发异常及错误页实际暴露环境信息"
 side_effects: "未执行；原文未提供完整的状态变化与恢复证据，实际操作影响按本文入口、进程权限和实验条件核对"
@@ -18,6 +17,8 @@ source_status: "unknown"
 id: "vw-255df2c9368c7d50d22a5d81"
 entity_id: "ve-255df2c9368c7d50d22a5d81"
 schema_version: "1"
+previous_fofa_unverified: "app.name=="
+hunter: "app.name==\"Laravel Default Page\""
 ---
 
 ## 核对与使用边界
@@ -39,6 +40,8 @@ schema_version: "1"
 历史原文标识：下文原技术材料按来源保留；仅本节明确确认的更正替代相应旧说法，标为待核的观察仍不是事实确认。
 
 # laravel开启debug模式信息泄露漏洞
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 Hunter 的完整表达式已记入 `hunter`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 # 一、漏洞简介
 <font style="color:rgba(0, 0, 0, 0.9);">laravel因配置不当会泄露MySQL，Redis，Elastic，Mongodb，neo4j，postgresql，SQLServer，Oracle，Firebird，sqlite，mail账号密码和APP</font><font style="color:rgb(215, 186, 125);">\_</font><font style="color:rgba(0, 0, 0, 0.9);">KEY等敏感信息。黑客可以利用这些信息进行脱库，或者在服务器植入后门，也可以利用数据库服务器进行跳板入侵内网其他重要服务器。</font>

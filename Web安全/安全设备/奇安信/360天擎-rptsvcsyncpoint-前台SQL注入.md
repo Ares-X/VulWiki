@@ -1,5 +1,5 @@
 ---
-version: "天擎"
+version: "unknown；原文“漏洞影响”处仅写天擎，未列软件版本或构建"
 source: "Threekiii/Vulnerability-Wiki"
 id: "vw-ca8aed5346c7e8c621f57e8d"
 entity_id: "ve-ca8aed5346c7e8c621f57e8d"
@@ -19,9 +19,12 @@ archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bff
 review_date: "2026-10-02"
 side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
 source_status: "unknown"
+previous_version: "天擎"
 ---
 
 # 360天擎 rptsvcsyncpoint 前台SQL注入
+
+> 版本字段校订（2026-10-04）：代码、命令、路径、产品名或章节标记误入版本字段的值已逐字保存到对应 `previous_*` 字段；当前版本字段只记正文明确的来源范围，无范围时记为 unknown。后文对此元数据误填的旧说明描述校订前状态，其余实验条件与待核项仍按原文保留。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）

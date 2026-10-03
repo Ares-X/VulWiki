@@ -3,7 +3,6 @@ source: "wy876 漏洞文库"
 id: "vw-d08a81ad592cdf72e4244d5f"
 entity_id: "ve-d08a81ad592cdf72e4244d5f"
 schema_version: "1"
-fofa_unverified: "web.title="
 title: "飞鱼星下一代防火墙安全网关aaa_portal_auth_wchat_submit存在远程命令执行漏洞"
 product: "飞鱼星下一代防火墙安全网关"
 record_type: "advisory"
@@ -20,9 +19,13 @@ review_date: "2026-10-02"
 side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
 source_url: "https://www.yuque.com/xiaokp7/ocvun2/qc40w8qnkoefmbpx"
 source_status: "recorded"
+previous_fofa_unverified: "web.title="
+hunter: "web.title=\"下一代防火墙安全网关\"&&web.body=\"./webui/js/jquerylib/\""
 ---
 
 # 飞鱼星下一代防火墙安全网关aaa_portal_auth_wchat_submit存在远程命令执行漏洞
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 Hunter 的完整表达式已记入 `hunter`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）

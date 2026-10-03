@@ -1,5 +1,5 @@
 ---
-version: "YApi 接口管理平台"
+version: "unknown"
 source: "Threekiii/Awesome-POC"
 title: "YApi 接口管理平台 后台命令执行漏洞"
 product: "YApi"
@@ -18,9 +18,12 @@ side_effects: "原文未完整记录副作用、清理步骤或运行验证；�
 id: "vw-7f8f6dc9536e6e5bfa17b2a9"
 entity_id: "ve-7f8f6dc9536e6e5bfa17b2a9"
 schema_version: "1"
+previous_version: "YApi 接口管理平台"
 ---
 
 # YApi 接口管理平台 后台命令执行漏洞
+
+> 版本字段校订（2026-10-04）：误填的版本字段原值逐字保存到对应 `previous_*` 字段。当前值区分正文声称的影响范围、实验环境与尚未知的范围；后文对该元数据误填的旧说明只描述校订前状态，未据此升级来源结论。
 
 <!-- vulwiki-editorial:start -->
 ## 校订与适用边界

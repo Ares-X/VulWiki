@@ -3,7 +3,6 @@ source: "wy876 漏洞文库"
 id: "vw-3d259b03476025ef9540e076"
 entity_id: "ve-3d259b03476025ef9540e076"
 schema_version: "1"
-fofa_unverified: "cert.subject="
 title: "中远麒麟堡垒机admin_commonuserSQL注入漏洞"
 product: "中远麒麟iAudit堡垒机"
 record_type: "vulnerability"
@@ -20,9 +19,13 @@ review_date: "2026-10-02"
 side_effects: "延时探针会占用线程或数据库连接；需记录基线和对照，单次慢响应或超时不足判定注入"
 source_url: "https://www.yuque.com/xiaokp7/ocvun2/br57cs51cd4m7sr5"
 source_status: "recorded"
+previous_fofa_unverified: "cert.subject="
+fofa: "cert.subject=\"Baolei\""
 ---
 
 # 中远麒麟堡垒机admin_commonuserSQL注入漏洞
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 FOFA 的完整表达式已记入 `fofa`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）

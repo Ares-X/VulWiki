@@ -1,5 +1,5 @@
 ---
-version: "锐捷EG易网关"
+version: "unknown；原文“影响版本”段只写锐捷 EG 易网关，没有具体型号版本或固件构建"
 source: "wy876 漏洞文库"
 id: "vw-0e27f993ffc80eebbf9db42a"
 entity_id: "ve-0e27f993ffc80eebbf9db42a"
@@ -20,9 +20,12 @@ review_date: "2026-10-02"
 side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
 source_url: "https://www.yuque.com/xiaokp7/ocvun2/ewl6ikmuyvguq1ps"
 source_status: "recorded"
+previous_version: "锐捷EG易网关"
 ---
 
 # 锐捷 EG易网关管理员账号密码泄露漏洞
+
+> 版本字段校订（2026-10-04）：代码、命令、路径、产品名或章节标记误入版本字段的值已逐字保存到对应 `previous_*` 字段；当前版本字段只记正文明确的来源范围，无范围时记为 unknown。后文对此元数据误填的旧说明描述校订前状态，其余实验条件与待核项仍按原文保留。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）

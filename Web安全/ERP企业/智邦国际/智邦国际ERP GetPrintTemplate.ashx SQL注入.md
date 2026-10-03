@@ -17,13 +17,15 @@ source_url: "https://github.com/SourByte05/Vulnerability-Wiki-PoC"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E6%99%BA%E9%82%A6%E5%9B%BD%E9%99%85/%E6%99%BA%E9%82%A6%E5%9B%BD%E9%99%85ERP%20GetPrintTemplate.ashx%20SQL%E6%B3%A8%E5%85%A5.md"
 fofa: "body=\"Win7以上版本系统请以管理员模式运行\""
-fofa_unverified: "body="
 id: "vw-a33c572b5b8dde08ea9fed6d"
 entity_id: "ve-a33c572b5b8dde08ea9fed6d"
 schema_version: "1"
+previous_fofa_unverified: "body="
 ---
 
 # 智邦国际ERP GetPrintTemplate ord SQL 注入
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 FOFA 的完整表达式已记入 `fofa`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 ## 条目说明
 

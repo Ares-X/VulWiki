@@ -17,13 +17,15 @@ source_url: "https://github.com/SourByte05/Vulnerability-Wiki-PoC"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E6%99%BA%E6%85%A7%E5%9F%8E%E5%B8%82/%E6%BB%A1%E5%AE%A2%E5%AE%9D%E6%99%BA%E6%85%A7%E9%A3%9F%E5%A0%82%E7%B3%BB%E7%BB%9F%20selectUserByOrgId%20%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE%E6%BC%8F%E6%B4%9E.md"
 fofa: "icon_hash=\"-409875651\""
-fofa_unverified: "icon_hash="
 id: "vw-da0d719bb55742dd391bc766"
 entity_id: "ve-da0d719bb55742dd391bc766"
 schema_version: "1"
+previous_fofa_unverified: "icon_hash="
 ---
 
 # 满客宝智慧食堂 selectUserByOrgId账户信息暴露
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 FOFA 的完整表达式已记入 `fofa`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 ## 条目说明
 

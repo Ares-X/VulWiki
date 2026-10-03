@@ -12,18 +12,22 @@ review_status: "text-reviewed"
 verification_status: "not-reproduced"
 content_status: "needs-review"
 identifier_status: "unknown"
-identifier_role: "unknown"
+identifier_role: "reference"
 primary_identifiers: ""
-referenced_identifiers: ""
+referenced_identifiers: "CNVD-2021-30167"
 prerequisites: "用户用受影响客户端连接攻击者可控服务响应；测试Win10，关闭防护是实验条件"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%AE%89%E5%85%A8%E8%AE%BE%E5%A4%87/%E4%B8%AD%E5%9B%BD%E8%9A%81%E5%89%91/%E5%88%86%E4%BA%AB%20%20%20%E8%9A%81%E5%89%91%20RCE%20%E5%8F%8D%E5%88%B6%E5%A4%8D%E7%8E%B0.md"
 review_date: "2026-10-02"
 side_effects: "回连样例可能向外部地址发送网络请求或建立会话；应使用自己的隔离回连服务，DNS/LDAP 到达只能证明相应交互，不能单独证明 RCE"
 source_url: "https://mp.weixin.qq.com/s/thLttnT09Qr53bTKejw5BA"
 source_status: "recorded"
+previous_identifier_role: "unknown"
+previous_referenced_identifiers: ""
 ---
 
 # 分享   蚁剑 RCE 反制复现
+
+> 编号角色校订（2026-10-04）：按归档技术正文区分主讨论编号与背景引用，更新 `primary_identifiers` / `referenced_identifiers` 及旧字段角色。旧编号原值、状态与正文保持原样，变更前字段逐字保存在 `previous_*`；后文旧的角色待核说明应按当前字段阅读。这里的角色判读不等于官方分配核验或漏洞复现。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）

@@ -17,13 +17,15 @@ source_url: "https://www.yuque.com/xiaokp7/ocvun2/pq90gr1d4fdx1r82"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/%E5%B9%B3%E5%8D%87%E7%94%B5%E5%AD%90%E6%B0%B4%E5%88%A9/%E5%B9%B3%E5%8D%87%E7%94%B5%E5%AD%90%E6%B0%B4%E5%BA%93%E5%AE%89%E5%85%A8%E7%9B%91%E7%AE%A1%E5%B9%B3%E5%8F%B0GetRecordsByTableNameAndColumns%E5%AD%98%E5%9C%A8SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md"
 fofa: "body=\"js/PSExtend.js\""
-fofa_unverified: "body="
 id: "vw-ed9e1c832dc61719e1f19cc3"
 entity_id: "ve-ed9e1c832dc61719e1f19cc3"
 schema_version: "1"
+previous_fofa_unverified: "body="
 ---
 
 # 平升电子水库安全监管平台 GetRecordsByTableNameAndColumns动态SQL查询
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 FOFA 的完整表达式已记入 `fofa`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 ## 条目说明
 

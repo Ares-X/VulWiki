@@ -1,5 +1,5 @@
 ---
-version: "百卓 Smart"
+version: "unknown；原文“漏洞影响”处仅写百卓 Smart，未列软件版本或构建"
 source: "Threekiii/Vulnerability-Wiki"
 id: "vw-1a930cc9a67e92683ef30230"
 entity_id: "ve-1a930cc9a67e92683ef30230"
@@ -19,9 +19,12 @@ archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bff
 review_date: "2026-10-02"
 side_effects: "执行文中载荷可能以目标进程权限启动命令或加载代码；权限受认证角色、操作系统账户及依赖版本约束，不能把 root/200 等通用字符串当成功证据"
 source_status: "unknown"
+previous_version: "百卓 Smart"
 ---
 
 # 百卓 Smart importhtml.php 远程命令执行漏洞
+
+> 版本字段校订（2026-10-04）：代码、命令、路径、产品名或章节标记误入版本字段的值已逐字保存到对应 `previous_*` 字段；当前版本字段只记正文明确的来源范围，无范围时记为 unknown。后文对此元数据误填的旧说明描述校订前状态，其余实验条件与待核项仍按原文保留。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）

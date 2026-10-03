@@ -17,13 +17,15 @@ source_url: "https://github.com/SourByte05/Vulnerability-Wiki-PoC"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E6%97%B6%E7%A9%BA%E6%99%BA%E5%8F%8B/%E6%97%B6%E7%A9%BA%E6%99%BA%E5%8F%8B%E4%BC%81%E4%B8%9A%E6%B5%81%E7%A8%8B%E5%8C%96%E7%AE%A1%E6%8E%A7%E7%B3%BB%E7%BB%9F%20indexService.notice%20%E5%AD%98%E5%9C%A8SQL%E6%B3%A8%E5%85%A5.md"
 fofa: "body=\"继续登录将挤掉原登录设备\""
-fofa_unverified: "body="
 id: "vw-09e2e93527c4a08fed6a1c2a"
 entity_id: "ve-09e2e93527c4a08fed6a1c2a"
 schema_version: "1"
+previous_fofa_unverified: "body="
 ---
 
 # 时空智友 indexService.notice id Oracle SQL 注入
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 FOFA 的完整表达式已记入 `fofa`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 ## 条目说明
 

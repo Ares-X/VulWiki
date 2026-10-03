@@ -3,7 +3,6 @@ source: "wy876 漏洞文库"
 id: "vw-84ce3ec7afb3c35aaae14ad4"
 entity_id: "ve-84ce3ec7afb3c35aaae14ad4"
 schema_version: "1"
-fofa_unverified: "body="
 title: "深圳市锐明技术股份有限公司Crocus系统存在任意用户添加漏洞"
 product: "Streamax锐明Crocus"
 record_type: "vulnerability"
@@ -20,9 +19,13 @@ review_date: "2026-10-02"
 side_effects: "账户操作会新增用户或更改认证材料，可能使原用户失去访问；须核对角色、操作前账户状态及恢复路径"
 source_url: "https://www.yuque.com/xiaokp7/ocvun2/kvyw6n7ou52f1ui6"
 source_status: "recorded"
+previous_fofa_unverified: "body="
+fofa: "body=\"/ThirdResource/respond/respond.min.js\" && title=\"Crocus\""
 ---
 
 # 深圳市锐明技术股份有限公司Crocus系统存在任意用户添加漏洞
+
+> 指纹字段校订（2026-10-04）：本文原归档明确标为 FOFA 的完整表达式已记入 `fofa`；原残缺 `fofa_unverified` 值逐字保存在 `previous_fofa_unverified`。后文关于该字段残缺的旧说明只描述校订前状态。查询用于产品检索，不证明资产受影响。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）
