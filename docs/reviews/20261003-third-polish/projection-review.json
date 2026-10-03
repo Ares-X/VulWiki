@@ -1,0 +1,94 @@
+{
+  "review": {
+    "scope": "Read-only audit of generated source/record/excluded/duplicate-candidate/index projections and Hexo/Docsify search consumers",
+    "repository": "/Users/aresx/Ares-X.github.io/source/wiki/VulWiki",
+    "baseline": "cfb19294812b1435a57e866a87dd18e2ff3ebec3",
+    "head": "cfb19294812b1435a57e866a87dd18e2ff3ebec3",
+    "date": "2026-10-03",
+    "working_tree_note": "Pre-existing untracked .serena/ observed and left untouched. No repository files modified. No generator/build, article code, PoC, HTML, attachment, scanner, or external target executed/accessed."
+  },
+  "verified_counts": {
+    "documents": 5666,
+    "indexed_sources": 5664,
+    "primary_entries": 5570,
+    "excluded_sources": 2,
+    "folded_duplicate_sources": 94,
+    "explicit_entities": 5558,
+    "duplicate_candidate_groups": 476,
+    "virtual_index_category_assignments": 15,
+    "index_categories_in_primary_entries": 67,
+    "summary_claims_match_materialized_lengths": true
+  },
+  "mapping_checks": {
+    "all_entry_fields_match_primary_source_projection": {
+      "fields": ["id", "path", "title", "product", "record_type", "content_status", "review_status", "verification_status", "primary_identifiers", "identifier_status", "identifier_candidates", "referenced_identifiers", "entity_id", "index_category"],
+      "mismatch_count": 0
+    },
+    "source_record_id_assignments": {
+      "assigned_ids": 5664,
+      "unknown_ids": 0,
+      "unassigned_sources": 0,
+      "duplicate_of_canonical_mismatches": 0,
+      "folded_sources": 94
+    },
+    "identifier_role_projection": {
+      "source_records_with_primary_identifiers": 2927,
+      "with_candidate_identifiers": 218,
+      "with_referenced_identifiers": 612,
+      "raw_legacy_identifier_role_field_records": 0,
+      "assessment": "Generated explicit primary/candidate/reference buckets are kept separate in source records; Hexo catalog preserves role tags and related source IDs for search results."
+    },
+    "excluded_records": [
+      {"path": "Web安全/中间件/WebLogic/（CVE-2018-3191）Weblogic远程代码执行漏洞.md", "status": "quarantined", "blocking_checks": []},
+      {"path": "Web安全/数据库/宝塔 Phpmyadmin/宝塔 Phpmyadmin 未授权访问漏洞.md", "status": "quarantined", "blocking_checks": []}
+    ],
+    "virtual_categories": "All 15 explicit index_category values appear in the 5570 record entries; wiki-catalog.js uses those values to place navigation while preserving each Markdown route."
+  },
+  "confirmed_projection_defects": [
+    {
+      "id": "archive-metadata-not-projected",
+      "severity": "medium",
+      "evidence": {
+        "schema": "docs/CONTENT-SCHEMA.md defines archive_url as an optional historical archive URL distinct from source_url and states it does not replace or verify source_url.",
+        "generator": "scripts/wiki.py catalog_record() does not copy archive_url, archive_commit, or archive_title into sources.jsonl.",
+        "consumer": "scripts/wiki.py search --include-sources searches the serialized sources.jsonl object, so these retained archive values cannot be found through this query entrance.",
+        "observed_nonempty_metadata_counts": {"archive_url": 3072, "archive_commit": 1039, "archive_title": 1},
+        "examples": ["Web安全/ERP企业/CyberPower PowerPanel Enterprise/CyberPower PowerPanel Enterprise 存在SQL注入漏洞（CVE-2024-32737）.md", "IOT安全/Panabit/Panabit iXCache date_config 后台命令执行漏洞.md"]
+      },
+      "impact": "Archive provenance is present in source Markdown but absent from generated source records and metadata search; consumers of the projection cannot recover it without reopening the article.",
+      "suggested_correction": "Copy archive_url verbatim as a distinct source-record field and project archive_commit/archive_title when present; keep archive_url separate from source.url. Add a read-only fixture/assertion that a source record and --include-sources query retain and match the exact archive URL, commit and title."
+    },
+    {
+      "id": "reference-link-list-truncated-at-50",
+      "severity": "medium",
+      "evidence": {
+        "generator": "scripts/wiki.py source_candidates() returns list(found.values())[:50].",
+        "affected_documents": 6,
+        "candidate_counts": [
+          {"path": "Web安全/其他软件/杂项/【紧急补丁】Veeam 12.3.2 发布，修复 CVE‑2025‑23121（9.9分 RCE）及两项高危权限滥用漏洞.md", "candidate_urls": 78, "projected_maximum": 50, "omitted_at_least": 28},
+          {"path": "Web安全/商业软件/Chrome/Chrome 120 修补了 10 个漏洞.md", "candidate_urls": 112, "projected_maximum": 50, "omitted_at_least": 62},
+          {"path": "Web安全/商业软件/IBM/IBM 修补数据虚拟化管理器、安全 SOAR 中的 RCE 漏洞.md", "candidate_urls": 88, "projected_maximum": 50, "omitted_at_least": 38},
+          {"path": "Web安全/网络设备/Check Point/CVE-2026-50751 _ Check Point Security Gateway Improper Authentication.md", "candidate_urls": 58, "projected_maximum": 50, "omitted_at_least": 8},
+          {"path": "Web安全/网络设备/Ivanti/CVE-2026-10520 _ Ivanti Sentry Pre-Authenticated OS Command Injection.md", "candidate_urls": 57, "projected_maximum": 50, "omitted_at_least": 7},
+          {"path": "Web安全/网络设备/Palo Alto/CVE-2026-0257 _ Palo Alto Networks PAN-OS GlobalProtect Authentication.md", "candidate_urls": 56, "projected_maximum": 50, "omitted_at_least": 6}
+        ],
+        "candidate_definition": "Read-only extraction matching the generator's source_url/ref/verification_source and labelled-reference URL collection, before its 50-item slice."
+      },
+      "impact": "Source-record links silently omit the later extracted URL values in these six records. The original article remains intact, but generated projection/search cannot retrieve those links, contrary to the repository rule that derived source URLs are not truncated or hidden.",
+      "suggested_correction": "Remove the fixed [:50] truncation or replace it only with a documented, non-lossy projection strategy. Retain each exact URL string and deterministic order/deduplication. Add a focused fixture with over 50 distinct labelled URLs and verify the last URL survives generation and --include-sources search."
+    }
+  ],
+  "not_found_in_checked_projection": [
+    "No mismatch between any of the 5570 record rows and its primary source row for the compared entry metadata fields.",
+    "No missing, duplicate, or mis-canonicalized source_record_ids across the 5664 indexed sources and 5570 primary entries.",
+    "No count discrepancy in the stated 94 duplicate_of-folded records or the two excluded records.",
+    "No detected role-bucket collapse among explicit primary_identifiers, identifier_candidates, and referenced_identifiers.",
+    "No missing index_category value among the 15 overrides in records.jsonl; the catalog consumer applies those as virtual navigation paths."
+  ],
+  "unknowns_and_limits": [
+    "This audit checks projection integrity, not the truth of each article's primary/candidate/reference assignment, duplicate equivalence, archive/source authenticity, technical content, or vulnerability status.",
+    "duplicate-candidates.json intentionally lists shared-primary groups for manual review; 476 candidate groups are not a count of confirmed duplicates.",
+    "The generated index page contents were inspected as derived navigation, but no browser interaction/rendered UI was exercised.",
+    "The six URL counts represent values extractable under the generator's current labelled-reference rules; they do not claim every URL in article bodies is a provenance link."
+  ]
+}

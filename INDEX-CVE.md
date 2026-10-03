@@ -4,13 +4,13 @@
 
 仅收录元数据明确声明的主编号。格式检查不等于官方核验；全文提及、旧字段未确认角色、撤销及争议编号不进入本索引。独立研究分别保留，仅明确 duplicate_of 折叠。
 
-- [2026 年（727 个主编号）](INDEX-CVE/year/2026.md)
-- [2025 年（572 个主编号）](INDEX-CVE/year/2025.md)
+- [2026 年（748 个主编号）](INDEX-CVE/year/2026.md)
+- [2025 年（577 个主编号）](INDEX-CVE/year/2025.md)
 - [2024 年（610 个主编号）](INDEX-CVE/year/2024.md)
 - [2023 年（326 个主编号）](INDEX-CVE/year/2023.md)
-- [2022 年（165 个主编号）](INDEX-CVE/year/2022.md)
+- [2022 年（166 个主编号）](INDEX-CVE/year/2022.md)
 - [2021 年（165 个主编号）](INDEX-CVE/year/2021.md)
-- [2020 年（207 个主编号）](INDEX-CVE/year/2020.md)
+- [2020 年（208 个主编号）](INDEX-CVE/year/2020.md)
 - [2019 年（147 个主编号）](INDEX-CVE/year/2019.md)
 - [2018 年（136 个主编号）](INDEX-CVE/year/2018.md)
 - [2017 年（68 个主编号）](INDEX-CVE/year/2017.md)

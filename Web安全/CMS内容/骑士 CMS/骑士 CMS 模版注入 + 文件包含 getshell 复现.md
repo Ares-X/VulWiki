@@ -46,6 +46,7 @@ canonical: "Web安全/CMS内容/骑士 CMS/骑士 CMS 模版注入 + 文件包�
 # 骑士 CMS 模版注入 + 文件包含 getshell 复现
 
 <meta name="referrer" content="no-referrer"/>
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/4-36O4OaWxu2jX2pzb5_Wg)
 
   

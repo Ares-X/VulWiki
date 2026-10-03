@@ -42,6 +42,7 @@ schema_version: "1"
 # Fastjson 小于等于 1.2.47 反序列化漏洞复现
 
 <meta name="referrer" content="no-referrer"/>
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/DqXbu0MRRoX_Iz0rgz214Q)
 
 0x01 前言

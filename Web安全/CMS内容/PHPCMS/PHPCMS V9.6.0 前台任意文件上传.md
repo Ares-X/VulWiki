@@ -38,6 +38,7 @@ schema_version: "1"
 # PHPCMS V9.6.0 前台任意文件上传
 
 <meta name="referrer" content="no-referrer"/>
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/sH0-JfD07AzMzpknqWME1w)
 
 #### **影响范围**

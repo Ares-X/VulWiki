@@ -46,7 +46,7 @@ schema_version: "1"
 
 最初，容器特权模式的出现是为了帮助开发者实现 Docker-in-Docker 特性。然而，在特权模式下运行不完全受控容器将给宿主机带来极大安全威胁。
 
-[官方文档](1. [https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities](https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities)) 对特权模式的描述如下：
+[官方文档](https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities) 对特权模式的描述如下：
 
 > 当操作者执行 `docker run --privileged` 时，Docker 将允许容器访问宿主机上的所有设备，同时修改 AppArmor 或 SELinux 的配置，使容器拥有与那些直接运行在宿主机上的进程几乎相同的访问权限。
 

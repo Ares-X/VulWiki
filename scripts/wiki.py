@@ -239,18 +239,58 @@ def fingerprint_valid(query):
 def prose_and_fences(body):
     """Blank fenced/indented code only for analysis; preserve source and lines."""
     output, issues, opened, content = [], [], None, []
-    for n, line in enumerate(body.splitlines(keepends=True), 1):
+    lines = body.splitlines(keepends=True)
+    request_start = re.compile(r"^(?:POST|PUT|PATCH|DELETE|OPTIONS)\s+\S+\s+HTTP/[0-9.]+$")
+    header_line = re.compile(r"^[!#$%&'*+.^_`|~0-9A-Za-z-]+\s*:")
+    content_type_line = re.compile(
+        r"(?i)^content-type\s*:\s*(?:application/(?:json|x-www-form-urlencoded|[^;\s]+\+xml|xml)|"
+        r"text/xml|multipart/form-data)(?:\s*;|\s*$)"
+    )
+
+    def body_shape(line):
+        value = line.strip()
+        if re.match(r"^\[[^\]]+\]\(", value) or value.startswith(("!", ">", "#")):
+            return False
+        return (
+            re.match(r"^\{\s*(?:[\"}])", value)
+            or re.match(r"^\[\s*(?:[\]{}\"0-9tfn-])", value)
+            or re.match(r"^[A-Za-z_][A-Za-z0-9_.-]*\s*=", value)
+            or re.match(r"^<\??[A-Za-z_:][A-Za-z0-9_.:-]*(?:\s|/?>)", value)
+            or re.match(r"^--[-A-Za-z0-9_]+(?:--)?\s*$", value)
+        )
+
+    for index, line in enumerate(lines):
+        n = index + 1
         match = re.match(r"^ {0,3}(`{3,}|~{3,})(.*)$", line.rstrip("\r\n"))
         if opened:
             if match and match[1][0] == opened[0] and len(match[1]) >= opened[1] and not match[2].strip():
                 if not "".join(content).strip():
                     issues.append(("empty_fence", "empty code fence", opened[2]))
+                payload = [item.rstrip("\r\n") for item in content]
+                nonblank = [(offset, item) for offset, item in enumerate(payload) if item.strip()]
+                if nonblank and request_start.fullmatch(nonblank[0][1]):
+                    request_headers = [item for _, item in nonblank[1:]]
+                    tail_is_headers = bool(request_headers) and all(header_line.match(item) for item in request_headers)
+                    has_body_type = any(content_type_line.match(item) for item in request_headers)
+                    language = opened[3].split(None, 1)[0].lower() if opened[3].strip() else ""
+                    if language in {"", "http", "text", "plain", "txt"} and tail_is_headers and has_body_type:
+                        for outside_index in range(index + 1, len(lines)):
+                            outside = lines[outside_index].rstrip("\r\n")
+                            if not outside.strip():
+                                continue
+                            if body_shape(outside):
+                                issues.append((
+                                    "http_body_outside_fence",
+                                    "HTTP request body outside code fence: " + outside,
+                                    outside_index + 1,
+                                ))
+                            break
                 opened, content = None, []
             else:
                 content.append(line)
             output.append("\n")
         elif match:
-            opened = (match[1][0], len(match[1]), n)
+            opened = (match[1][0], len(match[1]), n, match[2].strip())
             output.append("\n")
         else:
             output.append(line)
@@ -412,7 +452,7 @@ def source_candidates(metadata, body):
             section = label
         if label or section:
             collect(re.sub(r"!\[[^]]*\]\([^)]*\)", "", line), "body:labelled-reference")
-    return list(found.values())[:50]
+    return list(found.values())
 
 
 def repository_paths(root):
@@ -651,7 +691,7 @@ def catalog_record(r):
         "source": {"status": m.get("source_status", "recorded" if m.get("source_url") else "unknown"), "label": m.get("source", ""), "url": m["source_url"] if m.get("source_url") and not any(i.code == "source_url" for i in r.issues) else "", "links": r.source_links},
         "fingerprints": r.fingerprints,
     }
-    for key in ("entity_id", "canonical", "relation_type", "index_category", "category_recommendation", "prerequisites", "side_effects", "fixed_version", "verification_source"):
+    for key in ("entity_id", "canonical", "relation_type", "index_category", "category_recommendation", "prerequisites", "side_effects", "fixed_version", "verification_source", "archive_url", "archive_commit", "archive_title"):
         if m.get(key):
             result[key] = m[key]
     if m.get("version") and not any(i.code == "version_command" for i in r.issues):

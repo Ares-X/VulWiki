@@ -131,6 +131,7 @@ TikTok 已经对该漏洞进行了修复，并确认没有证据表明该漏洞�
   
 漏洞利用示例：  
   
+```http
 POST /account/recovery HTTP/1.1  
   
 Host: api.tiktok.com  
@@ -147,6 +148,7 @@ Content-Type: application/json
   
 }  
   
+```
 如果平台未对请求的  
 username参数进行适当的身份验证，攻击者即可通过此类请求绕过正常的身份验证流程。  
 # 五、PoC 漏洞复现  

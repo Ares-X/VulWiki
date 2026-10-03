@@ -41,6 +41,7 @@ schema_version: "1"
 # 【漏洞复现】Fastjson 系列
 
 <meta name="referrer" content="no-referrer"/>
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/5ebWECpbpX3-c7PEml2NVA)
 
 现在只对常读和星标的公众号才展示大图推送，建议大家能把**渗透安全团队** “**设为星标**”，否则可能就看不到了啦！

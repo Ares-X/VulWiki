@@ -1,0 +1,87 @@
+{
+  "review": {
+    "scope": "Read-only source-boundary review of all four article paths containing unfenced_source candidates in candidates-before.jsonl; inspect adjacent explanation and Git history for recoverable fence boundaries.",
+    "repository": "/Users/aresx/Ares-X.github.io/source/wiki/VulWiki",
+    "head": "cfb19294812b1435a57e866a87dd18e2ff3ebec3",
+    "candidate_file": "/tmp/vulwiki-third-polish-20261003/candidates-before.jsonl",
+    "result_file": "/tmp/vulwiki-third-polish-20261003/unfenced-source-review.json",
+    "repository_changes": "None. Reviewed target article paths are unchanged in the worktree. No article content, code, HTML, attachment, PoC, scanner, or target was executed or accessed."
+  },
+  "reviews": [
+    {
+      "path": "Web安全/其他软件/杂项/某 json--1-2-68 Autotype bypass - 先知社区.md",
+      "candidate_lines": [
+        852,
+        869
+      ],
+      "classification": "Real Java source; the candidate detector mistakes an incorrectly indented fence opener for unfenced source.",
+      "evidence": {
+        "current_context": "Line 848 is an opening ```java marker indented by four spaces; lines 849-869 are the contiguous Java sample; line 871 is the matching unindented closing fence. The four-space-indented package line, blank lines, trailing spaces, and Java string escapes are present in the archived text.",
+        "git_original": "The same opening marker, source bytes, and closing marker are present in historical Git snapshots e494be1a, 0eb1ca97, and b6fed4db; blame attributes the original block content to 124937c65.",
+        "interpretation": "CommonMark fenced code blocks allow at most three leading spaces, so the four-space opener is parsed as indented code text instead of opening a fence. The source region and intended language marker are nevertheless directly bounded by the archived opening/closing lines."
+      },
+      "safe_fence_proposal": "Change only the opening marker four-space indentation to zero; leave its ```java text, existing closing marker, and every byte/space/newline in the code body (including the four spaces before the package line) unchanged.",
+      "confidence": "high for boundary; no claim that the sample is valid, complete, or reproduced"
+    },
+    {
+      "path": "Web安全/开发框架/Spring/Spring框架远程命令执行漏洞复现及分析.md",
+      "candidate_lines": [
+        206,
+        230
+      ],
+      "classification": "Real Java source, currently unfenced; blank lines between imports and members caused separate detector candidates, not separate source blocks.",
+      "evidence": {
+        "current_context": "Line 204 introduces adding a global class; lines 206-230 form one continuous class sample ending with its outer closing brace; the next material is separated by blank lines and a new section.",
+        "git_original": "The same source lines and surrounding prose occur in e494be1a, 0eb1ca97, and b6fed4db. These snapshots establish source text and whitespace, but do not contain an earlier fence.",
+        "copy_boundary": "Unlike the Spring Security item, this region has no Markdown escape sequences or same-line explanatory tail inside the source span."
+      },
+      "safe_fence_proposal": "Add a java fence immediately before line 206 and a closing fence immediately after the existing outer brace on line 230. Preserve every intervening blank line, indentation state, identifier, and source character; do not reindent or fill in code.",
+      "confidence": "high for a formatting boundary; completeness and runtime behavior remain unknown"
+    },
+    {
+      "path": "Web安全/开发框架/Spring Security/（CVE-2018-1260）Spring Security Oauth2 远程代码执行.md",
+      "candidate_lines": [
+        152,
+        158
+      ],
+      "classification": "Java-like source excerpts embedded in prose, with no safe byte-faithful fence boundary recoverable from the repository history.",
+      "evidence": {
+        "current_context": "The WhitelabelApprovalEndpoint excerpt begins at line 152 and its method tail shares line 153 with an ellipsis and the explanatory phrase 跟入createTemplate，第29行：. A second createTemplate excerpt spans lines 155-158 and shares its tail with an ellipsis, explanatory text, and an image reference.",
+        "display_escapes": "The excerpts contain backslash escapes before punctuation such as at-sign, quote, underscore, less-than, and vertical-bar. In prose these escapes affect rendered text; in a fenced block they would display literally. Removing them to normalize display would edit the stored source representation, while retaining them in a fence changes visible and copied text.",
+        "git_original": "The same escaped run-on excerpts and inline explanation occur in e494be1a and 0eb1ca97; history supplies no clean fenced source copy or boundaries. The line-153/158 ellipses and prose are not source evidence that can be safely reconstructed."
+      },
+      "safe_fence_proposal": null,
+      "disposition": "Leave the source untouched. A source-faithful fence needs an authoritative clean excerpt or a separately verified rendered/copy artifact; do not infer missing code, split same-line prose, or strip Markdown escapes."
+    },
+    {
+      "path": "Web安全/其他软件/杂项/互联网公开漏洞整理 202309-202406.md",
+      "candidate_lines": [
+        3676,
+        3691
+      ],
+      "classification": "The flagged C# handler is embedded in an unfenced HTTP request example body; it is not a standalone C# source block. Other source-extractor candidates in this article are also request/multipart samples.",
+      "evidence": {
+        "current_context": "The sample starts with POST at line 3676, continues through request headers and the C# handler at lines 3680-3691, then a blank line and the next vulnerability heading. Content-Type precedes the handler; the archived sample has no inserted header/body separator.",
+        "git_original": "The complete request and C# lines are unchanged in e494be1a, 0eb1ca97, and b6fed4db. Original lines retain two trailing spaces for line breaks; no standalone C# fence exists in those snapshots.",
+        "boundary": "Fencing only lines 3680-3691 would split the captured request and alter its copy/paste shape. The whole POST example has a clear outer boundary, but its reported wire completeness is unknown."
+      },
+      "safe_fence_proposal": "Do not fence the C# substring independently. If this request is formatted later, the only bounded proposal is one http fence around the entire existing POST sample from line 3676 through line 3691, preserving every line, trailing space, and the absent blank separator verbatim; inspect rendered and copied output before accepting it.",
+      "confidence": "high that the C# lines belong to the request sample; unknown whether the recorded request is a complete wire transcript"
+    }
+  ],
+  "overall": {
+    "safe_actions_if_later_authorized": [
+      "Autotype: repair only the four-space indentation of the existing Java fence opener.",
+      "Spring RCE: wrap the exact contiguous class sample with a Java fence, without source edits.",
+      "Roundup: preserve the request as a whole; do not isolate its C# body."
+    ],
+    "leave_unmodified": [
+      "Spring Security Oauth2 run-on escaped excerpts: exact display/copy and source boundaries cannot be recovered from the checked Git originals."
+    ],
+    "limitations": [
+      "No Markdown renderer/browser was run; display/copy implications are based on the stored Markdown escapes and standard fence semantics.",
+      "Git history verifies prior stored bytes and nearby text, not upstream source authenticity or successful behavior.",
+      "No source code was compiled or executed and no PoC or HTML was opened or run."
+    ]
+  }
+}

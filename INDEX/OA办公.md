@@ -546,6 +546,10 @@
 
 - [通达OA UEditor集成 action_upload可控CONFIG上传](../Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E9%80%9A%E8%BE%BEOA/%E9%80%9A%E8%BE%BEOA-v2017-action_upload.php-%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E.md) [vulnerability; not-reproduced; needs-review]
 
+## 金和 OA C6
+
+- [金和 OA C6 AjaxForCenterBudgetDecompose SQL 注入](../Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E9%87%91%E5%92%8COA/%E9%87%91%E5%92%8COA%20C6%20AjaxForCenterBudgetDecompose%20SQL%E6%B3%A8%E5%85%A5.md) [vulnerability; source-claimed; needs-review]
+
 ## 金和C6
 
 - [金和C6 ApproveRemindSetExec XXE](../Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E9%87%91%E5%92%8COA/%E9%87%91%E5%92%8COA%20C6%20ApproveRemindSetExec.aspx%20XXE%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0%28CNVD-2024-40568%29.md) [vulnerability; not-reproduced; needs-review]

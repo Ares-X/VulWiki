@@ -31,6 +31,8 @@ Markdown 是唯一维护源。`scripts/wiki.py` 使用 Python 3.10+ 标准库，
 | source_status | `recorded` / `unknown` / `missing`；recorded表示已记URL，不表示事实核验通过 |
 | source_url | 实际原文/公告 URL；缺失时声明source_status，不使用本库 blob 冒充原始出处 |
 | archive_url | 可选历史归档链接；不替代 source_url、不代表来源核验 |
+| archive_commit | 可选归档提交标识，保留原值，不代表正文技术结论已核验 |
+| archive_title | 可选归档原题，与当前显示标题分别保留 |
 | ref / verification_source | 参考链接 / 核对事实的一手依据，正文说明支持字段、时间和限制 |
 | fofa / hunter / quake | 各平台独立的完整表达式；资产指纹不证明漏洞存在 |
 | fofa_unverified 等 | 留存残缺或待核查询，不进入指纹索引 |
@@ -89,6 +91,8 @@ canonical 自指表示本身是主入口，不要求 relation_type。非自指�
 JSONL 是 UTF-8 每行一个对象，不复制全文和图片。阅读全文依 path 读取原 Markdown；正文按需搜索继续使用现有站点流程。输出排序固定、不写构建时间；生成 Markdown 只保留一个末尾换行，原正文不作此改写。旧索引页若不再适用，保留 URL 并导航回当前索引，避免继续展示失效数据。
 
 `python scripts/wiki.py search CloudStack` 默认查主入口，可用 `--type analysis`、`--verification not-reproduced`、`--entity ENTITY-ID`。`--include-sources` 可查所有保留来源及完整版本/来源/指纹元数据。旧候选编号命中标为 `candidate-non-primary`，引用命中为 `reference-non-primary`；未进主 CVE 索引不代表编号不存在。
+
+已声明的 archive_url、archive_commit、archive_title 按原值进入来源记录，可用 `--include-sources` 查询；字段缺失时不补写。source.links 保留从元数据与正文明确参考区域提取的全部去重链接，不按条数截断。这些归档字段和参考链接仍与 source.url 的原文出处分别记录，不因此升级来源或事实的核验状态。
 
 派生来源 URL、verification_source 与诊断中的值保留原样，不脱敏、不截断，也不通过解析后重新编码改变查询串。该规则与正文保真规则一致；生成器不访问这些 URL。
 

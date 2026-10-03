@@ -60,7 +60,8 @@ PHP/JAVA/Python函数下划线转义污染，PHP旧禁用函数版本适用与Ja
 ### 归档技术正文
 
 <meta name="referrer" content="no-referrer"/>
-\> 本文由 \[简悦 SimpRead\](http://ksria.com/simpread/) 转码， 原文地址 \[mp.weixin.qq.com\](https://mp.weixin.qq.com/s/ne08FH-bFOA3v\_h3C0YCLg)
+
+> 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/ne08FH-bFOA3v\_h3C0YCLg)
 
 **1\. 什么是 XML**
 

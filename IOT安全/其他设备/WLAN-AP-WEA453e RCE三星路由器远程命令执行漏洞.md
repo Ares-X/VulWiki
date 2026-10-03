@@ -57,7 +57,7 @@ source_status: "unknown"
 
 |漏洞名称|上报日期|漏洞发现者|产品首页|软件链接|版本|CVE编号|
 --------|--------|---------|--------|-------|----|------|
-|WLAN-AP-WEA453e RCE三星路由器远程命令执行漏洞|2020-8|未知|https://www.Samsung.com| |三星WLAN-AP-WEA453e路由器|
+|WLAN-AP-WEA453e RCE三星路由器远程命令执行漏洞|2020-8|未知|https://www.Samsung.com| |三星WLAN-AP-WEA453e路由器||
 
 路由器首页
 ![image](./.resource/WLAN-AP-WEA453eRCE三星路由器远程命令执行漏洞/media/img-bd98ba93.png)

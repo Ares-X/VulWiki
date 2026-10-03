@@ -1,0 +1,59 @@
+{
+  "base_commit": "956c8b26de5accbc1af8faecacdd34c34384a759",
+  "articles": 5666,
+  "changed_articles": 506,
+  "bounded_operations": 520,
+  "operation_kinds": {
+    "meta_attribution_boundary": 489,
+    "font_markdown_boundary": 8,
+    "complete_http_fence": 18,
+    "complete_sql_fence": 3,
+    "html_literal_codespan": 2
+  },
+  "initial_candidates": 591,
+  "same_rule_before_candidates": 586,
+  "final_candidates": 70,
+  "corrected_candidate_ids": 516,
+  "corrected_scanner_false_positives": 5,
+  "new_candidate_ids": 0,
+  "static_structural_failures": 0,
+  "exact_inverse_pass": true,
+  "independent_review_errors": 0,
+  "python_tests": 71,
+  "node_tests": 21,
+  "quality_summary": {
+    "by_code": {
+      "fingerprint_unverified": 800,
+      "identifier_inactive": 27,
+      "identifier_role_unknown": 215,
+      "noncontent_link_candidate": 27,
+      "path_legacy": 2,
+      "site_relative_link": 81,
+      "source_missing": 3854,
+      "unrecognized_identifier_namespace": 88
+    },
+    "documents": 5666,
+    "errors": 0,
+    "fatal_issues": 0,
+    "warnings": 5094
+  },
+  "public_article_byte_matches": 5666,
+  "generated_file_byte_matches": 104,
+  "local_references_byte_matches": 6427,
+  "local_unique_target_byte_matches": 6130,
+  "sources": 5664,
+  "records": 5570,
+  "body_identifiers": 6838,
+  "evidence_files": 61,
+  "evidence_compressed_bytes": 12414651,
+  "publication": "local commit only; no push or deployment",
+  "limitations": [
+    "HTML DOM or browser clipboard",
+    "Image pixels",
+    "Article code/PoCs/attachments/scanners/loads",
+    "Example targets",
+    "Deployment",
+    "No external technical fact checking",
+    "Candidate context reading is not full-library human reading"
+  ]
+}

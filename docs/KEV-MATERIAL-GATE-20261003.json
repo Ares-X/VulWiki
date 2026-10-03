@@ -2216,5 +2216,227 @@
       ],
       "action": "retain"
     }
-  ]
+  ],
+  "latest_base_sync": {
+    "base": "dbf87349c84e537c233b4231a1164e60fa52eca3",
+    "article_count_relative_to_base": 53,
+    "new": 34,
+    "supplement": 19,
+    "gate_decisions_unchanged": true,
+    "current_article_hashes": [
+      {
+        "path": "Web安全/其他软件/Kestra/Kestra configs后缀白名单与未认证工作流执行（CVE-2026-49869）.md",
+        "sha256": "f08a94a7a86b6fe84df1fedf6ff8dff627fec7acaf4dab867a82210c65202bb8"
+      },
+      {
+        "path": "Web安全/AI应用/Langflow/Langflow responses跨用户Flow执行与UUID分支授权缺口（CVE-2026-55255）.md",
+        "sha256": "2390c63bd6d5cf641da5174c69d20fc2dd4d5f5a7bef80609060b73a3a54a9a0"
+      },
+      {
+        "path": "Web安全/开发框架/Starlette/Starlette BadHost路径重建与路由授权视图分裂（CVE-2026-48710）.md",
+        "sha256": "14fa50d24f0900ee7d4505f9ef580a53be4baa581db593ae2b9ff283cc68f910"
+      },
+      {
+        "path": "Web安全/AI应用/Marimo/marimo terminal WebSocket缺少认证与编辑模式前提（CVE-2026-39987）.md",
+        "sha256": "6d59f854e8eae82fb6968875379827589eabbbc6f10b0e522590a507cfeb08c6"
+      },
+      {
+        "path": "Web安全/CMS内容/Joomla/iCagenda附件上传PoC的版本差异与批量写入风险（CVE-2026-48939）.md",
+        "sha256": "990848b5f84ca1a639f5d02b2219c6d89d633938d439429f3f3b4fa44336dbdd"
+      },
+      {
+        "path": "Web安全/服务器软件/Splunk/Splunk Sidecar任意文件截断到数据库恢复写入链（CVE-2026-20253）.md",
+        "sha256": "c108812b434b41563fd95199c8bf5724b577a3683cfbde4039ace7603f889291"
+      },
+      {
+        "path": "Web安全/网络设备/Citrix NetScaler/NetScaler SAML IdP内存越读与会话泄露检测边界（CVE-2026-3055）.md",
+        "sha256": "b9c9dab16dbf3048c36c5fbb68895aa994c364e750a40ce22c7c353cad310972"
+      },
+      {
+        "path": "Web安全/云平台/Microsoft SharePoint/SharePoint JWT actor token验证缺失与模板假阳性边界（CVE-2026-55040）.md",
+        "sha256": "048e644ac32aca2f0786f79e28492a3be0831a97a08f13b083919e56bbb42205"
+      },
+      {
+        "path": "Web安全/开发框架/JetBrains/TeamCity agent polling反序列化链与公开模块残留边界（CVE-2026-63077）.md",
+        "sha256": "60221396046e963023b72f1b703038657e9e3fc4f74b3c2571ea04b8b13b7241"
+      },
+      {
+        "path": "Web安全/其他软件/Ray/Ray 浏览器请求判定与 DNS 重绑定边界（CVE-2025-62593）.md",
+        "sha256": "f0ffb43eae8f313e3f0fc08db706f5931bd0bb6f10c95c7c480b9539182b849f"
+      },
+      {
+        "path": "Web安全/邮件系统/Roundcube/Roundcube SVG animate 命名空间属性过滤修复分析（CVE-2025-68461）.md",
+        "sha256": "cb0bfce02adc83b8b1eb846c3de4c98cfc487ecc3d73b75c5e6418932b22605d"
+      },
+      {
+        "path": "Web安全/邮件系统/FreePBX/FreePBX filestore SSH 测试连接命令注入与权限差异（CVE-2025-64328）.md",
+        "sha256": "55241992cb66c2f67d36e947912b63bf0264a242ef15d9146d96d5e19d96f2d3"
+      },
+      {
+        "path": "Web安全/运维面板/Control Web Panel/CWP changePerm 权限参数命令注入与用户前提（CVE-2025-48703）.md",
+        "sha256": "3314ea4f111cfe4ce275280b63a5a2e7c1195dd9519d7a7b135485f64453bfe2"
+      },
+      {
+        "path": "Web安全/商业软件/DELMIA Apriso/DELMIA Apriso 账号创建与上传路径穿越链（CVE-2025-6205、6204）.md",
+        "sha256": "ff23629181c7c8aa3a396cb34874682dcc375f461cd07d7410d9ae8cc024d420"
+      },
+      {
+        "path": "Web安全/网络设备/Versa/Versa Concerto 逐跳请求头与 Actuator 认证边界（CVE-2025-34026）.md",
+        "sha256": "b4f64b115072e3d566a8fef3fab0b8c75a20fa8a605e0e988d70056655ef529f"
+      },
+      {
+        "path": "Web安全/开发框架/Vite/Vite inline/raw 文件访问校验的上游补丁对照（CVE-2025-31125）.md",
+        "sha256": "d4402c222cef268558be5437c7707b1315bcb3813b9bcf05526c01edf523ac26"
+      },
+      {
+        "path": "Web安全/云平台/CentreStack/CentreStack 与 TrioFox 临时下载路径穿越及版本检查误差（CVE-2025-11371）.md",
+        "sha256": "be96ee8c837dc8f437cb6e967896a921fc5cf0daf6a22eede077a7dd6b12c834"
+      },
+      {
+        "path": "Web安全/云平台/VMware/VMware 服务发现执行非受信二进制导致本地提权（CVE-2025-41244）.md",
+        "sha256": "3ce21b9141c2bc102a7b4af950d2d198c372a7b0f017c359a13c03a20983f84b"
+      },
+      {
+        "path": "系统安全/Android/Android ART JNI 可实例化检查与序列化回归测试（CVE-2025-48543）.md",
+        "sha256": "35b2e9c30b9aa85c74fa7f7733abd324cdcce4ca3159942a02d778e81709fc74"
+      },
+      {
+        "path": "Web安全/服务器软件/Ivanti/Ivanti EPM GetHashForWildcardRecursive 凭据强制认证资料（CVE-2024-13159）.md",
+        "sha256": "84fdc99f3e607d05e934512615ad32991a112e0c5d7b8b155073c7a15fddfcce"
+      },
+      {
+        "path": "Web安全/服务器软件/Ivanti/Ivanti EPM GetHashForWildcard 凭据强制认证资料（CVE-2024-13160）.md",
+        "sha256": "15fef2eae0c69dab952e9901236d770a9de3a783245e942fa756eaff580a4190"
+      },
+      {
+        "path": "Web安全/服务器软件/Ivanti/Ivanti EPM GetHashForSingleFile 凭据强制认证资料（CVE-2024-13161）.md",
+        "sha256": "f383d5233da535ca347a84d0af419e61d927c54fd6dd37c793112bae19e3e825"
+      },
+      {
+        "path": "Web安全/网络设备/Ivanti/Ivanti vTM 本地管理员创建鉴权绕过（CVE-2024-7593）.md",
+        "sha256": "26e35835b52ef5bbd035dd9062aa0b2fda20cf5807db17791d489ae8dcd1f0ad"
+      },
+      {
+        "path": "Web安全/商业软件/Mitel MiCollab 企业协作平台/Mitel MiCollab 企业协作平台 任意文件读取漏洞(CVE-2024-41713).md",
+        "sha256": "7f5eefdddcfe53db98a3784edc9c25cb72462a9b0f060bc4d509f8b5b942a85e"
+      },
+      {
+        "path": "Web安全/网络设备/Palo Alto/Palo Alto Networks Expedition 远程命令执行漏洞(CVE-2024-9463).md",
+        "sha256": "f40fadfd6278004c3f9fd7ef3daf04d75665593ece6df193d7f8df6378ea050a"
+      },
+      {
+        "path": "Web安全/网络设备/D-Link/D-Link NAS 未授权RCE漏洞(CVE-2024-3273).md",
+        "sha256": "291f212c7ba2f2048d2d7e180d53aa9aaf3b3a2552e70f7ca2fb1157e6b583eb"
+      },
+      {
+        "path": "Web安全/其他软件/杂项/NAKIVO Backup & Replication任意文件读取漏洞(CVE-2024-48248).md",
+        "sha256": "b088d02cfa3cd2c71b8e57a1dba8bc3c351e71df7c0ffc013ef1892c842a0c2a"
+      },
+      {
+        "path": "Web安全/其他软件/杂项/【PoC】SolarWinds Web Help Desk (CVE-2024-28987)严重漏洞的 PoC 已发布.md",
+        "sha256": "f47e1fedb1756135510efc7616c7c115df86b5b8629ac6952f2dcc235edf6736"
+      },
+      {
+        "path": "Web安全/其他软件/杂项/CVE-2024-1709.md",
+        "sha256": "d003bb7ed26168632194d6660742c797f862b34994d74e53eb74a57a7f124957"
+      },
+      {
+        "path": "系统安全/SimpleHelp/关键的 SimpleHelp 缺陷允许文件盗窃、权限提升和 RCE 攻击.md",
+        "sha256": "960a59d91cf9e60ad2718b54f0c63754a917027fdbe8499f1c9402e95fd271e0"
+      },
+      {
+        "path": "Web安全/网络设备/F5 BIG-IP/（CVE-2026-94127）F5 BIG-IP APM OAuth授权服务器远程代码执行漏洞.md",
+        "sha256": "ac81b5111e421500f16148cd780af3850fb09d259d9fad4b0e0eb316028559ec"
+      },
+      {
+        "path": "Web安全/网络设备/MikroTik RouterOS/CVE-2026-67276  RouterOS SSH公钥认证绕过漏洞（POC）.md",
+        "sha256": "75499aabfc49e1e127659cb4fb13cf87a37f46a612d7ce4beb0edcdbf7755ae0"
+      },
+      {
+        "path": "Web安全/中间件/JFrog/（CVE-2026-82329）JFrog Artifactory空join key认证绕过漏洞.md",
+        "sha256": "5ad3470082e1c9a89002b22b31c55b4287190675d002fdad34f0ecd0f95db50f"
+      },
+      {
+        "path": "Web安全/其他软件/杂项/【已支持检测】预认证即可利用！Kemp LoadMaster 堆内存缺陷导致命令注入远程代码执行漏洞CVE-2026-.md",
+        "sha256": "18128f70662602218383f190df96d242591e2653ff860ab4f2dc40412245e738"
+      },
+      {
+        "path": "Web安全/AI应用/AI综合/AI大模型网关存在SQL注入漏洞、附 POC 复现、影响版本LiteLLM 1.81.16~1.83.7（CVE-2026-42208）.md",
+        "sha256": "b03e5a1f24b85d366a52e1d514a8c76a9dd295a4e7607341ea673c565f066803"
+      },
+      {
+        "path": "Web安全/中间件/Apache Tomcat/Apache-Tomcat-Tribes-EncryptInterceptor-绕过远程代码执行漏洞-CVE-2026-34486.md",
+        "sha256": "1d8d15284b88d1ed68a80137915bd29d065f7a16908996d718410aed40ed501a"
+      },
+      {
+        "path": "Web安全/AI应用/AI综合/AI用户务必关注，Langflow未授权RCE分析（CVE-2026-33017）.md",
+        "sha256": "cbf341bd6f00c3f6c828030264b7aa42ea392e0e74ae905a99b767476252296f"
+      },
+      {
+        "path": "Web安全/邮件系统/SmarterMail/CVE-2026-23760.md",
+        "sha256": "8b3c01b7f03f5123d40bbcab8abb71e3fd9e6cfb75f1f5aa1eda8e1a831801fc"
+      },
+      {
+        "path": "Web安全/商业软件/PaperCut/PaperCut-Tapestry配置绕过与外部用户查询代码执行链-CVE-2026-81578-82078.md",
+        "sha256": "cf20f71dbeeff39acc9bae9d6325856aa9a19148723734cb0781f51124544ef1"
+      },
+      {
+        "path": "Web安全/网络设备/SonicWall/SMA1000-OPTIONS-CouchDB-SNMP链-CVE-2026-83548-83549.md",
+        "sha256": "48ed1b226ae3209ab4a6ff74a340953d3fd54db732516b5727f5c759ef9916ef"
+      },
+      {
+        "path": "Web安全/开发框架/Gitea/Gitea-diffpatch双次补丁Git-hook执行-CVE-2026-60004.md",
+        "sha256": "60fbc6393a1388d94f3add97240637d667f3e1778f67022099faea2c3474d2fe"
+      },
+      {
+        "path": "Web安全/AI应用/MLflow/MLflow-Webhook重定向DNS重绑定SSRF-CVE-2026-64849.md",
+        "sha256": "81cadd6c7e908c7de0cec20054cc2a67b2b890b58e5dd9f24f79deb3c17b83b4"
+      },
+      {
+        "path": "Web安全/CMS内容/Magento/Magento客户会话身份切换-CVE-2026-71362.md",
+        "sha256": "affecbce5afab85efaf436ae5559106d7d429686e3a1bcf76d7f6d6cfc56620a"
+      },
+      {
+        "path": "Web安全/云平台/Citrix/NetScaler-SAML-RelayState错误码混淆-CVE-2026-19490.md",
+        "sha256": "897221f98f25de583be1323f105b72caf8d6ef39564fbcb963d2c2ac2d30b3f8"
+      },
+      {
+        "path": "Web安全/网络设备/MikroTik RouterOS/RouterOS预认证rekey与SSH策略链分析-CVE-2026-67279.md",
+        "sha256": "1882a77e73597bb700c05b1c367970bc23df67f406f846fe5a139a0abed62702"
+      },
+      {
+        "path": "Web安全/邮件系统/Zimbra/Zimbra-SMTP日志Swatchdog命令注入-CVE-2026-73570.md",
+        "sha256": "95a5d09a942b4ba31a4e6fb5c22b5920a0a5f7c565fbdbca45bc7209b8ca7376"
+      },
+      {
+        "path": "IOT安全/D-Link/（CVE-2025-29635）D-Link DIR-823X命令注入漏洞.md",
+        "sha256": "d76ce2cd08a198d4ba640976793df87a65849bf804676d8019206474395f63fd"
+      },
+      {
+        "path": "Web安全/AI应用/Langflow/Langflow-code-API-未授权远程代码执行漏洞-CVE-2025-3248.md",
+        "sha256": "de82f90b3d4949f522eae2abef4b20e6324f76dc5ebdbb44720051ff4e2a827e"
+      },
+      {
+        "path": "Web安全/AI应用/Langflow/Langflow-≤-1.6.9-CORS-配置错误导致令牌劫持和远程命令执行漏洞-CVE-2025-34291.md",
+        "sha256": "f982cc0bd8942936740c5cf167971ccab33f9cce10899c667849e0b88e39ae9e"
+      },
+      {
+        "path": "Web安全/AI应用/n8n/n8n-表达式沙箱逃逸导致远程代码执行漏洞-CVE-2025-68613.md",
+        "sha256": "9d3bdbbb863698e97af6ca9e3ff10a2d18c36e36c03cb132acfa74e34cc0ad31"
+      },
+      {
+        "path": "Web安全/数据库/Phpmyadmin/phpMyAdmin setup配置保存注入与后续漏洞分界（CVE-2009-1151）.md",
+        "sha256": "4855bb9315559d42831b179f854b74584c262265f1d6a22203839f4c1476eb27"
+      },
+      {
+        "path": "Web安全/网络设备/Alcatel-Lucent/OmniPCX masterCGI ping命令拼接与单次执行限制（CVE-2007-3010）.md",
+        "sha256": "2c9a37d75881429dad33af8232dc7f600da944a62ad18a42a5ef70342ef3f707"
+      },
+      {
+        "path": "Web安全/运维面板/HP OpenView/HP OpenView connectedNodes命令注入与回显差异（CVE-2005-2773）.md",
+        "sha256": "902e918dfcedde6752f6cb0d48771ce43670b6666b72d2a258a52a8ba99c7e59"
+      }
+    ],
+    "historical_review_hashes_preserved": true
+  }
 }

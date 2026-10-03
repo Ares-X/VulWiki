@@ -42,6 +42,7 @@ schema_version: "1"
 # FastAdmin 前台分片传输上传文件 getshell 复现
 
 <meta name="referrer" content="no-referrer"/>
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/gAerDNnDSl6864oyvDy4nA)
 
 **上方蓝色字体关注我们，一起学安全！**

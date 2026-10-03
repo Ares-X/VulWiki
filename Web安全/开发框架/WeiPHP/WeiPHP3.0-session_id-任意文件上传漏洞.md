@@ -63,7 +63,7 @@ app="weiphp"
 
 发送请求包上传文件
 
-```php
+```http
 POST /index.php?s=%2FHome%2FFile%2Fupload%2Fsession_id%2Fscevs8hub3m5ogla05a421hb42.html HTTP/1.1
 Host: 
 User-Agent: Go-http-client/1.1

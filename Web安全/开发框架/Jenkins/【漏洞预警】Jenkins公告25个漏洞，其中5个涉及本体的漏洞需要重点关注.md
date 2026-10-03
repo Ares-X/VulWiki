@@ -61,6 +61,8 @@ CVE-2026-70429
 CVE-2026-70430  
  · 命名策略配置类型越界  
 <table><tbody><tr style="background-color:#f3f5f8;"><td style="border:1px solid #e7e9ee;padding:8px 10px;font-weight:bold;color:#1f2329;"><section><span leaf="">版本区间</span></section></td><td style="border:1px solid #e7e9ee;padding:8px 10px;font-weight:bold;color:#1f2329;"><section><span leaf="">状态</span></section></td></tr><tr><td style="border:1px solid #e7e9ee;padding:8px 10px;"><section><span leaf="">weekly ≤ 2.575 / LTS ≤ 2.568.1</span></section></td><td style="border:1px solid #e7e9ee;padding:8px 10px;color:#d63a2f;font-weight:bold;"><section><span leaf="">受影响</span></section></td></tr><tr><td style="border:1px solid #e7e9ee;padding:8px 10px;"><section><span leaf="">weekly 2.576 / LTS 2.568.2</span></section></td><td style="border:1px solid #e7e9ee;padding:8px 10px;color:#0a9b6e;font-weight:bold;"><section><span leaf="">已修复</span></section></td></tr></tbody></table>  
+
+
 二、原理分析  
   
 70426 这条最值得拆一下。Jenkins 主控和 agent 之间走  Remoting 库传序列化对象，主控收数据时按 JEP-200 套了一层类白名单挡反序列化攻击。但 Remoting  3384.v60d89463d9e0 及更早的版本里有一条备用解析路径，这层过滤没套上去。能在 agent 上跑代码、或者有  Agent/Connect 权限的人，把对象从这条备用路径送进去，主控照收照反序列化。能触发的范围限在 Jenkins 自带和 Java  平台类，插件自带的依赖不会被反序列化，但这足够在主控上跑代码了。  

