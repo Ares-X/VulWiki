@@ -269,6 +269,8 @@ def prose_and_fences(body):
             if match and match[1][0] == opened[0] and len(match[1]) >= opened[1] and not match[2].strip():
                 if not "".join(content).strip():
                     issues.append(("empty_fence", "empty code fence", opened[2]))
+                if opened[3] == "{=html}" and re.fullmatch(r"\s*<!--\s*-->\s*", "".join(content)):
+                    issues.append(("pandoc_comment_fence", "Pandoc list separator displayed as a code block; retain the comment outside its fence", opened[2]))
                 payload = [item.rstrip("\r\n") for item in content]
                 nonblank = [(offset, item) for offset, item in enumerate(payload) if item.strip()]
                 if nonblank and request_start.fullmatch(nonblank[0][1]):

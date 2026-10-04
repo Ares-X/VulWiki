@@ -195,9 +195,8 @@ Getshell漏洞，里面就有一个 未授权插件上传，文件内容可控�
 
 1.  通过未授权插件上传，将 XXE 载荷保存到固定路径文件：
 
-```{=html}
 <!-- -->
-```
+
     /A8/ApacheJetspeed/webapps/seeyonreport/WEB-INF/cache/temp.zip
 
 2.  通过 `/seeyonreport/SeeyonReportServiceServlet` 接口，跳目录后，使用

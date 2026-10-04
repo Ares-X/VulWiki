@@ -276,6 +276,14 @@ class WikiTests(unittest.TestCase):
         self.article(body='```html\n<img src="missing.png">\n![fake](missing.png)\n```\n')
         self.assertFalse(any(i.code.endswith('missing') for i in self.scan()[0].issues))
 
+    def test_pandoc_comment_separator_is_not_a_technical_code_block(self):
+        self.article(body='- command:\n\n```{=html}\n<!-- -->\n```\n    echo preserved\n')
+        self.assertTrue(any(i.code == 'pandoc_comment_fence' for i in self.scan()[0].issues))
+
+    def test_plain_comment_and_fenced_html_examples_are_preserved(self):
+        self.article(body='- command:\n\n<!-- -->\n\n    echo preserved\n\n```html\n<!-- -->\n```\n\n````text\n```{=html}\n<!-- -->\n```\n````\n')
+        self.assertFalse(any(i.code == 'pandoc_comment_fence' for i in self.scan()[0].issues))
+
     def test_http_request_body_outside_fence(self):
         cases = [
             ('POST /time-clock HTTP/1.1\nContent-Type: application/x-www-form-urlencoded\nContent-Length: 16', 'function=phpinfo'),

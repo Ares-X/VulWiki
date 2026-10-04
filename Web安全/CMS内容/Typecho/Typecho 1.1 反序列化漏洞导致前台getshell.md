@@ -62,9 +62,8 @@ Typecho 1.1
 1.  \$\_GET\['finish'\] 不为空
 2.  \$\_SERVER\['HTTP\_REFERER'\] 不为空
 
-```{=html}
 <!-- -->
-```
+
     //判断是否已经安装
     if (!isset($_GET['finish']) && file_exists(__TYPECHO_ROOT_DIR__ . '/config.inc.php') && empty($_SESSION['typecho'])) {
         exit;

@@ -1,0 +1,435 @@
+{
+  "ledger": "/tmp/vulwiki-bare-images-applied-ledger-20261004.json",
+  "current_checkout": "post-Pandoc dirty working tree atop frozen HEAD 4ab1698774cbf65a68c4f742a31bf92b599c5317",
+  "result": "PASS",
+  "checks": {
+    "article_count": 43,
+    "operation_count": 149,
+    "current_file_hashes_match_ledger": true,
+    "all_exact_replacement_spans_match": true,
+    "inverse_restores_every_preapply_sha256": true,
+    "all_nonplaceholder_bytes_unchanged_by_exact_inverse": true,
+    "caption_source_pairs_unchanged": 9
+  },
+  "articles": [
+    {
+      "path": "Web安全/CMS内容/74cms/74cms v4.2.126-通杀sql注入.md",
+      "current_sha256": "91b8faec394974e2fbb192722e074473abfd01b5642604c1d8dce741a6dee81b",
+      "restored_preapply_sha256": "c200264f52fb04e30866571f2b00f1511c2bbb4e667851bb701b773a100cdde4",
+      "operation_count": 1,
+      "all_spans_match": true,
+      "inverse_exact": true
+    },
+    {
+      "path": "Web安全/CMS内容/74cms/74cms v4.2.3 任意文件读取.md",
+      "current_sha256": "b06bf2635c268d46eac8dde8bd70d8002b5aabca1cc33f0a9eef76dfdb589147",
+      "restored_preapply_sha256": "d548f879b845d7a84a3c20979b0dac963ef887ddc5407efa553e3d91eea8f490",
+      "operation_count": 6,
+      "all_spans_match": true,
+      "inverse_exact": true
+    },
+    {
+      "path": "Web安全/CMS内容/CSZ CMS/CSZ CMS 1.2.7 储存型xss.md",
+      "current_sha256": "e83ec9745e5d486dd26a2915de12259d23116f47a41658952d0bdef925429dc1",
+      "restored_preapply_sha256": "d32c9433c94ff626c59ee8389be28e908f18bcab9fef0674c419900355e1a680",
+      "operation_count": 2,
+      "all_spans_match": true,
+      "inverse_exact": true
+    },
+    {
+      "path": "Web安全/CMS内容/Discuz/Discuz! X < 3.4 uc_center 后台代码执行漏洞.md",
+      "current_sha256": "1c996928491722ace916ca8fe92782e15bc0482f2ddd4dc68874d0785bca0445",
+      "restored_preapply_sha256": "0fed00006c4d61324007af28533a93bca73390fd1bce177fff5994b8d7ffbb0a",
+      "operation_count": 3,
+      "all_spans_match": true,
+      "inverse_exact": true
+    },
+    {
+      "path": "Web安全/CMS内容/Discuz/Discuz! X Windows短文件名安全问题导致的数据库备份爆破.md",
+      "current_sha256": "026060c9400611ea33c427296b1f86ce9c329b34bfd85229234fc09d4a3922d6",
+      "restored_preapply_sha256": "4ee80fcd933c5f9510b1d2c74d027d7cc46e5de277ea8f40bc053513f826c33b",
+      "operation_count": 2,
+      "all_spans_match": true,
+      "inverse_exact": true
+    },
+    {
+      "path": "Web安全/CMS内容/Discuz/Discuz! X3.1 后台任意代码执行漏洞.md",
+      "current_sha256": "e394e77bd0c16e23c826946b0097ca665715655d7950c2c6af1d0ca55c052767",
+      "restored_preapply_sha256": "417969c45071def2dc7d6672917d12b097962c7c4a257caa0b5dde4e6bd3453b",
+      "operation_count": 6,
+      "all_spans_match": true,
+      "inverse_exact": true
+    },
+    {
+      "path": "Web安全/CMS内容/ECShop/Ecshop 4.0.7 从反序列化到类型混淆漏洞.md",
+      "current_sha256": "2853f8f7263b2e6a676b00c5d0055e2a46f0c77be50aa3ce1adce83b75c9a166",
+      "restored_preapply_sha256": "f8b8f628df4dafa1d7871ce8aa5608ea159e5e746861cd809b666513444aa25f",
+      "operation_count": 1,
+      "all_spans_match": true,
+      "inverse_exact": true
+    },
+    {
+      "path": "Web安全/CMS内容/EmpireCMS/EmpireCMS 7.5 前台xss.md",
+      "current_sha256": "4f510d81fb6e15a4d90fb54e51a757c4b06951157ff4114394d4402be4786d37",
+      "restored_preapply_sha256": "0ab75d1e2d90862e8622f9b888cfab5b79066a16f68798f4cddfecca1b0a02ba",
+      "operation_count": 5,
+      "all_spans_match": true,
+      "inverse_exact": true
+    },
+    {
+      "path": "Web安全/CMS内容/EmpireCMS/EmpireCMS 7.5 后台xss.md",
+      "current_sha256": "b771603675ac67bde441cfd43a5dd95d52350e53cbaa4d1f6417aac3641c1f48",
+      "restored_preapply_sha256": "97061f4cbc0e0ac9189cd7315808f2ff9b5b35dcf4d9190e2334fd358910f3d7",
+      "operation_count": 6,
+      "all_spans_match": true,
+      "inverse_exact": true
+    },
+    {
+      "path": "Web安全/CMS内容/EmpireCMS/（CVE-2018-18086）EmpireCMS 7.5 后台getshell.md",
+      "current_sha256": "6a358b0688df243916b2caa75f146ae0854d962b386b7836fa5e8bedc7802601",
+      "restored_preapply_sha256": "cd37d8d813dd0b4e39d8cb1fff6fdb682520aabbab4f68f4b18704343cf632b6",
+      "operation_count": 9,
+      "all_spans_match": true,
+      "inverse_exact": true
+    },
+    {
+      "path": "Web安全/CMS内容/EmpireCMS/（CVE-2018-19462）EmpireCMS 7.5 admindbDoSql.php代码注入漏洞.md",
+      "current_sha256": "7932398de1755256b954d33c43b67a3e2433ca2e1558f48ae1adb216c24dace1",
+      "restored_preapply_sha256": "d73f676b3c0662283e1ea778b9d898ccd5f3e6e4bfdc885b9ab032cc6a8f141e",
+      "operation_count": 11,
+      "all_spans_match": true,
+      "inverse_exact": true
+    },
+    {
+      "path": "Web安全/CMS内容/Finecms/Finecms 5.0.8 任意代码执行漏洞.md",
+      "current_sha256": "34c7a09f07152fac7800d1bf1811506663f4384c4a21b736a18f7af631727774",
+      "restored_preapply_sha256": "12bccacdd75c56b8c3d0dca383f2cc57677acc916823f1fd5d3fed30a4324fb3",
+      "operation_count": 1,
+      "all_spans_match": true,
+      "inverse_exact": true
+    },
+    {
+      "path": "Web安全/CMS内容/Finecms/Finecms 5.0.8 会员中心任意代码执行漏洞.md",
+      "current_sha256": "73f3f3089e59611b3bbe1b838735c542cad0d5934b641840a435a9d8bbee8470",
+      "restored_preapply_sha256": "eadaf583a9bf8acf2d460f313acba989e0d8fc937e04b9af37e4ac20b497700e",
+      "operation_count": 2,
+      "all_spans_match": true,
+      "inverse_exact": true
+    },
+    {
+      "path": "Web安全/CMS内容/OneThink/OneThink 前台注入.md",
+      "current_sha256": "7dab6a8ca5289f0003e1f5d63771f62edfc9e4aca84e045b1a59157e41bf392d",
+      "restored_preapply_sha256": "2a843ecddf3e6dd788b0af05bd4b93554a2bf250eb83053203040b7bba16f3bc",
+      "operation_count": 1,
+      "all_spans_match": true,
+      "inverse_exact": true
+    },
+    {
+      "path": "Web安全/CMS内容/PHPCMS/Phpcms V9.6.0 任意密码重置漏洞.md",
+      "current_sha256": "7e60ae878f819bf1e27d04a01643efc47b566d3f450a768b63e44494aa880ac0",
+      "restored_preapply_sha256": "4431677d431f0a7e673b3169cb5155935d2441e3508f4d3757697d255ae89b19",
+      "operation_count": 1,
+      "all_spans_match": true,
+      "inverse_exact": true
+    },
+    {
+      "path": "Web安全/中间件/Apache Airflow/（CVE-2019-0216）Apache Airflow 储存型xss.md",
+      "current_sha256": "86aa383f756345b5a0a0fdeec0427c92a7598a11f922b53f3e8c31a01c070d35",
+      "restored_preapply_sha256": "e4a6645372b51269861e51b152ba7f503eaa335942e2df7fdd6437c562fe9dbb",
+      "operation_count": 4,
+      "all_spans_match": true,
+      "inverse_exact": true
+    },
+    {
+      "path": "Web安全/中间件/Apache JMeter/（CVE-2018-1297）Apache Jmeter RMI 反序列化命令执行漏洞.md",
+      "current_sha256": "14121dcdfa549eb83b4ac6066ded5b8343a7b5227574b525ecb3f6f86754c371",
+      "restored_preapply_sha256": "edce11397e608d6688b5d553b798e5d99396f56554a345f45cacc189bbeb89f1",
+      "operation_count": 2,
+      "all_spans_match": true,
+      "inverse_exact": true
+    },
+    {
+      "path": "Web安全/中间件/Apache Kylin/（CVE-2020-1956）Apache Kylin 远程命令执行漏洞.md",
+      "current_sha256": "b57d90b89b62cdce9eb53ae799bcba0ac0ea5bb0ae1aa5f21e461bf4f0f41806",
+      "restored_preapply_sha256": "060e76486827402850d81b22bdaffea095ed91a8d90ff317466bc32e6ec399bd",
+      "operation_count": 2,
+      "all_spans_match": true,
+      "inverse_exact": true
+    },
+    {
+      "path": "Web安全/中间件/Apache Shiro/（CVE-2016-4437）Apache Shiro <=1.2.4 反序列化漏洞.md",
+      "current_sha256": "bb23a1abb14222667d5761a461c5a583fb27a407e06719143bc3572d93ce9f38",
+      "restored_preapply_sha256": "6b3b3a39c8928274f64bc2f29a93339e3595d7e42b2ab2d06ffdd2ea061b92f5",
+      "operation_count": 5,
+      "all_spans_match": true,
+      "inverse_exact": true
+    },
+    {
+      "path": "Web安全/中间件/Apache Shiro/（CVE-2020-11989）Apache Shiro < 1.5.3 身份认证绕过漏洞.md",
+      "current_sha256": "464a46817d3314c34743d869ef52a6e334f9ab2727d3b8dcc184cb4f004929dc",
+      "restored_preapply_sha256": "b8247f0e79b4f214b3667058e963fb9954a91a0d53fc4f5e4537d6f69548b58c",
+      "operation_count": 11,
+      "all_spans_match": true,
+      "inverse_exact": true
+    },
+    {
+      "path": "Web安全/中间件/Apache Shiro/（CVE-2020-13933）Apache Shiro < 1.6.0 身份认证绕过漏洞.md",
+      "current_sha256": "641cc5f28c59d08a489952b85be11f90cd74e70121c01cd3e5e095fc468b68a1",
+      "restored_preapply_sha256": "0e78181d9fd36f1e6f1e217174349f09fb7c9580906018961fa9a93da80fdcb8",
+      "operation_count": 9,
+      "all_spans_match": true,
+      "inverse_exact": true
+    },
+    {
+      "path": "Web安全/中间件/Apache Solr/（CVE-2019-0193）Apache Solr 远程命令执行漏洞.md",
+      "current_sha256": "a1b97eb7c1b12074c6136ae6f57eeb591f2b1fae28b2033aa20bd493c61042ae",
+      "restored_preapply_sha256": "3a90074e729398439a9f68e9edd6d5c24874cb9680211c8c438590bf1176c070",
+      "operation_count": 3,
+      "all_spans_match": true,
+      "inverse_exact": true
+    },
+    {
+      "path": "Web安全/中间件/Apache Struts/（CVE-2016-0785）S2-029.md",
+      "current_sha256": "4e99317a8515c423062bb18776b2e3f421b59f72a7c34e1a5e83ad641df58b25",
+      "restored_preapply_sha256": "28494b17c255ee65526fb750cc07db658a2fe1497219f6e5cf0c4841e7f4a725",
+      "operation_count": 3,
+      "all_spans_match": true,
+      "inverse_exact": true
+    },
+    {
+      "path": "Web安全/中间件/Apache Struts/（CVE-2016-6795）s2-042.md",
+      "current_sha256": "069ac5b4d3f2a488463f939df61aee3ecc12ad88937c7e6e9bd16c1059096ac0",
+      "restored_preapply_sha256": "ace283105887f8107b78919c2eb5df88392ba8e10ace0f79468eb20ae83aae87",
+      "operation_count": 2,
+      "all_spans_match": true,
+      "inverse_exact": true
+    },
+    {
+      "path": "Web安全/中间件/Apache Struts/（CVE-2017-7525）s2-055.md",
+      "current_sha256": "82a2c85cc8b10b5724cde0166406314db90c333bca6b7b7dfc29ab4bc97999d3",
+      "restored_preapply_sha256": "5dfb8f3356d509bd3850e8b06a484cb81e76fe62ff36df8481888c50e52643f0",
+      "operation_count": 1,
+      "all_spans_match": true,
+      "inverse_exact": true
+    },
+    {
+      "path": "Web安全/中间件/Apache Struts/（CVE-2017-9791）s2-048.md",
+      "current_sha256": "89cb524af67d4649df4f031a383c00fb7ca25e76238bffd1f7cd675b795f26dd",
+      "restored_preapply_sha256": "52fa2815ac5a2bc1f11c048f1c955f75eb5ea1a1d76a9fa1b1e5fd42f26d0010",
+      "operation_count": 3,
+      "all_spans_match": true,
+      "inverse_exact": true
+    },
+    {
+      "path": "Web安全/云平台/Citrix/（CVE-2019-19781）Citrix 远程命令执行漏洞.md",
+      "current_sha256": "4a17cbcbc59b42ba0d92fee1fc1125291b9437ecb68648cc76d1ec5e5a38c967",
+      "restored_preapply_sha256": "d7b3da4e1e84a61ea7bcc5a064f6e34a28e3f32f4eb20e616db95091485109fb",
+      "operation_count": 1,
+      "all_spans_match": true,
+      "inverse_exact": true
+    },
+    {
+      "path": "Web安全/云平台/Citrix/（CVE-2020-7473）Citrix 认证绕过getshell.md",
+      "current_sha256": "ded96cac7716dbf69aa6a78278a7749866a3a036fb2e6724a176c5519bb5239d",
+      "restored_preapply_sha256": "2518f6212a2b7cb009406437fe72a6953a81e6235390436f5688b4d8b6dc9894",
+      "operation_count": 1,
+      "all_spans_match": true,
+      "inverse_exact": true
+    },
+    {
+      "path": "Web安全/云平台/Citrix/（CVE-2020-8195）Citrix 未授权访问漏洞.md",
+      "current_sha256": "98c03595abe0b4826900a54b595f30de9d5f27ff70cd7357f80cd7e81508e18f",
+      "restored_preapply_sha256": "38170501e8a0f3f5212b18f3e5b9bb95caa24774cd0326d0021436aedf4f347b",
+      "operation_count": 1,
+      "all_spans_match": true,
+      "inverse_exact": true
+    },
+    {
+      "path": "Web安全/云平台/Citrix/（CVE-2020-8198）Citrix 储存型xss.md",
+      "current_sha256": "5a047bd1f00ae8d92de4a9e5645ddb81d4d4528bd48fe306e39748e9e7506634",
+      "restored_preapply_sha256": "0ca89db0c86a885dd5b3bd546f4d5b23d60e97086fe95abfd98578681a369c63",
+      "operation_count": 1,
+      "all_spans_match": true,
+      "inverse_exact": true
+    },
+    {
+      "path": "Web安全/云平台/Citrix/（CVE-2020-ianianian）Citrix 目录遍历漏洞.md",
+      "current_sha256": "d5320ee3d91af11812563b2724d18f5f95df0a49ec894b1161a78a96f7878ca4",
+      "restored_preapply_sha256": "a2e0d92a859083c4c61ac448aefa84cadb1511e7011f1bdb39351a6617379b5e",
+      "operation_count": 1,
+      "all_spans_match": true,
+      "inverse_exact": true
+    },
+    {
+      "path": "Web安全/商业软件/Confluence/（CVE-2019-3398）Confluence 路径穿越漏洞.md",
+      "current_sha256": "c80cfbc40dddc8559144689ad761a8a3a01e147faf5be2d393c3d74c5b903b41",
+      "restored_preapply_sha256": "e2bf456998efbe2e74c527b87e99bf0c2d6c01f09dd98a96e763dd3574c9c3fb",
+      "operation_count": 2,
+      "all_spans_match": true,
+      "inverse_exact": true
+    },
+    {
+      "path": "Web安全/商业软件/Epage/Epage sql 注入漏洞.md",
+      "current_sha256": "f82daa77938e601a9051583acc9f30b8d14720ae7f1acdeb4727dfcc50d4d027",
+      "restored_preapply_sha256": "8251f026586ca9c504ca0816cd108ac0a55b62b03ca18d4704fc76a20488ed8b",
+      "operation_count": 3,
+      "all_spans_match": true,
+      "inverse_exact": true
+    },
+    {
+      "path": "Web安全/商业软件/帆软FineReport/FineReport 任意文件读取漏洞.md",
+      "current_sha256": "cf08e269b9a911a46b0f59058a2aab5ad489ba6f93ccbaf89004f6fe9d36a491",
+      "restored_preapply_sha256": "ff2e5a7865edf54611cdb92da4ffa39df29ee2edbfdc2421889532645b358936",
+      "operation_count": 1,
+      "all_spans_match": true,
+      "inverse_exact": true
+    },
+    {
+      "path": "Web安全/开发框架/FasterXML jackson/（CVE-2020-14060）FasterXML jackson-databind 反序列化漏洞.md",
+      "current_sha256": "d9f0505de70d93dc534ecddf300fa5dfdb4629411dfd487ee0fb74d4fd489f6f",
+      "restored_preapply_sha256": "bdeb823f44c14ba3a316322c9a281749b07054c5f3cb5b706d42d48664c00eed",
+      "operation_count": 1,
+      "all_spans_match": true,
+      "inverse_exact": true
+    },
+    {
+      "path": "Web安全/开发框架/FasterXML jackson/（CVE-2020-14062）FasterXML jackson-databind 反序列化漏洞.md",
+      "current_sha256": "d3cfdfe4b24f4163413101b5b8787361d57d4081e070af7e8fcc1e6ffc1a8f1e",
+      "restored_preapply_sha256": "3be164c94025f178c87ae93dcb46b11e8a853277c09d15ff353716812cb1717d",
+      "operation_count": 1,
+      "all_spans_match": true,
+      "inverse_exact": true
+    },
+    {
+      "path": "Web安全/开发框架/FasterXML jackson/（CVE-2020-14195）FasterXML jackson-databind 反序列化漏洞.md",
+      "current_sha256": "94b02a6a39bdfc81e303400c09c4a455c0a955e13c8dbaa3c740b8d8233cb32d",
+      "restored_preapply_sha256": "8a974f6f03774ca6646ed18e4818414610fbcc917def407e0bc80242a5933b6d",
+      "operation_count": 1,
+      "all_spans_match": true,
+      "inverse_exact": true
+    },
+    {
+      "path": "Web安全/开发框架/FasterXML jackson/（CVE-2020-24616）FasterXML jackson-databind 远程命令执行漏洞.md",
+      "current_sha256": "e4bc36dbe0a449be19cfb6dc48f87dc225cd4977863a264bd5ed254259c810a9",
+      "restored_preapply_sha256": "815d522f97717d2d69549d272c3dba5728461160eda166eddb6d5733178ea484",
+      "operation_count": 9,
+      "all_spans_match": true,
+      "inverse_exact": true
+    },
+    {
+      "path": "Web安全/开发框架/Fastjson/Fastjson 1.2.68 最新版本有限制 autotype bypass.md",
+      "current_sha256": "c3b0c8be1f07d58dfc67b2d29ebaedf130b8af29bd78dc1f26fa2fc87685232e",
+      "restored_preapply_sha256": "c7c0bdf1c62ecd4a6be70b74c108f27815f6763490cc74c0f6d32b5091eb0b11",
+      "operation_count": 10,
+      "all_spans_match": true,
+      "inverse_exact": true
+    },
+    {
+      "path": "Web安全/开发框架/Fastjson/Fastjson <=1.2.47 远程代码执行漏洞.md",
+      "current_sha256": "9ab5b969329b1d454abd08d985120c2a6edd943ec9c684b80909c1faac31c8d1",
+      "restored_preapply_sha256": "7b2d520c28f0ab5651d5120ec0e10172a13aa93e48de668b63d182f50cb0d5b6",
+      "operation_count": 1,
+      "all_spans_match": true,
+      "inverse_exact": true
+    },
+    {
+      "path": "Web安全/数据库/Aerospike/（CVE-2020-13151）Aerospike 数据库主机命令执行漏洞.md",
+      "current_sha256": "c791b75c3d56219e77a9df7d743411268cd4902043b8a07d05fcaec13a3d970c",
+      "restored_preapply_sha256": "116b3bff62017b6edb740b77c894e34b39278f45c0e3a758f3033a553af3b489",
+      "operation_count": 5,
+      "all_spans_match": true,
+      "inverse_exact": true
+    },
+    {
+      "path": "Web安全/网络设备/F5 BIG-IP/（CVE-2020-5902）F5 BIG-IP 远程命令执行漏洞.md",
+      "current_sha256": "bccc302148b7550afaf383641e35a2fe22233bbaad872ef3f283615e13c2f8d7",
+      "restored_preapply_sha256": "bb4555b878282f91af476bb28226c5695c7c7e8099634bfb8ce2eef0a90032a1",
+      "operation_count": 5,
+      "all_spans_match": true,
+      "inverse_exact": true
+    },
+    {
+      "path": "Web安全/网络设备/深信服/深信服EDR任意命令执行漏洞.md",
+      "current_sha256": "846f63fc984d0541d44691bec60550ae69dbaa4a33efda4cad67528eb50c775f",
+      "restored_preapply_sha256": "f1a2da3c2c2e243818f8fd625793af18b5bd0eb605becbf8fdc2a4af540bfc20",
+      "operation_count": 3,
+      "all_spans_match": true,
+      "inverse_exact": true
+    }
+  ],
+  "source_pairs": [
+    {
+      "path": "Web安全/开发框架/Shiro/新鲜出炉，Shiro 反序列化漏洞一站式综合利用工具.md",
+      "caption": "ba66c0ddf520b10a68e3bfee9bb3b0b8.png",
+      "image_markdown": "![ba66c0ddf520b10a68e3bfee9bb3b0b8.png](https://mmbiz.qpic.cn/sz_mmbiz_png/a1BOUvqnbrjvsg7icjzmicoLvmOXb9h8Xlb1kho6tibrJJyKXf7y53rZ7jXooy03715k1hvwNw0W9ckrAos3CoC2g/640?from=appmsg \"null\")  ",
+      "source_url": "https://mmbiz.qpic.cn/sz_mmbiz_png/a1BOUvqnbrjvsg7icjzmicoLvmOXb9h8Xlb1kho6tibrJJyKXf7y53rZ7jXooy03715k1hvwNw0W9ckrAos3CoC2g/640?from=appmsg",
+      "unchanged_current_and_restored": true
+    },
+    {
+      "path": "Web安全/开发框架/Shiro/新鲜出炉，Shiro 反序列化漏洞一站式综合利用工具.md",
+      "caption": "fc33f0cbe148d575c9eeb699734155c7.png",
+      "image_markdown": "![fc33f0cbe148d575c9eeb699734155c7.png](https://mmbiz.qpic.cn/sz_mmbiz_png/a1BOUvqnbrjvsg7icjzmicoLvmOXb9h8XlOJ1LvpibSaqjwswcPO6ndFJYBYsTUIYfHvnwhyEpcL9uj57gKPtUueA/640?from=appmsg \"null\")  ",
+      "source_url": "https://mmbiz.qpic.cn/sz_mmbiz_png/a1BOUvqnbrjvsg7icjzmicoLvmOXb9h8XlOJ1LvpibSaqjwswcPO6ndFJYBYsTUIYfHvnwhyEpcL9uj57gKPtUueA/640?from=appmsg",
+      "unchanged_current_and_restored": true
+    },
+    {
+      "path": "Web安全/开发框架/Shiro/新鲜出炉，Shiro 反序列化漏洞一站式综合利用工具.md",
+      "caption": "2cff7a920f8a678fd95a711be8bc0717.png",
+      "image_markdown": "![2cff7a920f8a678fd95a711be8bc0717.png](https://mmbiz.qpic.cn/sz_mmbiz_png/a1BOUvqnbrjvsg7icjzmicoLvmOXb9h8Xl2aVia8gSRnK4szPxeE0XQ23mmnTBf4alM9BiaatuLtTa4dzpsK9uqIDQ/640?from=appmsg \"null\")  ",
+      "source_url": "https://mmbiz.qpic.cn/sz_mmbiz_png/a1BOUvqnbrjvsg7icjzmicoLvmOXb9h8Xl2aVia8gSRnK4szPxeE0XQ23mmnTBf4alM9BiaatuLtTa4dzpsK9uqIDQ/640?from=appmsg",
+      "unchanged_current_and_restored": true
+    },
+    {
+      "path": "Web安全/开发框架/Shiro/新鲜出炉，Shiro 反序列化漏洞一站式综合利用工具.md",
+      "caption": "7c1c676e937d0088c556b4ba6b516768.png",
+      "image_markdown": "![7c1c676e937d0088c556b4ba6b516768.png](https://mmbiz.qpic.cn/sz_mmbiz_png/a1BOUvqnbrjvsg7icjzmicoLvmOXb9h8XlxyYDHpqC13nY47732DCADPic8KE7sevZa9wvfdRyYb6Y6sKdhlhH4YQ/640?from=appmsg \"null\")  ",
+      "source_url": "https://mmbiz.qpic.cn/sz_mmbiz_png/a1BOUvqnbrjvsg7icjzmicoLvmOXb9h8XlxyYDHpqC13nY47732DCADPic8KE7sevZa9wvfdRyYb6Y6sKdhlhH4YQ/640?from=appmsg",
+      "unchanged_current_and_restored": true
+    },
+    {
+      "path": "Web安全/开发框架/Shiro/新鲜出炉，Shiro 反序列化漏洞一站式综合利用工具.md",
+      "caption": "35bc0f81165f4a4d01d9d7eb21817a67.png",
+      "image_markdown": "![35bc0f81165f4a4d01d9d7eb21817a67.png](https://mmbiz.qpic.cn/sz_mmbiz_png/a1BOUvqnbrjvsg7icjzmicoLvmOXb9h8XlmHxDrRZEqsFpBaiaHRZA55gvTKR8tnFc9eWMG7gvnicpmoWcPGdjfkmw/640?from=appmsg \"null\")  ",
+      "source_url": "https://mmbiz.qpic.cn/sz_mmbiz_png/a1BOUvqnbrjvsg7icjzmicoLvmOXb9h8XlmHxDrRZEqsFpBaiaHRZA55gvTKR8tnFc9eWMG7gvnicpmoWcPGdjfkmw/640?from=appmsg",
+      "unchanged_current_and_restored": true
+    },
+    {
+      "path": "Web安全/开发框架/Shiro/新鲜出炉，Shiro 反序列化漏洞一站式综合利用工具.md",
+      "caption": "150a47635ae15abe016dde00c9201b57.png",
+      "image_markdown": "![150a47635ae15abe016dde00c9201b57.png](https://mmbiz.qpic.cn/sz_mmbiz_png/a1BOUvqnbrjvsg7icjzmicoLvmOXb9h8XlcMOURdupOwue2NBV22EQibTiaCaOibBmMqia9gDhgZR3gOPjl7FBTh2ucg/640?from=appmsg \"null\")  ",
+      "source_url": "https://mmbiz.qpic.cn/sz_mmbiz_png/a1BOUvqnbrjvsg7icjzmicoLvmOXb9h8XlcMOURdupOwue2NBV22EQibTiaCaOibBmMqia9gDhgZR3gOPjl7FBTh2ucg/640?from=appmsg",
+      "unchanged_current_and_restored": true
+    },
+    {
+      "path": "Web安全/开发框架/Shiro/新鲜出炉，Shiro 反序列化漏洞一站式综合利用工具.md",
+      "caption": "375a5360bce87b33b3639aca5c21b256.png",
+      "image_markdown": "![375a5360bce87b33b3639aca5c21b256.png](https://mmbiz.qpic.cn/sz_mmbiz_png/a1BOUvqnbrjvsg7icjzmicoLvmOXb9h8XlzNAY50S1pokCzUHgeLbsiawHNEvFrkuRVtvZDIoOkQZWaRZFjWk6bqw/640?from=appmsg \"null\")  ",
+      "source_url": "https://mmbiz.qpic.cn/sz_mmbiz_png/a1BOUvqnbrjvsg7icjzmicoLvmOXb9h8XlzNAY50S1pokCzUHgeLbsiawHNEvFrkuRVtvZDIoOkQZWaRZFjWk6bqw/640?from=appmsg",
+      "unchanged_current_and_restored": true
+    },
+    {
+      "path": "Web安全/开发框架/Shiro/新鲜出炉，Shiro 反序列化漏洞一站式综合利用工具.md",
+      "caption": "3e62b70d853aa2052f143c8a0a459322.png",
+      "image_markdown": "![3e62b70d853aa2052f143c8a0a459322.png](https://mmbiz.qpic.cn/sz_mmbiz_png/a1BOUvqnbrjvsg7icjzmicoLvmOXb9h8XlWQdibScyffyz1l3zDlYVbH45duu7JLbAibzcfyiaxnDl4O3mGuDIxZ3hA/640?from=appmsg \"null\")  ",
+      "source_url": "https://mmbiz.qpic.cn/sz_mmbiz_png/a1BOUvqnbrjvsg7icjzmicoLvmOXb9h8XlWQdibScyffyz1l3zDlYVbH45duu7JLbAibzcfyiaxnDl4O3mGuDIxZ3hA/640?from=appmsg",
+      "unchanged_current_and_restored": true
+    },
+    {
+      "path": "Web安全/开发框架/Shiro/新鲜出炉，Shiro 反序列化漏洞一站式综合利用工具.md",
+      "caption": "65ecad902c9caaaa022f7941a5225ad2.png",
+      "image_markdown": "![65ecad902c9caaaa022f7941a5225ad2.png](https://mmbiz.qpic.cn/sz_mmbiz_png/a1BOUvqnbrjvsg7icjzmicoLvmOXb9h8Xlw5J834UhUicPvVmHzsiaSqFB3gkxVgc0Mq6MFDmsvDbt9CvDWYpgRZYA/640?from=appmsg \"null\")  ",
+      "source_url": "https://mmbiz.qpic.cn/sz_mmbiz_png/a1BOUvqnbrjvsg7icjzmicoLvmOXb9h8Xlw5J834UhUicPvVmHzsiaSqFB3gkxVgc0Mq6MFDmsvDbt9CvDWYpgRZYA/640?from=appmsg",
+      "unchanged_current_and_restored": true
+    }
+  ],
+  "scanner_review": {
+    "files": [
+      "scripts/wiki.py",
+      "scripts/render-audit.cjs",
+      "tests/test_wiki.py",
+      "tests/render-audit.test.cjs"
+    ],
+    "result": "PASS",
+    "findings": "Static review confirms bare image filename candidate detection and a separate Pandoc comment-fence guard; tests distinguish bare filenames from linked images and fenced code, and distinguish Pandoc comment fences from ordinary fenced HTML."
+  }
+}

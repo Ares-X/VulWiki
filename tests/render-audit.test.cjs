@@ -20,6 +20,22 @@ test('detects a Setext heading that swallowed a triple fence marker as structura
   assert.equal(result.inventory.code_blocks, 0);
 });
 
+test('Pandoc separators render as comments while the neighboring code remains exact', () => {
+  const broken = '- command:\n\n```{=html}\n<!-- -->\n```\n    echo preserved\n';
+  assert.ok(has(audit(broken), 'pandoc_comment_fence'));
+  const repaired = '- command:\n\n<!-- -->\n\n    echo preserved\n';
+  assert.equal(has(audit(repaired), 'pandoc_comment_fence'), false);
+  const code = marked.lexer(repaired).filter((token) => token.type === 'code');
+  assert.deepEqual(code.map((token) => token.text), ['echo preserved']);
+  assert.equal(has(audit('```html\n<!-- -->\n```\n'), 'pandoc_comment_fence'), false);
+});
+
+test('bare image filenames are review candidates without treating code or real images as missing', () => {
+  assert.ok(has(audit('1.png\n'), 'bare_image_filename'));
+  assert.equal(has(audit('![1.png](actual.png)\n'), 'bare_image_filename'), false);
+  assert.equal(has(audit('```text\n1.png\n```\n'), 'bare_image_filename'), false);
+});
+
 test('detects WPS style adjacent triple backticks and a Markdown boundary after HTML', () => {
   const result = audit('``\n第一行```\n第二行\n``\n\n<div>内容</div># 后续标题\n');
   assert.ok(has(result, 'inline_triple_fence'));

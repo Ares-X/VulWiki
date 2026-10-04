@@ -62,9 +62,8 @@ Mysql可以使用`LOAD DATA INFILE`来读取文件，通常有两种用法，分
 
 -   phpmyadmin 开启了远程连接选项，adminer是默认开启的.
 
-```{=html}
 <!-- -->
-```
+
     $cfg['AllowArbitraryServer'] = true; //false改为true libraries下面的config.default.php
 
 -   mysql中secure\_file\_priv为空，即支持load infile的使用

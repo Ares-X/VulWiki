@@ -1,0 +1,188 @@
+{
+  "path": "Web安全/网络设备/Ivanti/Ivanti EPM 严重漏洞（CVE-2025-10573）存在管理员会话劫持与未授权远程代码执行风险.md",
+  "before_sha256": "58987858833900aa6f1e4d76c2603433a2423b901f9b5d18bb2d1ee18300b832",
+  "after_sha256": "93c9cd31144f57a9aa804a9343c58d1a0fd7c971f15e8507fb3b84089e88a860",
+  "source_archive_sha256": "07a8c7f659557ddcb267bc3df82987850e7964167a9591b5a910ebde9d9fe318",
+  "offset_unit": "Python Unicode code points",
+  "operations": [
+    {
+      "before": "* [专ж Ҹ](/column/index.html)",
+      "after": "* [专栏](/column/index.html)",
+      "reason": "exact same article archived source",
+      "scope": "previously held line",
+      "before_offset_chars": 3231,
+      "after_offset_chars": 3257
+    },
+    {
+      "before": "# Ivanti EPM 严重漏洞（CVE-2025-10573）存在管理员会话劫持与未授权远程代з Ғ执行风险",
+      "after": "# Ivanti EPM 严重漏洞（CVE-2025-10573）存在管理员会话劫持与未授权远程代码执行风险",
+      "reason": "exact same article archived source",
+      "scope": "previously held line",
+      "before_offset_chars": 3407,
+      "after_offset_chars": 3431
+    },
+    {
+      "before": "本文是翻译文з« ，文з« 原作者 Ddos ，文з« 来源：securityonline",
+      "after": " 本文是翻译文章，文章原作者  Ddos ，文章来源：securityonline",
+      "reason": "exact same article archived source",
+      "scope": "previously held line",
+      "before_offset_chars": 3526,
+      "after_offset_chars": 3548
+    },
+    {
+      "before": "Ivanti 已为其终端管理器（Endpoint ManagerпјҢEPM）解决方案推出**紧急安全更新**，修复了一系列严重漏洞 вҖ”вҖ” 这些漏洞可能允许攻击者执行任意代з Ғ或劫持管理员会话。此次更新针对四个独立漏洞，其中包括一个严重程度评分接近满分的**高危漏洞**гҖӮ",
+      "after": "Ivanti 已为其终端管理器（Endpoint Manager，EPM）解决方案推出**紧急安全更新**，修复了一系列严重漏洞 —— 这些漏洞可能允许攻击者执行任意代码或劫持管理员会话。此次更新针对四个独立漏洞，其中包括一个严重程度评分接近满分的**高危漏洞**。",
+      "reason": "exact same article archived source",
+      "scope": "previously held line",
+      "before_offset_chars": 4245,
+      "after_offset_chars": 4263
+    },
+    {
+      "before": "最严重的漏洞编号为В **CVE-2025-10573**，属于**存储型跨站脚本（Stored XSS）漏洞**пјҢCVSS 评分为 9.6。该漏洞影响В **2024 SU4 SR1 之前的所有 EPM 版本**гҖӮ",
+      "after": "最严重的漏洞编号为 **CVE-2025-10573**，属于**存储型跨站脚本（Stored XSS）漏洞**，CVSS 评分为 9.6。该漏洞影响 **2024 SU4 SR1 之前的所有 EPM 版本**。",
+      "reason": "exact same article archived source",
+      "scope": "previously held line",
+      "before_offset_chars": 4390,
+      "after_offset_chars": 4398
+    },
+    {
+      "before": "ж №据安全公告，该漏洞 “允许远程未授权攻击者在管理员会话上下文中执行任意 JavaScript 代з Ғ”。尽管漏洞利用需要用户交互（可能是诱骗管理员访问恶意页面），但**完全会话劫持的潜在风险**使其成为防御者的最高优先级处理事项。",
+      "after": "根据安全公告，该漏洞 “允许远程未授权攻击者在管理员会话上下文中执行任意 JavaScript 代码”。尽管漏洞利用需要用户交互（可能是诱骗管理员访问恶意页面），但**完全会话劫持的潜在风险**使其成为防御者的最高优先级处理事项。",
+      "reason": "exact same article archived source",
+      "scope": "previously held line",
+      "before_offset_chars": 4504,
+      "after_offset_chars": 4506
+    },
+    {
+      "before": "除上述高危 XSS 漏洞外，Ivanti 还修复了三个高严重级别的漏洞，这些漏洞可能导致系统面临**远程代з Ғ执行（RCEпјү**В 和**未授权文件操作**风险：",
+      "after": "除上述高危 XSS 漏洞外，Ivanti 还修复了三个高严重级别的漏洞，这些漏洞可能导致系统面临**远程代码执行（RCE）** 和**未授权文件操作**风险：",
+      "reason": "exact same article archived source",
+      "scope": "previously held line",
+      "before_offset_chars": 4625,
+      "after_offset_chars": 4623
+    },
+    {
+      "before": "1. **任意文件写入漏洞（CVE-2025-13659пјү**пјҡCVSS 评分为 8.8，该漏洞源于 “对动态管理的代з Ғ资源控制不当”，允许远程未授权攻击者向服务器写入任意文件，进而可能导致远程代з Ғ执行。",
+      "after": "1. **任意文件写入漏洞（CVE-2025-13659）**：CVSS 评分为 8.8，该漏洞源于 “对动态管理的代码资源控制不当”，允许远程未授权攻击者向服务器写入任意文件，进而可能导致远程代码执行。",
+      "reason": "exact same article archived source",
+      "scope": "previously held line",
+      "before_offset_chars": 4711,
+      "after_offset_chars": 4704
+    },
+    {
+      "before": "2. **签名验证失败漏洞（CVE-2025-13662пјү**пјҡCVSS 评分为 7.8，漏洞出现在补丁管理组件中 вҖңеҠ 密签名验证不充分”，允许远程未授权攻击者执行任意代з Ғ，但需用户交互。",
+      "after": "2. **签名验证失败漏洞（CVE-2025-13662）**：CVSS 评分为 7.8，漏洞出现在补丁管理组件中 “加密签名验证不充分”，允许远程未授权攻击者执行任意代码，但需用户交互。",
+      "reason": "exact same article archived source",
+      "scope": "previously held line",
+      "before_offset_chars": 4822,
+      "after_offset_chars": 4807
+    },
+    {
+      "before": "3. **路径遍历漏洞（CVE-2025-13661пјү**пјҡCVSS 评分为 7.1，允许已认证攻击者 “向目ж Ү目录外写入任意文件”，可能з ҙ坏系统完整性。",
+      "after": "3. **路径遍历漏洞（CVE-2025-13661）**：CVSS 评分为 7.1，允许已认证攻击者 “向目标目录外写入任意文件”，可能破坏系统完整性。",
+      "reason": "exact same article archived source",
+      "scope": "previously held line",
+      "before_offset_chars": 4927,
+      "after_offset_chars": 4902
+    },
+    {
+      "before": "这些漏洞影响В **Ivanti Endpoint Manager 2024 SU4 及所有早期版本**гҖӮIvanti 已发布В **2024 SU4 SR1 版本**以修复上述问题。",
+      "after": "这些漏洞影响 **Ivanti Endpoint Manager 2024 SU4 及所有早期版本**。Ivanti 已发布 **2024 SU4 SR1 版本**以修复上述问题。",
+      "reason": "exact same article archived source",
+      "scope": "previously held line",
+      "before_offset_chars": 5014,
+      "after_offset_chars": 4981
+    },
+    {
+      "before": "尽管 Ivanti 表示 “在漏洞披露时，尚未发现任何客户遭遇相关漏洞攻击”，但仍**强烈建议客户立即执行更新**гҖӮ",
+      "after": "尽管 Ivanti 表示 “在漏洞披露时，尚未发现任何客户遭遇相关漏洞攻击”，但仍**强烈建议客户立即执行更新**。",
+      "reason": "exact same article archived source",
+      "scope": "previously held line",
+      "before_offset_chars": 5110,
+      "after_offset_chars": 5073
+    },
+    {
+      "before": "对于ж— 法立即部署补丁的组织，Ivanti 建议审查其网络暴露面。针对上述高危 XSS 漏洞，安全公告特别指出：“Ivanti EPM 并非面向互联网的解决方案。若客户未将该系统暴露在互联网中，此漏洞的风险将显著降低”。",
+      "after": "对于无法立即部署补丁的组织，Ivanti 建议审查其网络暴露面。针对上述高危 XSS 漏洞，安全公告特别指出：“Ivanti EPM 并非面向互联网的解决方案。若客户未将该系统暴露在互联网中，此漏洞的风险将显著降低”。",
+      "reason": "exact same article archived source",
+      "scope": "previously held line",
+      "before_offset_chars": 5172,
+      "after_offset_chars": 5133
+    },
+    {
+      "before": "此外，管理员需**验证连接源和文件来源的可信度**：任意文件写入漏洞和签名验证失败漏洞的利用，均依赖于连接 “不可信的ж ё心服务器” 或导入 “不可信的配置文件”。",
+      "after": "此外，管理员需**验证连接源和文件来源的可信度**：任意文件写入漏洞和签名验证失败漏洞的利用，均依赖于连接 “不可信的核心服务器” 或导入 “不可信的配置文件”。",
+      "reason": "exact same article archived source",
+      "scope": "previously held line",
+      "before_offset_chars": 5285,
+      "after_offset_chars": 5244
+    },
+    {
+      "before": "商务合作，文з« 发布请联系 anquanke@360.cn",
+      "after": "商务合作，文章发布请联系 anquanke@360.cn",
+      "reason": "corrupted substring verified in the exact article archived DOM; existing Markdown boundaries retained",
+      "scope": "previously omitted page chrome",
+      "before_offset_chars": 5530,
+      "after_offset_chars": 5487
+    },
+    {
+      "before": "* 文з«",
+      "after": "* 文章",
+      "reason": "corrupted substring verified in the exact article archived DOM; existing Markdown boundaries retained",
+      "scope": "previously omitted page chrome",
+      "before_offset_chars": 6665,
+      "after_offset_chars": 6620
+    },
+    {
+      "before": "### TA的文з«",
+      "after": "### TA的文章",
+      "reason": "corrupted substring verified in the exact article archived DOM; existing Markdown boundaries retained",
+      "scope": "previously omitted page chrome",
+      "before_offset_chars": 6696,
+      "after_offset_chars": 6650
+    },
+    {
+      "before": "### 相关文з«",
+      "after": "### 相关文章",
+      "reason": "corrupted substring verified in the exact article archived DOM; existing Markdown boundaries retained",
+      "scope": "previously omitted page chrome",
+      "before_offset_chars": 7206,
+      "after_offset_chars": 7159
+    },
+    {
+      "before": "文з« 目录",
+      "after": "文章目录",
+      "reason": "corrupted substring verified in the exact article archived DOM; existing Markdown boundaries retained",
+      "scope": "previously omitted page chrome",
+      "before_offset_chars": 7949,
+      "after_offset_chars": 7901
+    },
+    {
+      "before": "Copyright В©",
+      "after": "Copyright ©",
+      "reason": "corrupted substring verified in the exact article archived DOM; existing Markdown boundaries retained",
+      "scope": "previously omitted page chrome",
+      "before_offset_chars": 8469,
+      "after_offset_chars": 8419
+    },
+    {
+      "before": "微信二维з Ғ",
+      "after": "微信二维码",
+      "reason": "corrupted substring verified in the exact article archived DOM; existing Markdown boundaries retained",
+      "scope": "previously omitted page chrome",
+      "before_offset_chars": 8688,
+      "after_offset_chars": 8637
+    },
+    {
+      "before": "> 编码校订（2026-10-04）：归档正文有 UTF-8 字节按 PTCP154 解码形成的乱码；本次仅恢复 204 处严格可正反向还原的非 ASCII 片段，URL、编号、ASCII 测试值和代码字符流均保持原样。14 行不能整行严格还原，其中无法验证的片段继续原样保留，不猜补文字；这不是全篇事实核验。",
+      "after": "> 编码校订（2026-10-04）：此前恢复了 204 处严格可正反向还原的非 ASCII 片段。本次找到并对照同篇安全客页面的 2026-01-18 存档，恢复先前待核的 14 行及遗漏的 7 处页面文字，保留来源的标点和不换行空格；译文来源记录不等于厂商事实核验。URL、编号、ASCII 测试值、代码及其余正文不变，推荐阅读中未证实的历史标题仍保留原值。",
+      "reason": "update owning editorial receipt to reflect verified source recovery",
+      "scope": "editorial note",
+      "before_offset_chars": 1531,
+      "after_offset_chars": 1531
+    }
+  ],
+  "inverse_restores_original_bytes": true,
+  "frontmatter_unchanged": true,
+  "related_link_titles_unchanged": true
+}
