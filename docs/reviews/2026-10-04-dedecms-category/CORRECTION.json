@@ -3,7 +3,7 @@
   "path": "Web安全/CMS内容/DedeCMS/DedeCMSV6-0-3 代码审计 - 先知社区.md",
   "before_sha256": "a5ded8b5821c503f461b30823fa4dfdfe4b96379a13c14d4239b171d7c4ed59a",
   "after_sha256": "682964c8e1514dba1ac36c57913c6162dd31b54b95792f20f81791f3490fea68",
-  "original_technical_body_sha256": "71c9628c161512666f6f79c72958f4cb43e0e6ab903430a0e6b419b774ef0ff0",
+  "original_technical_body_sha256": "82825e7508cd69abd0476518041be2e91932fb4006efa78ef9ca5b2212f847e1",
   "original_technical_body_unchanged": true,
   "before_fields": {
     "product": "通天星 CMSV6 车载视频监控平台",
@@ -64,5 +64,10 @@
     ],
     "additional_vehicle_platform_record": "Web安全/其他软件/杂项/CVE-2024-29666.md"
   },
-  "limits": "Correct only product/category and the erroneous maintainer-added note/side-effects statement. Original technical body, public values and other review notes stay byte-for-byte unchanged. Related records are not otherwise edited. No PoC or target access."
+  "limits": "Correct only product/category and the erroneous maintainer-added note/side-effects statement. Original technical body, public values and other review notes stay byte-for-byte unchanged. Related records are not otherwise edited. No PoC or target access.",
+  "original_technical_body_range": {
+    "start": "Original H1 including heading and its newline",
+    "end": "EOF",
+    "bytes": 14069
+  }
 }
