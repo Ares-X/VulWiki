@@ -51,7 +51,7 @@ EmpireCMS 7.5
 
 需要开启会员空间功能(默认关闭),登录后台开启会员空间功能。
 
-1.png
+> **图片待核**：原归档在此处仅保留文件名 `1.png`，没有可对应的图片引用。
 
 漏洞出现的位置在/e/ViewImg/index.html,浏览代码,发现如下代码存在漏洞
 
@@ -63,19 +63,19 @@ EmpireCMS 7.5
 
 例如,地址是:`index.html?url=javascript:alert(document.cookie)`,经过Request函数处理就变成`javascript:alert(document.cookie)`
 
-3.png
+> **图片待核**：原归档在此处仅保留文件名 `3.png`，没有可对应的图片引用。
 
 url地址经过Request函数处理之后,然后把url地址中的参数和值部分直接拼接当作a标签的href属性的值和img标签的src标签的值。
 
-4.png
+> **图片待核**：原归档在此处仅保留文件名 `4.png`，没有可对应的图片引用。
 
 通过上面的分析,可以发现代码没有对url的参数做过滤就直接拼接成a和img标签的属性的值,因此可以构造payload:?
 ?url=javascript:alert(/xss/)
 
 浏览器访问`http://www.0-sec.org/e/ViewImg/index.html?url=javascript:alert(/xss/)`
 
-5.png
+> **图片待核**：原归档在此处仅保留文件名 `5.png`，没有可对应的图片引用。
 
 点击图片便可触发
 
-6.png
+> **图片待核**：原归档在此处仅保留文件名 `6.png`，没有可对应的图片引用。

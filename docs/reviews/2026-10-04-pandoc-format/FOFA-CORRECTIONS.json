@@ -1,0 +1,101 @@
+{
+  "articles": [
+    {
+      "path": "Web安全/CMS内容/WordPress/WordPress Dokan Pro插件 SQL注入漏洞(CVE-2024-3922).md",
+      "sha256": "e9e85c86863e2de23601bda7585d10887eb7323968c50359d1db6bb9d51d67a1",
+      "line": 69,
+      "source_offset_bytes": {
+        "start": 3638,
+        "end_exclusive": 3678
+      },
+      "full_line": "FOFA：\"/wp-content/plugins/dokan-pro/\"",
+      "expression": "\"/wp-content/plugins/dokan-pro/\"",
+      "replacement": "fofa: \"\\\"/wp-content/plugins/dokan-pro/\\\"\"",
+      "valid_current_fofa_syntax": true,
+      "reasoning": "Exact expression explicitly labeled FOFA; standalone quoted keyword atom is supported.",
+      "before_sha256": "e9e85c86863e2de23601bda7585d10887eb7323968c50359d1db6bb9d51d67a1",
+      "after_sha256": "a40249a699db2b4e12212cfab5b6ca246c517193c13bb65250fb1f7dd72d50c8",
+      "old_field_line": "fofa_unverified: \"/wp-content/plugins/dokan-pro/\"",
+      "technical_body_unchanged": true,
+      "body_unchanged": true
+    },
+    {
+      "path": "Web安全/ERP企业/用友FE/用友 FE templateOfTaohong_manager.jsp 目录遍历漏洞.md",
+      "sha256": "6758fefb92b3cebcbda1b0c463dd91e5cdbf1a85d67e6effb23222115595f129",
+      "line": 76,
+      "source_offset_bytes": {
+        "start": 3591,
+        "end_exclusive": 3602
+      },
+      "full_line": "\"FE协作\"",
+      "expression": "\"FE协作\"",
+      "replacement": "fofa: \"\\\"FE协作\\\"\"",
+      "valid_current_fofa_syntax": true,
+      "reasoning": "Exact quoted keyword under the article heading 网络测绘; standalone quoted keyword atom is supported.",
+      "before_sha256": "6758fefb92b3cebcbda1b0c463dd91e5cdbf1a85d67e6effb23222115595f129",
+      "after_sha256": "4abc106f1c1a2e86f31a8fe5647065e7fe0db07345fee82657d8847148e50e5a",
+      "old_field_line": "fofa_unverified: \"\\\"FE协作\\\"\"",
+      "technical_body_unchanged": true,
+      "body_unchanged": true
+    },
+    {
+      "path": "Web安全/OA办公/致远OA/致远伪 0day FastJson 利用链.md",
+      "sha256": "d6195ede3b9328d5547af76e0034f86e7ff3c6ea87bec85f030f7337dcac491a",
+      "line": 62,
+      "source_offset_bytes": {
+        "start": 3320,
+        "end_exclusive": 3373
+      },
+      "full_line": "FOFA：\"seeyon\" && city=\"xxxx\" && after=\"2021-01-01\"",
+      "expression": "\"seeyon\" && city=\"xxxx\" && after=\"2021-01-01\"",
+      "replacement": "fofa: \"\\\"seeyon\\\" && city=\\\"xxxx\\\" && after=\\\"2021-01-01\\\"\"",
+      "valid_current_fofa_syntax": true,
+      "reasoning": "Exact complete expression explicitly labeled FOFA and accepted by current syntax validator. The source literally uses city=\"xxxx\"; retain this value and flag its meaning as source-uncertain rather than substituting a city.",
+      "before_sha256": "d6195ede3b9328d5547af76e0034f86e7ff3c6ea87bec85f030f7337dcac491a",
+      "after_sha256": "70bb7158777a2e785ce6f287fdeb56c81a2fba2fae32d6322a0e4ec8010889d4",
+      "old_field_line": "fofa_unverified: \"seeyon\"",
+      "technical_body_unchanged": true,
+      "body_unchanged": true
+    }
+  ],
+  "baseline_removed": [
+    {
+      "code": "fingerprint_unverified",
+      "count": 1,
+      "detail": "fofa: retained unverified query excluded from fingerprint index",
+      "key": "059affdf9473cd41a36c3c0a",
+      "line": 0,
+      "lines": [
+        0
+      ],
+      "path": "Web安全/ERP企业/用友FE/用友 FE templateOfTaohong_manager.jsp 目录遍历漏洞.md",
+      "severity": "warning"
+    },
+    {
+      "code": "fingerprint_unverified",
+      "count": 1,
+      "detail": "fofa: retained unverified query excluded from fingerprint index",
+      "key": "3c4ca42c02d48e689c6417f1",
+      "line": 0,
+      "lines": [
+        0
+      ],
+      "path": "Web安全/OA办公/致远OA/致远伪 0day FastJson 利用链.md",
+      "severity": "warning"
+    },
+    {
+      "code": "fingerprint_unverified",
+      "count": 1,
+      "detail": "fofa: retained unverified query excluded from fingerprint index",
+      "key": "8f8048d3affe00346207a367",
+      "line": 0,
+      "lines": [
+        0
+      ],
+      "path": "Web安全/CMS内容/WordPress/WordPress Dokan Pro插件 SQL注入漏洞(CVE-2024-3922).md",
+      "severity": "warning"
+    }
+  ],
+  "baseline_before_sha256": "f6b62e639aab5faf70f33522e6875c6e8c80273cf4cfcf8d510a4bd201a87fb0",
+  "baseline_after_sha256": "ba0126ae11267bd513d505d56ba05fb647c638cc834d051d6e0ba3e26285c088"
+}

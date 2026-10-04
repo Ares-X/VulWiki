@@ -15,11 +15,13 @@ side_effects: "现有材料未完整列明副作用；示例不保证只读或�
 review_date: "2026-10-02"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E7%94%A8%E5%8F%8BFE/%E7%94%A8%E5%8F%8B%20FE%20templateOfTaohong_manager.jsp%20%E7%9B%AE%E5%BD%95%E9%81%8D%E5%8E%86%E6%BC%8F%E6%B4%9E.md"
-fofa_unverified: "\"FE协作\""
+fofa: "\"FE协作\""
+fofa_previous_unverified: "\"FE协作\""
 id: "vw-802e8f635eefba3b5b25c258"
 entity_id: "ve-802e8f635eefba3b5b25c258"
 schema_version: "1"
 source_url: "https://github.com/zan8in/afrog-pocs/blob/253291be2d307a6c836d5997bbb838f1e846f9ba/vulnerability/yonyou-fe-templateoftaohong-manager-path-traversal.yaml"
+fofa_review_note: "同篇原文完整表达式；仅确认出处与基本语法，不证明资产受影响。"
 ---
 
 # 用友FE协作办公 templateOfTaohong目录遍历列举

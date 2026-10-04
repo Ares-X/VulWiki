@@ -55,7 +55,7 @@ OneThink \< 1.1.141212
 
 打开源码文件夹，好家伙，踏破铁鞋无觅处，得来全不费工夫------thinkphp3.2.3的框架，那岂不是，
 
-2.png
+> **图片待核**：原归档在此处仅保留文件名 `2.png`，没有可对应的图片引用。
 
 咱们一起回顾下它sql注入时参数的传递过程
 
@@ -234,9 +234,8 @@ ok，现在有了注入，我们就能使用联合查询，来绕过后台用户
 
 -   **密码验证**。即还要使得`think_ucenter_md5($password, UC_AUTH_KEY)`等于查询出的`$user['password']`，`$password`其实就是咱们登陆时输入的密码，我们跟进`think_ucenter_md`
 
-```{=html}
 <!-- -->
-```
+
     # \OneThink\Application\User\Common\common.php #15L
     function think_ucenter_md5($str, $key = 'ThinkUCenter'){
      return '' === $str ? '' : md5(sha1($str) . $key);

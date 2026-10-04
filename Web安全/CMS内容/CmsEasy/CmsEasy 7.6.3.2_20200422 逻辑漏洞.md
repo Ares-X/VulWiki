@@ -58,9 +58,8 @@ CmsEasy 7.6.3.2
 
 -   5.将抓到的包中的最后一个数字改为负数    图片 5.png    图片 6.png    然后放包
 
-```{=html}
 <!-- -->
-```
+
     GET /index.php?case=archive&act=doorders&aid=527&datatype=&thisnum=-100 HTTP/1.1
     Host: www.0-sec.org
     Accept: */*

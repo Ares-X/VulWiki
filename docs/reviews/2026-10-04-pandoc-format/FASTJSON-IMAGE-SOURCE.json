@@ -1,0 +1,42 @@
+{
+  "frozenCommit": "4ab1698774cbf65a68c4f742a31bf92b599c5317",
+  "article": {
+    "path": "Web安全/开发框架/Fastjson/Fastjson <=1.2.47 远程代码执行漏洞.md",
+    "currentSHA": "7ad4006ffe0aa111e117d17f4fac3afab08a1401",
+    "bareFilenameLine": 59,
+    "originalRaw": "1.png\n"
+  },
+  "publicSourceLookup": {
+    "repository": "https://github.com/PeiQi0/PeiQi-WIKI-Book",
+    "recursiveTreeEndpoint": "https://api.github.com/repos/PeiQi0/PeiQi-WIKI-Book/git/trees/main?recursive=1",
+    "recursiveTreeTruncated": false,
+    "fastjsonPathsFound": [
+      "docs/.vuepress/dist/wiki/iot/HIKVISION/HIKVISION 综合安防管理平台 applyCT Fastjson远程命令执行漏洞.html",
+      "docs/wiki/iot/HIKVISION/HIKVISION 综合安防管理平台 applyCT Fastjson远程命令执行漏洞.md"
+    ],
+    "exactTitleOrSameArticleFound": false,
+    "exactTitleSearchesFound": false,
+    "notes": "The Book main recursive tree has no Fastjson <=1.2.47 article. Its only Fastjson source is a distinct Hikvision applyCT article. Search for the quoted Fastjson <=1.2.47 title and PeiQi returned no exact same-article source."
+  },
+  "sameArticleResourceAssets": [
+    {
+      "path": "Web安全/开发框架/Fastjson/.resource/Fastjson-1.2.47-远程命令执行漏洞/media/202202231308359.png",
+      "sha256": "b53055797ba770b06cc20d0d9836a6943ece27b2502cc07df6420e68f6af383d",
+      "bytes": 131151,
+      "observation": "Burp request screenshot; the pictured request uses rmi://192.168.174.128:8888/TouchFile, whereas the frozen article line 59 follows LDAPRefServer setup and the later body payload uses ldap://ip:1389/Exploit. This is a related technique but not an exact placement/payload match.",
+      "decision": "not_exact_mapping"
+    },
+    {
+      "path": "Web安全/开发框架/Fastjson/.resource/Fastjson-1.2.47-远程命令执行漏洞/media/202202231308945.png",
+      "sha256": "1c6f1a3ac118585260a95d02be54f521a62fdfbc989da329606d32184598ee35",
+      "bytes": 202424,
+      "observation": "Netcat shell screenshot; pictured listener is port 9999, while the frozen article says nc -lvvp 8888. No exact placement match.",
+      "decision": "not_exact_mapping"
+    }
+  ],
+  "decision": {
+    "classification": "bare_original_placeholder; exact source mapping not established",
+    "replacement": null,
+    "reason": "The repository contains two image files under this article-named resource subtree, but neither image is an exact match for the bare 1.png position: one depicts a different RMI payload/protocol from the preceding LDAP server command and the later article payload; the other depicts a shell listener on a different port. PeiQi-WIKI-Book has no same article/source mapping. Do not bind either asset to line 59 based on topical similarity."
+  }
+}

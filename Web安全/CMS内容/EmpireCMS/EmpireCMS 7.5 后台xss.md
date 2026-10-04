@@ -51,30 +51,30 @@ EmpireCMS 7.5
 
 漏洞出现的页面在/e/admin/openpage/AdminPage.php,浏览漏洞页面代码,发现使用hRepPostStr函数对leftfile、title、mainfile参数进行处理
 
-1.png
+> **图片待核**：原归档在此处仅保留文件名 `1.png`，没有可对应的图片引用。
 
 跟进hRepPostStr函数,发现htmlspecialchars进行实体编码过滤,而且参数用的是ENT\_QUOTES(编码双引号和单引号)
 
-2.png
+> **图片待核**：原归档在此处仅保留文件名 `2.png`，没有可对应的图片引用。
 
 继续浏览代码,发现使用CkPostStrChar函数对参数进行处理
 
-3.png
+> **图片待核**：原归档在此处仅保留文件名 `3.png`，没有可对应的图片引用。
 
 跟进CkPostStrChar函数,处理编码字符4.png
 
 继续浏览代码,发现又使用了AddAddsData函数对参数进行处理
 
-5.png
+> **图片待核**：原归档在此处仅保留文件名 `5.png`，没有可对应的图片引用。
 
 跟进AddAddsData函数,分析代码:如果没有开启magic\_quotes\_gpc函数,就使用addslashes函数对参数中的特殊字符进行转义处理
 
-6.png
+> **图片待核**：原归档在此处仅保留文件名 `6.png`，没有可对应的图片引用。
 
 继续浏览代码,发现在网页输出时,
 \$leftfile、\$mainfile参数的输出位置是iframe标签的src里面,由于代码没有对别的恶意字符进行处理,此时可以构造javascript:alert(/xss/),iframe标签可以执行javascript代码,此时就会触发XSS代码。
 
-7.png
+> **图片待核**：原归档在此处仅保留文件名 `7.png`，没有可对应的图片引用。
 
 ### 漏洞复现
 

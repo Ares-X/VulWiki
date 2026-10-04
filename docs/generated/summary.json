@@ -2,10 +2,10 @@
   "documents": 5844,
   "excluded_sources": 2,
   "explicit_entities": 5558,
-  "fingerprints": 923,
+  "fingerprints": 926,
   "indexed_sources": 5842,
   "issues": {
-    "fingerprint_unverified": 48,
+    "fingerprint_unverified": 45,
     "identifier_inactive": 26,
     "identifier_role_unknown": 2,
     "noncontent_link_candidate": 24,
@@ -17,6 +17,6 @@
   "primary_cve_identifiers": 3556,
   "primary_entries": 5748,
   "schema_version": 1,
-  "source_digest": "330d60e8061d170c376f84aba8c5f9d8a723bd791106287900732a664c9b220a",
+  "source_digest": "462ddfa8a4941ec0282edd88a5ab01d9a2ffb55ac6144e879be38d22d7e7a84a",
   "verification": "offline-static-only"
 }

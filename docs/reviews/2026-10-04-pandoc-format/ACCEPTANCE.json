@@ -1,0 +1,52 @@
+{
+  "base_commit": "4ab1698774cbf65a68c4f742a31bf92b599c5317",
+  "source_documents": 5844,
+  "changed_articles": 79,
+  "unchanged_articles": 5765,
+  "exact_phase_hash_chains": true,
+  "pandoc_fences_repaired": 92,
+  "image_placeholder_annotations": 149,
+  "actual_image_captions_unchanged": 9,
+  "fofa_literals_recovered": 3,
+  "encoding_held_lines_recovered": 14,
+  "encoding_page_chrome_recovered": 7,
+  "Python_tests": 81,
+  "Marked_tests": 24,
+  "source_errors": 0,
+  "fatal_issues": 0,
+  "new_issues": 0,
+  "historical_warnings": 4097,
+  "render_before": {
+    "files": 5844,
+    "candidates": 256,
+    "by_rule": {
+      "bare_image_filename": 158,
+      "code_web_controls": 1,
+      "pandoc_comment_fence": 92,
+      "unfenced_source": 1,
+      "unknown_html_literal": 4
+    },
+    "structural_failures": 0,
+    "marked": {
+      "module": "/Users/aresx/Ares-X.github.io/node_modules/marked/lib/marked.cjs",
+      "version": "4.3.0"
+    }
+  },
+  "render_after": {
+    "files": 5844,
+    "candidates": 15,
+    "by_rule": {
+      "bare_image_filename": 9,
+      "code_web_controls": 1,
+      "unfenced_source": 1,
+      "unknown_html_literal": 4
+    },
+    "structural_failures": 0,
+    "marked": {
+      "module": "/Users/aresx/Ares-X.github.io/node_modules/marked/lib/marked.cjs",
+      "version": "4.3.0"
+    }
+  },
+  "article_code_executed": false,
+  "redaction": false
+}

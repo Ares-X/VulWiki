@@ -1,0 +1,223 @@
+{
+  "audit": "independent read-only review of cached exact same-article Anquanke source",
+  "reviewed_head": "4ab1698774cbf65a68c4f742a31bf92b599c5317",
+  "repository_file_sha256": "58987858833900aa6f1e4d76c2603433a2423b901f9b5d18bb2d1ee18300b832",
+  "source_archive": {
+    "path": "/tmp/anquanke-313631-archive.html",
+    "sha256": "07a8c7f659557ddcb267bc3df82987850e7964167a9591b5a910ebde9d9fe318",
+    "bytes": 26643,
+    "http_status": 200,
+    "wayback_snapshot_url": "https://web.archive.org/web/20260118194938id_/https://www.anquanke.com/post/id/313631",
+    "identity_checks": {
+      "visible_h1": "Ivanti EPM 严重漏洞（CVE-2025-10573）存在管理员会话劫持与未授权远程代码执行风险",
+      "window_state_post_id": 313631,
+      "window_state_title": "Ivanti EPM 严重漏洞（CVE-2025-10573）存在管理员会话劫持与未授权远程代码执行风险",
+      "visible_publish_timestamp": "2025-12-10 17:29:56",
+      "window_state_date": "2025-12-10 17:29:56",
+      "source_url_exact": "https://securityonline.info/critical-ivanti-epm-flaw-cve-2025-10573-risks-admin-session-hijack-and-unauthenticated-rce/",
+      "decision": "confirmed exact matching Anquanke article; visible page DOM and embedded state independently agree on title/date/id/source"
+    }
+  },
+  "accepted_held_line_restorations": [
+    {
+      "hold_frozen_line": 102,
+      "current_line": 102,
+      "current": "* [专ж Ҹ](/column/index.html)",
+      "proposed": "* [专栏](/column/index.html)",
+      "classification": "exact_same_article_source_restoration",
+      "decision": "accept_exact_source_restoration",
+      "check": "Visible same-article archived page DOM supports complete restored wording; Markdown line delimiters/list/heading structure remain unchanged."
+    },
+    {
+      "hold_frozen_line": 107,
+      "current_line": 107,
+      "current": "# Ivanti EPM 严重漏洞（CVE-2025-10573）存在管理员会话劫持与未授权远程代з Ғ执行风险",
+      "proposed": "# Ivanti EPM 严重漏洞（CVE-2025-10573）存在管理员会话劫持与未授权远程代码执行风险",
+      "classification": "exact_same_article_source_restoration",
+      "decision": "accept_exact_source_restoration",
+      "check": "Visible same-article archived page DOM supports complete restored wording; Markdown line delimiters/list/heading structure remain unchanged."
+    },
+    {
+      "hold_frozen_line": 117,
+      "current_line": 117,
+      "current": "本文是翻译文з« ，文з« 原作者 Ddos ，文з« 来源：securityonline",
+      "classification": "exact_same_article_source_restoration_with_spacing_delta",
+      "decision": "accept_exact_source_restoration",
+      "check": "Visible same-article archived page DOM supports complete restored wording; Markdown line delimiters/list/heading structure remain unchanged.",
+      "spacing_check": "DOM text nodes concatenate to the proposed line exactly: leading U+0020; double U+0020 before Ddos; trailing U+0020 after Ddos before Chinese comma. The affected-token punctuation spacing is source-proven; do not apply global whitespace cleanup."
+    },
+    {
+      "hold_frozen_line": 125,
+      "current_line": 127,
+      "current": "Ivanti 已为其终端管理器（Endpoint ManagerпјҢEPM）解决方案推出**紧急安全更新**，修复了一系列严重漏洞 вҖ”вҖ” 这些漏洞可能允许攻击者执行任意代з Ғ或劫持管理员会话。此次更新针对四个独立漏洞，其中包括一个严重程度评分接近满分的**高危漏洞**гҖӮ",
+      "proposed": "Ivanti 已为其终端管理器（Endpoint Manager，EPM）解决方案推出**紧急安全更新**，修复了一系列严重漏洞 —— 这些漏洞可能允许攻击者执行任意代码或劫持管理员会话。此次更新针对四个独立漏洞，其中包括一个严重程度评分接近满分的**高危漏洞**。",
+      "classification": "exact_same_article_source_restoration",
+      "decision": "accept_exact_source_restoration",
+      "check": "Visible same-article archived page DOM supports complete restored wording; Markdown line delimiters/list/heading structure remain unchanged."
+    },
+    {
+      "hold_frozen_line": 127,
+      "current_line": 129,
+      "current": "最严重的漏洞编号为В **CVE-2025-10573**，属于**存储型跨站脚本（Stored XSS）漏洞**пјҢCVSS 评分为 9.6。该漏洞影响В **2024 SU4 SR1 之前的所有 EPM 版本**гҖӮ",
+      "proposed": "最严重的漏洞编号为 **CVE-2025-10573**，属于**存储型跨站脚本（Stored XSS）漏洞**，CVSS 评分为 9.6。该漏洞影响 **2024 SU4 SR1 之前的所有 EPM 版本**。",
+      "classification": "exact_same_article_source_restoration",
+      "decision": "accept_exact_source_restoration",
+      "check": "Visible same-article archived page DOM supports complete restored wording; Markdown line delimiters/list/heading structure remain unchanged.",
+      "spacing_check": "Proposed text preserves verified source NBSP U+00A0 at each reported position."
+    },
+    {
+      "hold_frozen_line": 129,
+      "current_line": 131,
+      "current": "ж №据安全公告，该漏洞 “允许远程未授权攻击者在管理员会话上下文中执行任意 JavaScript 代з Ғ”。尽管漏洞利用需要用户交互（可能是诱骗管理员访问恶意页面），但**完全会话劫持的潜在风险**使其成为防御者的最高优先级处理事项。",
+      "proposed": "根据安全公告，该漏洞 “允许远程未授权攻击者在管理员会话上下文中执行任意 JavaScript 代码”。尽管漏洞利用需要用户交互（可能是诱骗管理员访问恶意页面），但**完全会话劫持的潜在风险**使其成为防御者的最高优先级处理事项。",
+      "classification": "exact_same_article_source_restoration",
+      "decision": "accept_exact_source_restoration",
+      "check": "Visible same-article archived page DOM supports complete restored wording; Markdown line delimiters/list/heading structure remain unchanged."
+    },
+    {
+      "hold_frozen_line": 131,
+      "current_line": 133,
+      "current": "除上述高危 XSS 漏洞外，Ivanti 还修复了三个高严重级别的漏洞，这些漏洞可能导致系统面临**远程代з Ғ执行（RCEпјү**В 和**未授权文件操作**风险：",
+      "proposed": "除上述高危 XSS 漏洞外，Ivanti 还修复了三个高严重级别的漏洞，这些漏洞可能导致系统面临**远程代码执行（RCE）** 和**未授权文件操作**风险：",
+      "classification": "exact_same_article_source_restoration",
+      "decision": "accept_exact_source_restoration",
+      "check": "Visible same-article archived page DOM supports complete restored wording; Markdown line delimiters/list/heading structure remain unchanged.",
+      "spacing_check": "Proposed text preserves verified source NBSP U+00A0 at each reported position."
+    },
+    {
+      "hold_frozen_line": 133,
+      "current_line": 135,
+      "current": "1. **任意文件写入漏洞（CVE-2025-13659пјү**пјҡCVSS 评分为 8.8，该漏洞源于 “对动态管理的代з Ғ资源控制不当”，允许远程未授权攻击者向服务器写入任意文件，进而可能导致远程代з Ғ执行。",
+      "proposed": "1. **任意文件写入漏洞（CVE-2025-13659）**：CVSS 评分为 8.8，该漏洞源于 “对动态管理的代码资源控制不当”，允许远程未授权攻击者向服务器写入任意文件，进而可能导致远程代码执行。",
+      "classification": "exact_same_article_source_restoration",
+      "decision": "accept_exact_source_restoration",
+      "check": "Visible same-article archived page DOM supports complete restored wording; Markdown line delimiters/list/heading structure remain unchanged."
+    },
+    {
+      "hold_frozen_line": 134,
+      "current_line": 136,
+      "current": "2. **签名验证失败漏洞（CVE-2025-13662пјү**пјҡCVSS 评分为 7.8，漏洞出现在补丁管理组件中 вҖңеҠ 密签名验证不充分”，允许远程未授权攻击者执行任意代з Ғ，但需用户交互。",
+      "proposed": "2. **签名验证失败漏洞（CVE-2025-13662）**：CVSS 评分为 7.8，漏洞出现在补丁管理组件中 “加密签名验证不充分”，允许远程未授权攻击者执行任意代码，但需用户交互。",
+      "classification": "exact_same_article_source_restoration",
+      "decision": "accept_exact_source_restoration",
+      "check": "Visible same-article archived page DOM supports complete restored wording; Markdown line delimiters/list/heading structure remain unchanged."
+    },
+    {
+      "hold_frozen_line": 135,
+      "current_line": 137,
+      "current": "3. **路径遍历漏洞（CVE-2025-13661пјү**пјҡCVSS 评分为 7.1，允许已认证攻击者 “向目ж Ү目录外写入任意文件”，可能з ҙ坏系统完整性。",
+      "proposed": "3. **路径遍历漏洞（CVE-2025-13661）**：CVSS 评分为 7.1，允许已认证攻击者 “向目标目录外写入任意文件”，可能破坏系统完整性。",
+      "classification": "exact_same_article_source_restoration",
+      "decision": "accept_exact_source_restoration",
+      "check": "Visible same-article archived page DOM supports complete restored wording; Markdown line delimiters/list/heading structure remain unchanged."
+    },
+    {
+      "hold_frozen_line": 137,
+      "current_line": 139,
+      "current": "这些漏洞影响В **Ivanti Endpoint Manager 2024 SU4 及所有早期版本**гҖӮIvanti 已发布В **2024 SU4 SR1 版本**以修复上述问题。",
+      "proposed": "这些漏洞影响 **Ivanti Endpoint Manager 2024 SU4 及所有早期版本**。Ivanti 已发布 **2024 SU4 SR1 版本**以修复上述问题。",
+      "classification": "exact_same_article_source_restoration",
+      "decision": "accept_exact_source_restoration",
+      "check": "Visible same-article archived page DOM supports complete restored wording; Markdown line delimiters/list/heading structure remain unchanged.",
+      "spacing_check": "Proposed text preserves verified source NBSP U+00A0 at each reported position."
+    },
+    {
+      "hold_frozen_line": 139,
+      "current_line": 141,
+      "current": "尽管 Ivanti 表示 “在漏洞披露时，尚未发现任何客户遭遇相关漏洞攻击”，但仍**强烈建议客户立即执行更新**гҖӮ",
+      "proposed": "尽管 Ivanti 表示 “在漏洞披露时，尚未发现任何客户遭遇相关漏洞攻击”，但仍**强烈建议客户立即执行更新**。",
+      "classification": "exact_same_article_source_restoration",
+      "decision": "accept_exact_source_restoration",
+      "check": "Visible same-article archived page DOM supports complete restored wording; Markdown line delimiters/list/heading structure remain unchanged."
+    },
+    {
+      "hold_frozen_line": 141,
+      "current_line": 143,
+      "current": "对于ж— 法立即部署补丁的组织，Ivanti 建议审查其网络暴露面。针对上述高危 XSS 漏洞，安全公告特别指出：“Ivanti EPM 并非面向互联网的解决方案。若客户未将该系统暴露在互联网中，此漏洞的风险将显著降低”。",
+      "proposed": "对于无法立即部署补丁的组织，Ivanti 建议审查其网络暴露面。针对上述高危 XSS 漏洞，安全公告特别指出：“Ivanti EPM 并非面向互联网的解决方案。若客户未将该系统暴露在互联网中，此漏洞的风险将显著降低”。",
+      "classification": "exact_same_article_source_restoration",
+      "decision": "accept_exact_source_restoration",
+      "check": "Visible same-article archived page DOM supports complete restored wording; Markdown line delimiters/list/heading structure remain unchanged."
+    },
+    {
+      "hold_frozen_line": 143,
+      "current_line": 145,
+      "current": "此外，管理员需**验证连接源和文件来源的可信度**：任意文件写入漏洞和签名验证失败漏洞的利用，均依赖于连接 “不可信的ж ё心服务器” 或导入 “不可信的配置文件”。",
+      "proposed": "此外，管理员需**验证连接源和文件来源的可信度**：任意文件写入漏洞和签名验证失败漏洞的利用，均依赖于连接 “不可信的核心服务器” 或导入 “不可信的配置文件”。",
+      "classification": "exact_same_article_source_restoration",
+      "decision": "accept_exact_source_restoration",
+      "check": "Visible same-article archived page DOM supports complete restored wording; Markdown line delimiters/list/heading structure remain unchanged."
+    }
+  ],
+  "accepted_boilerplate_corruption_repairs": [
+    {
+      "current_line": 149,
+      "current": "商务合作，文з« 发布请联系 anquanke@360.cn",
+      "same_article_dom_exact": " 商务合作，文章发布请联系 anquanke@360.cn ",
+      "classification": "exact_same_article_page_template_restoration",
+      "caveat": "Exact page DOM proves the phrase, including edge spaces. Current Markdown has no edge spaces; preserve or explicitly account for this source-to-Markdown whitespace difference rather than silently trimming.",
+      "decision": "accept_exact_corruption_repair_only",
+      "minimal_patch": "Replace only `文з«` with `文章`; to match source phrase, remove the single current space before `发布` only as part of this corrupted-span reconstruction. Do not add the DOM wrapper’s leading/trailing layout spaces."
+    },
+    {
+      "current_line": 190,
+      "current": "* 文з«",
+      "same_article_dom_exact": "文章",
+      "classification": "exact_same_article_page_template_restoration",
+      "evidence": "Same article page author-count list contains `<li>文章</li>`.",
+      "decision": "accept_exact_corruption_repair_only",
+      "minimal_patch": "Replace only the corrupted label `文з«` with `文章`; preserve bullet."
+    },
+    {
+      "current_line": 196,
+      "current": "### TA的文з«",
+      "same_article_dom_exact": " TA的文章",
+      "classification": "exact_same_article_page_template_restoration",
+      "evidence": "Same article page has `<h3 class=\"title\"> TA的文章</h3>`.",
+      "decision": "accept_exact_corruption_repair_only",
+      "minimal_patch": "Replace only `文з«` with `文章`; preserve heading level and current heading spacing."
+    },
+    {
+      "current_line": 214,
+      "current": "### 相关文з«",
+      "same_article_dom_exact": " 相关文章",
+      "classification": "exact_same_article_page_template_restoration",
+      "evidence": "Same article page has `<h3 class=\"title\"> 相关文章</h3>`.",
+      "decision": "accept_exact_corruption_repair_only",
+      "minimal_patch": "Replace only `文з«` with `文章`; preserve heading level and current heading spacing."
+    },
+    {
+      "current_line": 240,
+      "current": "文з« 目录",
+      "same_article_dom_exact": "文章目录",
+      "classification": "exact_same_article_page_template_restoration",
+      "evidence": "Same article page has `<div class=\"title\">文章目录</div>`.",
+      "decision": "accept_exact_corruption_repair_only",
+      "minimal_patch": "Replace only `文з«` with `文章`; preserve the following ` 目录`."
+    },
+    {
+      "current_line": 268,
+      "current": "Copyright В© 北京奇虎科技有限公司 三六零数字安全科技集团有限公司 安全KER All Rights Reserved [京ICP备08010314号-66](https://beian.miit.gov.cn/)[![](https://icon.cnzz.com/img/pic.gif)](https://www.cnzz.com/stat/website.php?web_id=1271278035 \"站长统计\")",
+      "same_article_dom_exact_prefix": "Copyright © 北京奇虎科技有限公司 三六零数字安全科技集团有限公司 安全KER All Rights Reserved",
+      "classification": "exact_same_article_page_template_restoration",
+      "evidence": "Same article page footer carries this copyright text. Preserve all subsequent URLs, query strings, and attribute text.",
+      "decision": "accept_exact_corruption_repair_only",
+      "minimal_patch": "Replace only `В©` with `©`; preserve the full rest of line, all URLs, query strings, and attributes."
+    },
+    {
+      "current_line": 270,
+      "current": "微信二维з Ғ",
+      "same_article_dom_exact": "微信二维码",
+      "classification": "exact_same_article_page_template_restoration",
+      "evidence": "Same article page has `<div class=\"layer-title\">微信二维码</div>`.",
+      "decision": "accept_exact_corruption_repair_only",
+      "minimal_patch": "Replace only `二维з Ғ` with `二维码`."
+    }
+  ],
+  "related_link_titles": {
+    "decision": "reject changes for this task",
+    "reason": "The href targets and their archived H1s were identified, but the supplied snapshot is dated 2026-01-18 and does not prove the label shown in the related-link list at the article publication date 2025-12-10. Keep existing labels pending an exact date-matched capture or clearly identified canonical mapping."
+  },
+  "scope_and_safety": "Read-only. No repository edits, scripts/site code execution, PoCs, scanners, payloads, or sample target requests. The archive HTML was statically parsed as text.",
+  "result": "All 14 prose/title/navigation held lines are supported as exact same-article source restorations. All seven boilerplate items are supported as corruption repairs, but apply only the listed spans and preserve the rest of each Markdown line. Do not normalize unrelated whitespace or alter the three related-link titles."
+}

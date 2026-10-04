@@ -145,7 +145,7 @@ SYS\_KEY被系统硬编码为24b16fede9a67c9251d3e7c7161c83ac，在`./WWW/config
 
     http://www.0-sec.org:88/uploadfile/member/0/0x0.php
 
-1.png
+> **图片待核**：原归档在此处仅保留文件名 `1.png`，没有可对应的图片引用。
 
 参考链接
 --------

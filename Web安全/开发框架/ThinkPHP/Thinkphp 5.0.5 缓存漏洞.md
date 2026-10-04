@@ -53,9 +53,8 @@ Thinkphp 5.0.5
 
 -   漏洞代码与3.2.3差不多，不一样的在缓存目录
 
-```{=html}
 <!-- -->
-```
+
 -   protected function getCacheKey($name)
             {
                 $name = md5($name);
@@ -74,9 +73,8 @@ Thinkphp 5.0.5
                 return $filename;
             }
 
-```{=html}
 <!-- -->
-```
+
 -   在index控制器写如下代码：
 
 ![](./.resource/Thinkphp5.0.5缓存漏洞/media/rId25.png)

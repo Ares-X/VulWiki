@@ -56,9 +56,8 @@ schema_version: "1"
 -   默认内置路由名字，如 `/env` 有时候也会被程序员修改，如修改成
     `/appenv`
 
-```{=html}
 <!-- -->
-```
+
     trace
     health
     loggers
@@ -98,9 +97,8 @@ schema_version: "1"
 
 -   `/env`、`/actuator/env`
 
-```{=html}
 <!-- -->
-```
+
 -   GET 请求 `/env`
     会泄露环境变量信息，或者配置中的一些用户名，当程序员的属性名命名不规范
     (例如 password 写成 psasword、pwd) 时，会泄露密码明文；
@@ -108,22 +106,18 @@ schema_version: "1"
     同时有一定概率可以通过 POST 请求 `/env` 接口设置一些属性，触发相关
     RCE 漏洞。
 
-```{=html}
 <!-- -->
-```
+
 -   `/jolokia`
 
-```{=html}
 <!-- -->
-```
+
 -   通过 `/jolokia/list` 接口寻找可以利用的 MBean，触发相关 RCE 漏洞；
 
-```{=html}
 <!-- -->
-```
+
 -   `/trace`
 
-```{=html}
 <!-- -->
-```
+
 -   一些 http 请求包访问跟踪信息，有可能发现有效的 cookie 信息

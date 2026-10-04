@@ -57,9 +57,8 @@ schema_version: "1"
 
 -   7、填写每个表格：
 
-```{=html}
 <!-- -->
-```
+
     Title: javascript:
 
     Format:Markdown

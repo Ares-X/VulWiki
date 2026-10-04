@@ -63,9 +63,8 @@ schema_version: "1"
 
 -   2.选择安装的产品，这里我只安装了部分与NC相关的模块。下面对NC产品模块做个简要说明;
 
-```{=html}
 <!-- -->
-```
+
     nc_uap              客户化
     nc_portal           企业门户
     nc_pd               工程基础数据
@@ -84,17 +83,15 @@ schema_version: "1"
 
 -   3.至此NC已安装完成，接下来创建Oracle用户;
 
-```{=html}
 <!-- -->
-```
+
     SQL> create user NCV6.5 identified by 1 default tablespace nnc_data01 temporary tablespace temp; 
     SQL> grant dba,connect to NCV6.5;
 
 -   4.配置sysConfig，产品安装完成之后会自动进入系统配置界面;
 
-```{=html}
 <!-- -->
-```
+
 -   服务器类型选择UAP SERVER。点击服务器信息→读取，如下图：
 
 ![2.png](./.resource/用友nc6.5反序列化漏洞/media/rId26.png)

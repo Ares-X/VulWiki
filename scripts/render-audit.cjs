@@ -127,6 +127,9 @@ function auditArticle({ path: articlePath, source, sourceBytes, marked }) {
     if (tokenOffset >= 0) codeCursor = tokenOffset + raw.length;
     const startLine = tokenOffset < 0 ? null : frontmatterLines + lineAt(body, tokenOffset);
     if (!String(token.text || '').trim()) pushCandidate(candidates, 'empty_code', raw, startLine);
+    if (token.lang === '{=html}' && /^\s*<!--\s*-->\s*$/.test(token.text || '')) {
+      pushCandidate(candidates, 'pandoc_comment_fence', raw, startLine);
+    }
     const headingInside = String(token.text || '').split(/\r?\n/).find((line) => /^\s*(?:#{1,6}\s*)?(?:修复|参考|披露|后续说明|修复建议|参考资料|披露时间|后续进展)\s*[:：]?\s*$/.test(line));
     if (headingInside) pushCandidate(candidates, 'prose_heading_in_code', raw, startLine, { heading: headingInside.trim() });
     if (/!\[[^\]]*\]\([^)]+\)/.test(String(token.text || '')) && /[\u4e00-\u9fff]{10}/.test(token.text || '')) pushCandidate(candidates, 'prose_images_in_code', raw, startLine);
@@ -218,6 +221,10 @@ function auditArticle({ path: articlePath, source, sourceBytes, marked }) {
   for (const token of sourceParagraphs) {
     const offset = locate(body, token.raw, sourceCursor);
     if (offset >= 0) sourceCursor = offset + token.raw.length;
+    if (/^\s*[\w.-]+\.(?:png|jpe?g|gif)\s*$/i.test(token.text || '')) {
+      pushCandidate(candidates, 'bare_image_filename', token.raw,
+        offset < 0 ? null : frontmatterLines + lineAt(body, offset));
+    }
     for (const match of token.raw.matchAll(/^ {0,3}(?:package\s+[\w.]+;|import\s+[\w.]+;|public\s+(?:class|interface)\s|#include\s*[<"]|<\?php|def\s+\w+\([^)]*\)\s*:|function\s+\w+\([^)]*\)\s*\{)[^\r\n]*$/gm)) {
       const at = offset < 0 ? -1 : offset + match.index;
       if (at < 0 || !overlaps(inlineRanges, at, at + match[0].length)) {

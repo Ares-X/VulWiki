@@ -1,0 +1,234 @@
+{
+  "reviewed_head": "4ab1698774cbf65a68c4f742a31bf92b599c5317",
+  "repo_path": "/Users/aresx/Ares-X.github.io/source/wiki/VulWiki",
+  "repository_file_sha256": "58987858833900aa6f1e4d76c2603433a2423b901f9b5d18bb2d1ee18300b832",
+  "review_scope": "Read-only recheck of RESOURCE-ENCODING-HOLDS.json's 14 line holds and eight previously proposed boilerplate restorations, plus residual related-link titles.",
+  "worktree": "No repository files edited. Pre-existing unrelated changes remain: M docs/REVIEW-FIFTH-POLISH-20261003.md; ?? .serena/.",
+  "same_article_cached_source": {
+    "identity": "Anquanke post id 313631; its archive metadata records the exact same current H1/title, publication timestamp 2025-12-10 17:29:56, and SecurityOnline source URL as the VulWiki article.",
+    "wayback_snapshot_url": "https://web.archive.org/web/20260118194938id_/https://www.anquanke.com/post/id/313631",
+    "cdx_record": {
+      "urlkey": "com,anquanke)/post/id/313631",
+      "timestamp": "20260118194938",
+      "original": "https://www.anquanke.com/post/id/313631",
+      "mimetype": "text/html",
+      "statuscode": "200",
+      "digest": "4ZW4O6E4QZRYUISRGK5GEWMYOFR3IX5D",
+      "length": "7888"
+    },
+    "retrieval": "Fetched the archived page successfully (HTTP 200); saved copy /tmp/anquanke-313631-archive.html, 26643 bytes. This is a cached copy of the exact Anquanke article, not a sibling template. Its visible article text and h1 match the archived VulWiki subject; its title/body restore the 14 held lines. No site scripts, PoC, scanner, payload, or target were executed or requested.",
+    "published_title_exact": "Ivanti EPM 严重漏洞（CVE-2025-10573）存在管理员会话劫持与未授权远程代码执行风险",
+    "source_url_exact": "https://securityonline.info/critical-ivanti-epm-flaw-cve-2025-10573-risks-admin-session-hijack-and-unauthenticated-rce/",
+    "conclusion": "The earlier assertion that the Anquanke page was unavailable is superseded: a Wayback CDX record and successful replay provide the exact article page. The 14 prose/title holds can now be reconciled to this cached same-article source. Restore source-visible words and markup from the HTML; do not use a translation generated from SecurityOnline alone."
+  },
+  "held_line_recoveries": [
+    {
+      "hold_frozen_line": 102,
+      "current_line": 102,
+      "current": "* [专ж Ҹ](/column/index.html)",
+      "source_visible_text": "* [专栏](/column/index.html)",
+      "proposed": "* [专栏](/column/index.html)",
+      "classification": "exact_same_article_source_restoration",
+      "evidence": "The archived article page's navigation has href=/column/index.html with anchor text 专栏."
+    },
+    {
+      "hold_frozen_line": 107,
+      "current_line": 107,
+      "current": "# Ivanti EPM 严重漏洞（CVE-2025-10573）存在管理员会话劫持与未授权远程代з Ғ执行风险",
+      "source_visible_text": "# Ivanti EPM 严重漏洞（CVE-2025-10573）存在管理员会话劫持与未授权远程代码执行风险",
+      "proposed": "# Ivanti EPM 严重漏洞（CVE-2025-10573）存在管理员会话劫持与未授权远程代码执行风险",
+      "classification": "exact_same_article_source_restoration",
+      "evidence": "The archived Anquanke h1 is identical to this display title except for the corrupted token. This directly resolves the prior title-source objection."
+    },
+    {
+      "hold_frozen_line": 117,
+      "current_line": 117,
+      "current": "本文是翻译文з« ，文з« 原作者 Ddos ，文з« 来源：securityonline",
+      "source_visible_text_exact_whitespace": " 本文是翻译文章，文章原作者  Ddos ，文章来源：securityonline",
+      "proposed_source_text": " 本文是翻译文章，文章原作者  Ddos ，文章来源：securityonline",
+      "classification": "exact_same_article_source_restoration_with_spacing_delta",
+      "evidence": "The exact page DOM contains `<p> 本文是翻译文章<span>，文章原作者  Ddos </span><span>，文章来源：securityonline</span></p>`. This proves both wording and whitespace. The current Markdown differs in spaces around these phrases; do not silently normalize them. If restoring this line, use the source-visible text (including its leading space and double space before Ddos), or record any deliberate Markdown edge-space handling explicitly."
+    },
+    {
+      "hold_frozen_line": 125,
+      "current_line": 127,
+      "current": "Ivanti 已为其终端管理器（Endpoint ManagerпјҢEPM）解决方案推出**紧急安全更新**，修复了一系列严重漏洞 вҖ”вҖ” 这些漏洞可能允许攻击者执行任意代з Ғ或劫持管理员会话。此次更新针对四个独立漏洞，其中包括一个严重程度评分接近满分的**高危漏洞**гҖӮ",
+      "source_visible_text": "Ivanti 已为其终端管理器（Endpoint Manager，EPM）解决方案推出**紧急安全更新**，修复了一系列严重漏洞 —— 这些漏洞可能允许攻击者执行任意代码或劫持管理员会话。此次更新针对四个独立漏洞，其中包括一个严重程度评分接近满分的**高危漏洞**。",
+      "proposed": "Ivanti 已为其终端管理器（Endpoint Manager，EPM）解决方案推出**紧急安全更新**，修复了一系列严重漏洞 —— 这些漏洞可能允许攻击者执行任意代码或劫持管理员会话。此次更新针对四个独立漏洞，其中包括一个严重程度评分接近满分的**高危漏洞**。",
+      "classification": "exact_same_article_source_restoration"
+    },
+    {
+      "hold_frozen_line": 127,
+      "current_line": 129,
+      "current": "最严重的漏洞编号为В **CVE-2025-10573**，属于**存储型跨站脚本（Stored XSS）漏洞**пјҢCVSS 评分为 9.6。该漏洞影响В **2024 SU4 SR1 之前的所有 EPM 版本**гҖӮ",
+      "source_visible_text": "最严重的漏洞编号为 **CVE-2025-10573**，属于**存储型跨站脚本（Stored XSS）漏洞**，CVSS 评分为 9.6。该漏洞影响 **2024 SU4 SR1 之前的所有 EPM 版本**。",
+      "proposed": "最严重的漏洞编号为 **CVE-2025-10573**，属于**存储型跨站脚本（Stored XSS）漏洞**，CVSS 评分为 9.6。该漏洞影响 **2024 SU4 SR1 之前的所有 EPM 版本**。",
+      "classification": "exact_same_article_source_restoration",
+      "evidence": "The archived DOM uses NBSP (visible here as U+00A0) before the two bold spans and a Chinese comma after Stored XSS; retain the source's NBSP rather than replacing it with ordinary spaces."
+    },
+    {
+      "hold_frozen_line": 129,
+      "current_line": 131,
+      "current": "ж №据安全公告，该漏洞 “允许远程未授权攻击者在管理员会话上下文中执行任意 JavaScript 代з Ғ”。尽管漏洞利用需要用户交互（可能是诱骗管理员访问恶意页面），但**完全会话劫持的潜在风险**使其成为防御者的最高优先级处理事项。",
+      "source_visible_text": "根据安全公告，该漏洞 “允许远程未授权攻击者在管理员会话上下文中执行任意 JavaScript 代码”。尽管漏洞利用需要用户交互（可能是诱骗管理员访问恶意页面），但**完全会话劫持的潜在风险**使其成为防御者的最高优先级处理事项。",
+      "proposed": "根据安全公告，该漏洞 “允许远程未授权攻击者在管理员会话上下文中执行任意 JavaScript 代码”。尽管漏洞利用需要用户交互（可能是诱骗管理员访问恶意页面），但**完全会话劫持的潜在风险**使其成为防御者的最高优先级处理事项。",
+      "classification": "exact_same_article_source_restoration"
+    },
+    {
+      "hold_frozen_line": 131,
+      "current_line": 133,
+      "current": "除上述高危 XSS 漏洞外，Ivanti 还修复了三个高严重级别的漏洞，这些漏洞可能导致系统面临**远程代з Ғ执行（RCEпјү**В 和**未授权文件操作**风险：",
+      "source_visible_text": "除上述高危 XSS 漏洞外，Ivanti 还修复了三个高严重级别的漏洞，这些漏洞可能导致系统面临**远程代码执行（RCE）** 和**未授权文件操作**风险：",
+      "proposed": "除上述高危 XSS 漏洞外，Ivanti 还修复了三个高严重级别的漏洞，这些漏洞可能导致系统面临**远程代码执行（RCE）** 和**未授权文件操作**风险：",
+      "classification": "exact_same_article_source_restoration",
+      "evidence": "The source uses NBSP before 和 (U+00A0); retain that character."
+    },
+    {
+      "hold_frozen_line": 133,
+      "current_line": 135,
+      "current": "1. **任意文件写入漏洞（CVE-2025-13659пјү**пјҡCVSS 评分为 8.8，该漏洞源于 “对动态管理的代з Ғ资源控制不当”，允许远程未授权攻击者向服务器写入任意文件，进而可能导致远程代з Ғ执行。",
+      "source_visible_text": "1. **任意文件写入漏洞（CVE-2025-13659）**：CVSS 评分为 8.8，该漏洞源于 “对动态管理的代码资源控制不当”，允许远程未授权攻击者向服务器写入任意文件，进而可能导致远程代码执行。",
+      "proposed": "1. **任意文件写入漏洞（CVE-2025-13659）**：CVSS 评分为 8.8，该漏洞源于 “对动态管理的代码资源控制不当”，允许远程未授权攻击者向服务器写入任意文件，进而可能导致远程代码执行。",
+      "classification": "exact_same_article_source_restoration"
+    },
+    {
+      "hold_frozen_line": 134,
+      "current_line": 136,
+      "current": "2. **签名验证失败漏洞（CVE-2025-13662пјү**пјҡCVSS 评分为 7.8，漏洞出现在补丁管理组件中 вҖңеҠ 密签名验证不充分”，允许远程未授权攻击者执行任意代з Ғ，但需用户交互。",
+      "source_visible_text": "2. **签名验证失败漏洞（CVE-2025-13662）**：CVSS 评分为 7.8，漏洞出现在补丁管理组件中 “加密签名验证不充分”，允许远程未授权攻击者执行任意代码，但需用户交互。",
+      "proposed": "2. **签名验证失败漏洞（CVE-2025-13662）**：CVSS 评分为 7.8，漏洞出现在补丁管理组件中 “加密签名验证不充分”，允许远程未授权攻击者执行任意代码，但需用户交互。",
+      "classification": "exact_same_article_source_restoration"
+    },
+    {
+      "hold_frozen_line": 135,
+      "current_line": 137,
+      "current": "3. **路径遍历漏洞（CVE-2025-13661пјү**пјҡCVSS 评分为 7.1，允许已认证攻击者 “向目ж Ү目录外写入任意文件”，可能з ҙ坏系统完整性。",
+      "source_visible_text": "3. **路径遍历漏洞（CVE-2025-13661）**：CVSS 评分为 7.1，允许已认证攻击者 “向目标目录外写入任意文件”，可能破坏系统完整性。",
+      "proposed": "3. **路径遍历漏洞（CVE-2025-13661）**：CVSS 评分为 7.1，允许已认证攻击者 “向目标目录外写入任意文件”，可能破坏系统完整性。",
+      "classification": "exact_same_article_source_restoration"
+    },
+    {
+      "hold_frozen_line": 137,
+      "current_line": 139,
+      "current": "这些漏洞影响В **Ivanti Endpoint Manager 2024 SU4 及所有早期版本**гҖӮIvanti 已发布В **2024 SU4 SR1 版本**以修复上述问题。",
+      "source_visible_text": "这些漏洞影响 **Ivanti Endpoint Manager 2024 SU4 及所有早期版本**。Ivanti 已发布 **2024 SU4 SR1 版本**以修复上述问题。",
+      "proposed": "这些漏洞影响 **Ivanti Endpoint Manager 2024 SU4 及所有早期版本**。Ivanti 已发布 **2024 SU4 SR1 版本**以修复上述问题。",
+      "classification": "exact_same_article_source_restoration",
+      "evidence": "The source uses NBSP before both bold spans and a full stop between sentences."
+    },
+    {
+      "hold_frozen_line": 139,
+      "current_line": 141,
+      "current": "尽管 Ivanti 表示 “在漏洞披露时，尚未发现任何客户遭遇相关漏洞攻击”，但仍**强烈建议客户立即执行更新**гҖӮ",
+      "source_visible_text": "尽管 Ivanti 表示 “在漏洞披露时，尚未发现任何客户遭遇相关漏洞攻击”，但仍**强烈建议客户立即执行更新**。",
+      "proposed": "尽管 Ivanti 表示 “在漏洞披露时，尚未发现任何客户遭遇相关漏洞攻击”，但仍**强烈建议客户立即执行更新**。",
+      "classification": "exact_same_article_source_restoration"
+    },
+    {
+      "hold_frozen_line": 141,
+      "current_line": 143,
+      "current": "对于ж— 法立即部署补丁的组织，Ivanti 建议审查其网络暴露面。针对上述高危 XSS 漏洞，安全公告特别指出：“Ivanti EPM 并非面向互联网的解决方案。若客户未将该系统暴露在互联网中，此漏洞的风险将显著降低”。",
+      "source_visible_text": "对于无法立即部署补丁的组织，Ivanti 建议审查其网络暴露面。针对上述高危 XSS 漏洞，安全公告特别指出：“Ivanti EPM 并非面向互联网的解决方案。若客户未将该系统暴露在互联网中，此漏洞的风险将显著降低”。",
+      "proposed": "对于无法立即部署补丁的组织，Ivanti 建议审查其网络暴露面。针对上述高危 XSS 漏洞，安全公告特别指出：“Ivanti EPM 并非面向互联网的解决方案。若客户未将该系统暴露在互联网中，此漏洞的风险将显著降低”。",
+      "classification": "exact_same_article_source_restoration"
+    },
+    {
+      "hold_frozen_line": 143,
+      "current_line": 145,
+      "current": "此外，管理员需**验证连接源和文件来源的可信度**：任意文件写入漏洞和签名验证失败漏洞的利用，均依赖于连接 “不可信的ж ё心服务器” 或导入 “不可信的配置文件”。",
+      "source_visible_text": "此外，管理员需**验证连接源和文件来源的可信度**：任意文件写入漏洞和签名验证失败漏洞的利用，均依赖于连接 “不可信的核心服务器” 或导入 “不可信的配置文件”。",
+      "proposed": "此外，管理员需**验证连接源和文件来源的可信度**：任意文件写入漏洞和签名验证失败漏洞的利用，均依赖于连接 “不可信的核心服务器” 或导入 “不可信的配置文件”。",
+      "classification": "exact_same_article_source_restoration"
+    }
+  ],
+  "previously_proposed_boilerplate_recheck": [
+    {
+      "current_line": 149,
+      "current": "商务合作，文з« 发布请联系 anquanke@360.cn",
+      "same_article_dom_exact": " 商务合作，文章发布请联系 anquanke@360.cn ",
+      "classification": "exact_same_article_page_template_restoration",
+      "caveat": "Exact page DOM proves the phrase, including edge spaces. Current Markdown has no edge spaces; preserve or explicitly account for this source-to-Markdown whitespace difference rather than silently trimming."
+    },
+    {
+      "current_line": 190,
+      "current": "* 文з«",
+      "same_article_dom_exact": "文章",
+      "classification": "exact_same_article_page_template_restoration",
+      "evidence": "Same article page author-count list contains `<li>文章</li>`."
+    },
+    {
+      "current_line": 196,
+      "current": "### TA的文з«",
+      "same_article_dom_exact": " TA的文章",
+      "classification": "exact_same_article_page_template_restoration",
+      "evidence": "Same article page has `<h3 class=\"title\"> TA的文章</h3>`."
+    },
+    {
+      "current_line": 214,
+      "current": "### 相关文з«",
+      "same_article_dom_exact": " 相关文章",
+      "classification": "exact_same_article_page_template_restoration",
+      "evidence": "Same article page has `<h3 class=\"title\"> 相关文章</h3>`."
+    },
+    {
+      "current_line": 240,
+      "current": "文з« 目录",
+      "same_article_dom_exact": "文章目录",
+      "classification": "exact_same_article_page_template_restoration",
+      "evidence": "Same article page has `<div class=\"title\">文章目录</div>`."
+    },
+    {
+      "current_line": 268,
+      "current": "Copyright В© 北京奇虎科技有限公司 三六零数字安全科技集团有限公司 安全KER All Rights Reserved [京ICP备08010314号-66](https://beian.miit.gov.cn/)[![](https://icon.cnzz.com/img/pic.gif)](https://www.cnzz.com/stat/website.php?web_id=1271278035 \"站长统计\")",
+      "same_article_dom_exact_prefix": "Copyright © 北京奇虎科技有限公司 三六零数字安全科技集团有限公司 安全KER All Rights Reserved",
+      "classification": "exact_same_article_page_template_restoration",
+      "evidence": "Same article page footer carries this copyright text. Preserve all subsequent URLs, query strings, and attribute text."
+    },
+    {
+      "current_line": 270,
+      "current": "微信二维з Ғ",
+      "same_article_dom_exact": "微信二维码",
+      "classification": "exact_same_article_page_template_restoration",
+      "evidence": "Same article page has `<div class=\"layer-title\">微信二维码</div>`."
+    }
+  ],
+  "related_link_title_recoveries": [
+    {
+      "current_lines": [
+        207,
+        225
+      ],
+      "href_target": "https://www.anquanke.com/post/id/313647",
+      "archived_target_snapshot": "https://web.archive.org/web/20260118194938id_/https://www.anquanke.com/post/id/313647",
+      "target_h1": "勒索软件团伙 Storm-0249 升级攻击手段：滥用 ClickFix 工具、无文件 PowerShell 与 DLL 劫持技术",
+      "classification": "exact_target_page_title_recovery; original 2025 related-list label timing not independently preserved",
+      "proposed_link_text": "勒索软件团伙 Storm-0249 升级攻击手段：滥用 ClickFix 工具、无文件 PowerShell 与 DLL 劫持技术"
+    },
+    {
+      "current_lines": [
+        231
+      ],
+      "href_target": "https://www.anquanke.com/post/id/313634",
+      "archived_target_snapshot": "https://web.archive.org/web/20260118194938id_/https://www.anquanke.com/post/id/313634",
+      "target_h1": "高危 n8n 远程代码执行漏洞（CVE-2025-65964）可通过操纵 Git 节点配置实现远程代码执行",
+      "classification": "exact_target_page_title_recovery; original 2025 related-list label timing not independently preserved",
+      "proposed_link_text": "高危 n8n 远程代码执行漏洞（CVE-2025-65964）可通过操纵 Git 节点配置实现远程代码执行"
+    },
+    {
+      "current_lines": [
+        234
+      ],
+      "href_target": "https://www.anquanke.com/post/id/313637",
+      "archived_target_snapshot": "https://web.archive.org/web/20260118194938id_/https://www.anquanke.com/post/id/313637",
+      "target_h1": "FortiOS、FortiWeb 及 FortiProxy 漏洞可导致攻击者绕过 FortiCloud 单点登录（SSO）认证",
+      "classification": "exact_target_page_title_recovery; original 2025 related-list label timing not independently preserved",
+      "proposed_link_text": "FortiOS、FortiWeb 及 FortiProxy 漏洞可导致攻击者绕过 FortiCloud 单点登录（SSO）认证"
+    }
+  ],
+  "exactness_boundary": {
+    "same_article_prose": "Exact same Anquanke article snapshot exists, so recovered line wording/characters are exact source text. Match source punctuation and NBSP; do not infer from English SecurityOnline translation.",
+    "same_article_static_chrome": "Exact same article page DOM snapshot supports the listed navigation, headings, footer labels, and author-post count label.",
+    "related_link_labels": "Each title is verified against the linked article's archived h1 using the href ID. The source page snapshot is from 2026-01-18, so the exact label as displayed in the related list on 2025-12-10 is not independently preserved. Treat as title correction from the target page, not a byte-for-byte restoration of the older sidebar list.",
+    "whitespace": "Where source-visible whitespace differs from the current Markdown line, the JSON records that explicitly. Preserve the exact source spacing or keep existing Markdown boundaries deliberately; do not run global whitespace normalization."
+  }
+}

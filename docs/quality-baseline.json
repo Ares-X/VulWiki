@@ -1273,18 +1273,6 @@
       "severity": "warning"
     },
     {
-      "code": "fingerprint_unverified",
-      "count": 1,
-      "detail": "fofa: retained unverified query excluded from fingerprint index",
-      "key": "059affdf9473cd41a36c3c0a",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/ERP企业/用友FE/用友 FE templateOfTaohong_manager.jsp 目录遍历漏洞.md",
-      "severity": "warning"
-    },
-    {
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
@@ -14017,18 +14005,6 @@
         0
       ],
       "path": "Web安全/其他软件/杂项/CVE-2024-6188 漏洞复现.md",
-      "severity": "warning"
-    },
-    {
-      "code": "fingerprint_unverified",
-      "count": 1,
-      "detail": "fofa: retained unverified query excluded from fingerprint index",
-      "key": "3c4ca42c02d48e689c6417f1",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/OA办公/致远OA/致远伪 0day FastJson 利用链.md",
       "severity": "warning"
     },
     {
@@ -33973,18 +33949,6 @@
         0
       ],
       "path": "Web安全/其他软件/杂项/【AI漏洞预警】huggingface transformers拒绝服务漏洞(CVE-2025-2099).md",
-      "severity": "warning"
-    },
-    {
-      "code": "fingerprint_unverified",
-      "count": 1,
-      "detail": "fofa: retained unverified query excluded from fingerprint index",
-      "key": "8f8048d3affe00346207a367",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/CMS内容/WordPress/WordPress Dokan Pro插件 SQL注入漏洞(CVE-2024-3922).md",
       "severity": "warning"
     },
     {
@@ -60911,6 +60875,48 @@
         "fe978b93636600fc1a56ef36"
       ],
       "review": "docs/reviews/2026-10-04-fofa-literals/README.md"
+    },
+    {
+      "date": "2026-10-04",
+      "reason": "Restore three previously missed exact FOFA keyword expressions after rechecking current parser; original placeholders and previous fields retained.",
+      "removed_issues": [
+        {
+          "code": "fingerprint_unverified",
+          "count": 1,
+          "detail": "fofa: retained unverified query excluded from fingerprint index",
+          "key": "059affdf9473cd41a36c3c0a",
+          "line": 0,
+          "lines": [
+            0
+          ],
+          "path": "Web安全/ERP企业/用友FE/用友 FE templateOfTaohong_manager.jsp 目录遍历漏洞.md",
+          "severity": "warning"
+        },
+        {
+          "code": "fingerprint_unverified",
+          "count": 1,
+          "detail": "fofa: retained unverified query excluded from fingerprint index",
+          "key": "3c4ca42c02d48e689c6417f1",
+          "line": 0,
+          "lines": [
+            0
+          ],
+          "path": "Web安全/OA办公/致远OA/致远伪 0day FastJson 利用链.md",
+          "severity": "warning"
+        },
+        {
+          "code": "fingerprint_unverified",
+          "count": 1,
+          "detail": "fofa: retained unverified query excluded from fingerprint index",
+          "key": "8f8048d3affe00346207a367",
+          "line": 0,
+          "lines": [
+            0
+          ],
+          "path": "Web安全/CMS内容/WordPress/WordPress Dokan Pro插件 SQL注入漏洞(CVE-2024-3922).md",
+          "severity": "warning"
+        }
+      ]
     }
   ],
   "schema_version": 1

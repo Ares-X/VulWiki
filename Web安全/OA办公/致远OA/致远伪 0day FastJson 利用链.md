@@ -16,10 +16,12 @@ review_date: "2026-10-02"
 source_url: "https://mp.weixin.qq.com/s/yTuQLqqvikwo1KfK-zGBBA"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/OA%E5%8A%9E%E5%85%AC/%E8%87%B4%E8%BF%9COA/%E8%87%B4%E8%BF%9C%E4%BC%AA%200day%20FastJson%20%E5%88%A9%E7%94%A8%E9%93%BE.md"
-fofa_unverified: "seeyon"
+fofa: "\"seeyon\" && city=\"xxxx\" && after=\"2021-01-01\""
+fofa_previous_unverified: "seeyon"
 id: "vw-53343484cb63fe5c18f59220"
 entity_id: "ve-53343484cb63fe5c18f59220"
 schema_version: "1"
+fofa_review_note: "同篇原文完整表达式；仅确认出处与基本语法，不证明资产受影响。 原文 city=\"xxxx\" 占位值原样保留，不补为真实城市。"
 ---
 
 # 致远OA / Fastjson main.do changeLocale JSON反序列化链及Fastjson版本教程
