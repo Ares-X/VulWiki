@@ -12,16 +12,23 @@ verification_status: "not-reproduced"
 content_status: "needs-review"
 identifier_status: "unknown"
 identifier_role: "primary"
-primary_identifiers: "CVE-2024-41473"
+primary_identifiers: "CVE-2024-41473;CVE-2024-41468"
 referenced_identifiers: ""
 prerequisites: "QEMU中patch check_network；真实设备认证前提未交代"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/Tenda/%E5%8E%9F%E5%88%9B%20Paper%20%20Tenda-FH1201%20%E5%A4%9A%E5%A4%84%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90%E5%92%8C%E5%A4%8D%E7%8E%B0.md"
 review_date: "2026-10-02"
 side_effects: "畸形输入可能使进程/内核崩溃、设备重启或服务不可用；本文崩溃线索不自动证明稳定代码执行，需隔离环境和可恢复配置；延时探针会占用线程或数据库连接；需记录基线和对照，单次慢响应或超时不足判定注入；文中还涉及重启、账户/SSH、防火墙或根目录配置变更；逐步核对具体命令及恢复方式，避免影响管理通道或业务网络"
 source_status: "unknown"
+previous_primary_identifiers: "CVE-2024-41473"
 ---
 
 #  原创 Paper | Tenda-FH1201 多处命令注入漏洞分析和复现   
+
+## 编号角色补核（2026-10-04）
+
+本次只确认编号在本文主题中的主编号／引用角色；版本、修复、截图及其他技术主张仍按下方具体待核说明阅读。旧字段和归档正文保持原值，较早的角色待核说明保留为历史记录。
+
+核对依据：[CNA 记录](https://cveawg.mitre.org/api/cve/CVE-2024-41468)；[CNA 记录](https://cveawg.mitre.org/api/cve/CVE-2024-41473)。这些记录支持编号／产品对应关系或编号状态，不替代本篇原始出处。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）

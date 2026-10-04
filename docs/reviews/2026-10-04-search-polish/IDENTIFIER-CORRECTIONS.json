@@ -1,0 +1,556 @@
+{
+  "base_commit": "1dc8c586830cecf1bb07350c934818173b6aca90",
+  "articles": [
+    {
+      "path": "Web安全/其他软件/杂项/【漏洞】RedSun复现.md",
+      "before_sha256": "1679c7e09a8f194fb2d9ed21e07723fa08041aeebf3867f8f49f5eb0fe6cd416",
+      "after_sha256": "d8153b47e1450f52c0cd765cd78d66ec0d045941b8ab91c8feacce0c592b5ee9",
+      "metadata_operations": [
+        {
+          "before": "identifier_role: \"unknown\"",
+          "after": "identifier_role: \"primary\""
+        },
+        {
+          "before": "primary_identifiers: \"\"",
+          "after": "primary_identifiers: \"CVE-2026-33825\""
+        }
+      ],
+      "body_change": "one new editorial role/status note; removing it restores the exact previous body",
+      "original_body_sha256": "bd4cf02548993b2f7227364e61f9cf392e29ac6b20f50395b1ef3d15cf27d804",
+      "scope_reason": "CNA assigns Microsoft Defender Antimalware Platform. Body gives the original PoC link and discusses Defender-specific behavior; assignment/product and technical subject align, though it does not establish every RedSun technical claim.",
+      "sources": [
+        "https://cveawg.mitre.org/api/cve/CVE-2026-33825"
+      ]
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【漏洞复现】CVE-2024-11680.md",
+      "before_sha256": "9d70cc8a74f87a38c86d605594c58bed882d6da6f7d81cac9135fd4e759dc5b0",
+      "after_sha256": "8a00a5197be3494bdfc8a8127c674da5267a4f6bced733592235da93fc8dfe13",
+      "metadata_operations": [
+        {
+          "before": "identifier_role: \"unknown\"",
+          "after": "identifier_role: \"primary\""
+        },
+        {
+          "before": "primary_identifiers: \"\"",
+          "after": "primary_identifiers: \"CVE-2024-11680\""
+        }
+      ],
+      "body_change": "one new editorial role/status note; removing it restores the exact previous body",
+      "original_body_sha256": "848c68400e863c71f2b45ff3910364d16e5d896f9c3b1dd924afca7a58eb7f95",
+      "scope_reason": "CNA JSON: ProjectSend; affected program file options.php; unauthenticated crafted HTTP requests modify configuration. Article analyzes the same fixed Nuclei template and options.php flow.",
+      "sources": [
+        "https://cveawg.mitre.org/api/cve/CVE-2024-11680"
+      ]
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【漏洞复现】通达OA SQL注入漏洞（CVE-2023-5783）.md",
+      "before_sha256": "594434815ee2815c06525d4516f4b3f2d999a27c4aedca27f2fc7469cf27bdb9",
+      "after_sha256": "25cf7ca48aaad766f702048af8773827909c733bf1dcf3f2ba1f22778d9990f6",
+      "metadata_operations": [
+        {
+          "before": "identifier_role: \"unknown\"",
+          "after": "identifier_role: \"primary\""
+        },
+        {
+          "before": "primary_identifiers: \"\"",
+          "after": "primary_identifiers: \"CVE-2023-5783\""
+        }
+      ],
+      "body_change": "one new editorial role/status note; removing it restores the exact previous body",
+      "original_body_sha256": "ec3c57a45790b81f48c497f88c5558733ae9fbb1c43aef12a88efa9c1d9d22da",
+      "scope_reason": "CNA JSON names Tongda OA 2017 and general/system/approve_center/flow_sort/flow/delete.php, arguments id/sort_parent. Article correction says id/sort_parent injection and endpoint function.",
+      "sources": [
+        "https://cveawg.mitre.org/api/cve/CVE-2023-5783"
+      ]
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【漏洞复现】通达OA SQL注入漏洞（CVE-2023-6052）.md",
+      "before_sha256": "8c815eeaa3bf9ade85c3ebf0ded599cc00dae2c8f27a2d7264353d7852b41f1b",
+      "after_sha256": "d6cdeebd237b8e073039fb4ca25ec4ca51e8e8878ae67aeff3f1fef4c3ebf5d0",
+      "metadata_operations": [
+        {
+          "before": "identifier_role: \"unknown\"",
+          "after": "identifier_role: \"primary\""
+        },
+        {
+          "before": "primary_identifiers: \"\"",
+          "after": "primary_identifiers: \"CVE-2023-6052\""
+        }
+      ],
+      "body_change": "one new editorial role/status note; removing it restores the exact previous body",
+      "original_body_sha256": "b144982eba3ddad5748b940c40e9bea6e3bc93a5b25d94ba24e9751b306b9970",
+      "scope_reason": "CNA JSON names Tongda OA 2017 and general/system/censor_words/module/delete.php, argument DELETE_STR; article body describes module/delete.",
+      "sources": [
+        "https://cveawg.mitre.org/api/cve/CVE-2023-6052"
+      ]
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【漏洞复现】通达OA SQL注入漏洞（CVE-2023-6053）.md",
+      "before_sha256": "0bcfbb205ee2417705d2590f2776bee3f5873258cbd5a08e392625a3fbb0c080",
+      "after_sha256": "e69a3aa7acd9d92e92b24b915f36750e9a92475a5efa684d788b68b084fc90ba",
+      "metadata_operations": [
+        {
+          "before": "identifier_role: \"unknown\"",
+          "after": "identifier_role: \"primary\""
+        },
+        {
+          "before": "primary_identifiers: \"\"",
+          "after": "primary_identifiers: \"CVE-2023-6053\""
+        }
+      ],
+      "body_change": "one new editorial role/status note; removing it restores the exact previous body",
+      "original_body_sha256": "a5a145aa02dfa08c182f421c19ead6718cf3c02aad62d95db1c8a421a556242f",
+      "scope_reason": "CNA JSON names Tongda OA 2017 and general/system/censor_words/manage/delete.php, argument DELETE_STR; article describes same manage/delete.",
+      "sources": [
+        "https://cveawg.mitre.org/api/cve/CVE-2023-6053"
+      ]
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【漏洞复现】通达OA SQL注入漏洞（CVE-2023-6054）.md",
+      "before_sha256": "8e877f41c8a30199ad929b8b871b8a1a02d1909e07746c170fc835f8aec08963",
+      "after_sha256": "220800ada100da5d50c12028cf573380f4daa4b199100839aaedc0e5e5f06887",
+      "metadata_operations": [
+        {
+          "before": "identifier_role: \"unknown\"",
+          "after": "identifier_role: \"primary\""
+        },
+        {
+          "before": "primary_identifiers: \"\"",
+          "after": "primary_identifiers: \"CVE-2023-6054\""
+        }
+      ],
+      "body_change": "one new editorial role/status note; removing it restores the exact previous body",
+      "original_body_sha256": "e7a413c7aef252f880bbfa9e33e9373bab5892ca7a48a9b5608950a941c7b453",
+      "scope_reason": "CNA JSON names Tongda OA 2017 and general/wiki/cp/manage/lock.php, argument TERM_ID_STR; article describes knowledge-base lock.",
+      "sources": [
+        "https://cveawg.mitre.org/api/cve/CVE-2023-6054"
+      ]
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【漏洞复现】通达OA SQL注入漏洞（CVE-2023-6276）.md",
+      "before_sha256": "a66afbe39a98d1da360a29abab24406286b6860259e8129355111ba312bdfeb1",
+      "after_sha256": "e293be6fd7ade887fe8418dc62b9a85b91958f1c9b5b605b1a4df87699f3f810",
+      "metadata_operations": [
+        {
+          "before": "identifier_role: \"unknown\"",
+          "after": "identifier_role: \"primary\""
+        },
+        {
+          "before": "primary_identifiers: \"\"",
+          "after": "primary_identifiers: \"CVE-2023-6276\""
+        }
+      ],
+      "body_change": "one new editorial role/status note; removing it restores the exact previous body",
+      "original_body_sha256": "56d60738ad4ba65c74ec9dc787d1eeca3b65a14740647e042abf34ec426fa8a5",
+      "scope_reason": "CNA JSON names Tongda OA 2017 and general/wiki/cp/ct/delete.php, argument PROJ_ID_STR; article describes knowledge-base deletion.",
+      "sources": [
+        "https://cveawg.mitre.org/api/cve/CVE-2023-6276"
+      ]
+    },
+    {
+      "path": "Web安全/其他软件/杂项/【漏洞预警】wandb信息泄露漏洞(CVE-2024-4642).md",
+      "before_sha256": "cb7271e4eab5bd1d21290748afa47e24153d0ea04da8494a6366674c930adc5f",
+      "after_sha256": "5e82b3c47e4746af6f841142670ff274e425d44e435591065e0d2c53397772ea",
+      "metadata_operations": [
+        {
+          "before": "identifier_role: \"unknown\"",
+          "after": "identifier_role: \"primary\""
+        },
+        {
+          "before": "primary_identifiers: \"\"",
+          "after": "primary_identifiers: \"CVE-2024-4642\""
+        },
+        {
+          "before": "identifier_status: \"unknown\"",
+          "after": "identifier_status: \"rejected\""
+        }
+      ],
+      "body_change": "one new editorial role/status note; removing it restores the exact previous body",
+      "original_body_sha256": "b630b48afb43de3200de55282411d59a5255843c0795f5e0536db6ec2203c524",
+      "scope_reason": "CNA record state is REJECTED. Article alleges SSRF in wandb/wandb Webhooks and its title/legacy identifier are explicitly about this issue. Record the claimed role as primary but status rejected, keeping it out of active CVE indexing.",
+      "sources": [
+        "https://cveawg.mitre.org/api/cve/CVE-2024-4642"
+      ]
+    },
+    {
+      "path": "Web安全/其他软件/杂项/为啥取证厂商扎堆突破安卓12-13提权？来看看CVE-2024-0044高严重性漏洞.md",
+      "before_sha256": "d6c4bfc3818df1aef16e254358e2197cb0705d77bdd18e29b068f0f88475aa8c",
+      "after_sha256": "77d174dc6ff2d087793b96f6761c6842387df2863154c4595fae65e05d9749df",
+      "metadata_operations": [
+        {
+          "before": "identifier_role: \"unknown\"",
+          "after": "identifier_role: \"primary\""
+        },
+        {
+          "before": "primary_identifiers: \"\"",
+          "after": "primary_identifiers: \"CVE-2024-0044\""
+        }
+      ],
+      "body_change": "one new editorial role/status note; removing it restores the exact previous body",
+      "original_body_sha256": "7a651ba39c2a34a9305b33f0b9583be04d8db95407a2a5faceda3915b12d4d08",
+      "scope_reason": "Android CNA: PackageInstallerService.createSessionInternal run-as any app; article explicitly names same function and run-as forgery.",
+      "sources": [
+        "https://cveawg.mitre.org/api/cve/CVE-2024-0044"
+      ]
+    },
+    {
+      "path": "Web安全/其他软件/杂项/从补丁到漏洞利用：逆向分析CVE-2026-24127.md",
+      "before_sha256": "64328ff82709085449998275ef4347a27dc55f9a68e42b98cc7ad5d4f681dc7d",
+      "after_sha256": "fd0e126c378e4d670608eb1b98435a124d653123b220788c153f980246fb1e52",
+      "metadata_operations": [
+        {
+          "before": "identifier_role: \"unknown\"",
+          "after": "identifier_role: \"primary\""
+        },
+        {
+          "before": "primary_identifiers: \"\"",
+          "after": "primary_identifiers: \"CVE-2026-24127\""
+        }
+      ],
+      "body_change": "one new editorial role/status note; removing it restores the exact previous body",
+      "original_body_sha256": "2dc4678fd443f9324021567565d43067e30400424fa361956193886247842de7",
+      "scope_reason": "GitHub CNA JSON: Typemill login.twig reflected XSS, versions through 2.19.1, fixed 2.19.2. Article analyzes the same Typemill commit, login.twig, username echo and POST /tm/login route.",
+      "sources": [
+        "https://cveawg.mitre.org/api/cve/CVE-2026-24127"
+      ]
+    },
+    {
+      "path": "Web安全/其他软件/杂项/叮~ 你有新的速递！CVE-2022-42475 RCE 漏洞（附 EXP）.md",
+      "before_sha256": "025cc471478636f212e7579f98e461ba251c47cabb37d482463fcbff2512dc46",
+      "after_sha256": "d23d1b396c488d90bbb8bed8afb0e7217431fd88f61d9d72555cb10f53686896",
+      "metadata_operations": [
+        {
+          "before": "identifier_role: \"unknown\"",
+          "after": "identifier_role: \"primary\""
+        },
+        {
+          "before": "primary_identifiers: \"\"",
+          "after": "primary_identifiers: \"CVE-2022-42475\""
+        }
+      ],
+      "body_change": "one new editorial role/status note; removing it restores the exact previous body",
+      "original_body_sha256": "3d87e6d6abf276e9edf179db0c4ea3d87257493c84d122887ac9917ea0ffc13b",
+      "scope_reason": "Fortinet CNA JSON identifies FortiOS/FortiProxy SSL-VPN heap overflow and crafted requests; article is a focused FortiOS CVE alert.",
+      "sources": [
+        "https://cveawg.mitre.org/api/cve/CVE-2022-42475"
+      ]
+    },
+    {
+      "path": "Web安全/其他软件/杂项/当异常绕过handleException：最新VM2沙箱绕过 CVE-2026-45411 原理分析.md",
+      "before_sha256": "d94e627bac4e3aa4734c7353b5eb8a6869adc9a0f8299f66bb798d87358430af",
+      "after_sha256": "20b67b7415e830521f0596afb6f9aa88079c88a34f3f1565ce6039b15dcbee52",
+      "metadata_operations": [
+        {
+          "before": "identifier_role: \"unknown\"",
+          "after": "identifier_role: \"primary\""
+        },
+        {
+          "before": "primary_identifiers: \"\"",
+          "after": "primary_identifiers: \"CVE-2026-45411\""
+        }
+      ],
+      "body_change": "one new editorial role/status note; removing it restores the exact previous body",
+      "original_body_sha256": "1032c631a929180ceac0d568bd7c6179a8e5f73c6f3c6d953fbc6422eb0214c5",
+      "scope_reason": "GitHub CNA JSON: vm2 before 3.11.3; async-generator yield* and thenable exception path allows sandbox escape. Article examines vm2 3.11.2, handleException catch rewriting, async generator yield* and thenable path.",
+      "sources": [
+        "https://cveawg.mitre.org/api/cve/CVE-2026-45411"
+      ]
+    },
+    {
+      "path": "Web安全/其他软件/杂项/春秋云镜 CVE-2023-2130.md",
+      "before_sha256": "e7e3dcbc4f0a8a6b60e0146f26d9dfc66e60ae629d7bf1adc9f4f82b797a7df9",
+      "after_sha256": "7157ad3d31117c9aa9ef0472ef548f4acbf0dee5a8bffe9cbb104d39d117e4bf",
+      "metadata_operations": [
+        {
+          "before": "identifier_role: \"unknown\"",
+          "after": "identifier_role: \"primary\""
+        },
+        {
+          "before": "primary_identifiers: \"\"",
+          "after": "primary_identifiers: \"CVE-2023-2130\""
+        }
+      ],
+      "body_change": "one new editorial role/status note; removing it restores the exact previous body",
+      "original_body_sha256": "ffd7a95ccdcce792b9ee86e28c347f0af9066a21ed7c1a8312cadd8c8b0ff280",
+      "scope_reason": "CNA JSON maps SourceCodester Purchase Order Management System 1.0, /admin/suppliers/view_details.php, GET id SQL injection. Article states same product, path, id parameter and behavior.",
+      "sources": [
+        "https://cveawg.mitre.org/api/cve/CVE-2023-2130"
+      ]
+    },
+    {
+      "path": "Web安全/其他软件/杂项/根据POC分析代码.md",
+      "before_sha256": "3762740b843e16b11e5a2d40ad086d437e03cc5ff402257df7e707deed15a8e9",
+      "after_sha256": "c526e8b3553b82434f761e7be7db2493aa898b3c275af86361bf9586a658d4e8",
+      "metadata_operations": [
+        {
+          "before": "identifier_role: \"unknown\"",
+          "after": "identifier_role: \"primary\""
+        },
+        {
+          "before": "primary_identifiers: \"\"",
+          "after": "primary_identifiers: \"CVE-2023-41599\""
+        }
+      ],
+      "body_change": "one new editorial role/status note; removing it restores the exact previous body",
+      "original_body_sha256": "e7f68f7c2dc8441dcc3ba405a67945d3d5e5bb41e5876a0660d5923f436b394c",
+      "scope_reason": "CNA JSON says JFinalCMS v5.0.0 /common/DownController.java directory traversal. Article explicitly cites the CVE-specific JFinalCMS PoC, fileKey request parameter and /../1.txt traversal to file download.",
+      "sources": [
+        "https://cveawg.mitre.org/api/cve/CVE-2023-41599"
+      ]
+    },
+    {
+      "path": "Web安全/其他软件/杂项/每周网安资讯 （2.24-3.2） UNC6201组织利用CVE-2026-22769零日漏洞部署恶意软件.md",
+      "before_sha256": "1100b947c08584acd3bfc19b719b2e0b5e99a0273128375ebe9da7eff91797d0",
+      "after_sha256": "dd29353b12553f4d62edfc8c83d302650f0a7b99f54178d9902c03ff6f87f9ac",
+      "metadata_operations": [
+        {
+          "before": "identifier_role: \"unknown\"",
+          "after": "identifier_role: \"primary\""
+        },
+        {
+          "before": "primary_identifiers: \"\"",
+          "after": "primary_identifiers: \"CVE-2026-22769\""
+        }
+      ],
+      "body_change": "one new editorial role/status note; removing it restores the exact previous body",
+      "original_body_sha256": "e93983691e1a8d771ec15bb6df03fa94d23013838c53d2ba6384fb6fdeb25173",
+      "scope_reason": "Dell CNA JSON maps RecoverPoint for Virtual Machines versions before 6.0.3.1 HF1 to hardcoded credential/root persistence. Article’s dedicated section identifies Dell RecoverPoint and the same CVE; roundup context does not negate that focal issue.",
+      "sources": [
+        "https://cveawg.mitre.org/api/cve/CVE-2026-22769"
+      ]
+    },
+    {
+      "path": "Web安全/其他软件/杂项/美国CISA：包括（CVE-2023-21608）在内的五个高危漏洞已被利用.md",
+      "before_sha256": "36ae0490045a524ea4dfb5e6f0b2e83bd976cfbd1797224706923325dda5feea",
+      "after_sha256": "45ba74d3c831a187b9c05cfa6681d5eb2fdf937b4560a3ea3152e739b173c299",
+      "metadata_operations": [
+        {
+          "before": "identifier_role: \"unknown\"",
+          "after": "identifier_role: \"primary\""
+        },
+        {
+          "before": "primary_identifiers: \"\"",
+          "after": "primary_identifiers: \"CVE-2023-21608;CVE-2023-20109;CVE-2023-41763;CVE-2023-36563;CVE-2023-44487\""
+        }
+      ],
+      "body_change": "one new editorial role/status note; removing it restores the exact previous body",
+      "original_body_sha256": "f84dce154a9b170fa51b8a7121bc88218c57e1b077f89da1b5773524d6e0b513",
+      "scope_reason": "Adobe CNA JSON maps 21608 to Acrobat Reader use-after-free requiring file-open interaction. Article enumerates this plus four other distinct CVEs as the complete subject of its five-item roundup; all five are explicitly listed in body, so register all five as primary scope identifiers.",
+      "sources": [
+        "https://cveawg.mitre.org/api/cve/CVE-2023-21608",
+        "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "path": "Web安全/其他软件/杂项/聊聊CS4.5下的CVE-2022-39197 RCE 的修复.md",
+      "before_sha256": "c00495a07d4e5a36e7b36e0b1d0b3fa9cea9e5e6583f1eddc27206ee7e03c657",
+      "after_sha256": "3319a5307b3b7a87ad2838cb04f1f3c9b6ba9de57c357b736bc30f87fc68035a",
+      "metadata_operations": [
+        {
+          "before": "identifier_role: \"unknown\"",
+          "after": "identifier_role: \"primary\""
+        },
+        {
+          "before": "primary_identifiers: \"\"",
+          "after": "primary_identifiers: \"CVE-2022-39197\""
+        }
+      ],
+      "body_change": "one new editorial role/status note; removing it restores the exact previous body",
+      "original_body_sha256": "7289bc97c8d12b03731063bb389a243af91017fd3d3c036ea4f39dfedd9eac0d",
+      "scope_reason": "MITRE CNA JSON: Cobalt Strike through 4.7 XSS in payload username; article’s actual focus is testing fixes for File Browser and ProcessList XSS/RCE behavior, including cited CVE-specific tool. Note article’s reported RCE does not change CNA’s XSS description.",
+      "sources": [
+        "https://cveawg.mitre.org/api/cve/CVE-2022-39197"
+      ]
+    },
+    {
+      "path": "Web安全/其他软件/杂项/高危漏洞预警：Windows TCP-IP 远程代码执行漏洞（CVE-2026-33827）.md",
+      "before_sha256": "44271b84e3cc1ffca6829b1eda479c936e08b08d5a55389c8cee39e0afcfeb17",
+      "after_sha256": "067d68d36fbd71c008be9d4c4dae5c644442a4e178c59f427eaeaf255f50a5b9",
+      "metadata_operations": [
+        {
+          "before": "identifier_role: \"unknown\"",
+          "after": "identifier_role: \"primary\""
+        },
+        {
+          "before": "primary_identifiers: \"\"",
+          "after": "primary_identifiers: \"CVE-2026-33827\""
+        }
+      ],
+      "body_change": "one new editorial role/status note; removing it restores the exact previous body",
+      "original_body_sha256": "0b6a8a584ca30bd103d30573c70dffed773b665bd8f468fc37517e1a3fd9dee8",
+      "scope_reason": "Microsoft CNA JSON maps CVE to Windows TCP/IP race condition allowing network code execution across listed Windows versions; article cites the exact MSRC CVE page and discusses this alert.",
+      "sources": [
+        "https://cveawg.mitre.org/api/cve/CVE-2026-33827"
+      ]
+    },
+    {
+      "path": "Web安全/智能设备/奔驰车机/梅赛德斯—奔驰信息娱乐系统漏洞详细信息披露.md",
+      "before_sha256": "7ea50d2e67e61bbdd052e34e2e07e1214a70a20bfe1593fe77674ef3885b4816",
+      "after_sha256": "dd97e27b97f600ae3575b8c90d89dfd8497a61d1981415757723924fedeb057a",
+      "metadata_operations": [
+        {
+          "before": "identifier_role: \"unknown\"",
+          "after": "identifier_role: \"primary\""
+        },
+        {
+          "before": "primary_identifiers: \"\"",
+          "after": "primary_identifiers: \"CVE-2024-37602;CVE-2024-37600;CVE-2024-37603;CVE-2024-37601;CVE-2023-34406;CVE-2023-34397;CVE-2023-34398;CVE-2023-34399;CVE-2023-34400;CVE-2023-34401;CVE-2023-34402;CVE-2023-34403;CVE-2023-34404\""
+        }
+      ],
+      "body_change": "one new editorial role/status note; removing it restores the exact previous body",
+      "original_body_sha256": "053cb2b3fa3b523ed55fedac1b053ced1c3072c3260631ae97d9241b31fc6d6e",
+      "scope_reason": "Article body explicitly enumerates all 13 CVEs as the vulnerabilities disclosed in this Mercedes infotainment research. Supplied CNA JSON independently maps 37602 to Mercedes Benz NTG6 and physical-access AirPlay/CarPlay DoS. This report records the article’s explicit multi-CVE scope; component-by-component details remain as the article states.",
+      "sources": [
+        "https://cveawg.mitre.org/api/cve/CVE-2024-37602",
+        "https://securelist.com/mercedes-benz-head-unit-security-research/115218/"
+      ]
+    },
+    {
+      "path": "Web安全/网络设备/NETGEAR/CVE-2021-35973：Netgear wac104 身份认证绕过.md",
+      "before_sha256": "29f36a4a8b8a5506c11f5f98effae20c74e3c78139a8c08efc2f2f179003e8e3",
+      "after_sha256": "03b79d2b2aec7c81e80e7ac235a49a4d2ecb11c9a0c454cee30435158eb450e4",
+      "metadata_operations": [
+        {
+          "before": "referenced_identifiers: \"\"",
+          "after": "referenced_identifiers: \"CNVD-2021-30167\""
+        }
+      ],
+      "body_change": "one new editorial role/status note; removing it restores the exact previous body",
+      "original_body_sha256": "86aa91c9fb01051255ea61e8921a49be1d8b6f2032adbdc05615010cebe3d5fb",
+      "scope_reason": "MITRE CNA JSON maps CVE to NETGEAR WAC104 /usr/sbin/mini_httpd authentication bypass and query suffix; body matches. CNVD value is clearly from the page-end unrelated Youyou NC recommendation, so retain it as reference.",
+      "sources": [
+        "https://cveawg.mitre.org/api/cve/CVE-2021-35973"
+      ]
+    },
+    {
+      "path": "Web安全/网络设备/TP-Link/TP-Link云摄像头NCXXX系列存在命令注⼊漏洞.md",
+      "before_sha256": "574b3a200f6a386fb0c2f4367f07f61e6c4c785eeabff4bfa5a38585b0b444a5",
+      "after_sha256": "962e276a0df3de2c7324a1f1ba639914ddeebd2df44653a6e25bedd60cc8416f",
+      "metadata_operations": [
+        {
+          "before": "referenced_identifiers: \"\"",
+          "after": "referenced_identifiers: \"CVE-2020-12110\""
+        }
+      ],
+      "body_change": "one new editorial role/status note; removing it restores the exact previous body",
+      "original_body_sha256": "f614f783edaee137bd329ff564ea05df012408bcbe3ce6dec4e5ae7af6beb1a5",
+      "scope_reason": "MITRE CNA JSON 12109 describes command injection in the listed NC cameras; 12110 separately describes a hardcoded encryption key. Article explicitly says 12109 Bonjour command injection is primary and 12110 is an additional chain/reference. Preserve both roles distinctly.",
+      "sources": [
+        "https://cveawg.mitre.org/api/cve/CVE-2020-12109",
+        "https://cveawg.mitre.org/api/cve/CVE-2020-12110"
+      ]
+    },
+    {
+      "path": "Web安全/网络设备/Tenda/原创 Paper  Tenda-FH1201 多处命令注入漏洞分析和复现.md",
+      "before_sha256": "058557b670c6061b88288bac87eb78cfa4356d7aeb02002e1e8dc11ae496d3e3",
+      "after_sha256": "1f0ae960c0f46b6359c8ea0b75eb849afc11f7f7e03d99c502cf5cb5e9713246",
+      "metadata_operations": [
+        {
+          "before": "primary_identifiers: \"CVE-2024-41473\"",
+          "after": "primary_identifiers: \"CVE-2024-41473;CVE-2024-41468\""
+        }
+      ],
+      "body_change": "one new editorial role/status note; removing it restores the exact previous body",
+      "original_body_sha256": "bcf4416f1b21276ef51de461eeb5af025447a3a6a566cf6b7d404f43fc8fd203",
+      "scope_reason": "CNA JSON records both exact product/version and distinct endpoints: 41468 cmdinput at /goform/exeCommand; 41473 mac at /goform/WriteFacMac. Article explicitly labels 3.1 and 3.2 with these same endpoint names; both are primary scope IDs.",
+      "sources": [
+        "https://cveawg.mitre.org/api/cve/CVE-2024-41468",
+        "https://cveawg.mitre.org/api/cve/CVE-2024-41473"
+      ]
+    }
+  ],
+  "hold": [
+    {
+      "path": "Web安全/其他软件/杂项/叮～你有新的速递！CNVD-2023-08743 漏洞（附 PoC）.md",
+      "sha256": "55360d3159dcd8f3aa113ef3431df528046b437d5a941cfefe626f8a7059735c",
+      "original_context": {
+        "frontmatter": [
+          {
+            "line": 2,
+            "text": "cnvd: \"CNVD-2023-08743\""
+          },
+          {
+            "line": 4,
+            "text": "identifier_role: \"unknown\""
+          },
+          {
+            "line": 5,
+            "text": "primary_identifiers: \"\""
+          },
+          {
+            "line": 6,
+            "text": "referenced_identifiers: \"\""
+          },
+          {
+            "line": 7,
+            "text": "identifier_status: \"unknown\""
+          }
+        ],
+        "body_snippets": [
+          {
+            "line": 30,
+            "text": "# 叮～你有新的速递！CNVD-2023-08743 漏洞（附 PoC）"
+          }
+        ]
+      },
+      "decision": "hold",
+      "operation": null,
+      "hold_reason": "No CNVD primary record was supplied in the CVE evidence set; the body labels the code-set-tree parameter issue and identifier, but issuing-authority record-to-product/endpoint mapping remains unverified. Do not infer solely from heading.",
+      "evidence": [],
+      "article_to_identifier_reason": "No CNVD primary record was supplied in the CVE evidence set; the body labels the code-set-tree parameter issue and identifier, but issuing-authority record-to-product/endpoint mapping remains unverified. Do not infer solely from heading."
+    },
+    {
+      "path": "Web安全/其他软件/杂项/栈溢出从复现到挖掘-CVE-2018-16333漏洞复现详解.md",
+      "sha256": "c4cb95723a53ca60800e86346243656548305cfab36b21e36f8e1d49d605ce49",
+      "original_context": {
+        "frontmatter": [
+          {
+            "line": 2,
+            "text": "cve: \"CVE-2018-16333\""
+          },
+          {
+            "line": 4,
+            "text": "identifier_role: \"unknown\""
+          },
+          {
+            "line": 5,
+            "text": "primary_identifiers: \"\""
+          },
+          {
+            "line": 6,
+            "text": "referenced_identifiers: \"\""
+          },
+          {
+            "line": 7,
+            "text": "identifier_status: \"unknown\""
+          }
+        ],
+        "body_snippets": [
+          {
+            "line": 26,
+            "text": "# 栈溢出从复现到挖掘-CVE-2018-16333漏洞复现详解"
+          },
+          {
+            "line": 31,
+            "text": "- 本文对象：CVE-2018-16333 ARM栈溢出教学，产品缺失"
+          }
+        ]
+      },
+      "decision": "hold",
+      "operation": null,
+      "hold_reason": "CNA assigns this ID to Tenda AC7/AC9/AC10/AC15/AC18 router web server stack overflow in POST ssid parameter. Article describes an unnamed ARM device and ssid stack overflow, but provides no Tenda model/firmware link; mechanism similarity is not enough to establish the same product mapping.",
+      "evidence": [
+        {
+          "url": "https://cveawg.mitre.org/api/cve/CVE-2018-16333",
+          "local_json_path": "/tmp/vulwiki-search-polish-20261004.HcVoxC/cna-evidence/CVE-2018-16333.json",
+          "cve_state": "PUBLISHED",
+          "assigner": "mitre",
+          "cna_description": "An issue was discovered on Tenda AC7 V15.03.06.44_CN, AC9 V15.03.05.19(6318)_CN, AC10 V15.03.06.23_CN, AC15 V15.03.05.19_CN, and AC18 V15.03.05.19(6318)_CN devices. There is a buffer overflow vulnerability in the router's web server. While processing the ssid parameter for a POST request, the value is directly used in a sprintf call to a local variable placed on the stack, which overrides the return address of the function, causing a buffer overflow."
+        }
+      ],
+      "article_to_identifier_reason": "CNA assigns this ID to Tenda AC7/AC9/AC10/AC15/AC18 router web server stack overflow in POST ssid parameter. Article describes an unnamed ARM device and ssid stack overflow, but provides no Tenda model/firmware link; mechanism similarity is not enough to establish the same product mapping."
+    }
+  ],
+  "limits": "Role classification and published CNA status only; no article execution or reproduction; no redaction; raw technical body and legacy identifier fields unchanged."
+}

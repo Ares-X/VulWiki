@@ -2857,6 +2857,7 @@
     "decision": "manual-review-required",
     "key": "CVE-2022-42475",
     "paths": [
+      "Web安全/其他软件/杂项/叮~ 你有新的速递！CVE-2022-42475 RCE 漏洞（附 EXP）.md",
       "Web安全/其他软件/杂项/奇安信攻防社区 - CVE-2022-42475 FortiGate SSLVPN 堆溢出漏洞分析与利用.md",
       "Web安全/其他软件/杂项/漏洞速递   CVE-2022-42475 VPN 远程代码执行漏洞.md"
     ]
@@ -3027,6 +3028,15 @@
     "paths": [
       "Web安全/中间件/Apache NiFi/CVE-2023-34212：通过 Apache NiFi 中的 JNDI 组件进行 Java 反序列化.md",
       "Web安全/中间件/Apache NiFi/漏洞情报  Apache NiFi 多个漏洞通告(CVE-2023-34468、CVE-2023-34212).md"
+    ]
+  },
+  {
+    "basis": "shared-primary-identifier",
+    "decision": "manual-review-required",
+    "key": "CVE-2023-36563",
+    "paths": [
+      "Web安全/其他软件/杂项/美国CISA：包括（CVE-2023-21608）在内的五个高危漏洞已被利用.md",
+      "Web安全/桌面软件/Microsoft/【已复现】Microsoft WordPad 信息泄露漏洞CVE-2023-36563安全风险通告.md"
     ]
   },
   {

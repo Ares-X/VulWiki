@@ -997,18 +997,6 @@
       "severity": "warning"
     },
     {
-      "code": "identifier_role_unknown",
-      "count": 1,
-      "detail": "legacy identifier candidates excluded from primary CVE index",
-      "key": "047c279b335938701f95a051",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/其他软件/杂项/每周网安资讯 （2.24-3.2） UNC6201组织利用CVE-2026-22769零日漏洞部署恶意软件.md",
-      "severity": "warning"
-    },
-    {
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly missing; reference links are not confirmed provenance",
@@ -3046,18 +3034,6 @@
         0
       ],
       "path": "Web安全/中间件/Apache ActiveMQ/Apache ActiveMQ 远程代码执行漏洞 CVE-2023-46604.md",
-      "severity": "warning"
-    },
-    {
-      "code": "identifier_role_unknown",
-      "count": 1,
-      "detail": "legacy identifier candidates excluded from primary CVE index",
-      "key": "0d2b9978c4e90f553f4db4f5",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/其他软件/杂项/【漏洞复现】通达OA SQL注入漏洞（CVE-2023-6276）.md",
       "severity": "warning"
     },
     {
@@ -8668,18 +8644,6 @@
       "severity": "warning"
     },
     {
-      "code": "identifier_role_unknown",
-      "count": 1,
-      "detail": "legacy identifier candidates excluded from primary CVE index",
-      "key": "2541621365e9f543c9feeb02",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/其他软件/杂项/【漏洞预警】wandb信息泄露漏洞(CVE-2024-4642).md",
-      "severity": "warning"
-    },
-    {
       "code": "fingerprint_unverified",
       "count": 1,
       "detail": "fofa: retained unverified query excluded from fingerprint index",
@@ -11020,18 +10984,6 @@
       "severity": "warning"
     },
     {
-      "code": "identifier_role_unknown",
-      "count": 1,
-      "detail": "legacy identifier candidates excluded from primary CVE index",
-      "key": "2ef29fd53a8f743cec890061",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/其他软件/杂项/【漏洞复现】通达OA SQL注入漏洞（CVE-2023-6052）.md",
-      "severity": "warning"
-    },
-    {
       "code": "fingerprint_unverified",
       "count": 1,
       "detail": "fofa: retained unverified query excluded from fingerprint index",
@@ -12373,18 +12325,6 @@
         0
       ],
       "path": "Web安全/商业软件/ShopXO/ShopXO v1.8.0 后台getshell.md",
-      "severity": "warning"
-    },
-    {
-      "code": "identifier_role_unknown",
-      "count": 1,
-      "detail": "legacy identifier candidates excluded from primary CVE index",
-      "key": "34fd6e7cc1c864b893679230",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/其他软件/杂项/【漏洞复现】通达OA SQL注入漏洞（CVE-2023-6054）.md",
       "severity": "warning"
     },
     {
@@ -21526,18 +21466,6 @@
       "severity": "warning"
     },
     {
-      "code": "identifier_role_unknown",
-      "count": 1,
-      "detail": "legacy identifier candidates excluded from primary CVE index",
-      "key": "5a130493c4ca3afae1d6af8e",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/其他软件/杂项/【漏洞复现】通达OA SQL注入漏洞（CVE-2023-5783）.md",
-      "severity": "warning"
-    },
-    {
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
@@ -24034,18 +23962,6 @@
       "severity": "warning"
     },
     {
-      "code": "identifier_role_unknown",
-      "count": 1,
-      "detail": "legacy identifier candidates excluded from primary CVE index",
-      "key": "646bffd602d3ac71d136d6a2",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/网络设备/Tenda/原创 Paper  Tenda-FH1201 多处命令注入漏洞分析和复现.md",
-      "severity": "warning"
-    },
-    {
       "code": "fingerprint_unverified",
       "count": 1,
       "detail": "fofa: retained unverified query excluded from fingerprint index",
@@ -24187,6 +24103,18 @@
         0
       ],
       "path": "系统安全/Linux/Splunk Enterprise Windows 平台 messaging 目录遍历漏洞 CVE-2024-36991.md",
+      "severity": "warning"
+    },
+    {
+      "code": "identifier_inactive",
+      "count": 1,
+      "detail": "primary identifiers excluded: rejected",
+      "key": "64fa797dfe42715dc69c574d",
+      "line": 0,
+      "lines": [
+        0
+      ],
+      "path": "Web安全/其他软件/杂项/【漏洞预警】wandb信息泄露漏洞(CVE-2024-4642).md",
       "severity": "warning"
     },
     {
@@ -25128,18 +25056,6 @@
       "severity": "warning"
     },
     {
-      "code": "identifier_role_unknown",
-      "count": 1,
-      "detail": "legacy identifier candidates excluded from primary CVE index",
-      "key": "695647df47a7f80fd00fe477",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/其他软件/杂项/【漏洞复现】通达OA SQL注入漏洞（CVE-2023-6053）.md",
-      "severity": "warning"
-    },
-    {
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly missing; reference links are not confirmed provenance",
@@ -25353,18 +25269,6 @@
         0
       ],
       "path": "Web安全/其他软件/杂项/【已复现】FortiSandbox 身份验证绕过漏洞（CVE-2026-39813）.md",
-      "severity": "warning"
-    },
-    {
-      "code": "identifier_role_unknown",
-      "count": 1,
-      "detail": "legacy identifier candidates excluded from primary CVE index",
-      "key": "6a0f1e29dd328aca1ceefc92",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/智能设备/奔驰车机/梅赛德斯—奔驰信息娱乐系统漏洞详细信息披露.md",
       "severity": "warning"
     },
     {
@@ -28359,18 +28263,6 @@
       "severity": "warning"
     },
     {
-      "code": "identifier_role_unknown",
-      "count": 1,
-      "detail": "legacy identifier candidates excluded from primary CVE index",
-      "key": "76c532db30916713b1fed230",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/网络设备/TP-Link/TP-Link云摄像头NCXXX系列存在命令注⼊漏洞.md",
-      "severity": "warning"
-    },
-    {
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
@@ -31009,18 +30901,6 @@
         0
       ],
       "path": "Web安全/CMS内容/vBulletin/（CVE-2019-17132）vBulletin 5.0 <5.5.4-'updateAvatar'身份验证的远程代码执行漏洞.md",
-      "severity": "warning"
-    },
-    {
-      "code": "identifier_role_unknown",
-      "count": 1,
-      "detail": "legacy identifier candidates excluded from primary CVE index",
-      "key": "822b65a949f111f144175cef",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/其他软件/杂项/【漏洞】RedSun复现.md",
       "severity": "warning"
     },
     {
@@ -36958,18 +36838,6 @@
       "severity": "warning"
     },
     {
-      "code": "identifier_role_unknown",
-      "count": 1,
-      "detail": "legacy identifier candidates excluded from primary CVE index",
-      "key": "9b9584dccbab61b3aac8a8a9",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/其他软件/杂项/【漏洞复现】CVE-2024-11680.md",
-      "severity": "warning"
-    },
-    {
       "code": "identifier_inactive",
       "count": 1,
       "detail": "primary identifiers excluded: disputed",
@@ -39229,18 +39097,6 @@
       "severity": "warning"
     },
     {
-      "code": "identifier_role_unknown",
-      "count": 1,
-      "detail": "legacy identifier candidates excluded from primary CVE index",
-      "key": "a51128545176eab93bf69a02",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/其他软件/杂项/当异常绕过handleException：最新VM2沙箱绕过 CVE-2026-45411 原理分析.md",
-      "severity": "warning"
-    },
-    {
       "code": "fingerprint_unverified",
       "count": 1,
       "detail": "fofa: retained unverified query excluded from fingerprint index",
@@ -39682,18 +39538,6 @@
         0
       ],
       "path": "Web安全/服务器软件/Wing FTP/黑客正在利用 Wing FTP 服务器中的关键 RCE 漏洞(CVE-2025-47812).md",
-      "severity": "warning"
-    },
-    {
-      "code": "identifier_role_unknown",
-      "count": 1,
-      "detail": "legacy identifier candidates excluded from primary CVE index",
-      "key": "a685dd8d0613e99647ca768a",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/网络设备/NETGEAR/CVE-2021-35973：Netgear wac104 身份认证绕过.md",
       "severity": "warning"
     },
     {
@@ -42988,18 +42832,6 @@
       "severity": "warning"
     },
     {
-      "code": "identifier_role_unknown",
-      "count": 1,
-      "detail": "legacy identifier candidates excluded from primary CVE index",
-      "key": "b407668b97040b7b7092c455",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/其他软件/杂项/根据POC分析代码.md",
-      "severity": "warning"
-    },
-    {
       "code": "fingerprint_unverified",
       "count": 1,
       "detail": "fofa: retained unverified query excluded from fingerprint index",
@@ -44269,18 +44101,6 @@
         0
       ],
       "path": "Web安全/AI应用/AiPy/AiPy 再获 OpenVPN 官方致谢：发现并协助修复多个安全漏洞.md",
-      "severity": "warning"
-    },
-    {
-      "code": "identifier_role_unknown",
-      "count": 1,
-      "detail": "legacy identifier candidates excluded from primary CVE index",
-      "key": "b9d32e9db0911af8b52d36ba",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/其他软件/杂项/为啥取证厂商扎堆突破安卓12-13提权？来看看CVE-2024-0044高严重性漏洞.md",
       "severity": "warning"
     },
     {
@@ -49173,18 +48993,6 @@
       "severity": "warning"
     },
     {
-      "code": "identifier_role_unknown",
-      "count": 1,
-      "detail": "legacy identifier candidates excluded from primary CVE index",
-      "key": "cdf6fff9f81cfb01efd45a46",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/其他软件/杂项/叮~ 你有新的速递！CVE-2022-42475 RCE 漏洞（附 EXP）.md",
-      "severity": "warning"
-    },
-    {
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly missing; reference links are not confirmed provenance",
@@ -49194,18 +49002,6 @@
         0
       ],
       "path": "系统安全/Linux/【已复现】Linux Kernel 本地权限提升漏洞CVE-2023-35001安全风险通告.md",
-      "severity": "warning"
-    },
-    {
-      "code": "identifier_role_unknown",
-      "count": 1,
-      "detail": "legacy identifier candidates excluded from primary CVE index",
-      "key": "ce060b30cc211278f6df4e07",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/其他软件/杂项/春秋云镜 CVE-2023-2130.md",
       "severity": "warning"
     },
     {
@@ -53977,18 +53773,6 @@
       "severity": "warning"
     },
     {
-      "code": "identifier_role_unknown",
-      "count": 1,
-      "detail": "legacy identifier candidates excluded from primary CVE index",
-      "key": "e22923997e16378330277ccc",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/其他软件/杂项/美国CISA：包括（CVE-2023-21608）在内的五个高危漏洞已被利用.md",
-      "severity": "warning"
-    },
-    {
       "code": "fingerprint_unverified",
       "count": 1,
       "detail": "fofa: retained unverified query excluded from fingerprint index",
@@ -56132,18 +55916,6 @@
         0
       ],
       "path": "Web安全/CMS内容/PivotX/（CVE-2025-52367）PivotX存储型XSS转后台RCE漏洞.md",
-      "severity": "warning"
-    },
-    {
-      "code": "identifier_role_unknown",
-      "count": 1,
-      "detail": "legacy identifier candidates excluded from primary CVE index",
-      "key": "eaf30708edea743d7ac278a4",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/其他软件/杂项/高危漏洞预警：Windows TCP-IP 远程代码执行漏洞（CVE-2026-33827）.md",
       "severity": "warning"
     },
     {
@@ -59915,18 +59687,6 @@
       "severity": "warning"
     },
     {
-      "code": "identifier_role_unknown",
-      "count": 1,
-      "detail": "legacy identifier candidates excluded from primary CVE index",
-      "key": "fa06473d89f277b0db27b44c",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/其他软件/杂项/从补丁到漏洞利用：逆向分析CVE-2026-24127.md",
-      "severity": "warning"
-    },
-    {
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
@@ -60380,18 +60140,6 @@
         0
       ],
       "path": "Web安全/商业软件/Quicklancer/Quicklancerlisting存在SQL注入漏洞.md",
-      "severity": "warning"
-    },
-    {
-      "code": "identifier_role_unknown",
-      "count": 1,
-      "detail": "legacy identifier candidates excluded from primary CVE index",
-      "key": "fc6eb8e9857909ecbf6aa5f4",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/其他软件/杂项/聊聊CS4.5下的CVE-2022-39197 RCE 的修复.md",
       "severity": "warning"
     },
     {
@@ -61453,5 +61201,39 @@
   ],
   "policy": "accepted historical debt, not a passing quality verdict; no new issues; fatal checks always block",
   "reason": "Reviewed reconstruction baseline: five pre-existing absent local resources; unresolved provenance, identifier roles and fingerprints remain explicit. No fatal issue can be waived.; PR #4 review: remove 67 resolved occurrences only; no new exemptions.; 2026-10-03: migrate 23 existing diagnostic keys to preserve complete URLs; paths, check codes and occurrence counts unchanged; no new exemptions.；2026-10-03 原件恢复清除5项资源缺失和21处空块；逐项核对官方撤销记录后登记5条既有编号的停用提示，依据见 docs/reviews/20261003-identifier-baseline-accounting.json；所有提示继续输出，未改变检查规则。；本轮继续逐块核对并清除64处已恢复空块，累计85/176处，剩余91处仍如实输出；未新增豁免。",
+  "reviewed_amendments": [
+    {
+      "added_keys": [
+        "64fa797dfe42715dc69c574d"
+      ],
+      "date": "2026-10-04",
+      "reason": "22已登记旧编号角色现已明确；wandb的已有CVE经CNA核对为REJECTED，将该条历史角色待核改记为编号撤销提示。仅移除本次解决的22条角色待核，增加这一状态提示；没有接受新的未知错误或重建基线。",
+      "removed_keys": [
+        "047c279b335938701f95a051",
+        "0d2b9978c4e90f553f4db4f5",
+        "2541621365e9f543c9feeb02",
+        "2ef29fd53a8f743cec890061",
+        "34fd6e7cc1c864b893679230",
+        "5a130493c4ca3afae1d6af8e",
+        "646bffd602d3ac71d136d6a2",
+        "695647df47a7f80fd00fe477",
+        "6a0f1e29dd328aca1ceefc92",
+        "76c532db30916713b1fed230",
+        "822b65a949f111f144175cef",
+        "9b9584dccbab61b3aac8a8a9",
+        "a51128545176eab93bf69a02",
+        "a685dd8d0613e99647ca768a",
+        "b407668b97040b7b7092c455",
+        "b9d32e9db0911af8b52d36ba",
+        "cdf6fff9f81cfb01efd45a46",
+        "ce060b30cc211278f6df4e07",
+        "e22923997e16378330277ccc",
+        "eaf30708edea743d7ac278a4",
+        "fa06473d89f277b0db27b44c",
+        "fc6eb8e9857909ecbf6aa5f4"
+      ],
+      "review": "docs/reviews/2026-10-04-search-polish/README.md"
+    }
+  ],
   "schema_version": 1
 }
