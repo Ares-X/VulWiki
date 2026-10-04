@@ -1,6 +1,6 @@
 ---
 source: "MrWQ/vulnerability-paper"
-product: "通天星 CMSV6 车载视频监控平台"
+product: "DedeCMS"
 record_type: "unknown"
 review_status: "text-reviewed"
 verification_status: "not-reproduced"
@@ -9,21 +9,21 @@ primary_identifiers: ""
 referenced_identifiers: ""
 identifier_role: "unknown"
 identifier_status: "unknown"
-category_recommendation: "IOT安全/其他设备"
+category_recommendation: "Web安全/CMS内容"
 title: "DedeCMSV6-0-3 代码审计 - 先知社区"
 prerequisites: "来源所述条件，未列明部分仍待核：Mostly admin; valid CSRF token; individual upload/DOM XSS scopes not specified; PHP runtime unknown"
-side_effects: "未执行；本文需注意的操作影响：分类更正：CMSV6 在本文指车载定位/视频监控行业平台，不是通用内容管理系统。其设备、调度或记录接口的业务状态和权限需按本文具体路由判断，不能只按名称 CMS 归类。"
+side_effects: "原文涉及后台模板或配置写入、文件移动和 PHP 代码执行尝试；不同尝试的成功、失败及待核结论分别保留。"
 source_status: "recorded"
 source_url: "https://xz.aliyun.com/t/10486"
 id: "vw-b265eacd7da8f1c4f6089926"
 entity_id: "ve-b265eacd7da8f1c4f6089926"
 schema_version: "1"
-index_category: "IOT安全/其他设备"
+index_category: "Web安全/CMS内容"
 ---
 
 ## 核对与使用边界
 
-- 分类更正：CMSV6 在本文指车载定位/视频监控行业平台，不是通用内容管理系统。其设备、调度或记录接口的业务状态和权限需按本文具体路由判断，不能只按名称 CMS 归类。
+- 产品与分类更正：本文讨论 DedeCMS；原文中的 `/dede/` 路径、`article_template_rand.php` 和 `DedeUserID` 对应内容管理系统。此前“通天星 CMSV6 车载平台”归属是维护误改。标题中的版本或分支沿用原文，不据标题确认发行版本。
 
 
 本文已按保存的全文审阅记录进行文字校订；本轮仅静态核对，未运行 PoC、请求目标或逐图验证。

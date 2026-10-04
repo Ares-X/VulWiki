@@ -1,0 +1,68 @@
+{
+  "base_commit": "b22ddaa7fcdc288b8b940f892cbc2b19aea886b7",
+  "path": "Web安全/CMS内容/DedeCMS/DedeCMSV6-0-3 代码审计 - 先知社区.md",
+  "before_sha256": "a5ded8b5821c503f461b30823fa4dfdfe4b96379a13c14d4239b171d7c4ed59a",
+  "after_sha256": "682964c8e1514dba1ac36c57913c6162dd31b54b95792f20f81791f3490fea68",
+  "original_technical_body_sha256": "71c9628c161512666f6f79c72958f4cb43e0e6ab903430a0e6b419b774ef0ff0",
+  "original_technical_body_unchanged": true,
+  "before_fields": {
+    "product": "通天星 CMSV6 车载视频监控平台",
+    "category_recommendation": "IOT安全/其他设备",
+    "index_category": "IOT安全/其他设备",
+    "side_effects": "未执行；本文需注意的操作影响：分类更正：CMSV6 在本文指车载定位/视频监控行业平台，不是通用内容管理系统。其设备、调度或记录接口的业务状态和权限需按本文具体路由判断，不能只按名称 CMS 归类。"
+  },
+  "after_fields": {
+    "product": "DedeCMS",
+    "category_recommendation": "Web安全/CMS内容",
+    "index_category": "Web安全/CMS内容",
+    "side_effects": "原文涉及后台模板或配置写入、文件移动和 PHP 代码执行尝试；不同尝试的成功、失败及待核结论分别保留。"
+  },
+  "erroneous_body_note": "- 分类更正：CMSV6 在本文指车载定位/视频监控行业平台，不是通用内容管理系统。其设备、调度或记录接口的业务状态和权限需按本文具体路由判断，不能只按名称 CMS 归类。",
+  "corrected_body_note": "- 产品与分类更正：本文讨论 DedeCMS；原文中的 `/dede/` 路径、`article_template_rand.php` 和 `DedeUserID` 对应内容管理系统。此前“通天星 CMSV6 车载平台”归属是维护误改。标题中的版本或分支沿用原文，不据标题确认发行版本。",
+  "introduction_commits": {
+    "product_note_recommendation": "a146870f38e1691c6e9634902f95267690c4e037",
+    "index_category": "b6fed4db3f3c092a7edf63e747b028decacde360"
+  },
+  "body_evidence": [
+    "/dede/article_template_rand.php",
+    "/dede/article_string_mix.php",
+    "DedeUserID",
+    "src/data/template.rand.php"
+  ],
+  "related_mapping_audit": {
+    "reviewed_count": 29,
+    "exact_product_selector_count_before": 28,
+    "confirmed_incorrect": 1,
+    "unchanged_vehicle_platform_paths": [
+      "Web安全/CMS内容/通天星/通天星CMSV6车载定位监控平台 disable SQL注入漏洞.md",
+      "Web安全/CMS内容/通天星/通天星CMSV6车载定位监控平台 getAlarmAppealByGuid SQL注入漏洞.md",
+      "Web安全/CMS内容/通天星CMSV6/通天星CMSV6车载视频监控平台MobileAction_downLoad存在任意文件下载漏洞.md",
+      "Web安全/CMS内容/通天星CMSV6/通天星CMSV6车载视频监控平台SelectDevAction_loadServerLoggerFile存在信息泄露漏洞.md",
+      "Web安全/CMS内容/通天星CMSV6/通天星CMSV6车载视频监控平台SelectDevAction_loadWebLoggerFile存在信息泄露漏洞.md",
+      "Web安全/CMS内容/通天星CMSV6/通天星CMSV6车载视频监控平台StandardApiAction_findCompanyList存在信息泄露漏洞.md",
+      "Web安全/CMS内容/通天星CMSV6/通天星CMSV6车载视频监控平台StandardApiAction_vehicleTTS存在SQL注入漏洞.md",
+      "Web安全/CMS内容/通天星CMSV6/通天星CMSV6车载视频监控平台StandardLoginAction_getAllUser存在信息泄露漏洞.md",
+      "Web安全/CMS内容/通天星CMSV6/通天星CMSV6车载视频监控平台StandardReportMediaAction_getImage存在任意文件读取漏洞.md",
+      "Web安全/CMS内容/通天星CMSV6/通天星CMSV6车载视频监控平台complex存在SQL注入漏洞.md",
+      "Web安全/CMS内容/通天星CMSV6/通天星CMSV6车载视频监控平台disable存在SQL注入漏洞.md",
+      "Web安全/CMS内容/通天星CMSV6/通天星CMSV6车载视频监控平台dismiss_disable存在SQL注入漏洞.md",
+      "Web安全/CMS内容/通天星CMSV6/通天星CMSV6车载视频监控平台downloadLogger任意文件下载.md",
+      "Web安全/CMS内容/通天星CMSV6/通天星CMSV6车载视频监控平台druid存在默认口令漏洞.md",
+      "Web安全/CMS内容/通天星CMSV6/通天星CMSV6车载视频监控平台edu_class_delete存在SQL注入漏洞.md",
+      "Web安全/CMS内容/通天星CMSV6/通天星CMSV6车载视频监控平台edu_course_publish_revoke存在SQL注入漏洞.md",
+      "Web安全/CMS内容/通天星CMSV6/通天星CMSV6车载视频监控平台edu_plan_publish_revoke存在SQL注入漏洞.md",
+      "Web安全/CMS内容/通天星CMSV6/通天星CMSV6车载视频监控平台getAlarmAppealByGuid存在SQL注入漏洞.md",
+      "Web安全/CMS内容/通天星CMSV6/通天星CMSV6车载视频监控平台inspect_file存在任意文件上传漏洞.md",
+      "Web安全/CMS内容/通天星CMSV6/通天星CMSV6车载视频监控平台kq_schedule存在SQL注入漏洞.md",
+      "Web安全/CMS内容/通天星CMSV6/通天星CMSV6车载视频监控平台line_manage存在SQL注入漏洞.md",
+      "Web安全/CMS内容/通天星CMSV6/通天星CMSV6车载视频监控平台list存在SQL注入漏洞.md",
+      "Web安全/CMS内容/通天星CMSV6/通天星CMSV6车载视频监控平台list存在信息泄露漏洞.md",
+      "Web安全/CMS内容/通天星CMSV6/通天星CMSV6车载视频监控平台merge存在SQL注入漏洞.md",
+      "Web安全/CMS内容/通天星CMSV6/通天星CMSV6车载视频监控平台muck_vehi_certificate存在SQL注入漏洞.md",
+      "Web安全/CMS内容/通天星CMSV6/通天星CMSV6车载视频监控平台run_stop_delete存在SQL注入漏洞.md",
+      "Web安全/CMS内容/通天星CMSV6/通天星CMSV6车载视频监控平台task_record_detail_delete存在SQL注入漏洞.md"
+    ],
+    "additional_vehicle_platform_record": "Web安全/其他软件/杂项/CVE-2024-29666.md"
+  },
+  "limits": "Correct only product/category and the erroneous maintainer-added note/side-effects statement. Original technical body, public values and other review notes stay byte-for-byte unchanged. Related records are not otherwise edited. No PoC or target access."
+}
