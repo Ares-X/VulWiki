@@ -16,10 +16,11 @@ review_date: "2026-10-02"
 source_url: "https://www.yuque.com/xiaokp7/ocvun2/gvrg0qu31td8ab01"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/%E6%95%B0%E5%AD%97%E7%B3%BB%E7%BB%9F/%E9%85%92%E5%BA%97%E5%AE%BD%E5%B8%A6%E8%BF%90%E8%90%A5%E7%B3%BB%E7%BB%9Fserver_ping%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md"
-fofa_unverified: "酒店宽带运营"
+previous_fofa_unverified: "酒店宽带运营"
 id: "vw-592889ff7bdff7c56d138a26"
 entity_id: "ve-592889ff7bdff7c56d138a26"
 schema_version: "1"
+fofa: "\"酒店宽带运营\""
 ---
 
 # 安美数字酒店宽带运营 server_ping ip命令注入

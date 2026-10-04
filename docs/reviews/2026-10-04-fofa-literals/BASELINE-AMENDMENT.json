@@ -1,0 +1,367 @@
+{
+  "before_sha256": "911cf056c80bb0b5d1e4d05c97e727b914cc5f2b1dc1a34d297235111d9240f9",
+  "after_sha256": "f6b62e639aab5faf70f33522e6875c6e8c80273cf4cfcf8d510a4bd201a87fb0",
+  "removed": [
+    {
+      "code": "fingerprint_unverified",
+      "count": 1,
+      "detail": "fofa: retained unverified query excluded from fingerprint index",
+      "key": "068258a6bde2c3dc522b86b2",
+      "line": 0,
+      "lines": [
+        0
+      ],
+      "path": "Web安全/商业软件/微信公众号商家收银台小程序系统/微信公众号商家收银台小程序系统存在任意文件上传漏洞.md",
+      "severity": "warning"
+    },
+    {
+      "code": "fingerprint_unverified",
+      "count": 1,
+      "detail": "fofa: retained unverified query excluded from fingerprint index",
+      "key": "188f31ded55da084c475b3a0",
+      "line": 0,
+      "lines": [
+        0
+      ],
+      "path": "Web安全/商业软件/JEEWMS/JeeWMS cgReportController.do SQL注入漏洞(CVE-2024-57760).md",
+      "severity": "warning"
+    },
+    {
+      "code": "fingerprint_unverified",
+      "count": 1,
+      "detail": "fofa: retained unverified query excluded from fingerprint index",
+      "key": "1a9999bca217ea114d83ab07",
+      "line": 0,
+      "lines": [
+        0
+      ],
+      "path": "Web安全/云平台/TerraMaster NAS/TerraMasterTOSexportUser.php远程命令执行.md",
+      "severity": "warning"
+    },
+    {
+      "code": "fingerprint_unverified",
+      "count": 1,
+      "detail": "fofa: retained unverified query excluded from fingerprint index",
+      "key": "205826bd5ac731e4cd17461d",
+      "line": 0,
+      "lines": [
+        0
+      ],
+      "path": "Web安全/商业软件/万能门店小程序/微信万能门店小程序系统存在SQL注入漏洞.md",
+      "severity": "warning"
+    },
+    {
+      "code": "fingerprint_unverified",
+      "count": 1,
+      "detail": "fofa: retained unverified query excluded from fingerprint index",
+      "key": "38b5eed23a9dd8318dfadbf4",
+      "line": 0,
+      "lines": [
+        0
+      ],
+      "path": "Web安全/商业软件/数字系统/酒店宽带运营系统server_ping远程命令执行漏洞.md",
+      "severity": "warning"
+    },
+    {
+      "code": "fingerprint_unverified",
+      "count": 1,
+      "detail": "fofa: retained unverified query excluded from fingerprint index",
+      "key": "39e4e67d38ae53938a683599",
+      "line": 0,
+      "lines": [
+        0
+      ],
+      "path": "Web安全/ERP企业/反序列化/浪潮GS企业管理软件xtdysrv存在反序列化漏洞.md",
+      "severity": "warning"
+    },
+    {
+      "code": "fingerprint_unverified",
+      "count": 1,
+      "detail": "fofa: retained unverified query excluded from fingerprint index",
+      "key": "3e2e5ef7ada9a8af3f29b67d",
+      "line": 0,
+      "lines": [
+        0
+      ],
+      "path": "Web安全/商业软件/广告任务平台/微信广告任务平台ajax_upload存在任意文件上传漏洞.md",
+      "severity": "warning"
+    },
+    {
+      "code": "fingerprint_unverified",
+      "count": 1,
+      "detail": "fofa: retained unverified query excluded from fingerprint index",
+      "key": "4800d6d6253473ed98721cc8",
+      "line": 0,
+      "lines": [
+        0
+      ],
+      "path": "Web安全/商业软件/小说漫画系统/微信公众号小说漫画系统Upload存在任意文件写入漏洞.md",
+      "severity": "warning"
+    },
+    {
+      "code": "fingerprint_unverified",
+      "count": 1,
+      "detail": "fofa: retained unverified query excluded from fingerprint index",
+      "key": "4868f6b0b1d696cd1979193c",
+      "line": 0,
+      "lines": [
+        0
+      ],
+      "path": "Web安全/商业软件/C-Lodop打印/C-Lodop打印服务系统存在任意文件读取漏洞.md",
+      "severity": "warning"
+    },
+    {
+      "code": "fingerprint_unverified",
+      "count": 1,
+      "detail": "fofa: retained unverified query excluded from fingerprint index",
+      "key": "4fa168cf60ba2bb068f2a9b8",
+      "line": 0,
+      "lines": [
+        0
+      ],
+      "path": "Web安全/云平台/TerraMaster NAS/漏洞复现 TerraMaster TOS api.php 信息泄露和远程命令执行.md",
+      "severity": "warning"
+    },
+    {
+      "code": "fingerprint_unverified",
+      "count": 1,
+      "detail": "fofa: retained unverified query excluded from fingerprint index",
+      "key": "546158e25d12cf03d6289a06",
+      "line": 0,
+      "lines": [
+        0
+      ],
+      "path": "Web安全/商业软件/聚合支付/聚合支付平台接口sdcustomno存在SQL注入漏洞.md",
+      "severity": "warning"
+    },
+    {
+      "code": "fingerprint_unverified",
+      "count": 1,
+      "detail": "fofa: retained unverified query excluded from fingerprint index",
+      "key": "5d1951e7f791d5e4b2010b0a",
+      "line": 0,
+      "lines": [
+        0
+      ],
+      "path": "Web安全/安全设备/金山终端安全/金山VGM防毒墙downFile存在任意文件读取漏洞.md",
+      "severity": "warning"
+    },
+    {
+      "code": "fingerprint_unverified",
+      "count": 1,
+      "detail": "fofa: retained unverified query excluded from fingerprint index",
+      "key": "5e1c36371f158b2acac85e15",
+      "line": 0,
+      "lines": [
+        0
+      ],
+      "path": "Web安全/开发框架/PHP/PHP-8.1.0-devzerodium后门命令执行漏洞.md",
+      "severity": "warning"
+    },
+    {
+      "code": "fingerprint_unverified",
+      "count": 1,
+      "detail": "fofa: retained unverified query excluded from fingerprint index",
+      "key": "60b28255c0b3258b8317207d",
+      "line": 0,
+      "lines": [
+        0
+      ],
+      "path": "Web安全/网络设备/锐捷/锐捷 云课堂主机 pool 目录遍历漏洞   孤桜懶契.md",
+      "severity": "warning"
+    },
+    {
+      "code": "fingerprint_unverified",
+      "count": 1,
+      "detail": "fofa: retained unverified query excluded from fingerprint index",
+      "key": "63688c9e3e7302e1e693ea15",
+      "line": 0,
+      "lines": [
+        0
+      ],
+      "path": "Web安全/网络设备/D-Link/D-Link NAS 未授权RCE漏洞(CVE-2024-3273).md",
+      "severity": "warning"
+    },
+    {
+      "code": "fingerprint_unverified",
+      "count": 1,
+      "detail": "fofa: retained unverified query excluded from fingerprint index",
+      "key": "7475d26441b1225637d96a41",
+      "line": 0,
+      "lines": [
+        0
+      ],
+      "path": "Web安全/ERP企业/用友NC/X 友 NCCloud FS 文件管理 SQL 注入.md",
+      "severity": "warning"
+    },
+    {
+      "code": "fingerprint_unverified",
+      "count": 1,
+      "detail": "fofa: retained unverified query excluded from fingerprint index",
+      "key": "81f65364492b23ae3f9dcb38",
+      "line": 0,
+      "lines": [
+        0
+      ],
+      "path": "Web安全/ERP企业/用友GRP-u8/X 友 U8 OA test-jsp SQL 注入漏洞.md",
+      "severity": "warning"
+    },
+    {
+      "code": "fingerprint_unverified",
+      "count": 1,
+      "detail": "fofa: retained unverified query excluded from fingerprint index",
+      "key": "877b9a6d99862b01431b671b",
+      "line": 0,
+      "lines": [
+        0
+      ],
+      "path": "Web安全/智能设备/TBK DVR/TBKDVR硬盘录像机device存在远程代码执行漏洞(CVE-2024-3721).md",
+      "severity": "warning"
+    },
+    {
+      "code": "fingerprint_unverified",
+      "count": 1,
+      "detail": "fofa: retained unverified query excluded from fingerprint index",
+      "key": "b09b2f4e50237da6ae01b45c",
+      "line": 0,
+      "lines": [
+        0
+      ],
+      "path": "Web安全/商业软件/小说漫画系统/微信公众号小说漫画系统fileupload.php存在任意文件写入漏洞.md",
+      "severity": "warning"
+    },
+    {
+      "code": "fingerprint_unverified",
+      "count": 1,
+      "detail": "fofa: retained unverified query excluded from fingerprint index",
+      "key": "b2df8650e77a76b576317487",
+      "line": 0,
+      "lines": [
+        0
+      ],
+      "path": "Web安全/商业软件/万能门店小程序/微信万能门店小程序系统存在任意文件读取漏洞.md",
+      "severity": "warning"
+    },
+    {
+      "code": "fingerprint_unverified",
+      "count": 1,
+      "detail": "fofa: retained unverified query excluded from fingerprint index",
+      "key": "b48ff054640850b56abe5324",
+      "line": 0,
+      "lines": [
+        0
+      ],
+      "path": "IOT安全/D-Link/D-LinkDAR上网行为审计网关importhtml远程命令执行漏洞.md",
+      "severity": "warning"
+    },
+    {
+      "code": "fingerprint_unverified",
+      "count": 1,
+      "detail": "fofa: retained unverified query excluded from fingerprint index",
+      "key": "b979e3002aabcd730c890cee",
+      "line": 0,
+      "lines": [
+        0
+      ],
+      "path": "Web安全/商业软件/JEEWMS/JeeWMS graphReportController.do SQL注入漏洞(CVE-2025-0392).md",
+      "severity": "warning"
+    },
+    {
+      "code": "fingerprint_unverified",
+      "count": 1,
+      "detail": "fofa: retained unverified query excluded from fingerprint index",
+      "key": "c424f58c2392121acb4acdfb",
+      "line": 0,
+      "lines": [
+        0
+      ],
+      "path": "Web安全/商业软件/海外抢单刷单/某二开版海外抢单Shua单系统存在任意用户登录漏洞.md",
+      "severity": "warning"
+    },
+    {
+      "code": "fingerprint_unverified",
+      "count": 1,
+      "detail": "fofa: retained unverified query excluded from fingerprint index",
+      "key": "d30481f8c55c3317f23f0add",
+      "line": 0,
+      "lines": [
+        0
+      ],
+      "path": "Web安全/商业软件/JEEWMS/JeeWMS cgFormBuildController.do SQL注入漏洞(CVE-2025-0391).md",
+      "severity": "warning"
+    },
+    {
+      "code": "fingerprint_unverified",
+      "count": 1,
+      "detail": "fofa: retained unverified query excluded from fingerprint index",
+      "key": "d7ee6d5e1db74d9fc041c0a8",
+      "line": 0,
+      "lines": [
+        0
+      ],
+      "path": "Web安全/商业软件/VEXUS交易所/VEXUS多语言货币交易所存在未授权访问漏洞.md",
+      "severity": "warning"
+    },
+    {
+      "code": "fingerprint_unverified",
+      "count": 1,
+      "detail": "fofa: retained unverified query excluded from fingerprint index",
+      "key": "df78ace4a16cfec01f067038",
+      "line": 0,
+      "lines": [
+        0
+      ],
+      "path": "Web安全/商业软件/JEEWMS/JeeWMS cgformTemplateController.do 任意文件读取漏洞(CVE-2024-27765).md",
+      "severity": "warning"
+    },
+    {
+      "code": "fingerprint_unverified",
+      "count": 1,
+      "detail": "fofa: retained unverified query excluded from fingerprint index",
+      "key": "e4ca5ef205aca2d12c4ea863",
+      "line": 0,
+      "lines": [
+        0
+      ],
+      "path": "Web安全/网络设备/锐捷/锐捷云课堂主机 目录遍历漏洞.md",
+      "severity": "warning"
+    },
+    {
+      "code": "fingerprint_unverified",
+      "count": 1,
+      "detail": "fofa: retained unverified query excluded from fingerprint index",
+      "key": "f9650d5b8a87fd9ebce0daad",
+      "line": 0,
+      "lines": [
+        0
+      ],
+      "path": "Web安全/商业软件/证书查询系统/证书系统查询系统lang任意文件读取漏洞.md",
+      "severity": "warning"
+    },
+    {
+      "code": "fingerprint_unverified",
+      "count": 1,
+      "detail": "fofa: retained unverified query excluded from fingerprint index",
+      "key": "fc62a6d4a70634bf2aff372d",
+      "line": 0,
+      "lines": [
+        0
+      ],
+      "path": "Web安全/商业软件/Quicklancer/Quicklancerlisting存在SQL注入漏洞.md",
+      "severity": "warning"
+    },
+    {
+      "code": "fingerprint_unverified",
+      "count": 1,
+      "detail": "fofa: retained unverified query excluded from fingerprint index",
+      "key": "fe978b93636600fc1a56ef36",
+      "line": 0,
+      "lines": [
+        0
+      ],
+      "path": "Web安全/商业软件/短视频系统视频知识付费系统/短视频系统视频知识付费系统存在任意文件读取漏洞.md",
+      "severity": "warning"
+    }
+  ],
+  "added": []
+}

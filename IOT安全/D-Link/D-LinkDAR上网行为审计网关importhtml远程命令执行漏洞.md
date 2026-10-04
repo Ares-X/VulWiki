@@ -3,7 +3,7 @@ source: "wy876 漏洞文库"
 id: "vw-9f889b84ae97f08983daf21e"
 entity_id: "ve-9f889b84ae97f08983daf21e"
 schema_version: "1"
-fofa_unverified: "mask.style.visibility"
+previous_fofa_unverified: "mask.style.visibility"
 title: "D-Link DAR importhtml.php SQL 执行与文件写入链"
 product: "D-Link DAR审计网关"
 record_type: "vulnerability"
@@ -20,6 +20,7 @@ review_date: "2026-10-02"
 side_effects: "文中写入/上传步骤会创建或覆盖目标文件；须先核对服务账户写权限、保存路径和脚本解析条件，验证后按原路径核查残留"
 source_url: "https://www.yuque.com/xiaokp7/ocvun2/qh15q6k18whqbdt8"
 source_status: "recorded"
+fofa: "\"mask.style.visibility\" && title=\"D-Link\""
 ---
 
 # D-Link DAR importhtml.php SQL 执行与文件写入链

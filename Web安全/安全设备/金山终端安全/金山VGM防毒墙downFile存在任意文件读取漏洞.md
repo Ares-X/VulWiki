@@ -3,7 +3,7 @@ source: "wy876 漏洞文库"
 id: "vw-c593bf69c91aa4ef092da794"
 entity_id: "ve-c593bf69c91aa4ef092da794"
 schema_version: "1"
-fofa_unverified: "金山VGM"
+previous_fofa_unverified: "金山VGM"
 title: "金山 VGM防毒墙downFile存在任意文件读取漏洞"
 product: "金山VGM防毒墙"
 record_type: "vulnerability"
@@ -20,6 +20,7 @@ review_date: "2026-10-02"
 side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
 source_url: "https://www.yuque.com/xiaokp7/ocvun2/rzhl67wobwkxypr0"
 source_status: "recorded"
+fofa: "\"金山VGM\""
 ---
 
 # 金山 VGM防毒墙downFile存在任意文件读取漏洞

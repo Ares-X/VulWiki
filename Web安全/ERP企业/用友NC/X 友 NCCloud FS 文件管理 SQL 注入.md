@@ -16,10 +16,11 @@ review_date: "2026-10-02"
 source_url: "https://mp.weixin.qq.com/s/jb7XeLGvdyNrF1xQFsXDjA"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E7%94%A8%E5%8F%8BNC/X%20%E5%8F%8B%20NCCloud%20FS%20%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%20SQL%20%E6%B3%A8%E5%85%A5.md"
-fofa_unverified: "NCCloud"
+previous_fofa_unverified: "NCCloud"
 id: "vw-4ab845edb58d57acbdd109ca"
 entity_id: "ve-4ab845edb58d57acbdd109ca"
 schema_version: "1"
+fofa: "\"NCCloud\""
 ---
 
 # 用友NCCloud FS fs/console username SQL 注入

@@ -10,7 +10,7 @@ identifier_status: "unknown"
 primary_identifiers: ""
 referenced_identifiers: ""
 identifier_role: "unknown"
-fofa_unverified: "TerraMaster"
+previous_fofa_unverified: "TerraMaster"
 source_url: "https://mp.weixin.qq.com/s/mSMqHFqBPkx89XZ7VFUkjQ"
 source_status: "recorded"
 prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
@@ -18,6 +18,7 @@ side_effects: "原文未完整记录副作用、清理步骤或运行验证；�
 id: "vw-5bb619c284ad6c3db1870ca0"
 entity_id: "ve-5bb619c284ad6c3db1870ca0"
 schema_version: "1"
+fofa: "\"TerraMaster\" && header=\"TOS\""
 ---
 
 # 漏洞复现 TerraMaster TOS api.php 信息泄露和远程命令执行

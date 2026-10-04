@@ -16,10 +16,11 @@ review_date: "2026-10-02"
 source_url: "https://www.yuque.com/xiaokp7/ocvun2/gzk5f87zuin8ipgr"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/%E5%B0%8F%E8%AF%B4%E6%BC%AB%E7%94%BB%E7%B3%BB%E7%BB%9F/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%B0%8F%E8%AF%B4%E6%BC%AB%E7%94%BB%E7%B3%BB%E7%BB%9FUpload%E5%AD%98%E5%9C%A8%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E5%86%99%E5%85%A5%E6%BC%8F%E6%B4%9E.md"
-fofa_unverified: "/Public/home/mhjs/jquery.js"
+previous_fofa_unverified: "/Public/home/mhjs/jquery.js"
 id: "vw-dbeed58e2a991ac35f5af61c"
 entity_id: "ve-dbeed58e2a991ac35f5af61c"
 schema_version: "1"
+fofa: "\"/Public/home/mhjs/jquery.js\""
 ---
 
 # 微信公众号小说漫画系统（源码发行方未明） IndexAjax Upload data URI文件写入

@@ -16,10 +16,11 @@ review_date: "2026-10-02"
 source_url: "https://github.com/SourByte05/Vulnerability-Wiki-PoC"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/%E8%AF%81%E4%B9%A6%E6%9F%A5%E8%AF%A2%E7%B3%BB%E7%BB%9F/%E8%AF%81%E4%B9%A6%E7%B3%BB%E7%BB%9F%E6%9F%A5%E8%AF%A2%E7%B3%BB%E7%BB%9Flang%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E.md"
-fofa_unverified: "/index/js/jquery.uls.data.js"
+previous_fofa_unverified: "/index/js/jquery.uls.data.js"
 id: "vw-066f2563de103b286eaca613"
 entity_id: "ve-066f2563de103b286eaca613"
 schema_version: "1"
+fofa: "\"/index/js/jquery.uls.data.js\""
 ---
 
 # 证书查询系统（厂商未知） ajax/lang路径遍历配置读取

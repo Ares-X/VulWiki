@@ -1,0 +1,783 @@
+{
+  "base_commit": "a1b957fbd79419540a2a981406f5e53d0dea0ce9",
+  "articles": [
+    {
+      "path": "IOT安全/D-Link/D-LinkDAR上网行为审计网关importhtml远程命令执行漏洞.md",
+      "sha256": "0d214ed1e1896205366fd5648281b69749d3c3ab28d7c685ab905dc6da3eaf9b",
+      "expression": "\"mask.style.visibility\" && title=\"D-Link\"",
+      "full_line": "+ fofa`\"mask.style.visibility\" && title=\"D-Link\"`",
+      "line": 61,
+      "source_offset_bytes": {
+        "start": 3500,
+        "end_exclusive": 3541
+      },
+      "reasoning": "Exact complete FOFA expression copied from this article line; quoted keyword operands are accepted by FOFA keyword search. No characters or operators were supplied or changed.",
+      "before_sha256": "0d214ed1e1896205366fd5648281b69749d3c3ab28d7c685ab905dc6da3eaf9b",
+      "after_sha256": "02c48c48f51ebf7ec56c7ad9a34572649b07757cfca0da038a563957e4b7bfb9",
+      "body_unchanged": true,
+      "previous_unverified_value_retained": true
+    },
+    {
+      "path": "Web安全/ERP企业/反序列化/浪潮GS企业管理软件xtdysrv存在反序列化漏洞.md",
+      "sha256": "781d070b642cbdcc2b994d9ab9f3b1aa2c3319e3ece88808801a3e2dd9056427",
+      "expression": "\"cwbase/web/scripts/aes.js\"",
+      "full_line": "+ fofa`\"cwbase/web/scripts/aes.js\"`",
+      "line": 55,
+      "source_offset_bytes": {
+        "start": 3186,
+        "end_exclusive": 3213
+      },
+      "reasoning": "Exact complete FOFA expression copied from this article line; quoted keyword operands are accepted by FOFA keyword search. No characters or operators were supplied or changed.",
+      "before_sha256": "781d070b642cbdcc2b994d9ab9f3b1aa2c3319e3ece88808801a3e2dd9056427",
+      "after_sha256": "f4b7295871a2bcecd0b9a27718ff0aeba164e46714a44bdca5075e4a4b9600b0",
+      "body_unchanged": true,
+      "previous_unverified_value_retained": true
+    },
+    {
+      "path": "Web安全/ERP企业/用友GRP-u8/X 友 U8 OA test-jsp SQL 注入漏洞.md",
+      "sha256": "00c0650ec031183940c2dd2a5419d330193731f370ce5f0caa3d002da4e80083",
+      "expression": "\"用友U8-OA\"",
+      "full_line": "FOFA  \"用友U8-OA\"",
+      "line": 65,
+      "source_offset_bytes": {
+        "start": 2788,
+        "end_exclusive": 2801
+      },
+      "reasoning": "Exact complete FOFA expression copied from this article line; quoted keyword operands are accepted by FOFA keyword search. No characters or operators were supplied or changed.",
+      "before_sha256": "00c0650ec031183940c2dd2a5419d330193731f370ce5f0caa3d002da4e80083",
+      "after_sha256": "803e79b06b1bd72c31f07b80490e56ddb664f0c7e87826d89fedc568d0414df1",
+      "body_unchanged": true,
+      "previous_unverified_value_retained": true
+    },
+    {
+      "path": "Web安全/ERP企业/用友NC/X 友 NCCloud FS 文件管理 SQL 注入.md",
+      "sha256": "af737c79adbefde7183e6fab93a07c229f07c80dfb470aca9b7d61a31b58abc1",
+      "expression": "\"NCCloud\"",
+      "full_line": "FOFA \"NCCloud\"",
+      "line": 65,
+      "source_offset_bytes": {
+        "start": 2789,
+        "end_exclusive": 2798
+      },
+      "reasoning": "Exact complete FOFA expression copied from this article line; quoted keyword operands are accepted by FOFA keyword search. No characters or operators were supplied or changed.",
+      "before_sha256": "af737c79adbefde7183e6fab93a07c229f07c80dfb470aca9b7d61a31b58abc1",
+      "after_sha256": "dca52cbce5ada2faf8f09145283fdc02671ae44607efacba3ae0cf73d6e242b8",
+      "body_unchanged": true,
+      "previous_unverified_value_retained": true
+    },
+    {
+      "path": "Web安全/云平台/TerraMaster NAS/TerraMasterTOSexportUser.php远程命令执行.md",
+      "sha256": "5e2f835a14b8594642ec7cac490f8bb8150d2eea2eca8184e72cd87c47e869a7",
+      "expression": "\"TerraMaster\" && header=\"TOS\"",
+      "full_line": "+ fofa`\"TerraMaster\" && header=\"TOS\"`",
+      "line": 53,
+      "source_offset_bytes": {
+        "start": 1952,
+        "end_exclusive": 1981
+      },
+      "reasoning": "Exact complete FOFA expression copied from this article line; quoted keyword operands are accepted by FOFA keyword search. No characters or operators were supplied or changed.",
+      "before_sha256": "5e2f835a14b8594642ec7cac490f8bb8150d2eea2eca8184e72cd87c47e869a7",
+      "after_sha256": "5d1a705656b7a8d497646f3bb9ea65f118fb92cc5bf12ef9b2996b51d8f8bd05",
+      "body_unchanged": true,
+      "previous_unverified_value_retained": true
+    },
+    {
+      "path": "Web安全/云平台/TerraMaster NAS/漏洞复现 TerraMaster TOS api.php 信息泄露和远程命令执行.md",
+      "sha256": "0e58dc448bc765705465cc298a6558ff0fdef77d8d7236d6d5b33178f0061940",
+      "expression": "\"TerraMaster\" && header=\"TOS\"",
+      "full_line": "**fofa：\"TerraMaster\" && header=\"TOS\"**",
+      "line": 69,
+      "source_offset_bytes": {
+        "start": 3187,
+        "end_exclusive": 3216
+      },
+      "reasoning": "Exact complete FOFA expression copied from this article line; quoted keyword operands are accepted by FOFA keyword search. No characters or operators were supplied or changed.",
+      "before_sha256": "0e58dc448bc765705465cc298a6558ff0fdef77d8d7236d6d5b33178f0061940",
+      "after_sha256": "21eb3f6f171fd31bf186d4302dfcbb9fea8b0042680676c570d92b0a6a493033",
+      "body_unchanged": true,
+      "previous_unverified_value_retained": true
+    },
+    {
+      "path": "Web安全/商业软件/C-Lodop打印/C-Lodop打印服务系统存在任意文件读取漏洞.md",
+      "sha256": "b9a7a8ab569a55be255697897d5dfc12db06c5fca4cbbcd24681e282dfc37cae",
+      "expression": "\"C-Lodop\" && icon_hash=\"-329747115\"",
+      "full_line": "+ fofa`\"C-Lodop\" && icon_hash=\"-329747115\"`",
+      "line": 55,
+      "source_offset_bytes": {
+        "start": 2526,
+        "end_exclusive": 2561
+      },
+      "reasoning": "Exact complete FOFA expression copied from this article line; quoted keyword operands are accepted by FOFA keyword search. No characters or operators were supplied or changed.",
+      "before_sha256": "b9a7a8ab569a55be255697897d5dfc12db06c5fca4cbbcd24681e282dfc37cae",
+      "after_sha256": "978dab65ed961989873b074e8abdb03d076bf388ce71de59653044509abbbfb9",
+      "body_unchanged": true,
+      "previous_unverified_value_retained": true
+    },
+    {
+      "path": "Web安全/商业软件/JEEWMS/JeeWMS cgFormBuildController.do SQL注入漏洞(CVE-2025-0391).md",
+      "sha256": "23ccf6951460c4aff84f7fa6e05ada88a36b58a8df05091850860e181ea438b0",
+      "expression": "body=\"url:userController.do?userOrgSelect&userId=\" && \"loginController.do?changeDefaultOrg\"",
+      "full_line": "FOFA：body=\"url:userController.do?userOrgSelect&userId=\" && \"loginController.do?changeDefaultOrg\"",
+      "line": 81,
+      "source_offset_bytes": {
+        "start": 3309,
+        "end_exclusive": 3400
+      },
+      "reasoning": "Exact complete FOFA expression copied from this article line; quoted keyword operands are accepted by FOFA keyword search. No characters or operators were supplied or changed.",
+      "before_sha256": "23ccf6951460c4aff84f7fa6e05ada88a36b58a8df05091850860e181ea438b0",
+      "after_sha256": "9df0cf3351b515bba7ef11d825eb2e7a8690f572e8a684ff84416f026f0d5e11",
+      "body_unchanged": true,
+      "previous_unverified_value_retained": true
+    },
+    {
+      "path": "Web安全/商业软件/JEEWMS/JeeWMS cgReportController.do SQL注入漏洞(CVE-2024-57760).md",
+      "sha256": "f35a8487a5fd07f7b61919fadc031a2c6541ac21a95f1cef9ee8e975b78ff1e2",
+      "expression": "body=\"url:userController.do?userOrgSelect&userId=\" && \"loginController.do?changeDefaultOrg\"",
+      "full_line": "FOFA：body=\"url:userController.do?userOrgSelect&userId=\" && \"loginController.do?changeDefaultOrg\"",
+      "line": 79,
+      "source_offset_bytes": {
+        "start": 3147,
+        "end_exclusive": 3238
+      },
+      "reasoning": "Exact complete FOFA expression copied from this article line; quoted keyword operands are accepted by FOFA keyword search. No characters or operators were supplied or changed.",
+      "before_sha256": "f35a8487a5fd07f7b61919fadc031a2c6541ac21a95f1cef9ee8e975b78ff1e2",
+      "after_sha256": "ae112446a3f93aa10a98bce4bbe79ab895b7619b3b8e85d686ec8b3b87e1d2f7",
+      "body_unchanged": true,
+      "previous_unverified_value_retained": true
+    },
+    {
+      "path": "Web安全/商业软件/JEEWMS/JeeWMS cgformTemplateController.do 任意文件读取漏洞(CVE-2024-27765).md",
+      "sha256": "70398c27fa4c4753abbad07db06b087eac228fdb4ae3dd2306392a4426c3838d",
+      "expression": "body=\"url:userController.do?userOrgSelect&userId=\" && \"loginController.do?changeDefaultOrg\"",
+      "full_line": "FOFA：body=\"url:userController.do?userOrgSelect&userId=\" && \"loginController.do?changeDefaultOrg\"",
+      "line": 80,
+      "source_offset_bytes": {
+        "start": 3198,
+        "end_exclusive": 3289
+      },
+      "reasoning": "Exact complete FOFA expression copied from this article line; quoted keyword operands are accepted by FOFA keyword search. No characters or operators were supplied or changed.",
+      "before_sha256": "70398c27fa4c4753abbad07db06b087eac228fdb4ae3dd2306392a4426c3838d",
+      "after_sha256": "f92841afbe24993cf0dd18dfe1066749618898bb635119bdf81c297183553975",
+      "body_unchanged": true,
+      "previous_unverified_value_retained": true
+    },
+    {
+      "path": "Web安全/商业软件/JEEWMS/JeeWMS graphReportController.do SQL注入漏洞(CVE-2025-0392).md",
+      "sha256": "5377e5d3e45b6cce39a5991c69d05b8d9edb6fe5878108072a7e9d2a7fe87d81",
+      "expression": "body=\"url:userController.do?userOrgSelect&userId=\" && \"loginController.do?changeDefaultOrg\"",
+      "full_line": "FOFA：body=\"url:userController.do?userOrgSelect&userId=\" && \"loginController.do?changeDefaultOrg\"",
+      "line": 80,
+      "source_offset_bytes": {
+        "start": 3233,
+        "end_exclusive": 3324
+      },
+      "reasoning": "Exact complete FOFA expression copied from this article line; quoted keyword operands are accepted by FOFA keyword search. No characters or operators were supplied or changed.",
+      "before_sha256": "5377e5d3e45b6cce39a5991c69d05b8d9edb6fe5878108072a7e9d2a7fe87d81",
+      "after_sha256": "d7918ade27897ca9bcd833e96d5633a99161ecd6450864fe03767ab3dea2550b",
+      "body_unchanged": true,
+      "previous_unverified_value_retained": true
+    },
+    {
+      "path": "Web安全/商业软件/Quicklancer/Quicklancerlisting存在SQL注入漏洞.md",
+      "sha256": "9eb64f935f4717b6068769bb31558df20869ec4def8d916865ec9f6c270a8dac",
+      "expression": "\"service_fragments/css/gig_detail.css\"",
+      "full_line": "+ fofa`\"service_fragments/css/gig_detail.css\"`",
+      "line": 55,
+      "source_offset_bytes": {
+        "start": 2299,
+        "end_exclusive": 2337
+      },
+      "reasoning": "Exact complete FOFA expression copied from this article line; quoted keyword operands are accepted by FOFA keyword search. No characters or operators were supplied or changed.",
+      "before_sha256": "9eb64f935f4717b6068769bb31558df20869ec4def8d916865ec9f6c270a8dac",
+      "after_sha256": "eb6156defab95070a691e230880329fef4070ffc4062ed275de45b28ca139db4",
+      "body_unchanged": true,
+      "previous_unverified_value_retained": true
+    },
+    {
+      "path": "Web安全/商业软件/VEXUS交易所/VEXUS多语言货币交易所存在未授权访问漏洞.md",
+      "sha256": "9896e2e895461105617d4dccc440a6985ee1930f94ba67e7ac13eb6afda9f505",
+      "expression": "\"image/n2.png\" && \"public/login.action\"",
+      "full_line": "+ fofa`\"image/n2.png\" && \"public/login.action\"`",
+      "line": 56,
+      "source_offset_bytes": {
+        "start": 2472,
+        "end_exclusive": 2511
+      },
+      "reasoning": "Exact complete FOFA expression copied from this article line; quoted keyword operands are accepted by FOFA keyword search. No characters or operators were supplied or changed.",
+      "before_sha256": "9896e2e895461105617d4dccc440a6985ee1930f94ba67e7ac13eb6afda9f505",
+      "after_sha256": "b07aeca0bcceb9627d5425c762a9e0aef553131413789ee2cefdacaea6bd7541",
+      "body_unchanged": true,
+      "previous_unverified_value_retained": true
+    },
+    {
+      "path": "Web安全/商业软件/万能门店小程序/微信万能门店小程序系统存在SQL注入漏洞.md",
+      "sha256": "5b27801873dbf65cb0191a5f6f54505bb61871eaef3ba5f08a307b92fbc96691",
+      "expression": "\"/comhome/cases/index.html\"",
+      "full_line": "+ fofa`\"/comhome/cases/index.html\"`",
+      "line": 54,
+      "source_offset_bytes": {
+        "start": 2681,
+        "end_exclusive": 2708
+      },
+      "reasoning": "Exact complete FOFA expression copied from this article line; quoted keyword operands are accepted by FOFA keyword search. No characters or operators were supplied or changed.",
+      "before_sha256": "5b27801873dbf65cb0191a5f6f54505bb61871eaef3ba5f08a307b92fbc96691",
+      "after_sha256": "f8861a7c38136dda1e2cde848af9601ed8d1126f30819d9a84fc8ff88b6a021f",
+      "body_unchanged": true,
+      "previous_unverified_value_retained": true
+    },
+    {
+      "path": "Web安全/商业软件/万能门店小程序/微信万能门店小程序系统存在任意文件读取漏洞.md",
+      "sha256": "4c808c67b1185a87a6e0bb61394527926a5c826f0325ae81e2b8a79670387d2c",
+      "expression": "\"/comhome/cases/index.html\"",
+      "full_line": "+ fofa`\"/comhome/cases/index.html\"`",
+      "line": 55,
+      "source_offset_bytes": {
+        "start": 2889,
+        "end_exclusive": 2916
+      },
+      "reasoning": "Exact complete FOFA expression copied from this article line; quoted keyword operands are accepted by FOFA keyword search. No characters or operators were supplied or changed.",
+      "before_sha256": "4c808c67b1185a87a6e0bb61394527926a5c826f0325ae81e2b8a79670387d2c",
+      "after_sha256": "d7a7c3c2aa45e6b0dfcc751291f02b0647a08a08f049a91f925d752ffb7cf9d1",
+      "body_unchanged": true,
+      "previous_unverified_value_retained": true
+    },
+    {
+      "path": "Web安全/商业软件/小说漫画系统/微信公众号小说漫画系统Upload存在任意文件写入漏洞.md",
+      "sha256": "9918c7e73bb595d429950e58788ff8b8e69e35add8599976145dd42ca9ab434c",
+      "expression": "\"/Public/home/mhjs/jquery.js\"",
+      "full_line": "+ fofa`\"/Public/home/mhjs/jquery.js\"`",
+      "line": 56,
+      "source_offset_bytes": {
+        "start": 2927,
+        "end_exclusive": 2956
+      },
+      "reasoning": "Exact complete FOFA expression copied from this article line; quoted keyword operands are accepted by FOFA keyword search. No characters or operators were supplied or changed.",
+      "before_sha256": "9918c7e73bb595d429950e58788ff8b8e69e35add8599976145dd42ca9ab434c",
+      "after_sha256": "ed6f3f1f18f89c90a8efd3dcce9a42d3fd71f08fa3e8ee7633231176cebf8383",
+      "body_unchanged": true,
+      "previous_unverified_value_retained": true
+    },
+    {
+      "path": "Web安全/商业软件/小说漫画系统/微信公众号小说漫画系统fileupload.php存在任意文件写入漏洞.md",
+      "sha256": "9b83775f780e47c3dd7d046d0bb1db92dc0f4aba30b0f4c5ea46d23014017050",
+      "expression": "\"/Public/home/mhjs/jquery.js\"",
+      "full_line": "+ fofa`\"/Public/home/mhjs/jquery.js\"`",
+      "line": 56,
+      "source_offset_bytes": {
+        "start": 2974,
+        "end_exclusive": 3003
+      },
+      "reasoning": "Exact complete FOFA expression copied from this article line; quoted keyword operands are accepted by FOFA keyword search. No characters or operators were supplied or changed.",
+      "before_sha256": "9b83775f780e47c3dd7d046d0bb1db92dc0f4aba30b0f4c5ea46d23014017050",
+      "after_sha256": "cec1403835a36f704155640a56a7b82eca68b72c415aa9fc10b5ed76f8983e39",
+      "body_unchanged": true,
+      "previous_unverified_value_retained": true
+    },
+    {
+      "path": "Web安全/商业软件/广告任务平台/微信广告任务平台ajax_upload存在任意文件上传漏洞.md",
+      "sha256": "710eea54b2a9ea2b47f10d145ed4e6f829ccbf74a8fb06193a7cf779fd6ba0fe",
+      "expression": "\"/tpl/Public/js/func.js\"",
+      "full_line": "+ fofa`\"/tpl/Public/js/func.js\"`",
+      "line": 56,
+      "source_offset_bytes": {
+        "start": 2905,
+        "end_exclusive": 2929
+      },
+      "reasoning": "Exact complete FOFA expression copied from this article line; quoted keyword operands are accepted by FOFA keyword search. No characters or operators were supplied or changed.",
+      "before_sha256": "710eea54b2a9ea2b47f10d145ed4e6f829ccbf74a8fb06193a7cf779fd6ba0fe",
+      "after_sha256": "a70dcc8fde8fcde3d5e5a1e153be6f53e54ca6340398bd5a5199771a69d763d3",
+      "body_unchanged": true,
+      "previous_unverified_value_retained": true
+    },
+    {
+      "path": "Web安全/商业软件/微信公众号商家收银台小程序系统/微信公众号商家收银台小程序系统存在任意文件上传漏洞.md",
+      "sha256": "d6f69c59cfa8a3bfef449ee6f89d204b64ad227d1af362d302920fb992f79666",
+      "expression": "\"/index.php?s=platform/index/captcha\"",
+      "full_line": "+ fofa`\"/index.php?s=platform/index/captcha\"`",
+      "line": 56,
+      "source_offset_bytes": {
+        "start": 3359,
+        "end_exclusive": 3396
+      },
+      "reasoning": "Exact complete FOFA expression copied from this article line; quoted keyword operands are accepted by FOFA keyword search. No characters or operators were supplied or changed.",
+      "before_sha256": "d6f69c59cfa8a3bfef449ee6f89d204b64ad227d1af362d302920fb992f79666",
+      "after_sha256": "88ed973063cc9881993a636cf11221cb84d2335048ac70902382a69620e92e69",
+      "body_unchanged": true,
+      "previous_unverified_value_retained": true
+    },
+    {
+      "path": "Web安全/商业软件/数字系统/酒店宽带运营系统server_ping远程命令执行漏洞.md",
+      "sha256": "47c6bdf35a58b6b67c1105ef82a7ad9340623abab800b324ff0da740da7fe5ba",
+      "expression": "\"酒店宽带运营\"",
+      "full_line": "+ fofa`\"酒店宽带运营\"`",
+      "line": 55,
+      "source_offset_bytes": {
+        "start": 2539,
+        "end_exclusive": 2559
+      },
+      "reasoning": "Exact complete FOFA expression copied from this article line; quoted keyword operands are accepted by FOFA keyword search. No characters or operators were supplied or changed.",
+      "before_sha256": "47c6bdf35a58b6b67c1105ef82a7ad9340623abab800b324ff0da740da7fe5ba",
+      "after_sha256": "d66e6250e3f89d1cb3abf81b04105ea629997c391a2615186a248c706a6f3ccb",
+      "body_unchanged": true,
+      "previous_unverified_value_retained": true
+    },
+    {
+      "path": "Web安全/商业软件/海外抢单刷单/某二开版海外抢单Shua单系统存在任意用户登录漏洞.md",
+      "sha256": "a67d8f7a4e1d0d2fced7f744e654638fd7c9a1c7e3ee032ed8ee5e2fd2724049",
+      "expression": "\"/red/popper.min.js\"",
+      "full_line": "+ fofa`\"/red/popper.min.js\"`",
+      "line": 56,
+      "source_offset_bytes": {
+        "start": 3056,
+        "end_exclusive": 3076
+      },
+      "reasoning": "Exact complete FOFA expression copied from this article line; quoted keyword operands are accepted by FOFA keyword search. No characters or operators were supplied or changed.",
+      "before_sha256": "a67d8f7a4e1d0d2fced7f744e654638fd7c9a1c7e3ee032ed8ee5e2fd2724049",
+      "after_sha256": "79894b7616ab41f78aea00107710a21c30e550b36f2f2d843c8013ad06a00e6c",
+      "body_unchanged": true,
+      "previous_unverified_value_retained": true
+    },
+    {
+      "path": "Web安全/商业软件/短视频系统视频知识付费系统/短视频系统视频知识付费系统存在任意文件读取漏洞.md",
+      "sha256": "5f59751af7308401b38aa29c0973d41d4b5a7fa76ccb6509768a097521071cb0",
+      "expression": "\"testvideo://login?id=\"",
+      "full_line": "+ fofa`\"testvideo://login?id=\"`",
+      "line": 55,
+      "source_offset_bytes": {
+        "start": 2924,
+        "end_exclusive": 2947
+      },
+      "reasoning": "Exact complete FOFA expression copied from this article line; quoted keyword operands are accepted by FOFA keyword search. No characters or operators were supplied or changed.",
+      "before_sha256": "5f59751af7308401b38aa29c0973d41d4b5a7fa76ccb6509768a097521071cb0",
+      "after_sha256": "394580cb0a909683630eea92db30cda067a919136368eb7b971540bf56ba435b",
+      "body_unchanged": true,
+      "previous_unverified_value_retained": true
+    },
+    {
+      "path": "Web安全/商业软件/聚合支付/聚合支付平台接口sdcustomno存在SQL注入漏洞.md",
+      "sha256": "2fc3ad618e9062eb6dccf4ee256c6a41fabe76dcca26d567e3ca9411bf24028b",
+      "expression": "\"/Public/theme/view4/css/style.css\"",
+      "full_line": "FOFA：\"/Public/theme/view4/css/style.css\"",
+      "line": 80,
+      "source_offset_bytes": {
+        "start": 3460,
+        "end_exclusive": 3495
+      },
+      "reasoning": "Exact complete FOFA expression copied from this article line; quoted keyword operands are accepted by FOFA keyword search. No characters or operators were supplied or changed.",
+      "before_sha256": "2fc3ad618e9062eb6dccf4ee256c6a41fabe76dcca26d567e3ca9411bf24028b",
+      "after_sha256": "1bf44a0af22a048790c1263e0f9f2a2e01edf4e282f2d011f87fb257fcb605cc",
+      "body_unchanged": true,
+      "previous_unverified_value_retained": true
+    },
+    {
+      "path": "Web安全/商业软件/证书查询系统/证书系统查询系统lang任意文件读取漏洞.md",
+      "sha256": "de172a56a27c82c83d310f91ab414f5fe2fb837fb3f4d410408d87457960178e",
+      "expression": "\"/index/js/jquery.uls.data.js\"",
+      "full_line": "FOFA：\"/index/js/jquery.uls.data.js\"",
+      "line": 79,
+      "source_offset_bytes": {
+        "start": 3292,
+        "end_exclusive": 3322
+      },
+      "reasoning": "Exact complete FOFA expression copied from this article line; quoted keyword operands are accepted by FOFA keyword search. No characters or operators were supplied or changed.",
+      "before_sha256": "de172a56a27c82c83d310f91ab414f5fe2fb837fb3f4d410408d87457960178e",
+      "after_sha256": "12c542d30f070463eeffc68aae94c5189c372288e2a7172c5dac73fca580cf19",
+      "body_unchanged": true,
+      "previous_unverified_value_retained": true
+    },
+    {
+      "path": "Web安全/安全设备/金山终端安全/金山VGM防毒墙downFile存在任意文件读取漏洞.md",
+      "sha256": "6870ffc6dbd6e1121d961534d0875116de56f62f960b087a5598c871cdaa8cb0",
+      "expression": "\"金山VGM\"",
+      "full_line": "+ fofa`\"金山VGM\"`",
+      "line": 60,
+      "source_offset_bytes": {
+        "start": 3475,
+        "end_exclusive": 3486
+      },
+      "reasoning": "Exact complete FOFA expression copied from this article line; quoted keyword operands are accepted by FOFA keyword search. No characters or operators were supplied or changed.",
+      "before_sha256": "6870ffc6dbd6e1121d961534d0875116de56f62f960b087a5598c871cdaa8cb0",
+      "after_sha256": "a87547d22187eed9baf01da72f73392e8b872e19de85b798fa961e92c216c027",
+      "body_unchanged": true,
+      "previous_unverified_value_retained": true
+    },
+    {
+      "path": "Web安全/开发框架/PHP/PHP-8.1.0-devzerodium后门命令执行漏洞.md",
+      "sha256": "07133b5a8fb3bb2b526b0667f95bfdd5b32ad9e7ed03ec037df494592591ca75",
+      "expression": "\"PHP/8.1.0-dev\"",
+      "full_line": "+ fofa`\"PHP/8.1.0-dev\"`",
+      "line": 48,
+      "source_offset_bytes": {
+        "start": 2358,
+        "end_exclusive": 2373
+      },
+      "reasoning": "Exact complete FOFA expression copied from this article line; quoted keyword operands are accepted by FOFA keyword search. No characters or operators were supplied or changed.",
+      "before_sha256": "07133b5a8fb3bb2b526b0667f95bfdd5b32ad9e7ed03ec037df494592591ca75",
+      "after_sha256": "845d2220e4e0a6e0f2c03efe4f928be56bafecc66919a8327a52305d9668a7a3",
+      "body_unchanged": true,
+      "previous_unverified_value_retained": true
+    },
+    {
+      "path": "Web安全/网络设备/锐捷/锐捷 云课堂主机 pool 目录遍历漏洞   孤桜懶契.md",
+      "sha256": "df3c9040e8f5c07640978ae69e8cd43cca3a1f109777cff7c48dad902e66599e",
+      "expression": "title=\"Ruijie\" && \"云课堂主机\"",
+      "full_line": "> d ⭕`FOFA：title=\"Ruijie\" && \"云课堂主机\"`",
+      "line": 71,
+      "source_offset_bytes": {
+        "start": 3685,
+        "end_exclusive": 3720
+      },
+      "reasoning": "Exact complete FOFA expression copied from this article line; quoted keyword operands are accepted by FOFA keyword search. No characters or operators were supplied or changed.",
+      "before_sha256": "df3c9040e8f5c07640978ae69e8cd43cca3a1f109777cff7c48dad902e66599e",
+      "after_sha256": "ce1e71823b94cbbaf555708858d93707099ac00d83303165ea55f7521377d723",
+      "body_unchanged": true,
+      "previous_unverified_value_retained": true
+    },
+    {
+      "path": "Web安全/网络设备/锐捷/锐捷云课堂主机 目录遍历漏洞.md",
+      "sha256": "0d029811686e457880bc070cc8b8af95245244b57e2c37ded3f1f2f47dffbdf4",
+      "expression": "title=\"Ruijie\" && \"云课堂主机\"",
+      "full_line": "FOFA: title=\"Ruijie\" && \"云课堂主机\"",
+      "line": 73,
+      "source_offset_bytes": {
+        "start": 3323,
+        "end_exclusive": 3358
+      },
+      "reasoning": "Exact complete FOFA expression copied from this article line; quoted keyword operands are accepted by FOFA keyword search. No characters or operators were supplied or changed.",
+      "before_sha256": "0d029811686e457880bc070cc8b8af95245244b57e2c37ded3f1f2f47dffbdf4",
+      "after_sha256": "1183f31bdfe82052053b7363cfa3d67d54a4b181a40d22e5fc76ab5446527b09",
+      "body_unchanged": true,
+      "previous_unverified_value_retained": true
+    },
+    {
+      "path": "Web安全/智能设备/TBK DVR/TBKDVR硬盘录像机device存在远程代码执行漏洞(CVE-2024-3721).md",
+      "sha256": "a9dddc2a54998c0e2adbcb013e909719d8d2f6cf3a351cf2c5ab0eed9d78aa95",
+      "expression": "\"Location: /login.rsp\"",
+      "full_line": "●fofa `\"Location: /login.rsp\"`",
+      "line": 61,
+      "source_offset_bytes": {
+        "start": 3240,
+        "end_exclusive": 3262
+      },
+      "reasoning": "Exact complete FOFA expression copied from this article line; quoted keyword operands are accepted by FOFA keyword search. No characters or operators were supplied or changed.",
+      "before_sha256": "a9dddc2a54998c0e2adbcb013e909719d8d2f6cf3a351cf2c5ab0eed9d78aa95",
+      "after_sha256": "3a3d8e619fb193a5772c7a614aa854b87ab02151210c0c3dac203b31ef7cd822",
+      "body_unchanged": true,
+      "previous_unverified_value_retained": true
+    },
+    {
+      "path": "Web安全/网络设备/D-Link/D-Link NAS 未授权RCE漏洞(CVE-2024-3273).md",
+      "sha256": "27d519f1e6aeaa1217b48160cea898dd376a6bdf5cdaf453aacafe2bba3e80b0",
+      "expression": "\"Text:In order to access the ShareCenter, please make sure you are using a recent browser(IE 7+, Firefox 3+, Safari 4+, Chrome 3+, Opera 10+)\"",
+      "full_line": "FOFA：\"Text:In order to access the ShareCenter, please make sure you are using a recent browser(IE 7+, Firefox 3+, Safari 4+, Chrome 3+, Opera 10+)\"",
+      "line": 107,
+      "source_offset_bytes": {
+        "start": 5179,
+        "end_exclusive": 5321
+      },
+      "reasoning": "Exact complete FOFA expression copied from this article line; quoted keyword operands are accepted by FOFA keyword search. No characters or operators were supplied or changed.",
+      "before_sha256": "27d519f1e6aeaa1217b48160cea898dd376a6bdf5cdaf453aacafe2bba3e80b0",
+      "after_sha256": "f3945ff0531544b677a94932de7dbb8a52e38b7cbff73021f5745b8ff4ee4de1",
+      "body_unchanged": true,
+      "previous_unverified_value_retained": true
+    }
+  ],
+  "remaining_holds": [
+    {
+      "path": "IOT安全/其他设备/大华智慧园区综合管理平台devicePoint_addImgIco任意文件上传漏洞.md",
+      "sha256": "60c7ceb0c9bbd5dbf173124af874a45cf36c7ecbe120919610d4f58a50a6c51e",
+      "original_value": "app=”dahua-智慧园区综合管理平台”",
+      "reason": "Original/current source uses typographic quotes in the app literal; wiki.fingerprint_valid rejects it and quote normalization would alter bytes."
+    },
+    {
+      "path": "Web安全/CMS内容/Seacms/seacms 最新版前台注入漏洞 - Panda - 专注于网络空间安全研究.md",
+      "sha256": "4dc20f2175a66188ee60ffb2b6dacb4b17a8d5f0e547f6ce00c55e1adf108b23",
+      "original_value": "搜索可以看到存在 400 + 的记录：",
+      "reason": "Original reports 400+ results; this is a count sentence, not a FOFA predicate."
+    },
+    {
+      "path": "Web安全/CMS内容/WordPress/WordPress Dokan Pro插件 SQL注入漏洞(CVE-2024-3922).md",
+      "sha256": "e9e85c86863e2de23601bda7585d10887eb7323968c50359d1db6bb9d51d67a1",
+      "original_value": "/wp-content/plugins/dokan-pro/",
+      "reason": "Only bare path /wp-content/plugins/dokan-pro/ is shown; no field/operator is supplied."
+    },
+    {
+      "path": "Web安全/ERP企业/博斯软件/博斯软件V6.0存在sql注入.md",
+      "sha256": "c6a299e71a36a50c76b019e8a9a292a2b7ba52d7a236e15625025cc004f20bca",
+      "original_value": "web.title:",
+      "reason": "Hunter line uses web.title:; the repository validator rejects colon and no punctuation rewrite is allowed."
+    },
+    {
+      "path": "Web安全/ERP企业/用友FE/用友 FE templateOfTaohong_manager.jsp 目录遍历漏洞.md",
+      "sha256": "6758fefb92b3cebcbda1b0c463dd91e5cdbf1a85d67e6effb23222115595f129",
+      "original_value": "\"FE协作\"",
+      "reason": "Only bare escaped product string FE协作 is available; no complete query expression."
+    },
+    {
+      "path": "Web安全/ERP企业/用友GRP-u8/用友GRP-U8行政事业内控管理软件SQL注入漏洞.md",
+      "sha256": "974583fc037e1cd245ad38f8712baabecc339bf9a7d52dc8aa95ec32dc466b56",
+      "original_value": "\\_dork: “用友GRP-u8”",
+      "reason": "The old fragment is explanatory _dork text with curly quotes, not a complete parser-valid query."
+    },
+    {
+      "path": "Web安全/ERP企业/用友NC/YonyouNC Tip.md",
+      "sha256": "37f6fd72060f93d39799984bf46e0899c77e2549389b6e25961be85b40ab6363",
+      "original_value": "/platform/yonyou-yyy.js",
+      "reason": "Only bare /platform/yonyou-yyy.js fragments and multiple headings occur; no uniquely attributable field-qualified expression."
+    },
+    {
+      "path": "Web安全/ERP企业/用友NC/用友 NC 漏洞汇总.md",
+      "sha256": "d543dc65bc7a644a23207837cbf68ecaf55782115c51439b318b4c5aab46deaa",
+      "original_value": "/platform/yonyou-yyy.js",
+      "reason": "Only bare /platform/yonyou-yyy.js fragments and headings occur; no field-qualified expression."
+    },
+    {
+      "path": "Web安全/OA办公/泛微oa/泛微e-cology SQL注入漏洞.md",
+      "sha256": "10b8287f6b87989d560bc26afb58b5f08ef03aec1cd522dbf91b4185644e51d1",
+      "original_value": "系统最新数据（一年内数据）显示全球范围内共有10266个泛微服务（基于jsp语言）。中国大陆使用数量最多，共有10166个，中国香港第二，共有51个，美国第三，共有15个，新加坡第",
+      "reason": "FOFA deployment counts are prose, not a search expression."
+    },
+    {
+      "path": "Web安全/OA办公/泛微oa/漏洞速递 + 检测脚本  泛微 E-Office 任意文件上传漏洞 CVE-2021-49104.md",
+      "sha256": "dfe40f30e33de5deaa58e81145d96b69044472dfa86660220cd3d9dd9336280f",
+      "original_value": "”工程师",
+      "reason": "Old fragment is the tail of an FOFA engineer title/link, not a fingerprint."
+    },
+    {
+      "path": "Web安全/OA办公/致远OA/致远伪 0day FastJson 利用链.md",
+      "sha256": "d6195ede3b9328d5547af76e0034f86e7ff3c6ea87bec85f030f7337dcac491a",
+      "original_value": "seeyon",
+      "reason": "The first operand “seeyon” is unqualified and later values include xxxx/placeholder text; parser-valid query cannot be recovered."
+    },
+    {
+      "path": "Web安全/OA办公/通达OA/通达 OA 漏洞比 getshell 还要牛的 system 权限.md",
+      "sha256": "8f1d8dbef06eb3f4af46f59cf2ed258524a81292a839d8939d85c70feb284def",
+      "original_value": "的搜索可以看到通达 OA 系统应用非常广泛, 这就给同学们提供了大量的实战环境. 当然大家一定要做一个正直的白帽子.",
+      "reason": "Old fragment is narrative prevalence/ethics text; no search expression is supplied."
+    },
+    {
+      "path": "Web安全/其他软件/杂项/万户协同办公平台 ezoffice 存在未授权访问漏洞 附 POC.md",
+      "sha256": "1ca16a499ed11140afdc569e610cf05063e3fcc1ea3d5686fe89877c36da5a42",
+      "original_value": "查询语句",
+      "reason": "The source has heading “4.fofa 查询语句” but no query value."
+    },
+    {
+      "path": "Web安全/其他软件/杂项/未公开漏洞 Crocus 任意文件下载漏洞.md",
+      "sha256": "80724a428cca7325501b3691d1f4ab601cb3cc6142836b4f9ba9fc1f588ae01a",
+      "original_value": "搜索语句**",
+      "reason": "Source uses Chinese 或 between body=\"inp_verification\" and icon_hash=\"1819219374\"; no literal query operator connects them."
+    },
+    {
+      "path": "Web安全/其他软件/杂项/某 RCE 漏洞复现、排查与监测.md",
+      "sha256": "b41cdc769e16a69ea217f18f0df5f600d5da95a6bd337adacfb7f760b271a5e9",
+      "original_value": "是一致的，这里匹配的是",
+      "reason": "The expression is discussed as a Goby response signature; no explicit FOFA query is tied to this record."
+    },
+    {
+      "path": "Web安全/其他软件/杂项/附 EXP 常见的未授权访问漏洞.md",
+      "sha256": "70ed49587c58b708a16ee8af9a72d49ddc5b27c9e7d36cf6ecb11626f6704a82",
+      "original_value": "” 工程师](http://mp.weixin.qq.com/s?__biz=MzI1NTM4ODIxMw==&mid=2247485135&idx=1&sn=f872054b31",
+      "reason": "Old fragment is the tail of a FOFA engineer hyperlink, not a query."
+    },
+    {
+      "path": "Web安全/商业软件/优客API接口管理系统/优客API接口管理系统存在SQL注入漏洞.md",
+      "sha256": "36c5465cbd5a810a763b2124dcb2417e9a538140b81043975b9d42c85fb2c1d0",
+      "original_value": "plain",
+      "reason": "“plain” is a code-fence language tag, not a query."
+    },
+    {
+      "path": "Web安全/商业软件/优客API接口管理系统/优客API接口管理系统存在信息泄露漏洞.md",
+      "sha256": "bac3ef36b1d7533831d0efa3b78d8703824f4721b24e5526d2ead7a7a22d7ef6",
+      "original_value": "plain",
+      "reason": "“plain” is a code-fence language tag, not a query."
+    },
+    {
+      "path": "Web安全/商业软件/会捷通云视讯/会捷通云视讯平台存在登录绕过漏洞和未授权任意文件读取漏洞.md",
+      "sha256": "4c5efdd64ff3faa78cc4efae4cd5cd953c7fe68a84b74cb4a82764d6843ebe0b",
+      "original_value": "body=",
+      "reason": "Original query stops at body=\"/him/api/rest/v1.0/node/role without closing the value; missing suffix is unknown."
+    },
+    {
+      "path": "Web安全/商业软件/子辰视讯/深圳市子辰视讯科技有限公司酒店智慧营销IPTV系统存在sql注入.md",
+      "sha256": "25fe7dd709bb30cf1a29f44529e02b21ada2edd0efa922177ffdeaf6d7f0da22",
+      "original_value": "web.title:",
+      "reason": "Hunter line uses web.title: and fails the repository validator."
+    },
+    {
+      "path": "Web安全/商业软件/懒人网址导航/懒人网址导航系统search存在SQL注入漏洞.md",
+      "sha256": "55aaf96be1291df71d57e995bf4d990d3300750455d25de4cd22c85afc3eb722",
+      "original_value": "./templates/antidote/css/style.css",
+      "reason": "Only a bare path is shown; no complete comparison."
+    },
+    {
+      "path": "Web安全/商业软件/某行业通用流程管控平台/某行业通用流程管控平台 RCE 之旅.md",
+      "sha256": "797495f1e363a28f86fa1884ad982870f49d7f125714a7765b5eef60c948629c",
+      "original_value": ", 有一千多个。",
+      "reason": "Original reports a thousand-plus results, not a query."
+    },
+    {
+      "path": "Web安全/商业软件/法源软件/杭州法源软件-公证实务教学软件-SQL注入漏洞.md",
+      "sha256": "3ff2618c782f6b1b331a955ab1f5b45a49773601d597b73ef6571e8af3792921",
+      "original_value": "暂时未收录任何网站",
+      "reason": "Original says no sites are listed; no query is present."
+    },
+    {
+      "path": "Web安全/商业软件/灵当CRM/灵当crmmultipleUpload存在任意文件上传漏洞.md",
+      "sha256": "ba8fcfa350e17d943cae9715db0459f9775844a6e9d8adf0221892530e0f5d4a",
+      "original_value": "body=",
+      "reason": "Malformed Markdown link duplicates/corrupts the first body value; exact query literal cannot be recovered."
+    },
+    {
+      "path": "Web安全/商业软件/灵当CRM/灵当crmuploadfile存在文件写入漏洞.md",
+      "sha256": "61e9104ab43deab67be57ec9fedcb62f620ebec3b058d94b0df02acd9e3ec0fc",
+      "original_value": "body=",
+      "reason": "Malformed Markdown link duplicates/corrupts the first body value; exact query literal cannot be recovered."
+    },
+    {
+      "path": "Web安全/商业软件/灵当CRM/灵当crmuploadify存在任意文件上传漏洞.md",
+      "sha256": "028f80b7752c4d25178faaddf2adac426de4c586c49ce3eb74124553503318a5",
+      "original_value": "body=",
+      "reason": "Malformed Markdown link duplicates/corrupts the first body value; exact query literal cannot be recovered."
+    },
+    {
+      "path": "Web安全/商业软件/灵当CRM/灵当crmupload存在任意文件上传漏洞.md",
+      "sha256": "6d05913b906d3b483bc28bb47a8a5a1c0cc79c6b8378fa231911a625a37bc9ee",
+      "original_value": "body=",
+      "reason": "Malformed Markdown link duplicates/corrupts the first body value; exact query literal cannot be recovered."
+    },
+    {
+      "path": "Web安全/商业软件/灵当CRM/灵当crmwechatSession存在任意文件上传漏洞.md",
+      "sha256": "f420cfc8bf9db10768d905af42964465dcf23f48a324f846ccdbb07f8174da4e",
+      "original_value": "body=",
+      "reason": "Malformed Markdown link duplicates/corrupts the first body value; exact query literal cannot be recovered."
+    },
+    {
+      "path": "Web安全/商业软件/灵当互动信息/灵当crmauth-info存在信息泄露漏洞.md",
+      "sha256": "3f756dda6aaf37dbeb6324c368b6304e7b6b4a51cc3ff2fd59be8a3b5976f92d",
+      "original_value": "body=",
+      "reason": "Malformed Markdown link corrupts first predicate; later body predicate is adjacent with no AND/OR."
+    },
+    {
+      "path": "Web安全/商业软件/灵当互动信息/灵当crmgetOrderList存在SQL注入漏洞.md",
+      "sha256": "055707f184899e53ecb804076f46958114987e2bf30386c00d72224a5bc75cb7",
+      "original_value": "body=",
+      "reason": "Malformed Markdown link corrupts first predicate; later body predicate is adjacent with no AND/OR."
+    },
+    {
+      "path": "Web安全/商业软件/灵当互动信息/灵当crmpdf存在任意文件读取漏洞.md",
+      "sha256": "8aba58c52bb0de5d90bca0851bd7f661389f56ddd62af081893c81bf9874d790",
+      "original_value": "body=",
+      "reason": "Malformed Markdown link corrupts first predicate; later body predicate is adjacent with no AND/OR."
+    },
+    {
+      "path": "Web安全/商业软件/盲盒抽奖小程序/盲盒抽奖小程序系统存在任意文件读取漏洞.md",
+      "sha256": "fbd797533b25f78751d36cd72a88a1e511240ea077aa073dc2dfe0668ccd0ff8",
+      "original_value": "plain",
+      "reason": "“plain” is a fenced-code language identifier; no query appears."
+    },
+    {
+      "path": "Web安全/商业软件/证书查询系统/证书查询系统存在任意文件读取漏洞.md",
+      "sha256": "ae6146a46c2cc25df06dc071d0b1e50873990f772cf7ab81e52ace218b4905b6",
+      "original_value": "/index/js/jquery.uls.data.js",
+      "reason": "Only a bare path is shown (with mismatched quote in the measurement line); no field comparison."
+    },
+    {
+      "path": "Web安全/商业软件/锦铭泰/广州锦铭泰软件科技有限公司F22服装管理软件系统index_login.asp存在信息泄漏漏洞.md",
+      "sha256": "1bbdcf4887eda460279c07f403c756453c14b3a801718bf11c80f01f0d918ebc",
+      "original_value": "+ 特征",
+      "reason": "“+ 特征” is a placeholder heading, not a query."
+    },
+    {
+      "path": "Web安全/商业软件/锦铭泰/广州锦铭泰软件科技有限公司F22服装管理软件系统openfile.aspx前台任意文件下载.md",
+      "sha256": "a2402f44dae2b4534c15d2cd0a0a6555616b4f90a64d31997fff5d132dec7e43",
+      "original_value": "+ 特征",
+      "reason": "“+ 特征” is a placeholder heading, not a query."
+    },
+    {
+      "path": "Web安全/安全设备/中国蚁剑/分享   蚁剑 RCE 反制复现.md",
+      "sha256": "0b2d4ce14bf9dbf2e8e49b18d5ddb10eb8c41349e51eb793d0f4734f70ce07c8",
+      "original_value": "”工程师",
+      "reason": "Old fragment is tail of unrelated FOFA engineer title, not a query."
+    },
+    {
+      "path": "Web安全/安全设备/堡垒机 - 附 PoC Jumpserver/堡垒机 - 附 PoC Jumpserver RCE 漏洞详细复现.md",
+      "sha256": "185a2e9bfb8e82773074627be2e14c3d3b277f333fb7bb900bafe1278efb43a5",
+      "original_value": "” 工程师](http://mp.weixin.qq.com/s?__biz=MzI1NTM4ODIxMw==&mid=2247485135&idx=1&sn=f872054b31",
+      "reason": "Old fragment is tail of FOFA engineer hyperlink, not a query."
+    },
+    {
+      "path": "Web安全/安全设备/奇安信/奇安信 360 天擎 rptsvcsyncpoint SQL 注入漏洞 getshell.md",
+      "sha256": "ab41c88a4d73639535e292ee78e700f876785b4ed80dc0ff31fb5d996380f4b9",
+      "original_value": "中搜索以下语法并随机确定要进行攻击测试的目标....",
+      "reason": "Expression includes unquoted {item.id}; repository validator rejects it and no value may be guessed."
+    },
+    {
+      "path": "Web安全/安全设备/奇安信天擎/奇安信天擎 任意文件上传.md",
+      "sha256": "8cfe1d734cea7ff899001d36a8389be242528efce9c76ad1eaaabb20a4c33a84",
+      "original_value": "奇安信天擎",
+      "reason": "Title predicates and a bare product string occur, but no explicit logical operators form one complete FOFA expression."
+    },
+    {
+      "path": "Web安全/开发框架/Spring Boot/SpringBladeexport-user存在SQL注入漏洞.md",
+      "sha256": "09081521d5683beb678c7512b773ef4a125f6f2e07362c6fabd60f8743119132",
+      "original_value": "body=",
+      "reason": "Malformed Markdown link interrupts the body value; exact literal cannot be recovered byte-for-byte."
+    },
+    {
+      "path": "Web安全/开发框架/Spring WebFlow/Spring WebFlow 远程代码执行漏洞 CVE-2017-4971.md",
+      "sha256": "642dfeed7bd18218feb86bed9d8d0d035d0cb5192ee2a037cc077687a390127d",
+      "original_value": ".org/topic/593d562353ab369c55425a90",
+      "reason": "Old value is suffix of a ThreatHunter URL, not a predicate."
+    },
+    {
+      "path": "Web安全/开发框架/ThinkPHP/漏洞通报 ThinkPHP3-2-x RCE 漏洞通报.md",
+      "sha256": "5a4585c8c0b5be630db7f4d5390048ce14a78de577cda476e3e3d6ce5a1c5121",
+      "original_value": "分布情况：",
+      "reason": "FOFA distribution/count prose is not a search expression."
+    },
+    {
+      "path": "Web安全/桌面软件/Viessmann/ViessmannVitogateRCE漏洞（CVE-2023-45852）.md",
+      "sha256": "d8a32039be01ee579142c602a92f81dabea91fddabd12081f83f5312ecb58999",
+      "original_value": "app=”Vitogate-300”",
+      "reason": "Typographic quotes in app=”Vitogate-300” fail validator; normalization would alter bytes."
+    },
+    {
+      "path": "Web安全/网络设备/Cisco/（CVE-2020-3452）CISCO ASA远程任意文件读取.md",
+      "sha256": "5f3a4cfd51e6c6659f093b481975acee833fc100c9d3e73371bf150eebebaa1e",
+      "original_value": "检索规则",
+      "reason": "“FOFA检索规则” is a heading without a rule value."
+    },
+    {
+      "path": "Web安全/网络设备/NETGEAR/CVE-2021-35973：Netgear wac104 身份认证绕过.md",
+      "sha256": "29f36a4a8b8a5506c11f5f98effae20c74e3c78139a8c08efc2f2f179003e8e3",
+      "original_value": "” 工程师](http://mp.weixin.qq.com/s?__biz=MzI1NTM4ODIxMw==&mid=2247485135&idx=1&sn=f872054b31",
+      "reason": "Old value is suffix of FOFA engineer reference link, not a query."
+    },
+    {
+      "path": "Web安全/网络设备/深信服/深信服EDR平台存在任意用户登录漏洞.md",
+      "sha256": "de6b2631040ccebe34c03db160345ca43076ea3e12d9331390cbf49b7832bb93",
+      "original_value": "<font style=",
+      "reason": "Two HTML-wrapped predicates app=... and title=... are adjacent with no explicit AND/OR; do not join."
+    },
+    {
+      "path": "Web安全/网络设备/深信服/深信服EDR平台存在远程命令执行漏洞.md",
+      "sha256": "2a255ca721340f0d4ee9b1c30312272312d1c17076199240ddbbd15589c379ef",
+      "original_value": "<font style=",
+      "reason": "Two HTML-wrapped predicates app=... and title=... are adjacent with no explicit AND/OR; do not join."
+    },
+    {
+      "path": "Web安全/邮件系统/RaidenMAILD/RaidenMAILD邮件服务器v.4.9.4存在任意文件读取漏洞.md",
+      "sha256": "bda935e379a0cf692aa840d33fe719632f8652b7cc4afe4ac3854e27d918298e",
+      "original_value": "RaidenMAILD Mail Server <= 4.9.4",
+      "reason": "Unfielded product/version prose RaidenMAILD Mail Server <= 4.9.4 is not a valid query predicate."
+    }
+  ],
+  "syntax_evidence": {
+    "support": "Official FOFA published search-page classification supports quoted keyword operands with field predicates; inspected published metadata, not asset queries. Field predicates remain checked by the existing conservative parser.",
+    "source_urls": [
+      "https://en.fofa.info/result?qbase64=Ind3dy5iYWlkdS5jb20iICYmIGNvdW50cnk9IlVTIg%3D%3D",
+      "https://en.fofa.info/result?qbase64=Im1pY2hhZWxhZ2Fya292LnJ1IiAmJiBmaWQ9IkUrMFI3RG9IZDVITzc5YUxjOXFrNVE9PSI%3D"
+    ]
+  },
+  "limits": "Same-article exact extraction; syntax-only, not vulnerability/product/version validation; no queries, targets or article code executed; no redaction."
+}

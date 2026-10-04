@@ -16,10 +16,11 @@ review_date: "2026-10-02"
 source_url: "https://mp.weixin.qq.com/s/-Qwin3YAAl5ztT1pNgN_tg"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E7%94%A8%E5%8F%8BGRP-u8/X%20%E5%8F%8B%20U8%20OA%20test-jsp%20SQL%20%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md"
-fofa_unverified: "用友U8-OA"
+previous_fofa_unverified: "用友U8-OA"
 id: "vw-4b3650ebf418583dab390331"
 entity_id: "ve-4b3650ebf418583dab390331"
 schema_version: "1"
+fofa: "\"用友U8-OA\""
 ---
 
 # 用友U8 OA test.jsp doType/S1 SQL 注入

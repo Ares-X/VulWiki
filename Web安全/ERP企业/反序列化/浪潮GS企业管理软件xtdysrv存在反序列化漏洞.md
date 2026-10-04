@@ -16,10 +16,11 @@ review_date: "2026-10-02"
 source_url: "https://www.yuque.com/xiaokp7/ocvun2/oro7nh02gg79zwah"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/%E6%B5%AA%E6%BD%AEGS%E4%BC%81%E4%B8%9A%E7%AE%A1%E7%90%86%E8%BD%AF%E4%BB%B6xtdysrv%E5%AD%98%E5%9C%A8%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%BC%8F%E6%B4%9E.md"
-fofa_unverified: "cwbase/web/scripts/aes.js"
+previous_fofa_unverified: "cwbase/web/scripts/aes.js"
 id: "vw-1b0347003da886b598f7f8eb"
 entity_id: "ve-1b0347003da886b598f7f8eb"
 schema_version: "1"
+fofa: "\"cwbase/web/scripts/aes.js\""
 ---
 
 # 浪潮GS xtdysrv SavePrintFormatAssign .NET反序列化

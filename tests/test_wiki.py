@@ -240,6 +240,18 @@ class WikiTests(unittest.TestCase):
         self.assertNotIn('fofa', r.fingerprints)
         self.assertIn('hunter', r.fingerprints)
 
+    def test_fofa_literal_atoms_preserve_complete_original_queries(self):
+        for query in ['"关键词"', '"mask.style.visibility" && title="D-Link"', 'body="url:userController.do?userId=" && "loginController.do?changeDefaultOrg"', '!("one" || "two")']:
+            self.assertTrue(wiki.fingerprint_valid(query, "fofa"), query)
+            self.assertFalse(wiki.fingerprint_valid(query, "hunter"), query)
+            self.assertFalse(wiki.fingerprint_valid(query, "quake"), query)
+        for query in ['""', '"broken', '"one" "two"', '"one" &&', '"one"; bad', '关键词']:
+            self.assertFalse(wiki.fingerprint_valid(query, "fofa"), query)
+        query = '"CaseSensitive" && title="原始值"'
+        self.article(fofa=query)
+        record = self.scan()[0]
+        self.assertEqual(record.fingerprints['fofa']['query'], query)
+
     def test_local_encoded_image_and_spaced_link(self):
         path = self.article(body='![a](.resource/image%20%281%29.png)\n[other](<other file.md>)\n')
         parent = (self.root / path).parent
