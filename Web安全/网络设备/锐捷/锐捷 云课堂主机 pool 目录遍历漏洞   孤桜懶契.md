@@ -3,7 +3,7 @@ source: "MrWQ/vulnerability-paper"
 id: "vw-52192607eff2e8ebcdb952a7"
 entity_id: "ve-52192607eff2e8ebcdb952a7"
 schema_version: "1"
-fofa_unverified: "title="
+previous_fofa_unverified: "title="
 title: "锐捷 云课堂主机 pool 目录遍历漏洞   孤桜懶契"
 product: "Ruijie云课堂主机软件"
 record_type: "vulnerability"
@@ -20,6 +20,7 @@ review_date: "2026-10-02"
 side_effects: "本篇未提供足以确认无副作用的完整验证流程；应依正文所述配置、权限与交互前提评估，不能把通告或截图当成可直接运行的检测脚本"
 source_url: "https://gylq.gitee.io/time/posts/17.html"
 source_status: "recorded"
+fofa: "title=\"Ruijie\" && \"云课堂主机\""
 ---
 
 # 锐捷 云课堂主机 pool 目录遍历漏洞   孤桜懶契

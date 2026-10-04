@@ -16,10 +16,11 @@ review_date: "2026-10-02"
 source_url: "https://www.yuque.com/xiaokp7/ocvun2/zhsn7ptr9pmr61nd"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/%E5%B9%BF%E5%91%8A%E4%BB%BB%E5%8A%A1%E5%B9%B3%E5%8F%B0/%E5%BE%AE%E4%BF%A1%E5%B9%BF%E5%91%8A%E4%BB%BB%E5%8A%A1%E5%B9%B3%E5%8F%B0ajax_upload%E5%AD%98%E5%9C%A8%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E.md"
-fofa_unverified: "/tpl/Public/js/func.js"
+previous_fofa_unverified: "/tpl/Public/js/func.js"
 id: "vw-987564a06c6cecb7ed014434"
 entity_id: "ve-987564a06c6cecb7ed014434"
 schema_version: "1"
+fofa: "\"/tpl/Public/js/func.js\""
 ---
 
 # 微信广告任务平台（源码发行方未知） ajax_upload PHP上传

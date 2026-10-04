@@ -10,13 +10,14 @@ identifier_status: "unknown"
 primary_identifiers: ""
 referenced_identifiers: ""
 identifier_role: "unknown"
-fofa_unverified: "TerraMaster"
+previous_fofa_unverified: "TerraMaster"
 source_status: "unknown"
 prerequisites: "原文未完整说明身份权限、部署配置和可达性；不能假定匿名、默认开启或所有版本适用。"
 side_effects: "原文未完整记录副作用、清理步骤或运行验证；阅读样例不等于获准在真实系统执行。"
 id: "vw-84813310d1d0c92bf9546d6a"
 entity_id: "ve-84813310d1d0c92bf9546d6a"
 schema_version: "1"
+fofa: "\"TerraMaster\" && header=\"TOS\""
 ---
 
 # TerraMaster TOS exportUser.php 远程命令执行

@@ -1465,18 +1465,6 @@
       "severity": "warning"
     },
     {
-      "code": "fingerprint_unverified",
-      "count": 1,
-      "detail": "fofa: retained unverified query excluded from fingerprint index",
-      "key": "068258a6bde2c3dc522b86b2",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/商业软件/微信公众号商家收银台小程序系统/微信公众号商家收银台小程序系统存在任意文件上传漏洞.md",
-      "severity": "warning"
-    },
-    {
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly missing; reference links are not confirmed provenance",
@@ -5763,18 +5751,6 @@
       "severity": "warning"
     },
     {
-      "code": "fingerprint_unverified",
-      "count": 1,
-      "detail": "fofa: retained unverified query excluded from fingerprint index",
-      "key": "188f31ded55da084c475b3a0",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/商业软件/JEEWMS/JeeWMS cgReportController.do SQL注入漏洞(CVE-2024-57760).md",
-      "severity": "warning"
-    },
-    {
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
@@ -6132,18 +6108,6 @@
         0
       ],
       "path": "Web安全/中间件/GeoServer/（CVE-2026-76904）GeoServer SQL注入转PostgreSQL RCE漏洞.md",
-      "severity": "warning"
-    },
-    {
-      "code": "fingerprint_unverified",
-      "count": 1,
-      "detail": "fofa: retained unverified query excluded from fingerprint index",
-      "key": "1a9999bca217ea114d83ab07",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/云平台/TerraMaster NAS/TerraMasterTOSexportUser.php远程命令执行.md",
       "severity": "warning"
     },
     {
@@ -7597,18 +7561,6 @@
         0
       ],
       "path": "Web安全/CMS内容/CmsEasy/CmsEasy-language_admin.php-后台命令执行漏洞.md",
-      "severity": "warning"
-    },
-    {
-      "code": "fingerprint_unverified",
-      "count": 1,
-      "detail": "fofa: retained unverified query excluded from fingerprint index",
-      "key": "205826bd5ac731e4cd17461d",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/商业软件/万能门店小程序/微信万能门店小程序系统存在SQL注入漏洞.md",
       "severity": "warning"
     },
     {
@@ -13300,18 +13252,6 @@
       "severity": "warning"
     },
     {
-      "code": "fingerprint_unverified",
-      "count": 1,
-      "detail": "fofa: retained unverified query excluded from fingerprint index",
-      "key": "38b5eed23a9dd8318dfadbf4",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/商业软件/数字系统/酒店宽带运营系统server_ping远程命令执行漏洞.md",
-      "severity": "warning"
-    },
-    {
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
@@ -13561,18 +13501,6 @@
         0
       ],
       "path": "Web安全/CMS内容/DedeCMS/DedeCMS_v5.7_carbuyaction_存储型XSS.md",
-      "severity": "warning"
-    },
-    {
-      "code": "fingerprint_unverified",
-      "count": 1,
-      "detail": "fofa: retained unverified query excluded from fingerprint index",
-      "key": "39e4e67d38ae53938a683599",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/ERP企业/反序列化/浪潮GS企业管理软件xtdysrv存在反序列化漏洞.md",
       "severity": "warning"
     },
     {
@@ -14593,18 +14521,6 @@
         0
       ],
       "path": "Web安全/安全设备/堡垒机 - 附 PoC Jumpserver/堡垒机 - 附 PoC Jumpserver RCE 漏洞详细复现.md",
-      "severity": "warning"
-    },
-    {
-      "code": "fingerprint_unverified",
-      "count": 1,
-      "detail": "fofa: retained unverified query excluded from fingerprint index",
-      "key": "3e2e5ef7ada9a8af3f29b67d",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/商业软件/广告任务平台/微信广告任务平台ajax_upload存在任意文件上传漏洞.md",
       "severity": "warning"
     },
     {
@@ -16985,18 +16901,6 @@
       "severity": "warning"
     },
     {
-      "code": "fingerprint_unverified",
-      "count": 1,
-      "detail": "fofa: retained unverified query excluded from fingerprint index",
-      "key": "4800d6d6253473ed98721cc8",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/商业软件/小说漫画系统/微信公众号小说漫画系统Upload存在任意文件写入漏洞.md",
-      "severity": "warning"
-    },
-    {
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
@@ -17150,18 +17054,6 @@
         0
       ],
       "path": "IOT安全/360/360天擎终端安全管理系统getsimilarlist存在SQL注入漏洞.md",
-      "severity": "warning"
-    },
-    {
-      "code": "fingerprint_unverified",
-      "count": 1,
-      "detail": "fofa: retained unverified query excluded from fingerprint index",
-      "key": "4868f6b0b1d696cd1979193c",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/商业软件/C-Lodop打印/C-Lodop打印服务系统存在任意文件读取漏洞.md",
       "severity": "warning"
     },
     {
@@ -18774,18 +18666,6 @@
       "severity": "warning"
     },
     {
-      "code": "fingerprint_unverified",
-      "count": 1,
-      "detail": "fofa: retained unverified query excluded from fingerprint index",
-      "key": "4fa168cf60ba2bb068f2a9b8",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/云平台/TerraMaster NAS/漏洞复现 TerraMaster TOS api.php 信息泄露和远程命令执行.md",
-      "severity": "warning"
-    },
-    {
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly missing; reference links are not confirmed provenance",
@@ -20043,18 +19923,6 @@
         0
       ],
       "path": "Web安全/OA办公/致远OA/致远OA A6 setextno.jsp sql注入漏洞_短版.md",
-      "severity": "warning"
-    },
-    {
-      "code": "fingerprint_unverified",
-      "count": 1,
-      "detail": "fofa: retained unverified query excluded from fingerprint index",
-      "key": "546158e25d12cf03d6289a06",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/商业软件/聚合支付/聚合支付平台接口sdcustomno存在SQL注入漏洞.md",
       "severity": "warning"
     },
     {
@@ -22066,18 +21934,6 @@
       "severity": "warning"
     },
     {
-      "code": "fingerprint_unverified",
-      "count": 1,
-      "detail": "fofa: retained unverified query excluded from fingerprint index",
-      "key": "5d1951e7f791d5e4b2010b0a",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/安全设备/金山终端安全/金山VGM防毒墙downFile存在任意文件读取漏洞.md",
-      "severity": "warning"
-    },
-    {
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
@@ -22375,18 +22231,6 @@
         0
       ],
       "path": "Web安全/其他软件/杂项/安全简讯（2024.12.12）.md",
-      "severity": "warning"
-    },
-    {
-      "code": "fingerprint_unverified",
-      "count": 1,
-      "detail": "fofa: retained unverified query excluded from fingerprint index",
-      "key": "5e1c36371f158b2acac85e15",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/开发框架/PHP/PHP-8.1.0-devzerodium后门命令执行漏洞.md",
       "severity": "warning"
     },
     {
@@ -23086,18 +22930,6 @@
       "severity": "warning"
     },
     {
-      "code": "fingerprint_unverified",
-      "count": 1,
-      "detail": "fofa: retained unverified query excluded from fingerprint index",
-      "key": "60b28255c0b3258b8317207d",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/网络设备/锐捷/锐捷 云课堂主机 pool 目录遍历漏洞   孤桜懶契.md",
-      "severity": "warning"
-    },
-    {
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
@@ -23743,18 +23575,6 @@
         0
       ],
       "path": "Web安全/商业软件/天维尔消防/天维尔消防智能指挥平台API接口页面sql注入.md",
-      "severity": "warning"
-    },
-    {
-      "code": "fingerprint_unverified",
-      "count": 1,
-      "detail": "fofa: retained unverified query excluded from fingerprint index",
-      "key": "63688c9e3e7302e1e693ea15",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/网络设备/D-Link/D-Link NAS 未授权RCE漏洞(CVE-2024-3273).md",
       "severity": "warning"
     },
     {
@@ -27696,18 +27516,6 @@
       "severity": "warning"
     },
     {
-      "code": "fingerprint_unverified",
-      "count": 1,
-      "detail": "fofa: retained unverified query excluded from fingerprint index",
-      "key": "7475d26441b1225637d96a41",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/ERP企业/用友NC/X 友 NCCloud FS 文件管理 SQL 注入.md",
-      "severity": "warning"
-    },
-    {
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
@@ -30868,18 +30676,6 @@
       "severity": "warning"
     },
     {
-      "code": "fingerprint_unverified",
-      "count": 1,
-      "detail": "fofa: retained unverified query excluded from fingerprint index",
-      "key": "81f65364492b23ae3f9dcb38",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/ERP企业/用友GRP-u8/X 友 U8 OA test-jsp SQL 注入漏洞.md",
-      "severity": "warning"
-    },
-    {
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
@@ -32269,18 +32065,6 @@
         0
       ],
       "path": "Web安全/开发框架/Spring Messaging/（CVE-2018-1270）Spring Messaging 远程命令执行漏洞.md",
-      "severity": "warning"
-    },
-    {
-      "code": "fingerprint_unverified",
-      "count": 1,
-      "detail": "fofa: retained unverified query excluded from fingerprint index",
-      "key": "877b9a6d99862b01431b671b",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/智能设备/TBK DVR/TBKDVR硬盘录像机device存在远程代码执行漏洞(CVE-2024-3721).md",
       "severity": "warning"
     },
     {
@@ -41956,18 +41740,6 @@
       "severity": "warning"
     },
     {
-      "code": "fingerprint_unverified",
-      "count": 1,
-      "detail": "fofa: retained unverified query excluded from fingerprint index",
-      "key": "b09b2f4e50237da6ae01b45c",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/商业软件/小说漫画系统/微信公众号小说漫画系统fileupload.php存在任意文件写入漏洞.md",
-      "severity": "warning"
-    },
-    {
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
@@ -42496,18 +42268,6 @@
       "severity": "warning"
     },
     {
-      "code": "fingerprint_unverified",
-      "count": 1,
-      "detail": "fofa: retained unverified query excluded from fingerprint index",
-      "key": "b2df8650e77a76b576317487",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/商业软件/万能门店小程序/微信万能门店小程序系统存在任意文件读取漏洞.md",
-      "severity": "warning"
-    },
-    {
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
@@ -42925,18 +42685,6 @@
         0
       ],
       "path": "Web安全/开发框架/Fastjson/通过Dnslog判断是否使用fastjson.md",
-      "severity": "warning"
-    },
-    {
-      "code": "fingerprint_unverified",
-      "count": 1,
-      "detail": "fofa: retained unverified query excluded from fingerprint index",
-      "key": "b48ff054640850b56abe5324",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "IOT安全/D-Link/D-LinkDAR上网行为审计网关importhtml远程命令执行漏洞.md",
       "severity": "warning"
     },
     {
@@ -44053,18 +43801,6 @@
         0
       ],
       "path": "Web安全/其他软件/杂项/漏洞技术 - cve-2020-1472.md",
-      "severity": "warning"
-    },
-    {
-      "code": "fingerprint_unverified",
-      "count": 1,
-      "detail": "fofa: retained unverified query excluded from fingerprint index",
-      "key": "b979e3002aabcd730c890cee",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/商业软件/JEEWMS/JeeWMS graphReportController.do SQL注入漏洞(CVE-2025-0392).md",
       "severity": "warning"
     },
     {
@@ -46549,18 +46285,6 @@
         0
       ],
       "path": "Web安全/开发框架/Ueditor/Ueditor编辑器1.4.3.3版本ssrf漏洞.md",
-      "severity": "warning"
-    },
-    {
-      "code": "fingerprint_unverified",
-      "count": 1,
-      "detail": "fofa: retained unverified query excluded from fingerprint index",
-      "key": "c424f58c2392121acb4acdfb",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/商业软件/海外抢单刷单/某二开版海外抢单Shua单系统存在任意用户登录漏洞.md",
       "severity": "warning"
     },
     {
@@ -50121,18 +49845,6 @@
       "severity": "warning"
     },
     {
-      "code": "fingerprint_unverified",
-      "count": 1,
-      "detail": "fofa: retained unverified query excluded from fingerprint index",
-      "key": "d30481f8c55c3317f23f0add",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/商业软件/JEEWMS/JeeWMS cgFormBuildController.do SQL注入漏洞(CVE-2025-0391).md",
-      "severity": "warning"
-    },
-    {
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly missing; reference links are not confirmed provenance",
@@ -51270,18 +50982,6 @@
         0
       ],
       "path": "IOT安全/天翼创维/天翼创维awifi路由器存在多处未授权访问漏洞.md",
-      "severity": "warning"
-    },
-    {
-      "code": "fingerprint_unverified",
-      "count": 1,
-      "detail": "fofa: retained unverified query excluded from fingerprint index",
-      "key": "d7ee6d5e1db74d9fc041c0a8",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/商业软件/VEXUS交易所/VEXUS多语言货币交易所存在未授权访问漏洞.md",
       "severity": "warning"
     },
     {
@@ -53008,18 +52708,6 @@
       "code": "fingerprint_unverified",
       "count": 1,
       "detail": "fofa: retained unverified query excluded from fingerprint index",
-      "key": "df78ace4a16cfec01f067038",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/商业软件/JEEWMS/JeeWMS cgformTemplateController.do 任意文件读取漏洞(CVE-2024-27765).md",
-      "severity": "warning"
-    },
-    {
-      "code": "fingerprint_unverified",
-      "count": 1,
-      "detail": "fofa: retained unverified query excluded from fingerprint index",
       "key": "df81dba223f12396094acefe",
       "line": 0,
       "lines": [
@@ -54454,18 +54142,6 @@
         0
       ],
       "path": "Web安全/AI应用/vLLM/vLLM的Mooncake存在严重RCE漏洞.md",
-      "severity": "warning"
-    },
-    {
-      "code": "fingerprint_unverified",
-      "count": 1,
-      "detail": "fofa: retained unverified query excluded from fingerprint index",
-      "key": "e4ca5ef205aca2d12c4ea863",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/网络设备/锐捷/锐捷云课堂主机 目录遍历漏洞.md",
       "severity": "warning"
     },
     {
@@ -59507,18 +59183,6 @@
       "severity": "warning"
     },
     {
-      "code": "fingerprint_unverified",
-      "count": 1,
-      "detail": "fofa: retained unverified query excluded from fingerprint index",
-      "key": "f9650d5b8a87fd9ebce0daad",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/商业软件/证书查询系统/证书系统查询系统lang任意文件读取漏洞.md",
-      "severity": "warning"
-    },
-    {
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly unknown; reference links are not confirmed provenance",
@@ -60128,18 +59792,6 @@
         0
       ],
       "path": "Web安全/服务器软件/Veeam/Veeam 修复5个严重漏洞.md",
-      "severity": "warning"
-    },
-    {
-      "code": "fingerprint_unverified",
-      "count": 1,
-      "detail": "fofa: retained unverified query excluded from fingerprint index",
-      "key": "fc62a6d4a70634bf2aff372d",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/商业软件/Quicklancer/Quicklancerlisting存在SQL注入漏洞.md",
       "severity": "warning"
     },
     {
@@ -60863,18 +60515,6 @@
       "severity": "warning"
     },
     {
-      "code": "fingerprint_unverified",
-      "count": 1,
-      "detail": "fofa: retained unverified query excluded from fingerprint index",
-      "key": "fe978b93636600fc1a56ef36",
-      "line": 0,
-      "lines": [
-        0
-      ],
-      "path": "Web安全/商业软件/短视频系统视频知识付费系统/短视频系统视频知识付费系统存在任意文件读取漏洞.md",
-      "severity": "warning"
-    },
-    {
       "code": "source_missing",
       "count": 1,
       "detail": "original source URL explicitly missing; reference links are not confirmed provenance",
@@ -61233,6 +60873,44 @@
         "fc6eb8e9857909ecbf6aa5f4"
       ],
       "review": "docs/reviews/2026-10-04-search-polish/README.md"
+    },
+    {
+      "added_keys": [],
+      "date": "2026-10-04",
+      "reason": "30条同篇正文完整FOFA表达式补入指纹；旧残缺值保留previous字段，正文未改。检查器仅FOFA支持引号关键词原子；只删除30条已解决提示，不增加豁免。",
+      "removed_keys": [
+        "068258a6bde2c3dc522b86b2",
+        "188f31ded55da084c475b3a0",
+        "1a9999bca217ea114d83ab07",
+        "205826bd5ac731e4cd17461d",
+        "38b5eed23a9dd8318dfadbf4",
+        "39e4e67d38ae53938a683599",
+        "3e2e5ef7ada9a8af3f29b67d",
+        "4800d6d6253473ed98721cc8",
+        "4868f6b0b1d696cd1979193c",
+        "4fa168cf60ba2bb068f2a9b8",
+        "546158e25d12cf03d6289a06",
+        "5d1951e7f791d5e4b2010b0a",
+        "5e1c36371f158b2acac85e15",
+        "60b28255c0b3258b8317207d",
+        "63688c9e3e7302e1e693ea15",
+        "7475d26441b1225637d96a41",
+        "81f65364492b23ae3f9dcb38",
+        "877b9a6d99862b01431b671b",
+        "b09b2f4e50237da6ae01b45c",
+        "b2df8650e77a76b576317487",
+        "b48ff054640850b56abe5324",
+        "b979e3002aabcd730c890cee",
+        "c424f58c2392121acb4acdfb",
+        "d30481f8c55c3317f23f0add",
+        "d7ee6d5e1db74d9fc041c0a8",
+        "df78ace4a16cfec01f067038",
+        "e4ca5ef205aca2d12c4ea863",
+        "f9650d5b8a87fd9ebce0daad",
+        "fc62a6d4a70634bf2aff372d",
+        "fe978b93636600fc1a56ef36"
+      ],
+      "review": "docs/reviews/2026-10-04-fofa-literals/README.md"
     }
   ],
   "schema_version": 1

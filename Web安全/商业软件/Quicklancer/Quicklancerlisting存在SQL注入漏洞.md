@@ -16,10 +16,11 @@ review_date: "2026-10-02"
 source_url: "https://www.yuque.com/xiaokp7/ocvun2/ggplqb9der0o0i5m"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/Quicklancer/Quicklancerlisting%E5%AD%98%E5%9C%A8SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md"
-fofa_unverified: "service_fragments/css/gig_detail.css"
+previous_fofa_unverified: "service_fragments/css/gig_detail.css"
 id: "vw-6ba11b1d63f2c8d849709842"
 entity_id: "ve-6ba11b1d63f2c8d849709842"
 schema_version: "1"
+fofa: "\"service_fragments/css/gig_detail.css\""
 ---
 
 # Quicklancer listing range2 SQL注入声称

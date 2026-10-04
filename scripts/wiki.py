@@ -185,7 +185,7 @@ def identifier_kind(identifier):
     return "invalid"
 
 
-def fingerprint_valid(query):
+def fingerprint_valid(query, platform="fofa"):
     """Conservative syntax-only subset, NOT platform or vulnerability validation."""
     token = re.compile(r'\s*(\&\&|\|\||!=|==|>=|<=|[()!<>=]|[A-Za-z_][\w.:-]*|"(?:\\.|[^"\\])*"|\d+)')
     tokens, pos = [], 0
@@ -211,6 +211,9 @@ def fingerprint_valid(query):
                 return False
             index += 1
             return ok
+        if platform == "fofa" and index < len(tokens) and re.fullmatch(r'"(?:\\.|[^"\\])+"', tokens[index]):
+            index += 1
+            return True
         if index + 2 >= len(tokens):
             return False
         key, op, val = tokens[index:index + 3]
@@ -597,7 +600,7 @@ def scan(root):
                     r.issue("fingerprint_unverified", platform + ": retained unverified query excluded from fingerprint index")
                 query = meta.get(platform, "")
                 if query:
-                    if fingerprint_valid(query):
+                    if fingerprint_valid(query, platform):
                         r.fingerprints[platform] = {"query": query, "syntax_status": "basic-checked", "verification_status": "unverified"}
                     else:
                         r.issue("fingerprint_invalid", platform + ": outside supported syntax or incomplete expression", "error")

@@ -16,10 +16,11 @@ review_date: "2026-10-02"
 source_url: "https://www.yuque.com/xiaokp7/ocvun2/nkwou5fss984m2t8"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/VEXUS%E4%BA%A4%E6%98%93%E6%89%80/VEXUS%E5%A4%9A%E8%AF%AD%E8%A8%80%E8%B4%A7%E5%B8%81%E4%BA%A4%E6%98%93%E6%89%80%E5%AD%98%E5%9C%A8%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE%E6%BC%8F%E6%B4%9E.md"
-fofa_unverified: "image/n2.png"
+previous_fofa_unverified: "image/n2.png"
 id: "vw-8e9336f2e6636b5178d4d8ec"
 entity_id: "ve-8e9336f2e6636b5178d4d8ec"
 schema_version: "1"
+fofa: "\"image/n2.png\" && \"public/login.action\""
 ---
 
 # VEXUS多语言交易所 Druid暴露与会话访问链

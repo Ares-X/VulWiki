@@ -16,10 +16,11 @@ review_date: "2026-10-02"
 source_url: "https://www.yuque.com/xiaokp7/ocvun2/ixpcs4iq19u5yrp4"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/%E6%B5%B7%E5%A4%96%E6%8A%A2%E5%8D%95%E5%88%B7%E5%8D%95/%E6%9F%90%E4%BA%8C%E5%BC%80%E7%89%88%E6%B5%B7%E5%A4%96%E6%8A%A2%E5%8D%95Shua%E5%8D%95%E7%B3%BB%E7%BB%9F%E5%AD%98%E5%9C%A8%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E.md"
-fofa_unverified: "/red/popper.min.js"
+previous_fofa_unverified: "/red/popper.min.js"
 id: "vw-eceafaa767f231aa49cba1e4"
 entity_id: "ve-eceafaa767f231aa49cba1e4"
 schema_version: "1"
+fofa: "\"/red/popper.min.js\""
 ---
 
 # 匿名二开海外抢单系统 信任user_id Cookie导致冒用用户

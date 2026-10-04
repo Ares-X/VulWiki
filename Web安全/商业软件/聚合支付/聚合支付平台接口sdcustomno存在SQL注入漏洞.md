@@ -16,10 +16,11 @@ review_date: "2026-10-02"
 source_url: "https://github.com/SourByte05/Vulnerability-Wiki-PoC"
 source_status: "recorded"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/%E8%81%9A%E5%90%88%E6%94%AF%E4%BB%98/%E8%81%9A%E5%90%88%E6%94%AF%E4%BB%98%E5%B9%B3%E5%8F%B0%E6%8E%A5%E5%8F%A3sdcustomno%E5%AD%98%E5%9C%A8SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md"
-fofa_unverified: "/Public/theme/view4/css/style.css"
+previous_fofa_unverified: "/Public/theme/view4/css/style.css"
 id: "vw-9b690ed8f45c22acfeb409ca"
 entity_id: "ve-9b690ed8f45c22acfeb409ca"
 schema_version: "1"
+fofa: "\"/Public/theme/view4/css/style.css\""
 ---
 
 # 聚合支付平台（厂商未知） pay_UPALIWAP_callbackurl sdcustomno时间盲注
