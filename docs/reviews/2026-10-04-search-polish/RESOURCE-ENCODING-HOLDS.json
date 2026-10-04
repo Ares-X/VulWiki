@@ -1,0 +1,366 @@
+{
+  "frozen_head": "1dc8c586830cecf1bb07350c934818173b6aca90",
+  "scope": "read-only final review of 13 image gaps and 14 residual non-invertible lines",
+  "project_rules_read": [
+    "CONTRIBUTING.md",
+    "docs/CONTENT-SCHEMA.md"
+  ],
+  "prior_evidence": [
+    "/tmp/vulwiki-final-goal-20261004.aipd3x20/phase5-empty-image-preview.json",
+    "/tmp/vulwiki-final-goal-20261004.aipd3x20/phase5-encoding-preview.json",
+    "/tmp/vulwiki-final-goal-20261004.aipd3x20/asset-restoration-applied-ledger.json",
+    "/tmp/vulwiki-final-goal-20261004.aipd3x20/missing-resources-evidence.json",
+    "/tmp/vulwiki-final-goal-20261004.aipd3x20/v2-asset-checks.json",
+    "docs/reviews/2026-10-04-final-acceptance/README.md"
+  ],
+  "images": [
+    {
+      "status": "hold",
+      "article": "Web安全/CMS内容/Pluck cms/Pluck CMS后台另两处任意代码执行.md",
+      "article_sha256_at_frozen_head": "22e655fcfa89ee9dddb67c32323e2c8fddaced4cf201480265f2327bf0393b85",
+      "reference": "> 归档图片缺失（2026-10-04）：此资源实际保存为 404 HTML，原图尚未找到。原引用保留为 `![](./.resource/PluckCMS4.7.10后台文件包含+文件上传导致getshell/media/rId25.shtml)`。",
+      "resource_path": "Web安全/CMS内容/Pluck cms/.resource/PluckCMS4.7.10后台文件包含+文件上传导致getshell/media/rId25.shtml",
+      "resource_bytes": 469,
+      "resource_sha256": "eef948e1d511bd86ff673f904bf0a97106d5395f0b7ed2cfb043da7ccc6ca6dd",
+      "resource_signature": "404 HTML",
+      "approved_restore": null,
+      "searched_channels": [
+        "same-path Git history through all reachable refs",
+        "all reachable Git object name/path listing",
+        "public web search by article title and exact rId filename",
+        "current public source/article lookup when an explicit source URL was recorded"
+      ],
+      "finding": "No non-empty exact same-article image blob or public source attachment mapping found. Similar rId images belong to unrelated articles and are excluded. Existing 404 HTML is retained as evidence; it cannot be used as an image."
+    },
+    {
+      "status": "hold",
+      "article": "Web安全/CMS内容/Pluck cms/Pluck CMS后台另两处任意代码执行.md",
+      "article_sha256_at_frozen_head": "22e655fcfa89ee9dddb67c32323e2c8fddaced4cf201480265f2327bf0393b85",
+      "reference": "> 归档图片缺失（2026-10-04）：此资源实际保存为 404 HTML，原图尚未找到。原引用保留为 `![](./.resource/PluckCMS4.7.10后台文件包含+文件上传导致getshell/media/rId26.shtml)`。",
+      "resource_path": "Web安全/CMS内容/Pluck cms/.resource/PluckCMS4.7.10后台文件包含+文件上传导致getshell/media/rId26.shtml",
+      "resource_bytes": 469,
+      "resource_sha256": "eef948e1d511bd86ff673f904bf0a97106d5395f0b7ed2cfb043da7ccc6ca6dd",
+      "resource_signature": "404 HTML",
+      "approved_restore": null,
+      "searched_channels": [
+        "same-path Git history through all reachable refs",
+        "all reachable Git object name/path listing",
+        "public web search by article title and exact rId filename",
+        "current public source/article lookup when an explicit source URL was recorded"
+      ],
+      "finding": "No non-empty exact same-article image blob or public source attachment mapping found. Similar rId images belong to unrelated articles and are excluded. Existing 404 HTML is retained as evidence; it cannot be used as an image."
+    },
+    {
+      "status": "hold",
+      "article": "Web安全/CMS内容/Pluck cms/Pluck CMS后台另两处任意代码执行.md",
+      "article_sha256_at_frozen_head": "22e655fcfa89ee9dddb67c32323e2c8fddaced4cf201480265f2327bf0393b85",
+      "reference": "> 归档图片缺失（2026-10-04）：此资源实际保存为 404 HTML，原图尚未找到。原引用保留为 `![](./.resource/PluckCMS4.7.10后台文件包含+文件上传导致getshell/media/rId29.shtml)`。",
+      "resource_path": "Web安全/CMS内容/Pluck cms/.resource/PluckCMS4.7.10后台文件包含+文件上传导致getshell/media/rId29.shtml",
+      "resource_bytes": 469,
+      "resource_sha256": "eef948e1d511bd86ff673f904bf0a97106d5395f0b7ed2cfb043da7ccc6ca6dd",
+      "resource_signature": "404 HTML",
+      "approved_restore": null,
+      "searched_channels": [
+        "same-path Git history through all reachable refs",
+        "all reachable Git object name/path listing",
+        "public web search by article title and exact rId filename",
+        "current public source/article lookup when an explicit source URL was recorded"
+      ],
+      "finding": "No non-empty exact same-article image blob or public source attachment mapping found. Similar rId images belong to unrelated articles and are excluded. Existing 404 HTML is retained as evidence; it cannot be used as an image."
+    },
+    {
+      "status": "hold",
+      "article": "Web安全/CMS内容/Pluck cms/Pluck CMS后台另两处任意代码执行.md",
+      "article_sha256_at_frozen_head": "22e655fcfa89ee9dddb67c32323e2c8fddaced4cf201480265f2327bf0393b85",
+      "reference": "> 归档图片缺失（2026-10-04）：此资源实际保存为 404 HTML，原图尚未找到。原引用保留为 `![](./.resource/PluckCMS后台另两处任意代码执行/media/rId30.shtml)`。",
+      "resource_path": "Web安全/CMS内容/Pluck cms/.resource/PluckCMS后台另两处任意代码执行/media/rId30.shtml",
+      "resource_bytes": 469,
+      "resource_sha256": "eef948e1d511bd86ff673f904bf0a97106d5395f0b7ed2cfb043da7ccc6ca6dd",
+      "resource_signature": "404 HTML",
+      "approved_restore": null,
+      "searched_channels": [
+        "same-path Git history through all reachable refs",
+        "all reachable Git object name/path listing",
+        "public web search by article title and exact rId filename",
+        "current public source/article lookup when an explicit source URL was recorded"
+      ],
+      "finding": "No non-empty exact same-article image blob or public source attachment mapping found. Similar rId images belong to unrelated articles and are excluded. Existing 404 HTML is retained as evidence; it cannot be used as an image."
+    },
+    {
+      "status": "hold",
+      "article": "Web安全/CMS内容/Pluck cms/Pluck CMS后台另两处任意代码执行.md",
+      "article_sha256_at_frozen_head": "22e655fcfa89ee9dddb67c32323e2c8fddaced4cf201480265f2327bf0393b85",
+      "reference": "> 归档图片缺失（2026-10-04）：此资源实际保存为 404 HTML，原图尚未找到。原引用保留为 `![](./.resource/PluckCMS4.7.10后台文件包含+文件上传导致getshell/media/rId31.shtml)`。",
+      "resource_path": "Web安全/CMS内容/Pluck cms/.resource/PluckCMS4.7.10后台文件包含+文件上传导致getshell/media/rId31.shtml",
+      "resource_bytes": 469,
+      "resource_sha256": "eef948e1d511bd86ff673f904bf0a97106d5395f0b7ed2cfb043da7ccc6ca6dd",
+      "resource_signature": "404 HTML",
+      "approved_restore": null,
+      "searched_channels": [
+        "same-path Git history through all reachable refs",
+        "all reachable Git object name/path listing",
+        "public web search by article title and exact rId filename",
+        "current public source/article lookup when an explicit source URL was recorded"
+      ],
+      "finding": "No non-empty exact same-article image blob or public source attachment mapping found. Similar rId images belong to unrelated articles and are excluded. Existing 404 HTML is retained as evidence; it cannot be used as an image."
+    },
+    {
+      "status": "hold",
+      "article": "Web安全/CMS内容/Pluck cms/Pluck CMS后台另两处任意代码执行.md",
+      "article_sha256_at_frozen_head": "22e655fcfa89ee9dddb67c32323e2c8fddaced4cf201480265f2327bf0393b85",
+      "reference": "> 归档图片缺失（2026-10-04）：此资源实际保存为 404 HTML，原图尚未找到。原引用保留为 `![](./.resource/PluckCMS4.7.10后台文件包含+文件上传导致getshell/media/rId32.shtml)`。",
+      "resource_path": "Web安全/CMS内容/Pluck cms/.resource/PluckCMS4.7.10后台文件包含+文件上传导致getshell/media/rId32.shtml",
+      "resource_bytes": 469,
+      "resource_sha256": "eef948e1d511bd86ff673f904bf0a97106d5395f0b7ed2cfb043da7ccc6ca6dd",
+      "resource_signature": "404 HTML",
+      "approved_restore": null,
+      "searched_channels": [
+        "same-path Git history through all reachable refs",
+        "all reachable Git object name/path listing",
+        "public web search by article title and exact rId filename",
+        "current public source/article lookup when an explicit source URL was recorded"
+      ],
+      "finding": "No non-empty exact same-article image blob or public source attachment mapping found. Similar rId images belong to unrelated articles and are excluded. Existing 404 HTML is retained as evidence; it cannot be used as an image."
+    },
+    {
+      "status": "hold",
+      "article": "Web安全/CMS内容/Pluck cms/Pluck CMS后台另两处任意代码执行.md",
+      "article_sha256_at_frozen_head": "22e655fcfa89ee9dddb67c32323e2c8fddaced4cf201480265f2327bf0393b85",
+      "reference": "> 归档图片缺失（2026-10-04）：此资源实际保存为 404 HTML，原图尚未找到。原引用保留为 `![](./.resource/PluckCMS4.7.10后台文件包含+文件上传导致getshell/media/rId34.shtml)`。",
+      "resource_path": "Web安全/CMS内容/Pluck cms/.resource/PluckCMS4.7.10后台文件包含+文件上传导致getshell/media/rId34.shtml",
+      "resource_bytes": 469,
+      "resource_sha256": "eef948e1d511bd86ff673f904bf0a97106d5395f0b7ed2cfb043da7ccc6ca6dd",
+      "resource_signature": "404 HTML",
+      "approved_restore": null,
+      "searched_channels": [
+        "same-path Git history through all reachable refs",
+        "all reachable Git object name/path listing",
+        "public web search by article title and exact rId filename",
+        "current public source/article lookup when an explicit source URL was recorded"
+      ],
+      "finding": "No non-empty exact same-article image blob or public source attachment mapping found. Similar rId images belong to unrelated articles and are excluded. Existing 404 HTML is retained as evidence; it cannot be used as an image."
+    },
+    {
+      "status": "hold",
+      "article": "Web安全/CMS内容/Pluck cms/Pluck CMS后台另两处任意代码执行.md",
+      "article_sha256_at_frozen_head": "22e655fcfa89ee9dddb67c32323e2c8fddaced4cf201480265f2327bf0393b85",
+      "reference": "> 归档图片缺失（2026-10-04）：此资源实际保存为 404 HTML，原图尚未找到。原引用保留为 `![](./.resource/PluckCMS4.7.10后台文件包含+文件上传导致getshell/media/rId35.shtml)`。",
+      "resource_path": "Web安全/CMS内容/Pluck cms/.resource/PluckCMS4.7.10后台文件包含+文件上传导致getshell/media/rId35.shtml",
+      "resource_bytes": 469,
+      "resource_sha256": "eef948e1d511bd86ff673f904bf0a97106d5395f0b7ed2cfb043da7ccc6ca6dd",
+      "resource_signature": "404 HTML",
+      "approved_restore": null,
+      "searched_channels": [
+        "same-path Git history through all reachable refs",
+        "all reachable Git object name/path listing",
+        "public web search by article title and exact rId filename",
+        "current public source/article lookup when an explicit source URL was recorded"
+      ],
+      "finding": "No non-empty exact same-article image blob or public source attachment mapping found. Similar rId images belong to unrelated articles and are excluded. Existing 404 HTML is retained as evidence; it cannot be used as an image."
+    },
+    {
+      "status": "hold",
+      "article": "Web安全/CMS内容/Pluck cms/Pluck CMS后台另两处任意代码执行.md",
+      "article_sha256_at_frozen_head": "22e655fcfa89ee9dddb67c32323e2c8fddaced4cf201480265f2327bf0393b85",
+      "reference": "> 归档图片缺失（2026-10-04）：此资源实际保存为 404 HTML，原图尚未找到。原引用保留为 `![](./.resource/PluckCMS后台另两处任意代码执行/media/rId37.shtml)`。",
+      "resource_path": "Web安全/CMS内容/Pluck cms/.resource/PluckCMS后台另两处任意代码执行/media/rId37.shtml",
+      "resource_bytes": 469,
+      "resource_sha256": "eef948e1d511bd86ff673f904bf0a97106d5395f0b7ed2cfb043da7ccc6ca6dd",
+      "resource_signature": "404 HTML",
+      "approved_restore": null,
+      "searched_channels": [
+        "same-path Git history through all reachable refs",
+        "all reachable Git object name/path listing",
+        "public web search by article title and exact rId filename",
+        "current public source/article lookup when an explicit source URL was recorded"
+      ],
+      "finding": "No non-empty exact same-article image blob or public source attachment mapping found. Similar rId images belong to unrelated articles and are excluded. Existing 404 HTML is retained as evidence; it cannot be used as an image."
+    },
+    {
+      "status": "hold",
+      "article": "Web安全/CMS内容/Pluck cms/Pluck CMS后台另两处任意代码执行.md",
+      "article_sha256_at_frozen_head": "22e655fcfa89ee9dddb67c32323e2c8fddaced4cf201480265f2327bf0393b85",
+      "reference": "> 归档图片缺失（2026-10-04）：此资源实际保存为 404 HTML，原图尚未找到。原引用保留为 `![](./.resource/PluckCMS后台另两处任意代码执行/media/rId38.shtml)`。",
+      "resource_path": "Web安全/CMS内容/Pluck cms/.resource/PluckCMS后台另两处任意代码执行/media/rId38.shtml",
+      "resource_bytes": 469,
+      "resource_sha256": "eef948e1d511bd86ff673f904bf0a97106d5395f0b7ed2cfb043da7ccc6ca6dd",
+      "resource_signature": "404 HTML",
+      "approved_restore": null,
+      "searched_channels": [
+        "same-path Git history through all reachable refs",
+        "all reachable Git object name/path listing",
+        "public web search by article title and exact rId filename",
+        "current public source/article lookup when an explicit source URL was recorded"
+      ],
+      "finding": "No non-empty exact same-article image blob or public source attachment mapping found. Similar rId images belong to unrelated articles and are excluded. Existing 404 HTML is retained as evidence; it cannot be used as an image."
+    },
+    {
+      "status": "hold",
+      "article": "Web安全/CMS内容/Pluck cms/Pluck CMS后台另两处任意代码执行.md",
+      "article_sha256_at_frozen_head": "22e655fcfa89ee9dddb67c32323e2c8fddaced4cf201480265f2327bf0393b85",
+      "reference": "> 归档图片缺失（2026-10-04）：此资源实际保存为 404 HTML，原图尚未找到。原引用保留为 `![](./.resource/PluckCMS后台另两处任意代码执行/media/rId39.shtml)`。",
+      "resource_path": "Web安全/CMS内容/Pluck cms/.resource/PluckCMS后台另两处任意代码执行/media/rId39.shtml",
+      "resource_bytes": 469,
+      "resource_sha256": "eef948e1d511bd86ff673f904bf0a97106d5395f0b7ed2cfb043da7ccc6ca6dd",
+      "resource_signature": "404 HTML",
+      "approved_restore": null,
+      "searched_channels": [
+        "same-path Git history through all reachable refs",
+        "all reachable Git object name/path listing",
+        "public web search by article title and exact rId filename",
+        "current public source/article lookup when an explicit source URL was recorded"
+      ],
+      "finding": "No non-empty exact same-article image blob or public source attachment mapping found. Similar rId images belong to unrelated articles and are excluded. Existing 404 HTML is retained as evidence; it cannot be used as an image."
+    },
+    {
+      "status": "hold",
+      "article": "Web安全/CMS内容/Yunucms/Yunucms v2.0.7 数据库泄露.md",
+      "article_sha256_at_frozen_head": "c07ab8feb2bdaf0f2cd10cda77ab73f5687a19a0511b0fcf94c706560438686f",
+      "reference": "> 归档图片缺失（2026-10-04）：此资源实际保存为 404 HTML，原图尚未找到。原引用保留为 `![](./.resource/Yunucmsv2.0.7数据库泄露/media/rId29.shtml)`。",
+      "resource_path": "Web安全/CMS内容/Yunucms/.resource/Yunucmsv2.0.7数据库泄露/media/rId29.shtml",
+      "resource_bytes": 469,
+      "resource_sha256": "eef948e1d511bd86ff673f904bf0a97106d5395f0b7ed2cfb043da7ccc6ca6dd",
+      "resource_signature": "404 HTML",
+      "approved_restore": null,
+      "searched_channels": [
+        "same-path Git history through all reachable refs",
+        "all reachable Git object name/path listing",
+        "public web search by article title and exact rId filename",
+        "current public source/article lookup when an explicit source URL was recorded"
+      ],
+      "finding": "No non-empty exact same-article image blob or public source attachment mapping found. Similar rId images belong to unrelated articles and are excluded. Existing 404 HTML is retained as evidence; it cannot be used as an image."
+    },
+    {
+      "status": "hold",
+      "article": "Web安全/商业软件/思福迪/思福迪运维安全管理系统test_qrcode_b存在远程命令执行漏洞.md",
+      "article_sha256_at_frozen_head": "f9e844a5787e6a719621e46c4f00c43f1b331b9cc3415098115036fb249ba77a",
+      "reference": "![]()",
+      "resource_path": null,
+      "resource_bytes": null,
+      "resource_sha256": null,
+      "approved_restore": null,
+      "searched_channels": [
+        "same-article Git history and frozen source reference",
+        "public Yuque source URL previously checked; it returns a password gate with no article body or attachments"
+      ],
+      "source_url": "https://www.yuque.com/xiaokp7/ocvun2/cwhyqkk2t3hh660w",
+      "finding": "The archived reference has no target filename or attachment identifier. The public page is password-gated. No image can be mapped to this position without guessing."
+    }
+  ],
+  "encoding_lines": {
+    "article": "Web安全/网络设备/Ivanti/Ivanti EPM 严重漏洞（CVE-2025-10573）存在管理员会话劫持与未授权远程代码执行风险.md",
+    "article_sha256_at_frozen_head": "58987858833900aa6f1e4d76c2603433a2423b901f9b5d18bb2d1ee18300b832",
+    "strict_codec_evidence": "/tmp/vulwiki-final-goal-20261004.aipd3x20/encoding-original-diagnosis.json; 204 spans have strict inverse proof, 14 lines remain unresolved.",
+    "source_checked": "https://securityonline.info/critical-ivanti-epm-flaw-cve-2025-10573-risks-admin-session-hijack-and-unauthenticated-rce/ and same-article https://www.anquanke.com/post/id/313631; direct original-source English supports topic and selected facts but is not an exact Chinese line transcript.",
+    "lines": [
+      {
+        "status": "hold",
+        "line_in_frozen_head": 102,
+        "residual_line": "* [专ж Ҹ](/column/index.html)",
+        "approved_restore": null,
+        "finding": "Strict PTCP154->UTF-8 inverse did not prove the complete line. Same-source English article corroborates parts of the reported meaning, but it does not establish the exact Chinese translation wording; no speculative line replacement is justified."
+      },
+      {
+        "status": "hold",
+        "line_in_frozen_head": 107,
+        "residual_line": "# Ivanti EPM 严重漏洞（CVE-2025-10573）存在管理员会话劫持与未授权远程代з Ғ执行风险",
+        "approved_restore": null,
+        "finding": "Strict PTCP154->UTF-8 inverse did not prove the complete line. Same-source English article corroborates parts of the reported meaning, but it does not establish the exact Chinese translation wording; no speculative line replacement is justified."
+      },
+      {
+        "status": "hold",
+        "line_in_frozen_head": 117,
+        "residual_line": "本文是翻译文з« ，文з« 原作者 Ddos ，文з« 来源：securityonline",
+        "approved_restore": null,
+        "finding": "Strict PTCP154->UTF-8 inverse did not prove the complete line. Same-source English article corroborates parts of the reported meaning, but it does not establish the exact Chinese translation wording; no speculative line replacement is justified."
+      },
+      {
+        "status": "hold",
+        "line_in_frozen_head": 125,
+        "residual_line": "Ivanti 已为其终端管理器（Endpoint ManagerпјҢEPM）解决方案推出**紧急安全更新**，修复了一系列严重漏洞 вҖ”вҖ” 这些漏洞可能允许攻击者执行任意代з Ғ或劫持管理员会话。此次更新针对四个独立漏洞，其中包括一个严重程度评分接近满分的**高危漏洞**гҖӮ",
+        "approved_restore": null,
+        "finding": "Strict PTCP154->UTF-8 inverse did not prove the complete line. Same-source English article corroborates parts of the reported meaning, but it does not establish the exact Chinese translation wording; no speculative line replacement is justified."
+      },
+      {
+        "status": "hold",
+        "line_in_frozen_head": 127,
+        "residual_line": "最严重的漏洞编号为В **CVE-2025-10573**，属于**存储型跨站脚本（Stored XSS）漏洞**пјҢCVSS 评分为 9.6。该漏洞影响В **2024 SU4 SR1 之前的所有 EPM 版本**гҖӮ",
+        "approved_restore": null,
+        "finding": "Strict PTCP154->UTF-8 inverse did not prove the complete line. Same-source English article corroborates parts of the reported meaning, but it does not establish the exact Chinese translation wording; no speculative line replacement is justified."
+      },
+      {
+        "status": "hold",
+        "line_in_frozen_head": 129,
+        "residual_line": "ж №据安全公告，该漏洞 “允许远程未授权攻击者在管理员会话上下文中执行任意 JavaScript 代з Ғ”。尽管漏洞利用需要用户交互（可能是诱骗管理员访问恶意页面），但**完全会话劫持的潜在风险**使其成为防御者的最高优先级处理事项。",
+        "approved_restore": null,
+        "finding": "Strict PTCP154->UTF-8 inverse did not prove the complete line. Same-source English article corroborates parts of the reported meaning, but it does not establish the exact Chinese translation wording; no speculative line replacement is justified."
+      },
+      {
+        "status": "hold",
+        "line_in_frozen_head": 131,
+        "residual_line": "除上述高危 XSS 漏洞外，Ivanti 还修复了三个高严重级别的漏洞，这些漏洞可能导致系统面临**远程代з Ғ执行（RCEпјү**В 和**未授权文件操作**风险：",
+        "approved_restore": null,
+        "finding": "Strict PTCP154->UTF-8 inverse did not prove the complete line. Same-source English article corroborates parts of the reported meaning, but it does not establish the exact Chinese translation wording; no speculative line replacement is justified."
+      },
+      {
+        "status": "hold",
+        "line_in_frozen_head": 133,
+        "residual_line": "1. **任意文件写入漏洞（CVE-2025-13659пјү**пјҡCVSS 评分为 8.8，该漏洞源于 “对动态管理的代з Ғ资源控制不当”，允许远程未授权攻击者向服务器写入任意文件，进而可能导致远程代з Ғ执行。",
+        "approved_restore": null,
+        "finding": "Strict PTCP154->UTF-8 inverse did not prove the complete line. Same-source English article corroborates parts of the reported meaning, but it does not establish the exact Chinese translation wording; no speculative line replacement is justified."
+      },
+      {
+        "status": "hold",
+        "line_in_frozen_head": 134,
+        "residual_line": "2. **签名验证失败漏洞（CVE-2025-13662пјү**пјҡCVSS 评分为 7.8，漏洞出现在补丁管理组件中 вҖңеҠ 密签名验证不充分”，允许远程未授权攻击者执行任意代з Ғ，但需用户交互。",
+        "approved_restore": null,
+        "finding": "Strict PTCP154->UTF-8 inverse did not prove the complete line. Same-source English article corroborates parts of the reported meaning, but it does not establish the exact Chinese translation wording; no speculative line replacement is justified."
+      },
+      {
+        "status": "hold",
+        "line_in_frozen_head": 135,
+        "residual_line": "3. **路径遍历漏洞（CVE-2025-13661пјү**пјҡCVSS 评分为 7.1，允许已认证攻击者 “向目ж Ү目录外写入任意文件”，可能з ҙ坏系统完整性。",
+        "approved_restore": null,
+        "finding": "Strict PTCP154->UTF-8 inverse did not prove the complete line. Same-source English article corroborates parts of the reported meaning, but it does not establish the exact Chinese translation wording; no speculative line replacement is justified."
+      },
+      {
+        "status": "hold",
+        "line_in_frozen_head": 137,
+        "residual_line": "这些漏洞影响В **Ivanti Endpoint Manager 2024 SU4 及所有早期版本**гҖӮIvanti 已发布В **2024 SU4 SR1 版本**以修复上述问题。",
+        "approved_restore": null,
+        "finding": "Strict PTCP154->UTF-8 inverse did not prove the complete line. Same-source English article corroborates parts of the reported meaning, but it does not establish the exact Chinese translation wording; no speculative line replacement is justified."
+      },
+      {
+        "status": "hold",
+        "line_in_frozen_head": 139,
+        "residual_line": "尽管 Ivanti 表示 “在漏洞披露时，尚未发现任何客户遭遇相关漏洞攻击”，但仍**强烈建议客户立即执行更新**гҖӮ",
+        "approved_restore": null,
+        "finding": "Strict PTCP154->UTF-8 inverse did not prove the complete line. Same-source English article corroborates parts of the reported meaning, but it does not establish the exact Chinese translation wording; no speculative line replacement is justified."
+      },
+      {
+        "status": "hold",
+        "line_in_frozen_head": 141,
+        "residual_line": "对于ж— 法立即部署补丁的组织，Ivanti 建议审查其网络暴露面。针对上述高危 XSS 漏洞，安全公告特别指出：“Ivanti EPM 并非面向互联网的解决方案。若客户未将该系统暴露在互联网中，此漏洞的风险将显著降低”。",
+        "approved_restore": null,
+        "finding": "Strict PTCP154->UTF-8 inverse did not prove the complete line. Same-source English article corroborates parts of the reported meaning, but it does not establish the exact Chinese translation wording; no speculative line replacement is justified."
+      },
+      {
+        "status": "hold",
+        "line_in_frozen_head": 143,
+        "residual_line": "此外，管理员需**验证连接源和文件来源的可信度**：任意文件写入漏洞和签名验证失败漏洞的利用，均依赖于连接 “不可信的ж ё心服务器” 或导入 “不可信的配置文件”。",
+        "approved_restore": null,
+        "finding": "Strict PTCP154->UTF-8 inverse did not prove the complete line. Same-source English article corroborates parts of the reported meaning, but it does not establish the exact Chinese translation wording; no speculative line replacement is justified."
+      }
+    ],
+    "approved_restore": null,
+    "decision": "hold all 14; current `title` frontmatter and display heading are an editorially changed title, not a valid source for restoring the damaged archived H1."
+  },
+  "summary": {
+    "approved_recovery_operations": 0,
+    "hold_images": 13,
+    "hold_encoding_lines": 14,
+    "machine_decoding": "Only previously proven 204 spans; no new span approved.",
+    "pixel_reading": "No new downloaded candidate image found, therefore no pixel reading in this review. Prior 44 recovered unique files already have separate pixel acceptance records.",
+    "source_image_distinction": "No current source-page feature image or unrelated rId image is treated as the missing historical screenshot."
+  }
+}

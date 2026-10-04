@@ -13,7 +13,7 @@ content_status: "needs-review"
 identifier_status: "unknown"
 identifier_role: "primary"
 primary_identifiers: "CVE-2020-12109"
-referenced_identifiers: ""
+referenced_identifiers: "CVE-2020-12110"
 prerequisites: "已认证；NC200/220/230/250及NC260/450直接，NC210需额外配置写入"
 archive_url: "https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/TP-Link/TP-Link%E4%BA%91%E6%91%84%E5%83%8F%E5%A4%B4NCXXX%E7%B3%BB%E5%88%97%E5%AD%98%E5%9C%A8%E5%91%BD%E4%BB%A4%E6%B3%A8%E2%BC%8A%E6%BC%8F%E6%B4%9E.md"
 review_date: "2026-10-02"
@@ -22,6 +22,12 @@ source_status: "unknown"
 ---
 
 # TP-Link云摄像头NCXXX系列存在命令注⼊漏洞
+
+## 编号角色补核（2026-10-04）
+
+本次只确认编号在本文主题中的主编号／引用角色；版本、修复、截图及其他技术主张仍按下方具体待核说明阅读。旧字段和归档正文保持原值，较早的角色待核说明保留为历史记录。
+
+核对依据：[CNA 记录](https://cveawg.mitre.org/api/cve/CVE-2020-12109)；[CNA 记录](https://cveawg.mitre.org/api/cve/CVE-2020-12110)。这些记录支持编号／产品对应关系或编号状态，不替代本篇原始出处。
 
 <!-- article-review:devices:begin -->
 ## 技术校订与证据边界（2026-10-02）

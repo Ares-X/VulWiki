@@ -1,0 +1,1315 @@
+[
+  {
+    "identifier": "CVE-2018-16333",
+    "url": "https://cveawg.mitre.org/api/cve/CVE-2018-16333",
+    "sha256": "ca2498542c683441b7c267789beddc7da0f91902615a67db866151fbe4dbbc12",
+    "state": "PUBLISHED",
+    "description": [
+      {
+        "lang": "en",
+        "value": "An issue was discovered on Tenda AC7 V15.03.06.44_CN, AC9 V15.03.05.19(6318)_CN, AC10 V15.03.06.23_CN, AC15 V15.03.05.19_CN, and AC18 V15.03.05.19(6318)_CN devices. There is a buffer overflow vulnerability in the router's web server. While processing the ssid parameter for a POST request, the value is directly used in a sprintf call to a local variable placed on the stack, which overrides the return address of the function, causing a buffer overflow."
+      }
+    ],
+    "affected": [
+      {
+        "product": "n/a",
+        "vendor": "n/a",
+        "versions": [
+          {
+            "status": "affected",
+            "version": "n/a"
+          }
+        ]
+      }
+    ],
+    "rejectedReasons": []
+  },
+  {
+    "identifier": "CVE-2020-12109",
+    "url": "https://cveawg.mitre.org/api/cve/CVE-2020-12109",
+    "sha256": "ad43cbc29042b8da563b8e9dab5560cc01958af8a4e832c472d64116dc8fa5c5",
+    "state": "PUBLISHED",
+    "description": [
+      {
+        "lang": "en",
+        "value": "Certain TP-Link devices allow Command Injection. This affects NC200 2.1.9 build 200225, NC210 1.0.9 build 200304, NC220 1.3.0 build 200304, NC230 1.3.0 build 200304, NC250 1.3.0 build 200304, NC260 1.5.2 build 200304, and NC450 1.5.3 build 200304."
+      }
+    ],
+    "affected": [
+      {
+        "product": "n/a",
+        "vendor": "n/a",
+        "versions": [
+          {
+            "status": "affected",
+            "version": "n/a"
+          }
+        ]
+      }
+    ],
+    "rejectedReasons": []
+  },
+  {
+    "identifier": "CVE-2020-12110",
+    "url": "https://cveawg.mitre.org/api/cve/CVE-2020-12110",
+    "sha256": "e02ef512cdfb07c4e723328e64f3bb4cf9948912740f756df06dbf4e37c023bf",
+    "state": "PUBLISHED",
+    "description": [
+      {
+        "lang": "en",
+        "value": "Certain TP-Link devices have a Hardcoded Encryption Key. This affects NC200 2.1.9 build 200225, N210 1.0.9 build 200304, NC220 1.3.0 build 200304, NC230 1.3.0 build 200304, NC250 1.3.0 build 200304, NC260 1.5.2 build 200304, and NC450 1.5.3 build 200304."
+      }
+    ],
+    "affected": [
+      {
+        "product": "n/a",
+        "vendor": "n/a",
+        "versions": [
+          {
+            "status": "affected",
+            "version": "n/a"
+          }
+        ]
+      }
+    ],
+    "rejectedReasons": []
+  },
+  {
+    "identifier": "CVE-2021-35973",
+    "url": "https://cveawg.mitre.org/api/cve/CVE-2021-35973",
+    "sha256": "61217ca614611397128e670535703dac959837f4e67ab13137328cd0a9e5e0b6",
+    "state": "PUBLISHED",
+    "description": [
+      {
+        "lang": "en",
+        "value": "NETGEAR WAC104 devices before 1.0.4.15 are affected by an authentication bypass vulnerability in /usr/sbin/mini_httpd, allowing an unauthenticated attacker to invoke any action by adding the &currentsetting.htm substring to the HTTP query, a related issue to CVE-2020-27866. This directly allows the attacker to change the web UI password, and eventually to enable debug mode (telnetd) and gain a shell on the device as the admin limited-user account (however, escalation to root is simple because of weak permissions on the /etc/ directory)."
+      }
+    ],
+    "affected": [
+      {
+        "product": "n/a",
+        "vendor": "n/a",
+        "versions": [
+          {
+            "status": "affected",
+            "version": "n/a"
+          }
+        ]
+      }
+    ],
+    "rejectedReasons": []
+  },
+  {
+    "identifier": "CVE-2022-39197",
+    "url": "https://cveawg.mitre.org/api/cve/CVE-2022-39197",
+    "sha256": "4de1e916ee6cec42da0752be37a87d62c73207940ee113c52c2b6d0aa2424b03",
+    "state": "PUBLISHED",
+    "description": [
+      {
+        "lang": "en",
+        "value": "An XSS (Cross Site Scripting) vulnerability was found in HelpSystems Cobalt Strike through 4.7 that allowed a remote attacker to execute HTML on the Cobalt Strike teamserver. To exploit the vulnerability, one must first inspect a Cobalt Strike payload, and then modify the username field in the payload (or create a new payload with the extracted information and then modify that username field to be malformed)."
+      }
+    ],
+    "affected": [
+      {
+        "product": "n/a",
+        "vendor": "n/a",
+        "versions": [
+          {
+            "status": "affected",
+            "version": "n/a"
+          }
+        ]
+      }
+    ],
+    "rejectedReasons": []
+  },
+  {
+    "identifier": "CVE-2022-42475",
+    "url": "https://cveawg.mitre.org/api/cve/CVE-2022-42475",
+    "sha256": "7e6069c3f92beac7d2e00605945fbcd06dcf4ee84c9ef7f2a230732a77d4acd6",
+    "state": "PUBLISHED",
+    "description": [
+      {
+        "lang": "en",
+        "value": "A heap-based buffer overflow vulnerability [CWE-122] in FortiOS SSL-VPN 7.2.0 through 7.2.2, 7.0.0 through 7.0.8, 6.4.0 through 6.4.10, 6.2.0 through 6.2.11, 6.0.15 and earlier  and FortiProxy SSL-VPN 7.2.0 through 7.2.1, 7.0.7 and earlier may allow a remote unauthenticated attacker to execute arbitrary code or commands via specifically crafted requests."
+      }
+    ],
+    "affected": [
+      {
+        "vendor": "Fortinet",
+        "product": "FortiProxy",
+        "defaultStatus": "unaffected",
+        "versions": [
+          {
+            "versionType": "semver",
+            "version": "7.2.0",
+            "lessThanOrEqual": "7.2.1",
+            "status": "affected"
+          },
+          {
+            "versionType": "semver",
+            "version": "7.0.0",
+            "lessThanOrEqual": "7.0.7",
+            "status": "affected"
+          },
+          {
+            "versionType": "semver",
+            "version": "2.0.0",
+            "lessThanOrEqual": "2.0.11",
+            "status": "affected"
+          },
+          {
+            "versionType": "semver",
+            "version": "1.2.0",
+            "lessThanOrEqual": "1.2.13",
+            "status": "affected"
+          },
+          {
+            "versionType": "semver",
+            "version": "1.1.0",
+            "lessThanOrEqual": "1.1.6",
+            "status": "affected"
+          },
+          {
+            "versionType": "semver",
+            "version": "1.0.0",
+            "lessThanOrEqual": "1.0.7",
+            "status": "affected"
+          }
+        ]
+      },
+      {
+        "vendor": "Fortinet",
+        "product": "FortiOS",
+        "defaultStatus": "unaffected",
+        "versions": [
+          {
+            "versionType": "semver",
+            "version": "7.2.0",
+            "lessThanOrEqual": "7.2.2",
+            "status": "affected"
+          },
+          {
+            "versionType": "semver",
+            "version": "7.0.0",
+            "lessThanOrEqual": "7.0.8",
+            "status": "affected"
+          },
+          {
+            "versionType": "semver",
+            "version": "6.4.0",
+            "lessThanOrEqual": "6.4.10",
+            "status": "affected"
+          },
+          {
+            "versionType": "semver",
+            "version": "6.2.0",
+            "lessThanOrEqual": "6.2.11",
+            "status": "affected"
+          },
+          {
+            "versionType": "semver",
+            "version": "6.0.0",
+            "lessThanOrEqual": "6.0.15",
+            "status": "affected"
+          },
+          {
+            "versionType": "semver",
+            "version": "5.6.0",
+            "lessThanOrEqual": "5.6.14",
+            "status": "affected"
+          },
+          {
+            "versionType": "semver",
+            "version": "5.4.0",
+            "lessThanOrEqual": "5.4.13",
+            "status": "affected"
+          },
+          {
+            "versionType": "semver",
+            "version": "5.2.0",
+            "lessThanOrEqual": "5.2.15",
+            "status": "affected"
+          },
+          {
+            "versionType": "semver",
+            "version": "5.0.0",
+            "lessThanOrEqual": "5.0.14",
+            "status": "affected"
+          }
+        ]
+      }
+    ],
+    "rejectedReasons": []
+  },
+  {
+    "identifier": "CVE-2023-2130",
+    "url": "https://cveawg.mitre.org/api/cve/CVE-2023-2130",
+    "sha256": "6711ab76983ef609fae673d73eefd48ba6452b31d0d6fceb91b5e026e46ebbe6",
+    "state": "PUBLISHED",
+    "description": [
+      {
+        "lang": "en",
+        "value": "A vulnerability classified as critical has been found in SourceCodester Purchase Order Management System 1.0. Affected is an unknown function of the file /admin/suppliers/view_details.php of the component GET Parameter Handler. The manipulation of the argument id leads to sql injection. It is possible to launch the attack remotely. The exploit has been disclosed to the public and may be used. VDB-226206 is the identifier assigned to this vulnerability."
+      },
+      {
+        "lang": "de",
+        "value": "Es wurde eine kritische Schwachstelle in SourceCodester Purchase Order Management System 1.0 entdeckt. Hiervon betroffen ist ein unbekannter Codeblock der Datei /admin/suppliers/view_details.php der Komponente GET Parameter Handler. Mit der Manipulation des Arguments id mit unbekannten Daten kann eine sql injection-Schwachstelle ausgenutzt werden. Der Angriff kann über das Netzwerk angegangen werden. Der Exploit steht zur öffentlichen Verfügung."
+      }
+    ],
+    "affected": [
+      {
+        "vendor": "SourceCodester",
+        "product": "Purchase Order Management System",
+        "versions": [
+          {
+            "version": "1.0",
+            "status": "affected"
+          }
+        ],
+        "modules": [
+          "GET Parameter Handler"
+        ]
+      }
+    ],
+    "rejectedReasons": []
+  },
+  {
+    "identifier": "CVE-2023-21608",
+    "url": "https://cveawg.mitre.org/api/cve/CVE-2023-21608",
+    "sha256": "62fb1ef1cbb41b57c9ad93b9404e545123dfbdcd143028c129d436853c86c348",
+    "state": "PUBLISHED",
+    "description": [
+      {
+        "lang": "en",
+        "value": "Adobe Acrobat Reader versions 22.003.20282 (and earlier), 22.003.20281 (and earlier) and 20.005.30418 (and earlier) are affected by a Use After Free vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file."
+      }
+    ],
+    "affected": [
+      {
+        "vendor": "Adobe",
+        "product": "Acrobat Reader",
+        "versions": [
+          {
+            "version": "unspecified",
+            "lessThanOrEqual": "20.005.30418",
+            "status": "affected",
+            "versionType": "custom"
+          },
+          {
+            "version": "unspecified",
+            "lessThanOrEqual": "22.003.20282",
+            "status": "affected",
+            "versionType": "custom"
+          },
+          {
+            "version": "unspecified",
+            "lessThanOrEqual": "22.003.20281",
+            "status": "affected",
+            "versionType": "custom"
+          },
+          {
+            "version": "unspecified",
+            "lessThanOrEqual": "None",
+            "status": "affected",
+            "versionType": "custom"
+          }
+        ]
+      }
+    ],
+    "rejectedReasons": []
+  },
+  {
+    "identifier": "CVE-2023-41599",
+    "url": "https://cveawg.mitre.org/api/cve/CVE-2023-41599",
+    "sha256": "8d2c552e3a23532c0daaddf5a1b8a8c7fb88263d898f5b016f5dfc78445ac8ab",
+    "state": "PUBLISHED",
+    "description": [
+      {
+        "lang": "en",
+        "value": "An issue in the component /common/DownController.java of JFinalCMS v5.0.0 allows attackers to execute a directory traversal."
+      }
+    ],
+    "affected": [
+      {
+        "vendor": "n/a",
+        "product": "n/a",
+        "versions": [
+          {
+            "version": "n/a",
+            "status": "affected"
+          }
+        ]
+      }
+    ],
+    "rejectedReasons": []
+  },
+  {
+    "identifier": "CVE-2023-5783",
+    "url": "https://cveawg.mitre.org/api/cve/CVE-2023-5783",
+    "sha256": "5e6ae7ba444f70247b129f9ccbfb3f96ae46cf1a405891d393fae8db2dfe6fcd",
+    "state": "PUBLISHED",
+    "description": [
+      {
+        "lang": "en",
+        "value": "A vulnerability has been found in Tongda OA 2017 up to 11.9 and classified as critical. Affected by this vulnerability is an unknown functionality of the file general/system/approve_center/flow_sort/flow/delete.php. The manipulation of the argument id/sort_parent leads to sql injection. The attack can be launched remotely. The exploit has been disclosed to the public and may be used. Upgrading to version 11.10 is able to address this issue. It is recommended to upgrade the affected component. The identifier VDB-243589 was assigned to this vulnerability. NOTE: The vendor was contacted early about this disclosure but did not respond in any way."
+      },
+      {
+        "lang": "de",
+        "value": "In Tongda OA 2017 bis 11.9 wurde eine Schwachstelle gefunden. Sie wurde als kritisch eingestuft. Hierbei betrifft es unbekannten Programmcode der Datei general/system/approve_center/flow_sort/flow/delete.php. Mittels dem Manipulieren des Arguments id/sort_parent mit unbekannten Daten kann eine sql injection-Schwachstelle ausgenutzt werden. Umgesetzt werden kann der Angriff über das Netzwerk. Der Exploit steht zur öffentlichen Verfügung. Ein Aktualisieren auf die Version 11.10 vermag dieses Problem zu lösen. Als bestmögliche Massnahme wird das Einspielen eines Upgrades empfohlen."
+      }
+    ],
+    "affected": [
+      {
+        "vendor": "Tongda",
+        "product": "OA 2017",
+        "versions": [
+          {
+            "version": "11.0",
+            "status": "affected"
+          },
+          {
+            "version": "11.1",
+            "status": "affected"
+          },
+          {
+            "version": "11.2",
+            "status": "affected"
+          },
+          {
+            "version": "11.3",
+            "status": "affected"
+          },
+          {
+            "version": "11.4",
+            "status": "affected"
+          },
+          {
+            "version": "11.5",
+            "status": "affected"
+          },
+          {
+            "version": "11.6",
+            "status": "affected"
+          },
+          {
+            "version": "11.7",
+            "status": "affected"
+          },
+          {
+            "version": "11.8",
+            "status": "affected"
+          },
+          {
+            "version": "11.9",
+            "status": "affected"
+          }
+        ]
+      }
+    ],
+    "rejectedReasons": []
+  },
+  {
+    "identifier": "CVE-2023-6052",
+    "url": "https://cveawg.mitre.org/api/cve/CVE-2023-6052",
+    "sha256": "8be385a555ce8c72a7e7a4b446e8d5a341f911b92faa79ef264a1b988391e7fd",
+    "state": "PUBLISHED",
+    "description": [
+      {
+        "lang": "en",
+        "value": "A vulnerability classified as critical has been found in Tongda OA 2017 up to 11.9. Affected is an unknown function of the file general/system/censor_words/module/delete.php. The manipulation of the argument DELETE_STR leads to sql injection. The exploit has been disclosed to the public and may be used. Upgrading to version 11.10 is able to address this issue. It is recommended to upgrade the affected component. The identifier of this vulnerability is VDB-244872. NOTE: The vendor was contacted early about this disclosure but did not respond in any way."
+      },
+      {
+        "lang": "de",
+        "value": "Es wurde eine kritische Schwachstelle in Tongda OA 2017 bis 11.9 entdeckt. Es geht dabei um eine nicht klar definierte Funktion der Datei general/system/censor_words/module/delete.php. Dank Manipulation des Arguments DELETE_STR mit unbekannten Daten kann eine sql injection-Schwachstelle ausgenutzt werden. Der Exploit steht zur öffentlichen Verfügung. Ein Aktualisieren auf die Version 11.10 vermag dieses Problem zu lösen. Als bestmögliche Massnahme wird das Einspielen eines Upgrades empfohlen."
+      }
+    ],
+    "affected": [
+      {
+        "vendor": "Tongda",
+        "product": "OA 2017",
+        "versions": [
+          {
+            "version": "11.0",
+            "status": "affected"
+          },
+          {
+            "version": "11.1",
+            "status": "affected"
+          },
+          {
+            "version": "11.2",
+            "status": "affected"
+          },
+          {
+            "version": "11.3",
+            "status": "affected"
+          },
+          {
+            "version": "11.4",
+            "status": "affected"
+          },
+          {
+            "version": "11.5",
+            "status": "affected"
+          },
+          {
+            "version": "11.6",
+            "status": "affected"
+          },
+          {
+            "version": "11.7",
+            "status": "affected"
+          },
+          {
+            "version": "11.8",
+            "status": "affected"
+          },
+          {
+            "version": "11.9",
+            "status": "affected"
+          }
+        ]
+      }
+    ],
+    "rejectedReasons": []
+  },
+  {
+    "identifier": "CVE-2023-6053",
+    "url": "https://cveawg.mitre.org/api/cve/CVE-2023-6053",
+    "sha256": "b214db1f697445056881ce344e21e5be6cc3fa8cb4f6f92cb7eca474626fa3e1",
+    "state": "PUBLISHED",
+    "description": [
+      {
+        "lang": "en",
+        "value": "A vulnerability, which was classified as critical, has been found in Tongda OA 2017 up to 11.9. Affected by this issue is some unknown functionality of the file general/system/censor_words/manage/delete.php. The manipulation of the argument DELETE_STR leads to sql injection. The exploit has been disclosed to the public and may be used. Upgrading to version 11.10 is able to address this issue. It is recommended to upgrade the affected component. VDB-244874 is the identifier assigned to this vulnerability. NOTE: The vendor was contacted early about this disclosure but did not respond in any way."
+      },
+      {
+        "lang": "de",
+        "value": "Eine kritische Schwachstelle wurde in Tongda OA 2017 bis 11.9 entdeckt. Hierbei geht es um eine nicht exakt ausgemachte Funktion der Datei general/system/censor_words/manage/delete.php. Durch die Manipulation des Arguments DELETE_STR mit unbekannten Daten kann eine sql injection-Schwachstelle ausgenutzt werden. Der Exploit steht zur öffentlichen Verfügung. Ein Aktualisieren auf die Version 11.10 vermag dieses Problem zu lösen. Als bestmögliche Massnahme wird das Einspielen eines Upgrades empfohlen."
+      }
+    ],
+    "affected": [
+      {
+        "vendor": "Tongda",
+        "product": "OA 2017",
+        "versions": [
+          {
+            "version": "11.0",
+            "status": "affected"
+          },
+          {
+            "version": "11.1",
+            "status": "affected"
+          },
+          {
+            "version": "11.2",
+            "status": "affected"
+          },
+          {
+            "version": "11.3",
+            "status": "affected"
+          },
+          {
+            "version": "11.4",
+            "status": "affected"
+          },
+          {
+            "version": "11.5",
+            "status": "affected"
+          },
+          {
+            "version": "11.6",
+            "status": "affected"
+          },
+          {
+            "version": "11.7",
+            "status": "affected"
+          },
+          {
+            "version": "11.8",
+            "status": "affected"
+          },
+          {
+            "version": "11.9",
+            "status": "affected"
+          }
+        ]
+      }
+    ],
+    "rejectedReasons": []
+  },
+  {
+    "identifier": "CVE-2023-6054",
+    "url": "https://cveawg.mitre.org/api/cve/CVE-2023-6054",
+    "sha256": "b5fbc749a058ccc7e33d8a6ad910fb452b9de271eeb3cd0b23f4211e5177f903",
+    "state": "PUBLISHED",
+    "description": [
+      {
+        "lang": "en",
+        "value": "A vulnerability, which was classified as critical, was found in Tongda OA 2017 up to 11.9. This affects an unknown part of the file general/wiki/cp/manage/lock.php. The manipulation of the argument TERM_ID_STR leads to sql injection. The exploit has been disclosed to the public and may be used. Upgrading to version 11.10 is able to address this issue. It is recommended to upgrade the affected component. The associated identifier of this vulnerability is VDB-244875. NOTE: The vendor was contacted early about this disclosure but did not respond in any way."
+      },
+      {
+        "lang": "de",
+        "value": "Es wurde eine kritische Schwachstelle in Tongda OA 2017 bis 11.9 gefunden. Es betrifft eine unbekannte Funktion der Datei general/wiki/cp/manage/lock.php. Durch Manipulation des Arguments TERM_ID_STR mit unbekannten Daten kann eine sql injection-Schwachstelle ausgenutzt werden. Der Exploit steht zur öffentlichen Verfügung. Ein Aktualisieren auf die Version 11.10 vermag dieses Problem zu lösen. Als bestmögliche Massnahme wird das Einspielen eines Upgrades empfohlen."
+      }
+    ],
+    "affected": [
+      {
+        "vendor": "Tongda",
+        "product": "OA 2017",
+        "versions": [
+          {
+            "version": "11.0",
+            "status": "affected"
+          },
+          {
+            "version": "11.1",
+            "status": "affected"
+          },
+          {
+            "version": "11.2",
+            "status": "affected"
+          },
+          {
+            "version": "11.3",
+            "status": "affected"
+          },
+          {
+            "version": "11.4",
+            "status": "affected"
+          },
+          {
+            "version": "11.5",
+            "status": "affected"
+          },
+          {
+            "version": "11.6",
+            "status": "affected"
+          },
+          {
+            "version": "11.7",
+            "status": "affected"
+          },
+          {
+            "version": "11.8",
+            "status": "affected"
+          },
+          {
+            "version": "11.9",
+            "status": "affected"
+          }
+        ]
+      }
+    ],
+    "rejectedReasons": []
+  },
+  {
+    "identifier": "CVE-2023-6276",
+    "url": "https://cveawg.mitre.org/api/cve/CVE-2023-6276",
+    "sha256": "fabd7f4a7858c4825ffd27b87071eb8970bf039597129de12100d3f841590fd2",
+    "state": "PUBLISHED",
+    "description": [
+      {
+        "lang": "en",
+        "value": "A vulnerability classified as critical has been found in Tongda OA 2017 up to 11.9. This affects an unknown part of the file general/wiki/cp/ct/delete.php. The manipulation of the argument PROJ_ID_STR leads to sql injection. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used. Upgrading to version 11.10 is able to address this issue. It is recommended to upgrade the affected component. The identifier VDB-246105 was assigned to this vulnerability."
+      },
+      {
+        "lang": "de",
+        "value": "Es wurde eine Schwachstelle in Tongda OA 2017 bis 11.9 entdeckt. Sie wurde als kritisch eingestuft. Es betrifft eine unbekannte Funktion der Datei general/wiki/cp/ct/delete.php. Mit der Manipulation des Arguments PROJ_ID_STR mit unbekannten Daten kann eine sql injection-Schwachstelle ausgenutzt werden. Der Angriff kann über das Netzwerk erfolgen. Der Exploit steht zur öffentlichen Verfügung. Ein Aktualisieren auf die Version 11.10 vermag dieses Problem zu lösen. Als bestmögliche Massnahme wird das Einspielen eines Upgrades empfohlen."
+      }
+    ],
+    "affected": [
+      {
+        "vendor": "Tongda",
+        "product": "OA 2017",
+        "versions": [
+          {
+            "version": "11.0",
+            "status": "affected"
+          },
+          {
+            "version": "11.1",
+            "status": "affected"
+          },
+          {
+            "version": "11.2",
+            "status": "affected"
+          },
+          {
+            "version": "11.3",
+            "status": "affected"
+          },
+          {
+            "version": "11.4",
+            "status": "affected"
+          },
+          {
+            "version": "11.5",
+            "status": "affected"
+          },
+          {
+            "version": "11.6",
+            "status": "affected"
+          },
+          {
+            "version": "11.7",
+            "status": "affected"
+          },
+          {
+            "version": "11.8",
+            "status": "affected"
+          },
+          {
+            "version": "11.9",
+            "status": "affected"
+          }
+        ]
+      }
+    ],
+    "rejectedReasons": []
+  },
+  {
+    "identifier": "CVE-2024-0044",
+    "url": "https://cveawg.mitre.org/api/cve/CVE-2024-0044",
+    "sha256": "f4e0d0d25adca2b0a5e88a63fc9d17d366f37efddeb039339bd3be0592321033",
+    "state": "PUBLISHED",
+    "description": [
+      {
+        "lang": "en",
+        "value": "In createSessionInternal of PackageInstallerService.java, there is a possible run-as any app due to improper input validation. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation."
+      }
+    ],
+    "affected": [
+      {
+        "vendor": "Google",
+        "product": "Android",
+        "versions": [
+          {
+            "version": "15",
+            "status": "affected"
+          },
+          {
+            "version": "14",
+            "status": "affected"
+          },
+          {
+            "version": "13",
+            "status": "affected"
+          },
+          {
+            "version": "12L",
+            "status": "affected"
+          },
+          {
+            "version": "12",
+            "status": "affected"
+          }
+        ],
+        "defaultStatus": "unaffected"
+      }
+    ],
+    "rejectedReasons": []
+  },
+  {
+    "identifier": "CVE-2024-11680",
+    "url": "https://cveawg.mitre.org/api/cve/CVE-2024-11680",
+    "sha256": "faae407880fbb6558b85b48d771001e54c28cb5f22a38919449657de080c23b9",
+    "state": "PUBLISHED",
+    "description": [
+      {
+        "lang": "en",
+        "supportingMedia": [
+          {
+            "base64": false,
+            "type": "text/html",
+            "value": "ProjectSend versions prior to r1720 are affected by an improper authentication vulnerability. Remote, unauthenticated attackers can exploit this flaw by sending crafted HTTP requests to <code>options.php</code>, enabling unauthorized modification of the application's configuration. Successful exploitation allows attackers to create accounts, upload webshells, and embed malicious JavaScript.<br>"
+          }
+        ],
+        "value": "ProjectSend versions prior to r1720 are affected by an improper authentication vulnerability. Remote, unauthenticated attackers can exploit this flaw by sending crafted HTTP requests to options.php, enabling unauthorized modification of the application's configuration. Successful exploitation allows attackers to create accounts, upload webshells, and embed malicious JavaScript."
+      }
+    ],
+    "affected": [
+      {
+        "defaultStatus": "unaffected",
+        "packageURL": "pkg:github/projectsend/projectsend",
+        "product": "ProjectSend",
+        "programFiles": [
+          "options.php"
+        ],
+        "repo": "https://github.com/projectsend/projectsend",
+        "vendor": "ProjectSend",
+        "versions": [
+          {
+            "lessThan": "r1720",
+            "status": "affected",
+            "version": "0",
+            "versionType": "custom"
+          }
+        ]
+      }
+    ],
+    "rejectedReasons": []
+  },
+  {
+    "identifier": "CVE-2024-37602",
+    "url": "https://cveawg.mitre.org/api/cve/CVE-2024-37602",
+    "sha256": "dc5fae610016bf1cd33d52e6b00af77ca0683a54790e6f6187289298f2ee1af7",
+    "state": "PUBLISHED",
+    "description": [
+      {
+        "lang": "en",
+        "value": "An issue was discovered in Mercedes Benz NTG (New Telematics Generation) 6 through 2021. A possible NULL pointer dereference in the Apple Car Play function affects NTG 6 head units. To perform this attack, physical access to Ethernet pins of the head unit base board is needed. With a static IP address, an attacker can connect via the internal network to the AirTunes / AirPlay service. With prepared HTTP requests, an attacker can cause the Car Play service to fail."
+      }
+    ],
+    "affected": [
+      {
+        "vendor": "n/a",
+        "product": "n/a",
+        "versions": [
+          {
+            "version": "n/a",
+            "status": "affected"
+          }
+        ]
+      }
+    ],
+    "rejectedReasons": []
+  },
+  {
+    "identifier": "CVE-2024-41468",
+    "url": "https://cveawg.mitre.org/api/cve/CVE-2024-41468",
+    "sha256": "64c9ef754883aa222720dde2af8f37f89f6e0fec5d3fa79cc3ca8635f43a66ed",
+    "state": "PUBLISHED",
+    "description": [
+      {
+        "lang": "en",
+        "value": "Tenda FH1201 v1.2.0.14 was discovered to contain a command injection vulnerability via the cmdinput parameter at /goform/exeCommand"
+      }
+    ],
+    "affected": [
+      {
+        "vendor": "n/a",
+        "product": "n/a",
+        "versions": [
+          {
+            "version": "n/a",
+            "status": "affected"
+          }
+        ]
+      }
+    ],
+    "rejectedReasons": []
+  },
+  {
+    "identifier": "CVE-2024-41473",
+    "url": "https://cveawg.mitre.org/api/cve/CVE-2024-41473",
+    "sha256": "598f2956c0e96e47de11085430a7f889ab25d81f9162bd3d80cdd21b359cd1e5",
+    "state": "PUBLISHED",
+    "description": [
+      {
+        "lang": "en",
+        "value": "Tenda FH1201 v1.2.0.14 was discovered to contain a command injection vulnerability via the mac parameter at ip/goform/WriteFacMac"
+      }
+    ],
+    "affected": [
+      {
+        "vendor": "n/a",
+        "product": "n/a",
+        "versions": [
+          {
+            "version": "n/a",
+            "status": "affected"
+          }
+        ]
+      }
+    ],
+    "rejectedReasons": []
+  },
+  {
+    "identifier": "CVE-2024-4642",
+    "url": "https://cveawg.mitre.org/api/cve/CVE-2024-4642",
+    "sha256": "95b3fda1561046bbee1347bb0cef387e9e901939c38d03501506f5b6782c97e0",
+    "state": "REJECTED",
+    "description": [],
+    "affected": [],
+    "rejectedReasons": [
+      {
+        "lang": "en",
+        "supportingMedia": [
+          {
+            "base64": false,
+            "type": "text/html",
+            "value": "This CVE ID has been rejected or withdrawn by its CVE Numbering Authority."
+          }
+        ],
+        "value": "This CVE ID has been rejected or withdrawn by its CVE Numbering Authority."
+      }
+    ]
+  },
+  {
+    "identifier": "CVE-2026-22769",
+    "url": "https://cveawg.mitre.org/api/cve/CVE-2026-22769",
+    "sha256": "68c55e27fbde1c3216c48ce7dd123149c9cbf8abe6ec12f47ebba55a93634a32",
+    "state": "PUBLISHED",
+    "description": [
+      {
+        "lang": "en",
+        "supportingMedia": [
+          {
+            "base64": false,
+            "type": "text/html",
+            "value": "Dell RecoverPoint for Virtual Machines, versions prior to 6.0.3.1 HF1, contain a hardcoded credential vulnerability. This is considered critical as an unauthenticated remote attacker with knowledge of the hardcoded credential could potentially exploit this vulnerability leading to unauthorized access to the underlying operating system and root-level persistence. Dell recommends that customers upgrade or apply one of the remediations as soon as possible."
+          }
+        ],
+        "value": "Dell RecoverPoint for Virtual Machines, versions prior to 6.0.3.1 HF1, contain a hardcoded credential vulnerability. This is considered critical as an unauthenticated remote attacker with knowledge of the hardcoded credential could potentially exploit this vulnerability leading to unauthorized access to the underlying operating system and root-level persistence. Dell recommends that customers upgrade or apply one of the remediations as soon as possible."
+      }
+    ],
+    "affected": [
+      {
+        "defaultStatus": "unaffected",
+        "product": "RecoverPoint for Virtual Machines",
+        "vendor": "Dell",
+        "versions": [
+          {
+            "lessThan": "6.0.3.1 HF1",
+            "status": "affected",
+            "version": "5.3 SP4 P1",
+            "versionType": "semver"
+          }
+        ]
+      },
+      {
+        "defaultStatus": "unaffected",
+        "product": "RecoverPoint for Virtual Machines",
+        "vendor": "Dell",
+        "versions": [
+          {
+            "lessThan": "6.0.3.1 HF1",
+            "status": "affected",
+            "version": "6.0, 6.0 SP1, 6.0 SP1 P1, 6.0 SP1 P2, 6.0 SP2, 6.0 SP2 P1, 6.0 SP3, and 6.0 SP3 P1",
+            "versionType": "semver"
+          }
+        ]
+      }
+    ],
+    "rejectedReasons": []
+  },
+  {
+    "identifier": "CVE-2026-24127",
+    "url": "https://cveawg.mitre.org/api/cve/CVE-2026-24127",
+    "sha256": "1903413ffa8cde151271d32c6da4238b480d638726b0e06d4f8ba55901d72707",
+    "state": "PUBLISHED",
+    "description": [
+      {
+        "lang": "en",
+        "value": "Typemill is a flat-file, Markdown-based CMS designed for informational documentation websites. A reflected Cross-Site Scripting (XSS) exists in the login error view template `login.twig` of versions 2.19.1 and below. The `username` value can be echoed back without proper contextual encoding when authentication fails. An attacker can execute script in the login page context. This issue has been fixed in version 2.19.2."
+      }
+    ],
+    "affected": [
+      {
+        "vendor": "typemill",
+        "product": "typemill",
+        "versions": [
+          {
+            "version": "< v2.19.2",
+            "status": "affected"
+          }
+        ]
+      }
+    ],
+    "rejectedReasons": []
+  },
+  {
+    "identifier": "CVE-2026-33825",
+    "url": "https://cveawg.mitre.org/api/cve/CVE-2026-33825",
+    "sha256": "e54ff5d6e7c0b8a0fb7e0469f8a15ac8cbad2f555158a75f2127900423967f11",
+    "state": "PUBLISHED",
+    "description": [
+      {
+        "value": "Insufficient granularity of access control in Microsoft Defender allows an authorized attacker to elevate privileges locally.",
+        "lang": "en-US"
+      }
+    ],
+    "affected": [
+      {
+        "vendor": "Microsoft",
+        "product": "Microsoft Defender Antimalware Platform",
+        "versions": [
+          {
+            "version": "4.0.0.0",
+            "lessThan": "4.18.26030.3011",
+            "versionType": "custom",
+            "status": "affected"
+          }
+        ]
+      }
+    ],
+    "rejectedReasons": []
+  },
+  {
+    "identifier": "CVE-2026-33827",
+    "url": "https://cveawg.mitre.org/api/cve/CVE-2026-33827",
+    "sha256": "df5b91822a7e1101de535ed904a0741fb357286f47fdc8add9e5236cf98e06cf",
+    "state": "PUBLISHED",
+    "description": [
+      {
+        "value": "Concurrent execution using shared resource with improper synchronization ('race condition') in Windows TCP/IP allows an unauthorized attacker to execute code over a network.",
+        "lang": "en-US"
+      }
+    ],
+    "affected": [
+      {
+        "vendor": "Microsoft",
+        "product": "Windows 10 Version 1607",
+        "platforms": [
+          "32-bit Systems",
+          "x64-based Systems"
+        ],
+        "versions": [
+          {
+            "version": "10.0.14393.0",
+            "lessThan": "10.0.14393.9060",
+            "versionType": "custom",
+            "status": "affected"
+          }
+        ]
+      },
+      {
+        "vendor": "Microsoft",
+        "product": "Windows 10 Version 1809",
+        "platforms": [
+          "32-bit Systems",
+          "x64-based Systems"
+        ],
+        "versions": [
+          {
+            "version": "10.0.17763.0",
+            "lessThan": "10.0.17763.8644",
+            "versionType": "custom",
+            "status": "affected"
+          }
+        ]
+      },
+      {
+        "vendor": "Microsoft",
+        "product": "Windows 10 Version 21H2",
+        "platforms": [
+          "32-bit Systems",
+          "ARM64-based Systems",
+          "x64-based Systems"
+        ],
+        "versions": [
+          {
+            "version": "10.0.19044.0",
+            "lessThan": "10.0.19044.7184",
+            "versionType": "custom",
+            "status": "affected"
+          }
+        ]
+      },
+      {
+        "vendor": "Microsoft",
+        "product": "Windows 10 Version 22H2",
+        "platforms": [
+          "32-bit Systems",
+          "ARM64-based Systems",
+          "x64-based Systems"
+        ],
+        "versions": [
+          {
+            "version": "10.0.19045.0",
+            "lessThan": "10.0.19045.7184",
+            "versionType": "custom",
+            "status": "affected"
+          }
+        ]
+      },
+      {
+        "vendor": "Microsoft",
+        "product": "Windows 11 version 22H3",
+        "platforms": [
+          "ARM64-based Systems"
+        ],
+        "versions": [
+          {
+            "version": "10.0.22631.0",
+            "lessThan": "10.0.22631.6936",
+            "versionType": "custom",
+            "status": "affected"
+          }
+        ]
+      },
+      {
+        "vendor": "Microsoft",
+        "product": "Windows 11 Version 23H2",
+        "platforms": [
+          "x64-based Systems"
+        ],
+        "versions": [
+          {
+            "version": "10.0.22631.0",
+            "lessThan": "10.0.22631.6936",
+            "versionType": "custom",
+            "status": "affected"
+          }
+        ]
+      },
+      {
+        "vendor": "Microsoft",
+        "product": "Windows 11 Version 24H2",
+        "platforms": [
+          "ARM64-based Systems",
+          "x64-based Systems"
+        ],
+        "versions": [
+          {
+            "version": "10.0.26100.0",
+            "lessThan": "10.0.26100.8246",
+            "versionType": "custom",
+            "status": "affected"
+          }
+        ]
+      },
+      {
+        "vendor": "Microsoft",
+        "product": "Windows 11 Version 25H2",
+        "platforms": [
+          "ARM64-based Systems",
+          "x64-based Systems"
+        ],
+        "versions": [
+          {
+            "version": "10.0.26200.0",
+            "lessThan": "10.0.26200.8246",
+            "versionType": "custom",
+            "status": "affected"
+          }
+        ]
+      },
+      {
+        "vendor": "Microsoft",
+        "product": "Windows 11 version 26H1",
+        "platforms": [
+          "ARM64-based Systems",
+          "x64-based Systems"
+        ],
+        "versions": [
+          {
+            "version": "10.0.28000.0",
+            "lessThan": "10.0.28000.1836",
+            "versionType": "custom",
+            "status": "affected"
+          }
+        ]
+      },
+      {
+        "vendor": "Microsoft",
+        "product": "Windows Server 2012",
+        "platforms": [
+          "x64-based Systems"
+        ],
+        "versions": [
+          {
+            "version": "6.2.9200.0",
+            "lessThan": "6.2.9200.26026",
+            "versionType": "custom",
+            "status": "affected"
+          }
+        ]
+      },
+      {
+        "vendor": "Microsoft",
+        "product": "Windows Server 2012 (Server Core installation)",
+        "platforms": [
+          "x64-based Systems"
+        ],
+        "versions": [
+          {
+            "version": "6.2.9200.0",
+            "lessThan": "6.2.9200.26026",
+            "versionType": "custom",
+            "status": "affected"
+          }
+        ]
+      },
+      {
+        "vendor": "Microsoft",
+        "product": "Windows Server 2012 R2",
+        "platforms": [
+          "x64-based Systems"
+        ],
+        "versions": [
+          {
+            "version": "6.3.9600.0",
+            "lessThan": "6.3.9600.23132",
+            "versionType": "custom",
+            "status": "affected"
+          }
+        ]
+      },
+      {
+        "vendor": "Microsoft",
+        "product": "Windows Server 2012 R2 (Server Core installation)",
+        "platforms": [
+          "x64-based Systems"
+        ],
+        "versions": [
+          {
+            "version": "6.3.9600.0",
+            "lessThan": "6.3.9600.23132",
+            "versionType": "custom",
+            "status": "affected"
+          }
+        ]
+      },
+      {
+        "vendor": "Microsoft",
+        "product": "Windows Server 2016",
+        "platforms": [
+          "x64-based Systems"
+        ],
+        "versions": [
+          {
+            "version": "10.0.14393.0",
+            "lessThan": "10.0.14393.9060",
+            "versionType": "custom",
+            "status": "affected"
+          }
+        ]
+      },
+      {
+        "vendor": "Microsoft",
+        "product": "Windows Server 2016 (Server Core installation)",
+        "platforms": [
+          "x64-based Systems"
+        ],
+        "versions": [
+          {
+            "version": "10.0.14393.0",
+            "lessThan": "10.0.14393.9060",
+            "versionType": "custom",
+            "status": "affected"
+          }
+        ]
+      },
+      {
+        "vendor": "Microsoft",
+        "product": "Windows Server 2019",
+        "platforms": [
+          "x64-based Systems"
+        ],
+        "versions": [
+          {
+            "version": "10.0.17763.0",
+            "lessThan": "10.0.17763.8644",
+            "versionType": "custom",
+            "status": "affected"
+          }
+        ]
+      },
+      {
+        "vendor": "Microsoft",
+        "product": "Windows Server 2019 (Server Core installation)",
+        "platforms": [
+          "x64-based Systems"
+        ],
+        "versions": [
+          {
+            "version": "10.0.17763.0",
+            "lessThan": "10.0.17763.8644",
+            "versionType": "custom",
+            "status": "affected"
+          }
+        ]
+      },
+      {
+        "vendor": "Microsoft",
+        "product": "Windows Server 2022",
+        "platforms": [
+          "x64-based Systems"
+        ],
+        "versions": [
+          {
+            "version": "10.0.20348.0",
+            "lessThan": "10.0.20348.5020",
+            "versionType": "custom",
+            "status": "affected"
+          }
+        ]
+      },
+      {
+        "vendor": "Microsoft",
+        "product": "Windows Server 2022, 23H2 Edition (Server Core installation)",
+        "platforms": [
+          "x64-based Systems"
+        ],
+        "versions": [
+          {
+            "version": "10.0.25398.0",
+            "lessThan": "10.0.25398.2274",
+            "versionType": "custom",
+            "status": "affected"
+          }
+        ]
+      },
+      {
+        "vendor": "Microsoft",
+        "product": "Windows Server 2025",
+        "platforms": [
+          "x64-based Systems"
+        ],
+        "versions": [
+          {
+            "version": "10.0.26100.0",
+            "lessThan": "10.0.26100.32690",
+            "versionType": "custom",
+            "status": "affected"
+          }
+        ]
+      },
+      {
+        "vendor": "Microsoft",
+        "product": "Windows Server 2025 (Server Core installation)",
+        "platforms": [
+          "x64-based Systems"
+        ],
+        "versions": [
+          {
+            "version": "10.0.26100.0",
+            "lessThan": "10.0.26100.32690",
+            "versionType": "custom",
+            "status": "affected"
+          }
+        ]
+      }
+    ],
+    "rejectedReasons": []
+  },
+  {
+    "identifier": "CVE-2026-45411",
+    "url": "https://cveawg.mitre.org/api/cve/CVE-2026-45411",
+    "sha256": "2b8ac906bd709236658daea042a9e3340347c65dce785ac54c4cbbe67fa251ec",
+    "state": "PUBLISHED",
+    "description": [
+      {
+        "lang": "en",
+        "value": "vm2 is an open source vm/sandbox for Node.js. Prior to 3.11.3, it is possible to catch a host exception using the yield* expression inside an async generator. When the generator is closed using the return function, the value is awaited on and exceptions thrown in the then call will be caught by the runtime and passed to the yield* iterator as the next value. This allows attackers to write code which can escape from the VM2 sandbox and execute arbitrary commands on the host system. This vulnerability is fixed in 3.11.3."
+      }
+    ],
+    "affected": [
+      {
+        "vendor": "patriksimek",
+        "product": "vm2",
+        "versions": [
+          {
+            "version": "< 3.11.3",
+            "status": "affected"
+          }
+        ]
+      }
+    ],
+    "rejectedReasons": []
+  }
+]

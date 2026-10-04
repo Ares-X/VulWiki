@@ -26034,7 +26034,7 @@
         {
           "article": "Web安全/其他软件/杂项/【漏洞复现】CVE-2024-11680.md",
           "mode": "supplement",
-          "sha256": "9d70cc8a74f87a38c86d605594c58bed882d6da6f7d81cac9135fd4e759dc5b0"
+          "sha256": "8a00a5197be3494bdfc8a8127c674da5267a4f6bced733592235da93fc8dfe13"
         }
       ]
     },
@@ -36368,5 +36368,18 @@
     "historical_editorial_correction_overlay_preserved": true,
     "historical_gate_and_source_receipts_preserved": true,
     "reading_and_admission_counts_unchanged": true
+  },
+  "publication_role_correction_overlay": {
+    "date": "2026-10-04",
+    "source_base_commit": "1dc8c586830cecf1bb07350c934818173b6aca90",
+    "review": "docs/reviews/2026-10-04-search-polish/README.md",
+    "reading_receipts_unchanged": true,
+    "files": [
+      {
+        "article": "Web安全/其他软件/杂项/【漏洞复现】CVE-2024-11680.md",
+        "before_sha256": "9d70cc8a74f87a38c86d605594c58bed882d6da6f7d81cac9135fd4e759dc5b0",
+        "after_sha256": "8a00a5197be3494bdfc8a8127c674da5267a4f6bced733592235da93fc8dfe13"
+      }
+    ]
   }
 }

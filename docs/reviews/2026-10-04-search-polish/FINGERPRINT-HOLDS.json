@@ -1,0 +1,4424 @@
+{
+  "root": "/Users/aresx/Ares-X.github.io/source/wiki/VulWiki",
+  "base_commit": "1dc8c586830cecf1bb07350c934818173b6aca90",
+  "review_scope": "all fingerprint_unverified warnings listed in scope file; static source only",
+  "count": 78,
+  "items": [
+    {
+      "path": "IOT安全/D-Link/D-LinkDAR上网行为审计网关importhtml远程命令执行漏洞.md",
+      "sha256": "0d214ed1e1896205366fd5648281b69749d3c3ab28d7c685ab905dc6da3eaf9b",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "mask.style.visibility"
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 6,
+            "text": "fofa_unverified: \"mask.style.visibility\""
+          },
+          {
+            "line": 61,
+            "text": "+ fofa`\"mask.style.visibility\" && title=\"D-Link\"`"
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 61,
+            "text": "+ fofa`\"mask.style.visibility\" && title=\"D-Link\"`"
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 6,
+            "text": "fofa_unverified: \"mask.style.visibility\""
+          },
+          {
+            "line": 7,
+            "text": "title: \"D-Link DAR importhtml.php SQL 执行与文件写入链\""
+          },
+          {
+            "line": 60,
+            "text": "# 三、资产测绘"
+          },
+          {
+            "line": 61,
+            "text": "+ fofa`\"mask.style.visibility\" && title=\"D-Link\"`"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "The FOFA line contains a bare quoted string plus title predicate; parser requires a field/operator for every operand. No rewriting the bare string as body=."
+    },
+    {
+      "path": "IOT安全/其他设备/大华智慧园区综合管理平台devicePoint_addImgIco任意文件上传漏洞.md",
+      "sha256": "60c7ceb0c9bbd5dbf173124af874a45cf36c7ecbe120919610d4f58a50a6c51e",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "app=”dahua-智慧园区综合管理平台”"
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 6,
+            "text": "fofa_unverified: \"app=”dahua-智慧园区综合管理平台”\""
+          },
+          {
+            "line": 61,
+            "text": "+ FOFA：`app=”dahua-智慧园区综合管理平台”`"
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 61,
+            "text": "+ FOFA：`app=”dahua-智慧园区综合管理平台”`"
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 6,
+            "text": "fofa_unverified: \"app=”dahua-智慧园区综合管理平台”\""
+          },
+          {
+            "line": 7,
+            "text": "title: \"大华智慧园区综合管理平台devicePoint_addImgIco任意文件上传漏洞\""
+          },
+          {
+            "line": 39,
+            "text": "- FOFA使用弯引号会影响语法；缺修复/权限/版本"
+          },
+          {
+            "line": 60,
+            "text": "# 三、资产测绘"
+          },
+          {
+            "line": 61,
+            "text": "+ FOFA：`app=”dahua-智慧园区综合管理平台”`"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Original/current source uses typographic quotes in the app literal; wiki.fingerprint_valid rejects it and quote normalization would alter bytes."
+    },
+    {
+      "path": "Web安全/CMS内容/Seacms/seacms 最新版前台注入漏洞 - Panda - 专注于网络空间安全研究.md",
+      "sha256": "4dc20f2175a66188ee60ffb2b6dacb4b17a8d5f0e547f6ce00c55e1adf108b23",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "搜索可以看到存在 400 + 的记录："
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 13,
+            "text": "fofa_unverified: \"搜索可以看到存在 400 + 的记录：\""
+          },
+          {
+            "line": 59,
+            "text": "海洋影视管理系统（seacms，海洋 cms）是一套专为不同需求的站长而设计的视频点播系统，采用的是 php5.X+mysql 的架构，使用 fofa 搜索可以看到存在 400 + 的记录："
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 59,
+            "text": "海洋影视管理系统（seacms，海洋 cms）是一套专为不同需求的站长而设计的视频点播系统，采用的是 php5.X+mysql 的架构，使用 fofa 搜索可以看到存在 400 + 的记录："
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 2,
+            "text": "fofa: \"\""
+          },
+          {
+            "line": 13,
+            "text": "fofa_unverified: \"搜索可以看到存在 400 + 的记录：\""
+          },
+          {
+            "line": 14,
+            "text": "title: \"seacms 最新版前台注入漏洞 - Panda - 专注于网络空间安全研究\""
+          },
+          {
+            "line": 25,
+            "text": "- 测绘字段处置：原 fofa 字段为残缺表达式、错误平台语法或当前解析器不支持的形式，原值完整保留到 fofa_unverified，不把它当作已校验查询或受影响资产证据。正文检索方法保留；具体问题见下列原审阅项。"
+          },
+          {
+            "line": 31,
+            "text": "- **结论使用边界（1）**：frontmatter fofa是搜索可以看到存在400+的记录而非查询，明确抽取噪声；最新版无固定build。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。"
+          },
+          {
+            "line": 59,
+            "text": "海洋影视管理系统（seacms，海洋 cms）是一套专为不同需求的站长而设计的视频点播系统，采用的是 php5.X+mysql 的架构，使用 fofa 搜索可以看到存在 400 + 的记录："
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Original reports 400+ results; this is a count sentence, not a FOFA predicate."
+    },
+    {
+      "path": "Web安全/CMS内容/WordPress/WordPress Dokan Pro插件 SQL注入漏洞(CVE-2024-3922).md",
+      "sha256": "e9e85c86863e2de23601bda7585d10887eb7323968c50359d1db6bb9d51d67a1",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "/wp-content/plugins/dokan-pro/"
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 14,
+            "text": "fofa_unverified: \"/wp-content/plugins/dokan-pro/\""
+          },
+          {
+            "line": 69,
+            "text": "FOFA：\"/wp-content/plugins/dokan-pro/\""
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 69,
+            "text": "FOFA：\"/wp-content/plugins/dokan-pro/\""
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 3,
+            "text": "fofa: \"\""
+          },
+          {
+            "line": 14,
+            "text": "fofa_unverified: \"/wp-content/plugins/dokan-pro/\""
+          },
+          {
+            "line": 15,
+            "text": "title: \"WordPress Dokan Pro插件 SQL注入漏洞(CVE-2024-3922)\""
+          },
+          {
+            "line": 26,
+            "text": "- 测绘字段处置：原 fofa 字段为残缺表达式、错误平台语法或当前解析器不支持的形式，原值完整保留到 fofa_unverified，不把它当作已校验查询或受影响资产证据。正文检索方法保留；具体问题见下列原审阅项。"
+          },
+          {
+            "line": 69,
+            "text": "FOFA：\"/wp-content/plugins/dokan-pro/\""
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Only bare path /wp-content/plugins/dokan-pro/ is shown; no field/operator is supplied."
+    },
+    {
+      "path": "Web安全/ERP企业/博斯软件/博斯软件V6.0存在sql注入.md",
+      "sha256": "c6a299e71a36a50c76b019e8a9a292a2b7ba52d7a236e15625025cc004f20bca",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "web.title:"
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"web.title:\""
+          },
+          {
+            "line": 56,
+            "text": "+ hunter`web.title:\"欢迎使用 博斯软件\"`"
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 56,
+            "text": "+ hunter`web.title:\"欢迎使用 博斯软件\"`"
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 3,
+            "text": "title: \"博斯软件（厂商归属待核） logined.jsp SQL 注入\""
+          },
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"web.title:\""
+          },
+          {
+            "line": 40,
+            "text": "- Hunter标题语句截断误入fofa，HTTP/sqlmap标java"
+          },
+          {
+            "line": 55,
+            "text": "## 三、资产测绘"
+          },
+          {
+            "line": 56,
+            "text": "+ hunter`web.title:\"欢迎使用 博斯软件\"`"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Hunter line uses web.title:; the repository validator rejects colon and no punctuation rewrite is allowed."
+    },
+    {
+      "path": "Web安全/ERP企业/反序列化/浪潮GS企业管理软件xtdysrv存在反序列化漏洞.md",
+      "sha256": "781d070b642cbdcc2b994d9ab9f3b1aa2c3319e3ece88808801a3e2dd9056427",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "cwbase/web/scripts/aes.js"
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"cwbase/web/scripts/aes.js\""
+          },
+          {
+            "line": 55,
+            "text": "+ fofa`\"cwbase/web/scripts/aes.js\"`"
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 55,
+            "text": "+ fofa`\"cwbase/web/scripts/aes.js\"`"
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 3,
+            "text": "title: \"浪潮GS xtdysrv SavePrintFormatAssign .NET反序列化\""
+          },
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"cwbase/web/scripts/aes.js\""
+          },
+          {
+            "line": 54,
+            "text": "## 三、资产测绘"
+          },
+          {
+            "line": 55,
+            "text": "+ fofa`\"cwbase/web/scripts/aes.js\"`"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Only bare path cwbase/web/scripts/aes.js is shown, without a field comparison."
+    },
+    {
+      "path": "Web安全/ERP企业/用友FE/用友 FE templateOfTaohong_manager.jsp 目录遍历漏洞.md",
+      "sha256": "6758fefb92b3cebcbda1b0c463dd91e5cdbf1a85d67e6effb23222115595f129",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "\"FE协作\""
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 76,
+            "text": "\"FE协作\""
+          }
+        ],
+        "source_body_lines": [],
+        "prior_captured_context": [
+          {
+            "line": 3,
+            "text": "title: \"用友FE协作办公 templateOfTaohong目录遍历列举\""
+          },
+          {
+            "line": 18,
+            "text": "fofa_unverified: \"\\\"FE协作\\\"\""
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Only bare escaped product string FE协作 is available; no complete query expression."
+    },
+    {
+      "path": "Web安全/ERP企业/用友GRP-u8/X 友 U8 OA test-jsp SQL 注入漏洞.md",
+      "sha256": "00c0650ec031183940c2dd2a5419d330193731f370ce5f0caa3d002da4e80083",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "用友U8-OA"
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"用友U8-OA\""
+          },
+          {
+            "line": 65,
+            "text": "FOFA  \"用友U8-OA\""
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 65,
+            "text": "FOFA  \"用友U8-OA\""
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 3,
+            "text": "title: \"用友U8 OA test.jsp doType/S1 SQL 注入\""
+          },
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"用友U8-OA\""
+          },
+          {
+            "line": 65,
+            "text": "FOFA  \"用友U8-OA\""
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Only bare product string 用友U8-OA is shown."
+    },
+    {
+      "path": "Web安全/ERP企业/用友GRP-u8/用友GRP-U8行政事业内控管理软件SQL注入漏洞.md",
+      "sha256": "974583fc037e1cd245ad38f8712baabecc339bf9a7d52dc8aa95ec32dc466b56",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "\\_dork: “用友GRP-u8”"
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 18,
+            "text": "fofa_unverified: \"\\\\_dork: “用友GRP-u8”\""
+          },
+          {
+            "line": 61,
+            "text": "fofa\\_dork: “用友GRP-u8”"
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 61,
+            "text": "fofa\\_dork: “用友GRP-u8”"
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 3,
+            "text": "title: \"用友GRP-U8 Proxy SQL/命令执行片段\""
+          },
+          {
+            "line": 18,
+            "text": "fofa_unverified: \"\\\\_dork: “用友GRP-u8”\""
+          },
+          {
+            "line": 39,
+            "text": "- FOFA含_dork转义/曲引号，不是标准字段"
+          },
+          {
+            "line": 49,
+            "text": "title: '用友GRP-U8行政事业内控管理软件SQL注入漏洞'"
+          },
+          {
+            "line": 61,
+            "text": "fofa\\_dork: “用友GRP-u8”"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "The old fragment is explanatory _dork text with curly quotes, not a complete parser-valid query."
+    },
+    {
+      "path": "Web安全/ERP企业/用友NC/X 友 NCCloud FS 文件管理 SQL 注入.md",
+      "sha256": "af737c79adbefde7183e6fab93a07c229f07c80dfb470aca9b7d61a31b58abc1",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "NCCloud"
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 3,
+            "text": "title: \"用友NCCloud FS fs/console username SQL 注入\""
+          },
+          {
+            "line": 4,
+            "text": "product: \"用友NCCloud FS\""
+          },
+          {
+            "line": 18,
+            "text": "archive_url: \"https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/ERP%E4%BC%81%E4%B8%9A/%E7%94%A8%E5%8F%8BNC/X%20%E5%8F%8B%20NCCloud%20FS%20%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%20SQL%20%E6%B3%A8%E5%85%A5.md\""
+          },
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"NCCloud\""
+          },
+          {
+            "line": 25,
+            "text": "# 用友NCCloud FS fs/console username SQL 注入"
+          },
+          {
+            "line": 29,
+            "text": "- 对象与具体问题：用友NCCloud FS；fs/console username SQLi"
+          },
+          {
+            "line": 40,
+            "text": "- NCCloud应与NC子产品字段区分；无修复build，去推广"
+          },
+          {
+            "line": 56,
+            "text": "**用友 NCCloud FS 文件管理登录页面对用户名参数没有过滤，存在 SQL 注入**"
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 65,
+            "text": "FOFA \"NCCloud\""
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 3,
+            "text": "title: \"用友NCCloud FS fs/console username SQL 注入\""
+          },
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"NCCloud\""
+          },
+          {
+            "line": 65,
+            "text": "FOFA \"NCCloud\""
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Only bare NCCloud is shown; no field/operator is specified."
+    },
+    {
+      "path": "Web安全/ERP企业/用友NC/YonyouNC Tip.md",
+      "sha256": "37f6fd72060f93d39799984bf46e0899c77e2549389b6e25961be85b40ab6363",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "/platform/yonyou-yyy.js"
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"/platform/yonyou-yyy.js\""
+          },
+          {
+            "line": 199,
+            "text": "\"/platform/yonyou-yyy.js\" "
+          },
+          {
+            "line": 244,
+            "text": "\"/platform/yonyou-yyy.js\" "
+          }
+        ],
+        "source_body_lines": [],
+        "prior_captured_context": [
+          {
+            "line": 3,
+            "text": "title: \"用友NC/NCCloud及U8 OA 历史多漏洞/组件接口集合\""
+          },
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"/platform/yonyou-yyy.js\""
+          },
+          {
+            "line": 196,
+            "text": "Fofa:"
+          },
+          {
+            "line": 241,
+            "text": "Fofa:"
+          },
+          {
+            "line": 258,
+            "text": "header = {"
+          },
+          {
+            "line": 353,
+            "text": "Fofa:"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Only bare /platform/yonyou-yyy.js fragments and multiple headings occur; no uniquely attributable field-qualified expression."
+    },
+    {
+      "path": "Web安全/ERP企业/用友NC/用友 NC 漏洞汇总.md",
+      "sha256": "d543dc65bc7a644a23207837cbf68ecaf55782115c51439b318b4c5aab46deaa",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "/platform/yonyou-yyy.js"
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"/platform/yonyou-yyy.js\""
+          },
+          {
+            "line": 213,
+            "text": "\"/platform/yonyou-yyy.js\""
+          },
+          {
+            "line": 258,
+            "text": "\"/platform/yonyou-yyy.js\""
+          }
+        ],
+        "source_body_lines": [],
+        "prior_captured_context": [
+          {
+            "line": 3,
+            "text": "title: \"用友NC/NCCloud/U8 OA 历史漏洞汇总\""
+          },
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"/platform/yonyou-yyy.js\""
+          },
+          {
+            "line": 210,
+            "text": "Fofa:"
+          },
+          {
+            "line": 255,
+            "text": "Fofa:"
+          },
+          {
+            "line": 272,
+            "text": " header = {"
+          },
+          {
+            "line": 367,
+            "text": "Fofa:"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Only bare /platform/yonyou-yyy.js fragments and headings occur; no field-qualified expression."
+    },
+    {
+      "path": "Web安全/OA办公/泛微oa/泛微e-cology SQL注入漏洞.md",
+      "sha256": "10b8287f6b87989d560bc26afb58b5f08ef03aec1cd522dbf91b4185644e51d1",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "系统最新数据（一年内数据）显示全球范围内共有10266个泛微服务（基于jsp语言）。中国大陆使用数量最多，共有10166个，中国香港第二，共有51个，美国第三，共有15个，新加坡第"
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 18,
+            "text": "fofa_unverified: \"系统最新数据（一年内数据）显示全球范围内共有10266个泛微服务（基于jsp语言）。中国大陆使用数量最多，共有10166个，中国香港第二，共有51个，美国第三，共有15个，新加坡第\""
+          },
+          {
+            "line": 54,
+            "text": "目前FOFA系统最新数据（一年内数据）显示全球范围内共有10266个泛微服务（基于jsp语言）。中国大陆使用数量最多，共有10166个，中国香港第二，共有51个，美国第三，共有15个，新加坡第四，共有11个，英国第五，共有4个。"
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 54,
+            "text": "目前FOFA系统最新数据（一年内数据）显示全球范围内共有10266个泛微服务（基于jsp语言）。中国大陆使用数量最多，共有10166个，中国香港第二，共有51个，美国第三，共有15个，新加坡第四，共有11个，英国第五，共有4个。"
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 3,
+            "text": "title: \"泛微e-cology WorkflowCenterTreeData SQL注入历史通告\""
+          },
+          {
+            "line": 18,
+            "text": "fofa_unverified: \"系统最新数据（一年内数据）显示全球范围内共有10266个泛微服务（基于jsp语言）。中国大陆使用数量最多，共有10166个，中国香港第二，共有51个，美国第三，共有15个，新加坡第\""
+          },
+          {
+            "line": 54,
+            "text": "目前FOFA系统最新数据（一年内数据）显示全球范围内共有10266个泛微服务（基于jsp语言）。中国大陆使用数量最多，共有10166个，中国香港第二，共有51个，美国第三，共有15个，新加坡第四，共有11个，英国第五，共有4个。"
+          },
+          {
+            "line": 83,
+            "text": "目前FOFA客户端平台已经更新该远程命令执行漏洞的检测POC。"
+          },
+          {
+            "line": 107,
+            "text": "公司产品：FOFA-网络空间安全搜索引擎、FOEYE-网络空间检索系统、NOSEC-安全讯息平台。"
+          },
+          {
+            "line": 109,
+            "text": "为您提供：网络空间测绘、企业资产收集、企业威胁情报、应急响应服务。"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "FOFA deployment counts are prose, not a search expression."
+    },
+    {
+      "path": "Web安全/OA办公/泛微oa/漏洞速递 + 检测脚本  泛微 E-Office 任意文件上传漏洞 CVE-2021-49104.md",
+      "sha256": "dfe40f30e33de5deaa58e81145d96b69044472dfa86660220cd3d9dd9336280f",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "”工程师"
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 20,
+            "text": "fofa_unverified: \"”工程师\""
+          },
+          {
+            "line": 247,
+            "text": "【奇淫巧技】如何成为一个合格的“FOFA”工程师"
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 247,
+            "text": "【奇淫巧技】如何成为一个合格的“FOFA”工程师"
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 3,
+            "text": "title: \"泛微e-office UploadFile.php logo任意文件上传\""
+          },
+          {
+            "line": 20,
+            "text": "fofa_unverified: \"”工程师\""
+          },
+          {
+            "line": 40,
+            "text": "- fofa=工程师也由尾部推广误抽"
+          },
+          {
+            "line": 83,
+            "text": "app:\"泛微协同办公标准产品EOffice\""
+          },
+          {
+            "line": 247,
+            "text": "【奇淫巧技】如何成为一个合格的“FOFA”工程师"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Old fragment is the tail of an FOFA engineer title/link, not a fingerprint."
+    },
+    {
+      "path": "Web安全/OA办公/致远OA/致远伪 0day FastJson 利用链.md",
+      "sha256": "d6195ede3b9328d5547af76e0034f86e7ff3c6ea87bec85f030f7337dcac491a",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "seeyon"
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"seeyon\""
+          },
+          {
+            "line": 62,
+            "text": "FOFA：\"seeyon\" && city=\"xxxx\" && after=\"2021-01-01\""
+          },
+          {
+            "line": 75,
+            "text": "POST /seeyon/main.do?method=changeLocale HTTP/1.1"
+          },
+          {
+            "line": 245,
+            "text": "http://service.seeyon.com/patchtools/tp.html# /patchList?type=%E5%AE%89%E5%85%A8%E8%A1%A5%E4%B8%81&id=12 "
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 62,
+            "text": "FOFA：\"seeyon\" && city=\"xxxx\" && after=\"2021-01-01\""
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 3,
+            "text": "title: \"致远OA / Fastjson main.do changeLocale JSON反序列化链及Fastjson版本教程\""
+          },
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"seeyon\""
+          },
+          {
+            "line": 62,
+            "text": "FOFA：\"seeyon\" && city=\"xxxx\" && after=\"2021-01-01\""
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "The first operand “seeyon” is unqualified and later values include xxxx/placeholder text; parser-valid query cannot be recovered."
+    },
+    {
+      "path": "Web安全/OA办公/通达OA/通达 OA 漏洞比 getshell 还要牛的 system 权限.md",
+      "sha256": "8f1d8dbef06eb3f4af46f59cf2ed258524a81292a839d8939d85c70feb284def",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "的搜索可以看到通达 OA 系统应用非常广泛, 这就给同学们提供了大量的实战环境. 当然大家一定要做一个正直的白帽子."
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 20,
+            "text": "fofa_unverified: \"的搜索可以看到通达 OA 系统应用非常广泛, 这就给同学们提供了大量的实战环境. 当然大家一定要做一个正直的白帽子.\""
+          },
+          {
+            "line": 84,
+            "text": "通过 fofa 的搜索可以看到通达 OA 系统应用非常广泛, 这就给同学们提供了大量的实战环境. 当然大家一定要做一个正直的白帽子."
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 84,
+            "text": "通过 fofa 的搜索可以看到通达 OA 系统应用非常广泛, 这就给同学们提供了大量的实战环境. 当然大家一定要做一个正直的白帽子."
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 3,
+            "text": "title: \"通达OA ispirit上传认证绕过及gateway包含链\""
+          },
+          {
+            "line": 20,
+            "text": "fofa_unverified: \"的搜索可以看到通达 OA 系统应用非常广泛, 这就给同学们提供了大量的实战环境. 当然大家一定要做一个正直的白帽子.\""
+          },
+          {
+            "line": 40,
+            "text": "- FOFA字段整段宣传不是检索式；大量br/style污染代码，multipart name/filename丢失"
+          },
+          {
+            "line": 84,
+            "text": "通过 fofa 的搜索可以看到通达 OA 系统应用非常广泛, 这就给同学们提供了大量的实战环境. 当然大家一定要做一个正直的白帽子."
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Old fragment is narrative prevalence/ethics text; no search expression is supplied."
+    },
+    {
+      "path": "Web安全/云平台/TerraMaster NAS/TerraMasterTOSexportUser.php远程命令执行.md",
+      "sha256": "5e2f835a14b8594642ec7cac490f8bb8150d2eea2eca8184e72cd87c47e869a7",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "TerraMaster"
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 3,
+            "text": "title: \"TerraMaster TOS exportUser.php 远程命令执行\""
+          },
+          {
+            "line": 4,
+            "text": "product: \"TerraMaster TOS\""
+          },
+          {
+            "line": 13,
+            "text": "fofa_unverified: \"TerraMaster\""
+          },
+          {
+            "line": 22,
+            "text": "# TerraMaster TOS exportUser.php 远程命令执行"
+          },
+          {
+            "line": 36,
+            "text": "- FOFA元数据仅TerraMaster丢失header条件"
+          },
+          {
+            "line": 50,
+            "text": "+ TerraMaster TOS < 4.1.24"
+          },
+          {
+            "line": 53,
+            "text": "+ fofa`\"TerraMaster\" && header=\"TOS\"`"
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 36,
+            "text": "- FOFA元数据仅TerraMaster丢失header条件"
+          },
+          {
+            "line": 53,
+            "text": "+ fofa`\"TerraMaster\" && header=\"TOS\"`"
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 3,
+            "text": "title: \"TerraMaster TOS exportUser.php 远程命令执行\""
+          },
+          {
+            "line": 13,
+            "text": "fofa_unverified: \"TerraMaster\""
+          },
+          {
+            "line": 30,
+            "text": "- 保留完整原始资产表达式，未把无字段的搜索词猜改成新的 FOFA 条件；待校验字段语法。"
+          },
+          {
+            "line": 36,
+            "text": "- FOFA元数据仅TerraMaster丢失header条件"
+          },
+          {
+            "line": 52,
+            "text": "# 三、资产测绘"
+          },
+          {
+            "line": 53,
+            "text": "+ fofa`\"TerraMaster\" && header=\"TOS\"`"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Only bare TerraMaster is marked; no field comparison."
+    },
+    {
+      "path": "Web安全/云平台/TerraMaster NAS/漏洞复现 TerraMaster TOS api.php 信息泄露和远程命令执行.md",
+      "sha256": "0e58dc448bc765705465cc298a6558ff0fdef77d8d7236d6d5b33178f0061940",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "TerraMaster"
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 3,
+            "text": "title: \"漏洞复现 TerraMaster TOS api.php 信息泄露和远程命令执行\""
+          },
+          {
+            "line": 4,
+            "text": "product: \"TerraMaster TOS\""
+          },
+          {
+            "line": 13,
+            "text": "fofa_unverified: \"TerraMaster\""
+          },
+          {
+            "line": 23,
+            "text": "# 漏洞复现 TerraMaster TOS api.php 信息泄露和远程命令执行"
+          },
+          {
+            "line": 38,
+            "text": "- 元数据漏两个CVE且FOFA只保留TerraMaster丢header条件"
+          },
+          {
+            "line": 67,
+            "text": "**漏洞影响：TerraMaster TOS < 4.2.31**"
+          },
+          {
+            "line": 69,
+            "text": "**fofa：\"TerraMaster\" && header=\"TOS\"**"
+          },
+          {
+            "line": 91,
+            "text": "        用法：python3 TerraMaster TOS 信息泄露漏洞+RCE.py"
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 38,
+            "text": "- 元数据漏两个CVE且FOFA只保留TerraMaster丢header条件"
+          },
+          {
+            "line": 69,
+            "text": "**fofa：\"TerraMaster\" && header=\"TOS\"**"
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 3,
+            "text": "title: \"漏洞复现 TerraMaster TOS api.php 信息泄露和远程命令执行\""
+          },
+          {
+            "line": 13,
+            "text": "fofa_unverified: \"TerraMaster\""
+          },
+          {
+            "line": 32,
+            "text": "- 保留完整原始资产表达式，未把无字段的搜索词猜改成新的 FOFA 条件；待校验字段语法。"
+          },
+          {
+            "line": 38,
+            "text": "- 元数据漏两个CVE且FOFA只保留TerraMaster丢header条件"
+          },
+          {
+            "line": 69,
+            "text": "**fofa：\"TerraMaster\" && header=\"TOS\"**"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Only bare TerraMaster is marked; no field comparison."
+    },
+    {
+      "path": "Web安全/其他软件/杂项/万户协同办公平台 ezoffice 存在未授权访问漏洞 附 POC.md",
+      "sha256": "1ca16a499ed11140afdc569e610cf05063e3fcc1ea3d5686fe89877c36da5a42",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "查询语句"
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 20,
+            "text": "fofa_unverified: \"查询语句\""
+          },
+          {
+            "line": 41,
+            "text": "1. FOFA误抓查询语句"
+          },
+          {
+            "line": 87,
+            "text": "4.fofa 查询语句"
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 41,
+            "text": "1. FOFA误抓查询语句"
+          },
+          {
+            "line": 87,
+            "text": "4.fofa 查询语句"
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 7,
+            "text": "title: \"万户协同办公平台 ezoffice 存在未授权访问漏洞 附 POC\""
+          },
+          {
+            "line": 20,
+            "text": "fofa_unverified: \"查询语句\""
+          },
+          {
+            "line": 41,
+            "text": "1. FOFA误抓查询语句"
+          },
+          {
+            "line": 87,
+            "text": "4.fofa 查询语句"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "The source has heading “4.fofa 查询语句” but no query value."
+    },
+    {
+      "path": "Web安全/其他软件/杂项/未公开漏洞 Crocus 任意文件下载漏洞.md",
+      "sha256": "80724a428cca7325501b3691d1f4ab601cb3cc6142836b4f9ba9fc1f588ae01a",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "搜索语句**"
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 20,
+            "text": "fofa_unverified: \"搜索语句**\""
+          },
+          {
+            "line": 78,
+            "text": "**fofa 搜索语句**"
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 78,
+            "text": "**fofa 搜索语句**"
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 7,
+            "text": "title: \"未公开漏洞 Crocus 任意文件下载漏洞\""
+          },
+          {
+            "line": 20,
+            "text": "fofa_unverified: \"搜索语句**\""
+          },
+          {
+            "line": 41,
+            "text": "1. FOFA字段误抓搜索语句标题"
+          },
+          {
+            "line": 78,
+            "text": "**fofa 搜索语句**"
+          },
+          {
+            "line": 80,
+            "text": "body=\"inp_verification\" 或 icon_hash=\"1819219374\""
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Source uses Chinese 或 between body=\"inp_verification\" and icon_hash=\"1819219374\"; no literal query operator connects them."
+    },
+    {
+      "path": "Web安全/其他软件/杂项/某 RCE 漏洞复现、排查与监测.md",
+      "sha256": "b41cdc769e16a69ea217f18f0df5f600d5da95a6bd337adacfb7f760b271a5e9",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "是一致的，这里匹配的是"
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 21,
+            "text": "fofa_unverified: \"是一致的，这里匹配的是\""
+          },
+          {
+            "line": 196,
+            "text": "Goby 语法和 fofa 是一致的，这里匹配的是 \"GET /\" 的应答，因为 Goby 在做资产探测的时候不会探测太多 URL。"
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 196,
+            "text": "Goby 语法和 fofa 是一致的，这里匹配的是 \"GET /\" 的应答，因为 Goby 在做资产探测的时候不会探测太多 URL。"
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 8,
+            "text": "title: \"某 RCE 漏洞复现、排查与监测\""
+          },
+          {
+            "line": 21,
+            "text": "fofa_unverified: \"是一致的，这里匹配的是\""
+          },
+          {
+            "line": 46,
+            "text": "1. 大量代码块整体错位：BPF位置是隐藏调试器、PsExec位置是FOFA、隐藏调试器位置是Python正则、Python位置是pcre工具、PCRE位置是Sysmon等，显著破坏操作"
+          },
+          {
+            "line": 47,
+            "text": "2. fofa元数据抽成叙述句，正文完整指纹却在错误节"
+          },
+          {
+            "line": 153,
+            "text": "body=\"Verification failure\" && body=\"false\" && header=\"Cache-Control: no-cache\" && header=\"Content-Length: 46\" && header=\"Content-Type: application/json\""
+          },
+          {
+            "line": 196,
+            "text": "Goby 语法和 fofa 是一致的，这里匹配的是 \"GET /\" 的应答，因为 Goby 在做资产探测的时候不会探测太多 URL。"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "The expression is discussed as a Goby response signature; no explicit FOFA query is tied to this record."
+    },
+    {
+      "path": "Web安全/其他软件/杂项/附 EXP 常见的未授权访问漏洞.md",
+      "sha256": "70ed49587c58b708a16ee8af9a72d49ddc5b27c9e7d36cf6ecb11626f6704a82",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "” 工程师](http://mp.weixin.qq.com/s?__biz=MzI1NTM4ODIxMw==&mid=2247485135&idx=1&sn=f872054b31"
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 20,
+            "text": "fofa_unverified: \"” 工程师](http://mp.weixin.qq.com/s?__biz=MzI1NTM4ODIxMw==&mid=2247485135&idx=1&sn=f872054b31\""
+          },
+          {
+            "line": 883,
+            "text": "[【奇淫巧技】如何成为一个合格的 “FOFA” 工程师](http://mp.weixin.qq.com/s?__biz=MzI1NTM4ODIxMw==&mid=2247485135&idx=1&sn=f872054b31429e244a6e56385698404a&chksm=ea37f995dd40708367700fc53cca4ce8cb490bc1fe23dd1f167d86c0d2014a0c03005af99b89&scene=21#wechat_redirect)"
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 883,
+            "text": "[【奇淫巧技】如何成为一个合格的 “FOFA” 工程师](http://mp.weixin.qq.com/s?__biz=MzI1NTM4ODIxMw==&mid=2247485135&idx=1&sn=f872054b31429e244a6e56385698404a&chksm=ea37f995dd40708367700fc53cca4ce8cb490bc1fe23dd1f167d86c0d2014a0c03005af99b89&scene=21#wechat_redirect)"
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 7,
+            "text": "title: \"附 EXP 常见的未授权访问漏洞\""
+          },
+          {
+            "line": 20,
+            "text": "fofa_unverified: \"” 工程师](http://mp.weixin.qq.com/s?__biz=MzI1NTM4ODIxMw==&mid=2247485135&idx=1&sn=f872054b31\""
+          },
+          {
+            "line": 44,
+            "text": "2. CNVD-2021-30167仅尾部用友推荐链接，非本文漏洞，fofa字段抓入推荐文章标题和截断URL属错误元数据"
+          },
+          {
+            "line": 439,
+            "text": "        header = dict()"
+          },
+          {
+            "line": 449,
+            "text": "        header = buffer.read(int(self.__FCGI_HEADER_SIZE))"
+          },
+          {
+            "line": 451,
+            "text": "        if not header:"
+          },
+          {
+            "line": 883,
+            "text": "[【奇淫巧技】如何成为一个合格的 “FOFA” 工程师](http://mp.weixin.qq.com/s?__biz=MzI1NTM4ODIxMw==&mid=2247485135&idx=1&sn=f872054b31429e244a6e56385698404a&chksm=ea37f995dd40708367700fc53cca4ce8cb490bc1fe23dd1f167d86c0d2014a0c03005af99b89&scene=21#wechat_redirect)"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Old fragment is the tail of a FOFA engineer hyperlink, not a query."
+    },
+    {
+      "path": "Web安全/商业软件/C-Lodop打印/C-Lodop打印服务系统存在任意文件读取漏洞.md",
+      "sha256": "b9a7a8ab569a55be255697897d5dfc12db06c5fca4cbbcd24681e282dfc37cae",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "C-Lodop"
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 3,
+            "text": "title: \"C-Lodop打印服务 路径读取\""
+          },
+          {
+            "line": 4,
+            "text": "product: \"C-Lodop打印服务\""
+          },
+          {
+            "line": 18,
+            "text": "archive_url: \"https://github.com/Ares-X/VulWiki/blob/41940cb0038d09ca5aaddbe5bffb923e423d210f/Web%E5%AE%89%E5%85%A8/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6/C-Lodop%E6%89%93%E5%8D%B0/C-Lodop%E6%89%93%E5%8D%B0%E6%9C%8D%E5%8A%A1%E7%B3%BB%E7%BB%9F%E5%AD%98%E5%9C%A8%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E.md\""
+          },
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"C-Lodop\""
+          },
+          {
+            "line": 25,
+            "text": "# C-Lodop打印服务 路径读取"
+          },
+          {
+            "line": 29,
+            "text": "- 对象与具体问题：C-Lodop打印服务；路径读取"
+          },
+          {
+            "line": 49,
+            "text": "C-Lodop云打印服务器是一款非常好用且受欢迎的专业云打印软件，简单实用，易操作。攻击者可利用此漏洞获取服务器上的任意文件，包括数据库凭据、API密钥、配置文件等，从而获取系统权限和敏感信息。"
+          },
+          {
+            "line": 52,
+            "text": "+ C-Lodop打印服务系统"
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 55,
+            "text": "+ fofa`\"C-Lodop\" && icon_hash=\"-329747115\"`"
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 3,
+            "text": "title: \"C-Lodop打印服务 路径读取\""
+          },
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"C-Lodop\""
+          },
+          {
+            "line": 54,
+            "text": "## 三、资产测绘"
+          },
+          {
+            "line": 55,
+            "text": "+ fofa`\"C-Lodop\" && icon_hash=\"-329747115\"`"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Only bare C-Lodop is present; no field/operator expression."
+    },
+    {
+      "path": "Web安全/商业软件/JEEWMS/JeeWMS cgFormBuildController.do SQL注入漏洞(CVE-2025-0391).md",
+      "sha256": "23ccf6951460c4aff84f7fa6e05ada88a36b58a8df05091850860e181ea438b0",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "body="
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 20,
+            "text": "fofa_unverified: \"body=\""
+          },
+          {
+            "line": 81,
+            "text": "FOFA：body=\"url:userController.do?userOrgSelect&userId=\" && \"loginController.do?changeDefaultOrg\""
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 81,
+            "text": "FOFA：body=\"url:userController.do?userOrgSelect&userId=\" && \"loginController.do?changeDefaultOrg\""
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 3,
+            "text": "title: \"JeeWMS cgFormBuild id SQL 注入\""
+          },
+          {
+            "line": 20,
+            "text": "fofa_unverified: \"body=\""
+          },
+          {
+            "line": 42,
+            "text": "- FOFA第二裸字符串/元数据残缺，HTTP应围栏"
+          },
+          {
+            "line": 81,
+            "text": "FOFA：body=\"url:userController.do?userOrgSelect&userId=\" && \"loginController.do?changeDefaultOrg\""
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Source has body=\"url:...\" && \"loginController...\"; RHS is unqualified and validator rejects it."
+    },
+    {
+      "path": "Web安全/商业软件/JEEWMS/JeeWMS cgReportController.do SQL注入漏洞(CVE-2024-57760).md",
+      "sha256": "f35a8487a5fd07f7b61919fadc031a2c6541ac21a95f1cef9ee8e975b78ff1e2",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "body="
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 20,
+            "text": "fofa_unverified: \"body=\""
+          },
+          {
+            "line": 79,
+            "text": "FOFA：body=\"url:userController.do?userOrgSelect&userId=\" && \"loginController.do?changeDefaultOrg\""
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 79,
+            "text": "FOFA：body=\"url:userController.do?userOrgSelect&userId=\" && \"loginController.do?changeDefaultOrg\""
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 3,
+            "text": "title: \"JeeWMS cgReport configId SQL 注入\""
+          },
+          {
+            "line": 20,
+            "text": "fofa_unverified: \"body=\""
+          },
+          {
+            "line": 40,
+            "text": "- 缺文本报错与固定版，在野声明不可当事实；FOFA抽取缺失"
+          },
+          {
+            "line": 79,
+            "text": "FOFA：body=\"url:userController.do?userOrgSelect&userId=\" && \"loginController.do?changeDefaultOrg\""
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Source has body=\"url:...\" && \"loginController...\"; RHS is unqualified and validator rejects it."
+    },
+    {
+      "path": "Web安全/商业软件/JEEWMS/JeeWMS cgformTemplateController.do 任意文件读取漏洞(CVE-2024-27765).md",
+      "sha256": "70398c27fa4c4753abbad07db06b087eac228fdb4ae3dd2306392a4426c3838d",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "body="
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 20,
+            "text": "fofa_unverified: \"body=\""
+          },
+          {
+            "line": 80,
+            "text": "FOFA：body=\"url:userController.do?userOrgSelect&userId=\" && \"loginController.do?changeDefaultOrg\""
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 80,
+            "text": "FOFA：body=\"url:userController.do?userOrgSelect&userId=\" && \"loginController.do?changeDefaultOrg\""
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 3,
+            "text": "title: \"JeeWMS cgformTemplate showPic路径读取\""
+          },
+          {
+            "line": 20,
+            "text": "fofa_unverified: \"body=\""
+          },
+          {
+            "line": 80,
+            "text": "FOFA：body=\"url:userController.do?userOrgSelect&userId=\" && \"loginController.do?changeDefaultOrg\""
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Source has body=\"url:...\" && \"loginController...\"; RHS is unqualified and validator rejects it."
+    },
+    {
+      "path": "Web安全/商业软件/JEEWMS/JeeWMS graphReportController.do SQL注入漏洞(CVE-2025-0392).md",
+      "sha256": "5377e5d3e45b6cce39a5991c69d05b8d9edb6fe5878108072a7e9d2a7fe87d81",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "body="
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 20,
+            "text": "fofa_unverified: \"body=\""
+          },
+          {
+            "line": 80,
+            "text": "FOFA：body=\"url:userController.do?userOrgSelect&userId=\" && \"loginController.do?changeDefaultOrg\""
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 80,
+            "text": "FOFA：body=\"url:userController.do?userOrgSelect&userId=\" && \"loginController.do?changeDefaultOrg\""
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 3,
+            "text": "title: \"JeeWMS graphReport store_code SQL 注入\""
+          },
+          {
+            "line": 20,
+            "text": "fofa_unverified: \"body=\""
+          },
+          {
+            "line": 41,
+            "text": "- 版本安全版、在野与CVE主源欠缺；FOFA残缺，结果仅图"
+          },
+          {
+            "line": 80,
+            "text": "FOFA：body=\"url:userController.do?userOrgSelect&userId=\" && \"loginController.do?changeDefaultOrg\""
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Source has body=\"url:...\" && \"loginController...\"; RHS is unqualified and validator rejects it."
+    },
+    {
+      "path": "Web安全/商业软件/Quicklancer/Quicklancerlisting存在SQL注入漏洞.md",
+      "sha256": "9eb64f935f4717b6068769bb31558df20869ec4def8d916865ec9f6c270a8dac",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "service_fragments/css/gig_detail.css"
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"service_fragments/css/gig_detail.css\""
+          },
+          {
+            "line": 55,
+            "text": "+ fofa`\"service_fragments/css/gig_detail.css\"`"
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 55,
+            "text": "+ fofa`\"service_fragments/css/gig_detail.css\"`"
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 3,
+            "text": "title: \"Quicklancer listing range2 SQL注入声称\""
+          },
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"service_fragments/css/gig_detail.css\""
+          },
+          {
+            "line": 54,
+            "text": "## 三、资产测绘"
+          },
+          {
+            "line": 55,
+            "text": "+ fofa`\"service_fragments/css/gig_detail.css\"`"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Only bare path service_fragments/css/gig_detail.css is shown."
+    },
+    {
+      "path": "Web安全/商业软件/VEXUS交易所/VEXUS多语言货币交易所存在未授权访问漏洞.md",
+      "sha256": "9896e2e895461105617d4dccc440a6985ee1930f94ba67e7ac13eb6afda9f505",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "image/n2.png"
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"image/n2.png\""
+          },
+          {
+            "line": 56,
+            "text": "+ fofa`\"image/n2.png\" && \"public/login.action\"`"
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 56,
+            "text": "+ fofa`\"image/n2.png\" && \"public/login.action\"`"
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 3,
+            "text": "title: \"VEXUS多语言交易所 Druid暴露与会话访问链\""
+          },
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"image/n2.png\""
+          },
+          {
+            "line": 55,
+            "text": "## 三、资产测绘"
+          },
+          {
+            "line": 56,
+            "text": "+ fofa`\"image/n2.png\" && \"public/login.action\"`"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Two bare quoted strings are joined with &&, but neither has a query field; no body= prefix is inferred."
+    },
+    {
+      "path": "Web安全/商业软件/万能门店小程序/微信万能门店小程序系统存在SQL注入漏洞.md",
+      "sha256": "5b27801873dbf65cb0191a5f6f54505bb61871eaef3ba5f08a307b92fbc96691",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "<font style="
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"<font style=\""
+          }
+        ],
+        "source_body_lines": [],
+        "prior_captured_context": [
+          {
+            "line": 3,
+            "text": "title: \"万能门店小程序 doPageGetFormList suid SQL注入\""
+          },
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"<font style=\""
+          },
+          {
+            "line": 53,
+            "text": "## 三、资产测绘"
+          },
+          {
+            "line": 54,
+            "text": "+ fofa`\"/comhome/cases/index.html\"`"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "HTML span contains only bare path /comhome/cases/index.html; no field comparison."
+    },
+    {
+      "path": "Web安全/商业软件/万能门店小程序/微信万能门店小程序系统存在任意文件读取漏洞.md",
+      "sha256": "4c808c67b1185a87a6e0bb61394527926a5c826f0325ae81e2b8a79670387d2c",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "<font style="
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"<font style=\""
+          }
+        ],
+        "source_body_lines": [],
+        "prior_captured_context": [
+          {
+            "line": 3,
+            "text": "title: \"万能门店小程序 _requestPost URL file协议文件读取\""
+          },
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"<font style=\""
+          },
+          {
+            "line": 40,
+            "text": "- FOFA HTML标记污染，HTTP错标Java，缺修复和鉴权证据"
+          },
+          {
+            "line": 54,
+            "text": "## 三、资产测绘"
+          },
+          {
+            "line": 55,
+            "text": "+ fofa`\"/comhome/cases/index.html\"`"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "HTML span contains only bare path /comhome/cases/index.html; no field comparison."
+    },
+    {
+      "path": "Web安全/商业软件/优客API接口管理系统/优客API接口管理系统存在SQL注入漏洞.md",
+      "sha256": "36c5465cbd5a810a763b2124dcb2417e9a538140b81043975b9d42c85fb2c1d0",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "plain"
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"plain\""
+          },
+          {
+            "line": 38,
+            "text": "- FOFA元数据是代码语言plain，不是搜索语句，明确抽取污染"
+          },
+          {
+            "line": 58,
+            "text": "```plain"
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 38,
+            "text": "- FOFA元数据是代码语言plain，不是搜索语句，明确抽取污染"
+          },
+          {
+            "line": 58,
+            "text": "```plain"
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 3,
+            "text": "title: \"优客API接口管理系统 index/index/doc id SQL注入\""
+          },
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"plain\""
+          },
+          {
+            "line": 38,
+            "text": "- FOFA元数据是代码语言plain，不是搜索语句，明确抽取污染"
+          },
+          {
+            "line": 55,
+            "text": "## 三、资产测绘"
+          },
+          {
+            "line": 56,
+            "text": "+ fofa"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "“plain” is a code-fence language tag, not a query."
+    },
+    {
+      "path": "Web安全/商业软件/优客API接口管理系统/优客API接口管理系统存在信息泄露漏洞.md",
+      "sha256": "bac3ef36b1d7533831d0efa3b78d8703824f4721b24e5526d2ead7a7a22d7ef6",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "plain"
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"plain\""
+          },
+          {
+            "line": 40,
+            "text": "- FOFA元数据plain是代码语言误抽取；无修复/配置证据"
+          },
+          {
+            "line": 57,
+            "text": "```plain"
+          },
+          {
+            "line": 65,
+            "text": "```plain"
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 40,
+            "text": "- FOFA元数据plain是代码语言误抽取；无修复/配置证据"
+          },
+          {
+            "line": 57,
+            "text": "```plain"
+          },
+          {
+            "line": 65,
+            "text": "```plain"
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 3,
+            "text": "title: \"优客API接口管理系统 runtime日志暴露声称\""
+          },
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"plain\""
+          },
+          {
+            "line": 40,
+            "text": "- FOFA元数据plain是代码语言误抽取；无修复/配置证据"
+          },
+          {
+            "line": 54,
+            "text": "## 三、资产测绘"
+          },
+          {
+            "line": 55,
+            "text": "+ fofa"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "“plain” is a code-fence language tag, not a query."
+    },
+    {
+      "path": "Web安全/商业软件/会捷通云视讯/会捷通云视讯平台存在登录绕过漏洞和未授权任意文件读取漏洞.md",
+      "sha256": "4c5efdd64ff3faa78cc4efae4cd5cd953c7fe68a84b74cb4a82764d6843ebe0b",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "body="
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"body=\""
+          },
+          {
+            "line": 79,
+            "text": "fofa:body=\"/him/api/rest/v1.0/node/role"
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 79,
+            "text": "fofa:body=\"/him/api/rest/v1.0/node/role"
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 3,
+            "text": "title: \"会捷通云视讯 响应替换登录与fileDownload任意读取两实体\""
+          },
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"body=\""
+          },
+          {
+            "line": 39,
+            "text": "- 请求响应用竖线/粗体而非代码块，FOFA缺闭合引号，响应长度需核"
+          },
+          {
+            "line": 79,
+            "text": "fofa:body=\"/him/api/rest/v1.0/node/role"
+          },
+          {
+            "line": 102,
+            "text": "**Server: Restlet-Framework/2.1.1**"
+          },
+          {
+            "line": 144,
+            "text": "**Server: Restlet-Framework/2.1.1**"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Original query stops at body=\"/him/api/rest/v1.0/node/role without closing the value; missing suffix is unknown."
+    },
+    {
+      "path": "Web安全/商业软件/子辰视讯/深圳市子辰视讯科技有限公司酒店智慧营销IPTV系统存在sql注入.md",
+      "sha256": "25fe7dd709bb30cf1a29f44529e02b21ada2edd0efa922177ffdeaf6d7f0da22",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "web.title:"
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"web.title:\""
+          },
+          {
+            "line": 56,
+            "text": "+ hunter`web.title:\"登录 - 酒店智慧营销IPTV系统\"`"
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 56,
+            "text": "+ hunter`web.title:\"登录 - 酒店智慧营销IPTV系统\"`"
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 3,
+            "text": "title: \"子辰视讯酒店智慧营销IPTV userlogin username SQL注入声称\""
+          },
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"web.title:\""
+          },
+          {
+            "line": 39,
+            "text": "- Hunter web.title冒号语法需核，元数据残缺"
+          },
+          {
+            "line": 55,
+            "text": "## 三、资产测绘"
+          },
+          {
+            "line": 56,
+            "text": "+ hunter`web.title:\"登录 - 酒店智慧营销IPTV系统\"`"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Hunter line uses web.title: and fails the repository validator."
+    },
+    {
+      "path": "Web安全/商业软件/小说漫画系统/微信公众号小说漫画系统Upload存在任意文件写入漏洞.md",
+      "sha256": "9918c7e73bb595d429950e58788ff8b8e69e35add8599976145dd42ca9ab434c",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "/Public/home/mhjs/jquery.js"
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"/Public/home/mhjs/jquery.js\""
+          },
+          {
+            "line": 56,
+            "text": "+ fofa`\"/Public/home/mhjs/jquery.js\"`"
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 56,
+            "text": "+ fofa`\"/Public/home/mhjs/jquery.js\"`"
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 3,
+            "text": "title: \"微信公众号小说漫画系统（源码发行方未明） IndexAjax Upload data URI文件写入\""
+          },
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"/Public/home/mhjs/jquery.js\""
+          },
+          {
+            "line": 55,
+            "text": "## 三、资产测绘"
+          },
+          {
+            "line": 56,
+            "text": "+ fofa`\"/Public/home/mhjs/jquery.js\"`"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Only a bare path is shown, without field/operator."
+    },
+    {
+      "path": "Web安全/商业软件/小说漫画系统/微信公众号小说漫画系统fileupload.php存在任意文件写入漏洞.md",
+      "sha256": "9b83775f780e47c3dd7d046d0bb1db92dc0f4aba30b0f4c5ea46d23014017050",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "/Public/home/mhjs/jquery.js"
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"/Public/home/mhjs/jquery.js\""
+          },
+          {
+            "line": 56,
+            "text": "+ fofa`\"/Public/home/mhjs/jquery.js\"`"
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 56,
+            "text": "+ fofa`\"/Public/home/mhjs/jquery.js\"`"
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 3,
+            "text": "title: \"微信公众号小说漫画系统内置WebUploader fileupload.php任意后缀上传\""
+          },
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"/Public/home/mhjs/jquery.js\""
+          },
+          {
+            "line": 55,
+            "text": "## 三、资产测绘"
+          },
+          {
+            "line": 56,
+            "text": "+ fofa`\"/Public/home/mhjs/jquery.js\"`"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Only a bare path is shown, without field/operator."
+    },
+    {
+      "path": "Web安全/商业软件/广告任务平台/微信广告任务平台ajax_upload存在任意文件上传漏洞.md",
+      "sha256": "710eea54b2a9ea2b47f10d145ed4e6f829ccbf74a8fb06193a7cf779fd6ba0fe",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "/tpl/Public/js/func.js"
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"/tpl/Public/js/func.js\""
+          },
+          {
+            "line": 56,
+            "text": "+ fofa`\"/tpl/Public/js/func.js\"`"
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 56,
+            "text": "+ fofa`\"/tpl/Public/js/func.js\"`"
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 3,
+            "text": "title: \"微信广告任务平台（源码发行方未知） ajax_upload PHP上传\""
+          },
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"/tpl/Public/js/func.js\""
+          },
+          {
+            "line": 55,
+            "text": "## 三、资产测绘"
+          },
+          {
+            "line": 56,
+            "text": "+ fofa`\"/tpl/Public/js/func.js\"`"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Only a bare path is shown, without field/operator."
+    },
+    {
+      "path": "Web安全/商业软件/微信公众号商家收银台小程序系统/微信公众号商家收银台小程序系统存在任意文件上传漏洞.md",
+      "sha256": "d6f69c59cfa8a3bfef449ee6f89d204b64ad227d1af362d302920fb992f79666",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "/index.php?s=platform/index/captcha"
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"/index.php?s=platform/index/captcha\""
+          },
+          {
+            "line": 56,
+            "text": "+ fofa`\"/index.php?s=platform/index/captcha\"`"
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 56,
+            "text": "+ fofa`\"/index.php?s=platform/index/captcha\"`"
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 3,
+            "text": "title: \"商家收银台小程序源码（厂商未明） upload.iframe FileType任意后缀上传\""
+          },
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"/index.php?s=platform/index/captcha\""
+          },
+          {
+            "line": 55,
+            "text": "## 三、资产测绘"
+          },
+          {
+            "line": 56,
+            "text": "+ fofa`\"/index.php?s=platform/index/captcha\"`"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Only a bare path is shown, without field/operator."
+    },
+    {
+      "path": "Web安全/商业软件/懒人网址导航/懒人网址导航系统search存在SQL注入漏洞.md",
+      "sha256": "55aaf96be1291df71d57e995bf4d990d3300750455d25de4cd22c85afc3eb722",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "./templates/antidote/css/style.css"
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"./templates/antidote/css/style.css\""
+          },
+          {
+            "line": 56,
+            "text": "+ fofa`\"./templates/antidote/css/style.css`"
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 56,
+            "text": "+ fofa`\"./templates/antidote/css/style.css`"
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 3,
+            "text": "title: \"懒人网址导航 search keyword SQL注入\""
+          },
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"./templates/antidote/css/style.css\""
+          },
+          {
+            "line": 39,
+            "text": "- FOFA字符串缺闭合引号，搜索语句损坏"
+          },
+          {
+            "line": 55,
+            "text": "## 三、资产测绘"
+          },
+          {
+            "line": 56,
+            "text": "+ fofa`\"./templates/antidote/css/style.css`"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Only a bare path is shown; no complete comparison."
+    },
+    {
+      "path": "Web安全/商业软件/数字系统/酒店宽带运营系统server_ping远程命令执行漏洞.md",
+      "sha256": "47c6bdf35a58b6b67c1105ef82a7ad9340623abab800b324ff0da740da7fe5ba",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "酒店宽带运营"
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 3,
+            "text": "title: \"安美数字酒店宽带运营 server_ping ip命令注入\""
+          },
+          {
+            "line": 4,
+            "text": "product: \"安美数字酒店宽带运营\""
+          },
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"酒店宽带运营\""
+          },
+          {
+            "line": 25,
+            "text": "# 安美数字酒店宽带运营 server_ping ip命令注入"
+          },
+          {
+            "line": 29,
+            "text": "- 对象与具体问题：安美数字酒店宽带运营；server_ping ip命令注入"
+          },
+          {
+            "line": 49,
+            "text": "安美数字 酒店宽带运营系统 server_ping.php 存在远程命令执行漏洞，漏洞文件中ip参数未过滤造成命令执行。"
+          },
+          {
+            "line": 52,
+            "text": "+ 安美数字 酒店宽带运营系统"
+          },
+          {
+            "line": 55,
+            "text": "+ fofa`\"酒店宽带运营\"`"
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 55,
+            "text": "+ fofa`\"酒店宽带运营\"`"
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 3,
+            "text": "title: \"安美数字酒店宽带运营 server_ping ip命令注入\""
+          },
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"酒店宽带运营\""
+          },
+          {
+            "line": 54,
+            "text": "## 三、资产测绘"
+          },
+          {
+            "line": 55,
+            "text": "+ fofa`\"酒店宽带运营\"`"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Only bare product phrase 酒店宽带运营 is shown."
+    },
+    {
+      "path": "Web安全/商业软件/某行业通用流程管控平台/某行业通用流程管控平台 RCE 之旅.md",
+      "sha256": "797495f1e363a28f86fa1884ad982870f49d7f125714a7765b5eef60c948629c",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": ", 有一千多个。"
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 19,
+            "text": "fofa_unverified: \", 有一千多个。\""
+          },
+          {
+            "line": 66,
+            "text": "某一天 7iny 好兄弟找到一套源代码 (安装包)，看了一下不少问题。就从这套系统代码开始渗透吧。看了一下 fofa, 有一千多个。  "
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 66,
+            "text": "某一天 7iny 好兄弟找到一套源代码 (安装包)，看了一下不少问题。就从这套系统代码开始渗透吧。看了一下 fofa, 有一千多个。  "
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 3,
+            "text": "title: \"未公开身份流程管控平台/UEditor/Apache Axis session泄露及SSRF到Axis管理部署链\""
+          },
+          {
+            "line": 19,
+            "text": "fofa_unverified: \", 有一千多个。\""
+          },
+          {
+            "line": 38,
+            "text": "- 不应从某行业猜厂商，标匿名案例/研究而非商业产品实体；FOFA字段抽成一千多个废值"
+          },
+          {
+            "line": 66,
+            "text": "某一天 7iny 好兄弟找到一套源代码 (安装包)，看了一下不少问题。就从这套系统代码开始渗透吧。看了一下 fofa, 有一千多个。  "
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Original reports a thousand-plus results, not a query."
+    },
+    {
+      "path": "Web安全/商业软件/法源软件/杭州法源软件-公证实务教学软件-SQL注入漏洞.md",
+      "sha256": "3ff2618c782f6b1b331a955ab1f5b45a49773601d597b73ef6571e8af3792921",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "暂时未收录任何网站"
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"暂时未收录任何网站\""
+          },
+          {
+            "line": 61,
+            "text": "FOFA暂时未收录任何网站"
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 61,
+            "text": "FOFA暂时未收录任何网站"
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 3,
+            "text": "title: \"杭州法源公证实务教学软件 登录txtName SQL注入声称\""
+          },
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"暂时未收录任何网站\""
+          },
+          {
+            "line": 40,
+            "text": "- FOFA暂未收录是时间性评论不是指纹，不能写fofa结构字段；version产品名"
+          },
+          {
+            "line": 61,
+            "text": "FOFA暂时未收录任何网站"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Original says no sites are listed; no query is present."
+    },
+    {
+      "path": "Web安全/商业软件/海外抢单刷单/某二开版海外抢单Shua单系统存在任意用户登录漏洞.md",
+      "sha256": "a67d8f7a4e1d0d2fced7f744e654638fd7c9a1c7e3ee032ed8ee5e2fd2724049",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "/red/popper.min.js"
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"/red/popper.min.js\""
+          },
+          {
+            "line": 56,
+            "text": "+ fofa`\"/red/popper.min.js\"`"
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 56,
+            "text": "+ fofa`\"/red/popper.min.js\"`"
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 3,
+            "text": "title: \"匿名二开海外抢单系统 信任user_id Cookie导致冒用用户\""
+          },
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"/red/popper.min.js\""
+          },
+          {
+            "line": 55,
+            "text": "## 三、资产测绘"
+          },
+          {
+            "line": 56,
+            "text": "+ fofa`\"/red/popper.min.js\"`"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Only a bare path is shown; no field comparison."
+    },
+    {
+      "path": "Web安全/商业软件/灵当CRM/灵当crmmultipleUpload存在任意文件上传漏洞.md",
+      "sha256": "ba8fcfa350e17d943cae9715db0459f9775844a6e9d8adf0221892530e0f5d4a",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "body="
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"body=\""
+          },
+          {
+            "line": 56,
+            "text": "+ fofa`body=\"[http://localhost:8088/crm/index.php\"](http://localhost:8088/crm/index.php\") && body=\"ldcrm.base.js\"`"
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 56,
+            "text": "+ fofa`body=\"[http://localhost:8088/crm/index.php\"](http://localhost:8088/crm/index.php\") && body=\"ldcrm.base.js\"`"
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 3,
+            "text": "title: \"灵当CRM Home multipleUpload PHP上传\""
+          },
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"body=\""
+          },
+          {
+            "line": 39,
+            "text": "- FOFA把localhost URL的Markdown链接塞进查询，严重格式污染，需重建"
+          },
+          {
+            "line": 55,
+            "text": "## 三、资产测绘"
+          },
+          {
+            "line": 56,
+            "text": "+ fofa`body=\"[http://localhost:8088/crm/index.php\"](http://localhost:8088/crm/index.php\") && body=\"ldcrm.base.js\"`"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Malformed Markdown link duplicates/corrupts the first body value; exact query literal cannot be recovered."
+    },
+    {
+      "path": "Web安全/商业软件/灵当CRM/灵当crmuploadfile存在文件写入漏洞.md",
+      "sha256": "61e9104ab43deab67be57ec9fedcb62f620ebec3b058d94b0df02acd9e3ec0fc",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "body="
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"body=\""
+          },
+          {
+            "line": 56,
+            "text": "+ fofa`body=\"[http://localhost:8088/crm/index.php\"](http://localhost:8088/crm/index.php\") && body=\"ldcrm.base.js\"`"
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 56,
+            "text": "+ fofa`body=\"[http://localhost:8088/crm/index.php\"](http://localhost:8088/crm/index.php\") && body=\"ldcrm.base.js\"`"
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 3,
+            "text": "title: \"灵当CRM weixinmp Upload uploadfile写PHP\""
+          },
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"body=\""
+          },
+          {
+            "line": 40,
+            "text": "- FOFA Markdown污染与其他灵当篇共享；仅正文无响应/修复"
+          },
+          {
+            "line": 55,
+            "text": "## 三、资产测绘"
+          },
+          {
+            "line": 56,
+            "text": "+ fofa`body=\"[http://localhost:8088/crm/index.php\"](http://localhost:8088/crm/index.php\") && body=\"ldcrm.base.js\"`"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Malformed Markdown link duplicates/corrupts the first body value; exact query literal cannot be recovered."
+    },
+    {
+      "path": "Web安全/商业软件/灵当CRM/灵当crmuploadify存在任意文件上传漏洞.md",
+      "sha256": "028f80b7752c4d25178faaddf2adac426de4c586c49ce3eb74124553503318a5",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "body="
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"body=\""
+          },
+          {
+            "line": 56,
+            "text": "+ fofa`body=\"[http://localhost:8088/crm/index.php\"](http://localhost:8088/crm/index.php\") && body=\"ldcrm.base.js\"`"
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 56,
+            "text": "+ fofa`body=\"[http://localhost:8088/crm/index.php\"](http://localhost:8088/crm/index.php\") && body=\"ldcrm.base.js\"`"
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 3,
+            "text": "title: \"灵当CRM uploaddify uploadify任意PHP上传\""
+          },
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"body=\""
+          },
+          {
+            "line": 40,
+            "text": "- FOFA Markdown链接污染，PHP执行未给返回，固定路径可能覆盖文件"
+          },
+          {
+            "line": 55,
+            "text": "## 三、资产测绘"
+          },
+          {
+            "line": 56,
+            "text": "+ fofa`body=\"[http://localhost:8088/crm/index.php\"](http://localhost:8088/crm/index.php\") && body=\"ldcrm.base.js\"`"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Malformed Markdown link duplicates/corrupts the first body value; exact query literal cannot be recovered."
+    },
+    {
+      "path": "Web安全/商业软件/灵当CRM/灵当crmupload存在任意文件上传漏洞.md",
+      "sha256": "6d05913b906d3b483bc28bb47a8a5a1c0cc79c6b8378fa231911a625a37bc9ee",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "body="
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"body=\""
+          },
+          {
+            "line": 55,
+            "text": "+ fofa`body=\"[http://localhost:8088/crm/index.php\"](http://localhost:8088/crm/index.php\") && body=\"ldcrm.base.js\"`"
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 55,
+            "text": "+ fofa`body=\"[http://localhost:8088/crm/index.php\"](http://localhost:8088/crm/index.php\") && body=\"ldcrm.base.js\"`"
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 3,
+            "text": "title: \"灵当CRM upload.php任意后缀上传\""
+          },
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"body=\""
+          },
+          {
+            "line": 40,
+            "text": "- FOFA同Markdown污染；落盘检测需清理，不能因纯文本就忽视持久文件"
+          },
+          {
+            "line": 54,
+            "text": "## 三、资产测绘"
+          },
+          {
+            "line": 55,
+            "text": "+ fofa`body=\"[http://localhost:8088/crm/index.php\"](http://localhost:8088/crm/index.php\") && body=\"ldcrm.base.js\"`"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Malformed Markdown link duplicates/corrupts the first body value; exact query literal cannot be recovered."
+    },
+    {
+      "path": "Web安全/商业软件/灵当CRM/灵当crmwechatSession存在任意文件上传漏洞.md",
+      "sha256": "f420cfc8bf9db10768d905af42964465dcf23f48a324f846ccdbb07f8174da4e",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "body="
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"body=\""
+          },
+          {
+            "line": 55,
+            "text": "+ fofa`body=\"[http://localhost:8088/crm/index.php\"](http://localhost:8088/crm/index.php\") && body=\"ldcrm.base.js\"`"
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 55,
+            "text": "+ fofa`body=\"[http://localhost:8088/crm/index.php\"](http://localhost:8088/crm/index.php\") && body=\"ldcrm.base.js\"`"
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 3,
+            "text": "title: \"灵当CRM wechatSession token上传PHP\""
+          },
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"body=\""
+          },
+          {
+            "line": 40,
+            "text": "- FOFA Markdown污染，无修复版本"
+          },
+          {
+            "line": 54,
+            "text": "## 三、资产测绘"
+          },
+          {
+            "line": 55,
+            "text": "+ fofa`body=\"[http://localhost:8088/crm/index.php\"](http://localhost:8088/crm/index.php\") && body=\"ldcrm.base.js\"`"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Malformed Markdown link duplicates/corrupts the first body value; exact query literal cannot be recovered."
+    },
+    {
+      "path": "Web安全/商业软件/灵当互动信息/灵当crmauth-info存在信息泄露漏洞.md",
+      "sha256": "3f756dda6aaf37dbeb6324c368b6304e7b6b4a51cc3ff2fd59be8a3b5976f92d",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "body="
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"body=\""
+          },
+          {
+            "line": 56,
+            "text": "+ fofa`body=\"[http://localhost:8088/crm/index.php\"](http://localhost:8088/crm/index.php\") && body=\"ldcrm.base.js\"` `body=\"crmcommon/js/jquery/jquery-1.10.1.min.js\"`"
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 56,
+            "text": "+ fofa`body=\"[http://localhost:8088/crm/index.php\"](http://localhost:8088/crm/index.php\") && body=\"ldcrm.base.js\"` `body=\"crmcommon/js/jquery/jquery-1.10.1.min.js\"`"
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 3,
+            "text": "title: \"灵当CRM dataCache/weixin auth_info.txt泄露声称\""
+          },
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"body=\""
+          },
+          {
+            "line": 40,
+            "text": "- FOFA含Markdown URL和font HTML双重污染，目录灵当互动信息应与CRM统一"
+          },
+          {
+            "line": 55,
+            "text": "## 三、资产测绘"
+          },
+          {
+            "line": 56,
+            "text": "+ fofa`body=\"[http://localhost:8088/crm/index.php\"](http://localhost:8088/crm/index.php\") && body=\"ldcrm.base.js\"` `body=\"crmcommon/js/jquery/jquery-1.10.1.min.js\"`"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Malformed Markdown link corrupts first predicate; later body predicate is adjacent with no AND/OR."
+    },
+    {
+      "path": "Web安全/商业软件/灵当互动信息/灵当crmgetOrderList存在SQL注入漏洞.md",
+      "sha256": "055707f184899e53ecb804076f46958114987e2bf30386c00d72224a5bc75cb7",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "body="
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"body=\""
+          },
+          {
+            "line": 55,
+            "text": "+ fofa`body=\"[http://localhost:8088/crm/index.php\"](http://localhost:8088/crm/index.php\") && body=\"ldcrm.base.js\"` `body=\"crmcommon/js/jquery/jquery-1.10.1.min.js\"`"
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 55,
+            "text": "+ fofa`body=\"[http://localhost:8088/crm/index.php\"](http://localhost:8088/crm/index.php\") && body=\"ldcrm.base.js\"` `body=\"crmcommon/js/jquery/jquery-1.10.1.min.js\"`"
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 3,
+            "text": "title: \"灵当CRM WxOrder getOrderList crm_user_id SQL注入\""
+          },
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"body=\""
+          },
+          {
+            "line": 54,
+            "text": "## 三、资产测绘"
+          },
+          {
+            "line": 55,
+            "text": "+ fofa`body=\"[http://localhost:8088/crm/index.php\"](http://localhost:8088/crm/index.php\") && body=\"ldcrm.base.js\"` `body=\"crmcommon/js/jquery/jquery-1.10.1.min.js\"`"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Malformed Markdown link corrupts first predicate; later body predicate is adjacent with no AND/OR."
+    },
+    {
+      "path": "Web安全/商业软件/灵当互动信息/灵当crmpdf存在任意文件读取漏洞.md",
+      "sha256": "8aba58c52bb0de5d90bca0851bd7f661389f56ddd62af081893c81bf9874d790",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "body="
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"body=\""
+          },
+          {
+            "line": 55,
+            "text": "+ fofa`body=\"[http://localhost:8088/crm/index.php\"](http://localhost:8088/crm/index.php\") && body=\"ldcrm.base.js\"` `body=\"crmcommon/js/jquery/jquery-1.10.1.min.js\"`"
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 55,
+            "text": "+ fofa`body=\"[http://localhost:8088/crm/index.php\"](http://localhost:8088/crm/index.php\") && body=\"ldcrm.base.js\"` `body=\"crmcommon/js/jquery/jquery-1.10.1.min.js\"`"
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 3,
+            "text": "title: \"灵当CRM data/pdf.php url相对路径读取\""
+          },
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"body=\""
+          },
+          {
+            "line": 40,
+            "text": "- 与auth_info静态缓存不是同漏洞；FOFA同模板污染，补版本修复"
+          },
+          {
+            "line": 54,
+            "text": "## 三、资产测绘"
+          },
+          {
+            "line": 55,
+            "text": "+ fofa`body=\"[http://localhost:8088/crm/index.php\"](http://localhost:8088/crm/index.php\") && body=\"ldcrm.base.js\"` `body=\"crmcommon/js/jquery/jquery-1.10.1.min.js\"`"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Malformed Markdown link corrupts first predicate; later body predicate is adjacent with no AND/OR."
+    },
+    {
+      "path": "Web安全/商业软件/盲盒抽奖小程序/盲盒抽奖小程序系统存在任意文件读取漏洞.md",
+      "sha256": "fbd797533b25f78751d36cd72a88a1e511240ea077aa073dc2dfe0668ccd0ff8",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "plain"
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"plain\""
+          },
+          {
+            "line": 40,
+            "text": "- FOFA字段plain误取代码语言，只有passwd请求无返回/修复"
+          },
+          {
+            "line": 58,
+            "text": "```plain"
+          },
+          {
+            "line": 68,
+            "text": "```plain"
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 40,
+            "text": "- FOFA字段plain误取代码语言，只有passwd请求无返回/修复"
+          },
+          {
+            "line": 58,
+            "text": "```plain"
+          },
+          {
+            "line": 68,
+            "text": "```plain"
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 3,
+            "text": "title: \"盲盒抽奖小程序（源码发行方未知） api/user/http_request file读取\""
+          },
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"plain\""
+          },
+          {
+            "line": 40,
+            "text": "- FOFA字段plain误取代码语言，只有passwd请求无返回/修复"
+          },
+          {
+            "line": 55,
+            "text": "## 三、资产测绘"
+          },
+          {
+            "line": 56,
+            "text": "+ fofa"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "“plain” is a fenced-code language identifier; no query appears."
+    },
+    {
+      "path": "Web安全/商业软件/短视频系统视频知识付费系统/短视频系统视频知识付费系统存在任意文件读取漏洞.md",
+      "sha256": "5f59751af7308401b38aa29c0973d41d4b5a7fa76ccb6509768a097521071cb0",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "testvideo://login?id="
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"testvideo://login?id=\""
+          },
+          {
+            "line": 55,
+            "text": "+ fofa`\"testvideo://login?id=\"`"
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 55,
+            "text": "+ fofa`\"testvideo://login?id=\"`"
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 3,
+            "text": "title: \"FastAdmin派生短视频知识付费源码 request_by_curl remote_server file读取\""
+          },
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"testvideo://login?id=\""
+          },
+          {
+            "line": 54,
+            "text": "## 三、资产测绘"
+          },
+          {
+            "line": 55,
+            "text": "+ fofa`\"testvideo://login?id=\"`"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Only bare testvideo://login?id= is shown; no field/operator."
+    },
+    {
+      "path": "Web安全/商业软件/聚合支付/聚合支付平台接口sdcustomno存在SQL注入漏洞.md",
+      "sha256": "2fc3ad618e9062eb6dccf4ee256c6a41fabe76dcca26d567e3ca9411bf24028b",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "/Public/theme/view4/css/style.css"
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"/Public/theme/view4/css/style.css\""
+          },
+          {
+            "line": 80,
+            "text": "FOFA：\"/Public/theme/view4/css/style.css\""
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 80,
+            "text": "FOFA：\"/Public/theme/view4/css/style.css\""
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 3,
+            "text": "title: \"聚合支付平台（厂商未知） pay_UPALIWAP_callbackurl sdcustomno时间盲注\""
+          },
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"/Public/theme/view4/css/style.css\""
+          },
+          {
+            "line": 80,
+            "text": "FOFA：\"/Public/theme/view4/css/style.css\""
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Only bare path /Public/theme/view4/css/style.css is shown."
+    },
+    {
+      "path": "Web安全/商业软件/证书查询系统/证书查询系统存在任意文件读取漏洞.md",
+      "sha256": "ae6146a46c2cc25df06dc071d0b1e50873990f772cf7ab81e52ace218b4905b6",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "/index/js/jquery.uls.data.js"
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"/index/js/jquery.uls.data.js\""
+          },
+          {
+            "line": 56,
+            "text": "+ fofa`\"/index/js/jquery.uls.data.js'\"`"
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 56,
+            "text": "+ fofa`\"/index/js/jquery.uls.data.js'\"`"
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 3,
+            "text": "title: \"证书查询系统（厂商未知） ajax/lang路径遍历配置读取\""
+          },
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"/index/js/jquery.uls.data.js\""
+          },
+          {
+            "line": 40,
+            "text": "- FOFA字符串多单引号，通用jquery语言库不能唯一定位产品"
+          },
+          {
+            "line": 55,
+            "text": "## 三、资产测绘"
+          },
+          {
+            "line": 56,
+            "text": "+ fofa`\"/index/js/jquery.uls.data.js'\"`"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Only a bare path is shown (with mismatched quote in the measurement line); no field comparison."
+    },
+    {
+      "path": "Web安全/商业软件/证书查询系统/证书系统查询系统lang任意文件读取漏洞.md",
+      "sha256": "de172a56a27c82c83d310f91ab414f5fe2fb837fb3f4d410408d87457960178e",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "/index/js/jquery.uls.data.js"
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"/index/js/jquery.uls.data.js\""
+          },
+          {
+            "line": 79,
+            "text": "FOFA：\"/index/js/jquery.uls.data.js\""
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 79,
+            "text": "FOFA：\"/index/js/jquery.uls.data.js\""
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 3,
+            "text": "title: \"证书查询系统（厂商未知） ajax/lang路径遍历配置读取\""
+          },
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"/index/js/jquery.uls.data.js\""
+          },
+          {
+            "line": 79,
+            "text": "FOFA：\"/index/js/jquery.uls.data.js\""
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Only bare path /index/js/jquery.uls.data.js is shown."
+    },
+    {
+      "path": "Web安全/商业软件/锦铭泰/广州锦铭泰软件科技有限公司F22服装管理软件系统index_login.asp存在信息泄漏漏洞.md",
+      "sha256": "1bbdcf4887eda460279c07f403c756453c14b3a801718bf11c80f01f0d918ebc",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "+ 特征"
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"+ 特征\""
+          },
+          {
+            "line": 56,
+            "text": "+ 特征"
+          }
+        ],
+        "source_body_lines": [],
+        "prior_captured_context": [
+          {
+            "line": 3,
+            "text": "title: \"锦铭泰F22服装管理软件 index_login.asp连接信息泄露声称\""
+          },
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"+ 特征\""
+          },
+          {
+            "line": 39,
+            "text": "- 资产测绘完全为空，fofa抽成+特征属于元数据污染"
+          },
+          {
+            "line": 54,
+            "text": "## 三、资产测绘"
+          },
+          {
+            "line": 55,
+            "text": "+ hunter"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "“+ 特征” is a placeholder heading, not a query."
+    },
+    {
+      "path": "Web安全/商业软件/锦铭泰/广州锦铭泰软件科技有限公司F22服装管理软件系统openfile.aspx前台任意文件下载.md",
+      "sha256": "a2402f44dae2b4534c15d2cd0a0a6555616b4f90a64d31997fff5d132dec7e43",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "+ 特征"
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"+ 特征\""
+          },
+          {
+            "line": 56,
+            "text": "+ 特征"
+          }
+        ],
+        "source_body_lines": [],
+        "prior_captured_context": [
+          {
+            "line": 3,
+            "text": "title: \"锦铭泰F22服装管理软件 openfile.aspx Url路径遍历下载\""
+          },
+          {
+            "line": 19,
+            "text": "fofa_unverified: \"+ 特征\""
+          },
+          {
+            "line": 40,
+            "text": "- Hunter/特征都空却fofa=+特征；简介漏接口的接字，无补丁"
+          },
+          {
+            "line": 54,
+            "text": "## 三、资产测绘"
+          },
+          {
+            "line": 55,
+            "text": "+ hunter"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "“+ 特征” is a placeholder heading, not a query."
+    },
+    {
+      "path": "Web安全/安全设备/中国蚁剑/分享   蚁剑 RCE 反制复现.md",
+      "sha256": "0b2d4ce14bf9dbf2e8e49b18d5ddb10eb8c41349e51eb793d0f4734f70ce07c8",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "”工程师"
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 7,
+            "text": "fofa_unverified: \"”工程师\""
+          },
+          {
+            "line": 390,
+            "text": "【奇淫巧技】如何成为一个合格的“FOFA”工程师"
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 390,
+            "text": "【奇淫巧技】如何成为一个合格的“FOFA”工程师"
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 7,
+            "text": "fofa_unverified: \"”工程师\""
+          },
+          {
+            "line": 8,
+            "text": "title: \"分享   蚁剑 RCE 反制复现\""
+          },
+          {
+            "line": 42,
+            "text": "- frontmatter CNVD-2021-30167来自页尾用友NC推荐，错误套给蚁剑；FOFA值也是推荐标题碎片"
+          },
+          {
+            "line": 390,
+            "text": "【奇淫巧技】如何成为一个合格的“FOFA”工程师"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Old fragment is tail of unrelated FOFA engineer title, not a query."
+    },
+    {
+      "path": "Web安全/安全设备/堡垒机 - 附 PoC Jumpserver/堡垒机 - 附 PoC Jumpserver RCE 漏洞详细复现.md",
+      "sha256": "185a2e9bfb8e82773074627be2e14c3d3b277f333fb7bb900bafe1278efb43a5",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "” 工程师](http://mp.weixin.qq.com/s?__biz=MzI1NTM4ODIxMw==&mid=2247485135&idx=1&sn=f872054b31"
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 6,
+            "text": "fofa_unverified: \"” 工程师](http://mp.weixin.qq.com/s?__biz=MzI1NTM4ODIxMw==&mid=2247485135&idx=1&sn=f872054b31\""
+          },
+          {
+            "line": 252,
+            "text": "[【奇淫巧技】如何成为一个合格的 “FOFA” 工程师](http://mp.weixin.qq.com/s?__biz=MzI1NTM4ODIxMw==&mid=2247485135&idx=1&sn=f872054b31429e244a6e56385698404a&chksm=ea37f995dd40708367700fc53cca4ce8cb490bc1fe23dd1f167d86c0d2014a0c03005af99b89&scene=21#wechat_redirect)"
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 252,
+            "text": "[【奇淫巧技】如何成为一个合格的 “FOFA” 工程师](http://mp.weixin.qq.com/s?__biz=MzI1NTM4ODIxMw==&mid=2247485135&idx=1&sn=f872054b31429e244a6e56385698404a&chksm=ea37f995dd40708367700fc53cca4ce8cb490bc1fe23dd1f167d86c0d2014a0c03005af99b89&scene=21#wechat_redirect)"
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 6,
+            "text": "fofa_unverified: \"” 工程师](http://mp.weixin.qq.com/s?__biz=MzI1NTM4ODIxMw==&mid=2247485135&idx=1&sn=f872054b31\""
+          },
+          {
+            "line": 7,
+            "text": "title: \"【堡垒机 - 附 PoC】Jumpserver RCE 漏洞详细复现\""
+          },
+          {
+            "line": 40,
+            "text": "- 手改三个ID/硬编码日志路径、未给修复范围；FOFA元数据取自页尾推荐链接"
+          },
+          {
+            "line": 252,
+            "text": "[【奇淫巧技】如何成为一个合格的 “FOFA” 工程师](http://mp.weixin.qq.com/s?__biz=MzI1NTM4ODIxMw==&mid=2247485135&idx=1&sn=f872054b31429e244a6e56385698404a&chksm=ea37f995dd40708367700fc53cca4ce8cb490bc1fe23dd1f167d86c0d2014a0c03005af99b89&scene=21#wechat_redirect)"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Old fragment is tail of FOFA engineer hyperlink, not a query."
+    },
+    {
+      "path": "Web安全/安全设备/奇安信/奇安信 360 天擎 rptsvcsyncpoint SQL 注入漏洞 getshell.md",
+      "sha256": "ab41c88a4d73639535e292ee78e700f876785b4ed80dc0ff31fb5d996380f4b9",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "中搜索以下语法并随机确定要进行攻击测试的目标...."
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 6,
+            "text": "fofa_unverified: \"中搜索以下语法并随机确定要进行攻击测试的目标....\""
+          },
+          {
+            "line": 83,
+            "text": "步骤一：在 Fofa 中搜索以下语法并随机确定要进行攻击测试的目标...."
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 83,
+            "text": "步骤一：在 Fofa 中搜索以下语法并随机确定要进行攻击测试的目标...."
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 6,
+            "text": "fofa_unverified: \"中搜索以下语法并随机确定要进行攻击测试的目标....\""
+          },
+          {
+            "line": 7,
+            "text": "title: \"奇安信 360 天擎 rptsvcsyncpoint SQL 注入漏洞 getshell\""
+          },
+          {
+            "line": 40,
+            "text": "- getshell只有一句声明无对应载荷/结果，FOFA元数据抽成正文句"
+          },
+          {
+            "line": 83,
+            "text": "步骤一：在 Fofa 中搜索以下语法并随机确定要进行攻击测试的目标...."
+          },
+          {
+            "line": 86,
+            "text": "#FOFA搜索语法"
+          },
+          {
+            "line": 87,
+            "text": "banner=\"QiAnXin web server\" || banner=\"360 web server\"  || body=\"appid\\\":\\\"skylar6\" || body=\"/task/index/detail?id={item.id}\" || body=\"已过期或者未授权，购买请联系4008-136-360\""
+          },
+          {
+            "line": 134,
+            "text": "    fofa-query: banner=\"QiAnXin web server\" || banner=\"360 web server\"  || body=\"appid\\\":\\\"skylar6\" || body=\"/task/index/detail?id={item.id}\" || body=\"已过期或者未授权，购买请联系4008-136-360\""
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Expression includes unquoted {item.id}; repository validator rejects it and no value may be guessed."
+    },
+    {
+      "path": "Web安全/安全设备/奇安信天擎/奇安信天擎 任意文件上传.md",
+      "sha256": "8cfe1d734cea7ff899001d36a8389be242528efce9c76ad1eaaabb20a4c33a84",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "奇安信天擎"
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 6,
+            "text": "fofa_unverified: \"奇安信天擎\""
+          },
+          {
+            "line": 7,
+            "text": "title: \"奇安信天擎 任意文件上传\""
+          },
+          {
+            "line": 8,
+            "text": "product: \"奇安信天擎管理中心\""
+          },
+          {
+            "line": 25,
+            "text": "# 奇安信天擎 任意文件上传"
+          },
+          {
+            "line": 30,
+            "text": "- 产品/组件：奇安信天擎管理中心"
+          },
+          {
+            "line": 69,
+            "text": "\"奇安信天擎\""
+          }
+        ],
+        "source_body_lines": [],
+        "prior_captured_context": [
+          {
+            "line": 6,
+            "text": "fofa_unverified: \"奇安信天擎\""
+          },
+          {
+            "line": 7,
+            "text": "title: \"奇安信天擎 任意文件上传\""
+          },
+          {
+            "line": 66,
+            "text": "web.title==\"360新天擎\""
+          },
+          {
+            "line": 67,
+            "text": "web.title==\"360天擎终端安全管理系统\""
+          },
+          {
+            "line": 68,
+            "text": "或者fofa"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Title predicates and a bare product string occur, but no explicit logical operators form one complete FOFA expression."
+    },
+    {
+      "path": "Web安全/安全设备/金山终端安全/金山VGM防毒墙downFile存在任意文件读取漏洞.md",
+      "sha256": "6870ffc6dbd6e1121d961534d0875116de56f62f960b087a5598c871cdaa8cb0",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "金山VGM"
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 6,
+            "text": "fofa_unverified: \"金山VGM\""
+          },
+          {
+            "line": 8,
+            "text": "product: \"金山VGM防毒墙\""
+          },
+          {
+            "line": 30,
+            "text": "- 产品/组件：金山VGM防毒墙"
+          },
+          {
+            "line": 60,
+            "text": "+ fofa`\"金山VGM\"`"
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 60,
+            "text": "+ fofa`\"金山VGM\"`"
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 6,
+            "text": "fofa_unverified: \"金山VGM\""
+          },
+          {
+            "line": 7,
+            "text": "title: \"金山 VGM防毒墙downFile存在任意文件读取漏洞\""
+          },
+          {
+            "line": 59,
+            "text": "# 三、资产测绘"
+          },
+          {
+            "line": 60,
+            "text": "+ fofa`\"金山VGM\"`"
+          },
+          {
+            "line": 73,
+            "text": "Referer: https://fofa.info/"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Only bare 金山VGM is shown."
+    },
+    {
+      "path": "Web安全/开发框架/PHP/PHP-8.1.0-devzerodium后门命令执行漏洞.md",
+      "sha256": "07133b5a8fb3bb2b526b0667f95bfdd5b32ad9e7ed03ec037df494592591ca75",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "PHP/8.1.0-dev"
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 13,
+            "text": "fofa_unverified: \"PHP/8.1.0-dev\""
+          },
+          {
+            "line": 35,
+            "text": "- **事实待核（1）**：版本指纹不是后门确认；依据：资产测绘PHP/8.1.0-dev可命中无后门构建；无验证响应。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。"
+          },
+          {
+            "line": 45,
+            "text": "+ PHP/8.1.0-dev"
+          },
+          {
+            "line": 48,
+            "text": "+ fofa`\"PHP/8.1.0-dev\"`"
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 48,
+            "text": "+ fofa`\"PHP/8.1.0-dev\"`"
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 2,
+            "text": "fofa: \"\""
+          },
+          {
+            "line": 13,
+            "text": "fofa_unverified: \"PHP/8.1.0-dev\""
+          },
+          {
+            "line": 14,
+            "text": "title: \"PHP-8.1.0-devzerodium后门命令执行漏洞\""
+          },
+          {
+            "line": 25,
+            "text": "- 测绘字段处置：原 fofa 字段为残缺表达式、错误平台语法或当前解析器不支持的形式，原值完整保留到 fofa_unverified，不把它当作已校验查询或受影响资产证据。正文检索方法保留；具体问题见下列原审阅项。"
+          },
+          {
+            "line": 35,
+            "text": "- **事实待核（1）**：版本指纹不是后门确认；依据：资产测绘PHP/8.1.0-dev可命中无后门构建；无验证响应。该项尚不能从转载本身确定外部事实；下文相应编号、版本或修复说法只作为来源记录，不能据此判定部署受影响或已修复。明确更正另列于本节。"
+          },
+          {
+            "line": 47,
+            "text": "# 三、资产测绘"
+          },
+          {
+            "line": 48,
+            "text": "+ fofa`\"PHP/8.1.0-dev\"`"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Only bare server text PHP/8.1.0-dev is shown."
+    },
+    {
+      "path": "Web安全/开发框架/Spring Boot/SpringBladeexport-user存在SQL注入漏洞.md",
+      "sha256": "09081521d5683beb678c7512b773ef4a125f6f2e07362c6fabd60f8743119132",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "body="
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 13,
+            "text": "fofa_unverified: \"body=\""
+          },
+          {
+            "line": 37,
+            "text": "- **代码与转录边界（2）**：FOFA语法严重污染；依据：正文body字符串内混Markdown链接和多余引号，元数据只body=。相应原代码作为存在此问题的历史样本保留，不能直接当作可运行、成功复现的 PoC；缺失内容需回原稿核对，不据此补造可执行攻击链。"
+          },
+          {
+            "line": 52,
+            "text": "+ fofa`body=\"[https://bladex.vip\"](https://bladex.vip\") && title!=\"融媒体中心后台管理系统\" && title!=\"尚牛电竞运营后台\"`"
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 37,
+            "text": "- **代码与转录边界（2）**：FOFA语法严重污染；依据：正文body字符串内混Markdown链接和多余引号，元数据只body=。相应原代码作为存在此问题的历史样本保留，不能直接当作可运行、成功复现的 PoC；缺失内容需回原稿核对，不据此补造可执行攻击链。"
+          },
+          {
+            "line": 52,
+            "text": "+ fofa`body=\"[https://bladex.vip\"](https://bladex.vip\") && title!=\"融媒体中心后台管理系统\" && title!=\"尚牛电竞运营后台\"`"
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 2,
+            "text": "fofa: \"\""
+          },
+          {
+            "line": 13,
+            "text": "fofa_unverified: \"body=\""
+          },
+          {
+            "line": 14,
+            "text": "title: \"SpringBladeexport-user存在SQL注入漏洞\""
+          },
+          {
+            "line": 25,
+            "text": "- 测绘字段处置：原 fofa 字段为残缺表达式、错误平台语法或当前解析器不支持的形式，原值完整保留到 fofa_unverified，不把它当作已校验查询或受影响资产证据。正文检索方法保留；具体问题见下列原审阅项。"
+          },
+          {
+            "line": 37,
+            "text": "- **代码与转录边界（2）**：FOFA语法严重污染；依据：正文body字符串内混Markdown链接和多余引号，元数据只body=。相应原代码作为存在此问题的历史样本保留，不能直接当作可运行、成功复现的 PoC；缺失内容需回原稿核对，不据此补造可执行攻击链。"
+          },
+          {
+            "line": 51,
+            "text": "# 三、资产测绘"
+          },
+          {
+            "line": 52,
+            "text": "+ fofa`body=\"[https://bladex.vip\"](https://bladex.vip\") && title!=\"融媒体中心后台管理系统\" && title!=\"尚牛电竞运营后台\"`"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Malformed Markdown link interrupts the body value; exact literal cannot be recovered byte-for-byte."
+    },
+    {
+      "path": "Web安全/开发框架/Spring WebFlow/Spring WebFlow 远程代码执行漏洞 CVE-2017-4971.md",
+      "sha256": "642dfeed7bd18218feb86bed9d8d0d035d0cb5192ee2a037cc077687a390127d",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": ".org/topic/593d562353ab369c55425a90"
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 14,
+            "text": "fofa_unverified: \".org/topic/593d562353ab369c55425a90\""
+          },
+          {
+            "line": 37,
+            "text": "- **证据待核（1）**：FOFA 元数据误取来源 URL；依据：fofa 为 .org/topic/593d562353ab369c55425a90，不是检索语句。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。"
+          },
+          {
+            "line": 53,
+            "text": "- https://threathunter.org/topic/593d562353ab369c55425a90"
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 37,
+            "text": "- **证据待核（1）**：FOFA 元数据误取来源 URL；依据：fofa 为 .org/topic/593d562353ab369c55425a90，不是检索语句。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。"
+          },
+          {
+            "line": 53,
+            "text": "- https://threathunter.org/topic/593d562353ab369c55425a90"
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 3,
+            "text": "fofa: \"\""
+          },
+          {
+            "line": 14,
+            "text": "fofa_unverified: \".org/topic/593d562353ab369c55425a90\""
+          },
+          {
+            "line": 15,
+            "text": "title: \"Spring WebFlow 远程代码执行漏洞 CVE-2017-4971\""
+          },
+          {
+            "line": 26,
+            "text": "- 测绘字段处置：原 fofa 字段为残缺表达式、错误平台语法或当前解析器不支持的形式，原值完整保留到 fofa_unverified，不把它当作已校验查询或受影响资产证据。正文检索方法保留；具体问题见下列原审阅项。"
+          },
+          {
+            "line": 35,
+            "text": "来源证据范围：有 Pivotal 公告、threathunter 和 Vulhub 实验说明"
+          },
+          {
+            "line": 37,
+            "text": "- **证据待核（1）**：FOFA 元数据误取来源 URL；依据：fofa 为 .org/topic/593d562353ab369c55425a90，不是检索语句。保留原引用、截图位置和实验叙述；本项所缺材料未被补造，截图存在或作者宣称成功都不等于已核验其内容。"
+          },
+          {
+            "line": 53,
+            "text": "- https://threathunter.org/topic/593d562353ab369c55425a90"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Old value is suffix of a ThreatHunter URL, not a predicate."
+    },
+    {
+      "path": "Web安全/开发框架/ThinkPHP/漏洞通报 ThinkPHP3-2-x RCE 漏洞通报.md",
+      "sha256": "5a4585c8c0b5be630db7f4d5390048ce14a78de577cda476e3e3d6ce5a1c5121",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "分布情况："
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 13,
+            "text": "fofa_unverified: \"分布情况：\""
+          },
+          {
+            "line": 73,
+            "text": "> fofa 分布情况："
+          },
+          {
+            "line": 91,
+            "text": "> github 分布情况："
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 73,
+            "text": "> fofa 分布情况："
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 2,
+            "text": "fofa: \"\""
+          },
+          {
+            "line": 13,
+            "text": "fofa_unverified: \"分布情况：\""
+          },
+          {
+            "line": 14,
+            "text": "title: \"漏洞通报 ThinkPHP3-2-x RCE 漏洞通报\""
+          },
+          {
+            "line": 26,
+            "text": "- 测绘字段处置：原 fofa 字段为残缺表达式、错误平台语法或当前解析器不支持的形式，原值完整保留到 fofa_unverified，不把它当作已校验查询或受影响资产证据。正文检索方法保留；具体问题见下列原审阅项。"
+          },
+          {
+            "line": 37,
+            "text": "- **结论使用边界（1）**：FOFA字段抽成普通标题；依据：fofa=分布情况，不是查询。此项限制直接适用于下文对应结论；现有正文不足以作更宽泛推论，所列方法和原始证据均保留。"
+          },
+          {
+            "line": 73,
+            "text": "> fofa 分布情况："
+          },
+          {
+            "line": 81,
+            "text": "目前 FOFA 系统最新数据（一年内数据）显示中国最多，国外的基本是云主机部署。中国范围内共有 139809 个使用 thinkphp 框架的服务。其中部署于云主机的服务最多，共有 96172 个。山东第二，共有 4,638 个，广东第三，共有 4,560 个，上海第四，共有 2,853 个，江苏第五，共有 1,585 台。"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "FOFA distribution/count prose is not a search expression."
+    },
+    {
+      "path": "Web安全/智能设备/TBK DVR/TBKDVR硬盘录像机device存在远程代码执行漏洞(CVE-2024-3721).md",
+      "sha256": "a9dddc2a54998c0e2adbcb013e909719d8d2f6cf3a351cf2c5ab0eed9d78aa95",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "Location: /login.rsp"
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 7,
+            "text": "fofa_unverified: \"Location: /login.rsp\""
+          },
+          {
+            "line": 61,
+            "text": "●fofa `\"Location: /login.rsp\"`"
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 61,
+            "text": "●fofa `\"Location: /login.rsp\"`"
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 7,
+            "text": "fofa_unverified: \"Location: /login.rsp\""
+          },
+          {
+            "line": 8,
+            "text": "title: \"TBK DVR硬盘录像机device存在远程代码执行漏洞(CVE-2024-3721)\""
+          },
+          {
+            "line": 60,
+            "text": "**三、资产测绘**  "
+          },
+          {
+            "line": 61,
+            "text": "●fofa `\"Location: /login.rsp\"`"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Only a quoted Location response string appears; no field comparison."
+    },
+    {
+      "path": "Web安全/桌面软件/Viessmann/ViessmannVitogateRCE漏洞（CVE-2023-45852）.md",
+      "sha256": "d8a32039be01ee579142c602a92f81dabea91fddabd12081f83f5312ecb58999",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "app=”Vitogate-300”"
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 21,
+            "text": "fofa_unverified: \"app=”Vitogate-300”\""
+          },
+          {
+            "line": 67,
+            "text": "+ fofa`app=”Vitogate-300”`"
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 67,
+            "text": "+ fofa`app=”Vitogate-300”`"
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 8,
+            "text": "title: \"ViessmannVitogateRCE漏洞（CVE-2023-45852）\""
+          },
+          {
+            "line": 21,
+            "text": "fofa_unverified: \"app=”Vitogate-300”\""
+          },
+          {
+            "line": 45,
+            "text": "4. Host空、Content-Length固定，FOFA使用中文弯引号易失效，特征章节空；有语雀转载源无原始披露"
+          },
+          {
+            "line": 66,
+            "text": "# 三、资产测绘"
+          },
+          {
+            "line": 67,
+            "text": "+ fofa`app=”Vitogate-300”`"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Typographic quotes in app=”Vitogate-300” fail validator; normalization would alter bytes."
+    },
+    {
+      "path": "Web安全/网络设备/Cisco/（CVE-2020-3452）CISCO ASA远程任意文件读取.md",
+      "sha256": "5f3a4cfd51e6c6659f093b481975acee833fc100c9d3e73371bf150eebebaa1e",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "检索规则"
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 7,
+            "text": "fofa_unverified: \"检索规则\""
+          },
+          {
+            "line": 41,
+            "text": "- version元数据仅表头、fofa仅检索规则"
+          },
+          {
+            "line": 88,
+            "text": "FOFA检索规则"
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 41,
+            "text": "- version元数据仅表头、fofa仅检索规则"
+          },
+          {
+            "line": 88,
+            "text": "FOFA检索规则"
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 7,
+            "text": "fofa_unverified: \"检索规则\""
+          },
+          {
+            "line": 8,
+            "text": "title: \"（CVE-2020-3452）CISCO ASA远程任意文件读取\""
+          },
+          {
+            "line": 41,
+            "text": "- version元数据仅表头、fofa仅检索规则"
+          },
+          {
+            "line": 88,
+            "text": "FOFA检索规则"
+          },
+          {
+            "line": 89,
+            "text": "FOFA: “webVpn”"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "“FOFA检索规则” is a heading without a rule value."
+    },
+    {
+      "path": "Web安全/网络设备/D-Link/D-Link NAS 未授权RCE漏洞(CVE-2024-3273).md",
+      "sha256": "27d519f1e6aeaa1217b48160cea898dd376a6bdf5cdaf453aacafe2bba3e80b0",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "Text:In order to access the ShareCenter, please make sure you are using a recent browser(I"
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 7,
+            "text": "fofa_unverified: \"Text:In order to access the ShareCenter, please make sure you are using a recent browser(I\""
+          },
+          {
+            "line": 107,
+            "text": "FOFA：\"Text:In order to access the ShareCenter, please make sure you are using a recent browser(IE 7+, Firefox 3+, Safari 4+, Chrome 3+, Opera 10+)\""
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 107,
+            "text": "FOFA：\"Text:In order to access the ShareCenter, please make sure you are using a recent browser(IE 7+, Firefox 3+, Safari 4+, Chrome 3+, Opera 10+)\""
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 7,
+            "text": "fofa_unverified: \"Text:In order to access the ShareCenter, please make sure you are using a recent browser(I\""
+          },
+          {
+            "line": 8,
+            "text": "title: \"D-Link NAS 未授权RCE漏洞(CVE-2024-3273)预警\""
+          },
+          {
+            "line": 60,
+            "text": "- fofa元数据截断；在野已知/影响面广无来源，脚本验证仅图片"
+          },
+          {
+            "line": 107,
+            "text": "FOFA：\"Text:In order to access the ShareCenter, please make sure you are using a recent browser(IE 7+, Firefox 3+, Safari 4+, Chrome 3+, Opera 10+)\""
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Quoted text is an HTTP/browser response message, not a field-qualified query."
+    },
+    {
+      "path": "Web安全/网络设备/NETGEAR/CVE-2021-35973：Netgear wac104 身份认证绕过.md",
+      "sha256": "29f36a4a8b8a5506c11f5f98effae20c74e3c78139a8c08efc2f2f179003e8e3",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "” 工程师](http://mp.weixin.qq.com/s?__biz=MzI1NTM4ODIxMw==&mid=2247485135&idx=1&sn=f872054b31"
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 8,
+            "text": "fofa_unverified: \"” 工程师](http://mp.weixin.qq.com/s?__biz=MzI1NTM4ODIxMw==&mid=2247485135&idx=1&sn=f872054b31\""
+          },
+          {
+            "line": 217,
+            "text": "[【奇淫巧技】如何成为一个合格的 “FOFA” 工程师](http://mp.weixin.qq.com/s?__biz=MzI1NTM4ODIxMw==&mid=2247485135&idx=1&sn=f872054b31429e244a6e56385698404a&chksm=ea37f995dd40708367700fc53cca4ce8cb490bc1fe23dd1f167d86c0d2014a0c03005af99b89&scene=21#wechat_redirect)"
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 217,
+            "text": "[【奇淫巧技】如何成为一个合格的 “FOFA” 工程师](http://mp.weixin.qq.com/s?__biz=MzI1NTM4ODIxMw==&mid=2247485135&idx=1&sn=f872054b31429e244a6e56385698404a&chksm=ea37f995dd40708367700fc53cca4ce8cb490bc1fe23dd1f167d86c0d2014a0c03005af99b89&scene=21#wechat_redirect)"
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 8,
+            "text": "fofa_unverified: \"” 工程师](http://mp.weixin.qq.com/s?__biz=MzI1NTM4ODIxMw==&mid=2247485135&idx=1&sn=f872054b31\""
+          },
+          {
+            "line": 9,
+            "text": "title: \"CVE-2021-35973：Netgear wac104 身份认证绕过\""
+          },
+          {
+            "line": 39,
+            "text": "- cnvd元数据CNVD-2021-30167来自页尾用友NC推荐文，非此漏洞；fofa元数据也是推荐文链接碎片"
+          },
+          {
+            "line": 181,
+            "text": "**zoomeye dork 关键词：app:\"Netgear wac104\"**"
+          },
+          {
+            "line": 217,
+            "text": "[【奇淫巧技】如何成为一个合格的 “FOFA” 工程师](http://mp.weixin.qq.com/s?__biz=MzI1NTM4ODIxMw==&mid=2247485135&idx=1&sn=f872054b31429e244a6e56385698404a&chksm=ea37f995dd40708367700fc53cca4ce8cb490bc1fe23dd1f167d86c0d2014a0c03005af99b89&scene=21#wechat_redirect)"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Old value is suffix of FOFA engineer reference link, not a query."
+    },
+    {
+      "path": "Web安全/网络设备/深信服/深信服EDR平台存在任意用户登录漏洞.md",
+      "sha256": "de6b2631040ccebe34c03db160345ca43076ea3e12d9331390cbf49b7832bb93",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "<font style="
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 6,
+            "text": "fofa_unverified: \"<font style=\""
+          },
+          {
+            "line": 60,
+            "text": "+ fofa`<font style=\"color:rgba(0, 0, 0, 0.9);\">app=\"SANGFOR-EDR\"</font>``<font style=\"color:rgba(0, 0, 0, 0.9);\">title=\"终端检测响应平台\"</font>`"
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 60,
+            "text": "+ fofa`<font style=\"color:rgba(0, 0, 0, 0.9);\">app=\"SANGFOR-EDR\"</font>``<font style=\"color:rgba(0, 0, 0, 0.9);\">title=\"终端检测响应平台\"</font>`"
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 6,
+            "text": "fofa_unverified: \"<font style=\""
+          },
+          {
+            "line": 7,
+            "text": "title: \"深信服EDR平台存在任意用户登录漏洞\""
+          },
+          {
+            "line": 37,
+            "text": "- fofa元数据与正文font标签污染且双查询缺操作符"
+          },
+          {
+            "line": 59,
+            "text": "# 三、资产测绘"
+          },
+          {
+            "line": 60,
+            "text": "+ fofa`<font style=\"color:rgba(0, 0, 0, 0.9);\">app=\"SANGFOR-EDR\"</font>``<font style=\"color:rgba(0, 0, 0, 0.9);\">title=\"终端检测响应平台\"</font>`"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Two HTML-wrapped predicates app=... and title=... are adjacent with no explicit AND/OR; do not join."
+    },
+    {
+      "path": "Web安全/网络设备/深信服/深信服EDR平台存在远程命令执行漏洞.md",
+      "sha256": "2a255ca721340f0d4ee9b1c30312272312d1c17076199240ddbbd15589c379ef",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "<font style="
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 6,
+            "text": "fofa_unverified: \"<font style=\""
+          },
+          {
+            "line": 59,
+            "text": "+ fofa`<font style=\"color:rgba(0, 0, 0, 0.9);\">app=\"SANGFOR-EDR\"</font>``<font style=\"color:rgba(0, 0, 0, 0.9);\">title=\"终端检测响应平台\"</font>`"
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 59,
+            "text": "+ fofa`<font style=\"color:rgba(0, 0, 0, 0.9);\">app=\"SANGFOR-EDR\"</font>``<font style=\"color:rgba(0, 0, 0, 0.9);\">title=\"终端检测响应平台\"</font>`"
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 6,
+            "text": "fofa_unverified: \"<font style=\""
+          },
+          {
+            "line": 7,
+            "text": "title: \"深信服EDR平台存在远程命令执行漏洞\""
+          },
+          {
+            "line": 37,
+            "text": "- FOFA字段被font和来源污染；无响应/编号/修复，较340同文严重简化"
+          },
+          {
+            "line": 58,
+            "text": "# 三、资产测绘"
+          },
+          {
+            "line": 59,
+            "text": "+ fofa`<font style=\"color:rgba(0, 0, 0, 0.9);\">app=\"SANGFOR-EDR\"</font>``<font style=\"color:rgba(0, 0, 0, 0.9);\">title=\"终端检测响应平台\"</font>`"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Two HTML-wrapped predicates app=... and title=... are adjacent with no explicit AND/OR; do not join."
+    },
+    {
+      "path": "Web安全/网络设备/锐捷/锐捷 云课堂主机 pool 目录遍历漏洞   孤桜懶契.md",
+      "sha256": "df3c9040e8f5c07640978ae69e8cd43cca3a1f109777cff7c48dad902e66599e",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "title="
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 6,
+            "text": "fofa_unverified: \"title=\""
+          },
+          {
+            "line": 58,
+            "text": "> 漏洞描述 i ⭐锐捷云课堂主机存在目录遍历漏洞，通过访问 get 请求 / pool/，即可读取目录. 导致敏感信息泄露. 漏洞影响 s ✅锐捷云课堂 空间测绘 d ⭕FOFA：title=\"Ruijie\" ......"
+          },
+          {
+            "line": 71,
+            "text": "> d ⭕`FOFA：title=\"Ruijie\" && \"云课堂主机\"`"
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 58,
+            "text": "> 漏洞描述 i ⭐锐捷云课堂主机存在目录遍历漏洞，通过访问 get 请求 / pool/，即可读取目录. 导致敏感信息泄露. 漏洞影响 s ✅锐捷云课堂 空间测绘 d ⭕FOFA：title=\"Ruijie\" ......"
+          },
+          {
+            "line": 71,
+            "text": "> d ⭕`FOFA：title=\"Ruijie\" && \"云课堂主机\"`"
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 6,
+            "text": "fofa_unverified: \"title=\""
+          },
+          {
+            "line": 7,
+            "text": "title: \"锐捷 云课堂主机 pool 目录遍历漏洞   孤桜懶契\""
+          },
+          {
+            "line": 38,
+            "text": "- FOFA残缺；非网络路由设备；摘要和正文重复网页页脚多"
+          },
+          {
+            "line": 58,
+            "text": "> 漏洞描述 i ⭐锐捷云课堂主机存在目录遍历漏洞，通过访问 get 请求 / pool/，即可读取目录. 导致敏感信息泄露. 漏洞影响 s ✅锐捷云课堂 空间测绘 d ⭕FOFA：title=\"Ruijie\" ......"
+          },
+          {
+            "line": 71,
+            "text": "> d ⭕`FOFA：title=\"Ruijie\" && \"云课堂主机\"`"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Source uses title=\"Ruijie\" ......; omitted clauses are unknown."
+    },
+    {
+      "path": "Web安全/网络设备/锐捷/锐捷云课堂主机 目录遍历漏洞.md",
+      "sha256": "0d029811686e457880bc070cc8b8af95245244b57e2c37ded3f1f2f47dffbdf4",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "title="
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 6,
+            "text": "fofa_unverified: \"title=\""
+          },
+          {
+            "line": 73,
+            "text": "FOFA: title=\"Ruijie\" && \"云课堂主机\""
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 73,
+            "text": "FOFA: title=\"Ruijie\" && \"云课堂主机\""
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 6,
+            "text": "fofa_unverified: \"title=\""
+          },
+          {
+            "line": 7,
+            "text": "title: \"锐捷云课堂主机 目录遍历漏洞\""
+          },
+          {
+            "line": 38,
+            "text": "- FOFA残缺，大段文库推广"
+          },
+          {
+            "line": 73,
+            "text": "FOFA: title=\"Ruijie\" && \"云课堂主机\""
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "RHS \"云课堂主机\" is unqualified in title=\"Ruijie\" && ... and fails validator."
+    },
+    {
+      "path": "Web安全/邮件系统/RaidenMAILD/RaidenMAILD邮件服务器v.4.9.4存在任意文件读取漏洞.md",
+      "sha256": "bda935e379a0cf692aa840d33fe719632f8652b7cc4afe4ac3854e27d918298e",
+      "scanner_warning": {
+        "line": 0,
+        "detail": "fofa: retained unverified query excluded from fingerprint index"
+      },
+      "original": {
+        "key": "fofa_unverified",
+        "value": "RaidenMAILD Mail Server <= 4.9.4"
+      },
+      "body_evidence": {
+        "old_value_occurrences": [
+          {
+            "line": 14,
+            "text": "fofa_unverified: \"RaidenMAILD Mail Server <= 4.9.4\""
+          },
+          {
+            "line": 56,
+            "text": "+ fofa`RaidenMAILD Mail Server <= 4.9.4`"
+          }
+        ],
+        "source_body_lines": [
+          {
+            "line": 56,
+            "text": "+ fofa`RaidenMAILD Mail Server <= 4.9.4`"
+          }
+        ],
+        "prior_captured_context": [
+          {
+            "line": 3,
+            "text": "title: \"RaidenMAILD邮件服务器v.4.9.4存在任意文件读取漏洞\""
+          },
+          {
+            "line": 14,
+            "text": "fofa_unverified: \"RaidenMAILD Mail Server <= 4.9.4\""
+          },
+          {
+            "line": 33,
+            "text": "- 原所谓 FOFA 值只是产品/版本文字，移到 fofa_unverified，避免被当作可执行资产查询。"
+          },
+          {
+            "line": 40,
+            "text": "- fofa metadata/body contain product+version prose rather than valid structured query"
+          },
+          {
+            "line": 55,
+            "text": "# 三、资产测绘"
+          },
+          {
+            "line": 56,
+            "text": "+ fofa`RaidenMAILD Mail Server <= 4.9.4`"
+          }
+        ]
+      },
+      "operation": null,
+      "decision": "hold",
+      "reason": "Unfielded product/version prose RaidenMAILD Mail Server <= 4.9.4 is not a valid query predicate."
+    }
+  ],
+  "validation": {
+    "all_scope_rows_covered": true,
+    "sha_matches_scope_and_prior_binding": true,
+    "unresolved_count": 78
+  },
+  "limitations": "No field/logical operator was inferred. No article query, PoC, scanner, or payload was executed; example targets were not accessed."
+}
