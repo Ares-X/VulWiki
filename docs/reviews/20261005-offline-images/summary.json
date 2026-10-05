@@ -33,7 +33,8 @@
       "recognized_container": 20141,
       "unknown": 32,
       "extension_mismatch": 32,
-      "remote_images": 0
+      "remote_images": 0,
+      "external_image_dependencies": 0
     },
     "reference_review": []
   },
@@ -61,7 +62,7 @@
   },
   "known_wechat_notice_matches": 0,
   "tests": {
-    "python": "89 PASS (Python 3.13)",
+    "python": "92 PASS (Python 3.13)",
     "node": "38 PASS"
   },
   "scope": "Public static image acquisition and Markdown presentation only; no PoC, scanner or example target executed/accessed. No redaction. Raster decoding and static SVG review do not mean visual review of every image.",

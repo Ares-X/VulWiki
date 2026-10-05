@@ -2,7 +2,7 @@
 """Offline audit of local Markdown image references and referenced file bytes.
 
 The tool reads source Markdown and resource bytes only. It does not execute,
-render, decode fully, contact, or modify articles or resources. Magic signatures
+render, decode raster data, contact, or modify articles or resources. Magic signatures
 identify likely containers, not complete structural validity or renderability.
 """
 from __future__ import annotations
@@ -18,12 +18,13 @@ import sys
 from collections import defaultdict
 from html.parser import HTMLParser
 from urllib.parse import urlsplit
+import xml.etree.ElementTree as ET
 
 ROOTS = ("Web安全", "系统安全", "IOT安全")
 LIMITATIONS = [
     "Image signatures identify likely containers only; they do not prove full structural validity or renderability.",
     "Unknown formats are reported for review and are not treated as invalid images.",
-    "SVG is inspected as text only; selected script, event, entity, and external-reference patterns are flagged, not fully sanitized.",
+    "SVG is checked statically as XML/text for selected external-resource and active-content patterns; this is not a sanitizer.",
 ]
 
 
@@ -137,6 +138,23 @@ def inspect_file(root: Path, relative: str) -> dict:
         for pattern, label in checks:
             if re.search(pattern, source, re.I):
                 flags.append(label)
+        try:
+            svg = ET.fromstring(source)
+            for element in svg.iter():
+                name = element.tag.rsplit("}", 1)[-1].lower()
+                attrs = {key.rsplit("}", 1)[-1].lower(): value for key, value in element.attrib.items()}
+                if name in {"image", "feimage", "use", "script", "font-face-uri", "link"}:
+                    if any(re.match(r"(?:https?:|//)", attrs.get(key, "").strip(), re.I)
+                           for key in ("href", "src")):
+                        flags.append("external_image_dependency")
+                css = attrs.get("style", "")
+                if name == "style":
+                    css += "".join(element.itertext())
+                if re.search(r'''(?:url\s*\(\s*["']?\s*|@import\s*["']\s*)(?:https?:|//)''', css, re.I):
+                    flags.append("external_image_dependency")
+        except ET.ParseError as error:
+            flags.append("svg_xml_parse_error: " + str(error))
+        flags = sorted(set(flags))
         item.update({"detected_format": "SVG-text", "status": "unknown", "svg_safety_flags": flags})
         return item
     item.update({"detected_format": "unknown", "status": "unknown"})
@@ -197,6 +215,8 @@ def audit(root: Path) -> dict:
     counts = {key: sum(f["status"] == key for f in files) for key in ("missing", "zero_byte", "html_error_page", "recognized_container", "unknown")}
     counts["extension_mismatch"] = sum(bool(f.get("extension_mismatch")) for f in files)
     counts["remote_images"] = len(remote_images)
+    counts["external_image_dependencies"] = sum(
+        "external_image_dependency" in f.get("svg_safety_flags", []) for f in files)
     try:
         head = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=root, text=True, stderr=subprocess.DEVNULL).strip()
     except (OSError, subprocess.CalledProcessError):
@@ -228,6 +248,7 @@ def main(argv=None) -> int:
     print(json.dumps({"report": str(args.report), "counts": result["counts"]}, ensure_ascii=False))
     return int(any(result["counts"][key] for key in ("missing", "zero_byte", "html_error_page"))
                or (args.require_local and (result["counts"]["remote_images"] > 0
+                                          or result["counts"]["external_image_dependencies"] > 0
                                           or bool(result["reference_review"]))))
 
 

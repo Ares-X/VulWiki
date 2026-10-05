@@ -125,6 +125,39 @@ class ResourceAuditTests(unittest.TestCase):
         result = audit_tool.audit(self.root)
         self.assertEqual([row["target"] for row in result["remote_images"]], [target, target])
 
+    def test_local_svg_cannot_load_external_image_or_css(self):
+        for source in ['<svg><image href="https://images.example.invalid/remote.png"/></svg>',
+                       '<svg><style>.pic {fill:url(//images.example.invalid/remote.png)}</style></svg>']:
+            with self.subTest(source=source):
+                (self.resource_dir / 'local.svg').write_text(source)
+                self.article('![svg](.resource/local.svg)\n')
+                report = self.root / 'report.json'
+                with contextlib.redirect_stdout(io.StringIO()):
+                    code = audit_tool.main(['--root', str(self.root), '--report', str(report), '--require-local'])
+                self.assertEqual(code, 1)
+                self.assertEqual(json.loads(report.read_text())['counts']['external_image_dependencies'], 1)
+
+    def test_svg_namespace_and_embedded_image_are_offline(self):
+        (self.resource_dir / 'local.svg').write_text(
+            '<svg xmlns="http://www.w3.org/2000/svg"><image href="data:image/png;base64,fixture"/></svg>')
+        self.article('![svg](.resource/local.svg)\n')
+        report = self.root / 'report.json'
+        with contextlib.redirect_stdout(io.StringIO()):
+            code = audit_tool.main(['--root', str(self.root), '--report', str(report), '--require-local'])
+        self.assertEqual(code, 0)
+        self.assertEqual(json.loads(report.read_text())['counts']['external_image_dependencies'], 0)
+
+    def test_svg_source_anchor_and_url_example_text_are_not_loaded_images(self):
+        (self.resource_dir / 'local.svg').write_text(
+            '<svg><text>fill:url(https://images.example.invalid/example.png)</text>'
+            '<a href="https://author.example.invalid/article"><text>source</text></a></svg>')
+        self.article('![svg](.resource/local.svg)\n')
+        report = self.root / 'report.json'
+        with contextlib.redirect_stdout(io.StringIO()):
+            code = audit_tool.main(['--root', str(self.root), '--report', str(report), '--require-local'])
+        self.assertEqual(code, 0)
+        self.assertEqual(json.loads(report.read_text())['counts']['external_image_dependencies'], 0)
+
     def test_nonfatal_format_review_and_full_html_text_in_report(self):
         png = b"\x89PNG\r\n\x1a\nfull-signature-fixture"
         unknown = b"\x00opaque non-image signature fixture"
