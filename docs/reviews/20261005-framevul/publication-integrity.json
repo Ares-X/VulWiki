@@ -1,0 +1,140 @@
+{
+  "base_commit": "927ec4a91f507197aeb3ab1aec67343495480d44",
+  "preservation": "Existing body bytes unchanged; only declared metadata corrections/additions and appended material. No original examples or values redacted.",
+  "articles": [
+    {
+      "frame_ids": [
+        267
+      ],
+      "path": "Web安全/开发框架/Gitea/Gitea 仓库迁移 Git 参数注入漏洞 CVE-2022-30781.md",
+      "operation": "new",
+      "sha256": "51a03a94f20c26e5fb99c9be6f744e0b0bdf2b0066b223d9c8690639c3f9741e",
+      "metadata_added": {},
+      "metadata_changed": {},
+      "assets": []
+    },
+    {
+      "frame_ids": [
+        259
+      ],
+      "path": "Web安全/中间件/GeoServer/GeoServer-OGC-Filter-SQL注入漏洞-CVE-2023-25157.md",
+      "operation": "append",
+      "sha256": "5e4cd189ee69456c1ba743b43db2a783f80608d3642a2a7f8c5454cb634a6e11",
+      "metadata_added": {
+        "version": "2.22 分支 < 2.22.2；2.21 分支 < 2.21.4；其他历史分支按官方公告所列修复版本分别核对",
+        "fixed_version": "2.22.2；2.21.4；2.20.7；2.19.7；2.18.7",
+        "verification_source": "https://geoserver.org/vulnerability/2023/02/20/ogc-filter-injection.html"
+      },
+      "metadata_changed": {},
+      "assets": [],
+      "editorial_operations": [
+        {
+          "frame_id": 259,
+          "path": "Web安全/中间件/GeoServer/GeoServer-OGC-Filter-SQL注入漏洞-CVE-2023-25157.md",
+          "before_sha256": "e026e557d67d53c566b3378bfa42819dba3a9e3b3bdfae9fa14a355a5fa85b68",
+          "after_sha256": "5e4cd189ee69456c1ba743b43db2a783f80608d3642a2a7f8c5454cb634a6e11",
+          "operation": "Remove exactly one trailing LF from newly authored appended prose; all original bytes and technical examples unchanged"
+        }
+      ]
+    },
+    {
+      "frame_ids": [
+        372
+      ],
+      "path": "Web安全/中间件/Resin/Resin Windows 盘符路径穿越漏洞 CVE-2006-1953.md",
+      "operation": "new",
+      "sha256": "396d01cce317f0c3b0c1c73d0d1cb0032d4973ef90427279bf921d806e293379",
+      "metadata_added": {},
+      "metadata_changed": {},
+      "assets": []
+    },
+    {
+      "frame_ids": [
+        266
+      ],
+      "path": "Web安全/开发框架/GitLab/【风险提示】天融信关于GitLab存在CVE-2022-2992 RCE漏洞的风险提示.md",
+      "operation": "append",
+      "sha256": "56638023d8a7bb73cc5db0e27fddf53ad0abd066306ec716509a43bf7e96c8bb",
+      "metadata_added": {
+        "previous_record_type": "unknown",
+        "previous_identifier_status": "unknown",
+        "version": "11.10 <= GitLab < 15.1.6；15.2 <= GitLab < 15.2.4；15.3 <= GitLab < 15.3.2",
+        "fixed_version": "15.1.6；15.2.4；15.3.2",
+        "verification_source": "https://gitlab.com/gitlab-org/cves/-/blob/master/2022/CVE-2022-2992.json"
+      },
+      "metadata_changed": {
+        "record_type": [
+          "unknown",
+          "vulnerability"
+        ],
+        "identifier_status": [
+          "unknown",
+          "active"
+        ]
+      },
+      "assets": [],
+      "editorial_operations": [
+        {
+          "frame_id": 266,
+          "path": "Web安全/开发框架/GitLab/【风险提示】天融信关于GitLab存在CVE-2022-2992 RCE漏洞的风险提示.md",
+          "before_sha256": "e3cecbc5ea65d7f96dfe91b7d5e58cae7360963a3ade777433c64d4a2d70e058",
+          "after_sha256": "56638023d8a7bb73cc5db0e27fddf53ad0abd066306ec716509a43bf7e96c8bb",
+          "operation": "Remove exactly one trailing LF from newly authored appended prose; all original bytes and technical examples unchanged"
+        }
+      ]
+    },
+    {
+      "frame_ids": [
+        303
+      ],
+      "path": "Web安全/CMS内容/Joomla/Joomla 3.7.0 SQL注入漏洞 CVE-2017-8917.md",
+      "operation": "append",
+      "sha256": "4653ffd8549c9b692b772df76eac6e2c22bd70e2488ba91ee327921579fb0f43",
+      "metadata_added": {
+        "version": "Joomla! CMS 3.7.0",
+        "fixed_version": "3.7.1",
+        "verification_source": "https://developer.joomla.org/security-centre/692-20170501-core-sql-injection.html"
+      },
+      "metadata_changed": {},
+      "assets": [],
+      "editorial_operations": [
+        {
+          "frame_id": 303,
+          "path": "Web安全/CMS内容/Joomla/Joomla 3.7.0 SQL注入漏洞 CVE-2017-8917.md",
+          "before_sha256": "aed4368d4bc3330a107519b017ff053f75ca295ec0363a6089c1c95bb2e56d13",
+          "after_sha256": "4653ffd8549c9b692b772df76eac6e2c22bd70e2488ba91ee327921579fb0f43",
+          "operation": "Remove exactly one trailing LF from newly authored appended prose; all original bytes and technical examples unchanged"
+        }
+      ]
+    },
+    {
+      "frame_ids": [
+        340
+      ],
+      "path": "Web安全/运维面板/MeterSphere/MeterSphere v1.15.4 resource-md-upload 未授权任意文件写入.md",
+      "operation": "new",
+      "sha256": "ede6f58cdc6a4c8037db590227683456c9fdb7cf1584a83669e26fc72e8f5604",
+      "metadata_added": {},
+      "metadata_changed": {},
+      "assets": [
+        {
+          "target": "Web安全/运维面板/MeterSphere/.resource/FrameVul-340-MeterSphere/md-upload-request.png",
+          "sha256": "f57a0366678a28e330181b7fe7cfc0aa4e07c98b0d07e883e1b3c9c7e358154f",
+          "bytes": 313175,
+          "original_url": "https://user-images.githubusercontent.com/26007706/146804566-36ca34f5-76a6-41d6-8d5f-56b6e7dedcee.png"
+        }
+      ]
+    },
+    {
+      "frame_ids": [
+        261
+      ],
+      "path": "Web安全/开发框架/GitLab/GitLab Bulk Imports UploadsPipeline 符号链接文件读取 CVE-2022-0244.md",
+      "operation": "new",
+      "sha256": "6294385dbf0c7d670b7b38302413002bec99f7efc0401d4a30044abe67365ffb",
+      "metadata_added": {},
+      "metadata_changed": {},
+      "assets": []
+    }
+  ]
+}

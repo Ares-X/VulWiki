@@ -1,0 +1,103 @@
+{
+  "verified_source_base": "927ec4a91f507197aeb3ab1aec67343495480d44",
+  "newer_master_known_but_not_reconciled": "25e2037091036e848c6f141e52a21f405f198c20",
+  "ready_to_merge": false,
+  "independent_review": "Seven article texts and immutable evidence scope accepted; precise final SHA256 per article below",
+  "article_hashes": [
+    {
+      "frame_ids": [
+        267
+      ],
+      "path": "Web安全/开发框架/Gitea/Gitea 仓库迁移 Git 参数注入漏洞 CVE-2022-30781.md",
+      "sha256": "51a03a94f20c26e5fb99c9be6f744e0b0bdf2b0066b223d9c8690639c3f9741e"
+    },
+    {
+      "frame_ids": [
+        259
+      ],
+      "path": "Web安全/中间件/GeoServer/GeoServer-OGC-Filter-SQL注入漏洞-CVE-2023-25157.md",
+      "sha256": "5e4cd189ee69456c1ba743b43db2a783f80608d3642a2a7f8c5454cb634a6e11"
+    },
+    {
+      "frame_ids": [
+        372
+      ],
+      "path": "Web安全/中间件/Resin/Resin Windows 盘符路径穿越漏洞 CVE-2006-1953.md",
+      "sha256": "396d01cce317f0c3b0c1c73d0d1cb0032d4973ef90427279bf921d806e293379"
+    },
+    {
+      "frame_ids": [
+        266
+      ],
+      "path": "Web安全/开发框架/GitLab/【风险提示】天融信关于GitLab存在CVE-2022-2992 RCE漏洞的风险提示.md",
+      "sha256": "56638023d8a7bb73cc5db0e27fddf53ad0abd066306ec716509a43bf7e96c8bb"
+    },
+    {
+      "frame_ids": [
+        303
+      ],
+      "path": "Web安全/CMS内容/Joomla/Joomla 3.7.0 SQL注入漏洞 CVE-2017-8917.md",
+      "sha256": "4653ffd8549c9b692b772df76eac6e2c22bd70e2488ba91ee327921579fb0f43"
+    },
+    {
+      "frame_ids": [
+        340
+      ],
+      "path": "Web安全/运维面板/MeterSphere/MeterSphere v1.15.4 resource-md-upload 未授权任意文件写入.md",
+      "sha256": "ede6f58cdc6a4c8037db590227683456c9fdb7cf1584a83669e26fc72e8f5604"
+    },
+    {
+      "frame_ids": [
+        261
+      ],
+      "path": "Web安全/开发框架/GitLab/GitLab Bulk Imports UploadsPipeline 符号链接文件读取 CVE-2022-0244.md",
+      "sha256": "6294385dbf0c7d670b7b38302413002bec99f7efc0401d4a30044abe67365ffb"
+    }
+  ],
+  "tests": {
+    "python_unit_tests": {
+      "passed": 94,
+      "failed": 0
+    },
+    "content_quality": {
+      "documents": 5852,
+      "new_issues": 0,
+      "fatal_issues": 0,
+      "historical_warnings": 4095,
+      "baseline_modified": false
+    },
+    "generated_indexes": "build and build --check passed",
+    "selected_resource_check": {
+      "articles": 7,
+      "files": 7,
+      "bytes": 1001560,
+      "missing": 0,
+      "remote_images": 0,
+      "unusable_image_tags": 0,
+      "external_image_dependencies": 0
+    },
+    "node_baseline": {
+      "marked_version": "17.0.5",
+      "total": 39,
+      "passed": 37,
+      "failed": 2,
+      "preexisting_failures": [
+        "tab-normalized CRLF request-location assertion",
+        "expected CommonJS module filename differs from installed ESM module"
+      ]
+    },
+    "code_copy_check": {
+      "articles": 7,
+      "blocks": 11,
+      "exact": true
+    },
+    "remote_ci": "pending publication"
+  },
+  "not_performed": [
+    "No article code or exploit execution",
+    "No dependency installation",
+    "No example-target requests or credential tests",
+    "No master update, merge or deployment",
+    "No resumed paused-source review"
+  ]
+}
