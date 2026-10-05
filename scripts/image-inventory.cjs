@@ -264,7 +264,12 @@ function articleImages(source, articlePath = '') {
           src_values: srcAttributes.map((attribute) => attribute.value) });
         continue;
       }
-      if (!srcAttributes.length || srcAttributes[0].value === null) continue;
+      if (!srcAttributes.length || !srcAttributes[0].value) {
+        const responsive = htmlAttributes(tag, open[0].length).some((attribute) =>
+          attribute.name === 'srcset' && attribute.value && attribute.value.trim());
+        if (!responsive) review.push({ path: articlePath, reason: 'html_image_without_source', token: tag });
+        continue;
+      }
       const attribute = srcAttributes[0];
       const span = originalSpan(tokenStart + start + attribute.valueStart, tokenStart + start + attribute.valueEnd);
       const tokenSpan = originalSpan(tokenStart + start, tokenStart + end + 1);

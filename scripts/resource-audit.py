@@ -48,16 +48,22 @@ class ResponsiveImageSources(HTMLParser):
         super().__init__()
         self.picture_depth = 0
         self.links = []
+        self.unusable_images = []
 
     def handle_starttag(self, tag, attrs):
         if tag == "picture":
             self.picture_depth += 1
         if tag != "img" and not (tag == "source" and self.picture_depth):
             return
+        if tag == "img" and not any(key in {"src", "srcset"} and value and value.strip()
+                                    for key, value in attrs):
+            self.unusable_images.append((self.get_starttag_text(), self.getpos()[0]))
         for key, value in attrs:
             if not value:
                 continue
             if tag == "source" and key == "src":
+                self.links.append((value, True, self.getpos()[0]))
+            if tag == "img" and key == "data-src":
                 self.links.append((value, True, self.getpos()[0]))
             if key == "srcset":
                 # Remote candidates have no unescaped spaces/commas. Embedded
@@ -165,6 +171,7 @@ def audit(root: Path) -> dict:
     references = defaultdict(list)
     reference_review = []
     remote_images = []
+    unusable_images = []
     article_hashes = {}
     for folder in ROOTS:
         content_root = root / folder
@@ -182,6 +189,8 @@ def audit(root: Path) -> dict:
             responsive = ResponsiveImageSources()
             # Match wiki.markdown_links' code-span exclusion before feeding HTML.
             responsive.feed(re.sub(r"(`+).*?\1", "", prose))
+            unusable_images.extend({"article": rel_article, "line": line, "raw_tag": tag}
+                                   for tag, line in responsive.unusable_images)
             for target, is_image, line in [*wiki.markdown_links(prose, with_lines=True, check_image_links=True), *responsive.links]:
                 if not is_image:
                     continue
@@ -215,6 +224,7 @@ def audit(root: Path) -> dict:
     counts = {key: sum(f["status"] == key for f in files) for key in ("missing", "zero_byte", "html_error_page", "recognized_container", "unknown")}
     counts["extension_mismatch"] = sum(bool(f.get("extension_mismatch")) for f in files)
     counts["remote_images"] = len(remote_images)
+    counts["unusable_image_tags"] = len(unusable_images)
     counts["external_image_dependencies"] = sum(
         "external_image_dependency" in f.get("svg_safety_flags", []) for f in files)
     try:
@@ -228,6 +238,7 @@ def audit(root: Path) -> dict:
                   "method": "Offline source parsing and byte/signature checks; no rendering or execution."},
         "counts": counts, "files": files, "reference_review": reference_review,
         "remote_images": remote_images,
+        "unusable_image_tags": unusable_images,
         "limitations": LIMITATIONS,
     }
 
@@ -248,6 +259,7 @@ def main(argv=None) -> int:
     print(json.dumps({"report": str(args.report), "counts": result["counts"]}, ensure_ascii=False))
     return int(any(result["counts"][key] for key in ("missing", "zero_byte", "html_error_page"))
                or (args.require_local and (result["counts"]["remote_images"] > 0
+                                          or result["counts"]["unusable_image_tags"] > 0
                                           or result["counts"]["external_image_dependencies"] > 0
                                           or bool(result["reference_review"]))))
 
