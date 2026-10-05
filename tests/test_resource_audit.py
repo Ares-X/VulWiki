@@ -99,6 +99,28 @@ class ResourceAuditTests(unittest.TestCase):
         self.assertEqual(code, 1)
         self.assertEqual(json.loads(report.read_text())["counts"]["missing"], 0)
 
+    def test_wechat_lazy_reference_is_checked_and_needs_a_browser_source(self):
+        target = 'https://images.example.invalid/lazy.png?original=full'
+        self.article('<img data-src="' + target + '">\n'
+                     '`<img data-src="' + target + '">`\n'
+                     '```html\n<img data-src="' + target + '">\n```\n')
+        result = audit_tool.audit(self.root)
+        self.assertEqual([row['target'] for row in result['remote_images']], [target])
+        self.assertEqual(result['counts']['unusable_image_tags'], 1)
+        (self.resource_dir / 'pic.png').write_bytes(b'\x89PNG\r\n\x1a\nfixture')
+        self.article('<img src=".resource/pic.png" data-src=".resource/pic.png">\n')
+        result = audit_tool.audit(self.root)
+        self.assertEqual(result['counts']['remote_images'], 0)
+        self.assertEqual(result['counts']['unusable_image_tags'], 0)
+
+    def test_empty_html_image_cannot_pass_offline_gate(self):
+        self.article('<img>\n<img src="">\n<!-- <img> -->\n`<img>`\n')
+        report = self.root / 'report.json'
+        with contextlib.redirect_stdout(io.StringIO()):
+            code = audit_tool.main(['--root', str(self.root), '--report', str(report), '--require-local'])
+        self.assertEqual(code, 1)
+        self.assertEqual(json.loads(report.read_text())['counts']['unusable_image_tags'], 2)
+
     def test_local_thumbnail_cannot_hide_remote_full_image_link(self):
         (self.resource_dir / "pic.png").write_bytes(b"\x89PNG\r\n\x1a\nfixture")
         self.article('[![preview](.resource/pic.png)](https://images.example.invalid/full.png)\n'
