@@ -10,14 +10,19 @@ identifier_status: "unknown"
 primary_identifiers: ""
 referenced_identifiers: ""
 identifier_role: "unknown"
-prerequisites: "Branch-specific vulnerable builds (<2.6.2,<2.5.4,<2.4.5,1.5.9 stated); logs expose user/asset/system_user IDs; configured asset"
+prerequisites: "历史材料所列分支范围仍待逐分支核对；本补充依据作者 v2.6.1 实验：已配置资产及系统用户、日志路径已知、历史终端记录含有效 user/asset/system_user 标识；自动登录或仍可复用的资产会话影响连接结果"
 source_url: "https://mp.weixin.qq.com/s/5q4cSlHUQ3NejkRg3vOWUA"
 source_status: "recorded"
-side_effects: "含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。"
+side_effects: "读取并在控制台输出日志和资产标识；申请连接令牌、建立受管资产终端并产生可能的审计记录；所附固定工具在 Yes/No 提示前向所有候选发送 echo 命令；后续命令的文件、账号或其他影响取决于输入；持续读取和无显式等待上限可能占用资源"
 id: "vw-a962bc76d2301a2c718e6fc2"
 entity_id: "ve-a962bc76d2301a2c718e6fc2"
 schema_version: "1"
 canonical: "Web安全/运维面板/Jumpserver/JumpServer 未授权接口 远程命令执行漏洞.md"
+previous_prerequisites: "Branch-specific vulnerable builds (<2.6.2,<2.5.4,<2.4.5,1.5.9 stated); logs expose user/asset/system_user IDs; configured asset"
+previous_side_effects: "含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。"
+version: "补充来源仅记录 JumpServer v2.6.1 实验环境；不是完整受影响范围，前文历史分支声明仍待核"
+fixed_version: "unknown"
+verification_source: "补充来源文本核对：https://mp.weixin.qq.com/s/lbcYzNsiOYZRwQzAIYxg3g；对应历史快照：https://web.archive.org/web/20210315060223id_/https://mp.weixin.qq.com/s/lbcYzNsiOYZRwQzAIYxg3g；工具静态核对：https://github.com/Veraxy00/Jumpserver-EXP/blob/4ce1723c2eb4f08fd42447ecdaeec5b1cab180b2/jumpserver-exp.py；不替换主来源，不表示运行验证"
 ---
 
 # JumpServer 未授权接口 远程命令执行漏洞
@@ -446,3 +451,95 @@ Twitter：@wgpsec
 ---
 
 > 来源：MrWQ/vulnerability-paper（https://github.com/MrWQ/vulnerability-paper）
+
+## 补充：Veraxy 对日志、认证与资产会话条件的分析
+
+### 来源与阅读范围
+
+本节依据 Veraxy @ QAX CERT 的《[JumpServer远程命令执行你可能不知道的点（附利用工具）](https://mp.weixin.qq.com/s/lbcYzNsiOYZRwQzAIYxg3g)》整理。原文页面记录的发布时间为 2021 年 2 月 9 日；本次读取的是 [2021 年 3 月 15 日保存的原文历史快照](https://web.archive.org/web/20210315060223id_/https://mp.weixin.qq.com/s/lbcYzNsiOYZRwQzAIYxg3g)，不是本次可直接访问的微信页面。前文保留的 PeiQi 材料与本节为不同来源。
+
+原作者使用的实验环境为 JumpServer v2.6.1。本节补充原文对资产登录方式、日志前提、接口认证和工具行为的说明；没有据此扩展其他分支的受影响版本，也没有在本次整理中执行请求、脚本或复现操作。原文的 67 个图片引用已登记，本节的判断依据为已读正文和下列固定工具源码，不把未查看的截图当作成功复现证据。
+
+这里的命令执行依赖 JumpServer 管理的资产连接，权限随对应系统用户和资产会话而定。不能由“可以建立资产终端”直接推出已经获得 JumpServer 核心服务所在主机或所有资产的 root 权限。
+
+### 一、资产登录方式决定会话能否建立
+
+原文首先区分了管理用户和系统用户：管理用户用于管理资产、推送系统用户、获取资产信息等；系统用户则是 JumpServer 跳转登录资产时使用的账户。配置了资产和用户关系，不等于任意时刻都能建立一个新的资产会话。
+
+原作者在 v2.6.1 实验环境中分别观察了以下情况：
+
+1. **自动登录。** 系统用户被配置为自动登录时，JumpServer 可以使用预留的认证信息连接资产。原文记录，在中断原有会话后仍能重新连接并执行命令；作者据此将自动登录作为稳定复现的重要条件。部分配置还涉及把系统用户自动推送至资产。
+2. **手动登录。** 如果连接资产时需要再次输入密码，攻击者仅取得接口返回的连接令牌，并不意味着掌握资产登录密码。原文描述了一种有限情况：系统用户与资产之间仍有未中断的 SSH 会话时，可能借助既有会话复用完成连接。
+3. **已有会话结束后。** 在上述手动登录场景中，原作者退出已有会话后再次测试，系统要求重新输入密码；不能再沿用此前的连接结果判断后续请求一定成功。
+
+这些是原作者的实验记录和条件分析。本节不将“实际部署通常采用自动登录”之类普遍性判断作为已验证事实，也不把手动登录等同于所有版本、所有配置下均安全。
+
+### 二、日志读取还需要路径、内容和历史记录同时满足
+
+前文已保留日志读取到终端连接的基本链条。原文进一步解释了几个容易忽略的前提：
+
+- **日志接口路径与日志文件路径是两层概念。** WebSocket 接口为 `/ws/ops/tasks/log/`；发送给它的 `task` 值才用于确定要读取的日志文件。原文选择的是 `/opt/jumpserver/logs/gunicorn`，而不是把接口 URL 当作磁盘文件路径。
+- **原文分析的路径处理会补上 `.log`。** 因此其例子在 `task` 值中省略了后缀。作者同时指出，这种处理限制了该入口可以直接读取的文件类型，不能把它概括成任意扩展名文件读取。
+- **必须能从已有记录取得有效标识。** 原文使用用户、资产和系统用户的三个标识，来源是 Web Terminal 连接资产时留下的权限校验记录。系统用户从未通过该方式连接过目标资产，或日志中没有相应记录时，正文中的后续步骤缺少必要输入。
+- **历史记录不保证仍可使用。** 日志中出现过某组三个标识，不能证明对应资产仍存在、仍可达，或者当前配置仍允许创建会话。原文附带工具把日志提取与资产可用性检查分成不同阶段。
+- **实际日志位置仍须吻合。** 作者使用的是默认日志目录。目录被调整、文件缺失或内容不符合预期，都可能使该样例无法取得所需数据；这类失败不能单独当作漏洞已经修复的证据。
+
+原文将日志调用关系梳理为 `CeleryLogWebsocket.receive()` 接收 `task`，随后经过 `handle_task()`、`read_log_file()`、`wait_util_log_path_exist()` 与 `get_celery_task_log_path()` 处理。这里保留的是原作者的代码分析结论；本轮没有重新审计整个 JumpServer 代码库。
+
+### 三、同名参数在两个终端入口中并非同一含义
+
+原文区分了 `/koko/ws/terminal/` 与 `/koko/ws/token/`：
+
+- `/koko/ws/terminal/` 是正常 Web Terminal 使用的入口。原文解释，该入口中的 `target_id` 对应资产标识，并与 `type`、`system_user_id` 等参数共同使用；会话需要经过相应的身份检查。
+- `/koko/ws/token/` 中的 `target_id` 对应连接令牌。原文描述，此入口根据令牌取得资产连接所需信息，再建立终端会话。
+
+因此，不能因为参数都叫 `target_id`，就把正常资产入口中的资产标识直接视为令牌入口所需的值。原文将连接令牌的有效期描述为 20 秒，并分别讨论了取得令牌和在有效期内建立终端会话两个环节。
+
+关于 `/api/v1/authentication/connection-token/` 与 `/api/v1/users/connection-token/`，原文认为它们在该实验版本中采用相同处理类，并介绍了 `user-only` 参数与权限选择之间的关系。需要保留一处原文内部的不一致：在介绍 Luna 的 `http.ts` 时，作者称非空 `user-only` 用于取得全部用户信息；后面分析 `GetTokenAsset()` 时，又称只有 `token` 返回全部信息，同时携带 `user-only` 时返回 `user` 字段。本节不把这两种相反表述合并成一个已核实结论，也没有据此改写原始请求或推导新的利用方法。进一步确定字段级语义，需要针对对应版本的处理函数另行核对。
+
+### 四、原作者所附工具的实际流程与副作用
+
+原文附带工具为 [Veraxy00/Jumpserver-EXP](https://github.com/Veraxy00/Jumpserver-EXP)。本次静态阅读固定在提交 `4ce1723c2eb4f08fd42447ecdaeec5b1cab180b2`：
+
+- [README.md](https://github.com/Veraxy00/Jumpserver-EXP/blob/4ce1723c2eb4f08fd42447ecdaeec5b1cab180b2/README.md)
+- [jumpserver-exp.py](https://github.com/Veraxy00/Jumpserver-EXP/blob/4ce1723c2eb4f08fd42447ecdaeec5b1cab180b2/jumpserver-exp.py)
+
+该提交的 Python 入口共 129 行、5,599 字节，已完整阅读。仓库根目录另外包含 README 和四个演示图片文件，没有其他本地代码模块、依赖清单、锁定文件、安装脚本或工作流目录。入口直接导入的第三方库为 `requests`、`websockets`，其余导入为 Python 标准库。README 只说明使用 Python 3，并给出以下调用形式，没有给出可复现的依赖版本组合或完整安装过程：
+
+```text
+python jumpserver-exp.py [address]
+
+如：python jumpserver-exp.py http://192.168.18.182:8080
+```
+
+上面的地址是原 README 的历史实验示例。本次没有运行该命令。
+
+从固定源码可以区分出三个阶段：
+
+1. **读取和提取。** 入口连接日志 WebSocket，提交固定的 `task` 文件路径，把收到的日志片段累积到内存，并用固定格式的正则表达式提取三元组。它依赖特定的参数顺序和日志格式，还以匹配到的健康检查日志作为结束条件（[源码第 13—32 行](https://github.com/Veraxy00/Jumpserver-EXP/blob/4ce1723c2eb4f08fd42447ecdaeec5b1cab180b2/jumpserver-exp.py#L13-L32)）。
+2. **逐项检查。** 对提取出的每个候选，脚本取得连接令牌并尝试建立终端，然后发送预设的 `echo` 标记命令来判断返回结果。这个阶段已经会向资产终端发送命令，不只是读取列表或测试 TCP 端口（[令牌及检测函数，第 45—67 行](https://github.com/Veraxy00/Jumpserver-EXP/blob/4ce1723c2eb4f08fd42447ecdaeec5b1cab180b2/jumpserver-exp.py#L45-L67)；[遍历候选，第 99—104 行](https://github.com/Veraxy00/Jumpserver-EXP/blob/4ce1723c2eb4f08fd42447ecdaeec5b1cab180b2/jumpserver-exp.py#L99-L104)）。
+3. **选择资产并执行用户命令。** 完成前面的逐项检查后，脚本才询问是否继续，再读取资产编号和用户指定的命令（[第 111—129 行](https://github.com/Veraxy00/Jumpserver-EXP/blob/4ce1723c2eb4f08fd42447ecdaeec5b1cab180b2/jumpserver-exp.py#L111-L129)）。
+
+**脚本中的 Yes/No 提示出现在逐项检查之后。** 因此选择 No 只能阻止后续的人工指定命令阶段，不能撤回此前已经进行的日志读取、令牌请求、终端初始化和预设 `echo` 命令。使用该脚本前就需要明确覆盖这些动作的资产授权。
+
+源码会把日志中的标识、终端返回内容和后续取得的令牌打印到控制台；终端会话及命令也可能被资产或 JumpServer 的审计机制记录。脚本本身没有直接创建本地结果文件、新增账号或删除文件的调用，但用户在最后阶段输入的命令可以产生相应副作用，不能因工具名带有“检测”而将它视为只读操作。
+
+### 五、固定工具与原文样例的保真限制
+
+以下问题来自静态阅读，不是一次执行结果，也没有在整理过程中修补为新工具：
+
+- 固定工具没有为 `requests.post()` 指定超时或先检查 HTTP 状态，便直接解析 JSON 和读取 `token` 字段；逐条 `recv()` 也没有显式的单次等待上限。捕获 `TimeoutError` 本身不会新增计时限制。日志片段会持续累积到内存，读取流程依赖其结束标记；消息数量或输出格式不符时，流程可能停滞、占用更多内存或判断不准确。
+- 工具的“可用”判断要求特定标记在一次返回中出现指定次数。终端回显、消息分片和提示内容都会影响这一判断；未被列为可用资产不能直接推出目标不存在漏洞。
+- 日志 URL 构造处理了 `http`/`https` 到 `ws`/`wss` 的转换，但后续终端 URL 仍使用固定 `ws://` 拼接方式。不能据此宣称这个版本完整支持 HTTPS 部署。
+- 资产选择的边界检查使用了原始候选集合的长度，随后却按筛选后的集合取值；筛选前后数量不同或编号输入不合适时可能出现错误。原代码未改。
+- 原文内嵌的简短 Python 样例与仓库完整工具不是同一个文件。保存的原始 HTML 中，该简短样例的最后一个代码行元素为 `asyncio.get_event_loop().run_until_complete(main_logic(cmd)`，缺少外层闭合括号。这里照录该行，不补写括号。
+- 原文按多个 `<code>` 元素保存代码行。单靠正文文本提取无法可靠还原显示缩进，本次也没有重建页面样式；不能只凭提取文本没有缩进，就把排版丢失判定为原作者源文件的缩进错误。原始 HTML 已保留。
+- 第三方依赖没有固定版本，本轮未下载或审计依赖包实现；没有建立运行环境或验证截图。这个缺口影响“原样可运行”和运行结果的判断，不影响对已读正文、入口代码和上述方法条件的整理。
+
+### 补充来源
+
+- Veraxy @ QAX CERT：[JumpServer远程命令执行你可能不知道的点（附利用工具）](https://mp.weixin.qq.com/s/lbcYzNsiOYZRwQzAIYxg3g)
+- 原文历史快照：[20210315060223](https://web.archive.org/web/20210315060223id_/https://mp.weixin.qq.com/s/lbcYzNsiOYZRwQzAIYxg3g)
+- 原作者附带工具：[固定提交 4ce1723c2eb4f08fd42447ecdaeec5b1cab180b2](https://github.com/Veraxy00/Jumpserver-EXP/tree/4ce1723c2eb4f08fd42447ecdaeec5b1cab180b2)
+
+本节未新增 CVE 编号。原文关于部分版本认证方式不同的提醒予以保留，但没有足够证据据此重写前文的完整受影响分支列表。

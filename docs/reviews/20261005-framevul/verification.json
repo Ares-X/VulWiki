@@ -2,7 +2,7 @@
   "verified_source_base": "927ec4a91f507197aeb3ab1aec67343495480d44",
   "newer_master_known_but_not_reconciled": "25e2037091036e848c6f141e52a21f405f198c20",
   "ready_to_merge": false,
-  "independent_review": "19 article texts and bounded source evidence independently accepted; final SHA256 per article below",
+  "independent_review": "21 article texts and bounded source evidence independently accepted; final SHA256 per article below",
   "article_hashes": [
     {
       "frame_ids": [
@@ -137,6 +137,20 @@
       ],
       "path": "Web安全/中间件/NPS内网穿透/npsauth_key未授权访问漏洞.md",
       "sha256": "cc8572a2bd5957abf9fe5938e4ecaeb87f2bd3846980fd278dcd06643f2aad3a"
+    },
+    {
+      "frame_ids": [
+        374
+      ],
+      "path": "Web安全/中间件/Resin/Resin 4.0.65 非严格映射下的 JSP 目录解析分析.md",
+      "sha256": "1e4e1c464e7f4c4003342dd3fa9efdc2a54ac91b548aa3915af3e871cfbb46c1"
+    },
+    {
+      "frame_ids": [
+        307
+      ],
+      "path": "Web安全/运维面板/Jumpserver/JumpServer 未授权接口 远程命令执行漏洞.md",
+      "sha256": "37363c69f2089bd237156a98a3b4021842c34bd14241ce4b89dc546736973f86"
     }
   ],
   "tests": {
@@ -145,7 +159,7 @@
       "failed": 0
     },
     "content_quality": {
-      "documents": 5859,
+      "documents": 5860,
       "new_issues": 0,
       "fatal_issues": 0,
       "historical_warnings": 4095,
@@ -153,13 +167,13 @@
     },
     "generated_indexes": "build and build --check passed",
     "selected_resource_check": {
-      "articles": 19,
-      "files": 21,
-      "bytes": 5565010,
+      "articles": 21,
+      "files": 48,
+      "bytes": 10947032,
       "missing": 0,
       "zero_byte": 0,
       "html_error_page": 0,
-      "recognized_container": 21,
+      "recognized_container": 48,
       "unknown": 0,
       "extension_mismatch": 0,
       "remote_images": 0,
@@ -177,8 +191,8 @@
       ]
     },
     "code_copy_check": {
-      "articles": 19,
-      "blocks": 42,
+      "articles": 21,
+      "blocks": 51,
       "exact": true
     },
     "remote_ci": {
@@ -231,6 +245,23 @@
               "status": "completed",
               "conclusion": "success",
               "url": "https://github.com/Ares-X/VulWiki/actions/runs/37269302797"
+            }
+          ]
+        },
+        {
+          "head": "5f47e444a0b924a3bd871a7ac70ad20f472bd299",
+          "checks": [
+            {
+              "event": "pull_request",
+              "status": "completed",
+              "conclusion": "success",
+              "url": "https://github.com/Ares-X/VulWiki/actions/runs/37270442558"
+            },
+            {
+              "event": "push",
+              "status": "completed",
+              "conclusion": "success",
+              "url": "https://github.com/Ares-X/VulWiki/actions/runs/37270437314"
             }
           ]
         }

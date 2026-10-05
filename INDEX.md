@@ -2,7 +2,7 @@
 
 # 产品索引
 
-收录 5763 个主入口（另保留 5857 份来源文档）；不代表独立漏洞数或已验证数量。隔离/无效记录和结构错误不进入本索引。
+收录 5764 个主入口（另保留 5858 份来源文档）；不代表独立漏洞数或已验证数量。隔离/无效记录和结构错误不进入本索引。
 
 - [360（5 篇）](INDEX/360.md)
 - [AI应用（87 篇）](INDEX/AI%E5%BA%94%E7%94%A8.md)
@@ -57,7 +57,7 @@
 - [XZ Utils（1 篇）](INDEX/XZ%20Utils.md)
 - [iOS（1 篇）](INDEX/iOS.md)
 - [macOS（1 篇）](INDEX/macOS.md)
-- [中间件（535 篇）](INDEX/%E4%B8%AD%E9%97%B4%E4%BB%B6.md)
+- [中间件（536 篇）](INDEX/%E4%B8%AD%E9%97%B4%E4%BB%B6.md)
 - [云平台（140 篇）](INDEX/%E4%BA%91%E5%B9%B3%E5%8F%B0.md)
 - [从 allow_active 到 root 的本地提权（1 篇）](INDEX/%E4%BB%8E%20allow_active%20%E5%88%B0%20root%20%E7%9A%84%E6%9C%AC%E5%9C%B0%E6%8F%90%E6%9D%83.md)
 - [信诺瑞得（1 篇）](INDEX/%E4%BF%A1%E8%AF%BA%E7%91%9E%E5%BE%97.md)

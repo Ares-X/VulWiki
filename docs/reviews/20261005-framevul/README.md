@@ -12,7 +12,7 @@
 
 ## 已完成独立复核并纳入本批的文章
 
-11 篇新增、8 篇补充。对已有文章的补充保持原正文逐字不变；必要元数据新增/纠正另有精确记录。
+12 篇新增、9 篇补充。对已有文章的补充保持原正文逐字不变；必要元数据新增/纠正另有精确记录。
 
 - 新增，FrameVul 267：[Gitea 仓库迁移 Git 参数注入漏洞 CVE-2022-30781](../../../Web%E5%AE%89%E5%85%A8/%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6/Gitea/Gitea%20%E4%BB%93%E5%BA%93%E8%BF%81%E7%A7%BB%20Git%20%E5%8F%82%E6%95%B0%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%20CVE-2022-30781.md)
 - 补充，FrameVul 259：[GeoServer-OGC-Filter-SQL注入漏洞-CVE-2023-25157](../../../Web%E5%AE%89%E5%85%A8/%E4%B8%AD%E9%97%B4%E4%BB%B6/GeoServer/GeoServer-OGC-Filter-SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E-CVE-2023-25157.md)
@@ -33,6 +33,8 @@
 - 新增，FrameVul 362：[phpMyAdmin GET SQL 请求 CSRF CVE-2017-1000499](../../../Web%E5%AE%89%E5%85%A8/%E6%95%B0%E6%8D%AE%E5%BA%93/Phpmyadmin/phpMyAdmin%20GET%20SQL%20%E8%AF%B7%E6%B1%82%20CSRF%20CVE-2017-1000499.md)
 - 新增，FrameVul 288：[JBoss EAP JMXInvokerServlet 反序列化资源耗尽 CVE-2016-7065](../../../Web%E5%AE%89%E5%85%A8/%E4%B8%AD%E9%97%B4%E4%BB%B6/JBoss/JBoss%20EAP%20JMXInvokerServlet%20%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E8%B5%84%E6%BA%90%E8%80%97%E5%B0%BD%20CVE-2016-7065.md)
 - 补充，FrameVul 352：[npsauth_key未授权访问漏洞](../../../Web%E5%AE%89%E5%85%A8/%E4%B8%AD%E9%97%B4%E4%BB%B6/NPS%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/npsauth_key%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE%E6%BC%8F%E6%B4%9E.md)
+- 新增，FrameVul 374：[Resin 4.0.65 非严格映射下的 JSP 目录解析分析](../../../Web%E5%AE%89%E5%85%A8/%E4%B8%AD%E9%97%B4%E4%BB%B6/Resin/Resin%204.0.65%20%E9%9D%9E%E4%B8%A5%E6%A0%BC%E6%98%A0%E5%B0%84%E4%B8%8B%E7%9A%84%20JSP%20%E7%9B%AE%E5%BD%95%E8%A7%A3%E6%9E%90%E5%88%86%E6%9E%90.md)
+- 补充，FrameVul 307：[JumpServer 未授权接口 远程命令执行漏洞](../../../Web%E5%AE%89%E5%85%A8/%E8%BF%90%E7%BB%B4%E9%9D%A2%E6%9D%BF/Jumpserver/JumpServer%20%E6%9C%AA%E6%8E%88%E6%9D%83%E6%8E%A5%E5%8F%A3%20%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md)
 
 其中 372 仅覆盖 CVE-2006-1953 的 Windows 盘符路径穿越。原汇编的弱口令、`%20`、`jndi-appconfig`、`viewfile` 分支未因此被认定全部覆盖。
 
@@ -43,7 +45,7 @@
 - 其余允许工作仍在进行，包括未读来源的正常恢复、已有草稿独立复核与完整台账收尾。不能把未读、一次读取失败或同CVE标题当成最终缺失/重复结论
 - 这些暂停不删除既有文章，也不撤销此前已有覆盖证据；台账中的本轮暂缓和旧覆盖状态是两个维度
 
-当前517项处置计数：deferred=442；non_article=14；duplicate=18；unread=23；update=9；new=11。`pending-review` 尚未发表，仍有允许范围的逐项核对在进行。
+当前517项处置计数：deferred=443；non_article=15；duplicate=18；unread=19；update=10；new=12。`pending-review` 尚未发表，仍有允许范围的逐项核对在进行。
 
 ## 本批验收与限制
 
@@ -52,6 +54,6 @@
 - 现有环境为Marked17.0.5；39项Node测试37通过、2项既有兼容性失败（制表符/CRLF定位及预期模块文件名）。没有安装新依赖，不能声称该组全过
 - 本批Markdown以字符串解析器审查，没有加载或执行HTML/PoC；原正文、代码、URL、测试值及图片原字节保持。新增MeterSphere和Jenkins图片已查看实际像素，使用库内相对引用
 - 本次没有运行PoC、扫描器、安装器、依赖安装、目标请求或凭据有效性测试；静态审查不等于漏洞或修复已复现
-- 本地针对累计19篇及其21份图片资源的离线检查通过：无缺失/空文件/HTML错误页/远程依赖；新图片原字节及相对引用核对通过。全库图片检查由远端CI再确认，不将选择性检查说成全库检查
+- 本地针对累计21篇及其48份图片资源的离线检查通过：无缺失/空文件/HTML错误页/远程依赖；新图片原字节及相对引用核对通过。全库图片检查由远端CI再确认，不将选择性检查说成全库检查
 
 持续更新本记录与同一草稿PR，直到允许范围内的工作结束或遇到明确阻碍。

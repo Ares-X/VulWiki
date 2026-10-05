@@ -1,5 +1,5 @@
 {
-  "snapshot_utc": "2026-10-05T06:01:17.547950+00:00",
+  "snapshot_utc": "2026-10-05T06:39:38.171961+00:00",
   "framevul_commit": "b28dd1a309d21bb90c4ffc8e39b0469c52f228eb",
   "vulwiki_base": "927ec4a91f507197aeb3ab1aec67343495480d44",
   "scope": {
@@ -10,16 +10,16 @@
   },
   "full_scope_complete": false,
   "counts": {
-    "deferred": 442,
-    "non_article": 14,
+    "deferred": 443,
+    "non_article": 15,
     "duplicate": 18,
-    "unread": 23,
-    "update": 9,
-    "new": 11
+    "unread": 19,
+    "update": 10,
+    "new": 12
   },
   "article_file_counts": {
-    "new": 11,
-    "updated": 8
+    "new": 12,
+    "updated": 9
   },
   "limits": [
     "本文件为持续更新的进度快照，不是全量技术审阅完成声明。",
@@ -4393,7 +4393,7 @@
           "failure": "HTTP 702，未取得文章正文"
         }
       ],
-      "independent_next_step": "优先恢复有归属的原作者正文或固定文件，再核对该文具体方法与现有正文；若这些公开路线均不可用，需要可核对的原文材料。"
+      "independent_next_step": "本轮精确URL档案查询返回空；待出现有归属的原文材料，不继续无目标检索。"
     },
     {
       "id": 258,
@@ -4462,7 +4462,7 @@
       "outcome_reason": "补充 GeoServer 具体 PoC、配置条件和分支修复边界。",
       "read_depth_summary": "完整读取 83 行脚本、README、两份官方公告和相关提交差异；现有正文保持不变。",
       "source_read_failures": [],
-      "independent_next_step": "等待草稿审核与合并决定；处理新的内容反馈。",
+      "independent_next_step": "本次有界补充的独立审阅与终稿哈希绑定已完成；远端提交和CI结果见PR25，未读的其他材料范围不因此视为已完整归档。",
       "content_sha256": "5e4cd189ee69456c1ba743b43db2a783f80608d3642a2a7f8c5454cb634a6e11"
     },
     {
@@ -4546,7 +4546,7 @@
       "outcome_reason": "新增 GitLab UploadsPipeline 符号链接读取资料，明确导入权限和留存副作用。",
       "read_depth_summary": "完整读取原报告、33 行原附件、CNA 和五份固定产品文件；附件按下载字节哈希留证。",
       "source_read_failures": [],
-      "independent_next_step": "等待草稿审核与合并决定；处理新的内容反馈。",
+      "independent_next_step": "本次有界补充的独立审阅与终稿哈希绑定已完成；远端提交和CI结果见PR25，未读的其他材料范围不因此视为已完整归档。",
       "content_sha256": "6294385dbf0c7d670b7b38302413002bec99f7efc0401d4a30044abe67365ffb"
     },
     {
@@ -4680,12 +4680,12 @@
       "publication_paths": [],
       "reason": "详见阅读范围、具体准入缺口和工作状态；有界检查结束不表示来源恢复已穷尽。",
       "read_depth": {
-        "recovery": "WeChat original yields Site Unavailable; title searches only establish catalogs. Generic GitLab file-read titles cannot distinguish 2016 and 2020 methods.",
+        "recovery": "Full readable probable reprint, author/year catalog target metadata and exact source identifiers; no image or linked PoC expansion",
         "current_identity": "SHA256/Gitblob identity and frontmatter only unless bounded_review/recovery explicitly states further body reading",
-        "current_public_summary": "已尝试原链接读取和公开来源检索；现阶段只确认明确记录的索引、片段或转载范围。"
+        "current_public_summary": "疑似Tide转载全文、作者年度目录与精确来源标识已读；未读图或扩展PoC。"
       },
       "admission_gaps": [
-        "通用 GitLab 文件读取标题不足以区分具体年份和方法。"
+        "转载与目标微信原文的完整对应尚未证实；同为GitLab文件读取不证明全文相同。"
       ],
       "work_state": "bounded_recovery_complete_source_gap",
       "assessment_outcome": "unread",
@@ -4746,8 +4746,8 @@
           }
         }
       ],
-      "outcome_reason": "通用 GitLab 文件读取标题不足以区分具体年份和方法。",
-      "read_depth_summary": "已尝试原链接读取和公开来源检索；现阶段只确认明确记录的索引、片段或转载范围。",
+      "outcome_reason": "原作者和2020年目录归属已确认，发现疑似同作者转载，仍不把它当精确原文恢复。",
+      "read_depth_summary": "疑似Tide转载全文、作者年度目录与精确来源标识已读；未读图或扩展PoC。",
       "source_read_failures": [
         {
           "url": "https://mp.weixin.qq.com/s/HKZHUs_bTN-00_8HsU6grA",
@@ -4842,7 +4842,7 @@
       "outcome_reason": "已恢复官方镜像中的原报告，追加现有文章的来源、编号与版本证据。",
       "read_depth_summary": "完整读取原报告、两篇现有正文、修复前后 UploadsRewriter 和 FileUploader；另核对路径检查函数。",
       "source_read_failures": [],
-      "independent_next_step": "等待草稿审核与合并决定；处理新的内容反馈。",
+      "independent_next_step": "本次有界补充的独立审阅与终稿哈希绑定已完成；远端提交和CI结果见PR25，未读的其他材料范围不因此视为已完整归档。",
       "content_sha256": "7637a98bd56111758aaabe525534104fc725d4916ae4aad2a3a95fed4656e53c"
     },
     {
@@ -4878,7 +4878,7 @@
       "outcome_reason": "追加 GitLab 2022-2992 的固定公开实现、版本和操作风险。",
       "read_depth_summary": "七份实现/环境文件全文已读，嵌入 PACK 做静态结构核对；未执行程序或安装环境。",
       "source_read_failures": [],
-      "independent_next_step": "等待草稿审核与合并决定；处理新的内容反馈。",
+      "independent_next_step": "本次有界补充的独立审阅与终稿哈希绑定已完成；远端提交和CI结果见PR25，未读的其他材料范围不因此视为已完整归档。",
       "content_sha256": "56638023d8a7bb73cc5db0e27fddf53ad0abd066306ec716509a43bf7e96c8bb"
     },
     {
@@ -4914,7 +4914,7 @@
       "outcome_reason": "新增 Gitea 迁移参数注入资料，并澄清外部 Git 对象下载与代码执行的区别。",
       "read_depth_summary": "完整读取九份固定 PoC 文本、三份调用链文件、补丁和官方版本材料；未读取 tttang 正文。",
       "source_read_failures": [],
-      "independent_next_step": "等待草稿审核与合并决定；处理新的内容反馈。",
+      "independent_next_step": "本次有界补充的独立审阅与终稿哈希绑定已完成；远端提交和CI结果见PR25，未读的其他材料范围不因此视为已完整归档。",
       "content_sha256": "51a03a94f20c26e5fb99c9be6f744e0b0bdf2b0066b223d9c8690639c3f9741e"
     },
     {
@@ -5383,12 +5383,12 @@
       "publication_paths": [],
       "reason": "详见阅读范围、具体准入缺口和工作状态；有界检查结束不表示来源恢复已穷尽。",
       "read_depth": {
-        "recovery": "Original unavailable; public fixed Git indexes correlate exact link/title with2024-06-06, not article body.",
-        "current_identity": "SHA256/Gitblob identity and frontmatter only unless bounded_review/recovery explicitly states further body reading",
-        "current_public_summary": "已尝试原链接读取和公开来源检索；现阶段只确认明确记录的索引、片段或转载范围。"
+        "recovery": "固定索引精确链接、转载目录作者元数据、大学预警全文已读；原文未恢复；现有文是external/report而非productFile。",
+        "current_identity": "Gitblob及完整现有对应正文已读；未读旧图，不据题名认定原文全文相同。",
+        "current_public_summary": "已读固定精确链接、作者目录元数据、大学预警全文和现有完整正文。"
       },
       "admission_gaps": [
-        "仅确认原链接与发布日期，缺 productFile 的完整方法和版本。"
+        "缺原文及productFile具体构建/方法对应；大学预警不能证明原作者的全部流程。"
       ],
       "work_state": "bounded_recovery_complete_source_gap",
       "assessment_outcome": "unread",
@@ -5412,8 +5412,8 @@
           }
         }
       ],
-      "outcome_reason": "仅确认原链接与发布日期，缺 productFile 的完整方法和版本。",
-      "read_depth_summary": "已尝试原链接读取和公开来源检索；现阶段只确认明确记录的索引、片段或转载范围。",
+      "outcome_reason": "当前候选为external/report，不能覆盖原题名productFile；原文仍未恢复。",
+      "read_depth_summary": "已读固定精确链接、作者目录元数据、大学预警全文和现有完整正文。",
       "source_read_failures": [
         {
           "url": "https://mp.weixin.qq.com/s?__biz=MzIyMjkzMzY4Ng==&mid=2247505219&idx=1&sn=f48d189da00e2f7040a3b62de580d8c1",
@@ -5436,12 +5436,12 @@
       "publication_paths": [],
       "reason": "详见阅读范围、具体准入缺口和工作状态；有界检查结束不表示来源恢复已穷尽。",
       "read_depth": {
-        "recovery": "Original unavailable; exact link present in2023-12-21 indexes. CVE-2023-6895 is only an independent topic lead, not verified full source equivalence.",
-        "current_identity": "SHA256/Gitblob identity and frontmatter only unless bounded_review/recovery explicitly states further body reading",
-        "current_public_summary": "已尝试原链接读取和公开来源检索；现阶段只确认明确记录的索引、片段或转载范围。"
+        "recovery": "原文未恢复；固定CNA全文已读，原发现者仓库404；精确URL公开档案元数据返回空。",
+        "current_identity": "Gitblob及完整现有对应正文已读；未读旧图，不据题名认定原文全文相同。",
+        "current_public_summary": "固定CNA全文、现有103行正文已读；原发现者Git仓库404；精确URL档案查询为空。"
       },
       "admission_gaps": [
-        "仅确认原链接，相关 CVE 线索不能代替该文。"
+        "原文或有归属的同文存档仍缺失；不把CNA概述当原文完整PoC。"
       ],
       "work_state": "bounded_recovery_complete_source_gap",
       "assessment_outcome": "unread",
@@ -5465,8 +5465,8 @@
           }
         }
       ],
-      "outcome_reason": "仅确认原链接，相关 CVE 线索不能代替该文。",
-      "read_depth_summary": "已尝试原链接读取和公开来源检索；现阶段只确认明确记录的索引、片段或转载范围。",
+      "outcome_reason": "CNA确认具体构建和ping.php参数，但不能代替未恢复的原微信文章。",
+      "read_depth_summary": "固定CNA全文、现有103行正文已读；原发现者Git仓库404；精确URL档案查询为空。",
       "source_read_failures": [
         {
           "url": "https://mp.weixin.qq.com/s?__biz=MzU5MTc1NTE0Ng==&mid=2247485360&idx=1&sn=aea143927b6bd96689f5d435bfb8df6c",
@@ -5648,12 +5648,12 @@
       "publication_paths": [],
       "reason": "详见阅读范围、具体准入缺口和工作状态；有界检查结束不表示来源恢复已穷尽。",
       "read_depth": {
-        "recovery": "Original full URL was preserved unchanged and retrieved only as a source article; returned Site Unavailable. Historical sharing parameters are not treated as proof of a live secret. No values rewritten.",
-        "current_identity": "SHA256/Gitblob identity and frontmatter only unless bounded_review/recovery explicitly states further body reading",
-        "current_public_summary": "已尝试原链接读取和公开来源检索；现阶段只确认明确记录的索引、片段或转载范围。"
+        "recovery": "原文未恢复；同题明确署名转载全文及两张图已读，但未证明与目标URL同文；图片原有遮挡不猜补。",
+        "current_identity": "Gitblob及完整现有对应正文已读；未读旧图，不据题名认定原文全文相同。",
+        "current_public_summary": "完整读取署名飓风网络安全/cexlife的转载及两张原图、现有cmd.json正文；不猜补像素。"
       },
       "admission_gaps": [
-        "原分享链接仅返回不可用页，需区分上传与转换入口；分享参数本身不证明有效秘密。"
+        "原文对应、完整公开请求及精确入口仍未闭合；分享参数未被当作有效秘密。"
       ],
       "work_state": "bounded_recovery_complete_source_gap",
       "assessment_outcome": "unread",
@@ -5677,8 +5677,8 @@
           }
         }
       ],
-      "outcome_reason": "原分享链接仅返回不可用页，需区分上传与转换入口；分享参数本身不证明有效秘密。",
-      "read_depth_summary": "已尝试原链接读取和公开来源检索；现阶段只确认明确记录的索引、片段或转载范围。",
+      "outcome_reason": "同题明确署名转载已读，但原微信对应未证明，转载的关键方法仍在原有遮挡图片中。",
+      "read_depth_summary": "完整读取署名飓风网络安全/cexlife的转载及两张原图、现有cmd.json正文；不猜补像素。",
       "source_read_failures": [
         {
           "url": "https://mp.weixin.qq.com/s?__biz=MzkxNTU5NjM5MQ==&mid=2247484409&idx=1&sn=ec6b363cbab59af3e323b3c18425b017&chksm=c15df6f1f62a7fe7ef6538e339eb29b59aa313a9e4c85f06482104f535ccc22fdcf83bbd2ef5&scene=126&sessionid=1701682077&key=1afad7311c1000c6326803e9993c3c3655685ec951d2506e5c3879b5677aaf2e6458039c2819a39d8ae10924fb7bc3801ac1eef39a661e9fa79211b8ba2fdfa2c640b23a6b917d9e431bc0f625f47fe16e7dcaa1d68152df42bed5848fd2efb0eda64c3b2a6765a3feb931a321c5edb2911a15b1e201ed23c21536122e4cb91f&ascene=15&uin=MzgxODQ4MjMz&devicetype=Windows+10+x64&version=63060012&lang=zh_CN&session_us=gh_c63b035bdde2&countrycode=GY&exportkey=n_ChQIAhIQ7Q315IOTslTK%2FxQwXGrc8RLmAQIE97dBBAEAAAAAAGIzN77M9Z8AAAAOpnltbLcz9gKNyK89dVj0u9EpNejbnNVOqEwJ4P6GYsvS0ML6oYIp1QqiHaFhhv%2FiWbMiN5JeGmU4kXOZzLVgs5F5lGq6Ld7BddxZK1XubANs13KMx3EV6BxC9PkDAobbJnFHhnB08kTxP%2F6r1jkRhFNUiEgGZoc%2BZWIVIyNXOX2NlJKwXjUMkuMi8PiN%2BPqU3zpfOqydlt%2F1IQlxoESqgm72uT8gP05hHQHf0UQmGlmiJcvcu7HumCvC0MA%2FpSugSDM7ch1bWlFQNDC1cwee&acctmode=0&pass_ticket=A4qxtGK0O4LeaDLKYYXNijQqeFho03G%2B90v3l9RyysEVcEcvjTMQ8cVu%2FWiZLpAuvaj7W%2BgV1ofOSy%2FnY1C2Gg%3D%3D&wx_header=0&fontgear=2",
@@ -5702,12 +5702,12 @@
       "publication_paths": [],
       "reason": "详见阅读范围、具体准入缺口和工作状态；有界检查结束不表示来源恢复已穷尽。",
       "read_depth": {
-        "recovery": "Original unavailable. Public search finds related FlexPaper/IP-guard reports but does not establish this exact article's scope.",
-        "current_identity": "SHA256/Gitblob identity and frontmatter only unless bounded_review/recovery explicitly states further body reading",
-        "current_public_summary": "已尝试原链接读取和公开来源检索；现阶段只确认明确记录的索引、片段或转载范围。"
+        "recovery": "原文未恢复；两篇现有FlexPaper正文全文及相关独立通告、厂商主页/FAQ已读；未取得明确对应原文或厂商补丁正文。",
+        "current_identity": "Gitblob及完整现有对应正文已读；未读旧图，不据题名认定原文全文相同。",
+        "current_public_summary": "两篇现文全文、相关独立安全通告、厂商主页和FAQ已读。"
       },
       "admission_gaps": [
-        "相关 FlexPaper/IP-guard 资料未证明与原文同一方法和构建。"
+        "缺精确原文归属和厂商对应补丁正文，不能用近似标题直接判完整覆盖。"
       ],
       "work_state": "bounded_recovery_complete_source_gap",
       "assessment_outcome": "unread",
@@ -5749,8 +5749,8 @@
           }
         }
       ],
-      "outcome_reason": "相关 FlexPaper/IP-guard 资料未证明与原文同一方法和构建。",
-      "read_depth_summary": "已尝试原链接读取和公开来源检索；现阶段只确认明确记录的索引、片段或转载范围。",
+      "outcome_reason": "现有两篇包含FlexPaper方法，原微信全文与构建对应仍未恢复。",
+      "read_depth_summary": "两篇现文全文、相关独立安全通告、厂商主页和FAQ已读。",
       "source_read_failures": [
         {
           "url": "https://mp.weixin.qq.com/s?__biz=MzI3NzMzNzE5Ng==&mid=2247486971&idx=1&sn=11a6cbd4db9a45976beb39fe613a3010",
@@ -6113,7 +6113,7 @@
       "outcome_reason": "新增已认证 JBoss EAP 反序列化资源耗尽资料，不把潜在 RCE 当作已证实效果。",
       "read_depth_summary": "完整读取通告、厂商记录和 CNA；固定 ZIP 字节与 Git 信息核对，四份序列化数据流只做有界语法分析。",
       "source_read_failures": [],
-      "independent_next_step": "等待草稿审核与合并决定；处理新的内容反馈。",
+      "independent_next_step": "本次有界补充的独立审阅与终稿哈希绑定已完成；远端提交和CI结果见PR25，未读的其他材料范围不因此视为已完整归档。",
       "content_sha256": "4c469a54090f60b39bac97584e4f76fe9d693bcd5b545af4d954b582965dc31a"
     },
     {
@@ -6840,7 +6840,7 @@
           "failure": "该次公开读取未取得正文"
         }
       ],
-      "independent_next_step": "等待草稿审核与合并决定；处理新的内容反馈。",
+      "independent_next_step": "本次有界补充的独立审阅与终稿哈希绑定已完成；远端提交和CI结果见PR25，未读的其他材料范围不因此视为已完整归档。",
       "content_sha256": "c242bb42f41fbe284c68b5797e36dfcdc7257de054401a319f2643a38b018bdc"
     },
     {
@@ -6898,7 +6898,7 @@
           "failure": "HTTP 502，未取得文章正文"
         }
       ],
-      "independent_next_step": "优先恢复有归属的原作者正文或固定文件，再核对该文具体方法与现有正文；若这些公开路线均不可用，需要可核对的原文材料。"
+      "independent_next_step": "完成该精确URL的一次有界档案查询；若有同文快照，先核范围再读正文。"
     },
     {
       "id": 302,
@@ -6932,7 +6932,7 @@
       "outcome_reason": "新增 Jenkins Git client Plugin 参数注入资料，保留原始图片证据。",
       "read_depth_summary": "固定 README 和四张原图全部读取；核对官方版本、Job/Configure 权限及固定修复函数。",
       "source_read_failures": [],
-      "independent_next_step": "等待草稿审核与合并决定；处理新的内容反馈。",
+      "independent_next_step": "本次有界补充的独立审阅与终稿哈希绑定已完成；远端提交和CI结果见PR25，未读的其他材料范围不因此视为已完整归档。",
       "content_sha256": "d76fb0ab36c91481d62687baf1a5c41e73ec6b838ffe8eb0e24cf779d142af3b"
     },
     {
@@ -6968,7 +6968,7 @@
       "outcome_reason": "在既有 Joomla 文章追加固定脚本的技术细节和副作用。",
       "read_depth_summary": "186 行脚本、README、官方公告与现有正文全文已读。",
       "source_read_failures": [],
-      "independent_next_step": "等待草稿审核与合并决定；处理新的内容反馈。",
+      "independent_next_step": "本次有界补充的独立审阅与终稿哈希绑定已完成；远端提交和CI结果见PR25，未读的其他材料范围不因此视为已完整归档。",
       "content_sha256": "68418ae1bd2ebf6fa09949c5a87f0b804915a8624a5854c6b92dfb7a85d63db1"
     },
     {
@@ -7045,7 +7045,7 @@
           "failure": "HTTP 521，未取得文章正文"
         }
       ],
-      "independent_next_step": "等待草稿审核与合并决定；处理新的内容反馈。",
+      "independent_next_step": "本次有界补充的独立审阅与终稿哈希绑定已完成；远端提交和CI结果见PR25，未读的其他材料范围不因此视为已完整归档。",
       "content_sha256": "68418ae1bd2ebf6fa09949c5a87f0b804915a8624a5854c6b92dfb7a85d63db1"
     },
     {
@@ -7160,19 +7160,21 @@
         "Web安全/运维面板/Jumpserver/JumpServer-未授权接口-远程命令执行漏洞.md",
         "Web安全/运维面板/Jumpserver/JumpServer-远程命令执行漏洞.md"
       ],
-      "decision": "unread",
-      "publication_paths": [],
-      "reason": "详见阅读范围、具体准入缺口和工作状态；有界检查结束不表示来源恢复已穷尽。",
+      "decision": "update",
+      "publication_paths": [
+        "Web安全/运维面板/Jumpserver/JumpServer 未授权接口 远程命令执行漏洞.md"
+      ],
+      "reason": "具体公开材料、版本/权限映射、有界静态审阅及最终内容哈希经独立核对；未运行PoC。",
       "read_depth": {
-        "recovery": "Original unavailable. Git discovery shows same short URL with2021 date and JumpServer source references, but no complete article.",
+        "recovery": "All original text and embedded code strings; all prose/code in both current Markdown files; no images or linked code/dependencies",
         "current_identity": "SHA256/Gitblob identity and frontmatter only unless bounded_review/recovery explicitly states further body reading",
-        "current_public_summary": "已尝试原链接读取和公开来源检索；现阶段只确认明确记录的索引、片段或转载范围。"
+        "current_public_summary": "完整读取原文技术文字、规范主文章及固定129行工具；67个图片引用登记但未读像素。"
       },
       "admission_gaps": [
-        "已找到原链接和 2021 年引用，尚无其特有讨论全文。"
+        "独立准入复核待完成；历史内嵌短样例的语法/排版限制明示。"
       ],
-      "work_state": "bounded_recovery_complete_source_gap",
-      "assessment_outcome": "unread",
+      "work_state": "independently-reviewed",
+      "assessment_outcome": "update",
       "current_mappings": [
         {
           "id": 307,
@@ -7215,15 +7217,16 @@
           }
         }
       ],
-      "outcome_reason": "已找到原链接和 2021 年引用，尚无其特有讨论全文。",
-      "read_depth_summary": "已尝试原链接读取和公开来源检索；现阶段只确认明确记录的索引、片段或转载范围。",
+      "outcome_reason": "精确原文已恢复，现有正文缺少登录方式、日志条件和资产会话分析；追加稿已完成。",
+      "read_depth_summary": "完整读取原文技术文字、规范主文章及固定129行工具；67个图片引用登记但未读像素。",
       "source_read_failures": [
         {
           "url": "https://mp.weixin.qq.com/s/lbcYzNsiOYZRwQzAIYxg3g",
           "failure": "该次公开读取未取得正文"
         }
       ],
-      "independent_next_step": "优先恢复有归属的原作者正文或固定文件，再核对该文具体方法与现有正文；若这些公开路线均不可用，需要可核对的原文材料。"
+      "independent_next_step": "本次有界补充的独立审阅与终稿哈希绑定已完成；远端提交和CI结果见PR25，未读的其他材料范围不因此视为已完整归档。",
+      "content_sha256": "37363c69f2089bd237156a98a3b4021842c34bd14241ce4b89dc546736973f86"
     },
     {
       "id": 308,
@@ -7239,12 +7242,13 @@
       "read_depth": {
         "bounded_review": "Canonical original repo resolved by sameID330347025; complete fixedREADME",
         "current_identity": "SHA256/Gitblob identity and frontmatter only unless bounded_review/recovery explicitly states further body reading",
-        "current_public_summary": "完整读取固定 README 并核对相同仓库 ID；未读完三个实现脚本。"
+        "current_public_summary": "固定README和3个入口已全文静态读；该分支不在3个入口中实现；现有相关段已比对。",
+        "recovery": "固定README与选定现有正文核心段已读；没有完整读取或归档工具实现。"
       },
       "admission_gaps": [
-        "整个工具未归档或完整审计；若补入实现，需另行核对其具体增量及依赖。"
+        "工具类型与全文覆盖分列；私钥分支的权限、版本与返回证据未闭合。"
       ],
-      "work_state": "bounded_review_complete_tool_scope",
+      "work_state": "in_progress_bounded_entry_increment_review",
       "assessment_outcome": "deferred",
       "current_mappings": [],
       "fixed_repository_evidence": {
@@ -7254,8 +7258,8 @@
         "readme_blob": null,
         "readme_lines": null
       },
-      "outcome_reason": "已确认更名后的原仓库，核心方法与现有 JumpServer 文章重合。",
-      "read_depth_summary": "完整读取固定 README 并核对相同仓库 ID；未读完三个实现脚本。",
+      "outcome_reason": "已有核心日志/令牌流程，README独立高权限分支仍缺明确权限与版本证据。",
+      "read_depth_summary": "固定README和3个入口已全文静态读；该分支不在3个入口中实现；现有相关段已比对。",
       "source_read_failures": [],
       "independent_next_step": "优先恢复有归属的原作者正文或固定文件，再核对精确版本、配置、修复和实现范围。"
     },
@@ -7356,12 +7360,13 @@
       "read_depth": {
         "bounded_review": "Complete fixedREADME; current related mappings verified",
         "current_identity": "SHA256/Gitblob identity and frontmatter only unless bounded_review/recovery explicitly states further body reading",
-        "current_public_summary": "完整读取固定 README，定位现有相关正文。"
+        "current_public_summary": "固定两个入口、直接依赖清单及官方GHSA已读；追加提案正在核对。",
+        "recovery": "固定README与选定现有正文核心段已读；没有完整读取或归档工具实现。"
       },
       "admission_gaps": [
-        "自动化脚本和依赖未完整审阅，不能仅凭 README 准入。"
+        "独立准入与最终有界追加稿尚待完成；工具未逐版本运行验证。"
       ],
-      "work_state": "bounded_review_complete_tool_scope",
+      "work_state": "in_progress_bounded_entry_increment_review",
       "assessment_outcome": "deferred",
       "current_mappings": [],
       "fixed_repository_evidence": {
@@ -7371,10 +7376,10 @@
         "readme_blob": "62ca3efe744e57c8c3209ce2bd76ec46c7cd83e3",
         "readme_lines": 66
       },
-      "outcome_reason": "现有文章覆盖密码重置核心问题，自动修改密码包装尚未作为新实现收录。",
-      "read_depth_summary": "完整读取固定 README，定位现有相关正文。",
+      "outcome_reason": "V2有验证码OCR和自动改密增量，不能仅按旧文预测code方法判全部重复。",
+      "read_depth_summary": "固定两个入口、直接依赖清单及官方GHSA已读；追加提案正在核对。",
       "source_read_failures": [],
-      "independent_next_step": "优先恢复有归属的原作者正文或固定文件，再核对精确版本、配置、修复和实现范围。"
+      "independent_next_step": "完成已经取得的固定入口、版本和条件对应；符合门槛才提交追加稿。"
     },
     {
       "id": 312,
@@ -7390,12 +7395,13 @@
       "read_depth": {
         "bounded_review": "Complete fixedREADME; current related mappings verified",
         "current_identity": "SHA256/Gitblob identity and frontmatter only unless bounded_review/recovery explicitly states further body reading",
-        "current_public_summary": "完整读取固定 README，定位现有深度分析。"
+        "current_public_summary": "两个固定入口、直接清单和官方GHSA已读；浏览器、Cookie文件及Playbook副作用已记录。",
+        "recovery": "固定README与选定现有正文核心段已读；没有完整读取或归档工具实现。"
       },
       "admission_gaps": [
-        "Python/Go 自动化实现及浏览器驱动依赖未完整审阅。"
+        "需独立复核真实自动化增量；不将README组合声明当代码事实。"
       ],
-      "work_state": "bounded_review_complete_tool_scope",
+      "work_state": "in_progress_bounded_entry_increment_review",
       "assessment_outcome": "deferred",
       "current_mappings": [],
       "fixed_repository_evidence": {
@@ -7405,10 +7411,10 @@
         "readme_blob": "1efa6fd510723f6a01fa0dbd7ef214c609f0701c",
         "readme_lines": 134
       },
-      "outcome_reason": "现有文章覆盖任意文件写入核心问题，具体自动化链未作为新实现收录。",
-      "read_depth_summary": "完整读取固定 README，定位现有深度分析。",
+      "outcome_reason": "实际Python/Go入口要求已有凭据，没有实现README所称42820重置链。",
+      "read_depth_summary": "两个固定入口、直接清单和官方GHSA已读；浏览器、Cookie文件及Playbook副作用已记录。",
       "source_read_failures": [],
-      "independent_next_step": "优先恢复有归属的原作者正文或固定文件，再核对精确版本、配置、修复和实现范围。"
+      "independent_next_step": "完成已经取得的固定入口、版本和条件对应；符合门槛才提交追加稿。"
     },
     {
       "id": 313,
@@ -7530,7 +7536,7 @@
           "failure": "HTTP 405，未取得文章正文"
         }
       ],
-      "independent_next_step": "优先恢复有归属的原作者正文或固定文件，再核对该文具体方法与现有正文；若这些公开路线均不可用，需要可核对的原文材料。"
+      "independent_next_step": "完成该精确URL的一次有界档案查询；若有同文快照，先核范围再读正文。"
     },
     {
       "id": 315,
@@ -8070,19 +8076,19 @@
       "prior_matched_paths": [
         "Web安全/CMS内容/Maccms/Maccms后门.md"
       ],
-      "decision": "unread",
+      "decision": "deferred",
       "publication_paths": [],
       "reason": "详见阅读范围、具体准入缺口和工作状态；有界检查结束不表示来源恢复已穷尽。",
       "read_depth": {
-        "recovery": "360doc source502; independent original research by 京亟QAQ found in search text identifies counterfeit distribution backdoor, but no full comparison to360doc body.",
+        "recovery": "原URL存档可见技术全文和现有80行正文已读；原图未读，省略号未猜补。",
         "current_identity": "SHA256/Gitblob identity and frontmatter only unless bounded_review/recovery explicitly states further body reading",
-        "current_public_summary": "已尝试原链接读取和公开来源检索；另已读独立作者完整技术文字，未读取图片。"
+        "current_public_summary": "精确2020年存档技术全文及现有80行正文已读；未猜补代码省略号，未执行样本。"
       },
       "admission_gaps": [
-        "原 360doc 未恢复；已读原研究者文字，指出山寨分发而非全部正版 V10，代码主要在未读图片。"
+        "完整样本及具体完整触发方法未取得；域名、样本哈希等新事实不能替代完整实现审查。"
       ],
-      "work_state": "bounded_recovery_complete_source_gap",
-      "assessment_outcome": "unread",
+      "work_state": "bounded_original_read_admission_gap",
+      "assessment_outcome": "deferred",
       "current_mappings": [
         {
           "id": 326,
@@ -8103,8 +8109,8 @@
           }
         }
       ],
-      "outcome_reason": "原 360doc 未恢复；已读原研究者文字，指出山寨分发而非全部正版 V10，代码主要在未读图片。",
-      "read_depth_summary": "已尝试原链接读取和公开来源检索；另已读独立作者完整技术文字，未读取图片。",
+      "outcome_reason": "原360doc文章已经恢复，确认为假冒MacCMS分发包事件；原始载荷本身截断，暂不新增。",
+      "read_depth_summary": "精确2020年存档技术全文及现有80行正文已读；未猜补代码省略号，未执行样本。",
       "source_read_failures": [
         {
           "url": "http://www.360doc.com/content/20/0203/14/30583588_889434397.shtml",
@@ -8115,7 +8121,7 @@
           "failure": "HTTP 502，未取得文章正文"
         }
       ],
-      "independent_next_step": "优先恢复有归属的原作者正文或固定文件，再核对该文具体方法与现有正文；若这些公开路线均不可用，需要可核对的原文材料。"
+      "independent_next_step": "优先恢复有归属的原作者正文或固定文件，再核对精确版本、配置、修复和实现范围。"
     },
     {
       "id": 327,
@@ -8348,7 +8354,7 @@
           "failure": "HTTP 521，未取得文章正文"
         }
       ],
-      "independent_next_step": "优先恢复有归属的原作者正文或固定文件，再核对该文具体方法与现有正文；若这些公开路线均不可用，需要可核对的原文材料。"
+      "independent_next_step": "完成该精确URL的一次有界档案查询；若有同文快照，先核范围再读正文。"
     },
     {
       "id": 332,
@@ -8405,7 +8411,7 @@
           "failure": "HTTP 521，未取得文章正文"
         }
       ],
-      "independent_next_step": "优先恢复有归属的原作者正文或固定文件，再核对该文具体方法与现有正文；若这些公开路线均不可用，需要可核对的原文材料。"
+      "independent_next_step": "完成该精确URL的一次有界档案查询；若有同文快照，先核范围再读正文。"
     },
     {
       "id": 333,
@@ -8462,7 +8468,7 @@
           "failure": "HTTP 521，未取得文章正文"
         }
       ],
-      "independent_next_step": "优先恢复有归属的原作者正文或固定文件，再核对该文具体方法与现有正文；若这些公开路线均不可用，需要可核对的原文材料。"
+      "independent_next_step": "完成该精确URL的一次有界档案查询；若有同文快照，先核范围再读正文。"
     },
     {
       "id": 334,
@@ -8596,7 +8602,7 @@
           "failure": "HTTP 521，未取得文章正文"
         }
       ],
-      "independent_next_step": "优先恢复有归属的原作者正文或固定文件，再核对该文具体方法与现有正文；若这些公开路线均不可用，需要可核对的原文材料。"
+      "independent_next_step": "完成该精确URL的一次有界档案查询；若有同文快照，先核范围再读正文。"
     },
     {
       "id": 336,
@@ -8632,7 +8638,7 @@
           "failure": "HTTP 502，未取得文章正文"
         }
       ],
-      "independent_next_step": "优先恢复有归属的原作者正文或固定文件，再核对该文具体方法与现有正文；若这些公开路线均不可用，需要可核对的原文材料。"
+      "independent_next_step": "完成该精确URL的一次有界档案查询；若有同文快照，先核范围再读正文。"
     },
     {
       "id": 337,
@@ -8716,7 +8722,7 @@
           "failure": "HTTP 405，未取得文章正文"
         }
       ],
-      "independent_next_step": "优先恢复有归属的原作者正文或固定文件，再核对该文具体方法与现有正文；若这些公开路线均不可用，需要可核对的原文材料。"
+      "independent_next_step": "完成该精确URL的一次有界档案查询；若有同文快照，先核范围再读正文。"
     },
     {
       "id": 339,
@@ -8764,7 +8770,7 @@
       "outcome_reason": "已恢复固定 PeiQi TRACE 变体，补充已有 INIT 方法及分支修复边界。",
       "read_depth_summary": "固定原文完整请求、原始研究、厂商/CVE 及 Metabase/H2 相关函数已核对；公共修复标签的空提交限制已明确。",
       "source_read_failures": [],
-      "independent_next_step": "等待草稿审核与合并决定；处理新的内容反馈。",
+      "independent_next_step": "本次有界补充的独立审阅与终稿哈希绑定已完成；远端提交和CI结果见PR25，未读的其他材料范围不因此视为已完整归档。",
       "content_sha256": "eb6bd1341e31358c24dc6e3302f924e06b13cd0f8599218905b4e3dd2f822646"
     },
     {
@@ -8793,7 +8799,7 @@
       "outcome_reason": "新增 MeterSphere v1.15.4 未授权文件写入资料，不扩大为已证实 cron RCE。",
       "read_depth_summary": "原 issue、完整截图、相关固定源码与 v1.16.0 认证边界变化已核对。",
       "source_read_failures": [],
-      "independent_next_step": "等待草稿审核与合并决定；处理新的内容反馈。",
+      "independent_next_step": "本次有界补充的独立审阅与终稿哈希绑定已完成；远端提交和CI结果见PR25，未读的其他材料范围不因此视为已完整归档。",
       "content_sha256": "ede6f58cdc6a4c8037db590227683456c9fdb7cf1584a83669e26fc72e8f5604"
     },
     {
@@ -8811,7 +8817,7 @@
       "publication_paths": [],
       "reason": "详见阅读范围、具体准入缺口和工作状态；有界检查结束不表示来源恢复已穷尽。",
       "read_depth": {
-        "recovery": "Original CSDN521; title query finds several independent Nacos methods, insufficient to select exact original.",
+        "recovery": "Status/title/URL and index mapping only; no further original body, template or technical source reads",
         "current_identity": "SHA256/Gitblob identity and frontmatter only unless bounded_review/recovery explicitly states further body reading",
         "current_public_summary": "只核对原 URL 的公开索引与候选身份；没有恢复暂停后的技术读取。"
       },
@@ -8937,19 +8943,17 @@
         "Web安全/中间件/Alibaba Nacos/Nacos存在默认口令漏洞.md",
         "Web安全/中间件/Alibaba Nacos/那些年我们一起追过的 Nacos.md"
       ],
-      "decision": "unread",
+      "decision": "non_article",
       "publication_paths": [],
       "reason": "详见阅读范围、具体准入缺口和工作状态；有界检查结束不表示来源恢复已穷尽。",
       "read_depth": {
-        "recovery": "Original URL loops through redirects; exact title in Git indexes only.",
+        "recovery": "Exact-URL reference snippets and primary site category index metadata; no form input or tool use, no password generation/validation",
         "current_identity": "SHA256/Gitblob identity and frontmatter only unless bounded_review/recovery explicitly states further body reading",
-        "current_public_summary": "已尝试原链接读取和公开来源检索；现阶段只确认明确记录的索引、片段或转载范围。"
+        "current_public_summary": "两份明确URL引用和站点类别元数据已读；原页自重定向，未使用工具或读实现。"
       },
-      "admission_gaps": [
-        "原站循环跳转，标题不足以确定“密码碰撞”的具体机制。"
-      ],
-      "work_state": "bounded_recovery_complete_source_gap",
-      "assessment_outcome": "unread",
+      "admission_gaps": [],
+      "work_state": "completed_bounded_tool_reference_classification",
+      "assessment_outcome": "non_article",
       "current_mappings": [
         {
           "id": 343,
@@ -8988,8 +8992,8 @@
           }
         }
       ],
-      "outcome_reason": "原站循环跳转，标题不足以确定“密码碰撞”的具体机制。",
-      "read_depth_summary": "已尝试原链接读取和公开来源检索；现阶段只确认明确记录的索引、片段或转载范围。",
+      "outcome_reason": "精确URL的固定引用支持其为在线BCrypt口令生成/计算工具，不新增Nacos漏洞文章。",
+      "read_depth_summary": "两份明确URL引用和站点类别元数据已读；原页自重定向，未使用工具或读实现。",
       "source_read_failures": [
         {
           "url": "https://www.jisuan.mobi/nX7.html",
@@ -9000,7 +9004,7 @@
           "failure": "循环跳转，未取得文章正文"
         }
       ],
-      "independent_next_step": "优先恢复有归属的原作者正文或固定文件，再核对该文具体方法与现有正文；若这些公开路线均不可用，需要可核对的原文材料。"
+      "independent_next_step": "不递归审计整个工具集合；只有独立且满足准入的具体方法才另行处理。"
     },
     {
       "id": 344,
@@ -9018,12 +9022,13 @@
       "read_depth": {
         "bounded_review": "Complete fixedREADME, source tree metadata/current mappings",
         "current_identity": "SHA256/Gitblob identity and frontmatter only unless bounded_review/recovery explicitly states further body reading",
-        "current_public_summary": "固定 README 与目录已读；现有 Hessian 文章全文已读。"
+        "current_public_summary": "固定入口、载荷类、连接/过滤器及辅助类、构建清单和协议类已静态读；官方2.2.3说明及补丁已取得。",
+        "recovery": "固定README与选定现有正文核心段已读；没有完整读取或归档工具实现。"
       },
       "admission_gaps": [
-        "Java 实现、依赖和内存驻留分支未完整审阅；已有引用不等于完整收录。"
+        "有界实现/版本补充正在收尾；未执行Java、反序列化或审计外部依赖及JAR字节。"
       ],
-      "work_state": "bounded_review_complete_admission_gap",
+      "work_state": "bounded_reference_coverage_implementation_gap",
       "assessment_outcome": "deferred",
       "current_mappings": [
         {
@@ -9052,10 +9057,10 @@
         "readme_blob": "d0043613c3d71087b8e3138c10ea27ea48a3d63f",
         "readme_lines": 84
       },
-      "outcome_reason": "已定位具体 Nacos Hessian 工具及现有文章，但未完成新实现准入。",
-      "read_depth_summary": "固定 README 与目录已读；现有 Hessian 文章全文已读。",
+      "outcome_reason": "旧文仅覆盖工具引用/入口；本轮已继续读取实际实现，不能仍称实现完全未读。",
+      "read_depth_summary": "固定入口、载荷类、连接/过滤器及辅助类、构建清单和协议类已静态读；官方2.2.3说明及补丁已取得。",
       "source_read_failures": [],
-      "independent_next_step": "优先恢复有归属的原作者正文或固定文件，再核对精确版本、配置、修复和实现范围。"
+      "independent_next_step": "完成已经取得的固定入口、版本和条件对应；符合门槛才提交追加稿。"
     },
     {
       "id": 345,
@@ -9071,10 +9076,10 @@
       "read_depth": {
         "bounded_review": "Complete fixedREADME/all3PNGpixels viewed; full81-line current body",
         "current_identity": "SHA256/Gitblob identity and frontmatter only unless bounded_review/recovery explicitly states further body reading",
-        "current_public_summary": "固定 README、三张完整原图和现有正文已读。"
+        "current_public_summary": "原固定README/3图和现文已读；2015 Encripto通告与厂商相关发行说明已读。"
       },
       "admission_gaps": [
-        "FVS336Gv2/v3 是型号，不是固件号；需确认固件、编号对应和修复。"
+        "2022来源实际固件号仍未知；型号不当作固件版号，历史相似报告不证明同一修复边界。"
       ],
       "work_state": "bounded_review_complete_admission_gap",
       "assessment_outcome": "deferred",
@@ -9086,8 +9091,8 @@
         "readme_blob": "688f2256435b5750fc86599da2d523068f4f9f5e",
         "readme_lines": 14
       },
-      "outcome_reason": "已读取实际 POST SQL 注入图片，但缺固件版本与修复对应，暂不追加。",
-      "read_depth_summary": "固定 README、三张完整原图和现有正文已读。",
+      "outcome_reason": "已找到2015年同参数原始报告，但不能把其固件/修复范围套给2022来源。",
+      "read_depth_summary": "原固定README/3图和现文已读；2015 Encripto通告与厂商相关发行说明已读。",
       "source_read_failures": [],
       "independent_next_step": "优先恢复有归属的原作者正文或固定文件，再核对精确版本、配置、修复和实现范围。"
     },
@@ -9374,7 +9379,7 @@
           "failure": "该次公开读取未取得正文"
         }
       ],
-      "independent_next_step": "等待草稿审核与合并决定；处理新的内容反馈。",
+      "independent_next_step": "本次有界补充的独立审阅与终稿哈希绑定已完成；远端提交和CI结果见PR25，未读的其他材料范围不因此视为已完整归档。",
       "content_sha256": "d4e1a515f58e7b687af8041582aa41d6640bcdf3426876830618163e5b529e3d"
     },
     {
@@ -9396,9 +9401,7 @@
         "current_public_summary": "固定 fork 入口、README、依赖清单、两个现有正文，以及官方标签、API 文档、配置与服务端调用均已核对。",
         "recovery": "固定 fork main.py、README、requirements全文；官方v0.26.10配置/API/路由/认证与加密源码全文及后续分支比较已读。"
       },
-      "admission_gaps": [
-        "独立准入复核待完成；首次修复版本仍未知，已提供源码对应的配置缓解；不声称整个扫描工具通过。"
-      ],
+      "admission_gaps": [],
       "work_state": "independently-reviewed",
       "assessment_outcome": "update",
       "current_mappings": [],
@@ -9417,7 +9420,7 @@
           "failure": "原仓库返回 404；公开副本是否同字节另行说明"
         }
       ],
-      "independent_next_step": "确认独立批准终稿的集成与远端推送结果。",
+      "independent_next_step": "本次有界补充的独立审阅与终稿哈希绑定已完成；远端提交和CI结果见PR25，未读的其他材料范围不因此视为已完整归档。",
       "content_sha256": "cc8572a2bd5957abf9fe5938e4ecaeb87f2bd3846980fd278dcd06643f2aad3a"
     },
     {
@@ -9618,12 +9621,12 @@
       "publication_paths": [],
       "reason": "详见阅读范围、具体准入缺口和工作状态；有界检查结束不表示来源恢复已穷尽。",
       "read_depth": {
-        "recovery": "Original WeChat unavailable; exact-title Git matches only catalogs. Different Panalog endpoint advisories do not establish this two-stage article.",
+        "recovery": "Full 57-line mirror text and full current VulWiki article; five mirror image contents not inspected, no other Panalog candidate expanded",
         "current_identity": "SHA256/Gitblob identity and frontmatter only unless bounded_review/recovery explicitly states further body reading",
-        "current_public_summary": "已尝试原链接读取和公开来源检索；现阶段只确认明确记录的索引、片段或转载范围。"
+        "current_public_summary": "完整57行Yuque署名镜像和现文已读；5张图未读，命令执行部分仅文字标签。"
       },
       "admission_gaps": [
-        "原文的任意用户创建和后台命令两部分都需完整对应。"
+        "原文对应、精确版本/认证及图中命令方法未闭合。"
       ],
       "work_state": "bounded_recovery_complete_source_gap",
       "assessment_outcome": "unread",
@@ -9647,8 +9650,8 @@
           }
         }
       ],
-      "outcome_reason": "原文的任意用户创建和后台命令两部分都需完整对应。",
-      "read_depth_summary": "已尝试原链接读取和公开来源检索；现阶段只确认明确记录的索引、片段或转载范围。",
+      "outcome_reason": "找到精确短长URL对应和相关固定镜像，尚无目标微信文章完整归属证据。",
+      "read_depth_summary": "完整57行Yuque署名镜像和现文已读；5张图未读，命令执行部分仅文字标签。",
       "source_read_failures": [
         {
           "url": "https://mp.weixin.qq.com/s/98kn5ry-C-IeKY2MDebjLw",
@@ -9708,7 +9711,7 @@
           "failure": "该次公开读取未取得正文"
         }
       ],
-      "independent_next_step": "等待草稿审核与合并决定；处理新的内容反馈。",
+      "independent_next_step": "本次有界补充的独立审阅与终稿哈希绑定已完成；远端提交和CI结果见PR25，未读的其他材料范围不因此视为已完整归档。",
       "content_sha256": "3cab94110472c7d6ab4a938544c764d60573c2b6b851dc1c28b5a81c6eb0978a"
     },
     {
@@ -9863,7 +9866,7 @@
           "failure": "HTTP 502，未取得文章正文"
         }
       ],
-      "independent_next_step": "等待草稿审核与合并决定；处理新的内容反馈。",
+      "independent_next_step": "本次有界补充的独立审阅与终稿哈希绑定已完成；远端提交和CI结果见PR25，未读的其他材料范围不因此视为已完整归档。",
       "content_sha256": "9e2dafe8a896d74e95694e4133b077182d35dfef264622880db93dce25afa733"
     },
     {
@@ -9917,7 +9920,7 @@
           "failure": "该次公开读取未取得正文"
         }
       ],
-      "independent_next_step": "等待草稿审核与合并决定；处理新的内容反馈。",
+      "independent_next_step": "本次有界补充的独立审阅与终稿哈希绑定已完成；远端提交和CI结果见PR25，未读的其他材料范围不因此视为已完整归档。",
       "content_sha256": "d851d61e9fc1ceeed635793407940e02c7b4d00e9d9c238c1c178698dce6e7b8"
     },
     {
@@ -9934,12 +9937,12 @@
       "publication_paths": [],
       "reason": "详见阅读范围、具体准入缺口和工作状态；有界检查结束不表示来源恢复已穷尽。",
       "read_depth": {
-        "recovery": "Original unavailable; fixed public indexes associate exact short URL withCVE-2018-12613 learning summary, no complete body recovered.",
+        "recovery": "Full article prose in raw HTML lines 557–604, plus author/date/license metadata; full page retained as inert HTML, not a whole-site copy; external JS and12 screenshots not reviewed",
         "current_identity": "SHA256/Gitblob identity and frontmatter only unless bounded_review/recovery explicitly states further body reading",
-        "current_public_summary": "已尝试原链接读取和公开来源检索；现阶段只确认明确记录的索引、片段或转载范围。"
+        "current_public_summary": "固定SuNu11文章技术文字全文、作者日期已读；12张图未读。"
       },
       "admission_gaps": [
-        "原学习总结未恢复，不能用同 CVE 的另一篇代替全部内容。"
+        "同题不等于同文；图中完整输入/结果及原URL关系未闭合。"
       ],
       "work_state": "bounded_recovery_complete_source_gap",
       "assessment_outcome": "unread",
@@ -9963,8 +9966,8 @@
           }
         }
       ],
-      "outcome_reason": "原学习总结未恢复，不能用同 CVE 的另一篇代替全部内容。",
-      "read_depth_summary": "已尝试原链接读取和公开来源检索；现阶段只确认明确记录的索引、片段或转载范围。",
+      "outcome_reason": "已读同题原作者Git博客，但它与不可读微信原链接的关系仍未证实。",
+      "read_depth_summary": "固定SuNu11文章技术文字全文、作者日期已读；12张图未读。",
       "source_read_failures": [
         {
           "url": "https://mp.weixin.qq.com/s/zGJxjtDLkw9CMHGfNRu1nw",
@@ -9987,23 +9990,23 @@
       "read_depth": {
         "recovery": "Original zkaq source-only GET succeeded. Base64 data inside mdv-content decoded statically without JS; full article text and all visible code excerpts read. Original authorl836918621 dated2020-06-12. Includes nondefaultAllowArbitraryServer,4.8.4 lab, rogue MySQL file read, same-session CSRF token handling and log matchers.",
         "current_identity": "SHA256/Gitblob identity and frontmatter only unless bounded_review/recovery explicitly states further body reading",
-        "current_public_summary": "原 HTML 内可见内容已静态还原并全文读取，官方公告已核对。"
+        "current_public_summary": "固定260行服务入口和直接依赖、7张必要原图已读；端口、日志截断和随机路径选择区别已核对。"
       },
       "admission_gaps": [
-        "完整脚本附件未取得，11 张图片未读；片段含多余标点和终止进程逻辑，不能拼成已验证程序。"
+        "手工摘要及独立准入收尾中；缺失检测包装仍不能声称完整或可运行。"
       ],
       "work_state": "bounded_review_complete_admission_gap",
       "assessment_outcome": "deferred",
       "current_mappings": [],
-      "outcome_reason": "已恢复原文可见全文，但完整附件和部分实验材料缺失，暂未准入新脚本。",
-      "read_depth_summary": "原 HTML 内可见内容已静态还原并全文读取，官方公告已核对。",
+      "outcome_reason": "原文手工方法所需服务实现与关键图已恢复，缺包装附件不再是一概拒绝理由。",
+      "read_depth_summary": "固定260行服务入口和直接依赖、7张必要原图已读；端口、日志截断和随机路径选择区别已核对。",
       "source_read_failures": [
         {
           "url": "https://bbs.zkaq.cn/t/4570.html",
           "failure": "该次公开读取未取得正文"
         }
       ],
-      "independent_next_step": "优先恢复有归属的原作者正文或固定文件，再核对精确版本、配置、修复和实现范围。"
+      "independent_next_step": "完成已经取得的固定入口、版本和条件对应；符合门槛才提交追加稿。"
     },
     {
       "id": 366,
@@ -10039,7 +10042,7 @@
           "failure": "HTTP 404，未取得文章正文"
         }
       ],
-      "independent_next_step": "等待草稿审核与合并决定；处理新的内容反馈。",
+      "independent_next_step": "本次有界补充的独立审阅与终稿哈希绑定已完成；远端提交和CI结果见PR25，未读的其他材料范围不因此视为已完整归档。",
       "content_sha256": "e678890f113b7b37b3a060c8a9fc692568cf96079686d0adf7f3a579ad1558ca"
     },
     {
@@ -10072,7 +10075,7 @@
           "failure": "该次公开读取未取得正文"
         }
       ],
-      "independent_next_step": "等待草稿审核与合并决定；处理新的内容反馈。",
+      "independent_next_step": "本次有界补充的独立审阅与终稿哈希绑定已完成；远端提交和CI结果见PR25，未读的其他材料范围不因此视为已完整归档。",
       "content_sha256": "7f833bbd28db725226fcf0d520292d1121e2ddf389b2d07981a67d07b322d12c"
     },
     {
@@ -10087,7 +10090,7 @@
       "publication_paths": [],
       "reason": "详见阅读范围、具体准入缺口和工作状态；有界检查结束不表示来源恢复已穷尽。",
       "read_depth": {
-        "recovery": "已恢复精确原URL的20190917021046公开存档并定位作者、日期和主要章节；在HTML第131–139行发现成功凭据语境后停止后续图片和工具读取。",
+        "recovery": "Original author/date and complete article prose read; no screenshots, linked tools, comments or adjacent topics reviewed",
         "current_identity": "SHA256/Gitblob identity and frontmatter only unless bounded_review/recovery explicitly states further body reading",
         "current_public_summary": "已读2019-09-17存档的作者/日期和主要章节；在原始 HTML 第131–139行发现凭据语境后停止图片及关联工具读取。"
       },
@@ -10121,16 +10124,16 @@
       "read_depth": {
         "recovery": "Original CSDN521; fixed baidu-security lab readme with exact title located, not yet read.",
         "current_identity": "SHA256/Gitblob identity and frontmatter only unless bounded_review/recovery explicitly states further body reading",
-        "current_public_summary": "原作者技术全文、固定实验 README 及三份安装文件已读。"
+        "current_public_summary": "原作者技术全文、此前5.2实验材料已读；新增5.3版本声明已核，相关源码审阅正在推进。"
       },
       "admission_gaps": [
-        "5.3 产品源码及修复未固定；实验的外部包、镜像和其余安装内容未完成审阅。"
+        "第三方镜像归属、具体权限/配置和修复对应仍需有界核对；不扩展其他PHPMyWind候选。"
       ],
       "work_state": "bounded_review_complete_admission_gap",
       "assessment_outcome": "deferred",
       "current_mappings": [],
-      "outcome_reason": "已恢复同题原作者的 5.3 分析，固定实验仓库为 5.2，二者没有混写。",
-      "read_depth_summary": "原作者技术全文、固定实验 README 及三份安装文件已读。",
+      "outcome_reason": "已取得标称5.3 Beta的固定源码镜像，正在与原作者三种方法逐项对应。",
+      "read_depth_summary": "原作者技术全文、此前5.2实验材料已读；新增5.3版本声明已核，相关源码审阅正在推进。",
       "source_read_failures": [
         {
           "url": "https://blog.csdn.net/dengzhasong7076/article/details/102139691",
@@ -10141,7 +10144,7 @@
           "failure": "HTTP 521，未取得文章正文"
         }
       ],
-      "independent_next_step": "优先恢复有归属的原作者正文或固定文件，再核对精确版本、配置、修复和实现范围。"
+      "independent_next_step": "完成已经取得的固定入口、版本和条件对应；符合门槛才提交追加稿。"
     },
     {
       "id": 370,
@@ -10177,7 +10180,7 @@
           "failure": "HTTP 521，未取得文章正文"
         }
       ],
-      "independent_next_step": "优先恢复有归属的原作者正文或固定文件，再核对该文具体方法与现有正文；若这些公开路线均不可用，需要可核对的原文材料。"
+      "independent_next_step": "完成该精确URL的一次有界档案查询；若有同文快照，先核范围再读正文。"
     },
     {
       "id": 371,
@@ -10281,7 +10284,7 @@
       "outcome_reason": "补录 Resin Windows 盘符穿越子问题，不冒充整个攻击向量集合已补齐。",
       "read_depth_summary": "固定原作者相关段、原始研究通告及官方变更记录已读。",
       "source_read_failures": [],
-      "independent_next_step": "等待草稿审核与合并决定；处理新的内容反馈。",
+      "independent_next_step": "本次有界补充的独立审阅与终稿哈希绑定已完成；远端提交和CI结果见PR25，未读的其他材料范围不因此视为已完整归档。",
       "content_sha256": "396d01cce317f0c3b0c1c73d0d1cb0032d4973ef90427279bf921d806e293379"
     },
     {
@@ -10318,7 +10321,7 @@
           "failure": "HTTP 404，未取得文章正文"
         }
       ],
-      "independent_next_step": "优先恢复有归属的原作者正文或固定文件，再核对该文具体方法与现有正文；若这些公开路线均不可用，需要可核对的原文材料。"
+      "independent_next_step": "完成该精确URL的一次有界档案查询；若有同文快照，先核范围再读正文。"
     },
     {
       "id": 374,
@@ -10328,29 +10331,34 @@
       "frame_entry_url": "https://github.com/Awrrays/FrameVul/blob/b28dd1a309d21bb90c4ffc8e39b0469c52f228eb/README.md#L1046",
       "prior_comparison_status": "uncertain",
       "prior_matched_paths": [],
-      "decision": "unread",
-      "publication_paths": [],
-      "reason": "详见阅读范围、具体准入缺口和工作状态；有界检查结束不表示来源恢复已穷尽。",
+      "decision": "new",
+      "publication_paths": [
+        "Web安全/中间件/Resin/Resin 4.0.65 非严格映射下的 JSP 目录解析分析.md"
+      ],
+      "reason": "具体公开材料、版本/权限映射、有界静态审阅及最终内容哈希经独立核对；未运行PoC。",
       "read_depth": {
-        "recovery": "Original WeChat unavailable; a separate cangqingzhe author article cites this title, but no original source body recovered.",
+        "recovery": "原文全文、7图；独立README前96行及3图；两份路由类全文、配置/版本/严格映射声明相关段；官方4.0文档搜索缓存。",
         "current_identity": "SHA256/Gitblob identity and frontmatter only unless bounded_review/recovery explicitly states further body reading",
-        "current_public_summary": "已尝试原链接读取和公开来源检索；另已读独立作者完整技术文字，未读取图片。"
+        "current_public_summary": "原文全文和前7图、独立固定README前96行及3图已读；2份路由源码类全文、配置/版本声明相关段和官方4.0配置文档已核。"
       },
       "admission_gaps": [
-        "原微信未恢复；独立作者分析讨论 .jsp 目录路由，但没有明确版本和完整实验材料。"
+        "独立准入待完成；第三方源码镜像未与官方包逐字节核对；原图遮挡JSP不作为完整示例代码。"
       ],
-      "work_state": "bounded_recovery_complete_source_gap",
-      "assessment_outcome": "unread",
+      "work_state": "independently-reviewed",
+      "assessment_outcome": "new",
       "current_mappings": [],
-      "outcome_reason": "原微信未恢复；独立作者分析讨论 .jsp 目录路由，但没有明确版本和完整实验材料。",
-      "read_depth_summary": "已尝试原链接读取和公开来源检索；另已读独立作者完整技术文字，未读取图片。",
+      "outcome_reason": "精确原文及版本截图已恢复，另有固定完整Hello示例，准备有界解析分析稿。",
+      "read_depth_summary": "原文全文和前7图、独立固定README前96行及3图已读；2份路由源码类全文、配置/版本声明相关段和官方4.0配置文档已核。",
       "source_read_failures": [
         {
           "url": "https://mp.weixin.qq.com/s/eZAG3Ze0ytd5l7ci1nb-qg",
           "failure": "该次公开读取未取得正文"
         }
       ],
-      "independent_next_step": "优先恢复有归属的原作者正文或固定文件，再核对该文具体方法与现有正文；若这些公开路线均不可用，需要可核对的原文材料。"
+      "independent_next_step": "本次有界补充的独立审阅与终稿哈希绑定已完成；远端提交和CI结果见PR25，未读的其他材料范围不因此视为已完整归档。",
+      "content_sha256": "1e4e1c464e7f4c4003342dd3fa9efdc2a54ac91b548aa3915af3e871cfbb46c1",
+      "coverage": "method-level supplement with limited original-image review",
+      "remaining_scope": "原文后续14张图片未读；原有水印遮挡代码未完整转录；已完整公开的独立Hello示例支撑本次方法整理，不将全部原文/全部版本计为已核验。"
     },
     {
       "id": 375,
@@ -12533,5 +12541,5 @@
     }
   ],
   "all_allowed_work_finished": false,
-  "source_assessment_snapshot_utc": "2026-10-05T06:01:17.547950+00:00"
+  "source_assessment_snapshot_utc": "2026-10-05T06:39:38.171961+00:00"
 }

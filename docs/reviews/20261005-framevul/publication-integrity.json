@@ -377,6 +377,62 @@
         ]
       },
       "assets": []
+    },
+    {
+      "frame_ids": [
+        374
+      ],
+      "path": "Web安全/中间件/Resin/Resin 4.0.65 非严格映射下的 JSP 目录解析分析.md",
+      "operation": "new",
+      "sha256": "1e4e1c464e7f4c4003342dd3fa9efdc2a54ac91b548aa3915af3e871cfbb46c1",
+      "metadata_added": {},
+      "metadata_changed": {},
+      "assets": [
+        {
+          "target": "Web安全/中间件/Resin/.resource/Resin-JSP-directory-FrameVul374/original-version.png",
+          "bytes": 35798,
+          "sha256": "18ca10da9e5ca1ede79fc510da6f0efd2d366266cb7dca40acd68dd0110ecd9a",
+          "original_url": "https://mmbiz.qpic.cn/mmbiz_png/wQ0FicTls5iavGUMJFibcybC1o3iaDckNjdPGicUqTv0FdSe5G9B6OUhHaRFnlPzkzoI57BvgO3VqC1ic41pw2GdO4UQ/640?wx_fmt=png"
+        },
+        {
+          "target": "Web安全/中间件/Resin/.resource/Resin-JSP-directory-FrameVul374/original-jsp.png",
+          "bytes": 35904,
+          "sha256": "7621edd5b554c9b15cab1e0c729d1e2ff48d0241a4181194a57ab8188140ca99",
+          "original_url": "https://mmbiz.qpic.cn/mmbiz_png/wQ0FicTls5iavGUMJFibcybC1o3iaDckNjdP649FdDrUEVM2Kqow1dOR5qTEs7stwSCO51iaFSiaCxEeiaG127ozqKdEg/640?wx_fmt=png"
+        },
+        {
+          "target": "Web安全/中间件/Resin/.resource/Resin-JSP-directory-FrameVul374/fixed-hello-result.png",
+          "bytes": 6912,
+          "sha256": "3035fa95dd8d41273017e1eef7d426f9651b5ba23d982d9590c53533ff66779d",
+          "original_url": "https://raw.githubusercontent.com/istoliving/JavaSec/c5b02696cd0551c53464881baa699f92f006232d/middleware/resin/note/img/144174242-db437f8b-0feb-4683-8e46-7e7586905a15-164000592925175.png"
+        }
+      ]
+    },
+    {
+      "frame_ids": [
+        307
+      ],
+      "path": "Web安全/运维面板/Jumpserver/JumpServer 未授权接口 远程命令执行漏洞.md",
+      "operation": "append",
+      "sha256": "37363c69f2089bd237156a98a3b4021842c34bd14241ce4b89dc546736973f86",
+      "metadata_added": {
+        "previous_prerequisites": "Branch-specific vulnerable builds (<2.6.2,<2.5.4,<2.4.5,1.5.9 stated); logs expose user/asset/system_user IDs; configured asset",
+        "previous_side_effects": "含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。",
+        "version": "补充来源仅记录 JumpServer v2.6.1 实验环境；不是完整受影响范围，前文历史分支声明仍待核",
+        "fixed_version": "unknown",
+        "verification_source": "补充来源文本核对：https://mp.weixin.qq.com/s/lbcYzNsiOYZRwQzAIYxg3g；对应历史快照：https://web.archive.org/web/20210315060223id_/https://mp.weixin.qq.com/s/lbcYzNsiOYZRwQzAIYxg3g；工具静态核对：https://github.com/Veraxy00/Jumpserver-EXP/blob/4ce1723c2eb4f08fd42447ecdaeec5b1cab180b2/jumpserver-exp.py；不替换主来源，不表示运行验证"
+      },
+      "metadata_changed": {
+        "prerequisites": [
+          "Branch-specific vulnerable builds (<2.6.2,<2.5.4,<2.4.5,1.5.9 stated); logs expose user/asset/system_user IDs; configured asset",
+          "历史材料所列分支范围仍待逐分支核对；本补充依据作者 v2.6.1 实验：已配置资产及系统用户、日志路径已知、历史终端记录含有效 user/asset/system_user 标识；自动登录或仍可复用的资产会话影响连接结果"
+        ],
+        "side_effects": [
+          "含资源消耗、延时或崩溃验证：可能影响服务可用性；限制请求次数、并发与超时，保留无攻击负载的对照结果。",
+          "读取并在控制台输出日志和资产标识；申请连接令牌、建立受管资产终端并产生可能的审计记录；所附固定工具在 Yes/No 提示前向所有候选发送 echo 命令；后续命令的文件、账号或其他影响取决于输入；持续读取和无显式等待上限可能占用资源"
+        ]
+      },
+      "assets": []
     }
   ]
 }
