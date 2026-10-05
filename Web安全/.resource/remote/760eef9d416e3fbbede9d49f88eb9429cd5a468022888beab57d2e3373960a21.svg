@@ -1,0 +1,127 @@
+  <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-labelledby="title desc">
+   <desc>
+    
+    
+    
+    
+    Two FrameStates have matching base fields but different Wasm signatures.
+    Because equality omits the signature, common subexpression elimination
+    merges them and the deoptimizer uses the wrong return kind.
+   </desc>
+   <defs>
+    <marker markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+     <path d="M0,0 L0,6 L9,3 z" fill="#17212b">
+     </path>
+    </marker>
+   </defs>
+   <g fill="none" stroke="#17212b" stroke-width="4" marker-end="url(#arrow)">
+    <path d="M330 245 L490 315">
+    </path>
+    <path d="M870 245 L710 315">
+    </path>
+    <path d="M600 390 V455">
+    </path>
+    <path d="M600 555 V605">
+    </path>
+   </g>
+   <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" text-anchor="middle" fill="#111827">
+    <g fill="#a9dfe3" stroke="#168b95" stroke-width="4">
+     <rect x="70" y="35" width="430" height="210">
+     </rect>
+     <rect x="700" y="35" width="430" height="210">
+     </rect>
+     <rect x="355" y="455" width="490" height="100">
+     </rect>
+    </g>
+    <text x="285" y="78" font-size="27">
+     
+     
+     
+     FrameState A
+    </text>
+    <text x="285" y="118" font-size="22">
+     
+     
+     
+     type: JS-to-Wasm continuation
+    </text>
+    <text x="285" y="153" font-size="22">
+     
+     
+     
+     inputs: context, parent state
+    </text>
+    <text x="285" y="198" font-size="24" font-weight="700">
+     
+     
+     
+     
+      signature: () → externref
+    </text>
+    <text x="915" y="78" font-size="27">
+     
+     
+     
+     FrameState B
+    </text>
+    <text x="915" y="118" font-size="22">
+     
+     
+     
+     type: JS-to-Wasm continuation
+    </text>
+    <text x="915" y="153" font-size="22">
+     
+     
+     
+     inputs: context, parent state
+    </text>
+    <text x="915" y="198" font-size="24" font-weight="700">
+     
+     
+     
+     
+      signature: () → i64
+    </text>
+    <g fill="#f9d6a5" stroke="#ca7900" stroke-width="4">
+     <path d="M600 265 L760 330 L600 395 L440 330 Z">
+     </path>
+    </g>
+    <text x="600" y="321" font-size="23">
+     
+     
+     
+     operator== true
+    </text>
+    <text x="600" y="351" font-size="19">
+     
+     
+     
+     signature omitted
+    </text>
+    <text x="600" y="496" font-size="25">
+     
+     
+     
+     CSE keeps one FrameState
+    </text>
+    <text x="600" y="530" font-size="21">
+     
+     
+     
+     
+      and redirects both call paths to it
+    </text>
+    <g fill="#f6b7b7" stroke="#c63c3c" stroke-width="4">
+     <rect x="220" y="585" width="760" height="50">
+     </rect>
+    </g>
+    <text x="600" y="618" font-size="21">
+     
+     
+     
+     
+      deoptimizer interprets return bits using the wrong kind
+    </text>
+   </g>
+  </svg>
