@@ -2,10 +2,10 @@
 
 # 产品索引
 
-收录 5748 个主入口（另保留 5842 份来源文档）；不代表独立漏洞数或已验证数量。隔离/无效记录和结构错误不进入本索引。
+收录 5752 个主入口（另保留 5846 份来源文档）；不代表独立漏洞数或已验证数量。隔离/无效记录和结构错误不进入本索引。
 
 - [360（5 篇）](INDEX/360.md)
-- [AI应用（86 篇）](INDEX/AI%E5%BA%94%E7%94%A8.md)
+- [AI应用（87 篇）](INDEX/AI%E5%BA%94%E7%94%A8.md)
 - [Amazon（7 篇）](INDEX/Amazon.md)
 - [Android（14 篇）](INDEX/Android.md)
 - [Apache（1 篇）](INDEX/Apache.md)
@@ -62,7 +62,7 @@
 - [从 allow_active 到 root 的本地提权（1 篇）](INDEX/%E4%BB%8E%20allow_active%20%E5%88%B0%20root%20%E7%9A%84%E6%9C%AC%E5%9C%B0%E6%8F%90%E6%9D%83.md)
 - [信诺瑞得（1 篇）](INDEX/%E4%BF%A1%E8%AF%BA%E7%91%9E%E5%BE%97.md)
 - [其他设备（35 篇）](INDEX/%E5%85%B6%E4%BB%96%E8%AE%BE%E5%A4%87.md)
-- [其他软件（592 篇）](INDEX/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6.md)
+- [其他软件（593 篇）](INDEX/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6.md)
 - [华硕（1 篇）](INDEX/%E5%8D%8E%E7%A1%95.md)
 - [商业软件（591 篇）](INDEX/%E5%95%86%E4%B8%9A%E8%BD%AF%E4%BB%B6.md)
 - [大华（5 篇）](INDEX/%E5%A4%A7%E5%8D%8E.md)
@@ -71,7 +71,7 @@
 - [安恒明御（1 篇）](INDEX/%E5%AE%89%E6%81%92%E6%98%8E%E5%BE%A1.md)
 - [容器逃逸（3 篇）](INDEX/%E5%AE%B9%E5%99%A8%E9%80%83%E9%80%B8.md)
 - [小米（2 篇）](INDEX/%E5%B0%8F%E7%B1%B3.md)
-- [开发框架（646 篇）](INDEX/%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6.md)
+- [开发框架（648 篇）](INDEX/%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6.md)
 - [摄像头（1 篇）](INDEX/%E6%91%84%E5%83%8F%E5%A4%B4.md)
 - [数据库（100 篇）](INDEX/%E6%95%B0%E6%8D%AE%E5%BA%93.md)
 - [昂捷（1 篇）](INDEX/%E6%98%82%E6%8D%B7.md)

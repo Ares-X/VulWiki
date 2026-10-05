@@ -1,0 +1,449 @@
+{
+  "window": {
+    "start": "2026-09-28T00:00:00Z",
+    "end": "2026-10-05T01:05:00Z",
+    "note": "结束时间只代表本次实际观察阶段，不覆盖10月5日未来时段"
+  },
+  "coverage_limits": [
+    "非全网、非全站、非全历史覆盖；当前列表不能证明旧文章没有静默修订",
+    "X/Twitter直读失败且限定公开搜索无有效具体研究帖，不能保证完整发现",
+    "先知列表/正文与Atom发布时间展示差7小时且没有时区后缀；保留原始字符串，不擅自转换边界日期",
+    "先知Atom多个远早于窗口的条目updated也显示本次近实时，未有正文版本差异证据时不认定为实质更新",
+    "未审阅的图片、附件、依赖实现及历史正文均明确不背书"
+  ],
+  "sources": [
+    {
+      "name": "wiki.0-sec.org",
+      "url": "https://wiki.0-sec.org/",
+      "observed_utc": "00:49–01:00",
+      "access": "unavailable",
+      "checks": [
+        "Web原站两次不可读",
+        "标准只读GET返回HTTP502",
+        "限定日期site查询未返回有效结果"
+      ],
+      "latest_visible_date": null,
+      "new_or_changed": [],
+      "limit": "无法核查周窗内容；不是无更新"
+    },
+    {
+      "name": "先知社区",
+      "url": "https://xz.aliyun.com/news",
+      "feed_url": "https://xz.aliyun.com/feed",
+      "observed_utc": "00:49–01:04",
+      "access": "readable_via_cloud_browser_and_atom",
+      "checks": [
+        "Web首页可见导航/热门，具体两篇样本返回挑战式文本，未执行该文本",
+        "云端浏览器正常呈现精选/社区全部及92896/92894/92735/92897技术主体",
+        "Atom只读GET成功，65446字节，直接读25条近期条目"
+      ],
+      "latest_visible_date": "Atom 2026-09-29 06:52:18；社区列表IFUNC 2026-09-29 20:23（均无时区）",
+      "new_or_changed": [
+        "http4s候选",
+        "Go ServeMux候选",
+        "IFUNC/seccomp方法候选",
+        "ZCode候选",
+        "Bybit/Bitget事件摘要"
+      ],
+      "limit": "浏览器社区全部不含AI专栏；Atom补出ZCode。图片未逐张查看；未下载附件。updated不是已验证实质修订"
+    },
+    {
+      "name": "跳跳糖",
+      "url": "https://tttang.com/",
+      "observed_utc": "00:49–01:00",
+      "access": "unavailable",
+      "checks": [
+        "Web两次超时",
+        "标准GET返回HTTP502",
+        "限定日期site查询未返回有效结果"
+      ],
+      "latest_visible_date": null,
+      "new_or_changed": [],
+      "limit": "不可核查；不能使用旧缓存宣称无更新"
+    },
+    {
+      "name": "Seebug Paper",
+      "url": "https://paper.seebug.org/",
+      "observed_utc": "00:49–01:00",
+      "access": "unavailable",
+      "checks": [
+        "Web两次not accessible",
+        "标准GET返回HTTP521",
+        "限定日期site查询未返回有效结果"
+      ],
+      "latest_visible_date": null,
+      "new_or_changed": [],
+      "limit": "不可核查；没有绕过限制"
+    },
+    {
+      "name": "安全客",
+      "url": "https://www.anquanke.com/index.html",
+      "observed_utc": "00:49–01:03",
+      "access": "readable_partial",
+      "checks": [
+        "根URL Web超时",
+        "index.html Web可读但缓存停在9/10",
+        "原站GET200 live列表最新为9/29两篇，已解析标题/日期/链接",
+        "316193正文成功；316190正文Web cache miss"
+      ],
+      "latest_visible_date": "2026-09-29 16:49:40（站点未明示时区）",
+      "new_or_changed": [
+        "https://www.anquanke.com/post/id/316193",
+        "https://www.anquanke.com/post/id/316190"
+      ],
+      "limit": "首页范围，无全站遍历；316193事件解释无具体漏洞触发，316190只确认列表元数据，均未准入"
+    },
+    {
+      "name": "Y4er Blog",
+      "url": "https://y4er.com/",
+      "archive_url": "https://y4er.com/posts/",
+      "observed_utc": "00:49–01:00",
+      "access": "readable",
+      "checks": [
+        "首页和文章归档第一页直接阅读",
+        "RSS点击提取失败"
+      ],
+      "latest_visible_date": "2023-10-26",
+      "new_or_changed": [],
+      "limit": "可见最新发布日期在窗口前；未逐篇比较210篇历史文章，页脚2026不代表新文"
+    },
+    {
+      "name": "PortSwigger Research",
+      "url": "https://portswigger.net/research",
+      "archive_url": "https://portswigger.net/research/articles",
+      "observed_utc": "00:49–00:51",
+      "access": "readable",
+      "checks": [
+        "首页与All Articles直接读取",
+        "RSS提取失败"
+      ],
+      "latest_visible_date": "2026-09-23 14:00 UTC",
+      "new_or_changed": [],
+      "limit": "最新HTTP/3工具/方法研究已在10/3报告；没有新列出周窗文章，不排除未标示旧文修订"
+    },
+    {
+      "name": "watchTowr Labs",
+      "url": "https://labs.watchtowr.com/",
+      "observed_utc": "00:49–00:54",
+      "access": "readable",
+      "checks": [
+        "首页、9/28与9/29原始研究直接读取",
+        "两篇原始PoC仓库提交列表各3条读取，最新SHA均与库内固定SHA一致"
+      ],
+      "latest_visible_date": "2026-09-29",
+      "new_or_changed": [
+        "CVE-2026-88771",
+        "CVE-2026-88772"
+      ],
+      "limit": "两篇均已收录，不重复新增；博客无本次可验证的修订历史，不能声称逐字未改"
+    },
+    {
+      "name": "公开X/Twitter",
+      "url": "https://x.com/PortSwiggerRes",
+      "observed_utc": "00:49–00:55",
+      "access": "limited_unverified",
+      "checks": [
+        "x.com/PortSwiggerRes直接403",
+        "x.com/SinSinology与twitter.com/albinowax直接读取失败",
+        "按日期公开X/Twitter检索及SinSinology+88771精确检索无可核具体研究帖"
+      ],
+      "latest_visible_date": null,
+      "new_or_changed": [],
+      "limit": "无可靠可回溯帖子；不把噪声结果或营销重定向当线索，不宣称总量覆盖"
+    },
+    {
+      "name": "Sonar",
+      "url": "https://www.sonarsource.com/blog/",
+      "observed_utc": "00:52–00:54",
+      "access": "readable_partial",
+      "checks": [
+        "原站首页直接读取最新六项，主要产品/AI工程内容",
+        "针对官方域名的10月漏洞研究补充检索未定位新研究，只出现产品/社区问答"
+      ],
+      "latest_visible_date": "首页未在提取中提供日期",
+      "new_or_changed": [],
+      "limit": "没有完成动态Vulnerability research分类的所有分页，不能写全站无更新"
+    },
+    {
+      "name": "GitHub Security Lab",
+      "url": "https://securitylab.github.com/advisories/",
+      "observed_utc": "00:52–00:57",
+      "access": "readable",
+      "checks": [
+        "原始公告索引及10/1七篇公告直接读取",
+        "共享语料HEAD正文/候选账本去重"
+      ],
+      "latest_visible_date": "2026-10-01",
+      "new_or_changed": [
+        "GHSL-2026-109",
+        "GHSL-2026-108",
+        "GHSL-2026-106",
+        "GHSL-2026-103",
+        "GHSL-2026-101",
+        "GHSL-2025-080",
+        "GHSL-2025-078"
+      ],
+      "limit": "均属重叠期，无证据是10/3后改稿；五条语料缺口、101已有正文、109已有后置候选，详见ghsl-overlap-ledger.json"
+    },
+    {
+      "name": "Assetnote/Searchlight Cyber",
+      "url": "https://www.slcyber.io/research",
+      "observed_utc": "00:52",
+      "access": "readable",
+      "checks": [
+        "直接原站research列表（尾斜杠重定向）"
+      ],
+      "latest_visible_date": "2026-09-07",
+      "new_or_changed": [],
+      "limit": "Goja研究已收录；未对历史文章进行逐字比较"
+    },
+    {
+      "name": "Doyensec",
+      "url": "https://blog.doyensec.com/",
+      "observed_utc": "00:52",
+      "access": "readable",
+      "checks": [
+        "首页直接读取最新文章及日期"
+      ],
+      "latest_visible_date": "2026-09-24",
+      "new_or_changed": [],
+      "limit": "最新Chrome iOS/Shortcuts方法文在目标增量窗前；当前列表未见10/2后新文，不代表旧文无静默更正"
+    },
+    {
+      "name": "Trail of Bits",
+      "url": "https://blog.trailofbits.com/",
+      "observed_utc": "00:52–00:54",
+      "access": "readable",
+      "checks": [
+        "原站首页及10/2 SequenceHash全文技术章节直接读取"
+      ],
+      "latest_visible_date": "2026-10-02",
+      "new_or_changed": [
+        "https://blog.trailofbits.com/2026/10/02/sequencehash-multihashing-for-the-rest-of-us/"
+      ],
+      "limit": "SequenceHash是密码构造/软件发布，含用法代码但不是具体产品漏洞触发；不准入漏洞稿"
+    },
+    {
+      "name": "Project Zero",
+      "url": "https://projectzero.google/",
+      "observed_utc": "00:52",
+      "access": "readable",
+      "checks": [
+        "直接首页读取最新条目"
+      ],
+      "latest_visible_date": "2026-09-21",
+      "new_or_changed": [],
+      "limit": "Dangling COM已在既有库；未检索所有公开issue或比较历史正文"
+    },
+    {
+      "name": "Synacktiv",
+      "url": "https://www.synacktiv.com/en/publications",
+      "observed_utc": "00:52",
+      "access": "readable",
+      "checks": [
+        "直接Publications英文首页读取"
+      ],
+      "latest_visible_date": "2026-08-31",
+      "new_or_changed": [],
+      "limit": "仅该语言最新列表，未比较全部旧文"
+    },
+    {
+      "name": "Zero Day Initiative",
+      "url": "https://www.zerodayinitiative.com/blog/",
+      "observed_utc": "00:52",
+      "access": "readable",
+      "checks": [
+        "直接Blog首页读取"
+      ],
+      "latest_visible_date": "2026-09-23",
+      "new_or_changed": [],
+      "limit": "Canon CVE-2024-0244为2024漏洞的9/23研究，已在上轮后置记录；非周窗新文"
+    },
+    {
+      "name": "Rapid7",
+      "url": "https://www.rapid7.com/blog/",
+      "observed_utc": "00:52–00:54",
+      "access": "readable_partial",
+      "checks": [
+        "直接首页及最新漏洞栏目",
+        "CVE-2026-76504原站文章与Updates直接读取"
+      ],
+      "latest_visible_date": "选中漏洞稿2026-09-30，更新2026-10-01",
+      "new_or_changed": [
+        "https://www.rapid7.com/blog/post/etr-critical-cisco-catalyst-sd-wan-manager-api-authentication-bypass-exploited-in-the-wild-cve-2026-76504/"
+      ],
+      "limit": "含IoC路径片段，没有完整请求/原始PoC；候选而非准入。未读全站威胁情报文章；未读取或恢复KEV任务"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "CVE-2026-88975",
+      "title": "http4s Ember HTTP/2 帧长检查滞后",
+      "classification": "历史披露的后续中文研究发现，补知识缺口",
+      "source_url": "https://xz.aliyun.com/news/92896",
+      "source_author": "北斗",
+      "source_published_raw": "Atom:2026-09-28 14:06:38；浏览器正文:2026-09-28 07:06",
+      "primary_url": "https://github.com/http4s/http4s/security/advisories/GHSA-gq9p-f254-h286",
+      "primary_published_utc": "2026-09-08T14:09:53Z",
+      "primary_updated_utc": "2026-09-14T20:25:14Z",
+      "global_catalog_published_utc": "2026-09-15T20:01:22Z",
+      "global_catalog_updated_utc": "2026-09-15T20:01:24Z",
+      "withdrawn_at": null,
+      "trigger_evidence": "社区正文提供完整9字节DATA帧头、HTTP/2握手前提、未完成负载与保持连接步骤；官方固定216行H2FrameSizeSuite独立提供0xffffff声明长度+1MiB零负载、模拟计数Socket和GOAWAY/读入量断言",
+      "fix_commit": "87cf334fa3f608ef7d3eb359e71e037ba3336d29",
+      "old_commit": "6c8f2edd88aeacf0a1b98ab4408ba2c5317de08c",
+      "fixed_releases": {
+        "v0.23.37": "73340be10836b95241ed2d7682b4da057b7b5ccb",
+        "v1.0.0-M48": "2d62cbe12e8941ac4800a41fa45e132900b90caa"
+      },
+      "code_license": "Apache-2.0；LICENSE及NOTICE已核，不延伸到文章全部文字",
+      "disposition": "eligible_original_chinese_summary_pending_parent_final_review",
+      "draft": "http4s-draft.md",
+      "evidence": [
+        "http4s-source-evidence.json",
+        "http4s-version-evidence.json",
+        "http4s-build-review.json",
+        "peer-review/http4s-ghsa.json",
+        "peer-review/http4s-repository-ghsa.json"
+      ],
+      "limits": [
+        "没有运行测试或网络触发",
+        "客户端官方证据仅共享代码推断；社区OOM主张未独立核验",
+        "社区upload2.zip未下载、相对研究笔记链接未取得可用原材料",
+        "已核24构建/工作流定义，未审远程Actions/SBT/Nix/传递依赖实现"
+      ]
+    },
+    {
+      "id": "xz-92894",
+      "title": "编码斜杠击穿 Go 路由器：ServeMux 双视图解析与路径穿越",
+      "source_url": "https://xz.aliyun.com/news/92894",
+      "author": "Signs",
+      "published_raw": "Atom:2026-09-28 07:24:17；浏览器列表:2026-09-28 00:24",
+      "disposition": "candidate_only",
+      "trigger_evidence": "正文描述/files/..%2Fsecret.txt、PathValue解码与自定义文件处理器组合；关键程序/请求记录为38张图片，未逐张查看",
+      "origin_check": "正文无外部超链接；独立读Go1.22官方发行说明确认路由语义变更与httpmuxgo121兼容开关",
+      "primary_url": "https://go.dev/doc/go1.22",
+      "reason": "不能把自制处理器与已公开Go1.22语义组合直接称Go通用未认证漏洞；暂无固定源码/完整图片审查和具体修复边界。当前语料精确关键词无匹配，属于方法知识缺口，未证实新产品漏洞"
+    },
+    {
+      "id": "xz-92735",
+      "title": "绕过seccomp沙箱限制利用GNU IFUNC强制绑定在constructor前执行resolver",
+      "source_url": "https://xz.aliyun.com/news/92735",
+      "author": "Signs",
+      "published_raw": "浏览器正文:2026-09-29 20:23",
+      "disposition": "candidate_only",
+      "trigger_evidence": "有raw_getpid C片段及lazy/NOW/LD_BIND_NOW时序对照描述，关键完整示例/命令为21张图片，未逐张查看",
+      "primary_url": "https://sourceware.org/glibc/manual/latest/html_node/Indirect-Functions.html",
+      "reason": "官方手册确认IFUNC可在constructor前执行，文章展示策略安装前执行并非已安装seccomp过滤器失效。完整触发工程/图片/编译运行前提未完成审阅；无CVE，方法补缺而非新产品漏洞"
+    },
+    {
+      "id": "xz-92897",
+      "title": "从 ZCode Trust Folder Bypass 0day 漏洞看 Coding Agent 的 Trust Folder 安全问题",
+      "source_url": "https://xz.aliyun.com/news/92897",
+      "author": "lbz",
+      "published_raw": "Atom:2026-09-29 06:52:18；浏览器正文:2026-09-28 23:52",
+      "disposition": "candidate_only",
+      "trigger_evidence": "可读主体提供可选admission门、插件与MCP路径叙述及若干示例函数；最小zcode.json/plugin.json块在可读文本中未完整呈现",
+      "reason": "原文没有可点击的一手仓库/固定提交/版本/厂商修复来源，不能仅凭0day标题或调用链准入；一张图片未独立查看，未下载或运行任何内容"
+    },
+    {
+      "id": "xz-92893",
+      "title": "多签、冷钱包为何仍被击穿？Bybit 与 Bitget 事件的分析",
+      "source_url": "https://xz.aliyun.com/news/92893",
+      "published_raw": "Atom:2026-09-28 04:41:16；社区列表:2026-09-27 21:41",
+      "disposition": "not_selected",
+      "reason": "事件线索；只读列表/Atom元数据，没有技术原文审查，不以标题准入"
+    },
+    {
+      "id": "CVE-2026-88771",
+      "source_url": "https://labs.watchtowr.com/oh-look-the-foot-gun-went-off-again-citrix-netscaler-preauth-command-injection-cve-2026-88771/",
+      "published": "2026-09-28",
+      "repository_head": "2e9bae2551e32dddb5b868f8c8dff4acc6e1e7eb",
+      "head_date": "2026-09-28T09:28:56Z",
+      "disposition": "already_covered_no_new_code_change",
+      "correction_note": "原站含否认第三方冒名生成稿的提醒，但无新增时间证据，不能称本周新撤稿或撤销该CVE",
+      "limit": "原站无修订历史，未保证逐字无修改"
+    },
+    {
+      "id": "CVE-2026-88772",
+      "source_url": "https://labs.watchtowr.com/here-we-go-again-citrix-netscaler-dtls-preauth-memory-overflow-cve-2026-88772/",
+      "published": "2026-09-29",
+      "repository_head": "014f53f385f7bced62dd1308446d0950a117a542",
+      "head_date": "2026-09-29T13:43:58Z",
+      "disposition": "already_covered_no_new_code_change",
+      "limit": "已收录文章包含公开代码权限修改和崩溃副作用，不重复新增或重新标为只读检测"
+    },
+    {
+      "id": "CVE-2026-76504",
+      "source_url": "https://www.rapid7.com/blog/post/etr-critical-cisco-catalyst-sd-wan-manager-api-authentication-bypass-exploited-in-the-wild-cve-2026-76504/",
+      "published": "2026-09-30",
+      "updated": "2026-10-01",
+      "disposition": "candidate_only",
+      "reason": "文章提供日志识别示例POST /%6a_security_check HTTP/1.1，而非完整可执行触发资料；没有扩展为利用步骤，也未开展KEV工作"
+    },
+    {
+      "id": "anquanke-316193",
+      "source_url": "https://www.anquanke.com/post/id/316193",
+      "published_raw": "2026-09-29 16:49:40",
+      "disposition": "not_selected",
+      "reason": "直接读到事件与流程解释，没有具体产品漏洞触发代码/请求；原文链接字样未指向可用原作者出处，不采信二手损失/归因做漏洞新稿"
+    },
+    {
+      "id": "anquanke-316190",
+      "source_url": "https://www.anquanke.com/post/id/316190",
+      "published_raw": "2026-09-29 16:42:44",
+      "disposition": "not_selected",
+      "reason": "标题/列表时间已核，正文Web cache miss，未有具体触发证据"
+    },
+    {
+      "id": "sequencehash-20261002",
+      "source_url": "https://blog.trailofbits.com/2026/10/02/sequencehash-multihashing-for-the-rest-of-us/",
+      "author": "Opal Wright",
+      "published": "2026-10-02",
+      "disposition": "not_selected",
+      "reason": "密码构造与软件发布，有API用法不是具体漏洞触发，不制造CVE或漏洞实体"
+    }
+  ],
+  "ghsl_gap_dispositions": {
+    "GHSL-2026-108": {
+      "admission": "not_admitted_this_cycle",
+      "remaining_review_elements": [
+        "未核实具体修复APK版本或补丁提交；原文只有维护者6月28日确认修复",
+        "未完成公开Python/Kotlin片段所依赖Android测试App、FileProvider配置/权限、构建清单及依赖的有界静态审阅",
+        "后端收集示例不等于完整地图/导航服务；不背书其后续流量结果"
+      ]
+    },
+    "GHSL-2026-106": {
+      "admission": "not_admitted_this_cycle",
+      "remaining_review_elements": [
+        "未核实具体修复APK版本或补丁提交；原文只有维护者6月28日确认修复",
+        "深链接与Intent触发资料已公开，但GPX输入/辅助服务及完整相关工程的安装、依赖、工作流未完成有界审阅",
+        "未独立比较各Android/存储模式的文件写入边界，不把原作者测试泛化"
+      ]
+    },
+    "GHSL-2026-103": {
+      "admission": "not_admitted_this_cycle",
+      "remaining_review_elements": [
+        "尚未把该导出Activity入口与现有101文章的补丁层逐项匹配，避免因共享下游行为误合并或重复",
+        "缺已核实的确切修复版本和入口对应固定修复提交；Phabricator本次不可读",
+        "虽然Intent和JavaScript示例明确，但完整候选App/collector的安装、依赖和工作流尚未审阅"
+      ]
+    },
+    "GHSL-2025-080": {
+      "admission": "not_admitted_this_cycle",
+      "remaining_review_elements": [
+        "PR3744/4480正文及files本次读取失败，9月24日纠正性修复的实际合并/部署状态未核实",
+        "已读取受影响workflow触发及执行sink，未完整审阅其所执行changelog.py、依赖安装、Action实现和修复前后权限约束",
+        "不将工作流片段等同于一份独立完整可运行PoC工程，也未核实所有必要触发前提"
+      ]
+    },
+    "GHSL-2025-078": {
+      "admission": "not_admitted_this_cycle",
+      "remaining_review_elements": [
+        "PR3744/4480正文及files本次读取失败，9月24日纠正性修复的实际合并/部署状态未核实",
+        "原文提供bot comment、PR checkout和pytest sink，但未完整审阅相关测试代码、安装依赖及所有工作流文件",
+        "尚未核实具体修补后触发权限和代码信任边界；不将公开命令摘录当完整候选工程已审"
+      ]
+    }
+  }
+}

@@ -71,6 +71,10 @@
 - [LiteLLM存在远程命令执行漏洞CVE-2026-42271 附POC](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/LiteLLM/LiteLLM%E5%AD%98%E5%9C%A8%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9ECVE-2026-42271%20%E9%99%84POC.md) [advisory; not-reproduced; needs-review]
 - [我在 30 行 Python 里拿到 LiteLLM 的 root：CVE-2026-30623 实战 + 加固](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/LiteLLM/%E6%88%91%E5%9C%A8%2030%20%E8%A1%8C%20Python%20%E9%87%8C%E6%8B%BF%E5%88%B0%20LiteLLM%20%E7%9A%84%20root%EF%BC%9ACVE-2026-30623%20%E5%AE%9E%E6%88%98%20%2B%20%E5%8A%A0%E5%9B%BA.md) [vulnerability; not-reproduced; needs-review]
 
+## Loom for AWS
+
+- [Loom for AWS 未配置身份提供方时授予超级管理员（CVE-2026-103956）](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/Loom/Loom%20%E6%97%A0%E8%BA%AB%E4%BB%BD%E6%8F%90%E4%BE%9B%E6%96%B9%E6%97%B6%E8%AE%A4%E8%AF%81%E7%BB%95%E8%BF%87%EF%BC%88CVE-2026-103956%EF%BC%89.md) [vulnerability; source-claimed; active]
+
 ## MLflow
 
 - [CVE-2025-14297：MLflow 追踪服务器的授权绕过漏洞](../Web%E5%AE%89%E5%85%A8/AI%E5%BA%94%E7%94%A8/MLflow/CVE-2025-14297%EF%BC%9AMLflow%20%E8%BF%BD%E8%B8%AA%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E6%8E%88%E6%9D%83%E7%BB%95%E8%BF%87%E6%BC%8F%E6%B4%9E.md) [analysis; not-reproduced; needs-review]

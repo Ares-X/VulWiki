@@ -1,0 +1,42 @@
+[
+  {
+    "path": "Web安全/其他软件/Phproject/Phproject REST API 对象级授权缺失（CVE-2026-104991）.md",
+    "sha256": "8a4a52b68d3092b6985c0053bc0a675d507545901957d1583d1250e6f12f982c",
+    "code_elements": 37,
+    "inline_spans": 36,
+    "fences": 1,
+    "copy_mismatches": [],
+    "active_elements": [],
+    "render_sha256": "1ba55c4e803baa037ab6a7d94c2b7825ced3de8655c807a06f31931985586762"
+  },
+  {
+    "path": "Web安全/开发框架/http4s/http4s Ember HTTP2 帧长检查滞后（CVE-2026-88975）.md",
+    "sha256": "5b46d796b04be23ce63038e7157d2b10ab6deb325b65f283615843a7543acee5",
+    "code_elements": 37,
+    "inline_spans": 37,
+    "fences": 0,
+    "copy_mismatches": [],
+    "active_elements": [],
+    "render_sha256": "1da43c0ce93424a1a2504561e775545d3b9f9a3005fdc17729bcc529d9cca423"
+  },
+  {
+    "path": "Web安全/开发框架/image-downloader/image-downloader URL 文件名解码路径穿越（CVE-2026-103648）.md",
+    "sha256": "1e797d7e54fb5a28ab189b0d195ae3f2de0e87818ac1d301ff11e39371b7cf49",
+    "code_elements": 46,
+    "inline_spans": 43,
+    "fences": 3,
+    "copy_mismatches": [],
+    "active_elements": [],
+    "render_sha256": "9f8f467649a43d0b9a846e714d82fb0ed13abb08adc043d9f79f833c2c5708bd"
+  },
+  {
+    "path": "Web安全/AI应用/Loom/Loom 无身份提供方时认证绕过（CVE-2026-103956）.md",
+    "sha256": "bea7a5eb0584df551221d425587b9f557710048981f4e001d638093dc8b01451",
+    "code_elements": 50,
+    "inline_spans": 49,
+    "fences": 1,
+    "copy_mismatches": [],
+    "active_elements": [],
+    "render_sha256": "0fdfd4e769bad464930679d59c35cbde222b20e3e03f1e8ba5d4c6793b084a39"
+  }
+]
